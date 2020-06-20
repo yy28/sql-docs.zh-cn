@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c643f09f-9ccc-4d8b-9243-3cde86c2bd46
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a4ea32cc0b36f1151c68b06af8f5445d4d46267b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4489f9d1ad576d49d885842f6969f9b61065791c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704832"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056132"
 ---
 # <a name="issasynchstatus-ole-db"></a>ISSAsynchStatus (OLE DB)
   **ISSAsynchStatus**公开对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 异步操作的支持。 这是一个可选接口，它继承自 core OLE DB interface **IDBAsynchStatus**。 除了从 IDBAsynchStatus 继承的 Abort 和 GetStatus 方法外，ISSAsynchStatus 还提供一个新方法，用于在完成异步操作或发生超时前等待****************。  

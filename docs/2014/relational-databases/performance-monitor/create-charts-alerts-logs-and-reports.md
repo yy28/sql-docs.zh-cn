@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: c9162b37-e5dc-43d1-a3aa-1e9ebc69fecc
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8f36f1a3df7eae3fd363aa5e2bc4b5ae13f36ae2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c04ceea8c017feec6f214eaf3d9b442f98d4e18d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63032410"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063917"
 ---
 # <a name="create-charts-alerts-logs-and-reports"></a>创建图表、警报、日志和报表
   使用系统监视器可以创建图表、警报、日志和报表，以监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。  

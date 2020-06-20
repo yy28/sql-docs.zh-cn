@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d253b44c-7600-4afa-a3a7-03cc937c6a4b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c85b6983cbff901ae39c365503a6ab1ae0fcede1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9bf476175245000ba63e058ca333953d07276076
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662363"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029434"
 ---
 # <a name="lockescalation-event-class"></a>Lock:Escalation 事件类
   **Lock:Escalation** 事件类指示较细粒度的锁已转换为较粗粒度的锁；例如，行锁已转换为对象锁。 升级事件类是事件 ID 为 60 的事件类。  
@@ -49,7 +48,7 @@ ms.locfileid: "62662363"
 |**NTUserName**|`nvarchar`|Windows 用户名。|6|是|  
 |**ObjectID**|`int`|为其触发了锁升级的表的系统分配 ID。|22|是|  
 |**ObjectID2**|`bigint`|相关对象或实体的 ID。 （触发了锁升级的 HoBT ID。）|56|是|  
-|**偏移量**|`int`|[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的起始偏移量。|61|是|  
+|**抵销**|`int`|[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的起始偏移量。|61|是|  
 |**OwnerID**|`int`|1 = TRANSACTION<br /><br /> 2 = CURSOR<br /><br /> 3 = SESSION<br /><br /> 4 = SHARED_TRANSACTION_WORKSPACE<br /><br /> 5 = EXCLUSIVE_TRANSACTION_WORKSPACE<br /><br /> 6 = WAITFOR_QUERY|58|是|  
 |**Id**|`int`|包含该语句的请求的 ID。|49|是|  
 |**ServerName**|`nvarchar`|所跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|否|  
@@ -58,7 +57,7 @@ ms.locfileid: "62662363"
 |**StartTime**|`datetime`|该事件（如果存在）的启动时间。|14|是|  
 |**TextData**|`ntext`|导致锁升级的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的文本。|1|是|  
 |**TransactionID**|`bigint`|系统分配的事务 ID。|4|是|  
-|**Type**|`int`|锁升级粒度：<br /><br /> 1 = NULL_RESOURCE<br /><br /> 2 = DATABASE<br /><br /> 3 = FILE<br /><br /> 5 = OBJECT（表级别）<br /><br /> 6 = PAGE<br /><br /> 7 = KEY<br /><br /> 8 = EXTENT<br /><br /> 9 = RID<br /><br /> 10 = APPLICATION<br /><br /> 11 = METADATA<br /><br /> 12 = HOBT<br /><br /> 13 = ALLOCATION_UNIT|57|是|  
+|类型|`int`|锁升级粒度：<br /><br /> 1 = NULL_RESOURCE<br /><br /> 2 = DATABASE<br /><br /> 3 = FILE<br /><br /> 5 = OBJECT（表级别）<br /><br /> 6 = PAGE<br /><br /> 7 = KEY<br /><br /> 8 = EXTENT<br /><br /> 9 = RID<br /><br /> 10 = APPLICATION<br /><br /> 11 = METADATA<br /><br /> 12 = HOBT<br /><br /> 13 = ALLOCATION_UNIT|57|是|  
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `sp_trace_create` 过程创建跟踪，使用 `sp_trace_setevent` 将锁升级列添加到跟踪，然后使用 `sp_trace_setstatus` 启动跟踪。 在如 `EXEC sp_trace_setevent @TraceID, 60, 22, 1`的语句中，数字 `60` 指示升级事件类， `22` 指示 **ObjectID** 列， `1` 将跟踪事件设置为 ON。  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0f0fe567-e115-4ace-b63c-73dc3428c0f6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3c5048dd8c545026b7499b78f7404fda7fe59593
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e233c09bfdb6532e4d9d1ef1b6e1eef69f89dcdd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62643367"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028205"
 ---
 # <a name="sql-server-event-class-reference"></a>SQL Server 事件类参考
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 可以记录 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的实例中发生的事件。 记录的事件是跟踪定义中事件类的实例。 在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]中，事件类以及它们的事件类别位于 **“跟踪文件属性”** 对话框的 **“事件选择”** 选项卡中。  
@@ -37,7 +36,7 @@ ms.locfileid: "62643367"
 |[CLR 事件类别](clr-event-category.md) 包括由于执行 NET 公共语言运行时 (CLR) 对象而生成的事件类。|[Assembly Load 事件类](../../database-engine/assembly-load-event-class.md)|  
 |[Database Event Category](database-event-category.md) 包括自动增大或收缩数据文件或日志文件时生成的事件类。|[Data File Auto Grow 事件类](data-file-auto-grow-event-class.md)<br /><br /> [Data File Auto Shrink 事件类](data-file-auto-shrink-event-class.md)<br /><br /> [Database Mirroring State Change 事件类](database-mirroring-state-change-event-class.md)<br /><br /> [Log File Auto Grow 事件类](log-file-auto-grow-event-class.md)<br /><br /> [Log File Auto Shrink 事件类](log-file-auto-shrink-event-class.md)|  
 |[Deprecation Event Category](deprecation-event-category.md) 包括与不推荐使用的情况相关的事件。|[Deprecation Announcement 事件类](deprecation-announcement-event-class.md)<br /><br /> [Deprecation Final Support 事件类](deprecation-final-support-event-class.md)|  
-|"[错误和警告" 事件类别 &#40;数据库引擎&#41;](errors-and-warnings-event-category-database-engine.md)包括在时生成的事件类[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|[Attention 事件类](attention-event-class.md)<br /><br /> [Background Job Error 事件类](background-job-error-event-class.md)<br /><br /> [Blocked Process Report 事件类](blocked-process-report-event-class.md)<br /><br /> [CPU Threshold Exceeded 事件类](cpu-threshold-exceeded-event-class.md)<br /><br /> [ErrorLog 事件类](errorlog-event-class.md)<br /><br /> [EventLog 事件类](eventlog-event-class.md)<br /><br /> [Exception 事件类](exception-event-class.md)<br /><br /> [Exchange Spill 事件类](exchange-spill-event-class.md)<br /><br /> [Execution Warnings 事件类](execution-warnings-event-class.md)<br /><br /> [Hash Warning 事件类](hash-warning-event-class.md)<br /><br /> [Missing Column Statistics 事件类](missing-column-statistics-event-class.md)<br /><br /> [Missing Join Predicate 事件类](missing-join-predicate-event-class.md)<br /><br /> [Sort Warnings 事件类](sort-warnings-event-class.md)<br /><br /> [User Error Message 事件类](user-error-message-event-class.md)|  
+|"[错误和警告" 事件类别 &#40;数据库引擎&#41;](errors-and-warnings-event-category-database-engine.md)包括在时生成的事件类 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|[Attention 事件类](attention-event-class.md)<br /><br /> [Background Job Error 事件类](background-job-error-event-class.md)<br /><br /> [Blocked Process Report 事件类](blocked-process-report-event-class.md)<br /><br /> [CPU Threshold Exceeded 事件类](cpu-threshold-exceeded-event-class.md)<br /><br /> [ErrorLog 事件类](errorlog-event-class.md)<br /><br /> [EventLog 事件类](eventlog-event-class.md)<br /><br /> [Exception 事件类](exception-event-class.md)<br /><br /> [Exchange Spill 事件类](exchange-spill-event-class.md)<br /><br /> [Execution Warnings 事件类](execution-warnings-event-class.md)<br /><br /> [Hash Warning 事件类](hash-warning-event-class.md)<br /><br /> [Missing Column Statistics 事件类](missing-column-statistics-event-class.md)<br /><br /> [Missing Join Predicate 事件类](missing-join-predicate-event-class.md)<br /><br /> [Sort Warnings 事件类](sort-warnings-event-class.md)<br /><br /> [User Error Message 事件类](user-error-message-event-class.md)|  
 |[Full Text 事件类别](full-text-event-category.md) 包括启动、中断或停止全文搜索时生成的事件类。|[FT:Crawl Aborted 事件类](ft-crawl-aborted-event-class.md)<br /><br /> [FT:Crawl Started 事件类](ft-crawl-started-event-class.md)<br /><br /> [FT:Crawl Stopped 事件类](ft-crawl-stopped-event-class.md)|  
 |[Locks Event Category](locks-event-category.md) 包括在获取、取消、释放锁时或者在对锁执行一些其他操作时生成的事件类。|[Deadlock Graph 事件类](deadlock-graph-event-class.md)<br /><br /> [Lock:Acquired 事件类](lock-acquired-event-class.md)<br /><br /> [Lock:Cancel 事件类](lock-cancel-event-class.md)<br /><br /> [Lock:Deadlock Chain 事件类](lock-deadlock-chain-event-class.md)<br /><br /> [Lock:Deadlock 事件类](lock-deadlock-event-class.md)<br /><br /> [Lock:Escalation 事件类](lock-escalation-event-class.md)<br /><br /> [Lock:Released 事件类](lock-released-event-class.md)<br /><br /> [Lock:Timeout (timeout > 0) 事件类](lock-timeout-timeout-0-event-class.md)<br /><br /> [Lock:Timeout 事件类](lock-timeout-event-class.md)|  
 |[Objects Event Category](objects-event-category.md) 包括在创建、打开、关闭或删除数据库对象时生成的事件类。|[Auto Stats 事件类](auto-stats-event-class.md)<br /><br /> [Object:Altered 事件类](object-altered-event-class.md)<br /><br /> [Object:Created 事件类](object-created-event-class.md)<br /><br /> [Object:Deleted 事件类](object-deleted-event-class.md)|  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 44aab631-d62d-4895-8fc7-7f1f3b1b68ce
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2259b19cec6674cdb1f5f4a0064334f78aa5300f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: deb6c1a4fb5095e387bed9ca2b88b66e62c0bd9a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059437"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966973"
 ---
 # <a name="dimension-processing-destination-editor-connection-manager-page"></a>维度处理目标编辑器（“连接管理器”页）
   可以使用“维度处理目标编辑器”对话框的“连接管理器”页面指定与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目或 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例之间的连接********。  
@@ -39,10 +38,10 @@ ms.locfileid: "66059437"
  **处理方法**  
  选择要应用于列表中选定维度的处理方法。 此选项的默认值为 **“完全”**。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**添加(增量式)**|对维度执行增量处理。|  
-|**达到**|对维度执行完全处理。|  
+|**完整**|对维度执行完全处理。|  
 |**Update**|对维度执行更新处理。|  
   
 ## <a name="see-also"></a>另请参阅  

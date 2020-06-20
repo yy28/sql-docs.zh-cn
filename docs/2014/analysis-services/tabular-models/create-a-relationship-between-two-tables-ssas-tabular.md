@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 052d77b7-7922-408a-a200-786016ee4d15
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 98bd7f6c904207aa6d38f2ae756a207f128707a4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: afd264701c8e74d4fdb99d186e3bb5be8d2b5e15
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067541"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939834"
 ---
 # <a name="create-a-relationship-between-two-tables-ssas-tabular"></a>创建两个表之间的关系（SSAS 表格）
   如果数据源中的表没有现有关系，或如果添加新表，则可以使用模型设计器中的工具创建新关系。 有关如何在表格模型中使用关系的详细信息，请参阅 [关系（SSAS 表格）](relationships-ssas-tabular.md)。  
@@ -49,7 +48,7 @@ ms.locfileid: "66067541"
   
 6.  对于 **“相关查找列”**，选择一列，此列具有与您为 **“列”** 选择的列中值匹配的唯一值。  
   
-7.  单击 **“创建”** 。  
+7.  单击“创建”。  
   
 #### <a name="to-create-a-relationship-between-two-tables-in-data-view"></a>在数据视图中创建两个表之间的关系  
   
@@ -67,7 +66,7 @@ ms.locfileid: "66067541"
   
 5.  对于 **“相关查找列”**，选择一列，此列具有与您为 **“列”** 选择的列中值匹配的唯一值。  
   
-6.  单击 **“创建”** 。  
+6.  单击“创建”。  
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;SSAS 表格&#41;中删除关系](delete-relationships-ssas-tabular.md)   

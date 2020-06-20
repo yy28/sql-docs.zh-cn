@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 839beaed-b094-467a-9b97-8764e9451fc0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 029b077b034d7b022ea1e27832624df86decb547
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a2d3e18b29cef517ef97f6720080b2fdf34ff1d5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63061295"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028071"
 ---
 # <a name="tm-promote-tran-completed-event-class"></a>TM: Promote Tran Completed 事件类
   TM: Promote Tran Completed 事件类指示 PROMOTE TRANSACTION 请求已完成。 将通过事务管理接口从客户端发送请求。  
@@ -48,7 +47,7 @@ ms.locfileid: "63061295"
 |SessionLoginName|`nvarchar`|发起会话的用户的登录名。 例如，如果您使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 SessionLoginName 将显示 Login1，而 LoginName 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|是|  
 |SPID|`int`|发生该事件的会话的 ID。|12|是|  
 |StartTime|`datetime`|该事件（如果存在）的启动时间。|14|是|  
-|成功|`int`|1 = 成功。 0 = 失败（例如，1 表示权限检查成功，0 表示该检查失败）。|23|是|  
+|Success|`int`|1 = 成功。 0 = 失败（例如，1 表示权限检查成功，0 表示该检查失败）。|23|是|  
 |TransactionID|`bigint`|系统分配的事务 ID。|4|是|  
 |XactSequence|`bigint`|用于说明当前事务的标记。|50|是|  
   

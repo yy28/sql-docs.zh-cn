@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 67dcdad0-57b2-431c-b77f-4ffc926af93d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0d9df271c457cb0f05f9fdfe70952b6d02224963
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 436625f9ad629a6b0e574aa046059f4e7e9c2bf2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783257"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995482"
 ---
 # <a name="delete-one-or-more-jobs"></a>删除一个或多个作业
-  本主题说明如何使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]或 SQL Server 管理对象在中删除代理作业。  
+  本主题说明如何 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 、或 SQL Server 管理对象在中删除代理作业 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。  
   
  
   
@@ -45,7 +44,7 @@ ms.locfileid: "72783257"
   
 3.  在“删除对象”**** 对话框中，确认选择了要删除的作业。  
   
-4.  单击“确定”。   
+4.  单击“确定”。  
   
 #### <a name="to-delete-multiple-jobs"></a>删除多个作业  
   

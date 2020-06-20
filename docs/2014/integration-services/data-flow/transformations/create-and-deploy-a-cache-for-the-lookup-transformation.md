@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ef5450bc9598f86909bbb032adcfa4bfc0fc9040
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b8ed4b8789de70a5a2ebba82779dfc5e7001fcf1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900632"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939648"
 ---
 # <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>为查找转换创建和部署缓存
   可以为查找转换创建和部署缓存文件 (.caw)。 引用数据集存储在缓存文件中。  
@@ -86,7 +85,7 @@ ms.locfileid: "62900632"
   
 4.  配置项目以创建一个部署实用工具，再生成项目。 有关详细信息，请参阅 [Create a Deployment Utility](../../create-a-deployment-utility.md)。  
   
-     将创建清单文件 \<项目名称>.SSISDeploymentManifest.xml，其中列出了项目、包及包配置中的杂项文件  。  
+     将创建清单文件 \<*project name*>.SSISDeploymentManifest.xml，其中列出了项目、包和包配置中的杂项文件。  
   
 5.  将包部署到文件系统。 有关详细信息，请参阅 [Deploy Packages by Using the Deployment Utility](../../deploy-packages-by-using-the-deployment-utility.md)。  
   

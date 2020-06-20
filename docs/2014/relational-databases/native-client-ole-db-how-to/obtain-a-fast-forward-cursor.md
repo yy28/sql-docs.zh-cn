@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 931a28c3-8ea1-45d6-9ca1-2b8388c4d8b0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 33bef36a351a492613ce0068b781dba335ee6513
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 3caa5d0e7e032a1d9d98b01cfa4bb26d207babf9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82697140"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056271"
 ---
 # <a name="obtain-a-fast_forward-cursor"></a>获取 FAST_FORWARD 游标
   若要获取只进只读游标，请将行集属性 DBPROP_SERVERCURSOR、DBPROP_OTHERINSERT、DBPROP_OTHERUPDATEDELETE、DBPROP_OWNINSERT 和 DBPROP_OWNUPDATEDELETE 设置为 VARIANT_TRUE。  

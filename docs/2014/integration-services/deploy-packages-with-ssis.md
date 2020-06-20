@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e47c9640c314ad28ae64ef105d723b77695e644d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f30221e3afb898834fcc13476760499fd3a5f9e8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176447"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951827"
 ---
 # <a name="ssis-tutorial-deploying-packages"></a>SSIS 教程：部署包
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供将包轻松部署到其他计算机的工具。 部署工具还管理任何依赖项，如包需要的配置和文件。 在本教程中，您将了解如何使用这些工具在目标计算机上安装包及其依赖项。
@@ -43,10 +42,10 @@ ms.locfileid: "78176447"
  本教程的目的是模拟实际部署中您可能遇到的问题的复杂性。 但是，如果不可能将包部署到其他计算机，仍可以学习本教程，方法是将包安装在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的本地实例上的 msdb 数据库中，再从同一实例上的 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 运行包。
 
 ## <a name="what-you-will-learn"></a>学习内容
- 熟悉中[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]提供的新工具、控件和功能的最佳方式是使用它们。 本教程将引导您完成创建 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目再将包和其他所需文件添加到项目的步骤。 完成项目后，将创建部署捆绑，将该捆绑复制到目标计算机，然后在目标计算机上安装包。
+ 熟悉中提供的新工具、控件和功能的最佳方式 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 是使用它们。 本教程将引导您完成创建 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目再将包和其他所需文件添加到项目的步骤。 完成项目后，将创建部署捆绑，将该捆绑复制到目标计算机，然后在目标计算机上安装包。
 
 ## <a name="requirements"></a>要求
- 本教程适用于已经熟悉基本文件系统操作的用户，但对中[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]提供的新功能的影响有限。 为了更好地[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]了解你将在本教程中使用的基本概念，你可能会发现先完成以下[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]教程很有用：[运行 SQL Server 导入和导出向导](import-export-data/start-the-sql-server-import-and-export-wizard.md)和[SSIS 教程：创建简单的 ETL 包](../integration-services/ssis-how-to-create-an-etl-package.md)。
+ 本教程适用于已经熟悉基本文件系统操作的用户，但对中提供的新功能的影响有限 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 。 为了更好地了解 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 你将在本教程中使用的基本概念，你可能会发现先完成以下教程很有用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ：[运行 SQL Server 导入和导出向导](import-export-data/start-the-sql-server-import-and-export-wizard.md)和[SSIS 教程：创建简单的 ETL 包](../integration-services/ssis-how-to-create-an-etl-package.md)。
 
  **源计算机。** 将在其上创建部署捆绑的计算机必须安装下列组件：
 
@@ -68,14 +67,14 @@ ms.locfileid: "78176447"
 
 -   必须具有在 AdventureWorks 中创建和删除表的权限以及在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中运行包的权限。
 
--   您必须具有对 msdb[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]系统数据库中 sysssispackages 表的读取和写入权限。
+-   您必须具有对 msdb 系统数据库中 sysssispackages 表的读取和写入权限 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。
 
  如果您计划将包部署到在其上创建部署捆绑的计算机，则该计算机必须同时满足源计算机和目标计算机的要求。
 
  **学完本教程的估计时间：** 2 小时
 
 ## <a name="lessons-in-this-tutorial"></a>本教程中的课程
- [第1课：准备创建部署捆绑](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)在本课中，您将准备好部署 ETL 解决方案，方法是创建一个新[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]项目，然后将包和其他所需文件添加到该项目中。
+ [第1课：准备创建部署捆绑](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)在本课中，您将准备好部署 ETL 解决方案，方法是创建一个新 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目，然后将包和其他所需文件添加到该项目中。
 
  [第2课：创建部署捆绑](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)在本课中，您将生成一个部署实用工具，并验证部署捆绑是否包括所需的文件。
 

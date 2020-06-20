@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e547382a-c064-4bc6-818c-5127890af334
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bd4e54a0099e459d52577de23acc5c4f2989edc5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bdcf47e483c3a52879c66838a657b51d65bff8f8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67284861"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938698"
 ---
 # <a name="roles-ssas-tabular"></a>角色（SSAS 表格）
   在表格模型中，角色定义模型的成员权限。 每个角色都包含成员（按 Windows 用户名或按 Windows 组）和权限（读取、处理、管理员）。 该角色的成员可按照角色权限的定义对模型执行操作。 使用读取权限定义的角色也可以通过使用行级别筛选器在行级别提供附加的安全性。  
@@ -40,7 +39,7 @@ ms.locfileid: "67284861"
 -   [相关任务](#bkmk_rt)  
   
 ##  <a name="understanding-roles"></a><a name="bkmk_underst"></a>了解角色  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]使用角色来管理和数据的[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]安全性。 在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中有两种类型的角色：  
+ 中使用角色 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 来管理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 和数据的安全性。 在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中有两种类型的角色：  
   
 -   服务器角色，它是一个固定角色，用于提供对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例的管理员访问权限。  
   
@@ -67,17 +66,17 @@ ms.locfileid: "67284861"
 |无|成员无法对模型数据库架构进行任何修改，也无法查询数据。|不应用行筛选器。 此角色中的用户无法看见数据|  
 |读取|允许成员查询数据（基于行筛选器），但是无法看到 SSMS 中的模型数据库，无法更改模型数据库架构，并且用户无法处理模型。|应用行筛选器。 用户仅能看见在行筛选器 DAX 公式中指定的数据。|  
 |读取和处理|允许成员查询数据（基于行级别筛选器）并通过运行包含处理命令的脚本或包来运行处理操作，但无法对数据库进行任何更改。 无法在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中查看模型数据库。|应用行筛选器。 仅能查询在行筛选器 DAX 公式中指定的数据。|  
-|进程|成员可以通过运行包含处理命令的脚本或包来运行处理操作。 不能修改模型数据库架构。 无法查询数据。 无法在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中查询模型数据库。|不应用行筛选器。 此角色中没有可查询的数据|  
-|Administrator|成员可以对模型架构进行任何修改并可以查询模型设计器、报表客户端和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的所有数据。|不应用行筛选器。 此角色中的所有数据均可查询。|  
+|过程|成员可以通过运行包含处理命令的脚本或包来运行处理操作。 不能修改模型数据库架构。 无法查询数据。 无法在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中查询模型数据库。|不应用行筛选器。 此角色中没有可查询的数据|  
+|管理员|成员可以对模型架构进行任何修改并可以查询模型设计器、报表客户端和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的所有数据。|不应用行筛选器。 此角色中的所有数据均可查询。|  
   
 ##  <a name="row-filters"></a><a name="bkmk_rowfliters"></a>行筛选器  
- 行筛选器定义特定角色的成员可以查询表中的哪些行。 通过使用 DAX 公式为模型中的每个表定义行筛选器。  
+ 行筛选器定义特定角色的成员可以查询表中的哪些行。 可使用 DAX 公式为模型中的每个表定义行筛选器。  
   
  可仅为具有“读取”和“读取和处理”权限的角色定义行筛选器。 默认情况下，如果没有为某一特定表定义行筛选器，则具有“读取”和“读取和处理”权限的角色的成员将能够查询表中的所有行，除非交叉筛选应用于其他表。  
   
  一旦为特定表定义了行筛选器后，求值结果必须为 TRUE/FALSE 值的 DAX 公式将定义可供该特定角色的成员进行查询的行。 未包含在 DAX 公式中的行将不可查询。 例如，对于 "销售" 角色的成员，具有以下行筛选器表达式的 Customers 表 *= customers [Country] = "USA"*，Sales 角色的成员将只能看到 USA 中的客户。  
   
- 行筛选器应用于指定的行以及相关行。 如果表具有多个关系，则筛选器将安全性应用于处于活动状态的关系。 行筛选器将与为相关表定义的其他行筛选器相交，例如：  
+ 行筛选器应用于指定的行以及相关行。 如果表具有多个关系，筛选器将对处于活动状态的关系应用安全性。 行筛选器将与为相关表定义的其他行筛选器相交，例如：  
   
 |表|DAX 表达式|  
 |-----------|--------------------|  
@@ -87,7 +86,7 @@ ms.locfileid: "67284861"
   
  这些权限对于 Transactions 表的净效果是，将允许成员查询客户位于 USA、产品类别是自行车并且年份是 2008 的数据行。 用户将无法查询 USA 之外的任何事务、不是自行车的任何事务或者不在 2008 年发生的任何事务，除非用户是授予了这些权限的其他角色。  
   
- 可以使用筛选器 =FALSE() 拒绝访问整个表的所有行。**  
+ 可以使用筛选器 =FALSE() 拒绝访问整个表的所有行。  
   
 ### <a name="dynamic-security"></a>动态安全性  
  动态安全性提供了一种基于当前登录用户的用户名或从连接字符串返回的 CustomData 属性定义行级别安全性的方式。 为了实现动态安全性，您必须在模型中包含一个具有用户登录名（Windows 用户名）值的表以及一个可用于定义特定权限的字段；例如，一个具有登录 ID (domain\username) 的 dimEmployees 表以及一个针对每个员工的部门值。  

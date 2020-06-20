@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7061f674-e806-46f2-8c15-e260a3c69a17
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 00113df9f330a2edfce0c75f69d45c1fcd9274ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c9f220f8908e92eaa861f64b0f896f78547b950e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068156"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940268"
 ---
 # <a name="specify-the-column39s-content-and-data-type-data-mining-wizard"></a>指定列&#39;的内容和数据类型（数据挖掘向导）
   可以使用 **“指定列的内容和数据类型”** 页修改向导已设置的列和内容类型。 向导使用源列的数据类型和所选算法的功能来确定每个列的默认数据和内容类型。  

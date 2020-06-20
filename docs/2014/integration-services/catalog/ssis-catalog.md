@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d4657bf58a7160f075759a265fef883c92fee0c9
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: f24ea0800107caf026105e306ae39e1461077de5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82921707"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924244"
 ---
 # <a name="ssis-catalog"></a>SSIS 目录
   `SSISDB`目录是使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 已部署到服务器的（SSIS）项目的中心点 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 。 例如，您可以设置项目和包参数，配置环境以便为包指定运行时值，执行包并对包进行故障排除，以及管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器操作。  
@@ -36,7 +35,7 @@ ms.locfileid: "82921707"
 >  不能重命名 `SSISDB` 数据库。  
   
 > [!NOTE]  
->  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `SSISDB` 数据库附加到的实例停止或不响应，则 ISServerExec 进程结束。 向 Windows 事件日志写入一条消息。  
+>  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `SSISDB` 数据库附加到的实例停止或不响应，则 ISServerExec.exe 进程结束。 向 Windows 事件日志写入一条消息。  
 >   
 >  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源作为群集故障转移的一部分进行故障转移，则正在运行的包不重新启动。 您可以使用检查点来重新启动包。 有关详细信息，请参阅 [通过使用检查点重新启动包](../packages/restart-packages-by-using-checkpoints.md)。  
   
@@ -56,7 +55,7 @@ ms.locfileid: "82921707"
 ### <a name="folder-project-environment"></a>文件夹、项目和环境  
  重命名文件夹、项目或环境时，请考虑以下规则。  
   
--   无效字符包括 ASCII/Unicode 字符 1 到 31、引号 (")、小于号 (\<)、大于号 (>)、竖线 (|)、退格符 (\b)、null (\0) 和制表符 (\t)。  
+-   无效字符包括 ASCII/Unicode 字符1到31、引号（"）、小于（ \<), greater than (> ）、竖线（|）、backspace （\b）、null （\ 0）和制表符（\t）。  
   
 -   名称不得包含前导空格或尾随空格。  
   
@@ -74,7 +73,7 @@ ms.locfileid: "82921707"
 ### <a name="environment-variable"></a>环境变量  
  命名环境变量时，请考虑以下规则。  
   
--   无效字符包括 ASCII/Unicode 字符 1 到 31、引号 (")、小于号 (\<)、大于号 (>)、竖线 (|)、退格符 (\b)、null (\0) 和制表符 (\t)。  
+-   无效字符包括 ASCII/Unicode 字符1到31、引号（"）、小于（ \<), greater than (> ）、竖线（|）、backspace （\b）、null （\ 0）和制表符（\t）。  
   
 -   名称不得包含前导空格或尾随空格。  
   
@@ -131,7 +130,7 @@ ms.locfileid: "82921707"
   
  更改加密算法是一项很耗时的操作。 首先，服务器必须使用以前指定的算法来解密所有配置值。 然后，服务器必须使用新算法来重新对这些值进行加密。 此时，在服务器上不能有其他 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 操作。 因此，为使 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 操作继续运行而不会中断，加密算法在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的对话框中是只读值。  
   
- 若要更改 "**加密算法**" 属性设置，请将 `SSISDB` 数据库设置为单用户模式，然后调用 catalog. configure_catalog 存储过程。 将 ENCRYPTION_ALGORITHM 用于 *property_name* 参数。 有关支持的属性值，请参阅 [catalog.catalog_properties（SSISDB 数据库）](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database)。 有关该存储过程的详细信息，请参阅 [catalog.configure_catalog（SSISDB 数据库）](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database)。  
+ 若要更改 "**加密算法**" 属性设置，请将 `SSISDB` 数据库设置为单用户模式，然后调用 catalog.configure_catalog 存储过程。 将 ENCRYPTION_ALGORITHM 用于 *property_name* 参数。 有关支持的属性值，请参阅 [catalog.catalog_properties（SSISDB 数据库）](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database)。 有关该存储过程的详细信息，请参阅 [catalog.configure_catalog（SSISDB 数据库）](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database)。  
   
  有关单用户模式的详细信息，请参阅 [将数据库设置为单用户模式](../../relational-databases/databases/set-a-database-to-single-user-mode.md)。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中加密和加密算法的信息，请参阅 [SQL Server 加密](../../relational-databases/security/encryption/sql-server-encryption.md)一节中的有关主题。  
   

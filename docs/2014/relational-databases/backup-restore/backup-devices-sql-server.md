@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 44cb3f6b8dd16eed44568051e1ef183c0ac8123a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a8abbba087679d263c00484764ecf445d6e5a006
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70155049"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959297"
 ---
 # <a name="backup-devices-sql-server"></a>备份设备 (SQL Server)
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库上执行备份操作期间，将备份的数据（“备份”  ）写入物理备份设备。 将介质集中的第一个备份写入物理备份设备时，便会初始化此备份设备。 包含一个或多个备份设备的集合的备份构成一个介质集。  
@@ -86,7 +85,7 @@ ms.locfileid: "70155049"
   
  BACKUP DATABASE *database_name*  
   
- 到磁盘**=** { **"**_physical_backup_device_name_**"** | **@**_physical_backup_device_name_var_ }  
+ TO DISK **=** { **'** _physical_backup_device_name_ **'**  |  **@** _physical_backup_device_name_var_ }  
   
  例如：  
   
@@ -100,7 +99,7 @@ GO
   
  RESTORE { DATABASE | LOG } *database_name*  
   
- 从磁盘**=** { **"**_physical_backup_device_name_**"** | **@**_physical_backup_device_name_var_ }  
+ FROM DISK **=** { **'** _physical_backup_device_name_ **'**  |  **@** _physical_backup_device_name_var_ }  
   
  例如，  
   
@@ -136,7 +135,7 @@ GO
     >  在网络上备份数据可能受网络错误的影响；因此，建议在使用远程磁盘时，完成备份后验证备份操作。 有关详细信息，请参阅 [RESTORE VERIFYONLY (Transact-SQL)](/sql/t-sql/statements/restore-statements-verifyonly-transact-sql)。  
   
 #### <a name="specifying-a-universal-naming-convention-unc-name"></a>指定通用命名约定 (UNC) 名称  
- 若要在备份或还原命令中指定网络共享，应针对备份设备使用文件的完全限定通用命名约定 (UNC) 名称。 UNC ** \\**名称的格式为_Systemname_**\\**_共享_**\\**名_路径_**\\**_文件名_。  
+ 若要在备份或还原命令中指定网络共享，应针对备份设备使用文件的完全限定通用命名约定 (UNC) 名称。 UNC 名称采用以下格式： **\\\\** _系统名称_ **\\** _共享名称_ **\\** _路径_ **\\** _文件名_。  
   
  例如：  
   
@@ -161,7 +160,7 @@ GO
   
  将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据备份到磁带时要求 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 操作系统支持一个或多个磁带机。 另外，对于给定的磁带机，我们建议您仅使用磁带机制造商推荐的磁带。 有关如何安装磁带机的详细信息，请参阅 Windows 操作系统的文档。  
   
- 在使用磁带机时，备份操作可能会写满一个磁带，并继续在另一个磁带上进行。 每个磁带包含一个介质标头。 使用的第一个介质称为“起始磁带 **”。 每个后续磁带称为“延续磁带” ** ，其介质序列号比前一磁带的介质序列号大一。 例如，与四个磁带设备相关联的介质集至少含有四个起始磁带（如果该数据库过大，还会有四个系列的延续磁带）。 在追加备份集时，必须在序列中装入最后一个磁带。 如果没有装入最后一个磁带， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将向前扫描到已装入磁带的末尾，然后要求更换磁带。 此时，请装入最后一个磁带。  
+ 在使用磁带机时，备份操作可能会写满一个磁带，并继续在另一个磁带上进行。 每个磁带包含一个介质标头。 使用的第一个介质称为“起始磁带  ”。 每个后续磁带称为“延续磁带”  ，其介质序列号比前一磁带的介质序列号大一。 例如，与四个磁带设备相关联的介质集至少含有四个起始磁带（如果该数据库过大，还会有四个系列的延续磁带）。 在追加备份集时，必须在序列中装入最后一个磁带。 如果没有装入最后一个磁带， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将向前扫描到已装入磁带的末尾，然后要求更换磁带。 此时，请装入最后一个磁带。  
   
  磁带备份设备的用法类似于磁盘设备，但下述情况例外：  
   
@@ -174,7 +173,7 @@ GO
   
  BACKUP { DATABASE | LOG } *database_name*  
   
- 到磁带**=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
+ TO TAPE **=** { **'** _physical_backup_device_name_ **'**  |  **@** _physical_backup_device_name_var_ }  
   
  例如：  
   
@@ -188,7 +187,7 @@ GO
   
  RESTORE { DATABASE | LOG } *database_name*  
   
- 从磁带**=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
+ FROM TAPE **=** { **'** _physical_backup_device_name_ **'**  |  **@** _physical_backup_device_name_var_ }  
   
 ###  <a name="tape-specific-backup-and-restore-options-transact-sql"></a><a name="TapeOptions"></a>特定于磁带的备份和还原选项（Transact-sql）  
  为了便于磁带管理，BACKUP 语句提供了下列磁带专用的选项：  
@@ -207,13 +206,13 @@ GO
 ###  <a name="managing-open-tapes"></a><a name="OpenTapes"></a>管理打开的磁带  
  若要查看打开的磁带设备列表以及装入请求状态，请查询 [sys.dm_io_backup_tapes](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql) 动态管理视图。 此视图显示了所有打开的磁带。 其中包括正在使用的磁带，它们等待下一个 BACKUP 或 RESTORE 操作时暂时处于空闲状态。  
   
- 如果意外使磁带处于打开状态，则释放磁带的最快方法是使用以下命令： RESTORE REWINDONLY FROM 磁带**=** _backup_device_name_。 有关详细信息，请参阅 [RESTORE REWINDONLY (Transact-SQL)](/sql/t-sql/statements/restore-statements-rewindonly-transact-sql)。  
+ 如果意外使磁带处于打开状态，则释放磁带的最快方式是使用以下命令：RESTORE REWINDONLY FROM TAPE **=** _backup_device_name_。 有关详细信息，请参阅 [RESTORE REWINDONLY (Transact-SQL)](/sql/t-sql/statements/restore-statements-rewindonly-transact-sql)。  
   
 ## <a name="using-the-azure-blob-storage-service"></a>使用 Azure Blob 存储服务  
  可以将 SQL Server 备份写入 Azure Blob 存储服务。  有关如何使用 Azure Blob 存储服务进行备份的详细信息，请参阅[使用 Azure Blob 存储服务进行备份和还原 SQL Server](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
   
 ##  <a name="using-a-logical-backup-device"></a><a name="LogicalBackupDevice"></a>使用逻辑备份设备  
- “逻辑备份设备 ** ”是指向特定物理备份设备（磁盘文件或磁带机）的可选用户定义名称。 通过逻辑备份设备，您可以在引用相应的物理备份设备时使用间接寻址。  
+ “逻辑备份设备  ”是指向特定物理备份设备（磁盘文件或磁带机）的可选用户定义名称。 通过逻辑备份设备，您可以在引用相应的物理备份设备时使用间接寻址。  
   
  定义逻辑备份设备涉及为物理设备分配逻辑名称。 例如，逻辑设备 AdventureWorksBackups 可能被定义为指向 Z:\SQLServerBackups\AdventureWorks2012.bak 文件或 \\\\.\tape0 磁带驱动器。 备份和还原命令随后可以将 AdventureWorksBackups 指定为备份设备，而不是指定 DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak' 或 TAPE = '\\\\.\tape0'。  
   
@@ -293,14 +292,14 @@ GO
 -   [删除备份设备 (SQL Server)](delete-a-backup-device-sql-server.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server，备份设备对象](../performance-monitor/sql-server-backup-device-object.md)   
+ [SQL Server Backup Device 对象](../performance-monitor/sql-server-backup-device-object.md)   
  [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
  [维护计划](../maintenance-plans/maintenance-plans.md)   
- [介质集、介质簇和备份集 &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)   
+ [媒体集、媒体簇和备份集 (SQL Server)](media-sets-media-families-and-backup-sets-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
- [RESTORE LABELONLY &#40;Transact-sql&#41;](/sql/t-sql/statements/restore-statements-labelonly-transact-sql)   
- [sys. backup_devices &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-backup-devices-transact-sql)   
- [sys. dm_io_backup_tapes &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql)   
+ [RESTORE LABELONLY (Transact-SQL)](/sql/t-sql/statements/restore-statements-labelonly-transact-sql)   
+ [sys.backup_devices (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-backup-devices-transact-sql)   
+ [sys.dm_io_backup_tapes (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql)   
  [镜像备份媒体集 (SQL Server)](mirrored-backup-media-sets-sql-server.md)  
   
   

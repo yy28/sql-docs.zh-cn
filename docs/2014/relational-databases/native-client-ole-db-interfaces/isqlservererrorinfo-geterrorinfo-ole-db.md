@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 83265c9c-eaf9-41f0-9f73-b0ae0972f0d5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fe870479a96ff0d40ddaae6903eadd29edfb64b8
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c3e325cd99276e04a178b89c19b233289edc09fa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707352"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056138"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>ISQLServerErrorInfo::GetErrorInfo (OLE DB)
   返回一个指针，该指针指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误详细信息的 Native Client OLE DB provider SSERRORINFO 结构。  

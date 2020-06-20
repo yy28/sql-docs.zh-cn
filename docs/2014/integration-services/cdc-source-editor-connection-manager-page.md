@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 304e6717-e160-4a7b-a06f-32182449fef8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7e33946220b10f35596a6496637c8572f5b97403
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c6ee99e02d9c3c5e78d00abd3e8d9f5673ee4d22
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061055"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924048"
 ---
 # <a name="cdc-source-editor-connection-manager-page"></a>CDC 源编辑器（“连接管理器”页）
   可以使用“CDC 源编辑器”**** 对话框的“连接管理器”**** 页，为 CDC 源从其中读取更改行的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 数据库（CDC 数据库）选择 ADO.NET 连接管理器。 一旦选择了 CDC 数据库，则需要选择该数据库中的一个捕获表。  
@@ -46,7 +45,7 @@ ms.locfileid: "66061055"
  **捕获实例**  
  选择或键入具有要读取的 CDC 表的“CDC 捕获实例”的名称。  
   
- 一个捕获源表可具有一个或两个捕获实例，以便通过架构更改处理表定义的无缝转换。 如果为要捕获的源表定义了一个捕获实例，则选择要在此处使用的捕获实例。 表 [schema].[table] 的默认捕获实例名称为 \<schema>_\<table>，但使用的实际捕获实例名称可能会不同。 从中读取的实际表是 CDC 表**cdc。\<捕获-实例>_CT**。  
+ 一个捕获源表可具有一个或两个捕获实例，以便通过架构更改处理表定义的无缝转换。 如果为要捕获的源表定义了一个捕获实例，则选择要在此处使用的捕获实例。 表 [schema] 的默认捕获实例名称。[表] 为 \<schema> _ \<table> ，但使用的实际捕获实例名称可能不同。 从中读取的实际表是 CDC 表**cdc。 \<capture-instance>_CT**。  
   
  **CDC 处理模式**  
  选择可以最好地满足您的处理需要的处理模式。 可能的选项包括：  
@@ -57,7 +56,7 @@ ms.locfileid: "66061055"
   
 -   **净值**：对于当前 CDC 处理范围中修改的每个源行，仅返回一个更改行。 如果某一源行更新了多次，将生成合并的更改（例如，插入+更新作为单个更新生成，更新+删除作为单个删除生成）。 在净更改处理模式下工作时，可以拆分对删除、插入和更新输出的更改并且并行处理它们，因为单个源行出现多次。  
   
--   **Net with 更新掩码**：此模式类似于常规的 Net 模式，但它还添加了命名模式为 **__ $\<列\_** 的布尔值列>_Changed，用于指示当前更改行中已更改的列。  
+-   **Net with 更新掩码**：此模式类似于常规 Net 模式，但它还添加了命名模式为 **__ $ \<column-name> \_ _Changed**的布尔值列，用于指示当前更改行中已更改的列。  
   
 -   **净值且具有合并**：此模式类似于一般的净值模式，但具有合并到单个合并操作中的插入和更新操作 (UPSERT)。  
   

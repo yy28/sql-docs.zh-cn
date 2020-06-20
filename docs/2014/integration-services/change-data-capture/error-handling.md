@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e0924c4ac6d2ddd4e14b35794b9c03ac7fb2e136
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7537a892e5453bb66c07ab4b2c6bd6513b754c7e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62835642"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923238"
 ---
 # <a name="error-handling"></a>错误处理
   Oracle CDC 实例从单个 Oracle 源数据库（一个 Oracle RAC 群集被视为单个数据库）挖掘更改并且将提交的更改写入目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 CDC 数据库的更改表中。  
@@ -37,7 +36,7 @@ ms.locfileid: "62835642"
 |状态|活动状态代码|错误状态代码|说明|  
 |------------|------------------------|-----------------------|------------------|  
 |ABORTED|0|1|Oracle CDC 实例未运行。 ABORTED 子状态指示 Oracle CDC 实例曾处于活动状态但之后已意外停止。<br /><br /> ABORTED 子状态在 Oracle CDC 服务主实例检测到 Oracle CDC 实例未运行而其状态为 ACTIVE 时建立。|  
-|ERROR|0|1|Oracle CDC 实例未运行。 ERROR 状态指示 CDC 实例曾处于活动状态但之后遇到了无法恢复的错误并且禁用了自身。 ERROR 状态包含以下子状态代码：<br /><br /> MISCONFIGURED：检测到无法恢复的配置错误。<br /><br /> PASSWORD-REQUIRED：没有为 Change Data Capture Designer for Oracle by Attunity 设置密码或者配置的密码无效。 这可能是因为对服务的非对称密钥密码进行的更改。|  
+|错误|0|1|Oracle CDC 实例未运行。 ERROR 状态指示 CDC 实例曾处于活动状态但之后遇到了无法恢复的错误并且禁用了自身。 ERROR 状态包含以下子状态代码：<br /><br /> MISCONFIGURED：检测到无法恢复的配置错误。<br /><br /> PASSWORD-REQUIRED：没有为 Change Data Capture Designer for Oracle by Attunity 设置密码或者配置的密码无效。 这可能是因为对服务的非对称密钥密码进行的更改。|  
 |RUNNING|1|0|CDC 实例正在运行并且正在处理更改记录。 RUNNING 状态包含以下子状态代码：<br /><br /> IDLE：所有更改记录都已处理并且存储在目标控制 (**_CT**) 表中。 没有针对控制表的活动事务。<br /><br /> PROCESSING：存在正处理、但尚未写入控制 (**_CT**) 表的更改记录。|  
 |STOPPED|0|0|CDC 实例未在运行。 STOP 子状态指示 CDC 实例曾处于活动状态并且之后已正确停止。|  
 |SUSPENDED|1|1|CDC 实例正在运行，但由于无法恢复的错误处理已挂起。 SUSPENDED 状态包含以下子状态代码：<br /><br /> DISCONNECTED：无法建立与源 Oracle 数据库的连接。 在连接恢复后会继续处理。<br /><br /> STORAGE：存储已满。 在存储变为可用时将继续处理。 在某些情况下，此状态可能不会出现，因为状态表无法更新。<br /><br /> LOGGER：记录器连接到 Oracle，但由于临时问题而无法读取 Oracle 事务日志。|  
@@ -48,14 +47,14 @@ ms.locfileid: "62835642"
 ## <a name="error-handling"></a>错误处理  
  本节介绍 Oracle CDC 服务如何处理错误。  
   
-### <a name="logging"></a>Logging  
+### <a name="logging"></a>日志记录  
  Oracle CDC 服务在下列位置之一中创建错误信息。  
   
 -   Windows 事件日志，用于记录错误以及指示 Oracle CDC 服务生命周期事件（开始、停止、连接到/重新连接到目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例）。  
   
 -   MSXDBCDC.dbo.xdbcdc_trace 表，用于 Oracle CDC 服务主进程进行的一般日志记录和跟踪。  
   
--   \<cdc-database>.cdc.xdbcdc_trace 表，用于 Oracle CDC 实例进行的常规日志记录和跟踪。 这意味着与特定 Oracle CDC 实例相关的错误将记录到该实例的跟踪表中。  
+-   \<cdc-database>Cdc. xdbcdc_trace 表，用于 ORACLE Cdc 实例的一般日志记录和跟踪。 这意味着与特定 Oracle CDC 实例相关的错误将记录到该实例的跟踪表中。  
   
  在对该服务执行以下操作时 Oracle CDC 服务会将信息记入日志：  
   

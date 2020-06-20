@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f94e3b59-ff2f-4d8d-8479-e85ce5b3483e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bd38e8d1685b23cfeeb1793d02b0fff1d7de0640
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a0d610b6541439124d2c289dfd319811c1e0d95
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662241"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029363"
 ---
 # <a name="objectaltered-event-class"></a>Object:Altered 事件类
   Object:Altered 事件类指示一个对象已更改，例如通过 ALTER INDEX、ALTER TABLE 或 ALTER DATABASE 语句更改对象。 此事件类可用来确定是否正在更改对象；例如通常用来创建临时存储过程的 ODBC 应用程序正在更改对象。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b01571fa-bc19-4742-8eed-ac163172a919
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 429ba1f8a12a4bd574a8304d18311a6e6e4efc79
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c7d2c37e38386f7e46c1b8a0800d45dfc0b9b0dd
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058699"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967075"
 ---
 # <a name="flat-file-destination-editor-connection-manager-page"></a>平面文件目标编辑器（“连接管理器”页）
   可以使用 **“平面文件目标编辑器”** 对话框的 **“连接管理器”** 页为目标选择平面文件连接，以及指定是覆盖现有目标文件还是追加到现有目标文件。 平面文件目标可以将数据写入文本文件。 该文本文件可以采用带分隔符、固定宽度、带有行分隔符的固定宽度或右边未对齐的格式。  
@@ -40,7 +39,7 @@ ms.locfileid: "66058699"
  **覆盖文件中的数据**  
  指示是覆盖现有文件还是向现有文件中追加数据。  
   
- **Header**  
+ **标头**  
  键入在向文件中写入任何数据之前插入到该文件中的文本块。 使用此选项可以包括其他信息，如列标题。  
   
  **预览**  

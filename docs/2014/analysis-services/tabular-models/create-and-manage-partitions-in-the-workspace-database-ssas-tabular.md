@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0b3027d6-652b-4eb3-a197-58b25df65218
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 37f1b8c1f97601ab9997fdb6706587f42e1b4e6f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef8a03920b20adadc19072f184a0629885d4a3fb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067462"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939798"
 ---
 # <a name="create-and-manage-partitions-in-the-workspace-database-ssas-tabular"></a>创建和管理工作区数据库中的分区（SSAS 表格）
   分区将表分成多个逻辑部分。 然后，可单独处理（刷新）每个分区，也可与其他分区并行处理每个分区。 分区可以提高大型数据库的可扩展性和可管理性。 默认情况下，每个表都具有一个包含所有列的分区。 本主题中的任务说明如何使用中的 "**分区管理器**" 对话框在模型工作区数据库中创建和管理分区。[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]  

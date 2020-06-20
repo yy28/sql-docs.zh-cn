@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7078d2fb-fa77-44fc-beb3-c095088fcb85
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d88acb23573afbd38e24836e254e8f54921806c0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a320b0cea686cdec953b2a508d7f0c277fc2e817
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63154606"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048393"
 ---
 # <a name="filegroup-element-for-index-dta"></a>索引的文件组元素 (DTA)
   指定要针对用户指定的配置，对其创建索引的文件组。  

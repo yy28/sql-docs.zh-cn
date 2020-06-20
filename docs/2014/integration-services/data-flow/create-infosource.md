@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e7db233b-5464-43de-9d26-6dd24c7ac1b7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: eba2d2d28c06a60cc8269a349996646726f59142
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e953cf4c8b3001b199523a747f934283e60473b8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827945"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916247"
 ---
 # <a name="create-infosource"></a>“创建 InfoSource”
   使用 **“创建 InfoSource”** 对话框创建一个新 InfoSource。 要创建新 InfoSource，请使用 **“创建事务数据的 InfoSource”** 或 **“创建主数据的 InfoSource”** 对话框。  

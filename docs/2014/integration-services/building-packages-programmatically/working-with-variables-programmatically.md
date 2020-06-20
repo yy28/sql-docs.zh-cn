@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: c4b76a3d-94ca-4a8e-bb45-cb8bd0ea3ec1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 42ac0e7f8b2c41fa30dd41c8255e0b8f04f6e730
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9d9ce228394ac5e11e9d526aee98dc1c012ef511
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176537"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924748"
 ---
 # <a name="working-with-variables-programmatically"></a>以编程方式使用变量
   变量提供一种在包、容器、任务和事件处理程序中动态设置值和控制进程的方式。 优先约束还可使用变量来控制数据流流向不同任务的方向。 变量具有多种用途：

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 68ffd473-6546-4015-98d0-3763165de65c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e81ea0aac9cfe7676abba18bc7dffb2e1561597b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f409e978bf977d48fbfc3a9ec56d5ebfe2b545ef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62678715"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064087"
 ---
 # <a name="workload-element-dta"></a>工作负荷元素 (DTA)
   指定要用于优化会话的工作负荷。  
@@ -57,7 +56,7 @@ ms.locfileid: "62678715"
  必须为每个优化会话指定一个工作负荷。  
   
 ## <a name="example"></a>示例  
- 下面的代码示例为`Workload`元素指定**MyDatabase. workload. mydatabase.mydbowner.tuningtable001**跟踪表。 使用带有 SQL Server 事件探查器的优化模板创建 **TuningTable001** ，并将该跟踪输出另存为一个表。  
+ 下面的代码示例为元素指定**MyDatabase. workload. mydatabase.mydbowner.tuningtable001**跟踪表。 `Workload` 使用带有 SQL Server 事件探查器的优化模板创建 **TuningTable001** ，并将该跟踪输出另存为一个表。  
   
 ```  
 <DTAXML ...>  

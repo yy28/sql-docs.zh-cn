@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: da9cd2c4-6fdd-4ada-b74f-105e3541393c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e3888782f93dde5726ed808383ea7da0c9a02a4d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8fc22c4af9980eb5c1c365c0ce2d0e2f6c8462e1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827190"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028995"
 ---
 # <a name="performance-statistics-event-class"></a>Performance Statistics 事件类
   Performance Statistics 事件类可用于监视正在执行的查询、存储过程和触发器的性能。 六个事件子类分别表示系统内查询、存储过程和触发器的生存期内的一个事件。 使用这些事件子类的组合以及关联的 sys.dm_exec_query_stats、sys.dm_exec_procedure_stats 和 sys.dm_exec_trigger_stats 动态管理视图，可以重新构建任何给定查询、存储过程或触发器的性能历史记录。  
@@ -38,7 +37,7 @@ ms.locfileid: "62827190"
 |EventSubClass|`int`|事件子类的类型。<br /><br /> 0 = 当前未存在于缓存中的新批处理 SQL 文本。<br /><br /> 下列 EventSubClass 类型是在即席批查询的跟踪中生成的。<br /><br /> 对于有 *n* 次查询的即席批查询：<br /><br /> 1 个类型 0 的查询|21|是|  
 |IntegerData2|`int`|Null|55|是|  
 |ObjectID|`int`|Null|22|是|  
-|偏移量|`int`|Null|61|是|  
+|Offset|`int`|Null|61|是|  
 |PlanHandle|`Image`|Null|65|是|  
 |SessionLoginName|`nvarchar`|发起会话的用户的登录名。 例如，如果您使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 SessionLoginName 将显示 Login1，而 LoginName 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|是|  
 |SPID|`int`|发生该事件的会话的 ID。|12|是|  
@@ -58,7 +57,7 @@ ms.locfileid: "62827190"
 |EventSubClass|`int`|事件子类的类型。<br /><br /> 1 = 存储过程中的查询已编译。<br /><br /> 下列 EventSubClass 类型是在存储过程的跟踪中生成的。<br /><br /> 对于有 *n* 次查询的存储过程：<br /><br /> *n* 个类型 1 的查询|21|是|  
 |IntegerData2|`int`|存储过程内语句的结尾。<br /><br /> 对于存储过程的结尾，此值为 -1。|55|是|  
 |ObjectID|`int`|系统分配的对象 ID。|22|是|  
-|偏移量|`int`|存储过程或批查询中的语句的起始偏移量。|61|是|  
+|Offset|`int`|存储过程或批查询中的语句的起始偏移量。|61|是|  
 |SPID|`int`|发生该事件的会话的 ID。|12|是|  
 |SqlHandle|`image`|SQL 句柄，可使用该句柄通过 dm_exec_sql_text 动态管理视图来获取存储过程的 SQL 文本。|63|是|  
 |StartTime|`datetime`|该事件（如果存在）的启动时间。|14|是|  
@@ -81,8 +80,8 @@ ms.locfileid: "62827190"
 |SessionLoginName|`nvarchar`|发起会话的用户的登录名。 例如，如果您使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 SessionLoginName 将显示 Login1，而 LoginName 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|是|  
 |EventSubClass|`int`|事件子类的类型。<br /><br /> 2 = 临时 SQL 语句中的查询已编译。<br /><br /> 下列 EventSubClass 类型是在即席批查询的跟踪中生成的。<br /><br /> 对于有 *n* 次查询的即席批查询：<br /><br /> *n* 个类型 2 的查询|21|是|  
 |IntegerData2|`int`|批处理内语句的结尾。<br /><br /> 对于批处理的结尾，此值为 -1。|55|是|  
-|ObjectID|`int`|不适用|22|是|  
-|偏移量|`int`|批处理中的语句的起始偏移量。<br /><br /> 对于批处理的开始，此值为 0。|61|是|  
+|ObjectID|`int`|空值|22|是|  
+|Offset|`int`|批处理中的语句的起始偏移量。<br /><br /> 对于批处理的开始，此值为 0。|61|是|  
 |SPID|`int`|发生该事件的会话的 ID。|12|是|  
 |SqlHandle|`image`|SQL 句柄。 可使用该句柄通过 dm_exec_sql_text 动态管理视图来获取批查询 SQL 文本。|63|是|  
 |StartTime|`datetime`|该事件（如果存在）的启动时间。|14|是|  
@@ -105,7 +104,7 @@ ms.locfileid: "62827190"
 |EventSubClass|`int`|事件子类的类型。<br /><br /> 3 = 保存在缓存中的某一查询已被破坏，与此计划相关的历史性能数据也将被破坏。<br /><br /> 下列 EventSubClass 类型是在跟踪中生成的。<br /><br /> 对于有 *n* 次查询的即席批查询：<br /><br /> 1 个类型 3 的查询（当从缓存中刷新查询时）<br /><br /> 对于有 *n* 次查询的存储过程：<br />1 个类型 3 的查询（当从缓存中刷新查询时）。|21|是|  
 |IntegerData2|`int`|存储过程或批处理中的语句的结尾。<br /><br /> 对于存储过程或批处理的结尾，此值为 -1。|55|是|  
 |ObjectID|`int`|Null|22|是|  
-|偏移量|`int`|存储过程或批查询中的语句的起始偏移量。<br /><br /> 对于存储过程或批处理的开始，此值为 0。|61|是|  
+|Offset|`int`|存储过程或批查询中的语句的起始偏移量。<br /><br /> 对于存储过程或批处理的开始，此值为 0。|61|是|  
 |SPID|`int`|发生该事件的会话的 ID。|12|是|  
 |SqlHandle|`image`|SQL 句柄，可使用该句柄通过 dm_exec_sql_text 动态管理视图来获取存储过程或批查询 SQL 文本。|63|是|  
 |StartTime|`datetime`|该事件（如果存在）的启动时间。|14|是|  
@@ -125,7 +124,7 @@ ms.locfileid: "62827190"
 |EventSubClass|`int`|事件子类的类型。<br /><br /> 4 = 缓存的存储过程已从缓存中删除，与它关联的历史性能数据也即将销毁。|21|是|  
 |IntegerData2|`int`|Null|55|是|  
 |ObjectID|`int`|存储过程的 ID。 与 sys.procedures 中的 object_id 列相同。|22|是|  
-|偏移量|`int`|Null|61|是|  
+|Offset|`int`|Null|61|是|  
 |SPID|`int`|发生该事件的会话的 ID。|12|是|  
 |SqlHandle|`image`|SQL 句柄，可使用该句柄通过 dm_exec_sql_text 动态管理视图来获取所执行的存储过程 SQL 文本。|63|是|  
 |StartTime|`datetime`|该事件（如果存在）的启动时间。|14|是|  
@@ -145,7 +144,7 @@ ms.locfileid: "62827190"
 |EventSubClass|`int`|事件子类的类型。<br /><br /> 5 = 缓存的触发器已从缓存中删除，与它关联的历史性能数据也即将销毁。|21|是|  
 |IntegerData2|`int`|Null|55|是|  
 |ObjectID|`int`|触发器的 ID。 与 sys.triggers/sys.server_triggers 目录视图中的 object_id 列相同。|22|是|  
-|偏移量|`int`|Null|61|是|  
+|Offset|`int`|Null|61|是|  
 |SPID|`int`|发生该事件的会话的 ID。|12|是|  
 |SqlHandle|`image`|SQL 句柄，可使用该句柄通过 dm_exec_sql_text 动态管理视图来获取触发器的 SQL 文本。|63|是|  
 |StartTime|`datetime`|该事件（如果存在）的启动时间。|14|是|  

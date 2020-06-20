@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 307d69c3-cabb-4dfa-b90c-9852492c1213
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ea2d05c2862445737ea544fdab9c4ca8fc5e6c76
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 08c0856df10c2b70dc58ab1b52b0b7a4a1041e1b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066847"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938738"
 ---
 # <a name="process-database-table-or-partition"></a>处理数据库、表或分区
-  本主题中的任务说明如何使用中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 "**处理\<对象>** " 对话框手动处理表格模型数据库、表或分区。  
+  本主题中的任务说明如何使用中的 "**处理 \<object> ** " 对话框手动处理表格模型数据库、表或分区 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。  
   
  有关表格模型处理的详细信息，请参阅[处理数据（SSAS 表格）](../process-data-ssas-tabular.md)。  
   
@@ -32,7 +31,7 @@ ms.locfileid: "66066847"
   
 2.  在 **“处理数据库”** 对话框的 **“模式”** 列表框中，选择下列处理模式之一：  
   
-    |“模式”|说明|  
+    |Mode|说明|  
     |----------|-----------------|  
     |**处理默认值**|检测数据库对象的处理状态，进行必要的处理，将未处理对象或部分处理的对象转变成为已完全处理的对象。 为空表和分区加载数据；生成或重新生成（重新计算）层次结构、计算列和关系。|  
     |**处理全部**|处理数据库及其包含的所有对象。 对已处理的对象运行“处理全部”时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将删除该对象中的所有数据，然后再处理该对象。 在对对象进行结构更改后，需要这种类型的处理。 此选项需要的资源最多。|  
@@ -47,7 +46,7 @@ ms.locfileid: "66066847"
   
 2.  在 **“处理表”** 对话框的 **“模式”** 列表框中，选择下列处理模式之一：  
   
-    |“模式”|说明|  
+    |Mode|说明|  
     |----------|-----------------|  
     |**处理默认值**|检测表对象的处理状态，进行必要的处理，将未处理对象或部分处理的对象转变成为已完全处理的对象。 为空表和分区加载数据；生成或重新生成（重新计算）层次结构、计算列和关系。|  
     |**处理全部**|处理表对象及其包含的所有对象。 对已处理的对象运行“处理全部”时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将删除该对象中的所有数据，然后再处理该对象。 在对对象进行结构更改后，需要这种类型的处理。 此选项需要的资源最多。|  
@@ -65,7 +64,7 @@ ms.locfileid: "66066847"
   
 3.  在 **“处理分区”** 对话框的 **“模式”** 列表框中，选择下列处理模式之一：  
   
-    |“模式”|说明|  
+    |Mode|说明|  
     |----------|-----------------|  
     |**处理默认值**|检测分区对象的处理状态，执行必要的处理，将未处理的分区对象或部分处理的分区对象交付为已完全处理的分区对象。 为空表和分区加载数据；生成或重新生成（重新计算）层次结构、计算列和关系。|  
     |**处理全部**|处理分区对象及其包含的所有对象。 对已处理的对象运行“处理全部”时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将删除该对象中的所有数据，然后再处理该对象。 在对对象进行结构更改后，需要这种类型的处理。|  

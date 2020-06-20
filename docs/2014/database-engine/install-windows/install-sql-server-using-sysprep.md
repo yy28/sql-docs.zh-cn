@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6470cd60eb3b5491b8941685dcae00a49b4e967c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d35b8f27dc0ef6a1deb40bd86ed193973c2c40b0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775300"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932501"
 ---
 # <a name="install-sql-server-2014-using-sysprep"></a>使用 SysPrep 安装 SQL Server 2014
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 相关的安装操作可以通过安装中心来访问。  “安装中心”的  “高级”页具有两个选项 - **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“** 的独立实例的映像准备”和 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“** 的已准备独立实例的映像完成”。 [准备](#prepare) 和 [完成](#complete) 部分将详细说明安装过程。 有关详细信息，请参阅 [Considerations for Installing SQL Server Using SysPrep](considerations-for-installing-sql-server-using-sysprep.md)。  
@@ -29,7 +28,7 @@ ms.locfileid: "62775300"
 ## <a name="prerequisites"></a>必备条件  
  安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之前，请查阅 [计划 SQL Server 安装](../../sql-server/install/planning-a-sql-server-installation.md)中的主题。  
   
- 有关[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本以及硬件和软件要求的详细信息，请参阅[安装 SQL Server 2014 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。  
+ 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本以及硬件和软件要求的详细信息，请参阅[安装 SQL Server 2014 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 不支持以下版本：  
@@ -115,7 +114,7 @@ ms.locfileid: "62775300"
   
      仅当计算机上存在未配置的已准备 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例时，才显示****“准备映像类型”页。 您可以选择准备 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的新实例，或者将 sys prep 支持的功能添加到计算机上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的现有已准备实例。 有关如何向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已准备实例添加功能的详细信息，请参阅 [向已准备实例添加功能](#AddFeatures)。  
   
-8.  在 "**许可条款**" 页上，阅读许可协议，然后选中相应的复选框以接受许可条款和条件。 为了帮助改进 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您还可以启用功能使用情况选项并将报告发送给 [!INCLUDE[msCoName](../../includes/msconame-md.md)]。  
+8.  在 **“许可条款”** 页上阅读许可协议，然后选中相应的复选框以接受许可条款和条件。 为了帮助改进 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您还可以启用功能使用情况选项并将报告发送给 [!INCLUDE[msCoName](../../includes/msconame-md.md)]。  
   
 9. 在 **“功能选择”** 页上，选择要安装的组件：  
   
@@ -129,7 +128,7 @@ ms.locfileid: "62775300"
   
 10. 在 **“准备映像规则”** 页上，系统配置检查器将在安装继续之前验证计算机的系统状态。 您可以通过单击 **“显示详细信息”** 在屏幕上查看详情，或通过单击 **“查看详细报告”** 从而以 HTML 报告的形式进行查看。  
   
-11. 在“实例配置”页上，指定实例的实例 ID。 单击“下一步”继续。  
+11. 在“实例配置”页上，指定实例的实例 ID。 单击 **“下一步”** 以继续。  
   
      **实例 ID** - 实例 ID 用于标识 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的安装目录和注册表项。 默认实例和命名实例都是如此。 如果已准备实例在“完成”步骤中作为默认实例完成，则该实例名称将被覆盖为 MSSQLSERVER。 实例 ID 仍保持指定的 ID。  
   
@@ -137,9 +136,9 @@ ms.locfileid: "62775300"
   
      所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack 和升级都将应用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的每个组件。  
   
-     **已安装的实例**-该网格显示[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]运行安装程序的计算机上的实例。  
+     **已安装的实例**-该网格显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 运行安装程序的计算机上的实例。  
   
-12. "**磁盘空间要求**" 页计算指定的功能所需的磁盘空间。 然后将所需空间与可用磁盘空间进行比较。  
+12. **“磁盘空间要求”** 页计算指定的功能所需的磁盘空间， 然后将所需空间与可用磁盘空间进行比较。  
   
 13. 系统配置检查器将运行准备映像规则来针对您指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能验证您的计算机配置。 您可以通过单击 **“显示详细信息”** 在屏幕上查看详情，或通过单击 **“查看详细报告”** 从而以 HTML 报告的形式进行查看。  
   
@@ -167,7 +166,7 @@ ms.locfileid: "62775300"
   
 5.  在 **“产品密钥”** 页上，选择某一选项按钮，该按钮指示您是安装免费版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，还是安装具有 PID 密钥的产品的生产版本。 有关详细信息，请参阅[SQL Server 2014 的版本和组件](../../sql-server/editions-and-components-of-sql-server-2016.md)。 如果您在安装 Evaluation 版，则 180 天的试用期将从您完成此步骤时开始。  
   
-6.  在 "**许可条款**" 页上，阅读许可协议，然后选中相应的复选框以接受许可条款和条件。 为了帮助改进 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您还可以启用功能使用情况选项并将报告发送给 [!INCLUDE[msCoName](../../includes/msconame-md.md)]。  
+6.  在 **“许可条款”** 页上阅读许可协议，然后选中相应的复选框以接受许可条款和条件。 为了帮助改进 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您还可以启用功能使用情况选项并将报告发送给 [!INCLUDE[msCoName](../../includes/msconame-md.md)]。  
   
 7.  在 **“选择已准备实例”** 页上，从下拉框中选择您要完成的已准备实例。 从****“实例 ID”列表中选择未配置的实例。  
   
@@ -178,7 +177,7 @@ ms.locfileid: "62775300"
     > [!NOTE]  
     >  您可以添加可用于您正在安装的产品版本的功能。 有关详细信息，请参阅[SQL Server 2014 的各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
-9. 在“实例配置”页上，指定已准备实例的实例名称。 这是您完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的配置后的实例的名称。 单击“下一步”继续。  
+9. 在“实例配置”页上，指定已准备实例的实例名称。 这是您完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的配置后的实例的名称。 单击 **“下一步”** 以继续。  
   
      **实例 ID** - 实例 ID 用于标识 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的安装目录和注册表项。 默认实例和命名实例都是如此。 如果已准备实例在“完成”步骤中作为默认实例完成，则该实例名称将被覆盖为 MSSQLSERVER。 实例 ID 仍保持准备阶段中指定的 ID。  
   
@@ -200,7 +199,7 @@ ms.locfileid: "62775300"
   
      为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务指定登录信息后，请单击 **“下一步”**。  
   
-12. 使用 "**服务器配置-排序规则**" 选项卡为[!INCLUDE[ssDE](../../includes/ssde-md.md)]和[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]指定非默认排序规则。 有关详细信息，请参阅[服务器配置 - 排序规则](../../sql-server/install/server-configuration-collation.md)。  
+12. 使用 "**服务器配置-排序规则**" 选项卡为和指定非默认排序规则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。 有关详细信息，请参阅[服务器配置 - 排序规则](../../sql-server/install/server-configuration-collation.md)。  
   
 13. 使用“ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 配置 - 帐户设置”页指定以下各项：  
   
@@ -223,7 +222,7 @@ ms.locfileid: "62775300"
   
 16. 使用“ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置”页指定要创建的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装类型。 有关 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置模式的详细信息，请参阅 [Reporting Services 配置选项 (SSRS)](../../sql-server/install/reporting-services-configuration-options-ssrs.md)。  
   
-17. 在 "**错误报告**" 页上，指定要发送到以[!INCLUDE[msCoName](../../includes/msconame-md.md)]帮助改进[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的信息。 默认情况下，将启用用于错误报告的选项。  
+17. 在 "**错误报告**" 页上，指定要发送到以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 帮助改进的信息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 默认情况下，将启用用于错误报告的选项。  
   
 18. 在 **“完整映像规则”** 页上，系统配置检查器将运行完整的映像规则，以便使用您所指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置来验证您的计算机配置。 您可以通过单击 **“显示详细信息”** 在屏幕上查看详情，或通过单击 **“查看详细报告”** 从而以 HTML 报告的形式进行查看。  
   
@@ -281,7 +280,7 @@ ms.locfileid: "62775300"
   
 4.  在 **“选择实例”** 页中，选择要修改的已准备实例。 已准备实例的名称将显示为“未配置 PreparedInstanceID”，其中 PreparedInstanceID 是您选择的实例。  
   
-5.  在 **“选择功能”** 页上，指定要从指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中删除的功能。 单击“下一步”继续。  
+5.  在 **“选择功能”** 页上，指定要从指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中删除的功能。 单击 **“下一步”** 以继续。  
   
 6.  将运行删除规则以验证是否可以成功完成删除操作。  
   
@@ -303,7 +302,7 @@ ms.locfileid: "62775300"
   
 4.  在 **“选择实例”** 页中，选择要修改的已准备实例。 已准备实例的名称将显示为“未配置 PreparedInstanceID”，其中 PreparedInstanceID 是您选择的实例。  
   
-5.  在 **“选择功能”** 页上，指定要从指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中删除的功能。 单击“下一步”继续。  
+5.  在 **“选择功能”** 页上，指定要从指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中删除的功能。 单击 **“下一步”** 以继续。  
   
 6.  在 **“删除规则”** 页上，安装程序将运行规则以验证是否可以成功完成操作。  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 4f09d040-9ec8-4aaa-b684-f632d571f0a8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a87af3febdab1e98dac0b1546b8b2b8939b739d6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8a24369829ae8b6fb45098e6ebc0be2f0e676e69
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061119"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924118"
 ---
 # <a name="cdc-control-task-editor"></a>CDC 控制任务编辑器
   使用 **“CDC 控制任务编辑器”** 对话框可以配置 CDC 控制任务。 CDC 控制任务配置包括定义与 CDC 数据库的连接、CDC 任务操作和状态管理信息。  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 232ac8ed-77fe-47d8-acd3-59bc2fdfdf48
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f90ea08269e79e57c623af41fc2f0fbc09e2fb42
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b153dfbe9dfdbb5741304153bd7b3dfd1d0d1b3c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066639"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938668"
 ---
 # <a name="restore-from-powerpivot"></a>从 PowerPivot 还原
   您可以使用 SQL Server Management Studio 中的“从 PowerPivot 还原”功能针对 Analysis Services 实例（在表格模式下运行）创建新的表格模型数据库，或从 PowerPivot 工作簿 (.xlsx) 还原到现有数据库。  

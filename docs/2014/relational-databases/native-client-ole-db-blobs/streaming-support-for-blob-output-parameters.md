@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b55fccbe-643e-42f1-bf9e-99509c4281af
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0635342e73edc8567299fbcdb719bd7106b27c9e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 39e21f3e56380ed4ccd96fb6f2ffa9d969c2ad0a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82708209"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056398"
 ---
 # <a name="streaming-support-for-blob-output-parameters"></a>BLOB 输出参数的流支持
   本主题包含一个示例，显示针对 BLOB 输出参数的流支持，它将 BLOB 输出参数绑定为 ISequentialStreams。  

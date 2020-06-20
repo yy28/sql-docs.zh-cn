@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fd66ad1f-df01-4240-9e89-8f41bff12c1e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a82e13202209121897a5e5878a141c8d53800a47
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 40a617dd1beff24f8f072f5d139bec7c1ca65f33
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62745418"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063696"
 ---
 # <a name="subscription-validation-options-transactional-subscriptions"></a>订阅验证选项（事务订阅）
   使用 "**订阅验证选项**" 对话框可以指定是仅使用行计数进行验证，还是使用行计数和二进制校验和进行验证。  
