@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 380e77e5-ad60-43d4-9605-34a84525f5dd
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 113f73bd363ca866f45e439eb5d599b177a910ce
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 66b4ffa868c6e488c4a4c008609a2c36cdb47104
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054150"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961757"
 ---
 # <a name="enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services"></a>为显式层次结构和集合启用实体 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，为显式层次结构和集合启用一个实体，以便您可以为该实体创建显式层次结构和集合。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  

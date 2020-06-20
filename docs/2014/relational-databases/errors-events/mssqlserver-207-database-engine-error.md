@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d1ab00c7-0331-437a-84fe-bae53b82feec
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5d39cfd6ca3eba8222dda09a83fdd809bb7d00e9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bd6044c08ecd5a73f539bfbc1139d6257c2db9d3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62915047"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054202"
 ---
 # <a name="mssqlserver_207"></a>MSSQLSERVER_207
     
@@ -118,8 +117,8 @@ ms.locfileid: "62915047"
 -   MERGE 语句中的 WHEN NOT MATCHED BY SOURCE 子句引用的是可以访问的值。 修改 MERGE 语句，使源表至少在 WHEN NOT MATCHED BY SOURCE 子句中返回一行。 例如，您可能需要添加或修订为子句指定的搜索条件。 或者，也可以更改该子句以指定没有引用源表的值。 例如，`WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = <expression, or other available value>` 。  
   
 ## <a name="see-also"></a>另请参阅  
- [MERGE &#40;Transact-sql&#41;](/sql/t-sql/statements/merge-transact-sql)   
- [FROM &#40;Transact-sql&#41;](/sql/t-sql/queries/from-transact-sql)   
+ [MERGE (Transact-SQL)](/sql/t-sql/statements/merge-transact-sql)   
+ [FROM (Transact-SQL)](/sql/t-sql/queries/from-transact-sql)   
  [SELECT (Transact-SQL)](/sql/t-sql/queries/select-transact-sql)   
  [UPDATE (Transact-SQL)](/sql/t-sql/queries/update-transact-sql)  
   

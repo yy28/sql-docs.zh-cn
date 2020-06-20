@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 292da1ed-4c7e-4bd2-9b84-b9ee09917724
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 395df605926f0ff4ddc30970cdcebce0f1d0c8fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8fad4d1cbeaa84b5c6be683d7a87997d1a3f89bc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63044442"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052636"
 ---
 # <a name="qnparameter-table-event-class"></a>QN:Parameter Table 事件类
   QN:Parameter table 事件报告有关创建、删除存储参数信息的内部表和为其保留引用计数所需操作的信息。 另外，此事件还报告重置参数表的使用计数的内部活动。  
@@ -38,7 +37,7 @@ ms.locfileid: "63044442"
 |GroupID|`int`|在其中激发 SQL 跟踪事件的工作负荷组的 ID。|66|是|  
 |HostName|`nvarchar`|正在运行客户端程序的计算机的名称。 如果客户端提供了主机名，则填充此数据列。 若要确定主机名，请使用 HOST_NAME 函数。|8|是|  
 |IsSystem|`int`|指示事件是发生在系统进程中还是发生在用户进程中。<br /><br /> 0 = 用户<br /><br /> 1 = 系统|60|否|  
-|LoginName|`nvarchar`|用户的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名（安全登录名或 Windows 登录凭据，格式为 "*域*\\*用户名*"）。|11|否|  
+|LoginName|`nvarchar`|用户的登录名（ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全登录名或 Windows 登录凭据，格式为 "*域* \\ *用户名*"）。|11|否|  
 |LoginSID|`image`|已登录用户的安全标识号 (SID)。 您可以在 sys.server_principals 目录视图中找到此信息。 服务器中的每个登录名都具有唯一的 SID。|41|是|  
 |NTDomainName|`nvarchar`|用户所属的 Windows 域。|7|是|  
 |NTUserName|`nvarchar`|拥有生成此事件的连接的用户的名称。|6|是|  

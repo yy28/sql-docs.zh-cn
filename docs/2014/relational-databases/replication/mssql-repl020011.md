@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f72072d7-bbb6-48ad-ac88-afa74aeb4d58
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 481e0b383fd877ec81385bcd4ca4ee37106bb298
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 646f25740ebb007f8d04a89690d3b712781efcc8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022768"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060714"
 ---
 # <a name="mssql_repl020011"></a>MSSQL_REPL020011
     
@@ -33,7 +32,7 @@ ms.locfileid: "63022768"
 |消息正文|进程无法在“%2”上执行“%1”。|  
   
 ## <a name="explanation"></a>说明  
- 事务复制处理过程中的许多情况都可能引发此错误，例如日志读取器代理执行 **sp_replcmds**（此过程无法在 \<服务器名> 上执行“sp_replcmds”）或 **sp_repldone**（此过程无法在 \<服务器名> 上执行“sp_repldone”）时。  
+ 在事务复制处理期间，可能会在很多情况下引发此错误，例如，当日志读取器代理执行时**sp_replcmds** （进程无法在上执行 "sp_replcmds" \<ServerName> ）或**sp_repldone** （进程无法在上执行 "sp_repldone" \<ServerName> ）。  
   
 ## <a name="user-action"></a>用户操作  
  如果在您刚刚从备份中还原的数据库中出现此错误，请确保遵守了备份和还原文档中列出的步骤，包括在适合时执行 **sp_replrestart** 。 有关详细信息，请参阅 [快照复制和事务复制的备份和还原策略](administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)。  

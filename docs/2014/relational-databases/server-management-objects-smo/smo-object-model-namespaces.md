@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7bfabe4d-9f4c-4bc9-b998-93bd2b50ee8a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ceef262411bf420330cf9e650d61a916719cb0e2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f20c9413923c68ae393315230511722c13f207d6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63130769"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055242"
 ---
 # <a name="smo-namespaces"></a>SMO 命名空间
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象 (SMO) 具有不同的命名空间。 不同的命名空间表示 SMO 中的不同功能区域。  
@@ -34,7 +33,7 @@ ms.locfileid: "63130769"
   
 |类|函数|  
 |-----------|--------------|  
-|<xref:Microsoft.SqlServer.Management.Smo>|包含用于以编程方式操作[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例类、实用工具类和枚举。|  
+|<xref:Microsoft.SqlServer.Management.Smo>|包含用于以编程方式操作的实例类、实用工具类和枚举 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |<xref:Microsoft.SqlServer.Management.Common>|包含复制管理对象 (RMO) 和 SMO 共有的类，例如连接类。|  
 |<xref:Microsoft.SqlServer.Management.Smo.Agent>|包含表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的类。|  
 |<xref:Microsoft.SqlServer.Management.Smo.Wmi>|包含表示 WMI 提供程序的类。|  

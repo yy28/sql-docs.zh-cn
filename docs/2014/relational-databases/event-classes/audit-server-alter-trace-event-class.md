@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 967586bf-d5f1-466c-82ab-8c461bfb6222
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 10c3556edb5c58e281db2dcaf5c05e9a202a3091
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a75a4aca9ca78fbfd3bd5b4aaa43e49ff2a3bcca
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63012514"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053138"
 ---
 # <a name="audit-server-alter-trace-event-class"></a>Audit Server Alter Trace 事件类
   对于检查 ALTER TRACE 权限的所有语句，都会发生 **Audit Server Alter Trace** 事件类。 检查 ALTER TRACE 的语句包括用于创建或配置跟踪或者在跟踪上设置筛选器的语句。  

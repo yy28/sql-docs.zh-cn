@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e9582244-7d00-45f4-be16-020a65c76a5e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 03dae95f44b4166947da4ef7bd88b532db00dd03
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d632da029905c4ce914c843a2ea1319e780ac735
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62667233"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060772"
 ---
 # <a name="refresh-data-in-replication-monitor"></a>刷新复制监视器中的数据
   在复制监视器中，可以自动或手动刷新主窗口和详细信息窗口（从主窗口启动的那些窗口）。 若要手动刷新窗口，请按 F5 键。 默认情况下，主窗口每五分钟自动刷新一次。每个发布服务器的刷新速率均可以自定义。  
@@ -42,7 +41,7 @@ ms.locfileid: "62667233"
   
     3.  右键单击订阅，然后单击 **“查看详细信息”** 。  
   
-2.  在“订阅 **SubscriptionName>”\<** 详细信息窗口中，单击“操作”  ，然后单击“自动刷新”  。 刷新速率由 **“发布服务器设置”** 对话框中的 **“刷新速率”** 设置决定。  
+2.  在 "**订阅 \<SubscriptionName> **详细信息" 窗口中，单击 "**操作**"，然后单击 "**自动刷新**"。 刷新速率由 **“发布服务器设置”** 对话框中的 **“刷新速率”** 设置决定。  
   
 ## <a name="see-also"></a>另请参阅  
  [监视复制](../monitoring-replication.md)  

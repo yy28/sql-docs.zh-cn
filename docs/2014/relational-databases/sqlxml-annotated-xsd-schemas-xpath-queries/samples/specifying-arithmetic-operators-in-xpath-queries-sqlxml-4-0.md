@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fdfbc87d-759f-4abc-acf5-a21de01f78d3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3d4ffa4b8eed84bd6597552967b3e51b10459749
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7b3b95dbc3a228d2b7f54cea18cad1ba5636527c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717852"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014983"
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>在 XPath 查询中指定算数运算符 (SQLXML 4.0)
   以下示例说明如何在 XPath 查询中指定算数运算符。 本示例中的 XPath 查询针对 SampleSchema1.xml 中包含的映射架构指定。 有关此示例架构的信息，请参阅[&#40;SQLXML 4.0&#41;的 XPath 批注的 XSD 架构示例](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)。  
@@ -28,13 +27,13 @@ ms.locfileid: "82717852"
 ## <a name="examples"></a>示例  
   
 ### <a name="a-specify-the--arithmetic-operator"></a>A. 指定 * 算数运算符  
- 此 XPath 查询返回满足指定谓词的** \< OrderDetail>** 元素：  
+ 此 XPath 查询返回 **\<OrderDetail>** 满足指定谓词的元素：  
   
 ```  
 /child::OrderDetail[@UnitPrice * @Quantity = 12.350]  
 ```  
   
- 在查询中， `child` 是轴， `OrderDetail` 是节点测试（如果**OrderDetail**是** \< 元素节点>**，则为 TRUE，因为>节点的** \< 元素**是轴的主节点 `child` ）。 对于所有** \< OrderDetail>** 元素节点，将应用谓词中的测试，并只返回满足条件的那些节点。  
+ 在查询中， `child` 是轴， `OrderDetail` 是节点测试（如果**OrderDetail**为，则为 TRUE **\<element node>** ，因为 **\<element>** 节点是轴的主节点 `child` ）。 对于所有 **\<OrderDetail>** 元素节点，将应用谓词中的测试，并只返回满足条件的那些节点。  
   
 > [!NOTE]  
 >  XPath 中的数字是双精度浮点数，对本示例中的浮点数进行比较将导致舍入。  

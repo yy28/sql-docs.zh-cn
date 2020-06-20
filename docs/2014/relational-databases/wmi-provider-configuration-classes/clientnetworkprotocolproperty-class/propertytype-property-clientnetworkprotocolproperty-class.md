@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: fc0e4725-979f-4517-a8f5-25436b87f5c2
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 244775d3b2a5fe301bd1d5d56803873aae21eaa8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 520699ce05d447ab3b40831a3fc34a9838110e30
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63135932"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014063"
 ---
 # <a name="propertytype-property-clientnetworkprotocolproperty-class"></a>PropertyType 属性（ClientNetworkProtocolProperty 类）
   获取[PropertyIdx 属性（ClientNetworkProtocolProperty 类）](clientnetworkprotocolproperty-class.md)值引用的属性的类型。  
@@ -38,7 +37,7 @@ object
   
 ## <a name="parts"></a>组成部分  
  *object*  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)]表示[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]客户端使用的网络协议属性的[ClientNetworkProtocolProperty 类](clientnetworkprotocolproperty-class.md)对象。  
+ 表示客户端使用的网络协议属性的[ClientNetworkProtocolProperty 类](clientnetworkprotocolproperty-class.md)对象 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  一个指定属性类型的 `uint32` 值。  

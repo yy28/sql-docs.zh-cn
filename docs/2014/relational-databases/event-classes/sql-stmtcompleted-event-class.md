@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a55f005d-e020-423c-8940-c24ea1b20104
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 62dc29f8143f92fc9674ed10c092dc6ad08570fa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 85bd8f79f7be5a46e8f714f69a0b61de560a0aed
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63060336"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051695"
 ---
 # <a name="sqlstmtcompleted-event-class"></a>SQL:StmtCompleted 事件类
   SQL:StmtCompleted 事件类指示 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句已完成。  
@@ -48,7 +47,7 @@ ms.locfileid: "63060336"
 |NestLevel|`int`|存储过程的嵌套级别（如果曾在存储过程中运行过语句）。|29|是|  
 |NTDomainName|`nvarchar`|用户所属的 Windows 域。|7|是|  
 |NTUserName|`nvarchar`|Windows 用户名。|6|是|  
-|偏移量|`int`|存储过程或批查询中的语句的起始偏移量。|61|是|  
+|Offset|`int`|存储过程或批查询中的语句的起始偏移量。|61|是|  
 |读取|`bigint`|由 SQL 语句发出的页读取数。|16|是|  
 |RequestID|`int`|包含该语句的请求的 ID。|49|是|  
 |RowCounts|`bigint`|事件所影响的行数。|48|是|  

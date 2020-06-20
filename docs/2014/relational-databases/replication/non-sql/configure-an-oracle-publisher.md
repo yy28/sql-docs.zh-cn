@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bffa36106278b8913a9ecb042e94318c41ce87b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4941a02deb770678f4efcf4d2dfc7b08243fff54
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022595"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005401"
 ---
 # <a name="configure-an-oracle-publisher"></a>配置 Oracle 发布服务器
   Oracle 发布服务器中的发布的创建方法与典型快照和事务发布相同，但在创建 Oracle 发布服务器中的发布之前，必须先完成下列步骤（本主题详细介绍步骤 1、步骤 3 和步骤 4）：  
@@ -41,7 +40,7 @@ ms.locfileid: "63022595"
 > [!NOTE]  
 >   删除 **MSSQLSERVERDISTRIBUTOR** 公共同义词和用 **CASCADE** 选项配置的 Oracle 复制用户，会删除 Oracle 发布服务器上的所有复制对象。  
   
- 有一个示例脚本可以帮助建立 Oracle 复制用户架构。 安装后，该脚本位于以下目录中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]： * \<drive>*：\\\Program Files\Microsoft SQL Server\\*\<InstanceName>* \mssql\install\oracleadmin.sql。 [Script to Grant Oracle Permissions](script-to-grant-oracle-permissions.md)主题中也包括了此脚本。  
+ 有一个示例脚本可以帮助建立 Oracle 复制用户架构。 安装后，该脚本位于以下目录中 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ： *\<drive>* ： \\ \Program Files\Microsoft SQL Server \\ *\<InstanceName>* \mssql\install\oracleadmin.sql。 [Script to Grant Oracle Permissions](script-to-grant-oracle-permissions.md)主题中也包括了此脚本。  
   
  使用具有 DBA 权限的帐户连接到 Oracle 数据库并执行此脚本。 此脚本将提示输入复制管理用户架构的用户名和密码以及用于创建对象的默认表空间（此表空间必须已存在于 Oracle 数据库中）。 有关为对象指定其他表空间的信息，请参阅[管理 Oracle 表空间](manage-oracle-tablespaces.md)。 可以任选用户名和强密码，但要将它们记下来，因为以后将 Oracle 数据库配置为发布服务器时会提示您输入此信息。 建议只将此架构用于复制所需的对象，而不要在此架构下创建要发布的表。  
   
@@ -74,7 +73,7 @@ ms.locfileid: "63022595"
   
  在 Oracle Universal Installer 中，您需要提供以下信息：  
   
-|信息|说明|  
+|信息|描述|  
 |-----------------|-----------------|  
 |Oracle 主目录|这是 Oracle 软件的安装目录的路径。 接受默认路径（C:\oracle\ora90 或类似路径），或输入另一个路径。 有关 Oracle 主目录的详细信息，请参阅本主题后面的“Oracle 主目录注意事项”部分。|  
 |Oracle 主目录名称|Oracle 主目录路径的别名。|  
@@ -105,7 +104,7 @@ ms.locfileid: "63022595"
   
      `sqlplus <UserSchemaLogin>/<UserSchemaPassword>@<NetServiceName>`  
   
-     例如：`sqlplus replication/$tr0ngPasswerd@Oracle90Server`  
+     例如： `sqlplus replication/$tr0ngPasswerd@Oracle90Server`  
   
 4.  如果网络配置成功，将成功登录，并显示 `SQL` 提示符。  
   

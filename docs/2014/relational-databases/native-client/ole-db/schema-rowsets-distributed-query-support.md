@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 11354bb6-be42-4d8d-854c-42dd3dc38656
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a47dd9575132210bbd5d664fbb3c73b57289693f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 48b57bbf40590f8ad5c049268f25fe66d2f94357
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704232"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998487"
 ---
 # <a name="distributed-query-support-in-schema-rowsets"></a>架构行集中的分布式查询支持
   为了支持 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分布式查询， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider **IDBSchemaRowset**接口将返回链接服务器上的元数据。  

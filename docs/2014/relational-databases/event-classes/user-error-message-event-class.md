@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d7594261-ccd9-487c-9678-11875ba57fb7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: afd556972ea3f5b47850e8cc20a8a5624ed45da5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d23a8ee66cafc4bef1f258e40dbe51274a308eb8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63064564"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051366"
 ---
 # <a name="user-error-message-event-class"></a>User Error Message 事件类
   User Error Message 事件类显示的是用户在错误或异常情况下查看的错误消息。 错误消息文本出现在 TextData 字段中。  
@@ -48,7 +47,7 @@ ms.locfileid: "63064564"
 |严重性|`int`|错误或异常的严重级别。|20|是|  
 |SPID|`int`|发生该事件的会话的 ID。|12|是|  
 |StartTime|`datetime`|该事件（如果存在）的启动时间。|14|是|  
-|State|`int`|等同于错误状态代码。|30|是|  
+|状态|`int`|等同于错误状态代码。|30|是|  
 |TextData|`ntext`|错误消息或异常的文本。|1|是|  
 |TransactionID|`bigint`|系统分配的事务 ID。|4|是|  
 |XactSequence|`bigint`|用于说明当前事务的标记。|50|是|  

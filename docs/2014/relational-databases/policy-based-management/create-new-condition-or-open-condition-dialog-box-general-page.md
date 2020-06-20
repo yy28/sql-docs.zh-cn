@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 106954bf-e4ba-412b-9c1a-907d06153dcd
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 296cdebc8a7a290cf8cdd848359ad776fa290c30
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c48a07d3b69c3beb0cf05dee29f89b7078658090
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63057758"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005791"
 ---
 # <a name="create-new-condition-or-open-condition-dialog-box-general-page"></a>“创建新条件”或“打开条件”对话框，“常规”页
   此对话框用于创建或更改基于策略的管理条件。 条件是一个布尔表达式，用于针对方面指定基于策略的管理目标的一组允许状态。 可在****“表达式”/“字段”框中选择的属性取决于所使用的方面。 有关条件与方面和策略如何关联的详细信息，请参阅 [使用基于策略的管理来管理服务器](administer-servers-by-using-policy-based-management.md)。  
@@ -35,7 +34,7 @@ ms.locfileid: "63057758"
  **字段**  
  每个方面公开一个或多个可设置的属性。 在“字段”框中，从可用属性列表中选择一个属性，为此条件创建一个表达式。  
   
- **操作员**  
+ **运算符**  
  为该表达式选择一个比较运算符。 比较运算符包括：=、!=、>、>=、<、<=、[NOT]LIKE、[NOT]IN。 并非所有运算符都适用于某些属性。  
   
  **值**  

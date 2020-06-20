@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 732dafee-f2d5-4aef-aad7-3a8bf3b1e876
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 037176b5e1833b3cbfcbc93131560fcafcc8e404
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 42e6221a85c30e3adb97df3a11c9cbdc49216b4d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704667"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039116"
 ---
 # <a name="updating-data-in-sql-server-cursors"></a>更新 SQL Server 游标中的数据
   通过游标提取和更新数据时 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者应用程序将受到与应用于任何其他客户端应用程序相同的注意事项和约束的约束。  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a34a3e69e157894b29db48da19f44d1e35dad746
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 57fb59a3954fb00ab943944c58cccd352c7270d2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62524248"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014348"
 ---
 # <a name="use-the-eventdata-function"></a>使用 EVENTDATA 函数
   使用 EVENTDATA 函数，可以捕获有关激发 DDL 触发器的事件的信息。 此函数返回 `xml` 值。 XML 架构包括下列信息：  
@@ -49,7 +48,7 @@ AS
   
  `CREATE TABLE NewTable (Column1 int);`  
   
- DDL 触发器中的 `EVENTDATA()` 语句将捕获不允许使用的 `CREATE TABLE` 语句文本。 这是通过对 EVENTDATA 生成的`xml`数据使用 XQuery 语句以及检索\<CommandText> 元素实现的。 有关详细信息，请参阅 [XQuery 语言参考 (SQL Server)](/sql/xquery/xquery-language-reference-sql-server)。  
+ DDL 触发器中的 `EVENTDATA()` 语句将捕获不允许使用的 `CREATE TABLE` 语句文本。 这是通过对 EVENTDATA 生成的数据使用 XQuery 语句 `xml` 并检索元素实现的 \<CommandText> 。 有关详细信息，请参阅 [XQuery 语言参考 (SQL Server)](/sql/xquery/xquery-language-reference-sql-server)。  
   
 > [!CAUTION]  
 >  EVENTDATA 将捕获 CREATE_SCHEMA 事件的数据以及相应 CREATE SCHEMA 定义的 <schema_element>（如果存在）。 此外，EVENTDATA 将 <schema_element> 定义识别为单独的事件。 因此，针对 CREATE_SCHEMA 事件和由 CREATE_SCHEMA 定义的 <schema_element> 表示的事件创建的 DDL 触发器可能两次返回相同的事件数据，如 `TSQLCommand` 数据。 例如，针对 CREATE_SCHEMA 事件和 CREATE_TABLE 事件创建的 DDL 触发器，将运行下列批处理：  

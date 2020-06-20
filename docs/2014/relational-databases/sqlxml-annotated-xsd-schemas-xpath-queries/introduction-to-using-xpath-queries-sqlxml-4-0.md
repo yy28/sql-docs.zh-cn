@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 01050a8e-0ccc-4a02-a4eb-b48be5c3f4f3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 69fe9c7decd7521ca752b0b5092748c907036f40
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9a32f28268d39b0cc93a315f45d775804eacdd98
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703122"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015395"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>XPath 查询使用简介 (SQLXML 4.0)
   XML Path 语言 (XPath) 查询可以指定作为 URL 的一部分，或在模板内指定。 映射架构决定生成的此片段的结构，值从数据库中进行检索。 从概念上来说，此过程类似于使用 CREATE VIEW 语句创建视图，然后根据视图编写 SQL 查询。  
@@ -45,9 +44,9 @@ ms.locfileid: "82703122"
 </root>  
 ```  
   
- 在本文档中， ** \< Customer>** 是元素节点， **cid**是属性节点， **"重要"** 是文本节点。  
+ 在本文档中， **\<Customer>** 是元素节点， **cid**是属性节点， **"重要"** 是文本节点。  
   
- XPath 是图形导航语言，用于从 XML 文档中选择节点集。 每个 XPath 运算符根据前一个 XPath 运算符所选择的节点集来选择节点集。 例如，给定一组** \< Customer>** 节点，XPath 可以选择**日期**属性值为 **"7/14/1999"** 的所有** \< 顺序>** 节点。 生成的节点集包含订单日期为 7/14/1999 的所有订单。  
+ XPath 是图形导航语言，用于从 XML 文档中选择节点集。 每个 XPath 运算符根据前一个 XPath 运算符所选择的节点集来选择节点集。 例如，给定一组 **\<Customer>** 节点，XPath 可以选择 **\<Order>** **日期**属性值为 **"7/14/1999"** 的所有节点。 生成的节点集包含订单日期为 7/14/1999 的所有订单。  
   
  万维网联盟 (W3C) 将 XPath 语言规定为标准导航语言。 SQLXML 4.0 实现了位于的 W3C XPath 规范的子集 http://www.w3.org/TR/1999/PR-xpath-19991008.html 。  
   
@@ -55,7 +54,7 @@ ms.locfileid: "82703122"
   
 -   **根查询**  
   
-     SQLXML 4.0 不支持根查询 (/)。 每个 XPath 查询必须在该架构中的顶级** \< ElementType>** 开始。  
+     SQLXML 4.0 不支持根查询 (/)。 每个 XPath 查询必须在架构的顶级开始 **\<ElementType>** 。  
   
 -   **报告错误**  
   
@@ -89,11 +88,11 @@ ms.locfileid: "82703122"
 ## <a name="supported-functionality"></a>支持的功能  
  下表显示了 SQLXML 4.0 中实现的 XPath 语言功能。  
   
-|功能|项|示例查询链接|  
+|Feature|项|示例查询链接|  
 |-------------|----------|----------------------------|  
 |Axes|`attribute`、`child`、`parent` 和 `self` 轴|[&#40;SQLXML 4.0&#41;在 XPath 查询中指定轴](samples/specifying-axes-in-xpath-queries-sqlxml-4-0.md)|  
 |包含连续谓词和嵌套谓词的布尔值谓词||[&#40;SQLXML 4.0&#41;在 XPath 查询中指定算术运算符](samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
-|所有关系运算符|=、！ =、<、 \< =、>、>=|[&#40;SQLXML 4.0&#41;在 XPath 查询中指定关系运算符](samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
+|所有关系运算符|=、！ =、<、 \<=, > >=|[&#40;SQLXML 4.0&#41;在 XPath 查询中指定关系运算符](samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |算术运算符|+、-、*、div|[&#40;SQLXML 4.0&#41;在 XPath 查询中指定算术运算符](samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |显式转换函数|`number()`, `string()`, `Boolean()`|[&#40;SQLXML 4.0&#41;在 XPath 查询中指定显式转换函数](samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)|  
 |布尔运算符|AND、OR|[在 &#40;SQLXML 4.0&#41;的 XPath 查询中指定布尔运算符](samples/specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)|  
@@ -103,7 +102,7 @@ ms.locfileid: "82703122"
 ## <a name="unsupported-functionality"></a>不支持的功能  
  下表显示了 SQLXML 4.0 中未实现的 XPath 语言功能。  
   
-|功能|项|  
+|Feature|项|  
 |-------------|----------|  
 |Axes|`ancestor`, `ancestor-or-self`, `descendant`, `descendant-or-self (//)`, `following`, `following-sibling`, `namespace`, `preceding`, `preceding-sibling`|  
 |数值谓词||  
@@ -111,7 +110,7 @@ ms.locfileid: "82703122"
 |节点函数|`ancestor`, `ancestor-or-self`, `descendant`, `descendant-or-self (//)`, `following`, `following-sibling`, `namespace`, `preceding`, `preceding-sibling`|  
 |字符串函数|`string()`, `concat()`, `starts-with()`, `contains()`, `substring-before()`, `substring-after()`, `substring()`, `string-length()`, `normalize()`, `translate()`|  
 |布尔函数|`lang()`|  
-|数值函数|`sum()`, `floor()`, `ceiling()`, `round()`|  
+|数字函数|`sum()`, `floor()`, `ceiling()`, `round()`|  
 |Union 运算符|&#124;|  
   
  在模板中指定 XPath 查询时，请注意以下行为：  

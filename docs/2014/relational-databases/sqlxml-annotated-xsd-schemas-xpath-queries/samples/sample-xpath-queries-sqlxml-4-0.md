@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1595c2d4-0e9c-4969-84c8-a793a32df57d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 260102f14919708836131e263c7ad687441ed987
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 96cc8bb406af4ce18eed8f078296fa1dcf69299e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717879"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014998"
 ---
 # <a name="sample-xpath-queries-sqlxml-40"></a>示例 XPath 查询 (SQLXML 4.0)
   本节提供 SQLXML 4.0 的 XPath 查询示例。 为了便于说明，在使用 ADO 执行的模板中指定这些示例 XPath 查询。 因此，您必须使用映射架构文件 SampleSchema1.xml，本节中也提供了此文件。 将此文件保存在存储模板的目录中。  

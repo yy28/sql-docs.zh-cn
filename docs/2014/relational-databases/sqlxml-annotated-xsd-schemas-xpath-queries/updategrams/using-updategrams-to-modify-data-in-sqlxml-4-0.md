@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: b8b3b892-cb73-41d0-b945-bce148d81d9b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cb266c198b7c828f1f8842cf4ffa3dc9c1de10e9
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4844ae1b242db1cc8aace7eecc78d58351bf839b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702994"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014956"
 ---
 # <a name="using-updategrams-to-modify-data-in-sqlxml-40"></a>使用 Updategram 修改 SQLXML 4.0 中的数据
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 通过使用 UPDATEGRAM 或 OPENXML 函数，可以从现有的 XML 文档中修改（插入、更新或删除）数据库 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 。  

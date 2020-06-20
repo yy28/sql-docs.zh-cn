@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a115ba95-17ae-45df-91bd-5a1a35f3745f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 287d565947a13621fd3ba39cff6437ff76894c03
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 520db8f10b9a60d2c8bd48771a5660402be835ab
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63021698"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016499"
 ---
 # <a name="publication-information-tracer-tokens-transactional-publication-sql-server-2005-and-later"></a>发布信息，跟踪令牌（事务发布，SQL Server 2005 和更高版本）
   可以使用“跟踪令牌”**** 选项卡验证连接，以及测量使用事务复制的系统的滞后时间。 将令牌（少量数据）写入发布数据库的事务日志中，就像标记典型的复制事务一样对其进行标记，使用令牌可以执行以下计算：  
@@ -63,7 +62,7 @@ ms.locfileid: "63021698"
  **分发服务器到订阅服务器**  
  在分发数据库中插入命令和在订阅服务器上提交相应事务之间所间隔的时间。 值为 **“挂起”** 指示令牌尚未到达订阅服务器。 如果持续显示挂起状态，请确保分发代理正在运行。  
   
- **总滞后时间**  
+ **总延迟**  
  在发布服务器上提交事务和在订阅服务器上提交相应事务之间所间隔的时间。 该值表示对于此订阅服务器，此时复制系统的端对端滞后时间。 值为 **“挂起”** 指示令牌尚未到达订阅服务器。  
   
 ## <a name="see-also"></a>另请参阅  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 74a52449-e08d-40f9-9e79-7114137e43cf
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 6b750e435ab31fae25877cd6c53702aeeec2670d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 995ddc912ea91c513446f9e0a5a3dc400a4f3e1f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62643130"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059788"
 ---
 # <a name="protocolname-property-servernetworkprotocolipaddress-class"></a>ProtocolName 属性（ServerNetworkProtocolIPAddress 类）
   获取引用 IP 地址的服务器网络协议的名称。  
@@ -38,7 +37,7 @@ object
   
 ## <a name="parts"></a>组成部分  
  *object*  
- 一个表示实例[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]上的网络协议 IP 地址的[ServerNetworkProtocolIPAdress 类](servernetworkprotocolipaddress-class.md)对象。  
+ 一个表示实例上的网络协议 IP 地址的[ServerNetworkProtocolIPAdress 类](servernetworkprotocolipaddress-class.md)对象 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  一个指定服务器网络协议名称的字符串值。  

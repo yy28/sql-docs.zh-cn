@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: 7a5ebeb6-7322-4141-a307-ebcf95976146
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 11144714addb50dc4c481512399228802390f2f3
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 267f9044505126cbe7f865e6577da3cbe2f26bcf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703610"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055145"
 ---
 # <a name="explicit-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>XSD 元素和属性到表和列的显式映射 (SQLXML 4.0)
   当使用 XSD 架构提供关系数据库的 XML 视图时，必须将该架构的元素和属性映射至数据库的表和列。 数据库表/视图中的行将映射至 XML 文档中的元素。 数据库中的列值映射到属性或元素。  
@@ -58,9 +57,9 @@ ms.locfileid: "82703610"
  若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[运行 SQLXML 示例的要求](../sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>A. 指定 sql:relation 和 sql:field 批注  
- 在此示例中，XSD 架构包含一个** \< Contact>** 包含** \< FName>** 和** \< LName>** 子元素和**ContactID**属性的复杂类型的元素。  
+ 在此示例中，XSD 架构包含 **\<Contact>** 带有和子元素的复杂类型的元素 **\<FName>** **\<LName>** 和**ContactID**属性。  
   
- `sql:relation`批注将** \< Contact>** 元素映射到 AdventureWorks 数据库中的 contact 表。 `sql:field`批注将** \< FName>** 元素映射到 FirstName 列，并且将** \< LName>** 元素映射到 LastName 列。  
+ `sql:relation`批注将元素映射 **\<Contact>** 到 AdventureWorks 数据库中的 Person 表。 `sql:field`批注将元素映射 **\<FName>** 到 FirstName 列，并将 **\<LName>** 元素映射到 LastName 列。  
   
  没有为**ContactID**属性指定批注。 这导致将属性默认映射为具有相同名称的列。  
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 13da4c7f-1010-4b2d-a63c-c69b6bfd96f1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4f1b4823db4ae961024ac2a786c948d8349f31be
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7b8000c1c28d5a1d3d129b6e8d01c4ab2fbbbc7d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919634"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954688"
 ---
 # <a name="nullability-and-three-value-logic-comparisons"></a>为 Null 性和三值逻辑比较
   如果您熟悉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型，您会在 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 `System.Data.SqlTypes` 命名空间中发现类似语义和精度。 但是，这些数据类型之间存在一些不同之处，本主题介绍了这些不同之处中最重要的内容。  
@@ -36,9 +35,9 @@ ms.locfileid: "62919634"
  `System.Data.SqlTypes` 命名空间引入了一个 `SqlBoolean` 类型以表示该三值逻辑。 在任何 `SqlTypes` 之间进行比较将返回一个 `SqlBoolean` 值类型。 UNKNOWN 值由 `SqlBoolean` 类型的 Null 值表示。 提供了属性 `IsTrue`、`IsFalse` 和 `IsNull` 来检查 `SqlBoolean` 类型的值。  
   
 ## <a name="operations-functions-and-null-values"></a>操作、函数和 NULL 值  
- 如果的任何操作数或参数为 null \*，则所有算术运算符（+、-、、/、%）、位运算符（~、& 和 |）和大多数函数`SqlTypes`都返回 null。 `IsNull` 属性始终返回一个 True 或 False 值。  
+ 如果的任何操作数或参数为 NULL，则所有算术运算符（+、-、 \* 、/、%）、位运算符（~、& 和 |）和大多数函数都返回 null `SqlTypes` 。 `IsNull` 属性始终返回一个 True 或 False 值。  
   
-## <a name="precision"></a>Precision  
+## <a name="precision"></a>精度  
  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR 中的 decimal 数据类型较 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 numeric 和 decimal 数据类型具有不同的最大值。 另外，在 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR 中，decimal 数据类型假设具有最大精度。 但是，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 CLR 中，`SqlDecimal` 提供了与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 decimal 数据类型相同的最大精度和小数位数以及相同的语义。  
   
 ## <a name="overflow-detection"></a>溢出检测  

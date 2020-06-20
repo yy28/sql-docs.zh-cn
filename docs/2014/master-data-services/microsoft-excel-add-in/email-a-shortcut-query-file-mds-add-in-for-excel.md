@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 5d46f20a-b04a-45c7-82af-02a2baaabbd7
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8d8e6a882899993ef91659d44456ca95fbb19094
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 94fb2d07cfd40c8685ef6a8259d871108bbd17bb
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65478892"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961177"
 ---
 # <a name="email-a-shortcut-query-file-mds-add-in-for-excel"></a>通过电子邮件发送快捷查询文件（用于 Excel 的 MDS 外接程序）
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 中，如果想要确保用户使用和你一样的数据，则可以通过电子邮件向他们发送快捷查询文件。 您应该共享查询，而不是将工作表保存并通过电子邮件发送。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  若要执行此过程：  
   
 -   您必须安装 Outlook 2010 或更高版本。  

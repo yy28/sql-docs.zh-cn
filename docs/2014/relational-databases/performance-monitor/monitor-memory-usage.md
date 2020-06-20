@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 1aee3933-a11c-4b87-91b7-32f5ea38c87f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c8d7dc9fdf5a6cd6e52261c0d2327676db79508c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ceb2174950731df9c54ed8ee0caba0578714df75
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63239143"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998379"
 ---
 # <a name="monitor-memory-usage"></a>监视内存使用量
   定期监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例以确认内存使用量在正常范围内。  

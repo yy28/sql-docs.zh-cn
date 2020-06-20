@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: b987b141-5abf-4161-a073-4cfc3e7f5aae
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 757c70398afe0f88d535b6853abe29b79e9617bc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac7c811c6f823b20a99fa590b48448d4b8ca3dbf
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482559"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961097"
 ---
 # <a name="filter-dialog-box-mds-add-in-for-excel"></a>“筛选器”对话框（用于 Excel 的 MDS 外接程序）
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]在中，使用 "**筛选器**" 对话框可以在将 MDS 管理的数据加载到 Excel 中之前缩小其列表范围。  
+  在中 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] ，使用 "**筛选器**" 对话框可以在将 MDS 管理的数据加载到 Excel 中之前缩小其列表范围。  
   
  此对话框包含三个部分： **“列”**、 **“行”** 和 **“摘要”**。  
   
@@ -40,8 +39,8 @@ ms.locfileid: "65482559"
   
 |控件名称|说明|  
 |------------------|-----------------|  
-|属性|显示筛选所依据的属性。 如果未列出任何属性，这是因为尚未添加任何属性。<br /><br /> 注意：可依据不准备在工作表中显示的属性进行筛选。|  
-|运算符|显示对应于所选属性的类型的运算符。 有关详细信息，请参阅 [Filter 运算符 (Master Data Services)](../filter-operators-master-data-services.md)。|  
+|Attribute|显示筛选所依据的属性。 如果未列出任何属性，这是因为尚未添加任何属性。<br /><br /> 注意：可依据不准备在工作表中显示的属性进行筛选。|  
+|操作员|显示对应于所选属性的类型的运算符。 有关详细信息，请参阅 [Filter 运算符 (Master Data Services)](../filter-operators-master-data-services.md)。|  
 |条件|筛选要依据的条件。|  
 |更新摘要|处理大型数据集时，单击该选项可使用要加载的数据的详细信息来更新 **“摘要”** 部分。|  
 |添加|在您单击 **“列”** 部分中的属性，然后单击 **“添加”** 后，将向筛选器列表添加属性。|  
@@ -53,7 +52,7 @@ ms.locfileid: "65482559"
   
 |控件名称|说明|  
 |------------------|-----------------|  
-|型号|模型的名称。|  
+|“模型”|模型的名称。|  
 |版本|版本的名称。|  
 |实体|实体的名称。|  
 |“行”|基于在 **“行”** 部分中应用的筛选器要加载到 Excel 中的行数。|  

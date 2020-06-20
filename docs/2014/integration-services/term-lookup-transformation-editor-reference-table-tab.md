@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 86ccec6d-615b-4f84-9226-ff80d8012f17
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e28dda733e4c93c482e26eeb207189014a1940da
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c00aa838b5bf420862cfe2793c404989ad911c9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055160"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962082"
 ---
 # <a name="term-lookup-transformation-editor-reference-table-tab"></a>字词查找转换编辑器（“引用表”选项卡）
   可以使用“字词查找转换编辑器”**** 对话框的“引用表”**** 选项卡指定到引用（查找）表的连接。  

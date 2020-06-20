@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 03dd7fac-5073-4f86-babd-37e45a86023c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9f0884a37c443f863cf0c1001bae1242852db3ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a98f64bc5b9dffc3e2494a0c36c8fc04cdfb6fa2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63135349"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041193"
 ---
 # <a name="create-an-alert-using-an-error-number"></a>使用错误号创建警报
-  本主题介绍如何在中创建[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理警报，该[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]警报将在使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../includes/tsql-md.md)]的情况下出现特定编号的错误时引发。  
+  本主题介绍如何 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在中创建代理警报 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，该警报将在使用或的情况下出现特定编号的错误时 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 引发 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。  
   
  **本主题内容**  
   
@@ -73,7 +72,7 @@ ms.locfileid: "63135349"
   
 9. 选中与 **“当消息包含以下内容时触发警报”** 复选框以将警报限制到特定的字符序列，然后在 **“消息正文”** 中输入关键字或字符串。 最大字符数为 100。  
   
-10. 单击" **确定**"。  
+10. 单击“确定”。   
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: a1fd71bf-5bf9-4ce2-9a1d-032576a4a6e9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8e94b24634eedf68afcb25c8c1ef957ce063cdc4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6ee353129d60fe7fc8bed0eff279920d8d4ba640
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63136733"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041323"
 ---
 # <a name="create-an-alert-using-severity-level"></a>Create an Alert Using Severity Level
-  本主题介绍如何使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../includes/tsql-md.md)]在中创建在发生特定严重级别的事件时引发的代理警报。  
+  本主题介绍如何 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用或在中创建在发生特定严重级别的事件时引发的代理警报 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 。  
   
  **本主题内容**  
   
@@ -74,7 +73,7 @@ ms.locfileid: "63136733"
   
 8.  选中与 **“当消息包含以下内容时触发警报”** 复选框以将警报限制到特定的字符序列，然后在 **“消息正文”** 中输入关键字或字符串。 最大字符数为 100。  
   
-9. 单击" **确定**"。  
+9. 单击“确定”。   
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

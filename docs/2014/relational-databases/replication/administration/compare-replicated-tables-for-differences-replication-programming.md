@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cd253a17-0c85-42b4-912c-690169ebe799
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 94d3faab4c831fe64e54a582a5f70b2ae6b664e4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a7d6315a8d8237effe5ae888d303e3aab0dcef1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68210783"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038406"
 ---
 # <a name="compare-replicated-tables-for-differences-replication-programming"></a>比较所复制表的差异（复制编程）
   项目验证用于确定发布服务器和订阅服务器上的表项目的已发布数据是否不同，这可能表明无法收敛。 有关详细信息，请参阅[验证已复制的数据](../validate-data-at-the-subscriber.md)。 但是，验证仅返回通过或失败信息，而不会提供任何有关源表和目标表之间存在哪些差异的信息。 **tablediff** 命令提示实用工具返回两个表之间存在的详细差异信息，甚至可生成 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本，以使订阅与发布服务器上的数据实现收敛。  

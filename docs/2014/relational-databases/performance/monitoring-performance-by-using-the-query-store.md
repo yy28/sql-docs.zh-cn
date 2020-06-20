@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 192c38bc189928cf980ab0141e53ab12f37d805c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e5d74b9c4def9c0314569a8d0bd87939cdcb11b2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175860"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038708"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Monitoring Performance By Using the Query Store
   查询存储功能让 DBA 可以探查查询计划选项和性能。 它让你可以快速找到查询计划中的更改所造成的性能差异，从而简化了性能疑难解答。 这一性能会自动捕获查询、计划和运行时统计信息的历史记录，并将其保留以供你查看。 它按时间窗口将数据分割开来，使你可以查看数据库使用情况模式并了解服务器上何时发生了查询计划更改。 可使用 [ALTER DATABASE SET](/sql/t-sql/statements/alter-database-transact-sql-set-options) 选项来配置查询存储。
@@ -506,7 +505,7 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
 
  在使用 `sp_query_store_force_plan` 时，你只可以强制执行查询存储记录为该查询计划的那些计划。 换句话说，可用于查询的计划只有那些在查询存储处于活动状态时已使用执行 Q1 的哪些计划。
 
- **删除强制执行查询的计划。** 若要再次依赖于[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]查询优化器来计算最佳查询计划，请`sp_query_store_unforce_plan`使用取消强制执行为查询选择的计划。
+ **删除强制执行查询的计划。** 若要再次依赖于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 查询优化器来计算最佳查询计划，请使用 `sp_query_store_unforce_plan` 取消强制执行为查询选择的计划。
 
 ```
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c73dbe55-d685-42eb-b0ee-9f3c5b9d97f3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 527e646f956e60b2c8495a738a85595baac383f2
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d63a3ebc13f5bfc0852c589a36185b5147c8c8d0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702330"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061168"
 ---
 # <a name="use-the-value-and-nodes-methods-with-openxml"></a>将 value() 和 nodes() 方法用于 OPENXML
   您可以对 SELECT 子句中的数据类型使用多个**value （）** 方法 `xml` 来生成提取值的行集。 **SELECT** **nodes()** 方法为可用于其他查询的每个所选节点生成一个内部引用。 生成行集时，如果行集有多个列且用于生成行集的路径表达式比较复杂，结合使用 **nodes()** 和 **value()** 方法可能会更有效。  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2055865c-f25e-4113-b7e4-2b8ba426335b
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 74fcbb6fb9e9f4fe3f2b50f5fb434cbae6491113
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ff43cf072f73fca56fefaeedc39a9691e6de50ad
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091474"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041709"
 ---
 # <a name="upgrade-how-to-topics"></a>升级操作指南主题
   本节中的主题说明如何升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 独立实例。  
@@ -31,7 +30,7 @@ ms.locfileid: "66091474"
   
 ## <a name="see-also"></a>另请参阅  
  [在升级服务器实例时最大程度减少镜像数据库的停机时间](../../database-engine/database-mirroring/upgrading-mirrored-instances.md)   
- [支持的版本和版本升级](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
+ [支持的版本升级](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [向后兼容性](../../../2014/getting-started/backward-compatibility.md)  
   
   

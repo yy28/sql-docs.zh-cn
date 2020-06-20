@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 840af91236f95d2065a926db93100e0a2bdc312f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 310e32b2804664c4189e8e677227018d853f934a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62989087"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060549"
 ---
 # <a name="filter-published-data"></a>筛选已发布数据
   通过筛选表项目，可以为要发布的数据创建分区。 通过筛选已发布数据，可以：  
@@ -100,7 +99,7 @@ ms.locfileid: "62989087"
 |SQL Server 7.0 合并发布中的所有列|SQL Server 7.0 合并发布中不能筛选的列。|  
 |时间戳|允许可更新订阅的 SQL Server 7.0 快照或事务发布|  
   
- <sup>1</sup>如果在合并发布中发布表，且该表已包含具有`uniqueidentifier` `ROWGUIDCOL`属性集的数据类型的列，则复制可以使用此列，而不是创建另一个名为**rowguid**的列。 在这种情况下，必须发布现有列。  
+ <sup>1</sup>如果在合并发布中发布表，且该表已包含具有属性集的数据类型的列 `uniqueidentifier` ，则 `ROWGUIDCOL` 复制可以使用此列，而不是创建另一个名为**rowguid**的列。 在这种情况下，必须发布现有列。  
   
  若要定义或修改列筛选器，请参阅 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)中的“使用 HOST_NAME() 进行筛选”部分。  
   
@@ -129,7 +128,7 @@ ms.locfileid: "62989087"
   
 -   事务复制允许您将索引视图按视图或表来复制。 如果将视图按表复制，则无法从表中筛选列。  
   
- 行筛选器未设计为跨数据库工作。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 有意将 `sp_replcmds` 的执行（执行筛选器）限制为数据库所有者 (`dbo`)。 `dbo` 不具有跨数据库权限。 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 中增加 CDC（变更数据捕获）后，`sp_replcmds` 逻辑将使用用户可以返回到和查询的信息填充变更跟踪表。 出于安全原因， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]会限制此逻辑的执行，使恶意`dbo`不能劫持此执行路径。 例如，恶意的 `dbo` 可能在 CDC 表上添加触发器，然后这些触发器会在调用 `sp_replcmds` 的用户（在这种情况下为日志读取器代理）的上下文中执行。  如果运行该代理所用的帐户具有更高权限，则恶意的 `dbo` 可以提升其权限。  
+ 行筛选器未设计为跨数据库工作。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 有意将 `sp_replcmds` 的执行（执行筛选器）限制为数据库所有者 (`dbo`)。 `dbo` 不具有跨数据库权限。 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 中增加 CDC（变更数据捕获）后，`sp_replcmds` 逻辑将使用用户可以返回到和查询的信息填充变更跟踪表。 出于安全原因， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 会限制此逻辑的执行，使恶意 `dbo` 不能劫持此执行路径。 例如，恶意的 `dbo` 可能在 CDC 表上添加触发器，然后这些触发器会在调用 `sp_replcmds` 的用户（在这种情况下为日志读取器代理）的上下文中执行。  如果运行该代理所用的帐户具有更高权限，则恶意的 `dbo` 可以提升其权限。  
   
 ## <a name="see-also"></a>另请参阅  
  [发布数据和数据库对象](publish-data-and-database-objects.md)  

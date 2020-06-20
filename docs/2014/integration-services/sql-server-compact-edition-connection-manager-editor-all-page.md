@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f9fbff4b-c502-44b3-8e7b-398d66e82206
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8a26587f9dd426cdf53a3a53a36d0e81e95ebf77
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9e6b326e86e1a9e21a740c3bf1bd1fedb6919e98
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055466"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962717"
 ---
 # <a name="sql-server-compact-edition-connection-manager-editor-all-page"></a>SQL Server Compact Edition 连接管理器编辑器（“全部”页）
   可以使用 **“SQL Server Compact Edition 连接管理器”** 对话框，指定连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact 数据库时使用的属性。  
@@ -53,10 +52,10 @@ ms.locfileid: "66055466"
   
  “模式”选项包含四个值，如下表所述：  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**只读**|指定对数据库的只读访问。|  
-|**“读写”**|指定对数据库的读/写权限。|  
+|**读写**|指定对数据库的读/写权限。|  
 |**排他**|指定对数据库的排他访问。|  
 |**共享读取**|指定其他用户可以同时读取该数据库。|  
   

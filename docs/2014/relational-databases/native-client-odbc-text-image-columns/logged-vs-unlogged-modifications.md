@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 20aa5b27-4a2c-46e7-8356-beb0eebf4b7e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3635fee71c92196cbc9408db1487e95da2b489ea
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8768acc75d18ea2236f0e9280e5d0c805e688107
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718769"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039368"
 ---
 # <a name="logged-vs-unlogged-modifications"></a>有日志记录的修改与无日志记录的修改
   应用程序可以请求 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驱动程序不记录**text**、 **ntext**和**image**修改。 但应慎用此选项。 它仅适用于**文本**、 **ntext**或**图像**数据不重要的情况，数据所有者愿意权衡恢复数据以提高性能的能力。  
