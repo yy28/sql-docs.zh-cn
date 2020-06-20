@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7d2649dd-0038-4a2c-b16d-f80f7c306966
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bbf5bad0a8c8e633149e2868047b88833a400849
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ceb1d222131c14810d3d71bdd8faf13509f97614
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703588"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055139"
 ---
 # <a name="excluding-schema-elements-from-the-resulting-xml-document-using-sqlmapped-sqlxml-40"></a>使用 sql:mapped 从生成的 XML 文档中排除架构元素 (SQLXML 4.0)
   由于是默认映射，XSD 架构中的每个元素和属性都映射到数据库表/视图和列。 如果要在 XSD 架构中创建不映射到任何数据库表（视图）或列并且不在 XML 中显示的元素，可以指定 `sql:mapped` 批注。  
@@ -40,11 +39,11 @@ ms.locfileid: "82703588"
  若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[运行 SQLXML 示例的要求](../sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-the-sqlmapped-annotation"></a>A. 指定 sql:mapped 批注  
- 假定您有来自其他源的 XSD 架构。 此 XSD 架构由一个** \< 人员组成。请联系>** 元素**与 ContactID**、 **FirstName**、 **LastName**和**HomeAddress**属性。  
+ 假定您有来自其他源的 XSD 架构。 此 XSD 架构由元素组成，该 **\<Person.Contact>** 元素具有**ContactID**、 **FirstName**、 **LastName**和**HomeAddress**属性。  
   
  将此 XSD 架构映射到 AdventureWorks 数据库中的 Contact 表时，将 `sql:mapped` 在**HomeAddress**特性上指定，因为 employees 表不会存储员工的家庭地址。 因此，在针对映射架构指定 XPath 查询时，此属性不会映射到数据库，并且不会在生成的 XML 文档中返回此属性。  
   
- 为架构的其余部分进行默认映射。 ** \< Person>** 元素映射到 person 表，所有属性都映射到 person 表中具有相同名称的列。  
+ 为架构的其余部分进行默认映射。 **\<Person.Contact>** 元素映射到 person 表，所有属性都映射到 person 表中具有相同名称的列。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

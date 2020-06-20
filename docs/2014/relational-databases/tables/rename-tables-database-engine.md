@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2f5c922d-4d71-4694-9fca-28dd99375799
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3fc62dc5f0e716273df257aba7fdc137391d3055
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6e73bbb92d8fd3fdcaa7756ce1dcb74d8cd598b5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196727"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055102"
 ---
 # <a name="rename-tables-database-engine"></a>重命名表（数据库引擎）
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 重命名 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的表。  
@@ -58,7 +57,7 @@ ms.locfileid: "68196727"
   
 1.  在对象资源管理器中，右键单击要重命名的表，然后从快捷菜单中选择“设计”****。  
   
-2.  从 **“视图”** 菜单上选择 **“属性”**。  
+2.  从 **“视图”** 菜单上选择 **“属性”** 。  
   
 3.  在 **“属性”** 窗口的 **“名称”** 值字段中，为该表键入新名称。  
   
@@ -74,7 +73,7 @@ ms.locfileid: "68196727"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  下面的示例将 `SalesTerritory` 架构中的 `SalesTerr` 表重命名为 `Sales` 。 将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  下面的示例将 `SalesTerritory` 架构中的 `SalesTerr` 表重命名为 `Sales` 。 将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     USE AdventureWorks2012;   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9b88baea-b7c6-4e5d-88f9-93d6a0ff0368
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 384b5cc158600848dbca6528a4c8c39250a23908
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5a2306db72fd3f0098e18ff058796a5498eafcac
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62629175"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043328"
 ---
 # <a name="clean-up-merge-metadata-replication-transact-sql-programming"></a>清除合并元数据（复制 Transact-SQL 编程）
   合并代理基于发布的保持设置定期清除合并复制元数据。 在发布服务器和订阅服务器的 [MSmerge_genhistory](/sql/relational-databases/system-tables/msmerge-genhistory-transact-sql)、 [MSmerge_contents](/sql/relational-databases/system-tables/msmerge-contents-transact-sql)、 [MSmerge_tombstone](/sql/relational-databases/system-tables/msmerge-tombstone-transact-sql)、 [MSmerge_past_partition_mappings](/sql/relational-databases/system-tables/msmerge-past-partition-mappings-transact-sql)和 [MSmerge_current_partition_mappings](/sql/relational-databases/system-tables/msmerge-current-partition-mappings) 系统表中将定期清除元数据。 还可以使用复制存储过程以编程方式清除这些表中的数据。  
@@ -29,7 +28,7 @@ ms.locfileid: "62629175"
   
 1.  在发布服务器的发布数据库中，执行 [sp_mergemetadataretentioncleanup](/sql/relational-databases/system-stored-procedures/sp-mergemetadataretentioncleanup-transact-sql)。  
   
-2.  可有可无请注意在步骤1中从[MSmerge_genhistory](/sql/relational-databases/system-tables/msmerge-genhistory-transact-sql)、 [MSmerge_contents](/sql/relational-databases/system-tables/msmerge-contents-transact-sql)和[MSmerge_tombstone](/sql/relational-databases/system-tables/msmerge-tombstone-transact-sql)系统表中删除的行数，分别**@num_genhistory_rows**在、 **@num_contents_rows**和**@num_tombstone_rows**输出参数中返回。  
+2.  可有可无请注意在步骤1中从[MSmerge_genhistory](/sql/relational-databases/system-tables/msmerge-genhistory-transact-sql)、 [MSmerge_contents](/sql/relational-databases/system-tables/msmerge-contents-transact-sql)和[MSmerge_tombstone](/sql/relational-databases/system-tables/msmerge-tombstone-transact-sql)系统表中删除的行数，分别在 **@num_genhistory_rows** 、 **@num_contents_rows** 和 **@num_tombstone_rows** 输出参数中返回。  
   
 3.  在订阅服务器中重复步骤 1 和 2 来清除订阅数据库的元数据。  
   

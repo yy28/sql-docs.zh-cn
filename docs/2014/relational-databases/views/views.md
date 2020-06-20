@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ada83c28-e8b7-45d9-b53c-b3d67c8820c8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 21be7e81440fe6eb9573ecd100a459d70319ccea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c7332506666b11e96255c2b903d70b232ae4efa6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63191268"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061444"
 ---
 # <a name="views"></a>视图
   视图是一个虚拟表，其内容由查询定义。 同表一样，视图包含一系列带有名称的列和行数据。 视图在数据库中并不是以数据值存储集形式存在，除非是索引视图。 行和列数据来自由定义视图的查询所引用的表，并且在引用视图时动态生成。  

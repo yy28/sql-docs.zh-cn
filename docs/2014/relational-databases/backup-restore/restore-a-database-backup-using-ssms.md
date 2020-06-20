@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 521fc35b8ada4b1eb6c62e75fed4e1d9f99d21c4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 82c3c7191ab686550885ebdc050f5fb1ac818cb9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154782"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957288"
 ---
 # <a name="restore-a-database-backup-sql-server-management-studio"></a>还原数据库备份 (SQL Server Management Studio)
   本主题说明如何还原完整数据库备份。  
@@ -32,17 +31,17 @@ ms.locfileid: "70154782"
 > [!IMPORTANT]  
 >  在完整恢复模式或大容量日志恢复模式下，必须先备份活动事务日志（称为日志尾部），然后才能在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中还原数据库。 有关详细信息，请参阅 [备份事务日志 (SQL Server)](back-up-a-transaction-log-sql-server.md)数据库还原到一个新位置并且可以选择重命名该数据库。 若要还原已加密的数据库，您必须有权访问用于对数据库进行加密的证书或非对称密钥。 如果没有证书或非对称密钥，数据库将无法还原。 因此，只要需要该备份，就必须保留用于对数据库加密密钥进行加密的证书。 有关详细信息，请参阅 [SQL Server Certificates and Asymmetric Keys](../security/sql-server-certificates-and-asymmetric-keys.md)。  
   
- 请注意，如果您将 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更高版本的数据库还原为 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，将自动升级该数据库。 通常，该数据库将立即可用。 但是，如果 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库具有全文检索，则升级过程将导入、重置或重新生成它们，具体取决于“全文升级选项”**** 服务器属性的设置。 如果将升级选项设置为“导入”**** 或“重新生成”****，在升级过程中将无法使用全文检索。 导入可能需要数小时，而重新生成所需的时间最多时可能十倍于此，具体取决于要编制索引的数据量。 另请注意，当升级选项设置为“导入”**** 时，如果全文目录不可用，将重新生成关联的全文检索。 有关查看或更改“全文升级选项”**** 属性设置的信息，请参阅[管理和监视服务器实例的全文搜索](../search/manage-and-monitor-full-text-search-for-a-server-instance.md)。  
+ 请注意，如果您将 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更高版本的数据库还原为 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，将自动升级该数据库。 通常，该数据库将立即可用。 但是，如果 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库具有全文检索，则升级过程将导入、重置或重新生成它们，具体取决于“全文升级选项”  服务器属性的设置。 如果将升级选项设置为“导入”  或“重新生成”  ，在升级过程中将无法使用全文检索。 导入可能需要数小时，而重新生成所需的时间最多时可能十倍于此，具体取决于要编制索引的数据量。 另请注意，当升级选项设置为“导入”  时，如果全文目录不可用，将重新生成关联的全文检索。 有关查看或更改“全文升级选项”  属性设置的信息，请参阅[管理和监视服务器实例的全文搜索](../search/manage-and-monitor-full-text-search-for-a-server-instance.md)。  
   
 ### <a name="to-restore-a-full-database-backup"></a>还原完整数据库备份  
   
-1.  连接到的相应实例[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]之后，在对象资源管理器中，单击服务器名称以展开服务器树。  
+1.  连接到相应的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例之后，在“对象资源管理器”中，单击服务器名称以展开服务器树。  
   
-2.  展开 **“数据库”** 。 **** 根据具体的数据库，选择一个用户数据库，或展开“系统数据库”并选择一个系统数据库。  
+2.  展开 **“数据库”** 。  根据具体的数据库，选择一个用户数据库，或展开“系统数据库”并选择一个系统数据库。  
   
 3.  右键单击该数据库，指向 "**任务**"，再指向 "**还原**"，然后单击 "**数据库**"，这将打开 "**还原数据库**" 对话框。  
   
-4.  在 **“常规”** 页上，使用 **“源”** 部分指定要还原的备份集的源和位置。 选择下列选项之一：  
+4.  在 **“常规”** 页上，使用 **“源”** 部分指定要还原的备份集的源和位置。 选择以下选项之一：  
   
     -   **Database**  
   
@@ -53,11 +52,11 @@ ms.locfileid: "70154782"
   
     -   **设备**  
   
-         单击浏览（**...**）按钮，打开 "**选择备份设备**" 对话框。 在 **“备份介质类型”** 框中，从列出的设备类型中选择一种。 若要为 **“备份介质”** 框选择一个或多个设备，请单击 **“添加”**。  
+         单击“浏览”按钮 ( **...** ) 以打开“选择备份设备”  对话框。 在 **“备份介质类型”** 框中，从列出的设备类型中选择一种。 若要为 **“备份介质”** 框选择一个或多个设备，请单击 **“添加”** 。  
   
          将所需设备添加到 **“备份介质”** 列表框后，单击 **“确定”** 返回到 **“常规”** 页。  
   
-         在 **“源: 设备: 数据库”** 列表框中，选择应还原的数据库名称。  
+         在“源:设备:数据库”列表框中，选择应还原的数据库名称 **。**  
   
         > [!NOTE]  
         >  此列表仅在选择了 **“设备”** 时才可用。 只有在所选设备上具有备份的数据库才可用。  
@@ -83,14 +82,14 @@ ms.locfileid: "70154782"
          **删除**  
          删除一个或多个选定的文件、磁带或逻辑备份设备。  
   
-         **目录**  
+         **Contents**  
          显示选定文件、磁带或逻辑备份设备的介质内容。  
   
 5.  在 **“目标”** 部分中， **“数据库”** 框自动填充要还原的数据库的名称。 若要更改数据库名称，请在 **“数据库”** 框中输入新名称。  
   
 6.  在 **“还原到”** 框中，保留默认选项 **“至最近一次进行的备份”** ，或者单击 **“时间线”** 访问 **“备份时间线”** 对话框以手动选择要停止恢复操作的时间点。 有关指定特定时间点的详细信息，请参阅 [Backup Timeline](backup-timeline.md)。  
   
-7.  在 **“要还原的备份集”** 网格中，选择要还原的备份。 此网格将显示对于指定位置可用的备份。 默认情况下，系统会推荐一个恢复计划。 若要覆盖建议的恢复计划，可以更改网格中的选择。 当取消选择某个早期备份时，将自动取消选择那些需要还原该早期备份才能进行的备份。 有关“用于还原的备份集”**** 网格中的列的信息，请参阅[还原数据库（“常规”页）](../../integration-services/general-page-of-integration-services-designers-options.md)。  
+7.  在 **“要还原的备份集”** 网格中，选择要还原的备份。 此网格将显示对于指定位置可用的备份。 默认情况下，系统会推荐一个恢复计划。 若要覆盖建议的恢复计划，可以更改网格中的选择。 当取消选择某个早期备份时，将自动取消选择那些需要还原该早期备份才能进行的备份。 有关“用于还原的备份集”  网格中的列的信息，请参阅[还原数据库（“常规”页）](../../integration-services/general-page-of-integration-services-designers-options.md)。  
   
 8.  或者单击 **“选择页”** 窗格中的 **“文件”** ，以便访问 **“文件”** 对话框。 在该对话框中，您可以通过在 **“将数据库文件还原为”** 网格中指定每个文件的新还原目标，将数据库还原到新的位置。 有关该网格的详细信息，请参阅[还原数据库（“文件”页）](restore-database-files-page.md)。  
   
@@ -98,11 +97,11 @@ ms.locfileid: "70154782"
   
     1.  `WITH` 选项（不是必需的）：  
   
-        -   **覆盖现有数据库（WITH REPLACE）**  
+        -   **覆盖现有数据库(WITH REPLACE)**  
   
-        -   **保留复制设置（带有 KEEP_REPLICATION）**  
+        -   **保留复制设置(WITH KEEP_REPLICATION)**  
   
-        -   **限制对还原数据库的访问（使用 RESTRICTED_USER）**  
+        -   **限制对还原数据库的访问(WITH RESTRICTED_USER)**  
   
     2.  为 **“恢复状态”** 框选择一个选项。 此框确定还原操作之后的数据库状态。  
   
@@ -123,12 +122,12 @@ ms.locfileid: "70154782"
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
- [备份事务日志 &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
- [&#40;SQL Server 创建完整数据库备份&#41;](create-a-full-database-backup-sql-server.md)   
- [将数据库还原到新位置 &#40;SQL Server&#41;](restore-a-database-to-a-new-location-sql-server.md)   
- [还原事务日志备份 &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)   
+ [备份事务日志 (SQL Server)](back-up-a-transaction-log-sql-server.md)   
+ [创建完整数据库备份 (SQL Server)](create-a-full-database-backup-sql-server.md)   
+ [将数据库还原到新位置 (SQL Server)](restore-a-database-to-a-new-location-sql-server.md)   
+ [还原事务日志备份 (SQL Server)](restore-a-transaction-log-backup-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
- [还原数据库 &#40;选项页&#41;](restore-database-options-page.md)   
+ [还原数据库（“选项”页）](restore-database-options-page.md)   
  [还原数据库（“常规”页）](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
   

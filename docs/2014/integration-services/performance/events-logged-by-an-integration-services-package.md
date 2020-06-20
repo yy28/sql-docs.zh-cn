@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 55a0951a-46f3-4f0f-9972-74cec9cc26b7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ef709a48f0c5c162e971cebbdf5d49c4417250ed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 113bc3d3c16912681a0136b058b49715bf0b4455
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62889829"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964697"
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>Integration Services 包记录的事件
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包将各种事件消息记入 Windows 应用程序事件日志。 包会在包启动时、包停止时和特定问题出现时记录这些消息。  

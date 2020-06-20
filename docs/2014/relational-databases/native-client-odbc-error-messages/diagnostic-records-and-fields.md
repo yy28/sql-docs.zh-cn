@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4949530c-62d1-4f1a-b592-144244444ce0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3d7d839fb55aff82c9d4f2ca12a316fa7401a502
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4fe52b211eb6d5a0e4d875264609d036702b2b0b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705402"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020068"
 ---
 # <a name="diagnostic-records-and-fields"></a>诊断记录和字段
   诊断记录与 ODBC 环境、连接、语句或描述符句柄关联。 当任何 ODBC 函数产生的返回代码不是 SQL_SUCCESS 或 SQL_INVALID_HANDLE 时，该函数调用的句柄就有相关联的诊断记录，其中包含信息性或错误性消息。 这些记录会一直保留，直到要通过该句柄调用其他函数，那时，记录就会被丢弃。 与一个句柄任一次调用相关联的诊断记录数目不受限制。  

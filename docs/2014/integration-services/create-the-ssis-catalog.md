@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6ed56d36-18d9-40c2-b51f-f2a4c71d1e73
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ae7f6128f14db0e1ccc423b5433744de7d3dc5d4
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 38f2e94ab794accb8f3b951d0affab2451624748
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922051"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917197"
 ---
 # <a name="create-the-ssis-catalog"></a>创建 SSIS 目录
   当您在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中设计和测试包后，可将包含包的项目部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器。 在您可以将项目部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器之前，该服务器必须包含 `SSISDB` 目录。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 的安装程序并不会自动创建目录；您需要使用以下说明手动创建目录。  

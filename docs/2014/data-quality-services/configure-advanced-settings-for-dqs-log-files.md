@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1d565748-9759-425c-ae38-4d2032a86868
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 1530594eefbb5c614901f2b8cb73030b989951fd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6b4054be2d956bccecd1d64dc807671caf8f980f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480977"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937988"
 ---
 # <a name="configure-advanced-settings-for-dqs-log-files"></a>为 DQS 日志文件配置高级设置
   本主题介绍如何为 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 和 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 日志文件配置高级设置，例如设置日志文件的滚动文件大小限制、设置事件的时间戳模式等。  
@@ -113,7 +112,7 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
 >  [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 日志记录设置配置动态生成并且存储于 DQS_MAIN.Log 文件中，该文件通常位于 C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Log 下（如果您安装了 SQL Server 的默认实例）。 但是，将不会保存在此文件中直接进行的更改，它们将会被 DQS_MAIN 数据库中 A_CONFIGURATION 表的配置设置覆盖。  
   
 ##  <a name="configure-data-quality-client-log-settings"></a><a name="DQSClient"></a>配置 Data Quality Client 日志设置  
- [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]日志设置配置文件 dqlog.client.xml 通常在 C:\PROGRAM Files\Microsoft SQL server\120\tools\binn\dq\config。中提供XML 文件的内容类似于您之前为[!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]日志配置设置修改的 xml 文件。 配置 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 日志设置：  
+ [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]日志设置配置文件 DQLog.Client.xml 通常在 C:\Program FILES\MICROSOFT SQL server\120\tools\binn\dq\config。上提供。XML 文件的内容类似于您之前为日志配置设置修改的 XML 文件 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 。 配置 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 日志设置：  
   
 1.  以管理员身份运行任何 XML 编辑工具或记事本。  
   

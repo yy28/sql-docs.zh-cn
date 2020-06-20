@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: efe66cec-3933-4f6e-8d35-fe3d300de66c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 76349c0ca91f24a6d8d7942a89eb9683a91b573d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 84eb956d8a973cf1186eb8f7454c5a8dd8f0709d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056343"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964238"
 ---
 # <a name="save-a-package-as-a-package-template"></a>将包另存为包模板
   本主题介绍在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中创建新的 Integration Services 包时如何指定自定义包以及将自定义包作为模板。 默认情况下，在将新包添加到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目中时， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 使用创建空包的包模板。 您无法替换此默认模板，但可以添加新的模板。  
@@ -41,11 +40,11 @@ ms.locfileid: "66056343"
   
 2.  在解决方案资源管理器中，右键单击项目，指向“添加”，然后单击“新建项”。********  
   
-3.  在 "**添加新项-\<项目名称>** " 对话框中，单击要用作模板的包。  
+3.  在 "**添加新项 \<project name> ** " 对话框中，单击要用作模板的包。  
   
      模板列表包括名为“新建 SSIS 包”的默认包模板。 包图标将标识可以用作包模板的模板。  
   
-4.  单击 **“添加”** 。  
+4.  单击“添加”。  
   
 ## <a name="see-also"></a>另请参阅  
  [在 SQL Server Data Tools 中创建包](create-packages-in-sql-server-data-tools.md)   

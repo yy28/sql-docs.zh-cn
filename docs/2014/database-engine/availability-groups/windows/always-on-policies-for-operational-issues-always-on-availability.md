@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 090ad6a9651a01532af528f5f78316eeadb9798d
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 9d91876e2efc7ac531ebdce5794024e92cd02959
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922016"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937188"
 ---
 # <a name="always-on-policies-for-operational-issues-with-always-on-availability-groups-sql-server"></a>针对 AlwaysOn 可用性组运行问题的 AlwaysOn 策略 (SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 运行状况模型评估一组基于预定义策略的管理 (PBM) 策略。 可以使用这些策略查看 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中可用性组及其可用性副本和数据库的运行状况。  

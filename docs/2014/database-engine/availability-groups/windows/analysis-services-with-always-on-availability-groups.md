@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a0ccca3f8c9f6307f9715286a3496002dd7e1278
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dbe92bf5f783bb1b71c1020d0ff808aafa0594b8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889225"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937157"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>含有 AlwaysOn 可用性组的 Analysis Services
   AlwaysOn 可用性组是预定义的 SQL Server 关系数据库集合；当有条件触发任一个数据库进行故障转移时，这些数据库将执行集体故障转移，使请求重定向到同一可用性组中其他实例上的镜像数据库。 如果将可用性组用作高可用性解决方案，您可以将该组中的数据库用作 Analysis Services 表格或多维解决方案中的数据源。 使用可用性数据库时，以下所有 Analysis Services 操作都能按预期工作：处理或导入数据、直接查询关系数据（使用 ROLAP 存储或 DirectQuery 模式）以及写回。  
@@ -23,7 +22,7 @@ ms.locfileid: "68889225"
  处理和查询属于只读工作负荷。 您可以通过将这些工作负荷转移到可读辅助副本来改善性能， 但这需要执行额外配置。 请使用本主题中的核对清单来确保遵循所有步骤。  
   
   
-##  <a name="prerequisites"></a><a name="bkmk_prereq"></a>先决条件  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> 先决条件  
  您必须具有针对所有副本的 SQL Server 登录名。 必须具有 **sysadmin** 权限才能配置可用性组、侦听器和数据库；但用户只需要 **db_datareader** 权限即可从 Analysis Services 客户端访问数据库。  
   
  请使用支持表格格式数据流 (TDS) 协议版本 7.4 或更高版本的数据访问接口（如 SQL Server Native Client 11.0），或 .NET Framework 4.02 中用于 SQL Server 的数据访问接口。  
@@ -111,7 +110,7 @@ ms.locfileid: "68889225"
   
     -   用所在域的名称取代“contoso.com”；如果所有计算机都位于相同的域中，则可在该脚本中省略该域。 如果侦听器使用的是默认端口，可保留该端口号。 侦听器实际使用的端口列在 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]的属性页中。  
   
-4.  执行脚本。  
+4.  执行该脚本。  
   
      下一步，在使用您刚配置的组中的数据库的 Analysis Services 模型中创建数据源。  
   
@@ -217,7 +216,7 @@ ms.locfileid: "68889225"
  为此，应该在 Analysis Services 模型中另外创建一个数据源，以便支持读写连接。 创建另一个数据源时，请使用你在只读连接中指定的相同的侦听器名称和数据库，但应保留支持 READWRITE 连接的默认设置，而不要修改“应用程序意向”****。 您现在可以向基于读写数据源的数据源视图添加新的事实表或维度表，然后针对新表启用写回功能。  
   
 ## <a name="see-also"></a>另请参阅  
- [可用性组侦听器、客户端连接和应用程序故障转移 &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [可用性组侦听程序、客户端连接和应用程序故障转移 &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [活动辅助副本：可读辅助副本 &#40;AlwaysOn 可用性组&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [AlwaysOn 可用性组 &#40;SQL Server 的操作问题的 AlwaysOn 策略&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
  [&#40;SSAS 多维&#41;创建数据源](https://docs.microsoft.com/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   

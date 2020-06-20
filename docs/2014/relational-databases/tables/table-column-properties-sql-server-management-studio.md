@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 09830897-cc10-46b8-95f5-e0e9681b668c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a49bfc0da1b5e18a4ea486fa68834254bbe82882
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1894b074491af1962d2180337288e188d41b2951
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211798"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055068"
 ---
 # <a name="table-column-properties-sql-server-management-studio"></a>表列属性 (SQL Server Management Studio)
   这些属性显示在表设计器的底部窗格中。 除非另行说明，否则在选定列后可以在“属性”窗口中编辑这些属性。 **“列属性”** 可以按类别或字母顺序显示。 许多属性仅针对特定的数据类型显示或有所更改。  
@@ -122,7 +121,7 @@ ms.locfileid: "68211798"
  **不用于复制**  
  指示在复制期间是否保留原始标识值。 有关复制的详细信息，请参阅 CREATE TABLE。 若要编辑此属性，请单击该属性的值，展开下拉列表，然后选择其他值。  
   
- **复制**  
+ **站**  
  显示是否在其他位置复制此列。  
   
  **RowGuid**  

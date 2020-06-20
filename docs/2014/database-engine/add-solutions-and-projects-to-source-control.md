@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3eaed80e-6f55-42ea-a964-aca31c09d055
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6d9cc15f79235e225dc6589a16b48c373479e639
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5256795677f4e8ce4249737d25d3ded1c4cd69c8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62792087"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937325"
 ---
 # <a name="add-solutions-and-projects-to-source-control"></a>将解决方案和项目添加到源代码管理
   将解决方案添加到源代码管理中时，该解决方案会成为由源代码管理提供程序创建并维护的动态版本控制存档的一部分。 每次有人在解决方案的新版本中执行检查时，该版本都会成为存档的一部分，并可供其他源代码管理用户使用。  

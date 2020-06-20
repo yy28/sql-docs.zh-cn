@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-manager: jroth
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 30f840c9fe558382c5a0549f09657c917c69c3d4
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: a5181dcf07745fc1bf9cd993ebd65c58f55f96c1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886184"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054273"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>使用数据迁移助手评估迁移到 Azure SQL 数据库的 SQL Server 数据空间的准备情况
 
@@ -62,8 +61,8 @@ Azure Migrate 项目用于存储从正在评估或迁移的环境中收集的发
     | ------------- | ------------- |
     | 亚洲 | 东南亚或东亚 |
     | 欧洲 | 欧洲南部或西欧 |
-    | 英国 | 英国南部或英国西部 |
-    | 美国 | 美国中部或美国西部2 |
+    | United Kingdom | 英国南部或英国西部 |
+    | United States | 美国中部或美国西部 2 |
 
     为项目指定的地理位置仅用于存储从本地 VM 中收集的元数据。 可为实际迁移选择任一目标区域。
 
@@ -102,7 +101,7 @@ Azure Migrate 项目用于存储从正在评估或迁移的环境中收集的发
 
     如果要将本地 SQL Server 实例升级到 SQL Server 的更高版本，或在 Azure VM 上托管 SQL Server，请将源和目标服务器类型设置为 " **SQL Server**"。 为 Azure SQL 数据库（PaaS）目标准备情况评估将目标服务器类型设置为**Azure SQL 数据库托管实例**。
 
-3. 选择“创建”  。
+3. 选择“创建”。
 
    ![Azure Migrate 数据迁移助手接口](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-interface.png)
 
@@ -127,7 +126,7 @@ Azure Migrate 项目用于存储从正在评估或迁移的环境中收集的发
    > [!NOTE]
    > 可以通过在按住 Shift 或 Ctrl 键的同时选择多个数据库，然后单击 "删除源" 来删除多个数据库。 还可以通过使用 "添加源" 按钮，从多个 SQL Server 实例添加数据库。
 
-4. 单击“下一步”，以开始评估  。
+4. 单击“下一步”，以开始评估。
 
    ![Azure Migrate 数据迁移助手-选择源屏幕](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-select-sources-screen.png)
 
@@ -135,7 +134,7 @@ Azure Migrate 项目用于存储从正在评估或迁移的环境中收集的发
 
    ![Azure Migrate 数据迁移助手-查看结果屏幕](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-review-results-screen.png)
 
-6. 登录到 Azure 门户。  
+6. 登录到 Azure 门户。
 
    ![Azure Migrate 数据迁移助手-查看结果屏幕](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-portal-signin.png)
 

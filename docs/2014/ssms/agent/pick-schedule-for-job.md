@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 6de2025d-c25c-47b9-9a25-18c294935c15
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 58076b9ad8c32563ae8502de148803ac762b35f8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 67855ba7841c06181240f220945dda0f4a719629
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62472927"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067720"
 ---
 # <a name="pick-schedule-for-job"></a>为作业选取计划
-  使用此对话框可以为[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理作业选择现有计划。  
+  使用此对话框可以为代理作业选择现有计划 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="options"></a>选项  
  **可用计划**  
@@ -31,10 +30,10 @@ ms.locfileid: "62472927"
  **名称**  
  显示计划的名称。  
   
- **Enabled**  
+ **已启用**  
  如果计划处于启用状态，则选中该选项。  
   
- **描述**  
+ **说明**  
  描述计划运行作业的条件。  
   
  **计划中的作业**  

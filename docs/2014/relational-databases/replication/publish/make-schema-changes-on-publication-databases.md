@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 65436da64ca7c718de053dab520edad71dac6228
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e26d3e89fcba41d474ca56637f9e465f17127348
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68199460"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060536"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>对发布数据库进行架构更改
   复制支持对已发布对象进行多种架构更改。 对 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 发布服务器中相应的发布对象进行下列任何一种架构更改时，默认会将该更改传播到所有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器：  
@@ -85,11 +84,11 @@ ms.locfileid: "68199460"
   
 #### <a name="adding-columns"></a>添加列  
   
--   若要将一个新列添加到表中并在现有发布中包括该列，请执行 ALTER TABLE \<Table> ADD \<Column>。 默认情况下，此列然后将被复制到所有订阅服务器中。 此列必须允许 NULL 值或包含默认约束。 有关添加列的详细信息，请参阅本主题中的“合并复制”部分。  
+-   若要向表中添加新列并在现有发布中包含该列，请执行 ALTER TABLE \<Table> add \<Column> 。 默认情况下，此列然后将被复制到所有订阅服务器中。 此列必须允许 NULL 值或包含默认约束。 有关添加列的详细信息，请参阅本主题中的“合并复制”部分。  
   
--   若要将一个新列添加到表中但不在现有发布中包括此列，请禁用架构更改复制，然后执行 ALTER TABLE \<Table> ADD \<Column>。  
+-   若要将新列添加到表中，而不将该列包含在现有发布中，请禁用对架构更改的复制，然后执行 ALTER TABLE \<Table> add \<Column> 。  
   
--   若要在现有发布中包括现有列，请使用 [sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql)、[sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) 或“发布属性 - \<发布>”对话框。****  
+-   若要在现有发布中包括现有列，请使用[sp_articlecolumn &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql)、 [sp_mergearticlecolumn &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql)或 "**发布属性- \<Publication> **对话框"。  
   
      有关详细信息，请参阅 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)。 这要求重新初始化订阅。  
   
@@ -97,9 +96,9 @@ ms.locfileid: "68199460"
   
 #### <a name="dropping-columns"></a>删除列  
   
--   若要从现有发布中删除列并从发布服务器中的表中删除该列，请执行 ALTER TABLE \<Table> DROP \<Column>。 默认情况下，该列然后将从所有订阅服务器中的表中删除。  
+-   若要从现有发布中删除列并在发布服务器上从表中删除该列，请执行 ALTER TABLE \<Table> drop \<Column> 。 默认情况下，该列然后将从所有订阅服务器中的表中删除。  
   
--   若要从现有发布中删除列但在发布服务器中的表中保留该列，请使用 [sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql)、[sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) 或“发布属性 - \<发布>”对话框。****  
+-   若要从现有发布中删除列，但在发布服务器的表中保留该列，请使用[sp_articlecolumn &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql)、 [sp_mergearticlecolumn &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql)或 "**发布属性- \<Publication> **对话框"。  
   
      有关详细信息，请参阅 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)。 这要求生成一个新的快照。  
   

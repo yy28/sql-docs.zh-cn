@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 47a7640b-20b3-4639-ab37-b6fc73575e6c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9bb392991afbb3707fafdb18a28cc3de53f97c78
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e96dd0461f3dace138b7822cdbaaa2fa242e2cb1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783201"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002218"
 ---
 # <a name="delete-a-job-category"></a>删除作业类别
-  本主题说明如何使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)]或 SQL Server 管理对象在中删除代理作业类别。  
+  本主题说明如何 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 SQL Server 管理对象在中删除代理作业类别 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。  
   
  作业类别有助于您组织作业，从而更容易筛选和分组。 例如，可以将所有数据库备份作业组织到“数据库维护”类别中。  
 
@@ -48,7 +47,7 @@ ms.locfileid: "72783201"
   
 4.  在“管理作业类别” ****_server_name_ 对话框中，选择要删除的作业类别。  
   
-5.  单击 **“删除”** 。  
+5.  单击“删除” 。  
   
 6.  在 **“作业类别”** 对话框中，单击 **“是”**。  
   

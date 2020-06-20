@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: dc1704da-eacd-4d26-b529-c996f958ca4b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bea56ada3ef490225fd08892128abb482b9342a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6275215afdb6de3aa134dbffe74aa22b9e7b6f5d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62999541"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054478"
 ---
 # <a name="shared-memory-properties"></a>shared memory 属性
   使用“共享内存属性”对话框的“协议”页可以启用或禁用共享内存协议。   Shared Memory 是可供使用的最简单协议，没有可配置的设置。 由于使用 Shared Memory 协议的客户端仅可以连接到在同一台计算机运行的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，因此它对于大多数数据库活动而言是没有用的。 如果怀疑其他协议配置有误，请使用 Shared Memory 协议进行故障排除。  

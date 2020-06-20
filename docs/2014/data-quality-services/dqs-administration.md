@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 7f4ddc16bdfcc7e0d3acdfabe83e81f3d06c0b93
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 74775847bdff99ef83571d15529224abe720144d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154442"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937738"
 ---
 # <a name="dqs-administration"></a>dqs 管理
   使用[!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS)，您可以管理在 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]上执行的各种 DQS 活动、配置与 DQS 活动有关的服务器级属性、配置 Reference Data Services 设置以及 DQS 日志设置。 通过 **的** 管理 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]功能来执行这些操作。 根据您在 DQS 中的安全访问权限（角色），授权/拒绝您在此区域中执行某些功能。  

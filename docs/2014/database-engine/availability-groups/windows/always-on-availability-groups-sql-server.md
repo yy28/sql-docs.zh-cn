@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2e040fb9c05683be9d737ea134710c03d36317cd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2c05dc72e99d5b897412bdcf8afdd85370dd06b7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75229012"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937217"
 ---
 # <a name="always-on-availability-groups-sql-server"></a>AlwaysOn 可用性组 (SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能是一个提供替代数据库镜像的企业级方案的高可用性和灾难恢复解决方案。 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中引入了 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]功能，此功能可最大程度地提高一组用户数据库对企业的可用性。 “可用性组” ** 针对一组离散的用户数据库（称为“可用性数据库” **，它们共同实现故障转移）支持故障转移环境。 一个可用性组支持一组读写主数据库以及一至八组对应的辅助数据库。 （可选）可使辅助数据库能进行只读访问和/或某些备份操作。  
@@ -29,7 +28,7 @@ ms.locfileid: "75229012"
  可用性组在可用性副本级别进行故障转移。 故障转移不是由诸如因数据文件丢失而使数据库成为可疑数据库、删除数据库或事务日志损坏等此类数据库问题导致的。  
   
   
-##  <a name="benefits"></a><a name="Benefits"></a>便利  
+##  <a name="benefits"></a><a name="Benefits"></a> 优势  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 提供了一组丰富的选项来提高数据库的可用性并改进资源使用情况。 主要组件如下：  
   
 -   支持最多九个可用性副本。 “可用性副本” ** 是可用性组的实例化，此可用性组由特定的 SQL Server 实例承载，该实例维护属于此可用性组的每个可用性数据库的本地副本。 每个可用性组都支持一个主副本和最多八个辅助副本。 有关详细信息，请参阅： [AlwaysOn 可用性组概述 (SQL Server)](overview-of-always-on-availability-groups-sql-server.md)。  
@@ -141,7 +140,7 @@ ms.locfileid: "75229012"
 -   [Reporting Services](reporting-services-with-always-on-availability-groups-sql-server.md)  
   
 > [!WARNING]  
->  有关使用的其他功能的限制和限制的信息[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，请参阅[Always On 可用性组：互操作性;SQL Server;](always-on-availability-groups-interoperability-sql-server.md)。  
+>  有关使用的其他功能的限制和限制的信息 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ，请参阅[Always On 可用性组：互操作性;SQL Server;](always-on-availability-groups-interoperability-sql-server.md)。  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
@@ -155,9 +154,9 @@ ms.locfileid: "75229012"
   
      [CSS SQL Server 工程师博客](https://blogs.msdn.com/b/psssql/)  
   
--   **视频**  
+-   **视频：**  
   
-     [Microsoft SQL Server Code-Named "Denali" AlwaysOn 系列，第一部分：介绍下一代高可用性解决方案](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 1:Introducing the Next Generation High Availability Solution](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)（Microsoft SQL Server Code-Named "Denali" Always On 系列，第 1 部分：介绍下一代高可用性解决方案）  
   
      [Microsoft SQL Server 名为 "Denali" Always On 系列，第2部分：使用 AlwaysOn 生成关键任务高可用性解决方案](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   

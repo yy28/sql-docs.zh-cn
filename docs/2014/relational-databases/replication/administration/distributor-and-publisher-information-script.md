@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 8622db47-c223-48fa-87ff-0b4362cd069a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 35b7c489b49a4463dc0b12f1469d1310f5d26fef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4695b53e52c9c63eaacb4f2f32c6bc9f65958213
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63186989"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060832"
 ---
 # <a name="distributor-and-publisher-information-script"></a>分发服务器和发布服务器信息脚本
   此脚本使用系统表和复制存储过程回答有关分发服务器和发布服务器上的对象的常见问题。 此脚本可按原样使用，也可以作为自定义脚本的基础。 此脚本可能需要做两处修改才能在您的环境中运行：  
   
 -   将 `use AdventureWorks2012` 一行更改为使用您的发布数据库的名称。  
   
--   从 `--` 一行中删除注释 (`exec sp_helparticle @publication='<PublicationName>'`) 并用发布的名称替换 \<PublicationName>。  
+-   `--`从行中删除注释（） `exec sp_helparticle @publication='<PublicationName>'` ，并将替换 \<PublicationName> 为发布的名称。  
   
 ```  
 --********** Execute at the Distributor in the master database **********--  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 56dc1bf8-99d4-41dc-bdc4-f64f1ccfd688
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9a598030000e5764cecc8ababa75ef2bdd8598ed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eeaea0d2fd211d1aa89b21422e62110f816f31a5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056381"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964537"
 ---
 # <a name="run-a-package-on-the-ssis-server-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 在 SSIS 服务器上运行包
   在将您的项目部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器中之后，可以在该服务器上运行此包。  

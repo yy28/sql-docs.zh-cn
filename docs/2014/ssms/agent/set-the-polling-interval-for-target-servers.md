@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4ffbbefa-77fb-442e-a77c-cb8c6cab9f3c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1578bbefc9ae17baae56799d943e5ae6186628ea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 36517f60a99a1a844f6d14d489587eef1de9cb13
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63033616"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067525"
 ---
 # <a name="set-the-polling-interval-for-target-servers"></a>Set the Polling Interval for Target Servers
-  本主题介绍如何设置[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理刷新从主服务器到目标服务器的信息的频率。 作业是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理执行的一系列指定操作。 多服务器作业是主服务器在一台或多台目标服务器上运行的作业。  
+  本主题介绍如何设置 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理刷新从主服务器到目标服务器的信息的频率。 作业是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理执行的一系列指定操作。 多服务器作业是主服务器在一台或多台目标服务器上运行的作业。  
   
 -   **开始之前：**  [安全性](#Security)  
   
@@ -66,6 +65,6 @@ ms.locfileid: "63033616"
 3.  在查询窗口中，使用[sp_post_msx_operation &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql)系统存储过程设置目标服务器的轮询间隔。  
   
 ## <a name="see-also"></a>另请参阅  
- [sysdownloadlist &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/dbo-sysdownloadlist-transact-sql)  
+ [dbo.sysdownloadlist &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/dbo-sysdownloadlist-transact-sql)  
   
   

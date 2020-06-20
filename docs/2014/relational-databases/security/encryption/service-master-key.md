@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 85f2095d-2590-4f59-8a29-7e100edd02bb
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
-ms.openlocfilehash: 6a802cfadfa48c7dbba7479ca169daedf70fe8b9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: baeeffd49ac89ce85cf64932fbfd4982d7243887
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74957131"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060267"
 ---
 # <a name="service-master-key"></a>服务主密钥
   服务主密钥为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密层次结构的根。 服务主密钥是首次需要它来加密其他密钥时自动生成的。 默认情况下，服务主密钥使用 Windows 数据保护 API 和本地计算机密钥进行加密。 只有创建服务主密钥的 Windows 服务帐户或有权访问服务帐户名称和密码的主体能够打开服务主密钥。  

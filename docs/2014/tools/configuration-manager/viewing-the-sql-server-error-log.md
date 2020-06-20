@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6908c21a-65e3-458f-a272-fee256d86448
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 88c5b77b4ac0f2d0f8ed579f2ff32eae8c263610
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 822ae4fba589f005aaee41857a9db3388a309254
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150295"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007883"
 ---
 # <a name="viewing-the-sql-server-error-log"></a>查看 SQL Server 错误日志
   查看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志可以确保进程（例如，备份和还原操作、批处理命令或其他脚本和进程）成功完成。 此功能可用于帮助检测任何当前或潜在的问题领域，包括自动恢复消息（尤其是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例已停止并重新启动时）、内核消息或其他服务器级错误消息。  

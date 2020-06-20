@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 921927f5-1b1e-452a-a79e-c691829fd826
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ae5ff9bf9fe78ca7230865c6f3df5f2b1333f005
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0702d85a6f83102a666720cef4692775c08a9ee5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480848"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937728"
 ---
 # <a name="dqs-security"></a>DQS 安全性
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 安全基础结构基于 SQL Server 安全基础结构。 数据库管理员通过将用户与 DQS 角色相关联，向用户授予一组权限。 这样，可以确定用户可访问的 DQS 资源以及允许用户执行的功能活动。  

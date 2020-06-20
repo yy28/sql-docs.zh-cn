@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f0623f79c3d17f3e350c151d64bb00372e3ffe56
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f2f6a9b3b8e5e1f63a2c539c710b03375b7061fd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481025"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937878"
 ---
 # <a name="create-a-matching-policy"></a>创建匹配策略
   本主题描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 的知识库中生成匹配策略。 您可以通过对示例数据运行“匹配策略”活动在 DQS 中准备匹配过程。 在此活动中，在策略中创建和测试一个或多个匹配规则，然后发布知识库以使匹配的规则可供公开使用。 知识库中只能有一个匹配策略，但该策略可以包含多个匹配规则。  

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: dfc27c1e-0fe2-4221-bed5-f52667ddd3c8
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ba05d426f9515793ad3a924e375ff9a6ab9f940f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9f3ec55aa69653667e5f968d0b4368b200431b70
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095882"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054948"
 ---
 # <a name="database-engine-configuration---user-instance"></a>数据库引擎配置 - 用户实例
   使用 **“用户实例”** 页可以为不具有管理员权限的用户生成单独的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，并可以将用户添加到管理员角色中。  

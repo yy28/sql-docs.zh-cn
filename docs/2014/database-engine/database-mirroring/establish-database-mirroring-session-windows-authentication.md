@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7cb418d6-dce1-4a0d-830e-9c5ccfe3bd72
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 70d9b3f9d243531e13d3d5a46693c80288815881
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a2f0b748ee8c639c6e64a2f530bfe1f05418dada
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62806898"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934228"
 ---
 # <a name="establish-a-database-mirroring-session-using-windows-authentication-sql-server-management-studio"></a>建立使用 Windows 身份验证的数据库镜像会话 (SQL Server Management Studio)
     
@@ -29,7 +28,7 @@ ms.locfileid: "62806898"
 -   主体服务器实例和镜像服务器实例必须运行同一版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（Standard 或 Enterprise）。 此外，极力建议这些服务器实例在可以处理相同工作负荷的类似系统上运行。  
   
     > [!NOTE]  
-    >  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的各版本中均未提供见证服务器实例。 有关各个版本支持的功能列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅 SQL Server 2014 的各个[版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+    >  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的各版本中均未提供见证服务器实例。 有关各个版本支持的功能列表 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请参阅 SQL Server 2014 的各个[版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
 -   镜像数据库必须存在并且为当前数据库。  
   
@@ -61,7 +60,7 @@ ms.locfileid: "62806898"
     |------------|--------------|-----------------|  
     |**高性能(异步)**|空(如果存在，尚未使用但会话需要仲裁)|为获得最佳性能，镜像数据库始终在某种程度上滞后于主体数据库，永远无法完全同步。 但是，数据库之间的异步间隔通常很小。 丢失伙伴会产生以下影响：<br /><br /> 如果镜像服务器实例变为不可用，则主体服务器继续可用。<br /><br /> 如果主体服务器实例变为不可用，则镜像服务器实例会停止；但是，如果会话没有见证服务器（按建议）或见证服务器连接到镜像服务器，则镜像服务器可以作为备用；数据库所有者可以强制让镜像服务器实例来提供服务（可能造成数据丢失）。<br /><br /> <br /><br /> 有关详细信息，请参阅 [数据库镜像会话期间的角色切换 (SQL Server)](role-switching-during-a-database-mirroring-session-sql-server.md)的各版本中均未提供见证服务器实例。|  
     |**不带自动故障转移功能的高安全(同步)**|否|保证将所有提交的事务都写入镜像服务器的磁盘上。<br /><br /> 只要伙伴相互连接并且数据库已同步，便可进行手动故障转移。 丢失伙伴会产生以下影响：<br /><br /> 如果镜像服务器实例变为不可用，则主体服务器继续可用。<br /><br /> 如果主体服务器实例变为不可用，则镜像服务器实例会停止但仍可以作为备用；数据库所有者可以强制让镜像服务器实例来提供服务（可能造成数据丢失）。<br /><br /> 有关详细信息，请参阅 [数据库镜像会话期间的角色切换 (SQL Server)](role-switching-during-a-database-mirroring-session-sql-server.md)的各版本中均未提供见证服务器实例。|  
-    |**带自动故障转移功能的高安全(同步)**|是（必需）|保证将所有提交的事务都写入镜像服务器的磁盘上。 通过包含见证服务器实例以支持自动故障转移，来实现最高可用性。 注意，只有首先指定了见证服务器地址，才可以选择 **“带自动故障转移功能的高安全(同步)”** 选项。 只要伙伴相互连接并且数据库已同步，便可进行手动故障转移。<br /><br /> 如果存在见证服务器，丢失伙伴连接会有以下影响：<br /><br /> -如果主体服务器实例变得不可用，则会发生自动故障转移。 镜像服务器实例将充当主体服务器，并且将其数据库用作主体数据库。<br /><br /> -如果镜像服务器实例变得不可用，主体将继续。<br /><br /> 有关详细信息，请参阅 [数据库镜像会话期间的角色切换 (SQL Server)](role-switching-during-a-database-mirroring-session-sql-server.md)的各版本中均未提供见证服务器实例。<br /><br /> ** \* \*重要\*提示**如果见证服务器断开连接，则伙伴必须彼此连接，数据库才可用。 有关详细信息，请参阅[仲裁：见证服务器如何影响数据库可用性（数据库镜像）](quorum-how-a-witness-affects-database-availability-database-mirroring.md)。|  
+    |**带自动故障转移功能的高安全(同步)**|是（必需）|保证将所有提交的事务都写入镜像服务器的磁盘上。 通过包含见证服务器实例以支持自动故障转移，来实现最高可用性。 注意，只有首先指定了见证服务器地址，才可以选择 **“带自动故障转移功能的高安全(同步)”** 选项。 只要伙伴相互连接并且数据库已同步，便可进行手动故障转移。<br /><br /> 如果存在见证服务器，丢失伙伴连接会有以下影响：<br /><br /> -如果主体服务器实例变得不可用，则会发生自动故障转移。 镜像服务器实例将充当主体服务器，并且将其数据库用作主体数据库。<br /><br /> -如果镜像服务器实例变得不可用，主体将继续。<br /><br /> 有关详细信息，请参阅 [数据库镜像会话期间的角色切换 (SQL Server)](role-switching-during-a-database-mirroring-session-sql-server.md)的各版本中均未提供见证服务器实例。<br /><br /> ** \* \* 重要 \* 提示 \* **如果见证服务器断开连接，则伙伴必须彼此连接，数据库才可用。 有关详细信息，请参阅[仲裁：见证服务器如何影响数据库可用性（数据库镜像）](quorum-how-a-witness-affects-database-availability-database-mirroring.md)。|  
   
 7.  满足下列所有条件后，单击 **“开始镜像”** 以开始镜像：  
   
@@ -87,7 +86,7 @@ ms.locfileid: "62806898"
  [删除数据库镜像 &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [角色切换后登录名和作业的管理 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)   
  [设置数据库镜像 &#40;SQL Server&#41;](setting-up-database-mirroring-sql-server.md)   
- [使数据库在其他服务器实例上可用时管理元数据 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
+ [当数据库在其他服务器实例上可用时管理元数据 (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
  [添加或替换数据库镜像见证服务器 (SQL Server Management Studio)](../database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
   

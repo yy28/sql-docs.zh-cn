@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 92323972-7943-4208-bbf4-050774fb6027
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b224868d4d9fc111cdbf9482282767420b6adcc8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a2ecd601b1329b3b95f1c3827cd04775c93304f6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63205149"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061275"
 ---
 # <a name="understanding-the-wmi-provider-for-configuration-management"></a>了解用于配置管理的 WMI 提供程序
   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供用于配置管理的 WMI 提供程序。 这样，您便可以使用 Windows Management Instrumentation (WMI) 来管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端和服务器网络设置以及服务器别名。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服务、网络设置和别名由计算机的 root\Microsoft\SqlServer\ComputerManagement*nn*命名空间中的 WMI 对象表示。 与指定计算机上的 WMI 提供程序建立连接后，可以使用 WQL 或脚本撰写语言查询服务、网络设置和别名。  
@@ -43,7 +42,7 @@ ms.locfileid: "63205149"
   
  有关使用 WMI 提供程序进行配置管理的管理应用程序的示例，请参阅[将 WQL 和脚本语言与用于配置管理的 Wmi 提供程序结合使用](using-wql-and-scripting-languages-with-the-wmi-provider.md)。  
   
- 有关使用 WMI 提供程序的编程管理应用程序的详细信息，请参阅[!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework SDK 中的 WMI 文档。  
+ 有关使用 WMI 提供程序的编程管理应用程序的详细信息，请参阅 .NET Framework SDK 中的 WMI 文档 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。  
   
 ## <a name="see-also"></a>另请参阅  
  [使用 WMI 提供程序进行配置管理](working-with-the-wmi-provider-for-configuration-management.md)   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e2dbe201e2690a013902ad6891b7f93f68fe0e04
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 120c7418d8b16fe6d083961affcf0b8a9c9f6c65
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127007"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061561"
 ---
 # <a name="replication-log-reader-agent"></a>复制日志读取器代理
   复制日志读取器代理是一个可执行文件，用于监视为事务复制配置的每个数据库的事务日志，以及将标记为进行复制的事务从事务日志复制到分发数据库中。  
@@ -69,7 +68,7 @@ ms.locfileid: "63127007"
  显示用法信息。  
   
  **-Publisher** _server_name_[ **\\** _instance_name_]  
- 发布服务器的名称。 为该服务器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 server_name  。 为该服务器上的 _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 server_name。  
+ 发布服务器的名称。 为该服务器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 server_name。 为该服务器上的 _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 server_name。  
   
  **-PublisherDB** _publisher_database_  
  发布服务器数据库的名称。  
@@ -110,7 +109,7 @@ ms.locfileid: "63127007"
  为扩展事件 XML 配置文件指定路径和文件名。 通过该扩展事件 XML 配置文件，您可以配置会话并且启用事件跟踪。  
   
  **-HistoryVerboseLevel** [ **0**| **1**| **2**]  
- 指定在日志读取器运行期间记录的历史记录数量。  选择 1 可将历史日志记录对性能的影响减小到最低限度。  
+ 指定在日志读取器运行期间记录的历史记录数量。 选择 1 可将历史日志记录对性能的影响减小到最低限度。  
   
 |HistoryVerboseLevel 值|说明|  
 |-------------------------------|-----------------|  
@@ -128,7 +127,7 @@ ms.locfileid: "63127007"
  仅限内部使用。  
   
  **-MaxCmdsInTran** _number_of_commands_  
- 指定在日志读取器将命令写入到分发数据库时可分组到一个事务中的语句的最大数目。 如果使用此参数，在发布服务器上的大事务（包含许多命令）应用于订阅服务器时，日志读取器代理和分发代理可将这些大事务拆分为若干个较小的事务。 指定此参数可以减少分发服务器的争用问题并缩短发布服务器与订阅服务器之间的滞后时间。 由于初始事务是以较小的单元应用的，订阅服务器可以在初始事务结束之前访问一个较大的逻辑发布服务器事务的行，因而会破坏事务的原子性。 默认值为 0  ，这将保持发布服务器的事务边界。  
+ 指定在日志读取器将命令写入到分发数据库时可分组到一个事务中的语句的最大数目。 如果使用此参数，在发布服务器上的大事务（包含许多命令）应用于订阅服务器时，日志读取器代理和分发代理可将这些大事务拆分为若干个较小的事务。 指定此参数可以减少分发服务器的争用问题并缩短发布服务器与订阅服务器之间的滞后时间。 由于初始事务是以较小的单元应用的，订阅服务器可以在初始事务结束之前访问一个较大的逻辑发布服务器事务的行，因而会破坏事务的原子性。 默认值为 0 ，这将保持发布服务器的事务边界。  
   
 > [!NOTE]  
 >  对于非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 发布，会忽略此参数。 有关详细信息，请参阅 [Performance Tuning for Oracle Publishers](../non-sql/performance-tuning-for-oracle-publishers.md)的“配置事务集作业”部分。  

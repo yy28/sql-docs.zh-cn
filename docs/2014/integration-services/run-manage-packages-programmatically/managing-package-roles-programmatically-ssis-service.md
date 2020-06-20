@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 2e0ca0d5-d4f5-421d-b17d-a48b37b923e5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b3494c520c0b0cef49ce2daf6c1d77e6899ba5d9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0bc0227c06f2a6e747c2fff90082e7e12596ad57
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176116"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964477"
 ---
 # <a name="managing-package-roles-programmatically-ssis-service"></a>以编程方式管理包角色（SSIS 服务）
   以编程方式使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包时，您可能希望确定哪些角色可以应用于包，或确定或设置应用于各个包的角色。 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 命名空间的 <xref:Microsoft.SqlServer.Dts.Runtime> 类提供了多种满足这些要求的方法。
 
  角色仅适用于存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb 数据库中的包  。 有关包角色的详细信息，请参阅 [Integration Services 角色（SSIS 服务）](../security/integration-services-roles-ssis-service.md)。
 
- 本主题中讨论的所有方法都需要引用 `Microsoft.SqlServer.ManagedDTS` 程序集。 在新项目中添加引用后，请使用<xref:Microsoft.SqlServer.Dts.Runtime> `using`或`Imports`语句导入该命名空间。
+ 本主题中讨论的所有方法都需要引用 `Microsoft.SqlServer.ManagedDTS` 程序集。 在新项目中添加引用后，请 <xref:Microsoft.SqlServer.Dts.Runtime> 使用或语句导入该命名 `using` 空间 `Imports` 。
 
 > [!IMPORTANT]
 >  <xref:Microsoft.SqlServer.Dts.Runtime.Application> 类中用于 SSIS 包存储的方法仅支持“.”、localhost 或本地服务器的服务器名称。 不能使用“(local)”。

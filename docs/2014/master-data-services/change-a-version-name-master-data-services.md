@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: cba8b814-155f-49c5-b636-afddc5b0de4f
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3e064f78efa3caacf3b21c330a54c145b8fead4a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2cd2441424a6728bbaac8c000e54f5737b3d7c62
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483647"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972057"
 ---
 # <a name="change-a-version-name-master-data-services"></a>更改版本名称 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，更改版本名称以便为您的组织对版本名称进行自定义。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“版本管理”** 功能区域。  

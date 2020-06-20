@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 0e91f4ac-6f29-40d7-8c28-9b82e4802c35
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 42c4383692677c0e124e72b997fdca54707f4d03
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cc13d2a37cb4267bde4c43dc9c54c2c5b12da8b1
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62889541"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964457"
 ---
 # <a name="managing-running-packages-programmatically"></a>以编程方式管理正在运行的包
   以编程方式使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包时，您可能希望确定哪些包当前正在运行。 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 命名空间的 <xref:Microsoft.SqlServer.Dts.Runtime> 类提供了满足这些需求的方法和类。  
   
  有关监视包的详细信息，请参阅[包管理（SSIS 服务）](../service/package-management-ssis-service.md)。  
   
- 本主题中讨论的所有方法都需要引用 `Microsoft.SqlServer.ManagedDTS` 程序集。 在新项目中添加引用后，请使用<xref:Microsoft.SqlServer.Dts.Runtime> `using`或`Imports`语句导入该命名空间。  
+ 本主题中讨论的所有方法都需要引用 `Microsoft.SqlServer.ManagedDTS` 程序集。 在新项目中添加引用后，请 <xref:Microsoft.SqlServer.Dts.Runtime> 使用或语句导入该命名空间 `using` `Imports` 。  
   
 > [!IMPORTANT]  
 >  <xref:Microsoft.SqlServer.Dts.Runtime.Application> 类中用于 SSIS 包存储的方法仅支持“.”、localhost 或本地服务器的服务器名称。 不能使用“(local)”。  

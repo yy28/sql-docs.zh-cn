@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7a4b9cd5eaad7b51f7cc3d2a0c73bea3f23fd542
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 312469e8355fb5720f1a1ce13a58a59f759da4ec
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767169"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964797"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>包的 SQL Server 代理作业
   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理可以自动化和计划 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的执行。 您可以计划部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的包，以及存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区和文件系统中的包。  
@@ -56,7 +55,7 @@ ms.locfileid: "62767169"
   
  有关演示如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理来运行包的视频，请参阅 MSDN 库中的视频主页 [如何使用 SQL Server 代理自动执行包（SQL Server 视频）](https://go.microsoft.com/fwlink/?LinkId=141771)。  
   
-##  <a name="troubleshooting"></a><a name="trouble"></a>有关  
+##  <a name="troubleshooting"></a><a name="trouble"></a> 故障排除  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤可能无法启动某个包，即便该包可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中以及从命令行成功运行。 该问题有一些常见的原因和一些推荐的解决方法。 有关详细信息，请参阅以下资源。  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 知识库文章： [当从 SQL Server 代理作业步骤调用 SSIS 包时 SSIS 包不运行](https://support.microsoft.com/kb/918760)  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0a895fd1dc3fe51296a110902fb1dd4c27d3d5a1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bfde82079c32b9aaba8db0ba9e52b02886bd2c47
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62831879"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919192"
 ---
 # <a name="data-profiling-task"></a>数据事件探查任务
   数据事件探查任务计算的各种配置文件可帮助您熟悉数据源并找出数据中要修复的问题。  
@@ -82,7 +81,7 @@ ms.locfileid: "62831879"
 |函数依赖关系配置文件|`integer` 类型、`char` 类型和 `datetime` 类型的列|  
 |包含配置文件|`integer` 类型、`char` 类型和 `datetime` 类型的列|  
   
- \*在以前的有效数据类型表中`integer`，、 `char` `datetime`、和`numeric`类型包括以下特定的数据类型：  
+ \*在以前的有效数据类型表中， `integer` 、、 `char` `datetime` 和 `numeric` 类型包括以下特定的数据类型：  
   
  Integer 类型包括 `bit`、`tinyint`、`smallint`、`int` 和 `bigint`。  
   
@@ -92,7 +91,7 @@ ms.locfileid: "62831879"
   
  Numeric 类型包括 `integer`（`bit` 除外）、`money`、`smallmoney`、`decimal`、`float`、`real` 和 `numeric`。  
   
- \*\*`image` `text`除列 Null 比率配置`variant`文件之外的配置文件不支持、、、和类型。 `XML` `udt`  
+ \*\*`image` `text` `XML` `udt` `variant` 除列 Null 比率配置文件之外的配置文件不支持、、、和类型。  
   
 ### <a name="valid-tables-and-columns"></a>有效的表和列  
  如果表或列为空，则数据事件探查将执行以下操作：  
