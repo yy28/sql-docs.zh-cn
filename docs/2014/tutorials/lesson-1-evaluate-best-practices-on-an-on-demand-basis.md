@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 868338d3-29c8-4a55-ab02-51a358d5b7ca
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: dc8da3880afe5cf107c7e6df260957e3df6ddc9d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b35c578ca1edbaebb9871d1633627811536f42bf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68185749"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054316"
 ---
 # <a name="lesson-1-evaluate-best-practices-on-an-on-demand-basis"></a>第 1 课：按需评估最佳做法策略
   通过使用策略评估的按需（或者“即席”）方法，您可以快速评估最佳实践策略，以便确定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的实例是否满足最佳实践指导原则和建议。  
   
- 在本课中，您将对一个或多个实例上的的[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]最佳实践策略执行按需评估。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
+ 在本课中，您将对 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 一个或多个实例上的的最佳实践策略执行按需评估 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。  
   
  本课程包含以下主题：  
   

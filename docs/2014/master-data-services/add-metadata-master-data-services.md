@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 74599a76-3fa4-4ac9-9d16-e0a03c15a762
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 801872affac61572553cbbd2e9648e197e16bb47
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 64093c4a0db4a4fc31f287fe908757de13a3462e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054292"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972293"
 ---
 # <a name="add-metadata-master-data-services"></a>添加元数据 (Master Data Services)
-  在[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，将用户定义的元数据添加到**元数据**模型，以描述模型对象。  
+  在中 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ，将用户定义的元数据添加到**元数据**模型，以描述模型对象。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  若要执行此过程：  
   
 -   **** 您必须有权访问“资源管理器”功能区域。  
@@ -34,7 +33,7 @@ ms.locfileid: "66054292"
   
 ### <a name="to-add-metadata"></a>添加元数据  
   
-1.  在[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]主页上的 "**模型**" 列表中，选择 "**元数据**" 模型。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 主页上的 "**模型**" 列表中，选择 "**元数据**" 模型。  
   
 2.  **** 从“版本”列表中，选择某一版本。  
   

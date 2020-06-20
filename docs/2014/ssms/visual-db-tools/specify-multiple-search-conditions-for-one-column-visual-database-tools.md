@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2c006e36-56b1-4992-89b4-c6c0b19808f3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 176d5a6586008d49ece1430ec03e2c54278eebce
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 37b6be71c7b62a80491656b98f997dd4eb7ec28f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62695396"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058022"
 ---
 # <a name="specify-multiple-search-conditions-for-one-column-visual-database-tools"></a>为同一列指定多个搜索条件 (Visual Database Tools)
   在某些情况下，可能希望对同一数据列应用多个搜索条件。 例如，您可能希望：  

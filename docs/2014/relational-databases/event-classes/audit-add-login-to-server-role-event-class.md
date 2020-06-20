@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7a8ed1c3-a98f-4f93-a6ba-e3901d941db9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f957283f2d667a9e75c30fae9d9b45401f06c499
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dc4ac90683681682a9d6576c454e01a072c67c64
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62867634"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85031144"
 ---
 # <a name="audit-add-login-to-server-role-event-class"></a>Audit Add Login to Server Role 事件类
   每当向固定服务器角色添加登录名或从其删除登录名时，都会发生 **Audit Add Login to Server Role** 事件类。 此事件类用于 **sp_addsrvrolemember** 和 **sp_dropsrvrolemember** 存储过程。  

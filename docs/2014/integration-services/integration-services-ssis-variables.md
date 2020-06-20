@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b824129d1687dce8471800f79d106328b9ee36f6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42dd04f4edf2d1e9b9b31b11ab96fcd97f9d21d6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62892265"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966177"
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services (SSIS) 变量
   变量存储 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包及其容器、任务和事件处理程序在运行时可以使用的值。 脚本任务和脚本组件中的脚本也可以使用变量。 将任务和容器按顺序组织为工作流的优先约束在其约束定义包含表达式时可以使用变量。  
@@ -86,7 +85,7 @@ ms.locfileid: "62892265"
  指定对变量的描述。  
   
  EvaluateAsExpression  
- 当属性设置为`True`时，提供的表达式用于设置变量值。  
+ 当属性设置为时 `True` ，提供的表达式用于设置变量值。  
   
  表达式  
  指定分配给该变量的表达式。  
@@ -114,19 +113,19 @@ ms.locfileid: "62892265"
  IncludeInDebugDump  
  指示调试转储文件中是否包括变量值。  
   
- 对于用户定义的变量和系统变量， **InclueInDebugDump**选项的默认值为`true`。  
+ 对于用户定义的变量和系统变量， **InclueInDebugDump**选项的默认值为 `true` 。  
   
- 但是，对于用户定义的变量，当满足以下条件**IncludeInDebugDump**时，系统`false`会将 IncludeInDebugDump 选项重置为：  
+ 但是，对于用户定义的变量， **IncludeInDebugDump** `false` 当满足以下条件时，系统会将 IncludeInDebugDump 选项重置为：  
   
--   如果**EvaluateAsExpression**变量属性设置为`true`，则系统会将**IncludeInDebugDump**选项重置为`false`。  
+-   如果**EvaluateAsExpression**变量属性设置为 `true` ，则系统会将**IncludeInDebugDump**选项重置为 `false` 。  
   
-     若要在调试转储文件中包括表达式文本作为变量值，请将**IncludeInDebugDump**选项设置为`true`。  
+     若要在调试转储文件中包括表达式文本作为变量值，请将**IncludeInDebugDump**选项设置为 `true` 。  
   
--   如果将变量数据类型更改为字符串，系统会将**IncludeInDebugDump**选项重置为`false`。  
+-   如果将变量数据类型更改为字符串，系统会将**IncludeInDebugDump**选项重置为 `false` 。  
   
- 当系统将**IncludeInDebugDump**选项重置为`false`时，这可能会覆盖用户选择的值。  
+ 当系统将**IncludeInDebugDump**选项重置为时 `false` ，这可能会覆盖用户选择的值。  
   
- Value  
+ 值  
  用户定义变量的值可以是文字或表达式。 变量包含设置变量值和值的数据类型的选项。 这两种属性必须兼容：例如，字符串值不能与整数数据类型一起使用。  
   
  如果将变量配置为作为表达式进行计算，则必须提供表达式。 在运行时计算表达式，而该变量将设置为计算结果。 例如，如果变量使用表达式 `DATEPART("month", GETDATE())` ，则变量的值与当前日期月份部分的数字相同。 表达式必须是使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 表达式语法的有效表达式。 表达式和变量一起使用时，表达式可以使用文字以及表达式语法所提供的运算符和函数，但表达式不能引用包中数据流的列。 表达式的最大长度为 4000 个字符。 有关详细信息，请参阅 [Integration Services (SSIS) 表达式](expressions/integration-services-ssis-expressions.md)。  

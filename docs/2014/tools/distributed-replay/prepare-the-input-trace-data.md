@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c14fd3d2-5770-47c2-a851-cc13ddbc9bf5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7af5d166ec3bc059bc2628512564d92fd4cc6cad
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9fd6ab191e3838de7d461df0626168ff08ef9afa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63149998"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064134"
 ---
 # <a name="prepare-the-input-trace-data"></a>准备输入跟踪数据
   使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 功能开始分布式重播之前，必须先从 Distributed Replay 管理工具启动预处理阶段以准备输入跟踪数据。 在预处理阶段，分布式重播控制器处理跟踪数据并生成一个中间文件：  
@@ -29,7 +28,7 @@ ms.locfileid: "63149998"
   
 ### <a name="to-prepare-the-input-trace-data"></a>准备输入跟踪数据  
   
-1.  **（可选）修改预处理配置设置**：若要修改预处理配置设置（例如，是否筛选系统会话或配置最长空闲时间），你必须修改基于 XML 的预处理配置文件 `<PreprocessModifiers>` 的 `DReplay.exe.preprocess.config`元素。 在修改预处理配置文件时，建议您修改副本而非原始文件。 若要修改设置，请执行以下步骤：  
+1.  **（可选）修改预处理配置设置**：若要修改预处理配置设置（例如，是否筛选系统会话或配置最长空闲时间），必须修改基于 XML 的预处理配置文件 `DReplay.exe.preprocess.config` 的 `<PreprocessModifiers>` 元素。 在修改预处理配置文件时，建议您修改副本而非原始文件。 若要修改设置，请执行以下步骤：  
   
     1.  制作默认预处理配置文件 `DReplay.exe.preprocess.config`的副本并重命名此新文件。 默认预处理配置文件位于管理工具安装文件夹。  
   
@@ -39,7 +38,7 @@ ms.locfileid: "63149998"
   
      有关预处理配置文件的详细信息，请参阅 [配置 Distributed Replay](configure-distributed-replay.md)。  
   
-2.  **启动预处理阶段**：若要准备输入跟踪数据，你必须使用 **preprocess** 选项运行管理工具。 有关详细信息，请参阅[预处理选项（Distributed Replay 管理工具）](preprocess-option-distributed-replay-administration-tool.md)。  
+2.  **启动预处理阶段**：若要准备输入跟踪数据，必须使用“预处理”选项运行管理工具。 有关详细信息，请参阅[预处理选项（Distributed Replay 管理工具）](preprocess-option-distributed-replay-administration-tool.md)。  
   
     1.  打开 Windows 命令提示符实用工具 (`CMD.exe`)，然后导航到分布式重播管理工具 (`DReplay.exe`) 的安装位置。  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 95a19dde-61ca-4d9b-aa3d-131fa4264296
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5b9396ab5a25bba979859ac685c4759b8b01c24d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 77604faa4cb32fc7babf273717422621b39648aa
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66428792"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966417"
 ---
 # <a name="foreach-loop-editor-collection-page"></a>Foreach 循环编辑器（“集合”页）
   可以使用“Foreach 循环编辑器”**** 对话框的“集合”**** 页，指定枚举器类型以及配置枚举器。  
@@ -28,7 +27,7 @@ ms.locfileid: "66428792"
  **枚举器**  
  从列表中选择枚举器类型。 此属性具有下表所列的选项。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**Foreach 文件枚举器**|枚举文件。 选择此值将显示 **“Foreach 文件枚举器”** 部分中的动态选项。|  
 |**Foreach Item 枚举器**|枚举项中的值。 选择此值将显示 **“Foreach Item 枚举器”** 部分中的动态选项。|  
@@ -58,7 +57,7 @@ ms.locfileid: "66428792"
   
 -   如果添加文件，则可能很难确定 Foreach 循环要处理的文件。  
   
- **Folder**  
+ **文件夹**  
  提供要枚举的根文件夹的路径。  
   
  **浏览**  
@@ -115,7 +114,7 @@ ms.locfileid: "66428792"
  您可以使用 Foreach ADO 枚举器枚举变量中存储的 ADO 或 ADO.NET 对象中的行或表。 例如，如果 Foreach 循环包括可将数据集写入变量的脚本任务，则可以使用 Foreach ADO 枚举器枚举数据集中的行。 如果变量包含 ADO.NET 数据集，则可以将枚举器配置为枚举多个表中的行或枚举表。  
   
  **ADO 对象源变量**  
- 在列表中选择用户定义的变量，或单击\<"**新建变量 ...** "> 创建新变量。  
+ 在列表中选择用户定义的变量，或单击 \<**New variable...**> 创建新变量。  
   
 > [!NOTE]  
 >  变量必须有 Object 数据类型，否则会发生错误。  
@@ -134,8 +133,8 @@ ms.locfileid: "66428792"
 ### <a name="enumerator--foreach-adonet-schema-rowset-enumerator"></a>Enumerator = Foreach ADO.NET 架构行集枚举器  
  您可以使用 Foreach ADO.NET 架构行集枚举器枚举指定数据源的架构。 例如，如果 Foreach 循环包括执行 SQL 任务，则可以使用 Foreach ADO.NET 架构行集枚举器枚举架构（例如， **AdventureWorks** 数据库中的列），使用执行 SQL 任务获取架构权限。  
   
- **连接**  
- 在列表中选择 ADO.NET 连接管理器，或单击\<"**新建连接 ...** "> 创建新的 ADO.NET 连接管理器。  
+ **Connection**  
+ 在列表中选择 ADO.NET 连接管理器，或单击 \<**New connection...**> 以创建新的 ADO.NET 连接管理器。  
   
 > [!IMPORTANT]  
 >  ADO.NET 连接管理器必须使用 .NET provider for OLE DB。 如果连接到 SQL Server，则建议使用的访问接口为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]**“连接管理器”** 对话框的 **.Net Providers for OleDb** 部分中列出的  Native Client。  
@@ -154,21 +153,21 @@ ms.locfileid: "66428792"
  您可以使用 Foreach 源变量枚举器枚举指定变量中的可枚举对象。 例如，如果 Foreach 循环包括运行查询并在变量中存储结果的执行 SQL 任务，则可以使用 Foreach 源变量枚举器枚举查询结果。  
   
  **变量**  
- 在列表中选择变量，或单击\<"**新建变量 ...** "> 创建新变量。  
+ 在列表中选择变量，或单击 \<**New variable...**> 创建新变量。  
   
  **相关主题：** [Integration Services &#40;SSIS&#41; 变量](integration-services-ssis-variables.md)、[添加变量](../../2014/integration-services/add-variable.md)  
   
 ### <a name="enumerator--foreach-nodelist-enumerator"></a>Enumerator = Foreach NodeList 枚举器  
  您可以使用 Foreach Nodelist 枚举器枚举一组通过将 XPath 表达式应用到 XML 文件而生成的 XML 节点。 例如，如果 Foreach 循环包括脚本任务，则可以使用 Foreach NodeList 枚举器将满足 XPath 表达式条件的值从 XML 文件传递到脚本任务。  
   
- 应用到 XML 文件的 XPath 表达式为外部 XPath 运算，存储于 OuterXPathString 属性中。 如果 XPath 枚举类型设置为`ElementCollection`，则 Foreach NodeList 枚举器可以将内部 XPath 表达式（存储在 InnerXPathString 属性中）应用到元素的集合。  
+ 应用到 XML 文件的 XPath 表达式为外部 XPath 运算，存储于 OuterXPathString 属性中。 如果 XPath 枚举类型设置为 `ElementCollection` ，则 Foreach NodeList 枚举器可以将内部 XPath 表达式（存储在 InnerXPathString 属性中）应用到元素的集合。  
   
  若要了解有关使用 XML 文档和数据的详细信息，请参阅 MSDN Library 中的“[Employing XML in the .NET Framework](https://go.microsoft.com/fwlink/?LinkId=56214)”。  
   
  **DocumentSourceType**  
  选择 XML 文档的源类型。 此属性具有下表所列的选项。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**直接输入**|将源设置为 XML 文档。|  
 |**文件连接**|选择包含 XML 文档的文件。|  
@@ -177,18 +176,18 @@ ms.locfileid: "66428792"
  **DocumentSource**  
  如果 "**将 documentsourcetype** " 设置为 "**直接输入**"，请提供 xml 代码，或单击省略号（...）按钮以使用 "**文档源编辑器**r" 对话框提供 xml。  
   
- 如果**将 documentsourcetype**设置为 "**文件连接**"，请选择文件连接管理器， \<或单击 "**新建连接 ...** "> 创建新的连接管理器。  
+ 如果将**将 documentsourcetype**设置为 "**文件连接**"，请选择文件连接管理器，或单击 " \<**New connection...**> 新建连接管理器"。  
   
  **相关主题：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- 如果 "**将 documentsourcetype** " 设置为 "**变量**"，请选择现有变量\<，或单击 "**新建变量 ...** "> 创建新变量。  
+ 如果将 "**将 documentsourcetype** " 设置为 "**变量**"，请选择现有变量，或单击 \<**New variable...**> 创建新变量。  
   
  **相关主题：** [Integration Services &#40;SSIS&#41; 变量](integration-services-ssis-variables.md)，请[添加变量](../../2014/integration-services/add-variable.md)。  
   
  **EnumerationType**  
  从列表中选择枚举类型。 此属性具有下表所列的选项。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**导航器**|使用 XPathNavigator 进行枚举。|  
 |**节点**|枚举 XPath 运算返回的节点。|  
@@ -198,7 +197,7 @@ ms.locfileid: "66428792"
  **OuterXPathStringSourceType**  
  选择 XPath 字符串的源类型。 此属性具有下表所列的选项。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**直接输入**|将源设置为 XML 文档。|  
 |**文件连接**|选择包含 XML 文档的文件。|  
@@ -207,21 +206,21 @@ ms.locfileid: "66428792"
  `OuterXPathString`  
  如果将 **OuterXPathStringSourceType** 设置为“直接输出”****，请提供 XPath 字符串。  
   
- 如果**将 outerxpathstringsourcetype**设置为 "**文件连接**"，请选择文件连接管理器， \<或单击 "**新建连接 ...** "> 创建新的连接管理器。  
+ 如果将**将 outerxpathstringsourcetype**设置为 "**文件连接**"，请选择文件连接管理器，或单击 " \<**New connection...**> 新建连接管理器"。  
   
  **相关主题：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- 如果 "**将 outerxpathstringsourcetype** " 设置为 "**变量**"，请选择现有变量\<，或单击 "**新建变量 ...** "> 创建新变量。  
+ 如果将 "**将 outerxpathstringsourcetype** " 设置为 "**变量**"，请选择现有变量，或单击 \<**New variable...**> 创建新变量。  
   
  **相关主题：** [Integration Services &#40;SSIS&#41; 变量](integration-services-ssis-variables.md)，请[添加变量](../../2014/integration-services/add-variable.md)。  
   
  **InnerElementType**  
- 如果将**EnumerationType**设置为`ElementCollection`，请在列表中选择内部元素的类型。  
+ 如果将**EnumerationType**设置为 `ElementCollection` ，请在列表中选择内部元素的类型。  
   
  **InnerXPathStringSourceType**  
  选择内部 XPath 字符串的源类型。 此属性具有下表所列的选项。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**直接输入**|将源设置为 XML 文档。|  
 |**文件连接**|选择包含 XML 文档的文件。|  
@@ -230,19 +229,19 @@ ms.locfileid: "66428792"
  `InnerXPathString`  
  如果将 **InnerXPathStringSourceType** 设置为“直接输入”****，请提供 XPath 字符串。  
   
- 如果**将 innerxpathstringsourcetype**设置为 "**文件连接**"，请选择文件连接管理器， \<或单击 "**新建连接 ...** "> 创建新的连接管理器。  
+ 如果将**将 innerxpathstringsourcetype**设置为 "**文件连接**"，请选择文件连接管理器，或单击 " \<**New connection...**> 新建连接管理器"。  
   
  **相关主题：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- 如果 "**将 innerxpathstringsourcetype** " 设置为 "**变量**"，请选择现有变量\<，或单击 "**新建变量 ...** "> 创建新变量。  
+ 如果将 "**将 innerxpathstringsourcetype** " 设置为 "**变量**"，请选择现有变量，或单击 \<**New variable...**> 创建新变量。  
   
  **相关主题：** [Integration Services &#40;SSIS&#41; 变量](integration-services-ssis-variables.md)，请[添加变量](../../2014/integration-services/add-variable.md)。  
   
 ### <a name="enumerator--foreach-smo-enumerator"></a>Enumerator = Foreach SMO 枚举器  
  您可以使用 Foreach SMO 枚举器枚举 SQL Server 管理对象 (SMO) 对象。 例如，如果 Foreach 循环包括执行 SQL 任务，则可以使用 Foreach SMO 枚举器枚举 **AdventureWorks** 数据库中的表并运行计算每个表中行数的查询。  
   
- **连接**  
- 选择现有的 ADO.NET 连接管理器，或\<单击 "**新建连接 ...** "> 创建新的连接管理器。  
+ **Connection**  
+ 选择现有的 ADO.NET 连接管理器，或单击 " \<**New connection...**> 新建连接管理器"。  
   
  相关主题： [ADO.NET Connection Manager](connection-manager/ado-net-connection-manager.md)、 [Configure ADO.NET Connection Manager](configure-ado-net-connection-manager.md)  
   
@@ -274,7 +273,7 @@ ms.locfileid: "66428792"
  **Blob 时间范围（自/至）筛选器**  
  指定时间范围筛选器。 将枚举在 **TimeRangeFrom** 之后以及在 **TimeRangeTo** 之前修改的文件。  
 ### <a name="enumerator--foreach-adls-file-enumerator"></a> 枚举器 = Foreach ADLS 文件枚举器  
-**ADLS 文件枚举器**使 SSIS 包能够使用筛选器枚举 ADLS 上的文件。 枚举文件的`/`以斜杠（）为前缀的完整路径可以存储在变量中并用于 Foreach 循环容器内的任务中。
+**ADLS 文件枚举器**使 SSIS 包能够使用筛选器枚举 ADLS 上的文件。 `/`枚举文件的以斜杠（）为前缀的完整路径可以存储在变量中并用于 Foreach 循环容器内的任务中。
   
 **AzureDataLakeConnection**  
 指定 Azure Data Lake 连接管理器，或创建一个引用 ADLS 帐户的新连接管理器。   

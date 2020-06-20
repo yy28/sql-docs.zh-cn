@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5c59f723-9707-4407-80ae-f05f483cf65f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f652519efc4b77bd785cdded468fe114f6499200
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 53e12d2be6cc4829fd9fc983ca5a24e2057da4e8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891545"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966137"
 ---
 # <a name="step-6-adding-and-configuring-the-lookup-transformations"></a>步骤 6：添加并配置查找转换
   在配置用于从源文件中提取数据的平面文件源后，下一个任务是定义获取 **CurrencyKey** 和 **DateKey**值所需的查找转换。 查找转换通过将指定输入列中的数据联接到引用数据集中的列来执行查找。 引用数据集可以是现有的表或视图，也可以是新表或 SQL 语句的结果。 在本教程中，查找转换使用 OLE DB 连接管理器连接到包含引用数据集的源数据的数据库。  
@@ -94,7 +93,7 @@ ms.locfileid: "62891545"
   
 9. 右键单击“Lookup Currency Key”转换，然后单击“属性”****。  
   
-10. 在属性窗口中，验证属性是否`LocaleID`设置为 "**英语（美国）** "，并将 " **DefaultCodePage** " 属性设置为 " **1252**"。  
+10. 在属性窗口中，验证 `LocaleID` 属性是否设置为 "**英语（美国）** "，并将 " **DefaultCodePage** " 属性设置为 " **1252**"。  
   
 ### <a name="to-add-and-configure-the--lookup-datekey-transformation"></a>添加并配置 Lookup DateKey 转换  
   
@@ -128,7 +127,7 @@ ms.locfileid: "62891545"
   
 11. 双击“Lookup Date Key”转换，然后单击“属性”****。  
   
-12. 在属性窗口中，验证属性是否`LocaleID`设置为 "**英语（美国）** "，并将 " **DefaultCodePage** " 属性设置为 " **1252**"。  
+12. 在属性窗口中，验证 `LocaleID` 属性是否设置为 "**英语（美国）** "，并将 " **DefaultCodePage** " 属性设置为 " **1252**"。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
  [步骤 7：添加并配置 OLE DB 目标](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  

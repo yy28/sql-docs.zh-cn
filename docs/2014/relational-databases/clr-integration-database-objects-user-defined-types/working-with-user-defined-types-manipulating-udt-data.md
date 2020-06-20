@@ -28,19 +28,18 @@ helpviewer_keywords:
 ms.assetid: 51b1a5f2-7591-4e11-bfe2-d88e0836403f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 11aa57037a1ea92bd72ed2eaa581d34baff8a122
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea8d8ef411c8766ebecb98ca1c9eeaa1be11f156
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874305"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954407"
 ---
 # <a name="manipulating-udt-data"></a>操作 UDT 数据
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 没有为在对用户定义类型 (UDT) 列中的数据进行修改时所使用的 INSERT、UPDATE 或 DELETE 语句提供专用语法。 [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST 或 CONVERT 函数用于将本机数据类型转换为 UDT 类型。  
   
 ## <a name="inserting-data-in-a-udt-column"></a>在 UDT 列中插入数据  
- 以下[!INCLUDE[tsql](../../includes/tsql-md.md)]语句将三行示例数据插入到**Points**表中。 **Point**数据类型由作为 UDT 属性公开的 X 和 Y 整数值组成。 必须使用 CAST 或 CONVERT 函数将以逗号分隔的 X 和 Y 值转换为**点**类型。 前两个语句使用 CONVERT 函数将字符串值转换为**点**类型，第三个语句使用 CAST 函数：  
+ 以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句将三行示例数据插入到**Points**表中。 **Point**数据类型由作为 UDT 属性公开的 X 和 Y 整数值组成。 必须使用 CAST 或 CONVERT 函数将以逗号分隔的 X 和 Y 值转换为**点**类型。 前两个语句使用 CONVERT 函数将字符串值转换为**点**类型，第三个语句使用 CAST 函数：  
   
 ```  
 INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '3,4'));  
@@ -55,7 +54,7 @@ INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));
 SELECT ID, PointValue FROM dbo.Points  
 ```  
   
- 若要查看以可读格式显示的输出，请`ToString`调用**Point** UDT 的方法，该方法将值转换为其字符串表示形式。  
+ 若要查看以可读格式显示的输出，请调用 `ToString` **Point** UDT 的方法，该方法将值转换为其字符串表示形式。  
   
 ```  
 SELECT ID, PointValue.ToString() AS PointValue   
@@ -156,7 +155,7 @@ WHERE PointValue = @ComparePoint;
 ```  
   
 ## <a name="invoking-udt-methods"></a>调用 UDT 方法  
- 还可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中调用在 UDT 中定义的方法。 **Point**类包含三个方法： `Distance` `DistanceFrom`、和`DistanceFromXY`。 有关定义这三个方法的代码清单，请参阅[编写用户定义类型](creating-user-defined-types-coding.md)的代码。  
+ 还可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中调用在 UDT 中定义的方法。 **Point**类包含三个方法： `Distance` 、 `DistanceFrom` 和 `DistanceFromXY` 。 有关定义这三个方法的代码清单，请参阅[编写用户定义类型](creating-user-defined-types-coding.md)的代码。  
   
  以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句调用 `PointValue.Distance` 方法：  
   
@@ -167,7 +166,7 @@ SELECT ID, PointValue.X AS [Point.X],
 FROM dbo.Points;  
 ```  
   
- 结果显示在`Distance`列中：  
+ 结果显示在 `Distance` 列中：  
   
 ```  
 IDXYDistance  

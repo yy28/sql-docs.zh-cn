@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 524e878933652699bef6e31da42d3a784b54df7c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 51f195a9f5fbe97eadfc281ad50bd0de55d6151e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62892639"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965527"
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>指定表复制或查询（SQL Server 导入和导出向导）
   使用 "**指定表复制或查询**" 页可以指定复制数据的方式。 您可以使用图形界面选择所希望复制的现有数据库对象，或使用 Transact-SQL 创建更复杂的查询。  
@@ -40,7 +39,7 @@ ms.locfileid: "62892639"
   
 -   System.Data.Odbc  
   
- 若要使**一个或多个表或视图中的数据复制**选项可用于其他提供程序，第三方可以将其自己的 ProviderDescriptor 节添加到 providerdescriptors.xml 文件中。 默认情况下，此文件\<位于*驱动器*>： \Program Files\Microsoft SQL server\100\dts\providerdescriptors 若要查看 ProviderDescriptor 部分的要求，请参阅 ProviderDescriptors.xsd 架构文件，默认情况下，该文件位于 ProviderDescriptors.xml 文件所在的文件夹中。  
+ 若要使**一个或多个表或视图中的数据复制**选项可用于其他提供程序，第三方可以将其自己的 ProviderDescriptor 部分添加到 ProviderDescriptors.xml 文件中。 默认情况下，此文件位于 \<*drive*> ： \Program FILES\MICROSOFT SQL server\100\dts\providerdescriptors 中。 若要查看 ProviderDescriptor 部分的要求，请参阅 ProviderDescriptors.xsd 架构文件，默认情况下，该文件位于 ProviderDescriptors.xml 文件所在的文件夹中。  
   
  **编写查询以指定要传输的数据**  
  使用 "**提供源查询**" 对话框生成用于检索行的 SQL 语句。 如果希望在复制操作中修改或限制源数据，请使用此选项。 只有符合选择条件的行才可用于复制。  

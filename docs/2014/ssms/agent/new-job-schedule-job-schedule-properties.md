@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 5c0b1bc9-dd87-49cc-b0dd-75d0d922b177
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 65adf53cc7401053b66b8c77839b267e7d20406a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f9af1d89e4bb53af3d3f640e7efb010e5ac8de35
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62704617"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064411"
 ---
 # <a name="new-job-schedule-job-schedule-properties"></a>新建作业计划：作业计划属性
   使用此页可以查看和更改计划的属性。  
@@ -33,7 +32,7 @@ ms.locfileid: "62704617"
  **计划类型**  
  选择计划的类型。  
   
- **Enabled**  
+ **已启用**  
  选中此项可以启用或禁用该计划。  
   
 ## <a name="recurring-schedule-types-options"></a>重复执行计划类型选项  
@@ -52,7 +51,7 @@ ms.locfileid: "62704617"
  **星期三**  
  设置作业在特定的星期三发生。 只用于每周重复执行计划。  
   
- **日**  
+ **星期四**  
  设置作业在特定的星期四发生。 只用于每周重复执行计划。  
   
  **星期五**  
@@ -64,13 +63,13 @@ ms.locfileid: "62704617"
  **星期日**  
  设置作业在特定的星期日发生。 只用于每周重复执行计划。  
   
- **那**  
+ **Day**  
  选择每月中执行此计划的日期。 只用于每月重复执行计划。  
   
  **每**  
  选择两次计划间隔的月数。 只用于每月重复执行计划。  
   
- **必须向**  
+ **“应用程序池:”**  
  为某月内特定一周的特定一天指定计划。 只用于每月重复执行计划。  
   
  **执行一次，时间为**  
@@ -89,7 +88,7 @@ ms.locfileid: "62704617"
  指定计划将无限期地保持有效。  
   
 ## <a name="one-time-schedule-types-options"></a>一次性计划类型选项  
- **日期**  
+ **Date**  
  选择作业的计划运行日期。  
   
  **时间**  

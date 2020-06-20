@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 057d7c1c-1428-4780-9447-a002ea741188
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 013a8e8ab09b192a2ff7a04a9d7ddc5be1395636
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4818b67766dafe851035041c8fd5137a0dfade73
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82710748"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84999200"
 ---
 # <a name="batches-of-statements"></a>语句的批处理
   一批 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句包含两个或多个语句，这些语句用分号（;) 分隔，并内置于传递到**SQLExecDirect**或[SQLPrepare 函数](https://go.microsoft.com/fwlink/?LinkId=59360)的单个字符串。 例如：  

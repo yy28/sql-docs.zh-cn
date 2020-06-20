@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f6b2bd
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ea11c177533a6101bb0654ca0450e85ea855d9a5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c97682163313a56acb8521174fa8d4012a69b529
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150822"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063896"
 ---
 # <a name="plan-guides"></a>计划指南
   如果您无法或不希望直接在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中更改实际查询文本，则可以使用计划指南来优化查询性能。 计划指南通过将查询提示或固定的查询计划附加到查询来影响查询的优化。 当第三方供应商提供的数据库应用程序中的一个小的查询子集没有按预期执行时，计划指南将很有用。 在计划指南中，您需要指定要优化的 Transact-SQL 语句以及包含要使用的查询提示的 OPTION 子句或要用于优化查询的特定查询计划。 当执行查询时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将 Transact-SQL 语句与计划指南进行匹配，然后在运行时将此 OPTION 子句附加到查询，或使用指定的查询计划。  
@@ -33,7 +32,7 @@ ms.locfileid: "63150822"
  可创建的计划指南总数仅受可用系统资源的限制。 尽管如此，计划指南还是应当限于针对提高或稳定性能的关键查询。 计划指南不应用来影响已部署应用程序的大部分查询负荷。  
   
 > [!NOTE]  
->  计划指南不适用于每个 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 有关各个版本支持的功能列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅 SQL Server 2014 的各个[版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 计划指南在任何版本中可见。 包含计划指南的数据库可以附加到任何版本。 将数据库还原或附加到升级版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]后，计划指南保持不变。  
+>  计划指南不适用于每个 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 有关各个版本支持的功能列表 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请参阅 SQL Server 2014 的各个[版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 计划指南在任何版本中可见。 包含计划指南的数据库可以附加到任何版本。 将数据库还原或附加到升级版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]后，计划指南保持不变。  
   
 ## <a name="types-of-plan-guides"></a>计划指南的类型  
  可以创建以下类型的计划指南。  
@@ -125,7 +124,7 @@ sp_create_plan_guide
   
  对于基于 SQL 或 TEMPLATE 的计划指南， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过对 @module_or_batch 参数和 @params 参数的值逐个字符地进行比较来将这两个值与查询匹配。 这意味着必须提供与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在实际批处理中接收的文本完全相同的文本。  
   
- 当@type = ' SQL ' 且@module_or_batch设置为 NULL 时，的值@module_or_batch将设置为的@stmt值。这意味着，在提交到*statement_text* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时，必须以相同的格式（字符对字符）提供 statement_text 的值。 不会执行内部转换来帮助完成该匹配。  
+ 当 @type = ' SQL ' 且 @module_or_batch 设置为 NULL 时，的值将 @module_or_batch 设置为的值 @stmt 。这意味着，在提交到时，必须以相同的格式（字符对字符）提供*statement_text*的值 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 不会执行内部转换来帮助完成该匹配。  
   
  当常规（SQL 或 OBJECT）计划指南和 TEMPLATE 计划指南都适用于语句时，将只使用常规计划指南。  
   
@@ -149,7 +148,7 @@ sp_create_plan_guide
 |说明如何验证计划指南。|[升级后验证计划指南](validate-plan-guides-after-upgrade.md)|  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_create_plan_guide &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+ [sp_create_plan_guide (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
  [sp_create_plan_guide_from_handle &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)   
  [sp_control_plan_guide &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql)   
  [sys. plan_guides &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-plan-guides-transact-sql)   

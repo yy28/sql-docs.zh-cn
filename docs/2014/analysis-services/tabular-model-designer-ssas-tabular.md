@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 45735c57-2a95-4e45-8994-7242df6c9c5f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 223a8a300a4f3000512f8d75dfb7595cb52abc08
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bb2a248ea8fa0205f1db11df0589ab2b3da0ab9b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067829"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940178"
 ---
 # <a name="tabular-model-designer-ssas-tabular"></a>表格模型设计器（SSAS 表格）
-  表格模型设计器是与 Microsoft [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 或更高版本集成的一部分，它具有专用于开发专业表格模型解决方案的附加项目类型模板。  
+  表格模型设计器是 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 与 Microsoft [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 或更高版本集成的一部分，它具有专用于开发专业表格模型解决方案的附加项目类型模板。  
   
  本主题的内容：  
   
@@ -32,7 +31,7 @@ ms.locfileid: "66067829"
   
 -   [Visual Studio 集成](#bkmk_vsint)  
   
-##  <a name="benefits"></a><a name="bkmk_benefits"></a>便利  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a> 优势  
  在您安装 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]时，用于创建表格模型的新项目模板将添加到可用项目类型中。 在使用这些模板之一创建了新的表格模型项目后，您可以通过使用表格模型设计器工具和向导开始创建模型。  
   
  除了用于创建专业多维和表格模型解决方案的新模板和工具外， [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 环境还提供调试和项目生命周期功能，确保您可以为组织创建功能最强大的 BI 解决方案。 有关 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]的详细信息，请参阅 [Getting Started with Visual Studio](https://go.microsoft.com/fwlink/?LinkId=206389)（Visual Studio 入门）。  
@@ -111,7 +110,7 @@ ms.locfileid: "66067829"
   
  除了这些菜单项之外，还有一些设置添加到了“工具”菜单项上的 Analysis Services 选项中。  
   
-### <a name="toolbar"></a>工具栏  
+### <a name="toolbar"></a>Toolbar  
  Analysis Services 工具栏提供了快速轻松访问最常用的模型创建命令的方式。  
   
 ##  <a name="visual-studio-integration"></a><a name="bkmk_vsint"></a> Visual Studio 集成  

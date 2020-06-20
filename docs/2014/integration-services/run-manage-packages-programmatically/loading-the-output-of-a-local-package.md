@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: aba8ecb7-0dcf-40d0-a2a8-64da0da94b93
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 843c5e8cbb857271d4cbd07288e24bfbd98019e3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 49c4814daf0463c99c7ccda6f16adb039fd58d64
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176617"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964487"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>加载本地包的输出
-  使用 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 将输出保存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标，或使用 System.IO  命名空间中的类将输出保存到平面文件目标时，客户端应用程序即可读取 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的输出。 但是，客户端应用程序也可以直接从内存读取包的输出，而无需中间步骤来持久化这些数据。 此解决方案`Microsoft.SqlServer.Dts.DtsClient`的关键是命名空间，其中包含 IDbDataParameter 命名空间中的`IDbConnection`、 `IDbCommand`和**IDbDataParameter**接口的专用实现 **。** 默认情况下，程序集 Microsoft.SqlServer.Dts.DtsClient.dll 安装在 %ProgramFiles%\Microsoft SQL Server\100\DTS\Binn  中。
+  使用 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 将输出保存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标，或使用 System.IO  命名空间中的类将输出保存到平面文件目标时，客户端应用程序即可读取 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的输出。 但是，客户端应用程序也可以直接从内存读取包的输出，而无需中间步骤来持久化这些数据。 此解决方案的关键是 `Microsoft.SqlServer.Dts.DtsClient` 命名空间，其中包含 `IDbConnection` `IDbCommand` IDbDataParameter 命名空间中的、和**IDbDataParameter**接口**System.Data**的专用实现。 默认情况下，程序集 Microsoft.SqlServer.Dts.DtsClient.dll 安装在 %ProgramFiles%\Microsoft SQL Server\100\DTS\Binn  中。
 
 > [!NOTE]
 >  本主题介绍的过程要求数据流任务以及所有父对象的 DelayValidation 属性均设置为其默认值 False****。
@@ -36,16 +35,16 @@ ms.locfileid: "78176617"
 
 1.  在包中，配置 DataReader 目标，以接收要读入到客户端应用程序中的输出。 使用说明性的名称为 DataReader 目标命名，因为您稍后将在客户端应用程序中使用此名称。 请记录 DataReader 目标的名称。
 
-2.  在开发项目中，通过找到程序集`Microsoft.SqlServer.Dts.DtsClient` **DtsClient**来设置对命名空间的引用。 默认情况下，此程序集安装在 C:\Program Files\Microsoft SQL Server\100\DTS\Binn**** 中。 使用 c # `Using`或[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] `Imports`语句将命名空间导入到代码中。
+2.  在开发项目中， `Microsoft.SqlServer.Dts.DtsClient` 通过查找程序集**Microsoft.SqlServer.Dts.DtsClient.dll**来设置对命名空间的引用。 默认情况下，此程序集安装在 C:\Program Files\Microsoft SQL Server\100\DTS\Binn**** 中。 使用 c # 或语句将命名空间导入到代码中 `Using` [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] `Imports` 。
 
-3.  在代码中，创建一个类型`DtsClient.DtsConnection`为的对象，其中包含一个连接字符串，其中包含**dtexec**运行包所需的命令行参数。 有关详细信息，请参阅 [dtexec Utility](../packages/dtexec-utility.md)。 然后，使用此连接字符串打开连接。 还可以使用 dtexecui**** 实用工具直观地创建所需的连接字符串。
+3.  在代码中，创建一个类型为的对象， `DtsClient.DtsConnection` 该对象包含一个连接字符串，其中包含**dtexec.exe**运行包所需的命令行参数。 有关详细信息，请参阅 [dtexec 实用工具](../packages/dtexec-utility.md)。 然后，使用此连接字符串打开连接。 还可以使用 dtexecui**** 实用工具直观地创建所需的连接字符串。
 
     > [!NOTE]
     >  该示例代码演示如何使用 `/FILE <path and filename>` 语法从文件系统加载包。 但您也可以使用 `/SQL <package name>` 语法从 MSDB 数据库加载包，或者使用 `/DTS \<folder name>\<package name>` 语法从 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包存储区加载包。
 
 4.  创建类型为 `DtsClient.DtsCommand` 的对象，该对象使用先前创建的 `DtsConnection`，并将该对象的 `CommandText` 属性设置为包中 DataReader 目标的名称。 然后，调用命令对象的 `ExecuteReader` 方法以将包结果加载到新的 DataReader 中。
 
-5.  还可以通过对 `DtsDataParameter` 对象使用 `DtsCommand` 对象的集合来间接参数化包的输出，以将值传递给在包中定义的变量。 在包中，您可以使用这些变量作为查询参数或在表达式中使用这些变量以影响返回给 DataReader 目标的结果。 必须先在**DtsClient**命名空间的包中定义这些变量，然后才能将其与客户`DtsDataParameter`端应用程序中的对象一起使用。 （您可能需要单击 "**变量**" 窗口中的 "**选择变量列**" 工具栏按钮以显示 "**命名空间**" 列。）在你的客户端代码中，当`DtsDataParameter`你将`Parameters`添加到的`DtsCommand`集合时，请从变量名称中省略 DtsClient 命名空间引用。 例如：
+5.  还可以通过对 `DtsDataParameter` 对象使用 `DtsCommand` 对象的集合来间接参数化包的输出，以将值传递给在包中定义的变量。 在包中，您可以使用这些变量作为查询参数或在表达式中使用这些变量以影响返回给 DataReader 目标的结果。 必须先在**DtsClient**命名空间的包中定义这些变量，然后才能将其与 `DtsDataParameter` 客户端应用程序中的对象一起使用。 （您可能需要单击 "**变量**" 窗口中的 "**选择变量列**" 工具栏按钮以显示 "**命名空间**" 列。）在你的客户端代码中，当你将添加 `DtsDataParameter` 到 `Parameters` 的集合时 `DtsCommand` ，请从变量名称中省略 DtsClient 命名空间引用。 例如：
 
     ```
     command.Parameters.Add(new DtsDataParameter("MyVariable", 1));
@@ -63,7 +62,7 @@ ms.locfileid: "78176617"
 ## <a name="example"></a>示例
  下面的示例将运行一个包，用于计算单个聚合值并将该值保存到 DataReader 目标，然后从 DataReader 读取此值，并在 Windows 窗体的文本框中显示该值。
 
- 在将包的输出加载到客户端应用程序时不一定要使用参数。 如果不想使用参数，可以在**DtsClient**命名空间中省略变量的使用，并忽略使用`DtsDataParameter`对象的代码。
+ 在将包的输出加载到客户端应用程序时不一定要使用参数。 如果不想使用参数，可以在**DtsClient**命名空间中省略变量的使用，并忽略使用对象的代码 `DtsDataParameter` 。
 
 #### <a name="to-create-the-test-package"></a>创建测试包
 
@@ -81,7 +80,7 @@ ms.locfileid: "78176617"
     SELECT * FROM Sales.vIndividualCustomer WHERE CountryRegionName = ?
     ```
 
-6.  单击`Parameters` ""，然后在 "**设置查询参数**" 对话框中，将 parameter0 映射中的单个输入参数映射到 DtsClient：： Country 变量。
+6.  单击 `Parameters` ""，然后在 "**设置查询参数**" 对话框中，将 parameter0 映射中的单个输入参数映射到 DtsClient：： Country 变量。
 
 7.  向数据流添加聚合转换，并将 OLE DB 源的输出连接到该转换。 打开 "聚合转换编辑器" 并将其配置为对所有输入列执行 "全部计数" 操作（*），并使用别名 CustomerCount 输出聚合值。
 
@@ -93,15 +92,15 @@ ms.locfileid: "78176617"
 
 1.  创建新的 Windows 窗体应用程序。
 
-2.  通过浏览到`Microsoft.SqlServer.Dts.DtsClient` **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn**中具有相同名称的程序集来添加对命名空间的引用。
+2.  `Microsoft.SqlServer.Dts.DtsClient`通过浏览到 **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn**中具有相同名称的程序集来添加对命名空间的引用。
 
 3.  复制以下示例代码并将其粘贴到窗体的代码模块中。
 
-4.  根据需要修改`dtexecArgs`变量的值，使其包含**dtexec**运行包所需的命令行参数。 示例代码从文件系统加载包。
+4.  根据需要修改变量的值， `dtexecArgs` 使其包含**dtexec.exe**运行包所需的命令行参数。 示例代码从文件系统加载包。
 
-5.  根据需要修改`dataReaderName`变量的值，使其包含包中的 DataReader 目标的名称。
+5.  根据需要修改变量的值， `dataReaderName` 使其包含包中的 DataReader 目标的名称。
 
-6.  在窗体中放入一个按钮和一个文本框。 示例代码使用作为`btnRun`按钮的名称，并`txtResults`使用作为文本框的名称。
+6.  在窗体中放入一个按钮和一个文本框。 示例代码使用 `btnRun` 作为按钮的名称，并使用 `txtResults` 作为文本框的名称。
 
 7.  运行该应用程序并单击按钮。 在短暂运行包后，您应能够看到在窗体的文本框中显示由包计算的聚合值（Canada 的客户计数）。
 

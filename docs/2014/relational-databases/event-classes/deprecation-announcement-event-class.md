@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 46fc578f-3c97-477f-879c-8a1b2cfd9d58
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 16cb4a7d0ac1cec33f3f9907b1b49e5588f45247
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c622d4d0c39d685b7808c6c4cf1bebbe7f455b12
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62662996"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053050"
 ---
 # <a name="deprecation-announcement-event-class"></a>Deprecation Announcement 事件类
   当使用的功能将从 **的未来版本中删除、但不会从下一主版本中删除时，将发生** Deprecation Announcement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]事件类。 为了使您的应用程序使用得最久，应避免使用会导致 **Deprecation Announcement** 事件类或 **Deprecation Final Support** 事件类的功能。  
@@ -44,10 +43,10 @@ ms.locfileid: "62662996"
 |NTUserName|`nvarchar`|Windows 用户名。|6|是|  
 |ObjectID|`int`|不推荐使用的功能的 ID 号。|22|是|  
 |ObjectName|`nvarchar`|不推荐使用的功能的名称。|34|是|  
-|偏移量|`int`|存储过程或批查询中的语句的起始偏移量。|61|是|  
+|Offset|`int`|存储过程或批查询中的语句的起始偏移量。|61|是|  
 |RequestID|`int`|包含该语句的请求的 ID。|49|是|  
 |ServerName|`nvarchar`|所跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|否|  
-|SessionLoginName|`nvarchar`|发起会话的用户的登录名。 例如，如果使用 Login1 连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]并以 Login2 的身份执行语句， `SessionLoginName`则将显示 Login1 `LoginName`并显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|是|  
+|SessionLoginName|`nvarchar`|发起会话的用户的登录名。 例如，如果使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并以 Login2 的身份执行语句，则将 `SessionLoginName` 显示 Login1 并 `LoginName` 显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|是|  
 |SPID|`int`|发生该事件的会话的 ID。|12|是|  
 |SqlHandle|`image`|可用于标识 SQL 批处理或存储过程的二进制句柄。|63|是|  
 |StartTime|`datetime`|该事件（如果存在）的启动时间。|14|是|  

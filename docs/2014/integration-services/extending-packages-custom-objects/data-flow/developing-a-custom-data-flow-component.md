@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: be126913-2a9a-41c9-9bf5-a7b0a0aea2f8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 061daaa3b44c151a1f77b075bef66ef90570af98
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2e1a6af8407813a2a712b0c43c0b06097477f00f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176337"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966499"
 ---
 # <a name="developing-a-custom-data-flow-component"></a>开发自定义数据流组件
   数据流任务由一些组件组成，这些组件用于连接各种数据源，然后快速转换和路由数据。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供一个可扩展的对象模型，该模型允许开发人员创建可在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 和已部署的包中使用的自定义源、转换和目标。 本节包含的主题将指导您开发自定义数据流组件。
@@ -37,7 +36,7 @@ ms.locfileid: "78176337"
 
  [执行计划和缓冲区分配](execution-plan-and-buffer-allocation.md)介绍数据流执行计划和数据缓冲区分配。
 
- 使用数据流[中的数据类型](working-with-data-types-in-the-data-flow.md)说明数据流如何将数据类型[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]映射到 .NET Framework 托管数据类型。
+ 使用数据流[中的数据类型](working-with-data-types-in-the-data-flow.md)说明数据流如何将 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 数据类型映射到 .NET Framework 托管数据类型。
 
  [验证数据流组件](validating-a-data-flow-component.md)说明用于验证组件配置和重新配置组件元数据的方法。
 
@@ -55,21 +54,21 @@ ms.locfileid: "78176337"
 
  [开发特定类型的数据流组件](../../extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md)介绍如何开发这三种类型的数据流组件：源、转换和目标。
 
-## <a name="reference"></a>参考
+## <a name="reference"></a>引用
  <xref:Microsoft.SqlServer.Dts.Pipeline>包含用于创建自定义数据流组件的类和接口。
 
  <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper>包含组成数据流任务对象模型的类和接口，用于创建自定义数据流组件或生成数据流任务。
 
  <xref:Microsoft.SqlServer.Dts.Pipeline.Design>包含用于创建数据流组件的用户界面的类和接口。
 
- [Integration Services 错误和消息引用](../../integration-services-error-and-message-reference.md)列出预定义[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]的错误代码及其符号名称和说明。
+ [Integration Services 错误和消息引用](../../integration-services-error-and-message-reference.md)列出预定义的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 错误代码及其符号名称和说明。
 
 ## <a name="related-sections"></a>相关章节
 
 ### <a name="information-common-to-all-custom-objects"></a>所有自定义对象的通用信息
  有关可以在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中创建的所有类型自定义对象的通用信息，请参阅以下主题：
 
- [开发 Integration Services 的自定义对象](../../extending-packages-custom-objects/developing-custom-objects-for-integration-services.md)介绍实现的所有类型自定义对象的基本步骤[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]。
+ [开发 Integration Services 的自定义对象](../../extending-packages-custom-objects/developing-custom-objects-for-integration-services.md)介绍实现的所有类型自定义对象的基本步骤 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 。
 
  [持久保存自定义对象](../../extending-packages-custom-objects/persisting-custom-objects.md)描述自定义持久性，并在必要时对其进行说明。
 

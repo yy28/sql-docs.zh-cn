@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a872057f354b289d65a6a3a730e3a63afd7af0d4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e6e45b1f49c348e6cce329fb918479e92edbe9ae
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62782311"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935330"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine-sql-server-configuration-manager"></a>启用数据库引擎的加密连接（SQL Server 配置管理器）
   本主题介绍如何通过使用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 配置管理器为 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 指定证书来启用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的加密连接。 服务器计算机必须具有提供的证书，客户端计算机必须设置为信任该证书的根颁发机构。 提供是指通过将证书导入 Windows 来安装证书的过程。  
@@ -37,7 +36,7 @@ ms.locfileid: "62782311"
  客户端必须能够验证服务器所用证书的所有权。 如果客户端具有对服务器证书进行签名的证书颁发机构所颁发的公钥证书，则不需要进一步的配置。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 包含多个证书颁发机构所颁发的公钥证书。 如果服务器证书由公共或私人证书颁发机构进行签名，而客户端没有该机构颁发的公钥证书，则必须安装对服务器证书进行签名的证书颁发机构所颁发的公钥证书。  
   
 > [!NOTE]  
->  若要在故障转移群集中使用加密，必须在故障转移群集的所有节点上安装带有虚拟服务器的完全限定 DNS 名称的服务器证书。 例如，如果你有一个具有名为 test1 的节点的双节点群集。公司>.com 和 test2。 * \< *你的公司>.com，你有一个名为 virtsql 的虚拟服务器，需要为 virtsql 安装一个证书。 * \< *你的公司在两个节点上都>.com。 * \< * 可以将“ForceEncryption”**** 选项的值设置为“是”****。  
+>  若要在故障转移群集中使用加密，必须在故障转移群集的所有节点上安装带有虚拟服务器的完全限定 DNS 名称的服务器证书。 例如，如果有一个双节点群集，其中节点名为 *\<your company>* test1。com 和 *\<your company>* test2。对于 com，你有一个名为 virtsql 的虚拟服务器，需要为 virtsql 安装一个 *\<your company>* 证书。在两个节点上都有 com。 可以将“ForceEncryption”**** 选项的值设置为“是”****。  
   
  **本主题内容**  
   
@@ -57,7 +56,7 @@ ms.locfileid: "62782311"
   
 ###  <a name="to-provision-install-a-certificate-on-the-server"></a><a name="Provision"></a> 在服务器中提供（安装）证书  
   
-1.  在 "**开始**" 菜单上，单击 "**运行**"，然后在 " `MMC` **打开**" 框中键入，然后单击 **"确定"**。  
+1.  在 "**开始**" 菜单上，单击 "**运行**"，然后在 "**打开**" 框中键入， `MMC` 然后单击 **"确定"**。  
   
 2.  在 MMC 控制台中的“文件”**** 菜单上，单击“添加/删除管理单元”****。  
   
@@ -83,9 +82,9 @@ ms.locfileid: "62782311"
   
 ###  <a name="to-configure-the-server-to-accept-encrypted-connections"></a><a name="ConfigureServerConnections"></a> 将服务器配置为接受加密连接  
   
-1.  在“SQL Server 配置管理器”中，展开“SQL Server 网络配置”，右键单击“\<服务器实例> 协议”，然后选择“属性”************ __****。  
+1.  在**SQL Server 配置管理器**中，展开 " **SQL Server 网络配置**"，右键单击 "**协议** _\<server instance>_ "，然后选择 "**属性**"。  
   
-2.  在 " **Protocols for**_\<实例名称_的协议>**属性**" 对话框中的 "**证书**" 选项卡上，从 "**证书**" 框的下拉菜单中选择所需的证书，然后单击 **"确定"**。  
+2.  在 " **Protocols for** _\<instance name>_ **属性**的协议" 对话框中的 "**证书**" 选项卡上，从 "**证书**" 框的下拉菜单中选择所需的证书，然后单击 **"确定"**。  
   
 3.  在 **“标志”** 选项卡的 **“ForceEncryption”** 框中，选择 **“是”**，然后单击 **“确定”** 关闭该对话框。  
   

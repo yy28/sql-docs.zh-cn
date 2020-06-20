@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 4d4baf1d-d0a1-4d09-bec7-137811f43f09
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e2ab1c4be29b87e1051daa702ce40905a95e34ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50ade30369ecdc7f5350503cc0e676a8158bb466
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022001"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061532"
 ---
 # <a name="publication-information-warnings-transactional-publication-sql-server-2005-and-later"></a>发布信息，警告（事务发布，SQL Server 2005 及更高版本）
   **“警告”** 选项卡适用于运行 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本的分发服务器。 使用 **“警告”** 选项卡可以为所选发布执行下列任务：  
@@ -39,13 +38,13 @@ ms.locfileid: "63022001"
   
      它对应于选项 **“如果滞后时间超出阈值，则发出警告”**。 如果达到或超过指定的阈值，订阅状态将显示为 **“‘严重’状态下的性能”** （除非需要显示更高优先级的问题）。 该阈值还可用于确定性能等级，等级信息显示在包含订阅信息的页上的 **“性能”** 列中。 性能等级可以为以下值之一：  
   
-    -   很好  
+    -   优秀  
   
     -   好  
   
     -   一般  
   
-    -   较差  
+    -   差  
   
     -   严重  
   
@@ -54,13 +53,13 @@ ms.locfileid: "63022001"
  除了在复制监视器中显示警告之外，达到阈值也可以触发警报。 通过单击 **“配置警报”** 并在 **“配置复制警报”** 对话框中提供信息，可以定义警报。  
   
 ## <a name="options"></a>选项  
- **Enabled**  
+ **已启用**  
  选择此项可以启用警告并指定阈值。  
   
  **警告**  
  与阈值关联的警告的说明。  
   
- **阀**  
+ **阈值**  
  指定阈值的值。  
   
  **配置警报**  

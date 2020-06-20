@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: e1b3072c-8daf-49a7-9895-c8cccd2adb95
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3294c9fd70ebae8eab4e76e17b2e0a21771ec26f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2d1b66cbbed716a4ce7b2d5cf9611e161141f162
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065050"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934575"
 ---
 # <a name="correlate-a-trace-with-windows-performance-log-data-sql-server-profiler"></a>将跟踪与 Windows 性能日志数据关联 (SQL Server Profiler)
-  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]可以将 Microsoft Windows 系统监视器计数器与[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]或[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]事件相关联。 Windows 系统监视器将指定计数器的系统活动记录在性能日志中。  
+  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]可以将 Microsoft Windows 系统监视器计数器与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 或事件相关联 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。 Windows 系统监视器将指定计数器的系统活动记录在性能日志中。  
   
 > [!NOTE]  
 >  有关在 Windows 不同版本间共享日志的信息，请参阅本主题结尾处介绍的过程。  
@@ -33,7 +32,7 @@ ms.locfileid: "66065050"
   
 3.  在 **“打开”** 对话框中，选择包含性能日志的文件。 必须在捕获跟踪数据的同一时间段捕获性能日志数据。  
   
-4.  在 **“性能计数器限制”** 对话框中，选中与要显示在跟踪旁边的系统监视器对象和计数器相对应的复选框。 单击“确定”****。  
+4.  在 **“性能计数器限制”** 对话框中，选中与要显示在跟踪旁边的系统监视器对象和计数器相对应的复选框。 单击“确定”   
   
 5.  在跟踪事件窗口中选择一个事件，或者使用箭头键在跟踪事件窗口的几个相邻行中导航。 **“系统监视器数据”** 窗口中的红色竖线指明与所选跟踪事件关联的性能日志数据。  
   

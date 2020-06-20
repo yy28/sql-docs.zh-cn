@@ -11,22 +11,21 @@ f1_keywords:
 ms.assetid: 6d3f9b24-d214-4e82-b161-c00ff8eff813
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1853281863fe3d1e6f4fcc6b36f228f7df523bda
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 46e17ba7281e8289e2209d4e1dfc3ae40f5ef161
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68189283"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062290"
 ---
 # <a name="job-properties-new-job-alerts-page"></a>作业属性：新建作业（“警报”页）
-  使用此页可以查看和组织[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理作业的警报。  
+  使用此页可以查看和组织代理作业的警报 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="options"></a>选项  
  **警报列表**  
  列出此作业的警报。  
   
- **添加**  
+ **Add**  
  为该作业创建新的警报。  
   
  **编辑**  

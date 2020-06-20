@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0d053786-5203-43f3-a613-27a8dd2bc44a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c3a765f23b4bfcdd4d8f0ff84ac8d363424882bc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fdeb04558cf8544eb8aad5456ec42fed8160f025
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767441"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965157"
 ---
 # <a name="step-1-copying-the-lesson-3-package"></a>步骤 1：复制 Lesson 3 包
   在本任务中，将为第 3 课中创建的 Lesson 3.dtsx 包创建一个副本。 或者，如果未完成第 3 课，则可以向项目添加本教程中附带的已完成的第 3 课包，然后再对其进行复制以供使用。 将使用这一新副本来完成第 4 课剩余部分。  
@@ -36,9 +35,9 @@ ms.locfileid: "62767441"
   
 6.  右键单击“控制流”**** 选项卡背景的任意位置，然后单击“属性”****。  
   
-7.  在属性窗口中，将`Name`属性更新为`Lesson 4`。  
+7.  在属性窗口中，将 `Name` 属性更新为 `Lesson 4` 。  
   
-8.  单击 " **ID** " 属性的框，然后在列表中，单击** \<"生成新 ID>**。  
+8.  单击“ID”**** 属性框，然后在列表中，单击“\<Generate New ID>”****。  
   
 ### <a name="to-add-the-completed-lesson-3-package"></a>添加已完成的 Lesson 3 包  
   

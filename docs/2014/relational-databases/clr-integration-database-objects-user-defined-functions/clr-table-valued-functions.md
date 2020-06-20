@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9a6133ea-36e9-45bf-b572-1c0df3d6c194
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7dfd3db3a8193e92f9670213c602d55dc45f5c7f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 192673590f5dccfcee3f7c49de7cda659f97b8c4
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75232293"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970797"
 ---
 # <a name="clr-table-valued-functions"></a>CLR 表值函数
   表值函数是返回表的用户定义函数。  
@@ -45,7 +44,7 @@ ms.locfileid: "75232293"
  表值参数即传递到某一过程或函数的用户定义表类型，它提供了一种将多行数据传递到服务器的高效方法。 表值参数提供与参数数组类似的功能，但灵活性更高并且与 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的集成更紧密。 它们还提供提升性能的潜力。 表值参数还有助于减少到服务器的往返次数。 可以将数据作为表值参数发送到服务器，而不是向服务器发送多个请求（例如，对于标量参数列表）。 用户定义表类型不能作为表值参数传递到在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程中执行的托管存储过程或函数，也不能从这些存储过程或函数中返回。 有关表值参数的详细信息，请参阅[使用表值参数（数据引擎）](../tables/use-table-valued-parameters-database-engine.md)。  
   
 ## <a name="output-parameters-and-table-valued-functions"></a>输出参数和表值函数  
- 通过使用输出参数，可以从表值函数返回信息。 在实现代码表值函数中的相应参数应将按引用传递参数用作参数。 请注意，Visual Basic 不支持采用与 Visual C# 的相同方法输出参数。 必须按引用指定参数，并应用\<Out （） > 特性来表示 output 参数，如下所示：  
+ 通过使用输出参数，可以从表值函数返回信息。 在实现代码表值函数中的相应参数应将按引用传递参数用作参数。 请注意，Visual Basic 不支持采用与 Visual C# 的相同方法输出参数。 必须按引用指定参数，并应用 \<Out()> 属性以表示输出参数，如下所示：  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -76,7 +75,7 @@ select * from table t cross apply function(t.column);
   
 -   当从外部数据生成表值函数时。 例如，读取事件日志并将其显示为表的表值函数。  
   
- **注意**表值函数只能通过[!INCLUDE[tsql](../../includes/tsql-md.md)] `InitMethod`方法（而不是`FillRow`方法）中的查询来执行数据访问。 如果执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询，则应使用 `InitMethod` 属性标记 `SqlFunction.DataAccess.Read`。  
+ **注意**表值函数只能通过 [!INCLUDE[tsql](../../includes/tsql-md.md)] `InitMethod` 方法（而不是方法）中的查询来执行数据访问 `FillRow` 。 如果执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询，则应使用 `InitMethod` 属性标记 `SqlFunction.DataAccess.Read`。  
   
 ## <a name="a-sample-table-valued-function"></a>示例表值函数  
  下面的表值函数返回系统事件日志中的信息。 此函数采用单个字符串参数，其中包含要读取的事件日志的名称。  
@@ -175,7 +174,7 @@ go
 ```  
   
 ## <a name="sample-returning-the-results-of-a-sql-server-query"></a>示例：返回 SQL Server 查询的结果  
- 以下示例演示查询 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的表值函数。 本示例使用 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中的 AdventureWorks 轻型数据库。 有关[https://www.codeplex.com/sqlserversamples](https://go.microsoft.com/fwlink/?LinkId=87843)下载 AdventureWorks 的详细信息，请参阅。  
+ 以下示例演示查询 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的表值函数。 本示例使用 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中的 AdventureWorks 轻型数据库。 [https://www.codeplex.com/sqlserversamples](https://go.microsoft.com/fwlink/?LinkId=87843)有关下载 AdventureWorks 的详细信息，请参阅。  
   
  将源代码文件命名为 FindInvalidEmails.cs 或 FindInvalidEmails.vb。  
   

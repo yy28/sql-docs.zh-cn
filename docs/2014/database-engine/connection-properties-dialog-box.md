@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6df812ad-4d80-4503-8a23-47719ce85624
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 350e48c225814052655e4fced89d2f934efa188f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 80e858e75cec96b7e56e16fa7465a22048563726
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62808395"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934599"
 ---
 # <a name="connection-properties-dialog-box"></a>“连接属性”对话框
   使用此对话框可以查看当前的连接属性。 在不同“对象资源管理器”对话框中单击“查看连接属性”**** 时，可以使用此对话框。 此页上显示的属性是只读的。  
@@ -29,7 +28,7 @@ ms.locfileid: "62808395"
  请注意，SQL Azure 的查询超时期限是 30 分钟。  
   
 ## <a name="authentication"></a>身份验证  
- 查看当前连接的身份验证属性。 身份验证属性是指在建立连接时所使用的登录名和身份验证方法。 若要更改身份验证属性，请[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]断开与的连接，然后使用所需的连接选项将对象资源管理器再次连接到服务器。  
+ 查看当前连接的身份验证属性。 身份验证属性是指在建立连接时所使用的登录名和身份验证方法。 若要更改身份验证属性，请断开与的连接， [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 然后使用所需的连接选项将对象资源管理器再次连接到服务器。  
   
  **身份验证方法**  
  用于当前连接的身份验证方法。  
@@ -73,7 +72,7 @@ ms.locfileid: "62808395"
  **服务器名称**  
  运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的计算机的名称。  
   
- **实例名**  
+ **Instance Name**  
  服务器的实例名称。 默认实例为空白。  
   
  **语言**  

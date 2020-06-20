@@ -9,18 +9,17 @@ ms.topic: reference
 ms.assetid: d10dacbc-1b0f-4a4b-b53b-83eae2a6d809
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7b622de076f9040fdedaa487baa8f1ec0f759c88
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2b9d60675ef4c0bdaef1d45c6e8fe230ac70393c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637733"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933378"
 ---
 # <a name="send-dataset-sample"></a>发送数据集示例
   发送 `DataSet` 示例说明如何在服务器端基于公共语言运行时 (CLR) 的存储过程中将基于 ADO.NET 的 `DataSet` 作为结果集返回到客户端。 例如，当此类存储过程使用查询结果填充 `DataSet`，然后操作该 `DataSet` 中包含的数据时，此操作很有用。 另外，在存储过程从头创建并填充 `DataSet` 时，此操作也很有用。该示例由 `DataSetUtilities` 和 `TestSendDataSet` 这两个类构成。 针对 `SendDataSet` 类的方法 `DataSetUtilities` 实现了将 `DataSet` 实例的内容传输到客户端的通用方式。 对 `DoTest` 类定义的 `TestSendDataSet` 方法通过创建 `SendDataSet` 并用 `DataSet` Transact-SQL 存储过程中的数据进行填充来验证 `uspGetTwoBOMTestData` 方法是否起作用。 `uspGetTwoBOMTestData` 两次运行 Transact-SQL 存储过程 `uspGetBillOfMaterials`，以通过递归方式查询两种产品的物料清单，这两种产品已被指定为 `usp_GetTwoBOMTestData` 存储过程的参数。 通常在填充数据集后，在调用 `SendDataSet` 前会对数据进行修改，然后才将数据集中的数据作为结果集传输到客户端。 简单地说，此示例返回的数据未经修改。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  若要创建和运行此项目，必须安装下列软件：  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[网站](https://www.microsoft.com/sql-server/sql-server-editions-express)免费获取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  

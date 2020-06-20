@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 487d24fc-41d5-495e-843c-0ac974ec472f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2e841956adf08f9ac14a3f1360839e9132bf9cd6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 65e7da666beaf84050dd8d60caf4cac5bfc013c7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093106"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036608"
 ---
 # <a name="remove-references-to-deprecated-system-stored-procedures"></a>删除对不推荐使用的系统存储过程的引用
   升级顾问检测到一些语句引用了在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中不再可用的未记录的系统存储过程和扩展存储过程。 引用这些对象的语句将失败。 请勿使用未记录的系统对象或 API，因为在将来的版本中该功能可能会更改或删除，且不会给出相关通知。  

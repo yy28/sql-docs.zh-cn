@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 33aac25f-abb4-4f29-af88-4a0dacd80ae7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3718a084211e7c3b2b7a14973e195a4b1c3b6b1a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 30a54064d398ec6db09a9ccd54eed9411a7f905a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62780707"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933208"
 ---
 # <a name="usage-scenarios-and-examples-for-common-language-runtime-clr-integration"></a>公共语言运行时 (CLR) 集成的使用方案和示例
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包括可以用来了解公共语言运行时 (CLR) 集成的可编程性功能的示例应用程序、包示例和多个编码示例。  
@@ -37,7 +36,7 @@ ms.locfileid: "62780707"
 |[CLR 事务示例](../../../2014/database-engine/dev-guide/clr-transactions-sample.md)|说明了如何使用 System.Transactions 命名空间中的托管 API 来控制事务。|  
 |[使用 CLR 和 XML 创建联系信息](../../../2014/database-engine/dev-guide/contact-creation-using-clr-and-xml.md)|SQL Server 的联系人示例提供了一些有用的实用工具，这些实用工具在基本的 AdventureWorks2012 示例数据库之上形成了一层额外的功能。 第一个实用工具为 AdventureWorks2012 数据库中所涉及的各种类型的人创建联系记录。 联系信息通过使用 XML 来指定，并传递到基于 C# 的存储过程或 VB 存储过程，以创建 XML 并将其放入该数据库中的正确表。|  
 |[Currency 类型和转换函数](../../../2014/database-engine/dev-guide/currency-type-and-conversion-function.md)|使用 C# 定义 Currency 用户定义数据类型。|  
-|[使用 CLR 处理大型对象](../../../2014/database-engine/dev-guide/handling-large-objects-using-clr.md)|演示如何使用 CLR 存储过程在与服务器[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可访问的文件系统之间传输大型二进制对象（lob）。|  
+|[使用 CLR 处理大型对象](../../../2014/database-engine/dev-guide/handling-large-objects-using-clr.md)|演示如何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 CLR 存储过程在与服务器可访问的文件系统之间传输大型二进制对象（lob）。|  
 |[Hello World Ready 示例](../../../2014/database-engine/dev-guide/hello-world-ready-sample.md)|说明创建、部署和测试基于 CLR 集成的简单且全球通用存储过程的基本操作。|  
 |[Hello World 示例](../../../2014/database-engine/dev-guide/hello-world-sample.md)|说明创建、部署和测试基于 CLR 集成的简单存储过程的基本操作。|  
 |[进程内数据访问示例](../../../2014/database-engine/dev-guide/in-process-data-access-sample.md)|包含多个演示 CLR 进程内数据访问接口的各种功能的简单函数。|  

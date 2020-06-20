@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 37d0edcabdb0171c8ca83c79080d59fdd8aafb76
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 60ebcc5ae689b6781a17cc7725020f6e2382e987
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67284955"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919128"
 ---
 # <a name="execute-package-task"></a>执行包任务
   执行包任务通过允许包将其他包作为工作流的组成部分运行来扩展 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的企业功能。  
@@ -56,7 +55,7 @@ ms.locfileid: "67284955"
   
  而有时您则希望父包和子包作为一个单元一起失败，或者您可能不希望引发其他进程的额外开销。 例如，如果子进程失败，而包的父进程中的后续处理取决于子进程的成功，则子包应当在父包的进程中运行。  
   
- 默认情况下，"执行包" 任务的 ExecuteOutOfProcess 属性设置为`False`，子包与父包运行在同一进程中。 如果将此属性设置为 `True`，则在单独的进程中运行子包。  这可能减慢子包的启动。 此外，如果将属性设置为 `True`，则不能在仅工具安装中调试包。 必须安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。 有关详细信息，请参阅 [安装 Integration Services](../install-windows/install-integration-services.md)  
+ 默认情况下，"执行包" 任务的 ExecuteOutOfProcess 属性设置为 `False` ，子包与父包运行在同一进程中。 如果将此属性设置为 `True`，则在单独的进程中运行子包。  这可能减慢子包的启动。 此外，如果将属性设置为 `True`，则不能在仅工具安装中调试包。 必须安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。 有关详细信息，请参阅 [安装 Integration Services](../install-windows/install-integration-services.md)  
   
 ## <a name="extending-transactions"></a>扩展事务  
  父包使用的事务可扩展到子包；因此，两个包都执行的工作可以提交或回滚。 例如，取决于子包执行的数据库插入，父包执行的数据库插入可以提交或回滚，反之亦然。 有关详细信息，请参阅 [Inherited Transactions](../inherited-transactions.md)。  

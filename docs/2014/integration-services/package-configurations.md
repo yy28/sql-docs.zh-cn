@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: d20e0311-1fc9-4ddc-a381-6d127cf11b69
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d3c220fc87f726d8ba3d8e8cc92904ce42e3baeb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 84acc1541e8c66da15405330ca48b41f256811ab
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056886"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964874"
 ---
 # <a name="package-configurations"></a>包配置
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]提供可用于在运行时更新属性值的包配置。  
@@ -79,7 +78,7 @@ ms.locfileid: "66056886"
   
 -   不能使用 **/ConfigFile** 选项加载用来替换在设计时指定的配置的配置。  
   
- 有关这些选项的详细信息以及这些选项的行为与早期版本的不同[!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)]之处，请参阅[SQL Server 2014 中 Integration Services 功能的行为更改](../../2014/integration-services/behavior-changes-to-integration-services-features-in-sql-server-2014.md)。  
+ 有关这些选项的详细信息以及这些选项的行为与早期版本的不同之处 [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] ，请参阅[SQL Server 2014 中 Integration Services 功能的行为更改](../../2014/integration-services/behavior-changes-to-integration-services-features-in-sql-server-2014.md)。  
   
 ## <a name="package-configuration-types"></a>包配置类型  
  下表介绍了包配置的类型。  
@@ -123,7 +122,7 @@ ms.locfileid: "66056886"
 ### <a name="registry-entry"></a>注册表项  
  如果要使用注册表项存储配置，可以使用已有项或在 HKEY_CURRENT_USER 中创建新项。 使用的注册表项必须具有名为 `Value` 的值。 该值可以是 DWORD 或一个字符串。  
   
- 如果选择 **“注册表项”** 配置类型，请在“注册表项”框中键入注册表项的名称。 格式为 \<registry key>。 如果要使用不在 HKEY_CURRENT_USER 根目录下的注册表项，请使用 \<Registry key\registry key\\...> 格式来标识该项。 例如，若要使用 SSISPackages 中的 MyPackage 项，请键入 `SSISPackages\MyPackage`。  
+ 如果选择 **“注册表项”** 配置类型，请在“注册表项”框中键入注册表项的名称。 格式为 \<registry key>。 如果要使用不在 HKEY_CURRENT_USER 根的注册表项，请使用格式 \<Registry key\registry key\\...> 来标识该密钥。 例如，若要使用 SSISPackages 中的 MyPackage 项，请键入 `SSISPackages\MyPackage`。  
   
 ### <a name="sql-server"></a>SQL Server  
  如果选择 **SQL Server** 配置类型，则需指定到要存储这些配置的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库的连接。 可以将配置保存到现有表，也可以在指定数据库中新建表。  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 52dc32d8-97ad-4ef0-834d-2e68f215d007
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fd364a08781c00eaaf42eb0b1c15e7e5011ed432
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0de7821aa966ecf52eeb214cf5b7fb0fe6eabef2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62867994"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85033249"
 ---
 # <a name="mssqlserver_4104"></a>MSSQLSERVER_4104
     
@@ -79,7 +78,7 @@ ms.locfileid: "62867994"
     SELECT a.c2 FROM a, b;   
     ```  
   
-     假定 UDT `myudt2` 不具有名为 `c2` 的属性，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将无法确定标识符 `a.c2` 是指表 `c2` 中的列 `a`，还是指表 `a` 中的列 `c2`、属性 `b`。  
+     假定 UDT `myudt2` 不具有名为 `c2` 的属性，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将无法确定标识符 `a.c2` 是指表 `a` 中的列 `c2`，还是指表 `b` 中的列 `a`、属性 `c2`。  
   
 ## <a name="user-action"></a>用户操作  
   

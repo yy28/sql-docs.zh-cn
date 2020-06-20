@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b3568e0f-3227-45a0-ad6d-997ee87cdf0f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5e48a38ba97feaf03a9ed14f3668ac4b98095a92
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1d172683f5248c5ad50cb20bb26f58c94849d4c8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62679118"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064329"
 ---
 # <a name="about-sql-server-management-studio"></a>关于 SQL Server Management Studio
   使用此对话框可以查看或复制有关 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的安装信息。 评估版会列出产品过期前所剩余的天数。  

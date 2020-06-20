@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: a0ec9643-3b44-4467-b855-f45ae4794f7f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2677d0dd1f4697177171ba0edd4641ec02110310
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a50ec57973deca40accbc98970919363681be63f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056567"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964627"
 ---
 # <a name="raw-file-destination-editor-connection-manager-page"></a>原始文件目标编辑器（“连接管理器”页）
   使用原始文件目标编辑器配置原始文件目标以将原始数据写入文件。  
   
- **您希望做什么？**  
+ **要执行什么操作？**  
   
 -   [打开原始文件目标编辑器](#open)  
   
@@ -62,6 +61,6 @@ ms.locfileid: "66056567"
  指定要用于输出列的备用名称。  
   
 ## <a name="see-also"></a>另请参阅  
- [Raw File Destination](data-flow/raw-file-destination.md)  
+ [原始文件目标](data-flow/raw-file-destination.md)  
   
   

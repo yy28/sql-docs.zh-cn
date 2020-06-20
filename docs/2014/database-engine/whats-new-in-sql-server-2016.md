@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 5e51cda61bb44d1f143cab50901276b927cca73a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ae3b565f858c383775b4fcccfac236c316fcfa4e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70176077"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927404"
 ---
 # <a name="what39s-new-database-engine"></a>新增功能&#39;（数据库引擎）
   这一最新版本的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]引入了一些新功能和增强功能，这些功能可以提高设计、开发和维护数据存储系统的架构师、开发人员和管理员的能力和工作效率。 以下是[!INCLUDE[ssDE](../includes/ssde-md.md)]已增强的方面。  
@@ -30,11 +29,11 @@ ms.locfileid: "70176077"
  
   
 ###  <a name="sql-server-data-files-in-azure"></a><a name="DataFiles"></a>SQL Server Azure 中的数据文件  
- [Azure 中的 SQL Server 数据文件](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)可为作为[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Azure blob 存储的数据库文件提供本机支持。 利用此功能，可以在本地或 Azure [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中的虚拟机中创建运行的数据库，并在 Azure Blob 存储中为数据创建专用存储位置。  
+ [Azure 中的 SQL Server 数据文件](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)可为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 作为 Azure blob 存储的数据库文件提供本机支持。 利用此功能，可以在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 本地或 azure 中的虚拟机中创建运行的数据库，并在 Azure Blob 存储中为数据创建专用存储位置。  
   
   
 ###  <a name="host-a-sql-server-database-in-an-azure-virtual-machine"></a><a name="AzureVM"></a>在 Azure 虚拟机中托管 SQL Server 数据库  
- 使用 "将[SQL Server 数据库部署到 Azure 虚拟机](https://msdn.microsoft.com/library/dn195938\(v=sql.120\).aspx)向导" 可[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]在 azure 虚拟机中的实例中承载数据库。  
+ 使用 "将[SQL Server 数据库部署到 Azure 虚拟机](https://msdn.microsoft.com/library/dn195938\(v=sql.120\).aspx)向导" 可 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在 azure 虚拟机中的实例中承载数据库。  
   
   
 ###  <a name="backup-and-restore-enhancements"></a><a name="Backup"></a>备份和还原增强功能  
@@ -42,11 +41,11 @@ ms.locfileid: "70176077"
   
 -   **SQL Server 备份到 URL**  
   
-     [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 备份到 URL 功能是在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] SP1 CU2 中引入的，只有 [!INCLUDE[tsql](../includes/tsql-md.md)]、PowerShell 和 SMO 支持这一功能。 在[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]中，你[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]可以使用备份到 Azure Blob 存储服务或从中进行还原。 “备份”任务和维护计划都可使用该新选项。 有关详细信息，请参阅[在 SQL Server Management Studio 中使用备份任务](../relational-databases/backup-restore/sql-server-backup-to-url.md#BackupTaskSSMS)、[使用维护计划向导 SQL SERVER 备份到 URL](../relational-databases/backup-restore/sql-server-backup-to-url.md#MaintenanceWiz)，以及[使用 SQL Server Management Studio 从 Azure 存储还原](../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS)。  
+     [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 备份到 URL 功能是在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] SP1 CU2 中引入的，只有 [!INCLUDE[tsql](../includes/tsql-md.md)]、PowerShell 和 SMO 支持这一功能。 在中 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] ，你可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 备份到 Azure Blob 存储服务或从中进行还原。 “备份”任务和维护计划都可使用该新选项。 有关详细信息，请参阅[在 SQL Server Management Studio 中使用备份任务](../relational-databases/backup-restore/sql-server-backup-to-url.md#BackupTaskSSMS)、[使用维护计划向导 SQL SERVER 备份到 URL](../relational-databases/backup-restore/sql-server-backup-to-url.md#MaintenanceWiz)，以及[使用 SQL Server Management Studio 从 Azure 存储还原](../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS)。  
   
 -   **将托管备份 SQL Server 到 Azure**  
   
-      是基于  备份到 URL 这一功能构建的服务， 提供这种服务来管理和安排数据库和日志的备份。 在此版本中，仅支持备份到 Azure 存储。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]可在数据库和实例级别同时进行配置，从而既能实现在数据库级别的精细控制，又能实现实例级别的自动化。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]可在本地运行[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的实例和[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Azure 虚拟机上运行的实例上进行配置。 建议用于在 Azure [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]虚拟机上运行的实例。 有关详细信息，请参阅[SQL Server 托管备份到 Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)。  
+      是基于  备份到 URL 这一功能构建的服务， 提供这种服务来管理和安排数据库和日志的备份。 在此版本中，仅支持备份到 Azure 存储。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]可在数据库和实例级别同时进行配置，从而既能实现在数据库级别的精细控制，又能实现实例级别的自动化。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]可在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 本地运行的实例和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Azure 虚拟机上运行的实例上进行配置。 建议用于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在 Azure 虚拟机上运行的实例。 有关详细信息，请参阅[SQL Server 托管备份到 Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)。  
   
 -   **备份的加密**  
   
@@ -104,7 +103,7 @@ ms.locfileid: "70176077"
    
   
 ###  <a name="buffer-pool-extension"></a><a name="Buffer"></a>缓冲池扩展  
- [缓冲池扩展](configure-windows/buffer-pool-extension.md)提供固态硬盘（SSD）的无缝集成作为[!INCLUDE[ssDE](../includes/ssde-md.md)]缓冲池的非易失性随机存取内存（NvRAM）扩展，从而显著提高 i/o 吞吐量。  
+ [缓冲池扩展](configure-windows/buffer-pool-extension.md)提供固态硬盘（SSD）的无缝集成作为缓冲池的非易失性随机存取内存（NvRAM）扩展 [!INCLUDE[ssDE](../includes/ssde-md.md)] ，从而显著提高 i/o 吞吐量。  
    
   
 ###  <a name="incremental-statistics"></a><a name="Stats"></a>增量统计信息  
@@ -133,13 +132,13 @@ ms.locfileid: "70176077"
  `SELECT ... INTO` 语句得到了改进，现在可以并行操作。 数据库的兼容性级别必须至少为 110。  
   
 ### <a name="tsql-enhancements-for-in-memory-oltp"></a>针对内存中 OLTP 的 [!INCLUDE[tsql](../includes/tsql-md.md)] 增强功能  
- 有关支持内存中[!INCLUDE[tsql](../includes/tsql-md.md)] oltp 的更改的信息，请参阅对[内存中 Oltp 的 transact-sql 支持](../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)。  
+ 有关 [!INCLUDE[tsql](../includes/tsql-md.md)] 支持内存中 oltp 的更改的信息，请参阅对[内存中 Oltp 的 transact-sql 支持](../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)。  
   
   
 ##  <a name="system-view-enhancements"></a><a name="SystemTable"></a>系统视图增强功能  
   
 ### <a name="sysxml_indexes"></a>sys.xml_indexes  
- [xml_indexes &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-xml-indexes-transact-sql)包含3个新列： `xml_index_type`、 `xml_index_type_description`和。 `path_id`  
+ [sys.xml_indexes &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-xml-indexes-transact-sql)包含3个新列： `xml_index_type` 、 `xml_index_type_description` 和 `path_id` 。  
   
 ### <a name="sysdm_exec_query_profiles"></a>sys.dm_exec_query_profiles  
  在执行查询时， [dm_exec_query_profiles &#40;transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql)监视实时查询进度。  
@@ -148,7 +147,7 @@ ms.locfileid: "70176077"
  [column_store_row_groups &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql)提供按段划分的聚集列存储索引信息，以帮助管理员做出系统管理决策。  
   
 ### <a name="sysdatabases"></a>sys.databases  
- [sys.databases &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)具有3个新列： `is_auto_create_stats_incremental_on`、 `is_query_store_on`和。 `resource_pool_id`  
+ [sys.databases &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)具有3个新列： `is_auto_create_stats_incremental_on` 、 `is_query_store_on` 和 `resource_pool_id` 。  
   
 ### <a name="system-view-enhancements-for-in-memory-oltp"></a>针对内存中 OLTP 的系统视图增强功能  
  有关支持内存中 OLTP 的系统视图增强功能的信息，请参阅[内存中 oltp 的系统视图、存储过程、dmv 和等待类型](../../2014/database-engine/system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp.md)。  
@@ -157,7 +156,7 @@ ms.locfileid: "70176077"
 ##  <a name="security-enhancements"></a><a name="Security"></a> 安全性改进  
   
 ### <a name="connect-any-database-permission"></a>CONNECT ANY DATABASE 权限  
- 新的服务器级权限。 将 CONNECT ANY DATABASE 授予某个登录名，该登录名必须连接到当前存在的所有数据库和将来可能创建的任何新数据库。**** 不要在任何数据库中授予超过连接的任何权限。 结合**SELECT ALL USER 安全对象**或`VIEW SERVER STATE` ，以允许审核进程查看实例上的所有数据或所有数据库状态[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
+ 新的服务器级权限。 将 CONNECT ANY DATABASE 授予某个登录名，该登录名必须连接到当前存在的所有数据库和将来可能创建的任何新数据库。**** 不要在任何数据库中授予超过连接的任何权限。 结合**SELECT ALL USER 安全对象**或 `VIEW SERVER STATE` ，以允许审核进程查看实例上的所有数据或所有数据库状态 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。  
   
 ### <a name="impersonate-any-login-permission"></a>IMPERSONATE ANY LOGIN 权限  
  新的服务器级权限。 授予后，当连接到数据库时，允许中间层进程模拟连接到它的客户端帐户。 被拒绝时，高特权的登录名可以阻止模拟其他登录名。 例如，可通过模拟其他登录名来阻止具有 CONTROL SERVER 权限的登录名。****  
@@ -168,7 +167,7 @@ ms.locfileid: "70176077"
   
 ##  <a name="deployment-enhancements"></a><a name="Deployment"></a>部署增强功能  
 ### <a name="azure-vm"></a>Azure VM
-将[SQL Server 数据库部署到 Microsoft Azure 虚拟机](../relational-databases/databases/deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md)，可以将[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]数据库部署到 Azure VM。  
+将[SQL Server 数据库部署到 Microsoft Azure 虚拟机](../relational-databases/databases/deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md)，可以将数据库部署 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 到 Azure VM。  
 
 ### <a name="refs"></a>ReFS
 现在支持在 ReFS 上部署数据库。   

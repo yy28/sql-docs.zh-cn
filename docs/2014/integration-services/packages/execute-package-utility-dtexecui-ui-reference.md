@@ -22,16 +22,15 @@ helpviewer_keywords:
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3648798bdbdfb6114fb44b0c4086340bb32d1085
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 59ce040242b87cfc955054e062a09fd579f77a14
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62890172"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964837"
 ---
 # <a name="execute-package-utility-dtexecui-ui-reference"></a>执行包实用工具 (DtExecUI) UI 参考
-  使用 **“执行包实用工具”** 来运行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。 该实用工具运行存储在以下三个位置之一的包：[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库、[!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区和文件系统。 此用户界面是使用**DTExec**命令提示工具[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]运行包的`dtexecui`替代方法，可通过在命令提示符下打开或在命令提示符下键入。  
+  使用 **“执行包实用工具”** 来运行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。 该实用工具运行存储在以下三个位置之一的包：[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库、[!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区和文件系统。 此用户界面 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] `dtexecui` 是使用**DTExec**命令提示工具运行包的替代方法，可通过在命令提示符下打开或在命令提示符下键入。  
   
  包与 **dtexecui.exe** 实用工具在同一个进程中执行。 由于此实用工具为 32 位工具，因此，在 64 位环境中使用 **dtexecui.exe** 运行的包是在 Windows on Win32 (WOW) 中运行的。 当在 64 位计算机上使用 dtexecui.exe 实用工具开发和测试命令时，应该首先在 64 位模式下使用 64 位版本的 **dtexec.exe** 测试该命令，然后在生产服务器中部署或安排这些命令。  
   
@@ -187,7 +186,7 @@ ms.locfileid: "62890172"
  单击此项可关闭“执行包实用工具”  对话框。  
   
 ## <a name="execution-options-page"></a>“执行选项”页  
- 可以使用“执行包实用工具”  对话框的“执行选项”  页指定包的运行时选项。  
+ 可以使用“执行包实用工具”对话框的“执行选项”页指定包的运行时选项。  
   
 ### <a name="options"></a>选项  
  **发生验证警告时包失败**  

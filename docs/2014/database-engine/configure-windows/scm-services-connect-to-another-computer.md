@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4305438285ae5f3b51ab8ac51ec2b1d0699aee64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 95de509e0c78c807c3c9de25b317eb2b540db93a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62810345"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935029"
 ---
 # <a name="connect-to-another-computer-sql-server-configuration-manager"></a>连接到其他计算机（SQL Server 配置管理器）
   本主题说明如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中连接到其他计算机。 按照第一个过程执行操作，打开 Windows 的“计算机管理” [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理控制台 (mmc)，连接到该计算机，然后展开“服务和应用程序”树。 遵循第二个过程，创建一个包含到远程计算机中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器的链接的文件。  
@@ -37,7 +36,7 @@ ms.locfileid: "62810345"
   
 3.  在 **“选择计算机”** 对话框中的 **“另一台计算机”** 文本框中，键入想要管理的计算机名，然后单击 **“确定”** 。  
   
-     “计算机管理”将显示运行在远程计算机上的服务。 顶层节点更改为“计算机管理 **远程计算机>”** \<  。  
+     “计算机管理”将显示运行在远程计算机上的服务。 顶级节点更改为 "**计算机管理**" \<*remotecomputer*> 。  
   
 4.  在控制台树中，依次展开 **“服务和应用程序”** 、 **“SQL Server 配置管理器”** 来管理远程计算机的服务。  
   
@@ -45,7 +44,7 @@ ms.locfileid: "62810345"
   
 1.  在 **“开始”** 菜单上，单击 **“运行”** 。  
   
-2.  在 "**打开**" 框中`mmc -a` ，键入以[!INCLUDE[msCoName](../../includes/msconame-md.md)]在作者模式下打开管理控制台。  
+2.  在 "**打开**" 框中，键入 `mmc -a` 以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 在作者模式下打开管理控制台。  
   
 3.  在“文件”  菜单上，单击“添加/删除管理单元”  。  
   
@@ -59,13 +58,13 @@ ms.locfileid: "62810345"
   
 8.  在“添加/删除管理单元”  窗口中，单击“确定”  。  
   
-9. 展开 "**计算机管理（***\<计算机名称>***）**" 和 "**服务和应用程序**"。  
+9. 展开 "**计算机管理（ ***\<computer name>*** ）**" 和 "**服务和应用程序**"。  
   
 10. 右键单击“SQL Server 配置管理器”  ，再单击“从此处新建窗口”  。  
   
 11. 在“窗口”菜单上，单击“控制台根节点”，切换回第一个窗口，并删除该窗口   。  
   
-12. 在 "**文件**" 菜单上，单击 "**另存为**"，并将文件保存在所需的文件夹中`.msc` ，并将文件扩展名保存到相应的文件夹中。 关闭 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理控制台。  
+12. 在 "**文件**" 菜单上，单击 "**另存为**"，并将文件保存在所需的文件夹中，并将文件扩展名保存到相应的文件夹中 `.msc` 。 关闭 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理控制台。  
   
 13. 若要打开目标计算机中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器，请双击此文件。 如果需要，则在桌面上或 **“开始”** 菜单中保存到此文件的链接。  
   
