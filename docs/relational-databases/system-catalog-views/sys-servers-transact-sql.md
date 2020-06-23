@@ -1,7 +1,7 @@
 ---
 title: sys.databases （Transact-sql） |Microsoft Docs
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 06/16/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: c4b141520b21902c4dadb26a3ac013b1ee334928
-ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
+ms.openlocfilehash: 89e8424532f12a4111e5a535a8016f3a4fe5ac6a
+ms.sourcegitcommit: d498110ec0c7c62782fb694d14436f06681f2c30
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84818221"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85196025"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -36,12 +36,12 @@ ms.locfileid: "84818221"
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|链接服务器的本地 ID。|  
 |name|**sysname**|当**server_id** = 0 时，返回的值是服务器名称。<br /><br /> 如果**server_id** > 0，则返回的值为链接服务器的本地名称。|  
-|**product**|**sysname**|链接服务器的产品名。 值 "SQL Server" 指示的另一个实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
-|**程序**|**sysname**|用于连接到链接服务器的 OLE DB 访问接口名称。|  
+|**产品**|**sysname**|链接服务器的产品名。 值 "SQL Server" 指示的另一个实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
+|**程序**|**sysname**|用于连接到链接服务器的 OLE DB 访问接口名称。<br /><br />从开始 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] ，默认情况下，值 "sqlncli.msi" 将映射到[SQL SERVER （MSOLEDBSQL）的 Microsoft OLE DB 驱动程序](../../connect/oledb/oledb-driver-for-sql-server.md)。 在早期版本中，值 "SQLNCLI.MSI" 映射到[SQL Server Native Client OLE DB 提供程序（SQLNCLI11）](../../relational-databases/native-client/sql-server-native-client.md)。|  
 |**data_source**|**nvarchar(4000)**|OLE DB 数据源连接属性。|  
-|**位置**|**nvarchar(4000)**|OLE DB 位置连接属性。 如果没有，则为 NULL。|  
-|**provider_string**|**nvarchar(4000)**|OLE DB 访问接口字符串连接属性。<br /><br /> 除非调用方拥有 ALTER ANY LINKED SERVER 权限，否则为 NULL。|  
-|**分类**|**sysname**|OLEDB 目录连接属性。 如果没有，则为 NULL。|  
+|**location**|**nvarchar(4000)**|OLE DB 位置连接属性。 如果没有，则为 NULL。|  
+|**provider_string**|**nvarchar(4000)**|OLE DB 访问接口字符串连接属性。<br /><br /> 如果调用方具有权限，则为 NULL `ALTER ANY LINKED SERVER` 。|  
+|**分类**|**sysname**|OLE DB 目录连接属性。 如果没有，则为 NULL。|  
 |**connect_timeout**|**int**|以秒为单位的连接超时，0 表示没有超时。|  
 |**query_timeout**|**int**|以秒为单位的查询超时，0 表示没有超时。|  
 |**is_linked**|**bit**|0 = 是使用**sp_addserver**添加的一种老式服务器，具有不同的 RPC 和分布式事务行为。<br /><br /> 1 = 标准链接服务器。|  
@@ -59,7 +59,7 @@ ms.locfileid: "84818221"
 |**is_nonsql_subscriber**|**bit**|服务器为非 SQL Server 复制订阅服务器。|  
 |**is_remote_proc_transaction_promotion_enabled**|**bit**|如果是 1，则调用远程存储过程将启动分布式事务，并用 MS DTC 登记该事务。 有关详细信息，请参阅 [sp_serveroption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)的数据。|  
 |modify_date|**datetime**|上次更改服务器信息的日期。|  
-|**is_rda_server**|**bit**|服务器启用远程数据存档（启用 stretch）。 有关详细信息，请参阅在[服务器上启用 Stretch Database](https://docs.microsoft.com/sql/sql-server/stretch-database/enable-stretch-database-for-a-database#EnableTSQLServer)。 适用于 SQL Server 2016 和更高版本。|
+|**is_rda_server**|**bit**|**适用于：** 从开始 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 。<br /><br />服务器启用远程数据存档（启用 stretch）。 有关详细信息，请参阅在[服务器上启用 Stretch Database](https://docs.microsoft.com/sql/sql-server/stretch-database/enable-stretch-database-for-a-database#EnableTSQLServer)。|
   
 ## <a name="permissions"></a>权限  
  **Provider_string**中的值始终为 NULL，除非调用方具有 ALTER ANY 链接服务器权限。  
@@ -79,4 +79,4 @@ ms.locfileid: "84818221"
  [sp_addlinkedsrvlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addremotelogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)  
   
-  
+ 

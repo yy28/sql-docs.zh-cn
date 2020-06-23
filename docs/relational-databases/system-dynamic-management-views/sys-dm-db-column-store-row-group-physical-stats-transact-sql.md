@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7970efdbfb2bd32da52f0a27620bf4b729716c54
-ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
+ms.openlocfilehash: fcfbbfb755892d710fef45554a87492ca2c37339
+ms.sourcegitcommit: d498110ec0c7c62782fb694d14436f06681f2c30
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84818388"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85196054"
 ---
 # <a name="sysdm_db_column_store_row_group_physical_stats-transact-sql"></a>sys. dm_db_column_store_row_group_physical_stats （Transact-sql）
 
@@ -47,8 +47,8 @@ ms.locfileid: "84818388"
 |**total_rows**|**bigint**|以物理方式存储在行组中的行数。 对于压缩的行组。 包括标记为已删除的行。|  
 |**deleted_rows**|**bigint**|以物理方式存储在压缩行组中且标记为要删除的行数。<br /><br /> 对于增量存储中的行组，值为 0。|  
 |**size_in_bytes**|**bigint**|此行组中所有页面的组合大小（以字节为单位）。 此大小不包括存储元数据或共享字典所需的大小。|  
-|**trim_reason**|**tinyint**|触发压缩行组的行数小于最大行数的原因。<br /><br /> 0-UNKNOWN_UPGRADED_FROM_PREVIOUS_VERSION<br /><br /> 1-NO_TRIM<br /><br /> 2-BULKLOAD<br /><br /> 3-REORG<br /><br /> 4-DICTIONARY_SIZE<br /><br /> 5-MEMORY_LIMITATION<br /><br /> 6-RESIDUAL_ROW_GROUP<br /><br /> 7-STATS_MISMATCH<br /><br /> 8-溢出|  
-|**trim_reason_desc**|**nvarchar(60)**|*Trim_reason*的说明。<br /><br /> 0-UNKNOWN_UPGRADED_FROM_PREVIOUS_VERSION：从的以前版本升级时出现 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。<br /><br /> 1-NO_TRIM：未剪裁行组。 行组已压缩，最多包含1048476行。  如果在增量行组关闭后删除了行的子集，则行数可能会减少<br /><br /> BULKLOAD：大容量加载批大小限制的行数。<br /><br /> 3-REORG：作为 REORG 命令的一部分的强制压缩。<br /><br /> 4-DICTIONARY_SIZE：字典大小增长太大，无法同时压缩所有行。<br /><br /> 5-MEMORY_LIMITATION：没有足够的可用内存来压缩所有行。<br /><br /> 6-RESIDUAL_ROW_GROUP：在索引生成操作期间作为 < 1000000 行的最后一个行组的一部分关闭<br /><br /> 7-STATS_MISMATCH：仅适用于内存中表上的列存储。 如果统计错误地指明了尾部 >= 1000000 限定行，但找到的行数较少，则压缩行组将具有 < 1000000 行<br /><br /> 8-溢出：仅适用于内存中表的列存储。 如果 tail 具有 > 1000000 个限定行，则在计数介于10万到1000000|  
+|**trim_reason**|**tinyint**|触发压缩行组的行数小于最大行数的原因。<br /><br /> 0-UNKNOWN_UPGRADED_FROM_PREVIOUS_VERSION<br /><br /> 1-NO_TRIM<br /><br /> 2-BULKLOAD<br /><br /> 3-REORG<br /><br /> 4-DICTIONARY_SIZE<br /><br /> 5-MEMORY_LIMITATION<br /><br /> 6-RESIDUAL_ROW_GROUP<br /><br /> 7-STATS_MISMATCH<br /><br /> 8-溢出<br /><br /> 9-AUTO_MERGE|  
+|**trim_reason_desc**|**nvarchar(60)**|*Trim_reason*的说明。<br /><br /> 0-UNKNOWN_UPGRADED_FROM_PREVIOUS_VERSION：从的以前版本升级时出现 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。<br /><br /> 1-NO_TRIM：未剪裁行组。 行组已压缩，最多包含1048476行。  如果在增量行组关闭后删除了行的子集，则行数可能会减少<br /><br /> BULKLOAD：大容量加载批大小限制的行数。<br /><br /> 3-REORG：作为 REORG 命令的一部分的强制压缩。<br /><br /> 4-DICTIONARY_SIZE：字典大小增长太大，无法同时压缩所有行。<br /><br /> 5-MEMORY_LIMITATION：没有足够的可用内存来压缩所有行。<br /><br /> 6-RESIDUAL_ROW_GROUP：在索引生成操作期间作为 < 1000000 行的最后一个行组的一部分关闭<br /><br /> 7-STATS_MISMATCH：仅适用于内存中表上的列存储。 如果统计错误地指明了尾部 >= 1000000 限定行，但找到的行数较少，则压缩行组将具有 < 1000000 行<br /><br /> 8-溢出：仅适用于内存中表的列存储。 如果 tail 具有 > 1000000 个限定行，则在计数介于10万到1000000<br /><br /> 9 AUTO_MERGE：在后台中运行的元组移动器合并操作将一个或多个行组合并到此行组。|  
 |**transition_to_compressed_state**|tinyint|显示此行组如何从增量存储移到列存储中的压缩状态。<br /><br /> 1-NOT_APPLICABLE<br /><br /> 2-INDEX_BUILD<br /><br /> 3-TUPLE_MOVER<br /><br /> 4-REORG_NORMAL<br /><br /> 5-REORG_FORCED<br /><br /> 6-BULKLOAD<br /><br /> 7-合并|  
 |**transition_to_compressed_state_desc**|nvarchar(60)| 1-NOT_APPLICABLE-操作不适用于增量存储。 或者，行组在升级到之前已经过压缩， [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 这种情况下不会保留历史记录。<br /><br /> 2-INDEX_BUILD 索引创建或索引重新生成压缩行组。<br /><br /> 3-TUPLE_MOVER-在后台压缩行组的元组移动器。 当行组将状态从 "已关闭" 更改<br /><br /> 4-REORG_NORMAL-重组操作，更改索引 .。。REORG，将关闭的行组从增量存储移到列存储中。 发生此错误之前，元组移动器有时间移动行组。<br /><br /> 5-REORG_FORCED-此行组在增量存储中处于打开状态，并且已强制转换为列存储，然后才有完整的行数。<br /><br /> 6-BULKLOAD-大容量加载操作直接压缩行组而不使用增量存储。<br /><br /> 7-合并操作合并了一个或多个行组到此行组，然后执行了列存储压缩。|  
 |**has_vertipaq_optimization**|bit|VertiPaq 优化通过对行组中的行顺序重新排列，以实现更高的压缩，从而提高列存储压缩。 大多数情况下，此优化会自动进行。 在以下两种情况下不使用 VertiPaq 优化：<br/>  a. 当增量行组移到列存储中，并且列存储索引上有一个或多个非聚集索引时-在此情况下，将跳过 VertiPaq 优化，以最大程度地减少对映射索引的更改;<br/> b. 用于内存优化表上的列存储索引。 <br /><br /> 0 = 否<br /><br /> 1 = 是|  

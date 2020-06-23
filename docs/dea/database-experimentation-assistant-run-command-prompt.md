@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: f2640e9018f29385851839932572aeaa3ee91ad9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 674f40b16437547956178293c5b491b11c8b2f89
+ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "77600127"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85215484"
 ---
 # <a name="run-database-experimentation-assistant-at-a-command-prompt"></a>在命令提示符下运行数据库实验助手
 
@@ -34,15 +34,15 @@ ms.locfileid: "77600127"
 
 若要启动新的工作负荷捕获，请在命令提示符下运行以下命令：
 
-`Deacmd.exe -o StartCapture -h <SQLServerInstance> -e <encryptconnection> -u <trustservercertificate> -d <database name> -p <trace file path> -f <trace file name> -t <Max duration>`
+`Deacmd.exe -o StartCapture -n <Trace FileName> -x <Trace Format> -h <SQLServerInstance> -f <database name> -e <Encrypt Connection> -m <Authetication Mode> -u <user name> -p <password> -l <Location of Output Folder> -d <duration>`
 
 **示例**
 
-`Deacmd.exe -o StartCapture -h localhost -e -d adventureworks -p c:\test -f sql2008capture -t 60`
+`Deacmd.exe -o StartCapture -n sql2008capture -x 0 -h localhost -f adventureworks -e --trust -m 0 -l c:\test  -d 60`
 
 **其他选项**
 
-使用`Deacmd.exe`命令启动新的工作负荷捕获时，可以使用以下附加选项：
+使用命令启动新的工作负荷捕获时 `Deacmd.exe` ，可以使用以下附加选项：
 
 | 选项| 说明 |  
 | --- | --- |
@@ -72,27 +72,27 @@ ms.locfileid: "77600127"
 
 3. 使用 StartReplayCaptureTrace 在运行 SQL Server 的目标计算机上启动跟踪捕获。
 
-    a.  在 SQL Server Management Studio （SSMS）中，打开 <\>Dea_InstallPath \Scripts\StartReplayCaptureTrace.sql。
+    a.  在 SQL Server Management Studio （SSMS）中，打开 <Dea_InstallPath \> \Scripts\StartReplayCaptureTrace.sql。
 
-    b.  运行`Set @durationInMins=0` ，以便跟踪捕获不会在指定的时间后自动停止。
+    b.  运行， `Set @durationInMins=0` 以便跟踪捕获不会在指定的时间后自动停止。
 
-    c.  若要设置每个跟踪文件的最大文件`Set @maxfilesize`大小，请运行。 建议的大小为200（以 MB 为单位）。
+    c.  若要设置每个跟踪文件的最大文件大小，请运行 `Set @maxfilesize` 。 建议的大小为200（以 MB 为单位）。
 
-    d.  编辑`@Tracefile`以为跟踪文件设置唯一名称。
+    d.  编辑 `@Tracefile` 以为跟踪文件设置唯一名称。
 
-    e.  如果`@dbname`只能在特定数据库上捕获工作负荷，请编辑以指定数据库名称。 默认情况下，将捕获整个服务器上的工作负荷。
+    e.  `@dbname`如果只能在特定数据库上捕获工作负荷，请编辑以指定数据库名称。 默认情况下，将捕获整个服务器上的工作负荷。
 
 4. 若要针对目标 SQL Server 实例重播 IRF 文件，请在命令提示符下运行以下命令：
 
     `DReplay replay -m "dreplaycontroller" -d "<Folder Path on Dreplay Controller>\IrfFolder" -o -s "SQL2016Target" -w "dreplaychild1,dreplaychild2,dreplaycild3,dreplaychild4"`
 
-    a.  若要监视状态，请在命令提示符下运行`DReplay status -f 1`。
+    a.  若要监视状态，请在命令提示符下运行 `DReplay status -f 1` 。
 
-    b.  若要停止重播，例如，如果在命令提示符处看到 pass% 低于预期，请运行`DReplay cancel`。
+    b.  若要停止重播，例如，如果在命令提示符处看到 pass% 低于预期，请运行 `DReplay cancel` 。
 
 5. 停止目标 SQL Server 实例上的跟踪捕获。
-6. 在 SSMS 中打开`<Dea_InstallPath>\Scripts\StopCaptureTrace.sql`。
-7. 编辑`@Tracefile`此项可匹配运行 SQL Server 的目标计算机上的跟踪文件路径。
+6. 在 SSMS 中打开 `<Dea_InstallPath>\Scripts\StopCaptureTrace.sql` 。
+7. 编辑 `@Tracefile` 此项可匹配运行 SQL Server 的目标计算机上的跟踪文件路径。
 8. 针对运行 SQL Server 的目标计算机运行脚本。
 
 **使用内置重播**
@@ -103,11 +103,11 @@ ms.locfileid: "77600127"
 
 若要启动新的跟踪分析，请在命令提示符下运行以下命令：
 
-`Deacmd.exe -o analysis -a <Target1 trace filepath> -b <Target2 trace filepath> -r reportname -h <SQLserverInstance> -e <encryptconnection> -u <trustservercertificate>`
+`Deacmd.exe -o analysis -a <Target1 trace filepath> -b <Target2 trace filepath> -r reportname -h <SQLserverInstance> -e <encryptconnection> -u <username>`
 
 **示例**
 
-`Deacmd.exe -o analysis -a C:\Trace\SQL2008Source\Trace.trc -b C:\ Trace\SQL2014Trace\Trace.trc -r upgrade20082014 -s localhost -e`
+`Deacmd.exe -o analysis -a C:\Trace\SQL2008Source\Trace.trc -b C:\ Trace\SQL2014Trace\Trace.trc -r upgrade20082014 -h localhost -e`
 
 若要查看这些跟踪文件的分析报告，需要使用 GUI 来查看图表和组织的指标。  不过，分析数据库会写入指定的 SQL Server 实例，因此您还可以直接查询生成的分析表。
 
@@ -132,6 +132,6 @@ ms.locfileid: "77600127"
 | --阿尔 | 使用 SAS 密钥的实例的 Blob URL |
 | --bbu | 带有 SAS 密钥的 B 实例的 Blob URL |
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - 有关使用 DEA 的详细信息，请参阅[数据库实验助手概述](database-experimentation-assistant-overview.md)。
