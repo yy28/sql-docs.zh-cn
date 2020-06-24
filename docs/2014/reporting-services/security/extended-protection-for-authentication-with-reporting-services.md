@@ -10,19 +10,19 @@ ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 89aae3981d88c25104a29a6abfe81f09bb04de53
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 74da8e34feb100edce52457536f7e19a49464eba
+ms.sourcegitcommit: 4fe7b0d5e8ef1bc076caa3819f7a7b058635a486
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78177076"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85263885"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Reporting Services 针对验证的扩展保护
   扩展保护是针对最新版本的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 操作系统的一组增强功能。 扩展保护增强了应用程序可用来保护凭据和身份验证的方式。 此功能自身并不直接提供保护机制来防止特定攻击（如凭据转发），但它为诸如 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的应用程序提供了一种基础结构来实施针对验证的扩展保护。
 
  作为扩展保护一部分的主要身份验证增强功能是服务绑定和渠道绑定。 渠道绑定使用渠道绑定标记 (CBT)，以验证在两个端点之间建立的渠道不会受到危害。 服务绑定使用服务器主体名称 (SPN) 来验证身份验证标记的预期目的地。 有关扩展保护的详细背景信息，请参阅 [Integrated Windows Authentication with Extended Protection（将 Windows 身份验证与扩展保护相集成）](https://go.microsoft.com/fwlink/?LinkId=179922)。
 
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]支持并强制实施已在操作系统中启用并在中[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]配置的扩展保护。 默认情况下， [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 接受指定 Negotiate 或 NTLM 身份验证的请求，因此，可能因操作系统中支持扩展保护以及 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 扩展保护功能而受益。
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]支持并强制实施已在操作系统中启用并在中配置的扩展保护 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 。 默认情况下， [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 接受指定 Negotiate 或 NTLM 身份验证的请求，因此，可能因操作系统中支持扩展保护以及 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 扩展保护功能而受益。
 
 > [!IMPORTANT]
 >  默认情况下，Windows 不启用扩展保护。 有关如何在 Windows 中启用扩展保护的信息，请参阅 [身份验证的扩展保护](https://go.microsoft.com/fwlink/?LinkID=178431)。 操作系统和客户端身份验证堆栈必须同时支持扩展保护，身份验证才能成功。 对于较早的操作系统，您可能需要安装多个更新，才能获得完整的支持扩展保护功能的计算机。 有关扩展保护的最新开发动态的信息，请参阅 [updated information with Extended Protection（扩展保护的更新信息）](https://go.microsoft.com/fwlink/?LinkId=183362)。
@@ -45,9 +45,9 @@ ms.locfileid: "78177076"
 
 ### <a name="upgrade"></a>升级
 
--   通过将 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 服务器升级到 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]，可将具有默认值的配置设置添加到 `rsreportserver.config` 文件。 如果设置已经存在，则[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]安装会将它们保留在`rsreportserver.config`文件中。
+-   通过将 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 服务器升级到 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]，可将具有默认值的配置设置添加到 `rsreportserver.config` 文件。 如果设置已经存在，则 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 安装会将它们保留在文件中 `rsreportserver.config` 。
 
--   将配置设置添加到`rsreportserver.config`配置文件时，默认行为是将[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]扩展保护功能设置为关闭，您必须启用此功能，如本主题中所述。 有关详细信息，请参阅本主题中的 [配置设置](#ConfigurationSettings) 部分。
+-   将配置设置添加到 `rsreportserver.config` 配置文件时，默认行为是将 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 扩展保护功能设置为关闭，您必须启用此功能，如本主题中所述。 有关详细信息，请参阅本主题中的 [配置设置](#ConfigurationSettings) 部分。
 
 -    设置的默认值为 。
 
@@ -81,8 +81,8 @@ ms.locfileid: "78177076"
 |场景|方案图|保护方式|
 |--------------|----------------------|-------------------|
 |HTTP 通信。 报表服务器将实行“客户端到报表服务器”服务绑定。|![RS_ExtendedProtection_Indirect](../media/rs-extendedprotection-indirect.gif "RS_ExtendedProtection_Indirect")<br /><br /> 1) 客户端应用程序<br /><br /> 2) 报表服务器<br /><br /> 3) 代理|没有 SSL 渠道，因此可能不实行渠道绑定。<br /><br /> 将 `RSWindowsExtendedProtectionLevel` 设置为 `Allow` 或 `Require`。<br /><br /> 将 `RSWindowsExtendedProtectionScenario` 设置为 `Any`。<br /><br /> 请注意，Report Server 必须配置为知道代理服务器的名称，以确保正确地强制执行服务绑定。|
-|HTTP 通信。<br /><br /> 报表服务器将实行“客户端到代理”渠道绑定和“客户端到报表服务器”服务绑定。|![RS_ExtendedProtection_Indirect_SSL](../media/rs-extendedprotection-indirect-ssl.gif "RS_ExtendedProtection_Indirect_SSL")<br /><br /> 1) 客户端应用程序<br /><br /> 2) 报表服务器<br /><br /> 3) 代理|到代理的 SSL 渠道是可用的，因此，可以与代理之间实行渠道绑定。<br /><br /> 还可以实行服务绑定。<br /><br /> 报表服务器必须了解代理名称，报表服务器管理员应使用主机标头为代理创建一个 URL 预留，或在 Windows 注册表项 `BackConnectionHostNames` 中配置代理名称。<br /><br /> `RSWindowsExtendedProtectionLevel`为`Allow`或`Require`。<br /><br /> 将 `RSWindowsExtendedProtectionScenario` 设置为 `Proxy`。|
-|与安全代理之间的间接 HTTPS 通信。 报表服务器将实行“客户端到代理”渠道绑定和“客户端到报表服务器”服务绑定。|![RS_ExtendedProtection_IndirectSSLandHTTPS](../media/rs-extendedprotection-indirectsslandhttps.gif "RS_ExtendedProtection_IndirectSSLandHTTPS")<br /><br /> 1) 客户端应用程序<br /><br /> 2) 报表服务器<br /><br /> 3) 代理|到代理的 SSL 渠道是可用的，因此，可以与代理之间实行渠道绑定。<br /><br /> 还可以实行服务绑定。<br /><br /> 报表服务器必须了解代理名称，报表服务器管理员应使用主机标头为代理创建一个 URL 预留，或在 Windows 注册表项 `BackConnectionHostNames` 中配置代理名称。<br /><br /> `RSWindowsExtendedProtectionLevel`为`Allow`或`Require`。<br /><br /> 将 `RSWindowsExtendedProtectionScenario` 设置为 `Proxy`。|
+|HTTP 通信。<br /><br /> 报表服务器将实行“客户端到代理”渠道绑定和“客户端到报表服务器”服务绑定。|![RS_ExtendedProtection_Indirect_SSL](../media/rs-extendedprotection-indirect-ssl.gif "RS_ExtendedProtection_Indirect_SSL")<br /><br /> 1) 客户端应用程序<br /><br /> 2) 报表服务器<br /><br /> 3) 代理|到代理的 SSL 渠道是可用的，因此，可以与代理之间实行渠道绑定。<br /><br /> 还可以实行服务绑定。<br /><br /> 报表服务器必须了解代理名称，报表服务器管理员应使用主机标头为代理创建一个 URL 预留，或在 Windows 注册表项 `BackConnectionHostNames` 中配置代理名称。<br /><br /> `RSWindowsExtendedProtectionLevel`为 `Allow` 或 `Require` 。<br /><br /> 将 `RSWindowsExtendedProtectionScenario` 设置为 `Proxy`。|
+|与安全代理之间的间接 HTTPS 通信。 报表服务器将实行“客户端到代理”渠道绑定和“客户端到报表服务器”服务绑定。|![RS_ExtendedProtection_IndirectSSLandHTTPS](../media/rs-extendedprotection-indirectsslandhttps.gif "RS_ExtendedProtection_IndirectSSLandHTTPS")<br /><br /> 1) 客户端应用程序<br /><br /> 2) 报表服务器<br /><br /> 3) 代理|到代理的 SSL 渠道是可用的，因此，可以与代理之间实行渠道绑定。<br /><br /> 还可以实行服务绑定。<br /><br /> 报表服务器必须了解代理名称，报表服务器管理员应使用主机标头为代理创建一个 URL 预留，或在 Windows 注册表项 `BackConnectionHostNames` 中配置代理名称。<br /><br /> `RSWindowsExtendedProtectionLevel`为 `Allow` 或 `Require` 。<br /><br /> 将 `RSWindowsExtendedProtectionScenario` 设置为 `Proxy`。|
 
 ### <a name="gateway"></a>网关
  此方案介绍连接到执行 SSL 和对用户进行身份验证的设备或软件的客户端应用程序。 接着，此设备或软件模拟用户上下文或其他用户上下文，之后对报表服务器发出请求。
@@ -101,19 +101,19 @@ ms.locfileid: "78177076"
 |从客户端间接和直接访问报表服务器，其中，客户端与代理或报表服务器建立 SSL 连接。|![RS_ExtendedProtection_CombinationSSL](../media/rs-extendedprotection-combinationssl.gif "RS_ExtendedProtection_CombinationSSL")<br /><br /> 1) 客户端应用程序<br /><br /> 2) 报表服务器<br /><br /> 3) 代理<br /><br /> 4) 客户端应用程序|可以使用渠道绑定<br /><br /> 报表服务器必须了解代理名称，报表服务器管理员应使用主机标头为代理创建一个 URL 预留，或在 Windows 注册表项 `BackConnectionHostNames` 中配置代理名称。<br /><br /> 将 `RSWindowsExtendedProtectionLevel` 设置为 `Allow` 或 `Require`。<br /><br /> 将 `RSWindowsExtendedProtectionScenario` 设置为 `Proxy`。|
 
 ## <a name="configuring-reporting-rervices-extended-protection"></a>配置 Reporting Rervices 扩展保护
- `rsreportserver.config`文件包含控制扩展保护行为的[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]配置值。
+ `rsreportserver.config`文件包含控制扩展保护行为的配置值 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 。
 
- 有关使用和编辑`rsreportserver.config`文件的详细信息，请参阅[rsreportserver.config 配置文件](../report-server/rsreportserver-config-configuration-file.md)。 还可以使用 WMI API 更改和检查扩展保护设置。 有关详细信息，请参阅 [SetExtendedProtectionSettings 方法 (WMI MSReportServer_ConfigurationSetting)](../wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)。
+ 有关使用和编辑文件的详细信息 `rsreportserver.config` ，请参阅[Rsreportserver.config 配置文件](../report-server/rsreportserver-config-configuration-file.md)。 还可以使用 WMI API 更改和检查扩展保护设置。 有关详细信息，请参阅 [SetExtendedProtectionSettings 方法 (WMI MSReportServer_ConfigurationSetting)](../wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)。
 
  当对配置设置进行验证失败时，将在报表服务器上禁用身份验证类型 `RSWindowsNTLM`、`RSWindowsKerberos` 和 `RSWindowsNegotiate`。
 
 ###  <a name="configuration-settings-for-reporting-services-extended-protection"></a><a name="ConfigurationSettings"></a> Reporting Services 扩展保护的配置设置
  下表提供有关在 `rsreportserver.config` 中显示的扩展保护配置设置的信息。
 
-|设置|说明|
+|设置|描述|
 |-------------|-----------------|
 |`RSWindowsExtendedProtectionLevel`|指定扩展保护的实行程度。 有效值为 `Off`、`Allow` 和 `Require`。<br /><br /> 默认值为 `Off`。<br /><br /> 值为 `Off` 指定没有渠道绑定或服务绑定验证。<br /><br /> 值为 `Allow` 支持扩展保护，但并不需要此功能。 值为 Allow 时指定：<br /><br /> 将为在支持扩展保护的操作系统上运行的客户端应用程序实行扩展保护。 实行保护的方式通过设置 `RsWindowsExtendedProtectionScenario` 来确定。<br /><br /> 对于在不支持扩展保护的操作系统上运行的应用程序而言，将允许进行身份验证。<br /><br /> 值为 `Require` 时指定：<br /><br /> 将为在支持扩展保护的操作系统上运行的客户端应用程序实行扩展保护。<br /><br /> 对于在不支持扩展保护的操作系统上运行的应用程序，将**不**允许进行身份验证。|
-|`RsWindowsExtendedProtectionScenario`|指定要验证哪些形式的扩展保护：渠道绑定、服务绑定，或两者。 有效值为 `Any`、`Proxy` 和 `Direct`。<br /><br /> 默认值为 `Proxy`。<br /><br /> 值为 `Any` 时指定：<br /><br /> \- 不要求 Windows NTLM、Kerberos 和 Negotiate 身份验证以及渠道绑定。<br /><br /> \- 实行服务绑定。<br /><br /> 值为 `Proxy` 时指定：<br /><br /> \- 当存在渠道绑定标记时，使用 Windows NTLM、Kerberos 和 Negotiate 身份验证。<br /><br /> \- 实行服务绑定。<br /><br /> 值为 `Direct` 时指定：<br /><br /> - 当 CBT 存在、与当前服务之间存在 SSL 连接并且用于 SSL 连接的 CBT 与 NTLM、Kerberos 或 Negotiate 标记的 CBT 匹配时，应使用 Windows NTLM、Kerberos 和 Negotiate 身份验证。<br /><br /> \- 不实行服务绑定。<br /><br /> <br /><br /> 注意：如果`RsWindowsExtendedProtectionLevel`将设置为`OFF`，则忽略此设置。|
+|`RsWindowsExtendedProtectionScenario`|指定要验证哪些形式的扩展保护：渠道绑定、服务绑定，或两者。 有效值为 `Any`、`Proxy` 和 `Direct`。<br /><br /> 默认值为 `Proxy`。<br /><br /> 值为 `Any` 时指定：<br /><br /> \- 不要求 Windows NTLM、Kerberos 和 Negotiate 身份验证以及渠道绑定。<br /><br /> \- 实行服务绑定。<br /><br /> 值为 `Proxy` 时指定：<br /><br /> \- 当存在渠道绑定标记时，使用 Windows NTLM、Kerberos 和 Negotiate 身份验证。<br /><br /> \- 实行服务绑定。<br /><br /> 值为 `Direct` 时指定：<br /><br /> - 当 CBT 存在、与当前服务之间存在 SSL 连接并且用于 SSL 连接的 CBT 与 NTLM、Kerberos 或 Negotiate 标记的 CBT 匹配时，应使用 Windows NTLM、Kerberos 和 Negotiate 身份验证。<br /><br /> \- 不实行服务绑定。<br /><br /> <br /><br /> 注意：如果将设置为，则忽略此设置 `RsWindowsExtendedProtectionLevel` `OFF` 。|
 
  `rsreportserver.config` 配置文件中的示例条目：
 
@@ -152,12 +152,6 @@ ms.locfileid: "78177076"
 |ComputerNamePhysicalDnsFullyQualified|唯一标识计算机的完全限定 DNS 名称。 如果本地计算机为群集中的节点，则将使用本地计算机的完全限定 DNS 名称，而不使用群集虚拟服务器的名称。<br /><br /> 此完全限定的 DNS 名称是 DNS 主机名和 DNS 域名的组合，格式为 *HostName*.*DomainName*。|
 |ComputerNamePhysicalDnsHostname|本地计算机的 DNS 主机名。 如果本地计算机为群集中的节点，则将使用本地计算机的 DNS 主机名，而不使用群集虚拟服务器的名称。|
 |ComputerNamePhysicalNetBIOS|本地计算机的 NetBIOS 名称。 如果本地计算机为群集中的节点，则将使用本地计算机的 NetBIOS 主机名，而不使用群集虚拟服务器的名称。|
-
- 当添加 SPN 时，将向跟踪日志添加类似如下内容的条目：
-
- `rshost!rshost!10a8!01/07/2010-19:29:38:: i INFO: SPN Whitelist Added <ComputerNamePhysicalNetBIOS> - <theservername>.`
-
- `rshost!rshost!10a8!01/07/2010-19:29:38:: i INFO: SPN Whitelist Added <ComputerNamePhysicalDnsHostname> - <theservername>.`
 
  有关详细信息，请参阅[为报表服务器注册服务主体名称 (SPN)](../report-server/register-a-service-principal-name-spn-for-a-report-server.md)和[关于 URL 预留和注册（SSRS 配置管理器）](../install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md)。
 
