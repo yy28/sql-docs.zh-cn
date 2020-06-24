@@ -1,5 +1,6 @@
 ---
 title: 使用 WMI 提供程序进行配置管理
+description: 了解用于配置管理的 WMI 提供程序，包括绑定、指定连接字符串和权限/服务器身份验证。
 ms.custom: seo-lt-2019
 ms.date: 04/12/2019
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 34daa922-7074-41d0-9077-042bb18c222a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d76cc006e2f8638de9b6d3c21660806239022ec0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c064c2927919ab4760903a9a3457f9c0be816647
+ms.sourcegitcommit: bf5e9cb3a2caa25d0a37f401b3806b7baa5adea8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73657377"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85295390"
 ---
 # <a name="working-with-the-wmi-provider-for-configuration-management"></a>使用 WMI 提供程序进行配置管理
 
@@ -39,13 +40,13 @@ ms.locfileid: "73657377"
 
 应用程序通过连接到 WMI 提供程序所定义的 WMI 命名空间，将用于配置管理的该提供程序定向到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 Windows WMI 服务将此命名空间映射到提供程序 DLL，并将该 DLL 加载到内存中。 所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例均由一个 WMI 命名空间表示。
 
-命名空间默认为以下格式。 格式`VV`是 SQL Server 的主版本号。 此数字可通过运行`SELECT @@VERSION;`发现。
+命名空间默认为以下格式。 格式 `VV` 是 SQL Server 的主版本号。 此数字可通过运行发现 `SELECT @@VERSION;` 。
 
 ```console
 \\.\root\Microsoft\SqlServer\ComputerManagementVV
 ```
 
-使用 PowerShell 进行连接时，必须删除该`\\.\`前导。 例如，下面的 PowerShell 代码列出了2016版（主要版本为13）的所有 WMI 类 SQL Server。
+使用 PowerShell 进行连接时， `\\.\` 必须删除该前导。 例如，下面的 PowerShell 代码列出了2016版（主要版本为13）的所有 WMI 类 SQL Server。
 
 ```powershell
 Get-WmiObject -Namespace 'root\Microsoft\SqlServer\ComputerManagement13' -List
@@ -69,7 +70,7 @@ where `instance_name` defaults to `MSSQLSERVER` in a default installation of [!I
 gwmi -ns 'root\Microsoft\SqlServer' __NAMESPACE | ? {$_.name -match 'ComputerManagement' } | select name
 ```
 
- **注意：** 如果要通过 Windows 防火墙进行连接，则需要确保计算机配置正确。 请[参阅 MSDN 网站](https://go.microsoft.com/fwlink/?linkid=15426)上[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Management Instrumentation 文档中的 "通过 Windows 防火墙连接" 一文。  
+ **注意：** 如果要通过 Windows 防火墙进行连接，则需要确保计算机配置正确。 请参阅 MSDN 网站上 Windows Management Instrumentation 文档中的 "通过 Windows 防火墙连接" 一文 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。 [Web site](https://go.microsoft.com/fwlink/?linkid=15426)  
   
 ## <a name="permissions-and-server-authentication"></a>权限和服务器身份验证  
  若要访问用于配置管理的 WMI 提供程序，客户端 WMI 管理脚本必须在目标计算机上的管理员上下文中运行。 您需要具有要管理的计算机上的本地 Windows Administrators 组的成员身份。  

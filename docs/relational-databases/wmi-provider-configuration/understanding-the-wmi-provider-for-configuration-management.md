@@ -1,5 +1,6 @@
 ---
 title: 配置管理的 WMI 提供程序
+description: 了解用于配置管理的 WMI 提供程序如何使用 WMI 来管理 SQL Server 中的服务、服务器别名和客户端/服务器网络设置。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 92323972-7943-4208-bbf4-050774fb6027
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 21ca5f7039b11b30c11a0fb707f6b6e89244bae2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4795ee1d456e5f4b823c24fc1ad48e81c9d6541e
+ms.sourcegitcommit: bf5e9cb3a2caa25d0a37f401b3806b7baa5adea8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73658915"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85295430"
 ---
 # <a name="understanding-the-wmi-provider-for-configuration-management"></a>了解用于配置管理的 WMI 提供程序
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "73658915"
   
  有关使用 WMI 提供程序进行配置管理的管理应用程序的示例，请参阅[将 WQL 和脚本语言与用于配置管理的 Wmi 提供程序结合使用](../../relational-databases/wmi-provider-configuration/using-wql-and-scripting-languages-with-the-wmi-provider.md)。  
   
- 有关使用 WMI 提供程序的编程管理应用程序的详细信息，请参阅[!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework SDK 中的 WMI 文档。  
+ 有关使用 WMI 提供程序的编程管理应用程序的详细信息，请参阅 .NET Framework SDK 中的 WMI 文档 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。  
   
 ## <a name="see-also"></a>另请参阅  
  [使用 WMI 提供程序进行配置管理](../../relational-databases/wmi-provider-configuration/working-with-the-wmi-provider-for-configuration-management.md)   

@@ -1,5 +1,6 @@
 ---
 title: 使用 WQL 访问 WMI 提供程序
+description: 使用此示例来了解如何在 SQL Server 中为计算机管理的 WMI 提供程序运行 Windows Management Instrumentation 查询语言语句。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 26499530-d93b-452b-bbe4-217ef1d11e68
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 53ade765b0f6b6710a12da06ae0b7470b55d9400
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8b9fa96f19bc0675a1e83db858e16605338b3899
+ms.sourcegitcommit: bf5e9cb3a2caa25d0a37f401b3806b7baa5adea8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73658944"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85295440"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-wql"></a>使用 WQL 访问用于配置管理的 WMI 提供程序
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,11 +33,11 @@ ms.locfileid: "73658944"
   
 1.  从 "**开始**" 菜单中，单击 "**运行**"，然后输入**WBEMtest**。  
   
-2.  将出现 WBEMtest.exe 对话框。 单击“连接”  。  
+2.  将出现 WBEMtest.exe 对话框。 单击“连接”。  
   
-3.  在第一个文本字段中，键入计算机管理命名空间的 WMI 提供程序：root\Microsoft\SqlServer\ComputerManagement11。 单击“连接”  。  
+3.  在第一个文本字段中，键入计算机管理命名空间的 WMI 提供程序：root\Microsoft\SqlServer\ComputerManagement11。 单击“连接”。  
   
-4.  单击 **“查询”**。 键入返回本地计算机上运行的当前服务的查询：**从 SqlService 中\*选择。** 单击“应用”  。  
+4.  单击 **“查询”**。 键入返回本地计算机上运行的当前服务的查询： ** \* 从 SqlService 中选择。** 单击“应用”。  
   
 5.  通过添加**ServiceName = "MSSQLSERVER"，** 进一步细化查询。  
   
