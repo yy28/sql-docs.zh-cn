@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Jobs Task Editor
 ms.assetid: e72b1dc7-8cda-4ee6-abb5-d438370f04df
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0c430f08b4a86c981df5138c7f78e76b54e7de28
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 25a9e2a023c5b677fb36ad51d9d1b50f217e50a5
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972822"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420644"
 ---
 # <a name="transfer-jobs-task-editor-jobs-page"></a>传输作业任务编辑器（“作业”页）
   可以使用 **“传输作业任务编辑器”** 对话框的 **“作业”** 页，指定用于将一个或多个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理作业从一个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例复制到另一个实例的属性。 有关传输作业任务的详细信息，请参阅 [Transfer Jobs Task](control-flow/transfer-jobs-task.md)。  
@@ -38,7 +38,7 @@ ms.locfileid: "84972822"
   
  此属性具有下表所列的选项：  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |**True**|复制所有作业。|  
 |**False**|仅复制指定的作业。|  
@@ -56,7 +56,7 @@ ms.locfileid: "84972822"
   
  此属性具有下表所列的选项：  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |**FailTask**|如果目标服务器上已存在同名的作业，则任务失败。|  
 |**Overwrite**|任务将覆盖目标服务器上同名的作业。|  
@@ -67,7 +67,7 @@ ms.locfileid: "84972822"
   
  此属性具有下表所列的选项：  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |**True**|启用目标服务器上的作业。|  
 |**False**|禁用目标服务器上的作业。|  

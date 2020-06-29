@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Database Task Editor
 ms.assetid: 0f65927a-5835-45ee-9c19-e33f00d0755c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 36f27bc789a5af9077225e3c507fadf54fb9ddfa
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: bb5bb1b71374fe1fa693447202ca698ebf415c82
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972854"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420804"
 ---
 # <a name="transfer-database-task-editor-general-page"></a>传输数据库任务编辑器（“常规”页）
   使用 **“传输数据库任务编辑器”** 对话框的 **“常规”** 页，可以对传输数据库任务进行命名和说明。 传输数据库任务将在两个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例之间复制或移动 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]数据库。 此任务还可以用来复制同一个服务器上的数据库。 有关此任务的详细信息，请参阅 [传输数据库任务](control-flow/transfer-database-task.md)。  

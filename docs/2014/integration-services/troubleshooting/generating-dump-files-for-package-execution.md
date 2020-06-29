@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 61ef1731-cb3a-4afb-b4a4-059b04aeade0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b3a44a21e375d37115f71ff8762b941bd87ef2ae
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 61e511aaff6c3c77338211537a685f8a1dc82981
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972715"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420604"
 ---
 # <a name="generating-dump-files-for-package-execution"></a>生成包执行的转储文件
   在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，可以创建提供包执行信息的调试转储文件。 这些文件中的信息有助于解决包执行问题。  

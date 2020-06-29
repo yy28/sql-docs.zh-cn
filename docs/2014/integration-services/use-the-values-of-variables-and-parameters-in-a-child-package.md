@@ -12,14 +12,14 @@ helpviewer_keywords:
 - packages [Integration Services], configurations
 - variables [Integration Services], adding
 ms.assetid: 9b939edb-4e17-48e5-8428-855beb10049c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 19f96adc9932b888f3304257fb9a23a22b06cc87
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a1ace15be59c7102547b4faedf70adc811bd140e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972607"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420194"
 ---
 # <a name="use-the-values-of-variables-and-parameters-in-a-child-package"></a>在子包中使用变量和参数的值
   此过程介绍如何创建使用父变量配置类型的包配置。 通过此配置类型，从父包运行的子包可以访问父包中的变量。  
@@ -88,11 +88,11 @@ ms.locfileid: "84972607"
   
     -   选择“配置位置存储在一个环境变量中”****，然后在“环境变量列表”**** 中选择包含变量名称的环境变量。  
   
-7.  单击“下一步”。  
+7.  单击“下一步”****。  
   
 8.  在“选择目标属性”页上，展开 **“变量”** 节点，并展开要配置的变量的 **“属性”** 节点，然后单击要由配置设置的属性。  
   
-9. 单击“下一步”。  
+9. 单击“下一步”****。  
   
 10. （可选）在“完成向导”页上，修改配置的默认名称，并检查配置信息。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "84972607"
   
 12. 在 **“包配置组织程序”** 对话框中， **“配置”** 框将列出新配置。  
   
-13. 单击“关闭” 。  
+13. 单击“关闭”。  
   
 ## <a name="see-also"></a>另请参阅  
  [包配置](../../2014/integration-services/package-configurations.md)   

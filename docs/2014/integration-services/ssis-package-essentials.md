@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - package requirements
 ms.assetid: b0c86c35-e3d3-4724-9a96-4087e9d74bf3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 608fae64df45e8cf84c1b72e37eb501df7758613
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2c4e3f6637c4e9fd65b0218b8489372355b3608f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962524"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421045"
 ---
 # <a name="ssis-package-essentials"></a>SSIS 包基本要素
   包是用于实现 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 功能以提取、转换和加载数据的对象。 可以通过使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 中的 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]设计器来创建包。 也可以通过运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 导入和导出向导或 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 连接项目向导来创建包。 有关详细信息，请在 SSIS 设计器和[导入项目向导](../../2014/integration-services/import-project-wizard.md) [SQL Server Data Tools 中创建包](create-packages-in-sql-server-data-tools.md)。  

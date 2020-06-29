@@ -14,14 +14,14 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: 08a019f5-8ba7-4527-97c1-e9846d4022ff
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2dbeca0a1f49484061c894b33b9022a63cede712
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fce781a80b03e937f875214a74c60aeacf016246
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972678"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420454"
 ---
 # <a name="troubleshooting-tools-package-connectivity"></a>对包连接进行故障排除的工具
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括一些功能和工具，您可以利用它们对在包和包从其提取和加载数据的数据源之间的连接进行故障排除。  

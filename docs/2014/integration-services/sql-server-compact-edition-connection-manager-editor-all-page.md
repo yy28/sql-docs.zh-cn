@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQL Server Compact Connection Manager Editor
 ms.assetid: f9fbff4b-c502-44b3-8e7b-398d66e82206
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9e6b326e86e1a9e21a740c3bf1bd1fedb6919e98
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4ddfebf9f606a717eabbeeccbcf9fd79742f60dc
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962717"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421254"
 ---
 # <a name="sql-server-compact-edition-connection-manager-editor-all-page"></a>SQL Server Compact Edition 连接管理器编辑器（“全部”页）
   可以使用 **“SQL Server Compact Edition 连接管理器”** 对话框，指定连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact 数据库时使用的属性。  
@@ -52,7 +52,7 @@ ms.locfileid: "84962717"
   
  “模式”选项包含四个值，如下表所述：  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |**只读**|指定对数据库的只读访问。|  
 |**读写**|指定对数据库的读/写权限。|  

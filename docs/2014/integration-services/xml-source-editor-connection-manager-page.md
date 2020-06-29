@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - XML Source Editor
 ms.assetid: e6507403-a3ce-4b6f-91fc-a7de9f7b6283
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e0df8c4cf72574df16ad42445434592faeae8548
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ead9ad63b6dfc7d144c0d9e748ad01b847774d85
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972367"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85419724"
 ---
 # <a name="xml-source-editor-connection-manager-page"></a>XML 源编辑器（“连接管理器”页）
   可以使用 **“XML 源编辑器”** 的 **“连接管理器”** 页指定 XML 文件和转换 XML 数据的 XSD。  
@@ -29,7 +29,7 @@ ms.locfileid: "84972367"
  **数据访问模式**  
  指定从源选择数据的方法。  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |XML 文件位置|从 XML 文件检索数据。|  
 |来自变量的 XML 文件|在变量中指定 XML 文件名。<br /><br /> **相关信息：**[在包中使用变量](../../2014/integration-services/use-variables-in-packages.md)|  

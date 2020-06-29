@@ -10,14 +10,14 @@ helpviewer_keywords:
 - components [Integration Services], data flow
 - expressions [Integration Services], data flow components
 ms.assetid: 9181b998-d24a-41fb-bb3c-14eee34f910d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d08d256946fbeb2f5b70057fc0d6992758b3a211
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0c996889b6127bb8ea16bab077bfd9d757921b11
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972627"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420344"
 ---
 # <a name="use-an-expression-in-a-data-flow-component"></a>在数据流组件中使用表达式
   本过程介绍如何将表达式添加到有条件拆分转换或派生列转换中。 有条件拆分转换使用表达式定义将数据行定向到转换输出的条件，而派生列转换使用表达式定义分配给列的值。  

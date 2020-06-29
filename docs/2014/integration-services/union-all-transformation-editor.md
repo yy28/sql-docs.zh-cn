@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Union All Transformation Editor
 ms.assetid: 32fbc1c1-da83-4684-9479-31fc3e2df98c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6414b887ee88ddc0281ee86fd3236f026b8a3f28
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a7e84c106767aa897b2e419b51ca5b5c538501cf
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972637"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420334"
 ---
 # <a name="union-all-transformation-editor"></a>Union All 转换编辑器
   可以使用 **“Union All 转换编辑器”** 对话框，将多个输入行集合并到单个输出行集中。 通过在数据流中包含 Union All 转换，可以从多个数据流合并数据、通过嵌套 Union All 转换来创建复杂数据集、以及在更正数据中的错误之后重新合并行。  

@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - objects [Integration Services]
 ms.assetid: 3da1ee6e-489d-4436-9fcb-bb0a57f9ae9a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 74da8a87ee5ea7797af31d0b01033d361dd9f673
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ae987cbd8e22fc5a9be28676eb2a8e4dfbb34bfa
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972508"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420074"
 ---
 # <a name="view-package-objects-in-package-explorer"></a>在包资源管理器中查看包对象
   此过程介绍如何使用包资源管理器查看 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包中的对象。  

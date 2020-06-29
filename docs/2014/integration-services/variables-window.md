@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Variables Window dialog box
 ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 258fdee44c2ab67babfa366f627b7b297c5f1535
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 62daceac93eda76f2d81ea0fdce00a3c5fa7e97f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972557"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420144"
 ---
 # <a name="variables-window"></a>“变量”窗口
   可以使用“变量”窗口创建和修改用户定义变量，以及查看系统变量。   

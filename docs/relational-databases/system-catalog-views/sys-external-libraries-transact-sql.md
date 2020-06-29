@@ -1,7 +1,7 @@
 ---
 title: sys. external_libraries （Transact-sql） |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2019
+ms.date: 06/25/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: machine-learning
@@ -18,21 +18,21 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b1bfc00b403fa76f692db78593ed4c0e6b53ce8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 7303649ec6d7a849979871de3f4f91b978adc23a
+ms.sourcegitcommit: a0ebbcb717f09d3614de5ce9eb9f3c00f0a45f81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80664434"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85409366"
 ---
 # <a name="sysexternal_libraries-transact-sql"></a>sys.external_libraries (Transact-SQL)  
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 支持管理与外部运行时（如 R、Python 和 Java）相关的包库。
 
 > [!NOTE]
-> 在 SQL Server 2017 中，支持 R 语言和 Windows 平台。 SQL Server 2019 及更高版本支持 Windows 和 Linux 平台上的 R、Python 和 Java。
+> 在 SQL Server 2017 中，支持 R 语言和 Windows 平台。 SQL Server 2019 及更高版本支持 Windows 和 Linux 平台上的 R、Python 和 Java。 在 Azure SQL 托管实例上，支持 R 和 Python。
 
 ## <a name="sysexternal_libraries"></a>sys.external_libraries
 
@@ -47,9 +47,9 @@ ms.locfileid: "80664434"
 |scope |int |0表示公共作用域;1用于专用范围 |  
 |scope_desc |varchar （7） |指示包是公共包还是私有包|
 
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 
 + [sys.external_library_files](sys-external-library-files-transact-sql.md)  
 + [创建外部库](../../t-sql/statements/create-external-library-transact-sql.md)  
-+ [在 SQL Server 上安装新 R 包](../../machine-learning/package-management/install-additional-r-packages-on-sql-server.md)  
-+ [在 SQL Server 上安装新 Python 包](../../machine-learning/package-management/install-additional-python-packages-on-sql-server.md)  
++ [安装新 R 包](../../machine-learning/package-management/install-additional-r-packages-on-sql-server.md)  
++ [安装新 Python 包](../../machine-learning/package-management/install-additional-python-packages-on-sql-server.md)  

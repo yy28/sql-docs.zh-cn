@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Database Task Editor
 ms.assetid: ccdb74d0-4bea-420c-a726-2e0eb8957e0a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 398e3f3d8496d26c2672ad6d11557c0058a594ee
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fddfbf70b298614767429a8a006d264ad4853aa0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962065"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420844"
 ---
 # <a name="transfer-database-task-editor-databases-page"></a>传输数据库任务编辑器（“数据库”页）
   使用 **“传输数据库任务编辑器”** 对话框的 **“数据库”** 页可为传输数据库任务涉及的源数据库和目标数据库指定属性。 传输数据库任务将在两个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例之间复制或移动 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]数据库。 此任务还可以用来复制同一个服务器上的数据库。 有关此任务的详细信息，请参阅 [传输数据库任务](control-flow/transfer-database-task.md)。  
@@ -52,7 +52,7 @@ ms.locfileid: "84962065"
   
  此属性具有下表所列的选项：  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |**True**|覆盖目标服务器数据库。|  
 |**False**|不覆盖目标服务器数据库。|  
@@ -81,7 +81,7 @@ ms.locfileid: "84962065"
   
  此属性具有下表所列的选项：  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |**True**|重新附加源数据库。|  
 |**False**|不重新附加源数据库。|  
