@@ -14,14 +14,14 @@ helpviewer_keywords:
 - SSIS Script task, vs. custom managed tasks
 - custom tasks [Integration Services], scripts
 ms.assetid: c0aea822-a21e-44e1-a3d3-8777bd0a1c34
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 18c78f2ba914dc5b65bba9d11de2a697c7038d5c
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: acf6faf9cdd78e951b8298c4e3b144d3444fb1ad
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968411"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85426294"
 ---
 # <a name="comparing-scripting-solutions-and-custom-objects"></a>比较脚本解决方案与自定义对象
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 脚本任务或脚本组件可实现许多可用于自定义托管任务或数据流组件的相同功能。 下面是有助于您根据需要选择相应的任务类型的一些注意事项：  

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - SSIS, scripting
 - scripts [Integration Services], about scripting
 ms.assetid: 67fe18ef-f3aa-41d4-9b9d-5defd4618c4b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ad036177e6265c31697a98c9e24fc4d1c11b310b
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a640847dbc6846b4045ea7f2f6ac1afe9294c160
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967237"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85426014"
 ---
 # <a name="extending-packages-with-scripting"></a>用脚本扩展包
   如果您觉得 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的内置组件不能满足您的要求，您可以编写自己的扩展插件代码来扩展 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的功能。 对于扩展包，您有两种不同的选择：可以在脚本任务和脚本组件提供的功能强大的包装中编写代码，或者通过从 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 对象模型提供的基类进行派生，完全重新创建自定义 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 扩展插件。
@@ -38,7 +38,7 @@ ms.locfileid: "84967237"
 
  [用脚本组件扩展数据流](data-flow-script-component/extending-the-data-flow-with-the-script-component.md)介绍如何使用脚本组件创建自定义数据流源、转换和目标。 通常，处理每一行数据时会调用一次数据流组件。
 
-## <a name="reference"></a>引用
+## <a name="reference"></a>参考
  [Integration Services 错误和消息引用](../integration-services-error-and-message-reference.md)列出预定义的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 错误代码及其符号名称和说明。
 
 ## <a name="related-sections"></a>相关章节
