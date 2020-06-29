@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 2a073699-79a2-4ea1-a68e-fc17a80b74ba
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 825d9191ad1ce29c93ea61ce3d4040fea2ff0e0b
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: addc83f1c3344059167ac96ef7460f84fca1673d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84919838"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433964"
 ---
 # <a name="cdc-control-task-custom-properties"></a>CDC 控制任务自定义属性
   下表描述了 CDC 控制任务的自定义属性。 所有属性均可读/写。  

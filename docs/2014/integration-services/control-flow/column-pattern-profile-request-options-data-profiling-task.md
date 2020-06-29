@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a00c72e6f444ec1e62082f254d6b77894b479d09
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 831350b3ab54f84236f7f258415aeb782539cdb5
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84919596"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433754"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>列模式信息配置文件请求选项（数据事件探查任务）
   可以使用 **“配置文件请求”** 页的 **“请求属性”** 窗格，为请求窗格中选定的 **“列模式信息配置文件请求”** 设置选项。 列模式配置文件报告一组涵盖指定字符串列中值的百分比的正则表达式。 此配置文件可以帮助您识别数据中的问题（如无效字符串），还可以建议可用于以后验证新值的正则表达式。 例如，美国邮政编码列的模式配置文件可能会生成正则表达式 \d{5}-\d{4}、\d{5} 和 \d{9}。 如果看到其他的正则表达式，则数据有可能包含无效或格式不正确的值。  
@@ -72,7 +72,7 @@ ms.locfileid: "84919596"
   
 -   **Data**，它包含 **TableOrView** 选项和 **Column** 选项  
   
--   常规  
+-   **常规**  
   
 -   **选项**  
   

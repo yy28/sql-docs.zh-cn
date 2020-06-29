@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Execute Process task [Integration Services]
 ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3dd58a175eaecc85e8c2bd515041753cf241adf9
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 229a5f6b5a0194f7bd815077274a4e7f97a21185
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84919178"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433454"
 ---
 # <a name="execute-process-task"></a>执行进程任务
   执行进程任务在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包工作流中运行应用程序或批处理文件。 虽然可以使用执行进程任务打开任意标准应用程序（例如 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 或 [!INCLUDE[ofprword](../../includes/ofprword-md.md)]），但通常还是使用它来运行针对数据源执行的业务应用程序或批处理文件。 例如，可以使用执行进程任务来展开一个压缩的文本文件。 然后，包可将该文本文件用作包中数据流的数据源。 再举一个例子，您可以使用执行进程任务运行生成日销售额报表的自定义 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 应用程序。 然后，可以将该报表附加到发送邮件任务，并将其转发给通讯组列表。  

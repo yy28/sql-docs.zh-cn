@@ -11,14 +11,14 @@ helpviewer_keywords:
 - connection managers [Integration Services], Analysis Services
 - Analysis Services connection manager
 ms.assetid: 9f9cadad-a1d0-4db5-98f5-df5dbbec1be4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 43dbe6d3a1a239f7a094189219de12953807bedb
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8c8e341088b3942e0a2a274dba9ab2a361afdb9b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921188"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434504"
 ---
 # <a name="analysis-services-connection-manager"></a>Analysis Services 连接管理器
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接管理器使包能够连接到运行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库的服务器，或连接到用于访问多维数据集和维度数据的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目。 在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中开发包时，仅可连接到 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]项目。 在运行时，包会连接到您已部署 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的服务器和数据库。  

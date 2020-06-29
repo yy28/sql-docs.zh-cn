@@ -10,14 +10,14 @@ f1_keywords:
 - sql12.dts.designer.afpdelcltask.f1
 - sql11.dts.designer.afpdelcltask.f1
 ms.assetid: e298776e-d18a-4393-a8e6-65ee3d555749
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: bfe15444cd4d6b9346364ecb554cf0a8d3fd2708
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: db0a15aaea37c6d18c1d3c2136e0fd0c94eb7506
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84919938"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433894"
 ---
 # <a name="azure-hdinsight-delete-cluster-task"></a>Azure HDInsight 删除群集任务
 Azure HDInsight 删除群集任务启用一个 SSIS 包来删除指定的 Azure 订阅和资源组中的一个 Azure HDInsight 群集  。

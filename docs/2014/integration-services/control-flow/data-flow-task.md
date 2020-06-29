@@ -15,14 +15,14 @@ helpviewer_keywords:
 - data flow [Integration Services], Data Flow task
 - Integration Services, performance
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ff5c519fbe9bf8096807962a939677b3a5d58cc5
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7f10a396923fe25e018271fd62d0412c75471c35
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84919536"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433644"
 ---
 # <a name="data-flow-task"></a>数据流任务
   数据流任务封装数据流引擎，该引擎在源和目标之间移动数据，使用户可以在移动数据时转换、清除和修改数据。 将数据流任务添加到包控制流使得包可以提取、转换和加载数据。  
@@ -70,7 +70,7 @@ ms.locfileid: "84919536"
 ### <a name="sample-messages-from-a-data-flow-task"></a>来自数据流任务的示例消息  
  下表列出了非常简单的包的日志条目示例消息。 该包使用 OLE DB 源来从表中提取数据，使用排序转换来排序数据，并使用 OLE DB 目标将数据写入其他表。  
   
-|日志项|Messages|  
+|日志项|消息|  
 |---------------|--------------|  
 |`BufferSizeTuning`|`Rows in buffer type 0 would cause a buffer size greater than the configured maximum. There will be only 9637 rows in buffers of this type.`<br /><br /> `Rows in buffer type 2 would cause a buffer size greater than the configured maximum. There will be only 9497 rows in buffers of this type.`<br /><br /> `Rows in buffer type 3 would cause a buffer size greater than the configured maximum. There will be only 9497 rows in buffers of this type.`|  
 |`OnPipelinePostEndOfRowset`|`A component will be given the end of rowset signal. : 1180 : Sort : 1181 : Sort Input`<br /><br /> `A component will be given the end of rowset signal. : 1291 : OLE DB Destination : 1304 : OLE DB Destination Input`|  

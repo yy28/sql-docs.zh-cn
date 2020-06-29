@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 8632dbc4-4394-4dc7-b19c-f9adeb21ba52
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1a7597e5ebf967bd9da590057a085a72ee8b1a17
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 81659606555a9cb1884e7a92458f293932533023
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84919888"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433984"
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>候选键配置文件请求选项（数据事件探查任务）
   可以使用 **“配置文件请求”** 页的 **“请求属性”** 窗格，为请求窗格中选定的 **“候选键配置文件请求”** 设置选项。 候选键配置文件报告某个列或列集对于选定的表是键还是近似键。 此配置文件还有助于标识数据中的问题，如潜在键列中存在重复值。  

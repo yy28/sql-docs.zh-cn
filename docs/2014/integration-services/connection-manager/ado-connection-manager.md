@@ -11,14 +11,14 @@ helpviewer_keywords:
 - connection managers [Integration Services], ADO
 - ADO connection manager [Integration Services]
 ms.assetid: 490418bc-5ef1-41b8-a9c8-de38aa96e0f6
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 85c76037c44f6260bbfc436823d844abdf74355d
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fb4b667733f81eebbaf2b6a2ab9b205c09fe2c66
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921230"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434534"
 ---
 # <a name="ado-connection-manager"></a>ADO 连接管理器
   ADO 连接管理器使包可以连接到 ActiveX 数据对象 (ADO) 对象（如记录集）。 此连接管理器通常用于以 Microsoft Visual Basic 6.0 等语言的早期版本编写的自定义任务，或用于从属于使用 ADO 连接到数据源的现有应用程序的自定义任务。  

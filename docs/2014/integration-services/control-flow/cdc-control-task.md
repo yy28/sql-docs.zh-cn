@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdccontroltask.f1
 ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: dc9a71c69e1b6440b5386236fa6e1f7073851b3f
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fb3d85e8617e3e2e84ea205d6c47bd3422a0ce7f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84919718"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433774"
 ---
 # <a name="cdc-control-task"></a>CDC 控制任务
   CDC 控制任务用于控制变更数据捕获 (CDC) 包的生命周期。 它处理 CDC 包与初始加载包的同步以及在运行 CDC 包时处理的日志序列号 (LSN) 范围的管理。 此外，CDC 控制任务还处理错误情况和恢复。  

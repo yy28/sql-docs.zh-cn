@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 87205984-507a-49f3-b27c-36a0075c234d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3be95dc906b55caaf6a7f33bd66c3137303ecee4
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e0fe93729e085107f9e74ad55e598aa30987d613
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84919541"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433614"
 ---
 # <a name="column-statistics-profile-request-options-data-profiling-task"></a>列统计信息配置文件请求选项（数据事件探查任务）
   可以使用 **“配置文件请求”** 页的 **“请求属性”** 窗格，为请求窗格中选择的 **“列统计信息配置文件请求”** 设置选项。 列统计信息配置文件报告以下统计信息：数值列的最小值、最大值、平均值和标准偏差以及 `datetime` 列的最小值和最大值。 此配置文件可以帮助您识别数据中的问题，如无效日期。 例如，您对历史日期列进行事件探查，却发现最近的日期是一个将来的日期。  

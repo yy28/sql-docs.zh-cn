@@ -9,16 +9,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - data sources [Integration Services], about data sources
 ms.assetid: 7ac81612-9822-470f-8d0f-a1dc96142fe3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 46d1f79079efd5b4816359cb97a14642f309cfbb
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fe18c331a1fe1786392f94fa2a3d2623ce13d0bb
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84920965"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434342"
 ---
-# <a name="data-sources"></a>“数据源”
+# <a name="data-sources"></a>Data Sources
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]包含可在包中使用的设计时对象 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ：数据源。  
   
  数据源对象是对连接的引用，它至少包括一个连接字符串和一个数据源标识符。 数据源对象还可以包括其他元数据，如说明、名称、用户名和密码。  

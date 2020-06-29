@@ -14,14 +14,14 @@ helpviewer_keywords:
 - foreach enumerators [Integration Services]
 - containers [Integration Services], Foreach Loop
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: be0fcbb238dfc73664569fec6753de49e4f0270d
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d31e81b28ef28a60ac9d7bc44f81327bc0591db4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84918937"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433074"
 ---
 # <a name="foreach-loop-container"></a>Foreach 循环容器
   Foreach 循环容器定义包中的重复控制流。 循环的实现与编程语言中的 **Foreach** 循环结构类似。 在包中，通过使用 Foreach 枚举器启用循环。  Foreach 循环容器将重复指定枚举器的每个成员的控制流。  

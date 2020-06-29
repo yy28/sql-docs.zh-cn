@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 1a4de41f-f38d-40ea-ba1b-6c0ef67ea52a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4fa7b494745c70ae63c8c51f3aa9ae8249040f50
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1ab0b3904d8d450bc0080710cc274add278113fd
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84919579"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433714"
 ---
 # <a name="column-length-distribution-profile-request-options-data-profiling-task"></a>列长度分布配置文件请求选项（数据事件探查任务）
   可以使用 **“配置文件请求”** 页的 **“请求属性”** 窗格，为请求窗格中选择的 **“列长度分布配置文件请求”** 设置选项。 列长度分布配置文件报告所选列中字符串值的所有不同长度，以及每个长度表示的行在表中的百分比。 此配置文件有助于标识数据中的问题，如值无效。 例如，在对以两个字符表示的美国州代码列进行事件探查，发现存在超过两个字符的值。  

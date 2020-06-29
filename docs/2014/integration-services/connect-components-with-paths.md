@@ -11,14 +11,14 @@ helpviewer_keywords:
 - components [Integration Services], connections
 - connections [Integration Services], data flow components
 ms.assetid: 05633e4c-1370-4b05-802b-f36b07dd71c8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8d6cc5a5fb14fff5fd92d5120f56c06d57ddcbaf
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8635ced29f28781bba9d67408ce69f61171ab660
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921388"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434494"
 ---
 # <a name="connect-components-with-paths"></a>使用路径连接组件
   在 **设计器中** “数据流” [!INCLUDE[ssIS](../includes/ssis-md.md)] 选项卡的设计图面上构造包中的数据流。 如果数据流包含两个数据流组件，则可以将源或转换的输出连接到转换或目标的输入，以连接这两个组件。 两个数据流组件之间的连接器称为路径。

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ADO.NET connection manager [Integration Services]
 - connections [Integration Services], ADO.NET
 ms.assetid: fc5daa2f-0159-4bda-9402-c87f1035a96f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 850c8f0f54339594b19debd48ebf4ac7021873d3
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9bdc25eeeae93fe0bd85deb55bfc86c55ab91ee5
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921223"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434524"
 ---
 # <a name="adonet-connection-manager"></a>ADO.NET 连接管理器
   [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接管理器使包能够使用 .NET 访问接口访问数据源。 此连接管理器通常用于访问等数据源 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，也用于访问通过使用 c # 等语言以托管代码编写的自定义任务中的 OLE DB 和 XML 公开的数据源。  

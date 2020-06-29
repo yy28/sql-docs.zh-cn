@@ -12,14 +12,14 @@ helpviewer_keywords:
 - connection managers [Integration Services], OLE DB
 - connections [Integration Services], OLE DB
 ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b075bb2830ab911e92ecd7efbd76e7b089e89629
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 98e9684e590493a21c9b0f526eb48bf4985c5d8a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84920488"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434224"
 ---
 # <a name="ole-db-connection-manager"></a>OLE DB 连接管理器
   OLE DB 连接管理器使包能够用 OLE DB 访问接口连接到数据源。 例如，连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 OLE DB 连接管理器可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
@@ -45,7 +45,7 @@ ms.locfileid: "84920488"
   
 -   指示是否在运行时保留从连接管理器中创建的连接。  
   
-## <a name="logging"></a>日志记录  
+## <a name="logging"></a>Logging  
  可以记录 OLE DB 连接管理器对外部数据访问接口所做的调用。 使用此日志记录功能，可以对 OLE DB 连接管理器与外部数据源的连接进行故障排除。 若要记录 OLE DB 连接管理器对外部数据访问接口所做的调用，请在包级别启用包日志记录并选择 **“诊断”** 事件。 有关详细信息，请参阅 [包执行的疑难解答工具](../troubleshooting/troubleshooting-tools-for-package-execution.md)。  
   
 ## <a name="configuration-of-the-oledb-connection-manager"></a>OLEDB 连接管理器的配置  
