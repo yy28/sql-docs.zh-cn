@@ -13,14 +13,14 @@ helpviewer_keywords:
 - run-time [Integration Services]
 - data flow components [Integration Services], run-time methods
 ms.assetid: fd9e4317-18dd-43af-bbdc-79db32183ac4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 656acd0802eb08e7b32c2d6b4dbee2129682d298
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b7c5e6a413a2bcf647752d2a1ad4c4f77ac3560b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968827"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436944"
 ---
 # <a name="run-time-methods-of-a-data-flow-component"></a>数据流组件的运行时方法
   在运行时，数据流任务将检查一系列组件、准备执行计划以及管理执行工作计划的工作线程池。 任务先从源加载数据行，再通过转换处理这些行，然后将它们保存到目标。  

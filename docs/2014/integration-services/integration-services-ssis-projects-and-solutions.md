@@ -13,14 +13,14 @@ helpviewer_keywords:
 - folders [Integration Services]
 - projects [Integration Services], about projects
 ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e48dfbf5420c6032b8185cf59b2b132df2c82cf2
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 21c87a2b8697c3c9e83bc82edac79dacd3481b35
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966225"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436404"
 ---
 # <a name="integration-services-ssis-projects"></a>Integration Services (SSIS) 项目
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 用于开发 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包。
@@ -45,7 +45,7 @@ ms.locfileid: "84966225"
 
  下表介绍 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目中出现的文件夹。
 
-|文件夹|说明|
+|Folder|说明|
 |------------|-----------------|
 |[!INCLUDE[ssIS](../includes/ssis-md.md)] 包|包含包。 有关详细信息，请参阅 [Integration Services (SSIS) 包](../../2014/integration-services/integration-services-ssis-packages.md)。|
 |杂项|包含除包文件以外的文件。|

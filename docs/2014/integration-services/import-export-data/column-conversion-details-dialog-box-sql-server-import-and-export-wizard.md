@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.issuedetails.f1
 ms.assetid: e2d00a39-dfbd-4821-a4d8-a5bd1164ed4d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: dd4e53a1e6485d74ba2aff4039108b357d9c0c92
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9207e76191060c56acad37db734827579a83aae0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966218"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436824"
 ---
 # <a name="column-conversion-details-dialog-box-sql-server-import-and-export-wizard"></a>“列转换详细信息”对话框（SQL Server 导入和导出向导）
   使用 "**列转换详细信息**" 对话框可以查看有关单个列的详细转换信息。 此转换信息包含源和目标中的列的数据类型以及向导将执行的转换。 此页还列出了向导用于确定所需的数据类型转换的数据类型映射文件。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 在安装过程中会安装这些数据类型映射文件。  

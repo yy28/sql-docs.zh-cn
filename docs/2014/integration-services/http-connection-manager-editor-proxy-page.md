@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - HTTP Connection Manager Editor
 ms.assetid: e831a830-49a3-49c5-8a31-9731fc4fd12e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6f5fa616116b4a6842143b6950905de4b8db0063
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 71880421f9f692c3d2c33aa6439e409c84851293
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968337"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436914"
 ---
 # <a name="http-connection-manager-editor-proxy-page"></a>HTTP 连接管理器编辑器（“代理”页）
   可以使用 **“HTTP 连接管理器编辑器”** 对话框的 **“代理”** 选项卡配置 HTTP 连接管理器以使用代理服务器。 利用 HTTP 连接，包可以使用 HTTP 访问 Web 服务器以发送或接收文件。  

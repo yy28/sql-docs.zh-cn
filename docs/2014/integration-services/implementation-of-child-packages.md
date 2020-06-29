@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - child packages
 ms.assetid: ab0c09d7-ce2e-487d-a1ed-a4b5adb6cc01
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7390434b1565c64b63e62c89d1e61b13f18cd6a6
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4a297324e5f51b3464fbf9e08568823e520a06bf
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965694"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436924"
 ---
 # <a name="implementation-of-child-packages"></a>子包的实现
   使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]来实现负载平衡时，子包将安装在其他服务器上，以利用可用的 CPU 或服务器时间。 若要创建和运行子包，需要执行以下步骤：  

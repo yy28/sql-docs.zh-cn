@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5c95ce51-e0fe-4fc5-95eb-2945929f2b13
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 795285a6aaceb3e74e80f5cad71d54c72c756ae2
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f1f50c3aed4429a3ba05a23a969d050c45778c34
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966147"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435844"
 ---
 # <a name="step-5-adding-and-configuring-the-flat-file-source"></a>步骤 5：添加并配置平面文件源
   在此任务中，将向包中添加一个平面文件源并对其进行配置。 平面文件源是一个数据流组件，它使用平面文件连接管理器定义的元数据来指定转换过程要从此平面文件中提取的数据的格式和结构。 可以通过使用平面文件连接管理器提供的文件格式定义将平面文件源配置为从单个平面文件提取数据。  
@@ -35,7 +35,7 @@ ms.locfileid: "84966147"
   
 6.  单击“列”**** 并验证列名是否正确。  
   
-7.  单击“确定”。  
+7.  单击" **确定**"。  
   
 8.  右键单击“平面文件源”并单击“属性”****。  
   

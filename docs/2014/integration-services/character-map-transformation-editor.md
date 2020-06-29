@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Character Map Transformation Editor
 ms.assetid: 3f1dbcf9-9cca-4606-bdcc-7ea6ad48cdf3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6d769112c95b88becfd1ec9bfbe7beabd0130cdd
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5f74855074ac4d362c1505a0e3a4ebff416ed4b5
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84922101"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435074"
 ---
 # <a name="character-map-transformation-editor"></a>字符映射表转换编辑器
   可以使用“字符映射表转换编辑器”**** 对话框，选择要应用到列数据的字符串函数，以及指定映射是就地更改还是添加为新列。  
@@ -35,7 +35,7 @@ ms.locfileid: "84922101"
  **目标**  
  指定是否就地保存字符串运算结果、使用现有列或将已修改的数据作为新列保存。  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |新列|将数据保存在新列中。 在 **“输出别名”** 下分配列名。|  
 |就地更改|将已修改的数据保存在现有的列中。|  
@@ -43,7 +43,7 @@ ms.locfileid: "84922101"
  **操作**  
  从列表中选择要应用于列数据的字符串函数。  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |小写|转换为小写字母。|  
 |大写|转换为大写字母。|  

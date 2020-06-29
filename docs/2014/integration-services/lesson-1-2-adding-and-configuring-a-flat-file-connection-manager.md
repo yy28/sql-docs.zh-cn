@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 79967f4244749f5e0e14d823b4e04832e8ccb3e0
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d07502256418b1d528f73bac3296045c393ddc1b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965327"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436114"
 ---
 # <a name="step-2-adding-and-configuring-a-flat-file-connection-manager"></a>步骤 2：添加和配置平面文件连接管理器
   在本任务中，将在刚创建的包中添加一个平面文件连接管理器。 通过平面文件连接管理器，包可从平面文件中提取数据。 使用平面文件连接管理器，可以指定包从平面文件中提取数据时要应用的文件的名称与位置、区域设置与代码页以及文件格式，其中包括列分隔符。 另外，还可以为各个列手动指定数据类型；也可以使用“提供列类型建议”对话框，自动将提取出来的数据列映射到 **数据类型。** [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]  
@@ -84,10 +84,10 @@ ms.locfileid: "84965327"
   
     |平面文件列|建议的类型|目标列|目标类型|  
     |----------------------|--------------------|------------------------|----------------------|  
-    |AverageRate|float [DT_R4]|FactCurrency.AverageRate|FLOAT|  
+    |AverageRate|float [DT_R4]|FactCurrency.AverageRate|float|  
     |CurrencyID|string [DT_STR]|DimCurrency.CurrencyAlternateKey|nchar(3)|  
     |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|date|  
-    |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|FLOAT|  
+    |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|float|  
   
      建议用于列的数据类型 `CurrencyID` 与目标表中字段的数据类型不兼容。 由于的数据类型 `DimCurrency.CurrencyAlternateKey` 为 nchar （3），因此 `CurrencyID` 必须从 string [DT_STR] 改为 string [DT_WSTR]。 此外，该字段 `DimDate.FullDateAlternateKey` 定义为 date 数据类型; 因此， `CurrencyDate` 需要从日期 [DT_Date] 改为数据库日期 [DT_DBDATE]。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "84965327"
   
 3.  在 "属性" 窗格中，将列的数据类型 `CurrencyDate` 从日期 [DT_DATE] 改为数据库日期 [DT_DBDATE]。  
   
-4.  单击“确定”。  
+4.  单击" **确定**"。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
  [步骤 3：添加并配置 OLE DB 连接管理器](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  

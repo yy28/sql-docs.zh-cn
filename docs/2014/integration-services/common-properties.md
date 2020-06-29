@@ -16,14 +16,14 @@ helpviewer_keywords:
 - input properties [Integration Services]
 - component properties [Integration Services]
 ms.assetid: 51973502-5cc6-4125-9fce-e60fa1b7b796
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 77bb61af021bb7499f6656d2fd604f4bdc06bfeb
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 06b9c8378d08f8eb1e27df8b545acc12ceaa7e2b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84922098"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435094"
 ---
 # <a name="common-properties"></a>通用属性
   对象模型中的数据流对象在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 组件、输入和输出以及输入列和输出列级具有通用属性和自定义属性。 其中许多属性的值是只读的，由数据流引擎在运行时分配。  
@@ -83,7 +83,7 @@ ms.locfileid: "84922098"
   
  下表介绍了数据流中的组件的属性。 其中某些属性的值是只读的，由数据流引擎在运行时分配。  
   
-|属性|数据类型|说明|  
+|properties|数据类型|说明|  
 |--------------|---------------|-----------------|  
 |ComponentClassID|字符串|组件的 CLSID。|  
 |ContactInfo|字符串|组件开发人员的联系信息。|  
@@ -103,7 +103,7 @@ ms.locfileid: "84922098"
   
  下表描述了数据流中的组件的输入属性。 其中某些属性的值是只读的，由数据流引擎在运行时分配。  
   
-|属性|数据类型|说明|  
+|properties|数据类型|说明|  
 |--------------|---------------|-----------------|  
 |说明|字符串|输入的说明。|  
 |ErrorOrTruncationOperation|字符串|一个可选字符串，它指定处理行时可以发生的错误或截断的类型。|  
@@ -123,7 +123,7 @@ ms.locfileid: "84922098"
   
  下表描述了数据流中的组件的输入列属性。 其中某些属性的值是只读的，由数据流引擎在运行时分配。  
   
-|属性|数据类型|说明|  
+|properties|数据类型|说明|  
 |--------------|---------------|-----------------|  
 |ComparisonFlags|Integer|一组标志，用于指定数据类型为 character 的列的比较方式。 有关详细信息，请参阅 [Comparing String Data](data-flow/comparing-string-data.md)。|  
 |说明|字符串|对输入列的说明。|  
@@ -146,7 +146,7 @@ ms.locfileid: "84922098"
   
  下表描述了数据流中的组件的输出属性。 其中某些属性的值是只读的，由数据流引擎在运行时分配。  
   
-|属性|数据类型|说明|  
+|properties|数据类型|说明|  
 |--------------|---------------|-----------------|  
 |DeleteOutputOnPathDetached|Boolean|用于确定当输出与路径分离时数据流引擎是否将其删除的值。|  
 |说明|字符串|对输出的说明。|  
@@ -167,7 +167,7 @@ ms.locfileid: "84922098"
   
  下表描述了数据流中的组件的输出列属性。 其中某些属性的值是只读的，由数据流引擎在运行时分配。  
   
-|属性|数据类型|说明|  
+|properties|数据类型|说明|  
 |--------------|---------------|-----------------|  
 |ComparisonFlags|Integer|一组标志，用于指定数据类型为 character 的列的比较方式。 有关详细信息，请参阅 [Comparing String Data](data-flow/comparing-string-data.md)。|  
 |说明|字符串|对输出列的说明。|  
@@ -189,7 +189,7 @@ ms.locfileid: "84922098"
   
  下表描述了数据流中的组件的外部元数据列属性。 其中某些属性的值是只读的，由数据流引擎在运行时分配。  
   
-|属性|数据类型|说明|  
+|properties|数据类型|说明|  
 |--------------|---------------|-----------------|  
 |说明|字符串|对外部列的说明。|  
 |ID|Integer|用于唯一标识列的值。|  
@@ -203,7 +203,7 @@ ms.locfileid: "84922098"
   
  下表描述了输出列和外部元数据列的数据类型属性。  
   
-|属性|数据类型|说明|  
+|properties|数据类型|说明|  
 |--------------|---------------|-----------------|  
 |CodePage|Integer|指定非 Unicode 字符串数据的代码页。|  
 |数据类型|Integer（枚举）|列的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 数据类型。 有关详细信息，请参阅[Integration Services 数据类型](data-flow/integration-services-data-types.md)。|  

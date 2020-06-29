@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.columnmapandtransform.f1
 ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1f3266bbbc100af3eac03bc18805c82b753d7aa7
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c1d381ec773499fdcf018375c7a51740880d3d9b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965630"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436784"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>列映射（SQL Server 导入和导出向导）
   使用 "**列映射**" 对话框可以编辑转换参数。  
@@ -64,7 +64,7 @@ ms.locfileid: "84965630"
  **目标**  
  指定在复制操作期间是否忽略列。 **\<ignore>** 对于要跳过的列，请在此列中进行选择，以便只复制列的子集。 在映射列之前，必须忽略所有不会被映射的列。  
   
- **类型**  
+ **Type**  
  为列选择数据类型。  
   
  **可以为 Null**  

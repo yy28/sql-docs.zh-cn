@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.selectsourcetablesandviews.f1
 ms.assetid: f60e1a19-2ea6-403c-89ab-3e60ac533ea0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: aee638291a4aee2c4ea5d60a69fc206af613e15d
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6356cb594013d642741148dd85f7ddefc1e08ff0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965547"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436744"
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>选择源表和源视图（SQL Server 导入和导出向导）
   使用 "**选择源表和视图**" 页可以指定要从数据源复制到目标的表和视图。  

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - tasks [Integration Services], transactions
 - transactions [Integration Services]
 ms.assetid: 3c78bb26-ddce-4831-a5f8-09d4f4fd53cc
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: bf9e435156d452a83b50adcf34771c7dd45b7bfd
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c963113a5c55f07c7f80dfa06f9c2fe7bf245e82
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965349"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436254"
 ---
 # <a name="integration-services-transactions"></a>Integration Services 事务
   包使用事务将任务执行的数据库操作绑定到原子单元中，这样做可以维护数据的完整性。 所有 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 容器类型（包、For 循环、Foreach 循环和序列容器以及封装每个任务的任务宿主）都可以配置为使用事务。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了三个用于配置事务的选项： **NotSupported**、 **Supported**和 **Required**。  

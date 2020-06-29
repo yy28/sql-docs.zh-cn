@@ -17,14 +17,14 @@ helpviewer_keywords:
 - data flow engine [Integration Services]
 - languages [Integration Services]
 ms.assetid: 262babc6-eea5-4609-bc65-07d64cbcfee9
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 21459ff6295fce745a380dfb25650d9bbd971de8
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5a0f7c24eb26cfcf7b834be52b765ce8d31a0a0e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965447"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436564"
 ---
 # <a name="integration-services-programming-overview"></a>Integration Services 编程概述
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 具有将数据移动和转换与包控制流和管理分开的体系结构。 有两个截然不同的引擎定义此体系结构，对 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 进行编程可以扩展这两个引擎并使其自动化。 运行时引擎实现控制流和包管理基础结构，该基础结构使开发人员能够控制执行流并为日志记录、事件处理程序和变量设置选项。 数据流引擎是一个专用高性能引擎，专用于提取、转换和加载数据。 对 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 进行编程时，将针对这两个引擎进行编程。  

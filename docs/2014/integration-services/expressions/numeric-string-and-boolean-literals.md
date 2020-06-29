@@ -14,14 +14,14 @@ helpviewer_keywords:
 - literals [Integration Services]
 - mapping literals [Integration Services]
 ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 15cea1ab511324cad52ed197f9f612bbedb2b162
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e480e7720fc6515417d28ae7b2d6c46c484f1989
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84969167"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437174"
 ---
 # <a name="literals-ssis"></a>文字 (SSIS)
   表达式可以包含数值、字符串和布尔文字。 表达式计算器支持多种数值，例如整数、小数和浮点常量。 表达式计算器还支持数值中包含科学记数法和指定表达式计算器如何处理值的 long 和 float 后缀。  

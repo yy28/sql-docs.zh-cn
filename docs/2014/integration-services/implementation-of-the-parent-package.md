@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - parent packages [Integration Services]
 ms.assetid: d8f94830-fa27-4151-88df-cbdc6bf0fc80
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 47d030435515cc621fe223f461e3da645e9dbebf
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 04b99a2607e73bbcd612b43be1bdb30324a37e9f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965673"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436864"
 ---
 # <a name="implementation-of-the-parent-package"></a>父包的实现
   负载平衡跨越多个服务器的 SSIS 包时，如果子包已经创建并部署且用来运行子包的远程 SQL Server 代理作业也创建之后，其下一个步骤是创建父包。 父包将包含很多执行 SQL Server 代理作业任务，每个任务负责调用用于运行其中一个子包的不同的 SQL Server 代理作业。 父包中的执行 SQL Server 代理作业任务又会运行各个 SQL Server 代理作业。 父包中的每个任务都包含诸如信息，例如，如何连接到远程服务器以及服务器上运行什么作业等。 有关详细信息，请参阅 [Execute SQL Server Agent Job Task](control-flow/execute-sql-server-agent-job-task.md)。  

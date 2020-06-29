@@ -10,14 +10,14 @@ helpviewer_keywords:
 - less than (<)
 - < (less than operator)
 ms.assetid: 8674afdc-4276-46cb-be08-5aadfe8b9624
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d95a6a5fd8646ea44db80c4dbefe9da14b9daf34
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b0cfbc8653507e56c630b62a1fdbce616e0b2bd9
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84969297"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437264"
 ---
 # <a name="lt-less-than-ssis-expression"></a>&lt;（小于）（SSIS 表达式）
   通过比较确定第一个表达式是否小于第二个表达式。 在执行比较前表达式计算器会自动转换多种数据类型。  

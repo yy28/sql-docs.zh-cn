@@ -17,14 +17,14 @@ helpviewer_keywords:
 - data flow components [Integration Services], execution plans
 - execution plans [Integration Services]
 ms.assetid: 679d9ff0-641e-47c3-abb8-d1a7dcb279dd
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0159c05b641cf234e2d8fdc6cd8c56bddb6a1054
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e64e7ca1680c8219168e447fec8dde41aa577ba5
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968867"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436964"
 ---
 # <a name="execution-plan-and-buffer-allocation"></a>执行计划和缓冲区分配
   在执行之前，数据流任务会先检查其组件，并为每一个组件序列生成一个执行计划。 本节提供有关执行计划、如何查看执行计划以及如何基于执行计划分配输入和输出缓冲区的详细信息。  

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - statements [Integration Services]
 - queries [Integration Services], about queries in packages
 ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c96e823881345ae648b5fa4b5f7cdfddd94d1fa3
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5ea5de1e9dacd6cce5c4e0b199d7220413da06d7
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965370"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436284"
 ---
 # <a name="integration-services-ssis-queries"></a>Integration Services (SSIS) 查询
   执行 SQL 任务、OLE DB 源、OLE DB 目标以及查找转换都可以使用 SQL 查询。 在执行 SQL 任务中，SQL 语句可以创建、更新和删除数据库对象与数据；运行存储过程以及执行 SELECT 语句。 在 OLE DB 源和查找转换中，SQL 语句通常为 SELECT 语句或 EXEC 语句。 后者经常用于运行可返回结果集的存储过程。  

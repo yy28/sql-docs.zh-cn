@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],preparing query
 ms.assetid: 9ea2db7a-3dca-4bbf-9903-cccd2d494b5f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e82378cd044c40abb4b8519a0c6d60bb906e3f23
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 026b39f9cd3ad330c2b33c5b607cce86b6b9ada2
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84922628"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435534"
 ---
 # <a name="prepare-to-query-for-the-change-data"></a>准备查询变更数据
   在用于执行变更数据增量加载的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的控制流中，第三个任务（即最后一个任务）是准备查询变更数据和添加数据流任务。  

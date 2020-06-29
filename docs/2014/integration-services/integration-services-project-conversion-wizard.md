@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.migrationwizard.f1
 ms.assetid: a192b094-4d0f-4c21-b911-460ec844a49f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f82e5eb63122f6a965e3a001b8124445cbe91675
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6fe1db6400922188a93b55aa36d72ef3f9bef25b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965413"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436674"
 ---
 # <a name="integration-services-project-conversion-wizard"></a>Integration Services 项目转换向导
   **“Integration Services 项目转换向导”** 可以将项目转换为项目部署模型。  
@@ -99,7 +99,7 @@ ms.locfileid: "84965413"
  **包名称**  
  列出包文件。  
   
- **状态**  
+ **Status**  
  指示包是否已准备好转换为项目部署模型。  
   
  **Message**  
@@ -167,13 +167,13 @@ ms.locfileid: "84965413"
  **包**  
  列出包文件。  
   
- **类型**  
+ **Type**  
  列出配置类型，如 XML 配置文件。  
   
  **配置字符串**  
  列出配置文件的路径。  
   
- **状态**  
+ **Status**  
  显示配置的状态消息。 单击该消息可以查看整个消息文本。  
   
  **添加配置**  

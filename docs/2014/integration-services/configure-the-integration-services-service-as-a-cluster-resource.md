@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 367835aa-9855-4791-a989-b3d08402ad4c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3a7d54586a8a2d0b60a65288b4a90947862692d5
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 01d572424691ae14b8c75fa594327eef3fbd9504
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921678"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434894"
 ---
 # <a name="configure-the-integration-services-service-as-a-cluster-resource"></a>将 Integration Services 服务配置为群集资源
   对于那些认为将 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务配置为群集资源所带来的优点大于缺点的客户，本节包含必要的配置说明。 但是， [!INCLUDE[msCoName](../includes/msconame-md.md)] 不建议将 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务配置为群集资源。  
@@ -77,9 +77,9 @@ ms.locfileid: "84921678"
   
 4.  在 **“文件”** 菜单上，指向 **“新建”** ，再单击 **“资源”** 。  
   
-5.  在“资源向导”的“新资源”页上，键入名称并选择“一般服务”作为“服务类型”    。 不要更改 **“组”** 的值。 单击“下一步”。  
+5.  在“资源向导”的“新资源”页上，键入名称并选择“一般服务”作为“服务类型”    。 不要更改 **“组”** 的值。 单击“下一步”****。  
   
-6.  在 **“可能的所有者”** 页上，将群集的节点作为可能的资源所有者来添加或删除。 单击“下一步”。  
+6.  在 **“可能的所有者”** 页上，将群集的节点作为可能的资源所有者来添加或删除。 单击“下一步”****。  
   
 7.  若要添加依赖关系，请在 **“依赖关系”** 页上的 **“可用资源”** 下选择一项资源，然后单击 **“添加”** 。 对于故障转移情况， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和用来存储 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包的共享磁盘应在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 联机前重新联机。 在选择依赖关系之后，单击 **“下一步”** 。  
   

@@ -10,14 +10,14 @@ helpviewer_keywords:
 - unequal operator (!=)
 - '!= (not equal to)'
 ms.assetid: fad20e85-c0e6-42bf-af70-2bc80ee09be5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f4587524468a2ebd42fb207a888b8691890c7f11
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b70350ab2214b16c3fc9f531dd541b0a7fa2c966
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966557"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437044"
 ---
 # <a name="-unequal-ssis-expression"></a>!=（不等于）（SSIS 表达式）
   执行比较操作以确定具有兼容数据类型的两个表达式是否不相等。 在执行比较前表达式计算器会自动转换多种数据类型。  

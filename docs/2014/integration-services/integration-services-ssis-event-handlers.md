@@ -18,14 +18,14 @@ helpviewer_keywords:
 - containers [Integration Services], events
 - events [Integration Services], about events
 ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2aab5732a667dfe9e26a89048991900148077df3
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 02648e214f425c142141281a2ad21f8433cb6143
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965397"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436394"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Integration Services (SSIS) 事件处理程序
   在运行时，可执行文件（包以及 Foreach 循环容器、For 循环容器、序列容器和任务宿主容器）会引发事件。 例如，错误发生时会引发 OnError 事件。 可以为这些事件创建自定义事件处理程序，以扩展包的功能并使包在运行时更容易管理。 事件处理程序可以执行诸如下列任务：

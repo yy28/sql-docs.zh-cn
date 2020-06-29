@@ -13,14 +13,14 @@ helpviewer_keywords:
 - SSIS, SSIS Designer
 - Integration Services, SSIS Designer
 ms.assetid: d2c48cff-46f4-4c70-b1f3-c88f9b8757f3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c2c9dfab3a728bc3d5c2a5179a9bb63fb9845b5c
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8f9c93ca0a3c8f731e37bfef6e55d4088bd932d1
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965365"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436274"
 ---
 # <a name="integration-services-user-interface"></a>Integration Services 用户界面
   除了 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器选项卡上的设计图面外，还可通过用户界面访问下面的窗口和对话框，以便向包添加功能以及配置包对象的属性。  

@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.reviewissues.f1
 ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 108256e1d8a3638da5cd676a0ee57894b3ee874c
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 68a9517222c6d5a3c2fecbddff9d3e811f3c2280
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966198"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436794"
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>查看数据类型映射（SQL Server 导入和导出向导）
   使用 "**查看数据类型映射**" 页可以查看有关数据类型转换的详细信息，向导必须执行该转换才能使源数据与目标兼容。 此信息包括可视提示，用于区分应成功的转换与可能导致错误或截断的转换。 对于每个转换，您都可以决定是否接受向导建议的转换，也可以指定如何处理发生的错误。  
