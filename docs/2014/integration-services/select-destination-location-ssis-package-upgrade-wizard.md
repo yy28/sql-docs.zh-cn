@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.is.upgradewizard.selectdestinationlocation.f1
 ms.assetid: 89274a71-0ffe-4889-84df-f5a7d78459ef
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c397e1e174703b40a7bada8ed6fe42675a0c9c24
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: abe5be4a11e0f7db4f6e8078395aef0fbdf8d10a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963817"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422034"
 ---
 # <a name="select-destination-location-ssis-package-upgrade-wizard"></a>选择目标位置（SSIS 包升级向导）
   使用 **“选择目标位置”** 页可以指定要将升级包保存到的目标位置。  
@@ -40,7 +40,7 @@ ms.locfileid: "84963817"
  **包源**  
  指定存储升级包的位置。 此选项具有下表所列的值。  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |**文件系统**|指示将升级的包将保存到本地计算机上的文件夹中。|  
 |**SSIS 包存储区**|指示升级的包将保存到 Integration Services 包存储区中。 包存储区由一组 Integration Services 服务管理的文件系统文件夹组成。 有关详细信息，请参阅[包管理（SSIS 服务）](service/package-management-ssis-service.md)。<br /><br /> 选择此值将显示相应的动态选项 **“包源”** 。|  

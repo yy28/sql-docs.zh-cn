@@ -13,14 +13,14 @@ helpviewer_keywords:
 - SSIS packages, saving
 - SQL Server Integration Services packages, saving
 ms.assetid: 21482a20-e420-4452-b7eb-8f9fa1929f31
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d4725d05e41ae6335ceae19c46c2c36af14dbcf8
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9d68eac95885b6c40d607237eeb51050a9c6130f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964387"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422534"
 ---
 # <a name="save-a-copy-of-a-package"></a>保存一个包副本 
   此过程介绍如何将包的副本保存到文件系统、包存储区或 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的 **msdb** 数据库。 指定保存包副本的位置时，也能够更新包的名称。  
@@ -58,7 +58,7 @@ ms.locfileid: "84964387"
   
     -   在 **“包保护级别”** 对话框中，选择不同的保护级别。  
   
-    -   单击“确定”。  
+    -   单击" **确定**"。  
   
 9. 单击“确定”。   
   

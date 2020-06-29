@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Query Builder dialog box
 ms.assetid: 780752c9-6e3c-4f44-aaff-4f4d5e5a45c5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1a393352f7ec0f9384ed2d30b2909c9d9f2c1dc0
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 81be066d92ef1e19a141414dad4359b60efca2f9
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964617"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423154"
 ---
 # <a name="query-builder"></a>查询生成器
   可以使用 **“查询生成器”** 对话框，创建在执行 SQL 任务、OLE DB 源和 OLE DB 目标以及查找转换中使用的查询。  
@@ -45,13 +45,13 @@ ms.locfileid: "84964617"
  **Toolbar**  
  使用工具栏可以管理数据集、选择要显示的窗格以及控制查询函数。  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |**显示/隐藏关系图窗格**|显示或隐藏 "**关系图**" 窗格。|  
 |**显示/隐藏网格窗格**|显示或隐藏 "**网格**" 窗格。|  
 |**显示/隐藏 SQL 窗格**|显示或隐藏**SQL**窗格。|  
 |**显示/隐藏结果窗格**|显示或隐藏 **“结果”** 窗格。|  
-|**运行**|运行查询。 结果将显示在结果窗格中。|  
+|**Run**|运行查询。 结果将显示在结果窗格中。|  
 |**验证 SQL**|验证 SQL 语句是否有效。|  
 |**升序排序**|依据网格窗格中的所选列对输出行按升序排序。|  
 |**降序排序**|依据网格窗格中的所选列对输出行按降序排序。|  

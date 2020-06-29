@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.is.upgradewizard.selectpackages.f1
 ms.assetid: 224100f1-51f6-4f1f-91a2-054819c76ae8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f67103eedf14bb405ad1655d21803ec84e6ff0ca
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2db10085a886342511e6f2fd65ec1bcd38323803
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963737"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421914"
 ---
 # <a name="select-packages-ssis-package-upgrade-wizard"></a>选择包（SSIS 包升级向导）
   可以使用 **“选择包”** 页选择要升级的包。 此页列出了在向导的 **“选择源位置”** 页上指定的位置中存储的包。  

@@ -15,14 +15,14 @@ helpviewer_keywords:
 - running packages [Integration Services]
 - Integration Services, (See also Integration Services packages)
 ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: fae1082d765bb8ab0c99edea252c89649558a9da
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c50dc3d7ab909aa43e8f1f0e7017290538ac6476
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964787"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423664"
 ---
 # <a name="execution-of-projects-and-packages"></a>项目和包的执行
   要运行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包，您可以根据包的存储位置使用某个工具。 下表中列出了这些工具。  

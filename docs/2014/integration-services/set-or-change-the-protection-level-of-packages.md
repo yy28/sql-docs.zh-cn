@@ -12,14 +12,14 @@ helpviewer_keywords:
 - security [Integration Services],protection levels
 - protection level for packages [Integration Services]
 ms.assetid: 904a5580-82ba-4a26-b0c5-d1c989975f61
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: bcb8f4da5f39647665b3f07355ea8eed2506cda5
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ae909a1f7a61c5ae2aa3d6319fd03c54dd70b0e1
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963397"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421824"
 ---
 # <a name="set-or-change-the-protection-level-of-packages"></a>设置或更改包的保护级别
   若要控制对包内容以及其中包含的敏感值（如密码）的访问，请设置 `ProtectionLevel` 属性的值。 项目中所含的包需要具有与项目相同的保护级别才能生成项目。 如果更改项目的 `ProtectionLevel` 属性设置，需要为包手动更新该属性设置。  
@@ -53,7 +53,7 @@ ms.locfileid: "84963397"
   
 2.  `Encrypt`在主题[dtutil 实用工具](dtutil-utility.md)中查看选项的映射，然后确定要用作所选属性的值的相应整数 `ProtectionLevel` 。  
   
-3.  打开“命令提示符”窗口。  
+3.  打开命令提示符窗口。  
   
 4.  在命令提示符下，导航到您要为其设置 `ProtectionLevel` 属性的包所在的文件夹。  
   

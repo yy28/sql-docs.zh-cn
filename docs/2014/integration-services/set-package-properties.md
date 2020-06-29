@@ -22,14 +22,14 @@ helpviewer_keywords:
 - version properties [Integration Services]
 - SQL Server Integration Services packages, properties
 ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 917c5af173fa1e7087d47789b17b0845ab426dad
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6d6884bf7a29c259eb943da02b5bb9e06ff330da
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963357"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421704"
 ---
 # <a name="set-package-properties"></a>设置包属性
   在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供的图形界面创建包时，可以在“属性”窗口中设置包对象的各个属性。  
@@ -78,7 +78,7 @@ ms.locfileid: "84963357"
 ###  <a name="execution"></a><a name="Execution"></a> 执行  
  此类别中的属性可配置包对象的运行时行为。  
   
-|属性|说明|  
+|properties|说明|  
 |--------------|-----------------|  
 |`DelayValidation`|指示是否将包验证推迟至包运行之时进行。 此属性的默认值为 `False`。|  
 |**Disable**|指示包是否已禁用。 此属性的默认值为 `False`。|  
@@ -92,7 +92,7 @@ ms.locfileid: "84963357"
 ###  <a name="forced-execution-value"></a><a name="ForcedExecutionValue"></a>强制执行值  
  此类别中的属性用于配置包的可选执行值。  
   
-|属性|说明|  
+|properties|说明|  
 |--------------|-----------------|  
 |`ForcedExecutionValue`|如果 ForceExecutionValue 设置为 `True` ，则为指定包返回的可选执行值的值。 此属性的默认值为 **0**。|  
 |`ForcedExecutionValueType`|ForcedExecutionValue 的数据类型。 此属性的默认值为 `Int32`。|  
@@ -114,7 +114,7 @@ ms.locfileid: "84963357"
 ###  <a name="misc"></a><a name="Misc"></a>Misc  
  此类别中的属性用于访问包所使用的配置和表达式，以及提供有关包的区域设置和日志记录模式的信息。 有关详细信息，请参阅 [在包中使用属性表达式](expressions/use-property-expressions-in-packages.md)。  
   
-|属性|说明|  
+|properties|说明|  
 |--------------|-----------------|  
 |`Configurations`|包使用的配置集合。 单击浏览按钮 (…) 可以查看和配置包配置****。|  
 |`Expressions`|单击浏览按钮 (…) 可以为包属性创建表达式****。<br /><br /> 注意：你可以为对象模型包含的所有包属性（而不仅仅是属性窗口中列出的属性）创建属性表达式。<br /><br /> 有关详细信息，请参阅 [在包中使用属性表达式](expressions/use-property-expressions-in-packages.md)。<br /><br /> 若要查看现有的属性表达式，请展开 `Expressions`。 单击表达式文本框中的浏览按钮 (…) 可以修改和计算表达式****。|  
@@ -128,7 +128,7 @@ ms.locfileid: "84963357"
 ###  <a name="security"></a><a name="Security"></a> Security  
  此类别中的属性用于设置包的保护级别。 有关详细信息，请参阅 [Access Control for Sensitive Data in Packages](security/access-control-for-sensitive-data-in-packages.md)。  
   
-|属性|说明|  
+|properties|说明|  
 |--------------|-----------------|  
 |`PackagePassword`|要求密码的包保护级别（ `EncryptSensitiveWithPassword` 和 `EncryptAllWithPassword` ）的密码。|  
 |`ProtectionLevel`|包的保护级别。 这些值为 `DontSaveSensitive` 、、、 `EncryptSensitiveWithUserKey` `EncryptSensitiveWithPassword` `EncryptAllWithPassword` 和**ServerStorage**。 此属性的默认值为 `EncryptSensitiveWithUserKey`。 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DTSProtectionLevel>。|  
@@ -136,7 +136,7 @@ ms.locfileid: "84963357"
 ###  <a name="transactions"></a><a name="Transactions"></a>记录  
  此类别中的属性用于配置包的隔离级别和事务选项。 有关详细信息，请参阅 [Integration Services 事务](integration-services-transactions.md)。  
   
-|属性|说明|  
+|properties|说明|  
 |--------------|-----------------|  
 |`IsolationLevel`|包事务的隔离级别。  此属性的默认值为 `Serializable`。 有效值为 <br />`Unspecified`<br />`Chaos`<br />`ReadUncommitted`<br />`ReadCommitted`<br />`RepeatableRead`<br />`Serializable`<br />`Snapshot`.<br /><br /> 仅当 `IsolationLevel` 属性的值设为 `TransactionOption` 时，系统才将 `Required` 属性应用到包事务。<br /><br /> 在以下条件成立时，将忽略子容器请求的 `IsolationLevel` 属性的值：<br /><br /> 子容器的 `TransactionOption` 属性的值为 `Supported`。<br />子容器联接父容器的事务。<br /><br /> 只有在容器开始新的事务时，才遵从该容器请求的 `IsolationLevel` 属性的值。 在以下条件成立时，容器将开始新的事务：<br /><br /> 容器的属性的值 `TransactionOption` 为 `Required` 。<br />父级已开始一个事务。<br /><br /> <br /><br /> 注意：`IsolationLevel` 属性的 `Snapshot` 值与包事务不兼容。 因此，您无法使用 `IsolationLevel` 属性将包事务的隔离级别设为 `Shapshot`。 而是使用 SQL 查询将包事务设为 `Snapshot`。 有关详细信息，请参阅 [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)。<br /><br /> 有关 `IsolationLevel` 属性的详细信息，请参阅<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>。|  
 |`TransactionOption`|包的事务参与情况。 其值为：`NotSupported`、`Supported`、`Required`。 此属性的默认值为 `Supported`。 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>。|  
@@ -144,7 +144,7 @@ ms.locfileid: "84963357"
 ###  <a name="version"></a><a name="Version"></a>版本  
  此类别中的属性用于提供包对象的版本信息。  
   
-|属性|说明|  
+|properties|说明|  
 |--------------|-----------------|  
 |`VersionBuild`|包的内部版本号。|  
 |`VersionComments`|包的版本注释。|  
