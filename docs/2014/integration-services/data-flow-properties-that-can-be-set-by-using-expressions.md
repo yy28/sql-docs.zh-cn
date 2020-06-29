@@ -16,14 +16,14 @@ helpviewer_keywords:
 - SSIS packages, property expressions
 - property expressions [Integration Services]
 ms.assetid: cd0e171a-08be-45d6-81dc-ed94f37698b8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3d23037bc09b735fc28e52eabb1852d1af303d15
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6cf52a4488cb90d65c373111babd359da612668d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84916947"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432464"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>可以使用表达式设置的数据流属性
   可以使用数据流任务容器上的可用属性表达式来指定数据流对象的某些属性的值。  
@@ -41,7 +41,7 @@ ms.locfileid: "84916947"
   
 ### <a name="data-flow-sources"></a>数据流源  
   
-|数据流对象|属性|  
+|数据流对象|properties|  
 |----------------------|--------------|  
 |ADO NET 源|TableOrViewName 属性<br /><br /> SqlCommand 属性|  
 |XML 源|XMLData 属性<br /><br /> XMLSchemaDefinition 属性|  
@@ -49,7 +49,7 @@ ms.locfileid: "84916947"
 ### <a name="data-flow-transformations"></a>数据流转换  
  有关这些自定义属性的详细信息，请参阅 [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md)。  
   
-|数据流对象|属性|  
+|数据流对象|properties|  
 |----------------------|--------------|  
 |有条件拆分转换|FriendlyExpression 属性|  
 |派生列转换|FriendlyExpression 属性|  
@@ -65,7 +65,7 @@ ms.locfileid: "84916947"
   
 ### <a name="data-flow-destinations"></a>数据流目标  
   
-|数据流对象|属性|  
+|数据流对象|properties|  
 |----------------------|--------------|  
 |ADO NET 目标|TableOrViewName 属性<br /><br /> BatchSize 属性<br /><br /> CommandTimeout 属性|  
 |平面文件目标|Header 属性|  

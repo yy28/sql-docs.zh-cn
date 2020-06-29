@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2c355c95c5e6c686a063c4c32081aa0740f8e2fd
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 51f92ddc8903a5c9dea9982866a22a19b013f41a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84915207"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431974"
 ---
 # <a name="modify-odata-source-query-at-runtime"></a>在运行时修改 OData 源查询
   可以通过向数据流任务的“[OData 源].[查询]”**** 属性添加表达式，在运行时修改 OData 源查询。  
@@ -59,7 +59,7 @@ ms.locfileid: "84915207"
   
 6.  输入**表达式**。  
   
-7.  单击“确定”。  
+7.  单击" **确定**"。  
   
 > [!WARNING]  
 >  请注意，当使用此方法时，需要确保设置的值为正确编码的 URL。 从用户输入接收值时（例如，通过参数设置各个查询选项值），必须确保值已验证，以避免潜在的 SQL 注入类型攻击。  

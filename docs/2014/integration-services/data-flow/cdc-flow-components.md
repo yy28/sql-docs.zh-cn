@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 22722605b266f28981457ce0c6839ad14279a434
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 909c8a7d6bb9959a66681c317d5ba05b76028e91
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84916767"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432414"
 ---
 # <a name="cdc-flow-components"></a>CDC 流组件
   用于 Microsoft [!INCLUDE[ssISCurrent](../../../includes/ssiscurrent-md.md)] 的 Change Data Capture 组件（由 Attunity 提供）可帮助 SSIS 开发人员处理 CDC，并降低 CDC 包的复杂性。  
@@ -68,7 +68,7 @@ ms.locfileid: "84916767"
   
  如果你要使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 进行包开发，请务必在运行卸载向导前关闭 [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 。  
   
-## <a name="benefits"></a>优势  
+## <a name="benefits"></a>优点  
  借助用于 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 组件的 CDC 组件，SSIS 开发者可以轻松生成 SSIS 包来处理变更数据。 这些组件增强了 SSIS 开发人员处理 CDC 的能力并降低了 CDC 包的复杂性。  
   
  使用 SSIS CDC 提供的更改数据更易于进一步处理，从而便于复制、加载数据仓库、更新 OLAP 的渐变维度、审核更改，或方便应用于其他可能的用途。 所使用的进一步处理的类型由 SSIS 开发人员确定。  

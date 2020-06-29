@@ -10,14 +10,14 @@ f1_keywords:
 - sql12.dts.designer.afpblobsrc.f1
 - sql11.dts.designer.afpblobsrc.f1
 ms.assetid: 80645c5c-88c8-4fb0-8607-de1bb7bffcbb
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0f1e39088c96239caae8e757407d3338733fcb76
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5a14c7022437c8a23f898a0f29c211bd9ae82aa0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84916655"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432374"
 ---
 # <a name="azure-blob-source"></a>Azure blob 源
  借助“Azure blob 源”  组件，SSIS 包可以读取 Azure blob 中的数据。 支持的文件格式：CSV 和 AVRO。 若要查看 Azure blob 源的编辑器，请将“Azure blob 源”  拖放到数据流设计器上，然后双击它打开编辑器。  

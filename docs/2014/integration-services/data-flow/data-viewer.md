@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Data Viewer dialog box
 ms.assetid: 6351309a-688f-4e82-9697-1712130f10a1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f45a99b149feb0c0609aac88660ad7e62ca425f2
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 11fec821580189c1efe17134d7ee33d111350f89
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84916017"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432204"
 ---
 # <a name="data-viewer"></a>数据查看器
   如果将路径配置为使用数据查看器，当数据在两个数据流组件之间移动时，数据查看器将依次显示各个缓冲区的数据。  

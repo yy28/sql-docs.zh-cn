@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Select variables
 - Variable selection
 ms.assetid: e62083ec-d127-48ea-aaa4-cca6017a29cb
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5497663a20769d9c73679f373adf4df7e5b0e631
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6346300de6ae5f225c43f0d8722e1f4c821be5e3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84918187"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432724"
 ---
 # <a name="select-variables-page"></a>“选择变量”页
   在配置脚本任务或脚本组件时，可以使用 **“选择变量”** 对话框为 **ReadOnlyVariables** 和 **ReadWriteVariables** 属性选择一个或多个变量。  
