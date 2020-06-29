@@ -18,14 +18,14 @@ helpviewer_keywords:
 - row transformations [Integration Services]
 - rowset transformations [Integration Services]
 ms.assetid: c70c4f6e-82dd-4948-b923-fd5193f67f7e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e90e459e5243d623ae0744ed2d7298cfd27eee5e
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: dbaa8ae33bb299cf524589e1e883577950d7c294
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939468"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430424"
 ---
 # <a name="integration-services-transformations"></a>Integration Services 转换
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 转换是包的数据流中对数据进行聚合、合并、分发和修改的组件。 转换还可以执行查找操作并生成样本数据集。 本节介绍 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 所包括的转换并说明它们是如何工作的。  

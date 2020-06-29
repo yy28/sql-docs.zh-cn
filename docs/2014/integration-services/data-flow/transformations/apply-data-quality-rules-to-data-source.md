@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: a965e8f2-004d-4ccc-8523-a185b35b26e2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 442516495ce4a384a7f2d61ffe469a976269dbb3
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d59e6fb5ffb752b3346d40740e0b841bf574344e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84913807"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431034"
 ---
 # <a name="apply-data-quality-rules-to-data-source"></a>将数据质量规则应用于数据源
   您可以使用 Data Quality Services (DQS) 来更正包数据流中的数据，方法是将 DQS 情理转换连接到数据源。 有关 DQS 的详细信息，请参阅 [Data Quality Services Concepts](../../../data-quality-services/data-quality-services-concepts.md)。 有关该转换的详细信息，请参阅 [DQS Cleansing Transformation](dqs-cleansing-transformation.md)。  

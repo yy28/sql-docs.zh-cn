@@ -38,14 +38,14 @@ helpviewer_keywords:
 - Copy Column transformation custom properties [Integration Services]
 - Character Map transformation custom properties [Integration Services]
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 60798bb7bd856dd131592e3c67eb155cf64a6ae7
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: bcf5706f3c208dad54577c8dd3be4bfb6b4ea643
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939248"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430014"
 ---
 # <a name="transformation-custom-properties"></a>Transformation Custom Properties
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 对象模型中，除了大多数数据流对象通用的属性以外，许多数据流对象还具有特定于该对象的自定义属性。 这些自定义属性仅在运行时可用，并未记录在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 托管编程参考文档中。  
@@ -442,7 +442,7 @@ ms.locfileid: "84939248"
   
  下表介绍透视转换的输出列的自定义属性。 所有属性均可读/写。  
   
-|属性|数据类型|说明|  
+|properties|数据类型|说明|  
 |--------------|---------------|-----------------|  
 |PivotKeyValue|字符串|列中由其 PivotUsage 属性的值标记为透视键的可能值之一。<br /><br /> 此属性的值可以使用属性表达式来指定。|  
 |SourceColumn|Integer|包含透视值或 -1 的输入列的 `LineageID`。 值 -1 表示透视操作中未使用该列。|  
@@ -467,7 +467,7 @@ ms.locfileid: "84939248"
   
  下表介绍行抽样转换的自定义属性。 所有属性均可读/写。  
   
-|属性|数据类型|说明|  
+|properties|数据类型|说明|  
 |--------------|---------------|-----------------|  
 |SamplingSeed|Integer|随机数生成器所使用的种子。 此属性的默认值为 **0**，指示转换使用时钟周期数。|  
 |SamplingValue|Integer|样本的行计数。<br /><br /> 此属性的值可以使用属性表达式来指定。|  
@@ -480,7 +480,7 @@ ms.locfileid: "84939248"
   
  下表介绍行抽样转换的输出列的自定义属性。 所有属性均可读/写。  
   
-|属性|数据类型|说明|  
+|properties|数据类型|说明|  
 |--------------|---------------|-----------------|  
 |InputColumnLineageId|Integer|该值用于指定作为输出列的源的输入列的 `LineageID`。|  
   
@@ -507,7 +507,7 @@ ms.locfileid: "84939248"
   
  下表介绍渐变维度转换的自定义属性。 所有属性均可读/写。  
   
-|属性|数据类型|说明|  
+|properties|数据类型|说明|  
 |--------------|---------------|-----------------|  
 |CurrentRowWhere|字符串|SELECT 语句中的 WHERE 子句，用于在具有相同业务键的行中选择当前行。|  
 |EnableInferredMember|Boolean|该值用于指定是否检测推断成员更新。 此属性的默认值为 `True`。|  
@@ -520,7 +520,7 @@ ms.locfileid: "84939248"
   
  下表介绍渐变维度转换的输入列的自定义属性。 所有属性均可读/写。  
   
-|属性|数据类型|说明|  
+|properties|数据类型|说明|  
 |--------------|---------------|-----------------|  
 |ColumnType|Integer（枚举）|列的更新类型。 其值包括：“变化的属性”(2)、“固定的属性”(4)、“历史属性”(3)、“键”(1) 和“其他”(0)********************。|  
   
@@ -533,21 +533,21 @@ ms.locfileid: "84939248"
   
  下表介绍排序转换的自定义属性。 所有属性均可读/写。  
   
-|属性|数据类型|说明|  
+|properties|数据类型|说明|  
 |--------------|---------------|-----------------|  
 |EliminateDuplicates|Boolean|指定转换是否删除转换输出中的重复行。 此属性的默认值为 `False`。|  
 |MaximumThreads|Integer|包含转换可用于排序的最大线程数。 如果值为 **0** ，则表示不限制线程数。 此属性的默认值为 **0**。<br /><br /> 此属性的值可以使用属性表达式来指定。|  
   
  下表介绍排序转换的输入列的自定义属性。 所有属性均可读/写。  
   
-|属性|数据类型|说明|  
+|properties|数据类型|说明|  
 |--------------|---------------|-----------------|  
 |NewComparisonFlags|Integer（位掩码）|该值用于指定转换如何比较列中的字符串数据。 有关详细信息，请参阅 [Comparing String Data](../comparing-string-data.md)。|  
 |NewSortKeyPosition|Integer|该值用于指定列的排序顺序。 如果值为 0，则表示不对该列上的数据进行排序。|  
   
  下表介绍排序转换的输出列的自定义属性。 所有属性均可读/写。  
   
-|属性|数据类型|说明|  
+|properties|数据类型|说明|  
 |--------------|---------------|-----------------|  
 |SortColumnID|Integer|排序列的 `LineageID`。|  
   
@@ -560,7 +560,7 @@ ms.locfileid: "84939248"
   
  下表介绍字词提取转换的自定义属性。 所有属性均可读/写。  
   
-|属性|数据类型|说明|  
+|properties|数据类型|说明|  
 |--------------|--------------|-----------------|  
 |FrequencyThreshold|Integer|该数值指示提取某个字词之前，该字词必须出现的次数。 此属性的默认值为 **2**。|  
 |IsCaseSensitive|Boolean|该值指定提取名词和名词短语时是否区分大小写。 此属性的默认值为 `False`。|  
@@ -580,7 +580,7 @@ ms.locfileid: "84939248"
   
  下表介绍字词查找转换的自定义属性。 所有属性均可读/写。  
   
-|属性|数据类型|说明|  
+|properties|数据类型|说明|  
 |--------------|---------------|-----------------|  
 |IsCaseSensitive|Boolean|该值用于指定是否将大小写区分比较应用于输入列文本与查找字词的匹配。 此属性的默认值为 `False`。|  
 |RefTermColumn|字符串|包含查找字词的列的名称。|  
@@ -588,7 +588,7 @@ ms.locfileid: "84939248"
   
  下表介绍字词查找转换的输入列的自定义属性。 所有属性均可读/写。  
   
-|属性|数据类型|说明|  
+|properties|数据类型|说明|  
 |--------------|---------------|-----------------|  
 |InputColumnType|Integer|该值用于指定列的使用。 有效值包括 0、1 和 2：0 表示传递列；1 表示查找列；2 表示既是传递列又是查找列的列。|  
   
@@ -610,7 +610,7 @@ ms.locfileid: "84939248"
   
  下表介绍逆透视转换的输入列的自定义属性。 所有属性均可读/写。  
   
-|属性|数据类型|说明|  
+|properties|数据类型|说明|  
 |--------------|---------------|-----------------|  
 |DestinationColumn|Integer|输入列映射到的输出列的 `LineageID`。 如果值为 -1，则表示输入列未映射到输出列。|  
 |PivotKeyValue|字符串|复制到转换输出列的值。<br /><br /> 此属性的值可以使用属性表达式来指定。<br /><br /> 在 [Unpivot Transformation](unpivot-transformation.md)中所述的逆透视应用场景中，透视值为以下文本值：Ham、Coke、Milk、Beer 和 Chips。 这些值在由 **“透视键值列名”** 选项指定的新 Product 列中显示为文本值。|  

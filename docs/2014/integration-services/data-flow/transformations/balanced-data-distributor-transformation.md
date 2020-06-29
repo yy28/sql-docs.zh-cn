@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.balanceddatadistributor.f1
 ms.assetid: ae0b33dd-f44b-42df-b6f6-69861770ce10
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c14603a1c27bde829d119521389c1a35f9f8178c
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 09591013bc1f21659720fa9fec2e94167be93a1e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84913797"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431074"
 ---
 # <a name="balanced-data-distributor-transformation"></a>平衡的数据分发服务器转换
   平衡的数据分发服务器 (BDD) 转换可利用新型 CPU 的并发处理能力。 它可将传入行的缓冲区均匀分布到各个独立线程的输出上。 通过对每个输出路径使用独立线程，BDD 组件提升了运行在多核和多处理器服务器上的 SSIS 包的性能。 BDD 组件是 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 功能包的一部分。 从[此处](https://go.microsoft.com/fwlink/p/?LinkId=391999)下载并安装它。  

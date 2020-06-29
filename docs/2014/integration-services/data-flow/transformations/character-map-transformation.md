@@ -14,14 +14,14 @@ helpviewer_keywords:
 - string functions
 - Character Map transformation [Integration Services]
 ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 30a920fa629649a5cb3974667cab4da0bd885d70
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 00c66af1d609e2e1730be8b7647bdc881d129caf
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84913677"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431014"
 ---
 # <a name="character-map-transformation"></a>字符映射表转换
   字符映射表转换将字符串函数（如从小写到大写的转换）应用于字符数据。 此转换操作只对字符串数据类型的列数据执行。  

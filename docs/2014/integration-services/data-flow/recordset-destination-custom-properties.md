@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1568ed6a-022c-4839-b73e-4eb49558bbc2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ad92bfe88dead236a5a1175dce3f2251e0f5fd91
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1df2143b50a2d85e74fb544e4fef4a0a246488a4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84914717"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431510"
 ---
 # <a name="recordset-destination-custom-properties"></a>记录集目标自定义属性
   记录集目标具有自定义属性和所有数据流组件通用的属性。  
