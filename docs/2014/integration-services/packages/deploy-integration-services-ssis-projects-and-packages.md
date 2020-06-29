@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 807bece28f82759d0a708fa785f23141a0b4407d
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e900225cc4215d586ea7494a60ba04835bcd2652
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964827"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423705"
 ---
 # <a name="deployment-of-projects-and-packages"></a>项目和包的部署
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 支持两种部署模型：项目部署模型和包部署模型。 项目部署模型使您可以将项目部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器。  
@@ -43,9 +43,9 @@ ms.locfileid: "84964827"
 ## <a name="features-of-project-deployment-model"></a>项目部署模型的功能  
  下表列出的功能仅可用于为项目部署模型开发的项目。  
   
-|Feature|说明|  
+|功能|说明|  
 |-------------|-----------------|  
-|参数|参数指定包将使用的数据。 您可以分别使用包参数和项目参数将参数范围限定在包级别或项目级别。 参数可用于表达式或任务中。 在将项目部署到目录时，可为每个参数分配文字值，或者使用在设计时分配的默认值。 还可以引用环境变量来代替文字值。 在包执行时解析环境变量值。|  
+|parameters|参数指定包将使用的数据。 您可以分别使用包参数和项目参数将参数范围限定在包级别或项目级别。 参数可用于表达式或任务中。 在将项目部署到目录时，可为每个参数分配文字值，或者使用在设计时分配的默认值。 还可以引用环境变量来代替文字值。 在包执行时解析环境变量值。|  
 |环境|环境是可由 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目引用的变量的容器。 每个项目可以具有多个环境引用，但包执行的单个实例只能引用来自单个环境的变量。 环境允许您对分配给包的值进行组织。 例如，您可以具有名为“开发”、“测试”和“生产”的环境。|  
 |环境变量|环境变量定义可在包执行过程中赋给参数的文字值。 若要使用某一环境变量，请创建环境引用（在与具有参数的环境相对应的项目中），向该环境变量的名称分配某一参数值，并且在配置执行实例时指定相应的环境引用。|  
 |SSISDB 目录|所有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 对象都在某一 SQL Server 实例上称作 SSISDB 目录的数据库中进行存储和管理。 通过该目录，您可以使用文件夹组织您的项目和环境。 每个 SQL Server 实例可具有一个目录。 每个目录中可具有零个或多个文件夹。 每个文件夹可具有零个或多个项目以及零个或多个环境。 该目录中的文件夹也可以用作针对 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 对象的权限的边界。|  

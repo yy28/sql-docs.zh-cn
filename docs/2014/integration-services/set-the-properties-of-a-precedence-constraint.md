@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Precedence Constraint Editor dialog box
 - precedence constraints [Integration Services], properties
 ms.assetid: d990f600-5c09-4cd5-8528-0a58d79dc9f2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 679e61c37df7d31b80f47fff186589ce0081f838
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 55e71b6615afc15c2963b4dbb9bfbf2790e90b3b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963117"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421551"
 ---
 # <a name="set-the-properties-of-a-precedence-constraint"></a>设置优先约束的属性
   若要设置优先约束属性，您可以使用下列工具之一：  
@@ -73,7 +73,7 @@ ms.locfileid: "84963117"
     |LogicalAnd|设置 `LogicalAnd` 此项可指定在多个可执行文件位于或链接到受约束的可执行文件时，优先约束与其他优先约束一起计算|  
     |名称|更新优先约束的名称。|  
     |ShowAnnotation|指定要使用的批注类型。 选择 **Never** 可以禁用批注；选择 **AsNeeded** 可以启用按需批注；选择 **ConstraintName** 可以使用 Name 属性的值自动进行批注；选择 **ConstraintDescription** 可以使用 Description 属性的值自动进行批注；选择 **ConstraintOptions** 可以使用 Value 和 Expression 属性的值自动进行批注。|  
-    |值|如果在 EvalOP 属性中指定的求值运算包含约束，请选择受约束的可执行文件的执行结果。|  
+    |“值”|如果在 EvalOP 属性中指定的求值运算包含约束，请选择受约束的可执行文件的执行结果。|  
   
 5.  关闭“属性”窗口。  
   

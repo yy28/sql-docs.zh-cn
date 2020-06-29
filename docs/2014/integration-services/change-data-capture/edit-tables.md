@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - tabProps
 ms.assetid: fed8fada-2abc-45e2-8228-0656f9c599cb
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 264d288881d7996ee52bd28aa841be8948dfe56e
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 91424dc726616952a7c4d3f230f845b8ed97f457
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84923298"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438714"
 ---
 # <a name="edit-tables"></a>编辑表
   使用 **“表”** 选项卡可对您从 Oracle 源数据库中选择的表和列进行更改。 该选项卡具有以下元素：  

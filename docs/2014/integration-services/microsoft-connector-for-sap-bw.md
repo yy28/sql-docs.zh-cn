@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5281f080-53d5-4679-aa26-f4cd4ac7a2df
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7d689824674c1e14f2051deafbdc9ca58f302441
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d1ae4e7a49d0ae2fe84c7f726a91fb3c5f7fc4ba
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967057"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424554"
 ---
 # <a name="microsoft-connector-11-for-sap-bw"></a>Microsoft Connector 1.1 for SAP BW
   [!INCLUDE[msCoName](../includes/msconame-md.md)]连接器 1.1 for SAP BW 包含一组三个组件，可让你从 SAP Netweaver BW 版本7系统中提取数据或将数据加载到 SAP BW 版本7系统。  
@@ -25,7 +25,7 @@ ms.locfileid: "84967057"
 > [!IMPORTANT]  
 >  从 SAP Netweaver BW 提取数据要求额外的 SAP 许可。 请向 SAP 核实以便确认这些要求。  
   
-## <a name="components"></a>组件数  
+## <a name="components"></a>组件  
  [!INCLUDE[msCoName](../includes/msconame-md.md)]SAP BW 的连接器1.1 具有以下组件：  
   
 -   **SAP BW 源** - SAP BW 源是一个数据流源组件，用于从 SAP Netweaver BW 版本 7 系统中提取数据。  

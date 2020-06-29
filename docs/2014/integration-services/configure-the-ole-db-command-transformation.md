@@ -10,14 +10,14 @@ helpviewer_keywords:
 - parameters [Integration Services]
 - OLE DB Command transformation
 ms.assetid: c800f167-3d2e-4c10-8ba3-a02f1872ccea
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8f6f14d93e840b9a206e0b5261eb9efade0f0e28
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7d9e0c2601968f7174f5250b7af88a92e75693fe
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921503"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434614"
 ---
 # <a name="configure-the-ole-db-command-transformation"></a>配置 OLE DB 命令转换
   若要添加和配置 OLE DB 命令转换，包必须已包含至少一个数据流任务和一个源（如平面文件源或 OLE DB 源）。 这种转换通常用于运行参数化查询。  
@@ -66,7 +66,7 @@ ms.locfileid: "84921503"
   
     -   单击 **“列映射”** ，并将 **“可用输入列”** 列表中的列映射到 **“可用目标列”** 列表中的参数。  
   
-14. 单击“确定”。  
+14. 单击" **确定**"。  
   
 15. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存”** 。  
   

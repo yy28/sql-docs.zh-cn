@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - File Connection Manager Editor
 ms.assetid: 051c48e5-3d86-49af-b554-ff62e3de3622
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9128f73dc8fec388ae111781b9beeb52bbab138b
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5ae883d085b1f6416096255a3b87d6e5872bc5e9
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967147"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425704"
 ---
 # <a name="file-connection-manager-editor"></a>文件连接管理器编辑器
   可以使用 **“文件连接管理器编辑器”** 对话框指定用于连接文件或文件夹的属性。  
@@ -32,7 +32,7 @@ ms.locfileid: "84967147"
  **使用类型**  
  指定“文件连接管理器”是连接到现有文件或文件夹，还是创建新的文件或文件夹。****  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |创建文件|在运行时创建新文件。|  
 |现有文件|使用现有文件。|  

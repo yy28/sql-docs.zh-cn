@@ -15,14 +15,14 @@ helpviewer_keywords:
 - extending data flow task [Integration Services]
 - components [Integration Services], data flow
 ms.assetid: be126913-2a9a-41c9-9bf5-a7b0a0aea2f8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2e1a6af8407813a2a712b0c43c0b06097477f00f
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ee2b30cf0796953d12f976745fb195169de86c68
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966499"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437074"
 ---
 # <a name="developing-a-custom-data-flow-component"></a>开发自定义数据流组件
   数据流任务由一些组件组成，这些组件用于连接各种数据源，然后快速转换和路由数据。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供一个可扩展的对象模型，该模型允许开发人员创建可在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 和已部署的包中使用的自定义源、转换和目标。 本节包含的主题将指导您开发自定义数据流组件。
@@ -54,7 +54,7 @@ ms.locfileid: "84966499"
 
  [开发特定类型的数据流组件](../../extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md)介绍如何开发这三种类型的数据流组件：源、转换和目标。
 
-## <a name="reference"></a>引用
+## <a name="reference"></a>参考
  <xref:Microsoft.SqlServer.Dts.Pipeline>包含用于创建自定义数据流组件的类和接口。
 
  <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper>包含组成数据流任务对象模型的类和接口，用于创建自定义数据流组件或生成数据流任务。

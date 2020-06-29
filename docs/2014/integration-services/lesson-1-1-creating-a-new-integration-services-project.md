@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f14521b5-941e-443b-8f5e-385f98e37fbf
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2c75a48868398b2a59673208fa55dbf4fc026221
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c96b23a8807741429eaee00dace7c22f1cd540c5
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965337"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436224"
 ---
 # <a name="step-1-creating-a-new-integration-services-project"></a>步骤 1：创建新的 Integration Services 项目
   若要在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中创建包，第一步是创建一个 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目。 此项目包含在数据转换解决方案中使用的数据源、数据源视图和包等对象的模板。  
@@ -38,7 +38,7 @@ ms.locfileid: "84965337"
   
 5.  接受默认位置，或单击“浏览”****，以浏览并找到要使用的文件夹。 在“项目位置”**** 对话框中，单击文件夹，再单击“选择文件夹”****。  
   
-6.  单击“确定”。  
+6.  单击" **确定**"。  
   
      默认情况下，将创建一个名为 **Package.dtsx**的空包，并将该包添加到项目中的“SSIS 包”之下。  
   

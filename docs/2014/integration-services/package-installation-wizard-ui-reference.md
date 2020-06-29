@@ -18,14 +18,14 @@ f1_keywords:
 helpviewer_keywords:
 - Package Installer Wizard
 ms.assetid: 6fca44d9-5001-4644-bcf3-c2d10a674b97
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b51049f0a55a10ae83af9e0f253c1c717f6d4962
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cc500615774a67bae70e9c9fa8845db166f44466
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964853"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423874"
 ---
 # <a name="package-installation-wizard-ui-reference"></a>包安装向导 UI 参考
   可以使用 **“包安装向导”** 部署 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目（包括包、所包含的杂项文件以及所有包的依赖关系）。  
@@ -42,7 +42,7 @@ ms.locfileid: "84964853"
  **不再显示此起始页**  
  选择此选项可以在下次运行向导时跳过起始页。  
   
- **下一步**  
+ **下一页**  
  转到向导的下一页。  
   
  **完成**  
@@ -60,13 +60,13 @@ ms.locfileid: "84964853"
  **路径**  
  查看要配置的属性的路径。  
   
- **类型**  
+ **Type**  
  查看属性的数据类型。  
   
  **值**  
  指定配置的值。  
   
- **下一步**  
+ **下一页**  
  转到向导的下一页。  
   
  **完成**  
@@ -75,10 +75,10 @@ ms.locfileid: "84964853"
 ## <a name="confirm-installation-page"></a>“确认安装”页  
  可以使用 **“确认安装”** 页开始安装包，查看状态以及查看向导用于从指定项目中安装文件的信息。  
   
- **下一步**  
+ **下一页**  
  安装包及其相关文件，并在完成安装后转到下一个向导页。  
   
- **状态**  
+ **Status**  
  显示包的安装进度。  
   
  **完成**  
@@ -97,7 +97,7 @@ ms.locfileid: "84964853"
  **安装后验证包**  
  指示安装后是否验证包。  
   
- **下一步**  
+ **下一页**  
  转到向导的下一页。  
   
  **完成**  
@@ -106,7 +106,7 @@ ms.locfileid: "84964853"
 ## <a name="packages-validation-page"></a>“包验证”页  
  可以使用 **“包验证”** 页查看包验证的进度和结果。  
   
- **下一步**  
+ **下一页**  
  转到向导的下一页。  
   
 ## <a name="select-installation-folder-page"></a>“选择安装文件夹”页  
@@ -119,7 +119,7 @@ ms.locfileid: "84964853"
  **浏览**  
  使用“查找文件夹”**** 对话框找到目标文件夹。  
   
- **下一步**  
+ **下一页**  
  转到向导的下一页。  
   
  **完成**  
@@ -155,7 +155,7 @@ ms.locfileid: "84964853"
  **依靠服务器存储进行加密**  
  选择此项可以使用 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的安全功能来帮助保护包。  
   
- **下一步**  
+ **下一页**  
  转到向导的下一页。  
   
  **完成**  

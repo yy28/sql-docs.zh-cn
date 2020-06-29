@@ -11,14 +11,14 @@ helpviewer_keywords:
 - breakpoints [Integration Services]
 - tasks [Integration Services], breakpoints
 ms.assetid: e7fa106a-2221-403a-bb74-efc9f12bb450
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9ef85c2744475a2f55af2abc3514aa3167473ff7
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f3bf0956770823c4e3b70f90b03ef392568fedd2
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84951845"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429744"
 ---
 # <a name="debug-a-package-by-setting-breakpoints-on-a-task-or-a-container"></a>通过在任务或容器上设置断点调试包
   本过程介绍如何在包、任务、For 循环容器、Foreach 循环容器或序列容器中设置断点。  

@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3caa4372-aff3-4c0f-9ecd-97870948b8d0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3c20d069a419a4d9f95a31489449a4726e25c304
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 57f87ec28e6c32f8e44abb3567878b85416ccd5e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84920453"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434094"
 ---
 # <a name="odata-connection-manager"></a>OData 连接管理器
   OData 连接管理器允许包连接到 OData 源。 OData 源组件使用 OData 连接管理器连接到 OData 源并使用来自服务的数据。 有关详细信息（包括这些组件的安装说明），请参阅[OData 源](../data-flow/odata-source.md)部分。  
@@ -47,7 +47,7 @@ ms.locfileid: "84920453"
   
 |||  
 |-|-|  
-|属性|说明|  
+|properties|说明|  
 |Url|服务文档的 URL。|  
 |UserName|要用于基本身份验证的用户名。|  
 |密码|要用于基本身份验证的密码。|  
