@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e7c039f6-3266-4d84-bfbd-f99b6858acf4
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 0943e3f98ae65ec6c142fb1b98f86da054e88638
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 3cbfbf253bfd080084b8182b353b1efb8b535d3c
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84521614"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468962"
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>挖掘模型内容（Analysis Services - 数据挖掘）
   使用基础挖掘结构中的数据设计并处理挖掘模型后，该挖掘模型就已完成，包含有“ ** 挖掘模型内容”。 可以使用此内容来预测或分析您的数据。  
@@ -75,12 +75,12 @@ ms.locfileid: "84521614"
   
 |NODE_TYPE ID|节点标签|节点内容|  
 |-------------------|----------------|-------------------|  
-|1|型号|元数据和根内容节点。 适用于所有模型类型。|  
+|1|“模型”|元数据和根内容节点。 适用于所有模型类型。|  
 |2|树|分类树的根节点。 适用于决策树模型。|  
 |3|Interior|树中的内部拆分节点。 适用于决策树模型。|  
 |4|分布|树的终端节点。 适用于决策树模型。|  
 |5|群集|算法检测到的分类。 适用于聚类分析模型以及顺序分析和聚类分析模型。|  
-|6|Unknown|未知节点类型。|  
+|6|未知|未知节点类型。|  
 |7|ItemSet|算法检测到的项集。 适用于关联模型或顺序分析和聚类分析模型。|  
 |8|AssociationRule|算法检测到的关联规则。 适用于关联模型或顺序分析和聚类分析模型。|  
 |9|PredictableAttribute|可预测属性。 适用于所有模型类型。|  
@@ -227,11 +227,11 @@ ms.locfileid: "84521614"
 |13|自动回归阶数|指示一个值，该值表示自动回归序列的数目。<br /><br /> 适用于使用 ARIMA 算法的时序模型。|  
 |14|移动平均值阶数|表示一个值，该值表示一个序列中的移动平均值数。<br /><br /> 适用于使用 ARIMA 算法的时序模型。|  
 |15|差分阶数|指示一个值，用于表示差分时序的次数。<br /><br /> 适用于使用 ARIMA 算法的时序模型。|  
-|16|布尔值|表示布尔型。|  
+|16|布尔|表示布尔型。|  
 |17|其他|表示一个由该算法定义的自定义值。|  
 |18|预呈现的字符串|表示一个由算法作为字符串呈现的自定义值。 对象模型不应用格式。|  
   
- 值类型是从 ADMOMD.NET 枚举派生的。 有关详细信息，请参阅 <xref:Microsoft.AnalysisServices.AdomdServer.MiningValueType>。  
+ 值类型是从 ADMOMD.NET 枚举派生的。 有关详细信息，请参阅[microsoft.analysisservices.sharepoint.integration.dll. AdomdServer. MiningValueType](/previous-versions/sql/sql-server-2014/ms144375(v=sql.120))。  
   
 ### <a name="node-score"></a>节点分数  
  根据模型类型的不同，节点分数的含义也不同，也可以特定于节点类型。 有关如何为每个模型和节点类型计算 NODE_SCORE 的信息，请参阅 [按算法类型列出挖掘模型内容](#bkmk_AlgoType)。  

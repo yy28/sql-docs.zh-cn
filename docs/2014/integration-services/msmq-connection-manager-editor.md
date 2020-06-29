@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - MSMQ Connection Manager Editor
 ms.assetid: ef842cb4-82da-4550-85fe-9bedbc1e77c7
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4d407cc3c0324b80ff63484f4e7c39ea30575ebc
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d452aa1edc21af067f1deac0e4544b117cecf13b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967037"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440194"
 ---
 # <a name="msmq-connection-manager-editor"></a>MSMQ 连接管理器编辑器
   可以使用“MSMQ 连接管理器”对话框指定“消息队列”（也称为 MSMQ）消息队列的路径。****  
@@ -40,8 +40,8 @@ ms.locfileid: "84967037"
   
 |队列类型|示例路径|  
 |----------------|-----------------|  
-|公用|\<computer name>\\<队列名称\>|  
-|Private|\<computer name>\Private $ \\<队列名称\>|  
+|公共|\<computer name>\\<队列名称\>|  
+|专用|\<computer name>\Private $ \\<队列名称\>|  
   
  可以用“.”代表本地计算机。  
   

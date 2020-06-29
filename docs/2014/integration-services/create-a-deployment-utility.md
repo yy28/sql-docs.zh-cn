@@ -10,14 +10,14 @@ helpviewer_keywords:
 - deploying packages [Integration Services], deployment utility
 - deployment utility [Integration Services]
 ms.assetid: 354322a4-ae8c-4d92-8e71-42d29dbd0614
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 25effc199b1f8e525ceec78216e935e13afe2be2
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f0a5f0f4db3f2e3ab5f961de99db0e92ca7009e3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84917357"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437954"
 ---
 # <a name="create-a-deployment-utility"></a>Create a Deployment Utility
   部署包的第一步是为 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目创建一个部署实用工具。 部署实用工具是一个文件夹，其中包含在不同服务器上部署 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目中的包所需的文件。 部署实用工具是在存储 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目的计算机上创建的。  
@@ -28,7 +28,7 @@ ms.locfileid: "84917357"
   
  下表列出了部署实用工具属性。  
   
-|属性|说明|  
+|properties|说明|  
 |--------------|-----------------|  
 |AllowConfigurationChange|一个指定在部署过程中是否可以更新配置的值。|  
 |CreateDeploymentUtility|一个指定在生成项目时是否创建包部署实用工具的值。 此属性必须为 `True` 才能创建部署实用工具。|  
@@ -52,7 +52,7 @@ ms.locfileid: "84917357"
   
 6.  还可以通过修改 `DeploymentOutputPath` 属性来更新部署实用工具的位置。  
   
-7.  单击“确定”。  
+7.  单击" **确定**"。  
   
 8.  在解决方案资源管理器中，右键单击该项目，再单击****“生成”。  
   

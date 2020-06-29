@@ -9,12 +9,12 @@ ms.topic: reference
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 63f8be6f47ef4a6abd20c42757648ca03a5701b3
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: 73c9371d28e64e41f7e0f7d2a53e94309fc66c28
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962057"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469082"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>创建自定义工作流 (Master Data Services)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 使用业务规则创建基本工作流解决方案，如自动更新和验证数据，并根据指定的条件发送电子邮件通知。 当您需要的处理比内置工作流操作提供的处理更复杂时，请使用自定义工作流。 自定义工作流是您创建的 .NET 程序集。 在调用您的工作流程序集时，您的代码可以执行您的情况所需要的任何操作。 例如，如果您的工作流要求复杂的事件处理（如多层审批或复杂的决策树），您可以配置 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 来启动自定义工作流，以便分析数据和确定将其发送到何处以待审批。  
@@ -38,7 +38,7 @@ ms.locfileid: "84962057"
 ## <a name="configure-master-data-services-for-custom-workflows"></a>为自定义工作流配置 Master Data Services  
  创建自定义工作流需要编写一些自定义代码，并将 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 配置为将工作流数据传递给工作流处理程序。 请按照以下步骤启用自定义工作流处理：  
   
-1.  创建实现 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> 的 .NET 程序集。  
+1.  创建用于实现[MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130))的 .net 程序集。  
   
 2.  配置 SQL Server MDS Workflow Integration Service 以连接您的 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库，并将标记与您的工作流处理程序关联。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "84962057"
 5.  将此业务规则应用到成员，以触发您的自定义工作流。  
   
 ### <a name="create-the-workflow-handler-assembly"></a>创建工作流处理程序程序集  
- 自定义工作流为 .NET 类库程序集，用于实现 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> 接口。 SQL Server MDS Workflow Integration Service 调用 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> 方法运行您的代码。 有关实现 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> 的代码示例，请参阅[自定义工作流示例 &#40;Master Data Services&#41;](create-a-custom-workflow-example.md)。  
+ 自定义工作流是实现[IWorkflowTypeExtender](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130))接口的 .net 类库程序集。 SQL Server MDS Workflow Integration Service 调用[WorkflowTypeExtender](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130)) ，以运行你的代码。 有关实现[MasterDataServices](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130))的示例代码，请参阅[Master Data Services&#41;&#40;自定义工作流示例](create-a-custom-workflow-example.md)。  
   
  按照以下步骤使用 Visual Studio 2010 创建 SQL Server MDS Workflow Integration Service 可以调用来处理自定义工作流的程序集：  
   
@@ -59,9 +59,9 @@ ms.locfileid: "84962057"
   
 3.  将“using Microsoft.MasterDataServices.Core.Workflow;”添加到 C# 代码文件。  
   
-4.  从类声明中的 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> 继承。 该类声明应类似于：“public class WorkflowTester : IWorkflowTypeExtender”。  
+4.  继承类声明中的[MasterDataServices。](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130)) 该类声明应类似于：“public class WorkflowTester : IWorkflowTypeExtender”。  
   
-5.  实现 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> 接口。 SQL Server MDS Workflow Integration Service 调用 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> 方法来启动您的工作流。  
+5.  实现[MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130))接口。 SQL Server MDS Workflow Integration Service 调用[WorkflowTypeExtender. StartWorkflow *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130))方法来启动工作流。  
   
 6.  将程序集复制到 \<Your installation folder> \Master Data services\webapplication\bin 中名为 Microsoft.MasterDataServices.Workflow.exe 的 SQL SERVER MDS Workflow Integration Service 可执行文件的位置。  
   

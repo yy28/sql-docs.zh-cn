@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Aggregate Transformation Editor
 ms.assetid: a01cb124-ec79-4673-b1a1-bf4d60ee1b45
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4799df229e96ce8488614d8ec7b0755332360fbc
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 59bf17aa0c13fcc771a75253d5ac9f46a160c57c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925588"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439504"
 ---
 # <a name="aggregate-transformation-editor-aggregations-tab"></a>聚合转换编辑器（“聚合”选项卡）
   可以使用 **“聚合转换编辑器”** 对话框的 **“聚合”** 选项卡指定聚合的列以及聚合属性。 可以应用多个聚合。 此转换不生成错误输出。  
@@ -43,11 +43,11 @@ ms.locfileid: "84925588"
  **键范围**  
  在“高级”显示中，根据需要指定聚合可写入的键的大致数目。 默认情况下，此选项的值为 **“未指定”**。 如果同时设置了 **“键范围”** 和 **“键”** 属性，则 **“键”** 的值优先。  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |未指定|不使用“键范围”属性。|  
 |低|聚合可以写入大约 500,000 个键。|  
-|中|聚合可以写入大约 5,000,000 个键。|  
+|中型|聚合可以写入大约 5,000,000 个键。|  
 |高|聚合可以写入 25,000,000 个以上的键。|  
   
  **“键”**  
@@ -65,11 +65,11 @@ ms.locfileid: "84925588"
  **操作**  
  参照下表，从可用操作列表中选择。  
   
-|Operation|说明|  
+|操作|说明|  
 |---------------|-----------------|  
 |**GroupBy**|将数据集划分为组。 可以将任何数据类型的列用于分组。 有关详细信息，请参阅 GROUP BY。|  
 |**长度**|对列中的值求和。 只能对数值数据类型的列求和。 有关详细信息，请参阅 SUM。|  
-|**平均**|返回列中值的平均值。 只能对数值数据类型的列求平均值。 有关详细信息，请参阅 AVG。|  
+|**平均值**|返回列中值的平均值。 只能对数值数据类型的列求平均值。 有关详细信息，请参阅 AVG。|  
 |**Count**|返回组中的项数。 有关详细信息，请参阅 COUNT。|  
 |**CountDistinct**|返回组中的唯一非空值的数量。 有关详细信息，请参阅 COUNT 和 DISTINCT。|  
 |**最小值**|返回组中的最小值。 只限于数值数据类型。|  
@@ -81,11 +81,11 @@ ms.locfileid: "84925588"
  **Count Distinct Scale**  
  根据需要，可以指定聚合能够写入的非重复值的大致数目。 默认情况下，此选项的值为 **“未指定”**。 如果同时 `CountDistinctScale` 指定了和**CountDistinctKeys** ，则**CountDistinctKeys**优先。  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |未指定|不使用 `CountDistinctScale` 属性。|  
 |低|聚合可以写入大约 500,000 个非重复值。|  
-|中|聚合可以写入大约 5,000,000 个非重复值。|  
+|中型|聚合可以写入大约 5,000,000 个非重复值。|  
 |高|聚合可以写入 25,000,000 个以上的非重复值。|  
   
  **Count Distinct Keys**  

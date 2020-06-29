@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Aggregate Transformation Editor
 ms.assetid: 186a9736-2554-40a0-9cb2-877a8db5fde8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8a94ba92b44c00442f97f9e11bbd72d06556d8fe
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c437e15cbbcb3df64770ad0da4272eedf41cf0e9
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925608"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439484"
 ---
 # <a name="aggregate-transformation-editor-advanced-tab"></a>聚合转换编辑器（“高级”选项卡）
   可以使用 **“聚合转换编辑器”** 对话框的 **“高级”** 选项卡设置组件属性，指定聚合以及设置输入和输出列的属性。  
@@ -34,11 +34,11 @@ ms.locfileid: "84925608"
  **“键范围”**  
  根据需要，可以指定聚合所需的键的大致数目。 转换将使用此信息优化其初始缓存大小。 默认情况下，此选项的值为 **“未指定”**。 如果同时指定了 **“键范围”** 和 **“键数”** ，则 **“键数”** 优先。  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |未指定|不使用 **“键范围”** 属性。|  
 |低|聚合可以写入大约 500,000 个键。|  
-|中|聚合可以写入大约 5,000,000 个键。|  
+|中型|聚合可以写入大约 5,000,000 个键。|  
 |高|聚合可以写入 25,000,000 个以上的键。|  
   
  **键数**  
@@ -47,11 +47,11 @@ ms.locfileid: "84925608"
  **非重复计数**  
  根据需要，可以指定聚合能够写入的非重复值的大致数目。 默认情况下，此选项的值为 **“未指定”**。 如果同时指定了 **“非重复键数范围”** 和 **“非重复键计数”** ，则 **“非重复键计数”** 优先。  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |未指定|不使用 CountDistinctScale 属性。|  
 |低|聚合可以写入大约 500,000 个非重复值。|  
-|中|聚合可以写入大约 5,000,000 个非重复值。|  
+|中型|聚合可以写入大约 5,000,000 个非重复值。|  
 |高|聚合可以写入 25,000,000 个以上的非重复值。|  
   
  **非重复键计数**  

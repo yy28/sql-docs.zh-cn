@@ -22,17 +22,17 @@ helpviewer_keywords:
 ms.assetid: dcbd8615-fa6d-4ddb-b8a5-0b19dddd6239
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0df04b8388bc54f0181e5d5b7bb7600faece6260
-ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
+ms.openlocfilehash: b4257d883b1f39e918f0f8a6eb8135e25b784a79
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85427224"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469282"
 ---
 # <a name="developing-a-custom-task"></a>开发自定义任务
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]使用任务执行工作单元，从而支持数据的提取、转换和加载。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包含多种任务，这些任务可执行从执行 SQL 语句到从 FTP 站点下载文件的大部分常用操作。 如果包含的任务和支持的操作不能完全满足您的要求，您可以创建自定义任务。  
   
- 若要创建自定义任务，必须创建从 <xref:Microsoft.SqlServer.Dts.Runtime.Task> 基类继承的类，再将 <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 属性应用到新类，然后重写基类的重要方法和属性，包括 <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A> 方法。  
+ 若要创建自定义任务，您必须创建一个继承[自的类的类](/dotnet/api/microsoft.sqlserver.dts.runtime.task)，将该特性应用于 <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 您的新类，然后重写基类的重要方法和属性，包括 <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A> 方法。  
   
 ## <a name="in-this-section"></a>本节内容  
  本节介绍如何创建、配置和编写自定义任务及其可选自定义用户界面的代码。  

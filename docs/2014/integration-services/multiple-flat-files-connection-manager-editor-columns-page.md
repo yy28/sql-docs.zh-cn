@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Multiple Flat Files Connection Manager Editor
 ms.assetid: ad0cb668-0df2-4d4e-9a20-d20692a0b67a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 365a22cc515a971ff460a6433973f884c640c973
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 207c6e9837f2a828316c91c642d7397b72c4ddc3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84950807"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440164"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-columns-page"></a>多平面文件连接管理器编辑器（“列”页）
   可以使用 **“多平面文件连接管理器编辑器”** 对话框的 **“列”** 节点指定行和列的信息，以及预览选定的第一个文件。  
@@ -38,7 +38,7 @@ ms.locfileid: "84950807"
  **行分隔符**  
  从可用行分隔符的列表中选择，或输入分隔符文本。  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |**回车换行符**|行由回车符和换行符的组合分隔。|  
 |**回车**|行由回车符分隔。|  
@@ -52,7 +52,7 @@ ms.locfileid: "84950807"
  **列分隔符**  
  从可用列分隔符的列表中选择，或输入分隔符文本。  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |**回车换行符**|列由回车符和换行符的组合分隔。|  
 |**回车**|列由回车符分隔。|  
@@ -93,7 +93,7 @@ ms.locfileid: "84950807"
  **行分隔符**  
  从可用行分隔符的列表中选择，或输入分隔符文本。  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |**回车换行符**|行由回车符和换行符的组合分隔。|  
 |**回车**|行由回车符分隔。|  

@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Export Column Transformation Editor
 ms.assetid: b659a5c2-5509-4b5b-9c82-136c971d5c7f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2460e3a86c83dbd6b206bf173ac2c2691ecee685
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4135c5096ad74559344ecb182c10feb770cdda37
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966727"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437344"
 ---
 # <a name="export-column-transformation-editor-columns-page"></a>导出列转换编辑器（“列”页）
   可以使用 **“导出列转换编辑器”** 对话框的 **“列”** 页，指定数据流中要提取到文件的列。 可以指定导出列转换是将数据追加到文件还是覆盖现有文件。  
@@ -33,10 +33,10 @@ ms.locfileid: "84966727"
  从包含文件路径和文件名的输入列的列表中进行选择。 所有行都应包含 **“提取列”** 和 **“文件路径列”** 的定义。  
   
  **允许追加**  
- 指定转换是否将数据追加到现有文件。 默认为 `false`。  
+ 指定转换是否将数据追加到现有文件。 默认值为 `false`。  
   
  **强制截断**  
- 指定转换在写入数据之前是否删除现有文件的内容。 默认为 `false`。  
+ 指定转换在写入数据之前是否删除现有文件的内容。 默认值为 `false`。  
   
  **写入 BOM**  
  指定是否将字节顺序标记 (BOM) 写入文件。 只有在数据具有 `DT_NTEXT` 或 DT_WSTR 数据类型，并且未将数据追加到现有数据文件时，才会写入 BOM。  

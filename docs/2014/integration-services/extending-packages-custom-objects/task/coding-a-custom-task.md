@@ -15,17 +15,17 @@ helpviewer_keywords:
 - validation [Integration Services], design-time tasks
 - SSIS custom tasks, validating
 ms.assetid: dc224f4f-b339-4eb6-a008-1b4fe0ea4fd2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2ac0429b744f9ba14798ca1f402261f16aae34a8
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5a6f26fc245e69093474ce33f80ab82e5be95781
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968677"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469292"
 ---
 # <a name="coding-a-custom-task"></a>编写自定义任务代码
-  创建继承自 <xref:Microsoft.SqlServer.Dts.Runtime.Task> 基类的类并将 <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 属性应用于该类后，必须重写基类的属性和方法的实现以提供自定义功能。
+  在创建了从[Microsoft SqlServer](/dotnet/api/microsoft.sqlserver.dts.runtime.task)基类继承的类，并将特性应用于该类后， <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 您必须重写基类的属性和方法的实现以提供您的自定义功能。
 
 ## <a name="configuring-the-task"></a>配置任务
 
@@ -35,7 +35,7 @@ ms.locfileid: "84968677"
  在自定义代码中使用 `Validate` 方法可实现验证。 运行时引擎通过对任务调用 `Validate` 方法来验证任务。 任务开发人员应负责定义任务验证成功或失败的标准并通知运行时引擎此评估的结果。
 
 #### <a name="task-abstract-base-class"></a>任务抽象基类
- <xref:Microsoft.SqlServer.Dts.Runtime.Task> 抽象基类提供 `Validate` 方法，每个任务应重写该方法以定义其验证标准。 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器将在包设计过程中多次自动调用 `Validate` 方法，并在警告或错误发生时向用户提供可视化提示，以帮助识别任务的配置问题。 任务返回 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 枚举的值并引发警告和错误事件，从而提供验证结果。 这些事件包含将在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中向用户显示的信息。
+ [Microsoft SqlServer](/dotnet/api/microsoft.sqlserver.dts.runtime.task) abstract 基类提供了 `Validate` 每个任务重写以定义其验证条件的方法。 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器将在包设计过程中多次自动调用 `Validate` 方法，并在警告或错误发生时向用户提供可视化提示，以帮助识别任务的配置问题。 任务返回 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 枚举的值并引发警告和错误事件，从而提供验证结果。 这些事件包含将在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中向用户显示的信息。
 
  下面是一些验证示例：
 
@@ -54,7 +54,7 @@ ms.locfileid: "84968677"
 -   在任务运行前，<xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 还会调用 `Validate` 方法中的代码；如果验证失败，<xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 将取消执行。
 
 #### <a name="user-interface-considerations-during-validation"></a>验证过程中用户界面的注意事项
- <xref:Microsoft.SqlServer.Dts.Runtime.Task> 包含一个用作 `Validate` 方法参数的 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> 接口。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> 接口包含一些方法，任务可调用这些方法以向运行时引擎引发事件。 在验证期间出现警告或错误情况时会调用 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A> 和 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A> 方法。 这两个警告方法需要相同的参数，包括错误代码、源组件、说明、帮助文件以及帮助上下文信息。 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器使用这些信息在设计图面上显示可视化提示。 设计器提供的可视化提示包含感叹号图标，该图标显示在设计图面上的任务旁。 此可视化提示通知用户：任务需要其他配置才能继续执行。
+ [Microsoft SqlServer. Task](/dotnet/api/microsoft.sqlserver.dts.runtime.task)包含一个 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> 作为方法参数的接口 `Validate` 。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> 接口包含一些方法，任务可调用这些方法以向运行时引擎引发事件。 在验证期间出现警告或错误情况时会调用 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A> 和 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A> 方法。 这两个警告方法需要相同的参数，包括错误代码、源组件、说明、帮助文件以及帮助上下文信息。 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器使用这些信息在设计图面上显示可视化提示。 设计器提供的可视化提示包含感叹号图标，该图标显示在设计图面上的任务旁。 此可视化提示通知用户：任务需要其他配置才能继续执行。
 
  感叹号图标还显示一个包含错误消息的工具提示。 错误消息由任务在事件的说明参数中提供。 错误消息还显示在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 的“任务列表”窗格中，该窗格可供用户集中查看所有验证错误。
 
@@ -158,7 +158,7 @@ End Class
 ### <a name="execute-method"></a>Execute 方法
  当 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 运行库调用包中包含的任务的 `Execute` 方法时，该任务将会运行。 任务在此方法中实现其核心业务逻辑和功能，并通过发布消息、从枚举返回值 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 和重写属性的属性来提供执行结果 `get` `ExecutionValue` 。
 
- <xref:Microsoft.SqlServer.Dts.Runtime.Task> 基类提供 <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A> 方法的默认实现。 自定义任务重写此方法以定义其运行时功能。 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 对象包装任务，从而将该任务与运行时引擎和包中的其他对象隔离。 由于这种隔离，任务不知道它在包中所处的执行顺序位置，所以仅在由运行库调用时才运行。 这种体系结构可防止任务在执行期间修改包时可能发生的问题。 只有通过向任务提供作为 <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A> 方法参数的对象，该任务才能访问包中的其他对象。 这些参数允许任务引发事件、向事件日志写入条目、访问变量集合以及在事务中登记与数据源的连接，同时还保持确保包的稳定性和可靠性所需的隔离。
+ 该[Microsoft SqlServer](/dotnet/api/microsoft.sqlserver.dts.runtime.task)类提供方法的默认实现 <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A> 方式的。 自定义任务重写此方法以定义其运行时功能。 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 对象包装任务，从而将该任务与运行时引擎和包中的其他对象隔离。 由于这种隔离，任务不知道它在包中所处的执行顺序位置，所以仅在由运行库调用时才运行。 这种体系结构可防止任务在执行期间修改包时可能发生的问题。 只有通过向任务提供作为 <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A> 方法参数的对象，该任务才能访问包中的其他对象。 这些参数允许任务引发事件、向事件日志写入条目、访问变量集合以及在事务中登记与数据源的连接，同时还保持确保包的稳定性和可靠性所需的隔离。
 
  下表列出了提供给任务的 <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A> 方法的参数。
 

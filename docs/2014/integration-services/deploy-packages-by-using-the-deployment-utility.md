@@ -12,14 +12,14 @@ helpviewer_keywords:
 - dependencies [Integration Services]
 - deploying packages [Integration Services], installing
 ms.assetid: eaf4b56e-2023-4d17-971c-703031da758c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 371a2ba0b88266e076cf4e3e438fbe5b0216cf1f
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e91890553cf06845ae35960f75120a87dbec68de
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84951707"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437494"
 ---
 # <a name="deploy-packages-by-using-the-deployment-utility"></a>使用部署实用工具部署包
   如果要使用所生成的部署实用工具将 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目中的包安装到与生成该工具的计算机不同的其他计算机上，则必须首先将部署文件夹复制到目标计算机上。  

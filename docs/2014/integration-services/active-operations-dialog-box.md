@@ -10,14 +10,14 @@ f1_keywords:
 - sql12.ssis.ssms.isoperations.executions.f1
 - sql12.ssis.ssms.isoperations.general.f1
 ms.assetid: 5bb0fcd6-0ce9-488a-85b8-25dddaa03cda
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9c6cd168a852eca294e85de696a611b460423c5a
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 49861de7be207875c554e02d3f3b1b2f941fff64
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84926538"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439794"
 ---
 # <a name="active-operations-dialog-box"></a>“活动操作”对话框
   使用 **“活动操作”** 对话框可以查看 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器上当前运行的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 操作的状态，例如部署、验证和包执行。 此数据存储在 SSISDB 目录中。  
@@ -41,7 +41,7 @@ ms.locfileid: "84926538"
 ##  <a name="configure-the-options"></a><a name="options"></a>配置选项  
   
 ### <a name="options"></a>选项  
- **类型**  
+ **Type**  
  指定操作的类型。 下面是 "**类型**" 字段的可能值以及 transact-sql 视图的 "operations_type" 列中的相应值 `catalog.operations` 。  
   
 |||  
@@ -57,7 +57,7 @@ ms.locfileid: "84926538"
 |验证包|301|  
 |配置目录|1000|  
   
- **Stop**  
+ **停止**  
  单击以停止当前正在运行的操作。  
   
   

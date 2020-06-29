@@ -19,12 +19,12 @@ ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 9464a28505707abe602decabd00cde58a02d1feb
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6b0894c29e1c3cb525cd9378c0a95e56299e8a1e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833752"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440704"
 ---
 # <a name="sysdm_operation_status-azure-sql-database"></a>sys.dm_operation_status（Azure SQL 数据库）
 
@@ -53,7 +53,7 @@ ms.locfileid: "82833752"
 ## <a name="permissions"></a>权限  
  此视图仅在**master**数据库中适用于服务器级主体登录名。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  若要使用此视图，您必须连接到**master**数据库。 使用 `sys.dm_operation_status` 服务器的**master**数据库中的视图 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 跟踪对执行的以下操作的状态 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ：  
   
 -   创建数据库  
@@ -73,7 +73,9 @@ ms.locfileid: "82833752"
 -   对话框的  
   
 -   删除数据库  
-  
+
+此视图中的信息保留大约1小时。 请使用 " [Azure 活动日志](https://docs.microsoft.com/azure/azure-monitor/platform/activity-log)" 查看最近90天内的操作的详细信息。 对于超过90天的保留期，请考虑将[活动日志条目发送](https://docs.microsoft.com/azure/azure-monitor/platform/activity-log#send-to-log-analytics-workspace)到 Log Analytics 工作区。
+
 ## <a name="example"></a>示例  
  显示与数据库 "mydb" 关联的最近异地复制操作。  
   

@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f24ea0800107caf026105e306ae39e1461077de5
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e3f141ae1d77e5c346fe03e74366b0d94f4ca354
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84924244"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439054"
 ---
 # <a name="ssis-catalog"></a>SSIS 目录
   `SSISDB`目录是使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 已部署到服务器的（SSIS）项目的中心点 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 。 例如，您可以设置项目和包参数，配置环境以便为包指定运行时值，执行包并对包进行故障排除，以及管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器操作。  
@@ -42,9 +42,9 @@ ms.locfileid: "84924244"
 ## <a name="catalog-object-identifiers"></a>目录对象标识符  
  在目录中创建新对象时，为该对象指定一个名称。 对象名称就是一个标识符。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定义了有关可在标识符中使用的字符的规则。 以下对象的名称必须遵循标识符规则。  
   
--   文件夹  
+-   Folder  
   
--   Project  
+-   项目  
   
 -   环境  
   
@@ -203,7 +203,7 @@ ms.locfileid: "84924244"
   
 -   [catalog.object_versions（SSISDB 数据库）](/sql/integration-services/system-views/catalog-object-versions-ssisdb-database)  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
  您可以使用参数在包执行时为包属性赋值。 若要设置包或项目参数的值和清除这些值，请调用 [catalog.set_object_parameter_value（SSISDB 数据库）](/sql/integration-services/system-stored-procedures/catalog-set-object-parameter-value-ssisdb-database)和 [catalog.clear_object_parameter_value（SSISDB 数据库）](/sql/integration-services/system-stored-procedures/catalog-clear-object-parameter-value-ssisdb-database)。 若要为执行实例设置参数的值，请调用 [catalog.set_execution_parameter_value（SSISDB 数据库）](/sql/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database)。 可以通过调用 [catalog.get_parameter_values（SSISDB 数据库）](/sql/integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database)来检索默认参数值。  
   
  以下视图显示了所有包和项目的参数，以及用于执行实例的参数值。  

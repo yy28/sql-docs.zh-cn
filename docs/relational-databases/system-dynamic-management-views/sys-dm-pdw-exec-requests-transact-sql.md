@@ -12,12 +12,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a3ee27ca4f92efb950c35ab0d8174676246c14b3
-ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
+ms.openlocfilehash: 62dfd50adf25d3e203c2bbf50c58579c65332606
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84818047"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440804"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys. dm_pdw_exec_requests （Transact-sql）
 
@@ -52,18 +52,18 @@ ms.locfileid: "84818047"
 
  Result_cache_hit 是查询对结果集缓存的使用的位掩码。  此列可以是[|（位或）](../../t-sql/language-elements/bitwise-or-transact-sql.md)以下一个或多个值的产品：  
   
-|值|说明|  
+|值 Hex （十进制）|说明|  
 |-----------|-----------------|  
 |**1**|结果集缓存命中|  
-|-**0x00**|结果集缓存未命中|  
-|-**0x01**|已对数据库禁用结果集缓存。|  
-|-**0x02**|在会话上禁用结果集缓存。 | 
-|-**0x04**|由于没有用于查询的数据源，因此已禁用结果集缓存。|  
-|-**0x08**|由于行级安全谓词，结果集缓存已禁用。|  
-|-**0x10**|由于在查询中使用了系统表、临时表或外部表，因此结果集缓存已禁用。|  
-|-**0x20**|由于查询包含运行时常量、用户定义函数或非确定性函数，因此禁用了结果集缓存。|  
-|-**0x40**|由于估计的结果集大小为 >10GB，结果集缓存已禁用。|  
-|-**0x80**|结果集缓存已禁用，因为结果集包含大小较大（>64kb）的行。|  
+|**0x00** （**0**）|结果集缓存未命中|  
+|-**0x01** （**-1**）|已对数据库禁用结果集缓存。|  
+|-**0x02** （**-2**）|在会话上禁用结果集缓存。 | 
+|-**0x04** （**-4**）|由于没有用于查询的数据源，因此已禁用结果集缓存。|  
+|-**0x08** （**-8**）|由于行级安全谓词，结果集缓存已禁用。|  
+|-**0x10** （**-16**）|由于在查询中使用了系统表、临时表或外部表，因此结果集缓存已禁用。|  
+|-**0x20** （**-32**）|由于查询包含运行时常量、用户定义函数或非确定性函数，因此禁用了结果集缓存。|  
+|-**0x40** （**-64**）|由于估计的结果集大小为 >10GB，结果集缓存已禁用。|  
+|-**0x80** （**-128**）|结果集缓存已禁用，因为结果集包含大小较大（>64kb）的行。|  
   
 ## <a name="permissions"></a>权限
 

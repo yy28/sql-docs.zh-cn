@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 87bc4d82-39d8-424f-886f-98cf1e4bb07a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3fa7119ba9a8321e2b3bb8cbe1015271c9a3c95e
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ed53af447271aad48abd08e8e98b0fd11bbcf7c4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965191"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440494"
 ---
 # <a name="lesson-3-installing-packages"></a>第 3 课：安装包
   在[第2课：创建部署捆绑](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)中，生成了部署实用工具，并创建了包含必须在另一台计算机上安装包的项的部署捆绑。 您还验证了部署捆绑中的文件列表，检查了在生成部署实用工具时创建的清单文件的内容。  

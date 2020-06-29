@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Select Variables dialog box
 ms.assetid: 7069a82b-905b-47a5-aee4-6fba24204979
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b86ec76d75f58db7f8e2978764e8ce9c5ace2279
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 47bf9fcd831cc8ca0a56b7687013104ba6b30c68
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963540"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440064"
 ---
 # <a name="select-variables"></a>选择变量
   可以使用 **“选择变量”** 对话框，指定在消息队列任务的发送消息操作中使用的变量。 “可用变量”列表包括消息队列任务或其父容器作用域内的系统变量和用户定义变量****。 该任务使用 **“所选变量”** 列表中的变量。  

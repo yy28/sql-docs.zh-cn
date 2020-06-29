@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 761407023130b2bc18c8e1b64d09d9b30155c3b3
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 77aac43aa6fc00a408c049ea7f6d078417a8d4dd
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966063"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440614"
 ---
 # <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>步骤 2：添加和配置 Foreach 循环容器
   在本任务中，将添加循环访问平面文件的文件夹的功能，并将第 1 课中使用的同一数据流转换应用于其中的每个平面文件。 实现方法是将 Foreach 循环容器添加到控制流中并进行配置。  
@@ -42,7 +42,7 @@ ms.locfileid: "84966063"
   
 3.  右键单击新添加的“Foreach 循环容器”****，然后选择“编辑”****。  
   
-4.  在 " **Foreach 循环编辑器**" 对话框的 "**常规**" 页上，对于 "**名称**"，输入 `Foreach File in Folder` 。 单击“确定”。  
+4.  在 " **Foreach 循环编辑器**" 对话框的 "**常规**" 页上，对于 "**名称**"，输入 `Foreach File in Folder` 。 单击" **确定**"。  
   
 5.  右键单击 "Foreach 循环容器"，单击 "**属性**"，然后在 "属性窗口中，验证 `LocaleID` 属性是否设置为"**英语（美国）**"。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "84966063"
     > [!IMPORTANT]  
     >  变量名称区分大小写。  
   
-4.  单击“确定”。  
+4.  单击" **确定**"。  
   
 5.  再次单击“确定”****，退出“Foreach 循环编辑器”**** 对话框。  
   

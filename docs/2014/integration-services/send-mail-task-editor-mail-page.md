@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Send Mail Task Editor
 ms.assetid: adb385d5-ef24-4d18-b9ea-b39e00a7075e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ee2b7992065e31bc6ef57de9b22444cf2da1f963
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3beaed3fa3e03ddf9fa9b90349a3aa57a131c9b0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963483"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440054"
 ---
 # <a name="send-mail-task-editor-mail-page"></a>发送邮件任务编辑器（“邮件”页）
   使用 **“发送邮件任务编辑器”** 对话框中的 **“邮件”** 页，可以指定收件人、邮件类型和邮件的优先级。 您还可以在邮件中附加文件。 邮件正文可以是您提供的字符串，也可以是指向包含文本的文件连接，还可以是包含文本的变量的名称。  
@@ -37,7 +37,7 @@ ms.locfileid: "84963483"
  **From**  
  指定发件人的电子邮件地址。  
   
- **收件人**  
+ **To**  
  提供收件人的电子邮件地址，用分号分隔。  
   
  **字幕**  
@@ -52,13 +52,13 @@ ms.locfileid: "84963483"
  **MessageSourceType**  
  选择消息的源类型。 此属性具有下表所列的选项。  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |**直接输入**|将源设置为邮件正文。 选择此值将显示动态选项 **MessageSource**。|  
 |**文件连接**|将源设置为包含邮件正文的文件。 选择此值将显示动态选项 **MessageSource**。|  
 |**变量**|将源设置为包含消息正文的变量。 选择此值将显示动态选项 **MessageSource**。|  
   
- **优先级**  
+ **Priority**  
  设置邮件的优先级。  
   
  **Attachments**  

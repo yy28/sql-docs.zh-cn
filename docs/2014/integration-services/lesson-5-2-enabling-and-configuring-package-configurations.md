@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 06d31a4244da2a751bc501080cdf501d540fbc92
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: da51560f2ccfb7bef849f1b191c43f19d35d36ed
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84951527"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440384"
 ---
 # <a name="step-2-enabling-and-configuring-package-configurations"></a>步骤 2：启用和配置包配置
   在此任务中，您将项目转换为包部署模型并使用包配置向导配置包。 您将使用该向导生成 XML 配置文件，该文件包含 Foreach 循环容器的 `Directory` 属性的配置设置。 Directory 属性的值由新的包级别变量在运行时提供，您可以更新该变量。 另外，将填充要在测试期间使用的新的示例数据文件夹。  
@@ -82,9 +82,9 @@ ms.locfileid: "84951527"
   
 14. 在“完成向导”**** 页上，键入该配置的配置名称，例如 **SSIS Tutorial Directory configuration**。 这是显示在“包配置组织程序”**** 对话框中的配置名称。  
   
-15. 单击“完成” 。  
+15. 单击“完成”。  
   
-16. 单击“关闭” 。  
+16. 单击“关闭”。  
   
 17. 向导将创建一个名为 Ssistutorial.dtsconfig. Datatransferconfig.dtsconfig 的配置文件，该配置文件包含变量的配置设置，后者 `value` 又设置了 `Directory` 枚举器的属性。  
   

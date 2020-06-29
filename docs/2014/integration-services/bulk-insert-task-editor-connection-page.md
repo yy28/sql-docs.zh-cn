@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Bulk Insert Task Editor
 ms.assetid: 51252c20-8865-4ede-a3fd-bd73a968f47d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 045c2b6ced6326b0667b798027cfe4c87ca7a362
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b2cd722fd8520ff011c0d57040a55d624178e15e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84924638"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439164"
 ---
 # <a name="bulk-insert-task-editor-connection-page"></a>大容量插入任务编辑器（“连接”页）
   可以使用 **“大容量插入任务编辑器”** 对话框的 **“连接”** 页，指定大容量插入操作的源和目标以及使用的格式。  
@@ -37,7 +37,7 @@ ms.locfileid: "84924638"
  **格式**  
  选择大容量插入任务的格式源。 此属性具有下表所列的选项。  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |**使用文件**|选择包含格式规范的文件。 选择此选项将显示动态选项 **FormatFile**。|  
 |**指定**|指定格式。 选择此选项将显示动态选项 `RowDelimiter` 和 `ColumnDelimiter` 。|  

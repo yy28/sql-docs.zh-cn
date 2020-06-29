@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - WMI Data Reader Task Editor
 ms.assetid: 1ee4fd97-defc-4a63-adfe-5f2df548e62a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 48227317d06df138010b6d265b299dc803004547
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 57de6dba3a2aec845bd92b3698e526228fd0120d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972417"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439804"
 ---
 # <a name="wmi-data-reader-task-editor-general-page"></a>WMI 数据读取器任务编辑器（“常规”页）
   可以使用 **“WMI 数据读取器任务编辑器”** 对话框的 **“常规”** 页，对 WMI 数据读取器任务进行命名和说明。  

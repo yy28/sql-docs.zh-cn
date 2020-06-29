@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 076c76c9232dcba910c3810d2632f799b2960142
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 17bfedafcb97793ccccf414a6ae5da9bc66faa66
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966077"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440604"
 ---
 # <a name="lesson-1-creating-the-project-and-basic-package"></a>第 1 课：创建项目和基本包
   在本课中，将创建一个简单 ETL 包，该包可以从单个平面文件源中提取数据，使用两个查找转换组件转换该数据，然后将该数据写入 **AdventureWorksDW2012** 的 **FactCurrency**事实数据表中。 在本课中，您还将学习如何创建新包、添加和配置数据源和目标连接以及使用新的控制流和数据流组件。  
@@ -61,20 +61,20 @@ ms.locfileid: "84966077"
   
 |列名|数据类型|查找表|查找列|  
 |-----------------|---------------|------------------|-------------------|  
-|AverageRate|FLOAT|无|无|  
+|AverageRate|float|无|无|  
 |CurrencyKey|int (FK)|DimCurrency|CurrencyKey (PK)|  
 |DateKey|int (FK)|DimDate|DateKey (PK)|  
-|EndOfDayRate|FLOAT|无|无|  
+|EndOfDayRate|float|无|无|  
   
 ### <a name="mapping-source-data-to-be-compatible-with-the-destination"></a>将源数据映射为与目标兼容  
  对源数据和目标数据的分析指出需要查找 **CurrencyKey** 和 **DateKey** 值。 将执行这些查找的转换通过使用 **DimCurrency** 和 **DimDate** 维度表中的备用键来获取 **CurrencyKey** 和 **DateKey** 值。  
   
 |平面文件列|表名称|列名|数据类型|  
 |----------------------|----------------|-----------------|---------------|  
-|0|AdventureWorksDW2012|AverageRate|FLOAT|  
+|0|AdventureWorksDW2012|AverageRate|float|  
 |1|DimCurrency|CurrencyAlternateKey|nchar(3)|  
 |2|DimDate|FullDateAlternateKey|date|  
-|3|AdventureWorksDW2012|EndOfDayRate|FLOAT|  
+|3|AdventureWorksDW2012|EndOfDayRate|float|  
   
 ## <a name="lesson-tasks"></a>课程任务  
  本课程包含以下任务：  

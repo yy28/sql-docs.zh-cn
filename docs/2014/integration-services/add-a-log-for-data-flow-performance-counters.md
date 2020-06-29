@@ -11,14 +11,14 @@ helpviewer_keywords:
 - counters [Integration Services]
 - logs [Integration Services], data flow counters
 ms.assetid: b500d166-33ba-4b82-a92d-b0a333924e8d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6c397a5e4361c1aca4edfc32807045e3da9cbed0
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b0076d61c4ad8abe3ef8ada818ac00a95b7bbe7c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84926388"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439744"
 ---
 # <a name="add-a-log-for-data-flow-performance-counters"></a>添加数据流性能计数器的日志
   本过程介绍如何为数据流引擎提供的性能计数器添加日志。  
@@ -34,7 +34,7 @@ ms.locfileid: "84926388"
   
 3.  在“性能”**** 对话框中，展开“性能日志和警报”****，右键单击“计数器日志”****，再单击“新建日志设置”****。 键入日志的名称。 例如，键入 **MyLog**。  
   
-4.  单击“确定”。  
+4.  单击" **确定**"。  
   
 5.  在 **MyLog** 对话框中，单击 **“添加计数器”**。  
   
@@ -48,15 +48,15 @@ ms.locfileid: "84926388"
   
     -   选择 **“选择列表中的计数器”** ，然后选择要使用的性能计数器。  
   
-9. 单击“添加”。  
+9. 单击“添加” ****。  
   
-10. 单击“关闭” 。  
+10. 单击“关闭”。  
   
 11. 在 **MyLog** 对话框中，检查 **“计数器”** 列表中记录日志的性能计数器的列表。  
   
 12. 若要添加其他计数器，请重复步骤 5 到步骤 10。  
   
-13. 单击“确定”。  
+13. 单击" **确定**"。  
   
     > [!NOTE]  
     >  必须使用属于 Administrators 组成员的本地帐户或域帐户启动性能日志和警报服务。  

@@ -1,10 +1,10 @@
 ---
 title: sys. dm_external_script_requests |Microsoft Docs
 ms.custom: ''
-ms.date: 10/28/2018
+ms.date: 06/26/2020
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: machine-learning
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_external_script_requests
@@ -16,37 +16,38 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_external_script_requests dynamic management view
 ms.assetid: e7e7c50f-b8b2-403c-b8c8-1955da5636c3
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 17df7a7b74f80a2a412e248de1261a22cdd6d4ed
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+author: dphansen
+ms.author: davidph
+manager: cgronlun
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 80b468006ba3ec4c479514059b3b89f65e500b37
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821023"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469342"
 ---
 # <a name="sysdm_external_script_requests"></a>sys.dm_external_script_requests
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 为运行外部脚本的每个活动工作线程帐户都返回一行。
   
-> [!NOTE] 
->  
-> 此动态管理视图（DMV）仅在已安装并启用支持外部脚本执行的功能时可用。 有关详细信息，请参阅[SQL Server 2017 及更高版本中 SQL Server 2016 和机器学习服务（r、Python）](../../machine-learning/sql-server-machine-learning-services.md)[中的 R Services](../../machine-learning/r/sql-server-r-services.md) 。  
+> [!NOTE]
+> 此动态管理视图（DMV）仅在已安装并启用支持外部脚本执行的功能时可用。 有关详细信息，请参阅[SQL Server 2017 及更高版本中的机器学习服务（R、Python）](../../machine-learning/sql-server-machine-learning-services.md)、 [SQL Server 2016 中的 r SERVICES](../../machine-learning/r/sql-server-r-services.md)和[Azure SQL 托管实例](/azure/azure-sql/managed-instance/machine-learning-services-overview)中的机器学习服务。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|external_script_request_id|**唯一标识符**|发送外部脚本请求的进程的 ID。 这对应于接收的进程 ID[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
+|external_script_request_id|**唯一标识符**|发送外部脚本请求的进程的 ID。 这对应于接收到的 SQL 实例的进程 ID。|  
 |语言|**nvarchar**|表示支持的脚本语言的关键字。 |  
 |degree_of_parallelism|**int**|数字，指示已创建的并行进程数。 此值可能与请求的并行进程数不同。|  
 |external_user_name|**nvarchar**|在其下执行脚本的 Windows 工作线程帐户。|  
   
-## <a name="permissions"></a>权限  
- 需要针对服务器的 VIEW SERVER STATE 权限。  
+## <a name="permissions"></a>权限
+
+ 需要 `VIEW SERVER STATE` 对服务器的权限。  
   
 > [!NOTE]
->   
->  运行外部脚本的用户必须具有额外权限 EXECUTE ANY EXTERNAL SCRIPT，但是，此 DMV 可由没有此权限的管理员使用。 
+> 运行外部脚本的用户必须具有其他权限 `EXECUTE ANY EXTERNAL SCRIPT` ，但是，管理员可以使用此 DMV 而无需此权限。 
   
 ## <a name="remarks"></a>备注  
 
@@ -54,36 +55,33 @@ ms.locfileid: "82821023"
 
 此视图还返回在其下运行脚本的工作线程帐户。 有关外部脚本所使用的辅助角色帐户的信息，请参阅[SQL Server 机器学习服务中扩展性框架的 "安全概述](../../machine-learning/concepts/security.md#sqlrusergroup)" 部分中的 "用于处理（SQLRUserGroup）的标识" 部分。
 
-在 **external_script_request_id** 字段中返回的 GUID 还表示用于存储临时文件的受保护目录的文件名。 每个工作线程帐户（如 MSSQLSERVER01）都表示单个 SQL 登录名或 Windows 用户，可以用于运行多个脚本请求。 默认情况下，这些临时文件会在请求脚本完成之后进行清理。
- 
+在 **external_script_request_id** 字段中返回的 GUID 还表示用于存储临时文件的受保护目录的文件名。 每个辅助角色帐户（如 MSSQLSERVER01）代表一个 SQL 登录名或 Windows 用户，并可用于运行多个脚本请求。 默认情况下，这些临时文件会在请求脚本完成之后进行清理。
+
 此 DMV 仅监视活动进程，不能报告已完成的脚本。 如果需要跟踪脚本的持续时间，我们建议将计时信息添加到脚本并在脚本执行过程中进行捕获。
 
 ## <a name="examples"></a>示例  
   
-### <a name="viewing-the-currently-active-r-scripts-for-a-particular-process"></a>查看特定进程的当前活动 R 脚本 
+### <a name="viewing-the-currently-active-scripts-for-a-particular-process"></a>查看特定进程的当前活动脚本
+
  下面的示例显示在当前实例上运行的外部脚本执行数。  
   
-```  
-SELECT external_script_request_id 
+```sql
+SELECT external_script_request_id
   , [language]
   , degree_of_parallelism
   , external_user_name
-FROM sys.dm_external_script_requests; 
+FROM sys.dm_external_script_requests;
 ```  
 
 结果  
 
-
 external_script_request_id  |语言  |degree_of_parallelism  |external_user_name  
 ---------|---------|---------|---------
-183EE6FC-7399-4318-AA2E-7A6C68E435A8     |     R    |      1   |  MSSQLSERVER01       
+183EE6FC-7399-4318-AA2E-7A6C68E435A8     |     R    |      1   |  MSSQLSERVER01
 
+## <a name="see-also"></a>请参阅
 
-  
-## <a name="see-also"></a>另请参阅  
- [动态管理视图和函数 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [与执行相关的动态管理视图和函数 (Transact-SQL)](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
-[sys. dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) 
-[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)  
-  
-
++ [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
++ [与执行相关的动态管理视图和函数 (Transact-SQL)](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
++ [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)
++ [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)  

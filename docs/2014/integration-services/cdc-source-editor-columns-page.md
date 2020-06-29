@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsource.columns.f1
 ms.assetid: bcf3030e-98d8-4445-967c-33c3f8ecb4fc
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 51fcd038f45fdabbf97d5fafc4d4daf341d5a79d
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1d48eaab07915ddbfafea3c0396f8d8cd914260c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84924052"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438984"
 ---
 # <a name="cdc-source-editor-columns-page"></a>CDC 源编辑器（“列”页）
   可以使用“CDC 源编辑器”对话框的“列”页，将输出列映射到每个外部（源）列********。  

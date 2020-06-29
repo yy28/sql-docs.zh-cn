@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 07e8aa47-37d4-4bbc-8bff-49e422d12897
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 0dcf79644ba3e9bc337b14e4ff28fe703e81564d
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: a49aa41d158bf2c9fd1ebb1a711d6ff35c0df98b
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84545429"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469012"
 ---
 # <a name="user-defined-functions-and-stored-procedures"></a>用户定义函数和存储过程
   对于 ADOMD.NET 服务器对象，可以创建用户定义的函数（UDF）或存储过程来与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 来自服务器的元数据和数据进行交互。 这些进程内方法是通过多维表达式 (MDX) 或数据挖掘扩展插件 (DMX) 语句调用的，可以提供附加功能而不会有网络通信的延迟。  
@@ -28,7 +28,7 @@ ms.locfileid: "84545429"
 ## <a name="udf-examples"></a>UDF 示例  
  UDF 是一种可在 MDX 或 DMX 语句上下文中调用的方法，可具有任意数目的参数，并可返回任意类型的数据。  
   
- 使用 MDX 创建的 UDF 与用 DMX 创建的 UDF 类似。 它们的主要差异在于 <xref:Microsoft.AnalysisServices.AdomdServer.Context> 对象的某些属性，如 <xref:Microsoft.AnalysisServices.AdomdServer.Context.CurrentCube%2A> 和 <xref:Microsoft.AnalysisServices.AdomdServer.Context.CurrentMiningModel%2A> 属性，只可用于其中一种脚本语言。  
+ 使用 MDX 创建的 UDF 与用 DMX 创建的 UDF 类似。 主要区别在于， [microsoft.analysisservices.sharepoint.integration.dll](/previous-versions/sql/sql-server-2014/ms143353(v=sql.120))对象的某些属性（如[AdomdServer *](/previous-versions/sql/sql-server-2014/ms137081(v=sql.120))和 CurrentCube * 属性）仅适用于一种脚本语言或另一种语言的属性，例如 microsoft.analysisservices.sharepoint.integration.dll * 和 AdomdServer [*](/previous-versions/sql/sql-server-2014/ms137178(v=sql.120))属性。  
   
  下面的示例演示如何使用 UDF 返回节点说明、筛选元组并对元组应用筛选器。  
   

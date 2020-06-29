@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - variables [Integration Services], adding
 ms.assetid: cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: eadb27485ac92aa10b22ad3f59cf9ac6029a851e
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 946a9f3ccecfcad30042d0264942836522e64c7d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84926138"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439684"
 ---
 # <a name="add-delete-change-scope-of-user-defined-variable-in-a-package"></a>添加、删除、更改包中用户定义变量的作用域
   这些过程介绍如何使用“变量”窗口来添加、删除和更改包中用户定义变量的作用域。****  

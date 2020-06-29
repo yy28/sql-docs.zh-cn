@@ -17,14 +17,14 @@ helpviewer_keywords:
 - datasets [Integration Services], sample
 - training mining models
 ms.assetid: 59767e52-f732-4b3f-8602-be50d0a64ef2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e7f68e2a6affcdeb7970b457786d91c69967c72b
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 09e8a4a4ccf4b6e018e8c8ef4a905f77e417b3e9
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939359"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437584"
 ---
 # <a name="percentage-sampling-transformation"></a>百分比抽样转换
   百分比抽样转换通过选择转换输入行的百分比来创建样本数据集。 样本数据集是从转换输入中随机选择的行，这使得结果样本可以代表输入。  

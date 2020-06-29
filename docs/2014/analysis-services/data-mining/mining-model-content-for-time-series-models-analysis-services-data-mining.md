@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bb225387-fbbf-4189-b172-9daa2495fa9c
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 550dd2bad920dc3538de011b7841c0174912e718
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: fc9186b0250f0bdb8dd5ad91cc7e84782218bbc2
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84521250"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468902"
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>时序模型的挖掘模型内容（Analysis Services - 数据挖掘）
   所有挖掘模型均使用相同的结构存储其内容。 该结构是根据数据挖掘内容架构行集而定义的。 但在该标准结构中，包含信息的节点以不同方式排列以表示各种类型的树。 本主题介绍在基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法的挖掘模型中这些节点的组织方式以及每个节点的含义。  
@@ -423,7 +423,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  “ ** 差分阶数”的值指示比较或区分序列的次数。  
   
- 有关可能的值类型的枚举，请参阅 <xref:Microsoft.AnalysisServices.AdomdServer.MiningValueType>。  
+ 有关可能的值类型的枚举，请参阅[microsoft.analysisservices.sharepoint.integration.dll. AdomdServer. MiningValueType](/previous-versions/sql/sql-server-2014/ms144375(v=sql.120))。  
   
 ### <a name="using-the-arima-tree-information"></a>使用 ARIMA 树信息  
  如果在企业解决方案中使用基于 ARIMA 算法的预测，则可能希望将公式粘贴到报表中以演示用于创建该预测的方法。 可以使用标题表示缩写格式的公式，也可以使用说明表示长格式的公式。  
@@ -436,7 +436,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
 -   XML 表示形式：使用 XML 查询。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  由于 ARTXP 树的每个拆分的信息均位于该树中的不同位置，因此可能很难从 ARTXP 树中检索信息。 因而对于 ARTXP 模型，必须获取公式的各个部分，然后进行些许处理来重组完整的公式。 相比之下，从 ARIMA 模型检索公式要容易一些，原因是从 ARIMA 树的任何位置均可获取该公式。 有关如何创建检索该信息的查询的信息，请参阅 [时序模型查询示例](time-series-model-query-examples.md)。  
   
 ## <a name="see-also"></a>另请参阅  

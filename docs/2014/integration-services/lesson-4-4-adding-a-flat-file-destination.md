@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 66533fb63a76bc92bcb45e7cb8feb058467e6583
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 177654c7bfe8d7acb7559139ef784dfd66611572
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968183"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440394"
 ---
 # <a name="step-4-adding-a-flat-file-destination"></a>步骤 4：添加平面文件目标
   Lookup Currency Key 转换的错误输出将无法执行查找操作的所有数据行重定向到脚本转换。 为了突显相关错误的信息，脚本转换将运行可获取错误说明的脚本。  
@@ -47,7 +47,7 @@ ms.locfileid: "84968183"
   
      注意，除了源数据文件中的列以外，还存在三个新列：ErrorCode、ErrorColumn 和 ErrorDescription。 这三列由 Lookup Currency Key 转换的错误输出和获取错误说明转换中的脚本生成，可用于排查失败行的原因。  
   
-12. 单击“确定”。  
+12. 单击" **确定**"。  
   
 13. 在“平面文件目标编辑器”**** 中，清除“覆盖文件中的数据”**** 复选框。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "84968183"
   
 14. 在“平面文件目标编辑器”**** 中，单击“映射”**** 来验证所有列是否正确。 您也可以选择重命名目标中的列。  
   
-15. 单击“确定”。  
+15. 单击" **确定**"。  
   
 ## <a name="next-steps"></a>后续步骤  
  [步骤 5：测试第 4 课教程包](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  

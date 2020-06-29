@@ -13,14 +13,14 @@ helpviewer_keywords:
 - SSIS, expressions
 - tools [Integration Services], Expression Builder
 ms.assetid: 376502e7-8ea5-46a0-8e3b-bbdbe730b698
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9cea6e1b6aa5f9748be3f9117fe59b3cbec8b180
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a4c2b2ec2be82cbc71987fb675d8599dbb790dcf
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966737"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437314"
 ---
 # <a name="expression-builder-integration-services"></a>表达式生成器 (Integration Services)
   **“表达式生成器”** 对话框提供了一个图形用户界面，用于生成属性表达式使用的表达式。 可以从 **设计器中的自定义任务对话框访问** “表达式生成器” [!INCLUDE[ssIS](../includes/ssis-md.md)] 对话框，也可以从 **中的** “属性” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]窗口访问该对话框。  

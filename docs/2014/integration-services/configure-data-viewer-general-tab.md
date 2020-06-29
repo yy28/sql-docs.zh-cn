@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Configure Data Viewer dialog box
 ms.assetid: 7f60ff18-9ad6-4169-af62-edcb04525b0e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 24bd24e4247fb739441f041c38907580ba157629
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c68f01425a94f139096ce85a0d12f2b18e0f9164
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921748"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438534"
 ---
 # <a name="configure-data-viewer-general-tab"></a>配置数据查看器（“常规”选项卡）
   在包执行过程中，数据查看器显示流过连接两个数据流组件的路径的数据。  
@@ -29,7 +29,7 @@ ms.locfileid: "84921748"
  **名称**  
  为数据查看器提供唯一的名称。  
   
- **类型**  
+ **Type**  
  列出数据查看器的类型。 单击类型可以显示示例图表。  
   
  **说明**  

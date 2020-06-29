@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.parameterwindow.f1
 ms.assetid: cd5d675b-dd5d-49cc-8b1f-dc717a973f99
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f43c6f25d7360b558a8bbfb9887b6bd2d6362106
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a26ae08c08a32b0593be8c9a2777b7cfe9c884fa
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84917213"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437884"
 ---
 # <a name="create-parameters"></a>Create Parameters
   使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 可以创建项目参数和包参数。 下面的过程提供了有关创建包参数/项目参数的分步说明。  
@@ -36,13 +36,13 @@ ms.locfileid: "84917213"
   
 3.  为列表自身中或 **“属性”** 窗口中的 **“名称”**、 **“数据类型”**、 **“值”**、 **“敏感”** 和 **“必需”** 属性输入值。 下表对这些属性进行了说明：  
   
-    |属性|说明|  
+    |properties|说明|  
     |--------------|-----------------|  
     |名称|参数的名称。|  
     |数据类型|参数的数据类型。|  
     |默认值|在设计时分配的参数的默认值。 这也称为设计默认值。|  
     |敏感|敏感参数值在目录中加密，并且在使用 Transact-SQL 或 SQL Server Management Studio 查看时以 NULL 值的形式出现。|  
-    |必需|需要首先指定并非设计默认值的值，包才能执行。|  
+    |必须|需要首先指定并非设计默认值的值，包才能执行。|  
     |说明|出于可维护性目的而提供的参数的说明。 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，当在适用的参数窗口中选择参数时，在“Visual Studio 属性”窗口中设置参数说明。|  
   
     > [!NOTE]  
@@ -70,13 +70,13 @@ ms.locfileid: "84917213"
   
 4.  为 **“名称”**、 **“数据类型”**、 **“值”**、 **“敏感”** 和 **“必需”** 属性输入值。  
   
-    |属性|说明|  
+    |properties|说明|  
     |--------------|-----------------|  
     |名称|参数的名称。|  
     |数据类型|参数的数据类型。|  
     |默认值|在设计时分配的参数的默认值。 这也称为设计默认值。|  
     |敏感|敏感参数值在目录中加密，并且在使用 Transact-SQL 或 SQL Server Management Studio 查看时以 NULL 值的形式出现。|  
-    |必需|需要首先指定并非设计默认值的值，包才能执行。|  
+    |必须|需要首先指定并非设计默认值的值，包才能执行。|  
     |说明|出于可维护性目的而提供的参数的说明。 在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，当在适用的参数窗口中选择参数时，在“Visual Studio 属性”窗口中设置参数说明。|  
   
 5.  保存项目以保存对参数所做的更改。 参数值将存储在项目文件的配置中。 保存项目文件以将对参数值的所有更改提交到磁盘。  

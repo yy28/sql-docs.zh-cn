@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.controlflowwindow.f1
 ms.assetid: 986e8fbe-f6ca-469a-9c7b-ad9b0b89f832
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8df8182305eb90be3286a8281169f075555306f1
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4838abd00dcde10f78587647b5ea980a3b3ce456
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84920158"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438284"
 ---
 # <a name="control-flow-tab"></a>“控制流”选项卡
   可以使用 **设计器的** “控制流” [!INCLUDE[ssIS](../includes/ssis-md.md)] 选项卡在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包中生成控制流。  

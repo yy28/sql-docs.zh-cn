@@ -11,14 +11,14 @@ helpviewer_keywords:
 - data flow [Integration Services], data viewers
 - adding data viewers
 ms.assetid: 5e573274-a170-4132-bfc8-a8ff3a8411e4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3a7698276ece16f3c1c9db53deec94912c89db01
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e04e678dfb2b98e5304f9f7c9f0cfe2a858b6485
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84926428"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439764"
 ---
 # <a name="add-a-data-viewer-to-a-data-flow"></a>将数据查看器添加到数据流
   本主题介绍如何在数据流中添加和配置数据查看器。 数据查看器可以显示在两个数据流组件之间移动的数据。 例如，数据查看器可以显示在数据流中的转换修改数据之前从数据源中提取的数据。  

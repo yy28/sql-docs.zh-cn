@@ -11,17 +11,17 @@ helpviewer_keywords:
 ms.assetid: 42965c09-1782-4cdb-9ce1-216af4c23e0a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: dc1aeb650810f9b6d580dabcd22091a2e1eb9d49
-ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
+ms.openlocfilehash: b1e6079d12de5468a654e646c434ae72596f62dc
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85427254"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469272"
 ---
 # <a name="creating-a-custom-task"></a>创建自定义任务
   创建自定义任务的步骤与创建其他任何 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 自定义对象的步骤相似：  
   
--   创建一个从基类继承的新类。 对于任务，基类是 <xref:Microsoft.SqlServer.Dts.Runtime.Task>。  
+-   创建一个从基类继承的新类。 对于任务，该基类为 "... ["。](/dotnet/api/microsoft.sqlserver.dts.runtime.task)  
   
 -   将标识对象类型的属性应用于该类。 对于任务，该属性是 <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "85427254"
 ## <a name="getting-started-with-a-custom-task"></a>自定义任务入门  
   
 ### <a name="creating-projects-and-classes"></a>创建项目和类  
- 由于所有托管任务都派生自 <xref:Microsoft.SqlServer.Dts.Runtime.Task> 基类，所以创建自定义任务的第一步是创建一个用您首选的托管编程语言编写的类库项目，然后创建一个从该基类继承的类。 在此派生类中重写基类的属性和方法可实现您的自定义功能。  
+ 由于所有托管任务都派生自[""，因此](/dotnet/api/microsoft.sqlserver.dts.runtime.task)创建自定义任务时，第一步是在首选托管编程语言中创建一个类库项目，然后创建一个从该基类继承的类。 在此派生类中重写基类的属性和方法可实现您的自定义功能。  
   
  在同一解决方案中，创建另一个类库项目，用于自定义用户界面。 为便于部署，推荐对用户界面使用单独的程序集，因为这样，您就可以分别更新和重新部署连接管理器或其用户界面。  
   

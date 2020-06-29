@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - addTabs
 ms.assetid: ad260e19-c021-4035-9311-c02fc96ceaea
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: afe2cb8d6c250f40605a60b3a8e31b2cffa94a95
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: db526bd1d5b9cab6a4e204d068827ff29b9dfa06
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84923828"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438914"
 ---
 # <a name="add-tables-to-a-cdc-instance"></a>将表添加到 CDC 实例
   使用“表选择”对话框可以将 Oracle 源中的附加表添加到 CDC 实例。 选定的表将添加到属性编辑器的 **“表”** 选项卡的列表中。  

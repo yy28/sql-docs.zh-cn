@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Web Service Task Editor
 ms.assetid: 93529c88-f540-47f2-a10a-12c87318ed6f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: fa1858469ec8756f05e186ca1cb50c966ee47268
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a0ff06e9001c943c294b9c7ba8f93d9cad21e9c3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972457"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439834"
 ---
 # <a name="web-service-task-editor-input-page"></a>Web 服务任务编辑器（“输入”页）
   可以使用 **“Web 服务任务编辑器”** 对话框的 **“输入”** 页，指定 Web 服务、Web 方法和作为输入提供给 Web 方法的值。 可通过直接在“值”列中键入字符串或在“值”列中选择变量来提供这些值。  
@@ -38,7 +38,7 @@ ms.locfileid: "84972457"
  **名称**  
  列出为 Web 方法提供的输入名称。  
   
- **类型**  
+ **Type**  
  列出输入的数据类型。  
   
 > [!NOTE]  

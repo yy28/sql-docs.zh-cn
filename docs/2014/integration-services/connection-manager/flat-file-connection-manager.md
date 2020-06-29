@@ -14,14 +14,14 @@ helpviewer_keywords:
 - flat files
 - flat file connections [Integration Services]
 ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e46c1ea54ba178fba73a1bfb2cc8ee296ca2b0d0
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 55d44369a0d6d57f876bb08475266955c87724b1
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84920855"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438464"
 ---
 # <a name="flat-file-connection-manager"></a>平面文件连接管理器
   平面文件连接管理器使包可以访问平面文件中的数据。 例如，平面文件源和目标可以使用平面文件连接管理器提取和加载数据。  

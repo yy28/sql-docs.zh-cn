@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Copy Column Transformation Editor
 ms.assetid: d8e70541-d563-4ce4-bf66-bc888a0d3026
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 317748ee2e5df7f64c15afd5f4d5661a739f4f88
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7647d25891b37e5f09356d427072e84b45882e4c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84917507"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437964"
 ---
 # <a name="copy-column-transformation-editor"></a>复制列转换编辑器
   可以使用 **“复制列转换编辑器”** 对话框选择要复制的列，以及为新的输出列指定名称。  

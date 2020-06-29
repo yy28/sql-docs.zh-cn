@@ -15,14 +15,14 @@ helpviewer_keywords:
 - packages [Integration Services], configurations
 - deploying packages [Integration Services], configurations
 ms.assetid: 91ac0347-f908-44f5-bd3d-115790223af4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5552d40cf2f899ca6b95658ac2aa50d5cc25f62f
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8931df95aba03710c5feb8b8270dcf9453ba1789
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84917297"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437914"
 ---
 # <a name="create-package-configurations"></a>创建包配置
   使用 **“包配置组织程序”** 对话框和包配置向导，可以创建包配置。 若要访问这些工具，请在 **中单击** “SSIS” **菜单上的** “包配置” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。  
@@ -105,7 +105,7 @@ ms.locfileid: "84917297"
   
 10. 查看 **“包配置组织程序”** 对话框中的配置。  
   
-11. 单击“关闭” 。  
+11. 单击“关闭”。  
   
 ## <a name="external-resources"></a>外部资源  
   

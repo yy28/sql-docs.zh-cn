@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ca1929a6-0ae6-47d7-b65f-08173b143720
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6afb7c8bcb0b6873ff0040eccdcf86dd90997851
-ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
+ms.openlocfilehash: 299c45662bc4034ba9db3331d09980b4fa31afe7
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85427634"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469312"
 ---
 # <a name="developing-custom-objects-for-integration-services"></a>开发 Integration Services 的自定义对象
   当随 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的控制流和数据流对象不能完全满足你的要求时，可以自己开发各种类型的自定义对象，其中包括：
@@ -60,26 +60,26 @@ ms.locfileid: "85427634"
 
 |自定义对象|基类|Attribute|重要方法|
 |-------------------|----------------|---------------|-----------------------|
-|任务|<xref:Microsoft.SqlServer.Dts.Runtime.Task>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>|
-|“ODBC 源编辑器”|<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.AcquireConnection%2A>、<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.ReleaseConnection%2A>|
-|日志提供程序|<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.OpenLog%2A>、<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A>、<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.CloseLog%2A>|
+|任务|[Microsoft SqlServer. Task](/dotnet/api/microsoft.sqlserver.dts.runtime.task)|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>|
+|“ODBC 源编辑器”|<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.AcquireConnection%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.ReleaseConnection%2A>|
+|日志提供程序|<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.OpenLog%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.CloseLog%2A>|
 |枚举器|<xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator.GetEnumerator%2A>|
-|数据流组件|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>|<xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute>|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A>、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A>、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A>|
+|数据流组件|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>|<xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute>|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A>, <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A>, <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A>|
 
 ## <a name="providing-links-to-samples-and-help-content"></a>提供指向示例和帮助内容的链接
- 若要在“SSIS 工具箱”  中显示指向用托管代码编写的自定义对象的示例和帮助内容的链接，请使用以下属性。
+ 若要在“SSIS 工具箱”**** 中显示指向用托管代码编写的自定义对象的示例和帮助内容的链接，请使用以下属性。
 
--   <xref:Microsoft.SqlServer.Dts.Pipeline.DTSPipelineComponentAttribute.SamplesTag%2A>
+-   [DTSPipelineComponentAttribute. SamplesTag * 的 *](/dotnet/api/microsoft.sqlserver.dts.pipeline.dtspipelinecomponentattribute.samplestag)
 
--   <xref:Microsoft.SqlServer.Dts.Pipeline.DTSPipelineComponentAttribute.HelpCollection%2A>
+-   [DTSPipelineComponentAttribute. HelpCollection * 的 *](/dotnet/api/microsoft.sqlserver.dts.pipeline.dtspipelinecomponentattribute.helpcollection)
 
--   <xref:Microsoft.SqlServer.Dts.Pipeline.DTSPipelineComponentAttribute.HelpKeyword%2A>
+-   [DTSPipelineComponentAttribute. HelpKeyword * 的 *](/dotnet/api/microsoft.sqlserver.dts.pipeline.dtspipelinecomponentattribute.helpkeyword)
 
--   <xref:Microsoft.SqlServer.Dts.Runtime.DTSTaskAttribute.SamplesTag%2A>
+-   [DTSTaskAttribute. SamplesTag * 的 *](/dotnet/api/microsoft.sqlserver.dts.runtime.dtstaskattribute.samplestag)
 
--   <xref:Microsoft.SqlServer.Dts.Runtime.DTSTaskAttribute.HelpCollection%2A>
+-   [DTSTaskAttribute. HelpCollection * 的 *](/dotnet/api/microsoft.sqlserver.dts.runtime.dtstaskattribute.helpcollection)
 
--   <xref:Microsoft.SqlServer.Dts.Runtime.DTSTaskAttribute.HelpKeyword%2A>
+-   [DTSTaskAttribute. HelpKeyword * 的 *](/dotnet/api/microsoft.sqlserver.dts.runtime.dtstaskattribute.helpkeyword)
 
  若要显示指向用本机代码编写的自定义对象的示例和帮助内容的链接，请在注册表脚本 (.rgs) 文件中为 SamplesTag、HelpKeyword 和 HelpCollection 添加项。 下面是一个示例。
 
@@ -93,7 +93,7 @@ ms.locfileid: "85427634"
  在自定义用户界面项目或程序集中，通常有两个类：一个用于实现特定类型自定义对象的用户界面的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 接口的类和用于显示以收集用户信息的 Windows 窗体。 您实现的接口只有少量方法，因此开发自定义用户界面并不困难。
 
 > [!NOTE]
->  许多 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 日志提供程序都有一个自定义用户界面，该界面实现 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsLogProviderUI>，并使用已筛选的可用连接管理器下拉列表替换“配置”  文本框。 但是，此版本的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中不实现自定义日志提供程序的自定义用户界面。 为 <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute.UITypeName%2A> 的 <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> 属性指定值不起作用。
+>  许多 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 日志提供程序都有一个自定义用户界面，该界面实现 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsLogProviderUI>，并使用已筛选的可用连接管理器下拉列表替换“配置”**** 文本框。 但是，此版本的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中不实现自定义日志提供程序的自定义用户界面。 为 <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute.UITypeName%2A> 的 <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> 属性指定值不起作用。
 
  下表提供了对一些接口的简单引用，您在为每种类型的自定义对象开发自定义用户界面时必须实现这些接口。 该表还介绍了当您选择不为对象开发自定义用户界面，或者无法在对象的属性中使用 `UITypeName` 属性将对象链接到其用户界面时，用户所能看到的内容。 尽管功能强大的高级编辑器能够满足数据流组件的要求，但对于任务和连接管理器，“属性”窗口解决方案的用户友好性较差，并且如果没有自定义窗体，将根本就无法配置自定义 ForEach 枚举器。
 
@@ -101,7 +101,7 @@ ms.locfileid: "85427634"
 |-------------------|-----------------------------------|----------------------------------------------------------------------|
 |任务|<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI>|仅“属性”窗口|
 |“ODBC 源编辑器”|<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI>|仅“属性”窗口|
-|日志提供程序|<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsLogProviderUI><br /><br /> （未在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中实现）|“配置”  列中的文本框|
+|日志提供程序|<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsLogProviderUI><br /><br /> （未在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中实现）|“配置”**** 列中的文本框|
 |枚举器|<xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumeratorUI>|仅“属性”窗口。 编辑器的“枚举器配置”区域为空。|
 |数据流组件|<xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI>|“高级编辑器”|
 

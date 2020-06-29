@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Term Extraction Transformation Editor
 ms.assetid: 4c305b7d-a231-4d03-a09f-8e2d6564fa76
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2ba82ed1dac3cf992ca181e5795b33721eca4d86
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 00a1ecae07fe4babf433d199d069fc6200b52269
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962217"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440024"
 ---
 # <a name="term-extraction-transformation-editor-term-extraction-tab"></a>字词提取转换编辑器（“字词提取”选项卡）
   可以使用 **“字词提取转换编辑器”** 对话框的 **“字词提取”** 选项卡，指定包含要提取的文本的文本列。  
@@ -29,7 +29,7 @@ ms.locfileid: "84962217"
  **可用输入列**  
  通过使用复选框，选择要用于字词提取的单个文本列。  
   
- **术语**  
+ **二项式**  
  为将包含所提取的字词的输出列提供名称。  
   
  **Score**  

@@ -10,14 +10,14 @@ helpviewer_keywords:
 - transactions [Integration Services], multiple
 - multiple transactions
 ms.assetid: c3664a94-be89-40c0-a3a0-84b74a7fedbe
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f0527336a5d6774b1c7114d523d0847b3d10d6a3
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5ff909c92a23c965047edc0fcf278e17e4c76d94
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965117"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440094"
 ---
 # <a name="multiple-transactions"></a>多个事务
   包可以在一个 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包中包含不相关的事务。 无论任何时候，位于嵌套容器层次结构中间的容器都不支持事务，位于层次结构中其他位置的容器如果配置为支持事务，则它们将启动单独的事务。 事务按照从嵌套容器层次结构中最里面的任务到包这个顺序来提交或回滚。 但是，在内部事务提交后，如果外部事务中止，已提交的事务不会回滚。

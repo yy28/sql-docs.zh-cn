@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Bulk Insert Task Editor
 ms.assetid: b3702811-3eb8-4b28-9190-5ae7a1a7bb6f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5f9c37fc722613b8f30772fd825663b2dfcf9b54
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1751d1e0ac01d5459a8c76e6a48626c2ad6deafd
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84924648"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439174"
 ---
 # <a name="bulk-insert-task-editor-options-page"></a>大容量插入任务编辑器（“选项”页）
   使用 **“大容量插入任务编辑器”** 对话框的 **“选项”** 页，可以设置大容量插入操作的属性。 大容量插入任务将大量数据复制到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 表或视图中。  
@@ -51,7 +51,7 @@ ms.locfileid: "84924648"
 |**激发触发器**|选择此项将激发对表上的触发器的任意插入、更新或删除操作。|  
   
  **SortedData**  
- 指定大容量插入语句中的 ORDER BY 子句。 所提供的列名必须是目标表中的有效列。 默认为 `false`。 这意味着 ORDER BY 子句将不对数据进行排序。  
+ 指定大容量插入语句中的 ORDER BY 子句。 所提供的列名必须是目标表中的有效列。 默认值为 `false`。 这意味着 ORDER BY 子句将不对数据进行排序。  
   
  **MaxErrors**  
  指定在取消大容量插入操作之前可以发生的最大错误数量。 如果值为 0，则指示对错误的数量没有限制。  

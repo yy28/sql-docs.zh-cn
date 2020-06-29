@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Logins Task Editor
 ms.assetid: bf244c24-bd45-4ece-b66b-78b488f35c5b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 67c81901e454c4e7a47e5d448f2aa17d6a8820fa
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c849c57c0854757a75eecf163a384c06ae8f1c47
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972807"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439994"
 ---
 # <a name="transfer-logins-task-editor-logins-page"></a>传输登录名任务编辑器（“登录名”页）
   可以使用 **“传输登录名任务编辑器”** 对话框的 **“登录名”** 页，指定用于将一个或多个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 登录名从一个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例复制到另一个实例的属性。 有关此任务的详细信息，请参阅 [Transfer Logins Task](control-flow/transfer-logins-task.md)。  
@@ -36,10 +36,10 @@ ms.locfileid: "84972807"
  **LoginsToTransfer**  
  选择要从源服务器复制到目标服务器的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 登录名。 此属性具有下表所列的选项：  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |**AllLogins**|源服务器上的所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 登录名都将复制到目标服务器。|  
-|**SelectedLogins**|只有通过 **LoginsList** 指定的登录名才会复制到目标服务器。|  
+|**了 selectedlogins**|只有通过 **LoginsList** 指定的登录名才会复制到目标服务器。|  
 |**AllLoginsFromSelectedDatabases**|通过 **DatabasesList** 指定的数据库中的所有登录名都将复制到目标服务器。|  
   
  **LoginsList**  
@@ -53,7 +53,7 @@ ms.locfileid: "84972807"
   
  此属性具有下表所列的选项：  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |**FailTask**|如果目标服务器上已存在同名的登录名，则任务失败。|  
 |**Overwrite**|任务将覆盖目标服务器上同名的登录名。|  

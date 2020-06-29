@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ed2089257af4f82b0bbb863731a17d396dc8795c
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4023db85af32babf04de54efbceb6130d7f979ea
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968257"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440584"
 ---
 # <a name="lesson-2-adding-looping"></a>第 2 课：添加循环
   在[第1课：创建项目和基本包](lesson-1-create-a-project-and-basic-package-with-ssis.md)中，创建了从单个平面文件源提取数据的包，使用查找转换转换数据，最后将数据加载到**AdventureWorksDW2012**示例数据库的**FactCurrency**事实数据表中。  

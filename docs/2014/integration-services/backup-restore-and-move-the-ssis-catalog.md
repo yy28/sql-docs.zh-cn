@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: bf806aef-8556-48ab-aed5-e95de9a2204e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 314dfaee23854524884edd0fe67fe1f45ec89b2e
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f9de552ddd54168f516f42d9988302561616fd65
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925268"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439364"
 ---
 # <a name="backup-restore-and-move-the-ssis-catalog"></a>备份、还原和移动 SSIS 目录
   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] 包含 SSISDB 数据库。 查询 SSISDB 数据库中的视图可以检查 **SSISDB** 目录中存储的对象、设置和操作数据。 本主题说明如何备份和还原该数据库。  
@@ -108,7 +108,7 @@ ms.locfileid: "84925268"
   
 7.  使用下列方法之一还原主密钥。 有关加密的详细信息，请参阅 [Encryption Hierarchy](../relational-databases/security/encryption/encryption-hierarchy.md)。  
   
-    -   **方法1**  
+    -   **方法 1**  
   
          如果已备份数据库主密钥且具有用于加密主密钥的密码，则使用此方法。  
   
@@ -130,7 +130,7 @@ ms.locfileid: "84925268"
         >   
         >  FORCE 参数指定即使当前数据库主密钥未打开，也应继续执行还原过程。 对于 SSISDB 目录，由于在您正在其中还原数据库的实例上未打开数据库主密钥，您将看到此消息。  
   
-    -   **方法2**  
+    -   **方法 2**  
   
          如果您具有用于创建 SSISDB 的原始密码，则使用此方法。  
   

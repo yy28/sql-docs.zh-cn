@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.cacheconnection.f1
 ms.assetid: 0d8f9324-0c35-4eea-b06d-da3cc2426d2c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 403210fd8a60cdfb7e92b18f9bb66ccb0a6f1f4c
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d22744bd83daa70994e552965ea96d148800afef
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84924618"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439144"
 ---
 # <a name="cache-connection-manager-editor"></a>缓存连接管理器编辑器
   缓存连接管理器从缓存转换或缓存文件 (.caw) 中读取引用数据集，并且可以将数据保存到缓存文件中。 这些数据始终存储在内存中。  
@@ -28,7 +28,7 @@ ms.locfileid: "84924618"
   
  “缓存连接管理器编辑器”**** 对话框包含以下选项卡：  
   
--   [常规选项卡](#generaltab)  
+-   [“常规”选项卡](#generaltab)  
   
 -   [列选项卡](#columnstab)  
   
@@ -82,7 +82,7 @@ ms.locfileid: "84924618"
 > [!NOTE]  
 >  当将查找转换配置为使用缓存连接管理器时，则仅引用数据集中的索引列能够映射到输入列。 此外，还必须对所有索引列进行映射。  
   
- **类型**  
+ **Type**  
  指定列的数据类型。  
   
  `Length`  

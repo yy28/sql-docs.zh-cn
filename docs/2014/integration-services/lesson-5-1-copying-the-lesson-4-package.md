@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 8aa7d690-4649-4c0a-ac6f-9504637ee426
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6bd8de63662b070e317f7c01d1d60f15b6864787
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a2d07500e357d69ba0e07d5453ae7df7f0244360
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968177"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440424"
 ---
 # <a name="step-1-copying-the-lesson-4-package"></a>步骤 1：复制 Lesson 4 包
   在本任务中，将为第 4 课中创建的 Lesson 4.dtsx 包创建一个副本。 或者将本教程中附带的已完成的 Lesson 4 包添加到项目中，然后再对其进行复制。 将使用这一新副本来完成第 5 课剩余部分。  

@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Analysis Services Processing Task Editor
 ms.assetid: 5612be78-57cf-4e4e-92cf-6bfa9f971040
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4ae832263c3a025f53989761541e3278f5ea6a60
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0ab462b751215ed6573de20764f3dee0715e5f33
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925568"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439464"
 ---
 # <a name="analysis-services-processing-task-editor-analysis-services-page"></a>Analysis Services 处理任务编辑器（Analysis Services 页）
   可以使用 **“Analysis Services 处理任务编辑器”** 对话框的 **Analysis Services** 页指定 Analysis Services 连接管理器，选择要处理的分析对象，以及设置处理选项和错误处理选项。  
@@ -45,10 +45,10 @@ ms.locfileid: "84925568"
  **相关主题：** [Analysis Services 连接管理器](connection-manager/analysis-services-connection-manager.md)、[“添加 Analysis Services 连接管理器”对话框 UI 参考](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **对象列表**  
- |属性|说明|  
+ |properties|说明|  
 |--------------|-----------------|  
 |**Object Name**|列出指定对象的名称。|  
-|**类型**|列出指定对象的类型。|  
+|**Type**|列出指定对象的类型。|  
 |**处理选项**|从列表中选择处理选项。<br /><br /> **相关主题**：[多维模型对象处理](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
 |**设置**|列出指定对象的处理设置。|  
   
@@ -64,7 +64,7 @@ ms.locfileid: "84925568"
  **相关主题：** [“影响分析”对话框（Analysis Services - 多维数据）](../../2014/analysis-services/impact-analysis-dialog-box-analysis-services-multidimensional-data.md)  
   
  **批设置摘要**  
- |属性|说明|  
+ |properties|说明|  
 |--------------|-----------------|  
 |**处理顺序**|指定是按顺序处理对象还是按批处理对象；如果使用并行处理，则指定要并发处理的对象数。|  
 |**事务模式**|指定按顺序处理时的事务模式。|  

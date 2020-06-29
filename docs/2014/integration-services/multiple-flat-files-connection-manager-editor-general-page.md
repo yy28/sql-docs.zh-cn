@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Multiple Flat Files Connection Manager Editor
 ms.assetid: 00129d43-2772-413b-bdf8-ac5de81cf4a5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 11c56c29f685eb8f3746431a79b4d6a42a4b9fe5
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 53d684e6f48f3f81ae23c34c23eed11789d4a1fe
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965137"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440114"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-general-page"></a>多平面文件连接管理器编辑器（“常规”页）
   可以使用 **“多平面文件连接管理器编辑器”** 对话框的 **“常规”** 页，选择一组具有相同数据格式的文件并指定其数据格式。 多平面文件连接使得数据包可以连接到具有相同格式的一组文本文件。  
@@ -50,7 +50,7 @@ ms.locfileid: "84965137"
  **格式**  
  指示是否使用带分隔符、固定宽度或右边未对齐的格式。 所有文件的数据格式必须相同。  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |带分隔符|各列之间由在 **“列”** 页上指定的分隔符隔开。|  
 |固定宽度|列的宽度固定，通过在 **“列”** 页上拖动标记线即可指定列的宽度。|  
@@ -62,7 +62,7 @@ ms.locfileid: "84965137"
  **标题行分隔符**  
  从标题行的分隔符列表中选择，或输入分隔符文本。  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |**回车换行符**|标题行由回车符和换行符的组合分隔。|  
 |**回车**|标题行由回车符分隔。|  
