@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - File System Task Editor
 ms.assetid: 51fe6614-3418-4eff-a28d-02ea31cc9aa9
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: cf0c153168c513c98f8b9ac58984cb88ae1811da
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 342a718e1d72a257e469cd855ffd60fff6c5704d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967127"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425674"
 ---
 # <a name="file-system-task-editor-general-page"></a>文件系统任务编辑器（“常规”页）
   可以使用 **“文件系统任务编辑器”** 对话框的 **“常规”** 页，配置任务执行的文件系统操作。  
@@ -39,7 +39,7 @@ ms.locfileid: "84967127"
  **IsDestinationPathVariable**  
  指示目标路径是否存储在变量中。 此属性具有下表所列的选项。  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |**True**|目标路径存储在变量中。 选择此值将显示动态选项 **DestinationVariable**。|  
 |**False**|目标路径在文件连接管理器中指定。 选择此值将显示动态选项 `DestinationConnection` 。|  
@@ -59,7 +59,7 @@ ms.locfileid: "84967127"
  **操作**  
  选择要执行的文件系统操作。 此属性具有下表所列的选项。  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |**复制目录**|复制目录。 选择此值将显示源和目标的动态选项。|  
 |**复制文件**|复制文件。 选择此值将显示源和目标的动态选项。|  
@@ -75,7 +75,7 @@ ms.locfileid: "84967127"
  `IsSourcePathVariable`  
  指示目标路径是否存储在变量中。 此属性具有下表所列的选项。  
   
-|值||  
+|“值”||  
 |-----------|-|  
 |**True**|目标路径存储在变量中。 选择此值将显示动态选项 **SourceVariable**。|  
 |**False**|目标路径在文件连接管理器中指定。 选择此值将显示动态选项 **DestinationVariable**。|  
@@ -114,7 +114,7 @@ ms.locfileid: "84967127"
  **消隐**  
  指示文件或目录是否可见。  
   
- **只读**  
+ **ReadOnly**  
  指示文件是否是只读的。  
   
  **存档**  

@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Message Queue Task Editor
 ms.assetid: 09368b18-37a5-4321-a173-7cfe5d42d2a2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 25053ac966629c1265d735df8502eccad1d8a290
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 558d26d06a64e6734f5b662d44673578dc71b191
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84950927"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424544"
 ---
 # <a name="message-queue-task-editor-general-page"></a>消息队列任务编辑器（“常规”页）
   可以使用 **“消息队列任务编辑器”** 对话框的 **“常规”** 页，对消息队列任务进行命名和说明，指定消息格式，以及指示任务是发送还是接收消息。  
@@ -36,7 +36,7 @@ ms.locfileid: "84950927"
  键入对消息队列任务的说明。  
   
  **Use2000Format**  
- 指示是否使用消息队列（也称为 MSMQ）的 2000 格式。 默认为 `False`。  
+ 指示是否使用消息队列（也称为 MSMQ）的 2000 格式。 默认值为 `False`。  
   
  **MSMQConnection**  
  选择现有 MSMQ 连接管理器，或单击 \<**New connection...**> 以创建新的连接管理器。  

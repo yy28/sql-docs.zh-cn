@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.nomappingfile.f1
 ms.assetid: 87d9d3e5-477f-4117-a37f-bff53ea3e14d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f06e60f052dad10b0e69ef0aa6a879e3d29d1f86
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3874bcad23994fdcf69ade948239760d5c871917
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965627"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425094"
 ---
 # <a name="convert-types-without-conversion-checking-sql-server-import-and-export-wizard"></a>转换类型时不进行转换检查（SQL Server 导入和导出向导）
   如果向导找不到一个或多个数据类型转换和映射文件，则使用 "**转换类型而不进行转换检查**" 页可以查看向导执行的映射 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 。 此页包含的信息可帮助您识别缺少的文件。  

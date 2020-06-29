@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Connection Manager Editor
 ms.assetid: 58aa3dee-4774-4e0b-a956-96d199be4c3a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e25d8b904faaeff05620386e984ddc5bdd99fdf5
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2a8064a36bce9be9cfa5e2cc88c5f23806932d2c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967117"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425684"
 ---
 # <a name="flat-file-connection-manager-editor-advanced-page"></a>平面文件连接管理器编辑器（“高级”页）
   可以使用 **“平面文件连接管理器编辑器”** 对话框的 **“高级”** 页，设置指定 Integration Services 如何读写平面文件中的数据的属性。 可以更改平面文件中各个列的名称，并设置包括文件中每个列的数据类型和分隔符在内的属性。  
@@ -37,7 +37,7 @@ ms.locfileid: "84967117"
  **配置各列的属性**  
  选择左窗格中的列可在右窗格中查看列的属性。 请参阅下表以了解数据类型属性的说明。 列出的部分属性仅对某些平面文件格式是可配置的。  
   
-|属性|说明|  
+|properties|说明|  
 |--------------|-----------------|  
 |**ColumnType**|表示列是由分隔符分隔、还是固定宽度，或是右边未对齐。 此属性为只读。 在右边未对齐的文件中，除最后一列之外的每一列的宽度都固定。 它由行分隔符分隔。|  
 |**OutputColumnWidth**|指定值存储为字节数；对于 Unicode 文件，此值对应于字符数。 在数据流任务中，此值用于设置平面文件源的输出列宽。<br /><br /> 注意：在对象模型中，此属性的名称为 MaximumWidth。|  
@@ -52,7 +52,7 @@ ms.locfileid: "84967117"
  **新建**  
  单击“新建”**** 添加一个新列。 默认情况下，单击 **“新建”** 按钮将会在列表末尾添加新列。 该按钮还包括以下选项，可以在下拉列表中选择。  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |**添加列**|在列表末尾添加新列。|  
 |**在其前插入**|在所选列前面插入新列。|  

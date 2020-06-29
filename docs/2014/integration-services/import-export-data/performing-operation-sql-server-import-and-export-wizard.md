@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.performingoperation.f1
 ms.assetid: 83259509-71d6-4a64-a7f2-4e9603b30bd4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 948588ef8cfec8e3b3a5d689068bdff5d4396cc6
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3abd9f9c0e5b2b76a2966e7c8da5583c5364d133
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965565"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424844"
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>正在执行操作（SQL Server 导入和导出向导）
   使用 "**执行操作**" 页可以查看导入/导出操作的进度和结果，并在必要时中断操作。  
@@ -29,16 +29,16 @@ ms.locfileid: "84965565"
  **操作**  
  显示整个操作过程中的每一步操作。  
   
- **状态**  
+ **Status**  
  显示操作是成功还是失败。  
   
  **Message**  
  显示操作可能生成的信息性消息和错误消息。  
   
- **筛选器**  
+ **Filter**  
  选择是否只希望显示错误、警告或成功的操作。 可以通过选择 "**显示所有操作**" 来恢复为默认显示。  
   
- **Stop**  
+ **停止**  
  如果需要，使用 "**停止**" 按钮中断操作。  
   
  **Report**  

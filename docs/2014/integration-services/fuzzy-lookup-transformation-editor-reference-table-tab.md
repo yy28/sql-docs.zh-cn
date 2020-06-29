@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Fuzzy Lookup Transformation Editor
 ms.assetid: 451f4e7d-1c8e-4784-b540-df0806509bf1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3efdb863b0a067d3d52405c5caa5a78e85555c62
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: eb86e4a6382095bb8bb0edc744fe6d16650581fd
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966267"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425204"
 ---
 # <a name="fuzzy-lookup-transformation-editor-reference-table-tab"></a>模糊查找转换编辑器（“引用表”选项卡）
   使用 **“模糊查找转换编辑器”** 对话框的 **“引用表”** 选项卡可以指定用于查找的源表和索引。 引用数据源必须是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库中的表。  

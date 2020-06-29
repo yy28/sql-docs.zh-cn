@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Connection Manager Editor
 ms.assetid: de47ea98-135e-4730-900e-dac629848798
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ff01832b565b0cca2e1a2550606307552ee63a33
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: efcfde9920aa50e7df6a4b9de59aebf066092c57
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967087"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425544"
 ---
 # <a name="flat-file-connection-manager-editor-preview-page"></a>平面文件连接管理器编辑器（“预览”页）
   可以使用 **“平面文件连接管理器编辑器”** 对话框的 **“预览”** 节点，按表格格式查看源文件的内容。  

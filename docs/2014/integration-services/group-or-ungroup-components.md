@@ -12,14 +12,14 @@ helpviewer_keywords:
 - containers [Integration Services], grouping
 - grouping tasks
 ms.assetid: 34320838-c271-4f8c-90b3-1254690890bb
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0beeed1beea03f3acdb869fcd10cef163eaedb9d
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e2c613671b12991e4819937f8be61f26a25cdf12
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968352"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425104"
 ---
 # <a name="group-or-ungroup-components"></a>对组件分组或取消分组
   **设计器中的**“控制流” **、** “数据流” **和** “事件处理程序” [!INCLUDE[ssIS](../includes/ssis-md.md)] 选项卡支持可折叠的分组。 如果包包含许多组件，这些选项卡可能变得很拥挤，使您很难一次查看所有组件并找到要使用的项。 可折叠的分组功能可节省工作图面空间，从而简化大型包的处理。  

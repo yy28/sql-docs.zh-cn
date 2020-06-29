@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Message Queue Task Editor
 ms.assetid: 7028756d-1dcc-480c-bbcd-e9654f0772a0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b30a7863fe50843f4408931b2b766bcb520f3a2c
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 53a392a09e2120c08c43b1e373c942ff9c60e148
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84950987"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424584"
 ---
 # <a name="message-queue-task-editor-receive-page"></a>消息队列任务编辑器（“接收”页）
   可以使用“消息队列任务编辑器”对话框的“接收”页，配置消息队列任务以接收 [!INCLUDE[msCoName](../includes/msconame-md.md)] 消息队列 (MSMQ) 消息********。  
@@ -30,7 +30,7 @@ ms.locfileid: "84950987"
  指示在接收后是否从队列中删除消息。 默认情况下，此值设置为 `False`。  
   
  **ErrorIfMessageTimeOut**  
- 指示当消息超时时任务是否失败，并显示错误消息。 默认为 `False`。  
+ 指示当消息超时时任务是否失败，并显示错误消息。 默认值为 `False`。  
   
  **TimeoutAfter**  
  如果选择任务失败时显示错误消息，则请指定显示超时消息之前等待的秒数。  
@@ -38,7 +38,7 @@ ms.locfileid: "84950987"
  **MessageType**  
  选择消息类型。 此属性具有下表所列的选项。  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |**数据文件消息**|消息存储在文件中。 选择该值将显示动态选项 **DataFileMessage**。|  
 |**变量消息**|消息存储在变量中。 选择该值将显示动态选项 **VariableMessage**。|  
@@ -52,12 +52,12 @@ ms.locfileid: "84950987"
  键入要使用的文件的路径，或单击省略号按钮 (…) 后再定位到该文件。****  
   
  **Overwrite**  
- 指示在保存数据文件消息的内容时是否覆盖现有文件中的数据。 默认为 `False`。  
+ 指示在保存数据文件消息的内容时是否覆盖现有文件中的数据。 默认值为 `False`。  
   
- **筛选器**  
+ **Filter**  
  指定是否对消息应用筛选器。 此属性具有下表所列的选项。  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |**无筛选器**|该任务不筛选消息。 选择该值将显示动态选项 **IdentifierReadOnly**。|  
 |**来源包**|该消息仅接收来自指定包的消息。 选择该值将显示动态选项 **Identifier**。|  
@@ -75,10 +75,10 @@ ms.locfileid: "84950987"
  **相关主题：** [选择包](control-flow/select-a-package.md)  
   
 ### <a name="messagetype--variable-message"></a>MessageType = 变量消息  
- **筛选器**  
+ **Filter**  
  指定是否将筛选器应用到消息。 此属性具有下表所列的选项。  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |**无筛选器**|该任务不筛选消息。 选择该值将显示动态选项 **IdentifierReadOnly**。|  
 |**来源包**|该消息仅接收来自指定包的消息。 选择该值将显示动态选项 **Identifier**。|  
@@ -104,9 +104,9 @@ ms.locfileid: "84950987"
  **比较**  
  指定是否将筛选器应用到消息。 此属性具有下表所列的选项。  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
-|**无**|不对消息进行比较。|  
+|无|不对消息进行比较。|  
 |**完全匹配**|消息必须与 **CompareString** 选项中的字符串完全匹配。|  
 |**忽略大小写**|消息必须与 **CompareString** 选项中的字符串匹配，但在比较时不区分大小写。|  
 |**包含**|消息必须包含 **CompareString** 选项中的字符串。|  
@@ -118,9 +118,9 @@ ms.locfileid: "84950987"
  **比较**  
  指定是否将筛选器应用到消息。 此属性具有下表所列的选项。  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
-|**无**|不对消息进行比较。|  
+|无|不对消息进行比较。|  
 |**完全匹配**|消息必须与 **CompareString** 选项中的字符串完全匹配。|  
 |**忽略大小写**|消息必须与 **CompareString** 选项中的字符串匹配，但在比较时不区分大小写。|  
 |**包含**|消息必须包含 **CompareString** 选项中的字符串。|  

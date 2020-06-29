@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Import Package dialog box
 ms.assetid: 0e5fb127-c7ff-4dfa-b90e-d9bcf0ce763b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: da790644cbd29bc38a89899e02d50aac58228a0e
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2765eef14ac8c3e84684e95f67bcd7e837e5cdea
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965510"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424884"
 ---
 # <a name="import-package-dialog-box-ui-reference"></a>“导入包”对话框 UI 参考
   可以使用 **中的** “导入包” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]对话框，导入 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包以及设置或修改包的保护级别。  

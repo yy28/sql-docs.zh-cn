@@ -20,14 +20,14 @@ f1_keywords:
 helpviewer_keywords:
 - DTExecUI utility
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 59ce040242b87cfc955054e062a09fd579f77a14
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: eae2f119e2d1fb8c52c00fc7dbe96af1d593193d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964837"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423844"
 ---
 # <a name="execute-package-utility-dtexecui-ui-reference"></a>执行包实用工具 (DtExecUI) UI 参考
   使用 **“执行包实用工具”** 来运行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。 该实用工具运行存储在以下三个位置之一的包：[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库、[!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区和文件系统。 此用户界面 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] `dtexecui` 是使用**DTExec**命令提示工具运行包的替代方法，可通过在命令提示符下打开或在命令提示符下键入。  

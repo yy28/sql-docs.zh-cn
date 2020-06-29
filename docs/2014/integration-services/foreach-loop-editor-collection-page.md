@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.collection.f1
 ms.assetid: 95a19dde-61ca-4d9b-aa3d-131fa4264296
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 77604faa4cb32fc7babf273717422621b39648aa
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 36e2c705382d553c9833776badfacd32aed7f6d6
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966417"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425514"
 ---
 # <a name="foreach-loop-editor-collection-page"></a>Foreach 循环编辑器（“集合”页）
   可以使用“Foreach 循环编辑器”**** 对话框的“集合”**** 页，指定枚举器类型以及配置枚举器。  
@@ -27,7 +27,7 @@ ms.locfileid: "84966417"
  **枚举器**  
  从列表中选择枚举器类型。 此属性具有下表所列的选项。  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |**Foreach 文件枚举器**|枚举文件。 选择此值将显示 **“Foreach 文件枚举器”** 部分中的动态选项。|  
 |**Foreach Item 枚举器**|枚举项中的值。 选择此值将显示 **“Foreach Item 枚举器”** 部分中的动态选项。|  
@@ -167,7 +167,7 @@ ms.locfileid: "84966417"
  **DocumentSourceType**  
  选择 XML 文档的源类型。 此属性具有下表所列的选项。  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |**直接输入**|将源设置为 XML 文档。|  
 |**文件连接**|选择包含 XML 文档的文件。|  
@@ -187,17 +187,17 @@ ms.locfileid: "84966417"
  **EnumerationType**  
  从列表中选择枚举类型。 此属性具有下表所列的选项。  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |**导航器**|使用 XPathNavigator 进行枚举。|  
-|**节点**|枚举 XPath 运算返回的节点。|  
+|**Node**|枚举 XPath 运算返回的节点。|  
 |**NodeText**|枚举 XPath 运算返回的文本节点。|  
 |`ElementCollection`|枚举 XPath 运算返回的元素节点。|  
   
  **OuterXPathStringSourceType**  
  选择 XPath 字符串的源类型。 此属性具有下表所列的选项。  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |**直接输入**|将源设置为 XML 文档。|  
 |**文件连接**|选择包含 XML 文档的文件。|  
@@ -220,7 +220,7 @@ ms.locfileid: "84966417"
  **InnerXPathStringSourceType**  
  选择内部 XPath 字符串的源类型。 此属性具有下表所列的选项。  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |**直接输入**|将源设置为 XML 文档。|  
 |**文件连接**|选择包含 XML 文档的文件。|  

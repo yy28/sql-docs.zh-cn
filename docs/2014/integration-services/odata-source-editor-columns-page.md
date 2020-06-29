@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - Sql12.dts.designer.odatasource.columns.f1
 ms.assetid: d640e9e4-86c3-4cb7-a6c2-e82624303696
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 433158341f4b07eaa26c7588472e4e7e1c1f0e7b
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2c4556d4fdce435ff0ccb667cc1a39b6efea01e0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965087"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424434"
 ---
 # <a name="odata-source-editor-columns-page"></a>OData 源编辑器（“列”页）
   使用“OData 源编辑器”**** 对话框的“列”**** 页可选择要包含在输出中的外部（源）列并将它们映射到输出列。  

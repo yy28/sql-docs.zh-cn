@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Connection Manager Editor
 ms.assetid: 77296024-5c1a-4f6a-9665-0b50d45d744c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0f4387b3311c4b2157ba202890c2a190e83e7ad5
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 82181fad0220ad73804c23d7ebce2fbe6994d820
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967097"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425654"
 ---
 # <a name="flat-file-connection-manager-editor-general-page"></a>平面文件连接管理器编辑器（“常规”页）
   可以使用 **“平面文件连接管理器编辑器”** 对话框的 **“常规”** 页选择文件和数据格式。 使用平面文件连接可以将包连接到文本文件。  
@@ -50,7 +50,7 @@ ms.locfileid: "84967097"
  **格式**  
  指示文件是否使用带分隔符、固定宽度或右边未对齐的格式。  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |带分隔符|各列之间由在 **“列”** 页上指定的分隔符隔开。|  
 |固定宽度|列的宽度固定。|  
@@ -65,7 +65,7 @@ ms.locfileid: "84967097"
  **标题行分隔符**  
  从标题行的分隔符列表中选择，或输入分隔符文本。  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |**回车换行符**|标题行由回车符和换行符的组合分隔。|  
 |**回车**|标题行由回车符分隔。|  

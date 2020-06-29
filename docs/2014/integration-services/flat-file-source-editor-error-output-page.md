@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Source Editor
 ms.assetid: c50500e7-0c74-42a0-865f-301f03feffab
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c6df7faa3dbb88ba8df836b59c47cad6a391e0d8
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 38bc7adf218327c8718295a4300ff6a5c4b53f0c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966407"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425474"
 ---
 # <a name="flat-file-source-editor-error-output-page"></a>平面文件源编辑器（“错误输出”页）
   可以使用“平面文件源编辑器”对话框的“错误输出”页选择错误处理选项，以及设置错误输出列的属性。********  

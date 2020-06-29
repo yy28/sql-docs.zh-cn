@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Package Roles dialog box
 ms.assetid: 63f13416-c0aa-4480-a336-ef1e6e31a860
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 64cdb71f323a4ac9325da74503d8aebaa8dd4474
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 94bb72fd6cb9dca8dd76d3925f86ae64a819b7d7
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964847"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423794"
 ---
 # <a name="package-roles-dialog-box-ui-reference"></a>“包角色”对话框 UI 参考
   可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的“包角色”**** 对话框，指定具有包读取访问权限的数据库级角色以及具有包写入访问权限的数据库级角色。 数据库级角色仅适用于  msdb 数据库中存储的包[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ****。  

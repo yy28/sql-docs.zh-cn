@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB Destination Editor
 ms.assetid: ae2200c6-8ba0-49b7-b01a-53425b84d2ed
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b19c61cf736ad888cdcb2ecb1f36060eebf30812
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 21ec7d4d38996ecf4cb5522fcfdf29fb6e80db89
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964987"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424164"
 ---
 # <a name="ole-db-destination-editor-connection-manager-page"></a>OLE DB 目标编辑器（“连接管理器”页）
   使用 **“OLE DB 目标编辑器”** 对话框的 **“连接管理器”** 页可以为目标选择 OLE DB 连接。 使用此页还可以选择数据库中的表或视图。  
