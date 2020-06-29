@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - REPLICATE function
 ms.assetid: e7a37b93-6d1d-42d5-9a65-de1790abf6a5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: cfe793403fe480c5d3afe7833798e25c519c58cd
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 94869b1144631c76b242e61617fbe64c23e09904
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84969087"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428264"
 ---
 # <a name="replicate-ssis-expression"></a>REPLICATE（SSIS 表达式）
   返回多次复制后的字符表达式。 *times* 参数的计算结果必须为整数。  

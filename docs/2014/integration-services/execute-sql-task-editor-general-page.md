@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Execute SQL Task Editor
 ms.assetid: beb39086-28ce-46af-b6d8-f7b4fb8d9069
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 294836625075a70b8e101afef2bb9221a177ca47
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 32bec035646c976442eb66ff1270b961835b243b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966774"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429194"
 ---
 # <a name="execute-sql-task-editor-general-page"></a>执行 SQL 任务编辑器（“常规”页）
   可以使用 **“执行 SQL 任务编辑器”** 对话框的 **“常规”** 页，配置执行 SQL 任务以及提供任务运行的 SQL 语句。  
@@ -67,7 +67,7 @@ ms.locfileid: "84966774"
   
  此属性具有下表所列的选项。  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |**直接输入**|将源设置为某个 Transact-SQL 语句。 选择此值将显示动态选项 **SQLStatement**。|  
 |**文件连接**|选择包含 Transact-SQL 语句的文件。 设置此选项将显示动态选项 **FileConnection**。|  

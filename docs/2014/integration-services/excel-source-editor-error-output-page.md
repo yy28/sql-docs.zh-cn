@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Source Editor
 ms.assetid: 8d14019e-cb60-4bc1-b71e-7f2326de8317
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6f1f5983048c1301e210c2ac64e0a092898f31e0
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 74e252782a40039e4d5709fabc4ae6ecd7a37932
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966807"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429264"
 ---
 # <a name="excel-source-editor-error-output-page"></a>Excel 源编辑器（“错误输出”页）
   可以使用 **“Excel 源编辑器”** 对话框的 **“错误输出”** 页选择错误处理选项以及设置错误输出列的属性。  

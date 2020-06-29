@@ -11,14 +11,14 @@ f1_keywords:
 - sql12.dts.designer.executepackagetask.package.f1
 - sql12.dts.designer.executepackagetask.general.f1
 ms.assetid: c2c96b4f-eb10-4d8b-be34-88edfd0785fb
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b9e114802c6e69467ba9438ee4c525ef85e73024
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 337b261c8c6b51125510ae463a673c746d7d6604
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966827"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429284"
 ---
 # <a name="execute-package-task-editor"></a>执行包任务编辑器
   可以使用执行包任务编辑器来配置执行包任务。 执行包任务通过允许包将其他包作为工作流的组成部分运行来扩展 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的企业功能。  
@@ -68,7 +68,7 @@ ms.locfileid: "84966827"
  **位置**  
  选择子包的位置。 此属性具有下表所列的选项。  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |**SQL Server**|将位置设置为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]实例。|  
 |**文件系统**|将位置设置为文件系统。|  

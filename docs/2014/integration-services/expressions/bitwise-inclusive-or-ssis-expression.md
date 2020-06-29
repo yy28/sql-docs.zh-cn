@@ -10,14 +10,14 @@ helpviewer_keywords:
 - '| (bitwise inclusive OR)'
 - bitwise inclusive OR (|)
 ms.assetid: 4dce9eb2-3680-4adc-81a3-816ea52cef49
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a7424c52583ebe5f2a886eba19c33c0749cf9f88
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0f4256c4a619e24f12341616eca6c33542a23674
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967487"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429114"
 ---
 # <a name="-bitwise-inclusive-or-ssis-expression"></a>|（位或）（SSIS 表达式）
   对两个整数值执行“位或”运算。 它会将第一个操作数的每一位与第二个操作数中对应的每一位进行比较。 如果任一位为 1，则对应结果位设置为 1。 否则，相应的结果位设置为零 (0)。  

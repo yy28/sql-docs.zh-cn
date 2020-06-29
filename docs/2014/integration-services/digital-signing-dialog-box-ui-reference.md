@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Digital Signing dialog box
 ms.assetid: d6137275-65d3-4fc9-bf31-d61dcd1228d4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7f89d495aa8826250c04f3e0cfe5979d5f202ac8
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2a0eb1847082434edf5eae84e3fe788bf57814a8
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966987"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429524"
 ---
 # <a name="digital-signing-dialog-box-ui-reference"></a>“数字签名”对话框 UI 参考
   使用 **“数字签名”** 对话框可以使用数字签名对包进行签名或删除签名。 在 **中，** SSIS **菜单的** “数字签名” **选项中提供了** “数字签名” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]对话框。  

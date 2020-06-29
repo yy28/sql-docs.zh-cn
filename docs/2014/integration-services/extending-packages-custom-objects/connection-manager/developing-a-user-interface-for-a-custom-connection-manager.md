@@ -10,14 +10,14 @@ helpviewer_keywords:
 - custom connection managers [Integration Services], developing user interface
 - custom user interface [Integration Services], custom connection manager
 ms.assetid: 908bf2ac-fc84-4af8-a869-1cb43573d2df
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7ddcad6f0968dc8b9321257e0ea2a95d8c65cf2e
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2efbc60cae881eec2bebda7655a533a7334ccc19
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966492"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85427714"
 ---
 # <a name="developing-a-user-interface-for-a-custom-connection-manager"></a>为自定义连接管理器开发用户界面
   重写基类的属性和方法的实现以提供自定义功能后，您可能需要为连接管理器创建自定义用户界面。 如果未创建自定义用户界面，用户只能使用“属性”窗口配置连接管理器。  

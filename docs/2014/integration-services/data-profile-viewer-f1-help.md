@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Data Profile Viewer [Integration Services]
 - Data Profiling task [Integration Services], viewer
 ms.assetid: 3469c60a-8f4f-46ba-999a-cb9070197fea
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 88ad528bfe581639dfa7e5dde35a7b53278b44b7
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d541e0c6143c9652629f80d911bf42db26e9a4ef
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84951831"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429714"
 ---
 # <a name="data-profile-viewer-f1-help"></a>数据配置文件查看器 F1 帮助
   可以使用数据配置文件查看器查看数据事件探查任务的输出。  
@@ -105,7 +105,7 @@ ms.locfileid: "84951831"
  **最大值**  
  显示在进行事件探查的列中发现的最大值。  
   
- **平均值**  
+ **格林威治时间**  
  显示在进行事件探查的列中发现的值的平均值。  
   
  **标准偏差**  

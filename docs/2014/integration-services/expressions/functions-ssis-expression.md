@@ -13,14 +13,14 @@ helpviewer_keywords:
 - SQL Server Integration Services, functions
 - SSIS, functions
 ms.assetid: e9a41a31-94f4-46a4-b737-c707dd59ce48
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: cc920b51652ef8c917d3e0bb52bd5b86d686c8c4
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2023cccadefaf3274a7032fe188b7d887a23b3d0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966627"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428654"
 ---
 # <a name="functions-ssis-expression"></a>函数（SSIS 表达式）
   表达式语言包含一组用于表达式的函数。 表达式可以使用单个函数。但是，通常一个表达式可以通过运算符将多个函数组合起来，从而使用多个函数。  

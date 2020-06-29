@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Source Editor
 ms.assetid: 50024686-a18d-4824-b20e-c84123f89d0b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3534ab746fd11786d02651f795d854b1a1466333
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0713d8d3d0c1f56bf322684a924a286e8b81af55
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966857"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429354"
 ---
 # <a name="excel-source-editor-columns-page"></a>Excel 源编辑器（“列”页）
   可以使用“Excel 源编辑器”对话框的“列”页，将输出列映射到每个外部（源）列********。  

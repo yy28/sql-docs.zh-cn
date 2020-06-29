@@ -12,14 +12,14 @@ helpviewer_keywords:
 - date data types
 - date and time formats for fast parse
 ms.assetid: bed6e2c1-791a-4fa1-b29f-cbfdd1fa8d39
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9db752a0910abb1a671e50b3a7a34fd2fd9cff68
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a5f880de91cad3925e43a65e6282319dbb1e57ee
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967007"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429704"
 ---
 # <a name="date-and-time-formats"></a>日期和时间格式
   快速分析提供一组快速、简单的数据分析例程。 快速分析支持下列日期和时间数据类型格式。  

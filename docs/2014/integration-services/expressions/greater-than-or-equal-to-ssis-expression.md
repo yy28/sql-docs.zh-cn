@@ -10,14 +10,14 @@ helpviewer_keywords:
 - <= (less than or equal to operator)
 - greater than or equal to (>=)
 ms.assetid: 52ad504d-2f54-44de-b5e2-620577c0e289
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: cbf78e3ccc56268304440ebacb0b8dfd2bc953b3
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 02d29866e0bee42f37cefa96df6bacc848c0cb15
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967367"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428604"
 ---
 # <a name="gt-greater-than-or-equal-to-ssis-expression"></a>&gt;=（大于或等于）（SSIS 表达式）
   执行比较来确定第一个表达式是否大于或等于第二个表达式。 在执行比较前表达式计算器会自动转换多种数据类型。  
