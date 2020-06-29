@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Configure OLE DB Connection Manager dialog box
 ms.assetid: 66b60dda-1f1b-45d0-9818-8434ea1121eb
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 999ae60465bd459abb1d4a68c35520b33c6410fb
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 66bf68534b2e1659be7ef48c465dd31c40e20a7e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921516"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434716"
 ---
 # <a name="configure-ole-db-connection-manager"></a>配置 OLE DB 连接管理器
   可以使用 **“配置 OLE DB 连接管理器”** 对话框添加数据源连接，添加的连接可以是新连接，也可以是现有连接的副本。  

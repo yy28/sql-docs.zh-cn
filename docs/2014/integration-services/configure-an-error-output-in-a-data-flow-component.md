@@ -11,14 +11,14 @@ helpviewer_keywords:
 - components [Integration Services], data flow
 - error outputs [Integration Services]
 ms.assetid: 53d7eeea-927d-4b45-8ea9-084e65ad5390
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: dc318c3278f7f86aa4946380daffa0652882c0fb
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6f5db0ec29fb6900dbe74ea021f31d0afc5551d7
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921878"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434884"
 ---
 # <a name="configure-an-error-output-in-a-data-flow-component"></a>在数据流组件中配置错误输出
   很多数据流组件支持错误输出，根据组件的不同， [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器提供几种不同的错误输出配置方法。 除了配置错误输出外，您还可以配置错误输出的列。 其中包括配置由该组件添加的 **ErrorCode** 和 **ErrorColumn** 列。  
@@ -64,7 +64,7 @@ ms.locfileid: "84921878"
   
 6.  为每列设置 **“截断”** 选项。  
   
-7.  单击“确定”。  
+7.  单击" **确定**"。  
   
 8.  若要保存已更新的包，请在 **“文件”** 菜单中单击 **“保存选定项”**。  
   

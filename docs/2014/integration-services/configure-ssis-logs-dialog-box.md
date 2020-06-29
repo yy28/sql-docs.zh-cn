@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Configure SSIS Logs dialog box
 ms.assetid: 4b980275-cd9a-4943-8c36-727d51f9a484
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6fab2f2e8fad2cd77e5bc27a78e66940fc40544b
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0de63b2c4d438faa0dea8b8fdefa5f50d071c7e4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921605"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434804"
 ---
 # <a name="configure-ssis-logs-dialog-box"></a>“配置 SSIS 日志”对话框
   使用 **“配置 SSIS 日志”** 对话框可以定义包的日志记录选项。  
@@ -92,10 +92,10 @@ ms.locfileid: "84921605"
  **高级**  
  选中或清除要记录的事件，以及选中或清除要为每个事件记录的信息。 单击 **“基本”** 可以隐藏除事件列表之外的所有日志记录详细信息。 日志记录可以包含以下信息：  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |**Computer**|发生所记录事件的计算机的名称。|  
-|**操作员**|启动包的人员的用户名。|  
+|**运算符**|启动包的人员的用户名。|  
 |**SourceName**|发生所记录事件的包、容器或任务的名称。|  
 |**源**|发生所记录事件的包、容器或任务的全局唯一标识符 (GUID)。|  
 |**ExecutionID**|包执行实例的全局唯一标识符。|  
