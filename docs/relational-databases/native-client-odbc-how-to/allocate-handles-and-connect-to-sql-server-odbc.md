@@ -15,15 +15,15 @@ ms.assetid: 6172cd52-9c9a-467d-992f-def07f3f3bb1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5d26af711c07c4ea296d5351d0fcb0d1f9710706
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9adc8ed5547691f693a88a5d468581022afd363e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294457"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783347"
 ---
 # <a name="allocate-handles-and-connect-to-sql-server-odbc"></a>分配句柄并连接到 SQL Server (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
     
 ### <a name="to-allocate-handles-and-connect-to-sql-server"></a>分配句柄并连接到 SQL Server  
@@ -42,11 +42,11 @@ ms.locfileid: "81294457"
   
 7.  也可以调用[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)来设置连接选项，或调用[SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)来获取连接选项。  
   
-8.  调用 SQLConnect，以使用现有数据源连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+8.  调用 SQLConnect，以使用现有数据源连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
      或  
   
-     调用[SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md)以使用连接字符串连接[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+     调用[SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md)以使用连接字符串连接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
      最小的完整 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接字符串采用以下两种格式之一：  
   
@@ -59,13 +59,13 @@ ms.locfileid: "81294457"
   
      \- 或 -  
   
-     多次调用[SQLBrowseConnect](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md)以生成连接字符串并连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+     多次调用[SQLBrowseConnect](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md)以生成连接字符串并连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
-9. 也可以调用[SQLGetInfo](../../relational-databases/native-client-odbc-api/sqlgetinfo.md)来获取[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据源的驱动程序属性和行为。  
+9. 也可以调用[SQLGetInfo](../../relational-databases/native-client-odbc-api/sqlgetinfo.md)来获取数据源的驱动程序属性和行为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 10. 分配并使用语句。  
   
-11. 调用 SQLDisconnect 断开连接[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，并使连接句柄可用于新连接。  
+11. 调用 SQLDisconnect 断开连接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，并使连接句柄可用于新连接。  
   
 12. 使用 SQL_HANDLE_DBC 的**HandleType**调用[SQLFreeHandle](../../relational-databases/native-client-odbc-api/sqlfreehandle.md) ，以释放连接句柄。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "81294457"
 >  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，则应通过[Win32 加密 API](https://go.microsoft.com/fwlink/?LinkId=64532)对其进行加密。  
   
 ## <a name="example"></a>示例  
- 此示例演示如何调用**SQLDriverConnect**以连接到实例， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]而无需使用现有的 ODBC 数据源。 通过将不完整的连接字符串传递给**SQLDriverConnect**，它会使 ODBC 驱动程序提示用户输入缺少的信息。  
+ 此示例演示如何调用**SQLDriverConnect**以连接到实例， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 而无需使用现有的 ODBC 数据源。 通过将不完整的连接字符串传递给**SQLDriverConnect**，它会使 ODBC 驱动程序提示用户输入缺少的信息。  
   
 ```  
 #define MAXBUFLEN   255  

@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 30f97f00-03d8-443a-9de9-9ec420b7699b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0a64db42ba04e864752559bb2d2b895625f2c9f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3698431316b86a40e70e144bfac23d81678db45c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68122625"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783087"
 ---
 # <a name="sysfn_my_permissions-transact-sql"></a>sys.fn_my_permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   返回有效授予主体对安全对象的权限的列表。 [HAS_PERMS_BY_NAME](../../t-sql/functions/has-perms-by-name-transact-sql.md)相关的函数。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "68122625"
 fn_my_permissions ( securable , 'securable_class' )  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *安全*  
  安全对象的名称。 如果安全对象为服务器或数据库，则该值应设置为 NULL。 securable 是 sysname 类型的标量表达式******。 *安全*对象的名称可以是多部分名称。  
   
@@ -51,7 +51,7 @@ fn_my_permissions ( securable , 'securable_class' )
 ## <a name="columns-returned"></a>返回的列  
  下表列出了**fn_my_permissions**返回的列。 返回的每一行说明了当前安全上下文拥有的对安全对象的一种权限。 如果查询失败，则返回 NULL。  
   
-|列名称|类型|说明|  
+|列名称|类型|描述|  
 |-----------------|----------|-----------------|  
 |entity_name|**sysname**|对其有效授予所列权限的安全对象的名称。|  
 |subentity_name|**sysname**|如果安全对象具有列，则为列名；否则为 NULL。|  
@@ -131,7 +131,7 @@ GO
 ```  
   
 ### <a name="f-listing-effective-permissions-on-an-xml-schema-collection"></a>F. 列出对 XML 架构集合的有效权限  
- 下面的示例返回调用方对`ProductDescriptionSchemaCollection` [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]数据库中名为的 XML 架构集合的有效权限的列表。  
+ 下面的示例返回调用方对数据库中名为的 XML 架构集合的有效权限的列表 `ProductDescriptionSchemaCollection` [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 。  
   
 ```  
 USE AdventureWorks2012;  

@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: c316f48f3e590fcba419e125f8e327b25ee1ede6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 257592ce6bd3c8080a6f4244a7528e79259e5cfa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933825"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783786"
 ---
 # <a name="sp_dropremotelogin-transact-sql"></a>sp_dropremotelogin (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   删除映射到本地登录名的远程登录名，该登录名用于针对运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本地服务器执行远程存储过程。  
   
@@ -43,7 +43,7 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
      [ , [ @remotename = ] 'remote_name' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @remoteserver = ] 'remoteserver'`远程服务器的名称，该远程服务器映射到要删除的远程登录名。 *remoteserver*的值为**sysname**，无默认值。 *remoteserver*必须已存在。  
   
 `[ @loginame = ] 'login'`与远程服务器相关联的本地服务器上的可选登录名。 login 的数据类型为 sysname，默认值为 NULL******。 如果指定，则必须已经存在*登录名*。  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: e8f67bdf-b489-49a9-9d0f-2069c1750467
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cb52e949b706f7e1af51f1c067d38ce23bb777f2
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 6b3aeded0476c809bd1bcdfbfdacb4eac3381751
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84881506"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775411"
 ---
 # <a name="xquery-extension-functions---sqlcolumn"></a>XQuery 扩展函数 - sql:column()
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   如主题在[Xml 内部绑定关系数据](../t-sql/xml/binding-relational-data-inside-xml-data.md)中所述，当使用[Xml 数据类型方法](../t-sql/xml/xml-data-type-methods.md)在 XQuery 内公开关系值时，可以使用**sql： column （（）** 函数。  
   

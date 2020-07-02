@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 6feb051d-77ae-4c93-818a-849fe518d1d4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7f4f6820aeeca8b600631810ed35933d2519b495
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea779dfb66d9fce2053fcee0b6fd3eedbc26a4ef
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68046328"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784852"
 ---
 # <a name="sysfn_cdc_map_time_to_lsn-transact-sql"></a>sys.fn_cdc_map_time_to_lsn (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   返回指定时间[lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)系统表的**start_lsn**列中的日志序列号（LSN）值。 您可以使用此函数将日期时间范围系统地映射到变更数据捕获枚举函数 cdc 所需的基于 LSN 的范围，该范围是[fn_cdc_get_all_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)和[cdc](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md) fn_cdc_get_net_changes_<capture_instance>返回该范围内的数据更改。  
   
@@ -48,7 +48,7 @@ sys.fn_cdc_map_time_to_lsn ( '<relational_operator>', tracking_time )
 }  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  **"**<relational_operator>**"** {小于 | 最大小于 | 最大大于 | 最小大于 | 小于等于  
  用于标识**cdc. lsn_time_mapping**表中的不同 LSN 值，并在与*tracking_time*值进行比较时，使用满足关系的关联**tran_end_time**来识别。  
   
@@ -75,13 +75,13 @@ sys.fn_cdc_map_time_to_lsn ( '<relational_operator>', tracking_time )
   
  `SELECT * FROM cdc.fn_cdc_get_net_changes_HR_Department(@begin_lsn, @end_lsn, 'all` `');`  
   
- 关系运算符 '`smallest greater than`' 用于将更改限制为在前一天的午夜后发生的更改。 如果具有不同 LSN 值的多个条目共享标识为[cdc. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)表中的下限的**tran_end_time**值，则该函数将返回最小的 lsn，以确保包含所有条目。 对于上限，关系运算符 "`largest less than or equal to`" 用于确保该范围包含当天的所有条目，其中包括除午夜之外的所有条目作为**tran_end_time**值。 如果具有不同 LSN 值的多个条目共享标识为上限的**tran_end_time**值，则该函数将返回最大的 lsn，以确保包含所有条目。  
+ 关系运算符 '`smallest greater than`' 用于将更改限制为在前一天的午夜后发生的更改。 如果具有不同 LSN 值的多个条目共享标识为[cdc. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)表中的下限的**tran_end_time**值，则该函数将返回最小的 lsn，以确保包含所有条目。 对于上限，关系运算符 " `largest less than or equal to` " 用于确保该范围包含当天的所有条目，其中包括除午夜之外的所有条目作为**tran_end_time**值。 如果具有不同 LSN 值的多个条目共享标识为上限的**tran_end_time**值，则该函数将返回最大的 lsn，以确保包含所有条目。  
   
 ## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  
   
 ## <a name="examples"></a>示例  
- 下面的示例使用`sys.fn_cdc_map_time_lsn`函数来确定[cdc. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)表中是否存在一个大于或等于午夜的**tran_end_time**值。 例如，可以用此查询来确定捕获进程是否已处理完截至前一天午夜提交的更改，以便接下来可以提取当天的更改数据。  
+ 下面的示例使用 `sys.fn_cdc_map_time_lsn` 函数来确定[cdc. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)表中是否存在一个大于或等于午夜的**tran_end_time**值。 例如，可以用此查询来确定捕获进程是否已处理完截至前一天午夜提交的更改，以便接下来可以提取当天的更改数据。  
   
 ```  
 DECLARE @extraction_time datetime, @lsn binary(10);  

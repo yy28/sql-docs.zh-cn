@@ -18,15 +18,15 @@ ms.assetid: cb4c1d37-667d-4bcd-b13c-eb638bcc9b69
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 388b51c79681589d3caec2ee3ea03b1ece6ff459
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e95fa5bb0948661faf9f8575557a39b90528879c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73782344"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783383"
 ---
 # <a name="bcp_writefmt"></a>bcp_writefmt
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   创建一个格式化文件，它包含对当前大容量复制数据文件的格式的说明。  
   
@@ -39,7 +39,7 @@ RETCODE bcp_writefmt (
         LPCTSTR szFormatFile);  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *hdbc*  
  是启用大容量复制的 ODBC 连接句柄。  
   
@@ -57,7 +57,7 @@ RETCODE bcp_writefmt (
  若要加载已保存的格式化文件，请使用[bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md)。  
   
 > [!NOTE]  
->  仅在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本7.0 和更高版本分发的**bcp**实用工具版本中支持**bcp_writefmt**生成的格式化文件。  
+>  仅在版本7.0 和更高版本分发的**bcp**实用工具版本中支持**bcp_writefmt**生成的格式化文件 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="example"></a>示例  
   

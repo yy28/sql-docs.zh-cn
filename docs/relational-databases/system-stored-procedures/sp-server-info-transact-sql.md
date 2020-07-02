@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a83d216b0830b035da72ad579a2448a12f41adba
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a711624214b262560766f49e8294b36291ad9d91
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82810304"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783729"
 ---
 # <a name="sp_server_info-transact-sql"></a>sp_server_info (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、数据库网关或基础数据源的属性名称和匹配值的列表。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "82810304"
 sp_server_info [[@attribute_id = ] 'attribute_id']  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @attribute_id = ] 'attribute_id'`属性的整数 ID。 *attribute_id*的值为**int**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -62,11 +62,11 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**10**|OWNER_TERM|owner|  
 |**11**|TABLE_TERM|表|  
 |**12**|MAX_OWNER_NAME_LENGTH|128|  
-|**9**|TABLE_LENGTH<br /><br /> 指定表名的最大字符数。|128|  
+|**13**|TABLE_LENGTH<br /><br /> 指定表名的最大字符数。|128|  
 |**14**|MAX_QUAL_LENGTH<br /><br /> 指定表限定符（由三部分组成的表名的第一部分）名称的最大长度。|128|  
 |**15**|COLUMN_LENGTH<br /><br /> 指定列名的最大字符数。|128|  
-|**超过**|IDENTIFIER_CASE<br /><br /> 在数据库（系统目录中对象的事例）中指定用户定义的名称（表名、列名、存储过程名）。|SENSITIVE|  
-|**11x17**|TX_ISOLATION<br /><br /> 指定服务器所采用的初始事务隔离级别，此级别与 SQL-92 中定义的隔离级别相对应。|2|  
+|**16**|IDENTIFIER_CASE<br /><br /> 在数据库（系统目录中对象的事例）中指定用户定义的名称（表名、列名、存储过程名）。|SENSITIVE|  
+|**17**|TX_ISOLATION<br /><br /> 指定服务器所采用的初始事务隔离级别，此级别与 SQL-92 中定义的隔离级别相对应。|2|  
 |**18**|COLLATION_SEQ<br /><br /> 指定该服务器的字符集排序。|charset=iso_1 sort_order=dictionary_iso charset_num=1 sort_order_num=51|  
 |**19**|SAVEPOINT_SUPPORT<br /><br /> 指定基础 DBMS 是否支持命名保存点。|是|  
 |**0.2**|MULTI_RESULT_SETS<br /><br /> 指定基础数据库或网关本身是否支持多个结果集（通过网关可以将多个语句与返回给客户端的多个结果集一起发送）。|是|  

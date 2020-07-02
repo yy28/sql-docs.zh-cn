@@ -11,15 +11,15 @@ ms.assetid: b82ecf4c-f151-4a99-8717-a73ee5ec994f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ba9829fc2273959f2292d8a3e9ed8e3975c0a525
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7d58e2658f4dde3cbbe083c73b203b1a3f803a13
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81281737"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783252"
 ---
 # <a name="send-and-receive-data-incrementally-with-filestream-odbc"></a>通过 FILESTREAM 以增量方式发送和接收数据 (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   此示例显示如何通过 FILESTREAM 功能使用 SQLPutData 和 SQLGetData 以增量方式发送和接收数据。  
   
@@ -28,11 +28,11 @@ ms.locfileid: "81281737"
 ## <a name="example"></a>示例  
  编译和运行此示例前，先启用 FILESTREAM 支持（[启用和配置 FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)）。  
   
- 第一个（ [!INCLUDE[tsql](../../includes/tsql-md.md)]）代码列表创建此示例使用的数据库。 您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例必须具有写访问权限才能运行此脚本（例如，采用本地系统帐户登录）。  
+ 第一个（ [!INCLUDE[tsql](../../includes/tsql-md.md)] ）代码列表创建此示例使用的数据库。 您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例必须具有写访问权限才能运行此脚本（例如，采用本地系统帐户登录）。  
   
  第二个代码列表是 C++ 代码。 您必须指定一个服务器；在 C++ 代码列表中，将“MyServer”更改为一个有效的服务器名称。 请确保 INCLUDE 环境变量包含包含 sqlncli.msi 的目录。 使用 odbc32.lib、user32.lib、/D "_UNICODE"、/D "UNICODE"、odbc32.lib 和 /EHsc 编译 C++ 代码列表。  
   
- 第三个[!INCLUDE[tsql](../../includes/tsql-md.md)]（）代码列表删除此示例使用的数据库。  
+ 第三个（ [!INCLUDE[tsql](../../includes/tsql-md.md)] ）代码列表删除此示例使用的数据库。  
   
 ```sql
 USE master  

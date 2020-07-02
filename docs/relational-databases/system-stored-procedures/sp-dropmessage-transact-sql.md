@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fa242b7adf46269402b28d459eace429fd247bc1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0c12c9fd481b8fdef50f9a2e0339b276598cd69a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830003"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783804"
 ---
 # <a name="sp_dropmessage-transact-sql"></a>sp_dropmessage (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   从 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例中删除指定的用户定义的错误消息。 可以使用**sys.databases**目录视图查看用户定义的消息。  
   
@@ -39,7 +39,7 @@ sp_dropmessage [ @msgnum = ] message_number
     [ , [ @lang = ] 'language' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @msgnum = ] message_number`要删除的消息号。 *message_number*必须是消息编号大于50000的用户定义消息。 *message_number*的值为**int**，默认值为 NULL。  
   
 `[ @lang = ] 'language'`要删除的消息的语言。 如果指定**all** ，则删除*message_number*的所有语言版本。 *language*的值为**sysname**，默认值为 NULL。  

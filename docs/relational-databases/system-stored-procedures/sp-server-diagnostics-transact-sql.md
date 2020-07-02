@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 044b5e79ba558dd5bb38331d9b2a07410a3a50de
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: 6524de89a96f64d2eed6a9f01b38b492ffb0fc04
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84294000"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783741"
 ---
 # <a name="sp_server_diagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 捕获有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的诊断数据和运行状况信息，以检测潜在故障。 该过程以重复模式运行，并定期发送结果。 可通过常规连接或 DAC 连接调用该过程。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "84294000"
 sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @repeat_interval = ] 'repeat_interval_in_seconds'`指示存储过程将重复运行以发送运行状况信息的时间间隔。  
   
  *repeat_interval_in_seconds*的值为**int** ，默认值为0。 有效参数值为 0，或等于或大于 5 的任意值。 存储过程至少要运行 5 秒钟才能返回完整数据。 存储过程以重复模式运行的最短时间为 5 秒。  
@@ -79,7 +79,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 -   **\<name of the availability group>**：收集指定可用性组的数据（如果 component_type = "Always On： AvailabilityGroup"）。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
 从故障角度而言，系统、资源和 query_processing 组件可用于故障检测，而 io_subsystem 和事件组件只能用于诊断用途。  
   
 下表将组件映射到其关联的运行状态。  

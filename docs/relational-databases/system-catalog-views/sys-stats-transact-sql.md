@@ -20,15 +20,15 @@ ms.assetid: 42605c80-126f-460a-befb-a0b7482fae6a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8c6d5a67293cd03bc7d20150bbff177b0391113c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: eb1d43e7cfd9892b7146ecbe551ecb7b42625981
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833934"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783936"
 ---
 # <a name="sysstats-transact-sql"></a>sys.stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的数据库中的表、索引和索引视图对应的每个统计信息对象都包含一行。 每个索引都具有相同名称和 ID （**index_id**stats_id）的相应统计信息行  =  **stats_id**，但并非每个统计信息行都有相应的索引。  
   
@@ -36,8 +36,8 @@ ms.locfileid: "82833934"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|这些统计信息所属对象的 ID。|  
-|**name**|**sysname**|统计信息的名称。 在对象中是唯一的。|  
+|object_id|**int**|这些统计信息所属对象的 ID。|  
+|name|**sysname**|统计信息的名称。 在对象中是唯一的。|  
 |**stats_id**|**int**|统计信息 ID。 在对象中是唯一的。<br /><br />如果统计信息对应于索引，则*stats_id*值与[sys.databases](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)目录视图中的*index_id*值相同。|  
 |**auto_created**|**bit**|指示统计信息是否由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自动创建。<br /><br /> 0 = 统计信息不是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自动创建。<br /><br /> 1 = 统计信息由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自动创建。|  
 |**user_created**|**bit**|指示统计信息是否由用户创建。<br /><br /> 0 = 统计信息不是用户创建的。<br /><br /> 1 = 统计信息是用户创建的。|  

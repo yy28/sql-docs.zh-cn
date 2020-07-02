@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f133a094-0009-4771-b93b-e86a5c01e40b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 709472c434d2ddb80d33832e7c466abdb5a7d0fc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 487ae30ae57ac2111d23c26fd85a4ab049301b3d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828891"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775752"
 ---
 # <a name="sp_helpmergefilter-transact-sql"></a>sp_helpmergefilter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   返回有关合并筛选器的信息。 此存储过程在发布服务器的任何数据库中执行。  
   
@@ -38,7 +38,7 @@ sp_helpmergefilter [ @publication= ] 'publication'
     [ , [ @filtername= ] 'filtername']  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publication = ] 'publication'`发布的名称。 *发布*为**sysname**，无默认值。  
   
 `[ @article = ] 'article'`项目的名称。 *项目*的默认值为**sysname**，默认值为 **%** ，它返回所有项目的名称。  

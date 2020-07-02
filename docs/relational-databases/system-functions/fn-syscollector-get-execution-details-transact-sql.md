@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d59ddf0c-72c0-4c57-bc83-aef260e4e105
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b2ed385026d2bd47912a1a95d237b2adedafa26d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 44180a30c69a8da47cfad77c07f86ee6b9b8bfaa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68042819"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775186"
 ---
 # <a name="fn_syscollector_get_execution_details-transact-sql"></a>fn_syscollector_get_execution_details (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   返回与给定包的 package_execution_id 相匹配的 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 日志 (sysssislog) 部分。 由包或其任务和容器在运行时生成的每个日志记录项在表中各占一行。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "68042819"
 fn_syscollector_get_execution_details ( log_id )  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *log_id*  
  执行日志的本地唯一标识符。 *log_id*是**int**。  
   
@@ -46,7 +46,7 @@ fn_syscollector_get_execution_details ( log_id )
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|ID|**int**|日志记录项的唯一标识符。|  
+|id|**int**|日志记录项的唯一标识符。|  
 |event|**sysname**|生成日志记录项的事件的名称。|  
 |computer|**nvarchar**|生成日志记录条目时运行包的计算机。|  
 |运算符后的表达式|**nvarchar**|运行生成日志记录项的包的人员或代理的用户名。|  
@@ -57,7 +57,7 @@ fn_syscollector_get_execution_details ( log_id )
 |endtime|**datetime**|包完成的时间。|  
 |datacode|**int**|用于标识与日志项关联的事件的整数值。 “0”指示事件未提供标识符。|  
 |databytes|**图像**|用于标识返回值的字节数组。|  
-|消息|**nvarchar**|事件以及与事件关联的信息的说明。|  
+|message|**nvarchar**|事件以及与事件关联的信息的说明。|  
   
 ## <a name="permissions"></a>权限  
  需要**dc_operator**的 SELECT 权限。  

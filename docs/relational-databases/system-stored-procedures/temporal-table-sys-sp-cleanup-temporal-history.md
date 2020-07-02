@@ -9,16 +9,16 @@ ms.assetid: 6eff30b4-b261-4f1f-b93c-1f69d754298d
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 668948af95fd33c57414b50aa888e185b3e4d089
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a9cd5efaf70a915b6a31dced0f79498a01dd7ef5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82807311"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783602"
 ---
 # <a name="syssp_cleanup_temporal_history-transact-sql"></a>sys. sp_cleanup_temporal_history （Transact-sql）
 
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -30,7 +30,7 @@ ms.locfileid: "82807311"
 sp_cleanup_temporal_history [@schema_name = ] schema_name, [@table_name = ] table_name [, [@row_count=] @row_count_var [OUTPUT]]
 ```
 
-## <a name="arguments"></a>参数
+## <a name="arguments"></a>自变量
 
 *\@table_name*
 

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: d599c791-200d-46f8-b758-97e761a1a5c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b5d39e560b3137daf711ea49794fe6a2a0499743
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 1a0b9cf43331e45d4aa1253fe5ad4b90d0bbea92
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529714"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775467"
 ---
 # <a name="xquery-and-static-typing"></a>XQuery 与静态类型化
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的 XQuery 是一种静态类型化的语言。 即，在查询编译期间，如果特定函数或运算符不接受表达式返回的值的类型或基数，则会出现类型错误。 此外，静态类型检查还可以检测类型化的 XML 文档的路径表达式是否已正确类型化。 XQuery 编译器首先应用添加隐式运算（例如原子化）的规范化阶段，然后执行静态类型推导和静态类型检查。  
   

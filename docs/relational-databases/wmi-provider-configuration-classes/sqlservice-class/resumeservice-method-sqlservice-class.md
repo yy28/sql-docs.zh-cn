@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0b0a5f08-b95e-4626-bf81-309da7a0aacd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 40c0822bc8b881153909f77ec50b0c9de9883dec
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 36ee271b89f707b18ff5a438a8d868048efca864
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660937"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784737"
 ---
 # <a name="resumeservice-method-sqlservice-class"></a>ResumeService 方法（SqlService 类）
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   尝试将服务置于已恢复状态。  
   
 ## <a name="syntax"></a>语法  

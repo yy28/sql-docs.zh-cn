@@ -30,15 +30,15 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 58155c9ec390259410538e9716dad87146acda2a
-ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
+ms.openlocfilehash: 15274c3b46ac7b0dfb3e9f43fad0dd1174f5fbbf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84215721"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775762"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>使用 sql:relationship 指定关系 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   可以对 XML 文档中的元素建立相关性。 元素可以按层次结构方式嵌套，并且可以在元素之间指定 ID、IDREF 或 IDREFS 关系。  
   
  例如，在 XSD 架构中， **\<Customer>** 元素包含 **\<Order>** 子元素。 将架构映射到 AdventureWorks 数据库后， **\<Customer>** 元素映射到 Customer 表， **\<Order>** 元素映射到 SalesOrderHeader 表。 由于是由客户下订单，因此，基础表 Sales.Customer 和 Sales.SalesOrderHeader 是相关的。 Sales.SalesOrderHeader 表中的 CustomerID 是外键，它引用 Sales.Customer 表中的 CustomerID 主键。 可以通过使用**sql： relationship**批注在映射架构元素之间建立这些关系。  
@@ -53,7 +53,7 @@ ms.locfileid: "84215721"
   
  为了提供表名和必需的联接信息，以下属性在**sql： relationship**批注上指定。 这些属性仅对于 **\<sql:relationship>** 元素有效：  
   
- **名称**  
+ **Name**  
  指定关系的唯一名称。  
   
  **父级**  

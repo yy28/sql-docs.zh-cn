@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 594f1dd0-3c27-41b3-b809-9ce6714c5a97
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bd1d131fadf2fb594b9ad2799791313d0136f39b
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: dc2a85c48e404fa717b001482bbe5fc8f8356e99
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689770"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775495"
 ---
 # <a name="numeric-values-functions---ceiling"></a>数值函数 - ceiling 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   返回不带小数部分并且不小于其参数值的最小数字。 如果参数是一个空序列，则返回空序列。  
   
@@ -35,11 +35,11 @@ ms.locfileid: "83689770"
 fn:ceiling ( $arg as numeric?) as numeric?  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *$arg*  
  将应用该函数的数字。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  如果 *$arg*的类型为三个数值基类型之一 **： xs： float**、 **xs： double**或**xs： decimal**，则返回类型与 *$arg*类型相同。  
   
  如果 *$arg*的类型是派生自其中一个数值类型的类型，则返回类型为基本数值类型。  
@@ -76,9 +76,9 @@ WHERE ProductModelID=7
   
 -   **说明**是一个**xml**类型列。 因此， [query （）方法（XML 数据类型）](../t-sql/xml/query-method-xml-data-type.md)用于指定 XQuery。 XQuery 语句指定为该查询方法的参数。  
   
--   **对于 .。。返回**为循环构造。 在查询中， **for**循环标识 \< 位置> 元素的列表。 对于每个工作中心位置， **for**循环中的**return**语句描述要生成的 XML：  
+-   **对于 .。。返回**为循环构造。 在查询中， **for**循环标识 \<Location> 元素列表。 对于每个工作中心位置， **for**循环中的**return**语句描述要生成的 XML：  
   
-    -   \<具有 LocationID 和 LaborHrs 属性的位置> 元素。 大括号 ({ }) 中对应的表达式从文档中检索所需的值。  
+    -   \<Location>具有 LocationID 和 LaborHrs 特性的元素。 大括号 ({ }) 中对应的表达式从文档中检索所需的值。  
   
     -   {$ i/@LotSize } 表达式从文档中检索 LotSize 属性（如果存在）。  
   

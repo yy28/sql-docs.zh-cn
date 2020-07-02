@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 7ed8df86-9fd2-4e09-96bc-5381fec85f65
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3405621d604e6450756520f6d93b66a51d4d66c8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f5cd7b04ebf16ce11791bf1d7caeb0d1012c5d9e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67941986"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783044"
 ---
 # <a name="object-hierarchy-syntax-transact-sql"></a>对象层次结构语法 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Sp_OAGetProperty 和 sp_OASetProperty 的*propertyname*参数和 sp_OAMethod 的*方法名称*参数支持对象层次结构语法，该语法与类似[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]。 当使用该特殊语法时，这些参数具有以下通用格式。  
+  Sp_OAGetProperty 和 sp_OASetProperty 的*propertyname*参数和 sp_OAMethod 的*方法名称*参数支持对象层次结构语法，该语法与类似 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 。 当使用该特殊语法时，这些参数具有以下通用格式。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,7 +33,7 @@ ms.locfileid: "67941986"
 'TraversedObject.PropertyOrMethod'  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *TraversedObject*  
  是层次结构中的一个 OLE 对象，该对象位于存储过程中指定的*objecttoken*下。 使用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 语法指定一系列集合、对象属性和返回对象的方法。 该系列中的每个对象说明符必须用句号 (.) 分隔。  
   

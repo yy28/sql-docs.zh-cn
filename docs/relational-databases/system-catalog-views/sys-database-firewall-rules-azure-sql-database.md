@@ -19,26 +19,26 @@ ms.assetid: 2e821593-3b9f-43d6-a99b-1ceffe177faf
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 61402b762b7a6b4d944214d59e187e1457e93f93
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d14ae77b15121b1344d3881f8966d6a707f71fa6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70155768"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784991"
 ---
 # <a name="sysdatabase_firewall_rules-azure-sql-database"></a>sys.database_firewall_rules (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-  返回与[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]关联的数据库级防火墙设置的相关信息。 在使用包含的数据库用户时，数据库级防火墙设置特别有用。 有关详细信息，请参阅 [包含的数据库用户 - 使你的数据库可移植](../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
+  返回与关联的数据库级防火墙设置的相关信息 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。 在使用包含的数据库用户时，数据库级防火墙设置特别有用。 有关详细信息，请参阅 [包含的数据库用户 - 使你的数据库可移植](../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
   
  `sys.database_firewall_rules` 视图包含以下各列：  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|ID|**INTEGER**|数据库级防火墙设置的标识符。|  
+|id|**整数**|数据库级防火墙设置的标识符。|  
 |name|**NVARCHAR （128）**|您选择用来描述和区分数据库级防火墙设置的名称。|  
 |start_ip_address|**VARCHAR （45）**|数据库级防火墙设置范围内的最低 IP 地址。 等于或大于此值的 IP 地址可能尝试连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 实例。 可能的最低 IP 地址为 `0.0.0.0`。|  
-|end_ip_address|**VARCHAR （45）**|防火墙设置范围内的最高 IP 地址。 等于或小于此值的 IP 地址可能尝试连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 实例。 可能的最高 IP 地址为 `255.255.255.255`。<br /><br /> 注意：如果此字段和**start_ip_address**字段都等于`0.0.0.0`，则允许 Azure 连接尝试。|  
+|end_ip_address|**VARCHAR （45）**|防火墙设置范围内的最高 IP 地址。 等于或小于此值的 IP 地址可能尝试连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 实例。 可能的最高 IP 地址为 `255.255.255.255`。<br /><br /> 注意：如果此字段和**start_ip_address**字段都等于，则允许 Azure 连接尝试 `0.0.0.0` 。|  
 |create_date|**型**|创建数据库级防火墙设置时的 UTC 日期和时间。|  
 |modify_date|**型**|上次修改数据库级防火墙设置时的 UTC 日期和时间。|  
   

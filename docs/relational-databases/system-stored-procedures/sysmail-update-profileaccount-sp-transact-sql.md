@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 92ca7488-29db-414e-8e36-08b0a8f542bb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 246081eb5c362cb76a4c037693ee6c40b999fcdd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 24c6674c35bdbe626cc703e84e773d33d3b7f47a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68037335"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783659"
 ---
 # <a name="sysmail_update_profileaccount_sp-transact-sql"></a>sysmail_update_profileaccount_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   更新数据库邮件配置文件中帐户的序列号。  
   
@@ -41,7 +41,7 @@ sysmail_update_profileaccount_sp  { [ @profile_id = ] profile_id
     [ @sequence_number = ] sequence_number  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @profile_id = ] profile_id`要更新的配置文件的配置文件 ID。 *profile_id*的值为**int**，默认值为 NULL。 必须指定*profile_id*或*profile_name* 。  
   
 `[ @profile_name = ] 'profile_name'`要更新的配置文件的配置文件名称。 *profile_name*的默认值为**sysname**，默认值为 NULL。 必须指定*profile_id*或*profile_name* 。  
@@ -71,7 +71,7 @@ sysmail_update_profileaccount_sp  { [ @profile_id = ] profile_id
  此过程的执行权限默认授予**sysadmin**固定服务器角色的成员。  
   
 ## <a name="examples"></a>示例  
- 下面的示例在**msdb**数据库的配置文件`AdventureWorks Administrator`中`Admin-BackupServer`更改帐户的序列号。 执行此代码后，该帐户的序列号为 `3`，指示前两个帐户失败后将尝试使用此帐户。  
+ 下面的示例在 `Admin-BackupServer` msdb 数据库的配置文件中更改帐户的序列号 `AdventureWorks Administrator` 。 **msdb** 执行此代码后，该帐户的序列号为 `3`，指示前两个帐户失败后将尝试使用此帐户。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_profileaccount_sp  

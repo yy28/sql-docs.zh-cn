@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9e1cb96e-5889-4f97-88cd-f60cf313ce68
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 27fb3a99167dce450a3d4f50e9d19036db8d896f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ff7b235f27b11749673019de222d555d57f364c1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830061"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783823"
 ---
 # <a name="sp_dropmergepublication-transact-sql"></a>sp_dropmergepublication (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   删除合并发布及其关联的快照代理。 删除合并发布之前必须删除全部的订阅。 发布中的项目将自动删除。 此存储过程在发布服务器上对发布数据库执行。  
   
@@ -39,7 +39,7 @@ sp_dropmergepublication [ @publication= ] 'publication'
     [ , [ @ignore_merge_metadata = ] ignore_merge_metadata ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publication = ] 'publication'`要删除的发布的名称。 *发布*为**sysname**，无默认值。 如果为**all**，则删除所有现有合并发布以及与它们关联的快照代理作业。 如果为*发布*指定了一个特定值，则只会删除该发布及其关联的快照代理作业。  
   
 `[ @ignore_distributor = ] ignore_distributor`用于在不清除分发服务器上清理任务的情况下删除发布。 *ignore_distributor*为**bit**，默认值为**0**。 重新安装分发服务器时也将使用此参数。  
@@ -56,7 +56,7 @@ sp_dropmergepublication [ @publication= ] 'publication'
   
  **sp_dropmergepublication**以递归方式删除与发布关联的所有项目，然后删除该发布本身。 如果发布包含一个或更多对它的订阅，则不能删除。 有关如何删除订阅的信息，请参阅[删除推送订阅](../../relational-databases/replication/delete-a-push-subscription.md)和[删除请求订阅](../../relational-databases/replication/delete-a-pull-subscription.md)。  
   
- 执行删除发布的**sp_dropmergepublication**不会删除发布数据库中的已发布对象，也不会删除订阅数据库中的相应对象。 \<如有必要，请使用 DROP object> 手动删除这些对象。  
+ 执行删除发布的**sp_dropmergepublication**不会删除发布数据库中的已发布对象，也不会删除订阅数据库中的相应对象。 \<object>如有必要，请使用 DROP 手动删除这些对象。  
   
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_dropmergepublication](../../relational-databases/replication/codesnippet/tsql/sp-dropmergepublication-_1.sql)]  

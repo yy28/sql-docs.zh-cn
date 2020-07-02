@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ba2fdccc-5ed4-40ef-a479-79497b4d61aa
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3dd772a1519ea856cac0302d31be9eb7d0f9d782
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: df0cbdda40b8e473ce81bf95b7c38e1cd2ec75c0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81283088"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783682"
 ---
 # <a name="sysmail_update_account_sp-transact-sql"></a>sysmail_update_account_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   更改现有数据库邮件帐户中的信息。  
  
@@ -51,7 +51,7 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
     [ @enable_ssl = ] enable_ssl   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @account_id = ] account_id`要更新的帐户 ID。 *account_id*的值为**int**，默认值为 NULL。 至少必须指定*account_id*或*account_name*中的一个。 如果两个都指定，则过程将更改帐户的名称。  
   
 `[ @account_name = ] 'account_name'`要更新的帐户的名称。 *account_name*的默认值为**sysname**，默认值为 NULL。 至少必须指定*account_id*或*account_name*中的一个。 如果两个都指定，则过程将更改帐户的名称。  
@@ -64,7 +64,7 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
   
 `[ @description = ] 'description'`帐户的新说明。 *description*的值为**nvarchar （256）**，默认值为 NULL。  
   
-`[ @mailserver_name = ] 'server_name'`要用于此帐户的 SMTP 邮件服务器的新名称。 运行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的计算机必须能够将*SERVER_NAME*解析为 IP 地址。 *server_name* **sysname**，无默认值。  
+`[ @mailserver_name = ] 'server_name'`要用于此帐户的 SMTP 邮件服务器的新名称。 运行的计算机 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必须能够将*server_name*解析为 IP 地址。 *server_name* **sysname**，无默认值。  
   
 `[ @mailserver_type = ] 'server_type'`邮件服务器的新类型。 *server_type* **sysname**，无默认值。 仅支持 **"SMTP"** 值。  
   
@@ -76,7 +76,7 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
   
 `[ @password = ] 'password'`用于登录到邮件服务器的新密码。 *password*的值为**sysname**，无默认值。  
   
-`[ @use_default_credentials = ] use_default_credentials`指定是否使用[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]服务的凭据将邮件发送到 SMTP 服务器。 **use_default_credentials**是 bit，无默认值。 当此参数为 1 时，数据库邮件使用[!INCLUDE[ssDE](../../includes/ssde-md.md)]的凭据。 当此参数为0时，数据库邮件使用** \@用户名**和** \@密码**在 SMTP 服务器上进行身份验证。 如果** \@用户名**和** \@密码**为空，则将使用匿名身份验证。 在指定此参数之前，请洽询您的 SMTP 管理员  
+`[ @use_default_credentials = ] use_default_credentials`指定是否使用服务的凭据将邮件发送到 SMTP 服务器 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 。 **use_default_credentials**是 bit，无默认值。 当此参数为 1 时，数据库邮件使用[!INCLUDE[ssDE](../../includes/ssde-md.md)]的凭据。 当此参数为0时，数据库邮件使用** \@ 用户名**和** \@ 密码**在 SMTP 服务器上进行身份验证。 如果** \@ 用户名**和** \@ 密码**为空，则将使用匿名身份验证。 在指定此参数之前，请洽询您的 SMTP 管理员  
   
 `[ @enable_ssl = ] enable_ssl`指定数据库邮件是否使用传输层安全性（TLS）（以前称为安全套接字层（SSL））对通信进行加密。 如果 SMTP 服务器需要 TLS，请使用此选项。 **enable_ssl**是 bit，无默认值。  
   
@@ -94,7 +94,7 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
 ## <a name="examples"></a>示例  
   
 ### <a name="a-changing-the-information-for-an-account"></a>A. 更改帐户的信息  
- 下面的示例在**msdb**数据库`AdventureWorks Administrator`中更新帐户。 此帐户的信息被设置为提供的值。  
+ 下面的示例在 `AdventureWorks Administrator` **msdb**数据库中更新帐户。 此帐户的信息被设置为提供的值。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_account_sp  

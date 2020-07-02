@@ -11,15 +11,15 @@ ms.assetid: 621b6d13-10f1-47d0-b63c-7adb6ab904e0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7ebd3d8439b70930039ec6fee37c7195dbb23ca0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3d7ea543843d22433072867a30df814a6bd095f5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81281749"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783238"
 ---
 # <a name="support-for-large-udts"></a>支持大型 UDT
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   此示例解决方案包含两个项目。 其中一个项目基于 C# 源代码创建一个程序集 (DLL)。 该程序集包含 CLR 类型。 数据库中将添加一个表。 该表中的一个列将属于该程序集中定义的一个类型。默认情况下，此示例将使用 master 数据库。 第二个项目是一个本机 C 应用程序，用来读取表中的数据。  
   
@@ -30,7 +30,7 @@ ms.locfileid: "81281749"
 ## <a name="example"></a>示例  
  第一个代码列表是 C# 源代码。 将其粘贴到名为 LargeStringUDT.cs 的文件并将它编译为 DLL。 将 LargeStringUDT.dll 复制到 C 驱动器的根目录中。  
   
- 第二个[!INCLUDE[tsql](../../includes/tsql-md.md)]（）代码列表在 master 数据库中创建程序集。  
+ 第二个（ [!INCLUDE[tsql](../../includes/tsql-md.md)] ）代码列表在 master 数据库中创建程序集。  
   
  使用 odbc32.lib 和 user32.lib 编译第二个 (C++) 代码列表。 请确保 INCLUDE 环境变量包含包含 sqlncli.msi 的目录。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "81281749"
   
  此示例连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 若要连接到命名实例，请更改 ODBC 数据源的定义以使用以下格式指定实例：server\namedinstance。 默认情况下，[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 将安装在命名实例中。  
   
- 第四个[!INCLUDE[tsql](../../includes/tsql-md.md)]（）代码列表从 master 数据库中删除程序集。  
+ 第四个（ [!INCLUDE[tsql](../../includes/tsql-md.md)] ）代码列表从 master 数据库中删除程序集。  
   
 ```  
 // LargeStringUDT.cs  

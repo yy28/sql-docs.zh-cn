@@ -16,20 +16,20 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7392ec41759116b350047302cfe770da006e6c66
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2da024366da5789631aee147ab25d89a5103b40e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388730"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785047"
 ---
 # <a name="executing-an-updategram-by-using-ado-sqlxml-40"></a>使用 ADO 执行 Updategram (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   该 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 应用程序使用 ADO 建立与 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的连接，然后执行 updategram。 updategram 更新特定雇员的姓氏。 本示例使用 AdventureWorks 示例数据库。  
   
  在此示例应用程序中：  
   
--   **Conn**对象（**adodb.recordset）。连接**）与在特定服务器计算机上运行的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例建立连接。  
+-   **Conn**对象（**adodb.recordset）。连接**）与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在特定服务器计算机上运行的实例建立连接。  
   
 -   **Cmd**对象（**adodb.recordset**）在已建立的连接上执行。  
   

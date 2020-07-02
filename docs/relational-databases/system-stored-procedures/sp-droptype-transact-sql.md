@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e78464ac-2370-4c4e-9cc0-06aebc07cec5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8bc4462e05c97975d643f6900574f39000bc4eca
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f6417edeacfd9462e5619e2844d4a162976d038b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827799"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783759"
 ---
 # <a name="sp_droptype-transact-sql"></a>sp_droptype (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   从**systypes**中删除别名数据类型。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "82827799"
 sp_droptype [ @typename = ] 'type'  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @typename = ] 'type'`您所拥有的别名数据类型的名称。 *类型*为**sysname**，无默认值。  
   
 ## <a name="return-code-type"></a>返回代码类型  

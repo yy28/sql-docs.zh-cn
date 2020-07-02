@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9fe96e9a-4758-4e4a-baee-3e1217c4426c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: dd9644253302c6a577c6cc3923bb3a9e3a0d8c0e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1f488c50518f0a1dd06d72532f1e9edad865e26a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68037378"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783666"
 ---
 # <a name="sysmail_update_principalprofile_sp-transact-sql"></a>sysmail_update_principalprofile_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   更新主体和配置文件之间的关联的信息。  
   
@@ -40,7 +40,7 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
     [ @is_default = ] 'is_default'  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @principal_id = ] principal_id`要更改的关联的**msdb**数据库中数据库用户或角色的 ID。 *principal_id*的值为**int**，默认值为 NULL。 必须指定*principal_id*或*principal_name* 。  
   
 `[ @principal_name = ] 'principal_name'`要更新的关联的**msdb**数据库中数据库用户或角色的名称。 *principal_name*的默认值为**sysname**，默认值为 NULL。 可以指定*principal_id*或*principal_name* 。  
@@ -62,7 +62,7 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
   
  如果关联的主体名称是**公共**的或关联的主体 id 为**0**，则此存储过程将更改公共配置文件。 只能有一个默认的公共配置文件。  
   
- 当** \@is_default**为 "**1**" 并且主体与多个配置文件关联时，指定的配置文件将成为主体的默认配置文件。 以前的默认配置文件仍与主体数据库关联，但不再是默认配置文件。  
+ 当** \@ is_default**为 "**1**" 并且主体与多个配置文件关联时，指定的配置文件将成为主体的默认配置文件。 以前的默认配置文件仍与主体数据库关联，但不再是默认配置文件。  
   
  存储过程**sysmail_update_principalprofile_sp**在**msdb**数据库中，由**dbo**架构拥有。 如果当前数据库不是**msdb**，则必须使用由三部分组成的名称来执行该过程。  
   
@@ -72,7 +72,7 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
 ## <a name="examples"></a>示例  
  **A. 将一个配置文件设置为数据库的默认公共配置文件**  
   
- 下面的示例将配置文件`General Use Profile`设置为**msdb**数据库中的用户的默认公共配置文件。  
+ 下面的示例将配置文件设置 `General Use Profile` 为**msdb**数据库中的用户的默认公共配置文件。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_principalprofile_sp  
@@ -83,7 +83,7 @@ EXECUTE msdb.dbo.sysmail_update_principalprofile_sp
   
  **B. 将一个配置文件设置为用户的默认专用配置文件**  
   
- 下面的示例将配置文件`AdventureWorks Administrator`设置为`ApplicationUser` **msdb**数据库中主体的默认配置文件。 该配置文件必须已与主体关联。 以前的默认配置文件仍与主体数据库关联，但不再是默认配置文件。  
+ 下面的示例将配置文件设置 `AdventureWorks Administrator` 为 `ApplicationUser` **msdb**数据库中主体的默认配置文件。 该配置文件必须已与主体关联。 以前的默认配置文件仍与主体数据库关联，但不再是默认配置文件。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_principalprofile_sp  

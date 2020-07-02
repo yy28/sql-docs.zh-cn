@@ -19,22 +19,22 @@ helpviewer_keywords:
 ms.assetid: 3383c607-0bbc-456a-ab37-7230f4cbf0e9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4c9ec7c14bf192891e547c68ca85b5b055eb6815
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6a071df606e3d7f7f6721e698b42e7c411906169
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823486"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784998"
 ---
 # <a name="sysdatabase_filestream_options-transact-sql"></a>sys.database_filestream_options (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   显示已启用的针对 FileTable 中的 FILESTREAM 数据的非事务性访问级别的相关信息。 为 SQL Server 实例中的每个数据库包含一行。  
   
  有关 FileTable 的详细信息，请参阅 [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)。  
   
   
-|列|类型|说明|  
+|列|类型|描述|  
 |------------|----------|-----------------|  
 |**database_id**|**int**|数据库的 ID。 此值在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中是唯一的。|  
 |**directory_name**|**nvarchar(255)**|所有 FileTable 命名空间的数据库级别目录。|  

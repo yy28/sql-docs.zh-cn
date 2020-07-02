@@ -17,15 +17,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fd641fe3d3843fe853a16db4833d40bdcbec4e1a
-ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
+ms.openlocfilehash: 43cf00aef7e1ce571f41c08d4d9033aee7bd43a5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84305936"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775264"
 ---
 # <a name="bulk-load-security-considerations-sqlxml-40"></a>大容量加载安全性注意事项 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   下面是使用 XML 大容量加载的安全准则：  
   
 -   当指定大容量加载操作作为事务执行时，可以使用**TempFilePath**属性指定用于创建临时文件的文件夹。  

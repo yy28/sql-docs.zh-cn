@@ -18,15 +18,15 @@ ms.assetid: 322e3170-93f8-468a-a123-104ce7bd7fad
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 19e8a8508a6be17b07b6db06c09fb46329c7fb06
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 99267f10764a7ab00bb0f6c0f29ddae2c7d6c087
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827360"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783621"
 ---
 # <a name="sp_xtp_flush_temporal_history-transact-sql"></a>sp_xtp_flush_temporal_history （Transact-sql）
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
   调用数据刷新任务，将所有提交的行从内存中的临时表移到基于磁盘的历史记录表。  
 
@@ -40,7 +40,7 @@ sys.sp_xtp_flush_temporal_history @schema_name, @object_name
   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *\@schema_name*  
  当前表或临时表的架构名称  
   

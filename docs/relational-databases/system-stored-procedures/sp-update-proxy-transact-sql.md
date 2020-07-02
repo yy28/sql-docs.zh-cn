@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 864fd0e6-9d61-4f07-92ef-145318d2f881
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ec6c40abd080c86722565762fab3b4f9d30bd0c0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 66ca1f35a5920f6f6d26bea0663e51d305fc1c3b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72305314"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775152"
 ---
 # <a name="sp_update_proxy-transact-sql"></a>sp_update_proxy (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   更改现有代理的属性。  
   
@@ -46,7 +46,7 @@ sp_update_proxy
     [ @description = ] 'description'  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @proxy_id = ] id`要更改的代理的代理标识号。 *Proxy_id*的值为**int**，默认值为 NULL。  
   
 `[ @proxy_name = ] 'proxy_name'`要更改的代理的名称。 *Proxy_name*的值为**sysname**，默认值为 NULL。  
@@ -65,9 +65,9 @@ sp_update_proxy
  **0** （成功）或**1** （失败）  
   
 ## <a name="remarks"></a>备注  
- 必须指定** \@proxy_name**或** \@proxy_id** 。 如果同时指定这两个参数，这两个参数必须引用相同的代理，否则存储过程会失败。  
+ 必须指定** \@ proxy_name**或** \@ proxy_id** 。 如果同时指定这两个参数，这两个参数必须引用相同的代理，否则存储过程会失败。  
   
- 必须指定** \@credential_name**或** \@credential_id**才能更改代理的凭据。 如果两个参数均被指定，则它们必须引用相同的凭据，否则存储过程将失败。  
+ 必须指定** \@ credential_name**或** \@ credential_id**才能更改代理的凭据。 如果两个参数均被指定，则它们必须引用相同的凭据，否则存储过程将失败。  
   
  此过程将更改代理，但不更改对代理的访问权限。 若要更改对代理的访问权限，请使用**sp_grant_login_to_proxy**和**sp_revoke_login_from_proxy**。  
   

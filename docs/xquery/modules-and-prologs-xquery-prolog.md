@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 03924684-c5fd-44dc-8d73-c6ab90f5e069
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d3c1d73fca8bdc91205110d89cceb3a694725c18
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: ece175be7fa0791bf1355ed6020121999d62660b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84881663"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775487"
 ---
 # <a name="modules-and-prologs---xquery-prolog"></a>模块和 Prolog - XQuery Prolog
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
   XQuery 查询由一个 prolog 和一个主体组成。 XQuery prolog 是一系列声明和定义，它们共同创建所需的查询处理环境。 在 SQL Server 中，XQuery prolog 可以包含命名空间声明。 XQuery 主体由指定预期查询结果的一些表达式组成。  
   

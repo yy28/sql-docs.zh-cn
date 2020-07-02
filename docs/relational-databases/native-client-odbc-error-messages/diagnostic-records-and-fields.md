@@ -20,15 +20,15 @@ helpviewer_keywords:
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b9cfea2db0ad0a5eadeede6df3f76ea3979243d0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f0f2ac10fe68f5e51f72d12f3b5514ef293afda0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81291793"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775963"
 ---
 # <a name="diagnostic-records-and-fields"></a>诊断记录和字段
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   诊断记录与 ODBC 环境、连接、语句或描述符句柄关联。 当任何 ODBC 函数产生的返回代码不是 SQL_SUCCESS 或 SQL_INVALID_HANDLE 时，该函数调用的句柄就有相关联的诊断记录，其中包含信息性或错误性消息。 这些记录会一直保留，直到要通过该句柄调用其他函数，那时，记录就会被丢弃。 与一个句柄任一次调用相关联的诊断记录数目不受限制。  
   
@@ -42,11 +42,11 @@ ms.locfileid: "81291793"
   
  ODBC 3。*x*比 ODBC 2 支持更多的诊断信息。*x*。 此信息存储在使用**SQLGetDiagField**检索的诊断记录的其他字段中。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序具有特定于驱动程序的诊断字段，可以通过**SQLGetDiagField**进行检索。 这些特定于驱动程序的字段的标签在 sqlncli.h 中定义。 使用这些标签可以检索与每条诊断记录关联的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 状态、严重级别、服务器名称、过程名称和行号。 此外，sqlncli.msi 包含驱动程序用于标识 Transact-sql 语句的代码定义（如果应用程序调用*DiagIdentifier*设置为 SQL_DIAG_DYNAMIC_FUNCTION_CODE 的**SQLGetDiagField** ）。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驱动程序具有特定于驱动程序的诊断字段，可以通过**SQLGetDiagField**进行检索。 这些特定于驱动程序的字段的标签在 sqlncli.h 中定义。 使用这些标签可以检索与每条诊断记录关联的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 状态、严重级别、服务器名称、过程名称和行号。 此外，sqlncli.msi 包含驱动程序用于标识 Transact-sql 语句的代码定义（如果应用程序调用*DiagIdentifier*设置为 SQL_DIAG_DYNAMIC_FUNCTION_CODE 的**SQLGetDiagField** ）。  
   
  ODBC 驱动程序管理器使用它从底层驱动程序缓存的错误信息来处理**SQLGetDiagField** 。 在成功连接之前，ODBC 驱动程序管理器不会缓存特定于驱动程序的诊断字段。 如果在成功完成连接之前调用以获取特定于驱动程序的诊断字段， **SQLGetDiagField**将返回 SQL_ERROR。 如果 ODBC 连接函数返回 SQL_SUCCESS_WITH_INFO，则该连接函数特定于驱动程序的诊断字段尚不可用。 只有在连接函数之后执行了另一个 ODBC 函数调用之后，才能开始为特定于驱动程序的诊断字段调用**SQLGetDiagField** 。  
   
- 使用 SQLGetDiagRec 返回的信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，可以有效地使用 NATIVE Client ODBC 驱动程序报告的大多数错误**SQLGetDiagRec**进行诊断。 不过，在有些情况下，特定于驱动程序的诊断字段返回的信息对于诊断错误非常重要。 当使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序为应用程序编写 ODBC 错误处理程序时，最好也使用**SQLGetDiagField**来检索至少 SQL_DIAG_SS_MSGSTATE 和 SQL_DIAG_SS_SEVERITY 特定于驱动程序的字段。 如果特定错误可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代码的多个位置引发，SQL_DIAG_SS_MSGSTATE 会为 Microsoft 支持工程师专门指示错误的引发位置，有时，这有助于诊断问题。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用**SQLGetDiagRec**返回的信息，可以有效地使用 Native Client ODBC 驱动程序报告的大多数错误进行诊断。 不过，在有些情况下，特定于驱动程序的诊断字段返回的信息对于诊断错误非常重要。 当使用 Native Client ODBC 驱动程序为应用程序编写 ODBC 错误处理程序时 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，最好也使用**SQLGetDiagField**来检索至少 SQL_DIAG_SS_MSGSTATE 和 SQL_DIAG_SS_SEVERITY 特定于驱动程序的字段。 如果特定错误可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代码的多个位置引发，SQL_DIAG_SS_MSGSTATE 会为 Microsoft 支持工程师专门指示错误的引发位置，有时，这有助于诊断问题。  
   
 ## <a name="see-also"></a>另请参阅  
  [处理错误和消息](../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  

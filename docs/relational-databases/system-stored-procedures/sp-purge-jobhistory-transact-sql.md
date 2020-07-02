@@ -18,15 +18,15 @@ ms.assetid: 237f9bad-636d-4262-9bfb-66c034a43e88
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 64832f713153e6eaed126e30a2a0fd56c38a4bc6
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 47952d7c246a0de94d4515774e89a185c0460f2a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820362"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783017"
 ---
 # <a name="sp_purge_jobhistory-transact-sql"></a>sp_purge_jobhistory (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   删除作业的历史记录。  
   
@@ -42,7 +42,7 @@ sp_purge_jobhistory
    [ , [ @oldest_date = ] oldest_date ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @job_name = ] 'job_name'`要删除其历史记录的作业的名称。 *job_name*的默认值为**sysname**，默认值为 NULL。 必须指定*job_id*或*job_name* ，但不能同时指定两者。  
   
 > [!NOTE]  

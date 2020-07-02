@@ -19,15 +19,15 @@ ms.assetid: 00b44baf-fcf0-4095-aabe-49fa87e77316
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 47f622c287eb0e32e1c5db2d33b64af2de3e379b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 87b905aa178aec6aa10d4d7585384183bdb5d6c9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833130"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783007"
 ---
 # <a name="sp_refresh_parameter_encryption-transact-sql"></a>sp_refresh_parameter_encryption （Transact-sql）
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
 为当前数据库中指定的非绑定到架构的存储过程、用户定义函数、视图、DML 触发器、数据库级 DDL 触发器或服务器级 DDL 触发器的参数更新 Always Encrypted 元数据。 
 
@@ -44,7 +44,7 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 { DATABASE_DDL_TRIGGER | SERVER_DDL_TRIGGER }
 ```
 
-## <a name="arguments"></a>参数
+## <a name="arguments"></a>自变量
 
 `[ @name = ] 'module_name'`存储过程、用户定义函数、视图、DML 触发器、数据库级 DDL 触发器或服务器级 DDL 触发器的名称。 *module_name*不能是公共语言运行时（CLR）存储过程或 CLR 函数。 *module_name*不能是绑定到架构的。 *module_name*为 `nvarchar` ，无默认值。 *module_name*可以是由多个部分组成的标识符，但只能引用当前数据库中的对象。
 

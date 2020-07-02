@@ -17,19 +17,19 @@ ms.assetid: 0c6663a4-5a25-44aa-8fe4-e35af9bf4a83
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 49ad51f271e80017420db978f9cac2d867712d8c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 07f3ecf2ad42824e8b9098e4ad4567b7cb8be7c6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302859"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774380"
 ---
 # <a name="cursor-transaction-isolation-level"></a>游标事务隔离级别
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   游标的完整锁定行为基于由客户端设置的并发属性和事务隔离级别之间的交互。 ODBC 客户端使用[SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) SQL_ATTR_TXN_ISOLATION 或 SQL_COPT_SS_TXN_ISOLATION 属性设置事务隔离级别。 通过将并发和事务隔离级别选项的锁定行为进行组合，可以确定特定游标环境的锁定行为。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序支持以下游标事务隔离级别：  
+ Native Client ODBC 驱动程序支持以下游标事务隔离级别 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ：  
   
 -   已提交读 (SQL_TXN_READ_COMMITTED)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "81302859"
   
 -   快照 (SQL_TXN_SS_SNAPSHOT)  
   
- 请注意，ODBC API 指定了其他事务隔离级别，但不支持这些级别[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]或[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序。  
+ 请注意，ODBC API 指定了其他事务隔离级别，但不支持这些级别 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序。  
   
 ## <a name="see-also"></a>另请参阅  
  [游标属性](../../../relational-databases/native-client-odbc-cursors/properties/cursor-properties.md)  

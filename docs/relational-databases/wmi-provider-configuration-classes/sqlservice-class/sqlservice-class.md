@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: ecac7a16-c638-4703-ab08-753b63295f3a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 772a7640f93fa11d6596511bc72ec9d1d5e2e1c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4ea415866676f0eb4f04984ee0ee427d68854ea2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660891"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784701"
 ---
 # <a name="sqlservice-class"></a>SqlService 类
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  [SqlService 类](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md)表示[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]服务的实例。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+  [SqlService 类](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md)表示服务的实例 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
- [SqlService 类](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md)用于以编程方式管理[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]服务。 通过[SqlService 类](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md)对象，您可以执行以下任务：  
+ [SqlService 类](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md)用于以编程方式管理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务。 通过[SqlService 类](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md)对象，您可以执行以下任务：  
   
 -   连接到服务。  
   

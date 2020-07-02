@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 7551f345-5510-4684-ab53-f9057249d13a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 483fc481e78c1a879f2858addf6925e987066010
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 3ef0707d0e2f2770a241ad22be567fed16ad9e3b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807968"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783025"
 ---
 # <a name="sp_dropsubscription-transact-sql"></a>sp_dropsubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   删除对发布服务器上的特殊项目、发布或订阅集的订阅。 此存储过程在发布服务器上对发布数据库执行。  
   
@@ -42,7 +42,7 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
     [ , [ @reserved= ] 'reserved' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publication = ] 'publication'`关联发布的名称。 *发布*为**sysname**，默认值为 NULL。 如果为**all**，则取消对指定订阅服务器的所有发布的所有订阅。 *发布*是必需的参数。  
   
 `[ @article = ] 'article'`项目的名称。 *项目*的值为**sysname**，默认值为 NULL。 如果为**all**，则删除针对每个指定发布和订阅服务器的所有项目的订阅。 对于允许立即更新的发布，请使用**all** 。  
@@ -60,7 +60,7 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  **sp_dropsubscription**用于快照复制和事务复制。  
   
  如果删除即时同步发布中的一个项目上的订阅，则不能再对其进行重新添加，除非是删除发布中所有项目上的订阅并同时对它们进行重新添加。  

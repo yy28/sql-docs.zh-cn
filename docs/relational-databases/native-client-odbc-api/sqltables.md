@@ -14,15 +14,15 @@ ms.assetid: 77b6c15c-9cf7-4019-b3f0-3d27d23ef656
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3f3fa2b053c41facba7d608b2352772abd3ff103
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bf32a7f0bc0bcdbe5dc1d45a34f71d7c13fdc7d3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81291735"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783467"
 ---
 # <a name="sqltables"></a>SQLTables
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   可以对静态服务器游标执行 SQLTables。 尝试对可更新的（动态或键集）游标执行 SQLTables 时，将返回 SQL_SUCCESS_WITH_INFO，指示游标类型已更改。  
   
@@ -30,7 +30,7 @@ ms.locfileid: "81291735"
   
  若要报告可用的目录、架构和表类型，SQLTables 使用空字符串（长度为零字节的指针）。 空字符串不是默认值（NULL 指针）。  
   
- Native Client ODBC 驱动程序通过接受由两部分组成的*CatalogName*参数的名称来支持链接服务器上表的报告信息： *Linked_Server_Name。 Catalog_Name。* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驱动程序通过接受由两部分组成的*CatalogName*参数的名称来支持链接服务器上表的报告信息： *Linked_Server_Name。 Catalog_Name*。  
   
  SQLTables 返回其名称与*TableName*匹配并且由当前用户拥有的所有表的相关信息。  
   

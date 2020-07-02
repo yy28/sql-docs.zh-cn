@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 6e2e5063-c1cf-4b5a-b642-234921e3f4f7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8241e15643eb4aa25912451ddfed94699954797f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 52d3c9676adbd95d219221270090dbcedc798bfb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388607"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775419"
 ---
 # <a name="xquery-extension-functions---sqlvariable"></a>XQuery 扩展函数 - sql:variable()
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   显示在 XQuery 表达式中包含 SQL 关系值的变量。  
   
@@ -55,7 +55,7 @@ sql:variable("variableName") as xdt:anyAtomicType?
   
 -   [!INCLUDE[tsql](../includes/tsql-md.md)] 变量中的值 (`DiscountPrice`)。 `sql:variable()` 方法用于将此值绑定到 XML。  
   
--   Xml 类型列`ProductModelName`中的值**xml** （），以使查询更加有趣。  
+-   `ProductModelName` **Xml**类型列中的值（），以使查询更加有趣。  
   
  以下是查询语句：  
   

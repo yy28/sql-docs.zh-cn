@@ -14,15 +14,15 @@ ms.assetid: 31176be8-d40e-4f93-8d44-a46e804a3e2d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 43f9c78ac618b21097d412b6676abf84b95e9667
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: 5cb799b3f6f9094db2406b4e2f0299bb6dbecfd9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967553"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783269"
 ---
 # <a name="running-stored-procedures---call-stored-procedures"></a>运行存储过程 - 调用存储过程
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驱动程序支持将存储过程作为远程存储过程执行。 通过将存储过程作为远程存储过程执行，可使驱动程序和服务器能够优化存储过程的执行性能。  
   

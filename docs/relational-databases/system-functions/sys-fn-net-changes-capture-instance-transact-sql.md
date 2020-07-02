@@ -1,5 +1,5 @@
 ---
-title: sys. fn_net_changes_&lt;capture_instance&gt; （transact-sql） |Microsoft Docs
+title: sys. fn_net_changes_ &lt; capture_instance &gt; （transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 342fa030-9fd9-4b74-ae4d-49f6038a5073
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 556518a5fc2950ff69e6a872df5387b4c8367c6b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: add3f81793b2dc21c08ca601bb1c48cc7d4588be
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68122572"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783077"
 ---
-# <a name="sysfn_net_changes_ltcapture_instancegt-transact-sql"></a>sys. fn_net_changes_&lt;capture_instance&gt; （transact-sql）
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sysfn_net_changes_ltcapture_instancegt-transact-sql"></a>sys. fn_net_changes_ &lt; capture_instance &gt; （transact-sql）
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **净更改**查询函数的包装器。 创建这些函数所必需的脚本由 sys.sp_cdc_generate_wrapper_function 存储过程生成。  
   
@@ -48,7 +48,7 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
 }  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *start_time*  
  **Datetime**值，表示要包含在结果集中的更改表条目范围的低端点。  
   
@@ -59,15 +59,15 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
  *end_time*  
  **Datetime**值，表示要包含在结果集中的更改表条目范围的高端点。  
   
- 此参数可以采用两种含义之一，具体取决于在调用 sp_cdc_generate_wrapper_function @closed_high_end_point时选择的值，以生成用于创建包装函数的脚本：  
+ 此参数可以采用两种含义之一，具体取决于在调用 sp_cdc_generate_wrapper_function 时选择的值， @closed_high_end_point 以生成用于创建包装函数的脚本：  
   
 -   @closed_high_end_point = 1  
   
-     结果集中仅包含 cdc. <capture_instance>_CT 更改表中值为\_ \_ **$start _lsn 的**值更改表中的行。  
+     结果集中仅包含 cdc. <capture_instance>_CT 更改表中值为 \_ \_ $start _lsn **start_time**的值更改表中的行。  
   
 -   @closed_high_end_point = 0  
   
-     在结果集中只包含 cdc. <capture_instance>_CT 更改表中值的值\_ \_**为 $start** _lsn 的更改表中的值。  
+     在结果集中只包含 cdc. <capture_instance>_CT 更改表中值的值为 \_ \_ $start _lsn **start_time**的更改表中的值。  
   
  如果为此参数提供 NULL 值，则查询范围的高端点对应于捕获实例的有效范围的高端点。  
   
@@ -93,11 +93,11 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
 ## <a name="table-returned"></a>返回的表  
   
-|列名称|列类型|说明|  
+|列名称|列类型|描述|  
 |-----------------|-----------------|-----------------|  
-|\<> 的@column_list列|**随着**|在调用以生成用于创建包装的脚本时，将在 sp_cdc_generate_wrapper_function 的**column_list**参数中标识的列。 如果*column_list*为空，则所有跟踪的源列将出现在结果集中。|  
-|__CDC_OPERATION|**nvarchar(2)**|一个操作代码，它指示将行应用于目标环境所需的操作。 操作将因以下调用中提供的参数*row_filter_option*的值而异：<br /><br /> *row_filter_option* = "all"、"all with mask"<br /><br /> 'D' - 删除操作<br /><br /> 'I' - 插入操作<br /><br /> 'UN' - 更新操作<br /><br /> *row_filter_option* = "all with merge"<br /><br /> 'D' - 删除操作<br /><br /> 'M' - 插入操作或更新操作|  
-|\<> 的@update_flag_list列|**bit**|通过将 _uflag 追加到列名称末尾所命名的位标记。 仅当*row_filter_option* **= "all with mask"** 且\__CDC_OPERATION **= ' UN '** 时，此标志才采用非 null 值。 如果在查询窗口中修改相应的列，则会将其设置为 1； 否则为 0。|  
+|\<columns from @column_list>|**随着**|在调用以生成用于创建包装的脚本时，将在 sp_cdc_generate_wrapper_function 的**column_list**参数中标识的列。 如果*column_list*为空，则所有跟踪的源列将出现在结果集中。|  
+|__CDC_OPERATION|**nvarchar （2）**|一个操作代码，它指示将行应用于目标环境所需的操作。 操作将因以下调用中提供的参数*row_filter_option*的值而异：<br /><br /> *row_filter_option* = "all"、"all with mask"<br /><br /> 'D' - 删除操作<br /><br /> 'I' - 插入操作<br /><br /> 'UN' - 更新操作<br /><br /> *row_filter_option* = "all with merge"<br /><br /> 'D' - 删除操作<br /><br /> 'M' - 插入操作或更新操作|  
+|\<columns from @update_flag_list>|**bit**|通过将 _uflag 追加到列名称末尾所命名的位标记。 仅当*row_filter_option* **= "all with mask"** 且 \_ _CDC_OPERATION **= ' UN '** 时，此标志才采用非 null 值。 如果在查询窗口中修改相应的列，则会将其设置为 1； 否则为 0。|  
   
 ## <a name="remarks"></a>备注  
  Capture_instance> 函数的 fn_net_changes_<充当 cdc. fn_cdc_get_net_changes_<capture_instance 查询函数的包装。 sys.sp_cdc_generate_wrapper 存储过程用于创建包装的脚本。  
@@ -108,13 +108,13 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
 2.  执行该脚本以实际创建包装函数。  
   
- 包装函数使用户能够系统地查询在按**日期时间**值（而不是按 LSN 值）界定的间隔内发生的更改。 包装函数执行所提供的**日期时间**值与作为查询函数的参数内部所需的 LSN 值之间的所有必需转换。 当包装函数以串行方式用于处理更改数据流时，它们可确保不会丢失或重复数据，前提是遵循以下约定：与一个调用关联的@end_time间隔值作为与随后的调用关联的间隔@start_time值提供。  
+ 包装函数使用户能够系统地查询在按**日期时间**值（而不是按 LSN 值）界定的间隔内发生的更改。 包装函数执行所提供的**日期时间**值与作为查询函数的参数内部所需的 LSN 值之间的所有必需转换。 当包装函数以串行方式用于处理更改数据流时，它们可确保不会丢失或重复数据，前提是遵循以下约定： @end_time 与一个调用关联的间隔值作为 @start_time 与随后的调用关联的间隔值提供。  
   
  通过在创建脚本时使用 @closed_high_end_point 参数，您可以生成包装以支持指定查询窗口中的闭合上限或开放上限。 就是说，您可以决定其提交时间等于提取间隔的上限的条目是否要包括在间隔中。 默认情况下，包括上限。  
   
- **净更改**包装函数返回的结果集仅返回生成包装时位于中的@column_list那些被跟踪列。 如果 @column_list 为 NULL，则返回所有被跟踪的源列。 源列后面是一个操作列 __CDC_OPERATION，该列包含一个或两个用于标识操作的字符。  
+ **净更改**包装函数返回的结果集仅返回生成包装时位于中的那些被跟踪列 @column_list 。 如果 @column_list 为 NULL，则返回所有被跟踪的源列。 源列后面是一个操作列 __CDC_OPERATION，该列包含一个或两个用于标识操作的字符。  
   
- 然后，将位标志追加到在参数@update_flag_list中标识的每个列的结果集。 对于**净更改**包装程序，如果@row_filter_option在包装函数的调用中使用的是 "all" 或 "all with merge"，则位标志将始终为 NULL。 @row_filter_option如果设置为 "all with mask" 并且 __CDC_OPERATION 为 "d" 或 "I"，则标志的值也将为 NULL。 如果\__CDC_OPERATION 为 "UN"，则该标志将设置为1或0，具体取决于**net** update 操作是否导致对列的更改。  
+ 然后，将位标志追加到在参数中标识的每个列的结果集 @update_flag_list 。 对于**净更改**包装程序，如果 @row_filter_option 在包装函数的调用中使用的是 "all" 或 "all with merge"，则位标志将始终为 NULL。 如果 @row_filter_option 设置为 "all with mask" 并且 __CDC_OPERATION 为 "d" 或 "I"，则标志的值也将为 NULL。 如果 \_ _CDC_OPERATION 为 "UN"，则该标志将设置为1或0，具体取决于**net** update 操作是否导致对列的更改。  
   
  变更数据捕获配置模板 "实例化架构的 CDC 包装 Tvf" 演示了如何使用 sp_cdc_generate_wrapper_function 存储过程获取架构的已定义查询函数的所有包装函数的 CREATE 脚本。 然后，此模板创建这些脚本。 有关模板的详细信息，请参阅[模板资源管理器](../../ssms/template/template-explorer.md)。  
   

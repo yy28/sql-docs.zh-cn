@@ -18,21 +18,21 @@ ms.assetid: afb47987-39e7-4079-ad66-e0abf4d4c72b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e2942f60e1bb41edfcd2d474619867d35806660
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1f48f5cf3bfc75bb8aa52d981a42aa83b8007e09
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73782336"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783384"
 ---
 # <a name="bcp_setcolfmt"></a>bcp_setcolfmt
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   **Bcp_setcolfmt**函数取代了[bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)。 在指定列排序规则时，必须使用**bcp_setcolfmt**函数。 [bcp_setbulkmode](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setbulkmode.md)可用于指定多个列格式。  
   
  该函数提供在大容量复制操作中指定列格式的灵活方法。 它用于设置单独的列格式属性。 对的每个调用都将设置一个列格式特性**bcp_setcolfmt** 。  
   
- **Bcp_setcolfmt**函数指定用户文件中数据的源或目标格式。 用作源格式时， **bcp_setcolfmt**指定在大容量复制到中的表中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用作数据源的现有数据文件的格式。 用作目标格式时，将使用**bcp_setcolfmt**指定的列格式创建数据文件。  
+ **Bcp_setcolfmt**函数指定用户文件中数据的源或目标格式。 用作源格式时， **bcp_setcolfmt**指定在大容量复制到中的表中用作数据源的现有数据文件的格式 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 用作目标格式时，将使用**bcp_setcolfmt**指定的列格式创建数据文件。  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,17 +46,17 @@ RETCODE bcp_setcolfmt (
         INT cbValue);  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *hdbc*  
  是启用大容量复制的 ODBC 连接句柄。  
   
- *field*  
+ *定义域*  
  要设置其属性的按一定顺序的列号。  
   
  *property*  
  属性常量之一。 在下表中定义属性常量。  
   
-|properties|值|说明|  
+|Property|值|描述|  
 |--------------|-----------|-----------------|  
 |BCP_FMT_TYPE|BYTE|用户文件中此列的数据类型。 如果不同于数据库表中相应列的数据类型，则大容量复制将根据情况转换数据。<br /><br /> BCP_FMT_TYPE 参数由 sqlncli.h 中的 SQL Server 数据类型标记枚举，而非采用 ODBC C 数据类型枚举器。 例如，您可以使用特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 SQLCHARACTER 类型指定一个字符串：ODBC 类型 SQL_C_CHAR。<br /><br /> 若要为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型指定默认的数据表示形式，则将此参数设置为 0。<br /><br /> 对于从 SQL Server 大容量复制到文件中，当 BCP_FMT_TYPE 为 SQLDECIMAL 或 SQLNUMERIC 时，如果源列不是**decimal**或**numeric**，则使用默认的精度和小数位数。 否则，如果源列为**decimal**或**numeric**，则使用源列的精度和小数位数。|  
 |BCP_FMT_INDICATOR_LEN|INT|以字节表示的指示器（前缀）的长度。<br /><br /> 它是列数据中以字节表示的长度/空指示器的长度。 有效的指示器长度值是 0（在未使用指示器时）、1、2 或 4。<br /><br /> 若要指定默认的大容量复制指示器用法，请将此参数设置为 SQL_VARLEN_DATA。<br /><br /> 指示器在内存中出现在任何数据的紧前面，在数据文件中出现在它们适用于的数据的紧前面。<br /><br /> 如果使用多种方法来指定数据文件列长度（例如指示器和最大列长度，或者指示器和终止符序列），则大容量复制将选择导致数据复制量最少的方法。<br /><br /> 如果列数据可能在长度上发生变化或列可能接受 NULL 作为值，则在没有调整数据格式的用户干预时，大容量复制生成的数据文件将包含指示器。|  

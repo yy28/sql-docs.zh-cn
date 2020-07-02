@@ -18,15 +18,15 @@ ms.assetid: 32187282-1385-4c52-9134-09f061eb44f5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b3d09d1f577c9af59ea085eefbf51e9a70558a36
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a58b41665d1b10a1e9f9868796b98b80e43e92d6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73782873"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774302"
 ---
 # <a name="bcp_control"></a>bcp_control
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   更改用于在文件和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之间进行大容量复制的各种控制参数的默认设置。  
   
@@ -40,7 +40,7 @@ RETCODE bcp_control (
         void* iValue);  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *hdbc*  
  是启用大容量复制的 ODBC 连接句柄。  
   
@@ -56,7 +56,7 @@ RETCODE bcp_control (
  BCPDELAYREADFMT  
  如果设置为 true，则布尔值将导致[bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md)在执行时读取。 如果为 false （默认值），bcp_readfmt 将立即读取格式化文件。 如果 BCPDELAYREADFMT 为 true 并且您调用 bcp_columns 或 bcp_setcolfmt，则会发生序列错误。  
   
- 如果`bcp_control(hdbc,`在调用`, (void *)FALSE)` `bcp_control(hdbc,` BCPDELAYREADFMT`, (void *)TRUE)`和 bcp_writefmt 后调用 BCPDELAYREADFMT，也会发生序列错误。  
+ 如果在 `bcp_control(hdbc,` `, (void *)FALSE)` 调用 `bcp_control(hdbc,` BCPDELAYREADFMT 和 bcp_writefmt 后调用 BCPDELAYREADFMT `, (void *)TRUE)` ，也会发生序列错误。  
   
  有关详细信息，请参阅[元数据发现](../../relational-databases/native-client/features/metadata-discovery.md)。  
   
@@ -70,7 +70,7 @@ RETCODE bcp_control (
  BCPFILE_RAW：文件中的数据位于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的代码页中。  
   
  BCPFILEFMT  
- 数据文件格式的版本号。 这可以是80（ [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]）、90（ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]）、100（ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]或[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]）、110（ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]）或120（ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]）。 120 是默认值。 对于采用服务器早期版本所支持的格式的数据，该选项对导出和导入这样的数据非常有用。 例如，若要将从[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]服务器中的文本列获取的数据导入到[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]或更高版本的服务器中的**varchar （max）** 列，应指定80。 同样，如果在从**varchar （max）** 列导出数据时指定80，则将像保存文本列[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]那样保存它，并且可以将其导入到[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]服务器的文本列。  
+ 数据文件格式的版本号。 这可以是80（ [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] ）、90（ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ）、100（ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ）、110（ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ）或120（ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ）。 120 是默认值。 对于采用服务器早期版本所支持的格式的数据，该选项对导出和导入这样的数据非常有用。 例如，若要将从服务器中的文本列获取的数据导入 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 到或更高版本的服务器中的**varchar （max）** 列 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ，应指定80。 同样，如果在从**varchar （max）** 列导出数据时指定80，则将像保存文本列那样保存它 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] ，并且可以将其导入到服务器的文本列 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 。  
   
  BCPFIRST  
  要复制的文件或表的第一行数据。 默认值为 1；值小于 1 则将此选项重置为其默认值。  
@@ -94,10 +94,10 @@ RETCODE bcp_control (
  *iValue*包含一个 SQLTCHAR 字符串指针。 寻址的字符串指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 大容量复制处理提示或返回结果集的 Transact-SQL 语句。 如果指定的 Transact-SQL 语句返回多个结果集，则忽略第一个结果集之后的所有结果集。 有关大容量复制处理提示的详细信息，请参阅[Bcp 实用工具](../../tools/bcp-utility.md)。  
   
  BCPKEEPIDENTITY  
- 当*iValue*为 TRUE 时，指定大容量复制函数插入为使用标识[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]约束定义的列提供的数据值。 输入文件必须提供标识列的值。 如果未进行设置，则为插入的行生成新标识值。 忽略文件的标识列中所存在的任何数据。  
+ 当*iValue*为 TRUE 时，指定大容量复制函数插入为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用标识约束定义的列提供的数据值。 输入文件必须提供标识列的值。 如果未进行设置，则为插入的行生成新标识值。 忽略文件的标识列中所存在的任何数据。  
   
  BCPKEEPNULLS  
- 指定是否会将文件中的空数据值转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中的 NULL 值。 当*iValue*为 TRUE 时，空值将转换为表中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NULL 值。 默认情况下会将空值转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中的列的默认值（如果存在默认值）。  
+ 指定是否会将文件中的空数据值转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中的 NULL 值。 当*iValue*为 TRUE 时，空值将转换为表中的 NULL 值 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 默认情况下会将空值转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中的列的默认值（如果存在默认值）。  
   
  BCPLAST  
  要复制的最后一行。 默认值为复制所有行；值小于 1 则将此选项重置为其默认值。  
@@ -137,7 +137,7 @@ RETCODE bcp_control (
   
  从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 大容量复制 SELECT 的结果集时，此函数还可用于指定 SELECT 语句。 将*eOption*设置为 BCPHINTS，并将*iValue*设置为具有指向包含 SELECT 语句的 SQLTCHAR 字符串的指针。  
   
- 仅当在用户文件和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表之间进行复制时，这些控制参数才有意义。 控制参数设置对使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)复制到的行没有影响。  
+ 仅当在用户文件和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表之间进行复制时，这些控制参数才有意义。 控制参数设置对使用 bcp_sendrow 复制到的行没有影响 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)  
   
 ## <a name="example"></a>示例  
   

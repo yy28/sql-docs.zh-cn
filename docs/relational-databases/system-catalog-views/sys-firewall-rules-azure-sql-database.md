@@ -18,26 +18,26 @@ ms.assetid: 140d2cd8-9aa1-4cc5-870d-e1dbc873b3fe
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 91c3a4101f19afe4a986514fea8dab207c6d9b48
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 98845a3733477c13761dfdf236685be9edce2b4c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70155544"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775236"
 ---
 # <a name="sysfirewall_rules-azure-sql-database"></a>sys.firewall_rules (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-  返回与[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]关联的服务器级防火墙设置的相关信息。  
+  返回与关联的服务器级防火墙设置的相关信息 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。  
   
  `sys.firewall_rules` 视图包含以下各列：  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|ID|**整形**|服务器级防火墙设置的标识符。|  
+|id|**整形**|服务器级防火墙设置的标识符。|  
 |name|**NVARCHAR （128）**|您选择用来描述和区分服务器级防火墙设置的名称。|  
 |start_ip_address|**VARCHAR （45）**|服务器级防火墙设置范围内的最低 IP 地址。 等于或大于此值的 IP 地址可能尝试连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 服务器。 可能的最低 IP 地址为 `0.0.0.0`。|  
-|end_ip_address|**VARCHAR （45）**|服务器级防火墙设置范围内的最高 IP 地址。 等于或小于此值的 IP 地址可能尝试连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 服务器。 可能的最高 IP 地址为 `255.255.255.255`。<br /><br /> 注意：如果此字段和**start_ip_address**字段都等于`0.0.0.0`，则允许 Azure 连接尝试。|  
+|end_ip_address|**VARCHAR （45）**|服务器级防火墙设置范围内的最高 IP 地址。 等于或小于此值的 IP 地址可能尝试连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 服务器。 可能的最高 IP 地址为 `255.255.255.255`。<br /><br /> 注意：如果此字段和**start_ip_address**字段都等于，则允许 Azure 连接尝试 `0.0.0.0` 。|  
 |create_date|**型**|创建服务器级防火墙设置时的 UTC 日期和时间。<br /><br /> 注意： UTC 是协调世界时的首字母缩写词。|  
 |modify_date|**型**|上次修改服务器级防火墙设置时的 UTC 日期和时间。|  
   

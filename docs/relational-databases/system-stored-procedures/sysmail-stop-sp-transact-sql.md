@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 045ee36f-5bf0-4626-b5ee-e84db06ce16f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 753375d139a03d5c0cec20dc994d83399e04f094
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c6ed9d4a05759495090a35224e5aa5ef805e520f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68037404"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783699"
 ---
 # <a name="sysmail_stop_sp-transact-sql"></a>sysmail_stop_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   通过停止外部程序所用的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 对象来停止数据库邮件。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "68037404"
 sysmail_stop_sp  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  无  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -51,7 +51,7 @@ sysmail_stop_sp
   
  当队列停止后，数据库邮件外部程序将不会处理消息。 通过此存储过程可以停止数据库邮件，以进行故障排除或维护。  
   
- 若要开始数据库邮件，请使用**sysmail_start_sp**。 请注意**sp_send_dbmail** ，当[!INCLUDE[ssSB](../../includes/sssb-md.md)]对象停止时，sp_send_dbmail 仍接受 mail。  
+ 若要开始数据库邮件，请使用**sysmail_start_sp**。 请注意，当对象停止时， **sp_send_dbmail**仍接受 mail [!INCLUDE[ssSB](../../includes/sssb-md.md)] 。  
   
 > [!NOTE]  
 >  此存储过程只停止用于数据库邮件的队列， 它不会停用数据库中的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 消息传递功能。 此存储过程不会禁用数据库邮件扩展存储过程以减少外围应用。 若要禁用扩展存储过程，请参阅**sp_configure**系统存储过程的[数据库邮件 XPs 选项](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md)。  

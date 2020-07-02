@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 850cef4e-6348-4439-8e79-fd1bca712091
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 08569c2313bfb7c9d992c510ef4c9c7548f51e64
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 525ebee42d097c4d4d171767a8b0a8fc844bc5f6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827735"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783753"
 ---
 # <a name="sp_help_alert-transact-sql"></a>sp_help_alert (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   报告有关为服务器定义的警报的信息。  
   
@@ -42,7 +42,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
      [ , [ @legacy_format = ] legacy_format ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @alert_name = ] 'alert_name'`警报名称。 *alert_name*为**nvarchar （128）**。 如果未指定*alert_name* ，则返回有关所有警报的信息。  
   
 `[ @order_by = ] 'order_by'`用于生成结果的排序顺序。 *order_by*的值为**sysname**，默认值为 N '*name*'。  
@@ -62,7 +62,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|系统分配的唯一整数标识符。|  
-|**name**|**sysname**|警报名称（例如，Demo：完整的**msdb**日志）。|  
+|name|**sysname**|警报名称（例如，Demo：完整的**msdb**日志）。|  
 |**event_source**|**nvarchar （100）**|事件源。 对于**MSSQLServer** [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本7.0，它将始终 MSSQLServer|  
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -89,14 +89,14 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0，将始终为“[Uncategorized]”。|  
 |**wmi_namespace**|**sysname**|如果**type**为**3**，则此列显示 WMI 事件的命名空间。|  
 |**wmi_query**|**nvarchar(512)**|如果**type**为**3**，则此列显示 WMI 事件的查询。|  
-|type |**int**|事件类型：<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件警报<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 性能警报<br /><br /> **3** = WMI 事件警报|  
+|**type**|**int**|事件类型：<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件警报<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 性能警报<br /><br /> **3** = WMI 事件警报|  
   
  当** \@ legacy_format**为**1**时， **sp_help_alert**将生成以下结果集。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|系统分配的唯一整数标识符。|  
-|**name**|**sysname**|警报名称（例如，Demo：完整的**msdb**日志）。|  
+|name|**sysname**|警报名称（例如，Demo：完整的**msdb**日志）。|  
 |**event_source**|**nvarchar （100）**|事件源。 对于版本7.0，它将始终**MSSQLServer** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -121,7 +121,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**flag**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)].|  
 |**performance_condition**|**nvarchar(512)**|如果**type**为**2**，则此列将显示性能条件的定义。 如果**type**为**3**，则此列显示 WMI 事件的查询。 否则，此列为 NULL。|  
 |**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]对于7.0，将始终为 "**[未分类]**" [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
-|type |**int**|警报类型：<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件警报<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 性能警报<br /><br /> **3** = WMI 事件警报|  
+|**type**|**int**|警报类型：<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件警报<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 性能警报<br /><br /> **3** = WMI 事件警报|  
   
 ## <a name="remarks"></a>备注  
  必须从**msdb**数据库运行**sp_help_alert** 。  

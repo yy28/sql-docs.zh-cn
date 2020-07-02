@@ -27,17 +27,17 @@ ms.assetid: 704b1ad3-3534-4cf3-aff4-9fb70064b6cc
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 730508fca6b6f9d3e9515e9ec496971a4b758279
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 76af106fb7881661a66119ae2161bc723254439e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68046523"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784878"
 ---
 # <a name="sysfn_builtin_permissions-transact-sql"></a>sys.fn_builtin_permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  返回服务器内置权限层次结构的说明。 `sys.fn_builtin_permissions`只能在和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]上调用，它将返回所有权限，不管当前平台上是否支持它们。 大多数权限适用于所有平台，但有些则不适用。 例如，不能对 SQL 数据库授予服务器级别权限。 有关哪些平台支持每个权限的信息，请参阅[&#40;数据库引擎&#41;的权限](../../relational-databases/security/permissions-database-engine.md)。  
+  返回服务器内置权限层次结构的说明。 `sys.fn_builtin_permissions`只能在和上调用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ，它将返回所有权限，不管当前平台上是否支持它们。 大多数权限适用于所有平台，但有些则不适用。 例如，不能对 SQL 数据库授予服务器级别权限。 有关哪些平台支持每个权限的信息，请参阅[&#40;数据库引擎&#41;的权限](../../relational-databases/security/permissions-database-engine.md)。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -57,7 +57,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
     | SYMMETRIC KEY | TYPE | USER | XML SCHEMA COLLECTION  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  DEFAULT  
  使用默认选项（不带引号）调用该函数时，该函数将返回内置权限的完整列表。  
   
@@ -72,7 +72,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
   
 ## <a name="tables-returned"></a>返回的表  
   
-|列名称|数据类型|排序规则|说明|  
+|列名称|数据类型|排序规则|描述|  
 |-----------------|---------------|---------------|-----------------|  
 |class_desc|**nvarchar(60)**|服务器的排序规则|安全对象类的说明。|  
 |permission_name|**nvarchar(60)**|服务器的排序规则|权限名称。|  
@@ -85,20 +85,20 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
   
 |权限类型|权限名称|应用于安全对象或类|  
 |---------------------|---------------------|-----------------------------------|  
-|AADS|ALTER ANY DATABASE EVENT SESSION<br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|DATABASE|  
+|AADS|ALTER ANY DATABASE EVENT SESSION<br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|DATABASE|  
 |AAES|ALTER ANY EVENT SESSION|SERVER|  
-|AAMK|ALTER ANY MASK<br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|DATABASE|  
+|AAMK|ALTER ANY MASK<br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|DATABASE|  
 |ADBO|ADMINISTER BULK OPERATIONS|SERVER|  
-|AEDS|ALTER ANY EXTERNAL DATA SOURCE<br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|DATABASE|  
-|AEFF|ALTER ANY EXTERNAL FILE FORMAT<br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|DATABASE|  
+|AEDS|ALTER ANY EXTERNAL DATA SOURCE<br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|DATABASE|  
+|AEFF|ALTER ANY EXTERNAL FILE FORMAT<br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|DATABASE|  
 |AL|ALTER|APPLICATION ROLE|  
 |AL|ALTER|ASSEMBLY|  
-|AL|ALTER<br />**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|AVAILABILITY GROUP|  
+|AL|ALTER<br />**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|AVAILABILITY GROUP|  
 |AL|ALTER|ASYMMETRIC KEY|  
 |AL|ALTER|CERTIFICATE|  
 |AL|ALTER|CONTRACT|  
 |AL|ALTER|DATABASE|  
-|AL|ALTER<br /> **应用 t o**： [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]和[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。 |DATABASE SCOPED CREDENTIAL|
+|AL|ALTER<br /> **应用 t o**： [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 和 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 。 |DATABASE SCOPED CREDENTIAL|
 |AL|ALTER|ENDPOINT|  
 |AL|ALTER|FULLTEXT CATALOG|  
 |AL|ALTER|FULLTEXT STOPLIST|  
@@ -110,24 +110,24 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |AL|ALTER|ROUTE|  
 |AL|ALTER|SCHEMA|  
 |AL|ALTER|SEARCH PROPERTY LIST|  
-|AL|ALTER<br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|SERVER ROLE|  
+|AL|ALTER<br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|SERVER ROLE|  
 |AL|ALTER|SERVICE|  
 |AL|ALTER|SYMMETRIC KEY|  
 |AL|ALTER|USER|  
 |AL|ALTER|XML SCHEMA COLLECTION|  
 |ALAA|ALTER ANY SERVER AUDIT|SERVER|  
-|ALAG|ALTER ANY AVAILABILITY GROUP<br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|SERVER|  
+|ALAG|ALTER ANY AVAILABILITY GROUP<br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|SERVER|  
 |ALAK|ALTER ANY ASYMMETRIC KEY|DATABASE|  
 |ALAR|ALTER ANY APPLICATION ROLE|DATABASE|  
 |ALAS|ALTER ANY ASSEMBLY|DATABASE|  
 |ALCD|ALTER ANY CREDENTIAL|SERVER|  
 |ALCF|ALTER ANY CERTIFICATE|DATABASE|  
-|ALCK|ALTER ANY COLUMN ENCRYPTION KEY<br />**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|DATABASE|  
-|ALCM|ALTER ANY COLUMN MASTER KEY<br />**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|DATABASE|  
+|ALCK|ALTER ANY COLUMN ENCRYPTION KEY<br />**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|DATABASE|  
+|ALCM|ALTER ANY COLUMN MASTER KEY<br />**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|DATABASE|  
 |ALCO|ALTER ANY CONNECTION|SERVER|  
 |ALDA|ALTER ANY DATABASE AUDIT|DATABASE|  
 |ALDB|ALTER ANY DATABASE|SERVER|  
-|ALDC|ALTER ANY DATABASE SCOPED CONFIGURATION<br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|DATABASE|  
+|ALDC|ALTER ANY DATABASE SCOPED CONFIGURATION<br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|DATABASE|  
 |ALDS|ALTER ANY DATASPACE|DATABASE|  
 |ALED|ALTER ANY DATABASE EVENT NOTIFICATION|DATABASE|  
 |ALES|ALTER ANY EVENT NOTIFICATION|SERVER|  
@@ -143,8 +143,8 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |ALSC|ALTER ANY CONTRACT|DATABASE|  
 |ALSK|ALTER ANY SYMMETRIC KEY|DATABASE|  
 |ALSM|ALTER ANY SCHEMA|DATABASE|  
-|ALSP|更改任何安全策略<br />**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|DATABASE|  
-|ALSR|ALTER ANY SERVER ROLE<br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|SERVER|  
+|ALSP|更改任何安全策略<br />**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|DATABASE|  
+|ALSR|ALTER ANY SERVER ROLE<br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|SERVER|  
 |ALSS|ALTER SERVER STATE|SERVER|  
 |ALST|ALTER SETTINGS|SERVER|  
 |ALSV|ALTER ANY SERVICE|DATABASE|  
@@ -155,11 +155,11 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |AUTH|AUTHENTICATE SERVER|SERVER|  
 |BADB|BACKUP DATABASE|DATABASE|  
 |BALO|BACKUP LOG|DATABASE|  
-|CADB|CONNECT ANY DATABASE<br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|SERVER|  
+|CADB|CONNECT ANY DATABASE<br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|SERVER|  
 |CL|CONTROL|APPLICATION ROLE|  
 |CL|CONTROL|ASSEMBLY|  
 |CL|CONTROL|ASYMMETRIC KEY|  
-|CL|CONTROL<br />**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|AVAILABILITY GROUP|  
+|CL|CONTROL<br />**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|AVAILABILITY GROUP|  
 |CL|CONTROL|CERTIFICATE|  
 |CL|CONTROL|CONTRACT|  
 |CL|CONTROL|DATABASE|  
@@ -176,7 +176,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CL|CONTROL|SCHEMA|  
 |CL|CONTROL|SEARCH PROPERTY LIST|  
 |CL|CONTROL SERVER|SERVER|  
-|CL|CONTROL<br />**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|SERVER ROLE|  
+|CL|CONTROL<br />**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|SERVER ROLE|  
 |CL|CONTROL|SERVICE|  
 |CL|CONTROL|SYMMETRIC KEY|  
 |CL|CONTROL|TYPE|  
@@ -187,7 +187,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CORP|CONNECT REPLICATION|DATABASE|  
 |COSQ|CONNECT SQL|SERVER|  
 |CP|CHECKPOINT|DATABASE|  
-|CRAC|CREATE AVAILABILITY GROUP<br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|SERVER|  
+|CRAC|CREATE AVAILABILITY GROUP<br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|SERVER|  
 |CRAG|CREATE AGGREGATE|DATABASE|  
 |CRAK|CREATE ASYMMETRIC KEY|DATABASE|  
 |CRAS|CREATE ASSEMBLY|DATABASE|  
@@ -212,7 +212,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CRSM|CREATE SCHEMA|DATABASE|  
 |CRSN|CREATE SYNONYM|DATABASE|  
 |CRSO|CREATE SEQUENCE|SCHEMA|  
-|CRSR|CREATE SERVER ROLE<br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|SERVER|  
+|CRSR|CREATE SERVER ROLE<br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|SERVER|  
 |CRSV|CREATE SERVICE|DATABASE|  
 |CRTB|CREATE TABLE|DATABASE|  
 |CRTE|CREATE TRACE EVENT NOTIFICATION|SERVER|  
@@ -223,13 +223,13 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |DL|DELETE|DATABASE|  
 |DL|DELETE|OBJECT|  
 |DL|DELETE|SCHEMA|  
-|EAES|EXECUTE ANY EXTERNAL SCRIPT<br />**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|DATABASE|  
+|EAES|EXECUTE ANY EXTERNAL SCRIPT<br />**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|DATABASE|  
 |EX|EXECUTE|DATABASE|  
 |EX|EXECUTE|OBJECT|  
 |EX|EXECUTE|SCHEMA|  
 |EX|EXECUTE|TYPE|  
 |EX|EXECUTE|XML SCHEMA COLLECTION|  
-|IAL|IMPERSONATE ANY LOGIN<br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|SERVER|  
+|IAL|IMPERSONATE ANY LOGIN<br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|SERVER|  
 |IM|IMPERSONATE|LOGIN|  
 |IM|IMPERSONATE|USER|  
 |IN|INSERT|DATABASE|  
@@ -259,10 +259,10 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |SN|SEND|SERVICE|  
 |SPLN|SHOWPLAN|DATABASE|  
 |SUQN|SUBSCRIBE QUERY NOTIFICATIONS|DATABASE|  
-|SUS|SELECT ALL USER SECURABLES<br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|SERVER|  
+|SUS|SELECT ALL USER SECURABLES<br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|SERVER|  
 |TO|TAKE OWNERSHIP|ASSEMBLY|  
 |TO|TAKE OWNERSHIP|ASYMMETRIC KEY|  
-|TO|TAKE OWNERSHIP<br />**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|AVAILABILITY GROUP|  
+|TO|TAKE OWNERSHIP<br />**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|AVAILABILITY GROUP|  
 |TO|TAKE OWNERSHIP|CERTIFICATE|  
 |TO|TAKE OWNERSHIP|CONTRACT|  
 |TO|TAKE OWNERSHIP|DATABASE|  
@@ -277,19 +277,19 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |TO|TAKE OWNERSHIP|ROLE|  
 |TO|TAKE OWNERSHIP|ROUTE|  
 |TO|TAKE OWNERSHIP|SCHEMA|  
-|TO|TAKE OWNERSHIP<br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|SERVER ROLE|  
+|TO|TAKE OWNERSHIP<br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|SERVER ROLE|  
 |TO|TAKE OWNERSHIP|SERVICE|  
 |TO|TAKE OWNERSHIP|SYMMETRIC KEY|  
 |TO|TAKE OWNERSHIP|TYPE|  
 |TO|TAKE OWNERSHIP|XML SCHEMA COLLECTION|  
-|UMSK|UNMASK<br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|DATABASE|  
+|UMSK|UNMASK<br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|DATABASE|  
 |UP|UPDATE|DATABASE|  
 |UP|UPDATE|OBJECT|  
 |UP|UPDATE|SCHEMA|  
 |VW|VIEW DEFINITION|APPLICATION ROLE|  
 |VW|VIEW DEFINITION|ASSEMBLY|  
 |VW|VIEW DEFINITION|ASYMMETRIC KEY|  
-|VW|VIEW DEFINITION<br />**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|AVAILABILITY GROUP|  
+|VW|VIEW DEFINITION<br />**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|AVAILABILITY GROUP|  
 |VW|VIEW DEFINITION|CERTIFICATE|  
 |VW|VIEW DEFINITION|CONTRACT|  
 |VW|VIEW DEFINITION|DATABASE|  
@@ -305,15 +305,15 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |VW|VIEW DEFINITION|ROUTE|  
 |VW|VIEW DEFINITION|SCHEMA|  
 |VW|VIEW DEFINITION|SEARCH PROPERTY LIST|  
-|VW|VIEW DEFINITION<br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|SERVER ROLE|  
+|VW|VIEW DEFINITION<br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|SERVER ROLE|  
 |VW|VIEW DEFINITION|SERVICE|  
 |VW|VIEW DEFINITION|SYMMETRIC KEY|  
 |VW|VIEW DEFINITION|TYPE|  
 |VW|VIEW DEFINITION|USER|  
 |VW|VIEW DEFINITION|XML SCHEMA COLLECTION|  
 |VWAD|VIEW ANY DEFINITION|SERVER|  
-|VWCK|VIEW ANY COLUMN ENCRYPTION KEY DEFINITION<br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|DATABASE|  
-|VWCM|VIEW ANY COLUMN MASTER KEY DEFINITION<br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|DATABASE|  
+|VWCK|VIEW ANY COLUMN ENCRYPTION KEY DEFINITION<br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|DATABASE|  
+|VWCM|VIEW ANY COLUMN MASTER KEY DEFINITION<br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|DATABASE|  
 |VWCT|VIEW CHANGE TRACKING|OBJECT|  
 |VWCT|VIEW CHANGE TRACKING|SCHEMA|  
 |VWDB|VIEW ANY DATABASE|SERVER|  
@@ -323,7 +323,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |XU|UNSAFE ASSEMBLY|SERVER|  
   
 ## <a name="remarks"></a>备注  
- `sys.fn_builtin_permissions` 是一个表值函数，它可以产生预定义权限层次结构的副本。 此层次结构包含涵盖权限。 `DEFAULT`结果集描述了权限层次结构的有向非循环图形，其根为（CLASS = SERVER，权限 = CONTROL SERVER）。  
+ `sys.fn_builtin_permissions` 是一个表值函数，它可以产生预定义权限层次结构的副本。 此层次结构包含涵盖权限。 `DEFAULT`结果集描述了权限层次结构的有向非循环图形，其根为（class = SERVER，权限 = CONTROL SERVER）。  
   
  `sys.fn_builtin_permissions` 不接受相关参数。  
   
@@ -337,7 +337,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 ## <a name="examples"></a>示例  
   
 ### <a name="a-listing-all-built-in-permissions"></a>A. 列出所有内置权限   
-使用`DEFAULT`或空字符串返回所有权限。   
+使用 `DEFAULT` 或空字符串返回所有权限。   
 ```sql  
 SELECT * FROM sys.fn_builtin_permissions(DEFAULT);
 SELECT * FROM sys.fn_builtin_permissions('');  

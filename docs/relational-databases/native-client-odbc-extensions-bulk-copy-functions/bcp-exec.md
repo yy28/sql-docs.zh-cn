@@ -18,15 +18,15 @@ ms.assetid: b23ea2cc-8545-4873-b0c1-57e76b0a3a7b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0767886191923c15f65bde7b9fe4bfb7d270b271
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bd9b2b63332b23034e46b071f76dc9129c3c6f9f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73782751"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774292"
 ---
 # <a name="bcp_exec"></a>bcp_exec
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   执行数据库表和用户文件之间数据的完整大容量复制。  
   
@@ -39,7 +39,7 @@ RETCODE bcp_exec (
         LPDBINT pnRowsProcessed);  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *hdbc*  
  是启用大容量复制的 ODBC 连接句柄。  
   
@@ -56,7 +56,7 @@ RETCODE bcp_exec (
   
  **bcp_exec**是在任意时间长度中可能未完成的唯一大容量复制函数。 因此，它是支持异步模式的唯一大容量复制函数。 若要设置异步模式，请在调用**bcp_exec**之前，使用[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)将 SQL_ATTR_ASYNC_ENABLE 设置为 SQL_ASYNC_ENABLE_ON。 若要测试完成，请调用具有相同参数的**bcp_exec** 。 如果大容量复制尚未完成， **bcp_exec**将返回 SUCCEED_ASYNC。 它还会在*pnRowsProcessed*中返回已发送到服务器的行数的状态计数。 发送到服务器的行直到到达批的末尾时才会提交。  
   
- 有关从开始大容量复制的重大更改的信息[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，请参阅[&#40;ODBC&#41;执行大容量复制操作](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)。  
+ 有关从开始大容量复制的重大更改的信息 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ，请参阅[&#40;ODBC&#41;执行大容量复制操作](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何使用**bcp_exec**：  

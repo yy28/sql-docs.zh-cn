@@ -22,21 +22,21 @@ ms.assetid: a5c4d5b8-5a24-4a2d-99b4-d003b546ee3a
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 020d75e780dcc2036b70348fa57cf1007ce0e401
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f6d46a0e06f96f646ebd68e383ad26f99e309082
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68037318"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783634"
 ---
 # <a name="system-stored-procedures-transact-sql"></a>系统存储过程 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
   在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，可以使用系统存储过程来执行许多管理和信息活动。 系统存储过程可划分为下表所示的类别。  
   
 ## <a name="in-this-section"></a>本节内容  
   
-|类别|说明|  
+|类别|描述|  
 |--------------|-----------------|  
 |[活动异地复制存储过程](https://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)|用于管理 Azure SQL 数据库中的活动异地复制配置|  
 |[目录存储过程](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)|用于实现 ODBC 数据字典功能，并隔离 ODBC 应用程序以使其不受基础系统表更改的影响。|  
@@ -71,7 +71,7 @@ ms.locfileid: "68037318"
 >  除非另外特别说明，否则所有的系统存储过程将返回一个 0 值以表示成功。 若要表示失败，则返回一个非零值。  
   
 ## <a name="api-system-stored-procedures"></a>API 系统存储过程  
- 针对 ADO、OLE DB 以及 ODBC 应用程序运行 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的用户可能会注意到这些使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 引用未涵盖的系统存储过程的应用程序。 本机客户端 OLE DB 访问接口和[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client ODBC 驱动程序使用这些存储过程来实现数据库 API 功能。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 这些存储过程只不过是访问接口或驱动程序所使用的机制，用来传达用户对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的请求。 它们只供提供程序或驱动程序内部使用。 不支持从基于的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]应用程序中显式调用它们。  
+ 针对 ADO、OLE DB 以及 ODBC 应用程序运行 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的用户可能会注意到这些使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 引用未涵盖的系统存储过程的应用程序。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本机客户端 OLE DB 访问接口和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client ODBC 驱动程序使用这些存储过程来实现数据库 API 功能。 这些存储过程只不过是访问接口或驱动程序所使用的机制，用来传达用户对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的请求。 它们只供提供程序或驱动程序内部使用。 不支持从基于的应用程序中显式调用它们 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
  Sp_createorphan 和 sp_droporphans 存储过程用于 ODBC **ntext**、 **text**和**image**处理。  
   

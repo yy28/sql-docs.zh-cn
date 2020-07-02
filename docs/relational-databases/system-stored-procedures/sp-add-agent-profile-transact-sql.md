@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5c246a33-2c21-4a77-9c2a-a2c9f0c5dda1
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 24a900409ae5979c13bdbff0d67d9d2670059208
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: de61da8e636ff3f6e38dac6fe85d45eaff75df3c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68770846"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783873"
 ---
 # <a name="sp_add_agent_profile-transact-sql"></a>sp_add_agent_profile (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   为复制代理创建新的配置文件。 此存储过程在分发服务器上的任何数据库中执行。  
   
@@ -41,7 +41,7 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
     [ , [ @default= ] default ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @profile_id = ] profile_id`与新插入的配置文件关联的 ID。 *profile_id*为**int** ，并且是一个可选的 OUTPUT 参数。 如果指定该 ID，则值将设置为新的配置文件 ID。  
   
 `[ @profile_name = ] 'profile_name'`配置文件的名称。 *profile_name* **sysname**，无默认值。  
@@ -54,11 +54,11 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
 |**2**|日志读取器代理|  
 |**3**|分发代理|  
 |**4**|合并代理|  
-|**900**|队列读取器代理|  
+|**9**|队列读取器代理|  
   
 `[ @profile_type = ] profile_type`配置文件的类型。*profile_type*的值为**int**，默认值为**1**。  
   
- **0**指示系统配置文件。 **1**表示自定义配置文件。 只能使用此存储过程创建自定义配置文件;因此，唯一有效的值是**1**。 仅[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]创建系统配置文件。  
+ **0**指示系统配置文件。 **1**表示自定义配置文件。 只能使用此存储过程创建自定义配置文件;因此，唯一有效的值是**1**。 仅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 创建系统配置文件。  
   
 `[ @description = ] 'description'`配置文件的说明。 *description*的值为**nvarchar （3000）**，无默认值。  
   

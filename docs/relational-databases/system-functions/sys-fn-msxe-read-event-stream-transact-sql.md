@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 5edb1162-625a-41e0-8ec9-1edc8ab9a74a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 886b874aeee47f71eb8b50dba27fdfdf8ea45c62
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 05be6f4b30e42ddc1213231a6d96a823dfc9f1cd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68082694"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783096"
 ---
 # <a name="sysfn_msxe_read_event_stream-transact-sql"></a>sys.fn_MSxe_read_event_stream (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   扩展事件提供表值函数 (TVF)，供扩展事件用户界面 (UI) 内部使用。 表本身不提供客户可以使用的数据。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "68082694"
 sys.fn_MSxe_read_event_stream ( session_name)  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *Session_name*  
  服务器上运行的会话的名称。  
   

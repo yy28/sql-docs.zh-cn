@@ -13,15 +13,15 @@ ms.assetid: de56f206-1f7e-4c03-bf22-da9c7f9f4433
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 46da93307d28b5be6aec3fbcbff31322e96ea634
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f9935a3faa08b8aa14b4f8c80182a2a005853666
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73782395"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783400"
 ---
 # <a name="bcp_setbulkmode"></a>bcp_setbulkmode
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   bcp_setbulkmode 允许您在大容量复制操作中指定列格式，并在单个函数调用中设置所有列特性。  
   
@@ -39,7 +39,7 @@ RETCODE bcp_setbulkmode (
 );  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *hdbc*  
  支持大容量复制的 ODBC 连接句柄。  
   
@@ -68,12 +68,12 @@ RETCODE bcp_setbulkmode (
   
  下表列出了 property 参数的常量**。  
   
-|properties|说明|  
+|Property|描述|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|指定字符输出模式。<br /><br /> 对应于 BCP 中的-c 选项。EXE 和 to bcp_setcolfmt，并将**BCP_FMT_TYPE**属性设置为**SQLCHARACTER**。|  
-|BCP_OUT_WIDE_CHARACTER_MODE|指定 Unicode 输出模式。<br /><br /> 对应于 BCP 中的-w 选项。EXE 和 bcp_setcolfmt，并将**BCP_FMT_TYPE**属性设置为**SQLNCHAR**。|  
-|BCP_OUT_NATIVE_TEXT_MODE|指定对非字符类型使用本机类型，对字符类型使用 Unicode。<br /><br /> 对应于 BCP 中的-N 选项。如果列类型是字符串，则使用**BCP_FMT_TYPE**属性设置为**SQLNCHAR**的 EXE 和 bcp_setcolfmt （如果不是字符串，则默认值）。|  
-|BCP_OUT_NATIVE_MODE|指定本机数据库类型。<br /><br /> 对应于 BCP 中的-n 选项。EXE 和 bcp_setcolfmt，并将**BCP_FMT_TYPE**属性设置为默认值。|  
+|BCP_OUT_CHARACTER_MODE|指定字符输出模式。<br /><br /> 对应于 BCP.EXE 中的-c 选项，并与**BCP_FMT_TYPE**属性设置为**SQLCHARACTER**bcp_setcolfmt。|  
+|BCP_OUT_WIDE_CHARACTER_MODE|指定 Unicode 输出模式。<br /><br /> 对应于 BCP.EXE 中的-w 选项和**BCP_FMT_TYPE**属性设置为**SQLNCHAR**的 bcp_setcolfmt。|  
+|BCP_OUT_NATIVE_TEXT_MODE|指定对非字符类型使用本机类型，对字符类型使用 Unicode。<br /><br /> 与 BCP.EXE 和 bcp_setcolfmt 中的-N 选项对应（如果列类型是字符串，则为**BCP_FMT_TYPE**属性设置为**SQLNCHAR** ）。|  
+|BCP_OUT_NATIVE_MODE|指定本机数据库类型。<br /><br /> 对应于 BCP.EXE 和 bcp_setcolfmt 中的-n 选项， **BCP_FMT_TYPE**属性设置为默认值。|  
   
  不应将 bcp_setbulkmode 与包含 bcp_setcolfmt、bcp_control 和 bcp_readfmt 的函数调用序列一起使用。 例如，不应调用 bcp_control （BCPTEXTFILE）和 bcp_setbulkmode。  
   

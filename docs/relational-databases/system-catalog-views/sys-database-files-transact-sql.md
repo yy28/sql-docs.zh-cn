@@ -20,15 +20,15 @@ ms.assetid: 0f5b0aac-c17d-4e99-b8f7-d04efc9edf44
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f51c090baea876c662b3fa31210d1eec59139bf4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9ab99e0ce3e63a42795d17fc859bbbd3b6c8059d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823480"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785017"
 ---
 # <a name="sysdatabase_files-transact-sql"></a>sys.database_files (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   每个存储在数据库本身中的数据库文件在表中占用一行。 这是一个基于每个数据库的视图。  
   
@@ -36,11 +36,11 @@ ms.locfileid: "82823480"
 |-----------------|---------------|-----------------|  
 |**file_id**|**int**|数据库内文件的 ID。|  
 |**file_guid**|**uniqueidentifier**|文件的 GUID。<br /><br /> NULL = 数据库已从的早期版本升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （适用于 SQL Server 2005 及更早版本）。|  
-|type |**tinyint**|文件类型：<br/><br /> 0 = 行<br /><br/> 1 = 日志<br/><br /> 2 = FILESTREAM<br /><br /> 3 =[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = 全文|  
+|**type**|**tinyint**|文件类型：<br/><br /> 0 = 行<br /><br/> 1 = 日志<br/><br /> 2 = FILESTREAM<br /><br /> 3 =[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = 全文|  
 |**type_desc**|**nvarchar(60)**|文件类型的说明：<br /><br /> ROWS <br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT|  
 |**data_space_id**|**int**|该值可以是 0 或大于 0。 值为 0 表示数据库日志文件，值大于 0 表示存储此数据文件的文件组的 ID。|  
-|**name**|**sysname**|数据库中文件的逻辑名称。|  
-|**physical_name**|**nvarchar(260)**|操作系统文件名。 如果数据库由 AlwaysOn[可读辅助副本](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)承载，则**physical_name**指示主副本数据库的文件位置。 对于可读辅助数据库的正确文件位置，请查询[sys.sysaltfiles](../../relational-databases/system-compatibility-views/sys-sysaltfiles-transact-sql.md)。|  
+|name|**sysname**|数据库中文件的逻辑名称。|  
+|**physical_name**|**nvarchar(260)**|操作系统文件名。 如果数据库由 AlwaysOn[可读辅助副本](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)承载，则**physical_name**指示主副本数据库的文件位置。 对于可读辅助数据库的正确文件位置，查询[sys.sysaltfiles](../../relational-databases/system-compatibility-views/sys-sysaltfiles-transact-sql.md)"。|  
 |State |**tinyint**|文件状态：<br /><br /> 0 = ONLINE <br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = SUSPECT <br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE <br /><br /> 7 = DEFUNCT|  
 |**state_desc**|**nvarchar(60)**|文件状态的说明：<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> 有关详细信息，请参阅[文件状态](../../relational-databases/databases/file-states.md)。|  
 |size |**int**|文件的当前大小（以 8 KB 页为单位）。<br /><br /> 0 = 不适用<br /><br /> 对于数据库快照来说，size 表示该快照可以一直用于文件的最大空间。<br /><br /> 对于 FILESTREAM 文件组容器，大小反映容器的当前已用大小。|  
@@ -68,7 +68,7 @@ ms.locfileid: "82823480"
 >  在删除或重新生成大型索引时，或者在删除或截断大型表时，[!INCLUDE[ssDE](../../includes/ssde-md.md)]将延迟实际页释放及其关联锁，直至事务提交完毕为止。 延迟的删除操作不会立即释放已分配的空间。 因此，在删除或截断大型对象后由 sys.database_files 立即返回的值可能不反映实际可用的磁盘空间。  
   
 ## <a name="permissions"></a>权限  
- 要求 **公共** 角色具有成员身份。  有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
+ 要求 **公共** 角色具有成员身份。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
 
 ## <a name="examples"></a>示例  
 以下语句将返回每个数据库文件的名称、文件大小和空白量。

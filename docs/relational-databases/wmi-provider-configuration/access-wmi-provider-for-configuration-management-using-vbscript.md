@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f3c5d981-eaa3-4d34-9b91-37e42636aa81
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fd515a60802f429611c1ae272216fac93642093e
-ms.sourcegitcommit: bf5e9cb3a2caa25d0a37f401b3806b7baa5adea8
+ms.openlocfilehash: fd1633699f6035d03066bcbd38f6ce3882b9cb68
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85295450"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784679"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-vbscript"></a>使用 VBScript 访问用于配置管理的 WMI 提供程序
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
   本部分介绍如何创建一个 VBScript 程序，用于列出 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 计算机上运行的已安装实例的版本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
  代码示例列出了运行在计算机上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例及其版本。  

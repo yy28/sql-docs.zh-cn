@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: f2285199-97ad-473c-a52d-270044dd862b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dc4f44e1b1d935f1abbd49532149edf078f7d1f7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7df586e9459e1a0e4bd141718c76bb4042a8f40b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823498"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784981"
 ---
 # <a name="sysdatabase_mirroring_endpoints-transact-sql"></a>sys.database_mirroring_endpoints (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的数据库镜像端点对应一行。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "82823498"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**\<继承列>**|-|从**sys.databases**中继承列（有关详细信息，请参阅[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)）。|  
+|**\<inherited columns>**|-|从**sys.databases**中继承列（有关详细信息，请参阅[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)）。|  
 |**role**|**tinyint**|镜像角色，为以下值之一：<br /><br /> **0** = 无<br /><br /> **1** = 伙伴<br /><br /> **2** = 见证服务器<br /><br /> **3** = 全部<br /><br /> 注意：此值仅适用于数据库镜像。|  
 |**role_desc**|**nvarchar(60)**|镜像角色的说明，为以下值之一：<br /><br /> **NONE**<br /><br /> **PARTNER**<br /><br /> **见证**<br /><br /> **ALL**<br /><br /> 注意：此值仅适用于数据库镜像。|  
 |**is_encryption_enabled**|**bit**|**1**表示启用了加密。<br /><br /> **0**表示禁用加密。|  
@@ -47,7 +47,7 @@ ms.locfileid: "82823498"
 |**connection_auth_desc**|**Nvarchar (60)**|连接到此端点所需的身份验证类型的说明，为以下值之一：<br /><br /> NTLM<br /><br /> KERBEROS<br /><br /> NEGOTIATE<br /><br /> CERTIFICATE<br /><br /> NTLM、CERTIFICATE<br /><br /> KERBEROS、CERTIFICATE<br /><br /> NEGOTIATE、CERTIFICATE<br /><br /> CERTIFICATE、NTLM<br /><br /> CERTIFICATE、KERBEROS<br /><br /> CERTIFICATE、NEGOTIATE|  
 |**certificate_id**|**int**|身份验证所用证书的 ID（如果有）。<br /><br /> 0 = 使用 Windows 身份验证。|  
 |**encryption_algorithm**|**tinyint**|加密算法，为以下值之一：<br /><br /> **0** -无<br /><br /> **1** -RC4<br /><br /> **2** -AES<br /><br /> **3** -无，RC4<br /><br /> **4** -无、AES<br /><br /> **5** -RC4、AES<br /><br /> **6** -AES、RC4<br /><br /> **7** -无、RC4、AES<br /><br /> **8** -无、AES、RC4|  
-|**encryption_algorithm_desc**|**nvarchar(60)**|加密算法的说明，为以下值之一：<br /><br /> 无<br /><br /> RC4<br /><br /> AES<br /><br /> NONE, RC4<br /><br /> NONE, AES<br /><br /> RC4, AES<br /><br /> AES, RC4<br /><br /> NONE, RC4, AES<br /><br /> NONE, AES, RC4|  
+|**encryption_algorithm_desc**|**nvarchar(60)**|加密算法的说明，为以下值之一：<br /><br /> NONE<br /><br /> RC4<br /><br /> AES<br /><br /> NONE, RC4<br /><br /> NONE, AES<br /><br /> RC4, AES<br /><br /> AES, RC4<br /><br /> NONE, RC4, AES<br /><br /> NONE, AES, RC4|  
   
 ## <a name="remarks"></a>备注  
   
@@ -59,7 +59,7 @@ ms.locfileid: "82823498"
   
 ## <a name="see-also"></a>另请参阅  
  [在添加或修改可用性副本时指定终结点 URL &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)   
- [sys. availability_replicas &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)   
+ [sys.availability_replicas (Transact-SQL)](../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)   
  [sys. database_mirroring &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)   
  [sys. database_mirroring_witnesses &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   
  [数据库镜像端点 &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   

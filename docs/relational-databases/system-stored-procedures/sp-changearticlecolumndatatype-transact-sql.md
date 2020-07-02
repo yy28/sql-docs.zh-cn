@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0db80e08-fb77-4d0c-aa41-455b13ffa9b4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: aa069ffe0d4ce677542ac714b19475aa3930f290
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 27a3c7b3f36b6bb4948b327cb7c9a3287f302f79
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833439"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783036"
 ---
 # <a name="sp_changearticlecolumndatatype-transact-sql"></a>sp_changearticlecolumndatatype (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   更改 Oracle 发布的项目列数据类型映射。 此存储过程在分发服务器上的任何数据库中执行。  
   
@@ -46,7 +46,7 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
     [ , [ @publisher = ] 'publisher'  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publication = ] 'publication'`Oracle 发布的名称。 *发布*为**sysname**，无默认值。  
   
 `[ @article = ] 'article'`项目的名称。 *项目*是**sysname**，无默认值。  

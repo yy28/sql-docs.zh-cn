@@ -18,15 +18,15 @@ ms.assetid: 5376f6fe-9508-439a-8c66-778d77f19ac3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d26f288c857cf44a932a91b250074c36453e2482
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1be4e981448e0c50815e5bf4612ce20feb8e6975
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73782973"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774309"
 ---
 # <a name="bcp_columns"></a>bcp_columns
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   用于设置在以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作为源或目标执行大容量复制时所用的用户文件中找到的列的总数。 可以使用[bcp_setbulkmode](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setbulkmode.md) ，而不是 bcp_columns 和[bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)。  
   
@@ -39,12 +39,12 @@ RETCODE bcp_columns (
         INT nColumns);  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *hdbc*  
  是启用大容量复制的 ODBC 连接句柄。  
   
  *nColumns*  
- 用户文件中的列的总数。 即使您准备将数据从用户文件大容量复制到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表，并且不想复制用户文件中的所有列，仍必须将*nColumns*设置为用户文件列总数。  
+ 用户文件中的列的总数。 即使您准备将数据从用户文件大容量复制到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表，并且不想复制用户文件中的所有列，仍必须将*nColumns*设置为用户文件列总数。  
   
 ## <a name="returns"></a>返回  
  SUCCEED 或 FAIL。  

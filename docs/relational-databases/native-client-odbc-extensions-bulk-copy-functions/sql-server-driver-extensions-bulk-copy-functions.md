@@ -16,15 +16,15 @@ ms.assetid: 6526b892-1d58-4f55-8335-f09887f6ea02
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6bee3ca51a46559231242188835ff1b75624cb68
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dd07a563a80da555544100b7dca374daa4d494d2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73782054"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783367"
 ---
 # <a name="sql-server-driver-extensions---bulk-copy-functions"></a>SQL Server 驱动程序扩展 - 大容量复制函数
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   开放式数据库连接 (ODBC) 是 Microsoft Win32 应用程序编程接口，应用程序使用该接口来访问 ODBC 数据源中的数据。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序参考未提供所有 ODBC 函数调用的文字说明。 只讨论那些与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序一起使用时具有特定于驱动程序的参数或行为的函数。  
   

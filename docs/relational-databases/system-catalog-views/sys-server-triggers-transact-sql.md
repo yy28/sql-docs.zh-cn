@@ -19,30 +19,30 @@ helpviewer_keywords:
 ms.assetid: 25926ff4-9271-45bf-bc32-d5d3344bd47a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b7a0a99f46cdd3ec5d2b6b9ac96cae7a1dc5c55e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: dca09294b86e1654cab12331b2b72462dd1598f0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832698"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775216"
 ---
 # <a name="sysserver_triggers-transact-sql"></a>sys.server_triggers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   包含 object_type 为 TR 或 TA 的所有服务器级别 DDL 触发器的集合。 对于 CLR 触发器，程序集必须加载到**master**数据库中。 所有服务器级别 DDL 触发器名称存在于单个全局范围内。  
   
 |列名|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|触发器的名称。|  
-|**object_id**|**int**|对象的 ID。|  
+|name|**sysname**|触发器的名称。|  
+|object_id|**int**|对象的 ID。|  
 |**parent_class**|**tinyint**|父级的类。 始终为：<br /><br /> 100 = 服务器|  
 |**parent_class_desc**|**nvarchar(60)**|父类的说明。 始终为：<br /><br /> SERVER。|  
 |**parent_id**|**int**|对 SERVER 上的触发器，此值始终为 0。|  
-|type |**char(2)**|对象类型：<br /><br /> TA = 程序集 (CLR) 触发器<br /><br /> TR = SQL 触发器|  
+|type|**char(2)**|对象类型：<br /><br /> TA = 程序集 (CLR) 触发器<br /><br /> TR = SQL 触发器|  
 |**type_desc**|**nvarchar(60)**|对象类型的类的说明。<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
-|**create_date**|**datetime**|触发器的创建日期。|  
-|**modify_date**|**datetime**|上一次使用 ALTER 语句修改触发器的日期。|  
-|**is_ms_shipped**|**bit**|由内部 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件代表用户创建的触发器。|  
+|create_date|**datetime**|触发器的创建日期。|  
+|modify_date|**datetime**|上一次使用 ALTER 语句修改触发器的日期。|  
+|is_ms_shipped|**bit**|由内部 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件代表用户创建的触发器。|  
 |**is_disabled**|**bit**|1 = 触发器被禁用。|  
   
 ## <a name="permissions"></a>权限  

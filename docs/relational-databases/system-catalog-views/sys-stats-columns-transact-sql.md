@@ -20,21 +20,21 @@ ms.assetid: 93414d07-97e9-4501-8577-f35b8d68fbe9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 88a8dbf26dacf97638b482655307386c08d9e5b9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4da73561774e1fe2df2abd4cc51ee0a2cbcd430f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833917"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783956"
 ---
 # <a name="sysstats_columns-transact-sql"></a>sys.stats_columns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   对于属于**sys.databases**统计信息的每一列都包含一行。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|此列所属的对象的 ID。|  
+|object_id|**int**|此列所属的对象的 ID。|  
 |**stats_id**|**int**|此列所属的统计信息的 ID。<br /><br />如果统计信息对应于索引，则*stats_id*值与[sys.databases](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)目录视图中的*index_id*值相同。|  
 |**stats_column_id**|**int**|统计信息列集中从 1 开始的序号。|  
 |**column_id**|**int**|**Sys.databases**中的列的 ID。|  
