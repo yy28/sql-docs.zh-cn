@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: cc81f227-0df3-4151-bb4d-4f45ea997b71
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1fcee7ea96d97fa4334cc1837e0a839d4781618c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 21b3f78e4146051922d35faaf76c0a56e202fe3c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820179"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762733"
 ---
 # <a name="sp_update_agent_profile-transact-sql"></a>sp_update_agent_profile (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   更新复制代理所用的配置文件。 此存储过程在分发服务器上对分发数据库执行。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "82820179"
 sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @profile_id= ] profile_id  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @agent_type = ] 'agent_type'`代理的类型。 *agent_type*是**int**，没有默认值，可以是下列值之一。  
   
 |值|说明|  
@@ -45,7 +45,7 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
 |**2**|日志读取器代理。|  
 |**3**|分发代理。|  
 |**4**|合并代理。|  
-|**900**|队列读取器代理。|  
+|**9**|队列读取器代理。|  
   
 `[ @agent_id = ] 'agent_id'`代理的 ID。 *agent_id*为**int**，没有默认值。  
   

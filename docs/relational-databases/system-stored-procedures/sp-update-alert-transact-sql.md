@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a63a5e34ac0331bfe879814e4d503c4d57cc3208
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6559be1c680c45b75154cea222ddfece355f49cb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832540"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762753"
 ---
 # <a name="sp_update_alert-transact-sql"></a>sp_update_alert (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   更新现有警报的设置。  
   
@@ -61,10 +61,10 @@ sp_update_alert
      [ , [ @wmi_query = ] 'wmi_query' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @name = ] 'name'`要更新的警报的名称。 *名称*为**sysname**，无默认值。  
   
-`[ @new_name = ] 'new_name'`警报的新名称。 该名称必须是唯一的。 *new_name*的默认值为**sysname**，默认值为 NULL。  
+`[ @new_name = ] 'new_name'`警报的新名称。 此名称必须唯一。 *new_name*的默认值为**sysname**，默认值为 NULL。  
   
 `[ @enabled = ] enabled`指定是启用（**1**）还是未启用（**0**）警报。 *enabled*为**tinyint**，默认值为 NULL。 必须启用警报，才能激发警报。  
   
@@ -112,11 +112,11 @@ sp_update_alert
   
 `[ @performance_condition = ] 'performance_condition'`以 **"**_itemcomparatorvalue_**"** 格式表示的值。 *performance_condition*的默认值为**nvarchar （512）**，默认值为 NULL，其中包含这些元素。  
   
-|格式元素|说明|  
+|格式元素|描述|  
 |--------------------|-----------------|  
-|*项*|性能对象、性能计数器或计数器的命名实例|  
+|*Item*|性能对象、性能计数器或计数器的命名实例|  
 |*比较运算符*|以下运算符之一： **>** 、 **<** 、**=**|  
-|值|计数器的数值|  
+|*值*|计数器的数值|  
   
 `[ @category_name = ] 'category'`警报类别的名称。 *category 的类型*为**sysname** ，默认值为 NULL。  
   

@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 9264cf8c-92ba-45ad-b2d6-15d26d805a16
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 85552daa2dda14c6a7516c96f0f9fe6566f31111
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 385bae0bd40fd392f038ef4dd85204c853a81773
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73843899"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762633"
 ---
 # <a name="xp_msver-transact-sql"></a>xp_msver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  返回有关[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的版本信息。 **xp_msver**还会返回有关服务器的实际内部版本号和服务器环境的信息。 **Xp_msver**返回的信息可用于[!INCLUDE[tsql](../../includes/tsql-md.md)]语句、批处理、存储过程等，从而增强了与平台无关的代码的逻辑。  
+  返回有关的版本信息 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 **xp_msver**还会返回有关服务器的实际内部版本号和服务器环境的信息。 **Xp_msver**返回的信息可用于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、批处理、存储过程等，从而增强了与平台无关的代码的逻辑。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -38,18 +38,18 @@ ms.locfileid: "73843899"
 xp_msver [ optname ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *optname*  
  是选项名，可以是下列值之一。  
   
-|选项/列名|说明|  
+|选项/列名|描述|  
 |-------------------------|-----------------|  
-|**ProductName**|产品名称;例如， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
+|**ProductName**|产品名称;例如， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |**ProductVersion**|产品版本。|  
 |**语言**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的语言版本。|  
 |**平台**|运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机的操作系统名称、制造商名称以及芯片系列名称。|  
-|**备注**|有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的杂项信息。|  
-|**CompanyName**|生产 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的公司名称，例如，[!INCLUDE[msCoName](../../includes/msconame-md.md)] Corporation。|  
+|**注释**|有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的杂项信息。|  
+|**公司**|生产 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的公司名称，例如，[!INCLUDE[msCoName](../../includes/msconame-md.md)] Corporation。|  
 |**FileDescription**|操作系统。|  
 |**FileVersion**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可执行文件的版本。|  
 |**InternalName**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部名称，例如，SQLSERVR。|  

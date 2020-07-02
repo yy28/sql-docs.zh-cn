@@ -16,15 +16,15 @@ ms.assetid: e2a12050-94e4-48a3-8a48-b780d646f116
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3a2006bd85a30e9e6ef59e313ac28eebae94ce5a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d5de01f180f584efe29d2d978faa410f1f812876
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307372"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762862"
 ---
 # <a name="ibcpsessionbcpreadfmt-ole-db"></a>IBCPSession::BCPReadFmt (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   从格式化文件中读取每一列的格式信息。  
   
@@ -37,7 +37,7 @@ HRESULT BCPReadFmt(
 ```  
   
 ## <a name="remarks"></a>备注  
- 可使用 BCPReadFmt 方法从格式化文件中读取数据，其中该文件指定数据文件中的数据格式****。 此方法能够检测格式化文件的正确版本。 它可以自动检测格式化文件采用的是 xml 格式还是旧式的文本格式，并据此执行操作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端支持的格式化文件版本 OLE DB 提供程序 BCP 为版本6.0 或更高版本。  
+ 可使用 BCPReadFmt 方法从格式化文件中读取数据，其中该文件指定数据文件中的数据格式****。 此方法能够检测格式化文件的正确版本。 它可以自动检测格式化文件采用的是 xml 格式还是旧式的文本格式，并据此执行操作。 本机客户端支持的格式化文件版本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB 提供程序 BCP 为版本6.0 或更高版本。  
   
  BCPReadFmt 方法在读取格式值之后，会相应调用 [IBCPSession::BCPColumns](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) 和 [IBCPSession::BCPColFmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) 方法****。 用户不必分析格式化文件并发出上述调用。  
   
@@ -45,7 +45,7 @@ HRESULT BCPReadFmt(
   
  [IBCPSession::BCPControl](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md) 的 eOption** 参数的 BCP_OPTION_DELAYREADFMT**** 值可修改 IBCPSession::BCPReadFmt 的行为。  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  pwszFormatFile**[in]  
  包含数据文件格式值的文件的路径和文件名。  
   

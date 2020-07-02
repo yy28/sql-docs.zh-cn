@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 08bd20c8-c6be-4be2-be9f-2b5e1d7bee43
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8a3d53367412251d553aa71a8085b50421624cc7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: bb1097facd4da22b74e76c480c11011269590b39
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820186"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762756"
 ---
 # <a name="sp_unregistercustomresolver-transact-sql"></a>sp_unregistercustomresolver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   撤消注册以前注册的业务逻辑模块。 业务逻辑的形式可以是 COM 组件或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 程序集。 此存储过程在注册自定义业务逻辑的分发服务器中执行。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "82820186"
 sp_unregistercustomresolver [ @article_resolver = ] 'article_resolver'   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @article_resolver = ] 'article_resolver'`指定正在注销的自定义业务逻辑的名称。 *article_resolver*为**nvarchar （255）**，无默认值。 如果要删除的业务逻辑是 COM 组件，则该参数是此组件的友好名称。 如果业务逻辑是 .NET Framework 程序集，则该参数是此程序集的名称。  
   
 ## <a name="return-code-values"></a>返回代码值  

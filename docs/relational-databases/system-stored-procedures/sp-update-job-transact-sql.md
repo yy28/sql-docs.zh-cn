@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: cbdfea38-9e42-47f3-8fc8-5978b82e2623
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 35653ce883733b7e1b3c2969fc4e62c61ad12eb9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e92590c819e33511b00071ee8d7e7aadd5efc1d6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820178"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762695"
 ---
 # <a name="sp_update_job-transact-sql"></a>sp_update_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   更改作业的属性。  
   
@@ -55,7 +55,7 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
      [, [@automatic_post =] automatic_post ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @job_id = ] job_id`要更新的作业的标识号。 *job_id*是**uniqueidentifier**。  
   
 `[ @job_name = ] 'job_name'`作业的名称。 *job_name*为**nvarchar （128）**。  
@@ -81,7 +81,7 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
 |**0**|从不|  
 |**1**|成功时|  
 |**2**|失败时|  
-|**3**|Always|  
+|**3**|始终|  
   
 `[ @notify_level_email = ] email_level`指定在完成该作业后何时发送电子邮件。 *email_level*是**int**。*email_level*使用与*eventlog_level*相同的值。  
   

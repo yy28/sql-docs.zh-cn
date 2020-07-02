@@ -20,21 +20,21 @@ ms.assetid: bffb91a3-492c-4375-bd2a-db8fc1a3ace4
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ae066013a49aa8bc22b227bf8a9b232e9b621ae5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e90629ef357d04b4161ca87d3d3f95a6e66ec487
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825020"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760281"
 ---
 # <a name="sysparameter_xml_schema_collection_usages-transact-sql"></a>sys.parameter_xml_schema_collection_usages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   为 XML 架构验证的每个参数返回一行。  
   
  |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|此参数所属对象的 ID。|  
+|object_id|**int**|此参数所属对象的 ID。|  
 |**parameter_id**|**int**|参数的 ID。  在对象中是唯一的。|  
 |**xml_collection_id**|**int**|包含参数验证 XML 架构命名空间的 XML 架构集合的 ID。|  
   

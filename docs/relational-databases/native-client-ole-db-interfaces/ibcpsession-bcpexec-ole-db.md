@@ -16,15 +16,15 @@ ms.assetid: 0f4ebb63-cf03-4e53-846e-6c3021cde007
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 094a43032836c5b335b7d041768e828334a0b159
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ed816338d3b2f0e10160202215ebc7c99fbfb0f8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307358"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762913"
 ---
 # <a name="ibcpsessionbcpexec-ole-db"></a>IBCPSession::BCPExec (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   执行大容量复制操作。  
   
@@ -43,7 +43,7 @@ HRESULT BCPExec(
   
  BCPExec 方法是可能胜任任何时间长度的唯一大容量复制方法****。 因此，它是支持异步模式的唯一大容量复制方法。 若要使用异步模式，请在调用 BCPExec 方法之前，将特定于提供程序的会话属性 SSPROP_ASYNCH_BULKCOPY 设置为 VARIANT_TRUE****。 此属性位于 DBPROPSET_SQLSERVERSESSION 属性集中。 若要完成测试，请用相同参数调用 BCPExec 方法****。 如果大容量复制尚未完成，则 BCPExec 方法会返回 DB_S_ASYNCHRONOUS****。 它还会在 pRowsCopied 参数中返回已发送到服务器或从服务器接收的行数的状态计数**。 发送到服务器的行直到到达批的末尾时才会提交。  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  pRowsCopied**[out]  
  指向 DWORD 的指针。 BCPExec 方法用成功复制的行数填充 DWORD****。 如果将 pRowsCopied 参数设置为 NULL，则 BCPExec 方法会忽略该参数******。  
   

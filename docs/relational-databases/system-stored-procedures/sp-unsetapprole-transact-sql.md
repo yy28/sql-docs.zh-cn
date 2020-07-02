@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4c4033d3-1a34-4dfb-835d-e3293d1a442d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a1925b28a59cd629004a102c85d9a303515186c3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 700bab92fde35f26ba1ce6ca956fabd72f130e31
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820176"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762743"
 ---
 # <a name="sp_unsetapprole-transact-sql"></a>sp_unsetapprole (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   停用应用程序角色并恢复到前一个安全上下文。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "82820176"
 sp_unsetapprole @cookie   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  **\@票证**  
  指定在激活应用程序角色时创建的 Cookie。 Cookie 是[sp_setapprole &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)创建的。 **varbinary （8000）**。  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b49d40ab-7552-438b-ad67-6237dcccb75b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 24193b3474b1088a87acb5bdd15a5c5c4459f44d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 759ac2b464bbdee2a0199afe540f00c7695381a9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68140548"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764274"
 ---
 # <a name="semanticsimilaritytable-transact-sql"></a>semanticsimilaritytable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   为指定列中其内容在语义上类似于指定文档的那些文档返回具有零个、一个或多个行的表。  
   
@@ -50,7 +50,7 @@ SEMANTICSIMILARITYTABLE
   
  此名称可由 1 到 4 个部分组成，但不允许使用远程服务器名称。  
   
- **该列**  
+ **column**  
  应为其返回结果的索引列的名称。 列必须启用语义索引。  
   
  column_list   
@@ -69,7 +69,7 @@ SEMANTICSIMILARITYTABLE
   
  如果从多个列请求结果，则基于每个列返回匹配的文档。  
   
-|Column_name|类型|说明|  
+|Column_name|类型|描述|  
 |------------------|----------|-----------------|  
 |**source_column_id**|**int**|源文档中用于查找相似文档的列的 ID。<br /><br /> 有关如何在列名称和 column_id 之间相互检索对方的详细信息，请参阅 COL_NAME 和 COLUMNPROPERTY 函数。|  
 |**matched_column_id**|**int**|从中找到相似文档的列的 ID。<br /><br /> 有关如何在列名称和 column_id 之间相互检索对方的详细信息，请参阅 COL_NAME 和 COLUMNPROPERTY 函数。|  

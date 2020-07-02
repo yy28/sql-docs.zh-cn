@@ -17,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: b519a101-fa53-44be-bd55-6ea79245b5d1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 112d237781ecbe257ef0b9d8c3f4bdee37ca5bc4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a8185249a40c11a031be8206a4a1ea016ed50faa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82813528"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764235"
 ---
 # <a name="ihpublications-transact-sql"></a>IHpublications (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   每个使用当前分发服务器的非 SQL Server 发布在**IHpublications**系统表中各占一行。 此表存储在分发数据库中。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**pubid**|**int**|为发布提供唯一 ID 的标识列。|  
-|**name**|**sysname**|与发布关联的唯一名称。|  
+|name|**sysname**|与发布关联的唯一名称。|  
 |**repl_freq**|**tinyint**|复制频率：<br /><br /> **0** = 基于事务。<br /><br /> **1** = 计划的表刷新。|  
 |**status**|**tinyint**|发布的状态，可以是以下状态之一。<br /><br /> **0** = 非活动。<br /><br /> **1** = 活动。|  
 |**sync_method**|**tinyint**|同步方法包括：<br /><br /> **1** = 字符大容量复制。<br /><br /> **4** = Concurrent_c，这意味着将使用字符大容量复制，但在快照过程中不锁定表。|  

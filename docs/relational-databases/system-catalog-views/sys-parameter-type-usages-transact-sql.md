@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: af0e167b-bffb-4525-84ec-3607f9268d3d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f0302cac5c0076849132ebef7904bd0d53d09208
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 12d7ec54c16a2abdd6a99ccc9797cbb33f49b9dd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825023"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760294"
 ---
 # <a name="sysparameter_type_usages-transact-sql"></a>sys.parameter_type_usages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   为每个用户定义类型的参数返回一行。  
   
@@ -36,12 +36,12 @@ ms.locfileid: "82825023"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|此参数所属对象的 ID。|  
+|object_id|**int**|此参数所属对象的 ID。|  
 |**parameter_id**|**int**|参数的 ID。 在对象中是唯一的。|  
 |**user_type_id**|**int**|用户定义类型的 ID。<br /><br /> 若要返回类型的名称，请在此列上联接到[sys.databases](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)目录视图。|  
   
 ## <a name="permissions"></a>权限  
- 要求 **公共** 角色具有成员身份。  有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
+ 要求 **公共** 角色具有成员身份。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;Transact-sql&#41;的标量类型目录视图](../../relational-databases/system-catalog-views/scalar-types-catalog-views-transact-sql.md)   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 29e7a7d7-b9c1-414a-968a-fc247769750d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 98eaa39475b58c7fad5b20c4f6a65101d33b103d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b56b81563a693397156f0fe29fe7b3e6a430ef41
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82809609"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762789"
 ---
 # <a name="sp_trace_setstatus-transact-sql"></a>sp_trace_setstatus (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   修改指定跟踪的当前状态。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "82809609"
 sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @traceid = ] trace_id`要修改的跟踪的 ID。 *trace_id*为**int**，没有默认值。 用户使用此*trace_id*值标识、修改和控制跟踪。 有关检索*trace_id*的信息，请参阅[fn_trace_getinfo &#40;transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)。  
   
 `[ @status = ] status`指定要在跟踪上实现的操作。 *status*为**int**，没有默认值。  
@@ -65,8 +65,8 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
 |**0**|没有错误。|  
 |**1**|未知错误。|  
 |**8**|指定的状态无效。|  
-|**900**|指定的跟踪句柄无效。|  
-|**9**|内存不足。 在没有足够内存执行指定的操作时返回此代码。|  
+|**9**|指定的跟踪句柄无效。|  
+|**13**|内存不足。 在没有足够内存执行指定的操作时返回此代码。|  
   
  如果跟踪已处于指定的状态， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 则将返回**0**。  
   

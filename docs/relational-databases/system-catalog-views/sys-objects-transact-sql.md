@@ -23,15 +23,15 @@ ms.assetid: f8d6163a-2474-410c-a794-997639f31b3b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: beede3f42597a6b3c7acc6f5bc5a57bc070d0eba
-ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
+ms.openlocfilehash: e946fcfc3792d42af5cf32e9e5494bc90c8b91c9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83732685"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760326"
 ---
 # <a name="sysobjects-transact-sql"></a>sys.objects (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   在数据库内创建的每个用户定义的架构范围内的对象（包括本机编译的标量用户定义函数）都包含一行。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "83732685"
 |is_published|**bit**|对象为发布对象。|  
 |is_schema_published|**bit**|仅发布对象的架构。|  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  可以将[OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md)、 [OBJECT_NAME](../../t-sql/functions/object-name-transact-sql.md)和[OBJECTPROPERTY](../../t-sql/functions/objectproperty-transact-sql.md)（）内置函数应用于 sys.databases 中显示的对象。  
   
  此视图有一个版本，它具有与系统对象相同的架构（称为[sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)）。 还有另一个名为 " [sys. all_objects](../../relational-databases/system-catalog-views/sys-all-objects-transact-sql.md)的视图，它显示系统对象和用户对象。 所有这三个目录视图的结构都相同。  

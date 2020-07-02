@@ -19,15 +19,15 @@ ms.assetid: e4284a1b-7534-4b34-8488-b8d05ed67b8c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f88a966e2095f527f36c84498e026c1e23aaa2ab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b22b180eb2467455e4dce34906ab7481801c139d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73785225"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760742"
 ---
 # <a name="bulk-copying-from-program-variables"></a>从程序变量执行大容量复制
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   可以直接从程序变量执行大容量复制。 分配用于保存行数据的变量并调用[bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)启动大容量复制后，为每一列调用[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) ，以指定与列关联的程序变量的位置和格式。 用数据填充每个变量，然后调用[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)将一行数据发送到服务器。 重复填充变量并调用**bcp_sendrow**的过程，直到所有行都发送到服务器，然后调用[bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md)以指定操作已完成。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "73785225"
   
  **Bcp_bind**_类型_参数使用 db-library 数据类型标识符，而非 ODBC 数据类型标识符。 在 sqlncli.msi 中定义了 DB-LIBRARY 数据类型标识符，以便与 ODBC **bcp_bind**函数结合使用。  
   
- 大容量复制函数并不支持所有 ODBC C 数据类型。 例如，大容量复制函数不支持 ODBC SQL_C_TYPE_TIMESTAMP 结构，因此请使用[SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)或[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)将 odbc SQL_TYPE_TIMESTAMP 数据转换为 SQL_C_CHAR 变量。 如果随后将**bcp_bind**与 SQLCHARACTER 的*类型*参数结合使用，将变量绑定到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime**列，则大容量复制函数会将字符变量中的 timestamp 转义子句转换为正确的日期时间格式。  
+ 大容量复制函数并不支持所有 ODBC C 数据类型。 例如，大容量复制函数不支持 ODBC SQL_C_TYPE_TIMESTAMP 结构，因此请使用[SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)或[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)将 odbc SQL_TYPE_TIMESTAMP 数据转换为 SQL_C_CHAR 变量。 如果随后将**bcp_bind**与 SQLCHARACTER 的*类型*参数结合使用，将变量绑定到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime**列，则大容量复制函数会将字符变量中的 timestamp 转义子句转换为正确的日期时间格式。  
   
  下表列出了从 ODBC SQL 数据类型映射到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型时推荐使用的数据类型。  
   
@@ -107,7 +107,7 @@ GO
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不直接支持 interval 数据类型。 不过，应用程序可以将 interval 转义序列作为字符串存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 字符列中。 该应用程序可以读取它们供以后使用，但是它们无法用在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中。  
   
- 可以使用大容量复制函数将从 ODBC 数据源中读取的数据快速加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中。 使用[SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)将结果集的列绑定到程序变量，然后使用**bcp_bind**将相同的程序变量绑定到大容量复制操作。 然后，调用[SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)或**SQLFetch**将数据从 ODBC 数据源提取到程序变量中，并调用[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)将数据从程序变量大容量复制到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+ 可以使用大容量复制函数将从 ODBC 数据源中读取的数据快速加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中。 使用[SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)将结果集的列绑定到程序变量，然后使用**bcp_bind**将相同的程序变量绑定到大容量复制操作。 然后，调用[SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)或**SQLFetch**将数据从 ODBC 数据源提取到程序变量中，并调用[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)将数据从程序变量大容量复制到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
  应用程序可以在任何需要更改最初在**bcp_bind** _pData_参数中指定的数据变量的地址时使用[bcp_colptr](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md)函数。 应用程序可以在任何需要更改最初在**bcp_bind**_cbData_参数中指定的数据长度时使用[bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)函数。  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5bb027e5-5279-487b-9c33-5f402987253c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f862824d6fe4e35eef25cbca949971276f1d0acd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 47fcad03fb8329c3d39150aa0aaf9b5688e0456f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827291"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764246"
 ---
 # <a name="ihcolumns-transact-sql"></a>IHcolumns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   每个已发布的列在**IHcolumns**系统表中各占一行。 该表用来定义非 SQL Server 发布服务器的列数据类型在发布时如何进行表示，它实际上是在非 SQL Server 数据库管理系统 (DBMS) 和 SQL Server 之间对数据类型进行映射。 此表存储在分发数据库中。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "82827291"
 |-----------------|---------------|-----------------|  
 |**column_id**|**int**|标识已发布列。|  
 |**publishercolumn_id**|**int**|将已发布的列与存储在[IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md)系统表中的列元数据相关联。|  
-|**name**|**sysname**|指定列名。|  
+|name|**sysname**|指定列名。|  
 |**article_id**|**int**|标识列所属的项目。|  
 |**column_ordinal**|**int**|按顺序标识列。|  
 |**mapped_type**|**tinyint**|订阅服务器中目标列的列数据类型。|  

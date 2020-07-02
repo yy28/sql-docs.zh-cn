@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c96a6c5e-f3ca-4c1e-b64b-0d8ef6986af8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7fdce8d2fad56d56e13343bc3397353e72d3be1b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: cc3e3af8e1b2333f68ea43fe9cacdfb4c3d39e40
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82809516"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762782"
 ---
 # <a name="sp_unbindefault-transact-sql"></a>sp_unbindefault (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   在当前数据库中为列或者别名数据类型解除（删除）默认值绑定。  
   
@@ -42,7 +42,7 @@ sp_unbindefault [ @objname = ] 'object_name'
      [ , [ @futureonly = ] 'futureonly_flag' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @objname = ] 'object_name'`要取消其默认值绑定的表和列或别名数据类型的名称。 *object_name*为**nvarchar （776）**，无默认值。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 尝试先将两部分标识符解析为列名，再解析为别名数据类型。  
   
  解除别名数据类型的默认值绑定时，也同时解除数据类型相同且具有相同默认值的任何列的默认值绑定。 属于该数据类型并且直接绑定默认值的类将不受影响。  

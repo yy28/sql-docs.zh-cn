@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 40a6b569dc469f216d54e615fadd506e968db981
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 63e7422cc26106ab6a9eadd9232ed9d168afd691
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82807489"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762655"
 ---
 # <a name="sysmail_help_queue_sp-transact-sql"></a>sysmail_help_queue_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   数据库邮件中具有两个队列：邮件队列和状态队列。 邮件队列存储正在等待发送的邮件项。 状态队列存储已发送项的状态。 此存储过程允许查看邮件队列的状态或状态队列的状态。 如果未指定参数** \@ queue_type** ，则存储过程将为每个队列返回一行。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "82807489"
 sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @queue_type = ] 'queue_type'`可选参数删除指定为*queue_type*的类型的电子邮件。 *queue_type*为**nvarchar （6）** ，无默认值。 有效条目为 "**邮件**" 和 "**状态**"。  
   
 ## <a name="return-code-values"></a>返回代码值  

@@ -23,15 +23,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fa89a799711c354da1ba61b27653ad25c046200a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1123009c0bfd73b1012476d30b6d633ee038f18c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68070455"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760370"
 ---
 # <a name="sysfulltext_stopwords-transact-sql"></a>sys.fulltext_stopwords (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   对于数据库中所有非索引字表中的每个非索引字，均包含对应的一行。  
  
@@ -39,7 +39,7 @@ ms.locfileid: "68070455"
 |-----------------|---------------|-----------------|  
 |**stoplist_id**|**int**|**stopword** 所属非索引字表的 ID。 此 ID 在数据库中是唯一的。|  
 |**非索引字**|**nvarchar （64）**|可视为非索引字匹配项的字词。|  
-|**语言**|**sysname**|与区域设置标识符（**LCID**）的值相对应的[fulltext_languages](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)中的别名值，或者是数字 LCID 的字符串表示形式。|  
+|language|**sysname**|与区域设置标识符（**LCID**）的值相对应的[fulltext_languages](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)中的别名值，或者是数字 LCID 的字符串表示形式。|  
 |**language_id**|**int**|用于断字的 LCID。|  
   
 ## <a name="permissions"></a>权限  

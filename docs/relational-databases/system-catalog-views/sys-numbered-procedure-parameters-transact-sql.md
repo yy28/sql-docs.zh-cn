@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: a441d46d-1f30-41c2-8d94-e9442f59786e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 420fc9d8de1197e28f4d1e55e2de59abcd2f4218
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 91deff0aa45038c22ece0f34b02314c2bf8e4d14
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825064"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760338"
 ---
 # <a name="sysnumbered_procedure_parameters-transact-sql"></a>sys.numbered_procedure_parameters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   带编号过程的每个参数都在表中对应一行。 当您创建带编号的存储过程时，基过程的编号为 1。 所有后续过程的编号依次为 2、3 等。 **sys. numbered_procedure_parameters**包含为2和更高编号的所有后续过程的参数定义。 该视图不显示基存储过程（编号 = 1）的参数。 基存储过程类似于无编号的存储过程。 因此，它的参数在[sys. parameters （transact-sql）](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)中表示。  
   
@@ -39,16 +39,16 @@ ms.locfileid: "82825064"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|此参数所属对象的 ID。|  
+|object_id|**int**|此参数所属对象的 ID。|  
 |**procedure_number**|**smallint**|对象中这种过程的数目（2 或更多）。|  
-|**name**|**sysname**|参数的名称。 在**procedure_number**中是唯一的。|  
+|name|**sysname**|参数的名称。 在**procedure_number**中是唯一的。|  
 |**parameter_id**|**int**|参数的 ID。 在**procedure_number**中是唯一的。|  
 |**system_type_id**|**tinyint**|参数的系统类型的 ID。|  
 |**user_type_id**|**int**|由用户定义的由参数定义的类型 ID。|  
 |**max_length**|**smallint**|参数的最大长度（字节）。<br /><br /> -1 = 列数据类型为 varchar(max)、nvarchar(max) 或 varbinary(max)。|  
 |**精度**|**tinyint**|如果参数是基于数值的，则表示参数的精度；否则为 0。|  
 |**scale**|**tinyint**|如果参数是基于数值的，则表示参数的小数位数；否则为 0。|  
-|**is_output**|**bit**|1 = 输出或返回参数；否则为 0|  
+|is_output|**bit**|1 = 输出或返回参数；否则为 0|  
 |**is_cursor_ref**|**bit**|1 = 参数是游标引用参数。|  
   
 > [!NOTE]  
