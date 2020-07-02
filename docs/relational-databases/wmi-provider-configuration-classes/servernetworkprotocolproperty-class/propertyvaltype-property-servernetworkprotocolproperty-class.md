@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: fbd42e8e-0642-4a19-b3c8-6ce88345145f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b2a74e515d2dddd58242e4760e3dd33c2c5031f5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 850bf40605701da98a5ecf5ce5a95cf276aa6e39
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659932"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727054"
 ---
 # <a name="propertyvaltype-property-servernetworkprotocolproperty-class"></a>PropertyValType 属性（ServerNetworkProtocolProperty 类）
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   获取存储在所引用属性中的值的数据类型。  
   
 ## <a name="syntax"></a>语法  
@@ -37,7 +37,7 @@ object.PropertyValType [= value]
   
 ## <a name="parts"></a>组成部分  
  *object*  
- 一个表示实例[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]上的网络协议属性的[ServerNetworkProtocolProperty 类](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md)对象。  
+ 一个表示实例上的网络协议属性的[ServerNetworkProtocolProperty 类](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md)对象 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  指定属性值的数据类型的**uint32**值。 如果是字符串值类型，则返回 0；如果是数值类型，则返回 1。  

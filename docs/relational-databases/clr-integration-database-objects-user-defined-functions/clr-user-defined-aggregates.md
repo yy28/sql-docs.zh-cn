@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: bad9b7e8-5967-4afa-8dc8-6d840faf9372
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9267e1e1e0b051dbbd8581b694aafacd2e5ce8a9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6775e9f4bda98f970fd5cdb666fb0bfdb8c1ac10
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488271"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727872"
 ---
 # <a name="clr-user-defined-aggregates"></a>CLR 用户定义聚合
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  聚合函数对一组值执行计算，并返回单个值。 传统上[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，只支持对一组输入标量值执行的内置聚合函数（如**SUM**或**MAX**），并从该集生成单个聚合值。 通过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 公共语言运行时 (CLR) 的集成，现在开发人员能够利用托管代码创建自定义聚合函数，并且使这些函数可供 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或其他托管代码访问。  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  聚合函数对一组值执行计算，并返回单个值。 传统 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上，只支持对一组输入标量值执行的内置聚合函数（如**SUM**或**MAX**），并从该集生成单个聚合值。 通过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 公共语言运行时 (CLR) 的集成，现在开发人员能够利用托管代码创建自定义聚合函数，并且使这些函数可供 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或其他托管代码访问。  
   
  下表列出了本节的主题。  
   

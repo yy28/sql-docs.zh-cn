@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1972670a39dbd0fdb3f12b58df5116a83bf0a58d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fc69a273dfa331e558f076429be95c2462b551d8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827636"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730045"
 ---
 # <a name="sp_help_job-transact-sql"></a>sp_help_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   返回有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理用来在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中执行自动活动的作业的信息。  
   
@@ -51,7 +51,7 @@ sp_help_job { [ @job_id = ] job_id
      [ , [ @description = ] 'description_pattern' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @job_id = ] job_id`作业标识号。 *job_id*的值为**uniqueidentifier**，默认值为 NULL。  
   
 `[ @job_name = ] 'job_name'`作业的名称。 *job_name*的默认值为**sysname**，默认值为 NULL。  
@@ -81,7 +81,7 @@ sp_help_job { [ @job_id = ] job_id
   
 `[ @execution_status = ] status`作业的执行状态。 *状态*为**int**，默认值为 NULL，可以是下列值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**0**|只返回那些空闲的或挂起的作业。|  
 |**1**|正在执行。|  
@@ -91,7 +91,7 @@ sp_help_job { [ @job_id = ] job_id
 |**5**|状态.|  
 |**7**|正在执行完成操作。|  
   
-`[ @date_comparator = ] 'date_comparison'`用于比较*date_created*和*date_modified*的比较运算符。 *date_comparison*为**char （1）**，可以为 =、 \< 或 >。  
+`[ @date_comparator = ] 'date_comparison'`用于比较*date_created*和*date_modified*的比较运算符。 *date_comparison*为**char （1）**，可以为 =、 \<, or > 。  
   
 `[ @date_created = ] date_created`作业的创建日期。 *date_created*为**datetime**，默认值为 NULL。  
   
@@ -109,7 +109,7 @@ sp_help_job { [ @job_id = ] job_id
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|作业的唯一 ID。|  
 |**originating_server**|**nvarchar(30)**|作业来自的服务器的名称。|  
-|**name**|**sysname**|作业的名称。|  
+|name|**sysname**|作业的名称。|  
 |**能够**|**tinyint**|指示是否启用要执行的作业。|  
 |**2008**|**nvarchar(512)**|对作业的说明。|  
 |**start_step_id**|**int**|执行作业的起始步骤的 ID。|  
@@ -138,7 +138,7 @@ sp_help_job { [ @job_id = ] job_id
 |**has_step**|**int**|作业具有的作业步骤数。|  
 |**has_schedule**|**int**|作业具有的作业计划数。|  
 |**has_target**|**int**|作业具有的目标服务器数。|  
-|type |**int**|作业的类型。<br /><br /> 1 = 本地作业。<br /><br /> **2** = 多服务器作业。<br /><br /> **0** = 作业没有目标服务器。|  
+|**type**|**int**|作业的类型。<br /><br /> 1 = 本地作业。<br /><br /> **2** = 多服务器作业。<br /><br /> **0** = 作业没有目标服务器。|  
   
  如果指定*job_id*或*job_name* ， **sp_help_job**将为作业步骤、作业计划和作业目标服务器返回这些附加的结果集。  
   
@@ -156,7 +156,7 @@ sp_help_job { [ @job_id = ] job_id
 |**on_success_step_id**|**int**|如果**on_success_action**为**4**，则指示要执行的下一步。|  
 |**on_fail_action**|**nvarchar(4000)**|步骤失败时所采取的操作。 值与**on_success_action**的值相同。|  
 |**on_fail_step_id**|**int**|如果**on_fail_action**为**4**，则指示要执行的下一步。|  
-|**服务**|**sysname**|保留。|  
+|服务器|**sysname**|保留。|  
 |**database_name**|**sysname**|对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 步骤，这是将在其中执行命令的数据库。|  
 |**database_user_name**|**sysname**|对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 步骤，这是命令执行时所在的数据库用户上下文。|  
 |**retry_attempts**|**int**|在认定步骤已经失败之前，应该对命令进行重试的最大次数（如果命令没有成功）。|  
@@ -199,7 +199,7 @@ sp_help_job { [ @job_id = ] job_id
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|目标服务器的标识符。|  
-|server_name |**nvarchar(30)**|目标服务器的计算机名称。|  
+|server_name|**nvarchar(30)**|目标服务器的计算机名称。|  
 |**enlist_date**|**datetime**|将目标服务器登记到主服务器的日期。|  
 |**last_poll_date**|**datetime**|目标服务器上一次轮询主服务器的日期。|  
 |**last_run_date**|**int**|作业上一次在此目标服务器上开始执行的日期。|  

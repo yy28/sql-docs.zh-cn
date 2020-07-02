@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 045d3cd1-712b-44b7-a56a-c9438d4077b9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b89dcde2aab76fcb6760f2788503485ef42182ac
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: e627296cecad35b21c84b928f4474f6302e9214d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807887"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725743"
 ---
 # <a name="sp_repldone-transact-sql"></a>sp_repldone (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   更新用于标识服务器的最后一个已分发事务的记录。 此存储过程在发布服务器上对发布数据库执行。  
   
@@ -43,7 +43,7 @@ sp_repldone [ @xactid= ] xactid
     [ , [ @reset= ] reset ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @xactid = ] xactid`服务器最后一次分布式事务的第一条记录的日志序列号（LSN）。 *xactid*为**binary （10）**，无默认值。  
   
 `[ @xact_seqno = ] xact_seqno`服务器最后一次分布式事务的最后一条记录的 LSN。 *xact_seqno*为**binary （10）**，无默认值。  
@@ -57,7 +57,7 @@ sp_repldone [ @xactid= ] xactid
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  **sp_repldone**用于事务复制。  
   
  日志读取器进程使用**sp_repldone**来跟踪已分发的事务。  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1546e0ae-5a99-4e01-9eb9-d147fa65884c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 812be95c9584e75d8452c946d1935625468a79a1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 70c59031b56b4ec7a5f670ecc3a9c5692181d8d2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828331"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733189"
 ---
 # <a name="sp_helpfile-transact-sql"></a>sp_helpfile (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   返回与当前数据库关联的文件的物理名称及属性。 使用此存储过程确定附加到服务器或从服务器分离的文件名。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "82828331"
 sp_helpfile [ [ @filename= ] 'name' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @filename = ] 'name'`当前数据库中任意文件的逻辑名称。 *名称*为**sysname**，默认值为 NULL。 如果未指定*name* ，则返回当前数据库中所有文件的属性。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -48,9 +48,9 @@ sp_helpfile [ [ @filename= ] 'name' ]
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|逻辑文件名。|  
+|name|**sysname**|逻辑文件名。|  
 |**fileid**|**smallint**|文件的数字标识符。 如果指定了*名称*，则不会返回 *。*|  
-|**名字**|**nchar （260）**|物理文件名。|  
+|**filename**|**nchar （260）**|物理文件名。|  
 |**filegroup**|**sysname**|文件所属的文件组。<br /><br /> NULL = 文件为日志文件。 它决不是文件组的一部分。|  
 |size |**nvarchar （15）**|文件大小 (KB)。|  
 |**maxsize**|**nvarchar （15）**|文件大小可达到的最大值。 此字段中的 UNLIMITED 值表示文件可以一直增长到磁盘变满为止。|  

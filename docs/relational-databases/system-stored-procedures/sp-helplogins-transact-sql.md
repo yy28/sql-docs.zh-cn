@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c26bf0ff225a593a6427402fc15543edbfc15637
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 188013bc5566ea0423d4e395354b4cdfc2465fd0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82818131"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733154"
 ---
 # <a name="sp_helplogins-transact-sql"></a>sp_helplogins (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   提供有关每个数据库中的登录名以及与其相关的用户的信息。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "82818131"
 sp_helplogins [ [ @LoginNamePattern = ] 'login' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @LoginNamePattern = ] 'login'`是登录名。 login 的数据类型为 sysname，默认值为 NULL******。 如果指定，则必须存在*登录名*。 如果未指定*login* ，则返回有关所有登录名的信息。  
   
 ## <a name="return-code-values"></a>返回代码值  

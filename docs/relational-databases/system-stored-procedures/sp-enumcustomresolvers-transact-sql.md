@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 81bd0d3a-48dc-42b1-b662-c630f61fc630
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5282daf1aa889742e6926fe5b97632b664499bc4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 703a301047f029dbd0ba1d67f55aa0e3ce01ff55
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831102"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731687"
 ---
 # <a name="sp_enumcustomresolvers-transact-sql"></a>sp_enumcustomresolvers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   返回所有可用的业务逻辑处理程序以及在分发服务器上注册的自定义冲突解决程序的列表。 此存储过程在发布服务器的任何数据库中执行。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "82831102"
 sp_enumcustomresolvers [ [ @distributor =] 'distributor']  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @distributor = ] 'distributor'`自定义冲突解决程序所在的分发服务器的名称。 *分发服务器*的默认值为**sysname**，默认值为 NULL。 *不推荐使用此参数，该参数将从以后的版本中删除。*  
   
 ## <a name="result-sets"></a>结果集  

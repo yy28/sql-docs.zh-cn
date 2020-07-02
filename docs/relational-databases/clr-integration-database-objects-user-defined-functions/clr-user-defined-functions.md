@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 6f7491f1-9a46-4146-ae09-056248634de2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0da524de3a21a97daf6e3b2d2e0277631a4467c0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fe481b1a49f8eba69bbf913e49f398c86244b952
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488262"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727858"
 ---
 # <a name="clr-user-defined-functions"></a>CLR 用户定义函数
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   用户定义函数是可采用参数、执行计算或其他操作并返回结果的例程。 从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 开始，可以使用任何 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 编程语言（例如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET 或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#）编写用户定义函数。  
   
  有两种类型的函数：标量，用于返回单个值；表值，用于返回一组行。  

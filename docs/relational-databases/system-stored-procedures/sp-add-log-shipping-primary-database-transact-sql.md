@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 69531611-113f-46b5-81a6-7bf496d0353c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5af11c14c7b0bf3b8e32d503c4b77e59623ce9ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ee4fd4f6b8ea67fd9e1b973fd2b283a10d525437
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68140449"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731778"
 ---
 # <a name="sp_add_log_shipping_primary_database-transact-sql"></a>sp_add_log_shipping_primary_database (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   设置日志传送配置（包括备份作业、本地监视记录及远程监视记录）的主数据库。  
   
@@ -54,7 +54,7 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @database = ] 'database'`日志传送主数据库的名称。 *数据库*为**sysname**，无默认值，且不能为 NULL。  
   
 `[ @backup_directory = ] 'backup_directory'`主服务器上备份文件夹的路径。 *backup_directory*为**nvarchar （500）**，无默认值，且不能为 NULL。  
@@ -71,7 +71,7 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
   
  1 = Windows 身份验证。  
   
- 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。 *monitor_server_security_mode*是**bit** ，并且不能为 NULL。  
+ 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。 *monitor_server_security_mode*是**bit** ，并且不能为 NULL。  
   
 `[ @monitor_server_login = ] 'monitor_server_login'`用于访问监视服务器的帐户的用户名。  
   
@@ -85,7 +85,7 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
   
 `[ @history_retention_period = ] history_retention_period`将保留历史记录的时间长度（分钟）。 *history_retention_period*的值为**int**，默认值为 NULL。 如果未指定值，则使用值 14420。  
   
-`[ @backup_job_id = ] backup_job_id OUTPUT`与[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]主服务器上的备份作业相关联的代理作业 ID。 *backup_job_id*为**uniqueidentifier** ，且不能为 NULL。  
+`[ @backup_job_id = ] backup_job_id OUTPUT`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]与主服务器上的备份作业相关联的代理作业 ID。 *backup_job_id*为**uniqueidentifier** ，且不能为 NULL。  
   
 `[ @primary_id = ] primary_id OUTPUT`日志传送配置的主数据库 ID。 *primary_id*为**uniqueidentifier** ，且不能为 NULL。  
   
@@ -146,7 +146,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [关于 &#40;SQL Server 的日志传送&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

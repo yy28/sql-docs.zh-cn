@@ -18,22 +18,22 @@ helpviewer_keywords:
 ms.assetid: d5cd30bb-89fd-4814-a7e8-9074f043f90f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 05f09d6c94c17cb54f92d6d5f786515dc229b86c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fbfbf38e084d147e13705ae76ac5367b697c5fe6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830912"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730139"
 ---
 # <a name="syscollector_collector_types-transact-sql"></a>syscollector_collector_types (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   提供有关收集项的收集器类型的信息。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**collector_type_uid**|**uniqueidentifer**|收集类型的 GUID。 不可为 null。|  
-|**name**|**sysname**|收集类型的名称。 不可为 null。|  
+|name|**sysname**|收集类型的名称。 不可为 null。|  
 |**parameter_schema**|**xml**|描述指定收集器类型的配置情况的 XML 架构。 此 XML 架构用于验证与特定收集项实例相关联的实际 XML 配置。 可以为 Null。|  
 |**parameter_formatter**|**xml**|确定用于转换 XML 的模板，以便在收集组属性页中使用。 可以为 Null。|  
 |**collection_package_id**|**uniqueidentifer**|收集包的 GUID。 不可为 null。|  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: a279ecd1-a59c-4315-9f08-bf221f00a465
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d8f55a496a5d5fc4a0a0c499056eff5e00bd1ea8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c24af2de8be7656ece793c17c051ff59ae5c8fa1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833808"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730153"
 ---
 # <a name="syscollector_collection_items-transact-sql"></a>syscollector_collection_items (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   返回有关收集组中的项的信息。  
   

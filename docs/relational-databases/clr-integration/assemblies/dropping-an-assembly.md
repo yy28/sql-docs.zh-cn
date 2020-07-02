@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 03481034-dc91-4488-ab24-ba44243e2690
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 48fca2d5a255193800fed39e9869e1be231229a9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 94482a0776f69dd3477c298b519dc5b47fa7dcd1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81485523"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727648"
 ---
 # <a name="dropping-an-assembly"></a>删除程序集
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   使用 CREATE ASSEMBLY 语句在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中注册的程序集可以进行删除（如果不再需要程序集所提供的功能）。 删除程序集时，将从数据库中删除程序集和它的所有关联文件，如调试文件。 若要删除程序集，可按照如下语法使用 DROP ASSEMBLY 语句：  
   
 ```  
@@ -44,7 +44,7 @@ DROP ASSEMBLY MyDotNETAssembly
 -   在数据库中使用 WITH SCHEMABINDING 子句创建了使用 UDT 变量或参数的函数、存储过程或触发器。  
   
 ### <a name="finding-udt-dependencies"></a>查找 UDT 依赖关系  
- 在执行 DROP TYPE 语句之前，首先必须删除所有依赖对象。 下面[!INCLUDE[tsql](../../../includes/tsql-md.md)]的查询查找使用**AdventureWorks**数据库中的 UDT 的所有列和参数。  
+ 在执行 DROP TYPE 语句之前，首先必须删除所有依赖对象。 下面的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 查询查找使用**AdventureWorks**数据库中的 UDT 的所有列和参数。  
   
 ```  
 USE Adventureworks;  

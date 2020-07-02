@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 139e834f-1988-4b4d-ac81-db1f89ea90e8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7f12da71985fc0d2629c28500c4561eb1495c0ca
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 227b83f8171122bfd5c7f328628ccb07c359de87
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820459"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731643"
 ---
 # <a name="sp_getqueuedrows-transact-sql"></a>sp_getqueuedrows (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   在订阅服务器上检索在队列中有未决更新的行。 此存储过程在订阅服务器的订阅数据库中执行。  
   
@@ -38,7 +38,7 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
     [ , [ @tranid = ] 'transaction_id' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @tablename = ] 'tablename'`表的名称。 *tablename*的值为**sysname**，无默认值。 该表必须是排队订阅的一部分。  
   
 `[ @owner = ] 'owner'`是订阅所有者。 *所有者*为**sysname**，默认值为 NULL。  
@@ -53,7 +53,7 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**操作**|**nvarchar （10）**|同步发生时采取的操作类型。<br /><br /> INS= 插入 <br /><br /> DEL = 删除<br /><br /> UPD = 更新|  
+|**Action**|**nvarchar （10）**|同步发生时采取的操作类型。<br /><br /> INS= 插入 <br /><br /> DEL = 删除<br /><br /> UPD = 更新|  
 |**Tranid**|**nvarchar （70）**|执行命令的事务 ID。|  
 |**table column1...n**||*Tablename*中指定的表的每一列的值。|  
 |**msrepl_tran_version**|**uniqueidentifier**|该列用于跟踪对已复制数据的更改以及在发布服务器上执行冲突检测。 该列自动添加到表中。|  

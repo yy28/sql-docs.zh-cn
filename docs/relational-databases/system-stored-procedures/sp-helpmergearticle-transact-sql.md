@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e01a1c9c96813c14827ca2f941c84d151c147195
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 04d1397494aec0d35e0ecfa9debcb6f844e6ebc2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82818054"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733132"
 ---
 # <a name="sp_helpmergearticle-transact-sql"></a>sp_helpmergearticle (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   返回有关项目的信息。 此存储过程用于在发布服务器上对发布数据库执行，或在正重新发布的订阅服务器上对订阅数据库执行。  
   
@@ -37,7 +37,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
     [ , [ @article= ] 'article' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publication = ] 'publication'`要检索其信息的发布的名称。 *发布*为**sysname**，默认值为 **%** ，它返回当前数据库的所有发布中包含的所有合并项目的相关信息。  
   
 `[ @article = ] 'article'`要返回其信息的项目的名称。 *项目*是**sysname**，默认值为 **%** ，它返回给定发布中所有合并项目的相关信息。  
@@ -47,7 +47,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|项目标识符。|  
-|**name**|**sysname**|项目的名称。|  
+|name|**sysname**|项目的名称。|  
 |**source_owner**|**sysname**|源对象所有者的名称。|  
 |**source_object**|**sysname**|从其中添加项目的源对象的名称。|  
 |**sync_object_owner**|**sysname**|定义发布项目的视图所有者的名称。|  
@@ -60,7 +60,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 |**subset_filterclause**|**nvarchar(1000)**|用于指定水平筛选的 WHERE 子句。|  
 |**pre_creation_command**|**tinyint**|预创建方法，可以为以下值之一：<br /><br /> **0** = 无<br /><br /> **1** = 删除<br /><br /> **2** = 删除<br /><br /> **3** = 截断|  
 |**schema_option**|**binary （8）**|项目的架构生成选项位图。 有关此位图选项的信息，请参阅[sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)或[sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。|  
-|type |**smallint**|项目类型，可以为以下值之一：<br /><br /> **10** = 表<br /><br /> **32** = 存储过程<br /><br /> **64** = 视图或索引视图<br /><br /> **128** = 用户定义函数<br /><br /> **160** = 仅限同义词架构|  
+|**type**|**smallint**|项目类型，可以为以下值之一：<br /><br /> **10** = 表<br /><br /> **32** = 存储过程<br /><br /> **64** = 视图或索引视图<br /><br /> **128** = 用户定义函数<br /><br /> **160** = 仅限同义词架构|  
 |**column_tracking**|**int**|列级跟踪的设置;其中， **1**表示列级跟踪处于开启状态， **0**表示列级跟踪处于关闭状态。|  
 |**resolver_info**|**nvarchar(255)**|项目冲突解决程序名。|  
 |**vertical_partition**|**bit**|如果项目已垂直分区，则为;其中， **1**表示项目已垂直分区， **0**表示不表示项目。|  
@@ -68,7 +68,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 |**identity_support**|**int**|如果启用自动标识范围处理，则为;，其中**1**是启用的， **0**是禁用的。|  
 |**pub_identity_range**|**bigint**|分配新标识值时要使用的范围大小。 有关详细信息，请参阅[复制标识列](../../relational-databases/replication/publish/replicate-identity-columns.md)的 "合并复制" 部分。|  
 |**identity_range**|**bigint**|分配新标识值时要使用的范围大小。 有关详细信息，请参阅[复制标识列](../../relational-databases/replication/publish/replicate-identity-columns.md)的 "合并复制" 部分。|  
-|**阀**|**int**|用于运行 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 或早期版本的的订阅服务器的百分比值 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 **阈值**控制合并代理分配新标识范围的时间。 如果使用了在阈值中指定的百分比值，合并代理将创建新的标识范围。 有关详细信息，请参阅[复制标识列](../../relational-databases/replication/publish/replicate-identity-columns.md)的 "合并复制" 部分。|  
+|**threshold**|**int**|用于运行 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 或早期版本的的订阅服务器的百分比值 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 **阈值**控制合并代理分配新标识范围的时间。 如果使用了在阈值中指定的百分比值，合并代理将创建新的标识范围。 有关详细信息，请参阅[复制标识列](../../relational-databases/replication/publish/replicate-identity-columns.md)的 "合并复制" 部分。|  
 |**verify_resolver_signature**|**int**|如果在合并复制中使用冲突解决程序之前验证数字签名，则为; 否则为。其中， **0**表示不验证签名， **1**表示验证签名是否来自受信任的源。|  
 |**destination_object**|**sysname**|目标对象的名称。 只适用于合并存储过程、视图和 UDF 架构项目。|  
 |**allow_interactive_resolver**|**int**|如果对项目使用交互式冲突解决程序，则为;其中， **1**表示使用此解析程序， **0**表示不使用。|  

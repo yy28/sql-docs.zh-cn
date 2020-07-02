@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 59f47194e94e256ddb6e2ded61dc61198dea26b8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b4c5d3157c6683a793f30eccd878aa9e691c7023
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824498"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729220"
 ---
 # <a name="sp_helppublication-transact-sql"></a>sp_helppublication (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   返回有关发布的信息。 对于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布，此存储过程在发布服务器上对发布数据库执行。 对于 Oracle 发布，此存储过程在分发服务器上对任何数据库执行。  
   
@@ -38,7 +38,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
     [ , [ @publisher = ] 'publisher' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publication = ] 'publication'`要查看的发布的名称。 *发布*为 sysname，默认值为 **%** ，它返回有关所有发布的信息。  
   
 `[ @found = ] 'found' OUTPUT`指示返回行的标志。 *找到* **int**和 OUTPUT 参数，默认值为**23456**。 **1**指示已找到发布。 **0**表示找不到发布。  
@@ -59,7 +59,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |task||用于保持向后兼容性。|  
 |replication frequency|**tinyint**|复制频率的类型：<br /><br /> **0** = 事务<br /><br /> **1** = 快照|  
 |synchronization method|**tinyint**|同步模式：<br /><br /> **0** = 本机大容量复制程序（**bcp**实用工具）<br /><br /> **1** = 字符大容量复制<br /><br /> **3** = 并发，表示使用本机大容量复制（**bcp**实用工具），但在快照期间不锁定表<br /><br /> **4** = Concurrent_c，这意味着将使用字符大容量复制，但在快照期间不锁定表|  
-|说明|**nvarchar(255)**|发布的可选说明。|  
+|description|**nvarchar(255)**|发布的可选说明。|  
 |immediate_sync|**bit**|表示是否在每次快照代理运行时创建或重新创建同步文件。|  
 |enabled_for_internet|**bit**|表示是否通过文件传输协议 (FTP) 和其他服务将发布的同步文件在 Internet 上公开。|  
 |allow_push|**bit**|表示是否允许对发布使用推送订阅。|  

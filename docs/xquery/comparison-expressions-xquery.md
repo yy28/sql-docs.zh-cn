@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: dc671348-306f-48ef-9e6e-81fc3c7260a6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 082fb2d1afdfa8824ea6f3d6e7bd3e4c484e281e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: db27f240030115ea24d8d32e2ffa1d5e4bf8921e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388160"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729512"
 ---
 # <a name="comparison-expressions-xquery"></a>比较表达式 (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
   XQuery 提供了下列类型的比较运算符：  
   
@@ -45,9 +45,9 @@ ms.locfileid: "81388160"
   
  下表中定义了常规运算符。  
   
-|运算符|说明|  
+|运算符|描述|  
 |--------------|-----------------|  
-|=|等于|  
+|=|Equal|  
 |!=|不等于|  
 |\<|小于|  
 |>|大于|  
@@ -80,7 +80,7 @@ set @x='<a>6</a>'
 select @x.query('/a[1] < "17"')  
 ```  
   
- 下面的查询从 AdventureWorks 示例数据库中提供的产品目录中返回某个产品型号的小尺寸图片。 该查询将 `PD:ProductDescription/PD:Picture/PD:Size` 返回的一组原子值与一个单一序列“small”进行比较。 如果比较结果为 True，则返回 <Picture\>元素。  
+ 下面的查询从 AdventureWorks 示例数据库中提供的产品目录中返回某个产品型号的小尺寸图片。 该查询将 `PD:ProductDescription/PD:Picture/PD:Size` 返回的一组原子值与一个单一序列“small”进行比较。 如果比较结果为 True，则返回 <Picture \> 元素。  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD)  
@@ -91,7 +91,7 @@ FROM   Production.ProductModel
 WHERE  ProductModelID=19         
 ```  
   
- 下面的查询将 <number\>元素中的一系列电话号码与字符串 "112-111-1111" 进行比较。 该查询对 AdditionalContactInfo 列中的一组电话号码元素进行比较，以确定文档中是否存在某个特定客户的特定电话号码。  
+ 下面的查询将 <number 元素中的一系列电话号码 \> 与字符串 "112-111-1111" 进行比较。 该查询对 AdditionalContactInfo 列中的一组电话号码元素进行比较，以确定文档中是否存在某个特定客户的特定电话号码。  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -104,7 +104,7 @@ FROM Person.Contact
 WHERE ContactID=1         
 ```  
   
- 该查询返回 True。 这表示文档中存在相应号码。 下面的查询只对上面的查询稍微做了修改。 在此查询中，将从文档中检索的电话号码值与包含两个电话号码值的组进行比较。 如果比较结果为 True，则返回 <\> number 元素。  
+ 该查询返回 True。 这表示文档中存在相应号码。 下面的查询只对上面的查询稍微做了修改。 在此查询中，将从文档中检索的电话号码值与包含两个电话号码值的组进行比较。 如果比较结果为 True，则返回 <number \> 元素。  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -140,9 +140,9 @@ WHERE ContactID=1
   
  下表中定义了值比较运算符。  
   
-|运算符|说明|  
+|运算符|描述|  
 |--------------|-----------------|  
-|eq|等于|  
+|eq|Equal|  
 |ne|不等于|  
 |lt|小于|  
 |gt|大于|  
@@ -153,7 +153,7 @@ WHERE ContactID=1
   
  这些运算符只适用于单一原子值。 也就是说，不能将一个序列指定为其中一个操作数。  
   
- 例如，下面的查询将> \<检索图片大小为 "small：  
+ 例如，下面的查询将检索 \<Picture> 图片大小为 "small：  
   
 ```  
 SELECT CatalogDescription.query('         
@@ -170,7 +170,7 @@ WHERE ProductModelID=19
   
 -   `declare namespace` 定义在随后的查询中使用的命名空间前缀。  
   
--   元素\<值> 大小与指定的原子值 "small" 进行比较。  
+-   \<Size>元素值与指定的原子值 "small" 进行比较。  
   
 -   请注意，由于值运算符仅适用于原子值，因此将隐式使用**data （）** 函数检索节点值。 也就是说，`data($P/PD:Size) eq "small"` 生成相同的结果。  
   
@@ -225,7 +225,7 @@ ProductModelID       Result
   
 -   `>>`：按文档顺序执行操作数**1**后跟**操作数 2** 。  
   
- 如果产品目录说明中的\<保修> 元素出现在特定产品的文档顺序中的\<维护> 元素之前，则以下查询将返回 True。  
+ 如果产品目录说明 \<Warranty> 中的元素出现 \<Maintenance> 在特定产品文档顺序中的元素之前，则以下查询将返回 True。  
   
 ```  
 WITH XMLNAMESPACES (  

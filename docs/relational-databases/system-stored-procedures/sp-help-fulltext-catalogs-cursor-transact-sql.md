@@ -18,15 +18,15 @@ ms.assetid: d44478d1-0cc4-415e-9d1a-6dccb64674fa
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 741b1311aee361e83c0d4ba2465ec9b80e1c217f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f9ab95a6e2d4b44c42735c5ffd9fe084a2a85854
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827699"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728172"
 ---
 # <a name="sp_help_fulltext_catalogs_cursor-transact-sql"></a>sp_help_fulltext_catalogs_cursor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   使用游标返回指定的全文目录的 ID、名称、根目录、状态和全文索引表的数量。  
   
@@ -43,7 +43,7 @@ sp_help_fulltext_catalogs_cursor [ @cursor_return= ] @cursor_variable OUTPUT ,
      [ @fulltext_catalog_name = ] 'fulltext_catalog_name'   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @cursor_return = ] @cursor_variable OUTPUT`类型为**cursor**的输出变量。 游标是只读的可滚动动态游标。  
   
 `[ @fulltext_catalog_name = ] 'fulltext_catalog_name'`全文目录的名称。 *fulltext_catalog_name* **sysname**。 如果省略该参数或该参数值为 NULL，则返回与当前数据库关联的所有全文目录的信息。  
@@ -56,7 +56,7 @@ sp_help_fulltext_catalogs_cursor [ @cursor_return= ] @cursor_variable OUTPUT ,
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**fulltext_catalog_id**|**smallint**|全文目录的标识符。|  
-|**名称**|**sysname**|全文目录的名称。|  
+|**NAME**|**sysname**|全文目录的名称。|  
 |**通道**|**nvarchar(260)**|从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 开始，此子句没有任何作用。|  
 |**状态**|**int**|目录的全文索引填充状态：<br /><br /> 0 = 空闲<br /><br /> 1 = 正在进行完全填充<br /><br /> 2 = 已暂停<br /><br /> 3 = 已中止<br /><br /> 4 = Recovering<br /><br /> 5 = 关闭<br /><br /> 6 = 正在进行增量填充<br /><br /> 7 = 正在生成索引<br /><br /> 8 = 磁盘已满。 已暂停<br /><br /> 9 = 更改跟踪|  
 |**NUMBER_FULLTEXT_TABLES**|**int**|与目录关联的全文索引表的数量。|  

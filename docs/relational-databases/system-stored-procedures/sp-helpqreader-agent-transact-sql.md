@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8e74e1aa-e95b-4183-8017-bf123439b08d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b1162939039470cdf8e7283950c342e1555c5c78
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2e969e33c42348aabcd46f1c51d56c1329669820
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824452"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729202"
 ---
 # <a name="sp_helpqreader_agent-transact-sql"></a>sp_helpqreader_agent (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   返回队列读取器代理的属性。 此存储过程在分发服务器的分发数据库或发布服务器的任意数据库中执行。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "82824452"
 sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @frompublisher = ] frompublisher`指定是在发布服务器还是分发服务器上调用该存储过程。 *frompublisher*的值为 bit，默认值为0。 **1**表示从发布服务器调用该存储过程， **0**表示从分发服务器调用该存储过程。  
   
 ## <a name="result-sets"></a>结果集  

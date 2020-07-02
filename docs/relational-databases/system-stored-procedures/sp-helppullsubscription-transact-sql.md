@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a0d9c3f1-1fe9-497c-8e2f-5b74f47a7346
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ce6fe81cc037e8e704758155aa302c61418ce65b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3b12ffb31836bfde3cb29cf240dbfc5d9da66eac
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824482"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729214"
 ---
 # <a name="sp_helppullsubscription-transact-sql"></a>sp_helppullsubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   显示订阅服务器上的一个或多个订阅的有关信息。 此存储过程在订阅服务器的订阅数据库中执行。  
   
@@ -39,7 +39,7 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
     [ , [ @show_push = ] 'show_push' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publisher = ] 'publisher'`远程服务器的名称。 *发布服务器*的默认值为**sysname**，默认值为 **%** ，它返回所有发布服务器的信息。  
   
 `[ @publisher_db = ] 'publisher_db'`发布服务器数据库的名称。 *publisher_db*的默认值为**sysname**，默认值为 **%** ，表示将返回所有发布服务器数据库。  
@@ -52,7 +52,7 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**器**|**sysname**|发布服务器的名称。|  
+|**publisher**|**sysname**|发布服务器的名称。|  
 |**publisher database**|**sysname**|发布服务器数据库名。|  
 |**发布**|**sysname**|发布的名称。|  
 |**independent_agent**|**bit**|表明该发布是否有独立的分发代理。|  

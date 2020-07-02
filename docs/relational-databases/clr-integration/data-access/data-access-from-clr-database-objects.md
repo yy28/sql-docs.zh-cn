@@ -23,16 +23,16 @@ helpviewer_keywords:
 ms.assetid: 9a0f4dee-71c1-42e9-a85e-52382807010f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5fdd552b0954f0eda838743530ab94e73aa27067
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 749be1b26a7802119346434b016b376ea94910cc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81485135"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727599"
 ---
 # <a name="data-access-from-clr-database-objects"></a>从 CLR 数据库对象进行数据访问
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  公共语言运行时（CLR）例程可以轻松地访问存储在其中运行的[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例中的数据，以及存储在远程实例中的数据。 该例程可以访问的特定数据由代码正在其中运行的用户上下文确定。 使用的 .NET Framework 数据提供程序[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]（也称为**SQLCLIENT**）从 CLR 数据库对象中访问数据。 这是由从托管客户端和中间层应用程序访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据的开发人员使用的相同访问接口。 因此，你可以在客户端和中间层应用程序中利用 ADO.NET 和**SqlClient**的知识。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+  公共语言运行时（CLR）例程可以轻松地访问存储在其中运行的实例中的数据 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，以及存储在远程实例中的数据。 该例程可以访问的特定数据由代码正在其中运行的用户上下文确定。 使用的 .NET Framework 数据提供程序 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] （也称为**SqlClient**）从 CLR 数据库对象中访问数据。 这是由从托管客户端和中间层应用程序访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据的开发人员使用的相同访问接口。 因此，你可以在客户端和中间层应用程序中利用 ADO.NET 和**SqlClient**的知识。  
   
 > [!NOTE]  
 >  默认情况下，不允许用户定义类型方法和用户定义函数执行数据访问。 必须将**SqlMethodAttribute**或**SqlFunctionAttribute**的**DataAccess**属性设置为**dataaccesskind.read** ，才能启用从用户定义类型（UDT）方法或用户定义函数的只读数据访问。 不允许从 UDT 或用户定义函数执行数据修改操作，否则，将在执行时引发异常。  

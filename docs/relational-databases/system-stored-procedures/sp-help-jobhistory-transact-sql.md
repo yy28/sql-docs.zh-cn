@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c9ad27602bbaa537fd74b1c6c730675c904f0b7e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2229da0158f746928be16ac190ecae2e36726da5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827594"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730046"
 ---
 # <a name="sp_help_jobhistory-transact-sql"></a>sp_help_jobhistory (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   为多服务器管理域中的服务器提供有关作业的信息。  
   
@@ -52,7 +52,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
      [ , [ @mode = ] 'mode' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @job_id = ] job_id`作业标识号。 *job_id*的值为**uniqueidentifier**，默认值为 NULL。  
   
 `[ @job_name = ] 'job_name'`作业的名称。 *job_name*的默认值为**sysname**，默认值为 NULL。  
@@ -75,7 +75,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
   
 `[ @run_status = ] run_status`作业的执行状态。 *run_status*的数据值为**int**，默认值为 NULL，可以是下列值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**0**|已失败|  
 |**1**|成功|  
@@ -116,7 +116,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**operator_netsent**|**nvarchar （20）**|接收有关该作业的网络消息的操作员（对于步骤历史记录为 NULL）。|  
 |**operator_paged**|**nvarchar （20）**|接收有关该作业的寻呼的操作员（对于步骤历史记录为 NULL）。|  
 |**retries_attempted**|**int**|步骤的重试次数（对于作业历史记录始终为 0）。|  
-|**服务**|**nvarchar(30)**|执行步骤或作业的服务器。 始终为（**local**）。|  
+|服务器|**nvarchar(30)**|执行步骤或作业的服务器。 始终为（**local**）。|  
   
 ## <a name="remarks"></a>备注  
  **sp_help_jobhistory**返回一个报表，其中包含指定计划作业的历史记录。 如果没有指定参数，则该报表包含所有预定作业的历史记录。  

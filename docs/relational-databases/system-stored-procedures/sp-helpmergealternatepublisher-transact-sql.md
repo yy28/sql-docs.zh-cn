@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a96e365f-5967-4580-9d79-5bacf2d12211
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: af9ccd6d8c5a97166fcaf45342de3efbbe5b6290
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fd1071dd1ca4e2951dc3a7d1fbc759ae13b968f6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82818142"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733139"
 ---
 # <a name="sp_helpmergealternatepublisher-transact-sql"></a>sp_helpmergealternatepublisher (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   返回作为合并发布的备用发布服务器启用的所有服务器列表。 此存储过程在订阅服务器的订阅数据库中执行。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "82818142"
 sp_helpmergealternatepublisher [ @publisher = ] 'publisher', [ @publisher_db = ] 'publisher_db', [ @publication = ] 'publication'  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publisher = ] 'publisher'`备用发布服务器的名称。*发布服务器*的**sysname**，无默认值。  
   
 `[ @publisher_db = ] 'publisher_db'`发布数据库的名称。*publisher_db* **sysname**，无默认值。  

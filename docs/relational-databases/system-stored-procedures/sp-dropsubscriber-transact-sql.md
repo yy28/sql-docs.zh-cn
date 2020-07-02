@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8c6eb282-81b5-4ec4-b691-aa061d9267dc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 49cfb9c44956f5d51f8671f2f891475b8794c053
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 093c04b63b9b99a777f7b20af70ea06677b0c917
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831142"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727204"
 ---
 # <a name="sp_dropsubscriber-transact-sql"></a>sp_dropsubscriber (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   从注册的服务器中删除订阅服务器名称。 此存储过程在发布服务器上对发布数据库执行。  
   
@@ -41,7 +41,7 @@ sp_dropsubscriber [ @subscriber= ] 'subscriber'
     [ , [ @ignore_distributor = ] ignore_distributor ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @subscriber = ] 'subscriber'`要删除的订阅服务器的名称。 *订阅服务器*的**sysname**，无默认值。  
   
 `[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  

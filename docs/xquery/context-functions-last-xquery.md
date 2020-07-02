@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: dc92086e-3b01-4b0b-9f54-3bbf306cf7ae
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f88c438206551e170810f467e7944b21232e245d
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 3713f0fadfe186c31a26f2f19adea88da2f28384
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529701"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729519"
 ---
 # <a name="context-functions---last-xquery"></a>上下文函数 - last (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   返回当前处理的序列中的项数。 具体来说，它返回序列中最后一项的整数索引。 序列中第一项的索引值为 1。  
   

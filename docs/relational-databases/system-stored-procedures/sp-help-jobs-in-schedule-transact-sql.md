@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1168aa2c-136b-4ba3-b18e-9070d95a26fa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2567640f49beb0c1921811a9d04671833dca11be
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c471e1bf5c2e3eac60d47418dc3957cef2209b02
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827578"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730022"
 ---
 # <a name="sp_help_jobs_in_schedule-transact-sql"></a>sp_help_jobs_in_schedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   返回有关附加了特定计划的作业的信息。  
   
@@ -40,7 +40,7 @@ sp_help_jobs_in_schedule
      [ @schedule_id = ] schedule_id   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @schedule_id = ] schedule_id`要列出其信息的计划的标识符。 *schedule_id*为**int**，没有默认值。 可以指定*schedule_id*或*schedule_name* 。  
   
 `[ @schedule_name = ] 'schedule_name'`要列出其信息的计划的名称。 *schedule_name* **sysname**，无默认值。 可以指定*schedule_id*或*schedule_name* 。  
@@ -55,7 +55,7 @@ sp_help_jobs_in_schedule
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|作业的唯一 ID。|  
 |**originating_server**|**nvarchar(30)**|作业来自的服务器的名称。|  
-|**name**|**sysname**|作业的名称。|  
+|name|**sysname**|作业的名称。|  
 |**能够**|**tinyint**|指示是否启用要执行的作业。|  
 |**2008**|**nvarchar(512)**|对作业的说明。|  
 |**start_step_id**|**int**|执行作业的起始步骤的 ID。|  
@@ -84,7 +84,7 @@ sp_help_jobs_in_schedule
 |**has_step**|**int**|作业具有的作业步骤数。|  
 |**has_schedule**|**int**|作业具有的作业计划数。|  
 |**has_target**|**int**|作业具有的目标服务器数。|  
-|type |**int**|作业类型：<br /><br /> **1** = 本地作业。<br /><br /> **2** = 多服务器作业。<br /><br /> **0** = 作业没有目标服务器。|  
+|**type**|**int**|作业类型：<br /><br /> **1** = 本地作业。<br /><br /> **2** = 多服务器作业。<br /><br /> **0** = 作业没有目标服务器。|  
   
 ## <a name="remarks"></a>备注  
  此过程列出有关附加到指定计划的作业的信息。  

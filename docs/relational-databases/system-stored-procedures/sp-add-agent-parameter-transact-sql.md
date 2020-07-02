@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 055f4765-0574-47c3-bf7d-6ef6e9bd8b34
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: c1aafa1736ff626f7b0bea9bea8753ae2c509ac4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cf8704f4106cd701c5c5d2bbeab324ed2f75e731
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68770962"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731756"
 ---
 # <a name="sp_add_agent_parameter-transact-sql"></a>sp_add_agent_parameter (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   将新参数及其值添加到代理配置文件中。 此存储过程在分发服务器上的任何数据库中执行。  
   
@@ -38,7 +38,7 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
         , [ @parameter_value = ] 'parameter_value'   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @profile_id = ] profile_id`**Msdb**数据库的**MSagent_profiles**表中的配置文件的 ID。 *profile_id*为**int**，没有默认值。  
   
  若要找出此*profile_id*表示的代理类型，请在[MSagent_profiles &#40;transact-sql&#41;](../../relational-databases/system-tables/msagent-profiles-transact-sql.md)表中查找*profile_id* ，并记下 " *agent_type* " 字段值。 这些值如下所示：  
@@ -49,15 +49,15 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
 |**2**|日志读取器代理|  
 |**3**|分发代理|  
 |**4**|合并代理|  
-|**900**|队列读取器代理|  
+|**9**|队列读取器代理|  
   
 `[ @parameter_name = ] 'parameter_name'`参数的名称。 *parameter_name* **sysname**，无默认值。 有关已在系统配置文件中定义的参数的列表，请参阅[复制代理配置文件](../../relational-databases/replication/agents/replication-agent-profiles.md)。 若要查看每个代理的有效参数的完整列表，请参阅下列主题：  
   
--   [复制快照代理](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+-   [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
 -   [复制日志读取器代理](../../relational-databases/replication/agents/replication-log-reader-agent.md)  
   
--   [复制分发代理](../../relational-databases/replication/agents/replication-distribution-agent.md)  
+-   [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)  
   
 -   [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)  
   

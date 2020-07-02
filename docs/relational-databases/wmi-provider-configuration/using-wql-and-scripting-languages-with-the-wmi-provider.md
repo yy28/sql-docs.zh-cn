@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: c1e64905-3c2b-4974-88f4-abf17cf7e289
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: db39dfd29532f2a0fd2d61ce4a987e0aada7d6c5
-ms.sourcegitcommit: bf5e9cb3a2caa25d0a37f401b3806b7baa5adea8
+ms.openlocfilehash: f96e814f14ba3e5de82ac633a757a8027f87296d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85295400"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729980"
 ---
 # <a name="using-wql-and-scripting-languages-with-the-wmi-provider"></a>通过 WMI 提供程序使用 WQL 和脚本语言
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
   管理应用程序以两种方式使用针对配置管理对象的 Windows Management Instrumentation (WMI) 提供程序访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务和网络设置：  
   
 -   使用某一 WQL 编辑器或查询工具（例如 WBEMTest.exe）可以查询通过 Windows Management Instrumentation 语言 (WQL) 设置的对象。  

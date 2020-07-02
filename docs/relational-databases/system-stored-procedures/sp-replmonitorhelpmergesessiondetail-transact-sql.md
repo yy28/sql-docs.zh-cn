@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 805c92fc-3169-410c-984d-f37e063b791d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d275b0666ae80ff933d7d236d0d04f2648b744fd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6e128b63ebe77467e7c3fd6ea2486f3fdc043334
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834281"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725718"
 ---
 # <a name="sp_replmonitorhelpmergesessiondetail-transact-sql"></a>sp_replmonitorhelpmergesessiondetail (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   返回有关特定复制合并代理会话的项目级详细信息，该会话用于监视合并复制。 结果集包括在会话过程中被同步的每个项目的详细信息行。 另外还包括提供会话初始化的行以及汇总上载和下载会话阶段的行。 此存储过程针对分发服务器的分发数据库或订阅服务器的订阅数据库执行。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "82834281"
 sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @session_id = ] session_id`指定一个代理会话。 *session_id*为**int** ，无默认值。  
   
 ## <a name="result-sets"></a>结果集  
@@ -48,7 +48,7 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 |**ArticleName**|**sysname**|被同步的项目的名称。 **ArticleName**还包含结果集中不表示项目详细信息的行的汇总信息。|  
 |**完成**|**decimal**|指示当前正在运行或已失败的会话中，给定的项目详细信息行中应用的全部更改的百分比。|  
 |**RelativeCost**|**decimal**|指示同步项目所花时间占会话的同步总时间的百分比。|  
-|**持续时间**|**int**|代理会话的长度。|  
+|**Duration**|**int**|代理会话的长度。|  
 |**Inserts**|**int**|会话中的插入数。|  
 |**更新**|**int**|会话中的更新数。|  
 |**Deletes**|**int**|会话中的删除数。|  

@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 865e86976a6da117d41ba2f22020f7137dee5038
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ac4bc1262eeb87aae42f11bf7c67ca0dc58848ec
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820268"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725644"
 ---
 # <a name="sp_stored_procedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   返回当前环境中的存储过程列表。  
   
@@ -42,7 +42,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
     [ , [@fUsePattern = ] 'fUsePattern' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @sp_name = ] 'name'`用于返回目录信息的过程的名称。 *name*为**nvarchar （390）**，默认值为 NULL。 支持通配符模式匹配。  
   
 `[ @sp_owner = ] 'schema'`过程所属架构的名称。 *schema*的值为**nvarchar （384）**，默认值为 NULL。 支持通配符模式匹配。 如果未指定*owner* ，则应用基础 DBMS 的默认过程可见性规则。  

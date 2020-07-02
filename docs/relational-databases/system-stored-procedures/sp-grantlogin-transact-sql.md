@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 0c873d99-c3bf-4eb1-948b-a46cb235ccd4
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: a32826266a9e844b01b455116e18ae821f71e9c5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3f605d17348c651ef0fbc58ebd52b422bdba1896
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68055316"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728194"
 ---
 # <a name="sp_grantlogin-transact-sql"></a>sp_grantlogin (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。  
   
@@ -41,8 +41,8 @@ ms.locfileid: "68055316"
 sp_grantlogin [@loginame=] 'login'  
 ```  
   
-## <a name="arguments"></a>参数  
-`[ @loginame = ] 'login'`Windows 用户或组的名称。 Windows 用户或组必须使用*域*\\*用户*的 windows 域名进行限定;例如， **London\Joeb**。 *login*的**sysname**为，无默认值。  
+## <a name="arguments"></a>自变量  
+`[ @loginame = ] 'login'`Windows 用户或组的名称。 Windows 用户或组必须以*域* \\ *用户*（例如**London\Joeb**）的 windows 域名进行限定。 *login*的**sysname**为，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -56,7 +56,7 @@ sp_grantlogin [@loginame=] 'login'
  要求对服务器拥有 ALTER ANY LOGIN 权限。  
   
 ## <a name="examples"></a>示例  
- 下面的示例使用`CREATE LOGIN`创建 Windows 用户[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `Corporate\BobJ.`的登录名，这是首选方法。  
+ 下面的示例使用 `CREATE LOGIN` 创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 用户的登录名， `Corporate\BobJ.` 这是首选方法。  
   
 ```sql
 CREATE LOGIN [Corporate\BobJ] FROM WINDOWS;  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 0a9a7c5b-c3cc-40ca-b524-e948a8cce4e4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fd1178a8c6dc5fb02d569fb7575b99bf5b182306
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fd934d69b8850a68ff4d007318ee93f4eede03cb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824272"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725569"
 ---
 # <a name="sp_syscollector_delete_execution_log_tree-transact-sql"></a>sp_syscollector_delete_execution_log_tree (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   删除与单个收集组的运行有关的所有日志项。 这还将从此运行的 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 表中删除日志项。  
   
@@ -40,7 +40,7 @@ sp_syscollector_delete_execution_log_tree[ @log_id = ] log_id
           , [ @from_collection_set = ] from_collection_set  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @log_id = ] log_id`收集组日志的唯一标识符。 *log_id*是**int**。  
   
 `[ @from_collection_set = ] from_collection_set`收集组的标识符。 *from_collection_set*是**bit = 1**。  

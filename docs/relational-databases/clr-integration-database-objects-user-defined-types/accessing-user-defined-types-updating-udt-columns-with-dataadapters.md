@@ -23,19 +23,19 @@ helpviewer_keywords:
 ms.assetid: 4489c938-ba03-4fdb-b533-cc3f5975ae50
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 08c36963088684d415534e091a2764f576a86d22
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 07b1dc9d3f7beca9f048ec0e367c33922e388f32
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488220"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727834"
 ---
 # <a name="accessing-user-defined-types---updating-udt-columns-with-dataadapters"></a>访问用户定义类型 - 使用 DataAdapter 更新 UDT 列
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   使用**SqlClient 和 SqlDataAdapter**检索和修改数据**时，支持**用户定义的类型（udt）和用户定义的类型（udt）。  
   
 ## <a name="populating-a-dataset"></a>填充数据集  
- 您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 语句选择 UDT 列值，以便利用数据适配器填充数据集。 下面的示例假定您有一个使用以下结构定义的**点**表和一些示例数据。 以下[!INCLUDE[tsql](../../includes/tsql-md.md)]语句将创建**Points**表并插入一些行。  
+ 您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 语句选择 UDT 列值，以便利用数据适配器填充数据集。 下面的示例假定您有一个使用以下结构定义的**点**表和一些示例数据。 以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句将创建**Points**表并插入一些行。  
   
 ```  
 CREATE TABLE dbo.Points (id int PRIMARY Key, p Point);  
@@ -68,7 +68,7 @@ da.Fill(datTable);
   
 -   为**SqlDataAdapter**对象提供自定义的**InsertCommand**、 **UpdateCommand**和**DeleteCommand**对象。  
   
--   使用命令生成器（**SqlClient. SqlCommandBuilder**）自动为您创建 INSERT、UPDATE 和 DELETE 命令。 若要进行冲突检测，请向包含 UDT 的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表添加**时间戳**列（别名**rowversion**）。 **Timestamp**数据类型允许您对表中的行进行版本标记，并且保证在数据库中是唯一的。 当更改表中的值时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为受此更改影响的行自动更新八个字节的二进制编号。  
+-   使用命令生成器（**SqlClient. SqlCommandBuilder**）自动为您创建 INSERT、UPDATE 和 DELETE 命令。 若要进行冲突检测，请向包含 UDT 的表添加**时间戳**列（别名**rowversion**） [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 **Timestamp**数据类型允许您对表中的行进行版本标记，并且保证在数据库中是唯一的。 当更改表中的值时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为受此更改影响的行自动更新八个字节的二进制编号。  
   
  请注意，除非基础表中有**timestamp**列，否则**SqlCommandBuilder**不会将 UDT 视为冲突检测。 可以比较 UDT，也可以不比较，因此，当使用“比较原始值”选项生成命令时，不会在 WHERE 子句中包含 UDT。  
   

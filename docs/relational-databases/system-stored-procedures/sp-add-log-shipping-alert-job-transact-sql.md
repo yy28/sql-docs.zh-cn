@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: dd95d96e-8963-4aa9-bdcc-3e4b1bc002d3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9793b26bbd45e08aa3bc488071bd3b26a3f1cfc9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2fc6d9e9aa0e4da2e2e2652d5d34b833cd7b2a56
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68140456"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730068"
 ---
 # <a name="sp_add_log_shipping_alert_job-transact-sql"></a>sp_add_log_shipping_alert_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   此存储过程用于检查是否已在此服务器上创建了警报作业。 如果警报作业不存在，则此存储过程将创建警报作业，并将其作业 ID 添加到**log_shipping_monitor_alert**表。 默认情况下，将启用警报作业并按计划每两分钟运行一次。  
   
@@ -39,8 +39,8 @@ sp_add_log_shipping_alert_job
 [, [ @alert_job_id = ] alert_job_id OUTPUT ]  
 ```  
   
-## <a name="arguments"></a>参数  
-`[ @alert_job_id = ] alert_job_id OUTPUT`[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日志传送警报作业的代理作业 ID。  
+## <a name="arguments"></a>自变量  
+`[ @alert_job_id = ] alert_job_id OUTPUT`[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日志传送警报作业的代理作业 ID。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -64,7 +64,7 @@ EXEC sp_add_log_shipping_alert_job;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [关于 &#40;SQL Server 的日志传送&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

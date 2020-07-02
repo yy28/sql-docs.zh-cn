@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: dd9920e1-7064-4c05-93d8-9303103fa1d6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f479daec811e9953bdb0b9e23727dd1a58ad15e4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b229db409520275fa1b043fa54c8ce6e6421096e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826002"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733059"
 ---
 # <a name="sp_invalidate_textptr-transact-sql"></a>sp_invalidate_textptr (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   使事务中指定的行内文本指针或所有行内文本指针失效。 **sp_invalidate_textptr**只能用于行内文本指针。 这些指针来自启用了**text in row**选项的表。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "82826002"
 sp_invalidate_textptr [ [ @TextPtrValue = ] textptr_value ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @TextPtrValue = ] textptr_value`要使其无效的行内文本指针。 *textptr_value*为**varbinary （** 16 **）**，默认值为 NULL。 如果为 NULL，则**sp_invalidate_textptr**使事务中的所有行内文本指针失效。  
   
 ## <a name="return-code-values"></a>返回代码值  

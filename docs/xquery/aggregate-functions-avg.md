@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 0cc60267-3c56-4a88-8ad7-bb07f0255d56
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7e7b88b5e28794ff8bc27c02b64b49471af92a05
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: a5ee393faed7f88bb155527d2233285d142b3a09
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84882036"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726792"
 ---
 # <a name="aggregate-functions---avg"></a>聚合函数 - avg
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
   返回一组数值的平均值。  
   
@@ -39,7 +39,7 @@ fn:avg($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
  *$arg*  
  一组要计算平均值的原子值。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  传递到**avg （）** 的所有原子化值的类型必须是三个内置数值基类型或 Xdt： untypedAtomic 中的一个的子类型。 不能使用不同的数值类型。 类型为 xdt:untypedAtomic 的值视为 xs:double。 **Avg （）** 的结果接收传入类型的基类型，例如，在 Xdt： untypedAtomic 的情况下，xs： double。  
   
  如果输入在静态上为空，则暗示为空，并且会引发静态错误。  

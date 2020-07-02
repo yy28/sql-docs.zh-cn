@@ -1,6 +1,6 @@
 ---
-title: Mscorlib.dll 中禁用的类型和成员 |Microsoft Docs
-description: SQL Server CLR 编程不允许使用 HostProtectionResource 枚举的某些值的类型或成员。 本文列出了 mscorlib.dll 不允许的值。
+title: mscorlib.dll 中不允许的类型和成员 |Microsoft Docs
+description: SQL Server CLR 编程不允许使用 HostProtectionResource 枚举的某些值的类型或成员。 本文列出 mscorlib.dll 不允许的值。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: daf82d4b-2f6d-44ca-9148-75193321b6d5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3c00877ce41cd15d27814bc67bf78bd32f6719ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d57e0cba6a0bb12d62b73ff6e064196a8d89c452
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81486863"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727734"
 ---
 # <a name="disallowed-types-and-members-in-mscorlibdll"></a>mscorlib.dll 中禁用的类型和成员
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]公共语言集成（CLR）编程不允许使用具有指定**HostProtectionAttribute**的类型或成员，其值为**ExternalProcessMgmt**、 **ExternalThreading**、 **MayLeakOnAbort**、 **SecurityInfrastructure**、 **SelfAffectingProcessMgmnt**、 **SelfAffectingThreading**、 **SharedState**、**同步**或**UI** **。** 下表列出了宿主保护属性 (HPA) 值被禁用的 mscorlib.dll 程序集的成员和类型。  
   
 > [!NOTE]  
@@ -31,11 +31,11 @@ ms.locfileid: "81486863"
 |--------------------|--------------------|  
 |SyncStream.BeginRead()|ExternalThreading|  
 |SyncStream.BeginWrite()|ExternalThreading|  
-|System.Collections.ArrayList.Synchronized()|Synchronization|  
-|System.Collections.Hashtable.Synchronized()|Synchronization|  
-|System.Collections.Queue.Synchronized()|Synchronization|  
-|System.Collections.SortedList.Synchronized()|Synchronization|  
-|System.Collections.Stack.Synchronized()|Synchronization|  
+|System.Collections.ArrayList.Synchronized()|同步|  
+|System.Collections.Hashtable.Synchronized()|同步|  
+|System.Collections.Queue.Synchronized()|同步|  
+|System.Collections.SortedList.Synchronized()|同步|  
+|System.Collections.Stack.Synchronized()|同步|  
 |System.Console.Beep()|UI|  
 |System.Console.get_Error()|UI|  
 |System.Console.get_In()|UI|  
@@ -55,9 +55,9 @@ ms.locfileid: "81486863"
 |System.Diagnostics.LogMessageEventHandler|ExternalThreading，Synchronization|  
 |System.IO.FileStream.BeginRead()|ExternalThreading|  
 |System.IO.FileStream.BeginWrite()|ExternalThreading|  
-|System.IO.Stream.Synchronized()|Synchronization|  
-|System.IO.TextReader.Synchronized()|Synchronization|  
-|System.IO.TextWriter.Synchronized()|Synchronization|  
+|System.IO.Stream.Synchronized()|同步|  
+|System.IO.TextReader.Synchronized()|同步|  
+|System.IO.TextWriter.Synchronized()|同步|  
 |System.Reflection.Emit.AssemblyBuilder|MayLeakOnAbort|  
 |System.Reflection.Emit.ConstructorBuilder|MayLeakOnAbort|  
 |System.Reflection.Emit.CustomAttributeBuilder|MayLeakOnAbort|  
@@ -101,9 +101,9 @@ ms.locfileid: "81486863"
   
 ## <a name="see-also"></a>另请参阅  
  [宿主保护属性和 CLR 集成编程](../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   
- [不允许的类型和成员在](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
- [系统中不允许的类型和成员](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-dll.md)   
- [系统中不允许的类型和成员](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-data-dll.md)   
+ [Microsoft.VisualBasic.dll中不允许的类型和成员](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
+ [System.dll中不允许的类型和成员](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-dll.md)   
+ [System.Data.dll中不允许的类型和成员](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-data-dll.md)   
  [System.Core.dll 中禁用的类型和成员](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-core-dll.md)  
   
   

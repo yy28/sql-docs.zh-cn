@@ -18,15 +18,15 @@ ms.assetid: 0bb6495f-258a-47ec-9f74-fd16671d23b8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3cdde96f57f813dbc25434867ed78ff884c2e7ab
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1ea5643c3299a7716b2e350d6bbc2e7bdb2f9c22
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820283"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725665"
 ---
 # <a name="sp_statistics-transact-sql"></a>sp_statistics (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   返回针对指定的表或索引视图的所有索引和统计信息的列表。  
   
@@ -45,7 +45,7 @@ sp_statistics [ @table_name = ] 'table_name'
      [ , [ @accuracy = ] 'accuracy' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @table_name = ] 'table_name'`指定用于返回目录信息的表。 *table_name* **sysname**，无默认值。 不支持通配符模式匹配。  
   
 `[ @table_owner = ] 'owner'`用于返回目录信息的表的表所有者的名称。 *table_owner*的默认值为**sysname**，默认值为 NULL。 不支持通配符模式匹配。 如果未指定*owner* ，则应用基础 DBMS 的默认表可见性规则。  
@@ -80,7 +80,7 @@ sp_statistics [ @table_name = ] 'table_name'
 |**归类**|**char （1）**|在排序规则中使用的顺序。 可以是：<br /><br /> A = 升序<br /><br /> D = 降序<br /><br /> NULL = 不适用|  
 |**基数**|**int**|表中的行数或索引中的唯一值。|  
 |**页**|**int**|用于存储索引或表的页数。|  
-|**FILTER_CONDITION**|**varchar（128**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不返回值。|  
+|**FILTER_CONDITION**|**varchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不返回值。|  
   
 ## <a name="return-code-values"></a>返回代码值  
  无  

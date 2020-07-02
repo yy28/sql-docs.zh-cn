@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 4b146437-3061-47f6-9e8c-26eeea10b54e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 386e1980ae19ba4f98222b51a4955b024f815083
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 399c1dca1657c95edd70dcec0ba26619f6001180
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488066"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727681"
 ---
 # <a name="assemblies-database-engine"></a>程序集（数据库引擎）
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   本节中的主题旨在帮助您了解、设计和实现程序集。  
   
- 程序集[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是用于部署函数、存储过程、触发器、用户定义聚合和用户定义类型（以[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]公共语言运行时（CLR）托管的一种托管代码语言，而不是在中[!INCLUDE[tsql](../../includes/tsql-md.md)]）的 DLL 文件。  
+ 程序集是用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 部署函数、存储过程、触发器、用户定义聚合和用户定义类型（以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 公共语言运行时（CLR）托管的一种托管代码语言，而不是在中）的 DLL 文件 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的程序集对象引用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 公共语言运行时中创建的托管应用程序模块（.dll 文件）。 程序集包含类元数据和托管代码。 将程序集上载到 SQL Server 实例是创建以下任何一个数据库对象的第一步：  
   

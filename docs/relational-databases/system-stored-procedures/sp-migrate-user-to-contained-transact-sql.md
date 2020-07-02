@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b3a49ff6-46ad-4ee7-b6fe-7e54213dc33e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a641f363b4a39b28b7a7ea767914d952c83d697e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d3faf15999e0c157859e3d2eee9c4119ab344844
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828277"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727146"
 ---
 # <a name="sp_migrate_user_to_contained-transact-sql"></a>sp_migrate_user_to_contained (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   将映射到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的数据库用户转换为具有密码的包含数据库用户。 在包含的数据库中，请使用此过程删除安装了该数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的依赖项。 **sp_migrate_user_to_contained**将用户与原始 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名分开，以便为包含的数据库单独管理密码和默认语言等设置。 **sp_migrate_user_to_contained**在将包含的数据库移动到的其他实例之前，可以使用 sp_migrate_user_to_contained [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ，以消除当前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例登录名的依赖项。  
   
@@ -41,7 +41,7 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
     [ @disablelogin = ] { N'disable_login' | N'do_not_disable_login' }   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  [** @username =** ] **N '***用户***'**  
  当前包含的数据库中的用户名称，该用户将映射到经过身份验证的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 该值为**sysname**，默认值为**NULL**。  
   

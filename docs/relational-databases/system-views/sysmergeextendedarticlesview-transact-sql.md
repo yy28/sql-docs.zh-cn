@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: bd5c8414-5292-41fd-80aa-b55a50ced7e2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 576fe599772454cb0cc8a01bf28c530f5cdfb13b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cb2b30da196f79fc10905ffb3ead95f8b5fca4d5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72278171"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733051"
 ---
 # <a name="sysmergeextendedarticlesview-transact-sql"></a>sysmergeextendedarticlesview (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **Sysmergeextendedarticlesview**视图将公开项目信息。 此视图存储在发布服务器的发布数据库以及订阅服务器的订阅数据库中。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|name |**sysname**|项目的名称。|  
+|name|**sysname**|项目的名称。|  
 |**type**|**tinyint**|指示项目类型，可以为下列类型之一：<br /><br /> **10** = 表。<br /><br /> **32** = 仅处理器架构。<br /><br /> **64** = 仅查看架构或仅索引视图架构。<br /><br /> **128** = 仅函数架构。<br /><br /> **160** = 仅限同义词架构。|  
 |**objid**|**int**|发布服务器对象的标识符。|  
 |**sync_objid**|**int**|表示同步数据集的视图标识符。|  
@@ -67,7 +67,7 @@ ms.locfileid: "72278171"
 |**identity_support**|**int**|指定是否启用自动标识范围处理。 **1**表示启用标识范围处理， **0**表示没有标识范围支持。|  
 |**destination_owner**|**sysname**|目标对象的所有者的名称。|  
 |**before_image_objid**|**int**|跟踪表对象 ID。 如果将发布配置为启用分区更改优化，则跟踪表将包含某些键列值。|  
-|**before_view_objid**|**int**|视图表的对象 ID。 视图所在的表用于在删除或更新行之前跟踪行是否属于特定的订阅服务器。 仅当使用* \@keep_partition_changes* = **true**创建发布时才适用。|  
+|**before_view_objid**|**int**|视图表的对象 ID。 视图所在的表用于在删除或更新行之前跟踪行是否属于特定的订阅服务器。 仅当使用* \@ keep_partition_changes*true 创建发布时才适用  =  **true**。|  
 |**verify_resolver_signature**|**int**|指定在合并复制中使用冲突解决程序之前是否验证数字签名：<br /><br /> **0** = 不验证签名。<br /><br /> **1** = 验证签名是否来自受信任的源。|  
 |**allow_interactive_resolver**|**bit**|指定是否对项目启用交互式冲突解决程序。 **1**指定对项目使用交互式冲突解决程序。|  
 |**fast_multicol_updateproc**|**bit**|指定是否已启用合并代理来使用一条 UPDATE 语句在同一行的多个列中应用更改。<br /><br /> **0** = 对每个更改的列发出单独的更新。<br /><br /> **1** = 对 UPDATE 语句发出，导致在一个语句中对多个列进行更新。|  
@@ -82,8 +82,8 @@ ms.locfileid: "72278171"
 |**delete_tracking**|**bit**|指示是否复制删除。<br /><br /> **0** = 不复制删除。<br /><br /> **1** = 复制删除，这是合并复制的默认行为。<br /><br /> 如果*delete_tracking*的值为**0**，则必须在发布服务器上手动删除订阅服务器上删除的行，并且必须在订阅服务器上手动删除在发布服务器上删除的行。<br /><br /> 注意：值为**0**会导致非收敛。|  
 |**compensate_for_errors**|**bit**|指示在同步期间遇到错误时是否采取补救措施。<br /><br /> **0** = 禁用补偿操作。<br /><br /> **1** = 不能在订阅服务器或发布服务器上应用的更改始终会导致补偿操作来撤消这些更改，这是合并复制的默认行为。<br /><br /> 注意：值为**0**会导致非收敛。|  
 |**pub_range**|**bigint**|发布服务器标识范围大小。|  
-|**内**|**bigint**|将分配到调整中订阅服务器的连续标识值的大小。|  
-|**阀**|**int**|标识范围阈值百分比。|  
+|**range**|**bigint**|将分配到调整中订阅服务器的连续标识值的大小。|  
+|**threshold**|**int**|标识范围阈值百分比。|  
 |**metadata_select_proc**|**sysname**|自动生成的存储过程的名称，该存储过程用于访问合并复制系统表中的元数据。|  
 |**stream_blob_columns**|**bit**|指定当复制二进制大型对象列时是否使用数据流优化。 **1**表示将尝试进行优化。|  
 |**preserve_rowguidcol**|**bit**|指示复制是否使用现有 rowguid 列。 如果值为**1** ，则表示使用现有的 ROWGUIDCOL 列。 **0**表示复制添加了 ROWGUIDCOL 列。|  

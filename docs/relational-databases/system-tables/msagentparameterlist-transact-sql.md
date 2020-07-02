@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4ea571a0-078d-4e13-95ee-f3d4bbd4dfb2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e82c9dd6bd2768e997e74508741d047d0155665f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3e240ab373316f72d41f472542907e3feb83cbbd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832351"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725489"
 ---
 # <a name="msagentparameterlist-transact-sql"></a>MSagentparameterlist (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **Msdb.dbo.msagentparameterlist**表包含复制代理参数信息，用于指定可为给定代理类型设置的参数。 该表存储在**msdb**数据库中。  
   

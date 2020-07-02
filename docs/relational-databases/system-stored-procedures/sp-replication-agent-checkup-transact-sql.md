@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 50357c2e-71aa-4e13-9e2e-0977a3655cc9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b434d4bda50cf03442020ba2f0c029aaa1e09cd9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 25daf9098c1c4da74d8c5adfdac062016f68ce96
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771233"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725710"
 ---
 # <a name="sp_replication_agent_checkup-transact-sql"></a>sp_replication_agent_checkup (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   检查每个分发数据库的复制代理，这些代理正在运行但在指定检测信号间隔内没有历史记录。 此存储过程在分发服务器上的任何数据库中执行。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68771233"
 sp_replication_agent_checkup [ [ @heartbeat_interval = ] heartbeat_interval ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @heartbeat_interval = ] 'heartbeat_interval'`代理在不记录进度消息的情况下可以执行的最大分钟数。 *heartbeat_interval*的值为**int**，默认值为10分钟。  
   
 ## <a name="return-code-values"></a>返回代码值  

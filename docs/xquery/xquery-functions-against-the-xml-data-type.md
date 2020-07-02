@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8df0877d-a03f-4ca9-b84e-908c4bb42b5e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0d35db27e171c8cc31a463ad9ae91613d1c0708c
-ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
+ms.openlocfilehash: ad25db1aa5a10039bc80766b30e1d2ba478df123
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84305696"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730976"
 ---
 # <a name="xquery-functions-against-the-xml-data-type"></a>针对 xml 数据类型的 XQuery 函数
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   本主题及其子主题介绍了在针对**xml**数据类型指定 XQuery 时可以使用的函数。 有关 W3C 规范，请参阅 [http://www.w3.org/TR/2004/WD-xpath-functions-20040723](https://go.microsoft.com/fwlink/?LinkId=4873) 。  
   

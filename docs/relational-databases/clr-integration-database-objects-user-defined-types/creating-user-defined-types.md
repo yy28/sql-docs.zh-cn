@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 09480763fe03e5191fdaaf778e2490988a3e334e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f4a3b9a924292152fbe049e42624f60a554bd6ef
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81486945"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727789"
 ---
 # <a name="creating-user-defined-types"></a>创建用户定义类型
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   若要创建能够在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中安装的用户定义类型 (UDT)，必须首先用一种支持的 .NET Framework 编程语言（例如 Visual C# 或 Visual Basic，该语言符合创建 UDT 的规范）创建一个类。 然后，可以将该类编译为可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中加载的动态链接库 (DLL)。 还可以使用 Visual Studio 创建和部署 UDT。  
   
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，能否执行公共语言运行时 (CLR) 代码默认设置为 OFF。 可以使用**sp_configure**系统存储过程来启用 CLR，如以下[!INCLUDE[tsql](../../includes/tsql-md.md)]语句中所示：  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，能否执行公共语言运行时 (CLR) 代码默认设置为 OFF。 可以使用**sp_configure**系统存储过程来启用 CLR，如以下语句中所示 [!INCLUDE[tsql](../../includes/tsql-md.md)] ：  
   
 ```  
 sp_configure 'clr enabled', 1  

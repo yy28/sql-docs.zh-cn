@@ -18,15 +18,15 @@ ms.assetid: c7f73ba0-ec35-4b10-aa5f-f1487e51fbf7
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3e0d18029c69ab988934b3e1c68fae90a9e8173a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 43bf9b75af8cc43af8c45e4cc2fe4f9d4e66e595
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82818524"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733172"
 ---
 # <a name="sp_helpindex-transact-sql"></a>sp_helpindex (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   报告有关表或视图索引的信息。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "82818524"
 sp_helpindex [ @objname = ] 'name'  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @objname = ] 'name'`用户定义的表或视图的限定或非限定名称。 仅当指定限定的表或视图名称时，才需要使用引号。 如果提供的是完全限定名称（包括数据库名称），则数据库名称必须是当前数据库的名称。 *name*为**nvarchar （776）**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  

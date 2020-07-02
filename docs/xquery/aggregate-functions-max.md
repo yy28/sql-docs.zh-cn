@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 5ee625c0-044a-4cda-b210-02b64e619d65
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2b2a7449da7c255d0ddbbed71fef3561f77e294d
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: caf736973d288a89bec287aff3cb1c1993e3b0dc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529981"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726776"
 ---
 # <a name="aggregate-functions---max"></a>聚合函数 - max
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   从一个原子值序列（ *$arg*）返回一个值大于所有其他值的项。  
   
@@ -35,11 +35,11 @@ ms.locfileid: "84529981"
 fn:max($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *$arg*  
  返回原子值序列中的最大值。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  传递给**max （）** 的原子化值的所有类型都必须是同一基类型的子类型。 接受的基类型是支持**gt**操作的类型。 这些类型包括三种内置数值基类型、日期/时间基类型、xs:string、xs:boolean 和 xdt:untypedAtomic。 类型为 xdt:untypedAtomic 的值将转换为 xs:double。 如果有这些类型的混合，或者如果传递其他类型的其他值，则会引发静态错误。  
   
  **Max （）** 的结果接收传入类型的基类型，例如，在 Xdt： untypedAtomic 的情况下，xs： double。 如果输入在静态上为空，则暗示为空，并且会引发静态错误。  

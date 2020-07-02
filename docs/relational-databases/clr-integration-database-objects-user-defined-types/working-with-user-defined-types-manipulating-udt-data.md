@@ -29,19 +29,19 @@ helpviewer_keywords:
 ms.assetid: 51b1a5f2-7591-4e11-bfe2-d88e0836403f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4ff4b620f2f06243b23b4c540f4c99b3c3cafa41
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 17913dab743f1aaaa7672ce855aa85ce8434f3c0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81486894"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727754"
 ---
 # <a name="working-with-user-defined-types---manipulating-udt-data"></a>使用用户定义类型 - 操作 UDT 数据
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 没有为在对用户定义类型 (UDT) 列中的数据进行修改时所使用的 INSERT、UPDATE 或 DELETE 语句提供专用语法。 [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST 或 CONVERT 函数用于将本机数据类型转换为 UDT 类型。  
   
 ## <a name="inserting-data-in-a-udt-column"></a>在 UDT 列中插入数据  
- 以下[!INCLUDE[tsql](../../includes/tsql-md.md)]语句将三行示例数据插入到**Points**表中。 **Point**数据类型由作为 UDT 属性公开的 X 和 Y 整数值组成。 必须使用 CAST 或 CONVERT 函数将以逗号分隔的 X 和 Y 值转换为**点**类型。 前两个语句使用 CONVERT 函数将字符串值转换为**点**类型，第三个语句使用 CAST 函数：  
+ 以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句将三行示例数据插入到**Points**表中。 **Point**数据类型由作为 UDT 属性公开的 X 和 Y 整数值组成。 必须使用 CAST 或 CONVERT 函数将以逗号分隔的 X 和 Y 值转换为**点**类型。 前两个语句使用 CONVERT 函数将字符串值转换为**点**类型，第三个语句使用 CAST 函数：  
   
 ```sql  
 INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '3,4'));  
@@ -101,7 +101,7 @@ ID xVal yVal
 ```  
   
 ## <a name="working-with-variables"></a>使用变量  
- 可以通过使用 DECLARE 语句将变量分配给 UDT 类型来使用变量。 以下语句使用[!INCLUDE[tsql](../../includes/tsql-md.md)] SET 语句分配值，并通过对变量调用 UDT 的**ToString**方法来显示结果：  
+ 可以通过使用 DECLARE 语句将变量分配给 UDT 类型来使用变量。 以下语句使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] SET 语句分配值，并通过对变量调用 UDT 的**ToString**方法来显示结果：  
   
 ```sql  
 DECLARE @PointValue Point;  
@@ -159,7 +159,7 @@ WHERE PointValue = @ComparePoint;
 ## <a name="invoking-udt-methods"></a>调用 UDT 方法  
  还可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中调用在 UDT 中定义的方法。 **Point**类包含三个方法： "**距离**"、" **DistanceFrom**" 和 " **DistanceFromXY**"。 有关定义这三个方法的代码清单，请参阅[编写用户定义类型](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)的代码。  
   
- 以下[!INCLUDE[tsql](../../includes/tsql-md.md)]语句调用**PointValue**方法：  
+ 以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句调用**PointValue**方法：  
   
 ```sql  
 SELECT ID, PointValue.X AS [Point.X],   
@@ -223,7 +223,7 @@ SET PointValue.Y = 99
 WHERE ID = 3  
 ```  
   
- 如果已使用将字节排序设置为**true**定义 udt， [!INCLUDE[tsql](../../includes/tsql-md.md)]则可以计算 WHERE 子句中的 udt 列。  
+ 如果已使用将字节排序设置为**true**定义 udt，则 [!INCLUDE[tsql](../../includes/tsql-md.md)] 可以计算 WHERE 子句中的 udt 列。  
   
 ```sql  
 UPDATE dbo.Points  

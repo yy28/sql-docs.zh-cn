@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 249a4048-e885-48e0-a92a-6577f59de751
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1b42439c35eaf2b240222987f577c8664263d657
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e8ec5aaabde0fd98cea45ec601f237743f58b7eb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820321"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725781"
 ---
 # <a name="sp_reinitmergesubscription-transact-sql"></a>sp_reinitmergesubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   将合并订阅标记为在下次运行合并代理时重新初始化。 此存储过程可在发布服务器的任意发布数据库中执行。  
   
@@ -39,7 +39,7 @@ sp_reinitmergesubscription [ [ @publication = ] 'publication'
     [ , [ @upload_first = ] 'upload_first'  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publication = ] 'publication'`发布的名称。 *发布*为**sysname**，默认值为**all**。  
   
 `[ @subscriber = ] 'subscriber'`订阅服务器的名称。 *订阅服务器*的值为**sysname**，默认值为**all**。  

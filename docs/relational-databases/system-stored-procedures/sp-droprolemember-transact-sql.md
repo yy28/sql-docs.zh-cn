@@ -18,16 +18,16 @@ ms.assetid: c2f19ab1-e742-4d56-ba8e-8ffd40cf4925
 ms.author: vanto
 author: VanMSFT
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7123c1bd3fee61a3d0671a0d8fbe27c2943ba7ea
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c21a740f3c4496db871b2602b001df80d3628ed8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124849"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727209"
 ---
 # <a name="sp_droprolemember-transact-sql"></a>sp_droprolemember (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   从当前数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 角色中删除安全帐户。  
   
@@ -52,7 +52,7 @@ sp_droprolemember 'role' ,
      'security_account'  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @rolename = ] 'role'`要从中删除成员的角色的名称。 *role*的值为**sysname**，无默认值。 *角色*必须存在于当前数据库中。  
   
 `[ @membername = ] 'security_account'`要从角色中删除的安全帐户的名称。 *security_account* **sysname**，无默认值。 *security_account*可以是数据库用户、其他数据库角色、windows 登录名或 windows 组。 当前数据库中必须存在*security_account* 。  
@@ -65,7 +65,7 @@ sp_droprolemember 'role' ,
   
  若要删除固定服务器角色的用户，请使用 sp_dropsrvrolemember。 不能删除 public 角色的用户，也不能从任何角色中删除 dbo。  
   
- 使用 sp_helpuser 查看[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]角色的成员，并使用 ALTER role 将成员添加到角色。  
+ 使用 sp_helpuser 查看角色的成员 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，并使用 ALTER role 将成员添加到角色。  
   
 ## <a name="permissions"></a>权限  
  要求具有角色的 ALTER 权限。  

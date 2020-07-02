@@ -22,18 +22,18 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fe5409120a3d0c5df3cf05318b0b85fd22d07bdf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0bf9f98482ad83d1cf5104f9379ac294f2064c62
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388097"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725882"
 ---
 # <a name="specifying-the-sqlinverse-attribute-on-sqlrelationship-sqlxml-40"></a>在 sql:relationship 上指定 sql:inverse 属性 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  仅当 XSD 架构用于大容量加载或 updategram 时， **sql：反向**特性才有用。 可以在** \<sql： relationship>** 元素上指定**sql：反向**特性。 在 updategram 中，updategram 逻辑在确定由 updategram 操作更新的表和列时会解释架构。 架构中所指定的父子关系决定了修改（插入或删除）记录的顺序。  
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+  仅当 XSD 架构用于大容量加载或 updategram 时， **sql：反向**特性才有用。 可在元素上指定**sql：反向**特性 **\<sql:relationship>** 。 在 updategram 中，updategram 逻辑在确定由 updategram 操作更新的表和列时会解释架构。 架构中所指定的父子关系决定了修改（插入或删除）记录的顺序。  
   
- 如果在 XSD 架构中指定的父子关系与相应数据库列之间的主键/外键关系顺序相反，则插入或删除 updategram 操作将因主键/外键冲突而失败。 在这种情况下，在** \<sql： relationship>** 元素中指定了**sql：反向**特性（**sql：反函数 = "true"**），并且 updategram 逻辑逆了架构中指定的父子关系的解释。  
+ 如果在 XSD 架构中指定的父子关系与相应数据库列之间的主键/外键关系顺序相反，则插入或删除 updategram 操作将因主键/外键冲突而失败。 在这种情况下，在元素中指定了**sql：反向**特性（**sql：反函数 = "true"**） **\<sql:relationship>** ，并且 updategram 逻辑逆了架构中指定的父子关系的解释。  
   
  **Sql：反向**属性采用布尔值（0 = false，1 = true）。 可接受的值为 0、1、true 和 false。  
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e31f785d1b1fa205a9498889f814a0a0bc32e9a8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 305b7a0e2c9d83fe33a6d571198b205f7452ba44
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834325"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725690"
 ---
 # <a name="sp_replmonitorhelpmergesession-transact-sql"></a>sp_replmonitorhelpmergesession (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   返回给定复制合并代理的以前会话的信息，并为每个符合筛选条件的会话返回一行。 此用于监视合并复制的存储过程在分发服务器的分发数据库上执行，或在订阅服务器的订阅数据库上执行。  
   
@@ -41,7 +41,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
     [ , [ @publication = ] 'publication' ]   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @agent_name = ] 'agent_name'`代理的名称。 *agent_name*为**nvarchar （100）** ，无默认值。  
   
 `[ @hours = ] hours`返回历史代理会话信息的时间范围（以小时为单位）。 *小时数*为**int**，可以是下列范围之一。  
@@ -70,10 +70,10 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**Session_id**|**int**|代理作业会话的 ID。|  
-|**状态**|**int**|代理运行状态：<br /><br /> **1** = 启动<br /><br /> **2** = 成功<br /><br /> **3** = 正在进行<br /><br /> **4** = 空闲<br /><br /> **5** = 重试<br /><br /> **6** = 失败|  
+|**Status**|**int**|代理运行状态：<br /><br /> **1** = 启动<br /><br /> **2** = 成功<br /><br /> **3** = 正在进行<br /><br /> **4** = 空闲<br /><br /> **5** = 重试<br /><br /> **6** = 失败|  
 |**StartTime**|**datetime**|时间代理作业会话开始。|  
-|**EndTime**|**datetime**|时间代理作业会话已完成。|  
-|**持续时间**|**int**|此作业会话的累计时间（以秒为单位）。|  
+|**结束**|**datetime**|时间代理作业会话已完成。|  
+|**Duration**|**int**|此作业会话的累计时间（以秒为单位）。|  
 |**UploadedCommands**|**int**|在代理会话过程中上载的命令的数目。|  
 |**DownloadedCommands**|**int**|在代理会话过程中下载的命令的数目。|  
 |**ErrorMessages**|**int**|在代理会话过程中生成的错误消息的数目。|  

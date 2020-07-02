@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 615e9440-32a3-4ec4-94c6-94547e10ebda
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2bdc377c87ce84ec6e44bd06bc905426aeaba231
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7df129ca7f704b137cc2fb88bc251dfe2d139753
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82819487"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730121"
 ---
 # <a name="database-related-dynamic-management-views-transact-sql"></a>与数据库有关的动态管理视图 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   本部分介绍了和中的以下动态管理对象 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 。  
   

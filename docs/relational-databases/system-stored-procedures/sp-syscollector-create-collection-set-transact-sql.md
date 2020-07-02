@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 69e9ff0f-c409-43fc-89f6-40c3974e972c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3998211b12b942df15ebb4e7978c1e989486e013
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1efb90e4dd03b0a14e30202375893a82e4c80a98
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830946"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725616"
 ---
 # <a name="sp_syscollector_create_collection_set-transact-sql"></a>sp_syscollector_create_collection_set (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   创建新的收集组。 您可以使用此存储过程为数据收集创建一个自定义收集组。  
   
@@ -54,7 +54,7 @@ sp_syscollector_create_collection_set
     , [ [ @collection_set_uid = ] 'collection_set_uid' OUTPUT ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @name = ] 'name'`收集组的名称。 *名称*为**sysname** ，不能为空字符串或 NULL。  
   
  *名称*必须是唯一的。 有关当前收集组名称的列表，请查询 syscollector_collection_sets 系统视图。  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 619716b5-95dc-4538-82ae-4b90b9da8ebc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c212c587efbf32067d575f488416256f35312f2d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c59a7c87c2252497a8a7865c179939a601039157
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832617"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733176"
 ---
 # <a name="sp_helpfilegroup-transact-sql"></a>sp_helpfilegroup (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   返回与当前数据库相关联的文件组的名称及属性。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "82832617"
 sp_helpfilegroup [ [ @filegroupname = ] 'name' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @filegroupname = ] 'name'`当前数据库中任意文件组的逻辑名称。 *名称*为**sysname**，默认值为 NULL。 如果未指定*name* ，则列出当前数据库中的所有文件组，并仅显示 "结果集" 部分中显示的第一个结果集。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -58,7 +58,7 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
 |-----------------|---------------|-----------------|  
 |**file_in_group**|**sysname**|文件组中文件的逻辑名称。|  
 |**fileid**|**smallint**|数字文件标识符。|  
-|**名字**|**nchar （260）**|文件的物理名称，包括目录路径。|  
+|**filename**|**nchar （260）**|文件的物理名称，包括目录路径。|  
 |size |**nvarchar （15）**|文件大小 (KB)。|  
 |**maxsize**|**nvarchar （15）**|文件的最大大小。<br /><br /> 这是文件可增长到的最大大小。 此字段中的 UNLIMITED 值表示文件可以一直增长到磁盘变满为止。|  
 |**growth**|**nvarchar （15）**|文件的增量。 表示每次需要新的空间时给文件增加的空间大小。<br /><br /> 0 = 文件的大小是固定的，不会增长。|  

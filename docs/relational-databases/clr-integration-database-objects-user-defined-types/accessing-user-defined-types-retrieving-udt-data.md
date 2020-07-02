@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 6a98ac8c-0e69-4c03-83a4-2062cb782049
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e3d14c6d24d6db5d27b12bcc3f28c1b6ba383442
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4ab209dccc53db8f1c90a5b25c6372be4af71025
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488216"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727837"
 ---
 # <a name="accessing-user-defined-types---retrieving-udt-data"></a>访问用户定义类型 - 检索 UDT 数据
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   若要在客户端上创建用户定义类型 (UDT)，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中作为 UDT 注册的程序集必须可供客户端应用程序使用。 UDT 程序集可位于该应用程序的相同目录中，也可以位于全局程序集缓存 (GAC) 中。 还可以在项目中设置对该程序集的引用。  
   
 ## <a name="requirements-for-using-udts-in-adonet"></a>在 ADO.NET 中使用 UDT 的要求  

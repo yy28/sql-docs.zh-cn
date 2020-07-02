@@ -31,15 +31,15 @@ helpviewer_keywords:
 ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a9d51cc0c33c8b656df176baa606a88a542ca4bc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5339a0d52754c19024a3774962d947bb4240ccba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81486948"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727823"
 ---
 # <a name="creating-user-defined-types---coding"></a>创建用户定义类型 - 编码
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   编写用户定义类型 (UDT) 的定义时，必须根据是要将 UDT 作为类还是作为结构实现以及您所选择的格式和序列化选项来实现各种功能。  
   
  本节中的示例说明如何将**点**UDT 作为**结构**（或 Visual Basic 中的**结构**）实现。 **Point** UDT 包含作为属性过程实现的 X 和 Y 坐标。  
@@ -58,7 +58,7 @@ using System.Data.SqlTypes;
 using Microsoft.SqlServer.Server;  
 ```  
   
- **Microsoft SqlServer**命名空间包含 UDT 的各种属性所需的对象， **SqlTypes**命名空间包含表示[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可用于程序集的本机数据类型的类。 当然，还可能存在程序集正常运行所需的其他命名空间。 **Point** UDT 还使用**system.web**命名空间来处理字符串。  
+ **Microsoft SqlServer**命名空间包含 UDT 的各种属性所需的对象， **SqlTypes**命名空间包含表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可用于程序集的本机数据类型的类。 当然，还可能存在程序集正常运行所需的其他命名空间。 **Point** UDT 还使用**system.web**命名空间来处理字符串。  
   
 > [!NOTE]  
 >  不支持执行用 **/clr： pure**编译的 Visual C++ 数据库对象（如 udt）。  
@@ -89,11 +89,11 @@ public struct Point : INullable
 ```  
   
 ## <a name="implementing-nullability"></a>实现为 Null 性  
- 除了为您的程序集正确指定属性外，UDT 还必须支持为 Null 性。 加载到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的 udt 是可识别 null 的，但为使 udt 能够识别 null 值，udt 必须实现**SqlTypes. INullable**接口。  
+ 除了为您的程序集正确指定属性外，UDT 还必须支持为 Null 性。 加载到中的 Udt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是可识别 null 的，但为使 udt 能够识别 null 值，udt 必须实现**SqlTypes. INullable**接口。  
   
  您必须创建一个名为**IsNull**的属性，该属性是在 CLR 代码内确定某个值是否为 null 所需要的。 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发现 UDT 的 Null 实例时，会使用正常的 Null 处理方法来保留 UDT。 如果服务器不必序列化或反序列化 UDT，它不会在这些方面浪费时间；此外，它也不会浪费空间来存储 Null UDT。 每次从 CLR 中引入 UDT 时都会执行这种 Null 检查，也就是说，始终都应可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] IS NULL 构造来检查有无 Null UDT。 服务器还使用**IsNull**属性来测试实例是否为 null。 一旦服务器确定 UDT 为 Null，它便可以使用其本机 Null 处理方法。  
   
- **IsNull**的**get （）** 方法不以任何方式进行特殊大小写。 如果**点**变量** \@p**为**Null** ** \@，则默认**情况下，将计算为 "null"，而不是 "1"。 这是因为**IsNull get （）** 方法的**SqlMethod （OnNullCall）** 特性默认为 false。 由于对象为**Null**，因此当请求属性时，对象未反序列化时，不会调用方法，并且返回默认值 "Null"。  
+ **IsNull**的**get （）** 方法不以任何方式进行特殊大小写。 如果**点**变量** \@ p**为**Null**，则默认情况下，将计算为 "null"，而不是 "1 ** \@ "。** 这是因为**IsNull get （）** 方法的**SqlMethod （OnNullCall）** 特性默认为 false。 由于对象为**Null**，因此当请求属性时，对象未反序列化时，不会调用方法，并且返回默认值 "Null"。  
   
 ### <a name="example"></a>示例  
  在下面的示例中，`is_Null` 变量是私有的并且保存了 UDT 实例的 Null 状态。 您的代码必须保留 `is_Null` 的相应值。 UDT 还必须具有一个名为**null**的静态属性，该属性将返回 UDT 的 null 值实例。 这样，如果该实例在数据库中确实为 Null，UDT 便可返回 Null 值。  
@@ -156,7 +156,7 @@ FROM Points
 WHERE location.IsNull = 0;  
 ```  
   
- 这两个查询都返回具有非**空**位置的点 id。 在 Query 1 中，使用的是正常 Null 处理方法，不需要反序列化 UDT。 另一方面，查询2必须反序列化每个非**Null**对象并调用 CLR 以获取**IsNull**属性的值。 显然，使用**IS NULL**将表现出更好的性能，并且永远不会有理由**IsNull**从代码中[!INCLUDE[tsql](../../includes/tsql-md.md)]读取 UDT 的 IsNull 属性。  
+ 这两个查询都返回具有非**空**位置的点 id。 在 Query 1 中，使用的是正常 Null 处理方法，不需要反序列化 UDT。 另一方面，查询2必须反序列化每个非**Null**对象并调用 CLR 以获取**IsNull**属性的值。 显然，使用**IS NULL**将表现出更好的性能，并且永远不会有理由从代码中读取 UDT 的**IsNull**属性 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。  
   
  那么，如何使用**IsNull**属性呢？ 首先，需要在 CLR 代码内确定某个值是否为**Null** 。 其次，服务器需要一种方法来测试实例是否为**Null**，因此服务器使用此属性。 确定为**Null**后，它可以使用其本机 Null 处理来处理它。  
   
@@ -544,7 +544,7 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
  **SqlMethodAttribute**类提供自定义属性，这些属性可用于标记方法定义，以便指定确定性、调用 null 调用行为，并指定方法是否为赋值函数。 使用的是这些属性的默认值，仅在需要非默认值时才使用自定义特性。  
   
 > [!NOTE]  
->  **SqlMethodAttribute**类继承自**SqlFunctionAttribute**类，因此**SqlMethodAttribute**继承了**TableDefinition**中的**FillRowMethodName**和**SqlFunctionAttribute**字段。 这意味着可以编写一个不属于此情况的表值方法。 方法将编译并部署程序集，但在运行时将引发关于**IEnumerable**返回类型的错误，并提供以下消息： "程序集>" 的类\<"\<Class>"\<中的 "方法、属性或字段 ' name> ' 具有无效的返回类型。"  
+>  **SqlMethodAttribute**类继承自**SqlFunctionAttribute**类，因此**SqlMethodAttribute**继承了**TableDefinition**中的**FillRowMethodName**和**SqlFunctionAttribute**字段。 这意味着可以编写一个不属于此情况的表值方法。 方法会编译和程序集，但在运行时将引发关于**IEnumerable**返回类型的错误，并返回以下消息： "程序集" "的类" "中的" 方法、属性或字段 "" \<name> \<class> \<assembly> 具有无效的返回类型。 "  
   
  下表描述了可在 UDT 方法中使用的一些相关**SqlMethodAttribute**属性，并列出了这些属性的默认值。  
   
@@ -552,13 +552,13 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
  指示函数是否需要访问存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本地实例中的用户数据。 默认值为**dataaccesskind.read**。**无**。  
   
  IsDeterministic  
- 指示在输入值相同且数据库状态相同的情况下函数是否会生成相同的输出值。 默认值为**false**。  
+ 指示在输入值相同且数据库状态相同的情况下函数是否会生成相同的输出值。 默认值为 **false**。  
   
  IsMutator  
- 指示方法是否在 UDT 实例中引起状态变化。 默认值为**false**。  
+ 指示方法是否在 UDT 实例中引起状态变化。 默认值为 **false**。  
   
  IsPrecise  
- 指示函数是否涉及不精确的计算，如浮点运算。 默认值为**false**。  
+ 指示函数是否涉及不精确的计算，如浮点运算。 默认值为 **false**。  
   
  OnNullCall  
  指示在指定 Null 引用输入参数时是否调用此方法。 默认值为**true**。  
@@ -569,13 +569,13 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
 > [!NOTE]  
 >  在查询中不允许使用赋值函数方法。 这些方法只能在赋值语句或数据修改语句中调用。 如果标记为赋值函数的方法不会返回**void** （或不是 Visual Basic 中的**Sub** ），则 CREATE TYPE 将失败并出现错误。  
   
- 下面的语句假定存在具有**旋转**方法的**三角形**UDT。 下面[!INCLUDE[tsql](../../includes/tsql-md.md)]的 update 语句调用**旋转**方法：  
+ 下面的语句假定存在具有**旋转**方法的**三角形**UDT。 下面的 [!INCLUDE[tsql](../../includes/tsql-md.md)] update 语句调用**旋转**方法：  
   
 ```  
 UPDATE Triangles SET t.RotateY(0.6) WHERE id=5  
 ```  
   
- **旋转**方法使用**SqlMethod**特性将**IsMutator**设置为**true** ，以便[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可以将该方法标记为赋值函数方法。 此代码还会将**OnNullCall**设置为**false**，这向服务器指示，如果任何输入参数为 null 引用，则该方法返回 null 引用（在 Visual Basic 中为**Nothing** ）。  
+ **旋转**方法使用**SqlMethod**特性将**IsMutator**设置为**true** ，以便 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以将该方法标记为赋值函数方法。 此代码还会将**OnNullCall**设置为**false**，这向服务器指示，如果任何输入参数为 null 引用，则该方法返回 null 引用（在 Visual Basic 中为**Nothing** ）。  
   
 ```vb  
 <SqlMethod(IsMutator:=True, OnNullCall:=False)> _  
@@ -601,7 +601,7 @@ public void Rotate(double anglex, double angley, double anglez)
  使用用户定义格式实现 UDT 时，必须实现用于实现 IBinarySerialize 接口的**读取**和**写入**方法，以处理序列化和反序列化 UDT 数据。 你还必须指定**SqlUserDefinedTypeAttribute**的**MaxByteSize**属性。  
   
 ### <a name="the-currency-udt"></a>Currency UDT  
- 与一起安装的 CLR 示例附带了**货币**UDT [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，从开始[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。  
+ 与一起安装的 CLR 示例附带了**货币**UDT [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，从开始 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。  
   
  **Currency** UDT 支持在特定区域性的货币系统中处理金钱量。 必须定义两个字段：用于**CultureInfo**的**字符串**，用于指定哪个用户颁发了货币（例如 en-us），并为**CurrencyValue**的**小**数值指定了货币。  
   
@@ -609,9 +609,9 @@ public void Rotate(double anglex, double angley, double anglez)
   
  在 CLR 中运行的代码将区域性与货币值分开比较。 对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码，通过执行下列操作来确定如何比较：  
   
-1.  将**IsByteOrdered**属性设置为 true，这将[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]告知使用磁盘上保留的二进制表示形式进行比较。  
+1.  将**IsByteOrdered**属性设置为 true，这将告知 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用磁盘上保留的二进制表示形式进行比较。  
   
-2.  使用**Currency** Udt 的[!INCLUDE[tsql](../../includes/tsql-md.md)] **Write**方法来确定 udt 如何持久保存在磁盘上，进而确定如何比较和排序操作。  
+2.  使用**Currency** Udt 的**Write**方法来确定 udt 如何持久保存在磁盘上，进而确定如何比较和排序 [!INCLUDE[tsql](../../includes/tsql-md.md)] 操作。  
   
 3.  使用以下二进制格式保存**货币**UDT：  
 

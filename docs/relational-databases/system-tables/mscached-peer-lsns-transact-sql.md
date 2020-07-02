@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f8b6089a-0230-45f9-8c34-9fe0d2a3a74e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7e062d1f7ef5a1c184211a8f4040ac8c295216e7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c5f3950ac6597f0d46321d0790df3509fbb07a62
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832349"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725482"
 ---
 # <a name="mscached_peer_lsns-transact-sql"></a>MScached_peer_lsns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **MScached_peer_lsns**表用于跟踪事务日志中的 LSN 值，这些值用于确定将哪些命令返回到对等复制中的给定订阅服务器。 此表存储在分发数据库中。  
   

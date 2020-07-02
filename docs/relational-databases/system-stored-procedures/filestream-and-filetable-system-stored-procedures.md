@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2c83a4a7-720b-4435-a3b5-788c29f56949
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1ebcaf4659d7be880f0f0e901b2eadcc9002b2d9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e0c7697c6c65f6d39de4d5f52ea2fdb85ea4e218
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942241"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731795"
 ---
 # <a name="filestream-and-filetable-system-stored-procedures-transact-sql"></a>Filestream 和 FileTable 系统存储过程（Transact-sql）
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   本部分介绍 FileTable 和 Filestream 功能的系统存储过程。  
 
@@ -36,7 +36,7 @@ ms.locfileid: "67942241"
   关闭 FileTable 数据的非事务性文件句柄。
 
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [文件流](../../relational-databases/blob/filestream-sql-server.md)
 <br>[Filetable](../../relational-databases/blob/filetables-sql-server.md)
 <br>[Filestream 和 FileTable 动态管理视图 (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)

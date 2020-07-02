@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1b94f280-e095-423f-88bc-988c9349d44c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 00753183678698138ca9475d66aa0064a4fff5ba
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f380304b0a2743eb6981eb18de59a69da0f8bd92
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827689"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728185"
 ---
 # <a name="sp_help_fulltext_catalogs-transact-sql"></a>sp_help_fulltext_catalogs (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   返回指定的全文目录的 ID、名称、根目录、状态以及全文索引表的数量。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "82827689"
 sp_help_fulltext_catalogs [ @fulltext_catalog_name = ] 'fulltext_catalog_name'  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @fulltext_catalog_name = ] 'fulltext_catalog_name'`全文目录的名称。 *fulltext_catalog_name* **sysname**。 如果省略该参数或参数值为 NULL，则返回与当前数据库相关的所有全文目录的信息。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -53,7 +53,7 @@ sp_help_fulltext_catalogs [ @fulltext_catalog_name = ] 'fulltext_catalog_name'
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**fulltext_catalog_id**|**smallint**|全文目录的标识符。|  
-|**名称**|**sysname**|全文目录的名称。|  
+|**NAME**|**sysname**|全文目录的名称。|  
 |**通道**|**nvarchar(260)**|从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 开始，此子句没有任何作用。|  
 |**状态**|**int**|目录的全文索引填充状态：<br /><br /> 0 = 空闲<br /><br /> 1 = 正在进行完全填充<br /><br /> 2 = 已暂停<br /><br /> 3 = 已中止<br /><br /> 4 = Recovering<br /><br /> 5 = 关闭<br /><br /> 6 = 正在进行增量填充<br /><br /> 7 = 正在生成索引<br /><br /> 8 = 磁盘已满。 已暂停<br /><br /> 9 = 更改跟踪<br /><br /> NULL = 用户没有对全文目录的 VIEW 权限，或者未全文启用数据库，或者未安装全文组件。|  
 |**NUMBER_FULLTEXT_TABLES**|**int**|与目录关联的全文索引表的数量。|  

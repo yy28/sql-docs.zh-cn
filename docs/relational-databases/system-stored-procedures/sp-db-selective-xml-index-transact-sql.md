@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 017301a2-4a23-4e68-82af-134f3d4892b3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d34cc5e283a94a59d2c6a540ab42b7d520d895f7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: eeed1432c6f3c3ba4f6dcd80608c2c40bd0db374
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831678"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728215"
 ---
 # <a name="sp_db_selective_xml_index-transact-sql"></a>sp_db_selective_xml_index (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库上启用和禁用选择性 XML 索引功能。 如果不带任何参数调用，则当在特定数据库上启用选择性 XML 索引时，存储过程返回 1。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "82831678"
 [[ @action = ] 'action']  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @ db_name = ] 'db_name'`要对其启用或禁用选择性 XML 索引的数据库的名称。 如果*db_name*为空，则假定为当前数据库。  
   
 `[ @action = ] 'action'`确定是启用还是禁用索引。 如果传递了除 "on"、"true"、"off" 或 "false" 之外的其他值，则会引发错误。  

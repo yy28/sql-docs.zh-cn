@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 83afa0ca-707e-4468-a888-228268ed4e10
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3fa3f6ead24faff78fd37eeb4e7cd9d427346d00
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 17872cfae8da4d8f28b6031be168aa60a063d54b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829199"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730796"
 ---
 # <a name="mspeer_conflictdetectionconfigrequest-transact-sql"></a>MSpeer_conflictdetectionconfigrequest (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   用于在对等复制中跟踪拓扑范围内的发布配置请求。 该表存储在发布数据库中。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "82829199"
 |sent_date|**datetime**|发起冲突配置请求的日期和时间。|  
 |timeout|**int**|过程应等待所有对等方返回冲突信息的时间。|  
 |modified_date|**datetime**|阶段的完成日期和时间。|  
-|progress_phase|**nvarchar(32)**|使用下列值之一标识当前处理阶段：<br /><br /> 开始学习<br /><br /> 正在浏览拓扑<br /><br /> 正在收集状态<br /><br /> 已收集状态|  
+|progress_phase|**nvarchar(32)**|使用下列值之一标识当前处理阶段：<br /><br /> 已开始<br /><br /> 正在浏览拓扑<br /><br /> 正在收集状态<br /><br /> 已收集状态|  
 |phase_timed_out|**bit**|指示当前阶段是否已超时。|  
   
 ## <a name="see-also"></a>另请参阅  

@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 480de2b0-2c16-497d-a6a3-bf7f52a7c9a0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 549c60eff284c4302f3695786bc87074c9b0d617
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 84fd6a1b23287b53115a21cd519244525d7939ab
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821673"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725786"
 ---
 # <a name="sysdatabase_mirroring-transact-sql"></a>sys.database_mirroring (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中的每个数据库占一行。 如果数据库未联机，或未启用数据库镜像，则除 database_id 以外的所有列的值都将为 NULL。  
   
@@ -46,13 +46,13 @@ ms.locfileid: "82821673"
 |**mirroring_role_desc**|**nvarchar(60)**|本地数据库在镜像中的角色说明，可以是以下值之一：<br /><br /> PRINCIPAL<br /><br /> MIRROR|  
 |**mirroring_role_sequence**|**int**|由于故障转移或强制服务，导致镜像伙伴在主体数据库角色和镜像数据库角色之间进行切换的次数。<br /><br /> NULL = 数据库不可访问或未镜像。|  
 |**mirroring_safety_level**|**tinyint**|镜像数据库更新的安全设置：<br /><br /> 0 = 未知状态<br /><br /> 1 = 关闭 [异步]<br /><br /> 2 = 完全 [同步]<br /><br /> NULL = 数据库不可访问或未镜像。|  
-|**mirroring_safety_level_desc**|**nvarchar(60)**|镜像数据库更新的事务安全设置，可以是下列值之一：<br /><br /> UNKNOWN<br /><br /> OFF<br /><br /> FULL<br /><br /> Null|  
+|**mirroring_safety_level_desc**|**nvarchar(60)**|镜像数据库更新的事务安全设置，可以是下列值之一：<br /><br /> 未知<br /><br /> OFF<br /><br /> FULL<br /><br /> Null|  
 |**mirroring_safety_sequence**|**int**|将更改的序列号更新为事务安全级别。<br /><br /> NULL = 数据库不可访问或未镜像。|  
 |**mirroring_partner_name**|**nvarchar(128)**|数据库镜像伙伴的服务器名称。<br /><br /> NULL = 数据库不可访问或未镜像。|  
 |**mirroring_partner_instance**|**nvarchar(128)**|其他伙伴的实例名和计算机名称。 如果伙伴成为主体服务器，则客户端需要此信息以连接到该伙伴服务器。<br /><br /> NULL = 数据库不可访问或未镜像。|  
 |**mirroring_witness_name**|**nvarchar(128)**|数据库镜像见证服务器的服务器名称。<br /><br /> NULL = 不存在见证服务器。|  
 |mirroring_witness_state|**tinyint**|数据库的数据库镜像会话中的见证服务器状态，可以是下列值之一：<br /><br /> 0 = 未知<br /><br /> 1 = 已连接<br /><br /> 2 = 已断开<br /><br /> NULL = 见证服务器不存在，数据库未联机或未镜像。|  
-|**mirroring_witness_state_desc**|**nvarchar(60)**|状态说明，可以是下列值之一：<br /><br /> UNKNOWN<br /><br /> CONNECTED<br /><br /> DISCONNECTED<br /><br /> Null|  
+|**mirroring_witness_state_desc**|**nvarchar(60)**|状态说明，可以是下列值之一：<br /><br /> 未知<br /><br /> CONNECTED<br /><br /> DISCONNECTED<br /><br /> Null|  
 |**mirroring_failover_lsn**|**numeric(25,0)**|保证将被镜像到两个伙伴服务器磁盘中的最新事务日志记录的日志序列号 (LSN)。 故障转移后，伙伴使用**mirroring_failover_lsn**作为协调点，新的镜像服务器将开始将新的镜像数据库与新的主体数据库进行同步。|  
 |**mirroring_connection_timeout**|**int**|镜像连接超时值（秒）。 这是等待伙伴或见证服务器回复的秒数，超过该时间后，伙伴或见证服务器将被视为不可用。 默认超时值为 10 秒。<br /><br /> NULL = 数据库不可访问或未镜像。|  
 |**mirroring_redo_queue**|**int**|对镜像服务器重做的最大日志量。 如果 mirroring_redo_queue_type 已设置为默认设置 UNLIMITED，则此列为 NULL。 如果数据库未联机，则该列也为 NULL。<br /><br /> 否则，该列包含最大日志量 (MB)。 如果达到最大值，则当镜像服务器也达到同一值时，日志将在主体服务器上临时停止。 此功能限制故障转移时间。<br /><br /> 有关详细信息，请参阅 [估计在角色切换期间服务的中断（数据库镜像）](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)。|  

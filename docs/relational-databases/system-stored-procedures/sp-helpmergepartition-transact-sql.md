@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 184188cc-f519-445d-97ce-aae38f1eb550
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 24edec99d34843e15c8cd89c0d7cd123c5e401dd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3812f7c59790d05f3519b94185a80dd6e22626cd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82817992"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733077"
 ---
 # <a name="sp_helpmergepartition-transact-sql"></a>sp_helpmergepartition (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   返回指定合并发布的分区信息。 此存储过程在发布服务器的任何数据库中执行。  
   
@@ -38,7 +38,7 @@ sp_helpmergepartition [ @publication= ] 'publication'
     [ , [ @host_name = ] 'host_name' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publication = ] 'publication'`发布的名称。 *发布*为**sysname**，无默认值。  
   
 `[ @suser_sname = ] 'suser_sname'`用于定义分区的 SUSER_SNAME 值。 *suser_sname*的值为**sysname**，默认值为 NULL。 提供此参数是为了将结果集限制在仅将 SUSER_SNAME 解析为提供的值的分区中。  

@@ -18,17 +18,17 @@ ms.assetid: 913cd5d4-39a3-4a4b-a926-75ed32878884
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ac6e69db443bd23c3e9b1119b21d8fd98ebe39c4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 57a435db1aca6c2ab9f093792e26f7e88dcbf21a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82815513"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727183"
 ---
 # <a name="sp_help-transact-sql"></a>sp_help (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  报告有关数据库对象（ **sysobjects**兼容性视图中列出的任何对象）、用户定义数据类型或数据类型的信息。  
+  报告有关数据库对象（ **sys.sys对象**兼容性视图中列出的任何对象）、用户定义数据类型或数据类型的信息。  
   
  
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -40,7 +40,7 @@ ms.locfileid: "82815513"
 sp_help [ [ @objname = ] 'name' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @objname = ] 'name'`**Sysobjects**或**systypes**表中任何用户定义的数据类型的任何对象的名称。 *名称*为**nvarchar （** 776 **）**，默认值为 NULL。 不能接受数据库名称。  两个或三个部分的名称必须进行分隔，例如 'Person.AddressType' 或 [Person.AddressType]。   
    
   
@@ -76,9 +76,9 @@ sp_help [ [ @objname = ] 'name' ]
 
     |列名称|数据类型|说明|  
     |-----------------|---------------|-----------------|  
-    |**Name**|**nvarchar （** 128 **）**|表名|  
+    |**Name**|**nvarchar （** 128 **）**|表名称|  
     |**所有者**|**nvarchar （** 128 **）**|表所有者|  
-    |**Type**|**nvarchar （** 31 **）**|表类型|  
+    |类型|**nvarchar （** 31 **）**|表类型|  
     |**Created_datetime**|**datetime**|表的创建日期|  
   
      **Sp_help**返回其他结果集，具体取决于指定的数据库对象。  
@@ -90,7 +90,7 @@ sp_help [ [ @objname = ] 'name' ]
         |列名称|数据类型|说明|  
         |-----------------|---------------|-----------------|  
         |**Column_name**|**nvarchar （** 128 **）**|列名称。|  
-        |**Type**|**nvarchar （** 128 **）**|列数据类型。|  
+        |类型|**nvarchar （** 128 **）**|列数据类型。|  
         |**得出**|**varchar （** 35 **）**|指示是否计算列中的值：“是”或“否”。|  
         |**长度**|**int**|以字节为单位的列长度。<br /><br /> 注意：如果列数据类型是大值类型（**varchar （max）**、 **nvarchar （max）**、 **varbinary （max）** 或**xml**），该值将显示为-1。|  
         |**Prec**|**char （** 5 **）**|列精度。|  
@@ -105,7 +105,7 @@ sp_help [ [ @objname = ] 'name' ]
         |列名称|数据类型|说明|  
         |-----------------|---------------|-----------------|  
         |**标识**|**nvarchar （** 128 **）**|其数据类型被声明为标识的列名。|  
-        |**Seed**|**numeric**|标识列的起始值。|  
+        |**种子**|**numeric**|标识列的起始值。|  
         |**版本号**|**numeric**|用于此列中的值的增量。|  
         |**不用于复制**|**int**|当复制登录名（如**sqlrepl**）将数据插入到表中时，不会强制使用 IDENTITY 属性：<br /><br /> 1 = True<br /><br /> 0 = False|  
   
@@ -152,7 +152,7 @@ sp_help [ [ @objname = ] 'name' ]
         |列名称|数据类型|说明|  
         |-----------------|---------------|-----------------|  
         |**Parameter_name**|**nvarchar （** 128 **）**|存储过程参数名。|  
-        |**Type**|**nvarchar （** 128 **）**|存储过程参数的数据类型。|  
+        |类型|**nvarchar （** 128 **）**|存储过程参数的数据类型。|  
         |**长度**|**smallint**|最大物理存储长度（以字节为单位）。|  
         |**Prec**|**int**|精度，即数字总位数。|  
         |**缩放**|**int**|小数点右边的数字位数。|  
@@ -198,6 +198,6 @@ GO
  [sp_helptrigger (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
  [sp_helpuser &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
  [&#40;Transact-sql&#41;系统存储过程](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sysobjects &#40;Transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-sysobjects-transact-sql.md)  
+ [Transact-sql&#41;的sys.sys对象 &#40;](../../relational-databases/system-compatibility-views/sys-sysobjects-transact-sql.md)  
   
   

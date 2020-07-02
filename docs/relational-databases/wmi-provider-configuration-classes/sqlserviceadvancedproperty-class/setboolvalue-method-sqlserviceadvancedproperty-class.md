@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5252b439-fce5-446a-8e57-99e3054bee69
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0b893415c56aae38c76836fbe0496e4d990ff83b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cc9a2599daef295a8e326f19efa6f151685a050c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659959"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731395"
 ---
 # <a name="setboolvalue-method-sqlserviceadvancedproperty-class"></a>SetBoolValue 方法（SqlServiceAdvancedProperty 类）
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   设置属性的布尔值。  
   
 ## <a name="syntax"></a>语法  
@@ -41,7 +41,7 @@ object.SetBoolValue [= value]
   
 #### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |*BoolValue*|一个指定高级属性的值的布尔值。|  
   

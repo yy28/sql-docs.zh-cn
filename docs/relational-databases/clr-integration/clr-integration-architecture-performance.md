@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ac12bf75588d70f12b4550260f9911796c1c3a56
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8199df81aca3688855b771923f6fa19a0e4f33db
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488142"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727629"
 ---
 # <a name="clr-integration-architecture----performance"></a>CLR 集成体系结构 - 性能
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  本主题讨论一些可提高与[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 公共语言运行时（CLR）集成性能的设计选择。  
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+  本主题讨论一些可提高 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 公共语言运行时（CLR）集成性能的设计选择。  
   
 ## <a name="the-compilation-process"></a>编译过程  
  在编译 SQL 表达式时，如果遇到对托管例程的引用，则生成 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 中间语言 (MSIL) 存根。 该存根包含的代码用于将例程参数从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 封送到 CLR、调用函数并返回结果。 该“粘附”代码基于参数类型和参数方向（向内、向外或引用）。  
@@ -56,7 +56,7 @@ ms.locfileid: "81488142"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]字符数据（如**varchar**）的类型可以是 SqlString 或 SqlChars。 SqlString 变量将整个值的实例创建到内存中。 SqlChars 变量提供可用于获得更好性能和可扩展性的流式接口，而无需将整个值的实例创建到内存中。 这对于大型对象 (LOB) 数据尤为重要。 此外，可以通过**CreateReader （）** 返回的流接口访问服务器 XML 数据。  
   
 ### <a name="clr-vs-extended-stored-procedures"></a>CLR 与扩展存储过程  
- 允许托管过程向客户端回发结果集的 Microsoft.SqlServer.Server 应用程序编程接口 (API) 的性能优于扩展存储过程使用的开放式数据服务 (ODS) API。 此外，System.web Api 还支持[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中引入的**xml**、 **varchar （max）**、 **nvarchar （max）** 和**VARBINARY （max**）等数据类型，而 ODS api 尚未进行扩展以支持新的数据类型。  
+ 允许托管过程向客户端回发结果集的 Microsoft.SqlServer.Server 应用程序编程接口 (API) 的性能优于扩展存储过程使用的开放式数据服务 (ODS) API。 此外，System.web Api 还支持中引入的**xml**、 **varchar （max）**、 **nvarchar （max）** 和**varbinary （MAX**）等数据类型， [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 而 ODS api 尚未进行扩展以支持新的数据类型。  
   
  通过托管代码，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对内存、线程和同步等资源的使用。 这是因为公开这些资源的托管 API 是针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源管理器实现的。 相反，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法查看或控制扩展存储过程的资源使用情况。 例如，如果扩展存储过程占用过多 CPU 或内存资源，则无法通过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 检测或控制此种情况。 但是，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以使用托管代码检测到给定线程已有很长一段时间未生成结果，并强制该任务生成以便安排其他工作。 因此，使用托管代码可以提高可扩展性，并改善系统资源使用情况。  
   

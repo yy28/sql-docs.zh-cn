@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: bfbbbee2-c255-4a59-a963-47d6e980a8e2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 155f59426e8167d5d888f3890089dd4b2ea3bf7c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 87c243c1eaffdcbf471347a677bb7e5d9c9ffbb6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72909688"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731741"
 ---
 # <a name="sp_add_log_shipping_secondary_primary-transact-sql"></a>sp_add_log_shipping_secondary_primary (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   为指定的主数据库设置主服务器信息，添加本地和远程监视器链接，并在辅助服务器上创建复制作业和还原作业。  
   
@@ -52,8 +52,8 @@ sp_add_log_shipping_secondary_primary
 [, [ @secondary_id = ] 'secondary_id' OUTPUT]  
 ```  
   
-## <a name="arguments"></a>参数  
-`[ @primary_server = ] 'primary_server'`日志传送配置中的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]主实例的名称。 *primary_server*为**sysname** ，且不能为 NULL。  
+## <a name="arguments"></a>自变量  
+`[ @primary_server = ] 'primary_server'`[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 日志传送配置中的主实例的名称。 *primary_server*为**sysname** ，且不能为 NULL。  
   
 `[ @primary_database = ] 'primary_database'`主服务器上的数据库的名称。 *primary_database* **sysname**，无默认值。  
   
@@ -61,11 +61,11 @@ sp_add_log_shipping_secondary_primary
   
 `[ @backup_destination_directory = ] 'backup_destination_directory'`辅助服务器上将备份文件复制到的目录。 *backup_destination_directory*为**nvarchar （500）** ，且不能为 NULL。  
   
-`[ @copy_job_name = ] 'copy_job_name'`要创建的用于将事务[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日志备份复制到辅助服务器的代理作业的名称。 *copy_job_name*为**sysname** ，且不能为 NULL。  
+`[ @copy_job_name = ] 'copy_job_name'`要创建的用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将事务日志备份复制到辅助服务器的代理作业的名称。 *copy_job_name*为**sysname** ，且不能为 NULL。  
   
-`[ @restore_job_name = ] 'restore_job_name'`辅助服务器上的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理作业的名称，可将备份还原到辅助数据库。 *restore_job_name*为**sysname** ，且不能为 NULL。  
+`[ @restore_job_name = ] 'restore_job_name'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]辅助服务器上的代理作业的名称，可将备份还原到辅助数据库。 *restore_job_name*为**sysname** ，且不能为 NULL。  
   
-`[ @file_retention_period = ] 'file_retention_period'`备份文件在删除前在@backup_destination_directory参数指定的路径中保留在辅助服务器上的时间长度（以分钟为单位）。 *history_retention_period*的值为**int**，默认值为 NULL。 如果未指定值，则使用值 14420。  
+`[ @file_retention_period = ] 'file_retention_period'`备份文件在删除前在参数指定的路径中保留在辅助服务器上的时间长度（以分钟为单位） @backup_destination_directory 。 *history_retention_period*的值为**int**，默认值为 NULL。 如果未指定值，则使用值 14420。  
   
 `[ @monitor_server = ] 'monitor_server'`监视服务器的名称。 *Monitor_server* **sysname**，无默认值，且不能为 NULL。  
   
@@ -114,7 +114,7 @@ sp_add_log_shipping_secondary_primary
  只有**sysadmin**固定服务器角色的成员才能运行此过程。  
   
 ## <a name="examples"></a>示例  
- 此示例演示如何使用**sp_add_log_shipping_secondary_primary**存储过程来设置辅助服务器上的主数据库[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]的信息。  
+ 此示例演示如何使用**sp_add_log_shipping_secondary_primary**存储过程来设置辅助服务器上的主数据库的信息 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 。  
   
 ```  
 EXEC master.dbo.sp_add_log_shipping_secondary_primary   
@@ -134,7 +134,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [关于 &#40;SQL Server 的日志传送&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

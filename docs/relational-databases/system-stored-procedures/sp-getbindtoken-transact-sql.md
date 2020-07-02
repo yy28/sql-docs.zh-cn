@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5db87d77-85fa-45a3-a23a-3ea500f9a5ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dca4015832f8bebf5501c4b3a7e84339bf62957b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 14fb45e2d5b7acad7cd0925ec32a9f56f10ddf55
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833190"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730058"
 ---
 # <a name="sp_getbindtoken-transact-sql"></a>sp_getbindtoken (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   返回事务的唯一标识符。 该唯一标识符是一个字符串，用来使用 sp_bindsession 绑定会话。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "82833190"
 sp_getbindtoken [@out_token =] 'return_value' OUTPUT   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  [ @out_token =] "*return_value*"  
  用于绑定会话的令牌。 *return_value*的值为**varchar （255）** ，无默认值。  
   
@@ -126,7 +126,7 @@ SELECT @bind_token AS Token;
  `\0]---5^PJK51bP<1F<-7U-]ANZ`  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_bindsession &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-bindsession-transact-sql.md)   
+ [sp_bindsession (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-bindsession-transact-sql.md)   
  [&#40;Transact-sql&#41;系统存储过程](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [扩展存储过程 API srv_getbindtoken &#40;&#41;](../../relational-databases/extended-stored-procedures-reference/srv-getbindtoken-extended-stored-procedure-api.md)  
   

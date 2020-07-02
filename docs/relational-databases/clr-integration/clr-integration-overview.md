@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 5aa176da-3652-4afa-a742-4c40c77ce5c3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 64c30629cf7608a7816ec16c458f55f4dfad1e75
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5779e5982ee6c9c3729b2995b25771b993a5e442
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488097"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727614"
 ---
 # <a name="clr-integration---overview"></a>CLR 集成 - 概述
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   公共语言运行时 (CLR) 是 Microsoft .NET Framework 的核心，它为所有 .NET Framework 代码提供执行环境。 在 CLR 中运行的代码称为托管代码。 CLR 提供执行程序所需的各种函数和服务，包括实时 (JIT) 编译、分配和管理内存、强制类型安全、异常处理、线程管理和安全性。  有关详细信息，请参阅 .NET Framework SDK。  
   
  使用在 Microsoft SQL Server 中驻留的 CLR（称为 CLR 集成），可以在托管代码中编写存储过程、触发器、用户定义函数、用户定义类型和用户定义聚合。 由于托管代码在执行之前才编译为本机代码，因此在某些情形下可以大幅提高性能。  

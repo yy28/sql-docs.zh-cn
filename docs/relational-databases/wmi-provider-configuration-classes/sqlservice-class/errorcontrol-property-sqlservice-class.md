@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: cbb1e0fa-5bfc-4b1b-a6ed-f7d5cfad4d73
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f520ddd8443699ef4d1fe388f165648b0ff188c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b666426cd7f1d7eb2395ec4a67f0b166564de17d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659662"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733013"
 ---
 # <a name="errorcontrol-property-sqlservice-class"></a>ErrorControl 属性（SqlService 类）
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   获取或设置启动期间服务无法启动时的错误严重性。  
   
 ## <a name="syntax"></a>语法  
@@ -54,7 +54,7 @@ object.ErrorControl [= value]
  严重  
  系统将尝试使用正确的配置重新启动。  
   
- Unknown  
+ 未知  
  严重性未知。  
   
 ## <a name="remarks"></a>备注  

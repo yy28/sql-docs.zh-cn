@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e55789d1-43fb-4a37-9e5e-60ccef122a5d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f9303801527b3154585034e1097623ce073fb91f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: be1bfbea0d6681a2fd22eb0e26991f3622f18d70
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834383"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730787"
 ---
 # <a name="sp_helppeerresponses-transact-sql"></a>sp_helppeerresponses (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   返回对等复制拓扑中参与者收到的特定状态请求的所有响应，其中请求是通过在拓扑中的任何已发布数据库上执行[sp_helppeerrequests](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)启动的。 此存储过程将对参与对等复制拓扑的发布服务器上的发布数据库执行。 有关详细信息，请参阅 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "82834383"
 sp_helppeerresponses [ @request_id = ] request_id  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @request_id = ] request_id`特定状态请求的 ID。 *request_id*为**int**，没有默认值。  
   
 ## <a name="result-sets"></a>结果集  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 70c10922-9345-4190-ba69-808a43f760da
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5aa9801d312e5f862cb6274659496aff10c774ad
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 298f50a9afd857054269f796fdda7da900cb4284
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68010506"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725497"
 ---
 # <a name="sp_syspolicy_configure-transact-sql"></a>sp_syspolicy_configure (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   配置基于策略的管理设置，例如，是否启用基于策略的管理。  
   
@@ -39,7 +39,7 @@ sp_syspolicy_configure [ @name = ] 'name'
     , [ @value = ] value  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @name = ] 'name'`要配置的设置的名称。 *name*为**sysname**，是必需的，并且不能为 NULL 或空字符串。  
   
  *名称*可以是以下任何值：  
@@ -78,7 +78,7 @@ sp_syspolicy_configure [ @name = ] 'name'
  要求具有 PolicyAdministratorRole 固定数据库角色的成员身份。  
   
 > [!IMPORTANT]  
->  可能的凭据提升：具有 PolicyAdministratorRole 角色的用户可以创建服务器触发器并计划策略执行，这可能会影响[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的正常运行。 例如，PolicyAdministratorRole 角色中的用户可以创建一个策略，它可能会禁止在[!INCLUDE[ssDE](../../includes/ssde-md.md)]中创建大多数对象。 由于这种可能的凭据提升，只应将 PolicyAdministratorRole 角色授予受信任的用户，以控制的配置[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+>  可能的凭据提升：具有 PolicyAdministratorRole 角色的用户可以创建服务器触发器并计划策略执行，这可能会影响[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的正常运行。 例如，PolicyAdministratorRole 角色中的用户可以创建一个策略，它可能会禁止在[!INCLUDE[ssDE](../../includes/ssde-md.md)]中创建大多数对象。 由于这种可能的凭据提升，只应将 PolicyAdministratorRole 角色授予受信任的用户，以控制的配置 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。  
   
 ## <a name="examples"></a>示例  
  下面的示例启用基于策略的管理。  

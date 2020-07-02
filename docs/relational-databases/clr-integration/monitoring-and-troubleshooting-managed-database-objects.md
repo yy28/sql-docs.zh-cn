@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: a7b589ac-104d-4b68-b4aa-9f5fc192b13d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e04b5308aeca5881f624122c70ad74c27417a46b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a9b05b11fcf3110b9f51d1f9cb44fdabb4a3ba36
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75258336"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728452"
 ---
 # <a name="monitoring-and-troubleshooting-managed-database-objects"></a>托管数据库对象监视和故障排除
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   本主题提供的信息介绍用于对正在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中运行的托管数据库对象和程序集进行监视和故障排除的工具。  
   
 ## <a name="profiler-trace-events"></a>事件探查器跟踪事件  
@@ -38,14 +38,14 @@ ms.locfileid: "75258336"
 ## <a name="performance-counters"></a>性能计数器  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了对象和计数器，系统监视器可以使用它们监视运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机中的活动。 对象可以是任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 锁或 Windows 进程。 每个对象有一个或多个计数器，用于确定所要监视对象的各方面信息。 有关详细信息，请参阅 [使用 SQL Server 对象](../../relational-databases/performance-monitor/use-sql-server-objects.md)。  
   
-|对象|说明|  
+|对象|描述|  
 |------------|-----------------|  
 |[SQL Server CLR 对象](../../relational-databases/performance-monitor/sql-server-clr-object.md)|CLR 执行所花的总时间。|  
   
 ## <a name="windows-system-monitor-perfmonexe-counters"></a>Windows 系统监视器 (PERFMON.EXE) 计数器  
  Windows 系统监视器 (PERFMON.EXE) 工具具有多个性能计数器，可用来监视 CLR 集成应用程序。 可以通过“sqlservr”进程名称筛选 .NET CLR 性能计数器，以跟踪当前正在运行的 CLR 集成应用程序。  
   
-|性能对象|说明|  
+|性能对象|描述|  
 |------------------------|-----------------|  
 |SqlServer:CLR|提供服务器的 CPU 统计信息。|  
 |.NET CLR 异常|跟踪每秒异常数。|  
@@ -56,7 +56,7 @@ ms.locfileid: "75258336"
 ## <a name="catalog-views"></a>目录视图  
  目录视图返回由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库引擎使用的信息。 建议您使用目录视图这一最常用的目录元数据界面，它可为您提供最有效的方法来获取、转换并显示此信息的自定义形式。 所有用户可用的目录元数据都通过目录视图来显示。 有关详细信息，请参阅[目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)。  
   
-|目录视图|说明|  
+|目录视图|描述|  
 |------------------|-----------------|  
 |[sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)|返回有关在数据库中注册的程序集的信息。|  
 |[sys. assembly_references &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-assembly-references-transact-sql.md)|标识引用其他程序集的程序集。|  
@@ -73,7 +73,7 @@ ms.locfileid: "75258336"
 ## <a name="dynamic-management-views"></a>动态管理视图  
  动态管理视图和函数返回可用于监视服务器实例的运行状况、诊断故障以及优化性能的服务器状态信息。 有关详细信息，请参阅[&#40;transact-sql&#41;中的动态管理视图和函数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)。  
   
-|DMV|说明|  
+|DMV|描述|  
 |---------|-----------------|  
 |[sys. dm_clr_appdomains &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md)|提供有关服务器中每个应用程序域的信息。|  
 |[sys. dm_clr_loaded_assemblies &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)|标识在服务器上注册的每个托管程序集。|  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d021864e-3f21-4d1a-89df-6c1086f753bf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4c0837db9666ab6b49aee30b81b5585cbf5d5ee0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 819c6c91b2fc57ca077b82797626cf255dcc6357
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056774"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725699"
 ---
 # <a name="sp_replicationdboption-transact-sql"></a>sp_replicationdboption (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   设置指定数据库的复制数据库选项。 此存储过程在发布服务器或订阅服务器上对任何数据库执行。  
   
@@ -40,16 +40,16 @@ sp_replicationdboption [ @dbname= ] 'db_name'
     [ , [ @from_scripting = ] from_scripting ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @dbname = ] 'dbname'`正在为其设置复制数据库选项的数据库。 *db_name* **sysname**，无默认值。  
   
 `[ @optname = ] 'optname'`要启用或禁用的复制数据库选项。 *optname*为**sysname**，可以是下列值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**合并发布**|数据库可用于合并发布。|  
 |**发布**|数据库可用于其他类型的发布。|  
-|**subscribe**|数据库为订阅数据库。|  
+|**订**|数据库为订阅数据库。|  
 |**sync with backup**|启用数据库以进行协调备份。 有关详细信息，请参阅为[事务复制启用协调备份 &#40;复制 Transact-sql 编程&#41;](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md)。|  
   
 `[ @value = ] 'value'`指示是启用还是禁用给定的复制数据库选项。 *值*为**sysname**，可以为**true**或**false**。 如果此值为**false** ，并且*optname*为**merge publish**，则还将删除对合并发布数据库的订阅。  

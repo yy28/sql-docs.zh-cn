@@ -20,29 +20,29 @@ helpviewer_keywords:
 ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2b19a9179cba2225a2209255ce48220669e4bbef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b20192a3804dfba713b04706d528738ceb8768c3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81486966"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727807"
 ---
 # <a name="creating-user-defined-types---requirements"></a>创建用户定义类型 - 需求
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  在创建要安装的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用户定义类型（UDT）时，必须做出几个重要的设计决策。 对于大多数 UDT，建议将 UDT 作为结构创建，尽管也可以选择将其作为类创建。 UDT 定义必须符合用于创建 UDT 的规范，以使其能够注册到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  在创建要安装的用户定义类型（UDT）时，必须做出几个重要的设计决策 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 对于大多数 UDT，建议将 UDT 作为结构创建，尽管也可以选择将其作为类创建。 UDT 定义必须符合用于创建 UDT 的规范，以使其能够注册到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 ## <a name="requirements-for-implementing-udts"></a>实现 UDT 的要求  
  为了在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中运行，您的 UDT 必须实现 UDT 定义中的以下要求：  
   
  该 UDT 必须指定**SqlUserDefinedTypeAttribute**。 **SerializableAttribute**的使用是可选的，但建议使用。  
   
--   UDT 必须通过创建公共**静态**（在 Visual Basic [!INCLUDE[msCoName](../../includes/msconame-md.md)]中为**共享**） **Null**方法来实现类或结构中的**SqlTypes。** 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是可识别 Null 的。 这是为使在 UDT 中执行的代码能够识别 Null 值所必需的。  
+-   UDT 必须通过创建公共**静态**（在 Visual Basic 中为**共享**） Null 方法来实现类或结构中的**SqlTypes。** [!INCLUDE[msCoName](../../includes/msconame-md.md)] **Null** 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是可识别 Null 的。 这是为使在 UDT 中执行的代码能够识别 Null 值所必需的。  
   
 -   UDT 必须包含一个公共**静态**（或**共享**）**分析**方法，该方法支持从中进行分析，以及一个公共**ToString**方法，用于转换为对象的字符串表示形式。  
   
 -   使用用户定义的序列化格式的 UDT 必须实现**IBinarySerialize**接口并提供**读****写**方法。  
   
--   UDT 必须实现**XmlIgnore** ，或者所有公共字段和属性必须是 Xml 可序列化的类型或用特性修饰的**类型（如果**需要重写标准序列化）。  
+-   UDT 必须实现**System.Xml。** 如果需要重写标准序列化，则串行化或所有公共字段和属性必须是 XML 可序列化的类型或用**XmlIgnore**特性修饰的类型。  
   
 -   一个 UDT 对象必须只存在一个序列化。 如果序列化或反序列化例程识别了某一特定对象的多个表示形式，则验证将失败。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "81486966"
   
 -   该 UDT 必须将数据元素作为公共字段或属性过程公开。  
   
--   公共名称的长度不能超过128个字符，并且必须符合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在[数据库标识符](../../relational-databases/databases/database-identifiers.md)中定义的标识符的命名规则。  
+-   公共名称的长度不能超过128个字符，并且必须符合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在[数据库标识符](../../relational-databases/databases/database-identifiers.md)中定义的标识符的命名规则。  
   
 -   **sql_variant**列不能包含 UDT 的实例。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "81486966"
 >  尽管服务器不使用它来执行比较，但你可以选择实现**system.icomparable**接口，该接口公开单一方法**CompareTo**。 此方法用于客户端上希望精确比较或排序 UDT 值的情况中。  
   
 ## <a name="native-serialization"></a>本机序列化  
- 为您的 UDT 选择正确的序列化属性取决于您正尝试创建的 UDT 的类型。 **本机**序列化格式使用非常简单的结构，该[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]结构使能够在磁盘上存储 UDT 的有效本机表示形式。 如果 UDT 非常简单且仅包含以下类型的字段，则建议使用**本机**格式：  
+ 为您的 UDT 选择正确的序列化属性取决于您正尝试创建的 UDT 的类型。 **本机**序列化格式使用非常简单的结构，该结构使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 能够在磁盘上存储 UDT 的有效本机表示形式。 如果 UDT 非常简单且仅包含以下类型的字段，则建议使用**本机**格式：  
   
  **bool**、 **byte**、 **sbyte**、 **short**、 **ushort**、 **int**、 **uint**、 **long**、 **ulong**、 **float**、 **double**、 **SqlByte**、 **SqlInt16**、 **SqlInt32**、 **SqlInt64**、 **SqlDateTime**、 **SqlSingle**、 **SqlDouble**、 **SqlMoney**、 **SqlBoolean**  
   
@@ -99,7 +99,7 @@ ms.locfileid: "81486966"
 >  为了编制索引，UDT 字段必须使用本机序列化或者是持久化的。  
   
 ## <a name="serialization-attributes"></a>序列化属性  
- 属性确定如何使用序列化来构造 UDT 的存储表示形式以及如何按值将 UDT 传输到客户端。 创建 UDT 时，您需要指定**SqlUserDefinedTypeAttribute**的。 **SqlUserDefinedTypeAttribute**特性指示类为 udt，并指定 udt 的存储。 "。 您可以选择指定**可序列化**属性， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]但不需要此属性。  
+ 属性确定如何使用序列化来构造 UDT 的存储表示形式以及如何按值将 UDT 传输到客户端。 创建 UDT 时，您需要指定**SqlUserDefinedTypeAttribute**的。 **SqlUserDefinedTypeAttribute**特性指示类为 udt，并指定 udt 的存储。 "。 您可以选择指定**可序列化**属性，但不 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 需要此属性。  
   
  **SqlUserDefinedTypeAttribute**包含以下属性：。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "81486966"
  指定序列化格式，它可以是**本机**的，也可以是**用户定制**的，具体取决于 UDT 的数据类型。  
   
  **IsByteOrdered**  
- 确定**Boolean**如何[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]对 UDT 执行二进制比较的布尔值。  
+ 确定**Boolean**如何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对 UDT 执行二进制比较的布尔值。  
   
  **IsFixedLength**  
  指示此 UDT 的所有实例是否都具有相同的长度。  
@@ -146,13 +146,13 @@ ms.locfileid: "81486966"
 -   小于或等于 (&lt;=)  
   
 ### <a name="implementing-nullability"></a>实现为 Null 性  
- 除了正确指定程序集的属性外，类还必须支持为 Null 性。 加载到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的 udt 是可识别 null 的，但为了使 UDT 能够识别 null 值，该类必须实现**INullable**接口。 有关如何在 UDT 中实现为空性的详细信息和示例，请参阅[编写用户定义类型的代码](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)。  
+ 除了正确指定程序集的属性外，类还必须支持为 Null 性。 加载到中的 Udt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是可识别 null 的，但为了使 UDT 能够识别 null 值，该类必须实现**INullable**接口。 有关如何在 UDT 中实现为空性的详细信息和示例，请参阅[编写用户定义类型的代码](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)。  
   
 ### <a name="string-conversions"></a>字符串转换  
  若要支持与 UDT 的字符串转换，必须在类中提供**Parse**方法和**ToString**方法。 **Parse**方法允许将字符串转换为 UDT。 它必须声明为**静态**（或在 Visual Basic 中**共享**），并采用**SqlTypes. SqlString**类型的参数。 有关如何实现**Parse**和**ToString**方法的详细信息和示例，请参阅[编写用户定义类型的代码](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)。  
   
 ## <a name="xml-serialization"></a>XML 序列化  
- Udt 必须支持与**xml**数据类型的转换，方法是符合 xml 序列化约定。 **System.object**命名空间包含用于将对象序列化为 Xml 格式文档或流的类。 您可以选择使用**IXmlSerializable**接口来实现**xml**序列化，该接口提供对 xml 序列化和反序列化的自定义格式设置。  
+ Udt 必须支持与**xml**数据类型的转换，方法是符合 xml 序列化约定。 **System.Xml。序列化**命名空间包含用于将对象序列化为 XML 格式文档或流的类。 您可以选择使用**IXmlSerializable**接口来实现**xml**序列化，该接口提供对 xml 序列化和反序列化的自定义格式设置。  
   
  除了执行从 UDT 到**xml**的显式转换以外，xml 序列化还可让你：  
   
