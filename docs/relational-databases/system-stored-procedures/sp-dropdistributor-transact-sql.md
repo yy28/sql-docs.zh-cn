@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0644032f-5ff0-4718-8dde-321bc9967a03
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 55ebb2b9c42c0690bcffe409cbc6a5bf5bf68fc0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fdd3c733d93fa803906523d7150b4377e6f28666
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830145"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786932"
 ---
 # <a name="sp_dropdistributor-transact-sql"></a>sp_dropdistributor (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   卸载分发服务器。 此存储过程在分发服务器上除分发数据库之外的任何数据库中执行。  
   
@@ -37,7 +37,7 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
     [ , [ @ignore_distributor= ] ignore_distributor ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @no_checks = ] no_checks`指示在删除分发服务器之前是否检查依赖对象。 *no_checks*为**bit**，默认值为0。  
   
  如果为**0**，则**sp_dropdistributor**检查以确保除分发服务器以外的所有发布和分发对象均已删除。  

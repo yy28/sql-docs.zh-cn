@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 75a4a040-72d5-4d29-8304-de0aa481ad4b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3040f585e10816d4f8664566be8af1523048db88
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a06023c8747c4226f7387b0f68bba13220707b99
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830119"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786895"
 ---
 # <a name="sp_droplinkedsrvlogin-transact-sql"></a>sp_droplinkedsrvlogin (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   删除运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本地服务器上的登录与链接服务器上的登录之间的现有映射。  
   
@@ -39,7 +39,7 @@ sp_droplinkedsrvlogin [ @rmtsrvname= ] 'rmtsrvname' ,
    [ @locallogin= ] 'locallogin'  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @rmtsrvname = ] 'rmtsrvname'`应用登录映射的链接服务器的名称 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *rmtsrvname*的值为**sysname**，无默认值。 *rmtsrvname*必须已存在。  
   
 `[ @locallogin = ] 'locallogin'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本地服务器上的登录名，它具有到链接服务器的映射*rmtsrvname*。 *locallogin*的值为**sysname**，无默认值。 必须已经存在*locallogin*到*rmtsrvname*的映射。 如果为 NULL，则会删除**sp_addlinkedserver**创建的默认映射，该映射将本地服务器上的所有登录名映射到链接服务器上的登录名。  

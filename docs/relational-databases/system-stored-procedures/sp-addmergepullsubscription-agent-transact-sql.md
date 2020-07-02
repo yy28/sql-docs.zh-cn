@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 69b751dc93ad4512498530ddd99cf4fc8edee62a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b9af4f3564c5834b856632db70bd6b12368a22c7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826287"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786241"
 ---
 # <a name="sp_addmergepullsubscription_agent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   向合并发布添加一个用于计划请求订阅同步的新代理作业。 此存储过程在订阅服务器的订阅数据库中执行。  
   
@@ -89,7 +89,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
     [ , [ @job_password = ] 'job_password' ]   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @name = ] 'name'`代理的名称。 *名称*为**sysname**，默认值为 NULL。  
   
 `[ @publisher = ] 'publisher'`发布服务器的名称。 *发布服务器*的**sysname**，无默认值。  
@@ -155,7 +155,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |**2**|按需|  
 |**4**|每天|  
 |**8**|每周|  
-|**超过**|每月一次|  
+|**16**|每月|  
 |**32**|与“每月”选项相关|  
 |**64**|自动启动|  
 |**128**|重复执行|  
@@ -176,7 +176,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |**6**|星期五|  
 |**7**|星期六|  
 |**8**|天|  
-|**900**|工作日|  
+|**9**|工作日|  
 |**10**|周末|  
 |NULL（默认值）||  
   
@@ -184,11 +184,11 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 |值|说明|  
 |-----------|-----------------|  
-|**1**|第一个|  
+|**1**|First|  
 |**2**|秒|  
 |**4**|第三个|  
 |**8**|第四个|  
-|**超过**|最后一个|  
+|**16**|最后一个|  
 |NULL（默认值）||  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`*Frequency_type*使用的重复因子。 *frequency_recurrence_factor*的值为**int**，默认值为 NULL。  
@@ -255,7 +255,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @use_web_sync = ] use_web_sync`指示已启用 Web 同步。 *use_web_sync*为**bit**，默认值为0。 **1**指定请求订阅可以使用 HTTP 通过 internet 进行同步。  
   
-`[ @internet_url = ] 'internet_url'`复制侦听器（REPLISAPI.DLL）的位置。DLL）。 *internet_url*的默认值为**nvarchar （260）**，默认值为 NULL。 *internet_url*是完全限定的 url，格式为 `http://server.domain.com/directory/replisapi.dll` 。 如果将服务器配置为侦听端口 80 以外的端口，则提供的端口号的格式也必须为 `http://server.domain.com:portnumber/directory/replisapi.dll`，其中的 `portnumber` 表示端口。  
+`[ @internet_url = ] 'internet_url'`是用于 Web 同步的复制侦听器（REPLISAPI.DLL）的位置。 *internet_url*的默认值为**nvarchar （260）**，默认值为 NULL。 *internet_url*是完全限定的 url，格式为 `http://server.domain.com/directory/replisapi.dll` 。 如果将服务器配置为侦听端口 80 以外的端口，则提供的端口号的格式也必须为 `http://server.domain.com:portnumber/directory/replisapi.dll`，其中的 `portnumber` 表示端口。  
   
 `[ @internet_login = ] 'internet_login'`合并代理使用 HTTP 基本身份验证连接到承载 Web 同步的 Web 服务器时使用的登录名。 *internet_login*的默认值为**sysname**，默认值为 NULL。  
   

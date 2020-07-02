@@ -1,5 +1,5 @@
 ---
-title: sys. sys.sysfiles （Transact-sql） |Microsoft Docs
+title: sys.sys文件（Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 3b47f38d-1cff-404d-89d3-9342c451c802
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2a3554e254be0623e36719fe76b2d811908a939d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 23f0a88653887177a84da079d00550dc9915f0d2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053475"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786383"
 ---
 # <a name="syssysfiles-transact-sql"></a>sys.sysfiles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   数据库中的每个文件对应一行。  
   
@@ -44,8 +44,8 @@ ms.locfileid: "68053475"
 |**growth**|**int**|数据库的增长大小。 根据**状态**的值，可以是页数或文件大小的百分比。<br /><br /> 0 = 无增长。|  
 |**status**|**int**|以兆字节（MB）或千字节（KB）表示的**增长**值的状态位。<br /><br /> 0x2 = 磁盘文件。<br /><br /> 0x40 = 日志文件。<br /><br /> 0x100000 = 增长。 该值是百分比，不是页数。|  
 |**性能**|**int**|保留。|  
-|**name**|**sysname**|文件的逻辑名称。|  
-|**名字**|**nvarchar(260)**|物理设备的名称。 这包括文件的完整路径。|  
+|name|**sysname**|文件的逻辑名称。|  
+|**filename**|**nvarchar(260)**|物理设备的名称。 这包括文件的完整路径。|  
   
 ## <a name="see-also"></a>另请参阅  
  [将系统表映射到系统视图 &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   

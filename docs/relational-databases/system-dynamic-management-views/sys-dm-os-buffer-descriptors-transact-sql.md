@@ -20,15 +20,15 @@ ms.assetid: 012aab95-8888-4f35-9ea3-b5dff6e3f60f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2b1ed24045f609b2feff1bfef6f288cd97047cf
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 61a84a655bced5a053f47d0aae1493ec80dd9ff8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827885"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787020"
 ---
 # <a name="sysdm_os_buffer_descriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   返回有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 缓冲池中当前所有数据页的信息。 可以使用该视图的输出，根据数据库、对象或类型来确定缓冲池内数据库页的分布。 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，此动态管理视图还返回有关缓冲池扩展文件中的数据页的信息。 有关详细信息，请参阅[缓冲池扩展](../../database-engine/configure-windows/buffer-pool-extension.md)。  
   
@@ -60,11 +60,11 @@ ms.locfileid: "82827885"
 ## <a name="remarks"></a>备注  
  sys. dm_os_buffer_descriptors 返回资源数据库正在使用的页。 sys. dm_os_buffer_descriptors 不返回有关免费或被盗页面的信息，也不返回有关在读取时出错的页的信息。  
   
-|From|功能|On|关系|  
+|From|功能|开|关系|  
 |----------|--------|--------|------------------|  
 |sys.dm_os_buffer_descriptors|sys.databases|database_id|多对一|  
-|sys.dm_os_buffer_descriptors|\<userdb> allocation_units|allocation_unit_id|多对一|  
-|sys.dm_os_buffer_descriptors|\<userdb> database_files|file_id|多对一|  
+|sys.dm_os_buffer_descriptors|\<userdb>.sys. allocation_units|allocation_unit_id|多对一|  
+|sys.dm_os_buffer_descriptors|\<userdb>.sys. database_files|file_id|多对一|  
 |sys.dm_os_buffer_descriptors|sys.dm_os_buffer_pool_extension_configuration|file_id|多对一|  
   
 ## <a name="examples"></a>示例  

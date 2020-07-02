@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0f4bbedc-0c1c-414a-b82a-6fd47f0a6a7f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6194e803367de5c66df6e270f196e6a8316ce203
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: 98c966ecb91bebb4f11db49028ecf53a885cc888
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627119"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786202"
 ---
 # <a name="sp_addpullsubscription-transact-sql"></a>sp_addpullsubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   将请求订阅添加到快照或事务发布中。 此存储过程在订阅服务器上要创建请求订阅的数据库中执行。  
   
@@ -43,7 +43,7 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
     [ , [ @immediate_sync = ] immediate_sync ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publisher = ] 'publisher'`发布服务器的名称。 *发布服务器*的**sysname**，无默认值。  
 
 > [!NOTE]
@@ -61,7 +61,7 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
   
 `[ @update_mode = ] 'update_mode'`更新的类型。 *update_mode*为**nvarchar （30）**，可以是下列值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**只读**（默认值）|该订阅是只读的。 在订阅服务器上所做的任何更改不会发送回发布服务器。 应在订阅服务器不进行更新时使用。|  
 |**同步事务**|支持立即更新订阅。|  
@@ -74,7 +74,7 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  **sp_addpullsubscription**用于快照复制和事务复制。  
   
 > [!IMPORTANT]  

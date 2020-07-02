@@ -19,15 +19,15 @@ ms.assetid: 07a73d71-ec3e-4894-947a-5859ca62c606
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 9ff85273a1e970b3bb891d1816a96019dd4f3ae5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 55bb26edf9d51731a4a5986a8a6063f6214df1f6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68135194"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787073"
 ---
 # <a name="sysselective_xml_index_paths-transact-sql"></a>sys.selective_xml_index_paths (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 开始，sys.selective_xml_index_paths 中的每行表示特定选择性 xml 索引的一个提升路径。  
   
@@ -45,11 +45,11 @@ FOR ( path1 = '/a/b/c' AS XQUERY 'xs:string',
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|包含 XML 列的表 ID。|  
+|object_id|**int**|包含 XML 列的表 ID。|  
 |**index_id**|**int**|选择性 xml 索引的唯一 ID。|  
 |**path_id**|**int**|提升的 XML 路径 ID。|  
 |**path**|**nvarchar(4000)**|提升的路径。 例如，“/a/b/c/d/e”。|  
-|**name**|**sysname**|路径名称。|  
+|name|**sysname**|路径名称。|  
 |**path_type**|**tinyint**|0 = XQUERY<br /><br /> 1 = SQL|  
 |**path_type_desc**|**sysname**|基于**path_type**值 "XQUERY" 或 "SQL"。|  
 |**xml_component_id**|**int**|数据库中 XML 架构组件的唯一 ID。|  

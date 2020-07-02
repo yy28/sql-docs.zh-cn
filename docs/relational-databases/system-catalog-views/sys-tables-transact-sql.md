@@ -20,21 +20,21 @@ ms.assetid: 8c42eba1-c19f-4045-ac82-b97a5e994090
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 25661cc9d9166da61bd7cef8e3368c2a393a931e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fc6b21029c829194c5287b450e266119b08a934f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821284"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787097"
 ---
 # <a name="systables-transact-sql"></a>sys.tables (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的每个用户表返回一行。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|\<继承列>||有关此视图所继承的列的列表，请参阅[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
+|\<inherited columns>||有关此视图所继承的列的列表，请参阅[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
 |lob_data_space_id|**int**|对于该表，非零值是存放二进制大型对象 (LOB) 数据的数据空间（文件组或分区方案）的 ID。 LOB 数据类型的示例包括**varbinary （max）**、 **varchar （max）**、 **geography**或**xml**。<br /><br /> 0 = 该表没有 LOB 数据。|  
 |filestream_data_space_id|**int**|FILESTREAM 文件组或包含 FILESTREAM 文件组的分区方案的数据空间 ID。<br /><br /> 若要报告 FILESTREAM 文件组的名称，请执行查询 `SELECT FILEGROUP_NAME (filestream_data_space_id) FROM sys.tables` 。<br /><br /> sys.tables 可以按 filestream_data_space_id = data_space_id 与下列视图联接。<br /><br /> -sys.databases. 文件组<br /><br /> -sys. partition_schemes<br /><br /> -sys. 索引<br /><br /> -sys. allocation_units<br /><br /> -sys. fulltext_catalogs<br /><br /> -sys. data_spaces<br /><br /> -sys. destination_data_spaces<br /><br /> -sys. master_files<br /><br /> -sys. database_files<br /><br /> -backupfilegroup （加入 filegroup_id）|  
 |max_column_id_used|**int**|此表曾使用的最大列 ID。|  

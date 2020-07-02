@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 508c686d-2bd4-41ba-8602-48ebca266659
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 69b98f779a30e15a83e7ce6eed681f8c7c0df04b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8c1d563e64769768a4c317bc0411eb40fb82b8d8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831661"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786196"
 ---
 # <a name="sp_dbcmptlevel-transact-sql"></a>sp_dbcmptlevel (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   将某些数据库行为设置为与指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本兼容。  
   
@@ -42,7 +42,7 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
     [ , [ @new_cmptlevel = ] version ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @dbname = ] name`要更改其兼容级别的数据库的名称。 数据库名称必须符合标识符的规则。 *名称*为**sysname**，默认值为 NULL。  
   
 `[ @new_cmptlevel = ] version`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]要使数据库兼容的的版本。 *版本*为**tinyint**，默认值为 NULL。 该值必须为下列值之一：  

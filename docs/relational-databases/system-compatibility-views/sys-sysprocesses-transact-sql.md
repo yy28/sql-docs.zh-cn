@@ -1,5 +1,5 @@
 ---
-title: sys. sysprocesses （Transact-sql） |Microsoft Docs
+title: sys.sys进程（Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 60a36d36-54b3-4bd6-9cac-702205a21b16
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6aa40d6a7363dd991dc37ed5c619b656e74f0eed
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e9e90b22dc5542d83533bff584af326abdcc4902
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78866365"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787046"
 ---
 # <a name="syssysprocesses-transact-sql"></a>sys.sysprocesses (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   包含正在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上运行的进程的相关信息。 这些进程可以是客户端进程或系统进程。 若要访问 sysprocesses，您必须位于 master 数据库上下文中，或者必须使用由三部分构成的名称 master.dbo.sysprocesses。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "78866365"
 |last_batch|**datetime**|客户端进程上次执行远程存储过程调用或 EXECUTE 语句的时间。|  
 |ecid|**smallint**|用于唯一标识代表单个进程进行操作的子线程的执行上下文 ID。|  
 |open_tran|**smallint**|进程的打开事务数。|  
-|status|**nchar(30)**|进程 ID 状态。 可能的值为：<br /><br /> **dormant** = 睡眠[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]正在重置会话。<br /><br /> **正在运行**= 会话正在运行一个或多个批处理。 多个活动的结果集 (MARS) 启用后，会话可以运行多个批。 有关详细信息，请参阅[使用多个活动的结果集 (MARS)](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)。<br /><br /> **背景**= 会话正在运行一个后台任务，例如死锁检测。<br /><br /> **rollback** = 会话具有正在处理的事务回滚。<br /><br /> **挂起**= 会话正在等待工作线程变为可用。<br /><br /> 可**运行**= 会话中的任务在等待获取时间量程时位于计划程序的可运行队列中。<br /><br /> **spinloop** = 会话中的任务正在等待旋转锁可用。<br /><br /> 已**挂起**= 会话正在等待事件（如 i/o）完成。|  
+|状态|**nchar(30)**|进程 ID 状态。 可能的值包括：<br /><br /> **dormant**  =  睡眠 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]正在重置会话。<br /><br /> **正在运行**= 会话正在运行一个或多个批处理。 多个活动的结果集 (MARS) 启用后，会话可以运行多个批。 有关详细信息，请参阅[使用多个活动的结果集 (MARS)](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)。<br /><br /> **背景**= 会话正在运行一个后台任务，例如死锁检测。<br /><br /> **rollback** = 会话具有正在处理的事务回滚。<br /><br /> **挂起**= 会话正在等待工作线程变为可用。<br /><br /> 可**运行**= 会话中的任务在等待获取时间量程时位于计划程序的可运行队列中。<br /><br /> **spinloop** = 会话中的任务正在等待旋转锁可用。<br /><br /> 已**挂起**= 会话正在等待事件（如 i/o）完成。|  
 |sid|**binary(86)**|用户的全局唯一标识符 (GUID)。|  
 |hostname|**nchar(128)**|工作站的名称。|  
 |program_name|**nchar(128)**|应用程序的名称。|  
@@ -69,7 +69,7 @@ ms.locfileid: "78866365"
 |stmt_start|**int**|为指定 sql_handle 运行当前 SQL 语句的起始偏移量。|  
 |stmt_end|**int**|所指定 sql_handle 的当前 SQL 语句的结束偏移量。<br /><br /> -1 指出当前语句为指定的 sql_handle 运行到 fn_get_sql 函数返回结果的结尾。|  
 |request_id|**int**|请求 ID。 用于标识在特定会话中运行的请求。|
-|page_resource |**binary （8）** |适用于  ：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br /><br /> 如果`waitresource`列包含页，则为页资源的8字节的十六进制表示形式。 |  
+|page_resource |**binary （8）** |适用于  ：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br /><br /> 如果列包含页，则为页资源的8字节的十六进制表示形式 `waitresource` 。 |  
   
 ## <a name="remarks"></a>备注  
  如果用户对服务器具有 VIEW SERVER STATE 权限，则该用户可查看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中所有正在执行的会话；否则，该用户只能查看当前会话。  

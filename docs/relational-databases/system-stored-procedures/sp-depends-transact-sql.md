@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d9934590-c6ae-4936-91c3-146055ef2c57
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9076d4bdda58a851e358371375b71f8934a945fe
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 396e370e7cb271c516033eb160332ac749a27aca
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830225"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787006"
 ---
 # <a name="sp_depends-transact-sql"></a>sp_depends (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   显示有关数据库对象依赖关系的信息，例如，依赖于表或视图的视图和过程，以及视图或过程所依赖的表和视图。 不报告对当前数据库以外对象的引用。  
   
@@ -63,22 +63,22 @@ sp_depends [ @objname = ] '<object>'
 ## <a name="result-sets"></a>结果集  
  **sp_depends**显示两个结果集。  
   
- 以下结果集显示* \< 对象>* 所依赖的对象。  
+ 下面的结果集显示依赖的对象 *\<object>* 。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar （257** **）**|存在依赖项的项名称。|  
-|type |**nvarchar （16）**|项的类型。|  
+|**type**|**nvarchar （16）**|项的类型。|  
 |**已更新**|**nvarchar （7）**|是否更新项。|  
 |**选择**|**nvarchar(8)**|项是否用于 SELECT 语句。|  
 |**column**|**sysname**|存在依赖项的列或参数。|  
   
- 下面的结果集显示依赖于* \< 对象>* 的对象。  
+ 下面的结果集显示依赖的对象 *\<object>* 。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar （257** **）**|存在依赖项的项名称。|  
-|type |**nvarchar （16）**|项的类型。|  
+|**type**|**nvarchar （16）**|项的类型。|  
   
 ## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  

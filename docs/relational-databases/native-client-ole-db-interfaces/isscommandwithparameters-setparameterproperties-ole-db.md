@@ -16,15 +16,15 @@ ms.assetid: 4cd0281a-a2a0-43df-8e46-eb478b64cb4b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80cf43e4abc1be19b1a6033174c980aa6d7cd378
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 93421c0671389533690c8aaec49f1c4f97997f62
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81290119"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785297"
 ---
 # <a name="isscommandwithparameterssetparameterproperties-ole-db"></a>ISSCommandWithParameters::SetParameterProperties (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   按照序号基于每个参数设置参数属性，或者通过指定 SSPARAMPROPS 结构数组来设置大容量参数属性。  
   
@@ -36,7 +36,7 @@ HRESULT SetParameterProperties(
       SSPARAMPROPS rgParamProperties[]);  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  cParams[in]**  
  rgParamProperties 数组中 SSPARAMPROPS 结构的数量**。 如果此数值为零，ISSCommandWithParameters::SetParameterProperties 将删除可能已经为该命令中的任何参数指定的所有属性****。  
   
@@ -71,7 +71,7 @@ struct SSPARAMPROPS {
 
  自 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 起，借助数据库引擎中的改进，ISSCommandWithParameters::SetParameterProperties 可以获取预期结果的更准确描述。 这些更准确的结果可能与旧版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中 ISSCommandWithParameters::SetParameterProperties 返回的值有所不同。 有关详细信息，请参阅[元数据发现](../../relational-databases/native-client/features/metadata-discovery.md)。  
   
-|成员|说明|  
+|成员|描述|  
 |------------|-----------------|  
 |iOrdinal**|所传递参数的序号。|  
 |cPropertySets**|rgPropertySets 中 DBPROPSET 结构的数量**。|  

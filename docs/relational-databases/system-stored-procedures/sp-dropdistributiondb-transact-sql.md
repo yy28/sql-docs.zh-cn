@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b6dd1846-2259-4d29-93af-a70a5d25a0c5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ff09552fcc8a79abcae877191b4456c0958d1ea2
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 9d9290b02c149889a488452d71ae800134d38f00
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807753"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786970"
 ---
 # <a name="sp_dropdistributiondb-transact-sql"></a>sp_dropdistributiondb (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   删除分发数据库。 如果数据库使用的物理文件未由另一个数据库使用，则删除这些文件。 此存储过程在分发服务器上的任何数据库中执行。  
   
@@ -37,13 +37,13 @@ ms.locfileid: "83807753"
 sp_dropdistributiondb [ @database= ] 'database'  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @database = ] 'database'`要删除的数据库。 *数据库*为**sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  **sp_dropdistributiondb**在所有类型的复制中使用。  
   
  在删除分发服务器之前，必须通过执行**sp_dropdistributor**来执行此存储过程。  

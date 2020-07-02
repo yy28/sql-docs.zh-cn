@@ -19,24 +19,24 @@ helpviewer_keywords:
 ms.assetid: 9fd9fa76-6128-410c-896f-741e6050143a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f0ffcc306a6b8194aeadcaa473e6eb981e7b97cf
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: cc4f4b7ea3cca4b0dd7a3f2bbe643786ae3324ba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834012"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786423"
 ---
 # <a name="sysservice_queues-transact-sql"></a>sys.service_queues (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   数据库中的每个对象都包含一个对应的行，其中，sys.databases 为，**类型**为 SQ。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**\<继承列>**||有关此视图所继承的列的列表，请参阅[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
+|**\<inherited columns>**||有关此视图所继承的列的列表，请参阅[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
 |**max_readers**|**smallint**|队列中允许的并发读取器的最大数目。|  
 |**activation_procedure**|**nvarchar （776）**|由三部分组成的激活过程名称。|  
-|**execute_as_principal_id**|**int**|EXECUTE AS 数据库主体的 ID。<br /><br /> 默认情况下，或者 EXECUTE AS CALLER 时，为 NULL。<br /><br /> 指定主体的 ID （如果 EXECUTE AS SELF EXECUTE AS \< principal>。<br /><br /> -2 = EXECUTE AS OWNER。|  
+|**execute_as_principal_id**|**int**|EXECUTE AS 数据库主体的 ID。<br /><br /> 默认情况下，或者 EXECUTE AS CALLER 时，为 NULL。<br /><br /> 指定主体的 ID （如果 EXECUTE AS 自行执行方式） \<principal> 。<br /><br /> -2 = EXECUTE AS OWNER。|  
 |**is_activation_enabled**|**bit**|1 = 启用激活。|  
 |**is_receive_enabled**|**bit**|1 = 启用接收。|  
 |**is_enqueue_enabled**|**bit**|1 = 启用排入队列。|  

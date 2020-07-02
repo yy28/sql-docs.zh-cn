@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: df5b955a-feb0-4863-9b3b-7f71e9653b3d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4f2f0888daf214e91127e8caed3c3bbb04424f0a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f8f07a38d612375030f43e2faf2194d4bc65bca8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82817127"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786129"
 ---
 # <a name="sp_replmonitorsubscriptionpendingcmds-transact-sql"></a>sp_replmonitorsubscriptionpendingcmds (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   返回有关对事务发布的订阅的等待命令数以及处理这些命令的粗略估计时间的信息。 此存储过程针对每个返回的订阅返回一行。 在分发服务器的分发数据库上执行此存储过程，用于监视复制。  
   
@@ -42,7 +42,7 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
         , [ @subscription_type = ] subscription_type  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publisher = ] 'publisher'`发布服务器的名称。 *发布服务器*的**sysname**，无默认值。  
   
 `[ @publisher_db = ] 'publisher_db'`已发布数据库的名称。 *publisher_db* **sysname**，无默认值。  
@@ -55,7 +55,7 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
   
 `[ @subscription_type = ] subscription_type`如果订阅的类型为。 *publication_type*是**int**，没有默认值，可以是下列值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**0**|推送订阅|  
 |**1**|请求订阅|  

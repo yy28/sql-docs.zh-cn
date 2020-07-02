@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 808a1925-be46-4999-8d69-b3a83010ec81
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2f0a3edd44f7795fd57fab1cf640e7ab95d59ee2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f29d2f67f50ecda28b0675ed6e716afd390ca899
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820734"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786256"
 ---
 # <a name="sp_addmergepushsubscription_agent-transact-sql"></a>sp_addmergepushsubscription_agent (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   添加新的代理作业，用于制定合并发布推送订阅的同步计划。 此存储过程在发布服务器上对发布数据库执行。  
   
@@ -61,7 +61,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
     [ , [ @enabled_for_syncmgr = ] 'enabled_for_syncmgr' ]   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publication = ] 'publication'`发布的名称。 *发布*为**sysname**，无默认值。  
   
 `[ @subscriber = ] 'subscriber'`订阅服务器的名称。 *订阅服务器*的值为**sysname**，默认值为 NULL。  
@@ -103,7 +103,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 |**2**|按需|  
 |**4**|每天|  
 |**8**|每周|  
-|**超过**|每月一次|  
+|**16**|每月|  
 |**32**|与“每月”选项相关|  
 |**64**|自动启动|  
 |**128**|重复执行|  
@@ -124,7 +124,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 |**6**|星期五|  
 |**7**|星期六|  
 |**8**|天|  
-|**900**|工作日|  
+|**9**|工作日|  
 |**10**|周末|  
 |NULL（默认值）||  
   
@@ -132,11 +132,11 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
   
 |值|说明|  
 |-----------|-----------------|  
-|**1**|第一个|  
+|**1**|First|  
 |**2**|秒|  
 |**4**|第三个|  
 |**8**|第四个|  
-|**超过**|最后一个|  
+|**16**|最后一个|  
 |NULL（默认值）||  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`*Frequency_type*使用的重复因子。 *frequency_recurrence_factor*的值为**int**，默认值为 NULL。  

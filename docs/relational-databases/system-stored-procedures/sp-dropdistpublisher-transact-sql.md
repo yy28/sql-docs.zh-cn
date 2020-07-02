@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c0bdd3de-3be0-455c-898a-98d4660e7ce3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 060b3b793adf53ab988cbba8b82ae683dac1e40a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: cfac0b293e4bf564ef334cd0dc1ef5c3d5395364
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830181"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786979"
 ---
 # <a name="sp_dropdistpublisher-transact-sql"></a>sp_dropdistpublisher (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   删除分发发布服务器。 此存储过程在分发服务器上的任何数据库中执行。  
   
@@ -38,7 +38,7 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
     [ , [ @ignore_distributor = ] ignore_distributor ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publisher = ] 'publisher'`是要删除的发布服务器。 *发布服务器*的**sysname**，无默认值。  
   
 `[ @no_checks = ] no_checks`指定**sp_dropdistpublisher**是否检查发布服务器是否已卸载服务器作为分发服务器。 *no_checks*为**bit**，默认值为**0**。  

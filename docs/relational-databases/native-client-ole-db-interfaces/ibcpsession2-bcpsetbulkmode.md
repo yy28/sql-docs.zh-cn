@@ -13,15 +13,15 @@ ms.assetid: babba19f-e67b-450c-b0e6-523a0f9d23ab
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a69eec3bd515ae82cf6d23fc37da9226800349ed
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 02f7e2cc2dac68ef252074ed5971590bcf3b1ac6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307324"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785459"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   IBCPSession2::BCPSetBulkMode 提供用于指定列格式的 [IBCPSession::BCPColFmt (OLE DB)](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) 的替代方法。 不同于设置单个列格式属性的 IBCPSession::BCPColFmt，IBCPSession2::BCPSetBulkMode 设置所有属性。  
   
@@ -38,7 +38,7 @@ HRESULT BCPSetBulkMode (
 );  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *property*  
  类型为 BYTE 的常量。 相关的常量列表，请参阅“备注”部分中的表。  
   
@@ -72,7 +72,7 @@ HRESULT BCPSetBulkMode (
   
  下表列出了 property 参数的常量**。  
   
-|properties|说明|  
+|Property|描述|  
 |--------------|-----------------|  
 |BCP_OUT_CHARACTER_MODE|指定字符输出模式。<br /><br /> 对应于 BCP.EXE 和 IBCPSession::BCPColFmt 中的 -c 选项，同时将 eUserDataType** 属性设置为 BCP_TYPE_SQLCHARACTER****。|  
 |BCP_OUT_WIDE_CHARACTER_MODE|指定 Unicode 输出模式。<br /><br /> 对应于 BCP.EXE 和 IBCPSession::BCPColFmt 中的 -w 选项，同时将 eUserDataType** 属性设置为 BCP_TYPE_SQLNCHAR****。|  

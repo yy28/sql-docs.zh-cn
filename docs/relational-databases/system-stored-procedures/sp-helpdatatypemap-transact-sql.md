@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 800c9c65-723e-4961-a63d-327987f129f0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fcf2bbd2d6c1ab7c9b73c1e122c746e56814c4fc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 61229514cb837a40537b6a363d2ebba81a5cef5a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824518"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786868"
 ---
 # <a name="sp_helpdatatypemap-transact-sql"></a>sp_helpdatatypemap (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   返回有关 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库管理系统（DBMS）之间的定义的数据类型映射的信息。 此存储过程在分发服务器上的任何数据库中执行。  
   
@@ -42,10 +42,10 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
     [ , [ @defaults_only = ] defaults_only ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @source_dbms = ] 'source_dbms'`要从中映射数据类型的 DBMS 的名称。 *source_dbms* **sysname**，可以是下列值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|源为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。|  
 |**联手**|源为 Oracle 数据库。|  
@@ -56,7 +56,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
   
 `[ @destination_dbms = ] 'destination_dbms'`目标 DBMS 的名称。 *destination_dbms* **sysname**，可以是下列值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|目标为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。|  
 |**联手**|目标为 Oracle 数据库。|  
@@ -71,7 +71,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
   
 ## <a name="result-sets"></a>结果集  
   
-|列名称|说明|  
+|列名称|描述|  
 |-----------------|-----------------|  
 |**mapping_id**|标识数据类型映射。|  
 |**source_dbms**|源 DBMS 的名称和版本号。|  

@@ -16,17 +16,17 @@ ms.assetid: a31c5632-96aa-483f-a307-004c5149fbc0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ba1762bdc54c5ffe3e3879d21edd5e48c096f03
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4927ffc7ded9a291e5910cd359cb59edea0bf3bb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303618"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785561"
 ---
 # <a name="getting-large-data"></a>获取大型数据
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  通常，使用者应该隔离用来创建[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 OLE DB 提供程序存储对象的代码，该代码用于处理未通过**ISequentialStream**接口指针引用的数据。  
+  通常，使用者应该隔离用来创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本机客户端 OLE DB 提供程序存储对象的代码，该代码用于处理未通过**ISequentialStream**接口指针引用的数据。  
   
  本主题涉及可用于以下函数的功能：  
   
@@ -38,7 +38,7 @@ ms.locfileid: "81303618"
   
  如果将 DBPROP_ACCESSORDER 属性（位于行集属性组中）设置为 DBPROPVAL_AO_SEQUENTIAL 或 DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS 的任一值，则使用者应该只在调用**GetNextRows**方法时提取单行数据，因为 BLOB 数据不进行缓冲。 如果 DBPROP_ACCESSORDER 的值设置为 DBPROPVAL_AO_RANDOM，则使用者可以在 GetNextRows 中提取多行数据****。  
   
- 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用者请求之前，Native Client OLE DB 提供程序[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不会从检索大数据。 使用者应在一个取值函数中绑定所有短 (Short) 数据，然后根据需要使用一个或多个临时取值函数检索大型数据值。  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者请求之前，Native Client OLE DB 提供程序不会从检索大数据 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 使用者应在一个取值函数中绑定所有短 (Short) 数据，然后根据需要使用一个或多个临时取值函数检索大型数据值。  
   
 ## <a name="example"></a>示例  
  本示例从单一列中检索大型数据值：  

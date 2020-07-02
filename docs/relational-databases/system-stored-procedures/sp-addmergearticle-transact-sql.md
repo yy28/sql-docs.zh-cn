@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0df654ea-24e2-4c61-a75a-ecaa7a140a6c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7ba2cebf6c4b779119696f19ee78b7ce8ec1cf66
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ebb47597b5d08e0f14d37490304001811d0b33e6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831877"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786274"
 ---
 # <a name="sp_addmergearticle-transact-sql"></a>sp_addmergearticle (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   在现有合并发布中添加项目。 此存储过程在发布服务器上对发布数据库执行。  
   
@@ -72,7 +72,7 @@ sp_addmergearticle [ @publication = ] 'publication'
     [ , [ @stream_blob_columns = ] 'stream_blob_columns' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publication = ] 'publication'`包含项目的发布的名称。 *发布*为**sysname**，无默认值。  
   
 `[ @article = ] 'article'`项目的名称。 该名称在发布中必须唯一。 *项目*是**sysname**，无默认值。 *项目*必须在运行的本地计算机上 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，并且必须符合标识符规则。  
@@ -81,7 +81,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @type = ] 'type'`项目的类型。 *type*的数据类型为**sysname**，默认值为**table**，可以是下列值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**table** （默认值）|具有架构和数据的表。 复制会监视该表以确定要复制的数据。|  
 |**func schema only**|仅具有架构的函数。|  
@@ -101,12 +101,12 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @pre_creation_cmd = ] 'pre_creation_cmd'`指定应用快照时，如果订阅服务器上存在该表，系统将执行的操作。 *pre_creation_cmd*为**nvarchar （10）**，可以是下列值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**无**|如果订阅服务器上已存在该表，则不执行任何操作。|  
 |**delete**|根据子集筛选器中的 WHERE 子句发出 delete 命令。|  
 |**drop** （默认值）|删除该表，然后重新创建一个表。 需要它来支持 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] 订阅服务器。|  
-|**去**|截断目标表。|  
+|**truncate**|截断目标表。|  
   
 `[ @creation_script = ] 'creation_script'`用于创建订阅数据库中项目的可选项目架构脚本的路径和名称。 *creation_script*为**nvarchar （255）**，默认值为 NULL。  
   
@@ -115,7 +115,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @schema_option = ] schema_option`给定项目的架构生成选项的位图。 *schema_option*为**binary （8）**，可以是[|（位或）](../../t-sql/language-elements/bitwise-or-transact-sql.md)其中一个或多个值的乘积。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**0x00**|禁用快照代理的脚本，并使用在*creation_script*中定义的提供的架构预创建脚本。|  
 |**0x01**|生成对象创建（CREATE TABLE、CREATE PROCEDURE 等）。 这是存储过程项目的默认值。|  
@@ -212,7 +212,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @check_permissions = ] check_permissions`是在合并代理将更改应用于发布服务器时验证的表级权限的位图。 如果合并进程使用的发布服务器登录名/用户帐户没有正确的表权限，则无效更改将被记录为冲突。 *check_permissions*为**int**，可以是[|（位或）](../../t-sql/language-elements/bitwise-or-transact-sql.md)以下一个或多个值的乘积。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**0x00** （默认值）|不检查权限。|  
 |**0x10**|检查了发布服务器上的权限后，才能上载订阅服务器上的插入操作。|  
@@ -280,7 +280,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @identityrangemanagementoption = ] identityrangemanagementoption`指定如何处理项目的标识范围管理。 *identityrangemanagementoption*的数据值为**nvarchar （10）**，可以为以下值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**无**|禁用标识范围管理。|  
 |**手动**|使用 NOT FOR REPLICATION 标记标识列，以启用手动标识范围处理。|  

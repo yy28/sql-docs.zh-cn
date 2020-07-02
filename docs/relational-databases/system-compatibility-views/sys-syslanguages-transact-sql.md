@@ -1,5 +1,5 @@
 ---
-title: sys. sys.syslanguages （Transact-sql） |Microsoft Docs
+title: sys.sys语言（Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,15 +21,15 @@ ms.assetid: f216d1cd-997c-42f0-a737-abbdfcd88383
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc152b8241b775f9fd686f8a31363cb4fca39de4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 24317a09585ae3835898386336f6d2953a76c89b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70874868"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786344"
 ---
 # <a name="syssyslanguages-transact-sql"></a>sys.syslanguages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中的每种语言都包含一行。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "70874868"
 |alias|**sysname**|代替语言名称，如 French。|  
 |months|**nvarchar(372)**|以逗号分隔的月份名全称列表，按一月到十二月的顺序排列，每个名称最多可有 20 个字符。|  
 |shortmonths|**nvarchar(132)**|以逗号分隔的月份名简称列表，按一月到十二月的顺序排列，每个名称最多可有 9 个字符。|  
-| days|**nvarchar(217)**|以逗号分隔的星期名称，按星期一到星期日的顺序排列，每个名称最多可有 30 个字符。|  
+|days|**nvarchar(217)**|以逗号分隔的星期名称，按星期一到星期日的顺序排列，每个名称最多可有 30 个字符。|  
 |lcid|**int**|语言的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 区域设置 ID。|  
 |msglangid|**smallint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]消息组 ID。|  
   
@@ -78,7 +78,7 @@ ms.locfileid: "70874868"
 |爱沙尼亚语|1061|1061|  
 |拉脱维亚语|1062|1062|  
 |立陶宛语|1063|1063|  
-|葡萄牙语（巴西）|1046|1046|  
+|葡萄牙语(巴西)|1046|1046|  
 |繁体中文|1028|1028|  
 |韩语|1042|1042|  
 |简体中文|2052|2052|  

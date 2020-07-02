@@ -20,20 +20,20 @@ author: CarlRabeler
 ms.author: carlrab
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 719f7ea686f1a93842d837c002ef2bca4a8c7a78
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 047e6d6f9f6e7c0405eab27655ee9e2d97e1236b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828519"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787141"
 ---
 # <a name="sysdatabase_connection_stats-azure-sql-database"></a>sys.database_connection_stats (Azure SQL Database)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   包含数据库连接 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 事件**connectivity**的统计信息，提供数据库连接成功和失败的概述。 有关连接事件的详细信息，请参阅 sys.databases 中的事件类型[event_log &#40;AZURE SQL 数据库&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)。  
   
-|统计信息|类型|说明|  
+|统计|类型|描述|  
 |---------------|----------|-----------------|  
 |**database_name**|**sysname**|数据库的名称。|  
 |**start_time**|**datetime2**|聚合间隔开始的 UTC 日期和时间。 时间始终为 5 分钟的倍数。 例如：<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  

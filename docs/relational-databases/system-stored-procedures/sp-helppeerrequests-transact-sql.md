@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 37bd503e-46c4-47c6-996e-be7ffe636fe8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8aa3fc831b81827d230274b95bf3cbfbe0d5a560
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8d86eeabda755e5b6546f3f5d800f1a35ba40e7e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834421"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786155"
 ---
 # <a name="sp_helppeerrequests-transact-sql"></a>sp_helppeerrequests (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   返回对等复制拓扑中参与者收到的所有状态请求的信息，这些请求是通过在拓扑中的任何已发布数据库上执行[sp_requestpeerresponse &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)启动的。 此存储过程将对参与对等复制拓扑的发布服务器上的发布数据库执行。 有关详细信息，请参阅 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)。  
   
@@ -37,7 +37,7 @@ sp_helppeerrequests [ @publication = ] 'publication'
     [ , [ @description = ] 'description'  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publication = ] 'publication'`发送了状态请求的对等拓扑中的发布名称。 *发布*为**sysname**，无默认值。  
   
 `[ @description = ] 'description'`可用于标识各个状态请求的值，这使你能够根据在调用[sp_requestpeerresponse &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)时提供的用户定义的信息筛选返回的响应。 *description*的值为**nvarchar （4000）**，默认值为 **%** 。 默认情况下，返回发布的所有状态请求。 此参数用于仅返回其说明与*说明*中提供的值匹配的状态请求，其中使用[类似的 &#40;transact-sql&#41;](../../t-sql/language-elements/like-transact-sql.md)子句来匹配字符串。  

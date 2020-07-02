@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c7167ed1-2b7e-4824-b82b-65f4667c4407
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3ae6596579942a3292c3467f4d3489346eb4aa42
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: be04cfff11e30baf2212401bd07b9ca74782ca14
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820666"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786215"
 ---
 # <a name="sp_addpublication-transact-sql"></a>sp_addpublication (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   创建快照或事务发布。 此存储过程在发布服务器上对发布数据库执行。  
   
@@ -82,7 +82,7 @@ sp_addpublication [ @publication = ] 'publication'
     [ , [ @replicate_partition_switch = ]'replicate_partition_switch'  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ \@publication = ] 'publication'`要创建的发布的名称。 *发布*为**sysname**，无默认值。 该名称在数据库中必须唯一。  
   
 `[ \@taskid = ] taskid`仅支持向后兼容性;使用[&#40;transact-sql&#41;sp_addpublication_snapshot ](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)。  
@@ -91,7 +91,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@sync_method = ] _'sync_method'`同步模式。 *sync_method*为**nvarchar （13）**，可以是下列值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**native**|生成所有表的本机模式大容量复制程序输出。 *对于 Oracle 发布服务器不支持*。|  
 |**字符**|生成所有表的字符模式大容量复制程序输出。 _对于 Oracle 发布服务器，_ **字符**_仅对快照复制有效_。|  
@@ -103,7 +103,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@repl_freq = ] 'repl_freq'`复制频率的类型， *repl_freq*为**nvarchar （10）**，可以是下列值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**连续**（默认值）|发布服务器提供所有基于日志的事务的输出。 对于非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器，这要求将*sync_method*设置为**concurrent_c**。|  
 |**概述**|发布服务器仅生成计划的同步事件。 对于非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器，这要求将*sync_method*设置为 "**字符**"。|  
@@ -112,7 +112,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@status = ] 'status'`指定发布数据是否可用。 *状态*为**nvarchar （8）**，可以是下列值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**active**|发布数据可立即用于订阅服务器。|  
 |**非活动**（默认值）|首次创建发布时，发布数据不能由订阅服务器使用（订阅服务器可以订阅，但这些订阅不被处理）。|  
@@ -135,9 +135,9 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@autogen_sync_procs = ] 'autogen_sync_procs'`指定是否在发布服务器上生成用于更新订阅的同步存储过程。 *autogen_sync_procs*为**nvarchar （5）**，可以是下列值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
-|**true**|在启用更新订阅时自动设置。|  
+|true|在启用更新订阅时自动设置。|  
 |**false**|在未启动更新订阅或没有为 Oracle 发布服务器启动更新订阅时自动设置。|  
 |NULL（默认值）|如果启用更新订阅，则默认值为**true;** 如果未启用更新订阅，则默认为**false** 。|  
   
@@ -176,7 +176,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@conflict_policy = ] 'conflict_policy'`指定使用排队更新订阅服务器选项时的冲突解决策略。 *conflict_policy*为**nvarchar （100）** ，默认值为 NULL，可以为以下值之一：  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**pub wins**|发布服务器在冲突中入选。|  
 |**sub reinit**|重新初始化订阅。|  
@@ -191,7 +191,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@queue_type = ] 'queue_type'`指定使用的队列类型。 *queue_type*为**nvarchar （10）**，默认值为 NULL，可以是下列值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**transact-sql**|使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储事务。|  
 |NULL（默认值）|默认为**sql**，它指定使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 来存储事务。|  
@@ -214,9 +214,9 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@allow_initialize_from_backup = ] 'allow_initialize_from_backup'`指示订户是否可以从备份而非初始快照中初始化对此发布的订阅。 *allow_initialize_from_backup*为**nvarchar （5）**，可以是下列值之一：  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
-|**true**|启用从备份进行的初始化。|  
+|true|启用从备份进行的初始化。|  
 |**false**|禁用从备份进行的初始化。|  
 |NULL（默认值）|对于对等复制拓扑中的发布，默认值为**true** ，对于所有其他发布，默认值为**false** 。|  
   

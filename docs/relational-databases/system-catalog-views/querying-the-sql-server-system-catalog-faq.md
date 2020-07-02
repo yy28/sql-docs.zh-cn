@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: ca202580-c37e-4ccd-9275-77ce79481f64
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 30b325dcd012defe3755f769c74ec2fc5d57522e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 78a0a77cc02512d031f7a6749871150026647acf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834493"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787210"
 ---
 # <a name="querying-the-sql-server-system-catalog-faq"></a>查询 SQL Server 系统目录常见问题
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   本主题包含一个常见问题列表。 这些问题的答案是基于目录视图的查询。  
   

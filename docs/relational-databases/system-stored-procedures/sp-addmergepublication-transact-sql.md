@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 28a629a1-7374-4614-9b04-279d290a942a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5d5b7870faed5423d4b12861d18f9bdb85e40c68
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 09e3c873ecdab8f967fb454854ae66b3a367ab87
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826298"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786244"
 ---
 # <a name="sp_addmergepublication-transact-sql"></a>sp_addmergepublication (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   创建新合并发布。 此存储过程针对发布服务器上要发布的数据库执行。  
   
@@ -74,7 +74,7 @@ sp_addmergepublication [ @publication = ] 'publication'
     [ , [ @conflict_logging = ] 'conflict_logging' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publication = ] 'publication'`要创建的合并发布的名称。 *发布*为**sysname**，无默认值，且不能为关键字 ALL。 发布的名称在数据库内必须唯一。  
   
 `[ @description = ] 'description'`发布说明。 *description*的值为**nvarchar （255）**，默认值为 NULL。  
@@ -86,7 +86,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @sync_mode = ] 'sync_mode'`发布服务器的初始同步模式。 *sync_mode*为**nvarchar （10）**，可以是下列值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**native** （默认值）|生成所有表的本机模式大容量复制程序输出。|  
 |**字符**|生成所有表的字符模式大容量复制程序输出。 需要支持 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] 和非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器。|  
@@ -134,7 +134,7 @@ sp_addmergepublication [ @publication = ] 'publication'
 `[ @ftp_password = ] 'ftp_password'`用于连接到 FTP 服务的用户密码。 *ftp_password*的默认值为**sysname**，默认值为 NULL。  
   
 > [!IMPORTANT]  
->  不要使用空密码。 使用强密码。  
+>  不要使用空密码。 请使用强密码。  
   
 `[ @conflict_retention = ] conflict_retention`指定保留冲突的保持期（天）。 *conflict_retention*的值为**int**，默认值为14天，然后将从冲突表中清除冲突行。  
   
@@ -162,9 +162,9 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @use_partition_groups = ] 'use_partition_groups'`指定应使用预计算分区来优化同步过程。 *use_partition_groups*为**nvarchar （5）**，可以是下列值之一：  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
-|**true**|发布使用预计算分区。|  
+|true|发布使用预计算分区。|  
 |**false**|发布不使用预计算分区。|  
 |NULL（默认值）|由系统确定分区策略。|  
   
@@ -203,8 +203,8 @@ sp_addmergepublication [ @publication = ] 'publication'
 |值|版本|  
 |-----------|-------------|  
 |**day** （默认值）|按天指定保持期。|  
-|week |按周指定保持期。|  
-|month |按月指定保持期。|  
+|week|按周指定保持期。|  
+|**month**|按月指定保持期。|  
 |**year**|按年指定保持期。|  
   
 `[ @generation_leveling_threshold = ] generation_leveling_threshold`指定代中包含的更改的数目。 代是传递给发布服务器或订阅服务器的更改的集合。 *generation_leveling_threshold*的值为**int**，默认值为1000。  
@@ -216,9 +216,9 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @conflict_logging = ] 'conflict_logging'`指定存储冲突记录的位置。 *conflict_logging*为**nvarchar （15）**，可以为以下值之一：  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
-|**器**|在发布服务器上存储冲突记录。|  
+|**publisher**|在发布服务器上存储冲突记录。|  
 |**订阅服务器**|在导致冲突的订阅服务器上存储冲突记录。 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 订阅服务器不支持此值。|  
 |**全部**|在发布服务器和订阅服务器上都存储冲突记录。|  
 |NULL（默认值）|在所有其他情况下 **，如果值** *backward_comp_level*为**90rtm** ，则自动将*conflict_logging* **设置为。**|  

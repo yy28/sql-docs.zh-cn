@@ -1,5 +1,5 @@
 ---
-title: sys. sysdevices （Transact-sql） |Microsoft Docs
+title: sys.sys设备（Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: ac5bcaf4-8fb6-4855-8856-d7643f469361
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9cbd14a7ce8dd1cfb1571874a83a615065200014
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 23c6f77ab2ffe78a478a168a917339cb90e50df2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053519"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786381"
 ---
 # <a name="syssysdevices-transact-sql"></a>sys.sysdevices (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   每个磁盘备份文件、磁带备份文件和数据库文件在表中对应一行。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68053519"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|name |**sysname**|备份文件或数据库文件的逻辑名称。|  
+|name|**sysname**|备份文件或数据库文件的逻辑名称。|  
 |size |**int**|以两千字节 (KB) 页为单位的文件大小。|  
 |**低级**|**int**|维护该列只是为了向后兼容。|  
 |**严重**|**int**|维护该列只是为了向后兼容。|  

@@ -11,15 +11,15 @@ ms.assetid: 32494df1-7ab7-4b88-a858-6b1021d67433
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c05c2535a0bd2694fc85905648c909f0b77065cc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 43c40611ea122c06b12556cb1e439103c65fdeb3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823552"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787120"
 ---
 # <a name="sysdatabase_event_session_actions-azure-sql-database"></a>sys.database_event_session_actions（Azure SQL 数据库）
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
   返回针对事件会话的每个事件执行的每个操作所对应的行。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "82823552"
 ||||  
 |-|-|-|  
 |From|功能|关系|  
-|sys. database_event_session_actions event_session_id|sys. database_event_sessions. event_session_id|多对一|  
+|sys. database_event_session_actions event_session_id|sys.sys. database_event_sessions。 event_session_id|多对一|  
 |sys. database_event_session_actions event_id<br /><br /> sys. database_event_session_actions event_session_id|sys. database_event_session_events event_session_id<br /><br /> sys. database_event_session_events event_id|多对一|  
   
   
