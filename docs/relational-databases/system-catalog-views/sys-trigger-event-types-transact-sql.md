@@ -19,21 +19,21 @@ helpviewer_keywords:
 ms.assetid: 054aed54-7151-4760-934a-149fa434f1ae
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 152fd6ca2798b9866b9a6fe9b439bfcc2c4d6a77
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e84c7c7161d88120eccd204c2e24bed508abba7d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828115"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771608"
 ---
 # <a name="systrigger_event_types-transact-sql"></a>sys.trigger_event_types (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   为可以激发触发器的每个事件或事件组返回一行。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|type |**int**|导致触发触发器的事件或事件组的类型。|  
+|**type**|**int**|导致触发触发器的事件或事件组的类型。|  
 |**type_name**|**nvarchar （64）**|事件或事件组的名称。 可以在[CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md)语句的 FOR 子句中指定此项。|  
 |**parent_type**|**int**|作为事件或事件组父级的事件组的类型。|  
   

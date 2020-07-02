@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4a496e60-414a-4026-ba7a-3e89391d39b7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0261465c04ad7f56dc14ca7e5530e23d8eac4a54
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 52fcf5c739ad5312aef89586e78454652df93f2f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829638"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771550"
 ---
 # <a name="sp_changedistributor_password-transact-sql"></a>sp_changedistributor_password (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   更改分发服务器的密码。 此存储过程在分发服务器上的任何数据库中执行。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "82829638"
 sp_changedistributor_password [ @password= ] 'password'   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @password = ] 'password'`新密码。 *password*的值为**sysname**，无默认值。 如果分发服务器是本地的，则更改**distributor_admin**系统登录名的密码。  
   
 ## <a name="return-code-values"></a>返回代码值  

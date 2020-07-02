@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 45117cb2-3247-433f-ba3d-7fa19514b1c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a332257b640124c04ed339ff11473b89a7c3b83b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5bd9def04c3d80bdc57ac4e7fe9a9d67be49a3c2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828431"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771219"
 ---
 # <a name="sp_configure_peerconflictdetection-transact-sql"></a>sp_configure_peerconflictdetection (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   为对等事务复制拓扑中包含的发布配置冲突检测。 有关详细信息，请参阅 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)。 此存储过程在发布服务器上对发布数据库执行。  
   
@@ -43,14 +43,14 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  [ @publication =] "*发布*"  
  要配置冲突检测的发布的名称。 *发布*为**sysname**，无默认值。  
   
  [ @action =] "*action*"  
  指定是否为发布启用或禁用冲突检测。 *操作*为**nvarchar （5）**，可以为以下值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**enable**|为发布启用冲突检测。|  
 |**disable**|为发布禁用冲突检测。|  

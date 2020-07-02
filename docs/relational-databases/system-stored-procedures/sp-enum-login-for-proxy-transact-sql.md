@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: ee6b6a701d4ff81863973c4c8e098bd9ed49c967
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a26f9ab251bbea3de121a26035d397d17cee5f24
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124680"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771137"
 ---
 # <a name="sp_enum_login_for_proxy-transact-sql"></a>sp_enum_login_for_proxy (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   列出安全主体服务器和代理服务器之间的关联。  
   
@@ -41,8 +41,8 @@ sp_enum_login_for_proxy
     [ @proxy_name = ] 'proxy_name'  
 ```  
   
-## <a name="arguments"></a>参数  
-`[ @name = ] 'name'`要列出其代理[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的主体、登录名、服务器角色或**msdb**数据库角色的名称。 名称为**nvarchar （256）**，默认值为 NULL。  
+## <a name="arguments"></a>自变量  
+`[ @name = ] 'name'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]要列出其代理的主体、登录名、服务器角色或**msdb**数据库角色的名称。 名称为**nvarchar （256）**，默认值为 NULL。  
   
 `[ @proxy_id = ] id`要列出其信息的代理的代理标识号。 *Proxy_id*的值为**int**，默认值为 NULL。 可以指定*id*或*proxy_name* 。  
   
@@ -57,8 +57,8 @@ sp_enum_login_for_proxy
 |-----------------|---------------|-----------------|  
 |**proxy_id**|**int**|代理服务器标识号。|  
 |**proxy_name**|**sysname**|代理服务器的名称。|  
-|**name**|**sysname**|关联的安全主体服务器的名称。|  
-|**flag**|**int**|安全主体服务器的类型。<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录<br /><br /> **1** = 固定系统角色<br /><br /> **2** = **msdb**中的数据库角色|  
+|name|**sysname**|关联的安全主体服务器的名称。|  
+|**flag**|**int**|安全主体服务器的类型。<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录<br /><br /> **1** = 固定系统角色<br /><br /> **2** = **msdb**中的数据库角色|  
 | &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="remarks"></a>备注  

@@ -23,22 +23,22 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c165ca271c3230399d54363f22d2b220e5427830
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6567b5dfa6a6b83298793c9e5f2962d9c1bdb878
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388658"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764830"
 ---
 # <a name="introduction-to-annotated-xsd-schemas-sqlxml-40"></a>带批注的 XSD 架构简介 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   您可以通过使用 XML 架构定义 (XSD) 语言创建关系数据的 XML 视图。 然后可通过使用 XML Path 语言 (XPath) 查询对这些视图进行查询。 这类似于使用 CREATE VIEW 语句创建视图，然后针对视图指定 SQL 查询。  
   
  XML 架构描述了 XML 文档的结构并且还描述了对文档中数据的各种约束。 针对该架构指定 XPath 查询时，返回的 XML 文档的结构由对其执行 XPath 查询的架构确定。  
   
- 在 xsd 架构中， ** \<xsd： schema>** 元素包含整个架构;所有元素声明都必须包含在** \<xsd： schema>** 元素中。 您可以描述定义架构所在的命名空间的属性，以及将架构中使用的命名空间作为** \<xsd： schema>** 元素的属性。  
+ 在 XSD 架构中， **\<xsd:schema>** 元素包含整个架构; 所有元素声明都必须包含在 **\<xsd:schema>** 元素中。 您可以描述定义架构所在的命名空间的属性，以及架构中用作元素属性的命名空间 **\<xsd:schema>** 。  
   
- 有效的 xsd 架构必须包含如下所定义的** \<xsd： schema>** 元素：  
+ 有效的 XSD 架构必须包含 **\<xsd:schema>** 定义的元素，如下所示：  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -47,7 +47,7 @@ ms.locfileid: "81388658"
 </xsd:schema>  
 ```  
   
- Xsd： schema>元素派生自中的 XML 架构命名空间规范http://www.w3.org/2001/XMLSchema。 ** \<**  
+ **\<xsd:schema>** 元素派生自中的 XML 架构命名空间规范 http://www.w3.org/2001/XMLSchema 。  
   
 ## <a name="annotations-to-the-xsd-schema"></a>XSD 架构的批注  
  您可以对 XSD 架构使用批注来描述数据库映射、查询数据库并返回 XML 文档形式的结果。 使用批注可将 XSD 架构映射到数据库表和列。 可以对 XSD 架构创建的 XML 视图指定 XPath 查询来查询数据库并获取 XML 形式的结果。  
@@ -58,7 +58,7 @@ ms.locfileid: "81388658"
  在关系数据库上下文中，将任意 XSD 架构映射到关系存储区很有用。 实现这种映射的一种方法是对 XSD 架构进行批注。 带有批注的 XSD 架构称为*映射架构*，它提供有关如何将 XML 数据映射到关系存储区的信息。 实际上，映射架构是关系数据的 XML 视图。 使用这些映射能够以 XML 文档形式检索关系数据。  
   
 ## <a name="namespace-for-annotations"></a>批注的命名空间  
- 在 XSD 架构中，批注通过使用命名空间**urn： schema-microsoft-com： mapping-schema**来指定。 如下面的示例中所示，指定命名空间的最简单方法是在** \<xsd： schema>** 标记中指定该命名空间。  
+ 在 XSD 架构中，批注通过使用命名空间**urn： schema-microsoft-com： mapping-schema**来指定。 如下面的示例中所示，指定命名空间的最简单方法是在标记中指定它 **\<xsd:schema>** 。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -70,7 +70,7 @@ ms.locfileid: "81388658"
  命名空间可采用任意前缀。 在本文档中， **sql**前缀用于表示批注命名空间，并将此命名空间中的批注与其他命名空间中的批注区分开来。  
   
 ## <a name="example-of-an-annotated-xsd-schema"></a>带批注的 XSD 架构的示例  
- 在下面的示例中，XSD 架构包含** \<Person。请联系>** 元素。 Employee>元素具有**ContactID**属性， ** \<FirstName>** ， ** \<LastName>** 子元素： ** \<**  
+ 在下面的示例中，XSD 架构由元素组成 **\<Person.Contact>** 。 **\<Employee>** 元素具有**ContactID**特性和 **\<FirstName>** 和 **\<LastName>** 子元素：  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
@@ -111,7 +111,7 @@ ms.locfileid: "81388658"
 </xsd:schema>  
 ```  
   
- 在映射架构中， ** \<Contact>** 元素通过使用**sql： relation**批注映射到示例 AdventureWorks 数据库中的 contact 表。 属性 ConID、FName 和 LName 映射到 Person 中的 ContactID、FirstName 和 LastName 列。请通过使用**sql： field**批注来联系表。  
+ 在映射架构中， **\<Contact>** 使用**sql： relation**批注将元素映射到示例 AdventureWorks 数据库中的 Contact 表。 属性 ConID、FName 和 LName 映射到 Person 中的 ContactID、FirstName 和 LastName 列。请通过使用**sql： field**批注来联系表。  
   
  此带有批注的 XSD 架构提供了关系数据的 XML 视图。 可使用 XPath 语言查询此 XML 视图。 XPath 查询返回的结果是一个 XML 文档，而 SQL 查询返回的结果是行集。  
   

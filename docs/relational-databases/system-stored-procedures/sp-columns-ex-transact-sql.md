@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c12ef6df-58c6-4391-bbbf-683ea874bd81
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f7b64251d139b34f0a23cec49ffbb4dcbf0384a0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2aa75e2f742cbafd64f5bb8d76d7cd8dbf4028ed
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826658"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771259"
 ---
 # <a name="sp_columns_ex-transact-sql"></a>sp_columns_ex (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   返回指定链接服务器表的列信息，每列一行。 如果指定了*column* ， **sp_columns_ex**仅返回特定列的列信息。  
   
@@ -43,7 +43,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
      [ , [ @ODBCVer = ] 'ODBCVer' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @table_server = ] 'table_server'`要返回其列信息的链接服务器的名称。 *table_server* **sysname**，无默认值。  
   
 `[ @table_name = ] 'table_name'`要返回其列信息的表的名称。 *table_name*的默认值为**sysname**，默认值为 NULL。  

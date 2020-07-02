@@ -18,15 +18,15 @@ ms.assetid: fee042fe-4781-4a33-a01b-d98fb5629f1b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b360a899ed17f0b1b82a5ebcdfbd664803ed8d93
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a86792b69e9bdd00c41c9ed5582046aee634d533
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828372"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772182"
 ---
 # <a name="sp_fulltext_pendingchanges-transact-sql"></a>sp_fulltext_pendingchanges (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   针对正在使用更改跟踪的指定表返回未处理的更改，例如挂起的插入、更新和删除。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "82828372"
 sp_fulltext_pendingchanges table_id  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  table_id**  
  表的 ID。 如果该表未进行全文索引，或未对该表启用更改跟踪，则将返回错误。  
   
@@ -47,9 +47,9 @@ sp_fulltext_pendingchanges table_id
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**密钥**|*|指定表中的全文键值。|  
+|**Key**|*|指定表中的全文键值。|  
 |**DocId**|**bigint**|与键值相对应的内部文档标识符 (DocId) 列。|  
-|**状态**|**int**|0 = 将从全文索引中删除行。<br /><br /> 1 = 将对行进行全文索引。<br /><br /> 2 = 行是最新的。<br /><br /> -1 = 行处于过渡（进行了批处理，但未提交）状态或错误状态。|  
+|**Status**|**int**|0 = 将从全文索引中删除行。<br /><br /> 1 = 将对行进行全文索引。<br /><br /> 2 = 行是最新的。<br /><br /> -1 = 行处于过渡（进行了批处理，但未提交）状态或错误状态。|  
 |**DocState**|**tinyint**|内部文档标识符 (DocId) 映射状态列的原始转储。|  
   
  <sup>* Key 的数据类型与基表中全文键列的数据类型相同。</sup>  

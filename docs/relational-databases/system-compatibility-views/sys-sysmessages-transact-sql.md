@@ -1,5 +1,5 @@
 ---
-title: sys. sysmessages （Transact-sql） |Microsoft Docs
+title: sys.sys消息（Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 44bee7d9-7517-4071-99be-8b36f979c7cc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 53f7abe7603430950f14ecad039419f8435cba28
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a70c96b28665141ada5138ac5dd99477d37de1ce
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68076550"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764335"
 ---
 # <a name="syssysmessages-transact-sql"></a>sys.sysmessages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   针对每个可由 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]返回的系统错误或警告都包含相应的一行。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]在用户屏幕上显示错误说明。  
   

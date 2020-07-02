@@ -26,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: dd7760db-a3a5-460f-bd97-b8d436015e19
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 80cb0fbbd3c6052ebe2d129a31f582c4aa1ee1ef
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e4cdea3abd58e6eb9d61eeec3e7bba91e80c97db
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824038"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771345"
 ---
 # <a name="sp_check_dynamic_filters-transact-sql"></a>sp_check_dynamic_filters (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   显示有关发布的参数化行筛选器属性的信息，特别是用于为发布生成已筛选数据分区的函数以及关于发布是否有资格使用预计算分区的信息。 此存储过程在发布服务器上对发布数据库执行。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "82824038"
 sp_check_dynamic_filters [ @publication = ] 'publication'  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publication = ] 'publication'`发布的名称。 *发布*为**sysname**，无默认值。  
   
 ## <a name="result-sets"></a>结果集  

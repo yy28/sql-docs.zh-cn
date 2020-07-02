@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c88e0f545a19c1f486c5c6927c11fd2707112963
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b33103bc84e6354e99ac04e73fa20a0f99725a6a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824076"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771383"
 ---
 # <a name="sp_changesubscription-transact-sql"></a>sp_changesubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   对于排队更新事务复制所涉及的快照或者事务推送订阅，或所涉及的请求订阅，更改其属性。 若要更改所有其他类型的请求订阅的属性，请使用[&#40;transact-sql&#41;sp_change_subscription_properties ](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)。 在发布服务器上对发布数据库执行**sp_changesubscription** 。  
   
@@ -47,7 +47,7 @@ sp_changesubscription [ @publication = ] 'publication'
     [ , [ @publisher = ] 'publisher' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publication = ] 'publication'`要更改的发布的名称。 *发布*为**sysname**，无默认值  
   
 `[ @article = ] 'article'`要更改的项目的名称。 *项目*是**sysname**，无默认值。  
@@ -60,7 +60,7 @@ sp_changesubscription [ @publication = ] 'publication'
   
 `[ @value = ] 'value'`指定的*属性*的新值。 *值*为**nvarchar （4000）**，可以是表中的值之一。  
   
-|Property|值|说明|  
+|Property|值|描述|  
 |--------------|-----------|-----------------|  
 |**distrib_job_login**||用来运行代理的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户的登录名。|  
 |**distrib_job_password**||用来运行代理的 Windows 帐户的密码。|  

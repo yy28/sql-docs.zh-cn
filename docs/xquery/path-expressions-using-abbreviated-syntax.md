@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: f83c2e41-5722-47c3-b5b8-bf0f8cbe05d3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eeb7026f341af60f289a1d3854e24656073add61
-ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
+ms.openlocfilehash: 83dab3384810943901813b90286674253b88b8f1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84306006"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765637"
 ---
 # <a name="path-expressions---using-abbreviated-syntax"></a>路径表达式 - 使用缩写语法
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
   [了解 XQuery 中的路径表达式](../xquery/path-expressions-xquery.md)的所有示例均使用不缩写的路径表达式语法。 路径表达式中用于轴步骤的未缩写语法包括轴名称和节点测试（用双冒号分隔），后跟零或更多个步骤限定符。  
   

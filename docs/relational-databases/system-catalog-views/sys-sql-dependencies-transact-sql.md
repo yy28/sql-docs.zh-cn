@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 1779aa87-a0b8-470a-a286-d7cc0b93ad2e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e6ec79ad00de37b7887164795752b350630193f8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 106c295d200ce823f80988be2276a927aba8126d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833957"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764458"
 ---
 # <a name="syssql_dependencies-transact-sql"></a>sys.sql_dependencies (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   对在定义另一引用对象的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 表达式或语句中引用的被引用的实体的每一依赖关系，均存在对应的一行。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "82833957"
 |-----------------|---------------|-----------------|  
 |**class**|**tinyint**|标识被引用的实体的类：<br /><br /> 0 = 对象或列（仅限非绑定到架构的引用）<br /><br /> 1 = 对象或列（架构绑定引用）<br /><br /> 2 = 类型（架构绑定引用）<br /><br /> 3 = XML 架构集合（架构绑定引用）<br /><br /> 4 = 分区函数（架构绑定引用）|  
 |**class_desc**|**nvarchar(60)**|被引用的实体的类的说明：<br /><br /> **OBJECT_OR_COLUMN_REFERENCE_NON_SCHEMA_BOUND**<br /><br /> **OBJECT_OR_COLUMN_REFERENCE_SCHEMA_BOUND**<br /><br /> **TYPE_REFERENCE**<br /><br /> **XML_SCHEMA_COLLECTION_REFERENCE**<br /><br /> **PARTITION_FUNCTION_REFERENCE**|  
-|**object_id**|**int**|引用对象的 ID。|  
+|object_id|**int**|引用对象的 ID。|  
 |**column_id**|**int**|如果引用 ID 是一列，则为引用列的 ID；否则为 0。|  
 |**referenced_major_id**|**int**|被引用的实体的 ID，由类的值解释，具体如下：<br /><br /> 0、1 = 对象或列的对象 ID。<br /><br /> 2 = 类型 ID。<br /><br /> 3 = XML 架构集合 ID。|  
 |**referenced_minor_id**|**int**|被引用实体的 Minor-ID，由类的值解释，如下所示：<br /><br /> 当 class =:<br /><br /> 0， **referenced_minor_id**是列 id;如果不是列，则为0。<br /><br /> 1， **referenced_minor_id**是列 id;如果不是列，则为0。<br /><br /> 否则， **referenced_minor_id** = 0。|  
@@ -48,7 +48,7 @@ ms.locfileid: "82833957"
 |**is_select_all**|**bit**|对象用在了 SELECT * 子句中（仅限对象级）。|  
   
 ## <a name="permissions"></a>权限  
- 要求 **公共** 角色具有成员身份。  有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
+ 要求 **公共** 角色具有成员身份。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [Transact-sql&#41;的目录视图 &#40;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

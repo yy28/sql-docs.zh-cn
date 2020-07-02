@@ -23,15 +23,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 295d924422410bbf247d9b96d27b705fdfe3b5d3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 03b6557d2d17e0a2c9b9ad651ca71d903c8ea19a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68133821"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764751"
 ---
 # <a name="sysfulltext_index_fragments-transact-sql"></a>sys.fulltext_index_fragments (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   全文索引使用称为*全文索引片段*的内部表来存储倒排索引数据。 可以使用此视图来查询有关这些片断的元数据。 在此视图中，每个全文索引片断在每个包含全文索引的表中各占一行。  
  
@@ -44,7 +44,7 @@ ms.locfileid: "68133821"
 |timestamp|**timestamp**|与片断创建关联的时间戳。 较新片断的时间戳大于较早片断的时间戳。|  
 |data_size|**int**|片断的逻辑大小（以字节为单位）。|  
 |row_count|**int**|片断中的行数。|  
-|status|**int**|片断状态，其中包括：<br /><br /> 0 = 新创建，尚未使用<br /><br /> 1 = 在全文索引填充或合并过程中正在用于插入<br /><br /> 4 = 关闭。 准备用于查询<br /><br /> 6 = 正在用于合并输入并准备用于查询<br /><br /> 8 = 标记为删除。 将不会用于查询和合并源。<br /><br /> 状态为4或6表示片断是逻辑全文索引的一部分，并且可以进行查询;也就是说，它是一个可*查询*片段。|  
+|状态|**int**|片断状态，其中包括：<br /><br /> 0 = 新创建，尚未使用<br /><br /> 1 = 在全文索引填充或合并过程中正在用于插入<br /><br /> 4 = 关闭。 准备用于查询<br /><br /> 6 = 正在用于合并输入并准备用于查询<br /><br /> 8 = 标记为删除。 将不会用于查询和合并源。<br /><br /> 状态为4或6表示片断是逻辑全文索引的一部分，并且可以进行查询;也就是说，它是一个可*查询*片段。|  
   
 ## <a name="remarks"></a>备注  
  可以使用 sys.fulltext_index_fragments 目录视图来查询组成全文索引的片断数。 如果全文查询速度较慢，可使用 sys.fulltext_index_fragments 查询全文索引中的可查询片断（状态 = 4 或 6）数，如下所示：  

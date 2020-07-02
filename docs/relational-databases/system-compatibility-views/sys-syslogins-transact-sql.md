@@ -1,5 +1,5 @@
 ---
-title: sys. syslogins （Transact-sql） |Microsoft Docs
+title: sys.sys登录名（Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 09/08/2017
 ms.prod: sql
@@ -20,22 +20,22 @@ helpviewer_keywords:
 ms.assetid: 4cb34f17-a4bb-469f-a218-71f074e6308f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5745d3f98741d4a414c7bb69d8f9865258d47e34
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2c0a8eaf44c5a893cb9d8dfbd8395a2e0b8b5504
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68020015"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764377"
 ---
 # <a name="syssyslogins-transact-sql"></a>sys.syslogins (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   每个登录帐户在表中对应一行。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。  
+**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -49,10 +49,10 @@ ms.locfileid: "68020015"
 |**spacelimit**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**timelimit**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**resultlimit**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**name**|**sysname**|用户的登录名。|  
+|name|**sysname**|用户的登录名。|  
 |**dbname**|**sysname**|建立连接时，用户的默认数据库名。|  
-|password |**nvarchar(128)**|返回 NULL。|  
-|**语言**|**sysname**|默认的用户语言。|  
+|**password**|**nvarchar(128)**|返回 NULL。|  
+|language|**sysname**|默认的用户语言。|  
 |**denylogin**|**int**|1 = 登录名是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 用户或组且已被拒绝访问。|  
 |**hasaccess**|**int**|1 = 已授权登录名访问服务器。|  
 |**isntname**|**int**|1 = 登录名是 Windows 用户或组。<br /><br /> 0 = 登录名是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。|  

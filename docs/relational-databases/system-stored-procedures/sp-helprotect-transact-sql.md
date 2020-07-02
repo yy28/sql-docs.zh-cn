@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8ff791855f7e65652f64d18f3128831172da9229
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3806476ffec61c155121f3238fefa8e08f689ad2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828871"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772132"
 ---
 # <a name="sp_helprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   返回一个报表，报表中包含当前数据库中某对象的用户权限或语句权限的信息。  
   
@@ -46,7 +46,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
      [ , [ @permissionarea = ] 'type' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @name = ] 'object_statement'`当前数据库或语句中具有报告权限的对象的名称。 *object_statement*为**nvarchar （776）**，默认值为 NULL，表示返回所有对象和语句权限。 如果值为一个对象（表、视图、存储过程或扩展存储过程），则该对象必须是当前数据库中的有效对象。 对象名称可以_包含所有者限定符_**。**_对象_。  
   
  如果*object_statement*是语句，则它可以是 CREATE 语句。  
@@ -69,7 +69,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 |**被授权者**|**sysname**|被授予权限的主体的名称。|  
 |**授权者**|**sysname**|向指定的被授权者进行授权的主体的名称。|  
 |**ProtectType**|**nvarchar （10）**|保护类型的名称：<br /><br /> GRANT REVOKE|  
-|**操作**|**nvarchar(60)**|权限的名称。 依赖于对象类型的有效的权限语句。|  
+|**Action**|**nvarchar(60)**|权限的名称。 依赖于对象类型的有效的权限语句。|  
 |**列**|**sysname**|权限的类型：<br /><br /> All = 权限适用于对象所有的当前列。<br /><br /> New = 权限适用于任何以后可以在对象上进行更改（使用 ALTER 语句）的新列。<br /><br /> All+New = All 和 New 的组合。<br /><br /> 如果权限类型不适用于列，则返回一个期间。|  
   
 ## <a name="remarks"></a>备注  
@@ -92,7 +92,7 @@ EXEC sp_helprotect @grantorname = 'dbo';
 ## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  
   
- 返回的信息取决于对元数据的访问权限的限制。 主体对其不具有权限的实体将不会显示。  有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
+ 返回的信息取决于对元数据的访问权限的限制。 主体对其不具有权限的实体将不会显示。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="examples"></a>示例  
   

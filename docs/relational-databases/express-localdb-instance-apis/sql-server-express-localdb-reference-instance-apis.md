@@ -10,15 +10,15 @@ ms.topic: reference
 ms.assetid: faec46da-0536-4de3-96f3-83e607c8a8b6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a9290e2b9b64c04545c833a2d04620d87564026e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2122ff4cddd045b3d73567af660ddc925d4152ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68021948"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767786"
 ---
 # <a name="sql-server-express-localdb-reference---instance-apis"></a>SQL Server Express LocalDB 参考 - 实例 API
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   在传统的、基于服务的 SQL Server 世界里，安装在单台计算机上的各 SQL Server 实例是物理分隔的；也就是说，每个实例都必须单独进行安装和删除，具有单独的一组二进制代码，并且在单独的服务进程下运行。 SQL Server 实例名称用于指定用户要连接的 SQL Server 实例。  
   
  SQL Server Express LocalDB 实例 API 使用简化的 "轻型" 实例模型。 尽管各个 LocalDB 实例在磁盘和注册表中是单独分开的，但它们使用同一组共享 LocalDB 二进制代码。 此外，LocalDB 不使用服务；LocalDB 实例是通过 LocalDB 实例 API 调用按需启动的。 在 LocalDB 中，实例名称用于指定用户要使用的 LocalDB 实例。  
@@ -65,7 +65,7 @@ ms.locfileid: "68021948"
 ### <a name="named-instance-naming-rules"></a>命名实例命名规则  
  LocalDB 实例名称最多可包含128个字符（ **sysname**数据类型施加的限制）。 这与传统 SQL Server 实例名称相比有显著差异，后者限制为 16 个 ASCII 字符的 NetBIOS 名称。 这种差异的原因是 LocalDB 将数据库视为文件，因此表示基于文件的语义，因此，用户可以更加自由地选择实例名称。  
   
- LocalDB 实例名称可包含在文件名组分内合法的任何 Unicode 字符。 文件名组件中的非法字符通常包含以下字符： ASCII/Unicode 字符1到31、引号（"）、小于号（\<）、大于号（>）、竖线（|）、退格符（\b）、制表符（\t）、冒号（:)、星号（*）、问号（？）、反斜杠（\\）和正斜杠（/）。 请注意，允许使用 Null 字符 (\ 0)，因为它用于终止字符串；第一个 Null 字符之后的任何字符都将忽略。  
+ LocalDB 实例名称可包含在文件名组分内合法的任何 Unicode 字符。 文件名组件中的非法字符通常包含以下字符： ASCII/Unicode 字符1到31、引号（"）、小于号（ \<), greater than (> ）、竖线（|）、backspace （\b）、制表符（\t）、冒号（:)、星号（*）、问号（？）、反斜杠（ \\ ）和正斜杠（/）。 请注意，允许使用 Null 字符 (\ 0)，因为它用于终止字符串；第一个 Null 字符之后的任何字符都将忽略。  
   
 > [!NOTE]  
 >  非法字符列表取决于操作系统，并且可能在将来的版本中更改。  

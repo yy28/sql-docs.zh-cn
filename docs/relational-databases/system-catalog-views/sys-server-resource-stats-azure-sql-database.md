@@ -19,15 +19,15 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 72e363b05e8f14dda535abd70e4218c949c42c91
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e85a74b203d270223d215ace08a58a0eea980fa1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68133074"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772986"
 ---
 # <a name="sysserver_resource_stats-azure-sql-database"></a>sys. server_resource_stats （Azure SQL Database）
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
 返回 Azure SQL 托管实例的 CPU 使用情况、IO 和存储数据。 在五分钟的间隔内收集和聚合数据。 每15秒报告一次。 返回的数据包括 CPU 使用率、存储大小、IO 利用率和托管实例 SKU。 历史数据保留大约 14 天。
 
@@ -78,4 +78,4 @@ HAVING AVG(avg_cpu_percent) >= 80
 ```  
     
 ## <a name="see-also"></a>另请参阅  
- [“托管实例”服务层级](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers)
+ [托管实例的服务层](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers)

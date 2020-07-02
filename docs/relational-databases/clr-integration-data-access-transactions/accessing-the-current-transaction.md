@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 1a4e2ce5-f627-4c81-8960-6a9968cefda2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ad8c499355ada4ab84c0f7e2016bbb363c71e779
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c82c4e4f5b1f1af6194ff409a684ca239881487a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487471"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765399"
 ---
 # <a name="accessing-the-current-transaction"></a>访问当前事务
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  如果事务处于活动状态，则在中输入运行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的公共语言运行时（CLR）代码时，该事务将通过**system.web**类公开。 **Transaction。 current**属性用于访问当前事务。 在大多数情况下，不必显式访问事务。 对于数据库连接，ADO.NET 会在调用**Open**方法时自动检查**transaction** ，并以透明方式在该事务中登记连接（除非在连接字符串中将**征用**关键字设置为 false）。  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  如果事务处于活动状态，则在中输入运行的公共语言运行时（CLR）代码时 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，该事务将通过**system.web**类公开。 **Transaction。 current**属性用于访问当前事务。 在大多数情况下，不必显式访问事务。 对于数据库连接，ADO.NET 会在调用**Open**方法时自动检查**transaction** ，并以透明方式在该事务中登记连接（除非在连接字符串中将**征用**关键字设置为 false）。  
   
  您可能需要在以下情况下直接使用**Transaction**对象：  
   
@@ -42,9 +42,9 @@ ms.locfileid: "81487471"
 ## <a name="canceling-an-external-transaction"></a>取消外部事务  
  可以用以下方式从托管过程或函数取消外部事务：  
   
--   通过使用输出参数，托管过程或函数可以返回值。 调用[!INCLUDE[tsql](../../includes/tsql-md.md)]过程可以检查返回值，并在适当的情况下执行**回滚事务**。  
+-   通过使用输出参数，托管过程或函数可以返回值。 调用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 过程可以检查返回值，并在适当的情况下执行**回滚事务**。  
   
--   托管过程或函数可以引发自定义异常。 调用[!INCLUDE[tsql](../../includes/tsql-md.md)]过程可以捕获由托管过程或函数在 try/catch 块中引发的异常，并执行**回滚事务**。  
+-   托管过程或函数可以引发自定义异常。 调用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 过程可以捕获由托管过程或函数在 try/catch 块中引发的异常，并执行**回滚事务**。  
   
 -   如果满足特定条件，托管过程或函数可以通过调用**transaction**方法来取消当前事务。  
   

@@ -18,15 +18,15 @@ ms.assetid: 2dec79cf-2baf-4c0f-8cbb-afb1a8654e1e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dbc724b9178ec867768fde3dc3d9ff58add554e9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1ffce9dd6a06b433e183570767bf165c9e6b75d9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826264"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771240"
 ---
 # <a name="sp_columns-transact-sql"></a>sp_columns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   返回在当前环境中可查询的指定对象的列信息。  
   
@@ -44,7 +44,7 @@ sp_columns [ @table_name = ] object
      [ , [ @ODBCVer = ] ODBCVer ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ \@table_name = ] object`用于返回目录信息的对象的名称。 *对象*可以是表、视图或具有列（如表值函数）的其他对象。 *对象*的值为**nvarchar （384）**，无默认值。 支持通配符模式匹配。  
   
 `[ \@table_owner = ] owner`用于返回目录信息的对象的所有者。 *所有者*为**nvarchar （384）**，默认值为 NULL。 支持通配符模式匹配。 如果未指定*owner* ，则应用基础 DBMS 的默认对象可见性规则。  

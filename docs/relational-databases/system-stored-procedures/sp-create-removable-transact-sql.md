@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 06e36ae5-f70d-4a26-9a7f-ee4b9360b355
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8cef470ba4873a56b21a29d7b2856f58c8ec7b11
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d273cd7c7f4c7c78f3c6cc9d928ffe27e9d79e6f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820575"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771175"
 ---
 # <a name="sp_create_removable-transact-sql"></a>sp_create_removable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   创建可移动介质数据库。 创建三个或更多文件（一为系统目录表，一为事务日志，其余文件为数据表）并将数据库置于这些文件之中。  
   
@@ -54,7 +54,7 @@ sp_create_removable
    [ @datasize16 = ] datasize16 ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @dbname = ] 'dbname'`要创建以便在可移动介质上使用的数据库的名称。 *dbname*为**sysname**。  
   
 `[ @syslogical = ] 'syslogical'`包含系统目录表的文件的逻辑名称。 *syslogical*为**sysname**。  

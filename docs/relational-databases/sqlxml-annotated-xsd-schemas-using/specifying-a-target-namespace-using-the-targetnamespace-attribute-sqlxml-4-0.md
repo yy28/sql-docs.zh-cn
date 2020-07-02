@@ -21,15 +21,15 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3daeaabe86d91d0986fb764c3a60304ec5e09faf
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: bfa6234aae5e2744a88c4fcfb158575cb07000f5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84885160"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764903"
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>使用 targetNamespace 属性指定目标命名空间 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   在编写 XSD 架构时，可以使用 XSD **targetNamespace**属性指定目标命名空间。 本主题介绍 XSD **targetNamespace**、 **elementFormDefault**和**attributeFormDefault**属性如何工作，如何影响生成的 XML 实例，以及如何使用命名空间指定 XPath 查询。  
   
  您可以使用**xsd： targetNamespace**属性将默认命名空间中的元素和属性放入不同的命名空间中。 还可以指定在显示局部声明的架构元素和属性时，是否应由命名空间限定（使用前缀显式限定或默认隐式限定）。 您可以使用元素上的**elementFormDefault**和**attributeFormDefault**属性 **\<xsd:schema>** 来全局指定本地元素和属性的限定，或者可以使用**窗体**属性单独指定单独的元素和属性。  

@@ -20,15 +20,15 @@ ms.assetid: f0d3b95a-8a00-471b-9da4-14cb8f5b045f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd9339c8d0ef678b021c3c2887963c487681eeac
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: bd504c18b41480b2d384efc5546f10b957a43bac
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82819103"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764320"
 ---
 # <a name="sysdm_tran_locks-transact-sql"></a>sys.dm_tran_locks (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   返回 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中有关当前活动的锁管理器资源的信息。 向锁管理器发出的已授予锁或正等待授予锁的每个当前活动请求分别对应一行。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "82819103"
 |**request_session_id**|**int**|当前拥有该请求的会话 ID。 对于分布式事务和绑定事务，拥有请求的会话 ID 可能不同。 该值为 -2 时，指示该请求属于孤立的分布式事务。 该值为 -3 时，指示请求属于延迟的恢复事务，例如因其回滚未能成功完成而延迟恢复该回滚的事务。|  
 |**request_exec_context_id**|**int**|当前拥有该请求的进程的执行上下文 ID。|  
 |**request_request_id**|**int**|当前拥有该请求的进程的请求 ID（批处理 ID）。 每当事务的多个活动的结果集 (MARS) 连接更改时，该值便会更改。|  
-|**request_owner_type**|**nvarchar(60)**|拥有请求的实体类型。 锁管理器请求可由各种实体所拥有。 可能的值有：<br /><br /> TRANSACTION = 请求由事务所有。<br /><br /> CURSOR = 请求由游标所有。<br /><br /> SESSION = 请求由用户会话所有。<br /><br /> SHARED_TRANSACTION_WORKSPACE = 请求由事务工作区的共享部分所有。<br /><br /> EXCLUSIVE_TRANSACTION_WORKSPACE = 请求由事务工作区的排他部分所有。<br /><br /> NOTIFICATION_OBJECT = 请求由内部 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件所有。 此组件已经请求锁管理器在有其他组件等待获取锁时进行通知。 FileTable 功能是使用此值的一个组件。<br /><br /> **注意：** 工作空间在内部使用，用于持有登记的会话的锁。|  
+|**request_owner_type**|**nvarchar(60)**|拥有请求的实体类型。 锁管理器请求可由各种实体所拥有。 可能的值包括：<br /><br /> TRANSACTION = 请求由事务所有。<br /><br /> CURSOR = 请求由游标所有。<br /><br /> SESSION = 请求由用户会话所有。<br /><br /> SHARED_TRANSACTION_WORKSPACE = 请求由事务工作区的共享部分所有。<br /><br /> EXCLUSIVE_TRANSACTION_WORKSPACE = 请求由事务工作区的排他部分所有。<br /><br /> NOTIFICATION_OBJECT = 请求由内部 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件所有。 此组件已经请求锁管理器在有其他组件等待获取锁时进行通知。 FileTable 功能是使用此值的一个组件。<br /><br /> **注意：** 工作空间在内部使用，用于持有登记的会话的锁。|  
 |**request_owner_id**|**bigint**|此请求的特定所有者的 ID。<br /><br /> 当事务是请求的所有者时，此值包含事务 ID。<br /><br /> 当 FileTable 是请求的所有者时，**request_owner_id** 具有以下值之一：<br /> <ul><li>**-4** ： FileTable 已获取数据库锁。<li> **-3** ： FileTable 已获取表锁。<li> **其他值**：该值表示文件句柄。 此值还显示为动态管理视图[dm_filestream_non_transacted_handles sys.databases &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md)中的**fcb_id** 。</li></ul>|  
 |**request_owner_guid**|**uniqueidentifier**|此请求的特定所有者的 GUID。 该值仅供分布式事务使用，在该事务中，该值与事务的 MS DTC GUID 相对应。|  
 |**request_owner_lockspace_id**|**nvarchar(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] 该值表示请求程序的锁空间 ID。 锁空间 ID 确定两个请求程序是否相互兼容以及在两者冲突的模式下是否可以向其授予锁。|  
@@ -97,15 +97,15 @@ ms.locfileid: "82819103"
   
 |资源类型|资源说明|Resource_associated_entity_id|  
 |-------------------|--------------------------|--------------------------------------|  
-|DATABASE|表示数据库。|不适用|  
-|FILE|表示数据库文件。 此文件可以是数据文件，也可以是日志文件。|不适用|  
+|DATABASE|表示数据库。|“不适用”|  
+|文件|表示数据库文件。 此文件可以是数据文件，也可以是日志文件。|“不适用”|  
 |OBJECT|表示数据库对象。 此对象可以是数据表、视图、存储过程、扩展存储过程或任何具有对象 ID 的对象。|对象 ID|  
 |PAGE|表示数据文件中的单页。|HoBt ID。 此值与 **sys.partitions.hobt_id** 相对应。 PAGE 资源并不总是有 HoBt ID，因为 HoBt ID 是可由调用方提供的额外信息，而有些调用方不能提供该信息。|  
 |KEY|表示索引中的一行。|HoBt ID。 此值与 **sys.partitions.hobt_id** 相对应。|  
-|EXTENT|表示数据文件区。 区是由八个连续页构成的组。|不适用|  
+|EXTENT|表示数据文件区。 区是由八个连续页构成的组。|“不适用”|  
 |RID|表示堆中的物理行。|HoBt ID。 此值与 **sys.partitions.hobt_id** 相对应。 RID 资源并不总是有 HoBt ID，因为 HoBt ID 是可由调用方提供的额外信息，而有些调用方不能提供该信息。|  
-|APPLICATION|表示指定了应用程序的资源。|不适用|  
-|METADATA|表示元数据信息。|不适用|  
+|APPLICATION|表示指定了应用程序的资源。|“不适用”|  
+|METADATA|表示元数据信息。|“不适用”|  
 |HOBT|表示堆或 B 树。 它们是基本访问路径结构。|HoBt ID。 此值与 **sys.partitions.hobt_id** 相对应。|  
 |ALLOCATION_UNIT|表示一组相关页，如索引分区。 每个分配单元都包含一个索引分配映射 (IAM) 链。|分配单元 ID。 此值与 **sys.allocation_units.allocation_unit_id** 相对应。|  
   
@@ -197,18 +197,18 @@ ms.locfileid: "82819103"
   
  下表提供每个资源类型的 **resource_description** 列的格式。  
   
-|资源|格式|说明|  
+|资源|格式|描述|  
 |--------------|------------|-----------------|  
-|DATABASE|不适用|**resource_database_id** 列中已提供数据库 ID。|  
-|FILE|<file_id>|此资源所表示的文件 ID。|  
+|DATABASE|“不适用”|**resource_database_id** 列中已提供数据库 ID。|  
+|文件|<file_id>|此资源所表示的文件 ID。|  
 |OBJECT|<object_id>|此资源所表示的对象 ID。 此对象可以是 **sys.objects** 中列出的任何对象，不仅仅是表。|  
 |PAGE|<file_id>:<page_in_file>|表示此资源所表示的页的文件和页 ID。|  
 |KEY|<hash_value>|表示行中由此资源表示的键列的哈希。|  
 |EXTENT|<file_id>:<page_in_files>|表示此资源所表示的区的文件和页 ID。 区 ID 与区中的第一页的页 ID 相同。|  
 |RID|<file_id>:<page_in_file>:<row_on_page>|表示此资源所表示的行的页 ID 和行 ID。 请注意，如果关联的对象 ID 为 99，则此资源表示 IAM 链的第一个 IAM 页上的八个混合页槽之一。|  
-|APPLICATION|\<Characters>>：最多 \< 32 个字符>:(<hash_value>）|表示用于划分此应用程序锁资源范围的数据库主体的 ID。 还包含与此应用程序锁资源相对应的资源字符串，最多包含其中的 32 个字符。 在某些情况下，因不再提供完整字符串而只能显示 2 个字符。 只有在恢复过程中重新获取的应用程序锁处于数据库恢复期间才会发生此行为。 哈希值表示与此应用程序锁资源相对应的完整资源字符串的哈希。|  
-|HOBT|不适用|作为 **resource_associated_entity_id** 提供的 HoBt ID。|  
-|ALLOCATION_UNIT|不适用|作为 **resource_associated_entity_id** 提供的分配单元 ID。|  
+|APPLICATION|\<DbPrincipalId>： \<upto 32 characters> :(<hash_value>）|表示用于划分此应用程序锁资源范围的数据库主体的 ID。 还包含与此应用程序锁资源相对应的资源字符串，最多包含其中的 32 个字符。 在某些情况下，因不再提供完整字符串而只能显示 2 个字符。 只有在恢复过程中重新获取的应用程序锁处于数据库恢复期间才会发生此行为。 哈希值表示与此应用程序锁资源相对应的完整资源字符串的哈希。|  
+|HOBT|“不适用”|作为 **resource_associated_entity_id** 提供的 HoBt ID。|  
+|ALLOCATION_UNIT|“不适用”|作为 **resource_associated_entity_id** 提供的分配单元 ID。|  
 |METADATA.ASSEMBLY|assembly_id = A|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |METADATA.ASSEMBLY_CLR_NAME|$qname_id = Q|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |METADATA.ASSEMBLY_TOKEN|assembly_id = A, $token_id|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

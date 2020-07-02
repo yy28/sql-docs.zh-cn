@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: ac28ef48-f4f4-4bf2-ba22-d44e1be88172
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a85a911d4c9f5cd4565e9839f3be44a4e2366079
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8f342fd9dcf89b5d9862a2ed51718b09aae2e991
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68067756"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771529"
 ---
 # <a name="snapshotsfn_trace_getdata-transact-sql"></a>snapshots.fn_trace_getdata (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   该函数返回为指定跟踪捕获的所有事件。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68067756"
 snapshots.fn_trace_gettable ( trace_info_id, start_time, end_time )  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *trace_info_id*  
  快照中主键的唯一标识符。管理数据仓库数据库中的 trace_info 表。 *trace_info_id*是**int**。  
   
@@ -51,7 +51,7 @@ snapshots.fn_trace_gettable ( trace_info_id, start_time, end_time )
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|\<所有跟踪列>|\<不同>|来自管理数据仓库数据库中 snapshots.trace_info 表的跟踪数据。<br /><br /> 可通过使用以下查询来获取指定跟踪的列的列表：<br /><br /> `SELECT * FROM sys.trace_columns`<br /><br /> **注意：** 由快照返回的列。 fn_trace_gettable 函数与 sys.databases trace_columns 系统视图中 "名称" 列中的值相对应。 唯一的差别在于该函数不返回 GroupID 列。|  
+|\<All trace columns>|\<Varies>|来自管理数据仓库数据库中 snapshots.trace_info 表的跟踪数据。<br /><br /> 可通过使用以下查询来获取指定跟踪的列的列表：<br /><br /> `SELECT * FROM sys.trace_columns`<br /><br /> **注意：** 由快照返回的列。 fn_trace_gettable 函数与 sys.databases trace_columns 系统视图中 "名称" 列中的值相对应。 唯一的差别在于该函数不返回 GroupID 列。|  
   
 ## <a name="permissions"></a>权限  
  要求拥有 mdw_reader 的 SELECT 权限。  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 518a4618-3592-4edc-8425-cbc33cdff891
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ef9a2fd87ac283ee2a7072cfccac838df7f16d04
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 547b524a35970f18cb1e3d1d4dbd3679267695a5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829566"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771436"
 ---
 # <a name="sp_changepublication_snapshot-transact-sql"></a>sp_changepublication_snapshot (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   更改指定发布的快照代理的属性。 此存储过程在发布服务器上对发布数据库执行。  
   
@@ -56,7 +56,7 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
     [ , [ @publisher = ] 'publisher' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publication = ] 'publication'`发布的名称。 *发布*为**sysname**，无默认值。  
   
 `[ @frequency_type = ] frequency_type`计划代理的频率。 *frequency_type*为**int**，可以是下列值之一。  
@@ -67,7 +67,7 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 |**2**|按需|  
 |**4**|每天|  
 |**8**|每周|  
-|**超过**|每月一次|  
+|**16**|每月|  
 |**32**|与“每月”选项相关|  
 |**64**|自动启动|  
 |**128**|重复执行|  
@@ -85,7 +85,7 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 |**6**|星期五|  
 |**7**|星期六|  
 |**8**|天|  
-|**900**|工作日|  
+|**9**|工作日|  
 |**10**|周末|  
 |NULL（默认值）||  
   
@@ -125,7 +125,7 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 `[ @publisher_password = ] 'publisher_password'`连接到发布服务器时使用的密码。 *publisher_password*的默认值为**sysname**，默认值为 NULL。  
   
 > [!IMPORTANT]  
->  不要使用空密码。 使用强密码。 如果可能，请在运行时提示用户输入安全凭据。 如果必须在脚本文件中存储凭据，则必须保护文件以防止未经授权的访问。  
+>  不要使用空密码。 请使用强密码。 如果可能，请在运行时提示用户输入安全凭据。 如果必须在脚本文件中存储凭据，则必须保护文件以防止未经授权的访问。  
   
 `[ @job_login = ] 'job_login'`用于运行代理的 Windows 帐户的登录名。 *job_login*为**nvarchar （257）**，默认值为 NULL。 此 Windows 帐户总是用于与分发服务器建立代理连接。 创建新的快照代理作业时，必须提供此参数。 对于非发布服务器，不能更改此项 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   

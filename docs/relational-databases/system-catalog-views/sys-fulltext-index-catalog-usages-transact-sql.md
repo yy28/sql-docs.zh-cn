@@ -20,21 +20,21 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0515e06636371689578d08fee0ae3f640539f680
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6afba685174f580122d7f3085644e2c0cc61a14a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68133829"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764717"
 ---
 # <a name="sysfulltext_index_catalog_usages-transact-sql"></a>sys.fulltext_index_catalog_usages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   对于全文索引引用的每个全文目录，返回与其对应的一行。    
  
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|全文索引表的 ID。 在该数据库中是唯一的。|  
+|object_id|**int**|全文索引表的 ID。 在该数据库中是唯一的。|  
 |**index_id**|**int**|全文索引的 ID。|  
 |**fulltext_catalog_id**|**int**|全文目录的 ID。|  
   

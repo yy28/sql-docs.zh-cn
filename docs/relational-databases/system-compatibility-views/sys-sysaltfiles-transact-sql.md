@@ -1,5 +1,5 @@
 ---
-title: sys. sys.sysaltfiles （Transact-sql） |Microsoft Docs
+title: sys.sysaltfiles （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 698dec23-5336-4108-87a5-f8e407f8da09
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 891e88761cac47be83fb69debbbc5e4cb6c401c0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3c79b582eaf6ba6f4fef568af11110fcb6ea17c6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006973"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764401"
 ---
 # <a name="syssysaltfiles-transact-sql"></a>sys.sysaltfiles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   在特殊情况下，包含与数据库中的文件相对应的行。  
   
@@ -45,8 +45,8 @@ ms.locfileid: "68006973"
 |**status**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**性能**|**int**|保留。|  
 |**dbid**|**smallint**|该文件所属数据库的数据库标识号。|  
-|**name**|**sysname**|文件的逻辑名称。|  
-|**名字**|**nvarchar(260)**|物理设备的名称。 这包括文件的完整路径。|  
+|name|**sysname**|文件的逻辑名称。|  
+|**filename**|**nvarchar(260)**|物理设备的名称。 这包括文件的完整路径。|  
   
 ## <a name="see-also"></a>另请参阅  
  [将系统表映射到系统视图 &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   

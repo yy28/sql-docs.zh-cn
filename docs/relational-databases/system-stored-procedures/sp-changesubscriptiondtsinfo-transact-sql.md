@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 64fc085f-f81b-493b-b59a-ee6192d9736d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fd0d08a045f67b436bd732b01a2279c923fc9461
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d721bf729d99a60a32693ddbe609cfcee01ba701
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824065"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771364"
 ---
 # <a name="sp_changesubscriptiondtsinfo-transact-sql"></a>sp_changesubscriptiondtsinfo (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   更改订阅的 Data Transformation Services (DTS) 包属性。 此存储过程在订阅服务器的订阅数据库中执行。  
   
@@ -39,7 +39,7 @@ sp_changesubscriptiondtsinfo [ [ @job_id = ] job_id ]
     [ , [ @dts_package_location= ] 'dts_package_location' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @job_id = ] job_id`推送订阅的分发代理的作业 ID。 *job_id*为**varbinary （16）**，无默认值。 若要查找分发作业 ID，请运行**sp_helpsubscription**或**sp_helppullsubscription**。  
   
 `[ @dts_package_name = ] 'dts_package_name'`指定 DTS 包的名称。 *dts_package_name*是**sysname**，默认值为 NULL。 例如，若要指定名为**DTSPub_Package**的包，请指定 `@dts_package_name = N'DTSPub_Package'` 。  

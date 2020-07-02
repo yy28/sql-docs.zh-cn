@@ -29,15 +29,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 17ad196110a68a83618e5048f53bfa84fb7e0f51
-ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
+ms.openlocfilehash: eade5e3328993176f8795d27e511902a42468192
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84306013"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764866"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>XPath 数据类型 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、XPath 和 XML 架构（XSD）的数据类型非常不同。 例如，XPath 没有整数或日期数据类型，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 XSD 则具有许多此类数据类型。 XSD 可将纳秒精度用于时间值，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 最高只能使用 1/300 秒的精度。 因此，将一种数据类型映射到另一种数据类型并不是始终可行的。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将数据类型映射到 XSD 数据类型的详细信息，请参阅[数据类型强制转换和 sql： datatype 批注 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md)。  
   
  XPath 包含三种数据类型：**字符串**、**数字**和**布尔值**。 **Number**数据类型始终为 IEEE 754 双精度浮点。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Float （53）** 数据类型是最接近的 XPath**数字**。 但是， **float （53）** 并不完全是 IEEE 754。 例如，NaN（非数字）和 infinity 均未使用。 尝试将非数字字符串转换为**数字**，并尝试除以零会导致错误。  
@@ -90,9 +90,9 @@ ms.locfileid: "84306013"
   
 |XDR 数据类型|等效<br /><br /> XPath 数据类型|使用的 SQL Server 转换|  
 |-------------------|------------------------------------|--------------------------------|  
-|Nonebin.base64bin.hex|空值|NoneEmployeeID|  
+|Nonebin.base64bin.hex|不可用|NoneEmployeeID|  
 |boolean|boolean|CONVERT(bit, EmployeeID)|  
-|number、int、float、i1、i2、i4、i8、r4、r8、ui1、ui2、ui4、ui8|number|CONVERT(float(53), EmployeeID)|  
+|number、int、float、i1、i2、i4、i8、r4、r8、ui1、ui2、ui4、ui8|数字|CONVERT(float(53), EmployeeID)|  
 |id、idref、idrefsentity、entities、enumerationnotation、nmtoken、nmtokens、chardate、Timedate、Time.tz、string、uri、uuid|字符串|CONVERT(nvarchar(4000), EmployeeID, 126)|  
 |fixed14.4|无（在 XPath 中没有等效于 fixed14.4 XDR 数据类型的数据类型）|CONVERT(money, EmployeeID)|  
 |date|字符串|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  

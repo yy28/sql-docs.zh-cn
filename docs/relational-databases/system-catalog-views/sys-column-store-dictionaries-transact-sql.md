@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 56efd563-2f72-4caf-94e3-8a182385c173
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3d69a2355f18a162f3e7a6b76b07bbb7cd6a597a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e7ccd7c93d42cb30eeb2fc24b79c358d519579b6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75656608"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764764"
 ---
 # <a name="syscolumn_store_dictionaries-transact-sql"></a>sys.column_store_dictionaries (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   xVelocity 内存优化的列存储索引中使用的每个字典各占一行。 字典用于对某些而非全部数据类型进行编码，因此并非列存储索引中的所有列都有字典。 字典可以作为主字典存在（对于所有段），也可能作为用于部分列段的其他辅助字典存在。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "75656608"
 |**partition_id**|**bigint**|指示分区 ID。 在数据库中是唯一的。|  
   
 ## <a name="permissions"></a>权限  
-要求对表具有 `VIEW DEFINITION` 权限。 以下各列将返回 null，除非用户也`SELECT`具有权限： last_id、entry_count data_ptr。  
+要求对表具有 `VIEW DEFINITION` 权限。 以下各列将返回 null，除非用户也具有 `SELECT` 权限： last_id、entry_count data_ptr。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   

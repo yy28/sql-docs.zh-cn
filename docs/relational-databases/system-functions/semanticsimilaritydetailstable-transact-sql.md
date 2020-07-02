@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 038d751a-fca5-4b4c-9129-cba741a4e173
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 34473e6eb173a0aabc5c2067e50aeeec27ce5636
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4b264f5276ad9d9f411fcdd14550130eb412a1b0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68067740"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771556"
 ---
 # <a name="semanticsimilaritydetailstable-transact-sql"></a>semanticsimilaritydetailstable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   返回一个表，该表包含其内容在语义上相似的两个文档（源文档和匹配的文档）共有的关键短语的零个、一个或多个行。  
   
@@ -71,10 +71,10 @@ SEMANTICSIMILARITYDETAILSTABLE
 ## <a name="table-returned"></a>返回的表  
  下表介绍此行集函数返回的关键短语的信息。  
   
-|Column_name|类型|说明|  
+|Column_name|类型|描述|  
 |------------------|----------|-----------------|  
 |**关键短语**|**NVARCHAR**|在源文档和匹配文档之间促进相似性的关键短语。|  
-|**分值**|**real**|一个相对值，用来表示此关键短语与两篇文档间相似的所有其他关键短语的关系。<br /><br /> 该值是范围 [0.0, 1.0] 中的小数值，较高的得分表示较高权重，1.0 是最理想的得分。|  
+|**分值**|**实际上**|一个相对值，用来表示此关键短语与两篇文档间相似的所有其他关键短语的关系。<br /><br /> 该值是范围 [0.0, 1.0] 中的小数值，较高的得分表示较高权重，1.0 是最理想的得分。|  
   
 ## <a name="general-remarks"></a>一般备注  
  有关详细信息，请参阅[通过语义搜索查找相似和相关文档](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)。  
@@ -92,7 +92,7 @@ SEMANTICSIMILARITYDETAILSTABLE
  需要对创建全文和语义搜索所基于的基表具有 SELECT 权限。  
   
 ## <a name="examples"></a>示例  
- 下面的示例检索5个关键短语，该短语在 AdventureWorks2012 示例数据库的**HumanResources humanresources.jobcandidate**表中指定的候选项之间具有最高相似性分数。 @CandidateId和@MatchedID变量表示全文索引的键列中的值。  
+ 下面的示例检索5个关键短语，该短语在 AdventureWorks2012 示例数据库的**HumanResources humanresources.jobcandidate**表中指定的候选项之间具有最高相似性分数。 @CandidateId和 @MatchedID 变量表示全文索引的键列中的值。  
   
 ```sql  
 SELECT TOP(5) KEY_TBL.keyphrase, KEY_TBL.score  

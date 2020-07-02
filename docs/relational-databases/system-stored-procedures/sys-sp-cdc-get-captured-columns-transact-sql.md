@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: d9e680be-ab9b-4e0c-b63a-90658f241df8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0bc087c6e55418a501459076a1f3f7862112a056
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5f7f5bfc20effb8e70168bc8375d3744f16fb8d5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82808182"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85769431"
 ---
 # <a name="syssp_cdc_get_captured_columns-transact-sql"></a>sys.sp_cdc_get_captured_columns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   返回指定捕获实例所跟踪的捕获源列的变更数据捕获元数据信息。 并非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每个版本中均提供变更数据捕获功能。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
@@ -43,7 +43,7 @@ sys.sp_cdc_get_captured_columns
     [ @capture_instance = ] 'capture_instance'  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  [ @capture_instance =] "*capture_instance*"  
  与源表关联的捕获实例的名称。 *capture_instance*为**sysname** ，且不能为 NULL。  
   

@@ -18,15 +18,15 @@ ms.assetid: 8204f6f2-5704-40a7-8d51-43fc832eeb54
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0cc6ff854079b740279127000a9edb04552245e1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 608f969ab70a0bd9a35b64918a29053caf26c385
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820547"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771156"
 ---
 # <a name="sp_createstats-transact-sql"></a>sp_createstats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   调用[CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)语句，以便对统计信息对象中尚未处于第一列的列创建单列统计信息。 创建单列统计信息会增加直方图的数目，这可能会改进基数估计、查询计划和查询性能。 统计信息对象的第一列具有直方图；其他列没有直方图。  
   
@@ -47,7 +47,7 @@ sp_createstats
     [ , [ @incremental = ] { 'incremental' | 'NO' } ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @indexonly = ] 'indexonly'`仅对现有索引中的列创建统计信息，而不是任何索引定义中的第一列。 **indexonly**为**char （9）**。 默认值为 NO。  
   
 `[ @fullscan = ] 'fullscan'`将[CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)语句与**FULLSCAN**选项一起使用。 **fullscan**为**char （9）**。  默认值为 NO。  

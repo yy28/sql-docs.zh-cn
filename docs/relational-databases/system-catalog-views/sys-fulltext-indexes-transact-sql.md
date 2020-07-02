@@ -21,21 +21,21 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b240c74abde034f5008416994ca9cb497e6e64f8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ca20bc73e071fea4a1a0f01acf2c0701b15aca25
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68133804"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764700"
 ---
 # <a name="sysfulltext_indexes-transact-sql"></a>sys.fulltext_indexes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   表对象的每个全文索引各占一行。  
 
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|此全文索引所属的对象的 ID。|  
+|object_id|**int**|此全文索引所属的对象的 ID。|  
 |**unique_index_id**|**int**|对应的唯一非全文索引的 ID，该索引用于将全文索引与行关联。|  
 |**fulltext_catalog_id**|**int**|全文索引所在的全文目录的 ID。|  
 |**is_enabled**|**bit**|1 = 当前已启用全文索引。|  

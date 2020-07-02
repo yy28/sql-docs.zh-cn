@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: fb2592a1-1fad-41f9-8ff8-74c5905dbae9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dc909fcf942bc73bed6c39357b494ecaeabcb97c
-ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
+ms.openlocfilehash: ba7b28277db82a39de449a51776b9893419d9db6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84215847"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765572"
 ---
 # <a name="validate-expressions-xquery"></a>validate 表达式 (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
   在此实现中，不支持**验证**表达式。 XQuery 构造表达式的结果始终是非类型化的。 如果应键入 XQuery 表达式的结果，则使用 SQL 强制转换表达式将结果转换为**xml**数据类型，并使用首选的架构集合。  
   

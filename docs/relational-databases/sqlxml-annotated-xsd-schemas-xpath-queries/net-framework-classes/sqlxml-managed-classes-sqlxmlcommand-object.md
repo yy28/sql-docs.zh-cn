@@ -32,15 +32,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: afebd1c659015e3daf4a357b12871687207b607e
-ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
+ms.openlocfilehash: c3c3c829b49f52476498e744c91fa5c1af37b6b7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84306156"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767537"
 ---
 # <a name="sqlxml-managed-classes---sqlxmlcommand-object"></a>SQLXML 托管类 - SqlXmlCommand 对象
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   这是 SqlXmlCommand 对象的构造函数：  
   
 ```  
@@ -109,7 +109,7 @@ public SqlXmlCommand(string cnString)
  CommandType  
  标识命令的类型。 此属性用于指定您要执行的命令的类型。 下表中的值确定命令的类型。 有关工作示例，请参阅[在 .Net 环境中访问 SQLXML 功能](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md)。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |SqlXmlCommandType|执行某一 SQL 命令（例如 `SELECT * FROM Employees FOR XML AUTO`）。|  
 |SqlXmlCommandType|执行某一 XPath 命令（例如 `Employees[@EmployeeID=1]`）。|  

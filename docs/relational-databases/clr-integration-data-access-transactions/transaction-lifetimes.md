@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: cb076fda-6488-4959-a6a4-7adaccf3f25c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1fed737c644ebb241a5761fffd2409c2556d28ea
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8a9783922f2e1e908ee13efb97512b4c16135341
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487483"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765390"
 ---
 # <a name="transaction-lifetimes"></a>事务生存期
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程中启动的事务与在托管代码中启动的事务之间存在一个重大区别：公共语言运行时 (CLR) 代码在进入或退出 CLR 调用时不能使事务状态取消均衡。 注意此区别的以下含义：  
   
 -   必须提交或回滚在 CLR 框架内启动的事务，否则在退出该框架时 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将产生错误。  

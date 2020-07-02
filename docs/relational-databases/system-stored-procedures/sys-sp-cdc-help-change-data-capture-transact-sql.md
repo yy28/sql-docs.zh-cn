@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b5ceaaa02d07e34e1e93789d2c72f80a3459a472
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 62d1fbfffeb23e823e89ecc1a22f44c54f8245a1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82807958"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768905"
 ---
 # <a name="syssp_cdc_help_change_data_capture-transact-sql"></a>sys.sp_cdc_help_change_data_capture (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   返回当前数据库中为变更数据捕获启用的每个表的变更数据捕获配置。 最多可为每个源表返回两行，为每个捕获实例返回一行。 并非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每个版本中均提供变更数据捕获功能。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
@@ -44,7 +44,7 @@ sys.sp_cdc_help_change_data_capture
   [, [ @source_name = ] 'source_name' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  [ @source_schema =] "*source_schema*"  
  源表所属架构的名称。 *source_schema*的默认值为**sysname**，默认值为 NULL。 指定*source_schema*时，还必须指定*source_name* 。  
   

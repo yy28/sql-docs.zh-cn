@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 12288f37-b54c-4237-b75e-eedc5fe8f96d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3b6efd2cc3d5793d4524c4ab3d058a6375d23892
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 5f329d4e4684997138d3c54e6b2831d70b961a93
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84886930"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765656"
 ---
 # <a name="aggregate-functions---sum"></a>聚合函数 - sum
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   返回一列数字的和。  
   
@@ -39,7 +39,7 @@ fn:sum($arg as xdt:anyAtomicType*) as xdt:anyAtomicType
  *$arg*  
  要计算和的一列原子值。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  传递给**sum （）** 的原子化值的所有类型都必须是同一基类型的子类型。 接受的基类型为三种内置数字基类型或 xdt:untypedAtomic。 类型为 xdt:untypedAtomic 的值将转换为 xs:double。 如果有这些类型的混合，或者如果传递其他类型的其他值，则会引发静态错误。  
   
  **Sum （）** 的结果会接收传入类型的基类型（如 Xdt： untypedAtomic），即使输入是空序列也是如此。 如果输入在静态下为空，则对于 xs:integer 的静态和动态类型，结果都为 0。  

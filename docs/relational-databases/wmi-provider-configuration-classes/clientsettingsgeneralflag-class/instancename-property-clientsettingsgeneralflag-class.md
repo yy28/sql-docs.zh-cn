@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 7de3c043-6c5a-4663-b960-a80492444a99
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8467ffe1f372b80e79358dc80f08a2b42e77ad6a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 48b7216ba97e6d9fb5f271770e94fdb8b819d11c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660191"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768267"
 ---
 # <a name="instancename-property-clientsettingsgeneralflag-class"></a>InstanceName 属性（ClientSettingsGeneralFlag 类）
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  获取[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]客户端实例的名称。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+  获取客户端实例的名称 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="syntax"></a>语法  
   

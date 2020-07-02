@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2182e922599e81a2333fcbf4da5970b55d7e5bc4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fdd889b1c28b037f4ab1d4f609cf93b19617e5b0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823465"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771469"
 ---
 # <a name="sp_changemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   更改合并请求订阅的属性。 此存储过程在订阅服务器的订阅数据库中执行。  
   
@@ -40,7 +40,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
     [ , [ @value= ] 'value' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publication = ] 'publication'`发布的名称。 *发布*为**sysname**，默认值为%。  
   
 `[ @publisher = ] 'publisher'`发布服务器的名称。 *发布服务器*的**sysname**为，默认值为%。  
@@ -51,7 +51,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
   
 `[ @value = ] 'value'`指定的属性的新值。 *值*为**nvarchar （255）**，可以是表中的值之一。  
   
-|Property|值|说明|  
+|Property|值|描述|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||快照文件夹的存储位置（如果该位置不同于默认位置或是默认位置之外的位置）。|  
 |**2008**||对该合并请求订阅的说明。|  
@@ -82,11 +82,11 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 ||**2**|同步触发器使用静态**sysservers**项执行远程过程调用（RPC），并且发布服务器必须在**sysservers**表中定义为远程服务器或链接服务器。|  
 |**sync_type**|**自动**|已发布表的架构和初始数据将首先传输到订阅服务器。|  
 ||**无**|订阅服务器已经具有已发布表的架构和初始数据；将始终传输系统表和数据。|  
-|**use_ftp**|**true**|使用 FTP 而不是典型协议来检索快照。|  
+|**use_ftp**|true|使用 FTP 而不是典型协议来检索快照。|  
 ||**false**|使用典型协议来检索快照。|  
-|**use_web_sync**|**true**|可以通过 HTTP 同步订阅。|  
+|**use_web_sync**|true|可以通过 HTTP 同步订阅。|  
 ||**false**|不能通过 HTTP 同步订阅。|  
-|**use_interactive_resolver**|**true**|在调解过程中使用交互式冲突解决程序。|  
+|**use_interactive_resolver**|true|在调解过程中使用交互式冲突解决程序。|  
 ||**false**|不使用交互式冲突解决程序。|  
 |**working_directory**||如果指定了使用 FTP 的选项，则是使用 FTP 将快照文件传输到的目录的完全限定路径。|  
 |NULL（默认值）||返回*属性*的支持值的列表。|  

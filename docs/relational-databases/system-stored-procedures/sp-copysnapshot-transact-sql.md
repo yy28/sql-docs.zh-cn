@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a012a32f-6f26-45bf-8046-b51cd7fec455
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c9d9eca16209dd9cfc5695ae56daf929d067ab6e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 17a554d6bccdfb067600f10122122bd542fe9c6b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831785"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771199"
 ---
 # <a name="sp_copysnapshot-transact-sql"></a>sp_copysnapshot (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   将指定发布的快照文件夹复制到** \@ destination_folder**中列出的文件夹。 此存储过程在发布服务器上对发布数据库执行。 此存储过程用于将快照复制到可移动介质（如 CD-ROM）上。  
   
@@ -38,7 +38,7 @@ sp_copysnapshot [ @publication = ] 'publication', [ @destination_folder = ] 'des
     [ , [ @subscriber_db = ] 'subscriber_db' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publication = ] 'publication'`要复制其快照内容的发布的名称。 *发布*为**sysname**，无默认值。  
   
 `[ @destination_folder = ] 'destination_folder'`是要将发布快照内容复制到其中的文件夹的名称。 *destination_folder*为**nvarchar （255）**，无默认值。 *Destination_folder*可以是备用位置，如在其他服务器、网络驱动器或可移动介质（如 cd-rom 或可移动磁盘）上。  

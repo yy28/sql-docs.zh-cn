@@ -18,15 +18,15 @@ ms.assetid: e49b98e4-d1f1-42b2-b16f-eb2fc7aa1cf5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a180f10f0b0ac4bb1836d529ac437d917b559e16
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 42985c60b7057904291bbf196e3faae27e77ae68
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820521"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771084"
 ---
 # <a name="sp_fulltext_catalog-transact-sql"></a>sp_fulltext_catalog (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   创建和删除全文目录，并启动和停止目录的索引操作。 可为每个数据库创建多个全文目录。  
   
@@ -44,7 +44,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
      [ , [ @path= ] 'root_directory' ]   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @ftcat = ] 'fulltext_catalog_name'`全文目录的名称。 每个数据库的目录名称必须是唯一的。 *fulltext_catalog_name* **sysname**。  
   
 `[ @action = ] 'action'`要执行的操作。 *操作*为**varchar （20）**，可以是下列值之一。  
@@ -52,13 +52,13 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 > [!NOTE]  
 >  可根据需要创建、删除和修改全文目录。 但请避免同时对多个目录的架构进行更改。 可以使用**sp_fulltext_table**存储过程来执行这些操作，这是建议的方法。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**创建**|在文件系统中创建一个空的新全文目录，并将**sysfulltextcatalogs**中的关联行添加到*fulltext_catalog_name*并*root_directory*（如果存在）值。 *fulltext_catalog_name*在数据库中必须是唯一的。|  
 |**击落**|删除*fulltext_catalog_name* ，方法是将其从文件系统中删除，并删除**sysfulltextcatalogs**中的关联行。 如果此目录中包含一个或多个表的索引，则此操作将失败。 **sp_fulltext_table**应执行 "*table_name*"，以从目录中删除表。<br /><br /> 如果目录不存在，则会显示错误。|  
 |**start_incremental**|开始*fulltext_catalog_name*的增量填充。 如果目录不存在，则会显示错误。 如果一个全文索引填充已经是活动的，则会显示一个警告，而不发生填充操作。 使用增量填充时，将检索全文索引的已更改行，前提是表中存在一个要进行全文索引的**时间戳**列。|  
 |**start_full**|启动*fulltext_catalog_name*的完全填充。 即使与此全文目录相关联的每一个表的每一行都进行过索引，也会对其检索全文索引。|  
-|**Stop**|停止*fulltext_catalog_name*的索引填充。 如果目录不存在，则会显示错误。 如果已经停止了填充，则不会显示警告。|  
+|**停止**|停止*fulltext_catalog_name*的索引填充。 如果目录不存在，则会显示错误。 如果已经停止了填充，则不会显示警告。|  
 |**重新生成**|重新生成*fulltext_catalog_name*。 重新生成目录时，将删除现有目录，并在其原位置创建一个新目录。 具有全文索引引用的所有表都与此新目录相关联。 重新生成会重置数据库系统表中的全文元数据。<br /><br /> 如果更改跟踪为 OFF，重新生成并不会导致重新填充新创建的全文目录。 在这种情况下，若要重新填充，请执行**sp_fulltext_catalog** ，并**start_full**或**start_incremental**操作。|  
   
 `[ @path = ] 'root_directory'`**创建**操作的根目录（而不是完整的物理路径）。 *root_directory*为**nvarchar （100）** ，默认值为 NULL，表示使用安装时指定的默认位置。 这是 Mssql 目录中的 Ftdata 子目录;例如，C:\Program Files\Microsoft SQL Server\MSSQL13。MSSQLSERVER\MSSQL\FTData. 指定的根目录必须驻留在同一台计算机的某一驱动器上，它不能只包含驱动器号，也不能是相对路径。 不支持使用网络驱动器、可移动驱动器、软盘和 UNC 路径。 全文目录必须在与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例相关联的本地硬盘上创建。  

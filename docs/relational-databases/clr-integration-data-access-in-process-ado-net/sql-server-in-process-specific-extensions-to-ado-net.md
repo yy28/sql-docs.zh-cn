@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 781b812e-eb14-472a-85fa-aa4cdb929bee
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f3c1729d216a1456551da3699c286385694e558a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8265a79c58f94eea59b0776910eda6e4902d5989
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75258170"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765451"
 ---
 # <a name="sql-server-in-process-specific-extensions-to-adonet"></a>SQL Server 进程内专用的 ADO.NET 扩展
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   主要有四种专门在进程内使用的 ADO.NET 功能性扩展。 下列主题将详细地介绍这些扩展功能。  
   
 ## <a name="in-this-section"></a>本节内容  

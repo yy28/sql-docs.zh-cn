@@ -1,5 +1,5 @@
 ---
-title: 命令行管理工具： SqlLocalDB |Microsoft Docs
+title: 命令行管理工具： SqlLocalDB.exe |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -12,15 +12,15 @@ apilocation:
 ms.assetid: dd0882b1-a8a9-447a-8bdf-0f9d7f36d336
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a41daed808b51df59ba80e0113b84e46c501c9b4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5c39272a1f8af7fce092f7aa31ac3a4f7ebd2263
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68126950"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765248"
 ---
 # <a name="command-line-management-tool-sqllocaldbexe"></a>命令行管理工具：SqlLocalDB.exe
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   SqlLocalDB.exe 是一个简单的工具，它使用户能够从命令行轻松管理 LocalDB 实例。 它作为 LocalDB 实例 API 的简单包装实现。 与在很多类似的 SQL Server 工具（例如 SQLCMD）中一样，参数作为命令行参数传递给 SqlLocalDB，并且将输出发送到控制台。  
   
  借助于 SqlLocalDB，开发人员不必编写代码或依赖于其他工具来调用 API，即可使用 LocalDB。  

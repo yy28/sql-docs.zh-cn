@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7e4260d05e0ed2967e9fbf151faeb53007080c21
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6fd7af5a486928e0dca9f5b2281e0b53c5038e74
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824028"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771338"
 ---
 # <a name="sp_check_for_sync_trigger-transact-sql"></a>sp_check_for_sync_trigger (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   确定是否正在用于立即更新订阅的复制触发器的上下文中调用用户定义的触发器或存储过程。 该存储过程在发布服务器的发布数据库中或在订阅服务器的订阅数据库中执行。  
   
@@ -38,14 +38,14 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
     [ , [ @fonpublisher = ] fonpublisher ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  [** @tabid =** ] "*tabid*"  
  正对检查即时更新触发器的表的对象 ID。 *tabid*的值为**int** ，无默认值。  
   
  [** @trigger_op =** ] "*trigger_output_parameters*" 输出  
  指定输出参数是否返回正在调用它的触发器的类型。 *trigger_output_parameters*为**char （10）** ，可以是下列值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**插件**|INSERT 触发器|  
 |**Upd**|UPDATE 触发器|  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 171cbc7d-7406-4cb0-8602-9405243bfd1d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 151b0f504080523e99fad839c17e02b786b619c0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b7b69de24d9b92e82d624a694800988cdf74180c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831096"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771107"
 ---
 # <a name="sp_enumdsn-transact-sql"></a>sp_enumdsn (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   对于使用特定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 用户帐户运行的服务器，返回所有定义的 ODBC 和 OLE DB 数据源名称的列表。 此存储过程在发布服务器的任何数据库中执行。  
   
@@ -45,8 +45,8 @@ sp_enumdsn
 |-----------------|---------------|-----------------|  
 |**数据源名称**|**sysname**|数据源的名称。|  
 |**说明**|**varchar(255)**|对数据源的说明。|  
-|**Type**|**int**|数据源类型：<br /><br /> **1** = ODBC DSN<br /><br /> **3** = OLE DB 数据源|  
-|提供者名称 |**varchar(255)**|OLE DB 访问接口的名称。 ODBC DSN 的值为 NULL。|  
+|类型|**int**|数据源类型：<br /><br /> **1** = ODBC DSN<br /><br /> **3** = OLE DB 数据源|  
+|提供者名称|**varchar(255)**|OLE DB 访问接口的名称。 ODBC DSN 的值为 NULL。|  
   
 ## <a name="remarks"></a>备注  
  每个 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务都有一个用户上下文。 用户上下文是一组注册表项，其中包含用户的 ODBC 数据源定义。 用户上下文由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在其下运行的用户名提供。  

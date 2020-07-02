@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6c59b4ba84981ff4cb1240d78e1d6d472be61289
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 97c6a7d309578ebe0cc6e93b5408ad6d9fad6296
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829634"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771503"
 ---
 # <a name="sp_changemergearticle-transact-sql"></a>sp_changemergearticle (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   更改合并项目的属性。 此存储过程在发布服务器上对发布数据库执行。  
   
@@ -41,7 +41,7 @@ sp_changemergearticle [ @publication = ] 'publication'
     [ , [ @force_reinit_subscription = ] force_reinit_subscription ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publication = ] 'publication'`项目所在的发布的名称。 *发布*为**sysname**，无默认值。  
   
 `[ @article = ] 'article'`要更改的项目的名称。 *项目*是**sysname**，无默认值。  
@@ -54,28 +54,28 @@ sp_changemergearticle [ @publication = ] 'publication'
   
 |Property|值|说明|  
 |--------------|------------|-----------------|  
-|**allow_interactive_resolver**|**true**|允许对项目使用交互式冲突解决程序。|  
+|**allow_interactive_resolver**|true|允许对项目使用交互式冲突解决程序。|  
 ||**false**|不允许对项目使用交互式冲突解决程序。|  
 |**article_resolver**||项目的自定义冲突解决程序。 仅适用于表项目。|  
 |**check_permissions** （位图）|**0x00**|不检查表级权限。|  
 ||**0x10**|将订阅服务器上的 INSERT 语句应用于发布服务器之前，要在发布服务器上检查表级权限。|  
 ||**0x20**|将订阅服务器上的 UPDATE 语句应用于发布服务器之前，要在发布服务器上检查表级权限。|  
 ||**0x40**|将订阅服务器上的 DELETE 语句应用于发布服务器之前，要在发布服务器上检查表级权限。|  
-|**column_tracking**|**true**|打开列级跟踪。 仅适用于表项目。<br /><br /> 注意：发布的列超过246列时，不能使用列级跟踪。|  
+|**column_tracking**|true|打开列级跟踪。 仅适用于表项目。<br /><br /> 注意：发布的列超过246列时，不能使用列级跟踪。|  
 ||**false**|关闭列级跟踪，保留行级冲突检测。 仅适用于表项目。|  
-|**compensate_for_errors**|**true**|同步过程中发生错误时执行补救措施。 有关详细信息，请参阅[sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。|  
+|**compensate_for_errors**|true|同步过程中发生错误时执行补救措施。 有关详细信息，请参阅[sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。|  
 ||**false**|不执行补救措施，这是默认行为。 有关详细信息，请参阅[sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。<br /><br /> ** \* \* 重要 \* 提示 \* ：** 尽管受影响的行中的数据可能看起来不收敛，但一旦你解决了任何错误，就可以应用更改，并且数据将聚合在一起。 如果某个项目的源表已在另一个发布中发布，则这两个项目的*compensate_for_errors*的值必须相同。|  
 |**creation_script**||用于在订阅数据库中创建项目的可选项目架构脚本的路径和名称。|  
-|**delete_tracking**|**true**|复制 DELETE 语句，这是默认行为。|  
+|**delete_tracking**|true|复制 DELETE 语句，这是默认行为。|  
 ||**false**|不复制 DELETE 语句。<br /><br /> ** \* \* 重要 \* 的 \* **设置**delete_tracking**为**false**会导致非收敛性，需要手动删除删除的行。|  
 |**2008**||项目的说明项。|  
 |**destination_owner**||订阅数据库中对象的所有者的名称（如果不是**dbo**）。|  
 |**identity_range**||**用于指定**在分配新标识值时要使用的范围大小（如果项目的**identityrangemanagementoption**设置为**auto**或**auto_identity_range**设置为**true**。 仅适用于表项目。 有关详细信息，请参阅[复制标识列](../../relational-databases/replication/publish/replicate-identity-columns.md)的 "合并复制" 部分。|  
 |**identityrangemanagementoption**|**手动**|禁用自动标识范围管理。 使用 NOT FOR REPLICATION 标记标识列，启用手动标识范围处理。 有关详细信息，请参阅[复制标识列](../../relational-databases/replication/publish/replicate-identity-columns.md)。|  
 ||**无**|禁用所有标识范围管理。|  
-|**logical_record_level_conflict_detection**|**true**|如果逻辑记录中发生了更改，则将检测到冲突。 要求将**logical_record_level_conflict_resolution**设置为**true**。|  
+|**logical_record_level_conflict_detection**|true|如果逻辑记录中发生了更改，则将检测到冲突。 要求将**logical_record_level_conflict_resolution**设置为**true**。|  
 ||**false**|**Column_tracking**使用指定的默认冲突检测。|  
-|**logical_record_level_conflict_resolution**|**true**|整个入选逻辑记录覆盖落选逻辑记录。|  
+|**logical_record_level_conflict_resolution**|true|整个入选逻辑记录覆盖落选逻辑记录。|  
 ||**false**|入选行未被约束为逻辑记录。|  
 |**partition_options**|**0**|项目的筛选是静态的，或者不会为每个分区生成唯一数据子集（即“重叠”分区）。|  
 ||**1**|分区是重叠的，订阅服务器上执行的 DML 更新无法更改行所属的分区。|  
@@ -84,10 +84,10 @@ sp_changemergearticle [ @publication = ] 'publication'
 |**pre_creation_command**|**无**|如果订阅服务器上已存在该表，则不执行任何操作。|  
 ||**delete**|根据子集筛选器中的 WHERE 子句发出 delete 命令。|  
 ||**击落**|删除该表，然后重新创建一个表。|  
-||**去**|截断目标表。|  
+||**truncate**|截断目标表。|  
 |**processing_order**||**int** ，指示合并发布中项目的处理顺序。|  
 |**pub_identity_range**||如果项目的**identityrangemanagementoption**设置为**auto**或**auto_identity_range**设置为**true**，则指定分配给具有服务器订阅的订阅**服务器的范围**大小。 此标识范围是为重新发布订阅服务器保留的，用于分配给其自身的订阅服务器。 仅适用于表项目。 有关详细信息，请参阅[复制标识列](../../relational-databases/replication/publish/replicate-identity-columns.md)的 "合并复制" 部分。|  
-|**published_in_tran_pub**|**true**|项目也在事务发布中发布。|  
+|**published_in_tran_pub**|true|项目也在事务发布中发布。|  
 ||**false**|项目不在事务发布中发布。|  
 |**resolver_info**||用于指定自定义冲突解决程序所需的其他信息。 某些 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 冲突解决程序需要提供列作为冲突解决程序的输入。 **resolver_info**为**nvarchar （255）**，默认值为 NULL。 有关详细信息，请参阅 [Microsoft 基于 COM 的冲突解决程序](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)。|  
 |**schema_option** （位图）||有关详细信息，请参阅本主题后面的 "备注" 部分。|  
@@ -133,13 +133,13 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||Null|系统自动为项目生成一个有效的架构选项。|  
 |**status**|**active**|用于发布表的初始处理脚本已运行。|  
 ||**unsynced**|用于发布表的初始处理脚本在下一次运行快照代理时运行。|  
-|**stream_blob_columns**|**true**|复制二进制大型对象列时使用数据流优化。 但是，某些合并复制功能（如逻辑记录）仍可阻止使用流优化。 启用 FILESTREAM 时， *stream_blob_columns*设置为 true。 这使复制 FILESTREAM 数据的性能达到最佳并减少内存使用率。 若要强制 FILESTREAM 表项目不使用 blob 流式处理，请将*stream_blob_columns*设置为 false。<br /><br /> ** \* \* 重要 \* 说明 \* **在同步过程中，启用此内存优化可能会影响合并代理的性能。 仅当复制包含数兆字节数据的列时，才应使用此选项。|  
+|**stream_blob_columns**|true|复制二进制大型对象列时使用数据流优化。 但是，某些合并复制功能（如逻辑记录）仍可阻止使用流优化。 启用 FILESTREAM 时， *stream_blob_columns*设置为 true。 这使复制 FILESTREAM 数据的性能达到最佳并减少内存使用率。 若要强制 FILESTREAM 表项目不使用 blob 流式处理，请将*stream_blob_columns*设置为 false。<br /><br /> ** \* \* 重要 \* 说明 \* **在同步过程中，启用此内存优化可能会影响合并代理的性能。 仅当复制包含数兆字节数据的列时，才应使用此选项。|  
 ||**false**|复制二进制大型对象列时不使用优化。|  
 |**subscriber_upload_options**|**0**|不限制在包含客户端订阅的订阅服务器上进行更新；将更改上载到发布服务器。 更改此属性可能需要重新初始化现有的订阅服务器。|  
 ||**1**|允许在包含客户端订阅的订阅服务器上进行更改，但不将更改上载到发布服务器。|  
 ||**2**|不允许在包含客户端订阅的订阅服务器上进行更改。|  
 |**subset_filterclause**||用于指定水平筛选的 WHERE 子句。 仅适用于表项目。<br /><br /> 由于性能原因，建议不要对参数化行筛选器子句（如）中的列名应用函数。 ** \* \* \* \* ** `LEFT([MyColumn]) = SUSER_SNAME()` 如果在筛选子句中使用[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)并重写 HOST_NAME 值，则可能需要使用[convert](../../t-sql/functions/cast-and-convert-transact-sql.md)转换数据类型。 有关此情况的最佳实践的详细信息，请参阅[参数化行筛选器](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)中的 "重写 HOST_NAME （）值" 部分。|  
-|**阀**||用于运行 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 或早期版本的的订阅服务器的百分比值 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 **阈值**控制合并代理分配新标识范围的时间。 如果使用了在阈值中指定的百分比值，合并代理将创建新的标识范围。 当**identityrangemanagementoption**设置为**auto**或**auto_identity_range**设置为**true**时使用。 仅适用于表项目。 有关详细信息，请参阅[复制标识列](../../relational-databases/replication/publish/replicate-identity-columns.md)的 "合并复制" 部分。|  
+|**threshold**||用于运行 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 或早期版本的的订阅服务器的百分比值 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 **阈值**控制合并代理分配新标识范围的时间。 如果使用了在阈值中指定的百分比值，合并代理将创建新的标识范围。 当**identityrangemanagementoption**设置为**auto**或**auto_identity_range**设置为**true**时使用。 仅适用于表项目。 有关详细信息，请参阅[复制标识列](../../relational-databases/replication/publish/replicate-identity-columns.md)的 "合并复制" 部分。|  
 |**verify_resolver_signature**|**1**|通过验证自定义冲突解决程序的数字签名来确定该签名是否来自可信来源。|  
 ||**0**|不通过验证自定义冲突解决程序的数字签名来确定该签名是否来自可信来源。|  
 |NULL（默认值）||返回*属性*的支持值的列表。|  

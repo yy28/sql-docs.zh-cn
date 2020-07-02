@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 3eb53a67-969d-4cb8-9681-b1c8e6fd55b6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1761c3546d043dd74a3fe2b491618140635fe61c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4b8c7157eac444815eae0b4846519b93389be2f4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823452"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771319"
 ---
 # <a name="sp_clean_db_file_free_space-transact-sql"></a>sp_clean_db_file_free_space (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   删除因 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据修改例程而留在数据库页上的残留信息。 sp_clean_db_file_free_space 仅清除数据库的一个文件中的所有页。  
   
@@ -42,7 +42,7 @@ sp_clean_db_file_free_space
  [ , [ @cleaning_delay = ] 'delay_in_seconds' ] [;]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  [ @dbname =] "*database_name*"  
  要清理的数据库的名称。 *dbname*为**sysname** ，且不能为 NULL。  
   

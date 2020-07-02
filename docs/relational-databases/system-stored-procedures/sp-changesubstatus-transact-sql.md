@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 12ee833860c4131b6dc9634d7f1da926968c1e14
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2daa7d007783434e0994846e41300c31b3e35162
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824052"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771357"
 ---
 # <a name="sp_changesubstatus-transact-sql"></a>sp_changesubstatus (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   更改现有订阅服务器的状态。 此存储过程在发布服务器上对发布数据库执行。  
   
@@ -63,7 +63,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
     [ , [ @publisher = ] 'publisher' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publication = ] 'publication'`发布的名称。 *发布*为**sysname**，默认值为 **%** 。 如果未指定*发布*，将影响所有发布。  
   
 `[ @article = ] 'article'`项目的名称。 该名称对发布必须是唯一的。 *项目*的默认值为**sysname**，默认值为 **%** 。 如果未指定*项目*，将影响所有项目。  
@@ -72,10 +72,10 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 `[ @status = ] 'status'`**Syssubscriptions**表中的订阅状态。 *状态*为**sysname**，无默认值，可以是下列值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**active**|订阅服务器已被同步并且正在接收数据。|  
-|**不用**|存在订阅服务器项，但没有订阅。|  
+|**inactive**|存在订阅服务器项，但没有订阅。|  
 |**subscribed**|订阅服务器正在请求数据，但尚未同步。|  
   
 `[ @previous_status = ] 'previous_status'`订阅的前一状态。 *previous_status*的默认值为**sysname**，默认值为 NULL。 此参数允许你更改当前具有该状态的所有订阅，从而允许组在一组特定订阅上运行（例如，将所有活动订阅设置回**订阅**）。  
@@ -90,11 +90,11 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 |值|说明|  
 |-----------|-----------------|  
-|**1**|第一个|  
+|**1**|First|  
 |**2**|秒|  
 |**4**|第三个|  
 |**8**|第四个|  
-|**超过**|最后一个|  
+|**16**|最后一个|  
 |NULL（默认值）||  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`*Frequency_type*使用的重复因子。 *frequency_recurrence_factor*的值为**int**，默认值为 NULL。  

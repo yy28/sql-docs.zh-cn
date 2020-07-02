@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3c56cd62-2966-4e87-a986-44cb3fd0b760
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b3a2a2405b4ca22f780576135c66ee32d058ed10
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 80927c19376e97b25c21af1f93faedd5637eb8bb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826259"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771209"
 ---
 # <a name="sp_copysubscription-transact-sql"></a>sp_copysubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
     
 > [!IMPORTANT]  
@@ -42,7 +42,7 @@ sp_copysubscription [ @filename = ] 'file_name'
     [ , [ @overwrite_existing_file = ] overwrite_existing_file]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @filename = ] 'file_name'`用于指定要保存数据文件（.mdf）副本的完整路径（包括文件名）的字符串。 *文件名为* **nvarchar （260）**，无默认值。  
   
 `[ @temp_dir = ] 'temp_dir'`包含临时文件的目录的名称。 *temp_dir*的默认值为**nvarchar （260）**，默认值为 NULL。 如果为 NULL，则 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将使用默认数据目录。 该目录应有足够的空间可容纳具有保持所有组合的订阅服务器数据库文件大小的文件。  

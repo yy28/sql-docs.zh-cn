@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e08fdfdd-d242-4e85-817b-9f7a224fe567
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 32ba968dc5e6ef78ff507b783e6212e4453586d3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a1f07445d119174ca441e7ed13be1851a6e2f058
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829571"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771485"
 ---
 # <a name="sp_changemergefilter-transact-sql"></a>sp_changemergefilter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   更改某些合并筛选属性。 此存储过程在发布服务器上对发布数据库执行。  
   
@@ -42,7 +42,7 @@ sp_changemergefilter [ @publication= ] 'publication'
     [ , [ @force_reinit_subscription = ] force_reinit_subscription ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publication = ] 'publication'`发布的名称。 *发布*为**sysname**，无默认值。  
   
 `[ @article = ] 'article'`项目的名称。 *项目*是**sysname**，无默认值。  
@@ -55,7 +55,7 @@ sp_changemergefilter [ @publication= ] 'publication'
   
  下表说明项目的属性和这些属性的值。  
   
-|Property|值|说明|  
+|Property|值|描述|  
 |--------------|-----------|-----------------|  
 |**filter_type**|**1**|联接筛选器。<br /><br /> 若要支持 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 订阅服务器，此选项是必需的。|  
 ||**2**|逻辑记录关系。|  
@@ -63,7 +63,7 @@ sp_changemergefilter [ @publication= ] 'publication'
 |**filtername**||筛选器名称。|  
 |**join_articlename**||联接项目名。|  
 |**join_filterclause**||筛选子句。|  
-|**join_unique_key**|**true**|联接位于唯一键上。|  
+|**join_unique_key**|true|联接位于唯一键上。|  
 ||**false**|联接没有位于唯一键上。|  
   
 `[ @force_invalidate_snapshot = ] force_invalidate_snapshot`确认此存储过程所执行的操作是否会使现有快照失效。 *force_invalidate_snapshot*是一**位**，默认值为**0**。  

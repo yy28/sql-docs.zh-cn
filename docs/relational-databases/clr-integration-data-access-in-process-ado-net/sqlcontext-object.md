@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 67437853-8a55-44d9-9337-90689ebba730
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cd6d3091b155ae829e368bdd182b3da8286c7194
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cc3dc5787693345c531e7afb3384bf093dc17aa6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487529"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765440"
 ---
 # <a name="sqlcontext-object"></a>SqlContext 对象
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   当您调用过程或函数，或对公共语言运行时 (CLR) 用户定义类型调用方法，或者当您所执行的操作激发任何 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 语言中定义的触发器时，您就会调用服务器中的托管代码。 由于在用户连接过程中需要执行此代码，因此需要从服务器上运行的代码访问调用方的上下文。 此外，某些数据访问操作只有在调用方的上下文中运行时才有效。 例如，访问触发器操作中使用的插入和删除的伪表只在调用方的上下文中有效。  
   
- 调用方的上下文是在**SqlContext**对象中提取的。 有关**SqlTriggerContext**方法和属性的详细信息，请参阅[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK 中的**SqlTriggerContext**类参考文档。  
+ 调用方的上下文是在**SqlContext**对象中提取的。 有关**SqlTriggerContext**方法和属性的详细信息，请参阅 SDK 中的**SqlTriggerContext**类参考文档。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]  
   
  **SqlContext**提供以下组件的访问权限：  
   
@@ -39,10 +39,10 @@ ms.locfileid: "81487529"
 -   **WindowsIdentity**： **WindowsIdentity**属性用于检索调用方的 Windows 标识。  
   
 ## <a name="determining-context-availability"></a>确定上下文可用性  
- 查询**SqlContext**类，以查看当前正在执行的代码是否在进程中运行。 为此，请检查**SqlContext**对象的**IsAvailable**属性。 **IsAvailable**属性是只读的，如果调用代码在**True**内[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]运行，并且可以访问其他**SqlContext**成员，则返回 True。 如果**IsAvailable**属性返回**False**，则所有其他**SqlContext**成员将引发**InvalidOperationException**（如果使用）。 如果**IsAvailable**返回**False**，则任何打开连接字符串中包含 "context connection = true" 的连接对象的尝试都将失败。  
+ 查询**SqlContext**类，以查看当前正在执行的代码是否在进程中运行。 为此，请检查**SqlContext**对象的**IsAvailable**属性。 **IsAvailable**属性是只读的，如果调用代码在内运行， **True** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并且可以访问其他**SqlContext**成员，则返回 True。 如果**IsAvailable**属性返回**False**，则所有其他**SqlContext**成员将引发**InvalidOperationException**（如果使用）。 如果**IsAvailable**返回**False**，则任何打开连接字符串中包含 "context connection = true" 的连接对象的尝试都将失败。  
   
 ## <a name="retrieving-windows-identity"></a>检索 Windows 标识  
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内执行的 CLR 代码始终在进程帐户的上下文中调用。 如果代码应使用调用用户的标识（而不是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]进程标识）执行某些操作，则应通过**SqlContext**对象的**WindowsIdentity**属性获取模拟标记。 **WindowsIdentity**属性返回表示调用**WindowsIdentity**方的[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 标识的 WindowsIdentity 实例，如果使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证对客户端进行身份验证，则返回 null。 只有标记有**EXTERNAL_ACCESS**或**UNSAFE**权限的程序集才能访问此属性。  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内执行的 CLR 代码始终在进程帐户的上下文中调用。 如果代码应使用调用用户的标识（而不是进程标识）执行某些操作， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 则应通过**SqlContext**对象的**WindowsIdentity**属性获取模拟标记。 **WindowsIdentity**属性返回表示调用方的 Windows 标识的**WindowsIdentity**实例 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ，如果使用身份验证对客户端进行身份验证，则返回 null [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 只有标记有**EXTERNAL_ACCESS**或**UNSAFE**权限的程序集才能访问此属性。  
   
  获取**WindowsIdentity**对象后，调用方可以模拟客户端帐户并代表其执行操作。  
   

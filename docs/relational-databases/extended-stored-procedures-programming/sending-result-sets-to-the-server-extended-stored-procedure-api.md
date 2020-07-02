@@ -13,20 +13,20 @@ ms.assetid: 9d54673d-ea9d-4ac6-825a-f216ad8b0e34
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 4a54ad922e7033737ccd256c1b3a0a34f543a6dd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c0ba957f0cde17f7accfeee66952fe2488a854bd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74095935"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767750"
 ---
 # <a name="sending-result-sets-to-the-server-extended-stored-procedure-api"></a>将结果集发送到服务器（扩展存储过程 API）
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 请改用 CLR 集成。  
   
- 将结果集发送到[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时，扩展存储过程应调用相应的 API，如下所示：  
+ 将结果集发送到时 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，扩展存储过程应调用相应的 API，如下所示：  
   
 -   使用**srv_sendrow**发送所有行（如果有）之前或之后，可以按任意顺序调用**srv_sendmsg**函数。 在向客户端发送完成状态之前，必须将所有消息发送到客户端**srv_senddone**。  
   

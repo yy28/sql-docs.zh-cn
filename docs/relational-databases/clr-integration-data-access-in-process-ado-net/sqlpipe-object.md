@@ -15,23 +15,23 @@ helpviewer_keywords:
 ms.assetid: 3e090faf-085f-4c01-a565-79e3f1c36e3b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7b95788d37fa8f8c2e57c2b20aa222938c65dc6c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 17a26c5897ff10ce636297151cef9f300f4f3056
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487504"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765427"
 ---
 # <a name="sqlpipe-object"></a>SqlPipe 对象
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本中，编写向调用客户端发送结果或输出参数的存储过程（或扩展存储过程）非常常见。  
   
- 在[!INCLUDE[tsql](../../includes/tsql-md.md)]存储过程中，任何返回零个或多个行的**SELECT**语句都会将结果发送到连接的调用方的 "管道"。  
+ 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程中，任何返回零个或多个行的**SELECT**语句都会将结果发送到连接的调用方的 "管道"。  
   
- 对于在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]运行的公共语言运行时（CLR）数据库对象，可以使用**SqlPipe**对象的**send**方法将结果发送到连接的管道。 访问**SqlContext**对象的**管道**属性以获取**SqlPipe**对象。 **SqlPipe**类在概念上类似于在 ASP.NET 中找到的**响应**类。 有关详细信息，请参阅 .NET Framework 软件开发包中的 SqlPipe 类参考文档。  
+ 对于在中运行的公共语言运行时（CLR）数据库对象 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，可以使用**SqlPipe**对象的**send**方法将结果发送到连接的管道。 访问**SqlContext**对象的**管道**属性以获取**SqlPipe**对象。 **SqlPipe**类在概念上类似于在 ASP.NET 中找到的**响应**类。 有关详细信息，请参阅 .NET Framework 软件开发包中的 SqlPipe 类参考文档。  
   
 ## <a name="returning-tabular-results-and-messages"></a>返回表格结果和消息  
- **SqlPipe**有一个**Send**方法，该方法具有三个重载。 它们是：  
+ **SqlPipe**有一个**Send**方法，该方法具有三个重载。 它们分别是：  
   
 -   `void Send(string message)`  
   
@@ -41,7 +41,7 @@ ms.locfileid: "81487504"
   
  **Send**方法将数据直接发送到客户端或调用方。 它通常是使用**SqlPipe**的输出的客户端，但对于嵌套 CLR 存储过程，输出使用者也可以是存储过程。 例如，Procedure1 使用命令文本“EXEC Procedure2”调用 SqlCommand.ExecuteReader()。 Procedure2 也是托管存储过程。 如果现在 Procedure2 调用 SqlPipe.Send(SqlDataRecord)，则该行被发送到 Procedure1 的读取器，而不是客户端。  
   
- **Send**方法会将客户端上显示的字符串消息作为信息消息发送，相当于 "打印" [!INCLUDE[tsql](../../includes/tsql-md.md)]。 它还可以使用**SqlDataRecord**或使用**SqlDataReader**的多行结果集发送单行结果集。  
+ **Send**方法会将客户端上显示的字符串消息作为信息消息发送，相当于 "打印" [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 它还可以使用**SqlDataRecord**或使用**SqlDataReader**的多行结果集发送单行结果集。  
   
  **SqlPipe**对象还具有**ExecuteAndSend**方法。 此方法可用于执行命令（作为**SqlCommand**对象传递）并将结果直接发送回调用方。 如果已提交的命令中有错误，则将异常发送到管道，但同时将一个副本发送到调用托管代码。 如果调用代码没有捕获异常，它会将堆栈传播到 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码并两次出现在输出中。 如果调用代码捕获了异常，则管道使用者仍将看到错误，但不会有重复错误。  
   
@@ -134,7 +134,7 @@ End Sub
 End Class  
 ```  
   
- 以下[!INCLUDE[tsql](../../includes/tsql-md.md)]语句执行**uspGetProduct**过程，该过程将返回旅行自行车产品列表。  
+ 以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句执行**uspGetProduct**过程，该过程将返回旅行自行车产品列表。  
   
 ```  
 EXEC uspGetProductLineVB 'T';  

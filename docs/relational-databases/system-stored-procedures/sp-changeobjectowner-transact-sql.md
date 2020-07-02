@@ -17,20 +17,20 @@ helpviewer_keywords:
 ms.assetid: 45b3dc1c-1cde-45b7-a248-5195c12973e9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6f00b788ecf6b6e4c02d4b8343ba14fa2c345e6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1e6f664cc763e56135ddf1c35f5f0057d97ec2d7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68056577"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771455"
 ---
 # <a name="sp_changeobjectowner-transact-sql"></a>sp_changeobjectowner (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   更改当前数据库中对象的所有者。  
   
 > [!IMPORTANT]
->  此存储过程仅适用于中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]可用的对象。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]请改用[ALTER SCHEMA](../../t-sql/statements/alter-schema-transact-sql.md)或[alter AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) 。 **sp_changeobjectowner**同时更改架构和所有者。 若要保持与早期版本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的兼容性，如果当前所有者和新所有者拥有的架构名称与它们的数据库用户名相同，则此存储过程将只更改对象所有者。  
+>  此存储过程仅适用于中可用的对象 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]请改用[ALTER SCHEMA](../../t-sql/statements/alter-schema-transact-sql.md)或[alter AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) 。 **sp_changeobjectowner**同时更改架构和所有者。 若要保持与早期版本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的兼容性，如果当前所有者和新所有者拥有的架构名称与它们的数据库用户名相同，则此存储过程将只更改对象所有者。  
 > 
 > [!IMPORTANT]
 >  已经将新的权限要求添加到此存储过程。  
@@ -44,10 +44,10 @@ ms.locfileid: "68056577"
 sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @objname = ] 'object'`当前数据库中现有的表、视图、用户定义函数或存储过程的名称。 *对象*是一个**nvarchar （776）**，无默认值。 *对象*可以用现有对象的所有者限定，格式为_existing_owner_**。** 如果架构及其所有者具有相同的名称，则为_对象_。  
   
-`[ @newowner = ] 'owner_ '`将成为对象的新所有者的安全帐户的名称。 *所有者*为**sysname**，无默认值。 *所有者*必须是有权访问当前数据库的有效数据库[!INCLUDE[msCoName](../../includes/msconame-md.md)]用户、服务器角色、Windows 登录名或 windows 组。 如果新所有者是没有对应数据库级主体的 Windows 用户或 Windows 组，则将创建数据库用户。  
+`[ @newowner = ] 'owner_ '`将成为对象的新所有者的安全帐户的名称。 *所有者*为**sysname**，无默认值。 *所有者*必须是有权访问当前数据库的有效数据库用户、服务器角色、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] windows 登录名或 windows 组。 如果新所有者是没有对应数据库级主体的 Windows 用户或 Windows 组，则将创建数据库用户。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -61,7 +61,7 @@ sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'
  需要**db_owner**固定数据库角色的成员身份，或者**db_ddladmin**固定数据库角色和**db_securityadmin**固定数据库角色的成员身份，同时还要求对对象拥有 CONTROL 权限。  
   
 ## <a name="examples"></a>示例  
- 下面的示例将`authors`表的所有者更改为。 `Corporate\GeorgeW`  
+ 下面的示例将表的所有者更改 `authors` 为 `Corporate\GeorgeW` 。  
   
 ```  
 EXEC sp_changeobjectowner 'authors', 'Corporate\GeorgeW';  

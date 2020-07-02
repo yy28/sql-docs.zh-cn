@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2c83a4a7-720b-4435-a3b5-788c29f56949
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b0294cb76ad25e4c11038be59666892c270256bb
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b9ff0596667be0822e2e65717ebfd757f001f821
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829751"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764817"
 ---
 # <a name="filestream-and-filetable-catalog-views-transact-sql"></a>Filestream 和 FileTable 目录视图 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   本节介绍与 FileTable 功能相关的目录视图。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "82829751"
  为每个 FileTable 返回一行。 继承自**sys.databases**。  
 
 ## <a name="see-also"></a>另请参阅
-[Filestream](../../relational-databases/blob/filestream-sql-server.md)
+[文件流](../../relational-databases/blob/filestream-sql-server.md)
 <br>[Filetable](../../relational-databases/blob/filetables-sql-server.md)
 <br>[Filestream 和 FileTable 动态管理视图 (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
 <br>[Filestream 和 FileTable 系统存储过程 (Transact-SQL)](../system-stored-procedures/filestream-and-filetable-system-stored-procedures.md)

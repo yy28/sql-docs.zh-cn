@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 52310260-a892-4b27-ad2e-bf164b98ee80
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f32929b9cd5d2f69ae4ffbb8d13f7ec09d9972ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d440b710d5f8c5693308500c01b7339c33943b0f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68064274"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767752"
 ---
 # <a name="unicode-data-and-server-code-pages"></a>Unicode 数据和服务器代码页
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 请改用 CLR 集成。  
@@ -40,7 +40,7 @@ ms.locfileid: "68064274"
   
 -   列名元数据将作为多字节数据传递到**srv_describe** 。  
   
-     扩展存储过程调用**srv_pfield** ，并将字段参数设置为 SRV_SPROC_CODEPAGE 以获取的多字节代码页[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+     扩展存储过程调用**srv_pfield** ，并将字段参数设置为 SRV_SPROC_CODEPAGE 以获取的多字节代码页 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 -   错误消息将作为多字节数据传递到**srv_sendmsg** 。  
   

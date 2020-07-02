@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 553288a0-be57-4d79-ae53-b7cbd065e127
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e81cb385da40b5d8aff52368bb59d0c91322321d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e946748b7374863e5981924671884e1621cf644d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832705"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772989"
 ---
 # <a name="sysserver_file_audits-transact-sql"></a>sys.server_file_audits (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   包含有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务器实例上审核中的文件审核类型的扩展信息。 有关详细信息，请参阅 [SQL Server Audit（数据库引擎）](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "82832705"
 |type_desc|**nvarchar(60)**|审核类型说明。|  
 |on_failure|**tinyint**|失败时的状态：<br /><br /> 0 = 继续<br /><br /> 1 = 关闭服务器实例<br /><br /> 2 = 失败操作|  
 |on_failure_desc|**nvarchar(60)**|失败时要写入的操作项：<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL OPERATION|  
-|is_state_enabled|**tinyint**|0 = 禁用<br /><br /> 1 = 启用|  
+|is_state_enabled|**tinyint**|0 - 禁用<br /><br /> 1 = 启用|  
 |queue_delay|**int**|写入磁盘前建议等待的最长时间（以毫秒为单位）。 如果为 0，则审核将确保在事件可以继续之前进行写入。|  
 |predicate|**nvarchar （8000）**|应用于事件的谓词表达式。|  
 |max_file_size|**bigint**|审核的最大大小（以 MB 为单位）：<br /><br /> 0 = 无限/不适用于所选的审核类型。|  

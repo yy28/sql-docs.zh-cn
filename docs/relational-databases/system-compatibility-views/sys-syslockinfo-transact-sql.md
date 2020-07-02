@@ -1,5 +1,5 @@
 ---
-title: sys. syslockinfo （Transact-sql） |Microsoft Docs
+title: sys.syslockinfo （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: d8cae434-807a-473e-b94f-f7a0e1b2daf0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0c56aa86c20867cfe2cf1da520922d1c74f9c01c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 90573a28292ac4f4de973dc2a5a0c5e1f331d2f0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053340"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764388"
 ---
 # <a name="syssyslockinfo-transact-sql"></a>sys.syslockinfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   包含有关所有已授权、正在转换和正在等待的锁请求的信息。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "68053340"
 |**req_refcnt**|**smallint**|锁引用计数。 事务每次请求具体某个资源上的锁时，引用计数便会增加。 直到引用计数等于 0 时才能释放锁。|  
 |**req_cryrefcnt**|**smallint**|保留以供将来使用。 总是设置为 0。|  
 |**req_lifetime**|**int**|锁生存期位图。 在某些查询处理策略的过程中，必须维护资源上的锁，直到查询处理器已完成查询的某个具体阶段为止。 查询处理器和事务管理器用锁生存期位图指示在查询结束运行的某个阶段时可以释放的锁组。 位图内的某些位用于指示即使锁的引用计数等于 0，也必须到事务结束时才释放的锁。|  
-|**req_spid**|**int**|请求[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]锁的会话的内部进程 ID。|  
+|**req_spid**|**int**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 请求锁的会话的内部进程 ID。|  
 |**req_ecid**|**int**|执行上下文 ID (ECID)。 用于指示并行操作内拥有具体某个锁的线程。|  
 |**req_ownertype**|**smallint**|与锁关联的对象类型：<br /><br /> 1 = 事务<br /><br /> 2 = 游标<br /><br /> 3 = 会话<br /><br /> 4 = ExSession<br /><br /> 注意，3 和 4 代表会话锁的特殊版本，分别跟踪数据库锁和文件组锁。|  
 |**req_transactionID**|**bigint**|**Syslockinfo**和探查器事件中使用的唯一事务 ID|  

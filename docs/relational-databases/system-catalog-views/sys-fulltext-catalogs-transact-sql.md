@@ -19,20 +19,20 @@ ms.assetid: cf1489ff-4819-41fa-a62a-4ed797a16207
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 114109e0ee7bf7ba8855ad65f4ab7438c9815187
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c232dd6e090f24d7438e2490c262d8f55c176003
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68133860"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764724"
 ---
 # <a name="sysfulltext_catalogs-transact-sql"></a>sys.fulltext_catalogs (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   每个全文目录对应一行。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]未来版本的中将删除以下列： **data_space_id**、 **file_id**和**path**。 请不要在新的开发工作中使用这些列，并尽快修改当前使用上述任意列的应用程序。  
+>  未来版本的中将删除以下列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ： **data_space_id**、 **file_id**和**path**。 请不要在新的开发工作中使用这些列，并尽快修改当前使用上述任意列的应用程序。  
  
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  

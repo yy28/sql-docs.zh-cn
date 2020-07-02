@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ff84e8e2-d496-482c-b23e-38a6626596e6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b0b0dbca878d0a30369edf75b2784cfac51ddc62
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e800a1ac9d77926ac24f9106aa673178d3c6b179
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820626"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771401"
 ---
 # <a name="sp_changesubscriber_schedule-transact-sql"></a>sp_changesubscriber_schedule (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   更改订阅服务器的分发代理或合并代理调度。 此存储过程在发布服务器的任何数据库中执行。  
   
@@ -47,7 +47,7 @@ sp_changesubscriber_schedule [ @subscriber = ] 'subscriber', [ @agent_type = ] t
     [ , [ @publisher = ] 'publisher' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @subscriber = ] 'subscriber'`订阅服务器的名称。 *订阅服务器*是**sysname**。 订阅服务器的名称必须在数据库中唯一，不能已经存在，不能为 NULL。  
   
 `[ @agent_type = ] type`代理的类型。 *类型*为**smallint**，默认值为**0**。 **0**指示分发代理。 **1**表示合并代理。  

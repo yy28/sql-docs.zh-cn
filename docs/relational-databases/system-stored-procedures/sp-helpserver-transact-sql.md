@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9e965a11708b2d4bbb72903a05846cb14300a5c6
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6fa9117891f9d9350e58a2c8233dcffe05c8cfc8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826092"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772122"
 ---
 # <a name="sp_helpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   报告某个特定远程服务器或复制服务器的信息，或者报告两种类型的所有服务器的信息。 提供服务器名称、服务器的网络名称、服务器的复制状态、服务器的标识号以及排序规则名称。 还提供连接到链接服务器的超时值，或对链接服务器进行查询的超时值。  
   
@@ -40,8 +40,8 @@ sp_helpserver [ [ @server = ] 'server' ]
   [ , [ @show_topology = ] 'show_topology' ]  
 ```  
   
-## <a name="arguments"></a>参数  
-`[ @server = ] 'server'`要报告其信息的服务器。 如果未指定*服务器*，则会报告有关 **.master**中所有服务器的信息。 *服务器*的默认值为**sysname**，默认值为 NULL。  
+## <a name="arguments"></a>自变量  
+`[ @server = ] 'server'`要报告其信息的服务器。 如果未指定*服务器*，则报告**master.sys 服务器**中的所有服务器。 *服务器*的默认值为**sysname**，默认值为 NULL。  
   
 `[ @optname = ] 'option'`描述服务器的选项。 *选项*为**varchar （** 35 **）**，默认值为 NULL，必须是下列值之一。  
   
@@ -68,7 +68,7 @@ sp_helpserver [ [ @server = ] 'server' ]
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|服务器名称。|  
+|name|**sysname**|服务器名称。|  
 |**network_name**|**sysname**|服务器的网络名称。|  
 |**status**|**varchar （** 70 **）**|服务器状态。|  
 |**id**|**char （** 4 **）**|服务器的标识号。|  

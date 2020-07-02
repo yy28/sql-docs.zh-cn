@@ -20,21 +20,21 @@ ms.assetid: e960df1a-13fc-43ee-ba91-34c1b719ac2c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b78466b0c2c20bc3b59fb372870bbad87aef0e74
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 725af9bc78fd0bd708ecd38c8c37cef629b19e63
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68133892"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764763"
 ---
 # <a name="sysforeign_keys-transact-sql"></a>sys.foreign_keys (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   对于作为 FOREIGN KEY 约束的每个对象都包含一行，其**类型**为 F。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**\<继承自 sys.databases 的列>**||有关此视图所继承的列的列表，请参阅[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
+|**\<Columns inherited from sys.objects>**||有关此视图所继承的列的列表，请参阅[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
 |**referenced_object_id**|**int**|所引用对象的 ID。|  
 |**key_index_id**|**int**|所引用对象内键索引的 ID。|  
 |**is_disabled**|**bit**|禁用 FOREIGN KEY 约束。|  

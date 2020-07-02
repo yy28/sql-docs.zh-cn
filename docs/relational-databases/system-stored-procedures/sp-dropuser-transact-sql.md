@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e28f18f9-7ecf-4568-89f4-fe5c520df386
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d4f4b08f21d29fead3f2cebf477be69cfaf766ad
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a231ed2809f387f58ccedef9acb8555a6569e992
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831129"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772207"
 ---
 # <a name="sp_dropuser-transact-sql"></a>sp_dropuser (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   从当前数据库中删除数据库用户。 **sp_dropuser**提供与早期版本的兼容性 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "82831129"
 sp_dropuser [ @name_in_db = ] 'user'  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @name_in_db = ] 'user'`要删除的用户的名称。 *用户*是**sysname**，无默认值。 *用户*必须存在于当前数据库中。 指定 Windows 登录时，请使用数据库用于标识该登录的名称。  
   
 ## <a name="return-code-values"></a>返回代码值  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d453c451-e957-490f-b968-5e03aeddaf10
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9a3b575b39055976262858fcf527d1b892790a02
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2cd1e4126c1a9da57a6bda6195be78d996e101d7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833389"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771380"
 ---
 # <a name="sp_changesubscriber-transact-sql"></a>sp_changesubscriber (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   更改订阅服务器的选项。 更新针对此发布服务器的订阅服务器的任何分发任务。 此存储过程将写入到分发数据库中的**MSsubscriber_info**表。 此存储过程在发布服务器上对发布数据库执行。  
   
@@ -55,7 +55,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
     [ , [ @publisher = ] 'publisher' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @subscriber = ] 'subscriber'`要更改其选项的订阅服务器的名称。 *订阅服务器*的**sysname**，无默认值。  
   
 `[ @type = ] type`订阅服务器类型。 *类型*为**tinyint**，默认值为 NULL。 **0**表示 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器。 **1**指定非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或其他 ODBC 数据源服务器订阅服务器。  
@@ -78,7 +78,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**2**|按需|  
 |**4**|每天|  
 |**8**|每周|  
-|**超过**|每月一次|  
+|**16**|每月|  
 |**32**|与“每月”选项相关|  
 |**64**|自动启动|  
 |**128**|重复执行|  
@@ -89,11 +89,11 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 |值|说明|  
 |-----------|-----------------|  
-|**1**|第一个|  
+|**1**|First|  
 |**2**|秒|  
 |**4**|第三个|  
 |**8**|第四个|  
-|**超过**|最后一个|  
+|**16**|最后一个|  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`分发任务在定义的*frequency_type*期间应定期发生的频率。 *frequency_recurrence_factor*的值为**int**，默认值为 NULL。  
   
@@ -120,7 +120,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @security_mode = ] security_mode`实现的安全模式。 *security_mode*为**int**，可以是下列值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证|  
 |**1**|Windows 身份验证|  

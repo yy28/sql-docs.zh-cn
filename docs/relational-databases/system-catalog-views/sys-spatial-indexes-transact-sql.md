@@ -19,25 +19,25 @@ helpviewer_keywords:
 ms.assetid: 40e967d5-2e8d-45af-bf5e-5251493cf7cb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a5264661a94b4802d6f06ab1af8ae74436b63b09
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 81c70f8084e047ee878d8f0e958189cdf1ff80d0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833969"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771628"
 ---
 # <a name="sysspatial_indexes-transact-sql"></a>sys.spatial_indexes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   表示空间索引的主索引信息。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|\<继承列>||继承[sys.databases](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)中的列。|  
+|\<inherited columns>||继承[sys.databases](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)中的列。|  
 |spatial_index_type|**tinyint**|空间索引的类型：<br /><br /> 1 = 几何空间索引<br /><br /> 2 = 地理空间索引|  
 |spatial_index_type_desc|**nvarchar(60)**|空间索引的类型说明：<br /><br /> GEOMETRY = 几何空间索引<br /><br /> GEOGRAPHY = 地理空间索引|  
 |tessellation_scheme|**sysname**|分割方案的名称：<br /><br /> GEOMETRY_GRID、GEOMETRY_AUTO_GRID、<br /><br /> GEOGRAPHY_GRID、GEOGRAPHY_AUTO_GRID<br /><br /> 注意：有关分割方案的信息，请参阅[空间索引概述](../../relational-databases/spatial/spatial-indexes-overview.md)。|  
-|\<继承列>||继承[sys.databases](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)中的列。<br /><br /> 继承的列 has_filter 和 filter_definition 显示在特定于空间索引的列之后。|  
+|\<inherited columns>||继承[sys.databases](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)中的列。<br /><br /> 继承的列 has_filter 和 filter_definition 显示在特定于空间索引的列之后。|  
   
 ## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: dfe1e1e1-9a65-406a-aced-6385a078e135
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 26480fa1adb8493a1c29e5b67a163e9cbff54920
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d9e821b1ea7688ed80adba7385e465366e7f69e6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834461"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772977"
 ---
 # <a name="sp_helpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   返回有关合并发布的信息。 此存储过程在发布服务器上对发布数据库执行。  
   
@@ -41,7 +41,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
     [ , [ @publisher_db = ] 'publisher_db' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  [ @publication **=** ] **"**_发布_**"**  
  发布的名称。 *发布*为**sysname**，默认值为 **%** ，它返回当前数据库中所有合并发布的相关信息。  
   
@@ -66,7 +66,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |-----------------|---------------|-----------------|  
 |id|**int**|发布在结果集列表中的连续顺序。|  
 |name|**sysname**|发布的名称。|  
-|说明|**nvarchar(255)**|对发布的说明。|  
+|description|**nvarchar(255)**|对发布的说明。|  
 |状态|**tinyint**|指示发布数据何时可用。|  
 |retention|**int**|用于保存对发布中项目所做更改的元数据的时间量。 此时间段单位可以为天、星期、月或年。 有关单位的信息，请参阅 retention_period_unit 列。|  
 |sync_mode|**tinyint**|该发布的同步模式：<br /><br /> **0** = 本机大容量复制程序（**bcp**实用工具）<br /><br /> **1** = 字符大容量复制|  

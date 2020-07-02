@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 9333da96-3a1c-4adb-9a74-5dac9ce596df
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9feddab12ea972ea4d7764fccfdd91a7f9b89cec
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d3f992fefc04de89fcfa9e077d01641fa538ea40
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68762255"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771402"
 ---
 # <a name="sp_changereplicationserverpasswords-transact-sql"></a>sp_changereplicationserverpasswords (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  更改复制代理连接到[!INCLUDE[msCoName](../../includes/msconame-md.md)]复制拓扑中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的服务器时所用的 Windows 帐户或登录名的存储密码。 一般情况下，必须更改服务器上运行的每个单独代理的密码，即使它们使用相同的登录名或帐户时也是如此。 使用此存储过程，可以更改服务器上运行的所有复制代理所用的给定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名或 Windows 帐户的所有实例的密码。 此存储过程在复制拓扑中的任意服务器上对主数据库执行。  
+  更改 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制代理连接到复制拓扑中的服务器时所用的 Windows 帐户或登录名的存储密码。 一般情况下，必须更改服务器上运行的每个单独代理的密码，即使它们使用相同的登录名或帐户时也是如此。 使用此存储过程，可以更改服务器上运行的所有复制代理所用的给定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名或 Windows 帐户的所有实例的密码。 此存储过程在复制拓扑中的任意服务器上对主数据库执行。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,14 +39,14 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
     [ , [ @server = ] 'server' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @login_type = ] login_type`提供的凭据的身份验证类型。 *login_type*为**tinyint**，无默认值。  
   
  **1** = Windows 集成身份验证  
   
- **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证  
+ **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证  
   
-`[ @login = ] 'login'`要更改的 Windows 帐户或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名。 *login*为**nvarchar （257）**，无默认值  
+`[ @login = ] 'login'`要更改的 Windows 帐户或登录名 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *login*为**nvarchar （257）**，无默认值  
   
 `[ @password = ] 'password'`要为指定的*登录名*存储的新密码。 *password*的值为**sysname**，无默认值。  
   
@@ -55,10 +55,10 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
   
 `[ @server = ] 'server'`正在为其更改存储密码的服务器连接。 *服务器* **sysname**，可以是以下值之一：  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**发行人**|所有指向分发服务器的代理连接。|  
-|**器**|所有指向发布服务器的代理连接。|  
+|**publisher**|所有指向发布服务器的代理连接。|  
 |**订阅服务器**|所有指向订阅服务器的代理连接。|  
 |**%** 缺省值|指向复制拓扑中所有服务器的代理连接。|  
   

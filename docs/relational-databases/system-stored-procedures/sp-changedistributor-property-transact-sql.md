@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 04f503a1-307c-4de0-bac6-e6e97d5b6940
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 55c7cd3e114da3d6a2bb318271717695bf768b7e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 441fe87551fd06ba786b4b36589bea00d7d399b9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829596"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771532"
 ---
 # <a name="sp_changedistributor_property-transact-sql"></a>sp_changedistributor_property (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   更改分发服务器的属性。 此存储过程在分发服务器上的任何数据库中执行。  
   
@@ -37,10 +37,10 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
     [ , [ @value= ] 'value' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @property = ] 'property'`给定分发服务器的属性。 *属性*为**sysname**，可以是下列值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**heartbeat_interval**|在不记录进度消息的情况下代理可以运行的最大分钟数。|  
 |NULL（默认值）|将打印所有可用的*属性*值。|  

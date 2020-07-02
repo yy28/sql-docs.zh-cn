@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 2b3b8651-de51-46dc-af82-c86c45eac871
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 694fb912675a15055688956a18714185e25995c4
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 4a4881fc4710ba56439eb98b5b196af93247c11f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84881927"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768158"
 ---
 # <a name="functions-on-string-values---substring"></a>基于字符串值的函数 - substring
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   返回 *$sourceString*的值的一部分，从 *$startingLoc*的值指示的位置开始，并继续查找 *$length*的值所指示的字符数。  
   
@@ -50,7 +50,7 @@ fn:substring($sourceString as xs:string?,
  *$length*  
  [可选] 要检索的字符数。 如果未指定，它将返回 *$startingLoc*中指定的位置中的所有字符，直到字符串的末尾。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  带有三个参数的函数将返回 `$sourceString` 中其位置 `$p` 遵守以下指定的字符串：  
   
  `fn:round($startingLoc) <= $p < fn:round($startingLoc) + fn:round($length)`  

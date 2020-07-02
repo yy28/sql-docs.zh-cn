@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7e0a4e38-4555-4750-8fd3-4425b29e6aa1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8fcca87157b2f6f7fe881c35b72ea54d965e095c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7809fe1f93ba0d2324591e88be308decd2b8ff45
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659252"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768301"
 ---
 # <a name="properties-property-clientnetworkprotocol-class"></a>Properties 属性（ClientNetworkProtocol 类）
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   获取与[配置客户端协议](https://technet.microsoft.com/library/ms181035.aspx)指定的当前客户端网络协议关联的属性。  
   
 ## <a name="syntax"></a>语法  
