@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 85e2d580-1c54-4b81-b7e6-2e12997199fd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 69c38cca8ab26691a155d11ad3afc88bdc2852d2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a88683f29875047d412d7ae858dc9db47659a36f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827311"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755486"
 ---
 # <a name="dbocdc_jobs-transact-sql"></a>dbo.cdc_jobs (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   存储用于捕获和清除作业的变更数据捕获配置参数。 此表存储在**msdb**中。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "82827311"
 |**持续**|**bit**|指示捕获作业是连续运行 (1) 还是以一次性模式运行 (0) 的标志。 有关详细信息，请参阅[sys.databases&#41;sp_cdc_add_job &#40;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)。<br /><br /> **连续**仅对捕获作业有效。|  
 |**pollinginterval**|**bigint**|日志扫描循环之间间隔的秒数。<br /><br /> **pollinginterval**仅对捕获作业有效。|  
 |**保留**|**bigint**|更改行要在更改表中保留的分钟数。<br /><br /> **保留**仅对清除作业有效。|  
-|**阀**|**bigint**|清除时可以使用一条语句删除的删除条目的最大数量。|  
+|**threshold**|**bigint**|清除时可以使用一条语句删除的删除条目的最大数量。|  
   
 ## <a name="see-also"></a>另请参阅  
  [sys. sp_cdc_add_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)   

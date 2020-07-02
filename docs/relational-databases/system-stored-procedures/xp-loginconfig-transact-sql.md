@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d380e799-2857-408a-bcbf-5e73a8e6aa5a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7abf136187b4f45a03cebc92fd23ee544dddb117
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ac7a3e57c18f6ce4ea73415224aabc3843488cf9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68116690"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755549"
 ---
 # <a name="xp_loginconfig-transact-sql"></a>xp_loginconfig (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   报告 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的登录安全配置。  
   
@@ -41,11 +41,11 @@ ms.locfileid: "68116690"
 xp_loginconfig ['config_name']  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  **"** *config_name* **"**  
  要显示的配置值。 如果未指定*config_name* ，则报告所有配置值。 *config_name*的数据值为**sysname**，默认值为 NULL，可以是下列值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**login mode**|登录安全模式。 可能的值为**Mixed**和**Windows Authentication**。<br /><br /> 替换者：<br /><br /> `SELECT SERVERPROPERTY('IsIntegratedSecurityOnly'); GO`|  
 |**default login**|信任连接的授权用户的默认 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录 ID 名（用于无匹配登录名的用户）。 默认登录名为**guest**。 提供此值是为了向后兼容。|  
@@ -63,7 +63,7 @@ xp_loginconfig ['config_name']
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|name |**sysname**|配置值|  
+|name|**sysname**|配置值|  
 |**config value**|**sysname**|配置值设置|  
   
 ## <a name="remarks"></a>备注  

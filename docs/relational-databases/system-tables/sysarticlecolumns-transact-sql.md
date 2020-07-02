@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 55918592-e05d-43b6-843b-7e4d82fa6275
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8c7a77aa4850765e37963a5a59995fd9e9004004
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3c295da10074efbd6e4ee1b014b754ac8622ba73
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834131"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753857"
 ---
 # <a name="sysarticlecolumns-transact-sql"></a>sysarticlecolumns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   对于快照发布或事务发布中发布的每个表列， **sysarticlecolumns**表在表中各占一行，并将每个列映射到其项目。 该表存储在发布数据库中。  
   

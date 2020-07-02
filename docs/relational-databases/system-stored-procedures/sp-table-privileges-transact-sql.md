@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 0512e688-4fc0-4557-8dc8-016672c1e3fe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a9c6391540f3da535eb709bba0a39bac11a99289
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3024de2e45f8d4fe6b7a8521f24e9fe44424d5f1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834247"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753987"
 ---
 # <a name="sp_table_privileges-transact-sql"></a>sp_table_privileges (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   返回指定的一个或多个表的表权限（如 INSERT、DELETE、UPDATE、SELECT、REFERENCES）的列表。  
   
@@ -42,7 +42,7 @@ sp_table_privileges [ @table_name = ] 'table_name'
      [ , [ @fUsePattern = ] 'fUsePattern' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  [ @table_name =] "*table_name*"  
  用来返回目录信息的表。 *table_name*为**nvarchar （** 384 **）**，无默认值。 支持通配符模式匹配。  
   

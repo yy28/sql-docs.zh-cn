@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: ca7bd036-d661-4c17-b00a-e1a975bd8932
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8adc560f2078795844c073b4c0c59aa1df404a2e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 20bda8c759d17443d56c2ce046f6c7d279e76f5a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820792"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754123"
 ---
 # <a name="sysdm_os_memory_cache_counters-transact-sql"></a>sys.dm_os_memory_cache_counters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中缓存运行状况的快照。 **dm_os_memory_cache_counters**提供有关已分配缓存项的运行时信息、其使用情况以及缓存项的内存源。  
   
@@ -36,13 +36,13 @@ ms.locfileid: "82820792"
 |-----------------|---------------|-----------------|  
 |**cache_address**|**varbinary(8)**|指示与特定缓存关联的计数器的地址（主键）。 不可为 null。|  
 |**name**|**nvarchar(256)**|指定缓存的名称。 不可为 null。|  
-|type |**nvarchar(60)**|指示与该项关联的缓存的类型。 不可为 null。|  
+|**type**|**nvarchar(60)**|指示与该项关联的缓存的类型。 不可为 null。|  
 |**single_pages_kb**|**bigint**|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]。<br /><br /> 已分配的单页内存量（千字节）。 这是通过单页分配器分配的内存量。 它指的是从此缓存的缓冲池中直接获取的 8 KB 页。 不可为 null。|  
 |**pages_kb**|**bigint**|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 指定缓存中分配的内存量 (KB)。 不可为 null。|  
 |**multi_pages_kb**|**bigint**|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]。<br /><br /> 已分配的多页内存的容量（千字节）。 这是使用内存节点的多页分配器分配的内存量。 此内存在缓冲池外面分配，利用了内存节点虚拟分配器的优势。 不可为 null。|  
 |**pages_in_use_kb**|**bigint**|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 指定缓存中分配并使用的内存量 (KB)。 可以为 Null。  不跟踪类型为 `USERSTORE_<*>` 的对象的值。  将针对其报告 NULL。|  
-|**single_pages_in_use_kb**|**bigint**|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]。<br /><br /> 正在使用的单页内存量（千字节）。 可以为 Null。 不会为 USERSTORE_ * > 类型的对象跟踪此信息 \< ，这些值将为 NULL。|  
-|**multi_pages_in_use_kb**|**bigint**|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]。<br /><br /> 正在使用的多页内存量（千字节）。 可以为 null. 不会为 USERSTORE_ * > 类型的对象跟踪此信息 \< ，这些值将为 NULL。|  
+|**single_pages_in_use_kb**|**bigint**|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]。<br /><br /> 正在使用的单页内存量（千字节）。 可以为 Null。 不会为 USERSTORE_ 类型的对象跟踪此信息 \<*> ，这些值将为 NULL。|  
+|**multi_pages_in_use_kb**|**bigint**|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]。<br /><br /> 正在使用的多页内存量（千字节）。 可以为 null. 不会为 USERSTORE_ 类型的对象跟踪此信息 \<*> ，这些值将为 NULL。|  
 |**entries_count**|**bigint**|指示缓存中的条目数。 不可为 null。|  
 |**entries_in_use_count**|**bigint**|指示缓存中正在使用的条目数。 不可为 null。|  
 |**pdw_node_id**|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  

@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 6160f15d-1b68-411e-ab6d-491ec288f264
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fedb0808c6071ec6a6ba9bb7bd985a43890cce3d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 70cacca6e6694d914c4b66b7e6eb813b012cf2b3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75245073"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755817"
 ---
 # <a name="srv_setutype-extended-stored-procedure-api"></a>srv_setutype（扩展存储过程 API）
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]请改用 CLR 集成。  
@@ -50,11 +50,11 @@ user_type
 );  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  srvproc**  
  指向作为特定客户端连接句柄的 SRV_PROC 结构的指针。 该结构包含扩展存储过程 API 库用于管理应用程序和客户端之间的通信和数据的信息。  
   
- *该列*  
+ *column*  
  指示要设置的列。 列的编号从 1 开始。  
   
  *user_type*  
@@ -64,7 +64,7 @@ user_type
  SUCCEED 或 FAIL。 如果相应列不存在，则返回 FAIL。  
   
 ## <a name="remarks"></a>备注  
- 列具有两种数据类型：其实际数据类型及其用户定义数据类型。 用户定义数据类型由[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用于存储列的实际用户定义数据类型（如果有）和列说明信息（如为空性和可更新性）。  
+ 列具有两种数据类型：其实际数据类型及其用户定义数据类型。 用户定义数据类型由用于存储列的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实际用户定义数据类型（如果有）和列说明信息（如为空性和可更新性）。  
   
  在使用 srv_describe 定义列后，并且在发送最后一行前，随时都可以调用 srv_setutype 函数**********。  
   

@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 04b140fe-110a-47b8-98b5-e4c161beb6c9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 041f651fb34c486cebc589f119f3e5f220314dd2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fce5e207ef1ca7f28c0d2088e9f23e701d860b7d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68059234"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754009"
 ---
 # <a name="sysfn_trace_getinfo-transact-sql"></a>sys.fn_trace_getinfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   返回有关指定跟踪或所有现有跟踪的信息。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "68059234"
 sys.fn_trace_getinfo ( { trace_id | NULL | 0 | DEFAULT } )  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *trace_id*  
  跟踪的 ID。 *trace_id*是**int**。 有效输入是跟踪的 ID 号、NULL、0或 DEFAULT。 在此上下文中，NULL、0 和 DEFAULT 是等效值。 指定 NULL、0 或 DEFAULT 可返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中所有跟踪的信息。  
   
@@ -52,8 +52,8 @@ sys.fn_trace_getinfo ( { trace_id | NULL | 0 | DEFAULT } )
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |traceid|**int**|跟踪的 ID。|  
-|property|**int**|跟踪的属性：<br /><br /> 1= 跟踪选项。 有关详细信息，请@options参阅[&#40;transact-sql&#41;sp_trace_create ](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)。<br /><br /> 2 = 文件名<br /><br /> 3 = 最大大小<br /><br /> 4 = 停止时间<br /><br /> 5 = 当前跟踪状态。 0 = 停止。 1 = 正在运行。|  
-|value|**sql_variant**|有关指定跟踪的属性的信息。|  
+|property|**int**|跟踪的属性：<br /><br /> 1= 跟踪选项。 有关详细信息，请 @options 参阅[&#40;transact-sql&#41;sp_trace_create ](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)。<br /><br /> 2 = 文件名<br /><br /> 3 = 最大大小<br /><br /> 4 = 停止时间<br /><br /> 5 = 当前跟踪状态。 0 = 停止。 1 = 正在运行。|  
+|值|**sql_variant**|有关指定跟踪的属性的信息。|  
   
 ## <a name="remarks"></a>备注  
  当传递特定跟踪的 ID 时，fn_trace_getinfo 将返回有关该跟踪的信息。 传递无效 ID 时，此函数将返回空行集。  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: dd32be6b-10d1-4059-b4fd-0bf817f40d54
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1cce4ad93181b86570da066093efc9f75e3fc9d6
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2fa8a3f309ada4334ea759bd7bb46d4b3c6a4233
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820808"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754079"
 ---
 # <a name="sysdm_os_memory_cache_entries-transact-sql"></a>sys.dm_os_memory_cache_entries (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中返回有关缓存中所有条目的信息。 使用此视图可对缓存条目进行跟踪，直至它们的关联对象。 还可使用此视图获取有关缓存条目的统计信息。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "82820808"
 |-----------------|---------------|-----------------|  
 |**cache_address**|**varbinary(8)**|缓存的地址。 不可为 null。|  
 |**name**|**nvarchar(256)**|缓存的名称。 不可为 null。|  
-|type |**varchar(60)**|缓存类型。 不可为 null。|  
+|**type**|**varchar(60)**|缓存类型。 不可为 null。|  
 |**entry_address**|**varbinary(8)**|缓存条目的描述符地址。 不可为 null。|  
 |**entry_data_address**|**varbinary(8)**|缓存条目中用户数据的地址。<br /><br /> 0x00000000 = 条目数据地址不可用。<br /><br /> 不可为 null。|  
 |**in_use_count**|**int**|同时使用此缓存条目的用户数。 不可为 null。|  

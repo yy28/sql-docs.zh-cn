@@ -19,15 +19,15 @@ ms.assetid: d03d4657-86d1-4496-97e6-cc3bc292e0b1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: f63469fb4955895b1eb1e3e8466dfbce6306e502
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d4371de1240e64aa5465f6f2d58f5e2eef029acf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824619"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754266"
 ---
 # <a name="sysdm_database_copies-azure-sql-database"></a>sys.dm_database_copies（Azure SQL 数据库）
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   返回有关数据库副本的信息。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "82824619"
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|`sys.databases` 视图中当前数据库的 ID。|  
 |**start_date**|**datetimeoffset**|当启动数据库复制时，区域 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 数据中心的 UTC 时间。|  
-|**modify_date**|**datetimeoffset**|当完成数据库复制时，区域 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 数据中心的 UTC 时间。 截至此时，新数据库与主数据库在事务上一致。 完成信息每1分钟更新一次。<br /><br />反映 percent_complete 字段的上一次更新的 UTC 时间。|  
+|modify_date|**datetimeoffset**|当完成数据库复制时，区域 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 数据中心的 UTC 时间。 截至此时，新数据库与主数据库在事务上一致。 完成信息每1分钟更新一次。<br /><br />反映 percent_complete 字段的上一次更新的 UTC 时间。|  
 |**percent_complete**|**real**|已复制的字节的百分比。 值介于 0 到 100 之间。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 可以自动从某些错误（如故障转移）中恢复，并重新启动数据库复制。 在这种情况下，percent_complete 将从 0 重新开始。|  
 |**error_code**|**int**|当大于 0 时，代码指示复制时发生的错误。 如果不发生错误，则值等于 0。|  
 |**error_desc**|**nvarchar （4096）**|复制时发生的错误的说明。|  

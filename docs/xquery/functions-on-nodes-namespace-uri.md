@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 9b48d216-26c8-431d-9ab4-20ab187917f4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a87e6108e68c3b9a2648abf7394f03f7e5c8d1ea
-ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
+ms.openlocfilehash: e22aadcb6da106c28ff38fc5b9d455f04152d0ec
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84306056"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753590"
 ---
 # <a name="functions-on-nodes---namespace-uri"></a>基于节点的函数 - namespace-uri
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
   返回 *$arg*中指定的 QName 的命名空间 URI 作为 xs： string。  
   
@@ -35,11 +35,11 @@ fn:namespace-uri() as xs:string
 fn:namespace-uri($arg as node()?) as xs:string  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *$arg*  
  将检索其命名空间 URI 部分的节点名称。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
   
 -   如果省略该参数，则默认值为上下文节点。  
   

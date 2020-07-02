@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 3af8b47a-936d-4411-91d1-d2d16dda5623
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a76835272ed86faeab807f97f6e8801985062733
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b7e0d440a453b0481a4440ec432669d3981b9da8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68059199"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754003"
 ---
 # <a name="sysfn_validate_plan_guide-transact-sql"></a>sys.fn_validate_plan_guide (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   验证指定计划指南的有效性。 sys.fn_validate_plan_guide 函数返回计划指南应用于其查询时遇到的第一条错误消息。 如果计划指南有效，则将返回一个空的行集。 在更改了数据库的物理设计后，计划指南可能会变为无效。 例如，如果计划指南指定了特定索引并且随后将该索引删除，则查询将不能再使用该计划指南。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "68059199"
 sys.fn_validate_plan_guide ( plan_guide_id )  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *plan_guide_id*  
  是在[plan_guides](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)目录视图中报告的计划指南的 ID。 *plan_guide_id*为**int** ，无默认值。  
   
@@ -53,7 +53,7 @@ sys.fn_validate_plan_guide ( plan_guide_id )
 |msgnum|**int**|错误消息的 ID。|  
 |severity|**tinyint**|消息的严重级别，在 1 到 25 之间。|  
 |state|**smallint**|错误的状态号，用于指示发生错误的代码位置。|  
-|消息|**nvarchar(2048)**|错误的消息正文。|  
+|message|**nvarchar(2048)**|错误的消息正文。|  
   
 ## <a name="permissions"></a>权限  
  OBJECT 作用域的计划指南要求对被引用的对象具有 VIEW DEFINITION 或 ALTER 权限，并要求具有编译计划指南中提供的查询或批处理的权限。 例如，如果批处理包含 SELECT 语句，则需要具有对被引用对象的 SELECT 权限。  
@@ -75,7 +75,7 @@ GO
 ```  
   
 ### <a name="b-testing-plan-guide-validation-before-implementing-a-change-to-the-database"></a>B. 在对数据库实施更改前测试计划指南的有效性  
- 下面的示例使用显式事务删除索引。 执行`sys.fn_validate_plan_guide`函数以确定此操作是否将使数据库中的任何计划指南无效。 基于此函数的结果，将提交 `DROP INDEX` 语句或回滚事务，并且不删除索引。  
+ 下面的示例使用显式事务删除索引。 `sys.fn_validate_plan_guide`执行函数以确定此操作是否将使数据库中的任何计划指南无效。 基于此函数的结果，将提交 `DROP INDEX` 语句或回滚事务，并且不删除索引。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -94,7 +94,7 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [计划指南](../../relational-databases/performance/plan-guides.md)   
- [sp_create_plan_guide &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
+ [sp_create_plan_guide (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [sp_create_plan_guide_from_handle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)  
   
   

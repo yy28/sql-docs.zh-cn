@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 442c6133-4038-42db-a67d-2631285ac76b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6ed53a60bd0ef285468d71c4018ba7a4ed9cd8c6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3f5b42276204441d4abe3eac5d10737a5a89a6b1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660382"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755384"
 ---
 # <a name="multiipconfigurationsupport-property-servernetworkprotocol-class"></a>MultiIpConfigurationSupport 属性（ServerNetworkProtocol 类）
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   获取用于指定服务器网络协议是否支持多个 IP 地址的布尔值属性。  
   
 ## <a name="syntax"></a>语法  
@@ -37,7 +37,7 @@ object.MultiIpConfigurationSupport [= value]
   
 ## <a name="parts"></a>组成部分  
  *object*  
- 表示实例使用的网络协议的[ProtocolName 属性（ServerNetworkProtocol 类）](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/protocolname-property-servernetworkprotocol-class.md)对象[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+ 表示实例使用的网络协议的[ProtocolName 属性（ServerNetworkProtocol 类）](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/protocolname-property-servernetworkprotocol-class.md)对象 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  指定服务器网络协议是否支持多个 IP 地址的布尔值：如果服务器网络协议支持多个 ip 地址，**则为 true** ; 如果服务器网络协议不支持多个 ip 地址，则为**false** 。  

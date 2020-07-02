@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: db0def92-f25b-45da-9709-eab972b33800
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e258fbd2e0d7a9d15e3c8aa9c2ec3e7bcc7ddc0c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 62b63057e34c2d26ad9d8ee3689267c9a06c93dc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824933"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754313"
 ---
 # <a name="syscollector_collection_sets-transact-sql"></a>syscollector_collection_sets (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   提供有关收集组的信息，包括计划、收集模式及其状态。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "82824933"
 |upload_job_id|**uniqueidentifier**|标识收集上载作业。 可以为 Null。|  
 |logging_level|**smallint**|指定日志记录级别（0、1 或 2）。 不可为 null。|  
 |days_until_expiration|**smallint**|收集的数据保存在管理数据仓库中的天数。 不可为 null。|  
-|说明|**nvarchar(4000)**|描述收集组。 可以为 Null。|  
+|description|**nvarchar(4000)**|描述收集组。 可以为 Null。|  
 |dump_on_any_error|**bit**|打开（1）或关闭（0），指示是否 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 在出现任何错误时创建转储文件。 不可为 null。|  
 |dump_on_codes|**nvarchar(max)**|包含用于触发转储文件的 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 错误代码的列表。 可以为 Null。|  
   

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: dff6d19b-765c-4df9-afff-9a0e7be9b91b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 19e94b01667d666a714db22d85d866b0df2ec3fc
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: c1a4d3014286618639b045f5028935368321a3a0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84881839"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753587"
 ---
 # <a name="functions-on-nodes---number"></a>基于节点的函数 - number
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   返回 *$arg*指示的节点的数值。  
   
@@ -40,7 +40,7 @@ fn:number($arg as node()?) as xs:double?
  *$arg*  
  将以数字返回其值的节点。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  如果未指定 *$arg* ，则返回上下文节点的数值，转换为双精度值。 在 SQL Server 中，不带参数的**fn： number （）** 只能用于上下文相关的谓词的上下文中。 特别要指出的是，它只能在方括号 ([ ]) 内使用。 例如，下面的表达式将返回 <`ROOT`> 元素。  
   
 ```  

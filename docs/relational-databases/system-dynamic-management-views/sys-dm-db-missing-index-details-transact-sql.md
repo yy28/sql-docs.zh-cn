@@ -21,15 +21,15 @@ ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 77b3faae57764a936e6115d22ac00ca855d3acb9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 159390f64b00aa8bd72478552e37ceaaf26566bb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829431"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754232"
 ---
 # <a name="sysdm_db_missing_index_details-transact-sql"></a>sys.dm_db_missing_index_details (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   返回有关缺失索引的详细信息，不包括空间索引。  
   
@@ -40,11 +40,11 @@ ms.locfileid: "82829431"
 |-----------------|---------------|-----------------|  
 |**index_handle**|**int**|标识特定的缺失索引。 该标识符在服务器中是唯一的。 **index_handle**是此表的键。|  
 |**database_id**|**smallint**|标识带有缺失索引的表所驻留的数据库。|  
-|**object_id**|**int**|标识索引缺失的表。|  
+|object_id|**int**|标识索引缺失的表。|  
 |**equality_columns**|**nvarchar(4000)**|构成相等谓词的列的逗号分隔列表，谓词的形式如下：<br /><br /> *表列*  =*constant_value*|  
 |**inequality_columns**|**nvarchar(4000)**|构成不等谓词的列的逗号分隔列表，例如以下形式的谓词：<br /><br /> *表列*  > *constant_value*<br /><br /> “=”之外的任何比较运算符都表示不相等。|  
 |**included_columns**|**nvarchar(4000)**|用于查询的涵盖列的逗号分隔列表。 有关覆盖列或包含列的详细信息，请参阅[创建包含列的索引](../../relational-databases/indexes/create-indexes-with-included-columns.md)。<br /><br /> 对于内存优化索引（哈希和内存优化非聚集），忽略**included_columns**。 每个内存优化索引中均包含表的所有列。|  
-|**损益**|**nvarchar(4000)**|索引缺失的表的名称。|  
+|**语句**|**nvarchar(4000)**|索引缺失的表的名称。|  
   
 ## <a name="remarks"></a>备注  
  由 **sys.dm_db_missing_index_details** 返回的信息会在查询优化器优化查询时更新，因而不是持久化的。 缺失索引信息只保留到重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 前。 如果数据库管理员要在服务器回收后保留缺失索引信息，则应定期制作缺失索引信息的备份副本。  

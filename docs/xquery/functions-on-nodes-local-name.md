@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: c901ef5d-89c5-482a-bf64-3eefbcf3098d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d3a10ab445bfcf9f61b7eb6c952100af9b6fadbb
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: 4c634614b6cfad036146081436ce31efcf1cd464
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689572"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753610"
 ---
 # <a name="functions-on-nodes---local-name"></a>基于节点的函数 - local-name
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   将 *$arg*名称的本地部分作为 xs： string 返回，该字符串要么为零长度字符串，要么具有 Xs： NCName 的词法形式。 如果未提供参数，默认值为上下文节点。  
   
@@ -35,11 +35,11 @@ fn:local-name() as xs:string
 fn:local-name($arg as node()?) as xs:string  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *$arg*  
  将检索其本地名称部分的节点名称。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
   
 -   在 SQL Server 中，不带参数的**fn： local name （）** 只能用于上下文相关的谓词的上下文中。 特别要指出的是，它只能在方括号 (`[ ]`) 内使用。  
   

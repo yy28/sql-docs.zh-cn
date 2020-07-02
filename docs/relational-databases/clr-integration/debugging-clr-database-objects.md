@@ -16,21 +16,21 @@ helpviewer_keywords:
 ms.assetid: 1332035c-d6ed-424d-8234-46ad21168319
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 71a766dc473c1bef47a8104ae76c0e70bd8b31b8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7af58a109a658a4af60ca49ad6eea401284782ac
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488385"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756311"
 ---
 # <a name="debugging-clr-database-objects"></a>调试 CLR 数据库对象
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为调试 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和数据库中的公共语言运行时 (CLR) 对象提供支持。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中进行调试的主要特点一个是易于设置和使用，另一个是 SQL Server 调试器与 Microsoft Visual Studio 调试器集成。 此外，还可以跨语言进行调试。 用户可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中无缝地单步执行 CLR 对象，反之亦然。 SQL Server Management Studio 中的 Transact-SQL 调试器无法用于调试托管数据库对象，但您可以通过使用 Visual Studio 中的调试器来调试这些对象。 Visual Studio 中的托管数据库对象调试支持所有常见的调试功能，例如，在服务器上执行的例程中的“单步执行”语句和“逐过程”语句。 调试器可以在调试过程中设置断点、检查调用堆栈、检查变量以及修改变量值。 请注意，Visual Studio .NET 2003 无法用于 CLR 集成编程或调试。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含预先安装的 .NET Framework，而 Visual Studio .NET 2003 无法使用 .NET Framework 2.0 程序集。  
   
  有关使用 Visual Studio 调试托管代码的详细信息，请参阅 Visual Studio 文档中的 "[调试托管代码](https://go.microsoft.com/fwlink/?LinkId=120377)" 主题。  
   
 ## <a name="debugging-permissions-and-restrictions"></a>调试权限和限制  
- 调试是一项高度特权的操作，因此只有**sysadmin**固定服务器角色的成员才可以在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]执行此操作。  
+ 调试是一项高度特权的操作，因此只有**sysadmin**固定服务器角色的成员才可以在中执行此操作 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
  调试时存在下列限制：  
   

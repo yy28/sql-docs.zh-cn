@@ -13,15 +13,15 @@ ms.assetid: 4eae58d1-03d4-40ca-8aa1-9b3ea10a38cf
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 78bfa4cd343fd13be121b660de700ef670f24adb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 741844bb8bcbf3e50b01ea4f3af0da6ad69e2567
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81293727"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755702"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-columns"></a>管理 text 和 image 列 - 使用执行时数据列
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
     
 ### <a name="to-use-data-at-execution-text-ntext-or-image-columns"></a>使用作为执行时数据的 text、ntext 或 image 列  
@@ -49,11 +49,11 @@ ms.locfileid: "81293727"
   
  此示例连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 若要连接到命名实例，请更改 ODBC 数据源的定义以使用以下格式指定实例：server\namedinstance。 默认情况下，[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 将安装在命名实例中。  
   
- 执行第一个（ [!INCLUDE[tsql](../../includes/tsql-md.md)]）代码列表，以创建该示例使用的表。  
+ 执行第一个（ [!INCLUDE[tsql](../../includes/tsql-md.md)] ）代码列表，以创建该示例使用的表。  
   
  使用 odbc32.lib 编译第二个 (C++) 代码列表。 然后，执行该程序。  
   
- 执行第三个[!INCLUDE[tsql](../../includes/tsql-md.md)]（）代码列表，以删除该示例使用的表。  
+ 执行第三个（ [!INCLUDE[tsql](../../includes/tsql-md.md)] ）代码列表，以删除该示例使用的表。  
   
 ```  
 use AdventureWorks  

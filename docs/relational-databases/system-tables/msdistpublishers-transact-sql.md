@@ -17,20 +17,20 @@ helpviewer_keywords:
 ms.assetid: 31844099-4b33-4dc9-84b4-bac70aa82598
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c70ea03659fe65b594555dd6bbbba7a650558e88
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 26b26690d1120ce66dd116ed7908a68fe594e077
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832323"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753934"
 ---
 # <a name="msdistpublishers-transact-sql"></a>MSdistpublishers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
   本地分发服务器支持的每个远程发布服务器在**MSdistpublishers**表中各占一行。 该表存储在**msdb**数据库中。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|发布服务器分发服务器的名称。|  
+|name|**sysname**|发布服务器分发服务器的名称。|  
 |**distribution_db**|**sysname**|分发数据库的名称。|  
 |**working_directory**|**nvarchar(255)**|用于存储发布的数据和架构文件的工作目录的名称。|  
 |**security_mode**|**int**|在分发服务器上实现的安全模式：<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。<br /><br /> **1** = Windows 身份验证。|  

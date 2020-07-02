@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 09fe4a28-ff8a-4655-9da1-4654d5bc514d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 22b1b6bf2abbf322cec690d9e466f2ea40fcb72a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 306357f87ffa30dbdd6fca302089cf0d8967242f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68059247"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754021"
 ---
 # <a name="sysfn_trace_getfilterinfo-transact-sql"></a>sys.fn_trace_getfilterinfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   返回有关应用于指定跟踪的筛选器的信息。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "68059247"
 fn_trace_getfilterinfo ( trace_id )  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *trace_id*  
  跟踪的 ID。 *trace_id*为**int**，没有默认值。  
   
@@ -57,7 +57,7 @@ fn_trace_getfilterinfo ( trace_id )
 |**columnid**|**int**|应用筛选器的列的 ID。|  
 |**logical_operator**|**int**|指定是否应用 AND 或 OR 运算符。|  
 |**comparison_operator**|**int**|指定比较类型：<br /><br /> 0 = 等于<br /><br /> 1 = 不等于<br /><br /> 2 = 大于<br /><br /> 3 = 小于<br /><br /> 4 = 大于或等于<br /><br /> 5 = 小于或等于<br /><br /> 6 = 类似于<br /><br /> 7 = 不类似于|  
-|**value**|**sql_variant**|指定应用筛选器的值。|  
+|value|**sql_variant**|指定应用筛选器的值。|  
   
 ## <a name="remarks"></a>备注  
  用户设置*trace_id*值以标识、修改和控制跟踪。 当传递特定跟踪的 ID 时， **fn_trace_getfilterinfo**返回有关该跟踪的任何筛选器的信息。 如果指定的跟踪没有筛选器，则此函数将返回空行集。 传递无效 ID 时，此函数将返回空行集。 有关跟踪的类似信息，请参阅[transact-sql&#41;&#40;fn_trace_getinfo ](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)。  

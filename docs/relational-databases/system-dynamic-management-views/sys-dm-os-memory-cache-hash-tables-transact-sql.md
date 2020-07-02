@@ -20,15 +20,15 @@ ms.assetid: 68b94f35-8f80-4d2b-bcde-7a21934219af
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: defda314b7993fff0c1ef1f511d176940b4b0525
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 53aa8de70efa2f8d95be7484a085889814daa8e5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820763"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754097"
 ---
 # <a name="sysdm_os_memory_cache_hash_tables-transact-sql"></a>sys.dm_os_memory_cache_hash_tables (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中的每个活动缓存返回一行。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "82820763"
 |-----------------|---------------|-----------------|  
 |**cache_address**|**varbinary(8)**|缓存条目的地址（主键）。 不可为 null。|  
 |**name**|**nvarchar(256)**|缓存的名称。 不可为 null。|  
-|type |**nvarchar(60)**|缓存类型。 不可为 null。|  
+|**type**|**nvarchar(60)**|缓存类型。 不可为 null。|  
 |**table_level**|**int**|哈希表编号。 某个特定缓存可能有多个对应于不同哈希函数的哈希表。 不可为 null。|  
 |**buckets_count**|**int**|哈希表中的存储桶数。 不可为 null。|  
 |**buckets_in_use_count**|**int**|当前使用的存储桶数。 不可为 null。|  

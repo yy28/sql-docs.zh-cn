@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 46da89a8-0cd9-4913-8521-4087589a04ba
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2b80437f4c5a51fa649a291673fc212483fd43ae
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: c522e0756ca846558acbf6ac1b96c7d4abeef57e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84881834"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753566"
 ---
 # <a name="functions-on-sequences---empty"></a>基于序列的函数 - empty
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   如果 *$arg*的值是空序列，则返回 True。 否则，该函数返回 False。  
   
@@ -39,7 +39,7 @@ fn:empty($arg as item()*) as xs:boolean
  *$arg*  
  项序列。 如果该序列为空，则此函数返回 True。 否则，该函数返回 False。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  不支持**fn： exists （）** 函数。 作为替代方法，可以使用**not （）** 函数。  
   
 ## <a name="examples"></a>示例  

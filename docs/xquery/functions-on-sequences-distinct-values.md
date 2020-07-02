@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: f4c2bb53-2bec-4f1a-9c00-cf997fb7ae5b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8c6e52209713ca94ab9cecc9f3c7910b6fc76ce9
-ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
+ms.openlocfilehash: 1a82bfef35b0d8aec39f7f539f65e6ff1fe8f3ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84215829"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753572"
 ---
 # <a name="functions-on-sequences---distinct-values"></a>基于序列的函数 - distinct-values
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
   从 *$arg*指定的序列中删除重复值。 如果 *$arg*是空序列，则函数返回空序列。  
   
@@ -35,11 +35,11 @@ ms.locfileid: "84215829"
 fn:distinct-values($arg as xdt:anyAtomicType*) as xdt:anyAtomicType*  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *$arg*  
  原子值序列。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  传递给**非重复值（）** 的所有原子化值的类型都必须是同一基类型的子类型。 接受的基类型是支持**eq**操作的类型。 这些类型包括三种内置数值基类型、日期/时间基类型、xs:string、xs:boolean 和 xdt:untypedAtomic。 类型 xdt:untypedAtomic 的值转换为 xs:string。 如果这些类型混合在一起，或者传递了其他类型的其他值，则会引发静态错误。  
   
  **非重复值（）** 的结果接收传入类型的基类型，例如，Xdt： untypedAtomic 的 xs： string，其中包含原始基数。 如果输入在静态上为空，则暗示为空，并且会引发静态错误。  

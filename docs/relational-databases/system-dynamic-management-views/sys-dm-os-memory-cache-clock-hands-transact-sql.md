@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 0660eddc-691c-425f-9d43-71151d644de7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 07d96a38d97917b11614e3c48c781e615a32554b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d957bdc70afdd0e6dbc7d15e5b2ea4ee78568dc5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820800"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754103"
 ---
 # <a name="sysdm_os_memory_cache_clock_hands-transact-sql"></a>sys.dm_os_memory_cache_clock_hands (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   返回特定缓存时钟的每个指针的状态。  
   
@@ -37,9 +37,9 @@ ms.locfileid: "82820800"
 |-----------------|---------------|-----------------|  
 |**cache_address**|**varbinary(8)**|与时钟关联的缓存的地址。 不可为 null。|  
 |**name**|**nvarchar(256)**|缓存的名称。 不可为 null。|  
-|type |**nvarchar(60)**|缓存存储的类型。 可存在相同类型的多个缓存。 不可为 null。|  
+|**type**|**nvarchar(60)**|缓存存储的类型。 可存在相同类型的多个缓存。 不可为 null。|  
 |**clock_hand**|**nvarchar(60)**|手动类型。 这是以下各项之一：<br /><br /> 外部<br /><br /> 内部<br /><br /> 不可为 null。|  
-|**clock_status**|**nvarchar(60)**|时钟的状态。 这是以下各项之一：<br /><br /> 已挂起<br /><br /> 正在运行<br /><br /> 不可为 null。|  
+|**clock_status**|**nvarchar(60)**|时钟的状态。 这是以下各项之一：<br /><br /> Suspended<br /><br /> 正在运行<br /><br /> 不可为 null。|  
 |**rounds_count**|**bigint**|通过缓存执行的、旨在删除项的清扫数。 不可为 null。|  
 |**removed_all_rounds_count**|**bigint**|所有清扫删除的项数。 不可为 null。|  
 |**updated_last_round_count**|**bigint**|上次清扫中更新的项数。 不可为 null。|  

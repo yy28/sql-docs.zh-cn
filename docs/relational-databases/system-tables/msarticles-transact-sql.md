@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1acd79a5-b3e2-4161-9592-7acc2a41ba38
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 98bd5295aadbe75928b4a05e7ec882235fb47313
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: daec387a9be288a44cbecc286bd77784ad776374
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832355"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753949"
 ---
 # <a name="msarticles-transact-sql"></a>MSarticles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   发布服务器正在复制的每个项目在**MSarticles**表中各占一行。 此表存储在分发数据库中。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "82832355"
 |**publisher_id**|**smallint**|发布服务器的 ID。|  
 |**publisher_db**|**sysname**|发布服务器数据库的名称。|  
 |**publication_id**|**int**|发布 ID。|  
-|**下文**|**sysname**|项目的名称。|  
+|**文章**|**sysname**|项目的名称。|  
 |**article_id**|**int**|项目的 ID。|  
 |**destination_object**|**sysname**|在订阅服务器上创建的表的名称。|  
 |**source_owner**|**sysname**|发布服务器上源表的架构的名称。|  

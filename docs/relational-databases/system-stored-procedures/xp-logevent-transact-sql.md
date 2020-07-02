@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 7b379ad0-5b12-4d2e-9c52-62465df1fdbd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 77275ee539a6367d7e2e04d03354155a5eff721d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b19aa23d0009900045d5298c095f6c5a4347d633
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68116641"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755563"
 ---
 # <a name="xp_logevent-transact-sql"></a>xp_logevent (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  将用户定义的消息记录到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日志文件和 Windows 事件查看器中。 xp_logevent 可用于发送警报，而无需向客户端发送消息。  
+  将用户定义的消息记录到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日志文件和 Windows 事件查看器中。 xp_logevent 可用于发送警报，而无需向客户端发送消息。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,7 +39,7 @@ xp_logevent { error_number , 'message' } [ , 'severity' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- *error_number*  
+ error_number   
  用户定义错误号，该值大于 50,000。 最大值为 2147483647 (2^31 - 1)。  
   
  **"** *message* **"**  
@@ -57,7 +57,7 @@ xp_logevent { error_number , 'message' } [ , 'severity' ]
  `The command(s) completed successfully.`  
   
 ## <a name="remarks"></a>备注  
- 从[!INCLUDE[tsql](../../includes/tsql-md.md)]过程、触发器、批处理等发送消息时，请使用 RAISERROR 语句而不是 xp_logevent。 xp_logevent 不会调用客户端的消息处理程序，也不@ERROR设置 @。 若要将消息写入 Windows 事件查看器以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志文件中，请执行 RAISERROR 语句。  
+ 从 [!INCLUDE[tsql](../../includes/tsql-md.md)] 过程、触发器、批处理等发送消息时，请使用 RAISERROR 语句而不是 xp_logevent。 xp_logevent 不会调用客户端的消息处理程序，也不设置 @ @ERROR 。 若要将消息写入 Windows 事件查看器以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志文件中，请执行 RAISERROR 语句。  
   
 ## <a name="permissions"></a>权限  
  需要 master 数据库中的 db_owner 固定数据库角色的成员身份，或者 sysadmin 固定服务器角色的成员身份。  

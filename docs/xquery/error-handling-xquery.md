@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 7dee3c11-aea0-4d10-9126-d54db19448f2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b80fda53a6ce0acfd326f6f897cb6cde1bf0e610
-ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
+ms.openlocfilehash: e7afd7743a7a158738b7b88cd20d33be3220ece0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84305882"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753639"
 ---
 # <a name="error-handling-xquery"></a>错误处理 (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   W3C 规范允许静态或动态引发类型错误，并定义了静态错误、动态错误和类型错误。  
   

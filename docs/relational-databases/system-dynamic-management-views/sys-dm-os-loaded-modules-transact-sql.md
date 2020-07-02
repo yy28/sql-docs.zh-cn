@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 56c7743a-b568-4943-bd3b-73c57d9d641c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 58f0258843995acc82e84d69a4d2d101594fc313
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 30aa54e93b30d2067e2ab02ba8d264920724cead
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820799"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754130"
 ---
 # <a name="sysdm_os_loaded_modules-transact-sql"></a>sys.dm_os_loaded_modules (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   针对每个加载到服务器地址空间的模块返回一行。  
   
@@ -43,8 +43,8 @@ ms.locfileid: "82820799"
 |**早期**|**bit**|1 = 模块是预发行版本的已加载模块。|  
 |**private_build**|**bit**|1 = 模块是专用版本的已加载模块。|  
 |**special_build**|**bit**|1 = 模块是特殊版本的已加载模块。|  
-|**语言**|**int**|模块的版本信息语言。|  
-|**company**|**nvarchar(256)**|创建模块的公司的名称。|  
+|language|**int**|模块的版本信息语言。|  
+|**上市公司**|**nvarchar(256)**|创建模块的公司的名称。|  
 |**2008**|**nvarchar(256)**|模块的说明。|  
 |**name**|**nvarchar(255)**|模块的名称。 包括模块的完整路径。|  
 |**pdw_node_id**|**int**|适用于  ：[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  

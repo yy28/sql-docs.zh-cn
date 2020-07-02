@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 119c8d62-eea8-44fb-bf72-de469c838c50
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f90f0f9ca490cc2adfeb2768b9d1dfe9f072eb39
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: aa9acc4c79d513392ecd85f7c667452fd5a108e0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834141"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753846"
 ---
 # <a name="suspect_pages-transact-sql"></a>suspect_pages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   对于每个由于出现次要 823 错误或 824 错误而失败的页，都包含一行。 页面列出在此表中是因为怀疑这些页面存在错误，但它们实际上可能是正常的。 修复可疑页面后，会在 " **event_type** " 列中更新其状态。  
   
