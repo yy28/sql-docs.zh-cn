@@ -13,15 +13,15 @@ ms.assetid: 0262df2b-5ba7-4715-b17b-3d9ce470a38e
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f0d1e6e4fa9c88fc67b15a076a6c96a742fd7fdc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c4f0ff3a5cc18845bc2fcc2bec682c6bd8e2db4e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304818"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724660"
 ---
 # <a name="sysinternal_partitions-transact-sql"></a>sys. internal_partitions （Transact-sql）
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
   为在基于磁盘的表上跟踪列存储索引的内部数据的每个行集返回一行。 这些行集是列存储索引的内部，跟踪已删除的行、行组映射和增量存储行组。 它们跟踪每个表分区的数据;每个表至少具有一个分区。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在每次重新生成列存储索引时重新创建行集。   
   
@@ -41,7 +41,7 @@ ms.locfileid: "72304818"
 |optimize_for_sequential_key|**bit**|1 = 分区启用了上一页插入优化。<br><br>0 = 默认值。 分区已禁用上一页插入优化。|
   
 ## <a name="permissions"></a>权限  
- 要求具有 `public` 角色的成员身份。  有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
+ 要求具有 `public` 角色的成员身份。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="general-remarks"></a>一般备注  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]每次创建或重新生成列存储索引时，都将重新创建新的列存储内部索引。  

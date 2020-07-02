@@ -14,15 +14,15 @@ ms.assetid: 0572fef3-daf5-409e-b557-c2a632f9a06d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6a696107a82b5f64109b115e3e1c360d81117344
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9634cf553750045c6c773ee9f804dc5358883852
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298331"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725114"
 ---
 # <a name="create-a-bulk-copy-format-file-odbc"></a>创建大容量复制格式化文件 (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   此示例演示如何使用大容量复制函数来创建数据文件和格式化文件。 此示例是面向 ODBC 3.0 版或更高版本开发的。  
   
@@ -62,11 +62,11 @@ ms.locfileid: "81298331"
   
  此示例连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 若要连接到命名实例，请更改 ODBC 数据源的定义以使用以下格式指定实例：server\namedinstance。 默认情况下，[!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] 将安装在命名实例中。  
   
- 执行第一个（ [!INCLUDE[tsql](../../../includes/tsql-md.md)]）代码列表，以创建此示例将使用的表。  
+ 执行第一个（ [!INCLUDE[tsql](../../../includes/tsql-md.md)] ）代码列表，以创建此示例将使用的表。  
   
  使用 odbc32.lib 和 odbcbcp.lib 编译第二个 (C++) 代码列表。  
   
- 执行第三个[!INCLUDE[tsql](../../../includes/tsql-md.md)]（）代码列表，以删除该示例使用的表。  
+ 执行第三个（ [!INCLUDE[tsql](../../../includes/tsql-md.md)] ）代码列表，以删除该示例使用的表。  
   
 ```  
 use AdventureWorks  

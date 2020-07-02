@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 49f0fc2a-e25e-47e1-a135-563adb509af1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 83dc24f312b1fa527804a1d7716ea3e754e97038
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b030903602a5356d273e3bd5ce46995a83ea9bf3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833786"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720332"
 ---
 # <a name="database-mirroring---sysdm_db_mirroring_auto_page_repair"></a>数据库镜像-sys. dm_db_mirroring_auto_page_repair
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   对服务器实例上所有镜像数据库的每个自动页修复尝试返回一行。 该视图包含对应于给定镜像数据库上最新自动页修复尝试的行，每个数据库最多可对应 100 行。 只要一个数据库对应的行达到最大值，则它的下个自动页修复尝试对应的行将替换现有的一个项。 下表定义了各个列的含义。  
   

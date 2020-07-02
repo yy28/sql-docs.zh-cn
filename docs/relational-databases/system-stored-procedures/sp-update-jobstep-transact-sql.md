@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: aa6a12a45a5c0609b4b717ccdf90af63ea53776b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 02697937d5a0402edbaf959ed52731010eab1ce6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833110"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723072"
 ---
 # <a name="sp_update_jobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   更改执行自动活动的作业中某一步骤的设置。  
   
@@ -60,7 +60,7 @@ sp_update_jobstep
             | [ @proxy_name = ] 'proxy_name' }   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @job_id = ] job_id`步骤所属的作业的标识号。 *job_id*的值为**uniqueidentifier**，默认值为 NULL。 必须指定*job_id*或*job_name* ，但不能同时指定两者。  
   
 `[ @job_name = ] 'job_name'`步骤所属的作业的名称。 *job_name*的默认值为**sysname**，默认值为 NULL。 必须指定*job_id*或*job_name* ，但不能同时指定两者。  
@@ -125,7 +125,7 @@ sp_update_jobstep
 |**2**|追加到输出文件|  
 |**4**|将 Transact-SQL 作业步骤输出写入步骤历史记录|  
 |**8**|将日志写入表（覆盖现有的历史记录）|  
-|**超过**|将日志写入表（追加到现有的历史记录）|  
+|**16**|将日志写入表（追加到现有的历史记录）|  
   
 `[ @proxy_id = ] proxy_id`作业步骤运行时所用代理的 ID 号。 *proxy_id*的类型为**int**，默认值为 NULL。 如果未指定*proxy_id* 、未指定*proxy_name*并且未指定*user_name* ，则作业步骤将作为代理的服务帐户运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   

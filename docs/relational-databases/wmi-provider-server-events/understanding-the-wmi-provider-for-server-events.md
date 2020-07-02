@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8fd7bd18-76d0-4b28-8fee-8ad861441ab2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: da078fc5ee5bab1481fc8091a2962288cab7b31c
-ms.sourcegitcommit: bf5e9cb3a2caa25d0a37f401b3806b7baa5adea8
+ms.openlocfilehash: 8e20f3dbfa4e62e5951396c3da2ff7f710b15f31
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85295360"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724531"
 ---
 # <a name="understanding-the-wmi-provider-for-server-events"></a>了解 WMI Provider for Server Events
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
   使用服务器事件的 WMI 提供程序，可以使用 Windows Management Instrumentation (WMI) 监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的事件。 该提供程序的运行方式是将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 转换为托管的 WMI 对象。 通过使用该提供程序，WMI 可以利用在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中生成事件通知的任何事件。 另外，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作为与 WMI 交互的管理应用程序，可以对这些事件做出响应，从而使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理所覆盖的事件范围超过了以前的版本。  
   
  通过发出 WMI 查询语言 (WQL) 语句，诸如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理这样的管理应用程序可以使用 WMI Provider for Server Events 来访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件。 WQL 是结构化查询语言 (SQL) 的简化子集，它还包含一些特定于 WMI 的扩展。 在使用 WQL 时，应用程序将针对特定数据库或数据库对象来检索事件类型。 WMI Provider for Server Events 会将查询转换成事件通知，实际上就是在目标数据库中创建事件通知。 有关事件通知在中的工作方式的详细信息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请参阅[WMI Provider For Server Events 的概念](https://technet.microsoft.com/library/ms180560.aspx)。 [WMI Provider For Server Events 类和属性](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md)中列出了可以查询的事件。  

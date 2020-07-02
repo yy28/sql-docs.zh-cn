@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2c09dfe73df914a38e53a39b99c99388590c8d9c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8d34f37256e36049b4766a4059068a2e7bd6cfd3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827731"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724580"
 ---
 # <a name="sp_help_category-transact-sql"></a>sp_help_category (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   提供有关作业、警报或操作员的指定类的信息。  
    
@@ -41,7 +41,7 @@ sp_help_category [ [ @class = ] 'class' ]
      [ , [ @suffix = ] suffix ]   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @class = ] 'class'`要请求其信息的类。 *类*为**varchar （8）**，默认值为**JOB**。 *类*可以是下列值之一。  
   
 |值|描述|  
@@ -72,7 +72,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|类别 ID|  
 |**category_type**|**tinyint**|类别的类型：<br /><br /> **1** = 本地<br /><br /> **2** = 多服务器<br /><br /> **3** = 无|  
-|**name**|**sysname**|类别名称|  
+|name|**sysname**|类别名称|  
   
  当** \@ 后缀**为**1**时， **sp_help_category**将返回以下结果集：  
   
@@ -80,7 +80,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|类别 ID|  
 |**category_type**|**sysname**|类别的类型。 **本地**、**多服务器**或**无**|  
-|**name**|**sysname**|类别名称|  
+|name|**sysname**|类别名称|  
   
 ## <a name="remarks"></a>备注  
  必须从**msdb**数据库运行**sp_help_category** 。  

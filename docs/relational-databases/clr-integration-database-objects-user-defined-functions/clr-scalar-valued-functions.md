@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 20dcf802-c27d-4722-9cd3-206b1e77bee0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4c9f5fe3a3fa9a58b8c1a103bcb2cf359d842190
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: e69f48867cc5dd66d72d30f6fa72b2d44d5fc54c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83806755"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719899"
 ---
 # <a name="clr-scalar-valued-functions"></a>CLR 标量值函数
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   标量值函数 (SVF) 返回单个值，例如字符串、整数或位值。 您可以使用任何 .NET Framework 的编程语言在托管代码中创建标量值用户定义函数。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或其他托管代码可访问这些函数。 有关 CLR 集成的优点以及如何在托管代码和之间进行选择的信息 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，请参阅[Clr 集成概述](../../relational-databases/clr-integration/clr-integration-overview.md)。  
   
 ## <a name="requirements-for-clr-scalar-valued-functions"></a>CLR 标量值函数的要求  

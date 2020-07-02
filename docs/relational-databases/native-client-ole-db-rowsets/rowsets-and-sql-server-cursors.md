@@ -17,15 +17,15 @@ ms.assetid: 26a11e26-2a3a-451e-8f78-fba51e330ecb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 26d849cf68bdb64cef35a45b73a329d37d3966b1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: af296d099b4858b9a554ad6d1fee54ecdc4189b5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300274"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724820"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>行集和 SQL Server 游标
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用两种方法将结果集返回到使用者：  
   
@@ -59,7 +59,7 @@ ms.locfileid: "81300274"
   
     -   不支持任何返回多个结果集的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
   
- 通过设置某些行集属性，使用者可以请求行集中的其他游标行为。 如果使用者未设置这些行集属性中的任何一个，或将它们全部设置为其默认[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]值，则 Native Client OLE DB 提供程序使用默认结果集实现行集。 如果将这些属性中的任何一个设置为默认值以外的值，则[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序将使用服务器游标实现行集。  
+ 通过设置某些行集属性，使用者可以请求行集中的其他游标行为。 如果使用者未设置这些行集属性中的任何一个，或将它们全部设置为其默认值，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序使用默认结果集实现行集。 如果将这些属性中的任何一个设置为默认值以外的值，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序将使用服务器游标实现行集。  
   
  以下行集属性指引 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 游标。 某些属性可以安全地与其他属性组合。 例如，展示 DBPROP_IRowsetScroll 和 DBPROP_IRowsetChange 属性的行集将是展示立即更新行为的书签行集。 其他属性相互排斥。 例如，展示 DBPROP_OTHERINSERT 的行集不能包含书签。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "81300274"
 |DBPROP_IMMOBILEROWS|VARIANT_FALSE|无法通过行集更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据。 行集只支持向前滚动。 支持相对行定位。 如果针对被引用的列存在索引，则命令文本可以包括 ORDER BY 子句。<br /><br /> DBPROP_IMMOBILEROWS 仅在可以显示由其他会话的命令或由其他用户插入的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 行的行集中可用。 如果试图在其 DBPROP_OTHERINSERT 不能是 VARIANT_TRUE 的任何行集上打开一个该属性设置为 VARIANT_FALSE 的行集，将导致错误。|  
 |DBPROP_REMOVEDELETED|VARIANT_TRUE|无法通过行集更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据。 行集只支持向前滚动。 支持相对行定位。 除非受另一个属性约束，否则命令文本可以包含 ORDER BY 子句。|  
   
- 可以[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通过使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **IOpenRowset：： OpenRowset**方法，在基础表或视图上轻松创建服务器游标支持的 Native Client OLE DB 提供程序行集。 按名称指定表或视图，同时在 rgPropertySets 参数中传递所需的行集属性集**。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可以通过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用**IOpenRowset：： OpenRowset**方法，在基础表或视图上轻松创建服务器游标支持的 Native Client OLE DB 提供程序行集。 按名称指定表或视图，同时在 rgPropertySets 参数中传递所需的行集属性集**。  
   
  当使用者需要服务器游标支持行集时，创建行集的命令文本将受到限制。 具体来说，命令文本只能是返回单个行集结果的单个 SELECT 语句，或实现返回单个行集结果的单个 SELECT 语句的存储过程。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "81300274"
   
  若要使用某一类型的游标模型，请找到对应于该游标模型的列，并查找在此列中值为“T”的所有行集属性。 将这些行集属性设置为 VARIANT_TRUE 即可使用特定游标模型。 可以将值为“-”的行集属性设置为 VARIANT_TRUE 或 VARIANT_FALSE。  
   
-|行集属性/游标模型|默认<br /><br /> result<br /><br /> set<br /><br /> (RO)|快速<br /><br /> 只<br /><br /> 进<br /><br /> (RO)|Static<br /><br /> (RO)|Keyset<br /><br /> 驱动 <br /><br /> (RO)|  
+|行集属性/游标模型|默认<br /><br /> result<br /><br /> set<br /><br /> (RO)|快速<br /><br /> 只<br /><br /> （仅限）<br /><br /> (RO)|静态<br /><br /> (RO)|Keyset<br /><br /> 驱动 <br /><br /> (RO)|  
 |--------------------------------------|-------------------------------------------|--------------------------------------------|-----------------------|----------------------------------|  
 |DBPROP_SERVERCURSOR|F|T|T|T|  
 |DBPROP_DEFERRED|F|F|-|-|  
@@ -147,7 +147,7 @@ ms.locfileid: "81300274"
  从这组指定的行集属性，获得在以前的表中列出的属性的子集。 根据每个行集属性的必需（T、F）或可选 (-) 标志值，将这些属性划分到两个子组中。 对于每个游标模型，从第一个表开始，并从左向右移动，将两个子组中属性的值与相应列中相应属性的值进行比较。 将选择与必需的属性完全匹配以及与可选的属性有最少不匹配数的游标模型。 如果有多个游标模型，则选择最左侧的游标模型。  
   
 ## <a name="sql-server-cursor-block-size"></a>SQL Server 游标块大小  
- 当[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]游标支持[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 OLE DB 提供程序行集时， **IRowset：： GetNextRows**或**IRowsetLocate：： GetRowsAt**方法的行句柄数组参数中的元素数目将定义游标块大小。 该数组中的控点指示的行是游标块的成员。  
+ 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 游标支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本机客户端 OLE DB 提供程序行集时， **IRowset：： GetNextRows**或**IRowsetLocate：： GetRowsAt**方法的行句柄数组参数中的元素数目将定义游标块大小。 该数组中的控点指示的行是游标块的成员。  
   
  对于支持书签的行集，游标块的成员由通过 IRowsetLocate::GetRowsByBookmark 方法检索到的行控点进行定义****。  
   

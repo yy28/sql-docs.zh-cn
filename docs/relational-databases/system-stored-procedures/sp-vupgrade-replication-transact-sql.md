@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d2c0ed66-07d1-4adc-82e5-a654376879bc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8c63f54756d3bde1ab3c79a0beee9cc06b709d05
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: aa15ada3a85a828133ca68a3c3c8ee43e365b344
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82808523"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722957"
 ---
 # <a name="sp_vupgrade_replication-transact-sql"></a>sp_vupgrade_replication (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   升级复制服务器时由安装程序激活。 根据需要升级架构和系统数据，以支持当前产品级别上的复制。 在系统和用户数据库中创建新的复制系统对象。 此存储过程在要发生复制升级的计算机上执行。  
   
@@ -40,7 +40,7 @@ sp_vupgrade_replication [ [@login=] 'login' ]
     [ , [ @security_mode= ] security_mode ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @login = ] 'login'`在分发数据库中创建新的系统对象时要使用的系统管理员登录名。 login 的数据类型为 sysname，默认值为 NULL******。 如果*security_mode*设置为**1**（这是 Windows 身份验证），则不需要此参数。  
   
 > [!NOTE]  

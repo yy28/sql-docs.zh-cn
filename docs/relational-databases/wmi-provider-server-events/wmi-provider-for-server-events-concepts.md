@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 80767fe0-32ac-406a-81a0-8212cd6ce7e4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 055c2cc30f4df8f3a7c2b1ddf3b00b16e0362200
-ms.sourcegitcommit: bf5e9cb3a2caa25d0a37f401b3806b7baa5adea8
+ms.openlocfilehash: 4c66bed154672f9b33565355a901c4f27d328ac6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85295350"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722706"
 ---
 # <a name="wmi-provider-for-server-events-concepts"></a>WMI Provider for Server Events 的概念
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
   利用 WMI Provider for Server Events，可以使用 Windows Management Instrumentation (WMI) 监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中的事件。  
   
 ## <a name="in-this-section"></a>本节内容  

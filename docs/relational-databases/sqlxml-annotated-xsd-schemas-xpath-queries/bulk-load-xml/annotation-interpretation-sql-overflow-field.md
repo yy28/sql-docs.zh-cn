@@ -17,22 +17,22 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e8909a0eee54667ea74af44e774bb5262599084b
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: 3b6ba41157e7e13651eb5810502a41e7c8abde67
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689237"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724698"
 ---
 # <a name="annotation-interpretation---sqloverflow-field"></a>批注解释 - sql:overflow-field
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   在架构中，可以将某列标识为溢出列，以接收 XML 文档中所有未用完的数据。 此列是使用**sql：溢出字段**批注在架构中指定的。 可能有多个溢出列。  
   
  每当有**sql：溢出字段**批注定义的 XML 节点（元素或属性）进入范围时，溢出列就会激活并接收未用完的数据。 节点离开作用域时，溢出列将不再活动，XML 大容量加载将激活上一个溢出字段（如果有）。  
   
  由于它在溢出列中存储数据，XML 大容量加载还会存储为其定义了**sql：溢出字段**的父元素的开始标记和结束标记。  
   
- 例如，下面的架构描述>和** \< CustOrder>** 元素的** \< 客户**。 上述每个元素都标识一个溢出列：  
+ 例如，下面的架构描述了 **\<Customers>** 和 **\<CustOrder>** 元素。 上述每个元素都标识一个溢出列：  
   
 ```  
 <?xml version="1.0" ?>  
@@ -76,9 +76,9 @@ ms.locfileid: "83689237"
 </xsd:schema>  
 ```  
   
- 在架构中， ** \< Customer>** 元素映射到 Customer 表， ** \< Order>** 元素映射到 CustOrder 表。  
+ 在架构中， **\<Customer>** 元素映射到 "参与表" 表， **\<Order>** 元素映射到 CustOrder 表。  
   
- ** \< Customer>** 和** \< Order>** 元素都标识溢出列。 因此，XML 大容量加载将 Customer 表的 "溢出" 列中的** \< Customer>** 元素的所有未用子元素和属性，以及 CustOrder 表的溢出列中** \< Order>** 元素的所有未用子元素和属性。  
+ **\<Customer>** 和元素都 **\<Order>** 标识溢出列。 因此，XML 大容量加载会将元素的所有未用完的子元素和属性保存 **\<Customer>** 在 "参与表" 的 "溢出" 列中，并将元素的所有未用完的子元素和属性保存 **\<Order>** 在 CustOrder 表的溢出列中。  
   
 ### <a name="to-test-a-working-sample"></a>测试工作示例  
   

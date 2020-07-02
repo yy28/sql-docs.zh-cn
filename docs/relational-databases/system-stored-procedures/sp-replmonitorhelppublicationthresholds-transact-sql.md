@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: d6b1aa4b-3369-4255-a892-c0e5cc9cb693
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ef69c7a4b9c0284772204981e8d01c793a683e19
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ebf0d2071d0687535479d8899c6f7c9b0f6b1eec
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834263"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720197"
 ---
 # <a name="sp_replmonitorhelppublicationthresholds-transact-sql"></a>sp_replmonitorhelppublicationthresholds (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   返回为所监视发布设置的阈值度量指标。 在分发服务器的分发数据库上执行此存储过程，用于监视复制。  
   
@@ -41,7 +41,7 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
     [ , [ @thresholdmetricname = ] 'thresholdmetricname'  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publisher = ] 'publisher'`发布服务器的名称。 *发布服务器*的**sysname**，无默认值。  
   
 `[ @publisher_db = ] 'publisher_db'`已发布数据库的名称。 *publisher_db* **sysname**，无默认值。  
@@ -50,7 +50,7 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
   
 `[ @publication_type = ] publication_type`如果发布的类型为。 *publication_type*为**int**，可以是下列值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**0**|事务发布。|  
 |**1**|快照发布。|  
@@ -63,7 +63,7 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
 |-----------------|---------------|-----------------|  
 |**metric_id**|**int**|复制性能度量指标的 ID，可为下列值之一。<br /><br /> **1expiration** -监视对事务发布的订阅是否即将过期。<br /><br /> **2latency** -监视对事务发布的订阅的性能。<br /><br /> **4mergeexpiration** -监视对合并发布的订阅是否即将过期。<br /><br /> **5mergeslowrunduration** -监视通过低带宽（拨号）连接进行的合并同步的持续时间。<br /><br /> **6mergefastrunduration** -监视通过高带宽（LAN）连接进行的合并同步的持续时间。<br /><br /> **7mergefastrunspeed** -监视通过高带宽（LAN）连接进行的合并同步的同步速率。<br /><br /> **8mergeslowrunspeed** -监视通过低带宽（拨号）连接进行的合并同步的同步速率。|  
 |**title**|**sysname**|复制性能度量指标的名称。|  
-|**value**|**int**|性能度量指标的阈值。|  
+|value|**int**|性能度量指标的阈值。|  
 |**shouldalert**|**bit**|如果在指标超过此发布定义的阈值时是否应生成警报，则为;如果值为**1** ，则表示应引发警报。|  
 |**isenabled**|**bit**|如果为此发布的此复制性能指标启用了监视，则为;值为**1**表示启用监视。|  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 745b265b-86e8-4399-b928-c6969ca1a2c8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9dd52e6d2e4bf8a1a099ea2391a2c6ce2d6decdc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: dee2cdf797bb3336bdf2645c42435ae441c63607
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827721"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724556"
 ---
 # <a name="sp_help_downloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   列出所提供作业的**sysdownloadlist**系统表中的所有行，如果未指定作业，则列出所有行。  
   
@@ -45,7 +45,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
      [ , [ @date_posted = ] date_posted ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @job_id = ] job_id`要为其返回信息的作业标识号。 *job_id*的值为**uniqueidentifier**，默认值为 NULL。  
   
 `[ @job_name = ] 'job_name'`作业的名称。 *job_name*的默认值为**sysname**，默认值为 NULL。  
@@ -90,7 +90,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**source_server**|**nvarchar(30)**|发出指令的服务器的计算机名。 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本7.0 中，这始终是主服务器（MSX）的计算机名。|  
 |**operation_code**|**nvarchar(4000)**|指令的操作代码。|  
 |**object_name**|**sysname**|受指令影响的对象。|  
-|**object_id**|**uniqueidentifier**|受指令影响的对象的标识号（对于作业对象为**job_id** ，对于服务器对象则为0x00，或特定于**operation_code**的数据值。|  
+|object_id|**uniqueidentifier**|受指令影响的对象的标识号（对于作业对象为**job_id** ，对于服务器对象则为0x00，或特定于**operation_code**的数据值。|  
 |**target_server**|**nvarchar(30)**|下载此指令的目标服务器。|  
 |**error_message**|**nvarchar(1024)**|目标服务器处理此指令时，遇到问题而发出的错误消息（如果有）。<br /><br /> 注意：任何错误消息会阻止目标服务器进一步下载。|  
 |**date_posted**|**datetime**|指令发布到表的日期。|  

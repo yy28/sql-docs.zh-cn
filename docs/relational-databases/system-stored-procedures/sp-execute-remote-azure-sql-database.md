@@ -15,15 +15,15 @@ ms.assetid: ca89aa4c-c4c1-4c46-8515-a6754667b3e5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 32655955bc150a57a6f15ebccdcf30187d3128fe
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9d257f5b52c6dfea82868b69570f2655675bb7ca
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820542"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720283"
 ---
 # <a name="sp_execute_remote-azure-sql-database"></a>sp_execute_remote（Azure SQL 数据库）
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   [!INCLUDE[tsql](../../includes/tsql-md.md)]对单个远程 AZURE SQL 数据库或在水平分区方案中用作分片的一组数据库执行语句。  
   
@@ -42,7 +42,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  [ \@ data_source_name =] *datasourcename*  
  标识执行语句的外部数据源。 请参阅[CREATE EXTERNAL DATA SOURCE &#40;transact-sql&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)。 外部数据源的类型可以是 "RDBMS" 或 "SHARD_MAP_MANAGER"。  
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 356a7b8a-ae53-4fb5-86ee-fcfddbf23ddd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eba554a2472a17f67d0b03faceb8d546da4996c3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b86fd5bd04c41d10437a8a0f7bcc21b61ab22fef
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831053"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720232"
 ---
 # <a name="sp_lookupcustomresolver-transact-sql"></a>sp_lookupcustomresolver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   返回在分发服务器上注册的基于 COM 的自定义冲突解决程序组件的业务逻辑处理程序或类标识符 (CLSID) 值的相关信息。 此存储过程在发布服务器上对发布数据库执行。  
   
@@ -41,7 +41,7 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
     [ , [ @publisher = ] 'publisher' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @article_resolver = ] 'article_resolver'`指定正在注销的自定义业务逻辑的名称。 *article_resolver*为**nvarchar （255）**，无默认值。 如果被删除的业务逻辑是 COM 组件，则此参数是该组件的友好名称。 如果业务逻辑是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 程序集，则此参数是该程序集的名称。  
   
 `[ @resolver_clsid = ] 'resolver_clsid' OUTPUT`与*article_resolver*参数中指定的自定义业务逻辑的名称关联的 COM 对象的 CLSID 值。 *resolver_clsid*为**nvarchar （50）**，默认值为 NULL。  

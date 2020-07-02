@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 73b33c56-2bff-446a-b495-ae198ad74db1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6e0f410a73d010d2931cfda2e87a4a4b4cbc1c64
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8e3ca89ab5974dbe53b12a2b5b369958ab38755c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832496"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720168"
 ---
 # <a name="sysmail_configure_sp-transact-sql"></a>sysmail_configure_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   更改数据库邮件的配置设置。 使用**sysmail_configure_sp**指定的配置设置适用于整个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
@@ -40,7 +40,7 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
     [ , [ @description = ] 'description' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  [ **@parameter_name** =] **"**_parameter_name_**"**  
  要更改的参数的名称。  
   

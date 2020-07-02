@@ -19,15 +19,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 20fec5c2625c87b2add23738b5b9d22ccfc77c4f
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: b38ef4e89db99239759ad0809a5b4828fd1906e3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84884881"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724709"
 ---
 # <a name="annotation-interpretation---sqlmapped"></a>批注解释 - sql:mapped
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   XML 大容量加载按预期处理 XSD 架构中的**sql：映射**批注，也就是说，如果映射架构为任何元素或属性指定了**sql： mapping = "false"** ，则 xml 大容量加载不会尝试将关联的数据存储在相应的列中。  
   
  XML 大容量加载将忽略未映射的元素和属性（因为未在架构中对其进行描述，或者在带有**sql：映射 = "false"** 的 XSD 架构中批注它们）。 如果使用**sql：溢出字段**指定了这样的列，则所有未映射的数据都将进入溢出列。  

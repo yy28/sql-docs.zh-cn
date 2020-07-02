@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 085deef8-2709-4da9-bb97-9ab32effdacf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2d9cc791a0bcd01b2af64ce61771d7460eda4b21
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d27a763efe79c9ab7f4809416b7bbc57f08e4044
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830990"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720253"
 ---
 # <a name="sp_post_msx_operation-transact-sql"></a>sp_post_msx_operation (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   将操作（行）插入到**sysdownloadlist**系统表中，以便下载和执行目标服务器。  
   
@@ -44,10 +44,10 @@ sp_post_msx_operation
      [ , [ @schedule_uid = ] schedule_uid ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @operation = ] 'operation'`已发布操作的操作类型。 *操作*为**varchar （64）**，无默认值。 有效的操作取决于*object_type*。  
   
-|对象类型|操作|  
+|对象类型|Operation|  
 |-----------------|---------------|  
 |**任务**|INSERT<br /><br /> UPDATE<br /><br /> DELETE<br /><br /> START<br /><br /> STOP|  
 |**服务**|RE-ENLIST<br /><br /> DEFECT<br /><br /> SYNC-TIME<br /><br /> SET-POLL|  

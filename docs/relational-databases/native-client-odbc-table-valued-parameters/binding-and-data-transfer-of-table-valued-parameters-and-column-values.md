@@ -13,21 +13,21 @@ ms.assetid: 0a2ea462-d613-42b6-870f-c7fa086a6b42
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3b7eecfdac3d42b7a3d8d66ffe1f8ac68652230f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2581625d9b86badd1cbfd36a0f1d072d0412d8ff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304491"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722259"
 ---
 # <a name="binding-and-data-transfer-of-table-valued-parameters-and-column-values"></a>表值参数和列值的绑定及数据传输
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   与其他参数类似，表值参数在传递到服务器之前必须进行绑定。 应用程序绑定表值参数的方式与绑定其他参数的方式相同：通过使用 SQLBindParameter 或对 SQLSetDescField 或 SQLSetDescRec 的等效调用。 表值参数的服务器数据类型为 SQL_SS_TABLE。 C 类型可以指定为 SQL_C_DEFAULT 或 SQL_C_BINARY。  
   
  在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本中，只支持输入表值参数。 因此，任何将 SQL_DESC_PARAMETER_TYPE 设置为 SQL_PARAM_INPUT 之外的值的尝试，都将返回具有 SQLSTATE = HY105 和消息“参数类型无效”的 SQL_ERROR。  
   
- 可使用属性 SQL_CA_SS_COL_HAS_DEFAULT_VALUE 为整个表值参数列分配默认值。 但是，不能使用 SQLBindParameter 中*StrLen_or_IndPtr*的 SQL_DEFAULT_PARAM 为单独的表值参数列值分配默认值。 不能将表值参数设置为默认值，方法是使用*StrLen_or_IndPtr* with SQLBindParameter 中的 SQL_DEFAULT_PARAM。 如果未遵循这些规则，则 SQLExecute 或 SQLExecDirect 将返回 SQL_ERROR。 将使用 SQLSTATE = 07S01 和消息 "参数\<p> 使用默认参数无效" 生成诊断记录，其中\<p> 是查询语句中 TVP 的序号。  
+ 可使用属性 SQL_CA_SS_COL_HAS_DEFAULT_VALUE 为整个表值参数列分配默认值。 但是，不能使用 SQLBindParameter 中*StrLen_or_IndPtr*的 SQL_DEFAULT_PARAM 为单独的表值参数列值分配默认值。 不能将表值参数设置为默认值，方法是使用*StrLen_or_IndPtr* with SQLBindParameter 中的 SQL_DEFAULT_PARAM。 如果未遵循这些规则，则 SQLExecute 或 SQLExecDirect 将返回 SQL_ERROR。 将生成一条诊断记录，其中 SQLSTATE = 07S01 和消息 "参数的默认参数使用无效 \<p> "，其中 \<p> 是查询语句中的 TVP 序号。  
   
  绑定表值参数之后，应用程序随后必须绑定每个表值参数列。 为此，应用程序首先调用 SQLSetStmtAttr，将 SQL_SOPT_SS_PARAM_FOCUS 设置为表值参数的序号。 然后，应用程序通过调用以下例程来绑定表值参数的列： SQLBindParameter、SQLSetDescRec 和 SQLSetDescField。 如果将 SQL_SOPT_SS_PARAM_FOCUS 设置为0，则会在操作常规顶级参数时还原 SQLBindParameter、SQLSetDescRec 和 SQLSetDescField 的常见影响。
  
@@ -64,7 +64,7 @@ ms.locfileid: "81304491"
   
 3.  调用 SQLSetStmtAttr，将 SQL_SOPT_SS_PARAM_FOCUS 设置为0。 此操作必须在调用 SQLExecute 或 SQLExecDirect 之前完成。 否则，将返回 SQL_ERROR，且生成具有 SQLSTATE=HY024 和消息“属性值 SQL_SOPT_SS_PARAM_FOCUS 无效(执行时必须为零)”的诊断记录。  
   
-4.  将*StrLen_or_IndPtr*或 SQL_DESC_OCTET_LENGTH_PTR 设置为无行的表值参数 SQL_DEFAULT_PARAM，或在下一次调用 SQLExecute 或 SQLExecDirect 时，如果表值参数包含行，则为要传输的行数。 由于表值参数不可为 null （尽管表值参数构成列可以为 null），因此不能将*StrLen_or_IndPtr*或 SQL_DESC_OCTET_LENGTH_PTR 设置为表值参数 SQL_NULL_DATA。 如果此值设置为无效值，则 SQLExecute 或 SQLExecDirect 将返回 SQL_ERROR，并使用 SQLSTATE = HY090 和消息 "参数\<p> 的字符串或缓冲区长度无效" 生成诊断记录，其中 p 是参数号。  
+4.  将*StrLen_or_IndPtr*或 SQL_DESC_OCTET_LENGTH_PTR 设置为无行的表值参数 SQL_DEFAULT_PARAM，或在下一次调用 SQLExecute 或 SQLExecDirect 时，如果表值参数包含行，则为要传输的行数。 由于表值参数不可为 null （尽管表值参数构成列可以为 null），因此不能将*StrLen_or_IndPtr*或 SQL_DESC_OCTET_LENGTH_PTR 设置为表值参数 SQL_NULL_DATA。 如果将此值设置为无效值，则 SQLExecute 或 SQLExecDirect 将返回 SQL_ERROR，并生成包含 SQLSTATE = HY090 和消息 "参数的字符串或缓冲区长度无效" 的诊断记录 \<p> ，其中 p 是参数号。  
   
 5.  调用 SQLExecute 或 SQLExecDirect。  
   

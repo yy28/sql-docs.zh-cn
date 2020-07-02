@@ -17,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: a86eb4f5-1f7b-493e-af55-3d15cf878228
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 60b6557bdc8db86ef1d8092220fb91e7e506193f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 359c039f0e3534628483bd866200f5f1056cc378
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820043"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725372"
 ---
 # <a name="syspublications-transact-sql"></a>syspublications (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   数据库内定义的每个发布在表中对应一行。 该表存储在发布数据库中。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**2008**|**nvarchar(255)**|发布的说明项。|  
-|**name**|**sysname**|与发布关联的唯一名称。|  
+|name|**sysname**|与发布关联的唯一名称。|  
 |**pubid**|**int**|为发布提供唯一 ID 的标识列。|  
 |**repl_freq**|**tinyint**|复制频率：<br /><br /> **0** = 基于事务。<br /><br /> **1** = 计划的表刷新。|  
 |**status**|**tinyint**|状态：<br /><br /> **0** = 非活动。<br /><br /> **1** = 活动。|  

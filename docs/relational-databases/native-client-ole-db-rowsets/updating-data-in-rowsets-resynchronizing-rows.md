@@ -16,17 +16,17 @@ ms.assetid: d2d30505-a878-4aa9-b821-53d8118a45a5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 44e31275a6eb3ab728d1a9d7280a3d77404f7248
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f96fcafcc4a18355f0431e6f62f9faa9646400cf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300245"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724806"
 ---
 # <a name="updating-data-in-rowsets---resynchronizing-rows"></a>更新行集中的数据 - 重新同步行
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  Native Client OLE DB 提供程序仅支持支持[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]游标的行集上的**IRowsetResynch。** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] IRowsetResynch 并不是需要时就可用****。 使用者在打开行集前必须请求该接口。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序仅**IRowsetResynch**支持支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 游标的行集上的 IRowsetResynch。 IRowsetResynch 并不是需要时就可用****。 使用者在打开行集前必须请求该接口。  
   
 ## <a name="see-also"></a>另请参阅  
  [更新行集中的数据](../../relational-databases/native-client-ole-db-rowsets/updating-data-in-rowsets.md)  

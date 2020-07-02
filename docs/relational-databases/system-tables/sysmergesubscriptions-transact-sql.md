@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6adc78da-991d-4c08-98c3-ecb4762e0e99
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0722ccd8c4f18fd16ed4abdb3630e80bc7d5de53
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9c4cef3b1a088f0ae0a085fd4769a8e252713df4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824772"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725394"
 ---
 # <a name="sysmergesubscriptions-transact-sql"></a>sysmergesubscriptions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   每个已知订阅服务器在表中对应一行，并且该表是发布服务器的本地表。 该表存储在发布数据库和订阅数据库中。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "82824772"
 |subscriber_type|**int**|订阅服务器的类型：<br /><br /> **1** = 全局。<br /><br /> **2** = 本地。<br /><br /> **3** = 匿名。|  
 |subscription_type|**int**|订阅的类型：<br /><br /> **0** = 推送。<br /><br /> **1** = 请求。<br /><br /> **2** = 匿名。|  
 |sync_type|**tinyint**|同步类型：<br /><br /> **1** = 自动。<br /><br /> **2** = 不同步。|  
-|说明|**nvarchar(255)**|对订阅的简短说明。|  
+|description|**nvarchar(255)**|对订阅的简短说明。|  
 |priority|**real**|指定订阅优先级并允许实现基于优先级的冲突解决。 对于所有本地或匿名订阅，等于**0.00** 。|  
 |recgen|**bigint**|上次接收的生成的编号。|  
 |recguid|**uniqueidentifier**|上次接收的生成的唯一 ID。|  

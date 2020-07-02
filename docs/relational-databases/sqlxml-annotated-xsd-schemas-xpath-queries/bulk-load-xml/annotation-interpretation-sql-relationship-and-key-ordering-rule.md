@@ -16,15 +16,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9963058caa3c027a294fac5828b39990bb344f5f
-ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
+ms.openlocfilehash: 788dd201372524b85ce3cd13d998f5f09a1ca287
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84215727"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724694"
 ---
 # <a name="annotation-interpretation---sqlrelationship-and-key-ordering-rule"></a>批注解释 - sql:relationship 和键排序规则
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   由于 XML 大容量加载在其节点进入作用域时会生成记录，并在其节点退出作用域时会将这些记录发送到 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，因此，有关记录的数据必须存在于节点的作用域中。  
   
  请考虑下面的 XSD 架构，其中和元素之间的一对多关系 **\<Customer>** **\<Order>** （一个客户可以放置多个订单）是使用元素指定的 **\<sql:relationship>** ：  

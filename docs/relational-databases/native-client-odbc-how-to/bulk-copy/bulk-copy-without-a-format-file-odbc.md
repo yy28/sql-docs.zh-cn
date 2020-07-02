@@ -16,15 +16,15 @@ ms.assetid: 4ee969a7-44ba-40d0-b9ab-8306f1a2b19d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2f2f1115971df37fe12177ec805898eea79744e8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a37c345f3d643a031bb53bad453268b45bd0258c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299587"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725128"
 ---
 # <a name="bulk-copy-without-a-format-file-odbc"></a>在不使用格式化文件的情况下进行大容量复制 (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   此示例显示了如何使用大容量复制函数创建本机模式数据文件，而不带格式化文件。 此示例是面向 ODBC 3.0 版或更高版本开发的。  
   

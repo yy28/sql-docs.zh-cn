@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a31562c5-358e-4cfc-a72d-b3faccc53851
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dc783b97430f5ddc456ebba82dd76a50c6d3cd2a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 90bd083c621bb99677c70aaceaab4038b9c15d9e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824062"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724635"
 ---
 # <a name="sysmail_faileditems-transact-sql"></a>sysmail_faileditems (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   对于状态为 "**失败**" 的每个数据库邮件消息都包含一行。 使用该视图可确定未成功发送的消息。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "82824062"
 |**者**|**varchar(max)**|消息收件人的电子邮件地址。|  
 |**copy_recipients**|**varchar(max)**|接收消息副本的用户的电子邮件地址。|  
 |**blind_copy_recipients**|**varchar(max)**|接收消息副本但其姓名未出现在消息标头中的用户的电子邮件地址。|  
-|**subject**|**nvarchar （510）**|消息的主题行。|  
+|**主题**|**nvarchar （510）**|消息的主题行。|  
 |**body**|**varchar(max)**|消息正文。|  
 |**body_format**|**varchar （20）**|消息正文的格式。 可能值为 TEXT 和 HTML。|  
 |**importance**|**varchar （6）**|消息的**重要性**参数。|  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 6c8db22d-2e4c-4b7c-ac5a-8762ef1b175b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7bd195499313eaa24afd12ab424ae3bf832841b1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e01cc51b12d92fefbca760541d433fbf27bb0191
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824894"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724646"
 ---
 # <a name="syscollector_execution_log_full-transact-sql"></a>syscollector_execution_log_full (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   提供有关在执行日志已满时收集组或包的信息。  
   

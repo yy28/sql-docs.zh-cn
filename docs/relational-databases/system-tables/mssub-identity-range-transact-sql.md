@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 26e20d28-14ed-44fc-af3b-4de386de4bb8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 965d8530b38aad7d01d9735e603eb3c3a7be0876
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0e7d5c15bd0ff4a20b4b8fe93719c573e03e2cd8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820990"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722872"
 ---
 # <a name="mssub_identity_range-transact-sql"></a>MSsub_identity_range (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **MSsub_identity_range**表提供对订阅的标识范围管理支持。 此表存储在订阅数据库中。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "82820990"
 |**objid**|**int**|包含由复制管理的标识列的表的 ID。|  
 |**range**|**bigint**|控制将在调整时在订阅服务器中指派的连续标识值的范围大小。|  
 |**last_seed**|**bigint**|当前范围的下限。|  
-|**阀**|**int**|用于控制分发代理何时分配新标识范围的百分比值。 当使用 "*阈值*" 中指定的百分比值时，分发代理将创建一个新的标识范围。|  
+|**threshold**|**int**|用于控制分发代理何时分配新标识范围的百分比值。 当使用 "*阈值*" 中指定的百分比值时，分发代理将创建一个新的标识范围。|  
   
 ## <a name="see-also"></a>另请参阅  
  [Transact-sql&#41;&#40;复制表](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

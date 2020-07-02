@@ -13,15 +13,15 @@ ms.assetid: b9c1ddce-1dd9-409d-a414-8b544d616273
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d1e931a24462711a742b8008eb04538e0e518d55
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 00f8e05a901c5c2729907ec64ae5cd14a8c23413
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305355"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725010"
 ---
 # <a name="profiling-odbc-driver-performance-data---log-long-running-queries"></a>分析 ODBC 驱动程序性能数据 - 记录长时间运行的查询
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   此示例显示用于记录长时间运行查询的特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驱动程序的选项。 此示例在运行时将创建 Odbcqry.log，其中包含执行时间超过应用程序所设定间隔的查询的列表。 IA64 平台不支持此示例。 此示例是面向 ODBC 3.0 版或更高版本开发的。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "81305355"
   
 3.  单击要记录其长时间运行的查询的数据源。  
   
-4.  单击 **“配置”**。  
+4.  单击 **“配置”** 。  
   
 5.  在 Microsoft SQL Server 配置 DSN 向导 "中，导航到具有 **" 将长时间运行的查询保存到日志文件**"的页面。  
   

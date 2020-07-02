@@ -16,23 +16,23 @@ ms.assetid: 3a916cc7-f352-42cb-8b83-f78e06cef991
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4782c61c2f150e36c9632d09170468229c238cbb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4ad277bb18a8ba549b9e5331fd9dcda7a774f093
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305451"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719783"
 ---
 # <a name="cursor-types"></a>游标类型
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  ODBC 定义 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序支持的四种游标类型。 这些游标的功能不同于检测对结果集及其消耗的资源（如**tempdb**中的内存和空间）的更改。 游标仅当尝试重新提取行时才会检测到对这些行的更改；数据源无法通知游标对当前提取行的更改。 游标检测并非由游标执行的更改的功能也受事务隔离级别的影响。  
+  ODBC 定义 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序支持的四种游标类型。 这些游标的功能不同于检测对结果集及其消耗的资源（如**tempdb**中的内存和空间）的更改。 游标仅当尝试重新提取行时才会检测到对这些行的更改；数据源无法通知游标对当前提取行的更改。 游标检测并非由游标执行的更改的功能也受事务隔离级别的影响。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持以下四种 ODBC 游标类型：  
   
 -   只进游标不支持滚动；它们只支持游标按从头到尾的顺序提取行。  
   
--   静态游标在打开游标时在**tempdb**中生成。 它们始终显示打开游标时的结果集。 它们从不会反映对数据的更改。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 静态游标始终是只读的。 由于静态服务器游标是在**tempdb**中作为工作表生成的，因此游标结果集的大小不能超过所允许的最大行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]大小。  
+-   静态游标在打开游标时在**tempdb**中生成。 它们始终显示打开游标时的结果集。 它们从不会反映对数据的更改。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 静态游标始终是只读的。 由于静态服务器游标是在**tempdb**中作为工作表生成的，因此游标结果集的大小不能超过所允许的最大行大小 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 -   打开由键集驱动的游标时，该游标的结果集中各行的成员身份和顺序是固定的。 可通过游标显示对非键列的更改。  
   

@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 8c16ecdf-68f4-4a2a-b594-086e3344e58a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8ed45ac6fd511d2024cc11916fe70980a7a6a065
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f1b75961f4d41a87e86c9a103a62ca128ce443e3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82816047"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720429"
 ---
 # <a name="messages-for-errors-catalog-views---sysmessages"></a>（错误）消息目录视图 - sys.messages
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   系统中的错误消息的每个**message_id**或**language_id**都包含一行，适用于系统定义消息和用户定义的消息。 有关详细信息，请参阅 [sp_addmessage (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)。  
    
@@ -42,7 +42,7 @@ ms.locfileid: "82816047"
 |**text**|**nvarchar(2048)**|对应的**language_id**处于活动状态时使用的消息文本。|  
   
 ## <a name="permissions"></a>权限  
- 要求 **公共** 角色具有成员身份。  有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
+ 要求 **公共** 角色具有成员身份。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [THROW (Transact-SQL)](../../t-sql/language-elements/throw-transact-sql.md)   

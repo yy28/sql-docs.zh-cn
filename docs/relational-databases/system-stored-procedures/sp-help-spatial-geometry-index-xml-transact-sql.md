@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9668ae6d-9ed5-418e-bb9a-9e7b66f7dd16
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9e7eb2e007191088a0259360924b2f5f931dec0a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1f29fd66b10c9e1f18203693a2b1474781e8065a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304895"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720276"
 ---
 # <a name="sp_help_spatial_geometry_index_xml-transact-sql"></a>sp_help_spatial_geometry_index_xml (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   返回关于**几何图形**空间索引的一组指定属性的名称和值。 可以选择是返回索引的一组核心属性还是返回索引的所有属性。  
   
@@ -44,7 +44,7 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
      [ ,.[ @xml_output = ] 'xml_output' ]   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  请参阅[空间索引存储过程的参数和属性](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)。  
   
 ## <a name="properties"></a>属性  
@@ -57,7 +57,7 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
  包含 NULL 值的属性未包含在 XML 返回集中。  
   
 ## <a name="example"></a>示例  
- 下面的示例使用`sp_help_spatial_geometry_index_xml`来调查** \@qs**中给定查询示例的表**geometry_col**上定义的空间索引**SIndx_SpatialTable_geometry_col2** 。 此示例在一个显示了所选属性的名称和值的 XML 片段中返回指定索引的核心属性。  
+ 下面的示例使用 `sp_help_spatial_geometry_index_xml` 来调查** \@ qs**中给定查询示例的表**geometry_col**上定义的空间索引**SIndx_SpatialTable_geometry_col2** 。 此示例在一个显示了所选属性的名称和值的 XML 片段中返回指定索引的核心属性。  
   
  然后，对结果集运行[XQuery](../../xquery/xquery-basics.md) ，返回特定属性。  
   

@@ -13,15 +13,15 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 54ab88302c14e9dc0aa405756bdf2e5b1ba75be5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: efa000212b64f1fb98523cfad163762b70b9db33
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304385"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724939"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>在客户端和服务器之间执行的转换
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   本主题说明在使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 编写的客户端应用程序与 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] （或更高版本）之间执行的日期/时间转换。  
   
@@ -39,19 +39,19 @@ ms.locfileid: "81304385"
 |DBTIMESTAMP|1,2|1,3,4|1,4,10|1,10,14|1,10,15|1,10|1,5,10|1,10,11|1,10,11|1,10<br /><br /> datetime2(7)|  
 |DBTIMESTAMPOFFSET|1,2,8|1,3,4,8|1,4,8,10|1,8,10,14|1,8,10,15|1,8,10|1,10|1,10,11|1,10,11|1,10<br /><br /> datetimeoffset(7)|  
 |FILETIME|1,2|1,3,4|1,4,13|1,13|1,13|1,13|1,5,13|1,13|1,10|1,13<br /><br /> datetime2(3)|  
-|BYTES|-|-|-|-|-|-|-|不适用|空值|空值|  
-|VARIANT|1|1|1|1,10|1,10|1,10|1,10|不适用|空值|1,10|  
-|SSVARIANT|1,16|1,16|1,16|1,10,16|1,10,16|1,10,16|1,10,16|不适用|空值|1,16|  
-|BSTR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|不适用|空值|空值|  
-|STR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|不适用|空值|空值|  
-|WSTR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|不适用|空值|空值|  
+|BYTES|-|-|-|-|-|-|-|不可用|空值|空值|  
+|VARIANT|1|1|1|1,10|1,10|1,10|1,10|不可用|空值|1,10|  
+|SSVARIANT|1,16|1,16|1,16|1,10,16|1,10,16|1,10,16|1,10,16|不可用|空值|1,16|  
+|BSTR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|不可用|空值|空值|  
+|STR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|不可用|空值|空值|  
+|WSTR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|不可用|空值|空值|  
   
 ## <a name="key-to-symbols"></a>符号含义  
   
 |符号|含义|  
 |------------|-------------|  
 |-|不支持任何转换。 如果在调用 IAccessor::CreateAccessor 时验证绑定，则在 rgStatus** 中返回 DBBINDSTATUS_UPSUPPORTEDCONVERSION。 当延迟取值函数验证时，则设置 DBSTATUS_E_BADACCESSOR。|  
-|不适用|不适用。|  
+|不可用|不适用。|  
 |1|如果提供的数据无效，则设置 DBSTATUS_E_CANTCONVERTVALUE。 在应用转换前验证输入数据，因此即使后续转换忽略某一部分，该部分仍然有效，以使转换成功完成。|  
 |2|忽略时间字段。|  
 |3|秒的小数部分必须为零，或者设置 DBSTATUS_E_DATAOVERFLOW。|  

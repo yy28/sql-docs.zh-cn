@@ -13,15 +13,15 @@ ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8e5147a8eef08c70605bf13f6c1cb04887d0d926
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a73fbe7709e30156f198205a21644153fad10240
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301873"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725183"
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>与 SQL Server 早期版本的增强日期和时间类型行为 (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   本主题说明当使用增强的日期和时间功能的客户端应用程序与早于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本通信时的预期行为，以及使用 Microsoft 数据访问组件、Windows 数据访问组件或早于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Native Client 版本的客户端应用程序向支持增强的日期和时间功能的服务器发送命令时的预期行为。  
   
@@ -32,23 +32,23 @@ ms.locfileid: "81301873"
   
  由 SQLDescribeCol、SQLDescribeParam、SQGetDescField 和 SQLColAttribute 返回的语句元数据将返回与所有方面的下级类型一致的元数据，包括类型名称。 此类下级类型的一个示例是**nvarchar**。  
   
- 当下级客户端应用程序针对[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] （或更高版本）服务器运行时，如果已对日期/时间类型进行架构更改，则预期行为如下所示：  
+ 当下级客户端应用程序针对 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] （或更高版本）服务器运行时，如果已对日期/时间类型进行架构更改，则预期行为如下所示：  
   
 |SQL Server 2005 类型|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]（或更高版本）类型|ODBC 客户端类型|结果转换（SQL 到 C）|参数转换（C 到 SQL）|  
 |--------------------------|----------------------------------------------|----------------------|------------------------------------|---------------------------------------|  
-|Datetime|日期|SQL_C_TYPE_DATE|OK|确定（1）|  
+|datetime|Date|SQL_C_TYPE_DATE|确定|确定（1）|  
 |||SQL_C_TYPE_TIMESTAMP|时间字段设置为零。|成功 (2)<br /><br /> 如果时间字段非零，则失败。 适用于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
-||Time(0)|SQL_C_TYPE_TIME|OK|确定（1）|  
+||Time(0)|SQL_C_TYPE_TIME|确定|确定（1）|  
 |||SQL_C_TYPE_TIMESTAMP|日期字段设置为当前日期。|成功 (2)<br /><br /> 忽略日期。 如果秒的小数部分非零，则将失败。 适用于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
 ||Time(7)|SQL_C_TIME|失败-时间文本无效。|确定（1）|  
 |||SQL_C_TYPE_TIMESTAMP|失败-时间文本无效。|确定（1）|  
-||Datetime2 （3）|SQL_C_TYPE_TIMESTAMP|OK|确定（1）|  
-||Datetime2 （7）|SQL_C_TYPE_TIMESTAMP|OK|由客户端转换将值舍入到 1/300 秒。|  
-|Smalldatetime|日期|SQL_C_TYPE_DATE|OK|OK|  
+||Datetime2 （3）|SQL_C_TYPE_TIMESTAMP|确定|确定（1）|  
+||Datetime2 （7）|SQL_C_TYPE_TIMESTAMP|确定|由客户端转换将值舍入到 1/300 秒。|  
+|Smalldatetime|Date|SQL_C_TYPE_DATE|确定|确定|  
 |||SQL_C_TYPE_TIMESTAMP|时间字段设置为零。|成功 (2)<br /><br /> 如果时间字段非零，则失败。 适用于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
-||Time(0)|SQL_C_TYPE_TIME|OK|OK|  
+||Time(0)|SQL_C_TYPE_TIME|确定|确定|  
 |||SQL_C_TYPE_TIMESTAMP|日期字段设置为当前日期。|成功 (2)<br /><br /> 忽略日期。 如果秒的小数部分非零，则失败。<br /><br /> 适用于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
-||Datetime2(0)|SQL_C_TYPE_TIMESTAMP|OK|OK|  
+||Datetime2(0)|SQL_C_TYPE_TIMESTAMP|确定|确定|  
 |||||
 
 ## <a name="key-to-symbols"></a>符号含义  
@@ -70,7 +70,7 @@ ms.locfileid: "81301873"
 ### <a name="column-metadata-returned-by-sqlcolumns-sqlprocedurecolumns-and-sqlspecialcolumns"></a>SQLColumns、SQLProcedureColumns 和 SQLSpecialColumns 返回的列元数据  
  对于日期/时间类型将返回以下列值：  
   
-|列类型|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|列名称|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |-----------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |DATA_TYPE|SQL_WVARCHAR|SQL_WVARCHAR|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_WVARCHAR|SQL_WVARCHAR|  
 |TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
@@ -88,7 +88,7 @@ ms.locfileid: "81301873"
 ### <a name="data-type-metadata-returned-by-sqlgettypeinfo"></a>SQLGetTypeInfo 返回的数据类型元数据  
  对于日期/时间类型将返回以下列值：  
   
-|列类型|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|列名称|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |-----------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |DATA_TYPE|SQL_WVARCHAR|SQL_WVARCHAR|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_WVARCHAR|SQL_WVARCHAR|  

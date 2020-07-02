@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: fafed718-8c3c-403f-93ee-ec51fc157a6e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 26cee403b1ded39555662009fc0273a40f8bd644
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: 78511d83ad75df4fe458bb5a5b3d2d59a8636c7f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689371"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720014"
 ---
 # <a name="functions-related-to-qnames---local-name-from-qname"></a>与 QName 相关的函数 - local-name-from-QName
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
   返回一个 xs： NCNAME，它表示 *$arg*指定的 QName 的本地部分。 如果 *$arg*是空序列，则结果为空序列。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "83689371"
 fn:local-name-from-QName($arg as xs:QName?) as xs:NCName?  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *$arg*  
  它是应从中提取本地名称的 QName。  
   

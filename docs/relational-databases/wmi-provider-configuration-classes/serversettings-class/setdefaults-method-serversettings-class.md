@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 76e4cfab-4b15-4da4-bb2f-8aac6f927f79
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 86e15376bd56a439e0763e79a5c166d7023125ea
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e507eede2ba7abb036eb33f74a0d1a1ab1ba2dce
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660273"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722784"
 ---
 # <a name="setdefaults-method-serversettings-class"></a>SetDefaults 方法（ServerSettings 类）
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  设置实例[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的所有默认值，并提供覆盖现有数据的选项。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+  设置实例的所有默认值， [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 并提供覆盖现有数据的选项。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,13 +37,13 @@ object.SetDefaults(OverwriteAll)
   
 ## <a name="parts"></a>组成部分  
  *object*  
- 一个表示[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]客户端实例的[ServerSettings 类](../../../relational-databases/wmi-provider-configuration-classes/serversettings-class/serversettings-class.md)对象。  
+ 一个表示客户端实例的[ServerSettings 类](../../../relational-databases/wmi-provider-configuration-classes/serversettings-class/serversettings-class.md)对象 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 #### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
-|*OverwriteAll*|指定是否覆盖实例上的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]现有值的布尔值：如果要覆盖现有数据，则为**true** ; 否则为**false** 。|  
+|*OverwriteAll*|指定是否覆盖实例上的现有值的布尔值 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ：如果要覆盖现有数据，则为**true** ; 否则为**false** 。|  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  U**int32**值，如果服务已成功修改，则为 0; 如果不支持该请求，则为 1; 其他任何数字表示出现错误。  

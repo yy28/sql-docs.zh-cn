@@ -13,15 +13,15 @@ ms.assetid: 23cc2688-6080-497e-8151-712d10da5fef
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dbb3f4206351d7ff8aff6caec44fa35f07cb1343
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5d449e0cf945875c93ed70c4115a2258fdcd61b2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302172"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724907"
 ---
 # <a name="processing-results-how-to-topics-ole-db"></a>处理结果操作指南主题 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   OLE DB 应用程序中的处理结果包括首先确定结果集的特性，然后将数据检索至程序变量。 如果该命令执行存储过程，则还必须了解如何处理来自此存储过程的返回代码和输出参数。  
   

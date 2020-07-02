@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 2c88c015-04fc-429b-84b2-835596a28b65
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d65e533f8bc808a7f3828cad797f22441905cea8
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 9c1f313a5316059a05cb30a5af6ef7a451353a3d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84881866"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724216"
 ---
 # <a name="functions-on-string-values---contains"></a>基于字符串值的函数 - contains
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   返回 xs： boolean 类型的值，指示 *$arg 1*的值是否包含 *$arg 2*指定的字符串值。  
   
@@ -39,10 +39,10 @@ fn:contains ($arg1 as xs:string?, $arg2 as xs:string?) as xs:boolean?
  *$arg 1*  
  要测试的字符串值。  
   
- *$arg2*  
+ *$arg 2*  
  要查找的子字符串。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  如果 *$arg 2*的值是长度为零的字符串，则函数将返回**True**。 如果 *$arg 1*的值是长度为零的字符串，而 *$arg 2*的值不是长度为零的字符串，则该函数返回**False**。  
   
  如果 *$arg 1*或 *$arg 2*的值是空序列，则该参数将被视为长度为零的字符串。  

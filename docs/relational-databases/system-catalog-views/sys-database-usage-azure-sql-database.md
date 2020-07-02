@@ -20,23 +20,23 @@ ms.assetid: be6820de-60bf-4ddd-ace7-4077893d630f
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 0a0789ebd9a5aa4bd10605d69afa59a586ce75b2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4b68fbc20fb220af49036890edc2b67d1a4f7b65
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70155536"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724684"
 ---
 # <a name="sysdatabase_usage-azure-sql-database"></a>sys.database_usage (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   **注意：这仅适用于 Azure SQL 数据库 V11。**  
   
- 列出[!INCLUDE[ssSDS](../../includes/sssds-md.md)]服务器上数据库的数量、类型和持续时间。  
+ 列出服务器上数据库的数量、类型和持续时间 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 。  
   
  **Sys. database_usage**视图包含以下列。  
   
-|列名|说明|  
+|列名|描述|  
 |-----------------|-----------------|  
 |time|使用事件发生的日期。|  
 |sku|数据库的服务层类型： **Web**、 **Business**、 **Basic**、 **Standard**、 **Premium**|  

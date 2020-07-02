@@ -23,15 +23,15 @@ ms.assetid: b289c7fb-5017-4d7e-a2d3-19401e9fc4cd
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e1d9fdfcd7bcc4f86afacc75dff5b40b77bb7b2a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 00a3245009d7f7db437a990fdf5dc814d6b19f7d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304595"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724990"
 ---
 # <a name="fetching-result-data"></a>提取结果数据
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   ODBC 应用程序具有三个用于提取结果数据的选项。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "81304595"
   
  在使用 SQL_C_DEFAULT 指定 C 变量的类型时必须小心。 SQL_C_DEFAULT 指定 C 变量的类型与列或参数的 SQL 数据类型匹配。 如果为**ntext**、 **nchar**或**nvarchar**列指定了 SQL_C_DEFAULT，则会将 Unicode 数据返回到应用程序。 如果尚未对应用程序进行编码以处理 Unicode 数据，则上述操作可能导致不同的问题。 对于**uniqueidentifier** （SQL_GUID）数据类型，可能会出现相同的问题类型。  
   
- **text**、 **ntext**和**image**数据通常太大，无法放入单个程序变量，通常使用**SQLGetData**而不是**SQLBindCol**进行处理。 使用服务器游标[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时，NATIVE Client ODBC 驱动程序会经过优化，以便在提取行时不传输未绑定的**text**、 **ntext**或**image**列的数据。 在应用程序为列发出**SQLGetData**之前，不会实际从服务器中检索**text**、 **ntext**或**image**数据。  
+ **text**、 **ntext**和**image**数据通常太大，无法放入单个程序变量，通常使用**SQLGetData**而不是**SQLBindCol**进行处理。 使用服务器游标时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驱动程序会经过优化，以便在提取行时不传输未绑定的**text**、 **ntext**或**image**列的数据。 在应用程序为列发出**SQLGetData**之前，不会实际从服务器中检索**text**、 **ntext**或**image**数据。  
   
  此优化可应用于应用程序，以便用户在滚动和向下滚动时不显示**text**、 **ntext**或**image**数据。 用户选择行后，应用程序可以调用**SQLGetData**来检索**text**、 **ntext**或**image**数据。 这会为用户不选择的任何行保存**文本**、 **ntext**或**图像**数据的传输，并且可以保存非常大的数据量。  
   

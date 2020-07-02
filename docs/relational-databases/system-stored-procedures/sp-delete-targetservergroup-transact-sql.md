@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d8dd838e-64aa-419f-9ccb-ff04908cf3e4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5c3c1b629196918b4305f3748cf76a85ac634f56
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 12bdf7bcba85f4fc695a8090d44eeccfb5b58593
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830287"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720294"
 ---
 # <a name="sp_delete_targetservergroup-transact-sql"></a>sp_delete_targetservergroup (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   删除指定的目标服务器组。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "82830287"
 sp_delete_targetservergroup [ @name = ] 'name'   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @name = ] 'name'`要删除的目标服务器组的名称。 *名称*为**sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  

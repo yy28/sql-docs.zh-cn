@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 4ace57dd-b66e-4b60-a2b9-a1b0f1a0831d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 15bdca46fc62832ecd97932b1b71f999f1f80324
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: cf7943cbcef462dbdf73e72357f28e4f4e3eb20d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84524388"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724215"
 ---
 # <a name="numeric-values-functions---floor"></a>数值函数 - floor
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   返回每个片段都大于其参数值的最大数。 如果参数是一个空序列，则返回空序列。  
   
@@ -35,11 +35,11 @@ ms.locfileid: "84524388"
 fn:floor ($arg as numeric?) as numeric?  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *$arg*  
  将应用该函数的数字。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  如果 *$arg*的类型为三个数值基类型之一 **： xs： float**、 **xs： double**或**xs： decimal**，则返回类型与 *$arg*类型相同。 如果 *$arg*的类型是派生自其中一个数值类型的类型，则返回类型为基本数值类型。  
   
  如果向 fn： floor、fn：天花板或 fn： round 函数的输入为**xdt： untypedAtomic**，非类型化数据，则它将隐式转换为**xs： double**。 任何其他类型都会生成静态错误。  

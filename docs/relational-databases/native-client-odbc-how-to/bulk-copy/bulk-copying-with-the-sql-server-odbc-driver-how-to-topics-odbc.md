@@ -14,19 +14,19 @@ ms.assetid: 6037b2c2-62b5-4a9e-b36d-83e5b315eef2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 76bc7c1f39fe0cca0badcf0b768b5a65dbe6d02f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a90a9bd5e3259e80dcd16550e3553c9c3dbdaf34
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298315"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725123"
 ---
 # <a name="bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc"></a>使用 SQL Server ODBC 驱动程序进行大容量复制操作指南主题 (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   在与 Microsoft® SQL Server™ 2005 一起使用时，SQL Server ODBC 驱动程序支持由 DB-Library API 支持的相同大容量复制功能。  
   
- 有关从开始大容量复制的重大更改的信息[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]，请参阅[&#40;ODBC&#41;执行大容量复制操作](../../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)。  
+ 有关从开始大容量复制的重大更改的信息 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ，请参阅[&#40;ODBC&#41;执行大容量复制操作](../../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ee01092f-9caf-4e88-888b-ec7b84223705
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e96326c97dde209f37104e66e562b66e96c8acd3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9fb4347ca545a695f2ab1f223f564ca152ba8d0f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82809000"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723049"
 ---
 # <a name="sp_upgrade_log_shipping-transact-sql"></a>sp_upgrade_log_shipping (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Sp_upgrade_log_shipping 存储过程会自动调用，以便升级特定于日志传送的元数据。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "82809000"
 sp_upgrade_log_shipping  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  无。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -56,7 +56,7 @@ sp_upgrade_log_shipping
  要求具有 **sysadmin** 固定服务器角色的成员身份。  
   
 ## <a name="see-also"></a>另请参阅  
- [关于 &#40;SQL Server 的日志传送&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

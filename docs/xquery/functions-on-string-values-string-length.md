@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 7cd69c8b-cf2c-478c-b9a3-e0e14e1aa8aa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 40cd82dac9c33e6718e4f3bf3270a065af824115
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: 2987001d2163340d9734a9cf606dfbe009901de3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689245"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720051"
 ---
 # <a name="functions-on-string-values---string-length"></a>基于字符串值的函数 - string-length
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   返回字符串的长度（以字符为单位）。  
   
@@ -36,11 +36,11 @@ fn:string-length() as xs:integer
 fn:string-length($arg as xs:string?) as xs:integer  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *$arg*  
  要计算其长度的源字符串。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  如果 *$arg*的值是空序列，则返回**xs： integer**值0。  
   
  XQuery 函数中代理对的行为依赖于数据库兼容级别。 如果该兼容级别为 110 或更高，则每个代理对都作为单个字符计数。 对于更低的兼容级别，它们会作为两个字符计数。 有关详细信息，请参阅[ALTER DATABASE 兼容级别 &#40;transact-sql&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)和[排序规则和 Unicode 支持](../relational-databases/collations/collation-and-unicode-support.md)。  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 171501fe-4b74-4647-96c3-7691c777e01b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 58b3251160b1d60862d0621dad1372265daefb5d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a3edb7c7b7e2db67132b943bb0d37e04516c8981
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834261"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720185"
 ---
 # <a name="sp_replmonitorhelppublisher-transact-sql"></a>sp_replmonitorhelppublisher (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   为与分发服务器关联的一个或多个发布服务器返回当前状态信息。 在分发服务器的分发数据库上执行此存储过程，用于监视复制。  
   
@@ -37,7 +37,7 @@ sp_replmonitorhelppublisher [ [ @publisher = ] 'publisher' ]
     [ , [ @refreshpolicy = ] refreshpolicy ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publisher = ] 'publisher'`是要监视其状态的发布服务器的名称。 *发布服务器*的**sysname**，默认值为 NULL。 如果为 NULL，则返回使用分发服务器的所有发布服务器的信息。  
   
 `[ @refreshpolicy = ] refreshpolicy`仅限内部使用。  
@@ -46,7 +46,7 @@ sp_replmonitorhelppublisher [ [ @publisher = ] 'publisher' ]
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**器**|**sysname**|发布服务器的名称。|  
+|**publisher**|**sysname**|发布服务器的名称。|  
 |**distribution_db**|**sysname**|给定发布服务器使用的分发数据库的名称。|  
 |**status**|**int**|与此发布服务器中的发布关联的所有复制代理的最大值状态，可以是下列值之一：<br /><br /> **1** = 已启动<br /><br /> **2** = 成功<br /><br /> **3** = 正在进行<br /><br /> **4** = 空闲<br /><br /> **5** = 正在重试<br /><br /> **6** = 失败|  
 |**warning**|**int**|由属于此发布服务器上的某发布的订阅生成的最大阈值警告，可以是以下一个或多个值的“逻辑或”结果。<br /><br /> **1** = 过期-对事务发布的订阅尚未在保持期阈值内同步。<br /><br /> **2** = 滞后时间-将数据从事务发布服务器复制到订阅服务器所用的时间超过了阈值（以秒为单位）。<br /><br /> **4** = mergeexpiration-合并发布的订阅尚未在保持期阈值内同步。<br /><br /> **8** = mergefastrunduration-通过快速网络连接完成合并订阅同步所用的时间超过了阈值（以秒为单位）。<br /><br /> **16** = mergeslowrunduration-完成合并订阅同步所用的时间超过了慢速或拨号网络连接的阈值（以秒为单位）。<br /><br /> **32** = mergefastrunspeed-合并订阅的同步过程中的行传递速率未能维持快速网络连接上的阈值速率（以每秒行数为单位）。<br /><br /> **64** = mergeslowrunspeed-合并订阅的同步过程中的行传递速率未能维持慢速或拨号网络连接的阈值速率（以每秒行数为单位）。|  

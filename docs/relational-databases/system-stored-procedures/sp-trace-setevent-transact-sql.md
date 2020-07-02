@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b8c58657eda708965821c4739f76b49c558c8e76
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 387e4a0a30f5681391bb5891dc772f7c9f04790c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832567"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723084"
 ---
 # <a name="sp_trace_setevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   在跟踪中添加或删除事件或事件列。 **sp_trace_setevent**只能在已停止的现有跟踪上执行（*状态*为**0**）。 如果对不存在的或*状态*不为**0**的跟踪执行此存储过程，则将返回错误。  
   
@@ -44,7 +44,7 @@ sp_trace_setevent [ @traceid = ] trace_id
           , [ @on = ] on  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @traceid = ] trace_id`要修改的跟踪的 ID。 *trace_id*为**int**，没有默认值。 用户使用此*trace_id*值标识、修改和控制跟踪。  
   
 `[ @eventid = ] event_id`要打开的事件的 ID。 *event_id*为**int**，没有默认值。  
@@ -75,7 +75,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |28|Degree of Parallelism Event（7.0 插入）|在执行 SELECT、INSERT 或 UPDATE 语句之前发生。|  
 |29-31|保留|改用事件 28。|  
 |32|保留|保留|  
-|33|异常|指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中出现了异常。|  
+|33|例外|指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中出现了异常。|  
 |34|SP:CacheMiss|指示未在过程缓存中找到某个存储过程。|  
 |35|SP:CacheInsert|指示某个项被插入到过程缓存中。|  
 |36|SP:CacheRemove|指示从过程缓存中删除了某个项。|  
@@ -240,7 +240,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  下表列出了可以为事件添加的列。  
   
-|列号|列名称|说明|  
+|列号|列名称|描述|  
 |-------------------|-----------------|-----------------|  
 |1|**TextData**|与跟踪内捕获的事件类相关的文本值。|  
 |2|**BinaryData**|与在跟踪中捕获的事件类相关的二进制值。|  
@@ -254,9 +254,9 @@ sp_trace_setevent [ @traceid = ] trace_id
 |10|**ApplicationName**|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|  
 |11|**LoginName**|客户端的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。|  
 |12|**SPID**|分配给 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 与客户端关联的进程的服务器进程 ID。|  
-|13|**持续时间**|事件所花费的实耗时间（以微秒为单位）。 Hash Warning 事件不填充该数据列。|  
+|13|**Duration**|事件所花费的实耗时间（以微秒为单位）。 Hash Warning 事件不填充该数据列。|  
 |14|**StartTime**|事件开始的时间（如果可用）。|  
-|15|**EndTime**|事件结束的时间。 启动事件类（如 **SQL:BatchStarting** 或 **SP:Starting**）不填充此列。 **哈希警告**事件也不会填充它。|  
+|15|**结束**|事件结束的时间。 启动事件类（如 **SQL:BatchStarting** 或 **SP:Starting**）不填充此列。 **哈希警告**事件也不会填充它。|  
 |16|**读取**|服务器代表事件所执行的逻辑磁盘读取次数。 此列不由**Lock：已发布**事件填充。|  
 |17|**写入**|服务器代表事件所执行的物理磁盘写入次数。|  
 |18|**CPU**|事件所用的 CPU 时间（毫秒）。|  
@@ -298,11 +298,11 @@ sp_trace_setevent [ @traceid = ] trace_id
 |54|**GUID**|GUID 值，与跟踪中捕获的事件类相关。|  
 |55|**IntegerData2**|整数值，与跟踪中捕获的事件类相关。|  
 |56|**ObjectID2**|相关的对象或实体的 ID（如果可用）。|  
-|57|**Type**|整数值，与跟踪中捕获的事件类相关。|  
+|57|类型|整数值，与跟踪中捕获的事件类相关。|  
 |58|**OwnerID**|拥有锁的对象的类型。 仅限于锁事件。|  
 |59|**ParentName**|对象所在架构的名称。|  
 |60|**IsSystem**|指示事件是发生在系统进程中还是发生在用户进程中。<br /><br /> **1** = 系统<br /><br /> **0** = 用户。|  
-|61|**Offset**|存储过程或批查询中的语句的起始偏移量。|  
+|61|**抵销**|存储过程或批查询中的语句的起始偏移量。|  
 |62|**SourceDatabaseID**|对象源所在数据库的 ID。|  
 |63|**： Sqlhandle**|基于即席查询文本或 SQL 对象的数据库和对象 ID 的 64 位哈希运算。 此值可传递给**sys.databases dm_exec_sql_text （）** 以检索关联的 sql 文本。|  
 |64|**SessionLoginName**|发起会话的用户的登录名。 例如，如果您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Login1 **连接到** 并以 **Login2**身份执行语句，则 **SessionLoginName** 将显示 **Login1**，而 **LoginName** 将显示 **Login2**。 此数据列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|  
@@ -326,7 +326,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 ## <a name="return-code-values"></a>返回代码值  
  下表说明在存储过程完成后用户可能获得的代码值。  
   
-|返回代码|说明|  
+|返回代码|描述|  
 |-----------------|-----------------|  
 |0|没有错误。|  
 |1|未知错误。|  
@@ -360,7 +360,7 @@ sp_trace_setevent [ @traceid = ] trace_id
  [sys. fn_trace_geteventinfo &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
  [sys. fn_trace_getinfo &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
  [sp_trace_generateevent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
- [SQL Server 事件类引用](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
+ [SQL Server 事件类参考](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
  [SQL 跟踪](../../relational-databases/sql-trace/sql-trace.md)  
   
   

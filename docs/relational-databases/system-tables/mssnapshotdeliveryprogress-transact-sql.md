@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9164bfe2-6fc4-4b52-946a-09ea3cf67041
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ad7f4e11e2c796ed5ec8e20e5a601c3484591ddf
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a94f45171d54d7abb4a81c0bf55ff35b2511a6bc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820979"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722904"
 ---
 # <a name="mssnapshotdeliveryprogress-transact-sql"></a>MSsnapshotdeliveryprogress (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **MSsnapshotdeliveryprogress**表用于跟踪在应用快照时已成功传送到订阅服务器的文件。 此数据用于在合并代理无法在会话时传送所有文件的情况下恢复文件传送，从而避免在下次运行合并代理时传送相同文件。 此表存储在订阅服务器的订阅数据库中。  
   

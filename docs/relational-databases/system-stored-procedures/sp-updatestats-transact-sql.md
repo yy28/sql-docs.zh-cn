@@ -18,15 +18,15 @@ ms.assetid: 01184651-6e61-45d9-a502-366fecca0ee4
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5d2bab967400244e35ac33bf96a1be72ae21e375
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 4449e2a518ab1bfd12563070a80514d890eae48c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83806843"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723058"
 ---
 # <a name="sp_updatestats-transact-sql"></a>sp_updatestats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 `UPDATE STATISTICS`针对当前数据库中的所有用户定义表和内部表运行。  
   
@@ -43,10 +43,10 @@ sp_updatestats [ [ @resample = ] 'resample']
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @resample = ] 'resample'`指定**sp_updatestats**将使用[UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md)语句的 "重新采样" 选项。 如果未指定 **"重新采样"** ，则**sp_updatestats**使用默认采样更新统计信息。 重新**采样**为**varchar （8）** ，默认值为 NO。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  **sp_updatestats** `UPDATE STATISTICS` 通过 `ALL` 在数据库中的所有用户定义表和内部表中指定关键字，sp_updatestats 执行。 sp_updatestats 显示指示其进度的消息。 完成更新之后，此存储过程将报告已为所有的表更新了统计信息。  
   
 **sp_updatestats**更新已禁用的非聚集索引的统计信息，并且不更新已禁用聚集索引的统计信息。  

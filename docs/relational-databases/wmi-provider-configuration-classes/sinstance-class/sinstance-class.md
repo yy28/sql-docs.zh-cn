@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: ddda92fa-5bb9-45dd-b421-243b02db4caf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 51d68eda2ef201bdd1b829ac932e295400ff0dac
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: eaff9bea929843dbdca73ba65e5f30ab3c39b60e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659037"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725308"
 ---
 # <a name="sinstance-class"></a>SInstance 类
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  [SInstance 类](../../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md)表示的[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+  [SInstance 类](../../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md)表示的实例 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
- [SInstance 类](../../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md)可用于管理与实例关联的协议和网络库[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 还可以为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例指定安全证书。  
+ [SInstance 类](../../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md)可用于管理与实例关联的协议和网络库 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 还可以为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例指定安全证书。  
   
 ## <a name="see-also"></a>另请参阅  
  [配置服务器网络协议和网络库](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

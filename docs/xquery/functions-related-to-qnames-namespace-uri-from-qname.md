@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 4ab3f003-2a3b-4268-9e88-b615e35701b2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a0967e9dfd9392513da3925725930111a97da0c9
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: 91174fa3ef113a7944ef02bb62e7088acd344f3e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689544"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720034"
 ---
 # <a name="functions-related-to-qnames---namespace-uri-from-qname"></a>与 QName 相关的函数 - namespace-uri-from-QName
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   返回表示 *$arg*指定的 QName 的命名空间 uri 的字符串。 如果 *$arg*是空序列，则结果为空序列。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "83689544"
 namespace-uri-from-QName($arg as xs:QName?) as xs:string?  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *$arg*  
  是返回其命名空间 URI 的 QName。  
   

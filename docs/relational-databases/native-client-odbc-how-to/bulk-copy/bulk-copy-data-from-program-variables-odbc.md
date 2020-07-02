@@ -14,15 +14,15 @@ ms.assetid: 0c3f2d7c-4ff2-4887-adfd-1f488a27c21c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7ebabedb2c801881a4dc908ead93515dc9119fc3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 62951ec956282201ae2b61a82c6a72dcd2831307
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299600"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725141"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>从程序变量大容量复制数据 (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   此示例演示如何使用大容量复制函数将数据从程序变量大容量复制到使用**bcp_bind**和**bcp_sendrow**的 SQL Server。 （为简化此示例，已删除错误检查代码。）  
   
@@ -65,11 +65,11 @@ ms.locfileid: "81299600"
   
  此示例连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 若要连接到命名实例，请更改 ODBC 数据源的定义以使用以下格式指定实例：server\namedinstance。 默认情况下，[!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] 将安装在命名实例中。  
   
- 执行第一个（ [!INCLUDE[tsql](../../../includes/tsql-md.md)]）代码列表，以创建此示例将使用的表。  
+ 执行第一个（ [!INCLUDE[tsql](../../../includes/tsql-md.md)] ）代码列表，以创建此示例将使用的表。  
   
  使用 odbc32.lib 和 odbcbcp.lib 编译第二个 (C++) 代码列表。 如果用 MSBuild.exe 生成示例，请先将 Bcpfmt.fmt 和 Bcpodbc.bcp 从项目目录复制到 .exe 文件所在的目录，然后调用 .exe。  
   
- 执行第三个[!INCLUDE[tsql](../../../includes/tsql-md.md)]（）代码列表，以删除该示例使用的表。  
+ 执行第三个（ [!INCLUDE[tsql](../../../includes/tsql-md.md)] ）代码列表，以删除该示例使用的表。  
   
 ```  
 // compile with: odbc32.lib odbcbcp.lib  
