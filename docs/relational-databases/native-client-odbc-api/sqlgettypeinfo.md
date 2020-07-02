@@ -14,17 +14,17 @@ ms.assetid: 13b982c3-ae03-4155-bc0d-e225050703ce
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 81ba57c6e66f156f13055ff5ec941fa8f0c86381
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7a0f52c2a1bb2826126ae6548cfad95c5ccf5eac
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298431"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85788065"
 ---
 # <a name="sqlgettypeinfo"></a>SQLGetTypeInfo
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序在**SQLGetTypeInfo**的结果集中报告额外的列 USERTYPE。 USERTYPE 报告 DB-Library 数据类型定义，这对需要将现有 DB-Library 应用程序移植到 ODBC 的开发人员很有用。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驱动程序在**SQLGetTypeInfo**的结果集中报告额外的列 USERTYPE。 USERTYPE 报告 DB-Library 数据类型定义，这对需要将现有 DB-Library 应用程序移植到 ODBC 的开发人员很有用。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将标识视为属性，而 ODBC 将它视为数据类型。 若要解决此不匹配， **SQLGetTypeInfo**返回数据类型： **intidentity**、 **smallintidentity**、 **tinyintidentity**、 **decimalidentity**和**numericidentity**。 **SQLGetTypeInfo**结果集列 AUTO_UNIQUE_VALUE 报告这些数据类型的值为 TRUE。  
   

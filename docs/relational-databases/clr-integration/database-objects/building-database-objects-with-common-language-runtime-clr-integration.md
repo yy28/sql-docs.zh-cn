@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: ce34132c-bfa3-447b-9131-b6e17c672efe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 902685dcf1f8c743453285820faa67bb70830614
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5dc38fc39a0f4d876adc99a0aff87d2acaad1545
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75258356"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789560"
 ---
 # <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>使用公共语言运行时 (CLR) 集成生成数据库对象
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  可以将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 与 .NET Framework 公共语言运行时 (CLR) 集成来生成数据库对象。 在内运行的[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]托管代码称为 "CLR 例程"。 这些例程包括：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+  可以将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 与 .NET Framework 公共语言运行时 (CLR) 集成来生成数据库对象。 在内运行的托管代码 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 称为 "CLR 例程"。 这些例程包括：  
   
 -   标量值用户定义函数（标量 UDF）  
   

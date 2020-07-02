@@ -15,15 +15,15 @@ apitype: DLLExport
 ms.assetid: d4aaea30-1d0d-4436-bcdc-5c101d27b1c1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7030f26cb95b78a3cd2dde8520876f13acc4bc46
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 23b5c34bf378254e097a3f9c80417d8f96eac0c8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68091205"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789468"
 ---
 # <a name="localdbgetversioninfo-function"></a>LocalDBGetVersionInfo 函数
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   返回有关指定的 SQL Server Express LocalDB 版本的信息，如该版本是否存在以及完整的 LocalDB 版本号（包括内部版本号和发行版本号）。  
   
  此信息以名为**LocalDBVersionInfo**的结构的形式返回，该**结构**具有以下定义。  

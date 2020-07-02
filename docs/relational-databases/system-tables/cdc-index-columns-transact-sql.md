@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 256ec8a5-3031-40a8-9fdb-99db42ea453d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c2dac6ec3b2799a4489d660c9467000b27391236
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 219e3c75b0c89c0707d772df86810419089bfe8f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833068"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790317"
 ---
 # <a name="cdcindex_columns-transact-sql"></a>cdc.index_columns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   为与更改表关联的每个索引列返回一行。 变更数据捕获使用这些索引列来唯一标识源表中的行。 默认情况下，将包括源表的主键列。 但是，如果在对源表启用变更数据捕获时指定了源表的唯一索引，则将改用该索引中的列。 如果启用净更改跟踪，则该源表需要主键或唯一索引。 有关详细信息，请参阅[sys.databases&#41;sp_cdc_enable_table &#40;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)。  
   
@@ -34,8 +34,8 @@ ms.locfileid: "82833068"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|更改表的 ID。|  
-|column_name |**sysname**|索引列的名称。|  
+|object_id|**int**|更改表的 ID。|  
+|column_name|**sysname**|索引列的名称。|  
 |**index_ordinal**|**tinyint**|索引中的列序号（从 1 开始）。|  
 |**column_id**|**int**|源表中的列 ID。|  
   

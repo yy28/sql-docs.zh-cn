@@ -13,17 +13,17 @@ ms.assetid: f3389ff2-f3be-4035-9fb5-c9ebc2f15025
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 42c8a45bb50e5fda8946cc3819aa4702f5c2fb3f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5d53cded519d054ae0782eceb66972193a5645d4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299557"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789175"
 ---
 # <a name="sqlgetdescrec"></a>SQLGetDescRec
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  本主题讨论特定于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 的 SQLGetDescRec 功能。  
+  本主题讨论特定于 Native Client 的 SQLGetDescRec 功能 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="sqlgetdescrec-and-table-valued-parameters"></a>SQLGetDescRec 和表值参数  
  SQLGetDescRec 可用于获取表值参数和表值参数列的特性值。 SQLGetDescRec 的*RecNumber*参数对应于 SQLBindParameter 的*ParameterNumber*参数。  
@@ -34,9 +34,9 @@ ms.locfileid: "81299557"
   
 |参数|表值参数|表值参数列和其他参数|  
 |---------------|-----------------------------|----------------------------------------------------------|  
-|*名称*|存储过程调用的正式参数名称；否则是长度为 0 的字符串。|表值参数列名称。|  
+|*Name*|存储过程调用的正式参数名称；否则是长度为 0 的字符串。|表值参数列名称。|  
 |*TypePtr*|SQL_DESC_TYPE。 对于表值参数，这是 SQL_SS_TABLE。|SQL_DESC_TYPE|  
-|*SubTypePtr*|Undefined|SQL_DESC_DATETIME_INTERVAL_CODE（对于 SQL_DATETIME 或 SQL_INTERVAL 类型的记录。）|  
+|*SubTypePtr*|未定义|SQL_DESC_DATETIME_INTERVAL_CODE（对于 SQL_DATETIME 或 SQL_INTERVAL 类型的记录。）|  
 |*LengthPtr*|0|SQL_DESC_OCTET_LENGTH|  
 |*PrecisionPtr*|0|SQL_DESC_PRECISION|  
 |*ScalePtr*|0|SQL_DESC_SCALE|  

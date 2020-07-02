@@ -10,21 +10,21 @@ ms.assetid: ec3c0f4f-f838-43ce-85f2-cf2761e2aac5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5d822362e9f9f7e70e4421056383aae8ddef03dc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 924ded48601e114ee2a04baead304721903954d4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303348"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787885"
 ---
 # <a name="metadata-discovery"></a>元数据发现
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  中[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]的元数据发现改进[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]允许 Native Client 应用程序确保从执行查询返回的列或参数元数据与执行查询之前指定的元数据格式相同或与其兼容。 如果执行查询后返回的元数据与执行该查询之前指定的元数据格式不兼容，您将会收到错误。  
+  中的元数据发现改进 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 允许 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 应用程序确保从执行查询返回的列或参数元数据与执行查询之前指定的元数据格式相同或与其兼容。 如果执行查询后返回的元数据与执行该查询之前指定的元数据格式不兼容，您将会收到错误。  
   
  在 bcp 和 ODBC 函数以及 IBCPSession 和 IBCPSession2 接口中，您现在可以指定延迟读取（延迟的元数据发现）以避免对查询输出操作执行元数据发现。 这样可以提高性能，并避免元数据发现失败。  
   
- 如果使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]的 Native Client 开发应用程序，但连接到早于[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]的服务器版本，则元数据发现功能将与服务器版本相对应。  
+ 如果使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的 Native Client 开发应用程序 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] ，但连接到早于的服务器版本 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] ，则元数据发现功能将与服务器版本相对应。  
   
 ## <a name="remarks"></a>备注  
  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中增强了以下 bcp 函数，以提供改进的元数据发现：  

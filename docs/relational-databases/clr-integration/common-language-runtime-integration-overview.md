@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 7be9e644-36a2-48fc-9206-faf59fdff4d7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 768ef9a74a7d7856533fa3ace09e25fee9e36c0b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dce6f579e4a1e0b983dbd5f3e1c2df6bca7c76c5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488388"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789570"
 ---
 # <a name="common-language-runtime-integration"></a>公共语言运行时集成
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]并且[Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index)使你能够使用本机公共语言运行时（CLR）集成作为 SQL Server 服务器端模块（过程、函数和触发器）来实现某些功能。 CLR 为托管代码提供服务，例如跨语言集成、代码访问安全性、对象生存期管理以及调试和分析支持。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户和应用程序开发人员来说，CLR 集成意味着您现在可以使用任何 .NET Framework 语言（包括 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#）编写存储过程、触发器、用户定义类型、用户定义函数（标量函数和表值函数）以及用户定义的聚合函数。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包括预安装的 .NET Framework 版本 4。  
 
@@ -68,7 +68,7 @@ ms.locfileid: "81488388"
  介绍如何启用 CLR 集成。  
   
 ## <a name="see-also"></a>另请参阅  
- [安装 .NET Framework](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx) （[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]仅限）   
+ [安装 .NET Framework](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx) （ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仅限）   
  [CLR 集成的性能](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)  
   
   

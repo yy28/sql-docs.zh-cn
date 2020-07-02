@@ -11,22 +11,22 @@ ms.assetid: e212010e-a5b6-4ad1-a3c0-575327d3ffd3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de214361ce06c6f0ff103c4e591ff4e5e53d887c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bd7abd2399c6e6ba1eee24ceeeb1999459f8e878
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81295601"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787670"
 ---
 # <a name="service-principal-names-spns-in-client-connections-ole-db"></a>客户端连接中的服务主体名称 (SPN) (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   本主题说明支持客户端应用程序中的服务主体名称 (SPN) 的 OLE DB 属性和成员函数。 有关客户端应用程序中 SPN 的详细信息，请参阅[客户端连接中的服务主体名称 &#40;SPN&#41; 支持](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)。 有关示例，请参阅[集成的 Kerberos 身份验证 (OLE DB)](../../../relational-databases/native-client-ole-db-how-to/integrated-kerberos-authentication-ole-db.md)。  
   
 ## <a name="provider-initialization-string-keywords"></a>访问接口初始化字符串关键字  
  以下访问接口初始化字符串关键字支持 OLE DB 应用程序中的 SPN。 在下表中，关键字列中的值用于 IDBInitialize::Initialize 的访问接口字符串。 使用 ADO 或 IDataInitialize::GetDataSource 建立连接时，在初始化字符串中使用说明列中的值。  
   
-|关键字|说明|值|  
+|关键字|描述|值|  
 |-------------|-----------------|-----------|  
 |ServerSPN|服务器 SPN|服务器的 SPN。 默认值为空字符串，这会使 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用访问接口生成的默认 SPN。|  
 |FailoverPartnerSPN|故障转移伙伴 SPN|故障转移伙伴的 SPN。 默认值为空字符串，这会使 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用访问接口生成的默认 SPN。|  

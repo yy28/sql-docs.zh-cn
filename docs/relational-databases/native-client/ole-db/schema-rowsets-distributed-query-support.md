@@ -18,19 +18,19 @@ ms.assetid: 11354bb6-be42-4d8d-854c-42dd3dc38656
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: daf4f4c0c7c6c1d53c2ab899dd150756399d53a3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f93e04283c35d84fa32d40fbed6bb3e1fa9ba4cd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81296949"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787710"
 ---
 # <a name="schema-rowsets---distributed-query-support"></a>架构行集 - 分布式查询支持
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  为了支持[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]分布式查询，Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client OLE DB provider **IDBSchemaRowset**接口将返回链接服务器上的元数据。  
+  为了支持 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分布式查询， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider **IDBSchemaRowset**接口将返回链接服务器上的元数据。  
   
- 如果 DBPROPSET_SQLSERVERSESSION 属性 SSPROP_QUOTEDCATALOGNAMES 是 VARIANT_TRUE，则可以为目录名称指定带引号的标识符（例如 "my.catalog"）。 当通过目录限制架构行集输出时[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，Native Client OLE DB 提供程序将识别包含链接服务器和目录名称的由两部分组成的名称。 对于下表中的架构行集，将两部分组成的目录名称指定为_linked_server_**。**_目录_将输出限制为命名链接服务器的适用目录。  
+ 如果 DBPROPSET_SQLSERVERSESSION 属性 SSPROP_QUOTEDCATALOGNAMES 是 VARIANT_TRUE，则可以为目录名称指定带引号的标识符（例如 "my.catalog"）。 当通过目录限制架构行集输出时， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序将识别包含链接服务器和目录名称的由两部分组成的名称。 对于下表中的架构行集，将两部分组成的目录名称指定为_linked_server_**。**_目录_将输出限制为命名链接服务器的适用目录。  
   
 |架构行集|目录限制|  
 |-------------------|-------------------------|  
@@ -46,7 +46,7 @@ ms.locfileid: "81296949"
 > [!NOTE]  
 >  若要将架构行集限制为来自链接服务器的所有目录，请使用语法 linked_server（其中，句点分隔符是名称规范的一部分）**。 该语法等同于将目录名称限制指定为 NULL，当链接服务器指示有不支持目录的数据源时也使用此语法。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序定义架构行集 LINKEDSERVERS，并返回注册为链接服务器的 OLE DB 数据源的列表。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序定义架构行集 LINKEDSERVERS，并返回注册为链接服务器的 OLE DB 数据源的列表。  
   
 ## <a name="see-also"></a>另请参阅  
  [架构行集支持 &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowset-support-ole-db.md)   

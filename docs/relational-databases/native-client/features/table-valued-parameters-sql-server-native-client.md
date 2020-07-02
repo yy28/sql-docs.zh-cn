@@ -13,15 +13,15 @@ ms.assetid: 5ee6bdcd-0309-4a20-b5c2-0e6b6839f34f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7134f0689701c663133e52dd9face50e99ef3102
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ec1628907bec95b5d8416bda3abd4a9b65e9074c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388426"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787851"
 ---
 # <a name="table-valued-parameters-sql-server-native-client"></a>表值参数 (SQL Server Native Client)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   表值参数在 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 中引入，它们为将多个数据行传递到服务器提供了有效方式。 表值参数提供类似于参数数组的功能，但它们提供了更好的灵活性和与 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 的更紧密集成，并且可以极大地提高性能。 表值参数还可以参与基于集合的操作，而参数数组不能参与。  
   

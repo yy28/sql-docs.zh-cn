@@ -14,17 +14,17 @@ ms.assetid: 3e59a37a-28ee-4c91-8968-7fe3b966739d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 341a9fe5c5919093853b0c62c7148515380a0551
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a3a056a9e6b5f02cc7dc3eb76837731d5a312cba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299567"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789188"
 ---
 # <a name="sqlgetdescfield"></a>SQLGetDescField
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序只为实现行描述符（IRD）公开驱动程序特定的描述符字段。 在 IRD 中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通过驱动程序特定的列属性引用描述符字段。 有关可用驱动程序特定的描述符字段的完整列表的信息，请参阅[SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驱动程序只为实现行描述符（IRD）公开驱动程序特定的描述符字段。 在 IRD 中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过驱动程序特定的列属性引用描述符字段。 有关可用驱动程序特定的描述符字段的完整列表的信息，请参阅[SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)。  
   
  包含列标识符字符串的描述符字段通常是长度为零的字符串。 特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有描述符字段值都是只读的。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "81299567"
   
  有关详细信息，请参阅[ODBC&#41;&#40;日期和时间改进](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
- 从开始[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，如果应用程序使用 ODBC 3.8，SQLGetDescField 可以返回**SQL_C_SS_TIME2** （对于**时间**类型）或**SQL_C_SS_TIMESTAMPOFFSET** （对于**datetimeoffset**），而不是**SQL_C_BINARY**。  
+ 从开始 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ，如果应用程序使用 ODBC 3.8，SQLGetDescField 可以返回**SQL_C_SS_TIME2** （对于**时间**类型）或**SQL_C_SS_TIMESTAMPOFFSET** （对于**datetimeoffset**），而不是**SQL_C_BINARY**。  
   
 ## <a name="sqlgetdescfield-support-for-large-clr-udts"></a>SQLGetDescField 对大型 CLR UDT 的支持  
  **SQLGetDescField**支持大型 CLR 用户定义类型（udt）。 有关详细信息，请参阅[&#40;ODBC&#41;的大型 CLR 用户定义类型](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  

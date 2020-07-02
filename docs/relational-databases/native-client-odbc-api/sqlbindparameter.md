@@ -14,17 +14,17 @@ ms.assetid: c302c87a-e7f4-4d2b-a0a7-de42210174ac
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 74122d531eba1f714e16c168838ee1653a8f1293
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cc270cb83833e3fcfc54ef4721a62ccaf3980729
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302678"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789427"
 ---
 # <a name="sqlbindparameter"></a>SQLBindParameter
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  **SQLBindParameter**当用于为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client ODBC 驱动程序提供数据时，SQLBindParameter 可以消除数据转换的负担，从而提高应用程序的客户端和服务器组件的性能。 其他好处包括在插入或更新近似数字数据类型时减少精度损失。  
+  当用于为 Native Client ODBC 驱动程序提供数据时， **SQLBindParameter**可以消除数据转换的负担 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，从而提高应用程序的客户端和服务器组件的性能。 其他好处包括在插入或更新近似数字数据类型时减少精度损失。  
   
 > [!NOTE]  
 >  如果将**char**和**wchar**类型数据插入到 image 列中，则使用传入的数据的大小，而不是转换为二进制格式后数据的大小。  
@@ -33,7 +33,7 @@ ms.locfileid: "81302678"
   
  如果使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序，则在绑定输入参数时指定 SQL_PARAM_INPUT。 在绑定用 OUTPUT 关键字定义的存储过程参数时，只指定 SQL_PARAM_OUTPUT 或 SQL_PARAM_INPUT_OUTPUT。  
   
- [SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md)如果绑定参数数组的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数组元素导致语句执行出错，则 Native Client ODBC 驱动程序的 SQLRowCount 不可靠。 ODBC 语句属性 SQL_ATTR_PARAMS_PROCESSED_PTR 报告在发生错误前已处理的行数。 然后，如有必要，该应用程序将遍历其参数状态数组，以便发现成功执行的语句数目。  
+ [SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果绑定参数数组的数组元素导致语句执行出错，则 Native Client ODBC 驱动程序的 SQLRowCount 不可靠。 ODBC 语句属性 SQL_ATTR_PARAMS_PROCESSED_PTR 报告在发生错误前已处理的行数。 然后，如有必要，该应用程序将遍历其参数状态数组，以便发现成功执行的语句数目。  
   
 ## <a name="binding-parameters-for-sql-character-types"></a>SQL 字符类型的绑定参数  
  如果传入的 SQL 数据类型为字符类型，则*ColumnSize*的大小以字符（而非字节）为单位。 如果数据字符串的长度大于8000，则应将*ColumnSize*设置为**SQL_SS_LENGTH_UNLIMITED**，这表示 SQL 类型的大小没有限制。  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 60d27260378a8f0d6706b85ea02232ffca6a05c8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8cce1f1fd046d2b93f41f010b82a067c5a936670
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827481"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790363"
 ---
 # <a name="sp_setsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   在故障排除过程中使用，以使用日志序列号（LSN）指定上次传递的事务，从而允许分发代理在下一个事务中开始传递。 重新启动时，分发代理会从分发数据库缓存（msrepl_commands）返回大于此水印（LSN）的事务。 此存储过程在订阅服务器的订阅数据库中执行。 非 SQL Server 订阅服务器不支持该过程。  
   
@@ -42,7 +42,7 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
         , [ @xact_seqno = ] xact_seqno   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publisher = ] 'publisher'`发布服务器的名称。 *发布服务器*的**sysname**，无默认值。  
   
 `[ @publisher_db = ] 'publisher_db'`发布数据库的名称。 *publisher_db* **sysname**，无默认值。 对于非 SQL Server 发布服务器， *publisher_db*是分发数据库的名称。  
@@ -78,6 +78,6 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>权限  
  只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_setsubscriptionxactseqno**。  
   
-## <a name="see-more"></a>了解详细内容
+## <a name="see-more"></a>查看详细信息
 
 [博客：如何跳过事务](https://repltalk.com/2019/05/28/how-to-skip-a-transaction/)  

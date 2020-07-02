@@ -20,15 +20,15 @@ ms.assetid: 8f44e194-d556-4119-a759-4c9dec7ecead
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2bd869b16cc6ec81d77ce0256859de1ed8c1d0e3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3f9a4abc2977d73041582a0ed0eeb21b45437094
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303651"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787774"
 ---
 # <a name="profiling-odbc-driver-performance"></a>ODBC 驱动程序性能事件探查
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序可以对两种类型的性能数据进行事件探查：  
   
@@ -77,7 +77,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="application-profile-statistics"></a>应用程序配置文件统计信息  
   
-|SQLPERF 字段|说明|  
+|SQLPERF 字段|描述|  
 |-------------------|-----------------|  
 |TimerResolution|服务器时钟时间的最小解析度（以毫秒为单位）。 通常，此值报告为 0（零）并且只有在报告的数值很大时才应予以考虑。 如果服务器时钟的最小解析度大于某些基于计时器的统计信息可能使用的间隔时间，这些统计信息可能会急剧增加。|  
 |SQLidu|SQL_PERF_START 之后 INSERT、DELETE 或 UPDATE 语句的数量。|  
@@ -115,7 +115,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="time-statistics"></a>时间统计信息  
   
-|SQLPERF 字段|说明|  
+|SQLPERF 字段|描述|  
 |-------------------|-----------------|  
 |msExecutionTime|SQL_PERF_START 之后驱动程序花费在处理工作上的累积时间量，其中包括等待服务器的回复所花费的时间。|  
 |msNetworkServerTime|驱动程序等待服务器回复所花费的累积时间量。|  

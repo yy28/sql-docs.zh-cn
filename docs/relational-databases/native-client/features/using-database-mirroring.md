@@ -18,15 +18,15 @@ ms.assetid: 71b15712-7972-4465-9274-e0ddc271eedc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b9c702d8d0508dcb64090f0b753da64019736ceb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 40879f902b6d014f90e6e2493b1761018c29ce40
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303197"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787832"
 ---
 # <a name="using-database-mirroring"></a>使用数据库镜像
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
     
 > [!NOTE]  
@@ -60,14 +60,14 @@ ms.locfileid: "81303197"
 >  此外，服务器名称不区分大小写，而数据库名称区分大小写。 因此，应确保在 DSN 和连接字符串中使用相同的大小写。  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB 访问接口  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序通过连接和连接字符串属性支持数据库镜像。 已向 DBPROPSET_SQLSERVERDBINIT 属性集添加 SSPROP_INIT_FAILOVERPARTNER 属性，FailoverPartner 关键字是 DBPROP_INIT_PROVIDERSTRING 的新连接字符串属性****。 有关详细信息，请参阅将[连接字符串关键字用于 SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序通过连接和连接字符串属性支持数据库镜像。 已向 DBPROPSET_SQLSERVERDBINIT 属性集添加 SSPROP_INIT_FAILOVERPARTNER 属性，FailoverPartner 关键字是 DBPROP_INIT_PROVIDERSTRING 的新连接字符串属性****。 有关详细信息，请参阅将[连接字符串关键字用于 SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
   
- 只要加载了提供程序，就会保留故障转移缓存，无论是在调用**CoUninitialize**之前还是在应用程序引用由[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native OLE DB Client 管理的某个对象（例如数据源对象）时，都是如此。  
+ 只要加载了提供程序，就会保留故障转移缓存，无论是在调用**CoUninitialize**之前还是在应用程序引用由 Native OLE DB Client 管理的某个对象 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] （例如数据源对象）时，都是如此。  
   
- 有关[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序对数据库镜像的支持的详细信息，请参阅[初始化和授权属性](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md)。  
+ 有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序对数据库镜像的支持的详细信息，请参阅[初始化和授权属性](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md)。  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>SQL Server Native Client ODBC 驱动程序  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序通过连接和连接字符串属性支持数据库镜像。 具体而言，添加了 SQL_COPT_SS_FAILOVER_PARTNER 特性以便与[SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)和[SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)函数一起使用;已将**Failover_Partner**关键字添加为新的连接字符串属性。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驱动程序通过连接和连接字符串属性支持数据库镜像。 具体而言，添加了 SQL_COPT_SS_FAILOVER_PARTNER 特性以便与[SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)和[SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)函数一起使用;已将**Failover_Partner**关键字添加为新的连接字符串属性。  
   
  只要应用程序至少分配有一个环境句柄，故障转移缓存就会一直保留。 相反，当释放最后一个环境句柄时，将丢失故障转移缓存。  
   

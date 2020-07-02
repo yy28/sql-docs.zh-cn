@@ -14,15 +14,15 @@ ms.assetid: 69d3af44-8196-43ab-8037-cdd06207b171
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: abce98b64da8de6039f81025201cce25269763a6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: feae55d486eae6b269cef94320fe9468edb6e672
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302602"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789367"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   **SQLColumns**返回 SQL_SUCCESS *CatalogName*、 *TableName*或*ColumnName*参数是否存在值。 当在这些参数中使用了无效值时， **SQLFetch**将返回 SQL_NO_DATA。  
   
@@ -31,13 +31,13 @@ ms.locfileid: "81302602"
   
  可以对静态服务器游标执行**SQLColumns** 。 尝试对可更新的（动态或键集）游标执行**SQLColumns**时，将返回 SQL_SUCCESS_WITH_INFO，指示游标类型已更改。  
   
- Native Client ODBC 驱动程序通过接受由两部分组成的*CatalogName*参数的名称来支持链接服务器上表的报告信息： *Linked_Server_Name。 Catalog_Name。* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驱动程序通过接受由两部分组成的*CatalogName*参数的名称来支持链接服务器上表的报告信息： *Linked_Server_Name。 Catalog_Name*。  
   
  对于 ODBC 2。*x*应用程序未在*TableName*中使用通配符， **SQLColumns**返回有关名称与*TableName*匹配并且由当前用户拥有的所有表的信息。 如果当前用户拥有的表的名称与*tablename*参数的名称匹配，则**SQLColumns**将返回其他用户所拥有的、表名称与*tablename*参数匹配的所有表的相关信息。 对于 ODBC 2。使用通配符的*x*应用程序， **SQLColumns**返回其名称与*TableName*匹配的所有表。 对于 ODBC 3。*x*应用程序**SQLColumns**返回其名称与*TableName*匹配的所有表，而不考虑所有者或是否使用通配符。  
   
  下表列出了结果集返回的列：  
   
-|列名称|说明|  
+|列名称|描述|  
 |-----------------|-----------------|  
 |DATA_TYPE|为**VARCHAR （max）** 数据类型返回 SQL_VARCHAR、SQL_VARBINARY 或 SQL_WVARCHAR。|  
 |TYPE_NAME|对于**varchar （max）**、 **varbinary （max）** 和**nvarchar （max）** 数据类型，返回 "varchar"、"varbinary" 或 "nvarchar"。|  
@@ -56,7 +56,7 @@ ms.locfileid: "81302602"
   
  对于 UDT 参数，您可以使用上面定义的特定于驱动程序的新描述符来获取或设置 UDT 的额外元数据数据，条件是服务器返回或需要此信息。  
   
- 当客户端连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]并调用 SQLColumns 时，对目录输入参数使用 NULL 或通配符值将不会返回其他目录中的信息。 而只返回有关当前目录的信息。 客户端可以首先调用 SQLTables 来确定所需的表所在的目录。 然后，客户端可以在其对 SQLColumns 的调用中使用目录输入参数的目录值来检索该表中的列的相关信息。  
+ 当客户端连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并调用 SQLColumns 时，对目录输入参数使用 NULL 或通配符值将不会返回其他目录中的信息。 而只返回有关当前目录的信息。 客户端可以首先调用 SQLTables 来确定所需的表所在的目录。 然后，客户端可以在其对 SQLColumns 的调用中使用目录输入参数的目录值来检索该表中的列的相关信息。  
   
 ## <a name="sqlcolumns-and-table-valued-parameters"></a>SQLColumns 和表值参数  
  SQLColumns 返回的结果集取决于 SQL_SOPT_SS_NAME_SCOPE 的设置。 有关详细信息，请参阅[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)。 已针对表值参数添加以下列：  
@@ -77,14 +77,14 @@ ms.locfileid: "81302602"
  **SQLColumns**支持大型 CLR 用户定义类型（udt）。 有关详细信息，请参阅[&#40;ODBC&#41;的大型 CLR 用户定义类型](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="sqlcolumns-support-for-sparse-columns"></a>SQLColumns 对稀疏列的支持  
- 已[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将两个特定列添加到 SQLColumns 的结果集中：  
+ 已将两个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定列添加到 SQLColumns 的结果集中：  
   
-|列名称|数据类型|说明|  
+|列名称|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |SS_IS_SPARSE|**Smallint**|如果该列为稀疏列，则为 SQL_TRUE；否则为 SQL_FALSE。|  
 |SS_IS_COLUMN_SET|**Smallint**|如果该列是**column_set**列，则 SQL_TRUE;否则，SQL_FALSE。|  
   
- 与 ODBC 规范一致，SS_IS_SPARSE 和 SS_IS_COLUMN_SET 会出现在已添加到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]早于[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]的版本的所有驱动程序特定列之前以及 ODBC 本身所强制的所有列之后。  
+ 与 ODBC 规范一致，SS_IS_SPARSE 和 SS_IS_COLUMN_SET 会出现在已添加到早于的版本的所有驱动程序特定列之前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以及 ODBC 本身所强制的所有列之后。  
   
  SQLColumns 返回的结果集取决于 SQL_SOPT_SS_NAME_SCOPE 的设置。 有关详细信息，请参阅[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)。  
   

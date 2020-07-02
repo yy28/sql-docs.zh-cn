@@ -19,19 +19,19 @@ ms.assetid: 90be414c-04b3-46c0-906b-ae7537989b7d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d83330105b86b131e4ac42390024a2adeee78617
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1b4bb12cd8461654cf2912cfcd0ebf245edc0db9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304627"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787939"
 ---
 # <a name="determining-the-characteristics-of-a-result-set-odbc"></a>确定结果集的特征 (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   元数据是描述其他数据的数据。 例如，结果集元数据描述结果集的特征，比如结果集中的列数、这些列的数据类型、其名称、精度和可为 Null 性。  
   
- ODBC 通过其目录 API 函数向应用程序提供元数据。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client odbc 驱动程序将许多 ODBC API 目录函数实现为对相应[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]目录过程的调用。  
+ ODBC 通过其目录 API 函数向应用程序提供元数据。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT odbc 驱动程序将许多 ODBC API 目录函数实现为对相应 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目录过程的调用。  
   
  应用程序需要大多数结果集操作的元数据。 例如，应用程序使用某列的数据类型来确定要将哪一种变量绑定到该列； 使用某字符列的字节长度来确定必须有多少空间才能显示该列的数据。 应用程序确定列的元数据的方式取决于应用程序的类型。  
   

@@ -14,23 +14,23 @@ ms.assetid: fbd7ba20-d917-4ca9-b018-018ac6af9f98
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 69457daccbc7868e58f91c71a48b4b25f15f5318
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 10bb4cf287d8cd2bcc2c0396659b1c2adad595d3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302700"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789444"
 ---
 # <a name="sqlbindcol"></a>SQLBindCol
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   作为一般规则，请考虑使用**SQLBindCol**导致数据转换的含义。 绑定转换是客户端进程，所以，举例来说，检索绑定到字符列的浮点值将导致应用程序在提取行时执行浮点到字符的转换。 可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] CONVERT 函数将数据转换的开销转给服务器。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例可以对执行的单个语句返回多个结果行集。 每个结果集都必须单独绑定。 有关多个结果集的绑定的详细信息，请参阅[SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md)。  
   
- 开发人员可以使用*TargetType*值[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQL_C_BINARY**将列绑定到特定的 C 数据类型。 不可移植绑定到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定类型的列。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定的已定义 ODBC C 数据类型与 DB-Library 的类型定义匹配，移植应用程序的 DB-Library 开发人员可能需要利用此功能。  
+ 开发人员可以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用*TargetType*值**SQL_C_BINARY**将列绑定到特定的 C 数据类型。 不可移植绑定到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定类型的列。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定的已定义 ODBC C 数据类型与 DB-Library 的类型定义匹配，移植应用程序的 DB-Library 开发人员可能需要利用此功能。  
   
- 对于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序，报告数据截断是一种开销高昂的过程。 通过确保所有绑定数据缓冲区的宽度足以返回数据，可以避免截断。 对于字符数据，在使用字符串终止的默认驱动程序行为时，该宽度应该包括字符串终止符所占的空间。 例如，如果将[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **char （5）** 列绑定到五个字符，则会导致每个提取的值被截断。 将同一列绑定到六个字符的数组可以提供一个用于存储空终止符的字符元素，这样即避免了截断。 [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)可用于在不截断的情况下有效地检索长字符和二进制数据。  
+ 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驱动程序，报告数据截断是一种开销高昂的过程。 通过确保所有绑定数据缓冲区的宽度足以返回数据，可以避免截断。 对于字符数据，在使用字符串终止的默认驱动程序行为时，该宽度应该包括字符串终止符所占的空间。 例如，如果将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **char （5）** 列绑定到五个字符，则会导致每个提取的值被截断。 将同一列绑定到六个字符的数组可以提供一个用于存储空终止符的字符元素，这样即避免了截断。 [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)可用于在不截断的情况下有效地检索长字符和二进制数据。  
   
  对于大值数据类型，如果用户提供的缓冲区不够大，无法保存列的整个值，则会返回**SQL_SUCCESS_WITH_INFO**和 "string data;发出右截断 "警告。 **StrLen_or_IndPtr**参数将包含缓冲区中存储的字符数/字节数。  
   

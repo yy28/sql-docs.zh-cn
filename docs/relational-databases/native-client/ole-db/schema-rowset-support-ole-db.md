@@ -17,22 +17,22 @@ ms.assetid: a75b4b69-b095-4690-9b31-a2b32a67489e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e54a81cf47804e1cf4568e739bb2c4cf83b9fe25
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 20aa929844dd7b5605672c1d103f807bc7d4147b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81288547"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787713"
 ---
 # <a name="schema-rowset-support-ole-db"></a>架构行集支持 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]处理[!INCLUDE[tsql](../../../includes/tsql-md.md)]分布式查询时，Native Client OLE DB 提供程序还支持从链接服务器返回架构信息。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]在处理分布式查询时，Native Client OLE DB 提供程序还支持从链接服务器返回架构信息 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 。  
   
 > [!NOTE]  
 >  尽管 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持同义词，但 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 不返回同义词的元数据。  
   
- 下表列出了[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]架构行集以及 Native Client OLE DB 提供程序支持的限制列。  
+ 下表列出了架构行集以及 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序支持的限制列。  
   
 |架构行集|限制列|  
 |-------------------|-------------------------|  

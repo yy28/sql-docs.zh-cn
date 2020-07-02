@@ -19,24 +19,24 @@ ms.assetid: ''
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 143ed8e5487772a39e4e98c92f8f07d78de7f370
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c57cc780bc3e05347daf8dd7778e7e5de274d303
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823367"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790488"
 ---
 # <a name="sysindex_resumable_operations-transact-sql"></a>sys. index_resumable_operations （Transact-sql）
 
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 **sys. index_resumable_operations**是一个系统视图，用于监视和检查当前执行状态以实现可恢复索引重新生成。  
 **适用**于： SQL Server （2017和更高版本）和 Azure SQL 数据库
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|此索引所属的对象的 ID （不可为 null）。|  
+|object_id|**int**|此索引所属的对象的 ID （不可为 null）。|  
 |**index_id**|**int**|索引的 ID （不可为 null）。 **index_id**仅在对象中是唯一的。|
-|**name**|**sysname**|索引的名称。 **名称**仅在对象中是唯一的。|  
+|name|**sysname**|索引的名称。 **名称**仅在对象中是唯一的。|  
 |**sql_text**|**nvarchar(max)**|DDL T-sql 语句文本|
 |**last_max_dop**|**smallint**|上次使用的 MAX_DOP （默认值 = 0）|
 |**partition_number**|**int**|所属索引或堆中的分区号。 对于未分区的表和索引，或者如果正在重新生成所有分区，则此列的值为 NULL。|

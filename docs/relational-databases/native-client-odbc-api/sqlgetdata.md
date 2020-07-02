@@ -14,23 +14,23 @@ ms.assetid: 204848be-8787-45b4-816f-a60ac9d56fcf
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5ebda3de96cbd9a4a1ceadd62093420cc372a169
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b351ded757bc424b5ae37459ce14fd3f1bd45f73
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302143"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789178"
 ---
 # <a name="sqlgetdata"></a>SQLGetData
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   **SQLGetData**用于检索结果集数据，而不绑定列值。 可以对同一列连续调用**SQLGetData** ，以从具有**text**、 **ntext**或**image**数据类型的列中检索大量数据。  
   
- 此时，不要求应用程序绑定变量来提取结果集数据。 可以使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQLGetData**从 Native Client ODBC 驱动程序检索任意列的数据。  
+ 此时，不要求应用程序绑定变量来提取结果集数据。 可以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用**SQLGetData**从 Native Client ODBC 驱动程序检索任意列的数据。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序不支持使用**SQLGetData**以随机列顺序检索数据。 使用**SQLGetData**处理的所有未绑定列都必须具有比结果集中绑定列更高的列序号。 应用程序必须按照从未绑定列的最小序号值到最大序号值的顺序处理数据。 尝试从较小序号的列中检索数据将导致错误。 如果某个应用程序使用服务器游标报告结果集行，则该应用程序可重新提取当前行，然后提取列值。 如果对默认的只读、只进游标执行语句，则必须重新执行该语句来备份**SQLGetData**。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驱动程序不支持使用**SQLGetData**以随机列顺序检索数据。 使用**SQLGetData**处理的所有未绑定列都必须具有比结果集中绑定列更高的列序号。 应用程序必须按照从未绑定列的最小序号值到最大序号值的顺序处理数据。 尝试从较小序号的列中检索数据将导致错误。 如果某个应用程序使用服务器游标报告结果集行，则该应用程序可重新提取当前行，然后提取列值。 如果对默认的只读、只进游标执行语句，则必须重新执行该语句来备份**SQLGetData**。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序准确报告使用**SQLGetData**检索到的**text**、 **ntext**和**image**数据的长度。 应用程序可以充分利用*StrLen_or_IndPtr*参数返回，以便快速检索长数据。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驱动程序准确报告使用**SQLGetData**检索到的**text**、 **ntext**和**image**数据的长度。 应用程序可以充分利用*StrLen_or_IndPtr*参数返回，以便快速检索长数据。  
   
 > [!NOTE]  
 >  对于大值类型，在数据截断的情况下*StrLen_or_IndPtr*将返回 SQL_NO_TOTAL。  

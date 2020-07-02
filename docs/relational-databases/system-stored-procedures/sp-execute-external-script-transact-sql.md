@@ -5,7 +5,7 @@ ms.date: 05/28/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.topic: language-reference
 f1_keywords:
 - sp_execute_external_script_TSQL
@@ -20,16 +20,16 @@ ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 45273b83d5beb033d8c3aad60fa9919a885e55c4
-ms.sourcegitcommit: 7397706bbbc7296946e92ca9d4de93d4a5313c66
+ms.openlocfilehash: 10c29ab8faed05c2fb2750e1e4de17b2fc1fb2b3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84203484"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790400"
 ---
 # <a name="sp_execute_external_script-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 **Sp_execute_external_script**存储过程执行以输入参数形式提供给过程的脚本，并与[机器学习服务](../../machine-learning/sql-server-machine-learning-services.md)和[语言扩展](../../language-extensions/language-extensions-overview.md)一起使用。 
@@ -98,7 +98,7 @@ sp_execute_external_script
 ```
 ::: moniker-end
 
-## <a name="arguments"></a>参数
+## <a name="arguments"></a>自变量
  ** \@ language** = N "*language*"  
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
  指示脚本语言。 *语言*为**sysname**。 有效值为**R**、 **Python**和通过[创建外部语言](../../t-sql/statements/create-external-language-transact-sql.md)（例如，Java）定义的任何语言。
@@ -137,7 +137,7 @@ sp_execute_external_script
   
 `[ @parameter1 = 'value1' [ OUT | OUTPUT ] [ ,...n ] ]`外部脚本使用的输入参数的值列表。  
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 > [!IMPORTANT]
 > 查询树由 SQL 机器学习控制，用户无法对查询执行任意操作。
@@ -322,7 +322,7 @@ GO
 
 要进行评分，还可以使用本机 [PREDICT](../../t-sql/queries/predict-transact-sql.md) 函数，此函数无需调用 Python 或 R 运行时，因此更加快速。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 + [SQL 机器学习](../../machine-learning/index.yml)
 + [SQL Server 语言扩展](../../language-extensions/language-extensions-overview.md)。 

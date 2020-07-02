@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f9dca50a-8baf-4170-90bc-e72783ce5b73
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6083a796b2ffcc3ef949ffc3c40d4aa4185e224a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e3ee34c74a10414104f96190cd04244c28171db4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827473"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790334"
 ---
 # <a name="sp_xml_removedocument-transact-sql"></a>sp_xml_removedocument (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   删除文档句柄指定的 XML 文档的内部表示形式并使该文档句柄无效。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "82827473"
 sp_xml_removedocument hdoc  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *hdoc*  
  新建文档的句柄。 无效句柄将返回错误。 *hdoc*是一个整数。  
   

@@ -18,15 +18,15 @@ ms.assetid: c01b7155-3f0a-473d-90b7-87a97bc56ca5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e7cf91baeb6771f0abb52fb5b8f4c4dc2bddafe0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0cc87b341a4ca9685e070395e003d8187e8593b8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73785279"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787986"
 ---
 # <a name="using-data-files-and-format-files"></a>使用数据文件和格式化文件
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   最简单的大容量复制程序执行以下操作：  
   
@@ -52,7 +52,7 @@ ms.locfileid: "73785279"
   
  从格式化文件描述的数据文件中大容量复制时，请通过在**bcp_init**之后调用[bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) ，然后在**bcp_exec**之前读取格式化文件。  
   
- **Bcp_control**函数在从数据文件大容量复制到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时控制多个选项。 **bcp_control**设置选项，如终止前的最大错误数、要开始大容量复制的文件中的行、要停止的行以及批大小。  
+ **Bcp_control**函数在从数据文件大容量复制到时控制多个选项 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 **bcp_control**设置选项，如终止前的最大错误数、要开始大容量复制的文件中的行、要停止的行以及批大小。  
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;ODBC&#41;执行大容量复制操作](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  

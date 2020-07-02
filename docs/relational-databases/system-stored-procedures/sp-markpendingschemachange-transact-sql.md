@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 01100309-7bef-4154-85bf-f18489577e37
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 91fb437d0b280f8739f0c6d1b6b90efeb73ab3c0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 500547ba6fa2fb53675dfd6eb8e5a32ffb293e49
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831009"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790373"
 ---
 # <a name="sp_markpendingschemachange-transact-sql"></a>sp_markpendingschemachange (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   用于合并发布的可支持性，它通过让管理员跳过所选的挂起架构更改，不复制这些更改。 此存储过程在发布服务器上对发布数据库执行。  
   
@@ -39,7 +39,7 @@ sp_markpendingschemachange [@publication = ] 'publication'
     [ , [ @status = ] 'status' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publication = ] 'publication'`发布的名称。 *发布*为**sysname**，无默认值。  
   
 `[ @schemaversion = ] schemaversion`标识挂起的架构更改。 *schemaversion*为**int**，默认值为**0**。 使用[sp_enumeratependingschemachanges &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md)列出发布的挂起的架构更改。  

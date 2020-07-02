@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: f5f658e3-417e-4286-9213-5738266f3b28
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6b06a0bdbb0cfa7e80d30128ccce71661edde219
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: facfcf92693f108bb04cbb864ac8364e2bef6721
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942309"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790415"
 ---
 # <a name="database-maintenance-plan-stored-procedures-transact-sql"></a>数据库维护计划存储过程 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支持用于设置维护任务的下列系统存储过程。 这些存储过程与数据库维护计划一起使用。 此功能已由不使用这些存储过程的维护计划替换。 可使用这些过程在从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本升级的安装中维护数据库维护计划。  
   

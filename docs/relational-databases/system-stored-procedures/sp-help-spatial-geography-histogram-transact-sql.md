@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5c5bd319-055d-4cd6-8c5a-06354cc056cc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3c2b94b4c76054fb1e9ce6e078f3490ad263a52c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c1ed475c78decb3891185b90d3dc032ab896bdf0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68085194"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790347"
 ---
 # <a name="sp_help_spatial_geography_histogram-transact-sql"></a>sp_help_spatial_geography_histogram (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   简化为空间索引键入网格参数的过程。  
   
@@ -39,7 +39,7 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
      [ , [ @sample = ] 'tablesample' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @tabname = ] 'tabname'`已为其指定了空间索引的表的限定名称或非限定名称。  
   
  仅当指定了限定表时才需要引号。 如果提供的是完全限定名称（包括数据库名称），则数据库名称必须是当前数据库的名称。 *tabname*的值为**sysname**，无默认值。  
@@ -71,7 +71,7 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
  **Geography**类型的边界框是整个地球。  
   
 ## <a name="examples"></a>示例  
- 下面的示例对[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]数据库中的`Person.Address`表调用**sp_help_spatial_geography_histogram** 。  
+ 下面的示例对**sp_help_spatial_geography_histogram** `Person.Address` 数据库中的表调用 sp_help_spatial_geography_histogram [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 。  
   
 ```  
 EXEC sp_help_spatial_geography_histogram @tabname = Person.Address, @colname = SpatialLocation, @resolution = 64, @sample = 30;  

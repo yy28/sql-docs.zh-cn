@@ -15,15 +15,15 @@ apitype: DLLExport
 ms.assetid: 231706f5-26c6-42eb-ab47-315df6b8f824
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c10fcf4f0a57eef5e2f4f33d699c4ed7d4d350e1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b392098091a3a439271a6f01a28ae152405e17b7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68022081"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789503"
 ---
 # <a name="localdbgetinstanceinfo-function"></a>LocalDBGetInstanceInfo 函数
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   返回有关指定的 SQL Server Express LocalDB 实例的信息，如该实例是否存在、实例使用的 LocalDB 版本以及实例是否正在运行等。  
   
  此信息返回到名为**LocalDBInstanceInfo**的结构中，该**结构**具有以下定义。  

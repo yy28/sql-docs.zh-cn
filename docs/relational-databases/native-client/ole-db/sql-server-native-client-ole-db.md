@@ -20,15 +20,15 @@ ms.assetid: da846da4-ec19-4a4f-81fb-7d5a2b2bf80a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a5f945ca5abaa515823ea81ad30ca4292cc42690
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: 425ef611fcb3af6b03f8b670a7bfa21c2de049ed
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84948651"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787656"
 ---
 # <a name="sql-server-native-client-ole-db"></a>SQL Server Native Client (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序（sqlncli.msi）是用于访问数据的低级别 COM API。 建议将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口用于开发需要高性能的工具、实用工具或底层组件。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口是直接访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表格格式数据流 (TDS) 协议的本机高性能访问接口。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "84948651"
   
 -   [数据源对象 (OLE DB)](../../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
--   [命令](../../../relational-databases/native-client-ole-db-commands/commands.md)  
+-   命令  
   
 -   [行集](../../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  
   
@@ -67,7 +67,7 @@ ms.locfileid: "84948651"
   
 -   [FILESTREAM 支持 &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)  
   
--   [中的](../../../relational-databases/native-client-ole-db-transactions/transactions.md)  
+-   [事务](../../../relational-databases/native-client-ole-db-transactions/transactions.md)  
   
 -   [错误](../../../relational-databases/native-client-ole-db-errors/errors.md)  
   

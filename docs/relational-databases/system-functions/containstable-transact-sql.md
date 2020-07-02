@@ -33,17 +33,17 @@ ms.assetid: e580c210-cf57-419d-9544-7f650f2ab814
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d1e4af8a90a4f83d8200f02910f3e445b49fca91
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3107dbb5771731fd15bb1432b2a180af612c86fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73983212"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790453"
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  返回一个表，其中包含对单个词和短语的精确或模糊（不太精确）匹配项、在一定范围内的单词之间的邻近性或加权匹配项的零行、一行或多行。 CONTAINSTABLE 用在[!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 语句的[FROM 子句](../../t-sql/queries/from-transact-sql.md)中，并作为常规表名称引用。 它对包含[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]基于字符的数据类型的全文索引列执行全文搜索。  
+  返回一个表，其中包含对单个词和短语的精确或模糊（不太精确）匹配项、在一定范围内的单词之间的邻近性或加权匹配项的零行、一行或多行。 CONTAINSTABLE 用在 SELECT 语句的[FROM 子句](../../t-sql/queries/from-transact-sql.md)中 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，并作为常规表名称引用。 它 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对包含基于字符的数据类型的全文索引列执行全文搜索。  
   
  CONTAINSTABLE 适用于与[contains 谓词](../../t-sql/queries/contains-transact-sql.md)相同的匹配项，并使用与 contains 相同的搜索条件。  
   
@@ -112,13 +112,13 @@ CONTAINSTABLE
   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *table*  
  已进行了全文索引的表的名称。 *table*可以是由一个、两个、三个或四个部分组成的数据库对象名称。 查询视图时，仅能涉及一个全文索引的基表。  
   
  *表*不能指定服务器名称，并且不能用于对链接服务器的查询。  
   
- column_name   
+ column_name  
  是为进行全文搜索而编制了索引的一个或多个列的名称。 列可以是 char、varchar、nchar、nvarchar、text、ntext、image、xml、varbinary 或 varbinary(max) 类型           。  
   
  column_list   
@@ -132,9 +132,9 @@ CONTAINSTABLE
   
  如果将不同语言的文档一起作为二进制大型对象 (BLOB) 存储在单个列中，则指定文档的区域设置标识符 (LCID) 将决定对其内容编制索引时使用哪种语言。 在对这种列进行查询时，指定 LANGUAGElanguage_term 可增大找到有效匹配项的可能性**。  
   
- 指定为字符串时， *language_term*对应于[sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)兼容性视图中的**alias**列值。  字符串必须用单引号引起来，如 'language_term'  。 如果指定为整数，则 language_term 就是标识该语言的实际 LCID  。 如果指定为十六进制值，则 language_term 将以 0x 开头，后跟 LCID 的十六进制值  。 十六进制值不能超过八位（包括前导零在内）。  
+ 指定为字符串时， *language_term*对应于[sys.sys语言](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)兼容性视图中的**alias**列值。  字符串必须用单引号引起来，如 'language_term'  。 如果指定为整数，则 language_term 就是标识该语言的实际 LCID  。 如果指定为十六进制值，则 language_term 将以 0x 开头，后跟 LCID 的十六进制值  。 十六进制值不能超过八位（包括前导零在内）。  
   
- 如果值是双字节字符集（DBCS）格式， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]则会将其转换为 Unicode。  
+ 如果值是双字节字符集（DBCS）格式，则 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会将其转换为 Unicode。  
   
  如果指定的语言无效，或者未安装对应于该语言的资源，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回错误。 若要使用非特定语言资源，请将 0x0 指定为 language_term  。  
   

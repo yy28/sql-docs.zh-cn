@@ -14,19 +14,19 @@ ms.assetid: aee5ed81-7e23-42e4-92d3-2da7844d9bc3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 54fe59caad74c856ef7a548fb54433f66c216a2c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bfabd9ad0a5ff9e59e8e7f91f1fc9709abef17f7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388455"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787900"
 ---
 # <a name="sparse-columns-support-in-sql-server-native-client"></a>SQL Server Native Client 中的稀疏列支持
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 支持稀疏列。 有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的稀疏列的详细信息，请参阅[使用稀疏列](../../../relational-databases/tables/use-sparse-columns.md)和[使用列集](../../../relational-databases/tables/use-column-sets.md)。  
   
- 有关 Native Client 中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的稀疏列支持的详细信息，请参阅[稀疏列支持 &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)和[稀疏列支持 &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/sparse-columns-support-ole-db.md)。  
+ 有关 Native Client 中的稀疏列支持的详细信息 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，请参阅[稀疏列支持 &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)和[稀疏列支持 &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/sparse-columns-support-ole-db.md)。  
   
  有关演示此功能的示例应用程序的信息，请参阅 [SQL Server 数据编程示例](https://msftdpprodsamples.codeplex.com/)。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "81388455"
 |BCP 的 queryout**** 行为。|在处理显式命名的列上与以前版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 相比没有变化。<br /><br /> 如果应用场景涉及在具有不同架构的表之间进行导入和导出，则可能要求特殊处理。<br /><br /> 有关 BCP 的详细信息，请参阅本章后面的“针对稀疏列的大容量复制 (BCP) 支持”。|  
   
 ## <a name="down-level-client-behavior"></a>下级客户端行为  
- 下级客户端将只为不属于 SQLColumns 和 DBSCHMA_COLUMNS 的稀疏 column_set 的成员的列返回元数据****。 Native Client 中[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]引入的其他 OLE DB 架构行集将不可用，也不会通过 SQL_SOPT_SS_NAME_SCOPE 对 ODBC 中的 SQLColumns 进行修改。  
+ 下级客户端将只为不属于 SQLColumns 和 DBSCHMA_COLUMNS 的稀疏 column_set 的成员的列返回元数据****。 Native Client 中引入的其他 OLE DB 架构行集 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 将不可用，也不会通过 SQL_SOPT_SS_NAME_SCOPE 对 ODBC 中的 SQLColumns 进行修改。  
   
  下级客户端将按名称访问作为稀疏 column_set 的成员的列，并且 column_set 列将可作为 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 客户端的 XML 列访问********。  
   

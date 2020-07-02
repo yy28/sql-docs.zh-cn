@@ -13,19 +13,19 @@ ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5de109f0f26dcc8b892f7856f889ea93089c1205
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2358894c1303856fc3e1b9db06bca1f7e9427509
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304368"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787700"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>大型 CLR 用户定义类型 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   本主题讨论 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中为支持大型公共语言运行时 (CLR) 用户定义类型 (UDT) 而对 OLE DB 进行的更改。  
   
- 有关 Native Client 中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]对大型 clr udt 的支持的详细信息，请参阅[大型 Clr 用户定义类型](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)。 有关示例，请参阅[使用大型 CLR UDT (OLE DB)](../../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md)。  
+ 有关 Native Client 中对大型 CLR Udt 的支持的详细信息 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，请参阅[大型 Clr 用户定义类型](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)。 有关示例，请参阅[使用大型 CLR UDT (OLE DB)](../../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md)。  
   
 ## <a name="data-format"></a>数据格式  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用 ~0 表示其大小对于大型对象 (LOB) 类型不受限制的值的长度。 ~0 还表示大于 8,000 个字节的 CLR UDT 的大小。  
@@ -56,8 +56,8 @@ ms.locfileid: "81304368"
   
 |参数类型|*wType*|*ulParamSize*|*bPrecision*|*bScale*|dwFlags** DBPARAMFLAGS_ISLONG|  
 |--------------------|-------------|-------------------|------------------|--------------|------------------------------------|  
-|DBTYPE_UDT<br /><br /> （长度小于或等于 8,000 个字节）|"DBTYPE_UDT"|*n*|未定义|未定义|clear|  
-|DBTYPE_UDT<br /><br /> （长度大于 8000 个字节）|"DBTYPE_UDT"|~0|未定义|未定义|set|  
+|DBTYPE_UDT<br /><br /> （长度小于或等于 8,000 个字节）|"DBTYPE_UDT"|*n*|undefined|未定义|clear|  
+|DBTYPE_UDT<br /><br /> （长度大于 8000 个字节）|"DBTYPE_UDT"|~0|undefined|未定义|set|  
   
 ## <a name="icommandwithparameterssetparameterinfo"></a>ICommandWithParameters::SetParameterInfo  
  在 DBPARAMBINDINFO 结构中提供的信息必须符合以下规定：  
@@ -80,7 +80,7 @@ ms.locfileid: "81304368"
   
  对于 UDT，还会定义以下列：  
   
-|列标识符|类型|说明|  
+|列标识符|类型|描述|  
 |-----------------------|----------|-----------------|  
 |DBCOLUMN_UDT_CATALOGNAME|DBTYPE_WSTR|对于 UDT 列，为在其中定义了 UDT 的目录的名称。|  
 |DBCOLUMN_UDT_SCHEMANAME|DBTYPE_WSTR|对于 UDT 列，为在其中定义了 UDT 的架构的名称。|  
@@ -105,7 +105,7 @@ ms.locfileid: "81304368"
   
  对于 UDT，还会定义以下列：  
   
-|列标识符|类型|说明|  
+|列标识符|类型|描述|  
 |-----------------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|对于 UDT 列，为在其中定义了 UDT 的目录的名称。|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|对于 UDT 列，为在其中定义了 UDT 的架构的名称。|  
@@ -121,13 +121,13 @@ ms.locfileid: "81304368"
 |绑定数据类型|UDT 到服务器|非 UDT 到服务器|UDT 来自服务器|非 UDT 来自服务器|  
 |----------------------|-------------------|------------------------|---------------------|--------------------------|  
 |DBTYPE_UDT|支持 (5)|错误 (1)|支持 (5)|错误 (4)|  
-|DBTYPE_BYTES|支持 (5)|不适用|支持 (5)|不适用|  
-|DBTYPE_WSTR|支持 (2)、(5)|不适用|支持 (3)、(5)、(6)|不适用|  
-|DBTYPE_BSTR|支持 (2)、(5)|不适用|支持 (3)、(5)|不适用|  
-|DBTYPE_STR|支持 (2)、(5)|不适用|支持 (3)、(5)|不适用|  
-|DBTYPE_IUNKNOWN|支持 (6)|不适用|支持 (6)|不适用|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|支持 (5)|不适用|支持 (3)、(5)|不适用|  
-|DBTYPE_VARIANT (VT_BSTR)|支持 (2)、(5)|不适用|空值|空值|  
+|DBTYPE_BYTES|支持 (5)|不可用|支持 (5)|不可用|  
+|DBTYPE_WSTR|支持 (2)、(5)|不可用|支持 (3)、(5)、(6)|不可用|  
+|DBTYPE_BSTR|支持 (2)、(5)|不可用|支持 (3)、(5)|不可用|  
+|DBTYPE_STR|支持 (2)、(5)|不可用|支持 (3)、(5)|不可用|  
+|DBTYPE_IUNKNOWN|支持 (6)|不可用|支持 (6)|不可用|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|支持 (5)|不可用|支持 (3)、(5)|不可用|  
+|DBTYPE_VARIANT (VT_BSTR)|支持 (2)、(5)|不可用|空值|空值|  
   
 ### <a name="key-to-symbols"></a>符号含义  
   

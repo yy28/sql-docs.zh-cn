@@ -14,17 +14,17 @@ ms.assetid: e64f4f94-eb73-4477-9745-080b6cbdc751
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f59b7f006387beea3d213b7f120e567487232e69
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 409ee4f3b9206ce614ca62ba4935b8ff96a4f85a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81282014"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789136"
 ---
 # <a name="sqlgetstmtattr"></a>SQLGetStmtAttr
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序扩展 SQLGetStmtAttr 以公开特定于驱动程序的语句属性。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驱动程序扩展 SQLGetStmtAttr 以公开特定于驱动程序的语句属性。  
   
  [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)列出了读写属性。 本主题列出只读语句属性。  
   
@@ -32,14 +32,14 @@ ms.locfileid: "81282014"
  SQL_SOPT_SS_CURRENT_COMMAND 属性公开命令批处理中的当前命令。 返回一个整数，该整数指定该命令在批处理中的位置。 *将 valueptr*值的类型为 SQLLEN。  
   
 ## <a name="sql_sopt_ss_nocount_status"></a>SQL_SOPT_SS_NOCOUNT_STATUS  
- SQL_SOPT_SS_NOCOUNT_STATUS 特性指示 NOCOUNT 选项的当前设置，该选项控制在调用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md)时是否报告受语句影响的行数。 *将 valueptr*值的类型为 SQLLEN。  
+ SQL_SOPT_SS_NOCOUNT_STATUS 特性指示 NOCOUNT 选项的当前设置，该选项控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在调用[SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md)时是否报告受语句影响的行数。 *将 valueptr*值的类型为 SQLLEN。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |SQL_NC_OFF|NOCOUNT 为 OFF。 SQLRowCount 返回受影响的行数。|  
 |SQL_NC_ON|NOCOUNT 为 ON。 SQLRowCount 不返回受影响的行数，返回值为0。|  
   
- 如果 SQLRowCount 返回0，则应用程序应测试 SQL_SOPT_SS_NOCOUNT_STATUS。 如果返回 SQL_NC_ON，则 SQLRowCount 的值将仅指示[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]未返回行计数。 如果返回了 SQL_NC_OFF，则表示 NOCOUNT 为 off，并且 SQLRowCount 返回的 0 值表示该语句未影响任何行。  
+ 如果 SQLRowCount 返回0，则应用程序应测试 SQL_SOPT_SS_NOCOUNT_STATUS。 如果返回 SQL_NC_ON，则 SQLRowCount 的值将仅指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 未返回行计数。 如果返回了 SQL_NC_OFF，则表示 NOCOUNT 为 off，并且 SQLRowCount 返回的 0 值表示该语句未影响任何行。  
   
  当 SQL_SOPT_SS_NOCOUNT_STATUS 为 SQL_NC_OFF 时，应用程序不应显示 SQLRowCount 的值。 大型批处理或存储过程可能包含多个 SET NOCOUNT 语句，所以不能认定 SQL_SOPT_SS_NOCOUNT_STATUS 保持不变。 每次 SQLRowCount 返回0时，应测试此选项。  
   

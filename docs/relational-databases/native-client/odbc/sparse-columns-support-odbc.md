@@ -11,15 +11,15 @@ ms.assetid: 11ae959f-2fb6-4b85-ac5d-1476a82136d4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2dd987453202af2d7761e70193f8a0968f4ad38d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5724a0d0a083477c8f148fb80851ad8358dff2f1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303661"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787764"
 ---
 # <a name="sparse-columns-support-odbc"></a>稀疏列支持 (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   本主题描述对稀疏列的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 支持。 有关演示 ODBC 对稀疏列的支持的示例，请参阅对[具有稀疏列的表调用 SQLColumns](../../../relational-databases/native-client-odbc-how-to/call-sqlcolumns-on-a-table-with-sparse-columns.md)。 有关稀疏列的详细信息，请参阅[SQL Server Native Client 中的稀疏列支持](../../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md)。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "81303661"
  新的实现行描述符（IRD）是一个名为 SQL_CA_SS_IS_COLUMN_SET 的只读 SQLSMALLINT 字段，可用于确定列是否为 XML **column_set**值。 SQL_CA_SS_IS_COLUMN_SET 接受值 SQL_TRUE 和 SQL_FALSE。  
   
 ## <a name="catalog-metadata"></a>目录元数据  
- 已[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]将两个特定列（SS_IS_SPARSE 和 SS_IS_COLUMN_SET）添加到[SQLColumns](../../../relational-databases/native-client-odbc-api/sqlcolumns.md)的结果集中。  
+ 已将两个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 特定列（SS_IS_SPARSE 和 SS_IS_COLUMN_SET）添加到[SQLColumns](../../../relational-databases/native-client-odbc-api/sqlcolumns.md)的结果集中。  
   
 ## <a name="odbc-function-support-for-sparse-columns"></a>对稀疏列的 ODBC 函数支持  
  以下 ODBC 函数已进行更新，以便在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中支持稀疏列：  

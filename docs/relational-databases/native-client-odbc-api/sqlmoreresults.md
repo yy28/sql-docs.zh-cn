@@ -14,15 +14,15 @@ ms.assetid: f65698c3-7291-480d-9dab-58b13feb7771
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f22112f57bbb38873956f17189169a4d66efe019
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: add522996d247b41f46fb975fc06eab0ddbe1806
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81289104"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85788052"
 ---
 # <a name="sqlmoreresults"></a>SQLMoreResults
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   **SQLMoreResults**允许应用程序检索多个结果行集。 如果 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 语句包含 COMPUTE 子句，或是提交了一批 ODBC 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，将导致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序生成多个结果集。 在任一种情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 都不允许通过创建服务器游标来处理结果。 因此，开发人员必须确保 ODBC 语句具有阻塞作用。 开发人员必须用完返回的数据或者取消 ODBC 语句，然后才能处理来自连接中其他活动语句的数据。  
   

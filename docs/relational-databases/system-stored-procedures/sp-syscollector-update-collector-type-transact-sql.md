@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 3c414dfd-d9ca-4320-81aa-949465b967bf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 224ee81383c247d3b2ba8d02aaa99f5a649d0e74
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d68443daf5f6e694dc0da8e838dfad897739af05
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82816347"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790344"
 ---
 # <a name="sp_syscollector_update_collector_type-transact-sql"></a>sp_syscollector_update_collector_type (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   为收集项更新收集器类型。 给定收集器类型的名称和 GUID，更新收集器类型配置，包括收集和上载包、参数架构和参数格式化程序架构。  
   
@@ -43,16 +43,16 @@ sp_syscollector_update_collector_type [ @collector_type_uid = ] 'collector_type_
           , [ @upload_package_id = ] upload_package_id  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @collector_type_uid = ] 'collector_type_uid'`收集器类型的 GUID。 *collector_type_uid*是**uniqueidentifier**，如果为 NULL，则它将自动创建并作为输出返回。  
   
 `[ @name = ] 'name'`收集器类型的名称。 *名称*为**sysname** ，必须指定。  
   
 `[ @parameter_schema = ] 'parameter_schema'`此收集器类型的 XML 架构。 *parameter_schema*是**xml** ，可能是某些收集器类型所必需的。 如果它不是必需的，此参数可为 NULL。  
   
-`[ @collection_package_id = ] collection_package_id`是指向 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 收集组使用的收集包的本地唯一标识符。 *collection_package_id* **uniqueidentifer** ，并且是必需的。 若要获取*collection_package_id*的值，请查询 msdb 数据库中的 dbo. syscollector_collector_types 系统视图。  
+`[ @collection_package_id = ] collection_package_id`是指向 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 收集组使用的收集包的本地唯一标识符。 *collection_package_id* **uniqueidentifer** ，并且是必需的。 若要获取*collection_package_id*的值，请查询 msdb 数据库中的 dbo.syscollector_collector_types 系统视图。  
   
-`[ @upload_package_id = ] upload_package_id`是指向 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 收集组使用的上载包的本地唯一标识符。 *upload_package_id*是**uniqueidentifier** ，且是必需的。 若要获取*upload_package_id*的值，请查询 msdb 数据库中的 dbo. syscollector_collector_types 系统视图。  
+`[ @upload_package_id = ] upload_package_id`是指向 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 收集组使用的上载包的本地唯一标识符。 *upload_package_id*是**uniqueidentifier** ，且是必需的。 若要获取*upload_package_id*的值，请查询 msdb 数据库中的 dbo.syscollector_collector_types 系统视图。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  

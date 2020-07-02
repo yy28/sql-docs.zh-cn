@@ -21,15 +21,15 @@ ms.assetid: 74ea9630-e482-4a46-bb45-f5234f079b48
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1c79fbd493906280c6503509309b9efc7a3216f8
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: ebc04e1e643b5cbcf3c351aa549bc5a895e310d5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967665"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85788000"
 ---
 # <a name="handling-errors-and-messages"></a>处理错误和消息
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   当应用程序调用 ODBC 函数时，驱动程序执行该函数，并以两种方式返回诊断信息：返回代码指示 ODBC 函数总体成功或失败，诊断记录提供有关函数的详细信息。 诊断记录包含标题记录和状态记录。 即使该函数成功，也仍将至少返回一条诊断记录，即标题记录。  
   

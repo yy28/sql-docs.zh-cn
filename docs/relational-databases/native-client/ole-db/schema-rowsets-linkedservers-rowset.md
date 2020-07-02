@@ -14,21 +14,21 @@ ms.assetid: 2633fd8a-65e7-498d-9aed-8e4b1cca2381
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 130cfb23f1d0a1eefa90868cf4c59f4c6d3f1e8e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8e4d0c26821cfc9870dc2e5f01f7927257599fe4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304948"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787691"
 ---
 # <a name="schema-rowsets---linkedservers-rowset"></a>架构行集 - LINKEDSERVERS 行集
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   LINKEDSERVERS 行集用于枚举可以参与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分布式查询的组织数据源****。  
   
  LINKEDSERVERS 行集包含以下列****。  
   
-|列名称|类型指示符|说明|  
+|列名称|类型指示符|描述|  
 |-----------------|--------------------|-----------------|  
 |SVR_NAME|DBTYPE_WSTR|链接服务器的名称。|  
 |SVR_PRODUCT|DBTYPE_WSTR|标识由链接服务器的名称所表示的数据存储的类型的制造商或其他名称。|  

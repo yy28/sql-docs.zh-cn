@@ -1,5 +1,5 @@
 ---
-title: sys. sysprotects （Transact-sql） |Microsoft Docs
+title: sys.sys保护（Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 49c9658d-fb51-4c77-94a0-fba699b0102d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ca403b5ad56386252d789ddede007a7293e59a40
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 457eccb7cf032a8b4e0be3a112e15cfe492a32f8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68079241"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790473"
 ---
 # <a name="syssysprotects-transact-sql"></a>sys.sysprotects (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   包含有关已使用 GRANT 和 DENY 语句应用于数据库中安全帐户的权限的信息。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "68079241"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|应用这些权限的对象的 ID。|  
-|**标识号**|**smallint**|应用这些权限的用户或组的 ID。 如果用户数和角色数超过 32,767，则发生溢出或返回 NULL。|  
+|**uid**|**smallint**|应用这些权限的用户或组的 ID。 如果用户数和角色数超过 32,767，则发生溢出或返回 NULL。|  
 |**action**|**tinyint**|可以有下列权限之一：<br /><br /> 26 = REFERENCES<br /><br /> 178 = CREATE FUNCTION<br /><br /> 193 = SELECT<br /><br /> 195 = INSERT<br /><br /> 196 = 删除<br /><br /> 197 = 更新<br /><br /> 198 = CREATE TABLE<br /><br /> 203 = CREATE DATABASE<br /><br /> 207 = CREATE VIEW<br /><br /> 222 = CREATE PROCEDURE<br /><br /> 224 = EXECUTE<br /><br /> 228 = BACKUP DATABASE<br /><br /> 233 = CREATE DEFAULT<br /><br /> 235 = BACKUP LOG<br /><br /> 236 = CREATE RULE|  
 |**protecttype**|**tinyint**|可以有下列值：<br /><br /> 204 = GRANT_W_GRANT<br /><br /> 205 = GRANT<br /><br /> 206 = DENY|  
 |**表列**|varbinary(8000)****|应用这些 SELECT 或 UPDATE 权限的列的位图。<br /><br /> Bit 0 = 所有列。<br /><br /> Bit 1 = 权限应用于该列。<br /><br /> NULL = 无信息。|  

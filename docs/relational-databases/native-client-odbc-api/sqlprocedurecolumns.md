@@ -14,25 +14,25 @@ ms.assetid: 6671e180-0072-4de5-90f5-314306d2ba9c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1b942126a5ad73d5c41f28f60a63d22ef8584f24
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 96c68eac12677109975fce5beea04eec071e70b1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81279984"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787975"
 ---
 # <a name="sqlprocedurecolumns"></a>SQLProcedureColumns
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  **SQLProcedureColumns**返回一个报告所有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]存储过程的返回值属性的行。  
+  **SQLProcedureColumns**返回一个报告所有存储过程的返回值属性的行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
  **SQLProcedureColumns**返回 SQL_SUCCESS *CatalogName*、 *SchemaName*、 *ProcName*或*ColumnName*参数是否存在值。 当在这些参数中使用了无效值时， **SQLFetch**将返回 SQL_NO_DATA。  
   
  可以对静态服务器游标执行**SQLProcedureColumns** 。 尝试对可更新的（动态或键集）游标执行**SQLProcedureColumns**时，将返回 SQL_SUCCESS_WITH_INFO，指示游标类型已更改。  
   
- 下表列出了结果集返回的列，以及如何通过[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序扩展这些列来处理**udt**和**xml**数据类型：  
+ 下表列出了结果集返回的列，以及如何通过 Native Client ODBC 驱动程序扩展这些列来处理**udt**和**xml**数据类型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ：  
   
-|列名称|说明|  
+|列名称|描述|  
 |-----------------|-----------------|  
 |SS_UDT_CATALOG_NAME|返回包含 UDT（用户定义类型）的目录的名称。|  
 |SS_UDT_SCHEMA_NAME|返回包含 UDT 的架构的名称。|  
