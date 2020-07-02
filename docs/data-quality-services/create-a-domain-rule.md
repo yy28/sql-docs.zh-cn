@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: c6a73d3f0dca65d0feb74cf572754351ccf86c7a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2615b71c19011b42bb8497ef07096cc27084409b
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75245484"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85810537"
 ---
 # <a name="create-a-domain-rule"></a>创建域规则
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中创建域规则。 域规则是用于验证、更正和标准化域值的条件。 域规则必须在域中保持正确，这样才能认为域值是准确的并且符合业务要求。 域规则可以包含用于验证域值、但不用于更正数据质量项目中的数据的验证规则。 规则还包含应用于有效数据并用于数据更正的标准化规则。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "75245484"
   
  您还可以选择创建一个域值。 例如，若要验证值是否以字母 A、B 或 C 开头，则您可以创建一个具有复杂条件的简单规则（例如，具有竖线字符的正则表达式），或者可以创建包含若干简单条件的复杂规则。 第一个规则的一个例子是“Value contains regular expression (^A|^B|^C)”。 第二个规则的一个例子是“'Value begins with A' OR 'Value begins with B' OR 'Value begins with C'”。  
   
-|条件|说明|示例|  
+|条件|描述|示例|  
 |---------------|-----------------|-------------|  
 |长度等于|只有包含由操作数指定的字符数的值才有效。|示例操作数：3<br /><br /> 有效值：BB1<br /><br /> 无效值：AA|  
 |长度大于或等于|只有包含由操作数指定的字符数或更多字符数的值才有效。|示例操作数：3<br /><br /> 有效值：BB1、BBAA<br /><br /> 无效值：AA|  

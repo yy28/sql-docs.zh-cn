@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: a8bad2f1-8fb0-4d14-a978-11a5720e62d6
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: a070f5a279cdddfb78d3188c210faf43661d5516
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cc20a282743d83873b58914e4fa391b8402ce473
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75557838"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85809676"
 ---
 # <a name="open-integration-services-projects-in-data-quality-client"></a>在数据质量客户端中打开 Integration Services 项目
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Integration Services 中的 DQS 清理组件允许您在批处理模式下运行清理项目。 但是，有时您可能想要查看 Integration Services 包中的清理结果，这类似于您在 DQS 的数据质量项目中，在清理活动的 **“管理和查看结果”** 选项卡中查看清理结果。 通过 DQS，您可以在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 中打开 Integration Services 项目，就像从 **“打开项目”** 屏幕打开任何其他数据质量项目一样，并且您将具有在 Integration Services 项目中清理结果的交互式清理体验。  
   
@@ -47,11 +47,11 @@ ms.locfileid: "75557838"
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
   
-2.  在[!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]主屏幕中，单击 "**打开数据质量项目**"。 将出现 **“打开项目”** 屏幕。  
+2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中，单击 "**打开数据质量项目**"。 将出现 **“打开项目”** 屏幕。  
   
 3.  在 **“打开项目”** 屏幕上，可以通过以下方式之一标识 Integration Services 项目：  
   
-    1.  **项目名称**：使用以下命名术语列出 Integration Services 项目： "Package. DQS Cleansing_*\<日期>\<时间>*_ {GUID}"。 每次成功地在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中运行同一个包，就会在“打开项目”屏幕中列出一个新项目。 ****  
+    1.  **项目名称**：使用以下命名术语列出 Integration Services 项目： "PACKAGE. DQS Cleansing_ *\<DATE>\<TIME>* _ {GUID}"。 每次成功地在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中运行同一个包，就会在“打开项目”屏幕中列出一个新项目。 ****  
   
     2.  **“项目类型”**：在 **“打开项目”** 屏幕中，Integration Services 项目具有 **SSIS** 作为项目类型。  
   

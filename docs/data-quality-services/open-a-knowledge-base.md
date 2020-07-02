@@ -11,16 +11,16 @@ f1_keywords:
 ms.assetid: a5f010a5-b762-41c9-881b-bf0c192dca83
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 91f5e7effe54b9955537d90d639a820b5428a5c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9d6eebcf079fbb509838e2a3c08efbee5340c4ff
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246012"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85809772"
 ---
 # <a name="open-a-knowledge-base"></a>打开知识库
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   本主题描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中打开现有的知识库，以及如何准备知识库以用于域管理、知识发现或添加匹配策略。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "75246012"
   
     -   选择 **“匹配策略”** 可以创建匹配策略，并将其添加到知识库。  
   
-5.  单击“打开”  。  
+5.  单击“打开” 。  
   
     > [!NOTE]  
     >  还可以通过右键单击知识库，然后单击“打开”来打开该知识库。 上下文菜单中的其他命令支持用其他名称保存它、对其解除锁定、放弃操作、重命名或显示其属性。  
@@ -79,7 +79,7 @@ ms.locfileid: "75246012"
 ##  <a name="state-of-a-knowledge-base"></a><a name="State"></a>知识库的状态  
  “状态”字段指示知识库处于活动的哪个阶段。 如果您打开知识库，则打开此知识库的该阶段。  
   
--   空>：如果已通过在 "域管理" 活动中单击 "**发布**"，并单击 **"是-发布知识库并退出**" 发布了知识库，则该知识库的 "状态" 字段为空。 ** \< **  
+-   **\<Empty>**：如果已通过在 "域管理" 活动中单击 "**发布**" 发布知识库，并单击 **"是-发布知识库并退出**"，则知识库的 "状态" 字段为空。  
   
 -   **工作中**：通过在域管理活动中单击 "**发布**"，然后单击 "**否" 保存对知识库所做的工作并退出**。  
   

@@ -14,15 +14,15 @@ ms.assetid: 330cd2ff-d5d5-4c8e-8f93-0869c977be94
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eafd432d96ad17a3ec0187c6c0e58103a7c9c6b1
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 40f3ef6735bb2de27fd4fda07c3f508717f52515
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84883588"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790680"
 ---
 # <a name="core-sqlxml-security-considerations"></a>SQLXML 核心安全性注意事项
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   以下是使用 SQLXML 进行数据访问的安全性准则。  
   
 -   SQLXMLOLEDB 提供程序公开**StreamFlags**属性，该属性允许您设置标志，以指示应为每个特定实例启用或禁用的 SQLXML 功能。 您可以使用此属性自定义对 SQLXML 的使用，并确保只启用所需组件。 有关详细信息，请参阅[SQLXMLOLEDB Provider &#40;SQLXML 4.0&#41;](https://msdn.microsoft.com/library/fc489682-690a-4bb0-b5ac-237d376dc110)。  

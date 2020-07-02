@@ -18,15 +18,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 462b9b2b8cd5239e6185b59dfabc028c4d7d8d6a
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: ce7be0a6f01ac92f13f35e4410dc59601fdbdc01
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529796"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790557"
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>将参数传递给 Updategram (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Updategram 为模板，因此您可以向其传递参数。 有关将参数传递到模板的详细信息，请参阅[&#40;SQLXML 4.0&#41;的 Updategram 安全注意事项](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)。  
   
  Updategram 允许您将 NULL 作为参数值传递。 若要传递 NULL 参数值，请指定**nullvalue**属性。 然后，将分配给**nullvalue**属性的值作为参数值提供。 Updategram 将该值视为 NULL。  

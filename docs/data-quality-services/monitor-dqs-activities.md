@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: d9926eb251d109eb8ed9529a4ae739e8a1915b07
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ba2bfe0a9979d94df43b923b7eff2ed68750e19a
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75245457"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85809830"
 ---
 # <a name="monitor-dqs-activities"></a>监视 DQS 活动
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中集中监视以下活动：知识发现、域管理、匹配策略、数据清理、数据匹配和 SSIS 清理。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "75245457"
   
         -   **清理**  
   
-        -   **匹配**  
+        -   **一致**  
   
     -   “SSIS 清理”**** 子类型：  
   
@@ -135,7 +135,7 @@ ms.locfileid: "75245457"
   
 3.  系统会提示您指定要保存的 Excel 文件的名称和位置。 导出的 Excel 文件包含以下工作表：  
   
-    |工作表名称|说明|  
+    |工作表名称|描述|  
     |----------------|-----------------|  
     |活动|包含与活动网格中的活动有关的信息（列）。|  
     |进程|包含与 **“活动步骤”** 选项卡中活动的进程有关的信息（列）。|  

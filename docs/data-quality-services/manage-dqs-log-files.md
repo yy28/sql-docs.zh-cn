@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 4fccfd24-aede-4882-be69-ec1e82682e16
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 6edcf577b7783662a02efc3531ac02c2535ef078
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3e3de142823ebe0749e350c93b4891e20838ad5d
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75245418"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85808708"
 ---
 # <a name="manage-dqs-log-files"></a>管理 DQS 日志文件
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 日志文件可帮助您诊断和解决与 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]、 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]和 [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)]有关的问题。 为 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]、 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]和 [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)]生成单独的日志文件。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "75245418"
   
 -   日期和时间  
   
--   线程名称  
+-   线程名  
   
 -   线程 ID  
   

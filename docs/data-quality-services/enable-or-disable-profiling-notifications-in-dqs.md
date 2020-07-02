@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: e439bb29-60cc-4afd-a79a-f629b8d843c1
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: d5d58777c4fe358f8536cc07b4eb1067487ab588
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1be57d6f139a3e7f9b418abb8d01619d20db209c
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251623"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85810758"
 ---
 # <a name="enable-or-disable-profiling-notifications-in-dqs"></a>在 DQS 中启用或禁用事件探查通知
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中启用或禁用事件探查通知。 默认情况下，在 DQS 中启用了事件探查通知。 事件探查通知将指出有关数据源的重要事实以及对数据执行的当前活动的效用。 有关详细信息，请参阅 [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md)。  
   
@@ -43,6 +43,6 @@ ms.locfileid: "75251623"
   
 4.  取消选中或选中 **“启用通知”** 复选框，以便为 DQS 中的各种活动禁用或启用事件探查通知。  
   
-5.  单击“**关闭**”。  
+5.  单击“关闭”。  
   
   

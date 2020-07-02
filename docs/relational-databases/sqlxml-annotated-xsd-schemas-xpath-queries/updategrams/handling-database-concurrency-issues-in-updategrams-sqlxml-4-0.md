@@ -22,15 +22,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dbb10145e8d660fa02ebefefc09da4aa04eb1778
-ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
+ms.openlocfilehash: 11e4a7a875dd2c9b9450619f389b2f082136c536
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84215280"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790591"
 ---
 # <a name="handling-database-concurrency-issues-in-updategrams-sqlxml-40"></a>在 Updategram 中处理数据库并发问题 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   与其他数据库更新机制一样，updategram 必须处理多用户环境下对数据的并发更新。 Updategram 使用乐观并发控制，该模式将选择字段数据与快照进行比较，以确保要更新的数据自从在数据库中读取后，其他用户应用程序未更改过该数据。 Updategram 在 updategram 的块中包含这些快照值 **\<before>** 。 更新数据库之前，updategram 会根据数据库中当前的值检查在块中指定的值， **\<before>** 以确保更新有效。  
   
  乐观并发控制在 updategram 中提供三种保护级别：低（无）、中间和高。 通过相应指定 updategram，可以确定需要的保护级别。  

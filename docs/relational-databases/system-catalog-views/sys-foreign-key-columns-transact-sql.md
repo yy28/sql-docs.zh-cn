@@ -20,15 +20,15 @@ ms.assetid: 7247f065-5441-4bcf-9f25-c84a03290dc6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad5bd8f5391e5903a6f9fd10e0cfb340cf4952b6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 93f7f96b3283df7e5f0087dec7277692e3485fc9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68133982"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790546"
 ---
 # <a name="sysforeign_key_columns-transact-sql"></a>sys.foreign_key_columns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   组成外键的每一列或列集在表中对应一行。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68133982"
 |-----------------|---------------|-----------------|  
 |**constraint_object_id**|**int**|FOREIGN KEY 约束的 ID。|  
 |**constraint_column_id**|**int**|构成外键的列或一组列的 ID （*1.. n* ，其中 n = 列数）。|  
-|**parent_object_id**|**int**|作为引用对象的约束父级的 ID。|  
+|parent_object_id|**int**|作为引用对象的约束父级的 ID。|  
 |**parent_column_id**|**int**|作为引用列的父列的 ID。|  
 |**referenced_object_id**|**int**|具有候选键的引用对象的 ID。|  
 |**referenced_column_id**|**int**|被引用列（候选键列）的 ID。|  
