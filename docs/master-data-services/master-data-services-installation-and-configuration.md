@@ -2,7 +2,7 @@
 title: 安装和配置
 description: 了解如何在 Windows Server 2012 R2 计算机上安装 Master Data Services，配置 MDS 数据库和网站，以及部署示例模型和数据。
 ms.custom: ''
-ms.date: 05/22/2019
+ms.date: 07/01/2020
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
@@ -11,16 +11,16 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f9a0a43bb913437e4818c46fc81c0794019639c7
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 777d0b497bae5e52c49fb95e1e7ff3e7387ea676
+ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796278"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85834768"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services 的安装和配置
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   本文介绍了如何在 Windows Server 2012 R2 计算机上安装 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 、设置 MDS 数据库和网站，以及部署示例模型和数据。 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) 使你的组织能够管理数据的受信任版本。   
   
@@ -130,7 +130,7 @@ ms.locfileid: "84796278"
   
 3.  在 "**数据库服务器**" 页上，指定 SQL Server 实例。 
 
-    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]添加对 SQL Server 托管实例的支持。 将**SQL Server 实例**的值设置为 Azure SQL 数据库托管实例的主机。 例如，`xxxxxx.xxxxxx.database.windows.net` 。
+    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]添加对 SQL Server 托管实例的支持。 将**SQL Server 实例**的值设置为 Azure SQL 数据库托管实例的主机。 例如 `xxxxxx.xxxxxx.database.windows.net`。
 
 4. 选择**身份验证类型**，然后单击 "**测试连接**" 以确认你可以使用所选身份验证类型的凭据连接到数据库。 单击“下一步”。
 
@@ -209,7 +209,7 @@ ms.locfileid: "84796278"
 
 ![mds_2016ConfigurationComplete_MessageBox](../master-data-services/media/mds-2016configurationcomplete-messagebox.png) 
   
-     For more information about the settings on the Web Configuration page, see [Web Configuration Page &#40;Master Data Services Configuration Manager&#41;](../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
+有关“Web 配置”页上的设置的详细信息，请参阅[“Web 配置”页（Master Data Services 配置管理器）](../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
   
  你还可以使用 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 指定与 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库相关联的 Web 应用程序和服务的其他设置。 例如，你可以指定加载数据的频率或发送验证电子邮件的频率。 有关详细信息，请参阅[系统设置 (Master Data Services)](../master-data-services/system-settings-master-data-services.md)。  
   
@@ -217,9 +217,7 @@ ms.locfileid: "84796278"
  以下三个示例模型包都包含在  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中。   这些示例模型包括数据。 示例模型包的默认位置为 %programfiles%\Microsoft SQL Server\140\Master Data Services\Samples\Packages****
   
 -   chartofaccounts_en.pkg  
-  
 -   customer_en.pkg  
-  
 -   product_en.pkg  
   
  可以使用 MDSModelDeploy 工具部署这些包。 MDSModelDeploy 工具的默认位置为 驱动器\Program Files\Microsoft SQL Server\ 140\Master Data Services\Configuration**。  
@@ -248,28 +246,26 @@ ms.locfileid: "84796278"
     >  `MDSModelDeploy listservices`  
     >   
     >  返回的值列表中，第一个服务值为指定用于部署模型的值。  
-    >
+
     > [!NOTE]
     > 为了解更多有关示例模型的元数据信息，请参考“c:\Program Files\Microsoft SQL Server\140\Master Data Services\Configuration”中提供的自述文件
-    >
    
      **部署 chartofaccounts_en.pkg 示例模型**  
   
-    ```  
+    ```console
     MDSModelDeploy deploynew -package chartofaccounts_en.pkg -model ChartofAccounts -service MDS1  
     ```  
   
      **部署 customer_en.pkg 示例模型**  
   
-    ```  
+    ```console
     MDSModelDeploy deploynew -package customer_en.pkg -model Customer -service MDS1  
     ```  
   
      **部署 product_en.pkg 示例模型**  
   
-    ```  
+    ```console
     MDSModelDeploy deploynew -package product_en.pkg -model Product -service MDS1  
-  
     ```  
   
      成功部署某一模型后，将显示“MDSModelDeploy 操作已完成”**** 消息。  
@@ -288,7 +284,7 @@ ms.locfileid: "84796278"
   
          ![MDS 网站、主页。](../master-data-services/media/mds-mdswebsite-homepage-selectsamplemodel.png "MDS 网站、主页。")  
   
-## <a name="next-step"></a>后续步骤  
+## <a name="next-step"></a>下一步  
  为你的数据创建一个新的模型和实体。 请参阅[创建模型 (Master Data Services)](../master-data-services/create-a-model-master-data-services.md) 和[创建实体 (Master Data Services)](../master-data-services/create-an-entity-master-data-services.md)。  
   
  有关如何使用模型和实体为 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中的数据生成结构的概述，请参阅 [Master Data Services 概述 (MDS)](../master-data-services/master-data-services-overview-mds.md)  

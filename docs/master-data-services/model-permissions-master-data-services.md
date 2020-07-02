@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 210f440b-2cc1-4c49-94b1-3a97e2af7bc3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5e42e54689b5b6a576a24fe57f2f9f4dcaccd1b8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 36e2b4cacd6636b2580aff1d8c27ea5a3a444906
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728975"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813234"
 ---
 # <a name="model-permissions-master-data-services"></a>模型权限 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   模型权限应用到模型中存在的所有实体、派生层次结构、显式层次结构和集合。 对于任何单个对象，可以覆盖分配给模型的权限。  
   
@@ -33,10 +33,10 @@ ms.locfileid: "73728975"
 |----------------|-----------------|  
 |**读取**|用户可以读取成员、属性、层次结构成员身份或集合成员身份。|  
 |**创建**|用户可以创建成员，并在创建过程中指定属性值。|  
-|**Update**|用户可以更新成员、属性、层次结构成员身份或集合成员身份。|  
+|**更新**|用户可以更新成员、属性、层次结构成员身份或集合成员身份。|  
 |**删除**|用户可以删除成员|  
-|**注销**|拒绝对模型的所有访问|  
-|**管理**|针对模型的管理员权限。 管理员权限仅在模型级别可用。|  
+|**拒绝**|拒绝对模型的所有访问|  
+|**管理员**|针对模型的管理员权限。 管理员权限仅在模型级别可用。|  
   
  读取、创建、更新和删除权限可以彼此合并。 当分配创建、更新和删除权限时，将自动分配读取权限。  
   

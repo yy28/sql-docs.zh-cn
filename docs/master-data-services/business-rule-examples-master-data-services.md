@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 3974b9be-4b7c-4a37-ab26-1a36ef455744
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 774dd01985a5a5f2a952c1002a804481a2f5497d
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 93bbed557f18c847d62dec3e700023f87324e594
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796538"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813692"
 ---
 # <a name="business-rule-examples-master-data-services"></a>业务规则示例 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 本文演示 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]的业务规则示例。 你会在 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]安装附带的示例模型中找到这些示例。   
   
@@ -28,7 +28,7 @@ ms.locfileid: "84796538"
   
   
 ## <a name="business-rule-examples"></a>业务规则示例  
-示例模型 |实体  |业务规则名称| 说明  
+示例模型 |实体  |业务规则名称| 描述  
 ---------|---------|---------|-----------|  
 客户    | 客户   | Person pmt terms| 为客户指定默认付款条款。          
 在下面的业务规则中，如果 CustomerType 属性值满足 `is equal` [规则条件](../master-data-services/business-rule-conditions-master-data-services.md)，则 `defaults to` [规则操作](../master-data-services/business-rule-conditions-master-data-services.md) 会应用于 PaymentTerms 属性。 否则不执行任何操作。  
@@ -43,7 +43,7 @@ Else
   
 **--------------------------------------------------**  
   
-示例模型  |实体  |业务规则名称|说明    
+示例模型  |实体  |业务规则名称|描述    
 ---------|---------|---------|---------------  
 客户     | 客户    | Org pmt terms | 为组织指定默认付款条款。         
 在下面的业务规则中，如果 CustomerType 属性值满足 `is equal` [规则条件](../master-data-services/business-rule-conditions-master-data-services.md)，则 `defaults to` [规则操作](../master-data-services/business-rule-actions-master-data-services.md) 会应用于 PaymentTerms 属性。 否则不执行任何操作。  
@@ -59,7 +59,7 @@ Else
 **--------------------------------------------------**  
   
   
-示例模型  |实体  |业务规则名称| 说明    
+示例模型  |实体  |业务规则名称| 描述    
 ---------|---------|---------|-----------  
 产品     |  产品       | DaysToManufacture |为内部制造指定制造天数范围。          
 在下面的业务规则中，如果 InHouseManufacture 属性值满足 `is equal` [规则条件](../master-data-services/business-rule-conditions-master-data-services.md)，则 `must be between` [规则操作](../master-data-services/business-rule-actions-master-data-services.md) 会应用于 DaysToManufacture 属性。 否则不执行任何操作。  
@@ -75,7 +75,7 @@ Else
 **--------------------------------------------------**  
   
   
-示例模型  |实体  |业务规则名称|说明    
+示例模型  |实体  |业务规则名称|描述    
 ---------|---------|---------|-------------  
 产品     |产品         |Required fields| 为产品实体成员指定必需属性。           
 在下面的业务规则中，在所有情况下都会为指定属性执行 `is required` [验证操作](../master-data-services/business-rule-actions-master-data-services.md) 。 属性值不能为 Null 或空白。  
@@ -100,7 +100,7 @@ Else
 **--------------------------------------------------**  
   
   
-示例模型  |实体  |业务规则名称|说明    
+示例模型  |实体  |业务规则名称|描述    
 ---------|---------|---------|-----------  
 产品     | 产品        |  Std Cost| 要求标准成本大于 0。        
 在下面的业务规则中，在所有情况下都会将 `must be greater than` [规则操作](../master-data-services/business-rule-actions-master-data-services.md) 应用于产品的 StandardCost 属性。  
@@ -116,7 +116,7 @@ Else
 **--------------------------------------------------**  
   
   
-示例模型  |实体  |业务规则名称|说明    
+示例模型  |实体  |业务规则名称|描述    
 ---------|---------|---------|------------  
 产品     | 产品        | FG MSRP Cost|指定产品是否为产成品，并且 MSRP（制造商建议零售价）和经销商成本必须大于 0。           
   
@@ -134,7 +134,7 @@ Else
 **--------------------------------------------------**  
   
   
-示例模型  |实体  |业务规则名称|说明    
+示例模型  |实体  |业务规则名称|描述    
 ---------|---------|---------|------------  
 产品     | 产品        |  Default Name| 基于 Color 和 Class 属性的值指定默认产品名称。 当 Color 属性值不是 YLO 并且 Class 属性不是 NA 时，默认名称是 Yellow NA。         
 在下面的业务规则中，如果 Color 和 Class 属性不满足 `is equal` 规则条件，则 `defaults to` [规则操作](../master-data-services/business-rule-actions-master-data-services.md) 会应用于 Name 属性。  

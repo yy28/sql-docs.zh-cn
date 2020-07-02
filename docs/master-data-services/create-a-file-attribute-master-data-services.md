@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: d224886b-2ef1-4658-8b01-2213cc4b8df6
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ce0f10316be9aa9f9b2b23a24642d8cd7d0eda1b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 18c64bacdec9e0d8640b5b5884a6dcaf04f99214
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175139"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813103"
 ---
 # <a name="create-a-file-attribute-master-data-services"></a>创建文件属性 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，创建文件属性以便使用文件填充属性值。
 
@@ -38,12 +38,12 @@ ms.locfileid: "78175139"
 ## <a name="attribute-information"></a>属性信息
  对于创建的每个属性，系统都会在网格中添加一行（其中包含七列）。 下表对这些列进行了说明。
 
-|列|说明|
+|列|描述|
 |------------|-----------------|
 |状态|属性状态。<br /><br /> 单击 "保存" 时，将显示![更新状态](../master-data-services/media/mds-statusicon-updating.png "用于更新状态的图标")图像的图标，指示属性正在更新。<br /><br /> 如果在创建或编辑属性时出现错误，则会显示![错误状态图标图标](../master-data-services/media/mds-statusicon-error.png "错误状态图标")。<br /><br /> 否则，状态为 "正常"，将显示!["确定状态](../master-data-services/media/mds-statusicon-ok.png ""正常" 状态图标")" 图像的图标。|
-|名称|属性名称。|
+|“属性”|属性名称。|
 |显示名称|属性显示名称。|
-|说明|属性说明。|
+|描述|属性说明。|
 |显示像素宽度|属性宽度。|
 |类型和属性|属性的类型和数据类型信息。|
 |启用更改跟踪|指定是否启用该属性以进行更改跟踪，并在括号中显示组号。|

@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 9a5e37f3-352e-45a6-b4a0-6f98f83b4bd8
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4d8f95671bebf3d67368a35ab61f3c24392186fa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 92b67b981c5eb7dbd1e05b1d18af291cae78aaa1
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728234"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813975"
 ---
 # <a name="edit-and-delete-an-entity-sync-relationship-master-data-services"></a>编辑和删除实体同步关系 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   实体同步是实体版本间的单向可重复同步。 它提供了一种在不同模型间共享实体数据的方法。 可以编辑和删除自己创建的同步关系。  
   
@@ -66,11 +66,11 @@ ms.locfileid: "73728234"
   
 3.  在“实体同步维护” **** 页上，选择网格中的同步关系。  
   
-4.  单击 **“编辑”**。 右侧将显示一个面板。  
+4.  单击 **“编辑”** 。 右侧将显示一个面板。  
   
 5.  请更改 ****“频率”。 选择“按需同步” ****，或选择“自动同步” **** 并设置频率。  
   
-6.  单击“保存”  。  
+6.  单击“ **保存**”。  
   
  **删除实体同步关系**  
   

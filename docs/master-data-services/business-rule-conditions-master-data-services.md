@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: d2e0a8c3-4c2e-407c-856e-68d95ebda9ed
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ab2b632307f966a0f8e37d290c3cc12d52cda064
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4849b2f16c691db08766ca451673d0960ee69222
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728718"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813693"
 ---
 # <a name="business-rule-conditions-master-data-services"></a>业务规则条件 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，业务规则条件确定对于要执行的一个或多个操作必须满足的条件。  
   
@@ -28,7 +28,7 @@ ms.locfileid: "73728718"
   
 ## <a name="business-rule-conditions"></a>业务规则条件  
   
-|条件名称|说明|  
+|条件名称|描述|  
 |--------------------|-----------------|  
 |**等于**|所选属性 **“等于”** 特定属性、特定属性值或者为空。<br /><br /> 此条件对文本、数字、日期和链接值有效。|  
 |**不等于**|所选属性 **“不等于”** 特定属性、特定属性值或者为空。<br /><br /> 此条件对文本、数字、日期和链接值有效。|  
@@ -40,7 +40,7 @@ ms.locfileid: "73728718"
 |**开头不为**|所选属性 **开头不为** 特定属性、特定属性值或者为空。<br /><br /> 此条件对文本和链接值有效。|  
 |**结尾为**|所选属性 **“结尾为”** 特定属性、特定属性值或者为空。<br /><br /> 此条件对文本和链接值有效。|  
 |**结尾不为**|所选属性 **结尾不为** 特定属性、特定属性值或者为空。<br /><br /> 此条件对文本和链接值有效。|  
-|**有**|所选属性 **“包含”** 特定属性、特定属性值或者为空。<br /><br /> 此条件对文本和链接值有效。|  
+|**contains**|所选属性 **“包含”** 特定属性、特定属性值或者为空。<br /><br /> 此条件对文本和链接值有效。|  
 |**不包含**|所选属性 **不包含** 特定属性、特定属性值或者为空。<br /><br /> 此条件对文本和链接值有效。|  
 |**包含模式**|所选属性 **“包含模式”** 来自特定属性、特定属性值或者为空。 使用 .NET Framework 正则表达式可以指定模式。<br /><br /> 有关正则表达式的详细信息，请参阅 MSDN Library 中的[正则表达式语言元素](https://go.microsoft.com/fwlink/?LinkId=164401)。<br /><br /> 此条件对文本和链接值有效。|  
 |**不包含模式**|所选属性 **不包含模式** 来自特定属性、特定属性值或者为空。 使用 .NET Framework 正则表达式可以指定模式。<br /><br /> 有关正则表达式的详细信息，请参阅 MSDN Library 中的[正则表达式语言元素](https://go.microsoft.com/fwlink/?LinkId=164401)。<br /><br /> 此条件对文本和链接值有效。|  

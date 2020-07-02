@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: d694a105-69b1-4ff6-99d3-1f408b916b81
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a18de9c33def5b0603f4460f87e7c5589ead4521
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: da814796cb4f03008857b20d6f8f7d00b70a8b4a
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728421"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813065"
 ---
 # <a name="create-an-index-master-data-services"></a>创建索引 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   为经常查询的属性列表创建自定义索引，以提高查询性能。  
   
@@ -50,10 +50,10 @@ ms.locfileid: "73728421"
   
  对于你创建的每个索引，系统都会在网格中添加一行（其中包含四列）。 下表对这些列进行了说明。  
   
-|列名|说明|  
+|列名|描述|  
 |-----------------|-----------------|  
 |状态|索引状态。<br /><br /> 单击 "**保存**" 时，将显示![更新状态](../master-data-services/media/mds-statusicon-updating.png "用于更新状态的图标")图像的图标，表明索引正在更新。<br /><br /> 如果在创建或编辑索引时出现错误，则会显示![错误状态图标图标](../master-data-services/media/mds-statusicon-error.png "错误状态图标")。<br /><br /> 否则，状态为 "正常"，并显示!["确定状态](../master-data-services/media/mds-statusicon-ok.png ""正常" 状态图标")" 图像的图标。|  
-|名称|索引名称。|  
+|“属性”|索引名称。|  
 |是唯一的|指定索引是否是唯一的。|  
 |对应属性|显示在其上定义索引的属性的显示名称。|  
   

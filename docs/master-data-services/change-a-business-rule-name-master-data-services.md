@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: cffcae43-a208-443f-9f43-a0ec9e05f79c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2794b4c7dc7d8196845a83509accca085f23f396
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9de8fba3f5a9ba04cccf475ed4a1ebcef1dced74
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728670"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813636"
 ---
 # <a name="change-a-business-rule-name-master-data-services"></a>更改业务规则名称 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，当分配的业务规则名称不能满足您的业务需要时，可以更改此名称。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "73728670"
   
 7.  为业务规则键入新名称。  
   
-8.  单击“保存”  。  
+8.  单击“ **保存**”。  
   
 9. 单击“全部发布” ****。  
   

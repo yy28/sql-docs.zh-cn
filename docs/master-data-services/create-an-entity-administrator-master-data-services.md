@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 717be1e8-488e-4219-8d1e-ca9084b864cd
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: bca3fbbfe08969f27c26ab0ca6a66e76468acdc8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5b74d076e0ba104c514126f035994c8debcb1de3
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729532"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813353"
 ---
 # <a name="create-an-entity-administrator-master-data-services"></a>创建实体管理员 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，如果你希望某个组或用户具有一个或多个实体中所有对象的所有权限，或者有权批准挂起更改集，请创建一个实体管理员。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "73729532"
   
 5.  对希望组或用户成为其管理员的每个实体，完成步骤 4。  
   
-6.  单击“保存”  。  
+6.  单击“ **保存**”。  
   
 ## <a name="see-also"></a>另请参阅  
  [管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)   

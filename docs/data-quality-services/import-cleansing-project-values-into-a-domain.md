@@ -11,16 +11,16 @@ f1_keywords:
 ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 34060c3fc5416f7244b400b506faad9097d66880
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3ffc5e2c36590fc1128eb1c073d51051fed2e4d1
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75241804"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85814087"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>将清理项目值导入到域中
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中，您可以将在清理过程中从数据质量清理项目或包含 DQS 清理组件的集成服务包中收集的数据质量知识，导入到域中。 这样可确保可信知识不丢失，而且可以不断地改进知识库。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "75241804"
   
     -   如果选择 **“从‘新建’选项卡中添加值”** ，则除了 **“正确”** 和 **“已更正”** 选项卡中的值之外，还将导入新建选项卡中的值。  
   
-    -   单击“确定”。   
+    -   单击 **“确定”** 。  
   
 6.  您将返回到 **“域值”** 选项卡；在值成功导入后，将显示一条消息。 **“值”** 表中将显示已导入的值，因此也是首次进入域中的值。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "75241804"
   
 9. 若要搜索特定字符串，在 **“查找”** 文本框中输入该字符串。 单击向上或向下箭头可以逐一查看满足搜索条件的值。 这些值将突出显示为黄色。  
   
-10. 单击 **“完成”** 。  
+10. 单击“完成”。  
   
     > [!NOTE]  
     >   有关使用 **“域值”** 选项卡上的值的详细信息，请参阅 [Change Domain Values](../data-quality-services/change-domain-values.md)。  
@@ -114,6 +114,6 @@ ms.locfileid: "75241804"
   
 ## <a name="see-also"></a>另请参阅  
  [数据清理](../data-quality-services/data-cleansing.md)   
- [DQS 清除转换](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)  
+ [DQS 清理转换](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)  
   
   

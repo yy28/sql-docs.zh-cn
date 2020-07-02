@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 399eed32-7c61-4239-9c06-996a65219518
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 89fa4dea57c4936a2d6a51e08f48668215ba53a2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2a0a2bd63e5b69cd9e0b206f18414b41c823441d
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728207"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812987"
 ---
 # <a name="edit-model-master-data-services"></a>编辑模型 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，你可以更改模型的名称和说明，并指明所需的事务日志保留期（以天为单位）。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "73728207"
   
 3.  在“管理模型” **** 页上，从网格中选择要更改其名称或说明的模型所在的行。  
   
-4.  单击 **“编辑”**。  
+4.  单击 **“编辑”** 。  
   
 5.  在“名称” **** 框中，键入更新后的模型名称。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "73728207"
   
 8.  单击 **“保存模型”**。  
   
- 网格的“状态”列中显示了对模型所执行操作的状态。 **** 单击 "**保存模型**" 按钮后，将显示 "![更新](../master-data-services/media/mds-model-status-updating.png "正在更新")" 图像，指示模型正在更新。 如果在创建或编辑模型时出现错误，则会显示![错误](../master-data-services/media/mds-model-status-error.png "错误")映像。 如果状态为“正常”，系统会显示 ![“确定”](../master-data-services/media/mds-model-status-ok.png "OK") 图像。  
+ 网格的“状态”列中显示了对模型所执行操作的状态。 **** 单击 "**保存模型**" 按钮后，将显示 "![更新](../master-data-services/media/mds-model-status-updating.png "更新")" 图像，指示模型正在更新。 如果在创建或编辑模型时出现错误，则会显示![错误](../master-data-services/media/mds-model-status-error.png "错误")映像。 如果状态为“正常”，系统会显示 ![“确定”](../master-data-services/media/mds-model-status-ok.png "确定") 图像。  
   
 ## <a name="see-also"></a>另请参阅  
  [创建模型 &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)   

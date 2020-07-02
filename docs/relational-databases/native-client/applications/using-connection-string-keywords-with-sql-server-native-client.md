@@ -18,12 +18,12 @@ ms.assetid: 16008eec-eddf-4d10-ae99-29db26ed6372
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d214cd21d5e94097164a8b5ede9252a59c552f4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5082230054064f41134f553660999314b5b51897
+ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85656996"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85834748"
 ---
 # <a name="using-connection-string-keywords-with-sql-server-native-client"></a>将连接字符串关键字用于 SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
@@ -199,7 +199,8 @@ ms.locfileid: "85656996"
 |关键字|初始化属性|说明|  
 |-------------|-----------------------------|-----------------|  
 |**应用程序名称**|SSPROP_INIT_APPNAME|用于标识应用程序的字符串。|  
-|**Application Intent**|SSPROP_INIT_APPLICATIONINTENT|连接到服务器时声明应用程序工作负荷类型。 可能的值为 ReadOnly 和 ReadWrite   。<br /><br /> 默认值为 ReadWrite  。 有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 对的支持的详细信息 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ，请参阅[对高可用性和灾难恢复的 SQL Server Native Client 支持](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。|  
+|**Application Intent**|SSPROP_INIT_APPLICATIONINTENT|"ApplicationIntent" 的同义词。|
+|**ApplicationIntent**|SSPROP_INIT_APPLICATIONINTENT|连接到服务器时声明应用程序工作负荷类型。 可能的值为 ReadOnly 和 ReadWrite   。<br /><br /> 默认值为 ReadWrite  。 有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 对的支持的详细信息 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ，请参阅[对高可用性和灾难恢复的 SQL Server Native Client 支持](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。|  
 |**自动翻译**|SSPROP_INIT_AUTOTRANSLATE|“AutoTranslate”的同义词。|  
 |**AutoTranslate**|SSPROP_INIT_AUTOTRANSLATE|配置 OEM/ANSI 字符转换。 可识别的值为“true”和“false”。|  
 |**Connect Timeout**|DBPROP_INIT_TIMEOUT|等待数据源初始化完成的时间（秒）。|  
@@ -249,7 +250,8 @@ ms.locfileid: "85656996"
   
 |关键字|初始化属性|说明|  
 |-------------|-----------------------------|-----------------|  
-|**Application Intent**|SSPROP_INIT_APPLICATIONINTENT|连接到服务器时声明应用程序工作负荷类型。 可能的值为 ReadOnly 和 ReadWrite   。<br /><br /> 默认值为 ReadWrite  。 有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 对的支持的详细信息 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ，请参阅[对高可用性和灾难恢复的 SQL Server Native Client 支持](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。|  
+|**Application Intent**|SSPROP_INIT_APPLICATIONINTENT|"ApplicationIntent" 的同义词。|
+|**ApplicationIntent**|SSPROP_INIT_APPLICATIONINTENT|连接到服务器时声明应用程序工作负荷类型。 可能的值为 ReadOnly 和 ReadWrite   。<br /><br /> 默认值为 ReadWrite  。 有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 对的支持的详细信息 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ，请参阅[对高可用性和灾难恢复的 SQL Server Native Client 支持](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。|  
 |**应用程序名称**|SSPROP_INIT_APPNAME|用于标识应用程序的字符串。|  
 |**自动翻译**|SSPROP_INIT_AUTOTRANSLATE|“AutoTranslate”的同义词。|  
 |**AutoTranslate**|SSPROP_INIT_AUTOTRANSLATE|配置 OEM/ANSI 字符转换。 可识别的值为“true”和“false”。|  

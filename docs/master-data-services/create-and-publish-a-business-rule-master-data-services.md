@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2dfc03bc292d7c39024116eca9cf49a5179a5b7c
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 39fdd6cebd0c27ec4a27a4543129a659bcdb22a3
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796390"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813030"
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>创建和发布业务规则 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，创建业务规则以便确保您的主数据的精确性。 创建规则后，必须首先发布它，然后才能将该规则应用于数据。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "84796390"
   
 5.  从“成员类型” **** 下拉列表中，选择要应用业务规则的成员类型。  
   
-6.  单击“添加”。  
+6.  单击 **“添加”** 。  
   
 7.  在“名称” **** 框中，键入业务规则的名称。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "84796390"
   
 19. 填写所有必填字段。  
   
-20. 单击 **“保存”** 。 此时，系统会在“Then” **** 网格中新添加一行。  
+20. 单击“ **保存**”。 此时，系统会在“Then” **** 网格中新添加一行。  
   
 21. （可选）若要添加“Else” **** 操作，请完成以下步骤。  
   
@@ -92,9 +92,9 @@ ms.locfileid: "84796390"
   
     4.  填写所有必填字段。  
   
-    5.  单击 **“保存”** 。 此时，系统会在“Else” **** 网格中新添加一行。  
+    5.  单击“ **保存**”。 此时，系统会在“Else” **** 网格中新添加一行。  
   
-22. 单击 **“保存”** 。 此时，系统会在业务规则网格中新添加一行。  
+22. 单击“ **保存**”。 此时，系统会在业务规则网格中新添加一行。  
   
 23. 单击“全部发布” ****。  
   
@@ -103,11 +103,11 @@ ms.locfileid: "84796390"
 ## <a name="grid-columns"></a>网格列  
  对于你创建的每个业务规则，系统都会在网格中添加一行（其中包含六列）。 下面介绍了这些列。  
   
-|名称|说明|  
+|“属性”|描述|  
 |----------|-----------------|  
 |状态|在你单击“保存” **** 后，系统会显示下面的图像，指明业务规则正在更新。<br /><br /> ![mds_BR_refresh](../master-data-services/media/mds-br-refresh.png "mds_BR_refresh")<br /><br /> 如果在创建或编辑业务规则时出错，系统会显示下面的图像。<br /><br /> ![mds_br_error](../master-data-services/media/mds-br-error.png "mds_br_error")<br /><br /> 如果状态为“正常”，则将显示下面的图像。<br /><br /> ![mds_BR_success](../master-data-services/media/mds-br-success.png "mds_BR_success")|  
-|名称|业务规则名称。|  
-|说明|业务规则描述。|  
+|“属性”|业务规则名称。|  
+|描述|业务规则描述。|  
 |业务规则状态|以下业务规则状态之一：未定义规则、有效、已排除、待更改、待排除、待删除。|  
 |已排除|指定是否排除业务规则。|  
 |通知|指定要向其发送电子邮件通知的选定用户或组。|  

@@ -3,7 +3,7 @@ title: sys. fn_get_audit_file （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 02/19/2020
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
+ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5c8aeffd66f812b682610ad16abc6c4336b77b9c
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
+ms.openlocfilehash: aa14b65d527de3efa82f54212e6668e232197486
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83668390"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813894"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]    
 
   从服务器审核在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中创建的审核文件返回信息。 有关详细信息，请参阅 [SQL Server Audit（数据库引擎）](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
   
@@ -43,7 +43,7 @@ fn_get_audit_file ( file_pattern,
     { default | audit_record_offset | NULL } )  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *file_pattern*  
  指定要读取的审核文件集的目录（或路径）和文件名。 类型为**nvarchar （260）**。 
  
@@ -51,19 +51,19 @@ fn_get_audit_file ( file_pattern,
     
     此参数必须包括路径（驱动器盘符或网络共享）和文件名，可以包含通配符。 单个星号（*）可用于从审核文件集中收集多个文件。 例如：  
   
-    -   ** \< 路径 \\>\* ** -收集指定位置中的所有审核文件。  
+    -   **\<path>\\\***-收集指定位置中的所有审核文件。  
   
-    -   ** \< 路径> \ LOGINSAUDIT_ {GUID}***-收集具有指定名称和 GUID 对的所有审核文件。  
+    -   ** \<path> \ LOGINSAUDIT_ {GUID}***-收集具有指定名称和 GUID 对的所有审核文件。  
   
-    -   ** \< 路径> \ LOGINSAUDIT_ {GUID} _00_29384. .Sqlaudit** -收集特定的审核文件。  
+    -   ** \<path> \ LOGINSAUDIT_ {GUID} _00_29384. .Sqlaudit** -收集特定的审核文件。  
   
  - **AZURE SQL 数据库**：
  
     此参数用于指定 blob URL （包括存储终结点和容器）。 虽然它不支持星号通配符，但你可以使用部分文件（blob）名称前缀（而不是完整的 blob 名称）来收集以此前缀开头的多个文件（blob）。 例如：
  
-      - ** \< Storage_endpoint \> / \< 容器 \> / \< ServerName \> / \< DatabaseName \> - / **收集特定数据库的所有审核文件（blob）。    
+      - **\<Storage_endpoint\>/\<Container\>/\<ServerName\>/\<DatabaseName\>/**-收集特定数据库的所有审核文件（blob）。    
       
-      - ** \< Storage_endpoint \> / \< Container \> / \< ServerName \> / \< DatabaseName \> / \< AuditName \> / \< CreationDate \> / \< \> .xel** -收集特定审核文件（blob）。
+      - ** \<Storage_endpoint\> / \<Container\> / \<ServerName\> / \<DatabaseName\> / \<AuditName\> / \<CreationDate\> / \<FileName\> . .xel** -收集特定的审核文件（blob）。
   
 > [!NOTE]  
 >  在无文件名模式的情况下传递路径将生成错误。  
@@ -83,7 +83,7 @@ fn_get_audit_file ( file_pattern,
 ## <a name="tables-returned"></a>返回的表  
  下表描述此函数可返回的审核文件内容。  
   
-| 列名称 | 类型 | 说明 |  
+| 列名称 | 类型 | 描述 |  
 |-------------|------|-------------|  
 | action_id | **varchar(4)** | 操作的 ID。 不可为 Null。 |  
 | additional_information | **nvarchar(4000)** | 仅适用于单个事件的唯一信息，以 XML 的形式返回。 有少量的可审核操作包含此类信息。<br /><br /> 对于具有与操作相关联的 TSQL 堆栈的操作，将以 XML 格式显示一个级别的 TSQL 堆栈。 该 XML 格式如下：<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> Frame nest_level 指示框架的当前嵌套级别。 模块名称表示为由三部分组成的格式（database_name、schema_name 和 object_name）。  模块名称将被解析为对无效的 xml 字符（如、、、）进行转义 `'\<'` `'>'` `'/'` `'_x'` 。 它们将被转义为 `_xHHHH\_` 。 HHHH 代表该字符对应的四位十六进制 UCS-2 代码。<br /><br /> 可以为 Null。 如果事件没有报告其他信息，则返回 NULL。 |
@@ -127,7 +127,7 @@ fn_get_audit_file ( file_pattern,
 | user_defined_information | **nvarchar(4000)** | **适用**于： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更高版本、Azure SQL 数据库和托管实例<br /><br /> 用于记录用户要使用**sp_audit_write**存储过程在审核日志中记录的任何其他信息。 |  
 
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  如果传递到**fn_get_audit_file**的*file_pattern*参数引用的路径或文件不存在，或者该文件不是审核文件，则返回**MSG_INVALID_AUDIT_FILE**错误消息。  
   
 ## <a name="permissions"></a>权限

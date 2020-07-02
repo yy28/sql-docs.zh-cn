@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: d323bbac-c8d4-4d2f-a7d2-a597e8b53e2d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4f45d9ced6b22ec2b0cf7007eee4549e595ec697
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0d6656052194b23b0107641d3c59ba8a84544731
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728574"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813153"
 ---
 # <a name="commit-or-submit-a-changeset-master-data-services"></a>确认提交变更集 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   变更集是主数据的挂起更改的集合。 如果实体的更改不需要管理员审批，则可以提交变更集。 如果实体的更改需要管理员审批，则你可以提交变更集以供审批。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "73728574"
 ## <a name="to-commit-a-local-changeset"></a>确认本地变更集  
  确认选项仅可用于实体管理员尚未启用审批需求的实体上的本地变更集。  
   
-1.  在[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]主页上，选择模型和版本，然后单击 "**资源管理器**"。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 主页上，选择模型和版本，然后单击 "**资源管理器**"。  
   
 2.  单击“实体”菜单中的某个实体 **** 。  
   
@@ -45,13 +45,13 @@ ms.locfileid: "73728574"
 ## <a name="to-submit-a-changeset"></a>提交变更集  
  提交选项仅可用在实体管理员启用了审批需求的实体上的变更集上。  
   
-1.  在[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]主页上，选择模型和版本，然后单击 "**资源管理器**"。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 主页上，选择模型和版本，然后单击 "**资源管理器**"。  
   
 2.  单击“实体”菜单中的某个实体 **** 。  
   
 3.  在右窗格中，选择“变更集” ****，然后双击要提交的变更集。  
   
-4.  单击“提交”  。  
+4.  单击“提交”。  
   
 ## <a name="next-steps"></a>后续步骤  
  [批准或拒绝变更集 (Master Data Services)](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)  

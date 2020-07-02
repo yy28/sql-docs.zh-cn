@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 4215cda5bfc82f0c6d195f336a1099309ab18154
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8b2c1a1ec0bb6c1417fa68720f2d345c6bc4ccb
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75255641"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813836"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>为 DQS 日志文件配置严重级别
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   本主题介绍如何通过使用 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] 为 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)](DQS) 中的不同活动和模块配置严重级别。 严重级别定义 DQS 中发生的事件的强度。 DQS 事件具有以下严重级别，这些级别按严重程度递减列出：  
   
@@ -63,7 +63,7 @@ ms.locfileid: "75255641"
     > [!NOTE]  
     >  默认情况下，将为每个活动选择 **“错误”** 。 这意味着，默认情况下对于每个活动，错误和严重消息将写入 DQS 日志文件。  
   
-5.  单击“**关闭**”。  
+5.  单击“关闭”。  
   
 ##  <a name="configure-severity-levels-at-module-level-advanced"></a><a name="ConfigureModule"></a>在模块级别配置严重级别（高级）  
  通过 **“日志设置”** 选项卡中的 **“高级”** 部分，您可以在模块级别配置日志严重性设置。 模块是在 DQS 中的某一特性内实现不同功能的 DQS 系统程序集。 例如，域管理活动包含不同功能，例如定义域规则、定义规则条件、为复合域定义跨域规则等。  
@@ -88,7 +88,7 @@ ms.locfileid: "75255641"
   
 4.  如果需要，为其他模块重复步骤 2 和 3。 您还可以通过单击 **“添加模块”** 和 **“删除模块”** 图标，向网格中添加或删除行。  
   
-5.  单击“**关闭**”。  
+5.  单击“关闭”。  
   
 ## <a name="see-also"></a>另请参阅  
  [为 DQS 日志文件配置高级设置](../data-quality-services/configure-advanced-settings-for-dqs-log-files.md)  

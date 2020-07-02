@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a43ffa259fd30d7aeaf4e2336780a2b92b2ef289
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 8618b0dfc4488f3862366ac873e8cd38e1086e51
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796389"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813358"
 ---
 # <a name="create-an-entity-master-data-services"></a>创建实体 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，创建一个实体以便包含成员及其属性。  
   
@@ -65,16 +65,16 @@ ms.locfileid: "84796389"
   
 9. 可选。 选择“启用数据压缩” **** 复选框。 默认情况下，系统将打开行压缩。 有关详细信息，请参阅 [Data Compression](../relational-databases/data-compression/data-compression.md)。  
   
-10. 单击 **“保存”** 。  
+10. 单击“ **保存**”。  
   
 ## <a name="grid-columns"></a>网格列  
  对于创建的每个实体，系统都会在网格中添加一行（其中包含十三列）。 下面介绍了这些列。  
   
-|名称|说明|  
+|“属性”|描述|  
 |----------|-----------------|  
 |状态|实体状态。 单击“保存” **** 时，将显示下图，指示实体正在更新。<br /><br /> ![用于更新状态的图标](../master-data-services/media/mds-statusicon-updating.png "用于更新状态的图标")<br /><br /> 如果在创建或编辑实体时出错，将显示下面的图像。<br /><br /> ![错误状态图标](../master-data-services/media/mds-statusicon-error.png "错误状态图标")<br /><br /> 如果状态为“正常”，则将显示下面的图像。<br /><br /> !["正常" 状态图标](../master-data-services/media/mds-statusicon-ok.png ""正常" 状态图标")|  
-|名称|实体名称。|  
-|说明|实体说明。|  
+|“属性”|实体名称。|  
+|描述|实体说明。|  
 |临时表|用于存储数据的表的前缀名称。|  
 |事务日志类型|实体的事务日志类型。|  
 |自动创建代码|指定是否启用自动代码创建。|  

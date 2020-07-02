@@ -16,22 +16,22 @@ helpviewer_keywords:
 ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4e01c6773ce28694e95f992f1af49a7cce19e969
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 112c046e6a3e0eb51b18ba397c718907fa0829c9
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728076"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813293"
 ---
 # <a name="leaf-permissions-master-data-services"></a>叶权限（主数据服务）
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   叶权限应用到实体的所有叶成员的属性值。  
   
  对于未启用显式层次结构的实体，将权限分配给 **“叶”** 等同于将权限分配给实体。  
   
- **注意：**  
+ 注意：  
   
 -   叶权限仅应用到用户界面的 **“资源管理器”** 功能区域。  
   
@@ -41,9 +41,9 @@ ms.locfileid: "73728076"
 |----------------|-----------------|  
 |**读取**|用户可以读取叶成员、属性。|  
 |**创建**|用户可以创建叶成员，并在创建过程中指定属性值。|  
-|**Update**|用户可以更新叶成员和属性。|  
+|**更新**|用户可以更新叶成员和属性。|  
 |**删除**|用户可以删除叶成员。|  
-|**注销**|拒绝对叶成员的所有访问权限。|  
+|**拒绝**|拒绝对叶成员的所有访问权限。|  
   
  读取、创建、更新和删除权限可以合并。 如果已分配创建、更新和删除权限，那么系统会自动分配读取权限。  
   
@@ -54,14 +54,14 @@ ms.locfileid: "73728076"
 |----------------|-----------------|  
 |**读取**|用户可以读取属性。|  
 |**创建**|用户可以在创建成员时分配值。|  
-|**Update**|用户可以更新属性。|  
+|**更新**|用户可以更新属性。|  
 |**删除**|无效。|  
-|**注销**|不显示属性。<br /><br /> 注意：不能明确拒绝对 Name 和 Code 属性的访问权限。|  
+|**拒绝**|不显示属性。<br /><br /> 注意：不能明确拒绝对 Name 和 Code 属性的访问权限。|  
   
 ### <a name="example"></a>示例  
  对于 Product 实体，将 **“更新”** 权限分配给 Subcategory 属性。 向所有其他属性分配“拒绝”权限。  
   
-|名称|代码|Subcategory（更新）|  
+|“属性”|代码|Subcategory（更新）|  
 |----------|----------|----------------------------|  
 |Mountain-100|BK-M101|{5}山地自行车|  
 |Mountain-100|BK-M201|{5}山地自行车|  

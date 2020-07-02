@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 1d565748-9759-425c-ae38-4d2032a86868
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: f4c0431afb7d1c2de0fc5e4fae5e7c7c25639002
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 98c6ef2767f7ac64567f3e0a3d31381935577c59
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75255615"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813869"
 ---
 # <a name="configure-advanced-settings-for-dqs-log-files"></a>为 DQS 日志文件配置高级设置
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   本主题介绍如何为 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 和 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 日志文件配置高级设置，例如设置日志文件的滚动文件大小限制、设置事件的时间戳模式等。  
   
@@ -115,7 +115,7 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
 >  [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 日志记录设置配置动态生成并且存储于 DQS_MAIN.Log 文件中，该文件通常位于 C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log 下（如果您安装了 SQL Server 的默认实例）。 但是，将不会保存在此文件中直接进行的更改，它们将会被 DQS_MAIN 数据库中 A_CONFIGURATION 表的配置设置覆盖。  
   
 ##  <a name="configure-data-quality-client-log-settings"></a><a name="DQSClient"></a>配置 Data Quality Client 日志设置  
- [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]日志设置配置文件 dqlog.client.xml 通常在 C:\PROGRAM Files\Microsoft SQL server\130\tools\binn\dq\config。中提供XML 文件的内容类似于您之前为[!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]日志配置设置修改的 xml 文件。 配置 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 日志设置：  
+ [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]日志设置配置文件 DQLog.Client.xml 通常在 C:\Program FILES\MICROSOFT SQL server\130\tools\binn\dq\config。上提供。XML 文件的内容类似于您之前为日志配置设置修改的 XML 文件 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 。 配置 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 日志设置：  
   
 1.  以管理员身份运行任何 XML 编辑工具或记事本。  
   

@@ -14,16 +14,16 @@ f1_keywords:
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 02adc815ee969af43b56e51966ded1b1fde6f101
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f7be51122765131e8681c11a7c84759e173f1517
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244151"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813791"
 ---
 # <a name="perform-knowledge-discovery"></a>执行知识发现
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   本主题描述如何通过知识发现生成知识库。 在发现过程中， [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 将通过计算机辅助进程对示例数据源中的数据进行分析，并且将获取的知识添加到知识库中。 可以在知识发现活动的 **“管理域值”** 步骤中或在域管理活动中修改和增强此知识。  
   
@@ -182,7 +182,7 @@ ms.locfileid: "75244151"
   
 8.  **从 Excel 导入域值**：通过单击 **“导入值”** 图标的向下箭头，然后选择 **“从 Excel 导入域值”**，从 Excel 电子表格添加新值。 输入文件名，根据需要选择 **“将第一行用作标头”** ，然后单击 **“确定”**。 有关详细信息，请参阅 [将值从 Excel 文件导入到域](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md)。  
   
-9. **从 Excel 导入项目值**：通过单击 **“导入值”** 图标的向下箭头，然后选择 **“从 Excel 导入项目值”**，从数据质量项目添加新值。 输入文件名，根据需要选择 **“将第一行用作标头”** ，然后单击 **“确定”**。 选择您从中导入值的项目，然后单击 **“确定”**。 将显示导入的值。 单击 **“完成”** 。 有关详细信息，请参阅“将项目值导入到域中”。  
+9. **从 Excel 导入项目值**：通过单击 **“导入值”** 图标的向下箭头，然后选择 **“从 Excel 导入项目值”**，从数据质量项目添加新值。 输入文件名，根据需要选择 **“将第一行用作标头”** ，然后单击 **“确定”**。 选择您从中导入值的项目，然后单击 **“确定”**。 将显示导入的值。 单击“完成”。 有关详细信息，请参阅“将项目值导入到域中”。  
   
 10. **删除所选域值**：通过选择值，然后单击 **“删除所选域值”** 按钮，从域中删除一个或多个现有值。 无法删除 DQS_NULL 的项，因此，如果您选择要删除的多个值，并且 DQS_NULL 的项是其中之一，则操作将失败。  
   

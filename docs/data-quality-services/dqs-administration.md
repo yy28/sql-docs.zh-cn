@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 065a8869eff0e88cee5bf0bb110a948f709743d7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 06e7b913533451aec82098bcd22b23a64bb3dc61
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251671"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85814095"
 ---
 # <a name="dqs-administration"></a>dqs 管理
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   使用[!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS)，您可以管理在 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]上执行的各种 DQS 活动、配置与 DQS 活动有关的服务器级属性、配置 Reference Data Services 设置以及 DQS 日志设置。 通过 **的** 管理 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]功能来执行这些操作。 根据您在 DQS 中的安全访问权限（角色），授权/拒绝您在此区域中执行某些功能。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "75251671"
 ### <a name="activity-monitoring"></a>活动监视  
  **中的** “活动监视” [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 屏幕显示有关在 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]上执行的每个活动的详细信息。 此屏幕将主要供数据专员使用，用于对 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 应用程序所连接的 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 上执行的所有活动执行高级监视。 此屏幕不提供任何系统级别的监视。 此外，DQS 管理员还可以使用此屏幕在需要时终止正在运行的活动或停止活动中正在运行的过程，从而控制活动或活动中的过程。 为知识发现、域管理、匹配策略、清理、匹配和基于 SQL Server Integration Services (SSIS) 的清理显示此数据。  
   
-### <a name="configuration"></a>配置  
+### <a name="configuration"></a>Configuration  
  DQS 管理员使用 **中的** “配置” [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 屏幕执行以下操作：  
   
 -   **引用数据**：配置引用数据服务提供程序： Azure Marketplace 或直接引用数据服务提供程序。 在设置引用数据服务提供程序后，可以在域管理活动期间在知识库中使用引用数据映射域/复合域，然后将同一知识库用于数据质量项目中的清理活动。 它还使你能够指定用于连接到 Internet 的代理设置以使用 Azure Marketplace。  
