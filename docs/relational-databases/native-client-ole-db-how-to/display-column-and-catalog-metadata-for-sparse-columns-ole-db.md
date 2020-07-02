@@ -11,15 +11,15 @@ ms.assetid: 3b8ccad5-411d-4b79-b95e-ee524714f7d6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f3bad30dbe0257d341ad91e2ed60bf698ca52dc8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 46cf671dd8a261130676c13dca09b1b9ad33a3c8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81295768"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773319"
 ---
 # <a name="display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>显示稀疏列的列和目录元数据 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   此示例将创建具有三个列的表，包括一个稀疏列、一个非稀疏列和一个列集列。 随后示例将显示 OLE DB 标志，指示非稀疏列和列集列的列及目录元数据。  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 57971787-f9f5-4199-9f64-c2b61a308906
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f16eb9ad600537ec5b7afe63474f78769c1b810b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 155f56340925a1c2c2d6a095085203492f20f016
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827568"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773856"
 ---
 # <a name="sp_help_jobserver-transact-sql"></a>sp_help_jobserver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   为给定的作业返回有关服务器的信息。  
   
@@ -41,7 +41,7 @@ sp_help_jobserver
      [ , [ @show_last_run_details = ] show_last_run_details ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @job_id = ] job_id`要为其返回信息的作业标识号。 *job_id*的值为**uniqueidentifier**，默认值为 NULL。  
   
 `[ @job_name = ] 'job_name'`要为其返回信息的作业的名称。 *job_name*的默认值为**sysname**，默认值为 NULL。  
@@ -59,7 +59,7 @@ sp_help_jobserver
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|目标服务器的标识号。|  
-|server_name |**nvarchar(30)**|目标服务器的计算机名称。|  
+|server_name|**nvarchar(30)**|目标服务器的计算机名称。|  
 |**enlist_date**|**datetime**|将目标服务器登记到主服务器的日期。|  
 |**last_poll_date**|**datetime**|目标服务器上一次轮询主服务器的日期。|  
   

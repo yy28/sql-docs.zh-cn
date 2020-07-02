@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 55fcc73b489a781601a2a6c5bbe139ee449cd60d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b7313e3784c5af9922fb5301b339087510a98e91
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827558"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773834"
 ---
 # <a name="sp_help_jobstep-transact-sql"></a>sp_help_jobstep (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   返回有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务在执行自动活动时使用的作业中的步骤信息。  
   
@@ -41,7 +41,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
      [ , [ @suffix = ] suffix ]   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @job_id = ] 'job_id'`要为其返回作业信息的作业标识号。 *job_id*的值为**uniqueidentifier**，默认值为 NULL。  
   
 `[ @job_name = ] 'job_name'`作业的名称。 *job_name*的值为**sysname**，默认值为 NULL。  
@@ -72,7 +72,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**on_success_step_id**|**int**|如果**on_success_action**为4，则指示要执行的下一步。|  
 |**on_fail_action**|**tinyint**|如果步骤失败了，应采取什么后续操作。 值与**on_success_action**相同。|  
 |**on_fail_step_id**|**int**|如果**on_fail_action**为4，则指示要执行的下一步。|  
-|**服务**|**sysname**|保留。|  
+|服务器|**sysname**|保留。|  
 |**database_name**|**sysname**|对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 步骤，这是命令执行时所在的数据库。|  
 |**database_user_name**|**sysname**|对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 步骤，这是命令执行时所在的数据库用户上下文。|  
 |**retry_attempts**|**int**|应该对命令进行重试的最大次数（如果命令没有成功）。|  

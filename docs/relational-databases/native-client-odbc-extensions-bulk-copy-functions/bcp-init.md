@@ -19,15 +19,15 @@ ms.assetid: 6a25862c-7f31-4873-ab65-30f3abde89d2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b8e40091f88c4e9fc739f125a2e44715e62c9ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 19914bb99a2812035e6833b389a62e6ed3139463
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73782685"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774264"
 ---
 # <a name="bcp_init"></a>bcp_init
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
 初始化大容量复制操作。  
 
@@ -46,7 +46,7 @@ Unicode 和 ANSI 名称：
 - bcp_initA （ANSI）
 - bcp_initW （Unicode）
 
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *hdbc*  
  是启用大容量复制的 ODBC 连接句柄。  
   
@@ -70,7 +70,7 @@ Unicode 和 ANSI 名称：
  SUCCEED 或 FAIL。  
   
 ## <a name="remarks"></a>备注  
- 调用任何其他大容量复制函数之前调用**bcp_init** 。 **bcp_init**对工作站和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之间的大容量数据复制执行必要的初始化。  
+ 调用任何其他大容量复制函数之前调用**bcp_init** 。 **bcp_init**对工作站和之间的大容量数据复制执行必要的初始化 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
  **Bcp_init**函数必须与支持使用大容量复制函数的 ODBC 连接句柄一起提供。 若要启用句柄，请使用 SQLSetConnectAttr，将 SQL_COPT_SS_BCP [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)设置为在已分配但未连接的连接句柄上 SQL_BCP_ON。 尝试对已连接的句柄分配属性将导致错误。  
   
@@ -84,7 +84,7 @@ Unicode 和 ANSI 名称：
   
 -   向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制时，数据文件必须包含数据库表中的每列数据。 从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制时，数据库表、视图或 SELECT 结果集中的所有列的数据均被复制到数据文件中。  
   
--   向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制时，数据文件中的列序号位置必须与数据库表中的列序号位置相同。 从[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]复制时， **bcp_exec**根据数据库表中列的序号位置放置数据。  
+-   向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制时，数据文件中的列序号位置必须与数据库表中的列序号位置相同。 从复制时 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ， **bcp_exec**根据数据库表中列的序号位置放置数据。  
   
 -   如果数据库数据类型的长度可变（例如， **varbinary （22）**）或数据库列可以包含 null 值，则数据文件中的数据将以长度/空指示器作为前缀。 指示符的宽度因数据类型和大容量复制的版本而异。  
   
@@ -92,7 +92,7 @@ Unicode 和 ANSI 名称：
   
  对于不包含索引的表，通过将数据库恢复模式设置为 SIMPLE 或 BULK_LOGGED 可以优化向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的大容量复制。 有关详细信息，请参阅批量导入和[更改数据库](../../t-sql/statements/alter-database-transact-sql.md)[中最小日志记录的先决条件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。  
   
- 如果未使用任何数据文件，则必须调用[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)以指定每列的数据的格式和位置，然后[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)将数据行复制到中。  
+ 如果未使用任何数据文件，则必须调用[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)以指定每列的数据的格式和位置，然后使用 bcp_sendrow 将数据行复制到中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)  
   
 ## <a name="example"></a>示例  
  此示例显示如何将 ODBC bcp_init 函数用于格式化文件。  

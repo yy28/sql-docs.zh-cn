@@ -13,15 +13,15 @@ ms.assetid: 31b318a4-20e7-4db0-b367-eb9938859029
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e272f7c545130ac5a0f6d66ec6991037123ed8c2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8e26d334a360b42ba1bdaa6311eb09bcffd70489
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301010"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773443"
 ---
 # <a name="metadata---parameter-and-rowset"></a>元数据 - 参数和行集
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   本主题提供了与 OLE DB 日期和时间增强功能相关的以下类型和类型成员的相关信息。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "81301010"
   
  bPrecision** 参数将被忽略。  
   
- 向服务器发送数据时将忽略“DBPARAMFLAGS_SS_ISVARIABLESCALE”。 通过使用特定于提供程序的类型名称“datetime”和“smalldatetime”，应用程序可以强制使用旧的表格格式数据流 (TDS) 类型********。 当连接到 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]（或更高版本）服务器时，如果类型名称为“datetime2”或“DBTYPE_DBTIMESTAMP”，将使用“datetime2”格式，并在必要时进行隐式服务器转换********。 如果使用提供程序特定的类型名称“datetime”**** 或“smalldatetime”****，则将忽略 bScale**。 否则，appications 必须确保正确设置*bScale* 。 从 MDAC 升级[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]的应用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]程序和使用 "DBTYPE_DBTIMESTAMP" 的 Native Client 的应用程序如果未正确设置*bScale* ，则会失败。 当连接到早于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 的服务器实例时，采用“DBTYPE_DBTIMESTAMP”且值不为 0 或 3 的 bScale 值不正确，并且将返回 E_FAIL**。  
+ 向服务器发送数据时将忽略“DBPARAMFLAGS_SS_ISVARIABLESCALE”。 通过使用特定于提供程序的类型名称“datetime”和“smalldatetime”，应用程序可以强制使用旧的表格格式数据流 (TDS) 类型********。 当连接到 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]（或更高版本）服务器时，如果类型名称为“datetime2”或“DBTYPE_DBTIMESTAMP”，将使用“datetime2”格式，并在必要时进行隐式服务器转换********。 如果使用提供程序特定的类型名称“datetime”**** 或“smalldatetime”****，则将忽略 bScale**。 否则，appications 必须确保正确设置*bScale* 。 从 MDAC 升级的应用程序和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 使用 "DBTYPE_DBTIMESTAMP" 的 Native Client 的应用程序如果未正确设置*bScale* ，则会失败。 当连接到早于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 的服务器实例时，采用“DBTYPE_DBTIMESTAMP”且值不为 0 或 3 的 bScale 值不正确，并且将返回 E_FAIL**。  
   
  如果未调用 ICommandWithParameters：： SetParameterInfo，则提供程序将在 IAccessor：： CreateAccessor 中指定的绑定类型中表示服务器类型，如下所示：  
   
@@ -83,7 +83,7 @@ ms.locfileid: "81301010"
 ## <a name="icolumnsrowsetgetcolumnsrowset"></a>IColumnsRowset::GetColumnsRowset  
  IColumnsRowset::GetColumnsRowset**** 返回以下列：  
   
-|列类型|DBCOLUMN_TYPE|DBCOLUM_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE、DBCOLUMN_DATETIMEPRECISION|DBCOLUMN_FLAGS、DBCOLUMNFLAGS_SS_ISVARIABLESCALE|  
+|列名称|DBCOLUMN_TYPE|DBCOLUM_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE、DBCOLUMN_DATETIMEPRECISION|DBCOLUMN_FLAGS、DBCOLUMNFLAGS_SS_ISVARIABLESCALE|  
 |-----------------|--------------------|-------------------------|-------------------------|--------------------------------------------------|---------------------------------------------------------|  
 |date|DBTYPE_DBDATE|6|10|0|Clear|  
 |time|DBTYPE_DBTIME2|10|8, 10..16|0..7|设置|  

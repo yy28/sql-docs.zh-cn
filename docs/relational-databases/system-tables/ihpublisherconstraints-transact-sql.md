@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 537b1e1a-7228-4680-aa27-5ad7072ea01e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f8b7409a15c9e8f3df4991b2b7d20737f5cd82c6
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fa87169a0988336e8a00537a76126120fb95d196
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82813264"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773771"
 ---
 # <a name="ihpublisherconstraints-transact-sql"></a>IHpublisherconstraints (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   使用当前分发服务器从非 SQL Server 发布服务器复制的每个约束在**IHpublisherconstraints**系统表中各占一行。 此表存储在分发数据库中。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "82813264"
 |table_id****|**int**|标识约束所属的[IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md)中的表。|  
 |**publisher_id**|**smallint**|标识正在发布该列的非 SQL Server 发布服务器。|  
 |**Name**|**Sysname**|所发布的约束的名称。|  
-|**Type**|**nvarchar(255)**|[IHconstrainttypes](../../relational-databases/system-tables/ihconstrainttypes-transact-sql.md)系统表中受支持的约束类型。|  
+|类型|**nvarchar(255)**|[IHconstrainttypes](../../relational-databases/system-tables/ihconstrainttypes-transact-sql.md)系统表中受支持的约束类型。|  
   
 ## <a name="see-also"></a>另请参阅  
  [异类数据库复制](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   

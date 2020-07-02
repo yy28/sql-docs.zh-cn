@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: 5eb67d59-a19d-4dba-9d2b-657f87818f6b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6a448e118fcc6c6401f8e3632dc035b53209655e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7690239969a50dc50e580eae4bb6a622f104aecf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82806086"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773801"
 ---
 # <a name="ihindextypes-transact-sql"></a>IHindextypes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   不 SQL Server 发布服务器支持的每个非 SQL Server 索引类型在**IHindextypes**系统表中各占一行。 此表存储在分发数据库中。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|type |**nvarchar(255)**|受支持的非 SQL Server 索引类型的名称。|  
+|**type**|**nvarchar(255)**|受支持的非 SQL Server 索引类型的名称。|  
   
 ## <a name="see-also"></a>另请参阅  
  [异类数据库复制](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   

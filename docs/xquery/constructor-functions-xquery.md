@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 98562d0e-d0e0-4f62-b001-90acbac67277
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 105ba6fb68e8d8031858fcf54dddc56b655ddcea
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 56dd5919565d1cbb7d0b95ae4476aef9140cecd0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529203"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773710"
 ---
 # <a name="constructor-functions-xquery"></a>构造函数 (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   从指定的输入中，构造函数创建任意 XSD 内置或用户定义原子类型的实例。  
   
@@ -37,14 +37,14 @@ TYP($atomicvalue as xdt:anyAtomicType?
   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *$strval*  
  将被转换的字符串。  
   
  *TYP*  
  任意内置 XSD 类型。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  支持用于基本和派生原子 XSD 类型的构造函数。 但是，不支持**xs： duration**的子类型，**包括 xdt： yearMonthDuration 和 xdt： dayTimeDuration**，以及**xs： QName**、 **xs： NMTOKEN**和**xs： NOTATION** 。 倘若它们是直接或间接从以下类型中派生的，则相关联的架构集合中提供的用户定义原子类型也可用。  
   
 #### <a name="supported-base-types"></a>支持的基类型  

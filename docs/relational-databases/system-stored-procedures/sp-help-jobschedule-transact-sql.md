@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 30ffe0203b3f9aacf23d811e48e6e6d8094a4ee2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 34cc7495b526b75f8da55046393aa45f3fd9a518
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827589"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773874"
 ---
 # <a name="sp_help_jobschedule-transact-sql"></a>sp_help_jobschedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   返回有关 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 用来执行自动活动的计划作业的信息。  
  
@@ -42,7 +42,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
      [ , [ @include_description = ] include_description ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @job_id = ] job_id`作业标识号。 *job_id*的值为**uniqueidentifier**，默认值为 NULL。  
   
 `[ @job_name = ] 'job_name'`作业的名称。 *job_name*的默认值为**sysname**，默认值为 NULL。  
@@ -77,13 +77,13 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**active_start_time**|**int**|计划开始的时间。|  
 |**active_end_time**|**int**|计划结束的时间。|  
 |**date_created**|**datetime**|创建计划的日期。|  
-|**schedule_description**|**nvarchar(4000)**|从**sysschedules 引用**中的值派生的计划的英语说明。 当*include_description*为**0**时，此列包含文本，指出未请求说明。|  
+|**schedule_description**|**nvarchar(4000)**|计划的英语说明，派生自**msdb.dbo.sys计划**中的值。 当*include_description*为**0**时，此列包含文本，指出未请求说明。|  
 |**next_run_date**|**int**|计划下一次引发作业运行的日期。|  
 |**next_run_time**|**int**|计划下一次引发作业运行的时间。|  
 |**schedule_uid**|**uniqueidentifier**|计划的标识符。|  
 |**job_count**|**int**|返回的作业数。|  
   
-> **注意： sp_help_jobschedule**返回**msdb**中的**sysjobschedules**和**sysschedules 引用**系统表中的值。 **sysjobschedules**每20分钟更新一次。 这可能会影响此存储过程返回的值。  
+> **注意： sp_help_jobschedule**从**dbo.sysjobschedules**返回值，并在**msdb**中**dbo.sys计划**系统表。 **sysjobschedules**每20分钟更新一次。 这可能会影响此存储过程返回的值。  
   
 ## <a name="remarks"></a>备注  
  **Sp_help_jobschedule**的参数只能在某些组合中使用。 如果指定*schedule_id* ，则*job_id*和*job_name*都无法指定。 否则， *job_id*或*job_name*参数可与*schedule_name*一起使用。  

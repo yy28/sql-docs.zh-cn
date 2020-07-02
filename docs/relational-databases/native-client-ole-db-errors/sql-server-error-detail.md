@@ -18,17 +18,17 @@ ms.assetid: 51500ee3-3d78-47ec-b90f-ebfc55642e06
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 76aafed4d05795739049d260089e32689efd55b1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a3391c9e57f1e6b3ae99836d402ab96f862752bd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300963"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773385"
 ---
 # <a name="sql-server-error-detail"></a>SQL Server 错误详细信息
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  Native Client OLE DB 提供程序定义特定于访问接口的错误接口[ISQLServerErrorInfo。](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 该接口返回有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误的更多详细信息，在命令执行或行集操作失败时这些信息很有用。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序定义特定于访问接口的错误接口[ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)。 该接口返回有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误的更多详细信息，在命令执行或行集操作失败时这些信息很有用。  
   
  可以用两种方式访问 ISQLServerErrorInfo 接口****。  
   
@@ -47,7 +47,7 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
   
  SSERRORINFO 结构成员由使用者解释如下。  
   
-|成员|说明|  
+|成员|描述|  
 |------------|-----------------|  
 |pwszMessage**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误消息。 与在 IErrorInfo::GetDescription 中返回的字符串相同****。|  
 |pwszServer**|会话的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|  

@@ -13,22 +13,22 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 66aad8634cdb4d71ba765da94e1e395fc1583226
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b5882a8ac4dc2cf4b46e1dc57b32c8159c435df6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301037"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773436"
 ---
 # <a name="metadata---date-and-time-and-schema-rowsets"></a>元数据 - 日期和时间与架构行集
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   本主题提供有关 COLUMNS 行集和 PROCEDURE_PARAMETERS 行集的信息。 该信息与 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中引入的 OLE DB 日期和时间增强功能相关。  
   
 ## <a name="columns-rowset"></a>COLUMNS 行集  
  对于日期/时间类型将返回以下列值：  
   
-|列类型|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_SS_ISVARIABLESCALE|DATETIME_PRECISION|  
+|列名称|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_SS_ISVARIABLESCALE|DATETIME_PRECISION|  
 |-----------------|----------------|------------------------------------------------------|-------------------------|  
 |date|DBTYPE_DBDATE|Clear|0|  
 |time|DBTYPE_DBTIME2|设置|0..7|  

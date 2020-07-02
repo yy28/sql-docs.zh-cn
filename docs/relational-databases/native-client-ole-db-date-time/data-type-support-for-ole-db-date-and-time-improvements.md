@@ -14,17 +14,17 @@ ms.assetid: d40e3fd6-9057-4371-8236-95cef300603e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f00744ce2f0363e7fcf38820b20e2b631df7adc6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 940727c0b5b932017e9572a40e11a547a1f0a897
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301059"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773463"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>针对 OLE DB 日期和时间改进的数据类型支持
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  本主题提供有关支持[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日期/时间数据类型 OLE DB （Native Client）类型的信息。  
+  本主题提供有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期/时间数据类型 OLE DB （Native Client）类型的信息。  
   
 ## <a name="data-type-mapping-in-rowsets-and-parameters"></a>行集和参数中的数据类型映射  
  OLE DB 提供两种新数据类型来支持新服务器类型：DBTYPE_DBTIME2 和 DBTYPE_DBTIMESTAMPOFFSET。 下表显示全部服务器类型映射：  
@@ -159,7 +159,7 @@ enum SQLVARENUM {
 };  
 ```  
   
- 如果将基础[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]架构更新为使用**datetime2**而不是**datetime**，则迁移到使用**sql_variant**并且依赖于**datetime**的有限精度的应用程序将需要进行更新。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]如果将基础架构更新为使用**datetime2**而不是**datetime**，则迁移到使用**sql_variant**并且依赖于**datetime**的有限精度的应用程序将需要进行更新。  
   
  还通过添加以下内容，对 SSVARIANT 的访问宏进行了扩展：  
   
@@ -173,12 +173,12 @@ enum SQLVARENUM {
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>ITableDefinition::CreateTable 中的数据类型映射  
  以下类型映射用于 ITableDefinition::CreateTable 所使用的 DBCOLUMNDESC 结构：  
   
-|OLE DB 数据类型 (wType**)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型|说明|  
+|OLE DB 数据类型 (wType**)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型|备注|  
 |----------------------------------|-----------------------------------------|-----------|  
 |DBTYPE_DBDATE|date||  
-|DBTYPE_DBTIMESTAMP|**datetime2**(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序检查 DBCOLUMDESC *bScale*成员，以确定秒的小数部分精度。|  
-|DBTYPE_DBTIME2|**** time(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序检查 DBCOLUMDESC *bScale*成员，以确定秒的小数部分精度。|  
-|DBTYPE_DBTIMESTAMPOFFSET|**** datetimeoffset(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序检查 DBCOLUMDESC *bScale*成员，以确定秒的小数部分精度。|  
+|DBTYPE_DBTIMESTAMP|**datetime2**(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序检查 DBCOLUMDESC *bScale*成员，以确定秒的小数部分精度。|  
+|DBTYPE_DBTIME2|**** time(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序检查 DBCOLUMDESC *bScale*成员，以确定秒的小数部分精度。|  
+|DBTYPE_DBTIMESTAMPOFFSET|**** datetimeoffset(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序检查 DBCOLUMDESC *bScale*成员，以确定秒的小数部分精度。|  
   
  应用程序以 wType** 指定 DBTYPE_DBTIMESTAMP 时，它可以通过在 pwszTypeName** 中提供类型名称来覆盖到 datetime2**** 的映射。 如果指定 datetime****，则 bScale** 必须为 3。 如果指定 smalldatetime****，则 bScale** 必须为 0。 如果*bScale*与*wType*和*pwszTypeName*不一致，将返回 DB_E_BADSCALE。  
   

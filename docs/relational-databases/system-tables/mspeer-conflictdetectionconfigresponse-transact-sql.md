@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 2685fb66-731d-40f7-af4b-596b9222c5d4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 511728cf8203407d964988486ea012d06dfbcc56
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d57963f288f5f1805d74c95058ecc92df17ff209
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82812567"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773725"
 ---
 # <a name="mspeer_conflictdetectionconfigresponse-transact-sql"></a>MSpeer_conflictdetectionconfigresponse (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   用于在对等复制中存储每个节点对拓扑范围内配置请求的响应。 该表存储在发布数据库中。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "82812567"
 |originator_id|**varbinary(16)**|标识拓扑中的每个节点以进行冲突检测。 有关详细信息，请参阅 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)。|  
 |peer_conflict_retention|**int**|在冲突表中存储元数据的时间段（以天为单位）。|  
 |peer_subscriptions|**XML**|有关响应请求的节点的信息。|  
-|progress_phase|**nvarchar(32)**|使用下列值之一标识当前处理阶段：<br /><br /> 开始学习<br /><br /> 已收集对等方版本<br /><br /> 已收集状态|  
+|progress_phase|**nvarchar(32)**|使用下列值之一标识当前处理阶段：<br /><br /> 已开始<br /><br /> 已收集对等方版本<br /><br /> 已收集状态|  
 |modified_date|**datetime**|阶段的完成日期和时间。|  
   
 ## <a name="see-also"></a>另请参阅  

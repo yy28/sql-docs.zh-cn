@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0ba33907-601b-4c3d-8099-2663f680a161
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 38efa38b53a089f960311e415d42972599872fcc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f4c3ec9cb14dc9c3e84167ad87f36f93f710f3be
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832270"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773706"
 ---
 # <a name="mspeer_lsns-transact-sql"></a>MSpeer_lsns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **Mspeer_lsns**表用于将每个事务映射到对等复制拓扑中的订阅。 此表存储在采用对等复制拓扑的每个发布数据库中，以及对等发布的所有订阅服务器的订阅数据库中。 有关这种类型的事务复制拓扑的详细信息，请参阅[对等事务复制](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)。 该表存储在发布数据库中。  
   

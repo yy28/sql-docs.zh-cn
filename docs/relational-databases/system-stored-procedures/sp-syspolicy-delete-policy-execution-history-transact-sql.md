@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: fe651af9-267e-45ec-b4e7-4b0698fb1be3
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f0cb7f631b75be4e8b2f4063b03aca1895ba6900
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 276ad7c1fd04b377dd71daf7e0f15298dd8c80e3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67997334"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773812"
 ---
 # <a name="sp_syspolicy_delete_policy_execution_history-transact-sql"></a>sp_syspolicy_delete_policy_execution_history (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   在基于策略的管理中删除策略的执行历史记录。 您可以使用此存储过程删除特定策略或所有策略的执行历史记录，也可以删除特定日期前的执行历史记录。  
   
@@ -39,7 +39,7 @@ sp_syspolicy_delete_policy_execution_history [ @policy_id = ] policy_id ]
     [ , [ @oldest_date = ] 'oldest_date' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @policy_id = ] policy_id`要删除其执行历史记录的策略的标识符。 *policy_id*为**int**，并且是必需的。 可以为 NULL。  
   
 `[ @oldest_date = ] 'oldest_date'`是要保留策略执行历史记录的最早日期。 先于此日期的所有执行历史记录都将被删除。 *oldest_date*为**datetime**，则是必需的。 可以为 NULL。  
@@ -73,7 +73,7 @@ ON a.policy_id = b.policy_id
  要求具有 PolicyAdministratorRole 固定数据库角色的成员身份。  
   
 > [!IMPORTANT]  
->  可能的凭据提升：具有 PolicyAdministratorRole 角色的用户可以创建服务器触发器并计划策略执行，这可能会影响[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的正常运行。 例如，PolicyAdministratorRole 角色中的用户可以创建一个策略，它可能会禁止在[!INCLUDE[ssDE](../../includes/ssde-md.md)]中创建大多数对象。 由于这种可能的凭据提升，只应将 PolicyAdministratorRole 角色授予受信任的用户，以控制的配置[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+>  可能的凭据提升：具有 PolicyAdministratorRole 角色的用户可以创建服务器触发器并计划策略执行，这可能会影响[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的正常运行。 例如，PolicyAdministratorRole 角色中的用户可以创建一个策略，它可能会禁止在[!INCLUDE[ssDE](../../includes/ssde-md.md)]中创建大多数对象。 由于这种可能的凭据提升，只应将 PolicyAdministratorRole 角色授予受信任的用户，以控制的配置 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。  
   
 ## <a name="examples"></a>示例  
  下面的示例为 ID 为 7 的策略删除特定日期前的策略执行历史记录。  
