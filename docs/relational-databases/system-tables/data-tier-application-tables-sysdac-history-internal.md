@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 025c11a6d04f61378080c303a4935ce98e64f164
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0330c68c8399318b2db96a5f88880fdd566c9acd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833101"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85625761"
 ---
 # <a name="data-tier-application-tables---sysdac_history_internal"></a>Data-tier Application Tables - sysdac_history_internal
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   包含为管理数据层应用程序 (DAC) 而执行的操作的相关信息。 该表存储在**msdb**数据库的**dbo**架构中。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "82833101"
 |-----------------|---------------|-----------------|  
 |**action_id**|**int**|操作的标识符|  
 |**sequence_id**|**int**|标识某一操作内的步骤。|  
-|**instance_id**|**uniqueidentifier**|DAC 实例的标识符。 此列可以联接于[dbo. sysdac_instances&#41;&#40;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)的**instance_id**列。|  
+|**instance_id**|**uniqueidentifier**|DAC 实例的标识符。 此列可在[dbo.sysdac_instances &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)的**instance_id**列上联接。|  
 |**action_type**|**tinyint**|操作类型的标识符：<br /><br /> **0** = 部署<br /><br /> **1** = 创建<br /><br /> **2** = 重命名<br /><br /> **3** = 分离<br /><br /> **4** = 删除|  
 |**action_type_name**|**varchar （19）**|操作类型的名称：<br /><br /> **部署：**<br /><br /> **create**<br /><br /> **rename**<br /><br /> **取出**<br /><br /> **delete**|  
 |**dac_object_type**|**tinyint**|受操作影响的对象类型的标识符：<br /><br /> **0** = dacpac<br /><br /> **1** = 登录名<br /><br /> **2** = 数据库|  
@@ -81,7 +81,7 @@ WHERE instance_id NOT IN
   
 ## <a name="see-also"></a>另请参阅  
  [数据层应用程序](../../relational-databases/data-tier-applications/data-tier-applications.md)   
- [sysdac_instances &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)   
+ [&#40;Transact-sql 的 dac_instancesdbo.sys&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)   
  [sysdac_instances_internal &#40;Transact-sql&#41;](../../relational-databases/system-tables/data-tier-application-tables-sysdac-instances-internal.md)  
   
   

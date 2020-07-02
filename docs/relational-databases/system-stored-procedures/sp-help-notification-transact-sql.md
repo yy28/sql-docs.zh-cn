@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dbba9ea2f9df7e9a9fd154193c8f52fe904899c7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3fe885be9072f24c18e6115efcf511faea2d8908
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820432"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85634366"
 ---
 # <a name="sp_help_notification-transact-sql"></a>sp_help_notification (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   报告给定操作员的警报列表，或者报告给定警报的操作员列表。  
   
@@ -43,7 +43,7 @@ sp_help_notification
      [ , [ @target_name = ] 'target_name' ]   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @object_type = ] 'object_type'`要返回的信息的类型。 *object_type*为**char （9）**，无默认值。 *object_type*可以是警报，其中列出了分配给所提供的操作员名称的警报 *，或操作员，其中*列出了负责提供的警报名称的操作员 *。*  
   
 `[ @name = ] 'name'`操作员名称（如果*object_type*为 OPERATORS）或警报名称（如果*object_type*为警报）。 *名称*为**sysname**，无默认值。  
@@ -58,7 +58,7 @@ sp_help_notification
   
 `[ @notification_method = ] notification_method`确定要返回的通知方法列的数值。 *notification_method*为**tinyint**，可以是下列值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**1**|电子邮件：只返回**use_email**列。|  
 |**2**|寻呼：仅返回**use_pager**列。|  

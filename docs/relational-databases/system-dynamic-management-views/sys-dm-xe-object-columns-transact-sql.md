@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: d96a14f3-4284-45ff-b1fe-4858e540a013
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3cdd234d99a02e4b7ecb72a7b0de6f47a268780c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f59e267be18b4cc16124ed4c52a4be7d5144b22a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826632"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85648470"
 ---
 # <a name="sysdm_xe_object_columns-transact-sql"></a>sys.dm_xe_object_columns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   返回所有对象的架构信息。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "82826632"
 |column_value|**nvarchar(256)**|显示与对象列关联的静态值。 可以为 Null。|  
 |capabilities|**int**|一个描述列的功能的位图。 可以为 Null。|  
 |capabilities_desc|**nvarchar(256)**|此对象列的功能的说明。 此值可以为下列值之一：<br /><br /> 必需。 将父对象绑定到一个事件会话时必须设置该值。<br /><br /> 可以为 Null。|  
-|说明|**nvarchar （3072）**|此对象列的说明。 可以为 Null。|  
+|description|**nvarchar （3072）**|此对象列的说明。 可以为 Null。|  
   
 ## <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  

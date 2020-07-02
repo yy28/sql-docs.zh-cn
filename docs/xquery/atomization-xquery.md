@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: e3d7cf2f-c6fb-43c2-8538-4470a6375af5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 70d623d8583535aae7ddcc23f26ab7c5e4e36fc7
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 0264c6d5c533510e7350e2f88e270d2cc7538dd3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84886884"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85643597"
 ---
 # <a name="atomization-xquery"></a>原子化 (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
   原子化是提取项的类型化值的过程。 在某些环境下，此进程是隐式进行的。 某些 XQuery 运算符（如算术运算符和比较运算符）依赖于此进程。 例如，将算术运算符直接应用于节点时，将首先通过隐式调用[数据函数](../xquery/data-accessor-functions-data-xquery.md)来检索节点的类型化值。 这将把原子值作为操作数传递给算术运算符。  
   

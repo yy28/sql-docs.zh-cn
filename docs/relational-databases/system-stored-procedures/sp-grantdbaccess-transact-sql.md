@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 3eb09513-03f1-42f8-9917-3a1f3a579bec
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 3b88badb8b1852617d9edd8acd31f2c19258cca7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 85ab6ead295b4459890a61deccdac3dc2775033a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304862"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646008"
 ---
 # <a name="sp_grantdbaccess-transact-sql"></a>sp_grantdbaccess (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   将数据库用户添加到当前数据库。  
   
@@ -42,10 +42,10 @@ sp_grantdbaccess [ @loginame = ] 'login'
     [ , [ @name_in_db = ] 'name_in_db' [ OUTPUT ] ]  
 ```  
   
-## <a name="arguments"></a>参数  
-`[ @loginame = ] 'login_ '`要映射到新数据库用户的 Windows 组、Windows [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名或登录名。 Windows 组和 windows 登录名的名称必须以*域*\\*登录*名的形式使用 windows 域名进行限定。例如， **LONDON\Joeb**。 登录名不能已映射到数据库中的用户。 *login*是**sysname**，无默认值。  
+## <a name="arguments"></a>自变量  
+`[ @loginame = ] 'login_ '`要映射到新数据库用户的 Windows 组、Windows 登录名或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 Windows 组和 windows 登录名的名称必须以*域* \\ *登录*名（例如， **LONDON\Joeb**）的 windows 域名进行限定。 登录名不能已映射到数据库中的用户。 *login*是**sysname**，无默认值。  
   
-``[ @name_in_db = ] 'name_in_db' [ OUTPUT]``新数据库用户的名称。 *name_in_db*是数据类型为**sysname**的输出变量，默认值为 NULL。 如果未指定，则使用*登录名*。 如果指定为值为 NULL 的输出变量， ** \@则 name_in_db**设置为*login*。 当前数据库中不能存在*name_in_db* 。  
+``[ @name_in_db = ] 'name_in_db' [ OUTPUT]``新数据库用户的名称。 *name_in_db*是数据类型为**sysname**的输出变量，默认值为 NULL。 如果未指定，则使用*登录名*。 如果指定为值为 NULL 的输出变量，则** \@ name_in_db**设置为*login*。 当前数据库中不能存在*name_in_db* 。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -59,7 +59,7 @@ sp_grantdbaccess [ @loginame = ] 'login'
  需要**db_owner**固定数据库角色的成员身份或**db_accessadmin**固定数据库角色的成员身份。  
   
 ## <a name="examples"></a>示例  
- 下面的示例使用`CREATE USER`将 Windows 登录名`Edmonds\LolanSo`的数据库用户添加到当前数据库。 新用户名为 `Lolan`。 这是创建数据库用户的首选方法。  
+ 下面的示例使用 `CREATE USER` 将 Windows 登录名的数据库用户添加 `Edmonds\LolanSo` 到当前数据库。 新用户名为 `Lolan`。 这是创建数据库用户的首选方法。  
   
 ```sql
 CREATE USER Lolan FOR LOGIN [Edmonds\LolanSo];  

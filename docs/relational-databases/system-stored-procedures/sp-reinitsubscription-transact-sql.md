@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d56ae218-6128-4ff9-b06c-749914505c7b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ee9af1ee7057b7a64a62e0ead12ba7e386839587
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8bc377c269eeb6034ebbe0e5753f2605464ecd8a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828236"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85645776"
 ---
 # <a name="sp_reinitsubscription-transact-sql"></a>sp_reinitsubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   将订阅标记为要重新初始化。 此存储过程在发布服务器的推送订阅中执行。  
   
@@ -43,7 +43,7 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
     [ , [ @invalidate_snapshot = ] invalidate_snapshot ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publication = ] 'publication'`发布的名称。 *发布*为**sysname**，默认值为 all。  
   
 `[ @article = ] 'article'`项目的名称。 *项目*的值为**sysname**，默认值为 all。 对于即时更新发布，*项目*必须**全部**为;否则，存储过程将跳过发布，并报告错误。  

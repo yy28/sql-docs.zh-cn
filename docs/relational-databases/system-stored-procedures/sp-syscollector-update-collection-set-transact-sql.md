@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 2dccc3cd-0e93-4e3e-a4e5-8fe89b31bd63
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cb261fdfb745e935b94fc5c2944640c507674ece
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9385503d625c14932d520e4cf7390bf42612faff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82816459"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85639853"
 ---
 # <a name="sp_syscollector_update_collection_set-transact-sql"></a>sp_syscollector_update_collection_set (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   用于修改用户定义的收集组的属性或重命名用户定义的收集组。  
   
@@ -54,7 +54,7 @@ sp_syscollector_update_collection_set
     , [ [ @description = ] 'description' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @collection_set_id = ] collection_set_id`收集组的唯一本地标识符。 *collection_set_id*为**int** ，并且*name*为 NULL 时必须具有值。  
   
 `[ @name = ] 'name'`收集组的名称。 *名称*为**sysname** ，并且*collection_set_id*为 NULL 时必须具有值。  
@@ -182,6 +182,6 @@ GO
  [&#40;Transact-sql&#41;系统存储过程](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [数据收集](../../relational-databases/data-collection/data-collection.md)   
  [syscollector_collection_sets &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)   
- [sysschedules 引用 &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
+ [dbo.sys计划 &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
   
   

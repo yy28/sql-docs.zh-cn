@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 85bc086d-8a4e-4949-a23b-bf53044b925c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d1f29541162381923faa6baa4ca6ce8d362a0f27
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3c65ee865a5c4e4bccd11c12846de1a1ca8b5035
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82808169"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85626024"
 ---
 # <a name="syssp_cdc_generate_wrapper_function-transact-sql"></a>sys.sp_cdc_generate_wrapper_function (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   生成相应的脚本，为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中可用的变更数据捕获查询函数创建包装函数。 所生成的包装中支持的 API 使查询间隔能够指定为 datetime 间隔。 这使该函数能够很好地应用于许多仓库应用程序，包括那些由 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包设计器开发的应用程序，这些设计器使用变更数据捕获技术来确定增量加载。  
   
@@ -49,7 +49,7 @@ sys.sp_cdc_generate_wrapper_function
 [ , [ @update_flag_list = ] 'update_flag_list'  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  [ @capture_instance =] "*capture_instance*"  
  要为其生成脚本的捕获实例。 *capture_instance* **sysname** ，并且其默认值为 NULL。 如果不指定值，或将值显式设置为 NULL，则会为所有捕获实例生成包装脚本  
   
@@ -67,7 +67,7 @@ sys.sp_cdc_generate_wrapper_function
   
 ## <a name="result-sets"></a>结果集  
   
-|列名称|列类型|说明|  
+|列名称|列类型|描述|  
 |-----------------|-----------------|-----------------|  
 |**function_name**|**nvarchar （145）**|生成的函数的名称。|  
 |**create_script**|**nvarchar(max)**|创建捕获实例包装函数的脚本。|  

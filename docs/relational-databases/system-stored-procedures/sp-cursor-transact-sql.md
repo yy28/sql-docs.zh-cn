@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9e99f8f657c3d35cc91ff92a9ae5d920271769b8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7550a640b723e77f3bfbc9b3473e762962ae2da3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820585"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646419"
 ---
 # <a name="sp_cursor-transact-sql"></a>sp_cursor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   请求定位更新。 此过程对游标的提取缓冲区内的一行或多行执行操作。 通过在表格格式数据流（TDS）包中指定 ID = 1 来调用 sp_cursor。  
   
@@ -43,14 +43,14 @@ sp_cursor  cursor, optype, rownum, table
     [ , value[...n]]]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *cursor*  
  游标句柄。 *cursor*是为**int**输入值调用的必需参数。 *cursor*是由 SQL Server 生成并由 sp_cursoropen 过程返回的*句柄*值。  
   
  *optype*  
  一个必需参数，它指定游标将执行的操作。 *optype*需要以下**int**输入值之一。  
   
-|值|名称|说明|  
+|值|名称|描述|  
 |-----------|----------|-----------------|  
 |0X0001|UPDATE|用于更新提取缓冲区中的一行或多行。  重新访问和更新*rownum*中指定的行。|  
 |0x0002|DELETE|用于删除提取缓冲区中的一行或多个行。 重新访问和删除*rownum*中指定的行。|  
@@ -89,7 +89,7 @@ sp_cursor  cursor, optype, rownum, table
  *table*  
  当游标定义涉及联接或*值*参数返回不明确的列名时，用于标识*optype*适用的表的表名。 如果未指定特定的表，则默认为 FROM 子句中的第一个表。 *table*是一个可选参数，它需要字符串输入值。 可以将此字符串指定为任何字符或 UNICODE 数据类型。 *表*可以是由多个部分组成的表名。  
   
- *value*  
+ value  
  用于插入或更新值。 *值*string 参数仅与 UPDATE 和 INSERT *optype*值一起使用。 可以将此字符串指定为任何字符或 UNICODE 数据类型。  
   
 > [!NOTE]  
@@ -139,7 +139,7 @@ sp_cursor  cursor, optype, rownum, table
  `[ [ UPDATE <table name> ] SET ] {<column name> = expression} [,...n]`  
   
 > [!NOTE]  
->  如果 \< 指定了 "更新表名称>"，则将忽略为*表*参数指定的任何值。  
+>  如果 \<table name> 指定 UPDATE，将忽略为*表*参数指定的任何值。  
   
  当使用多个参数时，第一个参数必须为采用以下形式的字符串：  
   
@@ -149,7 +149,7 @@ sp_cursor  cursor, optype, rownum, table
   
  `<column name> = expression  [,...n]`  
   
- 在这种情况下， \< 构造的 update 语句中的表名称> 是*表*参数指定或默认为的表名。  
+ 在这种情况下， \<table name> 构造的 update 语句中的是由*table*参数指定或默认为的。  
   
  对于 INSERT：  
   
@@ -158,7 +158,7 @@ sp_cursor  cursor, optype, rownum, table
  `[ [ INSERT [INTO] <table name> ] VALUES ] ( <expression> [,...n] )`  
   
 > [!NOTE]  
->  如果指定 "插入* \< 表名称>* "，则将忽略为*表*参数指定的任何值。  
+>  如果 *\<table name>* 指定 INSERT，则将忽略为*表*参数指定的任何值。  
   
  当使用多个参数时，第一个参数必须为采用以下形式的字符串：  
   
@@ -168,7 +168,7 @@ sp_cursor  cursor, optype, rownum, table
   
  `expression [,...n]`  
   
- 除了指定 VALUES 之外，在此情况下，在最后一个表达式后面必须带一个尾随“)”。 在这种情况下，构造的 UPDATE 语句中的* \< 表名称>* 是*表*参数指定或默认为的表名。  
+ 除了指定 VALUES 之外，在此情况下，在最后一个表达式后面必须带一个尾随“)”。 在这种情况下， *\<table name>* 构造的 UPDATE 语句中的是由*table*参数指定或默认为的。  
   
 > [!NOTE]  
 >  可以提交一个参数作为命名参数，也即“`@VALUES`”。 在此情况下，不能使用其他命名参数。  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 57087264554d228ec02ed22baa2afb932e646b10
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c748dd4980fb7b3b142893f5a04dd36f1676f8a6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826381"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85635005"
 ---
 # <a name="query-notifications---sysdm_qn_subscriptions"></a>查询通知-sys. dm_qn_subscriptions
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   返回有关服务器中的活动查询通知订阅的信息。 可以使用此视图检查服务器或指定数据库中的活动订阅，或者检查指定服务器主体。  
   
@@ -35,17 +35,17 @@ ms.locfileid: "82826381"
 |**id**|**int**|订阅的 ID。|  
 |**database_id**|**int**|执行通知查询所在数据库的 ID。 该数据库存储该订阅的相关信息。|  
 |**sid**|**varbinary （85）**|创建并拥有该订阅的服务器主体的安全 ID。|  
-|**object_id**|**int**|存储有关订阅参数信息的内部表的 ID。|  
+|object_id|**int**|存储有关订阅参数信息的内部表的 ID。|  
 |**created**|**datetime**|创建订阅的日期和时间。|  
 |**timeout**|**int**|订阅超时（以秒为单位）。 在经过这段时间后，通知将标记为激发。<br /><br /> 注意：实际触发时间可能大于指定的超时时间。但是，如果在指定的超时时间之后但在激发订阅之前发生了无效的更改，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可确保在发生更改时进行触发。|  
 |**status**|**int**|指示订阅的状态。 有关代码列表，请参阅备注下的表。|  
   
 ## <a name="relationship-cardinalities"></a>关系基数  
   
-|From|功能|On|类型|  
+|From|功能|开|类型|  
 |----------|--------|--------|----------|  
 |**sys.dm_qn_subscriptions**|**sys.databases**|**database_id**|多对一|  
-|**sys.dm_qn_subscriptions**|**sys.internal_tables**|**object_id**|多对一|  
+|**sys.dm_qn_subscriptions**|**sys.internal_tables**|object_id|多对一|  
   
 ## <a name="remarks"></a>备注  
  状态代码为 0 指示未确定的状态。  

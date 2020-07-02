@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a9f7131f-23e1-4d4d-a36c-180447543926
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a359251dbb2bd2a2685e5d9fb91d5c1603950c25
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f1b56d549d00fb0b76c530a5274adb6a9c82c80c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67986311"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85643713"
 ---
 # <a name="aggregate-functions---count"></a>聚合函数 - count
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   返回 *$arg*指定的序列中包含的项数。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "67986311"
 fn:count($arg as item()*) as xs:integer  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *$arg*  
  要计数的项。  
   
@@ -64,9 +64,9 @@ WHERE Production.ProductModel.ProductModelID=7
   
 -   [XQuery Prolog](../xquery/modules-and-prologs-xquery-prolog.md)中的**namespace**关键字定义命名空间前缀。 该前缀随后将用于 XQuery 主体。  
   
--   查询构造包含 <`NoOfWorkStations`> 元素的 XML。  
+-   查询构造包含 <> 元素的 XML `NoOfWorkStations` 。  
   
--   XQuery 体中的**count （）** 函数计算 <`Location`> 元素的数目。  
+-   XQuery 体中的**count （）** 函数计算 <> 元素的数目 `Location` 。  
   
  结果如下：  
   

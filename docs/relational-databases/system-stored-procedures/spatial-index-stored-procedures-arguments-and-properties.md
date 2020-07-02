@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: be45e7dd794ab7e03ffc70eb9b73109411fd3a02
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3001731959da3b253ee10f43c333b0c2a8b85380
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827447"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85626586"
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>空间索引存储过程-参数和属性
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   本主题介绍空间索引存储过程的参数和属性。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "82827447"
   
 -   [sp_help_spatial_geography_index_xml &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @tabname = ] 'tabname'`已为其指定了空间索引的表的限定名称或非限定名称。  
   
  仅当指定了限定表时才需要引号。 如果提供的是完全限定名称（包括数据库名称），则数据库名称必须是当前数据库的名称。 *tabname*的值为**nvarchar**（776），无默认值。  

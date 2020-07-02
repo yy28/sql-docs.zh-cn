@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f9141850-a62b-43bf-8e46-b2f92b75ca56
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ee9e291a0ff8b2fc14e7bc249ceea8320facedf9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ab7c13befad3c1780e067639838efa7434c57f53
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830974"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85645900"
 ---
 # <a name="sp_prepexec-transact-sql"></a>sp_prepexec (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   准备并执行参数化的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 sp_prepexec 结合了 sp_prepare 和 sp_execute 的函数。 在表格格式数据流（TDS）包中，此操作由 ID = 13 调用。  
   
@@ -39,7 +39,7 @@ sp_prepexec handle OUTPUT, params , stmt
     [ , bound param ] [ ,...n]]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *柄*  
  是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成的*句柄*标识符。 *句柄*是带有**int**返回值的必需参数。  
   
@@ -66,7 +66,7 @@ EXEC sp_prepexec @Out output,
 EXEC sp_unprepare @Out;  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [sp_prepare &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)   
  [sp_execute &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-execute-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

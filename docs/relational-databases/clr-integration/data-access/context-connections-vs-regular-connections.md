@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: a1dead02-be88-4b16-8cb2-db1284856764
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 881b7463400665d22baaa9b19f13cb5949df0830
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6417a0121a7e290d711690fb0150fdbe908827dd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81485141"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85637513"
 ---
 # <a name="context-connections-vs-regular-connections"></a>上下文连接与常规连接
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   如果要连接到远程服务器，请始终使用常规连接，而不使用上下文连接。 如果您需要连接到存储过程或函数正在其上运行的同一台服务器，则在大多数情况下请使用上下文连接。 这具有一些优势，例如，在同一个事务空间中运行以及不必重新验证。  
   
  此外，使用上下文连接通常会导致性能更佳和占用更少的资源。 上下文连接是一个仅进程内连接，因此它可以通过绕过网络协议和传输层来发送 Transact-sql 语句并接收结果，直接联系服务器。 同时跳过验证过程。 下图显示了**SqlClient**托管提供程序的主要组件，以及不同的组件在使用常规连接时以及使用上下文连接时如何彼此交互。  

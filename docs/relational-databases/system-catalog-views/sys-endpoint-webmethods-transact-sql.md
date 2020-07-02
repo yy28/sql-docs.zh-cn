@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 7dad0cf6-eafa-47cf-98cc-75ba8d3c7959
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1d3d9c528b7fd74055e5a98348b9766af320b7d7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c961900bf92133a2b5bddca21c1d67c2c5f8329c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829704"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85648935"
 ---
 # <a name="sysendpoint_webmethods-transact-sql"></a>sys.endpoint_webmethods (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
@@ -42,9 +42,9 @@ ms.locfileid: "82829704"
 |method_alias|**nvarchar （64）**|方法的别名。<br /><br /> 注意： [!INCLUDE[tsql](../../includes/tsql-md.md)] 标识符允许在 WSDL 方法名称中不合法的字符。<br /><br /> 别名用于将端点 WSDL 说明中公开的名称映射到调用 Web 方法时调用的实际基本 [!INCLUDE[tsql](../../includes/tsql-md.md)] 可执行对象。|  
 |object_name|**nvarchar （776）**|Web 方法重定向到的对象名称，在 NAME = 选项中指定。 名称部分以句点（.）分隔，并使用方括号进行分隔 `[``]` 。<br /><br /> 对象名称必须由三个部分组成，在 WSDL 选项中指定。|  
 |result_schema|**tinyint**|确定将哪个 XSD（如果有）与响应一起发回的选项。<br /><br /> 0 = 无<br /><br /> 1 = Standard<br /><br /> 2 = Default|  
-|result_schema_desc|**nvarchar(60)**|确定将哪个 XSD（如果有）与响应一起发回的选项的说明。<br /><br /> 无<br /><br /> STANDARD<br /><br /> DEFAULT|  
+|result_schema_desc|**nvarchar(60)**|确定将哪个 XSD（如果有）与响应一起发回的选项的说明。<br /><br /> NONE<br /><br /> STANDARD<br /><br /> DEFAULT|  
 |result_format|**tinyint**|确定如何在响应中设置结果格式的选项。<br /><br /> 1 = ALL_RESULTS<br /><br /> 2 = ROWSETS_ONLY<br /><br /> 3 = NONE|  
-|result_format_desc|**nvarchar(60)**|确定如何在响应中设置结果格式的选项的说明。<br /><br /> ALL_RESULTS<br /><br /> ROWSETS_ONLY<br /><br /> 无|  
+|result_format_desc|**nvarchar(60)**|确定如何在响应中设置结果格式的选项的说明。<br /><br /> ALL_RESULTS<br /><br /> ROWSETS_ONLY<br /><br /> NONE|  
   
 ## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  

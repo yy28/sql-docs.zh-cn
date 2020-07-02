@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9301dd80-72f7-4adb-9b13-87e7f9114248
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1a22fdc297c4ce7310b8d71b65dbe1cd4e0abf04
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e15e67071931ecdd4e1fa68af3c28de46112e9d0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830051"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85634892"
 ---
 # <a name="sp_dropmergepullsubscription-transact-sql"></a>sp_dropmergepullsubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   删除合并请求订阅。 此存储过程在订阅服务器的订阅数据库中执行。  
   
@@ -39,7 +39,7 @@ sp_dropmergepullsubscription [ @publication= ] 'publication'
     [ , [ @reserved= ] 'reserved' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publication = ] 'publication'`发布的名称。 *发布*为**sysname**，默认值为 NULL。 此参数是必需的。 指定一个值，**以删除所有发布**的订阅  
   
 `[ @publisher = ] 'publisher'`发布服务器的名称。 *发布服务器*的**sysname**，默认值为 NULL。 此参数是必需的。  

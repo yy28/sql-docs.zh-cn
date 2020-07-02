@@ -19,15 +19,15 @@ ms.assetid: 0aeefb3f-02ef-457e-8c42-84ddb26f1c88
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d7f3952dec669d5c85b9e8c8c5e5f8743264cff9
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: b9db9088455140d533b0a7d009ece1c2ae7f8fcb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670312"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85647408"
 ---
 # <a name="view_table_usage-transact-sql"></a>VIEW_TABLE_USAGE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   为视图中使用的当前数据库的每个表返回一行。 该信息架构视图返回当前用户对其拥有权限的对象的相关信息。  
   

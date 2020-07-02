@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b4c18863-ed92-4aa2-a04f-7ed832fc9e07
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3967b1e7c8e3b9da93d131a0b82eec1684009210
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c46a7e30f6f5163fba7b630e365f90e521a96e0c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82816608"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85645308"
 ---
 # <a name="sp_scriptdynamicupdproc-transact-sql"></a>sp_scriptdynamicupdproc (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   生成创建动态更新存储过程的 CREATE PROCEDURE 语句。 自定义存储过程中的 UPDATE 语句是基于 MCALL 语法动态生成的，它指示要更改的列。 如果订阅表中的索引数不断增加，并且被更改列的数目很小，请使用此存储过程。 此存储过程在发布服务器的发布数据库中执行。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "82816608"
 sp_scriptdynamicupdproc [ @artid =] artid  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @artid = ] artid`文章 ID。 *artid*的值为**int**，无默认值。  
   
 ## <a name="result-sets"></a>结果集  

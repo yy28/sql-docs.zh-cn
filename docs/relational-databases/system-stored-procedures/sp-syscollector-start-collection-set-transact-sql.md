@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: d8357180-f51e-4681-99f9-0596fe2d2b53
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 52afba46b09552af62ba9f08c34e1749689f41cc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e67e43a7725e7b7ae7ef76d8b48c26a7038c86d0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82809856"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633806"
 ---
 # <a name="sp_syscollector_start_collection_set-transact-sql"></a>sp_syscollector_start_collection_set (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   如果已启用收集器但收集组未运行，请启动收集组。 如果未启用收集器，请通过运行[sp_syscollector_enable_collector](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md)来启用收集器，然后使用此存储过程启动收集组。  
 
@@ -42,7 +42,7 @@ sp_syscollector_start_collection_set
     , [[ @name = ] 'name' ]   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @collection_set_id = ] collection_set_id`收集组的唯一本地标识符。 *collection_set_id*为**int** ，默认值为 NULL。 如果*name*为 NULL，则*collection_set_id*必须具有值。  
   
 `[ @name = ] 'name'`收集组的名称。 *名称*为**sysname** ，默认值为 NULL。 如果*collection_set_id*为 NULL，则*name*必须具有值。  

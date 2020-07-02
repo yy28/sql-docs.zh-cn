@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f132694a-dd05-405b-9d84-21acce9e564a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 965fc3fe168ecd6027c2c1fc2ebad92bc334e383
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8e1b8659d7828feaab219ce5c2b883137f252314
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82816743"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85645363"
 ---
 # <a name="sp_script_synctran_commands-transact-sql"></a>sp_script_synctran_commands (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   生成一个脚本，该脚本包含要应用于可更新订阅的订阅服务器上的**sp_addsynctrigger**调用。 对于发布中的每个项目，都有一个**sp_addsynctrigger**调用。 生成的脚本还包含创建处理已排队发布所需的**MSsubsciption_articles**表的**sp_addqueued_artinfo**调用。 此存储过程在发布服务器上对发布数据库执行。  
   
@@ -37,7 +37,7 @@ sp_script_synctran_commands [@publication = ] 'publication'
     [ , [@article = ] 'article']  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publication = ] 'publication'`要编写脚本的发布的名称。 *发布*为**sysname**，无默认值。  
   
 `[ @article = ] 'article'`要编写脚本的项目的名称。 *项目*的默认值为**sysname**，默认值为**all**，表示为所有项目编写脚本。  

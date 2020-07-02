@@ -17,15 +17,15 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 931babcaa6e229d6114930bba5f06803aa25f59e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0151b29c6375cdefd2ad1a6430591cb98b51e08e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829677"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85647059"
 ---
 # <a name="active-geo-replication---sp_wait_for_database_copy_sync"></a>活动异地复制-sp_wait_for_database_copy_sync
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   此过程的范围限定为主数据库与辅助数据库之间的 [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] 关系。 调用**sp_wait_for_database_copy_sync**会导致应用程序等待，直到所有提交的事务复制并由活动辅助数据库确认。 仅对主数据库运行**sp_wait_for_database_copy_sync** 。  
   
@@ -40,7 +40,7 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
      , [ @target_database = ] 'database_name'  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  [ @target_server = ] 'server_name'  
  承载活动辅助数据库的 SQL Database 服务器的名称。 server_name 为 sysname，无默认值。  
   

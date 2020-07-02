@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c851c1ab-3b29-4b99-9902-78c2665a844b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 957bbdc43c0f0adf3a545fee76e9f69df130d8f9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 81237214608b6fb0c04fa0857203d0488db375ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68116673"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633548"
 ---
 # <a name="xp_grantlogin-transact-sql"></a>xp_grantlogin (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   授予 Windows 组或用户对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的访问权限。  
   
@@ -41,10 +41,10 @@ ms.locfileid: "68116673"
 xp_grantlogin {[@loginame = ] 'login'} [,[@logintype = ] 'logintype']  
 ```  
   
-## <a name="arguments"></a>参数  
-`[ @loginame = ] 'login'`要添加的 Windows 用户或组的名称。 Windows 用户或组必须使用*域*\\*用户*的 windows 域名进行限定。 *login*的**sysname**为，无默认值。  
+## <a name="arguments"></a>自变量  
+`[ @loginame = ] 'login'`要添加的 Windows 用户或组的名称。 Windows 用户或组必须使用*域*用户的 windows 域名进行限定 \\ *User*。 *login*的**sysname**为，无默认值。  
   
-`[ @logintype = ] 'logintype'`被授予访问权限的登录名的安全级别。 *logintype*的值为**varchar （5）**，默认值为 NULL。 只能指定**管理员**。 如果指定**admin** ，则授予*登录名*的访问[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]权限，并将其添加为**sysadmin**固定服务器角色的成员。  
+`[ @logintype = ] 'logintype'`被授予访问权限的登录名的安全级别。 *logintype*的值为**varchar （5）**，默认值为 NULL。 只能指定**管理员**。 如果指定**admin** ，则授予*登录名*的访问权限 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，并将其添加为**sysadmin**固定服务器角色的成员。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  

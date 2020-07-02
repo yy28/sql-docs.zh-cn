@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: caedc43d-44b8-415a-897e-92923f6de3b8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c41a8f1bb7e1083bdb80eca875331e0ce8c92ab1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 79a123faab9b587d56d957a3f9e1765e8619f97d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820419"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85634311"
 ---
 # <a name="sp_help_operator-transact-sql"></a>sp_help_operator (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   报告有关为服务器定义的操作员的信息。  
   
@@ -41,7 +41,7 @@ sp_help_operator
      | [ @operator_id = ] operator_id }  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @operator_name = ] 'operator_name'`运算符名称。 *operator_name* **sysname**。 如果未指定*operator_name* ，则返回有关所有运算符的信息。  
   
 `[ @operator_id = ] operator_id`为其请求信息的操作员的标识号。 *operator_id*的值为**int**，默认值为 NULL。  
@@ -57,7 +57,7 @@ sp_help_operator
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|操作员标识号。|  
-|**name**|**sysname**|运算符名称。|  
+|name|**sysname**|运算符名称。|  
 |**能够**|**tinyint**|操作员可以接收到任何通知：<br /><br /> **1** = 是<br /><br /> **0** = 否|  
 |**email_address**|**nvarchar （100）**|操作员电子邮件地址。|  
 |**last_email_date**|**int**|上次用电子邮件通知操作员的日期。|  
@@ -103,7 +103,7 @@ EXEC dbo.sp_help_operator
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [sp_add_operator &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
  [sp_delete_operator &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
  [sp_update_operator &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   

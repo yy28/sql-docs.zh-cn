@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 11ce42ca-d3f1-44c8-9cac-214ca8896b9a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 65c4cd3f6ca07f2c3cb35dc7dcbaad373930ecc5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2e1aa82b9ced4593bbc1341c3ef305519fb1d1eb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68066812"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85634430"
 ---
 # <a name="sp_help_log_shipping_secondary_database-transact-sql"></a>sp_help_log_shipping_secondary_database (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   此存储过程可检索一个或多个辅助数据库的设置。  
   
@@ -42,7 +42,7 @@ sp_help_log_shipping_secondary_database
 [ @secondary_id = ] 'secondary_id'  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @secondary_database = ] 'secondary_database'`辅助数据库的名称。 *secondary_database* **sysname**，无默认值。  
   
 `[ @secondary_id = ] 'secondary_id'`日志传送配置中辅助服务器的 ID。 *secondary_id*为**uniqueidentifier** ，且不能为 NULL。  
@@ -52,7 +52,7 @@ sp_help_log_shipping_secondary_database
   
 ## <a name="result-sets"></a>结果集  
   
-|列名称|说明|  
+|列名称|描述|  
 |-----------------|-----------------|  
 |**secondary_id**|日志传送配置中辅助服务器的 ID。|  
 |**primary_server**|日志传送配置中 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]主实例的名称。|  
@@ -63,7 +63,7 @@ sp_help_log_shipping_secondary_database
 |**copy_job_id**|与辅助服务器上的复制作业关联的 ID。|  
 |**restore_job_id**|与辅助服务器上的还原作业关联的 ID。|  
 |**monitor_server**|在日志传送配置中用作监视服务器的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例的名称。|  
-|**monitor_server_security_mode**|用于连接到监视服务器的安全模式。<br /><br /> 1 = [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 身份验证。<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。|  
+|**monitor_server_security_mode**|用于连接到监视服务器的安全模式。<br /><br /> 1 = [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 身份验证。<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。|  
 |**secondary_database**|日志传送配置中辅助数据库的名称。|  
 |**restore_delay**|辅助服务器在还原给定备份文件之前等待的时间（分钟）。 默认为 0 分钟。|  
 |**restore_all**|如果设置为 1，则在运行还原作业时，辅助服务器将还原所有可用的事务日志备份。 否则，在原还了一个文件之后它将停止。|  
@@ -94,7 +94,7 @@ sp_help_log_shipping_secondary_database
   
 ## <a name="see-also"></a>另请参阅  
  [sp_help_log_shipping_secondary_primary &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql.md)   
- [关于 &#40;SQL Server 的日志传送&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

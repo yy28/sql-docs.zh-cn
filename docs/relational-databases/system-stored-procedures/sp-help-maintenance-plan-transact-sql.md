@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e972a510-960e-41d6-93c5-c71cd581a585
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9fac6fcf8e6728d666e46ace86f82c5f968bddb2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ca67d4b23ee91330939e5607dd3e32a0a79e808c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82818690"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85634381"
 ---
 # <a name="sp_help_maintenance_plan-transact-sql"></a>sp_help_maintenance_plan (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   返回有关指定的维护计划的信息。 如果没有指定计划，那么该存储过程将返回有关所有维护计划的信息。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "82818690"
 sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @plan_id = ] 'plan\_id'`指定维护计划的计划 ID。 *plan_id*是**UNIQUEIDENTIFIER**。 默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -54,7 +54,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
   
 ### <a name="plan-table"></a>Plan 表  
   
-|列名称|数据类型|说明|  
+|列名称|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**plan_id**|**uniqueidentifier**|维护计划 ID。|  
 |**plan_name**|**sysname**|维护计划名称。|  
@@ -70,7 +70,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
   
 ### <a name="database-table"></a>Database 表  
   
-|列名称|说明|  
+|列名称|描述|  
 |-----------------|-----------------|  
 |**database_name**|所有与维护计划相关的数据库的名称。 database_name 的数据类型为 sysname******。|  
   

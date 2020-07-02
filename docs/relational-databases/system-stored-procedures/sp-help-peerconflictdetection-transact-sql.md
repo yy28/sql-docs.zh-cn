@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 59e04107-5eaa-44a1-beb6-ac4f2dbbcb28
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d5c593127a16a5a1045b8b44f943079cd3335f3a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 63325c7b3ba43ae4b9f76224121010a3ebfb6a7d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828367"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85634299"
 ---
 # <a name="sp_help_peerconflictdetection-transact-sql"></a>sp_help_peerconflictdetection (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   返回对等事务复制拓扑中包含的发布的冲突检测设置信息。  
   
@@ -37,7 +37,7 @@ sp_help_peerconflictdetection [ @publication = ] 'publication'
     [ ,[ @timeout = ] timeout ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  [ @publication =] "*发布*"  
  要返回信息的发布的名称。 *发布*为**sysname**，无默认值。  
   

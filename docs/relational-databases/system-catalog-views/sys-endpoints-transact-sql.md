@@ -19,26 +19,26 @@ helpviewer_keywords:
 ms.assetid: e6dafa4e-e47e-43ec-acfc-88c0af53c1a1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: aa68fc9a434a93e506099e715b435fe717e9834e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a3c18d86fef5aad9c52ca03bb1a395a4ee8c236a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829702"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85648843"
 ---
 # <a name="sysendpoints-transact-sql"></a>sys.endpoints (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   在系统中创建的每个端点在都表中占一行。 始终只能有一个 SYSTEM 端点。  
   
 |列名|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|终结点的名称。 在服务器中是唯一的。 不可为 null。|  
+|name|**sysname**|终结点的名称。 在服务器中是唯一的。 不可为 null。|  
 |**endpoint_id**|**int**|端点 ID。 在服务器中是唯一的。 ID 小于 65536 的端点是系统端点。 不可为 null。|  
-|**principal_id**|**int**|被创建并拥有该端点的服务器主体的 ID。 可以为 Null。|  
+|principal_id|**int**|被创建并拥有该端点的服务器主体的 ID。 可以为 Null。|  
 |**protocol**|**tinyint**|端点协议。<br /><br /> 1 = HTTP<br /><br /> 2 = TCP<br /><br /> 3 = Name pipes<br /><br /> 4 = Shared memory<br /><br /> 5 = Virtual Interface Adapter (VIA)<br /><br /> 不可为 null。|  
 |**protocol_desc**|**nvarchar(60)**|端点协议的说明。 可以为 null. 以下值之一：<br /><br /> **HTTP**<br /><br /> **TCP**<br /><br /> **NAMED_PIPES**<br /><br /> **SHARED_MEMORY**<br /><br /> **VIA**注意： VIA 协议已弃用。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
-|type |**tinyint**|端点负载的类型。<br /><br /> 1 = SOAP<br /><br /> 2 = TSQL<br /><br /> 3 = SERVICE_BROKER<br /><br /> 4 = DATABASE_MIRRORING<br /><br /> 不可为 null。|  
+|**type**|**tinyint**|端点负载的类型。<br /><br /> 1 = SOAP<br /><br /> 2 = TSQL<br /><br /> 3 = SERVICE_BROKER<br /><br /> 4 = DATABASE_MIRRORING<br /><br /> 不可为 null。|  
 |**type_desc**|**nvarchar(60)**|端点负载类型的说明。 可以为 Null。 以下值之一：<br /><br /> **SOAP**<br /><br /> **TSQL**<br /><br /> **SERVICE_BROKER**<br /><br /> **DATABASE_MIRRORING**|  
 |State |**tinyint**|端点的状态。<br /><br /> 0 = STARTED，侦听并处理请求。<br /><br /> 1 = STOPPED，侦听但不处理请求。<br /><br /> 2 = DISABLED，不进行侦听。<br /><br /> 默认状态为 1。 可以为 Null。|  
 |**state_desc**|**nvarchar(60)**|端点状态的说明。<br /><br /> STARTED = 侦听并处理请求。<br /><br /> STOPPED = 侦听但不处理请求。<br /><br /> DISABLED = 不进行侦听。<br /><br /> 默认状态为 STOPPED。<br /><br /> 可以为 Null。|  

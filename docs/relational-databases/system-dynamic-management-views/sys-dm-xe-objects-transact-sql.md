@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 5d944b99-b097-491b-8cbd-b0e42b459ec0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 80170f22636b9542524f8ce97b6fe8a5e595953c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f89b6d7e2e4843ba252f884f02a6944de57a8326
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827831"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85648400"
 ---
 # <a name="sysdm_xe_objects-transact-sql"></a>sys.dm_xe_objects (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   对事件包显示的每个对象都返回一行。 对象可以是以下项之一：  
   
@@ -46,7 +46,7 @@ ms.locfileid: "82827831"
 |name|**nvarchar(60)**|对象的名称。 名称在特定对象类型的包中是唯一的。 不可为 null。|  
 |object_type|**nvarchar(60)**|对象的类型。 object_type 是以下项之一：<br /><br /> event<br /><br /> action<br /><br /> 目标<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> 类型<br /><br /> 不可为 null。|  
 |package_guid|**uniqueidentifier**|公开此操作的包的 GUID。 与 sys.dm_xe_packages.package_id 存在多对一关系。 不可为 null。|  
-|说明|**nvarchar(256)**|操作的说明。 说明由包作者设置。 不可为 null。|  
+|description|**nvarchar(256)**|操作的说明。 说明由包作者设置。 不可为 null。|  
 |capabilities|**int**|说明对象功能的位图。 可以为 Null。|  
 |capabilities_desc|**nvarchar(256)**|列出对象的所有功能。 可以为 Null。<br /><br /> **适用于所有对象类型的功能**<br /><br /> -<br />                                **私有**。 可供内部使用并且无法通过 CREATE/ALTER EVENT SESSION DDL 访问的唯一对象。 审核事件和目标属于此类别，此外，在内部使用的少量对象也属于此类别。<br /><br /> ===============<br /><br /> **事件功能**<br /><br /> -<br />                                **No_block**。 事件位于无论任何原因都无法阻塞的关键代码路径中。 具有此功能的事件无法添加到指定 NO_EVENT_LOSS 的任何事件会话中。<br /><br /> ===============<br /><br /> **适用于所有对象类型的功能**<br /><br /> -<br />                                **Process_whole_buffers**。 目标一次使用多个事件的缓冲区，而不是逐个使用事件。<br /><br /> -<br />                        **Singleton**。 在某一进程中只能存在目标的一个实例。 尽管多个事件会话可以引用相同的单个目标，但实际上只有一个实例，并且该实例将仅看到一次各唯一的事件。 如果将目标添加到全都收集同一个事件的多个会话，这一点非常重要。<br /><br /> -<br />                                **同步**。 在控制权返回到调用代码行之前，将对正在生成事件的线程执行目标。|  
 |type_name|**nvarchar(60)**|pred_source 和 pred_compare 对象的名称。 可以为 Null。|  

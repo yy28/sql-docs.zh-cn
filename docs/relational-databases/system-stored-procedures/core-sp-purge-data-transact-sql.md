@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 056076c3-8adf-4f51-8a1b-ca39696ac390
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 27f2d95a23a89c4e50924944709ba38a39a6ff2d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2c01cfb6e469ef33c897d581eadf2da757cdb06f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833664"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646879"
 ---
 # <a name="coresp_purge_data-transact-sql"></a>core.sp_purge_data (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   基于保留策略从管理数据仓库中删除数据。 此过程由 mdw_purge_data [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业对与指定的实例关联的管理数据仓库每天执行。 可以使用此存储过程从管理数据仓库中执行数据的按需删除。  
   
@@ -45,7 +45,7 @@ core.sp_purge_data
     [ , [ @duration = ] duration ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  [ @retention_days =] *retention_days*  
  管理数据仓库表中的数据的保留天数。 删除时间戳早于*retention_days*的数据。 *retention_days*为**smallint**，默认值为 NULL。 如果指定，该值必须是正数。 为 NULL 时，core.snapshots 视图中的 valid_through 列中的值决定了符合删除条件的行。  
   

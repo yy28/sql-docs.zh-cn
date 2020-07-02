@@ -18,15 +18,15 @@ ms.assetid: 62c18c21-35c5-4772-be0d-ffdcc19c97ab
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 24263a7e2428c0399fb7b655e9cb5d86e130e85d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ff8bf43db68acb2d29d8fe5310b86290391050e2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820287"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85645156"
 ---
 # <a name="sp_sproc_columns-transact-sql"></a>sp_sproc_columns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   为当前环境中的单个存储过程或用户定义函数返回列信息。  
   
@@ -45,7 +45,7 @@ sp_sproc_columns [[@procedure_name = ] 'name']
     [ , [@fUsePattern = ] 'fUsePattern']  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @procedure_name = ] 'name'`用于返回目录信息的过程的名称。 *名称*为**nvarchar （** 390 **）**，默认值为%，表示当前数据库中的所有表。 支持通配符模式匹配。  
   
 `[ @procedure_owner = ] 'owner'`过程的所有者的名称。 *所有者*为**nvarchar （** 384 **）**，默认值为 NULL。 支持通配符模式匹配。 如果未指定*owner* ，则应用基础 DBMS 的默认过程可见性规则。  

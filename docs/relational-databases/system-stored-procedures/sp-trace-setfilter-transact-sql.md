@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5d6646bb794b50158035759916ba823c6fca2102
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: eeb6fd370bfd107864845439086138fff3d379c2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820257"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85644843"
 ---
 # <a name="sp_trace_setfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   将筛选应用于跟踪。 **sp_trace_setfilter**只能在已停止的现有跟踪上执行（*状态*为**0**）。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]如果对不存在的或其*状态*不为**0**的跟踪执行此存储过程，则将返回错误。  
   
@@ -45,7 +45,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
           , [ @value = ] value  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @traceid = ] trace_id`要设置筛选器的跟踪的 ID。 *trace_id*为**int**，没有默认值。 用户使用此*trace_id*值标识、修改和控制跟踪。  
   
 `[ @columnid = ] column_id`应用筛选器的列的 ID。 *column_id*为**int**，没有默认值。 如果*column_id*为 NULL，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将清除指定跟踪的所有筛选器。  
@@ -78,7 +78,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 ## <a name="return-code-values"></a>返回代码值  
  下表说明在存储过程完成后用户可能获得的代码值。  
   
-|返回代码|说明|  
+|返回代码|描述|  
 |-----------------|-----------------|  
 |0|没有错误。|  
 |1|未知错误。|  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a1cb929158a6d17a7a7c16e5e303c403a2c03112
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e6accbb03bf4ed06f84f67263e89ab9c6bfa7654
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831763"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646047"
 ---
 # <a name="sp_cursorfetch-transact-sql"></a>sp_cursorfetch (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   从数据库中提取由一行或多行组成的缓冲区。 此缓冲区中的行组称为游标的*提取缓冲区*。 通过在表格格式数据流（TDS）包中指定 ID = 7 来调用 sp_cursorfetch。  
   
@@ -39,14 +39,14 @@ sp_cursorfetch cursor
     [ , fetchtype[ , rownum [ , nrows] ]]   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *cursor*  
  是由生成并由 sp_cursoropen 返回的*句柄*值 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *cursor*是为**int**输入值调用的必需参数。 有关详细信息，请参阅本主题后面的 "备注" 部分。  
   
  *fetchtype*  
  指定要提取的游标缓冲区。 *fetchtype*是一个可选参数，它需要以下整数输入值之一。  
   
-|值|名称|说明|  
+|值|名称|描述|  
 |-----------|----------|-----------------|  
 |0x0001|FIRST|提取*nrows*行的第一个缓冲区。 如果*nrows*等于0，则游标位于结果集之前，不返回任何行。|  
 |0x0002|NEXT|提取*nrows*行的下一个缓冲区。|  
@@ -55,7 +55,7 @@ sp_cursorfetch cursor
 |0x10|ABSOLUTE|从*rownum*行开始提取*nrows*行的缓冲区。<br /><br /> 注意：对动态游标或 FORWARD_ONLY 游标使用绝对将返回错误消息，因为 FORWARD_ONLY 只支持单向滚动。|  
 |0x20|RELATIVE|从指定为当前块中第一行的行的*rownum*值的行开始，提取*nrows*行的缓冲区。 在这种情况下， *rownum*可以为负数。<br /><br /> 注意：对 FORWARD_ONLY 游标使用相对的会返回一条错误消息，因为 FORWARD_ONLY 只支持单向滚动。|  
 |0x80|REFRESH|重新填充基础表中的缓冲区。|  
-|0x100|INFO|检索有关游标的信息。 使用*rownum*和*nrows*参数返回此信息。 因此，当指定 INFO 时， *rownum*和*nrows*将成为输出参数。|  
+|0x100|信息|检索有关游标的信息。 使用*rownum*和*nrows*参数返回此信息。 因此，当指定 INFO 时， *rownum*和*nrows*将成为输出参数。|  
 |0x200|PREV_NOADJUST|用法类似于 PREV。 但是，如果过早遇到结果集顶部，结果可能有所不同。|  
 |0x400|SKIP_UPDT_CNCY|必须与其他*fetchtype*值之一一起使用，但 INFO 除外。|  
   
@@ -133,7 +133,7 @@ sp_cursorfetch cursor
   
  RPC 状态参数设置为下表中显示的值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |0|过程已成功执行。|  
 |0x0001|过程失败。|  
@@ -142,7 +142,7 @@ sp_cursorfetch cursor
   
  这些行将作为典型的结果集返回，也即：列格式 (0x2a)、行 (0xd1)，后跟完成 (0xfd)。 元数据标记使用与为 sp_cursoropen 指定的相同格式发送，也即：对于 SQL Server 7.0 用户为 0x81、0xa5 和 0xa4 等。 行状态指示器在具有列名称 rowstat 和数据类型 INT4 的每一行的末尾作为隐藏列发送（类似于 BROWSE 模式）。 此 rowstat 列具有下表中显示的值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |0x0001|FETCH_SUCCEEDED|  
 |0x0002|FETCH_MISSING|  

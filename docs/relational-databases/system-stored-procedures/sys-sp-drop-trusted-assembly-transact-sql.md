@@ -20,15 +20,15 @@ ms.assetid: ''
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 50385161b417d02db2dc44ad1172910d31f198b3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4dbeed2c84db6a94237df6878fba688c6ed08a66
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905139"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85625943"
 ---
 # <a name="syssp_drop_trusted_assembly-transact-sql"></a>sys.sp_drop_trusted_assembly (Transact-SQL)  
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
 
 从服务器上的受信任程序集列表中删除程序集。
 
@@ -41,9 +41,9 @@ sp_drop_trusted_assembly
     [ @hash = ] 'value'
 ```  
 
-## <a name="arguments"></a>参数
+## <a name="arguments"></a>自变量
 
-[ @hash = ]"*value*"  
+[ @hash =] "*value*"  
 要从服务器的受信任程序集列表中删除的程序集的 SHA2_512 哈希值。 即使程序集未签名或数据库未标记为可信，也可以在启用 clr 严格安全时加载受信任的程序集。
 
 ## <a name="remarks"></a>备注  
@@ -52,7 +52,7 @@ sp_drop_trusted_assembly
 
 ## <a name="permissions"></a>权限
 
-要求具有固定服务器`sysadmin`角色或`CONTROL SERVER`权限的成员身份。
+要求具有 `sysadmin` 固定服务器角色或权限的成员身份 `CONTROL SERVER` 。
 
 ## <a name="examples"></a>示例  
 

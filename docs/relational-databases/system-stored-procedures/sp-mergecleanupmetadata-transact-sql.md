@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 892f8628-4cbe-4cc3-b959-ed45ffc24064
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c2691bb443da95ee04e49dcccf7e9888805ea573
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3670565137456fe32206072ac91fa0b5f90b410c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828339"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85640372"
 ---
 # <a name="sp_mergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   只应在包括运行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1 之前版本的服务器的复制拓扑中使用。**sp_mergecleanupmetadata**允许管理员清理**MSmerge_genhistory**、 **MSmerge_contents**和**MSmerge_tombstone**系统表中的元数据。 此存储过程在发布服务器上对发布数据库执行。  
   
@@ -37,7 +37,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
     [ , [ @reinitialize_subscriber = ] 'reinitialize_subscriber' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publication = ] 'publication'`发布的名称。 *发布*为**sysname**，默认值为 **%** ，它将清除所有发布的元数据。 如果显式指定发布，则该发布必须已存在。  
   
 `[ @reinitialize_subscriber = ] 'subscriber'`指定是否重新初始化订阅服务器。 *订户*为**nvarchar （5）**，可以为**true**或**FALSE**，默认值**为 true**。 如果为**TRUE**，则将订阅标记为要重新初始化。 如果为**FALSE**，则不将订阅标记为要重新初始化。  

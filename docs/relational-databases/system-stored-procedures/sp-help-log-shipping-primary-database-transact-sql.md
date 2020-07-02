@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e711b01c-ef29-4eb6-a016-0e647e337818
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9559a882da12c3e2a7a48a0aaa656a554633aa6f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9c88a4ac30ba51cdfdbd9a9d711a141044d099a6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67937917"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85634547"
 ---
 # <a name="sp_help_log_shipping_primary_database-transact-sql"></a>sp_help_log_shipping_primary_database (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   检索主数据库设置。  
   
@@ -40,7 +40,7 @@ sp_help_log_shipping_primary_database
 [ @primary_id = ] 'primary_id'  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @database = ] 'database'`日志传送主数据库的名称。 *数据库*为**sysname**，无默认值，且不能为 NULL。  
   
 `[ @primary_id = ] 'primary_id'`日志传送配置的主数据库 ID。 *primary_id*为**uniqueidentifier** ，且不能为 NULL。  
@@ -50,7 +50,7 @@ sp_help_log_shipping_primary_database
   
 ## <a name="result-sets"></a>结果集  
   
-|列名称|说明|  
+|列名称|描述|  
 |-----------------|-----------------|  
 |**primary_id**|日志传送配置的主数据库 ID。|  
 |**primary_database**|日志传送配置中主数据库的名称。|  
@@ -60,7 +60,7 @@ sp_help_log_shipping_primary_database
 |**backup_compression**|指示日志传送配置是否使用[备份压缩](../../relational-databases/backup-restore/backup-compression-sql-server.md)。<br /><br /> **0** = 禁用。 从不压缩日志备份。<br /><br /> **1** = 已启用。 始终压缩日志备份。<br /><br /> **2** = 使用视图的设置[或配置备份压缩默认服务器配置选项](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)。 这是默认值。<br /><br /> 只有 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]（或更高版本）支持备份压缩。 在其他版本中，该值始终为 2。|  
 |**backup_job_id**|与主服务器上的备份作业相关联的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业 ID。|  
 |**monitor_server**|在日志传送配置中用作监视服务器的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例的名称。|  
-|**monitor_server_security_mode**|用于连接到监视服务器的安全模式。<br /><br /> 1 = [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 身份验证。<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。|  
+|**monitor_server_security_mode**|用于连接到监视服务器的安全模式。<br /><br /> 1 = [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 身份验证。<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。|  
 |**backup_threshold**|备份操作之间的占用时间阈值（分钟），一旦超过此值，就会生成警报。|  
 |**threshold_alert**|超过备份阈值时引发的警报。|  
 |**threshold_alert_enabled**|确定是否启用备份阈值警报。<br /><br /> **1** = 已启用。<br /><br /> **0** = 禁用。|  
@@ -76,7 +76,7 @@ sp_help_log_shipping_primary_database
  只有**sysadmin**固定服务器角色的成员才能运行此过程。  
   
 ## <a name="examples"></a>示例  
- 此示例演示如何使用**sp_help_log_shipping_primary_database**检索数据库[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]的主数据库设置。  
+ 此示例演示如何使用**sp_help_log_shipping_primary_database**检索数据库的主数据库设置 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 。  
   
 ```  
 EXEC master.dbo.sp_help_log_shipping_primary_database @database=N'AdventureWorks2012';  
@@ -84,7 +84,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [关于 &#40;SQL Server 的日志传送&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

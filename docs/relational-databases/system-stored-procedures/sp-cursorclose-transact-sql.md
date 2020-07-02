@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d9b7b44d-cdff-456e-97df-7031a3b9beb6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f21e6db8e9c1cb8ec33f9bddd9610d8179b3e5ac
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b2a0f6f23d38cb0841ba6e1b7891d9d32fc95b1f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820591"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646253"
 ---
 # <a name="sp_cursorclose-transact-sql"></a>sp_cursorclose (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   关闭并取消分配游标，并释放所有关联的资源;也就是说，它会删除用于支持键集或静态**游标**的临时表。 通过在表格格式数据流（TDS）包中指定 ID = 9 来调用 sp_cursorclose。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "82820591"
 sp_cursorclose cursor  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *cursor*  
  是由生成并由 sp_cursoropen 过程返回的游标*句柄*值 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *cursor*是为**int**输入值调用的必需参数。  
   

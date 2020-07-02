@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 85dd8567599de98af1abb72394fef747bd2da6b5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c11132450e88326740af485a7293dd5a27b8326b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829970"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85645647"
 ---
 # <a name="sp_replcmds-transact-sql"></a>sp_replcmds (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   返回标记为要复制的事务的命令。 此存储过程在发布服务器上对发布数据库执行。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "82829970"
 sp_replcmds [ @maxtrans = ] maxtrans  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @maxtrans = ] maxtrans`要返回其相关信息的事务数。 *maxtrans*的值为**int**，默认值为**1**，表示下一个等待分发的事务。  
   
 ## <a name="result-sets"></a>结果集  

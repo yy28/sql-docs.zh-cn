@@ -20,16 +20,16 @@ ms.assetid: 077111cb-b860-4d61-916f-bac5d532912f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cb2b6e422b9b9e746e851e6d7b799cdf7c63387f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5acf2b0afd2285025112d6e3f224a5f44241a0b8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82811241"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85634937"
 ---
 # <a name="sysdm_sql_referenced_entities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 为中指定的引用实体的定义中的名称引用的每个用户定义实体返回一行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 当一个用户定义的实体（称为 "*被引用的实体*"）出现在另一个用户定义实体（称为 "*引用实体*"）的持久化 SQL 表达式中时，将创建两个实体之间的依赖关系。 例如，如果存储过程是指定的引用实体，则此函数会返回该存储过程中引用的所有用户定义实体，例如表、视图、用户定义类型 (UDT) 或其他存储过程。  
   
@@ -64,7 +64,7 @@ sys.dm_sql_referenced_entities (
 }  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  [ *schema_name*。 ] *referencing_entity_name*  
  是引用实体的名称。 当引用类为 OBJECT 时，需要*schema_name* 。  
   
@@ -99,7 +99,7 @@ sys.dm_sql_referenced_entities (
 |is_incomplete|**bit**|1 = 对象或列有绑定错误且不完整。<br /><br />此列已添加到 SQL Server 2016 SP2 中。|
 | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="exceptions"></a>例外  
+## <a name="exceptions"></a>异常  
  在满足以下任一条件时将返回空的结果集：  
   
 -   指定了系统对象。  
@@ -128,9 +128,9 @@ sys.dm_sql_referenced_entities (
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 用户定义函数|是|是|  
 |CLR 用户定义函数|否|是|  
 |CLR 触发器（DML 和 DDL）|否|否|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 触发器|是|否|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 数据库级 DDL 触发器|是|否|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 服务器级 DDL 触发器|是|否|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 触发器|是|No|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 数据库级 DDL 触发器|是|No|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 服务器级 DDL 触发器|是|No|  
 |扩展的存储过程|否|是|  
 |队列|否|是|  
 |同义词|否|是|  

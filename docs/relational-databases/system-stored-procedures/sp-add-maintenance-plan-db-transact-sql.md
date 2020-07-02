@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 76f4fefa-5b99-4deb-beed-e198987a45a9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e3f0afcd0007dc0e61424449e87851ca562b0cdd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8a3af8712870400d979a131dd26c4f6891b1b16a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68009201"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646641"
 ---
 # <a name="sp_add_maintenance_plan_db-transact-sql"></a>sp_add_maintenance_plan_db (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   将数据库与维护计划关联。  
   
@@ -44,7 +44,7 @@ sp_add_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
      [ @db_name = ] 'database_name'  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @plan_id = ] 'plan_id'`指定维护计划的计划 ID。 *plan_id*是**uniqueidentifier**，并且必须是有效 id。  
   
 `[ @db_name = ] 'database_name'`指定要添加到维护计划的数据库的名称。 在添加到计划中之前，数据库必须已创建或存在。 database_name 的数据类型为 sysname******。  

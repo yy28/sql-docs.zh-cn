@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 8287d611-50e3-43e1-ba8d-3e3793d3ba0e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2e9e9502dda9eab45c27065c37b31109c99c4c4f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 05a08c554aabdb8e99a756e10e63f5dc3eb82184
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829008"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85648020"
 ---
 # <a name="sysdm_xtp_gc_stats-transact-sql"></a>sys.dm_xtp_gc_stats (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   提供有关 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 垃圾回收进程的当前行为的信息（总体统计信息）。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "82829008"
   
  有关详细信息，请参阅[内存中 OLTP&#40;内存中优化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。  
   
-|列名称|类型|说明|  
+|列名称|类型|描述|  
 |-----------------|----------|-----------------|  
 |rows_examined|**bigint**|自启动服务器以来垃圾回收子系统检查的行数。|  
 |rows_no_sweep_needed|**bigint**|已在未进行灰尘角扫描的情况下删除的行数。|  

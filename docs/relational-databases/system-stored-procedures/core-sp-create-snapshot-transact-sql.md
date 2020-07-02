@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: ff297bda-0ee2-4fda-91c8-7000377775e3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 98963dbab83ffea8590c213284b2540393d7c0fd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c4ba72a35ba3b8339a1ebc919327ce353b2c7697
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831843"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646934"
 ---
 # <a name="coresp_create_snapshot-transact-sql"></a>core.sp_create_snapshot (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   在管理数据仓库的 core.snapshots 视图中插入一行。 每当上载包开始向管理数据仓库上载数据时，都会调用此过程。  
   
@@ -46,7 +46,7 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
     , [ @snapshot_id = ] snapshot_id OUTPUT  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  [ @collection_set_uid =] "*collection_set_uid*"  
  收集组的 GUID。 *collection_set_uid*为**uniqueidentifier** ，无默认值。 若要获取 GUID，请查询 msdb 数据库中的 dbo.syscollector_collection_sets 视图。  
   
@@ -60,7 +60,7 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
  收集组实例的名称。 *named_instance*是**sysname**，没有默认值。  
   
  [ @log_id =] *log_id*  
- 映射到收集数据的服务器上的收集组事件日志的唯一标识符。 *log_id*为**bigint** ，无默认值。 若要获取*log_id*的值，请查询 msdb 数据库中的 dbo. syscollector_execution_log 视图。  
+ 映射到收集数据的服务器上的收集组事件日志的唯一标识符。 *log_id*为**bigint** ，无默认值。 若要获取*log_id*的值，请查询 msdb 数据库中的 dbo.syscollector_execution_log 视图。  
   
  [ @snapshot_id =] *snapshot_id*  
  插入到 core 快照视图中的行的唯一标识符。 *snapshot_id*为**int** ，并作为 OUTPUT 返回。  

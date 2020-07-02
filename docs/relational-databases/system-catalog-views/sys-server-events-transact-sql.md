@@ -19,23 +19,23 @@ helpviewer_keywords:
 ms.assetid: 996f6c9b-6426-4847-95d9-6b77541422be
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9bf35753bbe72fef2211485ec723bfa42ba08eb7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 50dd13235c0b583b7e3c3f5869b9df60648f1549
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831383"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85648840"
 ---
 # <a name="sysserver_events-transact-sql"></a>sys.server_events (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   包含的每一行都对应于要为其激发服务器级事件通知或服务器级 DDL 触发器的一个事件。 **Object_id**和**类型**的列唯一标识服务器事件。  
 
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|要激发的服务器级事件通知或服务器级 DDL 触发器的 ID。|  
-|type |**int**|导致激发事件通知或 DDL 触发器的事件的类型。|  
+|object_id|**int**|要激发的服务器级事件通知或服务器级 DDL 触发器的 ID。|  
+|**type**|**int**|导致激发事件通知或 DDL 触发器的事件的类型。|  
 |**type_desc**|**nvarchar(60)**|对导致激发 DDL 触发器或事件通知的事件的说明。|  
 |**event_group_type**|**int**|要对其创建触发器或事件通知的事件组，如果未对事件组中创建触发器或事件通知，则为 Null。|  
 |**event_group_type_desc**|**nvarchar(60)**|要对其创建触发器或事件通知的事件组的说明，如果未对事件组创建触发器或事件通知，则为 Null。|  

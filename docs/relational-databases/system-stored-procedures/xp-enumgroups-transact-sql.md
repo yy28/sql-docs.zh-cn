@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0bd3ed36-e260-469c-a5ff-b033fb9ea59d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 885e29f8abbeb185017bc2472566e41596a56900
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0e228f2a2363cab777c2b7ae44185e3c215e8f93
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68116772"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633700"
 ---
 # <a name="xp_enumgroups-transact-sql"></a>xp_enumgroups (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   提供 Microsoft Windows 本地组列表或在指定 Windows 域中定义的全局组列表。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "68116772"
 xp_enumgroups [ 'domain_name' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  **"** *domain_name* **"**  
  要枚举其全局组列表的 Windows 域的名称。 *domain_name*的默认值为**sysname**，默认值为 NULL。  
   
@@ -50,12 +50,12 @@ xp_enumgroups [ 'domain_name' ]
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**group**|**sysname**|Windows 组的名称|  
-|**条**|**sysname**|Windows 提供的 Windows 组的说明|  
+|**comment**|**sysname**|Windows 提供的 Windows 组的说明|  
   
 ## <a name="remarks"></a>备注  
- 如果*domain_name*是运行实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的基于 Windows 的计算机的名称，或者未指定域名，则**xp_enumgroups**从运行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的计算机枚举本地组。  
+ 如果*domain_name*是运行实例的基于 Windows 的计算机的名称 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，或者未指定域名，则**xp_enumgroups**从运行的计算机枚举本地组 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
- **xp_enumgroups**当的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例在 Windows 98 上运行时，不能使用 xp_enumgroups。  
+ **xp_enumgroups**当的实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 Windows 98 上运行时，不能使用 xp_enumgroups。  
   
 ## <a name="permissions"></a>权限  
  需要**master**数据库中**db_owner**固定数据库角色的成员身份或**sysadmin**固定服务器角色的成员身份。  

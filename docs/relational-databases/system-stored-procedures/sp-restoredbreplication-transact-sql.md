@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a2c5ee32-e6d9-46e9-8031-8ff13c20acf7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 78cd6788820af2c8803f6688e0703878fe165df1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c8d83d2aad9227993df29774d3140376514319ff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82817027"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633939"
 ---
 # <a name="sp_restoredbreplication-transact-sql"></a>sp_restoredbreplication (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   将数据库还原到非发起服务器、数据库或因其他原因而无法运行复制过程的系统时，删除复制设置。 如果将已复制数据库还原到执行备份的服务器或数据库以外的其他服务器或数据库，则将无法保留复制设置。 在还原时，服务器直接调用**sp_restoredbreplication** ，以自动从还原的数据库删除复制元数据。  
   
@@ -39,7 +39,7 @@ sp_restoredbreplication [ @srv_orig = ] 'original_server_name'
     [ , [ @perform_upgrade = ] perform_upgrade ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @srv_orig = ] 'original_server_name'`  
  创建备份的服务器的名称。 *original_server_name* **sysname**，无默认值。  
   

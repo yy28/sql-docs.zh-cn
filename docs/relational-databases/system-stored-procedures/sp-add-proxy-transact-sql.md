@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: cb59df37-f103-439b-bec1-2871fb669a8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 316d0a8bb70c104649e1dbc88be7e9b0931504ab
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 873eb2320b1ed0baf1b76086b3c28ad55573e6ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826323"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646373"
 ---
 # <a name="sp_add_proxy-transact-sql"></a>sp_add_proxy (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   添加指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的代理。  
   
@@ -45,7 +45,7 @@ sp_add_proxy
     [ @proxy_id = ] id OUTPUT   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @proxy_name = ] 'proxy_name'`要创建的代理的名称。 *Proxy_name*的值为**sysname**，默认值为 NULL。 当*proxy_name*为 NULL 或空字符串时，代理的名称默认为提供的*user_name* 。  
   
 `[ @enabled = ] is_enabled`指定是否启用代理。 *Is_enabled*标志为**tinyint**，默认值为1。 当*is_enabled*为**0**时，代理不会启用，作业步骤不能使用。  

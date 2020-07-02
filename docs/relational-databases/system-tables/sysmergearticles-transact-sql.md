@@ -17,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: e9b1648e-4660-4688-9f56-18b2baf7228c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8328c332fe35b8e157c8631d90b8de67c6e96e17
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 79e19b531b7dfb10587ec6bdb4db71632066ef87
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831927"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633391"
 ---
 # <a name="sysmergearticles-transact-sql"></a>sysmergearticles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   本地数据库中定义的每个合并项目都在表中占一行。 该表存储在发布数据库中。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|项目的名称。|  
-|type |**tinyint**|指示项目类型，可以为下列类型之一：<br /><br /> **10** = 表。<br /><br /> **32** = 存储过程（仅限架构）。<br /><br /> **64** = 视图或索引视图（仅限架构）。<br /><br /> **128** = 用户定义的函数（仅限架构）。<br /><br /> **160** = 同义词（仅限架构）。|  
+|name|**sysname**|项目的名称。|  
+|**type**|**tinyint**|指示项目类型，可以为下列类型之一：<br /><br /> **10** = 表。<br /><br /> **32** = 存储过程（仅限架构）。<br /><br /> **64** = 视图或索引视图（仅限架构）。<br /><br /> **128** = 用户定义的函数（仅限架构）。<br /><br /> **160** = 同义词（仅限架构）。|  
 |**objid**|**int**|对象标识符。|  
 |**sync_objid**|**int**|表示同步数据集的视图的对象 ID。|  
 |**view_type**|**tinyint**|视图类型：<br /><br /> **0** = 不是视图;使用所有基对象。<br /><br /> **1** = 永久视图。<br /><br /> **2** = 临时视图。|  
@@ -87,7 +87,7 @@ ms.locfileid: "82831927"
 |**compensate_for_errors**|**bit**|指示在同步过程中遇到错误时是否执行补救措施。<br /><br /> **0** = 禁用补偿操作。<br /><br /> **1** = 不能在订阅服务器或发布服务器上应用的更改始终会导致补偿操作来撤消这些更改，这是合并复制的默认行为。<br /><br /> 注意：值为**0**会导致非收敛。|  
 |**pub_range**|**bigint**|发布服务器标识范围大小。|  
 |**range**|**bigint**|将分配到调整中订阅服务器的连续标识值的大小。|  
-|**阀**|**int**|标识范围阈值百分比。|  
+|**threshold**|**int**|标识范围阈值百分比。|  
 |**stream_blob_columns**|**bit**|指定在复制二进制大型对象列时是否使用数据流优化。 **1**表示尝试进行优化。|  
 |**preserve_rowguidcol**|**bit**|指示复制是否使用现有 rowguid 列。 如果值为**1** ，则表示使用现有的 ROWGUIDCOL 列。 **0**表示复制添加了 ROWGUIDCOL 列。|  
   

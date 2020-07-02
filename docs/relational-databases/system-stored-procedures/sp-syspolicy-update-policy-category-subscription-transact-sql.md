@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d0769566-8f5c-4c8a-84d3-ee17ea6e0cb4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f3833d16d0cf4e791064dc369d460fe9cf5cc3e2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cec54635b7cf40a85adeae5188750c8c2cc79fb5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68035361"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633914"
 ---
 # <a name="sp_syspolicy_update_policy_category_subscription-transact-sql"></a>sp_syspolicy_update_policy_category_subscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   更新指定数据库的策略类别订阅。  
   
@@ -41,7 +41,7 @@ sp_syspolicy_update_policy_category_subscription [ @policy_category_subscription
     , [ @policy_category = ] 'policy_category'  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @policy_category_subscription_id = ] policy_category_subscription_id`要更新的策略类别订阅的标识符。 *policy_category_subscription_id*为**int**，并且是必需的。  
   
 `[ @target_type = ] 'target_type'`类别订阅的目标类型。 *target_type*的默认值为**sysname**，默认值为 NULL。  
@@ -72,7 +72,7 @@ ON a.policy_category_id = b.policy_category_id;
  要求具有 PolicyAdministratorRole 固定数据库角色的成员身份。  
   
 > [!IMPORTANT]  
->  可能的凭据提升：具有 PolicyAdministratorRole 角色的用户可以创建服务器触发器并计划策略执行，这可能会影响[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的正常运行。 例如，PolicyAdministratorRole 角色中的用户可以创建一个策略，它可能会禁止在[!INCLUDE[ssDE](../../includes/ssde-md.md)]中创建大多数对象。 由于这种可能的凭据提升，只应将 PolicyAdministratorRole 角色授予受信任的用户，以控制的配置[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+>  可能的凭据提升：具有 PolicyAdministratorRole 角色的用户可以创建服务器触发器并计划策略执行，这可能会影响[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的正常运行。 例如，PolicyAdministratorRole 角色中的用户可以创建一个策略，它可能会禁止在[!INCLUDE[ssDE](../../includes/ssde-md.md)]中创建大多数对象。 由于这种可能的凭据提升，只应将 PolicyAdministratorRole 角色授予受信任的用户，以控制的配置 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。  
   
 ## <a name="examples"></a>示例  
  下面的示例更新现有策略类别订阅，以便 AdventureWorks2012 数据库订阅“Finance”策略类别。  

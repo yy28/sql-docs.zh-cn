@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: bfad414f-2bda-4bf5-9507-56a1e743dfc4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a4f091267a714adbc4d0c2bd147daa0cc2a9f9cd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 73af981371ecbadf92936016316222c061a14b8b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828271"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85640071"
 ---
 # <a name="sp_mergesubscription_cleanup-transact-sql"></a>sp_mergesubscription_cleanup (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   在发布服务器上删除指定的合并推送订阅后，删除**sysmergesubscriptions**和**sysmergearticles**中的元数据，如触发器和条目。 此存储过程在订阅服务器上的订阅数据库中运行。  
   
@@ -41,7 +41,7 @@ sp_mergesubscription_cleanup [ @publisher =] 'publisher'
         , [ @publication =] 'publication'  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publisher = ] 'publisher'`发布服务器的名称。 *发布服务器*的**sysname**，无默认值。  
   
 `[ @publisher_db = ] 'publisher_db'`发布服务器数据库的名称。 *publisher_db* **sysname**，无默认值。  

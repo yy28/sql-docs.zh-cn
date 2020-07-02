@@ -21,21 +21,21 @@ helpviewer_keywords:
 ms.assetid: 86e06938-9d0a-44e5-99e2-55c8ef5f2f84
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: fb396d47da69724d16c0d72e1373527f9c5e700f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 892a1ff4570f209b89866e1287cb55691d9b6189
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68102428"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85635300"
 ---
 # <a name="syslogin_token-transact-sql"></a>sys.login_token (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   为登录名标记中包含的每个服务器主体返回一行。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**principal_id**|**int**|主体的 ID。 此值在服务器中是唯一的。|  
+|principal_id|**int**|主体的 ID。 此值在服务器中是唯一的。|  
 |**sid**|**varbinary （85）**|服务器主体的安全标识符。 如果这是 Windows 主体，则**sid** = windows sid。 如果登录名已映射到证书，则**sid** = 来自证书的 GUID。|  
 |**name**|**nvarchar(128)**|主体的名称。 此值在服务器中是唯一的。|  
 |**type**|**nvarchar(128)**|主体类型的说明。 所有类型都映射到**sid**。 值可以是下列任一值：<br /><br /> SQL LOGIN<br /><br /> WINDOWS LOGIN<br /><br /> WINDOWS GROUP<br /><br /> SERVER ROLE<br /><br /> LOGIN MAPPED TO CERTIFICATE<br /><br /> LOGIN MAPPED TO ASYMMETRIC KEY<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC KEY|  

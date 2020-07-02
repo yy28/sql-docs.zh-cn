@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5df7d86b-d343-4d9b-88b1-74429ed092e6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 431defb262bbc93fbf0925acd569ced9921fe533
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e87afd1d76eb4bfb9602e1b3d57dd62a43b65772
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824326"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85639879"
 ---
 # <a name="sp_resetsnapshotdeliveryprogress-transact-sql"></a>sp_resetsnapshotdeliveryprogress (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   重置请求订阅的快照传递进程，以便重新启动快照传递。 在订阅服务器的订阅数据库中执行。  
   
@@ -37,7 +37,7 @@ sp_resetsnapshotdeliveryprogress [ [ @verbose_level = ] verbose_level ]
     [ , [ @drop_table = ] 'drop_table' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @verbose_level = ] verbose_level`指定返回的信息量。 *verbose_level*的值为**int**，默认值为**1**。 如果值为**1** ，则表示如果无法对**MSsnapshotdeliveryprogress**表获取必要的锁，则返回错误， **0**表示不返回错误。  
   
 `[ @drop_table = ] 'drop_table'`指示是删除还是截断包含有关快照进度信息的表。*drop_table*为**nvarchar （5）**，默认值为**FALSE**。 false 表示截断表，true 表示删除表。  

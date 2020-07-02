@@ -18,15 +18,15 @@ ms.assetid: 29d6cd36-535d-4765-bca8-62f9d9886ff5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 749f21864a4e3956051749f357a649942a3cf5be
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4da545089c2fba177c25c6ea00b49efa6464426c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82815333"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85634060"
 ---
 # <a name="sp_helpconstraint-transact-sql"></a>sp_helpconstraint (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   返回一个列表，其内容包括所有约束类型、约束类型的用户定义或系统提供的名称、定义约束类型时用到的列，以及定义约束的表达式（仅适用于 DEFAULT 和 CHECK 约束）。  
   
@@ -40,7 +40,7 @@ sp_helpconstraint [ @objname = ] 'table'
      [ , [ @nomsg = ] 'no_message' ]   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @objname = ] 'table'`是有关返回哪些约束信息的表。 对于当前数据库而言，指定的表必须位于本地。 *table*为**nvarchar （776）**，无默认值。  
   
 `[ @nomsg = ] 'no_message'`是用于打印表名称的可选参数。 *no_message*为**varchar （5）**，默认值为**msg**。**nomsg 表示**禁止打印。  

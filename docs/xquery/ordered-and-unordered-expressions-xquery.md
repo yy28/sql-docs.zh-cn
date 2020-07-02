@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 6e7b3631-38d5-4375-b565-21d2e3f36ae0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 995e2072be85128ab58b85213c255ee35c042d5b
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: a337cc615a8566040a654829c4a2853117efcf9c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84886859"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85643515"
 ---
 # <a name="ordered-and-unordered-expressions-xquery"></a>已排序和未排序的表达式 (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   默认情况下，中所有操作的排序模式 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 均为**排序**模式。 因此，路径表达式和 FLWOR 表达式返回的节点序列（不包含**order by**子句）按文档顺序排列。  
   

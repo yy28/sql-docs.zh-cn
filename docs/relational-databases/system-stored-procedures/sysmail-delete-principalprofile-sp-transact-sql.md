@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8fc14700-e17a-4073-9a96-7fc23e775c69
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 340682d6344057d758d3cf8a0822f439625460de
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: bbf964bd974be3ac862c6a40097f943091335ae5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82814151"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633709"
 ---
 # <a name="sysmail_delete_principalprofile_sp-transact-sql"></a>sysmail_delete_principalprofile_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   删除数据库用户或角色使用公共或专用数据库邮件配置文件的权限。  
   
@@ -39,7 +39,7 @@ sysmail_delete_principalprofile_sp  { [ @principal_id = ] principal_id | [ @prin
     { [ @profile_id = ] profile_id | [ @profile_name = ] 'profile_name' }  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @principal_id = ] principal_id`要删除的关联的**msdb**数据库中数据库用户或角色的 ID。 *principal_id*的值为**int**，默认值为 NULL。 若要将公共配置文件设置为专用配置文件，请提供主体 ID **0**或主体名称 **"public"**。 必须指定*principal_id*或*principal_name* 。  
   
 `[ @principal_name = ] 'principal_name'`要删除的关联的**msdb**数据库中数据库用户或角色的名称。 *principal_name*的默认值为**sysname**，默认值为 NULL。 若要将公共配置文件设置为专用配置文件，请提供主体 ID **0**或主体名称 **"public"**。 必须指定*principal_id*或*principal_name* 。  

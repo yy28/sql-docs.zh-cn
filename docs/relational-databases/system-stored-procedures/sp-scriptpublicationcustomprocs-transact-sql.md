@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b06102d5-4284-4834-b126-bc0baea49be5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bb59b3ce367a7f936d4d8bec28b363e493857632
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 19a7b793a1bd7a72941a8f07baba44c584e5d8f2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82816549"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85645373"
 ---
 # <a name="sp_scriptpublicationcustomprocs-transact-sql"></a>sp_scriptpublicationcustomprocs (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   在启用了自动生成自定义过程架构选项的发布中，为所有表项目编写自定义 INSERT、UPDATE 和 DELETE 过程的脚本。 **sp_scriptpublicationcustomprocs**对于手动应用快照的设置订阅特别有用。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "82816549"
 sp_scriptpublicationcustomprocs [ @publication = ] 'publication_name'  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publication = ] 'publication_name'`发布的名称。 *publication_name* **sysname** ，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  

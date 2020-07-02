@@ -20,15 +20,15 @@ ms.assetid: 4d5d1e52-a574-4bdd-87ae-b932527235e8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bf694bcd82d57b0c021797677674ceb418f875a2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3534afe09635fdc626c51b63469c801a0c3ac418
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82811438"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85648596"
 ---
 # <a name="sysdm_os_workers-transact-sql"></a>sys.dm_os_workers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   对于系统中的每个工作线程，相应地返回一行。 有关辅助角色的详细信息，请参阅[主题和任务体系结构指南](../../relational-databases/thread-and-task-architecture-guide.md)。 
   
@@ -58,11 +58,11 @@ ms.locfileid: "82811438"
 |exception_severity|**int**|此工作线程遇到的上一个异常的严重性。|  
 |exception_address|**varbinary(8)**|出现异常的代码地址|  
 |affinity|**bigint**|工作线程的线程关联。 与[sys. dm_os_threads &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md)中的线程的关联。|  
-|state|**nvarchar(60)**|工作线程的状态。 可以是以下其中一个值：<br /><br /> INIT = 工作线程当前正在初始化。<br /><br /> RUNNING = 工作线程当前正在以非抢先或抢先方式运行。<br /><br /> RUNNABLE = 工作线程准备运行在计划程序上。<br /><br /> SUSPENDED = 工作线程当前正在延迟，以等待事件向它发送信号。|  
+|state|**nvarchar(60)**|工作线程的状态。 可以是以下值之一：<br /><br /> INIT = 工作线程当前正在初始化。<br /><br /> RUNNING = 工作线程当前正在以非抢先或抢先方式运行。<br /><br /> RUNNABLE = 工作线程准备运行在计划程序上。<br /><br /> SUSPENDED = 工作线程当前正在延迟，以等待事件向它发送信号。|  
 |start_quantum|**bigint**|此工作线程的当前运行开始时的时间（以毫秒为单位）。|  
 |end_quantum|**bigint**|此工作线程的当前运行结束时的时间（以毫秒为单位）。|  
 |last_wait_type|**nvarchar(60)**|最后一个等待的类型。 有关等待类型的列表，请参阅[transact-sql&#41;&#40;dm_os_wait_stats ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)。|  
-|return_code|**int**|从最后一个等待返回值。 可以是以下其中一个值：<br /><br /> 0 =SUCCESS<br /><br /> 3 = DEADLOCK<br /><br /> 4 = PREMATURE_WAKEUP<br /><br /> 258 = TIMEOUT|  
+|return_code|**int**|从最后一个等待返回值。 可以是以下值之一：<br /><br /> 0 =SUCCESS<br /><br /> 3 = DEADLOCK<br /><br /> 4 = PREMATURE_WAKEUP<br /><br /> 258 = TIMEOUT|  
 |quantum_used|**bigint**|仅限内部使用。|  
 |max_quantum|**bigint**|仅限内部使用。|  
 |boost_count|**int**|仅限内部使用。|  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 34fa326c5982ee36cf0ee00fb66c8bac1714c06a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 74a5865151cb283aed16efe8ef2ea2908a9f56c9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830941"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85626623"
 ---
 # <a name="sp_showrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   显示有关在合并复制中用作项目的表中的行的信息。 此存储过程在发布服务器上对发布数据库执行。  
   
@@ -39,7 +39,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
     [ , [ @show = ] 'show' ]   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @ownername = ] 'ownername'`表所有者的名称。 *ownername*的值为**sysname**，默认值为 NULL。 如果数据库包含多个同名的表，但每个表具有不同的所有者，则该参数对于区分这些表很有用。  
   
 `[ @tablename = ] 'tablename'`包含要为其返回信息的行的表的名称。 *tablename*的值为**sysname**，默认值为 NULL。  
@@ -52,11 +52,11 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|server_name |**sysname**|承载生成行版本项目的数据库的服务器名称。|  
+|server_name|**sysname**|承载生成行版本项目的数据库的服务器名称。|  
 |**db_name**|**sysname**|生成此项目的数据库的名称。|  
 |**db_nickname**|**binary(6)**|生成此项目的数据库的别名。|  
 |**version**|**int**|项的版本。|  
-|**current_state**|**nvarchar （9）**|返回有关行的当前状态的信息。<br /><br /> **y**行数据表示行的当前状态。<br /><br /> **n**行数据不表示行的当前状态。<br /><br /> 不适用** \<>** -不适用。<br /><br /> ** \< 未知>** -无法确定当前状态。|  
+|**current_state**|**nvarchar （9）**|返回有关行的当前状态的信息。<br /><br /> **y**行数据表示行的当前状态。<br /><br /> **n**行数据不表示行的当前状态。<br /><br /> **\<n/a>**-不适用。<br /><br /> **\<unknown>**-无法确定当前状态。|  
 |**rowversion_table**|**nchar （17）**|指示是否将行版本存储在[MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)表或[MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)表中。|  
 |**comment**|**nvarchar(255)**|有关此行版本项目的附加信息。 通常，该字段为空。|  
   
@@ -64,7 +64,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|server_name |**sysname**|承载生成列版本项目的数据库的服务器名称。|  
+|server_name|**sysname**|承载生成列版本项目的数据库的服务器名称。|  
 |**db_name**|**sysname**|生成此项目的数据库的名称。|  
 |**db_nickname**|**binary(6)**|生成此项目的数据库的别名。|  
 |**version**|**int**|项的版本。|  

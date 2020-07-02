@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d29e1c24-3a3c-47a4-a726-4584afa6038a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e26fa9b22578d91636eb554c75a55f184869d529
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3ec2f258b02df154c2c629f19f8ea99f1a3950d4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68046210"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85647372"
 ---
 # <a name="sp_add_log_shipping_secondary_database-transact-sql"></a>sp_add_log_shipping_secondary_database (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   为日志传送设置辅助数据库。  
   
@@ -52,10 +52,10 @@ sp_add_log_shipping_secondary_database
 [, [ @history_retention_period = ] 'history_retention_period']  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @secondary_database = ] 'secondary_database'`辅助数据库的名称。 *secondary_database* **sysname**，无默认值。  
   
-`[ @primary_server = ] 'primary_server'`日志传送配置中的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]主实例的名称。 *primary_server*为**sysname** ，且不能为 NULL。  
+`[ @primary_server = ] 'primary_server'`[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 日志传送配置中的主实例的名称。 *primary_server*为**sysname** ，且不能为 NULL。  
   
 `[ @primary_database = ] 'primary_database'`主服务器上的数据库的名称。 *primary_database* **sysname**，无默认值。  
   
@@ -77,7 +77,7 @@ sp_add_log_shipping_secondary_database
   
 `[ @buffer_count = ] 'buffer_count'`备份或还原操作使用的缓冲区总数。 *buffer_count*为**int** ，默认值为-1。  
   
-`[ @max_transfer_size = ] 'max_transfer_size'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]向备份设备发出的最大输入或输出请求的大小（以字节为单位）。 *max_transfersize*为**int** ，并且可以为 NULL。  
+`[ @max_transfer_size = ] 'max_transfer_size'`向备份设备发出的最大输入或输出请求的大小（以字节为单位） [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *max_transfersize*为**int** ，并且可以为 NULL。  
   
 `[ @restore_threshold = ] 'restore_threshold'`在生成警报之前，还原操作允许间隔的分钟数。 *restore_threshold*为**int** ，且不能为 NULL。  
   
@@ -108,7 +108,7 @@ sp_add_log_shipping_secondary_database
  只有**sysadmin**固定服务器角色的成员才能运行此过程。  
   
 ## <a name="examples"></a>示例  
- 此示例演示如何使用**sp_add_log_shipping_secondary_database**存储过程将数据库**LogShipAdventureWorks**添加为日志传送配置中的辅助数据库，主数据库[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]驻留在主服务器 TRIBECA 上。  
+ 此示例演示如何使用**sp_add_log_shipping_secondary_database**存储过程将数据库**LogShipAdventureWorks**添加为日志传送配置中的辅助数据库，主数据库 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 驻留在主服务器 TRIBECA 上。  
   
 ```  
 EXEC master.dbo.sp_add_log_shipping_secondary_database   
@@ -125,7 +125,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [关于 &#40;SQL Server 的日志传送&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

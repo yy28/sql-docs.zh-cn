@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6909a3f1-43a2-4df5-a6a5-9e6f347ac841
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 526b0a5b968b85854b7818212413e02a1478c878
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 73b999f1f6ee2ba49209f5763be6bb42e777ef78
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82817184"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85626928"
 ---
 # <a name="sp_replqueuemonitor-transact-sql"></a>sp_replqueuemonitor (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   列出对 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] 指定发布的排队更新订阅的队列或消息队列的队列消息。 如果使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 队列，则将在订阅服务器上的订阅数据库上执行此存储过程。 如果使用消息队列，则将在分发服务器上的分发数据库上执行此存储过程。  
   
@@ -40,7 +40,7 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
     [ , [ @queuetype = ] 'queuetype' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publisher = ] 'publisher'`发布服务器的名称。 *发布服务器*的**sysname**，默认值为 NULL。 必须将该服务器配置为用于发布。 NULL 表示所有发布服务器。  
   
 `[ @publisherdb = ] 'publisher_db' ]`发布数据库的名称。 *publisher_db*的默认值为**sysname**，默认值为 NULL。 NULL 表示所有发布数据库。  

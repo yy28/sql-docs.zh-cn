@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 26150c09-2dca-46ad-bb01-3cb3165bcc5d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f66891393527b12f859d1a0aa6447470473a4d49
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: dd907c83ad7c2fc2751134003f820d43a1023129
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82808408"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85626218"
 ---
 # <a name="syssp_cdc_enable_table-transact-sql"></a>sys.sp_cdc_enable_table (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   为当前数据库中指定的源表启用变更数据捕获。 对表启用变更数据捕获时，应用于此表的每个数据操纵语言 (DML) 操作的记录都将写入事务日志中。 变更数据捕获进程将从日志中检索此信息，并将其写入可通过使用一组函数访问的更改表中。  
   
@@ -53,7 +53,7 @@ sys.sp_cdc_enable_table
   [;]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @source_schema = ] 'source_schema'`源表所属的架构的名称。 *source_schema* **sysname**，无默认值，且不能为 NULL。  
   
 `[ @source_name = ] 'source_name'`要对其启用变更数据捕获的源表的名称。 *source_name* **sysname**，无默认值，且不能为 NULL。  
