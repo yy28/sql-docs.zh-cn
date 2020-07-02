@@ -16,15 +16,15 @@ ms.assetid: 118a7cac-4c0d-44fd-b63e-3d542932d239
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 47a7021093710c8ebb4e300880ea58af037dcd70
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: 618fabb71d61aeee4543f7c2c869aa02f7b3e987
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84949492"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85657097"
 ---
 # <a name="using-ado-with-sql-server-native-client"></a>将 ADO 用于 SQL Server Native Client
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   为了充分利用中引入的新功能，例如 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 多个活动的结果集（MARS）、查询通知、用户定义类型（udt）或新的**xml**数据类型，使用 ActiveX 数据对象（ADO）的现有应用程序应将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序用作其数据访问接口。  
   

@@ -20,24 +20,24 @@ ms.assetid: 3dde0397-ef6f-4b3f-8250-3f25584eb62b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cb6f8c3efcf1f4ac84e521c323933c491c40a63c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 390b7d0c1fd34827580562b16074028465cb8ae3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831447"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85678417"
 ---
 # <a name="sysplan_guides-transact-sql"></a>sys.plan_guides (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   数据库中的每个计划指南都在表中对应一行。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**plan_guide_id**|**int**|数据库中计划指南的唯一标识符。|  
-|**name**|**sysname**|计划指南的名称。|  
-|**create_date**|**datetime**|计划指南的创建日期和时间。|  
-|**modify_date**|**型**|上次修改计划指南的日期。|  
+|name|**sysname**|计划指南的名称。|  
+|create_date|**datetime**|计划指南的创建日期和时间。|  
+|modify_date|**型**|上次修改计划指南的日期。|  
 |**is_disabled**|**bit**|1 = 禁用计划指南。<br /><br /> 0 = 启用计划指南。|  
 |**query_text**|**nvarchar(max)**|创建计划指南所依据的查询文本。|  
 |**scope_type**|**tinyint**|标识计划指南的作用域。<br /><br /> 1 = OBJECT<br /><br /> 2 = SQL<br /><br /> 3 = TEMPLATE|  

@@ -18,15 +18,15 @@ ms.assetid: 6192ca87-febd-4075-8199-14b4fa609b8c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 241a0594f3487d47c49a96fb2539b660b294b8a4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4537cdca0d9d0b64d7c7b75f57d0c4eb39836097
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827511"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85651918"
 ---
 # <a name="sp_recompile-transact-sql"></a>sp_recompile (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   导致存储过程、触发器和用户定义函数在下次运行时重新编译。 具体方法是：从过程缓存中删除现有计划，强制在下次运行该过程或触发器时创建新计划。 在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 集合中，记录事件 SP:CacheInsert 而不是事件 SP:Recompile。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "82827511"
 sp_recompile [ @objname = ] 'object'  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  [ @objname =] "*object*"  
  当前数据库中存储过程、触发器、表、视图或用户定义函数的限定或未限定的名称。 *对象*为**nvarchar （776）**，无默认值。 如果*对象*是存储过程、触发器或用户定义函数的名称，则存储过程、触发器或函数将在下次运行时重新编译。 如果*对象*是表或视图的名称，则所有引用该表或视图的存储过程、触发器或用户定义函数将在下次运行时重新编译。  
   

@@ -13,28 +13,28 @@ helpviewer_keywords:
 ms.assetid: 37fb86b9-8819-4387-bcdc-9616968e15ad
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1e135e6706454fe1f03b4c7ab762e5234e1b7d35
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b510e74d507cb540fa617b6c0da48c3090429192
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68064207"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85679057"
 ---
 # <a name="data-types-extended-stored-procedure-api"></a>数据类型（扩展存储过程 API）
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]请改用 CLR 集成。  
   
  若要使用扩展存储过程 API 数据类型，请在程序中包括 Srv.h 头文件。  
   
-|数据类型|SQL Server 数据类型|说明|  
+|数据类型|SQL Server 数据类型|描述|  
 |---------------|--------------------------|-----------------|  
 |SRVBIGBINARY|**binary**|binary 数据类型，长度为 0 至 8000 个字节****。|  
 |SRVBIGCHAR|**char**|character 数据类型，长度为 0 至 8000 个字节****。|  
 |SRVBIGVARBINARY|**varbinary**|长度可变的 binary 数据类型，长度为 0 至 8000 个字节****。|  
 |SRVBIGVARCHAR|**varchar**|长度可变的 character 数据类型，长度为 0 至 8000 个字节****。|  
-|SRVBINARY|**binary**|binary 数据类型****。|  
+|SRVBINARY|**binary**|**binary**数据类型。|  
 |SRVBIT|**小段**|**bit**数据类型。|  
 |SRVBITN|**bit null**|bit 数据类型，允许为 null 值****。|  
 |SRVCHAR|**char**|character 数据类型****。|  

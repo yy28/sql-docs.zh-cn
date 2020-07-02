@@ -16,15 +16,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 15375e7aaf860c5419e68cc64bb8e6e2cac125c1
-ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
+ms.openlocfilehash: aafc93dd9cf83a648cc4eecfe9301ad6e3ab24c6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84215899"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85650076"
 ---
 # <a name="introduction-to-the-sqlxmloledb-provider-sqlxml-40"></a>SQLXMLOLEDB 访问接口简介 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   SQLXMLOLEDB 访问接口是通过 ActiveX 数据对象 (ADO) 公开 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 功能的 OLE DB 访问接口。 但是，访问接口只能在 ADO 的“写入输出流”模式下执行命令。 SQLXMLOLEDB 访问接口不是行集访问接口。 执行命令时，必须指定 adExecuteStream 标志，该标志指示 ADO 使用您指定的输出流。  
   
  下面的示例演示了用于指定 adExecuteStream 标志的 Execute 命令的语法：  
@@ -40,13 +40,13 @@ oTestCommand.Execute , , adExecuteStream
 ## <a name="sqlxmloledb-provider-specific-properties"></a>特定于访问接口的 SQLXMLOLEDB 属性  
  SQLXMLOLEDB 访问接口公开下列特定于访问接口的连接属性。  
   
-|连接<br /><br /> property|默认<br /><br /> （如果有）|说明|  
+|连接<br /><br /> property|默认<br /><br /> （如果有）|描述|  
 |-----------------------------|----------------------------|-----------------|  
 |数据提供程序||提供 SQLXMLOLEDB 执行命令所使用的 OLE DB 访问接口的 PROGID。 从 SQLXML 4.0 和 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 开始，此访问接口包含在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中；因此，此属性值限制为“SQLNCLI11”。 有关详细信息，请参阅 [SQL Server Native Client 编程](../../../relational-databases/native-client/sql-server-native-client-programming.md)。|  
   
  SQLXMLOLEDB 访问接口公开下列特定于访问接口的命令属性。  
   
-|Command<br /><br /> property|默认<br /><br /> （如果有）|说明|  
+|命令<br /><br /> property|默认<br /><br /> （如果有）|描述|  
 |--------------------------|----------------------------|-----------------|  
 |基路径|""|指定基本文件路径。 基本文件路径用于指定 XML 样式表语言 (XSL) 或映射架构文件的位置。 基文件路径还用于解析 xsl 或映射架构文件的相对路径，该路径已在 XSL 或 Mapping 架构属性中指定。<br /><br /> 有关使用此属性的示例，请参阅[&#40;SQLXMLOLEDB Provider&#41;执行 XPath 查询](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md)。|  
 |ClientSideXML|False|如果希望在客户端上执行行集到 XML 的转换过程，而不是在服务器上执行，请将此属性设置为 True。 在希望将性能负载移到中间层时，此操作很有用。<br /><br /> 有关使用此属性的示例，请参阅[&#40;SQLXMLOLEDB 提供程序中执行 Sql 查询&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-sql-queries-sqlxmloledb-provider.md)或[执行包含 &#40;SQLXMLOLEDB PROVIDER&#41;的 Sql 查询的模板](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md)。|  
@@ -59,7 +59,7 @@ oTestCommand.Execute , , adExecuteStream
   
  下表包含 ss 流标志属性值的说明。  
   
-|属性值|说明|  
+|属性值|描述|  
 |--------------------|-----------------|  
 |STREAM_FLAGS_DISALLOW_URL|映射架构或 XSL 不接受 URL。|  
 |STREAM_FLAGS_DISALLOW_ABSOLTE_PATH|为映射架构或 XSL 指定的路径必须是相对于模板自身的基本路径的相对路径。|  

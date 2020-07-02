@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 38477e91-d084-4df7-b1de-b930c5580189
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 371f8e2bf9a5d67d68e9c1d48502bf3fa2f81db6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f2f9d2ab67ab969aed2b505702c4c1400fee27a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67904568"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85665385"
 ---
 # <a name="sysremote_logins-transact-sql"></a>sys.remote_logins (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   每个远程登录名映射返回一行。 此目录视图用于将声称来自对应服务器的传入本地登录名映射到实际本地登录名。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "67904568"
 |**server_id**|**int**|**Sys.databases**中的服务器的 ID。 该名称由来自“远程”服务器的连接提供。|  
 |**remote_name**|**sysname**|连接将提供的用于映射的登录名。 如果为 NULL，则使用在连接中指定的登录名。|  
 |**local_principal_id**|**int**|登录名要映射到的服务器主体的 ID。 如果为 0，远程登录名将映射到同名登录名。|  
-|**modify_date**|**datetime**|上次更改该链接登录名的日期。|  
+|modify_date|**datetime**|上次更改该链接登录名的日期。|  
   
 ## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  

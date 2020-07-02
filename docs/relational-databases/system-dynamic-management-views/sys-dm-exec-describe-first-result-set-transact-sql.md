@@ -18,15 +18,15 @@ ms.assetid: 6ea88346-0bdb-4f0e-9f1f-4d85e3487d23
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e1591c84de006308e96a3b8079ea05ef9ad6802b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a9597d1852cb16c4f212989d42b1b614f0e5e8fd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830608"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85676483"
 ---
 # <a name="sysdm_exec_describe_first_result_set-transact-sql"></a>sys.dm_exec_describe_first_result_set (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   此动态管理函数将 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句作为参数，并描述该语句的第一个结果集的元数据。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "82830608"
 sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_information)  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *\@tsql*  
  一个或多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 *Transact-sql SQL_batch*可以是**nvarchar （***n***）** 或**nvarchar （max）**。  
   
@@ -61,7 +61,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**bit**|指定列是出于浏览和参考目的而额外添加的列，并不会实际出现在结果集中。|  
 |**column_ordinal**|**int**|在结果集中包含列的序号位置。 第一列的位置将指定为 1。|  
-|**name**|**sysname**|包含列的名称（如果可以确定名称）。 否则，将包含 NULL。|  
+|name|**sysname**|包含列的名称（如果可以确定名称）。 否则，将包含 NULL。|  
 |**is_nullable**|**bit**|包含下列值：<br /><br /> 如果列允许使用 NULL，则值为 1。<br /><br /> 如果列不允许使用 NULL，则值为 0。<br /><br /> 如果无法确定列是否允许使用 NULL，则值为 1。|  
 |**system_type_id**|**int**|包含 sys.databases 中指定的列数据类型的 system_type_id。 对于 CLR 类型，即使 system_type_name 列返回 NULL，该列也会返回值 240。|  
 |**system_type_name**|**nvarchar(256)**|包含为列数据类型指定的名称和参数（例如，length、precision、scale）。<br /><br /> 如果数据类型是用户定义的别名类型，则会在此处指定基本系统类型。<br /><br /> 如果数据类型是 CLR 用户定义类型，则在此列中返回 NULL。|  
@@ -106,7 +106,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
   
  下表列出了错误类型及其说明。  
   
-|错误类型|错误类型|说明|  
+|错误类型|错误类型|描述|  
 |-----------------|-----------------|-----------------|  
 |1|MISC|未描述的所有错误。|  
 |2|SYNTAX|在批处理中发生语法错误。|  

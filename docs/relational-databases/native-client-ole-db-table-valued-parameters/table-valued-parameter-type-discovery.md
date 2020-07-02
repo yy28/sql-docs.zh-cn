@@ -13,17 +13,17 @@ ms.assetid: f55818c2-ebb5-4cf6-8c0c-0da41f592560
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 71e22c7945edb2014fc5c14ffcb5644fcc96a846
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f7432fa4fa6129207ac627085e63977e7d06cb65
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301209"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85659185"
 ---
 # <a name="table-valued-parameter-type-discovery"></a>表值参数类型发现
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  使用者（即使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序的客户端应用程序）可以发现每个命令参数的类型（如果命令文本已提供给 OLE DB 提供程序）。 了解表值参数的类型之后，使用者可以发现表值参数各列的元数据信息。  
+  使用者（即使用 Native Client OLE DB 提供程序的客户端应用程序） [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以发现每个命令参数的类型（如果命令文本已提供给 OLE DB 提供程序）。 了解表值参数的类型之后，使用者可以发现表值参数各列的元数据信息。  
   
  对于多数参数类型，ICommandWithParameters::GetParameterInfo 都支持过程参数的类型信息。 从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 开始，随着用户定义类型和 xml 数据类型的引入，由于无法通过 ICommandWithParameters 提供用户定义类型信息（名称、架构和目录），GetParameterInfo 方法不再能够完全满足此目的****。 因此，定义了一个新接口 ISSCommandWithParameters 来提供扩展类型信息。  
   

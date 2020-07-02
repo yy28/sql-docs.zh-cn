@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: fa496c6c-2a54-4fda-a238-db490c6b3afd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 58ddd6013cb3289cb99ab6e600d2c771cc366f41
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 13713bb4f3c5cc3f68903ffd1a22480e2922de37
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820940"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85664886"
 ---
 # <a name="sysserver_audit_specifications-transact-sql"></a>sys.server_audit_specifications (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   包含有关服务器实例上 SQL Server 审核中的服务器审核规范的信息。 有关 SQL Server Audit 的详细信息，请参阅 [SQL Server Audit（数据库引擎）](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "82820940"
 |-----------------|---------------|-----------------|  
 |**name**|**Sysname**|服务器规范的名称。|  
 |**server_specification_id**|**Int**|**Server_specification**的 ID。|  
-|**create_date**|**型**|审核服务器规范的创建日期。|  
+|create_date|**型**|审核服务器规范的创建日期。|  
 |**modified_date**|**型**|审核服务器规范的上次修改日期。|  
 |**is_state_enabled**|**tinyint**|审核规范状态：<br /><br /> 0-已禁用<br /><br /> 1-已启用|  
 |**audit_GUID**|**uniqueidentifier**|包含此规范的审核的 GUID。 在服务器启动期间成员服务器审核规范的枚举过程中使用。|  

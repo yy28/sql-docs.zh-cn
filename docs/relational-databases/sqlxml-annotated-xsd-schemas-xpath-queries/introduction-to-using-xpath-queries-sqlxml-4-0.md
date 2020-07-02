@@ -16,15 +16,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3ed8de737a350181a62eb12b8c9f2f19a762a44c
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 544a8741557c222577f124014d6a04a9d066add1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84882244"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85649765"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>XPath 查询使用简介 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   XML Path 语言 (XPath) 查询可以指定作为 URL 的一部分，或在模板内指定。 映射架构决定生成的此片段的结构，值从数据库中进行检索。 从概念上来说，此过程类似于使用 CREATE VIEW 语句创建视图，然后根据视图编写 SQL 查询。  
   
 > [!NOTE]  
@@ -92,7 +92,7 @@ ms.locfileid: "84882244"
 ## <a name="supported-functionality"></a>支持的功能  
  下表显示了 SQLXML 4.0 中实现的 XPath 语言功能。  
   
-|Feature|项|示例查询链接|  
+|功能|项|示例查询链接|  
 |-------------|----------|----------------------------|  
 |Axes|**attribute**、 **child**、 **parent**和**self**轴|[&#40;SQLXML 4.0&#41;在 XPath 查询中指定轴](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-axes-in-xpath-queries-sqlxml-4-0.md)|  
 |包含连续谓词和嵌套谓词的布尔值谓词||[&#40;SQLXML 4.0&#41;在 XPath 查询中指定算术运算符](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
@@ -106,7 +106,7 @@ ms.locfileid: "84882244"
 ## <a name="unsupported-functionality"></a>不支持的功能  
  下表显示了 SQLXML 4.0 中未实现的 XPath 语言功能。  
   
-|Feature|项|  
+|功能|项|  
 |-------------|----------|  
 |Axes|**祖先**、**祖先或-self**、**子代**、**子代-或-self （//）**，**后面**是**后同辈**、**命名空间**、**前面**和**同级**|  
 |数值谓词||  

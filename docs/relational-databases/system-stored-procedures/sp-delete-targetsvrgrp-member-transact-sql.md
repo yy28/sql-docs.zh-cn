@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 178a38d9-9b19-4648-95d7-e1397110d14c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 308b74fc484dc64d61aad7b30cd5015429228b86
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9a8e14523104e64a2e2574c1c233968597aa92b1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830290"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85693242"
 ---
 # <a name="sp_delete_targetsvrgrp_member-transact-sql"></a>sp_delete_targetsvrgrp_member (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   从目标服务器组中删除目标服务器。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "82830290"
 sp_delete_targetsvrgrp_member [ @group_name = ] 'group_name' , [ server_name = ] 'server_name'   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @group_name = ] 'group_name'`组的名称。 *group_name* **sysname**，无默认值。  
   
 `[ @server_name = ] 'server_name'`要从指定组中删除的服务器的名称。 *server_name*为**nvarchar （30）**，无默认值。  

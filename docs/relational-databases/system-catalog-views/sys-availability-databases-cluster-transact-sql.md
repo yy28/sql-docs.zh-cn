@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 8d9c57e5-7f39-4315-b466-92748231140a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2c36c1574ae1ad289c9980e1df9bfbe3b241e164
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c520cf9e836f8db051599ed00735763c85632aab
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829143"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85649125"
 ---
 # <a name="sysavailability_databases_cluster-transact-sql"></a>sys.availability_databases_cluster (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在为 Windows Server 故障转移群集（WSFC）群集中的任何 Always On 可用性组承载可用性副本的实例上的每个可用性数据库，都包含一行，不管本地副本数据库是否已联接到可用性组。  
   
@@ -47,10 +47,10 @@ ms.locfileid: "82829143"
  如果**availability_databases_cluster**的调用方不是数据库的所有者，则查看对应行所需的最小权限为 ALTER any DATABASE 或 VIEW any database 服务器级权限，或**master**数据库中的 CREATE database 权限。  
   
 ## <a name="see-also"></a>另请参阅  
- [sys. availability_groups &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
+ [sys.availability_groups (Transact-SQL)](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
  [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys. dm_hadr_database_replica_states &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)   
  [sys. dm_hadr_database_replica_cluster_states &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md)   
- [AlwaysOn 可用性组概述 (SQL Server)](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
+ [SQL Server Always On 可用性组 &#40;概述&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

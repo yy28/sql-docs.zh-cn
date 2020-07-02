@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: d2e678bb-51e8-4a61-b223-5c0b8d08b8b1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: be2e9ce380f9d761c29e86cef20f87556b634c3c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0b01d8ebe8f9a880e7f4a1dc06e324770dddaf1d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829371"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85676312"
 ---
 # <a name="sysdm_hadr_availability_replica_states-transact-sql"></a>sys.dm_hadr_availability_replica_states (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   为每个本地副本都返回一行，并为与本地副本位于同一 AlwaysOn 可用性组的每个远程副本都返回一行。 每一行都包含给定副本的状态信息。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "82829371"
   
  正在**解析：** 如果可用性副本处于解析角色中，则可能的操作状态如下表中所示。  
   
-|操作状态|说明|  
+|操作状态|描述|  
 |-----------------------|-----------------|  
 |PENDING_FAILOVER|正在为可用性组处理故障转移命令。|  
 |OFFLINE|可用性副本的所有配置数据都已在 WSFC 群集上更新，并且也在本地元数据中更新，但可用性组目前缺少主副本。|  
@@ -67,7 +67,7 @@ ms.locfileid: "82829371"
   
  **主要：** 当某个可用性副本正在执行主角色时，该副本当前是主副本。 可能的操作状态如下表中所示。  
   
-|操作状态|说明|  
+|操作状态|描述|  
 |-----------------------|-----------------|  
 |PENDING|这是一个临时状态，但是，如果工作线程无法处理请求，主副本可能会处于此状态。|  
 |ONLINE|可用性组资源已处于联机状态，并且所有数据库工作线程均已选取。|  
@@ -75,7 +75,7 @@ ms.locfileid: "82829371"
   
  **辅助：** 当某个可用性副本正在执行辅助角色时，该副本当前为辅助副本。 可能的操作状态如下表中所示。  
   
-|操作状态|说明|  
+|操作状态|描述|  
 |-----------------------|-----------------|  
 |ONLINE|本地辅助副本连接到主副本。|  
 |FAILED|本地辅助副本无法从 WSFC 群集读取和/或写入。|  

@@ -20,15 +20,15 @@ ms.assetid: 148a5276-a8d5-49d2-8146-3c63d24c2144
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c235ebc59424eba97d985740a7cf8456eee53150
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: b451385df6189a6a81ddc04d0f402c770902a1b8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83152028"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85663475"
 ---
 # <a name="sysdm_db_file_space_usage-transact-sql"></a>sys.dm_db_file_space_usage (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   返回数据库中每个数据文件的空间使用情况信息。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "83152028"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |database_id|**smallint**|数据库 ID。|  
-|file_id|**smallint**|文件 ID。<br /><br /> file_id 映射到 sys.databases 中的 file_id [dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md)和[sys.sysfiles](../../relational-databases/system-compatibility-views/sys-sysfiles-transact-sql.md)中的 fileid。|  
+|file_id|**smallint**|文件 ID。<br /><br /> file_id 映射到[sys.databases dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md)和[sys.sys文件](../../relational-databases/system-compatibility-views/sys-sysfiles-transact-sql.md)中的 file_id。|  
 |filegroup_id|**smallint**|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 文件组 ID。|  
 |total_page_count|**bigint**|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 数据文件中的总页数。|  
 |allocated_extent_page_count|**bigint**|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 数据文件的已分配区中的总页数。|  

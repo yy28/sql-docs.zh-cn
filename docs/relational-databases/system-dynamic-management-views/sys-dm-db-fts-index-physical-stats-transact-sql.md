@@ -20,22 +20,22 @@ ms.assetid: 997c3278-3630-47f6-ada3-190b6c16ce0e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: da91debf86d943e24d998afda2911d000f926525
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e09a87b00ea2308cbf21d3d8f57670e2c0c996bf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820895"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85663185"
 ---
 # <a name="sysdm_db_fts_index_physical_stats-transact-sql"></a>sys.dm_db_fts_index_physical_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   为关联有全文或语义索引的每个表中的每个全文或语义索引返回一行。  
   
 ||||  
 |-|-|-|  
-|**列名**|**Type**|**说明**|  
-|**object_id**|int|包含索引的表的对象 ID。|  
+|**列名**|类型|**说明**|  
+|object_id|int|包含索引的表的对象 ID。|  
 |**fulltext_index_page_count**|**bigint**|提取的逻辑大小（用索引页数表示）。|  
 |**keyphrase_index_page_count**|**bigint**|提取的逻辑大小（用索引页数表示）。|  
 |**similarity_index_page_count**|**bigint**|提取的逻辑大小（用索引页数表示）。|  

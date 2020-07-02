@@ -18,15 +18,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f1485221af02834e741d32dde5fd6ad45aaacdfe
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 76cdf55452ff2545063d8bc15c8347281fc46e57
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84884018"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85649265"
 ---
 # <a name="sample-xpath-queries-sqlxml-40"></a>示例 XPath 查询 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   本节提供 SQLXML 4.0 的 XPath 查询示例。 为了便于说明，在使用 ADO 执行的模板中指定这些示例 XPath 查询。 因此，您必须使用映射架构文件 SampleSchema1.xml，本节中也提供了此文件。 将此文件保存在存储模板的目录中。  
   
 > [!NOTE]  

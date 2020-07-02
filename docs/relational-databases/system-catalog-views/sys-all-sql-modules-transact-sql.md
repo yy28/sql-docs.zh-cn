@@ -20,31 +20,31 @@ ms.assetid: 7477a3fe-afb3-44c8-bb2c-c6e1d9bdee6f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0e0d56da2a61f97a523ee67dcf4847c76ad07b26
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a7953673269229b67541c28c245c989cb3f0ac45
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823380"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85652785"
 ---
 # <a name="sysall_sql_modules-transact-sql"></a>sys.all_sql_modules (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  返回**sys.databases sql_modules**和**system_sql_modules**的联合。  
+  返回**sql_modules**和**sys.system_sql_modules**的联合。  
   
  视图针对每个本机编译标量用户定义函数返回一行。 有关详细信息，请参阅[内存中 OLTP 的标量用户定义函数](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|包含对象的对象 ID。 在数据库中是唯一的。|  
+|object_id|**int**|包含对象的对象 ID。 在数据库中是唯一的。|  
 |**definition**|**nvarchar(max)**|定义此模块的 SQL 文本。<br /><br /> NULL = 已加密|  
-|**uses_ansi_nulls**|**bit**|模块是使用 SET ANSI_NULLS ON 创建的。|  
+|uses_ansi_nulls|**bit**|模块是使用 SET ANSI_NULLS ON 创建的。|  
 |**uses_quoted_identifier**|**bit**|模块是使用 SET QUOTED_IDENTIFIER ON 创建的。|  
 |**is_schema_bound**|**bit**|模块是使用 SCHEMABINDING 选项创建的。|  
 |**uses_database_collation**|**bit**|1 = 架构绑定模块定义取决于正确处理所需的数据库的默认排序规则；否则为 0。 此种依赖关系可防止更改数据库的默认排序规则。|  
 |**is_recompiled**|**bit**|过程是使用 WITH RECOMPILE 选项创建的。|  
 |**null_on_null_input**|**bit**|模块被声明为针对任何 NULL 输入生成 NULL 输出。|  
-|**execute_as_principal_id**|**int**|EXECUTE AS 数据库主体的 ID。<br /><br /> 默认情况下，或者 EXECUTE AS CALLER 时，为 NULL。<br /><br /> 指定主体的 ID （如果以 SELF 身份执行或作为 \< 主体> 执行。<br /><br /> -2 = EXECUTE AS OWNER。|  
+|**execute_as_principal_id**|**int**|EXECUTE AS 数据库主体的 ID。<br /><br /> 默认情况下，或者 EXECUTE AS CALLER 时，为 NULL。<br /><br /> 指定主体的 ID （如果 EXECUTE AS SELF 或 EXECUTE AS） \<principal> 。<br /><br /> -2 = EXECUTE AS OWNER。|  
 |**uses_native_compilation**|bit|**适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。<br /><br /> 0 = 非本机编译<br /><br /> 1 = 本机编译<br /><br /> 默认值为 0。|  
   
 ## <a name="permissions"></a>权限  
@@ -54,7 +54,7 @@ ms.locfileid: "82823380"
  [Transact-sql&#41;的目录视图 &#40;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [&#40;Transact-sql&#41;的对象目录视图](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [sys.sql_modules (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
- [sys. system_sql_modules &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-system-sql-modules-transact-sql.md)   
+ [&#40;Transact-sql 的 tem_sql_modulessys.sys&#41;](../../relational-databases/system-catalog-views/sys-system-sql-modules-transact-sql.md)   
  [内存中 OLTP（内存中优化）](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

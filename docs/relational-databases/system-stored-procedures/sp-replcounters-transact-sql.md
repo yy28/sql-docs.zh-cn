@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: fe585b1f-edda-421f-81d6-8a03a3a535d2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 859e214a0caccc9e515a5377d707aeb3d29c69da
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 98e5064c571a67afe445f265eaac693432cb5b38
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833116"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85645451"
 ---
 # <a name="sp_replcounters-transact-sql"></a>sp_replcounters (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   为每个发布数据库返回有关滞后时间、吞吐量和事务计数的复制统计信息。 此存储过程在发布服务器的任何数据库中执行。  
   
@@ -41,7 +41,7 @@ sp_replcounters
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**Database**|**sysname**|数据库的名称。|  
+|**数据库**|**sysname**|数据库的名称。|  
 |**Replicated transactions**|**int**|日志中等待传送到分发数据库的事务数。|  
 |**Replication rate trans/sec**|**float**|平均每秒传送到分发数据库的事务数。|  
 |**复制延迟**|**float**|事务在分发前位于日志中的平均时间（秒）。|  

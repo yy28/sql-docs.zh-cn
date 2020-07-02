@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 63a4ec6e-ce79-4bf1-9d37-5ac88f8d6beb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 986fd717ede9d8fb81bfb42a818921cf3d1b553e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7605a1f05fd99dcbd5b870cb78e15d6192708537
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830246"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85693095"
 ---
 # <a name="sp_deletepeerrequesthistory-transact-sql"></a>sp_deletepeerrequesthistory (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   删除与发布状态请求相关的历史记录，其中包括请求历史记录（[MSpeer_request &#40;transact-sql&#41;](../../relational-databases/system-tables/mspeer-request-transact-sql.md)）以及响应历史记录（[MSpeer_response &#40;transact-sql&#41;](../../relational-databases/system-tables/mspeer-response-transact-sql.md)）。此存储过程在参与对等复制拓扑的发布服务器上对发布数据库执行。 有关详细信息，请参阅 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)。  
   
@@ -38,7 +38,7 @@ sp_deletepeerrequesthistory [ @publication = ] 'publication'
     [ , [ @cutoff_date = ] cutoff_date ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publication = ] 'publication'`发出状态请求的发布的名称。 *发布*为**sysname**，无默认值。  
   
 `[ @request_id = ] request_id`指定单个状态请求，以便删除对此请求的所有响应。 *request_id*的值为**int**，默认值为 NULL。  

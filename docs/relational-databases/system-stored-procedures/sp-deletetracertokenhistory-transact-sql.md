@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 9ae1be14-0d2f-40b1-9d6e-22d79726abf4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6be1b5454fd134cd6c5de0473d404ec38cddedf3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 26a9c4a3001d2a5b4f5709311e23c0023307ce92
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830261"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85692800"
 ---
 # <a name="sp_deletetracertokenhistory-transact-sql"></a>sp_deletetracertokenhistory (Transact-SQL)
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 删除[MStracer_tokens &#40;transact-sql&#41;](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md)的跟踪令牌记录，并[MStracer_history &#40;transact-sql&#41;](../../relational-databases/system-tables/mstracer-history-transact-sql.md)系统表。 此存储过程在发布服务器上的发布数据库中执行，或者在分发服务器上的分发数据库中执行。
 
@@ -40,7 +40,7 @@ sp_deletetracertokenhistory [ @publication = ] 'publication'
     [ , [ @publisher_db = ] 'publisher_db' ]
 ```
 
-## <a name="arguments"></a>参数
+## <a name="arguments"></a>自变量
 
 `@publication= 'publication'`  
 已插入跟踪令牌的发布的名称。 数据类型为**sysname**。 此参数是必需的。

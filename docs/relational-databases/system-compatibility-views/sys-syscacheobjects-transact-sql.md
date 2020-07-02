@@ -1,5 +1,5 @@
 ---
-title: sys. sys.syscacheobjects （Transact-sql） |Microsoft Docs
+title: sys.syscacheobjects （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 9b14f37c-b7f5-4f71-b070-cce89a83f69e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: df4b83cb7b1e69191e8964730a534c1b24fbac2c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b33ff1cb4b46334f0b42d81f87920ef666a82e81
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68010777"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85663438"
 ---
 # <a name="syssyscacheobjects-transact-sql"></a>sys.syscacheobjects (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   包含有关如何使用缓存的信息。  
   
@@ -39,11 +39,11 @@ ms.locfileid: "68010777"
 |-----------------|---------------|-----------------|  
 |**bucketid**|**int**|存储桶 ID。 该值表示从 0 到（目录大小 - 1）的范围。 目录大小为哈希表的大小。|  
 |**cacheobjtype**|**nvarchar(17)**|缓存中的对象类型：<br /><br /> 编译计划<br /><br /> 可执行计划<br /><br /> 分析树<br /><br /> 游标<br /><br /> 扩展存储过程|  
-|**objtype**|**nvarchar(8)**|对象的类型：<br /><br /> 存储过程<br /><br /> 预定义语句<br /><br /> 即席查询（[!INCLUDE[tsql](../../includes/tsql-md.md)]从**sqlcmd**或**osql**实用工具提交为语言事件，而不是远程过程调用）<br /><br /> ReplProc（复制过程）<br /><br /> 触发器<br /><br /> 查看<br /><br /> 默认<br /><br /> 用户表<br /><br /> 系统表<br /><br /> 检查<br /><br /> 规则|  
+|**objtype**|**nvarchar(8)**|对象的类型：<br /><br /> 存储过程<br /><br /> 预定义语句<br /><br /> 即席查询（ [!INCLUDE[tsql](../../includes/tsql-md.md)] 从**sqlcmd**或**osql**实用工具提交为语言事件，而不是远程过程调用）<br /><br /> ReplProc（复制过程）<br /><br /> 触发器<br /><br /> 视图<br /><br /> 默认<br /><br /> 用户表<br /><br /> 系统表<br /><br /> 检查<br /><br /> 规则|  
 |**objid**|**int**|用于在缓存中查找对象的主键之一。 这是存储在数据库对象（过程、视图、触发器等）的**sysobjects**中的对象 ID。 对于 "临时" 或 "已准备好的 SQL" 等缓存对象， **objid**为内部生成的值。|  
 |**dbid**|**smallint**|在其中编译缓存对象的数据库 ID。|  
 |**dbidexec**|**smallint**|执行查询的数据库 ID。<br /><br /> 对于大多数对象， **dbidexec**与**dbid**具有相同的值。<br /><br /> 对于系统视图， **dbidexec**是用于执行查询的数据库 ID。<br /><br /> 对于即席查询， **dbidexec**为0。 这意味着**dbidexec**与**dbid**具有相同的值。|  
-|**标识号**|**smallint**|表示特殊查询计划和已准备好的计划的计划创建者。<br /><br /> -2 = 提交的批处理不依赖于隐式名称解析并可在不同的用户间共享。 这是首选方法。 任何其他值表示数据库中提交查询的用户的用户 ID。<br /><br /> 如果用户数和角色数超过 32,767，则发生溢出或返回 NULL。|  
+|**uid**|**smallint**|表示特殊查询计划和已准备好的计划的计划创建者。<br /><br /> -2 = 提交的批处理不依赖于隐式名称解析并可在不同的用户间共享。 这是首选方法。 任何其他值表示数据库中提交查询的用户的用户 ID。<br /><br /> 如果用户数和角色数超过 32,767，则发生溢出或返回 NULL。|  
 |**refcounts**|**int**|引用该缓存对象的其他缓存对象数。 计数 1 为基数。|  
 |**usecounts**|**int**|自开始以来使用该缓存对象的次数。|  
 |**pagesused**|**int**|缓存对象占用的页数。|  

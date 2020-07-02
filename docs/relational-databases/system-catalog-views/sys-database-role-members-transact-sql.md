@@ -20,17 +20,17 @@ ms.assetid: ed1b019d-ca48-4db3-85df-cf6d2db591cf
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1bbbcf04cdb141cff25565360d82714eed1e98f1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f41a5cc500ef8d893180804091e5f905961aa637
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68079469"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85665355"
 ---
 # <a name="sysdatabase_role_members-transact-sql"></a>sys.database_role_members (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  为每个数据库角色的每个成员返回一行。  数据库用户、应用程序角色和其他数据库角色可以是数据库角色的成员。 若要向角色添加成员，请将[ALTER role](../../t-sql/statements/alter-role-transact-sql.md)语句与`ADD MEMBER`选项一起使用。 与[database_principals sys.databases](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)联接以返回`principal_id`值的名称。
+  为每个数据库角色的每个成员返回一行。  数据库用户、应用程序角色和其他数据库角色可以是数据库角色的成员。 若要向角色添加成员，请将[ALTER role](../../t-sql/statements/alter-role-transact-sql.md)语句与选项一起使用 `ADD MEMBER` 。 与[database_principals sys.databases](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)联接以返回值的名称 `principal_id` 。
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -38,7 +38,7 @@ ms.locfileid: "68079469"
 |**member_principal_id**|**int**|成员的数据库主体 ID。|  
   
 ## <a name="permissions"></a>权限  
- 任何用户都可以查看自己的成员身份。 若要查看其他角色成员身份，需要`db_securityadmin`具有固定数据库角色`VIEW DEFINITION`的成员身份或数据库。  
+ 任何用户都可以查看自己的成员身份。 若要查看其他角色成员身份，需要具有 `db_securityadmin` 固定数据库角色的成员身份或 `VIEW DEFINITION` 数据库。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   

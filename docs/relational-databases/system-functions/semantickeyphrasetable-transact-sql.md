@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d33b973a-2724-4d4b-aaf7-67675929c392
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bfde3ee5d26557759bd881bce34a69b6ecf98dd1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3782b8139b84d87a30ac575476f5535173cdc66a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68140572"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85662579"
 ---
 # <a name="semantickeyphrasetable-transact-sql"></a>semantickeyphrasetable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   为与指定表中的指定列关联的关键短语返回包含零行、一行或多行的表。  
   
@@ -50,7 +50,7 @@ SEMANTICKEYPHRASETABLE
   
  此名称可由 1 到 4 个部分组成，但不允许使用远程服务器名称。  
   
- **该列**  
+ **column**  
  应为其返回结果的索引列的名称。 列必须启用语义索引。  
   
  column_list   
@@ -67,12 +67,12 @@ SEMANTICKEYPHRASETABLE
 ## <a name="table-returned"></a>返回的表  
  下表介绍此行集函数返回的关键短语的信息。  
   
-|Column_name|类型|说明|  
+|Column_name|类型|描述|  
 |------------------|----------|-----------------|  
 |**column_id**|**int**|从中提取和索引当前关键字短语的列的 ID。<br /><br /> 有关如何在列名称和 column_id 之间相互检索对方的详细信息，请参阅 COL_NAME 和 COLUMNPROPERTY 函数。|  
 |**document_key**|**\***<br /><br /> 此键与源表中的唯一键的类型相匹配。|从中对当前关键短语进行索引的文档或行的唯一键值。|  
 |**关键短语**|**NVARCHAR**|在由 column_id 表示的列中找到的关键短语，与 document_key 指定的文档关联。|  
-|**分值**|**real**|一个相对值，用来表示此关键短语与索引列中同一文档的所有其他关键短语的关系。<br /><br /> 该值是范围 [0.0, 1.0] 中的小数值，较高的得分表示较高权重，1.0 是最理想的得分。|  
+|**分值**|**实际上**|一个相对值，用来表示此关键短语与索引列中同一文档的所有其他关键短语的关系。<br /><br /> 该值是范围 [0.0, 1.0] 中的小数值，较高的得分表示较高权重，1.0 是最理想的得分。|  
   
 ## <a name="general-remarks"></a>一般备注  
  有关详细信息，请参阅[在具有语义搜索的文档中查找关键短语](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md)。  

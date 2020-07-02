@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 1a17b0c9-2535-4f3d-8013-cd0a6d08f773
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2edfbd187835a321f513f3fb9d14aaa1aef65ec5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: dbfd5f0fc29efd4d2f6a02d680c9a6df34c5392b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827950"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85663029"
 ---
 # <a name="sysdm_hadr_database_replica_states-transact-sql"></a>sys.dm_hadr_database_replica_states (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   为参与 Always On 可用性组的每个数据库返回一行，其中的本地实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在为其承载可用性副本。 此动态管理视图公开与主副本和辅助副本有关的状态信息。 在辅助副本上，此视图为服务器实例上的每个辅助数据库都返回一行。 在主副本上，此视图为每个主数据库都返回一行，并且为相应的辅助数据库另外返回一行。  
   

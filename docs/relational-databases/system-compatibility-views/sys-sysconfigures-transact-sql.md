@@ -1,5 +1,5 @@
 ---
-title: sys. sysconfigures （Transact-sql） |Microsoft Docs
+title: sys.sys配置（Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,26 +20,26 @@ helpviewer_keywords:
 ms.assetid: 146bf10a-c898-4676-a2a1-673fb1cee7a2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c785ee1c4d3c5382aa42adf48ad9880f00297137
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1e0e65f06ccecd01ae9396b2c64962040a446aeb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68089205"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85663348"
 ---
-# <a name="syssysconfigures-transact-sql"></a>sys. sysconfigures （Transact-sql）
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="syssysconfigures-transact-sql"></a>sys.sys配置（Transact-sql）
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  对每个由用户设置的配置选项都包含一行。 **sysconfigures**包含在最新启动之前定义的配置选项，以及自[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]那时起设置的任何动态配置选项。  
+  对每个由用户设置的配置选项都包含一行。 **sysconfigures**包含在最新启动之前定义的配置选项 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，以及自那时起设置的任何动态配置选项。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**value**|**int**|用户可修改的变量值。 仅在执行 RECONFIGURE 后，由[!INCLUDE[ssDE](../../includes/ssde-md.md)]使用。|  
-|**config.xml**|**int**|配置变量号。|  
-|**条**|**nvarchar(255)**|对配置选项的解释。|  
+|value|**int**|用户可修改的变量值。 仅在执行 RECONFIGURE 后，由[!INCLUDE[ssDE](../../includes/ssde-md.md)]使用。|  
+|**config**|**int**|配置变量号。|  
+|**comment**|**nvarchar(255)**|对配置选项的解释。|  
 |**status**|**smallint**|指示选项状态的位图。 可能的值如下所示：<br /><br /> 0 = 静态。 重新启动服务器后，设置才会生效。<br /><br /> 1 = 动态。 执行 RECONFIGURE 语句后，变量才会生效。<br /><br /> 2 = 高级。 仅当设置了 "**显示高级选项**" 时，才会显示变量。 重新启动服务器后，设置才会生效。<br /><br /> 3 = 动态和高级。|  
   
 ## <a name="see-also"></a>另请参阅  

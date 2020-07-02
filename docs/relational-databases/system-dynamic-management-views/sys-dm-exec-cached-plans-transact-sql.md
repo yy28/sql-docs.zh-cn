@@ -20,15 +20,15 @@ ms.assetid: 95b707d3-3a93-407f-8e88-4515d4f2039d
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bd09fde00399dc2e96dc67334a0446ca9f618c3e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 214c5aed0447fe63b941e32a13a4306b1a0209a3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830721"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85676839"
 ---
 # <a name="sysdm_exec_cached_plans-transact-sql"></a>sys.dm_exec_cached_plans (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为了加快查询执行而缓存的每个查询计划返回一行。 可以用此动态管理视图来查找缓存的查询计划、缓存的查询文本、缓存计划占用的内存量，以及重新使用缓存计划的计数。  
   

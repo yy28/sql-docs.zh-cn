@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: fdc1ec5f-f108-42b4-a2d8-f06a71913ab8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cf3aefc677f3eca48b26faf51eb92243e3806f10
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 718309e24e9ad7936dfc359e6db6ac529c926345
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82815274"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646105"
 ---
 # <a name="sp_repldropcolumn-transact-sql"></a>sp_repldropcolumn (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   从已发布的现有表项目中删除列。 此存储过程在发布服务器上对发布数据库执行。  
   
@@ -43,7 +43,7 @@ sp_repldropcolumn [ @source_object = ] 'source_object', [ @column = ] 'column'
     [ , [ @force_reinit_subscription = ] force_reinit_subscription ]   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  [ @source_object =] "*source_object*"  
  包含要删除的列的表项目的名称。 *source_object*为 nvarchar （258），无默认值。  
   

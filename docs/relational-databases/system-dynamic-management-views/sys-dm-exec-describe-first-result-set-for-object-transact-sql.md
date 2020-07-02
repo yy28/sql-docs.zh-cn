@@ -18,15 +18,15 @@ ms.assetid: 63b0fde7-95d7-4ad7-a219-a9feacf1bd89
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9bf2dff5e5d7a3cb1581de9c0b15ff8a58dc6be7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d0c08c6e0d41781783cf7aaffd1f26d6e7b4e417
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827983"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85676763"
 ---
 # <a name="sysdm_exec_describe_first_result_set_for_object-transact-sql"></a>sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   此动态管理函数采用 @object_id 作为参数，并描述具有该 ID 的模块的第一个结果元数据。 @object_id指定的可以是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程或触发器的 ID [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 如果它是其他任何对象（如视图、表、函数或 CLR 过程）的 ID，则会在结果的错误列中指定错误。  
   
@@ -42,7 +42,7 @@ sys.dm_exec_describe_first_result_set_for_object
     ( @object_id , @include_browse_information )  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *\@object_id*  
  @object_id [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 触发器的。  的类型为 int@object_id****。  
   
@@ -56,7 +56,7 @@ sys.dm_exec_describe_first_result_set_for_object
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**bit**|指定列是否是出于浏览信息的目的而额外添加的，并不会实际出现在结果集中。|  
 |**column_ordinal**|**int**|在结果集中包含列的序号位置。 第一列的位置将指定为 1。|  
-|**name**|**sysname**|包含列的名称（如果可以确定名称）。 否则为 NULL。|  
+|name|**sysname**|包含列的名称（如果可以确定名称）。 否则为 NULL。|  
 |**is_nullable**|**bit**|如果列允许 NULL，则包含值 1；如果列不允许 NULL，则包含 0；如果不能确定列是否允许 NULL，则为 1。|  
 |**system_type_id**|**int**|包含 sys.databases 中指定的列数据类型的 system_type_id。 对于 CLR 类型，即使 system_type_name 列返回 NULL，该列也会返回值 240。|  
 |**system_type_name**|**nvarchar(256)**|包含数据类型名称。 包含为列数据类型指定的参数（例如，length、precision、scale）。 如果数据类型是用户定义的别名类型，则会在此处指定基本系统类型。 如果数据类型是 CLR 用户定义类型，则在此列中返回 NULL。|  
@@ -101,7 +101,7 @@ sys.dm_exec_describe_first_result_set_for_object
   
  下表列出了错误类型及其说明。  
   
-|错误类型|错误类型|说明|  
+|错误类型|错误类型|描述|  
 |-----------------|-----------------|-----------------|  
 |1|MISC|未描述的所有错误。|  
 |2|SYNTAX|在批处理中发生语法错误。|  

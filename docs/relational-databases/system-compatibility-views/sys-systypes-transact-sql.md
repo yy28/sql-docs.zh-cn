@@ -1,5 +1,5 @@
 ---
-title: sys. systypes （Transact-sql） |Microsoft Docs
+title: sys.sys类型（Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,15 +21,15 @@ ms.assetid: 1b0b1d0c-5f7b-470b-bd52-8bfa922d7889
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5533e521ba28c0190a5be57ed7637632213d7447
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 99a970b5be9f28569942b4378c488b710b13cd32
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68018078"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85652335"
 ---
 # <a name="syssystypes-transact-sql"></a>sys.systypes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   为数据库中定义的每种系统提供的数据类型和每种用户定义的数据类型返回一行。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "68018078"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|name |**sysname**|数据类型名称。|  
+|name|**sysname**|数据类型名称。|  
 |**xtype**|**tinyint**|物理存储类型。|  
 |**status**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xusertype**|**smallint**|扩展用户类型。 如果数据类型的数字超过 32,767，则溢出或返回 NULL。|  
@@ -47,11 +47,11 @@ ms.locfileid: "68018078"
 |**xscale**|**tinyint**|服务器使用的内部小数位数。 不在查询中使用。|  
 |**tdefault**|**int**|特定存储过程的 ID，此存储过程包含对该数据类型的完整性检查功能。|  
 |**域名**|**int**|特定存储过程的 ID，此存储过程包含对该数据类型的完整性检查功能。|  
-|**标识号**|**smallint**|所有者类型的架构 ID。<br /><br /> 对于从旧版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升级的数据库，架构 ID 等于所有者的用户 ID。<br /><br /> ** \* \*重要\*提示**如果使用以下[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]任意 DDL 语句，则必须使用 systypes[目录视图](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)而不是**sys.databases**。<br /><br /> ALTER AUTHORIZATION ON TYPE<br /><br /> CREATE TYPE<br /><br /> 如果用户数和角色数超过 32,767，则发生溢出或返回 NULL。|  
+|**uid**|**smallint**|所有者类型的架构 ID。<br /><br /> 对于从旧版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升级的数据库，架构 ID 等于所有者的用户 ID。<br /><br /> ** \* \* 重要 \* 提示 \* **如果使用以下任意 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DDL 语句，则必须使用[sys.databases](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)目录视图，而不是**sys.sys类型**。<br /><br /> ALTER AUTHORIZATION ON TYPE<br /><br /> CREATE TYPE<br /><br /> 如果用户数和角色数超过 32,767，则发生溢出或返回 NULL。|  
 |**保护**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**collationid**|**int**|如果基于字符，则**collationid**是当前数据库的排序规则的 id;否则为 NULL。|  
 |**usertype**|**smallint**|用户类型 ID。 如果数据类型的数字超过 32,767，则溢出或返回 NULL。|  
-|**各种**|**bit**|可变长度数据类型。<br /><br /> 1 = True<br /><br /> 0 = False|  
+|**可变**|**bit**|可变长度数据类型。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |**allownulls**|**bit**|指示此数据类型的默认为空性。 如果使用[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)或[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)指定了可为 null 性，则会重写此默认值。|  
 |**type**|**tinyint**|物理存储数据类型。|  
 |**printfmt**|**varchar(255)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

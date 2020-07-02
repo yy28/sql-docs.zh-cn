@@ -16,21 +16,21 @@ ms.assetid: d70ee72c-6e2a-4bcd-9456-4a697a866361
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c3535360e120e0f9c61a8cfb7cb578e531e92572
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 319453b209f8d7306bee73c4492678e676e05441
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81280150"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85658265"
 ---
 # <a name="isolation-levels-ole-db"></a>隔离级别 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端可以控制连接的事务隔离级别。 若要控制事务隔离级别， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序使用：  
   
 -   DBPROPSET_SESSION [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序默认自动提交模式 DBPROP_SESS_AUTOCOMMITISOLEVELS。  
   
-     级别[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 Native Client OLE DB 提供程序默认为 DBPROPVAL_TI_READCOMMITTED。  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]级别的 Native Client OLE DB 提供程序默认为 DBPROPVAL_TI_READCOMMITTED。  
   
 -   将 ITransactionLocal::StartTransaction 方法的 isoLevel 参数用于本地手动提交事务******。  
   

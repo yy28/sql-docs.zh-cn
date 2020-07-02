@@ -1,5 +1,5 @@
 ---
-title: ConnectionValidSharedMemory dbmslpcn
+title: ConnectionValidSharedMemory dbmslpcn.dll
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.assetid: 6ae35826-7d75-4542-b686-5f79316b6157
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1f3bb097965563afb458b4529676d1e9967e4899
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 43a4bdb3b5e20246fc464d347710fb57f0584f0c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303874"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85657495"
 ---
 # <a name="connectionvalidsharedmemory-function-in-dbmslpcndll-shared-memory"></a>Dbmslpcn.dll 共享内存中的 ConnectionValidSharedMemory 函数
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   函数确定是否已安装并激活 SQL Server 共享内存。  
   
@@ -31,7 +31,7 @@ BOOL ConnectionValidSharedMemory(char * szServerName);
 ## <a name="parameters"></a>参数  
  *szServerName*  
   
--   类型： **char\* **  
+-   类型： **char \* **  
   
 -   SQL server 的名称。  
   

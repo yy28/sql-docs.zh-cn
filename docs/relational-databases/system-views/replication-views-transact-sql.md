@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 93e5056d-0d93-4a48-ba33-72762eb995d8
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ae0c1245bdf9ff7fe1d1eb712745cbc15d2479af
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 01c5c21ef7886773e162fe1f17cbcbaae177075b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807939"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85692665"
 ---
 # <a name="replication-views-transact-sql"></a>复制视图 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   这些视图包含中的复制所使用的信息 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 利用这些视图，可以更方便地访问[复制系统表](../../relational-databases/system-tables/replication-tables-transact-sql.md)中的数据。 将某个用户数据库启用为发布数据库或订阅数据库时，便会在该数据库中创建视图。 从复制拓扑中删除用户数据库时，便会删除该数据库中的所有复制对象。 访问复制元数据的首选方法是使用[复制存储过程](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)。  
   

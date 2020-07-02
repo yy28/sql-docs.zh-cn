@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: ed9e99c2-3e28-4ee8-bc20-61ca05984973
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d75a202b368df339b97a4a9588ad3ac073429c6e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 99512ce28daae39df9484ea554ba81b23d99e05f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659642"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85675107"
 ---
 # <a name="cinstance-class---setdefaults-method"></a>CInstance 类 - SetDefaults 方法
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  设置[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]客户端实例的所有默认值，并提供覆盖现有数据的选项。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+  设置客户端实例的所有默认值， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并提供覆盖现有数据的选项。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,9 +41,9 @@ object.SetDefaults(OverwriteAll)
   
 #### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
-|*OverwriteAll*|指定是否覆盖[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]客户端实例上的现有值的布尔值：如果为**true 则**覆盖现有数据，则为**false** ; 如果不覆盖现有数据，则为 false。|  
+|*OverwriteAll*|指定是否覆盖客户端实例上的现有值的布尔值：如果为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **true 则**覆盖现有数据，则为**false** ; 如果不覆盖现有数据，则为 false。|  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  一个 **uint32** 值，如果服务已成功修改，则为 0；如果不支持请求，则为 1；其他任何数字表示出现错误。  

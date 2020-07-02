@@ -1,5 +1,5 @@
 ---
-title: sys. syscomments （Transact-sql） |Microsoft Docs
+title: sys.sys注释（Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 767dd410-6bc9-4c4a-ab0f-6d2cf6163426
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 183fa2fc1a674ec1cc987c265f5a0d4c399e27cc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a121794c98b41cea7db6357e703a7993d9188699
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68010755"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85663363"
 ---
 # <a name="syssyscomments-transact-sql"></a>sys.syscomments (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   包含数据库中的每个视图、规则、默认值、触发器、CHECK 约束、DEFAULT 约束和存储过程的条目。 **Text**列包含原始 SQL 定义语句。  
   
@@ -43,10 +43,10 @@ ms.locfileid: "68010755"
 |**status**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**ctext**|varbinary(8000)****|SQL 定义语句的原始字节。|  
 |**texttype**|**smallint**|0 = 用户提供的注释<br /><br /> 1 = 系统提供的注释<br /><br /> 4 = 加密的注释|  
-|**语言**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**过**|**bit**|指示过程定义是否已经过模糊处理。<br /><br /> 0 = 未经模糊处理<br /><br /> 1 = 已经模糊处理<br /><br /> ** \* \*重要\*提示**若要对存储过程定义进行模糊处理，请使用带有 ENCRYPTION 关键字的 CREATE PROCEDURE。|  
-|**compressed**|**bit**|始终返回 0。 这表明过程已压缩。|  
-|**text**|**nvarchar(4000)**|SQL 定义语句的实际文本。<br /><br /> 解码后的表达式的语义等同于原始文本，但是没有语法保证。 例如，解码后的表达式中删除了空格。<br /><br /> 此[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]兼容视图从当前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]结构中获取信息，并且可以返回比**nvarchar （4000）** 定义更多的字符。 **sp_help**返回**nvarchar （4000）** 作为文本列的数据类型。 使用**syscomments**时，请考虑使用**nvarchar （max）**。 对于新的开发工作，请勿使用**syscomments**。|  
+|language|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**过**|**bit**|指示过程定义是否已经过模糊处理。<br /><br /> 0 = 未经模糊处理<br /><br /> 1 = 已经模糊处理<br /><br /> ** \* \* 重要 \* 说明 \* **若要对存储过程定义进行模糊处理，请使用带有 ENCRYPTION 关键字的 CREATE procedure。|  
+|**压缩**|**bit**|始终返回 0。 这表明过程已压缩。|  
+|**text**|**nvarchar(4000)**|SQL 定义语句的实际文本。<br /><br /> 解码后的表达式的语义等同于原始文本，但是没有语法保证。 例如，解码后的表达式中删除了空格。<br /><br /> 此 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 兼容视图从当前结构中获取信息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，并且可以返回比**nvarchar （4000）** 定义更多的字符。 **sp_help**返回**nvarchar （4000）** 作为文本列的数据类型。 使用**syscomments**时，请考虑使用**nvarchar （max）**。 对于新的开发工作，请勿使用**syscomments**。|  
   
 ## <a name="see-also"></a>另请参阅  
  [将系统表映射到系统视图 &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   

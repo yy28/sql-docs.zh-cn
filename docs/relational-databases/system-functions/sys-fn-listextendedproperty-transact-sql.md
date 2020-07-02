@@ -26,15 +26,15 @@ ms.assetid: 59bbb91f-a277-4a35-803e-dcb91e847a49
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9a2516d24b65e509ffc04c0f9979721ad6eefa22
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 11249fd563bd892c79edd4f3393c82f34b211684
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68082699"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85652190"
 ---
 # <a name="sysfn_listextendedproperty-transact-sql"></a>sys.fn_listextendedproperty (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   返回数据库对象的扩展属性值。  
  
@@ -56,7 +56,7 @@ fn_listextendedproperty (
   )   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  {默认值 |"*property_name*" |无效  
  属性的名称。 *property_name* **sysname**。 有效输入包括默认值 NULL 或属性名。  
   
@@ -92,7 +92,7 @@ fn_listextendedproperty (
 |objtype|**sysname**|  
 |objname|**sysname**|  
 |name|**sysname**|  
-|value|**sql_variant**|  
+|值|**sql_variant**|  
   
  如果返回的表为空，可能对象没有扩展属性或用户不具有列出对象扩展属性的权限。 当返回数据库本身的扩展属性时，objtype 和 objname 列将为 NULL。  
   
@@ -142,7 +142,7 @@ GO
  `(1 row(s) affected)`  
   
 ### <a name="b-displaying-extended-properties-on-all-columns-in-a-table"></a>B. 显示表中所有列的扩展属性  
- 下面的示例列出了`ScrapReason`表中的列的扩展属性。 这包含在架构 `Production` 中。  
+ 下面的示例列出了表中的列的扩展属性 `ScrapReason` 。 这包含在架构 `Production` 中。  
   
 ```  
 USE AdventureWorks2012;  
@@ -167,7 +167,7 @@ GO
  `(3 row(s) affected)`  
   
 ### <a name="c-displaying-extended-properties-on-all-tables-in-a-schema"></a>C. 显示架构中所有表的扩展属性  
- 下面的示例列出了包含在`Sales`架构中的所有表的扩展属性。  
+ 下面的示例列出了包含在架构中的所有表的扩展属性 `Sales` 。  
   
 ```  
 USE AdventureWorks2012;  

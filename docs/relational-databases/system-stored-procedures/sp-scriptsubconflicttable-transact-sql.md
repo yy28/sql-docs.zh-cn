@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 13867145-3dad-47a4-8d50-a65175418479
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f100fe3fda3bc3d156c093696a21ebcd7afce2a5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 32ff25b25b7bf5fb2056196bc91b558beb353f09
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829968"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85645295"
 ---
 # <a name="sp_scriptsubconflicttable-transact-sql"></a>sp_scriptsubconflicttable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   为给定排队订阅项目生成用于在订阅服务器上创建冲突表的脚本。 生成的脚本在订阅服务器的订阅数据库上执行。 此存储过程在发布服务器上对发布数据库执行。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "82829968"
 sp_scriptsubconflicttable [@publication =] 'publication'    , [@article =] 'article'  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publication = ] 'publication'`包含项目的发布的名称。 名称在数据库中必须是唯一的。 *发布*为**sysname**，无默认值。  
   
 `[ @article = ] 'article'`订阅项目的名称。 *项目*是**sysname**，无默认值。  

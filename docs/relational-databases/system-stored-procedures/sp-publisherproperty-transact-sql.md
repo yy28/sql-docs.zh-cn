@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0ed1ebc1-a1bd-4aed-9f46-615c5cf07827
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cf03396170972cf1e0c44a7a668e3651385579fc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1a4bfcd7d9f03e41e32551653788386612a43835
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820372"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715149"
 ---
 # <a name="sp_publisherproperty-transact-sql"></a>sp_publisherproperty (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   显示或更改非发布服务器的发布服务器属性 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 此存储过程在分发服务器上执行。  
   
@@ -38,7 +38,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
    [ , [ @propertyvalue = ] 'propertyvalue' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publisher = ] 'publisher'`异类发布服务器的名称。 *发布服务器*的**sysname**，无默认值。  
   
 `[ @propertyname = ] 'propertyname'`要设置的属性的名称。 *propertyname*为**sysname**，可以为以下值之一。  

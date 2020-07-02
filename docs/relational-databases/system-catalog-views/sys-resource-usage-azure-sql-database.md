@@ -19,15 +19,15 @@ ms.assetid: b90147a3-fd8e-408e-961d-5c7000e068ad
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 3be4ff07923759af53b929852d4dbaa4088a77f2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ac9473dbdcc51a4c5313b27596ce38d0607d336
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67904424"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85665262"
 ---
 # <a name="sysresource_usage-azure-sql-database"></a>sys.resource_usage (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
     
 > [!IMPORTANT]
@@ -46,7 +46,7 @@ ms.locfileid: "67904424"
 |-------------|---------------|-----------------|  
 |time|**datetime**|时间 (UTC)（以小时增量表示）。|  
 |database_name|**nvarchar**|用户数据库的名称。|  
-|sku|**nvarchar**|SKU 的名称。 下面是可能的值：<br /><br /> Web<br /><br /> Microsoft Store<br /><br /> 基本<br /><br /> Standard<br /><br /> Premium|  
+|sku|**nvarchar**|SKU 的名称。 下面是可能的值：<br /><br /> Web<br /><br /> Microsoft Store<br /><br /> 基本<br /><br /> Standard<br /><br /> 高级|  
 |usage_in_seconds|**int**|该小时内使用的 CPU 时间之和。<br /><br /> 注意：此列不推荐用于 V11，不适用于 V12。 **值始终设置为0。**|  
 |storage_in_megabytes|**decimal**|该小时的最大存储大小，包括数据库数据、索引、存储过程和元数据。|  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b64c1d0d6032ce5032a92c840635fdf0c087e571
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0d9aaa6550c34518c0c153dfa91cf3a5e8b8c0be
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72251952"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85662886"
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   返回 FILESTREAM 二进制大型对象 (BLOB) 路径。 OpenSqlFilestream API 使用此路径返回应用程序可用于通过使用 Win32 Api 处理 BLOB 数据的句柄。 PathName 是只读的。  
   
@@ -45,9 +45,9 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
  如果为任何其他数据类型的列或**varbinary （max）** Columnthat 请求路径名，则不会有 FILESTREAM 存储属性导致查询编译时错误。  
   
  *\@选*  
- 一个整数[表达式](../../t-sql/language-elements/expressions-transact-sql.md)，定义路径的服务器组件应如何进行格式化。 选项可以为下列值之一。 * \@* 默认值为 0。  
+ 一个整数[表达式](../../t-sql/language-elements/expressions-transact-sql.md)，定义路径的服务器组件应如何进行格式化。 * \@ 选项*可以为下列值之一。 默认值为 0。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |0|返回转换为 BIOS 格式的服务器名称，例如：`\\SERVERNAME\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
 |1|返回未经转换的服务器名称，例如：`\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
@@ -60,7 +60,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
  当数据库属于 Always On 可用性组时， *use_replica_computer_name*的值对**PathName**函数的输出具有以下影响：  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |未指定。|函数返回路径中的虚拟网络名称 (VNN)。|  
 |0|函数返回路径中的虚拟网络名称 (VNN)。|  

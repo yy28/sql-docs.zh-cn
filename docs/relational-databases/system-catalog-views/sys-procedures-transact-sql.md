@@ -20,21 +20,21 @@ ms.assetid: d17af274-b2dd-464e-9523-ee1f43e1455b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 894bcc1a5dc6400fe6e13ae66b63af6cec4cb128
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5e6d1842989766c0cf77f141a62ebb6e146281f3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831433"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85678304"
 ---
 # <a name="sysprocedures-transact-sql"></a>sys.procedures (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   对于作为某种过程的每个对象，都包含一个对应的行，其中，**类型**= P，X，RF，PC。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**\<继承自 sys.databases 的列>**||有关此视图所继承的列的列表，请参阅[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)|  
+|**\<Columns inherited from sys.objects>**||有关此视图所继承的列的列表，请参阅[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)|  
 |**is_auto_executed**|**bit**|1 = 在服务器启动时自动执行过程；否则为 0。 只能为 master 数据库中的过程设置此值。|  
 |**is_execution_replicated**|**bit**|复制此过程的执行。|  
 |**is_repl_serializable_only**|**bit**|仅当事务可序列化时才复制过程执行。|  

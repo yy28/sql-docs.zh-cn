@@ -19,28 +19,28 @@ helpviewer_keywords:
 ms.assetid: c2c4a000-1127-46a8-b1e9-947fd1136e1e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 67f25c6f4d39eb8cbd3b09d2e7710462f91ed397
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 727943423817c51b646ed151c79d7fdfc255d8b6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821555"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85664947"
 ---
 # <a name="sysserver_audits-transact-sql"></a>sys.server_audits (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   服务器实例中每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 审核都各占一行。 有关详细信息，请参阅 [SQL Server Audit（数据库引擎）](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**audit_id**|**int**|审核的 ID。|  
-|**name**|**sysname**|审核的名称。|  
+|name|**sysname**|审核的名称。|  
 |**audit_guid**|**uniqueidentifier**|用于在服务器启动和数据库附加操作期间使用成员服务器枚举审核&#124;数据库审核规范的审核的 GUID。|  
-|**create_date**|**datetime**|创建审核的 UTC 日期。|  
-|**modify_date**|**datetime**|上次修改审核的 UTC 日期。|  
-|**principal_id**|**int**|向服务器注册的审核所有者的 ID。|  
-|type |**char(2)**|审核类型：<br /><br /> SL-NT 安全事件日志<br /><br /> AL-NT 应用程序事件日志<br /><br /> 文件系统上的 FL 文件|  
-|**type_desc**|**nvarchar(60)**|SECURITY LOG<br /><br /> APPICATION LOG<br /><br /> FILE|  
+|create_date|**datetime**|创建审核的 UTC 日期。|  
+|modify_date|**datetime**|上次修改审核的 UTC 日期。|  
+|principal_id|**int**|向服务器注册的审核所有者的 ID。|  
+|type|**char(2)**|审核类型：<br /><br /> SL-NT 安全事件日志<br /><br /> AL-NT 应用程序事件日志<br /><br /> 文件系统上的 FL 文件|  
+|**type_desc**|**nvarchar(60)**|SECURITY LOG<br /><br /> APPICATION LOG<br /><br /> 文件|  
 |**on_failure**|**tinyint**|失败时要写入的操作项：<br /><br /> 0-继续<br /><br /> 1-关闭服务器实例<br /><br /> 2-失败操作|  
 |**on_failure_desc**|**nvarchar(60)**|失败时要写入的操作项：<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL_OPERATION|  
 |**is_state_enabled**|**tinyint**|0-已禁用<br /><br /> 1 - 启用|  

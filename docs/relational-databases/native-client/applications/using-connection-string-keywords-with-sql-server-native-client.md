@@ -18,15 +18,15 @@ ms.assetid: 16008eec-eddf-4d10-ae99-29db26ed6372
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 22451834b173d15db99a48e03f44156c6bb58d8c
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: 4d214cd21d5e94097164a8b5ede9252a59c552f4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84949506"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85656996"
 ---
 # <a name="using-connection-string-keywords-with-sql-server-native-client"></a>将连接字符串关键字用于 SQL Server Native Client
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   某些 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client API 使用连接字符串来指定连接属性。 连接字符串是关键字和关联的值的列表；每个关键字标识特定的连接属性。  
 
@@ -67,7 +67,7 @@ ms.locfileid: "84949506"
 |**ApplicationIntent**|连接到服务器时声明应用程序工作负荷类型。 可能的值为 ReadOnly 和 ReadWrite   。 默认值为 ReadWrite  。  例如：<br /><br /> `ApplicationIntent=ReadOnly`<br /><br /> 有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 对的支持的详细信息 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ，请参阅[对高可用性和灾难恢复的 SQL Server Native Client 支持](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。|  
 |**AttachDBFileName**|可附加数据库的主文件的名称。 如果使用 C 字符串变量，请包括完整路径，并将所有 \ 字符转义：<br /><br /> `AttachDBFileName=c:\\MyFolder\\MyDB.mdf`<br /><br /> 附加此数据库并使其成为连接的默认数据库。 若要使用**AttachDBFileName** ，还必须在[SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md)数据库参数或 SQL_COPT_CURRENT_CATALOG 连接属性中指定数据库名称。 如果该数据库以前已经附加，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不重新附加它；而是使用已附加的数据库作为连接的默认数据库。|  
 |**AutoTranslate**|如果是“yes”，则客户端和服务器之间发送的 ANSI 字符串将通过 Unicode 进行转换，以使在客户端与服务器的代码页之间匹配扩展字符的问题最小化。<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]使用客户端 ANSI 代码页（ACP）将发送到**CHAR**、 **varchar**或**text**变量、参数或列的客户端 SQL_C_CHAR 数据从字符转换为 unicode，然后使用服务器的 ACP 将其从 Unicode 转换为字符。<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]使用服务器 ACP 将发送到客户端 SQL_C_CHAR 变量的**char**、 **varchar**或**text**数据从字符转换为 UNICODE，然后使用客户端 ACP 将 unicode 转换为字符。<br /><br /> 这些转换由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序在客户端上执行。 这要求在服务器上使用的相同 ANSI 代码页 (ACP) 在客户端上可用。<br /><br /> 这些设置对于为下面这些传输而发生的转换无效：<br /><br /> \*Unicode SQL_C_WCHAR 发送到服务器上的**char**、 **varchar**或**text**的客户端数据。<br /><br /> 发送到客户端上的 Unicode SQL_C_WCHAR 变量 &#42; **char**、 **varchar**或**text** server 数据。<br /><br /> \*ANSI SQL_C_CHAR 发送到服务器上的 Unicode **nchar**、 **nvarchar**或**ntext**的客户端数据。<br /><br /> \*发送到客户端上的 ANSI SQL_C_CHAR 变量的 Unicode **nchar**、 **nvarchar**或**ntext**服务器数据。<br /><br /> 如果是“no”，则不执行字符转换。<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驱动程序不会将客户端 ANSI 字符转换 SQL_C_CHAR 发送到服务器上的**CHAR**、 **varchar**或**text**变量、参数或列的数据。 不会对从服务器发送到客户端上的 SQL_C_CHAR 变量的**char**、 **varchar**或**text**数据执行转换。<br /><br /> 如果客户端和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 正在使用不同的 ACP，则扩展字符可能被错误解释。|  
-|**Database**|连接的默认 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库的名称。 如果未指定**数据库**，则使用为登录名定义的默认数据库。 来自 ODBC 数据源的默认数据库将覆盖为登录定义的默认数据库。 除非还指定了**AttachDBFileName** ，否则数据库必须是现有的数据库。 如果还指定了**AttachDBFileName** ，则会附加该文件指向的主文件，并为**数据库**指定数据库名称。|  
+|**数据库**|连接的默认 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库的名称。 如果未指定**数据库**，则使用为登录名定义的默认数据库。 来自 ODBC 数据源的默认数据库将覆盖为登录定义的默认数据库。 除非还指定了**AttachDBFileName** ，否则数据库必须是现有的数据库。 如果还指定了**AttachDBFileName** ，则会附加该文件指向的主文件，并为**数据库**指定数据库名称。|  
 |**驱动程序**|[SQLDrivers](../../../relational-databases/native-client-odbc-api/sqldrivers.md)返回的驱动程序的名称。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序的关键字值是“{SQL Server Native Client 11.0}”。 如果指定**Driver**并且**DriverCompletion**设置为 SQL_DRIVER_NOPROMPT，则需要**Server**关键字。<br /><br /> 有关驱动程序名称的详细信息，请参阅[使用 SQL Server Native Client 的标头和库文件](../../../relational-databases/native-client/applications/using-the-sql-server-native-client-header-and-library-files.md)。|  
 |**DSN**|现有 ODBC 用户或系统数据源的名称。 此关键字将覆盖可能在**服务器**、**网络**和**地址**关键字中指定的任何值。|  
 |**Encrypt**|指定在通过网络发送数据之前是否应当将其加密。 可能的值为“yes”和“no”。 默认值为“no”。|  
@@ -277,7 +277,7 @@ ms.locfileid: "84949506"
   
  **注意**：在连接字符串中，“旧密码”属性会设置 SSPROP_AUTH_OLD_PASSWORD，它是当前密码（可能已过期），通过访问接口字符串属性无法获取该密码。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 SQL Server Native Client 生成应用程序](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 3f0defd0-478d-4e7f-96be-8795c9de4e3f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ed3638e3c8811235778ab2362700c9e08bf08ca5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5bec144cae5726ce8c4d5ff7af8998a41232b5a7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82811374"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85676335"
 ---
 # <a name="sysdm_server_services-transact-sql"></a>sys.dm_server_services (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   返回有关当前实例中的 SQL Server、全文 SQL Server Launchpad 服务（SQL Server 2017 +）和 SQL Server 代理服务的信息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 使用此动态管理视图可以报告有关这些服务的状态信息。  
   

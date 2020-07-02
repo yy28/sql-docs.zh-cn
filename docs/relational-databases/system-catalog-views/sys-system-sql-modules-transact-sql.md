@@ -1,5 +1,5 @@
 ---
-title: sys. system_sql_modules （Transact-sql） |Microsoft Docs
+title: sys.system_sql_modules （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,23 +20,23 @@ ms.assetid: ad3548bc-4780-4821-b962-b421d52daed9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dd6f6d995fd1bbf4378525c2e767e0ce05bd908a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0462b231ee46a7e4ccce3bb498c6271d450c5e26
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821332"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85664324"
 ---
 # <a name="syssystem_sql_modules-transact-sql"></a>sys.system_sql_modules (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  为每个包含 SQL 语言定义模块的系统对象返回一行。 类型为 FN、IF、P、PC、TF 和 V 的系统对象具有关联的 SQL 模块。 若要标识包含对象，可以将此视图加入到[sys.databases system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)。  
+  为每个包含 SQL 语言定义模块的系统对象返回一行。 类型为 FN、IF、P、PC、TF 和 V 的系统对象具有关联的 SQL 模块。 若要标识包含对象，可以将此视图加入到[sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|该包含对象的对象标识号，在数据库中是唯一的。|  
+|object_id|**int**|该包含对象的对象标识号，在数据库中是唯一的。|  
 |**definition**|**nvarchar(max)**|定义此模块的 SQL 文本。|  
-|**uses_ansi_nulls**|**bit**|1 = 创建模块时 SET ANSI_NULLS 数据库选项的设置为 ON。<br /><br /> 始终返回1。|  
+|uses_ansi_nulls|**bit**|1 = 创建模块时 SET ANSI_NULLS 数据库选项的设置为 ON。<br /><br /> 始终返回1。|  
 |**uses_quoted_identifier**|**bit**|1 = 创建模块时 SET QUOTED_IDENTIFIER 选项的设置为 ON。<br /><br /> 始终返回1。|  
 |**is_schema_bound**|**bit**|0 = 创建模块时未使用 SCHEMABINDING 选项。<br /><br /> 始终返回 0。|  
 |**uses_database_collation**|**bit**|0 = 模块不依赖于数据库的默认排序规则。<br /><br /> 始终返回 0。|  

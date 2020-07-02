@@ -19,15 +19,15 @@ ms.assetid: 5001e9fd-555c-4332-a57d-4d29a537454a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7ad40cdae904b198abc3ad0b17454b4cb58d72ed
-ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
+ms.openlocfilehash: 19da10f24c26a0f7ebbe42c0fd6d3ed8b28a7ee4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84215890"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85650056"
 ---
 # <a name="sqlxml-40-data-access-components---sqlxmloledb-provider"></a>SQLXML 4.0 数据访问组件 - SQLXMLOLEDB 提供程序
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 包含的三个数据访问接口可以将 XML 数据插入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的数据库中，还可以从中检索 XML 数据：  
   
 -   SQLXMLOLEDB 访问接口  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: db80f152-e8af-4303-95b6-3a3a7b664374
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 07bc4084e96a6164fe6f057d49593499c4f69f44
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4a902cc7ad691da5159dc3308aa69045fdc2f169
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830244"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85692694"
 ---
 # <a name="sp_denylogin-transact-sql"></a>sp_denylogin (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   防止 Windows 用户或 Windows 组连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "82830244"
 sp_denylogin [ @loginame = ] 'login'   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @loginame = ] 'login_ '`Windows 用户或组的名称。 *login*的**sysname**为，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
