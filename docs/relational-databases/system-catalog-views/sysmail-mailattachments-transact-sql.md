@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: aee87059-a4c1-459a-a95c-641b4e3f0e73
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ab020c70d1d1062f507bbb745f2e5f00d9faba6a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2d5a9063447752406a2898f6d72ea6e43ff316ba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824869"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733386"
 ---
 # <a name="sysmail_mailattachments-transact-sql"></a>sysmail_mailattachments (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   提交到数据库邮件的每个附件都在视图中占一行。 如果需要有关数据库附件的信息，则请使用该视图。 若要查看处理的所有电子邮件数据库邮件使用[sysmail_allitems &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "82824869"
 |-----------------|---------------|-----------------|  
 |**attachment_id**|**int**|附件的标识符。|  
 |**mailitem_id**|**int**|包含附件的邮件项的标识符。|  
-|**名字**|**nvarchar （520）**|附件的文件名。 如果**attach_query_result**为1且**query_attachment_filename**为 NULL，数据库邮件将创建任意文件名。|  
+|**filename**|**nvarchar （520）**|附件的文件名。 如果**attach_query_result**为1且**query_attachment_filename**为 NULL，数据库邮件将创建任意文件名。|  
 |**filesize**|**int**|附件的大小（字节）。|  
 |**接触**|**varbinary(max)**|附件的内容。|  
 |**last_mod_date**|**datetime**|上次修改行的日期和时间。|  

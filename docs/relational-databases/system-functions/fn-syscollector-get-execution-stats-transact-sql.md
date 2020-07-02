@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 793ad72c-a992-4a8d-8584-bcb6b3b476f1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 71a070de7c74d353be395628566c0bd3f63fd99a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dad75f84dd7696364528fe215bcf2665d78562c0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68042741"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734390"
 ---
 # <a name="fn_syscollector_get_execution_stats-transact-sql"></a>fn_syscollector_get_execution_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   返回有关收集组或包的详细统计信息，包括包数据流任务记录的错误行数。 数据流任务是处理数据的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 组件。 该数据采用关系格式，因此它具有由行组成的输入和输出数据集。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68042741"
 fn_syscollector_get_execution_stats ( log_id )  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *log_id*  
  执行日志的本地唯一标识符。 *log_id*是**int**。  
   
@@ -48,7 +48,7 @@ fn_syscollector_get_execution_stats ( log_id )
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|avg_row_count_in|**int**|进入包的数据流任务的平均行数。<br /><br /> 注意：数据流任务是处理数据的[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]组件。 该数据采用关系格式，因此它具有由行组成的输入数据集。 这是进入该任务的行数。 数据在转换后成为由行组成的结果集输出。 数据流任务将转换数据并输出由行组成的结果集。 该输出是退出任务的行数。|  
+|avg_row_count_in|**int**|进入包的数据流任务的平均行数。<br /><br /> 注意：数据流任务是 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 处理数据的组件。 该数据采用关系格式，因此它具有由行组成的输入数据集。 这是进入该任务的行数。 数据在转换后成为由行组成的结果集输出。 数据流任务将转换数据并输出由行组成的结果集。 该输出是退出任务的行数。|  
 |min_row_count_in|**int**|进入包的数据流任务的最少行数。|  
 |max_row_count_in|**int**|进入包的数据流任务的最大行数。|  
 |avg_row_count_out|**int**|退出包的数据流任务的平均行数。|  

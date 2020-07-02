@@ -18,27 +18,27 @@ helpviewer_keywords:
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1c3e0e4f48037f471ad260f709879ea7ce8ff5e8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7ffabc2f8bb48b006ec1224a3ae81ac49d6c21f0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829436"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734790"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   针对计划句柄所指定计划的每个计划属性返回一行。 可以使用此表值函数获取有关特定计划的详细信息，例如计划的缓存键值或当前同步执行次数。  
   
 > [!NOTE]  
->  通过此函数返回的某些信息会映射到[sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md)后向兼容性视图。
+>  通过此函数返回的某些信息映射到[sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md)后向兼容性视图。
 
 ## <a name="syntax"></a>语法  
 ```  
 sys.dm_exec_plan_attributes ( plan_handle )  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *plan_handle*  
  用于唯一标识已执行并且其计划驻留在计划缓存中的批处理的查询计划。 *plan_handle*为**varbinary （64）**。 可以从[sys.databases dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)动态管理视图获取计划句柄。  
   
@@ -46,20 +46,20 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|attribute|**varchar（128**|与此计划关联的属性的名称。 紧靠此的下表列出了可能的属性、数据类型及其说明。|  
-|value|**sql_variant**|与此计划关联的属性的值。|  
+|attribute|**varchar(128)**|与此计划关联的属性的名称。 紧靠此的下表列出了可能的属性、数据类型及其说明。|  
+|值|**sql_variant**|与此计划关联的属性的值。|  
 |is_cache_key|**bit**|指示此属性是否用作计划的缓存查找密钥的一部分。|  
 
 在上表中，**属性**可具有以下值：
 
-|属性|数据类型|说明|  
+|特性|数据类型|说明|  
 |---------------|---------------|-----------------|  
 |set_options|**int**|指示编译计划所使用的选项值。|  
 |objectid|**int**|用于在缓存中查找对象的主键之一。 这是存储在数据库对象（过程、视图、触发器等）的[sys.databases](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)中的对象 ID。 对于类型为“即席”或“已准备好”的计划，它是批处理文本的内部哈希。|  
 |dbid|**int**|是包含计划引用的实体的数据库 ID。<br /><br /> 对于即席计划或已准备好的计划，它是执行批处理的数据库 ID。|  
 |dbid_execute|**int**|对于存储在**资源**数据库中的系统对象，为从中执行缓存计划的数据库 ID。 对于所有其他情况，均为 0。|  
 |user_id|**int**|值 -2 指示已提交的批处理不依赖于隐式名称解析并可在不同的用户间共享。 这是首选方法。 任何其他值表示数据库中提交查询的用户的用户 ID。| 
-|language_id|**smallint**|创建缓存对象的连接的语言 ID。 有关详细信息，请参阅[sys.syslanguages &#40;transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)。|  
+|language_id|**smallint**|创建缓存对象的连接的语言 ID。 有关详细信息，请参阅[&#40;transact-sql&#41;sys.sys语言](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)。|  
 |date_format|**smallint**|创建缓存对象的连接的日期格式。 有关详细信息，请参阅 [SET DATEFORMAT (Transact-SQL)](../../t-sql/statements/set-dateformat-transact-sql.md).|  
 |date_first|**tinyint**|第一个日期值。 有关详细信息，请参阅 [SET DATEFIRST (Transact-SQL)](../../t-sql/statements/set-datefirst-transact-sql.md).|  
 |状态|**int**|缓存查找密钥中的内部状态位。|  
@@ -113,7 +113,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |UPON<br /><br /> 指示编译计划时数据库选项 PARAMETERIZATION 设置为 FORCED。|131072|  
 |ROWCOUNT|**适用于：** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]自[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 262144|  
   
-## <a name="cursors"></a>游标  
+## <a name="cursors"></a>光标  
  不活动游标缓存在编译的计划中，以便游标的并发用户可以重用存储游标所使用的内存。 例如，假设某批处理声明并使用了一个游标，但未释放该游标。 如果有两个用户执行同一个批处理，将有两个活动游标。 游标释放（可能在不同批处理中）后，用于存储该游标的内存就会缓存但不释放。 此不活动游标列表保存在编译的计划中。 下次用户执行该批处理时，缓存的游标内存将重用并相应地初始化为活动游标。  
   
 ### <a name="evaluating-cursor-options"></a>计算游标选项  

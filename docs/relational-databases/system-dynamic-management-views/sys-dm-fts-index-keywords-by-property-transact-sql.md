@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: fa41e052-a79a-4194-9b1a-2885f7828500
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 82f433d18ff0940c9283f93cfa5e3f87179d31ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cffa7327162b4ae333719ad0e50c02002d0a4528
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078555"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734546"
 ---
 # <a name="sysdm_fts_index_keywords_by_property-transact-sql"></a>sys.dm_fts_index_keywords_by_property (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   在给定表的全文索引中返回与属性相关的所有内容。 其中包括属于与全文索引关联的搜索属性列表注册的任何属性的所有数据。  
   
@@ -57,7 +57,7 @@ OBJECT_ID('table_name')
 )  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  db_id （"*database_name*"）  
  对[DB_ID （）](../../t-sql/functions/db-id-transact-sql.md)函数的调用。 此函数接受数据库名称并返回数据库 ID，该 ID 是 dm_fts_index_keywords_by_property 使用来查找指定的数据库。 如果省略 database_name，则返回当前数据库 ID**。  
   
@@ -85,7 +85,7 @@ OBJECT_ID('table_name')
   
  如果全文键列是建议的整数数据类型，则 document_id 直接映射到基表中的全文键值。  
   
- 相反，如果全文键列使用非整数数据类型，document_id 并不表示基表中的全文键。 在这种情况下，若要标识 dm_fts_index_keywords_by_property 返回的基表中的行，需要使用[sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)返回的结果来联接此视图。 在联接它们之前，您必须将存储过程的输出存储在临时表中。 然后，可以使用此存储过程返回的 DocId 列联接 dm_fts_index_keywords_by_property 的 document_id 列。 请注意，**时间戳**列无法在插入时接收值，因为它们是由自动生成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的。 因此， **timestamp**列必须转换为**varbinary （8）** 列。 下面的示例说明了这些步骤。 在此示例中， *table_id*是表的 id， *database_name*是数据库的名称， *table_name*是表的名称。  
+ 相反，如果全文键列使用非整数数据类型，document_id 并不表示基表中的全文键。 在这种情况下，若要标识 dm_fts_index_keywords_by_property 返回的基表中的行，需要使用[sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)返回的结果来联接此视图。 在联接它们之前，您必须将存储过程的输出存储在临时表中。 然后，可以使用此存储过程返回的 DocId 列联接 dm_fts_index_keywords_by_property 的 document_id 列。 请注意，**时间戳**列无法在插入时接收值，因为它们是由自动生成的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 因此， **timestamp**列必须转换为**varbinary （8）** 列。 下面的示例说明了这些步骤。 在此示例中， *table_id*是表的 id， *database_name*是数据库的名称， *table_name*是表的名称。  
   
 ```  
 USE database_name;  
@@ -109,7 +109,7 @@ GO
  要求具有全文索引涵盖的列的 SELECT 权限以及 CREATE FULLTEXT CATALOG 权限。  
   
 ## <a name="examples"></a>示例  
- 以下示例从 `Author` 示例数据库的 `Production.Document` 表的全文索引中的 `AdventureWorks` 属性中返回关键字。 该示例使用由 sys.databases `KWBPOP`返回的表的别名 **。 dm_fts_index_keywords_by_property**。 该示例使用内部联接来合并[sys.databases registered_search_properties](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)和[fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)中的列。  
+ 以下示例从 `Author` 示例数据库的 `Production.Document` 表的全文索引中的 `AdventureWorks` 属性中返回关键字。 该示例使用 `KWBPOP` 由 sys.databases 返回的表的别名 **。 dm_fts_index_keywords_by_property**。 该示例使用内部联接来合并[sys.databases registered_search_properties](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)和[fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)中的列。  
   
 ```  
 -- Once the full-text index is configured to support property searching  

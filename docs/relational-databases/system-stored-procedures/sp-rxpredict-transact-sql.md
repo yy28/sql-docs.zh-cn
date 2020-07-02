@@ -4,7 +4,7 @@ ms.date: 03/31/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.topic: language-reference
 f1_keywords:
 - sp_rxPredict
@@ -16,19 +16,19 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9663b4cd51a7aca9e9e30ccafcdcb0652ec4229a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b3f6ee7c1f0b1dc1ccbcd4db260621dc5bda3168
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488527"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750461"
 ---
 # <a name="sp_rxpredict"></a>sp_rxPredict  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly.md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 为给定输入生成预测值，该输入包含以二进制格式存储在 SQL Server 数据库中的机器学习模型。
 
-以近乎实时的速度对 R 和 Python 机器学习模型进行评分。 `sp_rxPredict``rxPredict`作为[RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)和[MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)中 R 函数的包装提供的存储过程，以及[revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package)和[MicrosoftML](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)中的[rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) Python 函数。 它是用 c + + 编写的，专门针对计分操作进行了优化。
+以近乎实时的速度对 R 和 Python 机器学习模型进行评分。 `sp_rxPredict`作为 `rxPredict` [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)和[MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)中 R 函数的包装提供的存储过程，以及[revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package)和[MicrosoftML](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)中的[rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) Python 函数。 它是用 c + + 编写的，专门针对计分操作进行了优化。
 
 尽管必须使用 R 或 Python 来创建模型，但在目标数据库引擎实例上以二进制格式对其进行序列化并存储后，即使未安装 R 或 Python 集成，也可以从该数据库引擎实例中使用该模型。 有关详细信息，请参阅[sp_rxPredict 的实时评分](https://docs.microsoft.com/sql/machine-learning/real-time-scoring)。
 
@@ -38,9 +38,9 @@ ms.locfileid: "81488527"
 sp_rxPredict  ( @model, @input )
 ```
 
-### <a name="arguments"></a>参数
+### <a name="arguments"></a>自变量
 
-**模型**
+**model**
 
 支持格式的预先训练模型。 
 
@@ -60,7 +60,7 @@ sp_rxPredict  ( @model, @input )
 > [!NOTE]
 > Enabing 此选项有安全隐患。 如果无法在服务器上启用 SQLCLR，请使用其他实现，如[TRANSACT-SQL 预测](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql?view=sql-server-2017)函数。
 
-用户需要`EXECUTE`对数据库的权限。
+用户需要 `EXECUTE` 对数据库的权限。
 
 ### <a name="supported-algorithms"></a>支持的算法
 
@@ -87,7 +87,7 @@ sp_rxPredict  ( @model, @input )
 
   + [featurizeText](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
   + [concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat)
-  + [分类](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical)
+  + [categorical](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical)
   + [categoricalHash](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categoricalHash)
   + [selectFeatures](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/selectFeatures)
 
@@ -113,14 +113,14 @@ sp_rxPredict  ( @model, @input )
 
   + [featurize_text](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-trees)
   + [concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat)
-  + [分类](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical)
+  + [categorical](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical)
   + [categorical_hash](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical-hash)
   
 ### <a name="unsupported-model-types"></a>不支持的模型类型
 
 以下模型类型不受支持：
 
-+ 在 RevoScaleR 中`rxGlm`使用`rxNaiveBayes`或算法的模型
++ `rxGlm` `rxNaiveBayes` 在 RevoScaleR 中使用或算法的模型
 + R 中的 PMML 模型
 + 使用其他第三方库创建的模型 
 
@@ -135,7 +135,7 @@ EXEC sp_rxPredict @model = @model,
 @inputData = N'SELECT * FROM data';
 ```
 
-除了是有效的 SQL 查询外， * \@inputData*中的输入数据还必须包含与存储模型中的列兼容的列。
+除了是有效的 SQL 查询外， * \@ inputData*中的输入数据还必须包含与存储模型中的列兼容的列。
 
 `sp_rxPredict`仅支持以下 .NET 列类型： double、float、short、ushort、long、ulong 和 string。 你可能需要在输入数据中筛选掉不受支持的类型，然后将其用于实时计分。 
 

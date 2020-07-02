@@ -18,15 +18,15 @@ ms.assetid: 33666f28-c370-47e2-a932-190316ed5f69
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 280ab197ef9347c6a209be7ef05e8f1ce2dfd23e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea4f2fbd33bf3eb1e9e6a2e2b079ef78796f6f61
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900876"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738638"
 ---
 # <a name="sysdm_fts_semantic_similarity_population-transact-sql"></a>sys.dm_fts_semantic_similarity_population (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   为关联有语义索引的每个表中的每个相似性索引返回一行关于文档相似性索引填充状态的信息。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "67900876"
     
 ||||  
 |-|-|-|  
-|**列名**|**类型**|**说明**|  
+|**列名**|类型|**说明**|  
 |**database_id**|**int**|包含正在填充的全文索引的数据库 ID。|  
 |**catalog_id**|**int**|包含此全文索引的全文目录的 ID。|  
 |table_id****|**int**|其全文索引正在被填充的表的 ID。|  
@@ -43,7 +43,7 @@ ms.locfileid: "67900876"
 |**completion_type**|**int**|有关填充完成的状态。|  
 |**completion_type_description**|**nvarchar(120)**|完成类型的说明。|  
 |**worker_count**|**int**|与相似性提取关联的工作线程数|  
-|**status**|**int**|此填充的状态。 说明：某些状态是暂时的。 下列类型作之一：<br /><br /> 3 = 正在启动<br /><br /> 5 = 正常处理<br /><br /> 7 = 已停止处理<br /><br /> 11 = 已中止填充|  
+|**status**|**int**|此填充的状态。 说明：某些状态是暂时的。 下列情况之一：<br /><br /> 3 = 正在启动<br /><br /> 5 = 正常处理<br /><br /> 7 = 已停止处理<br /><br /> 11 = 已中止填充|  
 |**status_description**|**nvarchar(120)**|对填充状态的说明。|  
 |**start_time**|**datetime**|填充开始的时间。|  
 |**incremental_timestamp**|**timestamp**|表示完全填充的开始时间戳。 对于所有其他填充类型，该值是表示填充进度的上次提交的检查点。|  

@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: d18019dd-f8dc-4492-b035-b1a639369b65
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bace0824a7c8411e267186c3e9919ba2eb4be15c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 51f6125602813dda2fdc8dbddceaa93ccc5edea2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82811975"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738631"
 ---
 # <a name="sysdm_hadr_availability_group_states-transact-sql"></a>sys.dm_hadr_availability_group_states (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   为在本地实例上拥有可用性副本的每个 Always On 可用性组返回一行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 每行显示定义给定可用性组的运行状况的状态。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "82811975"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**group_id**|**uniqueidentifier**|可用性组的唯一标识符。|  
-|**primary_replica**|**varchar（128**|正在承载当前主副本的服务器实例的名称。<br /><br /> NULL = 不是主副本或无法与 WSFC 故障转移群集通信。|  
+|**primary_replica**|**varchar(128)**|正在承载当前主副本的服务器实例的名称。<br /><br /> NULL = 不是主副本或无法与 WSFC 故障转移群集通信。|  
 |**primary_recovery_health**|**tinyint**|指示主副本的恢复状况，可为下列值之一：<br /><br /> 0 = 正在进行<br /><br /> 1 = 联机<br /><br /> Null<br /><br /> 在辅助副本上， **primary_recovery_health**列为 NULL。|  
 |**primary_recovery_health_desc**|**nvarchar(60)**|**Primary_replica_health**的说明，请执行以下操作之一：<br /><br /> ONLINE_IN_PROGRESS<br /><br /> ONLINE<br /><br /> Null|  
 |**secondary_recovery_health**|**tinyint**|指示辅助副本副本的恢复运行状况，其中之一如下：<br /><br /> 0 = 正在进行<br /><br /> 1 = 联机<br /><br /> Null<br /><br /> 在主副本上， **secondary_recovery_health**列是 NULL。|  

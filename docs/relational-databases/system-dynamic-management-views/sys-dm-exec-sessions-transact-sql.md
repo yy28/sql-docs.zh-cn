@@ -20,19 +20,19 @@ ms.assetid: 2b7e8e0c-eea0-431e-819f-8ccd12ec8cfa
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0ce44d14573000e9880fb1daf3a1ddb42746ee85
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: eff5e947caed2471d63c980418688f6945c78b21
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151966"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734676"
 ---
 # <a name="sysdm_exec_sessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中每个经过身份验证的会话都返回一行。 sys.dm_exec_sessions 是服务器范围的视图，显示了有关所有活动用户连接和内部任务的信息。 此信息包含客户端版本、客户端程序名称、客户端登录时间、登录用户、当前会话设置等。 使用 sys.dm_exec_sessions，首先可以查看当前的系统负荷并标识相关会话，然后可以通过其他动态管理视图或动态管理函数了解有关该会话的详细信息。  
   
- Sys. dm_exec_connections、dm_exec_sessions 和 sys.databases dm_exec_requests 动态管理视图映射到[sysprocesses](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)系统表。  
+ Sys. dm_exec_connections、dm_exec_sessions 和 sys.databases dm_exec_requests 动态管理视图映射到[sys.sys进程](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)系统表。  
   
 > **注意：** 若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称**dm_pdw_nodes_exec_sessions**。  
   

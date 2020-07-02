@@ -18,15 +18,15 @@ ms.assetid: b023103f-ccf3-44e2-b418-4be9bdd49f4a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 674da069c1c47c9e577327e9482add64353de881
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fc4cb9acc25255988d46e4e4bb5a922eb23a98fb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832600"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749303"
 ---
 # <a name="sp_helprole-transact-sql"></a>sp_helprole (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   返回当前数据库中有关角色的信息。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "82832600"
 sp_helprole [ [ @rolename = ] 'role' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @rolename = ] 'role'`当前数据库中的角色的名称。 *role*的值为**sysname**，默认值为 NULL。 *角色*必须存在于当前数据库中。 如果未指定*role* ，则返回当前数据库中所有角色的相关信息。  
   
 ## <a name="return-code-values"></a>返回代码值  

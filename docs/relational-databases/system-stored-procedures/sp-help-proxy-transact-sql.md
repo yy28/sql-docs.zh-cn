@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c091872c7e79a45fd6fb135d20c0910f9cd0158d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e9c59c6347317d193eafe43c511c0ece3831e29c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828402"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750531"
 ---
 # <a name="sp_help_proxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   列出一个或多个代理的信息。  
   
@@ -42,7 +42,7 @@ sp_help_proxy
     [ @name = ] 'name'  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @proxy_id = ] id`要列出其信息的代理的代理标识号。 *Proxy_id*的值为**int**，默认值为 NULL。 可以指定*id*或*proxy_name* 。  
   
 `[ @proxy_name = ] 'proxy_name'`要列出其信息的代理的名称。 *Proxy_name*的值为**sysname**，默认值为 NULL。 可以指定*id*或*proxy_name* 。  
@@ -57,7 +57,7 @@ sp_help_proxy
 |CmdExec|操作系统 (CmdExec)|  
 |快照|复制快照代理|  
 |LogReader|复制日志读取器代理|  
-|分发|复制分发代理|  
+|分布|复制分发代理|  
 |合并|Replication Merge Agent|  
 |QueueReader|复制队列读取器代理|  
 |ANALYSISQUERY|Analysis Services 命令|  
@@ -75,7 +75,7 @@ sp_help_proxy
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**proxy_id**|**int**|代理服务器标识号。|  
-|**name**|**sysname**|代理服务器的名称。|  
+|name|**sysname**|代理服务器的名称。|  
 |**credential_identity**|**sysname**|与代理关联的凭据的 Microsoft Windows 域名和用户名。|  
 |**能够**|**tinyint**|是否启用了此代理。 { **0** = 未启用， **1** = 已启用}|  
 |**2008**|**nvarchar(1024)**|对此代理的说明。|  

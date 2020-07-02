@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 507ec125-67dc-450a-9081-94cde5444a92
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 22a45505d5b79e7431902331d1dbca5ef0facbbf
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0ede8e0515decf06304694fa3a907cc468b16de1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830591"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734586"
 ---
 # <a name="sysdm_filestream_non_transacted_handles-transact-sql"></a>sys.dm_filestream_non_transacted_handles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   显示当前打开的与 FileTable 数据关联的非事务性文件句柄。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "82830591"
   
  有关详细信息，请参阅 [管理 FileTables](../../relational-databases/blob/manage-filetables.md)。  
   
-|**列**|**Type**|**说明**|  
+|**列**|类型|**说明**|  
 |----------------|--------------|---------------------|  
 |database_id|int|与句柄关联的数据库的 ID。|  
 |object_id|int|与句柄关联的 FileTable 的对象 ID。|  

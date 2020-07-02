@@ -1,5 +1,5 @@
 ---
-title: sys. system_columns （Transact-sql） |Microsoft Docs
+title: sys.system_columns （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,22 +20,22 @@ ms.assetid: 4ab1d48a-d57a-4e76-a08c-9627eeaf4588
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 76706ee2d516bce0f60a78224c983056b5220d72
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 984f0d9d7738137d0a892fb6634e124a32869a89
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831309"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733463"
 ---
 # <a name="syssystem_columns-transact-sql"></a>sys.system_columns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   具有列的系统对象的每列都对应一行。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|此列所属对象的 ID。|  
-|**name**|**sysname**|列的名称。 在对象中是唯一的。|  
+|object_id|**int**|此列所属对象的 ID。|  
+|name|**sysname**|列的名称。 在对象中是唯一的。|  
 |**column_id**|**int**|列的 ID。 在对象中是唯一的。<br /><br /> 列 ID 可以不按顺序排列。|  
 |**system_type_id**|**tinyint**|列的系统类型的 ID。|  
 |**user_type_id**|**int**|用户定义的列类型的 ID。<br /><br /> 若要返回类型的名称，请在此列上联接到[sys.databases](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)目录视图。|  

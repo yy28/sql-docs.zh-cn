@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 381d206e-06e2-48d0-8206-295fcf06ac98
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3d7e4ac0e338ac556c88c8cc22d6a87a53c67d51
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7c93aec2d5246073073fefaaaf4b21d3d542416a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487464"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737663"
 ---
 # <a name="clr-integration-and-transactions"></a>CLR 集成和事务
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  **System.web**命名空间提供与 ADO.NET 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]公共语言运行时（CLR）集成完全集成的事务框架。 **System.web**和 ADO.NET 一起使用来扩展和简化托管应用程序中本地事务和分布式事务的使用。  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  **System.web**命名空间提供与 ADO.NET 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公共语言运行时（CLR）集成完全集成的事务框架。 **System.web**和 ADO.NET 一起使用来扩展和简化托管应用程序中本地事务和分布式事务的使用。  
   
 > [!NOTE]  
 >  CLR 用户定义过程 (UDP) 不能与运行此过程的同一服务器建立连接（即环回连接），并且不能在同一事务中登记。 如果尝试上述操作，连接尝试将被阻止，并且无法将控制权传递回 UDP。 这将导致 UDP 发生超时错误（消息 1206）。  

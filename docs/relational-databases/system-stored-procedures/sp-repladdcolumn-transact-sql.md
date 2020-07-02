@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d6220f9f-c738-4f9c-bcf8-419994e86c81
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 08f459761c6e72063979bef6f7d9067611f2dd78
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 05c00137acdf989456903fedddcc45a7b79e0e61
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826547"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751628"
 ---
 # <a name="sp_repladdcolumn-transact-sql"></a>sp_repladdcolumn (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   将列添加到已发布的现有表项目中。 允许将新列添加到发布该表的所有发布服务器，或者只将新列添加到发布该表的特定发布中。 此存储过程在发布服务器上对发布数据库执行。  
   
@@ -45,14 +45,14 @@ sp_repladdcolumn [ @source_object = ] 'source_object', [ @column = ] 'column' ]
     [ , [ @force_reinit_subscription = ] force_reinit_subscription ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  [ @source_object =] "*source_object*"  
  包含要添加的新列的表项目的名称。 *source_object*为**nvarchar （358**），无默认值。  
   
  [ @column =] "*column*"  
  表中要为复制添加的列的名称。 *列*的值为**sysname**，无默认值。  
   
- [ @typetext =] "*typetext*"  
+ [ @typetext = ] \ "*typetext*"  
  要添加的列的定义。 *typetext*的值为**nvarchar （3000）**，无默认值。 例如，如果要添加 order_filled 列，并且它是一个字符字段，而不是 NULL，并且默认值为**N**，则 order_filled 将是*列*参数，而列的定义， **CHAR （1） not NULL 约束 constraint_name 默认值 "N"** 将为*typetext*参数值。  
   
  [ @publication_to_add =] "*publication_to_add*"  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ad87e9a0-b901-4e37-9950-aa517d680fc3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0d5c34cba36e4427c2f0def227b0641fa2f2fa84
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 16a0c7ffa2c12e43404f17eaa36fa787c2ae11cc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828926"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738504"
 ---
 # <a name="sp_helpdbfixedrole-transact-sql"></a>sp_helpdbfixedrole (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   返回固定数据库角色的列表。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "82828926"
 sp_helpdbfixedrole [ [ @rolename = ] 'role' ]   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @rolename = ] 'role'`固定数据库角色的名称。 *role*的值为**sysname**，默认值为 NULL。 如果指定了*role* ，则仅返回有关该角色的信息;否则，将返回所有固定数据库角色的列表和说明。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -77,7 +77,7 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
 ## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  
   
- 返回的信息取决于对元数据的访问权限的限制。 主体对其不具有权限的实体将不会显示。  有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
+ 返回的信息取决于对元数据的访问权限的限制。 主体对其不具有权限的实体将不会显示。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="examples"></a>示例  
  以下示例显示了所有固定数据库角色的列表。  

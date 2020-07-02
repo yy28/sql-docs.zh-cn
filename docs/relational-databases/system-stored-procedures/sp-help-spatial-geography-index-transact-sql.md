@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c9bf5675-eafc-4d71-bfdb-da963384fa0c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 73bb564880cae238cdbaa7e3c13a1f18ab95dc99
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1864aec83a60c83a1ff10bb0c5e3f814631c27fc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304874"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733256"
 ---
 # <a name="sp_help_spatial_geography_index-transact-sql"></a>sp_help_spatial_geography_index (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   返回有关**地理**空间索引的一组指定属性的名称和值。 以表格式返回结果。 可以选择是返回索引的一组核心属性还是返回索引的所有属性。  
   
@@ -41,7 +41,7 @@ sp_help_spatial_geography_index [ @tabname =] 'tabname'
      [ , [ @query_sample = ] 'query_sample' ]   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  请参阅[空间索引存储过程的参数和属性](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)。  
   
 ## <a name="properties"></a>属性  
@@ -53,7 +53,7 @@ sp_help_spatial_geography_index [ @tabname =] 'tabname'
 ## <a name="remarks"></a>备注  
   
 ## <a name="example"></a>示例  
- 下面的示例使用`sp_help_spatial_geography_index`来调查** \@qs**中给定查询示例的表**geography_col**上定义的**地理**空间索引**SIndx_SpatialTable_geography_col2** 。 此示例只返回指定索引的核心属性。  
+ 下面的示例使用 `sp_help_spatial_geography_index` 来调查** \@ qs**中给定查询示例的表**geography_col**上定义的**地理**空间索引**SIndx_SpatialTable_geography_col2** 。 此示例只返回指定索引的核心属性。  
   
 ```  
 declare @qs geography  

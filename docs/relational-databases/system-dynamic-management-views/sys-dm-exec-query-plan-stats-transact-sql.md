@@ -17,15 +17,15 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfacb
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 279f1a8fbe3ec78dc0cae30d9879615b169075bf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3bd7aa786466f3bde9aa42d75437d2406ef1e808
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75656989"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734752"
 ---
 # <a name="sysdm_exec_query_plan_stats-transact-sql"></a>sys. dm_exec_query_plan_stats （Transact-sql）
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
 
 返回以前缓存的查询计划的上一个已知实际执行计划的等效值。
 
@@ -35,7 +35,7 @@ ms.locfileid: "75656989"
 sys.dm_exec_query_plan_stats(plan_handle)  
 ``` 
 
-## <a name="arguments"></a>参数 
+## <a name="arguments"></a>自变量 
 *plan_handle*  
 是一个标记，用于唯一标识已执行并且其计划驻留在计划缓存中或当前正在执行的批处理的查询执行计划。 *plan_handle*为**varbinary （64）**。   
 
@@ -62,7 +62,7 @@ sys.dm_exec_query_plan_stats(plan_handle)
 |**query_plan**|**xml**|包含与*plan_handle*一起指定的实际查询执行计划的上一个已知运行时显示计划表示形式。 显示计划的格式为 XML。 为包含即席 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、存储过程调用以及用户定义函数调用等内容的每个批查询生成一个计划。<br /><br /> 此列可为空值。| 
 
 ## <a name="remarks"></a>备注
-从[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.4 开始，此系统函数可用。
+从 CTP 2.4 开始，此系统函数可用 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 。
 
 这是一个选择加入功能，并且需要启用[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451。 自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.5 起，若要在数据库级别完成此操作，请参阅 [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 中的 LAST_QUERY_PLAN_STATS 选项。
 
@@ -84,16 +84,16 @@ Sys. dm_exec_query_plan_stats 的显示计划输出包含以下信息：
     **AND**    
 -   查询非常简单，通常归类为 OLTP 工作负载的一部分。
 
-<sup>1</sup>从[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.5 开始，这是指仅包含根节点运算符（SELECT）的显示计划。 对于[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.4，这是指通过`sys.dm_exec_cached_plans`获取的缓存计划。
+<sup>1</sup>从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.5 开始，这是指仅包含根节点运算符（SELECT）的显示计划。 对于 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.4，这是指通过获取的缓存计划 `sys.dm_exec_cached_plans` 。
 
 在以下条件下，**不从 sys.databases 返回任何输出** **dm_exec_query_plan_stats**：
 
 -   使用*plan_handle*指定的查询计划已从计划缓存中逐出。     
-    **或**    
+    **OR**    
 -   最初无法缓存查询计划。 有关详细信息，请参阅[执行计划缓存和重复使用](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)。
   
 > [!NOTE] 
-> 由于**xml**数据类型中允许的嵌套级别数有限制，因此**dm_exec_query_plan**无法返回满足或超过128嵌套元素级别的查询计划。 在的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]早期版本中，此条件阻止查询计划返回，并生成[错误 6335](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-6000-to-6999)。 在[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 及更高版本中， **QUERY_PLAN**列返回 NULL。  
+> 由于**xml**数据类型中允许的嵌套级别数有限制，因此**dm_exec_query_plan**无法返回满足或超过128嵌套元素级别的查询计划。 在的早期版本中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，此条件阻止查询计划返回，并生成[错误 6335](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-6000-to-6999)。 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 及更高版本中， **query_plan**列返回 NULL。  
 
 ## <a name="permissions"></a>权限  
  要求具有对服务器的 `VIEW SERVER STATE` 权限。  
@@ -101,14 +101,14 @@ Sys. dm_exec_query_plan_stats 的显示计划输出包含以下信息：
 ## <a name="examples"></a>示例  
   
 ### <a name="a-looking-at-last-known-actual-query-execution-plan-for-a-specific-cached-plan"></a>A. 查看特定缓存计划的上一个已知实际查询执行计划  
- 下面的示例查询**dm_exec_cached_plans sys.databases**以查找有趣的计划，并从输出`plan_handle`复制其。  
+ 下面的示例查询**dm_exec_cached_plans sys.databases**以查找有趣的计划，并 `plan_handle` 从输出复制其。  
   
 ```sql  
 SELECT * FROM sys.dm_exec_cached_plans;  
 GO  
 ```  
   
-然后，若要获取最后一个已知的实际查询执行计划，请`plan_handle`使用复制的与系统函数**sys.databases dm_exec_query_plan_stats**。  
+然后，若要获取最后一个已知的实际查询执行计划，请使用复制的 `plan_handle` 与系统函数**sys.databases dm_exec_query_plan_stats**。  
   
 ```sql  
 SELECT * FROM sys.dm_exec_query_plan_stats(< copied plan_handle >);  

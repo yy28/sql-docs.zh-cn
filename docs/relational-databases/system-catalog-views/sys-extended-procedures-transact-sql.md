@@ -19,22 +19,22 @@ helpviewer_keywords:
 ms.assetid: 310e0f87-0044-4fdf-bd12-51a723a74ce6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 42ecb7a4199bd42c6f522e447f260c37e3ba3368
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: bcc9d30d457e9042f2a667a7a71f846f6e07eb63
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831972"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738760"
 ---
 # <a name="sysextended_procedures-transact-sql"></a>sys.extended_procedures (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   为扩展存储过程的每个对象都包含一个包含**sys.databases** = X 的行。因为扩展存储过程安装在**master**数据库中，所以它们只会在该数据库上下文中可见。 从任何其他数据库上下文中的**sys.databases extended_procedures**视图中进行选择将返回一个空结果集。  
 
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**\<继承自 sys.databases 的列>**||有关此视图所继承的列的列表，请参阅[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
+|**\<Columns inherited from sys.objects>**||有关此视图所继承的列的列表，请参阅[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
 |**dll_name**|**nvarchar(260)**|此扩展存储过程的 DLL 的名称，包括路径。|  
   
 ## <a name="permissions"></a>权限  

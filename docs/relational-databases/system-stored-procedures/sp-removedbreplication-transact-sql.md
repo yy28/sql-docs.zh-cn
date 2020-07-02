@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: cb98d571-d1eb-467b-91f7-a6e091009672
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 60004b81134b550761e65eba2ce38e155732c77f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 14c013da5fed9a0a9477692ce6bdda20b5d921a5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82817302"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751668"
 ---
 # <a name="sp_removedbreplication-transact-sql"></a>sp_removedbreplication (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   此存储过程将删除 SQL Server 发布服务器实例的发布数据库上或 SQL Server 订阅服务器实例的订阅数据库上的所有复制对象。 在相应的数据库中执行，或如果是在另一个数据库上下文的同一个实例上执行，请指定应删除复制对象的数据库。 此过程不会从其他数据库（例如，分发数据库）中删除对象。  
   
@@ -41,7 +41,7 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
     [ , [ @type = ] type ]   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @dbname = ] 'dbname'`数据库的名称。 *dbname* 的数据类型为 **sysname**，默认值为 NULL。 此参数值为 NULL 时，将使用当前数据库。  
   
 `[ @type = ] type`要为其删除数据库对象的复制的类型。 *类型*为**nvarchar （5）** ，可以为以下值之一。  

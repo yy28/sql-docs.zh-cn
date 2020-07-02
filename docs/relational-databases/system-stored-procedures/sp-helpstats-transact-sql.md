@@ -18,15 +18,15 @@ ms.assetid: 00ab3cfd-2736-4fc0-b1b2-16dd49fb2fe5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b4f84f187ea3f511b8dddcc79c712dfd7809748d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: cc07dec5878e0d31a325aa75af483ab4b1b04e58
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824417"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736974"
 ---
 # <a name="sp_helpstats-transact-sql"></a>sp_helpstats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   返回有关指定表中的列和索引的统计信息。  
   
@@ -43,7 +43,7 @@ sp_helpstats[ @objname = ] 'object_name'
      [ , [ @results = ] 'value' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @objname = ] 'object_name'`指定要为其提供统计信息的表。 *object_name*为**nvarchar （520）** ，且不能为 null。 可以指定一个一部分或两部分名称。  
   
 `[ @results = ] 'value'`指定要提供的信息的范围。 有效条目为 "**所有**" 和 "**统计**"。 **所有**索引的统计信息以及创建了统计信息的列的统计信息;**STATS**仅列出与索引不关联的统计信息。 *值*为**nvarchar （5）** ，默认值为 STATS。  
@@ -54,7 +54,7 @@ sp_helpstats[ @objname = ] 'object_name'
 ## <a name="result-sets"></a>结果集  
  下表对结果集中的列进行了说明。  
   
-|列名称|说明|  
+|列名称|描述|  
 |-----------------|-----------------|  
 |**statistics_name**|统计信息的名称。 返回**sysname** ，且不能为 null。|  
 |**statistics_keys**|统计信息所基于的键。 返回**nvarchar （2078）** ，且不能为 null。|  

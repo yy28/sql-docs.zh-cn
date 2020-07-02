@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d851461ae4cd07f3dd89e2cff4326d03e05a5d66
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 511101642570c9ddf28763b6303aa90bb985317a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82815254"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752779"
 ---
 # <a name="sp_oacreate-transact-sql"></a>sp_OACreate (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   创建 OLE 对象的实例。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "82815254"
 sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *progid*  
  要创建的 OLE 对象的编程标识符 (ProgID)。 此字符串描述 OLE 对象的类，其格式为： **'**_OLEComponent_**。**_对象_**'**  
   

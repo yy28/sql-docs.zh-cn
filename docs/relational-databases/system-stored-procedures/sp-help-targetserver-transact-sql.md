@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f841d3bd-901a-4980-ad0b-1c6eeba3f717
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6e24fcd2d134e9b66c15bd704416ef332f41d31e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ed310262b4f233a8642bbbab382a6d0b30a311e4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820398"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752793"
 ---
 # <a name="sp_help_targetserver-transact-sql"></a>sp_help_targetserver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   列出所有的目标服务器。  
   
@@ -39,7 +39,7 @@ sp_help_targetserver
      [ [ @server_name = ] 'server_name' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @server_name = ] 'server_name'`要返回其信息的服务器的名称。 *server_name*为**nvarchar （30）**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -51,7 +51,7 @@ sp_help_targetserver
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|服务器标识号。|  
-|server_name |**nvarchar(30)**|服务器名称。|  
+|server_name|**nvarchar(30)**|服务器名称。|  
 |**location**|**nvarchar(200)**|指定的服务器的位置。|  
 |**time_zone_adjustment**|**int**|根据格林尼治标准时间 (GMT) 进行的时区调整，以小时为单位。|  
 |**enlist_date**|**datetime**|指定的服务器的登记日期。|  
@@ -94,7 +94,7 @@ GO
  [sp_delete_targetserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql.md)   
  [sp_delete_targetservergroup &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)   
  [sp_update_targetservergroup &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)   
- [sysdownloadlist &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysdownloadlist-transact-sql.md)   
+ [dbo.sysdownloadlist &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysdownloadlist-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

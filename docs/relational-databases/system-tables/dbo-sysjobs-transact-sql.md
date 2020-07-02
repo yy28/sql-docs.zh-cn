@@ -1,5 +1,5 @@
 ---
-title: dbo. sysjobs （Transact-sql） |Microsoft Docs
+title: dbo.sys作业（Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: e244a6a5-54c2-47a6-8039-dd1852b0ae59
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8fe374a81fc88b6591da8fb0303d5ea490cccac0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: adf7124fe37d506eb0ac9b3dcb0bab5d6e85423b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82806924"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736873"
 ---
 # <a name="dbosysjobs-transact-sql"></a>dbo.sysjobs (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   存储将由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理执行的各个预定作业的信息。 该表存储在**msdb**数据库中。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "82806924"
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|作业的唯一 ID。|  
 |**originating_server_id**|**int**|发出作业的服务器的 ID。|  
-|**name**|**sysname**|作业的名称。|  
+|name|**sysname**|作业的名称。|  
 |**能够**|**tinyint**|指示是否启用要执行的作业。|  
 |**2008**|**nvarchar(512)**|对作业的说明。|  
 |**start_step_id**|**int**|执行作业的起始步骤的 ID。|  

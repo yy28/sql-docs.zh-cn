@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 96910d1c-be76-43eb-9c93-4477e6761749
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 36809be121087741d2a23becf41a32b2ffe9f5cd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9242f547d8f44e09341183a30a49afef4d2c4f52
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826030"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736924"
 ---
 # <a name="sp_helptracertokenhistory-transact-sql"></a>sp_helptracertokenhistory (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   返回指定跟踪令牌的详细滞后时间信息，为每个订阅服务器返回一行。 此存储过程在发布服务器上的发布数据库中执行，或者在分发服务器上的分发数据库中执行。  
   
@@ -39,7 +39,7 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
     [ , [ @publisher_db = ] 'publisher_db' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publication = ] 'publication'`在其中插入跟踪令牌的发布的名称。 *发布*为**sysname**，无默认值。  
   
 `[ @tracer_id = ] tracer_id`为其返回历史记录信息的[MStracer_tokens &#40;transact-sql&#41;](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md)表中的跟踪令牌的 ID。 *tracer_id*为**int**，没有默认值。  

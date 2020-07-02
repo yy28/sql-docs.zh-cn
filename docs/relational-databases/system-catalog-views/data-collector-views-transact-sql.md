@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a005e885-7813-4c7e-b332-b01d9e9d4054
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6d2df9fd85f77a2fa0207562a5b2a8be3e991489
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 91542894eeb00fc6c44e3d824bb7fd857cef8897
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823607"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752992"
 ---
 # <a name="data-collector-views-transact-sql"></a>数据收集器视图 (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   数据收集器可提供以下视图，用于显示有关数据收集器配置的信息（如收集器类型属性、收集组和收集组项）以及收集组运行时获得的执行统计信息。 这些视图位于**msdb**数据库中，也为基础表提供抽象层。 这种抽象化通过禁止对表的直接访问，同时允许在不影响任何关联应用程序的情况下对表进行更改，使安全性得以提高。  
   

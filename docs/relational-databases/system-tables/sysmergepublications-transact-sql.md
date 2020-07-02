@@ -17,23 +17,23 @@ helpviewer_keywords:
 ms.assetid: 7f82c6c3-22d1-47c0-a92b-4d64b98cc455
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 96708a8109594e0978757a163840d605d09cb522
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ae4203442a4596a8e52ab7212c21c7cc24759d50
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829814"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751568"
 ---
 # <a name="sysmergepublications-transact-sql"></a>sysmergepublications (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   数据库中定义的每个合并发布在表中各占一行。 该表存储在发布数据库和订阅数据库中。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**器**|**sysname**|默认服务器的名称。|  
+|**publisher**|**sysname**|默认服务器的名称。|  
 |**publisher_db**|**sysname**|默认发布服务器数据库的名称。|  
-|**name**|**sysname**|发布的名称。|  
+|name|**sysname**|发布的名称。|  
 |**2008**|**nvarchar(255)**|对发布的简短说明。|  
 |**保留**|**int**|整个发布集的保持期，其中单位由**retention_period_unit**列的值指示。|  
 |**publication_type**|**tinyint**|指示发布是否经过筛选：<br /><br /> **0** = 未筛选。<br /><br /> **1** = 已筛选。|  
@@ -65,7 +65,7 @@ ms.locfileid: "82829814"
 |**allow_synctoalternate**|**bit**|指定是否允许备用同步伙伴与该发布服务器同步。 **0**表示不允许同步伙伴。|  
 |**validate_subscriber_info**|**nvarchar （500）**|列出用于检索订阅服务器信息和验证订阅服务器上的参数化行筛选条件的函数。|  
 |**ad_guidname**|**sysname**|指定是否在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory 中发布该发布。 有效的 GUID 指定发布在 Active Directory 中发布，GUID 是对应的 Active Directory 发布对象**objectGUID**。 如果为 NULL，则将不在 Active Directory 中发布该发布。|  
-|**backward_comp_level**|**int**|数据库兼容级别。 可以是以下其中一个值：<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。<br /><br /> **100**  =  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 。|  
+|**backward_comp_level**|**int**|数据库兼容级别。 可以是以下值之一：<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。<br /><br /> **100**  =  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 。|  
 |**max_concurrent_merge**|**int**|允许的最大并发合并进程数。 如果此属性的值为**0** ，则表示在任何给定时间运行的并发合并进程数没有限制。 此属性设置一次可以对合并发布运行的并发合并进程数的限制。 如果同时调度的快照进程数比允许运行的进程数多，则多出的作业将放置在队列中等待，直到当前正在运行的合并进程完成。|  
 |**max_concurrent_dynamic_snapshots**|**int**|允许针对合并发布运行的最大并发筛选数据快照会话数。 如果为**0**，则在任意给定时间，可同时对发布运行的并发筛选数据快照会话的最大数量没有限制。 此属性对可以同时对合并发布运行的最大并发快照进程数设置限制。 如果同时调度的快照进程数比允许运行的进程数多，则多出的作业将放置在队列中等待，直到当前正在运行的合并进程完成。|  
 |**use_partition_groups**|**smallint**|指定发布是否使用预计算分区。|  

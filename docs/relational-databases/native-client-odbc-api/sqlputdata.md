@@ -14,31 +14,31 @@ ms.assetid: d39aaa5b-7fbc-4315-a7f2-5a7787e04f25
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e063d1053d8a6e5e10a1234d33893adf27fbc3ad
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 241c7e6bd0bfbd3b0239e610606a26b50f6e112d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302338"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751922"
 ---
 # <a name="sqlputdata"></a>SQLPutData
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  当使用 SQLPutData 向 SQL_LONGVARCHAR （ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **text**）、SQL_WLONGVARCHAR （**ntext**）或 SQL_LONGVARBINARY （**图像**）列发送超过65535个字节的数据（适用于版本 4.21 a）或 400 KB 6.0 SQL Server 数据时，以下限制适用：  
+  当使用 SQLPutData 向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL_LONGVARCHAR （**text**）、SQL_WLONGVARCHAR （**ntext**）或 SQL_LONGVARBINARY （**图像**）列发送超过65535个字节的数据（适用于版本 4.21 a）或 400 KB 6.0 SQL Server 数据时，以下限制适用：  
   
 -   引用的参数可以是 INSERT 语句中的*insert_value* 。  
   
 -   引用的参数可以是 UPDATE 语句的 SET 子句中的*表达式*。  
   
- 当使用版本6.5 或更低版本时，取消将向运行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的服务器提供块数据的 SQLPutData 调用序列将导致列值的部分更新。 调用 SQLCancel 时引用的**text**、 **ntext**或**image**列被设置为中间占位符值。  
+ 当使用版本6.5 或更低版本时，取消将向运行的服务器提供块数据的 SQLPutData 调用序列将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导致列值的部分更新。 调用 SQLCancel 时引用的**text**、 **ntext**或**image**列被设置为中间占位符值。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序不支持连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 6.5 版和更低版本。  
   
 ## <a name="diagnostics"></a>诊断  
- 对于 SQLPutData， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]有一个 Native Client 特定的 SQLSTATE：  
+ 对于 SQLPutData，有一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 特定的 SQLSTATE：  
   
-|SQLSTATE|错误|说明|  
+|SQLSTATE|错误|描述|  
 |--------------|-----------|-----------------|  
 |22026|字符串数据，长度不匹配|如果应用程序已指定要发送的数据的长度（以字节为单位），例如，使用 SQL_LEN_DATA_AT_EXEC （*n*），其中*n*大于0，则应用程序通过 SQLPutData 指定的字节总数必须与指定的长度匹配。|  
   

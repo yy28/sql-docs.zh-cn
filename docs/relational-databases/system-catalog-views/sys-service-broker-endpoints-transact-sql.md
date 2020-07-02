@@ -19,21 +19,21 @@ helpviewer_keywords:
 ms.assetid: 6979ec9b-0043-411e-aafb-0226fa26c5ba
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 221a490f6accb13706c19860f70c1de2db6d2bf8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a59beeb51d59b00fbd902045f0f1aaebc9322a64
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832665"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752905"
 ---
 # <a name="sysservice_broker_endpoints-transact-sql"></a>sys.service_broker_endpoints (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Service Broker 端点在此目录视图中占一行。 对于此视图中的每一行，都存在一个对应的行，其中包含具有 TCP 配置元数据的**tcp_endpoints**视图中的相同**endpoint_id** 。 TCP 是唯一允许 Service Broker 使用的协议。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**\<继承列>**|**--**|从 sys.databases 中继承列[&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)。|  
+|**\<inherited columns>**|**--**|从 sys.databases 中继承列[&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)。|  
 |**is_message_forwarding_enabled**|**bit**|端点支持消息转发。 最初设置为**0** （禁用）。 不可为 NULL。|  
 |**message_forwarding_size**|**int**|允许用于转发消息的**tempdb**空间的最大兆字节数。 最初设置为**10**。 不可为 NULL。|  
 |**connection_auth**|**tinyint**|连接到此端点所需的连接身份验证的类型，为以下值之一：<br /><br /> **1** -NTLM<br /><br /> **2** -KERBEROS<br /><br /> **3** -协商<br /><br /> **4** -证书<br /><br /> **5** -NTLM，证书<br /><br /> **6** -KERBEROS，证书<br /><br /> **7** -协商，证书<br /><br /> **8**证书，NTLM<br /><br /> **9**证书，KERBEROS<br /><br /> **10** -证书，协商<br /><br /> 不可为 NULL。|  

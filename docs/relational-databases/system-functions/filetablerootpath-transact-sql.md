@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0cba908a-c85c-4b09-b16a-df1cb333c629
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 10b4aa19b86530213f852ea90f959a1d7ef6c74f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1311ddfe90beafa3f3d89b27e510eac34aa5ae94
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72251239"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734401"
 ---
 # <a name="filetablerootpath-transact-sql"></a>FileTableRootPath (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   返回特定 FileTable 或当前数据库的根级 UNC 路径。  
   
@@ -36,12 +36,12 @@ ms.locfileid: "72251239"
 FileTableRootPath ( [ '[schema_name.]FileTable_name' ], @option )  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *FileTable_name*  
  FileTable 的名称。 *FileTable_name*的类型为**nvarchar**。 这是一个可选参数。 默认值为当前数据库。 指定*schema_name*也是可选的。 可以将 NULL 传递给*FileTable_name*以使用默认参数值  
   
  *\@选*  
- 一个整数表达式，定义路径的服务器组件应如何进行格式化。 选项可以具有以下值之一： * \@*  
+ 一个整数表达式，定义路径的服务器组件应如何进行格式化。 * \@ 选项*可以具有以下值之一：  
   
 |值|说明|  
 |-----------|-----------------|  
@@ -65,7 +65,7 @@ FileTableRootPath ( [ '[schema_name.]FileTable_name' ], @option )
   
  有关详细信息，请参阅 [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)。  
   
-## <a name="best-practices"></a>最佳方案  
+## <a name="best-practices"></a>最佳实践  
  若要使代码和应用程序独立于当前的计算机和数据库，应避免编写依赖于绝对文件路径的代码。 相反，在运行时获取文件的完整路径，方法是将**FileTableRootPath**和**GetFileNamespacePath**函数一起使用，如下面的示例中所示。 默认情况下， **GetFileNamespacePath** 函数返回数据库根路径下的文件的相对路径。  
   
 ```sql  

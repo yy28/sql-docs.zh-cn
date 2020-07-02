@@ -1,5 +1,5 @@
 ---
-title: dbo. systargetservers （Transact-sql） |Microsoft Docs
+title: dbo.systargetservers （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,22 +19,22 @@ helpviewer_keywords:
 ms.assetid: 479d1314-be37-4d19-ac9c-419fc9110e53
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6193bdfaaac12d34ed4993b71fd6b5862046384c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 063744d15d0f4ad6d7ce8bd4895d254aaecd2931
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82813726"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750244"
 ---
 # <a name="dbosystargetservers-transact-sql"></a>dbo.systargetservers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   记录此多服务器操作域中当前登记的目标服务器。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|服务器 ID。|  
-|server_name |**sysname**|服务器名称。|  
+|server_name|**sysname**|服务器名称。|  
 |**location**|**nvarchar(200)**|指定目标服务器的位置。|  
 |**time_zone_adjustment**|**int**|与格林尼治标准时间 (GMT) 之间的时差调整量（以小时为单位）。|  
 |**enlist_date**|**datetime**|指定目标服务器的登记日期和时间。|  

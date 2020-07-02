@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6ed15828-8cca-4cf0-b2ff-1ecd0d8db11a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 163b5aba5f676f14afd26b962c856b325ccc4dc4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6f9096b3e974b0fad906c4121a8c81bd2ba26e90
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82819915"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751559"
 ---
 # <a name="sysreplicationalerts-transact-sql"></a>sysreplicationalerts (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   包含导致激发复制警报的情况的相关信息。 该表存储在**msdb**数据库中。  
   
@@ -38,13 +38,13 @@ ms.locfileid: "82819915"
 |**error_id**|**int**|存储在**MSrepl_errors**中的错误的 ID。|  
 |**alert_error_code**|**int**|将此记录记入日志时所引发警报的消息 ID。|  
 |**time**|**datetime**|插入记录的时间。|  
-|**器**|**sysname**|与激发此警报的代理相关联的发布服务器的名称。|  
+|**publisher**|**sysname**|与激发此警报的代理相关联的发布服务器的名称。|  
 |**publisher_db**|**sysname**|与激发此警报的代理相关联的发布服务器数据库。|  
 |**发布**|**sysname**|与激发此警报的代理相关联的发布。|  
 |**publication_type**|**int**|发布类型：<br /><br /> **0** = Snapshot。<br /><br /> **1** = 事务性。<br /><br /> **2** = 合并。|  
 |**订阅服务器**|**sysname**|与激发此警报的代理相关联的订阅服务器的名称。|  
 |**subscriber_db**|**sysname**|与激发此警报的代理相关联的订阅服务器数据库的名称。|  
-|**下文**|**sysname**|与激发此警报的代理相关联的项目的名称。|  
+|**文章**|**sysname**|与激发此警报的代理相关联的项目的名称。|  
 |**destination_object**|**sysname**|与此警报相关联的订阅表的名称。|  
 |**source_object**|**sysname**|与此警报相关联的已发布表的名称。|  
 |**alert_error_text**|**ntext**|警报的文本。|  

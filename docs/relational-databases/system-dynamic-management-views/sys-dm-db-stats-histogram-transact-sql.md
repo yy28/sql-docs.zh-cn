@@ -20,15 +20,15 @@ ms.assetid: 1897fd4a-8d51-461e-8ef2-c60be9e563f2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 06a8b8e36123f34b42b890c8315b8847a3c0e0bb
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f9c203cef9234c070bcefcc82bea396734123d4f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828041"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738708"
 ---
 # <a name="sysdm_db_stats_histogram-transact-sql"></a>sys.dm_db_stats_histogram (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
 返回当前数据库中指定数据库对象（表或索引视图）的统计信息直方图 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 类似于 `DBCC SHOW_STATISTICS WITH HISTOGRAM`。
 
@@ -41,8 +41,8 @@ ms.locfileid: "82828041"
 sys.dm_db_stats_histogram (object_id, stats_id)  
 ```  
   
-## <a name="arguments"></a>参数  
- *object_id*  
+## <a name="arguments"></a>自变量  
+ object_id  
  当前数据库中您要请求其某个统计信息属性的对象的 ID。 *object_id* 是 **int**。  
   
  *stats_id*  

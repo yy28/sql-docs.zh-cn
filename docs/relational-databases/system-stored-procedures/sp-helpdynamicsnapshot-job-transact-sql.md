@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: d6dfdf26-f874-495f-a8a6-8780699646d7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 866f05904cfa1b6c7b3ce6b20a59a5be3096be2b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a155e7031a78cac6dcea4ca380f7b496d59170f0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82810599"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733225"
 ---
 # <a name="sp_helpdynamicsnapshot_job-transact-sql"></a>sp_helpdynamicsnapshot_job (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   返回有关生成筛选数据快照的代理作业的信息。 此存储过程在发布服务器上对发布数据库执行。  
   
@@ -44,7 +44,7 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
     [ , [ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publication = ] 'publication'`发布的名称。 *发布*的数据类型为**sysname**，默认值为 **%** ，它返回与所有发布的指定*dynamic_snapshot_jobid*和*dynamic_snapshot_jobname*匹配的所有已筛选的数据快照作业的信息。  
   
 `[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'`筛选的数据快照作业的名称。 *dynamic_snapshot_jobname*为**sysname**，默认值为 **%** ""，它将返回具有指定*dynamic_snapshot_jobid*的发布的所有动态作业。 如果创建作业时未显式指定作业名称，则作业名称具有以下格式：  

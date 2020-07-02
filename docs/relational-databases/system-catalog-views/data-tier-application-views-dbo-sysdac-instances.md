@@ -1,5 +1,5 @@
 ---
-title: dbo. sysdac_instances （Transact-sql） |Microsoft Docs
+title: dbo.sysdac_instances （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 28285f3d-3889-439f-8b24-3bdef08e46b4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dfff37bc876302e404b63eb7babf4fc3700fc9d9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 18031fac584eea39e5901276b597fc556263b18e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823629"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752976"
 ---
-# <a name="data-tier-application-views---dbosysdac_instances"></a>数据层应用程序视图-dbo. sysdac_instances
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="data-tier-application-views---dbosysdac_instances"></a>数据层应用程序视图-dbo.sysdac_instances
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   为部署到[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的每个数据层应用程序 (DAC) 实例显示一行。 sysdac_instances 属于 msdb 数据库中的 dbo 架构。 下表描述了 sysdac_instances 视图中的列。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "82823629"
 |instance_name|**sysname**|在部署 DAC 时指定的 DAC 实例的名称。|  
 |type_name|**sysname**|在创建 DAC 包时指定的 DAC 的名称。|  
 |type_version|**nvarchar （64）**|在创建 DAC 包时指定的 DAC 的版本。|  
-|说明|**nvarchar(4000)**|在创建 DAC 包时写入的 DAC 的说明。|  
+|description|**nvarchar(4000)**|在创建 DAC 包时写入的 DAC 的说明。|  
 |type_stream|**varbinary(max)**|包含 DAC 中包含的逻辑对象（如表和视图）的已编码表示形式的位流。|  
 |date_created|**datetime**|DAC 实例的创建日期和时间。|  
 |created_by|**sysname**|创建 DAC 实例的登录名。|  

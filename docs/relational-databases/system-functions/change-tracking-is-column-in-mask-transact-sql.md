@@ -19,15 +19,15 @@ ms.assetid: 649b370b-da54-4915-919d-1b597a39d505
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a6f7e9d8d9ab99ebe4a7c5749033eacf85b8feb5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 948b2b1e9ee9a8827322cf05fcb2f812d925de93
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68042989"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734435"
 ---
 # <a name="change_tracking_is_column_in_mask-transact-sql"></a>CHANGE_TRACKING_IS_COLUMN_IN_MASK (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   解释 CHANGETABLE （CHANGES ...）函数返回的 SYS_CHANGE_COLUMNS 值。 这使应用程序能够确定指定的列是否包含在为 SYS_CHANGE_COLUMNS 返回的值中。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68042989"
 CHANGE_TRACKING_IS_COLUMN_IN_MASK ( column_id , change_columns )  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *column_id*  
  是正在被检查的列的 ID。 可以使用[COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md)函数获取列 ID。  
   
@@ -53,7 +53,7 @@ CHANGE_TRACKING_IS_COLUMN_IN_MASK ( column_id , change_columns )
 ## <a name="return-values"></a>返回值  
  CHANGE_TRACKING_IS_COLUMN_IN_MASK 返回下列值。  
   
-|返回值|说明|  
+|返回值|描述|  
 |------------------|-----------------|  
 |0|指定的列不在*change_columns*列表中。|  
 |1|指定的列位于*change_columns*列表。|  
@@ -62,7 +62,7 @@ CHANGE_TRACKING_IS_COLUMN_IN_MASK ( column_id , change_columns )
  CHANGE_TRACKING_IS_COLUMN_IN_MASK 不会执行任何检查来验证*column_id*值，或者*change_columns*参数是从获取*column_id*的表中获取的。  
   
 ## <a name="examples"></a>示例  
- 下面的示例确定是否已更新 `Salary` 表的 `Employees` 列。 `COLUMNPROPERTY`函数将返回`Salary`列的列 ID。 必须使用 CHANGETABLE 作为数据源将 `@change_columns` 局部变量设置为查询的结果。  
+ 下面的示例确定是否已更新 `Salary` 表的 `Employees` 列。 `COLUMNPROPERTY`函数将返回列的列 ID `Salary` 。 必须使用 CHANGETABLE 作为数据源将 `@change_columns` 局部变量设置为查询的结果。  
   
 ```sql  
 SET @SalaryChanged = CHANGE_TRACKING_IS_COLUMN_IN_MASK  

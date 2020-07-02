@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: ee16de24-3d95-4b2e-a094-78df2514d18a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e955cb7378a9da430608bf55d287be0fd7237ef5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: be1df53780b7472d613c49d2d105c606a09de8df
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82807314"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750373"
 ---
 # <a name="backupmediafamily-transact-sql"></a>backupmediafamily (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   每个介质簇在表中占一行。 如果介质簇驻留在镜像介质集中，则对于介质集中的每个镜像，该介质簇都具有一个单独的行。 该表存储在**msdb**数据库中。  
     
@@ -40,7 +40,7 @@ ms.locfileid: "82807314"
 |**physical_device_name**|**nvarchar(260)**|备份设备的物理名称。 可以为 NULL。 此字段在备份和还原过程之间共享。 它可能包含原始备份目标路径或原始还原源路径。 具体取决于数据库的服务器上的备份还是还原。 请注意，从同一备份文件连续还原不会更新路径，而不管它在还原时的位置。 因此， **physical_device_name** "字段不能用于查看使用的还原路径。|  
 |**device_type**|**tinyint**|备份设备的类型：<br /><br /> 2 = 磁盘<br /><br /> 5 = 磁带<br /><br /> 7 = 虚拟设备<br /><br /> 9 = Azure 存储<br /><br /> 105 = 永久备份设备。<br /><br /> 可以为 NULL。<br /><br /> 所有永久设备名称和设备号都可以在**backup_devices**中找到。|  
 |**physical_block_size**|**int**|用于写入介质簇的物理块大小。 可以为 NULL。|  
-|**制作**|**tinyint**|镜像服务器号 (0-3)。|  
+|**mirror**|**tinyint**|镜像服务器号 (0-3)。|  
   
 ## <a name="remarks"></a>备注  
  通过 VERIFYONLY 从*BACKUP_DEVICE*还原将用介质集标头中的相应值填充**backupmediaset**表的列。  

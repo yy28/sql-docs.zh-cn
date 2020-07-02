@@ -20,15 +20,15 @@ ms.assetid: 8a54889d-e263-4881-9fcb-b1db410a9453
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 21007e66d8f193ce8e2a166e1615619be409cb9d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f7a88ef6865575d8e5c505cd563b463637dd8070
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828011"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738694"
 ---
 # <a name="sysdm_db_stats_properties-transact-sql"></a>sys.dm_db_stats_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   返回当前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中指定数据库对象（表或索引视图）的统计信息属性。 对于已分区表，请参阅类似的[sys.databases. dm_db_incremental_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md)。 
  
@@ -38,8 +38,8 @@ ms.locfileid: "82828011"
 sys.dm_db_stats_properties (object_id, stats_id)  
 ```  
   
-## <a name="arguments"></a>参数  
- *object_id*  
+## <a name="arguments"></a>自变量  
+ object_id  
  当前数据库中您要请求其某个统计信息属性的对象的 ID。 *object_id* 是 **int**。  
   
  *stats_id*  

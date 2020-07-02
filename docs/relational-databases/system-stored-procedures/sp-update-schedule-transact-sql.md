@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 97b3119b-e43e-447a-bbfb-0b5499e2fefe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bad747d2c88b7d159b9d043d12c81cc380c84c7b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ab7241fe17306fedf25c1562bcabe366d7754e84
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82809232"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749292"
 ---
 # <a name="sp_update_schedule-transact-sql"></a>sp_update_schedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   更改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理计划设置。  
   
@@ -54,7 +54,7 @@ sp_update_schedule
     [ , [ @automatic_post =] automatic_post ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @schedule_id = ] schedule_id`要修改的计划的标识符。 *schedule_id*为**int**，没有默认值。 必须指定*schedule_id*或*schedule_name* 。  
   
 `[ @name = ] 'schedule_name'`要修改的计划的名称。 *schedule_name* **sysname**，无默认值。 必须指定*schedule_id*或*schedule_name* 。  
@@ -70,7 +70,7 @@ sp_update_schedule
 |**1**|一次|  
 |**4**|每天|  
 |**8**|每周|  
-|**超过**|每月一次|  
+|**16**|每月|  
 |**32**|每月，相对于*频率间隔*|  
 |**64**|SQLServerAgent 服务启动时运行|  
 |**128**|计算机空闲时运行|  
@@ -102,11 +102,11 @@ sp_update_schedule
   
 |值|说明（单位）|  
 |-----------|--------------------------|  
-|**1**|第一个|  
+|**1**|First|  
 |**2**|秒|  
 |**4**|第三个|  
 |**8**|第四个|  
-|**超过**|最后一个|  
+|**16**|最后一个|  
   
 `[ @freq_recurrence_factor = ] freq_recurrence_factor`作业的计划执行之间的周数或月数。 仅当*freq_type*为**8**、 **16**或**32**时才使用*freq_recurrence_factor* 。 *freq_recurrence_factor*的值为**int**，默认值为**0**。  
   

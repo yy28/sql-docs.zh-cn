@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: d50afd20-a297-445e-be9e-13b48017e7ca
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 02d3762f419789732406564606ad7a3b990e30fd
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: f6fadf3bed15869ccd3d3307dcfe8b70c53d5310
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84881810"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737872"
 ---
 # <a name="functions-on-string-values---concat"></a>基于字符串值的函数 - concat
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   接受零或更多个字符串作为参数，并返回通过连接其中的每个参数值而创建的字符串。  
   
@@ -41,7 +41,7 @@ fn:concat ($string as xs:string?
  *$string*  
  可选择进行连接的字符串。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  此函数必须至少包含两个参数。 如果一个参数为空序列，则将被作为零长度字符串处理。  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>补充字符（代理项对）  

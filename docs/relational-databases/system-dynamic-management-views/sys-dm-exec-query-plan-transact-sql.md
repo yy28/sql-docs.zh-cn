@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: e26f0867-9be3-4b2e-969e-7f2840230770
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4cc8fd7a20da6d0bf56d68b690bf35341cb6a63e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2b57d657f0f6b1113db6b36bfa7c559110f77e84
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82812088"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734729"
 ---
 # <a name="sysdm_exec_query_plan-transact-sql"></a>sys.dm_exec_query_plan (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 以 XML 格式返回计划句柄指定的批查询的显示计划。 计划句柄指定的计划可以处于缓存或正在执行状态。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "82812088"
 sys.dm_exec_query_plan(plan_handle)  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 *plan_handle*  
 是一个标记，用于唯一标识已执行并且其计划驻留在计划缓存中或当前正在执行的批处理的查询执行计划。 *plan_handle*为**varbinary （64）**。   
 
@@ -87,7 +87,7 @@ sys.dm_exec_query_plan(plan_handle)
 ## <a name="examples"></a>示例  
  以下示例显示如何使用 **sys.dm_exec_query_plan** 动态管理视图。  
   
- 若要查看 XML 显示计划，请在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的查询编辑器中执行以下查询，然后在 **sys.dm_exec_query_plan** 返回的表的 **query_plan** 列中单击 **ShowPlanXML**。 XML 显示计划显示在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 摘要窗格中。 若要将 XML 显示计划保存到文件中，请在**query_plan**列中右键单击 " **ShowPlanXML** "，然后单击 "**将结果另存为**"，将文件命名为 \< *file_name*>，例如 myxmlshowplan.sqlplan .sqlplan。  
+ 若要查看 XML 显示计划，请在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的查询编辑器中执行以下查询，然后在 **sys.dm_exec_query_plan** 返回的表的 **query_plan** 列中单击 **ShowPlanXML**。 XML 显示计划显示在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 摘要窗格中。 若要将 XML 显示计划保存到文件中，请在**query_plan**列中右键单击 " **ShowPlanXML** "，单击 "**将结果另存为**"，将文件命名为 \<*file_name*> .sqlplan; 例如，myxmlshowplan.sqlplan. .sqlplan。  
   
 ### <a name="a-retrieve-the-cached-query-plan-for-a-slow-running-transact-sql-query-or-batch"></a>A. 检索运行速度缓慢的 Transact-SQL 查询或批查询的缓存查询计划  
  不同类型的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批查询（如即席批查询、存储过程和用户定义函数）的查询计划缓存在称作计划缓存的内存区域中。 每个缓存查询计划均由称作计划句柄的唯一标识符进行标识。 您可以通过 **sys.dm_exec_query_plan** 动态管理视图指定此计划句柄，以便检索特定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询或批处理的执行计划。  

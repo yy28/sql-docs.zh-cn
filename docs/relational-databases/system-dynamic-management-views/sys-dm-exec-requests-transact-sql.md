@@ -20,16 +20,16 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b8e1cf6bdf4270759a94761e67b94009576ef6ad
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+ms.openlocfilehash: 44c20aeed09468b9f2e0cc7047364f563e463daf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84941074"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734694"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 返回有关在中执行的每个请求的信息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 有关请求的详细信息，请参阅[线程和任务体系结构指南](../../relational-databases/thread-and-task-architecture-guide.md)。
    
@@ -38,7 +38,7 @@ ms.locfileid: "84941074"
 |session_id|**smallint**|与此请求相关的会话的 ID。 不可为 null。|  
 |request_id|**int**|请求的 ID。 在会话的上下文中是唯一的。 不可为 null。|  
 |start_time|**datetime**|请求到达时的时间戳。 不可为 null。|  
-|status|**nvarchar(30)**|请求的状态。 可以是以下位置之一：<br /><br /> 背景<br />正在运行<br />可运行<br />Sleeping<br />Suspended<br /><br /> 不可为 null。|  
+|状态|**nvarchar(30)**|请求的状态。 可以是以下位置之一：<br /><br /> 背景<br />正在运行<br />可运行<br />Sleeping<br />Suspended<br /><br /> 不可为 null。|  
 |命令|**nvarchar(32)**|标识正在处理的命令的当前类型。 常用命令类型包括：<br /><br /> SELECT<br />INSERT<br />UPDATE<br />DELETE<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> 可通过结合使用 sys.dm_exec_sql_text 和与请求对应的 sql_handle 检索请求的文本。 内部系统进程将基于它们所执行任务的类型来设置该命令。 这些任务可以包括：<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> 不可为 null。|  
 |sql_handle|**varbinary(64)**|是唯一标识查询所属的批处理或存储过程的标记。 可以为 Null。| 
 |statement_start_offset|**int**|指示当前正在执行的批处理或持久化对象当前正在执行的语句的开始位置（以字节为单位），从0开始。 可以与 `sql_handle` 、 `statement_end_offset` 和 `sys.dm_exec_sql_text` 动态管理函数一起使用，以检索请求的当前正在执行的语句。 可以为 Null。|  
@@ -98,7 +98,7 @@ ms.locfileid: "84941074"
 |page_server_reads|**bigint**|**适用**于： Azure SQL 数据库超大规模<br /><br /> 此请求执行的页服务器读取次数。 不可为 null。|  
 | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="remarks"></a>注解 
+## <a name="remarks"></a>备注 
 若要执行在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外的代码（例如，扩展存储过程和分布式查询），则必须在非抢先计划程序的控制范围以外执行该线程。 若要这样做，工作线程将切换到抢先模式。 由此动态管理视图返回的时间值不包括在抢先模式下花费的时间。
 
 在[行模式下](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution)执行并行请求时，会 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分配一个工作线程来协调负责完成分配给它们的任务的工作线程。 在此 DMV 中，只有协调器线程对该请求可见。 **不**会为协调器线程更新列**读取**、**写入**、 **logical_reads**和**row_count** 。 **仅**为协调器线程更新列**wait_type**、 **wait_time**、 **last_wait_type**、 **wait_resource**和**granted_query_memory** 。 有关详细信息，请参阅[线程和任务体系结构指南](../../relational-databases/thread-and-task-architecture-guide.md)。

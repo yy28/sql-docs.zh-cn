@@ -22,17 +22,17 @@ ms.assetid: 4523ae15-4260-40a7-a53c-8df15e1fee79
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4ab1797fabd8fb7d77eab85c97604b77e72f25c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ae1f88ba7694f99546382d9b1450aea4c555f4d9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68042759"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734379"
 ---
 # <a name="freetexttable-transact-sql"></a>FREETEXTTABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  是一个函数，用于在[!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 语句的[from 子句](../../t-sql/queries/from-transact-sql.md)中对包含基于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]字符的数据类型的全文索引列执行全文搜索。 此函数返回一个表，该表包含零行、一行或多行，其中包含的值与指定*freetext_string*中的文本的含义匹配，而不只是确切的措辞。 FREETEXTTABLE 被视为一个常规表名来引用。  
+  是一个函数，用于在 SELECT 语句的[from 子句](../../t-sql/queries/from-transact-sql.md)中对 [!INCLUDE[tsql](../../includes/tsql-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含基于字符的数据类型的全文索引列执行全文搜索。 此函数返回一个表，该表包含零行、一行或多行，其中包含的值与指定*freetext_string*中的文本的含义匹配，而不只是确切的措辞。 FREETEXTTABLE 被视为一个常规表名来引用。  
   
  FREETEXTTABLE 对于与[FREETEXT &#40;transact-sql&#41;](../../t-sql/queries/freetext-transact-sql.md)相同的匹配类型很有用，  
   
@@ -55,13 +55,13 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
      [ , top_n_by_rank ] )  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *table*  
  表的名称，该表已标记为全文查询。 *表*或*视图*可以是由一个、两个或三个部分组成的数据库对象名称。 查询视图时，仅能涉及一个全文索引的基表。  
   
  *表*不能指定服务器名称，并且不能用于对链接服务器的查询。  
   
- column_name   
+ column_name  
  FROM 子句中指定表的一个或多个全文索引列的名称。 列可以是 char、varchar、nchar、nvarchar、text、ntext、image、xml、varbinary 或 varbinary(max) 类型           。  
   
  column_list   
@@ -84,7 +84,7 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
   
  如果指定为字符串，language_term 将对应于 [sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 兼容性视图中的 alias 列值   。  字符串必须用单引号引起来，如 'language_term'  。 如果指定为整数，则 language_term 就是标识该语言的实际 LCID  。 如果指定为十六进制值，则 language_term 将以 0x 开头，后跟 LCID 的十六进制值  。 十六进制值不能超过八位（包括前导零在内）。  
   
- 如果值是双字节字符集（DBCS）格式， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]则会将其转换为 Unicode。  
+ 如果值是双字节字符集（DBCS）格式，则 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会将其转换为 Unicode。  
   
  如果指定的语言无效，或者未安装对应于该语言的资源，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回错误。 若要使用非特定语言资源，请将 0x0 指定为 language_term  。  
   
@@ -125,7 +125,7 @@ SELECT * FROM FREETEXTTABLE (Flags, FlagColors, 'Yellow');
 ```  
   
 ### <a name="b-using-freetext-in-an-inner-join"></a>B. 在 INNER JOIN 中使用 FREETEXT  
- 下面的示例返回任何产品的说明和排名，其说明与的含义相匹配`high level of performance`。  
+ 下面的示例返回任何产品的说明和排名，其说明与的含义相匹配 `high level of performance` 。  
   
 ```  
 USE AdventureWorks2012;  
@@ -143,7 +143,7 @@ GO
 ```  
   
 ### <a name="c-specifying-language-and-highest-ranked-matches"></a>C. 指定语言和排名最高的匹配项  
- 下面的示例是相同的，并显示`LANGUAGE` *language_term*和*top_n_by_rank*参数的用法。  
+ 下面的示例是相同的，并显示 `LANGUAGE` *language_term*和*top_n_by_rank*参数的用法。  
   
 ```  
 USE AdventureWorks2012;  

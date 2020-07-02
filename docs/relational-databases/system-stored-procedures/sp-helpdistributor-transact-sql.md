@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 37b0983e-3b69-4f0f-977e-20efce0a0b97
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6d849e7d43cc73ca6153375f5e5b3772944af1f7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: cb2b1fb97504b50f2c26ddbfe26f67888f507328
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828981"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733226"
 ---
 # <a name="sp_helpdistributor-transact-sql"></a>sp_helpdistributor (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   列出有关分发服务器、分发数据库、工作目录和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理用户帐户的信息。 该存储过程在发布服务器上对发布数据库或任何数据库执行。  
   
@@ -48,7 +48,7 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
     [ , [ @publisher_type = ] 'publisher_type' OUTPUT ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @distributor = ] 'distributor' OUTPUT`分发服务器的名称。 分发服务器的默认值为**sysname**，默认 **%** 值为，它是返回结果集的唯一值。  
   
 `[ @distribdb = ] 'distribdb' OUTPUT`分发数据库的名称。 *distribdb*的类型为**sysname**，默认 **%** 值为，该值是返回结果集的唯一值。  

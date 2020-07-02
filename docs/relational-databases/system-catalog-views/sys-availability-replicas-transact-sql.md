@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 0a06e9b6-a1e4-4293-867b-5c3f5a8ff62c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f3d0e745d2c9f9db062733949134dc66903c93c6
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b924ccc5deb5b533bd593ccc50eca111ac52ce66
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832013"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752931"
 ---
 # <a name="sysavailability_replicas-transact-sql"></a>sys.availability_replicas (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 为属于 WSFC 故障转移群集中任何 AlwaysOn 可用性组的每个可用性副本都返回一行。  
   
@@ -52,8 +52,8 @@ ms.locfileid: "82832013"
 |**主要 \_ 角色 \_ 允许 \_ 连接 \_ desc**|**nvarchar(60)**|**主要角色的 \_ 说明 \_ 允许 \_ 连接**，其中一项是：<br /><br /> ALL<br /><br /> 读 \_ 写|  
 |**辅助 \_ 角色 \_ 允许 \_ 连接**|**tinyint**|正在履行辅助角色的可用性副本（也就是辅助副本）是否可以接受来自客户端的连接，可为下列值之一：<br /><br /> 0 = 否。 不允许连接到辅助副本中的数据库，且不支持读取这些数据库。 这是默认设置。<br /><br /> 1 = 只读。 仅允许针对辅助副本中的数据库进行只读连接。 副本中的所有数据库都可用于读访问。<br /><br /> 2 = 全部。 允许针对辅助副本中的数据库的所有连接进行只读访问。<br /><br /> 有关详细信息，请参阅[活动次要副本：可读次要副本（Always On 可用性组）](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。|  
 |**secondary_role_allow_connections_desc**|**nvarchar(60)**|**Secondary_role_allow_connections**的说明，请执行以下操作之一：<br /><br /> 是<br /><br /> READ_ONLY<br /><br /> ALL|  
-|**create_date**|**datetime**|副本的创建日期。<br /><br /> NULL = 副本不位于此服务器实例上。|  
-|**modify_date**|**datetime**|上次修改副本的日期。<br /><br /> NULL = 副本不位于此服务器实例上。|  
+|create_date|**datetime**|副本的创建日期。<br /><br /> NULL = 副本不位于此服务器实例上。|  
+|modify_date|**datetime**|上次修改副本的日期。<br /><br /> NULL = 副本不位于此服务器实例上。|  
 |**backup_priority**|**int**|表示相对于同一可用性组中的其他副本，在此副本上执行备份的用户指定的优先级。 该值是范围 0..100 中的整数。<br /><br /> 有关详细信息，请参阅[活动次要副本：次要副本备份（Always On 可用性组）](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。|  
 |**read_only_routing_url**|**nvarchar(256)**|只读可用性副本的连接端点 (URL)。 有关详细信息，请参阅 [为可用性组配置只读路由 (SQL Server)](../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)。|  
   
@@ -63,7 +63,7 @@ ms.locfileid: "82832013"
  要求具有服务器实例的 VIEW ANY DEFINITION 权限。  
   
 ## <a name="see-also"></a>另请参阅  
- [sys. availability_groups &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
+ [sys.availability_groups (Transact-SQL)](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
  [AlwaysOn 可用性组概述 (SQL Server)](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Always On 可用性组 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [&#40;Transact-sql 监视可用性组&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f3a43597-4c5a-4520-bcab-becdbbf81d2e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bc81a19350c3ba95b99c821d972c02dd112c18e7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4e21038736343ecce98ded93d87f32d64b7ebe4e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82809638"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750400"
 ---
 # <a name="sp_trace_create-transact-sql"></a>sp_trace_create (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   创建跟踪定义。 新的跟踪将处于停止状态。  
   
@@ -46,14 +46,14 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
      [ , [ @filecount = ] 'max_rollover_files' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @traceid = ] trace_id`为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 新的跟踪分配的数字。 用户提供的任何输入都被忽略。 *trace_id*的值为**int**，默认值为 NULL。 用户使用*trace_id*值标识、修改和控制此存储过程定义的跟踪。  
   
 `[ @options = ] option_value`指定为跟踪设置的选项。 *option_value*为**int**，没有默认值。 用户可以通过指定所选出选项之和来选择这些选项的组合。 例如，若要打开 TRACE_FILE_ROLLOVER 和 SHUTDOWN_ON_ERROR 的选项，请为*option_value*指定**6** 。  
   
  下表列出了选项、说明和选项值。  
   
-|选项名|选项值|说明|  
+|选项名|选项值|描述|  
 |-----------------|------------------|-----------------|  
 |TRACE_FILE_ROLLOVER|**2**|指定在达到*max_file_size*时，将关闭当前跟踪文件并创建新文件。 所有新记录都将写入新文件。 新文件将与前一个文件同名，但是在文件名后将附加一个整数以指示其序列。 例如，如果命名原始跟踪文件为 filename.trc，则命名下个跟踪文件为 filename_1.trc，命名再下一个跟踪文件为 filename_2.trc，等等。<br /><br /> 随着更多滚动更新跟踪文件的创建，附加到文件名的整数值继续增加。<br /><br /> 如果在指定此选项时未指定*max_file_size*的值，SQL Server 将使用*MAX_FILE_SIZE* （5 MB）的默认值。|  
 |SHUTDOWN_ON_ERROR|**4**|指定无论任何原因，如果不能将跟踪写入文件，则 SQL Server 将关闭。 执行安全审核跟踪时，该选项很有用。|  
@@ -91,7 +91,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 ## <a name="return-code-values"></a>返回代码值  
  下表说明在存储过程完成后用户可能获得的代码值。  
   
-|返回代码|说明|  
+|返回代码|描述|  
 |-----------------|-----------------|  
 |0|没有错误。|  
 |1|未知错误。|  
@@ -137,7 +137,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
     -   **Exception**  
   
-    -   **注重**  
+    -   **Attention**  
   
 -   无法在此跟踪中添加或删除事件或列。  
   

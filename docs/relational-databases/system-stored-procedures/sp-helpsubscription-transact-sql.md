@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ff96bcbf-e2b9-4da8-8515-d80d4ce86c16
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f6ad28ace9f8b3a1b4852c54e3e4f427bd22c06d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 43951ff65e904bcb0802f84793f9f2101bfd14e9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824426"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736936"
 ---
 # <a name="sp_helpsubscription-transact-sql"></a>sp_helpsubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   列出与特定的发布、项目、订阅服务器或订阅集关联的订阅信息。 此存储过程在发布服务器上对发布数据库执行。  
   
@@ -41,7 +41,7 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
     [ , [ @publisher = ] 'publisher' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publication = ] 'publication'`关联发布的名称。 *发布*为**sysname**，默认值为 **%** ，它返回此服务器的所有订阅信息。  
   
 `[ @article = ] 'article'`项目的名称。 *项目*的默认值为**sysname**，默认值为 **%** ，它返回所选发布和订阅服务器的所有订阅信息。 如果为**all**，则只为发布的完整订阅返回一个条目。  
@@ -67,7 +67,7 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |-----------------|---------------|-----------------|  
 |**订阅服务器**|**sysname**|订阅服务器的名称。|  
 |**发布**|**sysname**|发布的名称。|  
-|**下文**|**sysname**|项目的名称。|  
+|**文章**|**sysname**|项目的名称。|  
 |**目标数据库**|**sysname**|用于存放复制数据的目标数据库的名称。|  
 |**订阅状态**|**tinyint**|订阅状态：<br /><br /> **0** = 非活动<br /><br /> **1** = 已订阅<br /><br /> **2** = 活动|  
 |**同步类型**|**tinyint**|订阅同步类型：<br /><br /> **1** = 自动<br /><br /> **2** = 无|  

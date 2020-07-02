@@ -20,27 +20,27 @@ helpviewer_keywords:
 author: josack
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5720617f6652a8acb1ab8b6daf0e5e8919a86f8b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 01b0a68658112ebde642dde3f9c1fa0fb1d73c57
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74165000"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734745"
 ---
 # <a name="sysdm_exec_query_optimizer_memory_gateways-transact-sql"></a>sys. dm_exec_query_optimizer_memory_gateways （Transact-sql）
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
 返回用于限制并发查询优化的资源信号量的当前状态。
 
-|列|类型|说明|  
+|列|类型|描述|  
 |----------|---------------|-----------------|  
 |**pool_id**|**int**|Resource Governor 下的资源池 ID|  
-|**name**|**sysname**|编译入口名称（小型网关、中型网关、大网关）|
+|name|**sysname**|编译入口名称（小型网关、中型网关、大网关）|
 |**max_count**|**int**|已配置的并发编译的最大计数|
 |**active_count**|**int**|当前在此入口中编译的活动计数|
 |**waiter_count**|**int**|此入口中的等待进程数|
 |**threshold_factor**|**bigint**|阈值因子，定义查询优化使用的最大内存部分。  对于小型网关，threshold_factor 指示一个查询的最大优化器内存使用情况（以字节为单位），以便在小型网关中获取访问权限。  对于中型和大型网关，threshold_factor 显示此入口的可用服务器内存的部分。 它在计算入口的内存使用量阈值时用作除数。|
-|**阀**|**bigint**|下一个阈值内存（字节）。  如果其内存消耗达到此阈值，则需要查询才能获得对此网关的访问权限。  如果不需要查询即可获取此网关的访问权限，则为 "-1"。|
+|**threshold**|**bigint**|下一个阈值内存（字节）。  如果其内存消耗达到此阈值，则需要查询才能获得对此网关的访问权限。  如果不需要查询即可获取此网关的访问权限，则为 "-1"。|
 |**is_active**|**bit**|是否需要查询来传递当前入口。|
 
 
@@ -71,5 +71,5 @@ FROM sys.dm_exec_query_optimizer_memory_gateways;
 ## <a name="see-also"></a>另请参阅  
  [动态管理视图和函数 &#40;Transact-sql&#41;](./system-dynamic-management-views.md)   
  [与执行相关的动态管理视图和函数 (Transact-SQL)](./execution-related-dynamic-management-views-and-functions-transact-sql.md)  
-[如何使用 DBCC MEMORYSTATUS 命令监视 SQL Server 2005](https://support.microsoft.com/help/907877/how-to-use-the-dbcc-memorystatus-command-to-monitor-memory-usage-on-sql-server-2005)
-上的内存使用量[RESOURCE_SEMAPHORE_QUERY_COMPILE 在 SQL Server 2014 中的大型查询编译](https://support.microsoft.com/help/3024815/large-query-compilation-waits-on-resource-semaphore-query-compile-in-sql-server-2014)
+[如何使用 DBCC MEMORYSTATUS 命令监视 SQL Server 2005](https://support.microsoft.com/help/907877/how-to-use-the-dbcc-memorystatus-command-to-monitor-memory-usage-on-sql-server-2005) 
+ 上的内存使用量[大型查询编译在 SQL Server 2014 中等待 RESOURCE_SEMAPHORE_QUERY_COMPILE](https://support.microsoft.com/help/3024815/large-query-compilation-waits-on-resource-semaphore-query-compile-in-sql-server-2014)

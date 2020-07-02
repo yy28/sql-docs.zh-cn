@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6362e35e-0ab3-4638-855b-1ce013f5fd6d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f9adbc21b0c226746c879bf1b32377c93b2d76c1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c2495cf2bc8941e2c619255f4328eba6be1942a4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829247"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736732"
 ---
 # <a name="msmerge_identity_range_allocations-transact-sql"></a>MSmerge_identity_range_allocations (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   " **MSmerge_identity_range_allocations** " 表用于跟踪已发布项目的标识范围分配的历史记录，以及对发布服务器和订阅服务器的标识范围分配。 此表存储在分发数据库中。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "82829247"
 |**publisher_id**|**smallint**|发布服务器的 ID。|  
 |**publisher_db**|**nvarchar(128)**|发布数据库的名称。|  
 |**发布**|**nvarchar(128)**|发布的名称。|  
-|**下文**|**nvarchar(128)**|项目的名称。|  
+|**文章**|**nvarchar(128)**|项目的名称。|  
 |**订阅服务器**|**nvarchar(128)**|订阅服务器的名称。|  
 |**subscriber_db**|**nvarchar(128)**|订阅数据库的名称。|  
 |**is_pub_range**|**bit**|列出是否将标识范围分配给发布服务器。|  

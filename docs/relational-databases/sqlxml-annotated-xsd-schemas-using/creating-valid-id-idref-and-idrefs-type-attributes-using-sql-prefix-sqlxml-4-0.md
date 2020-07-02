@@ -24,15 +24,15 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 336db1dba88e245492fb4c2e9fcefddb751b59ab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 832607a376c8c08dbcdcff0c70278401a166a7f4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388189"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750811"
 ---
 # <a name="creating-valid-id-idref-and-idrefs-type-attributes-using-sqlprefix-sqlxml-40"></a>使用 sql:prefix 创建有效的 ID、IDREF 和 IDREFS 类型属性 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   可以将属性指定为 ID 类型属性。 然后，可以用指定为 IDREF 或 IDREFS 的属性引用 ID 类型属性，从而启用文档之间的链接。  
   
  ID、IDREF 和 IDREFS 大体上对应于数据库中的 PK/FK（主键/外键）关系。 在 XML 文档中，ID 类型属性的值必须是唯一的。 如果在 XML 文档中将**CustomerID**和**订单**ID 属性指定为 ID 类型，则这些值必须是唯一的。 但是，在数据库中，CustomerID 和 OrderID 列可以具有相同值。 （例如，CustomerID = 1 和 OrderID = 1 在数据库中都是有效的）。  
@@ -55,9 +55,9 @@ ms.locfileid: "81388189"
  若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[运行 SQLXML 示例的要求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-id-and-idrefs-types"></a>A. 指定 ID 和 IDREFS 类型  
- 在下面的架构中， ** \<Customer>** 元素由** \<Order>** 子元素组成。 Order>元素还具有一个子元素，即** \<OrderDetail>** 元素。 ** \<**  
+ 在下面的架构中， **\<Customer>** 元素由 **\<Order>** 子元素组成。 **\<Order>** 元素还有一个子元素，即 **\<OrderDetail>** 元素。  
   
- Customer>的**OrderIDList**属性是一个 IDREFS 类型属性，该属性引用** \<Order>** 元素的 "订单**id** " 属性。 ** \<**  
+ 的**OrderIDList**属性 **\<Customer>** 是一个 IDREFS 类型属性，该属性引用元素的 "**订单 id** " 属性 **\<Order>** 。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

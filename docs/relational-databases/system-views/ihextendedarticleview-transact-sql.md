@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 19ef0a12-3214-4bb0-9c25-a665897e65a2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 0abca8ca826ec986a9cbf71f4fb577291e095e39
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 36ffc832e8e79e93eb3b158e7f99cfb64cea2dd7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029541"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752654"
 ---
 # <a name="ihextendedarticleview-transact-sql"></a>IHextendedArticleView (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **IHextendedArticleView**视图显示有关非 SQL Server 发布中的项目的信息。 此视图存储在**分发**数据库中。  
   
@@ -33,14 +33,14 @@ ms.locfileid: "68029541"
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|发布服务器的唯一标识符。|  
 |**publication_id**|**int**|发布的唯一标识符。|  
-|**下文**|**sysname**|项目的名称。|  
+|**文章**|**sysname**|项目的名称。|  
 |**destination_object**|**sysname**|在订阅服务器上已发布对象的名称。|  
 |**source_owner**|**sysname**|在发布服务器上已发布对象的所有者。|  
 |**source_object**|**sysname**|在发布服务器上发布的对象的名称。|  
 |**2008**|**nvarchar(255)**|项目的说明。|  
 |**creation_script**|**nvarchar(255)**|项目的架构创建脚本。|  
 |**del_cmd**|**nvarchar(255)**|执行 DELETE 的命令。|  
-|**筛选器**|**int**|用于定义水平分区的存储过程的标识符。|  
+|**filter**|**int**|用于定义水平分区的存储过程的标识符。|  
 |**filter_clause**|**ntext**|用于水平筛选项目的 WHERE 子句。|  
 |**ins_cmd**|**nvarchar(255)**|执行 INSERT 的命令。|  
 |**pre_creation_cmd**|**tinyint**|DROP TABLE、DELETE TABLE 或 TRUNCATE 的预创建命令：<br /><br /> **0** = 无。<br /><br /> **1** = 删除。<br /><br /> **2** = 删除。<br /><br /> **3** = 截断。|  

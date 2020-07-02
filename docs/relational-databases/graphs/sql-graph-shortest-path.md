@@ -18,15 +18,15 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
-ms.openlocfilehash: 9318a34b4853937983b107491c9210de80e5506c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 18527b8a6d64a3dca27a0c5e8a99d36bf1d6d45a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056404"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753252"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH （Transact-sql）
-[!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver2019.md)]
 
   指定关系图的搜索条件，该搜索条件是以递归方式或重复方式搜索的。 可以在 SELECT 语句中与 graph 节点和边缘表匹配中使用 SHORTEST_PATH。 
   
@@ -85,7 +85,7 @@ STRING_AGG 函数采用表达式和分隔符作为输入并返回一个字符串
 ### <a name="last_value"></a>LAST_VALUE
 若要从遍历的路径的最后一个节点投影属性，可以使用 LAST_VALUE 聚合函数。 将边缘表别名作为此函数的输入提供是错误的，只能使用节点表名称或别名。
 
-**最后一个节点**：最后一个节点引用在遍历的路径中最后显示的节点，而不考虑匹配谓词中的箭头方向。 例如： `MATCH(SHORTEST_PATH(n(-(e)->p)+) )`。 此处，路径中的最后一个节点将是最后访问的 P 节点。 
+**最后一个节点**：最后一个节点引用在遍历的路径中最后显示的节点，而不考虑匹配谓词中的箭头方向。 例如：`MATCH(SHORTEST_PATH(n(-(e)->p)+) )`。 此处，路径中的最后一个节点将是最后访问的 P 节点。 
 
 相反，最后一个节点是此模式的输出关系图路径中的最后一个第 n 个节点：`MATCH(SHORTEST_PATH((n<-(e)-)+p))`    
 
@@ -93,7 +93,7 @@ STRING_AGG 函数采用表达式和分隔符作为输入并返回一个字符串
 此函数返回在遍历路径中显示的已提供节点/边缘属性值或表达式的总和。
 
 ### <a name="count"></a>COUNT
-此函数返回路径中所需节点/边缘属性的非 null 值的数量。 COUNT 函数支持带有节点或\*边界表别名的 "" 运算符。 如果没有节点或边缘表别名，则的使用\*不明确，将导致错误。
+此函数返回路径中所需节点/边缘属性的非 null 值的数量。 COUNT 函数支持 \* 带有节点或边界表别名的 "" 运算符。 如果没有节点或边缘表别名，则的使用 \* 不明确，将导致错误。
 
     {  COUNT( <expression> | <node_or_edge_alias>.* )  <order_clause>  }
 

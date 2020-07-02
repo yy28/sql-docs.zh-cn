@@ -20,30 +20,30 @@ ms.assetid: 136a76ee-2b35-4418-ab46-fda2d51f7d99
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 520a1e7e26df90d1431db2df79c55c74415a20d4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 44f10a61c79feea046b59c78e608022acfc77136
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831987"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752913"
 ---
 # <a name="sysevent_notifications-transact-sql"></a>sys.event_notifications (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   为事件通知的每个对象都返回一行，其中**sys. type** = EN。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|事件通知的名称。|  
-|**object_id**|**int**|对象标识号。 在数据库中是唯一的。|  
+|name|**sysname**|事件通知的名称。|  
+|object_id|**int**|对象标识号。 在数据库中是唯一的。|  
 |**parent_class**|**tinyint**|父级的类。<br /><br /> 0 = 数据库<br /><br /> 1 = 对象或列|  
 |**parent_class_desc**|**nvarchar(60)**|DATABASE<br /><br /> OBJECT_OR_COLUMN|  
 |**parent_id**|**int**|父对象的非零 ID。<br /><br /> 0 = 父类是数据库。|  
-|**create_date**|**datetime**|创建日期。|  
-|**modify_date**|**datetime**|始终等于**create_date**。|  
+|create_date|**datetime**|创建日期。|  
+|modify_date|**datetime**|始终等于**create_date**。|  
 |**service_name**|**nvarchar(256)**|向其发送通知的目标服务的名称。|  
 |**broker_instance**|**nvarchar(128)**|向其发送通知的 Broker 实例。|  
-|**principal_id**|**int**|拥有此事件通知的数据库主体的 ID。|  
+|principal_id|**int**|拥有此事件通知的数据库主体的 ID。|  
 |**creator_sid**|**varbinary （85）**|创建事件通知的登录的 SID。<br /><br /> 如果未指定 FAN_IN 选项，则为 NULL。|  
   
 ## <a name="permissions"></a>权限  

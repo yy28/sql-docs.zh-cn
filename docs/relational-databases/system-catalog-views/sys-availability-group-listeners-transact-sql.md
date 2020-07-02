@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: b5e7d1fb-3ffb-4767-8135-604c575016b1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5e4ae93cfcb4df935b3b006413ab8d8c884090ff
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8b4257c7a4eba52ece199ee3a3426774e92ce0da
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829108"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750708"
 ---
 # <a name="sysavailability_group_listeners-transact-sql"></a>sys.availability_group_listeners (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   对于每个 AlwaysOn 可用性组，返回零行（指明没有与可用性组关联的网络名称），或为 Windows Server 故障转移群集 (WSFC) 中的每个可用性组侦听程序配置都返回一行。 此视图显示从群集中收集的实时配置。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "82829108"
 |-----------------|---------------|-----------------|  
 |**group_id**|**uniqueidentifier**|[Sys. availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)中的可用性组 ID （**group_id**）。|  
 |**listener_id**|**nvarchar （36）**|群集资源 ID 的 GUID。|  
-|**dns_name**|**nvarchar （63）**|可用性组侦听器的已配置网络名称（主机名）。|  
+|dns_name|**nvarchar （63）**|可用性组侦听器的已配置网络名称（主机名）。|  
 |**port**|**int**|为可用性组侦听器配置的 TCP 端口号。<br /><br /> NULL = 侦听器在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 外部配置，并且其端口号尚未添加到可用性组。 若要添加端口，请 pleaseuse [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)语句的修改侦听器选项 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。|  
 |**is_conformant**|**bit**|此 IP 配置是否符合标准，可为下列值之一：<br /><br /> 1 = 侦听器符合标准。 只有 "或" 关系存在于其 Internet 协议（IP）地址中。 *相容*包含[CREATE AVAILABILITY GROUP](../../t-sql/statements/create-availability-group-transact-sql.md)语句创建的每个 IP 配置 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 此外，如果 IP 配置是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之外创建的（例如通过使用 WSFC 故障转移群集管理器），但可以通过 ALTER AVAILABILITY GROUP tsql 语句修改，该 IP 配置也符合标准。<br /><br /> 0 = 侦听器不符合标准。 通常，这表示无法通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命令配置的 IP 地址可以直接在 WSFC 群集中定义。|  
 |**ip_configuration_string_from_cluster**|**nvarchar(max)**|该侦听器的群集 IP 配置字符串（如果有）。 NULL = 侦听器没有虚拟 IP 地址。 例如：<br /><br /> IPv4 地址：`65.55.39.10`。<br /><br /> IPv6 地址：`2001::4898:23:1002:20f:1fff:feff:b3a3`|  

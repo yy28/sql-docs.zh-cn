@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 87c7c39c-8e05-4e68-9272-45f908809c3b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fb61b115689472c5be3ec14de2e7387de3317d4d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f5d5c822264682aa3fb6fd43d26f589aeb272f45
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82814120"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752746"
 ---
 # <a name="sysmail_help_account_sp-transact-sql"></a>sysmail_help_account_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   列出有关数据库邮件帐户的信息（密码除外）。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "82814120"
 sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'account_name' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @account_id = ] account_id`要列出其信息的帐户的帐户 ID。 *account_id*的值为**int**，默认值为 NULL。  
   
 `[ @account_name = ] 'account_name'`要列出其信息的帐户的名称。 *account_name*的默认值为**sysname**，默认值为 NULL。  
@@ -53,7 +53,7 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 |-|-|-|  
 |列名称|数据类型|说明|  
 |**account_id**|**int**|帐户 ID。|  
-|**name**|**sysname**|帐户名称。|  
+|name|**sysname**|帐户名称。|  
 |**2008**|**nvarchar(256)**|对帐户的说明。|  
 |**email_address**|**nvarchar(128)**|发送消息的电子邮件地址。|  
 |**display_name**|**nvarchar(128)**|帐户的显示名称。|  

@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: ac97121f-2bd0-4f71-8e45-42c8584edbc5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c08fd2235750a8a7be99b5290813331141ddf0de
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c3d7a464f3faba633dd09be12ef4c3d006ef19ef
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68055371"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738589"
 ---
 # <a name="sysfn_translate_permissions-transact-sql"></a>sys.fn_translate_permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   将 SQL 跟踪返回的权限位掩码翻译成权限名称表。  
   
@@ -42,8 +42,8 @@ ms.locfileid: "68055371"
 sys.fn_translate_permissions ( level , perms )  
 ```  
   
-## <a name="arguments"></a>参数  
- *调配*  
+## <a name="arguments"></a>自变量  
+ *级别*  
  应用该权限的安全对象的种类。 *级别*为**nvarchar （60）**。  
   
  *perms*  
@@ -53,13 +53,13 @@ sys.fn_translate_permissions ( level , perms )
  **table**  
   
 ## <a name="remarks"></a>备注  
- SQL 跟踪的**权限**列中返回的值是用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]来计算有效权限的位掩码的整数表示形式。 25 种安全对象中的每一种都有它自己的权限集，并且这些权限具有相应的数字值。 **sys. fn_translate_permissions**将此位掩码转换为权限名称表。  
+ SQL 跟踪的**权限**列中返回的值是用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 来计算有效权限的位掩码的整数表示形式。 25 种安全对象中的每一种都有它自己的权限集，并且这些权限具有相应的数字值。 **sys. fn_translate_permissions**将此位掩码转换为权限名称表。  
   
 ## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  
   
 ## <a name="example"></a>示例  
- 下面的查询使用`sys.fn_builtin_permissions`来显示应用于证书的权限，然后使用`sys.fn_translate_permissions`返回权限位掩码的结果。  
+ 下面的查询使用 `sys.fn_builtin_permissions` 来显示应用于证书的权限，然后使用 `sys.fn_translate_permissions` 返回权限位掩码的结果。  
   
 ```  
 SELECT * FROM sys.fn_builtin_permissions('CERTIFICATE');  

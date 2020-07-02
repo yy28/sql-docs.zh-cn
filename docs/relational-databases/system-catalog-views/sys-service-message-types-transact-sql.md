@@ -19,25 +19,25 @@ helpviewer_keywords:
 ms.assetid: 6a38709a-60fe-46f6-89da-718f74f15600
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d5c2b7a1ca52a22a189395164544ff6fb8adb687
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7fca6309675975b6c03c46f7724eb6acfe91e580
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831322"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752880"
 ---
 # <a name="sysservice_message_types-transact-sql"></a>sys.service_message_types (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Service Broker 中注册的每个消息类型都在该目录视图中占一行。
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|消息类型的名称，在数据库中是唯一的。 不可为 NULL。|  
+|name|**sysname**|消息类型的名称，在数据库中是唯一的。 不可为 NULL。|  
 |**message_type_id**|**int**|消息类型的标识符，在数据库中是唯一的。 不可为 NULL。|  
-|**principal_id**|**int**|拥有该消息类型的数据库主体的标识符。 可以为 null.|  
-|**检查**|**char(2)**|在发送该类型的消息之前由 Broker 执行的验证。 不可为 NULL。 下列其中一项：<br /><br /> N = 无<br /><br /> X = XML<br /><br /> E = 空|  
-|**validation_desc**|**nvarchar(60)**|在发送该类型的消息之前由 Broker 执行的验证的说明。 可以为 null. 下列其中一项：<br /><br /> 无<br /><br /> XML<br /><br /> EMPTY|  
+|principal_id|**int**|拥有该消息类型的数据库主体的标识符。 可以为 null.|  
+|**validation**|**char(2)**|在发送该类型的消息之前由 Broker 执行的验证。 不可为 NULL。 下列其中一项：<br /><br /> N = 无<br /><br /> X = XML<br /><br /> E = 空|  
+|**validation_desc**|**nvarchar(60)**|在发送该类型的消息之前由 Broker 执行的验证的说明。 可以为 null. 下列其中一项：<br /><br /> NONE<br /><br /> XML<br /><br /> EMPTY|  
 |**xml_collection_id**|**int**|对于使用 XML 架构的验证，使用该架构集合的标识符。<br /><br /> 否则为 NULL。|  
   
 ## <a name="permissions"></a>权限  

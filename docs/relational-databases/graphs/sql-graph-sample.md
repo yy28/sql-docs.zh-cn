@@ -15,18 +15,18 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1737ae8427df8d6d9bd6dbb9dea359da09f0c657
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b08fdf07bf73b8d485ce9334d8998e055454dcb2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68035876"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751155"
 ---
 # <a name="create-a-graph-database-and-run-some-pattern-matching-queries-using-t-sql"></a>使用 T-sql 创建图形数据库并运行一些模式匹配查询
 
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
-此示例提供了[!INCLUDE[tsql-md](../../includes/tsql-md.md)]一个脚本，用于创建具有节点和边缘的图形数据库，然后使用 new match 子句来匹配某些模式并遍历图形。 此示例脚本可用于 Azure SQL 数据库和[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
+此示例提供了一个 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 脚本，用于创建具有节点和边缘的图形数据库，然后使用 NEW match 子句来匹配某些模式并遍历图形。 此示例脚本可用于 Azure SQL 数据库和[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
 
 ## <a name="sample-schema"></a>示例架构
 
@@ -163,7 +163,7 @@ go
 ```
 
 ## <a name="script-explanation"></a>脚本说明  
-此脚本使用新的 T-sql 语法来创建节点和边缘表。 演示如何使用`INSERT`语句将数据插入到节点和边缘表中，并说明如何将`MATCH`子句用于模式匹配和导航。
+此脚本使用新的 T-sql 语法来创建节点和边缘表。 演示如何使用语句将数据插入到节点和边缘表中 `INSERT` ，并说明如何将 `MATCH` 子句用于模式匹配和导航。
 
 |命令    |说明
 |---  |---  |

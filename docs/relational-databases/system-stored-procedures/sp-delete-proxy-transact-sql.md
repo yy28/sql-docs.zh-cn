@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 44a1db13-b7f2-4dab-a1b5-b8dafb41737c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 53f9e9f32a017427bc23dcf618cd119daa94bdbc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 355940ed8d91576fce7068e0400a533dee1f3406
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833306"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750560"
 ---
 # <a name="sp_delete_proxy-transact-sql"></a>sp_delete_proxy (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   删除指定代理。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "82833306"
 sp_delete_proxy [ @proxy_id = ] id , [ @proxy_name = ] 'proxy_name'  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @proxy_id = ] id`要删除的代理的代理标识号。 *Proxy_id*的值为**int**，默认值为 NULL。  
   
 `[ @proxy_name = ] 'proxy_name'`要删除的代理的名称。 *Proxy_name*的值为**sysname**，默认值为 NULL。  

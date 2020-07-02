@@ -18,16 +18,16 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 8ccb2a6e1e8201fe623839fc52f4f0b99b789bbf
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fc501f372cbeacfb2bc0f6172c9295b4b28a3076
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820825"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738604"
 ---
 # <a name="sysdm_geo_replication_link_status-azure-sql-database"></a>sys.dm_geo_replication_link_status（Azure SQL 数据库）
 
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   在异地复制合作关系中，主数据库和辅助数据库之间的每个复制链接都包含一行。 这包括主数据库和辅助数据库。 如果给定主数据库有多个连续复制链接，此表将对每种关系包含一行。 将在所有数据库（包括逻辑 master）中创建该视图。 但是，在主数据库中查询此视图将返回空集合。  
   

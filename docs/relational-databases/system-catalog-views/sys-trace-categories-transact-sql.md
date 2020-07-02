@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: f6a86766-e2a9-4d9f-a073-1b59e888ba7d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4898bdb8e05c2b2fce20ca30ef7f056107a4befa
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8ebbce0ef5bf49b1105a5ce7306011b4f7e512e7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821264"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733416"
 ---
 # <a name="systrace_categories-transact-sql"></a>sys.trace_categories (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   将相似事件类按类别分组。 **Sys.databases. trace_categories**目录视图中的每一行标识一个在服务器中唯一的类别。 在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的给定版本中，这些类别不变。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "82821264"
 |-----------------|---------------|-----------------|  
 |**category_id**|**smallint**|此类别的唯一 ID。 此列也位于**trace_events sys.databases**目录视图中。|  
 |**name**|**nvarchar(128)**|此类别的唯一名称。 此参数未本地化。|  
-|type |**tinyint**|类别类型：<br /><br /> 0 = 正常<br /><br /> 1 = 连接<br /><br /> 2 = 错误|  
+|**type**|**tinyint**|类别类型：<br /><br /> 0 = 正常<br /><br /> 1 = 连接<br /><br /> 2 = 错误|  
   
 ## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  

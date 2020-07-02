@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fb3ab70170f1b96bcfd62a9d7108792871ccd5d7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3a31eb5fa85ab7634d6fc65ac446607117ec70ad
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828951"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738523"
 ---
 # <a name="sp_helpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   报告有关指定数据库或所有数据库的信息。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "82828951"
 sp_helpdb [ [ @dbname= ] 'name' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @dbname = ] 'name'`要报告其信息的数据库的名称。 *名称*为**sysname**，无默认值。 如果未指定*名称*，则在**sys.databases**目录视图中的所有数据库上**sp_helpdb**报告。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -48,7 +48,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|数据库名称。|  
+|name|**sysname**|数据库名称。|  
 |**db_size**|**nvarchar （13）**|数据库总计大小。|  
 |**owner**|**sysname**|数据库所有者，如**sa**。|  
 |**dbid**|**smallint**|数据库 ID。|  
@@ -62,7 +62,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |-----------------|---------------|-----------------|  
 |**name**|**nchar(128)**|逻辑文件名。|  
 |**fileid**|**smallint**|文件 ID。|  
-|**名字**|**nchar （260）**|操作系统文件名（物理文件名称）。|  
+|**filename**|**nchar （260）**|操作系统文件名（物理文件名称）。|  
 |**filegroup**|**nvarchar(128)**|文件所属的文件组。<br /><br /> NULL = 文件为日志文件。 它决不是文件组的一部分。|  
 |size |**nvarchar （18）**|文件大小 (MB)。|  
 |**maxsize**|**nvarchar （18）**|文件大小可达到的最大值。 此字段中的 UNLIMITED 值表示文件可以一直增长到磁盘变满为止。|  

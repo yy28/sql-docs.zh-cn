@@ -20,15 +20,15 @@ ms.assetid: a5052701-edbf-4209-a7cb-afc9e65c41c1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a95bd2d98f84c288662838e030961bd4a753cff3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c57cc3e4be2683ec0dee5e9cc209718bf97b3859
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829292"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752861"
 ---
 # <a name="sysdm_os_threads-transact-sql"></a>sys.dm_os_threads (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   返回在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程中运行的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 操作系统线程的列表。  
   
@@ -50,9 +50,9 @@ ms.locfileid: "82829292"
 |stack_bytes_committed|**int**|在堆栈中提交的字节数。|  
 |stack_bytes_used|**int**|线程目前使用的字节数。|  
 |affinity|**bigint**|该线程运行时使用的 CPU 掩码。 这取决于**ALTER SERVER CONFIGURATION SET PROCESS 地缘**语句配置的值。 在软关联的情况下，可能与计划程序不同。|  
-|Priority|**int**|该线程的优先级值。|  
-|区域设置|**int**|线程的缓存区域设置 LCID。|  
-|令牌|**varbinary(8)**|线程的缓存模拟令牌句柄。|  
+|优先度|**int**|该线程的优先级值。|  
+|Locale|**int**|线程的缓存区域设置 LCID。|  
+|标记|**varbinary(8)**|线程的缓存模拟令牌句柄。|  
 |is_impersonating|**int**|指示该线程是否使用 Win32 模拟。<br /><br /> 1 = 该线程使用与进程默认的安全凭据不同的安全凭据。 这表明线程正在模拟创建该进程的实体以外的其他实体。|  
 |is_waiting_on_loader_lock|**int**|指示线程是否正在等待加载程序锁的操作系统状态。|  
 |fiber_data|**varbinary(8)**|线程当前运行的 Win32 纤程。 只有在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置了轻型池时，这才适用。|  

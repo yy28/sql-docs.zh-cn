@@ -1,5 +1,5 @@
 ---
-title: dbo. sysjobhistory （Transact-sql） |Microsoft Docs
+title: dbo.sysjobhistory （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/24/2019
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 1b1fcdbb-2af2-45e6-bf3f-e8279432ce13
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2ff3c872b195123608c12515fb3c19a03c3e3f44
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 43c35f7963ec7b817f6bcf98f95f950c4fc0a5fb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82807021"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736877"
 ---
 # <a name="dbosysjobhistory-transact-sql"></a>dbo.sysjobhistory (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
 包含有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理执行预定作业的信息。
   
@@ -53,7 +53,7 @@ ms.locfileid: "82807021"
 |**operator_id_netsent**|**int**|作业完成时用消息通知的操作员的 ID。|  
 |**operator_id_paged**|**int**|作业完成时用寻呼通知的操作员的 ID。|  
 |**retries_attempted**|**int**|尝试执行作业或步骤的重试次数。|  
-|**服务**|**sysname**|执行作业时所在服务器的名称。|  
+|服务器|**sysname**|执行作业时所在服务器的名称。|  
   
   ## <a name="example"></a>示例
  下面的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询将**run_time**和**run_duration**列转换为更加用户友好格式。  在中执行脚本 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。

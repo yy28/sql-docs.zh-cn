@@ -21,21 +21,21 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aa359c1c1e855c3652d7c6486d3993f588bae46d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 700d2cb18bad966e1a2edfd1f11e5fde9ac1b040
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388195"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750853"
 ---
 # <a name="creating-cdata-sections-using-sqluse-cdata-sqlxml-40"></a>使用 sql:use-cdata 创建 CDATA 节 (SQLXML 4.0)
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   在 XML 中，CDATA 节用于对那些所含字符不转义则会识别为标记字符的特定文本块进行转义。  
   
- Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的数据库有时可能包含由 XML 分析器视为标记字符的字符;例如，尖括号（< 和 >）、小于号或等于符号（<=）以及与号（&）都被视为标记字符。 但是，可以在 CDATA 节中对这类特殊字符进行包装，使它们不被视为标记字符。 XML 语法分析程序将 CDATA 节中的文本视为纯文本。  
+ Microsoft 中的数据库 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 有时可以包含由 XML 分析器视为标记字符的字符; 例如，尖括号（< 和 >）、小于或等于符号（<=）以及与号（&）被视为标记字符。 但是，可以在 CDATA 节中对这类特殊字符进行包装，使它们不被视为标记字符。 XML 语法分析程序将 CDATA 节中的文本视为纯文本。  
   
- **Sql： use-cdata**批注用于指定由[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回的数据应包装在 cdata 部分中（也就是说，它指示由**sql： field**指定的列中的值是否应包含在 cdata 节中）。 只能在映射到数据库列的元素上指定**sql： use-cdata**批注。  
+ **Sql： use-cdata**批注用于指定由返回的数据 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 应包装在 cdata 部分中（也就是说，它指示由**sql： field**指定的列中的值是否应包含在 cdata 节中）。 只能在映射到数据库列的元素上指定**sql： use-cdata**批注。  
   
  **Sql： use-cdata**批注采用布尔值（0 = false，1 = true）。 可接受的值为 0、1、true 和 false。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "81388195"
  若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[运行 SQLXML 示例的要求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-sqluse-cdata-on-an-element"></a>A. 在元素上指定 sql:use-cdata  
- 在下面的架构中，对于** \<地址>** 元素中的** \<AddressLine1>** ， **sql： use-cdata**设置为1（True）。 结果，将在 CDATA 节中返回数据。  
+ 在下面的架构中， **sql： use-cdata**在元素内设置为1（True） **\<AddressLine1>** **\<Address>** 。 结果，将在 CDATA 节中返回数据。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

@@ -13,15 +13,15 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ed1216a0afd9091af7a0597592310eb457a4cbe
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1143407da0e09d801e4ac75ae364c6c08d670040
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304407"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753069"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>在服务器和客户端之间执行的转换
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   本主题说明在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]（或更高版本）与使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 编写的客户端应用程序之间执行的日期/时间转换。  
   
@@ -30,25 +30,25 @@ ms.locfileid: "81304407"
   
 |转换后 -><br /><br /> From|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
-|日期|1,7|OK|-|-|1|1,3|1,7|-|OK (VT_BSTR)|OK|OK|4|4|  
-|时间|5、6、7|-|9|OK|6|3、6|5、6|-|OK (VT_BSTR)|OK|OK|4|4|  
-|Smalldatetime|7|8|9,10|10|OK|3|7|-|7 (VT_DATE)|OK|OK|4|4|  
-|Datetime|5、7|8|9,10|10|OK|3|7|-|7 (VT_DATE)|OK|OK|4|4|  
-|Datetime2|5、7|8|9,10|10|7|3|5、7|-|OK (VT_BSTR)|OK|OK|4|4|  
-|Datetimeoffset|5、7、11|8，11|9、10、11|10，11|7、11|OK|5、7、11|-|OK (VT_BSTR)|OK|OK|4|4|  
-|Char、Varchar、<br /><br /> Nchar、Nvarchar|7, 13|12|12、9|12|12|12|7、13|不适用|空值|空值|空值|空值|空值|  
-|Sql_variant<br /><br /> (datetime)|7|8|9,10|10|OK|3|7|-|7(VT_DATE)|OK|OK|4|4|  
-|Sql_variant<br /><br /> (smalldatetime)|7|8|9,10|10|OK|3|7|-|7(VT_DATE)|OK|OK|4|4|  
-|Sql_variant<br /><br /> (date)|1,7|OK|2|2|1|1,3|1,7|-|OK(VT_BSTR)|OK|OK|4|4|  
-|Sql_variant<br /><br /> (time)|5、6、7|2|6|OK|6|3、6|5、6|-|OK(VT_BSTR)|OK|OK|4|4|  
-|Sql_variant<br /><br /> (datetime2)|5、7|8|9,10|10|OK|3|5、7|-|OK(VT_BSTR)|OK|OK|4|4|  
-|Sql_variant<br /><br /> (datetimeoffset)|5、7、11|8，11|9、10、11|10，11|7、11|OK|5、7、11|-|OK(VT_BSTR)|OK|OK|4|4|  
+|Date|1,7|确定|-|-|1|1,3|1,7|-|OK (VT_BSTR)|确定|OK|4|4|  
+|时间|5、6、7|-|9|确定|6|3、6|5、6|-|OK (VT_BSTR)|确定|OK|4|4|  
+|Smalldatetime|7|8|9,10|10|确定|3|7|-|7 (VT_DATE)|确定|OK|4|4|  
+|datetime|5、7|8|9,10|10|确定|3|7|-|7 (VT_DATE)|确定|OK|4|4|  
+|Datetime2|5、7|8|9,10|10|7|3|5、7|-|OK (VT_BSTR)|确定|OK|4|4|  
+|Datetimeoffset|5、7、11|8，11|9、10、11|10,11|7、11|确定|5、7、11|-|OK (VT_BSTR)|确定|OK|4|4|  
+|Char、Varchar、<br /><br /> Nchar、Nvarchar|7, 13|12|12、9|12|12|12|7、13|不可用|空值|空值|空值|空值|空值|  
+|Sql_variant<br /><br /> (datetime)|7|8|9,10|10|确定|3|7|-|7(VT_DATE)|确定|OK|4|4|  
+|Sql_variant<br /><br /> (smalldatetime)|7|8|9,10|10|确定|3|7|-|7(VT_DATE)|确定|OK|4|4|  
+|Sql_variant<br /><br /> (date)|1,7|确定|2|2|1|1,3|1,7|-|OK(VT_BSTR)|确定|OK|4|4|  
+|Sql_variant<br /><br /> (time)|5、6、7|2|6|确定|6|3、6|5、6|-|OK(VT_BSTR)|确定|OK|4|4|  
+|Sql_variant<br /><br /> (datetime2)|5、7|8|9,10|10|确定|3|5、7|-|OK(VT_BSTR)|确定|OK|4|4|  
+|Sql_variant<br /><br /> (datetimeoffset)|5、7、11|8，11|9、10、11|10,11|7、11|确定|5、7、11|-|OK(VT_BSTR)|确定|OK|4|4|  
   
 ## <a name="key-to-symbols"></a>符号含义  
   
 |符号|含义|  
 |------------|-------------|  
-|OK|不需要任何转换。|  
+|确定|不需要任何转换。|  
 |-|不支持任何转换。 如果在调用 IAccessor::CreateAccessor 时验证绑定，则在 rgStatus** 中返回 DBBINDSTATUS_UPSUPPORTEDCONVERSION。 当延迟取值函数验证时，则设置 DBSTATUS_E_BADACCESSOR。|  
 |1|时间字段设置为零。|  
 |2|设置 DBSTATUS_E_CANTCONVERTVALUE。|  

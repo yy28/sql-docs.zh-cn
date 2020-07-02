@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8bdd22f7-c268-49b6-820c-3fe603feb128
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: d88db9492489175ab12e2f808b846899a1bf4a5f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3c89e15e2a5da3a33afc5641ac9d96c468afb20c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67910114"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750121"
 ---
 # <a name="sysextendedarticlesview-transact-sql"></a>sysextendedarticlesview (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **Sysextendedarticlesview**视图提供有关已发布项目的信息。 此视图存储在分发数据库中。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "67910114"
 |**del_cmd**|**nvarchar(255)**|在 DELETE 时所执行的命令；否则根据日志构造。|  
 |**2008**|**nvarchar(255)**|项目的描述性条目。|  
 |**dest_table**|**nvarchar(128)**|目标表的名称。|  
-|**筛选器**|**int**|用于水平分区的存储过程的对象标识符。|  
+|**filter**|**int**|用于水平分区的存储过程的对象标识符。|  
 |**filter_clause**|**ntext**|项目的 WHERE 子句，用于水平筛选。|  
 |**ins_cmd**|**nvarchar(255)**|要对 INSERT 执行的命令。|  
 |**name**|**nvarchar(128)**|与项目关联的名称，在发布内是唯一的。|  

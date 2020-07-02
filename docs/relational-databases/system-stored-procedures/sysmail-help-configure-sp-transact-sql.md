@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8a29933568cec147dc27ff7c9b5f026d62856e5b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 058d611f1ee9eaf73d8ca8c022728fb1920091ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82807718"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752731"
 ---
 # <a name="sysmail_help_configure_sp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   显示数据库邮件的配置设置。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "82807718"
 sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @parameter_name = ] 'parameter_name'`要检索的配置设置的名称。 如果指定此参数，则将在** \@ parameter_value**输出参数中返回配置设置的值。 当未指定** \@ parameter_name**时，此存储过程将返回一个结果集，其中包含实例中的所有数据库邮件配置设置。  
   
 ## <a name="return-code-values"></a>返回代码值  

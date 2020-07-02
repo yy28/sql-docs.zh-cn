@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 0dd5b794-733b-4a3c-b5a4-62f9f1f0f22d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b84e1002f84cbcd0117ed79253b611f3e6ca4da3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 303fe8085ae4d103ede7715dcbb46e456db8f01f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823608"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752947"
 ---
 # <a name="database-mirroring-witness-catalog-views---sysdatabase_mirroring_witnesses"></a>数据库镜像见证服务器目录视图-sys. database_mirroring_witnesses
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   服务器在数据库镜像合作关系中充当的每个见证服务器角色在表中都占用一行。 
   
@@ -41,7 +41,7 @@ ms.locfileid: "82823608"
 |**principal_server_name**|**sysname**|伙伴服务器的名称，该服务器的数据库副本当前是主体数据库。|  
 |**mirror_server_name**|**sysname**|伙伴服务器的名称，该服务器的数据库副本当前是镜像数据库。|  
 |**safety_level**|**tinyint**|镜像数据库中更新的事务安全设置：<br /><br /> 0 = 未知状态<br /><br /> 1 = Off（异步）<br /><br /> 2 = Full（同步）<br /><br /> 使用自动故障转移的见证服务器要求具有完全事务安全性，这是默认设置。|  
-|**safety_level_desc**|**nvarchar(60)**|对镜像数据库中更新的安全保证的说明：<br /><br /> UNKNOWN<br /><br /> OFF<br /><br /> FULL|  
+|**safety_level_desc**|**nvarchar(60)**|对镜像数据库中更新的安全保证的说明：<br /><br /> 未知<br /><br /> OFF<br /><br /> FULL|  
 |**safety_sequence_number**|**int**|更新**safety_level**更改的序列号。|  
 |**role_sequence_number**|**int**|镜像伙伴所充当的主体/镜像数据库角色的更改的更新序列号。|  
 |**mirroring_guid**|**uniqueidentifier**|镜像合作关系的标识符。|  

@@ -21,17 +21,17 @@ ms.assetid: 96b28abb-b059-48db-be2b-d60fe127f6aa
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aade9e02515e0d18e4edae188d72e5edafebbd3f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b805e9db3c9a5472f78cffd24624cf0a26a463dd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68059194"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738594"
 ---
 # <a name="sysfn_virtualfilestats-transact-sql"></a>sys.fn_virtualfilestats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  返回数据库文件（包括日志文件）的 I/O 统计信息。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，也可以从[sys.databases. dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md)动态管理视图获取此信息。  
+  返回数据库文件（包括日志文件）的 I/O 统计信息。 在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，也可以从[sys.databases. dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md)动态管理视图获取此信息。  
 
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,7 +42,7 @@ ms.locfileid: "68059194"
 fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *database_id* |无效  
  数据库的 ID。 database_id 的数据类型为 int，无默认值******。 指定 NULL 可返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中所有数据库的信息。  
   
@@ -55,7 +55,7 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 |-----------------|---------------|-----------------|  
 |**DbId**|**smallint**|数据库 ID。|  
 |**FileId**|**smallint**|文件 ID。|  
-|**标志**|**bigint**|提取数据时的数据库时间戳。 **int**在之前[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]的版本中为 int。 |  
+|**标志**|**bigint**|提取数据时的数据库时间戳。 在之前的版本中为**int** [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 。 |  
 |**NumberReads**|**bigint**|对文件发出的读取次数。|  
 |**BytesRead**|**bigint**|对文件发出的读取字节数。|  
 |**IoStallReadMS**|**bigint**|用户等待文件的读取 I/O 完成所费的总时间（以毫秒为单位）。|  
@@ -84,7 +84,7 @@ GO
 ```  
   
 ### <a name="b-displaying-statistical-information-for-a-named-database-and-file"></a>B. 显示命名数据库和文件的统计信息  
- 以下示例显示 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 示例数据库中日志文件的统计信息。 系统函数`DB_ID`用于指定*database_id*参数。  
+ 以下示例显示 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 示例数据库中日志文件的统计信息。 系统函数 `DB_ID` 用于指定*database_id*参数。  
   
 ```sql  
 SELECT *  

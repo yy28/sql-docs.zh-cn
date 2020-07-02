@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 61b9be77-e2f6-4da1-b2ae-a62cbe226145
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 287acb7986b3e518260f82278f8079391932ab6f
-ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
+ms.openlocfilehash: be33120bd19561055095fb81f4a4595edbcf394f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82262143"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734350"
 ---
 # <a name="sysfn_hadr_backup_is_preferred_replica--transact-sql"></a>sys. fn_hadr_backup_is_preferred_replica （Transact-sql）
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   用于确定当前副本是否为首选备份副本。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "82262143"
 sys.fn_hadr_backup_is_preferred_replica ( 'dbname' )  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  "*dbname*"  
  要备份的数据库的名称。 *dbname*的类型为 sysname。  
   
@@ -78,8 +78,8 @@ GO
 ## <a name="see-also"></a>另请参阅  
  [Always On 可用性组函数 &#40;Transact-sql&#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
  [Always On 可用性组 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [&#40;Transact-sql&#41;创建可用性组](../../t-sql/statements/create-availability-group-transact-sql.md)   
- [更改可用性组 &#40;Transact-sql&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
+ [CREATE AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/create-availability-group-transact-sql.md)   
+ [ALTER AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/alter-availability-group-transact-sql.md)   
  [活动辅助副本：辅助副本上的备份 &#40;Always On 可用性组&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) [Always On 可用性组目录视图 &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)      
   
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e4546c13-9fba-4bab-8b42-d6f18b33ec25
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0aad616275d635ac32d6e81dbc5321db0db58b34
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 193760ec432a67b8cf428f7e0207d6fd8174a5c6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68019937"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750505"
 ---
 # <a name="sp_revoke_login_from_proxy-transact-sql"></a>sp_revoke_login_from_proxy (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   删除对安全主体服务器的代理的访问权。  
   
@@ -41,8 +41,8 @@ sp_revoke_login_from_proxy
     [ @proxy_name = ] 'proxy_name'  
 ```  
   
-## <a name="arguments"></a>参数  
-`[ @name = ] 'name'`要删除其访问[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]权限的登录名、服务器角色或**msdb**数据库角色的名称。 *名称*为**nvarchar （256）** ，无默认值。  
+## <a name="arguments"></a>自变量  
+`[ @name = ] 'name'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]要删除其访问权限的登录名、服务器角色或**msdb**数据库角色的名称。 *名称*为**nvarchar （256）** ，无默认值。  
   
 `[ @proxy_id = ] id`要删除其访问权限的代理的 id。 必须指定*id*或*proxy_name* ，但不能同时指定两者。 *Id*为**int**，默认值为 NULL。  
   

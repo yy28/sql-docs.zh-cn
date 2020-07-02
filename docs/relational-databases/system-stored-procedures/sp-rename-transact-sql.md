@@ -21,15 +21,15 @@ ms.assetid: bc3548f0-143f-404e-a2e9-0a15960fc8ed
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ac92f07acb7e7322adcf00e09774f72e93e39963
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d1d9daa3350d252b6ef11c1dda88fc1383964e08
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826551"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751657"
 ---
 # <a name="sp_rename-transact-sql"></a>sp_rename (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   在当前数据库中更改用户创建对象的名称。 此对象可以是表、索引、列、别名数据类型或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 公共语言运行时（CLR）用户定义类型。  
   
@@ -46,7 +46,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
     [ , [ @objtype = ] 'object_type' ]   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  [ @objname =] "*object_name*"  
  用户对象或数据类型的当前限定或非限定名称。 如果要重命名的对象是表中的列，则*object_name*必须是表的形式。*列*或*架构。* 如果要重命名的对象是一个索引，则*object_name*必须是表的形式。*索引*或*架构。* 如果要重命名的对象是一个约束，则*object_name*的格式必须为*schema。*  
   
@@ -61,7 +61,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
  [ @objtype =] "*object_type*"  
  要重命名的对象的类型。 *object_type*为**varchar （13）**，默认值为 NULL，可以是下列值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |COLUMN|要重命名的列。|  
 |DATABASE|用户定义数据库。 重命名数据库时需要此对象类型。|  

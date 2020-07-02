@@ -20,21 +20,21 @@ ms.assetid: c962c619-e18f-4315-9251-8d9862462299
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 883469cb57a9735ccfc27ecaafa85fedd41cf9b3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0af2974f9f2372430bcb6a1672e2bcaa8b5dadf1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821910"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733491"
 ---
 # <a name="syscomputed_columns-transact-sql"></a>sys.computed_columns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   对于作为计算列的**sys.databases**列中的每一列都包含一行。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**\<继承列>**||**Sys. computed_columns**视图返回**sys.databases**视图中的所有列。 它还返回如下所述的其他列。 有关**sys.databases computed_columns**视图继承自**sys.databases**的列的说明，请参阅[&#40;transact-sql&#41;的 sys.databases。 ](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) 在**sys. computed_columns**视图中， **is_computed**列的值始终设置为1。|  
+|**\<Inherited columns>**||**Sys. computed_columns**视图返回**sys.databases**视图中的所有列。 它还返回如下所述的其他列。 有关**sys.databases computed_columns**视图继承自**sys.databases**的列的说明，请参阅[&#40;transact-sql&#41;的 sys.databases。 ](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) 在**sys. computed_columns**视图中， **is_computed**列的值始终设置为1。|  
 |**definition**|**nvarchar(max)**|定义该计算列的 SQL 文本。|  
 |**uses_database_collation**|**bit**|1 = 列定义依赖数据库的默认排序规则进行正确计算；否则为 0。 这种依赖关系可防止更改数据库的默认排序规则。|  
 |**is_persisted**|**bit**|计算列是持久化的。|  

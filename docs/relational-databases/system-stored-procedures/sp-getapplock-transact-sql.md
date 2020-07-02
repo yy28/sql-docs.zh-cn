@@ -19,15 +19,15 @@ ms.assetid: e1e85908-9f31-47cf-8af6-88c77e6f24c9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3b415e24ec1b81ed660f1ca43b3d4283d11c8e44
-ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
+ms.openlocfilehash: 7f1072cf996bf32c9511586c24cd6eb8dbb920f6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84423181"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752816"
 ---
 # <a name="sp_getapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   对应用程序资源设置锁。  
   
@@ -45,7 +45,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 [ ; ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  [ @Resource =] "*resource_name*"  
  指定标识锁资源的名称的字符串。 应用程序必须确保该资源名称是唯一的。 指定的名称经过内部哈希运算后成为可以存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 锁管理器中的值。 *resource_name*为**nvarchar （255）** ，无默认值。 如果资源字符串的长度超过**nvarchar （255）**，则它将被截断为**nvarchar （255）**。  
   
@@ -69,7 +69,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 ## <a name="return-code-values"></a>返回代码值  
  \>= 0 （成功）或 < 0 （失败）  
   
-|“值”|结果|  
+|值|结果|  
 |-----------|------------|  
 |0|锁已同时成功授予。|  
 |1|在等待释放其他不兼容锁后成功授予锁。|  
@@ -78,7 +78,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 |-3|选择锁请求作为死锁牺牲品。|  
 |-999|指示参数验证或其他调用错误。|  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  对资源设置的锁与当前事务或当前会话相关联。 当事务提交或回滚时，将释放与当前事务相关联的锁。 当会话注销时，将释放与会话关联的锁。当服务器出于任何原因而关闭时，将释放所有锁定。  
   
  sp_getapplock 创建的锁资源在会话的当前数据库中创建。 每个锁资源都由下列值的组合值进行标识：  
@@ -111,7 +111,7 @@ GO
   
  如果应用程序锁发生死锁，则该死锁不会回滚请求此应用程序锁的事务。 必须手动完成任何可能需要作为返回值结果的回滚。 因此，建议在代码中使用错误检查，如果返回某些值（例如 -3），则启动 ROLLBACK TRANSACTION 或替代操作。  
   
- 下面是一个示例：  
+ 以下是示例：  
   
 ```  
 USE AdventureWorks2012;  

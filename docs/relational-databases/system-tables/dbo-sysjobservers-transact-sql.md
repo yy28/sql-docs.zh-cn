@@ -1,5 +1,5 @@
 ---
-title: dbo. sysjobservers （Transact-sql） |Microsoft Docs
+title: dbo.sysjobservers （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/26/2019
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 9abcc20f-a421-4591-affb-62674d04575e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 50bc55ab39f61e8c1588770b3b1a0adec82d6f53
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e9a634b9b190747e37b1376ea2b38adf842ef4fd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82806893"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736845"
 ---
 # <a name="dbosysjobservers-transact-sql"></a>dbo.sysjobservers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
 存储特定作业与一个或多个目标服务器的关联或关系。 该表存储在 msdb 数据库中。
   

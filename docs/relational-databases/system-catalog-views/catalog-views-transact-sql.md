@@ -23,16 +23,16 @@ ms.assetid: 13bccc2f-ed3c-4b58-abd0-ca8bf34a66b8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9532ee19ec8489caa51d090feaff464e030a0da0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4f53f49e8418b8fb178a8fd1689c3bc64a8b0a0a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68670549"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733617"
 ---
 # <a name="system-catalog-views-transact-sql"></a>系统目录视图（Transact-sql）
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
 目录视图返回 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]使用的信息。 建议您使用目录视图这一最常用的目录元数据界面，它可为您提供最有效的方法来获取、转换并显示此信息的自定义形式。 所有用户可用的目录元数据都通过目录视图来显示。
 
@@ -45,7 +45,7 @@ ms.locfileid: "68670549"
 - 派生视图包含列的超集和行的子集。
 
 > [!IMPORTANT]
-> 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中，[!INCLUDE[msCoName](../../includes/msconame-md.md)] 可能会通过在列列表的末尾添加列来扩充任何系统目录视图的定义。 建议你不要在生产代码中\*使用语法 SELECT *catalog_view_name* FROM，因为返回的列数可能会更改并中断你的应用程序。
+> 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中，[!INCLUDE[msCoName](../../includes/msconame-md.md)] 可能会通过在列列表的末尾添加列来扩充任何系统目录视图的定义。 建议你不要 \* 在生产代码中使用语法 SELECT *catalog_view_name* FROM，因为返回的列数可能会更改并中断你的应用程序。
 
  中的目录视图具有如下类别：
 

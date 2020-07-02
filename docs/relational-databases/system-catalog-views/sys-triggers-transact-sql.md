@@ -20,15 +20,15 @@ ms.assetid: cefa4fc4-b8b9-4cd7-b124-eed5283acbfc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e2110ba25cf28c344f7e48c9bf8066d1b11381bd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8bcf1832c8f25da9ac10274c3dac2f6d120c98ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831301"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733413"
 ---
 # <a name="systriggers-transact-sql"></a>sys.triggers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   每个类型为 TR 或 TA 的触发器对象对应一行。 DML 触发器名称是架构作用域的，因此在**sys.databases**中可见。 DDL 触发器名称的作用域取决于父实体，只能在此视图中显示。  
   
@@ -36,16 +36,16 @@ ms.locfileid: "82831301"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|触发器名称。 DML 触发器名称的架构范围。 DDL 触发器名称的作用域取决于父实体。|  
-|**object_id**|**int**|对象标识号。 在数据库中是唯一的。|  
+|name|**sysname**|触发器名称。 DML 触发器名称的架构范围。 DDL 触发器名称的作用域取决于父实体。|  
+|object_id|**int**|对象标识号。 在数据库中是唯一的。|  
 |**parent_class**|**tinyint**|触发器的父类。<br /><br /> 0 = DDL 触发器的数据库。<br /><br /> 1 = DML 触发器的对象或列。|  
 |**parent_class_desc**|**nvarchar(60)**|触发器的父类的说明。<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN|  
 |**parent_id**|**int**|触发器的父实体的 ID，如下所示：<br /><br /> 0 = 父实体为数据库的触发器。<br /><br /> 对于 DML 触发器，这是定义 DML 触发器的表或视图的**object_id** 。|  
-|type |**char(2)**|对象类型：<br /><br /> TA = 程序集 (CLR) 触发器<br /><br /> TR = SQL 触发器|  
+|type|**char(2)**|对象类型：<br /><br /> TA = 程序集 (CLR) 触发器<br /><br /> TR = SQL 触发器|  
 |**type_desc**|**nvarchar(60)**|对象类型的说明。<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
-|**create_date**|**datetime**|触发器的创建日期。|  
-|**modify_date**|**datetime**|上次使用 ALTER 语句修改对象的日期。|  
-|**is_ms_shipped**|**bit**|由内部 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件代表用户创建的触发器。|  
+|create_date|**datetime**|触发器的创建日期。|  
+|modify_date|**datetime**|上次使用 ALTER 语句修改对象的日期。|  
+|is_ms_shipped|**bit**|由内部 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件代表用户创建的触发器。|  
 |**is_disabled**|**bit**|触发器被禁用。|  
 |**is_not_for_replication**|**bit**|触发器是作为 NOT FOR REPLICATION 创建的。|  
 |**is_instead_of_trigger**|**bit**|1 = INSTEAD OF 触发器。<br /><br /> 0 = AFTER 触发器。|  

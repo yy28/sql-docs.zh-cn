@@ -19,31 +19,31 @@ ms.assetid: 43ed8435-f059-4907-b5c0-193a258b394a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: ea963c07a15cd5c2db3cca113680026d3100936b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 54151b817b443d43f64e119841a7b69df7436d93
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942576"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752922"
 ---
 # <a name="sysbandwidth_usage-azure-sql-database"></a>sys.bandwidth_usage (Azure SQL Database)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
 > [!NOTE]
-> 这仅适用于[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]V11。 * *  
+> 这仅适用于 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V11。 * *  
   
  返回有关** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V11 数据库服务器**中每个数据库使用的网络带宽的信息。 为给定数据库返回的每行总结在一小时内使用的单个方向和类别。  
   
- **此已在中弃用[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。**  
+ **此已在中弃用 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。**  
   
  **Sys. bandwidth_usage**视图包含以下列。  
   
-|列名|说明|  
+|列名|描述|  
 |-----------------|-----------------|  
 |**time**|占用带宽的时间（小时）。 此视图中的各行以小时为单位。 例如，2009-09-19 02:00:00.000 表示占用带宽的时间是 2009 年 9 月 19 日的凌晨 2:00  到凌晨 3:00。|  
 |**database_name**|占用带宽的数据库的名称。|  
-|**方向键**|占用带宽的类型，为以下选项之一：<br /><br /> 入口：移动到中的数据[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 出口：移出的数据[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|  
+|**direction**|占用带宽的类型，为以下选项之一：<br /><br /> 入口：移动到中的数据 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。<br /><br /> 出口：移出的数据 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。|  
 |**class**|占用带宽的类别，为以下选项之一：<br />内部：正在 Azure 平台中移动的数据。<br />External：移出 Azure 平台的数据。<br /><br /> 仅在数据库与区域处于连续复制关系 ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]) 时返回此类别。 如果给定数据库未参与任何连续复制关系，则不会返回 "互连" 行。 有关详细信息，请参阅本主题后面的“备注”部分。|  
 |**time_period**|使用带宽的时段为 Peak 或 OffPeak。 The Peak time is based on the region in which the server was created. 例如，如果在“US_Northwest”地区创建了服务器，则高峰期时间定义为 PST 时间上午 10:00 点 到下午 6:00 之间。|  
 |**quantity**|占用的带宽量 (KB)。|  

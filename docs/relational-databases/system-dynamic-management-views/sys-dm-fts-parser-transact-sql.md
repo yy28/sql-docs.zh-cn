@@ -19,16 +19,16 @@ ms.assetid: 2736d376-fb9d-4b28-93ef-472b7a27623a
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: fa60c1785e0740dde4bc6b3755dea36db8a5a21a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0552dbdce5da12db4fedadecb5a4bd7e9c55c278
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900911"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738657"
 ---
 # <a name="sysdm_fts_parser-transact-sql"></a>sys.dm_fts_parser (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   在将给定[断字符](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)、[同义词库](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)和[非索引字表](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)组合应用于查询字符串输入后，返回最终的标记结果。 此词语切分结果等效于全文引擎针对指定查询字符串的输出。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "67900911"
 sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *query_string*  
  要分析的查询。 *query_string*可以是[包含](../../t-sql/queries/contains-transact-sql.md)语法支持的字符串链。 例如，您可以包括变形、同义词库和逻辑运算符。  
   
@@ -55,13 +55,13 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
  *accent_sensitivity*  
  控制全文搜索是否区分音调符号的布尔值。 *accent_sensitivity*是**bit**，具有以下值之一：  
   
-|Value|区分重音为 .。。|  
+|值|区分重音为 .。。|  
 |-----------|----------------------------|  
 |0|不区分<br /><br /> "咖啡馆" 和 "咖啡馆" 等词视为相同。|  
 |1|敏感<br /><br /> "咖啡馆" 和 "咖啡馆" 等词的处理方式不同。|  
   
 > [!NOTE]  
->  若要查看全文目录的此值的当前设置， [!INCLUDE[tsql](../../includes/tsql-md.md)]请运行以下语句： `SELECT fulltextcatalogproperty('` *catalog_name*`', 'AccentSensitivity');`。  
+>  若要查看全文目录的此值的当前设置，请运行以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句： `SELECT fulltextcatalogproperty('` *catalog_name* `', 'AccentSensitivity');` 。  
   
 ## <a name="table-returned"></a>返回的表  
   
@@ -80,7 +80,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
  **dm_fts_parser**支持全文谓词（如[CONTAINS](../../t-sql/queries/contains-transact-sql.md)和[FREETEXT](../../t-sql/queries/freetext-transact-sql.md)）和函数（如[CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)和[FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md)）的语法和功能。  
   
 ## <a name="using-unicode-for-parsing-special-characters"></a>使用 Unicode 分析特殊字符  
- 当分析查询字符串时， **sys.databases dm_fts_parser**将使用您所连接的数据库的排序规则，除非您将查询字符串指定为 Unicode。 因此，对于包含特殊字符（如ü或ç）的非 Unicode 字符串，输出可能是意外的，具体取决于数据库的排序规则。 若要独立于数据库排序规则处理查询字符串，请将字符串作为`N`前缀，即`N'` *query_string*`'`。  
+ 当分析查询字符串时， **sys.databases dm_fts_parser**将使用您所连接的数据库的排序规则，除非您将查询字符串指定为 Unicode。 因此，对于包含特殊字符（如ü或ç）的非 Unicode 字符串，输出可能是意外的，具体取决于数据库的排序规则。 若要独立于数据库排序规则处理查询字符串，请将字符串作为前缀 `N` ，即 `N'` *query_string* `'` 。  
   
  有关详细信息，请参阅本主题后面的“C. 显示包含特殊字符的字符串的输出”。  
   

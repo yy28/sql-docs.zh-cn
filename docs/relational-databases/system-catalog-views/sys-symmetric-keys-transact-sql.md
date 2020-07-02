@@ -20,28 +20,28 @@ ms.assetid: d410eae1-3a52-45de-b9a1-52d2bd93a8eb
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1ce1025ab54ced5162777c1c30f87f7f6262e0f3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8edb87ce16f87592727ba45bb897d8a1f9634ec4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833905"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734823"
 ---
 # <a name="syssymmetric_keys-transact-sql"></a>sys.symmetric_keys (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   对于使用 CREATE SYMMETRIC KEY 语句创建的每个对称密钥，返回与其对应的一行。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|密钥的名称。 在数据库中是唯一的。|  
-|**principal_id**|**int**|拥有密钥的数据库主体的 ID。|  
+|name|**sysname**|密钥的名称。 在数据库中是唯一的。|  
+|principal_id|**int**|拥有密钥的数据库主体的 ID。|  
 |**symmetric_key_id**|**int**|密钥的 ID。 在数据库中是唯一的。|  
 |**key_length**|**int**|密钥的长度（位）。|  
 |**key_algorithm**|**char(2)**|密钥使用的算法：<br /><br /> R2 = RC2<br /><br /> R4 = RC4<br /><br /> D = DES<br /><br /> D3 = Triple DES<br /><br /> DT = TRIPLE_DES_3KEY<br /><br /> DX = DESX<br /><br /> A1 = AES 128<br /><br /> A2 = AES 192<br /><br /> A3 = AES 256<br /><br /> NA = EKM 密钥|  
 |**algorithm_desc**|**nvarchar(60)**|对于密钥所用算法的说明：<br /><br /> RC2<br /><br /> RC4<br /><br /> DES<br /><br /> Triple_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256<br /><br /> NULL（仅限于可扩展密钥管理算法）|  
-|**create_date**|**datetime**|密钥的创建日期。|  
-|**modify_date**|**datetime**|密钥的修改日期。|  
+|create_date|**datetime**|密钥的创建日期。|  
+|modify_date|**datetime**|密钥的修改日期。|  
 |**key_guid**|**uniqueidentifier**|与密钥关联的全局唯一标识符 (GUID)。 对于持久化密钥，此标识符是自动生成的。 临时密钥的 GUID 从用户提供的通行短语中派生。|  
 |**key_thumbprint**|**sql_variant**|密钥的 SHA-1 哈希。 该哈希是全局唯一的。 对于非可扩展密钥管理密钥，此值将为 NULL。|  
 |**provider_type**|**nvarchar(120)**|加密提供程序的类型：<br /><br /> CRYPTOGRAPHIC PROVIDER = 可扩展密钥管理密钥<br /><br /> NULL = 非可扩展密钥管理密钥|  

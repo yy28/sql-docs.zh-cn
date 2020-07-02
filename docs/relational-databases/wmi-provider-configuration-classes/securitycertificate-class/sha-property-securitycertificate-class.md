@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 73dfe0b7-0237-4d92-8161-9264a10a28a7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2bf2057156191cb45b3528e691d78630bb3aedf4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9dfbe540ff5234d70a7da60ba50dd4f3e19e1548
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73658784"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736624"
 ---
 # <a name="sha-property-securitycertificate-class"></a>SHA 属性（SecurityCertificate 类）
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   获取安全证书的 SHA 指纹属性。  
   
 ## <a name="syntax"></a>语法  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 47abab63-e605-40e8-a54e-2241e2e01afd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 63fa5b02e681309e36b0c42ec5b504d9f07228ce
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d606cbca53810eaa9e19153e5de8b821391b2659
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68035367"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752768"
 ---
 # <a name="sp_syspolicy_unsubscribe_from_policy_category-transact-sql"></a>sp_syspolicy_unsubscribe_from_policy_category (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   从当前数据库中删除策略类别订阅。  
   
@@ -38,10 +38,10 @@ ms.locfileid: "68035367"
 sp_syspolicy_unsubscribe_from_policy_category [ @policy_category = ] 'policy_category'  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @policy_category = ] 'policy_category'`要删除的策略类别订阅的名称。 *policy_category* **sysname**，并且是必需的。  
   
- 若要获取*policy_category*的值，请查询 "syspolicy_policy_categories 系统" 视图。  
+ 若要获取*policy_category*的值，请在 "系统" 视图 policy_policy_categories 查询 msdb.dbo.sys。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  

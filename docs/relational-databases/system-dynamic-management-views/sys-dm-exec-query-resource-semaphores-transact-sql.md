@@ -20,15 +20,15 @@ ms.assetid: e43a2aa9-dd52-4c89-911e-1a7d05f7ffbb
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6ea2f693b49f2b8eebd2c2348883607e08112600
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1489905b5f91743892906655b2987c702c048516
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827949"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734719"
 ---
 # <a name="sysdm_exec_query_resource_semaphores-transact-sql"></a>sys.dm_exec_query_resource_semaphores (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中有关当前查询资源信号量状态的信息。 **sys. dm_exec_query_resource_semaphores**提供常规查询执行内存状态，并使你能够确定系统是否可以访问足够的内存。 此视图补充从[dm_os_memory_clerks sys.databases](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)获取的内存信息，以提供服务器内存状态的完整图片。 **sys. dm_exec_query_resource_semaphores**为常规资源信号量返回一行，并为小型查询资源信号量返回另一行。 小型查询信号量有两个要求：  
   

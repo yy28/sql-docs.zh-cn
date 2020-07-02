@@ -26,15 +26,15 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: af964cd3561a28db049baa49c2e74140db994784
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 81b6570f0301d501f1f8899da70e60f04f1c5c44
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388171"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750754"
 ---
 # <a name="hiding-elements-and-attributes-by-using-sqlhide"></a>使用 sql:hide 隐藏元素和属性
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   针对 XSD 架构执行 XPath 查询时，生成的 XML 文档具有在架构中指定的元素和属性。 您可以使用**sql： hide**批注指定在架构中隐藏某些元素和属性。 当查询的选择条件需要架构中的特定元素或属性，但是不希望在生成的 XML 文档中返回这些元素或属性时，该批注很有用。  
   
  **Sql： hide**批注采用布尔值（0 = false，1 = true）。 可接受的值为 0、1、true 和 false。  
@@ -43,9 +43,9 @@ ms.locfileid: "81388171"
  若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[运行 SQLXML 示例的要求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-sqlhide-on-an-attribute"></a>A. 对属性指定 sql:hide  
- 此示例中的 XSD 架构由一个** \<人员组成。请联系>** 元素与**ContactID**、 **FirstName**和**LastName**属性。  
+ 本例中的 XSD 架构由 **\<Person.Contact>** 具有**ContactID**、 **FirstName**和**LastName**属性的元素组成。  
   
- Person>元素属于复杂类型，因此映射到具有相同名称的表（默认映射）。 ** \<** Person>元素的所有属性都属于简单类型，并映射到 AdventureWorks 数据库的 Contacttable 中具有相同名称的列。 ** \<** 在架构中， **sql： hide**批注是在**ContactID**属性中指定的。 针对此架构指定 XPath 查询时，XML 文档中将不会返回**ContactID** 。  
+ **\<Person.Contact>** 元素属于复杂类型，因此映射到具有相同名称的表（默认映射）。 元素的所有属性 **\<Person.Contact>** 都属于简单类型，并且映射到 AdventureWorks 数据库的 Contacttable 中具有相同名称的列。 在架构中， **sql： hide**批注是在**ContactID**属性中指定的。 针对此架构指定 XPath 查询时，XML 文档中将不会返回**ContactID** 。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -92,7 +92,7 @@ ms.locfileid: "81388171"
 </ROOT>  
 ```  
   
- 当在元素上指定了**sql： hide**时，元素及其属性或子元素不会出现在生成的 XML 文档中。 下面是在** \<OD>** 元素上指定了**sql： hide**的另一个 XSD 架构：  
+ 当在元素上指定了**sql： hide**时，元素及其属性或子元素不会出现在生成的 XML 文档中。 下面是在元素中指定了**sql： hide**的另一个 XSD 架构 **\<OD>** ：  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -147,7 +147,7 @@ ms.locfileid: "81388171"
 </xsd:schema>  
 ```  
   
- 针对此架构指定 XPath 查询（ `/Customers[@CID="1"]`例如）时，生成的 XML 文档不包含** \<OD>** 元素及其子级，如下面的部分结果所示：  
+ `/Customers[@CID="1"]`针对此架构指定 XPath 查询（例如）时，生成的 XML 文档不包含 **\<OD>** 元素及其子级，如下面的部分结果所示：  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

@@ -20,15 +20,15 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 9ae59154acbaed6d02ab0e2a4ba1f78c5f46dc93
-ms.sourcegitcommit: a0ebbcb717f09d3614de5ce9eb9f3c00f0a45f81
+ms.openlocfilehash: 8267c35e2453873269ae94d1bff331d025a76fd8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85409336"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734638"
 ---
 # <a name="sysdm_external_script_execution_stats"></a>sys.dm_external_script_execution_stats
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 为每种类型的外部脚本请求返回一行。 外部脚本请求由受支持的外部脚本语言分组。 为每个已注册的外部脚本函数生成一行。 除非是由父进程（如 `rxExec`）发送，否则不会记录任意外部脚本函数。
   
@@ -48,7 +48,7 @@ ms.locfileid: "85409336"
 > [!NOTE]  
 > 运行外部脚本的用户必须具有额外权限 EXECUTE ANY EXTERNAL SCRIPT，但是，此 DMV 可由没有此权限的管理员使用。
   
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
   此 DMV 为内部遥测提供，以监视 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]中提供的新外部脚本执行功能的总体使用情况。 启动 LaunchPad 时会启动遥测服务，每次调用已注册的外部脚本函数时会递增基于磁盘的计数器。
 

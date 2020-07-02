@@ -1,7 +1,7 @@
 ---
 title: 使用数据迁移助手将 SQL Server 迁移到 Azure SQL Database
 description: 了解如何使用数据迁移助手将本地 SQL Server 迁移到 Azure SQL 数据库
-ms.date: 07/15/2019
+ms.date: 06/29/2020
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 6280a3ea803424dc2a6a72d673c59e1e48816601
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: ec6b5ad0ab2047e72a1f3e3e5dfcd9fc49b954d9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82885924"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749784"
 ---
 # <a name="migrate-on-premises-sql-server-or-sql-server-on-azure-vms-to-azure-sql-database-using-the-data-migration-assistant"></a>使用数据迁移助手将 Azure Vm 上的本地 SQL Server 或 SQL Server 迁移到 Azure SQL 数据库
 
@@ -33,7 +33,7 @@ ms.locfileid: "82885924"
 
 2. 将 "源类型" 设置为 " **SQL Server** "，将 "目标服务器" 类型设置为 " **Azure SQL 数据库**"。
 
-3. 选择“创建”  。
+3. 选择“创建”。
 
    ![创建迁移项目](../dma/media/NewCreate1.png)
 
@@ -48,7 +48,7 @@ ms.locfileid: "82885924"
 
     ![选择源服务器](../dma/media/select-source-server.png)
 
-3. 选择“连接”  。
+3. 选择“连接”。
 
 4. 选择要迁移到 Azure SQL 数据库的单个源数据库。
 
@@ -70,12 +70,12 @@ ms.locfileid: "82885924"
 
      ![选择目标服务器](../dma/media/select-target-server.png)
 
-3. 选择“连接”  。
+3. 选择“连接”。
 
 4. 选择要迁移到的单个目标数据库。
 
    > [!NOTE]
-   > 如果要迁移 Windows 用户，请在 "**目标外部用户域名**" 文本框中，确保正确指定意想不到外部用户域名。
+   > 如果要迁移 Windows 用户，请在 "**目标外部用户域名**" 文本框中，确保正确指定了目标外部用户域名。
 
     ![选择目标数据库](../dma/media/select-target-database.png)
 
@@ -87,8 +87,8 @@ ms.locfileid: "82885924"
 
     ![选择架构对象](../dma/media/select-schema-objects.png)
 
-       > [!NOTE]
-       > Some of the objects that cannot be converted as-is are presented with automatic fix opportunities. Clicking these objects on the left pane displays the suggested fixes on the right pane. Review the fixes and choose to either apply or ignore all changes, object by object. Note that applying or ignoring all changes for one object does not affect changes to other database objects. Statements that cannot be converted or automatically fixed are reproduced to the target database and commented.
+    > [!NOTE]
+    > 一些无法按原样转换的对象会提供自动修复机会。 单击左窗格中的这些对象将在右窗格中显示建议的修补程序。 查看修补程序并按逐个对象地应用或忽略所有更改。 请注意，应用或忽略一个对象的所有更改不会影响对其他数据库对象的更改。 无法转换或自动修复的语句将复制到目标数据库并进行注释。
 
     ![建议的修复](../dma/media/suggested-fix.png)
 
@@ -118,7 +118,7 @@ ms.locfileid: "82885924"
 
    ![迁移状态](../dma/media/migration-status.png) 
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 * [数据迁移助手 (DMA)](../dma/dma-overview.md)
 * [数据迁移助手：配置设置](../dma/dma-configurationsettings.md)
