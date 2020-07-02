@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: d47a9ab5-f2cc-42a8-8be9-a33895ce44f0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 55a0c2509a52bb77a4f8ea9779210dac27bc86db
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7ac8b37eb3c21a9dbe7fa69eb6805a502993b7b1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820416"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757891"
 ---
 # <a name="sp_get_redirected_publisher-transact-sql"></a>sp_get_redirected_publisher (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   由复制代理用于查询分发服务器，以确定是否已重定向原始发布服务器。  
   
@@ -37,7 +37,7 @@ sp_get_redirected_publisher
     [ @bypass_publisher_validation = ] [0 | 1 ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @original_publisher = ] 'original_publisher'`最初发布数据库的 SQL Server 实例的名称。 *original_publisher* **sysname**，无默认值。
   
 `[ @publisher_db = ] 'publisher_db'`要发布的数据库的名称。 *publisher_db* **sysname**，无默认值。  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 02d36f08-ac93-4463-bb59-284c5cd6ed04
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 088dbf0fb51edddedd37fdd176becd413fc229ee
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a31ee86fa0b73d21ba6f6c91a068df2c8137b63c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820969"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758607"
 ---
 # <a name="sysdbmaintplan_history-transact-sql"></a>sysdbmaintplan_history (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   该表存储在**msdb**数据库中。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "82820969"
 |**plan_id**|**uniqueidentifier**|数据库维护计划 ID。|  
 |**plan_name**|**sysname**|数据库维护计划名称。|  
 |**database_name**|**sysname**|与数据库维护计划关联的数据库的名称。|  
-|server_name |**sysname**|系统名称。|  
+|server_name|**sysname**|系统名称。|  
 |**activity**|**nvarchar(128)**|数据库维护计划执行的活动（例如备份事务日志等）。|  
 |**成功**|**bit**|**0** = 成功**1** = 失败|  
 |**end_time**|**datetime**|完成操作的时间。|  

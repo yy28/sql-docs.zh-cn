@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9408fa13-54a0-4cb1-8fb0-845e5536ef50
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8fe57e26392a2a01c7074d7d019baa20c4b9cb5f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 11571a7a3fb97a164291a3f3949d30205305daf7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82815727"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758807"
 ---
 # <a name="sp_help_publication_access-transact-sql"></a>sp_help_publication_access (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   返回发布的所有授权登录的列表。 此存储过程在发布服务器上对发布数据库执行。  
   
@@ -39,7 +39,7 @@ sp_help_publication_access [ @publication = ] 'publication'
     [ , [ @initial_list = ] initial_list ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publication = ] 'publication'`要访问的发布的名称。 *发布*为**sysname**，无默认值。  
   
 `[ @return_granted = ] 'return_granted'`登录 ID。 *return_granted*为**bit**，默认值为1。 如果指定**0**并 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用身份验证，则返回出现在发布服务器而不是分发服务器上的可用登录名。 如果指定**0**并使用 Windows 身份验证，则返回在发布服务器或分发服务器上不被明确拒绝访问的登录名。  

@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 3104514d-b404-47c9-b6d7-928106384874
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9f8a7f5ebb1b85740735c6070a784423b3258012
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 83af5231fd9403e0c77d6cad8a5abda5d27275d5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68064031"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756751"
 ---
 # <a name="srv_paramdata-extended-stored-procedure-api"></a>srv_paramdata（扩展存储过程 API）
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]请改用 CLR 集成。  
@@ -47,7 +47,7 @@ n
 );  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  srvproc**  
  指向作为特定客户端连接句柄（在这里为接收远程存储过程调用的句柄）的 SRV_PROC 结构的指针。 该结构包含扩展存储过程库用于管理应用程序和客户端之间的通信和数据的信息。  
   
@@ -57,7 +57,7 @@ n
 ## <a name="returns"></a>返回  
  一个指向参数值的指针。 如果第 n 个参数为 NULL，则没有第 n 个参数，或者没有任何远程存储过程，并返回 NULL****。 如果参数值为字符串，则不能以 Null 值结束。 使用 srv_paramlen 确定字符串的长度****。  
   
- 如果参数是[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型之一，则此函数返回以下值。 指针数据包括数据类型的指针是否为有效 (VP)、NULL 或不适用 (N/A)，以及指向的数据内容。  
+ 如果参数是数据类型之一，则此函数返回以下值 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 指针数据包括数据类型的指针是否为有效 (VP)、NULL 或不适用 (N/A)，以及指向的数据内容。  
   
 |新数据类型|输入数据长度|  
 |--------------------|-----------------------|  
@@ -68,7 +68,7 @@ n
 |BIGVARBINARY|**NULL：NULL、N/A**<br /><br /> **ZERO：VP、0x00**<br /><br /> **>=255：VP、255 个字节**<br /><br /> <255：VP、实际数据****|  
 |NCHAR|**NULL：NULL、N/A**<br /><br /> **ZERO：VP、255 个空格**<br /><br /> **>=255：VP、255 个字符**<br /><br /> <255：VP、实际数据加填充字符（最多 255 个）****|  
 |NVARCHAR|**NULL：NULL、N/A**<br /><br /> **ZERO：VP、NULL**<br /><br /> **>=255：VP、255 个字符**<br /><br /> <255：VP、实际数据****|  
-|NTEXT|**NULL：N/A**<br /><br /> **ZERO：** N/A<br /><br /> **>= 255：** 不适用<br /><br /> ** \<255：** 不适用|  
+|NTEXT|**NULL：N/A**<br /><br /> **ZERO：** N/A<br /><br /> **>= 255：** 不适用<br /><br /> ** \< 255：** 暂缺|  
   
  \*   数据不能以 Null 值结束；截断 255 个字符以外的字符时不会发出警告。  
   

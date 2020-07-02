@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: bdb56834-616e-47e4-b942-e895d2325e97
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: afaf4166facc16e7582f3978f3806d8d5a68fb0e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 64fef5a7f6d135961a6757a92d734e75f2114273
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831256"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760101"
 ---
 # <a name="sp_delete_backuphistory-transact-sql"></a>sp_delete_backuphistory (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   通过删除早于指定日期的备份集条目，减小备份和还原历史记录表的大小。 执行每个备份或还原操作后，会将其他行添加到备份和还原历史记录表中;因此，建议您定期执行**sp_delete_backuphistory**。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "82831256"
 sp_delete_backuphistory [ @oldest_date = ] 'oldest_date'   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @oldest_date = ] 'oldest\_date'`备份和还原历史记录表中保留的最早日期。 *oldest_date*为**datetime**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  

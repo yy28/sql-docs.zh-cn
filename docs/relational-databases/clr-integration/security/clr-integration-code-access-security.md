@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 2111cfe0-d5e0-43b1-93c3-e994ac0e9729
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 912db3acb6f6dc21952e99da31a1484a9745ed0b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2f28692cd1a5c3f60e823d6071244ae822fc557a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488300"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759041"
 ---
 # <a name="clr-integration-code-access-security"></a>CLR 集成代码访问安全性
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   公共语言运行时 (CLR) 支持用于托管代码的一种称为代码访问安全性的安全模式。 在这种模式下，根据代码的标识来对程序集授予权限。 有关详细信息，请参阅 .NET Framework 软件开发包中的“代码访问安全性”部分。  
   
  决定授予程序集的权限的安全策略定义在三个不同的位置：  
@@ -89,12 +89,12 @@ ms.locfileid: "81488300"
  向**不安全**的程序集授予**FullTrust**。  
   
 > [!IMPORTANT]  
->  **SAFE**对于执行计算和数据管理任务而无需访问外部[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]资源的程序集，建议使用 SAFE。 **EXTERNAL_ACCESS**对于访问外部[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]资源的程序集，建议使用 EXTERNAL_ACCESS。 默认情况下， **EXTERNAL_ACCESS**程序集[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]作为服务帐户执行。 **EXTERNAL_ACCESS**代码可以显式模拟调用方的 Windows 身份验证安全上下文。 由于默认值为作为[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]服务帐户执行，因此，只应将执行**EXTERNAL_ACCESS**的权限提供给受信任的登录名，以便作为服务帐户运行。 从安全角度来看， **EXTERNAL_ACCESS**和**UNSAFE**程序集是相同的。 不过， **EXTERNAL_ACCESS**程序集提供了不同的可靠性和可靠性保护，它们不在不**安全**的程序集中。 指定**UNSAFE**将允许程序集中的代码对[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]进程空间执行非法操作，因此可能危及的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]可靠性和可伸缩性。 有关在中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]创建 clr 程序集的详细信息，请参阅[管理 Clr 集成程序集](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)。  
+>  对于执行计算和数据管理任务而无需访问外部资源的程序集，建议使用**SAFE** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 对于访问外部资源的程序集，建议使用**EXTERNAL_ACCESS** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 默认情况下， **EXTERNAL_ACCESS**程序集作为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户执行。 **EXTERNAL_ACCESS**代码可以显式模拟调用方的 Windows 身份验证安全上下文。 由于默认值为作为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户执行，因此，只应将执行**EXTERNAL_ACCESS**的权限提供给受信任的登录名，以便作为服务帐户运行。 从安全角度来看， **EXTERNAL_ACCESS**和**UNSAFE**程序集是相同的。 不过， **EXTERNAL_ACCESS**程序集提供了不同的可靠性和可靠性保护，它们不在不**安全**的程序集中。 指定**UNSAFE**将允许程序集中的代码对进程空间执行非法操作 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，因此可能危及的可靠性和可伸缩性 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 有关在中创建 CLR 程序集的详细信息 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，请参阅[管理 Clr 集成程序集](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)。  
   
 ## <a name="accessing-external-resources"></a>访问外部资源  
- 如果用户定义类型（UDT）、存储过程或其他类型的构造程序集注册到了**SAFE**权限集，则在构造中执行的托管代码将无法访问外部资源。 但是，如果指定了**EXTERNAL_ACCESS**或**UNSAFE**权限集，并且托管代码尝试访问外部资源， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]将应用以下规则：  
+ 如果用户定义类型（UDT）、存储过程或其他类型的构造程序集注册到了**SAFE**权限集，则在构造中执行的托管代码将无法访问外部资源。 但是，如果指定了**EXTERNAL_ACCESS**或**UNSAFE**权限集，并且托管代码尝试访问外部资源， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将应用以下规则：  
   
-|如果|则|  
+|如果|Then|  
 |--------|----------|  
 |执行上下文与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名相对应。|拒绝访问外部资源的尝试并引发一个安全异常。|  
 |执行上下文与 Windows 登录名相对应并且执行上下文为原始调用方。|在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户的安全上下文下访问外部资源。|  
@@ -109,7 +109,7 @@ ms.locfileid: "81488300"
 ||**防**|**EXTERNAL_ACCESS**|**UNSAFE**|  
 |**代码访问安全权限**|仅执行|执行和访问外部资源|不受限制（包括 P/Invoke）|  
 |**编程模型限制**|是|是|无限制|  
-|**可验证性要求**|是|是|否|  
+|**可验证性要求**|是|是|No|  
 |**本地数据访问**|是|是|是|  
 |**调用本机代码的能力**|否|否|是|  
   

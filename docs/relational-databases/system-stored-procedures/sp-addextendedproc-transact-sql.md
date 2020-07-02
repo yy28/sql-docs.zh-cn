@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: c0d4b47b-a855-451e-90e5-5fb2d836ebfa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0bc8ea22699762927a026ae4cc811500c193555c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 715318b0b0ea38870317d05815845e1b6eaa3227
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68072756"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760187"
 ---
 # <a name="sp_addextendedproc-transact-sql"></a>sp_addextendedproc (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  将新扩展存储过程的名称注册到[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+  将新扩展存储过程的名称注册到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]请改用[CLR 集成](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)。  
@@ -42,7 +42,7 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
      [ @dllname = ] 'dll'  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @functname = ] 'procedure'`在动态链接库（DLL）内调用的函数的名称。 *过程*为**nvarchar （517）**，无默认值。 *过程*可选择性地包含所有者名称形式的所有者名称 *。*  
   
 `[ @dllname = ] 'dll'`包含该函数的 DLL 的名称。 *dll*的值为**varchar （255）**，无默认值。 建议指定 DLL 的完整路径。  
@@ -54,11 +54,11 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
  无  
   
 ## <a name="remarks"></a>备注  
- 创建扩展存储过程后，必须使用**sp_addextendedproc**将其添加到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中。 有关详细信息，请参阅[将扩展存储过程添加到 SQL Server](../../relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md)。  
+ 创建扩展存储过程后，必须使用 sp_addextendedproc 将其添加到中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 **sp_addextendedproc** 有关详细信息，请参阅[将扩展存储过程添加到 SQL Server](../../relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md)。  
   
  此过程只能在**master**数据库中运行。 若要从**master**之外的数据库中执行扩展存储过程，请使用**master**对扩展存储过程的名称进行限定。  
   
- **sp_addextendedproc**将条目添加到[sys.databases](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)目录视图，并[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]向注册新扩展存储过程的名称。 它还会在[sys. extended_procedures](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md)目录视图中添加一个条目。  
+ **sp_addextendedproc**将条目添加到[sys.databases](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)目录视图，并向注册新扩展存储过程的名称 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 它还会在[sys. extended_procedures](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md)目录视图中添加一个条目。  
   
 > [!IMPORTANT]  
 >  升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 后，未使用完整路径注册的现有 DLL 将无法工作。 若要更正此问题，请使用**sp_dropextendedproc**取消注册 DLL，然后使用**sp_addextendedproc**重新注册该 DLL，并指定完整路径。  

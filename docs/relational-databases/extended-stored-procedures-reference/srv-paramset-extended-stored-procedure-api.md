@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 2a509206-a1b8-4b20-b0a2-ef680cef7bd8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c3ec0de44aacbcfb2d4e6b96d7525da900017e01
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a8a2f3caa15eeb6e7ff25f511b4a0e92de68b383
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75253554"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756684"
 ---
 # <a name="srv_paramset-extended-stored-procedure-api"></a>srv_paramset（扩展存储过程 API）
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]请改用 CLR 集成。  
@@ -53,7 +53,7 @@ len
 );  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  srvproc**  
  指向作为特定客户端连接句柄（在这里为接收远程存储过程调用的句柄）的 SRV_PROC 结构的指针。 该结构包含扩展存储过程 API 库用于管理应用程序和客户端之间的通信和数据的信息。  
   
@@ -71,7 +71,7 @@ len
   
  如果 len 为 0，则返回 NULL**。 将 len 设置为 0 是将 NULL 返回给客户端的唯一方法**。  
   
- 如果参数是[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]数据类型之一，则此函数返回以下值。  
+ 如果参数是数据类型之一，则此函数返回以下值 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。  
   
 |新数据类型|返回数据长度|  
 |--------------------|------------------------|  
@@ -82,7 +82,7 @@ len
 |**BIGVARBINARY**|**NULL：** _len_ = 0, data = IG, RET = 1<br /><br /> **ZERO：** _len_ = IG, data = IG, RET = 0<br /><br /> **>=255：** _len_ = max8k, data = valid, RET = 0<br /><br /> **<255：** _len_ = <8k, data = valid, RET = 1|  
 |NCHAR|**NULL：** _len_ = 0, data = IG, RET = 1<br /><br /> **ZERO：** _len_ = IG, data = IG, RET = 0<br /><br /> **>=255：** _len_ = max8k, data = valid, RET = 0<br /><br /> **<255：** _len_ = <8k, data = valid, RET = 1|  
 |NVARCHAR|**NULL：** _len_ = 0, data = IG, RET = 1<br /><br /> **ZERO：** _len_ = IG, data = IG, RET = 0<br /><br /> **>=255：** _len_ = max8k, data = valid, RET = 0<br /><br /> **<255：** _len_ = <8k, data = valid, RET = 1|  
-|**NTEXT**|**NULL：** _len_ = IG, data = IG, RET = 0<br /><br /> **ZERO：** _len_ = IG, data = IG, RET = 0<br /><br /> **>=255：** _len_ = IG, data = IG, RET = 0<br /><br /> 255： _len_ = IG，data = IG，RET = 0 ** \<**|  
+|**NTEXT**|**NULL：** _len_ = IG, data = IG, RET = 0<br /><br /> **ZERO：** _len_ = IG, data = IG, RET = 0<br /><br /> **>=255：** _len_ = IG, data = IG, RET = 0<br /><br /> ** \< 255：** _len_ = IG，data = IG，RET = 0|  
 |RET = srv_paramset 的返回值||  
 |IG = 将忽略值||  
 |valid = 任何有效的数据指针||  

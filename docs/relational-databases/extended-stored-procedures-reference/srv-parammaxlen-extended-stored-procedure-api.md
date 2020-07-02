@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 49bfc29d-f76a-4963-b0e6-b8532dfda850
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8dfa779a664d398a6fb619bf17bf67bb52ab1bb0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 936dddfc9faecc48f61ac61e390aca7b82533314
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68005714"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756701"
 ---
 # <a name="srv_parammaxlen-extended-stored-procedure-api"></a>srv_parammaxlen（扩展存储过程 API）
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]请改用 CLR 集成。  
@@ -47,7 +47,7 @@ n
 );  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  srvproc**  
  指向作为特定客户端连接句柄（在这里为接收远程存储过程调用的句柄）的 SRV_PROC 结构的指针。 该结构包含扩展存储过程 API 库用于管理应用程序和客户端之间的通信和数据的信息。  
   
@@ -57,7 +57,7 @@ n
 ## <a name="returns"></a>返回  
  参数数据的最大长度（以字节为单位）。 如果没有第 n 个参数或没有任何远程存储过程，则返回 -1**。  
   
- 如果参数为以下[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型之一，则此函数返回以下值。  
+ 如果参数为以下数据类型之一，则此函数返回以下值 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 |新数据类型|输入数据长度|  
 |--------------------|-----------------------|  
@@ -68,7 +68,7 @@ n
 |**BIGVARBINARY**|**NULL：** 255<br /><br /> **ZERO：** 255<br /><br /> **>= 255：** 255<br /><br /> **<255：** 255|  
 |**NCHAR**|**NULL：** 255<br /><br /> **ZERO：** 255<br /><br /> **>= 255：** 255<br /><br /> **<255：** 255|  
 |**NVARCHAR**|**NULL：** 255<br /><br /> **ZERO：** 255<br /><br /> **>= 255：** 255<br /><br /> **<255：** 255|  
-|**NTEXT**|**NULL：** -1<br /><br /> **ZERO：**-1<br /><br /> **>= 255：** -1<br /><br /> 255：-1 ** \<**|  
+|**NTEXT**|**NULL：** -1<br /><br /> **ZERO：**-1<br /><br /> **>= 255：** -1<br /><br /> ** \< 255：** -1|  
   
 ## <a name="remarks"></a>备注  
  每个远程存储过程参数都具有实际数据长度和最大数据长度。 对于不允许使用 Null 值的标准固定长度数据类型，实际长度和最大长度相同。 对于可变长度数据类型，长度可以变化。 例如，声明为 varchar(30) 的参数可以具有长度仅为 10 个字节的数据****。 该参数的实际长度为 10，最大长度为 30。 srv_parammaxlen 函数获取远程存储过程的最大数据长度****。 若要获取参数的实际长度，请使用 srv_paramlen****。  

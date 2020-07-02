@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 98a8b4ce231c907231646379a3730ab0c1c535db
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3a9c125b718d3d48888499828ea84e9c5ab28d1e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828261"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758782"
 ---
 # <a name="sp_oamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   调用一个 OLE 对象的方法。  
   
@@ -40,7 +40,7 @@ sp_OAMethod objecttoken , methodname
     [ , [ @parametername = ] parameter [ OUTPUT ] [ ...n ] ]   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *objecttoken*  
  是先前使用**sp_OACreate**创建的 OLE 对象的对象标记。  
   
@@ -92,7 +92,7 @@ sp_OAMethod objecttoken , methodname
   
  如果一列中的所有数据值具有相同的数据类型，此数据类型将用于整个列。 当列中的数据值为其他数据类型时，将基于下表选择整个列的数据类型。  
   
-||int|float|money|datetime|varchar|nvarchar|  
+||int|FLOAT|money|datetime|varchar|nvarchar|  
 |------|---------|-----------|-----------|--------------|-------------|--------------|  
 |**int**|**int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**float**|**float**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  

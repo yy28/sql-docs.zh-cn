@@ -18,15 +18,15 @@ ms.assetid: 565483ea-875b-4133-b327-d0006d2d7b4c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2600543715bffaba36e29305b0893a9f17cca59c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd18fe45b25f4537c06de46c612f0508f9f86f9d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68072687"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758011"
 ---
 # <a name="sp_addextendedproperty-transact-sql"></a>sp_addextendedproperty (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   将新扩展属性添加到数据库对象中。  
   
@@ -52,14 +52,14 @@ sp_addextendedproperty
 [;]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  [ @name ] = {'*property_name*'}  
  要添加的属性的名称。 *property_name*为**sysname** ，且不能为 NULL。 名称还可以包括空格或非字母数字字符串以及二进制值。  
   
- [ @value= ]{"*value*"}  
+ [ @value =] {"*value*"}  
  要与属性关联的值。 *值* **sql_variant**，默认值为 NULL。 *value* 的大小不能超过 7,500 个字节。  
   
- [ @level0type= ]{'*level0_object_type*'}  
+ [ @level0type =] {'*level0_object_type*'}  
  级别 0 对象的类型。 *level0_object_type*的值为**varchar （128）**，默认值为 NULL。  
   
  有效输入包括：ASSEMBLY、CONTRACT、EVENT NOTIFICATION、FILEGROUP、MESSAGE TYPE、PARTITION FUNCTION、PARTITION SCHEME、REMOTE SERVICE BINDING、ROUTE、SCHEMA、SERVICE、USER、TRIGGER、TYPE、PLAN GUIDE 和 NULL。  
@@ -67,18 +67,18 @@ sp_addextendedproperty
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将来的  版本中将删除在级别 1 类型对象的扩展属性中指定 USER 作为级别 0 类型的功能。 改用 SCHEMA 作为级别 0 类型。 例如，在定义表的扩展属性时，指定表的架构而不是用户名。 将来的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中将删除指定 TYPE 作为级别 0 类型的功能。 对于 TYPE，请使用 SCHEMA 作为级别 0 类型，使用 TYPE 作为级别 1 类型。  
   
- [ @level0name= ]{'*level0_object_name*'}  
+ [ @level0name =] {'*level0_object_name*'}  
  所指定的级别 0 对象类型的名称。 *level0_object_name*的值为**sysname** ，默认值为 NULL。  
   
- [ @level1type= ]{'*level1_object_type*'}  
+ [ @level1type =] {'*level1_object_type*'}  
  级别 1 对象的类型。 *level1_object_type*的值为**varchar （128）**，默认值为 NULL。 有效的输入包括 AGGREGATE、DEFAULT、FUNCTION、LOGICAL FILE NAME、PROCEDURE、QUEUE、RULE、SEQUENCE、同义词、TABLE、TABLE_TYPE、TYPE、VIEW、XML SCHEMA COLLECTION 和 NULL。    
- [ @level1name= ]{'*level1_object_name*'}  
+ [ @level1name =] {'*level1_object_name*'}  
  所指定的级别 1 对象类型的名称。 *level1_object_name*的默认值为**sysname**，默认值为 NULL。  
   
- [ @level2type= ]{'*level2_object_type*'}  
+ [ @level2type =] {'*level2_object_type*'}  
  级别 2 对象的类型。 *level2_object_type*的值为**varchar （128）**，默认值为 NULL。 有效的输入包括：COLUMN、CONSTRAINT、EVENT NOTIFICATION、INDEX、PARAMETER、TRIGGER 和 NULL。  
   
- [ @level2name= ]{'*level2_object_name*'}  
+ [ @level2name =] {'*level2_object_name*'}  
  所指定的级别 2 对象类型的名称。 *level2_object_name*的默认值为**sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  

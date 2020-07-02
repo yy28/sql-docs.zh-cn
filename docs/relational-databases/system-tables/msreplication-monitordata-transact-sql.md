@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 843d3ffd-a1ef-4fd5-a744-c2252199793e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 118602eadf5dc1f23aa811d9a295fae351f54f36
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d247bd0fa935e11f6d6ca57cad393cfddabb6b2d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829857"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757847"
 ---
 # <a name="msreplication_monitordata-transact-sql"></a>MSreplication_monitordata (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **MSreplication_monitordata**表包含复制监视器所使用的缓存数据，每个受监视的订阅占一行。 此表存储在分发数据库中。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "82829857"
 |**lastrefresh**|**datetime**|刷新监视数据的日期和时间。|  
 |**computetime**|**int**|计算监视数据所花的时间（以秒为单位）。|  
 |**publication_id**|**int**|发布 ID。|  
-|**器**|**sysname**|发布服务器的名称。|  
+|**publisher**|**sysname**|发布服务器的名称。|  
 |**publisher_srvid**|**int**|发布服务器的服务器 ID。|  
 |**publisher_db**|**sysname**|发布数据库的名称。|  
 |**发布**|**sysname**|发布的名称。|  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7ba55e39-05dd-43c7-b5da-b268ed8426dd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 57b3016f0f5ee9f58e41ce6993af69c33aa3b742
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f92f64fe005bb49dd919f77e25931d5af025a8ea
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827744"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757872"
 ---
 # <a name="sp_help_agent_default-transact-sql"></a>sp_help_agent_default (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   检索作为参数传递的代理类型的默认配置 ID。 此存储过程可在分发服务器的任意数据库中执行。  
   
@@ -37,7 +37,7 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
         , [ @agent_type = ] agent_type  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @profile_id = ] _profile_idOUTPUT`代理类型的默认配置的 ID。 *profile_id*为**int**，没有默认值。*profile_id*也是一个输出参数，它返回代理类型默认配置的 id。  
   
 `[ @agent_type = ] 'agent_type'`代理的类型。 *agent_type*是**int**，没有默认值，可以是下列值之一。  
@@ -48,7 +48,7 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
 |**2**|日志读取器代理。|  
 |**3**|分发代理。|  
 |**4**|合并代理。|  
-|**900**|队列读取器代理|  
+|**9**|队列读取器代理|  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  

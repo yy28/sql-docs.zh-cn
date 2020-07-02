@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: f714e7f5-c2db-45c6-9536-6ca2cb5b42aa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f2fcb9c375fd6aee6be6e5135abc1cb2749778e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 56e48d1305c77cfc3950abdc0f116b8fd9c7c31d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660800"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759850"
 ---
 # <a name="clustered-property-sqlservice-class"></a>Clustered 属性（SqlService 类）
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   获取用于指定服务是否是群集实例的一部分的布尔值属性。  
   
 ## <a name="syntax"></a>语法  

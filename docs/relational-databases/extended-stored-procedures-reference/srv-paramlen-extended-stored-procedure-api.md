@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: d1fe92ff-cad6-4396-8216-125e5642e81e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5c89a9ddc1020f29bbcd661ec4c9672ba37f7770
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 55d9c6bf2e64509872faf02fa653499a28efb300
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68005704"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756724"
 ---
 # <a name="srv_paramlen-extended-stored-procedure-api"></a>srv_paramlen（扩展存储过程 API）
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]请改用 CLR 集成。  
@@ -47,7 +47,7 @@ n
 );  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  srvproc**  
  指向作为特定客户端连接句柄（在这里为接收远程存储过程调用的句柄）的 SRV_PROC 结构的指针。 该结构包含扩展存储过程 API 库用于管理应用程序和客户端之间的通信和数据的信息。  
   
@@ -57,7 +57,7 @@ n
 ## <a name="returns"></a>返回  
  参数数据的实际长度（字节）。 如果没有第 n 个参数或没有远程存储过程，则返回 -1**。 如果第 n 个参数为 NULL，则返回 0**。  
   
- 如果参数为以下[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]系统数据类型之一，则此函数返回以下值。  
+ 如果参数为以下 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 系统数据类型之一，则此函数返回以下值 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。  
   
 |新数据类型|输入数据长度|  
 |--------------------|-----------------------|  
@@ -68,7 +68,7 @@ n
 |**BIGVARBINARY**|**NULL：** 0<br /><br /> **零：** 1<br /><br /> **>= 255：** 255<br /><br /> <255：实际长度******|  
 |**NCHAR**|**NULL：** 0<br /><br /> **ZERO：** 255<br /><br /> **>= 255：** 255<br /><br /> **<255：** 255|  
 |**NVARCHAR**|**NULL：** 0<br /><br /> **零：** 1<br /><br /> **>= 255：** 255<br /><br /> <255：实际长度******|  
-|**NTEXT**|**NULL：** -1<br /><br /> **ZERO：**-1<br /><br /> **>= 255：** -1<br /><br /> 255：-1 ** \<**|  
+|**NTEXT**|**NULL：** -1<br /><br /> **ZERO：**-1<br /><br /> **>= 255：** -1<br /><br /> ** \< 255：** -1|  
   
  \*   实际长度  = 多字节字符串 (cch) 的长度**  
   

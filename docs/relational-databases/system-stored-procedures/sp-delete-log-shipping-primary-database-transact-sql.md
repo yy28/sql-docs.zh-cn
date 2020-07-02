@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: cb1d5d00-2805-4d47-bd04-545232067345
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: aff19eabc5738e986fca1bf13f85130daead3217
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9f1b5625ed09cb3c5e9d753477b61fdd1e898590
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72909867"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760080"
 ---
 # <a name="sp_delete_log_shipping_primary_database-transact-sql"></a>sp_delete_log_shipping_primary_database (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   此存储过程删除主数据库的日志传送，包括备份作业、本地历史记录以及远程历史记录。 仅在使用**sp_delete_log_shipping_primary_secondary**删除辅助数据库后，才使用此存储过程。  
   
@@ -39,7 +39,7 @@ sp_delete_log_shipping_primary_database
 [ @database = ] 'database'  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @database = ] 'database'`日志传送主数据库的名称。 *数据库*为**sysname**，无默认值，且不能为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -77,7 +77,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [关于 &#40;SQL Server 的日志传送&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

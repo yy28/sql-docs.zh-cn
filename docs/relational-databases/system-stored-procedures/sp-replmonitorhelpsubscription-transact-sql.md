@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a681b2db-c82d-4624-a10c-396afb0ac42f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c3eaaeb7715086bf5b411a016239bb24d147fcda
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 70b85170ec4b7cf56028b2cea6d643d5e72dfd0f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82817245"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760036"
 ---
 # <a name="sp_replmonitorhelpsubscription-transact-sql"></a>sp_replmonitorhelpsubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   返回发布服务器上属于一个或多个发布的订阅的当前状态信息，并为每个返回的订阅返回一行。 在分发服务器的分发数据库上执行此存储过程，用于监视复制。  
   
@@ -43,7 +43,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
     [ , [ @refreshpolicy = ] refreshpolicy ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publisher = ] 'publisher'`是要监视其状态的发布服务器的名称。 *发布服务器*的**sysname**，默认值为 NULL。 如果**为 null**，则返回使用分发服务器的所有发布服务器的信息。  
   
 `[ @publisher_db = ] 'publisher_db'`已发布数据库的名称。 *publisher_db*的值为**sysname**，默认值为 NULL。 如果为 NULL，则返回发布服务器上所有已发布数据库的信息。  
@@ -61,7 +61,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
   
 `[ @mode = ] mode`返回订阅监视信息时要使用的筛选模式。 *模式*为**int**，可以是下列值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**0** （默认值）|返回所有订阅。|  
 |**1**|只返回带错误的订阅。|  
@@ -89,7 +89,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**publisher_db**|**sysname**|发布数据库的名称。|  
 |**发布**|**sysname**|发布的名称。|  
 |**publication_type**|**int**|发布的类型，可以是下列值之一：<br /><br /> **0** = 事务发布<br /><br /> **1** = 快照发布<br /><br /> **2** = 合并发布|  
-|**类型**|**int**|订阅类型，可以是下列值之一：<br /><br /> **0** = 推送<br /><br /> **1** = 请求<br /><br /> **2** = 匿名|  
+|**subtype**|**int**|订阅类型，可以是下列值之一：<br /><br /> **0** = 推送<br /><br /> **1** = 请求<br /><br /> **2** = 匿名|  
 |**延迟**|**int**|在事务发布中，由日志读取器代理或分发代理传播的数据更改的最长滞后时间（以秒为单位）。|  
 |**latencythreshold**|**int**|事务发布的最长滞后时间，高于此时间即产生警告。|  
 |**agentnotrunning**|**int**|代理未运行的时间长度，以小时为单位。|  

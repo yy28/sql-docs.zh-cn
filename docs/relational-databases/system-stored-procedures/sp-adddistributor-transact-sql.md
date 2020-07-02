@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 35415502-68d0-40f6-993c-180e50004f1e
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 5c82ffa7ad254fc56f1c544a714d8633b7d1a33c
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: af202181425b751d684d833946a52df036633afb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627183"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760229"
 ---
 # <a name="sp_adddistributor-transact-sql"></a>sp_adddistributor (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   在 " [sys.sys服务器](../../relational-databases/system-compatibility-views/sys-sysservers-transact-sql.md)" 表中创建一个项（如果不存在），将服务器项标记为分发服务器，并存储属性信息。 此存储过程在分发服务器上对主数据库执行以注册服务器，并将其标记为分发服务器。 如果是远程分发服务器，此存储过程还在发布服务器上对主数据库执行以注册远程分发服务器。  
   
@@ -41,7 +41,7 @@ sp_adddistributor [ @distributor= ] 'distributor'
     [ , [ @from_scripting= ] from_scripting ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @distributor = ] 'distributor'`分发服务器名称。 *分发服务器*的**sysname**，无默认值。 只有在设置远程分发服务器时才使用此参数。 它在 msdb 中添加分发服务器属性的条目。 **MSdistributor**表。  
 
 > [!NOTE]
@@ -59,7 +59,7 @@ sp_adddistributor [ @distributor= ] 'distributor'
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  **sp_adddistributor**用于快照复制、事务复制和合并复制。  
   
 ## <a name="example"></a>示例  

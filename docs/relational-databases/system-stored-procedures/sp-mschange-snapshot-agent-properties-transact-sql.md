@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 7947a788-3fd7-469f-84db-b03ba89a153c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c3348590b002bb0ff5f154d983a56e3b66885073
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2e64d2f053696c16acbd72782501487adb726675
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828844"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756626"
 ---
 # <a name="sp_mschange_snapshot_agent_properties-transact-sql"></a>sp_MSchange_snapshot_agent_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   更改在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更高版本的分发服务器上运行的快照代理作业的属性。 当发布服务器在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 实例上运行时，可使用此存储过程更改属性。 此存储过程在分发服务器上对分发数据库执行。  
   
@@ -56,7 +56,7 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
         , [ @publisher_type = ] 'publisher_type'  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publisher = ] 'publisher'`发布服务器的名称。 *发布服务器*的**sysname**，无默认值。  
   
 `[ @publisher_db = ] 'publisher_db'`发布数据库的名称。 *publisher_db* **sysname**，无默认值。  
@@ -71,7 +71,7 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 |**2**|按需|  
 |**4**|每天|  
 |**8**|每周|  
-|**10**|每月一次|  
+|**10**|每月|  
 |**0.2**|每月，相对于频率间隔|  
 |**40**|当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理启动时|  
   
@@ -120,7 +120,7 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
   
 `[ @publisher_type = ] 'publisher_type'`指定发布服务器未在实例中运行时的发布服务器类型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *publisher_type* **sysname**，可以是下列值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。|  
 |**联手**|指定标准的 Oracle 发布服务器。|  

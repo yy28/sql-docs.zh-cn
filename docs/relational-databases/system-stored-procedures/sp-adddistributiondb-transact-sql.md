@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e9bad56c-d2b3-44ba-a4d7-ff2fd842e32d
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: ef595adcf3772dcac92c58764d99bca4374aeb0a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 13ba20770fd97d0db193ab492ae0958cf4c7ad35
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68771350"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758036"
 ---
 # <a name="sp_adddistributiondb-transact-sql"></a>sp_adddistributiondb (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   创建新的分发数据库并安装分发服务器架构。 分发数据库存储过程、架构以及用于复制的元数据。 此存储过程在分发服务器的主数据库中执行，以便创建分发数据库并安装启用复制分发所需的表和存储过程。  
   
@@ -52,10 +52,10 @@ sp_adddistributiondb [ @database= ] 'database'
     [ , [ @deletebatchsize_cmd = ] deletebatchsize_cmd ] 
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @database = ] database'`要创建的分发数据库的名称。 *数据库*为**sysname**，无默认值。 如果指定的数据库已经存在并且尚未标记为分发数据库，那么将安装启用分发所需的对象并将数据库标记为分发数据库。 如果指定的数据库已经作为分发数据库启用，则返回错误。  
   
-`[ @data_folder = ] 'data_folder'_`用于存储分发数据库数据文件的目录的名称。 *data_folder*为**nvarchar （255）**，默认值为 NULL。 如果为 NULL， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]则使用该实例的数据目录，例如`C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`。  
+`[ @data_folder = ] 'data_folder'_`用于存储分发数据库数据文件的目录的名称。 *data_folder*为**nvarchar （255）**，默认值为 NULL。 如果为 NULL，则使用该实例的数据目录 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，例如 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data` 。  
   
 `[ @data_file = ] 'data_file'`数据库文件的名称。 *data_file*为**nvarchar （255）**，默认值为**database**。 如果为 NULL，存储过程将使用数据库名称来构造文件名。  
   
@@ -65,7 +65,7 @@ sp_adddistributiondb [ @database= ] 'database'
   
 `[ @log_file = ] 'log_file'`日志文件的名称。 *log_file*为**nvarchar （255）**，默认值为 NULL。 如果为 NULL，存储过程将使用数据库名称来构造文件名。  
   
-`[ @log_file_size = ] log_file_size`初始日志文件大小（MB）。 *log_file_size*的值为**int**，默认值为 0 MB，这意味着使用所允许的最小日志文件大小创建文件大小[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+`[ @log_file_size = ] log_file_size`初始日志文件大小（MB）。 *log_file_size*的值为**int**，默认值为 0 MB，这意味着使用所允许的最小日志文件大小创建文件大小 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 `[ @min_distretention = ] min_distretention`从分发数据库中删除事务前的最小保持期（以小时为单位）。 *min_distretention*的值为**int**，默认值为0小时。  
   
@@ -73,7 +73,7 @@ sp_adddistributiondb [ @database= ] 'database'
   
 `[ @history_retention = ] history_retention`保留历史记录的小时数。 *history_retention*的值为**int**，默认值为48小时。  
   
-`[ @security_mode = ] security_mode`连接到分发服务器时使用的安全模式。 *security_mode*的值为**int**，默认值为1。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证;**1**指定 Windows 集成身份验证。  
+`[ @security_mode = ] security_mode`连接到分发服务器时使用的安全模式。 *security_mode*的值为**int**，默认值为1。 **0**指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证;**1**指定 Windows 集成身份验证。  
   
 `[ @login = ] 'login'`连接到分发服务器以创建分发数据库时使用的登录名。 如果*security_mode*设置为**0**，则这是必需的。 login 的数据类型为 sysname，默认值为 NULL******。  
   
@@ -81,7 +81,7 @@ sp_adddistributiondb [ @database= ] 'database'
   
 `[ @createmode = ] createmode`*createmode*的数据值为**int**，默认值为1，可以是下列值之一。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**1** （默认值）|"创建数据库" 或 "使用现有数据库"，并应用**instdist**文件以在分发数据库中创建复制对象。|  

@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 10f1bb74-3b43-4efd-b7ab-7a85a8600a50
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bba543dbf89cb1dd3c0eb8a456a54c3c31c51d02
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 22f2b2b5345d4d5cb11b96ecf7741ce144597548
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67903411"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756777"
 ---
 # <a name="adding-an-extended-stored-procedure-to-sql-server"></a>将扩展存储过程添加到 SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 请改用 CLR 集成。  
   
- 包含扩展存储过程函数的 DLL 充当对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的扩展。 若要安装此 DLL，请将文件复制到一个目录中，例如包含标准[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DLL 文件的目录（C:\PROGRAM Files\Microsoft SQL Server\MSSQL12.0.*x*默认情况下为 \MSSQL\Binn）。  
+ 包含扩展存储过程函数的 DLL 充当对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的扩展。 若要安装此 DLL，请将文件复制到一个目录中，例如包含标准 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DLL 文件的目录（C:\Program FILES\MICROSOFT SQL Server\MSSQL12.0.*x*默认情况下为 \MSSQL\Binn）。  
   
  在将扩展存储过程 DLL 复制到服务器之后，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统管理员必须将 DLL 中的每个扩展存储过程函数注册到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 可以使用 sp_addextendedproc 系统存储过程完成该操作。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "67903411"
 sp_addextendedproc 'xp_hello', 'c:\Program Files\Microsoft SQL Server\MSSQL13.0.MSSQLSERVER\MSSQL\Binn\xp_hello.dll';  
 ```  
   
- 如果在 `sp_addextendedproc` 中指定的函数名称与 DLL 中的函数名称不完全匹配，则新名称将在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中注册，但该名称是不可使用的。 例如，尽管注册`xp_Hello`为位于中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xp_hello.dll`的扩展存储过程，但如果[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]稍后使用`xp_Hello`调用函数，将无法在 DLL 中查找函数。  
+ 如果在 `sp_addextendedproc` 中指定的函数名称与 DLL 中的函数名称不完全匹配，则新名称将在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中注册，但该名称是不可使用的。 例如，尽管 `xp_Hello` 注册为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 位于中的扩展存储过程，但 `xp_hello.dll` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果稍后使用调用函数，将无法在 DLL 中查找函数 `xp_Hello` 。  
   
 ```  
 --Register the function (xp_hello) with an initial upper case  

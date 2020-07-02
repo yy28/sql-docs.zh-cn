@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 04e15011-a902-4074-b38c-3ec2fc73b838
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 2f341a881ca33c66121d6b87ee30d437c621f973
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: ba76aefe1b3b4f18a596c25d136c4ec6914ce5a6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627147"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760222"
 ---
 # <a name="sp_adddistpublisher-transact-sql"></a>sp_adddistpublisher (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   配置发布服务器以使用指定的分发数据库。 此存储过程在分发服务器上的任何数据库中执行。 请注意，在使用此存储过程之前，必须先运行[sp_adddistributor &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)和[&#40;sp_adddistributiondb](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)的存储过程。  
   
@@ -46,7 +46,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
     [ , [ @publisher_type = ] 'publisher_type' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publisher = ] 'publisher'`发布服务器名称。 *发布服务器*的**sysname**，无默认值。  
 
 > [!NOTE]
@@ -56,7 +56,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
   
 `[ @security_mode = ] security_mode`实现的安全模式。 此参数仅供复制代理用于连接到排队更新订阅的发布服务器或非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。 *security_mode*为**int**，可以是下列值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**0**|分发服务器中的复制代理使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证连接到发布服务器。|  
 |**1** （默认值）|分发服务器中的复制代理使用 Windows 身份验证连接到发布服务器。|  
@@ -89,7 +89,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
   
 `[ @publisher_type = ] 'publisher_type'`当发布服务器不是时指定发布服务器类型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *publisher_type* sysname，可以是下列值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**MSSQLSERVER**<br /><br /> （默认值）|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。|  
 |**联手**|指定标准的 Oracle 发布服务器。|  
@@ -100,7 +100,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  **sp_adddistpublisher**用于快照复制、事务复制和合并复制。  
   
 ## <a name="example"></a>示例  

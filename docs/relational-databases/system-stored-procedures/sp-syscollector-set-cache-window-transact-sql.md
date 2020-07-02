@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 660f2749-392f-46bf-89f3-27764d848507
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6f8ad01c5a287166e4196b78489d34f3fbbe31ce
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e4e37e40aea88ec90da7c95065f33f2becfe2b5f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828761"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760021"
 ---
 # <a name="sp_syscollector_set_cache_window-transact-sql"></a>sp_syscollector_set_cache_window (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   设置在数据上载失败时尝试上载数据的次数。 在失败时重新尝试上载可降低丢失所收集数据的风险。  
 
@@ -40,7 +40,7 @@ ms.locfileid: "82828761"
 sp_syscollector_set_cache_window [ @cache_window = ] cache_window   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  [ @cache_window =] *cache_window*  
  将数据上载到管理数据仓库失败但不丢失数据的重试次数。 *cache_window*为**int** ，默认值为1。 *cache_window*可以具有以下值之一：  
   

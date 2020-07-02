@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d83096b9-96ee-4789-bde0-940d4765b9ed
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: a50b989afef382a8315c29ea5257ad9b103e124c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4b22bb48cd5bc48a3b1812dfd97fc2b56df8ba11
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68769216"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757980"
 ---
 # <a name="sp_addlogreader_agent-transact-sql"></a>sp_addlogreader_agent (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   为给定数据库添加日志读取器代理。 此存储过程在发布服务器上对发布数据库执行。  
   
@@ -45,11 +45,11 @@ sp_addlogreader_agent [ @job_login = ] 'job_login'
     [ , [ @publisher = ] 'publisher' ]  
 ```  
   
-## <a name="arguments"></a>参数  
-`[ @job_login = ] 'job_login'`用于运行代理的[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户的登录名。 *job_login*为**nvarchar （257）**，默认值为 NULL。 此 Windows 帐户总是用于与分发服务器建立代理连接。  
+## <a name="arguments"></a>自变量  
+`[ @job_login = ] 'job_login'`用于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 运行代理的 Windows 帐户的登录名。 *job_login*为**nvarchar （257）**，默认值为 NULL。 此 Windows 帐户总是用于与分发服务器建立代理连接。  
   
 > [!NOTE]
->  对于非[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器，此登录名必须与[&#40;transact-sql&#41;sp_adddistpublisher](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)中指定的相同。  
+>  对于非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器，此登录名必须与[&#40;transact-sql&#41;sp_adddistpublisher](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)中指定的相同。  
   
 `[ @job_password = ] 'job_password'`运行代理所用的 Windows 帐户的密码。 *job_password*的值为**sysname**，默认值为 NULL。  
   
@@ -58,7 +58,7 @@ sp_addlogreader_agent [ @job_login = ] 'job_login'
   
 `[ @job_name = ] 'job_name'`现有代理作业的名称。 *job_name*的值为**sysname**，默认值为 NULL。 只有在使用现有作业而不是使用新创建的作业（默认值）来启动代理时，才需要指定此参数。  
   
-`[ @publisher_security_mode = ] publisher_security_mode`连接到发布服务器时代理所使用的安全模式。 *publisher_security_mode*为**smallint**，默认值为**1**。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证， **1**指定 Windows 身份验证。 对于非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器，必须指定**0**值。  
+`[ @publisher_security_mode = ] publisher_security_mode`连接到发布服务器时代理所使用的安全模式。 *publisher_security_mode*为**smallint**，默认值为**1**。 **0**指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证， **1**指定 Windows 身份验证。 对于非发布服务器，必须指定**0**值 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 `[ @publisher_login = ] 'publisher_login'`连接到发布服务器时使用的登录名。 *publisher_login*的默认值为**sysname**，默认值为 NULL。 当*publisher_security_mode*为**0**时，必须指定*publisher_login* 。 如果*publisher_login*为 NULL 且*publisher_security_mode*为**1**，则在连接到发布服务器时将使用*job_login*中指定的 Windows 帐户。  
   
@@ -67,7 +67,7 @@ sp_addlogreader_agent [ @job_login = ] 'job_login'
 > [!IMPORTANT]  
 >  请不要将身份验证信息存储在脚本文件中。 为保证安全性，应当在运行时再提供登录名和密码。  
   
-`[ @publisher = ] 'publisher'`非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器的名称。 *发布服务器*的**sysname**，默认值为 NULL。  
+`[ @publisher = ] 'publisher'`非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器的名称。 *发布服务器*的**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
 >  对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器，无需指定此参数。  
@@ -78,7 +78,7 @@ sp_addlogreader_agent [ @job_login = ] 'job_login'
 ## <a name="remarks"></a>备注  
  **sp_addlogreader_agent**用于事务复制。  
   
- 如果在创建**sp_addlogreader_agent**使用数据库的发布之前将已启用复制的数据库升级到此版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则必须执行 Sp_addlogreader_agent 才能添加日志读取器代理。  
+ 如果在创建使用数据库的发布之前将已启用复制的数据库升级到此版本的，则必须执行**sp_addlogreader_agent**才能添加日志读取器代理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="permissions"></a>权限  
  只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_addlogreader_agent**。  

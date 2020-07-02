@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8fb4a9c3-19af-4a34-8004-572729ba3d15
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4c371f5b61e88b3fa42eb7a3e7a3060dfc38d0ab
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 638706d8d49088d381fbefe54610b11486100226
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831052"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757867"
 ---
 # <a name="sp_help_agent_parameter-transact-sql"></a>sp_help_agent_parameter (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   返回[MSagent_parameters &#40;transact-sql&#41;](../../relational-databases/system-tables/msagent-parameters-transact-sql.md)系统表中配置文件的所有参数。 此存储过程可在运行代理的分发服务器的任意数据库中执行。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "82831052"
 sp_help_agent_parameter [ [ @profile_id = ] profile_id ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @profile_id = ] profile_id`[MSagent_parameters &#40;transact-sql&#41;](../../relational-databases/system-tables/msagent-parameters-transact-sql.md)表中的配置文件的 ID。 *profile_id*为**int**，默认值为 **-1**，表示返回所有参数。  
   
 ## <a name="result-sets"></a>结果集  
@@ -45,7 +45,7 @@ sp_help_agent_parameter [ [ @profile_id = ] profile_id ]
 |-----------------|---------------|-----------------|  
 |**profile_id**|**int**|代理配置文件的 ID。|  
 |**parameter_name**|**sysname**|参数的名称。|  
-|**value**|**nvarchar(255)**|参数值。|  
+|value|**nvarchar(255)**|参数值。|  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  

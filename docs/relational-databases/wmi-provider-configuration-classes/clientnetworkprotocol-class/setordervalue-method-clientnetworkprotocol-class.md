@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 15f693fd-37f6-41d9-9dab-d2c93db19895
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0438ea784bc8d1521455e0d5e7b9970dafe02fd4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6ee8f5897a8a5e1fed47005220321be98eca92ae
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660091"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756592"
 ---
 # <a name="setordervalue-method-clientnetworkprotocol-class"></a>SetOrderValue 方法（ClientNetworkProtocol 类）
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   从客户端协议列表中选择具有指定顺序值的协议。  
   
 ## <a name="syntax"></a>语法  
@@ -41,7 +41,7 @@ object.SetOrderValue(OrderValue)
   
 #### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |*OrderValue*|一个设置顺序值的 u**int32** 值。|  
   

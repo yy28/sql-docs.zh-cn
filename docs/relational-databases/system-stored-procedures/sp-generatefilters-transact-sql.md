@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0aeb5b7a-89d1-4bd5-a371-c27fa924360a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3d5b588c4d56400beb375b77ae8b8273d3f5ff0f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3bc04bf5c5b5501b4ac0ebbe55872553197c666e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827755"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757911"
 ---
 # <a name="sp_generatefilters-transact-sql"></a>sp_generatefilters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   在复制指定的表时，创建外键表的筛选器。 此存储过程在发布服务器上对发布数据库执行。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "82827755"
 sp_generatefilters [ @publication =] 'publication'  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publication = ] 'publication'`要筛选的发布的名称。 *发布*为**sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -49,7 +49,7 @@ sp_generatefilters [ @publication =] 'publication'
  只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_generatefilters**。  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_bindsession &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-bindsession-transact-sql.md)   
+ [sp_bindsession (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-bindsession-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

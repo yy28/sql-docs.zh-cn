@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 8c56fb69-ca04-4aba-b55a-64ae216c492d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8904ab2ea9e8f78037b03f886e6b61d692b65e60
-ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
+ms.openlocfilehash: 9d2163610d1ea537301ec61e1a34c8b6e727d6e0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84306066"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759455"
 ---
 # <a name="type-system---sequence-type-matching"></a>类型系统 - 序列类型匹配
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   XQuery 表达式的值始终是零序列或多项序列。 一个项可以是一个原子值，也可以是一个节点。 序列类型匹配是指将查询表达式返回的序列类型与特定类型进行匹配的能力。 例如：  
   

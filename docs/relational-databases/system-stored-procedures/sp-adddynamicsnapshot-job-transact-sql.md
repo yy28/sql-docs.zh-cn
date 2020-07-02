@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ef50ccf6-e360-4e4b-91b9-6706b8fabefa
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 48f94f7fcf823a9ed9acc519e393369e44b45302
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 53af39302f88f88633896e54301501ead8ff6f9a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68771344"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760217"
 ---
 # <a name="sp_adddynamicsnapshot_job-transact-sql"></a>sp_adddynamicsnapshot_job (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   创建一个代理作业，该代理作业可为具有参数化行筛选器的发布生成筛选数据快照。 此存储过程在发布服务器上对发布数据库执行。 管理员使用此存储过程可手动为订阅服务器创建筛选数据快照作业。  
   
@@ -55,7 +55,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
     [ , [ @active_end_time_of_day= ] active_end_time_of_day ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publication = ] 'publication'`要向其中添加筛选数据快照作业的发布的名称。 *发布*为**sysname**，无默认值。  
   
 `[ @suser_sname = ] 'suser_sname'`为订阅创建筛选数据快照时使用的值，该订阅按订阅服务器上[SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md)函数的值进行筛选。 *suser_sname* **sysname**，无默认值。 如果不使用此函数对发布进行动态筛选， *suser_sname*应为 NULL。  
@@ -75,13 +75,13 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
   
 `[ @frequency_type = ] frequency_type`用于计划筛选的数据快照作业的频率。 *frequency_type*为**int**，可以是下列值之一。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**1**|一次性|  
 |**2**|按需|  
-|**4** （默认值）|每日|  
+|**4** （默认值）|每天|  
 |**8**|每周|  
-|**超过**|每月一次|  
+|**16**|每月|  
 |**32**|与“每月”选项相关|  
 |**64**|自动启动|  
 |**128**|重复执行|  
@@ -93,31 +93,31 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |**1**|*frequency_interval*未使用。|  
 |**4** （默认值）|每*frequency_interval*天，默认为每天。|  
 |**8**|*frequency_interval*是以下一个或多个（与[&#124; &#40;位或&#41; &#40;transact-sql&#41;](../../t-sql/language-elements/bitwise-or-transact-sql.md)逻辑运算符组合）：<br /><br /> **1** = 星期日 &#124; **2** = 星期一 &#124; **4** = 星期二 &#124; **8** = 星期三 &#124; **16** = 星期四 &#124; **32** = 星期五 &#124; **64** = 星期六|  
-|**超过**|*Frequency_interval*月中的第几天。|  
+|**16**|*Frequency_interval*月中的第几天。|  
 |**32**|*frequency_interval*是以下项之一：<br /><br /> **1** = 星期日 &#124; **2** = 星期一 &#124; **3** = 星期二 &#124; **4** = 星期三 &#124; **5** = 星期四 &#124; **6** = 星期五 &#124; **7** = 星期六 &#124; **8** = 日 &#124; **9** = 工作日 &#124; **10** = 周末|  
 |**64**|*frequency_interval*未使用。|  
 |**128**|*frequency_interval*未使用。|  
   
 `[ @frequency_subday = ] frequency_subday`指定*frequency_subday_interval*的单位。 *frequency_subday*为**int**，可以是下列值之一。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**1**|一次|  
 |**2**|秒|  
 |**4** （默认值）|Minute|  
-|**8**|Hour|  
+|**8**|小时|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`作业的每次执行之间出现的*frequency_subday*周期数。 *frequency_subday_interval*的值为**int**，默认值为5。  
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`每月筛选的数据快照作业的发生次数。 如果*frequency_type*设置为**32** （每月相对），则使用此参数。 *frequency_relative_interval*为**int**，可以是下列值之一。  
   
-|Value|说明|  
+|值|描述|  
 |-----------|-----------------|  
-|**1** （默认值）|第一个|  
+|**1** （默认值）|First|  
 |**2**|秒|  
 |**4**|第三个|  
 |**8**|第四个|  
-|**超过**|最后一个|  
+|**16**|最后一个|  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`*Frequency_type*使用的重复因子。 *frequency_recurrence_factor*的值为**int**，默认值为0。  
   
@@ -135,7 +135,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |-----------------|---------------|-----------------|  
 |**id**|**int**|标识[MSdynamicsnapshotjobs](../../relational-databases/system-tables/msdynamicsnapshotjobs-transact-sql.md)系统表中的筛选数据快照作业。|  
 |**dynamic_snapshot_jobname**|**sysname**|已筛选数据快照作业的名称。|  
-|**dynamic_snapshot_jobid**|**uniqueidentifier**|唯一标识分发[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服务器上的代理作业。|  
+|**dynamic_snapshot_jobid**|**uniqueidentifier**|唯一标识 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分发服务器上的代理作业。|  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  

@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 0ecbec81-e637-44a9-a61e-11bf060ef084
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c02b9327dbff75e3c0816bb3eec19e3cb3135d50
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a81fb55802733d63612e0383c4ba9f5ce8061ec4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68008918"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758777"
 ---
 # <a name="sp_password-transact-sql"></a>sp_password (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  添加或更改[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名的密码。  
+  添加或更改登录名的密码 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]请改用[ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) 。  
@@ -43,7 +43,7 @@ sp_password [ [ @old = ] 'old_password' , ]
      [ , [ @loginame = ] 'login' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @old = ] 'old_password'`旧密码。 *old_password*的默认值为**sysname**，默认值为 NULL。  
   
 `[ @new = ] 'new_password'`新密码。 *new_password* **sysname**，无默认值。 如果未使用命名参数，则必须指定*old_password* 。  

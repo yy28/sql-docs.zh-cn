@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b393ecef-baa8-4d05-a268-b2f309fce89a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 42e3cd2c0431a1d23f3d67f7f1e983421b9b1e9a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 43b89ff4421f7e015ae2320aca94b0c19d5dde52
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "72278330"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760261"
 ---
 # <a name="getfilenamespacepath-transact-sql"></a>GetFileNamespacePath (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   返回 FileTable 中文件或目录的 UNC 路径。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "72278330"
 <column-name>.GetFileNamespacePath(is_full_path, @option)  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *列名*  
  FileTable 中的 VARBINARY （MAX） **file_stream**列的列名。  
   
@@ -45,15 +45,15 @@ ms.locfileid: "72278330"
  *is_full_path*  
  整数表达式，指定是返回相对路径还是绝对路径。 *is_full_path*可以具有以下值之一：  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**0**|返回数据库级目录内的相对路径。<br /><br /> 此为默认值。|  
 |**1**|返回以 `\\computer_name` 开头的完整 UNC 路径。|  
   
  *\@选*  
- 一个整数表达式，定义路径的服务器组件应如何进行格式化。 选项可以具有以下值之一： * \@*  
+ 一个整数表达式，定义路径的服务器组件应如何进行格式化。 * \@ 选项*可以具有以下值之一：  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**0**|返回转换为 NetBIOS 格式的服务器名称，例如：<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDatabase`<br /><br /> 这是默认值。|  
 |**1**|返回未经转换的服务器名称，例如：<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDatabase`|  
@@ -73,7 +73,7 @@ ms.locfileid: "72278330"
   
  此逻辑路径不直接对应于某一物理 NTFS 路径。 它通过 FILESTREAM 的文件系统筛选器驱动程序和 FILESTREAM 代理转换为物理路径。 逻辑路径和物理路径之间的这一区别使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以在内部重新组织数据并且不会影响路径的有效性。  
   
-## <a name="best-practices"></a>最佳方案  
+## <a name="best-practices"></a>最佳实践  
  若要使代码和应用程序独立于当前的计算机和数据库，应避免编写依赖于绝对文件路径的代码。 相反，在运行时获取文件的完整路径，方法是将**FileTableRootPath**和**GetFileNamespacePath**函数一起使用，如下面的示例中所示。 默认情况下， **GetFileNamespacePath** 函数返回数据库根路径下的文件的相对路径。  
   
 ```sql  

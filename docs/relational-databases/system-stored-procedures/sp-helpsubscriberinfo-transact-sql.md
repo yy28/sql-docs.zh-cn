@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: fbabe1ec-57cf-425c-bae7-af7f5d3198fd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fdb8e596405c9e205ec7a8cd907569644f8c9c5c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d843ff86e221a3e007d68f6f6d130f4fceb82f3f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820392"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756650"
 ---
 # <a name="sp_helpsubscriberinfo-transact-sql"></a>sp_helpsubscriberinfo (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   显示有关订阅服务器的信息。 此存储过程在发布服务器的任何数据库中执行。  
   
@@ -37,7 +37,7 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
     [ , [ @publisher = ] 'publisher' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @subscriber = ] 'subscriber'`订阅服务器的名称。 *订阅服务器*的默认值为**sysname**，默认值为 **%** ，表示将返回所有信息。  
   
 `[ @publisher = ] 'publisher'`发布服务器的名称。 *发布服务器*为**sysname**，默认值为当前服务器的名称。  
@@ -49,9 +49,9 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**器**|**sysname**|发布服务器的名称。|  
+|**publisher**|**sysname**|发布服务器的名称。|  
 |**订阅服务器**|**sysname**|订阅服务器的名称。|  
-|type |**tinyint**|订阅服务器的类型：<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库**1** = ODBC 数据源|  
+|**type**|**tinyint**|订阅服务器的类型：<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库**1** = ODBC 数据源|  
 |**id**|**sysname**|用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的登录 ID。|  
 |**password**|**sysname**|用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的密码。|  
 |**commit_batch_size**|**int**|不支持。|  

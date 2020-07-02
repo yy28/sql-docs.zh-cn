@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 18f8c9b3-cab7-4e8f-8754-11ac38c3f789
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: f0d1f6c1036d946088e2cc1aa91c08f620c3f597
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d947bdcf0e777d96c18551fafae61d3db9a930b6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68129539"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759985"
 ---
 # <a name="sysarticles-system-view-transact-sql"></a>sysarticles（系统视图）(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **Sysarticles**视图显示项目属性。 此视图存储在分发数据库中。  
   
@@ -36,10 +36,10 @@ ms.locfileid: "68129539"
 |**del_cmd**|**nvarchar(255)**|在 DELETE 时所执行的命令；否则根据日志构造。|  
 |**2008**|**nvarchar(255)**|项目的描述性条目。|  
 |**dest_table**|**sysname**|目标表的名称。|  
-|**筛选器**|**int**|存储过程 ID，用于水平分区。|  
+|**filter**|**int**|存储过程 ID，用于水平分区。|  
 |**filter_clause**|**ntext**|项目的 WHERE 子句，用于水平筛选。|  
 |**ins_cmd**|**nvarchar(255)**|在 INSERT 中执行的命令；否则从日志构造。|  
-|**name**|**sysname**|与项目关联的名称，在发布内是唯一的。|  
+|name|**sysname**|与项目关联的名称，在发布内是唯一的。|  
 |**objid**|**int**|已发布的表对象 ID。|  
 |**pubid**|**int**|项目所属发布的 ID。|  
 |**pre_creation_cmd**|**tinyint**|DROP TABLE、DELETE TABLE 或 TRUNCATE 的预创建命令：<br /><br /> **0** = 无。<br /><br /> **1** = 删除。<br /><br /> **2** = 删除。<br /><br /> **3** = 截断。|  

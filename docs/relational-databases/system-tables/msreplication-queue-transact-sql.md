@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: 664bf817-8021-4417-96d6-2bb1e4baabff
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7763f7406f865194743c43a6d182466767799b41
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5f9582f9377c1ae9cdcbefb00e772f456e1018e0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829821"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757828"
 ---
 # <a name="msreplication_queue-transact-sql"></a>MSreplication_queue (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   复制过程使用**MSreplication_queue**表存储使用基于 SQL 的排队的所有排队更新订阅所发出的排队命令。 该表存储在订阅数据库中。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**器**|**sysname**|发布服务器的名称。|  
+|**publisher**|**sysname**|发布服务器的名称。|  
 |**publisher_db**|**sysname**|发布数据库的名称。|  
 |**发布**|**sysname**|发布的名称。|  
 |**tranid**|**sysname**|执行排队命令时所使用的事务 ID。|  

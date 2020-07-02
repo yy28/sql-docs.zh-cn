@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 43911660-b4e4-4934-8c02-35221160aaec
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f4d6cb60ab7da7caaed5e0e91859f4bb083b191e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 40fe5e8e82d1a4e7b4f2f32d55f27b191d9aee8b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826170"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760154"
 ---
 # <a name="sp_dbmmonitorhelpalert-transact-sql"></a>sp_dbmmonitorhelpalert (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   返回若干个关键数据库镜像监视器性能指标中的一个或所有指标的警告阈值信息。  
  
@@ -68,10 +68,10 @@ sp_dbmmonitorhelpalert database_name
 |列|数据类型|说明|  
 |------------|---------------|-----------------|  
 |**alert_id**|**int**|下表列出了每个性能指标的**alert_id**值，以及**sp_dbmmonitorresults**结果集中显示的度量值的度量单位：|  
-|**阀**|**int**|警告的阈值。 如果在更新镜像状态时返回大于此阈值的值，则会在 Windows 事件日志中输入项。 此值表示 KB、分钟或毫秒，具体取决于警告。 如果当前未设置阈值，则该值是 NULL。<br /><br /> **注意：** 若要查看当前值，请运行[sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)存储过程。|  
+|**threshold**|**int**|警告的阈值。 如果在更新镜像状态时返回大于此阈值的值，则会在 Windows 事件日志中输入项。 此值表示 KB、分钟或毫秒，具体取决于警告。 如果当前未设置阈值，则该值是 NULL。<br /><br /> **注意：** 若要查看当前值，请运行[sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)存储过程。|  
 |**能够**|**bit**|0 = 禁用事件。<br /><br /> 1 = 启用事件。<br /><br /> **注意：** 保持期始终处于启用状态。|  
   
-|值|性能指标|单位|  
+|值|性能指标|计价单位|  
 |-----------|------------------------|----------|  
 |1|最早的未发送事务|分钟数|  
 |2|未发送日志|KB|  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: cb97ea71-da2f-441a-bbd2-db1f5f48ab49
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7cff85a61d7483be34852a79dfb8f3590eff0d4a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f94e292f9376abe583cc16ecef93437192d9568d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832421"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758702"
 ---
 # <a name="cdcddl_history-transact-sql"></a>cdc.ddl_history (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   为对启用了变更数据捕获的表所做的每一项数据定义语言 (DDL) 更改返回一行。 可以使用此表来确定源表发生 DDL 更改的时间以及更改的内容。 此表中不包含未发生 DDL 更改的源表的任何条目。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "82832421"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**source_object_id**|**int**|应用 DDL 更改的源表的 ID。|  
-|**object_id**|**int**|与源表的捕获实例相关联的更改表的 ID。|  
+|object_id|**int**|与源表的捕获实例相关联的更改表的 ID。|  
 |**required_column_update**|**bit**|指示在源表中修改了捕获列的数据类型。 此修改改变了更改表中的列。|  
 |**ddl_command**|**nvarchar(max)**|应用于源表的 DDL 语句。|  
 |**ddl_lsn**|**binary(10)**|与 DDL 修改的提交相关联的日志序列号 (LSN)。|  

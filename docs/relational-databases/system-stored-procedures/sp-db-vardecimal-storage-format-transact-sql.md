@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 9920b2f7-b802-4003-913c-978c17ae4542
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 91667feca7974f66233b7549af9f75838d2ce32d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 431572ccdb71cbad37708932a3313a543026272c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831697"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757959"
 ---
 # <a name="sp_db_vardecimal_storage_format-transact-sql"></a>sp_db_vardecimal_storage_format (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   返回数据库的当前 vardecimal 存储格式状态，或为数据库启用 vardecimal 存储格式。  从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 开始，始终启用用户数据库。 只有在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中才有必要为数据库启用 vardecimal 存储格式。  
   
@@ -46,7 +46,7 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
 [;]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  [ @dbname =] "*database_name*"  
  要更改其存储格式的数据库的名称。 *database_name* **sysname**，无默认值。 如果省略数据库名称，则返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中所有数据库的 vardecimal 存储格式状态。  
   

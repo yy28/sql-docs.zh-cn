@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0948b01e404b5eca475b344390ff105d4e094cce
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 976109aa0ef09575f818ff6daf82e742626dede7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834374"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756646"
 ---
 # <a name="sp_link_publication-transact-sql"></a>sp_link_publication (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   设置在连接到发布服务器时立即更新订阅的同步触发器所使用的配置和安全信息。 此存储过程在订阅服务器的订阅数据库中执行。  
   
@@ -48,7 +48,7 @@ sp_link_publication [ @publisher = ] 'publisher'
     [ , [ @distributor = ] 'distributor' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publisher = ] 'publisher'`要链接到的发布服务器的名称。 *发布服务器*的**sysname**，无默认值。  
   
 `[ @publisher_db = ] 'publisher_db'`要链接到的发布服务器数据库的名称。 *publisher_db* **sysname**，无默认值。  

@@ -17,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: 86ad5891-0bef-4963-9381-7d5b45245a0c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 42b29858ff276b65a30b9f465d38407b606cb792
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 740610a9fa20d3c47472f3737548a4c22fe20a19
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823362"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757777"
 ---
 # <a name="mssubscription_agents-transact-sql"></a>MSsubscription_agents (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   可更新订阅的分发代理和触发器使用**MSsubscription_agents**表来跟踪订阅属性。 该表存储在订阅数据库中。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|行的 ID。|  
-|**器**|**sysname**|发布服务器的名称。|  
+|**publisher**|**sysname**|发布服务器的名称。|  
 |**publisher_db**|**sysname**|发布数据库的名称。|  
 |**发布**|**sysname**|发布的名称。|  
 |**subscription_type**|**int**|订阅类型：<br /><br /> 0 = 推送。<br /><br /> 1 = 请求<br /><br /> 2 = 匿名请求。|  

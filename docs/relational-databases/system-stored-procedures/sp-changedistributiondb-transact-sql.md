@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 66f73185-ea9e-43f9-86ed-9dd933cee2f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3c2cba0fa65271a7668ae1945b458f26138fe36d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b9bd4367a4af33195ffdb3e233980f46205ca39a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833381"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760203"
 ---
 # <a name="sp_changedistributiondb-transact-sql"></a>sp_changedistributiondb (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   更改分发数据库的属性。 此存储过程在分发服务器上的任何数据库中执行。  
   
@@ -38,12 +38,12 @@ sp_changedistributiondb [ @database= ] 'database'
     [ , [ @value= ] 'value' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @database = ] 'database'`分发数据库的名称。 *数据库*为**sysname**，无默认值。  
   
 `[ @property = ] 'property'`要更改的给定数据库的属性。 *属性*为**sysname**，可以是下列值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**history_retention**|历史记录表保持期。|  
 |**max_distretention**|最大分发保持期。|  

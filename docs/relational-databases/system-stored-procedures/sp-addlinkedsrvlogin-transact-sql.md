@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: eb69f303-1adf-4602-b6ab-f62e028ed9f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1bf39a9a1262f30e3c0bbd6fd2ea5892a55540dd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4ee38ac3c19c9f5d5b36f896c1018a16e98e37cc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68072672"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758003"
 ---
 # <a name="sp_addlinkedsrvlogin-transact-sql"></a>sp_addlinkedsrvlogin (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   创建或更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本地实例上的登录名与远程服务器中安全帐户之间的映射。  
   
@@ -41,7 +41,7 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
      [ , [ @rmtpassword = ] 'rmtpassword' ]   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  `[ @rmtsrvname = ] 'rmtsrvname'`  
  应用登录映射的链接服务器的名称。 *rmtsrvname*的值为**sysname**，无默认值。  
   
@@ -51,10 +51,10 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
  如果值为 TRUE，则指定登录名使用其自己的凭据连接到*rmtsrvname*，并忽略*rmtuser*和*rmtpassword*参数。 FALSE 指定*rmtuser*和*rmtpassword*参数用于连接到指定*locallogin*的*rmtsrvname* 。 如果将*rmtuser*和*RMTPASSWORD*设置为 NULL，则不会使用登录名或密码连接到链接服务器。  
   
  `[ @locallogin = ] 'locallogin'`  
- 本地服务器上的登录。 *locallogin*的值为**sysname**，默认值为 NULL。 NULL 指定此条目适用于连接到*rmtsrvname*的所有本地登录名。 如果不为 NULL，则*locallogin*可以[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]为登录名或 Windows 登录名。 对于 Windows 登录来说，必须以直接的方式或通过已被授权访问的 Windows 组成员身份授予其访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的权限。  
+ 本地服务器上的登录。 *locallogin*的值为**sysname**，默认值为 NULL。 NULL 指定此条目适用于连接到*rmtsrvname*的所有本地登录名。 如果不为 NULL，则*locallogin*可以为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名或 Windows 登录名。 对于 Windows 登录来说，必须以直接的方式或通过已被授权访问的 Windows 组成员身份授予其访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的权限。  
   
  `[ @rmtuser = ] 'rmtuser'`  
- 当为 FALSE 时@useself ，用于连接到*rmtsrvname*的远程登录名。 当远程服务器是不使用 Windows 身份[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]验证的实例时， *rmtuser*是一个[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名。 *rmtuser*的值为**sysname**，默认值为 NULL。  
+ 当为 FALSE 时，用于连接到*rmtsrvname*的远程登录名 @useself 。 当远程服务器是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不使用 Windows 身份验证的实例时， *rmtuser*是一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 *rmtuser*的值为**sysname**，默认值为 NULL。  
   
  `[ @rmtpassword = ] 'rmtpassword'`  
  与*rmtuser*关联的密码。 *rmtpassword*的值为**sysname**，默认值为 NULL。  
@@ -68,7 +68,7 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
 > [!NOTE]  
 >  若要在某一链接服务器上使用表时创建最佳查询计划，查询处理器必须具有来自该链接服务器的数据分布统计。 对表的任何列具有有限权限的用户可能没有足够的权限来获取所有有用的统计，并且可能会收到效率较低的查询计划和经历不佳的性能。 如果链接服务器是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例，若要获取所有可用的统计，用户必须拥有该表或者是链接服务器上 sysadmin 固定服务器角色、db_owner 固定数据库角色或者 db_ddladmin 固定数据库角色的成员。 SQL Server 2012 SP1 修改了这些权限限制以获取统计信息，允许具有 SELECT 权限的用户访问通过 DBCC SHOW_STATISTICS 提供的统计信息。 有关详细信息，请参阅[DBCC SHOW_STATISTICS &#40;transact-sql&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)的权限部分。  
   
- 本地服务器上的所有登录和链接服务器上的远程登录之间的默认映射通过执行 sp_addlinkedserver 自动创建。 默认映射表示，当代表本地登录连接到链接服务器时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用本地登录的用户凭据。 这等效于对链接服务器执行@useself设置为**true**的 sp_addlinkedsrvlogin，而无需指定本地用户名。 使用 sp_addlinkedsrvlogin 只可以更改特定的本地服务器的默认映射或添加新映射。 若要删除默认映射或任何其他映射，请使用 sp_droplinkedsrvlogin。  
+ 本地服务器上的所有登录和链接服务器上的远程登录之间的默认映射通过执行 sp_addlinkedserver 自动创建。 默认映射表示，当代表本地登录连接到链接服务器时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用本地登录的用户凭据。 这等效于对 @useself 链接服务器执行设置为**true**的 sp_addlinkedsrvlogin，而无需指定本地用户名。 使用 sp_addlinkedsrvlogin 只可以更改特定的本地服务器的默认映射或添加新映射。 若要删除默认映射或任何其他映射，请使用 sp_droplinkedsrvlogin。  
   
  当所有下列条件都存在时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以自动地使用正在发出查询的用户的 Windows 安全凭据（Windows 登录名和密码），以连接到链接服务器，而不必使用 sp_addlinkedsrvlogin 来创建一个预设的登录映射：  
   

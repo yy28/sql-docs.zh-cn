@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: f96fc1ae-b798-4b05-82a7-564ae6ef23b8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 38013350a75e6632995d8025535ea115110894e0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 03dcac4c5e4a74503e7ad30cc499a2319375f950
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827175"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758686"
 ---
 # <a name="mssubscription_properties-transact-sql"></a>MSsubscription_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **MSsubscription_properties**表包含在订阅服务器上运行复制代理所需的参数信息的行。 对于请求订阅，该表存储在订阅服务器的订阅数据库中；对于推送订阅，该表存储在分发服务器的分发数据库中。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**器**|**sysname**|发布服务器的名称。|  
+|**publisher**|**sysname**|发布服务器的名称。|  
 |**publisher_db**|**sysname**|发布服务器数据库的名称。|  
 |**发布**|**sysname**|发布的名称。|  
 |**publication_type**|**int**|发布类型：<br /><br /> **0** = 事务性。<br /><br /> **2** = 合并。|  

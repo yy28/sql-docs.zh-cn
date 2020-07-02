@@ -13,22 +13,22 @@ ms.assetid: 6fe1f7e8-cc02-49df-8a2a-d47a96ec3567
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 74ecd20f28e58e133b5710d3cbd9d18b27ca7756
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d991dbdf8029a6021f4cf27a9010dec83b94a5ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74095990"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758122"
 ---
 # <a name="execution-characteristics-of-extended-stored-procedures"></a>扩展存储过程的执行特征
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 请改用 CLR 集成。  
   
  执行扩展存储过程具有以下特征：  
   
--   扩展存储过程函数在的安全上下文[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中执行。  
+-   扩展存储过程函数在的安全上下文中执行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 -   扩展存储过程函数在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的进程空间中运行。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "74095990"
   
 -  
   
- 加载扩展存储过程 DLL 后，DLL 将在服务器的地址空间中保持加载状态，直到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]停止或管理员使用 DBCC *DLL_name* （免费）显式卸载 DLL。  
+ 加载扩展存储过程 DLL 后，DLL 将在服务器的地址空间中保持加载状态，直到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 停止或管理员使用 DBCC *DLL_name* （免费）显式卸载 DLL。  
   
  使用 EXECUTE 语句，可以通过 [!INCLUDE[tsql](../../includes/tsql-md.md)] 将扩展存储过程作为存储过程来执行：  
   

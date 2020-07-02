@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ff428306-0ef4-49a3-b536-07ccdf6e2196
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bb5a31470af2630b0df53907db285e1206cc6fb4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6e2c1c4f898dcfd94619fe0e85bea15bd026f83b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824802"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757779"
 ---
 # <a name="mssubscriber_schedule-transact-sql"></a>MSsubscriber_schedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **MSsubscriber_schedule**表包含每个发布服务器/订阅服务器对的默认合并和事务同步计划。 此表存储在分发数据库中。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "82824802"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**器**|**sysname**|发布服务器的名称。|  
+|**publisher**|**sysname**|发布服务器的名称。|  
 |**订阅服务器**|**sysname**|订阅服务器的名称。|  
 |**agent_type**|**smallint**|代理的类型：<br /><br /> 0 = 分发代理。<br /><br /> 1 = 合并代理。|  
 |**frequency_type**|**int**|调度分发代理的频率：<br /><br /> **1** = 一次。<br /><br /> **2** = 按需。<br /><br /> **4** = 每天。<br /><br /> **8** = 每周。<br /><br /> **16** = 每月。<br /><br /> **32** = 每月相对的。<br /><br /> **64** = Autostart。<br /><br /> **128** = 重复。|  

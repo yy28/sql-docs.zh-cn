@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 9ceb9611-4929-44ee-a406-c39ba2720fd5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8f847881fa57735a09945d47d446949db3443b3e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5b9c53913cc6f399109da7a84cd8ec7f68957a8b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826153"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760139"
 ---
 # <a name="sp_dbmmonitorupdate-transact-sql"></a>sp_dbmmonitorupdate (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   通过为每个镜像数据库插入新的表行来更新数据库镜像监视器状态表，并截断早于当前保持期的行。 默认保持期是 7 天（168 小时）。 在更新表时， **sp_dbmmonitorupdate**会评估性能指标。  
   

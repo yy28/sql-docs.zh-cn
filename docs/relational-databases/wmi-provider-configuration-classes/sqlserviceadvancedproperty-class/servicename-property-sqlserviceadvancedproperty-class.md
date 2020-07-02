@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6d857b8d-77ed-4014-b1b0-e0e3d5e943c8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: aee1362bdb2f9b8060b6e57b438cf991b854a19a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1de77feeab3934700f82d3bf458fa9a27fbd1c55
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659981"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758527"
 ---
 # <a name="servicename-property-sqlserviceadvancedproperty-class"></a>ServiceName 属性（SqlServiceAdvancedProperty 类）
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   获取与高级属性关联的托管服务的名称。  
   
 ## <a name="syntax"></a>语法  
