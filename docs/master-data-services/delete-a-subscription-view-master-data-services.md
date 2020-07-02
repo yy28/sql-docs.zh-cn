@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 14b09c81-1297-48b0-8fe5-991414b930e0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2805e1c9faafa24b78b64a2fcc6082010099429f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 44ee02d2397f0f17573e48ccf056b3e768b15240
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729386"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811553"
 ---
 # <a name="delete-a-subscription-view-master-data-services"></a>删除订阅视图 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，当不再需要某订阅视图时，可以删除它。 在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中删除订阅视图后，将从 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中删除此视图。 你还可以编辑订阅视图。  
   

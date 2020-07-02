@@ -10,22 +10,22 @@ ms.topic: conceptual
 ms.assetid: ff1e2566-ac8f-467d-a6d9-12c3f13879b9
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7c5adbd91f713fabe1e185c51adb28350035bb20
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dc0fc6dad3771b051859130f13a9b0f3bab54389
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728886"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812312"
 ---
 # <a name="subscription-view-formats-master-data-services"></a>订阅视图格式 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   基于您选择的实体或派生层次结构，为订阅视图提供以下格式。  
   
 ## <a name="subscription-view-formats"></a>订阅视图格式  
   
-|名称|说明|  
+|“属性”|描述|  
 |----------|-----------------|  
 |**叶成员**|包含叶成员及其关联的属性值。|  
 |**叶成员历史记录**|包含叶成员历史数据及关联的属性值。 视图格式是缓慢更改维度类型 4 样式。|  

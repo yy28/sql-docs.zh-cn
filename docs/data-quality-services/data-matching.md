@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 4a34828900a90d3c01814c77a76d78e7b657d6f6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f36dfca8c0323f3df894aa677a84e6e7dadb5fc1
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251760"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812162"
 ---
 # <a name="data-matching"></a>数据匹配
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   借助 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 数据匹配过程，您可以减少数据源中的数据重复并改善数据准确性。 匹配可分析单个数据源的所有记录中的重复程度，同时返回所比较的每组记录之间的加权概率。 然后，您可以决定哪些记录匹配，并对源数据采取适当的措施。  
   

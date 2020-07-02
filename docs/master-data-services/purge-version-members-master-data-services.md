@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: adecce2d-46bb-49ff-8be9-0b31b8dd3cb6
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 94543ada58c5af829da6a7650e21f5f4e2deb9bb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0dc8e60b6cfe7d729aca36cc5e4a2203cf281129
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729006"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811705"
 ---
 # <a name="purge-version-members-master-data-services"></a>清除版本成员 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，删除成员仅将其停用或软删除。 数据仍驻留在数据库中。 本主题介绍如何在模型版本中清除（永久删除）所有软删除的成员。  
   

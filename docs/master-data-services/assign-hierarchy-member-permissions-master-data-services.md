@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: e1b8b46a-7cd1-4a7d-9345-dd7df081e145
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 9a725ec385d72ea3719e215ea9b01c1565aadecc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 02b84362699375c82b4e7eead7ad632c03a76c87
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729772"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812452"
 ---
 # <a name="assign-hierarchy-member-permissions-master-data-services"></a>分配层次结构成员权限 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   向层次结构成员分配权限，以便使用户或组具有在 **的** “资源管理器” [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]功能区域中查看数据的权限。  
   
@@ -51,13 +51,13 @@ ms.locfileid: "73729772"
   
 7.  从 **“层次结构”** 列表中，选择某一层次结构。  
   
-8.  单击 **“编辑”**。  
+8.  单击 **“编辑”** 。  
   
 9. 展开树，单击要向其分配权限的层次结构节点。  
   
 10. 从菜单中，选择“创建”、“读取”、“更新”和“删除”权限的组合，或选择“拒绝”权限。****************  
   
-11. 单击“保存”  。  
+11. 单击“ **保存**”。  
   
     > [!NOTE]  
     >  层次结构成员权限不立即生效。 有关详细信息，请参阅[立即应用成员权限 (Master Data Services)](../master-data-services/immediately-apply-member-permissions-master-data-services.md)。  

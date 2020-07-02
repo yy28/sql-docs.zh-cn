@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: b24ec4c2-1378-4c72-ac69-4ec2647030f0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5771fb5db586726d19d965ca18aa27f3dab16bd8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8d754308b968d5222704eb1264da71d0efbeb39b
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729601"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811802"
 ---
 # <a name="create-a-model-deployment-package-by-using-the-wizard"></a>使用向导创建模型部署包
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   使用 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 模型部署向导可创建只包含模型对象的包。 如果需要在包中包含数据，请参阅 [使用 MDSModelDeploy 创建模型部署包](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md)。  
   
@@ -46,13 +46,13 @@ ms.locfileid: "73729601"
   
 4.  在 **“创建包”** 页上，从 **“模型”** 列表中选择一个模型。  
   
-5.  单击“下一步”。   
+5.  单击“下一步”。  
   
-6.  单击 **“下载”** 。  
+6.  单击“下载”。  
   
 7.  保存文件。  
   
-8.  单击 **“关闭”** 关闭向导。  
+8.  单击“**关闭**”以关闭向导。  
   
 ## <a name="next-steps"></a>后续步骤  
   

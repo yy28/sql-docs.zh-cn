@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: cd8b57de-364d-42a3-9273-c1c6b992bb40
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 691d7e30fd64e99970fa22ee0f551162be945c36
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ea4f99ef58da9c74e22eb9edce67a00c55bec60b
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728454"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812742"
 ---
 # <a name="create-a-text-attribute-master-data-services"></a>创建文本属性 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，在您希望用户输入文本字符串作为属性值时创建文本属性。  
   
@@ -38,12 +38,12 @@ ms.locfileid: "73728454"
 ## <a name="attribute-information"></a>属性信息  
  对于创建的每个属性，系统都会在网格中添加一行（其中包含七列）。 下表对这些列进行了说明。  
   
-|列|说明|  
+|列|描述|  
 |------------|-----------------|  
 |状态|属性状态。<br /><br /> 单击 "保存" 时，将显示![更新状态](../master-data-services/media/mds-statusicon-updating.png "用于更新状态的图标")图像的图标，指示属性正在更新。<br /><br /> 如果在创建或编辑属性时出现错误，则会显示![错误状态图标图标](../master-data-services/media/mds-statusicon-error.png "错误状态图标")。<br /><br /> 否则，状态为 "正常"，将显示!["确定状态](../master-data-services/media/mds-statusicon-ok.png ""正常" 状态图标")" 图像的图标。|  
-|名称|属性名称。|  
+|“属性”|属性名称。|  
 |显示名称|属性显示名称。|  
-|说明|属性说明。|  
+|描述|属性说明。|  
 |显示像素宽度|属性宽度。|  
 |类型和属性|属性的类型和数据类型信息。|  
 |启用更改跟踪|指定是否启用该属性以进行更改跟踪，并在括号中显示组号。|  
@@ -90,7 +90,7 @@ ms.locfileid: "73728454"
   
 12. 根据需要，选择 **“启用更改跟踪”** 可以跟踪对属性组的更改。 有关详细信息，请参阅[向更改跟踪组添加属性 (Master Data Services)](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)。  
   
-13. 单击“保存”  。  
+13. 单击“ **保存**”。  
   
 ## <a name="see-also"></a>另请参阅  
  [属性 &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   

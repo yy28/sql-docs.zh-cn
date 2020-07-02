@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 4f65dc60-0ff8-46e6-9988-5bc5b9603ad0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7e41af6f7b5f1d2a770400ab66191f7957937659
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 16e1ff64a2c5178eda70fb681c11a7d7a1b79bc0
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729392"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811767"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-the-wizard"></a>使用向导部署模型部署包
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   使用 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 模型部署向导部署只包含模型对象的包。 如果需要部署包含数据的包，请参阅 [使用 MDSModelDeploy 部署模型部署包](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)。  
   
@@ -46,11 +46,11 @@ ms.locfileid: "73729392"
   
 3.  在 **“模型部署向导”** 上，单击 **“部署”**。  
   
-4.  单击“浏览”****。  
+4.  单击“浏览”。  
   
 5.  找到部署包（.pkg 文件），然后单击“打开”。****  
   
-6.  单击“下一步”  。  
+6.  单击“下一步”。  
   
 7.  在加载包后，单击 **“下一步”**。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "73729392"
   
 9. 单击“完成”**** 以退出向导。  
   
- **注意：**  
+ 注意：  
   
 -   如果包中的订阅视图与现有模型中的订阅视图同名，则显示此警告： **Deployer 订阅视图已重命名**。 另外，视图已创建为 *modelname.subscriptionviewname*。 如果此名称已使用，则不会创建订阅视图。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "73729392"
      在更新模型时，如果该过程在前三个步骤的任意步骤中失败，则该过程将不会继续；但是，已进行的更改将不会回滚。  
   
 ## <a name="next-steps"></a>后续步骤  
- 模型部署包中不包括文件属性以及用户和组权限。 在您部署模型后，必须手动更新这些内容。 有关详细信息，请参见:  
+ 模型部署包中不包括文件属性以及用户和组权限。 在您部署模型后，必须手动更新这些内容。 有关详情，请参阅：  
   
 -   [分配模型对象权限 (Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   

@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 27914c8b-8951-4b7d-914d-1cbf528dd248
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2127678ec9e6afbb17944ec80308e2e5e4bb440f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd6e35ba450bd96111b112232878b608787440b0
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729200"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811772"
 ---
 # <a name="filter-operators-master-data-services"></a>Filter 运算符 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   筛选成员列表时，可以使用下列运算符。  
   
@@ -28,7 +28,7 @@ ms.locfileid: "73729200"
   
 ## <a name="filter-operators"></a>Filter 运算符  
   
-|控件名称|说明|  
+|控件名称|描述|  
 |------------------|-----------------|  
 |**等于**|返回与指定条件完全相同的属性值。 例如，如果要针对 **Mountain-100**进行筛选，则必须键入 **Mountain-100**。|  
 |**不等于**|返回与指定条件不完全相同的属性值。 筛选条件必须与您要在结果中忽略的属性值完全相同。 例如，如果要忽略与 **Mountain-100**匹配的结果，则必须键入 **Mountain-100**。<br /><br /> <br /><br /> 注意：对某个属性应用带有“Is not equal”子句的筛选条件时，如果 SET ANSI_NULLS 在数据库设置中设置为 ON，则属性为 NULL 的成员将传递该筛选条件并作为结果返回。 若要停止此行为，请在数据库设置中将 SET ANSI_NULLS 设置为 OFF。 如果 SET ANSI_NULLS 设置为 OFF，则在数据值为 NULL 时，所有数据与 Null 值的比较求得的值为 TRUE，最终结果是该成员不会传递“Is not equal”子句。 有关详细信息，请参阅 [SET ANSI_NULLS (Transact-SQL)](../t-sql/statements/set-ansi-nulls-transact-sql.md)。|  

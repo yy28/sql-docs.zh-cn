@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: cb6d1967173c4379b54ca8596b34eadbd8ab46e9
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: d3fa715de1823a67b9a47a89ed59c1dd13573e27
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84800514"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811452"
 ---
 # <a name="master-data-services-overview-mds"></a>Master Data Services 概述 (MDS)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 本主题介绍 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]的关键数据组织和管理功能。 
   

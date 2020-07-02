@@ -12,16 +12,16 @@ ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: v-redu
 ms.author: lle
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c8f122f6fbc746b025b0354265ff9e176845333f
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: a6c318a1fca182e60a5df7fb5d1569433f65d25d
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84999963"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812911"
 ---
 # <a name="host-an-mds-database-on-a-managed-instance"></a>在托管实例上托管 MDS 数据库
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   本文介绍如何在托管实例上配置 Master Data Services （MDS）数据库。
   
@@ -169,7 +169,7 @@ ms.locfileid: "84999963"
 
    ![mds-SQLServer2019-WebConfigSelectDB](../master-data-services/media/mds-sqlserver2019-config-mi-webconfigselectdb.png "mds-SQLServer2019-MI_WebConfigSelectDB")
 
-1. 选择**应用**。 你将看到 "**配置完成**" 消息。 在消息框中选择 **"确定"** 以启动 web 应用程序。 网站地址为 `http://server name/web application/` 。
+1. 选择“应用”。 你将看到 "**配置完成**" 消息。 在消息框中选择 **"确定"** 以启动 web 应用程序。 网站地址为 `http://server name/web application/` 。
 
 ## <a name="configure-authentication"></a>配置身份验证
 
@@ -228,7 +228,7 @@ MDS 还支持 Active Directory 密码身份验证和 SQL Server 身份验证，�
 
 1. 完成所有任务后，选择 "**完成**"。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [Master Data Services 数据库](../master-data-services/master-data-services-database.md)
 - [主数据管理器 Web 应用程序](../master-data-services/master-data-manager-web-application.md)

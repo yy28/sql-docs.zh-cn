@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 22785062-4faf-46ee-bffa-01cbd6d5a5b3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: db9187a5a30a740e8d790a8b84b5dae597de8bfd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a0ca2773d513137adeb9e803b66930536e3a28a
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728181"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811939"
 ---
 # <a name="entity-permissions-master-data-services"></a>实体权限 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   实体权限应用到：  
   
@@ -41,9 +41,9 @@ ms.locfileid: "73728181"
 |----------------|-----------------|  
 |**读取**|用户可以读取成员、属性、层次结构成员身份或集合成员身份。|  
 |**创建**|用户可以创建成员，并在创建过程中指定属性值。|  
-|**Update**|用户可以更新成员、属性、层次结构成员身份或集合成员身份。|  
+|**更新**|用户可以更新成员、属性、层次结构成员身份或集合成员身份。|  
 |**删除**|用户可以删除成员。|  
-|**注销**|拒绝对实体的所有访问。|  
+|**拒绝**|拒绝对实体的所有访问。|  
   
  读取、创建、更新和删除权限可以彼此合并。 当分配创建、更新和删除权限时，将自动分配读取权限。  
   

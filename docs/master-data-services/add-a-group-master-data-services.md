@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: c7a88381-3b2c-4af7-9cf7-3a930c1abdee
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ef07ebbaf787852b3902af158f4f515293aae7ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5c9bbcdca2cdbab0d3d92e90e5b343fda196a027
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728816"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812833"
 ---
 # <a name="add-a-group-master-data-services"></a>添加组 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   在 **中将某一组添加到** “组” [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 列表中，以便开始向 Web 应用程序分配权限。 在该组中的某一用户可以访问 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]之前，必须为该组提供针对一个或多个功能区域和模型对象的权限。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "73728816"
   
 5.  或者单击 **“检查名称”**。  
   
-6.  单击“确定”。   
+6.  单击 **“确定”** 。  
   
     > [!NOTE]  
     >  当用户第一次访问 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]时，将用户的名称添加到 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 用户列表。  

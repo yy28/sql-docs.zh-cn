@@ -12,32 +12,32 @@ f1_keywords:
 ms.assetid: e045b41a-4836-47f6-8e78-2b09494b461f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b35c47704915ec9e85f0c4f2ac083bfb7a6017ac
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 246ac0977d84e1e011553937d1edd5ce39b53205
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729504"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812008"
 ---
 # <a name="create-web-application-dialog-box-master-data-services-configuration-manager"></a>“创建 Web 应用程序”对话框（Master Data Services 配置管理器）
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   使用“创建 Web 应用程序” **** 对话框可以创建 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序。 此 Web 应用程序在“Web 配置” **** 页上选择的网站中创建。  
   
 ## <a name="web-application"></a>Web 应用程序  
  Web 服务器从文件系统中的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] **WebApplication** 文件夹为此 Web 应用程序提供内容。 此位置在安装过程中指定，路径默认为驱动器**:\Program Files\Microsoft SQL Server\130\Master Data Services\WebApplication。  
   
-|控件名称|说明|  
+|控件名称|描述|  
 |------------------|-----------------|  
 |虚拟路径|选择要在其下创建 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序的虚拟路径。 虚拟路径是用来访问 Web 应用程序的 URL 的一部分。<br /><br /> 对此列表进行筛选以便只显示可在其下创建 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序的应用程序虚拟路径。 不能在其他 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序下创建 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序。|  
 |Alias|为 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序键入名称，或使用默认名称。 在 URL 中使用该名称从 Web 浏览器访问 Web 应用程序。|  
   
 ## <a name="application-pool"></a>应用程序池  
   
-|控件名称|说明|  
+|控件名称|描述|  
 |------------------|-----------------|  
-|**名称**|为新的应用程序池键入唯一的友好名称，或者使用默认名称。 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序将添加到这个应用程序池。<br /><br /> 应用程序池提供的边界可防止一个应用程序池中的应用程序影响另一个应用程序池中的应用程序。|  
+|**Name**|为新的应用程序池键入唯一的友好名称，或者使用默认名称。 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序将添加到这个应用程序池。<br /><br /> 应用程序池提供的边界可防止一个应用程序池中的应用程序影响另一个应用程序池中的应用程序。|  
 |**用户名**|键入来自 Active Directory 的域名和用户名。 此帐户是 Web 应用程序运行所在的应用程序池的标识。 此帐户应该与创建 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库时指定为服务帐户的帐户相同。<br /><br /> 此帐户添加到 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中的 mds_exec 数据库角色，以便访问数据库。 有关详细信息，请参阅[数据库登录、用户和角色 (Master Data Services)](../master-data-services/database-logins-users-and-roles-master-data-services.md)。 它还会被添加到 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Windows 组 **MDS_ServiceAccounts**，该组有权访问文件系统中的临时编译目录 **MDSTempDir**。 有关详细信息，请参阅[文件夹和文件权限 (Master Data Services)](../master-data-services/folder-and-file-permissions-master-data-services.md)。|  
 |**密码**|键入指定用户帐户的密码。|  
 |**确认密码**|重新键入指定用户帐户的密码。 **“密码”** 字段和 **“确认密码”** 字段必须包含相同的密码。|  

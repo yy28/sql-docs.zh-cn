@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: cfad6f1c-9125-4896-b5f5-a4b9f9593cc4
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 859eb2c829b7d6f35aa39cb2301a4a380c0d039e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: db37dd8b4eed5c887cfceceb382fe57aa0d2fc33
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729626"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812439"
 ---
 # <a name="create-a-changeset-master-data-services"></a>创建变更集 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   变更集是主数据的挂起更改的集合。 如果实体需要批准更改，则挂起的更改必须保存在变更集中，然后提交以供管理员批准。  
   

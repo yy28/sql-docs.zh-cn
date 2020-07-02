@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 9fd7a555-43bf-4796-a8b6-1ca63a291216
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e12489cc490c5b8ee9f363e329da9a057fac8f3f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0168bda2095d0286f184ba3f8530e51c4d7a1d42
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728980"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812352"
 ---
 # <a name="overlapping-model-and-member-permissions-master-data-services"></a>重叠的模型和成员权限（主数据服务）
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   分配给成员的权限可与分配给模型对象的权限重叠。 出现重叠时，限制性更强的权限将生效。  
   

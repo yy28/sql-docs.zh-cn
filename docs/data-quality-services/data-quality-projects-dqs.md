@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: a43fc9c0-19b6-414a-8661-4c7c55e0c03e
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 22a92035ea26a4341d4f912c3e6b5cdfaef75efa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6deb778d5b15ed76256fa0d22366f0be9eb25b02
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251711"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812523"
 ---
 # <a name="data-quality-projects-dqs"></a>数据质量项目 (DQS)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的数据质量项目就是使用知识库，通过执行“数据清理” ** 和 ** “数据匹配”活动改进源数据的质量，然后将结果数据导出到 SQL Server 数据库或 .csv 文件。 您可以将数据质量项目创建为一个清理项目或匹配项目，以执行相应的任务。 可以通过使用同一个知识库运行清理项目和匹配项目，因为用于数据清理和匹配的知识可以内置于同一个知识库中。  
   

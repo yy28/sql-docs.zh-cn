@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: a778bb5b-8e35-4a7b-b04a-ae2b46dec21b
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 1e5c51996ba85b9645650f453a0e4ed18478ccf7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ab254c9deaee5a9e31a89d2a44d281e83a2beead
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80607825"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812549"
 ---
 # <a name="data-profiling-and-notifications-in-dqs"></a>DQS 中的数据事件探查和通知
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的数据事件探查是一个分析现有数据源中的数据并显示有关 DQS 活动中的数据统计信息的过程。 它为您提供了数据质量的自动测量。 DQS 事件探查已集成到 DQS 知识管理和数据质量项目中。 它是动态和可调的。 事件探查具有两个主要目的：第一，引导您完成数据质量过程和支持您做出决策；第二，评估过程的效用。 DQS 事件探查具有下列优点：  
   
@@ -77,7 +77,7 @@ ms.locfileid: "80607825"
 ##  <a name="profiling-data-in-activity-monitoring"></a><a name="Monitoring"></a>活动监视中的事件探查数据  
  知识发现、匹配策略、匹配和清除活动的事件探查信息不仅可用于数据质量客户端中的活动页，还可在活动监视中使用。 活动监视向您提供当前和过去活动的概述。 除了活动的属性和相关的计算过程之外，您还可以查看针对一个位置的每个活动生成的事件探查信息。 您可以在活动表中选择一个活动，以便在下表中显示事件探查结果。 此外，还可以导出事件探查结果。 有关详细信息，请参阅 [DQS Administration](../data-quality-services/dqs-administration.md)。  
   
-##  <a name="notifications"></a><a name="Notifications"></a>报警  
+##  <a name="notifications"></a><a name="Notifications"></a> 通知  
  除了通过事件探查收集和显示重要统计信息和度量指标之外，DQS 还将生成通知（如果已启用），以指示您根据所显示的事件探查统计信息，何时可能需要采取措施。 DQS 使用通知来强调有关数据源的重要事实，并显示当前活动相对于其执行目的的有效性。 通知提供相关的提示和建议，这些信息指示某种条件并建议您如何改进知识发现、数据清除或数据匹配活动。  
   
  DQS 通知用于提出您可能感兴趣的问题或解决潜在的问题。 是否对通知进行操作取决于它是否与你的目的相关。 例如，假设当完整性和准确性均为 100% 时，如果数据清理没有生成任何更正值或建议值，则 DQS 会发布一个通知。 此通知将表明可能不需要运行该活动。 是否选择运行此活动取决于您。  
@@ -98,7 +98,7 @@ ms.locfileid: "80607825"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|任务说明|项目|  
+|任务说明|文章|  
 |----------------------|-----------|  
 |说明如何在 DQS 中启用或禁用通知。|[在 DQS 中启用或禁用事件探查通知](../data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md)|  
   

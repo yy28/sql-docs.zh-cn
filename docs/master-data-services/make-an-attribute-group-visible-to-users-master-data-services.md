@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: b2f6cc27-dbc9-4f3f-961e-e81e76375248
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 26ad0e3d481b5d09a3105645af5705a3bd99cdbf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 998eed940f93c90974848812e0e6dabf7cf9ca91
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729066"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811733"
 ---
 # <a name="make-an-attribute-group-visible-to-users-master-data-services"></a>使属性组对用户可见 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，当您想要用户在 **“资源管理器”** 功能区域中将选项卡置于网格上方时，使属性组对于用户或组是可见的。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "73729066"
   
 7.  单击“可用” **** 框中的用户或组，然后单击“添加” **** 箭头。 若要全部添加，请单击 **“全部添加”** 箭头。  
   
-8.  单击“保存”  。  
+8.  单击“ **保存**”。  
   
 ## <a name="see-also"></a>另请参阅  
  [属性组 &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md)   

@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 6f7c3f07-0f64-4283-8c9c-93facd00a046
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 870341b6ae6a3ffbda345aa7a0abc4a2fe253ac5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a4228f34fea725d2be8cdaff94613fa734771ce2
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728927"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811434"
 ---
 # <a name="reverse-a-transaction-master-data-services"></a>撤消事务 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，管理员可以在需要撤消操作时撤消事务。 事务的示例包括属性值更改、层次结构移动或成员删除。 本主题仅适用于事务日志类型为“属性”的实体的事务。 请转到实体资源管理器页，查看事务日志类型为“成员”的实体的事务历史记录。  
   

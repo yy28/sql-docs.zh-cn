@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: 7d1076e0-7710-469a-9107-e293e4bd80ac
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 6d8bdf65a4225bbb915c5596db641f4635775953
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 07879417c216e6d66085539ed6c177891a4e8bfb
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75255681"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811346"
 ---
 # <a name="cleanse-data-in-a-composite-domain"></a>清理复合域中的数据
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   本主题提供有关清理 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的复合域的信息。 一个复合域由两个或更多的单一域构成，并且映射到一个由多个相关字词构成的数据字段。 复合域中的单独的域必须具有一个共同的知识范畴。 有关复合域的详细信息，请参阅 [Managing a Composite Domain](../data-quality-services/managing-a-composite-domain.md)。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "75255681"
 |-----------------|-----------------|--------------------|  
 |Microsoft Office 2010|Microsoft Inc.|2010|  
   
- 在您测试明确的 *Then* 跨域规则 **“值等于”** 时， **“测试复合域规则”** 对话框将包含一个新列 **“更正为”**，该列将显示正确的数据。 在清理数据质量项目时，这个明确的跨域规则更改可信度为 100% 的数据，并且“原因”列显示以下消息：已由规则“\<Cross-Domain Rule Name>”更正******。 有关跨域规则的详细信息，请参阅 [Create a Cross-Domain Rule](../data-quality-services/create-a-cross-domain-rule.md)。  
+ 在您测试明确的 *Then* 跨域规则 **“值等于”** 时， **“测试复合域规则”** 对话框将包含一个新列 **“更正为”**，该列将显示正确的数据。 在清理数据质量项目中，此明确的跨域规则将数据更改为100% 的置信度，**原因**列显示以下消息：已由规则 " *\<Cross-Domain Rule Name>* " 更正。 有关跨域规则的详细信息，请参阅 [Create a Cross-Domain Rule](../data-quality-services/create-a-cross-domain-rule.md)。  
   
 > [!NOTE]  
 >  明确的跨域规则将不适用于附加到引用数据服务的复合域。  

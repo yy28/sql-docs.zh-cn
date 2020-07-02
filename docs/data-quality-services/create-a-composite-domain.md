@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 89c71bd3864fcaa682d3587a54fc2b32c26e5659
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f1ae1d6732b3661ca70511f0de8b3be0730ed63b
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289865"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812561"
 ---
 # <a name="create-a-composite-domain"></a>创建复合域
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 的知识库中创建复合域。 复合域由应用于单个数据字段的一个或多个单一域组成。 有关复合域的详细信息，请参阅[管理复合域](../data-quality-services/managing-a-composite-domain.md)。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "79289865"
   
 6.  在 **“域列表”** 中，选择将成为复合域一部分的域，然后单击右箭头将它们移至 **“复合域中的域”** 表中。  
   
-7.  单击“确定”。   
+7.  单击 **“确定”** 。  
   
 ##  <a name="set-composite-domain-properties"></a><a name="CompositeDomainProperties"></a> 设置复合域属性  
   
@@ -77,7 +77,7 @@ ms.locfileid: "79289865"
   
 2.  在 **“域列表”** 中，选择将成为复合域一部分的域，然后单击右箭头将它们移至 **“复合域中的域”** 表中。 这是可添加到您创建的复合域中的单一域列表。 只能使用已创建但尚未添加到现有复合域中的那些单一域。 无法将单一域添加到知识库中的多个复合域，并且一个复合域无法添加到另一个复合域中。  
   
-3.  单击“高级”****。  
+3.  单击 **“高级”** 。  
   
 4.  请为 **“分析方法”** 选择下列选项之一：  
   

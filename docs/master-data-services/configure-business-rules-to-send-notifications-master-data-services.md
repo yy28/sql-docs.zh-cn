@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: b24f7b11-ab53-4642-999c-e17b543b3558
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4645b9faca312eb5bee12eef1130893785c327d5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a6c70b57cb50ae8134fa04f2bab4073dced40091
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728563"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812018"
 ---
 # <a name="configure-business-rules-to-send-notifications-master-data-services"></a>配置业务规则以发送通知 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，当您要向用户通知有关属性值更改时，请配置业务规则以发送通知。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "73728563"
   
 7.  选中“发送通知”复选框，并从下拉列表中选择要向其发送电子邮件通知的用户或组。****  
   
-8.  单击“保存”  。  
+8.  单击“ **保存**”。  
   
 9. 单击“全部发布” ****。  
   

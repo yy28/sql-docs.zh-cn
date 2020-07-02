@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 83a03b85-ea7f-4b4a-b19b-f7eca534ffae
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2890487c4bbdf23ca4f1d7fa13aa15764f8029d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dd1c6dc3673fc7ff00fec90eb85825e9e34f84d9
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728870"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812919"
 ---
 # <a name="test-a-user39s-permissions-master-data-services"></a>测试用户权限 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，您可以创建测试用户并登录到 Web 应用程序以测试权限。当某个用户尝试访问 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] URL 时，将会对该用户的凭据进行身份验证。 在 Internet Explorer 中，安全设置控制是否自动进行身份验证，或者用户是否必须输入用户名和密码。 若要更改这些设置，请完成以下步骤：  
   

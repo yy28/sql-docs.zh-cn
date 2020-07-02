@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 94b2529323e5a075b6fd423fd8c69ece7a0535c0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1ce0686211440291711815fa3b1d76641a374da8
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75258849"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812600"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>备份和还原 DQS 数据库
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   本主题说明如何备份和还原 DQS 数据库。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "75258849"
   
 10. 在“对象资源管理器”中，右键单击服务器，再单击 **“新建查询”**。  
   
-11. 在查询编辑器窗口中，复制以下 SQL 语句，并将* \<password>* 替换为在 DQS 安装过程中为数据库主密钥提供的密码：  
+11. 在查询编辑器窗口中，复制以下 SQL 语句，并将替换为在 *\<PASSWORD>* DQS 安装过程中为数据库主密钥提供的密码：  
   
     ```  
     USE [DQS_MAIN]  

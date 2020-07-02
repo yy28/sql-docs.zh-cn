@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 44262bdd-430c-4337-ac92-9333f54c7039
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 8c17a3356949375ab6836db94a31910f5e54ca2a
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 2be9caff295a41dbb79c1062d2a3f132ea93141c
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796579"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812824"
 ---
 # <a name="add-a-user-master-data-services"></a>添加用户 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   在 **中将某一用户添加到** “用户” [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 列表中，以便开始向 Web 应用程序分配权限。 在该列表中的某一用户可以访问 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]之前，必须为该用户提供针对一个或多个功能区域和模型对象的权限。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "84796579"
   
 4.  或者单击 **“检查名称”**。  
   
-5.  单击“确定”。  
+5.  单击 **“确定”** 。  
   
 ## <a name="next-steps"></a>后续步骤  
   

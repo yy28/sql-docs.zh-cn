@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 797219ad-5109-4666-94d3-dd1d59440a33
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 028c1c20516d6f058e60dad6121aee0230d78817
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8422b9300b374cbf78eb602dc8ad8f36f7a5e39c
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729026"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811886"
 ---
 # <a name="merge-conflicts-master-data-services"></a>合并冲突 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，如果你尝试发布的数据已被另一个用户更改，则发布将失败并显示冲突错误。 若要解决此错误，可以执行合并冲突，然后重新发布更改。  
   

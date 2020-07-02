@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 4ce177b0-9884-47a2-9cea-212e845dd762
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 74a2b9a825b9e589cba9416eb932bcb824f00373
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d49665fff9fe5821bf5cb38e908202483f2250b5
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728328"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812374"
 ---
 # <a name="delete-an-explicit-hierarchy-master-data-services"></a>删除显式层次结构 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，当不再需要显式层次结构时可将其删除。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "73728328"
   
 5.  在“管理显式层次结构” **** 页上，单击要删除的显式层次结构。  
   
-6.  单击 **“编辑”**。  
+6.  单击 **“编辑”** 。  
   
 7.  在确认对话框中，单击 **“确定”**。  
   

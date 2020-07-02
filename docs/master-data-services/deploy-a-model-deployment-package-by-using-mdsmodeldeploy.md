@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: fb2a4df4-5e0d-4b34-818f-383dbde1b15c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 646ed23608fdeada57ae28e12ad674fc557ad856
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 16b5268f9ca4ac300bafe09b1188776985e5826d
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796359"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811770"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>使用 MDSModelDeploy 部署模型部署包
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，使用 MDSModelDeploy 工具来部署包含以下任一信息的包：  
   
@@ -95,7 +95,7 @@ ms.locfileid: "84796359"
   
 6.  成功部署包后，将显示一条消息“MDSModelDeploy 操作已成功完成”。  
   
- **注意：**  
+ 注意：  
   
 -   如果包中的订阅视图与现有模型中的订阅视图同名，则显示此警告： **Deployer 订阅视图已重命名** ，且视图创建为 *modelname.subscriptionviewname*。 如果此名称已使用，则不会创建订阅视图。  
   
@@ -114,7 +114,7 @@ ms.locfileid: "84796359"
      在更新某一模型时，如果该过程在前三个步骤中失败，则该过程将不会继续；但是，已进行的更改将不会回滚。 如果该过程在步骤 4 中失败，则会更新可更新的成员。  
   
 ## <a name="next-steps"></a>后续步骤  
- 模型部署包中不包括文件属性以及用户和组权限。 在您部署模型后，必须手动更新这些内容。 有关详细信息，请参阅：  
+ 模型部署包中不包括文件属性以及用户和组权限。 在您部署模型后，必须手动更新这些内容。 有关详情，请参阅：  
   
 -   [分配模型对象权限 (Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   

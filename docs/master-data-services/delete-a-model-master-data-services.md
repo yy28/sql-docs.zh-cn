@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: f0ad3cc4-aed7-47c8-94bc-2971fe9fe871
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 65164c1732aefe6555aa19325a158793d07631a6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7badbd43fd526ff66b599f04e6aeb36443cd3684
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728360"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811533"
 ---
 # <a name="delete-a-model-master-data-services"></a>删除模型 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   删除一个模型将从 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中删除该模型及其所有数据。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "73728360"
   
 6.  在附加确认对话框中，单击 **“确定”**。  
   
- 网格的“状态”列中显示了对模型所执行操作的状态。 **** 单击 "**保存模型**" 按钮后，将显示 "![更新](../master-data-services/media/mds-model-status-updating.png "正在更新")" 图像，指示模型正在更新。 如果在创建或编辑模型时出现错误，则会显示![错误](../master-data-services/media/mds-model-status-error.png "错误")映像。 如果状态为“正常”，系统会显示 ![“确定”](../master-data-services/media/mds-model-status-ok.png "OK") 图像。  
+ 网格的“状态”列中显示了对模型所执行操作的状态。 **** 单击 "**保存模型**" 按钮后，将显示 "![更新](../master-data-services/media/mds-model-status-updating.png "更新")" 图像，指示模型正在更新。 如果在创建或编辑模型时出现错误，则会显示![错误](../master-data-services/media/mds-model-status-error.png "错误")映像。 如果状态为“正常”，系统会显示 ![“确定”](../master-data-services/media/mds-model-status-ok.png "确定") 图像。  
   
 ## <a name="see-also"></a>另请参阅  
  [Master Data Services &#40;模型&#41;](../master-data-services/models-master-data-services.md)   

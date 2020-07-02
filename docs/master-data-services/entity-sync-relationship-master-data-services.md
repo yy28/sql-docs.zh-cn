@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: bd627a2d-dc64-47e9-9a71-2d0ad04b4962
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a8072ca35b1676a5bace4fe60f70e7cfdbc0778b
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 0dac91e4f43d244e133511e792f29770949da905
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796294"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811922"
 ---
 # <a name="entity-sync-relationship-master-data-services"></a>实体同步关系 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   实体同步是实体版本间的单向可重复同步。 它使你可在不同模型间共享实体数据。 你可以在一个模型中保留单个事实源，并在其他模型中重用该主数据。 例如，你可以将 US 状态数据存储在一个模型实体中，并在其他模型中重用该数据。  
   

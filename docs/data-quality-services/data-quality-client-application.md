@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: 25d1547e-4113-4b34-a9f8-8897db1acf16
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 4a789386fbbef91590ec025787e47c7655753a3b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9c788f20aa0b24d4058578119dc7b4bc139ded73
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251736"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812560"
 ---
 # <a name="data-quality-client-application"></a>数据质量客户端应用程序
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 应用程序允许您使用独立工具执行数据质量操作。 此应用程序使您能够创建知识库、创建和运行数据质量项目以及执行管理任务。  
   

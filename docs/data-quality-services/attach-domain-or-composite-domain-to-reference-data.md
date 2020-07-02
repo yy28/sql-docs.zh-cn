@@ -14,16 +14,16 @@ f1_keywords:
 ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: df671e83d80175f154a4008270c3b68dc2581b59
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0287c29e66711724b725689d578a498f0537600a
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75557912"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812622"
 ---
 # <a name="attach-domain-or-composite-domain-to-reference-data---data-quality-services-dqs"></a>将域或复合域附加到引用数据-Data Quality Services （DQS）
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   本主题介绍如何将数据质量知识库中的域/复合域附加到 Azure Marketplace 中的引用数据服务，以便针对高质量引用数据生成知识。 每个引用数据服务包含一个架构（数据列）。 在将域或复合域附加到引用数据服务后，必须将此附加域或所附加的复合域内的各个域映射到引用数据服务架构中的相应列。 通过将复合域附加到引用数据服务，您可以只将一个域附加到引用数据服务，然后将复合域内的各域映射到引用数据服务架构中的相应列。  
 
@@ -57,7 +57,7 @@ ms.locfileid: "75557912"
   
 4.  在 **“域管理”** 屏幕中，单击 **“创建域”** 图标以创建一个域。 创建下列四个域： **Address Line**、 **City**、 **State**和 **Zip**。  
   
-5.  单击 **“创建复合域”** 图标以便创建一个复合域。 在 **“创建复合域”** 对话框中，在 **“复合域名称”** 框中键入 **Address Verification** ，并且在该复合域中包括在步骤 3 中创建的所有域。 单击“确定”。   
+5.  单击 **“创建复合域”** 图标以便创建一个复合域。 在 **“创建复合域”** 对话框中，在 **“复合域名称”** 框中键入 **Address Verification** ，并且在该复合域中包括在步骤 3 中创建的所有域。 单击 **“确定”** 。  
   
 6.  在左侧的 **“域”** 窗格中，通过单击 **Address Verification**选择该复合域，然后单击右侧的 **“引用数据”** 选项卡。  
   

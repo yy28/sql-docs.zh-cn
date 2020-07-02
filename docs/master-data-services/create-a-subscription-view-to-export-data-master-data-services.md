@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e46961fa67492667a697c34f727ae068744e5e63
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 381d089aa124f44161b3fd5f1102f7377719f142
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796405"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812752"
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>创建订阅视图以导出数据 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   创建订阅视图，以便将 Master Data Services 数据导出到订阅系统。 你打算在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中创建数据的视图。  
   
@@ -61,16 +61,16 @@ ms.locfileid: "84796405"
   
 10. 如果您从 **“格式”** 列表中选择 **“显式级别”** 或 **“派生级别”** ，则键入要包括在视图中的层次结构中的级别数。  
   
-11. 单击 **“保存”** 。  
+11. 单击“ **保存**”。  
   
 ## <a name="view-information"></a>查看信息  
  对于创建的每个视图，系统都会在网格中添加一行（其中包含十列）。 下表对这些列进行了说明。  
   
-|列|说明|  
+|列|描述|  
 |------------|-----------------|  
 |状态|视图状态。<br /><br /> 单击 "**保存**" 时，将显示![更新状态](../master-data-services/media/mds-statusicon-updating.png "用于更新状态的图标")图像的图标，指示该视图正在更新。<br /><br /> 如果在创建或编辑视图时出现错误，则显示 "![错误状态](../master-data-services/media/mds-statusicon-error.png "错误状态图标")" 图像图标。<br /><br /> 否则，状态为 "正常"，将显示!["确定状态](../master-data-services/media/mds-statusicon-ok.png ""正常" 状态图标")" 图像的图标。|  
-|名称|订阅视图名称。|  
-|“模型”|模型名称。|  
+|“属性”|订阅视图名称。|  
+|型号|模型名称。|  
 |版本|版本名称。|  
 |版本标志|版本标志名称。|  
 |派生层次结构|派生层次结构名称。|  

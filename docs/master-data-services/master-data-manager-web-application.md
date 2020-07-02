@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 8eac727c-2304-4612-bc1f-14539295b4b3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0ce1a7470b6304b924f3fcc7ae0fcec70b08b634
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 99e82901a8d3dac593e60896fc663f03e8ec431a
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796572"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812929"
 ---
 # <a name="master-data-manager-web-application"></a>主数据管理器 Web 应用程序
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序主要由管理员用于执行管理任务。 例如，只有管理员才能创建模型、业务规则或数据版本。 有关管理员的详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   

@@ -11,16 +11,16 @@ f1_keywords:
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: a982279e06a1968cf80335cd16dd9eb74e458c3e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3f747839945d8f2ea4c6960d8a8c594f64777040
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251780"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811646"
 ---
 # <a name="create-term-based-relations"></a>创建基于字词的关系
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   本主题描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中为域创建基于字词的关系。 通过基于字词的关系 (TBR)，您可以对域中作为值的一部分的字词进行更正。 基于字词的关系使完全相同的多个值（只有其公共部分的拼写除外）可被视为相同的同义词。 例如，可以设置一个基于字词的关系，该关系可将字词“Inc.” 更改为“Incorporated”。 字词“Inc.” 将在其每次出现在域中时发生更改。 “Contoso, Inc.”的实例 将更改为“Contoso, Incorporated”，并且这两个值将被视为精确同义词。  
   

@@ -11,16 +11,16 @@ f1_keywords:
 ms.assetid: 5ee468f0-8538-4620-90e8-63f466c9000e
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 90937a98bb409c6f17bc542183cd024f408d71f2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 03f90fb4e97ac7671ba4f09ff5dc6ad32bfcf84b
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75257765"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812503"
 ---
 # <a name="use-value-relations-in-a-composite-domain"></a>在复合域中使用值关系
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 知识发现过程中查看为复合域找到的值组合。 此页显示值组合的出现次数。 复合域不支持值管理，因此，您无法对这些值执行任何操作。  
   

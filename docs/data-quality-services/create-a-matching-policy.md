@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 3a50b48b4c498020b3428af2eca2c9d045187682
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: de3733023aef2975b2276e2a804e0eec503a0930
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251787"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811334"
 ---
 # <a name="create-a-matching-policy"></a>创建匹配策略
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   本主题描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 的知识库中生成匹配策略。 您可以通过对示例数据运行“匹配策略”活动在 DQS 中准备匹配过程。 在此活动中，在策略中创建和测试一个或多个匹配规则，然后发布知识库以使匹配的规则可供公开使用。 知识库中只能有一个匹配策略，但该策略可以包含多个匹配规则。  
   

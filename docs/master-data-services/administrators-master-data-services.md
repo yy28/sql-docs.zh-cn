@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c1a4393881b05c21a690c06bfa39fd2114da0b18
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: a8f4fd055394df55b96b8694621d430bbac6c320
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796571"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812823"
 ---
 # <a name="administrators-master-data-services"></a>管理员 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   本文介绍 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中的管理员类型：模型管理员、实体管理员和超级用户。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "84796571"
   
 ## <a name="comparing-administrator-types"></a>比较管理员类型  
   
-|管理员类型|说明|  
+|管理员类型|描述|  
 |------------------------|-----------------|  
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 超级用户|在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中分配的权限对于管理员的访问权限没有影响。<br /><br /> 可以是基于显式分配的功能区域权限或从组继承的权限的超级用户。<br /><br /> 会自动拥有对所有模型的所有权限。<br /><br /> 自动对所有功能区域具有访问权限。|  
 |模型管理员|可以是基于显式分配的管理员权限或者从组继承的权限的模型管理员。<br /><br /> 仅对向其分配访问权限的功能区域具有访问权限。<br /><br /> 自动对特定模型中的所有对象和成员具有所有权限。|  

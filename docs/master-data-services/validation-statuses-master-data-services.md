@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: fc829d25-b3e8-4801-8a94-4df19a7a5971
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6c434e2cdc64616b5abbdf07ca4df428fce2edca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1ceaf7e42b8d25873cc595e3e64b6949e25d52e3
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728858"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812317"
 ---
 # <a name="validation-statuses-master-data-services"></a>验证状态 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   在 **“版本管理”** 功能区域中的 **“验证版本”** 页上，以下状态可能会出现。  
   
-|状态|说明|  
+|状态|描述|  
 |------------|-----------------|  
 |正在等待验证|正在等待验证的所有新创建的成员。|  
 |正在等待重新验证|正在等待验证的现有成员。|  

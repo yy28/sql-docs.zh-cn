@@ -12,23 +12,23 @@ f1_keywords:
 ms.assetid: dd72220e-a599-465d-8b84-9bb6a7433216
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 82b3762342c30b657f031bd53f89ae7652f5ece8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b7c581c06ca465de301d48a760c54f1247ff32f3
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729432"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811816"
 ---
 # <a name="database-configuration-page-master-data-services-configuration-manager"></a>“数据库配置”页（Master Data Services 配置管理器）
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   使用 **“数据库配置”** 页可以编辑 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库的系统设置。 系统设置将影响与所选 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库相关联的所有 Web 应用程序和 Web 服务。 您必须首先选择或创建一个 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库，然后系统设置才能启用并且可用于配置。  
   
 ## <a name="current-database"></a>当前数据库  
  选择一个现有 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库或创建要编辑其系统设置的新数据库。 在创建后，将选择这个新数据库。  
   
-|控件名称|说明|  
+|控件名称|描述|  
 |------------------|-----------------|  
 |**SQL Server 实例**|显示所选 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例的名称。 在您连接到某一实例并选择或创建某一 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库之前，此项为空。|  
 |**Master Data Services 数据库**|显示所选 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库的名称。 在您连接到某一实例并选择或创建某一 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库之前，此项为空。|  

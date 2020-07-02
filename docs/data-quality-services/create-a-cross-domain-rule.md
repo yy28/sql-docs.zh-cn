@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 070ef5db87ac28b59f01e3927f876f9c757e6caa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b42733965fc41662ba81514da59460a0d02d5ac8
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75245474"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812167"
 ---
 # <a name="create-a-cross-domain-rule"></a>创建跨域规则
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   本主题描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 的知识库中为复合域创建跨域规则。 跨域规则测试在复合域中包含的单一域中各值之间的关系。 跨域规则必须在复合域中保持正确，这样才能认为域值是准确的并且符合业务要求。 跨域规则用于验证、更正和标准化域值。  
   

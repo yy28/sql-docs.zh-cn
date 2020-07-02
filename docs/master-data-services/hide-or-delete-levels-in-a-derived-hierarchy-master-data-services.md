@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: e00582b9-9415-4b66-b4a7-9f590d83875f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b364213586b8f796101e099c1384cba9569f8ad9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3801704f26f0da82115ffaec6bd7e8078bf94f60
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728131"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811762"
 ---
 # <a name="hide-or-delete-levels-in-a-derived-hierarchy-master-data-services"></a>隐藏或删除派生层次结构中的级别 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，当您在派生层次结构中需要级别进行分组，但不需要显示级别时，可以隐藏级别。 当您不希望将级别用于分组时，可以删除它。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "73728131"
   
 4.  为您要编辑的派生层次结构选择行。  
   
-5.  单击 **“编辑”**。  
+5.  单击 **“编辑”** 。  
   
 6.  在 **“当前级别”** 窗格中：  
   

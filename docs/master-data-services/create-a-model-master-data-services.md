@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 55a0ff697fd9f20f34c2ddc878016ba75f5fa673
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 577155b8b7c10ce56f71346d28889e4ae29954e9
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796410"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811602"
 ---
 # <a name="create-a-model-master-data-services"></a>创建模型 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，创建模型以便包含模型对象。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "84796410"
   
  对于创建的每个模型，系统都会在网格中添加一行（其中包含八列）。 八个列是：  
   
--   状态****：模型状态。 单击 "**保存模型**" 按钮后，将显示 "![更新](../master-data-services/media/mds-model-status-updating.png "更新")" 图像，指示模型正在更新。 如果在创建或编辑模型时出现错误，则会显示![错误](../master-data-services/media/mds-model-status-error.png "错误")映像。 如果状态为“正常”，系统会显示 ![“确定”](../master-data-services/media/mds-model-status-ok.png "OK") 图像。  
+-   状态****：模型状态。 单击 "**保存模型**" 按钮后，将显示 "![更新](../master-data-services/media/mds-model-status-updating.png "更新")" 图像，指示模型正在更新。 如果在创建或编辑模型时出现错误，则会显示![错误](../master-data-services/media/mds-model-status-error.png "错误")映像。 如果状态为“正常”，系统会显示 ![“确定”](../master-data-services/media/mds-model-status-ok.png "确定") 图像。  
   
 -   名称****：模型名称。  
   

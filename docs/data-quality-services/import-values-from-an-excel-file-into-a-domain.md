@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 144a2b57fa671842f284445dee859e689e8adbe1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ff2e139b9cbb1a4711873ae1cc5e9b3f0ac28e41
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75254820"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812082"
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>将值从 Excel 文件导入到域
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   本主题介绍如何将值从 Excel 文件导入到 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 的域中。 使用 Excel 文件将域值导入到 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 应用程序中可以简化知识生成过程、节省时间并提高效率。 借助这一方法，在 Excel 文件或文本文件中具有有效数据值列表的人士能够将这些值导入到域中。 从 Excel 文件，您可以将域值导入到某个域中，或者将多个域导入到知识库中。 （有关将域导入知识库的详细信息，请参阅[在知识发现中从 Excel 文件导入域](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)。）不支持导出到 Excel 文件。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "75254820"
   
 9. 如果电子表格中的第一行表示域名，并且所有其他行表示有效的域值，则选择 **“将第一行用作标头”** 。  
   
-10. 单击“确定”。  将显示一个进度栏，指示成功导入了多少个值、未导入多少个值以及值的总数。 单击 **“取消”** 按钮将取消该过程。  
+10. 单击 **“确定”** 。 将显示一个进度栏，指示成功导入了多少个值、未导入多少个值以及值的总数。 单击 **“取消”** 按钮将取消该过程。  
   
 11. 确认“导入完成”显示在“导入域值”对话框中****。 在此对话框中查看哪些值已成功导入、哪些值未导入。 该对话框将指示文件的名称和路径、操作的完成状态、成功导入了多少个值、未导入多少个值以及处理的值的总数。  
   

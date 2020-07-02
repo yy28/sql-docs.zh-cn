@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 45bd01f9-ae15-4fc5-a2ba-eee565a26ef8
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 401983aa2e5094560f7bcc852c839986ffe4234d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c0d7e090350fdaae094c8365d28a4e058bdfa62e
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728771"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812808"
 ---
 # <a name="approve-or-reject-a-changeset-master-data-services"></a>批准或拒绝变更集 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   变更集是主数据的挂起更改的集合。 如果实体更改则需要管理员批准并将变更集提交以供审核，可以查看，然后批准或拒绝该变更集。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "73728771"
   
 ## <a name="to-approve-or-reject-a-changeset"></a>批准或拒绝变更集  
   
-1.  在[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]主页上，选择模型和版本，然后单击 "**资源管理器**"。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 主页上，选择模型和版本，然后单击 "**资源管理器**"。  
   
 2.  单击“实体”菜单中的某个实体 **** 。  
   

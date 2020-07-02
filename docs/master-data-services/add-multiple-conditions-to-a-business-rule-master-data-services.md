@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 5f0f6958-6cf2-444b-bdcd-05b887637a0b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4b85846202ef1cd8a30012dddb2c88803c901d16
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dca2f4877a172b7fd75025e226459c699ea7d13b
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728796"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812072"
 ---
 # <a name="add-multiple-conditions-to-a-business-rule-master-data-services"></a>向业务规则添加多个条件 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，在您想要采用更复杂的规则时，可以向业务规则添加多个 **AND** 或 **OR** 条件。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "73728796"
   
 6.  单击要编辑的业务规则所对应的行。  
   
-7.  单击 **“编辑”**。  
+7.  单击 **“编辑”** 。  
   
 8.  在左侧的 **If** 块中，从逻辑运算符下拉列表中选择 **AND/OR/NOT**。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "73728796"
   
 12. 填写所有必填字段。  
   
-13. 单击“保存”  。 此时，系统会在“If” **** 网格中新添加一行。  
+13. 单击“ **保存**”。 此时，系统会在“If” **** 网格中新添加一行。  
   
 14. （可选）若要添加更多条件，请完成第 8-13 步。  
   

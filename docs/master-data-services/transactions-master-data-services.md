@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7ce5d8456d1857c3e62239deadf217e5d9841caa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0b9f2eeec0e5936d215595755bbc92bb5b9a8c42
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728898"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812657"
 ---
 # <a name="transactions-master-data-services"></a>事务 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 
 
@@ -54,7 +54,7 @@ ms.locfileid: "73728898"
   
  你也可以调用以下存储过程来清除事务日志。  
   
-|存储过程|说明|  
+|存储过程|描述|  
 |----------------------|-----------------|  
 |mdm.udpTransactionsCleanup|清除事务历史记录|  
 |mdm.udpValidationsCleanup|清除验证历史记录|  

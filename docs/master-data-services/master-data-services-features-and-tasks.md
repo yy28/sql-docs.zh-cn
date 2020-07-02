@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 95c29509d9b08390a21598c94cdb64ccdd92cf36
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6a89ed871f18f52efa32b088e02d4432166866cb
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728028"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812903"
 ---
 # <a name="master-data-services-features-and-tasks"></a>Master Data Services 功能和任务
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   了解如何使用 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 来管理组织的主数据。 了解如何创建和操作模型对象（数据的容器）。 了解如何组织和维护主数据本身。 了解如何导入和导出主数据，以及在测试环境和生产环境之间共享模型。 最后，了解如何开发用于访问 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web 服务的自定义应用程序。  
   

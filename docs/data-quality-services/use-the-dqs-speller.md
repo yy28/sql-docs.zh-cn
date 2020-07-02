@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 087d7c7636b456e9cba07eb16abdd135abb43c4e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ce315c95f6906ba4c886d597b0df3d8957d4358a
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75257751"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812484"
 ---
 # <a name="use-the-dqs-speller"></a>使用 DQS 拼写检查器
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 拼写检查器会检查域中字符串值的语法、拼写和句子结构。 拼写检查器是独立的客户端功能，不与服务器端引擎集成并且对当前流或状态没有影响。 拼写检查器会标识它认为可能是错误的那些字符串值，然后在对域值进行其他手动更改的相同位置用红色的下划线标记这些字符串值。 这些位置包括：  
   
