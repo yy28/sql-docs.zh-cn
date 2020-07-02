@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 192b6214-df6e-44a3-bdd4-9d933a981619
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3447b9111ec6d6a6fd6a4084f884647cbd38eec2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 68540299b14af875f6625771d9d47f81f048f43d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820678"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716533"
 ---
 # <a name="sp_addpublication_snapshot-transact-sql"></a>sp_addpublication_snapshot (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   为指定的发布创建快照代理。 此存储过程在发布服务器上对发布数据库执行。  
   
@@ -56,7 +56,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
     [ , [ @publisher = ] 'publisher' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publication = ] 'publication'`发布的名称。 *发布*为**sysname**，无默认值。  
   
 `[ @frequency_type = ] frequency_type`执行快照代理的频率。 *frequency_type*为**int**，可以是下列值之一。  
@@ -66,7 +66,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |**1**|一次。|  
 |**4** （默认值）|每天。|  
 |**8**|每周。|  
-|**超过**|每月。|  
+|**16**|每月。|  
 |**32**|每月，相对于频率间隔。|  
 |**64**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理启动时。|  
 |**128**|计算机空闲时运行|  
@@ -78,7 +78,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |**1**|*frequency_interval*未使用。|  
 |**4** （默认值）|每*frequency_interval*天，默认为每天。|  
 |**8**|*frequency_interval*为以下一个或多个（与[&#124; （位或）](../../t-sql/language-elements/bitwise-or-transact-sql.md)逻辑运算符结合使用：<br /><br /> **1** = 星期日 &#124;<br /><br /> **2** = 星期一 &#124;<br /><br /> **4** = 星期二 &#124;<br /><br /> **8** = 星期三 &#124;<br /><br /> **16** = 星期四 &#124;<br /><br /> **32** = 星期五 &#124;<br /><br /> **64** = 星期六|  
-|**超过**|*Frequency_interval*月中的第几天。|  
+|**16**|*Frequency_interval*月中的第几天。|  
 |**32**|*frequency_interval*是以下项之一：<br /><br /> **1** = 星期日 &#124;<br /><br /> **2** = 星期一 &#124;<br /><br /> **3** = 星期二 &#124;<br /><br /> **4** = 星期三 &#124;<br /><br /> **5** = 星期四 &#124;<br /><br /> **6** = 星期五 &#124;<br /><br /> **7** = 星期六 &#124;<br /><br /> **8** = 日 &#124;<br /><br /> **9** = 工作日 &#124;<br /><br /> **10** = 周末|  
 |**64**|*frequency_interval*未使用。|  
 |**128**|*frequency_interval*未使用。|  

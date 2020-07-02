@@ -10,15 +10,15 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 01bca0b4e0c8d98d0a31451686f0396af99ed430
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: af15f93b869fed56bed19a495c64810b0f2436c7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112313"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718591"
 ---
 # <a name="wideworldimporters-data-generation"></a>WideWorldImporters 数据生成
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 WideWorldImporters 和 WideWorldImportersDW 数据库的已发布版本具有从2013年1月1日到数据库生成日期的数据。
 
 使用这些示例数据库时，可能需要包含更多最新的示例数据。
@@ -41,7 +41,7 @@ WideWorldImporters 和 WideWorldImportersDW 数据库的已发布版本具有从
 
     此语句将示例销售和采购数据添加到数据库中，直到达到当前日期。 它按天显示数据生成的进度。 每年需要数据的数据生成可能需要大约10分钟。 由于数据生成的随机因素，在运行之间生成的数据存在一些差异。
 
-    若要增加或减少每天生成的订单数，请更改参数`@AverageNumberOfCustomerOrdersPerDay`的值。 使用参数`@SaturdayPercentageOfNormalWorkDay`和`@SundayPercentageOfNormalWorkDay`来确定周末的订单量。
+    若要增加或减少每天生成的订单数，请更改参数的值 `@AverageNumberOfCustomerOrdersPerDay` 。 使用参数 `@SaturdayPercentageOfNormalWorkDay` 和 `@SundayPercentageOfNormalWorkDay` 来确定周末的订单量。
 
 ## <a name="import-generated-data-in-wideworldimportersdw"></a>导入在 WideWorldImportersDW 中生成的数据
 
@@ -63,11 +63,11 @@ WideWorldImportersDW 可以任意增加用于性能测试的数据大小。 例�
 
 其中一项难题是将下载内容的大小保持在足够小，以方便地下载，但足以演示 SQL Server 性能功能。 例如，仅当使用较大的行时，才会实现列存储索引的重要优势。 
 
-您可以使用此`Application.Configuration_PopulateLargeSaleTable`过程来增加`Fact.Sale`表中的行数。 行将在2012日历年中插入，以避免与开始2013年1月1日起的现有世界范围导入程序数据发生冲突。
+您可以使用此 `Application.Configuration_PopulateLargeSaleTable` 过程来增加表中的行数 `Fact.Sale` 。 行将在2012日历年中插入，以避免与开始2013年1月1日起的现有世界范围导入程序数据发生冲突。
 
 ### <a name="procedure-details"></a>过程详细信息
 
-#### <a name="name"></a>名称
+#### <a name="name"></a>“属性”
 
     Application.Configuration_PopulateLargeSaleTable
 
@@ -77,6 +77,6 @@ WideWorldImportersDW 可以任意增加用于性能测试的数据大小。 例�
 
 #### <a name="result"></a>结果
 
-在2012年中，大约将所需的`Fact.Sale`行数插入表中。 过程人为每天将行数限制为50000。 您可以更改此限制，但该限制有助于避免意外的表 overinflations。
+在2012年中，大约将所需的行数插入 `Fact.Sale` 表中。 过程人为每天将行数限制为50000。 您可以更改此限制，但该限制有助于避免意外的表 overinflations。
 
 此过程还会应用聚集列存储索引（如果尚未应用）。

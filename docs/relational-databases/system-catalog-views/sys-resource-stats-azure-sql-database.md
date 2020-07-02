@@ -19,15 +19,15 @@ ms.assetid: 02379a1b-3622-4578-8c59-a1b8f1a17914
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: e88d3916f5122564b443bc3c439200526b1f2d5e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a72bb16eddc55f5cf741a7809665b44ada4a7a30
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246913"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717572"
 ---
 # <a name="sysresource_stats-azure-sql-database"></a>sys.resource_stats (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   返回 Azure SQL 数据库的 CPU 使用率和存储数据。 在五分钟的间隔内收集和聚合数据。 对于每个用户数据库，资源消耗发生变化的每五分钟报告时段都有一行。 返回的数据包括 CPU 使用率、存储大小更改和数据库 SKU 修改。 不带更改的空闲数据库可能每五分钟间隔没有行。 历史数据保留大约 14 天。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "75246913"
 |start_time|**datetime**|指示5分钟报告间隔的开始时间的 UTC 时间。|  
 |end_time|**datetime**|指示五分钟报告间隔结束时间的 UTC 时间。|  
 |database_name|**nvarchar(128)**|用户数据库的名称。|  
-|sku|**nvarchar(128)**|数据库的服务层。 下面是可能的值：<br /><br /> 基本<br /><br /> Standard<br /><br /> Premium<br /><br />常规用途<br /><br />业务关键|  
+|sku|**nvarchar(128)**|数据库的服务层。 下面是可能的值：<br /><br /> 基本<br /><br /> Standard<br /><br /> 高级<br /><br />常规用途<br /><br />业务关键|  
 |storage_in_megabytes|**float**|时间段的最大存储大小（以 mb 为单位），包括数据库数据、索引、存储过程和元数据。|  
 |avg_cpu_percent|**decimal （5，2）**|平均计算使用率（以服务层限制的百分比表示）。|  
 |avg_data_io_percent|**decimal （5，2）**|平均 I/O 使用率（以基于服务层限制的百分比表示）。 对于超大规模数据库，请参阅[资源利用率统计信息中的数据 IO](https://docs.microsoft.com/azure/sql-database/sql-database-hyperscale-performance-diagnostics#data-io-in-resource-utilization-statistics)。|  

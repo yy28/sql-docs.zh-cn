@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 511276581464f366214bfd9bdd8543e3fb339ab8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 35943489c707d5a1b84313bb7ef6eca9113e36ed
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828445"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715900"
 ---
 # <a name="sp_change_subscription_properties-transact-sql"></a>sp_change_subscription_properties (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   更新请求订阅信息。 此存储过程在订阅服务器的订阅数据库中执行。  
   
@@ -41,7 +41,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
     [ , [ @publication_type = ] publication_type ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publisher = ] 'publisher'`发布服务器的名称。 *发布服务器*的**sysname**，无默认值。  
   
 `[ @publisher_db = ] 'publisher_db'`发布服务器数据库的名称。 *publisher_db* **sysname**，无默认值。  
@@ -63,7 +63,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
   
  下表说明项目的属性和这些属性的值。  
   
-|Property|值|说明|  
+|Property|值|描述|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||指定快照的备用文件夹的位置。 如果设置为 NULL，则将从发布服务器指定的默认位置提取快照文件。|  
 |**distrib_job_login**||用来运行代理的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户的登录名。|  
@@ -93,9 +93,9 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**publisher_password**||发布者密码。 只有对合并发布的订阅才支持更改*publisher_password* 。|  
 |**publisher_security_mode**|**1**|连接发布服务器时，使用 Windows 身份验证。 只有对合并发布的订阅才支持更改*publisher_security_mode* 。|  
 ||**0**|连接发布服务器时，使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。|  
-|**use_ftp**|**true**|使用 FTP 代替常规协议来检索快照。|  
+|**use_ftp**|true|使用 FTP 代替常规协议来检索快照。|  
 ||**false**|使用常规协议来检索快照。|  
-|**use_web_sync**|**true**|启用 Web 同步。|  
+|**use_web_sync**|true|启用 Web 同步。|  
 ||**false**|禁用 Web 同步。|  
 |**working_directory**||使用文件传输协议 (FTP) 传输快照文件时，用于临时存储发布的数据和架构文件的工作目录的名称。|  
   

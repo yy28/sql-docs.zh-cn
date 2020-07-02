@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 71b7cd36-a17d-4b12-b102-10aeb0f9268b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: eb45ce1c3e1786eb5a9a3cd630741dd4df773c40
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b4a3586625fa0a20d59ca0222ea1abbde6a6fef5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68030957"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716431"
 ---
 # <a name="sp_addremotelogin-transact-sql"></a>sp_addremotelogin (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   在本地服务器上添加新的远程登录 ID。 这样，远程服务器就能够连接并执行远程过程调用。  
   
@@ -43,15 +43,15 @@ sp_addremotelogin [ @remoteserver = ] 'remoteserver'
      [ , [ @remotename = ] 'remote_name' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  [ @remoteserver **=** ] **\ "**_remoteserver_**"**  
- 远程登录名所适用的远程服务器的名称。 *remoteserver*的值为**sysname**，无默认值。 如果仅指定了*remoteserver* ，则*remoteserver*上的所有用户将映射到本地服务器上具有相同名称的现有登录名。 对于本地服务器而言，远程服务器必须是已知的。 可以使用 sp_addserver 来添加。 当*remoteserver*上的用户连接到运行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的本地服务器以执行远程存储过程时，它们将作为本地登录名，该登录名与其在*remoteserver*上的登录名匹配。 *remoteserver*是启动远程过程调用的服务器。  
+ 远程登录名所适用的远程服务器的名称。 *remoteserver*的值为**sysname**，无默认值。 如果仅指定了*remoteserver* ，则*remoteserver*上的所有用户将映射到本地服务器上具有相同名称的现有登录名。 对于本地服务器而言，远程服务器必须是已知的。 可以使用 sp_addserver 来添加。 当*remoteserver*上的用户连接到运行的本地服务器 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以执行远程存储过程时，它们将作为本地登录名，该登录名与其在*remoteserver*上的登录名匹配。 *remoteserver*是启动远程过程调用的服务器。  
   
  [ @loginame **=** ] **"**_login_**"**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本地实例上的用户的登录 ID。 login 的数据类型为 sysname，默认值为 NULL******。 *登录名*必须在本地实例上已经存在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果指定*login* ，则*remoteserver*上的所有用户将映射到该特定本地登录名。 当*remoteserver*上的用户连接到的本地实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以执行远程存储过程时，它们将作为*登录名*进行连接。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本地实例上的用户的登录 ID。 login 的数据类型为 sysname，默认值为 NULL******。 *登录名*必须在本地实例上已经存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果指定*login* ，则*remoteserver*上的所有用户将映射到该特定本地登录名。 当*remoteserver*上的用户连接到的本地实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以执行远程存储过程时，它们将作为*登录名*进行连接。  
   
  [ @remotename **=** ] **'**_remote_name_**'**  
- 远程服务器上的用户的登录 ID。 *remote_name*的默认值为**sysname**，默认值为 NULL。 *remoteserver*上必须存在*remote_name* 。 如果指定*remote_name* ，则特定用户*remote_name*会映射到本地服务器上的*登录名*。 当*remoteserver*上的*remote_name*连接到的本地实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以执行远程存储过程时，它将作为*登录名*进行连接。 *Remote_name*的登录 id 可以不同于远程服务器上的登录 id*登录名*。  
+ 远程服务器上的用户的登录 ID。 *remote_name*的默认值为**sysname**，默认值为 NULL。 *remoteserver*上必须存在*remote_name* 。 如果指定*remote_name* ，则特定用户*remote_name*会映射到本地服务器上的*登录名*。 当*remoteserver*上的*remote_name*连接到的本地实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以执行远程存储过程时，它将作为*登录名*进行连接。 *Remote_name*的登录 id 可以不同于远程服务器上的登录 id*登录名*。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  

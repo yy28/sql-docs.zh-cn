@@ -10,15 +10,15 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 98ce2b9aa11b2e1381da1f16455df8a2c0d3f243
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1dfba407449b9517af2ed899f49387732c48353b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487426"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718529"
 ---
 # <a name="wideworldimportersdw-etl-workflow"></a>WideWorldImportersDW ETL 工作流
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 当数据更改时，使用*WWI_Integration* ETL 包将数据从 WideWorldImporters 数据库迁移到 WideWorldImportersDW 数据库。 包定期运行（通常为每天）。
 
 包通过使用 SQL Server Integration Services 来协调大容量 T-sql 操作（而不是 Integration Services 中的单独转换）来确保高性能。
@@ -59,11 +59,11 @@ ms.locfileid: "81487426"
    5. 选择 "**部署**" 以完成向导。
 
 2. 为 ETL 过程创建 SQL Server 代理作业：
-   1. 在 Management Studio 中，右键单击**SQL Server 代理**，然后选择 "**新建** > **作业**"。
+   1. 在 Management Studio 中，右键单击**SQL Server 代理**，然后选择 "**新建**  >  **作业**"。
    2. 输入名称，例如， *WIDEWORLDIMPORTERS ETL*。
    3. 添加**SQL Server Integration Services 包**类型的**作业步骤**。
    4. 选择具有 "Integration Services" 目录的服务器，然后选择 "*每日 ETL*包"。
-   5. 在 "**配置** > **连接管理器**" 下，确保已正确配置与源和目标的连接。 默认值为连接到本地实例。
+   5. 在 "**配置**  >  **连接管理器**" 下，确保已正确配置与源和目标的连接。 默认值为连接到本地实例。
    6. 选择 **"确定"** 以创建作业。
 
 3. 执行或计划作业。

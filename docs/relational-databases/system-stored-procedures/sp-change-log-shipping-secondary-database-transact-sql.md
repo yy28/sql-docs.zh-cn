@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 3ebcf2f1-980f-4543-a84b-fbaeea54eeac
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d0bd62fe3462441d4eab9d3d89bce20cf1144131
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d584b2db0e66b2affad0e061098f75fc9258fbdb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72909558"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715919"
 ---
 # <a name="sp_change_log_shipping_secondary_database-transact-sql"></a>sp_change_log_shipping_secondary_database (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   更改辅助数据库设置。  
   
@@ -50,7 +50,7 @@ sp_change_log_shipping_secondary_database
 [, [ @history_retention_period = ] 'history_retention_period']  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @restore_delay = ] 'restore_delay'`辅助服务器在还原给定备份文件之前等待的时间，以分钟为单位。 *restore_delay*为**int** ，且不能为 NULL。 默认值为 0。  
   
 `[ @restore_all = ] 'restore_all'`如果设置为1，则在还原作业运行时，辅助服务器将还原所有可用的事务日志备份。 否则，在原还了一个文件之后它将停止。 *restore_all*是**bit** ，并且不能为 NULL。  
@@ -69,7 +69,7 @@ sp_change_log_shipping_secondary_database
   
 `[ @buffer_count = ] 'buffer_count'`备份或还原操作使用的缓冲区总数。 *buffer_count*为**int** ，默认值为-1。  
   
-`[ @max_transfer_size = ] 'max_transfer_size'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]向备份设备发出的最大输入或输出请求的大小（以字节为单位）。 *max_transfersize*为**int** ，并且可以为 NULL。  
+`[ @max_transfer_size = ] 'max_transfer_size'`向备份设备发出的最大输入或输出请求的大小（以字节为单位） [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *max_transfersize*为**int** ，并且可以为 NULL。  
   
 `[ @restore_threshold = ] 'restore_threshold'`在生成警报之前，还原操作允许间隔的分钟数。 *restore_threshold*为**int** ，且不能为 NULL。  
   
@@ -111,7 +111,7 @@ EXEC master.dbo.sp_change_log_shipping_secondary_database
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [关于 &#40;SQL Server 的日志传送&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

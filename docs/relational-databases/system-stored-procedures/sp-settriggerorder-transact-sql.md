@@ -18,15 +18,15 @@ ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ad5239e2761ed1cc788f7826a054ac0e038d9e79
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7b90b91773ab0497452e0c12c5f485a36f81b6e8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824292"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719185"
 ---
 # <a name="sp_settriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   指定第一个激发或最后一个激发的 AFTER 触发器。 在第一个和最后一个触发器之间激发的 AFTER 触发器将按未定义的顺序执行。  
   
@@ -42,7 +42,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
     [ , [ @namespace = ] { 'DATABASE' | 'SERVER' | NULL } ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @triggername = ] '[ _triggerschema.] _triggername'`触发器的名称及其所属的架构（如果适用），其顺序为 "已设置" 或 "已更改"。 [_triggerschema_**.**]*triggername*为**sysname**。 如果名称与触发器不对应，或者名称与 INSTEAD OF 触发器对应，则该过程将返回错误。 不能为 DDL 或登录触发器指定*triggerschema* 。  
   
 `[ @order = ] 'value'`触发器的新顺序的设置。 *值*为**varchar （10）** ，可以是下列值之一。  
@@ -50,11 +50,11 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 > [!IMPORTANT]  
 >  **第一个**和**最后一个**触发器必须是两个不同的触发器。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
-|**1**|触发器被第一个触发。|  
-|**最后一个**|触发器被最后一个触发。|  
-|**无**|触发器以未定义的顺序触发。|  
+|**First**|触发器被第一个触发。|  
+|**时间**|触发器被最后一个触发。|  
+|无|触发器以未定义的顺序触发。|  
   
 `[ @stmttype = ] 'statement_type'`指定触发触发器的 SQL 语句。 *statement_type*为**varchar （50）** ，可以是 INSERT、UPDATE、DELETE、LOGON 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] [DDL 事件](../../relational-databases/triggers/ddl-events.md)中列出的任何语句事件。 不能指定事件组。  
   

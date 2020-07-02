@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a4e96c45-6dcd-471a-a494-b5c619459855
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d2b8fc2ac96821427aaf0ef2550fb6624a923d7f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6bf5b4c74b39c9326382089579e111b118235170
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68000929"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715848"
 ---
 # <a name="sp_help_log_shipping_monitor-transact-sql"></a>sp_help_log_shipping_monitor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   返回一个结果集，其中包含主服务器、辅助服务器或监视服务器上注册的主数据库和辅助数据库的状态和其他信息。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "68000929"
 sp_help_log_shipping_monitor  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  无。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -50,7 +50,7 @@ sp_help_log_shipping_monitor
 |-----------------|---------------|-----------------|  
 |**status**|**bit**|日志传送数据库代理的共同状态。<br /><br /> **0** = 正常和无代理故障。<br /><br /> **1** = 否则为。|  
 |**is_primary**|**bit**|指示该行是否用于主数据库：<br /><br /> **1** = 该行用于主数据库。<br /><br /> **0** = 该行适用于辅助数据库。|  
-|**服务**|**sysname**|此数据库所在的主服务器或辅助服务器的名称。|  
+|服务器|**sysname**|此数据库所在的主服务器或辅助服务器的名称。|  
 |**database_name**|**sysname**|数据库名称。|  
 |**time_since_last_backup**|**int**|最后一次备份日志以来的时间，以分钟为单位。<br /><br /> NULL = 信息不可用或者不相关。|  
 |**last_backup_file**|**nvarchar （500）**|上一个成功的备份日志文件的名称。<br /><br /> NULL = 信息不可用或者不相关。|  
@@ -71,7 +71,7 @@ sp_help_log_shipping_monitor
  要求具有 **sysadmin** 固定服务器角色的成员身份。  
   
 ## <a name="see-also"></a>另请参阅  
- [关于 &#40;SQL Server 的日志传送&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

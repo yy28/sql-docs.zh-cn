@@ -18,15 +18,15 @@ ms.assetid: 2606073e-c52f-498d-a923-5026b9d97e67
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c89b2cb803df80872d82f18b5f26b207e9e4bc38
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f2d068c18f692009f29ee7e8d6450c4f013c6906
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828465"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716129"
 ---
 # <a name="sp_bindrule-transact-sql"></a>sp_bindrule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   将规则绑定到列或别名数据类型。  
   
@@ -44,7 +44,7 @@ sp_bindrule [ @rulename = ] 'rule' ,
      [ , [ @futureonly = ] 'futureonly_flag' ]   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @rulename = ] 'rule'`由 CREATE RULE 语句创建的规则的名称。 *规则*为**nvarchar （776）**，无默认值。  
   
 `[ @objname = ] 'object_name'`是要将规则绑定到的表和列或别名数据类型。 无法将规则绑定到 text、ntext、image、varchar(max)、nvarchar(max)、varbinary(max)、xml、CLR 用户定义类型或 timestamp 列********************************。 无法将规则绑定到计算列。  

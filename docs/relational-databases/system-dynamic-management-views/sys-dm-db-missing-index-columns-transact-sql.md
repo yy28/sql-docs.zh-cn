@@ -21,15 +21,15 @@ ms.assetid: 3b24e5ed-0c79-47e5-805c-a0902d0aeb86
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b917a22efd85cf1dcc83f358d334683c579ee6d4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 23574f5bf194ca0d3bdc6b301cdb17b7be933ecd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829453"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718821"
 ---
 # <a name="sysdm_db_missing_index_columns-transact-sql"></a>sys.dm_db_missing_index_columns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   返回与缺少索引（不包括空间索引）的数据库表列有关的信息。 **sys. dm_db_missing_index_columns**是动态管理功能。  
 
@@ -40,7 +40,7 @@ ms.locfileid: "82829453"
 sys.dm_db_missing_index_columns(index_handle)  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *index_handle*  
  唯一地标识缺失索引的整数。 它可以从下列动态管理对象中获得：  
   
@@ -53,7 +53,7 @@ sys.dm_db_missing_index_columns(index_handle)
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**column_id**|**int**|列的 ID。|  
-|column_name |**sysname**|表列的名称。|  
+|column_name|**sysname**|表列的名称。|  
 |**column_usage**|**varchar （20）**|查询使用列的方式。 可能的值及其说明如下：<br /><br /> 相等性：列分配给表达相等性的谓词，格式为： <br />                        *表列*  = *constant_value*<br /><br /> 不等：列分配给表达不相等的谓词，例如，形式*为：*  >  *constant_value*的谓词。 “=”之外的任何比较运算符都表示不相等。<br /><br /> INCLUDE：列不用于计算谓词，但用于其他原因，例如，用于覆盖查询。|  
   
 ## <a name="remarks"></a>备注  

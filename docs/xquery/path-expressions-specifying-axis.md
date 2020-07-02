@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: c44fb843-0626-4496-bde0-52ca0bac0a9e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1f8e753f4961d33251120151bff6db1f8cd5e14c
-ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
+ms.openlocfilehash: 96240f605762be382065268fa39198baeeaaa53f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84215758"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717175"
 ---
 # <a name="path-expressions---specifying-axis"></a>路径表达式 - 指定轴
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   路径表达式中的轴步骤包括以下部分：  
   
@@ -44,7 +44,7 @@ ms.locfileid: "84215758"
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的 XQuery 实现支持以下轴步骤：  
   
-|轴|说明|  
+|轴|描述|  
 |----------|-----------------|  
 |**child**|返回上下文节点的子级。|  
 |**descendant**|返回上下文节点的所有后代。|  

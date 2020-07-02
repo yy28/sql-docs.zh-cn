@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1554b39f-274b-4ef8-898e-9e246b474333
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b0c847215d31bd2064467c3edbce42ba957c2e78
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ecd2576cac046984394b093832769363968e637a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79448339"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715887"
 ---
 # <a name="sp_change_users_login-transact-sql"></a>sp_change_users_login (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   将现有数据库用户映射到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 
   
@@ -46,24 +46,24 @@ sp_change_users_login [ @Action = ] 'action'
 [;]  
 ```  
   
-## <a name="arguments"></a>参数  
- [ @Action= ]"*action*"  
+## <a name="arguments"></a>自变量  
+ [ @Action =] "*action*"  
  描述过程要执行的操作。 *操作*为**varchar （10）**。 *操作*可以具有以下值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**Auto_Fix**|将当前数据库的 sys.database_principals 系统目录视图中的用户项链接到同名的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 如果不存在同名的登录名，将会创建一个。 检查**Auto_Fix**语句的结果，以确认确实进行了正确的链接。 避免在安全敏感情况下使用**Auto_Fix** 。<br /><br /> 如果使用**Auto_Fix**，则必须指定 "*用户*" 和 "*密码*" （如果登录名尚不存在）; 否则，必须指定 "*用户*"，但将忽略 "*密码*"。 *登录名*必须为 NULL。 *用户*必须是当前数据库中的有效用户。 不能将另一个用户映射到该登录名。|  
-|**报告**|列出当前数据库中未链接到任何登录名的用户以及相应的安全标识符 (SID)。 *用户*、*登录名*和*密码*必须为 NULL 或未指定。<br /><br /> 若要使用系统表将报表选项替换为查询，请将 sys.databases 中的条目与**database_principals sys.databases**中的条目进行比较**server_prinicpals** 。|  
-|**Update_One**|将当前数据库中的指定*用户*链接到现有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *登录名*。 必须指定*用户*和*登录名*。 *密码*必须为 NULL 或未指定。|  
+|**Report**|列出当前数据库中未链接到任何登录名的用户以及相应的安全标识符 (SID)。 *用户*、*登录名*和*密码*必须为 NULL 或未指定。<br /><br /> 若要使用系统表将报表选项替换为查询，请将 sys.databases 中的条目与**database_principals sys.databases**中的条目进行比较**server_prinicpals** 。|  
+|**Update_One**|将当前数据库中的指定*用户*链接到现有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *登录名*。 必须指定*用户*和*登录名*。 *密码*必须为 NULL 或未指定。|  
   
- [ @UserNamePattern= ]"*用户*"  
+ [ @UserNamePattern =] "*user*"  
  当前数据库中的用户名。 *user*的值为**sysname**，默认值为 NULL。  
   
- [ @LoginName= ]"*login*"  
+ [ @LoginName =] "*login*"  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名。 login 的数据类型为 sysname，默认值为 NULL******。  
   
- [ @Password= ]'*password*'  
- 分配给通过指定**Auto_Fix**创建的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]新登录名的密码。 如果已存在匹配的登录名，则会映射用户和登录名，并忽略*密码*。 如果不存在匹配的登录名，sp_change_users_login 将创建新[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的登录名，并为新的登录名分配*密码*作为密码。 *密码*为**sysname**，且不能为 NULL。  
+ [ @Password =] '*password*'  
+ 分配给 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过指定**Auto_Fix**创建的新登录名的密码。 如果已存在匹配的登录名，则会映射用户和登录名，并忽略*密码*。 如果不存在匹配的登录名，sp_change_users_login 将创建新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名，并为新的登录名分配*密码*作为密码。 *密码*为**sysname**，且不能为 NULL。  
   
 > **重要说明!!** 始终使用[强密码！](../../relational-databases/security/strong-passwords.md)
   

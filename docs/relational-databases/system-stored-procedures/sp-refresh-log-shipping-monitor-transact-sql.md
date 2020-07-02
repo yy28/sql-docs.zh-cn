@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: edefb912-31c5-4d99-9aba-06629afd0171
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b375c1861d532445cd39d42f59f0a8d753e53b85
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1db9dfdcb7941db0c253bf0b1c3f65b767a5cdec
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828824"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719251"
 ---
 # <a name="sp_refresh_log_shipping_monitor-transact-sql"></a>sp_refresh_log_shipping_monitor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   此存储过程使用指定日志传送代理的给定主服务器或辅助服务器中的最新信息来刷新远程监视器表。 此过程将在主服务器或辅助服务器上被调用。  
   
@@ -42,7 +42,7 @@ sp_refresh_log_shipping_monitor
 [ @mode ] n  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @agent_id = ] 'agent_id'`用于备份的主 ID 或者用于复制或还原的辅助 ID。 *agent_id*为**uniqueidentifier** ，且不能为 NULL。  
   
 `[ @agent_type = ] 'agent_type'`日志传送作业的类型。  
@@ -78,7 +78,7 @@ sp_refresh_log_shipping_monitor
  只有**sysadmin**固定服务器角色的成员才能运行此过程。  
   
 ## <a name="see-also"></a>另请参阅  
- [关于 &#40;SQL Server 的日志传送&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

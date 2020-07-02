@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 1ad3400d-7fcd-40c9-87ae-f5afc61e0374
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bf8ddb4e3794c8ad7889f395726fb325e071deb3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 97ee05c8deb88efcd451eb55007983833d0b1879
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303855"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719679"
 ---
 # <a name="filestream-support"></a>FILESTREAM 支持
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
 
   FILESTREAM 允许通过 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或通过直接访问 Windows 文件系统来存储和访问大型二进制值。 大型二进制值是大于 2 GB 的值。 若要详细了解增强的 FILESTREAM 支持，请参阅 [FILESTREAM (SQL Server)](../../../relational-databases/blob/filestream-sql-server.md)。  
   
- 打开数据库连接时， ** \@ \@** 默认情况下，TEXTSIZE 将设置为-1 （无限制）。  
+ 打开数据库连接时，默认情况下， ** \@ \@ TEXTSIZE**将设置为-1 （无限制）。  
   
  还可以使用 Windows 文件系统 API 访问和更新 FILESTREAM 列。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "81303855"
   
  若要创建 FILESTREAM 列或检测哪些现有列是 FILESTREAM 列，可以使用 [sys.columns](../../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) 目录视图的 is_filestream 列****。  
   
- 以下是一个示例：  
+ 下面是一个示例：  
   
 ```  
 -- Create a table with a FILESTREAM column.  
@@ -58,11 +58,11 @@ SELECT is_filestream FROM sys.columns WHERE name = 'varbinaryCol3' AND object_id
 ```  
   
 ## <a name="down-level-compatibility"></a>下级兼容性  
- 如果客户端是使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]附带的 Native client 版本编译的[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]，并且应用程序连接到[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]，则**varbinary （max）** 行为将与[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]兼容。 就是说，返回数据的最大大小将限制为不超过 2 GB。 对于超过 2 GB 的结果值，将发生截断，并将返回“字符串数据，右截断”警告。  
+ 如果客户端是使用附带的 Native Client 版本编译的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ，并且应用程序连接到 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ，则**varbinary （max）** 行为将与兼容 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 。 就是说，返回数据的最大大小将限制为不超过 2 GB。 对于超过 2 GB 的结果值，将发生截断，并将返回“字符串数据，右截断”警告。  
   
  如果将数据类型兼容性设置为 80，则客户端行为将与下级客户端行为一致。  
   
- 对于使用 SQLOLEDB 的客户端或在[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 的版本之前发布的其他提供程序， **varbinary （max）** 将映射到映像。  
+ 对于使用 SQLOLEDB 的客户端或在 Native Client 的版本之前发布的其他提供程序 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ， **varbinary （max）** 将映射到映像。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server Native Client 功能](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  

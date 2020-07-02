@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: af9bd2035106502da6ccb83a9a8818ca6bd0c47a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 96cd2abcc3e9bc76b2dd32026fedfe6ad774c19b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820695"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716585"
 ---
 # <a name="sp_addmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   创建推送合并订阅或请求合并订阅。 此存储过程在发布服务器上对发布数据库执行。  
   
@@ -60,7 +60,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
     [ , [ @hostname = ] 'hostname'  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publication = ] 'publication'`发布的名称。 *发布*为**sysname**，无默认值。 该发布必须已存在。  
   
 `[ @subscriber = ] 'subscriber'`订阅服务器的名称。 *订阅服务器*的值为**sysname**，默认值为 NULL。  
@@ -74,7 +74,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @subscriber_type = ] 'subscriber_type'`订阅服务器的类型。 *subscriber_type*为**nvarchar （15）**，可以是下列值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**local** （默认值）|订阅服务器仅对发布服务器是已知的。|  
 |**global**|订阅服务器对所有服务器都是已知的。|  
@@ -95,7 +95,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |**1**|一次|  
 |**4**|每天|  
 |**8**|每周|  
-|**10**|每月一次|  
+|**10**|每月|  
 |**0.2**|每月，相对于频率间隔|  
 |**40**|当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理启动时|  
 |NULL（默认值）||  
@@ -112,7 +112,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |**6**|星期五|  
 |**7**|星期六|  
 |**8**|天|  
-|**900**|工作日|  
+|**9**|工作日|  
 |**10**|周末|  
 |NULL（默认值）||  
   
@@ -120,11 +120,11 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 |值|说明|  
 |-----------|-----------------|  
-|**1**|第一个|  
+|**1**|First|  
 |**2**|秒|  
 |**4**|第三个|  
 |**8**|第四个|  
-|**超过**|最后一个|  
+|**16**|最后一个|  
 |NULL（默认值）||  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`*Frequency_type*使用的重复因子。 *frequency_recurrence_factor*的值为**int**，默认值为 NULL。  

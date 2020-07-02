@@ -18,15 +18,15 @@ ms.assetid: 3da70c10-68d0-4c16-94a5-9e84c4a520f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b1552f566852f90b3526645313a160f2446b868e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e886acbd91ff2882c7dd304227ae0b7f1d6afd9d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828476"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716118"
 ---
 # <a name="sp_bindefault-transact-sql"></a>sp_bindefault (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   将默认值绑定到列或绑定到别名数据类型。  
   
@@ -44,7 +44,7 @@ sp_bindefault [ @defname = ] 'default' ,
     [ , [ @futureonly = ] 'futureonly_flag' ]   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @defname = ] 'default'`由 CREATE DEFAULT 创建的默认值的名称。 *默认值*为**nvarchar （776）**，无默认值。  
   
 `[ @objname = ] 'object_name'`要绑定默认值的表和列的名称或别名数据类型。 *object_name*为**nvarchar （776）** ，无默认值。 不能将*object_name*定义为**varchar （max）**、 **nvarchar （max）**、 **VARBINARY （max）**、 **xml**或 CLR 用户定义类型。  

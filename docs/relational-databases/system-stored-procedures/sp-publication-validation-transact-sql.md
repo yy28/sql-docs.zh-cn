@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4fd1c7bf329334bee0d8b3c29ba5d1d97909818e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: db8a79e723d76cdf54377618cc94cb6a4b5431d7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826003"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715181"
 ---
 # <a name="sp_publication_validation-transact-sql"></a>sp_publication_validation (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   为指定发布中的每个项目启动项目验证请求。 此存储过程在发布服务器上对发布数据库执行。  
   
@@ -40,7 +40,7 @@ sp_publication_validation [ @publication = ] 'publication'
     [ , [ @publisher = ] 'publisher' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publication = ] 'publication'`发布的名称。 *发布*为**sysname**，无默认值。  
   
 `[ @rowcount_only = ] 'rowcount_only'`指示是否只返回表的行计数。 *rowcount_only*为**smallint** ，可以为以下值之一。  
@@ -56,7 +56,7 @@ sp_publication_validation [ @publication = ] 'publication'
 |值|说明|  
 |-----------|-----------------|  
 |**0**|使用 COUNT(*) 进行完整计数。|  
-|**1**|从**sysindexes**中快速计数。 计算 sysindexes 中的行比计算实际表中的行快得多[。](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) 但是，因为[sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md)被延迟更新，所以行计数可能不准确。|  
+|**1**|从**sysindexes**中快速计数。 计算[sys.sys索引](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md)中的行比计算实际表中的行的速度要快得多。 但是，因为[sys.sys索引](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md)被延迟更新，所以行计数可能不准确。|  
 |**2** （默认值）|首先尝试使用快速方法进行条件性快速计数。 如果快速方法显示出差异，则转而使用完整方法。 如果*expected_rowcount*为 NULL，并且存储过程用于获取该值，则始终使用完整 COUNT （*）。|  
   
 `[ @shutdown_agent = ] 'shutdown_agent'`指示分发代理是否应在完成验证后立即关闭。 *shutdown_agent*为**bit**，默认值为**0**。 如果为**0**，则复制代理不会关闭。 如果为**1**，则复制代理会在最后一篇文章验证后关闭。  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b9bbda36-a46a-4327-a01e-9cd632e4791b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c3ac5075f3bedeb889536fe90ebe7f6c4049199a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a1017c3332ca4e399984c01c68585d96aad86666
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833445"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716186"
 ---
 # <a name="sp_attachsubscription-transact-sql"></a>sp_attachsubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
 
   将现有的订阅数据库附加到任何订阅服务器。 此存储过程在新订阅服务器的主数据库中执行。  
   
@@ -52,7 +52,7 @@ sp_attachsubscription [ @dbname = ] 'dbname'
     [ , [ @db_master_key_password = ] 'db_master_key_password' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @dbname = ] 'dbname'`按名称指定目标订阅数据库的字符串。 *dbname*的值为**sysname**，无默认值。  
   
 `[ @filename = ] 'filename'`主 MDF （**master**数据文件）的名称和物理位置。 *filename*为**nvarchar （260）**，无默认值。  
@@ -79,7 +79,7 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 `[ @distributor_password = ] 'distributor_password'`分发服务器密码。 如果*distributor_security_mode*设置为**0**，则*distributor_password*是必需的。 *distributor_password*的默认值为**sysname**，默认值为 NULL。 *Distributor_password*的值必须少于 120 Unicode 字符。  
   
 > [!IMPORTANT]  
->  不要使用空密码。 使用强密码。 如果可能，请在运行时提示用户输入安全凭据。 如果必须在脚本文件中存储凭据，则必须保护文件以防止未经授权的访问。  
+>  不要使用空密码。 请使用强密码。 如果可能，请在运行时提示用户输入安全凭据。 如果必须在脚本文件中存储凭据，则必须保护文件以防止未经授权的访问。  
   
 `[ @publisher_security_mode = ] publisher_security_mode`同步时连接到发布服务器时使用的安全模式。 *publisher_security_mode*的值为**int**，默认值为**1**。 如果为**0**，则指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。 如果为**1**，则指定 Windows 身份验证。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
@@ -88,7 +88,7 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 `[ @publisher_password = ] 'publisher_password'`连接到发布服务器时使用的密码。 *publisher_password*的默认值为**sysname**，默认值为 NULL。 *Publisher_password*的值必须少于 120 Unicode 字符。  
   
 > [!IMPORTANT]  
->  不要使用空密码。 使用强密码。 如果可能，请在运行时提示用户输入安全凭据。 如果必须在脚本文件中存储凭据，则必须保护文件以防止未经授权的访问。  
+>  不要使用空密码。 请使用强密码。 如果可能，请在运行时提示用户输入安全凭据。 如果必须在脚本文件中存储凭据，则必须保护文件以防止未经授权的访问。  
   
 `[ @job_login = ] 'job_login'`用于运行代理的 Windows 帐户的登录名。 *job_login*为**nvarchar （257）**，无默认值。 此 Windows 帐户总是用于与分发服务器建立代理连接。  
   

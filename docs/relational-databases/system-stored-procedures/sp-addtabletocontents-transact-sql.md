@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2ea27001-74f4-463e-bf1b-b6b5a86b9219
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 429b908f01c7b0436f05622544b2aa8b241a6211
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2ad62613462575fb1bb33bf472e367d8f7640b03
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833583"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716331"
 ---
 # <a name="sp_addtabletocontents-transact-sql"></a>sp_addtabletocontents (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   将源表中当前不在跟踪表内的任何行的引用插入到合并跟踪表中。 如果已使用**bcp**大容量加载大量数据，则使用此选项，这将不会激发合并跟踪触发器。 此存储过程在发布服务器上对发布数据库执行。  
   
@@ -38,7 +38,7 @@ sp_addtabletocontents [ @table_name = ] 'table_name'
     [ , [ @filter_clause = ] 'filter_clause' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @table_name = ] 'table_name'`表的名称。 *table_name* **sysname**，无默认值。  
   
 `[ @owner_name = ] 'owner_name'`表所有者的名称。 *owner_name*的默认值为**sysname**，默认值为 NULL。  

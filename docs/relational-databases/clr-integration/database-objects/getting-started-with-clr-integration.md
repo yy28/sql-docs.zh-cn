@@ -25,22 +25,22 @@ helpviewer_keywords:
 ms.assetid: c73e628a-f54a-411a-bfe3-6dae519316cc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ca0e048d09b838663895d31de155d84c6294ed01
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6b560aa650140e4b94bbea4491fb28e5f1bf656f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487086"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717896"
 ---
 # <a name="getting-started-with-clr-integration"></a>CLR 集成入门
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
 
-本主题概述了使用与 .NET Framework 公共语言运行时（CLR）的[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]集成编译数据库对象所需的命名空间和库。 本主题还说明如何编写、编译和运行用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 编写的简单 CLR 存储过程。  
+本主题概述了使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 与 .NET Framework 公共语言运行时（CLR）的集成编译数据库对象所需的命名空间和库。 本主题还说明如何编写、编译和运行用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 编写的简单 CLR 存储过程。  
   
 ## <a name="required-namespaces"></a>所需命名空间  
 
-开发基本 CLR 数据库对象所需的组件随一起[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]安装。 CLR 集成功能在称作 system.data.dll 的程序集中公开，该程序集是 .NET Framework 的一部分。 该程序集还在全局程序集缓存 (GAC) 以及 .NET Framework 目录中提供。 对此程序集的引用通常由命令行工具和 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio 自动添加，因此无需手动添加它。  
+开发基本 CLR 数据库对象所需的组件随一起安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 CLR 集成功能在称作 system.data.dll 的程序集中公开，该程序集是 .NET Framework 的一部分。 该程序集还在全局程序集缓存 (GAC) 以及 .NET Framework 目录中提供。 对此程序集的引用通常由命令行工具和 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio 自动添加，因此无需手动添加它。  
   
 system.data.dll 程序集包含以下命名空间，这些命名空间是编译 CLR 数据库对象所必需的：  
   
@@ -92,7 +92,7 @@ End Class
   
 这一简单的程序包含针对公共类的单个静态方法。 此方法使用两个新类**[SqlContext](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlcontext.aspx)** 和**[SqlPipe](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlpipe.aspx)**，创建托管数据库对象以输出简单的短信。 此方法还将字符串“Hello world!”指派 为某一输出参数的值。 此方法可以声明为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的存储过程，然后采用与 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 存储过程相同的方式运行。  
   
-将此程序编译为库，将其加载[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]到中，并将其作为存储过程运行。  
+将此程序编译为库，将其加载到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，并将其作为存储过程运行。  
   
 ## <a name="compile-the-hello-world-stored-procedure"></a>编译 "Hello World" 存储过程  
 
@@ -138,7 +138,7 @@ EXTERNAL NAME helloworld.HelloWorldProc.HelloWorld
 -- EXTERNAL NAME helloworld.[MyNS.HelloWorldProc].HelloWorld  
 ```  
   
-一旦创建该存储过程后，就可以像用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 编写的普通存储过程一样运行该存储过程。 执行以下命令：  
+一旦创建该存储过程后，就可以像用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 编写的普通存储过程一样运行该存储过程。 运行以下命令：  
   
 ```sql
 DECLARE @J nchar(25)  

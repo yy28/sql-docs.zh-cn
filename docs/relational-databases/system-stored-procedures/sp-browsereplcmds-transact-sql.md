@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5e4f5b003eccda5fdada81e49d2a1f5347591869
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 695a45248185fe2c064cf94a9cf616efce475ecf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831774"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716062"
 ---
 # <a name="sp_browsereplcmds-transact-sql"></a>sp_browsereplcmds (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   返回分发数据库中存储的可读版本复制命令的结果集，并将其用作诊断工具。 此存储过程在分发服务器上对分发数据库执行。  
   
@@ -43,7 +43,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
     [ , [ @compatibility_level = ] compatibility_level ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @xact_seqno_start = ] 'xact_seqno_start'`指定要返回的最低值确切序列号。 *xact_seqno_start*为**nchar （22）**，默认值为0x00000000000000000000。  
   
 `[ @xact_seqno_end = ] 'xact_seqno_end'`指定要返回的最大确切序列号。 *xact_seqno_end*为**nchar （22）**，默认值为0xFFFFFFFFFFFFFFFFFFFF。  
@@ -71,7 +71,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 |**originator_srvname**|**sysname**|发起事务的服务器。|  
 |**originator_db**|**sysname**|发起事务的数据库。|  
 |**article_id**|**int**|项目的 ID。|  
-|type |**int**|命令的类型。|  
+|**type**|**int**|命令的类型。|  
 |**partial_command**|**bit**|指示是否为部分命令。|  
 |**hashkey**|**int**|仅限内部使用。|  
 |**originator_publication_id**|**int**|发起事务的发布的 ID。|  

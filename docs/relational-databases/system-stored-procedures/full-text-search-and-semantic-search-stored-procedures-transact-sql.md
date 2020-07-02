@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0d185a16-2b16-4958-884f-efe675e2e551
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9bfb3a2309b2e7d2d35f1b8f68c5caa9e9ac66c2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b3c700d5b5bc9c6e68f6ecab7186446c681b9d90
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820735"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716561"
 ---
 # <a name="full-text-search-and-semantic-search-stored-procedures-transact-sql"></a>全文搜索和语义搜索存储过程 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支持下列系统存储过程，这些存储过程用于实现和查询全文索引和语义索引。  
   

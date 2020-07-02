@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7394e8ca-4ce1-4e99-a784-205007c2c248
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d1acd5a12274c00bf2829b2219055d5a1ecf9eff
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 65728d55db4202fa979f4b7c8cbce5b1718d7660
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824303"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719198"
 ---
 # <a name="sp_setdefaultdatatypemapping-transact-sql"></a>sp_setdefaultdatatypemapping (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将和非数据库管理系统（DBMS）之间的现有数据类型映射标记 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为默认值。 此存储过程在分发服务器上的任何数据库中执行。  
   
@@ -53,12 +53,12 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
     [ , [ @destination_nullable = ] source_nullable ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @mapping_id = ] mapping_id`标识现有数据类型映射。  *mapping_id*为**int**，默认值为 NULL。 如果指定*mapping_id*，则不需要剩余的参数。  
   
 `[ @source_dbms = ] 'source_dbms'`要从中映射数据类型的 DBMS 的名称。 *source_dbms* **sysname**，可以是下列值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|源为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。|  
 |**联手**|源为 Oracle 数据库。|  
@@ -86,7 +86,7 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
   
 `[ @destination_dbms = ] 'destination_dbms'`目标 DBMS 的名称。 *destination_dbms* **sysname**，可以是下列值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|目标为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。|  
 |**联手**|目标为 Oracle 数据库。|  

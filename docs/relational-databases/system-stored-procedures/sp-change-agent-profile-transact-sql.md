@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e73acf8d-0be8-4197-ba11-fe798d0e2820
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1d4dedd9a7451daa97b3e1ad130f7f6dd95d8dd9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b0084338c2629b8ffeb208edc5ac7532105e1271
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823499"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715939"
 ---
 # <a name="sp_change_agent_profile-transact-sql"></a>sp_change_agent_profile (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   更改存储在[MSagent_profiles &#40;transact-sql&#41;](../../relational-databases/system-tables/msagent-profiles-transact-sql.md)表中的复制代理配置文件的参数。 此存储过程在分发服务器上的任何数据库中执行。  
   
@@ -38,7 +38,7 @@ sp_change_agent_profile [ @profile_id = ] profile_id
         , [ @value = ] 'value'   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @profile_id = ] profile_id`配置文件的 ID。 *profile_id*为**int**，没有默认值。  
   
 `[ @property = ] 'property'`属性的名称。 *属性*为**sysname**，无默认值。  
@@ -47,7 +47,7 @@ sp_change_agent_profile [ @profile_id = ] profile_id
   
  下表说明可以更改的配置文件属性。  
   
-|Property|说明|  
+|Property|描述|  
 |--------------|-----------------|  
 |**2008**|配置文件的说明。|  
   

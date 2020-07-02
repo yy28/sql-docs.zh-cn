@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 664f503aa6d3c6d3d0f8c32d83fc2ea9f238ff3b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 223f1feb346a48a2afaae9e89437ba1b06bcd2c3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829690"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717394"
 ---
 # <a name="sp_changearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   更改事务或快照发布中的项目属性。 此存储过程在发布服务器上对发布数据库执行。  
   
@@ -42,7 +42,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
     [ , [ @publisher = ] 'publisher' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publication = ] 'publication'`包含项目的发布的名称。 *发布*为**sysname**，默认值为 NULL。  
   
 `[ @article = ] 'article'`要更改其属性的项目的名称。 *项目*的默认值为**sysname**，默认值为 NULL。  
@@ -61,8 +61,8 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**dest_object**||提供该列是为了向后兼容。 使用**dest_table**。|  
 |**dest_table**||新目标表。|  
 |**destination_owner**||目标对象所有者的名称。|  
-|**筛选器**||要用于筛选表（水平筛选）的新存储过程。 默认值为 NULL。 对于对等复制中的发布，此值不能更改。|  
-|**fire_triggers_on_snapshot**|**true**|应用初始快照时会执行已复制的用户触发器。<br /><br /> 注意：对于要复制的触发器， *schema_option*的位掩码值必须包括值**0x100**。|  
+|**filter**||要用于筛选表（水平筛选）的新存储过程。 默认值为 NULL。 对于对等复制中的发布，此值不能更改。|  
+|**fire_triggers_on_snapshot**|true|应用初始快照时会执行已复制的用户触发器。<br /><br /> 注意：对于要复制的触发器， *schema_option*的位掩码值必须包括值**0x100**。|  
 ||**false**|应用初始快照时不会执行已复制的用户触发器。|  
 |**identity_range**||控制在订阅服务器中分配的标识范围的大小。 对等复制不支持此属性。|  
 |**ins_cmd**||要执行的 INSERT 语句，否则从日志构造。|  
@@ -70,7 +70,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**无**|不使用命令。|  
 ||**击落**|删除目标表。|  
 ||**delete**|删除目标表。|  
-||**去**|截断目标表。|  
+||**truncate**|截断目标表。|  
 |**pub_identity_range**||控制在订阅服务器中分配的标识范围的大小。 对等复制不支持此属性。|  
 |**schema_option**||为给定项目指定架构生成选项的位图。 *schema_option*为**binary （8）**。 有关详细信息，请参阅本主题后面的 "备注" 部分。|  
 ||**0x00**|通过快照代理禁用脚本。|  
@@ -128,8 +128,8 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**字符串文本**|使用字符串文字值将更改传播给订阅服务器。|  
 |**sync_object**||用于生成同步输出文件的表或视图的名称。 默认值为 NULL。 Oracle 发布服务器不支持。|  
 |**表空间**||标识从 Oracle 数据库发布的项目的日志记录表所使用的表空间。 有关详细信息，请参阅[管理 Oracle 表空间](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md)。|  
-|**阀**||用于控制分发代理何时分配新标识范围的百分比值。 对等复制不支持此属性。|  
-|type ||Oracle 发布服务器不支持。|  
+|**threshold**||用于控制分发代理何时分配新标识范围的百分比值。 对等复制不支持此属性。|  
+|**type**||Oracle 发布服务器不支持。|  
 ||**logbased**|基于日志的项目。|  
 ||**logbased manualboth**|具有手动筛选器和手动视图并且基于日志的项目。 此选项要求同时设置 " *sync_object* " 和 "*筛选器*" 属性。 Oracle 发布服务器不支持。|  
 ||**logbased manualfilter**|具有手动筛选器并且基于日志的项目。 此选项要求同时设置 " *sync_object* " 和 "*筛选器*" 属性。 Oracle 发布服务器不支持。|  
@@ -194,7 +194,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
 -   **destination_owner**  
   
--   **筛选器**  
+-   **filter**  
   
 -   **ins_cmd**  
   

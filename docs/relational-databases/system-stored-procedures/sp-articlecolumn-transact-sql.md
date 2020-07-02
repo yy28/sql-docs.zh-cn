@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8abaa8c1-d99e-4788-970f-c4752246c577
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 250d8687a97afdfa937abb9c49b2efa131195a52
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 460a3615517a0a0b62c70351613836c1b3bfb5d5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833526"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716242"
 ---
 # <a name="sp_articlecolumn-transact-sql"></a>sp_articlecolumn (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   用于指定项目中包含的列以垂直筛选已发布表中的数据。 此存储过程在发布服务器上对发布数据库执行。  
   
@@ -46,7 +46,7 @@ sp_articlecolumn [ @publication = ] 'publication'
     [ , [ @internal = ] 'internal' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publication = ] 'publication'`包含此项目的发布的名称。 *发布*为**sysname**，无默认值。  
   
 `[ @article = ] 'article'`项目的名称。 *项目*是**sysname**，无默认值。  

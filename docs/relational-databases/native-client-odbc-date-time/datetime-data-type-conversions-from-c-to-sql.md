@@ -13,19 +13,19 @@ ms.assetid: 7ac098db-9147-4883-8da9-a58ab24a0d31
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f8161ea07e394192e972caf4f772d9e7def36e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 97867fb2debffab4684aaef302773ebe531d820b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301770"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719019"
 ---
 # <a name="datetime-data-type-conversions-from-c-to-sql"></a>由 C 到 SQL 的 datetime 数类型转换
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  本主题列出了从 C 类型转换为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日期/时间类型时要考虑的问题。  
+  本主题列出了从 C 类型转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期/时间类型时要考虑的问题。  
   
- 下表中介绍的转换适用于在客户端上所进行的转换。 如果客户端指定的参数的秒的小数部分精度不同于服务器上定义的精度，则客户端转换可能会成功，但在调用**SQLExecute**或**SQLExecuteDirect**时，服务器将返回错误。 特别是，ODBC 将秒的小数部分的任何截断视为错误，而[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]行为是舍入;例如，当从**datetime2 （6）** 转向**datetime2 （2）** 时，将发生舍入。 Datetime 列值舍入为 1/300 秒，服务器将 smalldatetime 列的秒数设置为零。  
+ 下表中介绍的转换适用于在客户端上所进行的转换。 如果客户端指定的参数的秒的小数部分精度不同于服务器上定义的精度，则客户端转换可能会成功，但在调用**SQLExecute**或**SQLExecuteDirect**时，服务器将返回错误。 特别是，ODBC 将秒的小数部分的任何截断视为错误，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 行为是舍入; 例如，当从**datetime2 （6）** 到**datetime2 （2）** 时，将发生舍入。 Datetime 列值舍入为 1/300 秒，服务器将 smalldatetime 列的秒数设置为零。  
   
 |||||||||  
 |-|-|-|-|-|-|-|-|  
@@ -33,17 +33,17 @@ ms.locfileid: "81301770"
 |SQL_C_DATE|1|-|-|1,6|1,5,6|1,13|1,13|  
 |SQL_C_TIME|-|1|1|1,7|1、5、7|1,13|1,13|  
 |SQL_C_SS_TIME2|-|1,3|1,10|1,7|1、5、7|1,13|1,13|  
-|SQL_C_BINARY(SQL_SS_TIME2_STRUCT)|不适用|不适用|1,10,11|不适用|不适用|不适用|不适用|  
+|SQL_C_BINARY(SQL_SS_TIME2_STRUCT)|不可用|不可用|1,10,11|不可用|不可用|不可用|不可用|  
 |SQL_C_TYPE_TIMESTAMP|1,2|1,3,4|1,4,10|1,10|1,5,10|1,13|1,13|  
 |SQL_C_SS_TIMESTAMPOFFSET|1,2,8|1,3,4,8|1,4,8,10|1,8,10|1,10|1,13|1,13|  
-|SQL_C_BINARY(SQL_SS_TIMESTAMPOFFSET_STRUCT)|不适用|不适用|不适用|不适用|1,10,11|不适用|不适用|  
-|SQL_C_CHAR/SQL_WCHAR (date)|9|9|9|9,6|9,5,6|不适用|不适用|  
-|SQL_C_CHAR/SQL_WCHAR (time2)|9|9，3|9,10|9,7,10|9,5,7,10|不适用|不适用|  
-|SQL_C_CHAR/SQL_WCHAR (datetime)|9,2|9，3，4|9,4,10|9,10|9,5,10|不适用|不适用|  
-|SQL_C_CHAR/SQL_WCHAR (datetimeoffset)|9,2,8|9、3、4、8|9,4,8,10|9,8,10|9,10|不适用|不适用|  
-|SQL_C_BINARY(SQL_DATE_STRUCT)|1,11|不适用|不适用|不适用|不适用|不适用|不适用|  
-|SQL_C_BINARY(SQL_TIME_STRUCT)|不适用|不适用|不适用|不适用|不适用|不适用|不适用|  
-|SQL_C_BINARY(SQL_TIMESTAMP_STRUCT)|不适用|不适用|不适用|不适用|不适用|不适用|不适用|  
+|SQL_C_BINARY(SQL_SS_TIMESTAMPOFFSET_STRUCT)|不可用|不可用|不可用|不可用|1,10,11|不可用|不可用|  
+|SQL_C_CHAR/SQL_WCHAR (date)|9|9|9|9,6|9,5,6|不可用|不可用|  
+|SQL_C_CHAR/SQL_WCHAR (time2)|9|9，3|9,10|9,7,10|9,5,7,10|不可用|不可用|  
+|SQL_C_CHAR/SQL_WCHAR (datetime)|9,2|9，3，4|9,4,10|9,10|9,5,10|不可用|不可用|  
+|SQL_C_CHAR/SQL_WCHAR (datetimeoffset)|9,2,8|9、3、4、8|9,4,8,10|9,8,10|9,10|不可用|不可用|  
+|SQL_C_BINARY(SQL_DATE_STRUCT)|1,11|不可用|不可用|不可用|不可用|不可用|不可用|  
+|SQL_C_BINARY(SQL_TIME_STRUCT)|不可用|不可用|不可用|不可用|不可用|不可用|不可用|  
+|SQL_C_BINARY(SQL_TIMESTAMP_STRUCT)|不可用|不可用|不可用|不可用|不可用|不可用|不可用|  
   
 ## <a name="key-to-symbols"></a>符号含义  
   
@@ -90,7 +90,7 @@ ms.locfileid: "81301770"
   
      列大小为零则暗指 ODBC 中可变长度字符类型的大小无限制（即 9 位，除非应用 SQL_C_TYPE_TIMESTAMP 的三位数规则）。 指定列大小为零且具有固定长度的字符类型是错误的。  
   
--   不**适用：保留**现有[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]和早期行为。  
+-   不**适用：** 保留现有 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和早期行为。  
   
 ## <a name="see-also"></a>另请参阅  
  [ODBC&#41;&#40;的日期和时间改进](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  

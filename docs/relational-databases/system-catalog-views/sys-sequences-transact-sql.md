@@ -21,21 +21,21 @@ ms.assetid: 0e1b0e32-1cce-40f7-83c8-860ec660138a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5afddee7cf2d8d5e61db8833df45b839e6f70eca
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4a6588e142fb17f0b90dfb302dda242255513ed3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82815754"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717564"
 ---
 # <a name="syssequences-transact-sql"></a>sys.sequences (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   数据库中的每个序列对象各占一行。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|\<继承列>||从[sys.databases](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)继承所有列。|  
+|\<inherited columns>||从[sys.databases](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)继承所有列。|  
 |**start_value**|**sql_variant 不为 NULL**|序列对象的起始值。 如果使用 ALTER SEQUENCE 重新启动序列对象，它将以此值重新启动。 序列对象循环进入**minimum_value**或**maximum_value**，而不是**start_value**。|  
 |increment |**sql_variant 不为 NULL**|用于在每个生成值后使序列对象递增的值。|  
 |**minimum_value**|**sql_variant NULL**|序列对象可以生成的最小值。 在达到此值后，序列对象将在尝试生成多个值时返回错误，或在指定 CYCLE 选项时重新启动。 如果未指定 MINVALUE，则此列将返回序列生成器的数据类型支持的最小值。|  
@@ -52,7 +52,7 @@ ms.locfileid: "82815754"
 |**last_used_value**|**sql_variant NULL**|返回[Next Value For](../../t-sql/functions/next-value-for-transact-sql.md)函数生成的最后一个值。 适用于 SQL Server 2017 及更高版本。|  
   
 ## <a name="permissions"></a>权限  
- 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更高版本中，目录视图中仅显示用户拥有的安全对象的元数据，或用户对其拥有某些权限的安全对象的元数据。  有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
+ 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更高版本中，目录视图中仅显示用户拥有的安全对象的元数据，或用户对其拥有某些权限的安全对象的元数据。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [序列号](../../relational-databases/sequence-numbers/sequence-numbers.md)   

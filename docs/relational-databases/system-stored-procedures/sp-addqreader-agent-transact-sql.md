@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: dc9f591a-e67e-4ba8-bf47-defd5eda0822
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0347a7346e42e212775267fc5849360abaa75423
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1758f6cd269c911ea582577721d29e6534910e91
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820642"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716453"
 ---
 # <a name="sp_addqreader_agent-transact-sql"></a>sp_addqreader_agent (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   为给定分发服务器添加队列读取器代理。 此存储过程在分发服务器上针对分发数据库执行，或在发布服务器上针对发布数据库执行。  
   
@@ -39,7 +39,7 @@ sp_addqreader_agent [ @job_login = ] 'job_login'
     [ , [ @frompublisher = ] frompublisher   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @job_login = ] 'job_login'`用于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 运行代理的 Windows 帐户的登录名。 *job_login*为**nvarchar （257）**，无默认值。 此 Windows 帐户总是用于与分发服务器建立代理连接。  
   
 `[ @job_password = ] 'job_password'`运行代理所用的 Windows 帐户的密码。 *job_password* **sysname**，无默认值。  

@@ -18,15 +18,15 @@ ms.assetid: a583c087-bdb3-46d2-b9e5-3921b3e6d10b
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c9e0d3152c6d60faff4c1c42410374287bd7d111
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 87fbcab87999c83c688ec4fa9e46f1aeed033bcf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68030903"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716426"
 ---
 # <a name="sp_addrolemember-transact-sql"></a>sp_addrolemember (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   为当前数据库中的数据库角色添加数据库用户、数据库角色、Windows 登录名或 Windows 组。  
   
@@ -42,11 +42,11 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
 
 ```    
   
-## <a name="arguments"></a>参数  
- [ @rolename= ]"*role*"  
+## <a name="arguments"></a>自变量  
+ [ @rolename =] "*role*"  
  当前数据库中的数据库角色的名称。 *role*是**sysname**，无默认值。  
   
- [ @membername= ]"*security_account*"  
+ [ @membername =] "*security_account*"  
  添加到该角色中的安全帐户。 *security_account*是**sysname**，无默认值。 *security_account*可以是数据库用户、数据库角色、windows 登录名或 windows 组。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -75,7 +75,7 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
 ## <a name="examples"></a>示例  
   
 ### <a name="a-adding-a-windows-login"></a>A. 添加 Windows 登录名  
- 下面的示例将 Windows 登录名`Contoso\Mary5`作为用户`AdventureWorks2012` `Mary5`添加到数据库中。 用户 `Mary5` 随即被添加到 `Production` 角色中。  
+ 下面的示例将 Windows 登录名 `Contoso\Mary5` `AdventureWorks2012` 作为用户添加到数据库中 `Mary5` 。 用户 `Mary5` 随即被添加到 `Production` 角色中。  
   
 > [!NOTE]  
 >  因为 `Contoso\Mary5` 在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中被识别为数据库用户 `Mary5`，所以必须指定用户名 `Mary5`。 如果没有 `Contoso\Mary5` 登录名存在，语句将失败。 请通过使用您的域中的登录名进行测试。  
@@ -97,10 +97,10 @@ EXEC sp_addrolemember 'Production', 'Mary5';
 ## <a name="examples-sspdw"></a>示例：[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-adding-a-windows-login"></a>C. 添加 Windows 登录名  
- 下面的示例将登录名`LoginMary`作为用户`AdventureWorks2008R2` `UserMary`添加到数据库中。 用户 `UserMary` 随即被添加到 `Production` 角色中。  
+ 下面的示例将登录名 `LoginMary` `AdventureWorks2008R2` 作为用户添加到数据库中 `UserMary` 。 用户 `UserMary` 随即被添加到 `Production` 角色中。  
   
 > [!NOTE]  
->  因为登录名`LoginMary`称为数据库中`UserMary` [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]的数据库用户，所以`UserMary`必须指定用户名。 如果没有 `Mary5` 登录名存在，语句将失败。 登录名和用户通常具有相同的名称。 此示例使用不同的名称来区分影响登录名和用户的操作。  
+>  因为登录名 `LoginMary` 称为数据库中的数据库用户 `UserMary` ，所以 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] `UserMary` 必须指定用户名。 如果没有 `Mary5` 登录名存在，语句将失败。 登录名和用户通常具有相同的名称。 此示例使用不同的名称来区分影响登录名和用户的操作。  
   
 ```  
 -- Uses AdventureWorks  

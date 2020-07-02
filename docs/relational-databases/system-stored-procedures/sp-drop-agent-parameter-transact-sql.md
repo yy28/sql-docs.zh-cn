@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b99e65ff-9cca-4dce-a2ce-2968de23a76a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ce01a218fd2185c5904baf41014bc0c7caa5ec25
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4f0e89192e985463ecfbce622629a35215f5ec36
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830199"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717332"
 ---
 # <a name="sp_drop_agent_parameter-transact-sql"></a>sp_drop_agent_parameter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   从**MSagent_parameters**表中的配置文件中删除一个或所有参数。 此存储过程可在运行代理的分发服务器的任意数据库中执行。  
   
@@ -37,7 +37,7 @@ sp_drop_agent_parameter [ @profile_id = ] profile_id
     [ , [ @parameter_name = ] 'parameter_name' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @profile_id = ] profile_id`要删除其参数的配置文件的 ID。 *profile_id*为**int**，没有默认值。  
   
 `[ @parameter_name = ] 'parameter_name'`要删除的参数的名称。 *parameter_name*的默认值为**sysname**，默认值为 **%** 。 如果为 **%** ，则删除指定配置文件的所有参数。  

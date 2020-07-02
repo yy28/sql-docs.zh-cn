@@ -13,15 +13,15 @@ ms.assetid: 059431e2-a65c-4587-ba4a-9929a1611e96
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 83e4a72ba995d4fff796cdf8ec081a9ef9828936
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 435ca8d8685f62e7a8f2fad172f66414edafb756
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301742"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718985"
 ---
 # <a name="datetime-data-type-conversions-from-sql-to-c"></a>由 SQL 到 C 的 datetime 数据类型转换
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   下表列出了从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期/时间类型转换为 C 类型时要注意的问题。  
   
@@ -32,16 +32,16 @@ ms.locfileid: "81301742"
 ||SQL_C_DATE|SQL_C_TIME|SQL_C_TIMESTAMP|SQL_C_SS_TIME2|SQL_C_SS_TIMESTAMPOFFSET|SQL_C_BINARY|SQL_C_CHAR|SQL_C_WCHAR|  
 |SQL_CHAR|2、3、4、5|2、3、6、7、8|2、3、9、10、11|2、3、6、7|2、3、9、10、11|1|1|1|  
 |SQL_WCHAR|2、3、4、5|2、3、6、7、8|2、3、9、10、11|2、3、6、7|2、3、9、10、11|1|1|1|  
-|SQL_TYPE_DATE|OK|12|13|12|13、23|14|16|16|  
-|SQL_SS_TIME2|12|8|15|OK|10，23|17|16|16|  
-|SQL_TYPE_TIMESTAMP|18|7、8|OK|7|23|19|16|16|  
-|SQL_SS_TIMESTAMPOFFSET|18、22|7、8、20|20|7、20|OK|21|16|16|  
+|SQL_TYPE_DATE|确定|12|13|12|13、23|14|16|16|  
+|SQL_SS_TIME2|12|8|15|确定|10，23|17|16|16|  
+|SQL_TYPE_TIMESTAMP|18|7、8|确定|7|23|19|16|16|  
+|SQL_SS_TIMESTAMPOFFSET|18、22|7、8、20|20|7、20|确定|21|16|16|  
   
 ## <a name="key-to-symbols"></a>符号含义  
   
 |符号|含义|  
 |------------|-------------|  
-|OK|无转换问题。|  
+|确定|无转换问题。|  
 |1|应用 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前的规则。|  
 |2|忽略前导空格和尾随空格。|  
 |3|字符串解析为日期、时间、时区或时区偏移量，且秒的小数部分允许多达 9 位。 如果解析时区偏移量，则时间将转换为客户端时区。 如果在此转换过程中出现错误，将生成包含 SQLSTATE 22018 和消息 "日期时间字段溢出" 的诊断记录。|  

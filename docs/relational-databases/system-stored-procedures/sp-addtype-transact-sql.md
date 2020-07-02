@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ed72cd8e-5ff7-4084-8458-2d8ed279d817
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c876b024b0e8dd218064999adde4a43a18404829
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d8d8626c8f4b3d256899514d14494b119ee8149c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833582"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716321"
 ---
 # <a name="sp_addtype-transact-sql"></a>sp_addtype (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   创建别名数据类型。  
   
@@ -43,7 +43,7 @@ sp_addtype [ @typename = ] type,
     [ , [ @nulltype = ] 'null_type' ] ;  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @typename = ] type`别名数据类型的名称。 别名数据类型名称必须遵循[标识符](../../relational-databases/databases/database-identifiers.md)的规则，并且在每个数据库中必须是唯一的。 *类型*为**sysname**，无默认值。  
   
 `[ @phystype = ] system_data_type`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]别名数据类型所基于的物理数据类型或提供的数据类型。*system_data_type* **sysname**，无默认值，可以是下列值之一：  
@@ -67,7 +67,7 @@ sp_addtype [ @typename = ] type,
  *P*  
  非负整数，指示可保留的最大十进制位数，包括小数点前面和后面的数字。 有关详细信息，请参阅 [decimal 和 numeric (Transact-SQL)](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)。  
   
- *s*  
+ *些*  
  非负整数，指示小数点后面的小数数字可保留的最大十进制位数，它必须小于或等于精度值。 有关详细信息，请参阅 [decimal 和 numeric (Transact-SQL)](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)。  
   
 `[ @nulltype = ] 'null_type'`指示别名数据类型处理空值的方式。 *null_type*为**varchar （** 8 **）**，默认值为 null，并且必须用单引号引起来（' null '、' NOT null ' 或 ' NONULL '）。 如果**sp_addtype**未显式定义*null_type* ，则将其设置为当前默认的为空性。 使用 GETANSINULL 系统函数可确定当前默认的为空性。 可以使用 SET 语句或 ALTER DATABASE 对该为空性进行调整。 应显式定义为空性。 如果** \@ phystype**为**bit**，且未指定** \@ NULLTYPE** ，则默认值为 not NULL。  

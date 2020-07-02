@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d57f3098a69e499392af502d2d3a6d94840bde21
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: af2feda317d3cbcbf7391179c0797291644eca26
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834336"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719215"
 ---
 # <a name="sp_register_custom_scripting-transact-sql"></a>sp_register_custom_scripting (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   复制允许用户定义的自定义存储过程替换事务复制中使用的一个或多个默认过程。 对复制的表进行架构更改时，将重新创建这些存储过程。 **sp_register_custom_scripting**注册 [!INCLUDE[tsql](../../includes/tsql-md.md)] 当发生架构更改时执行的存储过程或脚本文件，以编写新的用户定义的自定义存储过程的定义脚本。 这个新的用户定义的自定义存储过程应反映表的新架构。 在发布服务器上对发布数据库执行**sp_register_custom_scripting** ，并在架构发生更改时在订阅服务器上执行已注册的脚本文件或存储过程。  
   
@@ -39,10 +39,10 @@ sp_register_custom_scripting [ @type  = ] 'type'
     [ , [ @article = ] 'article' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @type = ] 'type'`要注册的自定义存储过程或脚本的类型。 *类型*为**varchar （16）**，无默认值，可以是下列值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**&**|复制 INSERT 语句时，将执行注册的自定义存储过程。|  
 |**update**|复制 UPDATE 语句时，将执行注册的自定义存储过程。|  

@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: 714e2935-1bc7-4901-aea2-64b1bbda03d6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 40b1ebc5319c13b5aa84a28e1a5c5546dd62bd03
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9ae92407c52d84acaebbe157568e6d6476e4aa73
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68094826"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717256"
 ---
 # <a name="sysmergepartitioninfoview-transact-sql"></a>sysmergepartitioninfoview (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **Sysmergepartitioninfoview**视图显示表项目的分区信息。 此视图存储在发布服务器的发布数据库以及订阅服务器的订阅数据库中。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|name |**sysname**|项目的名称。|  
+|name|**sysname**|项目的名称。|  
 |**type**|**tinyint**|指示项目类型，可以为下列类型之一：<br /><br /> **0x0a** = Table。<br /><br /> **0x20** = 仅过程架构。<br /><br /> **0x40** = 仅查看架构或仅索引视图架构。<br /><br /> **0x80** = 仅函数架构。|  
 |**objid**|**int**|已发布对象的标识符。|  
 |**sync_objid**|**int**|表示同步数据集的视图的对象 ID。|  
@@ -86,8 +86,8 @@ ms.locfileid: "68094826"
 |**delete_tracking**|**bit**|指示是否复制删除。<br /><br /> **0** = 不复制删除。<br /><br /> **1** = 复制删除，这是合并复制的默认行为。<br /><br /> 如果*delete_tracking*的值为**0**，则必须在发布服务器上手动删除订阅服务器上删除的行，并且必须在订阅服务器上手动删除在发布服务器上删除的行。<br /><br /> 注意：值为**0**会导致非收敛。|  
 |**compensate_for_errors**|**bit**|指示在同步期间遇到错误时是否采取补救措施。<br /><br /> **0** = 禁用补偿操作。<br /><br /> **1** = 不能在订阅服务器或发布服务器上应用的更改始终会导致补偿操作来撤消这些更改，这是合并复制的默认行为。<br /><br /> 注意：值为**0**会导致非收敛。|  
 |**pub_range**|**bigint**|发布服务器标识范围大小。|  
-|**内**|**bigint**|将分配到调整中订阅服务器的连续标识值的大小。|  
-|**阀**|**int**|标识范围阈值百分比。|  
+|**range**|**bigint**|将分配到调整中订阅服务器的连续标识值的大小。|  
+|**threshold**|**int**|标识范围阈值百分比。|  
 |**stream_blob_columns**|**bit**|指示是否使用针对二进制大型对象列的流式优化。 **1**表示尝试进行优化。|  
 |**preserve_rowguidcol**|**bit**|指示复制是否使用现有 rowguid 列。 如果值为**1** ，则表示使用现有的 ROWGUIDCOL 列。 **0**表示复制添加了 ROWGUIDCOL 列。|  
 |**partition_view_id**|**int**|标识定义订阅服务器分区的视图。|  
@@ -104,7 +104,7 @@ ms.locfileid: "68094826"
 |**logical_record_level_conflict_detection**|**bit**|指示应在逻辑记录级还是行级或列级检测冲突。<br /><br /> **0** = 使用行级或列级冲突检测。<br /><br /> **1** = 使用逻辑记录冲突检测，在这种情况下，发布服务器上的行更改与订阅服务器上的同一逻辑记录在单独的行中更改时，会被视为冲突。<br /><br /> 当该值为 1 时，只能使用逻辑记录级别的冲突解决。|  
 |**logical_record_level_conflict_resolution**|**bit**|指示是否应在逻辑记录级或行级或列级解决冲突。<br /><br /> **0** = 使用行级或列级的解析。<br /><br /> **1** = 如果发生冲突，来自入选方的整个逻辑记录将覆盖失去一方的整个逻辑记录。<br /><br /> 值 1 既可用于逻辑记录级别的检测，也可用于行或列级别的检测。|  
 |**partition_options**|**tinyint**|定义项目数据的分区方式，当所有行只属于一个分区或只属于一个订阅时，这将可以实现性能优化。 *Partition_options*可以是下列值之一。<br /><br /> **0** = 项目的筛选是静态的，或者不为每个分区生成唯一的数据子集，即 "重叠" 分区。<br /><br /> **1** = 分区重叠，在订阅服务器上所做的 DML 更新不能更改行所属的分区。<br /><br /> **2** = 对项目的筛选将生成不重叠分区，但多个订阅服务器可以接收相同的分区。<br /><br /> **3** = 对项目的筛选将生成对每个订阅唯一的非重叠分区。|  
-|**name**|**sysname**|分区的名称。|  
+|name|**sysname**|分区的名称。|  
   
 ## <a name="see-also"></a>另请参阅  
  [使用参数化筛选器为合并发布管理分区](../../relational-databases/replication/publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)   

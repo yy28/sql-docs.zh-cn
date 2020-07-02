@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 0c6fe4cb-d846-40b5-8884-35a9c770f5e8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fac92658366cceffc3d4fac5ba650f9a14501185
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5491e736bfa075c4cc9f001bc2515184de865ee2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81485233"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717908"
 ---
 # <a name="context-connections-and-regular-connections---restrictions"></a>上下文连接和常规连接 - 限制
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本主题讨论通过上下文和常规连接在[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]进程中执行的代码的限制。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+  本主题讨论 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 通过上下文和常规连接在进程中执行的代码的限制。  
   
 ## <a name="restrictions-on-context-connections"></a>对上下文连接的限制  
  开发应用程序时，请考虑应用于上下文连接的以下限制：  
@@ -41,7 +41,7 @@ ms.locfileid: "81485233"
   
 -   使用“context connection=true”时，不能使用任何其他连接字符串关键字。  
   
--   如果**sqlconnection**的连接字符串为 "context connection = true"，而不是实例的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]名称，则**sqlconnection**属性返回 null。  
+-   如果**sqlconnection**的连接字符串为 "context connection = true"，而不是实例的名称，则**sqlconnection**属性返回 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] null。  
   
 -   对上下文连接执行命令时，设置**CommandTimeout**属性不起作用。  
   

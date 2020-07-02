@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a87ba30f69027849ea5444163291465dec00d9be
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: 4ff31939ce763f91ca706dfe9e7966b2a7b42f7d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627623"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716354"
 ---
 # <a name="sp_addsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
 
   将订阅添加到发布并设置订阅服务器的状态。 此存储过程在发布服务器上对发布数据库执行。  
   
@@ -75,7 +75,7 @@ sp_addsubscription [ @publication = ] 'publication'
     [ , [ @memory_optimized = ] memory_optimized ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  [ @publication =] "*发布*"  
  发布的名称。 *发布*为**sysname**，无默认值。  
   
@@ -94,7 +94,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @sync_type =] "*sync_type*"  
  订阅同步类型。 *sync_type*为**nvarchar （255）**，可以是下列值之一：  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |无|订阅服务器已包含发布表的架构和初始数据。<br /><br /> 注意：此选项已被弃用。 请改用仅支持复制。|  
 |automatic（默认值）|已发布表的架构和初始数据将首先传输到订阅服务器。|  
@@ -108,7 +108,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @status =] "*status*"  
  订阅状态。 *状态*为**sysname**，默认值为 NULL。 当此参数未显式设置时，复制会自动将其设置为下列值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |活动|订阅已初始化并可接受更改。 如果*sync_type*的值为 none、initialize with backup 或仅支持复制，则会设置此选项。|  
 |subscribed|订阅需要进行初始化。 如果*sync_type*的值为 "自动"，则会设置此选项。|  
@@ -122,12 +122,12 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @update_mode =] "*update_mode*"  
  更新的类型。*update_mode*为**nvarchar （30）**，可以是下列值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |read only（默认值）|该订阅是只读的。 在订阅服务器上所做的更改不会发送到发布服务器。|  
 |sync tran|支持立即更新订阅。 Oracle 发布服务器不支持。|  
 |queued tran|支持订阅进行排队更新。 可以在订阅服务器上进行数据修改，将其存储在队列中，然后传播到发布服务器。 Oracle 发布服务器不支持。|  
-|failover|将排队更新作为故障转移的情况下启用用于即时更新的订阅。 可以在订阅服务器上进行数据修改并立即传播到发布服务器。 如果发布服务器与订阅服务器未连接在一起，则可以更改更新模式以便将在订阅服务器上所做的数据修改存储在队列中，直到订阅服务器与发布服务器重新连接在一起。 Oracle 发布服务器不支持。|  
+|故障转移|将排队更新作为故障转移的情况下启用用于即时更新的订阅。 可以在订阅服务器上进行数据修改并立即传播到发布服务器。 如果发布服务器与订阅服务器未连接在一起，则可以更改更新模式以便将在订阅服务器上所做的数据修改存储在队列中，直到订阅服务器与发布服务器重新连接在一起。 Oracle 发布服务器不支持。|  
 |queued failover|支持将订阅作为排队更新订阅，并允许更改为立即更新模式。 在订阅服务器和发布服务器之间建立连接之前，可以在订阅服务器上修改数据，并将数据修改存储在队列中。 建立起持续连接后，即可将更新模式更改为立即更新。 Oracle 发布服务器不支持。|  
   
  请注意，如果要订阅的发布允许 DTS，则不允许值同步事务和排队事务。  
@@ -135,7 +135,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @loopback_detection =] "*loopback_detection*"  
  指定分发代理是否将从订阅服务器发起的事务发送回该订阅服务器。 *loopback_detection*为**nvarchar （5）**，可以是下列值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |true|分发代理不将从订阅服务器上发起的事务发送回该订阅服务器。 与双向事务复制一起使用。 有关详细信息，请参阅[双向事务复制](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md)。|  
 |false|分发代理将在订阅服务器上发起的事务发送回订阅服务器。|  
@@ -144,7 +144,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @frequency_type =] *frequency_type*  
  安排分发任务所使用的频率。 *frequency_type*为 int，可以是下列值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |1|一次性|  
 |2|按需|  
@@ -161,7 +161,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @frequency_relative_interval =] *frequency_relative_interval*  
  分发代理的日期。 如果*frequency_type*设置为32（每月相对），则使用此参数。 *frequency_relative_interval*为**int**，可以是下列值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |1|First|  
 |2|秒|  
@@ -176,7 +176,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @frequency_subday =] *frequency_subday*  
  在定义周期内重新调度的频率（分钟）。 *frequency_subday*为**int**，可以是下列值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |1|一次|  
 |2|秒|  
@@ -241,7 +241,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @backupdevicetype =] "*backupdevicetype*"  
  指定从备份初始化订阅服务器时使用的备份设备的类型。 *backupdevicetype*的数据值为**nvarchar （20）**，可以是下列值之一：  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |logical（默认值）|备份设备是逻辑设备。|  
 |disk|备份设备是磁盘驱动器。|  
@@ -279,7 +279,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @subscriber_type =] *subscriber_type*  
  订阅服务器的类型。 *subscriber_type*为**tinyint**，可以是下列值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |0（默认值）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]订阅服务器|  
 |1|ODBC 数据源服务器|  
@@ -292,7 +292,7 @@ sp_addsubscription [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  sp_addsubscription 用于快照复制和事务复制。  
   
  当 sysadmin 固定服务器角色的成员执行 sp_addsubscription 以创建推送订阅时，将隐式创建分发代理作业并将在 SQL Server 代理服务帐户下运行该作业。 建议你执行[sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) ，并为和指定不同的、特定于代理的 Windows 帐户的凭据 @job_login @job_password 。 有关详细信息，请参阅[复制代理安全模式](../../relational-databases/replication/security/replication-agent-security-model.md)。  

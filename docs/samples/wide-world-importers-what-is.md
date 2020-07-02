@@ -10,15 +10,15 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2fb0c990c03e0dfbf1cd279efa7a249bb5bc9645
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: adc2e7d74f8479384bd9f34b5442e796e4b74d66
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112381"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718549"
 ---
 # <a name="wide-world-importers-sample-databases-for-microsoft-sql"></a>宽世界导入 Microsoft SQL 示例数据库
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 这是虚构的公司广泛的导入程序以及在 SQL Server 和 Azure SQL 数据库的 WideWorldImporters 示例数据库中解决的工作流的概述。  
 
 广域世界导入器（WWI）是一种批发新奇货物导入器和分销商操作。

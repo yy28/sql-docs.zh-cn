@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 160a6b29-5e80-44ab-80ec-77d4280f627c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8578cccba27f38999ef786e1fb48b46445ad682c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 73f9bb5e2201b9c8b7577c54228e038310e7a141
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833647"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716387"
 ---
 # <a name="sp_addserver-transact-sql"></a>sp_addserver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]定义  本地实例的名称。 重命名宿主计算机后 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，使用**sp_addserver**通知 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 新计算机名称的实例。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 必须在该计算机承载的所有实例上执行此过程。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 无法更改的实例名称。 若要更改命名实例的实例名称，安装具有所需名称的新实例、从旧实例中分离数据库文件、将数据库附加到新实例并删除旧实例。 或者，你可以在客户端计算机上创建客户端别名名称，无需更改服务器计算机上的实例名称即可将连接重定向到其他服务器和实例名称或 **服务器:端口** 组合。
 
@@ -43,7 +43,7 @@ sp_addserver [ @server = ] 'server' ,
      [ , [ @duplicate_ok = ] 'duplicate_OK' ]
 ```
 
-## <a name="arguments"></a>参数
+## <a name="arguments"></a>自变量
 `[ @server = ] 'server'`服务器的名称。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 服务器名称必须唯一且必须符合  Windows 计算机名称的规则，但不允许包含空格。 *server* 的数据类型为 **sysname**，无默认值。
 
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果计算机上安装了多个  实例，则实例将如同在一个独立服务器上运行。 通过将*服务器*作为*servername\instancename*引用来指定命名实例。

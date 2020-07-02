@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d27ca972fa5a20fbb22a6786e6be2ca3cf8c8153
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2def277c877311fc5bfaa77bbab5923563d39a75
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830475"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716644"
 ---
 # <a name="sysdm_repl_traninfo-transact-sql"></a>sys.dm_repl_traninfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   返回有关每个复制的事务或变更数据捕获事务的信息。  
 
@@ -43,7 +43,7 @@ ms.locfileid: "82830475"
 |**各**|**int**|事务中复制的命令的 ID。|  
 |**xdesid**|**nvarchar （64）**|事务 ID。|  
 |**artcache_table_address**|**varbinary(8)**|上次用于该事务的缓存的项目表结构的内存中的地址。|  
-|**服务**|**nvarchar （514）**|服务器名称。|  
+|服务器|**nvarchar （514）**|服务器名称。|  
 |**server_len_in_bytes**|**smallint**|服务器名称的字符长度（字节）。|  
 |**database**|**nvarchar （514）**|数据库名称。|  
 |**db_len_in_bytes**|**smallint**|数据库名称的字符长度（字节）。|  

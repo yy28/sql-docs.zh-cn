@@ -18,15 +18,15 @@ ms.assetid: d1df8c15-ee73-49eb-9d13-6e98943c3e38
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2b56b53b90bc8c66b72d68de4b83def5712cdc54
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ef219cd00c8603fce6c03e92bb5f540bd954e81a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833398"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716158"
 ---
 # <a name="sp_autostats-transact-sql"></a>sp_autostats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   显示或更改索引、统计信息对象、表或索引视图的自动统计信息更新选项 AUTO_UPDATE_STATISTICS。  
   
@@ -43,7 +43,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
     [ , [ @indname = ] 'statistics_name' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @tblname = ] 'table_or_indexed_view_name'`要在其上显示 AUTO_UPDATE_STATISTICS 选项的表或索引视图的名称。 *table_or_indexed_view_name*为**nvarchar （776）**，无默认值。  
   
 `[ @flagc = ] 'stats_flag'`将 AUTO_UPDATE_STATISTICS 选项更新为以下值之一：  

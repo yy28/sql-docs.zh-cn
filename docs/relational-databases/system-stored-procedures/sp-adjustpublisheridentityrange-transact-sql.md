@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 64f111fd-fb7d-4459-93f7-65f0f8dd7efe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ad89d48f90ee82e8ae7c30728a50378f9f2cc521
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1f58c1a212c722873f66d940de691c89d13d08f5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833551"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716302"
 ---
 # <a name="sp_adjustpublisheridentityrange-transact-sql"></a>sp_adjustpublisheridentityrange (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   调整发布上的标识范围，并根据发布上的阈值重新分配新的范围。 此存储过程在发布服务器上对发布数据库执行。  
   
@@ -38,7 +38,7 @@ sp_adjustpublisheridentityrange [ [ @publication = ] 'publication' ]
     [ , [ @table_owner= ] 'table_owner' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publication = ] 'publication'`在其中重新分配新标识范围的发布的名称。 *发布*为**sysname**，默认值为 NULL。  
   
 `[ @table_name = ] 'table_name'`重新分配新标识范围的表的名称。 *table_name*的默认值为**sysname**，默认值为 NULL。  

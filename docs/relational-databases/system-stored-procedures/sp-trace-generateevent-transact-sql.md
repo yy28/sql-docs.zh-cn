@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5c5807225c2bda185b61050433cc3378b25b6fe1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 86f1702d2b5444ded603c9e34ec01ae8b95133dc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82809613"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719175"
 ---
 # <a name="sp_trace_generateevent-transact-sql"></a>sp_trace_generateevent (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中创建用户定义事件。  
   
@@ -43,7 +43,7 @@ sp_trace_generateevent [ @eventid = ] event_id
      [ , [ @userdata = ] user_data ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @eventid = ] event_id`要打开的事件的 ID。 *event_id*为**int**，没有默认值。 ID 必须是82到91中的事件编号之一，表示用户定义的事件， [sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)设置。  
   
 `[ @userinfo = ] 'user_info'`是可选的用户定义的字符串，用于标识事件的原因。 *user_info*的默认值为**nvarchar （128）**，默认值为 NULL。  
@@ -58,7 +58,7 @@ sp_trace_generateevent [ @eventid = ] event_id
 |**0**|没有错误。|  
 |**1**|未知错误。|  
 |**3**|指定的事件无效。 该事件可能不存在或者它不适用于此存储过程。|  
-|**9**|内存不足。 在没有足够内存执行指定的操作时返回此代码。|  
+|**13**|内存不足。 在没有足够内存执行指定的操作时返回此代码。|  
   
 ## <a name="remarks"></a>备注  
  **sp_trace_generateevent**执行先前由**xp_trace_ \* **扩展存储过程执行的许多操作。 使用**sp_trace_generateevent**而不是**xp_trace_generate_event**。  
@@ -94,7 +94,7 @@ you were capturing the event id=82, you will see it in the Profiler output.
 INSERT INTO user_config_test VALUES(1, 'abc');  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [sys. fn_trace_geteventinfo &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
  [sp_trace_setevent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [SQL 跟踪](../../relational-databases/sql-trace/sql-trace.md)  

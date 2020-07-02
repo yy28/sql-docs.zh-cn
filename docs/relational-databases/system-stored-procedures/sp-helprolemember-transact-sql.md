@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 42797510-aa5d-4564-85ac-27418419af9c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 65a1f4d2098e55c7007bd04e2fef00bcbac30ffc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 12d66cfa4668c8ca91d82d00cfa5abd4504e76eb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824410"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719286"
 ---
 # <a name="sp_helprolemember-transact-sql"></a>sp_helprolemember (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   返回有关当前数据库中某个角色的直接成员的信息。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "82824410"
 sp_helprolemember [ [ @rolename = ] 'role' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @rolename = ] ' role '`当前数据库中的角色的名称。 *role*的值为**sysname**，默认值为 NULL。 *角色*必须存在于当前数据库中。 如果未指定*role* ，则返回所有包含当前数据库中的至少一个成员的角色。  
   
 ## <a name="return-code-values"></a>返回代码值  

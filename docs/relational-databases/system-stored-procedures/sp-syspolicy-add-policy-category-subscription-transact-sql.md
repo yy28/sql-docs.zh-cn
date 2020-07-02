@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4284f550-9a3f-4726-8181-15e407fbf08f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 795a806b1b945407a2db947f6037c435efe68b56
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9f4f60a56dff14fd06318899fdf89c5602f7029b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68010510"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718645"
 ---
 # <a name="sp_syspolicy_add_policy_category_subscription-transact-sql"></a>sp_syspolicy_add_policy_category_subscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   将策略类别订阅添加到指定的数据库。  
   
@@ -41,14 +41,14 @@ sp_syspolicy_add_policy_category_subscription [ @target_type = ] 'target_type'
     [ , [ @policy_category_subscription_id = ] policy_category_subscription_id OUTPUT ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @target_type = ] 'target_type'`类别订阅的目标类型。 *target_type*为**sysname**，是必需的，并且必须设置为 "DATABASE"。  
   
 `[ @target_object = ] 'target_object'`将订阅该类别的数据库的名称。 *target_object* **sysname**，并且是必需的。  
   
 `[ @policy_category = ] 'policy_category'`要订阅的策略类别的名称。 *policy_category* **sysname**，并且是必需的。  
   
- 若要获取*policy_category*的值，请查询 "syspolicy_policy_categories 系统" 视图。  
+ 若要获取*policy_category*的值，请在 "系统" 视图 policy_policy_categories 查询 msdb.dbo.sys。  
   
 `[ @policy_category_subscription_id = ] policy_category_subscription_id`类别订阅的标识符。 *policy_category_subscription_id*是**int**，并作为 OUTPUT 返回。  
   

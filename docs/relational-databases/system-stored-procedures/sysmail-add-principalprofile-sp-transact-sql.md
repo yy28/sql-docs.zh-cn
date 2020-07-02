@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b2a0b313-abb9-4c23-8511-db77ca8172b3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d752015dab48058af18cb981a009691f407da171
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 387761d2275025f70a769cf3068693d08dbecc58
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82814371"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718630"
 ---
 # <a name="sysmail_add_principalprofile_sp-transact-sql"></a>sysmail_add_principalprofile_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   授予 msdb 数据库主体使用数据库邮件配置文件的权限。 数据库主体必须映射到 SQL Server authentication 用户、Windows 用户或 Windows 组。
   
@@ -40,7 +40,7 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
     [ , [ @is_default ] = 'is_default' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @principal_id = ] principal_id`关联的**msdb**数据库中数据库用户或角色的 ID。 *principal_id*的值为**int**，默认值为 NULL。 必须指定*principal_id*或*principal_name* 。 *Principal_id* **0**使此配置文件成为公共配置文件，并授予对数据库中所有主体的访问权限。  
   
 `[ @principal_name = ] 'principal_name'`关联的**msdb**数据库中数据库用户或角色的名称。 *principal_name*的默认值为**sysname**，默认值为 NULL。 必须指定*principal_id*或*principal_name* 。 *Principal_name* **"public"** 使此配置文件成为公共配置文件，并授予对数据库中所有主体的访问权限。  

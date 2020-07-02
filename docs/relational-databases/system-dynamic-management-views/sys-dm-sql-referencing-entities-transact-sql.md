@@ -20,15 +20,15 @@ ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a3557f9f77a310a9e72e8a9fb1e11a6976256d2d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9d0c2366e0d05fb7d3abe6488d8a2f8ff969f011
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82811300"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717450"
 ---
 # <a name="sysdm_sql_referencing_entities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   针对当前数据库中按名称引用另一个用户定义实体的每个实体均返回一行。 两个实体之间的依赖关系是在另一个实体（称为 "*引用实体* *"）的*持久化 SQL 表达式中按名称显示的。 例如，如果将某个用户定义类型 (UDT) 指定为被引用的实体，则此函数将返回在其定义中按名称引用该类型的每个用户定义实体。 该函数不会返回其他数据库中可能引用该指定实体的实体。 必须在 master 数据库的上下文中执行该函数，以便将服务器级 DDL 触发器作为引用实体返回。  
   
@@ -59,7 +59,7 @@ sys.dm_sql_referencing_entities (
 }  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *schema_name。引用的*_*entity_name*  
  被引用实体的名称。  
   
@@ -83,7 +83,7 @@ sys.dm_sql_referencing_entities (
 |referencing_class_desc|**nvarchar(60)**|引用实体的类的说明。<br /><br /> OBJECT<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER|  
 |is_caller_dependent|**bit**|指示被引用的实体的 ID 解析发生在运行时，因为它依赖于调用方的架构。<br /><br /> 1 = 引用实体可能会引用该实体，但是，被引用的实体的 ID 解析依赖于调用方，因此不能确定此解析。 仅对于非绑定到架构的引用且被引用对象为存储过程、扩展存储过程或在 EXECUTE 语句中调用的用户定义函数时，才会出现这种情况。<br /><br /> 0 = 被引用的实体不依赖于调用方。|  
   
-## <a name="exceptions"></a>例外  
+## <a name="exceptions"></a>异常  
  在满足以下任一条件时将返回空的结果集：  
   
 -   指定了系统对象。  
@@ -108,8 +108,8 @@ sys.dm_sql_referencing_entities (
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 用户定义函数|是|是|  
 |CLR 用户定义函数|否|是|  
 |CLR 触发器（DML 和 DDL）|否|否|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 触发器|是|否|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 数据库级 DDL 触发器|是|否|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 触发器|是|No|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 数据库级 DDL 触发器|是|No|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 服务器级 DDL 触发器|是|否|  
 |扩展的存储过程|否|是|  
 |队列|否|是|  

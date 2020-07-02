@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 199f5a74-e08e-4d02-a33c-b8ab0db20f44
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 21f2bf7a43bd391044deb03d08cc86ebc9a772bc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 67cf4522b88e9922027a671feeda02b3305dbfc3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828228"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718633"
 ---
 # <a name="sp_replshowcmds-transact-sql"></a>sp_replshowcmds (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   以可读格式返回标记为复制的事务的命令。 仅当客户端连接（包括当前连接）不从日志中读取复制的事务时，才能运行**sp_replshowcmds** 。 此存储过程在发布服务器上对发布数据库执行。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "82828228"
 sp_replshowcmds [ @maxtrans = ] maxtrans  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @maxtrans = ] maxtrans`要返回其信息的事务数。 *maxtrans*的值为**int**，默认值为**1**，它指定**sp_replshowcmds**为其返回信息的最大事务挂起复制数。  
   
 ## <a name="result-sets"></a>结果集  
@@ -48,7 +48,7 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
 |**originator_id**|**int**|命令发起方的 ID，始终为**0**。|  
 |**publisher_database_id**|**int**|发布服务器数据库的 ID，始终为**0**。|  
 |**article_id**|**int**|项目的 ID。|  
-|type |**int**|命令的类型。|  
+|**type**|**int**|命令的类型。|  
 |**command**|**nvarchar(1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)]command.|  
   
 ## <a name="remarks"></a>备注  

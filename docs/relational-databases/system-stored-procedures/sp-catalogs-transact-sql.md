@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ebb29ee2-be65-4e09-9c53-e3c6d12633e1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b760e27d7a0b320c0e911a1a485d1e5e9033146a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 155653adbfdb7902eb30e82dbade7fa3589ae00f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824848"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715974"
 ---
 # <a name="sp_catalogs-transact-sql"></a>sp_catalogs (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   返回指定链接服务器中目录的列表。 这等效于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的数据库。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "82824848"
 sp_catalogs [ @server_name = ] 'linked_svr'  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @server_name = ] 'linked_svr'`链接服务器的名称。 *linked_svr* **sysname**，无默认值。  
   
 ## <a name="result-sets"></a>结果集  

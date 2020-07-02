@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9c70b41d-ef4c-43df-92da-bd534c287ca1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9e186b87680ec0592f5c69ee5659c3b9c74f680b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b905d3f362aa16e36caa0795357c1ec1619d5ec7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826042"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715839"
 ---
 # <a name="sp_helpuser-transact-sql"></a>sp_helpuser (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   报告有关当前数据库中数据库级主体的信息。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "82826042"
 sp_helpuser [ [ @name_in_db = ] 'security_account' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @name_in_db = ] 'security_account'`当前数据库中的数据库用户或数据库角色的名称。 当前数据库中必须存在*security_account* 。 *security_account*的默认值为**sysname**，默认值为 NULL。 如果未指定*security_account* ， **sp_helpuser**将返回有关所有数据库主体的信息。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -82,7 +82,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 ## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  
   
- 返回的信息取决于对元数据的访问权限的限制。 主体对其不具有权限的实体将不会显示。  有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
+ 返回的信息取决于对元数据的访问权限的限制。 主体对其不具有权限的实体将不会显示。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="examples"></a>示例  
   

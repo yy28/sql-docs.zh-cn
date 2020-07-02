@@ -18,15 +18,15 @@ ms.assetid: e486d39b-771d-488d-a786-7136433a2203
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3c01290f0f95a7e240931a9398ab7acea1b287be
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 546e980aeb021f57a0267d1f668f7acd181b4dcf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824398"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719280"
 ---
 # <a name="sp_helptrigger-transact-sql"></a>sp_helptrigger (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   返回对当前数据库的指定表定义的 DML 触发器的类型。 sp_helptrigger 不能与 DDL 触发器一起使用。 改为查询[系统存储过程](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md)目录视图。  
   
@@ -40,7 +40,7 @@ sp_helptrigger [ @tabname = ] 'table'
      [ , [ @triggertype = ] 'type' ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @tabname = ] 'table'`当前数据库中要为其返回触发器信息的表的名称。 *table*为**nvarchar （776）**，无默认值。  
   
 `[ @triggertype = ] 'type'`要返回其相关信息的 DML 触发器的类型。 *类型*为**char （6）**，默认值为 NULL，可以是下列值之一。  

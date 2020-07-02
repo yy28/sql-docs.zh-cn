@@ -19,20 +19,20 @@ ms.assetid: ''
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 41d360ef2d0e9808f1ef4af49b14354cff637a14
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 95f251db2efe471455d18f4735be99ecee962a7d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824712"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717509"
 ---
 # <a name="sysdm_cluster_endpoints-transact-sql"></a>sys. dm_cluster_endpoints （Transact-sql）
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx_md](../../includes/applies-to-version/sqlserver2019.md)]
 
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |name|`sysname`|在 SQL 大数据群集中外部公开的服务的名称。 终结点的唯一标识符。 此视图的键。 不可为 null。 |  
-|说明|`nvarchar(4000)`|服务说明。 不可为 null。 |
+|description|`nvarchar(4000)`|服务说明。 不可为 null。 |
 |endpoint|`sysname`|终结点 url 或连接属性。 不可为 null。 |
 |protocol_desc|`sysname`|终结点协议说明 |
 

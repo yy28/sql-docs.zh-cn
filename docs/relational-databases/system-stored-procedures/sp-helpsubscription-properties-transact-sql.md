@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7a76a645-97eb-47ac-b3ea-e2d75012cbed
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cf8c3510ffbd2d40c882061cc81bb8f6a80d294f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ebef567c36028f63317be3e00ea4c8078a765b6f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82815277"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719479"
 ---
 # <a name="sp_helpsubscription_properties-transact-sql"></a>sp_helpsubscription_properties (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   从[MSsubscription_properties](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md)表中检索安全信息。 此存储过程在订阅服务器上执行。  
   
@@ -39,7 +39,7 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
     [ , [ @publication_type = ] publication_type ]   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publisher = ] 'publisher'`发布服务器的名称。 *发布服务器*的默认值为**sysname**，默认值为 **%** ，它返回所有发布服务器的信息。  
   
 `[ @publisher_db = ] 'publisher_db'`发布服务器数据库的名称。 *publisher_db*的默认值为**sysname**，默认值为 **%** ，它返回所有发布服务器数据库的信息。  
@@ -48,7 +48,7 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
   
 `[ @publication_type = ] publication_type`发布的类型。*publication_type*的值为**int**，默认值为 NULL。 如果提供，则*publication_type*必须是下列值之一：  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**0**|事务发布|  
 |**1**|快照发布|  
@@ -58,7 +58,7 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**器**|**sysname**|发布服务器的名称。|  
+|**publisher**|**sysname**|发布服务器的名称。|  
 |**publisher_db**|**sysname**|发布服务器数据库名。|  
 |**发布**|**sysname**|发布的名称。|  
 |**publication_type**|**int**|发布的类型：<br /><br /> **0** = 事务<br /><br /> **1** = 快照<br /><br /> **2** = 合并|  

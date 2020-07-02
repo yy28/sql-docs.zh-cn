@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fb90ec6a3d5413d22f4721491d3b151a7e28ac05
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8aec9e25008c8dfe3b14bbe838f8122bb93fb756
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833416"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717405"
 ---
 # <a name="sp_changedistpublisher-transact-sql"></a>sp_changedistpublisher (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   更改分发发布服务器的属性。 此存储过程在分发服务器上的任何数据库中执行。  
   
@@ -39,7 +39,7 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
     [ , [ @storage_connection_string = ] 'storage_connection_string']
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @publisher = ] 'publisher'`发布服务器名称。 *发布服务器*的**sysname**，无默认值。  
   
 `[ @property = ] 'property'`要更改的给定发布服务器的属性。 *属性*为**sysname** ，可以是下列值之一。  
@@ -55,7 +55,7 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
   
 |Property|值|说明|  
 |--------------|------------|-----------------|  
-|**active**|**true**|激活发布服务器。|  
+|**active**|true|激活发布服务器。|  
 ||**false**|停用发布服务器|  
 |**distribution_db**||分发数据库的名称。|  
 |**id**||登录名。|  

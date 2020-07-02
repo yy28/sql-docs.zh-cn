@@ -19,15 +19,15 @@ ms.assetid: d405fb8d-3b02-4327-8d45-f643df7f501a
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 11295f953e2f3e4e237838dfdb158fd01c9fa645
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1a5d247ae5e8e4cceb53bd3a093cabdff399d509
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68042898"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718714"
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   返回表的更改跟踪信息。可使用此语句返回表的所有更改或特定行的更改跟踪信息。  
   
@@ -45,7 +45,7 @@ CHANGETABLE (
 ( column_name [ , ...n ] ) , ( value [ , ...n ] )  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  更改*表*， *last_sync_version*  
  返回自*last_sync_version*指定的版本以来对某个表进行的所有更改的跟踪信息。  
   
@@ -68,10 +68,10 @@ CHANGETABLE (
  版本*表*{<primary_key_values>}  
  返回指定行的最新更改跟踪信息。 主键值必须标识该行。 <primary_key_values> 标识主键列并指定值。 可以按任意顺序指定主键列名称。  
   
- *数据表*  
+ *表格*  
  是用户定义的从中获取更改跟踪信息的表。 必须对表启用更改跟踪。 可以使用由一部分、两部分、三部分或四部分构成的表名。 表名可以是表的同义词。  
   
- column_name   
+ column_name  
  指定一个或多个主键列的名称。 可以按任意顺序指定多个列名。  
   
  *值*  
@@ -80,7 +80,7 @@ CHANGETABLE (
  方式*table_alias* [（*column_alias* [,.。。*n* ]）]  
  为 CHANGETABLE 返回的结果提供名称。  
   
- table_alias   
+ table_alias  
  是 CHANGETABLE 返回的表的别名。 *table_alias*是必需的，并且必须是有效的[标识符](../../relational-databases/databases/database-identifiers.md)。  
   
  column_alias**  
@@ -101,7 +101,7 @@ CHANGETABLE (
 |SYS_CHANGE_OPERATION|**nchar(1)**|指定更改的类型：<br /><br /> **U** = 更新<br /><br /> **I** = 插入<br /><br /> **D** = 删除|  
 |SYS_CHANGE_COLUMNS|**varbinary(4100)**|列出自 last_sync_version（基准版本）以后发生了更改的列。 请注意，计算列永远不会列出为已更改。<br /><br /> 以下任何一个条件为真时，值为 NULL：<br /><br /> 未启用列更改跟踪。<br /><br /> 操作是插入操作或删除操作。<br /><br /> 在一个操作中更新了所有非主键列。 不应直接解释此二进制值。 相反，若要对其进行解释，请使用[CHANGE_TRACKING_IS_COLUMN_IN_MASK （）](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)。|  
 |SYS_CHANGE_CONTEXT|**varbinary(128)**|可以通过使用[WITH](../../relational-databases/system-functions/with-change-tracking-context-transact-sql.md)子句作为 INSERT、UPDATE 或 DELETE 语句的一部分来更改上下文信息。|  
-|\<主键列值>|与用户表列相同|被跟踪表的主键值。 这些值在用户表中唯一标识各行。|  
+|\<primary key column value>|与用户表列相同|被跟踪表的主键值。 这些值在用户表中唯一标识各行。|  
   
 ### <a name="changetable-version"></a>CHANGETABLE VERSION  
  指定 VERSION 后，返回一个具有以下列的行。  
@@ -110,7 +110,7 @@ CHANGETABLE (
 |-----------------|---------------|-----------------|  
 |SYS_CHANGE_VERSION|**bigint**|与行关联的当前更改版本值。<br /><br /> 如果在超过更改跟踪保留期的时段内没有进行更改，或者在启用更改跟踪之后未更改行，则值为 NULL。|  
 |SYS_CHANGE_CONTEXT|**varbinary(128)**|更改可以在 INSERT、UPDATE 或 DELETE 语句中使用 WITH 子句选择指定的上下文信息。|  
-|\<主键列值>|与用户表列相同|被跟踪表的主键值。 这些值在用户表中唯一标识各行。|  
+|\<primary key column value>|与用户表列相同|被跟踪表的主键值。 这些值在用户表中唯一标识各行。|  
   
 ## <a name="remarks"></a>备注  
  CHANGETABLE 函数通常在对表的查询的 FROM 子句中使用。  

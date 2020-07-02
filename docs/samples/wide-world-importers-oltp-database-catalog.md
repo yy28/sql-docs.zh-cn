@@ -10,15 +10,15 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d4502a64a3822741c1928fcf6faee69d80d893d5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d9dc40928fddda2708a23a7fc927627cf0e9450d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112401"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718575"
 ---
 # <a name="wideworldimporters-database-catalog"></a>WideWorldImporters 数据库目录
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 WideWorldImporters 数据库包含销售和采购的所有事务信息和每日数据，以及车辆和冷会议室的传感器数据。
 
 ## <a name="schemas"></a>架构
@@ -40,7 +40,7 @@ WideWorldImporters 将架构用于不同目的，例如存储数据、定义用�
 
 这些架构用于不允许直接访问数据表的外部应用程序。 它们包含外部应用程序使用的视图和存储过程。
 
-|架构|说明|
+|架构|描述|
 |-----------------------------|---------------------|
 |网站|来自公司网站的对数据库的所有访问都是通过此架构。|
 |报表|来自 Reporting Services 报表的数据库的所有访问都通过此架构。|
@@ -52,7 +52,7 @@ WideWorldImporters 将架构用于不同目的，例如存储数据、定义用�
 
 特殊用途的架构
 
-|架构|说明|
+|架构|描述|
 |-----------------------------|---------------------|
 |集成|数据仓库集成所需的对象和过程（即，将数据迁移到 WideWorldImportersDW 数据库）。|
 |序列|保留应用程序中所有表使用的序列。|
@@ -82,7 +82,7 @@ WideWorldImporters 将架构用于不同目的，例如存储数据、定义用�
 
 |表|说明|
 |-----------------------------|---------------------|
-|Suppliers|供应商的主实体表（组织）|
+|供应商|供应商的主实体表（组织）|
 |SupplierCategories|供应商的类别（例如，novelties、玩具、服装、包装等）|
 |SupplierTransactions|与供应商相关的所有财务交易（发票、付款）|
 |Purchaseorders.xaml|供应商采购订单的详细信息|
@@ -155,20 +155,20 @@ WideWorldImporters 使用少量的架构，因此可以很容易地理解数据�
 
 `Website`架构包含可由 Web 前端使用的存储过程。
 
-`Reports`和`PowerBI`架构用于报告服务和 PowerBI 目的。 建议将此示例的任何扩展用于报告目的。
+`Reports`和 `PowerBI` 架构用于报告服务和 PowerBI 目的。 建议将此示例的任何扩展用于报告目的。
 
 ### <a name="website-schema"></a>网站架构
 
 它们是客户端应用程序使用的过程，例如 Web 前端。
 
-|过程|目的|
+|过程|目标|
 |-----------------------------|---------------------|
-|ActivateWebsiteLogon|允许人员（来自`Application.People`）访问网站。|
+|ActivateWebsiteLogon|允许人员（来自 `Application.People` ）访问网站。|
 |ChangePassword|更改用户的密码（适用于不使用外部身份验证机制的用户）。|
 |InsertCustomerOrders|允许插入一个或多个客户订单（包括订单行）。|
 |InvoiceCustomerOrders|获取要开票的订单列表，并处理发票。|
-|RecordColdRoomTemperatures|将传感器数据列表作为表值参数（TVP），并将数据应用于`Warehouse.ColdRoomTemperatures`临时表。|
-|RecordVehicleTemperature|获取一个 JSON 数组，并使用它来`Warehouse.VehicleTemperatures`更新。|
+|RecordColdRoomTemperatures|将传感器数据列表作为表值参数（TVP），并将数据应用于 `Warehouse.ColdRoomTemperatures` 临时表。|
+|RecordVehicleTemperature|获取一个 JSON 数组，并使用它来更新 `Warehouse.VehicleTemperatures` 。|
 |SearchForCustomers|按名称或名称的一部分（公司名称或人员名称）搜索客户。|
 |SearchForPeople|按名称或部分名称搜索用户。|
 |SearchForStockItems|按名称或部分名称或市场营销注释搜索库存项。|
@@ -181,9 +181,9 @@ WideWorldImporters 使用少量的架构，因此可以很容易地理解数据�
 
 ### <a name="dataloadsimulation-schema"></a>DataLoadSimulation 架构
 
-模拟插入销售和采购的工作负荷。 主存储过程是`PopulateDataToCurrentDate`，用于将示例数据插入到当前日期。
+模拟插入销售和采购的工作负荷。 主存储过程是 `PopulateDataToCurrentDate` ，用于将示例数据插入到当前日期。
 
-|过程|目的|
+|过程|目标|
 |-----------------------------|---------------------|
 |Configuration_ApplyDataLoadSimulationProcedures|重新创建数据负载模拟所需的过程。 这是将数据引入当前日期所需要的。|
 |Configuration_RemoveDataLoadSimulationProcedures|这会在数据模拟完成后再次删除这些过程。|
@@ -196,16 +196,16 @@ WideWorldImporters 使用少量的架构，因此可以很容易地理解数据�
 
 这些过程用于配置示例。 它们用于将企业版功能应用于示例的 standard edition 版本，还用于添加审核和全文索引。
 
-|过程|目的|
+|过程|目标|
 |-----------------------------|---------------------|
 |AddRoleMemberIfNonexistant|如果成员不在角色中，则将成员添加到角色中|
 |Configuration_ApplyAuditing|添加审核。 服务器审核适用于标准版数据库;为 enterprise edition 添加了其他数据库审核。|
-|Configuration_ApplyColumnstoreIndexing|适当地将列`Sales.OrderLines`存储`Sales.InvoiceLines`索引应用于和和重新编制索引。|
-|Configuration_ApplyFullTextIndexing|将全文索引应用`Application.People`于`Sales.Customers`、 `Purchasing.Suppliers`、和`Warehouse.StockItems`。 将`Website.SearchForPeople`、 `Website.SearchForSuppliers` `Website.SearchForCustomers`、、替换`Website.SearchForStockItemsByTags`为使用全文索引的替换过程。 `Website.SearchForStockItems`|
-|Configuration_ApplyPartitioning|将表分区应用`Sales.CustomerTransactions`于`Purchasing.SupplierTransactions`和，并重新排列索引以适应。|
+|Configuration_ApplyColumnstoreIndexing|适当地将列存储索引应用于 `Sales.OrderLines` 和 `Sales.InvoiceLines` 和重新编制索引。|
+|Configuration_ApplyFullTextIndexing|将全文索引应用于 `Application.People` 、、 `Sales.Customers` `Purchasing.Suppliers` 和 `Warehouse.StockItems` 。 将、、、替换 `Website.SearchForPeople` `Website.SearchForSuppliers` `Website.SearchForCustomers` `Website.SearchForStockItems` `Website.SearchForStockItemsByTags` 为使用全文索引的替换过程。|
+|Configuration_ApplyPartitioning|将表分区应用于 `Sales.CustomerTransactions` 和 `Purchasing.SupplierTransactions` ，并重新排列索引以适应。|
 |Configuration_ApplyRowLevelSecurity|应用行级别安全性，按与销售区域相关的角色来筛选客户。|
 |Configuration_ConfigureForEnterpriseEdition|应用列存储索引、完整文本、内存中、polybase 和分区。|
-|Configuration_EnableInMemory|添加内存优化文件组（在 Azure 中不工作时），将`Warehouse.ColdRoomTemperatures`替换`Warehouse.VehicleTemperatures`为内存中等效项，并迁移数据，重新创建具有`Website.OrderIDList`内存`Website.OrderList`优化`Website.OrderLineList`等效`Website.SensorDataList`项的、和，表类型，删除并重新创建使用`Website.InvoiceCustomerOrders`这些`Website.InsertCustomerOrders`表类型`Website.RecordColdRoomTemperatures`的过程、和。|
+|Configuration_EnableInMemory|添加内存优化文件组（在 Azure 中不工作时），将 `Warehouse.ColdRoomTemperatures` 替换 `Warehouse.VehicleTemperatures` 为内存中等效项，并迁移数据，重新创建 `Website.OrderIDList` `Website.OrderList` 具有内存优化等效项的、和 `Website.OrderLineList` ， `Website.SensorDataList` 表类型，删除并重新创建 `Website.InvoiceCustomerOrders` `Website.InsertCustomerOrders` `Website.RecordColdRoomTemperatures` 使用这些表类型的过程、和。|
 |Configuration_RemoveAuditing|删除审核配置。|
 |Configuration_RemoveRowLevelSecurity|删除行级别安全配置（对关联表的更改需要这种配置）。|
 |CreateRoleIfNonExistant|如果数据库角色尚不存在，则创建该角色。|
@@ -215,7 +215,7 @@ WideWorldImporters 使用少量的架构，因此可以很容易地理解数据�
 
 用于在数据库中配置序列的过程。
 
-|过程|目的|
+|过程|目标|
 |-----------------------------|---------------------|
 |ReseedAllSequences|为所有序列调用过程 ReseedSequenceBeyondTableValue。|
 |ReseedSequenceBeyondTableValue|用于将下一个序列值重定位到任何使用同一序列的表中的值之外。 （类似于标识符列的 DBCC CHECKIDENT 等效于序列但可能跨多个表）。|

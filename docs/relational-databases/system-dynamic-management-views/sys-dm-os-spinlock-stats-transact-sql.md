@@ -22,16 +22,16 @@ author: bluefooted
 ms.author: pamela
 ms.reviewer: maghan
 manager: amitban
-ms.openlocfilehash: eae0057441fe6bc356c7cea6c1e6ded829bbb9e6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8343a5aa5d8e95474fb87c1b6a39e2a013323295
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68265691"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718778"
 ---
 # <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys.dm_os_spinlock_stats (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 返回有关按类型组织的所有旋转锁等待的信息。  
   
@@ -47,14 +47,14 @@ ms.locfileid: "68265691"
 
 
 ## <a name="permissions"></a>权限  
-在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上， `VIEW SERVER STATE`需要权限。   
-在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层上，需要`VIEW DATABASE STATE`具有数据库中的权限。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。    
+在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
+在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。    
   
 ## <a name="remarks"></a>备注  
  
  sys. dm_os_spinlock_stats 可用于标识旋转锁争用的源。 在某些情况下，您可能能够解决或减少旋转锁的争用情况。 但是，在某些情况下可能需要与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 客户支持服务部门联系。  
   
- 你可以使用`DBCC SQLPERF`重置 dm_os_spinlock_stats sys.databases 的内容，如下所示：  
+ 你可以使用重置 dm_os_spinlock_stats sys.databases 的内容，如下所示 `DBCC SQLPERF` ：  
   
 ```  
 DBCC SQLPERF ('sys.dm_os_spinlock_stats', CLEAR);  
@@ -71,7 +71,7 @@ GO
    
  下表包含一些最常见的旋转锁类型的简要说明。  
   
-|旋转锁类型|说明|  
+|旋转锁类型|描述|  
 |-----------------|-----------------|  
 |ABR|仅限内部使用。|
 |ADB_CACHE|仅限内部使用。|
@@ -120,7 +120,7 @@ GO
 |DBSEEDING_OPERATION|仅限内部使用。|
 |DBT_HASH|仅限内部使用。|
 |DBT_IO_LIST|仅限内部使用。|
-|DBTABLE|控制对包含该数据库的属性的 SQL Server 中的每个数据库的内存中数据结构的访问。 有关详细信息，请参阅[此文](https://techcommunity.microsoft.com/t5/SQL-Server/Improving-Concurrency-Scalability-of-SQL-Server-workload-by/ba-p/384789)。 |
+|DBTABLE|控制对包含该数据库的属性的 SQL Server 中的每个数据库的内存中数据结构的访问。 请参阅[本文](https://techcommunity.microsoft.com/t5/SQL-Server/Improving-Concurrency-Scalability-of-SQL-Server-workload-by/ba-p/384789)，了解详细信息。 |
 |DEFERRED_WF_EXT_DROP|仅限内部使用。|
 |DEK_INSTANCE|仅限内部使用。|
 |DELAYED_PARTITIONED_STACK|仅限内部使用。|
@@ -130,7 +130,7 @@ GO
 |DIGEST_CACHE|仅限内部使用。|
 |DINPBUF|仅限内部使用。|
 |DIRECTLOGCONSUMER|仅限内部使用。|
-|DP_LIST|控制对打开了间接检查点的数据库的脏页列表的访问。 有关详细信息，请参阅[此文](https://techcommunity.microsoft.com/t5/SQL-Server/Indirect-Checkpoint-and-tempdb-8211-the-good-the-bad-and-the-non/ba-p/385510)。|
+|DP_LIST|控制对打开了间接检查点的数据库的脏页列表的访问。 请参阅[本文](https://techcommunity.microsoft.com/t5/SQL-Server/Indirect-Checkpoint-and-tempdb-8211-the-good-the-bad-and-the-non/ba-p/385510)，了解详细信息。|
 |DROP|仅限内部使用。|
 |DROP_TEMPO|仅限内部使用。|
 |DROPPED_ALLOC_UNIT|仅限内部使用。|
@@ -187,7 +187,7 @@ GO
 |LANG_RES_LOAD|仅限内部使用。|
 |LIVE_TARGET_TVF|仅限内部使用。|
 |LOCK_FREE_LIST|仅限内部使用。|
-|LOCK_HASH|保护对锁定管理器哈希表的访问，该表存储有关在数据库中持有的锁的信息。 有关详细信息，请参阅[此文](https://support.microsoft.com/kb/2926217)。|
+|LOCK_HASH|保护对锁定管理器哈希表的访问，该表存储有关在数据库中持有的锁的信息。 请参阅[本文](https://support.microsoft.com/kb/2926217)，了解详细信息。|
 |LOCK_NOTIFICATION|仅限内部使用。|
 |LOCK_RESOURCE_ID|仅限内部使用。|
 |LOCK_RW_ABTX_HASH_SET|仅限内部使用。|
@@ -307,7 +307,7 @@ GO
 |SOS_ACTIVEDESCRIPTOR|仅限内部使用。|
 |SOS_BLOCKALLOCPARTIALLIST|仅限内部使用。|
 |SOS_BLOCKDESCRIPTORBUCKET|仅限内部使用。|
-|SOS_CACHESTORE|同步对 SQL Server （如计划缓存或临时表缓存）中各种内存中缓存的访问。 此旋转锁类型上的繁重争用可能意味着许多不同的因素，具体取决于争用中的特定缓存。 请[!INCLUDE[msCoName](../../includes/msconame-md.md)]与客户支持服务部门联系，以帮助解决此旋转锁类型问题。 |
+|SOS_CACHESTORE|同步对 SQL Server （如计划缓存或临时表缓存）中各种内存中缓存的访问。 此旋转锁类型上的繁重争用可能意味着许多不同的因素，具体取决于争用中的特定缓存。 请与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 客户支持服务部门联系，以帮助解决此旋转锁类型问题。 |
 |SOS_CACHESTORE_CLOCK|仅限内部使用。|
 |SOS_CLOCKALG_INTERNODE_SYNC|仅限内部使用。|
 |SOS_DEBUG_HOOK|仅限内部使用。|

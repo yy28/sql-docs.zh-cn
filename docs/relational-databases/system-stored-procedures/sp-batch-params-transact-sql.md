@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e9a7cb410a1e520ee05b7f93263dcc46750dfb87
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2b5c067b42d61c2dae1dbe247a6212611d155348
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833446"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716139"
 ---
 # <a name="sp_batch_params-transact-sql"></a>sp_batch_params (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   返回一个行集，其中包含有关批中包含的参数的信息 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 **sp_batch_params**仅分析指定的批处理，并返回有关嵌入的参数值的信息。 此命令不会执行批处理，也不会修改执行环境。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "82833446"
 sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @tsqlbatch = ] 'tsqlbatch'`一个 Unicode 字符串，其中包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 所需的参数信息的语句或批处理。 *tsqlbatch*为**nvarchar （max）** 或可隐式转换为**nvarchar （max）**。  
   
 ## <a name="return-code-values"></a>返回代码值  
