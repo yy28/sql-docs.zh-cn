@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e58684d1-c394-48de-906e-da6ee91100c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b4825478c6ae6b8da25d66ccefa27d56e969676c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e28c02cb5816b65d5cc1bb1d196683a9bdf47e4d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786907"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85858536"
 ---
 # <a name="sp_droplogin-transact-sql"></a>sp_droplogin (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 这将阻止使用该登录名对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例进行访问。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "85786907"
 sp_droplogin [ @loginame = ] 'login'  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @loginame = ] 'login'`要删除的登录名。 *login*的**sysname**为，无默认值。 *登录名*必须已存在于中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="return-code-values"></a>返回代码值  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: c8b07189-7c35-414b-acc1-45bd6e7e17c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b7b68a7497dc3ed64eaf1b9047d1489e38f99be6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9be64080f6e1c56daa0901dbdc174c83d40cf541
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786960"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85859990"
 ---
 # <a name="sp_dropdevice-transact-sql"></a>sp_dropdevice (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   从的实例中删除数据库设备或备份设备，并 [!INCLUDE[ssDEversion2005](../../includes/ssdeversion2005-md.md)] 从**master.dbo.sys设备**中删除该条目。  
    
@@ -40,7 +40,7 @@ sp_dropdevice [ @logicalname = ] 'device'
     [ , [ @delfile = ] 'delfile' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @logicalname = ] 'device'`**master.dbo.sysdevices.name**中列出的数据库设备或备份设备的逻辑名称。 *设备*为**sysname**，无默认值。  
   
 `[ @delfile = ] 'delfile'`指定是否应删除物理备份设备文件。 *delfile*为**varchar （7）**。 如果指定为**DELFILE**，则删除物理备份设备磁盘文件。  
@@ -64,7 +64,7 @@ sp_dropdevice [ @logicalname = ] 'device'
 EXEC sp_dropdevice 'tapedump1';  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [备份设备 (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [删除备份设备 &#40;SQL Server&#41;](../../relational-databases/backup-restore/delete-a-backup-device-sql-server.md)   
  [sp_addumpdevice (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   

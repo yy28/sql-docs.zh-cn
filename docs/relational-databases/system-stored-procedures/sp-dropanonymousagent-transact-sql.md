@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 4cb96efa-9358-44a3-a8ee-a7e181bed089
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 8c9a025beaf1d9701411668a13fa78273105d30c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: acf909be9ca1185ea441acf27a60409e1c868328
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717324"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85859980"
 ---
 # <a name="sp_dropanonymousagent-transact-sql"></a>sp_dropanonymousagent (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   从发布服务器中删除分发服务器上进行复制监视的匿名代理。 此存储过程在发布服务器的任何数据库中执行。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "85717324"
 sp_dropanonymousagent [ @subid= ] sub_id    , [ @type= ] type  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @subid = ] sub_id`匿名订阅的全局标识符。 *sub_id*是**uniqueidentifier**，无默认值。 可以使用**sp_helppullsubscription**在订阅服务器上检索此标识符。 返回的结果集的**subid**字段中的值是此全局标识符。  
   
 `[ @type = ] type`订阅的类型。 *类型*为**int**，无默认值。 有效值为**1**或**2**。 如果使用分发代理快照复制或事务复制，请指定**1**。 如果使用合并代理合并复制，则指定**2**。  
