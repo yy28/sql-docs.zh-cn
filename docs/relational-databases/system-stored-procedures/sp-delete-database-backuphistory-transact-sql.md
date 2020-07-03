@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4c237944-453d-49fb-8d0e-4596945ac147
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 85d4ab45e1afc2769b8f9ac314db107ef01d37d8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4d1600578197545628c1b43fb80787f6565ba7c8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760092"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85864372"
 ---
 # <a name="sp_delete_database_backuphistory-transact-sql"></a>sp_delete_database_backuphistory (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   从备份和还原历史记录表中删除有关指定数据库的信息。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "85760092"
 sp_delete_database_backuphistory [ @database_name = ] 'database_name'  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @database_name = ] database_name`指定在备份和还原操作中涉及的数据库的名称。 *database_name* **sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  

@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: d1e8afb5-12ee-492b-a770-ba708ed7c8a4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2935ecccb9ce0421396d552787d38b0b80fb3c45
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 114240ad0916a664e95dbc980093b857ecd500a6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772241"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85862847"
 ---
 # <a name="sp_delete_maintenance_plan_db-transact-sql"></a>sp_delete_maintenance_plan_db (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   取消指定数据库和指定维护计划的关联。  
   
@@ -47,7 +47,7 @@ sp_delete_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
      [ @db_name = ] 'database_name'   
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @plan_id = ] 'plan\_id'`指定维护计划 ID。 *plan_id*是**uniqueidentifier**。  
   
 `[ @db_name = ] 'database\_name'`指定要从维护计划中删除的数据库名称。 database_name 的数据类型为 sysname******。  

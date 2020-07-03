@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 128e428a-01b3-4062-8c6e-d22d5fa268a9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a1dffb4ba6cdd82481777496033e56ca0571e37d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 224de422a7f43b7e2c3ff1dc090eeb3b55c752b1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786949"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85860155"
 ---
 # <a name="sp_dropdynamicsnapshot_job-transact-sql"></a>sp_dropdynamicsnapshot_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   为具有参数化行筛选器的发布删除筛选的数据快照作业。 此存储过程在发布服务器上对发布数据库执行。 删除该作业后，将从[MSdynamicsnapshotjobs](../../relational-databases/system-tables/msdynamicsnapshotjobs-transact-sql.md)系统表中删除所有相关数据。  
   
@@ -39,7 +39,7 @@ sp_dropdynamicsnapshot_job [ @publication = ] 'publication'
     [ , [ @ignore_distributor =] ignore_distributor ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @publication = ] 'publication'`要从中删除筛选数据快照作业的发布的名称。 *发布*为**sysname**，无默认值。  
   
 `[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'`要删除的筛选数据快照作业的名称。 *dynamic_snapshot_jobname*为 sysname，如果未提供它，则默认为与*dynamic_snapshot_jobid*关联的任何作业名称。  

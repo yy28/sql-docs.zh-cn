@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 64cf1186-28b8-4cd9-88f1-a7808a9c8d60
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c8710aa297b01634d5307dbd3c057b9d51fe8f6f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9ab3528c496722877310c13d073158bd20969bc4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85693258"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85861776"
 ---
 # <a name="sp_deletemergeconflictrow-transact-sql"></a>sp_deletemergeconflictrow (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   从冲突表[MSmerge_conflicts_info 或 &#40;transact-sql&#41;](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md)表中删除行。 此存储过程在存储冲突表的计算机的任何数据库中执行。  
   
@@ -40,7 +40,7 @@ sp_deletemergeconflictrow [ [ @conflict_table = ] 'conflict_table' ]
     [ , [ @drop_table_if_empty = ] 'drop_table_if_empty' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @conflict_table = ] 'conflict_table'`冲突表的名称。 *conflict_table*的默认值为**sysname**，默认值为 **%** 。 如果将*conflict_table*指定为 NULL 或 **%** ，则认为冲突为删除冲突，并从[MSmerge_conflicts_info &#40;transact-sql&#41;](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md)表中删除与*rowguid*和*origin_datasource*和*source_object*匹配的行。  
   
 `[ @source_object = ] 'source_object'`源表的名称。 *source_object*为**nvarchar （386）**，默认值为 NULL。  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1c2148c3-2928-4d9b-b1c8-3512cfbd6a63
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b8aad1e933930a269004f845523576d2c3d77ecd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 516bfaa2b581b19570e7edffc7567ae1d520bb85
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772230"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85862729"
 ---
 # <a name="sp_delete_maintenance_plan_job-transact-sql"></a>sp_delete_maintenance_plan_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   取消指定作业与指定维护计划的关联。  
   
@@ -44,7 +44,7 @@ sp_delete_maintenance_plan_job [ @plan_id = ] 'plan_id' ,
    [ @job_id = ] 'job_id'   
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @plan_id = ] 'plan\_id'`指定维护计划的 ID。 *plan_id*是**uniqueidentifier**，并且必须是有效 id。  
   
 `[ @job_id = ] 'job\_id'`指定与维护计划相关联的作业的 ID。 *job_id*是**uniqueidentifier**，并且必须是有效 id。  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0c836c99-1147-441e-998c-f0a30cd05275
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b361bdcf6daf9ad1efaf3a752228366ee661d1a9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9e8b245778ea29c162cc023f707c717dfc5a01a5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717377"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85861142"
 ---
 # <a name="sp_describe_cursor-transact-sql"></a>sp_describe_cursor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   报告服务器游标的属性。  
   
@@ -46,7 +46,7 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
 [;]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  [ @cursor_return =] *output_cursor_variable*输出  
  声明的用于接收游标输出的游标变量的名称。 *output_cursor_variable*是**游标**，无默认值，并且在调用 sp_describe_cursor 时，不能与任何游标相关联。 返回的游标是可滚动的动态只读游标。  
   
@@ -65,7 +65,7 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
  与打开的游标关联的游标变量的名称。 *input_cursor_variable*为**nvarchar （128）**。  
   
 ## <a name="return-code-values"></a>返回代码值  
- 无  
+ None  
   
 ## <a name="cursors-returned"></a>返回的游标  
  sp_describe_cursor 将其结果集封装在 [!INCLUDE[tsql](../../includes/tsql-md.md)] **游标**输出参数中。 这样，[!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理、存储过程和触发器即可逐行处理输出。 这也意味着无法直接从数据库 API 函数调用该过程。 **游标**输出参数必须绑定到程序变量，但是数据库 api 不支持绑定**游标**参数或变量。  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9a1fc335-1bef-4638-a33a-771c54a5dd19
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b183a121981cc32ca7cdd3857c4e9ee10fa7f83e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 19988c59d020d0f77d1f23bf0a210f2ae1488933
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717345"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85860814"
 ---
 # <a name="sp_detach_schedule-transact-sql"></a>sp_detach_schedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   删除计划和作业之间的关联。  
   
@@ -41,7 +41,7 @@ sp_detach_schedule
      [ @delete_unused_schedule = ] delete_unused_schedule   
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @job_id = ] job_id`要从中删除计划的作业的标识号。 *job_id*的值为**uniqueidentifier**，默认值为 NULL。  
   
 `[ @job_name = ] 'job_name'`要从中删除计划的作业的名称。 *job_name*的默认值为**sysname**，默认值为 NULL。  

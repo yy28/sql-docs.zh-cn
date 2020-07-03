@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: ea1aefe6-8f7d-46e9-a3cb-7b037b393e73
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 740bfcf83aca712dcaeb7189b226d880f7ae5a02
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 86aa6e39cd8086b906f3bf2c8c0dc9e80bc33034
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717308"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85860017"
 ---
 # <a name="sp_dropapprole-transact-sql"></a>sp_dropapprole (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   从当前数据库删除应用程序角色。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "85717308"
 sp_dropapprole [@rolename = ] 'role'  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @rolename = ] 'role'`要删除的应用程序角色。 *role*是**sysname**，无默认值。 *角色*必须存在于当前数据库中。  
   
 ## <a name="return-code-values"></a>返回代码值  

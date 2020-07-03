@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d9eaae9a00a125a2ffe2f290e2bd772eb40d84c6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ee5261834a0eeb11b4f7f6a21ab5110c0d42fd48
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717354"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85861121"
 ---
 # <a name="sp_detach_db-transact-sql"></a>sp_detach_db (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   从服务器实例中分离当前未使用的数据库，并且可以选择在分离之前为所有表运行 UPDATE STATISTICS。  
   
@@ -44,7 +44,7 @@ sp_detach_db [ @dbname= ] 'database_name'
     [ , [ @keepfulltextindexfile = ] 'KeepFulltextIndexFile' ]   
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @dbname = ] 'database_name'`要分离的数据库的名称。 *database_name*是**sysname**值，默认值为 NULL。  
   
 `[ @skipchecks = ] 'skipchecks'`指定是否要跳过或运行更新统计信息。 *skipchecks*的值为**nvarchar （10）** ，默认值为 NULL。 若要跳过更新统计信息，请指定**true**。 若要显式运行 UPDATE STATISTICS，请指定**false**。  

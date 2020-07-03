@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ff6c2c4b-e9fe-4d0c-bbc2-a2ddcc1acb95
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 48f077ed6de8b901c0b923f1aa96083a3ce70606
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c584dceb9306d6a74575b548bfd9d8548acb47a5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772167"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85862483"
 ---
 # <a name="sp_delete_operator-transact-sql"></a>sp_delete_operator (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   删除一位操作员。  
   
@@ -39,7 +39,7 @@ sp_delete_operator [ @name = ] 'name'
      [ , [ @reassign_to_operator = ] 'reassign_operator' ]   
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @name = ] 'name'`要删除的操作员的名称。 *名称*为**sysname**，无默认值。  
   
 `[ @reassign_to_operator = ] 'reassign_operator'`可重新分配指定操作员的警报的操作员的名称。 *reassign_operator*的默认值为**sysname**，默认值为 NULL。  

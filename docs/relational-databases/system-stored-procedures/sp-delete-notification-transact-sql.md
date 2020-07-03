@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b55d3898-596d-47a5-a4f0-d65dc736223b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1546737884a815e77cf7f6a0337dd4933348018b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 05682482a720bbf14a17497299676ac6a0cc23d4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772192"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85862643"
 ---
 # <a name="sp_delete_notification-transact-sql"></a>sp_delete_notification (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   删除特定警报和操作员的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理通知定义。  
   
@@ -40,7 +40,7 @@ sp_delete_notification
      [ @operator_name = ] 'operator'   
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @alert_name = ] 'alert'`警报的名称。 *警报*为**sysname**，无默认值。  
   
 `[ @operator_name = ] 'operator'`操作员的名称。 *运算符*的值为**sysname**，无默认值。  
