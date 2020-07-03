@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0f76dd31-5b7b-4209-9e2e-b9ed5cac164d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 05a1563188b5a8332c547901247ef43e07b1efa5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5b9277918b8ed869e121e3cf1fe3389bf402b2a0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85646123"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901459"
 ---
 # <a name="sp_primarykeys-transact-sql"></a>sp_primarykeys (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   返回指定远程表的主键列，每个键列对应一行。  
   
@@ -41,7 +41,7 @@ sp_primarykeys [ @table_server = ] 'table_server'
      [ , [ @table_catalog = ] 'table_catalog' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @table_server = ] 'table_server'_`要从中返回主键信息的链接服务器的名称。 *table_server* **sysname**，无默认值。  
   
 `[ @table_name = ] 'table_name'`要为其提供主键信息的表的名称。 *table_name*的默认值为**sysname**，默认值为 NULL。  
@@ -51,7 +51,7 @@ sp_primarykeys [ @table_server = ] 'table_server'
 `[ @table_catalog = ] 'table_catalog'`指定*table_name*所在目录的名称。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 环境中，该值对应于数据库名称。 *table_catalog*的默认值为**sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
- 无  
+ None  
   
 ## <a name="result-sets"></a>结果集  
   

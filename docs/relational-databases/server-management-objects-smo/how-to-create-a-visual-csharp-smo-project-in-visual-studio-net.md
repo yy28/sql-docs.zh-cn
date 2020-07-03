@@ -13,27 +13,27 @@ ms.assetid: 1e7abb16-23a0-4a18-91ad-253261e6bf84
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 53ab22f96020080e28a92975c4d78d6ca3215d57
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 60d0f5b55664312be1bdf6501cf54e78a826434b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74095965"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900633"
 ---
 # <a name="how-to-create-a-visual-c-smo-project-in-visual-studio-net"></a>如何在 Visual Studio .NET 中创建 Visual C# SMO 项目
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
   本节介绍了如何生成简单的 SMO 控制台应用程序。  
   
- 此示例导入命名空间，这样，程序即可以引用 SMO 类型。 **代理**命名空间的导入是可选的。 当编写使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的程序时使用此命名空间。 需要**公共**命名空间才能建立与实例的安全连接[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 **SqlClient**命名空间用于处理 SQL 异常错误。  
+ 此示例导入命名空间，这样，程序即可以引用 SMO 类型。 **代理**命名空间的导入是可选的。 当编写使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的程序时使用此命名空间。 需要**公共**命名空间才能建立与实例的安全连接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 **SqlClient**命名空间用于处理 SQL 异常错误。  
   
 ### <a name="creating-a-visual-c-smo-project-in-visual-studionet"></a>在 Visual Studio.NET 中创建 Visual c # SMO 项目  
   
 1. 启动 Visual Studio
   
-2. 在 "**文件**" 菜单上，单击 "**新建**"，然后单击 "**项目**"。  此时将出现“新建项目”  对话框。   
+2. 在 "**文件**" 菜单上，单击 "**新建**"，然后单击 "**项目**"。  将显示“新建项目”对话框。   
   
-3. 在 " [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **已安装**" 窗格中，导航到 "**模板**\\" "**Visual c #**\\**Windows** "，然后选择 "**控制台应用**  
+3. 在 " [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **已安装**" 窗格中，导航到 "**模板**" " \\ **Visual c #** \\ **Windows** "，然后选择 "**控制台应用**  
   
 4. 可有可无在 "**名称**" 文本框中，键入新应用程序的名称。  
 

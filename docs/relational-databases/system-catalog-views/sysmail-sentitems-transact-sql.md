@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 16eb2a44-cebb-4cec-93ac-e2498c39989f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e869cd092dd242caff859298b97502693abe2116
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 382be73e4047c1d75b5ab95d1b3959cb05af68c0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82812030"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901187"
 ---
 # <a name="sysmail_sentitems-transact-sql"></a>sysmail_sentitems (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   数据库邮件发送的每个消息都在视图中占一行。 若要查看哪些消息已成功发送，请使用**sysmail_sentitems** 。  
   
@@ -38,14 +38,14 @@ ms.locfileid: "82812030"
 |**者**|**varchar(max)**|消息收件人的电子邮件地址。|  
 |**copy_recipients**|**varchar(max)**|接收消息副本的用户的电子邮件地址。|  
 |**blind_copy_recipients**|**varchar(max)**|接收消息副本但其姓名未出现在消息标头中的用户的电子邮件地址。|  
-|**subject**|**nvarchar （510）**|消息的主题行。|  
+|**主题**|**nvarchar （510）**|消息的主题行。|  
 |**body**|**varchar(max)**|消息正文。|  
 |**body_format**|**varchar （20）**|消息正文的格式。 可能的值为**TEXT**和**HTML**。|  
 |**importance**|**varchar （6）**|消息的**重要性**参数。|  
 |**程度**|**varchar （12）**|消息的**敏感度**参数。|  
 |**file_attachments**|**varchar(max)**|附加到电子邮件中的文件名列表，以分号分隔。|  
 |**attachment_encoding**|**varchar （20）**|邮件附件的类型。|  
-|**query**|**varchar(max)**|邮件程序所执行的查询。|  
+|**查询**|**varchar(max)**|邮件程序所执行的查询。|  
 |**execute_query_database**|**sysname**|邮件程序在其中执行查询的数据库上下文。|  
 |**attach_query_result_as_file**|**bit**|如果该值为 0，则查询结果包含在电子邮件的正文中，在正文的内容之后。 如果该值为 1，则结果作为附件返回。|  
 |**query_result_header**|**bit**|如果值为1，则查询结果包含列标题。 如果该值为0，则查询结果不包括列标题。|  

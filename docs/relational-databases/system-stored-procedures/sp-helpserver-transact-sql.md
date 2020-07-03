@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6fa9117891f9d9350e58a2c8233dcffe05c8cfc8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fe5e3bd8d7d5ce0046a908f16ae860bc68386054
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772122"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899474"
 ---
 # <a name="sp_helpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   报告某个特定远程服务器或复制服务器的信息，或者报告两种类型的所有服务器的信息。 提供服务器名称、服务器的网络名称、服务器的复制状态、服务器的标识号以及排序规则名称。 还提供连接到链接服务器的超时值，或对链接服务器进行查询的超时值。  
   
@@ -40,12 +40,12 @@ sp_helpserver [ [ @server = ] 'server' ]
   [ , [ @show_topology = ] 'show_topology' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @server = ] 'server'`要报告其信息的服务器。 如果未指定*服务器*，则报告**master.sys 服务器**中的所有服务器。 *服务器*的默认值为**sysname**，默认值为 NULL。  
   
 `[ @optname = ] 'option'`描述服务器的选项。 *选项*为**varchar （** 35 **）**，默认值为 NULL，必须是下列值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**排序规则兼容**|影响分布式查询在链接服务器上的执行。 如果此选项设置为 True，|  
 |**数据访问**|启用和禁用链接服务器以进行分布式查询访问。|  

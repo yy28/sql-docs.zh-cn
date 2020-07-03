@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 440bc409-1188-4175-afc4-c68e31e44fed
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e80d631e4470e04d0ab5ab7edf6883350335586e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 68ef84e8efb3606042afbcf8579cf285a2077ab7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724643"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901039"
 ---
 # <a name="sysmail_event_log-transact-sql"></a>sysmail_event_log (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   数据库邮件系统返回的每个 Windows 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 消息都在视图中占一行。 （此上下文中的消息是指消息，例如错误消息，而不是电子邮件。）使用数据库邮件配置向导的 "**配置系统参数**" 对话框或[sysmail_configure_sp](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)存储过程来配置**日志记录级别**参数，以确定返回的消息。  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 850cef4e-6348-4439-8e79-fd1bca712091
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 525ebee42d097c4d4d171767a8b0a8fc844bc5f6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cca6c1730343a038b24e17d6aaa0156cb99c13b1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783753"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901538"
 ---
 # <a name="sp_help_alert-transact-sql"></a>sp_help_alert (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   报告有关为服务器定义的警报的信息。  
   
@@ -42,7 +42,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
      [ , [ @legacy_format = ] legacy_format ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @alert_name = ] 'alert_name'`警报名称。 *alert_name*为**nvarchar （128）**。 如果未指定*alert_name* ，则返回有关所有警报的信息。  
   
 `[ @order_by = ] 'order_by'`用于生成结果的排序顺序。 *order_by*的值为**sysname**，默认值为 N '*name*'。  

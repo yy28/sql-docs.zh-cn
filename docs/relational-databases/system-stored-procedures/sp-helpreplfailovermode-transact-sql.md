@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d1090e42-6840-4bf6-9aa9-327fd8987ec2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0b80121d920458bc097140d93c1f664ddf84ef2d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 846057680d9f97d5fc1e1bb2683a720a63f71585
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729177"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899791"
 ---
 # <a name="sp_helpreplfailovermode-transact-sql"></a>sp_helpreplfailovermode (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   显示订阅的当前故障转移模式。 此存储过程在订阅服务器上对任何数据库执行。 有关故障转移模式的详细信息，请参阅[事务复制的可更新订阅](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)。  
   
@@ -40,7 +40,7 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
     [ , [ @failover_mode = ] 'failover_mode'OUTPUT]   
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @publisher = ] 'publisher'`参与此订阅服务器的更新的发布服务器的名称。 *发布服务器*的**sysname**，无默认值。 必须已为发布配置了发布服务器。  
   
 `[ @publisher_db = ] 'publisher_db'`发布数据库的名称。 *publisher_db* **sysname**，无默认值。  
@@ -51,7 +51,7 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
   
 `[ @failover_mode = ] 'failover_mode' OUTPUT`返回在订阅服务器上进行数据修改时所采用的模式。 *failover_mode*为**nvarchar （10）** ，默认值为 NULL。 为**输出**参数。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**版**|立即更新：使用两阶段提交协议 (2PC)，将订阅服务器中的更新立即传播到发布服务器。|  
 |**好**|排队更新：将订阅服务器中的更新存储在队列中。|  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6d2b0472-0e1f-4005-833c-735d1940fe93
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3eac29c10b8f0204b3516051981fc29b3bee3ddc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e16fe7352b03e803af57ca1ef4b744597b57a18f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751716"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901435"
 ---
 # <a name="sp_registercustomresolver-transact-sql"></a>sp_registercustomresolver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   注册可在合并复制同步过程中调用的业务逻辑处理程序或基于 COM 的自定义冲突解决程序。 此存储过程在分发服务器上执行。  
   
@@ -40,7 +40,7 @@ sp_registercustomresolver [ @article_resolver = ] 'article_resolver'
     [ , [ @dotnet_class_name = ] 'dotnet_class_name' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @article_resolver = ] 'article_resolver'`指定正在注册的自定义业务逻辑的友好名称。 *article_resolver*为**nvarchar （255）**，无默认值。  
   
 `[ @resolver_clsid = ] 'resolver_clsid'`指定正在注册的 COM 对象的 CLSID 值。 自定义业务逻辑*resolver_clsid*为**nvarchar （50）**，默认值为 NULL。 在注册业务逻辑处理程序程序集时，必须将该参数设置为有效的 CLSID，或将其设置为 NULL。  

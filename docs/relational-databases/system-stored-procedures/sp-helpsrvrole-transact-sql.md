@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5c7f39f3-c261-4f70-8beb-08242d4ac242
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 204668e8983ed3503e1a5697c47a4abde92d26cc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9319cc35d3059bc1efafa3c4640b164c39d8bbfa
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750511"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899481"
 ---
 # <a name="sp_helpsrvrole-transact-sql"></a>sp_helpsrvrole (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固定服务器角色的列表。  
   
@@ -38,10 +38,10 @@ ms.locfileid: "85750511"
 sp_helpsrvrole [ [ @srvrolename = ] 'role' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @srvrolename = ] 'role'`固定服务器角色的名称。 *role*的值为**sysname**，默认值为 NULL。 *role*可以为下列值之一。  
   
-|固定服务器角色|描述|  
+|固定服务器角色|说明|  
 |-----------------------|-----------------|  
 |sysadmin|系统管理员|  
 |securityadmin|安全管理员|  
@@ -60,7 +60,7 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |ServerRole|**sysname**|服务器角色的名称|  
-|描述|**sysname**|ServerRole 的说明|  
+|说明|**sysname**|ServerRole 的说明|  
   
 ## <a name="remarks"></a>备注  
  固定服务器角色在服务器级上定义，这些角色具有执行特定服务器级管理活动的权限。 不能添加、删除或更改固定服务器角色。  

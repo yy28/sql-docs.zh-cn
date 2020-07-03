@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 26054e76-53b7-4004-8d48-92ba3435e9d7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 63a1e13c4ebb0948a0372c612d6536f0ec2c74c2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1ed545d31cd5f05fa8360d2cf73a88787f98df45
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728150"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901478"
 ---
 # <a name="sp_help_fulltext_columns_cursor-transact-sql"></a>sp_help_fulltext_columns_cursor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   使用游标返回为全文索引指派的列。  
   
@@ -43,7 +43,7 @@ sp_help_fulltext_columns_cursor [ @cursor_return = ] @cursor_variable OUTPUT
      [ , [ @column_name = ] 'column_name' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @cursor_return = ] @cursor_variable OUTPUT`类型为**cursor**的输出变量。 结果游标是只读的可滚动动态游标。  
   
 `[ @table_name = ] 'table_name'`为其请求全文索引信息的一个或两个部分组成的表名。 *table_name*为**nvarchar （517）**，默认值为 NULL。 如果省略*table_name* ，则将为每个全文索引表检索全文索引列信息。  

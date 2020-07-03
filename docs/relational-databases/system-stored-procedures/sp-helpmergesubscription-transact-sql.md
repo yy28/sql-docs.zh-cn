@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: da564112-f769-4e67-9251-5699823e8c86
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c966899707c7e37dee82dda9c678b4ac40df026f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2c1c2ff23ecde51f13270fca3f674c58412858f6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85626988"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899559"
 ---
 # <a name="sp_helpmergesubscription-transact-sql"></a>sp_helpmergesubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   返回有关对合并发布的订阅（推送订阅和请求订阅）的信息。 此存储过程用于在发布服务器上对发布数据库执行，或在正重新发布的订阅服务器上对订阅数据库执行。  
   
@@ -42,7 +42,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
     [ , [ @found=] 'found' OUTPUT]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @publication = ] 'publication'`发布的名称。 *发布*为**sysname**，默认值为 **%** 。 该发布必须已经存在，并符合标识符的相关规则。 如果为 NULL 或 **%** ，则返回有关当前数据库中所有合并发布和订阅的信息。  
   
 `[ @subscriber = ] 'subscriber'`订阅服务器的名称。 *订阅服务器*的默认值为**sysname**，默认值为 **%** 。 如果为 NULL 或 %，则返回有关对给定发布的所有订阅信息。  
@@ -55,7 +55,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
   
 `[ @subscription_type = ] 'subscription_type'`订阅的类型。 *subscription_type*为**nvarchar （15）**，可以是下列值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**push** （默认值）|推送订阅|  
 |**请求**|请求订阅|  

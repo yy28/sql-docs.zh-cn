@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: 7d1076e0-7710-469a-9107-e293e4bd80ac
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 07879417c216e6d66085539ed6c177891a4e8bfb
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: cb8b752d47113c546358ba0e22c77df08cad24c6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811346"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901133"
 ---
 # <a name="cleanse-data-in-a-composite-domain"></a>清理复合域中的数据
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   本主题提供有关清理 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的复合域的信息。 一个复合域由两个或更多的单一域构成，并且映射到一个由多个相关字词构成的数据字段。 复合域中的单独的域必须具有一个共同的知识范畴。 有关复合域的详细信息，请参阅 [Managing a Composite Domain](../data-quality-services/managing-a-composite-domain.md)。  
   

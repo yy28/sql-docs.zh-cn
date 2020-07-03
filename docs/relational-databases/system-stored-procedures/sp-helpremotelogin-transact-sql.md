@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 93f50869-2627-4642-899f-8f626f8833f4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3e277954a16e1e63d55e54b1eadb157c7f74a667
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d912271e1f772ed0161b6c97977917d525b7d771
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729194"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899511"
 ---
 # <a name="sp_helpremotelogin-transact-sql"></a>sp_helpremotelogin (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   报告在本地服务器上定义的某个或所有远程服务器的远程登录名的相关信息。  
   
@@ -42,7 +42,7 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
      [ , [ @remotename = ] 'remote_name' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  [ @remoteserver **=** ] **\ "***remoteserver***"**  
  远程服务器，将返回其远程登录名信息。 *remoteserver*的值为**sysname**，默认值为 NULL。 如果未指定*remoteserver* ，则返回在本地服务器上定义的所有远程服务器的相关信息。  
   

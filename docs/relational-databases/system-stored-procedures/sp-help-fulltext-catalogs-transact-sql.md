@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1b94f280-e095-423f-88bc-988c9349d44c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f380304b0a2743eb6981eb18de59a69da0f8bd92
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 403e4ac16f7b01cc0acdefb26c51c9e4519ed3bb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728185"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901498"
 ---
 # <a name="sp_help_fulltext_catalogs-transact-sql"></a>sp_help_fulltext_catalogs (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   返回指定的全文目录的 ID、名称、根目录、状态以及全文索引表的数量。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "85728185"
 sp_help_fulltext_catalogs [ @fulltext_catalog_name = ] 'fulltext_catalog_name'  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @fulltext_catalog_name = ] 'fulltext_catalog_name'`全文目录的名称。 *fulltext_catalog_name* **sysname**。 如果省略该参数或参数值为 NULL，则返回与当前数据库相关的所有全文目录的信息。  
   
 ## <a name="return-code-values"></a>返回代码值  

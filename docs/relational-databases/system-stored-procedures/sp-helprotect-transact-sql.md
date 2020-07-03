@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3806476ffec61c155121f3238fefa8e08f689ad2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8f170c15cdc75c8832adae7fae4147829b3b4bb9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772132"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899490"
 ---
 # <a name="sp_helprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   返回一个报表，报表中包含当前数据库中某对象的用户权限或语句权限的信息。  
   
@@ -46,7 +46,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
      [ , [ @permissionarea = ] 'type' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @name = ] 'object_statement'`当前数据库或语句中具有报告权限的对象的名称。 *object_statement*为**nvarchar （776）**，默认值为 NULL，表示返回所有对象和语句权限。 如果值为一个对象（表、视图、存储过程或扩展存储过程），则该对象必须是当前数据库中的有效对象。 对象名称可以_包含所有者限定符_**。**_对象_。  
   
  如果*object_statement*是语句，则它可以是 CREATE 语句。  

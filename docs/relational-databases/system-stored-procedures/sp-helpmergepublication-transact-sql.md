@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: dfe1e1e1-9a65-406a-aced-6385a078e135
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d9e821b1ea7688ed80adba7385e465366e7f69e6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a0e396b4ee38ddd2c6e76158d9cb8abfb9b601a8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772977"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899552"
 ---
 # <a name="sp_helpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   返回有关合并发布的信息。 此存储过程在发布服务器上对发布数据库执行。  
   
@@ -41,7 +41,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
     [ , [ @publisher_db = ] 'publisher_db' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  [ @publication **=** ] **"**_发布_**"**  
  发布的名称。 *发布*为**sysname**，默认值为 **%** ，它返回当前数据库中所有合并发布的相关信息。  
   

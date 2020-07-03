@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c997cfa1-539d-485c-a664-9c6f76bfe0c2
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 41d2c1aa64bc3d7913cadbb5e54e9895af55e554
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cec7eb26b749328d5bbf0f95f74a0de3b0f30a07
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750486"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901357"
 ---
 # <a name="sp_revokedbaccess-transact-sql"></a>sp_revokedbaccess (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   从当前数据库中删除数据库用户。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "85750486"
 sp_revokedbaccess [ @name_in_db = ] 'name'  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @name_in_db = ] 'name'`要删除的数据库用户的名称。 *名称*是**sysname** ，无默认值。 *name*可以是服务器登录名、windows 登录名或 windows 组名，并且必须存在于当前数据库中。 当您指定 Windows 登录或 Windows 组时，请指定其在数据库中所使用的名称。  
   
 ## <a name="return-code-values"></a>返回代码值  

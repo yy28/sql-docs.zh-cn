@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3a31eb5fa85ab7634d6fc65ac446607117ec70ad
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3fda6aba2ce361e814a0196db6138b38f13ce359
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738523"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899575"
 ---
 # <a name="sp_helpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   报告有关指定数据库或所有数据库的信息。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "85738523"
 sp_helpdb [ [ @dbname= ] 'name' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @dbname = ] 'name'`要报告其信息的数据库的名称。 *名称*为**sysname**，无默认值。 如果未指定*名称*，则在**sys.databases**目录视图中的所有数据库上**sp_helpdb**报告。  
   
 ## <a name="return-code-values"></a>返回代码值  

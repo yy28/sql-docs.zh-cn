@@ -19,15 +19,15 @@ ms.assetid: 32e95614-ed88-4068-8c37-1e21544717bc
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 993715676a6abd5d6687b7b1adbbeb3ab121d39f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0decfac8cf28727a3ba3f4bf5ad54e8f9ff8bee9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764690"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902177"
 ---
 # <a name="sysfulltext_semantic_language_statistics_database-transact-sql"></a>sys.fulltext_semantic_language_statistics_database (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   返回有关在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的当前实例上安装的语义语言统计数据库的行。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "85764690"
   
 ||||  
 |-|-|-|  
-|**列名**|类型|**说明**|  
+|**列名**|**Type**|**说明**|  
 |**database_id**|**int**|数据库 ID（在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中唯一）。|  
 |**register_date**|**datetime**|注册数据库进行语义处理的日期。|  
 |**registered_by**|**int**|注册数据库进行语义处理的服务器主体的 ID。|  

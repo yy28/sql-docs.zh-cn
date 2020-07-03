@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 199e869b-2cd2-44ee-b2ee-69edb06a1bc4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d6414be15bcd33e8ae2a0ab267baaa039761fc04
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 116dde1f0fd62f96e31a164ff06472de5b527938
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750448"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901345"
 ---
 # <a name="sp_schemafilter-transact-sql"></a>sp_schemafilter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   修改和显示在列出适于发布的 Oracle 表时排除的架构的相关信息。  
   
@@ -38,14 +38,14 @@ sp_schemafilter [ @publisher = ] 'publisher'
    [ , [ @operation = ] 'operation' ]   
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @publisher = ] 'publisher'`非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器的名称。 *发布服务器*的**sysname**，无默认值。  
   
 `[ @schema = ] 'schema'`架构的名称。 *架构*的值为**sysname**，默认值为 NULL。  
   
 `[ @operation = ] 'operation'`要对此架构采取的操作。 *操作*为**nvarchar （4）**，可以是下列值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**add**|将指定架构添加到不适合发布的架构列表中。|  
 |**击落**|从不适合发布的架构列表中删除指定架构。|  

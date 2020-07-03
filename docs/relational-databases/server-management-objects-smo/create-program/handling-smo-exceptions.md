@@ -16,15 +16,15 @@ ms.assetid: 4c725ff2-6588-44ca-b86a-87979e164153
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4fdf4e03eeb839aad74588f3fb338d10fc949220
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b1778509ef732d3888ff8f0c00d0281f0577554c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70148706"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900811"
 ---
 # <a name="handling-smo-exceptions"></a>处理 SMO 异常
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
   在托管代码中，如果出现错误，便会引发异常。 SMO 方法和属性不在返回值中报告成功或失败信息。 相反，可以通过异常处理程序捕获和处理异常。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "70148706"
  若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual Studio .net 中创建 Visual C&#35; SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。
   
 ## <a name="catching-an-exception-in-visual-basic"></a>在 Visual Basic 中捕获异常  
- 此代码示例演示如何使用**Try .。。Catch .。。Finally** [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]语句来捕获 SMO 异常。 所有 SMO 异常的类型均为 SmoException，并且均列出在 SMO 引用中。 显示内部异常的顺序的目的在于揭示错误的根源。 有关详细信息，请参阅 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET 文档。  
+ 此代码示例演示如何使用**Try .。。Catch .。。Finally** [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 语句来捕获 SMO 异常。 所有 SMO 异常的类型均为 SmoException，并且均列出在 SMO 引用中。 显示内部异常的顺序的目的在于揭示错误的根源。 有关详细信息，请参阅 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET 文档。  
   
 ```VBNET
 'This sample requires the Microsoft.SqlServer.Management.Smo.Agent namespace is included.

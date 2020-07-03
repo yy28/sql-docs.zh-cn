@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: af97d26c-4bd5-4b08-be51-8419e3b2832c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 78c3fb8530875120aac2936f36770d9de936332d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 45fea43b9d7d35fd674a566982d67b4043403d06
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783899"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900599"
 ---
 # <a name="syspolicy_conditions-transact-sql"></a>syspolicy_conditions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中每个基于策略的管理条件在表中各占一行。 syspolicy_conditions 属于 msdb 数据库中的 dbo 架构。 下表介绍了 syspolicy_conditions 视图中的列。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "85783899"
 |date_modified|**datetime**|条件的创建日期和时间。 如果从未进行修改，则为 NULL。|  
 |is_name_condition|**smallint**|指定该条件是否为命名条件。<br /><br /> 0 = 条件表达式不包含 @Name 变量。<br /><br /> 1 = 条件表达式包含 @Name 变量。|  
 |facet|**nvarchar(max)**|条件所基于的方面的名称。|  
-|Expression|**nvarchar(max)**|方面状态的表达式。|  
+|表达式|**nvarchar(max)**|方面状态的表达式。|  
 |obj_name|**sysname**|如果条件表达式包含 @Name，则为赋给此变量的对象名。|  
   
 ## <a name="remarks"></a>备注  

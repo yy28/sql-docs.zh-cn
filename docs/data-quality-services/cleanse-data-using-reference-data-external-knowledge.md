@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 158009e9-8069-4741-8085-c14a5518d3fc
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 199eac229d752cb019ec027124e83c85ead0176c
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 23606df29d79f3fc6deee175dd5e7aad8de394aa
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813881"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900492"
 ---
 # <a name="cleanse-data-using-external-knowledge-reference-data---data-quality-services-dqs"></a>使用（外部）知识引用数据的清理数据-Data Quality Services （DQS）
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   本主题说明如何使用引用数据提供程序中的知识清理数据。 尽管运行清理活动的所有步骤与使用来自引用数据提供程序的知识清理数据（请参阅[使用 DQS（内部）知识清理数据[!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)]中的说明）的步骤相同，但本主题提供的信息特定于使用 ](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md) (DQS) 中的引用数据服务清理数据。  
 
