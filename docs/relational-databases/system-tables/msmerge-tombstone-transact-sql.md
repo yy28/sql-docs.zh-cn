@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8b3fc7bf-729b-40f2-8a26-e7dfbe8ddb38
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 10e32b235a431d7d5a9d19b82a2a55af6e41f3ec
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e46010c61b8646763e3ca8e07e46e6d62864965d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85639330"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889698"
 ---
 # <a name="msmerge_tombstone-transact-sql"></a>MSmerge_tombstone (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MSmerge_tombstone**表包含有关已删除行的信息，并允许将删除传播到其他订阅服务器。 该表存储在发布数据库和订阅数据库中。  
   

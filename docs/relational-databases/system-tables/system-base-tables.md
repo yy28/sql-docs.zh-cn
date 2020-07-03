@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3336905579401f17a5c3afa2509e64670e5ea1ed
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cd89fffb6513306c8877ce6b02a3fadfceb6f1cf
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752639"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889230"
 ---
 # <a name="system-base-tables"></a>系统基表
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   系统基表是基础表，用于实际存储特定数据库的元数据。 由于**master**数据库包含一些其他表，而在其他任何数据库中都找不到该数据库，因此它在此方面是特殊的。 这些表包含服务器范围内的持久化元数据。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "85752639"
 ## <a name="system-base-tables"></a>系统基表  
  下表列出并描述了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的每个系统基表。  
   
-|基表|描述|  
+|基表|说明|  
 |----------------|-----------------|  
 |**sys.sysschobjs**|存在于每个数据库中。 每一行表示数据库中的一个对象。|  
 |**sys.sysbinobjs**|存在于每个数据库中。 数据库中的每个 Service Broker 实体都存在对应的一行。 Service Broker 实体包括以下内容：<br /><br /> 消息类型<br /><br /> 服务约定<br /><br /> 服务<br /><br /> 名称和类型使用固定的二进制排序规则。|  
