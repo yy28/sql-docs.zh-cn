@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 387e4a0a30f5681391bb5891dc772f7c9f04790c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7d1f047fed74a212358ef7c1af61034d021661ef
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723084"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892596"
 ---
 # <a name="sp_trace_setevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   在跟踪中添加或删除事件或事件列。 **sp_trace_setevent**只能在已停止的现有跟踪上执行（*状态*为**0**）。 如果对不存在的或*状态*不为**0**的跟踪执行此存储过程，则将返回错误。  
   
@@ -44,7 +44,7 @@ sp_trace_setevent [ @traceid = ] trace_id
           , [ @on = ] on  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @traceid = ] trace_id`要修改的跟踪的 ID。 *trace_id*为**int**，没有默认值。 用户使用此*trace_id*值标识、修改和控制跟踪。  
   
 `[ @eventid = ] event_id`要打开的事件的 ID。 *event_id*为**int**，没有默认值。  
@@ -75,7 +75,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |28|Degree of Parallelism Event（7.0 插入）|在执行 SELECT、INSERT 或 UPDATE 语句之前发生。|  
 |29-31|保留|改用事件 28。|  
 |32|保留|保留|  
-|33|例外|指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中出现了异常。|  
+|33|异常|指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中出现了异常。|  
 |34|SP:CacheMiss|指示未在过程缓存中找到某个存储过程。|  
 |35|SP:CacheInsert|指示某个项被插入到过程缓存中。|  
 |36|SP:CacheRemove|指示从过程缓存中删除了某个项。|  
@@ -240,7 +240,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  下表列出了可以为事件添加的列。  
   
-|列号|列名称|描述|  
+|列号|列名称|说明|  
 |-------------------|-----------------|-----------------|  
 |1|**TextData**|与跟踪内捕获的事件类相关的文本值。|  
 |2|**BinaryData**|与在跟踪中捕获的事件类相关的二进制值。|  
@@ -298,11 +298,11 @@ sp_trace_setevent [ @traceid = ] trace_id
 |54|**GUID**|GUID 值，与跟踪中捕获的事件类相关。|  
 |55|**IntegerData2**|整数值，与跟踪中捕获的事件类相关。|  
 |56|**ObjectID2**|相关的对象或实体的 ID（如果可用）。|  
-|57|类型|整数值，与跟踪中捕获的事件类相关。|  
+|57|**Type**|整数值，与跟踪中捕获的事件类相关。|  
 |58|**OwnerID**|拥有锁的对象的类型。 仅限于锁事件。|  
 |59|**ParentName**|对象所在架构的名称。|  
 |60|**IsSystem**|指示事件是发生在系统进程中还是发生在用户进程中。<br /><br /> **1** = 系统<br /><br /> **0** = 用户。|  
-|61|**抵销**|存储过程或批查询中的语句的起始偏移量。|  
+|61|**Offset**|存储过程或批查询中的语句的起始偏移量。|  
 |62|**SourceDatabaseID**|对象源所在数据库的 ID。|  
 |63|**： Sqlhandle**|基于即席查询文本或 SQL 对象的数据库和对象 ID 的 64 位哈希运算。 此值可传递给**sys.databases dm_exec_sql_text （）** 以检索关联的 sql 文本。|  
 |64|**SessionLoginName**|发起会话的用户的登录名。 例如，如果您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Login1 **连接到** 并以 **Login2**身份执行语句，则 **SessionLoginName** 将显示 **Login1**，而 **LoginName** 将显示 **Login2**。 此数据列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|  
@@ -326,7 +326,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 ## <a name="return-code-values"></a>返回代码值  
  下表说明在存储过程完成后用户可能获得的代码值。  
   
-|返回代码|描述|  
+|返回代码|说明|  
 |-----------------|-----------------|  
 |0|没有错误。|  
 |1|未知错误。|  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 651c017b-9e9a-48f2-a0bd-6fc896eab334
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1094ce4844686a6d0bebb11e6c95830dd783a843
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7dc556d25cdac393c13df81af4eee54664ff0acb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733117"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891646"
 ---
 # <a name="sp_helpmergearticlecolumn-transact-sql"></a>sp_helpmergearticlecolumn (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   返回合并发布的指定表或视图项目中的列的列表。 存储过程没有列，因此如果将存储过程指定为项目，则该存储过程会返回错误。 此存储过程在发布服务器上对发布数据库执行。  
   
@@ -37,7 +37,7 @@ sp_helpmergearticlecolumn [ @publication = ] 'publication' ]
         , [ @article= ] 'article' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @publication = ] 'publication'`发布的名称。*发布*为**sysname**，无默认值。  
   
 `[ @article = ] 'article'`要检索其信息的项目的表或视图的名称。*项目*是**sysname**，无默认值。  

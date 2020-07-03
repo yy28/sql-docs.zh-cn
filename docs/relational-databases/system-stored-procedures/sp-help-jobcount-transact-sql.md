@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ae8ef851-646c-4889-bc11-c8ec78762572
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6df2b3b8ac52211cc7a558724549870da8ff85e7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a697489367d085714fd9ab1ab5c6245ca04b9ee1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730034"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893683"
 ---
 # <a name="sp_help_jobcount-transact-sql"></a>sp_help_jobcount (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   提供计划附加到的作业数。  
   
@@ -40,7 +40,7 @@ sp_help_jobcount
      [ @schedule_id = ] schedule_id   
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @schedule_id = ] schedule_id`要列出的计划的标识符。 *schedule_id*为**int**，没有默认值。 可以指定*schedule_id*或*schedule_name* 。  
   
 `[ @schedule_name = ] 'schedule_name'`要列出的计划的名称。 *schedule_name* **sysname**，无默认值。 可以指定*schedule_id*或*schedule_name* 。  

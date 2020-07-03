@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 314ec720-3a37-48f7-bb6b-8d5b894bf843
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 27c5b993817e063caf08ca55e03a31ebaacc17b2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e9e0e355c033c0ee33dd8c503875d03a163f998b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731615"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893451"
 ---
 # <a name="sp_msx_set_account-transact-sql"></a>sp_msx_set_account (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   设置目标服务器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理主服务器帐户名和密码。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "85731615"
 sp_msx_set_account [ @credential_name = ] 'credential_name'  | [ @credential_id = ] credential_id  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @credential_name = ] 'credential_name'`用于登录到主服务器的凭据的名称。 所提供的名称必须是现有凭据的名称。 必须指定*credential_name*或*credential_id* 。  
   
 `[ @credential_id = ] credential_id`用于登录到主服务器的凭据的标识符。 标识符必须是现有凭据的标识符。 必须指定*credential_name*或*credential_id* 。  

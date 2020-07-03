@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d9f3f9b1-701b-4fce-9b42-c282656caf84
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4109b122f37c12cb9c01be2ceb36d185b9d6418c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 11f3abeff6d66e4a4a60c9e35d8eec0d742f753a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85651860"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892718"
 ---
 # <a name="sp_syspolicy_rename_condition-transact-sql"></a>sp_syspolicy_rename_condition (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   在基于策略的管理中重命名现有条件。  
   
@@ -39,7 +39,7 @@ sp_syspolicy_rename_condition { [ @name = ] 'name' | [ @condition_id = ] conditi
     , [ @new_name = ] 'new_name'  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @name = ] 'name'`要重命名的条件的名称。 *name*为**sysname**，如果*condition_id*为 NULL，则必须指定。  
   
 `[ @condition_id = ] condition_id`要重命名的条件的标识符。 *condition_id*为**int**，并且如果*name*为 NULL，则必须指定。  

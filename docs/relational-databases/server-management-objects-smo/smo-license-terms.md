@@ -9,15 +9,15 @@ ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2299b7c281183998ec36bd14b82af1fb2dde7c95
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 370316f6f2c77a270117aca3f59d42c11914175c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75238654"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894972"
 ---
 # <a name="sql-server-shared-management-objects-smo-license-terms"></a>SQL Server 共享管理对象 (SMO) 许可条款
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
 ## <a name="microsoft-software-license-terms"></a>MICROSOFT 软件许可条款
 **MICROSOFT SQL SERVER 2017 共享管理对象**
@@ -77,7 +77,7 @@ ms.locfileid: "75238654"
 
 **6.  文档。** 任何对您的计算机或内部网络拥有有效访问权的人都可以出于内部参考目的复制和使用文档。
 
-**7.  出口限制。** 该软件受美国出口法律和法规的约束。 您必须遵守适用于该软件的所有国内和国际出口法律和法规。 这些法律包括对目的地、最终用户和最终用途的各种限制。 有关其他信息，请[https://www.microsoft.com/exporting](https://www.microsoft.com/exporting)参阅。
+**7.  出口限制。** 该软件受美国出口法律和法规的约束。 您必须遵守适用于该软件的所有国内和国际出口法律和法规。 这些法律包括对目的地、最终用户和最终用途的各种限制。 有关其他信息，请参阅 [https://www.microsoft.com/exporting](https://www.microsoft.com/exporting) 。
 
 **8.  支持服务。** 由于此软件是 "按原样" 提供的，因此我们可能不会为其提供支持服务。
 

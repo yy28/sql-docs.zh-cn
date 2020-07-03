@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 792724dc-402e-4b17-9f2c-029d910bf88e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 39caf91dc69639be4207e3417982acfccf429bea
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a1c8b9e11f5dc1f7445459e1b2d727c52bdb609c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717545"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894779"
 ---
 # <a name="sysserver_audit_specification_details-transact-sql"></a>sys.server_audit_specification_details (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   包含服务器实例上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 审核中的服务器审核规范详细信息（操作）的相关信息。 有关详细信息，请参阅 [SQL Server Audit（数据库引擎）](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。 有关所有 audit_action_id 及其名称的列表，请查询[dm_audit_actions sys.databases &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)。  
   

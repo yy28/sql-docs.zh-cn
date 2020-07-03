@@ -16,26 +16,26 @@ ms.assetid: 7bfabe4d-9f4c-4bc9-b998-93bd2b50ee8a
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5e606844d031bb4ab2c29d9dfd012c97601ca12f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 510ec428f43f20715ab85d1f1f5e719e11863a74
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71077540"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894823"
 ---
 # <a name="smo-object-model-namespaces"></a>SMO 对象模型命名空间
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象 (SMO) 具有不同的命名空间。 不同的命名空间表示 SMO 中的不同功能区域。  
   
- 在[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，SMO 程序集位于 C:\PROGRAM Files\Microsoft SQL Server\130\SDK\Assemblies 文件夹中。  
+ 在中 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，SMO 程序集位于 C:\Program FILES\MICROSOFT SQL Server\130\SDK\Assemblies 文件夹中。  
   
 ## <a name="namespaces"></a>命名空间  
  SMO 命名空间包括：  
   
 |类|函数|  
 |-----------|--------------|  
-|<xref:Microsoft.SqlServer.Management.Smo>|包含用于以编程方式操作[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例类、实用工具类和枚举。|  
+|<xref:Microsoft.SqlServer.Management.Smo>|包含用于以编程方式操作的实例类、实用工具类和枚举 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |<xref:Microsoft.SqlServer.Management.Common>|包含复制管理对象 (RMO) 和 SMO 共有的类，例如连接类。|  
 |<xref:Microsoft.SqlServer.Management.Smo.Agent>|包含表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的类。|  
 |<xref:Microsoft.SqlServer.Management.Smo.Wmi>|包含表示 WMI 提供程序的类。|  

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5af6b91c-724f-45ac-aff1-7555014914f4
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: d7086db16eab9935624546965652834313a467db
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+ms.openlocfilehash: afc7da4e28ef7f32ca4a2b4ea762e5a5af442471
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84927818"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891972"
 ---
 # <a name="using-clustered-columnstore-indexes"></a>使用聚集列存储索引
   用于在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中使用聚集列存储索引的任务。
@@ -88,8 +88,8 @@ GO
 
  以下示例显示将 1,048,577 行加载到分区的结果。 这些结果显示列存储（作为压缩的列段）中的一个 COMPRESSED 行组以及增量存储中的 1 行。
 
-```
-SELECT * FROM sys.column_store_row_groups
+```sql
+SELECT * FROM sys.column_store_row_groups;
 ```
 
  ![用于批量加载的行组和增量存储](../../2014/database-engine/media/sql-server-pdw-columnstore-batchload.gif "用于批量加载的行组和增量存储")

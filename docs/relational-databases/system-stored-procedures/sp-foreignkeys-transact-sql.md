@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 99e2db4ca29fc39a4cebbd0b2dfb0564a5837e80
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 04df50dc8378dc346079c807f8e517f1e6bbecdd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760056"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891878"
 ---
 # <a name="sp_foreignkeys-transact-sql"></a>sp_foreignkeys (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   返回引用链接服务器中的表的主键的外键。  
   
@@ -44,7 +44,7 @@ sp_foreignkeys [ @table_server = ] 'table_server'
      [ , [ @fktab_catalog = ] 'fktab_catalog' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @table_server = ] 'table_server'`要为其返回表信息的链接服务器的名称。 *table_server* **sysname**，无默认值。  
   
 `[ @pktab_name = ] 'pktab_name'`具有主键的表的名称。 *pktab_name*的默认值为**sysname**，默认值为 NULL。  
@@ -60,7 +60,7 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 `[ @fktab_catalog = ] 'fktab_catalog'`包含外键的目录的名称。 *fktab_catalog*的默认值为**sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
- 无  
+ None  
   
 ## <a name="result-sets"></a>结果集  
  各种 DBMS 产品支持表的三部分命名（_目录_）**。**_架构_**。**_表_），它在结果集中表示。  

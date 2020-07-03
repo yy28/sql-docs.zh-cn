@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5709667f-e3e4-48a2-93ec-af5e22a2ac58
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7f158839f45b3b890c0ae46aee1d74f4e6a3e59b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 930b5ae195ab917faf5425bd2084314a633318b3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772957"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893035"
 ---
 # <a name="sp_srvrolepermission-transact-sql"></a>sp_srvrolepermission (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   显示固定服务器角色的权限。  
   
@@ -41,10 +41,10 @@ ms.locfileid: "85772957"
 sp_srvrolepermission [ [ @srvrolename = ] 'role']  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @srvrolename = ] 'role'`为其返回权限的固定服务器角色的名称。 *role*的值为**sysname**，默认值为 NULL。 如果未指定角色，则返回所有固定服务器角色的权限。 *角色*可以具有以下值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**sysadmin**|系统管理员|  
 |**securityadmin**|安全管理员|  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e9c59c6347317d193eafe43c511c0ece3831e29c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 051f41139627420e825feffb292a02905917705d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750531"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891707"
 ---
 # <a name="sp_help_proxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   列出一个或多个代理的信息。  
   
@@ -42,7 +42,7 @@ sp_help_proxy
     [ @name = ] 'name'  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @proxy_id = ] id`要列出其信息的代理的代理标识号。 *Proxy_id*的值为**int**，默认值为 NULL。 可以指定*id*或*proxy_name* 。  
   
 `[ @proxy_name = ] 'proxy_name'`要列出其信息的代理的名称。 *Proxy_name*的值为**sysname**，默认值为 NULL。 可以指定*id*或*proxy_name* 。  
@@ -51,7 +51,7 @@ sp_help_proxy
   
  下表列出了每个子系统的值。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |ActiveScripting|ActiveX 脚本|  
 |CmdExec|操作系统 (CmdExec)|  

@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 90e1a6d5-a692-4462-a163-4b0709d83150
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: d7ac6bfbd157a72cee716b4a5a916cf2c7069ba8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 51793a451187f5901d8d1dd8d84f35e4a472d356
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750542"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891847"
 ---
 # <a name="sp_grant_login_to_proxy-transact-sql"></a>sp_grant_login_to_proxy (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   授予安全主体数据库访问代理的权限。  
 
@@ -43,7 +43,7 @@ sp_grant_login_to_proxy
      { [ @proxy_id = ] id | [ @proxy_name = ] 'proxy_name' }  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @login_name = ] 'login_name'`要向其授予访问权限的登录名。 *Login_name*为**nvarchar （256）**，默认值为 NULL。 必须指定** \@ login_name**、 ** \@ fixed_server_role**或** \@ msdb_role**之一，否则存储过程将失败。  
   
 `[ @fixed_server_role = ] 'fixed_server_role'`要向其授予访问权限的固定服务器角色。 *Fixed_server_role*为**nvarchar （256）**，默认值为 NULL。 必须指定** \@ login_name**、 ** \@ fixed_server_role**或** \@ msdb_role**之一，否则存储过程将失败。  

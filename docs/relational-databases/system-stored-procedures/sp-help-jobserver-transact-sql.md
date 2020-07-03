@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 57971787-f9f5-4199-9f64-c2b61a308906
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 155f56340925a1c2c2d6a095085203492f20f016
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 93511eedfe434419270cccf6c5b4c3c685a8eeef
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773856"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893669"
 ---
 # <a name="sp_help_jobserver-transact-sql"></a>sp_help_jobserver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   为给定的作业返回有关服务器的信息。  
   
@@ -41,7 +41,7 @@ sp_help_jobserver
      [ , [ @show_last_run_details = ] show_last_run_details ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @job_id = ] job_id`要为其返回信息的作业标识号。 *job_id*的值为**uniqueidentifier**，默认值为 NULL。  
   
 `[ @job_name = ] 'job_name'`要为其返回信息的作业的名称。 *job_name*的默认值为**sysname**，默认值为 NULL。  

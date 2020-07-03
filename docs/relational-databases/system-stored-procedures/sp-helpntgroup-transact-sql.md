@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 02b4f7c1-480a-436c-8bae-7a2488be45d2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 04a98460660903788d8208d5662e0b9a31518316
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7f52bf995a4d8f24d2b987ad08602cf9184cff8f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786163"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893538"
 ---
 # <a name="sp_helpntgroup-transact-sql"></a>sp_helpntgroup (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   报告有关在当前数据库中有帐户的 Windows 组的信息。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "85786163"
 sp_helpntgroup [ [ @ntname= ] 'name' ]   
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @ntname = ] 'name'`Windows 组的名称。 *名称*为**sysname**，默认值为 NULL。 *名称*必须是有权访问当前数据库的有效 Windows 组。 如果未指定*名称*，则会在输出中包含对当前数据库具有访问权限的所有 Windows 组。  
   
 ## <a name="return-code-values"></a>返回代码值  

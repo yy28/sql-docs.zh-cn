@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 33755c33-7e1e-4ef7-af14-a9cebb1e2ed4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 36ac5833a4bf714c6f4b294f15f0cf6aca6fb64d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3e986d5d998864a343eab31e238a8f7df56a5d0c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750426"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892620"
 ---
 # <a name="sp_tables_ex-transact-sql"></a>sp_tables_ex (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   返回有关指定链接服务器中表的信息。  
   
@@ -43,7 +43,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
      [ , [@fUsePattern = ] 'fUsePattern' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @table_server = ] 'table_server'`要为其返回表信息的链接服务器的名称。 *table_server* **sysname**，无默认值。  
   
 ``[ , [ @table_name = ] 'table_name']``要为其返回数据类型信息的表的名称。 *table_name*的默认值为**sysname**，默认值为 NULL。  
@@ -54,7 +54,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
   
 `[ @table_type = ] 'table_type'`要返回的表的类型。 *table_type*的数据值为**sysname**，默认值为 NULL，可以具有以下值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**A**|别名。|  
 |**GLOBAL TEMPORARY**|系统范围内可用的临时表的名称。|  
@@ -68,7 +68,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
 `[ @fUsePattern = ] 'fUsePattern'`确定字符 **_**、 **%** 、 **[** 和 **]** 是否解释为通配符。 有效值为 0（模式匹配为关闭状态）和 1（模式匹配为打开状态）。 *fUsePattern*的值为**bit**，默认值为1。  
   
 ## <a name="return-code-values"></a>返回代码值  
- 无  
+ None  
   
 ## <a name="result-sets"></a>结果集  
   

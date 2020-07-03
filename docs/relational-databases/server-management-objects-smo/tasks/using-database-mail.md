@@ -15,22 +15,22 @@ ms.assetid: 7605390f-b485-48cc-8d97-e364a066067b
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3e29aaf45306c9ed5d8c8dd7c132dacd9af1e926
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dc909acc1cf5fa2a229cdf3c7477f291685c1bf0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70148344"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894349"
 ---
 # <a name="using-database-mail"></a>使用数据库邮件
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
-  在 SMO 中，数据库邮件子系统由 <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> 属性引用的 <xref:Microsoft.SqlServer.Management.Smo.Server.Mail%2A> 对象表示。 使用 SMO <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> 对象，可以配置数据库邮件子系统并管理配置文件和邮件帐户。 SMO <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail>对象属于**服务器**对象，也就是说，邮件帐户的作用域处于服务器级别。  
+  在 SMO 中，数据库邮件子系统由 <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> 属性引用的 <xref:Microsoft.SqlServer.Management.Smo.Server.Mail%2A> 对象表示。 使用 SMO <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> 对象，可以配置数据库邮件子系统并管理配置文件和邮件帐户。 SMO <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> 对象属于**服务器**对象，也就是说，邮件帐户的作用域处于服务器级别。  
   
 ## <a name="examples"></a>示例  
  若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual Studio .net 中创建 Visual C&#35; SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
- 对于使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据库邮件的程序，必须包括**Imports**语句来限定 Mail 命名空间。 请在应用程序的其他 **Imports** 语句之后、任何声明之前插入该语句，例如：  
+ 对于使用数据库邮件的程序 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，必须包括**Imports**语句来限定 Mail 命名空间。 请在应用程序的其他 **Imports** 语句之后、任何声明之前插入该语句，例如：  
   
  `Imports Microsoft.SqlServer.Management.Smo`  
   

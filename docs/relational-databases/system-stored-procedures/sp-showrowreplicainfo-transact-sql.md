@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 74a5865151cb283aed16efe8ef2ea2908a9f56c9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a734045bc253e71e8663314f785b8630b32b383a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85626623"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893045"
 ---
 # <a name="sp_showrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   显示有关在合并复制中用作项目的表中的行的信息。 此存储过程在发布服务器上对发布数据库执行。  
   
@@ -39,7 +39,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
     [ , [ @show = ] 'show' ]   
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @ownername = ] 'ownername'`表所有者的名称。 *ownername*的值为**sysname**，默认值为 NULL。 如果数据库包含多个同名的表，但每个表具有不同的所有者，则该参数对于区分这些表很有用。  
   
 `[ @tablename = ] 'tablename'`包含要为其返回信息的行的表的名称。 *tablename*的值为**sysname**，默认值为 NULL。  

@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 3eb09513-03f1-42f8-9917-3a1f3a579bec
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 85ab6ead295b4459890a61deccdac3dc2775033a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4fa8894b5c7ac33d8847bc28f2fac7a3c1020362
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85646008"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891821"
 ---
 # <a name="sp_grantdbaccess-transact-sql"></a>sp_grantdbaccess (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   将数据库用户添加到当前数据库。  
   
@@ -42,7 +42,7 @@ sp_grantdbaccess [ @loginame = ] 'login'
     [ , [ @name_in_db = ] 'name_in_db' [ OUTPUT ] ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @loginame = ] 'login_ '`要映射到新数据库用户的 Windows 组、Windows 登录名或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 Windows 组和 windows 登录名的名称必须以*域* \\ *登录*名（例如， **LONDON\Joeb**）的 windows 域名进行限定。 登录名不能已映射到数据库中的用户。 *login*是**sysname**，无默认值。  
   
 ``[ @name_in_db = ] 'name_in_db' [ OUTPUT]``新数据库用户的名称。 *name_in_db*是数据类型为**sysname**的输出变量，默认值为 NULL。 如果未指定，则使用*登录名*。 如果指定为值为 NULL 的输出变量，则** \@ name_in_db**设置为*login*。 当前数据库中不能存在*name_in_db* 。  

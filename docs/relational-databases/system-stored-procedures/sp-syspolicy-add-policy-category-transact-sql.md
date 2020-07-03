@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b682fac4-23c6-4662-8d05-c38f3b45507e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a60a1055b9f183ce6b13c977c774c4f2907750eb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ca8eca5643fb0021111c00abdce45e6de2c09878
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736894"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892766"
 ---
 # <a name="sp_syspolicy_add_policy_category-transact-sql"></a>sp_syspolicy_add_policy_category (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   添加可用于基于策略的管理的策略类别。 策略类别可帮助您对策略进行组织以及设置策略作用域。  
   
@@ -40,7 +40,7 @@ sp_syspolicy_add_policy_category [ @name = ] 'name'
     , [ @policy_category_id = ] policy_category_id OUTPUT  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @name = ] 'name'`策略类别的名称。 *名称*为**sysname**，并且是必需的。 *名称*不能为 NULL 或空字符串。  
   
 `[ @mandate_database_subscriptions = ] mandate_database_subscriptions`确定是否对策略类别强制执行数据库订阅。 *mandate_database_subscriptions*是**位**值，默认值为1（已启用）。  

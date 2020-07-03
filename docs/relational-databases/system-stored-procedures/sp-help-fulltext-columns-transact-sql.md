@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 92c8656b-f7fd-4904-9796-acc9ffed4106
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0a59ec7b385ca6c1b51967ec9a49f3d96d5b3e1c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dd1b3b6430baa2e1df39373876fbe08a57b9b926
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738541"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893735"
 ---
 # <a name="sp_help_fulltext_columns-transact-sql"></a>sp_help_fulltext_columns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   返回为全文索引指定的列。  
   
@@ -42,7 +42,7 @@ sp_help_fulltext_columns [ [ @table_name = ] 'table_name' ] ]
      [ , [ @column_name = ] 'column_name' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @table_name = ] 'table\_name'`为其请求全文索引信息的一个或两个部分组成的表名。 *table_name*为**nvarchar （517）**，默认值为 NULL。 如果省略*table_name* ，则将为每个全文索引表检索全文索引列信息。  
   
 `[ @column_name = ] 'column\_name'`为其请求全文索引元数据的列的名称。 *column_name*的值为**sysname**，默认值为 NULL。 如果省略*column_name*或为 NULL，则将为*table_name*的每个全文索引列返回全文列信息。 如果*table_name*也被省略或为 NULL，则将为数据库中所有表的每个全文索引列返回全文索引列信息。  

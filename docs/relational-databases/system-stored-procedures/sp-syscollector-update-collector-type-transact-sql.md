@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 3c414dfd-d9ca-4320-81aa-949465b967bf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d68443daf5f6e694dc0da8e838dfad897739af05
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f315b95b100315691d1ace30a3fe3bb2e9788d27
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790344"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892791"
 ---
 # <a name="sp_syscollector_update_collector_type-transact-sql"></a>sp_syscollector_update_collector_type (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   为收集项更新收集器类型。 给定收集器类型的名称和 GUID，更新收集器类型配置，包括收集和上载包、参数架构和参数格式化程序架构。  
   
@@ -43,7 +43,7 @@ sp_syscollector_update_collector_type [ @collector_type_uid = ] 'collector_type_
           , [ @upload_package_id = ] upload_package_id  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @collector_type_uid = ] 'collector_type_uid'`收集器类型的 GUID。 *collector_type_uid*是**uniqueidentifier**，如果为 NULL，则它将自动创建并作为输出返回。  
   
 `[ @name = ] 'name'`收集器类型的名称。 *名称*为**sysname** ，必须指定。  

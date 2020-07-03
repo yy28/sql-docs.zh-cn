@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fc69a273dfa331e558f076429be95c2462b551d8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6fe10c33c617833754ac23592528519aeabec1d5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730045"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893714"
 ---
 # <a name="sp_help_job-transact-sql"></a>sp_help_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   返回有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理用来在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中执行自动活动的作业的信息。  
   
@@ -51,7 +51,7 @@ sp_help_job { [ @job_id = ] job_id
      [ , [ @description = ] 'description_pattern' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @job_id = ] job_id`作业标识号。 *job_id*的值为**uniqueidentifier**，默认值为 NULL。  
   
 `[ @job_name = ] 'job_name'`作业的名称。 *job_name*的默认值为**sysname**，默认值为 NULL。  
@@ -61,7 +61,7 @@ sp_help_job { [ @job_id = ] job_id
   
 `[ @job_aspect = ] 'job_aspect'`要显示的作业属性。 *job_aspect*为**varchar （9）**，默认值为 NULL，可以是下列值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**ALL**|作业特征信息|  
 |**任务**|作业信息|  
@@ -81,7 +81,7 @@ sp_help_job { [ @job_id = ] job_id
   
 `[ @execution_status = ] status`作业的执行状态。 *状态*为**int**，默认值为 NULL，可以是下列值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**0**|只返回那些空闲的或挂起的作业。|  
 |**1**|正在执行。|  

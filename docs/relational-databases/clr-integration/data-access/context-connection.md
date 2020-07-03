@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 67dd1925-d672-4986-a85f-bce4fe832ef7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4d6b6f8e37dca038c25cb9afe86f97d86e4e3121
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cd0b57e73757348959a0b8b5f144fbc5c4ef0f8c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717932"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892477"
 ---
 # <a name="context-connection"></a>上下文连接
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   内部数据访问问题是一种非常常见的情况。 即您希望访问正在执行公共语言运行时 (CLR) 存储过程或函数的相同服务器。 一个选项是使用**SqlClient**创建一个连接，指定指向本地服务器的连接字符串，然后打开该连接。 这要求指定登录凭据。 连接位于与存储过程或函数不同的数据库会话中，它可能具有不同的**SET**选项，位于不同的事务中，看不到您的临时表等。 如果托管存储过程或函数代码正在 SQL Server 进程中执行，则是因为有人连接到了该服务器并执行了 SQL 语句调用它。 您可能希望存储过程或函数在该连接的上下文中执行，同时还需要在其事务、 **SET**选项等。 这称为上下文连接。  
   
  利用上下文连接，您可以在首先调用代码的同一上下文中执行 Transact-SQL 语句。 若要获取上下文连接，您必须使用“context connection”连接字符串关键字，如以下示例所示：  

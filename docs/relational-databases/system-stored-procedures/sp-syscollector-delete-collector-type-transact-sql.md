@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 3f32905e-0005-42cb-aef1-7bd04c51fbac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f3b9a8dd128bab509c4cfd760e097bc33ae2508e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2c24011a274b362a6b8267b7559d2641a4f1c6aa
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725560"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892918"
 ---
 # <a name="sp_syscollector_delete_collector_type-transact-sql"></a>sp_syscollector_delete_collector_type (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   删除收集器类型的定义。  
   
@@ -40,7 +40,7 @@ sp_syscollector_delete_collector_type [[ @collector_type_uid = ] 'collector_type
           , [[ @name = ] 'name' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @collector_type_uid = ] 'collector_type_uid'`收集器类型的 GUID。 *collector_type_uid*是**uniqueidentifier** ，且*name*为 NULL 时必须具有值。  
   
 `[ @name = ] 'name'`收集器类型的名称。 *名称*为**sysname** ，并且*collector_type_uid*为 NULL 时必须具有值。  

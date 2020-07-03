@@ -17,15 +17,15 @@ ms.assetid: 7e2327ce-e1a6-4904-83d1-0944b24a7b43
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5fefe8f2a129d92b10c685e81a89079128c8c0a6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 583c51578b2564b65580b8f82913d7974e7848d8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70911237"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892404"
 ---
 # <a name="using-filegroups-and-files-to-store-data"></a>使用文件组和文件存储数据
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
   数据文件可用于存储数据库文件。 数据文件可细分为文件组。  对象具有  属性，该属性引用  对象。 该集合中的每个 <xref:Microsoft.SqlServer.Management.Smo.FileGroup> 对象都具有 <xref:Microsoft.SqlServer.Management.Smo.FileGroup.Files%2A> 属性。 此属性引用 <xref:Microsoft.SqlServer.Management.Smo.DataFileCollection> 集合，该集合包含属于数据库的所有数据文件。 文件组主要用于将用于存储数据库对象的文件组合在起来。 将一个数据库对象分布到几个文件上的一个原因是，它可以提高性能，尤其是在文件存储在不同磁盘驱动器上时。  
   

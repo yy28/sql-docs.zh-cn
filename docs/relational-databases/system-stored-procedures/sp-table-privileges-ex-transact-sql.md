@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b58d4a07-5c40-4f17-b66e-6d6b17188dda
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3131a5e0a44cf0ccbdb4537dc8e409cc8b56be39
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3e8529a1a3be2bed8ddbea1ff475b21801a34424
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786104"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892645"
 ---
 # <a name="sp_table_privileges_ex-transact-sql"></a>sp_table_privileges_ex (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   返回有关指定链接服务器中的指定表的特权信息。  
   
@@ -42,7 +42,7 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
      [ , [@fUsePattern =] 'fUsePattern']  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @table_server = ] 'table_server'`要返回其信息的链接服务器的名称。 *table_server* **sysname**，无默认值。  
   
 `[ @table_name = ] 'table_name']`要为其提供表特权信息的表的名称。 *table_name*的默认值为**sysname**，默认值为 NULL。  
@@ -54,7 +54,7 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
 `[ @fUsePattern = ] 'fUsePattern'`确定字符 "_"、"%"、"[" 和 "]" 是否解释为通配符。 有效值为 0（模式匹配为关闭状态）和 1（模式匹配为打开状态）。 *fUsePattern*的值为**bit**，默认值为1。  
   
 ## <a name="return-code-values"></a>返回代码值  
- 无  
+ None  
   
 ## <a name="result-sets"></a>结果集  
   

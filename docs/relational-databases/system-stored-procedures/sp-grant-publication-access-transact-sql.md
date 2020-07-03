@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 17993952-def6-4a16-b1c1-323ec42967f8
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 9fe9aa39bf4c243a0177ac108a742037598983d5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 319f61f1cf1587117b4f8205b208c4f3e7deb6be
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733269"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891828"
 ---
 # <a name="sp_grant_publication_access-transact-sql"></a>sp_grant_publication_access (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   将登录名添加到发布的访问列表中。 此存储过程在发布服务器上对发布数据库执行。  
   
@@ -37,7 +37,7 @@ sp_grant_publication_access [ @publication = ] 'publication', [ @login = ] 'logi
     [ , [ @reserved = ] 'reserved' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @publication = ] 'publication'`要访问的发布的名称。 **"***发布***"** 的值为**sysname**，无默认值。  
   
 `[ @login = ] 'login'`登录 ID。 **"***login***"** 的值为**sysname**，无默认值。  

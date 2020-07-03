@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8a91df6a-eb84-4512-9a17-4a6e32a9538a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f61de8794969712c6a448cbcee59c70b7156028f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 506fde9c77a0a78ef36bc4a89933ccdbe6a5f45d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725679"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893016"
 ---
 # <a name="sp_start_job-transact-sql"></a>sp_start_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理立即执行作业。  
   
@@ -44,7 +44,7 @@ sp_start_job
      [ , [@output_flag =] output_flag]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @job_name = ] 'job_name'`要启动的作业的名称。 必须指定*job_id*或*job_name* ，但不能同时指定两者。 *job_name*的默认值为**sysname**，默认值为 NULL。  
   
 `[ @job_id = ] job_id`要启动的作业的标识号。 必须指定*job_id*或*job_name* ，但不能同时指定两者。 *job_id*的值为**uniqueidentifier**，默认值为 NULL。  

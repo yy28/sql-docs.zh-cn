@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: fae745e7-57a7-4cbc-8979-56ea8e392e4e
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 542e32606858604e59cdbf204bbf39eba6d214a6
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 0e7a33369516adf7a7fdae9f0047ff7f434e9c16
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813861"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894201"
 ---
 # <a name="configure-dqs-to-use-reference-data"></a>将 DQS 配置为使用引用数据
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   本主题介绍如何将 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 配置为使用引用数据来清理您的数据。 你可以使用来自 Azure Marketplace 的引用数据，也可以使用来自直接联机第三方引用数据提供程序的引用数据。  
 
@@ -69,7 +69,7 @@ ms.locfileid: "85813861"
   
     3.  在 **“类别”** 框中，键入新的直接引用数据服务提供程序提供的数据类别。  
   
-    4.  在“架构”框中，指定一个架构，此架构定义要从直接引用数据服务提供程序中使用的字段（列名称）的字符串。 字段名称不能包含空格，且字段应该用逗号进行分隔。 例如：`FirstName, LastName, City, State`。  
+    4.  在“架构”框中，指定一个架构，此架构定义要从直接引用数据服务提供程序中使用的字段（列名称）的字符串。 字段名称不能包含空格，且字段应该用逗号进行分隔。 例如： `FirstName, LastName, City, State`。  
   
     5.  在 **URI** 框中，键入直接引用数据服务提供程序的 URI。 DQS 中仅允许安全 URI（地址以 “https://” 开头）。  
   

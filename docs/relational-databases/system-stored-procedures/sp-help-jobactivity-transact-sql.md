@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d344864f-b4d3-46b1-8933-b81dec71f511
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 35de5fe106b437429265fcce03d49a9cb1b61401
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 84dee2f945feaa59d96adb03fc6d531d7f2fd925
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715193"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893701"
 ---
 # <a name="sp_help_jobactivity-transact-sql"></a>sp_help_jobactivity (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   列出有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业的运行时状态的信息。  
   
@@ -39,7 +39,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
      [ , [ @session_id = ] session_id ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @job_id = ] job_id`作业标识号。 *job_id*的值为**uniqueidentifier**，默认值为 NULL。  
   
 `[ @job_name = ] 'job_name'`作业的名称。 *job_name*的默认值为**sysname**，默认值为 NULL。  

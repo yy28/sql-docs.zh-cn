@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 3ac091ea-c9a8-4c05-a0b6-1ccf4e001339
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f7c3f1a4406ec64417c96fbc11387eb1b07f4eb4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bfdf2e7f08f9fc5c5ef602188c6c291b53de6063
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715870"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891785"
 ---
 # <a name="sp_help_log_shipping_monitor_secondary-transact-sql"></a>sp_help_log_shipping_monitor_secondary (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   从监视表返回关于辅助数据库的信息。  
   
@@ -41,7 +41,7 @@ sp_help_log_shipping_monitor_secondary
 [ @secondary_database = ] 'secondary_database'  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @secondary_server = ] 'secondary_server'`辅助服务器的名称。 *secondary_server* **sysname**，无默认值。  
   
 `[ @secondary_database = ] 'secondary_database'`辅助数据库的名称。 *secondary_database* **sysname**，无默认值。  
@@ -51,7 +51,7 @@ sp_help_log_shipping_monitor_secondary
   
 ## <a name="result-sets"></a>结果集  
   
-|列|描述|  
+|列|说明|  
 |------------|-----------------|  
 |**secondary_server**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 日志传送配置中的辅助实例的名称。|  
 |**secondary_database**|日志传送配置中辅助数据库的名称。|  
@@ -75,7 +75,7 @@ sp_help_log_shipping_monitor_secondary
 ## <a name="permissions"></a>权限  
  只有**sysadmin**固定服务器角色的成员才能运行此过程。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

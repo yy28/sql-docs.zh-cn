@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0c4553cd-d8e4-4691-963a-4e414cc0f1ba
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: cb46be347590d3fb61d05476616e6c0a52e1ed41
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+ms.openlocfilehash: ebae9f75ac25698582b7f3e4c78c2fb773bd803e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84929088"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891997"
 ---
 # <a name="setting-up-sql-server-managed-backup-to-azure-for-availability-groups"></a>为可用性组设置针对 Azure 的 SQL Server 托管备份
   本主题是有关为参与 AlwaysOn 可用性组的数据库配置 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 的教程。  
@@ -80,7 +80,7 @@ ms.locfileid: "84929088"
   
 6.  ** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 在节点1上启用和配置 AGTestDB：** Start SQL Server Management Studio，并连接到在其中安装了可用性数据库的节点1上的实例。 在根据要求修改数据库名称、存储 URL、SQL 凭据和保持期的值后，从查询窗口中运行以下语句：  
   
-    ```  
+    ```sql  
     Use msdb;  
     GO  
     EXEC smart_admin.sp_set_db_backup   
@@ -92,14 +92,13 @@ ms.locfileid: "84929088"
                     ,@encryptor_name='MyBackupCert'  
                     ,@enable_backup=1;  
     GO  
-  
     ```  
   
      有关创建用于加密的证书的详细信息，请参阅[创建加密的备份](../relational-databases/backup-restore/create-an-encrypted-backup.md)中的**创建备份证书**步骤。  
   
 7.  ** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 为节点2上的 AGTestDB 启用和配置：** Start SQL Server Management Studio 并连接到安装了可用性数据库的节点2上的实例。 在根据要求修改数据库名称、存储 URL、SQL 凭据和保持期的值后，从查询窗口中运行以下语句：  
   
-    ```  
+    ```sql  
     Use msdb;  
     GO  
     EXEC smart_admin.sp_set_db_backup   
@@ -111,15 +110,14 @@ ms.locfileid: "84929088"
                     ,@encryptor_name='MyBackupCert'  
                     ,@enable_backup=1;  
     GO  
-  
     ```  
   
      [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 。 数据库上的备份操作最多可能需要 15 分钟才能运行。 备份将在首选备份副本上进行。  
   
 8.  **查看扩展事件默认配置：** 通过在用于安排从其进行备份的副本上运行以下 transact-sql 语句，检查扩展事件配置 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 。 这通常是数据库所属可用性组的首选备份副本设置。  
   
-    ```  
-    SELECT * FROM smart_admin.fn_get_current_xevent_settings()  
+    ```sql  
+    SELECT * FROM smart_admin.fn_get_current_xevent_settings(); 
     ```  
   
      应看到默认情况下启用管理、操作和分析通道事件，且无法禁用这些事件。 这对于需要手动干预的事件来说应当已经足够。  您可以启用调试事件，但是这些通道包含 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 用来检测问题和解决问题的信息性事件和调试事件。 有关详细信息，请参阅[监视 SQL Server 托管备份到 Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)。  
@@ -132,11 +130,10 @@ ms.locfileid: "84929088"
   
     3.  **启用电子邮件通知以接收备份错误和警告：** 在查询窗口中，运行以下 Transact-SQL 语句：  
   
-        ```  
+        ```sql  
         EXEC msdb.smart_admin.sp_set_parameter  
         @parameter_name = 'SSMBackup2WANotificationEmailIds',  
         @parameter_value = '<email>'  
-  
         ```  
   
          有关详细信息和完整的示例脚本，请参阅[监视 SQL Server 托管备份到 Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)。  
@@ -145,7 +142,7 @@ ms.locfileid: "84929088"
   
 11. **监视运行状态：** 可以通过以前配置的电子邮件通知进行监视，也可以主动监控记录的事件。 以下是一些用于查看事件的示例 Transact-SQL 语句：  
   
-    ```  
+    ```sql  
     --  view all admin events  
     Use msdb;  
     Go  
@@ -166,18 +163,16 @@ ms.locfileid: "84929088"
   
     SELECT * from @eventresult  
     WHERE event_type LIKE '%admin%'  
-  
     ```  
   
-    ```  
+    ```sql  
     -- to enable debug events  
     Use msdb;  
     Go  
-             EXEC smart_admin.sp_set_parameter 'FileRetentionDebugXevent', 'True'  
-  
+    EXEC smart_admin.sp_set_parameter 'FileRetentionDebugXevent', 'True'  
     ```  
   
-    ```  
+    ```sql  
     --  View all events in the current week  
     Use msdb;  
     Go  
@@ -187,7 +182,6 @@ ms.locfileid: "84929088"
     SET @endofweek = DATEADD(Day, 7-DATEPART(WEEKDAY, CURRENT_TIMESTAMP), CURRENT_TIMESTAMP)  
   
     EXEC smart_admin.sp_get_backup_diagnostics @begin_time = @startofweek, @end_time = @endofweek;  
-  
     ```  
   
  本节中描述的步骤是专门用于在数据库上首次配置 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 。 您可以使用相同的系统存储过程**smart_admin sp_set_db_backup**来修改现有配置，并提供新值。 有关详细信息，请参阅[SQL Server 托管备份到 Azure-保持和存储设置](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)。  

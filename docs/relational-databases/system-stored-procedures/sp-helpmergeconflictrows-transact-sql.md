@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7c223a76efe1eeadb5e9c8fd6ac4a3e5ec577d58
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 85a5ad519f836288a98dd6327fc7ca8a15c0cf70
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733099"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893569"
 ---
 # <a name="sp_helpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   返回指定冲突表中的行。 此存储过程在存储冲突表的计算机上运行。  
   
@@ -40,7 +40,7 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
     [ , [ @logical_record_conflicts = ] logical_record_conflicts ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @publication = ] 'publication'`发布的名称。 *发布*为**sysname**，默认值为 **%** 。 如果指定了发布，将返回由该发布限定的所有冲突。 例如，如果 " **MSmerge_conflict_Customers** " 表具有 " **WA** " 和 " **CA** " 发布的冲突行，则传入发布名称**CA**会检索与**CA**发布相关的冲突。  
   
 `[ @conflict_table = ] 'conflict_table'`冲突表的名称。 *conflict_table* **sysname**，无默认值。 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本中，冲突表使用**MSmerge_conflict \_ _发布 \_ _** 的格式名称进行命名，其中每个已发布项目对应一个表。  

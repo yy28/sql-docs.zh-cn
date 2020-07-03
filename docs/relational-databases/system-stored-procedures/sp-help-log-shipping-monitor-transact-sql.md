@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a4e96c45-6dcd-471a-a494-b5c619459855
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6bf5b4c74b39c9326382089579e111b118235170
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b687131739188c811347aa032c0eb941124eb665
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715848"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891750"
 ---
 # <a name="sp_help_log_shipping_monitor-transact-sql"></a>sp_help_log_shipping_monitor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   返回一个结果集，其中包含主服务器、辅助服务器或监视服务器上注册的主数据库和辅助数据库的状态和其他信息。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "85715848"
 sp_help_log_shipping_monitor  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  无。  
   
 ## <a name="return-code-values"></a>返回代码值  

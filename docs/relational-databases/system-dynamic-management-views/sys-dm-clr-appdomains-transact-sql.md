@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c6a542e44f33a64b5cdd4727aab891592338b880
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2c3c0351bd541738e2540cc1a0624cf0ca9836c5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724624"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893987"
 ---
 # <a name="sysdm_clr_appdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   为服务器中的每个应用程序域返回一行。 应用程序域（**AppDomain**）是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 公共语言运行时（CLR）中的一个构造，它是应用程序的隔离单元。 您可以使用此视图来了解和排查在中执行的 CLR 集成对象的问题 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "85724624"
   
 ## <a name="appdomain-cleanup"></a>AppDomain 的清除  
   
-|状态|描述|  
+|状态|说明|  
 |-----------|-----------------|  
 |E_APPDOMAIN_UNLOADING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]已请求 CLR 卸载**AppDomain**，通常是因为包含托管数据库对象的程序集已更改或删除。|  
 |E_APPDOMAIN_UNLOADED|CLR 已卸载**AppDomain**。 这通常是由于**ThreadAbort**、 **OutOfMemory**或用户代码中未经处理的异常导致的升级过程的结果。|  

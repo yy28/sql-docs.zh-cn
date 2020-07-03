@@ -11,16 +11,16 @@ f1_keywords:
 ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 3ffc5e2c36590fc1128eb1c073d51051fed2e4d1
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 8688d5d20f1b5ac600e75327725ab18e9f8dba1b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85814087"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892392"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>将清理项目值导入到域中
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中，您可以将在清理过程中从数据质量清理项目或包含 DQS 清理组件的集成服务包中收集的数据质量知识，导入到域中。 这样可确保可信知识不丢失，而且可以不断地改进知识库。  
   

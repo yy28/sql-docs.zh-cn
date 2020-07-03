@@ -20,15 +20,15 @@ ms.assetid: 405e0ed7-50a9-430e-a343-471f54b4af76
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fceb0baa62b7998534a5b7620d2c99fd1afc1f8f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a8d59db8fbc621d70c4a933c7e0ae2b0afbe475a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70148318"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894965"
 ---
 # <a name="using-encryption"></a>使用加密
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
   在 SMO 中，服务主密钥由 <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey> 对象表示。 它是由 <xref:Microsoft.SqlServer.Management.Smo.Server.ServiceMasterKey%2A> 对象的 <xref:Microsoft.SqlServer.Management.Smo.Server> 属性引用的。 可以通过使用 <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey.Regenerate%2A> 方法重新生成服务主密钥。  
   

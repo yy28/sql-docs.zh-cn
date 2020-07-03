@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 866aaa27-a1e0-453a-9b1b-af39431ad9c2
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4dfb2dba5ac59cae919a0153d41cbf7c15f660e7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2d772c66af8dfbab805124e4a07d26243865330a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757883"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891857"
 ---
 # <a name="sp_grant_proxy_to_subsystem-transact-sql"></a>sp_grant_proxy_to_subsystem (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   授权代理访问子系统。  
   
@@ -40,14 +40,14 @@ sp_grant_proxy_to_subsystem
      { [ @subsystem_id = ] subsystem_id | [ @subsystem_name = ] 'subsystem_name' }  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @proxy_id = ] id`要为其授予访问权限的代理的代理标识号。 *Proxy_id*的值为**int**，默认值为 NULL。 必须指定*proxy_id*或*proxy_name* ，但不能同时指定两者。  
   
 `[ @proxy_name = ] 'proxy_name'`要为其授予访问权限的代理的名称。 *Proxy_name*的值为**sysname**，默认值为 NULL。 必须指定*proxy_id*或*proxy_name* ，但不能同时指定两者。  
   
 `[ @subsystem_id = ] id`要向其授予访问权限的子系统的 id 号。 *Subsystem_id*的值为**int**，默认值为 NULL。 必须指定*subsystem_id*或*subsystem_name* ，但不能同时指定两者。 下表列出了每个子系统的值。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**2**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX 脚本<br /><br /> ** \* \* 重要 \* 提示 \* **在的未来版本中，将从代理中删除 ActiveX 脚本编写子系统 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。|  
 |**3**|操作系统 (**CmdExec**)|  
@@ -64,7 +64,7 @@ sp_grant_proxy_to_subsystem
   
 `[ @subsystem_name = ] 'subsystem_name'`要向其授予访问权限的子系统的名称。 **Subsystem_name**的值为**sysname**，默认值为 NULL。 必须指定*subsystem_id*或*subsystem_name* ，但不能同时指定两者。 下表列出了每个子系统的值。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**ActiveScripting**|ActiveX 脚本|  
 |**CmdExec**|操作系统 (**CmdExec**)|  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0dfd963a-3bc5-4b58-94f7-aec976da2883
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 102698d7efffa753510f3e3b9af6fe40e35408fc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5968f8ae8c44f5a20ca93b10c653c950c842cadc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715159"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893483"
 ---
 # <a name="sp_msx_defect-transact-sql"></a>sp_msx_defect (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   从多服务器操作中删除当前服务器。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "85715159"
 sp_msx_defect [@forced_defection =] forced_defection  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @forced_defection = ] forced_defection`指定是否在主 SQLServerAgent 由于不可逆转损坏的**msdb**数据库而永久丢失或没有**msdb**数据库备份的情况下，强制脱离。 *forced_defection*为**bit**，默认值为**0**，指示不应发生强制脱离。 值为**1**时强制脱离。  
   
  通过执行**sp_msx_defect**强制脱离后，在主 SQLServerAgent 上， **sysadmin**固定服务器角色的成员必须运行以下命令才能完成脱离：  

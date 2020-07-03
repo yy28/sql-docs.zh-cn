@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1310fdaf-edb5-4294-9739-7fb37c2c2cb5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c8876dd3a23d9efb1c658d2412efb169daef1b62
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7aaa40e2542c3010e697e370cd4124982b35d41e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85634393"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893622"
 ---
 # <a name="sp_help_log_shipping_secondary_primary-transact-sql"></a>sp_help_log_shipping_secondary_primary (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   此存储过程将在辅助服务器上检索给定的主数据库的设置。  
   
@@ -40,7 +40,7 @@ sp_help_log_shipping_secondary_primary
 [ @primary_database = ] 'primary_database'  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @primary_server = ] 'primary_server'`[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 日志传送配置中的主实例的名称。 *primary_server*为**sysname** ，且不能为 NULL。  
   
 `[ @primary_database = ] 'primary_database'`主服务器上的数据库的名称。 *primary_database* **sysname**，无默认值。  

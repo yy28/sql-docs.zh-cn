@@ -18,17 +18,17 @@ ms.assetid: f5e5a832-03e9-477b-b55d-491c678ebb43
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 903ea22a3895f142f10ff9026a919067b8e60c95
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9fe291bf2284af09bdc71e9b534fc417c68b0ac2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70148577"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894379"
 ---
 # <a name="smo-programming-languages"></a>SMO 编程语言
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
-  本部分介绍如何在 Visual [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] c # .net 中[!INCLUDE[msCoName](../../includes/msconame-md.md)]对管理对象（SMO）进行编程。
+  本部分介绍如何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual c # .net 中对管理对象（SMO）进行编程。
   
 |主题|说明|  
 |-----------|-----------------|  

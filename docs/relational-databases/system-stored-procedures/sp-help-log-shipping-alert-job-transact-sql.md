@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4d4b4577-c393-4961-b2d3-b56e980b787b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 20b946ba96e1c4fa8830b79a43f1568e866acf7b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d831935d70d65756b431632c0b9b64d87049173c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715882"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891765"
 ---
 # <a name="sp_help_log_shipping_alert_job-transact-sql"></a>sp_help_log_shipping_alert_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   此存储过程将从日志传送监视器返回警报作业的作业 ID。  
   
@@ -39,8 +39,8 @@ sp_help_log_shipping_alert_job
   
 ```  
   
-## <a name="arguments"></a>自变量  
- 无  
+## <a name="arguments"></a>参数  
+ None  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  

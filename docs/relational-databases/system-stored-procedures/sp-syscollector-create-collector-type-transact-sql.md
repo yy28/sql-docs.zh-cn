@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 568e9119-b9b0-4284-9cef-3878c691de5f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4db22cb0d886a4b0ed1213998d334d4b20ce90f8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ba0086ac19daa4118bb411a4d2cb091ec9f1ce86
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725604"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892955"
 ---
 # <a name="sp_syscollector_create_collector_type-transact-sql"></a>sp_syscollector_create_collector_type (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   为数据收集器创建收集器类型。 收集器类型是围绕包的逻辑包装 [!INCLUDE[ssIS](../../includes/ssis-md.md)] ，它们提供用于收集数据并将数据上载到管理数据仓库的实际机制。  
   
@@ -45,7 +45,7 @@ sp_syscollector_create_collector_type
     , [ @upload_package_id = ] 'upload_package_id'  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  [ @collector_type_uid =] "*collector_type_uid*"  
  收集器类型的 GUID。 *collector_type_uid*是**uniqueidentifier** ，如果为 NULL，则它将自动创建并作为输出返回。  
   

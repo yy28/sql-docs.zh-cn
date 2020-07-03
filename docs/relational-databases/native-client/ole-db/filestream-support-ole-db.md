@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: c2bd3dfd-6103-43d1-859e-8ed8d19c58d3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 48202e2a4dea8447d02e093f731915cbf3ab6ee4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8fdc7912f08f7a2277fa5e5822420a0c8d0f287f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787722"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894117"
 ---
 # <a name="filestream-support-ole-db"></a>FILESTREAM 支持 (OLE DB)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   从 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 开始，OLE DB 支持增强的 FILESTREAM 功能。 有关此功能的详细信息，请参阅[FILESTREAM 支持](../../../relational-databases/native-client/features/filestream-support.md)。 有关示例，请参阅 [Filestream 和 OLE DB](../../../relational-databases/native-client-ole-db-how-to/filestream/filestream-and-ole-db.md)。  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 11ce42ca-d3f1-44c8-9cac-214ca8896b9a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2e1aa82b9ced4593bbc1341c3ef305519fb1d1eb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 215ad3a4a38abd962f43756ecb4c724c625f251d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85634430"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893632"
 ---
 # <a name="sp_help_log_shipping_secondary_database-transact-sql"></a>sp_help_log_shipping_secondary_database (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   此存储过程可检索一个或多个辅助数据库的设置。  
   
@@ -42,7 +42,7 @@ sp_help_log_shipping_secondary_database
 [ @secondary_id = ] 'secondary_id'  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @secondary_database = ] 'secondary_database'`辅助数据库的名称。 *secondary_database* **sysname**，无默认值。  
   
 `[ @secondary_id = ] 'secondary_id'`日志传送配置中辅助服务器的 ID。 *secondary_id*为**uniqueidentifier** ，且不能为 NULL。  
@@ -52,7 +52,7 @@ sp_help_log_shipping_secondary_database
   
 ## <a name="result-sets"></a>结果集  
   
-|列名称|描述|  
+|列名称|说明|  
 |-----------------|-----------------|  
 |**secondary_id**|日志传送配置中辅助服务器的 ID。|  
 |**primary_server**|日志传送配置中 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]主实例的名称。|  

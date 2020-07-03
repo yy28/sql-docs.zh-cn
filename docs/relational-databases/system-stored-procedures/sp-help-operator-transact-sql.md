@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: caedc43d-44b8-415a-897e-92923f6de3b8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 79a123faab9b587d56d957a3f9e1765e8619f97d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a8ce38772655172a9c5e22d3dfdba9cb7fd8f4b5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85634311"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891725"
 ---
 # <a name="sp_help_operator-transact-sql"></a>sp_help_operator (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   报告有关为服务器定义的操作员的信息。  
   
@@ -41,7 +41,7 @@ sp_help_operator
      | [ @operator_id = ] operator_id }  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @operator_name = ] 'operator_name'`运算符名称。 *operator_name* **sysname**。 如果未指定*operator_name* ，则返回有关所有运算符的信息。  
   
 `[ @operator_id = ] operator_id`为其请求信息的操作员的标识号。 *operator_id*的值为**int**，默认值为 NULL。  
@@ -103,7 +103,7 @@ EXEC dbo.sp_help_operator
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [sp_add_operator &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
  [sp_delete_operator &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
  [sp_update_operator &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   

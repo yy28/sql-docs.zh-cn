@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 0c873d99-c3bf-4eb1-948b-a46cb235ccd4
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 3f605d17348c651ef0fbc58ebd52b422bdba1896
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: de02d84d781c5db2d86902034b500c6b4a02ea2f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728194"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891812"
 ---
 # <a name="sp_grantlogin-transact-sql"></a>sp_grantlogin (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "85728194"
 sp_grantlogin [@loginame=] 'login'  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @loginame = ] 'login'`Windows 用户或组的名称。 Windows 用户或组必须以*域* \\ *用户*（例如**London\Joeb**）的 windows 域名进行限定。 *login*的**sysname**为，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  

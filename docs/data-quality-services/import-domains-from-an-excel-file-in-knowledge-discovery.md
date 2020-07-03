@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 4d3a3940-6c2a-4dc4-90eb-86f26012c165
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: db99574702a8a347182a43f60090f06bd6afa13b
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 7b38e057ff61825772f9668926b1474a2e23c610
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813818"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892359"
 ---
 # <a name="import-domains-from-an-excel-file-in-knowledge-discovery---data-quality-services-dqs"></a>在知识发现中从 Excel 文件导入域-Data Quality Services （DQS）
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 知识发现活动中从某一 Excel 文件导入一个或多个域。 该导入过程简化了知识生成过程，并且可以节省时间和精力。 借助这一方法，在 Excel 文件或文本文件中具有数据的人士能够创建包含这些数据的知识库。 （有关将值导入到现有知识库的域中的详细信息，请参阅[将值从 Excel 文件导入到域](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md)。）不支持导出到 Excel 文件。  
   

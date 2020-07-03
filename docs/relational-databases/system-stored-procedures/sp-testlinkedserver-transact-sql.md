@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e63ca7d4-47d6-455e-9aac-421f9683dadc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 27fd5a01211fabd1399fe45f2c30b043368d5f0a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 01ae2d33ab38b5a3f2720b817a036cd152f2c47f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750415"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892616"
 ---
 # <a name="sp_testlinkedserver-transact-sql"></a>sp_testlinkedserver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   测试与链接服务器的连接。 如果测试未成功，该过程将引发包含失败原因的异常。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "85750415"
 sp_testlinkedserver [ @servername ] = servername  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @servername = ]servername`链接服务器的名称。 *servername*的值为**sysname**，无默认值。  
   
 ## <a name="result-sets"></a>结果集  

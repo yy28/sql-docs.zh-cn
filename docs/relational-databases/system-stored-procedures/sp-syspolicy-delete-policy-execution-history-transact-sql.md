@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: fe651af9-267e-45ec-b4e7-4b0698fb1be3
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 276ad7c1fd04b377dd71daf7e0f15298dd8c80e3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cbee07cd02ca423a633133546130615bcb1d60c1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773812"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892715"
 ---
 # <a name="sp_syspolicy_delete_policy_execution_history-transact-sql"></a>sp_syspolicy_delete_policy_execution_history (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   在基于策略的管理中删除策略的执行历史记录。 您可以使用此存储过程删除特定策略或所有策略的执行历史记录，也可以删除特定日期前的执行历史记录。  
   
@@ -39,7 +39,7 @@ sp_syspolicy_delete_policy_execution_history [ @policy_id = ] policy_id ]
     [ , [ @oldest_date = ] 'oldest_date' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @policy_id = ] policy_id`要删除其执行历史记录的策略的标识符。 *policy_id*为**int**，并且是必需的。 可以为 NULL。  
   
 `[ @oldest_date = ] 'oldest_date'`是要保留策略执行历史记录的最早日期。 先于此日期的所有执行历史记录都将被删除。 *oldest_date*为**datetime**，则是必需的。 可以为 NULL。  

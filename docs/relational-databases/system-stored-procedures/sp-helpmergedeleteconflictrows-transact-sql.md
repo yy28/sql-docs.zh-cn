@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 222be651-5690-4341-9dfb-f9ec1d80c970
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7b5faa071629cc1b176799d78100ed7135413e86
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4c0712dc9b72d9a515dce7f5948c81f49d509a49
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733088"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893553"
 ---
 # <a name="sp_helpmergedeleteconflictrows-transact-sql"></a>sp_helpmergedeleteconflictrows (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   返回有关丢失删除的冲突的数据行的信息。 如果使用了分散的冲突日志，则将在发布服务器上对发布数据库执行此存储过程，或在订阅服务器上对订阅数据库执行此存储过程。  
   
@@ -39,7 +39,7 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
     [ , [ @publisher_db = ] 'publsher_db'  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @publication = ] 'publication'`发布的名称。 *发布*为**sysname**，默认值为 **%** 。 如果指定了发布，将返回由该发布限定的所有冲突。  
   
 `[ @source_object = ] 'source_object'`源对象的名称。 *source_object*为**nvarchar （386）**，默认值为 NULL。  

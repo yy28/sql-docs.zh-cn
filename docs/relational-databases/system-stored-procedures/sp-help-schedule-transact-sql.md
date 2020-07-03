@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b2fc4ce1-0a8e-44d2-b206-7dc7b258d8c9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2b14900e32c32a5de50998580a8d0de9ed7eacfb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5f0539e4281d58744b18a4f9ca522c52952032c0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720301"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893591"
 ---
 # <a name="sp_help_schedule-transact-sql"></a>sp_help_schedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   列出有关计划的信息。  
   
@@ -42,7 +42,7 @@ sp_help_schedule
      [ , [ @include_description = ] include_description ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @schedule_id = ] id`要列出的计划的标识符。 *schedule_name*为**int**，没有默认值。 可以指定*schedule_id*或*schedule_name* 。  
   
 `[ @schedule_name = ] 'schedule_name'`要列出的计划的名称。 *schedule_name* **sysname**，无默认值。 可以指定*schedule_id*或*schedule_name* 。  

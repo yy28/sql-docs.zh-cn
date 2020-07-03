@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b6e9e0d2-9144-434d-88af-4874f2582399
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5c638c37da5907295cf4f8ef0dbb63d7eef17f05
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9cd0ff590213b5dd687235328696d4956b0bb224
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762772"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892558"
 ---
 # <a name="sp_unregister_custom_scripting-transact-sql"></a>sp_unregister_custom_scripting (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   此存储过程将删除通过执行 sp_register_custom_scripting 注册的用户定义的自定义存储过程或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本[sp_register_custom_scripting](../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md)文件。 此存储过程在发布服务器上对发布数据库执行。  
   
@@ -38,10 +38,10 @@ sp_unregister_custom_scripting [ @type  = ] 'type'
     [ , [ @article = ] 'article' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @type = ] 'type'`要删除的自定义存储过程或脚本的类型。 *类型*为**varchar （16）**，无默认值，可以是下列值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**&**|复制 INSERT 语句时，执行注册的自定义存储过程或脚本。|  
 |**update**|复制 UPDATE 语句时，执行注册的自定义存储过程或脚本。|  

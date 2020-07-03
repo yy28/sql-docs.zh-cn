@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ceb3b2bc-0cc4-48d8-9bdc-6a809556e35f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 99f0eba106e13f222419edc43bf9745bbb3247bc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 551d0796ce534f77d4994064a9af032f34f81f04
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772117"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893472"
 ---
 # <a name="sp_msx_enlist-transact-sql"></a>sp_msx_enlist (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   将当前服务器添加到主服务器的可用服务器列表中。  
   
@@ -42,7 +42,7 @@ sp_msx_enlist [@msx_server_name =] 'msx_server'
      [, [@location =] 'location']  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @msx_server_name = ] 'msx_server'`多服务器管理（主）服务器的名称。 *msx_server* **sysname**，无默认值。  
   
 `[ @location = ] 'location'`要添加的目标服务器的位置。 *location*的值为**nvarchar （100）**，默认值为 NULL。  

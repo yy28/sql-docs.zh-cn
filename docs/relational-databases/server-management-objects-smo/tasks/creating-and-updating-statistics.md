@@ -13,16 +13,16 @@ ms.reviewer: matteot
 ms.custom: seo-dt-2019
 ms.date: 06/04/2020
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c3e04a1e6434c0319d4797460c6574d2fc81a973
-ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
+ms.openlocfilehash: b2e58dbb851b18347ec7de5fb41e96ff23be5d4d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84779099"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892017"
 ---
 # <a name="create-and-update-statistics"></a>创建和更新统计信息
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
 在 SMO 中，有关处理数据库中的查询的统计信息可以使用 <xref:Microsoft.SqlServer.Management.Smo.Statistic> 对象进行收集。
 

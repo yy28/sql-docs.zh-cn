@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 47d04a2b-dbf0-4f15-bd9b-81a2efc48131
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 933774af820c80abb70c5fbdad0441053533b451
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ddaed4baff5685f4ebf7bf4083c9264c895cdd32
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783704"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893211"
 ---
 # <a name="sp_serveroption-transact-sql"></a>sp_serveroption (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   为远程服务器和链接服务器设置服务器选项。  
   
@@ -41,12 +41,12 @@ sp_serveroption [@server = ] 'server'
       ,[@optvalue = ] 'option_value' ;  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @server = ] 'server'`要为其设置选项的服务器的名称。 *server* 的数据类型为 **sysname**，无默认值。  
   
 `[ @optname = ] 'option_name'`为指定的服务器设置的选项。 *option_name*为**varchar （** 35 **）**，无默认值。 *option_name*可以是以下值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**排序规则兼容**|影响分布式查询在链接服务器上的执行。 如果将此选项设置为**true**，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 假定链接服务器中的所有字符都与本地服务器兼容，并涉及字符集和排序规则（或排序顺序）。 这使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 得以将字符列上的比较发送给提供程序。 如果没有设置该选项，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将始终在本地进行字符列上的比较。<br /><br /> 只有在确信链接服务器所对应的数据源与本地服务器有相同的字符集和排序顺序时，才应当设置该选项。|  
 |**排序规则名称**|如果 "**使用远程排序规则**" 为**true** ，并且数据源不是数据源，则指定远程数据源使用的排序规则的名称 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 此名称必须是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支持的排序规则之一。<br /><br /> 如果访问的是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以外的 OLE DB 数据源，但该数据源的排序规则与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的某个排序规则匹配，则使用该选项。<br /><br /> 链接服务器必须支持该服务器中所有列使用的单个排序规则。 如果链接服务器支持单个数据源内的多个排序规则，或者如果无法确定链接服务器的排序规则是否与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的某个排序规则匹配，则不要设置该选项。|  

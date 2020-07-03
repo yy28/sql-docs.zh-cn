@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 553288a0-be57-4d79-ae53-b7cbd065e127
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e946748b7374863e5981924671884e1621cf644d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 34467a44025e345af271b70231db2653bcb29e85
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772989"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892348"
 ---
 # <a name="sysserver_file_audits-transact-sql"></a>sys.server_file_audits (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   包含有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务器实例上审核中的文件审核类型的扩展信息。 有关详细信息，请参阅 [SQL Server Audit（数据库引擎）](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "85772989"
 |create_date|**datetime**|创建文件审核的 UTC 日期。|  
 |modify_date|**datatime**|上次修改文件审核的 UTC 日期。|  
 |principal_id|**int**|在服务器上注册的审核的所有者的 ID。|  
-|类型|**char(2)**|审核类型：<br /><br /> 0 = NT 安全事件日志<br /><br /> 1 = NT 应用程序事件日志<br /><br /> 2 = 文件系统中的文件|  
+|type|**char(2)**|审核类型：<br /><br /> 0 = NT 安全事件日志<br /><br /> 1 = NT 应用程序事件日志<br /><br /> 2 = 文件系统中的文件|  
 |type_desc|**nvarchar(60)**|审核类型说明。|  
 |on_failure|**tinyint**|失败时的状态：<br /><br /> 0 = 继续<br /><br /> 1 = 关闭服务器实例<br /><br /> 2 = 失败操作|  
 |on_failure_desc|**nvarchar(60)**|失败时要写入的操作项：<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL OPERATION|  

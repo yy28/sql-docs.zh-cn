@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 64b4cc75-99a0-421e-b418-94e37595bbb0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 66a4d334719707d8f906b6026737037d7ea28175
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7be2717c1f98291c0ce60b25e4290c20d23a86ae
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725654"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892988"
 ---
 # <a name="sp_stop_job-transact-sql"></a>sp_stop_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理停止执行作业。  
 
@@ -43,7 +43,7 @@ sp_stop_job
     | [@server_name =] 'target_server'  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @job_name = ] 'job_name'`要停止的作业的名称。 *job_name*的默认值为**sysname**，默认值为 NULL。  
   
 `[ @job_id = ] job_id`要停止的作业的标识号。 *job_id*的值为**uniqueidentifier**，默认值为 NULL。  

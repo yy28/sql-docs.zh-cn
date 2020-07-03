@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a2b1eba0-bf71-47e7-a4c7-9f55feec82a3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 70c189733cdc45c8d496f2842486dbec433c32db
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8aa2ba45d45ee2518102d8e2ec7d60a3299fca88
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733156"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891688"
 ---
 # <a name="sp_helplinkedsrvlogin-transact-sql"></a>sp_helplinkedsrvlogin (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   提供有关某些登录名映射的信息，这些登录名是针对特定的链接服务器定义的，而这些链接服务器是用于分布式查询和远程存储过程的。  
   
@@ -39,7 +39,7 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
      [ , [ @locallogin = ] 'locallogin' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @rmtsrvname = ] 'rmtsrvname'`应用登录映射的链接服务器的名称。 *rmtsrvname*的值为**sysname**，默认值为 NULL。 如果为 NULL，则返回针对所有链接服务器定义的所有登录映射，这些链接服务器在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本地计算机中定义。  
   
 `[ @locallogin = ] 'locallogin'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本地服务器上的登录名，它具有到链接服务器的映射*rmtsrvname*。 *locallogin*的值为**sysname**，默认值为 NULL。 NULL 指定返回*rmtsrvname*上定义的所有登录映射。 如果不为 NULL，则必须已经存在*locallogin*到*rmtsrvname*的映射。 *locallogin*可以是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名或 Windows 用户。 对于 Windows 用户来说，必须以直接的方式或通过已被授权访问的 Windows 组成员身份授予其访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的权限。  

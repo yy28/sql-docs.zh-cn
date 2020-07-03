@@ -20,15 +20,15 @@ ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 89e8424532f12a4111e5a535a8016f3a4fe5ac6a
-ms.sourcegitcommit: d498110ec0c7c62782fb694d14436f06681f2c30
+ms.openlocfilehash: c4ebbcdb8fa1f13d7c0d40c4ac66ac1d3453dffb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85196025"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894931"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   为每个已注册的链接服务器或远程服务器包含一行，并为具有**server_id** = 0 的本地服务器提供一行。  
 
@@ -41,7 +41,7 @@ ms.locfileid: "85196025"
 |**data_source**|**nvarchar(4000)**|OLE DB 数据源连接属性。|  
 |**location**|**nvarchar(4000)**|OLE DB 位置连接属性。 如果没有，则为 NULL。|  
 |**provider_string**|**nvarchar(4000)**|OLE DB 访问接口字符串连接属性。<br /><br /> 如果调用方具有权限，则为 NULL `ALTER ANY LINKED SERVER` 。|  
-|**分类**|**sysname**|OLE DB 目录连接属性。 如果没有，则为 NULL。|  
+|**目录**|**sysname**|OLE DB 目录连接属性。 如果没有，则为 NULL。|  
 |**connect_timeout**|**int**|以秒为单位的连接超时，0 表示没有超时。|  
 |**query_timeout**|**int**|以秒为单位的查询超时，0 表示没有超时。|  
 |**is_linked**|**bit**|0 = 是使用**sp_addserver**添加的一种老式服务器，具有不同的 RPC 和分布式事务行为。<br /><br /> 1 = 标准链接服务器。|  

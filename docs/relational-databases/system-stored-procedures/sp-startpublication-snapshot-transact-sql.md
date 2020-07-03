@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2cf568ee-0679-4d19-a394-27210bff61e5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0355aeab92cdf7fd7700d52ca793a606692c943c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4138757f6be1d20c11e9b65111ef28b1b1d93119
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725674"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893006"
 ---
 # <a name="sp_startpublication_snapshot-transact-sql"></a>sp_startpublication_snapshot (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   用于启动为发布生成初始快照的快照代理作业。 此存储过程在发布服务器上对发布数据库执行。  
   
@@ -37,7 +37,7 @@ sp_startpublication_snapshot [ @publication = ] 'publication'
     [ , [ @publisher = ] 'publisher' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @publication = ] 'publication'`发布的名称。 *发布*为**sysname**，无默认值。  
   
 `[ @publisher = ] 'publisher'`非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器的名称。 *发布服务器*的**sysname**，默认值为 NULL。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器，无需指定此参数。  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 53ff2b0d-b7da-4e3d-8f3d-35e857bc3720
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b44e17d9e8625fbeb6ecd0e25b767e396c4c92d9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 49ba4abf13978e16dc4a868843d23348dd38e64f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725531"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892896"
 ---
 # <a name="sp_syscollector_enable_collector-transact-sql"></a>sp_syscollector_enable_collector (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   启用数据收集器。 由于每个服务器只有一个数据收集器，因此不需要任何参数。  
   
@@ -39,8 +39,8 @@ ms.locfileid: "85725531"
 dbo.sp_syscollector_enable_collector   
 ```  
   
-## <a name="arguments"></a>自变量  
- 无  
+## <a name="arguments"></a>参数  
+ None  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  

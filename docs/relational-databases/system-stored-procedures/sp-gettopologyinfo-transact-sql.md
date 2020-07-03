@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8bbe8a06-a4aa-4219-8402-12db6a4682c6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f847e529ef9f01b873393c2db67d7258ad912071
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: db6c762b104edbb297f92c703a7e28dbf6f1c141
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731624"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891861"
 ---
 # <a name="sp_gettopologyinfo-transact-sql"></a>sp_gettopologyinfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   返回有关对等事务复制拓扑的信息。 执行[sp_requestpeertopologyinfo](../../relational-databases/system-stored-procedures/sp-requestpeertopologyinfo-transact-sql.md) ，以在执行此过程之前收集信息。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "85731624"
 sp_gettopologyinfo [ @request_id = ] request_id  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  [ @request_id =] *request_id*  
  拓扑状态请求 ID。 *request_id*的值为**int**，默认值为 NULL。 若要获取 ID，请使用 @request_id [sp_requestpeertopologyinfo](../../relational-databases/system-stored-procedures/sp-requestpeertopologyinfo-transact-sql.md)中的 output 参数或查询[MSpeer_topologyrequest](../../relational-databases/system-tables/mspeer-topologyrequest-transact-sql.md)系统表。  
   

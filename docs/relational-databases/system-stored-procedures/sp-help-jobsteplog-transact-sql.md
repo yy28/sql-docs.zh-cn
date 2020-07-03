@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1a0be7b1-8f31-4b4c-aadb-586c0e00ed04
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eff6790875749a36e2178888ec446b1e81fb579c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7ef843202631d632b2a3712554cf67c9eca0878e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773841"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891799"
 ---
 # <a name="sp_help_jobsteplog-transact-sql"></a>sp_help_jobsteplog (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   返回有关特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤日志的元数据。 **sp_help_jobsteplog**不返回实际的日志。  
 
@@ -41,7 +41,7 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
      [ , [ @step_name = ] 'step_name' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @job_id = ] 'job_id'`要为其返回作业步骤日志信息的作业标识号。 *job_id*的值为**int**，默认值为 NULL。  
   
 `[ @job_name = ] 'job_name'`作业的名称。 *job_name*的值为**sysname**，默认值为 NULL。  

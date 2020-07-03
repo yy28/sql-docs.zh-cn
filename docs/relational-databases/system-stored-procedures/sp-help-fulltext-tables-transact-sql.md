@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 86e24a5f-a869-43f6-b83e-c52b7b01b5ff
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 73189dfb75f9a9debca373d09cc55b09aece7be3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 36f8a5d8fb38802f14ac61c18d382e6052241d8a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760068"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893721"
 ---
 # <a name="sp_help_fulltext_tables-transact-sql"></a>sp_help_fulltext_tables (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   返回为全文索引注册的表的列表。  
   
@@ -42,7 +42,7 @@ sp_help_fulltext_tables [ [ @fulltext_catalog_name = ] 'fulltext_catalog_name' ]
      [ , [ @table_name = ] 'table_name' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @fulltext_catalog_name = ] 'fulltext_catalog_name'`全文目录的名称。 *fulltext_catalog_name*的默认值为**sysname**，默认值为 NULL。 如果省略*fulltext_catalog_name*或为 NULL，则返回与数据库关联的所有全文索引表。 如果指定了*fulltext_catalog_name* ，但省略了*TABLE_NAME*或为 NULL，则将为与此目录关联的每个全文索引表检索全文索引信息。 如果同时指定*fulltext_catalog_name*和*table_name* ，则在*table_name*与*fulltext_catalog_name*关联时返回一行;否则，将引发错误。  
   
 `[ @table_name = ] 'table_name'`请求全文元数据的一个或两个部分组成的表名。 *table_name*为**nvarchar （517）**，默认值为 NULL。 如果仅指定*table_name* ，则仅返回与*table_name*相关的行。  

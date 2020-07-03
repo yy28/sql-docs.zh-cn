@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: bb0a38e0-4eb2-49bf-bba8-750fb706d06e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f5b44d91c1dda538963dedafd14c909afd72ceae
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f85568404dc9c62e5d7c7a7d034317b34bdb704f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787219"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894789"
 ---
 # <a name="resource-governor-catalog-views-transact-sql"></a>资源调控器目录视图 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   本节包含以下目录视图的资源调控器信息。 出于性能和实用性的考虑，已对这些视图进行了优化。 请尽可能使用这些目录视图访问资源调控器元数据。  
   

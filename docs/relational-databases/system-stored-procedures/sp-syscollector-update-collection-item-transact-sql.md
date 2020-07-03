@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 7a0d36c8-c6e9-431d-a5a4-6c1802bce846
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 786f2d3aa1b0f415ea349e9196082f305e904db8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: efbdc613c641482df6b4dfe88a7f132124276578
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725519"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892817"
 ---
 # <a name="sp_syscollector_update_collection_item-transact-sql"></a>sp_syscollector_update_collection_item (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   用于修改用户定义的收集项的属性，或重命名用户定义的收集项。  
   
@@ -45,7 +45,7 @@ sp_syscollector_update_collection_item
     , [ [ @parameters = ] 'parameters' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  [ @collection_item_id =] *collection_item_id*  
  标识收集项的唯一标识符。 *collection_item_id*为**int** ，默认值为 NULL。 如果*name*为 NULL，则*collection_item_id*必须具有值。  
   

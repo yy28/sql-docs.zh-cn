@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: df56d5a5-8961-494f-a745-d752ca63805a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3a06adaa2f533094b7527dcb1fb7fb7ece8cf8d4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dd2a18570770f8a7eeecc1fc9b15c7cacf3e3eb4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85644896"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892866"
 ---
 # <a name="sp_syscollector_set_cache_directory-transact-sql"></a>sp_syscollector_set_cache_directory (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定所收集数据在上载到管理数据仓库之前的存储目录。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "85644896"
 sp_syscollector_set_cache_directory [ @cache_directory = ] 'cache_directory'  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @cache_directory = ] 'cache_directory'`文件系统中临时存储所收集数据的目录。 *cache_directory*为**nvarchar （255）**，默认值为 NULL。 如果未指定值，则使用默认临时 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目录。  
   
 ## <a name="return-code-values"></a>返回代码值  

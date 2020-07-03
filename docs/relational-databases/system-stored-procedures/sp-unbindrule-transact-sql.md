@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f54ee155-c3c9-4f1a-952e-632a8339f0cc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 43fef1a35d36446cdf402b145c0afec68c9eb47d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3988bd0d9197b675c41115ba2b384b10cb35e851
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85639536"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892579"
 ---
 # <a name="sp_unbindrule-transact-sql"></a>sp_unbindrule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   在当前数据库中取消列或别名数据类型的规则绑定。  
   
@@ -42,7 +42,7 @@ sp_unbindrule [ @objname = ] 'object_name'
      [ , [ @futureonly = ] 'futureonly_flag' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @objname = ] 'object_name'`要从中解除规则绑定的表和列或别名数据类型的名称。 *object_name*为**nvarchar （776）**，无默认值。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 尝试先将两部分标识符解析为列名，再解析为别名数据类型。 在取消别名数据类型的规则绑定时，也同时取消数据类型相同并具有相同规则的任何列的绑定。 属于该数据类型并且规则直接绑定的列将不受影响。  
   
 > [!NOTE]  

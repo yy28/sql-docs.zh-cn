@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: d9920008-3387-4f9e-8f21-47473f2ba04f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1fdd39f81de3ca41c38d811095c5a81b700a318e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 30ed0844a104932664f8e872e612821dafce3d4e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733447"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892145"
 ---
 # <a name="syssystem_components_surface_area_configuration-transact-sql"></a>sys.system_components_surface_area_configuration (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   对于可通过外围应用配置器组件启用或禁用的每个可执行系统对象返回一行。 有关详细信息，请参阅 [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md)。  
   

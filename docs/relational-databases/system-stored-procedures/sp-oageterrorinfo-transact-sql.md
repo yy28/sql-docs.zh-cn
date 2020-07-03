@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a6f56713f2ac50a5e367f23a7987b62e2fb9a78b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d190bf442b7c6e629058f6679291ff75ca64e5ed
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719245"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893413"
 ---
 # <a name="sp_oageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   获取 OLE 自动化错误信息。  
   
@@ -42,7 +42,7 @@ sp_OAGetErrorInfo [ objecttoken ]
     [ , helpid OUTPUT ]   
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  *objecttoken*  
  是先前使用**sp_OACreate**创建的 OLE 对象的对象标记，或为 NULL。 如果指定了*objecttoken* ，则返回该对象的错误消息。 如果指定为 NULL，则返回整个批处理的错误信息。  
   
@@ -69,10 +69,10 @@ sp_OAGetErrorInfo [ objecttoken ]
 ## <a name="result-sets"></a>结果集  
  如果未指定输出参数，错误信息将作为结果集返回给客户端。  
   
-|列名|数据类型|描述|  
+|列名|数据类型|说明|  
 |------------------|---------------|-----------------|  
 |**错误**|**binary （4）**|错误号的二进制表示形式。|  
-|**Source**|**nvarchar （nn）**|错误的源。|  
+|**源**|**nvarchar （nn）**|错误的源。|  
 |**说明**|**nvarchar （nn）**|错误的说明。|  
 |**帮助**|**nvarchar （nn）**|错误源的帮助文件。|  
 |**HelpID**|**int**|错误源帮助文件中的帮助上下文 ID。|  

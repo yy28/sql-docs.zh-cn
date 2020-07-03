@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0bd1cff4-ceff-4095-9ae4-e1e65a80f5d6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 94dcbd7a3b2933d41994bbefda40aff755e978a3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 363d89a420d6fd927293fc39525e1a95d7ebd4b0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85645930"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893421"
 ---
 # <a name="sp_oadestroy-transact-sql"></a>sp_OADestroy (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   破坏已创建的 OLE 对象。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "85645930"
 sp_OADestroy objecttoken      
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  *objecttoken*  
  是先前使用**sp_OACreate**创建的 OLE 对象的对象标记。  
   

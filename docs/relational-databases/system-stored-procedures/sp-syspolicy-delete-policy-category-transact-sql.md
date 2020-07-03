@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e09d0d50-94d5-48fd-b284-445ddea6dfcd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1ba5b551d6caa0014d7676bb13f9cca2b366a5a0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 83d08b5261d6657a2bddbf494eb6f5e9ade3b065
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85639747"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892730"
 ---
 # <a name="sp_syspolicy_delete_policy_category-transact-sql"></a>sp_syspolicy_delete_policy_category (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   在基于策略的管理中删除策略类别。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "85639747"
 sp_syspolicy_delete_policy_category { [ @name = ] 'name' | [ @policy_category_id = ] policy_category_id }  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @name = ] 'name'`策略类别的名称。 *name*为**sysname**，如果*policy_category_id*为 NULL，则必须指定。  
   
 `[ @policy_category_id = ] policy_category_id`策略类别的标识符。 *policy_category_id*为**int**，并且如果*name*为 NULL，则必须指定。  

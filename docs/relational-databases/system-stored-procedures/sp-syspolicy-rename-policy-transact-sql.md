@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ce2b07f5-23b1-4f49-8e7b-c18cf3f3d45b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7785671c7233b9e696c4471075740f6ba0941684
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e157090ba5fb9b6c3c9da7fb88d0aa0612d2f727
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85675382"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892688"
 ---
 # <a name="sp_syspolicy_rename_policy-transact-sql"></a>sp_syspolicy_rename_policy (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   在基于策略的管理中重命名现有策略。  
   
@@ -40,7 +40,7 @@ sp_syspolicy_rename_policy { [ @name = ] 'name' | [ @policy_id = ] policy_id }
     , [ @new_name = ] 'new_name'  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @name = ] 'name'`要重命名的策略的名称。 *name*为**sysname**，如果*policy_id*为 NULL，则必须指定。  
   
 `[ @policy_id = ] policy_id`要重命名的策略的标识符。 *policy_id*为**int**，并且如果*name*为 NULL，则必须指定。  

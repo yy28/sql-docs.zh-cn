@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: a85aca1b-8135-4c81-9a05-da5aec76f1ed
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8779b04b7431978d687189cc6dd2536fe4a32370
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 86b5037b1aa581dd99385c9be13ea58ee8a571dd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736905"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892852"
 ---
 # <a name="sp_syscollector_set_warehouse_database_name-transact-sql"></a>sp_syscollector_set_warehouse_database_name (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定在用于连接到管理数据仓库的连接字符串中定义的数据库名称。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "85736905"
 sp_syscollector_set_warehouse_database_name [ @database_name = ] 'database_name'  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  [ @database_name =] "*database_name*"  
  管理数据仓库的名称。 *database_name*的默认值为 NULL，则为**sysname** 。  
   
