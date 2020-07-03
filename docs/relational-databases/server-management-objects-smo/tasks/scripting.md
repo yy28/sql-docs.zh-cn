@@ -14,17 +14,17 @@ ms.assetid: 13a35511-3987-426b-a3b7-3b2e83900dc7
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 63f6e86f08ea93525704159483b939c79c6575d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 59574cdd08b519704d94aa0303b30f2428036157
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72909042"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85884771"
 ---
 # <a name="scripting"></a>脚本编写
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
-  SMO 中的<xref:Microsoft.SqlServer.Management.Smo.Scripter>脚本由对象及其子对象或单个对象的**脚本**方法控制。 <xref:Microsoft.SqlServer.Management.Smo.Scripter>对象控制对实例[!INCLUDE[msCoName](../../../includes/msconame-md.md)]上对象的依赖关系的映射[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+  SMO 中的脚本由 <xref:Microsoft.SqlServer.Management.Smo.Scripter> 对象及其子对象或单个对象的**脚本**方法控制。 <xref:Microsoft.SqlServer.Management.Smo.Scripter>对象控制对实例上对象的依赖关系的映射 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
  使用 <xref:Microsoft.SqlServer.Management.Smo.Scripter> 对象及其子对象进行的高级脚本撰写是一个由三个阶段组成的过程：  
   

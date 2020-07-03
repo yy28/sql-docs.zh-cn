@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1d565748-9759-425c-ae38-4d2032a86868
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6b4054be2d956bccecd1d64dc807671caf8f980f
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+ms.openlocfilehash: 998f1079044f530a824600fede88c99ca91f793e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84937988"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85886045"
 ---
 # <a name="configure-advanced-settings-for-dqs-log-files"></a>为 DQS 日志文件配置高级设置
   本主题介绍如何为 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 和 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 日志文件配置高级设置，例如设置日志文件的滚动文件大小限制、设置事件的时间戳模式等。  
@@ -38,8 +38,8 @@ ms.locfileid: "84937988"
 ##  <a name="configure-data-quality-server-log-settings"></a><a name="DQSServer"></a>配置数据质量服务器日志设置  
  [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 日志设置在 DQS_MAIN 数据库的 A_CONFIGURATION 表中 **ServerLogging** 行的 **VALUE** 列中以 XML 格式提供。 您可以运行以下 SQL 查询以便查看配置信息：  
   
-```  
-select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'  
+```sql  
+select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'; 
 ```  
   
  若要更改 **** 日志记录的配置设置，您必须在 **ServerLogging** 行的 VALUE [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 列中更新相应信息。 在此示例中，我们将更新 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 日志设置，以便将滚动文件大小限制设置为 25000 KB（默认值为 20000 KB）。  
@@ -50,7 +50,7 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
   
 3.  在“查询编辑器”窗口中，复制以下 SQL 语句：  
   
-    ```  
+    ```sql  
     -- Begin the transaction.  
     BEGIN TRAN  
     GO  
@@ -96,14 +96,13 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
   
 5.  若要应用对 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 日志记录配置进行的更改，您必须运行以下 Transact-SQL 语句。 打开新的“查询编辑器”窗口，然后粘贴以下 Transact-SQL 语句：  
   
-    ```  
+    ```sql  
     USE [DQS_MAIN]  
     GO  
     DECLARE @return_value int  
     EXEC @return_value = [internal_core].[RefreshLogSettings]  
     SELECT 'Return Value' = @return_value  
     GO  
-  
     ```  
   
 6.  按 F5 执行这些语句。 检查 "**结果**" 窗格以验证语句是否已成功执行。  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5ef1fbf7-c03d-4488-9ab2-64aae296fa4f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: df4842ec25a69805843506cb052f69f09b6e23ea
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4445c622027e4e639c7748010daf97d535a29624
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750575"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881843"
 ---
 # <a name="sp_dropmergearticle-transact-sql"></a>sp_dropmergearticle (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   删除合并发布中的项目。 此存储过程在发布服务器上对发布数据库执行。  
   
@@ -42,7 +42,7 @@ sp_dropmergearticle [ @publication= ] 'publication'
     [ , [ @ignore_merge_metadata = ] ignore_merge_metadata ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @publication = ] 'publication'`要从中删除项目的发布的名称。 *发布*为**sysname**，无默认值。  
   
 `[ @article = ] 'article'`要从给定发布中删除的项目的名称。 *项目*是**sysname**，无默认值。 如果为**all**，则删除指定合并发布中的所有现有项目。 即使*项目*是**全部**的，仍必须将发布与本文分开放置。  

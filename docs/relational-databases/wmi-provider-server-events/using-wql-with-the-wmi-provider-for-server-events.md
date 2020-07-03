@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 58b67426-1e66-4445-8e2c-03182e94c4be
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 692eda0029e60121422244f8829bac9785269423
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bf1f87043075fdf44adec9d61f379f20d898c2fa
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775629"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888164"
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>将 WQL 与 WMI Provider for Server Events 结合使用
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   管理应用程序通过发出 WMI 查询语言 (WQL) 语句来访问使用 WMI Provider for Server Events 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件。 WQL 是结构化查询语言 (SQL) 的简化子集，它还包含一些特定于 WMI 的扩展。 当使用 WQL 时，应用程序将针对特定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例、数据库或数据库对象（当前唯一支持的对象为队列）来检索事件类型。 用于服务器事件的 WMI 提供程序将查询转换为在数据库范围内或对象范围的事件通知的目标数据库中创建的事件通知，或在用于服务器范围内的事件通知的**master**数据库中创建的事件通知。  
   
  例如，请考虑下列 WQL 查询：  
@@ -63,7 +63,7 @@ FROM event_type
 WHERE where_condition   
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  *event_property*  
  事件的属性。 示例包括**PostTime**、 **SPID**和**LoginName**。 查找[WMI Provider For Server Events 类和属性](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md)中列出的每个事件，以确定其包含的属性。 例如，"DDL_DATABASE_LEVEL_EVENTS" 事件包含 " **DatabaseName** " 和 "**用户名**" 属性。 它还从其父事件继承了**SQLInstance**、 **LoginName**、 **PostTime**、 **SPID**和**ComputerName**属性。  
   

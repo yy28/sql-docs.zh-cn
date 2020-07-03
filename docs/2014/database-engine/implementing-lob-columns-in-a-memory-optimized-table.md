@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: bd8df0a5-12b9-4f4c-887c-2fb78dd79f4e
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 2ff0439ff6b418006f3da5f0356169574509ebb7
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+ms.openlocfilehash: 0e6ca6b5ed0eb94b7293dfd5aab6623ea2a61454
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84932828"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885990"
 ---
 # <a name="implementing-lob-columns-in-a-memory-optimized-table"></a>在内存优化的表中实现 LOB 列
   内存优化表没有行外或大对象（LOB）存储（已在 SQL Server 2016 及更高版本中删除了此限制-请参阅[内存中 OLTP 支持的数据类型](../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)），行大小限制为8060个字节。 可以通过两种方式存储大的二进制或字符串值：  
@@ -25,7 +25,7 @@ ms.locfileid: "84932828"
   
  以下示例将二进制 LOB 值拆分为多行且将这些行插入内存优化的表：  
   
-<pre><code>tsql  
+```sql  
 create table BlobTable_inmem (  
    BlobId binary(16) not null,  
    SegmentationId int not null,  
@@ -75,7 +75,8 @@ where BlobId = @BlobId
 order by SegmentationId  
   
 select @Blob  
-go</code></pre>  
+go
+```
   
  或者，您可以为 LOB 列定义基于磁盘的表。 内存优化的表中每行在基于磁盘的表中具有相应的行，它包含该行的所有 LOB 值。 在以下示例中，有关员工的数据存储在内存优化的表中，而每个员工的照片存储在基于磁盘的表中。  
   

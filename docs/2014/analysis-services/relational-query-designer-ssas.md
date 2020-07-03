@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 9399b1d1-1ad2-44df-bd11-bef60fbf01ec
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: d3bd6b89713edad4429dc0a93aa96cf041a9562a
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 79765f589dcc649bdb2d12bd9dda0d4c955ae916
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84539619"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883933"
 ---
 # <a name="relational-query-designer-ssas"></a>关系查询设计器 (SSAS)
   关系查询设计器可帮助您创建一个查询，该查询指定要从 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 关系数据库以及 [!INCLUDE[msCoName](../includes/msconame-md.md)] 中检索的数据 [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] 。 使用图形查询设计器可以浏览元数据、以交互方式生成查询，还可以查看查询结果。  使用基于文本的查询设计器可以查看图形查询设计器生成的查询，也可以修改查询。 您还可以从文件或报表中导入现有的查询。  
@@ -94,7 +94,7 @@ ms.locfileid: "84539619"
 |Max|返回组中的最大值。 实现 SQL MAX 聚合。|  
 |StDev|返回组中所有值的统计标准偏差。 实现 SQL STDEV 聚合。|  
 |StDevP|返回指定组中所有值的总体标准偏差。 实现 SQL STDEVP 聚合。|  
-|SUM|返回组中所有值的总和。 实现 SQL SUM 聚合。|  
+|Sum|返回组中所有值的总和。 实现 SQL SUM 聚合。|  
 |Var|返回组中所有值的方差。 实现 SQL VAR 聚合。|  
 |VarP|返回组中所有值的总体方差。 实现 SQL VARP 聚合。|  
 |Avg Distinct|返回唯一项的均值。 实现 AVG 聚合和 DISTINCT 关键字的组合。|  
@@ -107,7 +107,7 @@ ms.locfileid: "84539619"
 |VarP Distinct|返回唯一项的方差。 实现 VARP 聚合和 DISTINCT 关键字的组合。|  
   
 ###  <a name="function-parameters-pane"></a><a name="FunctionParameters"></a> “函数参数”窗格  
- “函数参数”窗格显示存储过程或表值函数的参数。 显示以下列：  
+ “函数参数”窗格显示存储过程或表值函数的参数。 以下列会显示：  
   
 -   **参数名称** ：显示由存储过程或表值函数定义的参数名称。  
   
@@ -141,7 +141,7 @@ ms.locfileid: "84539619"
   
 -   **上移** 和 **下移** ：在 **“关系”** 列表中向上或向下移动关系。 关系在查询中的放置顺序会影响到查询结果。 关系将按其在 **“关系”** 列表中的显示顺序添加到查询中。  
   
- 显示以下列：  
+ 以下列会显示：  
   
 -   **左表** ：显示联接关系中第一个表的名称。  
   
@@ -154,7 +154,7 @@ ms.locfileid: "84539619"
 ###  <a name="applied-filters-pane"></a><a name="AppliedFilters"></a> “应用的筛选器”窗格  
  “应用的筛选器”窗格显示用于限定在运行时检索的数据行数的条件。 此窗格中指定的条件用于生成 SQL WHERE 子句。 如果选择了参数选项，则会自动创建参数。  
   
- 显示以下列：  
+ 以下列会显示：  
   
 -   **字段名称** ：显示应用该条件的字段的名称。  
   
@@ -219,7 +219,7 @@ ms.locfileid: "84539619"
 #### <a name="example"></a>示例  
  以下查询将从名为 `ContactType` 的表中返回名字列表。  
   
-```  
+```sql  
 SELECT Name FROM ContactType  
 ```  
   
@@ -242,7 +242,7 @@ SELECT Name FROM ContactType
 #### <a name="example"></a>示例  
  以下查询将调用名为 `uspGetWhereUsedProductID` 的存储过程。 该存储过程具有输入参数时，您在运行查询时必须提供参数值。  
   
-```  
+```sql  
 uspGetWhereUsedProductID  
 ```  
   

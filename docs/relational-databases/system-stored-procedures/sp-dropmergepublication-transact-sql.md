@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9e1cb96e-5889-4f97-88cd-f60cf313ce68
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ff7b235f27b11749673019de222d555d57f364c1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e9b2b36484d34396ed573f4b06bd1feb5b0f83b1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783823"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881829"
 ---
 # <a name="sp_dropmergepublication-transact-sql"></a>sp_dropmergepublication (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   删除合并发布及其关联的快照代理。 删除合并发布之前必须删除全部的订阅。 发布中的项目将自动删除。 此存储过程在发布服务器上对发布数据库执行。  
   
@@ -39,7 +39,7 @@ sp_dropmergepublication [ @publication= ] 'publication'
     [ , [ @ignore_merge_metadata = ] ignore_merge_metadata ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @publication = ] 'publication'`要删除的发布的名称。 *发布*为**sysname**，无默认值。 如果为**all**，则删除所有现有合并发布以及与它们关联的快照代理作业。 如果为*发布*指定了一个特定值，则只会删除该发布及其关联的快照代理作业。  
   
 `[ @ignore_distributor = ] ignore_distributor`用于在不清除分发服务器上清理任务的情况下删除发布。 *ignore_distributor*为**bit**，默认值为**0**。 重新安装分发服务器时也将使用此参数。  

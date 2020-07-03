@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 5257e054-be61-4a55-b699-708366a759af
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: cca345024fcf34cee4abd3695621c9548cee6121
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ca89eb84abc1826a91b4ee8ef285246f6c3de719
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728017"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882324"
 ---
 # <a name="change-sets-and-approval-mds-add-in-for-excel"></a>变更集和批准（用于 Excel 的 MDS 外接程序）
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   在用于 Excel 的 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 外接程序中，可以保存对变更集的实体挂起的更改。 可以应用现有变更集，以查看和修改挂起的更改，并可以提交现有的变更集。  
   

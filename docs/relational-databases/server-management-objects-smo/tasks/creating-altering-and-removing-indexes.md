@@ -13,16 +13,16 @@ ms.assetid: ad1befa5-46e0-4895-b9d3-42852e07607b
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 42acad11884fa9edc779d6aa52a94ccf38ee5444
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 577b6e8dfcf74407f4c233f4330e9f653de7e4d1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74095516"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882988"
 ---
 # <a name="creating-altering-and-removing-indexes"></a>创建、更改和删除索引
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理对象 (SMO) 层次结构中，索引由 <xref:Microsoft.SqlServer.Management.Smo.Index> 对象表示。 索引列由 <xref:Microsoft.SqlServer.Management.Smo.IndexedColumn> 对象的集合表示，而该对象由 <xref:Microsoft.SqlServer.Management.Smo.Index.IndexedColumns%2A> 属性表示。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "74095516"
  若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual Studio .net 中创建 Visual C&#35; SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="creating-a-non-clustered-composite-index-in-visual-basic"></a>在 Visual Basic 中创建非聚集组合索引  
- 此代码示例演示如何创建组合的非聚集索引。 对于复合索引，请将超过多个列添加到索引中。 对于非<xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A>聚集索引，将属性设置为**False** 。  
+ 此代码示例演示如何创建组合的非聚集索引。 对于复合索引，请将超过多个列添加到索引中。 <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A>对于非聚集索引，将属性设置为**False** 。  
   
 ```  
 ' /r:Microsoft.SqlServer.Smo.dll  
@@ -89,7 +89,7 @@ End Class
 ```  
   
 ## <a name="creating-a-non-clustered-composite-index-in-visual-c"></a>在 Visual C# 中创建非聚集组合索引  
- 此代码示例演示如何创建组合的非聚集索引。 对于复合索引，请将超过多个列添加到索引中。 对于非<xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A>聚集索引，将属性设置为**False** 。  
+ 此代码示例演示如何创建组合的非聚集索引。 对于复合索引，请将超过多个列添加到索引中。 <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A>对于非聚集索引，将属性设置为**False** 。  
   
 ```  
 // /r:Microsoft.SqlServer.Smo.dll  
@@ -147,7 +147,7 @@ public class A {
 ```  
   
 ## <a name="creating-a-non-clustered-composite-index-in-powershell"></a>在 PowerShell 中创建非聚集组合索引  
- 此代码示例演示如何创建组合的非聚集索引。 对于复合索引，请将超过多个列添加到索引中。 对于非<xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A>聚集索引，将属性设置为**False** 。  
+ 此代码示例演示如何创建组合的非聚集索引。 对于复合索引，请将超过多个列添加到索引中。 <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A>对于非聚集索引，将属性设置为**False** 。  
   
 ```  
 # Set the path context to the local, default instance of SQL Server and to the  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5769ffe206c1fc84107707acc980ab94c51ac932
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f2482e9af7451463c03bb5deb2e63c7261ec5361
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85676599"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882044"
 ---
 # <a name="sysdm_exec_cursors-transact-sql"></a>sys.dm_exec_cursors (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   返回有关在各种数据库中打开的游标的信息。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "85676599"
 dm_exec_cursors (session_id | 0 )  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  *session_id* |0  
  会话的 ID。 如果指定了*session_id* ，则此函数将返回有关指定会话中的游标的信息。  
   
@@ -74,14 +74,14 @@ dm_exec_cursors (session_id | 0 )
 ## <a name="remarks"></a>备注  
  下表提供了有关游标声明接口的信息，并列出了这些属性列的可能值。  
   
-|Property|描述|  
+|属性|说明|  
 |--------------|-----------------|  
 |API|使用一个数据访问 API（ODBC、OLEDB）声明游标。|  
 |TSQL|使用 Transact-SQL DECLARE CURSOR 语法声明游标。|  
   
  下表提供了有关游标类型的信息，并列出了这些属性列的可能值。  
   
-|类型|描述|  
+|类型|说明|  
 |----------|-----------------|  
 |Keyset|将游标声明为键集。|  
 |动态|将游标声明为动态。|  
@@ -90,7 +90,7 @@ dm_exec_cursors (session_id | 0 )
   
  下表提供了有关游标并发的信息，并列出了这些属性列的可能值。  
   
-|并发|描述|  
+|并发|说明|  
 |-----------------|-----------------|  
 |只读|将游标声明为只读。|  
 |Scroll Locks|游标使用滚动锁。|  
