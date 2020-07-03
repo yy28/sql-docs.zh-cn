@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a66c756a-1311-4f4a-8088-818f8ed90056
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: af32e648e08081dec95c7c62698da381280cec89
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 790f9fe538083c4133e748bfc67ee384c012d417
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756618"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881092"
 ---
 # <a name="setenable-method-clientnetworkprotocol-class"></a>SetEnable 方法（ClientNetworkProtocol 类）
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   启用[配置客户端协议](https://technet.microsoft.com/library/ms181035.aspx)指定的客户端网络协议。  
   
 ## <a name="syntax"></a>语法  

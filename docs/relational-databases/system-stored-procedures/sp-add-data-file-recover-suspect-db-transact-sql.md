@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b25262aa-a228-48b7-8739-6581c760b171
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 144d563bf27f0d6133da0ab4facb26edd3a23d44
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ce146a12cb794952cc218a3dadb22318b700460c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731748"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85879989"
 ---
 # <a name="sp_add_data_file_recover_suspect_db-transact-sql"></a>sp_add_data_file_recover_suspect_db (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   如果由于文件组上的空间不足（错误 1105）而导致对一个数据库的恢复不能完成，请向文件组中添加一个数据文件。 添加数据文件后，该存储过程禁用可疑设置并完成数据库的恢复。 参数与 ALTER DATABASE *database_name* ADD FILE 的参数相同。  
   
@@ -44,7 +44,7 @@ sp_add_data_file_recover_suspect_db [ @dbName= ] 'database'
     , [ @filegrowth = ] 'growth_increment'  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @dbName = ] 'database_ '`数据库的名称。 *数据库*为**sysname**，无默认值。  
   
 `[ @filegroup = ] 'filegroup_name_ '`要向其中添加文件的文件组。 *filegroup_name*为**nvarchar （260）**，默认值为 NULL，指示主文件。  

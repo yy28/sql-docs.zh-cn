@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e917afd75495ed2e6c2506bc0c012d4bfa7a8e4e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8d2bdee46efa339776a3d6baf92e616c56026c0b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727222"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880025"
 ---
 # <a name="sp_add_alert-transact-sql"></a>sp_add_alert (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   创建一个警报。  
   
@@ -52,7 +52,7 @@ sp_add_alert [ @name = ] 'name'
      [ , [ @wmi_query = ] 'wmi_query' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @name = ] 'name'`警报的名称。 该名称显示在为响应警报而发送的电子邮件或寻呼消息中。 它必须唯一，并且可以包含百分号（ **%** ）字符。 *名称*为**sysname**，无默认值。  
   
 `[ @message_id = ] message_id`定义警报的消息错误号。 （它通常与**sysmessages**表中的错误号相对应。）*message_id*的值为**int**，默认值为**0**。 如果使用*严重性*来定义警报，则*message_id*必须为**0**或 NULL。  
@@ -81,7 +81,7 @@ sp_add_alert [ @name = ] 'name'
   
 |值|说明|  
 |-----------|-----------------|  
-|**0**|无|  
+|**0**|None|  
 |**1**|电子邮件|  
 |**2**|寻呼机|  
 |**4**|**net send**|  

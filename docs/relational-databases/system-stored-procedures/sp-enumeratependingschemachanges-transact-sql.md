@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: df169b21-d10a-41df-b3a1-654cfb58bc21
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3ab8827795c2d65bcd6044102567d9b265c319f4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0b150b563cc9ea6bb555e6ea4f9caa1e6fe60193
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733278"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881743"
 ---
 # <a name="sp_enumeratependingschemachanges-transact-sql"></a>sp_enumeratependingschemachanges (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   返回所有的挂起架构更改的列表。 此存储过程可用于[sp_markpendingschemachange](../../relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql.md)，这使管理员可以跳过所选挂起的架构更改，使其不会被复制。 此存储过程在发布服务器上对发布数据库执行。  
   
@@ -37,7 +37,7 @@ sp_enumeratependingschemachanges [ @publication = ] 'publication'
     [ , [ @starting_schemaversion = ] starting_schemaversion ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @publication = ] 'publication'`发布的名称。 *发布*为**sysname**，无默认值。  
   
 `[ @starting_schemaversion = ] starting_schemaversion`要包含在结果集中的最小架构更改数。  

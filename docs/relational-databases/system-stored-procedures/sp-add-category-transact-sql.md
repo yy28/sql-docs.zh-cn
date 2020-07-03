@@ -17,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 076d5ade1f4951183578b1b46761d49dafbce8be
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 251c9992285084123df7afb3c27678c2886b531c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70810552"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85879999"
 ---
 # <a name="sp_add_category-transact-sql"></a>sp_add_category (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   将指定的作业、警报或操作员类别添加到服务器中。 有关替代方法，请参阅[使用 SQL Server Management Studio 创建作业类别](/sql/ssms/agent/create-a-job-category)。
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
  > [!IMPORTANT]  
- > 在[Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)上，当前支持大多数（但并非所有） SQL Server 代理功能。 有关详细信息，请参阅[Azure SQL 数据库托管实例与 SQL Server 的 t-sql 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+ > [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
   
 ## <a name="syntax"></a>语法  
   
@@ -59,7 +59,7 @@ sp_add_category
 |-----------|-----------------|  
 |LOCAL|本地作业类别。|  
 |多服务器|多服务器作业类别。|  
-|无|除作业之外的类的类别 **。**|  
+|NONE|除作业之外的类的类别 **。**|  
   
 `[ @name = ] 'name'`要添加的类别的名称。 该名称在指定类中必须是唯一的。 *名称*为**sysname**，无默认值。  
   
@@ -93,8 +93,8 @@ GO
  [sp_delete_category &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
  [sp_help_category &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
  [sp_update_category &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
- [sysjobs &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)   
- [sysjobservers &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)   
+ [dbo.sys作业 &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)   
+ [dbo.sysjobservers &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

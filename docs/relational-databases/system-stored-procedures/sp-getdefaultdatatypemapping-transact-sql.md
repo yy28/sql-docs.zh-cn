@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b8401de1-f135-41d0-ba79-ce8fe1f48c00
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e8011f6faabdea72054e6bd1b0258019428a0d8a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4c48f5dcb292f3d7ee6612a62a9e5edee8a6061a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731669"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881617"
 ---
 # <a name="sp_getdefaultdatatypemapping-transact-sql"></a>sp_getdefaultdatatypemapping (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   返回有关 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库管理系统（DBMS）之间的指定数据类型的默认映射的信息。 此存储过程在分发服务器上的任何数据库中执行。  
   
@@ -50,10 +50,10 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
     [ , [ @dataloss = ] dataloss OUTPUT ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @source_dbms = ] 'source_dbms'`要从中映射数据类型的 DBMS 的名称。 *source_dbms* **sysname**，可以是下列值之一：  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|源为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。|  
 |**联手**|源为 Oracle 数据库。|  
@@ -74,7 +74,7 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
   
 `[ @destination_dbms = ] 'destination_dbms'`目标 DBMS 的名称。 *destination_dbms* **sysname**，可以是下列值之一：  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|目标为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。|  
 |**联手**|目标为 Oracle 数据库。|  

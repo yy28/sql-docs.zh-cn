@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1546e0ae-5a99-4e01-9eb9-d147fa65884c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 70c59031b56b4ec7a5f670ecc3a9c5692181d8d2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 86fdfa8fe60e16cbfa9bfd0364953ec1df84a20f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733189"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881564"
 ---
 # <a name="sp_helpfile-transact-sql"></a>sp_helpfile (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   返回与当前数据库关联的文件的物理名称及属性。 使用此存储过程确定附加到服务器或从服务器分离的文件名。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "85733189"
 sp_helpfile [ [ @filename= ] 'name' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @filename = ] 'name'`当前数据库中任意文件的逻辑名称。 *名称*为**sysname**，默认值为 NULL。 如果未指定*name* ，则返回当前数据库中所有文件的属性。  
   
 ## <a name="return-code-values"></a>返回代码值  

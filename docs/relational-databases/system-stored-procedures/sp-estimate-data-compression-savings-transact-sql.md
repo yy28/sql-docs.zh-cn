@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 04201e9127f5de173767f7b2071088f2bd4f2828
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 94eeb0baeae20327650d0291e0ca4f1725abb1d9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772176"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881730"
 ---
 # <a name="sp_estimate_data_compression_savings-transact-sql"></a>sp_estimate_data_compression_savings (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   返回所请求对象的当前大小并估算对象在所请求的压缩状态下的大小。 可对所有表或部分表评估压缩。 这包括堆、聚集索引、非聚集索引、列存储索引、索引视图以及表和索引分区。 可以使用 row、page、列存储或列存储存档压缩来压缩这些对象。 如果表、索引或分区已经过压缩，则可使用该过程来估计在重新压缩的情况下该表、索引或分区的大小。  
   
@@ -54,7 +54,7 @@ sp_estimate_data_compression_savings
 [;]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  [ @schema_name =] "*schema_name*"  
  包含表或索引视图的数据库架构的名称。 *schema_name* **sysname**。 如果*schema_name*为 NULL，则使用当前用户的默认架构。  
   

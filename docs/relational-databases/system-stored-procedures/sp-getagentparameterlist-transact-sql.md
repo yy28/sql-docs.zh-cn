@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 50d3d3c1-b9a1-417c-bad4-674089c9c60d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0ceb3178f8ee200b88bcb5968c110a72a7434320
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9b4239fafd6ec4ecbda7d89dd143b70a4dccb7eb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85662414"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881635"
 ---
 # <a name="sp_getagentparameterlist-transact-sql"></a>sp_getagentparameterlist (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   返回一个列表，其中包含可以在代理配置文件中为指定代理类型设置的所有复制代理参数。 此存储过程可在运行代理的分发服务器的任意数据库中执行。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "85662414"
 sp_getagentparameterlist [ @agent_type = ] 'agent_type'  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @agent_type = ] 'agent_type'`正在为其添加参数的复制代理。 *agent_type*为**int**，可以是下列值之一：  
   
 |值|Agent|  

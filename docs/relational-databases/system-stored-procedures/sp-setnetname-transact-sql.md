@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f416ba81-3835-4588-b0a3-2fe75589490e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 140765eacad1d035f9e8640330701711a358991b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 87401c8f90f0351f797aa3572c7717bb02360e00
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719209"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881518"
 ---
 # <a name="sp_setnetname-transact-sql"></a>sp_setnetname (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   将**sys. server**中的网络名称设置为的远程实例的实际网络计算机名称 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 该过程可用于启用对计算机（其网络名中包含无效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符）的远程存储过程调用执行。  
   
@@ -40,7 +40,7 @@ sp_setnetname
      @netname = 'network_name'  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  ** @server = "** *server* **"**  
  在用户编码的远程存储过程调用语法中引用的远程服务器名。 **Sys.** server 中必须已有一行才能使用此*服务器*。 *server* 的数据类型为 **sysname**，无默认值。  
   

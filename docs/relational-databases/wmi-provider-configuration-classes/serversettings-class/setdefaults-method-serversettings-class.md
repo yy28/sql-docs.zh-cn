@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 76e4cfab-4b15-4da4-bb2f-8aac6f927f79
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e507eede2ba7abb036eb33f74a0d1a1ab1ba2dce
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4c1f7670aa0e90f848c3f66e65df104181541dee
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722784"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880726"
 ---
 # <a name="setdefaults-method-serversettings-class"></a>SetDefaults 方法（ServerSettings 类）
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   设置实例的所有默认值， [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 并提供覆盖现有数据的选项。  
   
 ## <a name="syntax"></a>语法  
@@ -41,7 +41,7 @@ object.SetDefaults(OverwriteAll)
   
 #### <a name="parameters"></a>参数  
   
-|参数|描述|  
+|参数|说明|  
 |---------------|-----------------|  
 |*OverwriteAll*|指定是否覆盖实例上的现有值的布尔值 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ：如果要覆盖现有数据，则为**true** ; 否则为**false** 。|  
   

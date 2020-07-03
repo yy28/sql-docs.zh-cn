@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 0fe45983-f9f2-4c7f-938a-0fd96e1cbe8d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4c25e061e8eb303f936cc129efc6e630e7be5933
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 584723414da47dbb0696ae991860d8bed50a3a26
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772150"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881724"
 ---
 # <a name="sp_estimated_rowsize_reduction_for_vardecimal-transact-sql"></a>sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   估计对表启用 vardecimal 存储格式后行平均大小的减少量。 使用该数字可估计表大小的总体减少量。 由于使用统计采样来计算行大小的平均减少量，因此只能将该计算结果视为估计值。 在极个别的情况下，启用 vardecimal 存储格式后行大小可能会增加。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "85772150"
 sp_estimated_rowsize_reduction_for_vardecimal [ [ @table_name = ] 'table'] [;]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @table = ] 'table'`要更改其存储格式的表的三部分名称。 *table*为**nvarchar （776）**。  
   
 ## <a name="return-code-values"></a>返回代码值  

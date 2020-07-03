@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 606c40aa-2593-43af-9762-0f260bbb51f2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 553ba3f86ce9917a3eb22991d09728611be21f13
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b52cc85ed5576ab40599141b551382a288c537f7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731647"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881603"
 ---
 # <a name="sp_getsubscriptiondtspackagename-transact-sql"></a>sp_getsubscriptiondtspackagename (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   在将数据发送到订阅服务器之前，返回用于转换数据的 Data Transformation Services (DTS) 包名称。 此存储过程在发布服务器的任何数据库中执行。  
   
@@ -37,7 +37,7 @@ sp_getsubscriptiondtspackagename [ @publication = ] 'publication'
     [ , [ @subscriber = ] 'subscriber' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @publication = ] 'publication'`发布的名称。 **"***发布***"** 的值为**sysname**，无默认值。  
   
 `[ @subscriber = ] 'subscriber'`订阅服务器的名称。 *订阅服务器*的值为 sysname，默认值为 NULL。  

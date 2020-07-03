@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 8e40145a-8559-4abe-8e2a-39b818928009
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ba9110c12249db334443af3744efd3cdb6125bee
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 82f338a31cf23b6ab151e2dc731f2a15d9f4de66
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725409"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881460"
 ---
 # <a name="restorefile-transact-sql"></a>restorefile (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   每个还原文件（包括按文件组名称间接还原的文件）在表中占一行。 该表存储在**msdb**数据库中。  
   

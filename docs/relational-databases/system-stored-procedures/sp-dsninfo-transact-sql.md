@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 34648615-814b-42bc-95a3-50e86b42ec4d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d7409d28b6a21a033c139c63ca6d6e7524e6ba50
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 59d0b995103ab01d3bf3b7ec5336ad16b97b1e6f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783767"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881748"
 ---
 # <a name="sp_dsninfo-transact-sql"></a>sp_dsninfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   从与当前服务器关联的分发服务器中返回 ODBC 或 OLE DB 数据源信息。 此存储过程在分发服务器上的任何数据库中执行。  
   
@@ -40,12 +40,12 @@ sp_dsninfo [ @dsn =] 'dsn'
     [ , [ @dso_type=] dso_type]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @dsn = ] 'dsn'`ODBC DSN 或 OLE DB 链接服务器的名称。 *dsn*的值为**varchar （128）**，无默认值。  
   
 `[ @infotype = ] 'info_type'`要返回的信息的类型。 如果未指定*info_type*或指定 NULL，则返回所有信息类型。 *info_type*为**varchar （128）**，默认值为 NULL，可以是下列值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**DBMS_NAME**|指定数据源供应商名称。|  
 |**DBMS_VERSION**|指定数据源版本。|  
@@ -58,7 +58,7 @@ sp_dsninfo [ @dsn =] 'dsn'
   
 `[ @dso_type = ] dso_type`数据源类型。 *dso_type*为**int**，可以是下列值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**1** （默认值）|ODBC 数据源|  
 |**3**|OLE DB 数据源|  

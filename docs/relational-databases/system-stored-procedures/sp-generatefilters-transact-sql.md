@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0aeb5b7a-89d1-4bd5-a371-c27fa924360a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3bc04bf5c5b5501b4ac0ebbe55872553197c666e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2db39366cba8aba94088a2d8e3590bd9e4324df7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757911"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881659"
 ---
 # <a name="sp_generatefilters-transact-sql"></a>sp_generatefilters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   在复制指定的表时，创建外键表的筛选器。 此存储过程在发布服务器上对发布数据库执行。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "85757911"
 sp_generatefilters [ @publication =] 'publication'  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @publication = ] 'publication'`要筛选的发布的名称。 *发布*为**sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  

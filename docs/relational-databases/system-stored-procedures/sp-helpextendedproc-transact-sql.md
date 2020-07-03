@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7e1f017e-c898-4225-b375-6a73ef9aac7b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7866b9d64a6064cac23382ea3bb33f4fc355cd80
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bf7e95f30eb4a6abdc61b47b5f64b20f0ed4b27a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733215"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881584"
 ---
 # <a name="sp_helpextendedproc-transact-sql"></a>sp_helpextendedproc (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   报告当前定义的扩展存储过程，以及该过程（函数）所属的动态链接库 (DLL) 的名称。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "85733215"
 sp_helpextendedproc [ [@funcname = ] 'procedure' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @funcname = ] 'procedure'`要报告其信息的扩展存储过程的名称。 *过程*的值为**sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  

@@ -20,21 +20,21 @@ ms.assetid: 1d7bd180-fd6c-4b38-a87b-351496040542
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 26d6ca64dfbca8bc63a81989d7c3c34a841e4f5a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 91b5c4e79839a3ec8936ee004dbc7b832b952223
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74095347"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880061"
 ---
 # <a name="backing-up-and-restoring-databases-and-transaction-logs"></a>备份和还原数据库和事务日志
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
-  在 SMO 中，<xref:Microsoft.SqlServer.Management.Smo.Backup> 类和 <xref:Microsoft.SqlServer.Management.Smo.Restore> 类是为实现特定备份和还原任务提供工具的实用工具类。 <xref:Microsoft.SqlServer.Management.Smo.Backup>对象表示所需的特定备份任务，而不[!INCLUDE[msCoName](../../../includes/msconame-md.md)]是服务器实例上的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]对象。  
+  在 SMO 中，<xref:Microsoft.SqlServer.Management.Smo.Backup> 类和 <xref:Microsoft.SqlServer.Management.Smo.Restore> 类是为实现特定备份和还原任务提供工具的实用工具类。 <xref:Microsoft.SqlServer.Management.Smo.Backup>对象表示所需的特定备份任务，而不是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务器实例上的对象。  
   
  如果发生数据丢失或损坏，则必须完全或部分还原备份。 部分还原使用 <xref:Microsoft.SqlServer.Management.Smo.FileGroupCollection> 集合将要进行还原的数据分成段。 如果要对事务日志进行备份，则可以使用 <xref:Microsoft.SqlServer.Management.Smo.Restore.ToPointInTime%2A> 对象的 <xref:Microsoft.SqlServer.Management.Smo.Restore> 属性将数据还原到特定时间点。 还可以采用 <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlVerify%2A> 方法来验证数据。 建议采用的备份过程是，通过定期进行还原操作并检查数据库中的数据来检查备份的完整性。  
   
- 与<xref:Microsoft.SqlServer.Management.Smo.Backup>对象一样，无<xref:Microsoft.SqlServer.Management.Smo.Restore>需使用**Create**方法来创建对象，因为它不表示实例上的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]任何对象。 <xref:Microsoft.SqlServer.Management.Smo.Restore> 对象具有还原数据库所需的一组属性和方法。  
+ 与 <xref:Microsoft.SqlServer.Management.Smo.Backup> 对象一样， <xref:Microsoft.SqlServer.Management.Smo.Restore> 无需使用**Create**方法来创建对象，因为它不表示实例上的任何对象 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 <xref:Microsoft.SqlServer.Management.Smo.Restore> 对象具有还原数据库所需的一组属性和方法。  
   
 ## <a name="examples"></a>示例  
  若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual Studio .net 中创建 Visual C&#35; SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  

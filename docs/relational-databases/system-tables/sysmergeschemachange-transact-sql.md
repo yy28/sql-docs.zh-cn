@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ae9ce16e-6ee9-4c7c-8210-a9bf2c7efdf0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 362cdb0fac2a30f80a5c1cd1c9d441d81522a6c7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7740982430f03aed138a578dc12113eb7caf1764
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725404"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881353"
 ---
 # <a name="sysmergeschemachange-transact-sql"></a>sysmergeschemachange (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   包含有关快照代理生成的已发布项目的信息。 该表存储在发布数据库和订阅数据库中。  
   

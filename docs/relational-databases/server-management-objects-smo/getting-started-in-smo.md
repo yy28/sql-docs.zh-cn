@@ -14,15 +14,15 @@ ms.assetid: ecc62702-c0d5-4180-b3c2-16ec5030caa7
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 22271c7c7fd5099ae9e65fecfedb820da00c6e30
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e306a3277a540f0d5da79e76aeefc2440fd81730
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70911266"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880074"
 ---
 # <a name="getting-started-in-smo"></a>SMO 入门
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
 本页提供了一些主题链接，这些主题旨在帮助你开始使用 SQL Server 管理对象（SMO）。 所列主题涵盖了 SMO 对象层次结构、用 SMO 编写程序、SMO 和不同编程语言以及特定编程任务。  
  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c78536fbf8e9bb00133d7724f218c60c3d005fb2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e6a2cc2c6dcb1eb1d9068a5107f504683eb516bf
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826324"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85879979"
 ---
 # <a name="sp_add_job-transact-sql"></a>sp_add_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   添加 SQL 代理服务执行的新作业。  
   
@@ -78,7 +78,7 @@ sp_add_job [ @job_name = ] 'job_name'
 |**0**|从不|  
 |**1**|成功时|  
 |**2** （默认值）|失败时|  
-|**3**|Always|  
+|**3**|始终|  
   
 `[ @notify_level_email = ] email_level`一个值，该值指示在完成该作业后何时发送电子邮件。 *email_level*的值为**int**，默认值为**0**，表示从不。 *email_level*使用与*eventlog_level*相同的值。  
   
