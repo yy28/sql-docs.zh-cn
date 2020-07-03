@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 564fae96-b88c-4f22-9338-26ec168ba6f5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c40f335e4b40a1c15af6247439ac1f19e88d9d37
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4a412ac614037a79e033636b20c21e2464c427ad
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730095"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898470"
 ---
 # <a name="sysfn_all_changes_ltcapture_instancegt-transact-sql"></a>sys. fn_all_changes_ &lt; capture_instance &gt; （transact-sql）
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **所有更改**查询函数的包装。 创建这些函数所必需的脚本由 sys.sp_cdc_generate_wrapper_function 存储过程生成。  
   
@@ -47,7 +47,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
 }  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  *start_time*  
  **Datetime**值，表示要包含在结果集中的更改表条目范围的低端点。  
   
@@ -83,7 +83,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
 ## <a name="table-returned"></a>返回的表  
   
-|列名称|列类型|描述|  
+|列名称|列类型|说明|  
 |-----------------|-----------------|-----------------|  
 |__CDC_STARTLSN|**binary(10)**|与更改关联的事务的提交 LSN。 在同一事务中提交的所有更改将共享同一个提交 LSN。|  
 |__CDC_SEQVAL|**binary(10)**|用于对事务中的行更改进行排序的序列值。|  

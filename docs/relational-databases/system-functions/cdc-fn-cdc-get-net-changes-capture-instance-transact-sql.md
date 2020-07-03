@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 43ab0d1b-ead4-471c-85f3-f6c4b9372aab
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5b2825efb9d6b0b16c0e68f2f5744b4371bc59e5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a9e801649cceee2aacdda530fa47c53db500bad6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734449"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898512"
 ---
 # <a name="cdcfn_cdc_get_net_changes_ltcapture_instancegt-transact-sql"></a>cdc fn_cdc_get_net_changes_ &lt; capture_instance &gt; （transact-sql）
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   为在指定的日志序列号（LSN）范围内更改的每个源行返回一个净更改行。  
   
@@ -51,7 +51,7 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
 }  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  *from_lsn*  
  LSN，它表示要包含在结果集中的 LSN 范围的低端点。 *from_lsn*为**binary （10）**。  
   

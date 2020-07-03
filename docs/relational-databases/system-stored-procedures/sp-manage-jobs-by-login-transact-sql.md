@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 832ec15a-6e92-4eb5-8c4a-af4dba79fbaa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e1abaab39d2ab7cc63e6089c0ae58777f4b84a35
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e810bf996f7dbaa8624c6a0e834011d759aa9348
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720224"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899387"
 ---
 # <a name="sp_manage_jobs_by_login-transact-sql"></a>sp_manage_jobs_by_login (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   删除或重新分配属于指定登录名的作业。  
   
@@ -41,7 +41,7 @@ sp_manage_jobs_by_login
      [, [@new_owner_login_name = ] 'new_owner_login_name']  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @action = ] 'action'`要对指定的登录名执行的操作。 *操作*为**varchar （10）**，无默认值。 删除*操作*时**DELETE**， **sp_manage_jobs_by_login**会删除*current_owner_login_name*拥有的所有作业。 **重新分配***操作*时，会将所有作业分配给*new_owner_login_name*。  
   
 `[ @current_owner_login_name = ] 'current_owner_login_name'`当前作业所有者的登录名。 *current_owner_login_name* **sysname**，无默认值。  

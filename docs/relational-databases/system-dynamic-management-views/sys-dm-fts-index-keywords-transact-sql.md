@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: fce7b2a1-7e74-4769-86a8-c77c7628decd
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: e29fcabeb2f99def9f2e06b1d0b157c8d148002a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3b95ce96f126249da124ea5830e7cc898fa9f8b6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734545"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898850"
 ---
 # <a name="sysdm_fts_index_keywords-transact-sql"></a>sys.dm_fts_index_keywords (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   返回有关指定表的全文索引内容的信息。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "85734545"
 sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  db_id （"*database_name*"）  
  对[DB_ID （）](../../t-sql/functions/db-id-transact-sql.md)函数的调用。 此函数接受数据库名称并返回数据库 ID，该 ID 是**dm_fts_index_keywords**使用来查找指定的数据库。 如果省略 database_name，则返回当前数据库 ID**。  
   

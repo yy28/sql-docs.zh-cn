@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: c2590159-6ec5-4510-81ab-e935cc4216cd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e870c1411382fc38494a899fa3621c80342c1a8e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4d1bc18704b4f2b239fe590184d58289d66b35fc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730079"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898286"
 ---
 # <a name="sysfn_trace_gettable-transact-sql"></a>sys.fn_trace_gettable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   以表格形式返回一个或多个跟踪文件的内容。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "85730079"
 fn_trace_gettable ( 'filename' , number_files )  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  "*filename*"  
  指定要读取的初始跟踪文件。 *filename*为**nvarchar （256）**，无默认值。  
   

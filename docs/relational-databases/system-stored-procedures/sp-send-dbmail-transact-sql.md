@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: f1d7a795-a3fd-4043-ac4b-c781e76dab47
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 42dbd7a5bf6e1bc7b705bcf017987da959faa114
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 63b7029c69fff73615d34bd723b97290b2557afb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827521"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899206"
 ---
 # <a name="sp_send_dbmail-transact-sql"></a>sp_send_dbmail (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   向指定收件人发送电子邮件。 该邮件可能包含查询结果集和/或文件附件。 当邮件成功放入数据库邮件队列中时， **sp_send_dbmail**将返回该消息的**mailitem_id** 。 此存储过程位于**msdb**数据库中。  
   
@@ -91,7 +91,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
 -   低  
   
--   一般  
+-   普通  
   
 -   高  
   
@@ -99,11 +99,11 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
 `[ @sensitivity = ] 'sensitivity'`邮件的敏感度。 参数的类型为**varchar （12）**。 该参数可能包含下列值之一：  
   
--   一般  
+-   普通  
   
 -   个人  
   
--   Private  
+-   专用  
   
 -   机密  
   

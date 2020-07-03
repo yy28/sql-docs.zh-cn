@@ -1,6 +1,6 @@
 ---
 title: 安装 SQL Server 更新后升级 DQS 数据库架构
-description: 了解如何在修补程序、修补程序或累积更新更新 SQL Server 之后，使用 Dqsinstaller.exe 升级 Data Quality Services （DQS）实例。
+description: 了解如何在修补程序、修补程序或累积更新更新 SQL Server 后使用 DQSInstaller.exe 升级 Data Quality Services （DQS）实例。
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: c8f3fbae-02c4-464d-a35c-7108f48c58cb
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: db5009ef7f5c9ff2a57022d30b2eb9f009fb6ab8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e2491a46bb4c0e07c61b5c827a7b8f666d09d94c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75558032"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897800"
 ---
 # <a name="upgrade-dqs-databases-schema-after-installing-sql-server-update"></a>安装 SQL Server 更新后升级 DQS 数据库架构
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   当你在先前配置的 DQS 实例上安装了 SQL Server 更新（补丁、修补程序或累积更新）后，你可能需要运行 DQSInstaller.exe 文件（带 **upgrade** 命令行参数）来升级 DQS 数据库架构。 否则，当您尝试使用数据质量客户端连接到数据质量服务器时，可能会收到以下错误：  
   

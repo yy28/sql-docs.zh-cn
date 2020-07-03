@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: a5821c70-f150-4676-8476-3a31f7403dca
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bf1406488424febe0ea98a686b91068fe2d07eda
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 58e6166060c5e2099051403361b2eb2c51ad4c18
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725769"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898918"
 ---
 # <a name="sysinternal_tables-transact-sql"></a>sys.internal_tables (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   为每个作为内部表的对象返回一行。 内部表由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自动生成以支持各种功能。 例如，创建主 XML 索引时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将自动创建一个内部表以保存拆分的 XML 文档数据。 内部表出现在每个数据库的**sys**架构中，并具有唯一的系统生成的名称，用于指示其功能，例如**xml_index_nodes_2021582240_32001**或**queue_messages_1977058079**  
   

@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 66b95f96-6df7-4657-9b3c-86a58c788ca5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 49859c498b0c2cb8550d7153334252a35d5d0e42
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6b25dfb47c49bd53a4544649d8e10e4c092d04de
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85646866"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898217"
 ---
 # <a name="coresp_update_data_source-transact-sql"></a>core.sp_update_data_source (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   更新管理数据仓库 core.source_info_internal 表中的现有行或在其中插入新行。 每次上载包开始将数据上载到管理数据仓库时，数据收集器运行时组件都会调用此过程。  
   
@@ -45,7 +45,7 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
     , [ @source_id = ] source_id OUTPUT  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  [ @collection_set_uid =] "*collection_set_uid*"  
  收集组的 GUID。 *collection_set_uid*是**uniqueidentifier**，没有默认值。 若要获取 GUID，请查询 msdb 数据库中的 dbo.syscollector_collection_sets 视图。  
   

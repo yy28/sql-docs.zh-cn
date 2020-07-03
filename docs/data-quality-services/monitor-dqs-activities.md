@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: ba2bfe0a9979d94df43b923b7eff2ed68750e19a
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 92f0d05b8b7f6bc4e72c70c73d9b93f0e785206d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85809830"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897483"
 ---
 # <a name="monitor-dqs-activities"></a>监视 DQS 活动
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中集中监视以下活动：知识发现、域管理、匹配策略、数据清理、数据匹配和 SSIS 清理。  
   
@@ -135,7 +135,7 @@ ms.locfileid: "85809830"
   
 3.  系统会提示您指定要保存的 Excel 文件的名称和位置。 导出的 Excel 文件包含以下工作表：  
   
-    |工作表名称|描述|  
+    |工作表名称|说明|  
     |----------------|-----------------|  
     |活动|包含与活动网格中的活动有关的信息（列）。|  
     |进程|包含与 **“活动步骤”** 选项卡中活动的进程有关的信息（列）。|  

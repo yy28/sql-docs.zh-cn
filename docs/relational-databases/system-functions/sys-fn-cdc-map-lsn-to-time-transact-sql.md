@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 405aa29c-8bd8-42d3-9f39-7494b643fc6f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 21290d164b899bf1ea14f392df31d09d38becc71
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b89925b781d94d84a22e744955d335e163875d2f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85647667"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898357"
 ---
 # <a name="sysfn_cdc_map_lsn_to_time-transact-sql"></a>sys.fn_cdc_map_lsn_to_time (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   根据指定的日志序列号（LSN），返回[cdc lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)系统表中**tran_end_time**列的日期和时间值。 您可以使用此函数系统地将 LSN 范围映射到更改表中的日期范围。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "85647667"
 sys.fn_cdc_map_lsn_to_time ( lsn_value )  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  *lsn_value*  
  要进行匹配的 LSN 值。 *lsn_value*为**binary （10）**。  
   

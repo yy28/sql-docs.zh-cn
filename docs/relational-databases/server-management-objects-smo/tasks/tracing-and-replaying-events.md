@@ -16,19 +16,19 @@ ms.assetid: f41b3f85-2f6c-4c3e-9776-8c73d2cc7a53
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d83b716d9919bf322097b8ded8409950982d961c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c6a164927ed5a6dd711dc6d2243dd3b96c85ca08
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70148361"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896309"
 ---
 # <a name="tracing-and-replaying-events"></a>跟踪和重播事件
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
-  在 SMO 中， <xref:Microsoft.SqlServer.Management.Trace> [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]命名空间中的**跟踪**和**重播**对象提供对功能（用于监视[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]或[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]的实例）的编程访问。 您可以捕获有关每个事件的数据并将其保存到文件或表中供以后分析。 例如，可以监视生产环境，了解哪些过程由于执行速度太慢影响了性能。  
+  在 SMO 中，命名空间中的**跟踪**和**重播**对象 <xref:Microsoft.SqlServer.Management.Trace> 提供对 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 功能（用于监视或的实例）的编程访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 。 您可以捕获有关每个事件的数据并将其保存到文件或表中供以后分析。 例如，可以监视生产环境，了解哪些过程由于执行速度太慢影响了性能。  
   
- **跟踪**和**重播**对象提供一组对象，这些对象可用于在实例上创建跟踪[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 可以在您自己的应用程序中使用这些对象为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 手动创建跟踪。 此外，SMO **Trace**对象可用于读取通过监视[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]或 DTS 日志记录创建的 SQL 跟踪文件和表。  
+ **跟踪**和**重播**对象提供一组对象，这些对象可用于在实例上创建跟踪 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 可以在您自己的应用程序中使用这些对象为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 手动创建跟踪。 此外，SMO **Trace**对象可用于读取通过监视 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 或 DTS 日志记录创建的 SQL 跟踪文件和表。  
   
  SMO**跟踪**对象允许您执行以下功能：  
   
@@ -56,7 +56,7 @@ ms.locfileid: "70148361"
   
  SMO 跟踪对象驻留在 <xref:Microsoft.SqlServer.Management.Trace> 命名空间中，该命名空间要求引用 Microsoft.SQLServer.ConnectionInfo.dll 文件。  
   
- **跟踪**和**重播**对象需要一个[microsoft.sqlserver.management.common.serverconnection>](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx) <xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A>对象，以便与实例建立连接[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 [Microsoft.sqlserver.management.common.serverconnection>](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx)对象驻留在[ConnectionInfo 命名空间中，该命名](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common)空间需要引用对文件的引用。  
+ **跟踪**和**重播**对象需要一个[microsoft.sqlserver.management.common.serverconnection>](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx) <xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A> 对象，以便与实例建立连接 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 [Microsoft.sqlserver.management.common.serverconnection>](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx)对象位于命名空间中[，该命名](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common)空间需要对 Microsoft.SQLServer.ConnectionInfo.dll 文件的引用。  
   
 > [!NOTE]  
 >  64位平台上不支持**跟踪**和**重播**对象。  

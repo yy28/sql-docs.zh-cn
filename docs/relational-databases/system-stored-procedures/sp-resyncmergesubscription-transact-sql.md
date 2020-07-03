@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e04d464a-60ab-4b39-a710-c066025708e6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eb9512bcf60d7a82d19cb383a87618c7d4c30393
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 48dac5345df6d9e963f3601741aa93a68e2dfa3f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767472"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899223"
 ---
 # <a name="sp_resyncmergesubscription-transact-sql"></a>sp_resyncmergesubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   将合并订阅重新同步到指定的已知验证状态。 这使您得以将订阅数据库强制集中或同步到特定的时点（如上次成功验证的时间）或指定的日期。 使用此方法重新同步订阅时，不重新应用快照。 此存储过程不用于快照复制订阅或事务复制订阅。 此存储过程在发布服务器的发布数据库中或订阅服务器的订阅数据库中执行。  
   
@@ -42,7 +42,7 @@ sp_resyncmergesubscription [ [ @publisher = ] 'publisher' ]
     [ , [ @resync_date_str = ] resync_date_string ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @publisher = ] 'publisher'`发布服务器的名称。 *发布服务器*的**sysname**，默认值为 NULL。 如果存储过程在发布服务器上运行，则 NULL 值有效。 如果在订阅服务器上运行该存储过程，则必须指定发布服务器。  
   
 `[ @publisher_db = ] 'publisher_db'`发布数据库的名称。 *publisher_db*的默认值为**sysname**，默认值为 NULL。 如果存储过程在发布服务器的发布数据库中运行，则 NULL 值有效。 如果在订阅服务器上运行该存储过程，则必须指定发布服务器。  

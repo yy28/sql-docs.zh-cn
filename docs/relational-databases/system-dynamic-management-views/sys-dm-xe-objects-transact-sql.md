@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 5d944b99-b097-491b-8cbd-b0e42b459ec0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f89b6d7e2e4843ba252f884f02a6944de57a8326
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4f4e4a404c2bc2ac49ad9916cef668e1eb1656ab
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85648400"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898584"
 ---
 # <a name="sysdm_xe_objects-transact-sql"></a>sys.dm_xe_objects (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   对事件包显示的每个对象都返回一行。 对象可以是以下项之一：  
   
@@ -44,7 +44,7 @@ ms.locfileid: "85648400"
  |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |name|**nvarchar(60)**|对象的名称。 名称在特定对象类型的包中是唯一的。 不可为 null。|  
-|object_type|**nvarchar(60)**|对象的类型。 object_type 是以下项之一：<br /><br /> event<br /><br /> action<br /><br /> 目标<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> 类型<br /><br /> 不可为 null。|  
+|object_type|**nvarchar(60)**|对象的类型。 object_type 是以下项之一：<br /><br /> event<br /><br /> action<br /><br /> 目标<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> type<br /><br /> 不可为 null。|  
 |package_guid|**uniqueidentifier**|公开此操作的包的 GUID。 与 sys.dm_xe_packages.package_id 存在多对一关系。 不可为 null。|  
 |description|**nvarchar(256)**|操作的说明。 说明由包作者设置。 不可为 null。|  
 |capabilities|**int**|说明对象功能的位图。 可以为 Null。|  

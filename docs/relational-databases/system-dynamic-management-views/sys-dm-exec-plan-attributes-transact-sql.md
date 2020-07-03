@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7ffabc2f8bb48b006ec1224a3ae81ac49d6c21f0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9b616e6186e9d5e19f353df1053d479e0d0afdd6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734790"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898897"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   针对计划句柄所指定计划的每个计划属性返回一行。 可以使用此表值函数获取有关特定计划的详细信息，例如计划的缓存键值或当前同步执行次数。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "85734790"
 sys.dm_exec_plan_attributes ( plan_handle )  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  *plan_handle*  
  用于唯一标识已执行并且其计划驻留在计划缓存中的批处理的查询计划。 *plan_handle*为**varbinary （64）**。 可以从[sys.databases dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)动态管理视图获取计划句柄。  
   

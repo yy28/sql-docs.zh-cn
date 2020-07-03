@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 3af8b47a-936d-4411-91d1-d2d16dda5623
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b7e0d440a453b0481a4440ec432669d3981b9da8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8ddc9e534b5f0e434dd9c0ca980da82eddb8006a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754003"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898269"
 ---
 # <a name="sysfn_validate_plan_guide-transact-sql"></a>sys.fn_validate_plan_guide (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   验证指定计划指南的有效性。 sys.fn_validate_plan_guide 函数返回计划指南应用于其查询时遇到的第一条错误消息。 如果计划指南有效，则将返回一个空的行集。 在更改了数据库的物理设计后，计划指南可能会变为无效。 例如，如果计划指南指定了特定索引并且随后将该索引删除，则查询将不能再使用该计划指南。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "85754003"
 sys.fn_validate_plan_guide ( plan_guide_id )  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  *plan_guide_id*  
  是在[plan_guides](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)目录视图中报告的计划指南的 ID。 *plan_guide_id*为**int** ，无默认值。  
   

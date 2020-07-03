@@ -18,15 +18,15 @@ ms.assetid: 33666f28-c370-47e2-a932-190316ed5f69
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: ea4f2fbd33bf3eb1e9e6a2e2b079ef78796f6f61
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a148750db907ebf43d6976d4d574145516e13d65
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738638"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898819"
 ---
 # <a name="sysdm_fts_semantic_similarity_population-transact-sql"></a>sys.dm_fts_semantic_similarity_population (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   为关联有语义索引的每个表中的每个相似性索引返回一行关于文档相似性索引填充状态的信息。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "85738638"
     
 ||||  
 |-|-|-|  
-|**列名**|类型|**说明**|  
+|**列名**|**Type**|**说明**|  
 |**database_id**|**int**|包含正在填充的全文索引的数据库 ID。|  
 |**catalog_id**|**int**|包含此全文索引的全文目录的 ID。|  
 |table_id****|**int**|其全文索引正在被填充的表的 ID。|  

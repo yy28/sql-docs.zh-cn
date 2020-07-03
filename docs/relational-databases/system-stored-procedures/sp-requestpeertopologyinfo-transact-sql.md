@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 15cd28bd-5a72-41fb-ae1b-726baaa6fad5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b5d3a61a52ffcdc1aec49e0682a6a9f00af188b8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c88b25976af9914d21ea4ee80d165e893360bdf0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85639964"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899273"
 ---
 # <a name="sp_requestpeertopologyinfo-transact-sql"></a>sp_requestpeertopologyinfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   使用有关对等事务复制拓扑的信息填充[MSpeer_topologyresponse](../../relational-databases/system-tables/mspeer-topologyresponse-transact-sql.md)系统表。 执行[sp_gettopologyinfo](../../relational-databases/system-stored-procedures/sp-gettopologyinfo-transact-sql.md)以获取 XML 格式的表中的信息。  
   
@@ -37,7 +37,7 @@ sp_requestpeertopologyinfo [ @publication = ] 'publication'
         [ ,[ @requestid=] request_id OUTPUT  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  [ @publication =] "*发布*"  
  要执行拓扑范围内的状态请求的发布的名称。 *发布*为**sysname**，无默认值。  
   

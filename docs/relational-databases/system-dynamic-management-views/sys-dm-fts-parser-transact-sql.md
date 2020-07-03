@@ -19,16 +19,16 @@ ms.assetid: 2736d376-fb9d-4b28-93ef-472b7a27623a
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 0552dbdce5da12db4fedadecb5a4bd7e9c55c278
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 171d63913c0d46b1d344082a5784c7507111a39b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738657"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898839"
 ---
 # <a name="sysdm_fts_parser-transact-sql"></a>sys.dm_fts_parser (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   在将给定[断字符](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)、[同义词库](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)和[非索引字表](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)组合应用于查询字符串输入后，返回最终的标记结果。 此词语切分结果等效于全文引擎针对指定查询字符串的输出。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "85738657"
 sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  *query_string*  
  要分析的查询。 *query_string*可以是[包含](../../t-sql/queries/contains-transact-sql.md)语法支持的字符串链。 例如，您可以包括变形、同义词库和逻辑运算符。  
   

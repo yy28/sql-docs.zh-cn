@@ -15,17 +15,17 @@ ms.assetid: 342569ba-d2f7-44d2-8f3f-ae9c701c7f0f
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6ffcdda8e1c6a3c85703ad7f3d6ed94ca0ca91fe
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fdf4d998eb87cc213f7ce6b3068c4bc142790e5a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70148718"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899064"
 ---
 # <a name="setting-properties---smo"></a>设置属性 - SMO
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
-  属性是存储有关对象的说明性信息的值。 例如， [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]配置选项由<xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A>对象的属性表示。 使用属性集合可以直接或间接访问属性。 直接访问属性使用以下语法：  
+  属性是存储有关对象的说明性信息的值。 例如， [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 配置选项由 <xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A> 对象的属性表示。 使用属性集合可以直接或间接访问属性。 直接访问属性使用以下语法：  
   
  `objInstance.PropertyName`  
   
@@ -62,7 +62,7 @@ ms.locfileid: "70148718"
 
   
 ## <a name="getting-and-setting-a-property-in-visual-basic"></a>在 Visual Basic 中获取和设置属性  
- 此代码示例<xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A>演示如何获取<xref:Microsoft.SqlServer.Management.Smo.Information>对象的属性，以及如何将<xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A>属性的属性设置为<xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes>枚举类型的**ExecuteSql**成员。  
+ 此代码示例演示如何获取对象的 <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> 属性 <xref:Microsoft.SqlServer.Management.Smo.Information> ，以及如何将属性的属性设置 <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> 为枚举类型的**ExecuteSql**成员 <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> 。  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -75,7 +75,7 @@ srv.ConnectionContext.SqlExecutionModes = SqlExecutionModes.ExecuteSql
 ```
   
 ## <a name="getting-and-setting-a-property-in-visual-c"></a>在 Visual C# 中获取和设置属性  
- 此代码示例<xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A>演示如何获取<xref:Microsoft.SqlServer.Management.Smo.Information>对象的属性，以及如何将<xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A>属性的属性设置为<xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes>枚举类型的**ExecuteSql**成员。  
+ 此代码示例演示如何获取对象的 <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> 属性 <xref:Microsoft.SqlServer.Management.Smo.Information> ，以及如何将属性的属性设置 <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> 为枚举类型的**ExecuteSql**成员 <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> 。  
   
 ```csharp  
 {   
@@ -154,7 +154,7 @@ tb.Create();
 ```  
   
 ## <a name="iterating-through-all-properties-of-an-object-in-visual-basic"></a>在 Visual Basic 中遍历对象的所有属性  
- 此代码示例将循环访问**Properties** <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>对象的 Properties 集合，并将[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]其显示在输出屏幕上。  
+ 此代码示例将循环访问对象的**Properties**集合 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> ，并将其显示在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 输出屏幕上。  
   
  在本示例中，由于 <xref:Microsoft.SqlServer.Management.Smo.Property> 对象同时也是 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 关键字，因此将该对象置于方括号中。  
   
@@ -178,7 +178,7 @@ Next
 ```
   
 ## <a name="iterating-through-all-properties-of-an-object-in-visual-c"></a>在 Visual C# 中遍历对象的所有属性  
- 此代码示例将循环访问**Properties** <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>对象的 Properties 集合，并将[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]其显示在输出屏幕上。  
+ 此代码示例将循环访问对象的**Properties**集合 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> ，并将其显示在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 输出屏幕上。  
   
 ```csharp  
 {   

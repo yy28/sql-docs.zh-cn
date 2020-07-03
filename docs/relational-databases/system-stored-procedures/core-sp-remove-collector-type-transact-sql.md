@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 88ceba25-e41a-405f-a416-bb68918a0024
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 85774dea163b6f07e9d3b9a5514db787d722874d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8c14d41dabfb8b587b3baaaaec9cb11ac3ac9d8f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85646889"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898185"
 ---
 # <a name="coresp_remove_collector_type-transact-sql"></a>core.sp_remove_collector_type (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   从管理数据仓库数据库中的 core.supported_collector_types 视图中删除一个条目。 必须在管理数据仓库数据库的上下文中执行此过程。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "85646889"
 core.sp_remove_collector_type [ @collector_type_uid = ] 'collector_type_uid'  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  [ @collector_type_uid =] "*collector_type_uid*"  
  收集器类型的 GUID。 *collector_type_uid*是**uniqueidentifier**，没有默认值。  
   

@@ -16,19 +16,19 @@ ms.assetid: 27aa179a-f3ee-4c70-9e7b-e26dba28bc3c
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e6e5c8f9d87fe511964d5657c57c70fe4379225e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5047719be180ff311f606f43c1f91fdb5fa6824e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70148564"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897166"
 ---
 # <a name="smo-syntax-conventions"></a>SMO 语法约定
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理对象（SMO）的印刷约定基于 Visual Studio .NET 参考[!INCLUDE[msCoName](../../includes/msconame-md.md)]资料中使用的约定。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理对象（SMO）的印刷约定基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio .net 参考资料中使用的约定。  
   
-|约定|用于|  
+|约定|用途|  
 |----------------|--------------|  
 |大写|在操作系统级别使用的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、宏名称和字词；文本中的文件名。|  
 |`monospace`|示例命令行和程序代码。|  

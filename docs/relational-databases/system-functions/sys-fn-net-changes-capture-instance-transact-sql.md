@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 342fa030-9fd9-4b74-ae4d-49f6038a5073
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: add3f81793b2dc21c08ca601bb1c48cc7d4588be
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5f000c8d2dc4f0f2adc95814ba9ef687602403dc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783077"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898320"
 ---
 # <a name="sysfn_net_changes_ltcapture_instancegt-transact-sql"></a>sys. fn_net_changes_ &lt; capture_instance &gt; （transact-sql）
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **净更改**查询函数的包装器。 创建这些函数所必需的脚本由 sys.sp_cdc_generate_wrapper_function 存储过程生成。  
   
@@ -48,7 +48,7 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
 }  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  *start_time*  
  **Datetime**值，表示要包含在结果集中的更改表条目范围的低端点。  
   
@@ -93,7 +93,7 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
 ## <a name="table-returned"></a>返回的表  
   
-|列名称|列类型|描述|  
+|列名称|列类型|说明|  
 |-----------------|-----------------|-----------------|  
 |\<columns from @column_list>|**随着**|在调用以生成用于创建包装的脚本时，将在 sp_cdc_generate_wrapper_function 的**column_list**参数中标识的列。 如果*column_list*为空，则所有跟踪的源列将出现在结果集中。|  
 |__CDC_OPERATION|**nvarchar （2）**|一个操作代码，它指示将行应用于目标环境所需的操作。 操作将因以下调用中提供的参数*row_filter_option*的值而异：<br /><br /> *row_filter_option* = "all"、"all with mask"<br /><br /> 'D' - 删除操作<br /><br /> 'I' - 插入操作<br /><br /> 'UN' - 更新操作<br /><br /> *row_filter_option* = "all with merge"<br /><br /> 'D' - 删除操作<br /><br /> 'M' - 插入操作或更新操作|  

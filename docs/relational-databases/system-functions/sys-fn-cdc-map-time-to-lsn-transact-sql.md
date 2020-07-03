@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 6feb051d-77ae-4c93-818a-849fe518d1d4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ea779dfb66d9fce2053fcee0b6fd3eedbc26a4ef
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a3cd283f09263d4f36f0f4e2cfd4a18767dd614e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784852"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898368"
 ---
 # <a name="sysfn_cdc_map_time_to_lsn-transact-sql"></a>sys.fn_cdc_map_time_to_lsn (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   返回指定时间[lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)系统表的**start_lsn**列中的日志序列号（LSN）值。 您可以使用此函数将日期时间范围系统地映射到变更数据捕获枚举函数 cdc 所需的基于 LSN 的范围，该范围是[fn_cdc_get_all_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)和[cdc](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md) fn_cdc_get_net_changes_<capture_instance>返回该范围内的数据更改。  
   
@@ -48,7 +48,7 @@ sys.fn_cdc_map_time_to_lsn ( '<relational_operator>', tracking_time )
 }  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  **"**<relational_operator>**"** {小于 | 最大小于 | 最大大于 | 最小大于 | 小于等于  
  用于标识**cdc. lsn_time_mapping**表中的不同 LSN 值，并在与*tracking_time*值进行比较时，使用满足关系的关联**tran_end_time**来识别。  
   

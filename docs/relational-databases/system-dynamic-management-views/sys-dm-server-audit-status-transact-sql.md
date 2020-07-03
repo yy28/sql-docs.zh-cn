@@ -18,23 +18,23 @@ helpviewer_keywords:
 ms.assetid: 4aa32d54-2ae1-437e-bbaa-7f1df1404b44
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: acb5726d9309a93e389e22a57d4be54cf03dbe24
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 982ebf62124a392c98ea2357e112cdb8bb56d45b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830414"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898677"
 ---
 # <a name="sysdm_server_audit_status-transact-sql"></a>sys.dm_server_audit_status (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   对于每次服务器审核返回一行，以指示该审核的当前状态。 有关详细信息，请参阅 [SQL Server Audit（数据库引擎）](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**audit_id**|**int**|审核的 ID。 映射到**sys.databases**目录视图中的**audit_id**字段。|  
-|**name**|**sysname**|审核的名称。 与**server_audits sys.databases**目录视图中的**name**字段相同。|  
-|**status**|**smallint**|服务器审核的数值状态：<br /><br /> 0 = 未启动<br /><br /> 1 =<br />        开始学习<br /><br /> 2 =<br />      运行时失败<br /><br /> 3 = 目标创建失败<br /><br /> 4 = 正在关闭|  
+|name|**sysname**|审核的名称。 与**server_audits sys.databases**目录视图中的**name**字段相同。|  
+|**status**|**smallint**|服务器审核的数值状态：<br /><br /> 0 = 未启动<br /><br /> 1 =<br />        已开始<br /><br /> 2 =<br />      运行时失败<br /><br /> 3 = 目标创建失败<br /><br /> 4 = 正在关闭|  
 |**status_desc**|**nvarchar(256)**|显示服务器审核状态的字符串：<br /><br /> NOT_STARTED<br /><br /> STARTED<br /><br /> RUNTIME_FAIL<br /><br /> TARGET_CREATION_FAILED<br /><br /> SHUTTING_DOWN|  
 |**status_time**|**datetime2**|审核的最后状态更改的时间戳（UTC 格式）。|  
 |**event_session_address**|**varbinary(8)**|与审核关联的扩展事件会话的地址。 与**dm_xe_sessions sys.databases**目录视图相关的。|  

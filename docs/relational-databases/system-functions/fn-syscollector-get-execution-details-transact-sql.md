@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d59ddf0c-72c0-4c57-bc83-aef260e4e105
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 44180a30c69a8da47cfad77c07f86ee6b9b8bfaa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2442148dbb8f9db45f5b80ba8b2a4fdd90ef5c29
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775186"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898459"
 ---
 # <a name="fn_syscollector_get_execution_details-transact-sql"></a>fn_syscollector_get_execution_details (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   返回与给定包的 package_execution_id 相匹配的 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 日志 (sysssislog) 部分。 由包或其任务和容器在运行时生成的每个日志记录项在表中各占一行。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "85775186"
 fn_syscollector_get_execution_details ( log_id )  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  *log_id*  
  执行日志的本地唯一标识符。 *log_id*是**int**。  
   

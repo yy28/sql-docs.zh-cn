@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: cbe13c22-4d7d-4a36-b194-7a13ce68ef27
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d9716985438a9e29c9ef8d72eb2ba3e77b8db42f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: adcf5709bc3bf086123324095a796e024a08911e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85639998"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899283"
 ---
 # <a name="sp_requestpeerresponse-transact-sql"></a>sp_requestpeerresponse (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   从对等拓扑中的节点执行此过程时，此过程将从拓扑中的其他每个节点请求响应。 通过执行此过程并检查对应的响应，可以保证所有先前命令都已传递到响应的节点。 此存储过程在请求的节点上对任何数据库执行。  
   
@@ -38,7 +38,7 @@ sp_requestpeerresponse [ @publication = ] 'publication'
     [ , [ @request_id = ] request_id OUTPUT ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @publication = ] 'publication'`要验证其状态的对等拓扑中的发布名称。 *发布*为**sysname**，无默认值。  
   
 `[ @description = ] 'description'`可用于标识各个状态请求的用户定义的信息。 *description*的值为**nvarchar （4000）**，默认值为 NULL。  
