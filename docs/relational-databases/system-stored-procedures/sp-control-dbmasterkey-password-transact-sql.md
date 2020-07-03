@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 63979a87-42a2-446e-8e43-30481faaf3ca
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 620a174f50d133c4a1dd34ed54c74abb7ee06a71
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b30529fbb5d4b80b0835ddb502c9a2c964ca8776
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81012438"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85870622"
 ---
 # <a name="sp_control_dbmasterkey_password-transact-sql"></a>sp_control_dbmasterkey_password (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   添加或删除包含打开数据库主密钥所需的密码的凭据。  
   
@@ -47,13 +47,13 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
  指定主密钥的密码。 *密码*为**nvarchar**。  
   
  @action= N'add '  
- 指定已指定数据库的凭据将添加到凭据存储区中。 凭据将包含数据库主密钥的密码。 传递给@action的值为**nvarchar**。  
+ 指定已指定数据库的凭据将添加到凭据存储区中。 凭据将包含数据库主密钥的密码。 传递给的值 @action 为**nvarchar**。  
   
  @action= N'drop '  
- 指定将从凭据存储区中删除已指定数据库的凭据。 传递给@action的值为**nvarchar**。  
+ 指定将从凭据存储区中删除已指定数据库的凭据。 传递给的值 @action 为**nvarchar**。  
   
 ## <a name="remarks"></a>备注  
- 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 需要数据库主密钥对密钥进行解密或加密时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会尝试使用实例的服务主密钥对数据库主密钥进行解密。 如果解密失败， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]则将在凭据存储区中搜索与需要其主密钥的数据库具有相同系列 GUID 的主密钥凭据。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 尝试使用每个匹配的凭据对数据库主密钥进行解密，直到成功解密或者没有更多的凭据为止。  
+ 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 需要数据库主密钥对密钥进行解密或加密时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会尝试使用实例的服务主密钥对数据库主密钥进行解密。 如果解密失败，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将在凭据存储区中搜索与需要其主密钥的数据库具有相同系列 GUID 的主密钥凭据。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 尝试使用每个匹配的凭据对数据库主密钥进行解密，直到成功解密或者没有更多的凭据为止。  
   
 > [!CAUTION]  
 >  对于 sa 和其他特权级别高的服务器主体无法访问的数据库，不要为其创建主密钥凭据。 可以对数据库进行配置，以便服务主密钥无法对其密钥层次结构进行解密。 该选项可作为数据库（包含 sa 或其他特权级别高的服务器主体不可访问的加密信息）的深度防御。 为此类数据库创建主密钥凭据将会删除这种深度防御功能，从而使 sa 和其他特权级别高的服务器主体能够对数据库进行解密。  
@@ -82,7 +82,7 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
 ## <a name="examples"></a>示例  
   
 ### <a name="a-creating-a-credential-for-the-adventureworks2012-master-key"></a>A. 为 AdventureWorks2012 主密钥创建凭据  
- 以下示例为 `AdventureWorks2012` 数据库主密钥创建凭据，并将主密钥密码作为机密内容存储在凭据中。 由于传递给的所有参数都`sp_control_dbmasterkey_password`必须为**nvarchar**类型的数据，因此，将用强制转换运算符`N`来转换文本字符串。  
+ 以下示例为 `AdventureWorks2012` 数据库主密钥创建凭据，并将主密钥密码作为机密内容存储在凭据中。 由于传递给的所有参数都 `sp_control_dbmasterkey_password` 必须为**nvarchar**类型的数据，因此，将用强制转换运算符来转换文本字符串 `N` 。  
   
 ```  
 EXEC sp_control_dbmasterkey_password @db_name = N'AdventureWorks2012',   

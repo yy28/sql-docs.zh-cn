@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b873931c5d09f3c54f61e872f8ea6646408c1a04
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d1ba13cd3ae77a13e329c39fea22a9ee9550ed47
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715965"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85873155"
 ---
 # <a name="sp_certify_removable-transact-sql"></a>sp_certify_removable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   验证是否正确配置数据库以便在可移动介质上分发，并向用户报告所有问题。  
   
@@ -42,7 +42,7 @@ sp_certify_removable [ @dbname= ] 'dbname'
      [ , [ @autofix = ] 'auto' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @dbname = ] 'dbname'`指定要验证的数据库。 *dbname*为**sysname**。  
   
 `[ @autofix = ] 'auto'`向系统管理员提供数据库和所有数据库对象的所有权，并删除任何用户创建的数据库用户和非默认权限。 *auto*的值为**nvarchar （4）**，默认值为 NULL。  

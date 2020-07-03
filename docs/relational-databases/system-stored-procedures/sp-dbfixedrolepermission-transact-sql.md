@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b8c30191-f532-49cd-83f3-c271f63ce572
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 52aeca25fd6fcf112adcb2410269fdcb1c049a52
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 69c80caccabb81fd2da1b3bdbe13ada8c5aa2582
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771149"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85867681"
 ---
 # <a name="sp_dbfixedrolepermission-transact-sql"></a>sp_dbfixedrolepermission (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   显示固定数据库角色的权限。 **sp_dbfixedrolepermission**将在中返回正确的信息 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 。 该输出不反映对 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中实现的权限层次结构的更改。 有关详细信息，请参阅[数据库级角色](../../relational-databases/security/authentication-access/database-level-roles.md#fixed-database-roles)，其中显示固定数据库角色的列表及其相应权限。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "85771149"
 sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @rolename = ] 'role'`有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固定数据库角色的名称。 *role*的值为**sysname**，默认值为 NULL。 如果未指定*role* ，将显示所有固定数据库角色的权限。  
   
 ## <a name="return-code-values"></a>返回代码值  

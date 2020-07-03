@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 3ebcf2f1-980f-4543-a84b-fbaeea54eeac
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d584b2db0e66b2affad0e061098f75fc9258fbdb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 086e914f9d05ada8985cdd8f017ef4a47003d1ae
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715919"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85872683"
 ---
 # <a name="sp_change_log_shipping_secondary_database-transact-sql"></a>sp_change_log_shipping_secondary_database (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   更改辅助数据库设置。  
   
@@ -50,7 +50,7 @@ sp_change_log_shipping_secondary_database
 [, [ @history_retention_period = ] 'history_retention_period']  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @restore_delay = ] 'restore_delay'`辅助服务器在还原给定备份文件之前等待的时间，以分钟为单位。 *restore_delay*为**int** ，且不能为 NULL。 默认值为 0。  
   
 `[ @restore_all = ] 'restore_all'`如果设置为1，则在还原作业运行时，辅助服务器将还原所有可用的事务日志备份。 否则，在原还了一个文件之后它将停止。 *restore_all*是**bit** ，并且不能为 NULL。  

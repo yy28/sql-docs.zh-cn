@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 9489dc30-af29-4363-a172-4645947fc95e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7869fed1b04a16a57750fcfd91d18e1b0c0d18a7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 268226d28b134ffe13a5acfca3baf47bde655baf
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738524"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85866743"
 ---
 # <a name="sp_dbmmonitoraddmonitoring-transact-sql"></a>sp_dbmmonitoraddmonitoring (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   创建数据库镜像监视器作业，该作业可定期更新服务器实例上每个镜像数据库的镜像状态。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "85738524"
 sp_dbmmonitoraddmonitoring [ update_period ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  *update_period*  
  指定更新间隔（分钟）。 此值可以是介于 1 到 120 分钟之间的值。 默认值为 1 分钟。  
   
@@ -47,7 +47,7 @@ sp_dbmmonitoraddmonitoring [ update_period ]
 >  如果将更新持续时间设置得太低，客户端的响应时间可能会增加。  
   
 ## <a name="return-code-values"></a>返回代码值  
- 无  
+ None  
   
 ## <a name="result-sets"></a>结果集  
  无  

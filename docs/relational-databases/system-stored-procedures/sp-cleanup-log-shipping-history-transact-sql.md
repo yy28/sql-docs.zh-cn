@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 96d236a9-1d0e-4f83-a4d3-f825b7381e46
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 091cdede60229e70fd492043db0cdfc3ab8cfb7b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d7b69c82e4e2043c8647ba19a8b40306d6836307
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771286"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85871100"
 ---
 # <a name="sp_cleanup_log_shipping_history-transact-sql"></a>sp_cleanup_log_shipping_history (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   此存储过程将根据保持期，清理本地和监视服务器上的历史记录。  
   
@@ -40,7 +40,7 @@ sp_cleanup_log_shipping_history
 [ @agent_type = ] 'agent_type'  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @agent_id = ] 'agent_id',`用于备份的主 ID 或者用于复制或还原的辅助 ID。 *agent_id*为**uniqueidentifier** ，且不能为 NULL。  
   
 `[ @agent_type = ] 'agent_type'`日志传送作业的类型。 0 = 备份，1 = 复制，2 = 还原。 *agent_type*为**tinyint** ，且不能为 NULL。  

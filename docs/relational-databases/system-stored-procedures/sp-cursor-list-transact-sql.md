@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7187cfbe-d4d9-4cfa-a3bb-96a544c7c883
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a644e06ca84bbc4ae5d4da6c9620c4afe1aeccba
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e228e44fe8327bb22ea833a8dc7a531b50bcab26
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787000"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85869716"
 ---
 # <a name="sp_cursor_list-transact-sql"></a>sp_cursor_list (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   报告当前为连接打开的服务器游标的属性。  
   
@@ -40,7 +40,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 [;]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  [ @cursor_return =] *cursor_variable_name*输出  
  已声明的游标变量的名称。 *cursor_variable_name*是**游标**，无默认值。 游标是可滚动、动态的只读游标。  
   
@@ -54,7 +54,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 |3|报告本地游标和全局游标。|  
   
 ## <a name="return-code-values"></a>返回代码值  
- 无  
+ None  
   
 ## <a name="cursors-returned"></a>返回的游标  
  sp_cursor_list 返回的报告是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 游标输出参数，而不是结果集。 这样，[!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理、存储过程和触发器便可以按一次一行的方式处理输出。 这还意味着无法直接从数据库 API 函数调用该过程。 游标输出参数必须绑定到程序变量，但是数据库 API 不支持绑定游标参数或变量。  

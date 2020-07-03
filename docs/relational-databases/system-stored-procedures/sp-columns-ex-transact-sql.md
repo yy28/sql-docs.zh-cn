@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c12ef6df-58c6-4391-bbbf-683ea874bd81
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2aa75e2f742cbafd64f5bb8d76d7cd8dbf4028ed
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 77608294b06025d5c265e67f71f9b0b228732729
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771259"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85871104"
 ---
 # <a name="sp_columns_ex-transact-sql"></a>sp_columns_ex (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   返回指定链接服务器表的列信息，每列一行。 如果指定了*column* ， **sp_columns_ex**仅返回特定列的列信息。  
   
@@ -43,7 +43,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
      [ , [ @ODBCVer = ] 'ODBCVer' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @table_server = ] 'table_server'`要返回其列信息的链接服务器的名称。 *table_server* **sysname**，无默认值。  
   
 `[ @table_name = ] 'table_name'`要返回其列信息的表的名称。 *table_name*的默认值为**sysname**，默认值为 NULL。  
@@ -57,7 +57,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
 `[ @ODBCVer = ] 'ODBCVer'`所使用的 ODBC 的版本。 *ODBCVer*的值为**int**，默认值为2。 这指示 ODBC 版本 2。 有效值为 2 或 3。 有关版本 2 和 3 之间的行为差异的信息，请参阅 ODBC SQLColumns 规范。  
   
 ## <a name="return-code-values"></a>返回代码值  
- 无  
+ None  
   
 ## <a name="result-sets"></a>结果集  
   

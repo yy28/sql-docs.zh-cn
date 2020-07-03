@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e6accbb03bf4ed06f84f67263e89ab9c6bfa7654
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f3729587261ab090548ad93f5a1000f621239557
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85646047"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85868959"
 ---
 # <a name="sp_cursorfetch-transact-sql"></a>sp_cursorfetch (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   从数据库中提取由一行或多行组成的缓冲区。 此缓冲区中的行组称为游标的*提取缓冲区*。 通过在表格格式数据流（TDS）包中指定 ID = 7 来调用 sp_cursorfetch。  
   
@@ -39,14 +39,14 @@ sp_cursorfetch cursor
     [ , fetchtype[ , rownum [ , nrows] ]]   
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  *cursor*  
  是由生成并由 sp_cursoropen 返回的*句柄*值 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *cursor*是为**int**输入值调用的必需参数。 有关详细信息，请参阅本主题后面的 "备注" 部分。  
   
  *fetchtype*  
  指定要提取的游标缓冲区。 *fetchtype*是一个可选参数，它需要以下整数输入值之一。  
   
-|值|名称|描述|  
+|值|名称|说明|  
 |-----------|----------|-----------------|  
 |0x0001|FIRST|提取*nrows*行的第一个缓冲区。 如果*nrows*等于0，则游标位于结果集之前，不返回任何行。|  
 |0x0002|NEXT|提取*nrows*行的下一个缓冲区。|  
@@ -133,7 +133,7 @@ sp_cursorfetch cursor
   
  RPC 状态参数设置为下表中显示的值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |0|过程已成功执行。|  
 |0x0001|过程失败。|  
@@ -142,7 +142,7 @@ sp_cursorfetch cursor
   
  这些行将作为典型的结果集返回，也即：列格式 (0x2a)、行 (0xd1)，后跟完成 (0xfd)。 元数据标记使用与为 sp_cursoropen 指定的相同格式发送，也即：对于 SQL Server 7.0 用户为 0x81、0xa5 和 0xa4 等。 行状态指示器在具有列名称 rowstat 和数据类型 INT4 的每一行的末尾作为隐藏列发送（类似于 BROWSE 模式）。 此 rowstat 列具有下表中显示的值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |0x0001|FETCH_SUCCEEDED|  
 |0x0002|FETCH_MISSING|  

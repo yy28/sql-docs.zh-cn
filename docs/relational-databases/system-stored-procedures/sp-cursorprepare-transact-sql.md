@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 21710c1cda732c09eed0a71da2286a12b8496783
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 130446e1f92fd735c3ab83a8f515fcf36fb63948
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733330"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85868820"
 ---
 # <a name="sp_cursorprepare-transact-sql"></a>sp_cursorprepare (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   将游标语句或批处理编译成执行计划，但并不创建游标。 编译的语句以后可供 sp_cursorexecute 使用。 此过程与 sp_cursorexecute 结合在一起具有与 sp_cursoropen 相同的功能，但拆分为两个阶段。 通过在表格格式数据流（TDS）包中指定 ID = 3 来调用 sp_cursorprepare。  
   
@@ -39,7 +39,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
     [ , scrollopt[ , ccopt]]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  *prepared_handle*  
  SQL Server 生成的已准备好的*句柄*标识符，它返回一个整数值。  
   
@@ -61,14 +61,14 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
  *options*  
  一个可选参数，它返回游标结果集列的说明。 *选项*需要以下**int**输入值。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
  *scrollopt*  
  滚动选项。 *scrollopt*是一个可选参数，它需要以下**整数**输入值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -90,7 +90,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
  *ccopt*  
  并发控制选项。 *ccopt*是一个可选参数，它需要以下**整数**输入值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS（以前称为 LOCKCC）|  
@@ -109,7 +109,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 ## <a name="remarks"></a>备注  
  RPC 状态参数为以下值之一：  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |0|成功|  
 |0x0001|失败|  

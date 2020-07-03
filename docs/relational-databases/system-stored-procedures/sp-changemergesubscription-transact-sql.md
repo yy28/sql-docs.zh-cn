@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: fd820f35-c189-4e2d-884d-b60c1c469f58
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3e0d230046fa06ad220c24c0f33616be213b6563
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a51ae948e546d616e6fd17a5b37501f112907560
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771451"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85871852"
 ---
 # <a name="sp_changemergesubscription-transact-sql"></a>sp_changemergesubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   更改合并推送订阅的选定属性。 此存储过程在发布服务器上对发布数据库执行。  
   
@@ -41,7 +41,7 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
     [ , [ @value= ] 'value' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @publication = ] 'publication'`要更改的发布的名称。 *发布*为**sysname**，默认值为 NULL。 此发布必须已经存在且必须符合标识符规则。  
   
 `[ @subscriber = ] 'subscriber'`订阅服务器的名称。 *订阅服务器*的值为**sysname**，默认值为 NULL。  
@@ -52,7 +52,7 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
   
 `[ @value = ] 'value'`指定的*属性*的新值。 *值*为**nvarchar （255）**，可以是表中的值之一。  
   
-|Property|值|描述|  
+|属性|值|说明|  
 |--------------|-----------|-----------------|  
 |**2008**||对该合并订阅的说明。|  
 |**大事**||子订阅的优先级。 在检测到冲突时，默认冲突解决程序将使用该优先级来选取入选方。|  

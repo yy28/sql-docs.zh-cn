@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: d575e624-7d30-4eae-b94f-5a7b9fa5427e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a26ca71a9db5d85f79787f19563e87ee7e49b78d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d90b4d76be9d75bbad28053a1e61ffb1c12212fa
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760137"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85865673"
 ---
 # <a name="sp_dbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   从存储数据库镜像监视历史记录的状态表中返回所监视数据库的状态行，并允许您选择该过程是否预先获得最新状态。  
   
@@ -76,7 +76,7 @@ sp_dbmmonitorresults database_name
  1 = 在计算结果之前通过调用**sp_dbmmonitorupdate**来更新数据库的状态。 但是，如果状态表在前15秒内已更新，或者该用户不是**sysadmin**固定服务器角色的成员，则**sp_dbmmonitorresults**在不更新状态的情况下运行。  
   
 ## <a name="return-code-values"></a>返回代码值  
- 无  
+ None  
   
 ## <a name="result-sets"></a>结果集  
  返回指定数据库的所请求行数的历史记录状态。 每一行包含以下信息：  

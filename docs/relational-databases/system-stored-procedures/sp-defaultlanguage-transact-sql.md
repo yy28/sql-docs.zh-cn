@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 908d01cc-e704-45d9-9e85-d2df6da3e6f5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 761579b7b1c068fe241933533cf73bb41036d9d1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fc4a45ab8a2241e719fd71598461fa6deb43814c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724569"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85864999"
 ---
 # <a name="sp_defaultlanguage-transact-sql"></a>sp_defaultlanguage (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   更改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录的默认语言。  
   
@@ -42,7 +42,7 @@ sp_defaultlanguage [ @loginame = ] 'login'
      [ , [ @language = ] 'language' ]   
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @loginame = ] 'login'`登录名。 *login*的**sysname**为，无默认值。 *登录名*可以是现有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名，也可以是 Windows 用户或组。  
   
 `[ @language = ] 'language'`登录名的默认语言。 *language*的值为**sysname**，默认值为 NULL。 *语言*必须是服务器上的有效语言。 如果未指定*语言*，则*语言*设置为服务器默认语言;默认语言由**sp_configure**配置变量**默认语言**定义。 更改服务器默认语言不会更改现有登录的默认语言。  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 16462ede-4393-4293-a598-ca88c48ca70b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b09864e65bb0c46370ee0f8c3d09994f94027d6d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: eedb738c9bd1a940f2875d182077edd3b939870b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733337"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85868866"
 ---
 # <a name="sp_cursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   打开游标。 sp_cursoropen 定义与游标和游标选项相关联的 SQL 语句，然后填充游标。 sp_cursoropen 等效于 [!INCLUDE[tsql](../../includes/tsql-md.md)] DECLARE_CURSOR 和 OPEN 语句的组合。 此过程通过在表格格式数据流 (TDS) 数据包中指定 ID = 2 来调用。  
   
@@ -40,7 +40,7 @@ sp_cursoropen cursor OUTPUT, stmt
     [ ,rowcount OUTPUT [ ,boundparam][,...n]]] ]]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  *cursor*  
  SQL Server 生成的游标标识符。 *cursor*是一个*句柄*值，必须对涉及游标的所有后续过程（如 sp_cursorfetch）提供此值。 *cursor*是带有**int**返回值的必需参数。  
   
@@ -52,7 +52,7 @@ sp_cursoropen cursor OUTPUT, stmt
  *scrollopt*  
  滚动选项。 *scrollopt*是一个可选参数，它需要以下**整数**输入值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -74,7 +74,7 @@ sp_cursoropen cursor OUTPUT, stmt
  *ccopt*  
  并发控制选项。 *ccopt*是一个可选参数，它需要以下**整数**输入值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS（以前称为 LOCKCC）|  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7550a640b723e77f3bfbc9b3473e762962ae2da3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a92b502368756fd86fc4facda7c0726260d88fea
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85646419"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85869685"
 ---
 # <a name="sp_cursor-transact-sql"></a>sp_cursor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   请求定位更新。 此过程对游标的提取缓冲区内的一行或多行执行操作。 通过在表格格式数据流（TDS）包中指定 ID = 1 来调用 sp_cursor。  
   
@@ -43,14 +43,14 @@ sp_cursor  cursor, optype, rownum, table
     [ , value[...n]]]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  *cursor*  
  游标句柄。 *cursor*是为**int**输入值调用的必需参数。 *cursor*是由 SQL Server 生成并由 sp_cursoropen 过程返回的*句柄*值。  
   
  *optype*  
  一个必需参数，它指定游标将执行的操作。 *optype*需要以下**int**输入值之一。  
   
-|值|名称|描述|  
+|值|名称|说明|  
 |-----------|----------|-----------------|  
 |0X0001|UPDATE|用于更新提取缓冲区中的一行或多行。  重新访问和更新*rownum*中指定的行。|  
 |0x0002|DELETE|用于删除提取缓冲区中的一行或多个行。 重新访问和删除*rownum*中指定的行。|  

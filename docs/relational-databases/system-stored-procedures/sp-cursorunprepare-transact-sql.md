@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b46d4813-c4a9-4f9d-9979-2b5082ecf06a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e95828dcee6ea75c24df350379e6ac1e3c43d5ff
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8c7db4e004f3a350454e25ceefb6c195839e2f6f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733290"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85868429"
 ---
 # <a name="sp_cursorunprepare-transact-sql"></a>sp_cursorunprepare (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   放弃在 sp_cursorprepare 存储过程中开发的执行计划。 通过在表格格式数据流（TDS）包中指定 ID = 6 来调用 sp_cursorunprepare。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "85733290"
 sp_cursorunprepare handle  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  *柄*  
  是在准备语句时 sp_cursorprepare 返回的*句柄*值。  
   

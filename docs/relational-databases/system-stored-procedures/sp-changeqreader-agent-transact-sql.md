@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d3fe79c5-31ef-4565-bf38-b476b5fb16f7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: faf3bd8ab39ac70a8edfcff805a7b8c1202dfa89
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e3ecfc002a04cb499898b63976e7a094b4a05fd5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771417"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85871377"
 ---
 # <a name="sp_changeqreader_agent-transact-sql"></a>sp_changeqreader_agent (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   更改队列读取器代理的安全属性。 此存储过程在分发服务器上针对分发数据库执行，或在发布服务器上针对发布数据库执行。  
   
@@ -38,7 +38,7 @@ sp_changeqreader_agent [ [ @job_login = ] 'job_login' ]
     [ , [ @frompublisher = ] frompublisher   
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @job_login = ] 'job_login'`用于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 运行代理的 Windows 帐户的登录名。 *job_login*为**nvarchar （257）**，默认值为 NULL。  
   
 `[ @job_password = ] 'job_password'`运行代理所用的 Windows 帐户的密码。 *job_password*的默认值为**sysname**，默认值为 NULL。  

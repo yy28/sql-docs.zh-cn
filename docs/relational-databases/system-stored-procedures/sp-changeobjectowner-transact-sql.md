@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 45b3dc1c-1cde-45b7-a248-5195c12973e9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1e6f664cc763e56135ddf1c35f5f0057d97ec2d7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: df232018259055697bb6624ee96a8fc980b3bef3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771455"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85871744"
 ---
 # <a name="sp_changeobjectowner-transact-sql"></a>sp_changeobjectowner (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   更改当前数据库中对象的所有者。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "85771455"
 sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @objname = ] 'object'`当前数据库中现有的表、视图、用户定义函数或存储过程的名称。 *对象*是一个**nvarchar （776）**，无默认值。 *对象*可以用现有对象的所有者限定，格式为_existing_owner_**。** 如果架构及其所有者具有相同的名称，则为_对象_。  
   
 `[ @newowner = ] 'owner_ '`将成为对象的新所有者的安全帐户的名称。 *所有者*为**sysname**，无默认值。 *所有者*必须是有权访问当前数据库的有效数据库用户、服务器角色、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] windows 登录名或 windows 组。 如果新所有者是没有对应数据库级主体的 Windows 用户或 Windows 组，则将创建数据库用户。  

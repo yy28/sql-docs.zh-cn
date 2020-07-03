@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6a204229-0a53-4617-a57e-93d4afbb71ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3da197547fcc0b08cb1154c6f32b11a65247304e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 800e70591e4ebb508bd5edd6426d43bdc3a16987
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85646268"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85869739"
 ---
 # <a name="sp_cursorexecute-transact-sql"></a>sp_cursorexecute (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   基于 sp_cursorprepare 创建的执行计划创建并填充游标。 此过程与 sp_cursorprepare 结合在一起具有与 sp_cursoropen 相同的功能，但拆分为两个阶段。 通过在表格格式数据流（TDS）包中指定 ID = 4 来调用 sp_cursorexecute。  
   
@@ -41,7 +41,7 @@ sp_cursorexecute prepared_handle, cursor
     [ ,rowcount OUTPUT [ ,bound param][,...n]]]]]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  *prepared_handle*  
  Sp_cursorprepare 返回的已准备语句*句柄*值。 *prepared_handle*是为**int**输入值调用的必需参数。  
   

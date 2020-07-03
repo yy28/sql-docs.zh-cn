@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 516ef311-e83b-45c9-b9cd-0e0641774c04
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 084063f7209692bdf3ffd124b8e2b73194068686
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 51f0e6107068f28f1c03c357564f131c133fec9e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760191"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85872475"
 ---
 # <a name="sp_changedbowner-transact-sql"></a>sp_changedbowner (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   更改当前数据库的所有者。  
   
@@ -42,7 +42,7 @@ sp_changedbowner [ @loginame = ] 'login'
      [ , [ @map = ] remap_alias_flag ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  [ @loginame =] "*login*"  
  当前数据库的新所有者的登录 ID。 *login*的**sysname**为，无默认值。 *登录名*必须是现有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名或 Windows 用户。 如果用户已通过数据库内现有的用户安全帐户访问了数据库，则该*登录名*不能成为当前数据库的所有者。 为了避免发生上述情况，请首先删除当前数据库内的用户。  
   

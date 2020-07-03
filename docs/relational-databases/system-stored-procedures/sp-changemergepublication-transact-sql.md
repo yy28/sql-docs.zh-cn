@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8f9260aad5b07e57ff3d95b8943d85a15756077d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ba7a6785952152632a9435269bc7b4a9b236ad38
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771475"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85872516"
 ---
 # <a name="sp_changemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   更改合并发布的属性。 此存储过程在发布服务器上对发布数据库执行。  
   
@@ -40,7 +40,7 @@ sp_changemergepublication [ @publication= ] 'publication'
     [ , [ @force_reinit_subscription = ] force_reinit_subscription ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @publication = ] 'publication'`发布的名称。 *发布*为**sysname**，无默认值。  
   
 `[ @property = ] 'property'`给定发布的要更改的属性。 *属性*为**sysname**，可以是下表中列出的值之一。  
@@ -49,7 +49,7 @@ sp_changemergepublication [ @publication= ] 'publication'
   
  下表描述了可以更改的发布属性，并描述了这些属性的值的限制。  
   
-|Property|值|描述|  
+|属性|值|说明|  
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|true|允许匿名订阅。|  
 ||**false**|不允许匿名订阅。|  
