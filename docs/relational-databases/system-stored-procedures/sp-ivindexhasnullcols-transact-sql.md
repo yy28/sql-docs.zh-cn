@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ed2cde63-37e1-43cf-b6ba-3b6114a0f797
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 482998563530a2b3a735be883a353e519eb64d60
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 837a589827b4bf4db9d4e7d38e00d56b646e781a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715166"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891612"
 ---
 # <a name="sp_ivindexhasnullcols-transact-sql"></a>sp_ivindexhasnullcols (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   验证索引视图的聚集索引是否唯一，而且当索引视图将要用于创建事务发布时其聚集索引不包含任何可能为 Null 的列。 此存储过程在发布服务器上对发布数据库执行。  
   
@@ -37,7 +37,7 @@ sp_ivindexhasnullcols [ @viewname = ] 'view_name'
         , [ @fhasnullcols= ] field_has_null_columns OUTPUT  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @viewname = ] 'view_name'`要验证的视图的名称。 *view_name* **sysname**，无默认值。  
   
 `[ @fhasnullcols = ] field_has_null_columns OUTPUT`指示视图索引是否具有允许 NULL 值的列的标志。 *view_name* **sysname**，无默认值。 如果视图索引包含允许 NULL 的列，则返回值**1** 。 如果视图不包含允许 NULL 的列，则返回值**0** 。  

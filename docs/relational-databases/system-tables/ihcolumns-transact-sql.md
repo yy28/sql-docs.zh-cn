@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5bb027e5-5279-487b-9c33-5f402987253c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 47fcad03fb8329c3d39150aa0aaf9b5688e0456f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c1870e1d826fef593f5458004d424a02185028e2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764246"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890308"
 ---
 # <a name="ihcolumns-transact-sql"></a>IHcolumns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   每个已发布的列在**IHcolumns**系统表中各占一行。 该表用来定义非 SQL Server 发布服务器的列数据类型在发布时如何进行表示，它实际上是在非 SQL Server 数据库管理系统 (DBMS) 和 SQL Server 之间对数据类型进行映射。 此表存储在分发数据库中。  
   

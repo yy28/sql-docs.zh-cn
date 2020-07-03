@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ba2fdccc-5ed4-40ef-a479-79497b4d61aa
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: df0cbdda40b8e473ce81bf95b7c38e1cd2ec75c0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4d50c251d2486b53611c2f2fccfc7e8c2bfa352d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783682"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890838"
 ---
 # <a name="sysmail_update_account_sp-transact-sql"></a>sysmail_update_account_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   更改现有数据库邮件帐户中的信息。  
  
@@ -51,7 +51,7 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
     [ @enable_ssl = ] enable_ssl   
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @account_id = ] account_id`要更新的帐户 ID。 *account_id*的值为**int**，默认值为 NULL。 至少必须指定*account_id*或*account_name*中的一个。 如果两个都指定，则过程将更改帐户的名称。  
   
 `[ @account_name = ] 'account_name'`要更新的帐户的名称。 *account_name*的默认值为**sysname**，默认值为 NULL。 至少必须指定*account_id*或*account_name*中的一个。 如果两个都指定，则过程将更改帐户的名称。  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5d56d780-ee40-4afc-9c2a-d1723d86e430
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2e0c7be221847924f48523526793fcd3d4664477
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 71df50ce6f94602d06bc46229887983233641610
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784836"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889746"
 ---
 # <a name="msmerge_partition_groups-transact-sql"></a>MSmerge_partition_groups (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MSmerge_partition_groups**表在给定数据库的每个预计算分区中存储一行。 除了列出的列以外，还将为参数化行筛选器中使用的每个函数在该表中添加一列。 例如，如果筛选器使用[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)函数，则会将名为**HOST_NAME_FN**的列添加到表中。 对于每一组已经与该发布服务器同步的唯一函数值，相应地存储一行。 如果两个或更多个订阅服务器通过对所有这些函数完全相同的值进行同步，则会在该表中共享相同的行，因此将会全部共享相同的分区 ID。该表存储在发布数据库中。  
   

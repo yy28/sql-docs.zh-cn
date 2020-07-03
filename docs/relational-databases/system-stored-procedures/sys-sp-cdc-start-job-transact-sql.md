@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: cf443a67-7705-4799-9f39-0e3a6a8a0708
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 23da49150e2066228247be012e065a1533895c58
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4a87fca28491075c9a75945b7a452c02b270d95b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85768406"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891052"
 ---
 # <a name="syssp_cdc_start_job-transact-sql"></a>sys.sp_cdc_start_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   启动当前数据库的变更数据捕获清除或捕获作业。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "85768406"
 sys.sp_cdc_start_job [ [ @job_type = ] 'job_type' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ [ @job_type = ] 'job_type' ]`要添加的作业的类型。 *job_type*的默认值为**nvarchar （20）** ，默认值为**capture**。 有效的输入包括 "**捕获**" 和 "**清理**"。  
   
 ## <a name="return-code-values"></a>返回代码值  

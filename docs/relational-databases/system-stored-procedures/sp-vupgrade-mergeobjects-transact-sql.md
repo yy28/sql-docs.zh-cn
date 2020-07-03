@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 73257c2e-cc4c-48e7-9d66-7ef045bdd4f5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1341450581e420e87a4f68e35613587afb9d3ac9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2e2237feb8ba1be19df876cedc480b15cc430a30
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722989"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891226"
 ---
 # <a name="sp_vupgrade_mergeobjects-transact-sql"></a>sp_vupgrade_mergeobjects (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   重新生成特定于项目的触发器、存储过程和视图，用于跟踪和应用合并复制的数据更改。 在以下情况下执行此过程：  
   
@@ -44,7 +44,7 @@ sp_vupgrade_mergeobjects [ [@login = ] 'login' ]
     [ , [ @security_mode = ] security_mode ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @login = ] 'login'`在分发数据库中创建新的系统对象时要使用的系统管理员登录名。 login 的数据类型为 sysname，默认值为 NULL******。 如果*security_mode*设置为**1**（这是 Windows 身份验证），则不需要此参数。  
   
 `[ @password = ] 'password'`在分发数据库中创建新的系统对象时要使用的系统管理员密码。 *password*的值为**sysname**，默认值为 **' '** （空字符串）。 如果*security_mode*设置为**1**（这是 Windows 身份验证），则不需要此参数。  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: bda66e1b-6bbd-49be-b86e-37efc920e912
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ac6461e522973b43926b66b6e525526ae6952d85
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 08db9ea2487f51267e7c1f1e4bac4fd807b59fcd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755517"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890710"
 ---
 # <a name="xp_sqlmaint-transact-sql"></a>xp_sqlmaint (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   使用包含**sqlmaint**开关的字符串调用**sqlmaint**实用程序。 **Sqlmaint**实用工具对一个或多个数据库执行一组维护操作。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "85755517"
 xp_sqlmaint 'switch_string'     
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  **"** *switch_string* **"**  
  一个字符串，其中包含**sqlmaint**实用工具开关。 开关及其值之间必须以空格分隔。  
   

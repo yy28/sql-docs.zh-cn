@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: ea918888-0fc5-4cc1-b301-26b2a9fbb20d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: df05d1b68da88c309cb69eb1187c9ec5f0b3375f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 54d6e50e6c29ab29d48143ed9a12c4bb0591d769
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85626163"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891181"
 ---
 # <a name="syssp_cdc_change_job-transact-sql"></a>sys.sp_cdc_change_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   修改当前数据库中变更数据捕获清除或捕获作业的配置。 若要查看作业的当前配置，请查询[dbo. cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)表，或使用[sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)。  
   
@@ -46,7 +46,7 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
     [ @threshold = ] 'delete threshold'  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @job_type = ] 'job_type'`要修改的作业的类型。 *job_type*为**nvarchar （20）** ，默认值为 "捕获"。 有效的输入为 'capture' 和 'cleanup'。  
   
 `[ @maxtrans ] = max_trans_`每个扫描循环中要处理的最大事务数。 *max_trans*的默认值为**int** ，默认值为 NULL，指示未更改此参数。 如果指定值，则该值必须是一个正整数。  

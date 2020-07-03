@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2ffe3197f74e274792ee1a3f97d700492a018bef
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9faada50dc5e48f0b3835f65c69a2a1d130e7594
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85633752"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890768"
 ---
 # <a name="xp_cmdshell-transact-sql"></a>xp_cmdshell (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   生成 Windows 命令 shell 并以字符串的形式传递以便执行。 任何输出都作为文本的行返回。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "85633752"
 xp_cmdshell { 'command_string' } [ , no_output ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  **"** *command_string* **"**  
  包含要传递到操作系统的命令的字符串。 *command_string*为**varchar （8000）** 或**nvarchar （4000）**，无默认值。 *command_string*不能包含一组以上的双引号。 如果在*command_string*中引用的文件路径或程序名称中有空格，则需要使用一对引号。 如果不方便使用内含的空格，则可考虑使用 FAT 8.3 文件名作为解决方法。  
   

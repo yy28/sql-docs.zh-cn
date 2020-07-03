@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b8171fb1-c11d-4244-8618-a12e28a150ce
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 033a2c950ec695a64aced30a383d25206e7f6d10
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: de4d2686066e10f1eb9f80862241d1d1a47cf6b7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751681"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891496"
 ---
 # <a name="sp_remove_job_from_targets-transact-sql"></a>sp_remove_job_from_targets (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   从指定的目标服务器或目标服务器组中删除指定的作业。  
   
@@ -41,7 +41,7 @@ sp_remove_job_from_targets [ @job_id = ] job_id
      [ , [ @target_servers = ] 'target_servers' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @job_id = ] job_id`要从中删除指定目标服务器或目标服务器组的作业的标识号。 必须指定*job_id*或*job_name* ，但不能同时指定两者。 *job_id*的值为**uniqueidentifier**，默认值为 NULL。  
   
 `[ @job_name = ] 'job_name'`要从中删除指定目标服务器或目标服务器组的作业的名称。 必须指定*job_id*或*job_name* ，但不能同时指定两者。 *job_name*的默认值为**sysname**，默认值为 NULL。  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9619ee410e0df014961e9f46a7e536508e0616c1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 052e97d1d744656c223e000adca7028fd11b7e0d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85639487"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890959"
 ---
 # <a name="sysmail_delete_mailitems_sp-transact-sql"></a>sysmail_delete_mailitems_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   从数据库邮件内部表中永久删除电子邮件。  
   
@@ -39,7 +39,7 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
     [ , [ @sent_status = ] 'sent_status' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ \@sent_before = ] 'sent_before'`删除直到作为*sent_before*参数提供的日期和时间的电子邮件。 *sent_before*为**datetime** ，默认值为 NULL。 NULL 指示所有日期。  
   
 `[ \@sent_status = ] 'sent_status'`删除*sent_status*指定的类型的电子邮件。 *sent_status*为**varchar （8）** ，无默认值。 有效条目为**发送**、未**发送**、**重试**和**失败**。 NULL 指示所有状态。  

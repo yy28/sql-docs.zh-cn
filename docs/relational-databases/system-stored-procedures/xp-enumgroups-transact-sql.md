@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0bd3ed36-e260-469c-a5ff-b033fb9ea59d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0e228f2a2363cab777c2b7ae44185e3c215e8f93
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c83ca09ff6e519420a8a4f8d077d9b855d9459f4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85633700"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890786"
 ---
 # <a name="xp_enumgroups-transact-sql"></a>xp_enumgroups (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   提供 Microsoft Windows 本地组列表或在指定 Windows 域中定义的全局组列表。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "85633700"
 xp_enumgroups [ 'domain_name' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  **"** *domain_name* **"**  
  要枚举其全局组列表的 Windows 域的名称。 *domain_name*的默认值为**sysname**，默认值为 NULL。  
   

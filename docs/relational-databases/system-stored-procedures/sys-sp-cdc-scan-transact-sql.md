@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 46e4294c-97b8-47d6-9ed9-b436a9929353
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 33ece4b5bfc2517969c8c78f3a573b70d65c48ac
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 558a2fd9ff62baa3448609eb42e5f31883fbac53
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85768557"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891061"
 ---
 # <a name="syssp_cdc_scan-transact-sql"></a>sys.sp_cdc_scan (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   执行变更数据捕获日志扫描操作。  
   
@@ -43,7 +43,7 @@ sys.sp_cdc_scan [ [ @maxtrans = ] max_trans ]
      [ , [ @pollinginterval = ] polling_interval ]   
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @maxtrans = ] max_trans`每个扫描循环中要处理的最大事务数。 *max_trans*的**整数为 int** ，默认值为500。  
   
 `[ @maxscans = ] max_scans`为了从日志中提取所有行而要执行的扫描周期的最大数目。 *max_scans*的**整数为 int** ，默认值为10。  

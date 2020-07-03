@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3f5a3e93ed2ae3b64828a3260743410b6d007560
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b5a1a7067e1ebda150d0236020288514eb90a8fc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755543"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890736"
 ---
 # <a name="xp_logininfo-transact-sql"></a>xp_logininfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   返回有关 Windows 用户和 Windows 组的信息。  
   
@@ -40,7 +40,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
      [ , [ @privilege = ] variable_name OUTPUT]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @acctname = ] 'account_name'`被授予访问权限的 Windows 用户或组的名称 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *account_name*的默认值为**sysname**，默认值为 NULL。 如果未指定*account_name* ，则会报告所有被显式授予登录权限的 windows 组和 windows 用户。 *account_name*必须是完全限定的。 例如，“ADVWKS4\macraes”或“BUILTIN\Administrators”。  
   
  **"all"**  | **"members"**  

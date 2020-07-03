@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b3fa7678-dba4-4537-be94-5ae63ca11f81
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9aee06246a9ca7922e62aef5d2a20aa7b67be347
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b09c799e553990715a8dd4f30bcd4adc9ce9dda1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755536"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890725"
 ---
 # <a name="xp_revokelogin-transact-sql"></a>xp_revokelogin (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   撤消 Windows 组或用户对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的访问权限。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "85755536"
 xp_revokelogin {[@loginame=] 'login'}  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @loginame = ] 'login'`要撤消其访问权限的 Windows 用户或组的名称。 *登录*名必须包含域名，例如 **[ADVWKS\sylvester1]**。 *login*的**sysname**为，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  

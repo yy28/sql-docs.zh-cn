@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e94b37a1-70ad-46a5-86c0-721892156f7c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7905ab0197c4286013f5a407570cdeaa39b3b009
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: db6f15fe8ce2f515bf79211e6db49a135eb6fb3f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85625991"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890969"
 ---
 # <a name="sysmail_delete_log_sp-transact-sql"></a>sysmail_delete_log_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   从数据库邮件日志中删除事件。 删除日志中的所有事件或删除符合某一日期或类型条件的那些事件。  
   
@@ -40,7 +40,7 @@ sysmail_delete_log_sp  [ [ @logged_before = ] 'logged_before' ]
   
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @logged_before = ] 'logged_before'`删除*logged_before*参数指定的日期和时间之前的条目。 *logged_before*为**datetime** ，默认值为 NULL。 NULL 指示所有日期。  
   
 `[ @event_type = ] 'event_type'`删除指定为*event_type*的类型的日志项。 *event_type*的值为**varchar （15）** ，无默认值。 有效条目为 "**成功**"、"**警告**"、"**错误**" 和 "**信息**"。 NULL 指示所有事件类型。  

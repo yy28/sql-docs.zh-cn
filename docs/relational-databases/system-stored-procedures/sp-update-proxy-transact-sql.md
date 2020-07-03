@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 864fd0e6-9d61-4f07-92ef-145318d2f881
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 66ca1f35a5920f6f6d26bea0663e51d305fc1c3b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: eb6af87e40c663ae6e1d7465919abb2f14f85979
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775152"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891286"
 ---
 # <a name="sp_update_proxy-transact-sql"></a>sp_update_proxy (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   更改现有代理的属性。  
   
@@ -46,7 +46,7 @@ sp_update_proxy
     [ @description = ] 'description'  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @proxy_id = ] id`要更改的代理的代理标识号。 *Proxy_id*的值为**int**，默认值为 NULL。  
   
 `[ @proxy_name = ] 'proxy_name'`要更改的代理的名称。 *Proxy_name*的值为**sysname**，默认值为 NULL。  

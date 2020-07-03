@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f8910aae-2013-4645-880c-134577cbcbe0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 965db8bf7af993c37551ddbc5e7c7343a85a2950
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a6e34caa87f529edcac10ea77bf3346d3f276fc5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764170"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890090"
 ---
 # <a name="log-shipping-tables-transact-sql"></a>日志传送表 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   以下主题介绍存储日志传送操作所使用的信息的系统表。  
   
