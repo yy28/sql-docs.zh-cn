@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 13bd1044-9497-4293-8390-1f12e6b8e952
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3d3a7a396c381facb76eb3abcc0d7fe67e5991ee
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 87c001dbb7d6f43004e60b0e3b30415361caa866
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716197"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85874475"
 ---
 # <a name="sp_attach_single_file_db-transact-sql"></a>sp_attach_single_file_db (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   将只有一个数据文件的数据库附加到当前服务器。 **sp_attach_single_file_db**不能用于多个数据文件。  
   
@@ -45,7 +45,7 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
     , [ @physname= ] 'physical_name'  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @dbname = ] 'dbname'`要附加到服务器的数据库的名称。 此名称必须唯一。 *dbname*的值为**sysname**，默认值为 NULL。  
   
 `[ @physname = ] 'physical_name'`是数据库文件的物理名称，包括路径。 *physical_name*的默认值为**nvarchar （260）**，默认值为 NULL。  

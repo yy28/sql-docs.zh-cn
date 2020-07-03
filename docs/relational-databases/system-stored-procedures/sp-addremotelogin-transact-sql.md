@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 71b7cd36-a17d-4b12-b102-10aeb0f9268b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b4a3586625fa0a20d59ca0222ea1abbde6a6fef5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 007b31ebb5ec7f35f6bf3b1f9fd4f76ff8c47f9e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716431"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85876778"
 ---
 # <a name="sp_addremotelogin-transact-sql"></a>sp_addremotelogin (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   在本地服务器上添加新的远程登录 ID。 这样，远程服务器就能够连接并执行远程过程调用。  
   
@@ -43,7 +43,7 @@ sp_addremotelogin [ @remoteserver = ] 'remoteserver'
      [ , [ @remotename = ] 'remote_name' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  [ @remoteserver **=** ] **\ "**_remoteserver_**"**  
  远程登录名所适用的远程服务器的名称。 *remoteserver*的值为**sysname**，无默认值。 如果仅指定了*remoteserver* ，则*remoteserver*上的所有用户将映射到本地服务器上具有相同名称的现有登录名。 对于本地服务器而言，远程服务器必须是已知的。 可以使用 sp_addserver 来添加。 当*remoteserver*上的用户连接到运行的本地服务器 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以执行远程存储过程时，它们将作为本地登录名，该登录名与其在*remoteserver*上的登录名匹配。 *remoteserver*是启动远程过程调用的服务器。  
   

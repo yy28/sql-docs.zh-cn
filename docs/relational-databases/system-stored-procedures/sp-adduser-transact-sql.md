@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 61a40eb4-573f-460c-9164-bd1bbfaf8b25
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9e7ba3827b9a659c0100805d0a9895fad503b2a7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5c917889a4ed435e59e7d165841234b80390dc7e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716293"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85875410"
 ---
 # <a name="sp_adduser-transact-sql"></a>sp_adduser (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   向当前数据库中添加新的用户。  
   
@@ -43,7 +43,7 @@ sp_adduser [ @loginame = ] 'login'
     [ , [ @grpname = ] 'role' ]   
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @loginame = ] 'login'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名或 Windows 登录名。 *login*是**sysname**，无默认值。 *登录名*必须是现有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名或 Windows 登录名。  
   
 `[ @name_in_db = ] 'user'`新数据库用户的名称。 *用户*为**sysname**，默认值为 NULL。 如果未指定*user* ，则新数据库用户的名称默认为*登录*名。 指定*user*后，新用户在数据库中的名称将不同于服务器级别的登录名。  

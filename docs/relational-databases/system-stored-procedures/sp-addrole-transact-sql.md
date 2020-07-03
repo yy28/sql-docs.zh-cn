@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e8a21642-8440-419a-8585-93d3d9d44f00
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9c4c882111446a24ca0dc8e0ac5ec8c0c28abbd5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f364de4eb2760c5beeae17360fb84ffd52fd7181
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716408"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85876745"
 ---
 # <a name="sp_addrole-transact-sql"></a>sp_addrole (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   在当前数据库中创建新的数据库角色。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "85716408"
 sp_addrole [ @rolename = ] 'role' [ , [ @ownername = ] 'owner' ]   
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @rolename = ] 'role'`新数据库角色的名称。 *role*是**sysname**，无默认值。 *role*必须是有效的标识符（ID），并且不能已存在于当前数据库中。  
   
 `[ @ownername = ] 'owner'`新数据库角色的所有者。 *所有者*为**sysname**，默认值为当前正在执行的用户。 *所有者*必须是当前数据库中的数据库用户或数据库角色。  

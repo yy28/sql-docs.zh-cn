@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5021ed5b-acca-4f8b-b9db-18733059c359
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5d93ac0966b0c843c219c029d4db1e7fa9462b77
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f18af2207069ab3a4d8b8a05c9c0a5b7a3fe6deb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731728"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85878244"
 ---
 # <a name="sp_add_targetsvrgrp_member-transact-sql"></a>sp_add_targetsvrgrp_member (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   将指定的目标服务器添加到指定的目标服务器组。  
    
@@ -38,7 +38,7 @@ ms.locfileid: "85731728"
 sp_add_targetsvrgrp_member [ @group_name = ] 'group_name' , [ @server_name = ] 'server_name'   
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @group_name = ] 'group_name'`组的名称。 *group_name* **sysname**，无默认值。  
   
 `[ @server_name = ] 'server_name'`应添加到指定组中的服务器的名称。 *server_name*为**nvarchar （30）**，无默认值。  

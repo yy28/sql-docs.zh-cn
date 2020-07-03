@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1b28f280-8ef9-48e9-bd99-ec14d79abaca
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b84eb615704799d0e63aa139b28356203512ea28
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 925a08a938e56ad2834cf656e89d7a229842641d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716282"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85875186"
 ---
 # <a name="sp_altermessage-transact-sql"></a>sp_altermessage (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   更改 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例中用户定义消息或系统消息的状态。 可以使用**sys.databases**目录视图查看用户定义的消息。  
 
@@ -40,7 +40,7 @@ sp_altermessage [ @message_id = ] message_number   ,[ @parameter = ]'write_to_lo
    ,[ @parameter_value = ]'value'   
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  [** @message_id =** ] *message_number*  
  要从**sys.databases**更改的消息的错误号。 *message_number*为**int** ，没有默认值。  
   

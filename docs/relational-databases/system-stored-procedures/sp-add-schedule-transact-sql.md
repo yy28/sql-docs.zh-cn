@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c12d6650023fcb3473a834d8145437d8a013df5e
-ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
+ms.openlocfilehash: 88dafeff6621a181b3720917235705d4e0b12e2d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84818136"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85878289"
 ---
 # <a name="sp_add_schedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   创建一个可由任意数量的作业使用的计划。  
   
@@ -53,7 +53,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
     [ , [ @originating_server = ] server_name ] /* internal */  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @schedule_name = ] 'schedule_name'`计划的名称。 *schedule_name* **sysname**，无默认值。  
   
 `[ @enabled = ] enabled`指示计划的当前状态。 *enabled*为**tinyint**，默认值为**1** （已启用）。 如果为**0**，则不启用计划。 如果不启用计划，则作业不会按此计划运行。  
@@ -63,7 +63,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |值|说明|  
 |-----------|-----------------|  
 |**1**|一次|  
-|**4**|每日|  
+|**4**|每天|  
 |**8**|每周|  
 |**16**|每月|  
 |**32**|每月，相对于*freq_interval*|  

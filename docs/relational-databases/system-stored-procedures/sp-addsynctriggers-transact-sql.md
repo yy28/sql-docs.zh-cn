@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e37d0c3b-19bf-4719-9535-96ba361372b3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c713c2d6dc07c9f9dfc9e31dfbf8a1749bb2c189
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f11e2c1aaf4747d8e0edaf6fd44b62ec93ee4896
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716346"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85876210"
 ---
 # <a name="sp_addsynctriggers-transact-sql"></a>sp_addsynctriggers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   在订阅服务器上创建与所有类型的可更新订阅（立即、排队和将排队更新作为故障转移的立即更新）一起使用的触发器。 此存储过程在订阅服务器的订阅数据库中执行。  
   
@@ -56,7 +56,7 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
     [ , [ @pubversion = ] pubversion  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @sub_table = ] 'sub_table'`订阅服务器表的名称。 *sub_table* **sysname**，无默认值。  
   
 `[ @sub_table_owner = ] 'sub_table_owner'`订阅服务器表的所有者的名称。 *sub_table_owner* **sysname**，无默认值。  

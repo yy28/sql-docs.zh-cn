@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c0d4b47b-a855-451e-90e5-5fb2d836ebfa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 715318b0b0ea38870317d05815845e1b6eaa3227
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 28711f289e86309baf6f2b54cf6c037d04d54d4d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760187"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85878004"
 ---
 # <a name="sp_addextendedproc-transact-sql"></a>sp_addextendedproc (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   将新扩展存储过程的名称注册到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
@@ -42,7 +42,7 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
      [ @dllname = ] 'dll'  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @functname = ] 'procedure'`在动态链接库（DLL）内调用的函数的名称。 *过程*为**nvarchar （517）**，无默认值。 *过程*可选择性地包含所有者名称形式的所有者名称 *。*  
   
 `[ @dllname = ] 'dll'`包含该函数的 DLL 的名称。 *dll*的值为**varchar （255）**，无默认值。 建议指定 DLL 的完整路径。  

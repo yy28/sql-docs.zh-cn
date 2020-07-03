@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: dd95d96e-8963-4aa9-bdcc-3e4b1bc002d3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2fc6d9e9aa0e4da2e2e2652d5d34b833cd7b2a56
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ca0d81b9e8c08fc25c86303d4f3fe7cf02013498
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730068"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85879927"
 ---
 # <a name="sp_add_log_shipping_alert_job-transact-sql"></a>sp_add_log_shipping_alert_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   此存储过程用于检查是否已在此服务器上创建了警报作业。 如果警报作业不存在，则此存储过程将创建警报作业，并将其作业 ID 添加到**log_shipping_monitor_alert**表。 默认情况下，将启用警报作业并按计划每两分钟运行一次。  
   
@@ -39,7 +39,7 @@ sp_add_log_shipping_alert_job
 [, [ @alert_job_id = ] alert_job_id OUTPUT ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @alert_job_id = ] alert_job_id OUTPUT`[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日志传送警报作业的代理作业 ID。  
   
 ## <a name="return-code-values"></a>返回代码值  

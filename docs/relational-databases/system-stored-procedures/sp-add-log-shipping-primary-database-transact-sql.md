@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 69531611-113f-46b5-81a6-7bf496d0353c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ee4fd4f6b8ea67fd9e1b973fd2b283a10d525437
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 188a7d3b98021255074ccaf6b954b4c9b2100fd0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731778"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85879944"
 ---
 # <a name="sp_add_log_shipping_primary_database-transact-sql"></a>sp_add_log_shipping_primary_database (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   设置日志传送配置（包括备份作业、本地监视记录及远程监视记录）的主数据库。  
   
@@ -54,7 +54,7 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
   
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @database = ] 'database'`日志传送主数据库的名称。 *数据库*为**sysname**，无默认值，且不能为 NULL。  
   
 `[ @backup_directory = ] 'backup_directory'`主服务器上备份文件夹的路径。 *backup_directory*为**nvarchar （500）**，无默认值，且不能为 NULL。  

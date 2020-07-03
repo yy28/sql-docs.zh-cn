@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b41ca3a5-7222-4c22-a012-e66a577a82f6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 11af27e5b94f7fa95c66e13b198ff6134df23912
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 52ede21961df29543714f4c31044ef2e261302c0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772276"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85879924"
 ---
 # <a name="sp_add_log_file_recover_suspect_db-transact-sql"></a>sp_add_log_file_recover_suspect_db (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   如果由于数据库上日志空间不足（错误 9002）而造成恢复不能完成，请将日志文件添加到文件组中。 添加文件后， **sp_add_log_file_recover_suspect_db**关闭可疑设置并完成数据库的恢复。 参数与 ALTER DATABASE *database_name*添加日志文件的参数相同。  
   
@@ -43,7 +43,7 @@ sp_add_log_file_recover_suspect_db [ @dbName= ] 'database' ,
     [ @filegrowth = ] 'growth_increment'  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @dbName = ] 'database'`数据库的名称。 *数据库*为**sysname**，无默认值。  
   
 `[ @name = ] 'logical_file_name'`引用文件时在中使用的名称 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 名称在服务器中必须是唯一的。 *logical_file_name*为**nvarchar （260）**，无默认值。  

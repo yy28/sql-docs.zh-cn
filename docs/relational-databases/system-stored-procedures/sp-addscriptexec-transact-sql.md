@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1627db41-6a80-45b6-b0b9-c0b7f9a1c886
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 145afa1da7ae19e480588ecbea28c389350de480
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7907f085cedfeb6a5dfc8be70c9a7eff67dc37b0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716406"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85876555"
 ---
 # <a name="sp_addscriptexec-transact-sql"></a>sp_addscriptexec (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   将 SQL 脚本（.sql 文件）发布到发布的所有订阅服务器。 此存储过程在发布服务器上对发布数据库执行。  
   
@@ -39,7 +39,7 @@ sp_addscriptexec [ @publication = ] publication
     [ , [ @publisher = ] 'publisher' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @publication = ] 'publication'`发布的名称。 *发布*为**sysname**，无默认值。  
   
 `[ @scriptfile = ] 'scriptfile'`SQL 脚本文件的完整路径。 *scriptfile*的值为**nvarchar （4000）**，无默认值。  

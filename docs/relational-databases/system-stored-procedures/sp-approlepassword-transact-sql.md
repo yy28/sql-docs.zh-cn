@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7967dc0b-bee2-4c63-b8e9-1c3ce2f5db2a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: da76e1c4d2c2700951a20df82502cc09739bc8cd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0d6fb44101952c5fe5fe28ba9764c43658a6208a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716258"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85874859"
 ---
 # <a name="sp_approlepassword-transact-sql"></a>sp_approlepassword (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   更改当前数据库中应用程序角色的密码。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "85716258"
 sp_approlepassword [ @rolename= ] 'role' , [ @newpwd = ] 'password'   
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @rolename = ] 'role'`应用程序角色的名称。 *Role*的值为**sysname**，无默认值。 *角色*必须存在于当前数据库中。  
   
 `[ @newpwd = ] 'password'`是应用程序角色的新密码。 *password*的值为**sysname**，无默认值。 *密码*不能为 NULL。  

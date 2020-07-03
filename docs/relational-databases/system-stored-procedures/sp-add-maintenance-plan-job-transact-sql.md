@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7205855c-964f-4f55-bf75-39a55f6fe7bd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: be495477556ee97567e4a9552e0437b33e58a698
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 89f9f2c1ac1982a1e86d0f48dbf7e1e0c9d26301
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85646514"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85879699"
 ---
 # <a name="sp_add_maintenance_plan_job-transact-sql"></a>sp_add_maintenance_plan_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   将维护计划与现有作业关联。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "85646514"
 sp_add_maintenance_plan_job [ @plan_id = ] 'plan_id' , [ @job_id = ] 'job_id'  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @plan_id = ] 'plan_id'`指定维护计划的 ID。 *plan_id*是**uniqueidentifier**，并且必须是有效 id。  
   
 `[ @job_id = ] 'job_id'`指定要与维护计划相关联的作业的 ID。 *job_id*是**uniqueidentifier**，并且必须是有效 id。 若要创建一个或一 sp_add_job 作业，请执行**sp_add_job**或使用 SQL Server Management Studio。  

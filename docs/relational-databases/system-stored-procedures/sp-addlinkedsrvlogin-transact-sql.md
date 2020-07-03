@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: eb69f303-1adf-4602-b6ab-f62e028ed9f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4ee38ac3c19c9f5d5b36f896c1018a16e98e37cc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 69c362a1b68a1c1bdc9fc8a90f1d2db3950fae81
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758003"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85877589"
 ---
 # <a name="sp_addlinkedsrvlogin-transact-sql"></a>sp_addlinkedsrvlogin (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   创建或更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本地实例上的登录名与远程服务器中安全帐户之间的映射。  
   
@@ -41,7 +41,7 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
      [ , [ @rmtpassword = ] 'rmtpassword' ]   
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  `[ @rmtsrvname = ] 'rmtsrvname'`  
  应用登录映射的链接服务器的名称。 *rmtsrvname*的值为**sysname**，无默认值。  
   

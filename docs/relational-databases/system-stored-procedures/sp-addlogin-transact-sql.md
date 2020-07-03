@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 030f19c3-a5e3-4b53-bfc4-de4bfca0fddc
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 06629b059afffe3baa0a34caec1337d7bc3f2517
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 477393f34743ba0643384762164697b845cadde4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757992"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85877378"
 ---
 # <a name="sp_addlogin-transact-sql"></a>sp_addlogin (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   创建新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名，该登录名允许用户使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
@@ -50,7 +50,7 @@ sp_addlogin [ @loginame = ] 'login'
 [;]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  [ @loginame =] "*login*"  
  登录的名称。 *login*的**sysname**为，无默认值。  
   
@@ -96,7 +96,7 @@ sp_addlogin [ @loginame = ] 'login'
   
  下表显示了数个与 sp_addlogin 一起使用的存储过程。  
   
-|存储过程|描述|  
+|存储过程|说明|  
 |----------------------|-----------------|  
 |[sp_grantlogin](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)|添加 Windows 用户或组。|  
 |[sp_password](../../relational-databases/system-stored-procedures/sp-password-transact-sql.md)|更改用户密码。|  

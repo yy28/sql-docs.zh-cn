@@ -15,16 +15,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: ''
 ms.date: 03/15/2017
-ms.openlocfilehash: db755e9587c88b224a7eb14c5259202fbce978f0
-ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
+ms.openlocfilehash: 292e2e14f8837aefb076256ec9d61ab7e2cf4032
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84779469"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85879950"
 ---
 # <a name="sp_add_jobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 将步骤（操作）添加到 SQL 代理作业。
 
@@ -74,7 +74,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 
 `[ @subsystem = ] 'subsystem'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理服务用来执行*命令*的子系统。 *子系统*为**nvarchar （40）**，可以是下列值之一。
 
-|值|描述|
+|值|说明|
 |-----------|-----------------|
 |'**ActiveScripting**'|活动脚本<br /><br /> ** \* \* 重要 \* 提示 \* **[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|
 |'**CmdExec**'|操作系统命令或可执行程序|
@@ -151,7 +151,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |**2**|追加到输出文件|  
 |**4**|将 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作业步骤输出写入步骤历史记录|  
 |**8**|将日志写入表（覆盖现有的历史记录）|  
-|**超过**|将日志写入表（追加到现有的历史记录）|  
+|**16**|将日志写入表（追加到现有的历史记录）|  
 |**32**|将所有输出写入作业历史记录|  
 |**64**|创建一个 Windows 事件以便用作 Cmd jobstep 要中止的信号|  
 

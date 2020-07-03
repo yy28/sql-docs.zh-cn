@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ed72cd8e-5ff7-4084-8458-2d8ed279d817
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d8d8626c8f4b3d256899514d14494b119ee8149c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a1b4d469d8afd6946b35cce503efd6db6cdfcb3a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716321"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85876216"
 ---
 # <a name="sp_addtype-transact-sql"></a>sp_addtype (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   创建别名数据类型。  
   
@@ -43,7 +43,7 @@ sp_addtype [ @typename = ] type,
     [ , [ @nulltype = ] 'null_type' ] ;  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @typename = ] type`别名数据类型的名称。 别名数据类型名称必须遵循[标识符](../../relational-databases/databases/database-identifiers.md)的规则，并且在每个数据库中必须是唯一的。 *类型*为**sysname**，无默认值。  
   
 `[ @phystype = ] system_data_type`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]别名数据类型所基于的物理数据类型或提供的数据类型。*system_data_type* **sysname**，无默认值，可以是下列值之一：  

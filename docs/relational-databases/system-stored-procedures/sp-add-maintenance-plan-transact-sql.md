@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 01ab1834-6260-47cb-a1b7-20722217b062
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 40eaf88f2bd0824d133571e53fd4d9b9831454b9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a37600763a02b4ed2fa49cddac0b514c80618f22
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85646525"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85879693"
 ---
 # <a name="sp_add_maintenance_plan-transact-sql"></a>sp_add_maintenance_plan (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   添加维护计划并返回计划 ID。  
   
@@ -44,7 +44,7 @@ sp_add_maintenance_plan [ @plan_name = ] 'plan_name' ,
      @plan_id = 'plan_id' OUTPUT  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @plan_name = ] 'plan_name'`指定要添加的维护计划的名称。 *plan_name*为**varchar （128）**。  
   
  ** @plan_id = '** *plan_id* **'**  
