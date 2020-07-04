@@ -11,20 +11,20 @@ ms.topic: conceptual
 ms.assetid: 7a8c96e0-1328-4f35-97fc-b6d9cb808bae
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 859751ebe806a662c4ec40d6812862d63a84a450
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7dab88e8e10bc854e3210d5898cbd965eb268e04
+ms.sourcegitcommit: 2e6c4104dca8680064eb64a7a79a3e15e1b4365f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887938"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85942855"
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>运行 DQSInstaller.exe 以便完成数据质量服务器安装
 
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ](../../includes/applies-to-version/sql-windows-only.md)]
 
   若要完成 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安装，您必须安装完 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]后运行 DQSInstaller.exe 文件。 本主题介绍如何从 **“开始”** 屏幕、 **“开始”** 菜单、Windows 资源管理器或命令提示符运行 DQSInstaller.exe，您可以选择上述任何方法来运行 DQSInstaller.exe 文件。  
   
-##  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> 先决条件  
   
 -   安装 SQL Server 时，必须在 SQL Server 安装程序的“功能选择”页上的 **“数据库引擎服务”** 下选择了 **“Data Quality Services”** ，并且必须已完成 SQL Server 安装。 有关详细信息，请参阅 [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "85887938"
 3.  系统将提示您为数据库主密钥键入密码。 该数据库密钥是加密引用数据服务提供程序密钥所必需的，当您以后在 [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 中设置引用数据提供程序时，这些密钥将存储于 DQS_MAIN 数据库中。  
   
     > [!IMPORTANT]  
-    >  密码长度必须至少为8个字符，并且必须包含以下四个类别中的三个：英文大写字母（A，B，C,.。。Z）、英文小写字母（a、b、c,.。。z）、数字（0、1、2,.。。9）、非字母数字或特殊字符（~！ @ # $% ^& * （） _-+ = | \\ {}[]:;"'<>,。?/). 例如： P@ssword。 如果当前密码与这些要求不匹配，安装程序将提示您输入其他密码。  
+    >  密码长度必须至少为8个字符，并且必须包含以下四个类别中的三个：英文大写字母（A，B，C,.。。Z）、英文小写字母（a、b、c,.。。z）、数字（0、1、2,.。。9）、非字母数字或特殊字符（~！ @ # $% ^& * （） _-+ = | \\ {}[]:;"'<>,。?/). 例如：P@ssword。 如果当前密码与这些要求不匹配，安装程序将提示您输入其他密码。  
   
 4.  提供一个密码，确认该密码，然后按下 ENTER 键以便继续安装。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "85887938"
 ##  <a name="run-dqsinstallerexe-from-command-prompt"></a><a name="CommandPrompt"></a>从命令提示符运行 DQSInstaller.exe  
  您可以从命令提示符处使用以下命令行参数运行 DQSInstaller.exe：  
   
-|DQSInstaller.exe 参数|说明|示例语法|  
+|DQSInstaller.exe 参数|描述|示例语法|  
 |--------------------------------|-----------------|-------------------|  
 |-collation|安装 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]时要使用的服务器排序规则。<br /><br /> DQS 仅支持不区分大小写的排序规则。 如果您指定了区分大小写的排序规则，则该安装程序将尝试使用指定排序规则的不区分大小写版本。 如果没有不区分大小写的排序规则，或者 SQL 不支持排序规则，则 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安装将失败。<br /><br /> 如果未指定服务器排序规则，则使用默认排序规则 SQL_Latin1_General_CP1_CI_AS。|`dqsinstaller.exe -collation <collation_name>`|  
 |-upgradedlls|跳过重新创建 DQS 数据库（DQS_MAIN、DQS_PROJECTS 和 DQS_STAGING_DATA），并且仅更新 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据库中的 DQS 所使用的 SQL 公共语言运行时 (SQLCLR) 程序集。<br /><br /> 有关详细信息，请参阅 [.NET Framework 更新后升级 SQLCLR 程序集](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)|`dqsinstaller.exe -upgradedlls`|  
