@@ -19,15 +19,14 @@ ms.assetid: 90be414c-04b3-46c0-906b-ae7537989b7d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1b4bb12cd8461654cf2912cfcd0ebf245edc0db9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: ec78b6708feae1b8eea6394705516577772026ae
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787939"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002873"
 ---
 # <a name="determining-the-characteristics-of-a-result-set-odbc"></a>确定结果集的特征 (ODBC)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   元数据是描述其他数据的数据。 例如，结果集元数据描述结果集的特征，比如结果集中的列数、这些列的数据类型、其名称、精度和可为 Null 性。  
   

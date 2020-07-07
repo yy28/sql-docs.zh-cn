@@ -18,15 +18,14 @@ ms.assetid: 78f2e5fc-b6fb-4eda-9f71-991a4d6c4902
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d01be082c524c2fbee559f3ca761352be4ad52bd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: bd6640c497226bbe2c97cbafaa9931582e9b5d6c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85658151"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005782"
 ---
 # <a name="supporting-local-transactions"></a>支持本地事务
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   会话分隔 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本机客户端 OLE DB 提供程序本地事务的事务范围。 当使用者的方向时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client OLE DB 提供程序将请求提交给已连接的实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，该请求构成了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client OLE DB 提供程序的工作单元。 本地事务始终 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB 提供程序会话中包装一个或多个工作单元。  
   
@@ -36,7 +35,7 @@ ms.locfileid: "85658151"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序支持**ITransactionLocal：： StartTransaction**参数，如下所示。  
   
-|参数|描述|  
+|参数|说明|  
 |---------------|-----------------|  
 |** isoLevel[in]|用于该事务的隔离级别。 在本地事务中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序支持以下各项：<br /><br /> **ISOLATIONLEVEL_UNSPECIFIED**<br /><br /> **ISOLATIONLEVEL_CHAOS**<br /><br /> **ISOLATIONLEVEL_READUNCOMMITTED**<br /><br /> **ISOLATIONLEVEL_READCOMMITTED**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_CURSORSTABILITY**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_SERIALIZABLE**<br /><br /> **ISOLATIONLEVEL_ISOLATED**<br /><br /> **ISOLATIONLEVEL_SNAPSHOT**<br /><br /> <br /><br /> 注意：从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 开始，ISOLATIONLEVEL_SNAPSHOT 对 isoLevel 参数有效，而不管是否对数据库启用了版本支持**。 但是，如果用户尝试执行语句，并且未启用版本支持和/或数据库不为只读，则将发生错误。 此外，如果在连接到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本时将 ISOLATIONLEVEL_SNAPSHOT 指定为 isoLevel，将发生 XACT_E_ISOLATIONLEVEL 错误**。|  
 |** isoFlags[in]|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序返回除零以外的任何值的错误。|  
@@ -45,7 +44,7 @@ ms.locfileid: "85658151"
   
  对于本地事务， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序实现**ITransaction：： Abort**参数，如下所示。  
   
-|参数|描述|  
+|参数|说明|  
 |---------------|-----------------|  
 |** pboidReason[in]|忽略（如果设置）。 可以安全地为 NULL。|  
 |** fRetaining[in]|当该参数为 TRUE 时，将针对会话隐式开始新的事务。 事务必须由使用者提交或中止。 为 FALSE 时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序将恢复为会话的自动提交模式。|  
@@ -53,7 +52,7 @@ ms.locfileid: "85658151"
   
  对于本地事务， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序实现**ITransaction：： Commit**参数，如下所示。  
   
-|参数|描述|  
+|参数|说明|  
 |---------------|-----------------|  
 |** fRetaining[in]|当该参数为 TRUE 时，将针对会话隐式开始新的事务。 事务必须由使用者提交或中止。 为 FALSE 时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序将恢复为会话的自动提交模式。|  
 |** grfTC[in]|Native Client OLE DB 提供程序不支持异步和阶段的一个返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序为除 XACTTC_SYNC 之外的任何值返回 XACT_E_NOTSUPPORTED。|  

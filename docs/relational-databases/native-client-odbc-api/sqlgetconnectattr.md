@@ -14,15 +14,14 @@ ms.assetid: 26e4e69a-44fd-45e3-b47a-ae39184f041b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8b09c9edcd684135e4cd72d0e09407c12c9cbfd5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 3881a7c5004e4141124b5440a74812decbd014e2
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789210"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003494"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序定义了特定于驱动程序的连接属性。 某些属性可用于**SQLGetConnectAttr**，该函数用于报告其当前设置。 在建立连接或使用[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)设置特性之前，不保证为这些特性报告的值。  
   
@@ -34,7 +33,7 @@ ms.locfileid: "85789210"
 > [!NOTE]  
 >  标准 ODBC 连接属性 SQL_ATTR_CONNECTION_DEAD 返回连接的最近状态。 这可能不是当前连接状态。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |SQL_CD_TRUE|与服务器的连接已丢失。|  
 |SQL_CD_FALSE|连接已打开，可以用于执行语句处理。|  
@@ -50,7 +49,7 @@ ms.locfileid: "85789210"
   
  有关详细信息，请参阅[访问扩展事件日志中的诊断信息](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |SQL_ERROR|连接失败。|  
 |SQL_SUCCESS|连接成功。 将在输出缓冲区中找到客户端连接 ID。|  
@@ -69,7 +68,7 @@ ms.locfileid: "85789210"
 ## <a name="sql_copt_ss_user_data"></a>SQL_COPT_SS_USER_DATA  
  SQL_COPT_SS_USER_DATA 属性检索用户数据指针。 用户数据存储在客户端拥有的内存中，并在每次连接时进行记录。 如果尚未设置用户数据指针，则返回 SQL_UD_NOTSET（NULL 指针）。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |SQL_UD_NOTSET|未设置用户数据指针。|  
 |任何其他值|用户数据的指针。|  

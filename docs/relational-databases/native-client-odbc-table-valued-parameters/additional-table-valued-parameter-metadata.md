@@ -14,15 +14,14 @@ ms.assetid: 6c193188-5185-4373-9a0d-76cfc150c828
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5b9777fb07714eb0d3c23c6ad4e9385921746771
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: e1aed8844cffc6ccfb6608e4077f792dcf8651e6
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773482"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004602"
 ---
 # <a name="additional-table-valued-parameter-metadata"></a>其他表值参数的元数据
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   若要检索表值参数的元数据，应用程序将调用 SQLProcedureColumns。 对于表值参数，SQLProcedureColumns 将返回单个行。 添加了两个额外 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定的列 SS_TYPE_CATALOG_NAME 和 SS_TYPE_SCHEMA_NAME，以提供与表值参数关联的表类型的架构和目录信息。 为了符合 ODBC 规范，SS_TYPE_CATALOG_NAME 和 SS_TYPE_SCHEMA_NAME 的显示位置位于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本中添加的所有驱动程序特定列之前，并位于 ODBC 自身委托的所有列之后。  
   
@@ -32,7 +31,7 @@ ms.locfileid: "85773482"
 |-----------------|---------------|---------------------|  
 |DATA_TYPE|Smallint（非 NULL）|SQL_SS_TABLE|  
 |TYPE_NAME|WVarchar(128)（非 NULL）|表值参数的类型名称。|  
-|COLUMN_SIZE|整数|Null|  
+|COLUMN_SIZE|Integer|Null|  
 |BUFFER_LENGTH|Integer|0|  
 |DECIMAL_DIGITS|Smallint|Null|  
 |NUM_PREC_RADIX|Smallint|Null|  
@@ -41,7 +40,7 @@ ms.locfileid: "85773482"
 |COLUMN_DEF|WVarchar(4000)|Null|  
 |SQL_DATA_TYPE|Smallint（非 NULL）|SQL_SS_TABLE|  
 |SQL_DATETIME_SUB|Smallint|Null|  
-|CHAR_OCTET_LENGTH|整数|Null|  
+|CHAR_OCTET_LENGTH|Integer|Null|  
 |ORDINAL_POSITION|Integer（非 NULL）|参数的序号位置。|  
 |IS_NULLABLE|Varchar|"YES"|  
 |SS_TYPE_CATALOG_NAME|WVarchar(128)（非 NULL）|包含表值参数表类型的类型定义的目录。|  

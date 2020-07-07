@@ -11,15 +11,14 @@ ms.assetid: 814cb31e-6fd1-4eb7-afe3-25b520638815
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 65caa65c9beb2f032c0aca52464047bfc4e6d9fc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: aa1cc9d33d1835fa65a9724a06f05e80b845ebe9
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773239"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005425"
 ---
 # <a name="retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db"></a>使用 ISequentialStream 从 FILESTREAM 列检索数据 (OLE DB)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   此示例显示如何使用 ICommandText 接口中的 ISequentialStream 接口从 Filestream 列检索单个记录。  
   

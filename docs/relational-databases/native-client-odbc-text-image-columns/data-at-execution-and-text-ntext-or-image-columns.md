@@ -23,15 +23,14 @@ ms.assetid: 67ffb1a6-f38d-4712-ba64-96bdd41ec2b2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6142ed44d7937e780de33740451caa029db189b3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 189058d9e15b0dfd9fa59108c2a8ba173765ac23
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785571"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004284"
 ---
 # <a name="data-at-execution-and-text-ntext-or-image-columns"></a>执行时数据和 Text、ntext 或 Image 列
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   使用 ODBC 执行时数据功能，应用程序能够对绑定列或参数使用非常大的数据量。 检索非常大的**text**、 **ntext**或**image**列时，应用程序可能无法简单地分配大型缓冲区，将列绑定到缓冲区，并提取行。 更新非常大的**text**、 **ntext**或**image**列时，应用程序可能无法简单地分配大型缓冲区，将其绑定到 SQL 语句中的参数标记，然后执行该语句。 在这些情况下，应用程序必须将[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)或[SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md)与它的执行时数据选项一起使用。  
   

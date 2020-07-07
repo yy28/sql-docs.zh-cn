@@ -13,15 +13,14 @@ ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a73fbe7709e30156f198205a21644153fad10240
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: b96e7807fd29e417616f2aec406d6a07f37ccf6f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725183"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004342"
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>与 SQL Server 早期版本的增强日期和时间类型行为 (ODBC)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   本主题说明当使用增强的日期和时间功能的客户端应用程序与早于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本通信时的预期行为，以及使用 Microsoft 数据访问组件、Windows 数据访问组件或早于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Native Client 版本的客户端应用程序向支持增强的日期和时间功能的服务器发送命令时的预期行为。  
   
@@ -36,7 +35,7 @@ ms.locfileid: "85725183"
   
 |SQL Server 2005 类型|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]（或更高版本）类型|ODBC 客户端类型|结果转换（SQL 到 C）|参数转换（C 到 SQL）|  
 |--------------------------|----------------------------------------------|----------------------|------------------------------------|---------------------------------------|  
-|datetime|Date|SQL_C_TYPE_DATE|确定|确定（1）|  
+|datetime|日期|SQL_C_TYPE_DATE|确定|确定（1）|  
 |||SQL_C_TYPE_TIMESTAMP|时间字段设置为零。|成功 (2)<br /><br /> 如果时间字段非零，则失败。 适用于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
 ||Time(0)|SQL_C_TYPE_TIME|确定|确定（1）|  
 |||SQL_C_TYPE_TIMESTAMP|日期字段设置为当前日期。|成功 (2)<br /><br /> 忽略日期。 如果秒的小数部分非零，则将失败。 适用于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
@@ -44,7 +43,7 @@ ms.locfileid: "85725183"
 |||SQL_C_TYPE_TIMESTAMP|失败-时间文本无效。|确定（1）|  
 ||Datetime2 （3）|SQL_C_TYPE_TIMESTAMP|确定|确定（1）|  
 ||Datetime2 （7）|SQL_C_TYPE_TIMESTAMP|确定|由客户端转换将值舍入到 1/300 秒。|  
-|Smalldatetime|Date|SQL_C_TYPE_DATE|确定|确定|  
+|Smalldatetime|日期|SQL_C_TYPE_DATE|确定|确定|  
 |||SQL_C_TYPE_TIMESTAMP|时间字段设置为零。|成功 (2)<br /><br /> 如果时间字段非零，则失败。 适用于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
 ||Time(0)|SQL_C_TYPE_TIME|确定|确定|  
 |||SQL_C_TYPE_TIMESTAMP|日期字段设置为当前日期。|成功 (2)<br /><br /> 忽略日期。 如果秒的小数部分非零，则失败。<br /><br /> 适用于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  

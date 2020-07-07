@@ -13,15 +13,14 @@ ms.assetid: 059431e2-a65c-4587-ba4a-9929a1611e96
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 435ca8d8685f62e7a8f2fad172f66414edafb756
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 9266133a7594c2703e0c8671710034c5d85dc9ff
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718985"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004365"
 ---
 # <a name="datetime-data-type-conversions-from-sql-to-c"></a>由 SQL 到 C 的 datetime 数据类型转换
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   下表列出了从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期/时间类型转换为 C 类型时要注意的问题。  
   

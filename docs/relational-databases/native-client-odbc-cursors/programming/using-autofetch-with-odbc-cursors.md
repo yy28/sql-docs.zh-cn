@@ -15,15 +15,14 @@ ms.assetid: 57bd55f4-8945-4d8d-9f58-d30c81d2a514
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ee4731c9666e47500620e540d1095b4ddb9214bc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: f02fab661eca50716dffa06d529ccd8c747c1d01
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760706"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001706"
 ---
 # <a name="using-autofetch-with-odbc-cursors"></a>通过 ODBC 游标使用自动提取
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   当连接到实例时 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序支持使用任何服务器游标类型时的自动提取选项。 使用自动提取，打开游标的**SQLExecute**或**SQLExecDirect**函数也具有隐式[SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)（SQL_FIRST）函数。 组成第一个行集的行将作为语句执行的一部分返回给绑定应用程序变量，并通过网络将另一个往返保存到服务器。 启用自动提取选项后，不支持[SQLGetData](../../../relational-databases/native-client-odbc-api/sqlgetdata.md) ;结果集列必须绑定到程序变量。  
   

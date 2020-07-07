@@ -14,15 +14,14 @@ ms.assetid: 13a35511-3987-426b-a3b7-3b2e83900dc7
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 59574cdd08b519704d94aa0303b30f2428036157
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
-ms.translationtype: MT
+ms.openlocfilehash: c6da1b1cb2188d96f6e9bf733d83ecb3e394a78d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85884771"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005963"
 ---
 # <a name="scripting"></a>脚本编写
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   SMO 中的脚本由 <xref:Microsoft.SqlServer.Management.Smo.Scripter> 对象及其子对象或单个对象的**脚本**方法控制。 <xref:Microsoft.SqlServer.Management.Smo.Scripter>对象控制对实例上对象的依赖关系的映射 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   

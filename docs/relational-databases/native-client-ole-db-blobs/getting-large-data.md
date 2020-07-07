@@ -16,15 +16,14 @@ ms.assetid: a31c5632-96aa-483f-a307-004c5149fbc0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4927ffc7ded9a291e5910cd359cb59edea0bf3bb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: e9ba0351a3ea398661642a2e737a58fb7adecf8d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785561"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005848"
 ---
 # <a name="getting-large-data"></a>获取大型数据
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   通常，使用者应该隔离用来创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本机客户端 OLE DB 提供程序存储对象的代码，该代码用于处理未通过**ISequentialStream**接口指针引用的数据。  
   

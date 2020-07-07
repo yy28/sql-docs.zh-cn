@@ -19,15 +19,14 @@ ms.assetid: 00b44baf-fcf0-4095-aabe-49fa87e77316
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 87b905aa178aec6aa10d4d7585384183bdb5d6c9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: e4d6914ce4b46a7fc787b496ebf6b23036b9c21c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783007"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002130"
 ---
 # <a name="sp_refresh_parameter_encryption-transact-sql"></a>sp_refresh_parameter_encryption （Transact-sql）
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 为当前数据库中指定的非绑定到架构的存储过程、用户定义函数、视图、DML 触发器、数据库级 DDL 触发器或服务器级 DDL 触发器的参数更新 Always Encrypted 元数据。 
 
@@ -48,14 +47,14 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 `[ @name = ] 'module_name'`存储过程、用户定义函数、视图、DML 触发器、数据库级 DDL 触发器或服务器级 DDL 触发器的名称。 *module_name*不能是公共语言运行时（CLR）存储过程或 CLR 函数。 *module_name*不能是绑定到架构的。 *module_name*为 `nvarchar` ，无默认值。 *module_name*可以是由多个部分组成的标识符，但只能引用当前数据库中的对象。
 
-`[ @namespace = ] ' < class > '`指定模块的类。 如果*module_name*是 DDL 触发器， `<class>` 则是必需的。 `<class>` 为 `nvarchar(20)`。 有效的输入为 `DATABASE_DDL_TRIGGER` 和 `SERVER_DDL_TRIGGER` 。    
+`[ @namespace = ] ' < class > '`指定模块的类。 如果*module_name*是 DDL 触发器， `<class>` 则是必需的。 `<class>` 为 `nvarchar(20)` 。 有效的输入为 `DATABASE_DDL_TRIGGER` 和 `SERVER_DDL_TRIGGER` 。    
 
 ## <a name="return-code-values"></a>返回代码值  
 
 0（成功）或非零数字（失败）
 
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 如果以下情况，模块的参数的加密元数据可能会过时：   
 * 模块引用的表中列的加密属性已更新。 例如，已删除某列，并且添加了一个具有相同名称但具有不同加密类型、加密密钥或加密算法的新列。  

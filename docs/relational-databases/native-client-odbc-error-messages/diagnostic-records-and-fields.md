@@ -20,15 +20,14 @@ helpviewer_keywords:
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0f2ac10fe68f5e51f72d12f3b5514ef293afda0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: f6236e2744487742a3fec119b62a2a08e7594822
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775963"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002376"
 ---
 # <a name="diagnostic-records-and-fields"></a>诊断记录和字段
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   诊断记录与 ODBC 环境、连接、语句或描述符句柄关联。 当任何 ODBC 函数产生的返回代码不是 SQL_SUCCESS 或 SQL_INVALID_HANDLE 时，该函数调用的句柄就有相关联的诊断记录，其中包含信息性或错误性消息。 这些记录会一直保留，直到要通过该句柄调用其他函数，那时，记录就会被丢弃。 与一个句柄任一次调用相关联的诊断记录数目不受限制。  
   

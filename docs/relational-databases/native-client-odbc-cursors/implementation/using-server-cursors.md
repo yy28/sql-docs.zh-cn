@@ -16,15 +16,14 @@ ms.assetid: 8a6d99b7-10b8-4474-8639-4914b25ba170
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 962a8879d53f9cf7f0f59ba4c79ba63063f79ecc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: ca3436e01cfe4c9585c6ecec8111077ecec13bd4
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730385"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000601"
 ---
 # <a name="using-server-cursors"></a>使用服务器游标
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   如果 ODBC 应用程序将任意 ODBC 游标属性设置为默认值以外的任何值，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驱动程序会请求服务器实现一个相同类型的 API 服务器游标。 如果使用 API 服务器游标，将在客户端上释放内存，并且可以大幅减少客户端与服务器之间的网络通信量。  
   

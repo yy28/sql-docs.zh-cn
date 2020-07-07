@@ -13,15 +13,14 @@ ms.assetid: c29e0f5e-9b3c-42b3-9856-755f4510832f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 571affb61db00386bc7e325c5491e5364d526ee2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 74e2fedfdc15ae247a77523a405204ed0b52edda
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719005"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001690"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>增强的日期和时间类型的大容量复制更改（OLE DB 和 ODBC）
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   本主题描述为支持大容量复制功能而增强的日期/时间功能。 本主题中的信息对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 中的 OLE DB 和 ODBC 均适用。  
   
@@ -32,7 +31,7 @@ ms.locfileid: "85719005"
 |-----------------------|-------------------------|-----------------------------------------------------------------------------------------------------|  
 |datetime|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|D|  
-|Date|SQLDATE|de|  
+|日期|SQLDATE|de|  
 |时间|SQLTIME|te|  
 |Datetime2|SQLDATETIME2|d2|  
 |Datetimeoffset|SQLDATETIMEOFFSET|do|  
@@ -99,7 +98,7 @@ ms.locfileid: "85719005"
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
 |datetime|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIME4|0x3a|  
-|Date|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
+|日期|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
 |时间|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
 |Datetime2|SQLDATETIME2|BCP_TYPE_SQLDATETIME2|0x2a|  
 |Datetimeoffset|SQLDATETIMEOFFSET|BCP_TYPE_SQLDATETIMEOFFSET|0x2b|  
@@ -112,16 +111,16 @@ ms.locfileid: "85719005"
   
 |转换后 -><br /><br /> From|date|time|smalldatetime|datetime|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
-|Date|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
-|时间|不可用|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
+|日期|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
+|时间|空值|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
 |Smalldatetime|1,2|1,4,10|1|1|1,10|1,5,10|1,11|1,11|  
 |datetime|1,2|1,4,10|1,12|1|1,10|1,5,10|1,11|1,11|  
 |Datetime2|1,2|1,4,10|1,10 (ODBC)1,12 (OLE DB)|1,10|1,10|1,5,10|1,3|1,3|  
 |Datetimeoffset|1,2,8|1,4,8,10|1,8,10|1,8,10|1,8,10|1,10|1,3|1,3|  
-|Char/wchar (date)|9|-|9,6 (ODBC)9,6,12 (OLE DB)|9,6 (ODBC)9,6,12 (OLE DB)|9,6|9,5,6|不可用|不可用|  
-|Char/wchar (time)|-|9,10|9,7,10 (ODBC)9,7,10,12 (OLE DB)|9,7,10 (ODBC)9,7,10, 12 (OLE DB)|9,7,10|9,5,7,10|不可用|不可用|  
-|Char/wchar (datetime)|9,2|9,4,10|9,10 (ODBC)9,10,12 (OLE DB)|9,10 (ODBC)9,10,12 (OLE DB)|9,10|9,5,10|不可用|不可用|  
-|Char/wchar (datetimeoffset)|9,2,8|9,4,8,10|9,8,10 (ODBC)9,8,10,12 (OLE DB)|9,8,10 (ODBC)9,8,10,12 (OLE DB)|9,8,10|9,10|不可用|不可用|  
+|Char/wchar (date)|9|-|9,6 (ODBC)9,6,12 (OLE DB)|9,6 (ODBC)9,6,12 (OLE DB)|9,6|9,5,6|空值|空值|  
+|Char/wchar (time)|-|9,10|9,7,10 (ODBC)9,7,10,12 (OLE DB)|9,7,10 (ODBC)9,7,10, 12 (OLE DB)|9,7,10|9,5,7,10|空值|空值|  
+|Char/wchar (datetime)|9,2|9,4,10|9,10 (ODBC)9,10,12 (OLE DB)|9,10 (ODBC)9,10,12 (OLE DB)|9,10|9,5,10|空值|空值|  
+|Char/wchar (datetimeoffset)|9,2,8|9,4,8,10|9,8,10 (ODBC)9,8,10,12 (OLE DB)|9,8,10 (ODBC)9,8,10,12 (OLE DB)|9,8,10|9,10|空值|空值|  
 ||||||||||
 
 #### <a name="key-to-symbols"></a>符号含义  
@@ -141,7 +140,7 @@ ms.locfileid: "85719005"
 |10|如果在客户端到服务器转换时发生具有数据丢失的截断，则发出错误 (OLE DB)，或者生成 ODBC 诊断记录，同时还生成 SQLSTATE 22008 和消息“日期时间字段溢出”。 如果值处于服务器使用的 UTC 范围可表示的范围外，也会发生此错误。 如果在服务器到客户端转换时发生秒或秒的小数部分截断，则只会显示警告。|  
 |11|如果发生具有数据丢失的截断，则生成诊断记录。<br /><br /> 在服务器到客户端转换时，这是警告 (ODBC SQLSTATE S1000)。<br /><br /> 在客户端到服务器转换时，这是错误 (ODBC SQLSTATE 22001)。|  
 |12|秒设置为零，秒的小数部分被放弃。 可能没有截断错误。|  
-|不可用|现有 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更早版本的行为将保持。|  
+|空值|现有 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更早版本的行为将保持。|  
 |||
 
 ## <a name="see-also"></a>另请参阅  

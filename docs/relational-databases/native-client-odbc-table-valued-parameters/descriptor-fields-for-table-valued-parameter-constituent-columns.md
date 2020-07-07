@@ -13,29 +13,28 @@ ms.assetid: 944b3968-fd47-4847-98d6-b87e8ef2acdc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4fc2ea564bff8899b3df82fd5d82297b7997c08c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 8c8d5468bbd9888905a39e2ba1aceac148201c97
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783207"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001102"
 ---
 # <a name="descriptor-fields-for-table-valued-parameter-constituent-columns"></a>表值参数构成列的描述符字段
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   本部分中描述的表值参数描述符字段是通过将[SQLSetDescField](../../relational-databases/native-client-odbc-api/sqlsetdescfield.md)和[SQLSetDescField](../../relational-databases/native-client-odbc-api/sqlsetdescfield.md)与实现参数描述符（IPD）的句柄结合使用来进行操作的。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  SQL_DESC_AUTO_UNIQUE_VALUE 用于表值参数以及其他功能。  
   
-|特性名|类型|描述|  
+|特性名|类型|说明|  
 |--------------------|----------|-----------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQLINTEGER|SQL_TRUE 指示该列是标识列。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可使用此信息来优化性能，但不要求应用程序为标识列设置该设置。|  
 ||||
 
  以下属性将添加到应用程序参数描述符 (APD) 和实现参数描述符 (IPD) 中的所有参数类型：  
   
-|特性名|类型|描述|  
+|特性名|类型|说明|  
 |--------------------|----------|-----------------|  
 |SQL_CA_SS_COLUMN_COMPUTED|SQLSMALLINT|SQL_TRUE 指示该列是计算列。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可使用此信息来优化性能，但不要求应用程序为计算列设置该设置。<br /><br /> 对于非表值参数列的绑定，将忽略此属性。|  
 |SQL_CA_SS_COLUMN_IN_UNIQUE_KEY|SQLSMALLINT|SQL_TRUE 指示表值参数列参与唯一键。 这可能导致查询性能提高。 对于非表值参数列的绑定，将忽略此属性。|  

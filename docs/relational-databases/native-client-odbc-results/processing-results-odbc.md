@@ -20,15 +20,14 @@ ms.assetid: 61a8db19-6571-47dd-84e8-fcc97cb60b45
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6afb7460e4ceb09bff7b79e360fafcd8eb541703
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: b001a0222f32b3810e3610c11d8fdce672d7bd38
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774257"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004674"
 ---
 # <a name="processing-results-odbc"></a>处理结果 (ODBC)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   应用程序提交 SQL 语句之后，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会将得到的任何数据作为一个或多个结果集返回。 结果集是一组与查询条件匹配的行和列。 SELECT 语句、目录函数和某些存储过程可产生以表格格式供应用程序使用的结果集。 如果执行的 SQL 语句为存储过程、包含多个命令的批处理或包含关键字的 SELECT 语句，则会有多个要处理的结果集。  
   

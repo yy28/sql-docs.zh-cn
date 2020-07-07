@@ -12,16 +12,15 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 07/01/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 90821de148c245038b01eda3ebbe5c0b09379255
-ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
-ms.translationtype: MT
+ms.openlocfilehash: 0be2ffbfb7160d5be8f5ebb2a2ed688103a54b4d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85834808"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004610"
 ---
 # <a name="binding-and-data-transfer-of-table-valued-parameters-and-column-values"></a>表值参数和列值的绑定及数据传输
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 在将表值参数（TVP）与其他参数传递给服务器之前，必须将其绑定。 应用程序绑定表值参数的方式与绑定其他参数的方式相同：使用 SQLBindParameter 或对 SQLSetDescField 或 SQLSetDescRec 的等效调用。 表值参数的服务器数据类型为 SQL_SS_TABLE。 C 类型可以指定为 SQL_C_DEFAULT 或 SQL_C_BINARY。  
 

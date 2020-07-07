@@ -20,15 +20,14 @@ ms.assetid: d06a001f-0f72-4679-bc2f-66fff7958b86
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ef035c70d44de379ca03ae510fe695cee94ce8f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: b759d19e5c0440a55d6267b820f83354652efd63
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786341"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004241"
 ---
 # <a name="sysdm_db_index_usage_stats-transact-sql"></a>sys.dm_db_index_usage_stats (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   返回不同类型索引操作的计数以及上次执行每种操作的时间。  
   
@@ -63,7 +62,7 @@ ms.locfileid: "85786341"
 |**last_system_update**|**datetime**|系统上次执行更新的时间。|  
 |pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  由一个查询执行对指定索引所进行的每个单独的搜索、扫描、查找或更新都被计为对该索引的一次使用，并使此视图中的相应计数器递增。 对于由用户提交的查询所引发的操作以及由内部生成的查询所引发的操作（例如为收集统计信息而进行的扫描），都将报告相应的信息。  
   
  **user_updates** 计数器指示由基础表或视图上的插入、更新或删除操作所引起的索引维护级别。 可以使用此视图确定应用程序极少使用的索引。 还可以使用此视图确定引发维护开销的索引。 您可能要删除引发维护开销但不用于查询或只是偶尔用于查询的索引。  

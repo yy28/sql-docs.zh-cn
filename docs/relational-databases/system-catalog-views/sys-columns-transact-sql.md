@@ -20,15 +20,14 @@ ms.assetid: 323ac9ea-fc52-4b8c-8a7e-e0e44f8ed86c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b6bafc58de30a97a18c0b1cbfa9ee07b0e4224b2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: c0f9f53a26c9c99491022b94efd6c8a96d53c98c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733514"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003083"
 ---
 # <a name="syscolumns-transact-sql"></a>sys.columns (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   为包含列的对象（如视图或表）的每一列返回一行。 下面是包含列的对象类型的列表。  
   

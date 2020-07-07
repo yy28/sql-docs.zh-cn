@@ -12,15 +12,14 @@ ms.assetid: 1e1e570c-7f14-4e16-beab-c328e3fbdaa8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad3b14e96311a79460384d59fc2dcf9a912b19fd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 540816610dacdd14ca47ba07c34c2752abc3dcbb
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85656986"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005713"
 ---
 # <a name="updating-an-application-from-sql-server-2005-native-client"></a>从 SQL Server 2005 Native Client 更新应用程序
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   本主题介绍自 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 以来在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Native Client 中的重大更改。  
   
@@ -28,7 +27,7 @@ ms.locfileid: "85656986"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 9.0 随 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 附带。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 随 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 附带。  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.5 随 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 附带。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 随 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 和 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 附带。  
   
-|自 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以来 SQL Server Native Client 中已更改的行为|描述|  
+|自 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以来 SQL Server Native Client 中已更改的行为|说明|  
 |------------------------------------------------------------------------------------|-----------------|  
 |OLE DB 仅填充到定义的小数位数。|对于将转换的数据发送到服务器的转换， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client （从开始 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] ）填充数据中的尾随零，最大长度为**日期时间**值的最大长度。 SQL Server Native Client 9.0 则填充到 9 位数。|  
 |验证 ICommandWithParameter::SetParameterInfo 的 DBTYPE_DBTIMESTAMP。|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client （从开始 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] ）实现了将 ICommandWithParameter：： SetParameterInfo 中的*bScale*的 OLE DB 要求设置为 DBTYPE_DBTIMESTAMP 的秒的小数部分。|  

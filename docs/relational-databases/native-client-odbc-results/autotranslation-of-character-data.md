@@ -23,15 +23,14 @@ ms.assetid: 86a8adda-c5ad-477f-870f-cb370c39ee13
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f299d5535a6b07d04eab3d8e16ad8f4bbe99f058
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 7c24230b76a08f629f219d23f67771e91ff3486c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775894"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002892"
 ---
 # <a name="autotranslation-of-character-data"></a>字符数据的自动转换
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   字符数据（如使用 SQL_C_CHAR 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用**CHAR**、 **varchar**或**text**数据类型存储在中的数据）声明的字符数据只能表示有限数量的字符。 对于每个字符使用一个字节进行存储的字符数据，它只能表示 256 个字符。 使用客户端计算机的 ANSI 代码页 (ACP) 解释存储在 SQL_C_CHAR 变量中的值。 使用服务器上的**char**、 **varchar**或**text**数据类型存储的值将使用服务器的 ACP 进行计算。  
   

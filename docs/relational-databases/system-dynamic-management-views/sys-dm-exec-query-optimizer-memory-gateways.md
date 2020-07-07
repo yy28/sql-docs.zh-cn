@@ -20,19 +20,18 @@ helpviewer_keywords:
 author: josack
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 01b0a68658112ebde642dde3f9c1fa0fb1d73c57
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: da47c1b31551abd538adca6a447ac57a3fc429ff
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734745"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005196"
 ---
 # <a name="sysdm_exec_query_optimizer_memory_gateways-transact-sql"></a>sys. dm_exec_query_optimizer_memory_gateways （Transact-sql）
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 返回用于限制并发查询优化的资源信号量的当前状态。
 
-|列|类型|描述|  
+|列|类型|说明|  
 |----------|---------------|-----------------|  
 |**pool_id**|**int**|Resource Governor 下的资源池 ID|  
 |name|**sysname**|编译入口名称（小型网关、中型网关、大网关）|
@@ -50,7 +49,7 @@ SQL Server 要求对服务器具有 VIEW SERVER STATE 权限。
 Azure SQL 数据库需要数据库中的 VIEW DATABASE STATE 权限。
 
 
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
 SQL Server 使用分层网关方法来限制允许的并发编译数。  使用三个网关，包括小型、中型和大型。 通过更大的编译内存（需要使用者），网关可帮助防止总体内存资源耗尽。
 
 等待网关导致延迟编译。 除了编译延迟外，限制请求还会将关联的 RESOURCE_SEMAPHORE_QUERY_COMPILE 等待类型累积。 RESOURCE_SEMAPHORE_QUERY_COMPILE 等待类型可能表示查询正在使用大量内存进行编译，并且该内存已用尽，或者有足够的内存可用，但是特定网关上的可用单元已经耗尽。 如果内存不足，无法编译查询执行计划，则可以使用**sys. dm_exec_query_optimizer_memory_gateways**的输出进行故障排除。  

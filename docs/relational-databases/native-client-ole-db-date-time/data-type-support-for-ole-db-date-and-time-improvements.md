@@ -14,15 +14,14 @@ ms.assetid: d40e3fd6-9057-4371-8236-95cef300603e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 940727c0b5b932017e9572a40e11a547a1f0a897
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 7d414c4aaf8e316d4662448f7e19b847468bee0c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773463"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005464"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>针对 OLE DB 日期和时间改进的数据类型支持
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   本主题提供有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期/时间数据类型 OLE DB （Native Client）类型的信息。  
   
@@ -173,7 +172,7 @@ enum SQLVARENUM {
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>ITableDefinition::CreateTable 中的数据类型映射  
  以下类型映射用于 ITableDefinition::CreateTable 所使用的 DBCOLUMNDESC 结构：  
   
-|OLE DB 数据类型 (wType**)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型|备注|  
+|OLE DB 数据类型 (wType**)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型|说明|  
 |----------------------------------|-----------------------------------------|-----------|  
 |DBTYPE_DBDATE|date||  
 |DBTYPE_DBTIMESTAMP|**datetime2**(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序检查 DBCOLUMDESC *bScale*成员，以确定秒的小数部分精度。|  

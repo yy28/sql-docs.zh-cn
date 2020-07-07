@@ -17,15 +17,14 @@ ms.assetid: 7ebd1394-cc8d-4bcf-92f3-c374a26e7ba0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c8e95adee6e01e4eb667d81e4523e7002b1aa89c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 4f3f0c654edce21a4ec5543d9488938b65d964f0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785136"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005293"
 ---
 # <a name="establishing-a-connection-to-a-data-source"></a>建立与数据源的连接
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   若要访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序，使用者必须首先通过调用**CoCreateInstance**方法创建数据源对象的实例。 每个 OLE DB 访问接口都具有一个唯一的类标识符 (CLSID)。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序，CLSID_SQLNCLI10 类标识符。 您还可以使用符号 SQLNCLI_CLSID，该符号将解析为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 您引用的 sqlncli.msi 中使用的 Native Client OLE DB 提供程序。  
   

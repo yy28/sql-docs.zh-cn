@@ -18,15 +18,14 @@ ms.assetid: 134003fd-9c93-4f5c-a988-045990933b80
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e1b2305336391a29de559fa01bd2d67c1a4621b2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 32dea8c43c1ad1e10f245cd806edb783a3153dd3
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775948"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001440"
 ---
 # <a name="constructing-sql-statements-for-cursors"></a>为游标构造 SQL 语句
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驱动程序使用服务器游标来实现 ODBC 规范中定义的游标功能。 ODBC 应用程序通过使用[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)设置不同的语句特性来控制游标行为。 以下为属性及其默认值。  
   
@@ -58,7 +57,7 @@ ms.locfileid: "85775948"
   
      执行包含多个 SELECT 语句的存储过程的 SQL 语句。 这包括填充参数或变量的 SELECT 语句。  
   
--   Keywords  
+-   关键字  
   
      包含关键字 FOR BROWSE 或 INTO 的 SQL 语句。  
   

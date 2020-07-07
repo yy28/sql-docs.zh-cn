@@ -13,15 +13,14 @@ ms.assetid: 0ebebd3b-0775-41c2-989d-aa4cf81af12a
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7eee04fd4d3ad5b56f72c1bf13b5a2c27c7741ff
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
-ms.translationtype: MT
+ms.openlocfilehash: 6243fdefcd5e145abc86cc148d8362d616286a47
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894094"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001253"
 ---
 # <a name="creating-altering-and-removing-user-defined-functions"></a>创建、更改和删除用户定义函数
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
   <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction>对象提供允许用户以编程方式管理中用户定义的函数的功能 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 用户定义函数支持输入和输出参数，还支持对表列的直接引用。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 要求先在数据库中注册程序集，然后才能在存储过程、用户定义函数、触发器和用户定义数据类型中使用这些程序集。 SMO 使用 <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly> 对象支持此项功能。  

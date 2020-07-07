@@ -13,19 +13,18 @@ ms.assetid: 6725bfb9-5f10-4115-be09-fd9c9f5779ea
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 96e74ebafcf6d80ba3db5a609209dcb79339d71e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: ef0728ab8c2785c11473743a39da2ba33b84d491
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783192"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001095"
 ---
 # <a name="odbc-sql-type-for-table-valued-parameters"></a>表值参数的 ODBC SQL 类型
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   对表值参数的支持是通过新的 ODBC SQL 类型 SQL_SS_TABLE 提供的。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  不能将 SQL_SS_TABLE 转换为任何其他 ODBC 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型。  
   
  如果 SQL_SS_TABLE 在 SQLBindParameter 的*ValueType*参数中用作 C 数据类型，或者尝试将应用程序参数描述符（APD）记录中的 SQL_DESC_TYPE 设置为 SQL_SS_TABLE，则返回 SQL_ERROR 并使用 SQLSTATE = HY003、"应用程序缓冲区类型无效" 生成诊断记录。  

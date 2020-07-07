@@ -11,15 +11,14 @@ ms.assetid: 9b5c94d6-612c-4e0f-976d-ac6ba55da3ac
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 818d2eb347539b6ea2452301bf153751184b433b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 52fbdd5925d67592b10e5dc4d293e9523dcda758
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787106"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003022"
 ---
 # <a name="sysdatabase_event_session_fields-azure-sql-database"></a>sys.database_event_session_fields（Azure SQL 数据库）
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   对在事件和目标上显式设置的每个可自定义列都返回一行。  
   
@@ -32,12 +31,12 @@ ms.locfileid: "85787106"
 |event_session_id|**int**|事件会话的 ID。 不可为 null。|  
 |object_id|**int**|此字段所关联的对象的 ID。 不可为 null。|  
 |name|**sysname**|字段的名称。 不可为 null。|  
-|值|**sql_variant**|字段的值。 不可为 null。|  
+|value|**sql_variant**|字段的值。 不可为 null。|  
   
 ## <a name="permissions"></a>权限  
  要求对服务器具有 VIEW DATABASE STATE 权限。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  此视图具有下列关系基数。  
   
 ||||  

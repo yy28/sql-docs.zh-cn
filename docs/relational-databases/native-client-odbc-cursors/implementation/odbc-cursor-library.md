@@ -19,15 +19,14 @@ ms.assetid: 3c610d3d-6e06-49cf-9a40-05b6a1c83a32
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2771c3418bc942de8ffeb54694b8395e5e5aa414
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: e936b0f62e8d12f95e8c08f88ffcb681f0f6aeaa
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719763"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000609"
 ---
 # <a name="odbc-cursor-library"></a>ODBC 游标库
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   某些 ODBC 驱动程序仅支持默认游标设置;这些驱动程序也不支持定位游标操作，如**SQLSetPos**。 ODBC 游标库是用于对通常不支持块状游标或静态游标的驱动程序实现这些游标的 Microsoft 数据访问组件 (MDAC) 的组件。 游标库还实现了定位的 UPDATE 和 DELETE 语句，并为它创建的游标实现了**SQLSetPos** 。  
   

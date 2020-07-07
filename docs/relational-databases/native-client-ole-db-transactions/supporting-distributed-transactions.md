@@ -19,15 +19,14 @@ ms.assetid: d250b43b-9260-4ea4-90cc-57d9a2f67ea7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 19378c7ead1ca34a6e3c2b42cb0b725560fabd8f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: b4bd02bccb53448a4039f7f27caf820a931df335
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85658202"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005810"
 ---
 # <a name="supporting-distributed-transactions"></a>支持分布式事务
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 访问接口使用者可以使用**ITransactionJoin：： JoinTransaction**方法参与由 Microsoft 分布式事务处理协调器（MS DTC）协调的分布式事务。  
   
@@ -37,7 +36,7 @@ ms.locfileid: "85658202"
   
  对于分布式事务， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序实现**ITransactionJoin：： JoinTransaction**参数，如下所示。  
   
-|参数|描述|  
+|参数|说明|  
 |---------------|-----------------|  
 |punkTransactionCoord**|指向 MS DTC 事务对象的指针。|  
 |IsoLevel**|由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序忽略。 使用者在从 MS DTC 获取事务对象时，确定由 MS DTC 协调的事务的隔离级别。|  
