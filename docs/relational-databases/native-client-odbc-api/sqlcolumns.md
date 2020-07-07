@@ -14,15 +14,14 @@ ms.assetid: 69d3af44-8196-43ab-8037-cdd06207b171
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: feae55d486eae6b269cef94320fe9468edb6e672
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 3ab77f9839c7780b88b6cbccaa58f0dabad8bc60
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789367"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006642"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   **SQLColumns**返回 SQL_SUCCESS *CatalogName*、 *TableName*或*ColumnName*参数是否存在值。 当在这些参数中使用了无效值时， **SQLFetch**将返回 SQL_NO_DATA。  
   
@@ -37,7 +36,7 @@ ms.locfileid: "85789367"
   
  下表列出了结果集返回的列：  
   
-|列名称|描述|  
+|列名称|说明|  
 |-----------------|-----------------|  
 |DATA_TYPE|为**VARCHAR （max）** 数据类型返回 SQL_VARCHAR、SQL_VARBINARY 或 SQL_WVARCHAR。|  
 |TYPE_NAME|对于**varchar （max）**、 **varbinary （max）** 和**nvarchar （max）** 数据类型，返回 "varchar"、"varbinary" 或 "nvarchar"。|  
@@ -79,7 +78,7 @@ ms.locfileid: "85789367"
 ## <a name="sqlcolumns-support-for-sparse-columns"></a>SQLColumns 对稀疏列的支持  
  已将两个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定列添加到 SQLColumns 的结果集中：  
   
-|列名称|数据类型|描述|  
+|列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |SS_IS_SPARSE|**Smallint**|如果该列为稀疏列，则为 SQL_TRUE；否则为 SQL_FALSE。|  
 |SS_IS_COLUMN_SET|**Smallint**|如果该列是**column_set**列，则 SQL_TRUE;否则，SQL_FALSE。|  

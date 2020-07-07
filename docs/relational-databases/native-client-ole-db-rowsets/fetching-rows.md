@@ -17,15 +17,14 @@ ms.assetid: 5e6dbe36-b682-464d-adfa-8e886f9bd452
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 37018708e8f54b37041a5c25c8a8e0ec5a79ee68
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: f74d247ef06762d4ca5a9533e04b784aac4c477a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724834"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007869"
 ---
 # <a name="fetching-rows"></a>提取行
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   IRowset 接口是基础行集接口****。 IRowset 接口提供了用于按顺序提取行、从这些行中获得数据以及管理行的方法****。 使用者使用 IRowset 中的这些方法执行所有基本行集操作****。 这包括提取和释放行以及获得列值。  
   

@@ -4,22 +4,28 @@ description: 了解每个版本对 Sybase （SybaseToSQL） SQL Server 迁移助
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 6/2/2020
+ms.date: 7/2/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 ms.author: alexiva
-ms.openlocfilehash: ce526f0ae42ac3d44e21f57d0542409d4a3dec0a
-ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
-ms.translationtype: MT
+ms.openlocfilehash: 10ac2af79db21b9320c3ef180a64de8c2a13b29f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84778939"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007853"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>SSMA for SAP ASE 中的新增功能（SybaseToSQL）
 
 本文列出了每个版本中的 SAP ASE SQL Server 迁移助手（以前称为 SSMA）的更改。
+
+## <a name="ssma-v811"></a>SSMA v 8.11
+
+适用于 SAP ASE 的 SSMA 的8.11 版本包含以下更改：
+
+* 修复临时表的转换
+* 使用 MSAL.NET 库进行交互式 Azure Active Directory 身份验证
 
 ## <a name="ssma-v810"></a>SSMA 8.10
 

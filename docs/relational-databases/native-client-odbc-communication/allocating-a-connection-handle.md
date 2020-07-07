@@ -21,15 +21,14 @@ ms.assetid: 471d8a31-199c-4f92-bb10-004fc7733b35
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 75546a921f9a8cf6c985696e87b97acb1e4a6983
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 7aee78c5b9f9b151710e3dc5feb662347b588f08
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734930"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007147"
 ---
 # <a name="allocating-a-connection-handle"></a>分配连接句柄
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   应用程序可以连接到数据源或驱动程序之前，必须分配连接句柄。 这是通过调用**SQLAllocHandle**并将*HandleType*参数设置为 SQL_HANDLE_DBC，并将*将 inputhandle*指向已初始化的环境句柄来完成的。  
   

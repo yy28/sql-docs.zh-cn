@@ -16,15 +16,14 @@ ms.assetid: 6bae29c4-7f49-419c-8712-90db734f992e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b50c8dc19d61511222949844459ad9c276faef28
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: a095cecfc790dc98edf2de174a3d492b25683db5
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783456"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006583"
 ---
 # <a name="cursor-programming-details-odbc"></a>游标编程详细信息 (ODBC)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   选择正确的游标类型可提高应用程序的性能。 在某些条件下，当请求的游标类型不支持执行的 SQL 语句时，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以隐式转换游标类型。  
   
