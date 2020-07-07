@@ -18,15 +18,14 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
-ms.openlocfilehash: b959348aaf7ca293a9d475a8b4eb6cb5cfdee7aa
-ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
-ms.translationtype: MT
+ms.openlocfilehash: 334b4ee83df73284abe7d20cdff66675d42039d5
+ms.sourcegitcommit: e6c260a139326f5a400a57ece812d39ef8b820bd
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85834631"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86032567"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH （Transact-sql）
-[!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE[tsql-appliesto-SQL 19-SQL DB-SQL MI](../../includes/applies-to-version/sqlserver2019-asdb-asdbmi.md)]
 
   指定关系图的搜索条件，该搜索条件是以递归方式或重复方式搜索的。 可以在 SELECT 语句中与 graph 节点和边缘表匹配中使用 SHORTEST_PATH。 
   
@@ -108,7 +107,7 @@ STRING_AGG 函数采用表达式和分隔符作为输入并返回一个字符串
 ### <a name="max"></a>MAX
 返回所提供的节点/边缘属性值或所遍历路径中出现的表达式的最大值。
 
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
 shortest_path 函数只能在 MATCH 内使用。     
 仅 shortest_path 支持 LAST_NODE。     
 如果查找加权最短路径，则不支持所有路径或所有最短路径。         
