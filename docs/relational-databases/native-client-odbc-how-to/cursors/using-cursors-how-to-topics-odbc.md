@@ -13,15 +13,14 @@ ms.assetid: 4e07d2a6-f389-4685-841c-71e34f948816
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0a87ab71ef062ad78c4b466bd2e75a6a36d4fdf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: d7d065eabd4256826235e9400c76d203ab8c0e5f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783307"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009481"
 ---
 # <a name="using-cursors-how-to-topics-odbc"></a>使用游标操作指南主题 (ODBC)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   若要使用游标，必须首先设置控制 ODBC 游标行为的连接和语句属性。 游标允许应用程序在每次提取时检索多行，并在游标的当前位置执行 UPDATE、INSERT 或 DELETE 语句。  
   

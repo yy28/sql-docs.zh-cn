@@ -4,22 +4,31 @@ description: 了解针对每个版本的 Oracle （SSMA）对 SQL Server 迁移�
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 6/2/2020
+ms.date: 7/2/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 ms.author: alexiva
-ms.openlocfilehash: 5d1a12d41d7d25154998f39be136266631b6d421
-ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
-ms.translationtype: MT
+ms.openlocfilehash: c0465466a00eb9e7c1eb3b75035d136687672fef
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84779554"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011293"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>SSMA for Oracle 中的新增功能（OracleToSQL）
 
 本文列出了每个版本中 Oracle 更改的 SQL Server 迁移助手（SSMA）。
+
+## <a name="ssma-v811"></a>SSMA v 8.11
+
+用于 Oracle 的 SSMA 的8.11 版本包含以下更改：
+
+* 支持语句中的子查询 `INSERT ... VALUES`
+* 改进了语句的转换 `COMMIT`
+* 修复 bug 的 `CONNECT BY LEVEL` 转换
+* 已更新分析器错误恢复逻辑，使其不变
+* 使用 MSAL.NET 库进行交互式 Azure Active Directory 身份验证
 
 ## <a name="ssma-v810"></a>SSMA 8.10
 

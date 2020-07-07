@@ -19,15 +19,14 @@ ms.assetid: 6a25862c-7f31-4873-ab65-30f3abde89d2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 19914bb99a2812035e6833b389a62e6ed3139463
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 87cbd2a6de772aa0886ee47d0c4d27fc734cbc3e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774264"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010079"
 ---
 # <a name="bcp_init"></a>bcp_init
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 初始化大容量复制操作。  
 
@@ -69,7 +68,7 @@ Unicode 和 ANSI 名称：
 ## <a name="returns"></a>返回  
  SUCCEED 或 FAIL。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  调用任何其他大容量复制函数之前调用**bcp_init** 。 **bcp_init**对工作站和之间的大容量数据复制执行必要的初始化 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
  **Bcp_init**函数必须与支持使用大容量复制函数的 ODBC 连接句柄一起提供。 若要启用句柄，请使用 SQLSetConnectAttr，将 SQL_COPT_SS_BCP [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)设置为在已分配但未连接的连接句柄上 SQL_BCP_ON。 尝试对已连接的句柄分配属性将导致错误。  

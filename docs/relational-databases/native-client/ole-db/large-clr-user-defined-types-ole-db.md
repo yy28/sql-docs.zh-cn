@@ -13,15 +13,14 @@ ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2358894c1303856fc3e1b9db06bca1f7e9427509
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: d67e41f3dfaed9ef59e586368d8b80dda2936669
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787700"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010502"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>大型 CLR 用户定义类型 (OLE DB)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   本主题讨论 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中为支持大型公共语言运行时 (CLR) 用户定义类型 (UDT) 而对 OLE DB 进行的更改。  
   
@@ -75,12 +74,12 @@ ms.locfileid: "85787700"
   
 |列类型|DBCOLUMN_TYPE|DBCOLUMN_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE|DBCOLUMN_FLAGS_ISLONG|DBCOLUMNS_ISSEARCHABLE|DBCOLUMN_OCTETLENGTH|  
 |-----------------|--------------------|--------------------------|-------------------------|---------------------|-----------------------------|-----------------------------|---------------------------|  
-|DBTYPE_UDT<br /><br /> （长度小于或等于 8,000 个字节）|DBTYPE_UDT|*n*|Null|Null|Clear|DB_ALL_EXCEPT_LIKE|n|  
+|DBTYPE_UDT<br /><br /> （长度小于或等于 8,000 个字节）|DBTYPE_UDT|*n*|Null|Null|清除|DB_ALL_EXCEPT_LIKE|n|  
 |DBTYPE_UDT<br /><br /> （长度大于 8000 个字节）|DBTYPE_UDT|~0|Null|Null|设置|DB_ALL_EXCEPT_LIKE|0|  
   
  对于 UDT，还会定义以下列：  
   
-|列标识符|类型|描述|  
+|列标识符|类型|说明|  
 |-----------------------|----------|-----------------|  
 |DBCOLUMN_UDT_CATALOGNAME|DBTYPE_WSTR|对于 UDT 列，为在其中定义了 UDT 的目录的名称。|  
 |DBCOLUMN_UDT_SCHEMANAME|DBTYPE_WSTR|对于 UDT 列，为在其中定义了 UDT 的架构的名称。|  
@@ -92,7 +91,7 @@ ms.locfileid: "85787700"
   
 |参数类型|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|dwFlags**<br /><br /> DBCOLUMNFLAGS_ISLONG|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------|  
-|DBTYPE_UDT<br /><br /> （长度小于或等于 8,000 个字节）|DBTYPE_UDT|*n*|~0|~0|Clear|  
+|DBTYPE_UDT<br /><br /> （长度小于或等于 8,000 个字节）|DBTYPE_UDT|*n*|~0|~0|清除|  
 |DBTYPE_UDT<br /><br /> （长度大于 8000 个字节）|DBTYPE_UDT|~0|~0|~0|设置|  
   
 ## <a name="columns-rowset-schema-rowsets"></a>COLUMNS 行集（架构行集）  
@@ -100,12 +99,12 @@ ms.locfileid: "85787700"
   
 |列类型|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_ISLONG|CHARACTER_OCTET_LENGTH|  
 |-----------------|----------------|-----------------------------------------|------------------------------|  
-|DBTYPE_UDT<br /><br /> （长度小于或等于 8,000 个字节）|DBTYPE_UDT|Clear|*n*|  
+|DBTYPE_UDT<br /><br /> （长度小于或等于 8,000 个字节）|DBTYPE_UDT|清除|*n*|  
 |DBTYPE_UDT<br /><br /> （长度大于 8000 个字节）|DBTYPE_UDT|设置|0|  
   
  对于 UDT，还会定义以下列：  
   
-|列标识符|类型|描述|  
+|列标识符|类型|说明|  
 |-----------------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|对于 UDT 列，为在其中定义了 UDT 的目录的名称。|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|对于 UDT 列，为在其中定义了 UDT 的架构的名称。|  
@@ -121,13 +120,13 @@ ms.locfileid: "85787700"
 |绑定数据类型|UDT 到服务器|非 UDT 到服务器|UDT 来自服务器|非 UDT 来自服务器|  
 |----------------------|-------------------|------------------------|---------------------|--------------------------|  
 |DBTYPE_UDT|支持 (5)|错误 (1)|支持 (5)|错误 (4)|  
-|DBTYPE_BYTES|支持 (5)|不可用|支持 (5)|不可用|  
-|DBTYPE_WSTR|支持 (2)、(5)|不可用|支持 (3)、(5)、(6)|不可用|  
-|DBTYPE_BSTR|支持 (2)、(5)|不可用|支持 (3)、(5)|不可用|  
-|DBTYPE_STR|支持 (2)、(5)|不可用|支持 (3)、(5)|不可用|  
-|DBTYPE_IUNKNOWN|支持 (6)|不可用|支持 (6)|不可用|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|支持 (5)|不可用|支持 (3)、(5)|不可用|  
-|DBTYPE_VARIANT (VT_BSTR)|支持 (2)、(5)|不可用|空值|空值|  
+|DBTYPE_BYTES|支持 (5)|空值|支持 (5)|空值|  
+|DBTYPE_WSTR|支持 (2)、(5)|空值|支持 (3)、(5)、(6)|空值|  
+|DBTYPE_BSTR|支持 (2)、(5)|空值|支持 (3)、(5)|空值|  
+|DBTYPE_STR|支持 (2)、(5)|空值|支持 (3)、(5)|空值|  
+|DBTYPE_IUNKNOWN|支持 (6)|空值|支持 (6)|空值|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|支持 (5)|空值|支持 (3)、(5)|空值|  
+|DBTYPE_VARIANT (VT_BSTR)|支持 (2)、(5)|空值|空值|空值|  
   
 ### <a name="key-to-symbols"></a>符号含义  
   

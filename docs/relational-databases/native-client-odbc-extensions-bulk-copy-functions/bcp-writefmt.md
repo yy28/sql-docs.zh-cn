@@ -18,15 +18,14 @@ ms.assetid: cb4c1d37-667d-4bcd-b13c-eb638bcc9b69
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e95fa5bb0948661faf9f8575557a39b90528879c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: eee4ef190de97572dad0b36dfc6b6f3e9bf370f7
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783383"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010023"
 ---
 # <a name="bcp_writefmt"></a>bcp_writefmt
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   创建一个格式化文件，它包含对当前大容量复制数据文件的格式的说明。  
   
@@ -49,7 +48,7 @@ RETCODE bcp_writefmt (
 ## <a name="returns"></a>返回  
  SUCCEED 或 FAIL。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  格式化文件指定大容量复制所创建的数据文件的数据格式。 对[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)和[bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)的调用定义数据文件的格式。 **bcp_writefmt**在*szformatfile 所*引用的文件中保存此定义。 有关详细信息，请参阅[bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)。  
   
  有关**bcp**数据格式文件的结构的详细信息，请参阅[使用 Bcp 实用工具导入和导出大容量数据 &#40;SQL Server&#41;](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)。  

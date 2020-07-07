@@ -14,28 +14,27 @@ ms.assetid: 57faf388-c7ca-4696-9845-34e0a10cc5f7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1c1bdf37018f75e1683fa0879ce4e25872efe20c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 690e853ceb908cb85d27831c0c9a4961591158f8
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789419"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012092"
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   **SQLBrowseConnect**使用可分类为三个级别的连接信息的关键字。 对于每个关键字，下表指示是否返回有效值列表以及该关键字是否可选。  
   
 ## <a name="level-1"></a>级别 1  
   
-|关键字|是否返回列表？|是否可选？|描述|  
+|关键字|是否返回列表？|是否可选？|说明|  
 |-------------|--------------------|---------------|-----------------|  
 |DSN|空值|否|**SQLDataSources**返回的数据源的名称。 如果使用 DRIVER 关键字，则无法使用 DSN 关键字。|  
 |DRIVER|空值|否|Microsoft® [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC driver name 为 { [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client 11}。 如果使用 DSN 关键字，则无法使用 DRIVER 关键字。|  
   
 ## <a name="level-2"></a>级别 2  
   
-|关键字|是否返回列表？|是否可选？|描述|  
+|关键字|是否返回列表？|是否可选？|说明|  
 |-------------|--------------------|---------------|-----------------|  
 |SERVER|是|No|数据源所驻留网络上的服务器名称。 可以输入术语 "(local)" 作为服务器，在此情况下，即使此为非联网版本，也可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本地副本。|  
 |UID|否|是|用户登录 ID。|  
@@ -45,7 +44,7 @@ ms.locfileid: "85789419"
   
 ## <a name="level-3"></a>Level 3  
   
-|关键字|是否返回列表？|是否可选？|描述|  
+|关键字|是否返回列表？|是否可选？|说明|  
 |-------------|--------------------|---------------|-----------------|  
 |DATABASE|是|是|数据库的名称 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |LANGUAGE|是|是|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的区域语言。|  
@@ -54,7 +53,7 @@ ms.locfileid: "85789419"
   
  以下属性（通过调用[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)设置）确定由**SQLBrowseConnect**返回的结果集。  
   
-|特性|描述|  
+|Attribute|说明|  
 |---------------|-----------------|  
 |SQL_COPT_SS_BROWSE_CONNECT|如果将其设置为 SQL_MORE_INFO_YES，则**SQLBrowseConnect**将返回服务器属性的扩展字符串。<br /><br /> 下面是**SQLBrowseConnect**返回的扩展字符串示例：<br /><br /> <br /><br /> `ServerName\InstanceName;Clustered:No;Version:8.00.131`<br /><br /> <br /><br /> 在此字符串中，分号用于分隔与服务器有关的各部分信息， 逗号用于分隔不同的服务器实例。|  
 |SQL_COPT_SS_BROWSE_SERVER|如果指定了服务器名称，则**SQLBrowseConnect**将返回指定服务器的信息。 如果 SQL_COPT_SS_BROWSE_SERVER 设置为 NULL，则**SQLBrowseConnect**将返回域中所有服务器的信息。<br /><br /> <br /><br /> 请注意，由于网络问题， **SQLBrowseConnect**可能无法及时接收来自所有服务器的响应。 因此，每个请求所返回的服务器列表都可能不同。|  

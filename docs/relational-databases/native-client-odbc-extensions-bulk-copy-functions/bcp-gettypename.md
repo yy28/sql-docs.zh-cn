@@ -18,15 +18,14 @@ ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12c4be2e1145d488ed057df5b206042b31bdb5b5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: b443a3ecd3e96740939a1cbef3f2a732a129d9a8
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774278"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010097"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   返回指定 BCP 类型标记的 SQL 类型名称。  
   
@@ -49,12 +48,12 @@ RETCODE bcp_gettypename (
 ## <a name="returns"></a>返回  
  一个字符串，其中包含与 BCP 类型对应的 SQL 类型名称。 如果指定了无效的 BCP 类型，则返回空字符串。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  BCP 类型标记在 sqlncli.h 头文件和 sqlncli11.lib 库中定义。  
   
  下表指定了可能的 BCP 类型、这些类型是否是 max 类型以及预期的输出。  
   
-|BCP 类型名称|MaxType|Output|  
+|BCP 类型名称|MaxType|输出|  
 |-------------------|-------------|------------|  
 |**SQLDECIMAL**|任一个|**decimal**|  
 |**SQLNUMERIC**|任一个|**numeric**|  

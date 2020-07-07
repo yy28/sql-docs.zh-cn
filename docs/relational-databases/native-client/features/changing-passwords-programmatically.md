@@ -21,15 +21,14 @@ ms.assetid: 624ad949-5fed-4ce5-b319-878549f9487b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f75555473e529b44d0b1fa99d0b526db8be1e64b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 0648fda674a0dba83ae4560fa3744e3c1b1430dc
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773231"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009088"
 ---
 # <a name="changing-passwords-programmatically"></a>以编程方式更改密码
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前，如果用户的密码过期，则只有管理员能对其进行重置。 从开始 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client 支持通过 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client OLE DB 访问接口和 native client ODBC 驱动程序以编程方式处理密码过期 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，并通过对**SQL Server 登录**对话框进行更改。  
   

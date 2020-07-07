@@ -18,15 +18,14 @@ ms.assetid: 23e98015-a8e4-4434-9b3f-9c7350cf965f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 239bc3a5957c69e1262bf8229b6bdf85fae4ea67
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 100646ffb50ac0cb187881a99678c6d366b8922b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783414"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010075"
 ---
 # <a name="bcp_moretext"></a>bcp_moretext
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   将部分较长的可变长度数据类型值发送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
@@ -53,7 +52,7 @@ RETCODE bcp_moretext (
 ## <a name="returns"></a>返回  
  SUCCEED 或 FAIL。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  此函数可与[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)和[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)结合使用，以便将长度可变的长数据值复制到多个较小的块区中 SQL Server。 **bcp_moretext**可用于具有以下 SQL Server 数据类型的列： **text**、 **ntext**、 **image**、 **varchar （max）**、 **nvarchar （max）**、 **varbinary （max）**、用户定义类型（UDT）和 XML。 **bcp_moretext**不支持数据转换，则提供的数据必须与目标列的数据类型匹配。  
   
  如果使用**bcp_moretext**支持的数据类型的非 NULL *pData*参数调用**bcp_bind** ， **bcp_sendrow**将发送整个数据值，而不考虑长度。 但是，如果**bcp_bind**具有用于支持的数据类型的 NULL *pData*参数，则**bcp_moretext**可用于在成功返回后立即从**bcp_sendrow**中复制数据，指示已处理包含数据的所有绑定列。  

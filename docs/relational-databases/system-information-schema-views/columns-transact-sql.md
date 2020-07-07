@@ -19,15 +19,14 @@ ms.assetid: bbf7ac4a-7444-4351-a590-a9f71e0bc495
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fe57fda774997f8439c44a75fa917ecb3db3495e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 940c3210f25430550c11e0ad836d536427d2936a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85647636"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012032"
 ---
 # <a name="columns-transact-sql"></a>COLUMNS (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   为当前数据库中当前用户可访问的每一列返回一行。  
   
@@ -59,7 +58,7 @@ ms.locfileid: "85647636"
 |**DOMAIN_SCHEMA**|**nvarchar （** 128 **）**|如果列是用户定义数据类型，则此列将返回该用户定义数据类型的架构名称。 否则，返回 NULL。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** 不要使用 INFORMATION_SCHEMA 视图来确定数据类型的架构。 查找类型的架构的唯一可靠方式是使用 TYPEPROPERTY 函数。|  
 |**DOMAIN_NAME**|**nvarchar （** 128 **）**|如果列是用户定义数据类型，则此列是该用户定义数据类型的名称。 否则，返回 NULL。|  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  INFORMATION_SCHEMA 的**ORDINAL_POSITION**列 **。列**视图与 COLUMNS_UPDATED 函数所返回列的位模式不兼容。 若要获取与 COLUMNS_UPDATED 兼容的位模式，你必须在查询 INFORMATION_SCHEMA 时引用 COLUMNPROPERTY 系统函数的**ColumnID**属性 **。列**视图。 例如：  
   
 ```  

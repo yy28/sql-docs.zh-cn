@@ -13,15 +13,14 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1143407da0e09d801e4ac75ae364c6c08d670040
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 9274597eef66091a048b9ff07943e8bc8a15936b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753069"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010597"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>在服务器和客户端之间执行的转换
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   本主题说明在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]（或更高版本）与使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 编写的客户端应用程序之间执行的日期/时间转换。  
   
@@ -30,13 +29,13 @@ ms.locfileid: "85753069"
   
 |转换后 -><br /><br /> From|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
-|Date|1,7|确定|-|-|1|1,3|1,7|-|OK (VT_BSTR)|确定|OK|4|4|  
+|日期|1,7|确定|-|-|1|1,3|1,7|-|OK (VT_BSTR)|确定|OK|4|4|  
 |时间|5、6、7|-|9|确定|6|3、6|5、6|-|OK (VT_BSTR)|确定|OK|4|4|  
 |Smalldatetime|7|8|9,10|10|确定|3|7|-|7 (VT_DATE)|确定|OK|4|4|  
 |datetime|5、7|8|9,10|10|确定|3|7|-|7 (VT_DATE)|确定|OK|4|4|  
 |Datetime2|5、7|8|9,10|10|7|3|5、7|-|OK (VT_BSTR)|确定|OK|4|4|  
 |Datetimeoffset|5、7、11|8，11|9、10、11|10,11|7、11|确定|5、7、11|-|OK (VT_BSTR)|确定|OK|4|4|  
-|Char、Varchar、<br /><br /> Nchar、Nvarchar|7, 13|12|12、9|12|12|12|7、13|不可用|空值|空值|空值|空值|空值|  
+|Char、Varchar、<br /><br /> Nchar、Nvarchar|7, 13|12|12、9|12|12|12|7、13|空值|空值|空值|空值|空值|空值|  
 |Sql_variant<br /><br /> (datetime)|7|8|9,10|10|确定|3|7|-|7(VT_DATE)|确定|OK|4|4|  
 |Sql_variant<br /><br /> (smalldatetime)|7|8|9,10|10|确定|3|7|-|7(VT_DATE)|确定|OK|4|4|  
 |Sql_variant<br /><br /> (date)|1,7|确定|2|2|1|1,3|1,7|-|OK(VT_BSTR)|确定|OK|4|4|  

@@ -18,16 +18,15 @@ ms.custom: ''
 ms.reviewer: ''
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1716c650a138edd36291e20877faf5da741b92a7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 29422a0dba80f9092221616c128b69f5579cb900
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787944"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009129"
 ---
 # <a name="bcp_bind"></a>bcp_bind
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   将程序变量中的数据绑定到表列，以便大容量复制到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
 
@@ -146,8 +145,8 @@ bcp_bind(hdbc, szName, 0,
 |SQLINT4|int|  
 |SQLINT8|_int64|  
 |SQLINTN|cbIndicator**<br /> 1: SQLINT1<br /> 2: SQLINT2<br /> 4: SQLINT4<br /> 8: SQLINT8|  
-|SQLFLT4|FLOAT|  
-|SQLFLT8|FLOAT|  
+|SQLFLT4|float|  
+|SQLFLT8|float|  
 |SQLFLTN|cbIndicator**<br /> 4: SQLFLT4<br /> 8: SQLFLT8|  
 |SQLDECIMALN|SQL_NUMERIC_STRUCT|  
 |SQLNUMERICN|SQL_NUMERIC_STRUCT|  
@@ -173,7 +172,7 @@ bcp_bind(hdbc, szName, 0,
 
  SUCCEED 或 FAIL。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 使用**bcp_bind**可以快速有效地将程序变量中的数据复制到中的表 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
 
