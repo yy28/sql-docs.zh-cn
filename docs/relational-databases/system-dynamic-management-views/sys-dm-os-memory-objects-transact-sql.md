@@ -20,15 +20,14 @@ ms.assetid: 5688bcf8-5da9-4ff9-960b-742b671d7096
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8672b03a7202d2ef7fa7666f4dd73462f1a6409f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 31af260a5290b899bb64fa3942d1e2aa0a076d31
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754058"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999044"
 ---
 # <a name="sysdm_os_memory_objects-transact-sql"></a>sys.dm_os_memory_objects (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   返回当前由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分配的内存对象。 可以使用**sys. dm_os_memory_objects**分析内存使用情况，并识别可能的内存泄漏。  
   
@@ -63,7 +62,7 @@ ms.locfileid: "85754058"
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
 
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  内存对象是指多个堆。 它们所提供的分配的粒度比内存分配器所提供的分配的粒度更精细。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件使用内存对象，而不使用内存分配器。 内存对象使用内存分配器的页分配器接口来分配页。 内存对象不使用虚拟内存接口或共享内存接口。 根据分配模式的不同，组件可以创建不同的内存对象类型来分配任意大小的区域。  
   
  内存对象的典型页面大小为 8 KB。 但是，增量内存对象的页大小的范围可以从 512 字节到 8 KB。  

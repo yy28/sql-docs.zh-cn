@@ -18,15 +18,14 @@ ms.assetid: 706ed441-2881-4934-8d5e-fb357ee067ce
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 583536c1b69951b18e6d30910f4e4d9d44b8d99f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: ccba808ada0276933608b9297b6c416c11cdb194
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717369"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998957"
 ---
 # <a name="sp_describe_parameter_encryption-transact-sql"></a>sp_describe_parameter_encryption （Transact-sql）
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   分析指定的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句及其参数，以确定哪些参数与使用 Always Encrypted 功能保护的数据库列相对应。 返回与加密列对应的参数的加密元数据。  
   
@@ -83,7 +82,7 @@ sp_describe_parameter_encryption
 |**column_encryption_key_ordinal**|**int**|第一个结果集中的行的代码。 引用的行描述为列配置的列加密密钥，参数对应于。|  
 |**column_encryption_normalization_rule_version**|**tinyint**|类型规范化算法的版本号。|  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支持 Always Encrypted 的客户端驱动程序将自动调用**sp_describe_parameter_encryption**来检索由应用程序发出的参数化查询的加密元数据。 随后，驱动程序将使用加密元数据对与 Always Encrypted 保护的数据库列对应的参数值进行加密，并在将查询发送到数据库引擎之前，用加密参数值替换应用程序提交的纯文本参数值。  
   
 ## <a name="permissions"></a>权限  

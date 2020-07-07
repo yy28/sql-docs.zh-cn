@@ -20,15 +20,14 @@ ms.assetid: 1d556c67-5c12-46d5-aa8c-7ec1bb858df7
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 41c8d6c92e835dd0285272e54cadedc6b677f73f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 7e0323d826440dc339d380c468df8b0131ee81eb
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754072"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999063"
 ---
 # <a name="sysdm_os_memory_clerks-transact-sql"></a>sys.dm_os_memory_clerks (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中当前处于活动状态的全部内存分配器的集合。  
   
@@ -59,7 +58,7 @@ ms.locfileid: "85754072"
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存管理器由一个三层的层次结构组成。 该层次结构的底层为内存节点。 中间层由内存分配器、内存缓存和内存池组成。 顶层由内存对象组成。 这些对象通常用于在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中分配内存。  
   
  内存节点提供低级分配器的界面和实现。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，只有内存内存分配器可访问内存节点。 内存分配器访问内存节点界面以分配内存。 内存节点还会跟踪 Clerk 分配的内存以进行诊断。 分配大量内存的每个组件，都必须使用分配器界面来创建其自己的内存分配器并分配其全部内存。 各组件会在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动时频繁创建其相应的分配器。  

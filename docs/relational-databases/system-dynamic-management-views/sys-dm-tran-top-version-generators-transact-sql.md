@@ -20,15 +20,14 @@ ms.assetid: cec7809b-ba8a-4df9-b5bb-d4f651ff1a86
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d6484d5f9762590f3bef941f7deff5092c720ba
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 416e527ad37ae34fcd3484a80cf774b054649548
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718709"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000229"
 ---
 # <a name="sysdm_tran_top_version_generators-transact-sql"></a>sys.dm_tran_top_version_generators (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   为生成版本存储区中大多数版本的对象返回一个虚拟表。 **sys. dm_tran_top_version_generators**返回按**database_id**和**rowset_id**分组的前256聚合记录的长度。 **sys. dm_tran_top_version_generators**通过查询**dm_tran_version_store**虚拟表来检索数据。 **dm_tran_top_version_generators**是一种低效运行的视图，因为此视图查询版本存储区，版本存储区可能非常大。 建议使用此函数查找版本存储区的最大使用者。  
   
@@ -56,7 +55,7 @@ sys.dm_tran_top_version_generators
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
 
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  由于**dm_tran_top_version_generators**在扫描整个版本存储区时可能必须读取多个页面，因此，运行**dm_tran_top_version_generators sys.databases**可能会影响系统性能。  
   
 ## <a name="examples"></a>示例  

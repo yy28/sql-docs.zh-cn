@@ -18,15 +18,14 @@ ms.assetid: 62c18c21-35c5-4772-be0d-ffdcc19c97ab
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ff8bf43db68acb2d29d8fe5310b86290391050e2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: c26e1b6272f4c3cdf6a1e8ed644ab9d03052948a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85645156"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999879"
 ---
 # <a name="sp_sproc_columns-transact-sql"></a>sp_sproc_columns (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   为当前环境中的单个存储过程或用户定义函数返回列信息。  
   
@@ -88,7 +87,7 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 |**IS_NULLABLE**|**varchar （254）**|表中的列的为 Null 性。 根据 ISO 规则确定为 Null 性。 遵从 ISO 标准的 DBMS 不能返回空字符串。<br /><br /> 如果列可包含 NULL，则显示 YES；如果列不能包含 NULL，则显示 NO。<br /><br /> 如果为 Null 性为未知，该列将返回零长度字符串。<br /><br /> 该列返回的值与 NULLABLE 列返回的值不同。|  
 |**SS_DATA_TYPE**|**tinyint**|扩展存储过程使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型。 有关详细信息，请参阅[数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)。|  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  **sp_sproc_columns**等效于 ODBC 中的**SQLProcedureColumns** 。 返回的结果按**PROCEDURE_QUALIFIER**、 **PROCEDURE_OWNER**、 **PROCEDURE_NAME**和参数在过程定义中的显示顺序进行排序。  
   
 ## <a name="permissions"></a>权限  

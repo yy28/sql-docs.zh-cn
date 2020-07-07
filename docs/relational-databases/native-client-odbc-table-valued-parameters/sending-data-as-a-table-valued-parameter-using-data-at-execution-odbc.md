@@ -13,15 +13,14 @@ ms.assetid: 361e6442-34de-4cac-bdbd-e05f04a21ce4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f2df587de4be458e520f8486b1e81e00916e6df8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 0ce5d61838ac40d350cda5a7d436fac6979f513f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760679"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998391"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>使用执行时数据将数据作为表值参数发送 (ODBC)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   这类似于 "[全部在内存中](../../relational-databases/native-client-odbc-table-valued-parameters/sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md)" 过程，但对表值参数使用执行时数据。  
   
@@ -186,7 +185,7 @@ from @Items
   
 ## <a name="example"></a>示例  
   
-### <a name="description"></a>描述  
+### <a name="description"></a>说明  
  此示例演示可以使用行流式处理，每次调用 SQLPutData 时使用 ODBC TVP，这与使用 BCP.exe 将数据加载到数据库的方式类似。  
   
  在构建此示例之前，请更改连接字符串中的服务器名称。  
@@ -374,7 +373,7 @@ EXIT:
   
 ## <a name="example"></a>示例  
   
-### <a name="description"></a>描述  
+### <a name="description"></a>说明  
  此示例演示你可以使用 ODBC TVP，对每次调用 SQLPutData 使用多行流，这类似于你可能使用 BCP.exe 将数据加载到数据库中的方式。  
   
  在构建此示例之前，请更改连接字符串中的服务器名称。  

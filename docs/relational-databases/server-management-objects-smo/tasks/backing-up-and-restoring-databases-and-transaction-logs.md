@@ -20,15 +20,14 @@ ms.assetid: 1d7bd180-fd6c-4b38-a87b-351496040542
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 91b5c4e79839a3ec8936ee004dbc7b832b952223
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
-ms.translationtype: MT
+ms.openlocfilehash: 8302596d94cc0b6800919e8c0f72870754c4715c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880061"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000280"
 ---
 # <a name="backing-up-and-restoring-databases-and-transaction-logs"></a>备份和还原数据库和事务日志
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   在 SMO 中，<xref:Microsoft.SqlServer.Management.Smo.Backup> 类和 <xref:Microsoft.SqlServer.Management.Smo.Restore> 类是为实现特定备份和还原任务提供工具的实用工具类。 <xref:Microsoft.SqlServer.Management.Smo.Backup>对象表示所需的特定备份任务，而不是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务器实例上的对象。  
   

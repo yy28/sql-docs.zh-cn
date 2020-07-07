@@ -14,15 +14,14 @@ ms.assetid: e64f4f94-eb73-4477-9745-080b6cbdc751
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 409ee4f3b9206ce614ca62ba4935b8ff96a4f85a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: be21c239bd01dea39022a75a3220f7093b4a3bef
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789136"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000349"
 ---
 # <a name="sqlgetstmtattr"></a>SQLGetStmtAttr
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驱动程序扩展 SQLGetStmtAttr 以公开特定于驱动程序的语句属性。  
   
@@ -34,7 +33,7 @@ ms.locfileid: "85789136"
 ## <a name="sql_sopt_ss_nocount_status"></a>SQL_SOPT_SS_NOCOUNT_STATUS  
  SQL_SOPT_SS_NOCOUNT_STATUS 特性指示 NOCOUNT 选项的当前设置，该选项控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在调用[SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md)时是否报告受语句影响的行数。 *将 valueptr*值的类型为 SQLLEN。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |SQL_NC_OFF|NOCOUNT 为 OFF。 SQLRowCount 返回受影响的行数。|  
 |SQL_NC_ON|NOCOUNT 为 ON。 SQLRowCount 不返回受影响的行数，返回值为0。|  

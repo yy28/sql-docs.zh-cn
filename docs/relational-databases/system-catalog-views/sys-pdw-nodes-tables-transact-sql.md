@@ -12,12 +12,11 @@ ms.assetid: 473b5d14-171b-4a16-9195-acf36d3f786c
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 5fa2412e61e30852497ffa00493ea6dbe244989a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: d91fdabce5350614d504b7dfdf990e2dd54b8b48
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68001111"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999124"
 ---
 # <a name="syspdw_nodes_tables-transact-sql"></a>sys. pdw_nodes_tables （Transact-sql）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "68001111"
   
 |列名|数据类型|说明|范围|  
 |-----------------|---------------|-----------------|-----------|  
-|\<继承列>||有关此视图所继承的列的列表，请参阅[sys.databases](../system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md)。||  
+|\<inherited columns>||有关此视图所继承的列的列表，请参阅[sys.databases](../system-catalog-views/sys-objects-transact-sql.md)。||  
 |lob_data_space_id|**int**||始终为 0。|  
 |filestream_data_space_id|**int**|FILESTREAM 文件组或的数据空间 ID[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|Null|  
 |max_column_id_used|**int**|此表使用的最大列 ID。||  
@@ -42,7 +41,7 @@ ms.locfileid: "68001111"
 |is_tracked_by_cdc|**bit**|1 = 已为表启用变更数据捕获|始终为 0;无 CDC 支持。|  
 |lock_escalation|**tinyint**|表的 LOCK_ESCALATION 选项的值： 2 = 自动|始终为2。|  
 |lock_escalation_desc|**nvarchar(60)**|Lock_escalation 选项的文本说明。|始终 "自动"。|  
-|pdw_node_id|**int**|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]节点的唯一标识符。|NOT NULL|  
+|pdw_node_id|**int**|节点的唯一标识符 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。|NOT NULL|  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL 数据仓库和并行数据仓库目录视图](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  

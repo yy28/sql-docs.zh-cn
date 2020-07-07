@@ -20,15 +20,14 @@ ms.assetid: c7157491-58c2-49fe-87d7-0c9723113adf
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 61f0acde59f599394c25ec76c964b9d8b6e0c1cb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: fb4c1742ed3b32a20d0026dad914a0fc7c90b6ea
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718725"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000247"
 ---
 # <a name="sysdm_tran_session_transactions-transact-sql"></a>sys.dm_tran_session_transactions (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   返回关联事务和会话的相关信息。  
   
@@ -53,7 +52,7 @@ ms.locfileid: "85718725"
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
 
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  通过绑定会话和分布式事务，一个事务可以运行于多个会话中。 在这种情况下，sys.dm_tran_session_transactions 将对同一 transaction_id 显示多个行，当前运行事务的每个会话对应一行。  
   
  通过使用多个活动的结果集 (MARS) 以自动提交模式执行多个请求，一个会话中可以有多个活动事务。 在这种情况下，sys.dm_tran_session_transactions 将对同一 session_id 显示多个行，在该会话中运行的每个事务对应一行。  

@@ -19,15 +19,14 @@ ms.assetid: a15949ef-88d9-4205-892e-0b66588b4fcc
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5d38096aacda2d50992c7ac3bc886a8740cb22f8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
-ms.translationtype: MT
+ms.openlocfilehash: 8e3c7296ee1eb0401fce59094750471139a46967
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892002"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998314"
 ---
 # <a name="programming-specific-tasks"></a>编程特定的任务
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   使用 SMO 对象的编程特定的任务包含一些复杂主题，只有具有特定函数的程序才需要这些主题，例如，备份、监视统计信息、复制、管理实例对象以及设置配置选项。  
   

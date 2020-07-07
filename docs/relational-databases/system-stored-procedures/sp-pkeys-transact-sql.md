@@ -17,15 +17,14 @@ ms.assetid: e614c75d-847b-4726-8f6f-cd18de688eda
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df9eabd129704d4de000fa5d1d236fb475996101
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: a89ba7886ecca244456b70e9b8dff78b0bea176e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720246"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999356"
 ---
 # <a name="sp_pkeys-transact-sql"></a>sp_pkeys (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   返回当前环境中单个表的主键信息。  
   
@@ -67,7 +66,7 @@ sp_pkeys [ @table_name = ] 'name'
 |KEY_SEQ|**smallint**|多列主键中列的序列号。|  
 |PK_NAME|**sysname**|主键标识符。 如果对数据源不适用，则返回 NULL。|  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  sp_pkeys 返回使用 PRIMARY KEY 约束显式定义的列的信息。 由于不是所有的系统均支持显式命名的主键，因此由网关实现者决定主键的构成。 请注意主键这一术语指的是表的逻辑主键。 应对被列为逻辑主键的每个键定义一个唯一索引。 此唯一索引也会由 sp_statistics 返回。  
   
  存储过程 sp_pkeys 与 ODBC 中的 SQLPrimaryKeys 等价。 返回的结果按 TABLE_QUALIFIER、TABLE_OWNER、TABLE_NAME 和 KEY_SEQ 排序。  
