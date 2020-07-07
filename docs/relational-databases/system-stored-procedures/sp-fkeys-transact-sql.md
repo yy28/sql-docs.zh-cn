@@ -18,15 +18,14 @@ ms.assetid: 18110444-d38d-4cff-90d2-d1fc6236668b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6d5eded47338315fa69bcb7a9dd270108f69574c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 2c280be43be2ef4f14e57321cb96420e6cf51eb6
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757949"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012687"
 ---
 # <a name="sp_fkeys-transact-sql"></a>sp_fkeys (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   返回当前环境的逻辑外键信息。 此过程显示各种外键关系，包括禁用的外键。  
   
@@ -89,7 +88,7 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
   
  返回的结果集按 FKTABLE_QUALIFIER、FKTABLE_OWNER、FKTABLE_NAME 以及 KEY_SEQ 排序。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  可以通过以下方法实现包含带禁用外键的表的应用程序编码：  
   
 -   当使用这些表时，临时禁用约束检查（ALTER TABLE NOCHECK 或 CREATE TABLE NOT FOR REPLICATION），稍后再重新启用它。  

@@ -21,15 +21,14 @@ ms.assetid: cc39ca92-3cba-478e-beef-65560aa84007
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 58bd6bfbb98ab8f75c8959af71bd5c3658790676
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 1751940417d7bf95d2745f46c9acb7f1eb8839a7
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85651887"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012633"
 ---
 # <a name="sp_query_store_remove_query-transact-sql"></a>sp_query_store_remove_query （Transact-sql）
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   删除查询存储中的查询，以及所有关联的计划和运行时统计信息。  
   
@@ -48,7 +47,7 @@ sp_query_store_remove_query [ @query_id = ] query_id [;]
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
   
 ## <a name="permissions"></a>权限  
  要求对数据库具有**ALTER**权限。

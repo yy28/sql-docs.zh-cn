@@ -14,15 +14,14 @@ ms.assetid: e31d5ca5-2103-498f-954c-1ee93e217186
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8be645c807a86e90dd4e71a8d46c11d995b61319
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 8ee9292901467ea496ebc66264ff194c9d55cf9f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718972"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012727"
 ---
 # <a name="date-and-time-improvements-odbc"></a>日期和时间改进 (ODBC)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]引入了新的日期和时间数据类型。 本部分介绍如何将这些新类型作为本机客户端中的扩展公开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 有关对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 新日期和时间数据类型的 Native Client 支持的概述，请参阅[日期和时间改进](../../relational-databases/native-client/features/date-and-time-improvements.md)。 有关演示 ODBC 日期/时间支持的示例，请参阅[使用日期和时间类型](../../relational-databases/native-client-odbc-how-to/use-date-and-time-types.md)。  
   

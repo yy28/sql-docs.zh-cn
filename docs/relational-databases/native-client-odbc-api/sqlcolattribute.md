@@ -14,22 +14,21 @@ ms.assetid: a5387d9e-a243-4cfe-b786-7fad5842b1d6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0b539e532d6de43bf646652a1d4845eaf38d8bd2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 1815a76dcfde42e45cb3b2ca1ffe4186ff52a238
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789394"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012431"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   您可以使用**SQLColAttribute**检索已准备或执行的 ODBC 语句的结果集列的属性。 在已准备好的语句上调用**SQLColAttribute**将导致往返 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驱动程序接收语句执行过程中的结果集列数据，因此在**SQLExecute**或**SQLExecDirect**完成后调用**SQLColAttribute**不涉及服务器往返。  
   
 > [!NOTE]  
 >  ODBC 列标识符属性并非可用于所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 结果集。  
   
-|字段标识符|描述|  
+|字段标识符|说明|  
 |----------------------|-----------------|  
 |SQL_COLUMN_TABLE_NAME|可用于从生成服务器游标的语句检索的结果集，或从包含 FOR BROWSE 子句的已执行 SELECT 语句检索的结果集。|  
 |SQL_DESC_BASE_COLUMN_NAME|可用于从生成服务器游标的语句检索的结果集，或从包含 FOR BROWSE 子句的已执行 SELECT 语句检索的结果集。|  
@@ -78,7 +77,7 @@ ms.locfileid: "85789394"
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]引入了驱动程序特定的描述符字段，以提供额外的信息来分别表示 XML 架构集合名称、架构名称和目录名称。 如果这些属性包含非字母数字字符，则它们不需要引号或转义符。 下表列出这些新的描述符字段：  
   
-|列名称|类型|描述|  
+|列名称|类型|说明|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_CATALOG_NAME|CharacterAttributePtr|在其中定义 XML 架构集合名称的目录的名称。 如果找不到目录名称，则此变量包含空字符串。<br /><br /> 将从 IRD 的 SQL_DESC_SS_XML_SCHEMACOLLECTION_CATALOG_NAME 记录字段（此字段是一个读写字段）中返回此信息。|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_SCHEMA_NAM E|CharacterAttributePtr|在其中定义 XML 架构集合名称的架构的名称。 如果找不到架构名称，则此变量包含空字符串。<br /><br /> 将从 IRD 的 SQL_DESC_SS_XML_SCHEMACOLLECTION_SCHEMA_NAME 记录字段（此字段是一个读写字段）中返回此信息。|  
@@ -86,7 +85,7 @@ ms.locfileid: "85789394"
   
  此外，[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 引入了新的驱动程序特定的描述符字段，以便为结果集的用户定义类型 (UDT) 列或为存储过程或参数化查询的 UDT 参数提供附加信息。 如果这些属性包含非字母数字字符，则它们不需要引号或转义符。 下表列出这些新的描述符字段：  
   
-|列名|类型|描述|  
+|列名|类型|说明|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_UDT_CATALOG_NAME|CharacterAttributePtr|包含 UDT 的目录的名称。|  
 |SQL_CA_SS_UDT_SCHEMA_NAME|CharacterAttributePtr|包含 UDT 的架构的名称。|  

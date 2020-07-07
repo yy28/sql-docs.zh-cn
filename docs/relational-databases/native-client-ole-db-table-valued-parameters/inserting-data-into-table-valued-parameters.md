@@ -14,15 +14,14 @@ ms.assetid: 9c1a3234-4675-40d3-b473-8df06208f880
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b0589e9dc221245d787ed97e9e5e022a7df792f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 739f2e04b77197e0189f34651bcaac045d7a4c7e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719748"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86013061"
 ---
 # <a name="inserting-data-into-table-valued-parameters"></a>向表值参数中插入数据
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序支持使用两种模型来指定表值参数行的数据：推送模型和请求模型。 提供演示请求模型的示例；请参阅 [SQL Server 数据编程示例](https://msftdpprodsamples.codeplex.com/)。  
   

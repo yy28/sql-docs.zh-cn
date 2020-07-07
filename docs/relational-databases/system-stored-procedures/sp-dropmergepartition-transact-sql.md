@@ -16,15 +16,14 @@ ms.assetid: 1be511c1-79ff-4947-9379-78d83b7b8945
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 117189e1b185769fc6a1c101af675bc672b00eda
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 7320f894800c1893afb69c73c6e5324eedbaa939
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783851"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012714"
 ---
 # <a name="sp_dropmergepartition-transact-sql"></a>sp_dropmergepartition (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   从发布中删除参数化行筛选器的分区。 此存储过程在发布服务器上对发布数据库执行。 此存储过程还删除分区的相应快照作业和快照文件。  
   
@@ -49,7 +48,7 @@ sp_dropmergepartition [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  **sp_dropmergepartition**用于合并复制。  
   
 ## <a name="permissions"></a>权限  

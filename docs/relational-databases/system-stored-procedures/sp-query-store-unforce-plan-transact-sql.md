@@ -21,15 +21,14 @@ ms.assetid: a52f91d0-ff1e-46ad-ba36-b32d9623c9ab
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f119ac8f18ae5f9f5b869f237eda27e887e78f15
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: c6af13e434fcf7fdc4c1738f71c76f092a0ed71d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758736"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012611"
 ---
 # <a name="sp_query_store_unforce_plan-transact-sql"></a>sp_query_store_unforce_plan （Transact-sql）
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   为特定查询启用取消强制执行先前强制计划。  
   
@@ -49,7 +48,7 @@ sp_query_store_unforce_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
   
 ## <a name="permissions"></a>权限  
  要求对数据库具有**ALTER**权限。

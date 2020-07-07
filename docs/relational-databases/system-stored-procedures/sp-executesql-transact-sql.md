@@ -19,15 +19,14 @@ ms.assetid: a8d68d72-0f4d-4ecb-ae86-1235b962f646
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8d6efd10e3b7cb385c576cf8644ec945736765ae
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: fdd669732bb26fcf14bde80efeb51673aeb3ce3e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85634822"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012695"
 ---
 # <a name="sp_executesql-transact-sql"></a>sp_executesql (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   执行可多次重复使用或动态生成的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或批处理。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或批处理可以包含嵌入参数。  
   
@@ -75,7 +74,7 @@ sp_executesql [ @stmt = ] statement
 ## <a name="result-sets"></a>结果集  
  从生成 SQL 字符串的所有 SQL 语句中返回结果集。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  必须按照本主题前面的 "语法" 一节中所述，按特定顺序输入 sp_executesql 参数。 如果这些参数的输入顺序不正确，则会显示一条错误消息。  
   
  在批处理、名称作用域和数据库上下文方面，sp_executesql 与 EXECUTE 的行为相同。 [!INCLUDE[tsql](../../includes/tsql-md.md)]在 \@ 执行 sp_executesql 语句之前，不会编译 sp_executesql stmt 参数中的语句或批处理。 \@然后，将编译 stmt 的内容，并将其作为执行计划单独执行，该执行计划独立于调用 sp_executesql 的批处理的执行计划。 sp_executesql 批处理不能引用调用 sp_executesql 的批处理中声明的变量。 sp_executesql 批处理中的本地游标或变量对调用 sp_executesql 的批处理是不可见的。 对数据库上下文所做的更改只在 sp_executesql 语句结束前有效。  

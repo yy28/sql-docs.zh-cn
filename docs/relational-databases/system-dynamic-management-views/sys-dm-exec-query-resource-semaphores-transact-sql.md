@@ -20,15 +20,14 @@ ms.assetid: e43a2aa9-dd52-4c89-911e-1a7d05f7ffbb
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1489905b5f91743892906655b2987c702c048516
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: d252d5976b07f688d890ed8ccf43a7b0a0c96b2c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734719"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012878"
 ---
 # <a name="sysdm_exec_query_resource_semaphores-transact-sql"></a>sys.dm_exec_query_resource_semaphores (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中有关当前查询资源信号量状态的信息。 **sys. dm_exec_query_resource_semaphores**提供常规查询执行内存状态，并使你能够确定系统是否可以访问足够的内存。 此视图补充从[dm_os_memory_clerks sys.databases](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)获取的内存信息，以提供服务器内存状态的完整图片。 **sys. dm_exec_query_resource_semaphores**为常规资源信号量返回一行，并为小型查询资源信号量返回另一行。 小型查询信号量有两个要求：  
   
@@ -60,7 +59,7 @@ ms.locfileid: "85734719"
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  如果查询使用的动态管理视图中包括 ORDER BY 或聚合，则可能增加内存占用，进而产生需进行故障排除的问题。  
   
  使用**sys. dm_exec_query_resource_semaphores**进行故障排除，但不要将其包含在将使用未来版本的应用程序中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
