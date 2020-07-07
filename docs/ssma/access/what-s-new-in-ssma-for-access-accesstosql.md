@@ -4,22 +4,27 @@ description: 了解每个版本的 SQL Server 迁移助手（SSMA） for Access 
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 6/2/2020
+ms.date: 7/2/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 ms.author: alexiva
-ms.openlocfilehash: 7aa805b018517860e925ebf52048a20cc257a9af
-ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
-ms.translationtype: MT
+ms.openlocfilehash: e2c45c4aea17448af7ed496c1c56b8629c30e429
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84779389"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85978839"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>SSMA for Access （AccessToSQL）中的新增功能
 
 本文列出了每个版本中的访问更改 SQL Server 迁移助手（SSMA）。
+
+## <a name="ssma-v811"></a>SSMA v 8.11
+
+用于访问的 SSMA 的8.11 版本包含以下更改：
+
+* 使用 MSAL.NET 库进行交互式 Azure Active Directory 身份验证
 
 ## <a name="ssma-v810"></a>SSMA 8.10
 
