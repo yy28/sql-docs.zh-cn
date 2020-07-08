@@ -19,17 +19,17 @@ helpviewer_keywords:
 - '@@TEXTSIZE function'
 - text size returned [SQL Server]
 ms.assetid: 4308a7b9-8e8f-49e9-8246-8224e32f4953
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: b4389320436559504e6a9618565dad3198e91353
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: 8a3fd16fc891f1996014e7deee016d696e7ff51c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68099018"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85714656"
 ---
 # <a name="x40x40textsize-transact-sql"></a>@@TEXTSIZE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   返回 [TEXTSIZE](../../t-sql/statements/set-textsize-transact-sql.md) 选项的当前值。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "68099018"
  **integer**  
   
 ## <a name="examples"></a>示例  
- 下面的示例使用 `SELECT` 语句来显示使用 `SET``TEXTSIZE` 语句更改前后的 `@@TEXTSIZE` 值。  
+ 下面的示例使用 `SELECT` 语句来显示使用 `@@TEXTSIZE` 语句更改前后的 `SET``TEXTSIZE` 值。  
   
 ```  
 -- Set the TEXTSIZE option to the default size of 4096 bytes.  

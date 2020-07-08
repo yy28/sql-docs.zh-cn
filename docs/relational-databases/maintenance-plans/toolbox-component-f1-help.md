@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c71cc0537f79330742282e7a0389187c8424d1f1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 67681c110015ae119c9f5a28812f9fba68f968a5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115532"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715334"
 ---
 # <a name="toolbox-component-f1-help"></a>工具箱组件的 F1 帮助
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   “工具箱”中显示有许多可以在   项目中使用的项[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 您可以从 **“视图”** 菜单打开 **“工具箱”** ，并根据需要停靠此窗口。 在停靠时， **“工具箱”** 可以始终是打开的并保持在固定位置，或设置为在未使用时 **“自动隐藏”** 。  
   
  可以通过拖放“工具箱”  中的图标，或通过复制并粘贴这些图标，将其移至代码编辑器中或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 设计视图的图面上。  

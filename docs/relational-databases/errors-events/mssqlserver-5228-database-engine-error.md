@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 5e83c617-4aa2-4755-bcc5-a798c46b97e4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b64b067889582949b42a7d5ffeeca1b1e119b6e0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e296bf3230fbbf3c308aa6c84dba288b9e64e12f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68123029"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717100"
 ---
 # <a name="mssqlserver_5228"></a>MSSQLSERVER_5228
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>详细信息  
   
-|||  
-|-|-|  
+| Attribute | 值 |  
+| :-------- | :---- |  
 |产品名称|SQL Server|  
 |事件 ID|5228|  
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC4_ANTIMATTER_COLUMN_DETECTED|  
-|消息正文|表错误: 对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID，分配单元 ID A_ID (类型为 TYPE)，页 PG_ID，行 R_ID。 DBCC 检测到来自联机索引生成操作的不完全清除。 (Antimatter 列值为 VALUE。)|  
+|消息正文|表错误:对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID，分配单元 ID A_ID（类型为 TYPE），页 PG_ID，行 R_ID。 DBCC 检测到来自联机索引生成操作的不完全清除。 (Antimatter 列值为 VALUE。)|  
   
 ## <a name="explanation"></a>说明  
 检测到对象 *O_ID*、索引 *I_ID* 和分区 *PN_ID* 存在未完成的联机索引生成。 这将由行 *R_ID* 上存在的 antimatter 列进行显示。 在联机索引生成过程中协调来自多个源的记录时，将使用 antimatter 列。 此错误消息还指出 antimatter 列的值。  

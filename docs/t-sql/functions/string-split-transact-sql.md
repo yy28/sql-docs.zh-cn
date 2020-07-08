@@ -18,12 +18,12 @@ ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: e7d51cb50e314f1347d905826a63556ab84f4ae3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: afbd05a22b40cfa24fd1eaef18d9aa63aa095be9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824162"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85714810"
 ---
 # <a name="string_split-transact-sql"></a>STRING_SPLIT (Transact-SQL)
 
@@ -189,10 +189,10 @@ WHERE ',1,2,3,' LIKE '%,' + CAST(ProductId AS VARCHAR(20)) + ',%';
 
 ## <a name="see-also"></a>另请参阅
 
-[LEFT (Transact-SQL)](../../t-sql/functions/left-transact-sql.md)<br />
-[LTRIM (Transact-SQL)](../../t-sql/functions/ltrim-transact-sql.md)<br />
-[RIGHT (Transact-SQL)](../../t-sql/functions/right-transact-sql.md)<br />
-[RTRIM (Transact-SQL)](../../t-sql/functions/rtrim-transact-sql.md)<br />
-[SUBSTRING (Transact-SQL)](../../t-sql/functions/substring-transact-sql.md)<br />
-[TRIM (Transact-SQL)](../../t-sql/functions/trim-transact-sql.md)<br />
-[字符串函数 (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)
+- [LEFT (Transact-SQL)](../../t-sql/functions/left-transact-sql.md)
+- [LTRIM (Transact-SQL)](../../t-sql/functions/ltrim-transact-sql.md)
+- [RIGHT (Transact-SQL)](../../t-sql/functions/right-transact-sql.md)
+- [RTRIM (Transact-SQL)](../../t-sql/functions/rtrim-transact-sql.md)
+- [SUBSTRING (Transact-SQL)](../../t-sql/functions/substring-transact-sql.md)
+- [TRIM (Transact-SQL)](../../t-sql/functions/trim-transact-sql.md)
+- [字符串函数 (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)

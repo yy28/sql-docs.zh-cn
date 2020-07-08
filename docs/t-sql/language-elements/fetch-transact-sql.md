@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8fd770d8f1af098d4328df12a11cdcff609f2328
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f226dd4b96774de236a3938662be2bf506db8cad
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71974403"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706441"
 ---
 # <a name="fetch-transact-sql"></a>FETCH (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   通过 [!INCLUDE[tsql](../../includes/tsql-md.md)] 服务器游标检索特定行。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "71974403"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 FETCH   
           [ [ NEXT | PRIOR | FIRST | LAST   
                     | ABSOLUTE { n | @nvar }   
@@ -65,10 +65,10 @@ FETCH
  返回游标中的最后一行并将其作为当前行。  
   
  ABSOLUTE { *n*| \@*nvar*}  
- 如果 n 或 \@nvar 为正，则返回从游标起始处开始向后的第 n 行，并将返回行变成新的当前行  。 如果 n 或 \@nvar 为负，则返回从游标末尾处开始向前的第 n 行，并将返回行变成新的当前行  。 如果 n 或 \@nvar 为 0，则不返回行 。 n 必须是整数常量，并且 \@nvar 必须是 smallint、tinyint 或 int   。  
+ 如果 n 或 *nvar 为正，则返回从游标起始处开始向后的第 n 行，并将返回行变成新的当前行*\@   。 如果 n 或 *nvar 为负，则返回从游标末尾处开始向前的第 n 行，并将返回行变成新的当前行*\@   。 如果 n 或 *nvar 为 0，则不返回行*\@  。 n 必须是整数常量，并且 *nvar 必须是 smallint、tinyint 或 int*\@     。  
   
  RELATIVE { *n*| \@*nvar*}  
- 如果 n 或 \@nvar 为正，则返回从当前行开始向后的第 n 行，并将返回行变成新的当前行  。 如果 n 或 \@nvar 为负，则返回从当前行开始向前的第 n 行，并将返回行变成新的当前行  。 如果 n 或 \@nvar 为 0，则返回当前行 。 在对游标进行第一次提取时，如果在将 n 或 \@nvar 设置为负数或 0 的情况下指定 `FETCH RELATIVE`，则不返回行 。 n 必须是整数常量，并且 \@nvar 必须是 smallint、tinyint 或 int   。  
+ 如果 n 或 *nvar 为正，则返回从当前行开始向后的第 n 行，并将返回行变成新的当前行*\@   。 如果 n 或 *nvar 为负，则返回从当前行开始向前的第 n 行，并将返回行变成新的当前行*\@   。 如果 n 或 *nvar 为 0，则返回当前行*\@  。 在对游标进行第一次提取时，如果在将 n 或 `FETCH RELATIVE`nvar 设置为负数或 0 的情况下指定 *，则不返回行*\@  。 n 必须是整数常量，并且 *nvar 必须是 smallint、tinyint 或 int*\@     。  
   
  GLOBAL  
  指定 cursor_name 是指全局游标  。  
@@ -83,7 +83,7 @@ FETCH
  允许将提取操作的列数据放到局部变量中。 列表中的各个变量从左到右与游标结果集中的相应列相关联。 各变量的数据类型必须与相应的结果集列的数据类型匹配，或是结果集列数据类型所支持的隐式转换。 变量的数目必须与游标选择列表中的列数一致。  
   
 ## <a name="remarks"></a>备注  
- 如果 ISO 样式 `DECLARE CURSOR` 语句中未指定 `SCROLL` 选项，则 `NEXT` 是唯一受支持的 `FETCH` 选项。 如果 ISO 样式 `DECLARE CURSOR` 中指定了 `SCROLL`，则支持所有 `FETCH` 选项。  
+ 如果 ISO 样式 `SCROLL` 语句中未指定 `DECLARE CURSOR` 选项，则 `NEXT` 是唯一受支持的 `FETCH` 选项。 如果 ISO 样式 `SCROLL` 中指定了 `DECLARE CURSOR`，则支持所有 `FETCH` 选项。  
   
  如果使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] DECLARE 游标扩展插件，则应用下列规则：  
   
@@ -91,7 +91,7 @@ FETCH
   
 -   如果 `DYNAMIC`、`FORWARD_ONLY` 或 `FAST_FORWARD` 未指定，且指定了 `KEYSET`、`STATIC` 或 `SCROLL` 中的一个，则支持所有 `FETCH` 选项。  
   
--   `DYNAMIC SCROLL` 游标支持除了 `ABSOLUTE` 的所有 `FETCH` 选项。  
+-   `DYNAMIC SCROLL` 游标支持除了 `FETCH` 的所有 `ABSOLUTE` 选项。  
   
  `@@FETCH_STATUS` 函数报告上一个 `FETCH` 语句的状态。 相同的信息记录在由 sp_describe_cursor 返回的游标中的 fetch_status 列中。 这些状态信息应该用于在对由 `FETCH` 语句返回的数据进行任何操作之前，以确定这些数据的有效性。 有关详细信息，请参阅 [@@FETCH_STATUS (Transact-SQL)](../../t-sql/functions/fetch-status-transact-sql.md)。  
   

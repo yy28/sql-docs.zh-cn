@@ -23,17 +23,17 @@ helpviewer_keywords:
 - verifying column updates
 - checking column updates
 ms.assetid: 8e3be25b-2e3b-4d1f-a610-dcbbd8d72084
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: fefd85737e5d58e71dae6fd81dc2c0306b0838e0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: 6baeb311e52588c63fc24d38143a0e5a54c96801
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67927635"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85714535"
 ---
 # <a name="update---trigger-functions-transact-sql"></a>UPDATE - 触发器函数 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   返回一个布尔值，指示是否尝试对表或视图的指定列执行 INSERT 或 UPDATE 操作。 可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT 或 UPDATE 触发器主体中的任意位置使用 UPDATE()，以测试触发器是否应执行某些操作。  
   
@@ -48,7 +48,7 @@ UPDATE ( column )
   
 ## <a name="arguments"></a>参数  
  *column*  
- 要为 INSERT 或 UPDATE 操作测试的列的名称。 由于表名是在触发器的 ON 子句中指定的，因此不要在列名前包含表名。 列可以是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持的任何[数据类型](../../t-sql/data-types/data-types-transact-sql.md)。 但是，计算列不能用于此上下文。  
+ 要为 INSERT 或 UPDATE 操作测试的列的名称。 由于表名是在触发器的 ON 子句中指定的，因此不要在列名前包含表名。 列可以是 [ 支持的任何](../../t-sql/data-types/data-types-transact-sql.md)数据类型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 但是，计算列不能用于此上下文。  
   
 ## <a name="return-types"></a>返回类型  
  Boolean  
@@ -63,7 +63,7 @@ UPDATE ( column )
 > [!NOTE]  
 >  IF UPDATE(column) 子句的功能等同于 IF、IF...ELSE 或 WHILE 子句，并且可以使用 BEGIN...END 语句块  。 有关详细信息，请参阅[控制流语言 &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)。  
   
- 可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 触发器主体中的任意位置使用 UPDATE(column)。  
+ 可以在  *触发器主体中的任意位置使用 UPDATE(column)* [!INCLUDE[tsql](../../includes/tsql-md.md)]。  
  
 如果将触发器应用于列，`UPDATED` 值将返回为 `true` 或 `1`，即使列值保持不变也是如此。 这是有意为之，并且触发器应实现确定是否允许插入/更新/删除操作的业务逻辑。 
   

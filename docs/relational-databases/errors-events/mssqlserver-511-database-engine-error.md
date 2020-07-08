@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 0c85686a-53c1-4180-ba8c-2000e68a0d63
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: caae7702ae1f4fde3f136024d538cf36c5ee2b51
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b3e094206a4fbbc9620ff7eed96e01c8b0a06f5f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68123076"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715426"
 ---
 # <a name="mssqlserver_511"></a>MSSQLSERVER_511
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>详细信息  
   
-|||  
-|-|-|  
+| Attribute | 值 |  
+| :-------- | :---- |  
 |产品名称|SQL Server|  
 |事件 ID|511|  
 |事件源|MSSQLSERVER|  

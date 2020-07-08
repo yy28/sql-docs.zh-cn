@@ -12,15 +12,15 @@ ms.assetid: 2ee479c8-66e4-45e9-a4c9-49d418e25a72
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 98bf70f1bc26b4b3dd3182024aa62ed41dd3bbab
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d139be67f2dceef498267376cf5cb74d8eabb164
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67910977"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717751"
 ---
 # <a name="sort-warnings-event-class"></a>Sort Warnings 事件类
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Sort Warnings 事件类指示排序操作的内存不足。 这不包括与创建索引有关的排序操作，只包括某查询内的排序操作（如 SELECT 语句中使用的 ORDER BY 子句）。  
   
  如果涉及排序操作的查询生成 EventSubClass 数据列值为 2 的 Sort Warnings 事件类，则需要多次传递数据才能排序数据，因此可能会影响查询性能。 进一步调查查询以确定是否可以消除排序操作。  

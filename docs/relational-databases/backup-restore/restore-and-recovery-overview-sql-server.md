@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 143925d3fa6867d656a4f473194608e77f5a960e
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: bde7cdd19ac66d30ceee0e73d6ea74ff5a66b2a8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82924931"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717968"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>还原与恢复概述 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   若要从故障中恢复 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库，数据库管理员必须按照逻辑正确并且有意义的还原顺序还原一组 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 还原和恢复支持从整个数据库、数据文件或数据页的备份还原数据，如下所示：  
   

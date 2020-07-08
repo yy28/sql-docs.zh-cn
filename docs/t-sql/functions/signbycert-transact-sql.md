@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: b4c6bced-4473-4bae-85b9-56deced495f9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 039e6b776240121aa66559cfb637c11f0ac70a9d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2a677a65aeebff4c37688dfbdb2f80d1f6ae1265
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71314580"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85714923"
 ---
 # <a name="signbycert-transact-sql"></a>SIGNBYCERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   使用证书对文本进行签名并返回签名。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "71314580"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
   
 SignByCert ( certificate_ID , @cleartext [ , 'password' ] )  
 ```  
@@ -61,7 +61,7 @@ SignByCert ( certificate_ID , @cleartext [ , 'password' ] )
  需要对证书具有 CONTROL 权限。  
   
 ## <a name="examples"></a>示例  
- 以下示例将用证书 `ABerglundCert07` 来签署 `@SensitiveData` 中的文本，该证书已用密码“pGFD4bb925DGvbd2439587y”进行解密。 然后，它在 `SignedData04` 表中插入明文和签名。  
+ 以下示例将用证书 `@SensitiveData` 来签署 `ABerglundCert07` 中的文本，该证书已用密码“pGFD4bb925DGvbd2439587y”进行解密。 然后，它在 `SignedData04` 表中插入明文和签名。  
   
 ```  
 DECLARE @SensitiveData nvarchar(max);  

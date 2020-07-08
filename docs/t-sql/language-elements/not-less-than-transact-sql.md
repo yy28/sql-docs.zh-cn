@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: ecbb598e-58a2-4b6c-90b4-3ad5bdfcae39
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 80e34fe713d44993d3d0349485e9e05783980fa4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: efb3b0d7a6422575df0d13bd15dccdf75834707d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68122001"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706279"
 ---
 # <a name="lt-not-less-than-transact-sql"></a>!&lt;（不小于）(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   比较两个表达式（比较运算符）。 当比较非空表达式时，如果左边操作数的值不小于右边操作数的值，则结果为 TRUE；否则结果为 FALSE。 如果任何一个操作数为 NULL 或两个都为 NULL，则请参阅主题 [SET ANSI_NULLS (Transact-SQL)](../../t-sql/statements/set-ansi-nulls-transact-sql.md)。  
   

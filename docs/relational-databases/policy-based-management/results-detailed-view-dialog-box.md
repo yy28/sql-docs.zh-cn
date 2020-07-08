@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: 366f0ff8-722a-40a9-934f-854147e4933d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d362670facc0638b435cfa604777a6631ac87e30
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5b9681bc22ea07ed3bed1d218ba752c2d4d6a666
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68021737"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716844"
 ---
 # <a name="results-detailed-view-dialog-box"></a>“结果详细视图”对话框
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   使用 **“评估策略”** 对话框运行策略并单击 **“评估”** 后，此对话框显示策略评估结果。 此对话框是只读的，可帮助您了解属性表达式的哪个部分可能失败。  
   
 ## <a name="options"></a>选项  
