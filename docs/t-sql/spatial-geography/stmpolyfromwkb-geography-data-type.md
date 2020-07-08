@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c4d0e649-0abb-4343-a3f0-3a702c8bbbdb
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: bb3ad4cf2da399c32af4ccdcb183ebebc393dbe5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 77de4f1e1fb5e76316101312f9c30b1b0663f0f0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68120939"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85702817"
 ---
 # <a name="stmpolyfromwkb-geography-data-type"></a>STMPolyFromWKB（geography 数据类型）
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 从开放地理空间信息联盟 (OGC) 已知二进制 (WKB) 表示形式返回 geographyMultiPolygon 实例  。
   

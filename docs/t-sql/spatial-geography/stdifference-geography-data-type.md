@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1cde5054-b91a-41bb-812a-08c9308738af
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 7ddc3324099be031fff61c2268094b85e9fab143
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 39465a009ac7b7d8cc19470e3e735779337c276f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68042338"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85704070"
 ---
 # <a name="stdifference-geography-data-type"></a>STDifference（geography 数据类型）
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   返回一个对象，该对象表示来自一个 geography  实例的点集，该点集在另一个 geography  实例之外。  
   

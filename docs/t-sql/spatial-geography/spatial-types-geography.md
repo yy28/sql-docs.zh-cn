@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: d9e4952a-1841-4465-a64b-11e9288dba1d
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 5b98f2283cfb9d89277ad97ffc7a883e43a42b4f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1a344d490ee4941ea233de28008a1cb990938274
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68042522"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85705360"
 ---
 # <a name="spatial-types---geography"></a>空间类型 - geography
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  地理空间数据类型 geography 是作为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 .NET 公共语言运行时 (CLR) 数据类型实现的。 此类型表示圆形地球坐标系中的数据。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geography 数据类型存储椭球体（圆形地球）数据，如 GPS 纬度和经度坐标  。  
+  地理空间数据类型 geography 是作为  **中的 .NET 公共语言运行时 (CLR) 数据类型实现的**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 此类型表示圆形地球坐标系中的数据。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geography 数据类型存储椭球体（圆形地球）数据，如 GPS 纬度和经度坐标  。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持 geography 空间数据类型的一组方法  。 这些方法包括开放地理空间信息联盟 (OGC) 标准和对该标准的一组 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 扩展所定义的 geography 方法。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持 geography 空间数据类型的一组方法  。 这些方法包括开放地理空间信息联盟 (OGC) 标准和对该标准的一组  **扩展所定义的 geography 方法**[!INCLUDE[msCoName](../../includes/msconame-md.md)]。  
  
  geography 方法的容错可高达 1.0e-7 * extents  。 extents 表示 geography 对象的各点之间的近似最大距离  。
   
@@ -42,7 +42,7 @@ ms.locfileid: "68042522"
 ### <a name="a-showing-how-to-add-and-query-geography-data"></a>A. 显示如何添加和查询地理数据  
  以下示例说明如何添加和查询地理数据。 第一个示例创建包含一个标识列和一个 `geography` 列 `GeogCol1` 的表。 第三列将 `geography` 列呈现为其开放地理空间信息联盟 (OGC) 熟知文本 (WKT) 表示形式，并使用 `STAsText()` 方法。 接下来将插入两行：一行包含 `LineString` 类型的 `geography`实例，一行包含 `Polygon` 实例。  
   
-```  
+```sql  
 IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
     DROP TABLE dbo.SpatialTable;  
 GO  
@@ -64,7 +64,7 @@ GO
 ### <a name="b-returning-the-intersection-of-two-geography-instances"></a>B. 返回两个 geography 实例的交集  
  下面的示例使用 `STIntersection()` 方法返回以前插入的两个 `geography` 实例相交的点。  
   
-```  
+```sql  
 DECLARE @geog1 geography;  
 DECLARE @geog2 geography;  
 DECLARE @result geography;  
@@ -78,7 +78,7 @@ SELECT @result.STAsText();
 ### <a name="c-using-geography-in-a-computed-column"></a>C. 在计算列中使用地理数据  
  下面的示例使用 geography 类型创建具有持久化计算列的表  。  
   
-```  
+```sql  
 IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
     DROP TABLE dbo.SpatialTable;  
 GO  
@@ -88,7 +88,7 @@ CREATE TABLE SpatialTable
     locationId int IDENTITY(1,1),  
     location geography,  
     deliveryArea as location.STBuffer(10) persisted  
-)  
+);  
 ```  
   
 ## <a name="see-also"></a>另请参阅  

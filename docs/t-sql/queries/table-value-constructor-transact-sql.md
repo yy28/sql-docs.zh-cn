@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e57cd31d-140e-422f-8178-2761c27b9deb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c0982bb3ffaf6c21ee8bff0b7cffc0bc472fb1d9
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 61b076459edf728475f5f8a15fed8ade5f3b47ff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634212"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85705957"
 ---
 # <a name="table-value-constructor-transact-sql"></a>表值构造函数 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   指定要构建到某一表中的一组行值表达式。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 表值构造函数允许在单个 DML 语句中指定多行数据。 表值构造函数可以指定为 INSERT VALUES 语句的 VALUES 子句...或指定为 MERGE 语句 USING 子句中的或 FROM 子句中的派生表。
   

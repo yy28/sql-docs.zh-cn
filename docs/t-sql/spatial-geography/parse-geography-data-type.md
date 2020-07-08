@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 21c402fa-fd0f-4d09-a097-49cee0316d4e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 209186cf3756c0bfb9b572a33ba470a83e0cd493
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 75e5083f3009a09e7b0ba347ab2a9982c852593f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68051437"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85705850"
 ---
 # <a name="parse-geography-data-type"></a>Parse（geography 数据类型）
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 从开放地理空间信息联盟 (OGC) 熟知文本 (WKT) 表示形式返回 geography 实例  。 Parse() 与 [STGeomFromText](../../t-sql/spatial-geography/stgeomfromtext-geography-data-type.md) 等效，不同的是，前者将值为 4326 的空间引用 ID (SRID) 作为参数。 输入值可以根据需要包含 Z（标高）和 M（度量）值。
   

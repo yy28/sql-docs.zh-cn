@@ -30,15 +30,15 @@ helpviewer_keywords:
 ms.assetid: 9b9caa3d-e7d0-42e1-b60b-a5572142186c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e3d7c9b661a69f4a575a18aae03f9eb5e601b69b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c800fb0a56351854b6e922a7ab79d86ee9cb5aa2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74191085"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85705950"
 ---
 # <a name="select-examples-transact-sql"></a>SELECT 示例 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   本主题提供了使用 [SELECT](../../t-sql/queries/select-transact-sql.md) 语句的示例。  
   
