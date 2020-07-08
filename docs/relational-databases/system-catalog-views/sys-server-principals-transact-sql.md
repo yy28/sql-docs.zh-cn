@@ -20,28 +20,27 @@ ms.assetid: c5dbe0d8-a1c8-4dc4-b9b1-22af20effd37
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 408ad309ade858c800b79ee83993fda4fe78467a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: 822d0663d13e4ad03c852758e97277e6711af0bd
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68133089"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091861"
 ---
 # <a name="sysserver_principals-transact-sql"></a>sys.server_principals (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   每个服务器级别主体占一行。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|name |**sysname**|主体的名称。 在服务器中是唯一的。|  
-|**principal_id**|**int**|主体的 ID 号。 在服务器中是唯一的。|  
+|name|**sysname**|主体的名称。 在服务器中是唯一的。|  
+|principal_id|**int**|主体的 ID 号。 在服务器中是唯一的。|  
 |**sid**|**varbinary （85）**|主体的 SID（安全标识符）。 如果是 Windows 主体，则它与 Windows SID 匹配。|  
 |**type**|**char （1）**|主体类型：<br /><br /> S = SQL 登录名<br /><br /> U = Windows 登录名<br /><br /> G = Windows 组<br /><br /> R = 服务器角色<br /><br /> C = 映射到证书的登录名<br /><br /> K = 映射到非对称密钥的登录名|  
 |**type_desc**|**nvarchar(60)**|主体类型的说明：<br /><br /> SQL_LOGIN<br /><br /> WINDOWS_LOGIN<br /><br /> WINDOWS_GROUP<br /><br /> SERVER_ROLE<br /><br /> CERTIFICATE_MAPPED_LOGIN<br /><br /> ASYMMETRIC_KEY_MAPPED_LOGIN|  
 |**is_disabled**|**int**|1 = 禁用登录名。|  
-|**create_date**|**datetime**|主体的创建时间。|  
-|**modify_date**|**datetime**|上次修改主体定义的时间。|  
+|create_date|**datetime**|主体的创建时间。|  
+|modify_date|**datetime**|上次修改主体定义的时间。|  
 |**default_database_name**|**sysname**|该主体的默认数据库。|  
 |**default_language_name**|**sysname**|该主体的默认语言。|  
 |**credential_id**|**int**|与该主体关联的凭据的 ID。 如果没有与该主体关联的凭据，则 credential_id 将为 NULL。|  

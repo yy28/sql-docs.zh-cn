@@ -20,15 +20,14 @@ ms.assetid: efa20414-2c6b-45a2-a7a9-60110a24da18
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11f39b29817716799ec693d6161135010c35a233
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: decb7b7ce4d1c2937c5c787e92c7c35472f30133
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68133026"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091721"
 ---
 # <a name="sysserver_role_members-transact-sql"></a>sys.server_role_members (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   为每个固定和用户定义的服务器角色的每个成员返回一行。  
   
@@ -42,7 +41,7 @@ ms.locfileid: "68133026"
 ## <a name="permissions"></a>权限  
  登录名可以查看自己的服务器角色成员身份，并且可以查看 principal_id 的固定服务器角色成员。 若要查看所有服务器角色成员身份，需要具有**服务器角色的 VIEW DEFINITION**权限或**securityadmin**固定服务器角色的成员身份。  
   
-  有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
+ 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="examples"></a>示例  
  下面的示例返回角色和其成员的名称和 ID。  

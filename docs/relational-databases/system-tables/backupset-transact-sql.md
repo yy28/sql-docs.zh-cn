@@ -20,15 +20,14 @@ ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0eb367dd29a96f5819563f0b10e036b7274c4303
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: 5cd91cd99d70a90e3aaec5972ddcdccf472a18f1
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827348"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091849"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   每个备份集在表中占一行。 备份集** 包含来自单个成功备份操作的备份。 RESTORE、RESTORE FILELISTONLY、RESTORE HEADERONLY 和 RESTORE VERIFYONLY 语句对指定的一个或多个备份设备上的介质集中的单个备份集进行操作。  
   
@@ -64,14 +63,14 @@ ms.locfileid: "82827348"
 |**database_creation_date**|**datetime**|数据库最初创建的日期和时间。 可以为 NULL。|  
 |**backup_start_date**|**datetime**|备份操作的开始日期和时间。 可以为 NULL。|  
 |**backup_finish_date**|**datetime**|备份操作的结束日期和时间。 可以为 NULL。|  
-|type |**char （1）**|备份类型。 可以是：<br /><br /> D = 数据库<br /><br /> I = 差异数据库<br /><br /> L = 日志<br /><br /> F = 文件或文件组<br /><br /> G = 差异文件<br /><br /> P = 部分<br /><br /> Q = 差异部分<br /><br /> 可以为 NULL。|  
+|**type**|**char （1）**|备份类型。 可以是：<br /><br /> D = 数据库<br /><br /> I = 差异数据库<br /><br /> L = 日志<br /><br /> F = 文件或文件组<br /><br /> G = 差异文件<br /><br /> P = 部分<br /><br /> Q = 差异部分<br /><br /> 可以为 NULL。|  
 |**sort_order**|**smallint**|执行备份操作的服务器的排序顺序。 可以为 NULL。 有关排序顺序和排序规则的详细信息，请参阅[排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)。|  
 |**code_page**|**smallint**|执行备份操作的服务器的代码页。 可以为 NULL。 有关代码页的详细信息，请参阅[排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)。|  
 |**compatibility_level**|**tinyint**|数据库的兼容级别设置。 可以是：<br /><br /> 90 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 100 = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]<br /><br /> 110 = [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /><br /> 120 = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> 可以为 NULL。<br /><br /> 有关兼容性级别的详细信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。|  
 |**database_version**|**int**|数据库的版本号。 可以为 NULL。|  
 |**backup_size**|**numeric(20,0)**|备份集的大小（以字节为单位）。 可以为 NULL。 对于 VSS 备份，backup_size 是一个估计值。|  
 |**database_name**|**nvarchar(128)**|备份操作中涉及的数据库的名称。 可以为 NULL。|  
-|server_name |**nvarchar(128)**|运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份操作的服务器的名称。 可以为 NULL。|  
+|server_name|**nvarchar(128)**|运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份操作的服务器的名称。 可以为 NULL。|  
 |**machine_name**|**nvarchar(128)**|运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的计算机的名称。 可以为 NULL。|  
 |**flag**|**int**|在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，**标志**列已被弃用，并且将被替换为以下位列：<br /><br /> **has_bulk_logged_data** <br /> **is_snapshot** <br /> **is_readonly** <br /> **is_single_user** <br /> **has_backup_checksums** <br /> **is_damaged** <br /> **begins_log_chain** <br /> **has_incomplete_metadata** <br /> **is_force_offline** <br /> **is_copy_only**<br /><br /> 可以为 NULL。<br /><br /> 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]　早期版本的备份集中，标志位如下：<br />1 = 备份包含最少的记录数据。 <br />2 = 使用了 WITH SNAPSHOT。 <br />4 = 备份时数据库为只读。<br />8 = 备份时数据库处于单用户模式。|  
 |**unicode_locale**|**int**|Unicode 区域设置。 可以为 NULL。|  
@@ -101,7 +100,7 @@ ms.locfileid: "82827348"
 |**encryptor_thumbprint**|**varbinary(20)**|可用于在数据库中查找证书或非对称密钥的加密程序的指纹。 在备份未加密的情况下，此值为 NULL。|  
 |**encryptor_type**|**nvarchar(32)**|使用的加密程序的类型：证书或非对称密钥。 . 在备份未加密的情况下，此值为 NULL。|  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  RESTORE VERIFYONLY FROM *backup_device* with LOADHISTORY，用介质集标头中的相应值填充**backupmediaset**表的列。  
   
  若要减少此表以及其他备份和历史记录表中的行数，请执行[sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)存储过程。  

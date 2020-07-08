@@ -14,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: ef87a8f1-5407-47b5-b8bf-bd7d08c0f0fe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4e9f5e12a56fe825909dd991c4b3253d3d90608c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: 82bcad58a97fa41938f127c0a814c312c4e22ec9
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827821"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052705"
 ---
 # <a name="sp_polybase_leave_group-transact-sql"></a>sp_polybase_leave_group （Transact-sql）
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   从 PolyBase 组中删除用于扩展计算的 SQL Server 实例。 
  
@@ -44,7 +43,7 @@ sp_polybase_leave_group;
 ## <a name="permissions"></a>权限  
  需要 CONTROL SERVER 权限。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  只能从组中删除计算节点。  
   
  运行存储过程后，重新启动计算机上的 PolyBase 引擎和 PolyBase 数据移动服务。 验证在头节点上运行以下 DMV： **sys. dm_exec_compute_nodes**。  

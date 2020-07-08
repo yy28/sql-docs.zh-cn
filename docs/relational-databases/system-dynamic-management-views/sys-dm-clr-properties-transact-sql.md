@@ -20,15 +20,14 @@ ms.assetid: 220d062f-d117-46e7-a448-06fe48db8163
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8cb9cfc6e645e9777a697e62183db874c47cfeb4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: a61484691e4e5a2ea5ca4c08b6382b501f1cc851
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824714"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091855"
 ---
 # <a name="sysdm_clr_properties-transact-sql"></a>sys.dm_clr_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   对于与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公共语言运行时 (CLR) 集成相关的每个属性（包括宿主 CLR 的版本和状态）返回一行。 通过运行[CREATE assembly](../../t-sql/statements/create-assembly-transact-sql.md)、 [ALTER ASSEMBLY](../../t-sql/statements/alter-assembly-transact-sql.md)或[DROP assembly](../../t-sql/statements/drop-assembly-transact-sql.md)语句或通过执行任何 CLR 例程、类型或触发器来初始化托管的 clr。 **Sys. dm_clr_properties**视图不指定是否已在服务器上启用用户 clr 代码的执行。 用户 CLR 代码的执行通过使用在[CLR enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)选项设置为1的[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)存储过程启用。  
   
@@ -37,7 +36,7 @@ ms.locfileid: "82824714"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(128)**|属性的名称。|  
-|**value**|**nvarchar(128)**|属性的值。|  
+|**value**|**nvarchar(128)**|属性的名称。|  
   
 ## <a name="properties"></a>属性  
  **Directory**属性指示在服务器上安装 .NET Framework 的目录。 在服务器上可能存在多个 .NET Framework 安装，该属性的值标识了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在使用的安装。  
@@ -68,7 +67,7 @@ ms.locfileid: "82824714"
   
  **CLR 处于停止状态**，仅在处于关闭 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 过程中时才会出现。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  此视图的属性和值在的未来版本中可能会更改， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 因为它增强了 CLR 集成功能。  
   
 ## <a name="permissions"></a>权限  

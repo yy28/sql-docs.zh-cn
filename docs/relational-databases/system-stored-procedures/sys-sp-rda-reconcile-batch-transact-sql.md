@@ -16,15 +16,14 @@ helpviewer_keywords:
 ms.assetid: 6d21eac3-7b6c-4fe0-8bc4-bf503f3948a6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 40fb2b497f799bc03551ff113c3b779510d1dee1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: c8ce7b946005eca97d57ef709557ec9b4334339c
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827386"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053060"
 ---
 # <a name="syssp_rda_reconcile_batch-transact-sql"></a>sys. sp_rda_reconcile_batch （Transact-sql）
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   将已启用 Stretch 的 SQL Server 表中存储的批 ID 与存储在远程 Azure 表中的批 ID 进行协调。  
   
@@ -42,14 +41,14 @@ sp_rda_reconcile_batch @objname = '@objname'
   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  \@objname = '* \@ objname*'  
  已启用延伸的 SQL Server 表的名称。  
   
 ## <a name="permissions"></a>权限  
  需要 db_owner 权限。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  如果要删除已迁移到 Azure 的数据，请执行以下操作。  
   
 1.  暂停数据迁移。 有关详细信息，请参阅[暂停和恢复数据迁移 &#40;Stretch Database&#41;](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md)。  

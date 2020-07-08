@@ -20,19 +20,18 @@ helpviewer_keywords:
 ms.assetid: b376711d-444a-4b5e-b483-8df323b4e31f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bc2bfdbd8714bf4211373e921c1b054ed224feb3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: f5f155837f1e5dd9057c376152ceae56bce33d74
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70155806"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053430"
 ---
 # <a name="managed_backupfn_get_health_status-transact-sql"></a>managed_backup fn_get_health_status （Transact-sql）
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   返回 0 行、一行或多行的表，行中是扩展事件在指定的一段时间内报告的错误总数。  
   
- 函数用于报告智能管理下的服务的运行状况状态。 目前[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ，智能管理伞支持。 因此，返回的错误与 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 相关。  
+ 函数用于报告智能管理下的服务的运行状况状态。 目前， [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 智能管理伞支持。 因此，返回的错误与 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 相关。  
   
  
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -62,7 +61,7 @@ managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 
 |number_of_backup_loops|int|备份代理扫描所有配置了 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的数据库的次数。|  
 |number_of_retention_loops|int|扫描数据库以评估所设置的保持期的次数。|  
   
-## <a name="best-practices"></a>最佳方案  
+## <a name="best-practices"></a>最佳实践  
  这些聚合的计数可用于监视系统运行状况。 例如，如果 number_of_retention_loops 列在 30 分钟内为 0，则保持管理可能占用较长时间，甚至没有正常工作。 非零错误列可能表示有问题，应检查扩展事件日志以了解任何问题。 或者，使用存储过程**sp_get_backup_diagnostics managed_backup**获取扩展事件的列表以查找错误的详细信息。  
   
 ## <a name="security"></a>安全性  

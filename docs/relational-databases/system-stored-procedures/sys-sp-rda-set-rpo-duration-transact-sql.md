@@ -16,15 +16,14 @@ helpviewer_keywords:
 ms.assetid: 95c80c5b-9252-4612-9ea7-544c48834fd2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3588f12006de3f7a9e79f6743ae8dffbe01f42c2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: 8e00939df070233efd2087a8534aaa711be01b3d
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82807744"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053473"
 ---
 # <a name="syssp_rda_set_rpo_duration-transact-sql"></a>sys. sp_rda_set_rpo_duration （Transact-sql）
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   设置 SQL Server 保留在临时表中的已迁移数据的小时数，以帮助确保远程 Azure 数据库完整还原（如果需要进行时间点还原）。    
     
@@ -40,7 +39,7 @@ sp_rda_set_rpo_duration [ @duration_hrs = ] duration_hrs
     
 ```    
     
-## <a name="arguments"></a>参数    
+## <a name="arguments"></a>自变量    
  [ @duration_hrs =] *duration_hrs*    
  要 SQL Server 为当前已启用延伸的数据库保留的已迁移数据的小时数（非 null 整数值）。 默认值和最小值为8小时。    
  
@@ -50,7 +49,7 @@ sp_rda_set_rpo_duration [ @duration_hrs = ] duration_hrs
 ## <a name="permissions"></a>权限    
  需要 db_owner 权限。    
     
-## <a name="remarks"></a>备注    
+## <a name="remarks"></a>注解    
  通过运行[sp_rda_get_rpo_duration &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-get-rpo-duration-transact-sql.md)获取当前值。    
     
 ## <a name="see-also"></a>另请参阅    

@@ -20,15 +20,14 @@ helpviewer_keywords:
 ms.assetid: 7c755d8a-64dd-44b2-be5e-735d30758900
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a23f8eb64ae99b999cdf6b16f1c888383a88c147
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: 4147d01936fbdd3a14e479a7b560d5368a5110ec
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68067783"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053703"
 ---
 # <a name="managed_backupfn_backup_db_config-transact-sql"></a>managed_backup fn_backup_db_config （Transact-sql）
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
    返回 0 个、1 个或多个带有 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 配置设置的行。 返回指定数据库的 1 行，或返回实例上配置了 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的所有数据库的信息。  
   
@@ -68,7 +67,7 @@ managed_backup.fn_backup_db_config ('database_name' | '' | NULL)
  要求具有**ALTER ANY CREDENTIAL**权限的**db_backupoperator**数据库角色的成员身份。 不应拒绝用户**查看任何定义**权限。  
   
 ## <a name="examples"></a>示例  
- 下面的示例返回 " [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] TestDB" 的配置  
+ 下面的示例返回 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] "TestDB" 的配置  
   
  对于每个代码段，请在语言属性字段中选择“tsql”。  
   

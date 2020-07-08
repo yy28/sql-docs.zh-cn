@@ -18,21 +18,20 @@ ms.assetid: 765069b7-60fd-414c-875f-3455460b75cd
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 65e42e6303b467abd38ddadb6be0c0d0fece46e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: b91a01714f7c7784f5ec227362c66c9468f44df5
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68018192"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053606"
 ---
 # <a name="stretch-database-catalog-views---sysremote_data_archive_tables"></a>Stretch Database 目录视图-sys. remote_data_archive_tables
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   每个从启用 Stretch 的本地表存储数据的远程表在表中各占一行。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|已启用延伸的本地表的对象 ID。|  
+|object_id|**int**|已启用延伸的本地表的对象 ID。|  
 |**remote_database_id**|**int**|自动生成的远程数据库本地标识符。|  
 |**remote_table_name**|**sysname**|远程数据库中与已启用延伸的本地表对应的表的名称。|  
 |**filter_predicate**|**nvarchar(max)**|标识要迁移的表中的行的筛选器谓词（如果有）。 如果值为 null，则整个表符合迁移条件。<br /><br /> 有关详细信息，请参阅为[表启用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)和[使用筛选器谓词选择要迁移的行](~/sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)。|  

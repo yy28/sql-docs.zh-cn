@@ -12,15 +12,14 @@ dev_langs:
 ms.assetid: 808e50ae-ff6e-4520-9ce2-530591d3d59b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 49eb0906a9a5af1fec2abfeec3ef58845b605e69
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: edb0740ce1bbc0009996849e39bf495c23ba29b0
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67941825"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053708"
 ---
 # <a name="sp_delete_backup-transact-sql"></a>sp_delete_backup （Transact-sql）
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   从指定数据库中删除构成快照备份集的所有快照和备份文件。 仅建议使用此系统存储过程来管理快照备份集。 有关详细信息，请参阅 [Azure 中数据库文件的文件快照备份](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。  
   
@@ -35,7 +34,7 @@ sys.sp_delete_backup
     ,[ [ @db_name = ] database_name | NULL ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *[ @backup_url =] backup_meta_file_url*  
  要删除的备份的 URL，该 URL 将删除由指定的备份集组成的所有快照，包括备份文件本身。  
   

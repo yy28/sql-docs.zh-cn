@@ -20,11 +20,11 @@ ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ee313bdcda6b005a3f3a80725908244d3a496b67
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d4a381c891c7cab2f4c14baaf87e9c5108cea714
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011606"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091537"
 ---
 # <a name="sysdm_os_wait_stats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -87,7 +87,7 @@ GO
   
  下表列出各任务所遇到的等待类型。  
 
-|类型 |说明| 
+|类型 |描述| 
 |-------------------------- |--------------------------| 
 |ABR |标识为仅供参考。 不支持。 不保证以后的兼容性。| | 
 |AM_INDBUILD_ALLOCATION |仅限内部使用。 <br />**适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
@@ -166,8 +166,8 @@ GO
 |CONNECTION_ENDPOINT_LOCK |仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 及更高版本。| 
 |COUNTRECOVERYMGR |仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |CREATE_DATINISERVICE |仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
-|CXCONSUMER |当使用者线程等待制造者线程发送行时，在并行查询计划中发生。 这是并行查询执行的正常部分。 <br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （从 SP2 开始 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ， [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3），[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
-|CXPACKET |在同步查询处理器交换迭代器时，以及在生成和使用行时，在并行查询计划中发生。 如果等待太久，无法通过优化查询（如添加索引）来减少等待时间，请考虑调整并行度的开销阈值或降低并行度。<br /> **注意：** 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 开始， [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ，CXPACKET 仅指同步查询处理器交换迭代器，并为使用者线程生成行。 在 CXCONSUMER 等待类型中单独跟踪使用者线程。| 
+|CXCONSUMER<a name="cxconsumer"></a>|当使用者线程（父）等待制造者线程发送行时，在并行查询计划中发生。 CXCONSUMER 等待是由从其制造者线程中用尽行的 Exchange 迭代器导致的。 这是并行查询执行的正常部分。 <br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （从 SP2 开始 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ， [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3），[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
+|CXPACKET<a name="cxpacket"></a>|在同步查询处理器交换迭代器时，以及在生成和使用行时，在并行查询计划中发生。 如果等待情况过大，并且无法通过优化查询来减少（如添加索引），请考虑调整并行的开销阈值或降低最大并行度（MaxDOP）。<br /> **注意：** 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 开始， [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ，CXPACKET 仅指同步查询处理器交换迭代器和生成行。 如果使用者线程速度太慢，则 Exchange 迭代器缓冲区可能会变满并导致 CXPACKET 等待。 在 CXCONSUMER 等待类型中单独跟踪使用者线程。| 
 |CXROWSET_SYNC |在并行范围扫描期间出现。| 
 |DAC_INIT |当正在初始化专用管理员连接时出现。| 
 |DBCC_SCALE_OUT_EXPR_CACHE |仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
@@ -1024,7 +1024,7 @@ GO
   
  有关锁兼容性矩阵，请参阅[transact-sql&#41;&#40;dm_tran_locks ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
     
  [&#40;Transact-sql 的与操作系统相关的动态管理视图 SQL Server&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [sys. dm_exec_session_wait_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   

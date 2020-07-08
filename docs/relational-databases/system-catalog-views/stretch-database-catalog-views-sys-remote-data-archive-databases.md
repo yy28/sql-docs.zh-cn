@@ -18,15 +18,14 @@ ms.assetid: 25bffb0c-9821-40b4-88cf-75f854891a09
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 339d960a136e9cf939032068c21ec737f4d37ceb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: a4d7717a6e89b156cd66ea96a44383d28cbecfb3
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68018205"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053627"
 ---
 # <a name="stretch-database-catalog-views---sysremote_data_archive_databases"></a>Stretch Database 目录视图-sys. remote_data_archive_databases
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   每个从已启用延伸的本地数据库中存储数据的远程数据库占一行。  
   
@@ -34,7 +33,7 @@ ms.locfileid: "68018205"
 |-----------------|---------------|-----------------|  
 |**remote_database_id**|**int**|自动生成的远程数据库本地标识符。|  
 |**remote_database_name**|**sysname**|远程数据库的名称。|  
-|**data_source_id**|**int**|用于连接到远程服务器的数据源|  
+|data_source_id|**int**|用于连接到远程服务器的数据源|  
   
 ## <a name="see-also"></a>另请参阅  
  [Stretch 数据库](../../sql-server/stretch-database/stretch-database.md)  

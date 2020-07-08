@@ -20,15 +20,14 @@ ms.assetid: c8fcced8-c780-49dc-99bd-6beb3ca532c4
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e89252effd6e8fbb14d800837328c9ff8042e0d3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: 9dedfbbb19fe186758d865f97271410ddcd5d27d
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827931"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091619"
 ---
 # <a name="sysdm_io_cluster_shared_drives-transact-sql"></a>sys.dm_io_cluster_shared_drives (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   如果当前服务器实例为群集服务器，则此视图返回每个共享驱动器的名称。 如果当前服务器实例不是群集实例，则返回空行集。  
   
@@ -40,7 +39,7 @@ ms.locfileid: "82827931"
 |**DriveName**|**nchar(2)**|驱动器的名称（驱动器号），表示共享群集磁盘阵列中的单个磁盘。 此列不可为空值。|  
 |**pdw_node_id**|**int**|**适用**于： ssPDW<br /><br /> 此分发所在的节点的标识符。|  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  如果已启用群集，则故障转移群集实例要求数据和日志文件位于共享磁盘上，以便在实例故障转移到另一节点后，可以访问这些数据和日志文件。 该视图中的每一行代表一个由此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 群集实例使用的共享磁盘。 只有该视图中所列磁盘可以用于存储该 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的数据或日志文件。 该视图中所列磁盘属于与实例关联的群集资源组。  
   
 > [!NOTE]  

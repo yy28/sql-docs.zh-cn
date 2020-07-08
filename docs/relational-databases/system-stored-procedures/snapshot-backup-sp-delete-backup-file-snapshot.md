@@ -12,15 +12,14 @@ dev_langs:
 ms.assetid: 5afe5530-a404-4fa5-af3c-bc7c3ca43ce6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cf376712d51f542f6da5eaa8e89b53779eda0c07
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: 365ddae67f2357c11735f2d0966e56405edbde07
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67941839"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053673"
 ---
 # <a name="sp_delete_backup_file_snapshot-transact-sql"></a>sp_delete_backup_file_snapshot （Transact-sql）
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   从指定的数据库中删除指定的备份快照。 将此系统存储过程与**sys. fn_db_backup_file_snapshots** system 函数结合使用，以标识和删除孤立的备份快照。 有关详细信息，请参阅 [Azure 中数据库文件的文件快照备份](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。  
 
@@ -36,7 +35,7 @@ sys.sp_delete_backup_file_snapshot
     , [ @snapshot_url = ] N'<snapshot_url>  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *[ @db_name =] database_name*  
  包含要删除的快照的数据库的名称，以 Unicode 字符串形式提供。  
   

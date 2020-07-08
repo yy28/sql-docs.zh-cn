@@ -20,17 +20,16 @@ helpviewer_keywords:
 ms.assetid: 82541160-d1df-4061-91a5-6868dd85743a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e7bb477901dee22c70bb47cd0eaf7da5eb163b7f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: 04e152b8ae15e4e0a810fb5ed945b4c8c69afe5b
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "77507528"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053450"
 ---
 # <a name="managed_backupsp_backup_config_schedule-transact-sql"></a>managed_backup sp_backup_config_schedule （Transact-sql）
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-  为[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]配置自动或自定义计划选项。  
+  为配置自动或自定义计划选项 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 。  
     
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -58,19 +57,19 @@ EXEC managed_backup.sp_backup_config_schedule
  托管备份操作的频率类型，可以设置为 "每日" 或 "每周"。  
   
  @days_of_week  
- 将备份设置为 "每周" 时@full_backup_freq_type的备份日期。 指定完整的字符串名称，如 "Monday"。  还可以指定多个以竖线分隔的星期名称。 例如 N'Monday |星期三 |星期五 "。  
+ @full_backup_freq_type将备份设置为 "每周" 时的备份日期。 指定完整的字符串名称，如 "Monday"。  还可以指定多个以竖线分隔的星期名称。 例如 N'Monday |星期三 |星期五 "。  
   
  @backup_begin_time  
- 备份窗口的开始时间。 不会在时间范围之外启动备份，这是由@backup_begin_time和@backup_duration的组合定义的。  
+ 备份窗口的开始时间。 不会在时间范围之外启动备份，这是由和的组合定义的 @backup_begin_time @backup_duration 。  
   
  @backup_duration  
- 备份时间窗口的持续时间。 请注意，不能保证在@backup_begin_time和@backup_duration定义的时间范围内完成备份。 在此时间窗口中启动但超过窗口持续时间的备份操作不会被取消。  
+ 备份时间窗口的持续时间。 请注意，不能保证在和定义的时间范围内完成备份 @backup_begin_time @backup_duration 。 在此时间窗口中启动但超过窗口持续时间的备份操作不会被取消。  
   
  @log_backup_freq  
- 这会确定事务日志备份的频率。 这些备份定期发生，而不是按为数据库备份指定的计划进行。 @log_backup_freq可以是分钟或小时，并且`0:00`有效，表示没有日志备份。 禁用日志备份仅适用于具有简单恢复模式的数据库。  
+ 这会确定事务日志备份的频率。 这些备份定期发生，而不是按为数据库备份指定的计划进行。 @log_backup_freq可以是分钟或小时，并且 `0:00` 有效，表示没有日志备份。 禁用日志备份仅适用于具有简单恢复模式的数据库。  
   
 > [!NOTE]  
->  如果恢复模式从 simple 更改为 full，则需要将 log_backup_freq 从`0:00`重新配置为非零值。  
+>  如果恢复模式从 simple 更改为 full，则需要将 log_backup_freq 从重新配置 `0:00` 为非零值。  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）或 1（失败）  

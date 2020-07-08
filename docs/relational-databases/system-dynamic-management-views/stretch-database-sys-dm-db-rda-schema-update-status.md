@@ -16,15 +16,14 @@ helpviewer_keywords:
 ms.assetid: 364e3caa-a7c6-4be5-a029-0b19da34de3e
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 611fe9d5bea47204b655f2defe5072d2dd17be92
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: b74f408bdb2be61076d5034478dc6743259fed6a
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67937017"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053643"
 ---
 # <a name="stretch-database---sysdm_db_rda_schema_update_status"></a>Stretch Database-sys. dm_db_rda_schema_update_status
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   当前数据库中每个已启用延伸的表的远程数据存档的每个架构更新任务在表中占一行。 任务由其任务 id 标识。  
   
@@ -41,7 +40,7 @@ ms.locfileid: "67937017"
 |**task_state_des**|**nvarchar**|远程数据存档架构更新任务的状态说明。|  
 |**start_time_utc**|**datetime**|远程数据存档架构更新开始的 UTC 时间。|  
 |**end_time_utc**|**datetime**|远程数据存档架构更新完成时的 UTC 时间。|  
-|**error_number**|**int**|如果远程数据存档架构更新失败，则表明出现了错误的错误号;否则为 null。|  
+|error_number |**int**|如果远程数据存档架构更新失败，则表明出现了错误的错误号;否则为 null。|  
 |**error_severity**|**int**|如果远程数据存档架构更新失败，则表明出现了错误的严重性;否则为 null。|  
 |**error_state**|**int**|如果远程数据存档架构更新失败，则表明出现了错误的状态;否则为 null。 Error_state 指示发生错误的条件或位置。|  
   

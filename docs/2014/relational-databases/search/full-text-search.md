@@ -11,12 +11,11 @@ helpviewer_keywords:
 ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 49751128273fd052dd0ecd9423238f6c71a15925
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
-ms.translationtype: MT
+ms.openlocfilehash: 16303c34d44a056f1f505a2d1876b2ee23df994c
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85063315"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091888"
 ---
 # <a name="full-text-search"></a>全文搜索
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中的全文搜索为用户和应用程序提供了对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中基于字符的数据运行全文查询的功能。 在可以对某一表运行全文查询之前，数据库管理员必须对该表创建全文索引。 全文索引包括表中一个或多个基于字符的列。 这些列可以具有下列任何一种数据类型：`char`、`varchar`、`nchar`、`nvarchar`、`text`、`ntext`、`image`、`xml` 或 `varbinary(max)` 和 FILESTREAM。 每个全文索引都对表中的一个或多个列创建索引，并且每个列都可以使用特定语言。
@@ -149,7 +148,7 @@ ms.locfileid: "85063315"
  [本主题内容](#top)
 
 ##  <a name="linguistic-components-and-language-support-in-full-text-search"></a><a name="components"></a>全文搜索中的语言组件和语言支持
- 全文搜索支持大约 50 种不同语言，例如英语、西班牙语、中文、日语、阿拉伯语、孟加拉语和印地语。 有关支持的全文语言的完整列表，请参阅 [sys.fulltext_languages (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql)。 全文索引中包含的每一列与一个 Microsoft Windows 区域设置标识符 (LCID) 相关联，每个区域设置标识符等同于全文搜索支持的一种语言。 例如，LCID 1033 等于美国英语，LCID 2057 等于英国英语。 对于每种支持的全文语言， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供语言组件以支持对以该语言存储的全文数据进行索引和查询。
+ 全文搜索支持几乎50多种语言，如英语、西班牙语、中文、日语、阿拉伯语、孟加拉语和印地语。 有关支持的全文语言的完整列表，请参阅 [sys.fulltext_languages (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql)。 全文索引中包含的每一列与一个 Microsoft Windows 区域设置标识符 (LCID) 相关联，每个区域设置标识符等同于全文搜索支持的一种语言。 例如，LCID 1033 等于美国英语，LCID 2057 等于英国英语。 对于每种支持的全文语言， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供语言组件以支持对以该语言存储的全文数据进行索引和查询。
 
  语言特有组件包括：
 
@@ -234,5 +233,3 @@ ms.locfileid: "85063315"
 -   [全文搜索 DDL、函数、存储过程和视图](../views/views.md)
 
  [本主题内容](#top)
-
-

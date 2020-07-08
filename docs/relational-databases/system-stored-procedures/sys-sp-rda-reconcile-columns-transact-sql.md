@@ -16,15 +16,14 @@ helpviewer_keywords:
 ms.assetid: 60d9cc4e-1828-450b-9d88-5b8485800d73
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8410cde58d5f6bcf6b2a48fcc7169210a41afe0a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: a528609b8ab33f913a45e9bd61a1409bc3927930
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82814611"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053024"
 ---
 # <a name="syssp_rda_reconcile_columns-transact-sql"></a>sys. sp_rda_reconcile_columns （Transact-sql）
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   将远程 Azure 表中的列与启用 Stretch SQL Server 表中的列协调。  
     
@@ -43,7 +42,7 @@ sp_rda_reconcile_columns @objname = '@objname'
   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  \@objname = '* \@ objname*'  
  已启用延伸的 SQL Server 表的名称。  
   
@@ -53,7 +52,7 @@ sp_rda_reconcile_columns @objname = '@objname'
 ## <a name="permissions"></a>权限  
  需要 db_owner 权限。  
    
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  如果远程 Azure 表中存在已启用延伸的 SQL Server 表中不复存在的列，这些额外的列不会阻止 Stretch Database 正常运行。 你可以选择手动删除额外列。  
   
 ## <a name="example"></a>示例  

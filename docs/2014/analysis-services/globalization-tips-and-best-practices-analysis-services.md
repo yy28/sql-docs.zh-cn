@@ -15,12 +15,11 @@ helpviewer_keywords:
 ms.assetid: 71a8c438-1370-4c69-961e-d067ee4e47c2
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: f2018c557b8fd7dffdceb14c0a872595a3ce21da
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
-ms.translationtype: MT
+ms.openlocfilehash: 27545026fcf426e024237ff837ce078fed3c4a00
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84544338"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091571"
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>全球化提示和最佳实践 (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]** 仅多维  
@@ -69,7 +68,7 @@ ms.locfileid: "84544338"
   
      在中国台湾地区，更常见的是繁体中文，建议使用的是基于笔画数的排序方式：Chinese_Taiwan_Stroke（用于 SQL Server 2000）、Chinese_Taiwan_Stroke_90（用于 SQL Server 2005）或 Chinese_Traditional_Stroke_Count_100（用于 SQL Server 2008 和更高版本）。  
   
-     其他区域（如中国香港和中国澳门）也使用繁体中文。 在中国香港，就排序规则而言，Chinese_Hong_Kong_Stroke_90（在 SQL Server 2005 上）的使用较为常见。 在澳门特别行政区，Chinese_Traditional_Stroke_Count_100 （SQL Server 2008 及更高版本）的使用非常频繁。  
+     其他区域（如中国香港特别行政区和澳门特别行政区）也使用繁体中文。 在中国香港，就排序规则而言，Chinese_Hong_Kong_Stroke_90（在 SQL Server 2005 上）的使用较为常见。 在澳门特别行政区，Chinese_Traditional_Stroke_Count_100 （SQL Server 2008 及更高版本）的使用非常频繁。  
   
 -   对于日语，最常使用的排序规则是 Japanese_CI_AS。 Japanese_XJIS_100 用于支持 [JIS2004](http://en.wikipedia.org/wiki/JIS_X_0213)的安装。 Japanese_BIN2 的使用通常见于数据迁移项目，用于由非 Windows 平台或数据源而非 SQL Server 关系数据引擎发出的数据。  
   
@@ -159,7 +158,5 @@ ms.locfileid: "84544338"
     ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Analysis Services Multidimensional 的全球化方案](globalization-scenarios-for-analysis-services-multiidimensional.md)   
+ [Analysis Services 多维的全球化方案](globalization-scenarios-for-analysis-services-multiidimensional.md)   
  [编写国际化 Transact-SQL 语句](../relational-databases/collations/write-international-transact-sql-statements.md)  
-  
-  

@@ -19,15 +19,14 @@ helpviewer_keywords:
 ms.assetid: e32fac49-5161-47c0-8540-af3fe730c00c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3f3b22b1889380be3aeeacc70877987f080ac766
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: 6d583ec570c7532fbafc354d4d5c70016a8cebd1
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830461"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053046"
 ---
 # <a name="sysdm_resource_governor_external_resource_pool_affinity-transact-sql"></a>sys. dm_resource_governor_external_resource_pool_affinity （Transact-sql）
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 **适用于：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)][!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]和 [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 返回有关当前外部资源池配置的 CPU 关联信息。
@@ -38,7 +37,7 @@ ms.locfileid: "82830461"
 |processor_group|**smallint**|Windows 逻辑处理器组的 ID。 不可为 null。|
 |cpu_mask|**bigint**|表示与此池关联的 Cpu 的二进制掩码。 不可为 null。|
   
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 使用关联的创建的池 `AUTO` 不会出现在此视图中，因为它们没有关联。 有关详细信息，请参阅[CREATE EXTERNAL RESOURCE pool &#40;transact-sql&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md)和[ALTER external Resource pool &#40;transact-sql&#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)语句。
 
@@ -46,7 +45,7 @@ ms.locfileid: "82830461"
 
 需要 `VIEW SERVER STATE` 权限。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [SQL Server 中机器学习的资源调控](../../machine-learning/administration/resource-governor.md)
 
