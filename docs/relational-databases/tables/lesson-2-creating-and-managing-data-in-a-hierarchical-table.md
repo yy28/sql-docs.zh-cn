@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 95f55cff-4abb-4c08-97b3-e3ae5e8b24e2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 657dedcf4944a2540d1237b53fa8ea822c31ae3f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b54f60e71344bc04271378fbd84214b31bd9503c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68031641"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85692497"
 ---
 # <a name="lesson-2-create-and-manage-data-in-a-hierarchical-table"></a>第 2 课：创建和管理层次结构表中的数据
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 在第 1 课中，你修改了一个现有表以使用 **hierarchyid** 数据类型，并采用现有数据的表示形式填充 **hierarchyid** 列。 在本课程中，您将由新表开始，使用分层方法插入数据。 然后，您将使用分层方法查询和操作数据。 
 
 ## <a name="prerequisites"></a>必备条件  
@@ -289,7 +289,7 @@ AdventureWorks2017 有 8 名在市场营销部门工作的雇员。 雇员的层
    
   
 ## <a name="reorder-data-in-a-hierarchical-table-using-hierarchical-methods"></a>使用分层方法对层次结构表中的数据重新排序
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 重新组织层次结构是一项常见的维护任务。 在此任务中，使用包含 [GetReparentedValue](../../t-sql/data-types/getreparentedvalue-database-engine.md) 方法的 UPDATE 语句首先将一行移到层次结构的新位置。 然后，我们会将整个子树移到一个新位置。  
   
 `GetReparentedValue` 方法使用两个参数。 第一个参数用于描述要修改的层次结构部分。 例如，如果层次结构为 **/1/4/2/3/** ，希望更改 **/1/4/** 部分，将层次结构变为 **/2/1/2/3/** ，后两个节点 (**2/3/** ) 保持不变，则必须提供要更改的节点 ( **/1/4/** ) 作为第一个参数。 第二个参数提供新的层次结构级别，在示例中为 **/2/1/** 。 这两个参数无须包含相同的级别数。  

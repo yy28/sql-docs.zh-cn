@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 08b0b5fe-298a-483f-b50a-73919a2513ce
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 9fb1de6376895c6c35bbbb7ec957837ae166250f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 07e448a8d63b7047ecafe19aa6f7adfbb535338d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67903545"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85693810"
 ---
 # <a name="audit-backup-and-restore-event-class"></a>审核备份和还原事件类
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   每当发出备份或还原命令时，都会发生 **Audit Backup/Restore** 事件类。  
   
 ## <a name="audit-backuprestore-event-class-data-columns"></a>Audit Backup/Restore 事件类的数据列  
