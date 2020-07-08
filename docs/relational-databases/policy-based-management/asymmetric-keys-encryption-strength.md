@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 235ff2ab-1c5a-45c7-a91b-9db69b958b60
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3c8baf2b846e33d7df51dfef3e24ee2b6028babb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 82c217eb64c0471b1d4261880a0dc61b1a18995d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68109924"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85655123"
 ---
 # <a name="asymmetric-keys-encryption-strength"></a>非对称密钥加密强度
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   此规则检查非对称密钥是否是使用 1024 位或更强的加密创建的。  
   
 ## <a name="best-practices-recommendations"></a>最佳做法建议  

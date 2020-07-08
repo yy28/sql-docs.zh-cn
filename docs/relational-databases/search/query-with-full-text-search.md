@@ -17,15 +17,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9fbc89d21deb7fab0662623634fb965a2f88640f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 59e3c8713aac6648d7419e405d424b8b4080030a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68053571"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629251"
 ---
 # <a name="query-with-full-text-search"></a>使用全文搜索查询
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 结合 SELECT 语句使用谓词 CONTAINS 和 FREETEXT 以及行集值函数 CONTAINSTABLE 和 FREETEXTTABLE 编写全文查询      。 本文提供每个谓词和函数的示例，并帮助用户选择要使用的最佳谓词和函数。
 
 -   要匹配单词和短语，可使用 CONTAINS 和 CONTAINSTABLE   。
@@ -33,10 +33,10 @@ ms.locfileid: "68053571"
 
 ## <a name="examples-of-each-predicate-and-function"></a><a name="examples_simple"></a>每个谓词和函数的示例
 
-以下示例使用 AdventureWorks 示例数据库。 有关 AdventureWorks 的最终版本，请参阅[适用于 SQL Server 2016 CTP3 的 AdventureWorks 数据库和脚本](https://www.microsoft.com/download/details.aspx?id=49502)。 要运行示例查询，还需要设置全文搜索。 有关详细信息，请参阅[全文搜索入门](get-started-with-full-text-search.md)。 
+以下示例使用 AdventureWorks 示例数据库。 有关 AdventureWorks 的最终版本，请参阅[适用于 SQL Server 2016 CTP3 的 AdventureWorks 数据库和脚本](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks)。 要运行示例查询，还需要设置全文搜索。 有关详细信息，请参阅[全文搜索入门](get-started-with-full-text-search.md)。 
 
 ### <a name="example---contains"></a>示例 - CONTAINS  
-下面的示例查找包含 `"Mountain"` 一词且价格为 `$80.99` 的所有产品：
+下面的示例查找包含 `$80.99` 一词且价格为 `"Mountain"` 的所有产品：
   
 ```sql
 USE AdventureWorks2012  
@@ -175,7 +175,7 @@ GO
 ## <a name="specific-types-of-searches"></a><a name="examples_specific"></a>特定搜索类型
 
 ###  <a name="search-for-a-specific-word-or-phrase-simple-term"></a><a name="Simple_Term"></a>搜索特定的单词或短语（简单词）  
- 可以使用 [CONTAINS](../../t-sql/queries/contains-transact-sql.md)、[CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)、[FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 或 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 在表中搜索特定单词或短语。 例如，如果要在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的“ProductReview”表中进行搜索，以查找关于某种产品的包含“learning curve”短语的所有注释，可以使用 CONTAINS 谓词，如下所示：  
+ 可以使用 [CONTAINS](../../t-sql/queries/contains-transact-sql.md)、[CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)、[FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 或 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 在表中搜索特定单词或短语。 例如，如果要在  **数据库的“ProductReview”** [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]表中进行搜索，以查找关于某种产品的包含“learning curve”短语的所有注释，可以使用 CONTAINS 谓词，如下所示：  
   
 ```sql
 USE AdventureWorks2012  
@@ -227,7 +227,7 @@ GO
 ###  <a name="search-for-inflectional-forms-of-a-specific-word-generation-term"></a><a name="Inflectional_Generation_Term"></a>搜索特定单词的变形（派生词）  
 可以使用 [CONTAINS](../../t-sql/queries/contains-transact-sql.md)、 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)、 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)或 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 搜索动词的所有不同时态和语态形式或搜索名词的单数和复数形式（变形搜索）或者搜索特定词的同义词形式（同义词库搜索）。  
   
-以下示例在 `AdventureWorks` 数据库的 `ProductReview` 表的 `Comments` 列搜索“foot”的任意变形（“foot”、“feet”等）： 
+以下示例在 `Comments` 数据库的 `ProductReview` 表的 `AdventureWorks` 列搜索“foot”的任意变形（“foot”、“feet”等）： 
   
 ```sql  
 USE AdventureWorks2012  

@@ -21,15 +21,15 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 393b6e248962fa496dcdac9fe5def556b766a2bd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8ae5dbc9652ed690edc6964db38cc8e0d5536625
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056264"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629532"
 ---
 # <a name="configure--manage-word-breakers--stemmers-for-search-sql-server"></a>配置和管理断字符和词干分析器以便搜索 (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 断字符和词干分析器用于对所有全文索引数据执行语言分析。 语言分析执行下述两项操作：
 
 -   **查找词边界（断字）** 。 “断字符”  根据语言的词法规则确定词的边界位置，从而标识各个词。 每个词（也称为标记  ）使用压缩表示形式插入全文索引以减少其大小。

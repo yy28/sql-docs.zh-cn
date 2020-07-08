@@ -17,15 +17,15 @@ ms.assetid: 1f499277-7f12-42ba-8cf4-52b683434944
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 91e4ceeba2e8ec18569c22a886623977402e478a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 63d70982c38a84b4765331c4a978cc276fe749ac
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76284003"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85653546"
 ---
 # <a name="distributor-information-publications"></a>分发服务器信息，发布
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   **“发布”** 选项卡提供左窗格中所选分发服务器的所有发布的摘要信息。  
   
 显示的有关分发服务器支持的发布信息包括一个列，该列包含发布服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 否则，发布信息与您在复制监视器的发布服务器视图中查看发布时提供的发布信息相同。 有关 **“发布”** 选项卡中的列的详细信息，请参阅 [Publisher Information, Publications](../../relational-databases/replication/publisher-information-publications.md)。  

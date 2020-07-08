@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - DATETIME2FROMPARTS function
 ms.assetid: 632b757d-d2d1-43a5-b870-792a779ae204
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 400de28e3191b953c1f44dfdf0777678f031e140
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5d0ac01a61b82ff48c52709be22a97253435a2c5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68119128"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85631911"
 ---
 # <a name="datetime2fromparts-transact-sql"></a>DATETIME2FROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -61,15 +61,15 @@ fractions
 指定秒的小数形式值的整数表达式。
   
 *精度*  
-整数表达式，用于指定 `DATETIME2FROMPARTS` 将返回的 datetime2 值的精度。
+整数表达式，用于指定  **将返回的 datetime2 值的精度**`DATETIME2FROMPARTS`。
   
 ## <a name="return-types"></a>返回类型
 datetime2( precision )   
   
 ## <a name="remarks"></a>备注  
-`DATETIME2FROMPARTS` 返回完全初始化的 datetime2 值  。 如果至少有一个必需参数具有无效值，`DATETIME2FROMPARTS` 将引发错误。 如果至少有一个必需参数具有 NULL 值，则 `DATETIME2FROMPARTS` 返回 NULL。 但是，如果 precision 参数具有 NULL 值，`DATETIME2FROMPARTS` 将引发错误。
+`DATETIME2FROMPARTS` 返回完全初始化的 datetime2 值  。 如果至少有一个必需参数具有无效值，`DATETIME2FROMPARTS` 将引发错误。 如果至少有一个必需参数具有 NULL 值，则 `DATETIME2FROMPARTS` 返回 NULL。 但是，如果 precision 参数具有 NULL 值， *将引发错误*`DATETIME2FROMPARTS`。
 
-fractions 参数取决于 precision 参数   。 例如，如果 precision 值为 7，则每个分数表示 100 纳秒；如果 precision 为 3，则每个分数表示 1 毫秒   。 如果 precision 的值为零，则 fractions 的值也必须为零；否则 `DATETIME2FROMPARTS` 将引发错误 。
+fractions 参数取决于 precision 参数   。 例如，如果 precision 值为 7，则每个分数表示 100 纳秒；如果 precision 为 3，则每个分数表示 1 毫秒   。 如果 precision 的值为零，则 fractions 的值也必须为零；否则  *将引发错误*  `DATETIME2FROMPARTS`。
   
 此函数支持在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 及更高版本的服务器上远程执行。 但不支持在版本低于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的服务器上远程执行。
   

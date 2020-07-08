@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 85ec53ed-d887-4d95-a028-08cb502a3356
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: dee3b6791d9cceef22c6ee105632ad023daead02
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: aac655288c15e0edc906f90a82f34f8dd7151ec1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76124993"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85654403"
 ---
 # <a name="device-not-ready-error"></a>设备未就绪错误
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   此规则检查系统事件日志中是否存在 EventId 15。 此错误可能是由 SCSI 主机适配器配置问题或相关问题引起的。  
   
 ## <a name="best-practices-recommendations"></a>最佳做法建议  

@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 9fba1139-82cb-4244-a41f-4337a7d0c132
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 81481c540d1d9beee820e30120dfffba8a9cfe0f
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: a115a1135ab0b7ded6bdde57e50ce1be190953b9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486786"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85655876"
 ---
 # <a name="columnstore-index-recommendations-in-database-engine-tuning-advisor-dta"></a>数据引擎优化顾问 (DTA) 中的列存储索引建议
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
  
   数据仓库和分析工作负荷可以充分利用[列存储索引](../../t-sql/statements/create-columnstore-index-transact-sql.md)和传统的行存储索引。 选择为数据库生成哪种行存储和列存储索引取决于应用程序的工作负荷。 在 SQL Server 2016 中，[数据库引擎优化顾问 (DTA)](../../relational-databases/performance/database-engine-tuning-advisor.md)可以分析工作负荷，并建议要在数据库上生成的适当的行存储和列存储索引组合。 

@@ -10,15 +10,15 @@ ms.assetid: 95e4c5fd-e16f-446e-b42b-105495a8f39a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d77321058cbe0a45bfa9ab168cf92ed9b1c3e8ca
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b8bab0dc383ba6d427656cddf14b0ab253d6b313
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67897596"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85630028"
 ---
 # <a name="audit-fulltext-event-class"></a>审核全文事件类
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   当 **连接到全文筛选器后台程序进程并与之通信时，会出现** Audit Fulltext [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件类。  
   
 ## <a name="audit-fulltext-event-class-data-columns"></a>审核全文事件类 - 数据列  

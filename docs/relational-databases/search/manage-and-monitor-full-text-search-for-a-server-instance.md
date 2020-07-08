@@ -14,15 +14,15 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 72b34355a11e87540bc8a298d0144988cdbeb17c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e638dfe871d2ba4582228c097291d7f118fa47d0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056183"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629456"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>管理和监视服务器实例的全文搜索
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   针对服务器实例的全文管理包括：  
   
 -   诸如管理 FDHOST Launcher 服务 (MSSQLFDLauncher)、重新启动筛选器后台程序宿主进程（如果您更改服务帐户凭据）、配置服务器范围内的全文属性以及备份全文目录之类的系统管理任务。 例如，在服务器级，您可以指定在整体上与服务器实例的默认语言不同的默认全文语言。  

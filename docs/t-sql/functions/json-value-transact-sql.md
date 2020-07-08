@@ -1,10 +1,8 @@
 ---
 title: JSON_VALUE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/21/2019
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.reviewer: genemi
 ms.technology: t-sql
 ms.topic: language-reference
 f1_keywords:
@@ -17,13 +15,14 @@ helpviewer_keywords:
 ms.assetid: cd016e14-11eb-4eaf-bf05-c7cfcc820a10
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 262830dfa4bf32dfb49638b3f0d730ea8aeadde5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f4cd163d4ccbb622deb4278d4f0f0b2490d404e8
+ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77037003"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84423063"
 ---
 # <a name="json_value-transact-sql"></a>JSON_VALUE (Transact-SQL)
 
@@ -31,13 +30,13 @@ ms.locfileid: "77037003"
 
  从 JSON 字符串中提取标量值。  
   
- 若要从 JSON 字符串而不是标量值中提取对象或数组，请参阅 [JSON_QUERY (Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md)。 有关 JSON_VALUE 和 JSON_QUERY 之间差异的信息，请参阅[比较 JSON_VALUE 和 JSON_QUERY](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md#JSONCompare) 。  
+ 若要从 JSON 字符串而不是标量值中提取对象或数组，请参阅 [JSON_QUERY (Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md)。 有关 JSON_VALUE 和 JSON_QUERY 之间差异的信息，请参阅[比较 JSON_VALUE 和 JSON_QUERY](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md#JSONCompare)   。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
-```
+```syntaxsql
 JSON_VALUE ( expression , path )  
 ```  
   
@@ -106,7 +105,7 @@ SET @jsonInfo=N'{
 ## <a name="examples"></a>示例  
   
 ### <a name="example-1"></a>示例 1
- 以下示例在查询结果中使用 JSON 属性 `town` 和 `state` 的值。 由于 JSON_VALUE 保留了源的排序规则，因此结果的排序顺序取决于 `jsonInfo` 列的排序规则。 
+ 以下示例在查询结果中使用 JSON 属性 `town` 和 `state` 的值。 由于 JSON_VALUE 保留了源的排序规则，因此结果的排序顺序取决于 `jsonInfo` 列的排序规则  。 
 
 > [!NOTE]
 > （此示例假定名为 `Person.Person` 的表包含 JSON 文本的 `jsonInfo` 列，且此列具有先前宽松模式和严格模式讨论中所示的结构。 在 AdventureWorks 示例数据库中，`Person` 表实际上不包含 `jsonInfo` 列。）
@@ -122,7 +121,7 @@ ORDER BY JSON_VALUE(jsonInfo,'$.info.address[0].town')
 ### <a name="example-2"></a>示例 2
  下面的示例将 JSON 属性 `town` 的值提取到本地变量。  
   
-```sql  
+```sql
 DECLARE @jsonInfo NVARCHAR(MAX)
 DECLARE @town NVARCHAR(32)
 

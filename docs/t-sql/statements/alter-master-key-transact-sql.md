@@ -1,6 +1,6 @@
 ---
 title: ALTER MASTER KEY (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+ms.custom: fasttrack-edit
 ms.date: 02/21/2019
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
@@ -27,12 +27,12 @@ ms.assetid: 8ac501c3-4280-4d5b-b58a-1524fa715b50
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e2f8c5534e58299f17f89543668404e7ea8507bf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d5a7600f9657a11a25732aa9527bd6a775234eda
+ms.sourcegitcommit: f66804e93cf4a7624bfa10168edbf1ed9a83cb86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68071288"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83868406"
 ---
 # <a name="alter-master-key-transact-sql"></a>ALTER MASTER KEY (Transact-SQL)
 
@@ -44,7 +44,7 @@ ms.locfileid: "68071288"
 
 ## <a name="syntax"></a>语法
 
-```
+```syntaxsql
 -- Syntax for SQL Server
 
 ALTER MASTER KEY <alter_option>
@@ -61,7 +61,7 @@ ALTER MASTER KEY <alter_option>
     DROP ENCRYPTION BY { SERVICE MASTER KEY | PASSWORD = 'password' }
 ```
 
-```
+```syntaxsql
 -- Syntax for Azure SQL Database
 -- Note: DROP ENCRYPTION BY SERVICE MASTER KEY is not supported on Azure SQL Database.
 
@@ -79,7 +79,7 @@ ALTER MASTER KEY <alter_option>
     DROP ENCRYPTION BY { PASSWORD = 'password' }
 ```
 
-```
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Analytics Platform System
 
 ALTER MASTER KEY <alter_option>
@@ -88,7 +88,9 @@ ALTER MASTER KEY <alter_option>
     <regenerate_option> | <encryption_option>
 
 <regenerate_option> ::=
-    [ FORCE ] REGENERATE WITH ENCRYPTION BY PASSWORD ='password'<encryption_option> ::=
+    [ FORCE ] REGENERATE WITH ENCRYPTION BY PASSWORD ='password'
+
+<encryption_option> ::=
     ADD ENCRYPTION BY SERVICE MASTER KEY
     |
     DROP ENCRYPTION BY SERVICE MASTER KEY
@@ -96,7 +98,7 @@ ALTER MASTER KEY <alter_option>
 
 ## <a name="arguments"></a>参数
 
-PASSWORD ='*password*' 指定用于加密或解密数据库主密钥的密码。 password 必须符合运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的 Windows 密码策略要求。
+PASSWORD ='*password*' 指定用于加密或解密数据库主密钥的密码。 password 必须符合运行  *实例的计算机的 Windows 密码策略要求*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
 
 ## <a name="remarks"></a>备注
 

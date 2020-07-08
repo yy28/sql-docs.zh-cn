@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: edd0d17a-0e9c-4c28-8395-a7d47e8ce3d6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b001e9e53c30ba57b2a56b0bd57571668ae2770c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 66e0df2599b8ada5f1c7dc3018e8021e2ee03df7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321774"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85654043"
 ---
 # <a name="debug-a-business-logic-handler-replication-programming"></a>调试业务逻辑处理程序（复制编程）
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   在同步合并订阅时，可以使用业务逻辑处理程序调用自定义业务逻辑。 有关详细信息，请参阅[合并同步期间执行业务逻辑](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)。  
   
  合并复制协调器 (replrec.dll) 调用包含业务逻辑的托管代码程序集。 在大多数情况下，replrec.dll 和自定义业务逻辑是在运行合并代理的计算机上执行的（对于请求订阅，在订阅服务器上执行；对于推送订阅，在分发服务器上执行）。 在 Web 同步或 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 订阅服务器的情况下，协调器和自定义业务逻辑在 Web 服务器上执行。  

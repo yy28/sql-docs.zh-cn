@@ -12,15 +12,15 @@ ms.assetid: 28a76c12-e997-48bb-bb0e-9624237a188e
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b23b9f20814c5cd00aa977223e9a5a4e6d3b5924
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: edc8aec7c4027fb55ace2fc8256d8f2b3439c2f1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67903594"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85635560"
 ---
 # <a name="audit-app-role-change-password-event-class"></a>Audit App Role Change Password 事件类
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   每当更改了应用程序角色的密码时，都会发生 **Audit App Role Change Password** 事件类。  
   
 ## <a name="audit-app-role-change-password-event-class-data-columns"></a>Audit App Role Change Password 事件类的数据列  

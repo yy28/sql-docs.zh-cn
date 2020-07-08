@@ -16,15 +16,15 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c8e23b3f5f291d120a099cae7f3e3e057db8da95
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 42898b255427c5f3d870a21e17e2cdeb17039919
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73595782"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85627318"
 ---
 # <a name="migrate-data-to-or-from-columns-using-always-encrypted-with-sql-server-import-and-export-wizard"></a>通过 SQL Server 导入和导出向导在使用 Always Encrypted 的列之间迁移数据 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 [SQL Server 导入和导出向导](../../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)是一种使你可以将数据从源复制到目标的工具。 本文档介绍在源和/或目标是包含使用 [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) 保护的列的 SQL Server 数据库时，如何使用 SQL Server 导入和导出向导。
 
