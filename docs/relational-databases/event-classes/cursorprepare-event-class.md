@@ -12,15 +12,15 @@ ms.assetid: 990e50fb-b3ee-4366-8613-2c40d4a456f7
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 19a307d6701a49f8041e07d21884215dc2b827d8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f4ee0bf31c737a1910f0606e54a6d0d42440fd99
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68093715"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719881"
 ---
 # <a name="cursorprepare-event-class"></a>CursorPrepare 事件类
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **CursorPrepare** 事件类描述了应用程序编程接口 (API) 游标中发生的游标准备事件。 当 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将与游标关联的 SELECT 语句编译到执行计划中但不创建该游标时，就会发生游标准备事件。  
   
  **CursorPrepare** 事件类包括在记录游标性能的跟踪中。 当跟踪中包括 **CursorPrepare** 事件类时，所造成的开销数量取决于跟踪期间对数据库使用游标的频率。 如果广泛使用游标，则跟踪可能会显著地降低性能。  

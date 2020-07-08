@@ -11,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 17a81fcd-8dbd-458d-a9c7-2b5209062f45
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a371ac7f8cad6f90f83c7408b315fa35d571d1f3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1fd961b275f6b392e9284312675c873f16fecd27
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82179033"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718063"
 ---
 # <a name="file-snapshot-backups-for-database-files-in-azure"></a>Azure 中数据库文件的文件快照备份
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文件快照备份使用 Azure 快照提供近乎即时的备份，并且更快速地还原使用 Azure Blob 存储服务存储的数据库文件。 使用此功能可简化备份和还原策略。 有关实时演示，请参阅 [时间点还原的演示](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo)。 有关使用 Azure Blob 存储服务存储数据库文件的详细信息，请参阅 [Microsoft Azure 中的 SQL Server 数据文件](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)。  
   
  ![快照备份体系结构图](../../relational-databases/backup-restore/media/snapshotbackups.PNG "快照备份体系结构图")  

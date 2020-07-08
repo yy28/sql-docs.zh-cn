@@ -12,15 +12,15 @@ ms.assetid: ab351c50-eed4-493a-87ed-89ec10933477
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cb9f3a891fa81345d7ae9d167419a02356a035af
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 39da2d65e56199a78204bb5ab1cc95e07c4a7014
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68093684"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719864"
 ---
 # <a name="cursorrecompile-event-class"></a>CursorRecompile 事件类
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **CursorRecompile** 事件类描述了应用程序编程接口 (API) 游标中发生的游标重新编译事件。 游标重新编译事件将在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 由于架构更改而重新编译 Transact-SQL 游标时发生。  
   
  也包括记录游标性能的跟踪中的 **CursorRecompile** 事件类。 如果跟踪包括 **CursorRecompile** 事件类，则引起的开销量将取决于跟踪过程中游标针对数据库的使用频率。 如果广泛使用游标，则跟踪可能会显著地降低性能。  

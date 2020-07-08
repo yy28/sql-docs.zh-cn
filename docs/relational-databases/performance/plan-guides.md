@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f6b2bd
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 595ef410a631da1eb1d71e7b2d20c75fd09e4bb2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8012115ff5f5a7fbd85de36b6263ea4380b44ccc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68113483"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722238"
 ---
 # <a name="plan-guides"></a>计划指南
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   如果您无法或不希望直接在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中更改实际查询文本，则可以使用计划指南来优化查询性能。 计划指南通过将查询提示或固定的查询计划附加到查询来影响查询的优化。 当第三方供应商提供的数据库应用程序中的一个小的查询子集没有按预期执行时，计划指南将很有用。 在计划指南中，您需要指定要优化的 Transact-SQL 语句以及包含要使用的查询提示的 OPTION 子句或要用于优化查询的特定查询计划。 当执行查询时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将 Transact-SQL 语句与计划指南进行匹配，然后在运行时将此 OPTION 子句附加到查询，或使用指定的查询计划。  
   
  可创建的计划指南总数仅受可用系统资源的限制。 尽管如此，计划指南还是应当限于针对提高或稳定性能的关键查询。 计划指南不应用来影响已部署应用程序的大部分查询负荷。  

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 641bd224-fcde-4ad4-9518-369cbeb398e4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ca0a64c6e7c9859ccb3f6d8697fb123134c3f31f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1cdacdc6209af2f1763f27bfc28419279e1d5a58
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321964"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722034"
 ---
 # <a name="microsoft-replication-conflict-viewer-and-interactive-resolver"></a>Microsoft 复制冲突查看器和交互式冲突解决程序
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   本节包含有关复制冲突查看器（用于合并复制及事务复制）以及交互式冲突解决程序（用于合并复制）的信息：  
   
 -   [Microsoft 复制冲突查看器（合并复制）](../../relational-databases/replication/microsoft-replication-conflict-viewer-merge-replication.md)  

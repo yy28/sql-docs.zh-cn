@@ -40,15 +40,15 @@ helpviewer_keywords:
 ms.assetid: 57d65d16-90d1-4b4c-b68e-6418a7064e76
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bba300b88a8028bee1793247a80d93fd4c6fe691
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b4585af3758327ea21834918a89142d8101b8745
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68020122"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85721225"
 ---
 # <a name="new-publication-wizard"></a>New Publication Wizard
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   本节介绍新建发布向导中的以下页的相关信息：  
   
 -   [Oracle 发布服务器](../../relational-databases/replication/oracle-publisher.md)  

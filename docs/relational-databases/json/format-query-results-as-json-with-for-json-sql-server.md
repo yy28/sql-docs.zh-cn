@@ -1,8 +1,7 @@
 ---
 title: 借助 FOR JSON 将查询结果的格式设置为 JSON
-ms.date: 06/06/2019
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: genemi
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,18 +11,19 @@ helpviewer_keywords:
 ms.assetid: 15b56365-58c2-496c-9d4b-aa2600eab09a
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 43e9b416885a5cbd1239b0694ffc3613b7509186
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4e9aee7c2c8de20c50c101e3573e4d3d9259b661
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74095812"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722272"
 ---
 # <a name="format-query-results-as-json-with-for-json-sql-server"></a>使用 FOR JSON 将查询结果格式化为 JSON (SQL Server)
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 通过将 **FOR JSON** 子句添加到 **SELECT** 语句中，将查询结果格式化为 JSON，或者将 SQL Server 中的数据导出为 JSON。 使用 FOR JSON 子句，通过将 JSON 输出的格式处理从应用委托到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 来简化客户端应用程序。
   
@@ -199,15 +199,14 @@ FOR JSON 子句的输出具有以下特征  ：
 下面是演示 FOR JSON 子句如何格式化 JSON 输出的示例  。  
   
 **查询结果**  
-  
-|||||  
-|-|-|-|-|  
-|**指向**|**B**|**C**|**D**|  
+
+|A|B|C|D|
+|-|-|-|-|
 |10|11|12|X|  
 |20|21|22|Y|  
 |30|31|32|Z|  
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
-  
+
  **JSON 输出**  
   
 ```json  

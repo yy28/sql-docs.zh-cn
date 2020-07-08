@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 4f8a4922-4507-4072-be67-c690528d5c3b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4af90d16e4e81b5d2ee1dc73de78826073d1cbff
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8a88bbccbe0fd1a57455343858f463afe072ed99
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67909465"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722325"
 ---
 # <a name="transaction-log-disk-space-for-index-operations"></a>索引操作的事务日志磁盘空间
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   大规模索引操作可以产生大量数据负载，从而导致事务日志的空间很快被占满。 若要确保索引操作能够回滚，不能在完成索引操作之前截断事务日志，但可以在索引操作期间备份日志。 因此，事务日志必须具有足够的空间，以存储索引操作期间的索引操作事务和任何并发用户事务。 这对脱机索引操作和联机索引操作都适用。 因为在脱机索引操作期间不能访问基础表，所以用户事务可能很少，日志的增长速度不快。 联机索引操作不能防止并发用户活动，因此，大规模联机索引操作与大量的并发用户事务相结合可能会导致事务日志不断增长，而不会提供截断日志的选项。  
   
 ## <a name="recommendations"></a>建议  

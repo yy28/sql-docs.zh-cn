@@ -17,15 +17,15 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: e4c2a2e56f9dab75bfe3873e721ccfca0bd16df3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: add476168eabf5255bb4cbdce59bd763d05faf4e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77705902"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719554"
 ---
 # <a name="query-profiling-infrastructure"></a>查询分析基础结构
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 提供了访问查询执行计划的运行时信息的功能。 出现性能问题时，最重要的操作之一是准确了解正在执行的工作负载以及如何驱动使用资源。 为此，访问[实际执行计划](../../relational-databases/performance/display-an-actual-execution-plan.md)是很重要的。
 

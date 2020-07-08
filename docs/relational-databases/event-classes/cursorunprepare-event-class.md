@@ -12,15 +12,15 @@ ms.assetid: 34055a2f-7d0f-4e13-a62e-7ee5b6c23b86
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 174cd2a4bc07d5de1cd664f715b9442846073502
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4748a1232f22f41f3ed079d90c980d7476f595e8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68092938"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719841"
 ---
 # <a name="cursorunprepare-event-class"></a>CursorUnprepare 事件类
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **CursorUnprepare** 事件类提供了与应用程序编程接口 (API) 游标中发生的游标撤消事件相关的信息。 游标撤消事件在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 放弃执行计划时发生。  
   
  将 **CursorUnprepare** 事件类包括到记录游标性能的跟踪中。 当跟踪中包括 **CursorUnprepare** 事件时，引发的开销量取决于跟踪过程中对数据库使用游标的频率。 如果广泛使用游标，则跟踪将会显著地降低性能。  

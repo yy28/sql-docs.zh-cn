@@ -3,7 +3,6 @@ title: 使用目标为 Azure 的托管备份
 description: 了解如何在数据库和实例级别启用目标为 Microsoft Azure 的 SQL Server 托管备份，以及如何启用通知和监视备份活动。
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
-ms.description: Enable SQL Server managed backup to Azure
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -12,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3e4729b5576b7c3558c99369cc80a68a236f2cf9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 49d427b7e07d46e604bfbc46c06022414c486c43
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82179151"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718107"
 ---
 # <a name="enable-sql-server-managed-backup-to-azure"></a>启用目标为 Azure 的 SQL Server 托管备份
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   本主题介绍了如何在数据库级别和实例级别使用默认设置启用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 。 还介绍了如何启用电子邮件通知以及如何监视备份活动。  
   
  本教程使用 Azure PowerShell。 教程开始前， [请下载并安装 Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/)。  

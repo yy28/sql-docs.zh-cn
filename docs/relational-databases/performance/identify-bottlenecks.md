@@ -22,15 +22,15 @@ ms.assetid: db079e65-ee80-4105-aec9-f8230d0d6635
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bbabafa1f5b367343f02c3a0bf3e122bc827ce66
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1c55d70a4c3ca15a204b216493395e22b2e59642
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67946755"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718916"
 ---
 # <a name="identify-bottlenecks"></a>识别瓶颈
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   对共享资源同时访问会导致瓶颈。 通常，每一软件系统都不可避免地存在瓶颈。 然而，对共享资源的过多需求将导致响应时间过长，因此必须进行识别和优化。  
   
  导致瓶颈的原因包括：  

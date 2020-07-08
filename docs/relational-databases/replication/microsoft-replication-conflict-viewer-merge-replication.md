@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0707cfc193d4d3e1e11ecb724d2012aee2d315c4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7677421f25f2dcc04a80d7e39182936e40136420
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321954"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722038"
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Microsoft 复制冲突查看器（合并复制）
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   使用复制冲突查看器，可以查看在复制同步过程中发生的所有冲突。 在两个不同的服务器上（例如，在发布服务器和订阅服务器上，或在两个不同的订阅服务器上）同时修改相同的数据时会发生冲突。 使用在创建时选择的冲突解决程序，复制可以自动解决冲突。 不过，使用复制冲突查看器可以在必要时选择不同的冲突解决方法。 可能会发生下列冲突：  
   
 -   更新冲突。 在两个位置更改相同的数据时会发生更新冲突。 一个更改入选，而另一个更改落选。 您可以选择保留现有数据（入选数据），使用与现有数据冲突的数据（落选数据）来覆盖现有数据，或合并入选数据和落选数据并更新现有数据。  

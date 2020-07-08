@@ -19,15 +19,15 @@ ms.assetid: bb95ecaf-444a-4771-a625-e0a91c8f0709
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f05ede948892b7f9ae6a9f9ee24a3b6878586917
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 54b656c95323c8f6cb2a4f5f6d4666555de5e02a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68113380"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719577"
 ---
 # <a name="reduce-the-production-server-tuning-load"></a>减轻生产服务器优化负荷
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问依赖于查询优化器分析工作负荷并提供优化建议。 在生产服务器上执行此分析会增加服务器负荷，并且可能会在优化会话过程中影响服务器的性能。 通过除了使用生产服务器以外，再使用一台测试服务器，可以减小在优化会话过程中对服务器负荷的影响。  
   
 ## <a name="how-database-engine-tuning-advisor-uses-a-test-server"></a>数据库引擎优化顾问如何使用测试服务器  

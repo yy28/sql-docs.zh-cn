@@ -22,15 +22,15 @@ ms.assetid: de7f2c90-8f4f-4cfc-94cc-4933a7fd2bde
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 201dbacf7ce2dde7cb3da387bbfd79070e1790ed
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d2acf936682a9c220d08df637778169e9a5b5840
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68140869"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719903"
 ---
 # <a name="set-a-session-language"></a>设置会话语言
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   根据语言和区域性首选项，可用会话语言设置下列元素在服务器上显示的方式：  
   
 -   用于显示错误和其他系统消息的语言。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可用的所有语言中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持所有系统错误字符串和系统错误消息拥有多个副本。 可以在 [sys.messages](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md) 目录视图中查看这些消息。 安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的本地化版本时，这些系统消息被翻译成所安装的语言版本。 默认情况下，也可以获得这些消息的美国英语集。 此外，可以使用 [sp_addmessage](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)添加特定语言的用户定义消息。  

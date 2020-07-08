@@ -12,15 +12,15 @@ ms.assetid: 63701c20-7886-454a-936f-7aea9d042cf7
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bc3e8cf22c4f90e75556fe44e42b0d3cf1a94d8b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 80cbbaab89417573c8da438176d23955c9fe2279
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68092936"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719854"
 ---
 # <a name="data-file-auto-grow-event-class"></a>Data File Auto Grow 事件类
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **Data File Auto Grow** 事件类指明数据文件已自动增长。 如果使用 ALTER DATABASE 语句显式增长数据文件，则不会触发此事件。  
   
  将 **Data File Auto Grow** 事件类包括在监视数据文件增长的跟踪中。  
