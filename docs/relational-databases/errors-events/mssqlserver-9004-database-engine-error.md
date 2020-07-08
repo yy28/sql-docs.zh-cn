@@ -11,21 +11,20 @@ helpviewer_keywords:
 ms.assetid: b528bb49-340c-4a81-9c8d-cefce6562f16
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9593cfdc08161d3352c59332970aee668a89f4f0
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 1010c56f0279e45096d896582cc17f368a8cd7ec
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81727950"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85636712"
 ---
 # <a name="mssqlserver_9004"></a>MSSQLSERVER_9004
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>详细信息  
   
-|||  
-|-|-|  
+| Attribute | 值 |  
+| :-------- | :---- |  
 |产品名称|SQL Server|  
 |事件 ID|9004|  
 |事件源|MSSQLSERVER|  
@@ -37,9 +36,9 @@ ms.locfileid: "81727950"
 在回滚、恢复或复制期间处理日志时出错。 这可能表明操作系统检测到错误，或者 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 检测到内部一致性错误。  
 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 在读取和处理事务日志内容时对其一致性执行逻辑检查。 对日志标头、日志块和日志记录的检查并不涉及所有方面。 状态编号提供有关故障类型的更多信息：
 
- - 状态 1  ：虚拟日志文件 (VLF) 的日志文件标头已损坏。  在服务启动时，如果在启动数据库期间找到了已损坏的日志文件标头，则在错误日志中只能看到错误 9004。 “日志文件标头”是事务日志中每个 VLF 的第一个部分。 日志文件标头不等同于日志文件的单个文件头，也不是前 8 KB。 如果日志文件的文件头已损坏，你可能会收到消息 5172，类似于数据库文件标头页损坏。
- - 状态 2 和 3  ：在 RESTORE 操作过程中执行恢复时日志块无效。
- - 状态 4 到状态 12  ：在处理日志记录时，这些是对日志块进行的所有检查。 其中包括奇偶校验、扇区和其他对事务日志一致性的逻辑检查
+ - 状态 1：虚拟日志文件 (VLF) 的日志文件标头已损坏。  在服务启动时，如果在启动数据库期间找到了已损坏的日志文件标头，则在错误日志中只能看到错误 9004。 “日志文件标头”是事务日志中每个 VLF 的第一个部分。 日志文件标头不等同于日志文件的单个文件头，也不是前 8 KB。 如果日志文件的文件头已损坏，你可能会收到消息 5172，类似于数据库文件标头页损坏。
+ - 状态 2 和 3：在 RESTORE 操作过程中执行恢复时日志块无效。
+ - 状态 4 到状态 12：在处理日志记录时，这些是对日志块进行的所有检查。 其中包括奇偶校验、扇区和其他对事务日志一致性的逻辑检查
 
 在大多数情况下，此错误仅在错误日志或 Windows 应用程序事件日志中出现，其 EventID = 9004，因为处理日志的操作不是基于直接用户命令的（如在 SQL Server 引擎启动时运行恢复）。 在这些情况下，错误 9004 通常会与错误 3414 同时出现。 但是，某些查询（如 ALTER DATABASE）可能需要处理日志，因此会看到这些错误。 由于错误的严重性为 21，用户会话已断开连接。
 
@@ -49,9 +48,9 @@ ms.locfileid: "81727950"
 ## <a name="user-action"></a>用户操作  
 执行以下操作之一将更正此错误：  
   
--   从备份还原  ：从已知完好的备份还原以解决此问题。 如果数据库或日志备份的日志部分包含损坏的内容，则在还原时可能会遇到错误 9004。 在这种情况下，备份中的事务日志已损坏。
+-   从备份还原：从已知完好的备份还原以解决此问题。 如果数据库或日志备份的日志部分包含损坏的内容，则在还原时可能会遇到错误 9004。 在这种情况下，备份中的事务日志已损坏。
   
--   重新生成日志  ：如果无法从备份还原，可以通过重新生成事务日志使数据库联机。 应仔细了解重建事务日志的后果。 其中包括“数据库中可能出现事务一致性缺失”  。 有关如何重新生成事务日志的更多信息，请参阅[在数据库紧急模式下纠正错误](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md#resolving-errors-in-database-emergency-mode)。
+-   重新生成日志：如果无法从备份还原，可以通过重新生成事务日志使数据库联机。 应仔细了解重建事务日志的后果。 其中包括“数据库中可能出现事务一致性缺失”。 有关如何重新生成事务日志的更多信息，请参阅[在数据库紧急模式下纠正错误](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md#resolving-errors-in-database-emergency-mode)。
   
--   检查日志中是否存在系统问题  ：另外，查看系统事件日志和错误日志，以识别系统内可能导致错误的问题。  
+-   检查日志中是否存在系统问题：另外，查看系统事件日志和错误日志，以识别系统内可能导致错误的问题。  
   

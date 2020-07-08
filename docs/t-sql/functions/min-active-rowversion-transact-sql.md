@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - MIN_ACTIVE_ROWVERSION function [Transact-SQL]
 ms.assetid: 87c89547-8ea1-4820-b75e-36be683e4e10
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 8fcd041edda3e8575e3dfc05615d2e23f6da20fd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7b0e3e12eee099191da6ea0db231c0f2f99f8c48
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68130274"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85681921"
 ---
 # <a name="min_active_rowversion-transact-sql"></a>MIN_ACTIVE_ROWVERSION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   返回当前数据库中最低的活动 **rowversion** 值。 如果 **rowversion** 值用在尚未提交的事务中，则它处于活动状态。 有关详细信息，请参阅 [rowversion (Transact-SQL)](../../t-sql/data-types/rowversion-transact-sql.md)。  
   
@@ -52,7 +52,7 @@ MIN_ACTIVE_ROWVERSION
  MIN_ACTIVE_ROWVERSION 函数不受事务隔离级别中的更改影响。  
   
 ## <a name="examples"></a>示例  
- 下例使用 `MIN_ACTIVE_ROWVERSION` 和 `@@DBTS` 返回 rowversion 值。 请注意，当数据库中没有活动事务时，值会有所不同。  
+ 下例使用 **和** 返回 rowversion 值`MIN_ACTIVE_ROWVERSION``@@DBTS`。 请注意，当数据库中没有活动事务时，值会有所不同。  
   
 ```  
 -- Create a table that has a ROWVERSION column in it.  

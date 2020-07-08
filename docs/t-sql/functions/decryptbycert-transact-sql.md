@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 4950d787-40fa-4e26-bce8-2cb2ceca12fb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9653e799a543dd95a7d6fb033e0a8d5b9a4484a8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d0b4363e41169ccec1da20780cc18ca3c3f57dff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71314535"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85682660"
 ---
 # <a name="decryptbycert-transact-sql"></a>DECRYPTBYCERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 此函数使用证书的私钥解密已加密数据。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "71314535"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
   
 DecryptByCert ( certificate_ID , { 'ciphertext' | @ciphertext }   
     [ , { 'cert_password' | @cert_password } ] )  
@@ -67,7 +67,7 @@ varbinary（最大大小为 8,000 个字节）  。
 `DECRYPTBYCERT` 需要对证书具有 CONTROL 权限。  
   
 ## <a name="examples"></a>示例  
-此示例从 `[AdventureWorks2012].[ProtectedData04]` 选择行，选择范围标记为最初使用证书 `JanainaCert02` 加密的数据。 该示例首先使用证书 `pGFD4bb925DGvbd2439587y` 的密码解密证书 `JanainaCert02` 的私钥。 然后使用此私钥解密已加密文本。 该示例将解密后的数据从 varbinary 转换为 nvarchar   。  
+此示例从 `[AdventureWorks2012].[ProtectedData04]` 选择行，选择范围标记为最初使用证书 `JanainaCert02` 加密的数据。 该示例首先使用证书 `JanainaCert02` 的密码解密证书 `pGFD4bb925DGvbd2439587y` 的私钥。 然后使用此私钥解密已加密文本。 该示例将解密后的数据从 varbinary 转换为 nvarchar   。  
 
 ```  
 SELECT convert(nvarchar(max), DecryptByCert(Cert_Id('JanainaCert02'),  

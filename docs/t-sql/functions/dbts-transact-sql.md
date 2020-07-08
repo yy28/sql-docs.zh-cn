@@ -16,17 +16,17 @@ helpviewer_keywords:
 - '@@DBTS function'
 - timestamp data type
 ms.assetid: 91842ddd-91c0-4445-a03f-116f6bc991d0
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 61743139f35ed3e8a5dd4bbac9bd1f4660cb2ec2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5493589b7a87af2ea856a63e81c3b366eb410d9e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68136031"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85682939"
 ---
 # <a name="x40x40dbts-transact-sql"></a>&#x40;&#x40;DBTS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 此函数返回当前数据库的当前 timestamp 数据类型的值  。 当前数据库将具有确保唯一的时间戳值。
   
@@ -47,7 +47,7 @@ ms.locfileid: "68136031"
 事务隔离级别的更改不会影响 @@DBTS 函数。
   
 ## <a name="examples"></a>示例  
-此示例从 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库返回当前的 timestamp。
+此示例从  **数据库返回当前的 timestamp**[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]。
   
 ```sql
 USE AdventureWorks2012;  

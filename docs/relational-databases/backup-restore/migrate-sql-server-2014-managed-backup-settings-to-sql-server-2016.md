@@ -11,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: ae937ebb-24ff-4a33-be3c-8f85328dfc75
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 47e44701e2e573ab58ba603b8acabb21635697a6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6b5b2a0c1aa13b634d23628ff693e8ef42226df5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180950"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85670766"
 ---
 # <a name="migrate-managed-backup-settings"></a>迁移托管备份设置
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   本主题介绍从 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 升级到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 时 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]的迁移注意事项。  
   
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的过程和基础行为在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]中已更改。 以下部分描述了功能更改及其意义。  

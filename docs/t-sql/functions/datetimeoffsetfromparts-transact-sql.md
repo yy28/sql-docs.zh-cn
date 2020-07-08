@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - DATETIMEOFFSETFROMPARTS function
 ms.assetid: 463da1f4-b4b6-45a3-9a95-ea1f99575542
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 786729a6bfcae37e3c2fb1aa9a9e85839ca9c127
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 21004da03ef694633b28518777c2ed2f0ac59d06
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68119110"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85683353"
 ---
 # <a name="datetimeoffsetfromparts-transact-sql"></a>DATETIMEOFFSETFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -68,7 +68,7 @@ minute_offset
 整数表达式，用于指定时区偏移量的分钟部分。  
   
 *精度*  
-整数文本值，用于指定 `DATETIMEOFFSETFROMPARTS` 要返回的 datetimeoffset 值的精度。  
+整数文本值，用于指定  **要返回的 datetimeoffset**`DATETIMEOFFSETFROMPARTS` 值的精度。  
   
 ## <a name="return-types"></a>返回类型
 datetimeoffset( precision )     
