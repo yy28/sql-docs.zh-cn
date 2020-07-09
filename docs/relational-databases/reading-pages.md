@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: f8da760e-aacb-4661-9f3a-2578d8c11e4e
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: f318dcaf176212414ccd0a82c006fa545a8a846f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 710a9796ae2eb68da9d95c7d9a075bba8b7a7482
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67929795"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726126"
 ---
 # <a name="reading-pages"></a>读取页
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
 SQL Server [!INCLUDE[ssDE](../includes/ssde-md.md)] 实例的 I/O 包括逻辑读取和物理读取。 每次 [!INCLUDE[ssDE](../includes/ssde-md.md)] 从 [缓冲区缓存](../relational-databases/memory-management-architecture-guide.md)请求页时都会发生逻辑读取。 如果页当前不在缓冲区高速缓存中，物理读取将首先将页从磁盘复制到缓存中。
 

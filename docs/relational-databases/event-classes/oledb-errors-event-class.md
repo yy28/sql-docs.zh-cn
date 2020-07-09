@@ -12,15 +12,15 @@ ms.assetid: 0ce1e906-5d92-42f2-ab38-8771ad5ca008
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9bd355a313b3f25424c2c392d13a5d0cdb15287f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 64df0d85fb8e4bb9e3ea54c7d8613a1a39ac3406
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115843"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726240"
 ---
 # <a name="oledb-errors-event-class"></a>OLEDB Errors 事件类
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   当对 OLE DB 提供程序的调用返回错误时，[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中将发生 OLEDB Errors 事件类。 请在跟踪中包括此事件类，以便查看 OLE DB 访问接口中失败的 HRESULT。  
   
  当跟踪中包含 OLEDB Errors 事件类时，开销量取决于跟踪过程中 OLE DB 访问接口针对数据库发生错误的频率。 如果此类错误频繁发生，跟踪的性能可能会显著降低。  

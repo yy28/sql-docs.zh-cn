@@ -13,15 +13,15 @@ ms.assetid: bdd7c71d-1c59-4044-bfe8-c85f908345bb
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 3f6fc6a82b0559282bf2ae714213bb8434c07bd0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 75b874fe2ded7f6baacdd65dddfd8ea3d371ba7a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286884"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726107"
 ---
 # <a name="add-or-edit-filter"></a>添加或编辑筛选器
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   使用 **“添加筛选器”** 和 **“编辑筛选器”** 对话框，可以添加和编辑静态行筛选器和参数化行筛选器。  
   
 > [!NOTE]  

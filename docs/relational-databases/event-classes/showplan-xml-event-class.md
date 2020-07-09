@@ -12,15 +12,15 @@ ms.assetid: 8e22de84-8890-414a-93e4-aebfaa057d7f
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 67e40d00fa989d3e2a8779b1b25c14476da89215
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0744a0988ff3026d307e7606bb29b20b12460a2b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67911035"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726143"
 ---
 # <a name="showplan-xml-event-class"></a>Showplan XML 事件类
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   当 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行 SQL 语句时，会发生 Showplan XML 事件类。 包括 Showplan XML 事件类以标识 Showplan 运算符。 此事件类将每个事件存储为定义完善的 XML 文档。  
   
  当跟踪中包含 Showplan XML 事件类时，其开销将明显影响性能。 查询优化后，Showplan XML 将存储查询计划。 若要将引起的开销降到最低，请将此事件类的使用范围限制在监视主要时段内的特定问题的跟踪中。  

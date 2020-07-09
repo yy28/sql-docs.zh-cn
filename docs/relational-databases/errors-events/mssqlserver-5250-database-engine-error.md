@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: f4a1d0e8-f27f-4cb8-a25d-040b40555dcc
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 27f8965d0244a532b9afeae44b43df6081aac64b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9cbf321c6151dbd55bfc27079a230bc6f05df9e1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68053618"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716991"
 ---
 # <a name="mssqlserver_5250"></a>MSSQLSERVER_5250
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>详细信息  
   
-|||  
-|-|-|  
+| Attribute | 值 |  
+| :-------- | :---- |  
 |产品名称|SQL Server|  
 |事件 ID|5250|  
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC4_CRITICAL_DATABASE_PAGE_CORRUPT|  
-|消息正文|数据库错误：数据库 'NAME'（数据库 ID DB_ID）的 PAGE_TYPE 页 P_ID 无效。 无法修复此错误。 您必须通过备份还原。|  
+|消息正文|数据库错误:数据库 NAME（数据库 ID DB_ID）的 PAGE_TYPE 页 P_ID 无效。 无法修复此错误。 您必须通过备份还原。|  
   
 ## <a name="explanation"></a>说明  
 指定数据库中的文件头页或引导页已损坏。  

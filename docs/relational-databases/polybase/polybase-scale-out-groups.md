@@ -14,12 +14,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 65e9ae2e44816ca761594acd3e2e907d7bd938a3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7ea789049116c79e3242a5d1fed1f1fb8f020d1f
+ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80217086"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84818229"
 ---
 # <a name="polybase-scale-out-groups"></a>PolyBase 横向扩展组
 
@@ -58,10 +58,6 @@ PolyBase 引擎是 PolyBase 查询背后的关键组件。 它对外部数据查
   
 PolyBase 数据移动服务接收来自 PolyBase 引擎的指令，并在 HDFS 和 SQL Server 之间以及头节点和计算节点上的 SQL Server 实例之间传输数据。
   
-## <a name="editions-availability"></a>版本可用性  
-
-在设置 SQL Server 后，可以将该实例指定为头节点或计算节点。 选择结果取决于运行 PolyBase 的 SQL Server 的版本。 在 Enterprise Edition 安装中，可将该实例指定为头节点或计算节点。 在 Standard Edition 中，只能将该实例指定为计算节点。
-
 ## <a name="next-steps"></a>后续步骤
 
 若要配置 PolyBase 横向扩展组，请参阅以下指南：

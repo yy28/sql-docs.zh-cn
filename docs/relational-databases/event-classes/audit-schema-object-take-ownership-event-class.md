@@ -12,15 +12,15 @@ ms.assetid: 66f39d9b-9ec2-48a7-8a9e-1b42931299c9
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 659d5fd6856c495288daa35d74e8a3b365026f10
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f2c5c1c2b55fbfdcd314d83f5ee0eda500cae4bc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67913515"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726285"
 ---
 # <a name="audit-schema-object-take-ownership-event-class"></a>Audit Schema Object Take Ownership 事件类
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   检查更改架构对象（例如表、过程或函数）的所有者的权限时会发生 **Audit Schema Object Take Ownership** 事件类。 使用 ALTER AUTHORIZATION 语句指定对象所有者时会出现这种情况。  
   
 ## <a name="audit-schema-object-take-ownership-event-class-data-columns"></a>Audit Schema Object Take Ownership 事件类的数据列  

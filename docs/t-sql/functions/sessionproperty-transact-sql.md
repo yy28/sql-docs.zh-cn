@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 1f3730b4-1495-4d3a-af43-e57952812df9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e22d0c36c3a5ce614357566079ec81dc54b7c70e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1083504e4b3075a3e3ec8429c1ab0b5a664f2998
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68022193"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85714937"
 ---
 # <a name="sessionproperty-transact-sql"></a>SESSIONPROPERTY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   返回会话的 SET 选项设置。  
   
@@ -42,7 +42,7 @@ SESSIONPROPERTY (option)
   
 ## <a name="arguments"></a>参数  
  *option*  
- 该会话的当前选项设置。 option 可以是下列任意值  。  
+ 该会话的当前选项设置。 option 可以是下列任意值。  
   
 |选项|说明|  
 |------------|-----------------|  
@@ -53,7 +53,7 @@ SESSIONPROPERTY (option)
 |CONCAT_NULL_YIELDS_ NULL|控制是将串联结果视为 Null 还是空字符串值。<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
 |NUMERIC_ROUNDABORT|指定当表达式中的舍入导致精度降低时是否生成错误消息和警告。<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
 |QUOTED_IDENTIFIER|指定是否遵从 ISO 关于如何使用引号来分隔标识符和文字字符串的规则。<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
-|\<任何其他字符串>|NULL = 输入无效。|  
+|\<Any other string>|NULL = 输入无效。|  
   
 ## <a name="return-types"></a>返回类型  
  **sql_variant**  

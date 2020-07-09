@@ -10,26 +10,29 @@ ms.topic: language-reference
 ms.assetid: 8e861df6-d103-4d84-8438-e822533f6849
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0a1828925494ca2e1e8f593e3f133a21cd10a9ee
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 96de2a2f26ce85918c93bba32a1652de781f241b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296777"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722580"
 ---
 # <a name="catalogdeploy_packages"></a>catalog.deploy_packages 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   将一个或多个包部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目录中的文件夹，或更新以前部署的现有包。  
   
 ## <a name="syntax"></a>语法  
   
 ```sql  
-[catalog].[deploy_packages]     [ @folder_name = ] folder_name,    [ @project_name = ] project_name,    [ @packages_table = ] packages_table,     [ @operation_id OUTPUT ] operation_id OUTPUT ]  
+catalog.deploy_packages [ @folder_name = ] folder_name
+    , [ @project_name = ] project_name
+    , [ @packages_table = ] packages_table
+    [, [ @operation_id OUTPUT = ] operation_id OUTPUT]
 ```  
   
 ## <a name="arguments"></a>参数  
