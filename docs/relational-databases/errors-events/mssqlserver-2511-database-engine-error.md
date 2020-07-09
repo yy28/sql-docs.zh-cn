@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 9a00c0ed-eb4b-4fae-8016-192396006c37
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fc5fb10b9c00d5b309c787c0a7e127e47a3be9f8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c28be4ae43225cc4593291285c09115829be8da2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68138581"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780447"
 ---
 # <a name="mssqlserver_2511"></a>MSSQLSERVER_2511
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>详细信息  
   
-|||  
-|-|-|  
+| Attribute | 值 |  
+| :-------- | :---- |  
 |产品名称|SQL Server|  
 |事件 ID|2511|  
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC_KEYS_OUT_OF_ORDER|  
-|消息正文|表错误: 对象 ID %d，索引 ID %d，分区 ID %I64d，分配单元 ID %I64d (类型为 %.*ls)。 页 %S_PGID，槽 %d 和 %d 中的键顺序不对。|  
+|消息正文|表错误:对象 ID %d，索引 ID %d，分区 ID %I64d，分配单元 ID %I64d (类型为 %.*ls)。 页 %S_PGID，槽 %d 和 %d 中的键顺序不对。|  
   
 ## <a name="explanation"></a>说明  
 在指定的索引中检测到顺序不对的键。 包含这些键的页可能已损坏。  

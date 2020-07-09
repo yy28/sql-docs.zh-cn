@@ -9,20 +9,20 @@ ms.topic: language-reference
 ms.assetid: 5d4be07a-38a5-4b25-819c-4dcb4636cc15
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b51fb99c97447d630610be45dc3e3b681d90c40f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 76ad2670dc60665fa128dd97aa335330228262ef
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68086002"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780358"
 ---
 # <a name="mssqlserver_2530"></a>MSSQLSERVER_2530
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>详细信息  
   
-|||  
-|-|-|  
+| Attribute | 值 |  
+| :-------- | :---- |  
 |产品名称|SQL Server|  
 |事件 ID|2530|  
 |事件源|MSSQLSERVER|  

@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 0418352c-0ab2-4dc7-b8b9-5c3bad94560c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e87c0983ac7e74b45251bb72c44265f2134aa3b9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d8a3d87f96ffdedb5f9f5c0c8330e34cd7ec3722
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68103732"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780340"
 ---
 # <a name="mssqlserver_2533"></a>MSSQLSERVER_2533
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>详细信息  
   
-|||  
-|-|-|  
+| Attribute | 值 |  
+| :-------- | :---- |  
 |产品名称|SQL Server|  
 |事件 ID|2533|  
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC_PAGE_WAS_NOT_SEEN|  
-|消息正文|表错误: 看不到分配给对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID，分配单元 ID A_ID（类型为 TYPE）的页 P_ID。 该页可能无效，或者页头中可能包含错误的分配单元 ID。|  
+|消息正文|表错误:看不到分配给对象 ID O_ID、索引 ID I_ID、分区 ID PN_ID、分配单元 ID A_ID（类型为 TYPE）的页 P_ID。 该页可能无效，或者页头中可能包含错误的分配单元 ID。|  
   
 ## <a name="explanation"></a>说明  
 页已分配给分配单元 ID *A_ID*，但此分配单元 ID 不在页头中。 页头具有其他的分配单元 ID。 如果页头中的分配单元 ID 用于有效的对象，则该页可能具有匹配的 MSSQLEngine_2534 错误。  

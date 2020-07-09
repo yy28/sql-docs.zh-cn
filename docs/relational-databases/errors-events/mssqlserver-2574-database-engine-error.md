@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: efba507a-b5ad-4f1d-b0c8-f73b663a0562
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 80529814a7933ef2e9310872fdfc63cb339355fb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3f79f52f60fc93e7c134b66f4e6430677c36e05f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68023071"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780250"
 ---
 # <a name="mssqlserver_2574"></a>MSSQLSERVER_2574
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>详细信息  
   
-|||  
-|-|-|  
+| Attribute | 值 |  
+| :-------- | :---- |  
 |产品名称|SQL Server|  
 |事件 ID|2574|  
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC_EMPTY_INDEX_TREE_LEVEL_PAGE|  
-|消息正文|表错误：对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID，分配单元 ID A_ID（类型为 TYPE）中的页 P_ID 为空。 在 B 树的 LEVEL 级上，这是不允许的。|  
+|消息正文|表错误:对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID，分配单元 ID A_ID（类型为 TYPE）中的页 P_ID 为空。 在 B 树的 LEVEL 级上，这是不允许的。|  
   
 ## <a name="explanation"></a>说明  
 指定索引叶级上方的 B 树页为空，即它不包含行。 对于 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 中的叶级页，此行为是可能的，但是在树级中决不可能。  

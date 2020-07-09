@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: bd56ffe4-0855-4ada-8aca-251fbc6ff2ce
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c09e789738f8ca6633a56c36d626dd200ae70e78
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 69ccb3f9cb14acf7eeb57d60dea01d0229becf56
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68137240"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780752"
 ---
 # <a name="mssqlserver_17832"></a>MSSQLSERVER_17832
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>详细信息  
   
-|||  
-|-|-|  
+| Attribute | 值 |  
+| :-------- | :---- |  
 |产品名称|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |事件 ID|17832|  
 |事件源|MSSQLSERVER|  
@@ -55,13 +55,13 @@ ms.locfileid: "68137240"
   
 1.  在 **“开始”** 菜单上，单击 **“运行”** 。  
   
-2.  键入 **regedit**，然后单击“确定”。  （如果此时出现“用户帐户控制”对话框，请单击“继续”。）    
+2.  键入 **regedit**，然后单击“确定”。 （如果此时出现“用户帐户控制”对话框，请单击“继续”。）   
   
 3.  导航到 **HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Lsa\Kerberos\Parameters**。  
   
-4.  如果 **MaxTokenSize** 参数不存在，请右键单击“参数”，指向“新建”，然后单击“DWORD (32 位)”值。    将注册表项命名为 **MaxTokenSize**。  
+4.  如果 **MaxTokenSize** 参数不存在，请右键单击“参数”，指向“新建”，然后单击“DWORD (32 位)”值。   将注册表项命名为 **MaxTokenSize**。  
   
-5.  右键单击 **MaxTokenSize**，然后单击“修改”。   
+5.  右键单击 **MaxTokenSize**，然后单击“修改”。  
   
 6.  在“数值数据”框中键入所需的 **MaxTokenSize** 值。  
   

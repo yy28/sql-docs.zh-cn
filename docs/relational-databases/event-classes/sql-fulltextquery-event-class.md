@@ -12,15 +12,15 @@ ms.assetid: 654fb295-f0a5-4d66-93e0-5d43e4d7d535
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 96dc31f7129caedf65b52a457846dd651b345751
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6737979fc99057e2a85ee6a5494f1c65a5ee7e19
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68064823"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85778769"
 ---
 # <a name="sqlfulltextquery-event-class"></a>SQL:FullTextQuery 事件类
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行全文查询时，会发生 SQL:FullTextQuery 事件类。 请将此事件类包括在监视与全文目录相关的问题的跟踪中。  
   
  当包含 SQL:FullTextQuery 事件类时，开销量将很高。 如果此类事件频繁发生，则跟踪可能会显著地降低性能。 为了尽量减小这种影响，此事件类的使用应限于短期监视特定问题的跟踪。  

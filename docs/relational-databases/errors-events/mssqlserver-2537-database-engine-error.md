@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 0af6ff69-d75a-4c39-8da2-9bd0695277c6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1b6f07d54fbc04d3ddd9ff6d0a25c2f940f0ca54
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f31350a9e8cc3751d79de7b4eefc4416e9291ac5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68103621"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780332"
 ---
 # <a name="mssqlserver_2537"></a>MSSQLSERVER_2537
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>详细信息  
   
-|||  
-|-|-|  
+| Attribute | 值 |  
+| :-------- | :---- |  
 |产品名称|SQL Server|  
 |事件 ID|2537|  
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC_RECORD_CHECK_FAILED|  
-|消息正文|表错误: 对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID，分配单元 ID A_ID (type TYPE)，页 P_ID，行 ROW_ID。 记录检查(CHECK_TEXT)失败。 值为 VALUE1 和 VALUE2。|  
+|消息正文|表错误:对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID，分配单元 ID A_ID（类型为 TYPE），页 P_ID，行 ROW_ID。 记录检查(CHECK_TEXT)失败。 值为 VALUE1 和 VALUE2。|  
   
 ## <a name="explanation"></a>说明  
 行 ROW_ID（或该行中的某列）未通过 CHECK_TEXT 所描述的测试或条件。  

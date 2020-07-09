@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: d047920c-f864-4338-b15f-49820886fbc5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bfc9cfccbad7d41997199f25d3d69ef0fff55e8e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b380f7967ab055aecc5d10b2af4f8f45aa26d100
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67951481"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780203"
 ---
 # <a name="mssqlserver_7904"></a>MSSQLSERVER_7904
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>详细信息  
   
-|||  
-|-|-|  
+| Attribute | 值 |  
+| :-------- | :---- |  
 |产品名称|SQL Server|  
 |事件 ID|7904|  
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC2_FS_MISSING_FILE|  
-|消息正文|表错误：找不到列 ID C_ID，ROWGUID RG_ID (位于对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID 中)的 FileStream 文件。|  
+|消息正文|表错误:找不到列 ID C_ID，ROWGUID RG_ID (位于对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID 中)的 FileStream 文件。|  
   
 ## <a name="explanation"></a>说明  
 分区的列值在对应的 FILESTREAM 列目录中没有匹配的 FILESTREAM 文件。  

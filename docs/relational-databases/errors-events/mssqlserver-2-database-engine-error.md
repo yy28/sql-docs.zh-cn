@@ -13,26 +13,26 @@ helpviewer_keywords:
 ms.assetid: 567fb571-7cda-4ce8-a702-cdff2df5d419
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5001efe04b24c987b37e269e3081abdd3a665bf7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c1e30294f89beb5f456953e26a33ee0cef13ea52
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67896826"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780614"
 ---
 # <a name="mssqlserver_2"></a>MSSQLSERVER_2
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>详细信息  
   
-|||  
-|-|-|  
+| Attribute | 值 |  
+| :-------- | :---- |  
 |产品名称|SQL Server|  
 |事件 ID|2|  
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称||  
-|消息正文|在建立与服务器的连接时出错。  在连接到 SQL Server 时，在默认的设置下 SQL Server 不允许远程连接可能会导致此失败。 （提供程序: 命名管道提供程序，错误：40 - 无法打开到 SQL Server 的连接）（.Net SqlClient 数据访问接口）|  
+|消息正文|在建立与服务器的连接时出错。  在连接到 SQL Server 时，在默认的设置下 SQL Server 不允许远程连接可能会导致此失败。 （提供程序：命名管道提供程序，错误: 40 - 无法打开到 SQL Server 的连接) (.Net SqlClient 数据提供程序)|  
   
 ## <a name="explanation"></a>说明  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 未响应客户端请求，可能是因为尚未启动服务器。  

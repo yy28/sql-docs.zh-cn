@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 1ab1195a-fe2a-4e06-b871-b177b6bea1fe
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fcf093c5560313487be60d854c880de526f7a525
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d1ab933d65ab0851f89ea313f87240979adf9288
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68056657"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780503"
 ---
 # <a name="mssqlserver_21893"></a>MSSQLSERVER_21893
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>详细信息  
   
-|||  
-|-|-|  
+| Attribute | 值 |  
+| :-------- | :---- |  
 |产品名称|SQL Server|  
 |事件 ID|21893|  
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|SQLErrorNum21893|  
-|消息正文|订阅服务器 (%s)（属于原始发布服务器“%s”）在重定向的发布服务器“%s”中不显示为远程服务器。 在重定向的发布服务器上运行 sp_addlinkedserver  ，以将这些订阅服务器添加为远程服务器。|  
+|消息正文|订阅服务器 (%s)（属于原始发布服务器“%s”）在重定向的发布服务器“%s”中不显示为远程服务器。 在重定向的发布服务器上运行 sp_addlinkedserver，以将这些订阅服务器添加为远程服务器。|  
   
 ## <a name="explanation"></a>说明  
 在远程服务器上，**sp_validate_redirected_publisher** 使用发布服务器数据库的订阅元数据表来确定其关联的订阅服务器，并验证在订阅服务器的 master.dbo.sysservers 中是否存在关联的条目。 如果任何标识的订阅服务器不存在，则会返回此错误。  

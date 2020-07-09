@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: cf19fbbb-7158-45f2-8778-8f3cad7f574a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b379a690019121ea98ff8e8b001f18814dbf6ebe
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 252415c6bf4ef2dfdfb7ae5c0858b661df546aa8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67951507"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780180"
 ---
 # <a name="mssqlserver_7905"></a>MSSQLSERVER_7905
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>详细信息  
   
-|||  
-|-|-|  
+| Attribute | 值 |  
+| :-------- | :---- |  
 |产品名称|SQL Server|  
 |事件 ID|7905|  
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC2_FS_INVALID_ROWSET_DIRECTORY|  
-|消息正文|数据库错误：目录 'DIRECTORY' 不是有效的 FileStream 目录。|  
+|消息正文|数据库错误:目录 DIRECTORY 不是有效的 FileStream 目录。|  
   
 ## <a name="explanation"></a>说明  
 行集目录的名称是分区的分区 ID，但特殊的行集目录名称（如“ghost”）除外。 如果无法将行集目录名称转换为分区 ID，则该目录不是有效的行集目录。  
