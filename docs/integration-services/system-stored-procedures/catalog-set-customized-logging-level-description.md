@@ -10,19 +10,16 @@ ms.topic: language-reference
 ms.assetid: 6ceaa39f-2439-457b-b99f-f12d88a1be32
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b836c5b2ef056e630a5ff6bf00848fa5bb3a5e31
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: beb078f6888f9ea89654922c1667a0e9a60448f5
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295353"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053568"
 ---
 # <a name="catalogset_customized_logging_level_description"></a>catalog.set_customized_logging_level_description 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
-
-
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   更改现有自定义日志记录级别的相关说明。 有关自定义日志记录级别的详细信息，请参阅 [Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)。  
   

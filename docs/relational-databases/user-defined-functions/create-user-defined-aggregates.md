@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: c278b746-6323-4b32-b460-239915acc067
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8e4291cbe79bf0eea51fdf10e2c13fea7f1e23a0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d66db5586f5f80f8f0e8954d041befbcd4c5eba4
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68138352"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053607"
 ---
 # <a name="create-user-defined-aggregates"></a>创建用户定义聚合
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
   您可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中创建在 CLR 程序集中进行编程的数据库对象。 能够利用由 CLR 提供的众多编程模型的数据库对象包括触发器、存储过程、函数、聚合函数和类型。  
   
  与 [!INCLUDE[tsql](../../includes/tsql-md.md)]中提供的内置聚合函数一样，用户定义聚合函数对一组值进行计算，然后返回单个值。  

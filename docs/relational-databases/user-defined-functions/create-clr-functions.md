@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: a82df075-2243-4e19-bfe1-ae6d65dabd0f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0234987ec9bdb6e71348e98d3096505a36e31743
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dd0860bc09c4b4ee1d1a67130f58a75c86dd0625
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68138544"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053593"
 ---
 # <a name="create-clr-functions"></a>创建 CLR 函数
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中创建可在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 公共语言运行时 (CLR) 中创建的程序集中进行编程的数据库对象。 可以充分利用公共语言运行时所提供的丰富的编程模式的数据库对象包括聚合函数、函数、存储过程、触发器以及类型。  
   

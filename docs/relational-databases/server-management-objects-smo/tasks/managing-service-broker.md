@@ -13,18 +13,18 @@ ms.assetid: b29d7432-d1e5-4bb6-b544-57b3a9430f95
 author: markingmyname
 ms.author: maghan
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e3fe187412a70956d1f4496b6c042e39edafd18c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2cb32127843920cc76c5dc4899a542c1519d90fa
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74094401"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86158885"
 ---
 # <a name="managing-service-broker"></a>管理 Service Broker
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
 
-  在 SMO 中， [!INCLUDE[ssSB](../../../includes/sssb-md.md)]对象位于需要引用到 "" 的 "" 的 "" 中的 " **."。** 为支持类信息，还要求对 Microsoft.SqlServer.ServiceBrokerEnum.dll 的引用。  
+  在 SMO 中， [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 对象位于需要引用 Microsoft.SqlServer.Smo.dll 的 "...**管理**" 中。 为支持类信息，还要求对 Microsoft.SqlServer.ServiceBrokerEnum.dll 的引用。  
   
  SMO 提供一组 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 对象，这些对象允许以编程方式管理 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 的实现 (DDL)。 这包括定义消息类型、约定、队列和服务。 因为 SMO 是并不针对数据操作、发送和接收的管理工具，所以 SMO 不支持 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 消息。  
   

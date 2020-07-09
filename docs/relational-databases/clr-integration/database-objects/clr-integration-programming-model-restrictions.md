@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 83b73909cf1844796640a83910ee609eadd7dba4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f5f04017124520f6e2acd0669946d5d43d4e83f4
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488512"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86160165"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>CLR 集成编程模型限制
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  在生成托管存储过程或其他托管数据库对象时，需要考虑执行[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]某些代码检查。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]当第一次在数据库中注册时，使用**CREATE assembly**语句并在运行时对托管代码程序集执行检查。 在运行时也将检查托管代码，这是因为在程序集中，也许存在在运行时实际上可能永远无法访问的代码路径。  这样一来，在注册第三方程序集时尤其灵活，因为，当存在专门在客户端环境下运行而从不在承载的 CLR 中执行的“不安全”代码时，不会阻塞程序集。 托管代码必须满足的要求取决于该程序集是注册为**安全**的、 **EXTERNAL_ACCESS**的、**不**安全的 **、最**严格的，并在下面列出。  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+  在生成托管存储过程或其他托管数据库对象时，需要考虑执行某些代码检查 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]当第一次在数据库中注册时，使用**CREATE assembly**语句并在运行时对托管代码程序集执行检查。 在运行时也将检查托管代码，这是因为在程序集中，也许存在在运行时实际上可能永远无法访问的代码路径。  这样一来，在注册第三方程序集时尤其灵活，因为，当存在专门在客户端环境下运行而从不在承载的 CLR 中执行的“不安全”代码时，不会阻塞程序集。 托管代码必须满足的要求取决于该程序集是注册为**安全**的、 **EXTERNAL_ACCESS**的、**不**安全的 **、最**严格的，并在下面列出。  
   
  除了对托管代码程序集进行了限制，还授予了一些代码安全权限。 公共语言运行时 (CLR) 支持称为代码访问安全性 (CAS) 的托管代码安全模式。 在这种模式下，根据代码的标识来对程序集授予权限。 **SAFE**、 **EXTERNAL_ACCESS**和**UNSAFE**程序集具有不同的 CAS 权限。 有关详细信息，请参阅[CLR 集成代码访问安全性](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)。  
   
@@ -38,9 +38,9 @@ ms.locfileid: "81488512"
   
 -   程序集是受支持的程序集之一。 有关详细信息，请参阅[支持的 .NET Framework 库](../../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)。  
   
--   你使用的是_\<位置>_ 的 "**创建程序集**"，并且所有引用的程序集及其依赖项在 " * \<位置>* 中可用。  
+-   你使用的是中的**CREATE ASSEMBLY**_ \<location> ，_ 并且所有引用的程序集及其依赖项在中均可用 *\<location>* 。  
   
--   你使用的是**CREATE ASSEMBLY FROM**_\<bytes ... >，_ 所有引用都通过以空格分隔的字节来指定。  
+-   你使用的是**中的 CREATE ASSEMBLY**_ \<bytes ...> ，_ 所有引用都是通过以空格分隔的字节来指定的。  
   
 ### <a name="external_access"></a>EXTERNAL_ACCESS  
  所有**EXTERNAL_ACCESS**程序集都必须满足以下条件：  
@@ -98,7 +98,7 @@ ms.locfileid: "81488512"
   
 -   SelfAffectingThreading  
   
--   Synchronization  
+-   同步  
   
 -   SharedState  
   

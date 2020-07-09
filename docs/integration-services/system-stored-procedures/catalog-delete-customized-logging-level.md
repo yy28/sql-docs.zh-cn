@@ -10,27 +10,23 @@ ms.topic: language-reference
 ms.assetid: 0aec1e34-f30b-4e5f-bba1-c26665cf2da6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b35576dc6a583f21f88547b40bc68ff23644cc72
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b7239a3ce8d5995320c5b5546b38e82e1b9c4282
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295485"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053733"
 ---
 # <a name="catalogdelete_customized_logging_level"></a>catalog.delete_customized_logging_level 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
-
-
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   删除现有的自定义日志记录级别。 有关自定义日志记录级别的详细信息，请参阅 [Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
 ## <a name="syntax"></a>语法  
   
 ```sql  
-delete_customized_logging_level [ @level_name = ] level_name  
-  
+catalog.delete_customized_logging_level [ @level_name = ] level_name
 ```  
   
 ## <a name="arguments"></a>参数  

@@ -22,16 +22,16 @@ helpviewer_keywords:
 ms.assetid: 95069d22-b05d-4670-b053-15ee2a664e33
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a32a606f73858ede15569d1ade891ad2ce1c69a5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a754825eb1da09dcfb7fa37401024b89cf70c1d2
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487934"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86160175"
 ---
 # <a name="clr-integration-custom-attributes-for-clr-routines"></a>CLR 例程的 CLR 集成自定义属性
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  列出的属性可应用于公共语言运行时（CLR）例程、用户定义的类型以及在中[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]注册的用户定义聚合。 如果未应用此属性，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将采用默认值。 列出的属性在**Microsoft sql**命名空间中定义。  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+  列出的属性可应用于公共语言运行时（CLR）例程、用户定义的类型以及在中注册的用户定义聚合 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 如果未应用此属性，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将采用默认值。 列出的属性在**Microsoft sql**命名空间中定义。  
   
 ## <a name="the-sqluserdefinedaggregate-attribute"></a>SqlUserDefinedAggregate 特性  
  **SqlUserDefinedAggregate**特性指示应将方法注册为用户定义的聚合。 必须使用此属性注释每个用户定义聚合。  

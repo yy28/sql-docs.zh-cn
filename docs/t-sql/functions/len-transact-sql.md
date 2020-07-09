@@ -20,15 +20,15 @@ ms.assetid: fa20fee4-884d-4301-891a-c03e901345ae
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7317bd1ee84a34c86bfb79b3be898d30c00595ed
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c505d2a72e9ccd0432f685307e97b16e625e859b
+ms.sourcegitcommit: e6c260a139326f5a400a57ece812d39ef8b820bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82822979"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86032454"
 ---
 # <a name="len-transact-sql"></a>LEN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 返回指定字符串表达式的字符数，其中不包含尾随空格。  
   
@@ -56,13 +56,13 @@ LEN ( string_expression )
 LEN 不包括尾随空格。 如果这是个问题，请考虑使用 [DATALENGTH (Transact-SQL)](../../t-sql/functions/datalength-transact-sql.md) 函数，该函数不会修整字符串。 如果处理的是 unicode 字符串，DATALENGTH 会返回可能不等于字符数的数字。 以下示例演示 LEN 和带有尾随空格的 DATALENGTH。  
   
 ```sql  
-DECLARE @v1 varchar(40),  
-    @v2 nvarchar(40);  
+  DECLARE @v1 VARCHAR(40),  
+    @v2 NVARCHAR(40);  
 SELECT   
 @v1 = 'Test of 22 characters ',   
 @v2 = 'Test of 22 characters ';  
-SELECT LEN(@v1) AS [varchar LEN] , DATALENGTH(@v1) AS [varchar DATALENGTH];  
-SELECT LEN(@v2) AS [nvarchar LEN], DATALENGTH(@v2) AS [nvarchar DATALENGTH];  
+SELECT LEN(@v1) AS [VARCHAR LEN] , DATALENGTH(@v1) AS [VARCHAR DATALENGTH];  
+SELECT LEN(@v2) AS [NVARCHAR LEN], DATALENGTH(@v2) AS [NVARCHAR DATALENGTH];  
 ```  
 
 > [!NOTE]

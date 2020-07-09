@@ -28,15 +28,15 @@ helpviewer_keywords:
 ms.assetid: 517fe745-d79b-4aae-99a7-72be45ea6acb
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 28952359d69fa1fa1c140a8a2a18222ec114cea0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5d3f9e4d405435816378141ba9e4053e8ac77a99
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73593906"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012802"
 ---
 # <a name="create-column-encryption-key-transact-sql"></a>CREATE COLUMN ENCRYPTION KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 为 [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 或[具有安全 Enclave 的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md) 创建列加密密钥元数据对象。 列加密密钥元数据对象包含用于对列中数据进行加密的列加密密钥的一个或两个加密值。 每个值都使用列主密钥进行加密。 
   
@@ -44,7 +44,7 @@ ms.locfileid: "73593906"
   
 ## <a name="syntax"></a>语法  
   
-```sql  
+```syntaxsql
 CREATE COLUMN ENCRYPTION KEY key_name   
 WITH VALUES  
   (  
@@ -61,15 +61,15 @@ WITH VALUES
 ```  
   
 ## <a name="arguments"></a>参数  
-key\_name  
+key_name\__  
 列加密密钥在数据库中所使用的名称。  
   
-column\_master\_key\_name 指定用于加密列加密密钥的自定义 CMK 的名称。  
+column_master\_key\_name\__ 指定用于加密列加密密钥的自定义 CMK 的名称。  
   
-algorithm\_name  
+algorithm_name\__  
 用于对列加密密钥进行加密的加密算法的名称。 系统提供程序的算法必须为 RSA_OAEP  。  
   
-varbinary\_literal  
+varbinary_literal\__  
 已加密的列加密密钥值 BLOB。  
   
 > [!WARNING]  
