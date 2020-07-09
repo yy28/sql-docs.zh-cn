@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 19718f762a7352865c5b9741ee42ec8cfe965eb8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bd425438dc4a06faea489ac9cba4b607492fcde8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79434520"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900402"
 ---
 # <a name="what-is-an-availability-group-listener"></a>什么是可用性组侦听器？  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 可用性组侦听器是一个虚拟网络名称 (VNN)，客户端可连接到此名称以访问 Always On 可用性组的主要副本或次要副本中的数据库。 侦听器允许客户端连接到副本，而无需知道 SQL Server 的物理实例名称。 由于侦听器路由流量，因此在发生故障转移后不需要修改客户端连接字符串。 
 

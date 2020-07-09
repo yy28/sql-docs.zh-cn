@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: 3ff0c862e93cd3b552b29c4eec8ab91931c809c7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 493239906f83b74735f9fcd4b6673fb2748abfff
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75656624"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897292"
 ---
 # <a name="configure-rhel-failover-cluster-instance-fci-cluster-for-sql-server"></a>为 SQL Server 配置 RHEL 故障转移群集实例 (FCI)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 本指南介绍如何在 Red Hat Enterprise Linux 上为 SQL Server 创建两节点的共享磁盘故障转移群集。 集群层基于在 [Pacemaker](https://clusterlabs.org/) 的基础上构建的 Red Hat Enterprise Linux (RHEL) [HA 加载项](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)。 SQL Server 实例在一个节点或另一个节点上处于活动状态。
 
@@ -373,7 +373,7 @@ STONITH 设备提供隔离代理。 有关如何在 Azure 中为此群集创建 
    mssqlha  (ocf::mssql:fci): Started sqlfcivm1
    
    PCSD Status:
-    slqfcivm1: Online
+    sqlfcivm1: Online
     sqlfcivm2: Online
    
    Daemon Status:

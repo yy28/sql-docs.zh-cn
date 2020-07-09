@@ -24,15 +24,15 @@ ms.assetid: fc2c7f76-f1f9-4f91-beef-bc8ef0da2feb
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e278e41fa2f27684b1ce249bb45b1dc78356753
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 82a5b3d8ee0f037fc8ea2909d333ea7de13841fa
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75325559"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85990583"
 ---
 # <a name="beginend-transact-sql"></a>BEGIN...END (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   包括一系列的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，从而可以执行一组 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 BEGIN 和 END 是控制流语言的关键字。  
   
@@ -40,14 +40,14 @@ ms.locfileid: "75325559"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 BEGIN  
     { sql_statement | statement_block }   
 END  
 ```  
   
 ## <a name="arguments"></a>参数  
- { sql_statement | statement_block }   
+ { sql_statement*statement_block }*  |    
  使用语句块定义的任何有效的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或语句组。  
   
 ## <a name="remarks"></a>备注  
@@ -58,20 +58,20 @@ END
 ## <a name="examples"></a>示例  
  在下面的示例中，`BEGIN` 和 `END` 定义一系列一起执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 如果不包括 `BEGIN...END` 块，则将执行两个 `ROLLBACK TRANSACTION` 语句，并返回两条 `PRINT` 消息。  
   
-```  
-USE AdventureWorks2012;  
+```sql
+USE AdventureWorks2012
 GO  
-BEGIN TRANSACTION;  
+BEGIN TRANSACTION
 GO  
 IF @@TRANCOUNT = 0  
 BEGIN  
     SELECT FirstName, MiddleName   
-    FROM Person.Person WHERE LastName = 'Adams';  
-    ROLLBACK TRANSACTION;  
-    PRINT N'Rolling back the transaction two times would cause an error.';  
-END;  
-ROLLBACK TRANSACTION;  
-PRINT N'Rolled back the transaction.';  
+    FROM Person.Person WHERE LastName = 'Adams'
+    ROLLBACK TRANSACTION
+    PRINT N'Rolling back the transaction two times would cause an error.'
+END
+ROLLBACK TRANSACTION
+PRINT N'Rolled back the transaction.'
 GO  
 /*  
 Rolled back the transaction.  
@@ -81,25 +81,20 @@ Rolled back the transaction.
 ## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  在下面的示例中，`BEGIN` 和 `END` 定义一系列一起运行的 [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 语句。 如果不包括 `BEGIN...END` 块，以下示例将处于连续循环中。  
   
-```  
+```sql
 -- Uses AdventureWorks  
-  
+
 DECLARE @Iteration Integer = 0  
 WHILE @Iteration <10  
 BEGIN  
     SELECT FirstName, MiddleName   
-    FROM dbo.DimCustomer WHERE LastName = 'Adams';  
+    FROM dbo.DimCustomer WHERE LastName = 'Adams'
     SET @Iteration += 1  
-END;  
-  
+END
 ```  
   
 ## <a name="see-also"></a>另请参阅  
  [ALTER TRIGGER (Transact-SQL)](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [控制流语言 (Transact-SQL)](~/t-sql/language-elements/control-of-flow.md)   
  [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)   
- [END (BEGIN...END) (Transact-SQL)](../../t-sql/language-elements/end-begin-end-transact-sql.md)  
-  
-  
-
-
+ [END (BEGIN...END) (Transact-SQL)](../../t-sql/language-elements/end-begin-end-transact-sql.md)

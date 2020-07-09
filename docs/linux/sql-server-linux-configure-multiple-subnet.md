@@ -9,16 +9,16 @@ ms.date: 12/01/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: af017cf5d36075fdba6de31aa841e980cc20e175
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d6cd6b4cdd25c6da0a7d034e2f980ad583a6561b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76911012"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901556"
 ---
 # <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>配置多子网 Always On 可用性组和故障转移群集实例
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 如果 Always On 可用性组 (AG) 或故障转移群集实例 (FCI) 跨越多个站点，则通常每个站点都有其自己的网络。 这通常意味着每个站点都有其自己的 IP 地址。 例如，站点 A 的地址以 192.168.1 x 开头，站点 B 的地址以 192.168.2 x 开头，其中 x 是服务器独有的 IP 地址部分    。 如果网络层中不存在某种类型的路由，则这些服务器将无法相互通信。 处理该情况有两种方法：设置桥接两个不同子网的网络（称为 VLAN），或配置子网之间的路由。
 

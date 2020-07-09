@@ -8,16 +8,16 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 392d8d477a2e136d54e6f0f06608eb0ebeda12a5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9944a6065d89a49e5bf1a0ccec2d4d681fbae748
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73593517"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900150"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>示例：SUSE Linux Enterprise Server 的无人参与 SQL Server 安装脚本
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 此示例 Bash 脚本在没有交互式输入的 SUSE Linux Enterprise Server(SLES) v12 SP2上安装 SQL Server 2017。 它提供数据库引擎、SQL Server 命令行工具和 SQL Server 代理的安装示例，并执行安装后步骤。 可以选择安装全文搜索并创建管理用户。
 

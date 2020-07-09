@@ -21,15 +21,15 @@ ms.assetid: 67c30b8d-3f15-41ad-b9a9-a4ced3b2af9f
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0fba8c8809e03e65f96fb1178a70e7784edab246
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 047f698d96a570f596e3b677a2174cb52ebd06de
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67950345"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85990473"
 ---
 # <a name="break-transact-sql"></a>BREAK (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 BREAK 将退出当前 WHILE 循环。 如果当前循环嵌套在另一个循环中，BREAK 将只退出当前循环，并且将控制给予外部循环中的下一个语句。
 

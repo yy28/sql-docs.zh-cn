@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 26bf8f71-c2b8-45ef-b3a3-372b96c9e6e3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f391a812a83d573a5f19cd2eaa238d9dae311efb
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: d7c84182de4647a206c25ba20a5a993af88a3e41
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922356"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900918"
 ---
 # <a name="evaluate-health-of-the-always-on-availability-group-using-group-policies"></a>使用组策略评估 AlwaysOn 可用性组的运行状况
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   AlwaysOn 仪表板使用 AlwaysOn 可用性组系统策略向用户提供有关可用性组运行状况的信息。 它们对可用性组运行问题的初始故障排除非常有用。 可扩展这些策略并将其用于自定义 Always On 仪表板，也可立即运行这些策略以报告所需运行状况信息。  
   
  有 14 条针对可用性组的系统策略。 有关每条策略的详细信息，请参阅[针对 Always On 可用性组运行问题的 Always On 策略 (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md)。  

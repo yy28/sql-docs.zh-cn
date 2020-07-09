@@ -13,18 +13,21 @@ f1_keywords:
 helpviewer_keywords:
 - STRING_AGG function
 ms.assetid: 8860ef3f-142f-4cca-aa64-87a123e91206
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d67efc13e326808b570fc33f054f922e74d5923e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 34af1cc4319135e7f2e30ed0c287a6567e420f64
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77478483"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85995370"
 ---
 # <a name="string_agg-transact-sql"></a>STRING_AGG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
+
+<!--[!INCLUDE [sqlserver2017-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-asa.md)]-->
+
+[!INCLUDE [sqlserver2017-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-asa.md)]
 
 串联字符串表达式的值，并在其间放置分隔符值。 不能在字符串末尾添加分隔符。 
  
@@ -32,7 +35,7 @@ ms.locfileid: "77478483"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 STRING_AGG ( expression, separator ) [ <order_clause> ]
 
 <order_clause> ::=   
@@ -45,12 +48,12 @@ STRING_AGG ( expression, separator ) [ <order_clause> ]
 是任何类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 串联期间，表达式被转换为 `NVARCHAR` 或 `VARCHAR` 类型。 非字符串类型被转换为 `NVARCHAR` 类型。
 
 separator   
-是 `NVARCHAR` 或 `VARCHAR` 类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)，用作串联字符串的分隔符。 可以是文本或变量。 
+是 [ 或 ](../../t-sql/language-elements/expressions-transact-sql.md) 类型的`NVARCHAR`表达式`VARCHAR`，用作串联字符串的分隔符。 可以是文本或变量。 
 
 <order_clause>   
 使用 `WITHIN GROUP` 子句有选择性地指定串联结果的顺序：
 
-```
+```syntaxsql
 WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 ```   
 <order_by_expression_list>   
@@ -96,7 +99,7 @@ FROM Person.Person;
 |--- |
 |Syed <br />Catherine <br />Kim <br />Kim <br />Kim <br />Hazem <br />... | 
 
-结果中不返回 `name` 单元格中的 `NULL` 值。   
+结果中不返回 `NULL` 单元格中的 `name` 值。   
 
 > [!NOTE]  
 > 如果使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查询编辑器，“结果显示为网格”选项无法实现回车符  。 可切换到“结果显示为文本”，以便正确查看结果集  。       
@@ -162,7 +165,7 @@ GROUP BY a.articleId, title;
 |177 |狗继续比猫更受人喜爱 |民意调查,动物|
 
 > [!NOTE]
-> 如果 `STRING_AGG` 函数不是 `SELECT` 列表中的唯一项，则需要子句 `GROUP BY`。
+> 如果 `GROUP BY` 函数不是 `STRING_AGG` 列表中的唯一项，则需要子句 `SELECT`。
 
 ### <a name="e-generate-list-of-emails-per-towns"></a>E. 生成按城市分类的电子邮件列表
 

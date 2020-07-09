@@ -21,18 +21,18 @@ helpviewer_keywords:
 - date and time [SQL Server], SWITCHOFFSET
 - time zones [SQL Server]
 ms.assetid: 32a48e36-0aa4-4260-9fe9-cae9197d16c5
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2ce69487c1550314dc7cfe3641333728fd07155e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 46d5834ff1e9c519b7ac675fd93b75d2b089317e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68117564"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85993884"
 ---
 # <a name="switchoffset-transact-sql"></a>SWITCHOFFSET (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   返回从存储的时区偏移量变为指定的新时区偏移量时得到的 datetimeoffset 值  。  
   
@@ -54,7 +54,7 @@ SWITCHOFFSET ( DATETIMEOFFSET, time_zone )
  是一个格式为 [+|-]TZH:TZM 的字符串，或是一个表示时区偏移量的带符号的整数（分钟数），假定它能够感知夏时制并作出相应的调整。  
   
 ## <a name="return-type"></a>返回类型  
- 具有 DATETIMEOFFSET 参数小数精度的 datetimeoffset。  
+ 具有 DATETIMEOFFSET 参数小数精度的 datetimeoffset   。  
   
 ## <a name="remarks"></a>备注  
  使用 SWITCHOFFSET 可选择与最初存储的时区偏移量不同的时区偏移量的 datetimeoffset 值  。 SWITCHOFFSET 不会更新存储的 time_zone 值  。  

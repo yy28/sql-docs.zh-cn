@@ -18,15 +18,15 @@ ms.assetid: 240f33ca-ef4a-413a-a4de-831885cb505b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 96fd9d883a115de64f0b1b8eb3879c941bc37b8a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: e39c277ac7fb0c09baca8bb98058c0ddc8766a55
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980517"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000387"
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>使用 bcp 指定字段长度 (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   字段长度指示以字符格式表示数据时所要求的最大字符数。 如果数据以本机格式存储，则字段长度就是已知的，例如， **int** 数据类型占 4 个字节。 如果指示前缀长度为 0，则 **bcp** 命令会提示输入字段长度、默认字段长度以及字段长度对包含 **char** 数据的数据文件中数据存储的影响。  
   
 ## <a name="the-bcp-prompt-for-field-length"></a>bcp 提示输入字段长度  

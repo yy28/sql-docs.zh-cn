@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ac339e638377778065f158b4cbd20280d5d4bb65
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e8b43794783253ced81466ac7974e40c0ec05840
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75244064"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900929"
 ---
 # <a name="policy-based-management-for-operational-issues-with-always-on-availability-groups"></a>对 Always On 可用性组的操作问题的基于策略的管理
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   Always On 可用性组运行状况模型评估一组基于预定义策略的管理 (PBM) 策略。 可以使用这些策略查看 SQL Server 中可用性组及其可用性副本和数据库的运行状况。  
   

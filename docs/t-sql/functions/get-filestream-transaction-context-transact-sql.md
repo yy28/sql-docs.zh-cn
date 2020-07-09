@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - GET_FILESTREAM_TRANSACTION_CONTEXT FILESTREAM [SQL Server]
 ms.assetid: 459e6b79-4420-41e6-85bf-89d90f43b4f1
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 7d284cb8c39307a6ee2568bd8e4fa5fa0df2c3e5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: fcb526d6737624aee12e900f3b9b7db1f2e7f69e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67940106"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898992"
 ---
 # <a name="get_filestream_transaction_context-transact-sql"></a>GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   返回表示会话的当前事务上下文的标记。 应用程序使用此标记可将 FILESTREAM 文件系统流式处理操作绑定到该事务。 有关 FILESTREAM 话题的列表，请参阅[二进制大型对象 &#40;Blob&#41; 数据 &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
   
@@ -50,7 +50,7 @@ GET_FILESTREAM_TRANSACTION_CONTEXT ()
  调用 GET_FILESTREAM_TRANSACTION_CONTEXT 时，系统将在事务持续期间授予调用方对事务的文件系统访问权。 若要允许其他用户通过文件系统访问事务，则使用 EXECUTE AS 以其他用户身份运行 GET_FILESTREAM_TRANSACTION_CONTEXT。  
   
 ## <a name="examples"></a>示例  
- 下面的示例在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 事务中使用 `GET_FILESTREAM_TRANSACTION_CONTEXT` 获取事务上下文。  
+ 下面的示例在 `GET_FILESTREAM_TRANSACTION_CONTEXT` 事务中使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 获取事务上下文。  
   
 ```csharp  
 using System;  

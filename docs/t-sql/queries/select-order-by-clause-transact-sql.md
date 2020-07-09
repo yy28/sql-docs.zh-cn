@@ -39,16 +39,16 @@ ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7ccced8b93b5f657d8fd0afe96f95d7b9f8a98a6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 296616f71102f5a5c68fe817b409273f6bf9428a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73981714"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999777"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT - ORDER BY 子句 (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的查询返回的数据进行排序。 可以使用此子句执行以下操作：  
   
@@ -63,7 +63,7 @@ ms.locfileid: "73981714"
 
 ## <a name="syntax"></a>语法  
   
-```
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 ORDER BY order_by_expression  
@@ -81,7 +81,7 @@ ORDER BY order_by_expression
 }  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 [ ORDER BY   
@@ -113,7 +113,7 @@ ORDER BY SchemaName + ''; -- wrong
  **ASC** | DESC  
  指定按升序或降序排列指定列中的值。 ASC 按从最低值到最高值的顺序进行排序。 DESC 按从最高值到最低值的顺序进行排序。 ASC 是默认排序顺序。 Null 值被视为最低的可能值。  
   
- OFFSET { integer_constant | offset_row_count_expression } { ROW | ROWS }   
+ OFFSET { integer_constant*offset_row_count_expression } { ROW | ROWS }*  |    
  指定开始从查询表达式返回行之前跳过的行数。 该值可以是大于或等于零的整数常量或表达式。  
   
 **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].s  
@@ -124,7 +124,7 @@ ORDER BY SchemaName + ''; -- wrong
   
  在查询执行计划中，将在 TOP 查询运算符的 Offset 属性中显示偏移行数值  。  
   
- FETCH { FIRST | NEXT } { integer_constant | fetch_row_count_expression } { ROW | ROWS } ONLY   
+ FETCH { FIRST | NEXT } { integer_constant*fetch_row_count_expression } { ROW | ROWS } ONLY* |    
  指定在处理 OFFSET 子句后返回的行数。 该值可以是大于或等于 1 的整数常量或表达式。  
   
 **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
@@ -392,20 +392,19 @@ ORDER BY DepartmentID
 ```  
   
 #### <a name="b-specifying-variables-for-offset-and-fetch-values"></a>B. 指定变量以提供 OFFSET 和 FETCH 值  
- 下面的示例声明 `@StartingRowNumber` 和 `@FetchRows` 变量，并在 OFFSET 和 FETCH 子句中指定这些变量。  
+ 下面的示例声明 `@RowsToSkip` 和 `@FetchRows` 变量，并在 OFFSET 和 FETCH 子句中指定这些变量。  
   
 ```sql
 USE AdventureWorks2012;  
 GO  
 -- Specifying variables for OFFSET and FETCH values    
-DECLARE @StartingRowNumber tinyint = 1  
+DECLARE @RowsToSkip tinyint = 2
       , @FetchRows tinyint = 8;  
 SELECT DepartmentID, Name, GroupName  
 FROM HumanResources.Department  
 ORDER BY DepartmentID ASC   
-    OFFSET @StartingRowNumber ROWS   
+    OFFSET @RowsToSkip ROWS   
     FETCH NEXT @FetchRows ROWS ONLY;  
-  
 ```  
   
 #### <a name="c-specifying-expressions-for-offset-and-fetch-values"></a>C. 指定表达式以提供 OFFSET 和 FETCH 值  
@@ -537,7 +536,7 @@ WHERE LastName LIKE 'A%'
 ORDER BY LastName;  
 ```  
   
- 以下示例按照两列进行排序。 此查询首先按 `FirstName` 列以升序排序，然后按 `LastName` 列以降序对常见 `FirstName` 值降序排序。  
+ 以下示例按照两列进行排序。 此查询首先按 `FirstName` 列以升序排序，然后按 `FirstName` 列以降序对常见 `LastName` 值降序排序。  
   
 ```sql
 -- Uses AdventureWorks  

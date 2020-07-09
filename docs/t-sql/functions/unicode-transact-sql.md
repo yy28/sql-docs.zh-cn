@@ -17,18 +17,18 @@ helpviewer_keywords:
 - UNICODE function
 - Unicode [SQL Server], UNICODE function
 ms.assetid: 5e3c40b2-8401-4741-9f2a-bae70eaa4da6
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 29a9476f5835df326aa34d8ccfc4cc6d22ea7e3f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 313a3b583c842b80827de704084a05707ea13cc3
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68670616"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85991972"
 ---
 # <a name="unicode-transact-sql"></a>UNICODE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   按照 Unicode 标准的定义，返回输入表达式的第一个字符的整数值。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68670616"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 UNICODE ( 'ncharacter_expression' )  
 ```  
   
@@ -48,7 +48,7 @@ UNICODE ( 'ncharacter_expression' )
 **int**  
   
 ## <a name="remarks"></a>备注  
-在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 之前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，UNICODE 函数返回范围 000000 - 00FFFF（它能够表示 Unicode 基本多文种平面 (BMP) 中的 65,535 个字符）内的 UCS-2 码位。 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始，若使用启用了[补充字符 (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) 的排序规则时，UNICODE 会返回一个在 000000 到 10FFFF 范围内的 UTF-16 码位。 有关 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 中的 Unicode 支持的详细信息，请参阅[排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn)。 
+在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 版本以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，UNICODE 函数返回范围 000000 - 00FFFF（它能够表示 Unicode 基本多文种平面 (BMP) 中的 65,535 个字符）内的 UCS-2 码位。 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始，若使用启用了[补充字符 (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) 的排序规则时，UNICODE 会返回一个在 000000 到 10FFFF 范围内的 UTF-16 码位。 有关 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 中的 Unicode 支持的详细信息，请参阅[排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn)。 
   
 ## <a name="examples"></a>示例  
   

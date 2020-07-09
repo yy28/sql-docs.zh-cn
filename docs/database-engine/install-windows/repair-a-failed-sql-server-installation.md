@@ -1,5 +1,6 @@
 ---
 title: 修复失败的 SQL Server 安装 | Microsoft Docs
+deescription: This article describes the scenarios where you can try a repair operation to fix failed SQL Server installation.
 ms.custom: ''
 ms.date: 09/08/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: 90c11b28-892b-44d6-978e-0eee48c75b7d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9130fd4fae0660008ede059418179b1bb9777a9e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3ba82179f31d8e6cef2e3e318187c26f448e8219
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67990836"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900318"
 ---
 # <a name="repair-a-failed-sql-server-installation"></a>修复失败的 SQL Server 安装
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 可以在以下情况下使用修复操作：  
   

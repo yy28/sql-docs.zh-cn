@@ -11,16 +11,16 @@ ms.assetid: d431f216-82cf-4d97-825e-bb35d3d53a45
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 725dbc3306f9ad9616b5cbeca2d96249dca1c4a8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bed32b21fe1e6c249c6de30779c28d0350e2a639
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165782"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85977200"
 ---
 # <a name="getting-started-with-system-versioned-temporal-tables"></a>由系统控制版本的时态表入门
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 根据你的方案，你可以创建新的系统版本控制临时表，或通过将临时属性添加到现有的表架构修改现有的系统版本控制临时表。 修改临时表中的数据时，系统将生成对应用程序和最终用户透明的版本历史记录。 因此，使用系统版本控制临时表时，不需要对修改表或查询最新（实际）状态的数据的方式进行任何更改。
 

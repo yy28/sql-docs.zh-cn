@@ -9,16 +9,16 @@ ms.date: 04/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: c787409d4e8772d89fc748d39c605506f5dcb520
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ff058b2e326399fa6d04503d984d540fba8efc1b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216186"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896976"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>将 Linux 主机上的 SQL Server 加入 Active Directory 域
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 本文提供有关如何将 SQL Server Linux 主机加入 Active Directory (AD) 域的常规指南。 有两种方法：使用内置 SSSD 包或使用第三方 Active Directory 提供程序。 第三方域加入产品的示例包括 [PowerBroker 标识服务 (PBIS)](https://www.beyondtrust.com/)、[One Identity](https://www.oneidentity.com/products/authentication-services/) 和 [Centrify](https://www.centrify.com/)。 本指南涵盖用于检查 Active Directory 配置的步骤。 但本指南不提供在使用第三方实用程序时如何将计算机加入域的相关说明。
 

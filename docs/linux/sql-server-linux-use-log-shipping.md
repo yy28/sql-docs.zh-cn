@@ -3,20 +3,20 @@ title: 为 Linux 上的 SQL Server 配置日志传送
 description: 本教程举例说明如何使用日志传送将 Linux 上的 SQL Server 实例复制到辅助实例。
 author: VanMSFT
 ms.author: vanto
-ms.date: 04/19/2017
+ms.date: 07/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 8bc7fa51eeb5d02400b15556a3bec06ce721c1de
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7d32d85ef52ac5e6dc687ed32e7283540240ce2b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73240708"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897201"
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>Linux 上的日志传送入门
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 SQL Server 日志传送是一种 HA 配置，支持将数据库从主服务器复制到一个或多个辅助服务器上。 简单地说，可将源数据库的备份还原到辅助服务器上。 随后，主服务器会定期创建事务日志备份，辅助服务器会还原备份，同时更新数据库的次要副本。 
 
@@ -85,11 +85,13 @@ SQL Server 日志传送是一种 HA 配置，支持将数据库从主服务器�
 
 -   创建文件以存储凭据。 使用最近为 mssql Samba 帐户设置的密码 
 
+    ```console
         vim /var/opt/mssql/.tlogcreds
         #Paste the following in .tlogcreds
         username=mssql
         domain=<domain>
         password=<password>
+    ```
 
 -   运行以下命令创建空目录，用于装载并正确设置权限和所有权
     ```bash   
@@ -102,8 +104,10 @@ SQL Server 日志传送是一种 HA 配置，支持将数据库从主服务器�
 
 -   将此行添加到 etc/fstab 以保留共享 
 
+    ```console
         //<ip_address_of_primary_server>/tlogs /var/opt/mssql/tlogs cifs credentials=/var/opt/mssql/.tlogcreds,ro,uid=mssql,gid=mssql 0 0
-        
+    ```
+
 -   装载共享
     ```bash   
     sudo mount -a
@@ -118,11 +122,12 @@ SQL Server 日志传送是一种 HA 配置，支持将数据库从主服务器�
     TO DISK = '/var/opt/mssql/tlogs/SampleDB.bak'
     GO
     ```
+
     ```sql
     DECLARE @LS_BackupJobId AS uniqueidentifier 
     DECLARE @LS_PrimaryId   AS uniqueidentifier 
     DECLARE @SP_Add_RetCode As int 
-    EXEC @SP_Add_RetCode = master.dbo.sp_add_log_shipping_primary_database 
+    EXECUTE @SP_Add_RetCode = master.dbo.sp_add_log_shipping_primary_database 
              @database = N'SampleDB' 
             ,@backup_directory = N'/var/opt/mssql/tlogs' 
             ,@backup_share = N'/var/opt/mssql/tlogs' 
@@ -142,7 +147,7 @@ SQL Server 日志传送是一种 HA 配置，支持将数据库从主服务器�
     DECLARE @LS_BackUpScheduleUID   As uniqueidentifier 
     DECLARE @LS_BackUpScheduleID    AS int 
 
-    EXEC msdb.dbo.sp_add_schedule 
+    EXECUTE msdb.dbo.sp_add_schedule 
             @schedule_name =N'LSBackupSchedule' 
             ,@enabled = 1 
             ,@freq_type = 4 
@@ -157,19 +162,19 @@ SQL Server 日志传送是一种 HA 配置，支持将数据库从主服务器�
             ,@schedule_uid = @LS_BackUpScheduleUID OUTPUT 
             ,@schedule_id = @LS_BackUpScheduleID OUTPUT 
 
-    EXEC msdb.dbo.sp_attach_schedule 
+    EXECUTE msdb.dbo.sp_attach_schedule 
             @job_id = @LS_BackupJobId 
             ,@schedule_id = @LS_BackUpScheduleID  
 
-    EXEC msdb.dbo.sp_update_job 
+    EXECUTE msdb.dbo.sp_update_job 
             @job_id = @LS_BackupJobId 
             ,@enabled = 1 
             
     END 
 
-    EXEC master.dbo.sp_add_log_shipping_alert_job 
+    EXECUTE master.dbo.sp_add_log_shipping_alert_job 
 
-    EXEC master.dbo.sp_add_log_shipping_primary_secondary 
+    EXECUTE master.dbo.sp_add_log_shipping_primary_secondary 
             @primary_database = N'SampleDB' 
             ,@secondary_server = N'<ip_address_of_secondary_server>' 
             ,@secondary_database = N'SampleDB' 
@@ -190,7 +195,7 @@ SQL Server 日志传送是一种 HA 配置，支持将数据库从主服务器�
     DECLARE @LS_Secondary__SecondaryId  AS uniqueidentifier 
     DECLARE @LS_Add_RetCode As int 
 
-    EXEC @LS_Add_RetCode = master.dbo.sp_add_log_shipping_secondary_primary 
+    EXECUTE @LS_Add_RetCode = master.dbo.sp_add_log_shipping_secondary_primary 
             @primary_server = N'<ip_address_of_primary_server>' 
             ,@primary_database = N'SampleDB' 
             ,@backup_source_directory = N'/var/opt/mssql/tlogs/' 
@@ -209,7 +214,7 @@ SQL Server 日志传送是一种 HA 配置，支持将数据库从主服务器�
     DECLARE @LS_SecondaryCopyJobScheduleUID As uniqueidentifier 
     DECLARE @LS_SecondaryCopyJobScheduleID  AS int 
 
-    EXEC msdb.dbo.sp_add_schedule 
+    EXECUTE msdb.dbo.sp_add_schedule 
             @schedule_name =N'DefaultCopyJobSchedule' 
             ,@enabled = 1 
             ,@freq_type = 4 
@@ -224,14 +229,14 @@ SQL Server 日志传送是一种 HA 配置，支持将数据库从主服务器�
             ,@schedule_uid = @LS_SecondaryCopyJobScheduleUID OUTPUT 
             ,@schedule_id = @LS_SecondaryCopyJobScheduleID OUTPUT 
 
-    EXEC msdb.dbo.sp_attach_schedule 
+    EXECUTE msdb.dbo.sp_attach_schedule 
             @job_id = @LS_Secondary__CopyJobId 
             ,@schedule_id = @LS_SecondaryCopyJobScheduleID  
 
     DECLARE @LS_SecondaryRestoreJobScheduleUID  As uniqueidentifier 
     DECLARE @LS_SecondaryRestoreJobScheduleID   AS int 
 
-    EXEC msdb.dbo.sp_add_schedule 
+    EXECUTE msdb.dbo.sp_add_schedule 
             @schedule_name =N'DefaultRestoreJobSchedule' 
             ,@enabled = 1 
             ,@freq_type = 4 
@@ -246,7 +251,7 @@ SQL Server 日志传送是一种 HA 配置，支持将数据库从主服务器�
             ,@schedule_uid = @LS_SecondaryRestoreJobScheduleUID OUTPUT 
             ,@schedule_id = @LS_SecondaryRestoreJobScheduleID OUTPUT 
 
-    EXEC msdb.dbo.sp_attach_schedule 
+    EXECUTE msdb.dbo.sp_attach_schedule 
             @job_id = @LS_Secondary__RestoreJobId 
             ,@schedule_id = @LS_SecondaryRestoreJobScheduleID  
             
@@ -255,7 +260,7 @@ SQL Server 日志传送是一种 HA 配置，支持将数据库从主服务器�
     IF (@@ERROR = 0 AND @LS_Add_RetCode = 0) 
     BEGIN 
 
-    EXEC @LS_Add_RetCode2 = master.dbo.sp_add_log_shipping_secondary_database 
+    EXECUTE @LS_Add_RetCode2 = master.dbo.sp_add_log_shipping_secondary_database 
             @secondary_database = N'SampleDB' 
             ,@primary_server = N'<ip_address_of_primary_server>' 
             ,@primary_database = N'SampleDB' 
@@ -272,11 +277,11 @@ SQL Server 日志传送是一种 HA 配置，支持将数据库从主服务器�
     IF (@@error = 0 AND @LS_Add_RetCode = 0) 
     BEGIN 
 
-    EXEC msdb.dbo.sp_update_job 
+    EXECUTE msdb.dbo.sp_update_job 
             @job_id = @LS_Secondary__CopyJobId 
             ,@enabled = 1 
 
-    EXEC msdb.dbo.sp_update_job 
+    EXECUTE msdb.dbo.sp_update_job 
             @job_id = @LS_Secondary__RestoreJobId 
             ,@enabled = 1 
 
@@ -291,7 +296,7 @@ SQL Server 日志传送是一种 HA 配置，支持将数据库从主服务器�
     USE msdb ;  
     GO  
 
-    EXEC dbo.sp_start_job N'LSBackup_SampleDB' ;  
+    EXECUTE dbo.sp_start_job N'LSBackup_SampleDB' ;  
     GO  
     ```
 
@@ -301,9 +306,9 @@ SQL Server 日志传送是一种 HA 配置，支持将数据库从主服务器�
     USE msdb ;  
     GO  
 
-    EXEC dbo.sp_start_job N'LSCopy_SampleDB' ;  
+    EXECUTE dbo.sp_start_job N'LSCopy_SampleDB' ;  
     GO  
-    EXEC dbo.sp_start_job N'LSRestore_SampleDB' ;  
+    EXECUTE dbo.sp_start_job N'LSRestore_SampleDB' ;  
     GO  
     ```
  - 通过执行以下命令验证日志传送故障转移是否正常运行

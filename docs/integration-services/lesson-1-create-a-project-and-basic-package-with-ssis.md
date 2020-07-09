@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ff31579a425f9e86fed11811c9d0a42c3113ee15
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 662fcb31c7a633be5186f93943af318316e7ff8d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288131"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900962"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>第 1 课：使用 SSIS 创建项目和基本包
 
@@ -50,7 +50,8 @@ ms.locfileid: "79288131"
   
 下面是 SampleCurrencyData.txt 文件中的源数据示例：  
   
-<pre>1.00070049USD9/3/05 0:001.001201442  
+```
+1.00070049USD9/3/05 0:001.001201442  
 1.00020004USD9/4/05 0:001  
 1.00020004USD9/5/05 0:001.001201442  
 1.00020004USD9/6/05 0:001  
@@ -59,7 +60,8 @@ ms.locfileid: "79288131"
 1.00070049USD9/9/05 0:001.001502253  
 1.00070049USD9/10/05 0:000.99990001  
 1.00020004USD9/11/05 0:001.001101211  
-1.00020004USD9/12/05 0:000.99970009</pre>  
+1.00020004USD9/12/05 0:000.99970009
+```
   
 在使用平面文件源数据时，需要了解平面文件连接管理器如何解释平面文件数据，这一点很重要。 如果平面文件源是 Unicode 编码的，则平面文件连接管理将所有列定义为 [DT_WSTR]，默认列宽为 50。 如果平面文件源是 ANSI 编码的，则将列定义为 [DT_STR]，默认列宽为 50。 可能必须更改这些默认设置，才能使字符串列类型更适用于你的数据。 需要查看目标的数据类型，然后在平面文件连接管理器中选择该类型。  
   

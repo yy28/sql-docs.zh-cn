@@ -26,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: d4a1fdec3f27d8086da02b5269c1240c40bc89d0
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 9b76f2e0287526d9d67dfa878446ce68410e0300
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633282"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999172"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 在数据库中创建列主密钥元数据对象。 列主密钥元数据条目表示存储在外部密钥存储中的密钥。 使用 [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 或[具有安全 enclave 的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md) 时，密钥会保护（加密）列加密密钥。 多列主密钥允许定期密钥轮换，以增强安全性。 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的对象资源管理器或 PowerShell 在密钥存储中创建列主密钥，并在数据库中创建其相关元数据对象。 有关详细信息，请参阅 [Always Encrypted 密钥管理概述](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)。  
   

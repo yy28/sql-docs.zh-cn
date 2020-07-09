@@ -9,16 +9,16 @@ ms.date: 01/10/2018
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 729aacf69f8aa36964f33c0bcb282351a67ab444
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 3db39ed328ca37cbc0eb03b2ce4f8cdbcda268dd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635434"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902314"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>使用 Azure Kubernetes 服务 (AKS) 在 Kubernetes 中部署 SQL Server 容器
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 了解如何在 Azure Kubernetes 服务 (AKS) 中的 Kubernetes 上配置 SQL Server 实例，并利用持久性存储实现高可用性 (HA)。 该解决方案提供复原能力。 如果 SQL Server 实例发生故障，Kubernetes 会自动在新 Pod 中重新创建实例。 Kubernetes 还针对节点故障提供复原能力。
 
@@ -160,12 +160,15 @@ Kubernetes 1.6 及更高版本支持[存储类](https://kubernetes.io/docs/conce
 1. 创建用于描述部署的清单（YAML 文件）。 下面的示例描述了部署，包括基于 SQL Server 容器映像的容器。
 
    ```yaml
-   apiVersion: apps/v1beta1
+   apiVersion: apps/v1
    kind: Deployment
    metadata:
      name: mssql-deployment
    spec:
      replicas: 1
+     selector:
+        matchLabels:
+          app: mssql
      template:
        metadata:
          labels:

@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 59e2f6c4321b1ccd90a66dd8e7466a3e0ccb490e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4c382b7f04b063ade451ee54d480db906c62e482
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216799"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899093"
 ---
 # <a name="operate-always-on-availability-groups-on-linux"></a>运行 Linux 上的 Always On 可用性组
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 ## <a name="upgrade-availability-group"></a>升级可用性组
 

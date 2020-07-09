@@ -18,16 +18,16 @@ ms.assetid: 2163bc7a-3816-4304-9c40-8954804f5465
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: d828577dbf19440e6f29fc6ae05a2582ab2e0863
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 491336ff6f405306fe7d74bd97769981ed909bfa
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824204"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85995085"
 ---
 # <a name="string_escape-transact-sql"></a>STRING_ESCAPE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 对文本中的特殊字符进行转义并返回有转义字符的文本。 STRING_ESCAPE 是 SQL Server 2016 中引入的一个确定性的函数  。 
   
@@ -101,13 +101,13 @@ SET @json = FORMATMESSAGE('{ "id": %d,"name": "%s", "surname": "%s" }',
   
 ## <a name="see-also"></a>另请参阅
 
- [CONCAT (Transact-SQL)](../../t-sql/functions/concat-transact-sql.md)  
- [CONCAT_WS (Transact-SQL)](../../t-sql/functions/concat-ws-transact-sql.md)  
- [FORMATMESSAGE (Transact-SQL)](../../t-sql/functions/formatmessage-transact-sql.md)  
- [QUOTENAME (Transact-SQL)](../../t-sql/functions/quotename-transact-sql.md)  
- [REPLACE (Transact-SQL)](../../t-sql/functions/replace-transact-sql.md)  
- [REVERSE (Transact-SQL)](../../t-sql/functions/reverse-transact-sql.md)  
- [STRING_AGG (Transact-SQL)](../../t-sql/functions/string-agg-transact-sql.md)  
- [STUFF (Transact-SQL)](../../t-sql/functions/stuff-transact-sql.md)  
- [TRANSLATE (Transact-SQL)](../../t-sql/functions/translate-transact-sql.md)  
- [字符串函数 (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)
+- [CONCAT (Transact-SQL)](../../t-sql/functions/concat-transact-sql.md)  
+- [CONCAT_WS (Transact-SQL)](../../t-sql/functions/concat-ws-transact-sql.md)  
+- [FORMATMESSAGE (Transact-SQL)](../../t-sql/functions/formatmessage-transact-sql.md)  
+- [QUOTENAME (Transact-SQL)](../../t-sql/functions/quotename-transact-sql.md)  
+- [REPLACE (Transact-SQL)](../../t-sql/functions/replace-transact-sql.md)  
+- [REVERSE (Transact-SQL)](../../t-sql/functions/reverse-transact-sql.md)  
+- [STRING_AGG (Transact-SQL)](../../t-sql/functions/string-agg-transact-sql.md)  
+- [STUFF (Transact-SQL)](../../t-sql/functions/stuff-transact-sql.md)  
+- [TRANSLATE (Transact-SQL)](../../t-sql/functions/translate-transact-sql.md)  
+- [字符串函数 (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)

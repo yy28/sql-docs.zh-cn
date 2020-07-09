@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3730a4a6cff31098df9d081457fb233727096de5
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 951a6967e51d877efdd68b4f4a6f118c5ec1e6e7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922357"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897344"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>监视 Always On 可用性组的性能
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Always On 可用性组的性能方面对维护任务关键型数据库的服务级别协议 (SLA) 至关重要。 了解可用性组如何将日志传送到次要副本有助于估计可用性实现的恢复时间目标 (RTO) 和恢复点目标 (RPO)，并识别执行效果不佳的可用性组或副本中的瓶颈。 本文介绍同步过程，演示如何计算一些关键指标，并提供一些常见性能故障排除方案的链接。  
    
 ##  <a name="data-synchronization-process"></a>数据同步过程  

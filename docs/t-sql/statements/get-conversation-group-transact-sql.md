@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 4da8a855-33c0-43b2-a49d-527487cb3b5c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d0ede71391f31096191255c5a8fee2051ad6f696
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3fe4dd0be7b453bfa01feac2b60f1ec6a915320b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72252185"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899172"
 ---
 # <a name="get-conversation-group-transact-sql"></a>GET CONVERSATION GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   为下一个要收到的消息返回会话组标识符，并锁定包含消息的会话的会话组。 会话组标识符可用于在检索消息本身之前检索会话状态信息。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "72252185"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
   
 [ WAITFOR ( ]  
    GET CONVERSATION GROUP @conversation_group_id  
@@ -72,12 +72,12 @@ ms.locfileid: "72252185"
  要从中获取会话组的队列的名称。  
   
  TIMEOUT timeout   
- 指定 Service Broker 等待消息到达队列的时间（毫秒）。 该子句只能与 WAITFOR 子句一起使用。 如果使用 WAITFOR 的语句不包括该子句，或者 timeout  为 -1，则等待时间没有限制。 如果超时时间已到，则 GET CONVERSATION GROUP 将 \@conversation_group_id 变量设置为 NULL。  
+ 指定 Service Broker 等待消息到达队列的时间（毫秒）。 该子句只能与 WAITFOR 子句一起使用。 如果使用 WAITFOR 的语句不包括该子句，或者 timeout  为 -1，则等待时间没有限制。 如果超时时间已到，则 GET CONVERSATION GROUP 将 *conversation_group_id 变量设置为 NULL\@* 。  
   
 ## <a name="remarks"></a>备注  
   
 > [!IMPORTANT]  
->  如果 GET CONVERSATION GROUP 语句不是批处理或存储过程中的第一个语句，则必须使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句终止符分号 (;) 终止前面的语句。  
+>  如果 GET CONVERSATION GROUP 语句不是批处理或存储过程中的第一个语句，则必须使用  **语句终止符分号 (;** [!INCLUDE[tsql](../../includes/tsql-md.md)]) 终止前面的语句。  
   
  如果 GET CONVERSATION GROUP 语句中指定的队列不可用，则该语句将失败，并返回一个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 错误。  
   

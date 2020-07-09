@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d76d91b2a083f06ea02951957bdd7e43b9092dea
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9a6ca6bf2fd3f17ecc9d252f4ed992c6a609866a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288541"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900901"
 ---
 # <a name="use-automatic-seeding-to-initialize-a-secondary-replica-for-an-always-on-availability-group"></a>使用自动种子设定初始化 AlwaysOn 可用性组的辅助副本
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 在 SQL Server 2012 和 2014 中，初始化 SQL Server Always On 可用性组中的次要副本的唯一方法是使用备份、复制和还原。 SQL Server 2016 引入了用于初始化次要副本的新功能“自动种子设定”  。 自动种子设定使用日志流传输将使用 VDI 的备份流式传输到使用所配置终结点的可用性组的每个数据库的次要副本。 最初创建可用性组或将数据库添加到可用性组时，可以使用此新功能。 支持 AlwaysOn 可用性组的所有 SQL Server 版本都支持自动种子设定，并可与传统可用性组和[分布式可用性组](distributed-availability-groups.md)一起使用。
 

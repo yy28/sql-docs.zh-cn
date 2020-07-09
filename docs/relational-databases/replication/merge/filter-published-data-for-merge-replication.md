@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 46c5023d-7a3b-4455-becc-e159fcb5d6c4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1e0d157b6a4f7f08d068dc8da75c42f4ad924044
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fdfd7525ade2500ee144bb57c030350a532ded64
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68033257"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901254"
 ---
 # <a name="filter-published-data-for-merge-replication"></a>为合并复制筛选已发布数据
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   除了可使用其他类型的复制定义的静态行筛选器和列筛选器之外，合并复制还提供参数化行筛选器和联接筛选器。 有关静态行筛选器和列筛选器的详细信息，请参阅[筛选已发布数据](../../../relational-databases/replication/publish/filter-published-data.md)。  
   
  合并复制用于多种支持移动用户的应用程序；这些应用程序通常有大量订阅，每个订阅接收唯一的数据集。 与联接筛选器结合的参数化筛选器允许管理员设置一个发布（或最多少量几个发布），并为用户提供不同的数据集，这就降低了因创建多个发布而造成的管理开销。  

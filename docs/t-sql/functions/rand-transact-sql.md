@@ -17,15 +17,15 @@ helpviewer_keywords:
 - values [SQL Server], random float
 - random float value
 ms.assetid: 363c84d6-b9fa-49ba-9a75-e44f27535ff6
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: af3301961fb153dc64e7ebe98f7012ce6570d0e9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 61303b7bffb07b2a42628af54d054250308723f2
+ms.sourcegitcommit: 2e6c4104dca8680064eb64a7a79a3e15e1b4365f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67948449"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85942926"
 ---
 # <a name="rand-transact-sql"></a>RAND (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -43,7 +43,7 @@ RAND ( [ seed ] )
   
 ## <a name="arguments"></a>参数  
  seed   
- 提供种子值的整数[表达式](../../t-sql/language-elements/expressions-transact-sql.md)（tinyint、smallint 或 int）    。 如果未指定 seed，则 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 随机分配种子值。 对于指定的种子值，返回的结果始终相同。  
+ 提供种子值的整数[表达式](../../t-sql/language-elements/expressions-transact-sql.md)（tinyint、smallint 或 int）    。 如果未指定 seed，则  *随机分配种子值*[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]。 对于指定的种子值，返回的结果始终相同。  
   
 ## <a name="return-types"></a>返回类型  
  **float**  
@@ -61,7 +61,7 @@ SELECT RAND(100), RAND(), RAND()
  以下示例将产生由 RAND 函数生成的四个不同的随机数。  
   
 ```sql  
-DECLARE @counter smallint;  
+DECLARE @counter SMALLINT;  
 SET @counter = 1;  
 WHILE @counter < 5  
    BEGIN  

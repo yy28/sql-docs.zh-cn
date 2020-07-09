@@ -1,6 +1,6 @@
 ---
 title: 为全文搜索配置和管理同义词库文件
-ms.date: 12/04/2017
+ms.date: 07/01/2020
 ms.prod: sql
 ms.prod_service: search, sql-database
 ms.technology: search
@@ -14,15 +14,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
-ms.openlocfilehash: c54c1774622416adb213b31852941c934be7af24
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8d97b66622254ad911cb7bf557c1a7368b4f3d40
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056204"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897993"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>为全文搜索配置和管理同义词库文件
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 全文搜索查询可以通过使用全文搜索*同义词库*来搜索用户指定的字词的同义词。 每个同义词库为特定语言定义一组同义词。 通过开发针对全文数据定制的同义词库，您可以有效地扩大对这些数据的全文查询的范围。
 
 仅对所有 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 和 [FREETEXTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 查询以及指定 `FORMSOF THESAURUS` 子句的任意 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 和 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 查询执行同义词库匹配操作。
@@ -52,30 +52,30 @@ ms.locfileid: "74056204"
 ##  <a name="location-of-thesaurus-files"></a><a name="location"></a>同义词库文件的位置  
  同义词库文件的默认位置为：  
   
-     <SQL_Server_data_files_path>\MSSQL13.MSSQLSERVER\MSSQL\FTDATA\  
+`<SQL_Server_data_files_path>\MSSQL13.MSSQLSERVER\MSSQL\FTDATA\`
   
- 该默认位置包含以下文件：  
+该默认位置包含以下文件：  
   
 -   **特定于语言的**同义词库文件  
 
     安装程序将在上述位置安装空同义词库文件。 对于每种支持的语言，将提供一个单独的文件。 系统管理员可以自定义这些文件。  
   
-     同义词库文件的默认文件名采用以下格式：  
+    同义词库文件的默认文件名采用以下格式：  
   
-         'ts' + <three-letter language-abbreviation> + '.xml'  
+    `'ts' + <three-letter language-abbreviation> + '.xml'`
   
-     对于给定的语言，同义词库文件位置是在注册表的以下值中指定的：
+    对于给定的语言，同义词库文件位置是在注册表的以下值中指定的：
      
-        HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<instance-name>\MSSearch\<language-abbrev>  
+    `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<instance-name>\MSSearch\<language-abbrev>`
   
 -   **全局**同义词库文件  
   
-     空的全局同义词库文件 tsGlobal.xml。  
+    空的全局同义词库文件 tsGlobal.xml。  
 
 ### <a name="change-the-location-of-a-thesaurus-file"></a>更改同义词库文件的位置 
 可通过更改同义词库文件的注册表项来更改其位置和名称。 对于每种语言，同义词库文件位置是在注册表的以下值中指定的：  
   
-    HKLM\SOFTWARE\Microsoft\Microsoft SQL Server\<instance name>\MSSearch\Language\<language-abbreviation>\TsaurusFile  
+`HKLM\SOFTWARE\Microsoft\Microsoft SQL Server\<instance name>\MSSearch\Language\<language-abbreviation>\TsaurusFile`
   
  全局同义词库文件对应于 LCID 为 0 的非特定语言。 此值只能由管理员更改。  
 

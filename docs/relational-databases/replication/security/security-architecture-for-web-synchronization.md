@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 74eee587-d5f5-4d1a-bbae-7f4e3f27e23b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 736b0620ecf8f7f44611f98daa97b3cc89f3fc4f
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 5797dc0f216d0956619e2874676b917314162dd5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529251"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900005"
 ---
 # <a name="security-architecture-for-web-synchronization"></a>Web 同步的安全体系结构
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以对 Web 同步安全性的配置进行精细控制。 本主题提供了 Web 同步配置中可包括的所有组件以及这些组件之间的连接信息的综合列表。 [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  
   
  下图显示了所有可用连接，但特定拓扑中可能不需要其中的某些连接。 例如，仅当使用 FTP 传递快照时才需要与 FTP 服务器建立连接。  

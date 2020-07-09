@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 8aeadf51-286c-4748-bef2-d25858b250bf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3d44551ead01d3a51cd52501460fbc390b18a438
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4673ac13bce5cdde9a2bca5b20e73270cda8a8f7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75251063"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896656"
 ---
 # <a name="kill-query-notification-subscription-transact-sql"></a>KILL QUERY NOTIFICATION SUBSCRIPTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   从实例中删除查询通知订阅。 该语句可以删除特定订阅或所有订阅。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "75251063"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
   
 KILL QUERY NOTIFICATION SUBSCRIPTION   
    { ALL | subscription_id }  
@@ -54,7 +54,7 @@ KILL QUERY NOTIFICATION SUBSCRIPTION
 ## <a name="remarks"></a>备注  
  KILL QUERY NOTIFICATION SUBSCRIPTION 语句删除查询通知订阅，而不生成通知消息。  
   
- subscription_id 是动态管理视图 [sys.dm_qn_subscriptions (Transact-SQL)](../../relational-databases/system-dynamic-management-views/query-notifications-sys-dm-qn-subscriptions.md) 中显示的订阅 ID。  
+ subscription_id 是动态管理视图 [sys.dm_qn_subscriptions (Transact-SQL)](../../relational-databases/system-dynamic-management-views/query-notifications-sys-dm-qn-subscriptions.md) 中显示的订阅 ID  。  
   
  如果指定的订阅 ID 不存在，该语句将生成错误。  
   

@@ -25,15 +25,15 @@ ms.assetid: 0e09d210-6f23-4129-aedb-3d56b2980683
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48eaf7f49976ed8784973c950887dc92252b08e5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b6d76789908699653981077214f4df5e85bdc648
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68101903"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998892"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 删除计划高速缓存中的所有元素，通过指定计划句柄或 SQL 句柄从计划高速缓存中删除特定计划，或者删除与指定资源池相关联的所有高速缓存条目。
 
@@ -58,7 +58,7 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
 ```  
   
 ## <a name="arguments"></a>参数  
- ( { plan_handle | sql_handle | pool_name } )    
+ ( { plan_handle | sql_handle | pool_name } )     
 plan_handle 用于唯一标识已执行并且其计划驻留在计划缓存中的批处理的查询计划  。 plan_handle 为 varbinary(64)，可以从下列动态管理对象中获得计划句柄   ：  
  -   [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
  -   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
@@ -72,7 +72,7 @@ sql_handle 是要清除的批处理的 SQL 句柄  。 sql_handle 为 varbinary(
  -   [sys.dm_exec_xml_handles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)  
  -   [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
 
-pool_name 是资源调控器资源池的名称  。 pool_name 的数据类型为 sysname，可通过查询 [sys.dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md) 动态管理视图获得此参数。  
+pool_name 是资源调控器资源池的名称  。 pool_name 的数据类型为 sysname，可通过查询 [sys.dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md) 动态管理视图获得此参数   。  
  若要将资源调控器工作负荷组与资源池相关联，请查询 [sys.dm_resource_governor_workload_groups](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md) 动态管理视图。 有关会话的工作负荷组的信息，请查询 [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) 动态管理视图。  
 
   

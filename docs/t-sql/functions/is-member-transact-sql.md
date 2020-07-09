@@ -27,15 +27,15 @@ ms.assetid: 77cb68a0-19b7-4fe1-ab17-e5587699631b
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2d3a0a9b09696959ba14c97c237e9e8ef9927db6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ab3e4b428cd3f8d5c899558ac2c4e1c5089d2cb1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982923"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85980942"
 ---
 # <a name="is_member-transact-sql"></a>IS_MEMBER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   指示当前用户是否为指定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 组或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库角色的成员。 Azure Active Directory 组不支持 IS_MEMBER 函数。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "73982923"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
   
 IS_MEMBER ( { 'group' | 'role' } )  
 ```  
@@ -52,7 +52,7 @@ IS_MEMBER ( { 'group' | 'role' } )
  **'** *group* **'**  
 **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本
   
- 正在检查的 Windows 组的名称；必须采用格式 Domain\\Group 。 group 的数据类型为 sysname   。  
+ 正在检查的 Windows 组的名称；必须采用格式 Domain*Group*\\  。 group 的数据类型为 sysname   。  
   
  **'** *role* **'**  
  要检查的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 角色的名称。 role 的数据类型为 sysname，它可以包括数据库固定角色或用户定义的角色，但不能包括服务器角色   。  

@@ -22,15 +22,15 @@ ms.assetid: 8f1ed34e-8467-4512-a211-e0f43dee6584
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: db101aad22430dac56e352f606522c0d8f3e0fd3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 55486ff2c68d47248f7980bbe5269cf665638221
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82803695"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000477"
 ---
 # <a name="soundex-transact-sql"></a>SOUNDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   返回一个由四个字符组成的代码 (SOUNDEX)，用于评估两个字符串的相似性。  
   
@@ -70,7 +70,7 @@ SOUNDEX ( character_expression )
 ## <a name="examples"></a>示例  
  以下示例显示了 SOUNDEX 函数及相关的 DIFFERENCE 函数。 在第一个示例中，返回所有辅音字母的标准 `SOUNDEX` 值。 对 `SOUNDEX` 和 `Smith` 运行 `Smythe` 会返回相同的结果，因为不会包括所有元音字母、字母 `y`、双写字母和字母 `h`。  
   
-```  
+```sql
 -- Using SOUNDEX  
 SELECT SOUNDEX ('Smith'), SOUNDEX ('Smythe');  
 ```  
@@ -78,16 +78,12 @@ SELECT SOUNDEX ('Smith'), SOUNDEX ('Smythe');
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)] 对 Latin1_General 排序规则有效。  
   
 ```  
-  
------ -----   
 S530  S530    
-  
-(1 row(s) affected)  
 ```  
   
  `DIFFERENCE` 函数用于比较 `SOUNDEX` 模式结果的差异。 以下示例显示两个仅元音字母不同的字符串。 返回的差异为 `4`（可能的最小差异）。  
   
-```  
+```sql
 -- Using DIFFERENCE  
 SELECT DIFFERENCE('Smithers', 'Smythers');  
 GO  
@@ -96,15 +92,12 @@ GO
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)] 对 Latin1_General 排序规则有效。  
   
 ```  
------------   
 4             
-  
-(1 row(s) affected)  
 ```  
   
  在以下示例中，字符串的辅音字母不同；所以，返回的差异为 `2`，表示差异更大。  
   
-```  
+```sql
 SELECT DIFFERENCE('Anothers', 'Brothers');  
 GO  
 ```  
@@ -112,10 +105,7 @@ GO
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)] 对 Latin1_General 排序规则有效。  
   
 ```  
------------   
 2             
-  
-(1 row(s) affected)  
 ```  
   
 ## <a name="see-also"></a>另请参阅  

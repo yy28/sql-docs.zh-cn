@@ -22,15 +22,15 @@ ms.assetid: 52dd29ab-25d7-4fd3-a960-ac55c30c9ea9
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3ee098b61c233bb3012ab1505553873c30edd5d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 500b2bddd1cb583672583e238668c5c5d0d773b5
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74095880"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998566"
 ---
 # <a name="while-transact-sql"></a>WHILE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 
   设置重复执行 SQL 语句或语句块的条件。 只要指定的条件为真，就重复执行语句。 可以使用 BREAK 和 CONTINUE 关键字在循环内部控制 WHILE 循环中语句的执行。  
@@ -39,7 +39,7 @@ ms.locfileid: "74095880"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 WHILE Boolean_expression   
@@ -47,7 +47,7 @@ WHILE Boolean_expression
   
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 WHILE Boolean_expression   
@@ -59,7 +59,7 @@ WHILE Boolean_expression
  *Boolean_expression*  
  返回 TRUE 或 FALSE 的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)   。 如果布尔表达式中含有 SELECT 语句，则必须用括号将 SELECT 语句括起来。  
   
- {sql_statement | statement_block}   
+ {sql_statement*statement_block}*  |    
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或用语句块定义的语句分组。 若要定义语句块，请使用控制流关键字 BEGIN 和 END。  
   
  BREAK  
