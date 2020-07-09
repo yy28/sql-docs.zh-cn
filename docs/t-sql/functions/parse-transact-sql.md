@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - PARSE function
 ms.assetid: 6a2dbf10-f692-471b-9458-24d246963049
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 991d27258b37895ebb2bf54e267fd07fbe87d78e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: 412099db82b2b16e538b1b2f742dde6548b93ce6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68892503"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737994"
 ---
 # <a name="parse-transact-sql"></a>PARSE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中转换为所请求的数据类型的表达式的结果。  
   
@@ -50,7 +50,7 @@ PARSE ( string_value AS data_type [ USING culture ] )
  *区域性*  
  可选字符串，它标识对 string_value 进行格式化的区域性  。  
   
- 如果未提供 culture 参数，则使用当前会话的语言  。 可以使用 SET LANGUAGE 语句隐式或显式设置此语言。 culture 接受 .NET Framework 支持的任何区域性；它不局限于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 显式支持的语言。 如果 culture 参数无效，PARSE 将引发错误  。  
+ 如果未提供 culture 参数，则使用当前会话的语言  。 可以使用 SET LANGUAGE 语句隐式或显式设置此语言。 culture 接受 .NET Framework 支持的任何区域性；它不局限于  *显式支持的语言*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果 culture 参数无效，PARSE 将引发错误  。  
   
 ## <a name="return-types"></a>返回类型  
  返回转换为所请求的数据类型的表达式的结果。  

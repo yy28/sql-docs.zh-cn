@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 76d14fac74d806427f67eadaea3bb5363b17d88a
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 8d4f85f004d1b15e356b02f025f4297296f9ef2a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664216"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735839"
 ---
 # <a name="create-external-language-transact-sql"></a>CREATE EXTERNAL LANGUAGE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
 
 从指定的文件路径或字节流中注册数据库中的外部语言扩展。 此语句充当一种通用机制，数据库管理员使用它可在 SQL Server 支持的任何 OS 平台上注册新外部语言扩展。 有关详细信息，请参阅[语言扩展](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview)。
 

@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: d4cbc1a9-37e1-4101-97fb-e6ac30c1223e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6f171e73836331971becefd8a2aa8ccebfbc1445
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 156ee6ad9860838b1d750f523cd936cbce15e0fb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75253605"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736327"
 ---
 # <a name="percent-character-wildcard---characters-to-match-transact-sql"></a>百分比字符（通配符 - 需匹配的字符）(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   匹配包含零个或多个字符的任意字符串。 此通配符既可以用作前缀也可以用作后缀。  
   

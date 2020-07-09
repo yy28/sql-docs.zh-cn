@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 8b1ee196-69af-4f9b-9bf5-63d8ac2bc39b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3641401fbb2314bf4712cc524777a490ced01541
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 8d98470daf000115061fde1d5b8a276f1bd76a4f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000121"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85743936"
 ---
 # <a name="avoid-conflicts-with-database-operations-in-filestream-applications"></a>避免与 FILESTREAM 应用程序中的数据库操作冲突
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   使用 SqlOpenFilestream() 打开 Win32 文件句柄以读取或写入 FILESTREAM BLOB 数据的应用程序可能会遇到与在通用事务中管理的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的冲突错误。 这包括花很长时间才能完成执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或 MARS 查询。 为了有助于避免这些类型的冲突，必须精心设计应用程序。  
   
  当 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 或应用程序尝试打开 FILESTREAM BLOB 时， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 会检查关联事务上下文。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 根据打开操作是在处理 DDL 语句、DML 语句，在检索数据还是在管理事务，从而允许或拒绝请求。 下表显示 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 如何根据事务中打开的文件的类型来确定是允许还是拒绝 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  

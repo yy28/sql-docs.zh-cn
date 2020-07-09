@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 79f7270e-e4df-4f4e-bc78-2dcad6a9f140
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a6f7d15cb13546e19fd234d4b738d11d085b1360
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2eafdc653dc0caf7a9de55a607013617a369e99f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68120565"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85637177"
 ---
 # <a name="mssqlserver_8680"></a>MSSQLSERVER_8680
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>详细信息  
   
-|||  
-|-|-|  
+| Attribute | 值 |  
+| :-------- | :---- |  
 |产品名称|SQL Server|  
 |事件 ID|8680|  
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|REMOTE_ERR|  
-|消息正文|内部查询处理器错误: 查询处理器在处理远程查询阶段的过程中遇到意外错误。|  
+|消息正文|内部查询处理器错误:查询处理器在处理远程查询操作过程中遇到意外错误。|  
   
 ## <a name="explanation"></a>说明  
 内部查询处理错误。  

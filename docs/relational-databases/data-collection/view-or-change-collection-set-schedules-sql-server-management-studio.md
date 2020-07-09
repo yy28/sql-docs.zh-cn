@@ -1,7 +1,6 @@
 ---
 title: 查看或更改收集组计划
-ms.custom: seo-lt-2019
-ms.date: 03/14/2017
+ms.date: 06/03/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -18,20 +17,21 @@ helpviewer_keywords:
 ms.assetid: 26336c98-78c5-414f-8d6a-574fc3af60c4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e38b03a9e903666593567bf34eaa50c578de6825
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 8e72be7c753db0871191e44bbc431d755ddfa193
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74055323"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733808"
 ---
 # <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>查看或更改收集组计划 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]查看或更改收集组计划。  
   
  收集模式（缓存或非缓存）决定变更计划的方式。 缓存模式使用不同的计划进行收集和上载。 非缓存模式使用同一计划进行收集和上载。 每个系统数据收集组的收集模式类型如下：  
   
--    “磁盘使用情况”使用非缓存收集模式。  
+-   “磁盘使用情况”使用非缓存收集模式。  
   
 -   **“查询统计信息”** 使用缓存收集模式。  
   
@@ -41,17 +41,17 @@ ms.locfileid: "74055323"
   
 1.  在对象资源管理器中，依次展开 **“管理”** 节点、 **“数据收集”** 和 **“系统数据收集组”** 。  
   
-2.  右键单击收集组名称，然后单击“属性”[以便打开](#CollectionSet)“数据收集组属性”对话框。   
+2.  右键单击收集组名称，然后单击“属性”[以便打开](#CollectionSet)“数据收集组属性”对话框。  
   
 ### <a name="to-change-the-schedules-for-a-cached-mode-collection-set"></a>更改缓存模式收集组的计划  
   
 1.  在对象资源管理器中，依次展开 **“管理”** 节点、 **“数据收集”** 和 **“系统数据收集组”** 。  
   
-2.  右键单击使用缓存模式的收集组（如“查询统计信息”），然后单击“属性”以便打开“[数据收集组属性](#CollectionSet)”对话框。    
+2.  右键单击使用缓存模式的收集组（如“查询统计信息”），然后单击“属性”以便打开“[数据收集组属性](#CollectionSet)”对话框。   
   
 3.  可以在 **“常规”** 页上更改收集频率。 为此，请按照下列步骤进行操作：  
   
-    1.  在详细信息窗格中，双击  “收集项”表中的**Collection items**“收集频率(秒)”列中显示的数字。  
+    1.  在详细信息窗格中，双击“收集项”表中的**Collection items**“收集频率(秒)”列中显示的数字。  
   
     2.  若要提高或降低收集频率，请键入一个更小或更大的数字，然后按 Enter 存储这个新值。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "74055323"
   
 1.  在对象资源管理器中，依次展开 **“管理”** 节点、 **“数据收集”** 和 **“系统数据收集组”** 。  
   
-2.  右键单击使用非缓存模式的收集组（如  “磁盘使用情况”），然后单击  “属性”以便打开[数据收集组属性](#CollectionSet)对话框。  
+2.  右键单击使用非缓存模式的收集组（如“磁盘使用情况”），然后单击“属性”以便打开[数据收集组属性](#CollectionSet)对话框。  
   
      **“数据收集组属性”** 对话框将显示收集组属性的分页视图。  
   
@@ -110,10 +110,11 @@ ms.locfileid: "74055323"
  **数据收集和上载**  
  指定收集数据并将其上载到管理数据仓库的方式。 选取下列选项之一。  
   
-|||  
-|-|-|  
+| 选项 | 说明 |
+| :----- | :---------- |
 |**不缓存。按照相同的计划收集和上载数据。**|选择此选项后，请指定以下选项之一：<br /><br /> **计划**。 按计划收集和上载数据。 单击 **“选取”** 可从预定义的计划列表中进行选择，或单击 **“新建”** 创建新计划。<br /><br /> **按需**。 按需收集和上载数据。|  
 |**已缓存。按照一组收集频率收集数据并对其进行缓存。按照单独的计划上载缓存的数据。**|按照指定的收集频率收集数据并对其进行缓存。 按照单独的计划上载收集的数据。|  
+|||
   
  **收集项**  
  显示收集组中的收集项。 以下是针对每个收集项提供的信息：  
@@ -133,17 +134,18 @@ ms.locfileid: "74055323"
  **设置收集的数据将在管理数据仓库中保留的时间。**  
  指定收集的数据保留的时间。 选取下列选项之一。  
   
-|||  
-|-|-|  
+| 选项 | 说明 |
+| :----- | :---------- |
 |**数据保留时间**|默认情况下选择此选项，并且默认保持期为 14 天。|  
 |**无限期保留数据**|对数据保留的时间长度没有限制。|  
-  
+|||
+
  **“上载”页**  
   
  使用此页可以为由此收集组收集的数据配置上载计划。  
   
 > [!NOTE]  
->  仅当已为  “数据收集和上传”配置了  “已缓存”选项时才启用此选项卡。  
+>  仅当已为 “数据收集和上传”配置了“已缓存”选项时才启用此选项卡。  
   
  **Server**  
  显示承载管理数据仓库的服务器的名称。 有关详细信息。请参阅[配置管理数据仓库 (SQL Server Management Studio)](../../relational-databases/data-collection/configure-the-management-data-warehouse-sql-server-management-studio.md)。  

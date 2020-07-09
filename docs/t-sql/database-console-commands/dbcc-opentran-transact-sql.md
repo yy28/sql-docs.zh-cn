@@ -25,15 +25,15 @@ helpviewer_keywords:
 ms.assetid: 63163843-226f-42d3-9e2c-b634fbf06943
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 7075de83b3f2d13d80d0eb08db1d780827eddeec
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e7ccef337d7b693561ec2d328fcc3a2f8afae72c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68039079"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748925"
 ---
 # <a name="dbcc-opentran-transact-sql"></a>DBCC OPENTRAN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 DBCC OPENTRAN 可帮助识别可能阻止日志截断的活动事务。 如果在指定数据库的事务日志中存在最早的活动事务以及最早的分布式和非分布式复制事务，DBCC OPENTRAN 将显示与之相关的信息。 仅当日志中存在活动事务或数据库包含复制信息时，才显示结果。 如果日志中没有活动事务，则显示信息性消息。
   
@@ -44,7 +44,7 @@ DBCC OPENTRAN 可帮助识别可能阻止日志截断的活动事务。 如果�
   
 ## <a name="syntax"></a>语法  
   
-```sql
+```syntaxsql
 DBCC OPENTRAN   
 [   
     ( [ database_name | database_id | 0 ] )   
@@ -55,7 +55,7 @@ DBCC OPENTRAN
 ```  
   
 ## <a name="arguments"></a>参数  
- database_name | database_id| 0   
+ database_name*database_id| 0* |    
  显示其中的最早事务信息的数据库名称或 ID。 如果未指定，或者指定为 0，则使用当前数据库。 数据库名称必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。  
   
  TABLERESULTS  

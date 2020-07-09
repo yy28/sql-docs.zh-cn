@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2c806be6b0fa54431243c3062ac12d1d1229c037
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f68337ee44e052c838b29d0051631c7be495a478
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180748"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737723"
 ---
 # <a name="restore-database-options-page"></a>还原数据库（“选项”页）
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   使用 **“还原数据库”** 对话框的 **“选项”** 页可修改还原操作的行为和结果。  
   
  **使用 SQL Server Management Studio 还原数据库备份**  

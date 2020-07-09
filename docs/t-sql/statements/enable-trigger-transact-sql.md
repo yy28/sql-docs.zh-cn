@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 6e21f0ad-68d0-432f-9c7c-a119dd2d3fc9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 369dd7ec16ee530d7612222ad7e77dd6faf66e14
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 26ffe6c73d00056b9b15bd07f41349b367bef02d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73980944"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735686"
 ---
 # <a name="enable-trigger-transact-sql"></a>ENABLE TRIGGER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 启用 DML、DDL 或登录触发器。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "73980944"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 ENABLE TRIGGER { [ schema_name . ] trigger_name [ ,...n ] | ALL }  
 ON { object_name | DATABASE | ALL SERVER } [ ; ]  
 ```  
@@ -78,7 +78,7 @@ ALL SERVER
 ## <a name="examples"></a>示例  
   
 ### <a name="a-enabling-a-dml-trigger-on-a-table"></a>A. 在表中启用 DML 触发器  
-以下示例禁用在 AdventureWorks 数据库的表 `Address` 中创建的触发器 `uAddress`，然后再启用它。  
+以下示例禁用在 AdventureWorks 数据库的表 `uAddress` 中创建的触发器 `Address`，然后再启用它。  
   
 ```sql  
 DISABLE TRIGGER Person.uAddress ON Person.Address;  

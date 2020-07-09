@@ -12,15 +12,15 @@ ms.assetid: d755833a-d7eb-4973-9352-67a2fba2442a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 92550c1282689e2d6091a5af2b588a3c36b9b2d2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 19dd9d5c8f4a5c9c4d37a6f7ce54f061d8bc0e47
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68118271"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737185"
 ---
 # <a name="locktimeout-timeout-gt-0-event-class"></a>Lock:Timeout (timeout &gt; 0) 事件类
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **Lock:Timeout (timeout > 0)** 事件类指示由于其他事务持有所需资源的阻塞锁而使对资源（例如页）锁的请求超时。 此事件类除了不包括超时值为 0 的任何事件外，其行为与 **Lock:Timeout** 事件类相同。  
   
  包括你正在其中使用超时值为零的锁探测或其他进程的跟踪中的 **Lock:Timeout (timeout > 0)** 事件类。 这样您可以查看实际超时发生的位置而无需查看超时值是否为零。  

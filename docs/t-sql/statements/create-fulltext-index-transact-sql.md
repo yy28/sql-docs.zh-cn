@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7653a59cd250c2a1abe524c0b12c366de4bd0bc4
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 134320f838e2d65090599f7172283e74de87c6df
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633399"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735800"
 ---
 # <a name="create-fulltext-index-transact-sql"></a>CREATE FULLTEXT INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内数据库中的表或索引视图创建全文索引。 每个表或索引视图只允许有一个全文索引，并且每个全文索引会应用于单个表或索引视图。 全文索引最多可以包含 1024 个列。  
   

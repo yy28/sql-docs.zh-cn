@@ -1,7 +1,7 @@
 ---
 title: Hadoop 连接管理器 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 06/29/2020
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5149f7e470720a2efc99c522bd905a4a1a13f2c6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4cf042d2ab9c2d3e7c492fa008282cbcbe730f8e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77903784"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735109"
 ---
 # <a name="hadoop-connection-manager"></a>Hadoop 连接管理器
 
@@ -83,7 +83,7 @@ ms.locfileid: "77903784"
 
     计算机必须配置为工作组的成员，因为 Kerberos 领域与 Windows 域不同。 设置 Kerberos 领域并添加 KDC 服务器，如以下示例所示。 根据需要，将 `REALM.COM` 替换为各自的领域。
 
-    ```    
+    ```console
     C:> Ksetup /setdomain REALM.COM`
     C:> Ksetup /addkdc REALM.COM <your_kdc_server_address>
     ```
@@ -92,7 +92,7 @@ ms.locfileid: "77903784"
 
 2.  使用 Ksetup 命令验证配置。 输出应如以下示例所示：
 
-    ```
+    ```console
     C:> Ksetup
     default realm = REALM.COM (external)
     REALM.com:
@@ -114,7 +114,7 @@ ms.locfileid: "77903784"
 
 1.  编辑 krb5.conf 文件中的 KDC 配置。 通过引用下面的配置模板，允许 KDC 信任 Windows 域。 默认情况下，配置位于 /etc/krb5.conf。
 
-    ```
+    ```console
     [logging]
     default = FILE:/var/log/krb5libs.log
     kdc = FILE:/var/log/krb5kdc.log
@@ -162,7 +162,7 @@ ms.locfileid: "77903784"
 
 1.  运行以下 Ksetup 命令以添加一个领域条目：
 
-    ```
+    ```console
     C:> Ksetup /addkdc REALM.COM <your_kdc_server_address>
     C:> ksetup /addhosttorealmmap HDFS-service-FQDN REALM.COM
     ```
@@ -201,10 +201,10 @@ ms.locfileid: "77903784"
 
 运行以下 Ksetup 命令以添加一个领域条目。
 
-    ```
-    C:> Ksetup /addkdc REALM.COM <your_kdc_server_address>
-    C:> ksetup /addhosttorealmmap HDFS-service-FQDN REALM.COM
-    ```
+```console
+C:> Ksetup /addkdc REALM.COM <your_kdc_server_address>
+C:> ksetup /addhosttorealmmap HDFS-service-FQDN REALM.COM
+```
 
 ## <a name="see-also"></a>另请参阅  
  [Hadoop 配置单元任务](../../integration-services/control-flow/hadoop-hive-task.md)   

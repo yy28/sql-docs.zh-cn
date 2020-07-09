@@ -29,15 +29,15 @@ helpviewer_keywords:
 ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: ac274000ffdb1bcd29ebad2a2e0d0395b8daba0c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a9498c5d2705abece345533573a768e71e0b7030
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67930325"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748905"
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 收缩当前数据库的指定数据或日志文件大小。 可以使用它将一个文件中的数据移到同一文件组中的其他文件，这会清空文件，从而允许删除数据库。 可以将文件收缩到小于创建大小，同时将最小文件大小重置为新值。
   
@@ -45,7 +45,7 @@ ms.locfileid: "67930325"
   
 ## <a name="syntax"></a>语法  
   
-```sql
+```syntaxsql
   
 DBCC SHRINKFILE   
 (  
@@ -161,7 +161,7 @@ transaction with timestamp 15 and other snapshot transactions linked to
 timestamp 15 or with timestamps older than 109 to finish.  
 ```  
   
-此消息指明，时间戳早于 109（收缩操作完成的最后一个事务）的快照事务正在阻止收缩操作。 它还指明，[sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) 动态管理视图中的 transaction_sequence_num 或 first_snapshot_sequence_num 列包含值 15。 如果 transaction_sequence_num  或 first_snapshot_sequence_num  视图列包含的数字小于收缩操作完成的最后一个事务 (109)，收缩操作会等待这些事务完成。
+此消息指明，时间戳早于 109（收缩操作完成的最后一个事务）的快照事务正在阻止收缩操作。 它还指明，[sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) 动态管理视图中的 transaction_sequence_num  或 first_snapshot_sequence_num  列包含值 15。 如果 transaction_sequence_num  或 first_snapshot_sequence_num  视图列包含的数字小于收缩操作完成的最后一个事务 (109)，收缩操作会等待这些事务完成。
   
 若要解决此问题，请执行下列任务之一：
 -   终止阻止收缩操作的事务。

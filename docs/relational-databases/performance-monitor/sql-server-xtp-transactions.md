@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 443d67e4-1c7f-41d7-b18d-2d657f58c22a
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: c00e408454b4bf5b4b907e517fa430212739734e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b8da1956665775cf54da529140a10a8477cd86ad
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006991"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85741525"
 ---
 # <a name="sql-server-xtp-transactions"></a>SQL Server XTP 事务
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   SQL Server XTP 事务性能对象包括有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中涉及内存中 OLTP 事务的计数器。  
   

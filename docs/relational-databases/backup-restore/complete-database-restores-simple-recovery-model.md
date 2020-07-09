@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 49828927-1727-4d1d-9ef5-3de43f68c026
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 1b95797a5725a620d545b51ac2afb5b55464cbb9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e2ad92efd8a02f783885a72299bae6bfd77b44bf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829771"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748496"
 ---
 # <a name="complete-database-restores-simple-recovery-model"></a>完整数据库还原（简单恢复模式）
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   数据库完整还原的目的是还原整个数据库。 整个数据库在还原期间处于脱机状态。 在数据库的任何部分变为联机之前，必须将所有数据恢复到同一点，即数据库的所有部分都处于同一时间点并且不存在未提交的事务。  
   
@@ -46,11 +46,11 @@ ms.locfileid: "82829771"
 ##  <a name="overview-of-database-restore-under-the-simple-recovery-model"></a><a name="Overview"></a> 在简单恢复模式下还原数据库的概述  
  简单恢复模式下的完整数据库还原只涉及一个或两个 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 语句，具体取决于是否需要还原差异数据库备份。 如果只使用完整数据库备份，则只需还原最近的备份，如下图所示。  
   
- ![仅还原完整数据库备份](../../relational-databases/backup-restore/media/bnrr-rmsimple1-fulldbbu.gif "仅还原完整数据库备份")  
+ ![仅还原完整数据库备份](../../relational-databases/backup-restore/media/bnrr-rmsimple1-fulldbbu.png "仅还原完整数据库备份")  
   
  如果还使用差异数据库备份，则应还原最近的完整数据库备份而不恢复数据库，然后还原最近的差异数据库备份并恢复数据库。 下图显示了这一过程。  
   
- ![还原完整数据库备份和差异数据库备份](../../relational-databases/backup-restore/media/bnrr-rmsimple2-diffdbbu.gif "还原完整数据库备份和差异数据库备份")  
+ ![还原完整数据库备份和差异数据库备份](../../relational-databases/backup-restore/media/bnrr-rmsimple2-diffdbbu.png "还原完整数据库备份和差异数据库备份")  
   
 > [!NOTE]  
 >  如果你计划将数据库备份还原到其它服务器实例，请参阅 [通过备份和还原来复制数据库](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)。  

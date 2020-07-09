@@ -1,7 +1,6 @@
 ---
 title: 将收集项添加到收集组中 (T-SQL)
-ms.custom: seo-lt-2019
-ms.date: 03/07/2017
+ms.date: 06/03/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -12,15 +11,16 @@ helpviewer_keywords:
 ms.assetid: 9fe6454e-8c0e-4b50-937b-d9871b20fd13
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8b6a17bf6732221787bda5e34d42b01046b3f828
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 3fc722a36601315dac08e6b497d89737fb2f4d33
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74055591"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733904"
 ---
 # <a name="add-a-collection-item-to-a-collection-set-transact-sql"></a>将收集项添加到收集组中 (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   可以使用随数据收集器一起提供的存储过程将收集项添加到现有收集组中。  
   
  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的查询编辑器执行以下步骤。  
@@ -30,13 +30,15 @@ ms.locfileid: "74055591"
 1.  通过运行 **sp_syscollector_stop_collection_set** 存储过程停止要向其中添加收集项的收集组。 例如，若要停止名为“Test Collection Set”的收集组，请运行下列语句：  
   
     ```sql  
-    USE msdb  
-    DECLARE @csid int  
+    USE msdb;
+    DECLARE @csid int;
+
     SELECT @csid = collection_set_id  
-    FROM syscollector_collection_sets  
-    WHERE name = 'Test Collection Set'  
-    SELECT @csid  
-    EXEC dbo.sp_syscollector_stop_collection_set @collection_set_id = @csid  
+      FROM syscollector_collection_sets
+      WHERE name = 'Test Collection Set';
+
+    SELECT @csid;
+    EXEC dbo.sp_syscollector_stop_collection_set @collection_set_id = @csid;
     ```  
   
     > [!NOTE]  
@@ -45,24 +47,28 @@ ms.locfileid: "74055591"
 2.  声明要向其中添加收集项的收集组。 下面的代码提供了一个演示如何声明收集组 ID 的示例。  
   
     ```sql  
-    DECLARE @collection_set_id_1 int  
-    SELECT @collection_set_id_1 = collection_set_id FROM [msdb].[dbo].[syscollector_collection_sets]  
-    WHERE name = N'Test Collection Set'; -- name of collection set  
+    DECLARE @collection_set_id_1 int;
+
+    SELECT @collection_set_id_1 = collection_set_id
+      FROM [msdb].[dbo].[syscollector_collection_sets]
+      WHERE name = N'Test Collection Set'; -- name of collection set  
     ```  
   
 3.  声明收集器类型。 下面的代码提供了一个演示如何声明一般 T-SQL 查询收集器类型的示例。  
   
     ```sql  
-    DECLARE @collector_type_uid_1 uniqueidentifier  
-    SELECT @collector_type_uid_1 = collector_type_uid FROM [msdb].[dbo].[syscollector_collector_types]   
+    DECLARE @collector_type_uid_1 uniqueidentifier;
+
+    SELECT @collector_type_uid_1 = collector_type_uid
+       FROM [msdb].[dbo].[syscollector_collector_types]
        WHERE name = N'Generic T-SQL Query Collector Type';  
     ```  
   
      可以运行下面的代码以获取已安装收集器类型的列表：  
   
     ```sql  
-    USE msdb  
-    SELECT * from syscollector_collector_types  
+    USE msdb;
+    SELECT * from syscollector_collector_types;
     GO  
     ```  
   
@@ -70,28 +76,31 @@ ms.locfileid: "74055591"
   
     ```sql  
     DECLARE @collection_item_id int;  
+
     EXEC [msdb].[dbo].[sp_syscollector_create_collection_item]   
-    @name=N'OS Wait Stats', --name of collection item  
-    @parameters=N'  
-    <ns:TSQLQueryCollector xmlns:ns="DataCollectorType">  
-     <Query>  
-      <Value>select * from sys.dm_os_wait_stats</Value>  
-      <OutputTable>os_wait_stats</OutputTable>  
-    </Query>  
-    </ns:TSQLQueryCollector>',  
-    @collection_item_id = @collection_item_id OUTPUT,  
-    @frequency = 60,  
-    @collection_set_id = @collection_set_id_1, --- Provides the collection set ID number  
-    @collector_type_uid = @collector_type_uid_1 -- Provides the collector type UID  
-    SELECT @collection_item_id     
+      @name=N'OS Wait Stats', --name of collection item  
+      @parameters=N'  
+        <ns:TSQLQueryCollector xmlns:ns="DataCollectorType">  
+         <Query>  
+          <Value>select * from sys.dm_os_wait_stats</Value>  
+          <OutputTable>os_wait_stats</OutputTable>  
+        </Query>  
+        </ns:TSQLQueryCollector>',  
+      @collection_item_id = @collection_item_id OUTPUT,  
+      @frequency = 60,  
+      @collection_set_id = @collection_set_id_1, --- Provides the collection set ID number  
+      @collector_type_uid = @collector_type_uid_1; -- Provides the collector type UID  
+    
+    SELECT @collection_item_id;
     ```  
   
 5.  在启动已更新的收集组之前，运行以下查询来验证新的收集项是否已创建：  
   
-    ```xaml  
-    USE msdb  
-    SELECT * from syscollector_collection_sets  
-    SELECT * from syscollector_collection_items  
+    ```sql
+    USE msdb;
+    GO
+    SELECT * from syscollector_collection_sets;
+    SELECT * from syscollector_collection_items;
     GO  
     ```  
   

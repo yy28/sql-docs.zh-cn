@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: cf98f57d-5a6d-4bc3-bf10-783e460fc63d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1da1a6aa4b7a98a7ac76c32effc116efdc7020d1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 630bbbdfe62e19897ce625af92b1c16069443abe
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68140781"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733876"
 ---
 # <a name="configure-properties-of-a-data-collector"></a>配置数据收集器的属性
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   本主题将介绍如何配置数据收集器的属性。  
   
 ## <a name="data-collection-properties-general-tab"></a>数据收集属性（“常规”选项卡）  

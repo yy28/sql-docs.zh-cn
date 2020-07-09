@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: a1c94e4a-7e91-46e0-9fac-07bbbf6dd018
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b7abf15e3085c83ec3871a74ca0977bd38a443e4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 156daa4c5299d1b124d659e1b881880855ce3695
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67951445"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85637220"
 ---
 # <a name="mssqlserver_7907"></a>MSSQLSERVER_7907
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>详细信息  
   
-|||  
-|-|-|  
+| Attribute | 值 |  
+| :-------- | :---- |  
 |产品名称|SQL Server|  
 |事件 ID|7907|  
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC2_FS_INVALID_COLUMN_DIRECTORY|  
-|消息正文|表错误：分区 ID PN_ID 中的目录 'DIRECTORY' 不是有效的 FileStream 目录。|  
+|消息正文|表错误:分区 ID PN_ID 中的目录 DIRECTORY 不是有效的 FileStream 目录。|  
   
 ## <a name="explanation"></a>说明  
 列目录的名称是分区的关系引擎列 ID。 如果无法将列目录名称转换为列 ID，则该目录不是有效的列目录。  

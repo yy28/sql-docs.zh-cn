@@ -23,21 +23,21 @@ helpviewer_keywords:
 ms.assetid: 0436e4a8-ca26-4d23-93f1-e31e2a1c8bfb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f9caf29596f3a5cf610e02ffcf4f27bfacbce668
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5397d5d20edb6f989714f8ffff4dcdd15c41e3c3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68001633"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735969"
 ---
 # <a name="alter-search-property-list-transact-sql"></a>ALTER SEARCH PROPERTY LIST (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   将指定的搜索属性添加到指定的搜索属性列表中或从列表中删除该属性。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 ALTER SEARCH PROPERTY LIST list_name  
 {  
    ADD 'property_name'  
@@ -71,7 +71,7 @@ SELECT name FROM sys.registered_search_property_lists;
  property_name   
  指定要用来标识全文查询中的属性的名称。 property_name 必须唯一标识属性集中的属性  。 属性名称可以包含内部空格。 property_name 的最大长度为 256 个字符  。 此名称可以是“作者”或“家庭地址”等此类用户友好名称，也可以是 Windows 的属性规范名称，如 System.Author 或 System.Contact.HomeAddress   。  
   
- 开发人员将需要使用你为 property_name 指定的值在 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 谓词中标识该属性。 因此，在添加属性时，务必指定一个在含义上可表示由指定的属性集 GUID (property_set_guid) 和属性标识符 (property_int_id) 定义属性的值   。 有关属性名称的详细信息，请参阅本主题后面的“备注”。  
+ 开发人员将需要使用你为 property_name 指定的值在 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 谓词中标识该属性  。 因此，在添加属性时，务必指定一个在含义上可表示由指定的属性集 GUID (property_set_guid) 和属性标识符 (property_int_id) 定义属性的值   。 有关属性名称的详细信息，请参阅本主题后面的“备注”。  
   
  若要查看当前数据库的搜索属性列表中当前存在的属性的名称，请使用 [sys.registered_search_properties](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md) 目录视图，如下所示：  
   

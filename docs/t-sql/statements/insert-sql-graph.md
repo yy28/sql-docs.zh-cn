@@ -17,17 +17,17 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8c4cfba19dc16e043ba6325fb6c9acb1665a597f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5c9f43a8c3739652cabfbe4abe21fca7612e9d38
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68071174"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735467"
 ---
 # <a name="insert-sql-graph"></a>INSERT（SQL 图形）
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
-向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 `node` 或 `edge` 表格添加一行或多行。 
+向 `node` 中的 `edge` 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表格添加一行或多行。 
 
 > [!NOTE]   
 >  有关标准 TRANSACT-SQL 语句，请参阅 [INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)。
@@ -37,7 +37,7 @@ ms.locfileid: "68071174"
 ## <a name="insert-into-node-table-syntax"></a>插入节点表语法 
 插入节点表的语法与插入常规表的语法相同。 
 
-```sql
+```syntaxsql
 [ WITH <common_table_expression> [ ,...n ] ]  
 INSERT   
 {  
@@ -123,7 +123,7 @@ edge_table_column_list
 
 节点表的 BULK 插入与关系表的 BULK 插入相同。
 
-批量插入边缘表之前，必须导入节点表。 然后才可从节点表的 `$node_id` 列中提取 `$from_id` 和 `$to_id` 的值，并将其作为边插入。 
+批量插入边缘表之前，必须导入节点表。 然后才可从节点表的 `$from_id` 列中提取 `$to_id` 和 `$node_id` 的值，并将其作为边插入。 
 
   
 ### <a name="permissions"></a>权限  

@@ -28,15 +28,15 @@ helpviewer_keywords:
 ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6ee0ca48835d87c379008c1894ed63596d23ac9b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9475e53b10fc68763471441163a7905d2bcfc5bc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68048147"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735769"
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   在当前数据库中创建一个将已分区表或已分区索引的分区映射到文件组的方案。 已分区表或已分区索引的分区的个数和域在分区函数中确定。 必须首先在 [CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md) 语句中创建分区功能，然后才能创建分区方案。  
 
@@ -47,7 +47,7 @@ ms.locfileid: "68048147"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 CREATE PARTITION SCHEME partition_scheme_name  
 AS PARTITION partition_function_name  
 [ ALL ] TO ( { file_group_name | [ PRIMARY ] } [ ,...n ] )  
@@ -104,7 +104,7 @@ TO (test1fg, test2fg, test3fg, test4fg);
 |-|-|-|-|-|  
 |**文件组**|`test1fg`|`test2fg`|`test3fg`|`test4fg`|  
 |分区 |1|2|3|4|  
-|**值**|**col1** <= `1`|col1 > `1` AND col1 <= `100` |col1 > `100` AND col1 <= `1000` |**col1** > `1000`|  
+|**值**|**col1** <= `1`|col1  AND col1 > `1`   <= `100`|col1  AND col1 > `100`   <= `1000`|**col1** > `1000`|  
   
 ### <a name="b-creating-a-partition-scheme-that-maps-multiple-partitions-to-the-same-filegroup"></a>B. 创建将多个分区映射到同一个文件组的分区方案  
  如果所有分区都映射到同一个文件组，则使用 ALL 关键字。 但是，如果是多个（但不是全部）分区映射到同一个文件组，则文件组名称必须进行重复，如以下示例所示。  
@@ -124,7 +124,7 @@ TO ( test1fg, test1fg, test1fg, test2fg );
 |-|-|-|-|-|  
 |**文件组**|`test1fg`|`test1fg`|`test1fg`|`test2fg`|  
 |分区 |1|2|3|4|  
-|**值**|**col1** <= `1`|col1 > 1 AND col1 <= `100` |col1 > `100` AND col1 <= `1000` |**col1** > `1000`|  
+|**值**|**col1** <= `1`|col1 > 1 AND col1    <= `100`|col1  AND col1 > `100`   <= `1000`|**col1** > `1000`|  
   
 ### <a name="c-creating-a-partition-scheme-that-maps-all-partitions-to-the-same-filegroup"></a>C. 创建将所有分区映射到同一个文件组的分区方案  
  以下示例创建的分区函数与前面的示例相同，并且创建一个将所有分区映射到同一个文件组的分区方案。  

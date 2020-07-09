@@ -27,15 +27,15 @@ helpviewer_keywords:
 ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2693b552008760025977a4c0ed0d3f3c3065713a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 30e57f094256004d90d82df175fff9f9e2e17ddd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67912608"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735793"
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   在当前数据库中创建一个函数，该函数可根据指定列的值将表或索引的各行映射到分区。 使用 CREATE PARTITION FUNCTION 是创建已分区表或索引的第一步。 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，一张表或一个索引最多可以有 15,000 个分区。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "67912608"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 CREATE PARTITION FUNCTION partition_function_name ( input_parameter_type )  
 AS RANGE [ LEFT | RIGHT ]   
 FOR VALUES ( [ boundary_value [ ,...n ] ] )   
@@ -73,7 +73,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
  指定 boundary_value 提供的值的数目，不能超过 14,999  。 创建的分区数等于 n + 1  。 不必按顺序列出各值。 如果值未按顺序列出，则[!INCLUDE[ssDE](../../includes/ssde-md.md)]将对它们进行排序、创建函数并返回一个警告，说明未按顺序提供值。 如果 n 包括任何重复的值，则数据库引擎将返回错误  。  
   
  LEFT | RIGHT   
- 指定当间隔值由 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 按升序从左到右排序时，boundary_value [ ,...n ] 属于每个边界值间隔的哪一侧（左侧还是右侧）。 如果未指定，则默认值为 LEFT。  
+ 指定当间隔值由  *按升序从左到右排序时，boundary_value [ ,...n ] 属于每个边界值间隔的哪一侧（左侧还是右侧）*   [!INCLUDE[ssDE](../../includes/ssde-md.md)]。 如果未指定，则默认值为 LEFT。  
   
 ## <a name="remarks"></a>备注  
  分区函数的作用域被限制为在其中创建该分区函数的数据库。 在该数据库内，分区函数驻留在与其他函数的命名空间不同的一个单独命名空间内。  
@@ -103,7 +103,7 @@ AS RANGE LEFT FOR VALUES (1, 100, 1000);
   
 |分区|1|2|3|4|  
 |---------------|-------|-------|-------|-------|  
-|**值**|**col1** <= `1`|col1 > `1` AND col1 <= `100` |col1 > `100` AND col1 <=`1000` |**col1** > `1000`|  
+|**值**|**col1** <= `1`|col1  AND col1 > `1`   <= `100`|col1  AND col1 > `100`   <=`1000`|**col1** > `1000`|  
   
 ### <a name="b-creating-a-range-right-partition-function-on-an-int-column"></a>B. 对 int 列创建 RANGE RIGHT 分区函数  
  以下分区函数与上一个示例使用相同的 boundary_value [ ,...n ] 值，但它指定 RANGE RIGHT    。  
@@ -133,7 +133,7 @@ AS RANGE RIGHT FOR VALUES ('20030201', '20030301', '20030401',
   
 |分区|1|2|...|11|12|  
 |---------------|-------|-------|---------|--------|--------|  
-|**值**|**datecol** \< `February 1, 2003`|**datecol** >= `February 1, 2003` AND **datecol** \< `March 1, 2003`||**datecol** >= `November 1, 2003` AND **col1** \< `December 1, 2003`|datecol  >= `December 1, 2003`| 
+|**值**|**datecol** \< `February 1, 2003`|**datecol** >= `February 1, 2003` AND **datecol** \< `March 1, 2003`||**datecol** >= `November 1, 2003` AND **col1** \< `December 1, 2003`|datecol   >= `December 1, 2003`| 
   
 ### <a name="d-creating-a-partition-function-on-a-char-column"></a>D. 对 char 列创建分区函数  
  以下分区函数将表或索引分为四个分区。  

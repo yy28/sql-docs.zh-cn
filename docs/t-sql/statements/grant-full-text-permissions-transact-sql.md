@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: fdb64e09-222a-47fe-b08b-999264ca261d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 527e59ef18d152b4546619cf67130dc7aecbfe6a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 130476df4dd952a3c64be85392fd91a733dc734e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68050831"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735574"
 ---
 # <a name="grant-full-text-permissions-transact-sql"></a>GRANT 全文权限 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   授予全文目录或全文非索引字表权限。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68050831"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 GRANT permission [ ,...n ] ON  
     FULLTEXT   
         {  
@@ -53,7 +53,7 @@ GRANT permission [ ,...n ] ON
  permission   
  权限的名称。 本主题后面的“备注”部分中介绍了不同权限与安全对象之间的有效映射。  
   
- ON FULLTEXT CATALOG ::full-text_catalog_name  
+ ON FULLTEXT CATALOG ::full-text_catalog_name    
  指定对其授予权限的全文目录。 需要使用作用域限定符 ::  。  
   
  ON FULLTEXT STOPLIST ::full-text_stoplist_name    

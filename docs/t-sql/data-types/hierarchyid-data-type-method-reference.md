@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 69b756e0-a1df-45b3-8a24-6ded8658aefe
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 122630048b7e4ff9cef34c49bfde68177020630f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dbbc15d64e2bc6ae3ad20689303e42712ffa17fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68077913"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738215"
 ---
 # <a name="hierarchyid-data-type-method-reference"></a>hierarchyid 数据类型方法引用
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 hierarchyid 数据类型是一种长度可变的系统数据类型  。 可使用 hierarchyid 表示层次结构中的位置  。 类型为 **hierarchyid** 的列不会自动表示树。 由应用程序来生成和分配 **hierarchyid** 值，使行与行之间的所需关系反映在这些值中。
   

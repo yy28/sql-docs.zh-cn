@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: eba1643f-07c4-4500-8643-b7e90f908147
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: dbc1bd923b0e86acfd0fbae995bd6fdbd16816a2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 41a0f923e997951e52b23ed0b1c2860a8c1532b0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68042031"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736113"
 ---
 # <a name="stisclosed-geography-data-type"></a>STIsClosed（geography 数据类型）
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   如果给定的 geography 实例的起点和终点相同，则返回 1  。 如果每个包含的 geography 实例都是闭合的，则为 geography 集类型返回 1   。 如果该实例不是闭合的，则返回 0。  
   

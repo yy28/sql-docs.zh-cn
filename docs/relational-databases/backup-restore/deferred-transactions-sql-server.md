@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 6fc0f9b6-d3ea-4971-9f27-d0195d1ff718
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 90dc61256f973ce8a16d50b547c0fca41b242465
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 86f7046fed39d95748c1f0ba7a7bbf5eb045cc5a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82179244"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748411"
 ---
 # <a name="deferred-transactions-sql-server"></a>延迟的事务 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 企业版中，如果在数据库启动过程中回滚（撤消）所需的数据处于脱机状态，则损坏的事务可能延迟。 “延迟的事务”  是指前滚阶段结束时未提交的事务或遇到错误而无法回滚的事务。 因为无法回滚事务，所以事务将延迟。  
   
 > [!NOTE]  

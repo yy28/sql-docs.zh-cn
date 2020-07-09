@@ -17,17 +17,17 @@ helpviewer_keywords:
 - '@@OPTIONS function'
 - current SET options
 ms.assetid: 3d5c7f6e-157b-4231-bbb4-4645a11078b3
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: e33ca6d8afdb7aa9245bbdc6b0ad225dcd00dade
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: 4103fef5cf8faa87de2ed0870687d7880135ee04
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982472"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738057"
 ---
 # <a name="x40x40options-transact-sql"></a>@@OPTIONS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   返回有关当前 SET 选项的信息。  
   
@@ -47,9 +47,9 @@ ms.locfileid: "73982472"
   
  可以使用 SET 语句更改特定用户会话的语言和查询处理选项。 “\@\@ 选项”只能检测到设置为 ON 或 OFF 的选项  。  
   
- “\@\@ 选项”函数返回选项的位图，转换为基数为 10 的（十进制）整数。 主题[配置 user options 服务器配置选项](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)提供的表中介绍了位设置的存放位置。  
+ “\@\@ 选项”函数返回选项的位图，转换为基数为 10 的（十进制）整数  。 主题[配置 user options 服务器配置选项](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)提供的表中介绍了位设置的存放位置。  
   
- 要解码“\@\@ 选项”值，将“\@\@选项返回的整数转换为二进制，然后查找[配置用户选择服务器配置选项](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)中的表中的值 。 例如，如果 `SELECT @@OPTIONS;` 返回值 `5496`，使用 Windows 编程人员计算器 (calc.exe) 将十进制 `5496` 转换为二进制。 结果为 `1010101111000`。 最右边的字符（二进制 1、2 和 4）为 0，指示表中的前三项为关闭状态。 查询该表，可以看到这三项是 DISABLE_DEF_CNST_CHK、IMPLICIT_TRANSACTIONS 和 CURSOR_CLOSE_ON_COMMIT    。 下一项（`1000` 位置中的 ANSI_WARNINGS）为启用状态。 继续向左处理位图并向下处理选项列表。 如果最左边的选项是 0，则它们被类型转换截断。 位图 `1010101111000` 实际上是 `001010101111000`，代表全部 15 个选项。  
+ 要解码“\@\@ 选项”值，将“\@\@选项返回的整数转换为二进制，然后查找[配置用户选择服务器配置选项](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)中的表中的值   。 例如，如果 `SELECT @@OPTIONS;` 返回值 `5496`，使用 Windows 编程人员计算器 (calc.exe) 将十进制 `5496` 转换为二进制  。 结果为 `1010101111000`。 最右边的字符（二进制 1、2 和 4）为 0，指示表中的前三项为关闭状态。 查询该表，可以看到这三项是 DISABLE_DEF_CNST_CHK、IMPLICIT_TRANSACTIONS 和 CURSOR_CLOSE_ON_COMMIT    。 下一项（`1000` 位置中的 ANSI_WARNINGS）为启用状态  。 继续向左处理位图并向下处理选项列表。 如果最左边的选项是 0，则它们被类型转换截断。 位图 `1010101111000` 实际上是 `001010101111000`，代表全部 15 个选项。  
   
 ## <a name="examples"></a>示例  
   
