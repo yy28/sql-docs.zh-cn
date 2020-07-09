@@ -1,24 +1,24 @@
 ---
 title: 使用内存中 OLTP 优化 JSON 处理
-ms.date: 07/18/2017
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: genemi
 ms.technology: ''
 ms.topic: conceptual
 ms.assetid: d9c5adb1-3209-4186-bc10-8e41a26f5e57
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a2b02d5b987958abc8dd97e48f86e7b44636efad
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 30a31cb80a9aea2f99824dbf7912714870059be3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74096071"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730413"
 ---
 # <a name="optimize-json-processing-with-in-memory-oltp"></a>使用内存中 OLTP 优化 JSON 处理
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 SQL Server 和 Azure SQL 数据库允许使用 JSON 格式的文本。 为了提高处理 JSON 数据的查询性能，可以使用标准字符串列（NVARCHAR 类型）将 JSON 文档存储在内存优化表中。 将 JSON 数据存储在内存优化表中可以利用无锁内存中数据访问来提高查询性能。
 
@@ -146,7 +146,6 @@ AS BEGIN
     FROM xtp.Product
         JOIN OPENJSON(@ProductIds)
             ON ProductID = value
-
 END;
 
 CREATE PROCEDURE xtp.UpdateProductData(@ProductId int, @Property nvarchar(100), @Value nvarchar(100))
@@ -157,7 +156,6 @@ AS BEGIN
     UPDATE xtp.Product
     SET Data = JSON_MODIFY(Data, @Property, @Value)
     WHERE ProductID = @ProductId;
-
 END
 ```
 

@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: ad9a4e92-13fb-457d-996a-66ffc2d55b79
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: b9a43e33b9476c874b2d5a0f64d17d48aec46605
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ae4bcbf6a8fe10fb07d644c697c8d3ac04631555
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71816749"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728435"
 ---
 # <a name="move-user-databases"></a>移动用户数据库
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，通过在 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 语句的 FILENAME 子句中指定新的文件位置，可以将用户数据库中的数据、日志和全文目录文件移动到新位置。 此方法适用于在同一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例中移动数据库文件。 若要将数据库移动到另一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例或另一台服务器上，请使用 [备份和还原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md) 或 [分离和附加操作](../../relational-databases/databases/move-a-database-using-detach-and-attach-transact-sql.md)。  
   
 ## <a name="considerations"></a>注意事项  

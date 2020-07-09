@@ -14,15 +14,15 @@ ms.assetid: 637098af-2567-48f8-90f4-b41df059833e
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 400b028696666b188760f61c2490a218bc8bd2be
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6339bdedffb2f2ee2f8379f63e123ab2e1d71c15
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68017657"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727113"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>唯一约束和 CHECK 约束
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   UNIQUE 约束和 CHECK 约束是可用于在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中强制数据完整性的两种类型的约束。 这些是重要的数据库对象。  
   

@@ -26,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: 8e896e73-af27-4cae-a725-7a156733f3bd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ea7697294cd25412d4ac78c92f3b1bf689f1ff34
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d3b8ca20f5304dae35a54357b79c763831ceb280
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68086114"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731364"
 ---
 # <a name="waitfor-transact-sql"></a>WAITFOR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   阻止执行批处理、存储过程或事务，直到已过指定时间或时间间隔，或者指定语句发生修改或至少返回一行为止。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "68086114"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
   
 WAITFOR   
 {  
@@ -70,13 +70,13 @@ WAITFOR
  有效的 RECEIVE 语句。  
   
 > [!IMPORTANT]  
->  包含 receive_statement 的 WAITFOR 仅适用于 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 消息。 有关详细信息，请参阅 [RECEIVE (Transact-SQL)](../../t-sql/statements/receive-transact-sql.md)。  
+>  包含 receive_statement 的 WAITFOR 仅适用于  *消息*[!INCLUDE[ssSB](../../includes/sssb-md.md)]。 有关详细信息，请参阅 [RECEIVE (Transact-SQL)](../../t-sql/statements/receive-transact-sql.md)。  
   
  *get_conversation_group_statement*  
  有效的 GET CONVERSATION GROUP 语句。  
   
 > [!IMPORTANT]  
->  包含 get_conversation_group_statement 的 WAITFOR 仅适用于 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 消息。 有关详细信息，请参阅 [GET CONVERSATION GROUP (Transact-SQL)](../../t-sql/statements/get-conversation-group-transact-sql.md)。  
+>  包含 get_conversation_group_statement 的 WAITFOR 仅适用于  *消息*[!INCLUDE[ssSB](../../includes/sssb-md.md)]。 有关详细信息，请参阅 [GET CONVERSATION GROUP (Transact-SQL)](../../t-sql/statements/get-conversation-group-transact-sql.md)。  
   
  TIMEOUT timeout   
  指定消息到达队列前等待的时间（以毫秒为单位）。  

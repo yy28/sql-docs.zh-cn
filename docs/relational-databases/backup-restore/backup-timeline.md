@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: ae3565f2-ddb2-4469-a992-7531d4f9ebb8
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3a0ebd9b51a28acf77020dccadd5fd509f20c488
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 0918928c8180bffc67476bbbe8f475f9f51a06a3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220475"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728508"
 ---
 # <a name="backup-timeline"></a>备份时间线
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   使用“备份时间线”  对话框可以查找和指定备份以便将数据库还原到某个时间点。 通过单击“还原数据库（“常规”页）”  窗格上的“时间线”  可以访问“备份时间线”  对话框。 通过此对话框，您可以查看对数据库执行的还原操作的时间线。  
   
  数据库恢复顾问确保仅选择需要恢复到该时点的那些备份。 这些选定的备份构成了为您的还原操作建议的还原计划。 您应仅使用选定的备份。 有关数据库恢复顾问的信息，请参阅[还原和恢复概述 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)。  

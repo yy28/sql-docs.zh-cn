@@ -32,15 +32,15 @@ helpviewer_keywords:
 ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 3a591ccc983732fe09a74db12c4b9f6a5a713955
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 681fd78830589d680924b2d1b7d6d71c3692a7ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529420"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726545"
 ---
 # <a name="database-mail-configuration-objects"></a>数据库邮件配置对象
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   数据库邮件有两个配置对象：数据库配置对象提供了一种方法，用于配置从数据库应用程序或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理发送电子邮件时数据库邮件应使用的设置。  
   
 -   数据库邮件帐户  

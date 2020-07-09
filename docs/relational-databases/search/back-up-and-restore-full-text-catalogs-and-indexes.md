@@ -17,15 +17,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 38eaba8bdf2772fe03690773881c67306a024b64
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3458c111b32ae42a71d062df091b01b4723fc6d9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056135"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729251"
 ---
 # <a name="back-up-and-restore-full-text-catalogs-and-indexes"></a>备份和还原全文目录和索引
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   本主题说明如何备份和还原在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中创建的全文索引。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，全文目录是一个逻辑概念，并不驻留在文件组中。 因此，若要备份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的全文目录，必须识别包含属于该目录的全文索引的每个文件组。 然后您必须逐个备份这些文件组。  
   

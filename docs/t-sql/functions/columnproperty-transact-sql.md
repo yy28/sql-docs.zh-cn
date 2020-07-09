@@ -17,17 +17,17 @@ helpviewer_keywords:
 - parameters [SQL Server], properties
 - COLUMNPROPERTY function
 ms.assetid: 2408c264-6eca-4120-bb71-df043c7c2792
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: ff96377eac69c1596e0d2e2661714f82dd2cae9a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 82830fdf3143b5cc50f203f625560a5e48fc7294
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73983015"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732626"
 ---
 # <a name="columnproperty-transact-sql"></a>COLUMNPROPERTY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 此函数将返回列或参数的信息。
   
@@ -47,7 +47,7 @@ COLUMNPROPERTY ( id , column , property )
 一个表达式，其中包含列或参数的名称。
   
 *property*  
-对于 id 自变量，property 自变量指定 `COLUMNPROPERTY` 函数将返回的信息类型 。 property 自变量可具有下列值之一  ：
+对于 id 自变量，property 自变量指定  *函数将返回的信息类型*  `COLUMNPROPERTY`。 property 自变量可具有下列值之一  ：
   
 |值|说明|返回的值|  
 |---|---|---|

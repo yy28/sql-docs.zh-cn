@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 6a1793c9-9856-485c-aac5-88fda62f61a8
 author: RothJa
 ms.author: jroth
-ms.openlocfilehash: a46dd56f8891235b7caae471bd4801b27bfc4306
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 8fed086b5553e8c8f4368f7ef671c074fe342362
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664935"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729809"
 ---
 # <a name="xml-data-sql-server"></a>XML 数据 (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了一个强大的平台，以针对半结构化数据管理开发功能丰富的应用程序。 对 XML 的支持已集成到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有组件中，包括下面几项：  
   
 -   **xml** 数据类型。 可将 XML 值本机存储在根据 XML 架构集合类型化或保持非类型化的 **xml** 数据类型列中。 可为 XML 列编制索引。  

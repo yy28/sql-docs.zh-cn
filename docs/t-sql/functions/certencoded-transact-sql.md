@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 677a0719-7b9a-4f0b-bc61-41634563f924
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e81c4101d03fd6f8426b1a15a29b206a0c2be7a5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0cc70ffc8f2520c4d8c50eff24b451f5a53ffbfc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68040101"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732745"
 ---
 # <a name="certencoded-transact-sql"></a>CERTENCODED (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 此函数返回二进制格式的证书的公共部分。 此函数将证书 ID 作为参数，并返回已编码的证书。 若要创建新证书，请将二进制结果传递给 **CREATE CERTIFICATE ...WITH BINARY**。
   

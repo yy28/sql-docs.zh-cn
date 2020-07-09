@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 37246adb-814d-4113-9983-4d336de8182c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: c617d4303593588b6e86a5b9b7662a5ec690c577
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 43587a5d42afdcdefe875d1b33b6f88070f61066
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67948078"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731232"
 ---
 # <a name="asbinaryzm-geography-data-type"></a>AsBinaryZM（geography 数据类型）
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   返回 geometry 实例的开放地理空间信息联盟 (OGC) 已知二进制 (WKB) 表示形式，增加了该实例传递的任何 Z（标高）和 M（度量）值    。  
   

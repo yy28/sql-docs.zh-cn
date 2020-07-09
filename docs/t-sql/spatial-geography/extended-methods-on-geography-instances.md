@@ -12,15 +12,15 @@ dev_langs:
 ms.assetid: d1822f1b-c1dd-4f2f-ab7c-6617c05a2b6c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 00c70a3b5b7bfba6bcd04fd622b4520c3a419848
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3688e530362dd313c9e5f5b4623cce1c64d5caae
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67930461"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731209"
 ---
 # <a name="extended-methods-on-geography-instances"></a>地理实例上的扩展方法
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在开放地理空间联盟 (OGC) 地理实例上支持多种扩展方法。  
   

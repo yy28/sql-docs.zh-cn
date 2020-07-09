@@ -37,15 +37,15 @@ ms.assetid: ''
 author: bluefooted
 ms.author: pamela
 manager: amitban
-ms.openlocfilehash: cd1fc9d36200a571a3dfd0e5367d4e3e01278466
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2f1214064c11537f4752f9ec824123c3d601a1c4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68262323"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730739"
 ---
 # <a name="dbcc-clonedatabase-transact-sql"></a>DBCC CLONEDATABASE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 使用 DBCC CLONEDATABASE 生成仅限架构的克隆数据库，以调查与查询优化器相关的性能问题。
 
@@ -53,7 +53,7 @@ ms.locfileid: "68262323"
   
 ## <a name="syntax"></a>语法  
   
-```
+```syntaxsql
 DBCC CLONEDATABASE   
 (  
     source_database_name
@@ -158,7 +158,7 @@ DBCC CLONEDATABASE 使用源数据库的内部数据库快照来实现执行复�
 - PARTITION SCHEME
 - PROCEDURE   
 > [!NOTE]   
-> 从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 开始，所有版本均支持 [!INCLUDE[tsql](../../includes/tsql-md.md)] 过程。 从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3 开始支持 CLR 过程。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始支持本机编译过程。  
+> 从 [!INCLUDE[tsql](../../includes/tsql-md.md)] SP2 开始，所有版本均支持 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 过程。 从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3 开始支持 CLR 过程。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始支持本机编译过程。  
 
 - QUERY STORE（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始支持）   
 > [!NOTE]   

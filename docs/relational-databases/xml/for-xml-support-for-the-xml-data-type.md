@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 87c9ee4bff2206508cb3100604c84219b1cea1d5
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.openlocfilehash: 230492cc44948b169d52a09ee628c424e9840e82
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81387971"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729892"
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>xml 数据类型的 FOR XML 支持
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   如果 FOR XML 查询在 SELECT 子句中指定了 **xml** 类型的列，列值将映射为返回的 XML 中的元素，不管是否指定了 ELEMENTS 指令。 **xml** 类型的列中的任何 XML 声明都不是序列化的。  
   
  例如，下列查询将从 **xml** 类型的 `AdditionalContactInfo` 列中检索客户联系人信息（如 `BusinessEntityID``FirstName` 和 `LastName` 列以及电话号码）。  

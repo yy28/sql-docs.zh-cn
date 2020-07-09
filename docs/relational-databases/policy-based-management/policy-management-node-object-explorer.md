@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 7f5dfdc1-6693-4b0d-8691-2d6f06913ed9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6fc55d4d0e68d83db7c7684d9c0d5cee3982a6c2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7fcd37d6584b38c50b35248124ade0a146af956d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68086911"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730259"
 ---
 # <a name="policy-management-node-object-explorer"></a>“策略管理”节点（对象资源管理器）
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   本部分包含 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中对象资源管理器的“策略管理”节点的以下 F1 帮助主题。  
   
 -   [“创建新条件”或“打开条件”对话框 -“常规”页](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-general-page.md)  

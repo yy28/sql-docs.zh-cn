@@ -17,17 +17,17 @@ helpviewer_keywords:
 - CHECKSUM_AGG function
 - groups [SQL Server], checksum values
 ms.assetid: cdede70c-4eb5-4c92-98ab-b07787ab7222
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 6fa6d6c5736f57338474c17ac41eee55411c865b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0fd4b0459552330fcbc17b4e3409b1106abc8bd7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68105027"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732693"
 ---
 # <a name="checksum_agg-transact-sql"></a>CHECKSUM_AGG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 此函数返回组中各值的校验和。 `CHECKSUM_AGG` 将忽略 null 值。 [OVER 子句](../../t-sql/queries/select-over-clause-transact-sql.md)可以遵循 `CHECKSUM_AGG`。
   
@@ -62,7 +62,7 @@ DISTINCT
 `CHECKSUM_AGG` 具有类似于其他聚合函数的功能。 有关详细信息，请参阅[聚合函数 (Transact-SQL)](../../t-sql/functions/aggregate-functions-transact-sql.md)。
   
 ## <a name="examples"></a>示例  
-这些示例使用 `CHECKSUM_AGG` 检测 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中 `ProductInventory` 表的 `Quantity` 列中的更改。
+这些示例使用 `CHECKSUM_AGG` 检测 `Quantity` 数据库中 `ProductInventory` 表的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 列中的更改。
   
 ```sql
 --Get the checksum value before the column value is changed.  

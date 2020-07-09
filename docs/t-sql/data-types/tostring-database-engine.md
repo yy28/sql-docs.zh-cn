@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5fc11ca5-c26d-4518-9512-67aa0270f110
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: da6d7934951b683976a1a55f116def120bc515a0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9b08bb0737507f6d4fbeb8ec62b932fa6e674b08
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68000431"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729654"
 ---
 # <a name="tostring-database-engine"></a>ToString（数据库引擎）
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 返回具有 this 逻辑表示形式的字符串  。 进行从 hierarchyid 到字符串类型的转换时将隐式调用 ToString  。 作用与 [Parse（数据库引擎）](../../t-sql/data-types/parse-database-engine.md)相反。
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b74bd9d4-758e-4b94-89a0-76dcda6d8c42
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 70df8f06eb1561dd186d5be643a5863ffab5981a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a0e2081eef43cdc892e3b48457c10f9e935c5d0d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68026453"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732482"
 ---
 # <a name="crypt_gen_random-transact-sql"></a>CRYPT_GEN_RANDOM (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 此函数返回 Crypto API (CAPI) 随机生成的加密随机数。 `CRYPT_GEN_RANDOM` 返回具有指定字节数长度的十六进制数。
   
@@ -33,16 +33,16 @@ ms.locfileid: "68026453"
   
 ## <a name="syntax"></a>语法  
   
-```sql
+```syntaxsql
 CRYPT_GEN_RANDOM ( length [ , seed ] )   
 ```  
   
 ## <a name="arguments"></a>参数  
 *length*  
-`CRYPT_GEN_RANDOM` 将创建数的长度数，以字节为单位。 length 参数的数据类型为“int”且值范围在 1 和 8000 之间。 `CRYPT_GEN_RANDOM` 为此范围外的“int”  值返回 NULL。 
+`CRYPT_GEN_RANDOM` 将创建数的长度数，以字节为单位。 length 参数的数据类型为“int”  且值范围在 1 和 8000 之间  。 `CRYPT_GEN_RANDOM` 为此范围外的“int”  值返回 NULL。 
   
 seed   
-一个可选的十六进制数字，用作随机种子值。 种子的长度必须匹配 length 参数的值   。 种子参数的数据类型为“varbinary (8000)”。
+一个可选的十六进制数字，用作随机种子值。 种子的长度必须匹配 length 参数的值   。 种子参数的数据类型为“varbinary (8000)”   。
   
 ## <a name="returned-types"></a>返回类型  
 varbinary(8000) 
