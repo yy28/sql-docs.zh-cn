@@ -17,18 +17,18 @@ helpviewer_keywords:
 - expressions [SQL Server], statistical variance
 - VARP function [Transact-SQL]
 ms.assetid: ce5d2e32-01da-4e18-b8ed-a08b61d84456
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 49b699b943041ba3edf91db9e96a6e044826d854
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 29b4a61add389492fda460a47796466a8fbe5f86
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67927571"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004042"
 ---
 # <a name="varp-transact-sql"></a>VARP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   返回指定表达式中所有值的总体统计方差。  
   
@@ -68,7 +68,7 @@ VARP ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 ## <a name="examples"></a>示例  
   
 ### <a name="a-using-varp"></a>A：使用 VARP  
- 以下示例返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `SalesPerson` 表中所有奖金值的总体方差。  
+ 以下示例返回 `SalesPerson` 数据库的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 表中所有奖金值的总体方差。  
   
 ```  
 SELECT VARP(Bonus)  
@@ -79,7 +79,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="b-using-varp"></a>B：使用 VARP  
- 下面的示例返回表 `dbo.FactSalesQuota` 中的销售配额值的 `VARP`。 第一列中包含所有非重复值的方差，第二列中包含所有值（包括任何重复值）的方差。  
+ 下面的示例返回表 `VARP` 中的销售配额值的 `dbo.FactSalesQuota`。 第一列中包含所有非重复值的方差，第二列中包含所有值（包括任何重复值）的方差。  
   
 ```  
 -- Uses AdventureWorks  

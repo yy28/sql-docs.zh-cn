@@ -23,15 +23,15 @@ ms.assetid: b1019300-171a-4a1a-854f-e1e751de3565
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7469e9b19650c88986d4f0658d28a7e0481abf2a
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: a76fa18b50c62127208db9430fafcfb5668225c1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81630233"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004987"
 ---
 # <a name="set-operators---except-and-intersect-transact-sql"></a>SET 运算符 - EXCEPT 和 INTERSECT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 比较两个查询的结果，返回非重复行。  
   
@@ -56,7 +56,7 @@ INTERSECT 返回由左右双侧输入查询运算符输出的非重复行。
 ```  
   
 ## <a name="arguments"></a>参数  
-\<query_specification\__ > | ( \<query_expression\__ > )  
+\<_query\_specification_> | ( \<_query\_expression_> )  
 查询规范或查询表达式返回与来自另一个查询规范或查询表达式的数据相比较的数据。 属于 EXCEPT 或 INTERSECT 运算的列定义不一定要相同。 但必须可通过隐式转换实现可比较。 如果数据类型不同，根据[数据类型优先顺序](../../t-sql/data-types/data-type-precedence-transact-sql.md)规则确定为执行比较而运行的数据类型。  
   
 如果类型相同，但精度、确定位数或长度不同，那么结果以相同的表达式合并规则为依据。 有关详细信息，请参阅[精度、小数位数和长度 (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)。  
@@ -101,7 +101,7 @@ EXCEPT 和 INTERSECT 可在分布式查询中使用，但只在本地服务器�
 ## <a name="examples"></a>示例  
 以下示例说明如何使用 `INTERSECT` 和 `EXCEPT` 运算符。 第一个查询返回 `Production.Product` 表中的所有值，以便对 `INTERSECT` 和 `EXCEPT` 所返回的结果进行比较。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT ProductID   
@@ -111,7 +111,7 @@ FROM Production.Product ;
   
 以下查询返回 `INTERSECT` 运算符左右两侧的两个查询均返回的所有非重复值。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ProductID   
@@ -124,7 +124,7 @@ FROM Production.WorkOrder ;
   
 下面的查询从 `EXCEPT` 运算符左侧的查询返回右侧查询不返回的所有非重复值。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ProductID   
@@ -137,7 +137,7 @@ FROM Production.WorkOrder ;
   
 下面的查询从 `EXCEPT` 运算符左侧的查询返回右侧查询不返回的所有非重复值。 对上例中的表进行了互换。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ProductID   
@@ -151,7 +151,7 @@ FROM Production.Product ;
 ## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 以下示例说明如何使用 `INTERSECT` 和 `EXCEPT` 运算符。 第一个查询返回 `FactInternetSales` 表中的所有值，以便对 `INTERSECT` 和 `EXCEPT` 所返回的结果进行比较。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT CustomerKey   
@@ -161,7 +161,7 @@ FROM FactInternetSales;
   
 以下查询返回 `INTERSECT` 运算符左右两侧的两个查询均返回的所有非重复值。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT CustomerKey   
@@ -176,7 +176,7 @@ ORDER BY CustomerKey;
   
 下面的查询从 `EXCEPT` 运算符左侧的查询返回右侧查询不返回的所有非重复值。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT CustomerKey   

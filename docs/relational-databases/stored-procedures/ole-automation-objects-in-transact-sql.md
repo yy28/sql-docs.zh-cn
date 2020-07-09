@@ -15,15 +15,15 @@ ms.assetid: a887d956-4cd0-400a-aa96-00d7abd7c44b
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5e18fcc3eda85fb30f816f9010b29f6818237b20
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 35da4f74722ab7677541a09c6292c81983aaa162
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68136814"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000963"
 ---
 # <a name="ole-automation-objects-in-transact-sql"></a>Transact-SQL 中的 OLE 自动化对象
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 包括一些系统存储过程，这些存储过程允许在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理、存储过程和触发器中引用 OLE 自动化对象。 这些系统存储过程作为扩展存储过程运行，而且通过存储过程执行的 OLE 自动化对象在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例的地址空间中的运行方式与扩展存储过程的运行方式相同。  
   
  OLE 自动化存储过程使 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理能够引用 SQL-DMO 对象和自定义 OLE 自动化对象，例如公开 **IDispatch** 接口的对象。 使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 创建的自定义进程内 OLE 服务器必须有一个用于“Class_Initialize”和“Class_Terminate”子例程的错误处理程序（使用“On Error GoTo”语句指定  ）   。 **Class_Initialize** 子例程和 **Class_Terminate** 子例程中未处理的错误可能导致不可预知的错误，例如 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的访问冲突。 建议其他子例程也有错误处理程序。  

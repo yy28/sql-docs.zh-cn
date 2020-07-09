@@ -19,18 +19,18 @@ helpviewer_keywords:
 - number of group items
 - COUNT_BIG function
 ms.assetid: f2e3601f-487e-4917-bb01-47b1047908cd
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23a3dd70b96aef4c24f3aa405ce428db5c7b2321
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e21bcd83ec6f45aeb34bf4dc2dd82215cbb69123
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68026515"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011499"
 ---
 # <a name="count_big-transact-sql"></a>COUNT_BIG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 此函数返回组中找到的项数量。 `COUNT_BIG` 的操作与 [COUNT](../../t-sql/functions/count-transact-sql.md) 函数类似。 这些函数区别只在于其返回的值的数据类型。 `COUNT_BIG` 始终返回“bigint”  数据类型值。 `COUNT` 始终返回“int”  数据类型值。
   
@@ -38,7 +38,7 @@ ms.locfileid: "68026515"
   
 ## <a name="syntax"></a>语法  
   
-```sql
+```syntaxsql
 
 -- Aggregation Function Syntax  
 COUNT_BIG ( { [ [ ALL | DISTINCT ] expression ] | * } )  
@@ -60,7 +60,7 @@ DISTINCT
 *\**  
 指定 `COUNT_BIG` 应对所有行计数，以确定要返回的总表行计数。 `COUNT_BIG(*)` 不采用任何参数，也不支持使用 DISTINCT。 `COUNT_BIG(*)` 不需要“expression”  参数，因为根据定义，该函数不使用有关任何特定列的信息。 `COUNT_BIG(*)` 返回指定表中的行数，但保留副本行。 它会单独为每一行计数，包括包含 null 值的行。
   
-OVER **(** [ partition_by_clause ] [ order_by_clause ] **)**    
+OVER **(** [ partition_by_clause ] [ order_by_clause ] *)*    
 “partition_by_clause”  将 `FROM` 子句生成的结果集划分为要应用 `COUNT_BIG` 函数的分区。 如果未指定，则此函数将查询结果集的所有行视为单个组。 “order_by_clause”  确定操作的逻辑顺序。 请参阅 [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md) 获取详细信息。
   
 ## <a name="return-types"></a>返回类型

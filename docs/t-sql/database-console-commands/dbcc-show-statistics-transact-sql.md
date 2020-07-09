@@ -33,15 +33,15 @@ ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 350ece68d98f8333eb6281a5cbb6fdacf792e51a
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: d3c9b007bd8714814cedeb33c78684f82bd6dd1e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632341"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003433"
 ---
 # <a name="dbcc-show_statistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 DBCC SHOW_STATISTICS 显示表或索引视图的当前查询优化统计信息。 查询优化器使用统计信息估计查询结果中的基数或行数，这样，查询优化器可以创建高质量的查询计划。 例如，查询优化器可以使用基数估计在查询计划中选择索引查找运算符而不是索引扫描运算符，从而通过避免消耗大量资源的索引扫描来提高查询性能。
   
@@ -167,8 +167,9 @@ DBCC SHOW_STATISTICS ( table_name , target )
 -   如果使用动态数据掩码规则屏蔽了 statistics 对象中的任何列，除 SELECT 权限外，该用户还必须具有 UNMASK 权限
 
 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 之前的版本中，用户必须是表所有者，或者是 `sysadmin` 固定服务器角色、`db_owner` 固定数据库角色或 `db_ddladmin` 固定数据库角色的成员。
-[!NOTE]
-若要将行为更改回 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 之前的行为，请使用跟踪标志 9485。
+
+ > [!NOTE]
+ > 若要将行为更改回 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 之前的行为，请使用跟踪标志 9485。
   
 ## <a name="permissions-for-sssdw-and-sspdw"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]的权限  
 DBCC SHOW_STATISTICS 需要对表具有 SELECT 权限或具有下列某种角色中的成员身份：

@@ -31,15 +31,15 @@ ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
 author: juliemsft
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f13bbee1fdde92c55c98a0c2478d0dec4db5e96a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fca606be32cc3b9e73defd52a30257ad09c0e099
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75884007"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007313"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   确定特定字符串是否与指定模式相匹配。 模式可以包含常规字符和通配符。 模式匹配过程中，常规字符必须与字符串中指定的字符完全匹配。 但是，通配符可以与字符串的任意部分相匹配。 与使用 = 和 != 字符串比较运算符相比，使用通配符可使 LIKE 运算符更加灵活。 如果任一参数都不属于字符串数据类型，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]会尽量将它转换为使用字符串数据类型。  
   
@@ -47,13 +47,13 @@ ms.locfileid: "75884007"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 match_expression [ NOT ] LIKE pattern [ ESCAPE escape_character ]  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 match_expression [ NOT ] LIKE pattern  
@@ -103,7 +103,7 @@ EXEC FindEmployee @EmpLName = 'Barb';
 GO  
 ```  
   
- 当名字中包含的字符数小于 20 时，char 变量 (`@EmpLName`) 将包含尾随空格，这导致 `FindEmployee` 过程中没有行返回。 由于 `LastName` 列为 varchar 类型，因此没有尾随空格  。 因为尾随空格是有意义的，所以此过程失败。  
+ 当名字中包含的字符数小于 20 时，char 变量 (`FindEmployee`) 将包含尾随空格，这导致  **过程中没有行返回**`@EmpLName`。 由于 `LastName` 列为 varchar 类型，因此没有尾随空格  。 因为尾随空格是有意义的，所以此过程失败。  
   
  但以下示例会成功，因为没有向 varchar  变量中添加尾随空格。  
   
@@ -268,7 +268,7 @@ Gail                  Westover             305-555-0100
 ```
 
 ### <a name="c-using-the-escape-clause"></a>C. 使用 ESCAPE 子句  
- 以下示例使用 `ESCAPE` 子句和转义符在 `mytbl2` 表的列 `c1` 中查找精确字符串 `10-15%`。  
+ 以下示例使用 `ESCAPE` 子句和转义符在 `10-15%` 表的列 `c1` 中查找精确字符串 `mytbl2`。  
   
 ```sql
 USE tempdb;  
@@ -343,7 +343,7 @@ ORDER by LastName;
 ```  
   
 ### <a name="g-using-like-with-the-_-wildcard-character"></a>G. 使用带 _ 通配符的 LIKE  
- 以下示例在 `DimEmployee` 表中查找区号以 `6` 开头、以 `2` 结尾的所有电话号码。 搜索模式的末尾包含 % 通配符，用于匹配电话列值中的所有后续字符。  
+ 以下示例在 `6` 表中查找区号以 `2` 开头、以 `DimEmployee` 结尾的所有电话号码。 搜索模式的末尾包含 % 通配符，用于匹配电话列值中的所有后续字符。  
   
 ```sql  
 -- Uses AdventureWorks  

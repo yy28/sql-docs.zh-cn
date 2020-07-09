@@ -18,15 +18,15 @@ ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48139f3da39cb280a95ccff8ab9aca2efc67a13b
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 3b44f45cfcefc1e413fbb13f9c172c1a11b66dc2
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83269475"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007500"
 ---
 # <a name="columnstore-indexes-overview"></a>列存储索引：概述
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 列存储索引是存储和查询大型数据仓库事实数据表的标准。 此索引使用基于列的数据存储和查询处理，与面向行的传统存储相比，最多可实现 10 倍的数据仓库查询性能提升。 此外，与处理非压缩数据相比，处理压缩数据可将性能提升 10 倍。 自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 起，列存储索引支持操作分析，即能够对事务工作负载运行高性能实时分析。  
   

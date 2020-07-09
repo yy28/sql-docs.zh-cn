@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 03eba220-13e2-49e3-bd9d-ea9df84dc28c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 41a6cc99d3b37ed0ba1e4276d4221b1eaff2baf2
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 66cd1609132a6b112823f3233e5b1461222051b6
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632212"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000656"
 ---
 # <a name="alter-view-transact-sql"></a>ALTER VIEW (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   修改先前创建的视图。 其中包括索引视图。 ALTER VIEW 不影响相关的存储过程或触发器，并且不会更改权限。  
   

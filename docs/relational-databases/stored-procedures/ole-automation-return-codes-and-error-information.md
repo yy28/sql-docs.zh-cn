@@ -14,15 +14,15 @@ ms.assetid: 9696fb05-e9e8-4836-b359-d4de0be0eeb2
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12bfbfa82768efe361f9b067764c7b5a4c408931
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 544d38f39e8ff27eeba474c6c9d54cb48576f049
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68136759"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000943"
 ---
 # <a name="ole-automation-return-codes-and-error-information"></a>OLE 自动化返回代码和错误信息
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   OLE 自动化系统存储过程返回一个 **int** 返回代码，该代码是基础 OLE 自动化操作返回的 HRESULT。 HRESULT 为 0 表示成功。 非零的 HRESULT 是 OLE 错误代码，其形式为十六进制 0x800*nnnnn*，但是当作为存储过程返回代码中的一个 **int** 值返回时，HRESULT 的形式为 214*nnnnnnn*。  
   
  例如，向 sp_OACreate 传递一个无效的对象名 (SQLDMO.Xyzzy) 会导致该过程返回一个值为 2147221005 的 **int** HRESULT，该值用十六进制表示则为 0x800401f3。  

@@ -23,15 +23,15 @@ ms.assetid: a5d5b050-203e-4355-ac85-e08ef5ca7823
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d835e68c767866a130ebb62c26fd315f5448416e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9b8340e655cc46a856995c0baa3c3cad4036f6e2
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67947765"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004026"
 ---
 # <a name="between-transact-sql"></a>BETWEEN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   指定测试范围。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "67947765"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 test_expression [ NOT ] BETWEEN begin_expression AND end_expression  
 ```  
   
@@ -159,7 +159,7 @@ GO
 ```  
   
 ### <a name="d-using-between-with-datetime-values"></a>D. 使用带有日期时间值的 BETWEEN  
- 以下示例检索 datetime 值介于 `'20011212'` 和 `'20020105'`（含）之间的行。  
+ 以下示例检索 datetime 值介于 **和**（含）之间的行`'20011212'``'20020105'`。  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -178,7 +178,7 @@ WHERE RateChangeDate BETWEEN '20011212' AND '20020105';
  4           2002-01-05 00:00:00.000  
  ```  
  
- 由于指定查询中的日期值和 `RateChangeDate` 列中存储的 datetime 值时未指定日期的时间部分，因此该查询将检索预期行。 未指定时间部分时，将默认使用 12:00 A.M。 请注意，若某行的时间部分晚于 2002-01-05 12:00 A.M.， 则由于它处于范围之外，因此此查询不返回该行。  
+ 由于指定查询中的日期值和  **列中存储的 datetime 值时未指定日期的时间部分，因此该查询将检索预期行**`RateChangeDate`。 未指定时间部分时，将默认使用 12:00 A.M。 请注意，若某行的时间部分晚于 2002-01-05 12:00 A.M.， 则由于它处于范围之外，因此此查询不返回该行。  
   
   
 ## <a name="see-also"></a>另请参阅  

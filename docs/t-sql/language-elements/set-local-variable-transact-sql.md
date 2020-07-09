@@ -18,15 +18,15 @@ ms.assetid: d410e06e-061b-4c25-9973-b2dc9b60bd85
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 770ef448094e764bcc1ca970354941c0d1d03d4c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 701893d6f3f1ded5b3d66684a66b8640b876242b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68072286"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005005"
 ---
 # <a name="set-local_variable-transact-sql"></a>SET @local_variable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 将先前使用 DECLARE @local_variable 语句创建的指定局部变量设置为指定值  。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "68072286"
 ## <a name="syntax"></a>语法  
 SQL Server 和 Azure SQL 数据库的语法：
 
-```sql    
+```syntaxsql
 SET   
 { @local_variable  
     [ . { property_name | field_name } ] = { expression | udt_name { . | :: } method_name }  
@@ -61,13 +61,13 @@ SET
 }   
 ```  
 Azure SQL 数据仓库和并行数据仓库语法：  
-```sql  
+```syntaxsql
 SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression  
 ```  
   
 ## <a name="arguments"></a>参数  
 **@** _local_variable_  
-除 **cursor**、**text**、**ntext**、**image** 或 **table** 之外的任何类型的变量的名称。 变量名称必须以 at 符号 (@) 开头。 变量名称必须遵循有关[标识符](../../relational-databases/databases/database-identifiers.md)的规则。  
+除 **cursor**、**text**、**ntext**、**image** 或 **table** 之外的任何类型的变量的名称。 变量名称必须以 at 符号 ( **) 开头@** 。 变量名称必须遵循有关[标识符](../../relational-databases/databases/database-identifiers.md)的规则。  
   
 property_name   
 用户定义类型的属性。  
@@ -184,7 +184,7 @@ SET **@** _cursor_variable_ 的语法规则不包含 LOCAL 和 GLOBAL 关键字�
 不要在 SELECT 语句中使用变量来连接值（即，计算聚合值）。 可能发生了意外查询结果。 因为，SELECT 列表中的所有表达式（包括赋值）不一定对于每个输出行仅执行一次。 有关详细信息，请参阅[此知识库文章](https://support.microsoft.com/kb/287515)。  
   
 ## <a name="permissions"></a>权限  
-要求具有 public 角色的成员身份。 所有用户都可以使用 SET @local_variable。  
+要求具有 public 角色的成员身份。 所有用户都可以使用 SET **local_variable@**  。  
   
 ## <a name="examples"></a>示例  
   
@@ -288,7 +288,7 @@ GO
 ```  
   
 ### <a name="h-assigning-a-value-to-a-user-defined-type-variable-by-invoking-a-method-of-the-type"></a>H. 通过调用类型的方法为用户定义类型的变量赋值  
-以下示例通过调用类型的 `SetXY` 方法设置用户定义类型 point 的值。  
+以下示例通过调用类型的  **方法设置用户定义类型 point 的值**`SetXY`。  
   
 ```  
 DECLARE @p Point;  

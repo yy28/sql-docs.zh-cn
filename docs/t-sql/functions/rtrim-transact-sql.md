@@ -21,15 +21,15 @@ ms.assetid: 52fd6e8d-650c-4f66-abcf-67765aa5aa83
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 07125650ddbe4c37ffd1522ceadadced8d899b61
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: bb85e014f600ea2d88f4022694a490ef5d4a8c6c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828619"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003683"
 ---
 # <a name="rtrim-transact-sql"></a>RTRIM (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   截断所有尾随空格后返回一个字符串。  
   
@@ -55,7 +55,7 @@ RTRIM ( character_expression )
 ### <a name="a-simple-example"></a>A. 简单示例  
  以下示例将接受一个在句子结尾包含空格的字符串，并返回在句子结尾没有空格的文本。  
   
-```  
+```sql  
 SELECT RTRIM('Removes trailing spaces.   ');  
 ```  
   
@@ -66,7 +66,7 @@ SELECT RTRIM('Removes trailing spaces.   ');
 ### <a name="b-simple-example"></a>B. 简单示例  
  以下示例显示如何使用 `RTRIM` 删除尾随空格。 此时会有另一个字符串连接到第一个字符串，显示空格已删除。  
   
-```  
+```sql  
 SELECT RTRIM('Four spaces are after the period in this sentence.    ') + 'Next string.';  
 ```  
   
@@ -77,7 +77,7 @@ SELECT RTRIM('Four spaces are after the period in this sentence.    ') + 'Next s
 ### <a name="c-using-rtrim-with-a-variable"></a>C. 将 RTRIM 用于变量  
  以下示例显示如何使用 `RTRIM` 删除字符变量中的尾随空格。  
   
-```  
+```sql  
 DECLARE @string_to_trim varchar(60);  
 SET @string_to_trim = 'Four spaces are after the period in this sentence.    ';  
 SELECT @string_to_trim + ' Next string.';  
@@ -87,18 +87,11 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```sql   
- -------------------------------------------------------------------------  
- Four spaces are after the period in this sentence.     Next string.  
- 
- (1 row(s) affected)`  
- 
- -------------------------------------------------------------------------  
- Four spaces are after the period in this sentence. Next string.  
- 
- (1 row(s) affected)
- ```  
-  
+```
+Four spaces are after the period in this sentence.     Next string.
+
+Four spaces are after the period in this sentence. Next string.
+```
 
   
 ## <a name="see-also"></a>另请参阅  

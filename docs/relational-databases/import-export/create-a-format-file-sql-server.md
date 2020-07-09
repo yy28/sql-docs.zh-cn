@@ -14,15 +14,15 @@ ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 95ac8a8a42523d513a6025d85308c4e130c044c8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4b3cffe95dcdd41cc904aed95de0d91c97314670
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980479"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009922"
 ---
 # <a name="create-a-format-file-sql-server"></a>创建格式化文件 (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   当对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表进行大容量的数据导入或导出时，您可使用格式化文件提供一个灵活的系统，用于写入需要少量编辑或不需要编辑即可符合其他数据格式的数据文件，或用于从其他软件程序读取数据文件。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持两种类型的格式化文件：非 XML 格式和 XML 格式。 非 XML 格式是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]早期版本支持的原始格式。  

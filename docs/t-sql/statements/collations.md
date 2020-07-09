@@ -19,16 +19,16 @@ ms.assetid: 76763ac8-3e0d-4bbb-aa53-f5e7da021daa
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 883256cfaad3c23133b5db520f5d9ef92f4546d3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7a706193058256747ba1ec2fa71c7641cdecc4e8
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71271916"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011323"
 ---
 # <a name="collate-transact-sql"></a>COLLATE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 定义数据库或表列的排序规则，或应用于字符串表达式时的排序规则强制转换操作。 排序规则名称既可以是 Windows 排序规则名称，也可以是 SQL 排序规则名称。 如果创建数据库期间未指定，则会为数据库分配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的默认排序规则。 如果创建表列期间未指定，则会为该列分配数据库的默认排序规则。
 
@@ -36,7 +36,7 @@ ms.locfileid: "71271916"
 
 ## <a name="syntax"></a>语法
 
-```
+```syntaxsql
 COLLATE { <collation_name> | database_default }
 <collation_name> :: =
     { Windows_collation_name } | { SQL_collation_name }
@@ -46,9 +46,9 @@ COLLATE { <collation_name> | database_default }
 
 collation_name  应用于表达式、列定义或数据库定义的排序规则的名称。 collation_name 只能是指定的 Windows_collation_name 或 SQL_collation_name    。 collation_name 必须是文本值  。 collation_name 不能用变量或表达式表示  。
 
-Windows_collation_name 是 [Windows 排序规则名称](../../t-sql/statements/windows-collation-name-transact-sql.md)的排序规则名称。
+Windows_collation_name 是 [Windows 排序规则名称](../../t-sql/statements/windows-collation-name-transact-sql.md)的排序规则名称  。
 
-SQL_collation_name 是 [SQL Server 排序规则名称](../../t-sql/statements/sql-server-collation-name-transact-sql.md)的排序规则名称。
+SQL_collation_name 是 [SQL Server 排序规则名称](../../t-sql/statements/sql-server-collation-name-transact-sql.md)的排序规则名称  。
 
 database_default  使 COLLATE 子句继承当前数据库的排序规则。
 
@@ -79,7 +79,7 @@ database_default  使 COLLATE 子句继承当前数据库的排序规则。
 
 COLLATE 子句仅适用于 char、varchar、text、nchar、nvarchar 和 ntext 数据类型       。
 
-COLLATE 使用 collate_name 来引用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排序规则或 Windows 排序规则的名称，以应用于表达式、列定义或数据库定义。 collation_name 只能是指定的 Windows_collation_name 或 SQL_collation_name，并且参数必须包含文本值    。 collation_name 不能用变量或表达式表示  。
+COLLATE 使用 collate_name 来引用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排序规则或 Windows 排序规则的名称，以应用于表达式、列定义或数据库定义  。 collation_name 只能是指定的 Windows_collation_name 或 SQL_collation_name，并且参数必须包含文本值    。 collation_name 不能用变量或表达式表示  。
 
 排序规则一般由排序规则名称标识，安装过程中除外。 在安装过程中，应该为 Windows 排序规则指定根排序规则指示符（排序规则区域设置），然后指定区分或不区分大小写或重音的排序选项。
 

@@ -18,17 +18,17 @@ helpviewer_keywords:
 - functions [SQL Server], date and time
 - time [SQL Server], functions
 ms.assetid: 19ac1693-3cfa-400d-bf83-20a9cb46599a
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 3724c25854bd98a98b077fb59897ba4da250aee1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f3cd8777a05d285c49ae314c4e39aed42b5dc184
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68329288"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011428"
 ---
 # <a name="datediff_big-transact-sql"></a>DATEDIFF_BIG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 此函数返回指定的 startdate 和 enddate 之间所跨的指定 datepart 边界的计数（作为带符号大整数值）    。
   
@@ -79,7 +79,7 @@ DATEDIFF_BIG ( datepart , startdate , enddate )
 + **smalldatetime**
 + **time**
 
-对于 date，`DATEDIFF_BIG` 接受列表达式、表达式、字符串文本或用户定义的变量。 字符串文字值必须解析为 datetime  。 使用四位数年份可避免含糊不清问题。 `DATEDIFF_BIG` 从 enddate 中减去 startdate   。 为避免不确定性，请使用四位数年份。 有关两位数年份的信息，请参阅[配置两位数年份截止服务器配置选项](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)。
+对于 date，`DATEDIFF_BIG` 接受列表达式、表达式、字符串文本或用户定义的变量  。 字符串文字值必须解析为 datetime  。 使用四位数年份可避免含糊不清问题。 `DATEDIFF_BIG` 从 enddate 中减去 startdate   。 为避免不确定性，请使用四位数年份。 有关两位数年份的信息，请参阅[配置两位数年份截止服务器配置选项](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)。
   
 enddate   
 请参阅 startdate  。
@@ -90,17 +90,17 @@ enddate
 ## <a name="return-value"></a>返回值  
 返回 startdate 与 enddate 之间的 bigint 差异，以 datepart 设置的 coundary 表示     。
   
-若 bigint 的返回值超出范围（-9223372036854775808 到 9223372036854775807），`DATEDIFF_BIG` 返回错误。 与返回 int 且因此可能以分钟或更高精度溢出的 `DATEDIFF` 不同，`DATEDIFF_BIG` 仅在使用纳秒精度（其中 enddate 和 startdate 之间的差异超过 292 年 3 个月 10 天 23 小时 47 分钟 16.8547758 秒）时才会溢出   。
+若 bigint 的返回值超出范围（-9223372036854775808 到 9223372036854775807），`DATEDIFF_BIG` 返回错误  。 与返回 int 且因此可能以分钟或更高精度溢出的 `DATEDIFF` 不同，`DATEDIFF_BIG` 仅在使用纳秒精度（其中 enddate 和 startdate 之间的差异超过 292 年 3 个月 10 天 23 小时 47 分钟 16.8547758 秒）时才会溢出      。
   
-如果为 startdate 和 enddate 都只指定了时间值，并且 datepart 不是时间 datepart，则 `DATEDIFF_BIG` 返回 0   。
+如果为 startdate 和 enddate 都只指定了时间值，并且 datepart 不是时间 datepart，则 `DATEDIFF_BIG` 返回 0     。
   
 `DATEDIFF_BIG` 不使用 startdate 或 enddate 的时区偏移量部分来计算返回值   。
   
-对于用于 startdate 或 enddates 的 malldatetime 值，由于 [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) 仅精确到分钟，因此 `DATEDIFF_BIG` 始终将返回值中的秒和毫秒设置为 0 。
+对于用于 startdate 或 enddates 的 malldatetime 值，由于 [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) 仅精确到分钟，因此 `DATEDIFF_BIG` 始终将返回值中的秒和毫秒设置为 0    。
   
-如果只为某个日期数据类型变量指定时间值，`DATEDIFF_BIG` 会将所缺日期部分的值设置为默认值：`1900-01-01`。 如果只为某个时间或日期数据类型的变量指定日期值，`DATEDIFF_BIG` 会将所缺时间部分的值设置为默认值：`00:00:00`。 如果 startdate 和 enddate 中有一个只含时间部分，另一个只含日期部分，`DATEDIFF_BIG` 会将所缺时间和日期部分设置为各自的默认值 。
+如果只为某个日期数据类型变量指定时间值，`DATEDIFF_BIG` 会将所缺日期部分的值设置为默认值：`1900-01-01`。 如果只为某个时间或日期数据类型的变量指定日期值，`DATEDIFF_BIG` 会将所缺时间部分的值设置为默认值：`00:00:00`。 如果 startdate 和 enddate 中有一个只含时间部分，另一个只含日期部分，`DATEDIFF_BIG` 会将所缺时间和日期部分设置为各自的默认值   。
   
-如果 startdate 和 enddate 具有不同的日期数据类型，并且其中一个的时间部分或秒小数部分精度比另一个高，`DATEDIFF_BIG` 会将另一个的所缺部分设置为 0 。
+如果 startdate 和 enddate 具有不同的日期数据类型，并且其中一个的时间部分或秒小数部分精度比另一个高，`DATEDIFF_BIG` 会将另一个的所缺部分设置为 0   。
   
 ## <a name="datepart-boundaries"></a>datepart 边界
 以下语句具有相同的 startdate 和 enddate 值   。 这些日期是相邻的，它们在时间上相差一微秒（0.0000001 秒）。 每个语句中 startdate 与 enddate 之间的差跨其 datepart 的一个日历或时间边界    。 每个语句都返回 1。 如果 startdate 和 enddate 的年份值不同，但它们的日历周值相同，`DATEDIFF_BIG` 将对 datepart week 返回 0     。

@@ -17,15 +17,15 @@ ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f4b2bd
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8808dc2befdcb2c31218e7dc155921bb10947e14
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1c7f2ff4782923eef9ee4d91fa0a7c69239e298c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287471"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009685"
 ---
 # <a name="joins-sql-server"></a>联接 (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用内存中的排序和哈希联接技术执行排序、交集、并集、差分等操作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 利用这种类型的查询计划支持垂直表分区（有时称为分列存储）。   
 
@@ -50,7 +50,7 @@ ms.locfileid: "79287471"
 FROM first_table join_type second_table [ON (join_condition)]
 ```
 
-join_type  指定执行的联接类型：内部、外部或交叉联接。 join_condition  定义用于对每一对联接行进行求值的谓词。 下面是 FROM 子句联接规范示例：
+join_type 指定执行的联接类型：内部、外部或交叉联接。 join_condition 定义用于对每一对联接行进行求值的谓词。 下面是 FROM 子句联接规范示例：
 
 ```sql
 FROM Purchasing.ProductVendor JOIN Purchasing.Vendor
@@ -111,20 +111,20 @@ WHERE pv.BusinessEntityID=v.BusinessEntityID
 ## <a name="understanding-nested-loops-joins"></a><a name="nested_loops"></a> 了解嵌套循环联接
 如果一个联接输入很小（不到 10 行），而另一个联接输入很大而且已在其联接列上创建了索引，则索引 Nested Loops 连接是最快的联接操作，因为它们需要的 I/O 和比较都最少。 
 
-嵌套循环联接也称为嵌套迭代  ，它将一个联接输入用作外部输入表（显示为图形执行计划中的顶端输入），将另一个联接输入用作内部（底端）输入表。 外部循环逐行处理外部输入表。 内部循环会针对每个外部行执行，在内部输入表中搜索匹配行。   
+嵌套循环联接也称为嵌套迭代，它将一个联接输入用作外部输入表（显示为图形执行计划中的顶端输入），将另一个联接输入用作内部（底端）输入表。 外部循环逐行处理外部输入表。 内部循环会针对每个外部行执行，在内部输入表中搜索匹配行。   
 
-最简单的情况是，搜索时扫描整个表或索引；这称为单纯嵌套循环联接  。 如果搜索时使用索引，则称为索引嵌套循环联接  。 如果将索引生成为查询计划的一部分（并在查询完成后立即将索引破坏），则称为临时索引嵌套循环联接  。 查询优化器考虑了所有这些不同情况。   
+最简单的情况是，搜索时扫描整个表或索引；这称为单纯嵌套循环联接。 如果搜索时使用索引，则称为索引嵌套循环联接。 如果将索引生成为查询计划的一部分（并在查询完成后立即将索引破坏），则称为临时索引嵌套循环联接。 查询优化器考虑了所有这些不同情况。   
 
 如果外部输入较小而内部输入较大且预先创建了索引，则嵌套循环联接尤其有效。 在许多小事务中（如那些只影响较小的一组行的事务），索引嵌套循环联接优于合并联接和哈希联接。 但在大型查询中，嵌套循环联接通常不是最佳选择。    
 
-嵌套循环联接运算符的 OPTIMIZED 属性设置为 True  时，这意味着当内侧表很大时，使用优化的嵌套循环（或批处理排序）来最大程度地减少 I/O，而不管是否对其进行并行化。 鉴于排序本身是隐藏操作，在分析执行计划时，给定计划中的这种优化可能不是非常明显。 但是可以在计划 XML 中查找属性 OPTIMIZED，它表明嵌套循环联接可能会尝试重新排序输入行以提高 I/O 性能。
+嵌套循环联接运算符的 OPTIMIZED 属性设置为 True 时，这意味着当内侧表很大时，使用优化的嵌套循环（或批处理排序）来最大程度地减少 I/O，而不管是否对其进行并行化。 鉴于排序本身是隐藏操作，在分析执行计划时，给定计划中的这种优化可能不是非常明显。 但是可以在计划 XML 中查找属性 OPTIMIZED，它表明嵌套循环联接可能会尝试重新排序输入行以提高 I/O 性能。
 
 ## <a name="understanding-merge-joins"></a><a name="merge"></a> 了解合并联接
 如果两个联接输入并不小但已在二者联接列上排序（例如，如果它们是通过扫描已排序的索引获得的），则合并联接是最快的联接操作。 如果两个联接输入都很大，而且这两个输入的大小差不多，则预先排序的合并联接提供的性能与哈希联接相近。 但是，如果这两个输入的大小相差很大，则哈希联接操作通常快得多。       
 
 合并联接要求两个输入都在合并列上排序，而合并列由联接谓词的等效 (ON) 子句定义。 通常，查询优化器扫描索引（如果在适当的一组列上存在索引），或在合并联接的下面放一个排序运算符。 在极少数情况下，虽然可能有多个等效子句，但只用其中一些可用的等效子句获得合并列。    
 
-由于每个输入都已排序，因此 Merge Join  运算符将从每个输入获取一行并将其进行比较。 例如，对于内联接操作，如果行相等则返回。 如果行不相等，则废弃值较小的行并从该输入获得另一行。 这一过程将重复进行，直到处理完所有的行为止。    
+由于每个输入都已排序，因此 Merge Join 运算符将从每个输入获取一行并将其进行比较。 例如，对于内联接操作，如果行相等则返回。 如果行不相等，则废弃值较小的行并从该输入获得另一行。 这一过程将重复进行，直到处理完所有的行为止。    
 
 合并联接操作可以是常规操作，也可以是多对多操作。 多对多合并联接使用临时表存储行。 如果每个输入中有重复值，则在处理其中一个输入中的每个重复项时，另一个输入必须重绕到重复项的开始位置。    
 
@@ -173,7 +173,7 @@ WHERE pv.BusinessEntityID=v.BusinessEntityID
 有关哈希援助的详细信息，请参阅 [Hash Warning 事件类](../../relational-databases/event-classes/hash-warning-event-class.md)。    
 
 ## <a name="understanding-adaptive-joins"></a><a name="adaptive"></a> 了解自适应联接
-借助[批处理模式](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution)自适应联接功能，可延迟选择[哈希联接](#hash)或[嵌套循环](#nested_loops)联接方法，将其延迟到扫描第一个输入之后  。 自适应联接运算符可定义用于决定何时切换到嵌套循环计划的阈值。 因此，查询计划可在执行期间动态切换到较好的联接策略，而无需进行重新编译。 
+借助[批处理模式](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution)自适应联接功能，可延迟选择[哈希联接](#hash)或[嵌套循环](#nested_loops)联接方法，将其延迟到扫描第一个输入之后。 自适应联接运算符可定义用于决定何时切换到嵌套循环计划的阈值。 因此，查询计划可在执行期间动态切换到较好的联接策略，而无需进行重新编译。 
 
 > [!TIP]
 > 小型和大型联接输入扫描之间频繁振荡的工作负荷将从此功能获益最大。
@@ -202,7 +202,7 @@ WHERE [fo].[Quantity] = 360;
 3. 由于查询返回 336 行，超过了阈值，因此，第二个分支表示标准哈希联接操作的探测阶段。 请注意，实时查询统计信息将显示流经运算符的行，在本示例中为“672 行，共 672 行”。
 4. 并且，最后一个分支是供未超出阈值的嵌套循环联接使用的聚集索引查找。 请注意，我们将看到显示“0 行，共 336 行”（未使用分支）。
 
-现将计划与同一查询进行对比，但当表中的 Quantity 值只有一行时  ：
+现将计划与同一查询进行对比，但当表中的 Quantity 值只有一行时：
  
 ```sql
 SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
@@ -224,7 +224,7 @@ WHERE [fo].[Quantity] = 361;
 
 批处理模式自适应联接适用于语句的初始执行，编译后，根据编译的自适应联结阈值和流经外部输入生成阶段的运行时行，连续执行将保持自适应状态。
 
-如果自适应联接切换到嵌套循环操作，它将使用哈希联接生成已经读取的行。 运算符不会  再次重新读取外部引用行。
+如果自适应联接切换到嵌套循环操作，它将使用哈希联接生成已经读取的行。 运算符不会再次重新读取外部引用行。
 
 ### <a name="tracking-adaptive-join-activity"></a>跟踪自适应联接活动
 自适应联接运算符具有以下计划运算符属性：

@@ -22,15 +22,15 @@ ms.assetid: f1054809-04f2-4995-9ebd-cb67098e6708
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2c26669059facb851668b6b226dac7aaa2387e9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0dcc4ee950337c46372ae8d5c8956614465fe2eb
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68122067"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007291"
 ---
 # <a name="not-equal-to-transact-sql---exclamation"></a>不等于 (Transact SQL) - 感叹号
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   测试某个表达式是否不等于另一个表达式（比较运算符）。 如果任何一个操作数为 NULL，或两个都为 NULL，则返回 NULL。 其功能与 [<>（不等于）](../../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)比较运算符相同。  
   

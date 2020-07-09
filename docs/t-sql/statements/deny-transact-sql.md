@@ -27,15 +27,15 @@ ms.assetid: c32d1e01-9ee9-4665-a516-fcfece58078e
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 151ca986f2705479567d8b9d5133ff1ad623a8b9
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: e0b77901f1a4c625f241c057f22af6b5fd437f10
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635591"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012559"
 ---
 # <a name="deny-transact-sql"></a>DENY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   拒绝为主体授予权限。 防止该主体通过组或角色成员身份继承权限。 DENY 优先于所有权限，但 DENY 不适用于 sysadmin 固定服务器角色的对象所有者或成员。
   安全性注意事项：sysadmin 固定服务器角色的成员和对象所有者不能拒绝权限  。

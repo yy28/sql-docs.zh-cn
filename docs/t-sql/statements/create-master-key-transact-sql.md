@@ -24,16 +24,16 @@ ms.assetid: 1710a305-1a4f-48ec-836c-11ffd0356d76
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 64e05a3498a489cfa16d913b953b39c0d0ccb251
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: beba354431da2b0f97c3965148cbf3d09f93d9f4
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71816846"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010762"
 ---
 # <a name="create-master-key-transact-sql"></a>CREATE MASTER KEY (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 在 master 数据库中，创建数据库主密钥。
 
@@ -41,14 +41,14 @@ ms.locfileid: "71816846"
 
 ## <a name="syntax"></a>语法
 
-```
+```syntaxsql
 CREATE MASTER KEY [ ENCRYPTION BY PASSWORD ='password' ]
 [ ; ]
 ```
 
 ## <a name="arguments"></a>参数
 
-PASSWORD ='password' 是用于加密数据库主密钥的密码  。 password 必须符合运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的 Windows 密码策略要求。 password 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]和 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 中是可选的。
+PASSWORD ='password' 是用于加密数据库主密钥的密码  。 password 必须符合运行  *实例的计算机的 Windows 密码策略要求*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 password 在 *和*  中是可选的[!INCLUDE[ssSDS](../../includes/sssds-md.md)][!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]。
 
 ## <a name="remarks"></a>备注
 

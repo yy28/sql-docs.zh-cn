@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 5bd3393d-2fa5-4db0-a69a-a1a72d638e9d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 33b04fb6e1db0afa87ecde24e28dd28772d6c3a9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 43bd7d1083934876f8ddd6a2b00a53e30c476162
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68070282"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003417"
 ---
 # <a name="drop-security-policy-transact-sql"></a>DROP SECURITY POLICY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   删除安全策略。  
   
@@ -35,14 +35,14 @@ ms.locfileid: "68070282"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 DROP SECURITY POLICY [ IF EXISTS ] [schema_name. ] security_policy_name    
 [;]  
 ```  
   
 ## <a name="arguments"></a>参数  
  IF EXISTS   
- 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。  
+ 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）  。  
   
  仅当安全策略已存在时对其进行有条件地删除。  
   

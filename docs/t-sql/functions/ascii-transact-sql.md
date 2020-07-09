@@ -18,18 +18,18 @@ helpviewer_keywords:
 - code [SQL Server], ASCII
 - leftmost character of expression
 ms.assetid: 45c2044a-0593-4805-8bae-0fad4bde2e6b
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b982d357668703a54b06124a8bb3edf0c963463
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 37c3298f693754943e355f91ee6e6b15bb6ab66a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74119188"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002280"
 ---
 # <a name="ascii-transact-sql"></a>ASCII (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 返回字符表达式中最左侧的字符的 ASCII 代码值。
   
@@ -37,7 +37,7 @@ ms.locfileid: "74119188"
   
 ## <a name="syntax"></a>语法  
   
-```sql
+```syntaxsql
 ASCII ( character_expression )  
 ```  
   
@@ -49,7 +49,7 @@ char 或 varchar 类型的[表达式](../../t-sql/language-elements/expressions-
  **int**  
   
 ## <a name="remarks"></a>备注
-ASCII 表示美国信息交换标准码      。 它是现代计算机的一种字符编码标准。 要获取 ASCII 字符列表，请参阅 [ASCII](https://www.wikipedia.org/wiki/ASCII) 的“可打印字符”部分。
+ASCII 表示美国信息交换标准码      。 它是现代计算机的一种字符编码标准。 要获取 ASCII 字符列表，请参阅 [ASCII](https://www.wikipedia.org/wiki/ASCII) 的“可打印字符”部分  。
 
 ASCII 是一个 7 位字符集。 扩展的 ASCII（或称 High ASCII）是不由 `ASCII` 函数处理的 8 位字符集。 
 

@@ -25,15 +25,15 @@ ms.assetid: 1c2d7235-7b9b-4336-8f17-429e7d82c2c3
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4ed342f6b73ee596d8429aa4b952c4becf7d41ab
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a9b03115c8dd424d5ce21fadcb74157958b16088
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68044027"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009245"
 ---
 # <a name="drop-procedure-transact-sql"></a>DROP PROCEDURE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   从 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的当前数据库中删除一个或多个存储过程或过程组。  
   
@@ -41,13 +41,13 @@ ms.locfileid: "68044027"
   
 ## <a name="syntax"></a>语法  
   
-```sql  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 DROP { PROC | PROCEDURE } [ IF EXISTS ] { [ schema_name. ] procedure } [ ,...n ]  
 ```  
   
-```sql  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 DROP { PROC | PROCEDURE } { [ schema_name. ] procedure_name }  
@@ -55,7 +55,7 @@ DROP { PROC | PROCEDURE } { [ schema_name. ] procedure_name }
   
 ## <a name="arguments"></a>参数  
  IF EXISTS   
- 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。  
+ 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）  。  
   
  有条件地删除过程（仅当其已存在时）。  
   

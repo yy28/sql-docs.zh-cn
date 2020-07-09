@@ -37,15 +37,15 @@ ms.assetid: 0b6f2b6f-3aa3-4767-943f-43df3c3c5cfd
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fc10141cc2b6c069894868b2a153abc31c4c250c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 86469f1f2b4a8e2d97b79315e2ceb5f4bf690cff
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70155831"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006296"
 ---
 # <a name="drop-table-transact-sql"></a>DROP TABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   删除一个或多个表定义以及这些表的所有数据、索引、触发器、约束和权限规范。 任何引用已删除表的视图或存储过程都必须使用 [DROP VIEW](../../t-sql/statements/drop-view-transact-sql.md) 或 [DROP PROCEDURE](../../t-sql/statements/drop-procedure-transact-sql.md) 显式删除。 若要报告表的依赖关系，请使用 [sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)。  
   
@@ -53,14 +53,14 @@ ms.locfileid: "70155831"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 DROP TABLE [ IF EXISTS ] { database_name.schema_name.table_name | schema_name.table_name | table_name } [ ,...n ]  
 [ ; ]  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 DROP TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
@@ -74,7 +74,7 @@ DROP TABLE { database_name.schema_name.table_name | schema_name.table_name | tab
  Azure SQL 数据库支持由三部分组成的名称格式 database_name.[schema_name].object_name，其中 database_name 为当前数据库，database_name 为 tempdb，object_name 以 # 开头。 Azure SQL 数据库不支持由四部分组成的名称。  
   
  IF EXISTS   
- 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。  
+ 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）  。  
   
  有条件地删除表（仅当其已存在时）。  
   
@@ -120,7 +120,7 @@ DROP TABLE AdventureWorks2012.dbo.SalesPerson2 ;
 ```  
   
 ### <a name="c-dropping-a-temporary-table"></a>C. 删除临时表  
- 以下示例将创建一个临时表，测试该表是否存在，删除该表，然后再次测试该表是否存在。 此示例不使用 IF EXISTS 语法，该语法适用于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及以上版本。  
+ 以下示例将创建一个临时表，测试该表是否存在，删除该表，然后再次测试该表是否存在。 此示例不使用 IF EXISTS 语法，该语法适用于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及以上版本  。  
   
 ```  
 CREATE TABLE #temptable (col1 int);  
@@ -140,7 +140,7 @@ SELECT * FROM #temptable;
   
 ### <a name="d-dropping-a-table-using-if-exists"></a>D. 使用 IF EXISTS 删除表  
   
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。  
+适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）  。  
   
  以下示例创建名为 T1 的表。 然后，第二条语句删除表。 第三条语句不执行任何操作，因为此表已删除，但这不会引起错误。  
   

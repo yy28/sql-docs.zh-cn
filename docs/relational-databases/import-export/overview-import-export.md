@@ -11,15 +11,15 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 99c3baf7bc52d5c0123cb5aeccef963578ebac68
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c2f1b8e4a711081bb998c6417c90e28b7638e508
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980425"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001184"
 ---
 # <a name="import-and-export-data-from-sql-server-and-azure-sql-database"></a>在 SQL Server 和 Azure SQL 数据库中导入和导出数据
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 可通过多种方法将数据导入 SQL Server 和 Azure SQL 数据库，以及从 SQL Server 和 Azure SQL 数据库中导出数据。 这些方法包括 Transact-SQL 语句、命令行工具和向导。
 
 也可以各种数据格式导入和导出数据。 这些格式包括平面文件、Excel、主要关系数据库和各种云服务。

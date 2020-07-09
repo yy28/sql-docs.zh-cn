@@ -19,18 +19,18 @@ helpviewer_keywords:
 - CURRENT_USER
 - users [SQL Server], names
 ms.assetid: 29248949-325b-4063-9f55-5a445fb35c6e
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d6901afbb6d0faa26c4977c15a3836bdeab68bb4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a912321662150a17062db6921276b61c28fa1f8e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73844615"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011464"
 ---
 # <a name="current_user-transact-sql"></a>CURRENT_USER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 此函数返回当前用户的名称。 此函数等效于 `USER_NAME()`。
   
@@ -46,7 +46,7 @@ CURRENT_USER
 **sysname**
   
 ## <a name="remarks"></a>备注  
-`CURRENT_USER` 返回当前安全上下文的名称。 如果在 `EXECUTE AS` 的调用切换上下文后执行 `CURRENT_USER`，`CURRENT_USER` 将返回被模拟上下文的名称。 如果 Windows 主体通过某组中的成员身份访问数据库，则 `CURRENT_USER` 将返回 Windows 主体的名称，而不是该组名。
+`CURRENT_USER` 返回当前安全上下文的名称。 如果在 `CURRENT_USER` 的调用切换上下文后执行 `EXECUTE AS`，`CURRENT_USER` 将返回被模拟上下文的名称。 如果 Windows 主体通过某组中的成员身份访问数据库，则 `CURRENT_USER` 将返回 Windows 主体的名称，而不是该组名。
   
 若要了解如何返回当前用户的登录名，请参阅 [SUSER_NAME (Transact-SQL)](../../t-sql/functions/suser-name-transact-sql.md) 和 [SYSTEM_USER (Transact-SQL)](../../t-sql/functions/system-user-transact-sql.md)。
   

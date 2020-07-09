@@ -11,16 +11,16 @@ ms.assetid: dddd707e-bfb1-44ff-937b-a84c5e5d1a94
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8ebeb98accf6f89e094949a7a8e56a86a2dcd6dd
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: cea12f4415cc99519ae8a5119cf5952a89dc2d27
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220384"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007082"
 ---
 # <a name="stopping-system-versioning-on-a-system-versioned-temporal-table"></a>停止对由系统控制版本的时态表进行系统版本控制
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 你可能希望暂时或永久停止对临时表的版本控制。 可以通过将 **SYSTEM_VERSIONING** 子句设置为 **OFF**实现此操作。
 

@@ -13,15 +13,15 @@ ms.assetid: cc6daf62-9663-4c3e-950a-ab42e2830427
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e64a097fb4d2eed917155fb3881d233231c413bc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 73243b7be6587b1e811ac040c5977207748b3889
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70148295"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003101"
 ---
 # <a name="stored-procedures-database-engine"></a>存储过程（数据库引擎）
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的存储过程是由一个或多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或对 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 公共语言运行时 (CLR) 方法的引用所构成的一个组。 过程与其他编程语言中的构造相似，这是因为它们都可以：  
   
 -   接受输入参数并以输出参数的格式向调用程序返回多个值。  

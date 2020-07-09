@@ -26,15 +26,15 @@ ms.assetid: f89286db-440f-4218-a828-30881ce3077a
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2191fbd39cea24142b866f0acc9a27717896dab9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c926d7ecebea11ea054b2a63ddb1e7b62d9cb84f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67914864"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010861"
 ---
 # <a name="object_id-transact-sql"></a>OBJECT_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   返回架构范围内对象的数据库对象标识号。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "67914864"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]   
   object_name' [ ,'object_type' ] )  
 ```  
@@ -55,7 +55,7 @@ OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]
  要使用的对象。 object_name 为 varchar 或 nvarchar    。 如果 object_name 为 varchar，则它会隐式转换为 nvarchar    。 可以选择是否指定数据库和架构名称。  
   
  **'** *object_type* **'**  
- 架构范围的对象类型。 object_type 为 varchar 或 nvarchar    。 如果 object_type 为 varchar，则它会隐式转换为 nvarchar    。 有关对象类型的列表，请参阅 [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 中的 type 列。  
+ 架构范围的对象类型。 object_type 为 varchar 或 nvarchar    。 如果 object_type 为 varchar，则它会隐式转换为 nvarchar    。 有关对象类型的列表，请参阅 [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 中的 type 列  。  
   
 ## <a name="return-types"></a>返回类型  
  **int**  

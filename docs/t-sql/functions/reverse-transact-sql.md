@@ -17,18 +17,18 @@ helpviewer_keywords:
 - REVERSE function
 - reverse character expressions
 ms.assetid: 555d8877-7cc7-4955-ae2c-6215aca313b7
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 208babd394592d48feaf257d14329db89d11f767
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ed41eebaf1f90315668fe7336dddf7a2c3c87404
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68092621"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003720"
 ---
 # <a name="reverse-transact-sql"></a>REVERSE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   返回字符串值的逆序。  
   
@@ -42,7 +42,7 @@ REVERSE ( string_expression )
   
 ## <a name="arguments"></a>参数  
  string_expression   
- string_expression 是字符串或二进制数据类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 string_expression 可以是常量、变量，也可以是字符列或二进制数据列  。  
+ string_expression 是字符串或二进制数据类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)  。 string_expression 可以是常量、变量，也可以是字符列或二进制数据列  。  
   
 ## <a name="return-types"></a>返回类型  
  varchar 或 nvarchar    

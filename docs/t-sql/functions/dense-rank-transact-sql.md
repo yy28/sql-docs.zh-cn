@@ -18,18 +18,18 @@ helpviewer_keywords:
 - tied rows [SQL Server]
 - ranking rows
 ms.assetid: 03871fc6-9592-4016-b0b2-ff543f132b20
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 89cfdcb49734897dbc41552158c9faad850f331a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 569e02b434d3e2f8d919b30fb91dc922f0588a5c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68135915"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005934"
 ---
 # <a name="dense_rank-transact-sql"></a>DENSE_RANK (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 此函数返回结果集分区中每行的排名，排名值没有间断。 特定行的排名等于该特定行之前不同排名值的数量加一。  
   
@@ -157,7 +157,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
   
 |FirstName|LastName|Row Number|Rank|Dense Rank|Quartile|SalesYTD|PostalCode|  
 |---------------|--------------|----------------|----------|----------------|--------------|--------------|----------------|  
-|{1}Michael{2}|{1}Blythe{2}|1|1|1|1|4557045.0459|98027|  
+|Michael|Blythe|1|1|1|1|4557045.0459|98027|  
 |Linda|Mitchell|2|1|1|1|5200475.2313|98027|  
 |Jillian|Carson|3|1|1|1|3857163.6332|98027|  
 |Garrett|Vargas|4|1|1|1|1764938.9859|98027|  
@@ -174,7 +174,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 
 ## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-ranking-rows-within-a-partition"></a>D. 对分区中的行进行排名  
+### <a name="d-ranking-rows-within-a-partition"></a>D:对分区中的行进行排名  
 此示例根据销售代表的销售总额将每个销售区域中的销售代表进行排名。 `DENSE_RANK` 按 `SalesTerritoryGroup` 对行集进行分区，并按 `SalesAmountQuota` 对结果集进行排序。  
   
 ```  

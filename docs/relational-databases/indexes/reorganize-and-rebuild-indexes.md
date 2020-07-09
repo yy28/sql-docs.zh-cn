@@ -32,16 +32,16 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 03690af5e9ec4ce835372378ca3bdf13eff3073a
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: c7694d4675d37045b7b463e950d1811cec197ee4
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83152034"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011941"
 ---
 # <a name="resolve-index-fragmentation-by-reorganizing-or-rebuilding-indexes"></a>通过重新组织或重新生成索引来解决索引碎片问题
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 本文介绍索引碎片整理的方法及其对查询性能的影响。 一旦确定[索引的碎片数量](#detecting-the-amount-of-fragmentation)，就可以在你选择的工具中运行 Transact-SQL 命令，或使用 SQL Server Management Studio，以便通过[重新组织索引](#reorganize-an-index)或[重新生成索引](#rebuild-an-index)来对索引进行碎片整理。
 

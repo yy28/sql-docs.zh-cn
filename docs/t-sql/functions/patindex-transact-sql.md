@@ -19,18 +19,18 @@ helpviewer_keywords:
 - pattern searching [SQL Server]
 - PATINDEX function
 ms.assetid: c0dfb17f-2230-4e36-98da-a9b630bab656
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 51b18437976a9ecb192a69602ecbdc97054b9b47
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0c9599ddcade6c62a21245ef16cc89034df1524c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76831838"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003803"
 ---
 # <a name="patindex-transact-sql"></a>PATINDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   返回模式在指定表达式中第一次出现的起始位置；如果在所有有效的文本和字符数据类型中都找不到该模式，则返回零。  
   
@@ -70,7 +70,7 @@ PATINDEX 基于输入的排序规则执行比较。 若要以指定排序规则�
 ## <a name="examples"></a>示例  
   
 ### <a name="a-simple-patindex-example"></a>A. 简单 PATINDEX 示例  
- 以下示例检查字符 `ter` 起始位置的短字符串 (`interesting data`)。  
+ 以下示例检查字符 `interesting data` 起始位置的短字符串 (`ter`)。  
   
 ```sql  
 SELECT position = PATINDEX('%ter%', 'interesting data');  
@@ -85,7 +85,7 @@ position
 ```
   
 ### <a name="b-using-a-pattern-with-patindex"></a>B. 在 PATINDEX 中使用模式  
-以下示例查找模式 `ensure` 在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `DocumentSummary` 表中 `Document` 列特定行中的开始位置。  
+以下示例查找模式 `ensure` 在 `DocumentSummary` 数据库的 `Document` 表中 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 列特定行中的开始位置。  
   
 ```sql  
 SELECT position = PATINDEX('%ensure%',DocumentSummary)  
@@ -158,7 +158,7 @@ position
 下面的示例使用变量将值传递到 pattern 参数  。 此示例使用 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库。  
   
 ```sql  
-DECLARE @MyValue varchar(10) = 'safety';   
+DECLARE @MyValue VARCHAR(10) = 'safety';   
 SELECT position = PATINDEX('%' + @MyValue + '%', DocumentSummary)   
 FROM Production.Document  
 WHERE DocumentNode = 0x7B40;  

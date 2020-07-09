@@ -1,6 +1,6 @@
 ---
 title: 使用具有默认架构的 OPENJSON
-ms.date: 06/02/2016
+ms.date: 06/03/2020
 ms.prod: sql
 ms.technology: ''
 ms.topic: conceptual
@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: 8e28a8f8-71a8-4c25-96b8-0bbedc6f41c4
 author: jovanpop-msft
 ms.author: jovanpop
-ms.reviewer: genemi
+ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 633737d8dd302d6546662fb048c3f3e1ea50c19b
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: 595323d28f50100936447a9077af361017cca922
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087357"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008704"
 ---
 # <a name="use-openjson-with-the-default-schema"></a>使用具有默认架构的 OPENJSON 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   使用具有默认架构的 OPENJSON 可返回一个表，其中每行显示对象的一个属性或数组中的一个元素  。  
   

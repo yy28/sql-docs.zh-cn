@@ -21,15 +21,15 @@ ms.assetid: 354c4935-1375-4141-8195-61326662f4d2
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e7aff4c7bdc1ec9edb93f8a207bd2166bcb3b084
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2a29eade691530ad9b2bdcc7b007df5decbdaa84
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68075297"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005011"
 ---
 # <a name="end-beginend-transact-sql"></a>END (BEGIN...END) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   括号中包含一系列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，这些语句作为一个组执行。 BEGIN...END 语句块允许嵌套。  
   
@@ -37,14 +37,14 @@ ms.locfileid: "68075297"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 BEGIN   
      { sql_statement | statement_block }   
 END   
 ```  
   
 ## <a name="arguments"></a>参数  
- { sql_statement| statement_block}   
+ { sql_statement*statement_block}* |    
  任何有效的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或用语句块定义的语句分组。 若要定义语句块（批处理），请使用控制流语言关键字 BEGIN 和 END。 虽然所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句在 BEGIN...END 块内都有效，但有些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句不能组合到同一个批（语句块）中。  
   
 ## <a name="result-types"></a>结果类型  

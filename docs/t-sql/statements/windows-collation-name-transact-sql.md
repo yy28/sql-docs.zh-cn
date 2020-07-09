@@ -18,16 +18,16 @@ ms.assetid: acceef84-2c68-46e2-a021-be019b7ab14e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f3fb28ddb5e910c70c8f5e72f34703d18fc4c38c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d7c4eec871d08eebbc18da84dec95d148fe161f5
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70874462"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012816"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Windows 排序规则名称 (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 COLLATE 子句中指定 Windows 排序规则名称。 Windows 排序规则名称是由排序规则指示符和比较样式构成的。
 
@@ -35,7 +35,7 @@ ms.locfileid: "70874462"
 
 ## <a name="syntax"></a>语法
 
-```
+```syntaxsql
 <Windows_collation_name> :: =
 CollationDesignator_<ComparisonStyle>
 
@@ -72,12 +72,12 @@ WidthSensitivity
 省略此选项指定不区分全半角，WS 指定区分全半角  。
 
 VariationSelectorSensitivity   
-- 适用范围：从 [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 开始 
+- 适用范围：从  **开始**[!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
 
 - 省略此选项指定区分不区分选择器，VSS 指定区分区分选择器  。
 
 **UTF8**  
-- 适用范围：从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始   
+- 适用范围：从  **开始**[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
 
 - 指定用于符合条件的数据类型的 UTF-8 编码。 有关详细信息，请参阅 [排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)。
 
@@ -234,6 +234,7 @@ SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 |不推荐使用；在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本中，在服务器级别不可用|Korean_Wansung_Unicode|Korean_Wansung_Unicode|
 |不推荐使用；在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本中，在服务器级别不可用|Lithuanian_Classic|Lithuanian_Classic|
 |不推荐使用；在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本中，在服务器级别不可用|马其顿语|马其顿语|
+||||
 
 <sup>1</sup> 仅 Unicode 的 Windows 排序规则只能应用于列级或表达式级数据。 它们不能用作服务器或数据库排序规则。
 
