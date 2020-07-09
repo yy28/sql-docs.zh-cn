@@ -25,15 +25,15 @@ helpviewer_keywords:
 ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 18e916c3f9a9d99ea177d0d266cb20bee44a3868
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8624eb00f1d3822b2e3e0f857c4d07eb36c2bcad
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73064686"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895497"
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   定义一个优先级别和一组条件，这组条件用于决定要将此优先级分配给哪些 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 会话。 此优先级别分配给使用在会话优先级中指定的相同约定与服务组合的任何会话端点。 优先级的值范围为 1（低）到 10（高）。 默认值为 5。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "73064686"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
   
 CREATE BROKER PRIORITY ConversationPriorityName  
 FOR CONVERSATION  
@@ -62,8 +62,8 @@ FOR CONVERSATION
  SET  
  指定用于确定会话优先级是否应用于会话的条件。 如果指定了 SET，则它必须至少包含以下条件之一：CONTRACT_NAME、LOCAL_SERVICE_NAME、REMOTE_SERVICE_NAME 或 PRIORITY_LEVEL。 如果未指定 SET，则全部三个条件都设置为默认值。  
   
- CONTRACT_NAME = {ContractName | ANY}  
- 指定要用作会话优先级是否应用于会话的判定条件的约定的名称。 ContractName 是一个 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 标识符，并且必须指定当前数据库中的协定的名称。  
+ CONTRACT_NAME = {ContractName*ANY}*  |    
+ 指定要用作会话优先级是否应用于会话的判定条件的约定的名称。 ContractName 是一个  *标识符，并且必须指定当前数据库中的协定的名称*[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
  ContractName   
  指定此会话优先级只能应用于启动会话的 BEGIN DIALOG 语句指定了 ON CONTRACT ContractName 的会话  。  
@@ -73,10 +73,10 @@ FOR CONVERSATION
   
  默认值为 ANY。  
   
- LOCAL_SERVICE_NAME = {LocalServiceName | ANY}  
+ LOCAL_SERVICE_NAME = {LocalServiceName*ANY}*  |    
  指定要用作确定会话优先级是否应用于会话端点的条件的服务名称。  
   
- LocalServiceName 是 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 标识符。 它必须指定当前数据库中的服务的名称。  
+ LocalServiceName 是  *标识符。* [!INCLUDE[ssDE](../../includes/ssde-md.md)] 它必须指定当前数据库中的服务的名称。  
   
  LocalServiceName   
  指定此会话优先级可以应用于以下各项：  
@@ -107,7 +107,7 @@ FOR CONVERSATION
   
  默认值为 ANY。  
   
- PRIORITY_LEVEL = { PriorityValue | DEFAULT }  
+ PRIORITY_LEVEL = { PriorityValue*DEFAULT }*  |    
  指定要分配给使用在会话优先级中指定的约定和服务的任何会话端点的优先级。 PriorityValue 必须是一个从 1（优先级最低）到 10（优先级最高）的整数文本  。 默认值为 5。  
   
 ## <a name="remarks"></a>备注  

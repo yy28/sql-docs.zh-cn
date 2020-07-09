@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: a6b8b37c-0015-4596-898c-51a567659e2e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 84d15026a188bd24522195d22e70707a8803fda8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1ccb7e5313ed36ad6fd3b08b030a9e60d3118bf6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75255802"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894546"
 ---
 # <a name="revoke-search-property-list-permissions-transact-sql"></a>撤消搜索属性列表权限 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   撤消搜索属性列表的权限。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "75255802"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
   
 REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON  
         SEARCH PROPERTY LIST :: search_property_list_name  
@@ -54,7 +54,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  permission   
  权限的名称。 本主题后面的“备注”部分中介绍了不同权限与安全对象之间的有效映射。  
   
- ON SEARCH PROPERTY LIST ::search_property_list_name  
+ ON SEARCH PROPERTY LIST ::search_property_list_name    
  指定要撤消权限的搜索属性列表。 需要使用作用域限定符 ::  。  
   
  database_principal   

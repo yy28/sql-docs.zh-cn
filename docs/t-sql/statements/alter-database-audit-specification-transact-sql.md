@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 85f4e7e6-a330-4de0-9048-64f386ccc314
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c9229f5bec676f28d92b4ea1aba1ad3aeeb4d6c8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0d8af9ca46800ad5f2d20a5de7f84ad0816d8666
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68065896"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895696"
 ---
 # <a name="alter-database-audit-specification-transact-sql"></a>ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 审核功能更改数据库审核规范对象。 有关详细信息，请参阅 [SQL Server Audit（数据库引擎）](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "68065896"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
   
 ALTER DATABASE AUDIT SPECIFICATION audit_specification_name  
 {  
@@ -80,7 +80,7 @@ ALTER DATABASE AUDIT SPECIFICATION audit_specification_name
  principal   
  应用审核操作或审核操作组的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 主体的名称。 有关详细信息，请参阅[主体（数据库引擎）](../../relational-databases/security/authentication-access/principals-database-engine.md)。  
   
- WITH ( STATE = { ON | OFF } )    
+ WITH ( STATE  **{ ON | OFF } )** **=**   
  允许或禁止审核收集此审核规范的记录。 审核规范状态更改必须在用户事务之外进行，并且从 ON 转换到 OFF 时，审核规范的同一语句中不能有其他更改。  
   
 ## <a name="remarks"></a>备注  
@@ -92,7 +92,7 @@ ALTER DATABASE AUDIT SPECIFICATION audit_specification_name
  创建数据库审核规范后，具有 CONTROL SERVER 或 ALTER ANY DATABASE AUDIT 权限的主体、sysadmin 帐户或对审核具有明确访问权限的主体即可查看该规范。  
   
 ## <a name="examples"></a>示例  
- 下面的示例针对称为 `HIPAA_Audit_DB_Specification` 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 审核更改称为 `SELECT` 的数据库审核规范，该规范审核 `dbo` 用户发出的 `HIPAA_Audit` 语句。  
+ 下面的示例针对称为 `HIPAA_Audit_DB_Specification` 的 `SELECT` 审核更改称为 `dbo` 的数据库审核规范，该规范审核 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户发出的 `HIPAA_Audit` 语句。  
   
 ```  
 ALTER DATABASE AUDIT SPECIFICATION HIPAA_Audit_DB_Specification  

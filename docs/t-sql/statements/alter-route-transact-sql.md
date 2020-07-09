@@ -22,15 +22,15 @@ ms.assetid: 8dfb7b16-3dac-4e1e-8c97-adf2aad07830
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 1e05ad220147e7f46bfaa66127fcc492aaeae6a2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b6aef8ae36dc8cb571c4ae1993df1a7b3a81f130
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67927189"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895613"
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   修改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中现有路由的路由信息。 
 
@@ -39,7 +39,7 @@ ms.locfileid: "67927189"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
   
 ALTER ROUTE route_name  
 WITH    
@@ -64,7 +64,7 @@ WITH
   
  如果省略 SERVICE_NAME 子句，则路由的服务名称保持不变。  
   
- BROKER_INSTANCE ='broker\_instance'  
+ BROKER_INSTANCE ='broker**instance'** _\__   
  指定承载目标服务的数据库。  broker_instance 参数必须是远程数据库的 Broker 实例标识符，该标识符可以通过在所选数据库中运行以下查询获得：  
   
 ```  
@@ -78,10 +78,10 @@ WHERE database_id = DB_ID();
 > [!NOTE]  
 >  此选项在包含数据库中不可用。  
   
- LIFETIME **=** route\_lifetime  
+ LIFETIME **=** route_lifetime\__  
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在路由表中保留路由的时间（秒）。 在生存期结束后，相应的路由即过期，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在为新会话选择路由时将不再考虑该路由。 如果省略此子句，则路由的生存期保持不变。  
   
- ADDRESS ='next\_hop\_address'  
+ ADDRESS ='next**hop**address' _\_\__  
 
  对于 Azure SQL 数据库托管实例，`ADDRESS` 必须是本地的。
 
@@ -89,7 +89,7 @@ WHERE database_id = DB_ID();
   
  **TCP://** { *dns_name* | *netbios_name* |*ip_address* } **:** *port_number*  
   
- 指定的 port_number 必须与指定计算机上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 端点的端口号匹配。 这可以通过在选定数据库中运行如下查询获得：  
+ 指定的 port_number 必须与指定计算机上 *实例的* 端点的端口号匹配[!INCLUDE[ssSB](../../includes/sssb-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 这可以通过在选定数据库中运行如下查询获得：  
   
 ```  
 SELECT tcpe.port  
@@ -99,7 +99,7 @@ INNER JOIN sys.service_broker_endpoints AS ssbe
 WHERE ssbe.name = N'MyServiceBrokerEndpoint';  
 ```  
   
- 当路由为 next_hop_address 指定 'LOCAL' 时，消息将传递给当前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中的服务。  
+ 当路由为 next_hop_address 指定 'LOCAL' 时，消息将传递给当前  **实例中的服务**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
  当路由为 next_hop_address 指定 'TRANSPORT' 时，根据服务名称中的网络地址确定网络地址   。 指定了  'TRANSPORT' 的路由可以指定服务名称或 Broker 实例。  
   
@@ -108,12 +108,12 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
 > [!NOTE]  
 >  此选项在包含数据库中不可用。  
   
- MIRROR_ADDRESS **='** next\_hop\_mirror\_address **'**  
+ MIRROR_ADDRESS **='** next_hop\_mirror\_address\__ **'**  
  指定镜像对的镜像服务器的网络地址，镜像对的主体服务器位于 next_hop_address  。 next_hop_mirror_address 按以下格式指定 TCP/IP 地址  ：  
   
  **TCP://** { *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
   
- 指定的 port_number 必须与指定计算机上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 端点的端口号匹配。 这可以通过在选定数据库中运行如下查询获得：  
+ 指定的 port_number 必须与指定计算机上 *实例的* 端点的端口号匹配[!INCLUDE[ssSB](../../includes/sssb-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 这可以通过在选定数据库中运行如下查询获得：  
   
 ```  
 SELECT tcpe.port  

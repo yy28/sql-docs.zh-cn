@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 251bc3af-ebce-4d97-adec-afc0e7fab6cc
-ms.openlocfilehash: 86e56d998959b4cc425626de249d66597262b50a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ced5df4a63cf6fbfed9e47a59a5c7f626de3874b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558391"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882707"
 ---
 # <a name="automate-database-migration-to-linux-with-the-sql-server-migration-assistant-ssma"></a>使用 SQL Server 迁移助手 (SSMA) 自动将数据库迁移到 Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 本文介绍 [SQL Server 迁移助手 (SSMA)](https://msdn.microsoft.com/library/mt613434.aspx)，它可帮助将数据库从 Microsoft Access、DB2、MySQL、Oracle 和 Sybase 轻松地迁移到 Linux 上的 SQL Server。 SSMA 是一个 Windows 应用程序，因此请在 Windows 计算机可连接到 Linux 上的远程 SQL Server 实例时使用 SSMA。 
 

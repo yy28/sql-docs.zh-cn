@@ -32,15 +32,15 @@ helpviewer_keywords:
 ms.assetid: 98e49b3f-a38f-4180-8171-fa9cb30db4cb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 65fbd94bac320994f9c1917e634210febd2ba878
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d7b84efd22c7d5d240d041f7da408e6d84604448
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70211213"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895519"
 ---
 # <a name="begin-conversation-timer-transact-sql"></a>BEGIN CONVERSATION TIMER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   启动计时器。 当超时到期时，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 为对话在本地队列上放入 `https://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer` 类型的消息。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "70211213"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
   
 BEGIN CONVERSATION TIMER ( conversation_handle )  
    TIMEOUT = timeout   
@@ -56,7 +56,7 @@ BEGIN CONVERSATION TIMER ( conversation_handle )
 ```  
   
 ## <a name="arguments"></a>参数  
- BEGIN CONVERSATION TIMER (conversation\_handle)  
+ BEGIN CONVERSATION TIMER (conversation**handle)** _\__   
  指定要计时的会话。 conversation_handle 的类型必须为 uniqueidentifier   。  
   
  TIMEOUT  
@@ -67,7 +67,7 @@ BEGIN CONVERSATION TIMER ( conversation_handle )
   
  例如，可以使用会话计时器避免应用程序过久地等待过期响应。 如果希望应用程序在 30 秒内完成对话，则可将对话的会话计时器设置为 60 秒（30 秒加 30 秒的宽限期）。 如果对话 60 秒后仍处于打开状态，则应用程序将收到一条关于该对话队列的超时消息。  
   
- 此外，应用程序可以使用会话计时器请求在特定时间进行激活。 例如，可以创建一个服务，每隔几分钟报告活动连接数；或者创建一种服务，每天晚上报告未清的采购订单。 该服务将会话计时器设置为在所需时间过期；计时器过期时，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 将发送一条 DialogTimer 消息  。 DialogTimer 消息导致 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 启动队列的激活存储过程。 该存储过程将向远程服务发送一条消息，并重新启动会话计时器。  
+ 此外，应用程序可以使用会话计时器请求在特定时间进行激活。 例如，可以创建一个服务，每隔几分钟报告活动连接数；或者创建一种服务，每天晚上报告未清的采购订单。 该服务将会话计时器设置为在所需时间过期；计时器过期时，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 将发送一条 DialogTimer 消息  。 DialogTimer 消息导致  **启动队列的激活存储过程**[!INCLUDE[ssSB](../../includes/sssb-md.md)]。 该存储过程将向远程服务发送一条消息，并重新启动会话计时器。  
   
  BEGIN CONVERSATION TIMER 在用户定义函数中无效。  
   

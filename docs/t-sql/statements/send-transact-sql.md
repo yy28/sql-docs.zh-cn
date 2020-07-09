@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: b6e66aeb-1714-4c2b-b7c2-d386d77b0d46
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9a6c6993252ccad0335b177c31c9d20b40f520a5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 024b038da647f36731a3a23d97033cad74f55a39
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70211426"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895955"
 ---
 # <a name="send-transact-sql"></a>SEND (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 使用一个或多个现有会话发送消息。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "70211426"
   
 ## <a name="syntax"></a>语法  
   
-```sql
+```syntaxsql
   
 SEND  
    ON CONVERSATION [(]conversation_handle [,.. @conversation_handle_n][)]  
@@ -50,7 +50,7 @@ SEND
 ```  
   
 ## <a name="arguments"></a>参数  
-ON CONVERSATION conversation_handle [.. @conversation_handle_n]  
+ON CONVERSATION conversation_handle [.. *]@conversation_handle_n*  
 指定消息所属的会话。 conversation_handle 必须包含一个有效的会话标识符。  不能多次使用相同的会话句柄。  
   
 MESSAGE TYPE message_type_name   

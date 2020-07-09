@@ -9,16 +9,16 @@ ms.date: 05/24/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: high-availability
-ms.openlocfilehash: e026fd9dd9bd0aa9cf78f5cf6d15303b0063ade5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ba7827a637c1317500894fcfda85cd1d5122cce7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750804"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888111"
 ---
 # <a name="configure-read-scale-for-an-always-on-availability-group"></a>为 AlwaysOn 可用性组配置读取缩放
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 可在 Windows 上配置 SQL Server AlwaysOn 可用性组用于读取缩放工作负载。 可用性组有两类体系结构：
 * 使用群集管理器提供改善的业务连续性并且可包含可读次要副本的高可用性体系结构。 若要创建此高可用性体系结构，请参阅[在 Windows 上创建和配置可用性组](creation-and-configuration-of-availability-groups-sql-server.md)。 

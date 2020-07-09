@@ -28,15 +28,15 @@ helpviewer_keywords:
 ms.assetid: 98fe0fff-1a2e-4ca2-b37f-83a06fdf098e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: de98dffe77940c6b8a6b66d0ce1a8b3b7565349d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0a6f9ba5edd20795d7645b334694e6e80fa57c47
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70745464"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892546"
 ---
 # <a name="create-message-type-transact-sql"></a>CREATE MESSAGE TYPE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   创建新消息类型。 消息类型定义消息的名称，以及 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 对具有该名称的消息执行的验证。 会话双方必须定义相同的消息类型。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "70745464"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 CREATE MESSAGE TYPE message_type_name  
     [ AUTHORIZATION owner_name ]  
     [ VALIDATION = {  NONE  
@@ -82,7 +82,7 @@ CREATE MESSAGE TYPE message_type_name
   
  会话双方必须定义相同的消息类型名称。 为便于排除故障，尽管 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 不要求会话双方使用相同的验证，但通常会话双方还是会为消息类型指定相同的验证。  
   
- 消息类型不能是临时对象。 允许使用以 # 开头的消息类型名称，但它们是永久对象。  
+ 消息类型不能是临时对象。 允许使用以 **#** 开头的消息类型名称，但它们是永久对象。  
   
 ## <a name="permissions"></a>权限  
  默认情况下，db_ddladmin 或 db_owner 固定数据库角色和 sysadmin 固定服务器角色的成员拥有创建消息类型的权限    。  

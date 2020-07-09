@@ -9,16 +9,16 @@ ms.date: 01/09/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 1ce63521989edfccc1fc9fc085b0a9c476cde2ee
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 332160202b3972339c2d9c668f31e373443d5217
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558389"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892292"
 ---
 # <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>在 Linux 上配置 SQL Server 可用性组用于读取缩放
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 可在 Linux 上配置 SQL Server AlwaysOn 可用性组 (AG) 用于读取缩放工作负载。 存在两种类型的 AG 体系结构。 高可用性 (HA) 体系结构利用群集管理器改善业务连续性。 此体系结构还可包括读取缩放副本。 若要创建高可用性体系结构，请参阅[配置 SQL Server Always On 可用性组以在 Linux 上实现高可用性](sql-server-linux-availability-group-configure-ha.md)。 其他体系结构只支持读取缩放工作负载。 本文介绍如何在不使用群集管理器的情况下创建 AG，用于读取缩放工作负载。 此体系结构仅提供读取缩放。 它不提供高可用性。
 

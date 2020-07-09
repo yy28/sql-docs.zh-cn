@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
-ms.openlocfilehash: e4979fbb4e2dbbccf7ed11b744051373b0750d1f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8ec35aff528e1ca35d145f400edeb2ca46a7df85
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558622"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883944"
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Linux 上的 Always On 可用性组
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 本文介绍在安装了基于 Linux 的 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 情况下的 Always On 可用性组 (AG) 的特征。 还介绍了基于 Linux 和基于 Windows Server 故障转移群集 (WSFC) 的 AG 之间的差异。 请参阅[基于 Windows 的文档](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)以了解关于 AG 的基础知识，因为其在 Windows 上和 Linux 上的工作方式相同，但 WSFC 除外。
 

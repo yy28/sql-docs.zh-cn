@@ -8,16 +8,16 @@ ms.date: 09/14/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 548ab73e97b9bccb6a64a95b7294d3d5ca63493d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4c3b0715547e8658f83d544578e91b554854a5ad
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79286841"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85887833"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>Linux 上的 SQL Server 的性能最佳做法和配置指南
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 本文提供了最佳做法和建议，以最大程度地提高连接到 Linux 上的 SQL Server 的数据库应用程序的性能。 这些建议特定在 Linux 平台上运行。 所有正常 SQL Server 建议（例如索引设计）仍适用。
 
@@ -31,7 +31,7 @@ ms.locfileid: "79286841"
 
 - **对节点和/或 Cpu 使用 PROCESS AFFINITY**
 
-   对于所有用于 Linux 操作系统上的 SQL Server 的 NUMANODE 和/或 CPU（通常是所有节点和 CPU），建议使用 `ALTER SERVER CONFIGURATION` 设置 `PROCESS AFFINITY`。 处理器关联有助于保持高效的 Linux 和 SQL 计划行为。 使用 NUMANODE  选项是最简单的方法。 请注意，即使你的计算机上只有一个 NUMA 节点，也应该使用 PROCESS AFFINITY  。  有关如何设置 **PROCESS AFFINITY** 的详细信息，请参阅[更改服务器配置](../t-sql/statements/alter-server-configuration-transact-sql.md)文档。
+   对于所有用于 Linux 操作系统上的 SQL Server 的 NUMANODE`ALTER SERVER CONFIGURATION``PROCESS AFFINITY` 和/或 CPU（通常是所有节点和 CPU），建议使用 **设置**。 处理器关联有助于保持高效的 Linux 和 SQL 计划行为。 使用 NUMANODE  选项是最简单的方法。 请注意，即使你的计算机上只有一个 NUMA 节点，也应该使用 PROCESS AFFINITY  。  有关如何设置 [PROCESS AFFINITY](../t-sql/statements/alter-server-configuration-transact-sql.md) 的详细信息，请参阅**更改服务器配置**文档。
 
 - **配置多个 tempdb 数据文件**
 
@@ -162,7 +162,7 @@ vm.transparent_hugepages=madvice
 并在修改后使 mssql 配置文件处于活动状态
 ```bash
 tuned-adm off
-tuned-amd profile mssql
+tuned-adm profile mssql
 ```
 
 ### <a name="swapfile"></a>交换文件

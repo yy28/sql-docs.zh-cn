@@ -18,17 +18,17 @@ helpviewer_keywords:
 - text-pointer values
 - displaying text pointer values
 ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: d0e511e34b782c444bcdf6c778bb89dfebd4fab4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: 521c012ec8e05cf288aab78021b83c45c2d7bd62
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68099031"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895718"
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>文本与图像函数 - TEXTPTR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   返回对应于 varbinary 格式的 text、ntext 或 image 列的文本指针值     。 检索到的文本指针值可用于 READTEXT、WRITETEXT 和 UPDATETEXT 语句。  
   
@@ -73,7 +73,7 @@ TEXTPTR ( column )
 >  若要运行以下示例，必须安装 pubs 数据库  。  
   
 ### <a name="a-using-textptr"></a>A. 使用 TEXTPTR  
- 以下示例将使用 `TEXTPTR` 函数来查找与 `pubs` 数据库的 `pub_info` 表中的 `New Moon Books` 关联的 image 列 `logo`。 文本指针放在局部变量 `@ptrval.` 中。  
+ 以下示例将使用 `TEXTPTR` 函数来查找与 **数据库的** 表中的 `logo` 关联的 image 列 `New Moon Books``pub_info``pubs`。 文本指针放在局部变量 `@ptrval.` 中。  
   
 ```  
 USE pubs;  
@@ -163,7 +163,7 @@ This is sample text data for Lucerne Publishing, publisher 9999 in the pubs data
 ```  
   
 ### <a name="d-returning-specific-text-data"></a>D. 返回特定文本数据  
- 以下示例将查找与 `pubs` 数据库的 `pub_info` 表中的 `pub_id``0736` 关联的 `text` 列 (`pr_info`)。 该例首先声明了一个局部变量 `@val`。 然后，将文本指针（长二进制字符串）置于 `@val` 中，并将其作为参数提供给 `READTEXT` 语句。 结果将返回从第五个字节（偏移量为 4）开始的 10 个字节。  
+ 以下示例将查找与 `text` 数据库的 `pr_info` 表中的 `pub_id``0736` 关联的 `pub_info` 列 (`pubs`)。 该例首先声明了一个局部变量 `@val`。 然后，将文本指针（长二进制字符串）置于 `@val` 中，并将其作为参数提供给 `READTEXT` 语句。 结果将返回从第五个字节（偏移量为 4）开始的 10 个字节。  
   
 ```  
 USE pubs;  

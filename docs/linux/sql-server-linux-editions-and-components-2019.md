@@ -24,16 +24,16 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: mikeray
-ms.openlocfilehash: b1ebc05fcae4bbf6065b0821101618b7eb64f541
-ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
+ms.openlocfilehash: d84f7a508d9ae6d46ba529d8139ecc8c0deaf3e8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "81002785"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894030"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>Linux 上 SQL Server 2019 的各版本和支持的功能
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 本文详细介绍 Linux 上的 SQL Server 2019 的不同版本支持的功能。 有关 Windows 上 SQL Server 的版本和支持功能，请参阅 [SQL Server 2019 - Windows](../sql-server/editions-and-components-of-sql-server-version-15.md)。  
   
@@ -236,7 +236,7 @@ Linux 上的 SQL Server 2019 目前不支持以下功能和服务。 随着时�
 | &nbsp; | StreamInsight |
 | &nbsp; | Analysis Services |
 | &nbsp; | Reporting Services |
-| &nbsp; | “数据库引擎服务” |
+| &nbsp; | 数据库引擎服务 |
 | &nbsp; | Master Data Services |
 
 <sup>1</sup> SQL Server 中支持 SQL Server R，但不支持作为单独包的 SQL Server R services。

@@ -25,16 +25,16 @@ helpviewer_keywords:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.openlocfilehash: c7394bf48f6bc32664e7d0a96af96ac0f3d1116f
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.openlocfilehash: 860d2a8c903a918e95ef38214e25a18efc3590d2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80402672"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893096"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Linux 上 SQL Server 2017 的各版本和支持的功能
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 本文详细介绍 Linux 上的 SQL Server 2017 的不同版本支持的功能。 有关 Windows 上 SQL Server 的版本和支持功能，请参阅 [SQL Server 2017 - Windows](../sql-server/editions-and-components-of-sql-server-2017.md)。  
   
@@ -229,7 +229,6 @@ Linux 上的 SQL Server 2017 目前不支持以下功能和服务。 随着时�
 | &nbsp; | 警报 |
 | &nbsp; | 日志读取器代理 |
 | &nbsp; | 托管备份 |
-| &nbsp; | 使用 MSX/TSX 进行多服务器管理 |
 | **高可用性** | 数据库镜像  |
 | **安全性** | 可扩展的密钥管理 |
 | &nbsp; | 链接服务器的 AD 身份验证 | 
@@ -239,7 +238,7 @@ Linux 上的 SQL Server 2017 目前不支持以下功能和服务。 随着时�
 | &nbsp; | StreamInsight |
 | &nbsp; | Analysis Services |
 | &nbsp; | Reporting Services |
-| &nbsp; | “数据库引擎服务” |
+| &nbsp; | 数据库引擎服务 |
 | &nbsp; | Master Data Services |
   
 ## <a name="next-steps"></a>后续步骤

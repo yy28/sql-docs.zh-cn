@@ -1,7 +1,7 @@
 ---
 title: query() 方法（xml 数据类型）| Microsoft Docs
 ms.custom: ''
-ms.date: 07/26/2017
+ms.date: 04/16/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: f48f6f7b-219f-463a-bf36-bc10f21afaeb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a8eb8570d260b1e30d3c0ecafa0f3bfd15065983
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6e864e6c6b9b0d604d853fdcf11d07a18799c3d4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72278159"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893888"
 ---
 # <a name="query-method-xml-data-type"></a>query() 方法（xml 数据类型）
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 对 xml 数据类型的实例指定 XQuery  。 结果为 xml 类型  。 该方法返回非类型化的 XML 实例。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
   
 query ('XQuery')  
 ```  
@@ -41,11 +41,11 @@ XQuery
 本节提供使用 xml 数据类型的 query() 方法的示例  。  
   
 ### <a name="a-using-the-query-method-against-an-xml-type-variable"></a>A. 对 xml 类型的变量使用 query() 方法  
-以下示例声明了 xml 类型的变量 \@myDoc 并将 XML 实例分配给它 。 然后使用 query() 方法对文档指定 XQuery  。  
+以下示例声明了 xml 类型的变量 **myDoc 并将 XML 实例分配给它\@**  。 然后使用 query() 方法对文档指定 XQuery  。  
   
-该查询检索 <`ProductDescription`> 元素的 <`Features`> 子元素：  
+该查询检索 <`Features`> 元素的 <`ProductDescription`> 子元素：  
   
-```  
+```sql
 declare @myDoc xml  
 set @myDoc = '<Root>  
 <ProductDescription ProductID="1" ProductName="Road Bike">  
@@ -70,7 +70,7 @@ SELECT @myDoc.query('/Root/ProductDescription/Features')
 ### <a name="b-using-the-query-method-against-an-xml-type-column"></a>B. 对 XML 类型列使用 query() 方法  
 在以下示例中，使用 query() 方法对 AdventureWorks 数据库中 xml 类型的 CatalogDescription 列指定 XQuery     ：  
   
-```  
+```sql
 SELECT CatalogDescription.query('  
 declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
 <Product ProductModelID="{ /PD:ProductDescription[1]/@ProductModelID }" />  
@@ -86,7 +86,7 @@ declare namespace wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-
   
 -   CatalogDescription 列是类型化 xml  列，这意味着它有关联的架构集合。 在 [XQuery Prolog](../../xquery/modules-and-prologs-xquery-prolog.md) 中，namespace  关键字定义稍后用于查询主体的前缀。  
   
--   query() 方法构造 XML，即包含 ProductModelID 属性的 <`Product`> 元素，其中 ProductModelID 属性值是从数据库中检索的  。 有关 XML 构造的详细信息，请参阅 [XML 构造 (XQuery)](../../xquery/xml-construction-xquery.md)。  
+-   query() 方法构造 XML，即包含 ProductModelID 属性的 < **> 元素，其中 ProductModelID 属性值是从数据库中检索的**`Product`   。 有关 XML 构造的详细信息，请参阅 [XML 构造 (XQuery)](../../xquery/xml-construction-xquery.md)。  
   
 -   WHERE 子句中的 [exist() 方法（XML 数据类型）](../../t-sql/xml/exist-method-xml-data-type.md)仅查找在 XML 中包含 <`Warranty`> 元素的行。 同样，namespace  关键字定义两个命名空间前缀。  
   
@@ -100,7 +100,7 @@ declare namespace wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-
   
 请注意，query() 方法和 exist() 方法都声明 PD 前缀。 在这些情况下，可以使用 WITH XMLNAMESPACES 首先定义前缀，然后在查询中使用它。  
   
-```  
+```sql
 WITH XMLNAMESPACES 
 (  
    'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD,  

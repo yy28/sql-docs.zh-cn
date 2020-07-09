@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 0544da48-0ca3-4a01-ba4c-940e23dc315b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 98dce9206326c51f5ae721903b93ea287afa992a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3d34a4b7913baa074ba3cc5aaca44c87e8c8ff75
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75656644"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895476"
 ---
 # <a name="create-database-audit-specification-transact-sql"></a>CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 审核功能创建数据库审核规范对象。 有关详细信息，请参阅 [SQL Server Audit（数据库引擎）](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "75656644"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
   
 CREATE DATABASE AUDIT SPECIFICATION audit_specification_name  
 {  
@@ -95,7 +95,7 @@ CREATE DATABASE AUDIT SPECIFICATION audit_specification_name
 ## <a name="examples"></a>示例
 
 ### <a name="a-audit-select-and-insert-on-a-table-for-any-database-principal"></a>A. 审核任何数据库主体的表上的 SELECT 和 INSERT 
- 下面的示例创建名为 `Payrole_Security_Audit` 的服务器审核，然后创建名为 `Payrole_Security_Audit` 的数据库审核规范，该规范针对 `AdventureWorks2012` 数据库中的 `HumanResources.EmployeePayHistory` 表审核 `dbo` 用户发出的 `SELECT` 和 `INSERT` 语句。  
+ 下面的示例创建名为 `Payrole_Security_Audit` 的服务器审核，然后创建名为 `Payrole_Security_Audit` 的数据库审核规范，该规范针对 `SELECT` 数据库中的 `INSERT` 表审核 `dbo` 用户发出的 `HumanResources.EmployeePayHistory` 和 `AdventureWorks2012` 语句。  
   
 ```  
 USE master ;  
@@ -122,7 +122,7 @@ GO
 ``` 
 
 ### <a name="b-audit-any-dml-insert-update-or-delete-on-_all_-objects-in-the-_sales_-schema-for-a-specific-database-role"></a>B. 审核特定数据库角色“sales”架构中所有对象上的任何 DML（INSERT、UPDATE 或 DELETE）    
- 下面的示例针对 `AdventureWorks2012` 数据库中 `Sales` 架构的所有对象，创建名为 `DataModification_Security_Audit` 的服务器审核，然后创建可由新数据库角色 `SalesUK` 中的用户审核 `INSERT`、`UPDATE` 和 `DELETE` 语句的数据库审核规范，其名称为 `Audit_Data_Modification_On_All_Sales_Tables`。  
+ 下面的示例针对 `DataModification_Security_Audit` 数据库中 `Audit_Data_Modification_On_All_Sales_Tables` 架构的所有对象，创建名为 `INSERT` 的服务器审核，然后创建可由新数据库角色 `UPDATE` 中的用户审核 `DELETE`、`SalesUK` 和 `Sales` 语句的数据库审核规范，其名称为 `AdventureWorks2012`。  
   
 ```  
 USE master ;  

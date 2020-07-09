@@ -29,15 +29,15 @@ helpviewer_keywords:
 ms.assetid: b016a289-3a74-46b1-befc-a13183be51e4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0e0a46138b9e6c4ccaff09c1ab5261f739deb6b5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a862161b34edb675fc38086d75713d35840c39c8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006490"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892501"
 ---
 # <a name="create-rule-transact-sql"></a>CREATE RULE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   创建名为规则的对象。 当绑定到列或别名数据类型时，使用规则指定可以插入到列中的可接受的值。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "68006490"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
   
 CREATE RULE [ schema_name . ] rule_name   
 AS condition_expression  
@@ -67,7 +67,7 @@ AS condition_expression
  condition_expression   
  定义规则的条件。 规则可以是 WHERE 子句中任何有效的表达式，并且可以包括诸如算术运算符、关系运算符和谓词（如 IN、LIKE、BETWEEN）这样的元素。 规则不能引用列或其他数据库对象。 可以包括不引用数据库对象的内置函数。 不能使用用户定义函数。  
   
- condition_expression 包括一个变量  。 每个局部变量前面都有一个 at 符号 (@)。 该表达式引用通过 UPDATE 或 INSERT 语句输入的值。 在创建规则时，可以使用任何名称或符号表示值，但第一个字符必须是 at 符号 (@)。  
+ condition_expression 包括一个变量  。 每个局部变量前面都有一个 at 符号 ( **)@** 。 该表达式引用通过 UPDATE 或 INSERT 语句输入的值。 在创建规则时，可以使用任何名称或符号表示值，但第一个字符必须是 at 符号 ( **)@** 。  
   
 > [!NOTE]  
 >  请避免对使用别名数据类型的表达式创建规则。 虽然可以对使用别名数据类型的表达式创建规则，但在将规则绑定到列或别名数据类型后，表达式被引用时将无法对其进行编译。  

@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 09f591a1-cfae-4a08-b04d-50bd02e7b71a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bed264287d4e2aa6bdb8eabb0d846688fbf157c6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4ca654d637ace759e7dcc42a0ad77437871ee844
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321654"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894982"
 ---
 # <a name="security-considerations-for-sql-server-compact-replication"></a>SQL Server Compact 复制的安全注意事项
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   保护 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库引擎实例与 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] 之间的连接涉及正确配置 Microsoft Internet Information Services (IIS) 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的安全性。  
   
 ## <a name="see-also"></a>另请参阅  
