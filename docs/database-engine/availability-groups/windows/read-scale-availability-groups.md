@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2decc7e78b599ebcd0c16e3373a0b62401d09428
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 28d9540c331ac5a250acc24abbd173f7ddf87e5f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75720804"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882574"
 ---
 # <a name="use-read-scale-with-always-on-availability-groups"></a>将读取缩放用于 Always On 可用性组
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 可用性组是一种全面的解决方案，赋予了 SQL Server 高可用性功能，并提供集成缩放解决方案。 在典型的数据库应用程序中，有多个客户端运行多种类型的工作负荷。 有时会由于资源限制出现瓶颈。 
 

@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 4d284ae9-3f5f-465a-b0dd-1328a4832a03
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0d94799898517b2d75ce6a1add308f0831b112ce
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b327105398388615aa507ceaf30734347fbf2683
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68132822"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882591"
 ---
 # <a name="set-remote_proc_transactions-transact-sql"></a>SET REMOTE_PROC_TRANSACTIONS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定当本地事务处于活动状态时，如果执行远程存储过程，将启动由 [!INCLUDE[tsql](../../includes/tsql-md.md)] 分布式事务处理协调器 (MS DTC) 管理的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分布式事务。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "68132822"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
   
 SET REMOTE_PROC_TRANSACTIONS { ON | OFF }   
 ```  
@@ -60,7 +60,7 @@ SET REMOTE_PROC_TRANSACTIONS { ON | OFF }
   
  当 REMOTE_PROC_TRANSACTIONS 为 OFF 时，远程存储过程调用不能成为本地事务的一部分。 远程存储过程所做的修改将在存储过程完成时提交或回滚。 由调用远程存储过程的连接发出的后续 COMMIT TRANSACTION 或 ROLLBACK TRANSACTION 语句对该过程所做的处理无效。  
   
- REMOTE_PROC_TRANSACTIONS 选项是一个兼容性选项，只影响对使用 **sp_addserver** 定义为远程服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例所进行的远程存储过程调用。 该选项不适用于在使用 **sp_addlinkedserver** 定义为链接服务器的实例上执行存储过程的分布式查询。  
+ REMOTE_PROC_TRANSACTIONS 选项是一个兼容性选项，只影响对使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sp_addserver**定义为远程服务器的** 实例所进行的远程存储过程调用。 该选项不适用于在使用 **sp_addlinkedserver** 定义为链接服务器的实例上执行存储过程的分布式查询。  
   
  SET REMOTE_PROC_TRANSACTIONS 的设置是在执行或运行时设置，而不是在分析时设置。  
   

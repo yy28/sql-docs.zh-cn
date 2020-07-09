@@ -2,7 +2,7 @@
 title: 查找事务复制错误
 description: 描述如何查找和识别事务复制错误，以及解决复制问题的故障排除方法。
 ms.custom: seo-lt-2019
-ms.date: 04/27/2018
+ms.date: 07/01/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: replication
@@ -12,15 +12,15 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 9a079838d343ba8de93e270d01d704eb32219ee9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d7c818e48c916a8ad3da7dfda7eaad6230c16ebd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286978"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882278"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>排除故障：查找 SQL Server 事务复制错误 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 如果对事务复制的工作机制没有基本的了解，那么排查复制错误可能会遭遇挫败。 创建发布的第一步是使用快照代理创建快照并将其保存到快照文件夹。 接下来，分发代理将该快照应用于订阅服务器。 
 
@@ -77,8 +77,10 @@ ms.locfileid: "76286978"
 
     ![拒绝访问的快照代理错误](media/troubleshooting-tran-repl-errors/snapshot-access-denied.png)
 
-        The replication agent had encountered an exception.
-        Exception Message: Access to path '\\node1\repldata.....' is denied.
+    ```console
+    The replication agent had encountered an exception.
+    Exception Message: Access to path '\\node1\repldata.....' is denied.
+    ```
 
 如果未正确配置快照文件夹的 Windows 权限，将看到快照代理出现“访问遭拒绝”的错误。 需验证是否具备存储快照文件夹的权限，并确保用于运行快照代理的帐户有权访问共享。  
 
@@ -108,10 +110,12 @@ ms.locfileid: "76286978"
     
     ![日志读取器代理的错误详细信息](media/troubleshooting-tran-repl-errors/log-reader-error.png)
 
-       Status: 0, code: 20011, text: 'The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.'.
-       The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.
-       Status: 0, code: 15517, text: 'Cannot execute as the database principal because the principal "dbo" does not exist, this type of principal cannot be impersonated, or you do not have permission.'.
-       Status: 0, code: 22037, text: 'The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.'.        
+    ```console
+    Status: 0, code: 20011, text: 'The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.'.
+    The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.
+    Status: 0, code: 15517, text: 'Cannot execute as the database principal because the principal "dbo" does not exist, this type of principal cannot be impersonated, or you do not have permission.'.
+    Status: 0, code: 22037, text: 'The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.'.        
+    ```
 
 6. 若未正确设置发布服务器数据库的所有者，通常便会发生该错误。 这可能会在还原数据库时发生。 要验证这一点：
 
@@ -127,7 +131,7 @@ ms.locfileid: "76286978"
 
     ```sql
     -- set the owner of the database to 'sa' or a specific user account, without the brackets. 
-    EXEC sp_changedbowner '<useraccount>'
+    EXECUTE sp_changedbowner '<useraccount>'
     -- example for sa: exec sp_changedbowner 'sa'
     -- example for user account: exec sp_changedbowner 'sqlrepro\administrator' 
     ```
@@ -158,9 +162,11 @@ ms.locfileid: "76286978"
 2. “分发服务器到订阅服务器历史记录”对话框随即打开，其中阐明了代理遇到的错误  ： 
 
      ![分发代理的错误详细信息](media/troubleshooting-tran-repl-errors/dist-history-error.png)
-    
-        Error messages:
-        Agent 'NODE1\SQL2016-AdventureWorks2012-AdvWorksProductTrans-NODE2\SQL2016-7' is retrying after an error. 89 retries attempted. See agent job history in the Jobs folder for more details.
+
+    ```console
+    Error messages:
+    Agent 'NODE1\SQL2016-AdventureWorks2012-AdvWorksProductTrans-NODE2\SQL2016-7' is retrying after an error. 89 retries attempted. See agent job history in the Jobs folder for more details.
+    ```
 
 3. 错误指示分发代理正在重试。 若要查找更多详细信息，请检查分发代理的作业历史记录： 
 
@@ -175,9 +181,11 @@ ms.locfileid: "76286978"
 5. 选择其中一个错误条目，并在窗口底部查看错误文本：  
 
     ![表示分发代理密码错误的错误文本](media/troubleshooting-tran-repl-errors/dist-pw-wrong.png)
-    
-        Message:
-        Unable to start execution of step 2 (reason: Error authenticating proxy NODE1\repl_distribution, system error: The user name or password is incorrect.)
+
+    ```console
+    Message:
+    Unable to start execution of step 2 (reason: Error authenticating proxy NODE1\repl_distribution, system error: The user name or password is incorrect.)
+    ```
 
 6. 此错误表示分发代理使用的密码不正确。 解决方法：
 
@@ -194,11 +202,13 @@ ms.locfileid: "76286978"
     通过右键单击“复制监视器”中的订阅 > “查看详细信息”，打开“分发到订阅服务器”历史记录    。 此处的错误是不同的： 
 
     ![表示分发代理无法连接的错误](media/troubleshooting-tran-repl-errors/dist-agent-cant-connect.png)
-           
-        Connecting to Subscriber 'NODE2\SQL2016'        
-        Agent message code 20084. The process could not connect to Subscriber 'NODE2\SQL2016'.
-        Number:  18456
-        Message: Login failed for user 'NODE2\repl_distribution'.
+
+    ```console
+    Connecting to Subscriber 'NODE2\SQL2016'        
+    Agent message code 20084. The process could not connect to Subscriber 'NODE2\SQL2016'.
+    Number:  18456
+    Message: Login failed for user 'NODE2\repl_distribution'.
+    ```
 
 8. 此错误表示分发代理无法连接到订阅服务器，因为用户 NODE2\repl_distribution 登录失败  。 若要进一步调查，请连接到订阅服务器，并在对象资源管理器的“管理”节点下，打开当前的 SQL Server 错误日志   ： 
 
@@ -234,8 +244,10 @@ ms.locfileid: "76286978"
 
 1. 在“命令”框中，开始新行，输入以下文本并选择“确定”   ： 
 
-       -Output C:\Temp\OUTPUTFILE.txt -Outputverboselevel 3
-    
+    ```console
+    -Output C:\Temp\OUTPUTFILE.txt -Outputverboselevel 3
+    ```
+
     可根据你的偏好修改位置和详细级别。
 
     ![作业步骤属性中的详细输出](media/troubleshooting-tran-repl-errors/verbose.png)

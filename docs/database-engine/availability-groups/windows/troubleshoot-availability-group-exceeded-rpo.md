@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 92c78d36559a8cb08a7f3368012a94ce3048c93c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d8ae9d5fee06ae9db1415b53c41a1d1d23633824
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822180"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882358"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rpo"></a>排除故障：可用性组超过了 RPO
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   在可用性组上执行强制手动故障转移到异步提交次要副本后，可能会发现数据丢失超过了恢复点目标 (RPO)。 或者，在使用 [Always On 可用性组的监视性能](monitor-performance-for-always-on-availability-groups.md)中的方法计算异步提交次要副本可能的数据丢失时，发现它超过了 RPO。  
   
  同步提交次要副本可保证零数据丢失，但异步提交次要副本可能的数据丢失取决于次要副本上仍在等待强化的日志数量。  

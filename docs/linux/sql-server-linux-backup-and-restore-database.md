@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
-ms.openlocfilehash: 88ef620a24bc2ce623ea6fb072871dadeffbcf6d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f90d612eb9064025db8b9ac942dd7f664cedb67e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68823112"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882334"
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>备份和还原 Linux 上的 SQL Server 数据库
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 可以使用多个不同的选项备份 Linux 上的 SQL Server 2017 中的数据库。 在 Linux 服务器上，可以使用 sqlcmd 连接到 SQL Server 并进行备份  。 如果是 Windows，则可以在连接到 Linux 上的 SQL Server 后通过用户界面进行备份。 各平台间的备份功能都是相同的。 例如，可以将数据库备份到本地、远程驱动器或 [Microsoft Azure Blob 存储服务](../relational-databases/backup-restore/sql-server-backup-to-url.md)中。
 

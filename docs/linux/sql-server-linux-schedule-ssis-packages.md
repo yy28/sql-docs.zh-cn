@@ -8,16 +8,16 @@ ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: ac7648287b4e4b609f4dd4f25b1b07a512065364
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c0526dea857f7ed3cb354e74bf3580d4e6a06669
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68065164"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882627"
 ---
 # <a name="schedule-sql-server-integration-services-package-execution-on-linux-with-cron"></a>使用 cron 在 Linux 上计划 SQL Server Integration Services 包执行
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 在 Windows 上运行 SQL Server Integration Services (SSIS) 和 SQL Server 时，可使用 SQL Server 代理自动执行 SSIS 包。 但是，在 Linux 上运行 SQL Server 和 SSIS 时，SQL Server 代理实用工具无法用于在 Linux 上计划作业。 可改为使用 cron 服务，其在 Linux 平台上广泛用于自动执行包。
 

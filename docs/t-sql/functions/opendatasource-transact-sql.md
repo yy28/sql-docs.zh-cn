@@ -20,18 +20,18 @@ helpviewer_keywords:
 - OLE DB data sources [SQL Server]
 - ad hoc connection information
 ms.assetid: 5510b846-9cde-4687-8798-be9a273aad31
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 8aa3f690b79167df6de5b27f6dd78276c61e0b26
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a7b4aa391f3b8f8822b65142417031ad21af9669
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71342060"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882461"
 ---
 # <a name="opendatasource-transact-sql"></a>OPENDATASOURCE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   在四部分对象名称中提供连接信息，而不使用链接服务器名称。  
 
@@ -80,7 +80,7 @@ OPENDATASOURCE ( 'provider_name', 'init_string' )
   
 每个提供程序的连接要求与创建链接服务器时的参数要求相似。 [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 一文中列出了很多常见提供程序的详细信息。  
   
-`FROM` 子句中对 `OPENDATASOURCE`、`OPENQUERY` 或 `OPENROWSET` 的任何调用与对用作更新目标的这些函数的任何调用都是分开独立计算的，即使为两个调用提供的参数相同也是如此。 具体而言，应用到上述任一调用的结果的筛选器或联接条件不会影响其他调用的结果。  
+`OPENDATASOURCE` 子句中对 `OPENQUERY`、`OPENROWSET` 或 `FROM` 的任何调用与对用作更新目标的这些函数的任何调用都是分开独立计算的，即使为两个调用提供的参数相同也是如此。 具体而言，应用到上述任一调用的结果的筛选器或联接条件不会影响其他调用的结果。  
   
 ## <a name="permissions"></a>权限  
  任何用户都可以执行 OPENDATASOURCE。 用于连接到远程服务器的权限由连接字符串确定。  
@@ -88,7 +88,7 @@ OPENDATASOURCE ( 'provider_name', 'init_string' )
 ## <a name="examples"></a>示例  
 
 ### <a name="a-using-opendatasource-with-select-and-the-sql-server-ole-db-driver"></a>A. 将 OPENDATASOURCE 与 SELECT 和 SQL Server OLE DB 驱动程序配合使用  
- 以下示例使用 [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) 访问远程服务器 `Seattle1` 上 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中的 `HumanResources.Department` 表。 使用 `SELECT` 语句定义返回的行集。 访问接口字符串包含 `Server` 和 `Trusted_Connection` 关键字。 这些关键字由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB 驱动程序识别。  
+ 以下示例使用 [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) 访问远程服务器 `HumanResources.Department` 上 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中的 `Seattle1` 表。 使用 `SELECT` 语句定义返回的行集。 访问接口字符串包含 `Server` 和 `Trusted_Connection` 关键字。 这些关键字由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB 驱动程序识别。  
   
 ```sql  
 SELECT GroupName, Name, DepartmentID  

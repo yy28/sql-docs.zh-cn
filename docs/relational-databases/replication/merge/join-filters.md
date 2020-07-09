@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: dd78fd8f-56e3-4582-9abd-6bc25c91e075
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 712665d24946c2826e4ab6c5e53bb853b07642b4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e6c68c2b2b2af6f32bcec900211b9185004caaa8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68033241"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882474"
 ---
 # <a name="join-filters"></a>Join Filters
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   联接筛选器允许根据发布中相关表的筛选方式对表进行筛选。 通常用参数化筛选器筛选父表，然后采用与定义各表之间联接完全相同的方式来定义联接筛选器。 联接筛选器扩展了参数化筛选器，以便仅复制与联接筛选器子句匹配的相关表中的数据。  
   
  联接筛选器通常遵循为其应用到的表定义的主键/外键关系，但并不严格受限于主键/外键关系。 联接筛选器可以基于任何逻辑比较两表中相关数据。  
