@@ -1,7 +1,7 @@
 ---
 title: 连接到 Oracle 数据源（SQL Server 导入和导出向导）| Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 06/29/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: integration-services
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: b0bd1f5a-34dd-4be3-9ac8-f9f87727781b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: faa8517c24a3db78ee7e7b53ff0151be93a87ba2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c114a5e17c95d21d999819e73dcfd53f84179802
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71285436"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773548"
 ---
 # <a name="connect-to-an-oracle-data-source-sql-server-import-and-export-wizard"></a>连接到 Oracle 数据源（SQL Server 导入和导出向导）
 
@@ -36,6 +36,7 @@ ms.locfileid: "71285436"
 |---|---|
 |服务器名称|**数据源**|
 |身份验证（登录）信息|“用户 ID”和“密码”或“集成安全性”   |
+|||
 
 无须在列表的“ConnectionString”字段中输入连接字符串  。 为 Oracle 服务器名称（“数据源”）输入单个值和登录信息后，向导会根据单个属性及其值组合出连接字符串  。 
 
@@ -70,9 +71,9 @@ Uid 和 Pwd
 ### <a name="connection-string-format"></a>连接字符串格式
 以下是典型连接字符串的格式。
 
-    ```
-    Driver={Microsoft ODBC for Oracle};Server=myServerAddress;Uid=myUsername;Pwd=myPassword;
-    ```
+```console
+Driver={Microsoft ODBC for Oracle};Server=myServerAddress;Uid=myUsername;Pwd=myPassword;
+```
 
 ### <a name="enter-the-connection-string"></a>输入连接字符串
 在“选择数据源”页或“选择目标”页上的“ConnectionString”字段中输入连接字符串，或在“Dsn”字段中输入 DSN 名称     。 输入连接字符串后，向导会分析该字符串，并在列表中显示各个属性及其值。

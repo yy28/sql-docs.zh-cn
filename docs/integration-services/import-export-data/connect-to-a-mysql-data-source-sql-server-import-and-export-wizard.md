@@ -1,7 +1,7 @@
 ---
 title: 连接到 MySQL 数据源（SQL Server 导入和导出向导）| Microsoft Docs
 ms.custom: ''
-ms.date: 06/20/2017
+ms.date: 06/29/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: integration-services
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3d7c5a38-18d3-4cc9-a241-04422cb250d3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9fc1128ff50a6b5f6fbb459dca23f518cbcd4f26
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fdec318d9fdc895470c7dde94e254c2cc164f079
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71285683"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768085"
 ---
 # <a name="connect-to-a-mysql-data-source-sql-server-import-and-export-wizard"></a>连接到 MySQL 数据源（SQL Server 导入和导出向导）
 
@@ -40,6 +40,7 @@ ms.locfileid: "71285683"
 |服务器名称|**Server**|
 |数据库名称|**Database**|
 |身份验证（登录）信息|“用户 ID”和“密码”  |
+|||
 
 无须在列表的“ConnectionString”字段中输入连接字符串  。 为 MySQL 服务器名称（“服务器”）输入单独值并输入登录信息后，向导会基于单独的属性及其值组合连接字符串  。 
 
@@ -79,18 +80,18 @@ MySQL 数据库的名称。
 ### <a name="connection-string-format"></a>连接字符串格式
 以下是典型连接字符串的格式。
 
-    ```
-    Driver={MySQL ODBC 5.3 Unicode Driver};Server=<server>;Database=<database>;UID=<user id>;PWD=<password>
-    ```
+```console
+Driver={MySQL ODBC 5.3 Unicode Driver};Server=<server>;Database=<database>;UID=<user id>;PWD=<password>
+```
 
 ### <a name="enter-the-connection-string"></a>输入连接字符串
 在“选择数据源”页或“选择目标”页上的“ConnectionString”字段中输入连接字符串，或在“Dsn”字段中输入 DSN 名称     。 输入连接字符串后，向导会分析该字符串，并在列表中显示各个属性及其值。
 
 以下示例使用此连接字符串。
 
-    ```
-    Driver={MySQL ODBC 5.3 Unicode Driver};Server=127.0.0.1;Database=world;UID=root;PWD=********
-    ```
+```console
+Driver={MySQL ODBC 5.3 Unicode Driver};Server=127.0.0.1;Database=world;UID=root;PWD=********
+```
 
 下面是输入连接字符串后出现的屏幕。
 

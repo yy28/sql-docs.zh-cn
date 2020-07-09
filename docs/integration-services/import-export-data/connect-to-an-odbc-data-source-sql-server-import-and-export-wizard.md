@@ -2,7 +2,7 @@
 title: 连接到 ODBC 数据源（SQL Server 导入和导出向导）| Microsoft Docs
 description: 介绍如何配置 ODBC DSN 或创建用于 SQL Server 导入和导出向导的 ODBC 连接字符串
 ms.custom: ''
-ms.date: 12/31/2019
+ms.date: 06/29/2020
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: integration-services
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e6318776-a188-48a7-995d-9eafd7148ff2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2b9979f7d82ef153ed3c447b5d47bf7424ca9443
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 73259121c31fcfc74352bf47938fcf28b294b894
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75608026"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773580"
 ---
 # <a name="connect-to-an-odbc-data-source-sql-server-import-and-export-wizard"></a>连接到 ODBC 数据源（SQL Server 导入和导出向导）
 
@@ -93,9 +93,9 @@ ms.locfileid: "75608026"
 
 本示例将使用以下连接字符串，该字符串与 Microsoft SQL Server 连接。 使用的数据库示例是 WideWorldImporters，我们将连接到本地计算机上的 SQL Server  。
 
-    ```
-    Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;
-    ```
+```console
+Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;
+```
 
 在“选择数据源”页或“选择目标”页上的“ConnectionString”字段中输入连接字符串    。 输入连接字符串后，向导会分析该字符串，并在列表中显示各个属性及其值。
 
@@ -140,7 +140,7 @@ ms.locfileid: "75608026"
 
 10. 使用记事本或其他文本编辑器打开保存的文件。 以下是 SQL Server 示例的内容。
 
-    ```   
+    ```console
     [ODBC]  
     DRIVER=ODBC Driver 13 for SQL Server  
     TrustServerCertificate=No  
@@ -155,9 +155,9 @@ ms.locfileid: "75608026"
 
     将示例文件 DSN 中必需的值进行组合后，会得到下面的连接字符串。
     
-        ```
-        DRIVER=ODBC Driver 13 for SQL Server;SERVER=localhost;DATABASE=WideWorldImporters;Trusted_Connection=Yes
-        ```
+    ```console
+    DRIVER=ODBC Driver 13 for SQL Server;SERVER=localhost;DATABASE=WideWorldImporters;Trusted_Connection=Yes
+    ```
 
     通常无需用到 ODBC 数据源管理器创建的 DSN 中的全部设置，即可创建正常运行的连接字符串。  
     -   始终需要指定 ODBC 驱动程序。

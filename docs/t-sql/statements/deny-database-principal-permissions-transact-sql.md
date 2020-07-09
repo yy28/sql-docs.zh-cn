@@ -28,15 +28,15 @@ helpviewer_keywords:
 ms.assetid: e2429a5d-e9be-4c05-be20-414d1038a63a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 93703add5e969959aee1dc9baf253476884f0baa
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 10da9d407308c9ffe4a076378ca9f82b41ebc852
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633186"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766707"
 ---
 # <a name="deny-database-principal-permissions-transact-sql"></a>DENY 数据库主体权限 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   拒绝授予的对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中数据库用户、数据库角色或应用程序角色的权限。  
 
@@ -68,19 +68,19 @@ DENY permission [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>参数  
- permission   
+ permission  
  指定可以拒绝的对数据库主体的权限。 有关权限的列表，请参阅本主题后面的“备注”部分。  
   
- USER ::database_user   
- 指定要拒绝对其权限的用户的类和名称。 需要使用作用域限定符 (::)  。  
+ USER ::database_user  
+ 指定要拒绝对其权限的用户的类和名称。 需要使用作用域限定符 (::)。  
   
- ROLE ::database_role   
- 指定要拒绝对其权限的角色的类和名称。 需要使用作用域限定符 (::)  。  
+ ROLE ::database_role  
+ 指定要拒绝对其权限的角色的类和名称。 需要使用作用域限定符 (::)。  
   
- APPLICATION ROLE ::application_role   
+ APPLICATION ROLE ::application_role  
  **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
- 指定要拒绝对其权限的应用程序角色的类和名称。 需要使用作用域限定符 (::)  。  
+ 指定要拒绝对其权限的应用程序角色的类和名称。 需要使用作用域限定符 (::)。  
   
  CASCADE  
  指示要拒绝的权限也会被对此主体授予该权限的其他主体拒绝。  
@@ -88,30 +88,30 @@ DENY permission [ ,...n ]
  AS \<database_principal>  
  指定一个主体，执行该查询的主体从该主体获得撤消该权限的权利。  
   
- Database_user   
+ Database_user  
  指定数据库用户。  
   
- Database_role   
+ Database_role  
  指定数据库角色。  
   
- Application_role   
+ Application_role  
  **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  指定应用程序角色。  
   
- Database_user_mapped_to_Windows_User   
+ Database_user_mapped_to_Windows_User  
  指定映射到 Windows 用户的数据库用户。  
   
- Database_user_mapped_to_Windows_Group   
+ Database_user_mapped_to_Windows_Group  
  指定映射到 Windows 组的数据库用户。  
   
- Database_user_mapped_to_certificate   
+ Database_user_mapped_to_certificate  
   指定映射到证书的数据库用户。  
   
- Database_user_mapped_to_asymmetric_key   
+ Database_user_mapped_to_asymmetric_key  
   指定映射到非对称密钥的数据库用户。  
   
- Database_user_with_no_login   
+ Database_user_with_no_login  
  指定无相应服务器级主体的数据库用户。  
   
 ## <a name="remarks"></a>备注  

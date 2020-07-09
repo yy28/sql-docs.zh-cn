@@ -15,15 +15,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c0394fdfaf25042eef28c4f350b6ca2bf141b14e
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: e1df3f06d5973f5ec0002da4c67b82519435a61d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81288133"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767582"
 ---
 # <a name="get-started-with-full-text-search"></a>全文搜索入门
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 SQL Server 数据库默认已启用全文搜索。 但是，在运行全文查询之前，必须先创建全文目录，然后在要搜索的表或索引视图中创建全文索引。
 
 ## <a name="set-up-full-text-search-in-two-steps"></a>通过两个步骤设置全文搜索

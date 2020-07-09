@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: ff921952-b935-4bb0-b587-bba6cd15a090
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 594b725b873124042dfa8afdc9253499d703999b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 97dccd39e74cdadad30edee265d8ec2183b183be
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68021619"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774149"
 ---
 # <a name="storage-system-input-output-time-out"></a>存储系统输入输出超时
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   此规则检查系统事件日志中是否存在 EventId 9。 此消息指示存储系统中出现 I/O 超时。  
   
 ## <a name="best-practices-recommendations"></a>最佳做法建议  

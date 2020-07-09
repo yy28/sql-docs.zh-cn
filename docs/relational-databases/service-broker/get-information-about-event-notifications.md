@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8bc10867-66d6-4f57-ac32-a6c29f3327cd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fefdced57d611d241dbb96b71a0b220139683243
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d82126c304a40cfba88201f71b8073a815a169cc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68083835"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764962"
 ---
 # <a name="get-information-about-event-notifications"></a>获取有关事件通知的信息
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   下列目录视图可用于查询有关事件通知的元数据。  
   
  **获取有关非服务器级别事件通知的信息**  

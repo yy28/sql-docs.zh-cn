@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 092d0d71-9f1e-4e38-a1c4-2487adfa5b4e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 810367b817aec0688a2bc5168be10c7ff073affc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 66652cac6436c399487c33f35ab94d408f0b6f1d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73980997"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766046"
 ---
 # <a name="drop-trigger-transact-sql"></a>DROP TRIGGER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   从当前数据库中删除一个或多个 DML 或 DDL 触发器。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "73980997"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 -- Trigger on an INSERT, UPDATE, or DELETE statement to a table or view (DML Trigger)  
   
 DROP TRIGGER [ IF EXISTS ] [schema_name.]trigger_name [ ,...n ] [ ; ]  
@@ -104,7 +104,7 @@ ON ALL SERVER
 ## <a name="examples"></a>示例  
   
 ### <a name="a-dropping-a-dml-trigger"></a>A. 删除 DML 触发器  
- 以下示例将删除 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中的 `employee_insupd` 触发器。 （从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，可使用 DROP TRIGGER IF EXISTS 语句。）  
+ 以下示例将删除 `employee_insupd` 数据库中的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 触发器。 （从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，可使用 DROP TRIGGER IF EXISTS 语句。）  
   
 ```  
 IF OBJECT_ID ('employee_insupd', 'TR') IS NOT NULL  

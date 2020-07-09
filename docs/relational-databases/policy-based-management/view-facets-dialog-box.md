@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: 70adec34-078c-4ae0-9961-d6a8318340e7
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0d1c9ec4a0f26a48f281b3f9d91fdbbc745a5391
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e3b8b4b8cf0a20579d88cb49a9cbe9d4e23523ec
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68054411"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773105"
 ---
 # <a name="view-facets-dialog-box"></a>“查看方面”对话框
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   此对话框用于查看基于策略的管理方面的属性。 方面属性是在创建方面时定义的，不能使用此对话框来更改这些属性。  
   
 ## <a name="options"></a>选项  

@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: f656bf46-e5be-4c7b-9ea4-0f2eee7441fe
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c3adcba99280331fd604cf71544d85a87f996109
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6dcca3cbe67a6cdfba4ffd24418fb5ac0fe23cab
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68087556"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767905"
 ---
 # <a name="mssqlserver_7934"></a>MSSQLSERVER_7934
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>详细信息  
   
-|||  
-|-|-|  
+| Attribute | 值 |  
+| :-------- | :---- |  
 |产品名称|SQL Server|  
 |事件 ID|7934|  
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC2_FS_MISSING_ROWSET_DIRECTORY|  
-|消息正文|表错误: 找不到对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID 的 Filestream 目录 ID F_ID。|  
+|消息正文|表错误:找不到对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID 的 Filestream 目录 ID F_ID。|  
   
 ## <a name="explanation"></a>说明  
 在运行 DBCC CHECKDB 期间，找到一个分区；但在 FILESTREAM 数据空间中却找不到与其对应的 FILESTREAM 行集目录。  

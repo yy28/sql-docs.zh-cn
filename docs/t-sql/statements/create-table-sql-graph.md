@@ -32,15 +32,15 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 37e374d44fc6013c1cdf6b9594d709ff4282f7aa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3941db45a3c667ac2b273323096b6e14bdc0e93f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70846720"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766935"
 ---
 # <a name="create-table-sql-graph"></a>CREATE TABLE（SQL 图形）
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
 
 以 `NODE` 或 `EDGE` 表的形式创建新 SQL 图形表。 
   
@@ -51,7 +51,7 @@ ms.locfileid: "70846720"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 CREATE TABLE   
     { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( { <column_definition> } 
@@ -98,10 +98,10 @@ CREATE TABLE
 ## <a name="arguments"></a>参数  
 本文档仅列出与 SQL 图形相关的参数。 有关受支持参数的完整列表和说明，请参阅 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)
 
- database_name    
+ database_name      
  要在其中创建表的数据库的名称。 database_name 须指定现有数据库的名称  。 如果未指定，则 database_name 默认为当前数据库  。 当前连接的登录名必须与 database_name 所指定数据库中的一个现有用户 ID 关联，并且该用户 ID 必须具有 CREATE TABLE 权限  。  
   
- schema_name    
+ schema_name      
  新表所属架构的名称。  
   
  *table_name*      

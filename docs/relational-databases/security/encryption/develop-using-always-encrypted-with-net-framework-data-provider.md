@@ -12,15 +12,15 @@ ms.assetid: 827e509e-3c4f-4820-aa37-cebf0f7bbf80
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ddd1847011a726f5230a9b25aa01ab694da764b3
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 857823bf01c537842a3d18e23c003d38ac6b68d7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922371"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765033"
 ---
 # <a name="using-always-encrypted-with-the-net-framework-data-provider-for-sql-server"></a>对用于 SQL Server 的 .NET Framework 数据提供程序使用 Always Encrypted
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 本文介绍了如何使用 [Always Encrypted](always-encrypted-database-engine.md) 或 [具有安全 Enclave 的 Always Encrypted](always-encrypted-enclaves.md) 和[用于 SQL Server 的 .NET Framework 数据提供程序](https://msdn.microsoft.com/library/kb9s9ks0(v=vs.110).aspx)来开发 .NET 应用程序。
 

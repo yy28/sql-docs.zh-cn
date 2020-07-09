@@ -12,15 +12,15 @@ ms.assetid: d39262c0-0035-42fc-b989-7a16ae0c7345
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 45c72a45776abb6a6f3215560d2b1aafd974d720
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7e7851febee7a47c57a5e376cfe5b92ed2999927
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68093703"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773530"
 ---
 # <a name="cursoropen-event-class"></a>CursorOpen 事件类
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **CursorOpen** 事件类说明在应用程序编程接口 (API) 游标中发生的游标打开事件。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 定义与游标和游标选项相关联的 SQL 语句时发生游标打开事件，然后填充游标。  
   
  在记录游标性能的跟踪中包括 **CursorOpen** 事件类。 在跟踪中包括 **CursorOpen** 事件类时，产生的开销取决于跟踪期间数据库中使用游标的频率。 如果广泛使用游标，则跟踪可能会显著地降低性能。  

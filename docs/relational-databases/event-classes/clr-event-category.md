@@ -14,15 +14,15 @@ ms.assetid: a7c0cd60-3bec-42be-ad5e-473bd26a06d9
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e589b57de25a5240b32e254d9c8280810dc0b557
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 978067f0d035fcd781d275bf77177e2b95383fdb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67999623"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762986"
 ---
 # <a name="clr-event-category"></a>CLR 事件类别
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **CLR** 事件类别包括由于在 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 内执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]公共语言运行时 (CLR) 对象而生成的事件类。  
  
  ## <a name="assembly-load-event-class"></a>Assembly Load 事件类 

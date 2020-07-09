@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 722bd2c6-0fb9-4838-954a-439744c6ac4b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b7cc3e42abfdb31da50b7db329f9c61c2a195111
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 17bd7cfa51701de32398345cb6221b0ad21da0eb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68087598"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773564"
 ---
 # <a name="mssqlserver_7933"></a>MSSQLSERVER_7933
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>详细信息  
   
-|||  
-|-|-|  
+| Attribute | 值 |  
+| :-------- | :---- |  
 |产品名称|SQL Server|  
 |事件 ID|7933|  
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC2_FS_ORPHANED_ROWSET_DIRECTORY|  
-|消息正文|表错误: 存在分区的 Filestream 目录 ID F_ID，但数据库中不存在相应的分区。|  
+|消息正文|表错误:存在分区的 FileStream 目录 ID F_ID，但数据库中不存在相应的分区。|  
   
 ## <a name="explanation"></a>说明  
 在执行 DBCC CHECKDB 期间，在 FILESTREAM 数据空间中找到了行集目录；但数据库中缺少与其对应的分区。  

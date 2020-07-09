@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 2b6d4c5a-a7f5-4dd1-b10a-7632265b1af7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 015ba90a6f2cad79483e52d5caa23ad06784c055
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cd616d55c63cb2e1a4ce78fa587b3dc79d315ff1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68004728"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765661"
 ---
 # <a name="set-statistics-xml-transact-sql"></a>SET STATISTICS XML (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   使 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，并以定义完善的 XML 文档格式生成有关语句执行情况的详细信息。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68004728"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
   
 SET STATISTICS XML { ON | OFF }  
 ```  
@@ -60,7 +60,7 @@ SET STATISTICS XML { ON | OFF }
  SET STATISTICS PROFILE 和 SET STATISTICS XML 彼此互为对等物。 前者生成文本输出；后者生成 XML 输出。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中，新的查询执行计划信息将只通过 SET STATISTICS XML 语句显示，而不通过 SET STATISTICS PROFILE 语句显示。  
   
 > [!NOTE]  
->  如果在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中选择了“包括实际的执行计划”，则该 SET 选项不会生成 XML 显示计划输出。 请在使用该 SET 选项之前清除“包括实际的执行计划”按钮  。  
+>  如果在  **中选择了“包括实际的执行计划”，则该 SET 选项不会生成 XML 显示计划输出**[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 请在使用该 SET 选项之前清除“包括实际的执行计划”按钮  。  
   
 ## <a name="permissions"></a>权限  
  若要使用 SET STATISTICS XML 并查看输出，用户必须具有以下权限：  
@@ -74,7 +74,7 @@ SET STATISTICS XML { ON | OFF }
 ## <a name="examples"></a>示例  
  下面两条语句使用 SET STATISTICS XML 设置，显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在查询内对索引进行分析和优化的方法。 第一个查询在索引列上的 WHERE 子句中使用等于 (=) 比较运算符。 第二个查询在 WHERE 子句中使用 LIKE 运算符。 这将强制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用聚集索引扫描并查找满足 WHERE 子句条件的数据。 EstimateRows 和 EstimatedTotalSubtreeCost 属性内用于第一个基于索引查询的值较小，这表示与非索引查询相比，该查询的处理速度要快得多，且使用的资源较少   。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SET STATISTICS XML ON;  

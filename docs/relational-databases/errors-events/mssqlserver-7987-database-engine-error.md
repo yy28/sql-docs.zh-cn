@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 314aebf1-6cdf-488d-a274-ce967fadb57b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d626c0dcf44bc0907516d78aefd54b3ec0bb608a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 47074877bb5d62ffa00e7824818fae9eed25004e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68007065"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767880"
 ---
 # <a name="mssqlserver_7987"></a>MSSQLSERVER_7987
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>详细信息  
   
-|||  
-|-|-|  
+| Attribute | 值 |  
+| :-------- | :---- |  
 |产品名称|SQL Server|  
 |事件 ID|7987|  
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC2_PRE_CHECKS_CHAIN_LINKAGE_MISMATCH|  
-|消息正文|系统表预检查: 对象 ID O_ID 具有不匹配的链链接。 P_ID1->next = P_ID2，但是 P_ID2->prev = P_ID3。 由于不可修复的错误，Check 语句已终止。|  
+|消息正文|系统表预检查:对象 ID O_ID 具有不匹配的链链接。 P_ID1->next = P_ID2，但是 P_ID2->prev = P_ID3。 由于不可修复的错误，Check 语句已终止。|  
   
 ## <a name="explanation"></a>说明  
 DBCC CHECKDB 的第一个阶段用于对关键系统表的数据页进行简单检查。 如果找到任何错误，则无法修复它们；因此，DBCC CHECKDB 立即终止。  
