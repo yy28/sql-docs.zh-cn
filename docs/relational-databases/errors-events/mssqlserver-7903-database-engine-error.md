@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 991a86df-42cd-435e-85b3-f42e4cb13039
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3c3444c213d71f9062f1456471db5d71ba9e842b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0d07630414760e8d216365b3f836a24381c99c1f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67951517"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85793164"
 ---
 # <a name="mssqlserver_7903"></a>MSSQLSERVER_7903
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>详细信息  
   
-|||  
-|-|-|  
+| Attribute | 值 |  
+| :-------- | :---- |  
 |产品名称|SQL Server|  
 |事件 ID|7903|  
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC2_FS_ORPHANED_FILE|  
-|消息正文|表错误：在对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID，列 ID C_ID 的 FileStream 目录中发现孤立文件“FILE”。|  
+|消息正文|表错误:在对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID，列 ID C_ID 的 FileStream 目录中发现孤立文件“FILE”。|  
   
 ## <a name="explanation"></a>说明  
 在 FILESTREAM 列目录中发现了 FILESTREAM 文件，但是在分区中缺少对应的列值。  

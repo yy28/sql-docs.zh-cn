@@ -20,34 +20,36 @@ helpviewer_keywords:
 ms.assetid: c6cd5d0f-18f4-49be-b161-64d9c5569086
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7d39f716717fe517fb3274e4c5519606916afb7b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 291c076d78b227487c6c4267343de5cffc7a3d63
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73064667"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813884"
 ---
 # <a name="alter-application-role-transact-sql"></a>ALTER APPLICATION ROLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   更改应用程序角色的名称、密码或默认架构。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>语法
   
-```  
+```syntaxsql
   
-ALTER APPLICATION ROLE application_role_name   
+ALTER APPLICATION ROLE application_role_name
     WITH <set_item> [ ,...n ]  
   
-<set_item> ::=   
-    NAME = new_application_role_name   
+<set_item> ::=
+    NAME = new_application_role_name
     | PASSWORD = 'password'  
     | DEFAULT_SCHEMA = schema_name  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>参数
+
  application_role_name   
  要修改的应用程序角色的名称。  
   
@@ -55,13 +57,14 @@ ALTER APPLICATION ROLE application_role_name
  指定应用程序角色的新名称。 该名称一定不能被用于引用数据库中任何主体。  
   
  PASSWORD ='password'   
- 指定应用程序角色的密码。 password 必须符合运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的 Windows 密码策略要求。 应始终使用强密码。  
+ 指定应用程序角色的密码。 password 必须符合运行  *实例的计算机的 Windows 密码策略要求*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 应始终使用强密码。  
   
  DEFAULT_SCHEMA =schema_name   
  指定服务器在解析对象名时将搜索的第一个架构。 schema_name 可以是数据库中不存在的架构  。  
   
-## <a name="remarks"></a>备注  
- 如果数据库中已存在新的应用程序角色名称，则该语句将失败。 当更改应用程序角色的名称、密码或默认架构更改时，与该角色关联的 ID 将不会随之改变。  
+## <a name="remarks"></a>备注
+
+如果数据库中已存在新的应用程序角色名称，则该语句将失败。 当更改应用程序角色的名称、密码或默认架构更改时，与该角色关联的 ID 将不会随之改变。  
   
 > [!IMPORTANT]  
 >  密码过期策略不适用于应用程序角色密码。 为此，选择强密码时要格外谨慎。 调用应用程序角色的应用程序必须存储其密码。  

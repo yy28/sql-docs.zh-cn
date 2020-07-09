@@ -19,17 +19,17 @@ helpviewer_keywords:
 - IDs [SQL Server], filegroups
 - names [SQL Server], filegroups
 ms.assetid: 852a76d8-9e61-4a31-84ee-c7edb84a061c
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 9902a85fbede75926bfbcb3dd48e19f622c19ea3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: beb3e7ed1733bc3cb2f7a3c136de1168e3722df9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68071480"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85858434"
 ---
 # <a name="filegroup_id-transact-sql"></a>FILEGROUP_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 此函数返回指定文件组名称的文件组标识 (ID) 号。  
   
@@ -51,7 +51,7 @@ filegroup_name  是类型 sysname  的表达式，它表示文件组 ID `FILEGRO
 filegroup_name 与 sys.filegroups 目录视图中的 name 列相对应    。  
   
 ## <a name="examples"></a>示例  
-此示例将返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中名为 `PRIMARY` 的文件组的文件组 ID。  
+此示例将返回 `PRIMARY` 数据库中名为 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 的文件组的文件组 ID。  
   
 ```  
 SELECT FILEGROUP_ID('PRIMARY') AS [Filegroup ID];  

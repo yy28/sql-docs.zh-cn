@@ -20,17 +20,17 @@ helpviewer_keywords:
 - identification numbers [SQL Server], files
 - file names [SQL Server], FILE_ID
 ms.assetid: 6a7382cf-a360-4d62-b9d2-5d747f56f076
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 63744a6731e7c57a21a821ce7ab65cb49e095e67
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f88f19d26ab7653f3d677862fce8de23e05e9c5b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68071531"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85858415"
 ---
 # <a name="file_id-transact-sql"></a>FILE_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 对于当前数据库的组件文件的给定逻辑名称，此函数返回文件标识 (ID) 号。  
   
@@ -55,7 +55,7 @@ file_name
 ## <a name="remarks"></a>备注  
 file_name  对应于 sys.master_files 或 sys.database_files 目录视图的 name 列中所显示的逻辑文件名。  
 
-如果 file_name 不对应当前数据库组件文件的逻辑名称，`FILE_ID` 将返回 `NULL`。
+如果 file_name`FILE_ID``NULL` 不对应当前数据库组件文件的逻辑名称，*将返回*。
   
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，分配给全文目录的文件标识号大于 32767。 因为 `FILE_ID` 函数具有 smallint  返回类型，`FILE_ID` 将不支持全文文件。 改用 [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md)。  
   
