@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: 53223432-615e-440f-904d-925d33ec2144
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d52fa3912bffd084a8f95e79963abcd99158cdd4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 99a8157c9285a7e6950e493f15c1b22f8c9d2eba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822393"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784104"
 ---
 # <a name="configure-database-mirrroing-security-wizard-mirror-server-instance"></a>配置数据库镜像安全向导：镜像服务器实例
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   使用此页可以指定有关具有镜像数据库的服务器实例的信息。  
   
 > [!IMPORTANT]  

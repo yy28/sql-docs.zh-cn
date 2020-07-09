@@ -22,17 +22,17 @@ helpviewer_keywords:
 - status information [SQL Server], events
 - DDL triggers, returning event data
 ms.assetid: 03a80e63-6f37-4b49-bf13-dc35cfe46c44
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 73e0c8737a65b040552029717bf6848e1fc0cb63
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 95996934e6d8334376533b4abf04e2cc7607fd78
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68094567"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784581"
 ---
 # <a name="eventdata-transact-sql"></a>EVENTDATA (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 此函数返回有关服务器或数据库事件的信息。 激发事件通知且指定的 Service Broker 收到结果时，将调用 `EVENTDATA`。 DDL 或登录触发器还支持在内部使用 `EVENTDATA`。  
   
@@ -85,7 +85,7 @@ EVENTDATA 返回数据类型为 xml  的值。 默认情况下，所有事件的
 此示例创建阻止创建新数据库表的 DDL 触发器。 对 `EVENTDATA` 生成的 XML 数据使用 XQuery 可捕获激发触发器的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 请参阅 [XQuery 语言参考 (SQL Server)](../../xquery/xquery-language-reference-sql-server.md) 以了解详细信息。  
   
 > [!NOTE]  
->  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的“以网格显示结果”来查询 `<TSQLCommand>` 元素时，命令文本中的分行符不会出现。 请改用“以文本格式显示结果”  。  
+>  使用  **中的“以网格显示结果”** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]来查询 `<TSQLCommand>` 元素时，命令文本中的分行符不会出现。 请改用“以文本格式显示结果”  。  
   
 ```  
 USE AdventureWorks2012;  

@@ -17,15 +17,15 @@ ms.assetid: 2f3ce5f5-c81c-4470-8141-8144d4f218dd
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 445453f6be42c6015fc3b6728eb12ee9a78f0ef6
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3240f9cd3e94418572482a5e73950e2b522ec663
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928165"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786885"
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>确定性函数和不确定性函数
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   只要使用特定的输入值集并且数据库具有相同的状态，那么不管何时调用，确定性函数始终都会返回相同的结果。 即使访问的数据库的状态不变，每次使用特定的输入值集调用非确定性函数都可能会返回不同的结果。 例如，函数 AVG 对上述给定的限定条件始终返回相同的值，但返回当前 datetime 值的 GETDATE 函数始终会返回不同的结果。  
   
  有多个用户定义函数的属性通过对调用函数的计算列进行索引或通过引用函数的索引视图确定 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 为函数的结果建立索引的功能。 函数的确定性是一个属性。 例如，如果一个视图引用了任何不确定性函数，则无法对该视图创建聚集索引。 有关函数属性（包括函数确定性）的详细信息，请参阅 [用户定义函数](../../relational-databases/user-defined-functions/user-defined-functions.md)。  

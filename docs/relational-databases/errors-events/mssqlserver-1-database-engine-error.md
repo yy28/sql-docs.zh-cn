@@ -13,26 +13,26 @@ helpviewer_keywords:
 ms.assetid: bad25b91-eaed-46c0-a5b7-71117a32304c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e1993d5ec94abc206cabd7c12841c3fdbe15a7cf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f7ec380df88d036da24da9021b949ce75673e363
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67928085"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781584"
 ---
 # <a name="mssqlserver_-1"></a>MSSQLSERVER_-1
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>详细信息  
   
-|||  
-|-|-|  
+| Attribute | 值 |  
+| :-------- | :---- |  
 |产品名称|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |事件 ID|-1|  
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称||  
-|消息正文|在建立与服务器的连接时出错。  在连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，在默认的设置下 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不允许进行远程连接可能会导致此失败。 (访问接口: SQL 网络接口，错误: 28 - 服务器不支持请求的协议) (Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，错误: -1)|  
+|消息正文|在建立与服务器的连接时出错。  在连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，在默认的设置下 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不允许进行远程连接可能会导致此失败。 （提供程序：SQL 网络接口，错误：28 - 服务器不支持请求的协议）（Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，错误：-1）|  
   
 ## <a name="explanation"></a>说明  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端无法连接到服务器。 此错误可能由以下某个原因引起：  

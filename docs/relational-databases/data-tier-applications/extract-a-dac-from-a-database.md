@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 86482b666c2ecfc5e9fcc09c1d06df14640386d0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d4c45a6b720fde31618f384bcc2df2cceacc4102
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68134785"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781688"
 ---
 # <a name="extract-a-dac-from-a-database"></a>从数据库中提取 DAC
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   使用“提取数据层应用程序向导”  或 Windows PowerShell 脚本可以从现有 SQL Server 数据库提取数据层应用程序 (DAC) 包。 提取过程将创建一个 DAC 包文件，其中包含数据库对象及其相关实例级别元素的定义。 例如，一个 DAC 包文件包含数据库表、存储过程、视图、用户以及映射到数据库用户的登录名。  
   
  

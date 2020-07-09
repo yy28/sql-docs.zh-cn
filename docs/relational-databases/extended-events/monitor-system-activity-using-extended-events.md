@@ -14,16 +14,16 @@ ms.assetid: d83ad88f-818c-49fe-a9a9-299f704fca53
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0612675365ac8de45c83715192cfb98a69a21d5b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d80d0e1deee504d4dd5a2d8ce49303a799f66fb8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79434064"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790848"
 ---
 # <a name="monitor-system-activity-using-extended-events"></a>使用扩展事件监视系统活动
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   此过程说明如何将扩展事件和 Windows 事件跟踪 (ETW) 配合使用来监视系统活动。 此过程还说明如何使用 CREATE EVENT SESSION、ALTER EVENT SESSION 和 DROP EVENT SESSION 语句。  
   

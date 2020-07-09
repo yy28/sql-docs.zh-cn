@@ -20,15 +20,15 @@ ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 94f5ccf6d7983a25bb8cafe084dbca103f966255
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 94e1353d8fb3d49a71b98e53f6ec92a6db469e2b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74095430"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786076"
 ---
 # <a name="track-data-changes-sql-server"></a>跟踪数据更改 (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供两个用于在数据库中跟踪数据更改的功能： [变更数据捕获](#Capture) 和 [更改跟踪](#Tracking)。 这两个功能使应用程序能够确定对数据库中的用户表所做的 DML 更改（插入、更新和删除操作）。 可对同一个数据库启用变更数据捕获和更改跟踪；没有特殊的注意事项。 有关支持变更数据捕获和更改跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]支持更改跟踪。 变更数据捕获仅在 SQL Server 和 Azure SQL 数据库托管实例中受支持。
   
 ## <a name="benefits-of-using-change-data-capture-or-change-tracking"></a>使用变更数据捕获或更改跟踪的好处  

@@ -25,15 +25,15 @@ helpviewer_keywords:
 ms.assetid: f2993a28-0b81-46f2-aec0-6877fe990387
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 02d42e48116e893c6bf7d04c2027762555be06f2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9f451dcfbe7f3463a1b99445efe52a3b31d02a75
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68091006"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787442"
 ---
 # <a name="monitor-resource-usage-system-monitor"></a>监视资源使用情况（系统监视器）
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   如果您运行的是 Microsoft Windows 服务器操作系统，则可以使用系统监视器图形工具来测量 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的性能。 可以查看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象、性能计数器以及其他对象的行为，这些对象包括处理器、内存、缓存、线程和进程。 每个对象都有一个相关的计数器集，用于测量设备使用情况、队列长度、延时情况，另外还有吞吐量及内部拥塞指示器。  
   
 > [!NOTE]  

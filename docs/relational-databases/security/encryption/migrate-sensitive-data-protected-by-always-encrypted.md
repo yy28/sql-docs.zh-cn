@@ -14,15 +14,15 @@ ms.assetid: b2ca08ed-a927-40fb-9059-09496752595e
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b96529feb6e6e4c4ac2ad7d4be62474a624392d8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 22ad17c49a2f084453c87f26b9c782404f93483d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76909907"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784029"
 ---
 # <a name="bulk-load-encrypted-data-to-columns-using-always-encrypted"></a>使用 Always Encrypted 将加密数据批量加载到列中
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 若要在大容量复制操作期间加载加密数据，而不用在服务器上执行元数据检查，请使用 **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** 选项创建用户。 此选项旨在由旧式工具使用，或者由不能使用 Always Encrypted 的第三方提取-转换-加载 (ETL) 工作流使用。 这使用户可以安全地将加密数据从包含加密列的一组表中移动到具有加密列的另一组表中（在相同或不同的数据库中）。  
 

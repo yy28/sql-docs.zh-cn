@@ -26,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: bc1218eb-ffff-44ce-8122-6e4fa7d68a79
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: d1735a107f0510deaf062ce28bdc1a8db2acbae1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7a8d3d3f24bcbd2b94dd8d4c0c84eff9d513e6cd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056354"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790028"
 ---
 # <a name="dbcc-checkalloc-transact-sql"></a>DBCC CHECKALLOC (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 检查指定数据库的磁盘空间分配结构的一致性。
   
@@ -42,7 +42,7 @@ ms.locfileid: "74056354"
   
 ## <a name="syntax"></a>语法  
   
-```
+```syntaxsql
 DBCC CHECKALLOC   
 [  
     ( database_name | database_id | 0   
@@ -123,7 +123,7 @@ DBCC CHECKALLOC 命令完成后，会将一条消息写入 [!INCLUDE[ssNoVersion
 |5|出现终止了 DBCC 命令的未知错误。|  
   
 ## <a name="error-reporting"></a>错误报告  
-只要 DBCC CHECKALLOC 检测到损坏错误，就将在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] LOG 目录中创建微型转储文件 (SQLDUMPnnnn.txt)。 如果为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例启用了“功能使用情况数据收集”和“错误报告”功能，该文件将被自动转发给 [!INCLUDE[msCoName](../../includes/msconame-md.md)]。 收集的数据将用于改进 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。
+只要 DBCC CHECKALLOC 检测到损坏错误，就将在  *LOG 目录中创建微型转储文件 (SQLDUMPnnnn.txt)* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例启用了“功能使用情况数据收集”和“错误报告”功能，该文件将被自动转发给 [!INCLUDE[msCoName](../../includes/msconame-md.md)]。 收集的数据将用于改进 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。
 转储文件包含 DBCC CHECKALLOC 命令的结果以及其他诊断输出数据。 该文件拥有任意访问控制列表 (DACL)。 只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户和 sysadmin 角色的成员有权进行访问。 默认情况下，sysadmin 角色包含 Windows BUILTIN\Administrators 组和本地管理员组的所有成员。 如果数据收集进程失败，DBCC 命令不会失败。
   
 ## <a name="resolving-errors"></a>纠正错误  

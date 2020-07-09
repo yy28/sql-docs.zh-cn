@@ -11,29 +11,29 @@ helpviewer_keywords:
 ms.assetid: 3be393a1-b186-41ae-afb9-a3d07ff354bb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: efe1822be148cb702e83da9685be52dbee74ff13
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1b57f8a7985c9fb092209bc5a80b9d0c3294d98c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72006078"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781490"
 ---
 # <a name="mssqlserver_10519"></a>MSSQLSERVER_10519
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>详细信息  
   
-|||  
-|-|-|  
+| Attribute | 值 |  
+| :-------- | :---- |  
 |产品名称|SQL Server|  
 |事件 ID|10519|  
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|PG_INCOMPATIBLE_STMT_AND_HINTS|  
-|消息正文|无法创建计划指南“%.\*ls”，因为 \@hints 中指定的提示无法应用于 \@stmt 或 \@statement_start_offset 指定的语句。 请确保提示可以应用于该语句。|  
+|消息正文|无法创建计划指南“%.\*ls”，因为 \@hints 中指定的提示无法应用于 \@stmt 或 \@statement_start_offset 指定的语句  。 请确保提示可以应用于该语句。|  
   
 ## <a name="explanation"></a>说明  
-\@hints 中指定的提示无法应用于 \@stmt 或 \@statement_start_offset 指定的语句。  
+\@hints 中指定的提示无法应用于 \@stmt 或 \@statement_start_offset 指定的语句  。  
   
 ## <a name="user-action"></a>用户操作  
 请指定可以应用于该语句的提示。  

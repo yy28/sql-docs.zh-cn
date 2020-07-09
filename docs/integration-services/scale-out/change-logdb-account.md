@@ -2,19 +2,19 @@
 title: 更改 SSIS Scale Out 日志记录的帐户 | Microsoft Docs
 description: 本文介绍如何更改 SSIS Scale Out 日志记录的用户帐户
 ms.custom: performance
-ms.date: 12/13/2017
+ms.date: 06/29/2020
 ms.prod: sql
 ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.reviewer: maghan
-ms.openlocfilehash: 81c1770da78d1d469d1b6ad3a01100abaa9ec829
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f5e6ab35e67f675c20349a7e968ff9d8d7131c68
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748602"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785617"
 ---
 # <a name="change-the-account-for-scale-out-logging"></a>更改 Scale Out 日志记录的帐户
 
@@ -38,12 +38,12 @@ ms.locfileid: "82748602"
 ## <a name="3-update-the-logging-information-in-ssisdb"></a>3.在 SSISDB 中更新日志记录信息
 使用 SQL Server 名称和连接字符串作为参数调用存储过程 `[catalog].[update_logdb_info]`，如下例所示：
 
-    ```sql
-    SET @serverName = CONVERT(sysname, SERVERPROPERTY('servername'))
-    SET @connectionString = 'Data Source=' + @serverName + ';Initial Catalog=SSISDB;Integrated Security=SSPI;'
-    EXEC [internal].[update_logdb_info] @serverName, @connectionString
-    GO
-    ```
+```sql
+SET @serverName = CONVERT(sysname, SERVERPROPERTY('servername'))
+SET @connectionString = 'Data Source=' + @serverName + ';Initial Catalog=SSISDB;Integrated Security=SSPI;'
+EXEC [internal].[update_logdb_info] @serverName, @connectionString
+GO
+```
 
 ## <a name="4-restart-the-scale-out-worker-service"></a>4.重启 Scale Out Worker 服务
 重启 Scale Out Worker 服务以使更改生效。

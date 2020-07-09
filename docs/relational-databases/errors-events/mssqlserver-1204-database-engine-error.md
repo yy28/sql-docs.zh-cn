@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: de6ece78-79de-484d-9224-ca0f7645815f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 50087e0397238ae0164bbb31cf8cddbdb5996c21
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5b64f13a26adc466a16c0c8b07c8e7f5692b5f7a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68116169"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781232"
 ---
 # <a name="mssqlserver_1204"></a>MSSQLSERVER_1204
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>详细信息  
   
-|||  
-|-|-|  
+| Attribute | 值 |  
+| :-------- | :---- |  
 |产品名称|SQL Server|  
 |事件 ID|1204|  
 |事件源|MSSQLSERVER|  
@@ -35,7 +35,7 @@ ms.locfileid: "68116169"
 ## <a name="explanation"></a>说明  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法获得锁资源。 这可能是由以下任一原因导致的：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法从操作系统分配更多的内存，因为其他进程正在使用它，或者因为服务器在配置了“最大服务器内存”  选项的情况下运行。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法从操作系统分配更多的内存，因为其他进程正在使用它，或者因为服务器在配置了“最大服务器内存”选项的情况下运行。  
   
 -   锁管理器使用的内存不会超过可供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的内存的 60%。  
   

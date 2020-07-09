@@ -15,15 +15,15 @@ ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 267209440bf68ecb2e6f3382823b30f3d19728f3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e863a04214a27f61581f10c4a2610671bde43635
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67952339"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787256"
 ---
 # <a name="synonyms-database-engine"></a>同义词（数据库引擎）
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   同义词是用来实现下列用途的数据库对象：  
   
 -   为可以存在于本地或远程服务器上的其他数据库对象（称为基对象）提供备用名称。  

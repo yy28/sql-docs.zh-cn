@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: eddb60b6-20a9-416c-adf3-4bc1687944fa
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 8a6a8bc83c1842676220f384d39179c74c47a336
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bf22e4f825d29a107f86fb486924b40da5af3752
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67987063"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787327"
 ---
 # <a name="sql-server-broker---dbm-transport-object"></a>SQL Server Broker - DBM Transport 对象
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **Broker / DBM Transport** 性能对象包含报告 Service Broker 和数据库镜像的网络信息的性能计数器。 下表列出了此对象包含的计数器。  
   
 |SQL Server Broker/DBM Transport 计数器|说明|  

@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: ebe92bfa-0721-48aa-9ba6-e7904ad265a1
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 12bd415093b8ea35ee82d6d8be2d1591a4f4fbfd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ff7d2c619a1dad619676092b8f2c937890d681f4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67987265"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787362"
 ---
 # <a name="sql-server-agent-statistics-object"></a>SQL Server 代理中的 Statistics 对象
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   SQL Server 代理中的 **Statistics** 性能对象包含报告 SQL Server 代理相关信息的性能计数器。  
   
  下表列出了 **SQLAgent:Statistics** 计数器。  

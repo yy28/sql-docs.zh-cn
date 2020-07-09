@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: fcc78e5f-e2cf-47df-8c3e-c169367f893b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c35a58b8db6c707c4921365e5b001421e3822176
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5048b2abbccb5133d8678b0599ffda773c64469a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68025834"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781300"
 ---
 # <a name="mssqlserver_10787"></a>MSSQLSERVER_10787
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>详细信息  
   
-|||  
-|-|-|  
+| Attribute | 值 |  
+| :-------- | :---- |  
 |产品名称|MSSQLSERVER|  
 |事件 ID|10787|  
 |事件源|MSSQLSERVER|  

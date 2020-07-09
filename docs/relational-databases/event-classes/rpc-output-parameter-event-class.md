@@ -12,15 +12,15 @@ ms.assetid: 8c830d11-7e88-4c3e-98e9-ba72c8c99b02
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b74cbe8ec74d0ea097693b38b05c87006baf07d7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7c520f268443d568e22a9e459b5dd1a14040d322
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67908335"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85791021"
 ---
 # <a name="rpc-output-parameter-event-class"></a>RPC Output Parameter 事件类
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   RPC Output Parameter 事件类跟踪远程过程调用 (RPC) 在执行之后的输出参数值。  
   
  此类用于检查存储过程返回的输出值。 例如，如果应用程序在执行远程调用之后没有生成预期的输出值，可以使用此事件类来帮助找出客户端代码和服务器代码之间的问题。  

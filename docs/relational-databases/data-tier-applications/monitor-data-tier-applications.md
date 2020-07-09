@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: d2765828-2385-4019-aef2-1de3ab7d1b26
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: abbd4cd516985dcebd28a5fd2fa28e9d83a413b2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ee30e1ce318276d9cf5bd7af3d13e291bfa2ea06
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907781"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781663"
 ---
 # <a name="monitor-data-tier-applications"></a>监视数据层应用程序
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   可以从 **(SSMS) 中的** 实用工具资源管理器 **和** 对象资源管理器 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 以及系统视图和表中监视数据层应用程序 (DAC)。 此外，可以使用标准数据库和 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 监视技术监视 DAC 中包含的数据库中的所有对象。  
   
 ## <a name="before-you-begin"></a>开始之前  

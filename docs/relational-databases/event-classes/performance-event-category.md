@@ -14,15 +14,15 @@ ms.assetid: 708f3585-d8be-4980-bbff-672d7c59397e
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 42eb4676454f71bbc7b1dd1def4ec5de3d0b3867
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5c9db194a87092fb9d24ed9ae1c1bb80e664af40
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68050411"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85791031"
 ---
 # <a name="performance-event-category"></a>Performance 事件类别
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   使用 **Performance** 事件类别可以监视 **Showplan** 事件类以及在执行 SQL 数据操作语言 (DML) 运算符时生成的事件类。  
   
 ## <a name="in-this-section"></a>本节内容  

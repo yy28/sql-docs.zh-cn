@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7030f40419850454e90978168e72846331b5e865
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ed1b1698fb945d92fce7cb2a0d1a9d0e2713afb5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288041"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781622"
 ---
 # <a name="upgrade-a-data-tier-application"></a>升级数据层应用程序
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   使用“升级数据层应用程序向导”或 Windows PowerShell 脚本可以更改当前部署的数据层应用程序 (DAC) 的架构和属性，以便匹配在 DAC 的新版本中定义的架构和属性。  
   
 -   **开始之前：** [选择 DAC 升级选项](#ChoseDACUpgOptions)、[限制和局限](#LimitationsRestrictions)、[先决条件](#Prerequisites)、[安全性](#Security)、[权限](#Permissions)  

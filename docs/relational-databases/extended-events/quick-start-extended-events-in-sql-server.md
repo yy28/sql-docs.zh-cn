@@ -11,16 +11,16 @@ ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4065dd97c2109a30c90f8de01c50c11894a91f68
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 7b32ac9e1d88953cd8c8fccf3e010d01d5a6bcc5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728423"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783495"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>快速入门：SQL Server 中的扩展事件
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 扩展事件是一种轻型性能监视系统，它允许用户收集监视和解决 SQL Server 中的问题所需的数据。 若要了解有关扩展事件体系结构的详细信息，请参阅[扩展事件概述](extended-events.md)。  本文旨在为不熟悉扩展事件以及想在几分钟内创建一个事件会话的 SQL 开发人员提供帮助。 通过使用扩展事件，你可以查看有关 SQL 系统和应用程序的内部操作的详细信息。 创建扩展事件会话时，需要告诉系统：
 

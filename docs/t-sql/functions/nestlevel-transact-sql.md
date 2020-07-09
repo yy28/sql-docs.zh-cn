@@ -17,17 +17,17 @@ helpviewer_keywords:
 - nesting stored procedures
 - stored procedure nesting levels [SQL Server]
 ms.assetid: 8c0b2134-8616-44f6-addc-6583c432fb62
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 4d9b391d58d8a55b7486cda447d13246df16093b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: f0be9ab485c6fab9ac8e09331f8421b3242d3a21
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68130148"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784396"
 ---
 # <a name="x40x40nestlevel-transact-sql"></a>&#x40;&#x40;NESTLEVEL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   返回在本地服务器上执行的当前存储过程的嵌套级别（初始值为 0）。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "68130148"
 ## <a name="remarks"></a>备注  
  每次一个存储过程通过引用公共语言运行时 (CLR) 例程、类型或聚合来调用另一个存储过程或执行托管代码时，嵌套级别都会增加。 超过最大级数 32 时，事务即被终止。  
   
- 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 字符串中执行 @@NESTLEVEL 时，返回的值为 1 + 当前嵌套级别。 使用 sp_executesql 动态执行 @@NESTLEVEL 时，返回的值为 2 + 当前嵌套级别。  
+ 在 @NESTLEVEL 字符串中执行 @[!INCLUDE[tsql](../../includes/tsql-md.md)] 时，返回的值为 1 + 当前嵌套级别。 使用 sp_executesql 动态执行 @@NESTLEVEL 时，返回的值为 2 + 当前嵌套级别。  
   
 ## <a name="examples"></a>示例  
   

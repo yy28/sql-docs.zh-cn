@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: ab394b7eed0a284b8ed74e5333b01f27283469ca
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 296cdb3433ff0e40ea73987ef5a53b985a550f1f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67987361"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787410"
 ---
 # <a name="sql-server-access-methods-object"></a>SQL Server Access Methods 对象
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **中的** Access Methods [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象提供用于监视如何访问数据库中的逻辑数据的计数器。 用 **Buffer Manager** 计数器监视对磁盘上的数据库页的物理访问。 监视用于访问数据库中存储的数据的方法有助于确定是否可以通过添加或修改索引、添加或移动分区、添加文件或文件组、对索引进行碎片整理或者重写查询来提高查询性能。 **Access Methods** 计数器也可用于监视数据库中数据、索引和可用空间的数量，从而指示每个服务器实例的数据卷和碎片。 索引的碎片过多会降低性能。  
   
  有关数据卷、碎片和用法的详细信息，请使用下列动态管理视图：  

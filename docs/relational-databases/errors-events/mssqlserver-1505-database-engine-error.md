@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: ef4df75d-0f36-4c8b-b36c-e427f65f91ca
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1b581fd45021820039b09edc69151ebea34a913e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e30483860b6bdd29f485d90ef1145150910e0e31
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67908607"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780978"
 ---
 # <a name="mssqlserver_1505"></a>MSSQLSERVER_1505
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>详细信息  
   
-|||  
-|-|-|  
+| Attribute | 值 |  
+| :-------- | :---- |  
 |产品名称|SQL Server|  
 |事件 ID|1505|  
 |事件源|MSSQLSERVER|  
@@ -59,7 +59,7 @@ SELECT LastName, FirstName, count(*) FROM dbo.Employee GROUP BY LastName, FirstN
   
 -   当为唯一索引或唯一约束选择列时，请选择那些定义为 NOT NULL 的列。 这样，当多行的键值包含 NULL 时，就消除了导致唯一性冲突的可能性。  
   
--   如果重复值是因数据输入错误而引起的，则可以先手动更正数据，然后创建索引或约束。 有关删除表中重复行的信息，请参阅知识库文章 139444：[How to remove duplicate rows from a table in SQL Server](https://support.microsoft.com/kb/139444)（如何删除 SQL Server 表中的重复行）。  
+-   如果重复值是因数据输入错误而引起的，则可以先手动更正数据，然后创建索引或约束。 有关删除表中重复行的信息，请参阅知识库文章 139444：[如何从 SQL Server 中的表中删除重复行](https://support.microsoft.com/kb/139444)。  
   
 ## <a name="see-also"></a>另请参阅  
 [CREATE INDEX (Transact-SQL)](~/t-sql/statements/create-index-transact-sql.md)  

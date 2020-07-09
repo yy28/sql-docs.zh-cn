@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b4efb0ae-cfe6-4d81-a4b4-6e4916885caa
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 3a0b99addafecb3567ed6e5bc351681e3318f67a
-ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
+ms.openlocfilehash: 893de2f02f6f10d5c4132864903f6b55495fbfdf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82138171"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789579"
 ---
 # <a name="attach-a-database"></a>附加数据库
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中附加数据库。 可以使用此功能来复制、移动或升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "82138171"
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 对象资源管理中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，然后单击以在 SSMS 中展开该实例视图。  
   
-2.  右键单击“数据库”  ，然后单击“附加”  。  
+2.  右键单击“数据库”，然后单击“附加”。  
   
 3.  在 **“附加数据库”** 对话框中，若要指定要附加的数据库，请单击 **“添加”** ，然后在 **“定位数据库文件”** 对话框中选择数据库所在的磁盘驱动器并展开目录树，以查找并选择数据库的 .mdf 文件。例如：
 
@@ -67,7 +67,7 @@ ms.locfileid: "82138171"
      **“要附加的数据库”**  
      显示所选数据库的有关信息。  
   
-     \<无列标题>  
+     \<no column header>  
      显示一个图标，用以指示附加操作的状态。 下面的 **“状态”** 说明中介绍可能的图标。  
   
      **MDF 文件位置**  
@@ -103,8 +103,8 @@ ms.locfileid: "82138171"
      **删除**  
      从 **“要附加的数据库”** 网格中删除选定文件。  
   
-     " <database_name> " 数据库详细信息     
-     显示要附加的文件的名称。 若要验证或更改文件的路径名，请单击“浏览”按钮 (…)   。  
+     " <database_name> " 数据库详细信息  
+     显示要附加的文件的名称。 若要验证或更改文件的路径名，请单击“浏览”按钮 (…) 。  
   
     > [!NOTE]  
     > 如果文件不存在，则 **“消息”** 列显示“找不到”。 如果找不到日志文件，则说明它位于其他目录中或者已被删除。 您需要更新 **“数据库详细信息”** 网格中该文件的路径使其指向正确的位置，或者从网格中删除该日志文件。 如果找不到 .ndf 数据文件，则需要更新网格中该文件的路径使其指向正确的位置。  
@@ -131,7 +131,7 @@ ms.locfileid: "82138171"
   
 3.  使用带 `FOR ATTACH` 子句的 [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) 语句。  
   
-     将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例附加 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的文件并将该数据库重命名为 `MyAdventureWorks`。  
+     将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例附加 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的文件并将该数据库重命名为 `MyAdventureWorks`。  
   
     ```sql  
     CREATE DATABASE MyAdventureWorks   
@@ -144,7 +144,7 @@ ms.locfileid: "82138171"
     > 或者，你可以使用 [sp_attach_db](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md) 或 [sp_attach_single_file_db](../../relational-databases/system-stored-procedures/sp-attach-single-file-db-transact-sql.md) 存储过程。 但是，Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的未来版本中将删除这些存储过程。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 建议改用 `CREATE DATABASE ... FOR ATTACH` 。  
   
 ##  <a name="follow-up-after-upgrading-a-sql-server-database"></a><a name="FollowUp"></a> 跟进：在升级 SQL Server 数据库之后  
-在使用附加方法升级数据库后，该数据库将立即变为可用，然后自动进行升级。 如果数据库具有全文检索，升级过程将导入、重置或重新生成它们，具体取决于 **全文升级选项** 服务器属性的设置。 如果将升级选项设置为“导入”  或“重新生成”  ，在升级过程中将无法使用全文检索。 导入可能需要数小时，而重新生成所需的时间最多时可能十倍于此，具体取决于要编制索引的数据量。 另请注意，当升级选项设置为“导入”  时，如果全文目录不可用，将重新生成关联的全文检索。  
+在使用附加方法升级数据库后，该数据库将立即变为可用，然后自动进行升级。 如果数据库具有全文检索，升级过程将导入、重置或重新生成它们，具体取决于 **全文升级选项** 服务器属性的设置。 如果将升级选项设置为“导入”或“重新生成”，在升级过程中将无法使用全文检索。 导入可能需要数小时，而重新生成所需的时间最多时可能十倍于此，具体取决于要编制索引的数据量。 另请注意，当升级选项设置为“导入”时，如果全文目录不可用，将重新生成关联的全文检索。  
   
 如果升级前用户数据库的兼容级别为 100 或更高，升级后将保持相应级别。 如果升级前兼容级别为 90，则在升级后的数据库中，兼容级别将设置为 100，该级别为 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]支持的最低兼容级别。 有关详细信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  
   

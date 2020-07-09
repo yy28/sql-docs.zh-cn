@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - CHOOSE function
 ms.assetid: 1c382c83-7500-4bae-bbdc-c1dbebd3d83f
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: d8a2f9871cbf547e465ef82049f23fcad9988d64
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2c2894f44ca54d26c8a0a4392e91d052de3a55aa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82822882"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784464"
 ---
 # <a name="logical-functions---choose-transact-sql"></a>逻辑函数 - CHOOSE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中从值列表返回指定索引处的项。  
   

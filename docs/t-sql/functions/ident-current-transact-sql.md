@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 21517ced-39f5-4cd8-8d9c-0a0b8aff554a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2271bbdd9a5b61fdfbf4985ca68acbffbc0b0b9d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f2f1989f65dfae7d772dfd7d14a9fb3dd285b0a2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73843695"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784537"
 ---
 # <a name="ident_current-transact-sql"></a>IDENT_CURRENT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 返回为指定的表或视图生成的最后一个标识值。 所生成的最后一个标识值可以针对任何会话和任何作用域。  
   
@@ -55,7 +55,7 @@ numeric  ([@@MAXPRECISION](../../t-sql/functions/max-precision-transact-sql.md),
 ## <a name="remarks"></a>备注  
 IDENT_CURRENT 类似于 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 标识函数 SCOPE_IDENTITY 和 @@IDENTITY。 这三个函数都返回最后生成的标识值。 但是，上述每个函数中定义的“最后”的作用域和会话有所不同  ：  
 
--   IDENT_CURRENT 返回为某个会话和作用域中的指定表生成的最新标识值。  
+-   IDENT_CURRENT 返回为某个会话和用域中的指定表生成的最新标识值。  
 -   @@IDENTITY 返回为跨所有作用域的当前会话中的任何表生成的最后一个标识值。  
 -   SCOPE_IDENTITY 返回为当前会话和当前作用域中的某个表生成的最新标识值。  
   

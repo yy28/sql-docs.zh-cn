@@ -12,15 +12,15 @@ ms.assetid: e6b37780-5ad8-4d50-89a3-d8a22496faac
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 44528a58b1ef57a2fd54958d68e4c6ac7089e8d6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d42d182b1026e72ffe4a4ab17722eaf49a50d657
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68075934"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790829"
 ---
 # <a name="tm-save-tran-completed-event-class"></a>TM: Save Tran Completed 事件类
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   TM: Save Tran Completed 事件类指明 SAVE TRANSACTION 请求已完成。 该请求是通过事务管理界面从客户端发送的。  
   
 ## <a name="tm-save-tran-completed-event-class-data-columns"></a>TM: Save Tran Completed 事件类的数据列  

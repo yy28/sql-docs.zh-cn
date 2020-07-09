@@ -12,15 +12,15 @@ ms.assetid: 3e1ac37e-6093-4dc9-9e5d-4270db18b547
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 715eb611d1228eb5ab08ead6fc84da076bd8bb30
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c77a9dd688178a858167b8810da328a53d7188b9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68125144"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790923"
 ---
 # <a name="tm-commit-tran-starting-event-class"></a>TM: Commit Tran Starting 事件类
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   TM: Commit Tran Starting 事件类表示正在启动 COMMIT TRANSACTION 请求。 将通过事务管理接口从客户端发送请求。 EventSubClass 列指示在提交当前事务后是否启动新事务。  
   
 ## <a name="tm-commit-tran-starting-event-class-data-columns"></a>TM: Commit Tran Starting 事件类的数据列  
