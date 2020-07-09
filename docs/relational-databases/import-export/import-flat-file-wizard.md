@@ -13,15 +13,15 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f04842324642c3d24f8b378a3c096e94aa96227c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 88fb60179a5503d3c41bbc253c1f7373c1d97184
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980549"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751226"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>将平面文件导入 SQL 向导
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 > 有关导入和导出向导的相关内容，请参阅 [SQL Server 导入和导出向导](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard)。
 
 利用导入平面文件向导可以轻松地将数据从平面文件 (.csv, .txt) 复制到数据库中的新表。 本概述描述了使用此向导的原因、查找此向导的方法，以及可遵循的简单示例。

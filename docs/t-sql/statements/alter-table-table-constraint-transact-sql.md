@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: ac2a11e0-cc77-4e27-b107-4fe5bc6f5195
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 92e12a2991d03c125e3247d1dd681b0a5754e2f9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9baaecd792c2dae1d23a47fa6ab7a72933412a55
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73981994"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760942"
 ---
 # <a name="alter-table-table_constraint-transact-sql"></a>ALTER TABLE table_constraint (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   指定通过使用 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 添加到表中的 PRIMARY KEY、UNIQUE、FOREIGN KEY、CHECK 约束或 DEFAULT 定义的属性。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "73981994"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 [ CONSTRAINT constraint_name ]   
 {   
     { PRIMARY KEY | UNIQUE }   
@@ -85,7 +85,7 @@ ms.locfileid: "73981994"
  [ ASC | DESC ]   
  指定加入到表约束中的一列或多列的排序顺序。 默认值为 ASC。  
   
- WITH FILLFACTOR =fillfactor  
+ WITH FILLFACTOR **fillfactor=**   
  指定[!INCLUDE[ssDE](../../includes/ssde-md.md)]在存储索引数据时使用的每个索引页的填充程度。 用户指定的 fillfactor 值的范围可以为 1 到 100  。 如果未指定值，则默认值为 0。  
   
 > [!IMPORTANT]  
@@ -128,7 +128,7 @@ ms.locfileid: "73981994"
   
  例如，在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中，ProductVendor 表与 Vendor 表有引用关系   。 ProductVendor.VendorID 外键引用 Vendor.VendorID 主键   。  
   
- 如果对 Vendor 表的某行执行 DELETE 语句，并且为 ProductVendor.VendorID 指定 ON DELETE CASCADE 操作，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将检查 ProductVendor 表中的一个或多个依赖行  。 如果存在依赖行，则除了删除 Vendor 表中被引用的行外，还将删除 ProductVendor 表中的依赖行   。  
+ 如果对 Vendor 表的某行执行 DELETE 语句，并且为 ProductVendor.VendorID 指定 ON DELETE CASCADE 操作，则  **将检查 ProductVendor 表中的一个或多个依赖行**  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  。 如果存在依赖行，则除了删除 Vendor 表中被引用的行外，还将删除 ProductVendor 表中的依赖行   。  
   
  相反，如果指定了 NO ACTION，并且 ProductVendor 表中至少有一行引用 Vendor 行，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将引发错误并回滚对 Vendor 行执行的删除操作   。  
   
@@ -153,7 +153,7 @@ ms.locfileid: "73981994"
   
  例如，在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中，ProductVendor 表与 Vendor 表有引用关系   。 ProductVendor.VendorID 外键引用 Vendor.VendorID 主键   。  
   
- 如果对 Vendor 表中的某行执行了 UPDATE 语句，并且为 ProductVendor.VendorID 指定了 ON UPDATE CASCADE 操作，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将检查 ProductVendor 表中是否有一个或多个依赖行  。 如果存在依赖行，那么 ProductVendor 表中的依赖行将随 Vendor 表中的被引用行一同更新   。  
+ 如果对 Vendor 表中的某行执行了 UPDATE 语句，并且为 ProductVendor.VendorID 指定了 ON UPDATE CASCADE 操作，则  **将检查 ProductVendor 表中是否有一个或多个依赖行**  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  。 如果存在依赖行，那么 ProductVendor 表中的依赖行将随 Vendor 表中的被引用行一同更新   。  
   
  相反，如果指定了 NO ACTION，则当 ProductVendor 表中至少有一行引用了 Vendor 行时，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 将引发错误，并回滚对 Vendor 行的更新操作   。  
   

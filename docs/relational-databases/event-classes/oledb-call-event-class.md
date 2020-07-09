@@ -12,15 +12,15 @@ ms.assetid: e1be1e90-98cc-47a3-addd-59d4aeca6547
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 23ce9be8428799a963addda5510e3528f94fb86b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d7a69d13beae131a6635c51c305c8d87c1c35127
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115855"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753339"
 ---
 # <a name="oledb-call-event-class"></a>OLEDB Call 事件类
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **为分布式查询和远程存储过程调用 OLE DB 访问接口时，会发生** OLEDB Call [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件类。  
   
  将 **OLEDB Call** 事件类包括在跟踪中可以只监视那些不请求数据的调用或未对 **QueryInterface** 方法进行的调用。 跟踪中包括 **OLEDB Call** 事件类时，引发的开销量取决于跟踪过程中针对数据库调用 OLE DB 的频率。 如果调用频繁发生，则跟踪可能会显著地降低性能。  

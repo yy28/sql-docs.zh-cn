@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 958e95d6-fbe6-43e8-abbd-ccedbac2dbac
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 06263499babe005bca36a982bc863dfa24356b5d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ef670f0a8a857c59ee990d9c7e1f1939794af9ba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68066074"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762028"
 ---
 # <a name="alter-asymmetric-key-transact-sql"></a>ALTER ASYMMETRIC KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   更改非对称密钥的属性。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "68066074"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>  
   
 <alter_option> ::=  
@@ -60,10 +60,10 @@ ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>
  WITH PRIVATE KEY  
  更改私钥的保护。  
   
- ENCRYPTION BY PASSWORD ='strongPassword'  
- 指定用于保护私钥的新密码。 password 必须符合运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的 Windows 密码策略要求。 如果省略该选项，则使用数据库主密钥对私钥进行加密。  
+ ENCRYPTION BY PASSWORD ='strongPassword' ****  
+ 指定用于保护私钥的新密码。 password 必须符合运行  *实例的计算机的 Windows 密码策略要求*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果省略该选项，则使用数据库主密钥对私钥进行加密。  
   
- DECRYPTION BY PASSWORD ='oldPassword'  
+ DECRYPTION BY PASSWORD ='oldPassword' ****  
  指定当前用于保护私钥的旧密码。 如果私钥使用数据库主密钥进行加密，则不需要指定旧密码。  
   
 ## <a name="remarks"></a>备注  

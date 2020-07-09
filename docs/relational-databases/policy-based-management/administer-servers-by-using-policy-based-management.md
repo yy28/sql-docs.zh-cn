@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 67a62cc33877644f9feb6384c5d454b2cf30695b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 97514b5bab233bbef63876dd8f0cd6b0afca2274
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76831808"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749530"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>使用基于策略的管理来管理服务器
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
    基于策略的管理是一个基于策略的系统，用于管理一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。 用于创建包含条件表达式的条件。 然后创建一些策略，将这些条件应用于数据库目标对象。  
 
 例如，作为数据库管理员，你可能希望确保某些服务器没有启用数据库邮件，因此，可创建设置该服务器选项的条件和策略。 

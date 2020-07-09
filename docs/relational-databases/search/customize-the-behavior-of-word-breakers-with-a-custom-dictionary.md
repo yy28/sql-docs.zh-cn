@@ -1,6 +1,5 @@
 ---
 title: 使用自定义词典自定义断字符的行为
-ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
@@ -11,15 +10,16 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 806d2f7aa35fc3299f22dbd1c3423834aaa8936f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.custom: seo-lt-2019
+ms.openlocfilehash: d9a3f034312dcb6be52534968034fe526cfa5955
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056237"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758066"
 ---
 # <a name="customize-behavior-of-word-breakers-with-a-custom-dictionary-sql-server-search"></a>使用自定义词典自定义断字符的行为（SQL Server 搜索）
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   您可以通过创建特定于语言的自定义字典文件，为特定的语言自定义断字符的行为。 例如，您可以禁止断字符断开某些字词或模式。  
   
  有关详细信息，请参阅下列 SharePoint 文章：  

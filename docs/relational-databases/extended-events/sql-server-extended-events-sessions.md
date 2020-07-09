@@ -1,7 +1,7 @@
 ---
 title: SQL Server Extended Events Sessions
 description: SQL Server 扩展事件会话是在用于承载 SQL Server 扩展事件引擎的进程中创建的。 了解会话状态和会话内容。
-ms.date: 03/14/2017
+ms.date: 05/26/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,16 +15,16 @@ ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cce8dfb0d96059f577adb4e86e6fc5556d9fd90c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fec4a507a8a40cb38bf9b5faf58545aa89a55167
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79487665"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756840"
 ---
 # <a name="sql-server-extended-events-sessions"></a>SQL Server Extended Events Sessions
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 扩展事件会话是在用于承载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 扩展事件引擎的进程中创建的。 扩展事件会话的以下各方面信息可为您理解扩展事件基础结构和所发生的常规处理提供有关背景知识：  
   
@@ -34,9 +34,9 @@ ms.locfileid: "79487665"
   
 ## <a name="session-states"></a>会话状态  
  下图说明了扩展事件会话的不同状态。  
-  
- ![扩展事件会话状态](../../relational-databases/extended-events/media/xesessionstate.gif "扩展事件会话状态")  
-  
+
+![扩展事件会话状态](../../relational-databases/extended-events/media/xesessionstate.png "扩展事件会话状态")
+
  对照前面的图，可以注意到在对事件会话发出不同的 DDL 命令时会话状态将发生更改。 下表说明了这些状态更改。  
   
 |图例标签|DDL 语句|说明|  

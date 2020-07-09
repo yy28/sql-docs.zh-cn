@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9b12be51-5469-46f9-8e86-e938e10aa3a1
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: f70156f5f725b10af712d0d5e898367715e46394
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f5ad220fdec5e770668c23dc7d21a1fc958ac4ca
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834535"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756327"
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>应用事务日志备份 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   本主题只与完整恢复模式或大容量日志恢复模式相关。  
   
  本主题介绍在还原 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库过程中应用事务日志备份。  

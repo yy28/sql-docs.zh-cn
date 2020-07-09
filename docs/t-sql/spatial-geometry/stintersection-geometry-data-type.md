@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 354843f5-cc14-478c-974a-04f363f9530f
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: e57a3551660467254a9c291ed78ed41aae30b7c8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 63edfe76d39fe00c01134e79b34511b78fe5984a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67950137"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762440"
 ---
 # <a name="stintersection-geometry-data-type"></a>STIntersection（geometry 数据类型）
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 返回一个对象，它表示一个 **geometry** 实例与另一个 **geometry** 实例的交点。
   

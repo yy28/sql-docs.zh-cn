@@ -12,15 +12,15 @@ ms.assetid: d4db32bc-972d-4429-809a-a62047c33e79
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 45b71ca895141a2dbef4dd68b13bb505a7ae7c91
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: aa80485dc5efa2d03d24a1e119360281928d3c6d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68116268"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755991"
 ---
 # <a name="objectdeleted-event-class"></a>Object:Deleted 事件类
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Object:Deleted 事件类指示对象已删除，例如由 DROP INDEX 和 DROP TABLE 语句删除。 此事件类可用于确定是否正在删除对象，例如由通常创建临时存储过程的 ODBC 应用程序删除。  
   
  通过监视 LoginName 和 NTUserName 默认数据列以及 Objects 事件类，可以确定正在创建、删除或访问对象的用户的名称。  

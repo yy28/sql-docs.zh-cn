@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f087a61c-f063-4fb8-8f1c-251a2fed76a1
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 2c67174927ea913f50bc23db7e940a79e224dcf2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4592965d484785f3f5a5407d517010288743b5d9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67894698"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762310"
 ---
 # <a name="stmpolyfromtext-geometry-data-type"></a>STMPolyFromText（geometry 数据类型）
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 从开放地理空间信息联盟 (OGC) 已知文本 (WKT) 表示形式返回 **geometry** 实例以及该实例传递的任何 Z（标高）和 M（度量）值。
   

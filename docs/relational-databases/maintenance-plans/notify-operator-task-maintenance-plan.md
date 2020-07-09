@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 39c0797c-ad2b-4591-85c9-a23a7f902895
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a8b8e698dc6799847ddd462904da2eadeae14279
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fd22da4ecbbef25ac02fb5c937307f4ccc1919a0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115644"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755736"
 ---
 # <a name="notify-operator-task-maintenance-plan"></a>“通知操作员”任务（维护计划）
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   使用 **“‘通知操作员’任务”** 对话框可以向此维护计划中添加自动通知。 要使用此任务，必须启用数据库邮件并将 MSDB 正确配置为邮件主机数据库，并且 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理操作员具有有效的电子邮件地址。  
   
  此任务使用 sp_notify_operator 存储过程。  

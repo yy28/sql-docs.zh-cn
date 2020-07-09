@@ -17,15 +17,15 @@ ms.assetid: d476c124-596b-4b27-a883-812b6b50a735
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d5e3c8d9876545e1e68a9795b7c327ac1e47e2d6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ce1e904ac0d3d5b329fce676218e3133bda60d81
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74096019"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757693"
 ---
 # <a name="create-dml-triggers-to-handle-multiple-rows-of-data"></a>创建 DML 触发器以处理多行数据
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   为 DML 触发器编写代码时，请考虑导致触发器激发的语句可能是影响多行数据（而不是单行）的单个语句。 这对于 UPDATE 和 DELETE 触发器很常见，因为这些语句经常影响多行。 而这对于 INSERT 触发器比较少见，因为基本 INSERT 语句仅添加单行。 但是，由于 INSERT 触发器可以通过 INSERT INTO (*table_name*) SELECT 语句触发，因此插入多行可能导致调用单个触发器。  
   
  在下列情况下关于多行的注意事项尤为重要：DML 触发器的功能自动重新计算一个表中的汇总值，并将结果存储在另一个表中以继续进行计数。  

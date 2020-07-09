@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 33f26f04173761a5b64576665a0dbab887c5c489
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1275488eeed0aaccf284490fafd0a3a83bab7aff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79487575"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756784"
 ---
 # <a name="view-the-extended-events-equivalents-to-sql-trace-event-classes"></a>查看与 SQL 跟踪事件类等效的扩展事件
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sql-asdb.md)]
 
   如果您想要使用扩展事件来收集与 SQL 跟踪事件类和列等效的事件数据，则理解 SQL 跟踪事件映射到扩展事件的事件和操作的方式将很有用。  
   

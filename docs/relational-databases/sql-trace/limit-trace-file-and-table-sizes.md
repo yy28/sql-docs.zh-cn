@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 88c31b02-f44c-4a14-be8b-437f2097de12
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b12834eac33fd016279b6f2f3a79cee413c3d23d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fe7c390f650a505ff79eb0be5bdfdac2eb9d9186
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68072888"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750976"
 ---
 # <a name="limit-trace-file-and-table-sizes"></a>限制跟踪文件和表的大小
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   SQL 跟踪结果的大小依赖于跟踪中包括的事件类和 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的用法。 如果跟踪经常出现的事件类，则可以通过设置最大文件大小或最大行数来最小化跟踪收集的数据量。 通过指定最大文件大小或行数，可以确保跟踪文件或表不会增长到超出指定范围。  
   
 > [!NOTE]  

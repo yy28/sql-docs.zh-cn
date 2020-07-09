@@ -12,15 +12,15 @@ ms.assetid: f54c9ef9-3add-497c-a09b-42c4ce3c623d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 39059275021f1196b729af4f30f23a09fd95c197
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 18b6122d9128d42b49da2d041c19a07dcf51fa8b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68050418"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753331"
 ---
 # <a name="oledb-queryinterface-event-class"></a>OLEDB QueryInterface 事件类
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **发出 OLE DB** QueryInterface [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 来调用分布式查询和远程存储过程时，会发生 **OLEDB QueryInterface** 事件类。 包括跟踪（这些跟踪监视与分布式查询和远程存储过程相关的问题）中的事件类。  
   
  如果包括 **OLEDB QueryInterface** 事件类，开销量将变高。 如果此类事件频繁发生，则跟踪可能会显著地降低性能。 若要最大限度地降低引起的开销，请仅将此事件类用于在短时间段内监视特定问题的跟踪操作。  

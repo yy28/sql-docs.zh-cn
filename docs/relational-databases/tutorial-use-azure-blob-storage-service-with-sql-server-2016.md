@@ -14,16 +14,16 @@ applies_to:
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: aba8d7e3dc7aaf48523303ad6f63682c888b3c46
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4143785a4789dd2f9dd2510b96bcc4de3a21c82e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79286971"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753774"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>教程：将 Azure Blob 存储服务用于 SQL Server 2016
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 欢迎使用“Microsoft Azure Blob 存储服务中使用 SQL Server 2016”教程。 本教程有助于学习如何将 Microsoft Azure Blob 存储服务用于 SQL Server 数据文件和 SQL Server 备份。  
   
 Microsoft Azure Blob 存储服务的 SQL Server 集成支持最初是 SQL Server 2012 Service Pack 1 CU2 的一项增强功能，现在已随 SQL Server 2014 和 SQL Server 2016 进一步增强。 有关此功能的概述以及使用此功能的好处，请参阅 [Microsoft Azure 中的 SQL Server 数据文件](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)。 有关实时演示，请参阅 [时间点还原的演示](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo)。  

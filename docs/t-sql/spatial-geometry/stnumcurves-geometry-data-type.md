@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 20c2fa0b-656b-4519-b34c-cc8f094290d4
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 1eb57ac476d430d5bc79c71ce5c6a12087155366
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f64b10f4ce73c886ce229c9c859bd6de9693cc80
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68089002"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762292"
 ---
 # <a name="stnumcurves-geometry-data-type"></a>STNumCurves（geometry 数据类型）
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 当 **geometry** 实例是一维空间数据类型时，此方法返回该实例中的曲线数。 一维空间数据类型包括 LineString、CircularString 和 CompoundCurve    。 `STNumCurves`() 仅适用于简单类型；它不适用于 **MultiLineString** 之类的 **geometry** 集合。
   

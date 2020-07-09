@@ -11,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: d31367db-b7db-44c4-8df2-f1240474cf78
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1bff30a7270be7b47e5bf718d07d5386951042f1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a26b04b1acc7ac829bb8fe79db2d3eaeede502dc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75557994"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760478"
 ---
 # <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>第 1 课：创建并应用 Off By Default 策略
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 通过使用基于策略的管理策略，您可以管理一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例、一个或多个实例对象、服务器实例、一个或多个数据库或者一个或多个数据库对象。 作为数据库管理员，您需要确保某些服务器没有启用数据库邮件。 在本课中，将创建一个条件以及设置此服务器选项的策略。 测试服务器以检查其是否符合该策略； 然后使用该策略重新配置服务器，以使服务器符合该策略。  
 
 ## <a name="prerequisites"></a>先决条件

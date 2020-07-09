@@ -14,15 +14,15 @@ ms.assetid: 62ef24b4-3553-4aed-b62a-670980bae501
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f166963f1325379d4545f9d8a334e7b77590a14f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b752acb72d4dd0a02f69670e181014e9aa596006
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68075480"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757706"
 ---
 # <a name="ddl-events"></a>DDL 事件
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   下表列出了可用于激发 DDL 触发器或事件通知的 DDL 事件。 注意，每个事件都对应于一个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或存储过程，并且语句语法修改为在关键字之间加入了一个下划线字符 (_)。  
   
 > [!IMPORTANT]  

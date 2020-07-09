@@ -1,10 +1,8 @@
 ---
 title: JSON_QUERY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/02/2016
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.reviewer: genemi
 ms.technology: t-sql
 ms.topic: language-reference
 f1_keywords:
@@ -17,13 +15,14 @@ helpviewer_keywords:
 ms.assetid: 1ab0d90f-19b6-4988-ab4f-22fdf28b7c79
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 09b1f1036f298179033c9ab1ba2e7c3ffed1ce06
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5acf669e6db68b5fceb3a83c7f036d5f8065bde3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68109375"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752254"
 ---
 # <a name="json_query-transact-sql"></a>JSON_QUERY (Transact-SQL)
 
@@ -37,7 +36,7 @@ ms.locfileid: "68109375"
   
 ## <a name="syntax"></a>语法  
   
-```sql  
+```syntaxsql
 JSON_QUERY ( expression [ , path ] )  
 ```  
   
@@ -46,18 +45,18 @@ JSON_QUERY ( expression [ , path ] )
  *expression*  
  一个表达式。 通常是包含 JSON 文本的变量或列的名称。  
   
- 如果 JSON_QUERY 在找到由 path 标识的值之前，找到在 expression 中无效的 JSON，则函数会返回错误    。 如果 JSON_QUERY 找不到由 path 标识的值，则它会扫描整个文本，并且会在找到在 expression 中任何位置无效的 JSON 时返回错误    。  
+ 如果 JSON_QUERY 在找到由 path 标识的值之前，找到在 expression 中无效的 JSON，则函数会返回错误 。 如果 JSON_QUERY 找不到由 path 标识的值，则它会扫描整个文本，并且会在找到在 expression 中任何位置无效的 JSON 时返回错误 。  
   
  *路径*  
  指定要提取的对象或数组的 JSON 路径。
 
-在 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 和 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] 中，可提供变量作为 path 的值  。
+在 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 和 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] 中，可提供变量作为 path 的值。
 
 JSON 路径可以为分析指定宽松或严格模式。 如果未指定分析模式，则宽松模式是默认值。 有关详细信息，请参阅 [JSON 路径表达式 (SQL Server)](../../relational-databases/json/json-path-expressions-sql-server.md)。  
 
-path 的默认值是“$”  。 因此，如果没有为 path 提供值，则 JSON_QUERY 会返回输入 expression    。
+path 的默认值是“$”。 因此，如果没有为 path 提供值，则 JSON_QUERY 会返回输入 expression。
 
-如果 path 格式无效，则 JSON_QUERY 返回错误   。  
+如果 path 格式无效，则 JSON_QUERY 返回错误。  
   
 ## <a name="return-value"></a>返回值
 
@@ -77,16 +76,16 @@ path 的默认值是“$”  。 因此，如果没有为 path 提供值，则 J
   
 ```json  
 {
-    "info": {
-        "type": 1,
-        "address": {
-            "town": "Bristol",
-            "county": "Avon",
-            "country": "England"
-        },
-        "tags": ["Sport", "Water polo"]
-    },
-    "type": "Basic"
+   "info": {
+      "type": 1,
+      "address": {
+         "town": "Bristol",
+         "county": "Avon",
+         "country": "England"
+      },
+      "tags": ["Sport", "Water polo"]
+   },
+   "type": "Basic"
 } 
 ```  
   
@@ -106,7 +105,7 @@ path 的默认值是“$”  。 因此，如果没有为 path 提供值，则 J
 
 **JSON_QUERY** 返回有效 JSON 片段。 因此，**FOR JSON** 不对 **JSON_QUERY** 返回值中的特殊字符进行转义。
 
-如果在使用 FOR JSON 返回结果，并且包含已采用 JSON 格式（在列中或作为表达式的结果）的数据，则使用不带 path 参数的 JSON_QUERY 对数据进行包装   。
+如果在使用 FOR JSON 返回结果，并且包含已采用 JSON 格式（在列中或作为表达式的结果）的数据，则使用不带 path 参数的 JSON_QUERY 对数据进行包装。
 
 ## <a name="examples"></a>示例  
   
@@ -116,7 +115,7 @@ path 的默认值是“$”  。 因此，如果没有为 path 提供值，则 J
   
 ```sql  
 SELECT PersonID,FullName,
- JSON_QUERY(CustomFields,'$.OtherLanguages') AS Languages
+  JSON_QUERY(CustomFields,'$.OtherLanguages') AS Languages
 FROM Application.People
 ```  
   
@@ -134,5 +133,5 @@ FOR JSON PATH
   
 ## <a name="see-also"></a>另请参阅
 
- [JSON 路径表达式 (SQL Server)](../../relational-databases/json/json-path-expressions-sql-server.md)   
- [JSON 数据 (SQL Server)](../../relational-databases/json/json-data-sql-server.md)  
+- [JSON 路径表达式 (SQL Server)](../../relational-databases/json/json-path-expressions-sql-server.md)   
+- [JSON 数据 (SQL Server)](../../relational-databases/json/json-data-sql-server.md)  

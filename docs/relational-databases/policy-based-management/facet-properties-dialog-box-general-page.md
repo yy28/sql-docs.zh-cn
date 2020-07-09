@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: 04f1d325-832d-4889-a5f1-ca004bdce2de
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 83eacf49b6653f7faba016c9f07a7adb88a09cb1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: caba17d326c15420762a0224bc0d2d1eb3a0ea53
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75557972"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749386"
 ---
 # <a name="facet-properties-dialog-box-general-page"></a>“方面属性”对话框，“常规”页
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   此对话框用于查看基于策略的管理方面的属性。 每个方面可应用于一个或多个目标类型，例如，服务器、数据库或表。 可以使用此页来查看与此方面有关的目标类型。 方面属性是在创建方面时定义的，无法使用此页来更改这些属性。  
   
 ## <a name="options"></a>选项  

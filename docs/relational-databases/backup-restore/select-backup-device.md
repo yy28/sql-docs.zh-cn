@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: 7887c9fd-15ce-4cc8-b069-845c1d09088c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 15b444c21be67be97f66e7855cfeb4c37eadbd22
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8870de514e6f59010405a644d62dd6c611658f3e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180628"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759087"
 ---
 # <a name="select-backup-device"></a>选择备份设备
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   使用 **“选择备份设备”** 对话框可以选择还原操作使用的逻辑备份设备。  
   
  逻辑备份设备是与物理设备对应的用户定义的逻辑设备，它是操作系统提供的磁带机或磁盘驱动器。  

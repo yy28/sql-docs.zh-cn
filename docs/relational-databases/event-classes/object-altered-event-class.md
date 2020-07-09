@@ -12,15 +12,15 @@ ms.assetid: f94e3b59-ff2f-4d8d-8479-e85ce5b3483e
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8cdf780816d16450ce9487a80c282fa1a0820631
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9757556741c36f5644d3d58a44744270a02b9c82
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115932"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756016"
 ---
 # <a name="objectaltered-event-class"></a>Object:Altered 事件类
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Object:Altered 事件类指示一个对象已更改，例如通过 ALTER INDEX、ALTER TABLE 或 ALTER DATABASE 语句更改对象。 此事件类可用来确定是否正在更改对象；例如通常用来创建临时存储过程的 ODBC 应用程序正在更改对象。  
   
  Object:Altered 事件类发生时总是有两个事件。 第一个事件指示“开始”阶段。 第二个事件指示“回滚”或“提交”阶段。  

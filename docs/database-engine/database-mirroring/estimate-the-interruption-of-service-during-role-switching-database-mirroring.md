@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a0301a6cdfd1381e3fdc6baa8189cc8fbf4739a1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9d83569a79980097a18ebff39b3628401a4387c3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75253571"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754669"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>估计在角色切换期间服务的中断（数据库镜像）
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   在角色切换过程中，数据库镜像功能中断服务的时间取决于角色切换的类型和原因。  
   
 -   对于自动故障转移，有两个影响服务中断时间的因素：镜像服务器识别主体服务器实例失败（错误检测）所需的时间，以及数据库故障转移所需的时间（故障转移时间）。  

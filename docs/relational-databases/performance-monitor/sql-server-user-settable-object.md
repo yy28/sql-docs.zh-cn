@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 633de3ef-533c-4f0c-9c7b-c105129d8e94
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: cddb71a35ac762ed602dd93e9e50f463da3e41f9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 427f24bdce5c7af4d0bd9c6b5c0c030112f8a5a1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67947927"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758902"
 ---
 # <a name="sql-server-user-settable-object"></a>SQL Server User Settable 对象
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   通过 Microsoft **中的** User Settable [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象可以创建自定义计数器实例。 自定义计数器实例用于监视服务器上现有计数器没有监视到的方面，例如您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库唯一具有的组件（例如，记录的客户定单数或产品目录）。  
   
  **User Settable** 对象包含 10 个 Query 计数器实例：从用户计数器 1  到用户计数器 10  。 这些计数器映射到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储过程 **sp_user_counter1** 到 **sp_user_counter10**。 由于这些存储过程由用户应用程序执行，因此，这些存储过程设置的值显示在系统监视器中。 计数器可以监视任何单一的整型值，例如，用于计算某产品在一天中获得的订单数的存储过程。  

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1c846950-0a2d-45df-b0d5-193e455f7cd5
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: dff35ab1603e3fa1d620914d8ac4afbe669a2be5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dd7bdb74f679f32132361aac5c2b751b9bda9494
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75252739"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756463"
 ---
 # <a name="start-the-configuring-database-mirroring-security-wizard"></a>启动配置数据库镜像安全向导
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   配置数据库镜像安全向导可用于最初配置镜像所涉及的全部或部分服务器实例的安全设置。 此向导与 **“数据库属性”** 对话框的 **“镜像”** 页一起使用。  
   
 ### <a name="to-launch-the-configure-database-mirroring-security-wizard"></a>启动配置数据库镜像安全向导  

@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: d664c2e5-dd0c-4da8-b27d-aa4ee4fc0ffd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: dc505c0fe87a298ba4a9015f467119c1b7d6d3f0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ebbe01dcc03ef670ac41ca0842f702c8e637cb37
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68021726"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760462"
 ---
 # <a name="select-source-dialog-box"></a>“选择源”对话框
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   此对话框用于选择要运行的策略的来源。 若要选择一个或多个包含策略的 XML 文件，请选择 **“文件”** 。 若要运行位于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上的策略，请选择 **“服务器”** 。  
   
  打开此对话框有以下几种不同的方法。  

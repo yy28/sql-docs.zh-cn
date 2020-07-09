@@ -17,15 +17,15 @@ ms.assetid: 655e709b-346b-469c-bddc-a5a0238d07e0
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ff27b763f5bbb658de2d5e762ecdecdaea7fc583
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 25ab3abd88a92afb2dc90c4d97bcced3443d22e9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74095712"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753797"
 ---
 # <a name="tutorial-getting-started-with-the-database-engine"></a>教程：数据库引擎入门
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 
 欢迎使用 [!INCLUDE[ssDE](../includes/ssde-md.md)] 教程入门。 本教程适用于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的新手且已安装 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]的用户。 本简明教程有助于您了解如何使用 [!INCLUDE[ssDE](../includes/ssde-md.md)]。  
   

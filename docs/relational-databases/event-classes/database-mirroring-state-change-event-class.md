@@ -14,15 +14,15 @@ ms.assetid: f936a99e-2a81-4768-8177-5c969bbe2e04
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 730186265d6932fb74f0b6ab7221abaeb53ecf53
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a7c1e9d1fe55b36560eb71675b3714b999d2512d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68009554"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756067"
 ---
 # <a name="database-mirroring-state-change-event-class"></a>Database Mirroring State Change 事件类
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **Database Mirroring State Change** 事件类指明镜像数据库的状态改变时间。 此事件类包括在监视镜像数据库条件的跟踪中。  
   
  当 **Database Mirroring State Change** 事件类包括在跟踪中后，相关开销会较低。 如果镜像数据库的状态增多，开销可能会上升。  

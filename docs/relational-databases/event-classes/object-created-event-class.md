@@ -12,15 +12,15 @@ ms.assetid: 57536924-5e66-4b09-a76d-8fcea2131771
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 333e6ab1e529b130a81fd8b5622016cd4f9f9d10
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bc33fb281f0056925397d763f4e7b888a7293f50
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115916"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756008"
 ---
 # <a name="objectcreated-event-class"></a>Object:Created 事件类
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Object:Created 事件类指明已创建一个对象，例如，使用 CREATE INDEX、CREATE TABLE 或 CREATE DATABASE 语句。  
   
  此事件类可用来确定是否（例如，使用经常用来创建临时存储过程的 ODBC 应用程序）创建了对象。 通过监视 LoginName 和 NTUserName 数据列，可以确定创建、删除或访问对象的用户的姓名。  

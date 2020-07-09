@@ -20,15 +20,15 @@ ms.assetid: cd522dda-b4ab-41b8-82b0-02445bdba7af
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fe633bc88750173f974ccf41a75f4bcad7e5c03b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 357dae5608e938eda4ea4fd42a92420f9297958e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68075513"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757659"
 ---
 # <a name="create-nested-triggers"></a>创建嵌套触发器
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   当触发器执行启动其他触发器的操作时，DML 和 DDL 触发器都是嵌套触发器。 这些操作都可以启动其他触发器等。 DML 触发器和 DDL 触发器最多可以嵌套 32 层。 可以通过 **nested triggers** 服务器配置选项来控制是否可以嵌套 AFTER 触发器。 但不管此设置是什么，都可以嵌套 INSTEAD OF 触发器（只有 DML 触发器可以为 INSTEAD OF 触发器）。  
   
 > [!NOTE]  

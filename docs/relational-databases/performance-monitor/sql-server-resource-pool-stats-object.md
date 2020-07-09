@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: bb46e029-fcf9-4aeb-a066-be41e7668fb9
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 98241060994cd97944db30a777bc23f475b8cb0e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 35053d98db9b87b06512064e75adf06b4bcd6c51
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67995697"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758926"
 ---
 # <a name="sql-server-resource-pool-stats-object"></a>SQL Server，Resource Pool Stats 对象
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   SQLServer:Resource Pool Stats 对象包含报告资源调控器资源池统计相关信息的性能计数器。  
   
  每个活动资源池都创建一个 SQLServer:Resource Pool Stats 性能对象实例，实例的名称与资源调控器资源池的名称相同。 下表介绍了此实例支持的计数器。  

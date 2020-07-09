@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9dcb5f58-35ab-4bb3-86ee-2d29eefba6d3
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 1e50ca09fc8ac7c9c61c17227448deebe8c69bc8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 274b14dc7d4feaedfd4f32221312762eddedc005
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68066314"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762177"
 ---
 # <a name="strelate-geometry-data-type"></a>STRelate（geometry 数据类型）
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   如果一个 **geometry** 实例与另一个 **geometry** 实例相关（其关系由“维扩展 9 交集模型”(DE-9IM) 模式矩阵值定义），则返回 1；否则，返回 0。  
   

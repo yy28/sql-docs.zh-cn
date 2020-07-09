@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6da39bea-0f67-4660-98fc-d7214f9b2138
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 3aa054a04b236c419b833df42ba668926e97e312
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 93d938b45f9820c1de2b7f225c222cab8dd0d11b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68030870"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762375"
 ---
 # <a name="stisvalid-geometry-data-type"></a>STIsValid（geometry 数据类型）
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 根据 **geometry** 实例的开放地理空间信息联盟 (OGC) 类型，如果可确定该实例的格式正确，则返回 true。 如果 **geometry** 实例格式不正确，则返回 false。
   

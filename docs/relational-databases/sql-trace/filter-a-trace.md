@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5e518050759aea98d249e93374a6335bddf30c75
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6d5677de166b1bfff58c64665901ce814a7448fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72909488"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751006"
 ---
 # <a name="filter-a-trace"></a>筛选跟踪
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   筛选器将限制跟踪内收集的事件。 如果没有设置筛选器，则跟踪输出中将返回选定事件类的所有事件。 例如，如果将跟踪中的 Windows 用户名限定为特定用户，将仅输出与那些用户相关的数据。  
   
  并不一定要为跟踪设置筛选器。 但是，筛选器会将跟踪过程中的开销降到最低。 筛选器将返回有针对性的数据，这样会使性能分析和审核变得更容易。  

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 544f4194-253e-4c57-96ca-31c16301434f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a52cf852edc4a03a72ba9cb71a4ccd50a3963ada
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bbac0c31618e419c7d67c3feba861e5e69008ee8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75245453"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758199"
 ---
 # <a name="view-the-state-of-a-mirrored-database-sql-server-management-studio"></a>查看镜像数据库的状态 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   在数据库镜像会话期间，可以在 **“数据库属性”** 对话框的 **“镜像”** 页查看数据库镜像会话的状态。  
   
 ### <a name="to-view-the-status-of-a-database-mirroring-session"></a>查看数据库镜像会话的状态  
@@ -35,7 +35,7 @@ ms.locfileid: "75245453"
   
 4.  镜像开始后， **“状态”** 窗格将显示您选择 **“镜像”** 页或单击 **“刷新”** 按钮时的数据库镜像会话的状态。 可能的状态如下：  
   
-    |States|说明|  
+    |状态|说明|  
     |------------|-----------------|  
     |\<blank>|不存在数据库镜像会话，并且没有要在 **“镜像”** 页上报告的活动。|  
     |已暂停|主体数据库正在运行，但没有向镜像服务器发送任何日志。 数据库的镜像副本不可用。|  
