@@ -1,5 +1,5 @@
 ---
-title: sys. dm_db_stats_histogram （Transact-sql） |Microsoft Docs
+title: sys. dm_db_stats_histogram (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,16 +20,18 @@ ms.assetid: 1897fd4a-8d51-461e-8ef2-c60be9e563f2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50b5ae0a00161b00c432f0ea88c1cd08c45b4219
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a9346aa6dbf98bbc827b90423f02b5027481f956
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011880"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196396"
 ---
 # <a name="sysdm_db_stats_histogram-transact-sql"></a>sys.dm_db_stats_histogram (Transact-SQL)
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
-返回当前数据库中指定数据库对象（表或索引视图）的统计信息直方图 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 类似于 `DBCC SHOW_STATISTICS WITH HISTOGRAM`。
+返回当前数据库中 (表或索引视图) 的指定数据库对象的统计信息直方图 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 类似于 `DBCC SHOW_STATISTICS WITH HISTOGRAM`。
 
 > [!NOTE] 
 > 从 SP1 CU2 开始，可以使用这一 DMF [!INCLUDE[ssSQL15](../../includes/ssSQL15-md.md)]
@@ -40,7 +42,7 @@ ms.locfileid: "86011880"
 sys.dm_db_stats_histogram (object_id, stats_id)  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  object_id  
  当前数据库中您要请求其某个统计信息属性的对象的 ID。 *object_id* 是 **int**。  
   
@@ -58,9 +60,9 @@ sys.dm_db_stats_histogram (object_id, stats_id)
 |range_rows |**real** |其列值位于直方图梯级内（不包括上限）的行的估算数目。 |
 |equal_rows |**real** |其列值等于直方图梯级的上限的行的估算数目。 |
 |distinct_range_rows |**bigint** |非重复列值位于直方图梯级内（不包括上限）的行的估算数目。 |
-|average_range_rows |**real** |直方图步骤中具有重复列值的平均行数，不包括上限（ `RANGE_ROWS / DISTINCT_RANGE_ROWS` 对于 `DISTINCT_RANGE_ROWS > 0` ）。 |
+|average_range_rows |**real** |直方图步骤中具有重复列值的平均行数，不包括) 的上限 (`RANGE_ROWS / DISTINCT_RANGE_ROWS` `DISTINCT_RANGE_ROWS > 0` 。 |
   
- ## <a name="remarks"></a>注解  
+ ## <a name="remarks"></a>备注  
  
  的结果集将 `sys.dm_db_stats_histogram` 返回类似于的信息， `DBCC SHOW_STATISTICS WITH HISTOGRAM` 并且还包括 `object_id` 、 `stats_id` 和 `step_number` 。
 
@@ -74,7 +76,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
  下面的关系图显示包含六个梯级的直方图。 第一个上限值左侧的区域是第一个梯级。  
   
- ![](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "Histogram")  
+ ![直方图](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "直方图")  
   
  对于每个直方图梯级：  
   
@@ -82,7 +84,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
 -   range_high_key** 左侧的纯色区域表示列值范围和每个列值的平均出现次数 (average_range_rows**)。 第一个直方图梯级的 average_range_rows** 始终是 0。  
   
--   点线表示用于估计范围中的非重复值总数（*distinct_range_rows*）和范围中的总值数（*range_rows*）的抽样值。 查询优化器使用 range_rows** 和 distinct_range_rows** 计算 average_range_rows**，且不存储抽样值。  
+-   点线表示用于估计范围中的非重复值总数的抽样值，该范围 (*distinct_range_rows*) 和 (*range_rows*) 范围内的值的总数。 查询优化器使用 range_rows** 和 distinct_range_rows** 计算 average_range_rows**，且不存储抽样值。  
   
  查询优化器按照直方图梯级的统计重要性来定义直方图梯级。 它使用最大差异算法使直方图中的梯级减至最少，并同时最大化边界值之间的差异。 最大梯级数为 200。 直方图梯级数可以少于非重复值的数目，即使对于边界点少于 200 的列也是如此。 例如，具有 100 个非重复值的列所具有的直方图的边界点可以少于 100。  
   
@@ -144,6 +146,6 @@ WHERE ss.[object_id] = OBJECT_ID('Country')
 ```
   
 ## <a name="see-also"></a>另请参阅  
-[DBCC SHOW_STATISTICS （Transact-sql）](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
+[DBCC SHOW_STATISTICS (Transact-sql) ](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
 [与对象相关的动态管理视图和函数 (Transact-SQL)](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)  
 [sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  

@@ -1,5 +1,5 @@
 ---
-title: sp_datatype_info_90 （SQL 数据仓库） |Microsoft Docs
+title: sp_datatype_info_90 (SQL 数据仓库) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.service: sql-data-warehouse
@@ -11,15 +11,15 @@ ms.assetid: 1d043964-dc6e-4c3e-ab61-bc444d5e25ae
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7919dac422a0033d9bac02a928da2ff7445c6cc9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0d19a2ef405fef8b62de96f621ddc13a816b4fc5
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108324"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196919"
 ---
-# <a name="sp_datatype_info_90-sql-data-warehouse"></a>sp_datatype_info_90 （SQL 数据仓库）
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+# <a name="sp_datatype_info_90-sql-data-warehouse"></a>sp_datatype_info_90 (SQL 数据仓库) 
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   返回有关当前环境所支持的数据类型的信息。  
   
@@ -49,12 +49,12 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 |TYPE_NAME|**sysname**|与 DBMS 相关的数据类型。|  
 |DATA_TYPE|**smallint**|此类型的所有列所映射到的 ODBC 类型代码。|  
 |PRECISION|**int**|数据源中数据类型的最大精度。 数据类型的精度不适用时返回 NULL。 PRECISION 列的返回值以 10 为基数。|  
-|LITERAL_PREFIX|**varchar （** 32 **）**|常量前使用的一个或多个字符。 例如，字符类型的单引号（**'**）和二进制的0x。|  
-|LITERAL_SUFFIX|**varchar （** 32 **）**|用于终止常数的一个或多个字符。 例如，对字符类型使用单引号（**'**），二进制不使用引号。|  
-|CREATE_PARAMS|**varchar （** 32 **）**|此数据类型的创建参数的说明。 例如， **decimal**为 "精度，小数位数"， **float**为 NULL， **varchar**为 "max_length"。|  
+|LITERAL_PREFIX|**varchar (** 32 **) **|常量前使用的一个或多个字符。 例如，单引号 (**'**) 用于字符类型，0x 用于二进制。|  
+|LITERAL_SUFFIX|**varchar (** 32 **) **|用于终止常数的一个或多个字符。 例如，单引号 (**"**) 用于字符类型，而不使用引号作为二进制。|  
+|CREATE_PARAMS|**varchar (** 32 **) **|此数据类型的创建参数的说明。 例如， **decimal**为 "精度，小数位数"， **float**为 NULL， **varchar**为 "max_length"。|  
 |NULLABLE|**smallint**|指定为 Null 性。<br /><br /> 1 = 允许 Null 值。<br /><br /> 0 = 不允许 Null 值。|  
 |CASE_SENSITIVE|**smallint**|指定是否区分大小写。<br /><br /> 1 = 此类型的所有列都区分大小写（用于排序规则）。<br /><br /> 0 = 此类型的所有列都不区分大小写。|  
-|SEARCHABLE|**smallint**|指定列类型的搜索能力：<br /><br /> 1 = 不能搜索。<br /><br /> 2 = 可以使用 LIKE 进行搜索。<br /><br /> 3 = 可以使用 WHERE 进行搜索。<br /><br /> 4 = 可以使用 WHERE 或 LIKE 进行搜索。|  
+|可搜索|**smallint**|指定列类型的搜索能力：<br /><br /> 1 = 不能搜索。<br /><br /> 2 = 可以使用 LIKE 进行搜索。<br /><br /> 3 = 可以使用 WHERE 进行搜索。<br /><br /> 4 = 可以使用 WHERE 或 LIKE 进行搜索。|  
 |UNSIGNED_ATTRIBUTE|**smallint**|指定数据类型的符号。<br /><br /> 1 = 数据类型没有符号。<br /><br /> 0 = 数据类型有符号。|  
 |MONEY|**smallint**|指定**money**数据类型。<br /><br /> 1 = **money**数据类型。<br /><br /> 0 = 不是**money**数据类型。|  
 |AUTO_INCREMENT|**smallint**|指定自动递增。<br /><br /> 1 = 自动递增。<br /><br /> 0 = 不自动递增。<br /><br /> NULL = 属性不适用。<br /><br /> 应用程序可以将值插入具有此属性的列中，但应用程序不能更新列中的值。 除了**bit**数据类型之外，AUTO_INCREMENT 仅对属于精确数字和近似数字数据类型类别的数据类型有效。|  
@@ -74,7 +74,7 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
  要求具有 public 角色的成员身份。  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 下面的示例通过指定的*data_type*值来检索`-9` **sysname**和**nvarchar**数据类型的信息。  
+ 下面的示例通过指定的*data_type*值来检索**sysname**和**nvarchar**数据类型的信息 `-9` 。  
   
 ```  
 USE master;  

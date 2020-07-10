@@ -14,15 +14,15 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 12adbc7c7f10b16591b2fc8c6b0473e86036957b
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: be447109a1432fdf8c3f3ae4a44f34a2eed1fd46
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627572"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196770"
 ---
-# <a name="sp_pdw_remove_network_credentials-sql-data-warehouse"></a>sp_pdw_remove_network_credentials （SQL 数据仓库）
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+# <a name="sp_pdw_remove_network_credentials-sql-data-warehouse"></a>sp_pdw_remove_network_credentials (SQL 数据仓库) 
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   这会删除存储在中 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 用于访问网络文件共享的网络凭据。 例如，使用此存储过程删除在 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 驻留在自己的网络中的服务器上执行备份和还原操作的权限。  
   
@@ -40,7 +40,7 @@ sp_pdw_remove_network_credentials 'target_server_name'
  "*target_server_name*"  
  指定目标服务器主机名或 IP 地址。 将从中删除用于访问此服务器的凭据 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。 这不会更改或删除你自己的团队管理的实际目标服务器上的任何权限。  
   
- *target_server_name*定义为 nvarchar （337）。  
+ *target_server_name*定义为 nvarchar (337) 。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  

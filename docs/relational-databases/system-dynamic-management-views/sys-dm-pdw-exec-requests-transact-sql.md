@@ -1,5 +1,5 @@
 ---
-title: sys. dm_pdw_exec_requests （Transact-sql） |Microsoft Docs
+title: sys. dm_pdw_exec_requests (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/05/2019
 ms.prod: sql
@@ -12,16 +12,16 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 62dfd50adf25d3e203c2bbf50c58579c65332606
-ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
+ms.openlocfilehash: a377c33424ae589fa796b6f382e936426ead006d
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85440804"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197067"
 ---
-# <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys. dm_pdw_exec_requests （Transact-sql）
+# <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys. dm_pdw_exec_requests (Transact-sql) 
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   保存有关中当前或最近活动的所有请求的信息 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。 每个请求/查询在表中各占一行。  
   
@@ -36,40 +36,40 @@ ms.locfileid: "85440804"
 |end_time|**datetime**|请求执行完成、失败或已取消的时间。|对于排队或活动的请求为 Null;否则，有效的**日期**时间小于或等于当前时间。|  
 |total_elapsed_time|**int**|自请求开始后执行所用的时间（以毫秒为单位）。|介于0与 submit_time 与 end_time 之间的差异。</br></br> 如果 total_elapsed_time 超过整数的最大值，则 total_elapsed_time 将继续作为最大值。 此条件将生成警告 "已超过最大值。"</br></br> 最大值（以毫秒为单位）与24.8 天相同。|  
 |label|**nvarchar(255)**|与某些 SELECT 查询语句相关联的可选标签字符串。|包含 "a-z"、"a-z"、"0-9" 和 "_" 的任何字符串。|  
-|error_id|**nvarchar （36）**|与请求关联的错误的唯一 ID （如果有）。|请参阅[dm_pdw_errors &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md);如果未发生错误，则设置为 NULL。|  
-|database_id|**int**|显式上下文使用的数据库的标识符（例如，使用 DB_X）。|请参阅 sys.databases 中的 ID [&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)。|  
+|error_id|**nvarchar (36) **|与请求关联的错误的唯一 ID （如果有）。|请参阅[dm_pdw_errors &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md);如果未发生错误，则设置为 NULL。|  
+|database_id|**int**|显式上下文所使用的数据库的标识符 (例如，使用 DB_X) 。|请参阅 sys.databases 中的 ID [&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)。|  
 |命令|**nvarchar(4000)**|保存用户提交的请求的完整文本。|任何有效的查询或请求文本。 超过4000字节的查询将被截断。|  
-|resource_class|**nvarchar （20）**|用于此请求的工作负荷组。 |静态资源类</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>            </br>动态资源类</br>SmallRC</br>MediumRC</br>LargeRC</br>XLargeRC|
-|importance|**nvarchar(128)**|执行请求的重要性设置。  这是此工作负荷组中的请求与共享资源的工作负荷组之间的相对重要性。  分类器中指定的重要性覆盖工作负荷组重要性设置。</br>适用于：Azure SQL 数据仓库|Null</br>low</br>below_normal</br>normal （默认值）</br>above_normal</br>high|
+|resource_class|**nvarchar (20) **|用于此请求的工作负荷组。 |静态资源类</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>            </br>动态资源类</br>SmallRC</br>MediumRC</br>LargeRC</br>XLargeRC|
+|importance|**nvarchar(128)**|执行请求的重要性设置。  这是此工作负荷组中的请求与共享资源的工作负荷组之间的相对重要性。  分类器中指定的重要性覆盖工作负荷组重要性设置。</br>适用于：Azure SQL 数据仓库|Null</br>low</br>below_normal</br>正常 (默认值) </br>above_normal</br>high|
 |group_name|**sysname** |对于利用资源的请求，group_name 是在其下运行请求的工作负荷组的名称。  如果请求不使用资源，则 group_name 为 null。</br>适用于：Azure SQL 数据仓库|
 |classifier_name|**sysname**|对于利用资源的请求，是用于分配资源和重要性的分类器的名称。||
-|resource_allocation_percentage|**decimal （5，2）**|分配给请求的资源的百分比。</br>适用于：Azure SQL 数据仓库|
+|resource_allocation_percentage|**decimal (5，2) **|分配给请求的资源的百分比。</br>适用于：Azure SQL 数据仓库|
 |result_cache_hit|**decimal**|详细说明已完成的查询是否使用了结果集缓存。  </br>适用于：Azure SQL 数据仓库| 1 = 结果集缓存命中 </br> 0 = 结果集缓存未命中 </br> 负值 = 未使用结果集缓存的原因。  有关详细信息，请参阅备注部分。|
 ||||
   
-## <a name="remarks"></a>注解 
+## <a name="remarks"></a>备注 
  有关此视图保留的最大行的信息，请参阅[容量限制](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata)主题中的元数据部分。
 
- Result_cache_hit 是查询对结果集缓存的使用的位掩码。  此列可以是[|（位或）](../../t-sql/language-elements/bitwise-or-transact-sql.md)以下一个或多个值的产品：  
+ Result_cache_hit 是查询对结果集缓存的使用的位掩码。  此列可以是以下一个或多个值的[| (位或) ](../../t-sql/language-elements/bitwise-or-transact-sql.md)产品：  
   
-|值 Hex （十进制）|说明|  
+|值 Hex (Decimal) |说明|  
 |-----------|-----------------|  
 |**1**|结果集缓存命中|  
-|**0x00** （**0**）|结果集缓存未命中|  
-|-**0x01** （**-1**）|已对数据库禁用结果集缓存。|  
-|-**0x02** （**-2**）|在会话上禁用结果集缓存。 | 
-|-**0x04** （**-4**）|由于没有用于查询的数据源，因此已禁用结果集缓存。|  
-|-**0x08** （**-8**）|由于行级安全谓词，结果集缓存已禁用。|  
-|-**0x10** （**-16**）|由于在查询中使用了系统表、临时表或外部表，因此结果集缓存已禁用。|  
-|-**0x20** （**-32**）|由于查询包含运行时常量、用户定义函数或非确定性函数，因此禁用了结果集缓存。|  
-|-**0x40** （**-64**）|由于估计的结果集大小为 >10GB，结果集缓存已禁用。|  
-|-**0x80** （**-128**）|结果集缓存已禁用，因为结果集包含大小较大（>64kb）的行。|  
+|**0x00** (**0**) |结果集缓存未命中|  
+|-**0x01** (**-1**) |已对数据库禁用结果集缓存。|  
+|-**0x02** (**-2**) |在会话上禁用结果集缓存。 | 
+|-**0x04** (**-4**) |由于没有用于查询的数据源，因此已禁用结果集缓存。|  
+|-**0x08** (**-8**) |由于行级安全谓词，结果集缓存已禁用。|  
+|-**0x10** (**-16**) |由于在查询中使用了系统表、临时表或外部表，因此结果集缓存已禁用。|  
+|-**0x20** (**-32**) |由于查询包含运行时常量、用户定义函数或非确定性函数，因此禁用了结果集缓存。|  
+|-**0x40** (**-64**) |由于估计的结果集大小为 >10GB，结果集缓存已禁用。|  
+|-**0x80** (**-128**) |结果集缓存已禁用，因为结果集包含大小为 ( # B0 64kb) 的行。|  
   
 ## <a name="permissions"></a>权限
 
  需要 VIEW SERVER STATE 权限。  
   
-## <a name="security"></a>安全性
+## <a name="security"></a>安全
 
  sys. dm_pdw_exec_requests 不根据特定于数据库的权限来筛选查询结果。 具有 VIEW SERVER STATE 权限的登录名可以获取所有数据库的结果查询结果  
   

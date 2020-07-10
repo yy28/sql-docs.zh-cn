@@ -12,15 +12,15 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: a4f4fac6f7b7dc1f7809042bd9b784b754bec1a2
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: c7be9d3eb55800c2fa5c4f155aff6fd81301490c
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627489"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197337"
 ---
-# <a name="sp_pdw_add_network_credentials-sql-data-warehouse"></a>sp_pdw_add_network_credentials （SQL 数据仓库）
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+# <a name="sp_pdw_add_network_credentials-sql-data-warehouse"></a>sp_pdw_add_network_credentials (SQL 数据仓库) 
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   这会在中存储网络凭据 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ，并将其与服务器关联。 例如，使用此存储过程可提供 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 适当的读/写权限，以便在目标服务器上执行数据库备份和还原操作，或创建用于 TDE 的证书的备份。  
   
@@ -40,12 +40,12 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpassword�
   
  若要通过未使用的网络进行连接，请使用目标服务器的未使用的 IP 地址。  
   
- *target_server_name*定义为 nvarchar （337）。  
+ *target_server_name*定义为 nvarchar (337) 。  
   
  "*user_name*"  
  指定有权访问目标服务器的 user_name。 如果目标服务器已有凭据，则这些凭据将更新为新凭据。  
   
- *user_name*定义为 nvarchar （513）。  
+ *user_name*定义为 nvarchar (513) 。  
   
  '*password*"  
  指定*user_name*的密码。  

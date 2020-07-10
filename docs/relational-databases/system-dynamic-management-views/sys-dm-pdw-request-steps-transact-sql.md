@@ -1,5 +1,5 @@
 ---
-title: sys. dm_pdw_request_steps （Transact-sql） |Microsoft Docs
+title: sys. dm_pdw_request_steps (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/19/2020
 ms.prod: sql
@@ -12,27 +12,27 @@ ms.assetid: cc563e88-0d34-436e-b914-b60d6ee0d50b
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 48ef27fe4726836e13af57be31b7358967b8d79e
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: d1e9dd970cebd1f25b953e7a5fe21c8ea8c60bde
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689757"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196192"
 ---
-# <a name="sysdm_pdw_request_steps-transact-sql"></a>sys. dm_pdw_request_steps （Transact-sql）
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+# <a name="sysdm_pdw_request_steps-transact-sql"></a>sys. dm_pdw_request_steps (Transact-sql) 
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   保存有关在中编写给定请求或查询的所有步骤的信息 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。 每个查询步骤在表中各占一行。  
   
 |列名|数据类型|说明|范围|  
 |-----------------|---------------|-----------------|-----------|  
 |request_id|**nvarchar(32)**|request_id 和 step_index 构成此视图的键。<br /><br /> 与请求关联的唯一数字 id。|请参阅 dm_pdw_exec_requests sys.databases 中的 request_id [&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)。|  
-|step_index|**int**|request_id 和 step_index 构成此视图的键。<br /><br /> 此步骤在组成请求的步骤序列中的位置。|对于包含 n 个步骤的请求，为0到（n-1）。|  
+|step_index|**int**|request_id 和 step_index 构成此视图的键。<br /><br /> 此步骤在组成请求的步骤序列中的位置。|对于包含 n 个步骤的请求，为 0 (n-1) 。|  
 |operation_type|**nvarchar(35)**|此步骤表示的操作类型。|**DMS 查询计划操作：**"ReturnOperation"、"PartitionMoveOperation"、"MoveOperation"、"BroadcastMoveOperation"、"ShuffleMoveOperation"、"TrimMoveOperation"、"CopyOperation"、"DistributeReplicatedTableMoveOperation"<br /><br /> **SQL 查询计划操作：**"OnOperation"、"RemoteOperation"<br /><br /> **其他查询计划操作：**'MetaDataCreateOperation', 'RandomIDOperation'<br /><br /> **读取的外部操作：**'HadoopShuffleOperation', 'HadoopRoundRobinOperation', 'HadoopBroadcastOperation'<br /><br /> **MapReduce 的外部操作：**'HadoopJobOperation', 'HdfsDeleteOperation'<br /><br /> **写入的外部操作：**'ExternalExportDistributedOperation', 'ExternalExportReplicatedOperation', 'ExternalExportControlOperation'<br /><br /> 有关详细信息，请参阅中的 "了解查询计划" [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] 。 <br /><br />  查询计划还可能会受数据库设置的影响。  有关详细信息，请参阅[ALTER DATABASE SET 选项](https://docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql-set-options?toc=/azure/sql-data-warehouse/toc.json&bc=/azure/sql-data-warehouse/breadcrumb/toc.json&view=azure-sqldw-latest)。|  
 |distribution_type|**nvarchar(32)**|此步骤将经历的分发类型。|"AllNodes"、"AllDistributions"、"AllComputeNodes"、"ComputeNode"、"分发"、"SubsetNodes"、"SubsetDistributions"、"未指定"|  
 |location_type|**nvarchar(32)**|步骤的运行位置。|"Compute"、"Control"、"DMS"|  
 |状态|**nvarchar(32)**|此步骤的状态。|挂起、正在运行、已完成、失败、UndoFailed、PendingCancel、已取消、已中止|  
-|error_id|**nvarchar （36）**|与此步骤关联的错误的唯一 id （如果有）。|请参阅 error_id [dm_pdw_errors &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md)。 如果未发生错误，则为 NULL。|  
+|error_id|**nvarchar (36) **|与此步骤关联的错误的唯一 id （如果有）。|请参阅 error_id [dm_pdw_errors &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md)。 如果未发生错误，则为 NULL。|  
 |start_time|**datetime**|步骤开始执行的时间。|小于或等于当前时间，大于或等于此步骤所属的查询 end_compile_time。 有关查询的详细信息，请参阅[&#40;transact-sql&#41;dm_pdw_exec_requests ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)。|  
 |end_time|**datetime**|此步骤完成执行、已取消或失败的时间。|小于或等于当前时间，大于或等于 start_time。 对于当前正在执行或已排队的步骤，将设置为 NULL。|  
 |total_elapsed_time|**int**|查询步骤已运行的总时间（以毫秒为单位）。|介于0与 end_time 与 start_time 之间的差异。 对于排队步骤，为0。<br /><br /> 如果 total_elapsed_time 超过整数的最大值，则 total_elapsed_time 将继续作为最大值。 此条件将生成警告 "已超过最大值。"<br /><br /> 最大值（以毫秒为单位）等效于24.8 天。|  

@@ -1,5 +1,5 @@
 ---
-title: sys. dm_pdw_dms_workers （Transact-sql） |Microsoft Docs
+title: sys. dm_pdw_dms_workers (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -12,15 +12,15 @@ ms.assetid: 0a284d18-3c46-4ffa-bcc9-689e660ee8b4
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 6e5f295637db0e138caf324e3126707b9e0ea774
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 43b471634efc60a2beb4abd982b04437bdebb2af
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67899512"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197121"
 ---
-# <a name="sysdm_pdw_dms_workers-transact-sql"></a>sys. dm_pdw_dms_workers （Transact-sql）
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+# <a name="sysdm_pdw_dms_workers-transact-sql"></a>sys. dm_pdw_dms_workers (Transact-sql) 
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   保存有关完成 DMS 步骤的所有工作线程的信息。  
   
@@ -32,19 +32,19 @@ ms.locfileid: "67899512"
 |pdw_node_id|**int**|正在运行辅助角色的节点。|请参阅 dm_pdw_nodes sys.databases 中的 node_id [&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)。|  
 |distribution_id|**Int**|正在运行辅助进程的分发（如果有）。|请参阅 pdw_distributions sys.databases 中的 distribution_id [&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-distributions-transact-sql.md)。|  
 |类型|**nvarchar(32)**|此项表示的 DMS 工作线程的类型。|"DIRECT_CONVERTER"、"DIRECT_READER"、"FILE_READER"、"HASH_CONVERTER"、"HASH_READER"、"ROUNDROBIN_CONVERTER"、"EXPORT_READER"、"EXTERNAL_READER"、"EXTERNAL_WRITER"、"PARALLEL_COPY_READER"、"REJECT_WRITER"、"WRITER"|  
-|status|**nvarchar(32)**|DMS 工作线程的状态。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
+|状态|**nvarchar(32)**|DMS 工作线程的状态。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |bytes_per_sec|**bigint**|读取或写入吞吐量。|大于或等于0。 如果查询在执行之前已取消或失败，则为 NULL。|  
 |bytes_processed|**bigint**|此工作线程处理的总字节数。|大于或等于0。 如果查询在执行之前已取消或失败，则为 NULL。|  
 |rows_processed|**bigint**|为此辅助角色读取或写入的行数。|大于或等于0。 如果查询在执行之前已取消或失败，则为 NULL。|  
 |start_time|**datetime**|此工作线程的执行开始的时间。|大于或等于此辅助线程所属的查询步骤的开始时间。 请参阅[sys.databases &#40;transact-sql&#41;dm_pdw_request_steps ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md)。|  
 |end_time|**datetime**|执行结束、失败或已取消的时间。|对于正在进行的或已排队的工作线程，为 NULL。 否则，大于 start_time。|  
-|total_elapsed_time|**int**|执行所用的总时间（以毫秒为单位）。|大于或等于0。<br /><br /> 自系统启动或重新启动以来经过的总时间。 如果 total_elapsed_time 超过了整数的最大值24.8 （以毫秒为单位），则会导致具体化失败，因为溢出。<br /><br /> 最大值（以毫秒为单位）等效于24.8 天。|  
+|total_elapsed_time|**int**|执行所用的总时间（以毫秒为单位）。|大于或等于0。<br /><br /> 自系统启动或重新启动以来经过的总时间。 如果 total_elapsed_time 超过24.8 天（以毫秒为单位） (整数的最大值) ，则会导致具体化失败，因为溢出。<br /><br /> 最大值（以毫秒为单位）等效于24.8 天。|  
 |cpu_time|**bigint**|此工作线程占用的 CPU 时间（以毫秒为单位）。|大于或等于0。|  
 |query_time|**int**|SQL 开始将行返回到线程之前的时间段（以毫秒为单位）。|大于或等于0。|  
 |buffers_available|**int**|未使用的缓冲区数。| 如果查询在执行之前已取消或失败，则为 NULL。|  
 |sql_spid|**int**|为此 DMS 辅助角色执行工作的 SQL Server 实例的会话 id。||  
 |dms_cpid|**int**|运行的实际线程的进程 ID。||  
-|error_id|**nvarchar （36）**|执行此辅助进程期间发生的错误的唯一标识符（如果有）。|请参阅 dm_pdw_request_steps sys.databases 中的 error_id [&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md)。|  
+|error_id|**nvarchar (36) **|执行此辅助进程期间发生的错误的唯一标识符（如果有）。|请参阅 dm_pdw_request_steps sys.databases 中的 error_id [&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md)。|  
 |source_info|**nvarchar(4000)**|对于读取器，说明源表和列。||  
 |destination_info|**nvarchar(4000)**|对于编写器，指定目标表。||  
   

@@ -1,5 +1,5 @@
 ---
-title: sys. pdw_nodes_column_store_segments （Transact-sql）
+title: 'sys. pdw_nodes_column_store_segments (Transact-sql) '
 ms.custom: seo-dt-2019
 ms.date: 03/28/2018
 ms.prod: sql
@@ -13,16 +13,16 @@ author: julieMSFT
 ms.author: jrasnick
 manager: jrj
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: bea8e0d51b2918d7280f4afdb8b9d02f6b757827
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fc1e04718ea9db16d3b0c2a1cc59b14f906c6f31
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401673"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197189"
 ---
-# <a name="syspdw_nodes_column_store_segments-transact-sql"></a>sys. pdw_nodes_column_store_segments （Transact-sql）
+# <a name="syspdw_nodes_column_store_segments-transact-sql"></a>sys. pdw_nodes_column_store_segments (Transact-sql) 
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
 对于 columnstore 索引中的每列包括一行。
 
@@ -33,18 +33,18 @@ ms.locfileid: "74401673"
 | **column_id**               | **int**    | 列存储列的 ID。                                |
 | **segment_id**              | **int**    | 列段的 ID。 为实现向后兼容性，即使这是行组 ID，列名仍将继续 segment_id 调用。 您可以使用 <hobt_id，partition_id column_id> <segment_id> 来唯一标识段。 |
 | **version**                 | **int**    | 列段格式的版本。                        |
-| **encoding_type**           | **int**    | 用于该段的编码类型：<br /><br /> 1 = 不带字典的 VALUE_BASED 非字符串/二进制（类似于4，具有一些内部变体）<br /><br /> 2 = 在字典中具有通用值的 VALUE_HASH_BASED 非字符串/二进制列<br /><br /> 3 = STRING_HASH_BASED 字典中包含通用值的字符串/二进制列<br /><br /> 4 = 不带字典的 STORE_BY_VALUE_BASED 非字符串/二进制<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED 字符串/二进制，无字典<br /><br /> 如果可能，所有编码都利用位打包和长度为长度的编码。 |
+| **encoding_type**           | **int**    | 用于该段的编码类型：<br /><br /> 1 = 不含字典的 VALUE_BASED 非字符串/二进制文件 (类似于4，具有一些内部变体) <br /><br /> 2 = 在字典中具有通用值的 VALUE_HASH_BASED 非字符串/二进制列<br /><br /> 3 = STRING_HASH_BASED 字典中包含通用值的字符串/二进制列<br /><br /> 4 = 不带字典的 STORE_BY_VALUE_BASED 非字符串/二进制<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED 字符串/二进制，无字典<br /><br /> 如果可能，所有编码都利用位打包和长度为长度的编码。 |
 | **row_count**               | **int**    | 行组中的行数。                             |
 | **has_nulls**               | **int**    | 1 如果列段具有 Null 值。                     |
 | **base_id**                 | **bigint** | 如果正在使用编码类型1，则为基值 ID。  如果未使用编码类型1，则 base_id 设置为1。 |
 | **magnitude**               | **float**  | 如果正在使用编码类型1，则为数量级。  如果未使用编码类型1，则数量级设置为1。 |
-| **primary__dictionary_id**  | **int**    | 主字典的 ID。 如果为非零值，则指向当前段（即行组）中此列的本地字典。 值-1 指示此段没有本地字典。 |
-| **secondary_dictionary_id** | **int**    | 辅助字典的 ID。 如果为非零值，则指向当前段（即行组）中此列的本地字典。 值-1 指示此段没有本地字典。 |
+| **primary__dictionary_id**  | **int**    | 主字典的 ID。 如果为非零值，则指向当前段中此列的本地字典 (即行组) 。 值-1 指示此段没有本地字典。 |
+| **secondary_dictionary_id** | **int**    | 辅助字典的 ID。 如果为非零值，则指向当前段中此列的本地字典 (即行组) 。 值-1 指示此段没有本地字典。 |
 | **min_data_id**             | **bigint** | 列段中的最小数据 ID。                       |
 | **max_data_id**             | **bigint** | 列段中的最大数据 ID。                       |
 | **null_value**              | **bigint** | 用于表示 Null 的值。                               |
 | **on_disk_size**            | **bigint** | 段大小（字节）。                                    |
-| **pdw_node_id**             | **int**    | [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]节点的唯一标识符。 |
+| **pdw_node_id**             | **int**    | 节点的唯一标识符 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。 |
 | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]

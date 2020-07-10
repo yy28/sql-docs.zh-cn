@@ -1,5 +1,5 @@
 ---
-title: sys. dm_pdw_sys_info （Transact-sql） |Microsoft Docs
+title: sys. dm_pdw_sys_info (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -12,21 +12,21 @@ ms.assetid: 686976b4-2d5d-4d64-bf12-56eba1dc59b1
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 0bc6c97f4d41023b822f42a6bbe4c5b193d42e45
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 93e0020fb0da67538b37c171b3252ba029184554
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68088758"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197021"
 ---
-# <a name="sysdm_pdw_sys_info-transact-sql"></a>sys. dm_pdw_sys_info （Transact-sql）
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+# <a name="sysdm_pdw_sys_info-transact-sql"></a>sys. dm_pdw_sys_info (Transact-sql) 
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   提供了一组在设备上反映总体活动的设备级计数器。  
   
 |列名|数据类型|说明|范围|  
 |-----------------|---------------|-----------------|-----------|  
-|total_sessions|**int**|系统中当前的会话数。|0到 max_active_sessions （请参阅下文）。|  
+|total_sessions|**int**|系统中当前的会话数。|0到 max_active_sessions (请参阅下面) 。|  
 |idle_sessions|**int**|当前空闲的会话数。||  
 |active_requests|**int**|当前正在运行的活动请求数。||  
 |queued_requests|**int**|当前排队的请求数。||  

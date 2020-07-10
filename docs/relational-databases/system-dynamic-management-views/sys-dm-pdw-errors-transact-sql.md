@@ -1,5 +1,5 @@
 ---
-title: sys. dm_pdw_errors （Transact-sql） |Microsoft Docs
+title: sys. dm_pdw_errors (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -12,22 +12,22 @@ ms.assetid: 944eac31-5691-432b-b9f5-f1e11c05191f
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 06f905b4750801080c6b645601261bfe96f1ee0f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0ce09955508fa3743be9d8ef600e05f0e36c4467
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67899433"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197103"
 ---
-# <a name="sysdm_pdw_errors-transact-sql"></a>sys. dm_pdw_errors （Transact-sql）
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+# <a name="sysdm_pdw_errors-transact-sql"></a>sys. dm_pdw_errors (Transact-sql) 
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   保存在执行请求或查询过程中遇到的所有错误的相关信息。  
   
 |列名|数据类型|说明|范围|  
 |-----------------|---------------|-----------------|-----------|  
-|error_id|**nvarchar （36）**|此视图的键。<br /><br /> 与错误关联的唯一数字 id。|系统中所有查询错误都是唯一的。|  
-|source|**nvarchar （64）**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
+|error_id|**nvarchar (36) **|此视图的键。<br /><br /> 与错误关联的唯一数字 id。|系统中所有查询错误都是唯一的。|  
+|source|**nvarchar (64) **|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |类型|**nvarchar(4000)**|发生的错误的类型。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |create_time|**datetime**|发生错误的时间。|小于或等于当前时间。|  
 |pwd_node_id|**int**|涉及的特定节点的标识符（如果有）。 有关节点 id 的其他信息，请参阅[transact-sql&#41;&#40;dm_pdw_nodes ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)。||  

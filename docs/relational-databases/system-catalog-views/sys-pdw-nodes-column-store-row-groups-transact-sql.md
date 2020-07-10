@@ -1,5 +1,5 @@
 ---
-title: sys. pdw_nodes_column_store_row_groups （Transact-sql）
+title: 'sys. pdw_nodes_column_store_row_groups (Transact-sql) '
 ms.custom: seo-dt-2019
 ms.date: 03/03/2017
 ms.prod: sql
@@ -12,31 +12,31 @@ ms.assetid: 17a4c925-d4b5-46ee-9cd6-044f714e6f0e
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b1cbdc63907933f173c7d32a2dde3151dd4db7af
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1e65d2212dea9f8d2bbe9aad1854a2b8cd904dd3
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74399873"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197346"
 ---
-# <a name="syspdw_nodes_column_store_row_groups-transact-sql"></a>sys. pdw_nodes_column_store_row_groups （Transact-sql）
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+# <a name="syspdw_nodes_column_store_row_groups-transact-sql"></a>sys. pdw_nodes_column_store_row_groups (Transact-sql) 
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  按段提供聚集列存储索引信息，以帮助管理员在中[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]做出系统管理决策。 **sys. pdw_nodes_column_store_row_groups**包含物理存储的总行数（包括标记为已删除的行数）和标记为已删除的行数的列。 使用**sys. pdw_nodes_column_store_row_groups**确定哪些行组的已删除行的百分比较高并应重新生成。  
+  按段提供聚集列存储索引信息，以帮助管理员在中做出系统管理决策 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。 **sys. pdw_nodes_column_store_row_groups**包含物理存储的总行数的列 (包括标记为已删除的行) 以及标记为已删除的行数的列。 使用**sys. pdw_nodes_column_store_row_groups**确定哪些行组的已删除行的百分比较高并应重新生成。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|基础表的 ID。 这是计算节点上的物理表，而不是控制节点上逻辑表的 object_id。 例如，object_id 与 sys.databases 中的 object_id 不匹配。<br /><br /> 若要与 sys.databases 联接，请使用 sys. pdw_index_mappings。|  
+|object_id|**int**|基础表的 ID。 这是计算节点上的物理表，而不是控制节点上逻辑表的 object_id。 例如，object_id 与 sys.databases 中的 object_id 不匹配。<br /><br /> 若要与 sys.databases 联接，请使用 sys. pdw_index_mappings。|  
 |**index_id**|**int**|*Object_id*表上的聚集列存储索引的 ID。|  
 |**partition_number**|**int**|保存行组*row_group_id*的表分区的 ID。 你可以使用*partition_number*将此 DMV 加入 sys.databases。|  
 |**row_group_id**|**int**|此行组的 ID。 这在分区中是唯一的。|  
 |**dellta_store_hobt_id**|**bigint**|delta 行组的 hobt_id；或如果行组类型不是 delta，则为 NULL。 delta 行组是正在接受新记录的读/写行组。 增量行组具有**打开**状态。 delta 行组仍采用行存储格式，并且尚未压缩成列存储格式。|  
-|**state**|**tinyint**|与 state_description 关联的 ID 号。<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
+|State |**tinyint**|与 state_description 关联的 ID 号。<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
 |**state_desccription**|**nvarchar(60)**|行组的持久状态的说明：<br /><br /> OPEN-正在接受新记录的读/写行组。 开放的行组仍采用行存储格式，并且尚未压缩成列存储格式。<br /><br /> 已关闭-已填充但尚未由元组移动器进程压缩的行组。<br /><br /> 压缩-已填充和压缩的行组。|  
 |**total_rows**|**bigint**|行组中物理存储的总行数。 一些行可能已删除，但它们仍被存储。 一个行组中的最大行数为 1,048,576（十六进制 FFFFF）。|  
 |**deleted_rows**|**bigint**|在标记为删除的行组中物理存储的行数。<br /><br /> 对于增量行组，始终为0。|  
 |**size_in_bytes**|**int**|此行组中所有页面的组合大小（以字节为单位）。 此大小不包括存储元数据或共享字典所需的大小。|  
-|**pdw_node_id**|**int**|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]节点的唯一 id。|  
+|**pdw_node_id**|**int**|节点的唯一 id [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。|  
 |**distribution_id**|**int**|分布的唯一 id。|
   
 ## <a name="remarks"></a>备注  
@@ -80,7 +80,7 @@ AND CSRowGroups.index_id = NI.index_id
 ORDER BY object_name(i.object_id), i.name, IndexMap.physical_name, pdw_node_id;  
 ```  
 
-下面[!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]的示例对聚集列存储的每个分区的行以及打开、关闭或压缩的行组中的行数进行计数：  
+下面的 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 示例对聚集列存储的每个分区的行以及打开、关闭或压缩的行组中的行数进行计数：  
 
 ```
 SELECT

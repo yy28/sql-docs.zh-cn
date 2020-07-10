@@ -1,5 +1,5 @@
 ---
-title: sys. pdw_nodes_column_store_dictionaries （Transact-sql）
+title: 'sys. pdw_nodes_column_store_dictionaries (Transact-sql) '
 ms.date: 03/03/2017
 ms.prod: sql
 ms.technology: data-warehouse
@@ -12,22 +12,22 @@ ms.assetid: 7ae1c2e4-45c0-4880-a692-1f299fbcfd19
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4e4ecf91491a88e002c92a82d321e5712d48ef76
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bc82a44fcd536b53b2e49851806262a0bdd230ef
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74399823"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197172"
 ---
-# <a name="syspdw_nodes_column_store_dictionaries-transact-sql"></a>sys. pdw_nodes_column_store_dictionaries （Transact-sql）
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+# <a name="syspdw_nodes_column_store_dictionaries-transact-sql"></a>sys. pdw_nodes_column_store_dictionaries (Transact-sql) 
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   列存储索引中使用的每个字典都包含一行。 字典用于对某些而非全部数据类型进行编码，因此并非列存储索引中的所有列都有字典。 字典可以作为主字典存在（对于所有段），也可能作为用于部分列段的其他辅助字典存在。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**partition_id**|**bigint**|指示分区 ID。 在数据库中是唯一的。|  
-|**hobt_id**|**bigint**|具有此列存储索引的表的堆或B 树索引（HoBT）的 ID。|  
+|**hobt_id**|**bigint**|具有此列存储索引的表的堆或B 树索引 (HoBT) 的 ID。|  
 |**column_id**|**int**|列存储列的 ID。|  
 |**dictionary_id**|**int**|字典的 ID。|  
 |**version**|**int**|字典格式的版本。|  
@@ -35,7 +35,7 @@ ms.locfileid: "74399823"
 |**last_id**|**int**|字典中的最后一个数据 ID。|  
 |**entry_count**|**bigint**|字典中的条目数。|  
 |**on_disc_size**|**bigint**|字典大小（以字节为单位）。|  
-|**pdw_node_id**|**int**|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]节点的唯一标识符。|  
+|**pdw_node_id**|**int**|节点的唯一标识符 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。|  
   
 ## <a name="permissions"></a>权限  
  需要 `VIEW SERVER STATE` 权限。  
