@@ -1,5 +1,5 @@
 ---
-title: sys. dm_column_encryption_enclave （Transact-sql） |Microsoft Docs
+title: sys. dm_column_encryption_enclave (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/11/2019
 ms.prod: sql
@@ -9,19 +9,19 @@ ms.topic: language-reference
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: d10bef0df04501c177086b6c89b3f67dec3bab10
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f41a5f704a50924a882e220786ac8cafc090237a
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73599240"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279545"
 ---
 # <a name="sysdm_column_encryption_enclave-transact-sql"></a>sys.dm_column_encryption_enclave (Transact-SQL)
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 返回 Always Encrypted 安全 enclave 的性能计数器。 有关详细信息，请参阅[具有安全 enclave 的 Always Encrypted](../security/encryption/always-encrypted-enclaves.md)。
 
-如果已配置 enclave 并已在上一次重新启动后正确初始化[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，则该视图将只包含一行。 如果 enclave 未配置或未正确初始化，则视图不会返回任何行。 
+如果已配置 enclave 并已在上一次重新启动后正确初始化 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则该视图将只包含一行。 如果 enclave 未配置或未正确初始化，则视图不会返回任何行。 
 
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  

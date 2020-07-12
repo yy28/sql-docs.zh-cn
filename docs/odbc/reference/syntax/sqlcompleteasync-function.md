@@ -14,18 +14,16 @@ helpviewer_keywords:
 ms.assetid: 1b97c46a-d2e5-4540-8239-9d975e5321c6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4e09d61ef516e846798dd3af2d07dafa78af4605
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f56def542b71906d1e9432d724fdab8143ccb346
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299652"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279585"
 ---
 # <a name="sqlcompleteasync-function"></a>SQLCompleteAsync 函数
 **度**  
- 引入的版本： ODBC 3。8  
-  
- 标准符合性：无  
+ 引入的版本： ODBC 3.8 标准符合性：无  
   
  **摘要**  
  **SQLCompleteAsync**可用于通过基于通知或轮询的处理来确定异步函数的完成时间。 有关异步操作的详细信息，请参阅[异步执行](../../../odbc/reference/develop-app/asynchronous-execution.md)。  
@@ -50,7 +48,7 @@ SQLRETURN SQLCompleteAsync(
  *HandleType*  
  送要完成异步处理的句柄的类型。 有效值为 SQL_HANDLE_DBC 或 SQL_HANDLE_STMT。  
   
- *Handle*  
+ *柄*  
  送要完成异步处理的句柄。 如果*句柄*不是*HandleType*指定的类型的有效句柄，则**SQLCompleteAsync**将返回 SQL_INVALID_HANDLE。  
   
  如果*句柄*不是*HandleType*指定的类型的有效句柄，则**SQLCompleteAsync**将返回 SQL_INVALID_HANDLE。  
@@ -72,8 +70,8 @@ SQLRETURN SQLCompleteAsync(
   
 -   SQL_NO_DATA：在通知模式下，异步操作未进行或驱动程序管理器未向应用程序发出通知。 在轮询模式下，异步操作未进行。  
   
-## <a name="comments"></a>说明  
+## <a name="comments"></a>注释  
  在基于轮询的异步处理模式下，当**SQLCompleteAsync**返回 SQL_SUCCESS 时， *AsyncRetCodePtr*可能 SQL_STILL_EXECUTING。 应用程序应始终进行轮询，直到不 SQL_STILL_EXECUTING *AsyncRetCodePtr* 。 在基于通知的异步处理模式下， *AsyncRetCodePtr*将永远不会 SQL_STILL_EXECUTING。  
   
 ## <a name="see-also"></a>另请参阅  
- [异步执行（轮询方法）](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)
+ [异步执行 (轮询方法) ](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)

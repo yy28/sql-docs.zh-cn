@@ -1,5 +1,5 @@
 ---
-title: 连接到远程 Integration Services 服务器（SSIS 服务） |Microsoft Docs
+title: " (SSIS 服务连接到远程 Integration Services 服务器) |Microsoft Docs"
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9487aff1-44d8-42c1-8176-bb9891d4632d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 48369c2691386bc41675571c892302e3e4b7ece1
-ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
+ms.openlocfilehash: a106a07f985dcc8d263304f574a911b84222903c
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85434654"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279471"
 ---
 # <a name="connect-to-a-remote-integration-services-server-ssis-service"></a>连接到远程 Integration Services 服务器（SSIS 服务）
     
@@ -96,13 +96,6 @@ ms.locfileid: "85434654"
   
 ## <a name="connecting-by-using-a-local-account"></a>使用本地帐户连接  
  如果您是在客户端计算机上使用本地 Windows 帐户工作，则只有远程计算机上存在与客户端计算机上的本地帐户的帐户名和密码相同并且具有相应权限的本地帐户时，才可以连接到远程计算机上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务。  
-  
-## <a name="by-default-the-ssis-service-does-not-support-delegation"></a>默认情况下，SSIS 服务不支持委派  
-默认情况下，该 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务不支持委托凭据，或有时称为双跃点。 在此方案中，你在客户端计算机上工作， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务在第二台计算机上运行和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在第三台计算机上运行。 首先， [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 成功地将你的凭据从客户端计算机传递到第二台计算机上， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务正在这台计算机上运行。 但是， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务不能将你的凭据从第二台计算机委派到正在运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的第三台计算机上。
-
-可通过将“信任此用户对任何服务的委派(仅 Kerberos)”**** 的权限授予 SQL Server 服务帐户（它将 Integration Services 服务 (ISServerExec.exe) 作为子进程启动），从而启用凭据委派。 在授予此权限之前，请考虑它是否符合组织的安全要求。
-
-有关详细信息，请参阅 [Getting Cross Domain Kerberos and Delegation working with SSIS Package](https://blogs.msdn.microsoft.com/psssql/2014/06/26/getting-cross-domain-kerberos-and-delegation-working-with-ssis-package/)（获取跨域 Kerberos 和委派使用 SSIS 包）。
   
 ## <a name="see-also"></a>另请参阅  
  [为访问 SSIS 服务配置 Windows 防火墙](../../2014/integration-services/configure-a-windows-firewall-for-access-to-the-ssis-service.md)  
