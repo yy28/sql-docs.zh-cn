@@ -1,5 +1,6 @@
 ---
 title: 数据库引擎错事件和错误
+description: 请参阅此 MSSQL 错误代码列表，查找有关 SQL Server 数据库引擎事件的错误消息的说明。
 ms.custom: ''
 ms.date: 01/28/2020
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: reference
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2f8ad61d068689bb0bc5c47e4e0921eddd9aad7c
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: f87cf70ebcb3a491d31fc7523ac6a4c0a7889a2f
+ms.sourcegitcommit: 49dab56fc71dc394f4dde9962ec44d99cc15027c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728260"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84158616"
 ---
 # <a name="database-engine-errors"></a>数据库引擎错误
 
@@ -605,9 +606,9 @@ ORDER BY message_id
 |991 |  16  |    否  | 当一个或多个主机数据库 '%.*ls' 的分区数据库被标记为可疑时，无法使该主机数据库脱机。|
 |992 |  16  |    否  | 无法获取数据库 '%.*ls' 上的共享锁。|
 |993 |  10  |    否  | 重做数据库 '%.*ls' 适用的从 %d 到 %d 的版本升级步骤。|
-|994 |  10  |    否  | 警告："%.ls"."%.*ls" 上的索引 "%.ls" 已禁用，因为它包含计算列  。|
-|995 |  10  |    否  | 警告："%.ls"."%.*ls" 上的索引 "%.ls" 已禁用  。 它位于只读文件组中，因此无法升级。|
-|996 |  10  |    否  | 警告："%.ls"."%.*ls" 上的索引 "%.ls" 已禁用  。 无法升级此列存储索引，可能是因为它超出了 '%d' 字节的行大小限制。|
+|994 |  10  |    否  | 警告："%.ls"."%.*ls" 上的索引 "%.ls" 已禁用，因为它包含计算列。|
+|995 |  10  |    否  | 警告："%.ls"."%.*ls" 上的索引 "%.ls" 已禁用。 它位于只读文件组中，因此无法升级。|
+|996 |  10  |    否  | 警告："%.ls"."%.*ls" 上的索引 "%.ls" 已禁用。 无法升级此列存储索引，可能是因为它超出了 '%d' 字节的行大小限制。|
 |    &nbsp;    |    &nbsp;    |&nbsp;        |    &nbsp;    |
 
 
@@ -4212,7 +4213,7 @@ ORDER BY message_id
 |    9243    |    10    |    否    |    查询通知传递无法在对话 '%.*ls' 上发送消息。由于在 Service Broker 中出现以下错误，查询通知传递失败: '%.* ls'。 有关其他信息，请参阅错误日志。    |
 |    9244    |    16    |    否    |    查询通知清除无法访问数据库 "%d" 的元数据。 请检查数据库是否已成功还原并处于联机状态。    |
 |    9300    |    16    |    否    |    %s在此版本的服务器中，'fn:id()' 函数仅接受类型为 'IDREF *' 的参数。    |
-|    9301    |    16    |    否    |    %s在此版本的服务器中，'cast as <type>%s' 不可用。 请使用 'cast as <type> ?'  语法重写语句。    |
+|    9301    |    16    |    否    |    %s在此版本的服务器中，'cast as <type>%s' 不可用。 请使用 'cast as <type> ?' 语法重写语句。    |
 |    9302    |    16    |    否    |    %s使用 'fn:id()' 函数时所在的上下文项必须是节点。    |
 |    9303    |    16    |    否    |    %s '%ls' 附近存在语法错误，应为 '%ls'。    |
 |    9304    |    16    |    否    |    %s此版本的服务器仅支持 XQuery 版本 '1.0'。    |
@@ -4391,7 +4392,7 @@ ORDER BY message_id
 |    9643    |    16    |    否    |    Service Broker/数据库镜像传输管理器出错:错误: %i。状态: %i。    |
 |    9644    |    16    |    否    |    Service Broker 消息调度程序出错。 错误: %i。状态: %i。    |
 |    9645    |    16    |    否    |    Service Broker 管理器出错，错误: %i，状态: %i。    |
-|    9646    |    16    |    否    |    计时器事件缓存出错:  错误 %i，状态 %i。    |
+|    9646    |    16    |    否    |    计时器事件缓存出错: 错误 %i，状态 %i。    |
 |    9647    |    16    |    是    |    从网络接收到的消息格式不正确。 无法从发往 ID 为 %d 的数据库的消息中检索 Broker 消息属性。 这表示可能存在网络问题或其他应用程序可能已连接到 Service Broker 端点上。    |
 |    9648    |    20    |    否    |    已为队列 '%.*ls' 启用激活，但 MAX_QUEUE_READERS 为零， 所以不会激活任何过程。 请考虑增加 MAX_QUEUE_READERS 的数目。    |
 |    9649    |    16    |    是    |    连接到其他 Service Broker 时出现安全(SSPI)错误: '%.*ls'。 有关详细信息，请查看 Windows 事件日志。    |
@@ -8104,9 +8105,9 @@ ORDER BY message_id
 |    21869    |    16    |    否    |    无法在推荐的父项目 '%s' 和推荐的子项目 '%s' 之间添加筛选器，因为该操作可导致在筛选器关系中引入循环。 该子项目已对推荐的父项目进行筛选。    |
 |    [21871](mssqlserver-21871-database-engine-error.md)    |        |        |    发布服务器“%s”（属于数据库“%s”）尚未重定向。    |
 |    21879    |    16    |    否    |    无法查询重定向服务器“%s”以找到原始发布服务器“%s”和发布服务器数据库“%s”来确定远程服务器的名称；错误 %d，错误消息“%s”。    |
-|    [21889](mssqlserver-21889-database-engine-error.md)    |        |        |    SQL Server 实例“%s”不是复制发布服务器。 在 SQL Server 实例“%s”(具有分发服务器“%s”)上运行 sp_adddistributor  ，以便使该实例承载发布数据库“%s”。 确保指定的登录名和密码与用于原始发布服务器的登录名和密码相同。    |
+|    [21889](mssqlserver-21889-database-engine-error.md)    |        |        |    SQL Server 实例“%s”不是复制发布服务器。 在 SQL Server 实例“%s”(具有分发服务器“%s”)上运行 sp_adddistributor，以便使该实例承载发布数据库“%s”。 确保指定的登录名和密码与用于原始发布服务器的登录名和密码相同。    |
 |    [21892](mssqlserver-21892-database-engine-error.md)    |        |        |    无法在与虚拟网络名称“%s”相关联的可用性组主副本上查询 sys.availability_replicas 以获取成员副本的服务器名称：错误 = %d，错误消息 = %s。    |
-|    [21893](mssqlserver-21893-database-engine-error.md)    |        |        |    订阅服务器 (%s)（属于原始发布服务器“%s”）在重定向的发布服务器“%s”中不显示为远程服务器。 在重定向的发布服务器上运行 sp_addlinkedserver  ，以将这些订阅服务器添加为远程服务器。    |
+|    [21893](mssqlserver-21893-database-engine-error.md)    |        |        |    订阅服务器 (%s)（属于原始发布服务器“%s”）在重定向的发布服务器“%s”中不显示为远程服务器。 在重定向的发布服务器上运行 sp_addlinkedserver，以将这些订阅服务器添加为远程服务器。    |
 |    [21898](mssqlserver-21898-database-engine-error.md)    |        |        |    发布服务器“%s”使用的是分发数据库“%s”，而不是“%s”（后者是承载发布数据库“%s”所需的）。 请在分发服务器“%s”上运行 **sp_changedistpublisher**，以将发布服务器使用的分发数据库更改为“%s”。    |
 |    [21899](mssqlserver-21899-database-engine-error.md)    |        |        |    重定向发布服务器“%s”中的查询失败，该查询用于确定原始发布服务器“%s”的订阅服务器是否存在 sysserver 条目，失败时错误为“%d”，错误消息为“%s”。    |
 |    &nbsp;    |    &nbsp;    |&nbsp;        |    &nbsp;    |
@@ -8125,7 +8126,7 @@ ORDER BY message_id
 |    22108    |    16    |    否    |    CHANGE_TRACKING_CONTEXT WITH 子句不能用于 SELECT 语句。    |
 |    22109    |    16    |    否    |    CHANGE_TRACKING_CONTEXT WITH 子句的 "context" 参数的数据类型必须是 varbinary，最大长度为 128。    |
 |    22110    |    16    |    否    |    CHANGETABLE(VERSION ...) 函数中指定的列数与表 '%.*ls' 的主键列数目不匹配。    |
-|    22111    |    16    |    否    |    CHANGETABLE(VERSION ...) 函数中指定的列 '%.*ls' 不是表 '%.* ls' 的主键的一部分。     |
+|    22111    |    16    |    否    |    CHANGETABLE(VERSION ...) 函数中指定的列 '%.*ls' 不是表 '%.* ls' 的主键的一部分。    |
 |    22112    |    16    |    否    |    各主键列在 CHANGETABLE(VERSION ...) 函数中只能指定一次。 列 '%.*ls' 指定了多次。    |
 |    22113    |    16    |    否    |    因为正在对该表进行更改跟踪，所以不允许 %S_MSG。    |
 |    22114    |    16    |    否    |    不能将 ALTER DATABASE 的更改跟踪选项与其他 ALTER DATABASE 选项组合使用。    |
