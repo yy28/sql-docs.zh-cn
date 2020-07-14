@@ -21,15 +21,15 @@ ms.assetid: 1c364511-d72a-4789-8efa-3cf2a1f6b791
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 02da90c14c34dccbc3a195e206d13ba0a371188d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 66841ba6ac7e278cc2353a126675cbb2cc57c48f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82822378"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010852"
 ---
 # <a name="ntile-transact-sql"></a>NTILE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   将有序分区中的行分发到指定数目的组中。 各个组有编号，编号从一开始。 对于每一个行，NTILE 将返回此行所属的组的编号。  
   
@@ -43,19 +43,19 @@ NTILE (integer_expression) OVER ( [ <partition_by_clause> ] < order_by_clause > 
   
 ## <a name="arguments"></a>参数  
  *integer_expression*  
- 一个正整数表达式，用于指定每个分区必须被划分成的组数。 integer_expression 可以是 int 或 bigint 类型    。  
+ 一个正整数表达式，用于指定每个分区必须被划分成的组数。 integer_expression 可以是 int 或 bigint 类型 。  
   
  \<partition_by_clause>  
  将由 [FROM](../../t-sql/queries/from-transact-sql.md) 子句生成的结果集划分为要应用函数的分区。 有关 PARTITION BY 语法的信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
  \<order_by_clause>  
- 确定 NTILE 值分配到分区中各行的顺序。 当在排名函数中使用 \<order_by_clause> 时，不能用整数表示列。  
+ 确定 NTILE 值分配到分区中各行的顺序。 在排名函数中使用 \<order_by_clause> 时，不能用整数表示列。  
   
 ## <a name="return-types"></a>返回类型  
  **bigint**  
   
 ## <a name="remarks"></a>备注  
- 如果分区的行数不能被 integer_expression 整除，则将导致一个成员有两种大小不同的组  。 按照 OVER 子句指定的顺序，较大的组排在较小的组前面。 例如，如果总行数是 53，组数是 5，则前三个组每组包含 11 行，其余两个组每组包含 10 行。 另一方面，如果总行数可被组数整除，则行数将在组之间平均分布。 例如，如果总行数为 50，有五个组，则每组将包含 10 行。  
+ 如果分区的行数不能被 integer_expression 整除，则将导致一个成员有两种大小不同的组。 按照 OVER 子句指定的顺序，较大的组排在较小的组前面。 例如，如果总行数是 53，组数是 5，则前三个组每组包含 11 行，其余两个组每组包含 10 行。 另一方面，如果总行数可被组数整除，则行数将在组之间平均分布。 例如，如果总行数为 50，有五个组，则每组将包含 10 行。  
   
  NTILE 具有不确定性。 有关详细信息，请参阅 [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。  
   
@@ -69,7 +69,7 @@ USE AdventureWorks2012;
 GO  
 SELECT p.FirstName, p.LastName  
     ,NTILE(4) OVER(ORDER BY SalesYTD DESC) AS Quartile  
-    ,CONVERT(nvarchar(20),s.SalesYTD,1) AS SalesYTD  
+    ,CONVERT(NVARCHAR(20),s.SalesYTD,1) AS SalesYTD  
     , a.PostalCode  
 FROM Sales.SalesPerson AS s   
 INNER JOIN Person.Person AS p   
@@ -106,7 +106,7 @@ Pamela         Ansman-Wolfe          4         1,352,577.13   98027
 ```  
   
 ### <a name="b-dividing-the-result-set-by-using-partition-by"></a>B. 使用 PARTITION BY 划分结果集  
- 以下示例将 `PARTITION BY` 参数添加到示例 A 中的代码。首先按 `PostalCode` 将行分区，然后在每个 `PostalCode` 内将行分成四个组。 该示例还声明一个变量 `@NTILE_Var` 并使用该变量指定 integer_expression 参数的值  。  
+ 以下示例将 `PARTITION BY` 参数添加到示例 A 中的代码。首先按 `PostalCode` 将行分区，然后在每个 `PostalCode` 内将行分成四个组。 该示例还声明一个变量 `@NTILE_Var` 并使用该变量指定 integer_expression 参数的值。  
   
 ```  
 USE AdventureWorks2012;  
@@ -115,7 +115,7 @@ DECLARE @NTILE_Var int = 4;
   
 SELECT p.FirstName, p.LastName  
     ,NTILE(@NTILE_Var) OVER(PARTITION BY PostalCode ORDER BY SalesYTD DESC) AS Quartile  
-    ,CONVERT(nvarchar(20),s.SalesYTD,1) AS SalesYTD  
+    ,CONVERT(NVARCHAR(20),s.SalesYTD,1) AS SalesYTD  
     ,a.PostalCode  
 FROM Sales.SalesPerson AS s   
 INNER JOIN Person.Person AS p   
@@ -159,7 +159,7 @@ Lynn         Tsoflias             4        1,421,810.92  98055
 -- Uses AdventureWorks  
   
 SELECT e.LastName, NTILE(4) OVER(ORDER BY SUM(SalesAmountQuota) DESC) AS Quartile,  
-       CONVERT (varchar(13), SUM(SalesAmountQuota), 1) AS SalesQuota  
+       CONVERT (VARCHAR(13), SUM(SalesAmountQuota), 1) AS SalesQuota  
 FROM dbo.DimEmployee AS e   
 INNER JOIN dbo.FactSalesQuota AS sq   
     ON e.EmployeeKey = sq.EmployeeKey  
@@ -199,7 +199,7 @@ Tsoflias          4          867,000.00
 -- Uses AdventureWorks  
   
 SELECT e.LastName, NTILE(2) OVER(PARTITION BY e.SalesTerritoryKey ORDER BY SUM(SalesAmountQuota) DESC) AS Quartile,  
-       CONVERT (varchar(13), SUM(SalesAmountQuota), 1) AS SalesQuota  
+       CONVERT (VARCHAR(13), SUM(SalesAmountQuota), 1) AS SalesQuota  
    ,st.SalesTerritoryCountry  
 FROM dbo.DimEmployee AS e   
 INNER JOIN dbo.FactSalesQuota AS sq   

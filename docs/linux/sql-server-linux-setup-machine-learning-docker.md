@@ -9,18 +9,18 @@ manager: cgronlun
 ms.date: 05/11/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c5bb573a3d8d5e93b51bb0536b5fc2171987a0ee
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: c07c92b65fe8ebed54ac75f3b9180bbd39534109
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83269416"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882510"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-docker"></a>在 Docker 上安装 SQL Server 机器学习服务（Python 和 R）
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 本文介绍如何在 Docker 上安装 SQL Server 机器学习服务。 可使用机器学习服务在数据库中执行 Python 和 R 脚本。 我们不为预建容器提供机器学习服务。 你可以使用 [GitHub 上的可用示例模板](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices)在 SQL Server 容器中创建一个。
 
@@ -36,7 +36,7 @@ ms.locfileid: "83269416"
 
 以下命令将 `mssql-docker` git 存储库克隆到本地目录。
 
-1. 在 Linux 或 Mac 上打开 Bash 终端，或在 Windows 上打开适用于 Linux 的 Windows 子系统终端。
+1. 打开 Linux 或 Mac 上的 Bash 终端。
 
 2. 创建一个目录来保存 mssql-docker 存储库的本地副本。
 
@@ -65,10 +65,12 @@ ms.locfileid: "83269416"
 3. 运行以下命令：
 
     ```bash
-    docker runs -d -e MSSQL_PID=Developer -e ACCEPT_EULA=Y -e ACCEPT_EULA_ML=Y -e SA_PASSWORD=<your_sa_password> -v OS>:/var/opt/mssql -p 1433:1433 mssql-server-mlservices
+    docker run -d -e MSSQL_PID=Developer -e ACCEPT_EULA=Y -e ACCEPT_EULA_ML=Y -e MSSQL_SA_PASSWORD=<password> -v <directory on the host OS>:/var/opt/mssql -p 1433:1433 mssql-server-mlservices
     ```
-
-    更改 `SA_PASSWORD=<your_sa_password>` 中的 `<your_sa_password>` 并更改 `-v` 路径。 
+  
+    > [!NOTE]
+    > 可以为 MSSQL_PID 使用以下任一值：Developer（免费）、Express（免费）、Enteprise（付费）、Standard（付费）。 如果使用付费版，请确保已购买许可证。 将（密码）替换为实际密码。 使用 -v 的卷装载是可选的。 将（主机操作系统上的目录）替换为要在其中装载数据库数据和日志文件的实际目录。
+    
 
 4. 通过运行以下命令进行确认：
 
@@ -89,30 +91,19 @@ ms.locfileid: "83269416"
    export ACCEPT_EULA_ML='Y'
    export PATH_TO_MSSQL='/home/mssql/'
    ```
-
-2. 运行 run.sh 脚本：
-
-   ```bash
-   ./run.sh
-   ```
-
-   此命令使用开发人员版（默认）机器学习服务创建 SQL Server 容器。 SQL Server 端口 1433 在主机上公开为端口 1401   。
-
+  
    > [!NOTE]
    > 在容器中运行 SQL Server 生产版本的过程略有不同。 有关详细信息，请参阅 [在 Docker 上配置 SQL Server 容器映像](sql-server-linux-configure-docker.md)。 如果使用相同的容器名称和端口，本教程的其余部分仍适用于生产容器。
 
-3. 若要查看 Docker 容器，请运行 `docker ps` 命令：
+2. 若要查看 Docker 容器，请运行 `docker ps` 命令：
 
    ```bash
    sudo docker ps -a
    ```
 
-4. 如果“状态”  列显示“正常运行”  状态，表明 SQL Server 正在容器中运行，且正在侦听“端口”  列中指定的端口。 如果 SQL Server 容器的“状态”列显示“已退出”，则参阅[配置指南的疑难解答部分](sql-server-linux-configure-docker.md#troubleshooting)   。
+3. 如果“状态”列显示“正常运行”状态，表明 SQL Server 正在容器中运行，且正在侦听“端口”列中指定的端口。 如果 SQL Server 容器的“状态”列显示“已退出”，则参阅[配置指南的疑难解答部分](sql-server-linux-configure-docker.md#troubleshooting) 。
 
-   ```bash
-   $ sudo docker ps -a
-   ```
-
+ 
     输出：
 
     ```

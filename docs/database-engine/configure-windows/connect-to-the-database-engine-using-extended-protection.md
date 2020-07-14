@@ -1,5 +1,6 @@
 ---
 title: 使用扩展保护连接到数据库引擎 | Microsoft Docs
+description: 了解扩展保护如何使用服务绑定和渠道绑定来帮助防止身份验证中继攻击。 了解如何启用此功能。
 ms.custom: ''
 ms.date: 05/21/2019
 ms.prod: sql
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5216b324477f1af7fb727af3462ccce8d64e6a64
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9f54a62d7110f86087f796b6dc1f9a6c688d89d6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012097"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772633"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>使用扩展保护连接到数据库引擎
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自  始支持扩展保护 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]。 **针对验证的扩展保护** 是操作系统实现的一项网络组件功能。 Windows 7 和 Windows Server 2008 R2 支持**扩展保护** 。 旧**操作系统的 Service Pack 中包括** 扩展保护 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 功能。 使用**扩展保护**进行连接时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会更安全。  
   
 > [!IMPORTANT]  
@@ -63,7 +64,7 @@ ms.locfileid: "68012097"
   
 -   **强行加密**  
   
-     可能的值为 **“打开”** 和 **“关闭”** 。 若要使用渠道绑定，“强行加密”  必须设置为“打开”  ，所有客户端都将强制进行加密。 如果为 **“关闭”** ，则只确保服务绑定。 **“强行加密”** 位于 **配置管理器中的“MSSQLSERVER 的协议属性”（“标志”选项卡）** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上。  
+     可能的值为 **“打开”** 和 **“关闭”** 。 若要使用渠道绑定，“强行加密”  必须设置为“打开” ，所有客户端都将强制进行加密。 如果为 **“关闭”** ，则只确保服务绑定。 **“强行加密”** 位于 **配置管理器中的“MSSQLSERVER 的协议属性”（“标志”选项卡）** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上。  
   
 -   **扩展保护**  
   
@@ -86,7 +87,7 @@ ms.locfileid: "68012097"
   
 1.  在 **“开始”** 菜单上，选择 **“所有程序”** ，指向 **Microsoft SQL Server** ，再单击 **“SQL Server 配置管理器”** 。  
   
-2.  展开“SQL Server 网络配置”、右键单击“协议”选择“\<_InstanceName>”，然后单击“属性” 。  
+2.  展开“SQL Server 网络配置”，右键单击“协议”选择“_\<_InstanceName*>*”，然后单击“属性”  。  
   
 3.  对于渠道绑定和服务绑定，同时在 **“高级”** 选项卡上将 **“扩展保护”** 设置为适当的设置。  
   

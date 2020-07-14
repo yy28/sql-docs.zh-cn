@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 4cbed281-5e1e-4d8b-b410-4c18a6cd0205
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0433232412135256e98e6f3292fd88fa58bef62d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 91df6d2f20f7ba5a18a5dbdff30712d17b8c0e24
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633688"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880364"
 ---
 # <a name="grant-server-principal-permissions-transact-sql"></a>通过 GRANT 语句授予服务器主体权限 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   授予对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的权限。  
   
@@ -56,36 +56,36 @@ GRANT permission [ ,...n ] }
 ```  
   
 ## <a name="arguments"></a>参数  
- permission   
+ permission  
  指定可对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名授予的权限。 有关权限的列表，请参阅本主题后面的“备注”部分。  
   
- LOGIN ::  SQL_Server_login   
- 指定要对其授予权限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 需要使用作用域限定符 (::)  。  
+ LOGIN ::SQL_Server_login  
+ 指定要对其授予权限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 需要使用作用域限定符 (::)。  
   
  SERVER ROLE **::** *server_role*  
- 指定要授予权限的用户定义服务器角色。 需要使用作用域限定符 (::)  。  
+ 指定要授予权限的用户定义服务器角色。 需要使用作用域限定符 (::)。  
   
- TO \<server_principal> 指定要向其授予权限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名或服务器角色。  
+ TO \<server_principal>：指定要向其授予权限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名或服务器角色。  
   
- SQL_Server_login   
+ SQL_Server_login  
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户的名称。  
   
- SQL_Server_login_from_Windows_login   
+ SQL_Server_login_from_Windows_login  
  指定通过 Windows 登录帐户创建的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户的名称。  
   
- SQL_Server_login_from_certificate   
+ SQL_Server_login_from_certificate  
  指定映射到证书的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户的名称。  
   
- SQL_Server_login_from_AsymKey   
+ SQL_Server_login_from_AsymKey  
  指定映射到非对称密钥的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户的名称。  
   
- server_role   
+ server_role  
  指定用户定义的服务器角色的名称。  
   
  WITH GRANT OPTION  
  指示该主体还可以向其他主体授予所指定的权限。  
   
- AS SQL_Server_login   
+ AS SQL_Server_login  
  指定执行此查询的主体要从哪个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名派生其授予该权限的权限。  
   
 ## <a name="remarks"></a>备注  

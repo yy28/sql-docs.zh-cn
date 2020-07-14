@@ -11,16 +11,16 @@ ms.assetid: 5f398470-c531-47b5-84d5-7c67c27df6e5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7cd858693ed429fd7b776a20f9300657337fa0f8
-ms.sourcegitcommit: 1f9fc7402b00b9f35e02d5f1e67cad2f5e66e73a
+ms.openlocfilehash: 9eec9c506d6026bef09a3cd6415a786a8a4f01af
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82107968"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002487"
 ---
 # <a name="modifying-data-in-a-system-versioned-temporal-table"></a>修改由系统控制版本的时态表中的数据
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 系统版本控制的临时表中的数据使用常规的 DML 语句进行修改，但有一个重要的区别：无法直接修改时间段列数据。 当数据更新时，它就是版本控制的，每个已更新行的以前版本都将插入到历史记录表中。 当删除数据时，删除是逻辑的，行将从当前表格移动到历史记录表中 - 不会被永久删除。
 
@@ -50,7 +50,7 @@ ms.locfileid: "82107968"
          ) ;
    ```
 
-- 如果你确实在 INSERT  语句中的列列表中指定了 PERIOD  列，则需要指定 DEFAULT  作为它们的值。
+- 如果你确实在 INSERT 语句中的列列表中指定了 PERIOD 列，则需要指定 DEFAULT 作为它们的值。
 
   ```sql
   INSERT INTO [dbo].[Department]
@@ -150,7 +150,7 @@ SWITCH TO [dbo].[Department] PARTITION 2;
 
 ## <a name="updating-data"></a>更新数据
 
-用常规的 **UPDATE** 语句在当前表中更新数据。 你可以将当前表中的数据从历史记录表更新到“哎呀”方案。 但是，无法更新 **PERIOD** 列且当 **SYSTEM_VERSIONING = ON**时不能直接在历史记录表中更新数据。
+用常规的 **UPDATE** 语句在当前表中更新数据。 可以针对小的意外根据历史记录表来更新当前表中的数据。  但是，无法更新 PERIOD 列且当 SYSTEM_VERSIONING = ON 时不能直接在历史记录表中更新数据。
 
 设置 **SYSTEM_VERSIONING = OFF** 并从当前和历史记录表中更新行，但请记住，这样的话系统将不会保留更改的历史记录。
 
@@ -175,7 +175,7 @@ Cannot update GENERATED ALWAYS columns in table 'TmpDev.dbo.Department'.
 
 ### <a name="updating-the-current-table-from-the-history-table"></a>从历史记录表更新当前表
 
-可以对当前表使用 UPDATE 以便在过去的特定时间点将实际行状态恢复为有效状态（恢复为“上次已知完好的行版本”）  。 下面的示例显示了恢复为截至 2015-04-25 的历史记录表中的值，其中的 DeptID = 10。
+可以对当前表使用 UPDATE 以便在过去的特定时间点将实际行状态恢复为有效状态（恢复为“上次已知完好的行版本”）。 下面的示例显示了恢复为截至 2015-04-25 的历史记录表中的值，其中的 DeptID = 10。
 
 ```sql
 UPDATE Department

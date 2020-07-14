@@ -1,8 +1,9 @@
 ---
-title: 启用了外部脚本的服务器配置选项 | Microsoft Docs
-ms.date: 11/13/2017
+title: 启用了外部脚本的服务器配置选项
+description: 了解 SQL Server 中的“已启用外部脚本”选项。 启用后，可以执行用支持的语言（如 R 或 Python）编写的外部脚本。
+ms.date: 06/30/2020
 ms.prod: sql
-ms.technology: configuration
+ms.technology: machine-learning-services
 ms.reviewer: ''
 ms.topic: language-reference
 f1_keywords:
@@ -11,36 +12,36 @@ f1_keywords:
 helpviewer_keywords:
 - external scripts enabled option
 ms.assetid: 9d0ce165-8719-4007-9ae8-00f85cab3a0d
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 3f47352cc82ac831ebcd64548baa24423490094f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: dphansen
+ms.author: davidph
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 3915ca28aa6512c52e2cb465528bb4c04ea8dd21
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72006045"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772485"
 ---
 # <a name="external-scripts-enabled-server-configuration-option"></a>启用了外部脚本的服务器配置选项
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-适用于：   和 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)][!INCLUDE[sssql17-md](../../includes/sssql17-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-使用 **external scripts enabled** 选项启用包含某些远程语言扩展的脚本执行。 此属性默认处于禁用状态。 安装“高级分析服务”  后，安装程序可以根据需要将此属性设置为 true。
+使用 **external scripts enabled** 选项启用包含某些远程语言扩展的脚本执行。 此属性默认处于禁用状态。 安装“机器学习服务”后，安装程序可以根据需要将此属性设置为 true。
 
 ## <a name="remarks"></a>备注
 
-在使用 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 过程执行外部脚本之前，必须启用“已启用外部脚本”选项。 使用 sp_execute_external_script 执行以受支持的语言（如 R 或 Python）编写的脚本  。 
+在使用 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 过程执行外部脚本之前，必须启用“已启用外部脚本”选项。 使用 sp_execute_external_script 执行以受支持的语言（如 R 或 Python）编写的脚本。 
 
 + 对于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]
 
     [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 支持 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中的 R 语言，以及一组 R 工作站工具和连接库。
 
-    在 **安装程序安装期间安装** 高级分析扩展 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能，以启用 R 脚本的执行。 默认安装 R 语言。
+    在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程中安装“R 服务”功能，以允许执行 R 脚本。
 
-+ 对于 [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]
++ 适用于 [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] 和更高版本
 
-    [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] 使用与 SQL Server 2016 相同的体系结构，但支持 Python 语言。
+    [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] 支持 R 和 Python 语言。
 
-    在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程中安装“高级分析扩展”功能，以启用外部脚本的执行。 确保在初始安装过程中至少选择一种语言：R 和/或 Python。 
+    在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程中安装“机器学习服务”功能，以允许执行外部脚本。 确保在初始安装过程中至少选择一种语言：R 和/或 Python。
 
 ## <a name="additional-requirements"></a>其他需求
 
@@ -51,16 +52,11 @@ sp_configure 'external scripts enabled', 1;
 RECONFIGURE WITH OVERRIDE;  
 ```
 
-你必须重启 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以使此更改生效。
-
-有关详细信息，请参阅[安装 SQL Server 机器学习](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)。
+有关详细信息，请参阅[在 Windows 上](../../machine-learning/install/sql-machine-learning-services-windows-install.md)或[在 Linux 上安装 SQL Server 机器学习服务（Python 和 R）](../../linux/sql-server-linux-setup-machine-learning-docker.md?toc=/sql/machine-learning/toc.json)。
 
 ## <a name="see-also"></a>另请参阅
 
-[sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
-
-[RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)
-
-[sp_execute_external_script (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
-
-[SQL Server 机器学习服务](../../advanced-analytics/r/sql-server-r-services.md)
++ [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
++ [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)
++ [sp_execute_external_script (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
++ [SQL 机器学习文档](../../machine-learning/index.yml)

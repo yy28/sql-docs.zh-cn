@@ -1,5 +1,6 @@
 ---
 title: 示例：指定 ELEMENT 指令 | Microsoft Docs
+description: 查看有关如何在 SQL 查询中指定 ELEMENT 指令以生成以元素为中心的 XML 的示例。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 80dd5d1f-fa90-4f97-a186-8fa3f460a7f3
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5e0760c0d1ee59725e074f55d3730f574a5fac3a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d6e8f74e0d5d8d90afa09c733e5b46b47b533995
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006724"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632620"
 ---
 # <a name="example-specifying-the-element-directive"></a>示例：指定 ELEMENT 指令
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   此示例检索雇员信息并生成以元素为中心的 XML，如下所示：  
   
 ```  

@@ -1,5 +1,6 @@
 ---
 title: 创建数据库 | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL 在 SQL Server 2019 中创建数据库。 查看有关该过程的建议。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4c4beea2-6cbc-4352-9db6-49ea8130bb64
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 4233a277fa20a4bd951b717bfad0039612b5e77e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 463f442c15fdd6bfa29e97c650d5b7d8ee95fe91
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68037612"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85631029"
 ---
 # <a name="create-a-database"></a>创建数据库
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建数据库。  
 
 > [!NOTE]
@@ -75,16 +76,16 @@ ms.locfileid: "68037612"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的实例，然后展开该实例。  
   
-2.  右键单击“数据库”  ，然后单击“新建数据库”  。  
+2.  右键单击“数据库”，然后单击“新建数据库”。  
   
 3.  在 **“新建数据库”** 中，输入数据库名称。  
   
 4.  若要通过接受所有默认值创建数据库，请单击 **“确定”** ；否则，请继续后面的可选步骤。  
   
-5.  若要更改所有者名称，请单击 (…) 选择其他所有者  。  
+5.  若要更改所有者名称，请单击 (…) 选择其他所有者。  
   
     > [!NOTE]  
-    >  “使用全文检索”  选项始终处于选中和灰显状态，这是因为从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 开始，所有用户数据库都启用了全文检索。  
+    >  “使用全文检索”选项始终处于选中和灰显状态，这是因为从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 开始，所有用户数据库都启用了全文检索。  
   
 6.  若要更改主数据文件和事务日志文件的默认值，请在 **“数据库文件”** 网格中单击相应的单元并输入新值。 有关详细信息，请参阅 [向数据库中添加数据文件或日志文件](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)。  
   
@@ -112,7 +113,7 @@ ms.locfileid: "68037612"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例将创建数据库 `Sales`。 由于未使用关键字 PRIMARY，因此第一个文件 (`Sales_dat`) 将成为主文件。 因为在 `Sales_dat` 文件的 SIZE 参数中没有指定 MB 或 KB，将使用 MB 并按 MB 分配。 `Sales_log` 文件以 MB 为单位进行分配，因为 `SIZE` 参数中显式声明了 `MB` 后缀。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例将创建数据库 `Sales`。 由于未使用关键字 PRIMARY，因此第一个文件 (`Sales_dat`) 将成为主文件。 因为在 `Sales_dat` 文件的 SIZE 参数中没有指定 MB 或 KB，将使用 MB 并按 MB 分配。 `Sales_log` 文件以 MB 为单位进行分配，因为 `SIZE` 参数中显式声明了 `MB` 后缀。  
   
 ```sql  
 USE master ;  

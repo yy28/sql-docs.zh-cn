@@ -1,7 +1,8 @@
 ---
 title: 本机编译 T-SQL 模块的功能
+description: 了解 Transact-SQL 外围应用以及本机编译 T-SQL 模块主体支持的功能，如存储过程和标量用户定义函数。
 ms.custom: seo-dt-2019
-ms.date: 10/23/2017
+ms.date: 07/01/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,36 +12,20 @@ ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 472a654a0bee8b386c6573c8ab1ed8fdb0b4cf8d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 172e3a271086564c0ae4da7fd01a3084d65a85e5
+ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79286661"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85834718"
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>本机编译的 T-SQL 模块支持的功能
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 
   本主题列出了 T-SQL 的外围应用以及本机编译 T-SQL 模块主体支持的功能，如存储过程 ([CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md))、标量用户定义函数、内联表值函数和触发器。  
 
  有关本机模块定义的支持功能，请参阅 [对于本机编译的 T-SQL 模块支持的 DDL](../../relational-databases/in-memory-oltp/supported-ddl-for-natively-compiled-t-sql-modules.md)。  
-
--   [本机模块中的查询外围应用](#qsancsp)  
-
--   [数据修改](#dml)  
-
--   [控制流语言](#cof)  
-
--   [支持的运算符](#so)  
-
--   [本机编译模块中的内置函数](#bfncsp)  
-
--   [审核](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md#auditing)  
-
--   [表提示和查询提示](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md#tqh)  
-
--   [排序限制](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md#los)  
 
  如需了解不支持构造的完整信息以及如何解决本机编译模块中不支持某些功能的问题，请参阅 [Migration Issues for Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)。 有关不支持的功能的详细信息，请参阅 [内存中 OLTP 不支持的 Transact-SQL 构造](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)。  
 
@@ -49,7 +34,7 @@ ms.locfileid: "79286661"
 支持以下查询构造：  
 
 CASE 表达式：CASE 可用于允许使用有效表达式的任意语句或子句。
-   - 适用对象：[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]  。  
+   - 适用对象：[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]。  
     从 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 开始，本机编译 T-SQL 模块已支持 CASE 语句。
 
 SELECT 子句：  
@@ -57,35 +42,35 @@ SELECT 子句：
 -   列名和别名（使用 AS 或 = 语法）。  
 
 -   标量子查询
-    - 适用对象：[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]  。
+    - 适用对象：[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
       从 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 开始，本机编译模块已支持标量子查询。
 
 -   TOP*  
 
 -   SELECT DISTINCT  
-    - 适用对象：[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]  。
+    - 适用对象：[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
       从 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 开始，本机编译模块已支持 DISTINCT 运算符。
 
-              DISTINCT aggregates are not supported.  
+        - 不支持 DISTINCT 聚合。  
 
 -   UNION 和 UNION ALL
-    - 适用对象：[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]  。
+    - 适用对象：[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
       从 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 开始，本机编译模块已支持 UNION 和 UNION ALL 运算符。
 
 -   表分配  
 
 FROM 子句：  
 
--   FROM \<内存优化表或表变量>  
+-   FROM \<memory optimized table or table variable>  
 
--   FROM \<本机编译的内联 TVF>  
+-   FROM \<natively compiled inline TVF>  
 
 -   LEFT OUTER JOIN、RIGHT OUTER JOIN、CROSS JOIN 和 INNER JOIN。
-    - 适用对象：[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]  。
+    - 适用对象：[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
       从 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 开始，本机编译模块已支持 JOINS。
 
 -   子查询 `[AS] table_alias`。 有关详细信息，请参阅 [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)。 
-    - 适用对象：[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]  。
+    - 适用对象：[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
       从 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 开始，本机编译模块已支持子查询。
 
 WHERE 子句：  
@@ -94,7 +79,7 @@ WHERE 子句：
 
 -   AND、BETWEEN  
 -   OR、NOT、IN、EXISTS
-    - 适用对象：[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]  。
+    - 适用对象：[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
       从 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 开始，本机编译模块已支持 OR/NOT/IN/EXISTS 运算符。
 
 
@@ -169,7 +154,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 
 -   [TRY...CATCH (Transact-SQL)](../../t-sql/language-elements/try-catch-transact-sql.md)  
 
-               To achieve optimal performance, use a single TRY/CATCH block for an entire natively compiled T-SQL module.  
+    - 要优化性能，请对整个本机编译的 T-SQL 模块使用单个 TRY/CATCH 块。  
 
 -   [THROW (Transact-SQL)](../../t-sql/language-elements/throw-transact-sql.md)  
 
@@ -178,20 +163,20 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 ##  <a name="supported-operators"></a><a name="so"></a> 支持的运算符  
  支持下列运算符。  
 
--   [比较运算符 (Transact SQL)](../../t-sql/language-elements/comparison-operators-transact-sql.md)（例如，>、\<、>= 和 <=）  
+-   [比较运算符 (Transact SQL)](../../t-sql/language-elements/comparison-operators-transact-sql.md)（例如，>、\<, >= 和 <=）  
 
 -   一元运算符（+、-）。  
 
 -   二元运算符（*、/、+、-、%（取模））。  
 
-               The plus operator (+) is supported on both numbers and strings.  
+    - 数字和字符串都支持加号运算符 (+)。  
 
 -   逻辑运算符（AND、OR、NOT）。  
 
 -   按位运算符 ~、&、| 和 ^  
 
 -   APPLY 运算符
-    - 适用对象：[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]  。  
+    - 适用对象：[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。  
       从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 开始，本机编译模块支持 APPLY 运算符。
 
 ##  <a name="built-in-functions-in-natively-compiled-modules"></a><a name="bfncsp"></a> 本机编译模块中的内置函数  
@@ -202,7 +187,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 -   日期函数：CURRENT_TIMESTAMP、DATEADD、DATEDIFF、DATEFROMPARTS、DATEPART、DATETIME2FROMPARTS、DATETIMEFROMPARTS、DAY、EOMONTH、GETDATE、GETUTCDATE、MONTH、SMALLDATETIMEFROMPARTS、SYSDATETIME、SYSUTCDATETIME 和 YEAR。  
 
 -   字符串函数：LEN、LTRIM、RTRIM 和 SUBSTRING。  
-    - 适用对象：[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]  。  
+    - 适用对象：[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。  
       从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 开始，还支持下列内置函数：TRIM、TRANSLATE 和 CONCAT_WS。  
 
 -   标识函数：SCOPE_IDENTITY  
@@ -212,7 +197,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 -   Uniqueidentifier 函数：NEWID 和 NEWSEQUENTIALID  
 
 -   JSON 函数  
-    - 适用对象：[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]  。  
+    - 适用对象：[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。  
       从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 开始，本机编译模块支持 JSON 函数。
 
 -   错误函数：ERROR_LINE、ERROR_MESSAGE、ERROR_NUMBER、ERROR_PROCEDURE、ERROR_SEVERITY 和 ERROR_STATE  
@@ -244,7 +229,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 ##  <a name="limitations-on-sorting"></a><a name="los"></a>排序限制  
  可以在使用 [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md) 和 [ORDER BY 子句 (Transact-SQL)](../../t-sql/queries/select-order-by-clause-transact-sql.md) 的查询中对 8,000 多行进行排序。 但是，如果没有 [ORDER BY 子句 (Transact-SQL)](../../t-sql/queries/select-order-by-clause-transact-sql.md)，[TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md) 最多可对 8,000 行进行排序（如果存在联接，则更少）。  
 
- 如果查询同时使用 [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md) 运算符和 [ORDER BY 子句 (Transact-SQL)](../../t-sql/queries/select-order-by-clause-transact-sql.md)，则可以对 TOP 运算符指定多达 8192 行。 如果指定超过 8192 行，则将收到错误消息：消息 41398、级别 16、状态 1、程序 \<procedureName>、行 \<lineNumber>，TOP 运算符最多可返回 8192 行；已请求 \<number>。     
+ 如果查询同时使用 [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md) 运算符和 [ORDER BY 子句 (Transact-SQL)](../../t-sql/queries/select-order-by-clause-transact-sql.md)，则可以对 TOP 运算符指定多达 8192 行。 如果指定超过 8192 行，则将收到错误消息：消息 41398、级别 16、状态 1、程序 \<procedureName>行 \<lineNumber> TOP 运算符可返回最多 8192 行；但请求了 \<number> 行。    
 
  如果您没有 TOP 子句，则可以使用 ORDER BY 对任何数目的行进行排序。  
 

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8a14f12d-2fbf-4036-b8b2-8db3354e0eb7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e70998bed1ed0f2681009622cfb086baa79dcf02
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 054782a6b6dd4ee381c0a70b857a945c72a66372
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982018"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760957"
 ---
 # <a name="alter-table-index_option-transact-sql"></a>ALTER TABLE index_option (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   指定一组可应用于某个索引的选项，该索引是使用 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 创建的约束定义的一部分。  
   
@@ -30,7 +30,7 @@ ms.locfileid: "73982018"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 {   
     PAD_INDEX = { ON | OFF }  
   | FILLFACTOR = fillfactor  
@@ -75,7 +75,7 @@ ms.locfileid: "73982018"
  ON  
  FILLFACTOR 指定的可用空间百分比应用于索引的中间级页。  
   
- OFF 或未指定 fillfactor   
+ OFF 或未指定 fillfactor  
  考虑到中间级页上的键集，可以将中间级页几乎填满，但至少要为最大索引行留出足够空间。  
   
  FILLFACTOR =fillfactor  
@@ -132,7 +132,7 @@ ms.locfileid: "73982018"
  OFF  
  不使用页锁。  
 
- OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF  }
+ OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF }
 
 **适用于**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 及更高版本。
 
@@ -141,10 +141,10 @@ ms.locfileid: "73982018"
  SORT_IN_TEMPDB = { ON | OFF }   
  **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
- 指定是否将排序结果存储在 tempdb 中  。 默认为 OFF。  
+ 指定是否将排序结果存储在 tempdb 中。 默认为 OFF。  
   
  ON  
- 在 tempdb 中存储用于生成索引的中间排序结果  。 如果 tempdb 与用户数据库不在同一组磁盘上，就可缩短创建索引所需的时间  。 但是，这会增加索引生成期间所使用的磁盘空间量。  
+ 在 tempdb 中存储用于生成索引的中间排序结果。 如果 tempdb 与用户数据库不在同一组磁盘上，就可缩短创建索引所需的时间。 但是，这会增加索引生成期间所使用的磁盘空间量。  
   
  OFF  
  中间排序结果与索引存储在同一数据库中。  
@@ -161,7 +161,7 @@ ms.locfileid: "73982018"
  在索引操作期间不持有长期表锁。 在索引操作的主要阶段，源表上只使用意向共享 (IS) 锁。 这使得能够继续对基础表和索引进行查询或更新。 操作开始时，在很短的时间内对源对象持有共享 (S) 锁。 操作结束时，如果创建非聚集索引，将在短期内获取对源的 S（共享）锁；当联机创建或删除聚集索引时，以及重新生成聚集或非聚集索引时，将在短期内获取 SCH-M（架构修改）锁。 但联机索引锁是短的元数据锁，特别是 Sch-M 锁必须等待此表上的所有阻塞事务完成。 在等待期间，Sch-M 锁在访问同一表时阻止在此锁后等待的所有其他事务。 对本地临时表创建索引时，ONLINE 不能设置为 ON。  
   
 > [!NOTE]  
->  联机索引重新生成可以设置本节稍后介绍的 low_priority_lock_wait 选项  。 在联机索引重新生成期间，low_priority_lock_wait 管理 S 和 Sch-M 锁优先级  。  
+>  联机索引重新生成可以设置本节稍后介绍的 low_priority_lock_wait 选项。 在联机索引重新生成期间，low_priority_lock_wait 管理 S 和 Sch-M 锁优先级。  
   
  OFF  
  在索引操作期间应用表锁。 这样可以防止所有用户在操作期间访问基础表。 创建、重新生成或删除聚集索引或者重新生成或删除非聚集索引的脱机索引操作将对表获取架构修改 (Sch-M) 锁。 这样可以防止所有用户在操作期间访问基础表。 创建非聚集索引的脱机索引操作将对表获取共享 (S) 锁。 这样可以防止更新基础表，但允许读操作（如 SELECT 语句）。  
@@ -174,9 +174,9 @@ ms.locfileid: "73982018"
  MAXDOP =max_degree_of_parallelism  
  **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
- 在索引操作期间替代 max degree of parallelism 配置选项  。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。 使用 MAXDOP 可以限制在执行并行计划的过程中使用的处理器数量。 最大数量为 64 个处理器。  
+ 在索引操作期间替代 max degree of parallelism 配置选项。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。 使用 MAXDOP 可以限制在执行并行计划的过程中使用的处理器数量。 最大数量为 64 个处理器。  
   
- max_degree_of_parallelism 可以是  ：  
+ max_degree_of_parallelism 可以是：  
   
  - 1 - 取消生成并行计划。  
  - \>1 - 将并行索引操作中使用的最大处理器数量限制为指定数量。  
@@ -213,17 +213,17 @@ ms.locfileid: "73982018"
   
  有关压缩的详细信息，请参阅[数据压缩](../../relational-databases/data-compression/data-compression.md)。  
   
-ON PARTITIONS ( { **partition_number_expression> |** range> } [ ,...n ] ) 适用于：\< 及更高版本\<     [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]。  
+ON PARTITIONS ( { \<partition_number_expression> | \<range> } [ ,...n ] ) 适用于：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本  。  
   
  指定对其应用 DATA_COMPRESSION 设置的分区。 如果表未分区，ON PARTITIONS 参数将生成错误。 如果不提供 ON PARTITIONS 子句，DATA_COMPRESSION 选项将应用于已分区表的所有分区。  
   
-可以按以下方式指定 \<partition_number_expression>：  
+可以通过下列方式指定 \<partition_number_expression>：  
   
--   提供一个分区号，例如：ON PARTITIONS (2)。  
--   提供若干单独分区的分区号并用逗号将它们隔开，例如：ON PARTITIONS (1, 5)。  
--   同时提供范围和单个分区，例如：ON PARTITIONS (2, 4, 6 TO 8)。  
+-   提供分区号，例如：ON PARTITIONS (2)。  
+-   为多个单独分区提供分区号，用逗号分隔，例如：ON PARTITIONS (1, 5)。  
+-   同时提供范围和单独分区，例如：ON PARTITIONS (2, 4, 6 TO 8)。  
   
-\<range> 可以指定为以单词 TO 隔开的分区号，例如：ON PARTITIONS (6 TO 8)。  
+\<range> 可指定为由单词 TO 隔开的分区号，例如：ON PARTITIONS (6 TO 8)。  
   
  若要为不同分区设置不同的数据压缩类型，请多次指定 DATA_COMPRESSION 选项，例如：  
   
@@ -254,21 +254,21 @@ DATA_COMPRESSION = COLUMNSTORE_ARCHIVE ON PARTITIONS (2, 4, 6 TO 8)
 **low_priority_lock_wait**  
  **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。  
   
- 当此表没有阻塞操作时，SWITCH 或联机索引重新生成便已完成  。 WAIT_AT_LOW_PRIORITY 指示如果 SWITCH 或联机索引重新生成操作由于其他阻塞操作而无法立即完成，则进行等待   。 该操作持有低优先级锁，允许持有与 DDL 语句冲突的锁的其他操作继续进行。 省略 WAIT AT LOW PRIORITY 选项与 `WAIT_AT_LOW_PRIORITY ( MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)` 等效。  
+ 当此表没有阻塞操作时，SWITCH 或联机索引重新生成便已完成。 WAIT_AT_LOW_PRIORITY 指示如果 SWITCH 或联机索引重新生成操作由于其他阻塞操作而无法立即完成，则进行等待。 该操作持有低优先级锁，允许持有与 DDL 语句冲突的锁的其他操作继续进行。 省略 WAIT AT LOW PRIORITY 选项与 `WAIT_AT_LOW_PRIORITY ( MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)` 等效。  
   
-MAX_DURATION = time [MINUTES ]    
- 执行 DDL 命令时 SWITCH 或必须获取的联机索引重新生成锁将等待的时间（以分钟为单位指定的整数值）  。 SWITCH 或联机索引重新生成操作试图立即完成。 如果操作被阻塞的时间达到 MAX_DURATION，则将执行某一 ABORT_AFTER_WAIT 操作   。 MAX_DURATION 时间始终以分钟为单位，MINUTES 一词可以省略   。  
+MAX_DURATION = time [MINUTES ]  
+ 执行 DDL 命令时 SWITCH 或必须获取的联机索引重新生成锁将等待的时间（以分钟为单位指定的整数值）。 SWITCH 或联机索引重新生成操作试图立即完成。 如果操作被阻塞的时间达到 MAX_DURATION，则将执行某一 ABORT_AFTER_WAIT 操作 。 MAX_DURATION 时间始终以分钟为单位，MINUTES 一词可以省略 。  
   
 ABORT_AFTER_WAIT = [NONE | SELF | BLOCKERS } ]    
  无  
- 不更改锁优先级（使用常规优先级），继续 SWITCH 或联机索引重新生成操作  。  
+ 不更改锁优先级（使用常规优先级），继续 SWITCH 或联机索引重新生成操作。  
   
 SELF  
- 不采取任何操作，直接退出当前执行的 SWITCH 或联机索引重新生成 DDL 操作  。  
+ 不采取任何操作，直接退出当前执行的 SWITCH 或联机索引重新生成 DDL 操作。  
   
 BLOCKERS  
- 终止阻塞当前 SWITCH 或联机索引重新生成 DDL 操作的所有用户事务以使操作可以继续  。  
- BLOCKERS 要求具有 ALTER ANY CONNECTION 权限  。  
+ 终止阻塞当前 SWITCH 或联机索引重新生成 DDL 操作的所有用户事务以使操作可以继续。  
+ BLOCKERS 要求具有 ALTER ANY CONNECTION 权限。  
   
 ## <a name="remarks"></a>备注  
  有关索引选项的完整说明，请参阅 [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)。  

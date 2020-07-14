@@ -18,16 +18,16 @@ ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9c1b80a81aa6c05727b0711e68219d5c0aa32cb9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 08e432e0470074a5861c070d26110478353817b2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75325509"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727068"
 ---
 # <a name="create-indexed-views"></a>创建索引视图
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 本文介绍了如何对视图创建索引。 对视图创建的第一个索引必须是唯一聚集索引。 创建唯一聚集索引后，可以创建更多非聚集索引。 为视图创建唯一聚集索引可以提高查询性能，因为视图在数据库中的存储方式与具有聚集索引的表的存储方式相同。 查询优化器可使用索引视图加快执行查询的速度。 要使优化器考虑将该视图作为替换，并不需要在查询中引用该视图。
 
@@ -51,7 +51,7 @@ ms.locfileid: "75325509"
 
 如果执行查询时启用不同的 SET 选项，则在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中对同一表达式求值会产生不同结果。 例如，将 SET 选项 `CONCAT_NULL_YIELDS_NULL` 设置为 ON 后，表达式 `'abc' + NULL` 会返回值 NULL`NULL`。 但将 `CONCAT_NULL_YIELDS_NULL` 设置为 OFF 后，同一表达式会生成 `'abc'`。
 
-为了确保能够正确维护视图并返回一致结果，索引视图需要多个 SET 选项具有固定值。 如果下列条件成立，则下表中的 SET 选项必须设置为“必需的值”  列中显示的值：
+为了确保能够正确维护视图并返回一致结果，索引视图需要多个 SET 选项具有固定值。 如果下列条件成立，则下表中的 SET 选项必须设置为“必需的值”列中显示的值：
 
 - 创建视图和视图上的后续索引。
 - 创建视图时在视图中引用的基表。
@@ -92,7 +92,7 @@ ms.locfileid: "75325509"
 - 创建索引时，`IGNORE_DUP_KEY` 选项必须设置为 OFF（默认设置）。
 - 在视图定义中，必须使用两部分名称（即 _schema_ **.** _tablename_ ）来引用表。
 - 视图中引用的用户定义函数必须使用 `WITH SCHEMABINDING` 选项创建。
-- 视图中引用的任何用户定义的函数都必须由两部分组成的名称（即 _\<schema\>_ **.** _\<function\>_ ）引用。
+- 在视图中引用的任何用户定义的函数都必须由两部分组成的名称 _\<schema\>_ **.** _\<function\>_ 引用。
 - 用户定义函数的数据访问属性必须是 `NO SQL`，外部访问属性必须是 `NO`。
 - 公共语言运行时 (CLR) 功能可以出现在视图的选择列表中，但不能作为聚集索引键定义的一部分。 CLR 函数不能出现在视图的 WHERE 子句中或视图中的 JOIN 运算的 ON 子句中。
 - 在视图定义中使用的 CLR 函数和 CLR 用户定义类型方法必须具有下表所示的属性设置。
@@ -123,7 +123,7 @@ ms.locfileid: "75325509"
    |`CHECKSUM_AGG`|||
    |&nbsp;|&nbsp;|&nbsp;|
   
-    <sup>1</sup> 索引视图可以包含 float  列；但聚集索引键中不能包含此类列。
+    <sup>1</sup> 索引视图可以包含 float 列；但聚集索引键中不能包含此类列。
 
 - 如果存在 `GROUP BY`，则 VIEW 定义必须包含 `COUNT_BIG(*)`，并且不得包含 `HAVING`。 这些 `GROUP BY` 限制仅适用于索引视图定义。 即使某个索引视图不满足这些 `GROUP BY` 限制，查询也可以在其执行计划中使用该视图。
 - 如果视图定义包含 `GROUP BY` 子句，则唯一聚集索引的键只能引用 `GROUP BY` 子句中指定的列。
@@ -149,13 +149,13 @@ ms.locfileid: "75325509"
 
 可以禁用表和视图的索引。 禁用表的聚集索引时，与该表关联的视图的索引也将被禁用。
 
-<a name="nondeterministic"></a> 将字符串隐式转换为 datetime  或 smalldatetime  所涉及的表达式被视为具有不确定性。 有关详细信息，请参阅[文字日期字符串转换为日期值的不确定性转换](../../t-sql/data-types/nondeterministic-convert-date-literals.md)。
+<a name="nondeterministic"></a> 将字符串隐式转换为 datetime 或 smalldatetime 所涉及的表达式被视为具有不确定性。 有关详细信息，请参阅[文字日期字符串转换为日期值的不确定性转换](../../t-sql/data-types/nondeterministic-convert-date-literals.md)。
 
 ### <a name="security"></a><a name="Security"></a> Security
 
 #### <a name="permissions"></a><a name="Permissions"></a> 权限
 
-要求在数据库中具有 CREATE VIEW 权限，并具有在其中创建视图的架构的 ALTER 权限   。
+要求在数据库中具有 CREATE VIEW 权限，并具有在其中创建视图的架构的 ALTER 权限 。
 
 ## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL
 

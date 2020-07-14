@@ -1,5 +1,6 @@
 ---
 title: Microsoft Azure 中的 SQL Server 数据文件 | Microsoft Docs
+description: 了解一些对于在 Microsoft Azure 存储中存储 SQL Server 数据文件至关重要的概念和注意事项以及使用 Azure 存储的一些优点。
 ms.custom: ''
 ms.date: 12/04/2019
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ba61e7cc35d9cd0a0f63e3e2f89980b12c6904d5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5314f43ea17351f54cf1815346a0820cc5cd77e3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74833583"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715491"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure 中的 SQL Server 数据文件
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   ![Azure 上的数据文件](../../relational-databases/databases/media/data-files-on-azure.png "Azure 上的数据文件")  
   
 Microsoft Azure 中的 SQL Server 数据文件可为作为 blob 存储的 SQL Server 数据库文件提供本机支持。 通过此功能，你可以在本地或在 Microsoft Azure 中虚拟机上运行的 SQL Server 中创建数据库，而将数据存储在 Microsoft Azure blob 存储中的专用存储位置。 此功能还简化了在计算机之间移动数据库的过程。 你可以从一台计算机中分离数据库，并将它们附加到另一台计算机。 此外，它还允许你将数据库备份文件从 Microsoft Azure 存储空间还原或还原到 Microsoft Azure 存储空间，为数据库备份文件提供了备选存储位置。 因此，它在数据虚拟化、数据移动、安全性和可用性、轻松降低成本以及维护方面都具备优势，可实现高可用性和弹性扩展，支持几种混合解决方案。
@@ -123,9 +124,9 @@ ON
   
 - 无法使用“Azure 存储中的 SQL Server 数据文件”功能在 blob 存储中存储内存中 OLTP 数据。 这是因为内存 OLTP 依赖于 **FileStream** ，并且，在此功能的最新版本中，不支持在 Azure 存储中存储 **FileStream** 数据。  
   
-- 使用“Azure 中的 SQL Server 数据文件”功能时，SQL Server 使用 master 数据库中的排序规则集来执行所有 URL 或文件路径比较  。  
+- 使用“Azure 中的 SQL Server 数据文件”功能时，SQL Server 使用 master 数据库中的排序规则集来执行所有 URL 或文件路径比较。  
   
-- 只要不在主数据库中添加新数据库文件，就支持 AlwaysOn 可用性组  。 如果某个数据库操作需要在主数据库中创建新文件，请首先在次要节点上禁用可用性组。 然后对主数据库执行该数据库操作，并在主节点中备份该数据库。 接下来，将该数据库还原到次要节点。 完成后，重新启用次要节点中的 Alwys On 可用性组。 
+- 只要不在主数据库中添加新数据库文件，就支持 AlwaysOn 可用性组。 如果某个数据库操作需要在主数据库中创建新文件，请首先在次要节点上禁用可用性组。 然后对主数据库执行该数据库操作，并在主节点中备份该数据库。 接下来，将该数据库还原到次要节点。 完成后，重新启用次要节点中的 Alwys On 可用性组。 
 
    >[!NOTE]
    >使用“Azure 中的 SQL Server 数据文件”功能时，不支持 Always On 故障转移群集实例。
@@ -144,7 +145,7 @@ ON
 ### <a name="sql-server-management-studio-support"></a>SQL Server Management Studio 支持  
  使用 SQL Server Management Studio 时，您可通过多个对话框窗口使用此功能。 例如，`https://teststorageaccnt.blob.core.windows.net/testcontainer/` 表示存储容器的 URL 路径。
  
- 将其作为一些对话框窗口的“路径”，例如“新建数据库”、“附加数据库”和“还原数据库”。     有关详细信息，请参阅[教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)。  
+ 将其作为一些对话框窗口的“路径”，例如“新建数据库”、“附加数据库”和“还原数据库”。    有关详细信息，请参阅[教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)。  
   
 ### <a name="sql-server-management-objects-smo-support"></a>SQL Server 管理对象 (SMO) 支持  
  使用“Azure 中的 SQL Server 数据文件”功能时，支持所有 SQL Server 管理对象 (SMO)。 如果 SMO 对象需要文件路径，请使用 BLOB URL 格式而不是本地文件路径，如 `https://teststorageaccnt.blob.core.windows.net/testcontainer/`。 有关 SQL Server 管理对象的详细信息，请参阅 SQL Server 联机丛书中的 [SQL Server 管理对象 (SMO) 编程指南](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)。  
@@ -152,7 +153,7 @@ ON
 ### <a name="transact-sql-support"></a>Transact-SQL 支持  
  此新功能在 Transact-SQL 外围应用中引入了以下更改：
 
-- **sys.master_files** 系统视图中新增一个 **int**列，即 **credential_id** 。 credential_id 列用于实现将 Azure 存储数据文件交叉引用回为其创建的凭据的 `sys.credentials`  。 你可以使用它来排除故障，例如，当有数据库文件使用凭据时无法删除凭据。  
+- **sys.master_files** 系统视图中新增一个 **int**列，即 **credential_id** 。 credential_id 列用于实现将 Azure 存储数据文件交叉引用回为其创建的凭据的 `sys.credentials`。 你可以使用它来排除故障，例如，当有数据库文件使用凭据时无法删除凭据。  
   
 ##  <a name="troubleshooting-for-sql-server-data-files-in-microsoft-azure"></a><a name="bkmk_Troubleshooting"></a> 排查“Microsoft Azure 中的 SQL Server 数据文件”功能问题  
  为避免不受支持的功能或限制造成的错误，首先请查看 [Limitations](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md#bkmk_Limitations)。  
@@ -168,7 +169,7 @@ ON
      解决方法：确保已在容器上正确创建了共享访问签名。 有关第 2 课中提供的说明，请参阅[教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](../lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)。  
   
 - *尚未正确创建 SQL Server 凭据。*    
-    解决方法：确保已对“标识”字段使用了“共享访问签名”，并正确创建了机密  。 有关第 3 课中提供的说明，请参阅[教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](../lesson-3-database-backup-to-url.md)。  
+    解决方法：确保已对“标识”字段使用了“共享访问签名”，并正确创建了机密。 有关第 3 课中提供的说明，请参阅[教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](../lesson-3-database-backup-to-url.md)。  
   
  **租赁 Blob 错误：**  
   

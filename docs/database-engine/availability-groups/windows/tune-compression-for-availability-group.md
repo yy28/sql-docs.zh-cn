@@ -1,5 +1,6 @@
 ---
 title: 调整可用性组的压缩 | Microsoft Docs
+description: 了解 SQL Server 如何压缩可用性组的数据流；压缩会减少网络流量，增加 CPU 负载，还可能导致延迟。
 ms.custom: ''
 ms.date: 06/22/2016
 ms.prod: sql
@@ -8,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: 7632769c-b246-4766-886f-7c60ec540be8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3891d30ef5bfffb19ca1d4bfcaab290e3903816b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f8af4702abe127dc0bf5b53be7618515c21cd13c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013674"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888008"
 ---
 # <a name="tune-compression-for-availability-group"></a>调整可用性组的压缩
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 默认情况下，SQL Server 将在适用时压缩可用性组的数据流。 压缩会减少网络流量，增加 CPU 负载，还可能导致延迟。 必须是 sysadmin 固定服务器角色的成员才能启用压缩。 下表显示 SQL Server 何时对可用性组日志流使用压缩：
 
 | 场景 | 压缩设置
@@ -24,6 +25,7 @@ ms.locfileid: "68013674"
 | 同步提交副本 | 未压缩
 | 异步提交副本 | Compressed
 | 自动种子设定过程中 | 未压缩
+| 在数据库中启用了 TDE  | 未压缩
 
 ## <a name="trace-flags-for-availability-group-compression"></a>可用性组压缩的跟踪标志 
 

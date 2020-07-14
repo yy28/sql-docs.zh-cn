@@ -1,5 +1,6 @@
 ---
 title: EKM provider enabled 服务器配置选项 | Microsoft Docs
+description: 了解“已启用 EKM 提供程序”选项。 它控制 SQL Server 中的可扩展密钥管理设备支持。 了解如何打开或关闭此选项。
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - EKM provider enabled option
 ms.assetid: da58ed50-3a13-4172-9065-960559d8f383
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: f0f2faa0170a892cb48dd91386f8f5155591e71d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: be9e074cd3d58571a0db9646648207b26b1512b3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68011841"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772519"
 ---
 # <a name="ekm-provider-enabled-server-configuration-option"></a>EKM provider enabled 服务器配置选项
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **EKM provider enabled** 选项控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的可扩展密钥管理设备支持。 默认情况下，此选项处于关闭状态。  
   

@@ -1,5 +1,6 @@
 ---
 title: 日志传送和复制 (SQL Server) | Microsoft Docs
+description: 了解日志传送如何将由主数据库上执行的每个插入、更新或删除所组成的事务日志应用到辅助数据库上。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 132bebfd-0206-4d23-829a-b38e5ed17bc9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ce1bf24e0f76a7e6d61f2b3bdc3c43c89863d85a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6c72f43b6605821ad984a9ad9dc98378aea258bd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68030825"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85696042"
 ---
 # <a name="log-shipping-and-replication-sql-server"></a>日志传送和复制 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   日志传送涉及单个数据库的两个副本，而这两个副本通常驻留在不同的计算机上。 在任何给定时间都只有一个数据库副本可供客户端使用。 该副本称为主数据库。 通过日志传送将客户端对主数据库所做的更新传播到数据库的另一副本（称为辅助数据库）。 日志传送涉及将由主数据库上执行的每个插入、更新或删除所组成的事务日志应用到辅助数据库上。  
   
  日志传送可以与复制一起使用，具有以下行为：  
@@ -86,7 +87,7 @@ ms.locfileid: "68030825"
   
 7.  存储过程成功执行后，请重新启动日志读取器代理。 有关详细信息，请参阅[启动和停止复制代理 (SQL Server Management Studio)](../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md).  
   
-8.  可以在发布服务器中应用已经分发到订阅服务器的事务。 为确保分发代理尝试在订阅服务器中重新应用这些事务时不会因错误而失败，请指定标题为“遇到数据一致性错误时继续”  的代理配置文件。  
+8.  可以在发布服务器中应用已经分发到订阅服务器的事务。 为确保分发代理尝试在订阅服务器中重新应用这些事务时不会因错误而失败，请指定标题为“遇到数据一致性错误时继续” 的代理配置文件。  
   
 ### <a name="log-shipping-with-merge-replication"></a>合并复制的日志传送  
  请按照下面过程中的步骤配置合并复制和日志传送。  

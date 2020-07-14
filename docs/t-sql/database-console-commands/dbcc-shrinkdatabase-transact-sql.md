@@ -28,15 +28,15 @@ ms.assetid: fc976afd-1edb-4341-bf41-c4a42a69772b
 author: pmasl
 ms.author: umajay
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: 1bda4ebd946bfd8adf31190c36125075d50dc28d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e36315d58721fc6c50393b0bff10c7e8a2e3dee0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68073165"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757203"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 收缩指定数据库中的数据文件和日志文件的大小。
   
@@ -44,7 +44,7 @@ ms.locfileid: "68073165"
   
 ## <a name="syntax"></a>语法  
   
-```sql
+```syntaxsql
 DBCC SHRINKDATABASE   
 ( database_name | database_id | 0   
      [ , target_percent ]   
@@ -118,9 +118,9 @@ DBCC SHRINKDATABASE 以每个文件为单位对数据文件进行收缩。然而
 
 例如，如果为收缩 **mydb** 将 _target\_percent_ 指定为 25，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 计算得出此文件的目标大小为 8 MB（6 MB 数据加上 2 MB 可用空间）。 因此，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 将数据文件后 2 MB 中的所有数据移动到数据文件前 8 MB 的任何可用空间中，然后对该文件进行收缩。
   
-假设 mydb 的数据文件包含 7 MB 的数据  。 将 _target\_percent_ 指定为 30，以允许将此数据文件收缩到可用空间的 30%。 但是，将 _target\_percent_ 指定为 40 不会收缩数据文件，因为 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将文件收缩到的大小不能小于数据当前占用的空间大小。 
+假设 mydb 的数据文件包含 7 MB 的数据。 将 _target\_percent_ 指定为 30，以允许将此数据文件收缩到可用空间的 30%。 但是，将 _target\_percent_ 指定为 40 不会收缩数据文件，因为 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将文件收缩到的大小不能小于数据当前占用的空间大小。 
 
-还可以用另一种方法来考虑此问题：所要求的 40％ 可用空间加上整个数据文件大小的 70％（10 MB 中的 7 MB），超过了 100％。 任何大于 30 的 _target\_size_ 都不会收缩数据文件。 它不会收缩是因为所需的可用百分比加上数据文件当前占用的百分比大于 100%。
+还可以用另一种方法来思考此问题：40% 的所要求可用空间加上 70% 的整个数据文件大小（10 MB 中的 7 MB）超过了 100%。 任何大于 30 的 _target\_size_ 都不会收缩数据文件。 它不会收缩是因为所需的可用百分比加上数据文件当前占用的百分比大于 100%。
   
 对于日志文件，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 使用 _target\_percent_ 计算整个日志的目标大小。 这就是为什么 _target\_percent_ 是收缩操作后日志中的可用空间量的原因。 之后，整个日志的目标大小转换为每个日志文件的目标大小。
   
@@ -130,12 +130,12 @@ DBCC SHRINKDATABASE 尝试立即将每个物理日志文件收缩到其目标大
   
 ## <a name="best-practices"></a>最佳实践  
 当您计划收缩数据库时，请考虑以下信息：
--   收缩操作在执行某个操作后最有效。 此操作会创建未使用的空间，例如截断表或删除表操作。  
+-   在执行会产生未使用空间的操作（如截断表或删除表操作）后，执行收缩操作最有效。
 -   大多数数据库都需要一些可用空间，以供常规日常操作使用。 可能会反复收缩数据库，并注意到数据库大小再次增长。 这种增长表明常规操作需要使用收缩的空间。 在这种情况下，反复收缩数据库是一种无谓的操作。  
 -   收缩操作不保留数据库中索引的碎片状态，通常还会在一定程度上增加碎片。 此结果是不要反复收缩数据库的另一个原因。  
 -   除非有特定要求，否则不要将 AUTO_SHRINK 数据库选项设置为 ON。  
   
-## <a name="troubleshooting"></a>故障排除  
+## <a name="troubleshooting"></a>疑难解答  
 收缩操作可能会被在[基于行版本控制的隔离级别](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)下运行的事务阻止。 例如，在执行 DBCC SHRINK DATABASE 操作时，正在基于行版本控制的隔离级别下运行大型删除操作。 当这种情况发生时，收缩操作会等到删除操作完成后再收缩文件。 收缩操作在等待时，DBCC SHRINKFILE 和 DBCC SHRINKDATABASE 操作会打印输出信息性消息（对于 SHRINKDATABASE 为 5202，对于 SHRINKFILE 为 5203）。 此消息在第一个小时内每五分钟打印到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志一次，然后在后续每个小时打印一次。 例如，如果错误日志包含以下错误消息：  
   
 ```sql

@@ -1,5 +1,6 @@
 ---
 title: ft notify bandwidth 服务器配置选项 | Microsoft Docs
+description: 了解“FT 通知带宽”选项。 了解它如何影响 SQL Server 在小内存缓冲区池中维护的缓冲区数。
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -14,17 +15,17 @@ helpviewer_keywords:
 - small memory buffers
 - memory [SQL Server], buffers
 ms.assetid: 9ca284c5-f3e0-4a67-a132-fff376ff0ffe
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 6b0589f5b3622d4271f6307427f49d804b76c4e8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cb6bf13a1f8e71f419350946d156f2504274b6d0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67998077"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772467"
 ---
 # <a name="ft-notify-bandwidth-server-configuration-option"></a>ft notify bandwidth 服务器配置选项
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   使用 **ft notify bandwidth** 选项可以指定小内存缓冲区的池可以增长到的大小。 小内存缓冲区的大小为 64 千字节 (KB)。 *max* 参数值指定全文内存管理器在小缓冲池中应该维护的最大缓冲区数。 如果 **max** 值为零，则可以位于小缓冲池中的缓冲区数没有上限。  
   

@@ -1,5 +1,6 @@
 ---
 title: 升级 Master Data Services | Microsoft Docs
+description: 发现用于升级 Microsoft SQL Server Master Data Services 的 4 种方案。 了解文件位置和升级疑难解答。
 ms.custom: ''
 ms.date: 07/21/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: 9c3543f3-3eb9-455d-a9bf-f17e9506ad21
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d1b9131442160969e7511f42b91ed09a3b4001e1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e58b0ea07dc97ac7573934112dd3969cadb53c26
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67934827"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900277"
 ---
 # <a name="upgrade-master-data-services"></a>升级 Master Data Services
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   
   以下是升级 Microsoft [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Master Data Services 的方案。  
   
@@ -40,15 +41,15 @@ ms.locfileid: "67934827"
   
 ##  <a name="file-location"></a><a name="fileLocation"></a> 文件位置  
   
--   在 [!INCLUDE[ss2017](../../includes/sssqlv14-md.md)] 中，默认情况下这些文件安装在 drive:\Program Files\Microsoft SQL Server\140\Master Data Services  中。  
+-   在 [!INCLUDE[ss2017](../../includes/sssqlv14-md.md)] 中，默认情况下这些文件安装在 drive:\Program Files\Microsoft SQL Server\140\Master Data Services中。  
 
--   在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中，默认情况下这些文件安装在驱动器  :\Program Files\Microsoft SQL Server\130\Master Data Services 中。  
+-   在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中，默认情况下这些文件安装在驱动器:\Program Files\Microsoft SQL Server\130\Master Data Services 中。  
   
--   在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中，默认情况下这些文件安装在驱动器  :\Program Files\Microsoft SQL Server\120\Master Data Services 中。  
+-   在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中，默认情况下这些文件安装在驱动器:\Program Files\Microsoft SQL Server\120\Master Data Services 中。  
   
--   在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，默认情况下这些文件安装在驱动器  :\Program Files\Microsoft SQL Server\110\Master Data Services 中。  
+-   在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，默认情况下这些文件安装在驱动器:\Program Files\Microsoft SQL Server\110\Master Data Services 中。  
   
--   在 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 中，默认情况下这些文件安装在驱动器  :\Program Files\Microsoft SQL Server\Master Data Services 中。  
+-   在 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 中，默认情况下这些文件安装在驱动器:\Program Files\Microsoft SQL Server\Master Data Services 中。  
   
 ##  <a name="upgrade-without-database-engine-upgrade"></a><a name="noengine"></a> 升级（不升级数据库引擎）  
  在此方案中，继续使用 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 托管 MDS 数据库。 但是，必须升级 MDS 数据库的架构，然后创建最新的 [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] Web 应用程序来访问 MDS 数据库。 升级后，无法再通过早期版本的 Web 应用程序访问 MDS 数据库。  
@@ -63,7 +64,7 @@ ms.locfileid: "67934827"
   
     2.  在左窗格中，单击 **“安装”** 。  
   
-    3.  在右窗格中，单击“全新 SQL Server 独立安装或向现有安装添加功能”  。  
+    3.  在右窗格中，单击“全新 SQL Server 独立安装或向现有安装添加功能”。  
   
     4.  在 **“功能选择”** 页上，选择 **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** 和要安装的任何其他功能。  
   
@@ -105,14 +106,14 @@ ms.locfileid: "67934827"
   
     2.  选择 MDS 数据库。  
   
-    3.  单击“应用”  。  
+    3.  单击“应用”。  
   
 ##  <a name="upgrade-with-database-engine-upgrade"></a><a name="engine"></a> 升级（升级数据库引擎）  
  此方案将数据库引擎和 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 应用程序均从早期版本升级到 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 或 [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)]。  
   
  **升级（要升级数据库引擎）**  
   
-1.  **仅适用于 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]**：打开“控制面板” > “程序和功能”，然后卸载 Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]。  
+1.  仅适用于 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]：打开“控制面板” > “程序和功能”，然后卸载 Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 。  
   
 2.  将数据引擎升级到 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 或 [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)]。 有关详细信息，请参阅 [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)。  
   
@@ -138,7 +139,7 @@ ms.locfileid: "67934827"
   
     2.  在左窗格中，单击 **“安装”** 。  
   
-    3.  在右窗格中，单击“全新 SQL Server 独立安装或向现有安装添加功能”  。  
+    3.  在右窗格中，单击“全新 SQL Server 独立安装或向现有安装添加功能”。  
   
     4.  在 **“功能选择”** 页上，选择 **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** 和要安装的任何其他功能。  
   
@@ -148,10 +149,10 @@ ms.locfileid: "67934827"
   
 3.  升级 MDS 数据库架构、创建 Web 应用程序，并将新的 Web 应用程序与已升级的 MDS 数据库相关联。 有关说明，请参阅 [升级（不升级数据库引擎）](#noengine)中的步骤 2 - 4  
   
-## <a name="troubleshooting"></a>故障排除  
- **问题：** 打开 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Web 应用程序时，出现“客户端版本与数据库版本不兼容”的错误消息。  
+## <a name="troubleshooting"></a>疑难解答  
+ **问题：** 打开 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Web 应用时，出现“客户端版本与数据库版本不兼容”的错误消息。  
   
- **解决方案：** 当 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 主数据管理器 Web 应用程序尝试访问已升级到 [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] Master Data Services 的数据库时，会发生此问题。 必须改用 [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] Web 应用程序。  
+ **解决方案：** 当 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 主数据管理器 Web 应用尝试访问已升级到 [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] Master Data Services 的数据库时，会发生此问题。 必须改用 [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] Web 应用程序。  
   
  如果您在升级 MDS 数据库架构时没有在 IIS 中停止并重新启动 **“MDS 应用程序池”** ，则也可能出现此问题。 重新启动 **“MDS 应用程序池”** 可解决此问题。  
   

@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: d54aa325-8761-4cd4-8da7-acf33df12296
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 253828eba55e919d7363bb56896560de1de38b25
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7c712c08c6ad766a701fc47d45fae8ce69008d40
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982056"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895636"
 ---
 # <a name="alter-queue-transact-sql"></a>ALTER QUEUE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   更改队列的属性。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "73982056"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 ALTER QUEUE <object>   
    queue_settings  
    | queue_action  
@@ -79,13 +79,13 @@ WITH
 ```  
   
 ## <a name="arguments"></a>参数  
- Database_name（对象）   
- 包含要更改队列的数据库的名称。 如果未提供 database_name，则默认为当前数据库  。  
+ Database_name（对象）  
+ 包含要更改队列的数据库的名称。 如果未提供 database_name，则默认为当前数据库。  
   
- schema_name（对象）   
- 新队列所属架构的名称。 如果未提供 schema_name，则默认为当前用户的默认架构  。  
+ schema_name（对象）  
+ 新队列所属架构的名称。 如果未提供 schema_name，则默认为当前用户的默认架构。  
   
- queue_name   
+ queue_name  
  要更改的队列的名称。  
   
  STATUS（队列）  
@@ -117,7 +117,7 @@ WITH
 > [!TIP]  
 >  有关索引碎片的常规指南，当碎片在 5% 和 30% 之间时，重新组织索引。 当碎片超过 30% 时，请重新生成索引。 但这些数字仅适用于作为环境起始点的常规指南。 要确定索引碎片的数量，请使用 [sys.dm_db_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) - 有关示例，请参阅该文章中的示例 G。  
   
- MOVE TO { file_group | "default" }   
+ MOVE TO { file_group | "default" }  
  **适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本。  
   
  将队列内部表（及其索引）移动到用户指定的文件组中。  新文件组不得为只读。  
@@ -125,17 +125,17 @@ WITH
  PROCEDURE_NAME = \<procedure>  
  指定当队列包含要处理的消息时，要激活的存储过程的名称。 此值必须是一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符。  
   
- database_name（过程）   
+ database_name（过程）  
  包含存储过程的数据库的名称。  
   
- schema_name（过程）   
+ schema_name（过程）  
  拥有存储过程的架构的名称。  
   
- stored_procedure_name   
+ stored_procedure_name  
  存储过程的名称。  
   
- MAX_QUEUE_READERS = max_reader   
- 指定队列同时启动的激活存储过程的最大实例数。 max_readers 值必须是 0 到 32767 之间的数字  。  
+ MAX_QUEUE_READERS = max_reader  
+ 指定队列同时启动的激活存储过程的最大实例数。 max_readers 值必须是 0 到 32767 之间的数字。  
   
  EXECUTE AS  
  指定用于运行激活存储过程的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库用户帐户。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必须能在队列激活存储过程时检查此用户的权限。 对于 Windows 域用户，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必须连接到域，并能够在激活过程时验证指定用户的权限，否则激活失败。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户，服务器始终可检查权限。  
@@ -143,8 +143,8 @@ WITH
  SELF  
  指定存储过程以当前用户身份执行。 （执行该 ALTER QUEUE 语句的数据库主体。）  
   
- 'user_name'   
- 存储过程执行时所用的用户的名称。 user_name 必须是指定为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符的有效 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户。 当前用户必须对指定的 user_name 具有 IMPERSONATE 权限  。  
+ 'user_name'  
+ 存储过程执行时所用的用户的名称。 user_name 必须是指定为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符的有效 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户。 当前用户必须对指定的 user_name 具有 IMPERSONATE 权限。  
   
  OWNER  
  指定存储过程以队列的所有者身份执行。  

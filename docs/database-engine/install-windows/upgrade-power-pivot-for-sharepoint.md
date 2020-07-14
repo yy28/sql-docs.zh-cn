@@ -11,16 +11,16 @@ author: Minewiskan
 ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
-ms.openlocfilehash: 8d13d6df17cad82076813c5fee93ed794d3439f2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ed9b17969e54f620ee22c237526f59e2f49700b5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68892586"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900245"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>升级 Power Pivot for SharePoint
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   
   本文概述将 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 的部署升级到 [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] 所需的步骤。 具体步骤取决于环境中当前运行的 SharePoint 版本，并包括 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 外接程序 (**spPowerPivot.msi**)。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "68892586"
   
     1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导中单击 **“安装”** 。  
   
-    2.  单击“从 SQL Server 升级...”  。  
+    2.  单击“从 SQL Server 升级...”。  
   
     3.  在 **“选择实例”** 页上，选择 **POWERPIVOT** 实例名，然后单击 **“下一步”** 。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "68892586"
   
          或  
   
-         在“开始”  菜单上，指向“所有程序”  ，然后依次单击 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] “配置工具”  和 “SharePoint 2013 配置工具” **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** 。 请注意，只有在本地服务器上安装了 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 后，才会列出此工具。  
+         在“开始”菜单上，指向“所有程序”，然后依次单击 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] “配置工具”和 “SharePoint 2013 配置工具” **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** 。 请注意，只有在本地服务器上安装了 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 后，才会列出此工具。  
   
     2.  启动时，该配置工具会检查 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 场解决方案和 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] web 应用程序解决方案的升级状态。 如果检测到这些解决方案的较早版本，将看到消息“**已检测到 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 解决方案文件的更高版本。请选择升级选项以升级场**。” 单击“确定”  关闭系统验证消息。  
   
@@ -116,16 +116,16 @@ ms.locfileid: "68892586"
   
          “脚本”选项卡显示 PowerShell cmdlet，或引用该工具将运行的 PowerShell 脚本文件。  
   
-    6.  单击 **“验证”** 可检查每个操作是否有效。 如果 **“验证”** 不可用，这意味着所有操作都适用于您的系统。 如果“验证”  可用，你可能修改了某个输入值（例如 Excel 服务应用程序名称），或是该工具可能已确定无法执行某个操作。 如果无法执行某个操作，您必须排除它，或修复导致该操作被标记为无效的基本条件。  
+    6.  单击 **“验证”** 可检查每个操作是否有效。 如果 **“验证”** 不可用，这意味着所有操作都适用于您的系统。 如果“验证” 可用，你可能修改了某个输入值（例如 Excel 服务应用程序名称），或是该工具可能已确定无法执行某个操作。 如果无法执行某个操作，您必须排除它，或修复导致该操作被标记为无效的基本条件。  
   
         > [!IMPORTANT]  
         >  第一项操作 **“升级场解决方案”** 必须始终最先处理。 它注册用于配置服务器的 PowerShell cmdlet。 如果此操作出错，不要继续操作。 应该使用错误中提供的信息诊断并解决该问题，然后继续处理任务列表中的其他操作。  
   
-    7.  单击 **“运行”** 执行对此任务有效的所有操作。 只有通过验证检查后， **“运行”** 才可用。 当你单击“运行”  时，出现以下警告，提醒你将在批处理模式下执行操作：“该工具中所有标记为有效的配置设置将应用于 SharePoint 场 **。是否继续?** ”。  
+    7.  单击 **“运行”** 执行对此任务有效的所有操作。 只有通过验证检查后， **“运行”** 才可用。 当你单击“运行”时，出现以下警告，提醒你将在批处理模式下执行操作：“该工具中所有标记为有效的配置设置将应用于 SharePoint 场 **。是否继续?** ”。  
   
     8.  单击 **“是”** 继续操作。  
   
-    9. 升级场中的解决方案和功能可能要花几分钟才能完成。 在此期间，对 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据的连接请求“将失败”，并显示类似“无法刷新数据”或“试图执行请求操作期间出错   **。请重试**。” 升级完成后，服务器将变为可用，这些错误将不会再出现。  
+    9. 升级场中的解决方案和功能可能要花几分钟才能完成。 在此期间，对 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据的连接请求“将失败”，并显示类似“无法刷新数据”或“试图执行请求操作期间出错  **。请重试**。” 升级完成后，服务器将变为可用，这些错误将不会再出现。  
   
      有关详细信息，请参阅以下主题：  
   
@@ -170,7 +170,7 @@ ms.locfileid: "68892586"
   
 7.  **在 SharePoint 2013 场中的每个服务器上运行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ) 服务的第一台 SharePoint 应用程序服务器上** 配置工具[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]，以在 SharePoint 中升级解决方案和 Web 服务。 不能使用管理中心执行此步骤。  
   
-    1.  在“开始”  菜单上，指向“所有程序”  ，依次单击 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、“配置工具”  和“配置工具” **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** 。 请注意，只有在本地服务器上安装了 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 后，才会列出此工具。  
+    1.  在“开始”菜单上，指向“所有程序”，依次单击 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、“配置工具”和“配置工具” **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** 。 请注意，只有在本地服务器上安装了 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 后，才会列出此工具。  
   
     2.  启动时，该配置工具会检查 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 场解决方案和 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] web 应用程序解决方案的升级状态。 如果检测到这些解决方案的较早版本，将看到消息“已检测到 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 解决方案文件的更高版本。 请选择升级选项以升级场。” 单击“确定”  关闭消息框。  
   
@@ -192,18 +192,18 @@ ms.locfileid: "68892586"
   
          “脚本”选项卡显示 PowerShell cmdlet，或引用该工具将运行的 PowerShell 脚本文件。  
   
-    7.  单击 **“验证”** 可检查每个操作是否有效。 如果 **“验证”** 不可用，这意味着所有操作都适用于您的系统。 如果“验证”  可用，你可能修改了某个输入值（例如 Excel 服务应用程序名称），或是该工具可能已确定无法执行某个操作。 如果无法执行某个操作，您必须排除它，或修复导致该操作被标记为无效的基本条件。  
+    7.  单击 **“验证”** 可检查每个操作是否有效。 如果 **“验证”** 不可用，这意味着所有操作都适用于您的系统。 如果“验证” 可用，你可能修改了某个输入值（例如 Excel 服务应用程序名称），或是该工具可能已确定无法执行某个操作。 如果无法执行某个操作，您必须排除它，或修复导致该操作被标记为无效的基本条件。  
   
         > [!IMPORTANT]  
         >  第一项操作 **“升级场解决方案”** 必须始终最先处理。 它注册用于配置服务器的 PowerShell cmdlet。 如果此操作出错，不要继续操作。 应该使用错误中提供的信息诊断并解决该问题，然后继续处理任务列表中的其他操作。  
   
-    8.  单击 **“运行”** 执行对此任务有效的所有操作。 只有通过验证检查后， **“运行”** 才可用。 当你单击“运行”  时，出现以下警告，提醒你将在批处理模式下执行操作：“该工具中所有标记为有效的配置设置将应用于 SharePoint 场。 是否继续?”  
+    8.  单击 **“运行”** 执行对此任务有效的所有操作。 只有通过验证检查后， **“运行”** 才可用。 当你单击“运行”时，出现以下警告，提醒你将在批处理模式下执行操作：“该工具中所有标记为有效的配置设置将应用于 SharePoint 场。 是否继续?”  
   
     9. 单击 **“是”** 继续操作。  
   
     10. 升级场中的解决方案和功能可能要花几分钟才能完成。 在此期间，针对 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据的连接请求将失败，并显示“无法刷新数据”或“试图执行请求操作期间出错。 请重试。” 升级完成后，服务器将变为可用，这些错误将不会再出现。  
   
-8.  对场中的每个 SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) 服务重复以下过程  ：1) 运行 SQL Server 安装程序 2) 运行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具。  
+8.  对场中的每个 SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) 服务重复以下过程：1) 运行 SQL Server 安装程序 2) 运行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具。  
   
 9. 请通过执行升级后步骤以及通过检查场中 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器的版本，确认升级成功。 有关详细信息，请参阅本文中的[升级后的验证任务](#verify)以及下面的部分。  
   
@@ -219,9 +219,9 @@ ms.locfileid: "68892586"
         Stsadm -o enumdeployments  
         ```  
   
-    2.  检查现有部署的以下信息：“类型”是收回或部署，“文件”为 powerpivotwebapp.wsp 或 powerpivotfarm.wsp   。  
+    2.  检查现有部署的以下信息：“类型”是收回或部署，“文件”为 powerpivotwebapp.wsp 或 powerpivotfarm.wsp 。  
   
-    3.  对于与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 解决方案有关的部署或收回，请复制“JobId”的 GUID 值，然后将其粘贴到以下命令中（使用 Shell 的“编辑”菜单上的“标记”、“复制”和“粘贴”命令复制该 GUID）  ：  
+    3.  对于与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 解决方案有关的部署或收回，请复制“JobId”的 GUID 值，然后将其粘贴到以下命令中（使用 Shell 的“编辑”菜单上的“标记”、“复制”和“粘贴”命令复制该 GUID）：  
   
         ```  
         Stsadm -o canceldeployment -id "<GUID>"  
@@ -247,7 +247,7 @@ ms.locfileid: "68892586"
 Get-PowerPivotSystemService  
 ```  
   
- 验证 **CurrentSolutionVersion**。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本号为 13.0.\<major build>.\<minor build>  
+ 验证 **CurrentSolutionVersion**。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 为版本 13.0.\<major build>.\<minor build>  
   
 ### <a name="verify-the-version-of-the-analysis-services-windows-service"></a>验证 Analysis Services Windows 服务的版本  
  如果您只升级了 SharePoint 2010 场中的某些 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 服务器，则未升级服务器上的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例可能比场中预期的版本旧。 您需要将所有的服务器升级到相同的版本，以便它们可以使用。 使用以下方法之一验证每台计算机上 SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) Windows 服务的版本。  
@@ -256,9 +256,9 @@ Get-PowerPivotSystemService
   
 1.  导航到 **实例的** Bin [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 文件夹。 例如，`C:\Program Files\Microsoft SQL Server\MSAS13.POWERPIVOT\OLAP\bin`。  
   
-2.  右键单击 `msmdsrv.exe` 并选择“属性”  。  
+2.  右键单击 `msmdsrv.exe` 并选择“属性”。  
   
-3.  单击“详细信息”。   
+3.  单击“详细信息”。  
   
 4.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 文件版本应为 13.00.\<major build>.\<minor build>。  
   

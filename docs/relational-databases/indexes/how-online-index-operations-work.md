@@ -18,15 +18,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.prod_service: database-engine, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2dd4970cc25e382706f63ed94b7bcc3700549d9f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a61295dcadd884f2b54d23bd74dfee66cd866dc4
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67909757"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812642"
 ---
 # <a name="how-online-index-operations-work"></a>联机索引操作的工作方式
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   本主题将定义联机索引操作中存在的结构，并显示与这些结构相关联的活动。  
   
@@ -65,12 +65,14 @@ ms.locfileid: "67909757"
 |构建<br /><br /> 主要阶段|在大容量加载操作中对数据进行扫描、排序、合并并将数据插入到目标中。<br /><br /> 并发的用户选择、插入、更新和删除操作将被同时应用到预先存在的索引和所有正在生成的新索引。|IS<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE**|  
 |最后<br /><br /> 短暂的阶段|必须完成所有未提交的更新事务，这一阶段才能开始。 根据获取的锁，所有新的用户读/写事务将在短时间内被阻塞，直到此阶段完成为止。<br /><br /> 系统元数据将被更新以便用目标替换源。<br /><br /> 如有必要，源将被删除。 例如，在重新生成或删除聚集索引之后。|INDEX_BUILD_INTERNAL_RESOURCE**<br /><br /> 如果创建的是非聚集索引，则为对表的 S。\*<br /><br /> 如果删除了任何源结构（索引或表），则为 SCH-M（架构修改）。\*|  
   
- \* 索引操作将等待任何未提交的更新事务完成后，才会获取对表的 S 锁或 SCH-M 锁。  
+ \* 索引操作将等待任何未提交的更新事务完成后，才会获取对表的 S 锁或 SCH-M 锁。 如果一个长时间运行的查询正在进行之中，则联机索引操作会等该查询结束。
   
  ** 在索引操作执行过程中，资源锁 INDEX_BUILD_INTERNAL_RESOURCE 将阻止对源和预先存在的结构执行并发数据定义语言 (DDL) 操作。 例如，此锁将会阻止为同一表同时重新生成两个索引。 虽然此资源锁与 Sch-M 锁相关联，但它不会阻止数据操作语句。  
   
  上一个表显示了在涉及单个索引的联机索引操作生成阶段获取的单个共享锁（S 锁）。 当在单个联机索引操作中（例如，在为包含一个或多个非聚集索引的表创建初始聚集索引的过程中）生成或重新生成聚集索引和非聚集索引后，在生成阶段将获取两个短期 S 锁，然后再获取长期意向共享 (IS) 锁。 首先获取一个 S 锁以创建聚集索引，当完成聚集索引的创建后，再获取第二个短期 S 锁以创建非聚集索引。 创建完非聚集索引后，S 锁会降级为 IS 锁，直到联机索引操作的最后阶段。  
-  
+
+有关如何使用和管理锁的详细信息，请参阅[参数](../../t-sql/statements/alter-table-index-option-transact-sql.md#arguments)。
+
 ### <a name="target-structure-activities"></a>目标结构活动  
  下表列出了索引操作每个阶段中涉及目标结构的活动以及相应的锁定策略。  
   
@@ -91,4 +93,6 @@ ms.locfileid: "67909757"
   
  [联机索引操作准则](../../relational-databases/indexes/guidelines-for-online-index-operations.md)  
   
-  
+## <a name="next-steps"></a>后续步骤
+
+[ALTER TABLE 索引选项](../../t-sql/statements/alter-table-index-option-transact-sql.md#arguments)

@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 141bc976-7631-49f6-82bd-a235028645b1
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 009029f16d85fa82867f37e075066701dacfc375
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1c57f0fde92d22d0fa70c88addc37e13e9e0954b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73064694"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735861"
 ---
 # <a name="create-asymmetric-key-transact-sql"></a>CREATE ASYMMETRIC KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   在数据库中创建非对称密钥。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "73064694"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 CREATE ASYMMETRIC KEY asym_key_name   
    [ AUTHORIZATION database_principal_name ]  
    [ FROM <asym_key_source> ]  
@@ -73,28 +73,28 @@ CREATE ASYMMETRIC KEY asym_key_name
  *asym_key_name*  
  数据库中非对称密钥的名称。 非对称密钥名称必须遵循[标识符](../../relational-databases/databases/database-identifiers.md)相关规则，并且在数据库中必须唯一。  
 
- AUTHORIZATION database_principal_name   
+ AUTHORIZATION database_principal_name  
  指定非对称密钥的所有者。 所有者不能是角色或组。 如果省略该选项，则所有者为当前用户。  
   
- FROM asym_key_source   
+ FROM asym_key_source  
  指定从中加载非对称密钥对的源。  
   
- FILE = 'path_to_strong-name_file'   
+ FILE = 'path_to_strong-name_file'  
  指定从中加载密钥对的强名称文件所在的路径。 由 MAX_PATH 根据 Windows API 限制为 260 个字符。  
   
 > [!NOTE]  
 >  此选项在包含数据库中不可用。  
   
- EXECUTABLE FILE = 'path_to_executable_file'   
+ EXECUTABLE FILE = 'path_to_executable_file'  
  指定要从中加载公钥的程序集文件的路径。 由 MAX_PATH 根据 Windows API 限制为 260 个字符。  
   
 > [!NOTE]  
 >  此选项在包含数据库中不可用。  
   
- ASSEMBLY assembly_name   
+ ASSEMBLY assembly_name  
  指定已加载到数据库（要从中加载公钥）中的已签名程序集的名称。  
   
- PROVIDER provider_name   
+ PROVIDER provider_name  
  指定可扩展密钥管理 (EKM) 提供程序的名称。 必须先使用 CREATE PROVIDER 语句定义此提供程序。 有关外部密钥管理的详细信息，请参阅[可扩展密钥管理 (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md)。  
   
  ALGORITHM = \<algorithm>  
@@ -102,7 +102,7 @@ CREATE ASYMMETRIC KEY asym_key_name
   
  RSA_1024 和 RSA_512 已弃用。 若要使用 RSA_1024 和 RSA_512（不推荐），必须将数据库设置为兼容级别 120 或更低。  
   
- PROVIDER_KEY_NAME = 'key_name_in_provider'   
+ PROVIDER_KEY_NAME = 'key_name_in_provider'  
  指定来自外部提供程序的密钥名称。  
   
  CREATION_DISPOSITION = CREATE_NEW  
@@ -111,11 +111,11 @@ CREATE ASYMMETRIC KEY asym_key_name
  CREATION_DISPOSITION = OPEN_EXISTING  
  将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 非对称密钥映射到现有可扩展的密钥管理密钥。 PROVIDER_KEY_NAME 必须用于指定设备上的密钥名称。 如果未提供 CREATION_DISPOSITION = OPEN_EXISTING，则默认值为 CREATE_NEW。  
   
- ENCRYPTION BY PASSWORD = 'password'   
- 指定用于对私钥进行加密的密码。 如果未提供该子句，则使用数据库主密钥对私钥进行加密。 password 最多为 128 个字符  。 password 必须符合运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的 Windows 密码策略要求。  
+ ENCRYPTION BY PASSWORD = 'password'  
+ 指定用于对私钥进行加密的密码。 如果未提供该子句，则使用数据库主密钥对私钥进行加密。 password 最多为 128 个字符。 password 必须符合运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的 Windows 密码策略要求。  
   
 ## <a name="remarks"></a>备注  
- “非对称密钥”是数据库级的安全对象实体  。 该实体的默认格式包含公钥和私钥。 当未使用 FROM 子句执行时，CREATE ASYMMETRIC KEY 会生成新的密钥对。 使用 FROM 子句执行时，CREATE ASYMMETRIC KEY 会从文件中导入密钥对，或者从程序集或 DLL 文件中导入公钥。  
+ “非对称密钥”是数据库级的安全对象实体。 该实体的默认格式包含公钥和私钥。 当未使用 FROM 子句执行时，CREATE ASYMMETRIC KEY 会生成新的密钥对。 使用 FROM 子句执行时，CREATE ASYMMETRIC KEY 会从文件中导入密钥对，或者从程序集或 DLL 文件中导入公钥。  
   
  默认情况下，私钥受数据库主密钥保护。 如果尚未创建任何数据库主密钥，则需要使用密码保护私钥。  
   

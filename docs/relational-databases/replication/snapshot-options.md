@@ -15,41 +15,41 @@ ms.assetid: 759fab42-66c7-4541-a7a3-bb6fb868493c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 9d44a77a95b8b6a46fbc37a21a8abbd5ee75dfce
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3117e274c146413dcf8b973f054c7d0b1865e7de
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288821"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767610"
 ---
 # <a name="modify-snapshot-initialization-options-for-sql-replication"></a>修改 SQL 复制的快照初始化选项 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 [使用快照初始化订阅](initialize-a-subscription-with-a-snapshot.md)时有许多可用选项。
 
 ## <a name="specify-snapshot-format-sql-server-management-studio"></a>指定快照格式 (SQL Server Management Studio)
-  在“发布属性 - \<发布>”对话框的“快照”页上指定快照格式。 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+  在“发布属性 -  \<Publication>”对话框的“快照”页上指定快照格式。 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 ### <a name="to-specify-snapshot-format"></a>指定快照格式  
   
-1.  在“发布属性 - \<发布>”对话框的“快照”页上，选择“本机 SQL Server - 所有订阅服务器都必须是运行 SQL Server 的服务器”或“字符 - 如果发布服务器或订阅服务器没有运行 SQL Server，则需要此项”。  
+1.  在“发布属性 - \<Publication>”对话框的“快照”页上，选择“本机 SQL Server - 所有订阅服务器都必须是运行 SQL Server 的服务器”或“字符 - 如果发布服务器或订阅服务器没有运行 SQL Server，则需要此项”。  
   
     > [!NOTE]  
     >  建议选择本机格式，除非此发布必须支持对 SQL Server Compact 数据库或非 SQL Server 数据库的订阅。  
   
-2.  选择“确定”  。   
+2.  选择“确定”。   
 
 ## <a name="snapshot-folder-locations"></a>快照文件夹位置
 
 ### <a name="default-snapshot-location"></a>默认快照位置
 可以在配置分发向导的 **“快照文件夹”** 页上指定默认快照位置。 有关使用此向导的详细信息，请参阅[配置发布和分发](../../relational-databases/replication/configure-publishing-and-distribution.md)。 如果在未配置为分发服务器的服务器上创建发布，请在新建发布向导的 **“快照文件夹”** 页上指定默认快照位置。 有关使用此向导的详细信息，请参阅[创建发布](../../relational-databases/replication/publish/create-a-publication.md)。  
   
- 在“分发服务器属性 - \<分发服务器>”对话框的“发布服务器”页上，修改默认快照位置。 有关详细信息，请参阅[查看和修改分发服务器和发布服务器属性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)。 在“发布属性 - \<发布>”对话框中设置每个发布的快照文件夹。 有关详细信息，请参阅 [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+ 在“分发服务器属性 - \<Distributor>”对话框的“发布服务器”页上，修改默认快照位置 。 有关详细信息，请参阅[查看和修改分发服务器和发布服务器属性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)。 在“发布属性 - \<Publication>”对话框中设置每个发布的快照文件夹。 有关详细信息，请参阅 [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 ### <a name="to-modify-the-default-snapshot-location"></a>修改默认快照位置  
   
-1.  在“分发服务器属性 - \<分发服务器>”对话框的“发布服务器”页上，单击要更改其默认快照位置的发布服务器的属性按钮 (…)。    
-2.  在“分发服务器属性 - \<分发服务器>”对话框中，为“默认快照文件夹”属性输入一个值。  
+1.  在“分发服务器属性 - \<Distributor>”对话框的“发布服务器”页上，单击要更改其默认快照位置的发布服务器的属性按钮 (...)  。    
+2.  在“分发服务器属性 - \<Publisher>”对话框中，为“默认快照文件夹”属性输入一个值 。  
   
     > [!NOTE]  
     >  快照代理必须对指定的目录具有写权限，而分发代理或合并代理必须具有读权限。 如果使用的是请求订阅，则必须指定一个共享目录作为通用命名约定 (UNC) 路径，如 \\\computername\snapshot。 有关详细信息，请参阅[保护快照文件夹](../../relational-databases/replication/security/secure-the-snapshot-folder.md)。    
@@ -64,13 +64,13 @@ ms.locfileid: "79288821"
 如果要指定一个备用快照文件夹位置或压缩快照文件，请创建发布但不立即创建初始快照，为该快照位置设置发布属性，然后为该发布运行快照代理。 如果在创建初始快照后更改了备用位置，则为该发布生成的任何快照的位置都不会重定位到新的备用位置。 在这种情况下，根据发布设置的不同，合并代理或分发代理可能找不到新备用位置的快照文件。  
   
 > [!NOTE]  
->  请不要（使用“发布属性”  对话框或 [sp_changepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)）指定与默认快照文件夹位置相同的备用位置。  
+>  请不要（使用“发布属性”对话框或 [sp_changepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)）指定与默认快照文件夹位置相同的备用位置。  
   
 > [!CAUTION]  
 >  不要同时使用 WebSync 和备用快照文件夹位置。  
   
 #### <a name="use-sql-server-management-studio"></a>使用 SQL Server Management Studio
-1.  在“发布属性 - \<发布>”对话框的“快照”页上：  
+1.  在“发布属性 -  \<Publication>”对话框的“快照”页上：  
   
     1.  选择 **“将文件放入下列文件夹”** ，然后单击 **“浏览”** 定位到某个目录，或者输入用于存储快照文件的目录的路径。  
   
@@ -81,11 +81,11 @@ ms.locfileid: "79288821"
   
      若要压缩快照文件，请选择 **“压缩此文件夹中的快照文件”** 。 压缩通常用于低带宽连接和可移动介质（如 CD-ROM）上的备用快照位置。  
   
-2.  选择“确定”  。  
+2.  选择“确定”。  
   
 #### <a name="use-transact-sql"></a>使用 Transact-SQL 
 
-在[配置快照属性（复制 Transact-SQL 编程）](../../relational-databases/replication/publish/configure-snapshot-properties-replication-transact-sql-programming.md)时，将 snapshot_in_defaultfolder 的值指定为 false  。 
+在[配置快照属性（复制 Transact-SQL 编程）](../../relational-databases/replication/publish/configure-snapshot-properties-replication-transact-sql-programming.md)时，将 snapshot_in_defaultfolder 的值指定为 false。 
 
 ## <a name="compressed-snapshots"></a>压缩的快照
   如果要在慢速网络上传输快照，或者将快照存储到可移动介质上而未压缩的快照太大而不适于存储在介质上，则应该压缩快照文件。 在这些情况下，压缩快照文件很有用，但压缩增加了生成和应用快照的时间。  
@@ -98,7 +98,7 @@ ms.locfileid: "79288821"
 >  在某些情况下，压缩的快照可以提高通过网络传输快照文件的性能。 但是，如果压缩快照，则在生成快照文件时需要通过快照代理进行额外处理，而在应用快照文件时需要通过分发代理或合并代理进行额外处理。 在某些情况下，这可能会降低生成快照的速度，并增加应用快照所需的时间。 此外，如果发生网络故障，压缩的快照将无法恢复，因此不适用于不可靠的网络。 在网络中使用压缩的快照时，应仔细权衡这些利弊。  
   
 ### <a name="use-sql-server-management-studio"></a>使用 SQL Server Management Studio
-1.  在“发布属性 - \<发布>”对话框的“快照”页上：  
+1.  在“发布属性 -  \<Publication>”对话框的“快照”页上：  
   
     1.  选择 **“将文件放入下列文件夹”** ，然后单击 **“浏览”** 定位到某个目录，或者输入用于存储快照文件的目录的路径。  
   
@@ -111,11 +111,11 @@ ms.locfileid: "79288821"
         >  如果选中了此复选框，则默认文件夹中存储的文件将不压缩。 压缩文件只能存储在上一步骤中指定的备用位置中。  
   
 2.  选择 **“压缩此文件夹中的快照文件”** 。    
-3.  选择“确定”  。   
+3.  选择“确定”。   
 
 ### <a name="use-transact-sql"></a>使用 Transact-SQL
 
-[配置快照属性](../../relational-databases/replication/publish/configure-snapshot-properties-replication-transact-sql-programming.md)时，将值 compress_snapshot 指定为 True   。 
+[配置快照属性](../../relational-databases/replication/publish/configure-snapshot-properties-replication-transact-sql-programming.md)时，将值 compress_snapshot 指定为 True 。 
 
 ## <a name="execute-scripts-before-and-after-snapshot-is-applied"></a>在应用快照之前和之后执行脚本
 可以指定在应用快照之前或之后在订阅服务器上执行的脚本。 使用脚本的原因有多种，例如在每台订阅服务器上创建登录帐户和架构（对象所有者）。  
@@ -128,7 +128,7 @@ ms.locfileid: "79288821"
 
 ### <a name="execute-a-script"></a>执行脚本 
 
-1.  在“发布属性 - \<发布>”对话框的“快照”页上：    
+1.  在“发布属性 -  \<Publication>”对话框的“快照”页上：    
     -   若要指定在应用快照之前执行的脚本，请单击 **“浏览”** 导航到该脚本，或者在 **“应用快照之前执行此脚本”** 文本框中输入该脚本的路径。  
   
         > [!NOTE]  

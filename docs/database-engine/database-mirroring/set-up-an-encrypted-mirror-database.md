@@ -1,5 +1,6 @@
 ---
 title: 设置加密的镜像数据库 | Microsoft Docs
+description: 了解如何通过使用 sp_control_dbmasterkey_password 创建凭据来启用镜像数据库的数据库主密钥的自动解密。
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7329a575-be29-46e0-abc6-1344db37920c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e96342ca114ae06d2c1d75954ccd32a674f900a4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a4711df54f96487447ed543945bd863a4bc7b598
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68025231"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735142"
 ---
 # <a name="set-up-an-encrypted-mirror-database"></a>设置加密的镜像数据库
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   若要对镜像数据库的数据库主密钥启用自动解密，必须提供用于加密该镜像服务器实例的主密钥的口令。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本包括传输密码的机制。 在开始数据库镜像之前，请使用 **sp_control_dbmasterkey_password** 为数据库主密钥创建一个凭据。 必须为要镜像的每个数据库重复此过程。 有关详细信息，请参阅 [sp_control_dbmasterkey_password (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-control-dbmasterkey-password-transact-sql.md)。  
   
 > [!CAUTION]  

@@ -1,6 +1,6 @@
 ---
 title: 将副本添加到可用性组 (SSMS)
-ms.description: Add a replica to an Always On availability group using the wizard found in SQL Server Management Studio.
+description: 使用 SQL Server Management Studio 中的向导将副本添加到 AlwaysOn 可用性组。
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 60d962b6-2af4-4394-9190-61939a102bc0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: afca5e00f95056fc201f37260088c90004ff3d1f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1df0c28e1d7919b1694802b2b5f024cf5e6dcf6f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75244984"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880242"
 ---
 # <a name="add-a-replica-to-your-always-on-availability-group-using-the-availability-group-wizard-in-sql-server-management"></a>使用 SQL Server Management 中的“可用性组向导”将副本添加到 AlwaysOn 可用性组
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  使用“将副本添加到可用性组向导”可帮助你将新的次要副本添加到现有 AlwaysOn 可用性组  。  
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
+  使用“将副本添加到可用性组向导”可帮助你将新的次要副本添加到现有 AlwaysOn 可用性组。  
   
 > [!NOTE]  
 >  有关使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell 将辅助副本添加到可用性组的详细信息，请参阅 [将辅助副本添加到可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)。  
@@ -66,11 +66,11 @@ ms.locfileid: "75244984"
   
 1.  在对象资源管理器中，连接到承载可用性组的主副本的服务器实例，然后展开服务器树。  
   
-2.  依次展开“Always On 高可用性”  节点和“可用性组”  节点。  
+2.  依次展开“Always On 高可用性”节点和“可用性组”节点。  
   
-3.  右键单击要向其添加辅助副本的可用性组，然后选择“添加副本”  命令。 这将启动“将副本添加到可用性组向导”。  
+3.  右键单击要向其添加辅助副本的可用性组，然后选择“添加副本”命令。 这将启动“将副本添加到可用性组向导”。  
   
-4.  在 **“连接到现有的辅助副本”** 页上，连接到可用性组中的每个辅助副本。 有关详细信息，请参阅[连接到现有的辅助副本页（添加副本向导：添加数据库向导）](../../../database-engine/availability-groups/windows/connect-to-existing-secondary-replicas-page.md)。  
+4.  在 **“连接到现有的辅助副本”** 页上，连接到可用性组中的每个辅助副本。 有关详细信息，请参阅[“连接到现有次要副本”页（添加副本向导：添加数据库向导）](../../../database-engine/availability-groups/windows/connect-to-existing-secondary-replicas-page.md)。  
   
 5.  在 **“指定副本”** 页上，为可用性组指定和配置一个或多个新的辅助副本。 此页包含三个选项卡。 下表介绍了这些选项卡。 有关详细信息，请参阅[“指定副本”页（新建可用性组向导：添加副本向导）](../../../database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md)。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "75244984"
     |**端点**|使用此选项卡可验证每个新的辅助副本的现有数据库镜像端点（如果有）。 如果在其服务帐户使用 Windows 身份验证的服务器实例上缺少该端点，则该向导会自动创建该端点。<br /><br /> <br /><br /> 注意：如果任何服务器实例基于非域用户帐户运行，则你需要首先对你的服务器实例进行手动更改，然后才能在向导中继续执行。 有关详细信息，请参阅本主题前面的 [先决条件](#Prerequisites)。|  
     |**备份首选项**|使用此选项卡可以整体为可用性组指定您的备份首选项；如果您想要修改当前设置，还可为各个可用性副本指定备份优先级。|  
   
-6.  如果所选的副本包含具有数据库主密钥的数据库，请在“密码”列中输入数据库主密钥的密码  。  “状态”列指示具有数据库主密钥的数据库  “所需的密码”。 在“密码”列中输入正确的密码之前，“下一步”将显示为灰色   。 输入密码后，请单击  “刷新”。 如果正确输入密码，则“状态”列会指示“密码已输入”，然后便可进行“下一步”操作   。  
+6.  如果所选的副本包含具有数据库主密钥的数据库，请在“密码”列中输入数据库主密钥的密码。  “状态”列指示具有数据库主密钥的数据库  “所需的密码”。 在“密码”列中输入正确的密码之前，“下一步”将显示为灰色 。 输入密码后，请单击 “刷新”。 如果正确输入密码，则“状态”列会指示“密码已输入”，然后便可进行“下一步”操作 。  
   
 7.  在 **“选择初始数据同步”** 页上，选择如何创建新的辅助数据库并将其联接到可用性组。 选择以下选项之一：  
   
@@ -90,7 +90,7 @@ ms.locfileid: "75244984"
   
          如果选择 **“完全”** ，则在创建可用性组后，向导会将每个主数据库及其事务日志备份到网络共享，并在每个承载新的辅助副本的服务器实例上还原备份。 然后，该向导将每个新的辅助数据库联接到可用性组。  
   
-         在“指定可由所有副本访问的共享网络位置”  字段中，指定承载副本的所有服务器都具有读写访问权限的备份共享。 日志备份将是您的日志备份链的一部分。 适当地存储日志备份文件。  
+         在“指定可由所有副本访问的共享网络位置”字段中，指定承载副本的所有服务器都具有读写访问权限的备份共享。 日志备份将是您的日志备份链的一部分。 适当地存储日志备份文件。  
   
         > [!IMPORTANT]  
         >  有关所需文件系统权限的详细信息，请参阅本主题中前面的 [先决条件](#Prerequisites)部分。  
@@ -116,7 +116,7 @@ ms.locfileid: "75244984"
      完成向导后，单击 **“关闭”** 以退出安装向导。  
   
 > [!IMPORTANT]  
->  添加副本后，请参阅 [将辅助副本添加到可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)。  
+>  添加副本后，请参阅[将次要副本添加到可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md) 中的“跟进：添加副本后”部分。  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   

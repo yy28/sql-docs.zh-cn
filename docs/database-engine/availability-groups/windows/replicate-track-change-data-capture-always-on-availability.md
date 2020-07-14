@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5f1920374f62f98eed81323eca05ce1e45e66fc6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fbc22ea4b3673d6ed4d0d4ee581da8fadb473fb8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79433754"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888052"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>复制、更改跟踪和更改数据捕获 - AlwaysOn 可用性组
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]上支持复制、更改数据捕获 (CDC) 和更改跟踪 (CT)。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 有助于提供高可用性和附加数据库恢复功能。  
   
@@ -156,7 +156,7 @@ ms.locfileid: "79433754"
   
      可用性组侦听器名称或显式节点名称都可用来查找辅助副本。 如果使用可用性组侦听器名称，则会将访问定向到任何合适的辅助副本。  
   
-     当使用 sp_addlinkedserver 来创建链接服务器以访问次要副本时，将 \@datasrc 参数用于可用性组侦听器名称或显式服务器名称，并且将 \@provstr 参数用于指定只读意向。  
+     当使用 sp_addlinkedserver 来创建链接服务器以访问次要副本时，将 \@datasrc 参数用于可用性组侦听器名称或显式服务器名称，并且将 \@provstr 参数用于指定只读意向 。  
   
     ```sql  
     EXEC sp_addlinkedserver   
@@ -172,7 +172,7 @@ ms.locfileid: "79433754"
   
      一般情况下，你应使用域登录名来对驻留在作为 AlwaysOn 可用性组成员的数据库中的更改数据进行客户端访问。 若要确保在故障转移后能够继续访问变更数据，域用户需要具有对支持可用性组副本的所有主机的访问特权。 如果将一个数据库用户添加到主副本中的数据库，则会将该用户与一个域登录名关联，然后将该数据库用户传播到辅助数据库，并且继续与指定的域登录名关联。 如果将新数据库用户与一个 SQL Server 身份验证登录名关联，则将传播辅助数据库上的用户而不关联登录名。 尽管可以使用关联的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证登录名来访问最初定义数据库用户的主副本上的更改数据，但该节点是能够进行访问的唯一节点。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证登录名将无法访问任何辅助数据库中的数据，也无法访问除定义了数据库用户的原始数据库之外的任何新的主数据库中的数据。  
      
--   禁用变更数据捕获   
+-   禁用变更数据捕获  
 如果需要在属于 AlwaysOn 可用性组的数据库中禁用“更改数据捕获”，则需要执行其他步骤以确保不会影响日志截断。 需要执行以下步骤之一，防止禁用变更数据捕获后，变更数据捕获会阻止日志截断：
     - 重启每个次要副本实例上的 SQL Server 服务
     - 或者，从可用性组的所有次要副本实例中删除此数据库，并使用自动或手动种子设定将它添加到可用性组副本实例
@@ -217,11 +217,15 @@ ms.locfileid: "79433754"
   
 ### <a name="considerations"></a>注意事项  
   
--   不支持将分发数据库用于 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 或数据库镜像。 复制配置与配置了分发服务器的 SQL Server 实例相关联，因此无法镜像或复制分发数据库。 为了让分发服务器提供高可用性，请使用 SQL Server 故障转移群集。 有关详细信息，请参阅 [AlwaysOn 故障转移群集实例 (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。  
+-   不支持将分发数据库用于数据库镜像，但在一定限制下支持用于 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，请参阅[配置分发可用性组](../../../relational-databases/replication/configure-distribution-availability-group.md#limitations-or-exclusions)。 复制配置与配置了分发服务器的 SQL Server 实例相关联，因此无法镜像或复制分发数据库。 还可以使用 SQL Server 故障转移群集为分发服务器提供高可用性。 有关详细信息，请参阅 [AlwaysOn 故障转移群集实例 (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。  
   
 -   尽管支持订阅服务器故障转移到辅助数据库，但这是用于合并复制订阅服务器的手动过程。 该过程与故障转移镜像的订阅服务器数据库所用的方法基本相同。 事务复制订阅服务器在参与 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]时不需要特殊处理。 订阅服务器必须运行 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 或更高版本才能加入可用性组。  有关详细信息，请参阅 [复制订阅服务器和 AlwaysOn 可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/replication-subscribers-and-always-on-availability-groups-sql-server.md)
   
 -   存在于数据库外部的元数据和对象不会传播到辅助副本，包括登录名、作业和链接服务器。 如果您在故障转移后需要新的主数据库中有元数据和对象，则必须手动复制它们。 有关详细信息，请参阅 [管理可用性组中数据库的登录名和作业 (SQL Server)](../../../database-engine/availability-groups/windows/logins-and-jobs-for-availability-group-databases.md)。  
+
+### <a name="distributed-availability-groups"></a>Distributed Availability Groups
+
+无法将可用性组中的发布服务器或分发数据库配置为分布式可用性组的一部分。 可用性组中的发布服务器数据库和可用性组中的分发数据库都需要侦听器终结点才能正确配置和使用。 但是，不能为分布式可用性组配置侦听器终结点。
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
  **复制**  

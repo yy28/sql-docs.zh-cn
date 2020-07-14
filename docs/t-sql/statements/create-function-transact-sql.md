@@ -40,16 +40,16 @@ helpviewer_keywords:
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a011f82fc465be79f18a45e71e1dc7e62710d31e
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: f92ce95ce8427773c57b34511e3ab458e67d8358
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631480"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767095"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中创建用户定义函数。 用户定义函数是接受参数、执行操作（例如复杂计算）并将操作结果以值的形式返回的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或公共语言运行时 (CLR) 例程。 返回值可以是标量（单个）值或表。 使用此语句可以创建可通过以下方式使用的重复使用的例程：
 
@@ -268,30 +268,30 @@ RETURNS return_data_type
 ## <a name="arguments"></a>参数
 
 OR ALTER
- 适用于   ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+ 适用于：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 只有在函数已存在时才对其进行有条件地更改。
 
 > [!NOTE]
 > 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU1 开始，可以使用 CLR 的可选 [OR ALTER] 语法。
 
-schema_name 是用户定义函数所属的架构的名称  。
+schema_name 是用户定义函数所属的架构的名称。
 
-function_name 是用户定义函数的名称  。 函数名称必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则，并且在数据库中以及对其架构来说是唯一的。
+function_name 是用户定义函数的名称。 函数名称必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则，并且在数据库中以及对其架构来说是唯一的。
 
 > [!NOTE]
 > 即使未指定参数，函数名称后也需要加上括号。
 
-@parameter_name 是用户定义函数中的参数  。 可声明一个或多个参数。
+@parameter_name 是用户定义函数中的参数。 可声明一个或多个参数。
 
 一个函数最多可以有 2,100 个参数。 执行函数时，如果未定义参数的默认值，则用户必须提供每个已声明参数的值。
 
 通过将 at 符号 (@) 用作第一个字符来指定参数名称。 参数名称必须符合标识符规则。 参数是对应于函数的局部参数；其他函数中可使用相同的参数名称。 参数只能代替常量，而不能用于代替表名、列名或其他数据库对象的名称。
 
 > [!NOTE]
-> 在传递存储过程或用户定义函数中的参数时，或在声明和设置批语句中的变量时，不会遵守 ANSI_WARNINGS。 例如，如果将一个变量定义为 char(3)，然后将其值设置为大于三个字符，则数据会被截断为定义的大小，并且 `INSERT` 或 `UPDATE` 语句可以成功执行  。
+> 在传递存储过程或用户定义函数中的参数时，或在声明和设置批语句中的变量时，不会遵守 ANSI_WARNINGS。 例如，如果将一个变量定义为 char(3)，然后将其值设置为大于三个字符，则数据会被截断为定义的大小，并且 `INSERT` 或 `UPDATE` 语句可以成功执行。
 
-[ type_schema_name.  parameter_data_type 是参数的数据类型及其所属的架构，后者为可选项  。 对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数，允许使用除 timestamp 数据类型之外的所有数据类型（包括 CLR 用户定义类型和用户定义表类型）  。 对于 CLR 函数，允许使用除 text、ntext、image、用户定义表类型和 timestamp 数据类型之外的所有数据类型（包括 CLR 用户定义类型）     。 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数或 CLR 函数中，不能将非标量类型 **cursor** 和 **table** 指定为参数数据类型。
+[ type_schema_name. parameter_data_type 是参数的数据类型及其所属的架构，后者为可选项。 对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数，允许使用除 timestamp 数据类型之外的所有数据类型（包括 CLR 用户定义类型和用户定义表类型）。 对于 CLR 函数，允许使用除 text、ntext、image、用户定义表类型和 timestamp 数据类型之外的所有数据类型（包括 CLR 用户定义类型）   。 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数或 CLR 函数中，不能将非标量类型 **cursor** 和 **table** 指定为参数数据类型。
 
 如果未指定 *type_schema_name*，[!INCLUDE[ssDE](../../includes/ssde-md.md)]会按以下顺序查找 *scalar_parameter_data_type*：
 
@@ -299,7 +299,7 @@ function_name 是用户定义函数的名称  。 函数名称必须符合[标�
 - 当前数据库中当前用户的默认架构。
 - 当前数据库中的 **dbo** 架构。
 
-[ =default ] 是参数的默认值  。 如果定义了 default 值，则无需指定此参数的值即可执行函数  。
+[ =default ] 是参数的默认值。 如果定义了 default 值，则无需指定此参数的值即可执行函数。
 
 > [!NOTE]
 > 可以为除 **varchar(max)** 和 **varbinary(max)** 数据类型之外的 CLR 函数指定默认的参数值。
@@ -308,40 +308,40 @@ function_name 是用户定义函数的名称  。 函数名称必须符合[标�
 
 READONLY 指示不能在函数定义中更新或修改参数。 用户定义的表类型参数 (TVP) 需要 READONLY，而其他任何参数类型都不能使用 READONLY。
 
-return_data_type 是标量用户定义函数的返回值  。 对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数，可以使用除 timestamp 数据类型之外的所有数据类型（包括 CLR 用户定义类型）  。 对于 CLR 函数，允许使用除 text、ntext、image 和 timestamp 数据类型之外的所有数据类型（包括 CLR 用户定义类型）     。 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数或 CLR 函数中，不能将非标量类型 **cursor** 和 **table** 指定为返回数据类型。
+return_data_type 是标量用户定义函数的返回值。 对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数，可以使用除 timestamp 数据类型之外的所有数据类型（包括 CLR 用户定义类型）。 对于 CLR 函数，允许使用除 text、ntext、image 和 timestamp 数据类型之外的所有数据类型（包括 CLR 用户定义类型）   。 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数或 CLR 函数中，不能将非标量类型 **cursor** 和 **table** 指定为返回数据类型。
 
-function_body 指定一系列定义函数值的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，这些语句在一起使用不会产生负面影响（例如修改表）  。 function_body 仅用于标量函数和多语句表值函数 (MSTVF)  。
+function_body 指定一系列定义函数值的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，这些语句在一起使用不会产生负面影响（例如修改表）。 function_body 仅用于标量函数和多语句表值函数 (MSTVF)。
 
-在标量函数中，function_body 是一系列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，这些语句一起使用可计算出标量值  。
+在标量函数中，function_body 是一系列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，这些语句一起使用可计算出标量值。
 
-在 MSTVF 中，function_body 是一系列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，这些语句将填充 TABLE 返回变量  。
+在 MSTVF 中，function_body 是一系列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，这些语句将填充 TABLE 返回变量。
 
-scalar_expression 指定标量函数返回的标量值  。
+scalar_expression 指定标量函数返回的标量值。
 
-TABLE 指定表值函数 (TVF) 的返回值为表。 只有常量和 @local_variables 可以传递到 TVF  。
+TABLE 指定表值函数 (TVF) 的返回值为表。 只有常量和 @local_variables 可以传递到 TVF。
 
 在内联 TVF 中，TABLE 返回值是通过单个 SELECT 语句定义的。 内联函数没有关联的返回变量。
 
-<a name="mstvf"></a> 在 MSTVF 中，\@return_variable  是一个 TABLE 变量，用于存储和汇总应作为函数值返回的行。 只能将 \@*return_variable* 指定用于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数，而不能用于 CLR 函数。
+<a name="mstvf"></a> 在 MSTVF 中，\@return_variable 是一个 TABLE 变量，用于存储和汇总应作为函数值返回的行。 只能将 \@*return_variable* 指定用于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数，而不能用于 CLR 函数。
 
-select_stmt 定义内联表值函数 (TVF) 返回值的单个 SELECT 语句  。
+select_stmt 定义内联表值函数 (TVF) 返回值的单个 SELECT 语句。
 
 ORDER (\<order_clause>) 指定从表值函数中返回结果的顺序。 有关详细信息，请参阅本主题后面的“[在 CLR 表值函数中使用排序顺序](#using-sort-order-in-clr-table-valued-functions)”部分。
 
-EXTERNAL NAME method_specifier> assembly_name.class_name.method_name
-适用于\<     ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]SP1 及更高版本）
+EXTERNAL NAME \<method_specifier> *assembly_name*.*class_name*.*method_name*
+适用于：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]SP1 及更高版本）
 
 指定创建的函数名称应引用的程序集和方法。
 
-- assembly_name - 必须与 `SELECT * FROM sys.assemblies;` 的 `name` 列中的值匹配  。
+- assembly_name - 必须与 `SELECT * FROM sys.assemblies;` 的 `name` 列中的值匹配。
 
   这是曾在 `CREATE ASSEMBLY` 语句中使用的名称。
 
-- class_name - 必须与 `SELECT * FROM sys.assembly_modules;` 的 `assembly_name` 列中的值匹配  。
+- class_name - 必须与 `SELECT * FROM sys.assembly_modules;` 的 `assembly_name` 列中的值匹配。
 
   此值通常包含嵌入的句点或圆点。 在这种情况下，Transact-SQL 语法要求将该值置于一对方括号 [] 或一对双引号 "" 内。
 
-- method_name - 必须与 `SELECT * FROM sys.assembly_modules;` 的 `method_name` 列中的值匹配  。
+- method_name - 必须与 `SELECT * FROM sys.assembly_modules;` 的 `method_name` 列中的值匹配。
 
   该方法必须是静态方法。
 
@@ -352,9 +352,9 @@ EXTERNAL NAME method_specifier> assembly_name.class_name.method_name
 > - 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不能执行 CLR 代码。 可以创建、修改和删除引用公共语言运行时模块的数据库对象；不过，只有在启用 [clr enabled 选项](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)之后，才能在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中执行这些引用。 若要启用此选项，请使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)。
 > - 此选项在包含数据库中不可用。
 
-\<table_type_definition> ( { \<column_definition> \<column_constraint> | \<computed_column_definition> } [ \<table_constraint> ] [ ,...n ] ) 定义 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数的表数据类型    。 表声明包含列定义和列约束（或表约束）。 表始终放在主文件组中。
+*\<*table_type_definition*>* ( { \<column_definition> \<column_constraint>| \<computed_column_definition> } [ \<table_constraint> ] [ ,...*n* ] ) 为 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数定义表数据类型。 表声明包含列定义和列约束（或表约束）。 表始终放在主文件组中。
 
-\< clr_table_type_definition > ( { column_name**data_type } [ ,...n ] ) 适用于     ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]（[在某些区域以预览版提供](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)）。
+*\< clr_table_type_definition >* ( { *column_name**data_type* } [ ,...*n* ] ) 适用于：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]（[在某些区域以预览版提供](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)）。
 
 定义 CLR 函数的表数据类型。 表声明仅包含列名称和数据类型。 表始终放在主文件组中。
 
@@ -372,7 +372,7 @@ EXECUTE 对于本机编译的标量用户定义函数，EXECUTE AS 是必需的�
 
 指定函数将具有以下一个或多个选项：
 
-ENCRYPTION 适用于  ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]SP1 及更高版本）
+ENCRYPTION 适用于：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]SP1 及更高版本）
 
 指示[!INCLUDE[ssDE](../../includes/ssde-md.md)]会将 CREATE FUNCTION 语句的原始文本转换为模糊格式。 模糊代码的输出在任何目录视图中都不能直接显示。 对系统表或数据库文件没有访问权限的用户不能检索模糊文本。 但是，可以通过 [DAC 端口](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)访问系统表的特权用户或直接访问数据库文件的特权用户可以使用此文本。 此外，能够向服务器进程附加调试器的用户可在运行时从内存中检索原始过程。 有关如何访问系统元数据的详细信息，请参阅[元数据可见性配置](../../relational-databases/security/metadata-visibility-configuration.md)。
 
@@ -393,9 +393,9 @@ SCHEMABINDING 指定将函数绑定到其引用的数据库对象。 如果指�
 - 该函数及其引用的对象属于同一数据库。
 - 执行 `CREATE FUNCTION` 语句的用户对该函数引用的数据库对象具有 `REFERENCES` 权限。
 
-RETURNS NULL ON NULL INPUT | CALLED ON NULL INPUT 指定标量函数的 OnNULLCall 特性   。 如果未指定，则默认为 CALLED ON NULL INPUT。 这意味着即使传递的参数为 NULL，也将执行函数体。
+RETURNS NULL ON NULL INPUT | CALLED ON NULL INPUT 指定标量函数的 OnNULLCall 特性 。 如果未指定，则默认为 CALLED ON NULL INPUT。 这意味着即使传递的参数为 NULL，也将执行函数体。
 
-如果在 CLR 函数中指定了 RETURNS NULL ON NULL INPUT，它指示当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接收到的任何一个参数为 NULL 时，它可以返回 NULL，而无需实际调用函数体。 如果 \<method_specifier> 中指定的 CLR 函数的方法已具有指示 RETURNS NULL ON NULL INPUT 的自定义属性，但 CREATE FUNCTION 语句指示 CALLED ON NULL INPUT，则优先采用 CREATE FUNCTION 语句指示的属性。 不能为 CLR 表值函数指定 OnNULLCall 属性  。
+如果在 CLR 函数中指定了 RETURNS NULL ON NULL INPUT，它指示当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接收到的任何一个参数为 NULL 时，它可以返回 NULL，而无需实际调用函数体。 如果 \<method_specifier> 中指定的 CLR 函数的方法已具有指示 RETURNS NULL ON NULL INPUT 的自定义属性，但 CREATE FUNCTION 语句指示 CALLED ON NULL INPUT，则优先采用 CREATE FUNCTION 语句指示的属性。 不能为 CLR 表值函数指定 OnNULLCall 属性。
 
 EXECUTE AS 子句指定用于执行用户定义函数的安全上下文。 所以，您可以控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用哪一个用户帐户来验证针对该函数引用的任何数据库对象的权限。
 
@@ -404,40 +404,40 @@ EXECUTE AS 子句指定用于执行用户定义函数的安全上下文。 所�
 
 有关详细信息，请参阅 [EXECUTE AS 子句 (Transact-SQL)](../../t-sql/statements/execute-as-clause-transact-sql.md)。
 
-INLINE = { ON | OFF } 适用于  ：SQL Server 2019 和更高版本。
+INLINE = { ON | OFF } 适用于：SQL Server 2019 和更高版本。
 
 指定是否应内联此标量 UDF。 此子句仅适用于标量用户定义函数。 `INLINE` 子句不是强制性的。 如果未指定 `INLINE` 子句，则会基于 UDF 是否可内联而自动设定为 ON/OFF。 如果指定了 `INLINE=ON` 但发现 UDF 不可内联，则会引发错误。 有关详细信息，请参阅[标量 UDF 内联](../../relational-databases/user-defined-functions/scalar-udf-inlining.md)。
 
 **\< column_definition >::=**
 
-定义表数据类型。 表声明包含列定义和约束。 对于 CLR 函数，只能指定 column_name 和 data_type   。
+定义表数据类型。 表声明包含列定义和约束。 对于 CLR 函数，只能指定 column_name 和 data_type 。
 
-column_name 是表中列的名称  。 列名称必须遵循标识符的规则，且在表中必须唯一。 column_name 可以包含 1 到 128 个字符  。
+column_name 是表中列的名称。 列名称必须遵循标识符的规则，且在表中必须唯一。 column_name 可以包含 1 到 128 个字符。
 
-data_type 指定列数据类型  。 对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数，可以使用除 timestamp 之外的所有数据类型（包括 CLR 用户定义类型）  。 对于 CLR 函数，可以使用除 text、ntext、image、char、varchar、varchar(max) 和 timestamp 之外的所有数据类型（包括 CLR 用户定义类型）。在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数或 CLR 函数中，不能将非标量类型 cursor 指定为列数据类型         。
+data_type 指定列数据类型。 对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数，可以使用除 timestamp 之外的所有数据类型（包括 CLR 用户定义类型）。 对于 CLR 函数，可以使用除 text、ntext、image、char、varchar、varchar(max) 和 timestamp 之外的所有数据类型（包括 CLR 用户定义类型）。在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数或 CLR 函数中，不能将非标量类型 cursor 指定为列数据类型       。
 
-DEFAULT constant_expression 如果在插入过程中未显式提供值，则指定为列提供的值  。 constant_expression 可以是常量、NULL 或系统函数值  。 DEFAULT 定义可以应用于除具有 IDENTITY 属性的列之外的任何列。 不能为 CLR 表值函数指定 DEFAULT。
+DEFAULT constant_expression 如果在插入过程中未显式提供值，则指定为列提供的值。 constant_expression 可以是常量、NULL 或系统函数值。 DEFAULT 定义可以应用于除具有 IDENTITY 属性的列之外的任何列。 不能为 CLR 表值函数指定 DEFAULT。
 
-COLLATE collation_name  指定列的排序规则。 如果未指定，则为该列分配数据库的默认排序规则。 排序规则名称既可以是 Windows 排序规则名称，也可以是 SQL 排序规则名称。 如需获取排序规则列表和详细信息，请参阅 [Windows 排序规则名称 (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md) 和 [SQL Server 排序规则名称 (Transact-SQL)](../../t-sql/statements/sql-server-collation-name-transact-sql.md)。
+COLLATE collation_name 指定列的排序规则。 如果未指定，则为该列分配数据库的默认排序规则。 排序规则名称既可以是 Windows 排序规则名称，也可以是 SQL 排序规则名称。 如需获取排序规则列表和详细信息，请参阅 [Windows 排序规则名称 (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md) 和 [SQL Server 排序规则名称 (Transact-SQL)](../../t-sql/statements/sql-server-collation-name-transact-sql.md)。
 
-COLLATE 子句只能用来更改数据类型为 char、varchar、nchar 和 nvarchar 的列的排序规则     。
+COLLATE 子句只能用来更改数据类型为 char、varchar、nchar 和 nvarchar 的列的排序规则   。
 
 > [!NOTE]
 > 不能为 CLR 表值函数指定 `COLLATE`。
 
-ROWGUIDCOL 指示新列是行的全局唯一标识符列。 对于每个表，只能将其中的一个 uniqueidentifier 列指定为 ROWGUIDCOL 列  。 ROWGUIDCOL 属性只能分配给 uniqueidentifier 列  。
+ROWGUIDCOL 指示新列是行的全局唯一标识符列。 对于每个表，只能将其中的一个 uniqueidentifier 列指定为 ROWGUIDCOL 列。 ROWGUIDCOL 属性只能分配给 uniqueidentifier 列。
 
 ROWGUIDCOL 属性并不强制列中所存储值的唯一性。 该属性也不会为插入表的新行自动生成值。 若要为每列生成唯一值，请在 INSERT 语句中使用 NEWID 函数。 可以指定默认值；但是，不能将 NEWID 指定为默认值。
 
-IDENTITY 指示新列是标识列。 在为表添加新行时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将为该列提供唯一的增量值。 标识列通常与 PRIMARY KEY 约束一起使用，作为表的唯一行标识符。 可以将 IDENTITY 属性分配到 tinyint、smallint、int、decimal(p,0) 或 numeric(p,0) 列       。 每个表只能创建一个标识列。 不能对标识列使用绑定默认值和 DEFAULT 约束。 必须同时指定 seed 和 increment，或者都不指定   。 如果二者都未指定，则取默认值 (1,1)。
+IDENTITY 指示新列是标识列。 在为表添加新行时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将为该列提供唯一的增量值。 标识列通常与 PRIMARY KEY 约束一起使用，作为表的唯一行标识符。 可以将 IDENTITY 属性分配到 tinyint、smallint、int、decimal(p,0) 或 numeric(p,0) 列     。 每个表只能创建一个标识列。 不能对标识列使用绑定默认值和 DEFAULT 约束。 必须同时指定 seed 和 increment，或者都不指定 。 如果二者都未指定，则取默认值 (1,1)。
 
 不能为 CLR 表值函数指定 IDENTITY。
 
-seed 是要分配给表中第一行的整数值  。
+seed 是要分配给表中第一行的整数值。
 
-increment 是要加到表中后续行的 seed 值上的整数值   。
+increment 是要加到表中后续行的 seed 值上的整数值 。
 
- \< column_constraint >::= and \< table_constraint>::= 
+ **\< column_constraint >::= and \< table_constraint>::=**
 
 为指定列或表定义约束。 对于 CLR 函数，允许的唯一约束类型为 NULL。 不允许命名约束。
 
@@ -455,31 +455,31 @@ CLUSTERED | NONCLUSTERED 指示为 PRIMARY KEY 或 UNIQUE 约束创建聚集索�
 
 CHECK 一个约束，该约束通过限制可输入一列或多列中的可能值来强制实现域完整性。 不能为 CLR 表值函数指定 CHECK 约束。
 
-logical_expression  返回 TRUE 或 FALSE 的逻辑表达式。
+logical_expression 返回 TRUE 或 FALSE 的逻辑表达式。
 
 **\<computed_column_definition>::=**
 
 指定计算列。 有关计算列的详细信息，请参阅 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)。
 
-column_name 是计算列的名称  。
+column_name 是计算列的名称。
 
-computed_column_expression 是定义计算列的值的表达式  。
+computed_column_expression 是定义计算列的值的表达式。
 
 **\<index_option>::=**
 
 为 PRIMARY KEY 或 UNIQUE 索引指定索引选项。 有关索引选项的详细信息，请参阅 [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)。
 
-PAD_INDEX = { ON | OFF } 指定索引填充  。 默认为 OFF。
+PAD_INDEX = { ON | OFF } 指定索引填充。 默认为 OFF。
 
-FILLFACTOR = fillfactor 指定一个百分比，指示在创建或更改索引的过程中，应将每个索引页面的叶级填充到什么程度  [!INCLUDE[ssDE](../../includes/ssde-md.md)]。 fillfactor 必须是 1 到 100 之间的整数  。 默认值为 0。
+FILLFACTOR = fillfactor 指定一个百分比，指示在创建或更改索引的过程中，应将每个索引页面的叶级填充到什么程度[!INCLUDE[ssDE](../../includes/ssde-md.md)]。 fillfactor 必须是 1 到 100 之间的整数。 默认值为 0。
 
-IGNORE_DUP_KEY = { ON | OFF  } 指定在插入操作尝试向唯一索引中插入重复键值时的错误响应。 IGNORE_DUP_KEY 选项仅适用于创建或重新生成索引后发生的插入操作。 默认为 OFF。
+IGNORE_DUP_KEY = { ON | OFF } 指定在插入操作尝试向唯一索引中插入重复键值时的错误响应。 IGNORE_DUP_KEY 选项仅适用于创建或重新生成索引后发生的插入操作。 默认为 OFF。
 
-STATISTICS_NORECOMPUTE = { ON | OFF } 指定是否重新计算分布统计信息  。 默认为 OFF。
+STATISTICS_NORECOMPUTE = { ON | OFF } 指定是否重新计算分布统计信息。 默认为 OFF。
 
-ALLOW_ROW_LOCKS = { ON | OFF } 指定是否允许行锁  。 默认值为 ON。
+ALLOW_ROW_LOCKS = { ON | OFF } 指定是否允许行锁。 默认值为 ON。
 
-ALLOW_PAGE_LOCKS = { ON | OFF } 指定是否允许使用页锁  。 默认值为 ON。
+ALLOW_PAGE_LOCKS = { ON | OFF } 指定是否允许使用页锁。 默认值为 ON。
 
 ## <a name="best-practices"></a>最佳实践
 
@@ -497,7 +497,7 @@ ALLOW_PAGE_LOCKS = { ON | OFF } 指定是否允许使用页锁  。 默认值为
 
 为了使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在类中重载时引用正确方法，\<method_specifier> 中指示的方法必须具有下列特征：
 
-- 接收 [ ,...n ] 中指定的参数数量  。
+- 接收 [ ,...n ] 中指定的参数数量。
 - 通过值而不是引用来接收所有参数。
 - 使用与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 函数中指定的类型兼容的参数类型。
 
@@ -507,7 +507,7 @@ ALLOW_PAGE_LOCKS = { ON | OFF } 指定是否允许使用页锁  。 默认值为
 
 ## <a name="general-remarks"></a>一般备注
 
-可在使用标量表达式的位置调用标量函数。 这包括计算列和 CHECK 约束定义。 也可以使用 [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md) 语句执行标量函数。 必须使用至少由两部分组成名称的函数来调用标量函数 (<schema><function>)  。 有关多部分名称的详细信息，请参阅 [Transact-SQL 语法约定 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。 在允许表表达式的情况下，可在 `SELECT`、`INSERT`、`UPDATE` 或 `DELETE` 语句的 `FROM` 子句中调用表值函数。 有关详细信息，请参阅[执行用户定义函数](../../relational-databases/user-defined-functions/execute-user-defined-functions.md)。
+可在使用标量表达式的位置调用标量函数。 这包括计算列和 CHECK 约束定义。 也可以使用 [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md) 语句执行标量函数。 必须使用至少由两部分组成名称的函数来调用标量函数 (<schema><function>)。 有关多部分名称的详细信息，请参阅 [Transact-SQL 语法约定 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。 在允许表表达式的情况下，可在 `SELECT`、`INSERT`、`UPDATE` 或 `DELETE` 语句的 `FROM` 子句中调用表值函数。 有关详细信息，请参阅[执行用户定义函数](../../relational-databases/user-defined-functions/execute-user-defined-functions.md)。
 
 ## <a name="interoperability"></a>互操作性
 
@@ -614,7 +614,7 @@ ALLOW_PAGE_LOCKS = { ON | OFF } 指定是否允许使用页锁  。 默认值为
 
 下面的示例将创建用户定义函数 `ISOweek`。 此函数使用日期参数来计算 ISO 周数。 要使此函数能正确计算，必须在调用该函数前调用 `SET DATEFIRST 1`。
 
-该示例还演示了如何使用 [EXECUTE AS](../../t-sql/statements/execute-as-clause-transact-sql.md) 子句指定可执行存储过程的安全上下文。 在该示例中，`CALLER` 选项指定该过程将在调用该过程的用户的上下文中执行。 还可以指定 `SELF`、`OWNER` 和 user_name 等其他选项  。
+该示例还演示了如何使用 [EXECUTE AS](../../t-sql/statements/execute-as-clause-transact-sql.md) 子句指定可执行存储过程的安全上下文。 在该示例中，`CALLER` 选项指定该过程将在调用该过程的用户的上下文中执行。 还可以指定 `SELF`、`OWNER` 和 user_name 等其他选项。
 
 下面是函数调用。 请注意，`DATEFIRST` 设置为 `1`。
 

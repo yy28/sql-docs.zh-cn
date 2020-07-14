@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5260ccc53fbdba1e0773dc43c021f0ec4f21e255
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 6d4cae8c42f8a29842e62f94cfcd7a87e187b4e0
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151551"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091624"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   如果为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]功能启用了 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 的实例，将创建新的可用性组。  
   
@@ -162,7 +162,7 @@ CREATE AVAILABILITY GROUP group_name
  FAILURE_CONDITION_LEVEL 和 HEALTH_CHECK_TIMEOUT 值为给定组定义“灵活的故障转移策略”。 此灵活的故障转移策略向您提供对必须导致自动故障转移的条件的精确控制。 有关详细信息，请参阅[针对可用性组的自动故障转移的灵活的故障转移策略 (SQL Server)](../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md)。  
   
  HEALTH_CHECK_TIMEOUT = milliseconds  
- 指定在 WSFC 群集假定服务器实例速度较慢或挂起前，等待 [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 系统存储过程返回服务器运行状况信息的等待时间（毫秒）。 HEALTH_CHECK_TIMEOUT 在组级别设置，但仅针对为具有自动故障转移的同步-提交可用性模式 (AVAILABILITY_MODE = SYNCHRONOUS_COMMIT) 配置的可用性副本。  此外，只有在主要副本和次要副本均配置为自动故障转移模式 (FAILOVER_MODE = AUTOMATIC) 并且次要副本当前与主要副本同步的情况下，运行状况检查超时才可以触发自动故障转移。  
+ 指定在 WSFC 群集假定服务器实例速度较慢或无响应前，等待 [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 系统存储过程返回服务器运行状况信息的等待时间（毫秒）。 HEALTH_CHECK_TIMEOUT 在组级别设置，但仅针对为具有自动故障转移的同步-提交可用性模式 (AVAILABILITY_MODE = SYNCHRONOUS_COMMIT) 配置的可用性副本。  此外，只有在主要副本和次要副本均配置为自动故障转移模式 (FAILOVER_MODE = AUTOMATIC) 并且次要副本当前与主要副本同步的情况下，运行状况检查超时才可以触发自动故障转移。  
   
  默认的 HEALTH_CHECK_TIMEOUT 值为 30000 毫秒（30 秒）。 最小值为 15000 毫秒（15 秒），最大值为 4294967295 毫秒。  
   
@@ -207,7 +207,7 @@ CREATE AVAILABILITY GROUP group_name
 > [!NOTE]  
 >  如果在创建可用性组时指定少于四个次要副本，则随时可以使用 [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句添加其他的次要副本。 还可以使用此语句从现有的可用性组中删除任何次要副本。  
   
- \<server_instance> 指定承载副本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例的地址。 地址格式依赖于该实例是默认实例还是命名实例以及它是独立实例还是故障转移群集实例 (FCI)，如下所示：  
+ \<server_instance> 指定承载副本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的地址。 地址格式依赖于该实例是默认实例还是命名实例以及它是独立实例还是故障转移群集实例 (FCI)，如下所示：  
   
  { '*system_name*[\\*instance_name*]' | '*FCI_network_name*[\\*instance_name*]' }  
   
@@ -356,7 +356,7 @@ CREATE AVAILABILITY GROUP group_name
  无  
  指定此可用性副本为主要副本时不支持只读路由。 此选项为默认行为。  
 
- READ_WRITE_ROUTING_URL = { ('\<server_instance>') }  
+ READ_WRITE_ROUTING_URL = { ('\<server_instance>') }    
  适用对象：SQL Server（从 SQL Server 2019 (15.x) 开始） 
 
  指定服务器实例，这些实例承载在以主角色运行时满足以下要求的此可用性组的可用性副本：
@@ -378,7 +378,7 @@ CREATE AVAILABILITY GROUP group_name
   
  需要将次要可用性组联接到分布式可用性组。 有关详细信息，请参阅 [ALTER AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/alter-availability-group-transact-sql.md)中的 PowerShell 将次要副本添加到现有的 AlwaysOn 可用性组。  
   
- \<ag_name> 指定构成一半分布式可用性组的可用性组的名称。  
+ \<ag_name> 指定构成一半分布式可用性组的可用性组名称。  
   
  LISTENER **='** TCP **://** _system-address_ **:** _port_ **'**  
  指定与可用性组关联的侦听器的 URL 路径。  
@@ -422,7 +422,7 @@ CREATE AVAILABILITY GROUP group_name
  MANUAL  
  指定手动种子设定（默认）。 此方法要求在主要副本上创建数据库的备份，并在次要可用性组的副本上手动还原该备份。  
   
- LISTENER 'dns\_name'( \<listener_option\> ) 为此可用性组定义新的可用性组侦听程序 。 LISTENER 是一个可选参数。  
+ LISTENER '_dns\_name_'( \<listener_option\> ) 为此可用性组定义新的可用性组侦听器  。 LISTENER 是一个可选参数。  
   
 > [!IMPORTANT]
 >  创建第一个侦听器之前，强烈建议阅读[创建或配置可用性组侦听程序 (SQL Server)](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)。  
@@ -462,13 +462,13 @@ CREATE AVAILABILITY GROUP group_name
  `WITH IP ( ('10.120.19.155','255.255.254.0') )`  
   
  *ip4_address*  
- 指定可用性组侦听器的由四部分组成的 IPv4 地址。 例如，`10.120.19.155` 。  
+ 指定可用性组侦听器的由四部分组成的 IPv4 地址。 例如，`10.120.19.155`。  
   
  *ipv4_mask*  
- 指定可用性组侦听器的由四部分组成的 IPv4 掩码。 例如，`255.255.254.0` 。  
+ 指定可用性组侦听器的由四部分组成的 IPv4 掩码。 例如，`255.255.254.0`。  
   
  ipv6_address  
- 指定可用性组侦听器的 IPv6 地址。 例如，`2001::4898:23:1002:20f:1fff:feff:b3a3` 。  
+ 指定可用性组侦听器的 IPv6 地址。 例如，`2001::4898:23:1002:20f:1fff:feff:b3a3`。  
   
  PORT = listener_port  
  指定端口号 listener_port，以供由 WITH IP 子句指定的可用组侦听器使用。 PORT 是可选的。  
@@ -496,7 +496,7 @@ CREATE AVAILABILITY GROUP group_name
 |------------------|-------------|-----------------|  
 |AUTOMATED_BACKUP_PREFERENCE|SECONDARY|此自动备份首选项指示应在辅助副本上发生备份，但在主副本是唯一联机的副本时（这是默认行为）除外。 为使 AUTOMATED_BACKUP_PREFERENCE 设置生效，您需要编写可用性数据库上备份作业的脚本，以便考虑自动备份首选项。|  
 |FAILURE_CONDITION_LEVEL|3|此失败条件级别设置指定在发生了严重的 SQL Server 内部错误（例如孤立的自旋锁、严重的写访问冲突或过多的转储）时应启动自动故障转移。|  
-|HEALTH_CHECK_TIMEOUT|600000|此运行状况检查超时值（60 秒）指定 WSFC 群集为 [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 系统存储过程等待 60000 毫秒，以便自动返回与托管同步提交副本的服务器实例有关的服务器运行状况信息，之后，群集将认为该主机服务器实例速度慢或已挂起。 （默认值为 30000 毫秒。）|  
+|HEALTH_CHECK_TIMEOUT|600000|此运行状况检查超时值（60 秒）指定 WSFC 群集为 [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 系统存储过程等待 60000 毫秒，以便自动返回与托管同步提交副本的服务器实例有关的服务器运行状况信息，之后，群集将认为该主机服务器实例速度慢或未响应。 （默认值为 30000 毫秒。）|  
   
  三个可用性副本将由名为 `COMPUTER01`、`COMPUTER02` 和 `COMPUTER03` 的计算机上的默认服务器实例承载。 下表总结了为每个副本的副本选项指定的值。  
   
@@ -584,6 +584,3 @@ GO
  [Always On 可用性组配置故障排除 (SQL Server)](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)   
  [AlwaysOn 可用性组概述 (SQL Server)](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
-  
-  
-

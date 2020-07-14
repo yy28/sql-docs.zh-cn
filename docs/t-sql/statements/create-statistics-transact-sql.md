@@ -26,15 +26,15 @@ ms.assetid: b23e2f6b-076c-4e6d-9281-764bdb616ad2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7efc30e37b1242c66df856f79944de687650b99d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3a2d74236b0c58776a43f4f2a56f7f240de72d2c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982569"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002508"
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   在表格、索引视图或外部表格的一列或多列上创建查询优化统计信息。 对于大多数查询，查询优化器已为高质量查询计划生成必要的统计信息；在少数情况下，您需要使用 CREATE STATISTICS 创建附加的统计信息或修改查询设计以提高查询性能。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "73982569"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 -- Create statistics on an external table  
@@ -88,7 +88,7 @@ ON { table_or_indexed_view_name } ( column [ ,...n ] )
     [ PAGECOUNT = numeric_contant ] 
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 CREATE STATISTICS statistics_name   
@@ -122,7 +122,7 @@ CREATE STATISTICS statistics_name
  *statistics_name*  
  是要创建的统计信息的名称。  
   
- table_or_indexed_view_name   
+ table_or_indexed_view_name  
  在其上创建统计信息的表格、索引视图或外部表格的名称。 若要在另一个数据库中创建统计信息，请指定限定的表名称。  
   
  *column [ ,...n]*  
@@ -130,13 +130,13 @@ CREATE STATISTICS statistics_name
   
  您可以指定任何可指定为索引键列的列，但下列情况除外：  
   
--   不能指定 Xml、全文和 FILESTREAM 列。   
+-   不能指定 Xml、全文和 FILESTREAM 列。  
   
 -   只有当 ARITHABORT 和 QUOTED_IDENTIFIER 数据库设置为 ON 时，才能指定计算列。  
   
 -   如果 CLR 用户定义类型支持二进制排序，则可以指定 CLR 用户定义类型列。 如果方法具有确定性标记，可以指定定义为用户定义类型的列的方法调用的计算列。  
   
- WHERE \<filter_predicate> 指定一个表达式，以选择在创建统计信息对象时要包括的行的子集。 使用筛选谓词创建的统计信息称作筛选统计信息。 筛选器谓词使用简单比较逻辑且不能引用计算列、UDT 列、空间数据类型列或 hierarchyID 数据类型列。  比较运算符不允许使用 NULL 文本的比较。 请改用 IS NULL 和 IS NOT NULL 运算符。  
+ WHERE \<filter_predicate> 指定一个表达式，以选择在创建统计信息对象时要包括的行的子集。 使用筛选谓词创建的统计信息称作筛选统计信息。 筛选器谓词使用简单比较逻辑且不能引用计算列、UDT 列、空间数据类型列或 hierarchyID 数据类型列。 比较运算符不允许使用 NULL 文本的比较。 请改用 IS NULL 和 IS NOT NULL 运算符。  
   
  下面是 Production.BillOfMaterials 表的筛选谓词的一些示例：  
   
@@ -153,8 +153,8 @@ CREATE STATISTICS statistics_name
   
  如果省略，SQL Server 会使用采样创建统计信息，并确定创建高质量查询计划所需的示例大小  
   
- SAMPLE number { PERCENT | ROWS }   
- 指定在查询优化器创建统计信息时所使用的表或索引视图中的近似行百分比或行数。 对于 PERCENT，number 可以介于 0 到 100 之间，对于 ROWS，number 可以介于 0 到总行数之间   。 查询优化器抽样的实际行百分比或行数可能与指定的行百分比或行数不匹配。 例如，查询优化器扫描数据页上的所有行。  
+ SAMPLE number { PERCENT | ROWS }  
+ 指定在查询优化器创建统计信息时所使用的表或索引视图中的近似行百分比或行数。 对于 PERCENT，number 可以介于 0 到 100 之间，对于 ROWS，number 可以介于 0 到总行数之间 。 查询优化器抽样的实际行百分比或行数可能与指定的行百分比或行数不匹配。 例如，查询优化器扫描数据页上的所有行。  
   
  对于基于默认抽样的查询计划并非最佳的特殊情况，SAMPLE 非常有用。 在大多数情况下，不必指定 SAMPLE，这是因为在默认情况下，查询优化器已根据需要采用抽样，并以统计方式确定大量样本的大小，以便创建高质量的查询计划。  
   
@@ -163,7 +163,7 @@ CREATE STATISTICS statistics_name
  我们建议不指定 0 PERCENT 或 0 ROWS。 如果指定 0 PERCENT 或 0 ROWS，则将创建统计信息对象，但该对象不包含任何统计信息数据。  
  
  PERSIST_SAMPLE_PERCENT = { ON | OFF }  
- 为 ON 时，统计信息将保留创建采样百分比，用于未明确指定采样百分比的后续更新。  为 OFF 时，在未明确指定采样百分比的后续更新中，统计信息采样百分比将重置为默认采样  。 默认为 **OFF**。 
+ 为 ON 时，统计信息将保留创建采样百分比，用于未明确指定采样百分比的后续更新。 为 OFF 时，在未明确指定采样百分比的后续更新中，统计信息采样百分比将重置为默认采样。 默认为 **OFF**。 
  
  > [!NOTE]
  > 如果该表被截断，则截断的 HoBT 上生成的所有统计信息将恢复为使用默认采样百分比。
@@ -174,7 +174,7 @@ CREATE STATISTICS statistics_name
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  NORECOMPUTE  
- 为 statistics_name 禁用自动统计信息更新选项 AUTO_STATISTICS_UPDATE。  如果指定了该选项，则查询优化器将完成 statistics_name 的任何正在进行中的统计信息更新并禁止在将来出现更新。   
+ 为 statistics_name 禁用自动统计信息更新选项 AUTO_STATISTICS_UPDATE。 如果指定了该选项，则查询优化器将完成 statistics_name 的任何正在进行中的统计信息更新并禁止在将来出现更新。  
   
  若要重新启用统计信息更新，请使用 [DROP STATISTICS](../../t-sql/statements/drop-statistics-transact-sql.md) 删除统计信息，然后运行 CREATE STATISTICS 但不使用 NORECOMPUTE 选项。  
   
@@ -184,7 +184,7 @@ CREATE STATISTICS statistics_name
  有关 AUTO_STATISTICS_UPDATE 选项的详细信息，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)。 有关禁用和重新启用统计信息更新的详细信息，请参阅[统计信息](../../relational-databases/statistics/statistics.md)。  
   
  INCREMENTAL = { ON | OFF }  
- 为 ON 时，根据分区统计信息创建统计信息  。 为 OFF 时，为所有分区合并统计信息。  默认为 **OFF**。  
+ 为 ON 时，根据分区统计信息创建统计信息。 为 OFF 时，为所有分区合并统计信息。 默认为 **OFF**。  
   
  如果不支持每个分区统计信息，将生成错误。 对于以下统计信息类型，不支持增量统计信息：  
   
@@ -198,12 +198,12 @@ CREATE STATISTICS statistics_name
   
 **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。  
   
-MAXDOP = max_degree_of_parallelism   
-**适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始）。  
+MAXDOP = max_degree_of_parallelism  
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始）。  
   
- 在统计信息操作期间替代最大并行度配置选项  。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。 使用 MAXDOP 可以限制在执行并行计划的过程中使用的处理器数量。 最大数量为 64 个处理器。  
+ 在统计信息操作期间替代最大并行度配置选项。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。 使用 MAXDOP 可以限制在执行并行计划的过程中使用的处理器数量。 最大数量为 64 个处理器。  
   
- max_degree_of_parallelism 可以是  ：  
+ max_degree_of_parallelism 可以是：  
   
  1  
  取消生成并行计划。  
@@ -221,7 +221,7 @@ MAXDOP = max_degree_of_parallelism
   
 -   ALTER TABLE  
 -   用户是表所有者  
--   具有 db_ddladmin 固定数据库角色的成员身份   
+-   具有 db_ddladmin 固定数据库角色的成员身份  
   
 ## <a name="general-remarks"></a>一般备注  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可使用 tempdb 在生成统计信息之前对已抽样的行进行排序。  
@@ -243,6 +243,7 @@ MAXDOP = max_degree_of_parallelism
 * 每个统计信息对象至多可列出 64 列。
 * MAXDOP 选项与 STATS_STREAM、ROWCOUNT 和 PAGECOUNT 选项不兼容。
 * 如果使用，MAXDOP 选项会受 Resource Governor 工作负载组 MAX_DOP 设置的限制。
+* Azure SQL 数据库中不支持外部表上的 CREATE 和 DROP STATISTICS。
   
 ## <a name="examples"></a>示例  
 
@@ -278,7 +279,7 @@ GO
 ```  
   
 ### <a name="d-create-statistics-on-an-external-table"></a>D. 在外部表上创建统计信息  
- 在外部表上创建统计信息时，除了提供列的列表，唯一需要做的决定是通过对行采样创建统计数据，还是通过扫描所有行创建统计数据。  
+ 在外部表上创建统计信息时，除了提供列的列表，唯一需要做的决定是通过对行采样创建统计数据，还是通过扫描所有行创建统计数据。 Azure SQL 数据库中不支持外部表上的 CREATE 和 DROP STATISTICS。
   
  由于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将外部表中的数据导入临时表，创建统计信息，所以完全扫描选项所需时间更长。 对于大型表格来说，通常情况下，使用默认采样方法就够了。  
   

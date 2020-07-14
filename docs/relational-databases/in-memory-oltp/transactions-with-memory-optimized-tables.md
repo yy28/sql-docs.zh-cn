@@ -1,5 +1,6 @@
 ---
 title: 具有内存优化表的事务 | Microsoft Docs
+description: 了解内存优化表和本机编译的存储过程的事务，以及它们与基于磁盘的表的事务的区别。
 ms.custom: ''
 ms.date: 01/16/2018
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: ba6f1a15-8b69-4ca6-9f44-f5e3f2962bc5
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0c80e52eff233c2d04cb77fb5cf5d85bdac8fe34
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e86e2957a4c9961a5d82d13737a3239deb9a7342
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68081758"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753185"
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>具有内存优化表的事务
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 本文介绍特定于内存优化表和本机编译存储过程的事务的所有方面。  
   
@@ -44,7 +45,7 @@ SQL Server 中的事务隔离级别以不同的方式应用到内存优化表与
   
 SQL Server 提供以下事务启动模式：  
   
-- **自动提交** — 启动简单的查询或 DML 语句将隐式打开事务，结束语句将隐式提交事务。 “自动提交”为默认设置  。  
+- **自动提交** — 启动简单的查询或 DML 语句将隐式打开事务，结束语句将隐式提交事务。 “自动提交”为默认设置。  
   - 在自动提交模式下，通常你不需要在 FROM 子句中编写内存优化表上事务隔离级别的相关表提示。  
   
 - **显式** - Transact-SQL 包含代码 BEGIN TRANSACTION，以及最终的 COMMIT TRANSACTION。 可将两个或更多个语句并入同一个事务。  
@@ -114,17 +115,17 @@ ALTER DATABASE CURRENT
   
 下面是阶段的描述。  
   
-#### <a name="regular-processing-phase-1-of-3"></a>常规处理：第 1 阶段（共 3 个）  
+#### <a name="regular-processing-phase-1-of-3"></a>常规处理：第 1 阶段（共 3 个阶段）  
   
 - 此阶段包括执行所有查询及查询中的 DML 语句。  
 - 在此阶段，语句从事务的逻辑开始时间起将看到内存优化表的版本。  
   
-#### <a name="validation-phase-2-of-3"></a>验证：第 2 阶段（共 3 个）  
+#### <a name="validation-phase-2-of-3"></a>验证：第 2 阶段（共 3 个阶段）  
   
 - 验证阶段首先分配结束时间，从而以逻辑方式将事务标记为完成。 此阶段完成后将使对事务进行的所有更改对依赖此事务的其他事务可见。 在此事务已成功提交之前将无法提交依赖于它的事务。 此外，不允许存在这种依赖关系的事务向客户端返回结果集，以确保客户端只看到已成功提交到数据库的数据。  
 - 此阶段包括可重复读验证和可序列化验证。 在可重复读验证中，它将检查该事务所读取的任何行从被读取以来是否有更新。 在可序列化验证中，它将检查是否向此事务所扫描的任何数据区域插入了任何行。 按[隔离级别和冲突](#isolation-levels)中的表所述，使用快照隔离时，可能会同时发生可重复读验证和可序列化验证，以验证唯一约束和外键约束的一致性。  
   
-#### <a name="commit-processing-phase-3-of-3"></a>提交处理：第 3 阶段（共 3 个）  
+#### <a name="commit-processing-phase-3-of-3"></a>提交处理：第 3 阶段（共 3 个阶段）  
   
 - 在提交阶段，对持久表的更改会写入日志，随后日志会写入磁盘。 然后，控制权将返回给客户端。  
 - 在提交处理完成后，所有依赖事务都会收到它们可以提交的通知。  
@@ -145,8 +146,8 @@ ALTER DATABASE CURRENT
 | **41305**| 可重复读验证失败。 此事务从内存优化表中读取的行已由另一个在此事务提交前提交的事务更新。 | 如果使用 REPEATABLE READ 或 SERIALIZABLE 隔离，并且某个并发事务的操作导致外键约束冲突，则会发生此错误。 <br/><br/>这种并发的外键约束冲突很少见，一般表示应用程序逻辑或数据输入出现了问题。 但是，如果外键约束所涉及的列上没有索引，也会发生此错误。 因此，建议始终在内存优化表中的外键列上创建索引。 <br/><br/> 有关外键冲突导致的验证失败的更多详细注意事项，请参阅 SQL Server 客户咨询团队发布的 [这篇博客文章](https://blogs.msdn.microsoft.com/sqlcat/2016/03/24/considerations-around-validation-errors-41305-and-41325-on-memory-optimized-tables-with-foreign-keys/) 。 |  
 | **41325** | 可序列化验证失败。 将新行插入到了现有事务之前已扫描的区域。 我们将此称为虚拟行。 | 如果使用 SERIALIZABLE 隔离，并且某个并发事务的操作导致主键约束、唯一约束或外键约束冲突，则会发生此错误。 <br/><br/> 这种并发的约束冲突很少见，一般表示应用程序逻辑或数据输入出现了问题。 但是，如果外键约束所涉及的列上没有索引，也会发生此错误，这一点与可重复读验证失败相似。 |  
 | **41301** | 依赖项失败：依赖另一个事务，但该事务随后无法提交。 | 此事务 (Tx1) 在另一个事务 (Tx2) 处于其验证或提交处理阶段时，通过读取该事务 (Tx2) 写入的数据依赖于 Tx2。 Tx2 随后无法提交。 Tx2 无法提交最常见的原因是可重复读 (41305) 和可序列化 (41325) 验证失败；不太常见的原因是日志 IO 失败。 |
-| 41823  和 41840  | 已达到内存优化表和表变量中的用户数据配额。 | 错误 41823 适用于 SQL Server Express/Web/Standard Edition，以及 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] 中的单一数据库。 错误 41840 适用于 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] 中的弹性池。 <br/><br/> 在大多数情况下，这些错误表示已达到最大用户数据大小。从内存优化表中删除数据可解决该错误。 但是，也存在极少数特殊情况，即此错误是暂时性的。 因此，我们建议在第一次遇到这些错误时重试。<br/><br/> 同此列表中的其他错误一样，错误 41823 和 41840 会导致活动事务中止。 |
-| **41839** | 事务超出了最大提交依赖项数目。 |适用对象：  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]。 更高版本的 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]没有提交依赖关系数量限制。<br/><br/> 给定事务 (Tx1) 可以依赖的事务数具有限制。 这些事务是传出依赖项。 此外，可以依赖给定事务 (Tx1) 的事务数也有限制。 这些事务是传入依赖项。 两个限制均为 8。 <br/><br/> 导致此失败最常见的情况是有大量读取事务正在访问由单个写入事务写入的数据。 如果所有读取事务都在对相同数据执行大范围扫描，并且写入事务的验证或提交处理时间很长，例如，写入事务在 SERIALIZABLE 隔离下执行大范围扫描（延长了验证阶段的持续时间）或事务日志放置在慢速日志 IO 设备上（延长了提交处理的持续时间），则发生这种情况的可能性会增加。 如果读取事务正在执行大范围扫描，但只需访问几行数据，则可能缺少索引。 同样，如果写入事务正在 SERIALIZABLE 隔离下执行大范围扫描，但只需访问几行数据，这也是缺少索引的征兆。 <br/><br/> 可以使用跟踪标志 9926  解除提交依赖关系数量限制。 只有在确认不缺少索引后仍发生此错误条件时，才使用此跟踪标志，因为它可能会掩盖上述情况中的这些问题。 另需注意的是，复杂的依赖关系图会导致系统效率低下，这里的复杂是指每个事务都有大量传入和传出依赖项，并且每个事务都有许多层依赖关系。  |
+| 41823 和 41840 | 已达到内存优化表和表变量中的用户数据配额。 | 错误 41823 适用于 SQL Server Express/Web/Standard Edition，以及 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] 中的单一数据库。 错误 41840 适用于 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] 中的弹性池。 <br/><br/> 在大多数情况下，这些错误表示已达到最大用户数据大小。从内存优化表中删除数据可解决该错误。 但是，也存在极少数特殊情况，即此错误是暂时性的。 因此，我们建议在第一次遇到这些错误时重试。<br/><br/> 同此列表中的其他错误一样，错误 41823 和 41840 会导致活动事务中止。 |
+| **41839** | 事务超出了最大提交依赖项数目。 |适用对象：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]。 更高版本的 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]没有提交依赖关系数量限制。<br/><br/> 给定事务 (Tx1) 可以依赖的事务数具有限制。 这些事务是传出依赖项。 此外，可以依赖给定事务 (Tx1) 的事务数也有限制。 这些事务是传入依赖项。 两个限制均为 8。 <br/><br/> 导致此失败最常见的情况是有大量读取事务正在访问由单个写入事务写入的数据。 如果所有读取事务都在对相同数据执行大范围扫描，并且写入事务的验证或提交处理时间很长，例如，写入事务在 SERIALIZABLE 隔离下执行大范围扫描（延长了验证阶段的持续时间）或事务日志放置在慢速日志 IO 设备上（延长了提交处理的持续时间），则发生这种情况的可能性会增加。 如果读取事务正在执行大范围扫描，但只需访问几行数据，则可能缺少索引。 同样，如果写入事务正在 SERIALIZABLE 隔离下执行大范围扫描，但只需访问几行数据，这也是缺少索引的征兆。 <br/><br/> 可以使用跟踪标志 9926 解除提交依赖关系数量限制。 只有在确认不缺少索引后仍发生此错误条件时，才使用此跟踪标志，因为它可能会掩盖上述情况中的这些问题。 另需注意的是，复杂的依赖关系图会导致系统效率低下，这里的复杂是指每个事务都有大量传入和传出依赖项，并且每个事务都有许多层依赖关系。  |
   
 ### <a name="retry-logic"></a>重试逻辑 
 

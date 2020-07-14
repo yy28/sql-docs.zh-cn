@@ -1,5 +1,6 @@
 ---
 title: 配置 Always Encrypted 的 enclave 类型服务器配置选项 | Microsoft Docs
+description: 了解如何启用或禁用 Always Encrypted 的安全 enclave。 了解如何确认 enclave 是否已正确初始化。
 ms.custom: ''
 ms.date: 09/24/2018
 ms.prod: sql
@@ -10,27 +11,27 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4786c512850d161d9b7ab33f2a12cd0bd077b2bd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6e16bbd33d9353c02cf72e3c931a5d8749197f5d
+ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73593821"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84818361"
 ---
 # <a name="configure-the-enclave-type-for-always-encrypted-server-configuration-option"></a>配置 Always Encrypted 的 enclave 类型服务器配置选项
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
 本文介绍如何为具有安全 enclave 的 Always Encrypted 启用或禁用安全 enclave。 有关详细信息，请参阅[具有安全 enclave 的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)。
 
-列加密 enclave 类型  服务器配置选项控制用于 Always Encrypted 的安全 enclave 类型。 该选项可以设置为以下值之一：  
+列加密 enclave 类型服务器配置选项控制用于 Always Encrypted 的安全 enclave 类型。 该选项可以设置为以下值之一：  
   
 |值|说明|  
 |-------------------|-----------------| 
-|0|没有安全 enclave  。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 不会为 Always Encrypted 初始化安全 enclave。 因此，具有安全 enclave 的 Always Encrypted 功能将不可用。|  
-|1|基于虚拟化的安全性 (VBS)  。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 会尝试初始化基于虚拟化的安全性 (VBS) enclave。
+|0|没有安全 enclave。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 不会为 Always Encrypted 初始化安全 enclave。 因此，具有安全 enclave 的 Always Encrypted 功能将不可用。|  
+|1|基于虚拟化的安全性 (VBS)。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 会尝试初始化基于虚拟化的安全性 (VBS) enclave。
 
 > [!IMPORTANT]
-> 对列加密 enclave 类型  的更改直到重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例才会生效。
+> 对列加密 enclave 类型的更改直到重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例才会生效。
    
 可以使用 [sys.configurations (Transact-SQL)](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) 视图检查配置的 enclave 类型值和当前生效的 enclave 类型值。 
 

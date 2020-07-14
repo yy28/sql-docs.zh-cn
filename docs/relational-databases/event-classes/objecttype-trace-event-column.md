@@ -1,5 +1,6 @@
 ---
 title: ObjectType 跟踪事件列 | Microsoft Docs
+description: 了解对象类型跟踪事件列的可能值，它们用在 SQL Server 中的各种跟踪事件中。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: 42f85c50-34c9-49ca-955f-af9595e2707f
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 76675cf49ba1ac19e18b3bb4b96980aa30c4f6c3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f583813ae44cb180005b0cb9eeb592b3a946508c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115890"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755975"
 ---
 # <a name="objecttype-trace-event-column"></a>ObjectType 跟踪事件列
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   ObjectType 跟踪事件列用在各种跟踪事件中。 本主题说明此列的可能值以及其相关定义。  
   
 ## <a name="object-type-column-values"></a>ObjectType 列值  
@@ -42,7 +43,7 @@ ms.locfileid: "68115890"
 |8280|扩展存储过程|  
 |16724|CLR 触发器|  
 |16964|数据库|  
-|16975|Object|  
+|16975|对象|  
 |17222|全文目录|  
 |17232|CLR 存储过程|  
 |17235|架构|  

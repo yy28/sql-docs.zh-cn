@@ -25,15 +25,15 @@ ms.assetid: ddcef3a6-0341-43e0-ae73-630484b7b398
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ffdfd5662cd8bbfd4b9cd580a4df141a4c5a4bd
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: cfe397ae8b508e7821af6b3b9d837434129a3e56
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634187"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999759"
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT - OVER 子句 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   在应用关联的开窗函数前确定行集的分区和排序。 也就是说，OVER 子句定义查询结果集内的窗口或用户指定的行集。 然后，开窗函数将计算窗口中每一行的值。 您可以将 OVER 子句与函数一起使用，以便计算各种聚合值，例如移动平均值、累积聚合、运行总计或每组结果的前 N 个结果。  
   
@@ -111,17 +111,17 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  PARTITION BY  
  将查询结果集分为多个分区。 开窗函数分别应用于每个分区，并为每个分区重新启动计算。  
   
- value_expression   
- 指定行集按其分区的列。 value_expression 只能引用可供 FROM 子句使用的列  。 value_expression 不能引用选择列表中的表达式或别名  。 value_expression 可以是列表达式、标量子查询、标量函数或用户定义的变量  。  
+ value_expression  
+ 指定行集按其分区的列。 value_expression 只能引用可供 FROM 子句使用的列。 value_expression 不能引用选择列表中的表达式或别名。 value_expression 可以是列表达式、标量子查询、标量函数或用户定义的变量。  
   
- \<ORDER BY 子句 >  
+ \<ORDER BY clause>  
  定义结果集的每个分区中行的逻辑顺序。 也就是说，它指定按其执行开窗函数计算的逻辑顺序。  
   
- order_by_expression   
- 指定用于进行排序的列或表达式。 order_by_expression 只能引用可供 FROM 子句使用的列  。 不能将整数指定为表示列名或别名。  
+ order_by_expression  
+ 指定用于进行排序的列或表达式。 order_by_expression 只能引用可供 FROM 子句使用的列。 不能将整数指定为表示列名或别名。  
   
- COLLATE collation_name   
- 指定应该根据在 collation_name 中指定的排序规则执行 ORDER BY 操作  。 collation_name 既可以是 Windows 排序规则名称，也可以是 SQL 排序规则名称  。 有关详细信息，请参阅 [排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)。 COLLATE 仅适用于 char、nchar、varchar 和 nvarchar 类型的列     。  
+ COLLATE collation_name  
+ 指定应该根据在 collation_name 中指定的排序规则执行 ORDER BY 操作。 collation_name 既可以是 Windows 排序规则名称，也可以是 SQL 排序规则名称。 有关详细信息，请参阅 [排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)。 COLLATE 仅适用于 char、nchar、varchar 和 nvarchar 类型的列   。  
   
  **ASC** | DESC  
  指定按升序或降序排列指定列中的值。 ASC 是默认排序顺序。 Null 值被视为最低的可能值。  
@@ -141,26 +141,26 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
   
  指定窗口在分区中的第一行开始。 UNBOUNDED PRECEDING 只能指定为窗口起点。  
   
- \<无符号值指定> PRECEDING  
- 使用 \<无符号值指定> 指示要置于当前行之前的行或值的数目。 对于 RANGE 则不允许这样指定。  
+ \<unsigned value specification> PRECEDING  
+ 使用 \<unsigned value specification> 指定，用以指示要置于当前行之前的行或值的数目。 对于 RANGE 则不允许这样指定。  
   
  CURRENT ROW  
 **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。 
   
  在与 ROWS 一起使用时指定窗口在当前行开始或结束，或者在与 RANGE 一起使用时指定当前值。 CURRENT ROW 可指定为既是起点，又是终点。  
   
- BETWEEN \<窗口框架限定\< AND <窗口框架限定>  
+ BETWEEN \<window frame bound > AND \<window frame bound >  
 **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。 
   
- 与 ROWS 或 RANGE 一起使用，以便指定窗口的下（开始）边界和上（结束）边界点。 \<窗口框架限定> 定义边界起点，\<窗口框架限定> 定义边界结点。 上限不能小于下限。  
+ 与 ROWS 或 RANGE 一起使用，以便指定窗口的下（开始）边界和上（结束）边界点。 \<window frame bound> 定义边界起点，\<window frame bound> 定义边界终点。 上限不能小于下限。  
   
  UNBOUNDED FOLLOWING  
 **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。 
   
  指定窗口在分区的最后一行结束。 UNBOUNDED FOLLOWING 只能指定为窗口终点。 例如，RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING 定义以当前行开始、以分区的最后一行结束的窗口。  
   
- \<无符号值指定> FOLLOWING  
- 使用 \<无符号值指定> 指示要置于当前行之后的行或值的数目。 在 \<无符号值指定> FOLLOWING 指定为窗口起点时，终点必须是 \<无符号值指定>FOLLOWING。 例如，ROWS BETWEEN 2 FOLLOWING AND 10 FOLLOWING 定义一个窗口，该窗口以跟随在当前行之后的第二行开头、以跟随在当前行之后的第十行结尾。 对于 RANGE 则不允许这样指定。  
+ \<unsigned value specification> FOLLOWING  
+ 使用 \<unsigned value specification> 指定，用以指示要置于当前行之后的行或值的数目。 当 \<unsigned value specification> FOLLOWING 指定为窗口起点时，终点必须为 \<unsigned value specification>FOLLOWING。 例如，ROWS BETWEEN 2 FOLLOWING AND 10 FOLLOWING 定义一个窗口，该窗口以跟随在当前行之后的第二行开头、以跟随在当前行之后的第十行结尾。 对于 RANGE 则不允许这样指定。  
   
  无符号整数文字  
 **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。  
@@ -174,7 +174,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  
 ### <a name="important"></a>重要说明！
 
-如果指定 ROWS/RANGE 并且 \<窗口框架前置> 用于 \<窗口框架区>（简短语法），则这一指定用于窗口框架边界起点并且 CURRENT ROW 用于边界终点。 例如，“ROWS 5 PRECEDING”等于“ROWS BETWEEN 5 PRECEDING AND CURRENT ROW”。  
+如果指定 ROWS/RANGE 并且 \<window frame preceding> 用于 \<window frame extent>（简短语法），则这一指定用于窗口框架边界起点并且 CURRENT ROW 用于边界终点。 例如，“ROWS 5 PRECEDING”等于“ROWS BETWEEN 5 PRECEDING AND CURRENT ROW”。  
   
 > [!NOTE]
 > 如果未指定 ORDER BY，则整个分区将用于窗口框架。 这仅适用于不要求 ORDER BY 子句的函数。 如果未指定 ROWS/RANGE，但指定了 ORDER BY，则将 RANGE UNBOUNDED PRECEDING AND CURRENT ROW 用作窗口框架的默认值。 这仅适用于可接受可选 ROWS/RANGE 指定的函数。 例如，排名函数无法接受 ROWS/RANGE，因此，此窗口框架不适用，甚至在存在 ORDER BY 而不存在 ROWS/RANGE 时也是如此。  
@@ -182,9 +182,9 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
 ## <a name="limitations-and-restrictions"></a>限制和局限  
  OVER 子句不能与 CHECKSUM 聚合函数结合使用。  
   
- RANGE 不能用于 \<无符号值指定> PRECEDING 或 \<无符号值指定> FOLLOWING。  
+ RANGE 不能用于 \<unsigned value specification> PRECEDING 或 \<unsigned value specification> FOLLOWING。  
   
- 根据用于 OVER 子句的排名、聚合或分析函数，可能不支持 \<ORDER BY 子句> 和/或 \<ROWS 和 RANGE 子句>。  
+ 根据用于 OVER 子句的排名、聚合或分析函数，可能不支持 \<ORDER BY clause> 和/或 \<ROWS and RANGE clause>。  
   
 ## <a name="examples"></a>示例  
   
@@ -323,11 +323,11 @@ USE AdventureWorks2012;
 GO  
 SELECT BusinessEntityID, TerritoryID   
    ,DATEPART(yy,ModifiedDate) AS SalesYear  
-   ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
-   ,CONVERT(varchar(20),AVG(SalesYTD) OVER (PARTITION BY TerritoryID   
+   ,CONVERT(VARCHAR(20),SalesYTD,1) AS  SalesYTD  
+   ,CONVERT(VARCHAR(20),AVG(SalesYTD) OVER (PARTITION BY TerritoryID   
                                             ORDER BY DATEPART(yy,ModifiedDate)   
                                            ),1) AS MovingAvg  
-   ,CONVERT(varchar(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
+   ,CONVERT(VARCHAR(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
                                             ORDER BY DATEPART(yy,ModifiedDate)   
                                             ),1) AS CumulativeTotal  
 FROM Sales.SalesPerson  
@@ -360,10 +360,10 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
 ```sql  
 SELECT BusinessEntityID, TerritoryID   
    ,DATEPART(yy,ModifiedDate) AS SalesYear  
-   ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
-   ,CONVERT(varchar(20),AVG(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
+   ,CONVERT(VARCHAR(20),SalesYTD,1) AS SalesYTD  
+   ,CONVERT(VARCHAR(20),AVG(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
                                             ),1) AS MovingAvg  
-   ,CONVERT(varchar(20),SUM(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
+   ,CONVERT(VARCHAR(20),SUM(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
                                             ),1) AS CumulativeTotal  
 FROM Sales.SalesPerson  
 WHERE TerritoryID IS NULL OR TerritoryID < 5  
@@ -392,13 +392,13 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
   
 **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。  
   
- 以下示例使用 ROWS 子句定义其行将作为当前行以及后随的 N 行（在此示例中为 1 行）计算的窗口  。  
+ 以下示例使用 ROWS 子句定义其行将作为当前行以及后随的 N 行（在此示例中为 1 行）计算的窗口。  
   
 ```sql  
 SELECT BusinessEntityID, TerritoryID   
-    ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
+    ,CONVERT(VARCHAR(20),SalesYTD,1) AS SalesYTD  
     ,DATEPART(yy,ModifiedDate) AS SalesYear  
-    ,CONVERT(varchar(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
+    ,CONVERT(VARCHAR(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
                                              ORDER BY DATEPART(yy,ModifiedDate)   
                                              ROWS BETWEEN CURRENT ROW AND 1 FOLLOWING ),1) AS CumulativeTotal  
 FROM Sales.SalesPerson  
@@ -426,9 +426,9 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
   
 ```sql  
 SELECT BusinessEntityID, TerritoryID   
-    ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
+    ,CONVERT(VARCHAR(20),SalesYTD,1) AS SalesYTD  
     ,DATEPART(yy,ModifiedDate) AS SalesYear  
-    ,CONVERT(varchar(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
+    ,CONVERT(VARCHAR(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
                                              ORDER BY DATEPART(yy,ModifiedDate)   
                                              ROWS UNBOUNDED PRECEDING),1) AS CumulativeTotal  
 FROM Sales.SalesPerson  
@@ -463,7 +463,7 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
   
 SELECT ROW_NUMBER() OVER(ORDER BY SUM(SalesAmountQuota) DESC) AS RowNumber,  
     FirstName, LastName,   
-CONVERT(varchar(13), SUM(SalesAmountQuota),1) AS SalesQuota   
+CONVERT(VARCHAR(13), SUM(SalesAmountQuota),1) AS SalesQuota   
 FROM dbo.DimEmployee AS e  
 INNER JOIN dbo.FactSalesQuota AS sq  
     ON e.EmployeeKey = sq.EmployeeKey  

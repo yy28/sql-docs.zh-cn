@@ -14,38 +14,38 @@ helpviewer_keywords:
 ms.assetid: f9ef89ed-36f6-431b-8843-25d445ec137f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5d1a8b0c8f674dd39ece67cb79db0110cfd55994
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 68f87213d310c909d266a20c235f1686f66e6902
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321237"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896810"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication"></a>创建事务发布的可更新订阅
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 > [!NOTE]  
 >  此功能在从 2012 到 2016 的 [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] 版本中仍然受支持。  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
 
 通过事务复制，可以将在订阅服务器上进行的更改回传到使用立即或排队更新订阅的发布服务器。 可以使用复制存储过程以编程方式创建更新订阅。 
  
-可以在“新建订阅向导”的“可更新订阅”页上配置可更新订阅。   只有为可更新订阅启用了事务发布，此页才可用。 有关启用可更新订阅的详细信息，请参阅[为事务发布启用更新订阅](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)。   
+可以在“新建订阅向导”的“可更新订阅”页上配置可更新订阅。  只有为可更新订阅启用了事务发布，此页才可用。 有关启用可更新订阅的详细信息，请参阅[为事务发布启用更新订阅](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)。   
   
 ## <a name="configure-an-updatable-subscription-from-the-publisher"></a>从发布服务器配置可更新订阅  
 
 1. 在 Microsoft SQL Server Management Studio 中连接到发布服务器，然后展开服务器节点。
 2. 展开 **“复制”** 文件夹，再展开 **“本地发布”** 文件夹。
-3. 右键单击为更新订阅启用的事务发布，然后单击“新建订阅”。 
+3. 右键单击为更新订阅启用的事务发布，然后单击“新建订阅”。
 4. 按照向导中的页，为订阅指定选项，如分发代理应在何处运行。
-5. 在“新建订阅向导”的“可更新订阅”页上，确保已选中“复制”。   
-6. 从“在发布服务器提交”下拉列表中选择一个选项： 
+5. 在“新建订阅向导”的“可更新订阅”页上，确保已选中“复制”。  
+6. 从“在发布服务器提交”下拉列表中选择一个选项：
 
-    * 若要使用立即更新订阅，请选择“同时提交更改”。  如果选择此选项，并且发布允许排队更新订阅（使用新建发布向导所创建发布的默认设置），则订阅属性 **update_mode** 将设置为“故障转移”。  此模式使您以后在必要时能够切换到排队更新。
+    * 若要使用立即更新订阅，请选择“同时提交更改”。 如果选择此选项，并且发布允许排队更新订阅（使用新建发布向导所创建发布的默认设置），则订阅属性 **update_mode** 将设置为“故障转移”。 此模式使您以后在必要时能够切换到排队更新。
 
-    * 若要使用排队更新订阅，请选择“对更改进行排队并在可能时提交”。  如果选择此选项且发布允许立即更新订阅（使用新建发布向导所创建发布的默认设置），而且订阅服务器运行的是 SQL Server 2005 或更高版本，则订阅属性 **update_mode** 将设置为排队故障转移。 此模式使您以后在必要时能够切换到立即更新。
+    * 若要使用排队更新订阅，请选择“对更改进行排队并在可能时提交”。 如果选择此选项且发布允许立即更新订阅（使用新建发布向导所创建发布的默认设置），而且订阅服务器运行的是 SQL Server 2005 或更高版本，则订阅属性 **update_mode** 将设置为排队故障转移。 此模式使您以后在必要时能够切换到立即更新。
 
     有关切换更新模式的详细信息，请参阅[切换可更新事务性订阅的更新模式](../../../relational-databases/replication/administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md)。
 
-7. 对于使用立即更新或将 **update_mode** 设置为**排队故障转移**的订阅，显示“用于可更新订阅的登录名”页。 在“用于可更新订阅的登录名”页上，指定链接服务器，通过此服务器可与发布服务器建立连接，以便立即更新订阅。  连接用于在订阅服务器上激发的触发器，这些触发器用于将更改传播到发布服务器。 选择以下选项之一：
+7. 对于使用立即更新或将 **update_mode** 设置为**排队故障转移**的订阅，显示“用于可更新订阅的登录名”页。 在“用于可更新订阅的登录名”页上，指定链接服务器，通过此服务器可与发布服务器建立连接，以便立即更新订阅。 连接用于在订阅服务器上激发的触发器，这些触发器用于将更改传播到发布服务器。 选择以下选项之一：
 
     * **创建使用 SQL Server 身份验证进行连接的链接服务器。** 如果尚未在订阅服务器和发布服务器之间定义远程服务器或链接服务器，则选择此选项。 复制会为您创建链接服务器。 所指定的帐户在发布服务器上必须已经存在。
 
@@ -61,20 +61,20 @@ ms.locfileid: "75321237"
 1. 在 SQL Server Management Studio 中连接到订阅服务器，然后展开服务器节点。
 2. 展开 **“复制”** 文件夹。
 3. 右键单击 **“本地订阅”** 文件夹，再单击 **“新建订阅”** 。
-4. 在“新建订阅向导”的“发布”页上，从“发布服务器”下拉列表中选择“查找 SQL Server 发布服务器”。    
+4. 在“新建订阅向导”的“发布”页上，从“发布服务器”下拉列表中选择“查找 SQL Server 发布服务器”。   
 5. 在 **“连接到服务器”** 对话框中连接到发布服务器。
-6. 在“发布”页上，选择为更新订阅启用的事务发布。 
+6. 在“发布”页上，选择为更新订阅启用的事务发布。
 7. 按照向导中的页，为订阅指定选项，如分发代理应在何处运行。
-8. 在“新建订阅向导”的“可更新订阅”页上，确保已选中“复制”。  
-9. 从“在发布服务器提交”下拉列表中选择一个选项： 
+8. 在“新建订阅向导”的“可更新订阅”页上，确保已选中“复制”。 
+9. 从“在发布服务器提交”下拉列表中选择一个选项：
 
-    * 若要使用立即更新订阅，请选择“同时提交更改”。  如果选择此选项，并且发布允许排队更新订阅（使用新建发布向导所创建发布的默认设置），则订阅属性 **update_mode** 将设置为“故障转移”。  此模式使您以后在必要时能够切换到排队更新。
+    * 若要使用立即更新订阅，请选择“同时提交更改”。 如果选择此选项，并且发布允许排队更新订阅（使用新建发布向导所创建发布的默认设置），则订阅属性 **update_mode** 将设置为“故障转移”。 此模式使您以后在必要时能够切换到排队更新。
 
-    * 若要使用排队更新订阅，请选择“对更改进行排队并在可能时提交”。  如果选择此选项且发布允许立即更新订阅（使用新建发布向导所创建发布的默认设置），而且订阅服务器运行的是 SQL Server 2005 或更高版本，则订阅属性 **update_mode** 将设置为排队**故障转移**。 此模式使您以后在必要时能够切换到立即更新。
+    * 若要使用排队更新订阅，请选择“对更改进行排队并在可能时提交”。 如果选择此选项且发布允许立即更新订阅（使用新建发布向导所创建发布的默认设置），而且订阅服务器运行的是 SQL Server 2005 或更高版本，则订阅属性 **update_mode** 将设置为排队**故障转移**。 此模式使您以后在必要时能够切换到立即更新。
 
     有关切换更新模式的详细信息，请参阅[切换可更新事务性订阅的更新模式](../../../relational-databases/replication/administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md)。
 
-10. 对于使用立即更新或将 **update_mode** 设置为排队**故障转移**的订阅，显示“用于可更新订阅的登录名”页。 在“用于可更新订阅的登录名”页上，指定链接服务器，通过此服务器可与发布服务器建立连接，以便立即更新订阅。  连接用于在订阅服务器上激发的触发器，这些触发器用于将更改传播到发布服务器。 选择以下选项之一：
+10. 对于使用立即更新或将 **update_mode** 设置为排队**故障转移**的订阅，显示“用于可更新订阅的登录名”页。 在“用于可更新订阅的登录名”页上，指定链接服务器，通过此服务器可与发布服务器建立连接，以便立即更新订阅。 连接用于在订阅服务器上激发的触发器，这些触发器用于将更改传播到发布服务器。 选择以下选项之一：
 
     * **创建使用 SQL Server 身份验证进行连接的链接服务器。** 如果尚未在订阅服务器和发布服务器之间定义远程服务器或链接服务器，则选择此选项。 复制会为您创建链接服务器。 所指定的帐户在发布服务器上必须已经存在。
 
@@ -201,7 +201,7 @@ ms.locfileid: "75321237"
 1. 在发布服务器上，通过执行 [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)验证发布是否支持排队更新订阅。 
 
     * 如果结果集中 allow_queued_tran 的值为 1，说明发布支持排队更新订阅。
-    * 如果结果集中 allow_queued_tran 的值为 0，说明必须重新创建该发布以使其支持排队更新订阅。 有关详细信息，请参阅“如何为事务发布启用更新订阅（复制 Transact-SQL 编程）”。
+    * 如果结果集中 allow_queued_tran 的值为 0，说明必须重新创建该发布以使其支持排队更新订阅。 有关详细信息，请参阅如何：为事务发布启用更新订阅（复制 Transact-SQL 编程）。
 
 2. 在发布服务器上，通过执行 [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)以验证发布是否支持推送订阅。 
 
@@ -228,10 +228,10 @@ ms.locfileid: "75321237"
     * 该订阅的分发代理作业计划。
 
 ## <a name="set-queued-updating-conflict-resolution-options"></a>设置已排队的更新冲突解决选项 
-在“发布属性 - \<发布>”对话框的“订阅选项”页上，为支持排队更新订阅的发布设置冲突解决选项。 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+ 在“发布属性 - \<Publication>”对话框的“订阅选项”页上，为支持排队更新订阅的发布设置冲突解决选项。 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
   
-1.  在“发布属性 - \<发布>”对话框的“订阅选项”页上，为“冲突解决策略”选项选择以下值之一：  
+1.  在“发布属性 - \<Publication>”对话框的“订阅选项”页上，为“冲突解决策略”选项选择以下值之一：  
   
     -   **保留发布服务器更改**    
     -   **保留订阅服务器更改**    

@@ -3,21 +3,21 @@ title: Linux 上的 SQL Server 2017 的发行说明
 description: 本文包含 Linux 上运行的 SQL Server 2017 的发行说明和支持功能。 发行说明适用于最新版本和几个以前的版本。
 author: VanMSFT
 ms.author: vanto
-ms.date: 04/10/2020
+ms.date: 07/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 0decf0cbaf3d64353e76c4927369503add744808
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: be72cfb4fd0645af7ca07ae8c1042ec41bf75052
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81298257"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882700"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 上的 SQL Server 2017 的发行说明
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 以下发行说明适用于 Linux 上运行的 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]。 本文按各版本分为不同的部分。 GA 版本提供了详细的支持，并列出了已知的问题。 每个累积更新 (CU) 或常规分发版本 (GDR) 都有指向介绍 CU 更改的支持文章的链接，还有指向 Linux 包下载的链接。
 
@@ -46,6 +46,7 @@ ms.locfileid: "81298257"
 
 | 发布               | 版本       | 发布日期 |
 |-----------------------|---------------|--------------|
+| [CU21](#CU21)         | 14.0.3335.7   | 2020-07-01   |
 | [CU20](#CU20)         | 14.0.3294.2   | 2020-04-10   |
 | [CU19](#CU19)         | 14.0.3281.6   | 2020-02-05   |
 | [CU18](#CU18)         | 14.0.3257.3   | 2019-12-09   |
@@ -73,7 +74,7 @@ ms.locfileid: "81298257"
 
 ## <a name="how-to-install-updates"></a><a id="cuinstall"></a> 如何安装更新
 
-如果已配置 CU 存储库 (mssql-server-2017)，则在执行新安装时将获得 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 包的最新 CU  。 CU 存储库是 Linux 上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的所有包安装文章的默认库。 如果已配置 GDR 存储库 (mssql-server-2017-gdr)，将仅获得自 GA 以来发布的关键安全更新  。 如果需要 Docker 容器 CU 或 GDR 更新，请参阅 [适用于 Docker 引擎的 Linux 上的 Microsoft SQL Server](https://hub.docker.com/r/microsoft/mssql-server)。 有关存储库配置的详细信息，请参阅[为 Linux 上的 SQL Server 配置存储库](sql-server-linux-change-repo.md)。
+如果已配置 CU 存储库 (mssql-server-2017)，则在执行新安装时将获得 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 包的最新 CU。 CU 存储库是 Linux 上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的所有包安装文章的默认库。 如果已配置 GDR 存储库 (mssql-server-2017-gdr)，将仅获得自 GA 以来发布的关键安全更新。 如果需要 Docker 容器 CU 或 GDR 更新，请参阅 [适用于 Docker 引擎的 Linux 上的 Microsoft SQL Server](https://hub.docker.com/r/microsoft/mssql-server)。 有关存储库配置的详细信息，请参阅[为 Linux 上的 SQL Server 配置存储库](sql-server-linux-change-repo.md)。
 
 如果要更新现有的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 包，请为每个包运行相应的更新命令以获取最新的 CU。 有关每个包的特定更新说明，请参阅以下安装指南：
 
@@ -81,6 +82,27 @@ ms.locfileid: "81298257"
 - [安装全文搜索包](sql-server-linux-setup-full-text-search.md)
 - [安装 SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 - [启用 SQL Server 代理](sql-server-linux-setup-sql-agent.md)
+
+## <a name="cu21-july-2020"></a><a id="CU21"></a> CU21（2020 年 7 月）
+
+这是 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 的累积更新 21 (CU21) 发行版。 此发行版的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 版本为 14.0.3335.7。 若要了解此发行版中的修补程序和改进，请参阅 <https://support.microsoft.com/help/4557397>。
+
+### <a name="package-details"></a>包详细信息
+
+对于手动安装或脱机包安装，可以下载 RPM 和 Debian 包，其信息如下表所示：
+
+> [!NOTE]
+> 自 CU20 起，SQL Server 2017 现已开始支持 Ubuntu 18.04 和 RHEL 8。
+>
+> Ubuntu 的脱机包安装链接指向 Ubuntu 18.04 包，不适用于 Ubuntu 18.04 的 SSIS 包除外。 若要查找 Ubuntu 16.04 包，请参阅下载路径 <https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/>。
+>
+> Red Hat 的脱机包安装链接指向 RHEL 8 包，不适用于 RHEL 8 的 SSIS 包除外。 若要查找 RHEL 7 包，请参阅下载路径 <https://packages.microsoft.com/rhel/7/mssql-server-2017/>。
+
+| 程序包 | 包版本 | 下载 |
+|-----|-----|-----|
+| Red Hat RPM 包 | 14.0.3335.7-17 | [引擎 RPM 包](https://packages.microsoft.com/rhel/8/mssql-server-2017/mssql-server-14.0.3335.7-17.x86_64.rpm)</br>[高可用性 RPM 包](https://packages.microsoft.com/rhel/8/mssql-server-2017/mssql-server-ha-14.0.3335.7-17.x86_64.rpm)</br>[全文搜索 RPM 包](https://packages.microsoft.com/rhel/8/mssql-server-2017/mssql-server-fts-14.0.3335.7-17.x86_64.rpm)</br>[SSIS 包](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| SLES RPM 包 | 14.0.3335.7-17 | [mssql-server 引擎 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3335.7-17.x86_64.rpm)</br>[高可用性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3335.7-17.x86_64.rpm)</br>[全文搜索 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3335.7-17.x86_64.rpm) | 
+| Ubuntu 18.04 Debian 包 | 14.0.3335.7-17 | [引擎 Debian 包](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3335.7-17_amd64.deb)</br>[高可用性 Debian 包](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3335.7-17_amd64.deb)</br>[全文搜索 Debian 包](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3335.7-17_amd64.deb)<br/>[SSIS 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
 ## <a name="cu20-april-2020"></a><a id="CU20"></a> CU20（2020 年 4 月）
 
@@ -91,7 +113,7 @@ ms.locfileid: "81298257"
 对于手动安装或脱机包安装，可以下载 RPM 和 Debian 包，其信息如下表所示：
 
 > [!NOTE]
-> 自 CU20 起，SQL Server 2017 现已开始支持 Ubuntu 18.04  和 RHEL 8  。
+> 自 CU20 起，SQL Server 2017 现已开始支持 Ubuntu 18.04 和 RHEL 8。
 >
 > Ubuntu 的脱机包安装链接指向 Ubuntu 18.04 包，不适用于 Ubuntu 18.04 的 SSIS 包除外。 若要查找 Ubuntu 16.04 包，请参阅下载路径 <https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/>。
 >
@@ -508,19 +530,19 @@ sudo systemctl start mssql-server
 
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager 无法连接到 Linux 上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。
 
-- sa 登录名的默认语言是英语  。
+- sa 登录名的默认语言是英语。
 
-    - **解决方法**：使用 ALTER LOGIN 语句更改 sa 登录名的语言   。
+    - **解决方法**：使用 ALTER LOGIN 语句更改 sa 登录名的语言 。
 
 #### <a name="databases"></a>数据库
 
 - 不能使用 mssql-conf 实用工具移动 master 数据库。 可以使用 mssql-conf 移动其他系统数据库。
 
-- 还原在 Windows 上 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中备份的数据库时，必须在 Transact-SQL 语句中使用 WITH MOVE 子句  。
+- 还原在 Windows 上 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中备份的数据库时，必须在 Transact-SQL 语句中使用 WITH MOVE 子句。
 
 - 传输层安全性 (TLS) 的某些算法（密码套件）无法在 Linux 上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中正常运行。 这会在尝试连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 时导致连接失败，以及在高可用性组中的副本之间建立连接时出现问题。
 
-   - **解决方法**：通过执行以下操作，修改 Linux 上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的 mssql.conf 配置脚本以禁用有问题的密码套件  ：
+   - **解决方法**：通过执行以下操作，修改 Linux 上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的 mssql.conf 配置脚本以禁用有问题的密码套件：
 
       1. 将以下项添加到 /var/opt/mssql/mssql.conf。
 
@@ -540,7 +562,7 @@ sudo systemctl start mssql-server
 
 - Windows 上使用内存中 OLTP 的 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 数据库无法在 Linux 上的 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 上进行还原。 要还原使用内存中 OLTP 的 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 数据库，请首先将数据库升级到 Windows 上的 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 或 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]，然后再通过备份/还原或分离/附加将数据库移至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。
 
-- 目前 Linux 不支持用户权限 ADMINISTER BULK OPERATIONS  。
+- 目前 Linux 不支持用户权限 ADMINISTER BULK OPERATIONS。
 
 #### <a name="networking"></a>网络
 
@@ -563,10 +585,10 @@ sudo systemctl start mssql-server
 1. 从引导 cmdline 中删除 `ipv6.disable=1`，在内核中启用 IPv6。 执行此操作的方法取决于 Linux 分发版和引导加载程序，例如 grub。 如果确实想要禁用 IPv6，仍可以通过在 `sysctl` 配置中设置 `net.ipv6.conf.all.disable_ipv6 = 1` 来禁用它（例如 `/etc/sysctl.conf`）。 这仍然会阻止系统的网络适配器获取 IPv6 地址，但允许 sqlservr 功能运行。
 
 #### <a name="network-file-system-nfs"></a>网络文件系统 (NFS)
-如果在生产中使用网络文件系统 (NFS) 远程共享，请注意以下支持要求  ：
+如果在生产中使用网络文件系统 (NFS) 远程共享，请注意以下支持要求：
 
-- 使用 NFS 版本 4.2 或更高版本  。 较早版本的 NFS 不支持新式文件系统常用的必需功能，例如 fallocate 和稀疏文件创建。
-- 仅在 NFS 装载上查找 /var/opt/mssql 目录  。 不支持其他文件，例如 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 系统二进制文件。
+- 使用 NFS 版本 4.2 或更高版本。 较早版本的 NFS 不支持新式文件系统常用的必需功能，例如 fallocate 和稀疏文件创建。
+- 仅在 NFS 装载上查找 /var/opt/mssql 目录。 不支持其他文件，例如 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 系统二进制文件。
 - 安装远程共享时，请确保 NFS 客户端使用“nolock”选项。
 
 #### <a name="localization"></a>本地化
@@ -583,7 +605,7 @@ sudo systemctl start mssql-server
    sudo MSSQL_LCID=<LcidValue> /opt/mssql/bin/mssql-conf setup
    ```
 
-- 运行 mssql-conf 安装程序并执行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的非英语安装时，在本地化文本“配置 SQL Server...”之后会显示错误的扩展字符。 或者，对于非拉丁语的安装，句子可能完全丢失。 丢失的句子应显示以下本地化字符串：“已成功处理授权 PID。 新版本为 [\<名称\>版本]”。 输出此字符串仅供参考，下一 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 累积更新将针对所有语言解决此问题。 这不会以任何方式影响 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的成功安装。 
+- 运行 mssql-conf 安装程序并执行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的非英语安装时，在本地化文本“配置 SQL Server...”之后会显示错误的扩展字符。 或者，对于非拉丁语的安装，句子可能完全丢失。 丢失的句子应显示以下本地化字符串：“已成功处理授权 PID。 新版本为 [\<Name\>版本]”。 输出此字符串仅供参考，下一 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 累积更新将针对所有语言解决此问题。 这不会以任何方式影响 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的成功安装。 
 
 #### <a name="full-text-search"></a>全文搜索
 
@@ -591,7 +613,7 @@ sudo systemctl start mssql-server
 
 #### <a name="sql-server-integration-services-ssis"></a><a id="ssis"></a> SQL Server Integration Services (SSIS)
 
-- 此版本中的 SUSE 不支持 mssql-server-is 包  。 目前仅 Ubuntu 和 Red Hat Enterprise Linux (RHEL) 支持该包。
+- 此版本中的 SUSE 不支持 mssql-server-is 包。 目前仅 Ubuntu 和 Red Hat Enterprise Linux (RHEL) 支持该包。
 
 - 由于 Linux CTP 2.1 刷新版和更高版本上有 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]，所以 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包可以使用 Linux 上的 ODBC 连接。 虽然已使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和 MySQL ODBC 驱动程序测试过该功能，但也希望该功能可以与任何遵循 ODBC 规范的 Unicode ODBC 驱动程序搭配使用。 在设计阶段，可以提供 DSN 或连接字符串以连接到 ODBC 数据，还可以使用 Windows 身份验证。 有关详细信息，请参阅[宣布 Linux 上的 ODBC 支持的博客文章](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/)。
 

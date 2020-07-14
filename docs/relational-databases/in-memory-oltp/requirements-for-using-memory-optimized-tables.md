@@ -1,5 +1,6 @@
 ---
 title: 使用内存优化表的要求 | Microsoft Docs
+description: 了解内存中 OLTP 的使用要求，包括 SQL 数据库版本、内存及存储注意事项和安装。
 ms.custom: ''
 ms.date: 11/24/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2a8830fbf4b9418f80cf07c7586e71689001d455
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: afb7af65cca7d2ee33a2fde38d77b6236320514b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68109607"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722370"
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>使用内存优化表的要求
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   若要了解如何在 Azure DB 中使用内存中 OLTP，请参阅 [Get started with In-Memory in SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-in-memory/)（在 SQL 数据库中使用内存中功能入门）。  
   
@@ -52,7 +53,7 @@ ms.locfileid: "68109607"
 > [!NOTE]
 > 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始，Standard 和 Express 版本支持内存中 OLTP，但它们对可用于给定数据库中内存优化表的内存量设置了配额。 在 Standard 版本中，每个数据库的配额是 32GB；在 Express 版本中，每个数据库的配额是 352MB。 
   
--   如果创建一个或多个包含内存优化表的数据库，应通过向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务启动帐户授予 SE_MANAGE_VOLUME_NAME 用户权限，启用即时文件初始化 (IFI)  。 如果没有 IFI，内存优化存储文件（数据和差异文件）将在创建时初始化，这会对工作负荷性能产生负面影响。 有关 IFI 的详细信息，包括如何启用它，请参阅[数据库即时文件初始化](../../relational-databases/databases/database-instant-file-initialization.md)。
+-   如果创建一个或多个包含内存优化表的数据库，应通过向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务启动帐户授予 SE_MANAGE_VOLUME_NAME 用户权限，启用即时文件初始化 (IFI)。 如果没有 IFI，内存优化存储文件（数据和差异文件）将在创建时初始化，这会对工作负荷性能产生负面影响。 有关 IFI 的详细信息，包括如何启用它，请参阅[数据库即时文件初始化](../../relational-databases/databases/database-instant-file-initialization.md)。
   
 ## <a name="see-also"></a>另请参阅  
  [内存中 OLTP（内存中优化）](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  

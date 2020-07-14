@@ -12,20 +12,20 @@ ms.assetid: fb876cec-f88d-4975-b3fd-0fb85dc0a7ff
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 12c4552ac8a78c5347f700144afa316d64774602
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 234c70cb0724bd313f7e98b92f8d043ff1e2bf5f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68089360"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85642323"
 ---
 # <a name="exchange-spill-event-class"></a>Exchange Spill 事件类
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **Exchange Spill** 事件类指示并行查询计划中的通信缓冲区已暂时写入 **tempdb** 数据库。 这种情况发生的几率很小，仅当查询计划具有多次范围扫描时才会发生。  
   
  一般情况下，生成此类范围扫描的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询包含许多 BETWEEN 运算符，其中每个运算符会从表或索引中选择某一范围的行。 或者，可以使用表达式来获取多个范围，例如 (T.a > 10 AND T.a < 20) OR (T.a > 100 AND T.a < 120)。 此外，查询计划必须要求按顺序扫描这些范围，原因是对 T.a 应用了 ORDER BY 子句，或者计划中的迭代器要求它按排序顺序处理元组。  
   
- 如果此类查询的计划中有多个 **Parallelism** 运算符，则 **Parallelism** 运算符所使用的内存通信缓冲区将变满，这可能使查询的执行进度由此停止。 在此情况下，其中一个 **Parallelism** 运算符会将其输出缓冲区写入 **tempdb**（此操作称为“交换溢出”  ），以便它可以处理某些输出缓冲区中的行。 最终，当使用者准备使用溢出行时，溢出行将返回给使用者。  
+ 如果此类查询的计划中有多个 **Parallelism** 运算符，则 **Parallelism** 运算符所使用的内存通信缓冲区将变满，这可能使查询的执行进度由此停止。 在此情况下，其中一个 **Parallelism** 运算符会将其输出缓冲区写入 **tempdb**（此操作称为“交换溢出”），以便它可以处理某些输出缓冲区中的行。 最终，当使用者准备使用溢出行时，溢出行将返回给使用者。  
   
  非常少见的是，在同一执行计划内可能出现多个交换溢出，这将使得查询的执行速度缓慢。 如果您发现同一个查询计划的执行中有五个以上的溢出，请与支持人员联系。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "68089360"
   
 |数据列名称|数据类型|说明|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|ApplicationName |**nvarchar**|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
+|ApplicationName|**nvarchar**|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
 |**ClientProcessID**|**int**|主机为运行该客户端应用程序的进程分配的 ID。 如果客户端提供了客户端进程 ID，则填充此数据列。|9|是|  
 |**DatabaseID**|**int**|由 USE *database* 语句指定的数据库的 ID；如果未对给定实例发出 USE *database* 语句，则为默认数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 数据列而且服务器可用，则 **ServerName** 将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
 |**DatabaseName**|**nvarchar**|正在其中运行用户语句的数据库的名称。|35|是|  
@@ -60,7 +60,7 @@ ms.locfileid: "68089360"
 |**GroupID**|**int**|在其中激发 SQL 跟踪事件的工作负荷组的 ID。|66|是|  
 |**HostName**|**nvarchar**|正在运行客户端的计算机的名称。 如果客户端提供了主机名，则填充此数据列。 若要确定主机名，请使用 HOST_NAME 函数。|8|是|  
 |**IsSystem**|**int**|指示事件是发生在系统进程中还是发生在用户进程中。 1 = 系统，0 = 用户。|60|是|  
-|**LoginName**|**nvarchar**|用户的登录名（ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全登录名或 Windows 登录凭据，格式为“ *\<域>\\<用户名\>* ”）。|11|是|  
+|**LoginName**|**nvarchar**|用户的登录名（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全登录名或 Windows 登录凭据，格式为 \<DOMAIN>\\<username\>）。|11|是|  
 |**LoginSid**|**图像**|登录用户的安全标识号 (SID)。 您可以在 **master** 数据库的 **syslogins** 表中找到此信息。 服务器中的每个登录名都具有唯一的 SID。|41|是|  
 |**NTDomainName**|**nvarchar**|用户所属的 Windows 域。|7|是|  
 |**NTUserName**|**nvarchar**|Windows 用户名。|6|是|  

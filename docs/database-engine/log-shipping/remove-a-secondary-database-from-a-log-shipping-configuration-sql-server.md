@@ -1,6 +1,6 @@
 ---
 title: 删除日志传送辅助数据库
-description: 了解如何删除日志传送辅助数据库伙伴。
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL 在 SQL Server 中删除日志传送辅助伙伴。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: ebe368a4-ca1c-45d0-9a71-3ddbd5b26a8e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 03a22206129b3f6002006f1fdcb74d5aad73308f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: db79ab9084e1c633af66736d6974487e00182385
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258992"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85695757"
 ---
 # <a name="remove-a-secondary-database-from-a-log-shipping-configuration-sql-server"></a>从日志传送配置中删除辅助数据库 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中删除日志传送辅助数据库。  
   
  **本主题内容**  
@@ -54,7 +54,7 @@ ms.locfileid: "75258992"
   
 1.  连接到当前是日志传送主服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例并展开该实例。  
   
-2.  展开“数据库”  ，右键单击日志传送主数据库，再单击“属性”  。  
+2.  展开“数据库”，右键单击日志传送主数据库，再单击“属性”。  
   
 3.  在 **“选择页”** 下，单击 **“事务日志传送”** 。  
   

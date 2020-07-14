@@ -1,5 +1,6 @@
 ---
 title: 配置服务器以侦听备用管道 | Microsoft Docs
+description: 了解如何配置 SQL Server 数据库引擎侦听的命名管道。 了解如何将客户端应用程序连接到特定的命名管道。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,17 +14,17 @@ helpviewer_keywords:
 - pipes [SQL Server], alternate
 - alternate pipes [SQL Server]
 ms.assetid: 914f7491-e2be-4b0d-b3aa-fe5409cdbafa
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: fd7a0ebf16733109e59aac74652d90e0b63a1d9d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: fb0d7b15cf17ac1af60dbb55382dc1886fcca9a2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012907"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789784"
 ---
 # <a name="configure-a-server-to-listen-on-an-alternate-pipe"></a>配置服务器以侦听备用管道
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   本主题说明如何使用 SQL Server 配置管理器在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中将服务器配置为侦听备用管道。 默认情况下， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的默认实例侦听命名管道 \\\\.\pipe\sql\query。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 和 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 的命名实例侦听其他管道。  
   
  使用客户端应用程序连接到特定的命名管道的方式有三种：  
@@ -38,15 +39,15 @@ ms.locfileid: "68012907"
   
 #### <a name="to-configure-the-named-pipe-used-by-the-sql-server-database-engine"></a>配置 SQL Server 数据库引擎使用的命名管道  
   
-1.  在 SQL Server 配置管理器的控制台窗格中，展开“SQL Server 网络配置”，然后单击以展开“**实例名称> 的协议”**  *\<* 。  
+1.  在 SQL Server 配置管理器的控制台窗格中，展开“SQL Server 网络配置”，然后单击以展开“\<instance name> 的协议” 。  
   
-2.  在详细信息窗格中，右键单击“命名管道”  ，再单击“属性”  。  
+2.  在详细信息窗格中，右键单击“命名管道”，再单击“属性”。  
   
 3.  在 **“协议”** 选项卡的 **“管道名称”** 框中，键入希望 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 侦听的管道，再单击 **“确定”** 。  
   
-4.  在控制台窗格中，单击“SQL Server 服务”。   
+4.  在控制台窗格中，单击“SQL Server 服务”。  
   
-5.  在详细信息窗格中，右键单击“SQL Server  (\<实例名称>)”  ，然后单击“重启”  以停止并重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+5.  在详细信息窗格中，右键单击“SQL Server(\<instance name>)”，然后单击“重新启动”以停止并重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 侦听备用管道时，使用客户端应用程序连接到特定的命名管道的方式有三种：  
   

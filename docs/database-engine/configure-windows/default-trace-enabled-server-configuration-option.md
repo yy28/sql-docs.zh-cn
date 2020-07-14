@@ -1,5 +1,6 @@
 ---
 title: default trace enabled 服务器配置选项 | Microsoft Docs
+description: 了解“默认跟踪已启用”选项。 了解默认跟踪如何帮助进行故障排除。
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - traces [SQL Server], logs
 - default trace enabled option
 ms.assetid: 1322d668-44f4-469e-8fd6-e0d02a81c8f2
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 33a04235580d70567b1de09180b10526255811bf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bfeec7df441b841cbbaa5da7c0b693f37749e861
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68011943"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772556"
 ---
 # <a name="default-trace-enabled-server-configuration-option"></a>default trace enabled 服务器配置选项
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   使用 **default trace enabled** 选项可启用或禁用默认跟踪日志文件。 默认跟踪功能提供了丰富持久的活动日志，并主要根据配置选项进行更改。  
   
@@ -49,7 +50,7 @@ GO
 ```  
   
 ## <a name="configuring"></a>配置  
- 如果将 **default trace enabled** 选项设置为 1，可启用“默认跟踪”  。 此选项的默认设置为 1 (ON)。 值为 0 时将关闭跟踪。  
+ 如果将 **default trace enabled** 选项设置为 1，可启用“默认跟踪” 。 此选项的默认设置为 1 (ON)。 值为 0 时将关闭跟踪。  
   
  **default trace enabled** 选项是一个高级选项。 如果使用 **sp_configure** 系统存储过程来更改该设置，则仅当 **show advanced options** 设置为 1 时才能更改 **default trace enabled** 选项。 该设置将立即生效，无需重新启动服务器。  
   

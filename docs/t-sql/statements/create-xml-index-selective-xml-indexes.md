@@ -12,15 +12,15 @@ dev_langs:
 ms.assetid: 1f510151-41d5-45c2-9cd0-b1ca0246fffe
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 3f5e9e831677a2779c908a0ec4b3afa5b27f7fff
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 902cebc510572b8900acf6f12666398ef9d147b1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68058488"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766904"
 ---
 # <a name="create-xml-index-selective-xml-indexes"></a>CREATE XML INDEX（选择性 XML 索引）
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   在已通过现有选择性 XML 索引建立索引的单个路径上创建新的辅助选择性 XML 索引。 您还可以创建主要选择性 XML 索引。 有关详细信息，请参阅[创建、更改和删除选择性 XML 索引](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)。  
   
@@ -28,7 +28,7 @@ ms.locfileid: "68058488"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
   
 CREATE XML INDEX index_name  
     ON <table_object> ( xml_column_name )  
@@ -66,10 +66,10 @@ xmlnamespace_uri AS xmlnamespace_prefix
 ```  
   
 ##  <a name="arguments"></a><a name="Arguments"></a> 参数  
- index_name   
+ index_name  
  要创建的新索引的名称。 索引名称在表中必须唯一，但在数据库中不必唯一。 索引名称必须符合[标识符](../../relational-databases/databases/database-identifiers.md)的规则。  
   
- *\<* table_object> 是包含要建立索引的 XML 列的表。 您可以使用下列格式：  
+ ON \<table_object> 是包含要建立索引的 XML 列的表。 您可以使用下列格式：  
   
 -   `database_name.schema_name.table_name`  
   
@@ -77,15 +77,15 @@ xmlnamespace_uri AS xmlnamespace_prefix
   
 -   `schema_name.table_name`  
   
- xml_column_name   
+ xml_column_name  
  包含要建立索引的路径的 XML 列的名称。  
   
- USING XML INDEX sxi_index_name   
+ USING XML INDEX sxi_index_name  
  现有选择性 XML 索引的名称。  
   
- FOR ( **xquery_or_sql_values_path> ) 是要在其上创建辅助选择性 XML 索引的已建立索引的路径名称**\<  。 要建立索引的路径是从 CREATE SELECTIVE XML INDEX 语句分配的名称。 有关详细信息，请参阅 [CREATE SELECTIVE XML INDEX (Transact-SQL)](../../t-sql/statements/create-selective-xml-index-transact-sql.md)。  
+ FOR (\<xquery_or_sql_values_path>) 是要在其上创建辅助选择性 XML 索引的已建立索引的路径名称 。 要建立索引的路径是从 CREATE SELECTIVE XML INDEX 语句分配的名称。 有关详细信息，请参阅 [CREATE SELECTIVE XML INDEX (Transact-SQL)](../../t-sql/statements/create-selective-xml-index-transact-sql.md)。  
   
- 有关通过 \<index_options> 获取索引选项的信息，请参阅 [CREATE XML INDEX](../../t-sql/statements/create-xml-index-selective-xml-indexes.md)。  
+ WITH \<index_options> 有关索引选项的详细信息，请参阅 [CREATE XML INDEX](../../t-sql/statements/create-xml-index-selective-xml-indexes.md)。  
   
 ## <a name="remarks"></a>备注  
  对于基表中的每个 XML 列，可能有多个辅助选择性 XML 索引。  

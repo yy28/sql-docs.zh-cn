@@ -1,5 +1,6 @@
 ---
 title: 配置“最大文本 REPL 大小”服务器配置选项 | Microsoft Docs
+description: 了解如何使用最大文本复制大小选项来限制 SQL Server 添加到复制列或捕获列的某些类型的数据的大小。
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -10,14 +11,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - max text repl size option
 ms.assetid: 3056cf64-621d-4996-9162-3913f6bc6d5b
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: abbdd3ed8e522150ad03ec334752e7ec3cf2763f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 85a47542c9681cd2dc004dae788d77010e2e0efd
+ms.sourcegitcommit: da836a2e23bd2ed56d2a72983f7b5b18c6f13342
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012556"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85090555"
 ---
 # <a name="configure-the-max-text-repl-size-server-configuration-option"></a>配置 max text repl size 服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -69,7 +70,7 @@ ms.locfileid: "68012556"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例说明如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 将 `max text repl size` 选项的值配置为 `-1`。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例说明如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 将 `max text repl size` 选项的值配置为 `-1`。  
   
 ```sql  
 USE AdventureWorks2012 ;  

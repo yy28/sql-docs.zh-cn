@@ -10,16 +10,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 5d74fd03a75b9b583eb92d34c45e7e0004ff9912
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7592100b7f8faec7dcfba35977e6b1cb5865854c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80215862"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85741760"
 ---
 # <a name="configure-polybase-to-access-external-data-in-mongodb"></a>配置 PolyBase 以访问 MongoDB 中的外部数据
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 本文介绍如何使用 SQL Server 实例上的 PolyBase 来查询 MongoDB 中的外部数据。
 
@@ -75,20 +75,19 @@ ms.locfileid: "80215862"
 >创建外部数据源后，可以使用 [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) 命令在该数据源上创建可查询的表。 
 
 ## <a name="flattening"></a>平展
- 为 MongoDB 文档集合中的嵌套和重复数据启用平展。 要求用户启用 `create an external table` 并通过可能包含嵌套和/或重复数据的 MongoDB 文档集合显式指定关系架构。 我们在将来的里程碑中将支持通过 mongo 文档集合的自动架构检测。
-JSON 嵌套/重复数据类型将按如下所示平展
+为 MongoDB 文档集合中的嵌套和重复数据启用平展。 要求用户启用 `create an external table` 并通过可能包含嵌套和/或重复数据的 MongoDB 文档集合显式指定关系架构。 JSON 嵌套/重复数据类型将按如下所示平展
 
 * 对象：大括号括起来的无序键/值集合（嵌套）
 
-   - 我们将为每个对象键创建表列
+   - SQL Server 为每个对象键创建表列
 
      * 列名称：objectname_keyname
 
 * 数组：有序值，以逗号分隔，用方括号括起来（重复）
 
-   - 我们将为每个数组项添加新表行
+   - SQL Server 为每个数组项添加新表行
 
-   - 我们将按每个数组创建一列，用于存储数组项索引
+   - SQL Server 按每个数组创建一列，用于存储数组项索引
 
      * 列名称：arrayname_index
 
@@ -96,11 +95,11 @@ JSON 嵌套/重复数据类型将按如下所示平展
 
 此技术存在几个潜在问题，其中包括两个问题：
 
-* 一个空的重复字段将有效地屏蔽包含在相同记录的平面字段中的数据
+* 空的重复字段将有效地屏蔽包含在相同记录的平面字段中的数据
 
 * 存在多个重复字段可能导致生成的行数呈爆炸式增长
 
-例如，我们评估以非关系 JSON 格式存储的 MongoDB 示例数据集餐馆集合。 每家餐馆都有一个嵌套的地址字段和按不同日期分配的一组等级。 下图显示了包含嵌套地址和嵌套重复等级的典型餐馆。
+例如，SQL Server 评估以非关系 JSON 格式存储的 MongoDB 示例数据集餐馆集合。 每家餐馆都有一个嵌套的地址字段和按不同日期分配的一组等级。 下图显示了包含嵌套地址和嵌套重复等级的典型餐馆。
 
 ![MongoDB 平展](../../relational-databases/polybase/media/mongo-flattening.png "MongoDB 餐馆平展")
 
@@ -123,7 +122,7 @@ JSON 嵌套/重复数据类型将按如下所示平展
 
 ## <a name="cosmos-db-connection"></a>Cosmos DB 连接
 
-使用 Cosmos DB mongo api 和 Mongo DB PolyBase 连接器，可创建 Cosmos DB 实例的外部表  。 可按照以上列出的相同步骤完成此操作。 确保数据库范围凭据、服务器地址、端口和位置字符串反映 Cosmos DB 服务器的相应内容。 
+使用 Cosmos DB mongo api 和 Mongo DB PolyBase 连接器，可创建 Cosmos DB 实例的外部表。 可按照以上列出的相同步骤完成此操作。 确保数据库范围凭据、服务器地址、端口和位置字符串反映 Cosmos DB 服务器的相应内容。 
 
 ## <a name="next-steps"></a>后续步骤
 

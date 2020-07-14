@@ -1,5 +1,6 @@
 ---
 title: XML 架构集合 (SQL Server) | Microsoft Docs
+description: 了解 XML 架构集合如何存储导入的 XML 架构以验证 XML 实例，并在 XML 数据存储在 SQL Server 数据库中时键入这些数据。
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 4a334b4a02126023b94e5623b45050b067b48ce6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2db7f06f0e68b1a03bf4b2a205666fcf90a58d32
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68096822"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729768"
 ---
 # <a name="xml-schema-collections-sql-server"></a>XML 架构集合 (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   如主题 [xml (Transact-SQL) ](../../t-sql/xml/xml-transact-sql.md)中所述，SQL Server 使用 **xml** 数据类型对 XML 数据进行本机存储。 您可以选择通过 XML 架构集合将 XSD 架构与 **xml** 类型的变量或列关联。 XML 架构集合存储导入的 XML 架构，然后用于执行以下操作：  
   
 -   验证 XML 实例  
@@ -38,7 +39,7 @@ ms.locfileid: "68096822"
   
  请注意，XML 架构集合是一个类似于数据库表的元数据实体。 您可以创建、修改和删除它们。 [CREATE XML SCHEMA COLLECTION (Transact-SQL)](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) 语句中指定的架构将自动导入到新建的 XML 架构集合对象中。 通过使用 [ALTER XML SCHEMA COLLECTION (Transact-SQL)](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md) 语句，可以将其他架构或架构组件导入到数据库中的现有集合对象。  
   
- 如主题 [类型化与非类型化的 XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)中所述，存储在与架构关联的列或变量中的 XML 称为 **类型化的** XML，因为该架构为实例数据提供了必要的数据类型信息。 SQL Server 使用此类型信息优化数据存储。  
+ 如主题[类型化与非类型化的 XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md) 中所述，存储在与架构关联的列或变量中的 XML 称为**类型化的** XML，因为该架构为实例数据提供了必要的数据类型信息。 SQL Server 使用此类型信息优化数据存储。  
   
  查询处理引擎也使用该架构进行类型检查并优化查询和数据修改。  
   
@@ -163,7 +164,7 @@ ms.locfileid: "68096822"
 ##  <a name="getting-information-about-xml-schemas-and-schema-collections"></a><a name="info"></a> 获取有关 XML 架构和架构集合的信息  
  XML 架构集合在目录视图 sys.xml_schema_collections 中枚举出来。 XML 架构集合“sys”由系统定义。 它包含无需显式加载即可在所有用户定义的 XML 架构集合中使用的预定义命名空间。 此列表包含 xml、xs、xsi、fn 和 xdt 的命名空间。 另外两个目录视图是 sys.xml_schema_namespaces（它枚举每个 XML 架构集合中的所有命名空间）和 sys.xml_components（它枚举每个 XML 架构中的所有 XML 架构组件）。  
   
- 内置函数 XML_SCHEMA_NAMESPACE  （schemaName、XmlSchemacollectionName、namespace-uri）  生成 xml  数据类型实例。 此实例包含在 XML 架构集合中所包含架构（预定义的 XML 架构除外）的 XML 架构片段。  
+ 内置函数 XML_SCHEMA_NAMESPACE（schemaName、XmlSchemacollectionName、namespace-uri） 生成 xml 数据类型实例。 此实例包含在 XML 架构集合中所包含架构（预定义的 XML 架构除外）的 XML 架构片段。  
   
  可以按下列方式枚举 XML 架构集合的内容：  
   

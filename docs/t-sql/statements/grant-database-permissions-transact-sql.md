@@ -20,16 +20,16 @@ ms.assetid: 499e5ed6-945c-4791-ab45-68dec0b9c289
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7a73c0554c878aea4fa89ffb7170547d55271f15
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 185b3e77666739c92239adbb9c569683970b71f0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288191"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006286"
 ---
 # <a name="grant-database-permissions-transact-sql"></a>GRANT 数据库权限 (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 授予对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的数据库的权限。
 
@@ -37,7 +37,7 @@ ms.locfileid: "79288191"
 
 ## <a name="syntax"></a>语法
 
-```
+```syntaxsql
 
 GRANT <permission> [ ,...n ]
     TO <database_principal> [ ,...n ] [ WITH GRANT OPTION ]
@@ -59,7 +59,7 @@ permission | ALL [ PRIVILEGES ]
 
 ## <a name="arguments"></a>参数
 
-permission  指定可对数据库授予的权限。 有关权限的列表，请参阅本主题后面的“备注”部分。
+permission 指定可对数据库授予的权限。 有关权限的列表，请参阅本主题后面的“备注”部分。
 
 ALL 该选项并不授予全部可能的权限。 授予 ALL 等同于授予下列权限：BACKUP DATABASE、BACKUP LOG、CREATE DATABASE、CREATE DEFAULT、CREATE FUNCTION、CREATE PROCEDURE、CREATE RULE、CREATE TABLE 和 CREATE VIEW。
 
@@ -67,38 +67,38 @@ PRIVILEGES 包含此参数是为了符合 ISO 标准。 请不要更改 ALL 的�
 
 WITH GRANT OPTION 指示该主体还可以向其他主体授予所指定的权限。
 
-AS \<database_principal> 指定一个主体，执行该查询的主体从该主体获得授予该权限的权利。
+AS \<database_principal>：指定一个主体，执行该查询的主体从中获得授予权限的权利。
 
-Database_user  指定数据库用户。
+Database_user 指定数据库用户。
 
-Database_role  指定数据库角色。
+Database_role 指定数据库角色。
 
-Application_role*适用于：* 及更高版本、
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)][!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+Application_role
+适用于：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
 
 指定应用程序角色。
 
-Database_user_mapped_to_Windows_User*适用于：* 及更高版本
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]
+Database_user_mapped_to_Windows_User
+适用于：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本
 
 指定映射到 Windows 用户的数据库用户。
 
-Database_user_mapped_to_Windows_Group*适用于：* 及更高版本
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]
+Database_user_mapped_to_Windows_Group
+适用于：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本
 
 指定映射到 Windows 组的数据库用户。
 
-Database_user_mapped_to_Windows_certificate*适用于：* 及更高版本
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]
+Database_user_mapped_to_Windows_certificate
+适用于：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本
 
 指定映射到证书的数据库用户。
 
-Database_user_mapped_to_asymmetric_key  
-适用于  ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本
+Database_user_mapped_to_asymmetric_key
+适用于：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本
 
 指定映射到非对称密钥的数据库用户。
 
-Database_user_with_no_login  指定无相应服务器级主体的数据库用户。
+Database_user_with_no_login 指定无相应服务器级主体的数据库用户。
 
 ## <a name="remarks"></a>备注
 
@@ -109,7 +109,7 @@ Database_user_with_no_login  指定无相应服务器级主体的数据库用户
 
 |数据库权限|数据库权限隐含的权限|服务器权限隐含的权限|
 |-------------------------|------------------------------------|----------------------------------|
-|ADMINISTER DATABASE BULK OPERATIONS<br/>适用对象：  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。|CONTROL|CONTROL SERVER|
+|ADMINISTER DATABASE BULK OPERATIONS<br/>适用对象：[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。|CONTROL|CONTROL SERVER|
 |ALTER|CONTROL|ALTER ANY DATABASE|
 |ALTER ANY APPLICATION ROLE|ALTER|CONTROL SERVER|
 |ALTER ANY ASSEMBLY|ALTER|CONTROL SERVER|
@@ -172,7 +172,7 @@ Database_user_with_no_login  指定无相应服务器级主体的数据库用户
 |CREATE VIEW|ALTER|CONTROL SERVER|
 |CREATE XML SCHEMA COLLECTION|ALTER|CONTROL SERVER|
 |DELETE|CONTROL|CONTROL SERVER|
-|在运行 CREATE 语句前执行|CONTROL|CONTROL SERVER|
+|EXECUTE|CONTROL|CONTROL SERVER|
 |EXECUTE ANY EXTERNAL SCRIPT <br /> **适用于**： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]。|CONTROL|CONTROL SERVER|
 |EXECUTE EXTERNAL SCRIPT <br /> **适用于**： [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)]。|EXECUTE ANY EXTERNAL SCRIPT|CONTROL SERVER|
 |INSERT|CONTROL|CONTROL SERVER|
@@ -195,7 +195,7 @@ Database_user_with_no_login  指定无相应服务器级主体的数据库用户
 
 若要使用 AS 选项，还必须满足以下附加要求：
 
-|AS granting_principal |所需的其他权限|
+|AS granting_principal|所需的其他权限|
 |------------------------------|------------------------------------|
 |数据库用户|对用户的 IMPERSONATE 权限、db_securityadmin 固定数据库角色的成员身份、db_owner 固定数据库角色的成员身份或 sysadmin 固定服务器角色的成员身份。|
 |映射到 Windows 登录名的数据库用户|对用户的 IMPERSONATE 权限、db_securityadmin 固定数据库角色的成员身份、db_owner 固定数据库角色的成员身份或 sysadmin 固定服务器角色的成员身份。|

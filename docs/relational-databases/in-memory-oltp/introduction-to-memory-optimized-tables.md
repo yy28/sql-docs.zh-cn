@@ -1,5 +1,6 @@
 ---
 title: 内存优化表简介 | Microsoft Docs
+description: 了解内存优化表，这些表具有持久性并支持具有原子性、一致性、隔离性和持久性的事务。
 ms.custom: ''
 ms.date: 12/02/2016
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9fe7d83331ee1dc0824e77602c60be04e070fb6f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 32129e87589c982c2ae620abbf91eeeb245dc3a0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68050198"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723123"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>内存优化表简介
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   内存优化表是使用 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) 创建而成的表。  
   
@@ -69,20 +70,20 @@ ms.locfileid: "68050198"
 
 以下因素会影响可以通过内存中 OLTP 实现的性能提升：  
   
- 通信：与包含较少调用且每个存储过程中实现的功能较多的应用程序相比，具有许多短存储过程调用的应用程序的性能提升可能较小。  
+通信：与包含较少调用且每个存储过程中实现的功能较多的应用程序相比，具有许多短存储过程调用的应用程序的性能提升可能较小。  
   
-*[!INCLUDE[tsql](../../includes/tsql-md.md)]* 执行：在使用本机编译的存储过程而不是解释的存储过程或查询执行时，内存中 OLTP 实现最佳性能。 从此类存储过程访问内存优化表可能有好处。  
+[!INCLUDE[tsql](../../includes/tsql-md.md)]执行：在使用本机编译的存储过程而不是解释的存储过程或查询执行时，内存中 OLTP 实现最佳性能。 从此类存储过程访问内存优化表可能有好处。  
   
- 范围扫描与点查找：内存优化的非聚集索引支持范围扫描和有序扫描。 对于点查找，内存优化的哈希索引具有比内存优化的非聚集索引更好的性能。 内存优化的非聚集索引具有比基于磁盘的索引更好的性能。
+范围扫描与点查找：内存优化的非聚集索引支持范围扫描和有序扫描。 对于点查找，内存优化的哈希索引具有比内存优化的非聚集索引更好的性能。 内存优化的非聚集索引具有比基于磁盘的索引更好的性能。
 
 - 从 SQL Server 2016 开始，内存优化表的查询计划可以并行方式扫描表。 这提高了分析查询的性能。
   - 在 SQL Server 2016 中，哈希索引也变为可以并行方式进行扫描。
   - 在 SQL Server 2016 中，非聚集索引也变为可以并行方式进行扫描。
   - 从一开始在 SQL Server 2014 中，列存储索引就可以并行方式进行扫描。
   
- 索引操作：索引操作不记入日志并且只存在于内存中。  
+索引操作：索引操作不记入日志并且只存在于内存中。  
   
- 并发：在性能受引擎级别并发（如闩锁争用或阻塞）影响的应用程序迁移到内存中 OLTP 时，其性能会显著提高。  
+并发：在性能受引擎级别并发（如闩锁争用或阻塞）影响的应用程序迁移到内存中 OLTP 时，其性能会显著提高。  
   
 下表列出了关系数据库中常见的性能和可伸缩性问题以及内存中 OLTP 提高性能的方式。  
   

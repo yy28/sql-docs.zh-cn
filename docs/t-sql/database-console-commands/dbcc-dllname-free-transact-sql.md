@@ -26,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: 1eb71c17-fe15-430b-8916-e4e312dcf9c0
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: cc9716cbd1e27c6589b964c3c3d6208105f4863c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: aeac2877165b3d0b00d33fd62e8e81086d951f0b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68101951"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894886"
 ---
 # <a name="dbcc-dllname-free-transact-sql"></a>DBCC dllname (FREE) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 从内存中上载指定的扩展存储过程 DLL。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
@@ -52,10 +52,10 @@ DBCC <dllname> ( FREE ) [ WITH NO_INFOMSGS ]
  取消显示所有信息性消息。  
   
 ## <a name="remarks"></a>备注
-执行扩展存储过程时，DLL 仍保持由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例加载，直到服务器关闭为止。 此语句允许从内存中卸载 DLL，而不用关闭 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 若要显示目前由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 加载的 DLL 文件，请执行 sp_helpextendedproc 
+执行扩展存储过程时，DLL 仍保持由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例加载，直到服务器关闭为止。 此语句允许从内存中卸载 DLL，而不用关闭 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 若要显示目前由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 加载的 DLL 文件，请执行 sp_helpextendedproc
   
 ## <a name="result-sets"></a>结果集  
-指定了有效的 DLL 之后，DBCC dllname (FREE) 将返回  ：
+指定了有效的 DLL 之后，DBCC dllname (FREE) 将返回：
   
 ```sql
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
@@ -65,7 +65,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 要求具有 **sysadmin** 固定服务器角色或 **db_owner** 固定数据库角色的成员身份。
   
 ## <a name="examples"></a>示例  
-以下示例假设以 xp_sample.dll 实现 `xp_sample` 且已执行完毕。 DBCC \<dllname> (FREE) 会卸载与 `xp_sample` 扩展过程相关联的 xp_sample.dll 文件。
+以下示例假设以 xp_sample.dll 实现 `xp_sample` 且已执行完毕。 DBCC \<*dllname*> (FREE) 卸载与 `xp_sample` 扩展过程相关联的 xp_sample.dll 文件。
   
 ```sql  
 DBCC xp_sample (FREE);  

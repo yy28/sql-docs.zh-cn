@@ -1,5 +1,6 @@
 ---
 title: 使用 SMB 文件共享存储安装 SQL Server | Microsoft Docs
+description: 在 SQL Server 中，安装系统数据库和数据库引擎用户数据库时可以选择服务器消息块 (SMB) 文件服务器作为存储。
 ms.custom: ''
 ms.date: 09/05/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0b1d78acdaee97c38536969481c79fc3a94d6c9e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ff25352a7aefe716c66cb01a4abafcfb9742e6ca
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67990935"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883510"
 ---
 # <a name="install-sql-server-with-smb-fileshare-storage"></a>使用 SMB 文件共享存储安装 SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]开始，在安装系统数据库（Master、Model、MSDB 和 TempDB）和 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 用户数据库时可以选择服务器消息块 (SMB) 文件服务器作为存储。 这同时适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 独立安装和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集安装 (FCI)。  
   
@@ -97,12 +98,12 @@ ms.locfileid: "67990935"
     > [!NOTE]  
     >  对 SMB 共享文件夹的 FULL CONTROL 共享权限和 NTFS 权限应被限制为： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务帐户和具有管理服务器角色的 Windows 用户。  
   
-     建议将域帐户用作 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户。 如果系统帐户用作服务帐户，则按以下格式为计算机帐户授予权限：\<domain_name>\\<computer_name>\*$*。  
+     建议将域帐户用作 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户。 如果系统帐户用作服务帐户，则按以下格式为计算机帐户授予权限：\<*domain_name*>\\<computer_name>\*$*。  
   
     > [!NOTE]  
     >  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程中，如果 SMB 文件共享指定为存储选项，则需要将域帐户指定为服务帐户。 对于 SMB 文件共享，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装后系统帐户只能指定为服务帐户。  
     >   
-    >  虚拟帐户无法通过身份验证，因而无法访问远程位置。 所有虚拟帐户均使用计算机帐户的权限。 以 \<domain_name>\\<computer_name>\*$* 格式设置计算机帐户。  
+    >  虚拟帐户无法通过身份验证，因而无法访问远程位置。 所有虚拟帐户均使用计算机帐户的权限。 以 \<*domain_name*>\\<computer_name>\*$* 格式预配计算机帐户。  
   
 -   用于安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的帐户应该对用作数据目录的 SMB 文件共享文件夹或群集安装过程中的任何其他数据文件夹（用户数据库目录、用户数据库日志目录、TempDB 目录、TempDB 日志目录、备份目录）具有 FULL CONTROL 权限。  
   

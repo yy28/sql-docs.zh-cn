@@ -4,22 +4,22 @@ titleSuffix: SQL Server
 description: 本文介绍如何在 Linux 上安装 SQL Server 工具。
 author: VanMSFT
 ms.author: vanto
-ms.date: 03/12/2020
+ms.date: 06/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-ms.openlocfilehash: a6ee495dc984273b8a1c20784542d6611edbbbba
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e427e429ea4fe65f1f4f0af707c1a11c16c0834b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288781"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897335"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>在 Linux 上安装 sqlcmd 和 bcp SQL Server 命令行工具
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 通过以下步骤安装命令行工具、Microsoft ODBC 驱动程序及其依赖项。 **mssql-tools** 包包含：
 
@@ -36,7 +36,7 @@ ms.locfileid: "79288781"
 
 本文介绍如何安装命令行工具。 如果正在寻找有关如何使用 **sqlcmd** 或 **bcp** 的示例，请参阅本主题末尾的[链接](#next-steps)。
 
-## <a name="a-idrhelinstall-tools-on-rhel-7"></a><a id="RHEL"><a/> 在 RHEL 7 上安装工具
+## <a name="a-idrhelinstall-tools-on-rhel-8"></a><a id="RHEL"><a/>在 RHEL 8 上安装工具
 
 通过以下步骤在 Red Hat Enterprise Linux 上安装 **mssql-tools**。 
 
@@ -49,7 +49,7 @@ ms.locfileid: "79288781"
 1. 下载 Microsoft Red Hat 存储库配置文件。
 
    ```bash
-   curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/msprod.repo
+   curl https://packages.microsoft.com/config/rhel/8/prod.repo > /etc/yum.repos.d/msprod.repo
    ```
 
 1. 退出超级用户模式。
@@ -71,21 +71,21 @@ ms.locfileid: "79288781"
    ```
 
    > [!Note] 
-   > 若要将 mssql-tools 更新至最新版本，请运行以下命令  ：
+   > 若要将 mssql-tools 更新至最新版本，请运行以下命令：
    >    ```bash
    >   sudo yum check-update
    >   sudo yum update mssql-tools
    >   ```
 
-1. **可选**：向 bash shell 中的 PATH 环境变量添加 `/opt/mssql-tools/bin/`  。
+1. **可选**：向 bash shell 中的 PATH 环境变量添加 `/opt/mssql-tools/bin/`。
 
-   要使 sqlcmd/bcp 能从登陆会话的 bash shell 进行访问，请使用下列命令修改 ~/.bash_profile 文件中的 PATH    ：
+   要使 sqlcmd/bcp 能从登陆会话的 bash shell 进行访问，请使用下列命令修改 ~/.bash_profile 文件中的 PATH  ：
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
    ```
 
-   要使 sqlcmd/bcp 能从交互式/非登录会话的 bash shell 进行访问，请使用下列命令修改 ~/.bashrc 文件中的 PATH    ：
+   要使 sqlcmd/bcp 能从交互式/非登录会话的 bash shell 进行访问，请使用下列命令修改 ~/.bashrc 文件中的 PATH  ：
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
@@ -119,21 +119,21 @@ ms.locfileid: "79288781"
    ```
 
    > [!Note] 
-   > 若要将 mssql-tools 更新至最新版本，请运行以下命令  ：
+   > 若要将 mssql-tools 更新至最新版本，请运行以下命令：
    >    ```bash
    >   sudo apt-get update 
    >   sudo apt-get install mssql-tools 
    >   ```
 
-1. **可选**：向 bash shell 中的 PATH 环境变量添加 `/opt/mssql-tools/bin/`  。
+1. **可选**：向 bash shell 中的 PATH 环境变量添加 `/opt/mssql-tools/bin/`。
 
-   要使 sqlcmd/bcp 能从登陆会话的 bash shell 进行访问，请使用下列命令修改 ~/.bash_profile 文件中的 PATH    ：
+   要使 sqlcmd/bcp 能从登陆会话的 bash shell 进行访问，请使用下列命令修改 ~/.bash_profile 文件中的 PATH  ：
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
    ```
 
-   要使 sqlcmd/bcp 能从交互式/非登录会话的 bash shell 进行访问，请使用下列命令修改 ~/.bashrc 文件中的 PATH    ：
+   要使 sqlcmd/bcp 能从交互式/非登录会话的 bash shell 进行访问，请使用下列命令修改 ~/.bashrc 文件中的 PATH  ：
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
@@ -158,21 +158,21 @@ ms.locfileid: "79288781"
    ```
 
    > [!Note] 
-   > 若要将 mssql-tools 更新至最新版本，请运行以下命令  ：
+   > 若要将 mssql-tools 更新至最新版本，请运行以下命令：
    >    ```bash
    >   sudo zypper refresh
    >   sudo zypper update mssql-tools
    >   ```
 
-1. **可选**：向 bash shell 中的 PATH 环境变量添加 `/opt/mssql-tools/bin/`  。
+1. **可选**：向 bash shell 中的 PATH 环境变量添加 `/opt/mssql-tools/bin/`。
 
-   要使 sqlcmd/bcp 能从登陆会话的 bash shell 进行访问，请使用下列命令修改 ~/.bash_profile 文件中的 PATH    ：
+   要使 sqlcmd/bcp 能从登陆会话的 bash shell 进行访问，请使用下列命令修改 ~/.bash_profile 文件中的 PATH  ：
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
    ```
 
-   要使 sqlcmd/bcp 能从交互式/非登录会话的 bash shell 进行访问，请使用下列命令修改 ~/.bashrc 文件中的 PATH    ：
+   要使 sqlcmd/bcp 能从交互式/非登录会话的 bash shell 进行访问，请使用下列命令修改 ~/.bashrc 文件中的 PATH  ：
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
@@ -185,11 +185,11 @@ macOS 上目前提供 **sqlcmd** 和 **bcp** 的预览版。 有关详细信息�
 
 *如果尚未安装 [Homebrew](https://brew.sh)，请进行安装：*
 
-        /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+- `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 
 若要为 Mac El Capitan 和 Sierra 安装工具，请使用以下命令：
 
-```
+```bash
 # brew untap microsoft/mssql-preview if you installed the preview version 
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
@@ -218,11 +218,11 @@ brew install mssql-tools
 
    | Linux 分发版 | ODBC 包位置 |
    |---|---|
-   | Red Hat | [https://packages.microsoft.com/rhel/7.3/prod](https://packages.microsoft.com/rhel/7.3/prod) |
+   | Red Hat | [https://packages.microsoft.com/rhel/8/prod](https://packages.microsoft.com/rhel/8/prod) |
    | SLES | [https://packages.microsoft.com/sles/12/prod](https://packages.microsoft.com/sles/12/prod)|
    | Ubuntu 16.04 | [**msodbcsql**](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql)<br/>[**unixodbc-dev**](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/u/unixodbc/) |
 
-1. **将下载的包移至 Linux 计算机**。 如果使用了不同的计算机下载包，则可以通过“scp”命令将包移至你的 Linux 计算机  。
+1. **将下载的包移至 Linux 计算机**。 如果使用了不同的计算机下载包，则可以通过“scp”命令将包移至你的 Linux 计算机。
 
 1. **安装包**：安装 **mssql-tools** 和 **msodbc** 包。 如果遇到任何依赖项错误，请忽略，直到出现下一步操作。
 

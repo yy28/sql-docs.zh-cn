@@ -1,5 +1,6 @@
 ---
 title: 客户端网络配置 | Microsoft Docs
+description: 了解客户端计算机连接到网络上的 SQL Server 实例的方式。 了解可用于管理客户端的工具。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,18 +17,18 @@ helpviewer_keywords:
 - client connections [SQL Server]
 - network connections [SQL Server], client configuration
 ms.assetid: c382eacd-0a0c-40a4-958f-9b774eb2d734
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 4fcbb9e6ee0f68433034cd2c3a29f565e05359e9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 65e9cff3efd309e25104e0f283a1902d8a0392e6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012957"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759178"
 ---
 # <a name="client-network-configuration"></a>客户端网络配置
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  借助客户端软件，客户端计算机能够连接到网络上的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 “客户端”是前端应用程序，它使用服务器（如 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]）提供的服务。 这种应用程序所驻留的计算机称为“客户端计算机”  。  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  借助客户端软件，客户端计算机能够连接到网络上的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 “客户端”是前端应用程序，它使用服务器（如 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]）提供的服务。 这种应用程序所驻留的计算机称为“客户端计算机” 。  
   
  在最简单的情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端可与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例驻留在同一计算机上。 而通常一个客户端通过网络可以连接到一个或多个远程服务器。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的客户端/服务器体系结构允许通过网络无缝地管理多个客户端和服务器。 默认的客户端配置可以满足大多数情况。  
   
@@ -43,7 +44,7 @@ ms.locfileid: "68012957"
   
 -   DB-Library 客户端  
   
-     这些应用程序包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] isql 命令提示实用工具和写入 DB-Library 的客户端  。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对使用 DB-Library 的客户端应用程序的支持仅限于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 功能。  
+     这些应用程序包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] isql 命令提示实用工具和写入 DB-Library 的客户端。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对使用 DB-Library 的客户端应用程序的支持仅限于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 功能。  
   
 > [!NOTE]  
 >  尽管 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 仍然支持来自使用 DB-Library 和嵌入式 SQL API 的现有应用程序的连接，但不包含对使用这些 API 的应用程序进行编程工作所需的文件或文档。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的未来版本将不再支持来自 DB-Library 或嵌入式 SQL 应用程序的连接。 请不要使用 DB-Library 或嵌入式 SQL 来开发新的应用程序。 修改现有的应用程序时，请删除 DB-Library 或嵌入式 SQL 的任何依赖项。 请使用 SQLClient 命名空间或诸如 OLE DB 或 ODBC 的 API，而不使用这些 API。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不包含运行这些应用程序所需的 DB-Library DLL。 若要运行 DB-Library 或嵌入式 SQL 应用程序，必须有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 6.5 版、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 版或 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]提供的 DB-Library DLL。  

@@ -16,15 +16,15 @@ ms.assetid: c001c2e7-d092-43d4-8fa6-693b3ec4c3ea
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 75542c488b9033cb791b731535eaab6a14c72c72
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 1f110124a562ccf6f1cc7ee1d570d29b67c49785
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633677"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004717"
 ---
 # <a name="grant-object-permissions-transact-sql"></a>GRANT 对象权限 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   授予对表、视图、表值函数、存储过程、扩展存储过程、标量函数、聚合函数、服务队列或同义词的权限。  
   
@@ -56,13 +56,13 @@ GRANT <permission> [ ,...n ] ON
 ```  
   
 ## <a name="arguments"></a>参数  
- permission   
+ permission  
  指定可以授予的对架构包含的对象的权限。 有关权限的列表，请参阅本主题后面的“备注”部分。  
   
  ALL  
  授予 ALL 不会授予所有可能的权限。 授予 ALL 等同于授予适用于指定对象的所有 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-92 权限。 对于不同权限，ALL 的含义有所不同：  
   
-- 标量函数权限：EXECUTE、REFERENCES。  
+- 标量值函数权限：EXECUTE、REFERENCES。  
 - 表值函数权限：DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
 - 存储过程权限：EXECUTE。  
 - 表权限：DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
@@ -72,13 +72,13 @@ PRIVILEGES
  包含此参数以符合 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-92 标准。 请不要更改 ALL 的行为。  
   
 *column*  
- 指定表、视图或表值函数中要授予对其权限的列的名称。 需要使用括号 ( )。 只能授予对列的 SELECT、REFERENCES 及 UPDATE 权限。 可以在权限子句中或在安全对象名之后指定 column  。  
+ 指定表、视图或表值函数中要授予对其权限的列的名称。 需要使用括号 ( )。 只能授予对列的 SELECT、REFERENCES 及 UPDATE 权限。 可以在权限子句中或在安全对象名之后指定 column。  
   
 > [!CAUTION]  
 >  表级 DENY 并不优先于列级 GRANT。 保留了权限层次结构中的这种不一致性以保持向后兼容。  
   
- ON [ OBJECT :: ] [ schema_name ] .  *object_name*  
- 指定要授予对其权限的对象。 如果指定了 schema_name，则 OBJECT 短语是可选的  。 如果使用了 OBJECT 短语，则需要作用域限定符 (::)。 如果未指定 schema_name，则使用默认架构  。 如果指定了 schema_name，则需要使用架构作用域限定符 (.)  。  
+ ON [ OBJECT :: ] [ schema_name ] . *object_name*  
+ 指定要授予对其权限的对象。 如果指定了 schema_name，则 OBJECT 短语是可选的。 如果使用了 OBJECT 短语，则需要作用域限定符 (::)。 如果未指定 schema_name，则使用默认架构。 如果指定了 schema_name，则需要使用架构作用域限定符 (.)。  
   
  TO \<database_principal>  
  指定要向其授予权限的主体。  
@@ -86,30 +86,30 @@ PRIVILEGES
  WITH GRANT OPTION  
  指示该主体还可以向其他主体授予所指定的权限。  
   
- AS \<database_principal> 指定一个主体，执行该查询的主体从该主体获得授予该权限的权利。  
+ AS \<database_principal> 指定一个主体，执行此查询的主体从该主体中获得授予权限的权利。  
   
- Database_user   
+ Database_user  
  指定数据库用户。  
   
- Database_role   
+ Database_role  
  指定数据库角色。  
   
- Application_role   
+ Application_role  
  指定应用程序角色。  
   
- Database_user_mapped_to_Windows_User   
+ Database_user_mapped_to_Windows_User  
  指定映射到 Windows 用户的数据库用户。  
   
- Database_user_mapped_to_Windows_Group   
+ Database_user_mapped_to_Windows_Group  
  指定映射到 Windows 组的数据库用户。  
   
- Database_user_mapped_to_certificate   
+ Database_user_mapped_to_certificate  
  指定映射到证书的数据库用户。  
   
- Database_user_mapped_to_asymmetric_key   
+ Database_user_mapped_to_asymmetric_key  
  指定映射到非对称密钥的数据库用户。  
   
- Database_user_with_no_login   
+ Database_user_with_no_login  
  指定无相应服务器级主体的数据库用户。  
   
 ## <a name="remarks"></a>备注  
@@ -126,7 +126,7 @@ PRIVILEGES
 |ALTER|CONTROL|ALTER|  
 |CONTROL|CONTROL|CONTROL|  
 |DELETE|CONTROL|DELETE|  
-|在运行 CREATE 语句前执行|CONTROL|在运行 CREATE 语句前执行|  
+|EXECUTE|CONTROL|EXECUTE|  
 |INSERT|CONTROL|INSERT|  
 |RECEIVE|CONTROL|CONTROL|  
 |REFERENCES|CONTROL|REFERENCES|  

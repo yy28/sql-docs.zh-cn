@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 236749303a05b54f37be5e24f10f56fc6f5bc41d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: db7f3f6456543af06a32f27e2e3258597e062906
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71227160"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669943"
 ---
 # <a name="alter-external-data-source-transact-sql"></a>ALTER EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -32,12 +32,12 @@ ms.locfileid: "71227160"
 
 ## <a name="syntax"></a>语法  
 
-```  
+```syntaxsql
 -- Modify an external data source
 -- Applies to: SQL Server (2016 or later) and APS
 ALTER EXTERNAL DATA SOURCE data_source_name SET
     {   
-        LOCATION = 'server_name_or_IP' [,] |
+        LOCATION = '<prefix>://<path>[:<port>]' [,] |
         RESOURCE_MANAGER_LOCATION = <'IP address;Port'> [,] |
         CREDENTIAL = credential_name
     }  
@@ -61,14 +61,14 @@ ALTER EXTERNAL DATA SOURCE data_source_name
 ## <a name="arguments"></a>参数  
  data_source_name 指定数据源的用户定义名称。 该名称必须是唯一的。
 
- LOCATION = 'server_name_or_IP' 提供连接协议和外部数据源的路径。
+ LOCATION =“<prefix>://<path>[:<port>]”：提供外部数据源的连接协议、路径和端口。 若要了解有效的位置选项，请参阅 [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](create-external-data-source-transact-sql.md#location--prefixpathport)。
 
  RESOURCE_MANAGER_LOCATION = ‘\<IP address;Port>’（不适用于 Azure SQL 数据仓库）指定 Hadoop 资源管理器位置。 如果指定，查询优化器可以选择通过使用 Hadoop 的计算功能预处理 PolyBase 查询的数据。 这是基于开销的决策。 这称为谓词下推，可以显著减少 Hadoop 和 SQL之间传输的数据量，并因此提高查询性能。
 
  CREDENTIAL = Credential_Name 指定命名凭据。 请参阅 [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)。
 
 TYPE = [HADOOP | BLOB_STORAGE]   
-适用对象：  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。
+适用对象：[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。
 仅对于大容量操作，`LOCATION` 必须是有效的 Azure Blob 存储 URL。 请勿将 /、文件名或共享访问签名参数放在 `LOCATION` URL 的末尾。
 必须使用 `SHARED ACCESS SIGNATURE` 作为标识创建所使用的凭据。 有关共享访问签名的详细信息，请参阅[使用共享访问签名 (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)。
 

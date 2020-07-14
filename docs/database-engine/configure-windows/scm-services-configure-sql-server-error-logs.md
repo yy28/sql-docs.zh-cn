@@ -1,5 +1,6 @@
 ---
 title: 配置 SQL Server 错误日志 | Microsoft Docs
+description: 了解错误日志回收。 查看如何设置最大日志文件大小以及如何设置 SQL Server 备份和存档的先前日志文件数。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,23 +11,23 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.configurelogs.configureerrorlogs.f1
 ms.assetid: 03f0d463-9b0b-4af9-a853-da936d75e5af
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 8e746861ef30305a901c388f7574a4a27e2edab4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 060b3828c772a030ab095ae1bea857dc8eaa3b5a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74127479"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85651379"
 ---
 # <a name="scm-services---configure-sql-server-error-logs"></a>SCM 服务 - 配置 SQL Server 错误日志
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   本主题介绍如何查看或修改回收 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志的方式。  
 
 ## <a name="to-open-the-configure-sql-server-error-logs-dialog-box"></a>打开“配置 SQL Server 错误日志”对话框  
 
-1. 在对象资源管理器中，展开 SQL Server 的实例，展开  “管理”，右键单击  “SQL Server 日志”，再单击  “配置”。
+1. 在对象资源管理器中，展开 SQL Server 的实例，展开“管理”，右键单击“SQL Server 日志”，再单击“配置”。
 
 2. 在 **“配置 SQL Server 错误日志”** 对话框中，从以下选项中进行选择。
 
@@ -40,7 +41,7 @@ ms.locfileid: "74127479"
 
       指定错误日志文件回收前创建的最大存档错误日志文件数。 默认值为 6，不包括当前文件。 该值决定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在回收备份日志前保留的以前的备份日志的数量。
 
-    b.保留“数据库类型”设置，即设置为“共享”。 日志文件大小
+    b. 日志文件大小
 
       **错误日志文件的大小上限（以 KB 为单位）**
 

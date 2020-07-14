@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 61fe5d7ffb5dfc6ec98f6d5350eff396deaa0312
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f468697c165eefca98e5d5d7492b9a3d5eab25e8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558322"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897269"
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>配置故障转移群集实例 - Linux 上的 SQL Server (RHEL)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 SQL Server 双节点共享磁盘故障转移群集实例为实现高可用性提供服务器级别的冗余。 本教程介绍如何创建 Linux 上的 SQL Server 的双节点故障转移群集实例。 你将完成的特定步骤包括：
 
@@ -35,7 +35,7 @@ SQL Server 双节点共享磁盘故障转移群集实例为实现高可用性提
 
 有关概念性信息，请参阅[故障转移群集实例 - Linux 上的 SQL Server](sql-server-linux-shared-disk-cluster-concepts.md)。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 若要完成接下来的端到端方案，需要两台计算机来部署双节点群集，还需要一台服务器进行存储。 以下步骤概述了如何配置这些服务器。
 
@@ -241,7 +241,7 @@ SQL Server 双节点共享磁盘故障转移群集实例为实现高可用性提
 
     \<IPResourceName> 是与 IP 地址关联的资源的名称
 
-    \<IPAddress> 是 FCI 的IP 地址
+    \<IPAddress> 是 FCI 的 IP 地址
 
     \<NetworkCard> 是与子网（即 eth0）关联的网卡
 

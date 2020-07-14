@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: c45e1086-c25b-48bb-a764-4a893e983db2
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0353ff7b9e0778a7ef59107f5ba2876e72bbdd69
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d92713b06958dbfd8e2aef995779a25ed76d9d09
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75243344"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735399"
 ---
 # <a name="revoke-database-principal-permissions-transact-sql"></a>REVOKE 数据库主体权限 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   撤消授予或拒绝的对数据库用户、数据库角色或应用程序角色的权限。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "75243344"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
   
 REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]    
     ON   
@@ -60,19 +60,19 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>参数  
- permission   
+ permission  
  指定可以撤消的对数据库主体的权限。 有关权限的列表，请参阅本主题后面的“备注”部分。  
   
- USER ::database_user   
- 指定要撤消对其权限的用户的类和名称。 需要使用作用域限定符 (::)  。  
+ USER ::database_user  
+ 指定要撤消对其权限的用户的类和名称。 需要使用作用域限定符 (::)。  
   
- ROLE ::database_role   
- 指定要撤消对其权限的角色的类和名称。 需要使用作用域限定符 (::)  。  
+ ROLE ::database_role  
+ 指定要撤消对其权限的角色的类和名称。 需要使用作用域限定符 (::)。  
   
- APPLICATION ROLE ::application_role   
+ APPLICATION ROLE ::application_role  
 **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
- 指定要撤消对其权限的应用程序角色的类和名称。 需要使用作用域限定符 (::)  。  
+ 指定要撤消对其权限的应用程序角色的类和名称。 需要使用作用域限定符 (::)。  
   
  GRANT OPTION  
  指示要撤消向其他主体授予指定权限的权限。 不会撤消该权限本身。  
@@ -86,40 +86,40 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 > [!CAUTION]  
 >  如果对授予了 WITH GRANT OPTION 权限的权限执行级联撤消，将同时撤消该权限的 GRANT 和 DENY 权限。  
   
- AS \<database_principal> 指定一个主体，执行此查询的主体从该主体获得撤销该权限的权利。  
+ AS \<database_principal> 指定一个主体，执行该查询的主体从该主体获得撤消该权限的权利。  
   
- Database_user   
+ Database_user  
  指定数据库用户。  
   
- Database_role   
+ Database_role  
  指定数据库角色。  
   
- Application_role   
+ Application_role  
 **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
  指定应用程序角色。  
   
- Database_user_mapped_to_Windows_User   
+ Database_user_mapped_to_Windows_User  
 **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本
   
  指定映射到 Windows 用户的数据库用户。  
   
- Database_user_mapped_to_Windows_Group   
+ Database_user_mapped_to_Windows_Group  
 **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本
   
  指定映射到 Windows 组的数据库用户。  
   
- Database_user_mapped_to_certificate   
+ Database_user_mapped_to_certificate  
 **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本
   
  指定映射到证书的数据库用户。  
   
- Database_user_mapped_to_asymmetric_key   
+ Database_user_mapped_to_asymmetric_key  
 **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本
   
  指定映射到非对称密钥的数据库用户。  
   
- Database_user_with_no_login   
+ Database_user_with_no_login  
  指定无相应服务器级主体的数据库用户。  
   
 ## <a name="remarks"></a>备注  
@@ -156,7 +156,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ## <a name="permissions"></a>权限  
  需要对指定主体的 CONTROL 权限或隐含 CONTROL 权限的更高权限。  
   
- 将某一数据库的 CONTROL 权限授予用户（例如，db_owner 固定数据库角色的成员）后，该用户就可授予对该数据库中任何一个安全对象的任意权限  。  
+ 将某一数据库的 CONTROL 权限授予用户（例如，db_owner 固定数据库角色的成员）后，该用户就可授予对该数据库中任何一个安全对象的任意权限。  
   
 ## <a name="examples"></a>示例  
   

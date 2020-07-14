@@ -1,5 +1,6 @@
 ---
 title: 配置发布和分发 | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio、Transact-SQL 或复制管理对象在 SQL Server 中配置发布和分发。
 ms.custom: ''
 ms.date: 09/23/2018
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f4f51850fe288f2bbbd6d0e70a123a03f84344ac
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0e39946071c85dff0c1e29f6f36e6bafe910f77d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76284904"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774006"
 ---
 # <a name="configure-publishing-and-distribution"></a>配置发布和分发
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中配置发布和分发。
 
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前 
@@ -32,7 +33,7 @@ ms.locfileid: "76284904"
 有关详细信息，请参阅[查看和修改复制安全设置](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)。
 
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio 
-可以使用新建发布向导或配置分发向导配置分发。 配置分发服务器后，查看并修改“分发服务器属性 - \<分发服务器>”对话框中的属性。 若要配置分发服务器以便 `db_owner` 固定数据库角色的成员可以创建发布，或者要配置不是发布服务器的远程分发服务器，请使用“配置分发向导”。
+可以使用新建发布向导或配置分发向导配置分发。 配置分发服务器后，查看并修改“分发服务器属性 - \<Distributor>”对话框中的属性。 若要配置分发服务器以便 `db_owner` 固定数据库角色的成员可以创建发布，或者要配置不是发布服务器的远程分发服务器，请使用“配置分发向导”。
 
 #### <a name="to-configure-distribution"></a>配置分发 
 
@@ -42,7 +43,7 @@ ms.locfileid: "76284904"
 
 3. 随着配置分发向导执行下列操作： 
 
-  - 选择分发服务器。 若要使用本地分发服务器，请选择“ServerName 将充当自己的分发服务器; SQL Server 将创建分发数据库和日志”  。 若要使用远程分发服务器，请选择 **“使用以下服务器作为分发服务器”** ，再选择一个服务器。 该服务器必须已配置为分发服务器，并且启用发布服务器使用此分发服务器。 有关详细信息，请参阅[在分发服务器上启用远程发布服务器 (SQL Server Management Studio)](../../relational-databases/replication/enable-a-remote-publisher-at-a-distributor-sql-server-management-studio.md)。
+  - 选择分发服务器。 若要使用本地分发服务器，请选择“ServerName 将充当自己的分发服务器; SQL Server 将创建分发数据库和日志”。 若要使用远程分发服务器，请选择 **“使用以下服务器作为分发服务器”** ，再选择一个服务器。 该服务器必须已配置为分发服务器，并且启用发布服务器使用此分发服务器。 有关详细信息，请参阅[在分发服务器上启用远程发布服务器 (SQL Server Management Studio)](../../relational-databases/replication/enable-a-remote-publisher-at-a-distributor-sql-server-management-studio.md)。
 
      如果选择远程分发服务器，则必须在 **“管理密码”** 页上输入从发布服务器连接到分发服务器的密码。 此密码必须与在远程分发服务器上启用发布服务器时所指定的密码相匹配。
 
@@ -77,7 +78,7 @@ ms.locfileid: "76284904"
 
    - 如果结果集中 `distribution db installed` 的值为 `0`，请在分发服务器上对 master 数据库执行 [sp_adddistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)。 对 `@database` 指定分发数据库名称。 也可以对 `@max_distretention` 指定最长事务保持期，并对 `@history_retention` 指定历史记录保持期。 如果要创建一个新的数据库，请指定所需的数据库属性参数。
 
-2. 在分发服务器上，执行 [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)，同时对 `@working_directory` 指定用作默认快照文件夹的 UNC 共享。 如果分发服务器在连接到发布服务器时使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，还必须对 `0` 指定值 `@security_mode`，并对 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指定 `@login` `@password` 登录信息。
+2. 在分发服务器上，执行 [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)，同时对 `@working_directory` 指定用作默认快照文件夹的 UNC 共享。 如果分发服务器在连接到发布服务器时使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，还必须对 `@security_mode` 指定值 `0`，并对 `@login` 和 `@password` 指定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录信息。
 
    对于 SQL 数据库托管实例上的分发服务器，对 `@working_directory` 使用 Azure 存储帐户，对 `@storage_connection_string` 使用存储访问密钥。 
 

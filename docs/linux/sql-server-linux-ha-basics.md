@@ -9,16 +9,16 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: c999228cdcd78ca2996ee134266a36543e97d913
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c7b22e569f17ca7297483d0b5286ecc77a9a14e5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216677"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895310"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>有关 Linux 部署的 SQL Server 可用性基础知识
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 从 [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] 开始，Linux 和 Windows 都支持 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]。 与基于 Windows 的 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 部署一样，[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 数据库和实例需要在 Linux 下高度可用。 本文介绍了规划和部署基于 Linux 的高可用性 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 数据库和实例的技术方面，以及与基于 Windows 的安装的一些区别。 因为 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 对于 Linux 专业人员来说可能是新内容，而 Linux 对于 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 专业人员来说可能是新内容，所以这篇文章有时会介绍一些人熟悉，而其他人不熟悉的概念。
 
@@ -31,10 +31,10 @@ ms.locfileid: "80216677"
 在 Windows 上，FCI 始终需要一个基础 Windows Server 故障转移群集 (WSFC)。 根据部署方案，AG 通常需要基础 WSFC，但 [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] 中的新 None 变量除外。 在 Linux 中不存在 WSFC。 Linux 中的群集实现将在 [Linux 上 Always On 可用性组和故障转移群集实例的 Pacemaker](#pacemaker-for-always-on-availability-groups-and-failover-cluster-instances-on-linux) 一节进行讨论。
 
 ## <a name="a-quick-linux-primer"></a>Linux 快速入门
-虽然有些 Linux 安装可以通过接口完成，但大多数安装都不是，这意味着操作系统层的几乎所有工作都是通过命令行完成的。 在Linux 环境中，此命令行的常用术语是 bash shell  。
+虽然有些 Linux 安装可以通过接口完成，但大多数安装都不是，这意味着操作系统层的几乎所有工作都是通过命令行完成的。 在Linux 环境中，此命令行的常用术语是 bash shell。
 
 在 Linux 中，许多命令需要以提升的权限执行，就像作为管理员需要在 Windows 服务器中执行许多操作一样。 使用提升的权限执行有两种主要方法：
-1. 在适当用户的上下文中运行。 若要更改为其他用户，请使用命令 `su`。 如果 `su` 在没有用户名的情况下独立执行，那么只要你知道密码，你现在就将作为根处于 shell 中  。
+1. 在适当用户的上下文中运行。 若要更改为其他用户，请使用命令 `su`。 如果 `su` 在没有用户名的情况下独立执行，那么只要你知道密码，你现在就将作为根处于 shell 中。
    
 2. 运行事务更常见、更安全的做法是，在执行任何操作之前使用 `sudo`。 本文中的许多示例都使用了 `sudo`。
 
@@ -121,14 +121,14 @@ sudo firewall-cmd --permanent --add-service=high-availability
 -   [SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)
 
 ### <a name="install-ssnoversion-md-packages-for-availability"></a>安装 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 包以实现可用性
-在基于 Windows 的 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 安装中，有些组件甚至可以在基本引擎安装中安装，而其他组件则不能。 在 Linux 下，只有 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 引擎作为安装过程的一部分进行安装。 其他全部内容都是可选的。 对于 Linux 下的高可用性 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 实例，应使用 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 安装两个包：[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 代理 (mssql-server-agent) 和高可用性 (HA) 包 (mssql-server-ha)   。 虽然 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 代理在技术上是可选的，但它是 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 的作业计划程序，并且是日志传送所必需的，因此建议安装。 在基于 Windows 的安装中，[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 代理是不可选的。
+在基于 Windows 的 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 安装中，有些组件甚至可以在基本引擎安装中安装，而其他组件则不能。 在 Linux 下，只有 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 引擎作为安装过程的一部分进行安装。 其他全部内容都是可选的。 对于 Linux 下的高可用性 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 实例，应使用 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 安装两个包：[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 代理 (mssql-server-agent) 和高可用性 (HA) 包 (mssql-server-ha) 。 虽然 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 代理在技术上是可选的，但它是 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 的作业计划程序，并且是日志传送所必需的，因此建议安装。 在基于 Windows 的安装中，[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 代理是不可选的。
 
 >[!NOTE]
 >对于 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 的新用户，[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 代理是 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 的内置作业计划程序。 这是 DBA 计划备份和其他 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 维护等内容的常见方法。 与 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 的基于 Windows 的安装不同，其中 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 代理是完全不同的服务，在 Linux 上，[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 代理在 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 自身的上下文中运行。
 
-在基于 Windows 的配置上配置 AG 或 FCI 时，它们可识别群集。 群集感知意味着 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 具有 WSFC 了解的特定资源 DLL（用于 FCI 的 sqagtres.dll 和 sqsrvres.dll 以及用于 AG 的 hadrres.dll），并由 WSFC 使用以确保 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 群集功能正常启动和运行。 由于群集不仅对于 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 是外部的，而且对于 Linux 本身也是外部的，因此 Microsoft 必须为基于 Linux 的 AG 和 FCI 部署编写与资源 DLL 等价的代码。 这是 mssql-server-ha 包，也称为 Pacemaker 的 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 资源代理  。 若要安装 mssql-server-ha 包，请参阅[安装 HA 和 SQL Server 代理包](sql-server-linux-deploy-pacemaker-cluster.md#install-the-sql-server-ha-and-sql-server-agent-packages)  。
+在基于 Windows 的配置上配置 AG 或 FCI 时，它们可识别群集。 群集感知意味着 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 具有 WSFC 了解的特定资源 DLL（用于 FCI 的 sqagtres.dll 和 sqsrvres.dll 以及用于 AG 的 hadrres.dll），并由 WSFC 使用以确保 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 群集功能正常启动和运行。 由于群集不仅对于 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 是外部的，而且对于 Linux 本身也是外部的，因此 Microsoft 必须为基于 Linux 的 AG 和 FCI 部署编写与资源 DLL 等价的代码。 这是 mssql-server-ha 包，也称为 Pacemaker 的 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 资源代理。 若要安装 mssql-server-ha 包，请参阅[安装 HA 和 SQL Server 代理包](sql-server-linux-deploy-pacemaker-cluster.md#install-the-sql-server-ha-and-sql-server-agent-packages)。
 
-其他用于 Linux 上的 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]、[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 全文搜索 (mssql-server-fts) 和 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Integration Services (mssql-server-is) 的可选包对于高可用性、FCI 或 AG 都不是必需的   。
+其他用于 Linux 上的 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]、[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 全文搜索 (mssql-server-fts) 和 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Integration Services (mssql-server-is) 的可选包对于高可用性、FCI 或 AG 都不是必需的 。
 
 ## <a name="pacemaker-for-always-on-availability-groups-and-failover-cluster-instances-on-linux"></a>Linux 上的 AlwaysOn 可用性组和故障转移群集实例的 Pacemaker
 如前所述，目前 Microsoft 支持的唯一用于 AG 和 FCI 的群集机制就是具有 Corosync 的 Pacemaker。 本节介绍理解该解决方案的基本信息，以及如何为 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 配置规划和部署该解决方案。
@@ -148,7 +148,7 @@ sudo firewall-cmd --permanent --add-service=high-availability
 
 ![](./media/sql-server-linux-ha-basics/image1.png)
 
-在 Linux 上，虽然每个支持的分发版都有可用的 Pacemaker，但每个分发版都可以自定义，且具有稍微不同的实现和版本。 本文说明部分将介绍其中一些差异。 群集层是开放源代码，因此即使它随分发版一起发布，也不像 Windows 下的 WSFC 那样紧密集成。 这就是 Microsoft 提供 mssql-server-ha 的原因，这样 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 和 Pacemaker 堆栈就可以为 AG 和 FCI 提供接近但不完全相同的体验，就像在 Windows 下一样  。
+在 Linux 上，虽然每个支持的分发版都有可用的 Pacemaker，但每个分发版都可以自定义，且具有稍微不同的实现和版本。 本文说明部分将介绍其中一些差异。 群集层是开放源代码，因此即使它随分发版一起发布，也不像 Windows 下的 WSFC 那样紧密集成。 这就是 Microsoft 提供 mssql-server-ha 的原因，这样 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 和 Pacemaker 堆栈就可以为 AG 和 FCI 提供接近但不完全相同的体验，就像在 Windows 下一样。
 
 有关 Pacemaker 的完整文档，包括关于 RHEL 和 SLES 的所有内容更深入的阐释和完整的参考信息：
 -   [RHEL](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/ch-overview-HAAR.html)
@@ -169,10 +169,13 @@ WSFC 和 Pacemaker WSFC 群集都有资源的概念。 资源是在群集上下�
 
 Pacemaker 具有标准资源和克隆资源。 克隆资源是在所有节点上同时运行的资源。 例如，在多个节点上运行以实现负载均衡的 IP 地址。 为 FCI 创建的任何资源都使用标准资源，因为在任何给定时间只有一个节点可以托管 FCI。
 
+[!INCLUDE [bias-sensitive-term-t](../includes/bias-sensitive-term-t.md)]
+
 创建 AG 时，它需要一种特殊形式的克隆资源（称为多状态资源）。 虽然 AG 只有一个主要副本，但 AG 本身可以跨所有配置的节点运行，并且可能允许诸如只读访问之类的操作。 因为这是对节点的“实时”使用，所以资源有两种状态的概念：主状态和从状态。 有关详细信息，请参阅[多状态资源：具有多种模式的资源](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/s1-multistateresource-HAAR.html)。
 
 #### <a name="resource-groupssets"></a>资源组/集
-与 WSFC 中的角色类似，Pacemaker 群集也具有资源组的概念。 资源组（在 SLES 中称为“集”）是一起运行的资源集合，可以作为单个单元从一个节点故障转移到另一个节点。 资源组不能包含配置为主/从的资源；因此，它们不能用于 AG。 虽然资源组可用于 FCI，但通常不建议使用该配置。
+
+与 WSFC 中的角色类似，Pacemaker 群集也具有资源组的概念。 资源组（在 SLES 中称为“集”）是一起运行的资源集合，可以作为单个单元从一个节点故障转移到另一个节点。 资源组不能包含配置为主状态或从状态的资源；因此，它们不能用于 AG。 虽然资源组可用于 FCI，但通常不建议使用该配置。
 
 #### <a name="constraints"></a>约束
 WSFC 具有各种资源参数以及依赖项，以此说明 WSFC 两个不同资源之间的父/子关系。 依赖项只是一个规则，指示 WSFC 哪个资源需要首先联机。
@@ -210,7 +213,7 @@ Pacemaker 群集的日志位置因分发版而异。
 ### <a name="virtualizing-linux-based-pacemaker-clusters-for-ssnoversion-md"></a>为 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 虚拟化基于 Linux 的 Pacemaker 群集
 使用虚拟机为 AG 和 FCI 部署基于 Linux 的 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 部署的规则与基于 Windows 的对应规则相同。 Microsoft 在 [Microsoft 支持知识库 956893](https://support.microsoft.com/help/956893/support-policy-for-microsoft-sql-server-products-that-are-running-in-a-hardware-virtualization-environment) 中提供了一组基本规则，用于支持虚拟化 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 部署。 由于平台本身的差异，不同的虚拟机监控程序（如 Microsoft 的 Hyper-V 和 VMware 的 ESXi）可能会有不同的差异。
 
-对于虚拟化下的 AG 和 FCI，请确保为给定 Pacemaker 群集的节点设置了反关联性。 在 AG 或 FCI 配置中配置为高可用性时，托管 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 的 VM 不应在同一虚拟机监控程序主机上运行。 例如，如果部署了双节点 FCI，则需要至少有三个虚拟机监控程序主机，以便在主机发生故障时，特别是使用 Live Migration 或 vMotion 等功能时，其中一个托管节点的 VM 可以找到某个位置  。
+对于虚拟化下的 AG 和 FCI，请确保为给定 Pacemaker 群集的节点设置了反关联性。 在 AG 或 FCI 配置中配置为高可用性时，托管 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 的 VM 不应在同一虚拟机监控程序主机上运行。 例如，如果部署了双节点 FCI，则需要至少有三个虚拟机监控程序主机，以便在主机发生故障时，特别是使用 Live Migration 或 vMotion 等功能时，其中一个托管节点的 VM 可以找到某个位置。
 
 有关更多详细信息，请参阅：
 -   Hyper-V 文档 - [Using Guest Clustering for High Availability](https://technet.microsoft.com/library/dn440540(v=ws.11).aspx)（使用来宾群集实现高可用性）

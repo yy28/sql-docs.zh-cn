@@ -1,5 +1,6 @@
 ---
 title: 确定有效的数据库引擎权限 | Microsoft Docs
+description: 了解如何确定谁对 SQL Server 数据库引擎中的各种对象拥有权限，包括当前和以前的权限系统。
 ms.custom: ''
 ms.date: 01/03/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: 273ea09d-60ee-47f5-8828-8bdc7a3c3529
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b7c27c18cb862a753bc1a71c38d732c72a040a48
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: f4e26da02da69955a3bc3f589753efa1007ae3a1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488026"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005624"
 ---
 # <a name="determining-effective-database-engine-permissions"></a>确定有效的数据库引擎权限
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 本文介绍如何确定谁对 SQL Server 数据库引擎中的各种对象拥有权限。 SQL Server 针对数据库引擎实现两个权限系统。 角色固定的旧系统拥有预先配置的权限。 从 SQL Server 2005 开始，提供了更灵活、更精确的系统。 （本文中的信息同样适用于 SQL Server 2005 及更高版本。 某些类型的权限在某些版本的 SQL Server 中不可用。）
 
@@ -92,7 +93,7 @@ SELECT DP1.name AS DatabaseRoleName,
 
 可在服务器级别、数据库级别、架构级别或对象等等级别授予权限。共有 26 个级别（称为类）。 类的完整列表按字母顺序分别包括：`APPLICATION ROLE`、`ASSEMBLY`、`ASYMMETRIC KEY`、`AVAILABILITY GROUP`、`CERTIFICATE`、`CONTRACT`、`DATABASE`、`DATABASE` `SCOPED CREDENTIAL`、`ENDPOINT`、`FULLTEXT CATALOG`、`FULLTEXT STOPLIST`、`LOGIN`、`MESSAGE TYPE`、`OBJECT`、`REMOTE SERVICE BINDING`、`ROLE`、`ROUTE`、`SCHEMA`、`SEARCH PROPERTY LIST`、`SERVER`、`SERVER ROLE`、`SERVICE`、`SYMMETRIC KEY`、`TYPE`、`USER`、`XML SCHEMA COLLECTION`。 （某些类在某些类型的 SQL Server 中不可用。）若要提供有关每个类的完整信息，需要执行不同的查询。
 
-### <a name="principals"></a>Principals
+### <a name="principals"></a>主体
 
 权限将授予主体。 主体可以是服务器角色、登录名、数据库角色或用户。 登录名可以代表包含许多 Windows 用户的 Windows 组。 由于 Windows 组不由 SQL Server 维护，因此，SQL Server 不一定总知道谁是 Windows 组的成员。 当某个 Windows 用户连接到 SQL Server 时，登录数据包中包含该用户的 Windows 组成员身份令牌。
 

@@ -13,16 +13,16 @@ ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: 0cd776b547c60ddbb144415f7185d1c770d9e6df
-ms.sourcegitcommit: 25ad26e56d84e471ed447af3bb571cce8a53ad8f
+ms.openlocfilehash: 864abdb32dceaaa18e221295eebebc4f8382d4bb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82872797"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901559"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>快速入门：使用 Docker 运行 SQL Server 容器映像
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -133,7 +133,7 @@ any changes to one section should be duplicated in the other-->
    | 参数 | 说明 |
    |-----|-----|
    | **-e "ACCEPT_EULA=Y"** |  将 **ACCEPT_EULA** 变量设置为任意值，以确认接受[最终用户许可协议](https://go.microsoft.com/fwlink/?LinkId=746388)。 SQL Server 映像的必需设置。 |
-   | **-e "SA_PASSWORD=\<YourStrong@Passw0rd\>"** | 指定至少包含 8 个字符且符合 [SQL Server 密码要求](../relational-databases/security/password-policy.md)的强密码。 SQL Server 映像的必需设置。 |
+   | -e "SA_PASSWORD=\<YourStrong@Passw0rd\>" | 指定至少包含 8 个字符且符合 [SQL Server 密码要求](../relational-databases/security/password-policy.md)的强密码。 SQL Server 映像的必需设置。 |
    | **-p 1433:1433** | 将主机环境中的 TCP 端口（第一个值）映射到容器中的 TCP 端口（第二个值）。 在此示例中，SQL Server 侦听容器中的 TCP 1433，并对主机上的端口 1433 公开。 |
    | **--name sql1** | 为容器指定一个自定义名称，而不是使用随机生成的名称。 如果运行多个容器，则无法重复使用相同的名称。 |
    | **-d** | 在后台运行容器（守护程序） |
@@ -164,7 +164,7 @@ any changes to one section should be duplicated in the other-->
 
    ![Docker ps 命令输出](./media/sql-server-linux-setup-docker/docker-ps-command.png)
 
-4. 如果“状态”列显示“正常运行”，则 SQL Server 将在容器中运行，并侦听“端口”列中指定的端口    。 如果 SQL Server 容器的“状态”列显示“已退出”，则参阅[配置指南的疑难解答部分](sql-server-linux-configure-docker.md#troubleshooting)   。
+4. 如果“状态”列显示“正常运行”，则 SQL Server 将在容器中运行，并侦听“端口”列中指定的端口  。 如果 SQL Server 容器的“状态”列显示“已退出”，则参阅[配置指南的疑难解答部分](sql-server-linux-configure-docker.md#troubleshooting) 。
 
 `-h`（主机名）参数也非常有用，但为了简单起见，本教程中不使用它。 这会将容器的内部名称更改为一个自定义值。 也就是以下 Transact-SQL 查询中返回的名称：
 
@@ -187,23 +187,23 @@ SELECT @@SERVERNAME,
 
 在开始执行以下步骤之前，请确保已在本文顶部选择了首选的 shell（bash、PowerShell 或 cmd）。
 
-1. 从 Docker Hub 拉取 SQL Server 2019 Linux 容器映像。
+1. 从 Microsoft 容器注册表中拉取 SQL Server 2019 Linux 容器映像。
 
    ::: zone pivot="cs1-bash"
    ```bash
-   sudo docker pull mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
+   sudo docker pull mcr.microsoft.com/mssql/server:2019-CU5-ubuntu-18.04
    ```
    ::: zone-end
 
    ::: zone pivot="cs1-powershell"
    ```PowerShell
-   docker pull mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
+   docker pull mcr.microsoft.com/mssql/server:2019-CU5-ubuntu-18.04
    ```
    ::: zone-end
 
    ::: zone pivot="cs1-cmd"
    ```cmd
-   docker pull mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
+   docker pull mcr.microsoft.com/mssql/server:2019-CU5-ubuntu-18.04
    ```
    ::: zone-end
 
@@ -222,7 +222,7 @@ SELECT @@SERVERNAME,
    ```bash
    sudo docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" \
       -p 1433:1433 --name sql1 \
-      -d mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
+      -d mcr.microsoft.com/mssql/server:2019-CU5-ubuntu-18.04
    ```
    ::: zone-end
 
@@ -230,7 +230,7 @@ SELECT @@SERVERNAME,
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
       -p 1433:1433 --name sql1 `
-      -d mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
+      -d mcr.microsoft.com/mssql/server:2019-CU5-ubuntu-18.04
    ```
    ::: zone-end
 
@@ -238,7 +238,7 @@ SELECT @@SERVERNAME,
    ```cmd
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
       -p 1433:1433 --name sql1 `
-      -d mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
+      -d mcr.microsoft.com/mssql/server:2019-CU5-ubuntu-18.04
    ```
    ::: zone-end
 
@@ -253,10 +253,10 @@ SELECT @@SERVERNAME,
    | 参数 | 说明 |
    |-----|-----|
    | **-e "ACCEPT_EULA=Y"** |  将 **ACCEPT_EULA** 变量设置为任意值，以确认接受[最终用户许可协议](https://go.microsoft.com/fwlink/?LinkId=746388)。 SQL Server 映像的必需设置。 |
-   | **-e "SA_PASSWORD=\<YourStrong@Passw0rd\>"** | 指定至少包含 8 个字符且符合 [SQL Server 密码要求](../relational-databases/security/password-policy.md)的强密码。 SQL Server 映像的必需设置。 |
+   | -e "SA_PASSWORD=\<YourStrong@Passw0rd\>" | 指定至少包含 8 个字符且符合 [SQL Server 密码要求](../relational-databases/security/password-policy.md)的强密码。 SQL Server 映像的必需设置。 |
    | **-p 1433:1433** | 将主机环境中的 TCP 端口（第一个值）映射到容器中的 TCP 端口（第二个值）。 在此示例中，SQL Server 侦听容器中的 TCP 1433，并对主机上的端口 1433 公开。 |
    | **--name sql1** | 为容器指定一个自定义名称，而不是使用随机生成的名称。 如果运行多个容器，则无法重复使用相同的名称。 |
-   | **mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04** | SQL Server 2019 Ubuntu Linux 容器映像。 |
+   | mcr.microsoft.com/mssql/server:2019-CU5-ubuntu-18.04 | SQL Server 2019 Ubuntu Linux 容器映像。 |
 
 3. 要查看 Docker 容器，请使用 `docker ps` 命令。
 
@@ -282,7 +282,7 @@ SELECT @@SERVERNAME,
 
    ![Docker ps 命令输出](./media/sql-server-linux-setup-docker/docker-ps-command.png)
 
-4. 如果“状态”列显示“正常运行”，则 SQL Server 将在容器中运行，并侦听“端口”列中指定的端口    。 如果 SQL Server 容器的“状态”列显示“已退出”，则参阅[配置指南的疑难解答部分](sql-server-linux-configure-docker.md#troubleshooting)   。
+4. 如果“状态”列显示“正常运行”，则 SQL Server 将在容器中运行，并侦听“端口”列中指定的端口  。 如果 SQL Server 容器的“状态”列显示“已退出”，则参阅[配置指南的疑难解答部分](sql-server-linux-configure-docker.md#troubleshooting) 。
 
 `-h`（主机名）参数也非常有用，但为了简单起见，本教程中不使用它。 这会将容器的内部名称更改为一个自定义值。 也就是以下 Transact-SQL 查询中返回的名称：
 
@@ -306,7 +306,7 @@ SA  帐户是安装过程中在 SQL Server 实例上创建的系统管理员。 
 
 1. 选择 SA 用户要使用的强密码。
 
-1. 使用 `docker exec` 运行sqlcmd  ，以使用 Transact-SQL 更改密码。 在下面的示例中，将旧密码 `<YourStrong!Passw0rd>` 和新密码 `<YourNewStrong!Passw0rd>` 替换为你自己的密码值。
+1. 使用 `docker exec` 运行sqlcmd，以使用 Transact-SQL 更改密码。 在下面的示例中，将旧密码 `<YourStrong!Passw0rd>` 和新密码 `<YourNewStrong!Passw0rd>` 替换为你自己的密码值。
 
    ::: zone pivot="cs1-bash"
    ```bash
@@ -365,17 +365,17 @@ SA  帐户是安装过程中在 SQL Server 实例上创建的系统管理员。 
    > [!TIP]
    > 可以省略命令行上提示要输入的密码。
 
-3. 如果成功，应会显示 sqlcmd  命令提示符：`1>`。
+3. 如果成功，应会显示 sqlcmd 命令提示符：`1>`。
 
 ## <a name="create-and-query-data"></a>创建和查询数据
 
-以下部分将引导你使用 sqlcmd  和 Transact-SQL 完成新建数据库、添加数据并运行简单查询的整个过程。
+以下部分将引导你使用 sqlcmd 和 Transact-SQL 完成新建数据库、添加数据并运行简单查询的整个过程。
 
 ### <a name="create-a-new-database"></a>新建数据库
 
 以下步骤创建一个名为 `TestDB` 的新数据库。
 
-1. 在 sqlcmd  命令提示符中，粘贴以下 Transact-SQL 命令以创建测试数据库：
+1. 在 sqlcmd 命令提示符中，粘贴以下 Transact-SQL 命令以创建测试数据库：
 
    ```sql
    CREATE DATABASE TestDB
@@ -397,7 +397,7 @@ SA  帐户是安装过程中在 SQL Server 实例上创建的系统管理员。 
 
 接下来创建一个新表 `Inventory`，然后插入两个新行。
 
-1. 在 sqlcmd  命令提示符中，将上下文切换到新的 `TestDB` 数据库：
+1. 在 sqlcmd 命令提示符中，将上下文切换到新的 `TestDB` 数据库：
 
    ```sql
    USE TestDB
@@ -425,7 +425,7 @@ SA  帐户是安装过程中在 SQL Server 实例上创建的系统管理员。 
 
 现在，运行查询以从 `Inventory` 表返回数据。
 
-1. 通过 sqlcmd  命令提示符输入查询，以返回 `Inventory` 表中数量大于 152 的行：
+1. 通过 sqlcmd 命令提示符输入查询，以返回 `Inventory` 表中数量大于 152 的行：
 
    ```sql
    SELECT * FROM Inventory WHERE quantity > 152;
@@ -439,7 +439,7 @@ SA  帐户是安装过程中在 SQL Server 实例上创建的系统管理员。 
 
 ### <a name="exit-the-sqlcmd-command-prompt"></a>退出 sqlcmd 命令提示符
 
-1. 要结束 sqlcmd  会话，请键入 `QUIT`：
+1. 要结束 sqlcmd 会话，请键入 `QUIT`：
 
    ```sql
    QUIT

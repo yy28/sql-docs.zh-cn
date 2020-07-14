@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: a40083b3-4f7b-4a25-a5a3-6ef67bdff440
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4c1267e08bfdb1361223f3a93ec465b3da83d8ce
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cf9ee7fc22e29e7e757b2c615b398a9233d0ad7a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70846568"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880250"
 ---
 # <a name="specify-a-merge-article-resolver"></a>指定合并项目冲突解决程序
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中指定合并项目冲突解决程序。  
 
   
@@ -45,15 +45,15 @@ ms.locfileid: "70846568"
     -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Internet Information Services (IIS) 服务器，对于使用 Web 同步的请求订阅  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 注册冲突解决程序之后，在“项目属性 - \<项目>”对话框（可在新建发布向导和“发布属性 - \<发布>”对话框中使用）的“冲突解决程序”选项卡上指定项目应使用该冲突解决程序。 有关如何使用该向导和如何访问该对话框的详细信息，请参阅[创建发布](../../../relational-databases/replication/publish/create-a-publication.md)和[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+ 注册冲突解决程序之后，在“项目属性 - \<Article>”对话框（可在新建发布向导和“发布属性 - \<Publication>”对话框中使用）的“冲突解决程序”选项卡上指定项目应使用该冲突解决程序。   有关如何使用该向导和如何访问该对话框的详细信息，请参阅[创建发布](../../../relational-databases/replication/publish/create-a-publication.md)和[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 #### <a name="to-specify-a-resolver"></a>指定冲突解决程序  
   
-1.  在新建发布向导或“发布属性 - \<发布>”对话框的“项目”页上，选择一个表。  
+1.  在新建发布向导或“发布属性 - \<Publication>”对话框的“项目” 页上，选择一个表。  
   
 2.  单击 **“项目属性”** ，再单击 **“设置突出显示的表项目的属性”** 。  
   
-3.  在“项目属性 - \<项目>”页上，单击“冲突解决程序”选项卡。  
+3.  在“项目属性 - \<Article>”页上，单击“冲突解决程序”选项卡 。  
   
 4.  选择 **“使用自定义冲突解决程序（已在分发服务器上注册）”** ，然后在列表中单击冲突解决程序。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "70846568"
   
 2.  若要确定所需冲突解决程序是否已注册，请在发布服务器上对任意数据库执行 [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md)。 这将显示自定义冲突解决程序的说明以及在分发服务器上注册的每个基于 COM 的冲突解决程序的类标识符 (CLSID)，或者显示在分发服务器上注册的每个业务逻辑处理程序的托管程序集相关信息。  
   
-3.  如果尚未注册所需的自定义解决程序，请在分发服务器上执行 [sp_registercustomresolver &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md)。 为 \@article_resolver 指定冲突解决程序的名称；对于业务逻辑处理程序，此为程序集的易记名称。 对于基于 COM 的冲突解决程序，为 \@resolver_clsid 指定 DLL 的 CLSID；对于业务逻辑处理程序，为 \@is_dotnet_assembly 指定值 true、为 \@dotnet_assembly_name 指定程序集名称，并为 \@dotnet_class_name 指定可覆盖 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 的类的完全限定名称。  
+3.  如果尚未注册所需的自定义解决程序，请在分发服务器上执行 [sp_registercustomresolver &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md)。 为 \@article_resolver 指定冲突解决程序的名称；对于业务逻辑处理程序，此为程序集的易记名称。 对于基于 COM 的冲突解决程序，为 \@resolver_clsid 指定 DLL 的 CLSID；对于业务逻辑处理程序，为 \@is_dotnet_assembly 指定值 true、为 \@dotnet_assembly_name 指定程序集名称，并为 \@dotnet_class_name 指定可覆盖 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 的类的完全限定名称    。  
   
     > [!NOTE]  
     >  如果业务逻辑处理程序程序集与合并代理可执行文件不是部署在同一目录中、与同步启动合并代理的应用程序不是部署在同一目录中，或者不是部署在全局程序集缓存 (GAC) 中，则需要为 \@dotnet_assembly_name 指定带有程序集名称的完整路径。  
@@ -104,7 +104,7 @@ ms.locfileid: "70846568"
   
 2.  在发布服务器上执行 [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md)，并记下所需自定义冲突解决程序在结果集的 **value** 字段中的名称。  
   
-3.  在发布服务器上，对发布数据库执行 [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。 为 \@article_resolver 指定从步骤 2 获得的冲突解决程序的名称，并使用 \@resolver_info 参数指定自定义冲突解决程序所需的任何输入内容。 对于基于存储过程的自定义冲突解决程序，\@resolver_info 为存储过程的名称。 有关 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 提供的冲突解决程序所需输入内容的详细信息，请参阅 [Microsoft 基于 COM 的冲突解决程序](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)。  
+3.  在发布服务器上，对发布数据库执行 [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。 为 \@article_resolver 指定从步骤 2 获得的冲突解决程序的名称，并使用 \@resolver_info 参数指定自定义冲突解决程序所需的任何输入内容 。 对于基于存储过程的自定义冲突解决程序，\@resolver_info 为存储过程的名称。 有关 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 提供的冲突解决程序所需输入内容的详细信息，请参阅 [Microsoft 基于 COM 的冲突解决程序](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)。  
   
 ## <a name="specify-or-change-a-custom-resolver-for-an-existing-merge-article"></a>为现有合并项目指定或更改自定义冲突解决程序  
   
@@ -112,9 +112,9 @@ ms.locfileid: "70846568"
   
 2.  在发布服务器上执行 [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md)，并记下所需自定义冲突解决程序在结果集的 **value** 字段中的名称。  
   
-3.  在发布服务器上，对发布数据库执行 [sp_changemergearticle (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。 将 \@property 的值指定为 article_resolver（包括业务逻辑处理程序的完整路径），并为 \@value 指定从步骤 2 获得的所需自定义冲突解决程序的名称。  
+3.  在发布服务器上，对发布数据库执行 [sp_changemergearticle (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。 将 \@property 的值指定为 article_resolver（包括业务逻辑处理程序的完整路径），并为 \@value 指定从步骤 2 获得的所需自定义冲突解决程序的名称  。  
   
-4.  若要更改自定义冲突解决程序所需的任何输入内容，请再次执行 [sp_changemergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。 将 \@property 的值指定为 resolver_info 并为 \@value 指定自定义冲突解决程序所需的任何输入内容。 对于基于存储过程的自定义冲突解决程序，\@resolver_info 为存储过程的名称。 有关所需输入内容的详细信息，请参阅 [Microsoft 基于 COM 的冲突解决程序](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)。  
+4.  若要更改自定义冲突解决程序所需的任何输入内容，请再次执行 [sp_changemergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。 将 \@property 的值指定为 resolver_info 并为 \@value 指定自定义冲突解决程序所需的任何输入内容  。 对于基于存储过程的自定义冲突解决程序，\@resolver_info 为存储过程的名称。 有关所需输入内容的详细信息，请参阅 [Microsoft 基于 COM 的冲突解决程序](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)。  
   
 ## <a name="unregister-a-custom-conflict-resolver"></a>撤消注册自定义冲突解决程序  
   

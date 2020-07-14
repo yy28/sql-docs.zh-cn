@@ -1,5 +1,6 @@
 ---
 title: 使用 SysPrep 安装 SQL Server | Microsoft Docs
+description: 本文介绍如何通过在 SQL Server 安装中使用 SysPrep 来准备和完成映像。
 ms.custom: ''
 ms.date: 09/07/2017
 ms.prod: sql
@@ -10,18 +11,18 @@ ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 8e8b9a36fac2e90719d3f8a8dbeee5d4c4a0e662
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2984f165c686226337af7edfb94e4c4216eb5eab
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67990948"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899667"
 ---
 # <a name="install-sql-server-with-sysprep"></a>使用 SysPrep 安装 SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 相关的安装操作可以通过安装中心来访问。  “安装中心”的  “高级”页具有两个选项 - **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“** 的独立实例的映像准备”和 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“** 的已准备独立实例的映像完成”。 [准备](#prepare) 和 [完成](#complete) 部分将详细说明安装过程。 有关详细信息，请参阅 [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)。 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 相关的安装操作可以通过安装中心来访问。 “安装中心”的“高级”页具有两个选项 -“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的独立实例的映像准备”和“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已准备独立实例的映像完成”。 [准备](#prepare) 和 [完成](#complete) 部分将详细说明安装过程。 有关详细信息，请参阅 [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)。 
   
 还可以使用命令提示符或配置文件准备和完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例。 有关详细信息，请参阅：  
   
@@ -29,7 +30,7 @@ ms.locfileid: "67990948"
   
 - [使用配置文件安装 SQL Server](../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
 安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前，请查阅[计划 SQL Server 安装](../../sql-server/install/planning-a-sql-server-installation.md)中的文章。 
   
 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本及硬件和软件要求的详细信息，请参阅[安装 SQL Server 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。 
@@ -103,7 +104,7 @@ ms.locfileid: "67990948"
   
     |||  
     |-|-|  
-    |[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SysPrep{2}|[!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication<br /><br /> 全文功能<br /><br /> “数据库引擎服务”<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式下的<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]<br /><br /> 可再发行的功能<br /><br /> 共享功能|  
+    |[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SysPrep|[!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication<br /><br /> 全文功能<br /><br /> 数据库引擎服务<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式下的<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]<br /><br /> 可再发行的功能<br /><br /> 共享功能|  
   
      突出显示功能名称时，右侧窗格中会显示每个组件组的说明。 您可以选中任意一些复选框。 有关详细信息，请参阅 [SQL Server 的各版本和支持的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。 
   
@@ -111,11 +112,11 @@ ms.locfileid: "67990948"
   
 10. 在 **“准备映像规则”** 页上，系统配置检查器将在安装继续之前验证计算机的系统状态。 您可以通过单击 **“显示详细信息”** 在屏幕上查看详情，或通过单击 **“查看详细报告”** 从而以 HTML 报告的形式进行查看。 
   
-11. 在“实例配置”页上，指定实例的实例 ID。 单击“下一步”  以继续。 
+11. 在“实例配置”页上，指定实例的实例 ID。 单击“下一步”以继续。 
   
      **实例 ID** - 实例 ID 用于标识 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的安装目录和注册表项。 默认实例和命名实例都是如此。 如果已准备实例在“完成”步骤中作为默认实例完成，则该实例名称将被覆盖为 MSSQLSERVER。 实例 ID 仍保持指定的 ID。 
   
-     **实例根目录** - 默认情况下，实例根目录为 [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]。 若要指定一个非默认的根目录，请使用所提供的字段，或单击  “浏览”以找到一个安装文件夹。 在“完成”步骤的配置过程中，将使用准备步骤中指定的目录。 
+     **实例根目录** - 默认情况下，实例根目录为 [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]。 若要指定一个非默认的根目录，请使用所提供的字段，或单击“浏览”以找到一个安装文件夹。 在“完成”步骤的配置过程中，将使用准备步骤中指定的目录。 
   
      所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack 和升级都将应用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的每个组件。 
   
@@ -151,16 +152,16 @@ ms.locfileid: "67990948"
   
 6. 在 **“许可条款”** 页上阅读许可协议，然后选中相应的复选框以接受许可条款和条件。 为了帮助改进 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您还可以启用功能使用情况选项并将报告发送给 [!INCLUDE[msCoName](../../includes/msconame-md.md)]。 
   
-7. 在 **“选择已准备实例”** 页上，从下拉框中选择您要完成的已准备实例。 从  “实例 ID”列表中选择未配置的实例。 
+7. 在 **“选择已准备实例”** 页上，从下拉框中选择您要完成的已准备实例。 从“实例 ID”列表中选择未配置的实例。 
   
-     **安装的实例：** 该网格显示所有实例，包括此计算机上的任何已准备实例。 
+     **已安装的实例：** 该网格显示所有实例，包括此计算机上的任何已准备实例。 
   
 8. 在 **“查看功能”** 页上，您将看到在安装的准备步骤中包括的所选功能和组件。 如果您要向未在已准备实例中包括的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例添加更多功能，则必须首先完成此步骤以完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，然后从 **“安装中心”** 的 **“添加功能”** 上添加功能。 
   
     > [!NOTE]  
     >  您可以添加可用于您正在安装的产品版本的功能。 有关详细信息，请参阅 [SQL Server 的各版本和支持的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。  
   
-9. 在“实例配置”页上，指定已准备实例的实例名称。 这是您完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的配置后的实例的名称。 单击“下一步”  以继续。 
+9. 在“实例配置”页上，指定已准备实例的实例名称。 这是您完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的配置后的实例的名称。 单击“下一步”以继续。 
   
      **实例 ID** - 实例 ID 用于标识 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的安装目录和注册表项。 默认实例和命名实例都是如此。 如果已准备实例在“完成”步骤中作为默认实例完成，则该实例名称将被覆盖为 MSSQLSERVER。 实例 ID 仍保持准备阶段中指定的 ID。 
   
@@ -182,7 +183,7 @@ ms.locfileid: "67990948"
   
      为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务指定登录信息后，请单击 **“下一步”** 。 
   
-12. 使用“服务器配置 - 排序规则”  选项卡为 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 指定非默认的排序规则。 有关详细信息，请参阅[服务器配置 - 排序规则](https://msdn.microsoft.com/library/e3986870-5be4-458b-b671-5ff12a27b022)。 
+12. 使用“服务器配置 - 排序规则”选项卡为 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 指定非默认的排序规则。 有关详细信息，请参阅[服务器配置 - 排序规则](https://msdn.microsoft.com/library/e3986870-5be4-458b-b671-5ff12a27b022)。 
   
 13. 使用“ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 配置 - 帐户设置”页指定以下各项：  
   
@@ -259,11 +260,11 @@ ms.locfileid: "67990948"
   
 2. 双击要卸载的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件，再单击 **“删除”** 。 
   
-3. 将运行安装程序支持规则以验证您的计算机配置。 单击“确定”以继续。  
+3. 将运行安装程序支持规则以验证您的计算机配置。 单击 **“确定”** 继续。 
   
 4. 在 **“选择实例”** 页中，选择要修改的已准备实例。 已准备实例的名称将显示为“未配置 PreparedInstanceID”，其中 PreparedInstanceID 是您选择的实例。 
   
-5. 在 **“选择功能”** 页上，指定要从指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中删除的功能。 单击“下一步”  以继续。 
+5. 在 **“选择功能”** 页上，指定要从指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中删除的功能。 单击“下一步”以继续。 
   
 6. 将运行删除规则以验证是否可以成功完成删除操作。 
   
@@ -281,11 +282,11 @@ ms.locfileid: "67990948"
   
 2. 双击要卸载的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件，再单击 **“删除”** 。 
   
-3. 将运行安装程序支持规则以验证您的计算机配置。 单击“确定”以继续。  
+3. 将运行安装程序支持规则以验证您的计算机配置。 单击 **“确定”** 继续。 
   
 4. 在 **“选择实例”** 页中，选择要修改的已准备实例。 已准备实例的名称将显示为“未配置 PreparedInstanceID”，其中 PreparedInstanceID 是您选择的实例。 
   
-5. 在 **“选择功能”** 页上，指定要从指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中删除的功能。 单击“下一步”  以继续。 
+5. 在 **“选择功能”** 页上，指定要从指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中删除的功能。 单击“下一步”以继续。 
   
 6. 在 **“删除规则”** 页上，安装程序将运行规则以验证是否可以成功完成操作。 
   

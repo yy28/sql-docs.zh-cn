@@ -1,5 +1,6 @@
 ---
 title: 监视复制代理 | Microsoft Docs
+description: SQL Server 复制监视器提供复制活动的系统视图，让你能够查找特定代理的相关信息。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,12 +21,12 @@ ms.assetid: d06ed24f-82d7-4b9e-9e40-cc9780476a71
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: fd19ef065c98022d0f8fecd8e4fd044007759005
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7984491281088f345e3e263356c6dad323d2cf5a
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288064"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807602"
 ---
 # <a name="monitor-replication-agents"></a>监视复制代理
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "76288064"
   
     -   队列读取器代理  
   
-     通过下列选项卡访问与这些代理关联的信息和任务： **“代理”** （每个发布服务器和发布都提供）和 **“警告”** （每个发布都提供）。 有关详细信息，请参阅[使用复制监视器查看信息和执行任务](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
+     通过以下选项卡访问与这些代理相关联的信息和任务：“代理”（可用于每个发布服务器和发布）和“警告”（可用于每个发布） 。 有关详细信息，请参阅[使用复制监视器查看信息和执行任务](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
 -   以下代理与复制监视器中的订阅相关联：  
   
@@ -47,7 +48,7 @@ ms.locfileid: "76288064"
   
     -   合并代理  
   
-     通过下列选项卡访问与这些代理相关联的信息和任务： **“订阅监视列表”** （每个发布服务器都提供）或 **“所有订阅”** 选项卡（所有发布都提供）。 有关详细信息，请参阅[使用复制监视器查看信息和执行任务](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
+     通过以下选项卡访问与这些代理相关联的信息和任务：“订阅监视列表”（所有发布服务器都提供）或“所有订阅”选项卡（所有发布都提供） 。 有关详细信息，请参阅[使用复制监视器查看信息和执行任务](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
 ## <a name="using-sql-server-management-studio-to-monitor-replication-agents"></a>使用 SQL Server Management Studio 监视复制代理  
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 为监视复制代理提供下列对话框：  
@@ -76,7 +77,7 @@ ms.locfileid: "76288064"
   
     -   单击 **“监视器”** 启动 **复制监视器**。  
   
-5.  单击“关闭”  。  
+5.  单击“关闭”。  
   
 #### <a name="to-monitor-the-distribution-agent-and-merge-agent-from-the-publisher"></a>监视分发代理和合并代理（从发布服务器）  
   
@@ -98,7 +99,7 @@ ms.locfileid: "76288064"
   
     -   对于请求订阅，单击 **“查看作业历史记录”** 启动 **日志文件查看器**，此查看器可以显示代理日志的输出。  
   
-6.  单击“关闭”  。  
+6.  单击“关闭”。  
   
 #### <a name="to-monitor-the-distribution-agent-and-merge-agent-from-the-subscriber"></a>监视分发代理和合并代理（从订阅服务器）  
   
@@ -116,7 +117,7 @@ ms.locfileid: "76288064"
   
     -   单击 **“查看作业历史记录”** 启动 **日志文件查看器**，此查看器可以显示代理日志的输出。  
   
-5.  单击“关闭”  。  
+5.  单击“关闭”。  
   
 ## <a name="see-also"></a>另请参阅  
  [复制代理概述](../../../relational-databases/replication/agents/replication-agents-overview.md)  

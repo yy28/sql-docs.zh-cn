@@ -1,5 +1,6 @@
 ---
 title: 本机编译存储过程 - 数据访问应用程序
+description: 查找有关从数据访问应用程序调用本机编译存储过程的指南，以及使用 SQL Server Native Client ODBC 驱动程序的示例。
 ms.custom: seo-dt-2019
 ms.date: 03/16/2017
 ms.prod: sql
@@ -11,16 +12,16 @@ ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: abc9aa1f61d241f3fe24196ad9d8ad4244b951f2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 05dcd994a1cf2387bfe7e1a1be46e7a95d24249d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412765"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723374"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>从数据访问应用程序调用本机编译的存储过程
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 本主题提供有关从数据访问应用程序中调用本机编译的存储过程的指导。
 
@@ -32,7 +33,7 @@ ms.locfileid: "74412765"
 
 ### <a name="sqlclient"></a>SqlClient
 
-- 对于 SqlClient，准备好的执行与直接执行没有分别   。 使用 SqlCommand 及 CommandType = CommandType.StoredProcedure 执行存储过程。
+- 对于 SqlClient，准备好的执行与直接执行没有分别 。 使用 SqlCommand 及 CommandType = CommandType.StoredProcedure 执行存储过程。
 
 - SqlClient 不支持准备好的 RPC 过程调用。
 
@@ -48,18 +49,18 @@ ms.locfileid: "74412765"
 
 以下建议适用于在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 中使用 ODBC 驱动程序调用本机编译的存储过程。
 
-*调用一次：* 只调用存储过程一次的最高效方式是使用 **SQLExecDirect** 和 ODBC CALL 子句发出直接的 RPC 调用。 请勿使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] EXECUTE 语句  。 如需多次调用存储过程，则准备好的执行最为高效。
+*调用一次：* 只调用存储过程一次的最高效方式是使用 **SQLExecDirect** 和 ODBC CALL 子句发出直接的 RPC 调用。 请勿使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] EXECUTE 语句。 如需多次调用存储过程，则准备好的执行最为高效。
 
 *调用多次：* 多次调用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储过程的最高效方式是通过准备好的 RPC 过程调用执行。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 中使用 ODBC 驱动程序执行准备好的 RPC 调用的步骤是：
 
 1. 打开到数据库的连接。
-2. 使用 SQLBindParameter  绑定参数。
-3. 使用 SQLPrepare  准备过程调用。
-4. 使用 SQLExecute  多次执行存储过程。
+2. 使用 SQLBindParameter 绑定参数。
+3. 使用 SQLPrepare 准备过程调用。
+4. 使用 SQLExecute 多次执行存储过程。
 
 #### <a name="c-code-for-odbc"></a>用于 ODBC 的 C 代码
 
-下面的 C 代码片段演示了某个向订单添加行项目的存储过程的准备好的执行。 SQLPrepare  只调用了一次， 而 SQLExecute  调用了多次（每个过程执行调用一次）。
+下面的 C 代码片段演示了某个向订单添加行项目的存储过程的准备好的执行。 SQLPrepare 只调用了一次， 而 SQLExecute 调用了多次（每个过程执行调用一次）。
 
 ```cpp
 // Bind parameters

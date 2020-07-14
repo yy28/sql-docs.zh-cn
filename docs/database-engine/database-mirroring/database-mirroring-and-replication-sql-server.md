@@ -1,5 +1,6 @@
 ---
 title: 数据库镜像和复制 (SQL Server) | Microsoft Docs
+description: 了解如何将数据库镜像与复制一起使用以改进 SQL Server 中发布数据库的可用性。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e957d0ae199375ffe13a756cc1a8b0872aa962e3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8d54e8831218a64d854ae6b42955f59de8728518
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68661435"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789688"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>数据库镜像和复制 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   数据库镜像可以与复制一起使用以改进发布数据库的可用性。 数据库镜像涉及一个数据库的两个副本，这两个副本通常驻留在不同的计算机上。 在任何给定时间都只有一个数据库副本可供客户端使用。 该副本称为主体数据库。 客户端对主体数据库所做的更新应用到数据库的另一副本（称为镜像数据库）。 镜像涉及将在主体数据库上执行的每个插入、更新或删除操作的事务日志应用到镜像数据库上。  
   
  对发布数据库完全支持将复制故障转移到镜像数据库的功能；而对订阅数据库则提供有限支持。 对于分发数据库则不支持数据库镜像。 有关无需重新配置复制就可以恢复分发数据库或订阅数据库的信息，请参阅 [备份和还原复制数据库](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)。   
@@ -76,7 +77,7 @@ ms.locfileid: "68661435"
   
     -   将 \@working_directory 参数的值设置为主体数据库使用的快照文件夹。  
   
-4.  为“-PublisherFailoverPartner”代理参数指定镜像名称  。 下列代理在故障转移后需要使用此代理参数来标识镜像：  
+4.  为“-PublisherFailoverPartner”代理参数指定镜像名称。 下列代理在故障转移后需要使用此代理参数来标识镜像：  
   
     -   快照代理（对于所有发布）  
   
@@ -98,7 +99,7 @@ ms.locfileid: "68661435"
   
     -   [Replication Agent Executables Concepts](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
-     建议将“-PublisherFailoverPartner”添加到代理配置文件，然后在配置文件中指定镜像名称  。 例如，如果您通过存储过程配置复制，请执行以下操作：  
+     建议将“-PublisherFailoverPartner”添加到代理配置文件，然后在配置文件中指定镜像名称。 例如，如果您通过存储过程配置复制，请执行以下操作：  
   
     ```  
     -- Execute sp_help_agent_profile in the context of the distribution database to get the list of profiles.  

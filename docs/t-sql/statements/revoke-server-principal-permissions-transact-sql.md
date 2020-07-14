@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 75409024-f150-4326-af16-9d60e900df18
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5510106a1b37e43210d043856825cfff56763e05
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 489b6c35f523c6f19d5b763cc54e5aeb6ace1e4f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634087"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894533"
 ---
 # <a name="revoke-server-principal-permissions-transact-sql"></a>撤消服务器主体权限 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   撤消为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名授予或拒绝的权限。  
   
@@ -56,30 +56,30 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
 ```  
   
 ## <a name="arguments"></a>参数  
- permission   
+ permission  
  指定可对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名撤消的权限。 有关权限的列表，请参阅本主题后面的“备注”部分。  
   
- LOGIN ::  SQL_Server_login   
- 指定要撤消权限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 需要使用作用域限定符 (::)  。  
+ LOGIN ::SQL_Server_login  
+ 指定要撤消权限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 需要使用作用域限定符 (::)。  
   
  SERVER ROLE **::** *server_role*  
- 指定要撤消权限的服务器角色。 需要使用作用域限定符 (::)  。  
+ 指定要撤消权限的服务器角色。 需要使用作用域限定符 (::)。  
   
  { FROM | TO } \<server_principal> 指定要撤消权限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名或服务器角色。  
   
- SQL_Server_login   
+ SQL_Server_login  
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户的名称。  
   
- SQL_Server_login_from_Windows_login   
+ SQL_Server_login_from_Windows_login  
  指定通过 Windows 登录帐户创建的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户的名称。  
   
- SQL_Server_login_from_certificate   
+ SQL_Server_login_from_certificate  
  指定映射到证书的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户的名称。  
   
- SQL_Server_login_from_AsymKey   
+ SQL_Server_login_from_AsymKey  
  指定映射到非对称密钥的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户的名称。  
   
- server_role   
+ server_role  
  指定用户定义的服务器角色的名称。  
   
  GRANT OPTION  
@@ -94,7 +94,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
 > [!CAUTION]  
 >  如果对授予了 WITH GRANT OPTION 权限的权限执行级联撤消，将同时撤消该权限的 GRANT 和 DENY 权限。  
   
- AS SQL_Server_login   
+ AS SQL_Server_login  
  指定执行此查询的主体从哪个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名派生其撤消该权限的权限。  
   
 ## <a name="remarks"></a>备注  

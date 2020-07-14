@@ -12,15 +12,15 @@ dev_langs:
 ms.assetid: cca96a8f-7737-42d2-bbcc-03d5f858dcc1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7883a99a223af67f536a0991bb0ba48f30211bc6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ce6f6005e3e2b6966a4bc9e457b1ee552ea017f1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68071357"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85761867"
 ---
 # <a name="alter-index-selective-xml-indexes"></a>ALTER INDEX（选择性 XML 索引）
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   修改现有的选择性 XML 索引。 ALTER INDEX 语句更改以下一项或多项：  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68071357"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 ALTER INDEX index_name  
     ON <table_object>   
     [WITH XMLNAMESPACES ( <xmlnamespace_list> )]  
@@ -110,10 +110,10 @@ identifier
 ```  
   
 ##  <a name="arguments"></a><a name="Arguments"></a> 参数  
- index_name   
+ index_name  
  要更改的现有索引的名称。  
   
- *table_object>\<*  
+ *\<table_object>*  
  包含要建立索引的 XML 列的表。 使用以下格式之一：  
   
 -   `database_name.schema_name.table_name`  
@@ -124,18 +124,18 @@ identifier
   
 -   `table_name`  
   
- [WITH XMLNAMESPACES **(** \<xmlnamespace_list> **)** ]  
+ [WITH XMLNAMESPACES ( \<xmlnamespace_list> )]   
  要建立索引的路径使用的命名空间的列表。 有关 WITH XMLNAMESPACES 子句的语法的信息，请参阅 [WITH XMLNAMESPACES (Transact-SQL)](../../t-sql/xml/with-xmlnamespaces.md)。  
   
- FOR **(** \<promoted_node_path_action_list> **)**  
+ FOR ( \<promoted_node_path_action_list> )   
  要添加或删除的已建立索引的路径的列表。  
   
--   使用 ADD 语句添加路径  。 添加路径时，您使用的语法与使用 CREATE SELECTIVE XML INDEX 语句创建路径所用的语法相同。 有关可以在 CREATE 或 ALTER 语句中指定的路径的信息，请参阅[为选择性 XML 索引指定路径和优化提示](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)。  
+-   使用 ADD 语句添加路径。 添加路径时，您使用的语法与使用 CREATE SELECTIVE XML INDEX 语句创建路径所用的语法相同。 有关可以在 CREATE 或 ALTER 语句中指定的路径的信息，请参阅[为选择性 XML 索引指定路径和优化提示](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)。  
   
--   使用 REMOVE 语句删除路径  。 删除路径时，请提供创建路径时的路径名。  
+-   使用 REMOVE 语句删除路径。 删除路径时，请提供创建路径时的路径名。  
   
- [WITH **(** \<index_options> **)** ]  
- 使用不包含 FOR 子句的 ALTER INDEX 时只能指定 \<index_options>。 在您使用 ALTER INDEX 添加或删除索引中的路径时，索引选项将不是有效的参数。 有关索引选项的信息，请参阅 [CREATE XML INDEX（选择性 XML 索引）](../../t-sql/statements/create-xml-index-selective-xml-indexes.md)。  
+ [WITH ( \<index_options> )]   
+ 使用不包含 FOR 子句的 ALTER INDEX 时，只能指定 \<index_options>。 在您使用 ALTER INDEX 添加或删除索引中的路径时，索引选项将不是有效的参数。 有关索引选项的信息，请参阅 [CREATE XML INDEX（选择性 XML 索引）](../../t-sql/statements/create-xml-index-selective-xml-indexes.md)。  
   
 ## <a name="remarks"></a>备注  
   

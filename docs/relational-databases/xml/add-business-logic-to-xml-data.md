@@ -1,5 +1,6 @@
 ---
 title: 将业务逻辑添加到 XML 数据 | Microsoft Docs
+description: 了解如何通过应用 XSL 转换、对数据使用特定于域的约束或通过触发验证规则来向 XML 数据添加业务逻辑。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 0877fb38-f1a2-43d8-86cf-4754be224dc1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: aaabf611574c60620df600264537436b41e85c18
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 524be57031368538271d1bde0016121644b9fed4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664814"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729160"
 ---
 # <a name="add-business-logic-to-xml-data"></a>将业务逻辑添加到 XML 数据
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   可以采用多种方式将业务逻辑添加到 XML 数据中：  
   
 -   您可以编写行或列约束，以在插入和修改 XML 数据时强制实施特定于域的约束。  

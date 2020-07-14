@@ -1,5 +1,6 @@
 ---
 title: 查看和修改发布属性 | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio、Transact-SQL 或复制管理对象在 SQL Server 中查看和修改发布属性。
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ ms.assetid: 27d72ea4-bcb6-48f2-b4aa-eb1410da7efc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 852363b7106d6f4a6b4fb359a14410dd8cb09a99
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: eab592c7a0b95262e551eea02eef625ad653e12d
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287501"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807839"
 ---
 # <a name="view-and-modify-publication-properties"></a>查看和修改发布属性
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -108,10 +109,10 @@ ms.locfileid: "76287501"
   
 #### <a name="to-change-the-properties-of-a-snapshot-or-transactional-publication"></a>更改快照发布或事务发布的属性  
   
-1.  执行 [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)，在 \@property 参数中指定要更改的发布属性，并在 \@value 参数中指定此属性的新值。  
+1.  执行 [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)，在 \@property 参数中指定要更改的发布属性，并在 \@value 参数中指定此属性的新值 。  
   
     > [!NOTE]  
-    >  如果该更改将要求生成新快照，则还必须将 \@force_invalidate_snapshot 的值指定为 1，而如果该更改将要求重新初始化订阅服务器，则必须将 \@force_reinit_subscription 的值指定为 1。 有关更改时需要新快照或重新初始化的属性的详细信息，请参阅[更改发布和项目属性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)。  
+    >  如果该更改将要求生成新快照，则还必须将 \@force_invalidate_snapshot 的值指定为 1，而如果该更改将要求重新初始化订阅服务器，则必须将 \@force_reinit_subscription 的值指定为 1   。 有关更改时需要新快照或重新初始化的属性的详细信息，请参阅[更改发布和项目属性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)。  
   
 #### <a name="to-view-the-properties-of-a-merge-publication"></a>查看合并发布的属性  
   
@@ -119,10 +120,10 @@ ms.locfileid: "76287501"
   
 #### <a name="to-change-the-properties-of-a-merge-publication"></a>更改合并发布的属性  
   
-1.  执行 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)，在 \@property 参数中指定要更改的发布属性，并在 \@value 参数中指定此属性的新值。  
+1.  执行 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)，在 \@property 参数中指定要更改的发布属性，并在 \@value 参数中指定此属性的新值 。  
   
     > [!NOTE]  
-    >  如果该更改将要求生成新快照，则还必须将 \@force_invalidate_snapshot 的值指定为 1，而如果该更改将要求重新初始化订阅服务器，则必须将 \@force_reinit_subscription 的值指定为 1。有关那些在更改后要求生成新快照或重新初始化的属性的详细信息，请参阅[更改发布和项目属性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)。  
+    >  如果该更改将要求生成新快照，则还必须将 \@force_invalidate_snapshot 的值指定为 1，而如果该更改将要求重新初始化订阅服务器，则必须将 \@force_reinit_subscription 的值指定为 1。有关那些在更改后要求生成新快照或重新初始化的属性的详细信息，请参阅[更改发布和项目属性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)   。  
   
 #### <a name="to-view-the-properties-of-a-snapshot"></a>查看快照的属性  
   

@@ -1,30 +1,28 @@
 ---
-title: 常见问题解答
-titleSuffix: Azure Data Studio
+title: Azure Data Studio 常见问题解答
 description: 有关 Azure Data Studio 的常见问题解答 (FAQ)。
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 1916a10a468fdc44c021e410eb1521cb7c219d58
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dfcab918073fedd80def91d3556e15f632a62edc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67959549"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774612"
 ---
-# <a name="azure-data-studio-faq"></a>[!INCLUDE[Azure Data Studio](../includes/name-sos.md)] 常见问题解答
+# <a name="azure-data-studio-faq"></a>Azure Data Studio 常见问题解答
 
 ## <a name="what-is-azure-data-studio"></a>什么是 Azure Data Studio？
 
-Azure Data Studio 是一种新的开源跨平台桌面环境，适合在 Windows、MacOS 和 Linux 上使用 Azure Data 系列本地及云数据平台的数据专业人员。 Azure Data Studio 提供现代编辑器体验，其中包括速度超快的 IntelliSense、代码片段、源代码管理集成和集成终端，之前发布的 SQL Operations Studio 是它的预览版。 它在设计时考虑了数据平台用户，带有内置查询结果集图表和可自定义的仪表板。
+Azure Data Studio 是一种新的开源跨平台桌面环境，适合在 Windows、macOS 和 Linux 上使用 Azure Data 系列本地及云数据平台的数据专业人员。 Azure Data Studio 提供现代编辑器体验，其中包括速度超快的 IntelliSense、代码片段、源代码管理集成和集成终端，之前发布的 SQL Operations Studio 是它的预览版。 它在设计时考虑了数据平台用户，带有内置查询结果集图表和可自定义的仪表板。
 
 研究表明，在使用 SQL Server Management Studio 时，相比其他任务，用户在处理查询编辑上花费的时间要多得多。 出于这个原因，Azure Data Studio 侧重于关注最常用的功能，并通过产品的可选扩展项提供更丰富的体验。 这使得每个用户都可以根据自己最常用的工作流对环境进行自定义。
-
 
 ## <a name="how-much-does-azure-data-studio-cost"></a>Azure Data Studio 的费用是多少？
 
@@ -59,8 +57,8 @@ GitHub 上提供了 Azure Data Studio 及其数据提供程序的源代码。 �
 *如为以下情况，请使用 Azure Data Studio：*
 
 - 花费大量时间编辑或执行查询。
-- 需要快速绘制和直观显示结果集。
-- 可以通过集成终端，使用 sqlcmd 或 Powershell 执行大多数管理任务。
+- 需要能够快速绘图和直观显示结果集。
+- 可通过集成终端使用 sqlcmd 或 PowerShell 执行大多数管理任务。
 - 对向导的使用需求较少。
 - 不需要实施深层次的管理或平台配置。
 - 需要在 macOS 或 Linux 上运行。
@@ -158,7 +156,7 @@ GitHub 上提供了 Azure Data Studio 及其数据提供程序的源代码。 �
 |安全管理||是|
 |Service Broker||是|
 |SQL Mail||是|
-|Template Explorer||是|
+|模板资源管理器||是|
 |漏洞评估||是|
 |XEvent 管理||是|
 

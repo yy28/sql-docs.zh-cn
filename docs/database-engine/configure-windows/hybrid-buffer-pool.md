@@ -1,5 +1,6 @@
 ---
 title: 混合缓冲池 | Microsoft Docs
+description: 了解混合缓冲池如何使持久性内存设备可通过内存总线进行访问。 启用或禁用此 SQL Server 2019 功能，查看最佳做法。
 ms.custom: ''
 ms.date: 10/31/2019
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: ''
 author: briancarrig
 ms.author: brcarrig
 manager: amitban
-ms.openlocfilehash: e2aafb77145fbe22a980ef158cfa7c78db6288d2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 73f4abc0c1b2a7cd6943ab6b216133812c145d19
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216256"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772429"
 ---
 # <a name="hybrid-buffer-pool"></a>混合缓冲池
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 混合缓冲池使缓冲池对象能够引用驻留在持久性内存 (PMEM) 设备上的数据库文件中的数据页，而不是缓存在易失 DRAM 中的数据页的副本。 [!INCLUDE[sqlv15](../../includes/sssqlv15-md.md)] 中引入了此功能。
 
@@ -94,12 +95,12 @@ SELECT name, is_memory_optimized_enabled FROM sys.databases;
 
 ## <a name="best-practices-for-hybrid-buffer-pool"></a>混合缓冲池的最佳做法
 
-在 Windows 上格式化 PMEM 设备时，使用可用于 NTFS 的最大分配单元大小（Windows Server 2019 中为 2 MB）并确保已为 DAX（直接访问）格式化该设备。
+ - 在 Windows 上格式化 PMEM 设备时，使用可用于 NTFS 的最大分配单元大小（Windows Server 2019 中为 2 MB）并确保已为 DAX（直接访问）格式化该设备。
 
-在 Windows 上使用[内存中的锁定页面](./enable-the-lock-pages-in-memory-option-windows.md)。
+ - 在 Windows 上使用[内存中的锁定页面](./enable-the-lock-pages-in-memory-option-windows.md)。
 
-文件大小应为 2 MB 的倍数（模数 2 MB 应等于零）。
+ - 文件大小应为 2 MB 的倍数（模数 2 MB 应等于零）。
 
-如果混合缓冲池的服务器范围设置禁用，则任何用户数据库将不能使用该功能。
+ - 如果混合缓冲池的服务器范围设置禁用，则任何用户数据库将不能使用该功能。
 
-如果混合缓冲池的服务器范围设置启用，你可使用数据库范围设置禁用单个用户数据库的功能。
+ - 如果混合缓冲池的服务器范围设置启用，你可使用数据库范围设置禁用单个用户数据库的功能。

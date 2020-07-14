@@ -1,6 +1,6 @@
 ---
 title: 添加日志传送辅助数据库
-description: 介绍如何向现有的日志传送配置添加辅助数据库。
+description: 介绍如何在 SQL Server 中使用 SQL Server Management Studio 或 Transact-SQL 将辅助数据库添加到现有的日志传送配置。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b02eba13-f8e6-4684-b7e4-75ea038ea473
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 66a194a26529834a3d77229a21b7556b03da635e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a140f44e848c7b8b00b8c8b7891467dde74822cb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822158"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85696731"
 ---
 # <a name="add-a-secondary-database-to-a-log-shipping-configuration-sql-server"></a>向日志传送配置添加辅助数据库 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   此主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中向现有的日志传送配置添加辅助数据库。  
   
   
@@ -38,7 +38,7 @@ ms.locfileid: "74822158"
   
 #### <a name="to-add-a-log-shipping-secondary-database"></a>添加日志传送辅助数据库  
   
-1.  右键单击要在日志传送配置中用作主数据库的数据库，然后单击“属性”  。  
+1.  右键单击要在日志传送配置中用作主数据库的数据库，然后单击“属性”。  
   
 2.  在 **“选择页”** 下，单击 **“事务日志传送”** 。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "74822158"
   
 13. 请注意 **“还原作业”** 下 **“计划”** 框中列出的还原计划。 如果要自定义安装计划，请单击 **“计划”** ，然后根据需要调整 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理计划。 此计划应为大致的备份计划。  
   
-14. 单击“确定”。   
+14. 单击“确定”。  
   
 15. 在“数据库属性”对话框上单击 **“确定”** ，以开始配置过程。  
   

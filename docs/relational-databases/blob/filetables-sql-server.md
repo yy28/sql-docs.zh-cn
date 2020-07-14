@@ -1,5 +1,6 @@
 ---
 title: FileTable (SQL Server) | Microsoft Docs
+description: 探索 FileTable 的优点和功能，它是使用目录结构存储文件的 SQL Server 功能。 了解如何使用 FileTable。
 ms.custom: ''
 ms.date: 10/24/2016
 ms.prod: sql
@@ -15,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: a57b629c-e9ed-48fd-9a48-ed3787d80c8f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8993c5e9ea1334b5bb8a002f1991041886a9f282
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8f694511c2f79bcaf86d7756410a2cbc286b968a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68125173"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767961"
 ---
 # <a name="filetables-sql-server"></a>FileTable (SQL Server)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   FileTable 功能为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中存储的文件数据提供对 Windows 文件命名空间的支持以及与 Windows 应用程序的兼容性支持。 FileTable 使得应用程序可以集成其存储和数据管理组件，可对非结构化数据和元数据提供集成的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务（包括全文搜索和语义搜索）。  
   
  换言之，您可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中将文件和文档存储在称作 FileTable 的特别的表中，但是从 Windows 应用程序访问它们，就好像它们存储在文件系统中，而不必对您的客户端应用程序进行任何更改。  
@@ -60,9 +61,9 @@ ms.locfileid: "68125173"
   
 -   每行包含以下项： 有关 FileTable 的架构的详细信息，请参阅 [FileTable Schema](../../relational-databases/blob/filetable-schema.md)。  
   
-    -   流数据的 file_stream 列和 stream_id (GUID) 标识符   。 （ **file_stream** 列对于目录为 NULL。）  
+    -   流数据的 file_stream 列和 stream_id (GUID) 标识符 。 （ **file_stream** 列对于目录为 NULL。）  
   
-    -   用于表示和维护当前项（文件或目录）以及目录层次结构的 path_locator 列和 parent_path_locator 列   。  
+    -   用于表示和维护当前项（文件或目录）以及目录层次结构的 path_locator 列和 parent_path_locator 列 。  
   
     -   10 个文件属性，如可用于文件 I/O API 的创建日期和修改日期。  
   

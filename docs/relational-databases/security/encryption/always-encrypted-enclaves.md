@@ -11,23 +11,23 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5625c3429a9bae89ae940fb552a3e6d1e58678c9
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 76af9a82a53004d01443a0442946e28fed73d0f0
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82999412"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858869"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>具有安全 Enclave 的 Always Encrypted
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
  
 具有安全 Enclave 的 Always Encrypted 为 [Always Encrypted](always-encrypted-database-engine.md) 功能提供其他功能。
 
-SQL Server 2016 中引入的 Always Encrypted 可保护敏感数据的机密性免受 SQL Server 的恶意软件以及具有高度特权但未经授权  的用户的攻击。 具有高度特权但未经授权的用户包括 DBA、计算机管理员、云管理员，或可以合法访问服务器实例、硬件等但不应有权访问部分或全部实际数据的任何其他用户。  
+SQL Server 2016 中引入的 Always Encrypted 可保护敏感数据的机密性免受 SQL Server 的恶意软件以及具有高度特权但未经授权的用户的攻击。 具有高度特权但未经授权的用户包括 DBA、计算机管理员、云管理员，或可以合法访问服务器实例、硬件等但不应有权访问部分或全部实际数据的任何其他用户。  
 
 如果没有本文中所讨论的增强功能，Always Encrypted 会通过在客户端加密数据并且从不允许数据或相应的加密密钥以纯文本形式显示在 SQL Server 引擎中来保护数据。 因此，数据库内的加密列上的功能受到严格限制。 SQL Server 可以对加密数据执行的唯一操作是相等比较（仅适用于确定性加密）。 数据库内不支持所有其他操作，包括加密操作（初始数据加密或密钥轮换）或富计算（例如，模式匹配）。 用户需要将数据移出数据库才能对客户端执行这些操作。
 
- 具有安全 enclave 的 Always Encrypted 通过允许在服务器端对安全 enclave 内的纯文本数据进行计算来解决这些限制。 安全 enclave 是 SQL Server 进程内受保护的内存区域，并充当用于处理 SQL Server 引擎中的敏感数据的受信任执行环境。 安全 enclave 显示为托管计算机上的其余 SQL Server 和其他进程的黑盒。 无法从外部查看 enclave 内的任何数据或代码，即使采用调试程序也是如此。  
+具有安全 enclave 的 Always Encrypted 通过允许在服务器端对安全 enclave 内的纯文本数据进行计算来解决这些限制。 安全 enclave 是 SQL Server 进程内受保护的内存区域，并充当用于处理 SQL Server 引擎中的敏感数据的受信任执行环境。 安全 enclave 显示为托管计算机上的其余 SQL Server 和其他进程的黑盒。 无法从外部查看 enclave 内的任何数据或代码，即使采用调试程序也是如此。  
 
 
 Always Encrypted 使用安全 enclave，如下图中所示：
@@ -51,13 +51,13 @@ Always Encrypted 使用安全 enclave，如下图中所示：
 
 - **就地加密** – 针对敏感数据的加密操作（例如：初始数据加密或轮替列加密密钥）在安全 enclave 内执行，且不需要将数据移出数据库。 可以使用 ALTER TABLE Transact-SQL 语句执行就地加密，且不需要使用 SSMS 中的 Always Encrypted 向导或 Set-SqlColumnEncryption PowerShell cmdlet。
 
-- **富计算（预览）** – 在安全 enclave 内支持针对加密列的操作，包括模式匹配（LIKE 谓词）和范围比较，这样会将 Always Encrypted 解锁到需要在数据库系统内执行此类计算的广泛应用和方案。
+- **富计算** - 在安全 enclave 内支持针对加密列的操作，包括模式匹配（LIKE 谓词）和范围比较，这样会将 Always Encrypted 解锁到需要在数据库系统内执行此类计算的广泛应用程序和方案。
 
 ## <a name="secure-enclave-attestation"></a>安全 Enclave 证明
 
 SQL Server 引擎内的安全 enclave 可以访问加密数据库列中存储的敏感数据以及相应的纯文本列加密密钥。 在向 SQL Server 提交涉及到 enclave 计算的查询之前，应用程序内的客户端驱动程序必须基于给定的技术（例如，VBS）验证安全 enclave 是否是正版 enclave，以及是否已签署 enclave 以在 enclave 内运行。 
 
-验证 enclave 的过程称为“enclave 证明”  ，同时涉及应用程序内的客户端驱动程序和用于联系外部证明服务的 SQL Server。 证明过程的细节取决于 enclave 技术和证明服务。
+验证 enclave 的过程称为“enclave 证明”，同时涉及应用程序内的客户端驱动程序和用于联系外部证明服务的 SQL Server。 证明过程的细节取决于 enclave 技术和证明服务。
 
 SQL Server 支持 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 中的 VBS 安全 enclave 的证明过程是 Windows Defender System Guard 运行时证明，该证明将主机保护者服务 (HGS) 用作证明服务。 需要在你的环境中配置 HGS 并注册用于托管 HGS 中的 SQL Server 实例的计算机。 还必须使用 HGS 证明配置客户端应用程序或工具（例如，SQL Server Management Studio）。
 
@@ -80,8 +80,8 @@ SQL Server 支持 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 
 
 已启用 enclave 的列是使用已启用 enclave 的列加密密钥加密的数据库列。 可用于已启用 enclave 的列的功能取决于列所使用的加密类型。
 
-- 确定性加密  - 使用确定性加密的已启用 enclave 的列支持就地加密，但不支持安全 enclave 内的任何其他操作。 相等性比较受支持，但是通过比较enclave 外的已加密文本执行。  
-- 随机加密  - 使用随机加密的已启用 enclave 的列支持就地加密以及安全 enclave 内的富计算。 支持的富计算是模式匹配和[比较运算符](../../../t-sql/language-elements/comparison-operators-transact-sql.md)，包括相等比较。
+- 确定性加密 - 使用确定性加密的已启用 enclave 的列支持就地加密，但不支持安全 enclave 内的任何其他操作。 相等性比较受支持，但是通过比较enclave 外的已加密文本执行。  
+- 随机加密 - 使用随机加密的已启用 enclave 的列支持就地加密以及安全 enclave 内的富计算。 支持的富计算是模式匹配和[比较运算符](../../../t-sql/language-elements/comparison-operators-transact-sql.md)，包括相等比较。
 
 有关加密类型的详细信息，请参阅 [Always Encrypted 加密](always-encrypted-cryptography.md)。
 
@@ -123,7 +123,7 @@ SQL Server 支持 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 
 如果 SQL Server 实例出现故障，它的数据库可能处于以下状态：数据文件可能包含来自未完成事务的一些修改。 启动后，此实例运行[数据库恢复](../../logs/the-transaction-log-sql-server.md#recovery-of-all-incomplete-transactions-when--is-started)过程，其中涉及回滚在事务日志中找到的所有未完成事务，以确保维护数据库完整性。 如果未完成事务对索引进行了任何更改，也需要撤消这些更改。 例如，可能需要删除或重新插入索引中的一些键值。
 
 > [!IMPORTANT]
-> Microsoft 强烈建议，先为数据库启用[加速数据库恢复 (ADR)](../../backup-restore/restore-and-recovery-overview-sql-server.md#adr)，再  在使用随机加密进行加密且已启用 enclave 的列上创建首个索引。
+> Microsoft 强烈建议，先为数据库启用[加速数据库恢复 (ADR)](../../backup-restore/restore-and-recovery-overview-sql-server.md#adr)，再在使用随机加密进行加密且已启用 enclave 的列上创建首个索引。
 
 如果使用遵循 [ARIES](https://people.eecs.berkeley.edu/~brewer/cs262/Aries.pdf) 恢复模式的[传统数据库恢复过程](https://docs.microsoft.com/azure/sql-database/sql-database-accelerated-database-recovery#the-current-database-recovery-process)，SQL Server 必须等到应用程序向 enclave 提供列的列加密密钥，才能撤消对索引的更改，而这可能需要很长时间才能完成。 ADR 大大减少了因无法从 enclave 内的缓存获取列加密密钥而必须延迟的撤消操作数。 因此，它通过最大限度地降低新事务受阻的可能性，极大地提高了数据库可用性。 启用 ADR 后，SQL Server 可能仍需要使用列加密密钥来完成旧数据版本清理，但是作为不影响数据库可用性或用户事务的后台任务来完成。 不过，错误日志中可能会显示错误消息，指明清理操作因缺少列加密密钥而失败。
 

@@ -1,5 +1,6 @@
 ---
 title: 打开日志文件查看器 | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio 中的日志文件查看器访问有关在几个日志中捕获的错误和事件的信息。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: a86b89cb-0432-4648-895a-05ecc5450e45
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9e76c7eb85306f63e9be230c76159efbab25444a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e6124fa7c8b4a0ab4637c52d7ceb38d4abc698fc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68083986"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85667955"
 ---
 # <a name="open-log-file-viewer"></a>打开日志文件查看器
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的日志文件查看器来访问有关在以下日志中捕获的错误和事件的信息：  
   
 -   审核集合  
@@ -57,45 +58,45 @@ ms.locfileid: "68083986"
   
 2.  执行下列任一操作：  
   
-    -   右键单击“SQL Server 日志”  ，指向“查看”  ，然后单击“SQL Server 日志”  或“SQL Server 和 Windows 日志”  。  
+    -   右键单击“SQL Server 日志”，指向“查看”，然后单击“SQL Server 日志”或“SQL Server 和 Windows 日志”。  
   
-    -   展开“SQL Server 日志”  ，右键单击任何日志文件，然后单击“查看 SQL Server 日志”  。 还可以双击任何日志文件。  
+    -   展开“SQL Server 日志”，右键单击任何日志文件，然后单击“查看 SQL Server 日志”。 还可以双击任何日志文件。  
   
      这些日志包括 **“数据库邮件”** 、 **“SQL Server”** 、 **“SQL Server 代理”** 和 **“Windows NT”** 。  
   
 ##### <a name="to-view-logs-that-are-related-to-jobs"></a>查看与作业相关的日志  
   
--   在对象资源管理器中，展开“SQL Server 代理”  ，右键单击“作业”  ，然后单击“查看历史记录”  。  
+-   在对象资源管理器中，展开“SQL Server 代理”，右键单击“作业”，然后单击“查看历史记录”。  
   
      这些日志包括 **“数据库邮件”** 、 **“作业历史记录”** 和 **“SQL Server 代理”** 。  
   
 ##### <a name="to-view-logs-that-are-related-to-maintenance-plans"></a>查看与维护计划相关的日志  
   
--   在对象资源管理器中，展开“管理”  ，右键单击“维护计划”  ，然后单击“查看历史记录”  。  
+-   在对象资源管理器中，展开“管理”，右键单击“维护计划”，然后单击“查看历史记录”。  
   
      这些日志包括 **“数据库邮件”** 、 **“作业历史记录”** 、 **“维护计划”** 、 **“远程维护计划”** 和 **“SQL Server 代理”** 。  
   
 ##### <a name="to-view-logs-that-are-related-to-data-collection"></a>查看与数据收集相关的日志  
   
--   在对象资源管理器中，展开“管理”  ，右键单击“数据收集”  ，然后单击“查看日志”  。  
+-   在对象资源管理器中，展开“管理”，右键单击“数据收集”，然后单击“查看日志”。  
   
      这些日志包括 **“数据收集”** 、 **“作业历史记录”** 和 **“SQL Server 代理”** 。  
   
 ##### <a name="to-view-logs-that-are-related-to-database-mail"></a>查看与数据库邮件相关的日志  
   
--   在对象资源管理器中，展开“管理”  ，右键单击“数据库邮件”  ，然后单击“查看数据库邮件日志”  。  
+-   在对象资源管理器中，展开“管理”，右键单击“数据库邮件”，然后单击“查看数据库邮件日志”。  
   
      这些日志包括 **“数据库邮件”** 、“作业历史记录”、 **“维护计划”** 、 **“远程维护计划”** 、 **“SQL Server”** 、 **“SQL Server 代理”** 和 **“Windows NT”** 。  
   
 ##### <a name="to-view-logs-that-are-related-to-audits-collections"></a>查看与审核集合相关的日志  
   
--   在对象资源管理器中，依次展开“安全性”  和“审核”  ，右键单击一个审核，然后单击“查看审核日志”  。  
+-   在对象资源管理器中，依次展开“安全性”和“审核”，右键单击一个审核，然后单击“查看审核日志”。  
   
      这些日志包括 **“审核集合”** 和 **“Windows NT”** 。  
   
 ##### <a name="to-view-logs-that-are-related-to-audits-collections"></a>查看与审核集合相关的日志  
   
--   在对象资源管理器中，依次展开“安全性”  和“审核”  ，右键单击一个审核，然后单击“查看审核日志”  。  
+-   在对象资源管理器中，依次展开“安全性”和“审核”，右键单击一个审核，然后单击“查看审核日志”。  
   
      这些日志包括 **“审核集合”** 和 **“Windows NT”** 。  
   

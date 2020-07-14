@@ -1,5 +1,6 @@
 ---
 title: 加密数据列 | Microsoft Docs
+description: 了解如何使用 Transact-SQL 通过 SQL Server 中的对称加密来加密数据列，该操作有时称为列级加密或单元级加密。
 ms.custom: ''
 ms.date: 01/02/2019
 ms.prod: sql
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 08899661d3638b03aaf848bd207625e168812e87
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
+ms.openlocfilehash: 90987ec581d734116f386e1a0f3bfd72e4bf15b6
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957406"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091737"
 ---
 # <a name="encrypt-a-column-of-data"></a>加密数据列
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]  
 
-  本文介绍如何使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中通过对称加密对数据列进行加密。 这有时称为列级加密或单元级加密。  
+  本文介绍如何使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中通过对称加密对数据列进行加密。 这有时称为列级加密或单元级加密。 此功能针对 Azure Synapse Analytics (SQL DW) 处于预览状态
 
 ## <a name="security"></a>安全性  
   
@@ -58,7 +59,7 @@ PASSWORD = '<some strong password>';
   
 2. 在标准菜单栏上，单击 **“新建查询”** 。  
   
-3. 将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3. 将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
 
     ```sql
     USE AdventureWorks2012;  
@@ -116,7 +117,7 @@ PASSWORD = '<some strong password>';
   
 2. 在标准菜单栏上，单击 **“新建查询”** 。  
   
-3. 将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3. 将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```sql
     USE AdventureWorks2012;  

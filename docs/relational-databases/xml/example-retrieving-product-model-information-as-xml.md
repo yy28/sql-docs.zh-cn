@@ -1,5 +1,6 @@
 ---
 title: 示例：以 XML 形式检索产品型号信息 | Microsoft Docs
+description: 查看示例了解如何通过将 RAW 模式与 FOR XML 子句结合来以 XML 形式检索产品型号信息。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 3828b4ca-3ab2-444f-9c58-8be6e7f064a6
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 82ed3302c9a0bc3046f999bafd31258023db8856
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 4850857682bddf64be8312cea67d577cc3a1f939
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664484"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632756"
 ---
 # <a name="example-retrieving-product-model-information-as-xml"></a>示例：以 XML 形式检索产品型号信息
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   下面的查询将返回产品型号信息。 `RAW` 子句中指定了 `FOR XML` 模式。  
   
 ## <a name="example"></a>示例  

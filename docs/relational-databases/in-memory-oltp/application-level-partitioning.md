@@ -1,5 +1,6 @@
 ---
 title: 应用程序级分区 | Microsoft Docs
+description: 查看处理订单的示例。 此应用程序将最近的订单存储在内存优化表中，将较早的订单存储在基于磁盘的表中。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 162d1392-39d2-4436-a4d9-ee5c47864c5a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 20fe12efc4bbc7ba948a89e5b15fb3f869651d4f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 047d337dd8ce561924a6f27de7ac43a4d57f4c60
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67951259"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629703"
 ---
 # <a name="application-level-partitioning"></a>应用程序级分区
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   此应用程序处理订单。 最近的订单处理量很大。 更早的订单处理量不大。 最近的订单位于内存优化的表中。 更早的订单位于基于磁盘的表中。 *hotDate* 之后的所有订单位于内存优化的表中。 *hotDate* 之前的所有订单位于基于磁盘的表中。 假定存在一个极端 OLTP 工作负荷，它包含很多并发事务。 必须实施此业务规则（内存优化的表中的最近订单），即使几个并发事务正在尝试更改 *hotDate*。  
   
  该示例未对磁盘表使用分区表，而是利用第三个表来跟踪两个表之间的显式拆分点。 拆分点可用于确保将新插入的数据始终按照日期插入到适当的表中。 此外，拆分点还可用于确定查找数据的位置。 晚到数据仍会进入适当的表中。  

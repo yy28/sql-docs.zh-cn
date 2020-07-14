@@ -23,20 +23,20 @@ helpviewer_keywords:
 ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: d779af4f450fe444181df995a8dab26b102c3038
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 4328e0ae41a5d830cae37544bec972936ff39b53
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220412"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787559"
 ---
 # <a name="manage-partition-wizard"></a>管理分区向导 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   使用 **管理分区向导** 可以通过分区切换或实现可调窗口应用场景来管理和修改现有已分区表。 使用此向导，可以轻松管理分区，并可简化表中数据的定期迁入和迁出。  
   
 ### <a name="to-start-the-manage-partition-wizard"></a>启动管理分区向导  
   
--   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，选择数据库，右键单击要在其中创建分区的表，指向“存储”  ，然后单击“管理分区”  。  
+-   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，选择数据库，右键单击要在其中创建分区的表，指向“存储”，然后单击“管理分区”。  
   
      **Note** 如果 **“管理分区”** 不可用，则所选的表可能不包含分区。 在 **“存储”** 子菜单上单击 **“创建分区”** ，然后使用 **创建分区向导** 在表中创建分区。  
   
@@ -74,9 +74,9 @@ ms.locfileid: "82220412"
  若要创建临时表以切入或切出分区数据，请选择 **“为分区切换创建临时表”** 。  
   
 ### <a name="sliding-window-scenario"></a>滑动窗口应用场景  
- 若要管理滑动窗口应用场景中的分区，请选择“管理滑动窗口应用场景中的分区数据”  。  
+ 若要管理滑动窗口应用场景中的分区，请选择“管理滑动窗口应用场景中的分区数据”。  
   
-## <a name="uielement-list"></a>UIElement 列表  
+## <a name="ui-element-list"></a>UI 元素列表  
  **“为分区切换创建临时表”**  
  为切入和切出现有已分区表的数据创建临时表。  
   
@@ -92,26 +92,26 @@ ms.locfileid: "82220412"
  ![用于返回页首链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [本部分](#Top)  
   
 ##  <a name="select-partition-switching-in-options-page"></a><a name="SwitchIn"></a> 选择分区切入选项页  
- 使用“选择分区切入选项”  页可以选择要切入到已分区表中的临时表。  
+ 使用“选择分区切入选项”页可以选择要切入到已分区表中的临时表。  
   
-## <a name="uielement-list"></a>UIElement 列表  
+## <a name="ui-element-list"></a>UI 元素列表  
  **显示所有分区**  
  选择此选项可以显示所有分区，包括当前位于已分区表的分区。  
   
  **分区网格**  
- 显示所选分区的分区名称、“左边界”  、“右边界”  、“文件组”  和“行计数”  。  
+ 显示所选分区的分区名称、“左边界”、“右边界”、“文件组”和“行计数”。  
   
  **切入表**  
- 选择包含您要添加到您的已分区表的分区的临时表。 必须先创建此临时表，然后才能使用“管理分区向导”  来切入分区。  
+ 选择包含您要添加到您的已分区表的分区的临时表。 必须先创建此临时表，然后才能使用“管理分区向导”来切入分区。  
   
  ![用于返回页首链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [本部分](#Top)  
   
 ##  <a name="select-partition-switching-out-options-page"></a><a name="SwitchOut"></a> 选择分区切出选项页  
- 使用“选择分区切出选项”  页可以选择用于保存要从已分区表中切出的分区数据的分区和临时表。  
+ 使用“选择分区切出选项”页可以选择用于保存要从已分区表中切出的分区数据的分区和临时表。  
   
-## <a name="uielement-list"></a>UIElement 列表  
+## <a name="ui-element-list"></a>UI 元素列表  
  **分区网格**  
- 显示所选分区的分区名称、“左边界”  、“右边界”  、“文件组”  和“行计数”  。  
+ 显示所选分区的分区名称、“左边界”、“右边界”、“文件组”和“行计数”。  
   
  **切出表**  
  选择要将您的数据切出到的新表或现有表。  
@@ -131,7 +131,7 @@ ms.locfileid: "82220412"
   
  您可以在位于源分区的临时表中创建相同的索引。 临时表会自动基于源分区的元素包含约束。 此约束通常根据源分区的边界值生成。  
   
-## <a name="uielement-list"></a>UIElement 列表  
+## <a name="ui-element-list"></a>UI 元素列表  
  **临时表名**  
  为临时表创建名称，或接受编辑框中显示的默认名称。  
   
@@ -163,13 +163,13 @@ ms.locfileid: "82220412"
   
 ### <a name="run-immediately"></a>立即运行  
  **Run immediately**  
- 当单击“下一步”  或“完成”  时，令向导完成对分区的修改。  
+ 当单击“下一步”或“完成”时，令向导完成对分区的修改。  
   
 ### <a name="schedule"></a>计划  
  选中此项可以在计划的日期和时间修改表分区。  
   
  **更改计划**  
- 打开“新建作业计划”  对话框，你可以在此对话框中选择、更改或查看计划作业的属性。  
+ 打开“新建作业计划”对话框，你可以在此对话框中选择、更改或查看计划作业的属性。  
   
  ![用于返回页首链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于返回页首链接的箭头图标") [本部分](#Top)  
   
@@ -259,7 +259,7 @@ ms.locfileid: "82220412"
 ##  <a name="summary-page"></a><a name="Summary"></a> 摘要页  
  使用 **“摘要”** 可检查您在前面的页中选择的选项。  
   
-## <a name="uielement-list"></a>UIElement 列表  
+## <a name="ui-element-list"></a>UI 元素列表  
  **检查所做选择**  
  显示您在向导的每一页中所做的选择。 单击节点可展开和查看以前选择的选项。  
   
@@ -276,7 +276,7 @@ ms.locfileid: "82220412"
  指定每个操作的类型和名称。  
   
  **Status**  
- 指示向导操作作为一个整体返回的值是“成功”  还是“失败”  。  
+ 指示向导操作作为一个整体返回的值是“成功”还是“失败”。  
   
  **消息**  
  提供从该进程中返回的任何错误或警告消息。  
@@ -285,7 +285,7 @@ ms.locfileid: "82220412"
  停止向导的操作。  
   
  **Report**  
- 创建一个包含“管理分区向导”  的结果的报告。 选项包括：  
+ 创建一个包含“管理分区向导”的结果的报告。 选项包括：  
   
 -   **查看报告**  
   
@@ -296,7 +296,7 @@ ms.locfileid: "82220412"
 -   **“将报告作为电子邮件发送”**  
   
  **查看报告**  
- 打开“查看报告”  对话框。 此对话框包含 **管理分区向导**进度的文本报告。  
+ 打开“查看报告”对话框。 此对话框包含 **管理分区向导**进度的文本报告。  
   
  **关闭**  
  关闭向导。  

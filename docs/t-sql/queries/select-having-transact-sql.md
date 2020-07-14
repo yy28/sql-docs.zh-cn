@@ -21,15 +21,15 @@ ms.assetid: 55650709-001e-42f4-902f-ead09a3c34af
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2a574e3f7348c4641665b067193c54604145386c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fcbdec5e4d0e6c35d01d02e48e1d680d9702a66c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76315607"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999755"
 ---
 # <a name="select---having-transact-sql"></a>SELECT - HAVING (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   指定组或聚合的搜索条件。 HAVING 只能与 SELECT 语句一起使用。 HAVING 通常与 GROUP BY 子句一起使用。 如果未使用 GROUP BY，则会有隐式的单一、聚合组。   
   
@@ -37,14 +37,14 @@ ms.locfileid: "76315607"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 [ HAVING <search condition> ]  
 ```  
   
 ## <a name="arguments"></a>参数  
-\<search_condition> 指定需要组和/或聚合需要满足的一个或更多谓词。 有关搜索条件和谓词的详细信息，请参阅[搜索条件 (Transact-SQL)](../../t-sql/queries/search-condition-transact-sql.md)。  
+\<search_condition> 指定组和/或聚合需要满足的一个或多个谓词。 有关搜索条件和谓词的详细信息，请参阅[搜索条件 (Transact-SQL)](../../t-sql/queries/search-condition-transact-sql.md)。  
   
- 不能在 HAVING 子句中使用 text、image 和 ntext 数据类型    。  
+ 不能在 HAVING 子句中使用 text、image 和 ntext 数据类型  。  
   
 ## <a name="examples"></a>示例  
  以下示例使用简单 `HAVING` 子句从 `SalesOrderID` 表中检索超过 `SalesOrderDetail` 的每个 `$100000.00` 的总计。  

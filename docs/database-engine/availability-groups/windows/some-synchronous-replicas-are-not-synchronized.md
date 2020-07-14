@@ -1,6 +1,6 @@
 ---
 title: 一些同步副本不同步
-description: 介绍 Always On 可用性组的同步副本未同步的一些可能原因和解决方法
+description: 介绍 Always On 可用性组的同步副本未同步的一些可能原因和解决方案。
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: e58ed56e-4c30-42e6-a9fc-a8c401620e02
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 494d772f7eff9ccf8ba9783885d5c62e49fddbbe
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 76c8ce29a0061f32fe7c7a42bb44b2156406b493
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822591"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883099"
 ---
 # <a name="some-synchronous-replicas-are-not-synchronized"></a>一些同步副本不同步
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
     
-## <a name="introduction"></a>介绍  
+## <a name="introduction"></a>简介  
   
 |||  
 |-|-|  

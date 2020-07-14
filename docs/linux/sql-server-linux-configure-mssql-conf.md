@@ -8,21 +8,21 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 8e36eb9bccd183c8c38ebbfeafcc4ace7e025960
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5d3ee42f28fed73a4dd513b10d01948552fdd6d5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79286911"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901543"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>使用 mssql-conf 工具配置 Linux 上的 SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-mssql-conf 是随 SQL Server 2017 for Red Hat Enterprise Linux、SUSE Linux Enterprise Server 和 Ubuntu 安装的配置脚本  。 可以使用此实用工具设置以下参数：
+mssql-conf 是随 SQL Server 2017 for Red Hat Enterprise Linux、SUSE Linux Enterprise Server 和 Ubuntu 安装的配置脚本。 它会修改存储配置值的 [mssql.conf 文件](#mssql-conf-format)。 可使用 mssql-conf 实用工具设置以下参数：
 
 |||
 |---|---|
@@ -50,7 +50,7 @@ mssql-conf 是随 SQL Server 2017 for Red Hat Enterprise Linux、SUSE Linux Ente
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-mssql-conf 是随 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] for Red Hat Enterprise Linux、SUSE Linux Enterprise Server 和 Ubuntu 安装的配置脚本  。 可以使用此实用工具设置以下参数：
+mssql-conf 是随 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] for Red Hat Enterprise Linux、SUSE Linux Enterprise Server 和 Ubuntu 安装的配置脚本。 可以使用此实用工具设置以下参数：
 
 |||
 |---|---|
@@ -86,13 +86,13 @@ mssql-conf 是随 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] for Re
 
 * 对于 Always On 可用性组和共享磁盘群集，始终在每个节点上进行相同的配置更改。
 
-* 对于共享磁盘群集方案，请勿尝试重新启动 mssql-server 服务以应用更改  。 SQL Server 作为应用程序运行。 应将资源脱机，然后重新联机。
+* 对于共享磁盘群集方案，请勿尝试重新启动 mssql-server 服务以应用更改。 SQL Server 作为应用程序运行。 应将资源脱机，然后重新联机。
 
-* 这些示例通过指定完整路径 /opt/mssql/bin/mssql-conf 来运行 mssql-conf  。 如果选择改为导航到该路径，请在当前目录 ./mssql-conf 的上下文中运行 mssql-conf  。
+* 这些示例通过指定完整路径 /opt/mssql/bin/mssql-conf 来运行 mssql-conf。 如果选择改为导航到该路径，请在当前目录 ./mssql-conf 的上下文中运行 mssql-conf。
 
 ## <a name="enable-sql-server-agent"></a><a id="agent"></a> 启用 SQL Server 代理
 
-使用 sqlagent.enabled 设置可启用 [SQL Server 代理](sql-server-linux-run-sql-server-agent-job.md)  。 默认情况下，SQL Server 代理处于禁用状态。 如果 mssql.conf 设置文件中不存在 sqlagent.enabled，则 SQL Server 在内部假定已禁用 SQL Server 代理  。
+使用 sqlagent.enabled 设置可启用 [SQL Server 代理](sql-server-linux-run-sql-server-agent-job.md)。 默认情况下，SQL Server 代理处于禁用状态。 如果 mssql.conf 设置文件中不存在 sqlagent.enabled，则 SQL Server 在内部假定已禁用 SQL Server 代理。
 
 若要更改此设置，请使用以下步骤：
 
@@ -110,13 +110,13 @@ mssql-conf 是随 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] for Re
 
 ## <a name="change-the-sql-server-collation"></a><a id="collation"></a> 更改 SQL Server 排序规则
 
-使用 set-collation 选项可将排序规则值更改为支持的任何排序规则  。
+使用 set-collation 选项可将排序规则值更改为支持的任何排序规则。
 
 1. 首先，[备份服务器上的所有用户数据库](sql-server-linux-backup-and-restore-database.md)。
 
 1. 然后，使用 [sp_detach_db](../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md) 存储过程分离用户数据库。
 
-1. 运行 set-collation 选项并按照提示进行操作  ：
+1. 运行 set-collation 选项并按照提示进行操作：
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set-collation
@@ -130,12 +130,12 @@ mssql-conf 是随 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] for Re
 
 ## <a name="configure-customer-feedback"></a><a id="customerfeedback"></a> 配置客户反馈
 
-使用 telemetry.customerfeedback 设置可更改 SQL Server 是否向 Microsoft 发送反馈  。 默认情况下，对于所有版本，此值设置为“true”  。 若要更改该值，请运行以下命令：
+使用 telemetry.customerfeedback 设置可更改 SQL Server 是否向 Microsoft 发送反馈。 默认情况下，对于所有版本，此值设置为“true”。 若要更改该值，请运行以下命令：
 
 > [!IMPORTANT]
 > 无法关闭 SQL Server、Express 和 Developer 免费版本的客户反馈。
 
-1. 使用 **telemetry.customerfeedback** 的 **set** 命令以根身份运行 mssql-conf 脚本。 以下示例通过指定 false 来关闭客户反馈  。
+1. 使用 **telemetry.customerfeedback** 的 **set** 命令以根身份运行 mssql-conf 脚本。 以下示例通过指定 false 来关闭客户反馈。
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set telemetry.customerfeedback false
@@ -151,9 +151,9 @@ mssql-conf 是随 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] for Re
 
 ## <a name="change-the-default-data-or-log-directory-location"></a><a id="datadir"></a> 更改默认数据或日志目录位置
 
-使用 filelocation.defaultdatadir 和 filelocation.defaultlogdir 设置可更改创建新数据库和日志文件的位置   。 默认情况下，此位置为 /var/opt/mssql/data。 若要更改这些设置，请使用以下步骤：
+使用 filelocation.defaultdatadir 和 filelocation.defaultlogdir 设置可更改创建新数据库和日志文件的位置 。 默认情况下，此位置为 /var/opt/mssql/data。 若要更改这些设置，请使用以下步骤：
 
-1. 为新的数据库数据和日志文件创建目标目录。 以下示例创建一个新的 /tmp/data 目录  ：
+1. 为新的数据库数据和日志文件创建目标目录。 以下示例创建一个新的 /tmp/data 目录：
 
    ```bash
    sudo mkdir /tmp/data
@@ -166,7 +166,7 @@ mssql-conf 是随 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] for Re
    sudo chgrp mssql /tmp/data
    ```
 
-1. 使用 mssql-conf 通过 set 命令更改默认数据目录  ：
+1. 使用 mssql-conf 通过 set 命令更改默认数据目录：
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set filelocation.defaultdatadir /tmp/data
@@ -184,16 +184,16 @@ mssql-conf 是随 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] for Re
    sudo /opt/mssql/bin/mssql-conf set filelocation.defaultlogdir /tmp/log
    ```
 
-1. 此命令还假定存在 /tmp/log 目录，并且它位于用户和组“mssql”下  。
+1. 此命令还假定存在 /tmp/log 目录，并且它位于用户和组“mssql”下。
 
 
 ## <a name="change-the-default-master-database-file-directory-location"></a><a id="masterdatabasedir"></a> 更改默认的 master 数据库文件目录位置
 
-使用 filelocation.masterdatafile 和 filelocation.masterlogfile 设置可更改 SQL Server 引擎查找 master 数据库文件的位置   。 默认情况下，此位置为 /var/opt/mssql/data。
+使用 filelocation.masterdatafile 和 filelocation.masterlogfile 设置可更改 SQL Server 引擎查找 master 数据库文件的位置 。 默认情况下，此位置为 /var/opt/mssql/data。
 
 若要更改这些设置，请使用以下步骤：
 
-1. 为新的错误日志文件创建目标目录。 以下示例创建一个新的 /tmp/masterdatabasedir 目录  ：
+1. 为新的错误日志文件创建目标目录。 以下示例创建一个新的 /tmp/masterdatabasedir 目录：
 
    ```bash
    sudo mkdir /tmp/masterdatabasedir
@@ -206,7 +206,7 @@ mssql-conf 是随 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] for Re
    sudo chgrp mssql /tmp/masterdatabasedir
    ```
 
-1. 使用 mssql-conf 通过 set 命令更改主数据和日志文件的默认 master 数据库目录  ：
+1. 使用 mssql-conf 通过 set 命令更改主数据和日志文件的默认 master 数据库目录：
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set filelocation.masterdatafile /tmp/masterdatabasedir/master.mdf
@@ -240,7 +240,7 @@ mssql-conf 是随 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] for Re
  
 ## <a name="change-the-name-of-master-database-files"></a><a id="masterdatabasename"></a> 更改 master 数据库文件的名称
 
-使用 filelocation.masterdatafile 和 filelocation.masterlogfile 设置可更改 SQL Server 引擎查找 master 数据库文件的位置   。 还可以使用它来更改 master 数据库和日志文件的名称。 
+使用 filelocation.masterdatafile 和 filelocation.masterlogfile 设置可更改 SQL Server 引擎查找 master 数据库文件的位置 。 还可以使用它来更改 master 数据库和日志文件的名称。 
 
 若要更改这些设置，请使用以下步骤：
 
@@ -250,7 +250,7 @@ mssql-conf 是随 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] for Re
    sudo systemctl stop mssql-server
    ```
 
-1. 使用 mssql-conf 通过 set 命令更改主数据和日志文件的预期 master 数据库名称  ：
+1. 使用 mssql-conf 通过 set 命令更改主数据和日志文件的预期 master 数据库名称：
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set filelocation.masterdatafile /var/opt/mssql/data/masternew.mdf
@@ -275,11 +275,11 @@ mssql-conf 是随 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] for Re
 
 ## <a name="change-the-default-dump-directory-location"></a><a id="dumpdir"></a> 更改默认转储目录位置
 
-使用 filelocation.defaultdumpdir 设置可更改每当系统崩溃时生成内存和 SQL 转储的默认位置  。 默认情况下，这些文件在 /var/opt/mssql/log 中生成。
+使用 filelocation.defaultdumpdir 设置可更改每当系统崩溃时生成内存和 SQL 转储的默认位置。 默认情况下，这些文件在 /var/opt/mssql/log 中生成。
 
 若要设置新位置，请使用以下命令：
 
-1. 为新的转储文件创建目标目录。 以下示例创建一个新的 /tmp/dump 目录  ：
+1. 为新的转储文件创建目标目录。 以下示例创建一个新的 /tmp/dump 目录：
 
    ```bash
    sudo mkdir /tmp/dump
@@ -292,7 +292,7 @@ mssql-conf 是随 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] for Re
    sudo chgrp mssql /tmp/dump
    ```
 
-1. 使用 mssql-conf 通过 set 命令更改默认数据目录  ：
+1. 使用 mssql-conf 通过 set 命令更改默认数据目录：
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set filelocation.defaultdumpdir /tmp/dump
@@ -306,11 +306,11 @@ mssql-conf 是随 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] for Re
 
 ## <a name="change-the-default-error-log-file-directory-location"></a><a id="errorlogdir"></a> 更改默认的错误日志文件目录位置
 
-使用 filelocation.errorlogfile 设置可更改创建新错误日志、默认探查器跟踪、系统健康状况会话 XE 和 Hekaton 会话 XE 文件的位置  。 默认情况下，此位置为 /var/opt/mssql/log。 设置用于 SQL 错误日志文件的目录将成为其他日志的默认日志目录。
+使用 filelocation.errorlogfile 设置可更改创建新错误日志、默认探查器跟踪、系统健康状况会话 XE 和 Hekaton 会话 XE 文件的位置。 默认情况下，此位置为 /var/opt/mssql/log。 设置用于 SQL 错误日志文件的目录将成为其他日志的默认日志目录。
 
 若要更改这些设置，请执行以下操作：
 
-1. 为新的错误日志文件创建目标目录。 以下示例创建一个新的 /tmp/logs 目录  ：
+1. 为新的错误日志文件创建目标目录。 以下示例创建一个新的 /tmp/logs 目录：
 
    ```bash
    sudo mkdir /tmp/logs
@@ -323,7 +323,7 @@ mssql-conf 是随 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] for Re
    sudo chgrp mssql /tmp/logs
    ```
 
-1. 使用 mssql-conf 通过 set 命令更改默认错误日志文件名  ：
+1. 使用 mssql-conf 通过 set 命令更改默认错误日志文件名：
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set filelocation.errorlogfile /tmp/logs/errorlog
@@ -338,11 +338,11 @@ mssql-conf 是随 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] for Re
 
 ## <a name="change-the-default-backup-directory-location"></a><a id="backupdir"></a> 更改默认备份目录位置
 
-使用 filelocation.defaultbackupdir 设置可更改生成备份文件的默认位置  。 默认情况下，这些文件在 /var/opt/mssql/data 中生成。
+使用 filelocation.defaultbackupdir 设置可更改生成备份文件的默认位置。 默认情况下，这些文件在 /var/opt/mssql/data 中生成。
 
 若要设置新位置，请使用以下命令：
 
-1. 为新的备份文件创建目标目录。 以下示例创建一个新的 /tmp/backup 目录  ：
+1. 为新的备份文件创建目标目录。 以下示例创建一个新的 /tmp/backup 目录：
 
    ```bash
    sudo mkdir /tmp/backup
@@ -371,45 +371,45 @@ mssql-conf 是随 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] for Re
 
 如果某个 SQL Server 进程发生异常，SQL Server 会创建内存转储。
 
-可使用两个选项控制 SQL Server 收集的内存转储类型：coredump.coredumptype 和 coredump.captureminiandfull   。 这两个选项与核心转储捕获的两个阶段相关。 
+可使用两个选项控制 SQL Server 收集的内存转储类型：coredump.coredumptype 和 coredump.captureminiandfull 。 这两个选项与核心转储捕获的两个阶段相关。 
 
-第一阶段的捕获由 coredump.coredumptype 设置控制，此设置确定异常期间生成的转储文件类型  。 第二阶段由 coredump.captureminiandfull 设置启用  。 如果 coredump.captureminiandfull 设置为 true，则会生成 coredump.coredumptype 指定的转储文件，还会生成第二个小型转储   。 将 coredump.captureminiandfull 设置为 false 可禁用第二次捕获尝试  。
+第一阶段的捕获由 coredump.coredumptype 设置控制，此设置确定异常期间生成的转储文件类型。 第二阶段由 coredump.captureminiandfull 设置启用。 如果 coredump.captureminiandfull 设置为 true，则会生成 coredump.coredumptype 指定的转储文件，还会生成第二个小型转储 。 将 coredump.captureminiandfull 设置为 false 可禁用第二次捕获尝试。
 
-1. 确定是否使用 coredump.captureminiandfull 设置捕获小型转储和完全转储  。
+1. 确定是否使用 coredump.captureminiandfull 设置捕获小型转储和完全转储。
 
     ```bash
     sudo /opt/mssql/bin/mssql-conf set coredump.captureminiandfull <true or false>
     ```
 
-    默认值：false 
+    默认值：false
 
-1. 使用 coredump.coredumptype 设置指定转储文件的类型  。
+1. 使用 coredump.coredumptype 设置指定转储文件的类型。
 
     ```bash
     sudo /opt/mssql/bin/mssql-conf set coredump.coredumptype <dump_type>
     ```
 
-    默认值：miniplus 
+    默认值：miniplus
 
-    下表列出了可能的 coredump.coredumptype 值  。
+    下表列出了可能的 coredump.coredumptype 值。
 
     | 类型 | 说明 |
     |-----|-----|
     | **mini** | Mini 是最小的转储文件类型。 它使用 Linux 系统信息确定进程中的线程和模块。 转储仅包含主机环境线程堆栈和模块。 不包含间接内存引用或全局变量。 |
-    | **miniplus** | MiniPlus 与 mini 相似，但它包括更多内存。 它理解 SQLPAL 的内部机制和主机环境，可将下面的内存区域添加到转储：</br></br> - 各种全局变量</br> - 超过 64TB 的所有内存</br> - - 在/proc/$pid/maps 中找到的所有命名区域 </br> - 来自线程和堆栈的间接内存</br> - 线程信息</br> - 关联的 Teb 和 Peb</br> - 模块信息</br> - VMM 和 VAD 树 |
+    | **miniplus** | MiniPlus 与 mini 相似，但它包括更多内存。 它理解 SQLPAL 的内部机制和主机环境，可将下面的内存区域添加到转储：</br></br> - 各种全局变量</br> - 超过 64TB 的所有内存</br> - - 在/proc/$pid/maps 中找到的所有命名区域</br> - 来自线程和堆栈的间接内存</br> - 线程信息</br> - 关联的 Teb 和 Peb</br> - 模块信息</br> - VMM 和 VAD 树 |
     | **filtered** | Filtered 采用基于减法的设计，其中包括进程中的所有内存，除非专门排除某些内存。 此设计理解 SQLPAL 的内部机制和主机环境，从转储中排除某些区域。
-    | **full** | Full 是完整的过程转储，包括 /proc/$pid/maps 中的所有区域  。 这并非由 coredump.captureminiandfull 设置控制  。 |
+    | **full** | Full 是完整的过程转储，包括 /proc/$pid/maps 中的所有区域。 这并非由 coredump.captureminiandfull 设置控制。 |
 
 ## <a name="set-the-default-database-mail-profile-for-sql-server-on-linux"></a><a id="dbmail"></a> 为 Linux 上的 SQL Server 设置默认数据库邮件配置文件
 
-通过 sqlpagent.databasemailprofile 可为电子邮件警报设置默认的 DB 邮件配置文件  。
+通过 sqlpagent.databasemailprofile 可为电子邮件警报设置默认的 DB 邮件配置文件。
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
 ```
 ## <a name="high-availability"></a><a id="hadr"></a> 高可用性
 
-使用 hadr.hadrenabled 选项可在 SQL Server 实例上启用可用性组  。 下面的命令通过将 hadr.hadrenabled 设置为 1 来启用可用性组  。 必须重启 SQL Server，该设置才能生效。
+使用 hadr.hadrenabled 选项可在 SQL Server 实例上启用可用性组。 下面的命令通过将 hadr.hadrenabled 设置为 1 来启用可用性组。 必须重启 SQL Server，该设置才能生效。
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled  1
@@ -424,7 +424,7 @@ sudo systemctl restart mssql-server
 
 ## <a name="set-local-audit-directory"></a><a id="localaudit"></a> 设置本地审核目录
 
-使用 telemetry.userrequestedlocalauditdirectory 设置可启用本地审核，并可设置创建本地审核日志的目录  。
+使用 telemetry.userrequestedlocalauditdirectory 设置可启用本地审核，并可设置创建本地审核日志的目录。
 
 1. 为新的本地审核日志创建目标目录。 以下示例创建新的 **/tmp/audit** 目录：
 
@@ -455,7 +455,7 @@ sudo systemctl restart mssql-server
 
 ## <a name="change-the-sql-server-locale"></a><a id="lcid"></a> 更改 SQL Server 区域设置
 
-使用 language.lcid 设置可将 SQL Server 区域设置更改为任何支持的语言标识符 (LCID)  。 
+使用 language.lcid 设置可将 SQL Server 区域设置更改为任何支持的语言标识符 (LCID)。 
 
 1. 以下示例将区域设置更改为法语 (1036)：
 
@@ -471,9 +471,9 @@ sudo systemctl restart mssql-server
 
 ## <a name="set-the-memory-limit"></a><a id="memorylimit"></a> 设置内存限制
 
-使用 memory.memorylimitmb 设置可控制 SQL Server 可用的物理内存量（以 MB 为单位）  。 默认值为物理内存的 80%。
+使用 memory.memorylimitmb 设置可控制 SQL Server 可用的物理内存量（以 MB 为单位）。 默认值为物理内存的 80%。
 
-1. 使用 memory.memorylimitmb 的 set 命令以根用户身份运行 mssql-conf 脚本   。 以下示例将 SQL Server 可用的内存更改为 3.25 GB (3328 MB)。
+1. 使用 memory.memorylimitmb 的 set 命令以根用户身份运行 mssql-conf 脚本 。 以下示例将 SQL Server 可用的内存更改为 3.25 GB (3328 MB)。
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set memory.memorylimitmb 3328
@@ -489,9 +489,9 @@ sudo systemctl restart mssql-server
 
 ## <a name="configure-msdtc"></a><a id="msdtc"></a> 配置 MSDTC
 
-network.rpcport 和 distributedtransaction.servertcpport 设置用于配置 Microsoft 分布式事务处理协调器 (MSDTC)   。 要更改这些设置，请运行以下命令：
+network.rpcport 和 distributedtransaction.servertcpport 设置用于配置 Microsoft 分布式事务处理协调器 (MSDTC) 。 要更改这些设置，请运行以下命令：
 
-1. 使用 network.rpcport 的 set 命令以根用户身份运行 mssql-conf 脚本  ：
+1. 使用 network.rpcport 的 set 命令以根用户身份运行 mssql-conf 脚本：
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set network.rpcport <rcp_port>
@@ -589,7 +589,7 @@ outboundnetworkaccess = 1
 
 ## <a name="change-the-tcp-port"></a><a id="tcpport"></a> 更改 TCP 端口
 
-使用 network.tcpport 设置可更改 SQL Server 侦听连接的 TCP 端口  。 默认情况下，此端口设置为 1433。 若要更改端口，请运行以下命令：
+使用 network.tcpport 设置可更改 SQL Server 侦听连接的 TCP 端口。 默认情况下，此端口设置为 1433。 若要更改端口，请运行以下命令：
 
 1. 使用“network.tcpport”的“set”命令以根用户身份运行 mssql-conf 脚本：
 
@@ -626,7 +626,7 @@ outboundnetworkaccess = 1
 
 ## <a name="enabledisable-traceflags"></a><a id="traceflags"></a> 启用/禁用跟踪标志
 
-使用 traceflag 选项可启用或禁用 SQL Server 服务启动的跟踪标志  。 若要启用/禁用跟踪标志，请使用以下命令：
+使用 traceflag 选项可启用或禁用 SQL Server 服务启动的跟踪标志。 若要启用/禁用跟踪标志，请使用以下命令：
 
 1. 使用以下命令启用跟踪标志。 例如，对于跟踪标志 1234：
 
@@ -640,7 +640,7 @@ outboundnetworkaccess = 1
    sudo /opt/mssql/bin/mssql-conf traceflag 2345 3456 on
    ```
 
-1. 同样，可以通过指定跟踪标志并添加“off”参数来禁用一个或多个启用的跟踪标志  ：
+1. 同样，可以通过指定跟踪标志并添加“off”参数来禁用一个或多个启用的跟踪标志：
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf traceflag 1234 2345 3456 off
@@ -654,9 +654,9 @@ outboundnetworkaccess = 1
 
 ## <a name="remove-a-setting"></a>删除设置
 
-要取消设置使用 `mssql-conf set` 进行的任何设置，请使用 `unset` 选项和设置名称调用 mssql-conf  。 这将清除设置，有效地将其重置为默认值。
+要取消设置使用 `mssql-conf set` 进行的任何设置，请使用 `unset` 选项和设置名称调用 mssql-conf。 这将清除设置，有效地将其重置为默认值。
 
-1. 以下示例清除 network.tcpport 选项  。
+1. 以下示例清除 network.tcpport 选项。
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf unset network.tcpport
@@ -670,18 +670,18 @@ outboundnetworkaccess = 1
 
 ## <a name="view-current-settings"></a>查看当前设置
 
-要查看任何已配置的设置，请运行以下命令以输出 mssql.conf 文件的内容  ：
+要查看任何已配置的设置，请运行以下命令以输出 mssql.conf 文件的内容：
 
 ```bash
 sudo cat /var/opt/mssql/mssql.conf
 ```
 
-请注意，此文件中未显示的所有设置均使用其默认值。 下一部分提供示例 mssql.conf 文件  。
+请注意，此文件中未显示的所有设置均使用其默认值。 下一部分提供示例 mssql.conf 文件。
 
 
 ## <a name="mssqlconf-format"></a><a id="mssql-conf-format"></a> mssql.conf format
 
-以下 /var/opt/mssql/mssql.conf 文件提供了每个设置的示例  。 可以根据需要使用此格式手动更改 mssql.conf 文件  。 如果手动更改文件，则必须在应用更改之前重启 SQL Server。 要将 mssql.conf 文件与 Docker 配合使用，必须让 Docker [保留你的数据](sql-server-linux-configure-docker.md)  。 首先将完整的 mssql.conf 文件添加到主机目录，然后运行容器  。 [客户反馈](sql-server-linux-customer-feedback.md)中有一个示例。
+以下 /var/opt/mssql/mssql.conf 文件提供了每个设置的示例。 可以根据需要使用此格式手动更改 mssql.conf 文件。 如果手动更改文件，则必须在应用更改之前重启 SQL Server。 要将 mssql.conf 文件与 Docker 配合使用，必须让 Docker [保留你的数据](sql-server-linux-configure-docker.md)。 首先将完整的 mssql.conf 文件添加到主机目录，然后运行容器。 [客户反馈](sql-server-linux-customer-feedback.md)中有一个示例。
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"

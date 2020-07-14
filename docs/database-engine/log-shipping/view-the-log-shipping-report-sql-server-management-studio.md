@@ -1,6 +1,6 @@
 ---
 title: 查看日志传送报告 (SSMS)
-description: 了解如何使用 SQL Server Management Studio (SSMS) GUI 查看日志传送报告。
+description: 查看 SQL Server Management Studio 中的事务日志传送状态报告。 在监视服务器、主服务器或辅助服务器中运行状态报告。
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3b549f2f-3683-45e5-b8e8-8095276c41ab
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: de5a925e9d583d1263fb8b99ebca2f8edac51165
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ba4a8e1d48587046ecceb9007ca57f580b0338c2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258563"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748543"
 ---
 # <a name="view-the-log-shipping-report-sql-server-management-studio"></a>查看日志传送报告 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   本主题说明如何在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中查看事务日志传送状态报告。 您可以在监视服务器、主服务器或辅助服务器中运行状态报告。 若要查看有关日志传送配置的最完整的信息，请在监视服务器实例上查看此报告。  
   
  该报告显示所有其状态可从您连接到的服务器实例获得的日志传送活动的状态。 如果该服务器实例涉及不同角色（例如，用作一个数据库的监视服务器，同时用作另一个数据库的辅助服务器）的多种配置，则显示的结果包含每个角色的各项配置信息。 如果存储过程能够针对给定的日志传送配置连接到监视服务器实例，则报告将显示此配置的其他状态。  
@@ -44,7 +44,7 @@ ms.locfileid: "75258563"
   
 1.  连接到监视服务器、主服务器或辅助服务器。  
   
-2.  在对象资源管理器中，右键单击服务器实例，依次指向“报表”  和“标准报表”  。  
+2.  在对象资源管理器中，右键单击服务器实例，依次指向“报表”和“标准报表”。  
   
 3.  单击 **“事务日志传送状态”** 。  
   

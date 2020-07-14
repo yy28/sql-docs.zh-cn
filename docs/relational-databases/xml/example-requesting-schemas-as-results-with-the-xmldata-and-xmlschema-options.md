@@ -1,5 +1,6 @@
 ---
 title: 使用 XMLDATA 和 XMLSCHEMA 请求架构作为结果 | Microsoft Docs
+description: 了解如何将 RAW 模式下的 XMLDATA 和 XMLSCHEMA 选项用于 FOR XML 子句，以请求查询结果中的 XML-DATA 架构或 XSD 架构。
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,15 +14,15 @@ ms.assetid: 3504ca38-be66-42b2-8dab-f499c9584840
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: ed72f442fa85a505ace0a1826028ee43f1ea6e97
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: e7dfada43a7f899339f9f6ab59ef94dda9853c36
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664507"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632932"
 ---
 # <a name="request-schemas-as-results-with-xmldata--xmlschema"></a>使用 XMLDATA 和 XMLSCHEMA 请求架构作为结果
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   下面的查询返回描述文档结构的 XML-DATA 架构。  
   
 ## <a name="example"></a>示例  
@@ -53,7 +54,7 @@ GO
 ```  
   
 > [!NOTE]  
->  <`Schema`> 被声明为命名空间。 在不同的 FOR XML 查询中请求多个 XML-Data 架构时，为了避免命名空间冲突，该示例中的命名空间标识符 `Schema1` 将在每次执行查询时进行更改。 命名空间标识符由 Schema  _**n**_ 组成，其中 _**n**_ 是一个整数。  
+>  <`Schema`> 被声明为命名空间。 在不同的 FOR XML 查询中请求多个 XML-Data 架构时，为了避免命名空间冲突，该示例中的命名空间标识符 `Schema1` 将在每次执行查询时进行更改。 命名空间标识符由 Schema_**n**_ 组成，其中 _**n**_ 是一个整数。  
   
  通过指定 `XMLSCHEMA` 选项，您可以针对结果请求 XSD 架构。  
   

@@ -1,5 +1,6 @@
 ---
 title: 在应用程序代码中使用 FOR XML 结果 | Microsoft Docs
+description: 了解如何在应用程序中使用带有 FOR XML 子句的 SQL 查询的结果。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9927e5a4477961fbd7122ae96b05e42c74bf2196
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 430c7118d4185f123973c0ca7b00b02fb8ba39a9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665050"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775540"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>在应用程序代码中使用 FOR XML 结果
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   通过在 SQL 查询中使用 FOR XML 子句，可以检索查询结果，甚至可以将其转换为 XML 数据。 当 FOR XML 查询结果可以在 XML 应用程序代码中使用时，您可以使用此功能执行以下操作：  
   
 -   查询 SQL 表中 [XML 数据 (SQL Server)](../../relational-databases/xml/xml-data-sql-server.md) 值的实例  
@@ -164,7 +165,7 @@ ms.locfileid: "80665050"
   
 -   **YearOpened：** 1974  
   
--   **Specialty：** Road  
+-   **Specialty：** 道路  
   
 -   **SquareFeet：** 38000  
   

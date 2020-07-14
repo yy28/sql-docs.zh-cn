@@ -1,5 +1,6 @@
 ---
 title: 不支持的功能 - 内存中 OLTP
+description: 了解内存优化对象不支持的 SQL Server 功能。 查看已受支持的内存中 OLTP 的功能。
 ms.custom: ''
 ms.date: 02/21/2020
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8464f56274308694ada9e5721ae8e0ceb5ed85ed
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a2460e174ab0e8207c3e37f2e0dc999663a1dd8b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77558319"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753170"
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>内存中 OLTP 不支持的 SQL Server 功能
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 本主题讨论不支持用于内存优化对象的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。 此外，最后一节列出了内存中 OLTP 不支持的功能，但后来添加了对这些功能的支持。
   
@@ -53,8 +54,8 @@ ms.locfileid: "77558319"
 
 |数据库|允许|说明|  
 |---------------|-------------|-----------------|  
-| 用户数据库、模型和 msdb   。 | 否 | 多数情况下，不支持跨数据库查询和事务  。<br /><br />如果查询使用内存优化表或本机编译存储过程，则此查询无法访问其他数据库。 此限制适用于事务以及查询。<br /><br />tempdb 和 master 系统数据库除外   。 此时，master 数据库可进行只读访问  。 |
-| 资源数据库和 tempdb   | 是 | 在涉及内存中 OLTP 对象的事务中，可以使用资源和 tempdb 系统数据库，而无需添加限制   。
+| 用户数据库、模型和 msdb 。 | 否 | 多数情况下，不支持跨数据库查询和事务。<br /><br />如果查询使用内存优化表或本机编译存储过程，则此查询无法访问其他数据库。 此限制适用于事务以及查询。<br /><br />tempdb 和 master 系统数据库除外 。 此时，master 数据库可进行只读访问。 |
+| 资源数据库和 tempdb  | 是 | 在涉及内存中 OLTP 对象的事务中，可以使用资源和 tempdb 系统数据库，而无需添加限制 。
 ||||
 
 ## <a name="scenarios-not-supported"></a>不支持的方案  
@@ -63,8 +64,8 @@ ms.locfileid: "77558319"
   
 - 访问内存优化表的查询上的键集和动态游标。 这些游标将降级为静态和只读的。  
   
-- 不支持使用 MERGE INTO target，其中 target 是内存优化表    。
-    - 内存优化表支持 MERGE USING source   。  
+- 不支持使用 MERGE INTO target，其中 target 是内存优化表。
+    - 内存优化表支持 MERGE USING source。  
   
 - 不支持 ROWVERSION (TIMESTAMP) 数据类型。 有关详细信息，请参阅 [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)。
   
@@ -78,13 +79,13 @@ ms.locfileid: "77558319"
     - 不支持 PBM 的仅阻止并记录模式。 当服务器上存在此类策略时，可能会使内存中 OLTP DDL 无法成功执行。 支持“按需”和“按计划”模式。  
 
 - 内存中 OLTP 不支持数据库包含（[包含的数据库](../../relational-databases/databases/contained-databases.md)）。
-    - 支持 contained database authentication。 但是，在动态管理视图 (DMV) dm_db_uncontained_entities 中，所有内存中 OLTP 对象都被标记为“breaking containment”  。
+    - 支持 contained database authentication。 但是，在动态管理视图 (DMV) dm_db_uncontained_entities 中，所有内存中 OLTP 对象都被标记为“breaking containment”。
 
 ## <a name="recently-added-supports"></a>最近添加的支持
 
 有时，较新版本的 SQL Server 增加了对以前不支持的功能的支持。 本节列出了内存中 OLTP 过去不支持的功能，但后来内存中 OLTP 添加了对这些功能的支持。
 
-在下表中，version  值（如 `(15.x)`）是指 Transact-SQL 语句 `SELECT @@Version;` 返回的值。
+在下表中，version 值（如 `(15.x)`）是指 Transact-SQL 语句 `SELECT @@Version;` 返回的值。
 
 | 功能名称 | SQL Server 的版本 | 注释 |
 | :----------- | :-------------------- | :------- |

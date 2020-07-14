@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 7f825b40-2264-4608-9809-590d0f09d882
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0b70fdfc02e876310841bde3646aab9620c56951
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 50f114b01f72f48dd0ebd28123dfabdeef3a4b91
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68082497"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896580"
 ---
 # <a name="restore-statements---rewindonly-transact-sql"></a>RESTORE 语句 - REWINDONLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   倒带并关闭指定的磁带设备，这些设备在以 NOREWIND 选项执行 BACKUP 或 RESTORE 语句后保持打开状态。 仅磁带设备支持此命令。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "68082497"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
   
 RESTORE REWINDONLY   
 FROM <backup_device> [ ,...n ]  
@@ -61,17 +61,17 @@ FROM <backup_device> [ ,...n ]
  指定要用于还原操作的逻辑或物理备份设备。  
   
  { *logical_backup_device_name* |  **@** _logical\_backup\_device\_name\_var_ }  
- 由 sp_addumpdevice  创建的、用于还原数据库的备份设备的逻辑名称，该名称必须符合有关标识符的规则。 如果作为变量 ( **@** _logical\_backup\_device\_name\_var_) 提供，则可以将该备份设备名称指定为字符串常量 ( **@** _logical\_backup\_device\_name\_var_ = _logical\_backup\_device\_name_) 或字符字符串数据类型（ntext  或 text  数据类型除外）的变量。  
+ 由 sp_addumpdevice 创建的、用于还原数据库的备份设备的逻辑名称，该名称必须符合有关标识符的规则。 如果作为变量 ( **@** _logical\_backup\_device\_name\_var_) 提供，则可以将该备份设备名称指定为字符串常量 ( **@** _logical\_backup\_device\_name\_var_ = _logical\_backup\_device\_name_) 或字符字符串数据类型（ntext 或 text 数据类型除外）的变量。  
   
  {DISK | TAPE } **=** { **'** _physical\_backup\_device\_name_ **'**  |  **@** _physical\_backup\_device\_name\_var_ }  
- 允许从指定的磁盘或磁带设备还原备份。 应使用设备的实际名称（例如，完整的路径和文件名）指定磁盘和磁带的设备类型：DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' or TAPE = '\\\\.\TAPE0'。 如果指定为变量 (@physical\_backup\_device\_name\_var)，则可以将该设备名称指定为字符串常量 (@physical\_backup\_device\_name\_var = 'physical_backup_device_name') 或字符字符串数据类型（ntext 或 text 数据类型除外）的变量 。  
+ 允许从指定的磁盘或磁带设备还原备份。 应以设备的实际名称（例如，完整路径和文件名）指定磁盘和磁带的设备类型：DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' 或 TAPE = '\\\\.\TAPE0'。 如果指定为变量 (@physical\_backup\_device\_name\_var)，则可以将该设备名称指定为字符串常量 (@physical\_backup\_device\_name\_var = 'physical_backup_device_name') 或字符字符串数据类型（ntext 或 text 数据类型除外）的变量 。  
   
  如果使用的是具有 UNC 名称（必须包含计算机名称）的网络服务器，请指定磁盘的设备类型。 有关如何使用 UNC 名称的详细信息，请参阅[备份设备 (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md)。  
   
  运行 Microsoft SQL Server 所用的帐户必须对远程计算机或网络服务器拥有 READ 访问权，这样才能执行 RESTORE 操作。  
   
  *n*  
- 一个占位符，用于指示可以指定多个备份设备和逻辑备份设备。 备份设备或逻辑备份设备最多可以有 64 个  。  
+ 一个占位符，用于指示可以指定多个备份设备和逻辑备份设备。 备份设备或逻辑备份设备最多可以有 64 个。  
   
  还原顺序是否要求备份设备的数量与创建备份所属的介质集时所用的数量相同，这取决于还原是脱机还原还是联机还原。 脱机还原允许还原所用的设备少于创建备份时所用的设备。 联机还原要求使用备份的所有备份设备。 使用较少的设备进行还原将会失败。  
   

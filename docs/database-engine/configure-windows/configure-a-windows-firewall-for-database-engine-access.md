@@ -1,5 +1,6 @@
 ---
 title: 为数据库引擎访问配置 Windows 防火墙 | Microsoft Docs
+description: 了解如何配置 Windows 防火墙，以便客户端计算机可以通过防火墙访问 SQL Server 数据库引擎的实例。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - firewall systems, [Database Engine]
 - security [SQL Server], firewalls
 ms.assetid: 0093b43c-c6b5-4574-9b30-3a0e91e1a1f9
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: d3ec56a8e4961985a6c809983f671edf0234491d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 815ecb54acf22b1ac28adae534847fa842b2e87a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012894"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784138"
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>为数据库引擎访问配置 Windows 防火墙
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 
   本主题说明如何使用 SQL Server 配置管理器在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中为数据库引擎访问配置 Windows 防火墙。 防火墙系统有助于阻止对计算机资源进行未经授权的访问。 若要通过防火墙访问 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例，必须在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机上配置防火墙以允许访问。  
@@ -67,11 +68,11 @@ ms.locfileid: "68012894"
   
 1.  在 **“开始”** 菜单上，单击 **“运行”** ，键入 **WF.msc**，然后单击 **“确定”** 。  
   
-2.  在“高级安全 Windows 防火墙”的左窗格中，右键单击“入站规则”，并在操作窗格中单击“新建规则”。     
+2.  在“高级安全 Windows 防火墙”的左窗格中，右键单击“入站规则”，并在操作窗格中单击“新建规则”。    
   
 3.  在 **“规则类型”** 对话框中，选择 **“端口”** ，然后单击 **“下一步”** 。  
   
-4.  在 **“协议和端口”** 对话框中，选择 **TCP**。 选择“特定本地端口”  ，然后键入 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例的端口号，例如默认实例的端口号 **1433**。 单击“下一步”。   
+4.  在 **“协议和端口”** 对话框中，选择 **TCP**。 选择“特定本地端口”，然后键入 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例的端口号，例如默认实例的端口号 **1433**。 单击“下一步”。  
   
 5.  在 **“操作”** 对话框中，选择 **“允许连接”** ，然后单击 **“下一步”** 。  
   
@@ -83,11 +84,11 @@ ms.locfileid: "68012894"
   
 1.  在 **“开始”** 菜单上，单击 **“运行”** ，键入 **WF.msc**，然后单击 **“确定”** 。  
   
-2.  在“高级安全 Windows 防火墙”的左窗格中，右键单击“入站规则”，并在操作窗格中单击“新建规则”。     
+2.  在“高级安全 Windows 防火墙”的左窗格中，右键单击“入站规则”，并在操作窗格中单击“新建规则”。    
   
 3.  在 **“规则类型”** 对话框中，选择 **“程序”** ，然后单击 **“下一步”** 。  
   
-4.  在 **“程序”** 对话框中，选择 **“此程序路径”** 。 单击 **“浏览”** ，导航到要通过防火墙访问的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，再单击 **“打开”** 。 默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 位于 **C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\Sqlservr.exe**。 单击“下一步”。   
+4.  在 **“程序”** 对话框中，选择 **“此程序路径”** 。 单击 **“浏览”** ，导航到要通过防火墙访问的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，再单击 **“打开”** 。 默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 位于 **C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\Sqlservr.exe**。 单击“下一步”。  
   
 5.  在 **“操作”** 对话框中，选择 **“允许连接”** ，然后单击 **“下一步”** 。  
   

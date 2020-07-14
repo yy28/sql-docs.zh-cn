@@ -1,5 +1,6 @@
 ---
 title: 修改 XML 索引 | Microsoft Docs
+description: 了解 ALTER INDEX (Transact-SQL) DDL 语句可如何用于修改现有的 XML 和非 XML 索引。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 24d50fe1-c6ec-49e6-91a3-9791851ba53d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: efe1b72c4cb98b51da065b8194432f4e8d9efa61
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 3e89c0bc3a0cb7731507f1693fbd554011c62926
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665077"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729872"
 ---
 # <a name="modify-xml-indexes"></a>修改 XML 索引
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] DDL 语句可用于修改现有的 XML 和非 XML 索引。 但是，并非所有的 ALTER INDEX 选项都适用于 XML 索引。 修改 XML 索引时以下选项不可用：  
   
 -   对于 XML 索引，重新生成和设置选项 IGNORE_DUP_KEY 无效。 对于辅助 XML 索引，重新生成选项 ONLINE 必须设置为 OFF。 在 ALTER INDEX 语句中，不允许 DROP_EXISTING 选项。  

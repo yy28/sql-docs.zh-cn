@@ -1,5 +1,6 @@
 ---
 title: 备份数据库主密钥 | Microsoft Docs
+description: 了解如何使用 Transact-SQL 在 SQL Server 中备份数据库主密钥。 这个重要的密钥加密其他密钥和证书。
 ms.custom: ''
 ms.date: 01/02/2019
 ms.prod: sql
@@ -11,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 7ad9a0a0-6e4f-4f7b-8801-8c1b9d49c4d8
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 55db3923f26acaad667e444afb13ae0d86bcc59e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 922b921649892673f51876c6e2336e05244a1e17
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957496"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892436"
 ---
 # <a name="back-up-a-database-master-key"></a>备份数据库主密钥
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   本主题介绍如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中备份数据库主密钥。 数据库主密钥用于加密数据库里面的其他密钥和证书。 如果主密钥被删除或损坏，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可能无法解密数据库里面的其他密钥，并且使用这些密钥加密的数据就如同丢失一样。 出于这个原因，您应备份数据库主密钥，并将备份存储在另外一个安全的位置。  
   
 ## <a name="before-you-begin"></a>开始之前  
@@ -51,7 +52,7 @@ ms.locfileid: "74957496"
   
 6. 在标准菜单栏上，单击 **“新建查询”** 。  
   
-7. 将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+7. 将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```sql
     -- Creates a backup of the "AdventureWorks2012" master key. Because this master key is not encrypted by the service master key, a password must be specified when it is opened.  

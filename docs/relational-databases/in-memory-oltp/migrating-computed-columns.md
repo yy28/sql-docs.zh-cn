@@ -1,5 +1,6 @@
 ---
 title: 迁移计算列 | Microsoft Docs
+description: 了解如何在内存优化表中模拟计算列。 评估迁移后是否需要计算列功能。
 ms.custom: ''
 ms.date: 12/17/2016
 ms.prod: sql
@@ -11,16 +12,16 @@ ms.assetid: 64a9eade-22c3-4a9d-ab50-956219e08df1
 author: MightyPen
 ms.author: genemi
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 36a0a6f82499a617a37b7cc9b848a33ec29c2ce3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2b378b5921397ec90d44a4d63de3aeaf944d8ab2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68050127"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730893"
 ---
 # <a name="migrating-computed-columns"></a>迁移计算列
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 内存优化的表中不支持计算列。 但是，可模拟计算列。
 

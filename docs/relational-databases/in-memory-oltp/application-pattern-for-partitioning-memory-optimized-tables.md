@@ -1,5 +1,6 @@
 ---
 title: 应用程序模式 - 内存优化表分区
+description: 了解内存中 OLTP 应用程序设计模式，该模式将当前的活动数据存储在内存优化表中，将旧数据存储在已分区表中。
 ms.custom: seo-dt-2019,issue-PR=4700-14820
 ms.date: 05/03/2020
 ms.prod: sql
@@ -10,22 +11,22 @@ ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ee8450f69d87bce0691de5d4641c0ab68b6fe3b7
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0da2cd346f2f71b190d4192646bc58a70c116933
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762818"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730421"
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>用于对内存优化表进行分区的应用程序模式
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-[!INCLUDE[hek_2](../../includes/hek-2-md.md)] 支持的应用程序设计模式是将性能资源消耗在相对较新的数据上。 当读取或更新当前数据的频率远高于旧数据时，可以应用此模式。 在这种情况下，我们说当前数据是活动的  或热的  ，较旧的数据是冷的  。
+[!INCLUDE[hek_2](../../includes/hek-2-md.md)] 支持的应用程序设计模式是将性能资源消耗在相对较新的数据上。 当读取或更新当前数据的频率远高于旧数据时，可以应用此模式。 在这种情况下，我们说当前数据是活动的或热的，较旧的数据是冷的。
 
-主要意图是将热  数据存储在内存优化表中。 可能会按每周或每月的频率将已变冷  的旧数据移动到已分区表中。 已分区表将其数据存储在磁盘或其他硬盘驱动器上，而不是存储在内存中。
+主要意图是将热数据存储在内存优化表中。 可能会按每周或每月的频率将已变冷的旧数据移动到已分区表中。 已分区表将其数据存储在磁盘或其他硬盘驱动器上，而不是存储在内存中。
 
-通常情况下，这种设计使用一个日期时间  键，使移动过程能够有效地区分冷热数据。
+通常情况下，这种设计使用一个日期时间键，使移动过程能够有效地区分冷热数据。
 
 ## <a name="advanced-partitioning"></a>高级分区
 
@@ -40,7 +41,7 @@ ms.locfileid: "82762818"
 最近已经变冷的数据必须移到已分区表中。 这种定期分区交换的步骤如下：
 
 1. 对于内存优化表中的数据，确定作为热数据与新的冷数据之间的分界线或分界点的日期时间。
-2. 将新的冷数据从内存中 OLTP 表插入 cold\_staging  表。
+2. 将新的冷数据从内存中 OLTP 表插入 cold\_staging 表。
 3. 从内存优化表中删除相同的冷数据。
 4. 将 cold\_staging 表交换到分区中。
 5. 添加分区。

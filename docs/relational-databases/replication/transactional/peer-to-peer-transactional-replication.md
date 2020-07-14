@@ -1,5 +1,6 @@
 ---
 title: 对等事务复制 | Microsoft Docs
+description: 在 SQL Server 中，对等复制通过在多个服务器实例上维护数据副本，提供了一种扩展的高可用性解决方案。
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -16,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4dcb5f8bd05b5cd1b5b68927abfef49576d6b072
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d85b1f3460dc55f7d6cd24420f2d86bb0f9623c2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71710724"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901239"
 ---
 # <a name="peer-to-peer---transactional-replication"></a>对等事务复制
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-  对等复制通过在多个服务器实例（又称为“节点”  ）上维护数据副本，提供了一种扩展的高可用性解决方案。 对等复制建立在事务复制的基础之上，以事务方式近乎实时地传播一致的更改。 这样，需要扩展读取操作的应用程序就可以将来自客户端的读取操作分布到多个节点上。 由于对等复制以近乎实时的方式维护节点上的数据，从而提供了数据冗余，提高了数据的可用性。  
+  对等复制通过在多个服务器实例（又称为“节点” ）上维护数据副本，提供了一种扩展的高可用性解决方案。 对等复制建立在事务复制的基础之上，以事务方式近乎实时地传播一致的更改。 这样，需要扩展读取操作的应用程序就可以将来自客户端的读取操作分布到多个节点上。 由于对等复制以近乎实时的方式维护节点上的数据，从而提供了数据冗余，提高了数据的可用性。  
   
  请考虑 Web 应用程序的情况。 它可以通过以下方式从对等复制中获益：  
   
@@ -145,20 +146,20 @@ ms.locfileid: "71710724"
   
  以下属性具有特殊的注意事项：  
   
--   发布属性 `@allow_initialize_from_backup` 需要 true 值  。  
+-   发布属性 `@allow_initialize_from_backup` 需要 true 值 。  
   
--   项目属性 `@replicate_ddl` 需要 true 值  ；`@identityrangemanagementoption` 需要 manual 值  ；`@status` 需要设置选项 24  。  
+-   项目属性 `@replicate_ddl` 需要 true 值；`@identityrangemanagementoption` 需要 manual 值；`@status` 需要设置选项 24。  
   
--   项目属性 `@ins_cmd``@del_cmd` 和 `@upd_cmd` 的值不能设置为 SQL  。  
+-   项目属性 `@ins_cmd``@del_cmd` 和 `@upd_cmd` 的值不能设置为 SQL 。  
   
--   订阅属性 `@sync_type` 的值需要为 none 或 automatic   。  
+-   订阅属性 `@sync_type` 的值需要为 none 或 automatic  。  
   
 ### <a name="maintenance-considerations"></a>维护注意事项  
  一些操作需要让系统静止。 也就是说，停止所有节点上已发布表中的活动，并确保每个节点都已收到来自所有其他节点的更改。  
   
 ||仅使用 SQL Server 2005 对等，或混合使用 SQL Server 2005 对等与 SQL Server 2008 对等和更高版本|仅使用 SQL Server 2005 对等，或混合使用 SQL Server 2005 对等与 SQL Server 2008 对等和更高版本|SQL2008 对等和更高版本|SQL2008 对等和更高版本|  
 |-|------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|------------------------------|------------------------------|  
-|向拓扑添加节点|完整拓扑中的 2 个节点：无需处于静止状态。 改用 `sync_type = 'initialize with backup'`|2 个以上节点：需要处于静止状态。|`sync_type = 'replication support only'`设置用户帐户 ：需要处于静止状态。|`sync_type = 'initialize with backup'` 和 `'initialize from lsn'`：无需处于静止状态。|  
+|向拓扑添加节点|完整拓扑中的 2 个节点：无需处于静止状态。 改用 `sync_type = 'initialize with backup'`|2 个以上节点：需要处于静止状态。|`sync_type = 'replication support only'`：需要处于静止状态。|`sync_type = 'initialize with backup'` 和 `'initialize from lsn'`：无需处于静止状态。|  
   
  拓扑架构更改（添加或删除项目）时需要处于静止状态。 有关详细信息，请参阅[管理对等拓扑（复制 Transact-SQL 编程）](../../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)。  
   

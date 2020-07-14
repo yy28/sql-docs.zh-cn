@@ -1,5 +1,6 @@
 ---
 title: 数据库属性（“更改跟踪”页）| Microsoft Docs
+description: 了解如何使用“数据库属性”对话框中的“更改跟踪”选项卡来查看或修改数据库的更改跟踪设置。
 ms.custom: ''
 ms.date: 01/07/2016
 ms.prod: sql
@@ -13,15 +14,15 @@ ms.assetid: 9b929640-bc62-449b-9b06-b5a77b8cf372
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2661424dcfe87f7151bbd92b2dfbf76861913fbb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b0abdb96d6d01ac1d630e8489013c381518573b6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68099634"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756230"
 ---
 # <a name="database-properties-changetracking-page"></a>数据库属性（“更改跟踪”页）
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   使用此页可查看或修改所选数据库的更改跟踪设置。 有关在此页上可用选项的详细信息，请参阅[启用和禁用更改跟踪 (SQL Server)](../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md)。  
   
 ## <a name="options"></a>选项  
@@ -35,7 +36,7 @@ ms.locfileid: "68099634"
  还可以使用 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)来配置更改跟踪。  
   
  **保持期**  
- 指定在数据库中保留更改跟踪信息的最短期限。 只有当“自动清除”  的值为 True  时，才会删除数据。  
+ 指定在数据库中保留更改跟踪信息的最短期限。 只有当“自动清除”的值为 True 时，才会删除数据。  
   
  默认值为 2。  
   
@@ -47,7 +48,7 @@ ms.locfileid: "68099634"
  **自动清除**  
  指示是否在经过指定的保持期后自动删除更改跟踪信息。  
   
- 启用“自动清除”  会将任何先前自定义的保持期重置为默认保持期（即 2 天）。  
+ 启用“自动清除”会将任何先前自定义的保持期重置为默认保持期（即 2 天）。  
   
 ## <a name="see-also"></a>另请参阅  
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   

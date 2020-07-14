@@ -11,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 6ae358b2-6f6f-46e0-a7c8-f9ac6ce79a0e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b608af9a25b6a4fe14078043276e0689990e6246
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 9b36628be4fbb72b48136f56c9403207f5e03dd8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922266"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759103"
 ---
 # <a name="restoring-from-backups-stored-in-microsoft-azure"></a>从 Microsoft Azure 中存储的备份还原
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   本主题概述在使用存储在 Azure Blob 存储服务中的备份还原数据库时的注意事项。 这适用于使用“SQL Server 备份到 URL”备份或由 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]创建的备份。  
   
  如果在 Azure Blob 存储服务中存储了要还原的备份，则我们建议查看本主题，然后查看介绍关于如何还原数据库的步骤的主题，本地和 Azure 备份的还原步骤相同。  
@@ -35,7 +35,7 @@ ms.locfileid: "82922266"
   
 ### <a name="using-sql-server-management-studio"></a>使用 SQL Server Management Studio  
   
--   还原任务用于使用 SQL Server Management Studio 还原数据库。 备份介质页现在包含“URL”  选项，可以显示存储在 Azure Blob 存储服务中的备份文件。 您还必须提供用于对存储帐户进行身份验证的 SQL 凭据。 随后，使用 Azure Blob 存储中的可用备份填充“要还原的备份集”  网格。 有关详细信息，请参阅[使用 SQL Server Management Studio 从 Azure 存储还原](../../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS)。  
+-   还原任务用于使用 SQL Server Management Studio 还原数据库。 备份介质页现在包含“URL”选项，可以显示存储在 Azure Blob 存储服务中的备份文件。 您还必须提供用于对存储帐户进行身份验证的 SQL 凭据。 随后，使用 Azure Blob 存储中的可用备份填充“要还原的备份集”网格。 有关详细信息，请参阅[使用 SQL Server Management Studio 从 Azure 存储还原](../../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS)。  
   
 ### <a name="optimizing-restores"></a>优化还原  
  要减小还原写入时间，请将 **“执行卷维护任务”** 用户权限添加到 SQL Server 用户帐户。 有关详细信息，请参阅 [数据库文件初始化](https://go.microsoft.com/fwlink/?LinkId=271622)。 如果在开启即时文件初始化后还原操作仍很慢，请查看执行数据库备份的实例的日志文件的大小。 如果日志非常大（好几 GB），则还原操作慢是正常的。 在还原过程中，必须清空日志文件，这需要花费相当多的时间。  

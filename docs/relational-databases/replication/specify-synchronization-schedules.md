@@ -1,5 +1,6 @@
 ---
 title: 指定同步计划 | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio、Transact-SQL 或复制管理对象在 SQL Server 中指定同步计划。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: 97f2535b-ec19-4973-823d-bcf3d5aa0216
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f240938196d50b76b182e994000727c4f3e30d58
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6dbdad85561116fb3dd6a3c003bb7bf9967c00b1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287120"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783123"
 ---
 # <a name="specify-synchronization-schedules"></a>指定同步计划
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中指定同步计划。 在创建订阅时，可以定义同步计划以控制何时运行订阅的复制代理。 如果没有指定计划参数，则订阅将使用默认计划。  
   
  订阅由分发代理（对于快照复制和事务复制）或合并代理（对于合并复制）进行同步。 代理可以连续运行、按需运行或按计划运行。  
@@ -48,27 +49,27 @@ ms.locfileid: "76287120"
   
 |代理|作业名称|  
 |-----------|--------------|  
-|请求订阅的合并代理|**\<发布服务器>-\<发布数据库>-\<发布>-\<订阅服务器>-\<订阅数据库>-\<整数>**|  
-|推送订阅的合并代理|**\<发布服务器>-\<发布数据库>-\<发布>-\<订阅服务器>-\<整数>**|  
-|推送订阅的分发代理|**\<发布服务器>-\<发布数据库>-\<发布>-\<订阅服务器>-\<整数>** <sup>1</sup>|  
-|请求订阅的分发代理|**\<>-\<发布数据库>-\<发布>-\<订阅服务器>-\<数据库>-\<GUID>** <sup>2</sup>|  
-|非 SQL Server 订阅服务器的推送订阅的分发代理|**\<发布服务器>-\<发布数据库>-\<发布>-\<订阅服务器>-\<整数>**|  
+|请求订阅的合并代理|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<integer>**|  
+|推送订阅的合并代理|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|  
+|推送订阅的分发代理|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>** <sup>1</sup>|  
+|请求订阅的分发代理|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<GUID>** <sup>2</sup>|  
+|非 SQL Server 订阅服务器的推送订阅的分发代理|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|  
   
- <sup>1</sup> 对于 Oracle 发布的推送订阅，它是“\<发布服务器>-\<发布服务器>”而不是“\<发布服务器>-\<发布数据库>”  
+ <sup>1</sup> 对于 Oracle 发布的推送订阅，它是 **\<Publisher>-\<Publisher**>，而不是 \<Publisher>-\<PublicationDatabase>  
   
- <sup>2</sup> 对于 Oracle 发布的请求订阅，它是“\<发布服务器>-\<分发数据库>”而不是“\<发布服务器>-\<发布数据库>”  
+ <sup>2</sup> 对于 Oracle 发布的请求订阅，它是 **\<Publisher>-\<DistributionDatabase**>，而不是 \<Publisher>-\<PublicationDatabase>  
   
 #### <a name="to-specify-synchronization-schedules"></a>指定同步计划  
   
-1.  在新建订阅向导的“同步计划”页上，从“代理计划”下拉列表中为要创建的每个订阅选择以下值之一：    
+1.  在新建订阅向导的“同步计划”页上，从“代理计划”下拉列表中为要创建的每个订阅选择以下值之一：   
   
     -   **连续运行**  
   
     -   **仅按需运行**  
   
-    -   **定义计划...>\<**  
+    -   **\<Define Schedule...>**  
   
-2.  如果选择“\<定义计划...>”，请在“作业计划属性”对话框中指定一个计划，然后单击“确定”。  
+2.  如果选择“\<Define Schedule...>”，请在“作业计划属性”对话框中指定一个计划，然后单击“确定”。    
   
 3.  完成向导。  
 
@@ -80,9 +81,9 @@ ms.locfileid: "76287120"
   
 3.  右键单击订阅，然后单击 **“查看详细信息”** 。  
   
-4.  在“订阅 <SubscriptionName>”窗口中，单击“操作”，然后单击“\<AgentName> 作业属性”。  
+4.  在“订阅 <SubscriptionName>”窗口中，单击“操作”，再单击“\<AgentName> 作业属性”  。  
   
-5.  在“作业属性 - \<JobName>”对话框的“计划”页上，单击“编辑”。  
+5.  在“作业属性 - \<JobName>”对话框的“计划”页上，单击“编辑”。    
   
 6.  在 **“作业计划属性”** 对话框中，从 **“计划类型”** 下拉列表中选择一个值：  
   
@@ -104,7 +105,7 @@ ms.locfileid: "76287120"
   
 3.  右键单击与订阅相关联的分发代理或合并代理的作业，再单击 **“属性”** 。  
   
-4.  在“作业属性 - \<JobName>”对话框的“计划”页上，单击“编辑”。  
+4.  在“作业属性 - \<JobName>”对话框的“计划”页上，单击“编辑”。    
   
 5.  在 **“作业计划属性”** 对话框中，从 **“计划类型”** 下拉列表中选择一个值：  
   
@@ -126,7 +127,7 @@ ms.locfileid: "76287120"
   
 3.  右键单击与订阅相关联的分发代理或合并代理的作业，再单击 **“属性”** 。  
   
-4.  在“作业属性 - \<JobName>”对话框的“计划”页上，单击“编辑”。  
+4.  在“作业属性 - \<JobName>”对话框的“计划”页上，单击“编辑”。    
   
 5.  在 **“作业计划属性”** 对话框中，从 **“计划类型”** 下拉列表中选择一个值：  
   
@@ -145,25 +146,25 @@ ms.locfileid: "76287120"
   
  计划由以下计划参数定义，而计划的行为从 [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md) 继承：  
   
--   **frequency_type\@** - 计划代理时所用的频率类型。  
+-   \@frequency_type - 计划代理时所用的频率类型。  
   
--   **frequency_interval\@** - 星期几运行代理。  
+-   \@frequency_interval - 星期几运行代理。  
   
--   **frequency_relative_interval\@** - 计划每月运行代理的给定月份的星期。  
+-   \@frequency_relative_interval - 计划每月运行代理的给定月份的星期。  
   
--   **frequency_recurrence_factor\@** - 同步之间发生的频率类型单位数值。  
+-   \@frequency_recurrence_factor - 同步之间发生的频率类型单位数值。  
   
--   **frequency_subday\@** - 一天内多次运行代理时的频率单位。  
+-   \@frequency_subday - 一天内多次运行代理时的频率单位。  
   
--   **frequency_subday_interval\@** - 一天内多次运行代理时运行之间的频率单位数值。  
+-   \@frequency_subday_interval - 一天内多次运行代理时运行之间的频率单位数值。  
   
--   **active_start_time_of_day\@** - 在给定日将要开始运行代理的最早时间。  
+-   \@active_start_time_of_day - 在给定日将要开始运行代理的最早时间。  
   
--   **active_end_time_of_day\@** - 在给定日将要开始运行代理的最晚时间。  
+-   \@active_end_time_of_day - 在给定日将要开始运行代理的最晚时间。  
   
--   **active_start_date\@** - 代理计划生效的第一天。  
+-   \@active_start_date - 代理计划生效的第一天。  
   
--   **active_end_date\@** - 代理计划生效的最后一天。  
+-   \@active_end_date - 代理计划生效的最后一天。  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-pull-subscription-to-a-transactional-publication"></a>为事务发布的请求订阅定义同步计划  
   

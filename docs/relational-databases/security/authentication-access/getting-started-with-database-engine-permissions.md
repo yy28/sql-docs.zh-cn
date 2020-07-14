@@ -1,5 +1,6 @@
 ---
 title: 数据库引擎权限入门 | Microsoft Docs
+description: 查看 SQL Server 中的一些基本的安全概念，了解典型的数据库引擎权限实现。
 ms.custom: ''
 ms.date: 01/03/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0fd86c132a0a51ea6bbba533bc7e8a2ab1083ddc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c5d6f2daf6b37c260b84683e3f85395a88b1f218
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72903020"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005653"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>数据库引擎权限入门
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 中的权限通过登录名和服务器角色在服务器级别进行管理，以及通过数据库用户和数据库角色在数据库级别进行管理。 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 的模型在每个数据库中公开同一系统，但服务器级别权限不可用。 本主题复习一些基本的安全概念，然后介绍典型的权限实现。  
   
@@ -40,7 +41,7 @@ ms.locfileid: "72903020"
 ##### <a name="database-users"></a>数据库用户  
  通过在数据库中创建数据库用户并将该数据库用户映射到登录名来授予登录名对数据库的访问权限。 通常，数据库用户名与登录名相同，尽管它不必要相同。 每个数据库用户均映射到单个登录名。 一个登录名只能映射到数据库中的一个用户，但可以映射为多个不同数据库中的数据库用户。  
   
- 也可以创建不具有相应登录名的数据库用户。 这些数据库用户称为“包含的数据库用户”  。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 鼓励使用包含的数据库用户，因为这样可以更轻松地将你的数据库移到另一个服务器。 与登录名类似，包含的数据库用户可以使用 Windows 身份验证或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证。 有关详细信息，请参阅 [包含的数据库用户 - 使你的数据库可移植](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
+ 也可以创建不具有相应登录名的数据库用户。 这些数据库用户称为“包含的数据库用户” 。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 鼓励使用包含的数据库用户，因为这样可以更轻松地将你的数据库移到另一个服务器。 与登录名类似，包含的数据库用户可以使用 Windows 身份验证或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证。 有关详细信息，请参阅 [包含的数据库用户 - 使你的数据库可移植](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
   
  有 12 种类型的用户，它们在如何进行身份验证以及所表示的人员方面略有差异。 若要查看用户列表，请参阅 [CREATE USER (Transact-SQL)](../../../t-sql/statements/create-user-transact-sql.md)。  
   
@@ -125,7 +126,7 @@ GRANT UPDATE ON OBJECT::Production.Parts TO PartsTeam;
 -   如果管理员未正确执行 `DENY SELECT ON OBJECT::OrderStatus TO Sales;` ，则 Ted 作为 Sales 角色的成员将被拒绝 `SELECT` 权限，因为对 Sales 的 `DENY` 将覆盖其个人  `GRANT`。  
   
 > [!NOTE]  
->  可以使用 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]配置权限。 在对象资源管理器中查找安全对象，右键单击该安全对象，然后单击“属性”  。 选择“权限”页  。 有关使用权限页的帮助，请参阅 [Permissions or Securables Page](../../../relational-databases/security/permissions-or-securables-page.md)。  
+>  可以使用 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]配置权限。 在对象资源管理器中查找安全对象，右键单击该安全对象，然后单击“属性”。 选择“权限”页  。 有关使用权限页的帮助，请参阅 [Permissions or Securables Page](../../../relational-databases/security/permissions-or-securables-page.md)。  
   
 ## <a name="permission-hierarchy"></a>权限层次结构  
  权限具有父/子层次结构。 也就是说，如果你授予对数据库的 `SELECT` 权限，则该权限包括对数据库中所有（子）架构的 `SELECT` 权限。 如果你授予对架构的 `SELECT` 权限，则该权限包括对架构中所有（子）表和视图的 `SELECT` 权限。 权限是可传递的；也就是说，如果你授予对数据库的 `SELECT` 权限，则该权限包括对所有（子级）架构和所有（孙级）表和视图的 `SELECT` 权限。  

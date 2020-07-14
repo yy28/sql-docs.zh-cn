@@ -25,16 +25,16 @@ ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 56e259f707a665c5bc2f4af89b63c2cb3846b70c
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: e72ad310f39b47bcb76544ae56b0bc110bdbc542
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606409"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010757"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的表或视图中删除一行或多行。  
   
@@ -147,14 +147,14 @@ DELETE
   
  [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 或 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 函数，视提供程序的功能而定。  
   
- WITH ( \<table_hint_limited> [... n] )  
+ WITH **(** \<table_hint_limited> [... *n*] **)**  
  指定目标表允许的一个或多个表提示。 需要有 WITH 关键字和括号。 不允许 NOLOCK 和 READUNCOMMITTED。 有关表提示的详细信息，请参阅[表提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md)。  
   
  \<OUTPUT_Clause>  
  将已删除行或基于这些行的表达式作为 DELETE 操作的一部分返回。 在针对视图或远程表的任何 DML 语句中都不支持 OUTPUT 子句。 有关该子句的参数和行为的详细信息，请参阅 [OUTPUT 子句 (Transact-SQL)](../../t-sql/queries/output-clause-transact-sql.md)。  
   
  FROM *table_source*  
- 指定附加的 FROM 子句。 这个对 DELETE 的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 扩展允许从 \<table_source> 指定数据，并从第一个 FROM 子句内的表中删除相应的行。  
+ 指定附加的 FROM 子句。 通过针对 DELETE 的该 [!INCLUDE[tsql](../../includes/tsql-md.md)] 扩展，可从 \<table_source> 指定数据并从第一个 FROM 子句内的表中删除相应的行。  
   
  这个扩展指定联接，可在 WHERE 子句中取代子查询来标识要删除的行。  
   
@@ -184,7 +184,7 @@ DELETE
  cursor_variable_name  
  游标变量的名称。 游标变量必须引用允许更新的游标。  
   
- OPTION ( \<query_hint> [ ,... n] )   
+ OPTION **(** \<query_hint> [ **,** ... *n*] **)**  
  关键字，指示用于自定义[!INCLUDE[ssDE](../../includes/ssde-md.md)]处理语句的方式的优化器提示。 有关详细信息，请参阅[查询提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)。  
   
 ## <a name="best-practices"></a>最佳实践  

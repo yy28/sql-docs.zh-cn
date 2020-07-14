@@ -27,15 +27,15 @@ helpviewer_keywords:
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 652e8448eb5e4de9b39f9e399d1f2a709ef8cf47
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 44fc9e7e1c15ae2bd5eb4471d1ee5e396274faa0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68100464"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763220"
 ---
 # <a name="move-system-databases"></a>移动系统数据库
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   本主题说明如何在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中移动系统数据库。 移动系统数据库在下列情况下可能很有用：  
   
@@ -146,17 +146,17 @@ ms.locfileid: "68100464"
   
 1.  在 **“开始”** 菜单中，依次指向 **“所有程序”** 、 **“Microsoft SQL Server”** 和 **“配置工具”** ，然后单击 **“SQL Server 配置管理器”** 。  
   
-2.  在“SQL Server 服务”  节点中，右键单击 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例（如 **SQL Server (MSSQLSERVER)** ），并选择“属性”  。  
+2.  在“SQL Server 服务”节点中，右键单击 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例（如 **SQL Server (MSSQLSERVER)** ），并选择“属性”。  
   
-3.  在“SQL Server (_instance_name_) 属性”对话框中，单击“启动参数”选项卡。  
+3.  在“SQL Server (_instance_name_) 属性” 对话框中，单击“启动参数”选项卡。  
   
-4.  在“现有参数”框中，选择 –d 参数以移动 master 数据文件  。 单击 **“更新”** 以保存更改。  
+4.  在“现有参数”框中，选择 –d 参数以移动 master 数据文件。 单击 **“更新”** 以保存更改。  
   
-     在“指定启动参数”  框中，将该参数更改为 master 数据库的新路径。  
+     在“指定启动参数”框中，将该参数更改为 master 数据库的新路径。  
   
-5.  在“现有参数”框中，选择 –l 参数以移动 master 日志文件  。 单击 **“更新”** 以保存更改。  
+5.  在“现有参数”框中，选择 –l 参数以移动 master 日志文件。 单击 **“更新”** 以保存更改。  
   
-     在“指定启动参数”  框中，将该参数更改为 master 数据库的新路径。  
+     在“指定启动参数”框中，将该参数更改为 master 数据库的新路径。  
   
      数据文件的参数值必须跟在 `-d` 参数的后面，日志文件的参数值必须跟在 `-l` 参数的后面。 下面的示例显示用于 master 数据文件默认位置的参数值。  
   
@@ -185,13 +185,13 @@ ms.locfileid: "68100464"
     GO  
     ```  
 
-10. 此时 SQL Server 应正常运行。 但是 Microsoft 建议还调整 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\instance_ID\Setup` 处的注册表项，其中 instance_ID  类似于 `MSSQL13.MSSQLSERVER`。 在该配置单元中，将 `SQLDataRoot` 值更改为新路径。 未能更新注册表可能会导致修补和升级失败。
+10. 此时 SQL Server 应正常运行。 但是 Microsoft 建议还调整 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\instance_ID\Setup` 处的注册表项，其中 instance_ID 类似于 `MSSQL13.MSSQLSERVER`。 在该配置单元中，将 `SQLDataRoot` 值更改为新路径。 未能更新注册表可能会导致修补和升级失败。
 
   
 ##  <a name="moving-the-resource-database"></a><a name="Resource"></a> 移动 Resource 数据库  
  Resource 数据库的位置是 \<*drive*>:\Program Files\Microsoft SQL Server\MSSQL\<version>.\<*instance_name*>\MSSQL\Binn\\。 无法移动该数据库。  
   
-##  <a name="follow-up-after-moving-all-system-databases"></a><a name="Follow"></a> 后续操作：移动所有系统数据库后  
+##  <a name="follow-up-after-moving-all-system-databases"></a><a name="Follow"></a> 后续任务：移动所有系统数据库后  
  如果已将所有系统数据库都移到新的驱动器/卷或移到使用不同驱动器盘符的另一个服务器，请进行下列更新。  
   
 -   更改 SQL Server 代理日志路径。 如果不更新此路径，SQL Server 代理将无法启动。  

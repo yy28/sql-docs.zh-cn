@@ -10,21 +10,21 @@ ms.topic: language-reference
 ms.assetid: 91319b0b-5536-4ab4-a403-9559ed9dd177
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 901f430f09621c6ad9be20759cddb757e2e96ee7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a93801d7d17ff8952d02b5351c1cf0dd9bce4486
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295507"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749671"
 ---
 # <a name="catalogcreate_execution_dump"></a>catalog.create_execution_dump 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  导致暂停正在运行的包并创建转储文件。 此文件存储在 \<drive>:\Program Files\Microsoft SQL Server\130\Shared\ErrorDumps文件夹中。  
+  导致暂停正在运行的包并创建转储文件。 此文件存储在 \<drive>:\Program Files\Microsoft SQL Server\130\Shared\ErrorDumps 文件夹中。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,8 +34,8 @@ catalog.create_execution_dump [ @execution_id = ] execution_id
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @execution_id = ] execution_id   
- 正在运行的包的执行 ID。 execution_id 为 bigint   。  
+ [ @execution_id = ] execution_id  
+ 正在运行的包的执行 ID。 execution_id 为 bigint。  
   
 ## <a name="example"></a>示例  
  在以下示例中，系统提示将为正在运行的执行 ID 为 88 的包创建转储文件。  
@@ -53,7 +53,7 @@ EXEC create_execution_dump @execution_id = 88
  无  
   
 ## <a name="permissions"></a>权限  
- 此存储过程要求用户为具有 ssis_admin 数据库角色的成员  。  
+ 此存储过程要求用户为具有 ssis_admin 数据库角色的成员。  
   
 ## <a name="errors-and-warnings"></a>错误和警告  
  下表说明了导致存储过程失败的情况。  

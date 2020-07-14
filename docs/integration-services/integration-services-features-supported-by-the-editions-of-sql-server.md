@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e5018225-68bb-4f34-ae4a-ead79d8ad13a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9963f137470c7e252bc00be189c37ac98e6374e4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4149e9a9a956aaf5a212d8a6ba2a7b65b1523ee3
+ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71284360"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84817791"
 ---
 # <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>SQL Server 各个版本支持的 Integration Services 功能
 
@@ -35,7 +35,7 @@ ms.locfileid: "71284360"
 
 可在 180 天的试用期内使用 SQL Server 评估版。  
     
-> [![从评估中心下载](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) [从评估中心下载 SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)     
+> [![从评估中心下载](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) [从评估中心下载 SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)    
     
 ## <a name="new-integration-services-features-in-sql-server-2017"></a><a name="ISNew"></a>SQL Server 2017 中的新 Integration Services 功能
   
@@ -44,6 +44,7 @@ ms.locfileid: "71284360"
 |Scale Out 主要角色|是|||||
 |Scale Out 辅助角色|是|是 <sup>1</sup>|TBD|TBD|TBD|
 |支持 OData 组件 <sup>2</sup> 中的 Microsoft Dynamics AX 和 Microsoft Dynamics CRM|是|是||||
+|Linux 支持|是|是|||是|
 
 <sup>1</sup> 如果在 Scale Out 中运行的包需要仅限企业版的功能，则 Scale Out Worker 必须也在 SQL Server 企业版实例上运行。
 
@@ -53,7 +54,10 @@ ms.locfileid: "71284360"
 
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|SQL Server 导入和导出向导|是|是|是|是|是|  
+|SQL Server 导入和导出向导|是|是|是|是<sup>1</sup>|是<sup>1</sup>|
+
+<sup>1</sup> Linux 上的 SQL 不提供 DTSWizard.exe。 但是，可以使用 Linux 上的 dtexec 来执行 Windows 上的 DTSWizard 创建的包。
+
 
 ## <a name="integration-services"></a><a name="IS"></a> Integration Services  
   

@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: f7b3de5b-198d-448d-8c71-1cdd9239676c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a7b5233b44610ce5d2ad15d5a7aceda207f077dc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 56f5262fe130d391bf152d0924df814e15ffc316
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180888"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85669832"
 ---
 # <a name="recover-to-a-log-sequence-number-sql-server"></a>恢复到日志序列号 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   本主题仅与使用完整恢复模式或大容量日志恢复模式的数据库相关。  
   
  您可以使用日志序列号 (LSN) 定义还原操作的恢复点。 但是，这是为工具供应商提供的专用功能，不太可能广泛使用。  
@@ -39,7 +39,7 @@ ms.locfileid: "82180888"
  RESTORE 顺序期间，在内部使用 LSN 跟踪数据还原到的时间点。 还原备份后，数据被还原到与进行备份的时间点相对应的 LSN。 差异和日志备份将还原的数据库推到稍后的时间，该时间与一个更高的 LSN 相对应。 有关 LSN 的详细信息，请参阅 [SQL Server 事务日志体系结构和管理指南](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)。  
   
 > [!NOTE]  
-> LSN 是数据类型为 numeric(25,0) 的值  。 算术运算（例如加法或减法）对 LSN 没有任何意义，请不要与 LSN 一起使用。  
+> LSN 是数据类型为 numeric(25,0) 的值。 算术运算（例如加法或减法）对 LSN 没有任何意义，请不要与 LSN 一起使用。  
  
 ## <a name="viewing-lsns-used-by-backup-and-restore"></a>查看备份和还原使用的 LSN  
  使用下列一种或几种方法可以查看发生给定备份和还原事件的日志记录的 LSN：  
@@ -60,11 +60,11 @@ ms.locfileid: "82180888"
 ## <a name="transact-sql-syntax-for-restoring-to-an-lsn"></a>还原到 LSN 的 Transact-SQL 语法  
  通过使用 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 语句，可以在 LSN 处或刚好在 LSN 之前停止，如下所示：  
   
--   使用 WITH STOPATMARK **='** lsn: _<lsn_number>_ **'** 子句，其中 lsn: *\<lsnNumber>* 是一个字符串，它指出包含指定 LSN 的日志记录是恢复点。  
+-   使用 WITH STOPATMARK ='lsn:<lsn_number>' 子句，其中 lsn:\<lsnNumber> 是一个字符串，它指出包含指定 LSN 的日志记录是恢复点。  
   
      STOPATMARK 前滚到 LSN，并且前滚中包括该日志记录。  
   
--   使用 WITH STOPBEFOREMARK **='** lsn: _<lsn_number>_ **'** 子句，其中 lsn: *\<lsnNumber>* 是一个字符串，它指出包含指定 LSN 编号的日志记录之前的日志记录是恢复点。  
+-   使用 WITH STOPBEFOREMARK ='lsn:<lsn_number>' 子句，其中 lsn:\<lsnNumber> 是一个字符串，它指出包含指定 LSN 编号的日志记录之前的日志记录是恢复点。  
   
      STOPBEFOREMARK 前滚到 LSN，并从前滚中排除该日志记录。  
   

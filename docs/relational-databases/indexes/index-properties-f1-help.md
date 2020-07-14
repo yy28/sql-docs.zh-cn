@@ -19,15 +19,15 @@ ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c6d84af2893cc535717c2785d35875ca2b0d5550
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f9ca6fc85701a0056074d4ce3a1ff76abfe1cfb4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68476303"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760804"
 ---
 # <a name="index-properties-f1-help"></a>“索引属性”对话框的 F1 帮助
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   本主题中的这部分引用了使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 对话框提供的各种索引属性。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "68476303"
  显示索引的名称。 对于现有索引，此字段是只读的。 在创建新的索引时，请键入索引的名称。  
   
  **索引类型**  
- 指示索引的类型。 对于新索引，指示在打开该对话框时所选索引的类型。 索引可以是： **“聚集”** 、 **“非聚集”** 、 **“主 XML”** 、 **“辅助 XML”** 、 **“空间”** \ **“聚集列存储索引”** 或 **“非聚集列存储”** 。  
+ 指示索引的类型。 对于新索引，指示在打开该对话框时所选索引的类型。 索引可以是：“聚集”、“非聚集”、“主 XML”、“辅助 XML”、“空间”、“聚集列存储”或“非聚集列存储”      。  
   
  **注意** 每个表只允许创建一个聚集索引。 每个表只允许创建一个 xVelocity 内存优化的列存储索引。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "68476303"
  显示组成索引键的列是否允许在表或视图列中存储 Null 值。  
   
  **添加**  
- 向索引键添加列。 从单击“添加”时出现的“从 <表名称 **选择列”对话框中选择表列** *\<*  。 对于空间索引，在选择一列后，该按钮将呈灰色。  
+ 向索引键添加列。 从单击“添加”时显示的“从 \<table name> 中选择列”对话框中选择表列。 对于空间索引，在选择一列后，该按钮将呈灰色。  
   
  **删除**  
  从组成索引键的列中删除所选列。  
@@ -108,7 +108,7 @@ ms.locfileid: "68476303"
  在索引键网格中向下移动所选列。  
   
  **列存储列**  
- 单击“添加”  可为列存储索引选择列。 有关列存储索引的限制，请参阅 [CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)。  
+ 单击“添加”可为列存储索引选择列。 有关列存储索引的限制，请参阅 [CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)。  
   
  **包含列**  
  在非聚集索引中包含非键列。 使用此选项，您可以将列作为非键列添加到非聚集索引的叶级别中，从而跳过当前对索引键总大小的索引限制以及对构成索引键的最大列数的索引限制。 有关详细信息，请参阅 [创建带有包含列的索引](../../relational-databases/indexes/create-indexes-with-included-columns.md)。  
@@ -139,7 +139,7 @@ ms.locfileid: "68476303"
 
 ### <a name="general-options"></a>常规选项
 **自动重新计算统计信息**<br>
-指定是否自动重新计算分布统计信息。 默认值为 True  ，这等效于将 STATISTICS_NORECOMPUTE 设置为 OFF。 如果将此项设置为 False  ，则将 STATISTICS_NORECOMPUTE 设置为 ON。
+指定是否自动重新计算分布统计信息。 默认值为 True，这等效于将 STATISTICS_NORECOMPUTE 设置为 OFF。 如果将此项设置为 False，则将 STATISTICS_NORECOMPUTE 设置为 ON。
 
 **忽略重复的值** <br>
 指定在插入操作尝试向唯一索引插入重复键值时的错误响应。

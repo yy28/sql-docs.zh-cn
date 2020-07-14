@@ -31,12 +31,12 @@ ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 51b327832b5ad5cae52791efdbf1df756aade3a5
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 74ab018b017b675e08abb53036f88c3eaf2e5618
+ms.sourcegitcommit: 05fdc50006a9abdda79c3a4685b075796068c4fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636322"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84748588"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,9 +49,77 @@ ms.locfileid: "81636322"
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
-  
+
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
+以下代码块显示 SQL Server 2019 中的语法。 或者，可以参阅 [SQL Server 2017 及更早版本中的语法](execute-transact-sql.md?view=sql-server-2017)。 
+
 ```syntaxsql
--- Syntax for SQL Server  
+-- Syntax for SQL Server 2019
+  
+Execute a stored procedure or function  
+[ { EXEC | EXECUTE } ]  
+    {   
+      [ @return_status = ]  
+      { module_name [ ;number ] | @module_name_var }   
+        [ [ @parameter = ] { value   
+                           | @variable [ OUTPUT ]   
+                           | [ DEFAULT ]   
+                           }  
+        ]  
+      [ ,...n ]  
+      [ WITH <execute_option> [ ,...n ] ]  
+    }  
+[;]  
+  
+Execute a character string  
+{ EXEC | EXECUTE }   
+    ( { @string_variable | [ N ]'tsql_string' } [ + ...n ] )  
+    [ AS { LOGIN | USER } = ' name ' ]  
+[;]  
+  
+Execute a pass-through command against a linked server  
+{ EXEC | EXECUTE }  
+    ( { @string_variable | [ N ] 'command_string [ ? ]' } [ + ...n ]  
+        [ { , { value | @variable [ OUTPUT ] } } [ ...n ] ]  
+    )   
+    [ AS { LOGIN | USER } = ' name ' ]  
+    [ AT linked_server_name ]  
+    [ AT DATA_SOURCE data_source_name ]  
+[;]  
+  
+<execute_option>::=  
+{  
+        RECOMPILE   
+    | { RESULT SETS UNDEFINED }   
+    | { RESULT SETS NONE }   
+    | { RESULT SETS ( <result_sets_definition> [,...n ] ) }  
+}   
+  
+<result_sets_definition> ::=   
+{  
+    (  
+         { column_name   
+           data_type   
+         [ COLLATE collation_name ]   
+         [ NULL | NOT NULL ] }  
+         [,...n ]  
+    )  
+    | AS OBJECT   
+        [ db_name . [ schema_name ] . | schema_name . ]   
+        {table_name | view_name | table_valued_function_name }  
+    | AS TYPE [ schema_name.]table_type_name  
+    | AS FOR XML   
+}  
+```  
+::: moniker-end
+
+::: monikerRange=">=sql-server-2016 ||=sqlallproducts-allversions"
+
+以下代码块显示 SQL Server 2017 及更早版本中的语法。 或者，可以参阅 [SQL Server 2019 中的语法](execute-transact-sql.md?view=sql-server-ver15)。
+
+
+```syntaxsql
+-- Syntax for SQL Server 2017 and earleir  
   
 Execute a stored procedure or function  
 [ { EXEC | EXECUTE } ]  
@@ -107,6 +175,8 @@ Execute a pass-through command against a linked server
     | AS FOR XML   
 }  
 ```  
+::: moniker-end
+
   
 ```syntaxsql
 -- In-Memory OLTP   
@@ -179,7 +249,8 @@ Execute a character string
     | AS TYPE [ schema_name.]table_type_name  
     | AS FOR XML  
   
-```  
+```
+
   
 ```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
@@ -195,6 +266,8 @@ Execute a character string
     ( { @string_variable | [ N ] 'tsql_string' } [ +...n ] )  
 [;]  
 ```  
+
+
   
 ## <a name="arguments"></a>参数  
  @*return_status*  
@@ -202,7 +275,7 @@ Execute a character string
   
  在用于调用标量值用户定义函数时，@*return_status* 变量可以为任意标量数据类型。  
   
- module_name   
+ module_name  
  是要调用的存储过程或标量值用户定义函数的完全限定或者不完全限定名称。 模块名称必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。 无论服务器的排序规则如何，扩展存储过程的名称总是区分大小写。  
   
  用户可以执行在另一数据库中创建的模块，只要运行模块的用户拥有此模块或具有在该数据库中执行该模块的适当权限。 用户可以在另一台运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的服务器中执行模块，只要该用户有相应的权限使用该服务器（远程访问），并能在数据库中执行该模块。 如果指定了服务器名称但没有指定数据库名称，则 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]会在用户的默认数据库中查找该模块。  
@@ -297,15 +370,23 @@ Execute a character string
   
  WITH \<execute_option>  
  可能的执行选项。 不能在 INSERT…EXEC 语句中指定 RESULT SETS 选项。  
+ 
+AT DATA_SOURCE data_source_name 适用于：[!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] 及更高版本
+  
+ 指定对 _name 执行 command_string，并将结果（如果有）返回到客户端。  data_source_name 必须引用数据库中现有 EXTERNAL DATA SOURCE 定义。 仅支持指向 SQL Server 的数据源。 此外，对于指向计算池的 SQL Server 大数据群集数据源，支持数据池或存储池。 使用 [CREATE EXTERNAL DATA SOURCE](../statements/create-external-data-source-transact-sql.md) 定义数据源。  
+  
+ WITH \<execute_option>  
+ 可能的执行选项。 不能在 INSERT…EXEC 语句中指定 RESULT SETS 选项。  
   
 |术语|定义|  
 |----------|----------------|  
 |RECOMPILE|执行模块后，强制编译、使用和放弃新计划。 如果该模块存在现有查询计划，则该计划将保留在缓存中。<br /><br /> 如果所提供的参数为非典型参数或者数据有很大的改变，使用该选项。 该选项不能用于扩展存储过程。 建议尽量少使用该选项，因为它消耗较多系统资源。<br /><br /> **注意：** 在调用使用 OPENDATASOURCE 语法的存储过程时，不能使用 WITH RECOMPILE。 如果指定由四个部分组成的对象名，则忽略 WITH RECOMPILE 选项。<br /><br /> **注意：** 本机编译的标量用户定义函数不支持 RECOMPILE。 如需重新编译，请使用 [sp_recompile (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md)。|  
 |**RESULT SETS UNDEFINED**|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 此选项不保证将返回任何结果（如果有），并且不提供任何定义。 如果返回任何结果，则说明语句正常执行而没有发生错误，否则，不会返回任何结果。 如果未提供 result_sets_option，则 RESULT SETS UNDEFINED 是默认行为。<br /><br /> 对于已解释的标量用户定义函数和本机编译的标量用户定义函数，此选项不可操作，因为这些函数永远不会返回结果集。|  
 |RESULT SETS NONE|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 保证执行语句不返回任何结果。 如果返回任何结果，则会中止批处理。<br /><br /> 对于已解释的标量用户定义函数和本机编译的标量用户定义函数，此选项不可操作，因为这些函数永远不会返回结果集。|  
-|*\<result_sets_definition>*|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 保证返回 result_sets_definition 中指定的结果。 对于返回多个结果集的语句，请提供多个 *result_sets_definition* 部分。 将每个 *result_sets_definition* 用括号括上，并以逗号隔开。 有关详细信息，请参阅本主题后面的 \<result_sets_definition>。<br /><br /> 对于本机编译的标量用户定义函数，此选项总是会导致错误，因为这些函数永远不会返回结果集。|
+|*\<result_sets_definition>*|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 保证返回 result_sets_definition 中指定的结果。 对于返回多个结果集的语句，请提供多个 *result_sets_definition* 部分。 将每个 *result_sets_definition* 用括号括上，并以逗号隔开。 有关详细信息情，请参阅本主题后面的 \<result_sets_definition>。<br /><br /> 对于本机编译的标量用户定义函数，此选项总是会导致错误，因为这些函数永远不会返回结果集。|
   
-\<result_sets_definition> **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+\<result_sets_definition>
+适用于：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
  描述执行的语句所返回的结果集。 result_sets_definition 的子句具有以下含义  
   
@@ -389,26 +470,26 @@ USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FRO
 ### <a name="context-switching-permissions"></a>上下文切换权限  
  若要对某登录名指定 EXECUTE AS，调用方必须具有对所指定登录名的 IMPERSONATE 权限。 若要对某数据库用户指定 EXECUTE AS，调用方必须具有对所指定用户名的 IMPERSONATE 权限。 如果未指定执行上下文或指定了 EXECUTE AS CALLER，则无需 IMPERSONATE 权限。  
   
-## <a name="examples"></a>示例  
+## <a name="examples-sql-server"></a>示例：SQL Server
   
 ### <a name="a-using-execute-to-pass-a-single-parameter"></a>A. 使用 EXECUTE 传递单个参数  
  [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中的 `uspGetEmployeeManagers` 存储过程需要一个参数 (`@EmployeeID`)。 以下示例执行`uspGetEmployeeManagers` 存储过程，以 `Employee ID 6` 作为参数值。  
   
-```  
+```sql    
 EXEC dbo.uspGetEmployeeManagers 6;  
 GO  
 ```  
   
  在执行过程中变量可以显式命名：  
   
-```  
+```sql    
 EXEC dbo.uspGetEmployeeManagers @EmployeeID = 6;  
 GO  
 ```  
   
  如果以下语句是批处理、**osql** 或 **sqlcmd** 脚本中的第一个语句，则无需 EXEC。  
   
-```  
+```sql    
 dbo.uspGetEmployeeManagers 6;  
 GO  
 --Or  
@@ -419,7 +500,7 @@ GO
 ### <a name="b-using-multiple-parameters"></a>B. 使用多个参数  
  下面的示例在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中执行 `spGetWhereUsedProductID` 存储过程。 该存储过程将传递两个参数：第一个参数为产品 ID (`819`)，第二个参数 `@CheckDate,` 是 `datetime` 值。  
   
-```  
+```sql    
 DECLARE @CheckDate datetime;  
 SET @CheckDate = GETDATE();  
 EXEC dbo.uspGetWhereUsedProductID 819, @CheckDate;  
@@ -429,7 +510,7 @@ GO
 ### <a name="c-using-execute-tsql_string-with-a-variable"></a>C. 使用带变量的 EXECUTE 'tsql_string' 语句  
  下面的示例说明了 `EXECUTE` 如何处理动态生成的包含变量的字符串。 该示例创建 `tables_cursor` 游标以保存 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中所有用户定义表的列表，然后使用该列表重新生成对表的全部索引。  
   
-```  
+```sql    
 DECLARE tables_cursor CURSOR  
    FOR  
    SELECT s.name, t.name   
@@ -457,7 +538,7 @@ GO
   
 **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本
   
-```  
+```sql    
 DECLARE @retstat int;  
 EXECUTE @retstat = SQLSERVER1.AdventureWorks2012.dbo.uspGetEmployeeManagers @BusinessEntityID = 6;  
 ```  
@@ -475,7 +556,7 @@ EXEC @proc_name;
 ### <a name="f-using-execute-with-default"></a>F. 使用带 DEFAULT 的 EXECUTE  
  以下示例创建了一个存储过程，第一个和第三个参数具有默认值。 当运行该过程时，如果调用时没有传递值或者指定了默认值，这些默认值就会赋给第一个和第三个参数。 请注意，`DEFAULT` 关键字有多种使用方法。  
   
-```  
+```sql    
 IF OBJECT_ID(N'dbo.ProcTestDefaults', N'P')IS NOT NULL  
    DROP PROCEDURE dbo.ProcTestDefaults;  
 GO  
@@ -494,7 +575,7 @@ GO
   
  `Proc_Test_Defaults` 存储过程可使用多种组合执行。  
   
-```  
+```sql    
 -- Specifying a value only for one parameter (@p2).  
 EXECUTE dbo.ProcTestDefaults @p2 = 'A';  
 -- Specifying a value for the first two parameters.  
@@ -516,7 +597,7 @@ EXECUTE dbo.ProcTestDefaults DEFAULT, 'I', @p3 = DEFAULT;
   
 **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本
   
-```  
+```sql    
 EXEC sp_addlinkedserver 'SeattleSales', 'SQL Server'  
 GO  
 EXECUTE ( 'CREATE TABLE AdventureWorks2012.dbo.SalesTbl   
@@ -527,7 +608,7 @@ GO
 ### <a name="h-using-execute-with-recompile"></a>H. 使用 EXECUTE WITH RECOMPILE  
  以下示例执行 `Proc_Test_Defaults` 存储过程，并在执行模块后强制编译、使用和放弃一个新查询计划。  
   
-```  
+```sql    
 EXECUTE dbo.Proc_Test_Defaults @p2 = 'A' WITH RECOMPILE;  
 GO  
 ```  
@@ -535,7 +616,7 @@ GO
 ### <a name="i-using-execute-with-a-user-defined-function"></a>I. 对用户定义函数使用 EXECUTE  
  下面的示例在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中执行 `ufnGetSalesOrderStatusText` 标量用户定义函数。 该语句使用 `@returnstatus` 变量存储函数的返回值。 函数需要一个输入参数 `@Status`。 该参数定义为 **tinyint** 数据类型。  
   
-```  
+```sql    
 DECLARE @returnstatus nvarchar(15);  
 SET @returnstatus = NULL;  
 EXEC @returnstatus = dbo.ufnGetSalesOrderStatusText @Status = 2;  
@@ -548,7 +629,7 @@ GO
   
 **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本
   
-```  
+```sql    
 -- Setup the linked server.  
 EXEC sp_addlinkedserver    
         @server='ORACLE',  
@@ -580,7 +661,7 @@ GO
 ### <a name="k-using-execute-as-user-to-switch-context-to-another-user"></a>K. 使用 EXECUTE AS USER 将上下文切换为其他用户  
  以下示例执行用于创建表的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 字符串并指定 `AS USER` 子句将语句的执行上下文从调用方切换为 `User1`。 当语句运行时，[!INCLUDE[ssDE](../../includes/ssde-md.md)]将检查 `User1` 的权限。 `User1` 必须为数据库中的用户，必须具有在 `Sales` 架构中创建表的权限，否则语句将失败。  
   
-```  
+```sql    
 EXECUTE ('CREATE TABLE Sales.SalesTable (SalesID int, SalesName varchar(10));')  
 AS USER = 'User1';  
 GO  
@@ -591,7 +672,7 @@ GO
   
 **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本
   
-```  
+```sql    
 -- Setup the linked server.  
 EXEC sp_addlinkedserver 'SeattleSales', 'SQL Server'  
 GO  
@@ -607,7 +688,7 @@ GO
   
 **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
-```  
+```sql    
 EXEC uspGetEmployeeManagers 16  
 WITH RESULT SETS  
 (   
@@ -627,7 +708,7 @@ WITH RESULT SETS
   
 **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
-```  
+```sql    
 --Create the procedure  
 CREATE PROC Production.ProductList @ProdName nvarchar(50)  
 AS  
@@ -657,53 +738,103 @@ WITH RESULT SETS
 );  
   
 ```  
+  ### <a name="o-using-execute-with-at-data_source-data_source_name-to-query-a-remote-sql-server"></a>O. 将 EXECUTE 用于 AT DATA_SOURCE data_source_name 以查询远程 SQL Server 
   
-## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 以下示例将命令字符串传递给指向 SQL Server 实例的外部数据源。 
   
-### <a name="example-o-basic-procedure-execution"></a>示例 O：基本过程执行  
+**适用于**：[!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] 及更高版本
+  
+```sql    
+EXECUTE ( 'SELECT @@SERVERNAME' ) AT DATA_SOURCE my_sql_server;  
+GO  
+```  
+  
+### <a name="p-using-execute-with-at-data_source-data_source_name-to-query-compute-pool-in-sql-server-big-data-cluster"></a>P. 将 EXECUTE 用于 AT DATA_SOURCE data_source_name 以查询远程 SQL Server 大数据群集中的计算池 
+
+ 以下示例将命令字符串传递给指向 SQL Server 大数据群集中计算池的外部数据源。 该示例针对 SQL Server 大数据群集中的计算池创建数据源 `SqlComputePool`，并对该数据源执行 `SELECT` 语句。 
+  
+**适用于**：[!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] 及更高版本
+  
+```sql  
+CREATE EXTERNAL DATA SOURCE SqlComputePool 
+WITH (LOCATION = 'sqlcomputepool://controller-svc/default');
+EXECUTE ( 'SELECT @@SERVERNAME' ) AT DATA_SOURCE SqlComputePool;  
+GO  
+```  
+
+### <a name="q-using-execute-with-at-data_source-data_source_name-to-query-data-pool-in-sql-server-big-data-cluster"></a>Q. 将 EXECUTE 用于 AT DATA_SOURCE data_source_name 以查询远程 SQL Server 大数据群集中的数据池 
+ 以下示例将命令字符串传递给指向 SQL Server 大数据群集中计算池的外部数据源。 该示例针对 SQL Server 大数据群集中的数据池创建数据源 `SqlDataPool`，并对该数据源执行 `SELECT` 语句。 
+  
+**适用于**：[!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] 及更高版本
+  
+```sql  
+CREATE EXTERNAL DATA SOURCE SqlDataPool 
+WITH (LOCATION = 'sqldatapool://controller-svc/default');
+EXECUTE ( 'SELECT @@SERVERNAME' ) AT DATA_SOURCE SqlDataPool;  
+GO  
+```
+
+### <a name="r-using-execute-with-at-data_source-data_source_name-to-query-storage-pool-in-sql-server-big-data-cluster"></a>R. 将 EXECUTE 用于 AT DATA_SOURCE data_source_name 以查询远程 SQL Server 大数据群集中的存储池 
+
+ 以下示例将命令字符串传递给指向 SQL Server 大数据群集中计算池的外部数据源。 该示例针对 SQL Server 大数据群集中的数据池创建数据源 `SqlStoragePool`，并对该数据源执行 `SELECT` 语句。 
+  
+**适用于**：[!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] 及更高版本
+  
+```sql  
+CREATE EXTERNAL DATA SOURCE SqlStoragePool
+WITH (LOCATION = 'sqlhdfs://controller-svc/default');
+EXECUTE ( 'SELECT @@SERVERNAME' ) AT DATA_SOURCE SqlStoragePool;  
+GO  
+```
+
+  
+## <a name="examples-azure-synapse-analytics"></a>示例：Azure Synapse Analytics 
+  
+### <a name="a-basic-procedure-execution"></a>答：基本过程执行  
  执行存储过程：  
   
-```  
+```sql  
 EXEC proc1;  
 ```  
   
  使用在运行时确定的名称调用存储过程：  
   
-```  
+```sql    
 EXEC ('EXEC ' + @var);  
 ```  
   
  从存储过程中调用存储过程：  
   
-```  
+```sql   
 CREATE sp_first AS EXEC sp_second; EXEC sp_third;  
 ```  
   
-### <a name="example-p-executing-strings"></a>示例 P：执行字符串  
+### <a name="b-executing-strings"></a>B：执行字符串  
  执行 SQL 字符串：  
   
-```  
+```sql   
 EXEC ('SELECT * FROM sys.types');  
 ```  
   
  执行嵌套字符串：  
   
-```  
+```sql  
 EXEC ('EXEC (''SELECT * FROM sys.types'')');  
 ```  
   
  执行字符串变量：  
   
-```  
+```sql  
 DECLARE @stringVar nvarchar(100);  
 SET @stringVar = N'SELECT name FROM' + ' sys.sql_logins';  
 EXEC (@stringVar);  
 ```  
   
-### <a name="example-q-procedures-with-parameters"></a>示例 Q：包含参数的过程  
+### <a name="c-procedures-with-parameters"></a>C:包含参数的过程  
+
  以下示例创建一个包含参数的过程，并演示执行该过程的三种方法：  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 CREATE PROC ProcWithParameters  

@@ -1,20 +1,20 @@
 ---
 title: 在 SQL Server 或 SQL 数据库中存储 JSON 文档
-ms.description: This article describes why and how to store and index JSON documents in SQL Server or SQL Database, and how to optimize queries over the JSON documents.
-ms.date: 01/04/2018
+description: 本文介绍了在 SQL Server 或 SQL 数据库中存储 JSON 文档并编制其索引的原因和方法，以及如何优化对 JSON 文档的查询。
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: genemi
 ms.technology: ''
 ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: ea43d88fea017c723177e4b83c86b5c8165b734b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1809ea2c3f99528eb15518808e13387c519878da
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74096024"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760759"
 ---
 # <a name="store-json-documents-in-sql-server-or-sql-database"></a>在 SQL Server 或 SQL 数据库中存储 JSON 文档
 SQL Server 和 Azure SQL 数据库包含可使用标准 SQL 语言分析 JSON 文档的本机 JSON 函数。 可以将 JSON 文档存储在 SQL Server 或 SQL 数据库中，并像在 NoSQL 数据库中一样查询 JSON 数据。 本文介绍在 SQL Server 或 SQL 数据库中存储 JSON 文档的相关选项。
@@ -61,7 +61,7 @@ SELECT TOP 100 JSON_VALUE(log, '$.severity'), AVG( CAST( JSON_VALUE(log,'$.durat
  ORDER BY AVG( CAST( JSON_VALUE(log,'$.duration') as float) ) DESC
 ```
 
-可使用任意 T-SQL 函数和查询子句来查询 JSON 文档  。 SQL Server 和 SQL 数据库不会在可以用来分析 JSON 文档的查询中引入任意约束。 可通过 `JSON_VALUE` 函数从 JSON 文档中提取值，并在查询中使用该值，如同使用任何其他值一样。
+可使用任意 T-SQL 函数和查询子句来查询 JSON 文档。 SQL Server 和 SQL 数据库不会在可以用来分析 JSON 文档的查询中引入任意约束。 可通过 `JSON_VALUE` 函数从 JSON 文档中提取值，并在查询中使用该值，如同使用任何其他值一样。
 
 能够使用大量 T-SQL 查询语法是 SQL Server 和 SQL 数据库与经典 NoSQL 数据库的主要区别 - 在 Transact-SQL 中，可能有需要处理 JSON 数据的任何函数。
 

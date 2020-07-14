@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 13f5c8c892729abe0ba0e0a79185b360f0098d07
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: d1c21bafa36dc929ef5dbc5f6e57bce27cc791b5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83150596"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762017"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   更改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中现有的 Always On 可用性组。 只有当前主副本支持大多数 ALTER AVAILABILITY GROUP 参数。 但是，只有辅助副本支持 JOIN、FAILOVER 和 FORCE_FAILOVER_ALLOW_DATA_LOSS 参数。  
   
@@ -388,7 +388,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
  ALL  
  主副本中的数据库允许所有连接。 此选项为默认行为。  
   
- READ_ONLY_ROUTING_LIST = { ('\<server_instance>' [ ,...n ] ) | NONE}     
+ READ_ONLY_ROUTING_LIST = { ('\<server_instance>' [ ,...n ] ) | NONE }     
  指定一个以逗号分隔的服务器实例列表，这些实例承载在以辅助角色运行时满足以下要求的此可用性组的可用性副本：  
   
 -   被配置为允许所有连接或只读连接（参阅上文 SECONDARY_ROLE 选项的 ALLOW_CONNECTIONS 参数）。  
@@ -407,7 +407,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
  无  
  指定此可用性副本为主副本时将不支持只读路由。 此选项为默认行为。 与 MODIFY REPLICA ON 一起使用时，此值将禁用现有列表（如果有）。  
 
- READ_WRITE_ROUTING_URL = { ('\<server_instance>') }  
+ READ_WRITE_ROUTING_URL = { ('\<server_instance>') }    
  适用对象：SQL Server（从 SQL Server 2019 (15.x) 开始） 
 
  指定服务器实例，这些实例承载在以主角色运行时满足以下要求的此可用性组的可用性副本：
@@ -467,7 +467,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
   
  有关强制故障转移的限制、先决条件和建议的信息，以及强制故障转移对可用性组中以前的主数据库的影响，请参阅[执行可用性组的强制手动故障转移 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)。  
   
- ADD LISTENER **'** _dns\_name_ **'(** \<add_listener_option> **)**  
+ ADD LISTENER '_dns\_name_'( \<add_listener_option> )    
  为此可用性组定义新的可用性组侦听器。 仅在主要副本上受支持。  
   
 > [!IMPORTANT]
@@ -569,13 +569,13 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
  `WITH IP ( ('10.120.19.155','255.255.254.0') )`  
   
  *ipv4_address*  
- 指定可用性组侦听器的由四部分组成的 IPv4 地址。 例如，`10.120.19.155` 。  
+ 指定可用性组侦听器的由四部分组成的 IPv4 地址。 例如，`10.120.19.155`。  
   
  *ipv4_mask*  
- 指定可用性组侦听器的由四部分组成的 IPv4 掩码。 例如，`255.255.254.0` 。  
+ 指定可用性组侦听器的由四部分组成的 IPv4 掩码。 例如，`255.255.254.0`。  
   
  ipv6_address  
- 指定可用性组侦听器的 IPv6 地址。 例如，`2001::4898:23:1002:20f:1fff:feff:b3a3` 。  
+ 指定可用性组侦听器的 IPv6 地址。 例如，`2001::4898:23:1002:20f:1fff:feff:b3a3`。  
   
  PORT = listener_port  
  指定端口号 listener_port，以供由 WITH IP 子句指定的可用组侦听器使用。 PORT 是可选的。  
@@ -584,7 +584,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
   
  例如： `WITH IP ( ('2001::4898:23:1002:20f:1fff:feff:b3a3') ) , PORT = 7777`  
   
- MODIFY LISTENER **'** _dns\_name_ **'(** \<modify\_listener\_option\> **)**  
+ MODIFY LISTENER '_dns\_name_'( \<modify\_listener\_option\> )    
  修改此可用性组的现有可用性组侦听器。 仅在主要副本上受支持。  
   
  \<modify\_listener\_option\>  

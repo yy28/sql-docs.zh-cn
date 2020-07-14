@@ -1,5 +1,6 @@
 ---
 title: 升级 SQL Server | Microsoft Docs
+description: 本文提供了资源链接，包含不同版本的 SQL Server 实例的升级信息。
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ ms.assetid: 5064e35b-b70d-4a0b-a9e9-fff04162f9d2
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5a023389a6c3d0ea087d003af09464481af2089c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8689e210cd0faf265fc1dcf96705a87cecccf5ed
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79198304"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900214"
 ---
 # <a name="upgrade-sql-server"></a>升级 SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
  
  可以将 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、[!INCLUDE[ss2016](../../includes/sssql15-md.md)] 或 [!INCLUDE[ss2017](../../includes/sssqlv14-md.md)] 的实例直接升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 对于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]和 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]，需要执行并行升级或迁移，以移动到 SQL Server 2019，因为受支持的主流操作系统之间没有共同的重叠部分。 在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序以升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 之前，请先查看以下有关升级过程和发行说明的文章。  
   

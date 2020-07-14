@@ -11,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6efb6c939f0881e1fd5a90e0d7df96303d40bea4
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 502feae1c94b905069b567bcf62d82fc128299a4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220517"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728488"
 ---
 # <a name="backup-encryption"></a>备份加密
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   本主题概述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份的加密选项。 其中详细介绍备份期间加密的用法、优点和推荐做法。  
 
 ## <a name="overview"></a><a name="Overview"></a> 概述  
@@ -73,8 +73,20 @@ ms.locfileid: "82220517"
 
 ##  <a name="permissions"></a><a name="Permissions"></a> 权限  
 
-若要加密备份或从加密备份中还原，请对用于加密数据库备份的证书或非对称密钥使用 VIEW DEFINITION 权限  。  
-  
+对加密数据库执行备份操作的帐户需要具有特定权限。 
+
+- 要备份的数据库上的 db_backupoperator 数据库级别角色。 无论是否加密，都需要此角色。 
+- 对 `master` 数据库中的证书具有 VIEW DEFINITION 权限。
+
+   下面的示例将为证书授予适当的权限。 
+   
+   ```tsql
+   USE [master]
+   GO
+   GRANT VIEW DEFINITION ON CERTIFICATE::[<SERVER_CERT>] TO [<db_account>]
+   GO
+   ```
+
 > [!NOTE]  
 > 不需要访问 TDE 证书即可备份或还原受 TDE 保护的数据库。  
   
@@ -84,9 +96,9 @@ ms.locfileid: "82220517"
 ### <a name="using-sql-server-management-studio"></a>使用 SQL Server Management Studio  
  在以下任何对话框中，可在创建数据库的备份时加密备份。  
   
-1. [备份数据库（“备份选项”页）](../../relational-databases/backup-restore/back-up-database-backup-options-page.md)在  “备份选项”页上，可以选择  “加密”，并指定加密算法和证书或非对称密钥以用于加密。  
+1. [备份数据库（“备份选项”页）](../../relational-databases/backup-restore/back-up-database-backup-options-page.md)在“备份选项”页上，可以选择“加密”，并指定加密算法和证书或非对称密钥以用于加密。  
   
-1. [使用维护计划向导](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure)选择某个备份任务后，可以在  “定义备份()任务”页的  “选项”选项卡上，选择  “备份加密”，并指定加密算法和证书或密钥以用于加密。  
+1. [使用维护计划向导](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure)选择某个备份任务后，可以在“定义备份()任务”页的“选项”选项卡上，选择“备份加密”，并指定加密算法和证书或密钥以用于加密。  
   
 ### <a name="using-transact-sql"></a>“使用 Transact-SQL”  
  下面是用于加密备份文件的示例 TSQL 语句：  

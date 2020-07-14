@@ -1,5 +1,6 @@
 ---
 title: 内存中 OLTP（内存中优化）| Microsoft Docs
+description: 将这些示例和资源用于内存中 OLTP，后者可显著提高 SQL Server 中的性能。
 ms.custom: ''
 ms.date: 11/21/2019
 ms.prod: sql
@@ -14,21 +15,21 @@ ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1546b8fbf4abeafcb9051e17fae7c949babcfc24
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: b0575e8b5072dccf3c197180bec3941ca3585ba6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922122"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723129"
 ---
 # <a name="in-memory-oltp-and-memory-optimization"></a>内存中 OLTP 和内存优化
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 可显著改善事务处理、数据引入和数据加载的性能以及暂时数据方案。  若要跳转到快速测试自己的内存优化表和本机编译的存储过程所需的基本代码和知识，请参阅
  -  [快速入门 1：可提高 Transact SQL 性能的内存中 OLTP 技术](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)。  
  
-我们向 YouTube 上传了说明 SQL Server 上的内存中 OLTP 并演示性能优势的 [17 分钟视频](#anchorname-17minute-video)  。
+我们向 YouTube 上传了说明 SQL Server 上的内存中 OLTP 并演示性能优势的 [17 分钟视频](#anchorname-17minute-video)。
 
 深入了解内存中 OLTP 的详细概述以及查看显示技术中性能优势的方案：
 
@@ -70,7 +71,7 @@ ms.locfileid: "82922122"
 
 此部分提供其他网站的链接，这些网站包含有关 SQL Server 上的内存中 OLTP 的信息。
 
-- [说明内存中 OLTP 并演示性能优势的视频  ](#anchorname-17minute-video)
+- [说明内存中 OLTP 并演示性能优势的视频](#anchorname-17minute-video)
 
 - [In-Memory OLTP Performance Demo v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)
 
@@ -88,7 +89,7 @@ ms.locfileid: "82922122"
 
 - _视频标题：_ &nbsp; **SQL Server 2016 中的内存中 OLTP**
 - _发布日期：_ &nbsp; 2019 年 3 月 10 日，发布于 `YouTube.com`。
-- _持续时间：_ &nbsp; 17:32 &nbsp; &nbsp;（有关视频链接，请参阅以下[索引](#anchorname-index-17minute-video)  。）
+- _持续时间：_ &nbsp; 17:32 &nbsp; &nbsp;（有关视频链接，请参阅以下[索引](#anchorname-index-17minute-video)。）
 - _：_ &nbsp; SQL Server 高级项目经理 Jos de Bruijn
 
 ### <a name="demo-can-be-downloaded"></a>可以下载演示
@@ -119,7 +120,7 @@ ms.locfileid: "82922122"
 | &nbsp; &nbsp; [07:22](https://www.youtube.com/watch?v=l5l5eophmK4&t=442) | 在 SQL Server 2014 中首次发布，但是在 2016 中进行了重大改进。 |
 | &nbsp; &nbsp; [07:58](https://www.youtube.com/watch?v=l5l5eophmK4&t=558) | 也在 Azure SQL 数据库中可用（云中）。 |
 | <br/>D.&nbsp;[08:09](https://www.youtube.com/watch?v=l5l5eophmK4&t=489) | <br/>性能演示。<br/> 使用一个常规表运行演示。 |
-| &nbsp; &nbsp; [09:11](https://www.youtube.com/watch?v=l5l5eophmK4&t=551) | SSMS 上下文菜单：“报表”&gt;“事务性能分析”   |
+| &nbsp; &nbsp; [09:11](https://www.youtube.com/watch?v=l5l5eophmK4&t=551) | SSMS 上下文菜单：“报表”&gt;“事务性能分析”  |
 | &nbsp; &nbsp; [10:38](https://www.youtube.com/watch?v=l5l5eophmK4&t=638) | SSMS 上下文菜单：**内存优化顾问**<br/> &nbsp; &nbsp; 通过常规表实际创建内存优化表，以及迁移数据。 |
 | &nbsp; &nbsp; [11:28](https://www.youtube.com/watch?v=l5l5eophmK4&t=688) | 重新运行演示，速度提高 45 倍。 |
 | <br/>E.&nbsp;[12:17](https://www.youtube.com/watch?v=l5l5eophmK4&t=737) | <br/>在 SQL Server 2016 中更易于使用内存中 OLTP（与 2014 相比）。 |

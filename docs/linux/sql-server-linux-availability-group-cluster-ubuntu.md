@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
-ms.openlocfilehash: a42d031ee66ee455af91dbcce233140a7ab0a171
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: c929e689f68def3b267dced2001468814d8747d0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001097"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892325"
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>配置 Ubuntu 群集和可用性组资源
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 本文档介绍如何在 Ubuntu 上创建三节点群集，以及如何将先前创建的可用性组添加为群集中的资源。 若要实现高可用性，Linux 上的可用性组需要三个节点，请参阅[可用性组配置的高可用性和数据保护](sql-server-linux-availability-group-ha.md)。
 
@@ -187,7 +187,7 @@ sudo apt-get install mssql-server-ha
 
 ## <a name="create-availability-group-resource"></a>创建可用性组资源
 
-若要创建可用性组资源，请使用 `pcs resource create` 命令并设置资源属性。 以下命令将为可用性组创建一个名为 `ag1` 的 `ocf:mssql:ag` master/slave 类型的资源。 
+若要创建可用性组资源，请使用 `pcs resource create` 命令并设置资源属性。 以下命令将为可用性组创建一个名为 `ag1` 的 `ocf:mssql:ag` master/subordinate 类型的资源。 
 
 ```bash
 sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=30s master meta notify=true

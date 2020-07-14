@@ -1,6 +1,6 @@
 ---
 title: 添加或替换镜像见证服务器 (SSMS)
-description: 了解如何使用 SQL Server Management Studio (SSMS) 添加或替换数据库镜像见证服务器。
+description: 了解当数据库镜像端点使用 Windows 身份验证时，如何使用 SQL Server Management Studio 添加或替换数据库镜像见证服务器。
 ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4b5ecffd-f025-4ab7-b69d-8958c6477127
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 61e7be7b4e1f61f243d896d5073ae469bebe6940
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4cf7d77550f96c72867ecc8133df3cb4f64b7300
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75247498"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763928"
 ---
 # <a name="add-or-replace-a-database-mirroring-witness-sql-server-management-studio"></a>添加或替换数据库镜像见证服务器 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   如果数据库镜像端点使用 Windows 身份验证，则可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 添加或替换见证服务器。 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中添加见证服务器还会将运行模式更改为具有自动故障转移功能的高安全性模式。  
   
 > [!NOTE]  
@@ -42,15 +42,15 @@ ms.locfileid: "75247498"
   
 6.  在 **“包括见证服务器”** 对话框中，单击 **“是”** ，再单击 **“下一步”** 。  
   
-7.  在 **“选择要配置的服务器”** 对话框中，将自动选中 **“见证服务器实例”** 复选框。 单击“下一步”。   
+7.  在 **“选择要配置的服务器”** 对话框中，将自动选中 **“见证服务器实例”** 复选框。 单击“下一步”。  
   
-8.  在 **“主体服务器实例”** 对话框中，保留现有的端口和端点。 单击“下一步”。   
+8.  在 **“主体服务器实例”** 对话框中，保留现有的端口和端点。 单击“下一步”。  
   
 9. 在 **“见证服务器实例”** 对话框中，单击 **“连接”** 。  
   
-10. 在  “连接到服务器”对话框的  “服务器名称”字段中，指定见证服务器实例，并使用 Windows 身份验证（默认设置）。 单击“连接”  。  
+10. 在“连接到服务器”对话框的“服务器名称”字段中，指定见证服务器实例，并使用 Windows 身份验证（默认设置）。 单击“连接”。  
   
-11. 建立连接之后，便会在 **“见证服务器实例”** 对话框中显示见证服务器实例的侦听器端口和数据库镜像端点。 单击“下一步”。   
+11. 建立连接之后，便会在 **“见证服务器实例”** 对话框中显示见证服务器实例的侦听器端口和数据库镜像端点。 单击“下一步”。  
   
 12. **“服务帐户”** 对话框包含主体服务器实例、镜像服务器实例和见证服务器实例的域服务帐户字段。  
   
@@ -62,13 +62,13 @@ ms.locfileid: "75247498"
   
          域名必须大写。  
   
-     单击“下一步”。   
+     单击“下一步”。  
   
 13. 在 **“完成该向导”** 摘要屏幕中，检查见证服务器配置（可选），再单击 **“完成”** 。  
   
-14. 完成之后，该向导将返回到 **“数据库属性”** 对话框，此对话框的 **“见证服务器”** 字段中现在显示见证服务器的服务器网络地址。 此外，还会自动选中  “具有自动故障转移功能的高安全模式(同步)”，使用见证服务器时需要此选项。  
+14. 完成之后，该向导将返回到 **“数据库属性”** 对话框，此对话框的 **“见证服务器”** 字段中现在显示见证服务器的服务器网络地址。 此外，还会自动选中“具有自动故障转移功能的高安全模式(同步)”，使用见证服务器时需要此选项。  
   
-     若要启用见证服务器并将会话更改为具有自动故障转移功能的高安全性模式，请单击  “确定”。  
+     若要启用见证服务器并将会话更改为具有自动故障转移功能的高安全性模式，请单击“确定”。  
   
 ## <a name="see-also"></a>另请参阅  
  [数据库镜像见证服务器](../../database-engine/database-mirroring/database-mirroring-witness.md)   

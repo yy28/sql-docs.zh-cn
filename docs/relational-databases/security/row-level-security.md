@@ -1,5 +1,6 @@
 ---
 title: 行级安全性 | Microsoft Docs
+description: 了解行级别安全性如何使用组成员身份或执行上下文来控制对 SQL Server 中数据库表中行的访问权限。
 ms.custom: ''
 ms.date: 05/14/2019
 ms.prod: sql
@@ -17,16 +18,16 @@ ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f9e604ba803b1116c9867071f547a1d1958437b7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5573bcc6762e8a03651ba1573bc6254aaa2c80a0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78288978"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000529"
 ---
 # <a name="row-level-security"></a>行级安全性
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   ![行级安全图](../../relational-databases/security/media/row-level-security-graphic.png "行级安全图")  
   
@@ -41,7 +42,7 @@ ms.locfileid: "78288978"
 **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]（[获取](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)）、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。
   
 > [!NOTE]
-> Azure SQL 数据仓库仅支持筛选谓词。 Azure SQL 数据仓库暂不支持阻止谓词。
+> Azure Synapse 仅支持筛选谓词。 Azure Synapse 暂不支持阻止谓词。
 
 ## <a name="description"></a><a name="Description"></a> 说明
 
@@ -53,7 +54,7 @@ RLS 支持两种类型的安全谓词。
   
  对表中的行级数据的访问将受到定义为内联表值函数的安全谓词的限制。 随后调用该函数，并由安全策略进行实施。 对于筛选谓词，应用程序不知道从结果集中筛选掉的行。 如果所有行都被筛选掉，返回的是空集。 对于阻止谓词，违反该谓词的任何操作将失败并出错。  
   
- 筛选谓词在读取基表中数据时应用。 它们影响所有 Get 操作：SELECT  、DELETE  和 UPDATE  。 用户无法选择或删除筛选掉的行。 用户无法更新筛选掉的行。 但可以更新以后将要筛选掉的行。 阻止谓词影响所有写入操作。  
+ 筛选谓词在读取基表中数据时应用。 它们影响所有 Get 操作：SELECT、DELETE 和 UPDATE。 用户无法选择或删除筛选掉的行。 用户无法更新筛选掉的行。 但可以更新以后将要筛选掉的行。 阻止谓词影响所有写入操作。  
   
 - AFTER INSERT 和 AFTER UPDATE 谓词可以防止用户将行更新为违反该谓词的值。  
   
@@ -63,11 +64,11 @@ RLS 支持两种类型的安全谓词。
   
  筛选器和阻止谓词以及安全策略具有以下行为：  
   
-- 你可以定义与另一个表联接和/或调用函数的谓词函数。 如果使用 `SCHEMABINDING = ON`（默认设置）创建安全策略，则该联接或函数可以从查询进行访问并按预期方式工作而无需进行任何其他权限检查。 如果安全策略是使用 `SCHEMABINDING = OFF` 创建的，用户必须对这些附加表和函数拥有 SELECT  权限，才能查询目标表。 如果谓词函数调用 CLR 标量值函数，则还需要 EXECUTE  权限。
+- 你可以定义与另一个表联接和/或调用函数的谓词函数。 如果使用 `SCHEMABINDING = ON`（默认设置）创建安全策略，则该联接或函数可以从查询进行访问并按预期方式工作而无需进行任何其他权限检查。 如果安全策略是使用 `SCHEMABINDING = OFF` 创建的，用户必须对这些附加表和函数拥有 SELECT 权限，才能查询目标表。 如果谓词函数调用 CLR 标量值函数，则还需要 EXECUTE 权限。
   
 - 你可以针对已定义但禁用安全谓词的表发出查询。 筛选掉或阻止的任何行都不会受影响。  
   
-- 如果 dbo 用户、db_owner  角色的成员或表所有者查询已定义并启用安全策略的表，行按照安全策略所定义被筛选掉或阻止。  
+- 如果 dbo 用户、db_owner 角色的成员或表所有者查询已定义并启用安全策略的表，行按照安全策略所定义被筛选掉或阻止。  
   
 - 尝试更改架构绑定安全策略绑定的表的架构会导致错误。 但是，可以更改谓词未引用的列。  
   
@@ -79,7 +80,7 @@ RLS 支持两种类型的安全谓词。
   
  筛选器谓词具有以下行为：  
   
-- 定义筛选表中的行的安全策略。 应用程序不知道任何针对 SELECT  、UPDATE  和 DELETE  操作被筛选掉的行。 包括所有行都被筛选掉的情况。应用程序可以对行执行 INSERT  操作，即使这些行将在其他任何操作过程中被筛选掉，也不例外。  
+- 定义筛选表中的行的安全策略。 应用程序不知道任何针对 SELECT、UPDATE 和 DELETE 操作被筛选掉的行。 包括所有行都被筛选掉的情况。应用程序可以对行执行 INSERT 操作，即使这些行将在其他任何操作过程中被筛选掉，也不例外。  
   
  阻止谓词具有以下行为：  
   
@@ -123,7 +124,7 @@ RLS 支持两种类型的安全谓词。
   
 - 强烈建议为 RLS 对象、谓词函数和安全策略单独创建架构。 这有助于将针对这些特殊对象所需的权限与目标表分开。 在多租户数据库中可能需要对不同策略和谓词函数进行额外的分隔，但具体标准各有不同。
   
-- **ALTER ANY SECURITY POLICY** 权限适用于高特权用户（如安全策略管理员）。 安全策略管理员不需要针对他们保护的表的 SELECT 权限  。  
+- **ALTER ANY SECURITY POLICY** 权限适用于高特权用户（如安全策略管理员）。 安全策略管理员不需要针对他们保护的表的 SELECT 权限。  
   
 - 避免在谓词函数中进行类型转换以避免潜在的运行时错误。  
   
@@ -131,13 +132,13 @@ RLS 支持两种类型的安全谓词。
   
 - 避免在谓词函数中使用过多表联接以便使性能最大化。  
   
- 避免使用依赖于会话特定 [SET 选项](../../t-sql/statements/set-statements-transact-sql.md)的谓词逻辑：如果用户可以执行任意查询，则其逻辑依赖于会话特定的 SET 选项的谓词函数可能会透漏信息，不过，这种逻辑很少在实际应用程序中使用  。 例如，将字符串隐式转换为 **datetime** 的谓词函数可能会根据当前会话的 **SET DATEFORMAT** 选项筛选不同的行。 一般而言，谓词函数应遵守以下规则：  
+ 避免使用依赖于会话特定 [SET 选项](../../t-sql/statements/set-statements-transact-sql.md)的谓词逻辑：如果用户可以执行任意查询，则其逻辑依赖于会话特定的 SET 选项的谓词函数可能会透漏信息，不过，这种逻辑很少在实际应用程序中使用。 例如，将字符串隐式转换为 **datetime** 的谓词函数可能会根据当前会话的 **SET DATEFORMAT** 选项筛选不同的行。 一般而言，谓词函数应遵守以下规则：  
   
 - 谓词函数不应将字符串隐式转换为 **date**、**smalldatetime**、**datetime**、**datetime2** 或 **datetimeoffset**，也不应执行相反的转换，因为这些转换受 [SET DATEFORMAT (Transact-SQL)](../../t-sql/statements/set-dateformat-transact-sql.md) 和 [SET LANGUAGE (Transact-SQL)](../../t-sql/statements/set-language-transact-sql.md) 选项的影响。 应改用 **CONVERT** 函数并显式指定样式参数。  
   
 - 谓词函数不应依赖于每周第一天的值，因为此值受 [SET DATEFIRST (Transact-SQL)](../../t-sql/statements/set-datefirst-transact-sql.md) 选项的影响。  
   
-- 谓词函数不得依赖在出错（如溢出或被零除）时返回 NULL  的算术表达式或聚合表达式，因为这种行为受 [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)、[SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-numeric-roundabort-transact-sql.md) 和 [SET ARITHABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-arithabort-transact-sql.md) 选项影响。  
+- 谓词函数不得依赖在出错（如溢出或被零除）时返回 NULL 的算术表达式或聚合表达式，因为这种行为受 [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)、[SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-numeric-roundabort-transact-sql.md) 和 [SET ARITHABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-arithabort-transact-sql.md) 选项影响。  
   
 - 谓词函数不应将串联字符串与 **NULL** 进行比较，因为这种行为受 [SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md) 选项的影响。  
 
@@ -159,17 +160,17 @@ RLS 支持两种类型的安全谓词。
   
 - **Filestream：** RLS 与 Filestream 不兼容。  
   
-- **PolyBase：** 仅支持对 Azure SQL 数据仓库的 PolyBase 外部表使用 RLS。
+- **PolyBase：** 仅支持对 Azure Synapse 的 PolyBase 外部表使用 RLS。
 
 - **内存优化表：** 必须使用 `WITH NATIVE_COMPILATION` 选项定义在内存优化表中用作安全谓词的内联表值函数。 使用此选项时，内存优化表不支持的语言功能将被禁止，并在创建时发出相应的错误。 有关详细信息，请参阅 **内存优化表简介** 中的 [内存优化表中的行级别安全性](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md)部分。  
   
 - **索引视图：** 一般情况下，可以在视图基础之上创建安全策略，并能在安全策略绑定的表基础之上创建视图。 但是，不能在具有安全策略的表顶层创建索引视图，因为通过索引执行的行查找将跳过策略。  
   
-- **变更数据捕获：** 变更数据捕获可能会将应被筛选掉的全部行泄露给 db_owner  角色的成员，或在为表启用 CDC 时指定的“限制”角色的成员用户（请注意，可以显式将此功能设置为 NULL  ，让所有用户都能访问变更数据）。 实际上， **db_owner** 和此选通角色的成员可以看到对表所做的所有数据更改，即使表中存在安全策略。  
+- **变更数据捕获：** 变更数据捕获可能会将应被筛选掉的全部行泄露给 db_owner 角色的成员，或在为表启用 CDC 时指定的“限制”角色的成员用户（请注意，可以显式将此功能设置为 NULL，让所有用户都能访问变更数据）。 实际上， **db_owner** 和此选通角色的成员可以看到对表所做的所有数据更改，即使表中存在安全策略。  
   
-- **更改跟踪：** 更改跟踪可能会将应被筛选掉的行的主键泄露给同时拥有 SELECT  和 VIEW CHANGE TRACKING  权限的用户。 实际数据值不会泄漏；只会透露已更新/插入/删除具有 B 主键的行的列 A 这一事实。 如果主键包含机密元素（如社会安全号码），这会产生问题。 但是，在实践中，此 **CHANGETABLE** 几乎始终与原始表联接以获取最新数据。  
+- **更改跟踪：** 更改跟踪可能会将应被筛选掉的行的主键泄露给同时拥有 SELECT 和 VIEW CHANGE TRACKING 权限的用户。 实际数据值不会泄漏；只会透露已更新/插入/删除具有 B 主键的行的列 A 这一事实。 如果主键包含机密元素（如社会安全号码），这会产生问题。 但是，在实践中，此 **CHANGETABLE** 几乎始终与原始表联接以获取最新数据。  
   
-- **全文搜索：** 对于使用以下全文搜索和语义搜索函数的查询，性能应该会下降，因为引入了附加联接，以应用行级别安全性，并避免泄露应被筛选掉的行的主键：CONTAINSTABLE、FREETEXTTABLE、semantickeyphrasetable、semanticsimilaritydetailstable、semanticsimilaritytable   。  
+- **全文搜索：** 对于使用以下全文搜索和语义搜索函数的查询，性能应该会下降，因为引入了附加联接，以应用行级别安全性，并避免泄露应被筛选掉的行的主键：CONTAINSTABLE、FREETEXTTABLE、semantickeyphrasetable、semanticsimilaritydetailstable、semanticsimilaritytable 。  
   
 - **列存储索引：** RLS 与聚集和非聚集列存储索引兼容。 但是，由于行级别安全性应用了一个函数，优化器可能会修改查询计划，从而不会使用批处理模式。  
   
@@ -185,8 +186,6 @@ RLS 支持两种类型的安全谓词。
   
  创建将演示不同访问功能的三个用户帐户。  
 
-> [!NOTE]
-> Azure SQL 数据仓库不支持“以用户身份执行”，因此必须事先为每个用户创建登录。 稍后，将以适当的用户身份登录以测试此行为。
 
 ```sql  
 CREATE USER Manager WITHOUT LOGIN;  
@@ -273,10 +272,6 @@ EXECUTE AS USER = 'Manager';
 SELECT * FROM Sales;
 REVERT;  
 ```
-
-> [!NOTE]
-> Azure SQL 数据仓库不支持 EXECUTE AS USER，因此请以适当的用户身份登录以测试上述行为。
-
 管理员应看到所有六行。 Sales1 和 Sales2 用户应只能看到自己的销售情况。
 
 更改安全策略以禁用策略。
@@ -301,7 +296,7 @@ DROP FUNCTION Security.fn_securitypredicate;
 DROP SCHEMA Security;
 ```
 
-### <a name="b-scenarios-for-using-row-level-security-on-an-azure-sql-data-warehouse-external-table"></a><a name="external"></a> B. 对 Azure SQL 数据仓库外部表使用行级别安全性的方案
+### <a name="b-scenarios-for-using-row-level-security-on-an-azure-synapse-external-table"></a><a name="external"></a> B. 对 Azure Synapse 外部表使用行级别安全性的方案
 
 此简短示例创建三个用户，以及一个包含六行的外部表。 然后，它为外部表创建内联表值函数和安全策略。 该示例演示如何为各种用户筛选选择语句。
 
@@ -345,7 +340,7 @@ INSERT INTO Sales VALUES (6, 'Sales2', 'Seat', 5);
 SELECT * FROM Sales;
 ```
 
-通过已创建的 Sales 表，创建 Azure SQL 数据仓库外部表。
+通过已创建的 Sales 表，创建 Synapse Analytics 外部表。
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'somepassword';
@@ -394,7 +389,7 @@ WITH (STATE = OFF);
 
 现在 Sales1 和 Sales2 用户可以看到所有六行。
 
-连接到 SQL 数据仓库数据库以清理资源
+连接到 Azure Synapse 数据库以清理资源
 
 ```sql
 DROP USER Sales1;
@@ -421,7 +416,7 @@ DROP LOGIN Manager;
 ### <a name="c-scenario-for-users-who-connect-to-the-database-through-a-middle-tier-application"></a><a name="MidTier"></a> C. 用户通过中间层应用程序连接到数据库的方案
 
 > [!NOTE]
-> 在此示例中，Azure SQL 数据仓库当前不支持阻止谓词功能，因此 Azure SQL 数据仓库不会阻止插入错误用户 ID 的行。
+> 在此示例中，Azure Synapse当前不支持阻止谓词功能，因此 Azure Synapse 不会阻止插入错误用户 ID 的行。
 
 此示例演示一个中间层应用程序如何实现连接筛选，其中应用程序用户（或租户）共享同一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户（应用程序）。 应用程序连接到数据库之后在 [SESSION_CONTEXT (Transact-SQL)](../../t-sql/functions/session-context-transact-sql.md) 中设置当前应用程序用户 ID，然后安全策略以透明方式筛选不应对此 ID 可见的行，同时阻止用户插入错误用户 ID 的行。 无需进行任何其他应用更改。  
   

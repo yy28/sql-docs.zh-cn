@@ -46,16 +46,16 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3645b913b4e806d964a2da420d987ca10b2217f0
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: 384b474180e17eaed9827da2d2e2b2f9157c6f4b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81297296"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766956"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中创建新表。
 
@@ -345,56 +345,56 @@ column_name <data_type>
 
 ## <a name="arguments"></a>参数
 
-database_name  要在其中创建表的数据库的名称。 database_name 须指定现有数据库的名称  。 如果未指定，则 database_name 默认为当前数据库  。 当前连接的登录名必须与 database_name 所指定数据库中的一个现有用户 ID 关联，并且该用户 ID 必须具有 CREATE TABLE 权限  。
+database_name 要在其中创建表的数据库的名称。 database_name 须指定现有数据库的名称。 如果未指定，则 database_name 默认为当前数据库。 当前连接的登录名必须与 database_name 所指定数据库中的一个现有用户 ID 关联，并且该用户 ID 必须具有 CREATE TABLE 权限。
 
-schema_name  新表所属架构的名称。
+schema_name 新表所属架构的名称。
 
-table_name  新表的名称。 表名必须遵循有关[标识符](../../relational-databases/databases/database-identifiers.md)的规则。 除了本地临时表名（以单个数字符号 (#) 为前缀的名称）不能超过 116 个字符外，table_name 最多可包含 128 个字符  。
+table_name 新表的名称。 表名必须遵循有关[标识符](../../relational-databases/databases/database-identifiers.md)的规则。 除了本地临时表名（以单个数字符号 (#) 为前缀的名称）不能超过 116 个字符外，table_name 最多可包含 128 个字符。
 
 **适用于**（AS FileTable）：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本）。
 
 将新表创建为 FileTable。 您无需指定列，因为 FileTable 具有固定架构。 有关详细信息，请参阅 [FileTables](../../relational-databases/blob/filetables-sql-server.md)。
 
-column_name  
-computed_column_expression  定义计算列的值的表达式。 计算列是虚拟列，并非实际存储在表中，除非此列标记为 PERSISTED。 该列由同一表中的其他列通过表达式计算得到。 例如，计算列可以定义为：cost AS price \* qty    。表达式可以是非计算列的名称、常量、函数、变量以及通过一个或多个运算符连接的上述元素的任意组合。 表达式不能是子查询，也不能包含别名数据类型。
+column_name
+computed_column_expression 定义计算列的值的表达式。 计算列是虚拟列，并非实际存储在表中，除非此列标记为 PERSISTED。 该列由同一表中的其他列通过表达式计算得到。 例如，计算列可以定义为：cost AS price \* qty  。表达式可以是非计算列的名称、常量、函数、变量以及通过一个或多个运算符连接的上述元素的任意组合。 表达式不能是子查询，也不能包含别名数据类型。
 
 计算列可用于选择列表、WHERE 子句、ORDER BY 子句或任何可使用正则表达式的其他位置，但下列情况除外：
 
 - 计算列必须标记为 PERSISTED，才能参与 FOREIGN KEY 或 CHECK 约束。
 - 如果计算列的值由具有确定性的表达式定义，并且索引列中可使用计算结果的数据类型，则可将该列用作索引中的键列，或者用作 PRIMARY KEY 或 UNIQUE 约束的一部分。
 
-   例如，如果表中含有整数列 a 和 b，则可以对计算列 a+b 创建索引，但不能对计算列 a+DATEPART(dd, GETDATE()) 创建索引，因为在以后的调用中，其值可能发生改变     。
+   例如，如果表中含有整数列 a 和 b，则可以对计算列 a+b 创建索引，但不能对计算列 a+DATEPART(dd, GETDATE()) 创建索引，因为在以后的调用中，其值可能发生改变   。
 
 - 计算列不能作为 INSERT 或 UPDATE 语句的目标。
 
 > [!NOTE]
 > 表中计算列所使用的列值因行而异，因此计算列的每一行可能有不同的值。
 
-计算列的为 Null 性是由[!INCLUDE[ssDE](../../includes/ssde-md.md)]根据使用的表达式自动确定的。 即使只有不可为空的列，大多数表达式的结果也认为是可为空的，因为可能的下溢或溢出也将生成 NULL 结果。 使用带 AllowsNull 属性的 `COLUMNPROPERTY` 函数以调查表中任何计算列的为 Null 性  。 通过使用 check_expression 常量指定 `ISNULL`（常量是替换所有 NULL 结果的非空值），可以将可为 Null 的表达式转换为不可为 Null 的表达式  。 对于基于公共语言运行时 (CLR) 用户定义类型表达式的计算列，需要对此类型有 REFERENCES 权限。
+计算列的为 Null 性是由[!INCLUDE[ssDE](../../includes/ssde-md.md)]根据使用的表达式自动确定的。 即使只有不可为空的列，大多数表达式的结果也认为是可为空的，因为可能的下溢或溢出也将生成 NULL 结果。 使用带 AllowsNull 属性的 `COLUMNPROPERTY` 函数以调查表中任何计算列的为 Null 性。 通过使用 check_expression 常量指定 `ISNULL`（常量是替换所有 NULL 结果的非空值），可以将可为 Null 的表达式转换为不可为 Null 的表达式。 对于基于公共语言运行时 (CLR) 用户定义类型表达式的计算列，需要对此类型有 REFERENCES 权限。
 
-PERSISTED 指定[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]将在表中物理存储计算值，并在计算列依赖的任何其他列发生更新时对这些计算值进行更新。 将计算列标记为 `PERSISTED`可以对具有确定性但不精确的计算列创建索引。 有关详细信息，请参阅 [计算列上的索引](../../relational-databases/indexes/indexes-on-computed-columns.md)。 必须将用作已分区表的分区依据列的任何计算列显式标记为 `PERSISTED`。 指定 `PERSISTED` 时，computed_column_expression 必须具有确定性  。
+PERSISTED 指定[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]将在表中物理存储计算值，并在计算列依赖的任何其他列发生更新时对这些计算值进行更新。 将计算列标记为 `PERSISTED`可以对具有确定性但不精确的计算列创建索引。 有关详细信息，请参阅 [计算列上的索引](../../relational-databases/indexes/indexes-on-computed-columns.md)。 必须将用作已分区表的分区依据列的任何计算列显式标记为 `PERSISTED`。 指定 `PERSISTED` 时，computed_column_expression 必须具有确定性。
 
-ON { partition_scheme | filegroup | "default" } 指定存储表的分区架构或文件组    。 如果指定了 partition_scheme，则该表将成为已分区表，其分区存储在 partition_scheme 所指定的一个或多个文件组的集合中   。 如果指定了 filegroup，则该表将存储在已命名文件组中  。 数据库中必须存在该文件组。 如果指定了 "default"，或者根本未指定 ON，表则存储在默认文件组中  。 CREATE TABLE 中指定的表的存储机制以后不能进行更改。
+ON { partition_scheme | filegroup | "default" } 指定存储表的分区架构或文件组 。 如果指定了 partition_scheme，则该表将成为已分区表，其分区存储在 partition_scheme 所指定的一个或多个文件组的集合中 。 如果指定了 filegroup，则该表将存储在已命名文件组中。 数据库中必须存在该文件组。 如果指定了 "default"，或者根本未指定 ON，表则存储在默认文件组中。 CREATE TABLE 中指定的表的存储机制以后不能进行更改。
 
-ON {partition_scheme | filegroup | "default"} 也可以在 PRIMARY KEY 约束或 UNIQUE 约束中指定    。 这些约束会创建索引。 如果 filegroup 未指定，则索引会存储在已命名文件组中  。 如果指定了 "default"，或者根本未指定 ON，索引则将与表存储在同一文件组中  。 如果 `PRIMARY KEY` 或 `UNIQUE` 约束创建聚集索引，则表的数据页将与索引存储在同一文件组中。 如果指定了 `CLUSTERED` 或约束另外创建了聚集索引，并且指定的 partition_scheme 不同于表定义的 partition_scheme 或 filegroup 或相反，则只接受约束定义，而忽略其他定义    。
+ON {partition_scheme | filegroup | "default"} 也可以在 PRIMARY KEY 约束或 UNIQUE 约束中指定 。 这些约束会创建索引。 如果 filegroup 未指定，则索引会存储在已命名文件组中。 如果指定了 "default"，或者根本未指定 ON，索引则将与表存储在同一文件组中。 如果 `PRIMARY KEY` 或 `UNIQUE` 约束创建聚集索引，则表的数据页将与索引存储在同一文件组中。 如果指定了 `CLUSTERED` 或约束另外创建了聚集索引，并且指定的 partition_scheme 不同于表定义的 partition_scheme 或 filegroup 或相反，则只接受约束定义，而忽略其他定义  。
 
 > [!NOTE]
-> 在此上下文中，default 不是关键字  。 它是默认文件组的标识符，并且必须进行分隔（类似于 ON "default" 或 ON [default]）    。 如果指定了 "default"，当前会话的 `QUOTED_IDENTIFIER` 选项则必须为 ON  。 这是默认设置。 有关详细信息，请参阅 [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。
+> 在此上下文中，default 不是关键字。 它是默认文件组的标识符，并且必须进行分隔（类似于 ON "default" 或 ON [default]）  。 如果指定了 "default"，当前会话的 `QUOTED_IDENTIFIER` 选项则必须为 ON。 这是默认设置。 有关详细信息，请参阅 [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。
 >
 > 在创建分区表后，请考虑将表的 `LOCK_ESCALATION` 选项设置为 `AUTO`。 这可通过将锁升级到分区 (HoBT) 级而不是表级来改善并发性。 有关详细信息，请参阅 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)。
 
-TEXTIMAGE_ON { filegroup"default" } 指示 text、ntext、image、xml、varchar(max)、nvarchar(max)、varbinary(max) 和 CLR 用户定义类型的列（包括几何图形和地理）存储在指定文件组  |          。
+TEXTIMAGE_ON { filegroup"default" } 指示 text、ntext、image、xml、varchar(max)、nvarchar(max)、varbinary(max) 和 CLR 用户定义类型的列（包括几何图形和地理）存储在指定文件组|        。
 
-如果表中没有较大值列，则不允许使用 `TEXTIMAGE_ON`。 如果指定了 partition_scheme，则不能指定 `TEXTIMAGE_ON`  。 如果指定了 "default"，或者根本未指定 `TEXTIMAGE_ON`，较大值列则将存储在默认文件组中  。 以后不能对 `CREATE TABLE` 中指定的任何较大值列数据的存储进行更改。
+如果表中没有较大值列，则不允许使用 `TEXTIMAGE_ON`。 如果指定了 partition_scheme，则不能指定 `TEXTIMAGE_ON`。 如果指定了 "default"，或者根本未指定 `TEXTIMAGE_ON`，较大值列则将存储在默认文件组中。 以后不能对 `CREATE TABLE` 中指定的任何较大值列数据的存储进行更改。
 
 > [!NOTE]
 > Varchar(max)、nvarchar(max)、varbinary(max)、xml 和大型 UDT 值直接存储在数据行中（最大限制为 8,000 个字节，只要记录中可以容纳此值）。 如果记录中容纳不下该值，则指针存储在行内，其余内容存储在 LOB 存储空间内的行外。 0 是默认值，表示所有值都直接存储在数据行中。
 >
 > `TEXTIMAGE_ON` 仅更改“LOB 存储空间”的位置，不影响数据存储在行内的时间。 使用 sp_tableoption 的 large value types out of row 选项将整个 LOB 值存储在行外。
 >
-> 在此上下文中，default 不是关键字。 它是默认文件组的标识符，并且必须进行分隔（类似于 `TEXTIMAGE_ON "default"` 或 `TEXTIMAGE_ON [default]`）。 如果指定了 "default"，当前会话的 `QUOTED_IDENTIFIER` 选项则必须为 ON  。 这是默认设置。 有关详细信息，请参阅 [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。
+> 在此上下文中，default 不是关键字。 它是默认文件组的标识符，并且必须进行分隔（类似于 `TEXTIMAGE_ON "default"` 或 `TEXTIMAGE_ON [default]`）。 如果指定了 "default"，当前会话的 `QUOTED_IDENTIFIER` 选项则必须为 ON。 这是默认设置。 有关详细信息，请参阅 [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。
 
-FILESTREAM_ON { partition_scheme_name | filegroup | "default" } 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 及更高版本）     。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 不支持 `FILESTREAM`。
+FILESTREAM_ON { partition_scheme_name | filegroup | "default" } 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 及更高版本）  。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 不支持 `FILESTREAM`。
 
 指定 FILESTREAM 数据的文件组。
 
@@ -407,19 +407,19 @@ FILESTREAM_ON { partition_scheme_name | filegroup | "default" } 适用对象：[
 与 ON 和 `TEXTIMAGE_ON` 一样，无法更改通过使用 `CREATE TABLE` 为 `FILESTREAM_ON` 设置的值，但以下情况除外：
 
 - [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) 语句将堆转换为聚集索引。 在这种情况下，可以指定不同的 FILESTREAM 文件组、分区方案或 NULL。
-- [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) 语句将聚集索引转换为堆。 在这种情况下，可以指定不同的 FILESTREAM 文件组、分区方案或 "default"  。
+- [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) 语句将聚集索引转换为堆。 在这种情况下，可以指定不同的 FILESTREAM 文件组、分区方案或 "default"。
 
 `FILESTREAM_ON <filegroup>` 子句中的文件组或在分区方案中指定的每个 FILESTREAM 文件组须定义有一个文件。 须使用 [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017) 或 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 语句来定义此文件；否则，会引发错误。
 
 有关 FILESTREAM 相关话题，请参阅 [二进制大型对象 - Blob 数据](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。
 
-[ _type\_schema\_name_ **.** ] type_name  指定列的数据类型以及该列所属的架构。 对于基于磁盘的表，可以为以下数据类型之一：
+[ _type\_schema\_name_ **.** ] type_name 指定列的数据类型以及该列所属的架构。 对于基于磁盘的表，可以为以下数据类型之一：
 
 - 系统数据类型
 - 基于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统数据类型的别名类型。 必须首先用 `CREATE TYPE` 语句创建别名数据类型，然后才能将它们用于表定义中。 在 `CREATE TABLE` 语句中，可以覆盖别名数据类型的 NULL 或 NOT NULL 赋值。 但是，长度规格不能更改；不能在 `CREATE TABLE` 语句中指定别名数据类型的长度。
 - CLR 用户定义类型。 必须首先用 `CREATE TYPE` 语句创建 CLR 用户定义类型，然后才能将它们用于表定义中。 若要创建 CLR 用户定义类型的列，则需要对此类型具有 REFERENCES 权限。
 
-如果 type_schema_name 未指定，则 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 按照下列顺序引用 type_name   ：
+如果 type_schema_name 未指定，则 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 按照下列顺序引用 type_name ：
 
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统数据类型。
 - 当前数据库中当前用户的默认架构。
@@ -427,75 +427,75 @@ FILESTREAM_ON { partition_scheme_name | filegroup | "default" } 适用对象：[
 
 有关内存优化表的信息，请参阅 [In-Memory OLTP 的受支持数据类型](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)，获取受支持系统类型。
 
-precision  指定的数据类型的精度。 有关有效精度值的详细信息，请参阅[精度、小数位数和长度](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)。
+precision 指定的数据类型的精度。 有关有效精度值的详细信息，请参阅[精度、小数位数和长度](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)。
 
-scale  指定的数据类型的小数位数。 有关有效小数位数值的详细信息，请参阅[精度、小数位数和长度](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)。
+scale 指定的数据类型的小数位数。 有关有效小数位数值的详细信息，请参阅[精度、小数位数和长度](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)。
 
-max  仅应用于 varchar  、nvarchar  和 varbinary  数据类型，存储 2^31 个字节的字符、二进制数据以及 2^30 个字节的 Unicode 数据。
+max 仅应用于 varchar、nvarchar 和 varbinary 数据类型，存储 2^31 个字节的字符、二进制数据以及 2^30 个字节的 Unicode 数据。
 
-CONTENT 指定 column_name 中 xml 数据类型的每个实例都可包含多个顶级元素   。 CONTENT 仅适用于 xml 数据类型，并且只有在同时指定了 xml_schema_collection 时才能指定 CONTENT   。 如果未指定，则 CONTENT 为默认行为。
+CONTENT 指定 column_name 中 xml 数据类型的每个实例都可包含多个顶级元素。 CONTENT 仅适用于 xml 数据类型，并且只有在同时指定了 xml_schema_collection 时才能指定 CONTENT。 如果未指定，则 CONTENT 为默认行为。
 
-DOCUMENT 指定 column_name 中 xml 数据类型的每个实例仅可包含一个顶级元素   。 DOCUMENT 仅适用于 xml 数据类型，并且只有在同时指定了 xml_schema_collection 时才能指定 DOCUMENT   。
+DOCUMENT 指定 column_name 中 xml 数据类型的每个实例仅可包含一个顶级元素。 DOCUMENT 仅适用于 xml 数据类型，并且只有在同时指定了 xml_schema_collection 时才能指定 DOCUMENT。
 
-xml_schema_collection  仅适用于 xml  数据类型，用于将 XML 架构集合与该类型相关联。 在架构中键入 xml 列之前，须先使用 [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) 在数据库中创建该架构  。
+xml_schema_collection 仅适用于 xml 数据类型，用于将 XML 架构集合与该类型相关联。 在架构中键入 xml 列之前，须先使用 [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) 在数据库中创建该架构。
 
-DEFAULT 如果在插入过程中未显式提供值，则指定为列提供的值。 DEFAULT 定义可适用于除定义为 timestamp 或带 `IDENTITY` 属性的列以外的任何列  。 如果为用户定义类型列指定了默认值，则该类型应当支持从 constant_expression 到用户定义类型的隐式转换  。 删除表时，将删除 DEFAULT 定义。 只有常量值（例如字符串）、标量函数（系统函数、用户定义函数或 CLR 函数）或 NULL 可用作默认值。 为了与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本兼容，可以为 DEFAULT 分配约束名称。
+DEFAULT 如果在插入过程中未显式提供值，则指定为列提供的值。 DEFAULT 定义可适用于除定义为 timestamp 或带 `IDENTITY` 属性的列以外的任何列。 如果为用户定义类型列指定了默认值，则该类型应当支持从 constant_expression 到用户定义类型的隐式转换。 删除表时，将删除 DEFAULT 定义。 只有常量值（例如字符串）、标量函数（系统函数、用户定义函数或 CLR 函数）或 NULL 可用作默认值。 为了与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本兼容，可以为 DEFAULT 分配约束名称。
 
-constant_expression  是用作列的默认值的常量、NULL 或系统函数。
+constant_expression 是用作列的默认值的常量、NULL 或系统函数。
 
-memory_optimized_constant_expression  是一个常量、NULL 或一个支持用作列默认值的系统函数。 本机编译的存储过程中必须支持它。 有关本机编译已存储进程中内置函数的详细信息，请参阅[本机编译 T-SQL 模块的受支持的功能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)。
+memory_optimized_constant_expression 是一个常量、NULL 或一个支持用作列默认值的系统函数。 本机编译的存储过程中必须支持它。 有关本机编译已存储进程中内置函数的详细信息，请参阅[本机编译 T-SQL 模块的受支持的功能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)。
 
-IDENTITY 指示新列是标识列。 在表中添加新行时，[!INCLUDE[ssDE](../../includes/ssde-md.md)]将为该列提供一个唯一的增量值。 标识列通常与 PRIMARY KEY 约束一起用作表的唯一行标识符。 可以将 `IDENTITY` 属性分配给 tinyint、smallint、int、bigint、decimal(p,0) 或 numeric(p,0) 列       。 每个表只能创建一个标识列。 不能对标识列使用绑定默认值和 DEFAULT 约束。 必须同时指定种子和增量，或者两者都不指定。 如果二者都未指定，则取默认值 (1,1)。
+IDENTITY 指示新列是标识列。 在表中添加新行时，[!INCLUDE[ssDE](../../includes/ssde-md.md)]将为该列提供一个唯一的增量值。 标识列通常与 PRIMARY KEY 约束一起用作表的唯一行标识符。 可以将 `IDENTITY` 属性分配给 tinyint、smallint、int、bigint、decimal(p,0) 或 numeric(p,0) 列     。 每个表只能创建一个标识列。 不能对标识列使用绑定默认值和 DEFAULT 约束。 必须同时指定种子和增量，或者两者都不指定。 如果二者都未指定，则取默认值 (1,1)。
 
-seed  是加载到表中的第一行所使用的值。
+seed 是加载到表中的第一行所使用的值。
 
-increment  是向加载的前一行的标识值中添加的增量值。
+increment 是向加载的前一行的标识值中添加的增量值。
 
 NOT FOR REPLICATION 在 `CREATE TABLE` 语句中，可以为 IDENTITY 属性、FOREIGN KEY 约束和 CHECK 约束指定 `NOT FOR REPLICATION` 子句。 如果为 `IDENTITY` 属性指定了此子句，复制代理执行插入时，标识列中的值将不会增加。 如果为约束指定了此子句，则当复制代理执行插入、更新或删除操作时，将不会强制执行此约束。
 
-GENERATED ALWAYS AS ROW { START | END } [ HIDDEN ] [ NOT NULL ] 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。
+GENERATED ALWAYS AS ROW { START | END } [ HIDDEN ] [ NOT NULL ] 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 指定系统将使用指定的 `datetime2` 列来记录记录有效的开始时间或记录有效的结束时间。 此列必须定义为 `NOT NULL`。 如果尝试将此列定义为 `NULL`，系统将引发错误。 如果不为期间列显式指定 NOT NULL，系统则会将此列默认定义为 `NOT NULL`。 将此参数与 `PERIOD FOR SYSTEM_TIME` 和 `WITH SYSTEM_VERSIONING = ON` 参数结合使用来对表启用系统版本控制。 有关详细信息，请参阅 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)。
 
-可将一个或两个时间段列标记为 HIDDEN 标志，隐式隐藏这些列，这样 SELECT \* FROM`<table>` 就不会返回这些列中的值    。 默认情况下，时间段列不会处于隐藏状态。 若要使用隐藏的列，则它必须显式包含在直接引用时态表的所有查询中。 若要更改现有时间段列的 HIDDEN 特性，须先删除 PERIOD，再使用不同的隐藏标志重新创建   。
+可将一个或两个时间段列标记为 HIDDEN 标志，隐式隐藏这些列，这样 SELECT \* FROM`<table>` 就不会返回这些列中的值 。 默认情况下，时间段列不会处于隐藏状态。 若要使用隐藏的列，则它必须显式包含在直接引用时态表的所有查询中。 若要更改现有时间段列的 HIDDEN 特性，须先删除 PERIOD，再使用不同的隐藏标志重新创建 。
 
-INDEX index_name [ CLUSTERED | NONCLUSTERED ] (column_name [ ASC | DESC ] [ ,... n ] ) 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]     。
+INDEX index_name [ CLUSTERED | NONCLUSTERED ] (column_name [ ASC | DESC ] [ ,... n ] ) 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。
 
 指定在表上创建索引。 这可以是聚集索引，也可以是非聚集索引。 该索引包含列出的列，并按照升序或降序对数据进行排序。
 
-INDEX index_name CLUSTERED COLUMNSTORE 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]   。
+INDEX index_name CLUSTERED COLUMNSTORE 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 指定使用聚集列存储以分列格式存储整个表格。 此操作包含表中的所有列。 数据不按字母或数字顺序排序，因为行是按照可获得列存储压缩好处的原则而组织的。
 
-INDEX index_name [ NONCLUSTERED ] COLUMNSTORE (column_name [ ,... n ] ) 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]     。
+INDEX index_name [ NONCLUSTERED ] COLUMNSTORE (column_name [ ,... n ] ) 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。
 
 指定在表中创建非聚集列存储索引。 基础表可以是行存储堆或聚集索引，也可以是聚集列存储索引。 在任何情况下，可在表上创建非聚集列存储索引将这些列的数据的第二个副本存储在索引中。
 
 将非聚集列存储索引作为聚集列存储索引进行存储和管理。 称其为非聚集列存储索引，是因为这些列可能是有限的，且作为表的二级索引存在。
 
-ON partition\_scheme\_name  (  column\_name  )  指定分区方案，该方案定义要将分区索引的分区映射到的文件组。 须通过执行 [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) 或 [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md)，使数据库中存在该分区方案。 column_name 指定对已分区索引进行分区所依据的列  。 该列必须与 partition_scheme_name 使用的分区函数参数的数据类型、长度和精度相匹配  。 column_name 不限于索引定义中的列  。 除了在对 UNIQUE 索引分区时，必须从用作唯一键的列中选择 column_name 外，还可以指定基表中的任何列  。 通过此限制，[!INCLUDE[ssDE](../../includes/ssde-md.md)]可验证单个分区中的键值唯一性。
+ON partition\_scheme\_name(column\_name) 指定分区方案，该方案定义要将分区索引的分区映射到的文件组。 须通过执行 [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) 或 [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md)，使数据库中存在该分区方案。 column_name 指定对已分区索引进行分区所依据的列。 该列必须与 partition_scheme_name 使用的分区函数参数的数据类型、长度和精度相匹配。 column_name 不限于索引定义中的列。 除了在对 UNIQUE 索引分区时，必须从用作唯一键的列中选择 column_name 外，还可以指定基表中的任何列。 通过此限制，[!INCLUDE[ssDE](../../includes/ssde-md.md)]可验证单个分区中的键值唯一性。
 
 > [!NOTE]
 > 在对非唯一的聚集索引进行分区时，如果尚未指定分区依据列，则默认情况下[!INCLUDE[ssDE](../../includes/ssde-md.md)]将在聚集索引键列表中添加分区依据列。 在对非唯一的非聚集索引进行分区时，如果尚未指定分区依据列，则[!INCLUDE[ssDE](../../includes/ssde-md.md)]会添加分区依据列作为索引的非键（包含）列。
 
-如果未指定 partition_scheme_name 或 filegroup 且该表已分区，则索引会与基础表使用相同分区依据列并被放入同一分区方案中   。
+如果未指定 partition_scheme_name 或 filegroup 且该表已分区，则索引会与基础表使用相同分区依据列并被放入同一分区方案中 。
 
 > [!NOTE]
 > 您不能对 XML 索引指定分区方案。 如果基表已分区，则 XML 索引与该表使用相同的分区方案。
 
 有关分区索引的详细信息，请参阅[已分区表和已分区索引](../../relational-databases/partitions/partitioned-tables-and-indexes.md)。
 
-ON filegroup_name  为指定文件组创建指定索引。 如果未指定位置且表或视图尚未分区，则索引将与基础表或视图使用相同的文件组。 该文件组必须已存在。
+ON filegroup_name 为指定文件组创建指定索引。 如果未指定位置且表或视图尚未分区，则索引将与基础表或视图使用相同的文件组。 该文件组必须已存在。
 
-ON "default" 为默认文件组创建指定索引  。
+ON "default" 为默认文件组创建指定索引。
 
-在此上下文中，“default”一词不是关键字。 它是默认文件组的标识符，并且必须进行分隔（类似于 ON "default" 或 ON [default]）   。 如果指定了 "default"，当前会话的 `QUOTED_IDENTIFIER` 选项则必须为 ON。 这是默认设置。 有关详细信息，请参阅 [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。
+在此上下文中，“default”一词不是关键字。 它是默认文件组的标识符，并且必须进行分隔（类似于 ON "default" 或 ON [default]） 。 如果指定了 "default"，当前会话的 `QUOTED_IDENTIFIER` 选项则必须为 ON。 这是默认设置。 有关详细信息，请参阅 [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。
 
-[ FILESTREAM_ON { filestream_filegroup_name | partition_scheme_name | "NULL" } ] 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 及更高版本）    。
+[ FILESTREAM_ON { filestream_filegroup_name | partition_scheme_name | "NULL" } ] 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 及更高版本） 。
 
 在创建聚集索引时，指定表的 FILESTREAM 数据的位置。 FILESTREAM_ON 子句用于将 FILESTREAM 数据移动到不同的 FILESTREAM 文件组或分区方案。
 
-filestream_filegroup_name 是 FILESTREAM 文件组的名称  。 该文件组须包含一个使用 [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md) 或 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 语句为该文件组定义的文件；否则，会引发错误。
+filestream_filegroup_name 是 FILESTREAM 文件组的名称。 该文件组须包含一个使用 [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md) 或 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 语句为该文件组定义的文件；否则，会引发错误。
 
 如果表已分区，则必须包含 `FILESTREAM_ON` 子句并且必须指定 FILESTREAM 文件组的分区方案，此分区方案需使用与此表分区方案相同的分区功能和分区列。 否则将引发错误。
 
@@ -505,15 +505,15 @@ filestream_filegroup_name 是 FILESTREAM 文件组的名称  。 该文件组须
 
 有关详细信息，请参阅 [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md)。
 
-ROWGUIDCOL 指示新列为行 GUID 列。 对于每个表，只能将其中的一个 uniqueidentifier 列指定为 ROWGUIDCOL 列  。 应用 ROWGUIDCOL 属性能够实现通过使用 `$ROWGUID` 引用列。 ROWGUIDCOL 属性只能分配给 uniqueidentifier 列  。 用户定义数据类型列不能使用 ROWGUIDCOL 指定。
+ROWGUIDCOL 指示新列为行 GUID 列。 对于每个表，只能将其中的一个 uniqueidentifier 列指定为 ROWGUIDCOL 列。 应用 ROWGUIDCOL 属性能够实现通过使用 `$ROWGUID` 引用列。 ROWGUIDCOL 属性只能分配给 uniqueidentifier 列。 用户定义数据类型列不能使用 ROWGUIDCOL 指定。
 
 ROWGUIDCOL 属性并不强制列中所存储值的唯一性。 ROWGUIDCOL 也不会为插入表的新行自动生成值。 若要为每列生成唯一值，请使用 [INSERT](../../t-sql/statements/insert-transact-sql.md) 语句上的 [NEWID](../../t-sql/functions/newid-transact-sql.md) 或 [NEWSEQUENTIALID](../../t-sql/functions/newsequentialid-transact-sql.md) 函数，或将这些函数用作该列的默认值。
 
 ENCRYPTED WITH 使用 [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 功能指定加密列。
 
-COLUMN_ENCRYPTION_KEY = key_name  指定列加密密钥。 有关详细信息，请参阅 [CREATE COLUMN ENCRYPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md)。
+COLUMN_ENCRYPTION_KEY = key_name 指定列加密密钥。 有关详细信息，请参阅 [CREATE COLUMN ENCRYPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md)。
 
-ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED } 确定性加密  对任何给定的纯文本值始终生成相同的加密值。 使用确定性加密可基于加密值进行下列操作：使用相等性比较进行搜索、分组、使用相等性联接联接各表，此外，还允许未经授权的用户通过检查加密列中的模式来猜测加密值的相关信息。 只有使用相同的列加密密钥对两列进行加密，才能在已进行确定性加密的该列上联结两个表。 确定性加密必须使用具有字符列的 binary2 排序顺序的列排序规则。
+ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED } 确定性加密对任何给定的纯文本值始终生成相同的加密值。 使用确定性加密可基于加密值进行下列操作：使用相等性比较进行搜索、分组、使用相等性联接联接各表，此外，还允许未经授权的用户通过检查加密列中的模式来猜测加密值的相关信息。 只有使用相同的列加密密钥对两列进行加密，才能在已进行确定性加密的该列上联结两个表。 确定性加密必须使用具有字符列的 binary2 排序顺序的列排序规则。
 
 **随机加密** 使用一种以更不可预测地方式加密数据的方法。 随机加密更为安全，但会阻止对加密列进行任何计算和索引编制，除非你的 SQL Server 实例支持具有安全 enclave 的 Always Encrypted。 请参阅[具有安全 Enclave 的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md) 以了解详细信息。
 
@@ -523,17 +523,17 @@ ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED } 确定性加密  对任何给�
 
 列必须是符合条件的数据类型。
 
-ALGORITHM 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本）  。
+ALGORITHM 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本）。
 
-须是“AEAD_AES_256_CBC_HMAC_SHA_256”  。
+须是“AEAD_AES_256_CBC_HMAC_SHA_256”。
 
 有关包括功能约束在内的详细信息，请参阅 [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)。
 
 SPARSE 指示列为稀疏列。 稀疏列已针对 NULL 值进行了存储优化。 不能将稀疏列指定为 NOT NULL。 有关稀疏列的其他限制和详细信息，请参阅[使用稀疏列](../../relational-databases/tables/use-sparse-columns.md)。
 
-ADD MASKED WITH ( FUNCTION = ' mask_function ') 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本）   。
+ADD MASKED WITH ( FUNCTION = ' mask_function ') 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本）。
 
-指定动态数据掩码。 mask_function 是具有相应参数的掩码函数的名称  。 有四个函数可供选择：
+指定动态数据掩码。 mask_function 是具有相应参数的掩码函数的名称。 有四个函数可供选择：
 
 - default()
 - email()
@@ -542,17 +542,17 @@ ADD MASKED WITH ( FUNCTION = ' mask_function ') 适用对象：[!INCLUDE[ssNoVer
 
 有关函数参数的信息，请参阅[动态数据掩码](../../relational-databases/security/dynamic-data-masking.md)。
 
-FILESTREAM 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 及更高版本） 
+FILESTREAM 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 及更高版本）
 
-仅对 varbinary(max) 列有效  。 请为 varbinary(max) BLOB 数据指定 FILESTREAM 存储  。
+仅对 varbinary(max) 列有效。 请为 varbinary(max) BLOB 数据指定 FILESTREAM 存储。
 
-表中还必须包含一个具有 ROWGUIDCOL 特性的 uniqueidentifier 数据类型列  。 此列不得为空值且必须具有 UNIQUE 或 PRIMARY KEY 单列约束。 该列的 GUID 值可由应用程序在插入数据时提供，也可由使用 NEWID () 函数的 DEFAULT 约束提供。
+表中还必须包含一个具有 ROWGUIDCOL 特性的 uniqueidentifier 数据类型列。 此列不得为空值且必须具有 UNIQUE 或 PRIMARY KEY 单列约束。 该列的 GUID 值可由应用程序在插入数据时提供，也可由使用 NEWID () 函数的 DEFAULT 约束提供。
 
 如果为表定义了 FILESTREAM 列，则不能删除 ROWGUIDCOL 列并且不能更改相关的约束。 仅当删除了最后一个 FILESTREAM 列后，才能删除 ROWGUIDCOL 列。
 
 当为某个列指定了 FILESTREAM 存储属性时，该列的所有值都将存储在文件系统上的 FILESTREAM 数据容器中。
 
-COLLATE collation_name  指定列的排序规则。 排序规则名称既可以是 Windows 排序规则名称，也可以是 SQL 排序规则名称。 collation_name 仅适用于 char、varchar、text、nchar、nvarchar 和 ntext 数据类型列        。 如果没有指定该参数，则该列的排序规则是用户定义数据类型的排序规则（如果列为用户定义数据类型）或数据库的默认排序规则。
+COLLATE collation_name 指定列的排序规则。 排序规则名称既可以是 Windows 排序规则名称，也可以是 SQL 排序规则名称。 collation_name 仅适用于 char、varchar、text、nchar、nvarchar 和 ntext 数据类型列     。 如果没有指定该参数，则该列的排序规则是用户定义数据类型的排序规则（如果列为用户定义数据类型）或数据库的默认排序规则。
 
 有关 Windows 和 SQL 排序规则名称的详细信息，请参阅 [Windows 排序规则名称](../../t-sql/statements/windows-collation-name-transact-sql.md)和 [SQL 排序规则名称](../../t-sql/statements/sql-server-collation-name-transact-sql.md)。
 
@@ -560,7 +560,7 @@ COLLATE collation_name  指定列的排序规则。 排序规则名称既可以�
 
 CONSTRAINT 可选关键字，表示 PRIMARY KEY、NOT NULL、UNIQUE、FOREIGN KEY 或 CHECK 约束定义的开始。
 
-constraint_name  是约束的名称。 约束名称必须在表所属的架构中唯一。
+constraint_name 是约束的名称。 约束名称必须在表所属的架构中唯一。
 
 NULL | NOT NULL 确定列中是否允许使用空值。 严格来讲，NULL 不是约束，但可以像指定 NOT NULL 那样指定它。 只有同时指定了 PERSISTED 时，才能为计算列指定 NOT NULL。
 
@@ -574,11 +574,11 @@ CLUSTERED | NONCLUSTERED 指示为 PRIMARY KEY 或 UNIQUE 约束创建聚集索�
 
 FOREIGN KEY REFERENCES 为列中的数据提供引用完整性的约束。 FOREIGN KEY 约束要求列中的每个值在所引用的表中对应的被引用列中都存在。 FOREIGN KEY 约束只能引用在所引用的表中是 PRIMARY KEY 或 UNIQUE 约束的列，或所引用的表中在 UNIQUE INDEX 内的被引用列。 计算列上的外键也必须标记为 PERSISTED。
 
-[ schema\_name  .  ] referenced_table_name  ] 是 FOREIGN KEY 约束引用的表的名称，以及该表所属架构的名称。
+[ schema\_name.] referenced_table_name] 是 FOREIGN KEY 约束引用的表的名称，以及该表所属架构的名称。
 
-( ref_column [ ,... n ] ) 是 FOREIGN KEY 约束所引用的表中的一列或多列      。
+( ref_column [ ,... n ] ) 是 FOREIGN KEY 约束所引用的表中的一列或多列。
 
-ON DELETE { NO ACTION  | CASCADE | SET NULL | SET DEFAULT } 指定如果已创建表中的行具有引用关系，并且被引用行已从父表中删除，则对这些行采取的操作。 默认值为 NO ACTION。
+ON DELETE { NO ACTION | CASCADE | SET NULL | SET DEFAULT } 指定如果已创建表中的行具有引用关系，并且被引用行已从父表中删除，则对这些行采取的操作。 默认值为 NO ACTION。
 
 NO ACTION [!INCLUDE[ssDE](../../includes/ssde-md.md)]将引发错误，并回滚对父表中行的删除操作。
 
@@ -592,13 +592,13 @@ SET DEFAULT 如果父表中对应的行被删除，则组成外键的所有值�
 
 如果表中已存在 `INSTEAD OF` 触发器 `ON DELETE`，则无法定义 `ON DELETE CASCADE`。
 
-例如，在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中，ProductVendor 表与 Vendor 表有引用关系   。 ProductVendor.BusinessEntityID 外键引用 Vendor.BusinessEntityID 主键   。
+例如，在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中，ProductVendor 表与 Vendor 表有引用关系 。 ProductVendor.BusinessEntityID 外键引用 Vendor.BusinessEntityID 主键 。
 
-如果对 Vendor 表中的某行执行 `DELETE` 语句，并且为 ProductVendor.BusinessEntityID 指定 `ON DELETE CASCADE` 操作，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将检查 ProductVendor 表中的一个或多个依赖行    。 如果存在依赖行，则 ProductVendor 表中的依赖行将随 Vendor 表中的被引用行一同删除   。
+如果对 Vendor 表中的某行执行 `DELETE` 语句，并且为 ProductVendor.BusinessEntityID 指定 `ON DELETE CASCADE` 操作，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将检查 ProductVendor 表中的一个或多个依赖行  。 如果存在依赖行，则 ProductVendor 表中的依赖行将随 Vendor 表中的被引用行一同删除 。
 
-相反，如果指定了 `NO ACTION`，并且 ProductVendor 表中至少有一行引用了 Vendor 行，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 会引发错误并回滚对 Vendor 进行行的删除操作   。
+相反，如果指定了 `NO ACTION`，并且 ProductVendor 表中至少有一行引用了 Vendor 行，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 会引发错误并回滚对 Vendor 进行行的删除操作 。
 
-ON UPDATE { NO ACTION  | CASCADE | SET NULL | SET DEFAULT } 指定在发生更改的表中，如果行有引用关系且引用的行在父表中被更新，则对这些行采取什么操作。 默认值为 NO ACTION。
+ON UPDATE { NO ACTION | CASCADE | SET NULL | SET DEFAULT } 指定在发生更改的表中，如果行有引用关系且引用的行在父表中被更新，则对这些行采取什么操作。 默认值为 NO ACTION。
 
 NO ACTION [!INCLUDE[ssDE](../../includes/ssde-md.md)]将引发错误，并回滚对父表中相应行的更新操作。
 
@@ -612,39 +612,39 @@ SET DEFAULT 如果更新了父表中的相应行，则会将构成外键的所�
 
 如果被更改的表中已有 `INSTEAD OF` 触发器 `ON UPDATE`，则不能定义 `ON UPDATE CASCADE`、`SET NULL` 或 `SET DEFAULT`。
 
-例如，在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中，ProductVendor 表与 Vendor 表有引用关系   ：ProductVendor.BusinessEntity 外键引用 Vendor.BusinessEntityID 主键   。
+例如，在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中，ProductVendor 表与 Vendor 表有引用关系 ：ProductVendor.BusinessEntity 外键引用 Vendor.BusinessEntityID 主键 。
 
-如果对 Vendor 表中的行执行 UPDATE 语句，并且为 ProductVendor.BusinessEntityID 指定了 ON UPDATE CASCADE 操作，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将检查 ProductVendor 表中的一个或多个依赖行    。 如果存在依赖行，则 ProductVendor 表中的依赖行将随 Vendor 表中的被引用行一同更新   。
+如果对 Vendor 表中的行执行 UPDATE 语句，并且为 ProductVendor.BusinessEntityID 指定了 ON UPDATE CASCADE 操作，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将检查 ProductVendor 表中的一个或多个依赖行  。 如果存在依赖行，则 ProductVendor 表中的依赖行将随 Vendor 表中的被引用行一同更新 。
 
-反之，如果指定了 NO ACTION，并且 ProductVendor 表中至少有一行引用 Vendor 行，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将引发错误并回滚对 Vendor 行的更新操作   。
+反之，如果指定了 NO ACTION，并且 ProductVendor 表中至少有一行引用 Vendor 行，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将引发错误并回滚对 Vendor 行的更新操作 。
 
 CHECK 一个约束，该约束通过限制可输入一列或多列中的可能值来强制实现域完整性。 计算列上的 CHECK 约束也必须标记为 PERSISTED。
 
-logical_expression  返回 TRUE 或 FALSE 的逻辑表达式。 别名数据类型不能作为表达式的一部分。
+logical_expression 返回 TRUE 或 FALSE 的逻辑表达式。 别名数据类型不能作为表达式的一部分。
 
-column  用括号括起来的一列或多列，在表约束中表示这些列用在约束定义中。
+column 用括号括起来的一列或多列，在表约束中表示这些列用在约束定义中。
 
-[ ASC  | DESC ] 指定加入到表约束中的一列或多列的排序顺序。 默认值为 ASC。
+[ ASC | DESC ] 指定加入到表约束中的一列或多列的排序顺序。 默认值为 ASC。
 
-partition_scheme_name  分区架构的名称，该分区架构定义要将已分区表的分区映射到的文件组。 数据库中必须存在该分区架构。
+partition_scheme_name 分区架构的名称，该分区架构定义要将已分区表的分区映射到的文件组。 数据库中必须存在该分区架构。
 
-[ _partition\_column\_name_ **.** ] 指定对已分区表进行分区所依据的列。 此列必须与 partition_scheme_name 在数据类型、长度和精度方面使用的分区函数中指定的列相匹配  。 必须将参与分区函数的计算列显式标记为 PERSISTED。
+[ _partition\_column\_name_ **.** ] 指定对已分区表进行分区所依据的列。 此列必须与 partition_scheme_name 在数据类型、长度和精度方面使用的分区函数中指定的列相匹配。 必须将参与分区函数的计算列显式标记为 PERSISTED。
 
 > [!IMPORTANT]
 > 建议您对分区表的分区列以及作为 ALTER TABLE...SWITCH 操作源或目标的非分区表指定 NOT NULL。 这样做可确保分区列上的所有 CHECK 约束都不必检查 Null 值。
 
-WITH FILLFACTOR =  fillfactor  指定[!INCLUDE[ssDE](../../includes/ssde-md.md)]存储索引数据时每个索引页的填充程度。 用户指定的 fillfactor 值的范围可以为 1 到 100  。 如果未指定值，则默认值为 0。 填充因子的值 0 和 100 在所有方面都是相同的。
+WITH FILLFACTOR =fillfactor 指定[!INCLUDE[ssDE](../../includes/ssde-md.md)]存储索引数据时每个索引页的填充程度。 用户指定的 fillfactor 值的范围可以为 1 到 100。 如果未指定值，则默认值为 0。 填充因子的值 0 和 100 在所有方面都是相同的。
 
 > [!IMPORTANT]
-> 将 WITH FILLFACTOR = fillfactor 记录为适用于 PRIMARY KEY 或 UNIQUE 约束的唯一索引选项是为了保持向后兼容，但在未来的版本中将不会以此方式进行记录  。
+> 将 WITH FILLFACTOR = fillfactor 记录为适用于 PRIMARY KEY 或 UNIQUE 约束的唯一索引选项是为了保持向后兼容，但在未来的版本中将不会以此方式进行记录。
 
-column_set_name  XML COLUMN_SET FOR ALL_SPARSE_COLUMNS 列集的名称。 列集是一种非类型化的 XML 表示形式，它将表的所有稀疏列合并为一种结构化的输出。 有关列集的详细信息，请参阅 [使用列集](../../relational-databases/tables/use-column-sets.md)。
+column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS 列集的名称。 列集是一种非类型化的 XML 表示形式，它将表的所有稀疏列合并为一种结构化的输出。 有关列集的详细信息，请参阅 [使用列集](../../relational-databases/tables/use-column-sets.md)。
 
-PERIOD FOR SYSTEM_TIME ( system_start_time_column_name , system_end_time_column_name ) 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]    。
+PERIOD FOR SYSTEM_TIME ( system_start_time_column_name , system_end_time_column_name ) 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。
 
 指定系统用于记录有效记录时间段的列的名称。 将此参数与 GENERATED ALWAYS AS ROW { START | END } 参数和 WITH SYSTEM_VERSIONING = ON 参数结合使用，启用表的系统版本控制。 有关详细信息，请参阅 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)。
 
-COMPRESSION_DELAY 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。
+COMPRESSION_DELAY 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 为内存优化，延迟指定行须在其能够压缩到列存储索引之前在表中保持不变的最小分钟数。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 根据行的最近更新时间选择要进行压缩的特定行。 例如，如果行在两个小时内频繁更改，则可以设置 `COMPRESSION_DELAY = 120 Minutes` 以确保在 SQL Server 压缩此行之前完成更新。
 
@@ -670,15 +670,15 @@ COLUMNSTORE
 
 仅适用于列存储索引，包括非聚集列存储索引和聚集列存储索引。 COLUMNSTORE 指定使用性能最高的列存储压缩进行压缩。 这是典型选择。
 
-COLUMNSTORE_ARCHIVE 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。
+COLUMNSTORE_ARCHIVE 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 仅适用于列存储索引，包括非聚集列存储索引和聚集列存储索引。 COLUMNSTORE_ARCHIVE 会进一步将表或分区压缩得更小。 这可用于存档，或者用于要求更小存储大小并且可以付出更多时间来进行存储和检索的其他情形。
 
 有关详细信息，请参阅 [Data Compression](../../relational-databases/data-compression/data-compression.md)。
 
-ON PARTITIONS (  { `<partition_number_expression>` | [ ,  ...n  ] )  指定对其应用 DATA_COMPRESSION 设置的分区。 如果未对表进行分区，则 `ON PARTITIONS` 参数将生成错误。 如果未提供 `ON PARTITIONS` 子句，`DATA_COMPRESSION` 选项则将应用于分区表的所有分区。
+ON PARTITIONS ( { `<partition_number_expression>` | [ ,...n ] ) 指定对其应用 DATA_COMPRESSION 设置的分区。 如果未对表进行分区，则 `ON PARTITIONS` 参数将生成错误。 如果未提供 `ON PARTITIONS` 子句，`DATA_COMPRESSION` 选项则将应用于分区表的所有分区。
 
-可以按以下方式指定 partition_number_expression  ：
+可以按以下方式指定 partition_number_expression：
 
 - 提供分区的分区号，例如：`ON PARTITIONS (2)`
 - 提供若干单独分区的分区号，并用逗号分隔，例如：`ON PARTITIONS (1, 5)`
@@ -699,11 +699,11 @@ WITH
 
 \<index_option> ::= 指定一个或多个索引选项。 有关这些操作的完整说明，请参阅 [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)。
 
-PAD_INDEX = { ON | OFF  } 如果为 ON，则 FILLFACTOR 指定的可用空间百分比将应用于该索引的中间级别页。 如果未指定 OFF 或 FILLFACTOR 值，则考虑到中间级别页的键集，将中间级别页填充到一个近似容量，以留出足够的空间来容纳至少一个索引的最大行。 默认为 OFF。
+PAD_INDEX = { ON | OFF } 如果为 ON，则 FILLFACTOR 指定的可用空间百分比将应用于该索引的中间级别页。 如果未指定 OFF 或 FILLFACTOR 值，则考虑到中间级别页的键集，将中间级别页填充到一个近似容量，以留出足够的空间来容纳至少一个索引的最大行。 默认为 OFF。
 
-FILLFACTOR =  fillfactor  指定一个百分比，指示在[!INCLUDE[ssDE](../../includes/ssde-md.md)]创建或修改索引的过程中，应将每个索引页面的叶级填充到什么程度。 fillfactor 必须是 1 到 100 之间的整数  。 默认值为 0。 填充因子的值 0 和 100 在所有方面都是相同的。
+FILLFACTOR =fillfactor 指定一个百分比，指示在[!INCLUDE[ssDE](../../includes/ssde-md.md)]创建或修改索引的过程中，应将每个索引页面的叶级填充到什么程度。 fillfactor 必须是 1 到 100 之间的整数。 默认值为 0。 填充因子的值 0 和 100 在所有方面都是相同的。
 
-IGNORE_DUP_KEY = { ON | OFF  } 指定在插入操作尝试向唯一索引中插入重复键值时的错误响应。 IGNORE_DUP_KEY 选项仅适用于创建或重新生成索引后发生的插入操作。 当执行 [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)、[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) 或 [UPDATE](../../t-sql/queries/update-transact-sql.md) 时，该选项无效。 默认为 OFF。
+IGNORE_DUP_KEY = { ON | OFF } 指定在插入操作尝试向唯一索引中插入重复键值时的错误响应。 IGNORE_DUP_KEY 选项仅适用于创建或重新生成索引后发生的插入操作。 当执行 [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)、[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) 或 [UPDATE](../../t-sql/queries/update-transact-sql.md) 时，该选项无效。 默认为 OFF。
 
 ON 向唯一索引插入重复键值时将出现警告消息。 只有违反唯一性约束的行才会失败。
 
@@ -715,55 +715,55 @@ OFF 向唯一索引插入重复键值时将出现错误消息。 整个 INSERT �
 
 在后向兼容语法中，`WITH IGNORE_DUP_KEY` 等同于 `WITH IGNORE_DUP_KEY = ON`。
 
-STATISTICS_NORECOMPUTE =  { ON | OFF  } 如果为 ON，则过期的索引统计信息不会自动重新计算。 如果为 OFF，则启用自动统计信息更新。 默认为 OFF。
+STATISTICS_NORECOMPUTE = { ON | OFF } 如果为 ON，则过期的索引统计信息不会自动重新计算。 如果为 OFF，则启用自动统计信息更新。 默认为 OFF。
 
-ALLOW_ROW_LOCKS =  { ON  | OFF } 如果为 ON，则访问索引时允许使用行锁。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]确定何时使用行锁。 如果为 OFF，则不使用行锁。 默认值为 ON。
+ALLOW_ROW_LOCKS = { ON | OFF } 如果为 ON，则访问索引时允许使用行锁。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]确定何时使用行锁。 如果为 OFF，则不使用行锁。 默认值为 ON。
 
-ALLOW_PAGE_LOCKS =  { ON  | OFF } 如果为 ON，则访问索引时允许使用页锁。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]确定何时使用页锁。 如果为 OFF，则不使用页锁。 默认值为 ON。
+ALLOW_PAGE_LOCKS = { ON | OFF } 如果为 ON，则访问索引时允许使用页锁。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]确定何时使用页锁。 如果为 OFF，则不使用页锁。 默认值为 ON。
 
-OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF  } **适用于**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 及更高版本。 <BR>
+OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF } **适用于**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 及更高版本。 <BR>
 指定是否针对最后一页插入争用进行优化。 默认为 OFF。 有关详细信息，请参阅“CREATE INDEX”页的[顺序键](./create-index-transact-sql.md#sequential-keys)部分。
 
-FILETABLE_DIRECTORY = directory_name 
+FILETABLE_DIRECTORY = directory_name
 
 **适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本）。
 
 指定与 windows 兼容的 FileTable 目录名称。 此名称应在数据库的所有 FileTable 目录名称中唯一。 无论排序规则如何设置，唯一性比较都不区分大小写。 如果未指定此值，则使用 filetable 这个名称。
 
-FILETABLE_COLLATE_FILENAME = { collation_name | database_default } 
+FILETABLE_COLLATE_FILENAME = { collation_name | database_default }
 
 **适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本）。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 不支持 `FILETABLE`。
 
 指定要应用于 FileTable 的“名称”  列的排序规则名称。 排序规则必须不区分大小写，以遵守 Windows 操作系统文件命名语义。 如果未指定此值，则使用数据库默认排序规则。 如果数据库默认排序规则区分大小写，将引发错误，CREATE TABLE 操作将失败。
 
-collation_name  不区分大小写的排序规则的名称。
+collation_name 不区分大小写的排序规则的名称。
 
 database_default 指定应使用数据库的默认排序规则。 此排序规则必须不区分大小写。
 
 FILETABLE_PRIMARY_KEY_CONSTRAINT_NAME = constraint_name
- 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本）   。
+ 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本）。
 
 指定要对自动为 FileTable 创建的主键约束使用的名称。 如果未指定此值，则系统将为该约束生成一个名称。
 
 FILETABLE_STREAMID_UNIQUE_CONSTRAINT_NAME = constraint_name
- 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本）   。
+ 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本）。
 
-指定要对自动为 FileTable 中的 stream_id 列创建的唯一约束使用的名称  。 如果未指定此值，则系统将为该约束生成一个名称。
+指定要对自动为 FileTable 中的 stream_id 列创建的唯一约束使用的名称。 如果未指定此值，则系统将为该约束生成一个名称。
 
 FILETABLE_FULLPATH_UNIQUE_CONSTRAINT_NAME = constraint_name
- 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本）   。
+ 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本）。
 
-指定要对自动为 FileTable 中的 parent_path_locator 和 name 列创建的唯一约束使用的名称   。 如果未指定此值，则系统将为该约束生成一个名称。
+指定要对自动为 FileTable 中的 parent_path_locator 和 name 列创建的唯一约束使用的名称 。 如果未指定此值，则系统将为该约束生成一个名称。
 
-SYSTEM_VERSIONING = ON [ ( HISTORY_TABLE = schema_name .history_table_name [, DATA_CONSISTENCY_CHECK = { ON | OFF } ] ) ] 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]）        。
+SYSTEM_VERSIONING = ON [ ( HISTORY_TABLE = schema_name .history_table_name [, DATA_CONSISTENCY_CHECK = { ON | OFF } ] ) ] 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]）    。
 
 如果数据类型、为 Null 性约束和主键约束需要都满足了，则可启动系统版本控制。 如果未使用 `HISTORY_TABLE` 参数，系统将在与当前表相同的文件组中生成一个符合当前表架构的新历史记录表，从而在两个表之间创建链接，使系统能在历史记录表中记录当前表中每行的历史记录。 此历史记录表的名称为 `MSSQL_TemporalHistoryFor<primary_table_object_id>`。 默认情况下，历史记录表是经过 **PAGE** 压缩的。 如果 `HISTORY_TABLE` 参数用于创建指向现有历史记录表的链接并使用此表，则会在当前表和指定表之间创建链接。 如果当前表已分区，则历史记录表在默认文件组上创建，因为不会自动将分区配置从当前表复制到历史记录表。 如果历史记录表的名称在历史记录表创建期间指定，则必须指定架构和表的名称。 创建现有历史记录表的链接时，可以选择执行数据一致性检查。 数据一致性检查可确保现有记录不重叠。 系统默认执行数据一致性检查。 将此参数与 `PERIOD FOR SYSTEM_TIME` 和 `GENERATED ALWAYS AS ROW { START | END }` 参数结合使用来对表启用系统版本控制。 有关详细信息，请参阅 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)。
 
-REMOTE_DATA_ARCHIVE = { ON [ ( table_stretch_options [,...n] ) ] | OFF ( MIGRATION_STATE = PAUSED ) } 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本）   。
+REMOTE_DATA_ARCHIVE = { ON [ ( table_stretch_options [,...n] ) ] | OFF ( MIGRATION_STATE = PAUSED ) } 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本）。
 
 创建已启用或禁用 Stretch Database 的新表。 有关详细信息，请参阅 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)。
 
-为表启用 Stretch Database 
+为表启用 Stretch Database
 
 指定 `ON` 为表启用 Stretch 时，可选择指定 `MIGRATION_STATE = OUTBOUND` 立即开始迁移数据，也可指定 `MIGRATION_STATE = PAUSED` 推迟迁移数据。 默认值是 `MIGRATION_STATE = OUTBOUND`。 有关为表启用 Stretch 的详细信息，请参阅[为表启用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)。
 
@@ -771,7 +771,7 @@ REMOTE_DATA_ARCHIVE = { ON [ ( table_stretch_options [,...n] ) ] | OFF ( MIGRATI
 
 **权限**。 为数据库或表启用 Stretch 需要 db_owner 权限。 为表启用 Stretch 还需具有表的 ALTER 权限。
 
-[ FILTER_PREDICATE = { null | predicate } ] 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本）   。
+[ FILTER_PREDICATE = { null | predicate } ] 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本）。
 
 根据需要，指定一个筛选器谓词，从包含历史数据和最新数据的表中选择要迁移的行。 该谓词必须调用确定性的内联表值函数。 有关详细信息，请参阅[为表启用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)和[使用筛选器函数选择要迁移的行](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)。
 
@@ -780,9 +780,9 @@ REMOTE_DATA_ARCHIVE = { ON [ ( table_stretch_options [,...n] ) ] | OFF ( MIGRATI
 
 如果未指定筛选器谓词，则将迁移整个表。
 
-指定筛选器谓词时，还须同时指定 MIGRATION_STATE  。
+指定筛选器谓词时，还须同时指定 MIGRATION_STATE。
 
-MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED } 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。
+MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED } 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 - 指定 `OUTBOUND` 以将数据从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 迁移到 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 - 指定 `INBOUND` 以将表的远程数据从 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 复制回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，然后为此表禁用 Stretch Database。 有关详细信息，请参阅 [禁用 Stretch Database 并恢复远程数据](../../sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data.md)。
@@ -791,22 +791,22 @@ MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED } 适用对象：[!INCLUDE[ssNoV
 
 - 指定 `PAUSED` 可暂停或推迟数据迁移。 有关详细信息，请参阅[暂停和恢复数据迁移 - Stretch Database](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md)。
 
-MEMORY_OPTIMIZED 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]）  。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 托管实例不支持内存优化表。
+MEMORY_OPTIMIZED 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]）。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 托管实例不支持内存优化表。
 
 ON 值指示表是否为内存优化表。 内存优化表是内存中 OLTP 功能的一部分，用于优化事务处理的性能。 要开始使用内存中 OLTP，请参阅[快速入门 1：可提高 Transact SQL 性能的内存中 OLTP 技术](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)。 有关内存优化表的详细信息，请参阅[内存优化表](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)。
 
 默认值 OFF 指示表是基于磁盘的表。
 
-DURABILITY 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。
+DURABILITY 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 `SCHEMA_AND_DATA` 的值指示表具有持久性，这意味着更改会持久保留在磁盘上，重新启动或故障转移后仍然存在。 SCHEMA_AND_DATA 是默认值。
 
 `SCHEMA_ONLY` 的值指示表是非持久表。 表架构具有持久化性，但是，数据库重新启动或故障转移之后，任何数据更改都不会保留。 仅允许将 `DURABILITY = SCHEMA_ONLY` 用于 `MEMORY_OPTIMIZED = ON`。
 
 > [!WARNING]
-> 当使用 DURABILITY = SCHEMA_ONLY 创建表，随后使用 ALTER DATABASE 更改 READ_COMMITTED_SNAPSHOT 时，表中的数据将丢失    。
+> 当使用 DURABILITY = SCHEMA_ONLY 创建表，随后使用 ALTER DATABASE 更改 READ_COMMITTED_SNAPSHOT 时，表中的数据将丢失  。
 
-BUCKET_COUNT 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。
+BUCKET_COUNT 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 指示应在哈希索引中创建的存储桶数。 哈希索引中 BUCKET_COUNT 的最大值为 1,073,741,824。 有关桶计数的详细信息，请参阅[内存优化表索引](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)。
 
@@ -816,7 +816,7 @@ INDEX **适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]�
 
 可将列索引和表索引指定为 CREATE TABLE 语句的一部分。 有关在内存优化表中添加和删除索引的详细信息，请参阅：[更改内存优化表](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)
 
-HASH 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。
+HASH 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 指示创建哈希索引。
 
@@ -836,9 +836,9 @@ HASH 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（
 
 可以创建本地临时表和全局临时表。 本地临时表仅在当前会话中可见，而全局临时表在所有会话中都可见。 临时表不能分区。
 
-本地临时表的名称前缀有一个数字符号 (#table_name)，而全局临时表的名称前缀有两个数字符号 (##table_name)   。
+本地临时表的名称前缀有一个数字符号 (#table_name)，而全局临时表的名称前缀有两个数字符号 (##table_name) 。
 
-[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句通过使用 `CREATE TABLE` 语句中为 table_name 指定的值引用临时表，例如  ：
+[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句通过使用 `CREATE TABLE` 语句中为 table_name 指定的值引用临时表，例如：
 
 ```sql
 CREATE TABLE #MyTempTable (
@@ -851,9 +851,9 @@ VALUES (1);
 
 如果在单个存储过程或批处理中创建了多个临时表，则它们必须有不同的名称。
 
-创建或访问临时表时，如果包括 schema_name，它将被忽略  。 所有临时表都在 dbo 架构中进行创建。
+创建或访问临时表时，如果包括 schema_name，它将被忽略。 所有临时表都在 dbo 架构中进行创建。
 
-如果本地临时表由存储过程创建或由多个用户同时执行的应用程序创建，则[!INCLUDE[ssDE](../../includes/ssde-md.md)]必须能够区分由不同用户创建的表。 为此，[!INCLUDE[ssDE](../../includes/ssde-md.md)]在内部为每个本地临时表的表名追加一个数字后缀。 存储在 tempdb 的 sysobjects 表中的临时表，其全名由 CREATE TABLE 语句中指定的表名和系统生成的数字后缀组成   。 为了可追加后缀，为本地临时表指定的 table_name 不能超过 116 个字符  。
+如果本地临时表由存储过程创建或由多个用户同时执行的应用程序创建，则[!INCLUDE[ssDE](../../includes/ssde-md.md)]必须能够区分由不同用户创建的表。 为此，[!INCLUDE[ssDE](../../includes/ssde-md.md)]在内部为每个本地临时表的表名追加一个数字后缀。 存储在 tempdb 的 sysobjects 表中的临时表，其全名由 CREATE TABLE 语句中指定的表名和系统生成的数字后缀组成 。 为了可追加后缀，为本地临时表指定的 table_name 不能超过 116 个字符。
 
 除非使用 DROP TABLE 显式删除临时表，否则临时表将在退出其作用域时由系统自动删除：
 
@@ -957,7 +957,7 @@ Test1Col
 - FOREIGN KEY 约束可引用同一表中的其他列。 此行为称为自引用。
 - 列级 FOREIGN KEY 约束的 REFERENCES 子句只能列出一个引用列。 此列的数据类型必须与定义约束的列的数据类型相同。
 - 表级 FOREIGN KEY 约束的 REFERENCES 子句中引用列的数目必须与约束列列表中的列数相同。 每个引用列的数据类型也必须与列表中相应列的数据类型相同。 引用列的指定顺序必须与指定主键列或引用表上的唯一约束的列时所用的顺序相同。
-- 如果类型为 timestamp 的列是外键或被引用键的一部分，则不能指定 CASCADE、SET NULL 或 SET DEFAULT  。
+- 如果类型为 timestamp 的列是外键或被引用键的一部分，则不能指定 CASCADE、SET NULL 或 SET DEFAULT。
 - 可将 CASCADE、SET NULL、SET DEFAULT 和 NO ACTION 在相互存在引用关系的表上进行组合。 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 遇到 NO ACTION，它将停止并回滚相关的 CASCADE、SET NULL 和 SET DEFAULT 操作。 如果 DELETE 语句导致 CASCADE、SET NULL、SET DEFAULT 和 NO ACTION 操作的组合，则在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 检查所有 NO ACTION 前，将应用所有 CASCADE、SET NULL 和 SET DEFAULT 操作。
 - 对于表可包含的引用其他表的 FOREIGN KEY 约束的数目或其他表所拥有的引用特定表的 FOREIGN KEY 约束的数目， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 都没有预定义的限制。
 
@@ -980,8 +980,8 @@ Test1Col
     |SESSION_USER|执行插入的用户的名称。|
     |SYSTEM_USER|执行插入的用户的名称。|
     |USER|执行插入的用户的名称。|
-- DEFAULT 定义中的 constant_expression 不能引用表中的其他列，也不能引用其他表、视图或存储过程  。
-- 不能对数据类型为 timestamp 的列或具有 IDENTITY 属性的列创建 DEFAULT 定义  。
+- DEFAULT 定义中的 constant_expression 不能引用表中的其他列，也不能引用其他表、视图或存储过程。
+- 不能对数据类型为 timestamp 的列或具有 IDENTITY 属性的列创建 DEFAULT 定义。
 - 如果别名数据类型绑定到默认对象，则不能对该别名数据类型的列创建 DEFAULT 定义。
 
 ## <a name="check-constraints"></a>CHECK 约束
@@ -993,12 +993,12 @@ Test1Col
   当执行 INSERT 和 UPDATE 语句时，CHECK CONSTRAINTS 和规则具有相同的数据验证功能。
 
 - 当列上存在规则和一个或多个 CHECK 约束时，将验证所有限制。
-- 不能在 text、ntext 或 image 列上定义 CHECK 约束    。
+- 不能在 text、ntext 或 image 列上定义 CHECK 约束  。
 
 ## <a name="additional-constraint-information"></a>其他约束信息
 
 - 无法使用 `DROP INDEX` 删除为约束创建的索引；必须使用 `ALTER TABLE` 来删除约束。 可以使用 `ALTER INDEX ... REBUILD` 重新生成已创建的约束用索引。 有关详细信息，请参阅 [重新组织和重新生成索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)。
-- 除了不能以数字符号 (#) 开头以外，约束名称还必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。 如果未提供 constraint_name，则会将系统生成的名称分配给约束  。 约束名将出现在所有与违反约束有关的错误信息中。
+- 除了不能以数字符号 (#) 开头以外，约束名称还必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。 如果未提供 constraint_name，则会将系统生成的名称分配给约束。 约束名将出现在所有与违反约束有关的错误信息中。
 - 当 `INSERT`、`UPDATE` 或 `DELETE` 语句中违反了约束时，将终止执行该语句。 但是，当 `SET XACT_ABORT` 设置为 OFF 时，如果该语句是显式事务的一部分，则继续处理此语句。 当 `SET XACT_ABORT` 设置为 ON 时，将回滚整个事务。 还可以通过检查 `@@ERROR` 系统函数将 `ROLLBACK TRANSACTION` 语句与事务定义一起使用。
 - 如果 `ALLOW_ROW_LOCKS = ON` 且 `ALLOW_PAGE_LOCK = ON`，可以在访问索引时使用行级别、页级别和表级别锁定。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]将选择相应的锁，并且可以将锁从行锁或页锁升级到表锁。 如果 `ALLOW_ROW_LOCKS = OFF` 并且 `ALLOW_PAGE_LOCK = OFF`，则当访问索引时将仅允许表级别的锁。
 - 如果某个表具有 FOREIGN KEY 或 CHECK CONSTRAINTS 及触发器，则将在触发器执行前先检查约束条件。
@@ -1015,18 +1015,18 @@ Test1Col
 
 |列数据类型|规则|
 |----------------------|----------|
-|别名数据类型|[!INCLUDE[ssDE](../../includes/ssde-md.md)]使用创建数据类型时指定的为 Null 性。 若要确定数据类型的默认为 Null 性，请使用 sp_help  。|
+|别名数据类型|[!INCLUDE[ssDE](../../includes/ssde-md.md)]使用创建数据类型时指定的为 Null 性。 若要确定数据类型的默认为 Null 性，请使用 sp_help。|
 |CLR 用户定义类型 (CLR user-defined type)|根据列定义确定为 Null 性。|
-|系统提供的数据类型|如果系统提供的数据类型只有一个选项，则优先使用该选项。 timestamp 数据类型必须为 NOT NULL  。 当任何会话设置通过 SET 设置为 ON 时：<br />如果 ANSI_NULL_DFLT_ON = ON，则分配 NULL  。 <br />如果 ANSI_NULL_DFLT_OFF = ON，则分配 NOT NULL  。<br /><br /> 当任何数据库设置通过 ALTER DATABASE 进行配置时：<br />如果 ANSI_NULL_DEFAULT_ON = ON，则分配 NULL  。 <br />如果 ANSI_NULL_DEFAULT_OFF = ON，则分配 NOT NULL  。<br /><br /> 若要查看 ANSI_NULL_DEFAULT 的数据库设置，请使用 sys.databases 目录视图 |
+|系统提供的数据类型|如果系统提供的数据类型只有一个选项，则优先使用该选项。 timestamp 数据类型必须为 NOT NULL。 当任何会话设置通过 SET 设置为 ON 时：<br />如果 ANSI_NULL_DFLT_ON = ON，则分配 NULL。 <br />如果 ANSI_NULL_DFLT_OFF = ON，则分配 NOT NULL。<br /><br /> 当任何数据库设置通过 ALTER DATABASE 进行配置时：<br />如果 ANSI_NULL_DEFAULT_ON = ON，则分配 NULL。 <br />如果 ANSI_NULL_DEFAULT_OFF = ON，则分配 NOT NULL。<br /><br /> 若要查看 ANSI_NULL_DEFAULT 的数据库设置，请使用 sys.databases 目录视图|
 
 如果没有为会话设置任何 ANSI_NULL_DFLT 选项，并且将数据库设置为默认值（ANSI_NULL_DEFAULT 为 OFF），则会分配默认值 NOT NULL。
 
-如果该列是计算列，则其为 Null 性总是由[!INCLUDE[ssDE](../../includes/ssde-md.md)]自动确定。 若要查找此类型列的为 Null 性，请使用带 AllowsNull 属性的 `COLUMNPROPERTY` 函数  。
+如果该列是计算列，则其为 Null 性总是由[!INCLUDE[ssDE](../../includes/ssde-md.md)]自动确定。 若要查找此类型列的为 Null 性，请使用带 AllowsNull 属性的 `COLUMNPROPERTY` 函数。
 
 > [!NOTE]
 > SQL Server ODBC 驱动程序和 SQL Server OLE DB 驱动程序都默认将 ANSI_NULL_DFLT_ON 设置为 ON。 ODBC 和 OLE DB 用户可以在 ODBC 数据源中配置该设置，或通过应用程序设置的连接特性或属性配置该设置。
 
-## <a name="data-compression"></a>Data Compression
+## <a name="data-compression"></a>数据压缩
 
 不能为系统表启用压缩功能。 在创建表时，除非另外指定，否则，将数据压缩设置为 NONE。 如果指定的分区列表或分区超出范围，将生成错误。 有关数据压缩的详细信息，请参阅 [数据压缩](../../relational-databases/data-compression/data-compression.md)。
 
@@ -1165,7 +1165,7 @@ ON PRIMARY;
 
 ### <a name="g-creating-a-table-with-an-xml-column-typed-to-an-xml-schema-collection"></a>G. 创建其 xml 列键入 XML 架构集合的表
 
-以下示例创建一个表，其 `xml` 列将键入 XML 架构集合 `HRResumeSchemaCollection`。 `DOCUMENT` 关键字指定 column_name 中 `xml` 数据类型的每个实例只能包含一个顶级元素  。
+以下示例创建一个表，其 `xml` 列将键入 XML 架构集合 `HRResumeSchemaCollection`。 `DOCUMENT` 关键字指定 column_name 中 `xml` 数据类型的每个实例只能包含一个顶级元素。
 
 ```sql
 CREATE TABLE HumanResources.EmployeeResumes
@@ -1199,7 +1199,7 @@ GO
 
 |文件组|test1fg|test2fg|test3fg|test4fg|
 |---------------|-------------|-------------|-------------|-------------|
-|分区 |1|2|3|4|
+|分区|1|2|3|4|
 |**值**|col 1 \<= 1|col1 > 1 AND col1 \<= 100|col1 > 100 AND col1 \<= 1,000|col1 > 1000|
 
 ### <a name="i-using-the-uniqueidentifier-data-type-in-a-column"></a>I. 在列中使用 uniqueidentifier 数据类型
@@ -1232,7 +1232,7 @@ CREATE TABLE dbo.mytable
 
 ### <a name="k-creating-a-computed-column-based-on-a-user-defined-type-column"></a>K. 基于用户定义类型列创建计算列
 
-以下示例将创建一个表，其中一列定义为用户定义类型 `utf8string`，并假设此类型的程序集和类型本身已在当前数据库中创建。 另一列是基于 `utf8string` 定义的，使用 type(class)`utf8string` 的 `ToString()` 方法计算列值  。
+以下示例将创建一个表，其中一列定义为用户定义类型 `utf8string`，并假设此类型的程序集和类型本身已在当前数据库中创建。 另一列是基于 `utf8string` 定义的，使用 type(class)`utf8string` 的 `ToString()` 方法计算列值。
 
 ```sql
 CREATE TABLE UDTypeTable

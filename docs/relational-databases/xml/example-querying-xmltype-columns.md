@@ -1,5 +1,6 @@
 ---
-title: 示例：查询 XML 类型的列 | Microsoft Docs
+title: 示例：查询 XMLType 列 | Microsoft Docs
+description: 查看有关如何查询 xml 数据类型的列的示例。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: d9f3710d-7a2e-4abe-9c02-3e3c0df4d620
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9dcfe0dd5dea972145c35ddce9b75b1fb009ccb9
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: d5e28c3b6a68e765287cfcc2934c06fb25270f5d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664533"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633118"
 ---
-# <a name="example-querying-xmltype-columns"></a>示例：查询 XML 类型的列
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# <a name="example-querying-xmltype-columns"></a>示例：查询 XMLType 列
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   下面的查询包括 **xml** 类型的列。 该查询从 `Instructions` xml **类型的** 列的第一个位置检索产品型号 ID、名称和生产步骤。  
   
 ## <a name="example"></a>示例  

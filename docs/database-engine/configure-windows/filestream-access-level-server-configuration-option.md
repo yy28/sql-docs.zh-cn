@@ -1,5 +1,6 @@
 ---
 title: “文件流访问级别”服务器配置选项 | Microsoft Docs
+description: 熟悉“filestream_access_level”选项。 了解它如何更改 SQL Server 实例的 FILESTREAM 访问级别。
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - FILESTREAM [SQL Server], access level
 - filestream access level
 ms.assetid: b88f6ff2-795e-4730-bfb8-dbc6a958f2ad
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 8335f821e2bd4026c17b0054e047125a0afd0177
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b891ba283acb1176a60bcc64105e126192aa8225
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68011701"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772452"
 ---
 # <a name="filestream-access-level-server-configuration-option"></a>filestream access level 服务器配置选项
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   可以使用 filestream_access_level 选项来更改此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的 FILESTREAM 访问级别。  
   

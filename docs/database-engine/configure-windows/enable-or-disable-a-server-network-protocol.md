@@ -1,5 +1,6 @@
 ---
 title: 启用或禁用服务器网络协议 | Microsoft Docs
+description: 了解如何启用或禁用服务器网络协议。 了解如何使用 SQL Server 配置管理器或 PowerShell 执行此任务。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,17 +19,17 @@ helpviewer_keywords:
 - surface area configuration [SQL Server], connection protocols
 - connections [SQL Server], enabling remote using Configuration Manager
 ms.assetid: ec5ccb69-61c9-4576-8843-014b976fd46e
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 914250b46e7608f3b0977a2b5c4d7218032989f5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4b63c205a6953a751507abdd67abb229b5f15387
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68011819"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772500"
 ---
 # <a name="enable-or-disable-a-server-network-protocol"></a>启用或禁用服务器网络协议
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所有网络协议都是由  安装程序安装的，可以启用也可以禁用这些网络协议。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 本主题介绍如何通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器或 PowerShell，在  中启用或禁用服务器网络协议。 必须停止并重新启动 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ，更改才能生效。  
   
 > [!IMPORTANT]  
@@ -49,15 +50,15 @@ ms.locfileid: "68011819"
   
 #### <a name="to-enable-a-server-network-protocol"></a>启用服务器网络协议  
   
-1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在  配置管理器的控制台窗格中，展开“SQL Server 网络配置”。  
+1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 配置管理器的控制台窗格中，展开“SQL Server 网络配置”。  
   
-2.  在控制台窗格中，单击“**实例名称> 的协议”** _\<_ 。  
+2.  在控制台窗格中，单击“\<instance name> 的协议”。  
   
-3.  在细节窗格中，右键单击要更改的协议，再单击“启用”  或“禁用”  。  
+3.  在细节窗格中，右键单击要更改的协议，再单击“启用”  或“禁用” 。  
   
-4.  在控制台窗格中，单击“SQL Server 服务”。   
+4.  在控制台窗格中，单击“SQL Server 服务”。  
   
-5.  在细节窗格中，右键单击“SQL Server (\<实例名称>)”，然后单击“重启”停止并重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。  
+5.  在详细信息窗格中，右键单击“SQL Server (\<instance name>)”，然后单击“重新启动”以停止并重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务 。  
   
 ##  <a name="using-sql-server-powershell"></a><a name="PowerShellProcedure"></a> 使用 SQL Server PowerShell  
   
@@ -67,7 +68,7 @@ ms.locfileid: "68011819"
   
 2.  可以从任务栏启动 Windows PowerShell，也可以通过依次单击“开始”、“所有程序”、“附件”、“Windows PowerShell”、“Windows PowerShell”来启动。  
   
-3.  通过输入“sqlps”导入“Import-Module “sqlps””模块   。  
+3.  通过输入“sqlps”导入“Import-Module “sqlps””模块 。  
   
 4.  执行以下语句以启用 TCP 和 Named Pipes 协议。 `<computer_name>` 将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]替换为运行  的计算机的名称。 `MSSQLSERVER` 如果您在配置命名实例，请将  替换为该实例的名称。  
   

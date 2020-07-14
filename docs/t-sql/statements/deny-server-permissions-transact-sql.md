@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 68d6b2a9-c36f-465a-9cd2-01d43a667e99
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: de59423c368bc966fab3958fbeb4b04888f4e2a8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 32a379b4b8df00f4929fad6bcef53d4504c5324d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68114779"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766671"
 ---
 # <a name="deny-server-permissions-transact-sql"></a>DENY 服务器权限 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   拒绝服务器的权限。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "68114779"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 DENY permission [ ,...n ]   
     TO <grantee_principal> [ ,...n ]  
     [ CASCADE ]  
@@ -55,7 +55,7 @@ DENY permission [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>参数  
- permission   
+ permission  
  指定可对服务器拒绝的权限。 有关权限的列表，请参阅本主题后面的“备注”部分。  
   
  CASCADE  
@@ -70,22 +70,22 @@ DENY permission [ ,...n ]
   
 在此语句中使用 AS 并不意味着能够模拟其他用户。    
   
- SQL_Server_login   
+ SQL_Server_login  
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。  
   
- SQL_Server_login_mapped_to_Windows_login   
+ SQL_Server_login_mapped_to_Windows_login  
  指定映射到 Windows 登录名的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。  
   
- SQL_Server_login_mapped_to_Windows_group   
+ SQL_Server_login_mapped_to_Windows_group  
  指定映射到 Windows 组的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。  
   
- SQL_Server_login_mapped_to_certificate   
+ SQL_Server_login_mapped_to_certificate  
  指定映射到证书的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。  
   
- SQL_Server_login_mapped_to_asymmetric_key   
+ SQL_Server_login_mapped_to_asymmetric_key  
  指定映射到非对称密钥的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。  
   
- server_role   
+ server_role  
  指定服务器角色。  
   
 ## <a name="remarks"></a>备注  
@@ -126,7 +126,7 @@ DENY permission [ ,...n ]
 |EXTERNAL ACCESS ASSEMBLY|CONTROL SERVER|  
 |IMPERSONATE ANY LOGIN<br /><br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|CONTROL SERVER|  
 |SELECT ALL USER SECURABLES<br /><br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|CONTROL SERVER|  
-|关机|CONTROL SERVER|  
+|SHUTDOWN|CONTROL SERVER|  
 |UNSAFE ASSEMBLY|CONTROL SERVER|  
 |VIEW ANY DATABASE|VIEW ANY DEFINITION|  
 |VIEW ANY DEFINITION|CONTROL SERVER|  
@@ -135,14 +135,14 @@ DENY permission [ ,...n ]
 ## <a name="remarks"></a>备注  
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中添加了以下三个服务器权限。  
   
- CONNECT ANY DATABASE 权限   
- 将 CONNECT ANY DATABASE 授予某个登录名，该登录名必须连接到当前存在的所有数据库和将来可能创建的任何新数据库。  不要在任何数据库中授予超过连接的任何权限。 与 SELECT ALL USER SECURABLES 或 VIEW SERVER STATE 结合使用，可审核进程查看所有数据或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上的所有数据库状态。   
+ CONNECT ANY DATABASE 权限  
+ 将 CONNECT ANY DATABASE 授予某个登录名，该登录名必须连接到当前存在的所有数据库和将来可能创建的任何新数据库。 不要在任何数据库中授予超过连接的任何权限。 与 SELECT ALL USER SECURABLES 或 VIEW SERVER STATE 结合使用，可审核进程查看所有数据或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上的所有数据库状态。   
   
- IMPERSONATE ANY LOGIN 权限   
- 授予后，当连接到数据库时，允许中间层进程模拟连接到它的客户端帐户。 被拒绝时，高特权的登录名可以阻止模拟其他登录名。 例如，可通过模拟其他登录名来阻止具有 CONTROL SERVER 权限的登录名。   
+ IMPERSONATE ANY LOGIN 权限  
+ 授予后，当连接到数据库时，允许中间层进程模拟连接到它的客户端帐户。 被拒绝时，高特权的登录名可以阻止模拟其他登录名。 例如，可通过模拟其他登录名来阻止具有 CONTROL SERVER 权限的登录名。  
   
- SELECT ALL USER SECURABLES 权限   
- 授予后，作者等登录名可以查看用户可连接到的所有数据库中的数据。 被拒绝时，阻止访问对象，除非这些对象处于 sys 架构中。   
+ SELECT ALL USER SECURABLES 权限  
+ 授予后，作者等登录名可以查看用户可连接到的所有数据库中的数据。 被拒绝时，阻止访问对象，除非这些对象处于 sys 架构中。  
   
 ## <a name="permissions"></a>权限  
  要求具有 CONTROL SERVER 权限或者安全对象的所有权。 如果使用 AS 子句，则指定的主体必须拥有要对其拒绝权限的安全对象。  

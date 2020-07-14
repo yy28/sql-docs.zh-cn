@@ -1,5 +1,6 @@
 ---
 title: 数据库属性（“镜像”页）| Microsoft Docs
+description: 了解如何配置镜像属性和查看镜像会话的状态。 了解如何启动、暂停或删除镜像会话。
 ms.custom: ''
 ms.date: 08/25/2016
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: 5bdcd20f-532d-4ee6-b2c7-18dbb7584a87
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a25b2b40b147cd0bd23e8c7554e548b6a577d539
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5324c46fb8a4eb67d2364ee3bcbd5e21674a5c7a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68099594"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85630991"
 ---
 # <a name="database-properties-mirroring-page"></a>数据库属性（“镜像”页）
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   从主体数据库中访问此页，并用它来配置并修改数据库的数据库镜像的属性。 还可以使用该页来启动配置数据库镜像安全向导，以查看镜像会话的状态，并可以暂停或删除数据库镜像会话。  
   
 > **重要说明！！！** 开始镜像前必须先配置安全性。 如果镜像尚未开始，则必须使用此向导来开始。 **“镜像”** 页文本框将被禁用，直到向导完成为止。  
@@ -41,7 +42,7 @@ ms.locfileid: "68099594"
 |如果镜像已经开始。|如果在向导中更改了见证服务器，它将相应地进行设置。|  
   
  **服务器网络地址**  
- 每种服务器实例都有一个等效选项：“主体”  、“镜像”  和“见证服务器”  。  
+ 每种服务器实例都有一个等效选项：“主体”、“镜像”和“见证服务器”  。  
   
  服务器实例的服务器网络地址是在完成配置数据库镜像安全向导时自动指定的。 完成该向导后，可以根据需要手动修改网络地址。  
   
@@ -85,7 +86,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
  单击 **“开始镜像”** 即可开始会话。 数据库引擎将尝试自动连接到镜像伙伴，以验证镜像服务器是否正确地进行了配置，然后开始镜像会话。 如果可以开始镜像，将创建一个作业以监控数据库。  
   
  **暂停** 或 **恢复**  
- 在数据库镜像会话期间，单击“暂停”  以暂停会话。 此时，将显示一个提示，要求您确认；如果单击 **“是”** ，则会话将暂停，并且该按钮改为 **“恢复”** 。 若要恢复会话，请单击 **“恢复”** 。  
+ 在数据库镜像会话期间，单击“暂停”以暂停会话。 此时，将显示一个提示，要求您确认；如果单击 **“是”** ，则会话将暂停，并且该按钮改为 **“恢复”** 。 若要恢复会话，请单击 **“恢复”** 。  
   
  有关暂停会话的影响的信息，请参阅 [暂停和恢复数据库镜像 (SQL Server)](../../database-engine/database-mirroring/pausing-and-resuming-database-mirroring-sql-server.md)。  
   
@@ -99,7 +100,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
  **故障转移**  
  单击此项可在发生故障时手动地将相关操作从主体数据库转移到镜像数据库。  
   
-> **注意：** 如果镜像会话在高性能模式下运行，则不支持手动故障转移。 若要手动进行故障转移，必须先将运行模式更改为“不带自动故障转移功能的高安全(同步)”  。 在故障转移完成后，可将新主体服务器实例上的模式再改为“高性能(异步)”  。  
+> **注意：** 如果镜像会话在高性能模式下运行，则不支持手动故障转移。 若要手动进行故障转移，必须先将运行模式更改为“不带自动故障转移功能的高安全(同步)”。 在故障转移完成后，可将新主体服务器实例上的模式再改为“高性能(异步)”。  
   
  此时，将显示一个提示，要求您进行确认。 如果单击 **“是”** ，将尝试进行故障转移。 主体服务器将开始尝试使用 Windows 身份验证连接到镜像服务器。 如果 Windows 身份验证无效，主体服务器将显示 **“连接到服务器”** 对话框。 如果镜像服务器使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，请选择 **“身份验证”** 框中的 **“SQL Server 身份验证”** 。 在 **“登录名”** 文本框中，指定连接镜像服务器时使用的登录帐户，然后在 **“密码”** 文本框中指定该帐户的密码。  
   
@@ -123,9 +124,9 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
  有关运行模式的详细信息，请参阅 [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)。  
   
  **Status**  
- 镜像开始以后，“状态”  面板将显示从你选择“镜像”  页时起数据库镜像会话的状态。 若要更新 **“状态”** 面板，请单击 **“刷新”** 按钮。 可能的状态如下：  
+ 镜像开始以后，“状态”面板将显示从你选择“镜像”页时起数据库镜像会话的状态。 若要更新 **“状态”** 面板，请单击 **“刷新”** 按钮。 可能的状态如下：  
   
-|States|说明|  
+|状态|说明|  
 |------------|-----------------|  
 |**尚未配置此数据库用于镜像**|不存在数据库镜像会话，并且没有要在 **“镜像”** 页上报告的活动。|  
 |**已暂停**|主体数据库可用，但没有向镜像服务器发送任何日志。|  
@@ -137,13 +138,13 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
  有关详细信息，请参阅[镜像状态 (SQL Server)](../../database-engine/database-mirroring/mirroring-states-sql-server.md)。  
   
  **“刷新”**  
- 单击此项可更新“状态”  框。  
+ 单击此项可更新“状态”框。  
   
 ## <a name="remarks"></a>备注  
  如果你不熟悉数据库镜像，请参阅 [数据库镜像 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
   
 ### <a name="adding-a-witness-to-an-existing-session"></a>向现有会话中添加见证服务器  
- 可以向现有会话中添加见证服务器，也可以替换现有的见证服务器。 如果您知道见证服务器的服务器网络地址，则可在 **“见证服务器”** 字段中手动输入该地址。 如果您不知道见证服务器的服务器网络地址，则可使用配置数据库镜像安全向导来配置见证服务器。 当该字段中出现该地址后，请确保已选中“带自动故障转移功能的高安全(同步)”  选项。  
+ 可以向现有会话中添加见证服务器，也可以替换现有的见证服务器。 如果您知道见证服务器的服务器网络地址，则可在 **“见证服务器”** 字段中手动输入该地址。 如果您不知道见证服务器的服务器网络地址，则可使用配置数据库镜像安全向导来配置见证服务器。 当该字段中出现该地址后，请确保已选中“带自动故障转移功能的高安全(同步)”选项。  
   
  配置了新的见证服务器后，必须单击 **“确定”** 将其添加到镜像会话中。  
   
@@ -152,7 +153,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
  [添加或替换数据库镜像见证服务器 (SQL Server Management Studio)](../../database-engine/database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
 ### <a name="removing-a-witness"></a>删除见证服务器  
- 若要删除见证服务器，请从 **“见证服务器”** 字段中删除它的服务器网络地址。 如果从具有自动故障转移功能的高安全性模式切换到高性能模式，则将自动清除“见证服务器”  字段。  
+ 若要删除见证服务器，请从 **“见证服务器”** 字段中删除它的服务器网络地址。 如果从具有自动故障转移功能的高安全性模式切换到高性能模式，则将自动清除“见证服务器”字段。  
   
  删除了见证服务器后，必须单击 **“确定”** ，才能从镜像会话中将其删除。  
   

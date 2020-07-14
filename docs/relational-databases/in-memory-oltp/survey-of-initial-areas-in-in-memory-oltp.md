@@ -1,5 +1,6 @@
 ---
 title: 通过内存中 OLTP 加速 T-SQL 性能
+description: 了解 SQL Server 和 Azure SQL 数据库的内存中 OLTP 性能功能的基础知识，其中包含面向开发人员的快速说明和核心代码示例。
 ms.custom: seo-dt-2019
 ms.date: 09/27/2019
 ms.prod: sql
@@ -11,16 +12,16 @@ ms.assetid: 1c25a164-547d-43c4-8484-6b5ee3cbaf3a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ca32d98270a6eea4bd918c12c6b45279a05628e5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e90d523b4dc17d640ebaae825abef59d80582389
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412499"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85650870"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>内存中 OLTP 内的初始领域调查
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   
 本文适用于急于了解 Microsoft SQL Server 和 Azure SQL 数据库的内存中 OLTP 性能功能基础知识的开发人员。  
@@ -59,7 +60,7 @@ SQL Server 提供的内存中功能可极大提升许多应用程序系统的性
   
 稍后你可以查看以下文章，这些文章提供从内存中 OLTP 获取性能的演示：  
   
-- [演示：内存中 OLTP 的性能改善](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md) 提供了更大的潜在性能提升的小规模演示。  
+- [演示：内存中 OLTP 的性能改善](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md)通过小规模演示来演示较大的潜在性能提升。  
 - [内存中 OLTP 的示例数据库](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md)提供了更大规模的演示。  
   
   
@@ -70,9 +71,9 @@ SQL Server 提供的内存中功能可极大提升许多应用程序系统的性
   
 有两种主要方案：  
   
-- “批操作分析”  是指在工作时间后运行或在具有事务数据副本的辅助硬件上运行的聚合进程。  
+- “批操作分析” 是指在工作时间后运行或在具有事务数据副本的辅助硬件上运行的聚合进程。  
   - [Azure SQL 数据仓库](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-overview-what-is/) 也与批操作分析相关。  
-- “实时操作分析”  是指工作时间内在用于事务工作负荷的主硬件上运行的聚合进程。  
+- “实时操作分析” 是指工作时间内在用于事务工作负荷的主硬件上运行的聚合进程。  
   
   
 本文重点介绍 OLTP，而不是介绍相关分析。 有关列存储索引如何将分析引入 SQL 的信息，请参阅：  
@@ -85,7 +86,7 @@ SQL Server 提供的内存中功能可极大提升许多应用程序系统的性
 > 有关内存中功能的一个两分钟视频可在 [Azure SQL 数据库 - 内存中技术](https://channel9.msdn.com/Blogs/Windows-Azure/Azure-SQL-Database-In-Memory-Technologies)中找到。 该视频的发布日期为 2015 年 12 月。  
 
 
-### <a name="columnstore"></a>columnstore
+### <a name="columnstore"></a>列存储
 
 一系列精彩的博客文章从多个视角完美地介绍了列存储索引。 大部分文章都在深入介绍列存储支持的实时运营分析的概念。  这些文章由 Microsoft 项目经理 Sunil Agarwal 于 2016年 3 月创作。
 
@@ -93,12 +94,12 @@ SQL Server 提供的内存中功能可极大提升许多应用程序系统的性
 
 1. [Real-Time Operational Analytics Using In-Memory Technology](https://blogs.technet.microsoft.com/dataplatforminsider/2015/12/09/real-time-operational-analytics-using-in-memory-technology/)
 2. [Real-Time Operational Analytics - Overview nonclustered columnstore index (NCCI)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/29/real-time-operational-analytics-using-nonclustered-columnstore-index/)
-3. [Real-Time Operational Analytics: Simple example using nonclustered clustered columnstore index (NCCI) in SQL Server 2016](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/29/real-time-operational-analytics-simple-example-using-nonclustered-clustered-columnstore-index-ncci/)
-4. [Real-Time Operational Analytics: DML operations and nonclustered columnstore index (NCCI) in SQL Server 2016](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/04/real-time-operational-analytics-dml-operations-and-nonclustered-columnstore-index-ncci-in-sql-server-2016/)
-5. [Real-Time Operational Analytics: Filtered nonclustered columnstore index (NCCI)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/)
-6. [Real-Time Operational Analytics: Compression Delay Option for Nonclustered Columnstore Index (NCCI)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci/)
-7. [Real-Time Operational Analytics: Compression Delay option with NCCI and the performance](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-with-ncci-and-the-performance/)
-8. [Real-Time Operational Analytics: Memory-Optimized Tables and Columnstore Index](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/real-time-operational-analytics-memory-optimized-table-and-columnstore-index/)
+3. [实时运行分析：SQL Server 2016 中使用非聚集列存储索引 (NCCI) 的简单示例](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/29/real-time-operational-analytics-simple-example-using-nonclustered-clustered-columnstore-index-ncci/)
+4. [实时运行分析：SQL Server 2016 中的 DML 操作和非聚集列存储索引 (NCCI)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/04/real-time-operational-analytics-dml-operations-and-nonclustered-columnstore-index-ncci-in-sql-server-2016/)
+5. [实时运行分析：已筛选的非聚集列存储索引 (NCCI)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/)
+6. [实时运行分析：非聚集列存储索引 (NCCI) 的压缩延迟选项](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci/)
+7. [实时运行分析：NCCI 及性能的压缩延迟选项](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-with-ncci-and-the-performance/)
+8. [实时运行分析：内存优化表和列存储索引](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/real-time-operational-analytics-memory-optimized-table-and-columnstore-index/)
 
 #### <a name="defragment-a-columnstore-index"></a>对列存储索引进行碎片整理
 
@@ -107,9 +108,9 @@ SQL Server 提供的内存中功能可极大提升许多应用程序系统的性
 
 #### <a name="bulk-importation-of-data"></a>批量导入数据
 
-1. [Clustered Column Store: Bulk Load](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2014/07/27/clustered-column-store-index-bulk-loading-the-data/)
-2. [Clustered Columnstore Index: Data Load Optimizations - Minimal Logging](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/10/clustered-columnstore-index-data-load-optimizations-minimal-logging/)
-3. [Clustered columnstore Index: Data Load Optimization - Parallel Bulk Import](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/28/clustered-columnstore-index-parallel-bulk-import/)
+1. [聚集列存储：大容量加载](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2014/07/27/clustered-column-store-index-bulk-loading-the-data/)
+2. [聚集列存储索引：数据加载优化 - 最小日志记录](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/10/clustered-columnstore-index-data-load-optimizations-minimal-logging/)
+3. [聚集列存储索引：数据加载优化 - 并行批量导入](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/28/clustered-columnstore-index-parallel-bulk-import/)
 
 
 
@@ -362,7 +363,7 @@ PRINT @mesg;
 **双重特性：** 内存优化表具有双重特性：在活动内存中是一种表示形式，在硬盘上是另一种表示形式。 每个事务将提交到该表的这两种表示形式。 事务针对更快的活动内存表示形式运行。 内存优化表从活动内存比磁盘速度更快受益。 此外，活动内存的更大灵活性使得实现针对速度进行优化的更高级表结构切实可行。 高级结构也是无页的，因此它可以避免闩锁和自旋锁的开销和争用。  
   
   
-**无锁：** 内存优化表依赖于 *乐观* 方法来实现数据完整性与并发性和高吞吐量这两个对立的目标。 在事务处理期间，该表不在任何版本的已更新数据行上放置锁。 在某些大容量系统中，这可以大大减少争用。  
+**无锁：** 内存优化表依赖于乐观方法来实现数据完整性与并发性和高吞吐量这两个对立的目标。 在事务处理期间，该表不在任何版本的已更新数据行上放置锁。 在某些大容量系统中，这可以大大减少争用。  
   
   
 **行版本：** 内存优化表不使用锁，而是在表本身中（不是在 tempdb 中）添加新版本的已更新行。 原始行将一直保留，直到提交事务之后。 在事务处理期间，其他进程可以读取行的原始版本。  
@@ -370,7 +371,7 @@ PRINT @mesg;
 - 为基于磁盘的表创建某一行的多个版本时，行版本将暂时存储在 tempdb 中。  
   
   
-**更少的日志记录：** 已更新行的之前和之后版本将保存在内存优化表中。 行对提供了很多通常写入到日志文件的信息。 这使得系统将更少信息更少次数地写入到日志。 还确保事务完整性。  
+**更少日志记录：** 已更新行的之前和之后版本将保存在内存优化表中。 行对提供了很多通常写入到日志文件的信息。 这使得系统将更少信息更少次数地写入到日志。 还确保事务完整性。  
   
   
 <a name="how-do-native-procs-perform-faster-35x"></a>  
@@ -396,14 +397,14 @@ PRINT @mesg;
 ### <a name="trade-offs-of-memory-optimized-tables"></a>内存优化表的权衡  
   
   
-**估计内存：** 你必须估计内存优化表要使用的活动内存量。 计算机系统必须具有足够的内存容量，才能托管内存优化表。 有关详细信息，请参阅：  
+**估计内存：** 必须估计内存优化表要使用的活动内存量。 计算机系统必须具有足够的内存容量，才能托管内存优化表。 有关详细信息，请参阅：  
   
 - [内存使用情况的监视和故障排除](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)  
 - [估算内存优化表的内存需求](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)  
 - [内存优化表中的表和行大小](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
   
-**对大型表分区：** 满足大量活动内存需求的一种方法是将大型表划分为几部分，内存中的部分存储 *热度高的最近* 数据行，磁盘上的其他部分存储 *冷旧* 数据行（如已完全发货和已完成的销售订单）。 此分区是一个需要设计和实现的手动过程。 请参阅：  
+**对大型表进行分区：** 满足大量活动内存需求的一种方法是将大型表划分为几部分，内存中的部分存储热度高的最近数据行，磁盘上的其他部分存储冷旧数据行（如已完全发货和已完成的销售订单） 。 此分区是一个需要设计和实现的手动过程。 请参阅：  
   
 - [应用程序级分区](../../relational-databases/in-memory-oltp/application-level-partitioning.md)  
 - [用于对内存优化表进行分区的应用程序模式](../../relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md)  
@@ -493,9 +494,9 @@ PRINT @mesg;
   
 ## <a name="related-links"></a>相关链接  
   
-- 初始文章： [内存中 OLTP（内存中优化）](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
+- 基础知识：[内存中 OLTP（内存中优化）](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
     
 以下文章介绍了某些代码，演示了通过使用内存中 OLTP 可实现的性能提升：  
   
-- [演示：内存中 OLTP 的性能改善](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md) 提供了更大的潜在性能提升的小规模演示。  
+- [演示：内存中 OLTP 的性能改善](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md)通过小规模演示来演示较大的潜在性能提升。  
 - [内存中 OLTP 的示例数据库](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md)提供了更大规模的演示。  

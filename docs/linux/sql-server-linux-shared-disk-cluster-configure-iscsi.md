@@ -5,20 +5,20 @@ ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.date: 08/28/2017
+ms.date: 06/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: e10f354a8f0af2467a9519a794995043864a4cd6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: abe2613d421e07107c6ce81b18f5f9f83c8fe66d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558574"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897305"
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>配置故障转移群集实例 - iSCSI - Linux 上的 SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 本文介绍如何在 Linux 上为故障转移群集实例 (FCI) 配置 iSCSI 存储。 
 
@@ -77,7 +77,7 @@ iSCSI 使用网络将名为“目标”的服务器中的磁盘呈现给服务�
     sudo iscsiadm -m node -I <iSCSIIfaceName> -p TargetIPAddress -l
     ```
 
-    \<iSCSINetName> 是网络的唯一/友好名称，\<TargetIPAddress> 是 iSCSI 目标的 IP 地址。
+    \<iSCSIIfaceName> 网络的唯一/友好名称，\<TargetIPAddress> 是 iSCSI 目标的 IP 地址。
 
     ![iSCSITargetLogin][4]
 
@@ -103,7 +103,7 @@ iSCSI 使用网络将名为“目标”的服务器中的磁盘呈现给服务�
     sudo pvcreate /dev/<devicename>
     ```
 
-    \<devicename> 是上一步中的设备的名称。 
+    \<devicename> 是上一步中设备的名称。 
 
  
 8.  在 iSCSI 磁盘上创建卷组。 分配给单个卷组的磁盘被视为池或集合。 
@@ -112,7 +112,7 @@ iSCSI 使用网络将名为“目标”的服务器中的磁盘呈现给服务�
     sudo vgcreate <VolumeGroupName> /dev/devicename
     ```
 
-    \<VolumeGroupName> 是卷组的名称，\<devicename> 是步骤 6 中设备的名称。 
+    \<VolumeGroupName> 是卷组的名称，\<devicename> 是第 6 步中设备的名称。 
  
 9.  创建并验证磁盘的逻辑卷。
 
@@ -120,7 +120,7 @@ iSCSI 使用网络将名为“目标”的服务器中的磁盘呈现给服务�
     sudo lvcreate -Lsize -n <LogicalVolumeName> <VolumeGroupName>
     ```
     
-    \<size> 是要创建的卷的大小，可以用 G（千兆字节）、T（兆字节）等指定，\<logical volume name> 是逻辑卷的名称，\<volume group name> 是上一步中卷组的名称。 
+    \<size> 是要创建的卷的大小，可以以 G (GB)、T (TB) 等为单位指定。\<LogicalVolumeName> 是逻辑卷的名称，\<VolumeGroupName> 是上一步中卷组的名称。 
 
     下面的示例创建了一个 25GB 的卷。
  
@@ -134,212 +134,213 @@ iSCSI 使用网络将名为“目标”的服务器中的磁盘呈现给服务�
     sudo mkfs.ext4 /dev/<VolumeGroupName>/<LogicalVolumeName>
     ```
 
-    \<volumeGroupName> 是上一步中卷组的名称。 \<LogicalVolumeName> 是上一步中逻辑卷的名称。  
+    \<VolumeGroupName> 是上一步中卷组的名称。 \<LogicalVolumeName> 是上一步中逻辑卷的名称。  
 
 12. 对于系统数据库或存储在默认数据位置的任何内容，请执行以下步骤。 否则则，请跳至步骤 13。
 
-   *    确保正在使用的服务器上的 SQL Server 已停止运行。
+   * 确保正在使用的服务器上的 SQL Server 已停止运行。
 
-    ```bash
-    sudo systemctl stop mssql-server
-    sudo systemctl status mssql-server
-    ```
-
-   *    彻底切换为超级用户。 如果成功，不会收到任何确认信息。
-
-    ```bash
-    sudo -i
-    ```
-
-   *    切换为 mssql 用户。 如果成功，不会收到任何确认信息。
-
-    ```bash
-    su mssql
-    ```
-
-   *    创建一个临时目录来存储 SQL Server 数据和日志文件。 如果成功，不会收到任何确认信息。
-
-    ```bash
-    mkdir <TempDir>
-    ```
-
-    \<TempDir> 是文件夹名称。 以下示例创建名为 /var/opt/mssql/TempDir 的文件夹。
-
-    ```bash
-    mkdir /var/opt/mssql/TempDir
-    ```
+        ```bash
+        sudo systemctl stop mssql-server
+        sudo systemctl status mssql-server
+        ```
     
-   *    将 SQL Server 的数据和日志文件复制到临时目录。 如果成功，不会收到任何确认信息。
+   * 彻底切换为超级用户。 如果成功，不会收到任何确认信息。
 
-    ```bash
-    cp /var/opt/mssql/data/* <TempDir>
-    ```
-
-    \<TempDir> 是上一步中的文件夹的名称。
+        ```bash
+        sudo -i
+        ```
     
-   *    验证文件是否位于目录中。
+   * 切换为 mssql 用户。 如果成功，不会收到任何确认信息。
 
-    ```bash
-    ls \<TempDir>
-    ```
-    \<TempDir> 是步骤 d 中文件夹的名称。
+        ```bash
+        su mssql
+        ```
+    
+   * 创建一个临时目录来存储 SQL Server 数据和日志文件。 如果成功，不会收到任何确认信息。
 
-   *    删除现有 SQL Server 数据目录中的文件。 如果成功，不会收到任何确认信息。
+        ```bash
+        mkdir <TempDir>
+        ```
+    
+        \<TempDir> 是文件夹的名称。 以下示例创建名为 /var/opt/mssql/TempDir 的文件夹。
 
-    ```bash
-    rm - f /var/opt/mssql/data/*
-    ```
+        ```bash
+        mkdir /var/opt/mssql/TempDir
+        ```
+        
+   * 将 SQL Server 的数据和日志文件复制到临时目录。 如果成功，不会收到任何确认信息。
 
-   *    验证文件是否已删除。 下图显示了从 c 到 h 的整个序列的示例。
+        ```bash
+        cp /var/opt/mssql/data/* <TempDir>
+        ```
+    
+        \<TempDir> 是上一步中的文件夹的名称。
+    
+   * 验证文件是否位于目录中。
 
-    ```bash
-    ls /var/opt/mssql/data
-    ```
-
-    ![45-CopyMove][8]
+        ```bash
+        ls \<TempDir>
+        ```
  
-   *    键入 `exit` 切换回根用户。
+        \<TempDir> 是步骤 d 中文件夹的名称。
 
-   *    将 iSCSI 逻辑卷装入 SQL Server 数据文件夹中。 如果成功，不会收到任何确认信息。
+   * 删除现有 SQL Server 数据目录中的文件。 如果成功，不会收到任何确认信息。
 
-    ```bash
-    mount /dev/<VolumeGroupName>/<LogicalVolumeName> /var/opt/mssql/data
-    ``` 
+        ```bash
+        rm - f /var/opt/mssql/data/*
+        ```
+    
+   * 验证文件是否已删除。 下图显示了从 c 到 h 的整个序列的示例。
 
-    \<VolumeGroupName> 是卷组的名称，\<LogicalVolumeName> 是已创建的逻辑卷的名称。 以下示例语法与上一个命令中的卷组和逻辑卷匹配。
+        ```bash
+        ls /var/opt/mssql/data
+        ```
+    
+        ![45-CopyMove][8]
 
-    ```bash
-    mount /dev/FCIDataVG1/FCIDataLV1 /var/opt/mssql/data
-    ``` 
+   * 键入 `exit` 切换回根用户。
 
-   *    将装载的所有者更改为 mssql。 如果成功，不会收到任何确认信息。
+   * 将 iSCSI 逻辑卷装入 SQL Server 数据文件夹中。 如果成功，不会收到任何确认信息。
 
-    ```bash
-    chown mssql /var/opt/mssql/data
-    ```
+        ```bash
+        mount /dev/<VolumeGroupName>/<LogicalVolumeName> /var/opt/mssql/data
+        ```
 
-   *    将装载组的所有权更改为 mssql。 如果成功，不会收到任何确认信息。
+        \<VolumeGroupName> 是卷组的名称，\<LogicalVolumeName> 是已创建的逻辑卷的名称。 以下示例语法与上一个命令中的卷组和逻辑卷匹配。
 
-    ```bash
-    chgrp mssql /var/opt/mssql/data
-    ``` 
+        ```bash
+        mount /dev/FCIDataVG1/FCIDataLV1 /var/opt/mssql/data
+        ```
 
-   *    切换为 mssql 用户。 如果成功，不会收到任何确认信息。
+   * 将装载的所有者更改为 mssql。 如果成功，不会收到任何确认信息。
 
-    ```bash
-    su mssql
-    ``` 
+        ```bash
+        chown mssql /var/opt/mssql/data
+        ```
 
-   *    从临时目录 /var/opt/mssql/data 复制文件。 如果成功，不会收到任何确认信息。
+   * 将装载组的所有权更改为 mssql。 如果成功，不会收到任何确认信息。
 
-    ```bash
-    cp /var/opt/mssql/TempDir/* /var/opt/mssql/data
-    ``` 
+        ```bash
+        chgrp mssql /var/opt/mssql/data
+        ```
 
-   *    验证文件是否在那里。
+   * 切换为 mssql 用户。 如果成功，不会收到任何确认信息。
 
-    ```bash
-    ls /var/opt/mssql/data
-    ``` 
- 
+        ```bash
+        su mssql
+        ``` 
+
+   * 从临时目录 /var/opt/mssql/data 复制文件。 如果成功，不会收到任何确认信息。
+
+        ```bash
+        cp /var/opt/mssql/TempDir/* /var/opt/mssql/data
+        ``` 
+    
+   * 验证文件是否在那里。
+
+        ```bash
+        ls /var/opt/mssql/data
+        ``` 
+
    *    输入 `exit` 以退出 mssql 身份。
-    
+
    *    输入 `exit` 以退出 root 身份。
 
    *    启动 SQL Server。 如果正确复制了所有内容并正确应用了安全性，SQL Server 应显示为已启动。
 
-    ```bash
-    sudo systemctl start mssql-server
-    sudo systemctl status mssql-server
-    ``` 
- 
+        ```bash
+        sudo systemctl start mssql-server
+        sudo systemctl status mssql-server
+        ``` 
+
    *    停止 SQL Server 并验证它是否已关闭。
 
-    ```bash
-    sudo systemctl stop mssql-server
-    sudo systemctl status mssql-server
-    ``` 
+        ```bash
+        sudo systemctl stop mssql-server
+        sudo systemctl status mssql-server
+        ``` 
 
 13. 对于系统数据库以外的其他内容，例如用户数据库或备份，请按照以下步骤操作。 如果仅使用默认位置，请跳至步骤 14。
 
    *    切换为超级用户。 如果成功，不会收到任何确认信息。
 
-    ```bash
-    sudo -i
-    ```
+        ```bash
+        sudo -i
+        ```
 
    *    创建将由 SQL Server 使用的文件夹。 
 
-    ```bash
-    mkdir <FolderName>
-    ```
+        ```bash
+        mkdir <FolderName>
+        ```
 
-    \< 为文件夹名称。 如果文件夹不在正确的位置，需要指定文件夹的完整路径。 以下示例创建名为 /var/opt/mssql/userdata 的文件夹。
+        \<FolderName> 是文件夹的名称。 如果文件夹不在正确的位置，需要指定文件夹的完整路径。 以下示例创建名为 /var/opt/mssql/userdata 的文件夹。
 
-    ```bash
-    mkdir /var/opt/mssql/userdata
-    ```
+        ```bash
+        mkdir /var/opt/mssql/userdata
+        ```
 
    *    将 iSCSI 逻辑卷装载到上一步中创建的文件夹中。 如果成功，不会收到任何确认信息。
-    
-    ```bash
-    mount /dev/<VolumeGroupName>/<LogicalVolumeName> <FolderName>
-    ```
 
-    \<VolumeGroupName> 是卷组的名称，\<LogicalVolumeName> 是已创建的逻辑卷的名称，\<FolderName> 是文件夹的名称。 示例语法如下所示。
+        ```bash
+        mount /dev/<VolumeGroupName>/<LogicalVolumeName> <FolderName>
+        ```
 
-    ```bash
-    mount /dev/FCIDataVG2/FCIDataLV2 /var/opt/mssql/userdata 
-    ```
+        \<VolumeGroupName> 是卷组的名称，\<LogicalVolumeName> 是已创建的逻辑卷的名称，\<FolderName> 是文件夹的名称。 示例语法如下所示。
+
+        ```bash
+        mount /dev/FCIDataVG2/FCIDataLV2 /var/opt/mssql/userdata 
+        ```
 
    *    将创建的文件夹的所有权更改为 mssql。 如果成功，不会收到任何确认信息。
 
-    ```bash
-    chown mssql <FolderName>
-    ```
+        ```bash
+        chown mssql <FolderName>
+        ```
 
-    \<FolderName> 是已创建的文件夹的名称。 下面显示了一个示例。
+        \<FolderName> 是已创建的文件夹的名称。 下面显示了一个示例。
 
-    ```bash
-    chown mssql /var/opt/mssql/userdata
-    ```
-  
+        ```bash
+        chown mssql /var/opt/mssql/userdata
+        ```
+
    *    将创建的文件夹组更改为 mssql。 如果成功，不会收到任何确认信息。
 
-    ```bash
-    chown mssql <FolderName>
-    ```
+        ```bash
+        chown mssql <FolderName>
+        ```
 
-    \<FolderName> 是已创建的文件夹的名称。 下面显示了一个示例。
+        \<FolderName> 是已创建的文件夹的名称。 下面显示了一个示例。
 
-    ```bash
-    chown mssql /var/opt/mssql/userdata
-    ```
+        ```bash
+        chown mssql /var/opt/mssql/userdata
+        ```
 
    *    键入 `exit` 以退出超级用户身份。
 
    *    若要进行测试，请在该文件夹中创建数据库。 以下示例使用 sqlcmd 创建数据库，将上下文切换到该数据库，验证操作系统级别是否存在文件，然后删除临时位置。 可以使用 SSMS。
   
-    ![50-ExampleCreateSSMS][9]
+        ![50-ExampleCreateSSMS][9]
 
    *    卸载共享 
 
-    ```bash
-    sudo umount /dev/<VolumeGroupName>/<LogicalVolumeName> <FolderName>
-    ```
+        ```bash
+        sudo umount /dev/<VolumeGroupName>/<LogicalVolumeName> <FolderName>
+        ```
 
-    \<VolumeGroupName> 是卷组的名称，\<LogicalVolumeName> 是已创建的逻辑卷的名称，\<FolderName> 是文件夹的名称。 示例语法如下所示。
+        \<VolumeGroupName> 是卷组的名称，\<LogicalVolumeName> 是已创建的逻辑卷的名称，\<FolderName> 是文件夹的名称。 示例语法如下所示。
 
-    ```bash
-    sudo umount /dev/FCIDataVG2/FCIDataLV2 /var/opt/mssql/userdata 
-    ```
+        ```bash
+        sudo umount /dev/FCIDataVG2/FCIDataLV2 /var/opt/mssql/userdata 
+        ```
 
 14. 配置服务器，以便只有 Pacemaker 可以激活卷组。
 
     ```bash
     sudo lvmconf --enable-halvm --services -startstopservices
     ```
- 
+
 15. 生成服务器上卷组的列表。 列出的任何非 iSCSI 磁盘内容都由系统使用，例如用于 OS 磁盘的内容。
 
     ```bash
@@ -352,11 +353,10 @@ iSCSI 使用网络将名为“目标”的服务器中的磁盘呈现给服务�
     volume_list = [ <ListOfVGsNotUsedByPacemaker> ]
     ```
 
-    \<ListOfVGsNotUsedByPacemaker> 是步骤 20 的输出中 FCI不 使用的卷组列表。 将每个卷组括在引号中并用逗号分隔。 下面显示了一个示例。
+    \<ListOfVGsNotUsedByPacemaker> 是步骤 20 的输出中 FCI 不会使用的卷组的列表。 将每个卷组括在引号中并用逗号分隔。 下面显示了一个示例。
 
     ![55-ListOfVGs][11]
- 
- 
+
 17. 当 Linux 启动时，它将装载文件系统。 要确保只有 Pacemaker 可以装入 iSCSI 磁盘，请重新生成根文件系统映像。 
 
     运行以下命令，可能需要一些时间才能完成。 运行成功后不会收到任何消息。
@@ -374,6 +374,7 @@ iSCSI 使用网络将名为“目标”的服务器中的磁盘呈现给服务�
     ```bash
     sudo vgs
     ``` 
+
 23. 启动 SQL Server 并验证它是否可以在此服务器上启动。
 
     ```bash
@@ -387,14 +388,15 @@ iSCSI 使用网络将名为“目标”的服务器中的磁盘呈现给服务�
     sudo systemctl stop mssql-server
     sudo systemctl status mssql-server
     ```
+
 25. 在将参与 FCI 的任何其他服务器上重复步骤 1 - 6。
 
 现在可以配置 FCI 了。
 
-|分发 |主题 
-|----- |-----
-|**附带 HA 加载项的 Red Hat Enterprise Linux** |[配置](sql-server-linux-shared-disk-cluster-configure.md)<br/>[操作](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
-|**附带 HA 加载项的 SUSE Linux Enterprise Server** |[配置](sql-server-linux-shared-disk-cluster-sles-configure.md)
+| 分发 | 主题 |
+| :----------- | :---- |
+| 附带 HA 加载项的 Red Hat Enterprise Linux | [配置](sql-server-linux-shared-disk-cluster-configure.md)<br/>[操作](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md) |
+| 附带 HA 加载项的 SUSE Linux Enterprise Server | [配置](sql-server-linux-shared-disk-cluster-sles-configure.md) |
 
 ## <a name="next-steps"></a>后续步骤
 

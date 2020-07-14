@@ -1,5 +1,6 @@
 ---
 title: 动态数据掩码 | Microsoft Docs
+description: 了解动态数据掩码，它通过对非特权用户屏蔽敏感数据来限制此类数据的公开。 它可极大地简化 SQL Server 中的安全保护。
 ms.date: 05/02/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse
@@ -10,15 +11,15 @@ ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c0f2a5d652b23efec6b4dd1c6d021f85e1155247
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bf3c9a827a4a3318bbee7e550aa8759a8dcc0eb4
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67997722"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005589"
 ---
 # <a name="dynamic-data-masking"></a>动态数据屏蔽
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 ![动态数据掩码](../../relational-databases/security/media/dynamic-data-masking.png)
 
@@ -62,7 +63,7 @@ ms.locfileid: "67997722"
   
 -   使用 `SELECT INTO` 或 `INSERT INTO` 将数据从经过屏蔽的列复制到另一表中会导致目标表中显示屏蔽的数据。  
   
--   运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出时，将应用动态数据屏蔽。 数据库包含已掩码的列将导致导出的数据文件也包含已掩码的数据（假定该文件是由没有 UNMASK 特权的用户导出的），并且导入的数据库将包含已静态掩码的数据  。  
+-   运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出时，将应用动态数据屏蔽。 数据库包含已掩码的列将导致导出的数据文件也包含已掩码的数据（假定该文件是由没有 UNMASK 特权的用户导出的），并且导入的数据库将包含已静态掩码的数据。  
   
 ## <a name="querying-for-masked-columns"></a>查询屏蔽列  
  使用 **sys.masked_columns** 视图可查询对其应用了屏蔽函数的表列。 该视图继承自 **sys.columns** 视图。 该视图会返回 **sys.columns** 视图中的所有列，以及 **is_masked** 和 **masking_function** 列，表明该列是否被屏蔽，以及在该列被屏蔽的情况下定义了什么屏蔽函数。 该视图仅显示在其上应用了屏蔽函数的列。  
@@ -93,7 +94,7 @@ WHERE is_masked = 1;
  添加动态数据屏蔽是作为架构更改对基础表执行的，因此无法对具有依赖项的列执行。 若要解决此限制，可先删除依赖项，然后添加动态数据屏蔽，再重新创建依赖项。 例如，如果依赖项是由于索引依赖于该列，则可以删除索引，然后添加掩码，再重新创建依赖索引。
  
 
-## <a name="security-note-bypassing-masking-using-inference-or-brute-force-techniques"></a>安全说明：可使用推断或暴力技术绕过屏蔽
+## <a name="security-note-bypassing-masking-using-inference-or-brute-force-techniques"></a>安全说明：可使用推断或强力破解技术绕过屏蔽
 
 动态数据屏蔽旨在通过在应用程序使用的一组预定义查询中限制数据泄露，来简化应用程序开发。 虽然动态数据屏蔽也可以用于在直接访问生产数据库时防止敏感数据的意外泄露，不过请务必注意，具有即席查询权限的非特权用户可以应用技术来获取对实际数据的访问权限。 如果需要授予这类即席访问权限，则应使用审核监视所有数据库活动并缓解这种情况。
  

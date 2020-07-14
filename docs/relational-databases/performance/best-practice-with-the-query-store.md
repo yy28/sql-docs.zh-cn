@@ -13,16 +13,16 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c07131e3991fd7cceb77e1874b7150184345b546
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f304dea7c49965bbb511034c09fb6ef781f2311f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287571"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006003"
 ---
 # <a name="best-practices-with-query-store"></a>查询存储最佳做法
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 本文概述使用 SQL Server 查询存储处理工作负载的最佳做法。
 
@@ -34,9 +34,9 @@ ms.locfileid: "79287571"
 
 ## <a name="use-query-performance-insight-in-azure-sql-database"></a><a name="Insight"></a>在 Azure SQL 数据库中使用 Query Performance Insight
 
-如果在 Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中运行查询存储，则可使用 [Query Performance Insight](https://docs.microsoft.com/azure/sql-database/sql-database-query-performance) 来分析一定时段内的资源消耗情况。 虽然可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 和 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) 来获取所有查询的详细资源消耗情况（例如 CPU、内存和 I/O），但使用 Query Performance Insight 可以快速且有效地确定查询对数据库总体 DTU 消耗情况的影响。 有关详细信息，请参阅 [Azure SQL Database Query Performance Insight](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/)（Azure SQL 数据库的 Query Performance Insight）。
+如果在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]中运行查询存储，则可以使用 [Query Performance Insight](https://docs.microsoft.com/azure/sql-database/sql-database-query-performance) 来分析一定时段内的资源消耗情况。 虽然可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 和 [Azure Data Studio](../../azure-data-studio/what-is.md) 来获取所有查询的详细资源消耗情况（例如 CPU、内存和 I/O），但使用 Query Performance Insight 可以快速且有效地确定查询对数据库总体 DTU 消耗情况的影响。 有关详细信息，请参阅 [Azure SQL Database Query Performance Insight](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/)（Azure SQL 数据库的 Query Performance Insight）。
 
-本部分介绍最佳的配置默认值，这些默认值旨在确保 Query Store 以及依赖功能能够可靠运行。 默认配置已针对持续数据收集操作进行优化，即，在 OFF/READ_ONLY 状态下花费最少的时间。
+本部分介绍最佳的配置默认值，这些默认值旨在确保 Query Store 以及依赖功能能够可靠运行。 默认配置已针对持续数据收集操作进行优化，即，在 OFF/READ_ONLY 状态下花费最少的时间。 有关所有可用的查询存储选项的详细信息，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md#query-store)。
 
 | 配置 | 说明 | 默认 | 注释 |
 | --- | --- | --- | --- |
@@ -49,9 +49,12 @@ ms.locfileid: "79287571"
 | | | | |
 
 > [!IMPORTANT]
-> 在 Query Store 的最终激活阶段，会在所有 Azure SQL 数据库中自动应用这些默认值（请参阅上面的重要说明）。 激活后，Azure SQL 数据库不会更改客户设置的配置值，除非这些值对主要工作负载或查询存储的可靠运行造成负面影响。
+> 在查询存储的最终激活阶段，系统会在所有 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]中自动应用这些默认值。 启用后，[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]不会更改客户设置的配置值，除非这些值对主要工作负载或查询存储的可靠运行造成负面影响。
 
-如果想要保持使用自定义设置，请[结合 Query Store 选项使用 ALTER DATABASE](https://msdn.microsoft.com/library/bb522682.aspx)，将配置还原到以前的状态。 请查看 [Query Store 最佳实践](https://msdn.microsoft.com/library/mt604821.aspx)，了解如何选择最佳的配置参数。
+> [!NOTE]  
+> 无法在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]的单一数据库和弹性池中禁用查询存储。 执行 `ALTER DATABASE [database] SET QUERY_STORE = OFF` 将返回警告 `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`。 
+
+如果想要保持使用自定义设置，请[结合 Query Store 选项使用 ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md#query-store)，将配置还原到以前的状态。 请查看[查询存储最佳做法](../../relational-databases/performance/best-practice-with-the-query-store.md)，了解如何选择最佳的配置参数。
 
 ## <a name="use-query-store-with-elastic-pool-databases"></a>将查询存储与弹性池数据库配合使用
 
@@ -66,7 +69,7 @@ ms.locfileid: "79287571"
 
  下面是设置参数值时应遵循的准则：
 
-**最大大小 (MB)**：为查询存储在数据库中占用的数据空间指定一个限制。 这是最重要的设置，直接影响查询存储的操作模式。
+**最大大小 (MB)** ：为查询存储在数据库中占用的数据空间指定一个限制。 这是最重要的设置，直接影响查询存储的操作模式。
 
 当查询存储收集查询、执行计划和统计信息时，其在数据库中的大小会一直增长，直至达到此限制。 达到此限制后，Query Store 会自动将操作模式更改为只读，并停止收集新数据，这意味着你的性能分析自此不再精确。
 
@@ -93,7 +96,7 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);
 ```
 
- **数据刷新间隔（分钟）**：它定义将收集的运行时统计信息保存到磁盘的频率。 它在图形用户界面 (GUI) 中以分钟为单位，但在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中以秒为单位。 默认值为 900 秒，在图形用户界面中为 15 分钟。 如果工作负载不生成大量不同的查询和计划或者你能够接受在数据库关闭之前花更长的时间来保留数据，可考虑使用更大的值。
+ **数据刷新间隔（分钟）** ：它定义将收集的运行时统计信息保存到磁盘的频率。 它在图形用户界面 (GUI) 中以分钟为单位，但在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中以秒为单位。 默认值为 900 秒，在图形用户界面中为 15 分钟。 如果工作负载不生成大量不同的查询和计划或者你能够接受在数据库关闭之前花更长的时间来保留数据，可考虑使用更大的值。
 
 > [!NOTE]
 > 如果出现故障转移或关闭命令，使用跟踪标志 7745 会阻止查询存储数据写入磁盘。 有关更多信息，请参阅[在任务关键型服务器上使用跟踪标志](#Recovery)部分。
@@ -112,7 +115,7 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);
 ```
 
-**过时查询阈值（天）**：基于时间的清除策略，用于控制持久化运行时统计信息和非活动查询的保持期（以天为单位）。 查询存储默认配置为将数据保留 30 天，这对于你的方案来说可能过长。
+**过时查询阈值（天）** ：基于时间的清除策略，用于控制持久化运行时统计信息和非活动查询的保持期（以天为单位）。 查询存储默认配置为将数据保留 30 天，这对于你的方案来说可能过长。
 
 避免保留你并不打算使用的历史数据。 这样可以减少变为只读状态的次数。 查询存储数据的大小以及检测和解决问题的时间将会变得更可预测。 使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或以下脚本配置基于时间的清理策略：
 
@@ -136,7 +139,7 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
 - **自定义**：支持额外控件和微调数据收集策略功能。 新的自定义设置定义在内部捕获策略时间阈值期间执行的操作。 这是评估配置条件的时间边界，如果所有值为 true，则查询存储可以捕获查询。
 
 > [!IMPORTANT]
-> 当查询存储捕获模式设置为“全部”、“自动”或“自定义”时，始终捕获游标、存储过程中的查询和本机编译的查询。 若要捕获本机编译的查询，请使用 [sys.sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) 启用每个查询统计信息的收集。
+> 当查询存储捕获模式设置为“全部”、“自动”或“自定义”时，始终捕获游标、存储过程中的查询和本机编译的查询  。 若要捕获本机编译的查询，请使用 [sys.sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) 启用每个查询统计信息的收集。
 
  以下脚本将 QUERY_CAPTURE_MODE 设置为 AUTO：
 
@@ -309,7 +312,7 @@ SET QUERY_STORE (OPERATION_MODE = READ_WRITE);
 
 - 遵循最佳实践规范即可避免在无提示情况下更改操作模式。 如果可以确保查询存储大小始终小于最大允许值，则会极大地降低转换为只读模式的几率。 根据[配置查询存储](#Configure)部分所述，可激活基于大小的策略，使查询存储在大小接近极限时自动清除数据。
 - 为了确保最新的数据能够得到保留，可将基于时间的策略配置为定期删除过时信息。
-- 最后，请考虑将“查询存储捕获模式”设置为“Auto”，因为这样通常可以筛选掉与工作负载不太相关的查询。
+- 最后，请考虑将“查询存储捕获模式”设置为“Auto”，因为这样通常可以筛选掉与工作负载不太相关的查询 。
 
 ### <a name="error-state"></a>错误状态
 
@@ -345,7 +348,7 @@ GO
 SELECT actual_state_desc, desired_state_desc, current_storage_size_mb,
     max_storage_size_mb, readonly_reason, interval_length_minutes,
     stale_query_threshold_days, size_based_cleanup_mode_desc,
-    query_capture_mode_de
+    query_capture_mode_desc
 FROM sys.database_query_store_options;
 ```
 
@@ -361,7 +364,7 @@ FROM sys.database_query_store_options;
 |**自定义**|[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 在 `ALTER DATABASE SET QUERY_STORE` 命令下引入自定义捕获模式。 启用后，在新的“查询存储捕获策略”设置下有额外可用的查询存储配置，可用于微调特定服务器中的数据收集。<br /><br />新的自定义设置定义在内部捕获策略时间阈值期间执行的操作。 这是评估配置条件的时间边界，如果所有值为 true，则查询存储可以捕获查询。 有关详细信息，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)。|
 
 > [!NOTE]
-> 当查询存储捕获模式设置为“全部”、“自动”或“自定义”时，始终捕获游标、存储过程中的查询和本机编译的查询。 若要捕获本机编译的查询，请使用 [sys.sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) 启用每个查询统计信息的收集。
+> 当查询存储捕获模式设置为“全部”、“自动”或“自定义”时，始终捕获游标、存储过程中的查询和本机编译的查询  。 若要捕获本机编译的查询，请使用 [sys.sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) 启用每个查询统计信息的收集。
 
 ## <a name="keep-the-most-relevant-data-in-query-store"></a>在 Query Store 中保留最相关数据
 
@@ -371,7 +374,7 @@ FROM sys.database_query_store_options;
 |最佳做法|设置|
 |-------------------|-------------|
 |对保留的历史数据进行限制。|配置基于时间的策略以激活自动清理功能。|
-|筛选掉不相关的查询。|将“查询存储捕获模式”配置为“自动”。|
+|筛选掉不相关的查询。|将“查询存储捕获模式”配置为“自动” 。|
 |达到最大大小时，删除不太相关的查询。|激活基于大小的清理策略。|
 
 ## <a name="avoid-using-non-parameterized-queries"></a><a name="Parameterize"></a> 避免使用非参数化查询

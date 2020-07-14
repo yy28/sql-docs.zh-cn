@@ -1,5 +1,6 @@
 ---
 title: 内存中 OLTP 支持的数据类型 | Microsoft Docs
+description: 了解内存中 OLTP 功能内存优化表和本机编译的 T-SQL 模块不支持的数据类型。
 ms.custom: ''
 ms.date: 06/19/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: a7380ef0-c9d7-49e4-b6de-fad34752b9f3
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: daa05543715f81511aa0faa8467fc78819999404
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 324d9c27608bd5ee3e93a6987cec7b81407f048a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68075891"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85650930"
 ---
 # <a name="supported-data-types-for-in-memory-oltp"></a>内存中 OLTP 支持的数据类型
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   本文列出了内存中 OLTP 功能不支持的数据类型：  
   

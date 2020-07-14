@@ -1,14 +1,11 @@
 ---
-title: ADD SIGNATURE (Transact-SQL) | Microsoft Docs
-ms.date: 05/15/2017
+title: ADD SIGNATURE (Transact-SQL)
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: language-reference
 f1_keywords:
 - ADD SIGNATURE
 - ADD_SIGNATURE_TSQL
-dev_langs:
-- TSQL
 helpviewer_keywords:
 - ADD SIGNATURE statement
 - adding digital signatures
@@ -17,57 +14,64 @@ helpviewer_keywords:
 ms.assetid: 64d8b682-6ec1-4e5b-8aee-3ba11e72d21f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 284f5fb33d8842747805a27c68522929ddfbc59d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 06/10/2020
+ms.openlocfilehash: 4b5781ba73a340c72befdcde81559ac22d45a6a7
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634924"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813159"
 ---
 # <a name="add-signature-transact-sql"></a>ADD SIGNATURE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  将数字签名添加到存储过程、函数、程序集或触发器中。 此外，还将副署添加到存储过程、函数、程序集或触发器。  
-  
-  
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-## <a name="syntax"></a>语法  
-  
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+
+将数字签名添加到存储过程、函数、程序集或触发器中。 此外，还将副署添加到存储过程、函数、程序集或触发器。
+
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+
+## <a name="syntax"></a>语法
+
 ```syntaxsql
-ADD [ COUNTER ] SIGNATURE TO module_class::module_name   
-    BY <crypto_list> [ ,...n ]  
+ADD [ COUNTER ] SIGNATURE TO module_class::module_name
+    BY <crypto_list> [ ,...n ]
   
 <crypto_list> ::=  
     CERTIFICATE cert_name  
-    | CERTIFICATE cert_name [ WITH PASSWORD = 'password' ]  
-    | CERTIFICATE cert_name WITH SIGNATURE = signed_blob   
+    | CERTIFICATE cert_name [ WITH PASSWORD = 'password' ]
+    | CERTIFICATE cert_name WITH SIGNATURE = signed_blob
     | ASYMMETRIC KEY Asym_Key_Name  
-    | ASYMMETRIC KEY Asym_Key_Name [ WITH PASSWORD = 'password'.]  
-    | ASYMMETRIC KEY Asym_Key_Name WITH SIGNATURE = signed_blob  
-```  
+    | ASYMMETRIC KEY Asym_Key_Name [ WITH PASSWORD = 'password'.]
+    | ASYMMETRIC KEY Asym_Key_Name WITH SIGNATURE = signed_blob
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
+
+module_class  
+向其中添加签名的模块的类。 架构范围内的模块的默认类为 OBJECT。  
   
-## <a name="arguments"></a>参数  
- module_class   
- 向其中添加签名的模块的类。 架构范围内的模块的默认类为 OBJECT。  
-  
- module_name   
+ module_name  
  要签名或副署的存储过程、函数、程序集或触发器的名称。  
   
- CERTIFICATE cert_name   
+ CERTIFICATE cert_name  
  对存储过程、函数、程序集或触发器进行签名或副署时所用证书的名称。  
   
- WITH PASSWORD ='password'   
+ WITH PASSWORD ='password'  
  是对证书私钥或非对称密钥进行解密时所需的密码。 仅当数据库主密钥不保护私钥时才需要该子句。  
   
- SIGNATURE =signed_blob   
- 指定模块的已签名二进制大型对象 (BLOB)。 如果不提供私钥，而只提供模块时，则该子句非常有用。 当使用该子句时，只需要模块、签名和公钥便可将已签名的二进制大型对象添加到数据库。 signed_blob 是以十六进制格式表示的 Blob 自身  。  
+ SIGNATURE =signed_blob  
+ 指定模块的已签名二进制大型对象 (BLOB)。 如果不提供私钥，而只提供模块时，则该子句非常有用。 当使用该子句时，只需要模块、签名和公钥便可将已签名的二进制大型对象添加到数据库。 signed_blob 是以十六进制格式表示的 Blob 自身。  
   
- ASYMMETRIC KEY Asym_Key_Name   
+ ASYMMETRIC KEY Asym_Key_Name  
  对存储过程、函数、程序集或触发器进行签名或副署时所用非对称密钥的名称。  
   
-## <a name="remarks"></a>备注  
- 要签名或副署的模块以及用来对模块进行签名的证书或非对称密钥必须已经存在。 模块中的每个字符都包括在签名计算中。 这包括前导回车符和换行符。  
+## <a name="remarks"></a>备注
+
+要签名或副署的模块以及用来对模块进行签名的证书或非对称密钥必须已经存在。 模块中的每个字符都包括在签名计算中。 这包括前导回车符和换行符。  
   
  可以使用任意数量的证书和非对称密钥对模块进行签名和副署。  
   
@@ -75,14 +79,14 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
   
  如果模块包含 EXECUTE AS 子句，则也会将主体的安全 ID (SID) 作为签名过程的一部分包括在内。  
   
-> [!CAUTION]  
->  模块签名只应用于授予权限，不应用于拒绝或撤消权限。  
+> [!CAUTION]
+> 模块签名只应用于授予权限，不应用于拒绝或撤消权限。  
   
  不能对内联表值函数进行签名。  
   
  可以在 sys.crypt_properties 目录视图中看到有关签名的信息。  
   
-> [!WARNING]  
+> [!WARNING]
 >  当为签名重新创建过程时，原始批处理中的所有语句必须与重新创建批处理相匹配。 如果批处理的任何部分有所不同，即使是空格或注释不同，所生成的签名也将会不同。  
   
 ## <a name="countersignatures"></a>副署  
@@ -92,18 +96,20 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
   
 -   如果我们对 procSelectT1 进行签名，以便 procSelectT1 可以访问 T1，则 Alice 可以直接调用 procSelectT1，而不必调用 ProcSelectT1ForAlice。  
   
--   我们可以对 Alice 拒绝授予针对 procSelectT1 的 EXECUTE 权限，但是，Alice 也无法通过 ProcSelectT1ForAlice 调用 procSelectT1。  
+-   我们可以对 Alice 拒绝授予针对 procSelectT1 的 EXECUTE 权限，但是，Alice 也无法通过 ProcSelectT1ForAlice 调用 procSelectT1。
   
 -   对 ProcSelectT1ForAlice 签名本身也不会起作用，因为此签名在调用 procSelectT1 时将丢失。  
   
 然而，通过使用用于对 ProcSelectT1ForAlice 进行签名的相同证书来副署 procSelectT1，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将在整个调用链中保留此签名，并允许访问 T1。 如果 Alice 试图直接调用 procSelectT1，她将无法访问 T1，因为副署不授予任何权限。 下面的示例 C 显示了此示例的 [!INCLUDE[tsql](../../includes/tsql-md.md)]。  
   
 ## <a name="permissions"></a>权限  
- 需要对对象拥有 ALTER 权限，并且对证书或非对称密钥拥有 CONTROL 权限。 如果关联的私钥受密码保护，则用户还必须具有相应的密码。  
+
+需要对对象拥有 ALTER 权限，并且对证书或非对称密钥拥有 CONTROL 权限。 如果关联的私钥受密码保护，则用户还必须具有相应的密码。  
   
 ## <a name="examples"></a>示例  
   
-### <a name="a-signing-a-stored-procedure-by-using-a-certificate"></a>A. 通过使用证书对存储过程进行签名  
+### <a name="a-signing-a-stored-procedure-by-using-a-certificate"></a>A. 通过使用证书对存储过程进行签名
+
  以下示例使用证书 `HumanResources.uspUpdateEmployeeLogin` 对存储过程 `HumanResourcesDP` 进行签名。  
   
 ```  
@@ -113,8 +119,9 @@ ADD SIGNATURE TO HumanResources.uspUpdateEmployeeLogin
 GO  
 ```  
   
-### <a name="b-signing-a-stored-procedure-by-using-a-signed-blob"></a>B. 通过使用已签名的 BLOB 对存储过程进行签名  
- 下面的示例创建一个新数据库，并创建要在示例中使用的证书。 该示例创建一个简单的存储过程并且对该存储过程进行签名，并且从 `sys.crypt_properties` 检索该签名 BLOB。 最后，将删除并再次添加该签名。 该示例通过使用 WITH SIGNATURE 语法对该工程进行签名。  
+### <a name="b-signing-a-stored-procedure-by-using-a-signed-blob"></a>B. 通过使用已签名的 BLOB 对存储过程进行签名
+
+下面的示例创建一个新数据库，并创建要在示例中使用的证书。 该示例创建一个简单的存储过程并且对该存储过程进行签名，并且从 `sys.crypt_properties` 检索该签名 BLOB。 最后，将删除并再次添加该签名。 该示例通过使用 WITH SIGNATURE 语法对该工程进行签名。  
   
 ```  
 CREATE DATABASE TestSignature ;  
@@ -159,8 +166,9 @@ ADD SIGNATURE TO [sp_signature_demo]
 GO  
 ```  
   
-### <a name="c-accessing-a-procedure-using-a-countersignature"></a>C. 使用副署访问过程  
- 下面的示例说明副署如何帮助控制对于对象的访问。  
+### <a name="c-accessing-a-procedure-using-a-countersignature"></a>C. 使用副署访问过程
+
+下面的示例说明副署如何帮助控制对于对象的访问。  
   
 ```  
 -- Create tesT1 database  
@@ -245,8 +253,7 @@ DROP LOGIN Alice;
   
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [sys.crypt_properties (Transact-SQL)](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)   
- [DROP SIGNATURE (Transact-SQL)](../../t-sql/statements/drop-signature-transact-sql.md)  
-  
-  
+## <a name="see-also"></a>另请参阅
+
+- [sys.crypt_properties (Transact-SQL)](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)
+- [DROP SIGNATURE (Transact-SQL)](../../t-sql/statements/drop-signature-transact-sql.md)

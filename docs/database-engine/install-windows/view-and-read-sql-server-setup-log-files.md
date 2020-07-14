@@ -1,5 +1,6 @@
 ---
 title: 查看和读取 SQL Server 安装程序日志文件 | Microsoft Docs
+description: 本文将介绍 SQL Server 安装程序创建的日志文件。 日志文件位于带有日期和时间戳的文件夹中。
 ms.custom: ''
 ms.date: 09/09/2016
 ms.prod: sql
@@ -18,35 +19,35 @@ ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b3ddfa9ee8866086fa16a384efb63a5392394d3a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: edeb881f5d589e0a2e09848cc4b4c7f7c958f9ba
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76929125"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900172"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>查看和阅读 SQL Server 安装程序日志文件
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
-默认情况下，SQL Server 安装程序会在 \%programfiles%\Microsoft SQL Server\\nnn\Setup Bootstrap\Log 内带有日期和时间戳的文件夹中创建日志文件，其中 nnn 是与正在安装的 SQL 版本相对应的数字。 带有时间戳的日志文件夹的名称格式为 YYYYMMDD_hhmmss。 在无人参与模式下执行安装程序时，将在 %temp%\sqlsetup*.log 中创建日志。 日志文件夹中的所有文件将归档到各自日志文件夹的 Log\*.cab 文件中。  
+默认情况下，SQL Server 安装程序会在 \%programfiles%\Microsoft SQL Server\\nnn\Setup Bootstrap\Log 内带有日期和时间戳的文件夹中创建日志文件，其中 nnn 是与正在安装的 SQL 版本相对应的数字 。 带有时间戳的日志文件夹的名称格式为 YYYYMMDD_hhmmss。 在无人参与模式下执行安装程序时，将在 %temp%\sqlsetup*.log 中创建日志。 日志文件夹中的所有文件将归档到各自日志文件夹的 Log\*.cab 文件中。  
 
    | 文件           | 路径 |
    | :------        | :----------------------------- |
-   | **Summary.txt**    | \%programfiles%\Microsoft SQL Server\\nnn\Setup Bootstrap\Log  |
-   | **Summary_\<MachineName>\_Date.txt**  | \%programfiles%\Microsoft SQL Server\\nnn\Setup Bootstrap\Log\YYYYMMDD_hhmmss  |
-   | **Detail.txt** | \%programfiles%\Microsoft SQL Server\\nnn\Setup Bootstrap\Log\YYYYMMDD_hhmmss |
-   | **数据存储** | \%programfiles%\Microsoft SQL Server\\nnn\Setup Bootstrap\Log\YYYYMMDD_hhmmss\Datastore 
+   | **Summary.txt**    | \%programfiles%\Microsoft SQL Server\\nnn\Setup Bootstrap\Log |
+   | Summary_\<MachineName>\_Date.txt  | \%programfiles%\Microsoft SQL Server\\nnn\Setup Bootstrap\Log\YYYYMMDD_hhmmss |
+   | **Detail.txt** | \%programfiles%\Microsoft SQL Server\\nnn\Setup Bootstrap\Log\YYYYMMDD_hhmmss|
+   | **数据存储** | \%programfiles%\Microsoft SQL Server\\nnn\Setup Bootstrap\Log\YYYYMMDD_hhmmss\Datastore
    | **MSI 日志文件** | \%programfiles%\Microsoft SQL Server\\nnn\Setup Bootstrap\Log\YYYYMMDD_hhmmss\\\<Name>.log|
-   | **ConfigurationFile.ini** | \%programfiles%\Microsoft SQL Server\\nnn\Setup Bootstrap\Log\YYYYMMDD_hhmmss  |
-   | **SystemConfigurationCheck_Report.htm** | \%programfiles%\Microsoft SQL Server\\nnn\Setup Bootstrap\Log\YYYYMMDD_hhmmss  |
+   | **ConfigurationFile.ini** | \%programfiles%\Microsoft SQL Server\\nnn\Setup Bootstrap\Log\YYYYMMDD_hhmmss |
+   | **SystemConfigurationCheck_Report.htm** | \%programfiles%\Microsoft SQL Server\\nnn\Setup Bootstrap\Log\YYYYMMDD_hhmmss |
    | **对于无人参与的安装** | %temp%\sqlsetup*.log |
 
 
  ![setup-bootstrap-example.png](media/view-and-read-sql-server-setup-log-files/setup-bootstrap-example.png)
 
  >[!NOTE]
- > 路径 nnn 中的数字对应要安装的 SQL 版本  。 上图中安装的是 SQL 2017，因此该文件夹为 140。 SQL 2016 对应的文件夹为 130，SQL 2014 对应的文件夹为 120。
+ > 路径 nnn 中的数字对应要安装的 SQL 版本。 上图中安装的是 SQL 2017，因此该文件夹为 140。 SQL 2016 对应的文件夹为 130，SQL 2014 对应的文件夹为 120。
   
  SQL Server 安装程序分以下三个基本阶段完成： 
   
@@ -82,7 +83,7 @@ ms.locfileid: "76929125"
 
 
   >[!NOTE]
-  > 请注意，修补时可能会存在多个子文件夹（一个用于每个要修补的实例，一个用于共享功能），其中包含一组类似的文件（即 %programfiles%\MicrosoftSQL Server\130\Setup Bootstrap\Log\<YYYYMMDD_HHMM > \MSSQLSERVER）。 
+  > 请注意，修补时可能会存在多个子文件夹（一个用于每个要修补的实例，一个用于共享功能），其中包含一组类似的文件（即 %programfiles%\MicrosoftSQL Server\130\Setup Bootstrap\Log\<YYYYMMDD_HHMM>\MSSQLSERVER）。 
   
 ### <a name="location"></a>位置  
  Summary.txt 位于 %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\nnn\Setup Bootstrap\Log\\。

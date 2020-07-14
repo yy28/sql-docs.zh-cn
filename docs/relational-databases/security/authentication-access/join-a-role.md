@@ -1,5 +1,6 @@
 ---
 title: 加入角色 | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio 或 Transact-sql 向 SQL Server 中的登录名和数据库用户分配角色。 使用角色管理权限。
 ms.custom: ''
 ms.date: 07/14/2016
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: 05c8d10d-5823-46c6-8b1a-81722da6a42b
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 909a8156556cd4a654dcfd6406de2bd45826e31b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4cea30d4694ae9c89d69ca6d36330ecc623a015a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67990493"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005639"
 ---
 # <a name="join-a-role"></a>加入角色
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中向登录名和数据库用户分配角色。 可使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的角色高效地管理权限。 将权限分配给角色，然后在角色中添加和删除用户以及登录名。 通过使用角色，不必针对各个用户单独维护权限。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持四种类型的角色。  
@@ -76,11 +77,11 @@ ms.locfileid: "67990493"
   
 3.  展开 **“服务器角色”** 文件夹。  
   
-4.  右键单击要编辑的角色，然后选择“属性”  。  
+4.  右键单击要编辑的角色，然后选择“属性”。  
   
-5.  在“服务器角色属性 - _server\_role\_name_”对话框的“成员”页中，单击“添加”。  
+5.  在“服务器角色属性 - _server\_role\_name_”对话框的“成员”页中，单击“添加”  。  
   
-6.  在“选择服务器登录名或角色”  对话框的“输入要选择的对象名称(示例)”  下，输入要添加到该服务器角色的登录名或服务器角色。 或者，单击“浏览...”，然后在“浏览对象”对话框中选择任意对象或所有可用对象   。 单击“确定”以返回“服务器角色属性 - _server\_role\_name_”对话框。  
+6.  在“选择服务器登录名或角色”对话框的“输入要选择的对象名称(示例)”下，输入要添加到该服务器角色的登录名或服务器角色。 或者，单击“浏览...”，然后在“浏览对象”对话框中选择任意对象或所有可用对象 。 单击“确定”以返回“服务器角色属性 - _server\_role\_name_”对话框 。  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -98,11 +99,11 @@ ms.locfileid: "67990493"
   
 6.  展开 **“服务器角色”** 文件夹。  
   
-7.  右键单击要编辑的角色，然后选择“属性”  。  
+7.  右键单击要编辑的角色，然后选择“属性”。  
   
-8.  在“数据库角色属性 - _database\_role\_name_”对话框的“常规”页中，单击“添加”。  
+8.  在“数据库角色属性 - _database\_role\_name_”对话框的“常规”页中，单击“添加”  。  
   
-9. 在“选择数据库用户或角色”  对话框的“输入要选择的对象名称(示例)”  下，输入要添加到该数据库角色的登录名或数据库角色。 或者，单击“浏览...”，然后在“浏览对象”对话框中选择任意对象或所有可用对象   。 单击“确定”以返回“数据库角色属性 - _database\_role\_name_”对话框。  
+9. 在“选择数据库用户或角色”对话框的“输入要选择的对象名称(示例)”下，输入要添加到该数据库角色的登录名或数据库角色。 或者，单击“浏览...”，然后在“浏览对象”对话框中选择任意对象或所有可用对象 。 单击“确定”以返回“数据库角色属性 - _database\_role\_name_”对话框 。  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -114,7 +115,7 @@ ms.locfileid: "67990493"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     ALTER SERVER ROLE diskadmin ADD MEMBER [Domain\Juan] ;  
@@ -129,7 +130,7 @@ ms.locfileid: "67990493"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     ALTER ROLE Marketing ADD MEMBER [Domain\Juan] ;  

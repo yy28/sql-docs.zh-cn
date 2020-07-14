@@ -1,5 +1,6 @@
 ---
 title: SSMS 对内存中 OLTP 的支持
+description: 使用 SQL Server Management Studio 来管理内存优化表、表索引、本机编译的存储过程和用户定义的表类型。
 ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: ee847b5f-6a1a-448e-a746-d61a023881ff
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e9bd4cb0c2fff4259814f6e33a65777023a801fd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b909ab9d5290ae0c34c9c65a1bd47010a20952e4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412526"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734983"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>对内存中 OLTP 的 SQL Server Management Studio 支持
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 是用于管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 基础结构的集成环境。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供用于配置、监视和管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的工具。 有关详细信息，请参阅 [SQL Server Management Studio](https://msdn.microsoft.com/library/66a6b7b1-de6a-4161-82bd-98ded486947b)  
   
  本主题中的任务说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 来管理内存优化的表、内存优化的表的索引、本机编译的存储过程以及用户定义的内存优化的表类型。  
@@ -30,17 +31,17 @@ ms.locfileid: "74412526"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库引擎实例，然后展开该实例。  
   
-2.  右键单击“数据库”  ，然后单击“新建数据库”  。  
+2.  右键单击“数据库”，然后单击“新建数据库”。  
   
-3.  若要添加新内存优化的数据文件组，请单击  “文件组”页。 在  “内存优化数据”下，单击  “添加文件组”，然后输入内存优化数据文件组的名称。  标有 **“FILESTREAM 文件”** 的列表示文件组中的容器数。 容器是在 **“常规”** 页上添加的。  
+3.  若要添加新内存优化的数据文件组，请单击“文件组”页。 在“内存优化数据”下，单击“添加文件组”，然后输入内存优化数据文件组的名称。  标有 **“FILESTREAM 文件”** 的列表示文件组中的容器数。 容器是在 **“常规”** 页上添加的。  
   
-4.  要向文件组添加文件（容器），请单击  “常规”页。 在 **“数据库文件”** 下，单击 **“添加”** 。 在  “文件类型”中选择  “FILESTREAM 数据”，指定容器的逻辑名称，选择内存优化文件组，并确保  “自动增长/最大大小”设置为  “无限制”。  
+4.  要向文件组添加文件（容器），请单击“常规”页。 在 **“数据库文件”** 下，单击 **“添加”** 。 在“文件类型”中选择“FILESTREAM 数据”，指定容器的逻辑名称，选择内存优化文件组，并确保“自动增长/最大大小”设置为“无限制”。  
 
      有关如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 创建新数据库的更多信息，请参阅[创建数据库](../../relational-databases/databases/create-a-database.md)。  
   
 ### <a name="to-create-a-memory-optimized-table"></a>创建内存优化的表  
   
-1.  在  “对象资源管理器”中，右键单击数据库的**Tables**“表”节点，单击  “新建”，然后单击  “内存优化的表”。  
+1.  在“对象资源管理器”中，右键单击数据库的**Tables**“表”节点，单击“新建”，然后单击“内存优化的表”。  
   
      此时会显示用于创建内存优化表的模板。  
   
@@ -48,11 +49,11 @@ ms.locfileid: "74412526"
   
      有关如何使用模板的更多信息，请参阅 [Template Explorer](../../ssms/template/template-explorer.md)。  
   
-3.  在  “对象资源管理器”中，表先按基于磁盘的表，然后按内存优化表的顺序排序。 使用 **“对象资源管理器详细信息”** 可以查看按名称排序的所有表。  
+3.  在“对象资源管理器”中，表先按基于磁盘的表，然后按内存优化表的顺序排序。 使用 **“对象资源管理器详细信息”** 可以查看按名称排序的所有表。  
   
 ### <a name="to-create-a-natively-compiled-stored-procedure"></a>创建本机编译的存储过程  
   
-1.  在  “对象资源管理器”中，右键单击数据库的  “存储过程”节点，单击  “新建”，然后单击  “本机编译的存储过程”。  
+1.  在“对象资源管理器”中，右键单击数据库的“存储过程”节点，单击“新建”，然后单击“本机编译的存储过程”。  
   
      此时会显示用于创建本机编译存储过程的模板。  
   
@@ -62,7 +63,7 @@ ms.locfileid: "74412526"
   
 ### <a name="to-create-a-user-defined-memory-optimized-table-type"></a>创建用户定义的内存优化表类型  
   
-1.  在  “对象资源管理器”中，展开数据库的  “类型”节点，右键单击  “用户定义的表类型”节点，单击  “新建”，然后单击  “用户定义的内存优化表类型”。  
+1.  在“对象资源管理器”中，展开数据库的“类型”节点，右键单击“用户定义的表类型”节点，单击“新建”，然后单击“用户定义的内存优化表类型”。  
   
      将显示创建用户定义的内存优化表类型所用的模板。  
   
@@ -74,7 +75,7 @@ ms.locfileid: "74412526"
   
 #### <a name="view-memory-usage-by-memory-optimized-objects-report"></a>查看内存优化对象的内存使用情况报表  
   
--   在  “对象资源管理器”中，右键单击数据库，然后依次单击  “报表”、  “标准报表”、  “内存优化对象的内存使用情况”。  
+-   在“对象资源管理器”中，右键单击数据库，然后依次单击“报表”、“标准报表”、“内存优化对象的内存使用情况”。  
   
      该报表提供数据库中的内存优化对象占用的内存空间详细数据。  
   
@@ -82,9 +83,9 @@ ms.locfileid: "74412526"
   
 1.  获取有关内存使用情况的信息：  
   
-    -   在  “对象资源管理器”中，右键单击内存优化表，然后依次单击  “属性”、  “存储”页。 **“数据空间”** 属性的值指示表中数据占用的内存。 **“索引空间”** 属性的值指示表中索引占用的内存。  
+    -   在“对象资源管理器”中，右键单击内存优化表，然后依次单击“属性”、“存储”页。 **“数据空间”** 属性的值指示表中数据占用的内存。 **“索引空间”** 属性的值指示表中索引占用的内存。  
   
-    -   在  “对象资源管理器”中，右键单击数据库，单击  “属性”，然后单击  “常规”页。  “分配给内存优化对象的内存”属性的值指示分配给数据库中内存优化对象的内存。  “内存优化对象使用的内存”属性的值指示数据库中内存优化对象使用的内存。  
+    -   在“对象资源管理器”中，右键单击数据库，单击“属性”，然后单击“常规”页。 “分配给内存优化对象的内存”属性的值指示分配给数据库中内存优化对象的内存。 “内存优化对象使用的内存”属性的值指示数据库中内存优化对象使用的内存。  
   
 ## <a name="supported-features-in-ssmanstudiofull"></a>中支持的功能 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 支持具有内存优化的数据文件组、内存优化的表、索引和本机编译的存储过程的数据库上数据库引擎所支持的功能和操作。  
@@ -109,7 +110,7 @@ ms.locfileid: "74412526"
   
         -   附加和分离包含内存优化表的数据库。  
   
-              “附加数据库”用户界面不显示内存优化数据文件组。 但是，您可以继续附加数据库并且数据库将正确附加。  
+             “附加数据库”用户界面不显示内存优化数据文件组。 但是，您可以继续附加数据库并且数据库将正确附加。  
   
             > [!NOTE]  
             >  如果要使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 附加具有内存优化数据文件组容器的数据库，并且该数据库的内存优化数据文件组容器是在另一台计算机上创建的，则该内存优化数据文件组容器在两台计算机上的位置必须相同。 如果希望该数据库的内存优化数据文件组容器在新计算机上的位置不同，则可使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 附加该数据库。 在下例中，内存优化数据文件组容器在新计算机上的位置为 C:\Folder2。 但是，在第一台计算机上创建内存优化数据文件组容器时，该位置为 C:\Folder1。  
@@ -128,7 +129,7 @@ ms.locfileid: "74412526"
   
         -   生成脚本。  
   
-             在 **“生成和发布脚本向导”** 中， **“检查对象是否存在”** 脚本编写选项的默认值是 FALSE。 如果  “检查对象是否存在”脚本编写选项的值在向导的  “设置脚本编写选项”屏幕中设置为 TRUE，则生成的脚本将包含“CREATE PROCEDURE <过程名称> AS”和“ALTER PROCEDURE <过程名称> <过程定义>”。 在执行时，生成的脚本将返回错误，因为在本机编译的存储过程中不支持 ALTER PROCEDURE。  
+             在 **“生成和发布脚本向导”** 中， **“检查对象是否存在”** 脚本编写选项的默认值是 FALSE。 如果“检查对象是否存在”脚本编写选项的值在向导的“设置脚本编写选项”屏幕中设置为 TRUE，则生成的脚本将包含“CREATE PROCEDURE <过程名称> AS”和“ALTER PROCEDURE <过程名称> <过程定义>”。 在执行时，生成的脚本将返回错误，因为在本机编译的存储过程中不支持 ALTER PROCEDURE。  
   
              更改每个本机编译的存储过程的生成的脚本：  
   
@@ -140,7 +141,7 @@ ms.locfileid: "74412526"
   
         -   导入和导出数据。 使用“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 从一个或多个表或视图中导入和导出向导复制数据”选项。 如果目标表是目标数据库中不存在的内存优化表：  
   
-            1.  在 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入与导出向导”** 中的 **“指定表复制或查询”** 屏幕上，选择 **“复制一个或多个表或视图的数据”** 。 然后单击“下一步”  。  
+            1.  在 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入与导出向导”** 中的 **“指定表复制或查询”** 屏幕上，选择 **“复制一个或多个表或视图的数据”** 。 然后单击“下一步”。  
   
             2.  单击 **“编辑映射”** 。 然后选择 **“创建目标表”** 并单击 **“编辑 SQL”** 。 在目标数据库上输入用于创建内存优化表的 CREATE TABLE 语法。 单击 **“确定”** 并完成向导中的剩余步骤。  
   
@@ -150,7 +151,7 @@ ms.locfileid: "74412526"
   
 -   “对象资源管理器详细信息”窗格  
   
--   Template Explorer  
+-   模板资源管理器  
   
 ## <a name="unsupported-features-in-ssmanstudiofull"></a>中不支持的功能 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  对于内存中 OLTP 对象，数据库引擎不支持的功能和操作， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 同样不支持。  

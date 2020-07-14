@@ -1,5 +1,6 @@
 ---
 title: 从命令提示符安装更新 | Microsoft Docs
+description: 本文介绍 SQL Server 更新安装的命令语法。 可根据你组织的需求测试并修改安装脚本。
 ms.custom: ''
 ms.date: 09/08/2017
 ms.prod: sql
@@ -10,23 +11,23 @@ ms.assetid: bc98ba2b-aae9-4d01-aa85-d4c36428cb0b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 933d8ae26522800326c88a8ba28dbd99c5688fc2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 22821930b8d0e10826fcaad0f33258262f59f2ae
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67990912"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900379"
 ---
 # <a name="installing-updates-from-the-command-prompt"></a>从命令提示符安装更新
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 请根据您所在单位的需要测试并修改安装脚本。 
  
 ## <a name="sample-syntax-for-installation"></a>安装的示例语法 
 更新包的名称可能会有变化，可能包含语言、版本和处理器组件。 在命令提示符下应用更新，从而将 <package_name> 替换为更新包的名称： 
  
-- 更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的单一实例和所有共享组件（如 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和管理工具）：可以使用 InstanceName 参数或 InstanceID 参数指定实例。 若要更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已准备实例，必须指定 InstanceID 参数。
+- 更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的单个实例和所有共享组件（如 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和管理工具）：您可以通过使用 InstanceName 参数或 InstanceID 参数指定实例。 若要更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已准备实例，必须指定 InstanceID 参数。
 
     ```
     <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceName=MyInstance

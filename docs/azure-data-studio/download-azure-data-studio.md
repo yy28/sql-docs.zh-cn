@@ -1,24 +1,24 @@
 ---
 title: 下载并安装 Azure Data Studio
 description: 下载并安装适用于 Windows、macOS 或 Linux 的 Azure Data Studio
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
+ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 4/30/2020
-ms.reviewer: maghan, sstein
-ms.openlocfilehash: 67a195fbfcedb7b53fbc81aed8ba561386126374
-ms.sourcegitcommit: d3e7c06fe989135f70d97f5ec6613fad4d62b145
+ms.date: 6/15/2020
+ms.openlocfilehash: 249dfc97acea8228eef1234a41f1510e8b223788
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82619680"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774686"
 ---
 # <a name="download-and-install-azure-data-studio"></a>下载并安装 Azure Data Studio
 
-[!INCLUDE[name-sos](../includes/name-sos.md)] 在 Windows、macOS 和 Linux 上运行。
+Azure Data Studio 在 Windows、macOS 和 Linux 上运行。
 
 下载并安装最新版本：
 
@@ -27,46 +27,46 @@ ms.locfileid: "82619680"
 
 |平台|下载|发布日期| 版本 |
 |:---|:---|:---|:---|
-| Windows | [用户安装程序（推荐）](https://go.microsoft.com/fwlink/?linkid=2127556)<br>[系统安装程序](https://go.microsoft.com/fwlink/?linkid=2127555)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2127476) | 2020 年 4 月 30 日 | 1.17.1 |
-| macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2127554) | 2020 年 4 月 30 日 | 1.17.1 |
-| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2127551)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2127552)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2127553) | 2020 年 4 月 30 日| 1.17.1 |
+| Windows | [用户安装程序（推荐）](https://go.microsoft.com/fwlink/?linkid=2132348)<br>[系统安装程序](https://go.microsoft.com/fwlink/?linkid=2132347)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2132518) | 2020 年 6 月 15 日 | 1.19.0 |
+| macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2132519) | 2020 年 6 月 15 日 | 1.19.0 |
+| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2132350)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2132351)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2132349) | 2020 年 6 月 15 日| 1.19.0 |
 
 有关最新版本的详细信息，请参阅[发行说明](release-notes.md)。
 
 ## <a name="get-azure-data-studio-for-windows"></a>获取适用于 Windows 的 Azure Data Studio
 
-此版本的 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 包含标准 Windows 安装程序体验和 .zip 文件。
+此版本的 Azure Data Studio 包含标准 Windows Installer 体验和 .zip 文件。
 
-建议使用用户安装程序，因为它不需要管理员权限，可简化安装和升级  。 用户安装程序不需要管理员权限，因为它位于用户本地的 AppData (LOCALAPPDATA) 文件夹下。 用户安装程序还提供更流畅的后台更新体验。 有关详细信息，请参阅 [Windows 用户设置](https://code.visualstudio.com/updates/v1_26#_user-setup-for-windows)。
+建议使用用户安装程序，因为它不需要管理员权限，可简化安装和升级。 用户安装程序不需要管理员权限，因为它位于用户本地的 AppData (LOCALAPPDATA) 文件夹下。 用户安装程序还提供更流畅的后台更新体验。 有关详细信息，请参阅 [Windows 用户设置](https://code.visualstudio.com/updates/v1_26#_user-setup-for-windows)。
 
 **用户安装程序**（推荐）
 
-1. 下载并运行[适用于 Windows 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 用户安装程序](https://go.microsoft.com/fwlink/?linkid=2127556)  。
+1. 下载并运行[适用于 Windows 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 用户安装程序](https://go.microsoft.com/fwlink/?linkid=2132348)。
 2. 启动 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 应用。
 
 **系统安装程序**
 
-1. 下载并运行[适用于 Windows 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 系统安装程序](https://go.microsoft.com/fwlink/?linkid=2127555)  。
+1. 下载并运行[适用于 Windows 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 系统安装程序](https://go.microsoft.com/fwlink/?linkid=2132347)。
 2. 启动 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 应用。
 
 **zip 文件**
 
-1. 下载[适用于 Windows 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip](https://go.microsoft.com/fwlink/?linkid=2127476)。
+1. 下载[适用于 Windows 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip](https://go.microsoft.com/fwlink/?linkid=2132518)。
 2. 浏览到下载文件并将其解压缩。
-3. `\azuredatastudio-windows\azuredatastudio.exe`运行 
+3. `\azuredatastudio-windows\azuredatastudio.exe`运行
 
 ## <a name="get-azure-data-studio-for-macos"></a>获取适用于 macOS 的 Azure Data Studio
 
-1. 下载[适用于 macOS 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)]](https://go.microsoft.com/fwlink/?linkid=2127554)。
+1. 下载[适用于 macOS 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)]](https://go.microsoft.com/fwlink/?linkid=2132519)。
 2. 若要展开 zip 的内容，请双击。
-3. 若要使 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 在启动板中可用，请将 Azure Data Studio.app 拖到“Applications”文件夹中    。
+3. 若要使 Azure Data Studio 在启动板中可用，请将 Azure Data Studio.app 拖到“Applications”文件夹中  。
 
 ## <a name="get-azure-data-studio-for-linux"></a>获取适用于 Linux 的 Azure Data Studio
 
 1. 通过使用安装程序之一或 tar.gz 存档来下载适用于 Linux 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)]：
-    - [.deb](https://go.microsoft.com/fwlink/?linkid=2127551)
-    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2127552)
-    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2127553)
+    - [.deb](https://go.microsoft.com/fwlink/?linkid=2132350)
+    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2132351)
+    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2132349)
 1. 若要提取文件并启动 [!INCLUDE[name-sos](../includes/name-sos-short.md)]，请打开一个新的终端窗口并键入以下命令：
 
    **Debian 安装：**
@@ -102,16 +102,19 @@ ms.locfileid: "82619680"
    > 在 Debian、Redhat 和 Ubuntu 上，可能缺少依赖项。 使用以下命令安装这些依赖项，具体取决于你的 Linux 版本：
 
    **Debian：**
+
    ```bash
    sudo apt-get install libunwind8
    ```
 
    **Redhat：**
+
    ```bash
    yum install libXScrnSaver
    ```
 
    **Ubuntu：**
+
    ```bash
    sudo apt-get install libxss1
 
@@ -122,7 +125,7 @@ ms.locfileid: "82619680"
 
 ## <a name="download-insiders-build-of-azure-data-studio"></a>下载 Azure Data Studio 的预览体验内部版本
 
-通常，用户应下载上述 Azure Data Studio 的稳定版本。 但是，如果用户希望试用 Beta 版功能并向我们提供反馈，可以下载 [Azure Data Studio 的预览体验内部版本。](https://github.com/microsoft/azuredatastudio#try-out-the-latest-insiders-build-from-master)
+通常，用户应下载上述 Azure Data Studio 的稳定版本。 但是，如果用户希望试用 Beta 版功能并向我们提供反馈，可以下载 [Azure Data Studio 的预览体验内部版本。](https://github.com/microsoft/azuredatastudio#try-out-the-latest-insiders-build-from-main)
 
 ## <a name="uninstall-azure-data-studio"></a>卸载 Azure Data Studio
 
@@ -132,7 +135,7 @@ ms.locfileid: "82619680"
 
 ## <a name="supported-operating-systems"></a>受支持的操作系统
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] 在 Windows、macOS 和 Linux 上运行，并在以下平台上受支持：
+Azure Data Studio 在 Windows、macOS 和 Linux 上运行，并在以下平台上受支持：
 
 ### <a name="windows"></a>Windows
 
@@ -170,7 +173,7 @@ ms.locfileid: "82619680"
 
 ## <a name="check-for-updates"></a>检查更新
 
-若要检查最新更新，请单击窗口左下角的齿轮图标，然后单击“检查更新” 
+若要检查最新更新，请单击窗口左下角的齿轮图标，然后单击“检查更新”
 
 ## <a name="supported-sql-offerings"></a>支持的 SQL 产品/服务
 
@@ -180,19 +183,19 @@ ms.locfileid: "82619680"
 
 如果用户仍在使用 SQL Operations Studio，则需要升级到 Azure Data Studio。 SQL Operations Studio 是 Azure Data Studio 的预览名称和预览版本。 2018 年 9 月，我们已[将该名称更改为 Azure Data Studio](https://cloudblogs.microsoft.com/sqlserver/2018/09/25/azure-data-studio-for-sql-server/) 并发布了正式 (GA) 版本。 由于不再更新或支持 SQL Operations Studio，因此我们要求所有 SQL Operations Studio 用户下载最新版本的 Azure Data Studio 以获取最新功能、安全更新以及修补程序。
 
-从旧的预览版升级到最新 Azure Data Studio 时会丢失当前的设置和扩展。 若要迁移设置，请按照以下“移动用户设置”部分中的说明进行操作  ：
+从旧的预览版升级到最新 Azure Data Studio 时会丢失当前的设置和扩展。 若要迁移设置，请按照以下“移动用户设置”部分中的说明进行操作：
 
 ## <a name="move-user-settings"></a>移动用户设置
 
 若要迁移自定义设置、键盘快捷方式或代码片段，请执行以下步骤。 若要从 SQL Operations Studio 版本升级到 Azure Data Studio，请务必执行此操作。
 
-如果已经拥有 Azure Data Studio，或从未安装或自定义过 SQL Operations Studio，可忽略此部分  。
+如果已经拥有 Azure Data Studio，或从未安装或自定义过 SQL Operations Studio，可忽略此部分。
 
-1. 单击左下方的齿轮，然后单击“设置”，以打开设置  。
+1. 单击左下方的齿轮，然后单击“设置”，以打开设置。
 
    ![open-settings](./media/download/open-settings.png)
 
-2. 右键单击顶部的“用户设置”选项卡，然后单击“在资源管理器中显示”  
+2. 右键单击顶部的“用户设置”选项卡，然后单击“在资源管理器中显示” 
 
    ![reveal-in-explorer](./media/download/reveal-in-explorer.png)
 

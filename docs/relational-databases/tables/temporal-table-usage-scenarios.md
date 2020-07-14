@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eaac8c264caf9009006853e0f02e258ad5d7408f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e6a000df12b44b2da1913f45febfaa93e39f7af1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165742"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881221"
 ---
 # <a name="temporal-table-usage-scenarios"></a>时态表使用方案
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 临时表通常适用于需要跟踪数据更改历史记录的方案。 建议在以下用例中考虑使用时态表，以获得巨大的生产效率优势。
 
@@ -141,8 +141,8 @@ FROM Employee
 
 > [!TIP]
 > 在带有 FOR SYSTEM_TIME 的临时子句中指定的筛选条件为 SARG 型（即 SQL Server 可以利用基础聚集索引以执行搜索而不是扫描操作。
-> 如果直接查询历史记录表，请确保筛选条件也是 SARG 型的，即在指定筛选器时采用 \<时间段列> {< | > | =, …} 格式 date_condition AT TIME ZONE 'UTC' 格式。
-> 如果将 AT TIME ZONE 应用到时间段列，SQL Server 会执行开销可能很大的表/索引扫描。 避免在查询中出现以下类型的条件：\<时间段列> AT TIME ZONE '\<你的时区' > {< | > | =, ...} date_condition。
+> 如果直接查询历史记录表，请确保筛选条件也是 SARG 型的，即在指定筛选器时采用 \<period column> > {< | > | =, …} date_condition AT TIME ZONE 'UTC' 格式。
+> 如果将 AT TIME ZONE 应用到时间段列，SQL Server 会执行开销可能很大的表/索引扫描。 在查询中要避免这种类型的条件：\<period column> AT TIME ZONE '\<your time zone>' > {< | > | =, ...} 的形式 date_condition。
 
 另请参阅：[在系统版本控制时态表中查询数据](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)。
 

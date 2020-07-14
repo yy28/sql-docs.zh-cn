@@ -22,15 +22,15 @@ ms.assetid: 0a760138-460e-410a-a3c1-d60af03bf2ed
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4bb0b9c6b9d6fe47b69678211122e5c8be7023c7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6799fefe08e3c57d6bac0924f2192094c1b9e428
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78937665"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091831"
 ---
 # <a name="alter-schema-transact-sql"></a>ALTER SCHEMA (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   在架构之间传输安全对象。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "78937665"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 ALTER SCHEMA schema_name   
@@ -51,7 +51,7 @@ ALTER SCHEMA schema_name
     }  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 ALTER SCHEMA schema_name   
@@ -66,7 +66,7 @@ ALTER SCHEMA schema_name
  \<entity_type>  
  更改其所有者的实体的类。 Object 是默认值。  
   
- securable_name   
+ securable_name  
  要移入架构中的架构范围内的安全对象的一部分或两部分名称。  
   
 ## <a name="remarks"></a>备注  
@@ -74,7 +74,7 @@ ALTER SCHEMA schema_name
   
  ALTER SCHEMA 仅可用于在同一数据库中的架构之间移动安全对象。 若要更改或删除架构中的安全对象，请使用特定于该安全对象的 ALTER 或 DROP 语句。  
   
- 如果对 securable_name 使用了由一部分组成的名称，则将使用当前生效的名称解析规则查找该安全对象  。  
+ 如果对 securable_name 使用了由一部分组成的名称，则将使用当前生效的名称解析规则查找该安全对象。  
   
  将安全对象移入新架构时，将删除与该安全对象关联的全部权限。 如果已显式设置安全对象的所有者，则该所有者保持不变。 如果安全对象的所有者已设置为 SCHEMA OWNER，则该所有者将保持为 SCHEMA OWNER；但移动之后，SCHEMA OWNER 将解析为新架构的所有者。 新所有者的 principal_id 将为 NULL。  
   
@@ -82,7 +82,9 @@ ALTER SCHEMA schema_name
   
  移动表或同义词不会自动更新对该对象的引用。 必须手动修改引用已移动对象的任何对象。 例如，如果移动了某个表，并且触发器中引用了该表，则必须修改触发器以反映新的架构名称。 请使用 [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) 列出该对象上的依赖关系，然后再进行移动。  
 
- 若要通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 更改表的架构，请在对象资源管理器中右键单击该表，然后单击“设计”  。 按 F4 以打开“属性”窗口  。 在“架构”框中，选择新架构  。  
+ 若要通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 更改表的架构，请在对象资源管理器中右键单击该表，然后单击“设计”。 按 F4 以打开“属性”窗口。 在“架构”框中，选择新架构。  
+ 
+ ALTER SCHEMA 使用架构级别锁。
   
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  

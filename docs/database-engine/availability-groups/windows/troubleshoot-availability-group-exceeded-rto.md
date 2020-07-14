@@ -1,5 +1,6 @@
 ---
-title: 故障排除：可用性组超过了 RTO (SQL Server) | Microsoft Docs
+title: 疑难解答：可用性组超过了 RTO (SQL Server) | Microsoft Docs
+description: 了解当故障转移花费的时间超过在 SQL Server 中的恢复时间目标时，如何对 Always On 可用性组上的故障转移进行故障排除。
 ms.custom: ag-guide
 ms.date: 06/13/2017
 ms.prod: sql
@@ -9,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: e83e4ef8-92f0-406f-bd0b-dc48dc210517
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9b62bcc1eebe8371bc45ae7f565d9aa712f1b1d4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 959361d64316618ce6b7ccc997f7ef958b1259f5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013747"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888021"
 ---
-# <a name="troubleshoot-availability-group-exceeded-rto"></a>故障排除：可用性组超过了 RTO
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="troubleshoot-availability-group-exceeded-rto"></a>疑难解答：可用性组超过了 RTO
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   对可用性组进行自动故障转移或计划的手动故障转移（无数据丢失）后，可能会发现故障转移时间超过恢复时间目标 (RTO)。 或者，在使用[监视 Always On 可用性组的性能](monitor-performance-for-always-on-availability-groups.md)中的方法估计同步提交次要副本的故障转移时间时（如自动故障转移伙伴），发现该时间超过了 RTO。  
   
  如果自动故障转移仍未完成，请参阅[故障排除 SQL Server 2012 Always On 环境中的自动故障转移问题](https://support.microsoft.com/kb/2833707)。  

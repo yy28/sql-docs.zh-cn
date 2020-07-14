@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 32c1f0e8-db70-4836-95b2-8833be9e0ad1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6df9cdae6fc21d073dfc69f392232a20ca2d0377
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c0bf5ca87b879c85d223f83d40a8b39cf26c0b41
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68100384"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780914"
 ---
 # <a name="mssqlserver_17067"></a>MSSQLSERVER_17067
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>详细信息  
   
-|||  
-|-|-|  
+| Attribute | 值 |  
+| :-------- | :---- |  
 |产品名称|SQL Server|  
 |事件 ID|17067|  
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|SQLASSERT_MESG|  
-|消息正文|SQL Server 断言: 文件: \<%s>，行 = %d %s。 此错误可能与时间有关。 如果重新运行该语句后错误仍然存在，请使用 DBCC CHECKDB 来检查数据库的结构是否完整，或重新启动服务器以确保内存中的数据结构未破坏。|  
+|消息正文|SQL Server 断言:文件：\<%s>，行 = %d %s。 此错误可能与时间有关。 如果重新运行该语句后错误仍然存在，请使用 DBCC CHECKDB 来检查数据库的结构是否完整，或重新启动服务器以确保内存中的数据结构未破坏。|  
   
 ## <a name="explanation"></a>说明  
 与时间有关的暂时性错误或内存中或磁盘上的数据损坏均可导致此错误。  

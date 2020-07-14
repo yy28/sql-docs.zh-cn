@@ -1,5 +1,6 @@
 ---
 title: 远程服务器 | Microsoft Docs
+description: 了解远程服务器，它们已在 SQL Server 中替换为链接服务器。 查看功能、配置和安全性的相关信息。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,17 +15,17 @@ helpviewer_keywords:
 - servers [SQL Server], remote
 - remote access option
 ms.assetid: abf0fa24-f199-4273-9a1a-e8787ac9bee1
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 2b3c4937d87d166d87711389be7acd0c4ae0f8ff
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 393688d3ecb5d0e29a1b05aa6f00d7eec7ca7e22
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67938184"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85651574"
 ---
 # <a name="remote-servers"></a>远程服务器
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中支持远程服务器只是为了向后兼容。 新应用程序应该改用链接服务器。 有关详细信息，请参阅 [链接服务器（数据库引擎）](../../relational-databases/linked-servers/linked-servers-database-engine.md)。  
   
  远程服务器配置使客户端能够连接到一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，以便在没有建立单独的连接的情况下在其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上执行存储过程。 此时，客户端所连接的服务器接受客户端的请求，并代表客户端将该请求发送到远程服务器。 远程服务器处理请求，并将所有结果返回到原始的服务器。 服务器再将那些结果传递给客户端。 当设置远程服务器配置时，还应考虑如何建立安全性。  
@@ -36,7 +37,7 @@ ms.locfileid: "67938184"
   
  大多数情况下，不需要为远程服务器设置配置选项。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组将在本地计算机和远程计算机上设置默认值以允许远程服务器连接。  
   
- 为了能够进行远程访问，必须在本地和远程计算机上将 **remote access** 配置选项设置为 1。 （这是默认设置。）  **remote access** 控制远程服务器的登录。 可以通过使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] sp_configure 存储过程或  **来重置此配置选项**[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 若要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中设置选项，请在 **“服务器属性连接”** 页上，使用 **“允许远程连接到此服务器”** 。 若要访问“服务器属性连接”  页，请在对象资源管理器中右键单击服务器名称，再单击“属性”  。 在 **“服务器属性”** 页上，单击 **“连接”** 页。  
+ 为了能够进行远程访问，必须在本地和远程计算机上将 **remote access** 配置选项设置为 1。 （这是默认设置。）  **remote access** 控制远程服务器的登录。 可以通过使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] sp_configure 存储过程或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 来重置此配置选项。 若要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中设置选项，请在 **“服务器属性连接”** 页上，使用 **“允许远程连接到此服务器”** 。 若要访问“服务器属性连接”页，请在对象资源管理器中右键单击服务器名称，再单击“属性”。 在 **“服务器属性”** 页上，单击 **“连接”** 页。  
   
  在本地服务器中，您可以禁用远程服务器配置，以防止远程服务器中的用户对与其配对的本地服务器进行访问。  
   

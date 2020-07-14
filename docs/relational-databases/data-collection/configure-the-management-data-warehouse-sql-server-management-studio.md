@@ -1,5 +1,6 @@
 ---
 title: 配置管理数据仓库 (SSMS)
+description: 了解如何配置管理数据仓库以支持一个或多个使用数据收集器的 SQL Server 实例的数据存储。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 54badd0404ee5360aef4a7bc095c236e5b31f79d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1c82c79bcf0b1494890055c098e6c7efdbc733ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056473"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733872"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>配置管理数据仓库 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   本主题介绍如何配置管理数据仓库以支持使用数据收集器的单个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的数据存储。 这些实例可能位于相同或不同的服务器上。 本主题还提供针对 [配置管理数据仓库向导](#Wizard) 对话框的用户界面的说明。 有关配置数据收集器的信息，请参阅 [Configure Properties of a Data Collector](../../relational-databases/data-collection/configure-properties-of-a-data-collector.md)。  
   
 > [!NOTE]  
@@ -42,7 +43,7 @@ ms.locfileid: "74056473"
   
 2.  在对象资源管理器中，展开 **“管理”** 节点。  
   
-3.  右键单击“数据收集”  ，展开“任务”  ，然后单击“配置管理数据仓库”  。  
+3.  右键单击“数据收集”，展开“任务”，然后单击“配置管理数据仓库”。  
   
 4.  使用 [配置管理数据仓库向导](#Wizard) 创建一个管理数据仓库，配置登录名，启用数据收集，然后启动 **“系统数据收集组”** 。  
   
@@ -55,7 +56,7 @@ ms.locfileid: "74056473"
   
     -   使用配置管理数据仓库向导为现有的管理数据仓库配置数据收集。  
   
-    -   右键单击“数据收集”  ，然后单击“属性”  。 在 **“常规”** 选项卡上，指定现有的管理数据仓库以及安装该管理数据仓库的服务器。  
+    -   右键单击“数据收集”，然后单击“属性”。 在 **“常规”** 选项卡上，指定现有的管理数据仓库以及安装该管理数据仓库的服务器。  
   
 6.  重复步骤 5 直至将使用该数据收集的所有数据库实例均配置为将数据上载到共享的管理数据仓库。  
 
@@ -93,7 +94,7 @@ ms.locfileid: "74056473"
   
  可通过为某个登录名选中 **“映射”** 复选框来指定该登录名。  
   
- **数据库角色成员身份：** *\<data warehouse name>*  
+ \<data warehouse name> 的数据库角色成员身份  
  通过单击以下一个或多个选项旁边的复选框，选择登录名映射到的管理数据仓库角色：  
   
 -   **mdw_admin**  
@@ -103,7 +104,7 @@ ms.locfileid: "74056473"
 -   **mdw_writer**  
   
  **新建登录名**  
- 打开“登录名 - 新建”  对话框并为管理数据仓库创建新的登录名。  
+ 打开“登录名 - 新建”对话框并为管理数据仓库创建新的登录名。  
   
  **“完成向导”页**  
   
@@ -114,7 +115,7 @@ ms.locfileid: "74056473"
  使用此页可查看每个配置步骤的结果。  
   
  **详细信息**  
- 每个配置步骤在“详细信息”  网格中显示为一行。 每一行均包含描述相应步骤的 **“操作”** 列和指示该步骤成功或失败的 **“状态”** 列。 如果有错误，则在 **“消息”** 列中会显示消息。  
+ 每个配置步骤在“详细信息”网格中显示为一行。 每一行均包含描述相应步骤的 **“操作”** 列和指示该步骤成功或失败的 **“状态”** 列。 如果有错误，则在 **“消息”** 列中会显示消息。  
   
  **Stop**  
  停止向导的处理。  

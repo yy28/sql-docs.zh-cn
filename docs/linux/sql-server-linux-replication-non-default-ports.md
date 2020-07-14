@@ -4,30 +4,33 @@ titleSuffix: SQL Server on Linux
 description: 了解如何在 Linux 上配置快照文件夹共享（非默认端口），以实现 SQL Server 复制。
 ms.custom: seo-lt-2019
 author: MikeRayMSFT
-ms.author: mikerayW
+ms.author: mikeray
 ms.reviewer: vanto
 ms.date: 09/24/2018
 ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cb715e2a0a056c18352361b58ce8ffd67e3da78e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cdb90854984c195258891178be8a3fd07345929b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558586"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882676"
 ---
 # <a name="configure-replication-with-non-default-ports-sql-server-linux"></a>使用非默认端口配置复制 (SQL Server Linux)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 可以通过 Linux 上的 SQL Server 实例（会侦听使用 network.tcpport mssql-conf 设置配置的任何端口）来配置复制。 如果满足以下条件，则需要在配置过程中将端口追加到服务器名称后：
 
 1. 复制设置涉及 Linux 上的 SQL Server 实例
 2. 任何实例（Windows 或 Linux）都在侦听非默认端口。 
 
-可以通过在实例上运行 @@servername 来查找实例的服务器名称。
+可以通过在实例上运行 @@servername 来查找实例的服务器名称。 请勿使用 IP 地址而不是服务器名称。 为发布服务器、分发服务器或订阅服务器使用 IP 地址可能会导致错误。
+
+> [!NOTE]
+> 在使用非默认端口的 Linux 上创建 SQL Server 复制仅适用于 SQL Server 2019 及更高版本。
 
 ## <a name="examples"></a>示例
 

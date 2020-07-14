@@ -1,5 +1,6 @@
 ---
 title: 使用文件输入/输出 API 访问 FileTable | Microsoft Docs
+description: 了解如何在 Filetable 中使用文件 I/O API，还要了解哪些文件系统操作与 FileTable 兼容。
 ms.custom: ''
 ms.date: 08/25/2016
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d1cdc6947c97052660dea3be9d6013a8e61a090d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d73f6f8e993784def2dd9325933778e2048d5eae
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908777"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85744694"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>使用文件输入输出 API 访问 FileTable
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   说明如何在 FileTable 上执行文件系统 I/O。  
   
 ##  <a name="get-started-using-file-io-apis-with-filetables"></a><a name="accessing"></a> 开始使用文件 I/O API 访问 FileTable  

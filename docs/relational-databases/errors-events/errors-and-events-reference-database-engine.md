@@ -1,5 +1,6 @@
 ---
 title: 错误和事件参考（数据库引擎）| Microsoft Docs
+description: 了解需要进行进一步说明及使用外部资源链接的所选 SQL Server 数据库引擎错误消息。
 ms.custom: ''
 ms.date: 10/15/2019
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: ea928535-6fd1-4738-a8ed-ffb602f3825e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d9bf4de57b77e3f036cb842e53efe816de862559
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 89907738aa2e496e082a633f00882a72de5c07aa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908690"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781598"
 ---
 # <a name="errors-and-events-reference-database-engine"></a>错误和事件参考（数据库引擎）
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   本节包含需要进一步说明的所选的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 错误消息。  
   
 ## <a name="in-this-section"></a>本节内容  
@@ -35,10 +36,10 @@ ms.locfileid: "72908690"
   
  下表提供了指向这些资源的链接并说明了这些资源。  
   
-|资源|描述|  
+|资源|说明|  
 |--------------|-----------------|  
 |[SQL Server 社区](https://go.microsoft.com/fwlink/?LinkId=42455)|此网站提供指向由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 社区监视的新闻组和论坛的链接。 还列出了诸如博客和网站之类的社区信息资源。 尽管不能保证得到答案，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 社区对于解决问题还是非常有帮助。|  
-|[SQL Server 开发人员中心社区](/sql/sql-server/index.yml)|此站点专门提供对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 开发人员有用的新闻组、论坛和其他社区资源。|  
+|[SQL Server 开发人员中心社区](/sql/sql-server/)|此站点专门提供对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 开发人员有用的新闻组、论坛和其他社区资源。|  
 |[Microsoft 帮助和支持](https://go.microsoft.com/fwlink/?linkid=16419)|您可以使用此网站来获得 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 支持人员的帮助，以便解决具体的问题。|  
   
   

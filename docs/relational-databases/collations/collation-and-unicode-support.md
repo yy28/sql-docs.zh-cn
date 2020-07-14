@@ -32,16 +32,16 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2d20f0cd4a08e22787caecfb663ef0d2dcd47003
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 63084232460e60aedb0b0a1abe267caa7687e9dd
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75831816"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091906"
 ---
 # <a name="collation-and-unicode-support"></a>排序规则和 Unicode 支持
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的排序规则可为您的数据提供排序规则、区分大小写属性和区分重音属性。 与诸如 char 和 varchar 等字符数据类型一起使用的排序规则规定可表示该数据类型的代码页和对应字符   。 
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的排序规则可为您的数据提供排序规则、区分大小写属性和区分重音属性。 与诸如 char 和 varchar 等字符数据类型一起使用的排序规则规定可表示该数据类型的代码页和对应字符 。 
 
 无论你是要安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的新实例、还原数据库备份，还是将服务器连接到客户端数据库，都必须了解正在处理的数据的区域设置要求、排序顺序以及是否区分大小写和重音。 若要列出在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例上可用的排序规则，请参阅 [sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)。    
     
@@ -65,7 +65,7 @@ ms.locfileid: "75831816"
     
 与排序规则关联的选项区分大小写、区分重音、区分假名、区分全半角以及区分变体选择符。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 为 [UTF-8](https://www.wikipedia.org/wiki/UTF-8) 编码引入了其他选项。 
 
-可以通过将这些选项附加到排序规则名称中来指定这些选项。 例如，排序规则 Japanese_Bushu_Kakusu_100_CS_AS_KS_WS_UTF8  区分大小写、区分重音、区分假名、区分全半角以及使用 UTF-8 编码。 再举一例，此排序规则 Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS  就不区分大小写、不区分重音、区分假名、区分全半角、区分变体选择符，并且使用非 Unicode 编码。 
+可以通过将这些选项附加到排序规则名称中来指定这些选项。 例如，排序规则 Japanese_Bushu_Kakusu_100_CS_AS_KS_WS_UTF8 区分大小写、区分重音、区分假名、区分全半角以及使用 UTF-8 编码。 再举一例，此排序规则 Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS 就不区分大小写、不区分重音、区分假名、区分全半角、区分变体选择符，并且使用非 Unicode 编码。 
 
 下表描述了与这些不同选项关联的行为：    
     
@@ -75,7 +75,7 @@ ms.locfileid: "75831816"
 |区分重音 (\_AS)|区分重音字符和非重音字符。 例如，“a”和“ấ”视为不同字符。 如果未选择此选项，则排序规则将不区分重音。 即 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在排序时将字母的重音形式和非重音形式视为相同。 通过指定 \_AI，可以显式选择不区分重音。|    
 |区分假名 (\_KS)|区分日语中的两种假名字符类型：平假名和片假名。 如果未选择此选项，则排序规则将不区分假名。 即 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在排序时将平假名字符和片假名字符视为相同。 省略此选项是指定不区分假名的唯一方法。|   
 |区分全半角 (\_WS)|区分全角字符和半角字符。 如果未选择此选项，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会在排序时将同一字符的全角和半角形式视为相同。 省略此选项是指定不区分全半角的唯一方法。|  
-|区分变体选择符 (\_VSS)|区分 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 中首次引入的日语排序规则 Japanese_Bushu_Kakusu_140 和 Japanese_XJIS_140 中不同的象形变体选择符   。 变体序列包含基本字符加上其他变体选择符。 如果未选择 \_VSS 选项，排序规则不区分变体选择符，并且在比较中不考虑变体选择符。 也就是说，出于排序的考虑，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会将具有不同变体选择符但基于相同基本字符的字符视为相同。 有关详细信息，请参阅 [Unicode Ideographic Variation Database](https://www.unicode.org/reports/tr37/)（Unicode 象形变体数据库）。<br/><br/> 全文搜索索引中不支持区分变体选择符 (\_VSS) 排序规则。 全文搜索索引仅支持区分重音 (\_AS)、区分假名 (\_KS) 和区分全半角 (\_WS) 选项。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML 和 CLR 引擎不支持 (\_VSS) 变体选择符。|      
+|区分变体选择符 (\_VSS)|区分 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 中首次引入的日语排序规则 Japanese_Bushu_Kakusu_140 和 Japanese_XJIS_140 中不同的象形变体选择符 。 变体序列包含基本字符加上其他变体选择符。 如果未选择 \_VSS 选项，排序规则不区分变体选择符，并且在比较中不考虑变体选择符。 也就是说，出于排序的考虑，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会将具有不同变体选择符但基于相同基本字符的字符视为相同。 有关详细信息，请参阅 [Unicode Ideographic Variation Database](https://www.unicode.org/reports/tr37/)（Unicode 象形变体数据库）。<br/><br/> 全文搜索索引中不支持区分变体选择符 (\_VSS) 排序规则。 全文搜索索引仅支持区分重音 (\_AS)、区分假名 (\_KS) 和区分全半角 (\_WS) 选项。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML 和 CLR 引擎不支持 (\_VSS) 变体选择符。|      
 |二进制 (\_BIN) <sup>1</sup>|根据为每个字符定义的位模式对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中的数据进行排序和比较。 二进制排序顺序不仅区分大小写，而且也区分重音。 二进制排序顺序的速度也最快。 有关详细信息，请参阅本文中的[二进制排序规则](#Binary-collations)部分。|      
 |二进制-码位 (\_BIN2) <sup>1</sup> | 根据 Unicode 数据的 Unicode 码位对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中的数据进行排序和比较。 对于非 Unicode 数据，二进制码位将使用与二进制排序相同的比较方式。<br/><br/> 使用二进制-码位排序顺序的优点是：对已排序的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据进行比较的应用程序不必重新对数据进行排序。 因此，二进制-码位排序顺序使应用程序开发变得更加简单，从而可以提高性能。 有关详细信息，请参阅本文中的[二进制排序规则](#Binary-collations)部分。|
 |UTF-8 (\_UTF8)|启用要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中存储的 UTF-8 编码数据。 如果未选择此选项，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会对适用的数据类型使用默认的非 Unicode 编码格式。 有关详细信息，请参阅本文中的 [UTF-8 支持](#utf8)部分。| 
@@ -122,18 +122,18 @@ ms.locfileid: "75831816"
 Windows 排序规则根据关联的 Windows 系统区域设置来定义字符数据的存储规则。 在 Windows 排序规则中，可以使用与 Unicode 数据相同的算法实现非 Unicode 数据的比较。 Windows 基本排序规则指定应用字典排序时所用的字母表或语言。 规则还指定用于存储非 Unicode 字符数据的代码页。 Unicode 排序和非 Unicode 排序都与特定 Windows 版本中的字符串比较相兼容。 这保证了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中所有数据类型的一致性，使开发人员能够使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所使用的相同规则对应用程序中的字符串排序。 有关详细信息，请参阅 [Windows 排序规则名称 (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md)。    
     
 #### <a name="binary-collations"></a><a name="Binary-collations"></a> 二进制排序规则    
-二进制排序规则基于区域设置和数据类型定义的编码值顺序来对数据进行排序。 它们区分大小写。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的二进制排序规则定义了所使用的区域设置和 ANSI 代码页。 这将强制使用二进制排序顺序。 由于它们相对简单，因此二进制排序规则有助于提高应用程序性能。 对于非 Unicode 数据类型，数据比较将基于 ANSI 代码页中定义的码位。 对于 Unicode 数据类型，数据比较将基于 Unicode 码位。 对于 Unicode 数据类型的二进制排序规则，数据排序将不考虑区域设置。 例如，对 Unicode 数据应用 Latin_1_General_BIN 和 Japanese_BIN，会得到完全相同的排序结果   。 有关详细信息，请参阅 [Windows 排序规则名称 (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md)。   
+二进制排序规则基于区域设置和数据类型定义的编码值顺序来对数据进行排序。 它们区分大小写。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的二进制排序规则定义了所使用的区域设置和 ANSI 代码页。 这将强制使用二进制排序顺序。 由于它们相对简单，因此二进制排序规则有助于提高应用程序性能。 对于非 Unicode 数据类型，数据比较将基于 ANSI 代码页中定义的码位。 对于 Unicode 数据类型，数据比较将基于 Unicode 码位。 对于 Unicode 数据类型的二进制排序规则，数据排序将不考虑区域设置。 例如，对 Unicode 数据应用 Latin_1_General_BIN 和 Japanese_BIN，会得到完全相同的排序结果 。 有关详细信息，请参阅 [Windows 排序规则名称 (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md)。   
     
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中有两种类型的二进制排序规则：
 
--  早期的 BIN 排序规则对 Unicode 数据执行的是不完整的逐码位比较  。 这些早期的二进制排序规则将第一个字符作为 WCHAR 比较，接下来是逐字节比较。 在 BIN 排序规则中，仅首字符按照码位排序，其余字符根据其字节值排序。
+-  早期的 BIN 排序规则对 Unicode 数据执行的是不完整的逐码位比较。 这些早期的二进制排序规则将第一个字符作为 WCHAR 比较，接下来是逐字节比较。 在 BIN 排序规则中，仅首字符按照码位排序，其余字符根据其字节值排序。
 
--  更新的 BIN2 排序规则可实现纯码位比较  。 在 BIN2 排序规则中，所有字符根据其码位排序。 由于 Intel 平台是一个 little endian 体系结构，因此 Unicode 码字符始终以字节对调的形式存储。     
+-  更新的 BIN2 排序规则可实现纯码位比较。 在 BIN2 排序规则中，所有字符根据其码位排序。 由于 Intel 平台是一个 little endian 体系结构，因此 Unicode 码字符始终以字节对调的形式存储。     
     
 #### <a name="sql-server-collations"></a><a name="SQL-collations"></a> SQL Server 排序规则    
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排序规则 (SQL_\*) 提供与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本兼容的排序顺序。 非 Unicode 数据的字典排序规则与 Windows 操作系统提供的任何排序例程都不兼容。 但是，Unicode 数据的排序与特定版本的 Windows 排序规则兼容。 由于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排序规则对非 Unicode 数据和 Unicode 数据使用不同的比较规则，因此对于相同数据的比较会看到不同的结果，具体取决于基本数据类型。 有关详细信息，请参阅 [SQL Server 排序规则名称 (Transact-SQL)](../../t-sql/statements/sql-server-collation-name-transact-sql.md)。 
 
-在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程中，默认安装排序规则设置由操作系统 (OS) 区域设置确定。 服务器级排序规则可以在安装期间进行更改，也可以在安装前通过更改 OS 区域设置进行更改。 出于后向兼容性原因，默认排序规则设置为与每个特定区域设置关联的最早可用版本。 因此，不推荐总是使用默认排序规则。 更改 Windows 排序规则的默认安装设置可充分利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。 例如，对于 OS 区域设置“英语(美国)”（代码页 1252），安装过程中的默认排序规则是 SQL_Latin1_General_CP1_CI_AS，可将其更改为最接近的 Windows 对等排序规则 Latin1_General_100_CI_AS_SC   。
+在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程中，默认安装排序规则设置由操作系统 (OS) 区域设置确定。 服务器级排序规则可以在安装期间进行更改，也可以在安装前通过更改 OS 区域设置进行更改。 出于后向兼容性原因，默认排序规则设置为与每个特定区域设置关联的最早可用版本。 因此，不推荐总是使用默认排序规则。 更改 Windows 排序规则的默认安装设置可充分利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。 例如，对于 OS 区域设置“英语(美国)”（代码页 1252），安装过程中的默认排序规则是 SQL_Latin1_General_CP1_CI_AS，可将其更改为最接近的 Windows 对等排序规则 Latin1_General_100_CI_AS_SC 。
     
 > [!NOTE]    
 > 升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的英文实例时可以指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排序规则 (SQL_\*)，以便与现有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例兼容。 由于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的默认排序规则是在安装过程中定义的，因此在以下情况下请确保慎重指定排序规则设置：    
@@ -178,12 +178,12 @@ Windows 排序规则根据关联的 Windows 系统区域设置来定义字符数
 |阿拉伯语（也门）|0x2401|0x0401|Arabic_CI_AS|
 |亚美尼亚语（亚美尼亚）|0x042b|0x0419|Latin1_General_CI_AS|
 |阿萨姆语（印度）|0x044d|0x044d|在服务器级别不可用|
-|阿泽里语（阿塞拜疆，西里尔文）|0x082c|0x082c|不推荐使用，在服务器级别不可用|
-|阿泽里语（阿塞拜疆，拉丁语）|0x042c|0x042c|不推荐使用，在服务器级别不可用|
+|阿塞拜疆语（阿塞拜疆，西里尔文）|0x082c|0x082c|不推荐使用，在服务器级别不可用|
+|阿塞拜疆语（阿塞拜疆，拉丁语）|0x042c|0x042c|不推荐使用，在服务器级别不可用|
 |巴什基尔语（俄罗斯）|0x046d|0x046d|Latin1_General_CI_AI|
 |巴斯克语（巴斯克）|0x042d|0x0409|Latin1_General_CI_AS|
 |白俄罗斯语（白俄罗斯）|0x0423|0x0419|Cyrillic_General_CI_AS|
-|孟加拉语（孟加拉）|0x0845|0x0445|在服务器级别不可用|
+|孟加拉语（孟加拉国）|0x0845|0x0445|在服务器级别不可用|
 |孟加拉语（印度）|0x0445|0x0439|在服务器级别不可用|
 |波斯尼亚语（波斯尼亚和黑塞哥维那，西里尔文）|0x201a|0x201a|Latin1_General_CI_AI|
 |波斯尼亚语（波斯尼亚和黑塞哥维那，拉丁语）|0x141a|0x141a|Latin1_General_CI_AI|
@@ -235,7 +235,7 @@ Windows 排序规则根据关联的 Windows 系统区域设置来定义字符数
 |法语（摩纳哥）|0x180c|0x040c|French_CI_AS|
 |法语（瑞士）|0x100c|0x040c|French_CI_AS|
 |弗里西亚语（荷兰）|0x0462|0x0462|Latin1_General_CI_AI|
-|加利西亚语（西班牙）|0x0456|0x0409|Latin1_General_CI_AS|
+|加利西亚语|0x0456|0x0409|Latin1_General_CI_AS|
 |格鲁吉亚语（格鲁吉亚）|0x10437|0x10437|Georgian_Modern_Sort_CI_AS|
 |格鲁吉亚语（格鲁吉亚）|0x0437|0x0419|Latin1_General_CI_AS|
 |德语 - 电话簿排序 (DIN)|0x10407|0x10407|German_PhoneBook_CI_AS|
@@ -290,7 +290,7 @@ Windows 排序规则根据关联的 Windows 系统区域设置来定义字符数
 |挪威语（博克马尔语，挪威）|0x0414|0x0414|Latin1_General_CI_AI|
 |挪威语（尼诺斯克语，挪威）|0x0814|0x0414|Latin1_General_CI_AI|
 |奥克西唐语（法国）|0x0482|0x040c|French_CI_AS|
-|奥里雅语（印度）|0x0448|0x0439|在服务器级别不可用|
+|奥里亚语（印度）|0x0448|0x0439|在服务器级别不可用|
 |普什图语（阿富汗）|0x0463|0x0463|在服务器级别不可用|
 |波斯语（伊朗）|0x0429|0x0429|Latin1_General_CI_AI|
 |波兰语（波兰）|0x0415|0x0415|Polish_CI_AS|
@@ -303,6 +303,7 @@ Windows 排序规则根据关联的 Windows 系统区域设置来定义字符数
 |罗马尼亚语（罗马尼亚）|0x0418|0x0418|Romanian_CI_AS|
 |罗曼什语（瑞士）|0x0417|0x0417|Latin1_General_CI_AI|
 |俄语（俄罗斯）|0x0419|0x0419|Cyrillic_General_CI_AS|
+|萨哈语（俄罗斯）|0x0485|0x0485|Latin1_General_CI_AI|
 |萨米语（伊纳里，芬兰）|0x243b|0x083b|Latin1_General_CI_AI|
 |萨米语(律勒欧，挪威)|0x103b|0x043b|Latin1_General_CI_AI|
 |萨米语（律勒欧，瑞典）|0x143b|0x083b|Latin1_General_CI_AI|
@@ -366,7 +367,6 @@ Windows 排序规则根据关联的 Windows 系统区域设置来定义字符数
 |威尔士语（英国）|0x0452|0x0452|Latin1_General_CI_AI|
 |沃洛夫语（塞内加尔）|0x0488|0x040c|French_CI_AS|
 |班图语/索萨语（南非）|0x0434|0x0409|Latin1_General_CI_AS|
-|雅库特语（俄罗斯）|0x0485|0x0485|Latin1_General_CI_AI|
 |彝语（中国）|0x0478|0x0409|Latin1_General_CI_AS|
 |约鲁巴语（尼日利亚）|0x046a|0x0409|Latin1_General_CI_AS|
 |祖鲁语（南非）|0x0435|0x0409|Latin1_General_CI_AS|
@@ -374,7 +374,7 @@ Windows 排序规则根据关联的 Windows 系统区域设置来定义字符数
 > [!NOTE]
 > 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程中不能选择仅 Unicode 排序规则，因为不支持将它们用作服务器级排序规则。    
     
-为服务器分配排序规则后，只能通过导出所有数据库对象和数据来更改它，重新生成 master 数据库，并导入所有数据库对象和数据  。 与更改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的默认排序规则相反，可在创建新数据库或数据库列时指定所需的排序规则。    
+为服务器分配排序规则后，只能通过导出所有数据库对象和数据来更改它，重新生成 master 数据库，并导入所有数据库对象和数据。 与更改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的默认排序规则相反，可在创建新数据库或数据库列时指定所需的排序规则。    
 
 若要查询 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的服务器排序规则，请使用下列 `SERVERPROPERTY` 函数：
 
@@ -393,7 +393,7 @@ SELECT * FROM sys.fn_helpcollations();
     
 除非更改服务器的排序规则，否则无法更改系统数据库的排序规则。
     
-数据库排序规则将应用于数据库中的所有元数据，并且是所有字符串列、临时对象、变量名称和数据库中使用的任何其他字符串的默认排序规则。 当更改用户数据库的排序规则时，如果在数据库访问临时表中进行查询，则可能出现排序规则冲突。 临时表始终存储在 tempdb 系统数据库中，该数据库使用实例的排序规则  。 如果排序规则导致计算字符数据时出现冲突，则比较用户数据库和 tempdb  之间的字符数据的查询可能会失败。 可以通过在查询中指定 `COLLATE` 子句来解决此问题。 有关详细信息，请参阅[排序规则 (Transact-SQL)](~/t-sql/statements/collations.md)。    
+数据库排序规则将应用于数据库中的所有元数据，并且是所有字符串列、临时对象、变量名称和数据库中使用的任何其他字符串的默认排序规则。 当更改用户数据库的排序规则时，如果在数据库访问临时表中进行查询，则可能出现排序规则冲突。 临时表始终存储在 tempdb 系统数据库中，该数据库使用实例的排序规则。 如果排序规则导致计算字符数据时出现冲突，则比较用户数据库和 tempdb 之间的字符数据的查询可能会失败。 可以通过在查询中指定 `COLLATE` 子句来解决此问题。 有关详细信息，请参阅[排序规则 (Transact-SQL)](~/t-sql/statements/collations.md)。    
 
 > [!NOTE]
 > 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 上创建数据库后，将无法更改排序规则。
@@ -433,7 +433,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 区域设置是与位置或区域性相关联的一组信息。 此信息可以包括所用语言的名称和标识符、用于书写该语言的文字以及文化习俗。 排序规则可以与一个或多个区域设置相关联。 有关详细信息，请参阅 [Microsoft 分配的区域设置 ID](https://msdn.microsoft.com/goglobal/bb964664.aspx)。    
     
 ###  <a name="code-page"></a><a name="Code_Page_Defn"></a> 代码页    
-代码页是给定脚本的有序字符集，其中数值索引（即码位值）与每个字符相关联。 Windows 代码页通常被称为“字符集”   。 代码页用于支持不同的 Windows 系统区域设置所使用的字符集和键盘布局。     
+代码页是给定脚本的有序字符集，其中数值索引（即码位值）与每个字符相关联。 Windows 代码页通常被称为“字符集” 。 代码页用于支持不同的 Windows 系统区域设置所使用的字符集和键盘布局。     
  
 ###  <a name="sort-order"></a><a name="Sort_Order_Defn"></a> 排序顺序    
 排序顺序指定数据值的排序方式。 该顺序影响数据比较的结果。 数据的排序通过使用排序规则而实现，且可使用索引对排序进行优化。    
@@ -458,12 +458,12 @@ Unicode 是一种将码位映射到字符的标准。 由于它旨在涵盖全�
 对于支持世界范围的读者所需的所有字符的字符数据类型，很难为其选择代码页。 在国际化数据库中，最简单的字符数据管理方法是始终使用支持 Unicode 的数据类型。 
 
 ### <a name="unicode-data-types"></a>Unicode 数据类型
-如果在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更高版本）中存储反映多种语言的字符数据，请使用 Unicode 数据类型（nchar、nvarchar 和 ntext），而不是非 Unicode 数据类型（char、varchar 和 text       ）。 
+如果在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更高版本）中存储反映多种语言的字符数据，请使用 Unicode 数据类型（nchar、nvarchar 和 ntext），而不是非 Unicode 数据类型（char、varchar 和 text     ）。 
 
 > [!NOTE]
 > 对于 Unicode 数据类型，[!INCLUDE[ssde_md](../../includes/ssde_md.md)]最多可以使用 UCS-2 表示 65,535 个字符；或者，如果使用了附属字符，可表示整个 Unicode 范围（‭1,114,111 个字符）。 如需详细了解如何启用增补字符，请参阅[字符](#Supplementary_Characters)。
 
-或者，从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始，如果使用支持 UTF-8 的排序规则 (\_UTF8)，则以前的非 Unicode 数据类型（char 和 varchar）将变为使用 UTF-8 编码的 Unicode 数据类型   。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 不会更改以前存在的 Unicode 数据类型（nchar、nvarchar 和 ntext）的行为，且继续使用 UCS-2 或 UTF-16 编码    。 有关详细信息，请参阅 [UTF-8 与 UTF-16 的存储差异](#storage_differences)。
+或者，从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始，如果使用支持 UTF-8 的排序规则 (\_UTF8)，则以前的非 Unicode 数据类型（char 和 varchar）将变为使用 UTF-8 编码的 Unicode 数据类型 。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 不会更改以前存在的 Unicode 数据类型（nchar、nvarchar 和 ntext）的行为，且继续使用 UCS-2 或 UTF-16 编码  。 有关详细信息，请参阅 [UTF-8 与 UTF-16 的存储差异](#storage_differences)。
 
 ### <a name="unicode-considerations"></a>Unicode 注意事项
 非 Unicode 数据类型有明显的局限性， 这是因为非 Unicode 计算机只能使用单个代码页。 使用 Unicode，你可能会体验到性能提升，因为这只需要较少的代码页转换。 必须在数据库级、列级或表达式级单独选择 Unicode 排序规则，因为在服务器级不支持 Unicode 排序规则。    
@@ -486,15 +486,15 @@ Unicode 是一种将码位映射到字符的标准。 由于它旨在涵盖全�
     -   BIN 或 BIN2<sup>2</sup> 二进制排序规则
     -   SQL\_* 排序规则  
     
-<sup>1</sup>自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3 起。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0 已将排序规则 UTF8_BIN2 替换为 Latin1_General_100_BIN2_UTF8   。        
+<sup>1</sup>自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3 起。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0 已将排序规则 UTF8_BIN2 替换为 Latin1_General_100_BIN2_UTF8 。        
 <sup>2</sup>截至 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3。    
     
 若要评估与使用 Unicode 或非 Unicode 数据类型相关的问题，请测试您的具体方案以确定您所在环境下的性能差异大小。 最好对整个组织中的系统所使用的排序规则进行标准化，并尽可能部署 Unicode 服务器和客户端。    
     
 在许多情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 与其他服务器或客户端交互，你的组织可能会使用应用程序和服务器实例之间的多种数据访问标准。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端是两种主要类型之一：    
     
--   使用 OLE DB 和开放式数据库连接 (ODBC) 3.7 版或更高版本的 Unicode 客户端  。    
--   使用 DB-Library 和 ODBC 3.6 版或更低版本的非 Unicode 客户端  。    
+-   使用 OLE DB 和开放式数据库连接 (ODBC) 3.7 版或更高版本的 Unicode 客户端。    
+-   使用 DB-Library 和 ODBC 3.6 版或更低版本的非 Unicode 客户端。    
     
 下表提供有关以 Unicode 和非 Unicode 服务器的各种组合使用多语言数据的信息：    
     
@@ -508,13 +508,13 @@ Unicode 是一种将码位映射到字符的标准。 由于它旨在涵盖全�
 ##  <a name="supplementary-characters"></a><a name="Supplementary_Characters"></a> 增补字符    
 Unicode 联盟为每个字符都分配一个唯一码位（介于 000000-10FFFF 之间的值）。 最常用字符的码位值介于范围 000000-00FFFF（65,535 个字符）之间，可以装入内存中和磁盘上的 8 位字或 16 位字中。 通常将此范围指定为基本多文种平面 (BMP)。 
 
-但 Unicode 联盟额外建立了 16 个字符“平面”，每个平面的大小都与 BMP 相同。 此定义允许 Unicode 表示介于码位范围 000000-10FFFF 之间的 1,114,112 个字符（即 2<sup>16</sup>* 17 个字符）。 码位值大于 00FFFF 的字符需要 2 到 4 个连续 8 位字 (UTF-8)，或 2 个连续 16 位字 (UTF-16)。 超出 BMP 的字符称为“附属字符”  ，其他连续 8 位字或 16 位字称为“代理项对”  。 如需了解增补字符、代理项、代理项对的更多详细信息，请参阅 [Unicode 标准](http://www.unicode.org/standard/standard.html)。    
+但 Unicode 联盟额外建立了 16 个字符“平面”，每个平面的大小都与 BMP 相同。 此定义允许 Unicode 表示介于码位范围 000000-10FFFF 之间的 1,114,112 个字符（即 2<sup>16</sup>* 17 个字符）。 码位值大于 00FFFF 的字符需要 2 到 4 个连续 8 位字 (UTF-8)，或 2 个连续 16 位字 (UTF-16)。 超出 BMP 的字符称为“附属字符”，其他连续 8 位字或 16 位字称为“代理项对”。 如需了解增补字符、代理项、代理项对的更多详细信息，请参阅 [Unicode 标准](http://www.unicode.org/standard/standard.html)。    
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供用于存储介于 BMP 范围（000000-00FFFF）内的 Unicode 数据的数据类型（如 nchar  和 nvarchar  ），而[!INCLUDE[ssde_md](../../includes/ssde_md.md)]使用 UCS-2 编码它们。 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供用于存储介于 BMP 范围（000000-00FFFF）内的 Unicode 数据的数据类型（如 nchar 和 nvarchar），而[!INCLUDE[ssde_md](../../includes/ssde_md.md)]使用 UCS-2 编码它们。 
 
-[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 引入了新增补字符 (\_SC) 排序规则系列，可以与下面的数据类型结合使用来表示整个 Unicode 字符范围（000000-10FFFF）：nchar  、nvarchar  和 sql_variant  。 例如：Latin1_General_100_CI_AS_SC 或 Japanese_Bushu_Kakusu_100_CI_AS_SC（如果使用日语排序规则）   。 
+[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 引入了新增补字符 (\_SC) 排序规则系列，可以与下面的数据类型结合使用来表示整个 Unicode 字符范围（000000-10FFFF）：nchar、nvarchar 和 sql_variant。 例如：Latin1_General_100_CI_AS_SC 或 Japanese_Bushu_Kakusu_100_CI_AS_SC（如果使用日语排序规则） 。 
  
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 将增补字符支持扩展到，与已启用 UTF-8 的新排序规则 ([\_UTF8](#utf8)) 结合使用的数据类型 char  和 varchar  。 这些数据类型也能表示整个 Unicode 字符范围。   
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 将增补字符支持扩展到，与已启用 UTF-8 的新排序规则 ([\_UTF8](#utf8)) 结合使用的数据类型 char 和 varchar。 这些数据类型也能表示整个 Unicode 字符范围。   
 
 > [!NOTE]
 > 自 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 起，所有新 \_140 排序规则都自动支持增补字符。
@@ -572,16 +572,16 @@ SELECT Name, Description FROM fn_helpcollations()
 WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
 ``` 
 
-由于所有新排序规则都内置有对增补字符的支持，因此新 \_140  排序规则都没有（或不需要）SC 标志。
+由于所有新排序规则都内置有对增补字符的支持，因此新 \_140 排序规则都没有（或不需要）SC 标志。
 
 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]索引、内存优化表、列存储索引和本机编译模块支持这些排序规则。
 
 <a name="ctp23"></a>
 
 ## <a name="utf-8-support"></a><a name="utf8"></a> UTF-8 支持
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 完全支持广泛使用的 UTF-8 字符编码作为导入或导出编码，以及作为字符串数据的数据库级别或列级别排序规则。 UTF-8 受 char  和 varchar  数据类型支持，并在创建对象的排序规则或将其更改为带有 UTF8  后缀的排序规则时启用。 例如，将 LATIN1_GENERAL_100_CI_AS_SC 更改为 LATIN1_GENERAL_100_CI_AS_SC_UTF8   。 
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 完全支持广泛使用的 UTF-8 字符编码作为导入或导出编码，以及作为字符串数据的数据库级别或列级别排序规则。 UTF-8 受 char 和 varchar 数据类型支持，并在创建对象的排序规则或将其更改为带有 UTF8 后缀的排序规则时启用。 例如，将 LATIN1_GENERAL_100_CI_AS_SC 更改为 LATIN1_GENERAL_100_CI_AS_SC_UTF8 。 
 
-UTF-8 仅适用于支持增补字符的 Windows 排序规则，如 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中所述。 nchar  和 nvarchar  数据类型仅支持 UCS-2 或 UTF-16 编码，并保持不变。
+UTF-8 仅适用于支持增补字符的 Windows 排序规则，如 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中所述。 nchar 和 nvarchar 数据类型仅支持 UCS-2 或 UTF-16 编码，并保持不变。
 
 ### <a name="storage-differences-between-utf-8-and-utf-16"></a><a name="storage_differences"></a> UTF-8 与 UTF-16 的存储差异
 Unicode 联盟为每个字符都分配一个唯一码位（介于 000000-10FFFF 之间的值）。 使用 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 时，UTF-8 和 UTF-16 编码都可用来表示整个范围：    
@@ -597,29 +597,29 @@ Unicode 联盟为每个字符都分配一个唯一码位（介于 000000-10FFFF 
 |000800–003FFF<br />004000–00FFFF|2,048–16,383<br />16,384–65,535|3|2|
 |010000–03FFFF<sup>2</sup><br /><br />040000–10FFFF<sup>2</sup>|65,536–262,143<sup>2</sup><br /><br />262,144–1,114,111<sup>2</sup>|4|4|
 
-<sup>1</sup> 存储字节是指编码字节长度，而不是数据类型在磁盘上的存储大小  。 若要详细了解磁盘上的存储大小，请参阅 [nchar 和 nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)，以及 [char 和 varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md)。
+<sup>1</sup> 存储字节是指编码字节长度，而不是数据类型在磁盘上的存储大小。 若要详细了解磁盘上的存储大小，请参阅 [nchar 和 nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)，以及 [char 和 varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md)。
 
 <sup>2</sup>[增补字符](#Supplementary_Characters)的码位范围。
 
 > [!TIP]   
-> 通常认为，在 [CHAR(n) 和 VARCHAR(n)](../../t-sql/data-types/char-and-varchar-transact-sql.md) 或在 [NCHAR(n) 和 NVARCHAR(n)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) 中，n 定义字符数      。 这是因为在示例 CHAR(10) 列中，可以使用排序规则（如 Latin1_General_100_CI_AI）存储在 0-127 范围内的 10 ASCII 字符，因为此范围内的每个字符仅使用 1 个字节  。
+> 通常认为，在 [CHAR(n) 和 VARCHAR(n)](../../t-sql/data-types/char-and-varchar-transact-sql.md) 或在 [NCHAR(n) 和 NVARCHAR(n)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) 中，n 定义字符数    。 这是因为在示例 CHAR(10) 列中，可以使用排序规则（如 Latin1_General_100_CI_AI）存储在 0-127 范围内的 10 ASCII 字符，因为此范围内的每个字符仅使用 1 个字节。
 >    
-> 但是，在 [CHAR(n) 和 VARCHAR(n)](../../t-sql/data-types/char-and-varchar-transact-sql.md) 中，n 以字节数 (0-8,000) 定义字符串大小，而在 [NCHAR(n) 和 NVARCHAR(n)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) 中，n 以字节对 (0-4,000) 定义字符串大小         。 n 不会定义可存储的字符数  。
+> 但是，在 [CHAR(n) 和 VARCHAR(n)](../../t-sql/data-types/char-and-varchar-transact-sql.md) 中，n 以字节数 (0-8,000) 定义字符串大小，而在 [NCHAR(n) 和 NVARCHAR(n)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) 中，n 以字节对 (0-4,000) 定义字符串大小        。 n 不会定义可存储的字符数。
 
-如你所见，选择适当的 Unicode 编码和数据类型可以节省大量存储或增加当前存储占用，具体视使用的字符集而定。 例如，如果使用启用了 UTF-8 的拉丁语排序规则（如 Latin1_General_100_CI_AI_SC_UTF8），则 `CHAR(10)` 列可存储 10 个字节，并且可保留 0-127 范围内的 10 ASCII 字符  。 但只可保留 5 个 128-2047 范围内的字符和 3 个 2048-65535 范围内的字符。 相比之下，由于 `NCHAR(10)` 列存储 10 个字节对（20 个字节），因此该列可保留 10 个 0-65535 范围内的字符。  
+如你所见，选择适当的 Unicode 编码和数据类型可以节省大量存储或增加当前存储占用，具体视使用的字符集而定。 例如，如果使用启用了 UTF-8 的拉丁语排序规则（如 Latin1_General_100_CI_AI_SC_UTF8），则 `CHAR(10)` 列可存储 10 个字节，并且可保留 0-127 范围内的 10 ASCII 字符。 但只可保留 5 个 128-2047 范围内的字符和 3 个 2048-65535 范围内的字符。 相比之下，由于 `NCHAR(10)` 列存储 10 个字节对（20 个字节），因此该列可保留 10 个 0-65535 范围内的字符。  
 
 在选择是要将 UTF-8 编码还是 UTF-16 编码用于数据库或列前，请先考虑要存储的字符串数据的分布情况：
 -  如果它主要在 ASCII 范围 0-127 内（如英语），使用 UTF-8 和 UTF-16 时每个字符分别需要 1 个和 2 个字节。 UTF-8 具有存储优势。 如果使用已启用 UTF-8 的排序规则将包含在 0-127 范围内的 ASCII 字符的现有列数据类型从 `NCHAR(10)` 更改为 `CHAR(10)`，则会减少 50% 的存储需求。 之所以会有这种减少是因为，`NCHAR(10)` 需要 20 个字节进行存储，而 `CHAR(10)` 相比则需要 10 个字节用于相同的 Unicode 字符串表示形式。    
--  如果超出 ASCII 范围（几乎所有拉丁字母语言以及希腊语、西里尔文、科普特语、亚美尼亚语、希伯来语、阿拉伯语、叙利亚语、它拿语和西非书面文），使用 UTF-8 和 UTF-16 时每个字符都需要 2 个字节。 在这种情况下，可比较的数据类型（例如，char  与 nchar  之间）没有显著的存储差异。
+-  如果超出 ASCII 范围（几乎所有拉丁字母语言以及希腊语、西里尔文、科普特语、亚美尼亚语、希伯来语、阿拉伯语、叙利亚语、它拿语和西非书面文），使用 UTF-8 和 UTF-16 时每个字符都需要 2 个字节。 在这种情况下，可比较的数据类型（例如，char 与 nchar 之间）没有显著的存储差异。
 -  如果它主要是东亚语言（如韩语、中文和日语），使用 UTF-8 和 UTF-16 时每个字符分别需要 3 个和 2 个字节。 UTF-16 具有存储优势。 
--  使用 UTF-8 和 UTF-16 时，介于 010000 和 10FFFF 范围内的字符都需要 4 个字节。 在这种情况下，可比较的数据类型（例如，char  与 nchar  之间）没有存储差异。
+-  使用 UTF-8 和 UTF-16 时，介于 010000 和 10FFFF 范围内的字符都需要 4 个字节。 在这种情况下，可比较的数据类型（例如，char 与 nchar 之间）没有存储差异。
 
 有关其他注意事项，请参阅[编写国际化 Transact-SQL 语句](../../relational-databases/collations/write-international-transact-sql-statements.md)。
 
 ### <a name="converting-to-utf-8"></a><a name="converting"></a> 转换为 UTF-8
-因为在 [CHAR(n) 和 VARCHAR(n)](../../t-sql/data-types/char-and-varchar-transact-sql.md) 或在 [NCHAR(n) 和 NVARCHAR(n)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) 中，n 定义字节存储大小，而不定义可以存储的字符数，所以确定必须转换的数据类型大小很重要，这可以避免数据被截断      。 
+因为在 [CHAR(n) 和 VARCHAR(n)](../../t-sql/data-types/char-and-varchar-transact-sql.md) 或在 [NCHAR(n) 和 NVARCHAR(n)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) 中，n 定义字节存储大小，而不定义可以存储的字符数，所以确定必须转换的数据类型大小很重要，这可以避免数据被截断    。 
 
-例如，考虑定义为 NVARCHAR(100) 的列，该列存储了 180 个字节的日语字符  。 在本示例中，当前使用 UCS-2 或 UTF-16 对列数据进行编码，每个字符使用 2 个字节。 将列类型转换为 VARCHAR(200) 不足以防止数据被截断，因为新的数据类型只能存储 200 个字节，而使用 UTF-8 编码时，日语字符需要 3 个字节  。 因此，必须将列定义为 VARCHAR(270)，以避免由于数据截断而丢失数据  。
+例如，考虑定义为 NVARCHAR(100) 的列，该列存储了 180 个字节的日语字符。 在本示例中，当前使用 UCS-2 或 UTF-16 对列数据进行编码，每个字符使用 2 个字节。 将列类型转换为 VARCHAR(200) 不足以防止数据被截断，因为新的数据类型只能存储 200 个字节，而使用 UTF-8 编码时，日语字符需要 3 个字节。 因此，必须将列定义为 VARCHAR(270)，以避免由于数据截断而丢失数据。
 
 因此，在将现有数据转换为 UTF-8 之前，需要事先知道列定义的预计字节大小，并相应地调整新数据类型的大小。 请参阅[数据示例 GitHub](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/unicode) 中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本或 SQL 笔记本，其中使用 [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md) 函数和 [COLLATE](../../t-sql/statements/collations.md) 语句来确定现有数据库中 UTF-8 转换操作的正确数据长度要求。
 
@@ -656,4 +656,3 @@ Unicode 联盟为每个字符都分配一个唯一码位（介于 000000-10FFFF 
 [创建全文索引时选择语言](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md)     
 [sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)       
 [单字节和多字节字符集](https://docs.microsoft.com/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)      
- 

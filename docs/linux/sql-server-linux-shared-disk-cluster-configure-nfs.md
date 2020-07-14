@@ -9,16 +9,16 @@ ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 35f6dc79756c192419dbe3a8962d5dcdfeea8aef
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 47c2e816219ebbb4a4b3fefea2974ef511cdaee2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558332"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897285"
 ---
 # <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>配置故障转移群集实例 NFS - Linux 上的 SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 本文介绍如何在 Linux 上为故障转移群集实例 (FCI) 配置 NFS 存储。 
 
@@ -76,7 +76,7 @@ NFS 或网络文件系统是用于在 Linux 中而非 Windows 中共享磁盘的
     mkdir <TempDir>
     ```
 
-    \<TempDir> 是文件夹名称。 以下示例创建名为 /var/opt/mssql/tmp 的文件夹。
+    \<TempDir> 是文件夹的名称。 以下示例创建名为 /var/opt/mssql/tmp 的文件夹。
 
     ```bash
     mkdir /var/opt/mssql/tmp
@@ -200,7 +200,7 @@ NFS 或网络文件系统是用于在 Linux 中而非 Windows 中共享磁盘的
     mkdir <FolderName>
     ```
 
-    \< 为文件夹名称。 如果文件夹不在正确的位置，需要指定文件夹的完整路径。 以下示例将创建名为 /var/opt/mssql/userdata 的文件夹。
+    \<FolderName> 是文件夹的名称。 如果文件夹不在正确的位置，需要指定文件夹的完整路径。 以下示例将创建名为 /var/opt/mssql/userdata 的文件夹。
 
     ```bash
     mkdir /var/opt/mssql/userdata

@@ -1,5 +1,6 @@
 ---
 title: 复制教程 | Microsoft Docs
+description: 使用这些教程帮助你在 SQL Server 中为复制准备服务器，然后了解如何配置事务复制和合并复制。
 ms.custom: ''
 ms.date: 04/09/2018
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 3df80893c54978060387c7ff96cb975b34740534
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 811723fa85d059b5e750135bf551f723c5c137dc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287332"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716712"
 ---
 # <a name="replication-tutorials"></a>复制教程
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 复制是一种功能强大的解决方案，可用于在服务器之间移动数据或数据子集。 可以使用事务复制在完全连接的服务器之间复制数据。 此外，还可以使用合并复制在间歇连接的服务器和客户端之间复制数据。 在本文中，你将发现可帮助准备服务器复制的教程，以及介绍如何配置事务复制和合并复制的教程。 
   
 在复制教程中，“发布服务器”是指包含将要复制的源数据的服务器。 “订阅服务器”是指目标服务器。 发布服务器和订阅服务器可以共享同一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，但这不是必需的。 有关详细信息，请参阅[复制发布模型概述](../../relational-databases/replication/publish/replication-publishing-model-overview.md)。  
@@ -43,7 +44,7 @@ ms.locfileid: "76287332"
 了解如何配置事务复制，以在完全连接的服务器之间复制数据。 本教程还包括一些基本的错误故障排除方法。 
 
   
-[教程：配置服务器和移动客户端之间的复制（合并）](../../relational-databases/replication/tutorial-replicating-data-with-mobile-clients.md)
+[教程：在服务器和移动客户端之间配置复制（合并）](../../relational-databases/replication/tutorial-replicating-data-with-mobile-clients.md)
 
 了解如何配置合并复制，以在服务器与仅偶尔连接的一个或多个客户端之间交换数据。  
   

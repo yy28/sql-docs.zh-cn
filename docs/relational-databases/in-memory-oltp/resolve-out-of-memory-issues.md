@@ -1,5 +1,6 @@
 ---
 title: 解决内存不足问题 | Microsoft Docs
+description: 了解 SQL Server 内存中 OLTP 内存不足的情况，以及如何还原和解决影响、解决页分配故障和最佳实践。
 ms.custom: ''
 ms.date: 12/21/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8171a91d18650285c7bcaf4eb780083e958a8789
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0db5cb560b4e50d903ceca431556f2bdc18365ad
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908443"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722390"
 ---
 # <a name="resolve-out-of-memory-issues"></a>解决内存不足问题
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] 相比， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 随着需求的不断增加，为 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 安装和分配的内存量可能会不足。 这时内存就会不足。 本主题介绍如何从 OOM 情况恢复。 有关可帮助你避免很多 OOM 情况的指南，请参阅 [内存使用情况的监视和故障排除](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md) 。  
   
@@ -26,13 +27,13 @@ ms.locfileid: "72908443"
   
 |主题|概述|  
 |-----------|--------------|  
-|[解决 OOM 导致的数据库还原故障](#bkmk_resolveRecoveryFailures)|收到错误消息“由于资源池 '\<resourcePoolName>' 内存不足，数据库 '  \<databaseName>  ' 的还原操作失败”时应采取的操作。|  
+|[解决 OOM 导致的数据库还原故障](#bkmk_resolveRecoveryFailures)|收到错误消息“由于资源池 '\<resourcePoolName>' 内存不足，数据库 '\<databaseName>' 的还原操作失败”时应采取的操作 。|  
 |[消除工作负荷的低内存或 OOM 情况的影响](#bkmk_recoverFromOOM)|发现内存不足问题对性能产生负面影响时应采取的操作。|  
-|[在提供足够内存时，解决由于内存不足导致的页分配失败问题](#bkmk_PageAllocFailure)|收到错误消息“由于资源池 '\<resourcePoolName>  ' 内存不足，不允许对数据库 '\<databaseName>  ' 进行页分配”时应采取的操作。 ……”当可用内存足以进行操作时。|
+|[在提供足够内存时，解决由于内存不足导致的页分配失败问题](#bkmk_PageAllocFailure)|收到错误消息“由于资源池 '\<resourcePoolName>' 内存不足，不允许对数据库 '\<databaseName>' 进行页分配”时应采取的操作 。 ……”当可用内存足以进行操作时。|
 |[在 VM 环境下使用内存中 OLTP 的最佳做法](#bkmk_VMs)|在虚拟化环境中使用内存中 OLTP 需要注意的内容。|
   
 ##  <a name="resolve-database-restore-failures-due-to-oom"></a><a name="bkmk_resolveRecoveryFailures"></a> 解决 OOM 导致的数据库还原故障  
- 尝试还原数据库时，可能会收到错误消息：“由于资源池‘\<databaseName>’内存不足，数据库‘\<resourcePoolName>’的还原操作失败。”   这表明服务器没有足够的可用内存来还原数据库。 
+ 尝试还原数据库时，可能会收到错误消息：“由于资源池‘\<resourcePoolName>’内存不足，数据库‘\<databaseName>’的还原操作失败。” 这表明服务器没有足够的可用内存来还原数据库。 
    
 将数据库还原到的服务器必须有足够的可用内存用于数据库备份中的内存优化表，否则数据库不会联机，并且会被标记为可疑。  
   
@@ -68,7 +69,7 @@ ms.locfileid: "72908443"
      有关 MAX_MEMORY_PERCENT 最大值的信息，请参阅主题部分 [可用于内存优化表和索引的内存百分比](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable)。  
   
 -   增加 **最大服务器内存**。  
-    有关配置 max server memory 的信息，请参阅主题[“服务器内存”服务器配置选项](../../database-engine/configure-windows/server-memory-server-configuration-options.md)  。  
+    有关配置 max server memory 的信息，请参阅主题[“服务器内存”服务器配置选项](../../database-engine/configure-windows/server-memory-server-configuration-options.md)。  
   
 ##  <a name="resolve-impact-of-low-memory-or-oom-conditions-on-the-workload"></a><a name="bkmk_recoverFromOOM"></a> 消除工作负荷的低内存或 OOM 情况的影响  
  当然，最好不要出现低内存或 OOM（内存不足）情况。 好的计划和监视有助于避免 OOM 情况。 但再好的计划也并不总能预见实际情况，最后仍有可能遇到低内存或 OOM 情况。 从 OOM 恢复有两个步骤：  

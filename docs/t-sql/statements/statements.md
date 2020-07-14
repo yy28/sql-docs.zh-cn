@@ -13,18 +13,18 @@ ms.assetid: d8d6f62a-e815-425c-a80e-a63fd34ec275
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bf492b24e1473ce189f39a84096242773b78cc4a
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: 287b86bd9cc368d2a04ea7f7be5e1397e2d6aab9
+ms.sourcegitcommit: 2e6c4104dca8680064eb64a7a79a3e15e1b4365f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82086807"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85942916"
 ---
 # <a name="transact-sql-statements"></a>Transact-SQL 语句
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-SQL 语句是工作的原子单元，要么完全成功，要么完全失败。 SQL 语句是一组指令，由标识符、参数、变量、名称、数据类型和成功编译的 SQL 保留字组成。 如果 `BeginTransaction` 命令未指定启动事务，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会为 SQL 语句创建隐式  事务。 如果此语句成功，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会始终提交隐式事务；如果此命令失败，则会回滚隐式事务。  
+SQL 语句是工作的原子单元，要么完全成功，要么完全失败。 SQL 语句是一组指令，由标识符、参数、变量、名称、数据类型和成功编译的 SQL 保留字组成。 如果 `BeginTransaction` 命令未指定启动事务，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会为 SQL 语句创建隐式事务。 如果此语句成功，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会始终提交隐式事务；如果此命令失败，则会回滚隐式事务。  
 
 语句有很多种类型。 也许最重要的是 [SELECT](../queries/select-transact-sql.md)，它从数据库中检索行，并支持从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的一个或多个表内选择一个或多个行或列。 本文总结了除 `SELECT` 语句外还用于 Transact-SQL (T-SQL) 的语句类别。 左侧导航栏中列出了所有语句。
 
@@ -34,7 +34,7 @@ SQL 语句是工作的原子单元，要么完全成功，要么完全失败。 
 
 ## <a name="data-definition-language"></a>数据定义语言
 
-数据定义语言 (DDL) 语句定义数据结构。 使用以下语句在数据库中创建、更改或删除数据结构。
+数据定义语言 (DDL) 语句定义数据结构。 使用以下语句在数据库中创建、更改或删除数据结构。 这些语句包括：
 
 - ALTER
 - 排序规则
@@ -52,6 +52,7 @@ SQL 语句是工作的原子单元，要么完全成功，要么完全失败。 
 - BULK INSERT
 - DELETE
 - INSERT
+- SELECT
 - UPDATE
 - MERGE
 - TRUNCATE TABLE

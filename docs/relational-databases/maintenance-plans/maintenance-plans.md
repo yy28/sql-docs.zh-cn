@@ -1,5 +1,6 @@
 ---
 title: 维护计划 | Microsoft Docs
+description: 了解维护计划，这些计划会创建工作流来确保 SQL Server 数据库得到优化、定期备份且保持一致。
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5982ca65-74fe-44e3-aef9-00a65a0db169
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f773e5188716e7f74fc75567b0c6e000607d47c9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fb0036acec4ec0c416f6fa01ccf99663be741514
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115879"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789464"
 ---
 # <a name="maintenance-plans"></a>维护计划
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   维护计划可创建所需的任务工作流，以确保优化数据库、定期进行备份并确保数据库一致。 维护计划向导还可创建核心维护计划，但手动创建计划具有更大的灵活性。  
   
 ## <a name="benefits-of-maintenance-plans"></a>维护计划的优点  
@@ -57,7 +58,7 @@ ms.locfileid: "68115879"
   
 -   运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业。 这可以用来创建可执行各种操作的作业以及运行这些作业的维护计划。  
   
- 维护任务生成的结果可以作为报表写入文本文件，或写入 **msdb** 维护计划表（**sysmaintplan_log** 和 **sysmaintplan_logdetail**）。 若要在日志文件查看器中查看结果，请右键单击“维护计划”  ，再单击“查看历史记录”  。  
+ 维护任务生成的结果可以作为报表写入文本文件，或写入 **msdb** 维护计划表（**sysmaintplan_log** 和 **sysmaintplan_logdetail**）。 若要在日志文件查看器中查看结果，请右键单击“维护计划”，再单击“查看历史记录”。  
   
 ## <a name="related-tasks"></a>Related Tasks  
  参考以下主题以开始使用维护计划。  
@@ -65,7 +66,7 @@ ms.locfileid: "68115879"
 |||  
 |-|-|  
 |**说明**|**主题**|  
-|配置“代理 XP”  服务器配置选项以启用 SQL Server 代理扩展存储过程。|[“代理 XP”服务器配置选项](../../database-engine/configure-windows/agent-xps-server-configuration-option.md)|
+|配置“代理 XP”服务器配置选项以启用 SQL Server 代理扩展存储过程。|[“代理 XP”服务器配置选项](../../database-engine/configure-windows/agent-xps-server-configuration-option.md)|
 |说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 创建维护计划。|[创建维护计划](../../relational-databases/maintenance-plans/create-a-maintenance-plan.md)|  
 |说明如何使用维护计划设计图面创建维护计划。|[创建维护计划（维护计划设计图面）](../../relational-databases/maintenance-plans/create-a-maintenance-plan-maintenance-plan-design-surface.md)|  
 |对象资源管理器中可用的文档维护计划功能。|[维护计划节点（对象资源管理器）](../../relational-databases/maintenance-plans/maintenance-plans-node-object-explorer.md)|  

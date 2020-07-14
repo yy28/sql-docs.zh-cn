@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f172d631-3b8c-4912-bd0f-568366cd9870
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8449d7c6c766824628c3352897c25303f10e3a29
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a58c4a27a90a36acc47c3338b39a802a2209060d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75320758"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900650"
 ---
 # <a name="specify-data-type-mappings-for-an-oracle-publisher"></a>指定 Oracle 发布服务器的数据类型映射
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中指定 Oracle 发布服务器的数据类型映射。 虽然已经为 Oracle 发布服务器提供了一组默认数据类型映射，但可能仍有必要为给定发布指定不同的映射。  
   
  **本主题内容**  
@@ -35,15 +35,15 @@ ms.locfileid: "75320758"
      [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 在“项目属性 - \<项目>”对话框的“数据映射”选项卡上指定数据类型映射。 可以从新建发布向导和“发布属性 - \<发布>”对话框的“项目”页中访问该对话框。 有关使用该向导和访问该对话框的详细信息，请参阅[从 Oracle 数据库创建发布](../../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md)以及[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+ 在“项目属性 - \<Article>”对话框的“数据映射”选项卡上指定数据类型映射 。 可以从新建发布向导和“发布属性 - \<Publication>”对话框的“项目”页中访问该对话框 。 有关使用该向导和访问该对话框的详细信息，请参阅[从 Oracle 数据库创建发布](../../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md)以及[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 #### <a name="to-specify-a-data-type-mapping"></a>指定数据类型映射  
   
-1.  在新建发布向导或“发布属性 - \<发布>”对话框的“项目”页上，选择一个表，然后单击“项目属性”。  
+1.  在新建发布向导或“发布属性 - \<Publication>”对话框的“项目”页上，选择一个表，然后单击“项目属性”  。  
   
 2.  单击 **“设置突出显示的表项目的属性”** 。  
   
-3.  在“项目属性 - \<项目>”对话框的“数据映射”选项卡上，从“订阅服务器数据类型”列中选择映射：  
+3.  在“项目属性 - \<Article>”对话框的“数据映射”选项卡上，从“订阅服务器数据类型”列中选择映射  ：  
   
     -   对于某些数据类型，只能有一种可能的映射，在这种情况下，属性网格中的相应列是只读的。  
   

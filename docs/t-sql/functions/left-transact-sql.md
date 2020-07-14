@@ -18,18 +18,18 @@ helpviewer_keywords:
 - LEFT function
 - leftmost character of expression
 ms.assetid: 44a8c71b-63d8-458b-8b5d-99d570067c3c
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 361059daeb60402f564caa09837046117804ba6c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a31f0bd882a206897b541eeb265dfeab68ae50ab
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68059927"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008792"
 ---
 # <a name="left-transact-sql"></a>LEFT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   返回字符串中从左边开始指定个数的字符。  
   
@@ -37,26 +37,29 @@ ms.locfileid: "68059927"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 LEFT ( character_expression , integer_expression )  
 ```  
   
 ## <a name="arguments"></a>参数  
  *character_expression*  
- 字符或二进制数据的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 character_expression 可以是常量、变量或列  。 character_expression 可以是除 text 或 ntext 外的任何数据类型，可隐式转换为 varchar 或 nvarchar      。 否则，请使用 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 函数显式转换 character_expression  。  
+ 字符或二进制数据的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 character_expression 可以是常量、变量或列。 character_expression 可以是除 text 或 ntext 外的任何数据类型，可隐式转换为 varchar 或 nvarchar   。 否则，请使用 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 函数显式转换 character_expression。  
+ 
+> [!NOTE]  
+> 如果 string_expression 的类型为二进制或 varbinary，则 LEFT 将执行到 varchar 的隐式转换，因此不会保留二进制输入  。  
   
  *integer_expression*  
- 指定要返回的 character_expression 的字符数的正整数  。 如果 integer_expression 为负，则返回错误  。 如果 integer_expression 的数据类型为 bigint，且包含较大的值，则 character_expression 必须是较大的数据类型，如 varchar(max)。  
+ 指定要返回的 character_expression 的字符数的正整数。 如果 integer_expression 为负，则返回错误。 如果 integer_expression 的数据类型为 bigint，且包含较大的值，则 character_expression 必须是较大的数据类型，如 varchar(max)。  
   
- integer_expression 参数将 UTF-16 代理项字符计为一个字符  。  
+ integer_expression 参数将 UTF-16 代理项字符计为一个字符。  
   
 ## <a name="return-types"></a>返回类型  
- character_expression 为非 Unicode 字符数据类型时，返回 varchar   。  
+ character_expression 为非 Unicode 字符数据类型时，返回 varchar。  
   
- character_expression 为 Unicode 字符数据类型时，返回 nvarchar   。  
+ character_expression 为 Unicode 字符数据类型时，返回 nvarchar。  
   
 ## <a name="remarks"></a>备注  
- 在使用 SC 排序规则时，integer_expression 参数将 UTF-16 代理项对计为一个字符  。 有关详细信息，请参阅 [排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)。  
+ 在使用 SC 排序规则时，integer_expression 参数将 UTF-16 代理项对计为一个字符。 有关详细信息，请参阅 [排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)。  
   
 ## <a name="examples"></a>示例  
   

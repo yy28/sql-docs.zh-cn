@@ -1,5 +1,6 @@
 ---
 title: 数据库镜像监视器概述 | Microsoft Docs
+description: 了解如何使用数据库镜像监视器监视镜像数据库，以验证数据库镜像会话中的数据流和执行故障排除。
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8ebbdcd6-565a-498f-b674-289c84b985eb
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 07ad2379f82552a3db0ceee30305f7fdc38003fe
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3d5dbfd56f461da431843d1788d9226a72448b57
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006403"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730919"
 ---
 # <a name="database-mirroring-monitor-overview"></a>数据库镜像监视器概述
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   如果有适当的权限，您可以使用数据库镜像监视器来监视服务器实例上的镜像数据库的任何子集。 通过监视可以验证数据库镜像会话中是否有数据流动以及数据流动的方式。 数据库镜像监视还有助于排查数据流减少的原因。  
   
  可以在每个故障转移伙伴上分别注册要监视的镜像数据库。 注册数据库时，数据库镜像监视器将缓存有关数据库的以下信息：  
@@ -46,12 +47,12 @@ ms.locfileid: "68006403"
   
  对于每个注册数据库，都将显示以下信息：  
   
- _<Database_name>_ **(** _\<Status>_ **,** _<PRINCIPAL_SERVER>_ **->** _<MIRROR_SERVER>_ **)**  
+ <Database_name> ( \<Status> , <PRINCIPAL_SERVER> -> <MIRROR_SERVER> )  
   
  *<Database_name>*  
  向数据库镜像监视器注册的镜像数据库的名称。  
   
- *Status>\<*  
+ *\<Status>*  
  可能的状态及其相关图标如下所示：  
   
 |图标|状态|说明|  
@@ -65,9 +66,9 @@ ms.locfileid: "68006403"
  *<PRINCIPAL_SERVER>*  
  当前作为主体服务器实例的伙伴的名称。 该名称采用以下格式：  
   
- <SYSTEM_NAME>  [ **\\** <instance_name>  ]  
+ <SYSTEM_NAME>[ **\\** <instance_name>]  
   
- 其中，<SYSTEM_NAME>  是服务器实例所在系统的名称。 对于非默认服务器实例，实例名也显示为：<SYSTEM_NAME>  **\\** <instance_name>  。  
+ 其中，<SYSTEM_NAME> 是服务器实例所在系统的名称。 对于非默认服务器实例，实例名也显示为：<SYSTEM_NAME> **\\** <instance_name>。  
   
  *<MIRROR_SERVER>*  
  当前作为镜像服务器实例的伙伴的名称。 格式与主体服务器的格式相同。  
@@ -78,11 +79,11 @@ ms.locfileid: "68006403"
  选定一个数据库后，“详细信息”窗格的 **“状态”** 选项卡式页面中将显示该数据库的状态。 该页的内容来自主体和镜像服务器实例。 通过与主体服务器实例和镜像服务器实例的单独连接收集状态时，会异步填充该页。 该状态每隔 30 秒自动刷新一次。  
   
 > [!NOTE]  
->  你不能更改监视器的刷新速率，但可以通过“数据库镜像历史记录”  对话框刷新状态表。  
+>  你不能更改监视器的刷新速率，但可以通过“数据库镜像历史记录”对话框刷新状态表。  
   
  通过选择 **“警告”** 选项卡式页面，系统管理员可以查看数据库的当前警告配置。 在此，管理员可以启动 **“设置警告阈值”** 对话框，以启用并配置一个或多个警告阈值。  
   
- 在选项卡上方的横幅中，详细信息窗格将监视器上次刷新状态信息的时间显示为：“上次刷新：\<date>\<time>”。 通常，数据库镜像监视器会在不同时间从主体和镜像服务器实例中检索状态信息。 将显示两次刷新时间中较早的时间。  
+ 在选项卡上方的标题中，“详细信息”窗格将监视器上次刷新状态信息的时间显示为“上次刷新:\<date>\<time>”。 通常，数据库镜像监视器会在不同时间从主体和镜像服务器实例中检索状态信息。 将显示两次刷新时间中较早的时间。  
   
 ## <a name="action-menu"></a>“操作”菜单  
  **“操作”** 菜单总是包含以下命令：  

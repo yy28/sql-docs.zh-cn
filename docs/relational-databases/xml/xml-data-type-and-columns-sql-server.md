@@ -1,5 +1,6 @@
 ---
 title: XML 数据类型和列 (SQL Server) | Microsoft Docs
+description: 了解用于在 SQL Server 中存储 XML 数据的 xml 数据类型的优势和限制。
 ms.custom: ''
 ms.date: 05/17/2019
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 83cea04e6617706151c0f74c43273281e6b89901
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 0a23431727b25135751693d1dbec68b6377dcd4e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664794"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729790"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>XML 数据类型和列 (SQL Server)
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   本主题讨论 **中** xml [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型的优势和不足，并帮助您选择如何存储 XML 数据。  
   
 ## <a name="relational-or-xml-data-model"></a>关系或 XML 数据模型  
@@ -115,7 +116,7 @@ ms.locfileid: "80664794"
   
  如果您的 XML 文档具有多种结构，或您的 XML 文档符合不同的或复杂的架构，而这些架构很难映射到关系结构，本机 XML 存储很有用。  
   
-#### <a name="example-modeling-xml-data-using-the-xml-data-type"></a>示例：使用 xml 数据类型对 XML 数据进行建模  
+#### <a name="example-modeling-xml-data-using-the-xml-data-type"></a>示例：使用 XML 数据类型对 XML 数据进行建模  
  例如有一个 XML 格式的产品手册，其中每个主题对应单独的一章，而每章中又包含多节。 一节可以包含多个小节。 因此，\<section> 是一个递归元素。 产品手册包含大量混合内容、关系图和技术材料；数据是半结构化的。 用户可能希望对感兴趣的主题执行上下文搜索，例如，在有关“索引”的章中搜索有关“聚集索引”的节，并查询技术数量。  
   
  适合 XML 文档的存储模型为 **xml** 数据类型列。 这可保留 XML 数据的 InfoSet 内容。 对 XML 列创建索引有利于提高查询性能。  

@@ -1,5 +1,6 @@
 ---
 title: SQL Server 属性（“文件流”页）| Microsoft Docs
+description: 熟悉 SQL Server 中的 FILESTREAM 设置。 了解如何打开 FILESTREAM，以及如何配置远程客户端访问和其他属性。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,20 +13,20 @@ f1_keywords:
 helpviewer_keywords:
 - FILESTREAM [SQL Server], properties page
 ms.assetid: 8a8d38d3-e97a-4b09-a40b-659b2e3a5c47
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: d40d7111bf7beac4c8a34f91481368b94f62c519
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 81edbd9bfc913f9d339625a993f866d44e1a313b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68025448"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730928"
 ---
 # <a name="server-properties---filestream-page"></a>服务器属性 -“文件流”页
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   使用此页可针对此 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]安装启用 FILESTREAM。  
   
-## <a name="uielement-list"></a>UIElement 列表  
+## <a name="ui-element-list"></a>UI 元素列表  
  **针对 Transact-SQL 访问启用 FILESTREAM**  
  选中此项可针对 [!INCLUDE[tsql](../../includes/tsql-md.md)] 访问启用 FILESTREAM。 必须选中此控制选项，才能使用其他控制选项。  
   

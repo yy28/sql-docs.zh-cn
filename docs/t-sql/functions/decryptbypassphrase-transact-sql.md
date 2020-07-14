@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: ca34b5cd-07b3-4dca-b66a-ed8c6a826c95
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3b81c44b5475592b471f71e1815468a61140da65
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: aaa37425d2de461cd5f7bdd1bb3ae37da53ce249
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636414"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85682288"
 ---
 # <a name="decryptbypassphrase-transact-sql"></a>DECRYPTBYPASSPHRASE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 此函数可对最初使用密码加密的数据进行解密。  
   
@@ -44,42 +44,32 @@ DecryptByPassPhrase ( { 'passphrase' | @passphrase }
 ```  
   
 ## <a name="arguments"></a>参数  
- passphrase   
+ passphrase  
 用于生成解密密钥的密码。  
   
  @passphrase  
-类型变量
-
-+ **char**
-+ **nchar**
-+ **nvarchar**
-
-或
-
-+ **varchar**
-
-包含用于生成解密密钥的密码。  
+类型为 char、nchar、nvarchar 或 varchar 的变量，其中包含用于生成解密密钥的密码   。  
   
-'ciphertext'   
-使用密钥加密的数据字符串。 ciphertext 具有 varbinary 数据类型   。  
+'ciphertext'  
+使用密钥加密的数据字符串。 ciphertext 具有 varbinary 数据类型。  
  
 @ciphertext  
-varbinary 类型的变量，包含使用密钥加密的数据  。 *\@ciphertext* 变量的最大大小为 8,000 字节。  
+varbinary 类型的变量，包含使用密钥加密的数据。 *\@ciphertext* 变量的最大大小为 8,000 字节。  
   
-add_authenticator   
-指示原始加密过程是否包含验证器和纯文本以及是否对其进行加密。 如果加密过程使用验证器，则 add_authenticator 具有 1 值  。 add_authenticator 具有 int 数据类型   。  
+add_authenticator  
+指示原始加密过程是否包含验证器和纯文本以及是否对其进行加密。 如果加密过程使用验证器，则 add_authenticator 具有 1 值。 add_authenticator 具有 int 数据类型。  
   
 @add_authenticator  
 变量，指示原始加密过程是否包含验证器和纯文本以及是否对其进行加密。 如果加密过程使用验证器，则 *\@add_authenticator* 具有值 1。 *\@add_authenticator* 具有 **int** 数据类型。  
 
-authenticator   
-用作验证器生成基础的数据。 authenticator 具有 sysname 数据类型   。  
+authenticator  
+用作验证器生成基础的数据。 authenticator 具有 sysname 数据类型。  
   
 @authenticator  
 包含用作验证器生成基础的数据的变量。 *\@authenticator* 具有 **sysname** 数据类型。  
   
 ## <a name="return-types"></a>返回类型  
-varbinary（最大大小为 8,000 个字节）  。  
+varbinary（最大大小为 8,000 个字节）。  
   
 ## <a name="remarks"></a>备注  
 `DECRYPTBYPASSPHRASE` 不需要执行权限。 如果 `DECRYPTBYPASSPHRASE` 收到错误的密码或错误的验证器信息，则返回 NULL。  
@@ -93,14 +83,14 @@ varbinary（最大大小为 8,000 个字节）  。
   
 ```  
 USE AdventureWorks2012;  
--- Get the pass phrase from the user.  
+-- Get the passphrase from the user.  
 DECLARE @PassphraseEnteredByUser nvarchar(128);  
 SET @PassphraseEnteredByUser   
 = 'A little learning is a dangerous thing!';  
   
 -- Decrypt the encrypted record.  
 SELECT CardNumber, CardNumber_EncryptedbyPassphrase   
-    AS 'Encrypted card number', CONVERT(nvarchar,  
+    AS 'Encrypted card number', CONVERT(varchar,  
     DecryptByPassphrase(@PassphraseEnteredByUser, CardNumber_EncryptedbyPassphrase, 1   
     , CONVERT(varbinary, CreditCardID)))  
     AS 'Decrypted card number' FROM Sales.CreditCard   

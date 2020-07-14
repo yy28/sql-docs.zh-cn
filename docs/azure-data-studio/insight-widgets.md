@@ -1,23 +1,22 @@
 ---
 title: 使用见解小组件监视服务器和数据库
-titleSuffix: Azure Data Studio
 description: 了解 Azure Data Studio 中的见解小组件
 ms.custom: seodec18, sqlfreshmay19, seo-lt-2019
 ms.date: 05/14/2019
-ms.prod: sql
-ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
+ms.prod: azure-data-studio
+ms.technology: ''
+ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4edf4003d40da35dcd54b3938e0f318ef8b9440a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1568251dba79998c07e05b78b2d156cebbb0e7fd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957051"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774598"
 ---
-# <a name="manage-servers-and-databases-with-insight-widgets-in-name-sos"></a>使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 中的见解小组件管理服务器和数据库
+# <a name="manage-servers-and-databases-with-insight-widgets-in-azure-data-studio"></a>使用 Azure Data Studio 中的见解小组件管理服务器和数据库
 
 见解小组件使用用于监视服务器和数据库的 Transact-SQL (T-SQL) 查询，并将其转化为富有见解力的可视化效果。
 
@@ -36,7 +35,7 @@ ms.locfileid: "74957051"
 
 ## <a name="sql-queries"></a>SQL 查询
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] 试图避免引入另一种语言或繁杂的用户界面，因此它尽可能多地使用 JSON 配置最少的 T-SQL。 通过使用 T-SQL 配置见解小组件，可以利用无数个现有的有用 T-SQL 查询源，这些查询可转化为富有见解力的小组件。
+Azure Data Studio 试图避免引入另一种语言或繁杂的用户界面，因此它尽可能多地使用 JSON 配置最少的 T-SQL。 通过使用 T-SQL 配置见解小组件，可以利用无数个现有的有用 T-SQL 查询源，这些查询可转化为富有见解力的小组件。
 
 见解小组件由一个或两个 T-SQL 查询组成：
 * *见解小组件查询*是必需的，并且是返回小组件中所示数据的查询。
@@ -44,7 +43,7 @@ ms.locfileid: "74957051"
 
 见解小组件查询定义用于呈现计数、图表或图形的数据集。 见解详细信息查询用于在见解详细信息面板中以表格格式列出相关见解详细信息。 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] 执行见解小组件查询，并将查询结果集映射到某个图表的数据集，然后呈现它。 当用户打开某个见解的详细信息时，它会执行见解详细信息查询，并在对话框的网格视图中输出结果。
+Azure Data Studio 执行见解小组件查询，并将查询结果集映射到某个图表的数据集，然后呈现它。 当用户打开某个见解的详细信息时，它会执行见解详细信息查询，并在对话框的网格视图中输出结果。
 
 基本思路是以某种方式编写 T-SQL 查询，以便将其用作计数、图表和图形小组件的数据集。 
 

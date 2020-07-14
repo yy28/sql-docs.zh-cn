@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 050b6ba215d9dc4db433ad81dd8fa48bed212803
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ff383fface773da790fd52c498e861ee402dc862
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75557922"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882063"
 ---
 # <a name="sql-server-connector-maintenance--troubleshooting"></a>SQL Server 连接器维护与故障排除
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   本主题提供了有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器的补充信息。 有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器的详细信息，请参阅 [Extensible Key Management Using Azure Key Vault &#40;SQL Server&#41;（使用 Azure 密钥保管库的可扩展密钥管理）](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)、[Setup Steps for Extensible Key Management Using the Azure Key Vault（使用 Azure 密钥保管库的可扩展密钥管理的设置步骤）](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)和 [Use SQL Server Connector with SQL Encryption Features（使用具有 SQL 加密功能的 SQL Server 连接器）](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)。  
   
@@ -139,7 +139,7 @@ ms.locfileid: "75557922"
 8.  在验证更新是否有效之后，可以删除旧 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器文件夹（如果在步骤 3 中你选择将其重命名而不是卸载。）  
   
 ### <a name="rolling-the-ssnoversion-service-principal"></a>滚动更新 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务主体  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用 Azure Active Directory 中创建的服务主体作为凭据来访问密钥保管库。  服务主体具有客户端 ID 和身份验证密钥。  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 凭据是使用 **VaultName**、 **客户端 ID**和 **身份验证密钥**设置的。  身份验证密钥  在特定的期限内有效（一年或两年）。   在该期限已过之前，必须在 Azure AD 中为服务主体生成新密钥。  然后，必须在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中更改凭据。    [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 为当前会话中的凭据保留缓存，因此，如果凭据发生更改，应重新启动 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用 Azure Active Directory 中创建的服务主体作为凭据来访问密钥保管库。  服务主体具有客户端 ID 和身份验证密钥。  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 凭据是使用 **VaultName**、 **客户端 ID**和 **身份验证密钥**设置的。  身份验证密钥在特定的期限内有效（一年或两年）。   在该期限已过之前，必须在 Azure AD 中为服务主体生成新密钥。  然后，必须在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中更改凭据。    [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 为当前会话中的凭据保留缓存，因此，如果凭据发生更改，应重新启动 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 。  
   
 ### <a name="key-backup-and-recovery"></a>密钥备份和恢复  
 应定期备份密钥保管库。 如果保管库中的非对称密钥丢失，可以从备份还原它。 必须使用和以前相同的名称还原密钥，还原 PowerShell 命令将执行此操作（如下面步骤所示）。  
@@ -147,13 +147,13 @@ ms.locfileid: "75557922"
 
 概括而言，步骤如下：  
   
-* 备份保管库密钥（使用 Backup-AzureKeyVaultKey Powershell cmdlet）。  
+* 备份保管库密钥（使用 Backup-AzureKeyVaultKey PowerShell cmdlet）。  
 * 如果保管库出错，则在同一地理区域*中创建新的保管库。 创建此保管库的用户应在为 SQL Server 设置的服务主体所在的同一默认目录中。  
-* 将密钥还原到新保管库（使用 Restore-AzureKeyVaultKey Powershell cmdlet - 这将使用和以前相同的名称还原密钥）。 如果已经存在具有相同名称的密钥，则还原将失败。  
+* 将密钥还原到新保管库（使用 Restore-AzureKeyVaultKey PowerShell cmdlet - 这将使用和以前相同的名称还原密钥）。 如果已经存在具有相同名称的密钥，则还原将失败。  
 * 向 SQL Server 服务主体授予权限以使用此新的保管库。  
 * 修改数据库引擎使用的 SQL Server 凭据以反映新的保管库名称（如果需要）。  
   
-只要密钥备份保留在同一个地理区域或国家云，就可以跨 Azure 区域还原密钥备份，这些国家/地区包括：美国、加拿大、日本、澳大利亚、印度、APAC、欧洲、巴西、中国、美国政府或德国。  
+可以跨 Azure 区域还原密钥备份，前提是它们保留在同一个地理区域或国家/地区云中：美国、加拿大、日本、澳大利亚、印度、亚太地区、欧洲、巴西、中国、美国政府或德国。  
   
   
 ##  <a name="b-frequently-asked-questions"></a><a name="AppendixB"></a> B. 常见问题  
@@ -167,7 +167,7 @@ ms.locfileid: "75557922"
   
 ### <a name="on-configuring-ssnoversion"></a>有关配置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
 
-SQL Server 连接器需要哪些终结点的访问权限？  该连接器与两个终结点通信，这两个终结点需要列入允许列表。 与这些其他服务进行出站通信所需的唯一端口是 443（用于 Https）：
+SQL Server 连接器需要哪些终结点的访问权限？ 该连接器与两个终结点通信，这两个终结点需要获得允许。 与这些其他服务进行出站通信所需的唯一端口是 443（用于 Https）：
 -  login.microsoftonline.com/*:443
 -  *.vault.azure.net/* :443
 
@@ -192,9 +192,9 @@ SQL Server 连接器需要哪些终结点的访问权限？  该连接器与两�
 ![aad-change-default-directory-helpsteps](../../../relational-databases/security/encryption/media/aad-change-default-directory-helpsteps.png)
 
 1. 转到 Azure 经典门户：[https://manage.windowsazure.com](https://manage.windowsazure.com)  
-2. 在左侧菜单上，向下滚动并选择“设置”  。
-3. 选择当前所使用的 Azure 订阅，然后在屏幕底部的命令中单击“编辑目录”  。
-4. 在弹出窗口中，使用“目录”  下拉列表选择要使用的 Active Directory。 这会使它成为默认目录。
+2. 在左侧菜单上，向下滚动并选择“设置”。
+3. 选择当前所使用的 Azure 订阅，然后在屏幕底部的命令中单击“编辑目录”。
+4. 在弹出窗口中，使用“目录”下拉列表选择要使用的 Active Directory。 这会使它成为默认目录。
 5. 请确保你是新选择的 Active Directory 的全局管理员。 如果你不是全局管理员，则可能会由于切换目录而失去管理权限。
 6. 弹出窗口关闭之后，如果你看不到你的任何订阅，则可能需要在屏幕右上角菜单的“订阅”筛选器中更新“按目录筛选”筛选器，才能看到使用最近更新的 Active Directory 的订阅。
 
@@ -216,7 +216,7 @@ SQL Server 连接器需要哪些终结点的访问权限？  该连接器与两�
 5 | scp_err_AuthFailure | EKM 提供程序的身份验证失败。    
 6 | scp_err_InvalidArgument | 提供的参数无效。    
 7 | scp_err_ProviderError | EKM 提供程序中发生了 SQL 引擎捕获到的未知错误。   
-401 | acquireToken | 服务器已针对请求响应代码 401。 请确保客户端 ID 和密码正确，并凭据字符串是 AAD 客户端 ID 和密码的串联（无连字符）。
+401 | acquireToken | 服务器已针对请求响应代码 401。 请确保客户端 ID 和密码正确，并且凭据字符串是 AAD 客户端 ID 和密码的串联（无连字符）。
 404 | getKeyByName | 服务器响应 404，因为找不到密钥名称。 请确保保管库中存在密钥名称。
 2049 | scp_err_KeyNameDoesNotFitThumbprint | 密钥名称太长，不适用于 SQL 引擎的指纹。 密钥名称不得超过 26 个字符。    
 2050 | scp_err_PasswordTooShort | 作为 AAD 客户端 ID 和密码的串联的密码字符串少于 32 个字符。    

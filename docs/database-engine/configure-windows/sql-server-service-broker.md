@@ -1,5 +1,6 @@
 ---
 title: SQL Server Service Broker | Microsoft Docs
+description: 了解 Service Broker。 了解它如何为 SQL Server 数据库引擎和 Azure SQL 数据库托管实例中的消息提供本机支持。
 ms.custom: ''
 ms.date: 09/07/2018
 ms.prod: sql
@@ -20,18 +21,18 @@ helpviewer_keywords:
 - SQL Server Service Broker
 - Service Broker
 ms.assetid: 8b8b3b57-fd46-44de-9a4e-e3a8e3999c1e
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 99800a06e04d5f5d4f9651e32d0a143e90331b09
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 3e915b46eb89c29d260dc66ad7b73bc0cbc73ebc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528151"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764046"
 ---
 # <a name="service-broker"></a>Service Broker
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] 为 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 和 [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index)中的消息传递和队列提供本机支持。 开发人员可轻松创建通过 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 组件在不同数据库之间通信的复杂应用程序，也可构建分发式应用程序和可靠的应用程序。  
   

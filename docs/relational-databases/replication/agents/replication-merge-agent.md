@@ -1,5 +1,6 @@
 ---
 title: 复制合并代理 | Microsoft Docs
+description: 复制合并代理将数据库表中保存的初始快照应用于订阅服务器、合并增量数据更改，并协调冲突。
 ms.custom: ''
 ms.date: 10/29/2018
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ddbb30c678599cafcde7e5cb8888a904b9cf7b58
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: a4dff5292a3cd0bfcd46e2615bc755665ff3e49d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529401"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897891"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   复制合并代理是一个将数据库表中保存的初始快照应用于订阅服务器的实用工具可执行文件。 它还合并自初始快照创建后发布服务器上发生的增量数据更改，并根据配置的规则或通过使用创建的自定义冲突解决程序来协调冲突。  
   
 > [!NOTE]  
@@ -114,7 +115,7 @@ replmerg [-?]
  输出所有可用的参数。  
   
  **-Publisher** _server_name_[ **\\** _instance_name_]  
- 发布服务器的名称。 为该服务器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 server_name  。 为该服务器上的 _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 server_name。  
+ 发布服务器的名称。 为该服务器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 server_name。 为该服务器上的 _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 server_name。  
   
  **-PublisherDB** _publisher_database_  
  发布服务器数据库的名称。  
@@ -180,7 +181,7 @@ replmerg [-?]
   
  **-ExchangeType** [ **1**| **2**| **3**]  
 > [!WARNING]
->  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] 要限制上载，请改用 sp_addmergearticle 的 \@subscriber_upload_options   。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] 要限制上载，请改用 sp_addmergearticle 的 \@subscriber_upload_options 。  
   
  指定同步过程中数据交换的类型，可以是下列值之一：  
   
@@ -265,7 +266,7 @@ replmerg [-?]
  在历史记录线程检查目前是否有连接在等待服务器响应之前等待的秒数。 在执行长时间运行的批处理时，减小该值可避免检查代理将合并代理标记为可疑。 默认值为 **300** 秒。  
   
  **-LoginTimeOut** _login_time_out_seconds_  
- 登录超时前等待的秒数。  默认值为 15 秒。  
+ 登录超时前等待的秒数。 默认值为 15 秒。  
   
  **-MakeGenerationInterval** _make_generation_interval_seconds_  
  等待创建生成或更改批的秒数或下载到客户端的秒数。 默认值为 **1** 秒。  
@@ -288,7 +289,7 @@ replmerg [-?]
  代理输出文件的路径。 如果未提供文件名，则向控制台发送该输出。 如果指定的文件名已存在，会将输出追加到该文件。  
   
  **-OutputVerboseLevel** [**0**|**1**|**2**]  
- 指定输出是否应提供详细内容。  如果详细级别为 0，则只输出错误消息。 如果详细级别为 **1**，则输出所有的进度报告消息。  如果详细级别为 2（默认），则输出所有错误消息和进度消息，这对调试很有帮助。  
+ 指定输出是否应提供详细内容。 如果详细级别为 0，则只输出错误消息。 如果详细级别为 **1**，则输出所有的进度报告消息。  如果详细级别为 2（默认），则输出所有错误消息和进度消息，这对调试很有帮助。  
   
  **-ParallelUploadDownload** [**0**|**1**]  
  指定合并代理是否应并行处理上载到发布服务器和下载到订阅服务器的更改，这对于具有高带宽的大容量环境很有用。 如果 **ParallelUploadDownload** 为 **1**，则启用并行处理。  
@@ -321,7 +322,7 @@ replmerg [-?]
  指定合并代理用于枚举来自源的更改的源线程数。 在上载过程中，源是订阅服务器；在下载过程中，源是发布服务器。 默认值为 **3**。  
   
  **-StartQueueTimeout** _start_queue_timeout_seconds_  
- 当运行的并发合并进程数达到由 sp_addmergepublication 的 \@max_concurrent_merge 属性设置的限制时，合并代理等待的最大秒数   。 如果在达到最大秒数之后合并代理仍在等待，则合并代理将退出。 值 0 表示代理将无限期地等待，但是可以将其取消。  
+ 当运行的并发合并进程数达到由 sp_addmergepublication 的 \@max_concurrent_merge 属性设置的限制时，合并代理等待的最大秒数 。 如果在达到最大秒数之后合并代理仍在等待，则合并代理将退出。 值 0 表示代理将无限期地等待，但是可以将其取消。  
   
  **-SubscriberDatabasePath** _subscriber_database_path_  
  如果 **SubscriberType** 为 **2** （允许建立到 Jet 数据库的连接，而无需 ODBC 数据源名称 (DSN)），则为 Jet 数据库（.mdb 文件）的路径。  
@@ -361,7 +362,7 @@ replmerg [-?]
  指定合并代理是否在订阅服务器和备用发布服务器之间进行同步。 值为 **1** 表示它是备用发布服务器。 默认值为 **0**。  
  
  **-T** [**101|102**]  
- 可实现更多合并代理附加功能的跟踪标志。 设置为值 101 可获取更多详细的日志记录信息，帮助确定合并复制同步过程的每个步骤所花费的时间  。 值 102 与跟踪标志 101 写入相同的统计信息，不同的是会将信息写入 <Distribution server>..msmerge_history 表   。 通过使用 `-output` 和 `-outputverboselevel` 参数，在使用跟踪标志 101 时启用合并代理日志记录。  例如，将以下参数添加到合并代理，然后重启代理：`-T 101, -output, -outputverboselevel`。 
+ 可实现更多合并代理附加功能的跟踪标志。 设置为值 101 可获取更多详细的日志记录信息，帮助确定合并复制同步过程的每个步骤所花费的时间。 值 102 与跟踪标志 101 写入相同的统计信息，不同的是会将信息写入 <Distribution server>..msmerge_history 表 。 通过使用 `-output` 和 `-outputverboselevel` 参数，在使用跟踪标志 101 时启用合并代理日志记录。  例如，将以下参数添加到合并代理，然后重启代理：`-T 101, -output, -outputverboselevel`。 
  
  **-UploadGenerationsPerBatch** _upload_generations_per_batch_  
  将订阅服务器上的更改上载到发布服务器时要在单个批次处理的生成数。 生成的定义是每个项目中属于一个逻辑组的更改。 可靠的通信链接的默认值为 **100**。 不可靠的通信链接的默认值为 **1**。  

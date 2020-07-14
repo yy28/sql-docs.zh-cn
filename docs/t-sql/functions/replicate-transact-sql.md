@@ -17,18 +17,18 @@ helpviewer_keywords:
 - REPLICATE function
 - repeating character expressions
 ms.assetid: 0cd467fb-3f22-471a-892c-0039d9f7fa1a
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 27078aceb7bbeb4918c6884bd8a1e984e9384ce5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: db82218c76a9459c992b3cb8a5177cd06e319053
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67944480"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003736"
 ---
 # <a name="replicate-transact-sql"></a>REPLICATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   以指定的次数重复字符串值。  
   
@@ -36,22 +36,25 @@ ms.locfileid: "67944480"
   
 ## <a name="syntax"></a>语法  
   
-```  
-REPLICATE ( string_expression ,integer_expression )   
+```syntaxsql
+REPLICATE ( string_expression , integer_expression )   
 ```  
   
 ## <a name="arguments"></a>参数  
- string_expression   
- 字符串或二进制数据类型的表达式。 string_expression 可以是字符或二进制数据  。  
+ string_expression  
+ 字符串或二进制数据类型的表达式。  
   
 > [!NOTE]  
->  如果 string_expression 的类型不是 varchar(max) 或 nvarchar(max)，则 REPLICATE 将返回值截断为 8000 字节    。 若要返回大于 8,000 字节的值，则必须将 string_expression 显式转换为适当的大值数据类型  。  
+> 如果 string_expression 的类型为 binary，则 REPLICATE 将执行对 varchar 的隐式转换，因此不会保留二进制输入。  
+
+> [!NOTE]  
+> 如果 string_expression 输入的类型为 varchar(max) 或 nvarchar(max)，则 REPLICATE 在 8000 字节处截断返回值 。 若要返回大于 8,000 字节的值，则必须将 string_expression 显式转换为适当的大值数据类型。  
   
  *integer_expression*  
- 是任何整数类型的表达式，包括 bigint  。 如果 integer_expression 为负，则返回 NULL  。  
+ 是任何整数类型的表达式，包括 bigint。 如果 integer_expression 为负，则返回 NULL。  
   
 ## <a name="return-types"></a>返回类型  
- 返回与 string_expression 相同的类型  。  
+ 返回与 string_expression 相同的类型。  
   
 ## <a name="examples"></a>示例  
   
@@ -119,7 +122,7 @@ Varchar Column        Char Column
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-replicate"></a>C. 使用 REPLICATE  
+### <a name="c-using-replicate"></a>C:使用 REPLICATE  
  以下示例在 `ItemCode` 值的前面将 `0` 字符复制四次。  
   
 ```  

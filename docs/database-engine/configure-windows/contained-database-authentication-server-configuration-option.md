@@ -1,5 +1,6 @@
 ---
 title: contained database authentication 服务器配置选项 | Microsoft Docs
+description: 了解“已包含数据库身份验证”选项。 了解如何打开它，以便可以将包含的数据库附加到 SQL Server 数据库引擎。
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - contained database, enabling
 - contained database authentication option
 ms.assetid: b80768d2-ac20-4035-a335-d9adb74b3f6e
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: f571690b4af27d4099e0750eeacedcafd943f1fa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 29439e7957ad9c6563a282e9a4264a5f2d1f5c5a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012126"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772605"
 ---
 # <a name="contained-database-authentication-server-configuration-option"></a>contained database authentication 服务器配置选项
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   使用 **contained database authentication** 选项对 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例启用包含的数据库。  
   

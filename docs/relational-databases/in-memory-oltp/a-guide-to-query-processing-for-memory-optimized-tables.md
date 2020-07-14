@@ -1,5 +1,6 @@
 ---
 title: 内存优化表的查询处理
+description: 了解在 SQL Server 的内存中 OLTP 中针对内存优化表和本机编译存储过程的查询处理。
 ms.custom: seo-dt-2019
 ms.date: 05/09/2019
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8aae0e199fa1e82116baf0164b0d5c11b68e3711
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a6a13f70bfffbdbeba0ba08882c4dcc9b53aaa69
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79112341"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85668875"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>内存优化表查询处理指南
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   内存中 OLTP 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中引入内存优化的表和本机编译的存储过程。 本文简单介绍针对内存优化表和本机编译存储过程的查询处理。  
   
@@ -194,7 +195,7 @@ END
   
  本机编译存储过程在创建时编译，而解释型存储过程在首次执行时编译。 （部分编译（特别是分析和 algebrization）发生在创建时。 但是，对于解释型存储过程，将在首次执行时优化查询计划。）重新编译逻辑相似。 如果服务器已重新启动，本机编译的存储过程将在该过程首次执行时重新编译。 解释型存储过程在计划不再存在于计划高速缓存中时重新编译。 下表对本机编译存储过程和解释型存储过程的编译和重新编译进行了总结：  
   
-||本机编译存储过程|使用解释型|  
+||本机编译|使用解释型|  
 |-|-----------------------|-----------------|  
 |初始编译|创建时。|首次执行时。|  
 |自动重新编译|在数据库或服务器重新启动后首次执行该过程时。|服务器重新启动时。 或者从计划高速缓存中逐出时（通常是由于架构或状态更改，或者内存压力）。|  
@@ -225,7 +226,7 @@ END
   
  本机编译存储过程的调用如下所述：  
   
-1.  用户发出一条“EXEC usp_myproc”语句   。  
+1.  用户发出一条“EXEC usp_myproc”语句。  
   
 2.  分析器提取名称和存储过程参数。  
   

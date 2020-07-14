@@ -1,5 +1,6 @@
 ---
 title: 更改内存优化表 | Microsoft Docs
+description: 了解 ALTER TABLE 语句如何执行内存优化表的架构和索引更改。 在单个语句中结合使用 ADD、DROP 和 ALTER 操作。
 ms.custom: ''
 ms.date: 10/22/2018
 ms.prod: sql
@@ -11,16 +12,16 @@ ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3d65b6931053c7eccbb96093fb2cd840f8277cb7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: db339d9063378b29f6902f7e52e3006ac57295b7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67951297"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85776079"
 ---
 # <a name="altering-memory-optimized-tables"></a>更改内存优化表
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 可以使用 ALTER TABLE 语句来更改内存优化表的架构和索引。 在 SQL Server 2016 和 Azure SQL 数据库中，对内存优化表的 ALTER TABLE 操作属于 OFFLINE，表示操作正在进行时，表格不能用于查询。 数据库应用程序可以继续运行，并且访问该表的任何操作都将被阻止，直到更改过程完成。 可以将多个 ADD、DROP 或 ALTER 操作合并为单个 ALTER TABLE 语句。
 
@@ -68,7 +69,7 @@ ms.locfileid: "67951297"
   - 导致行上列移动行外列。
   - 导致行外列移动行上列。
   - 创建新的行外列。
-  - 异常：  已使用优化方式记录了延长行外列。
+  - 异常：已使用优化方式记录了延长行外列。
   
 ## <a name="examples"></a>示例
 

@@ -1,5 +1,6 @@
 ---
 title: 配置 remote data archive 服务器配置选项 | Microsoft Docs
+description: 了解如何使用远程数据存档选项来指定能否为 Stretch 启用服务器上的数据库和表。
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: b5817b5a-f39a-4faf-b11e-a47b54fd9f32
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fda2594b2dc61a78eb5900ef6d1b735dac5b44e4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fc53b5392d6bd493b634e9e2c8a4a92613eb8c32
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012327"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785751"
 ---
 # <a name="configure-the-remote-data-archive-server-configuration-option"></a>配置远程数据存档服务器配置选项
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   使用 **remote data archive** 选项，可以指定能否为服务器上的数据库和表启用延伸。 有关详细信息，请参阅 [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)。  
   

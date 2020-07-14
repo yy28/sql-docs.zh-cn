@@ -1,5 +1,6 @@
 ---
 title: 以最小配置启动 SQL Server | Microsoft Docs
+description: 熟悉 SQL Server 中的最小配置启动选项。 查看何时以及如何使用该选项，并了解它如何限制功能。
 ms.custom: ''
 ms.date: 01/20/2017
 ms.prod: sql
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - minimal configuration [SQL Server]
 - starting SQL Server, minimal configuration
 ms.assetid: 4d733c99-28b3-42d8-b7f6-7b943b548173
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 0c919ad9202c99c7b010b6aee9c921e76784eb24
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e6e301cd7dc29cc5e2a2cffc34066369ed67d57a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79027956"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763994"
 ---
 # <a name="start-sql-server-with-minimal-configuration"></a>以最小配置启动 SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   如果存在配置问题而无法启动服务器，可使用最小配置启动选项来启动 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 这就是启动选项 **-f**。 使用最小配置启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例会自动将服务器置于单用户模式。  
   
@@ -35,7 +36,7 @@ ms.locfileid: "79027956"
 
 -   将以最小大小配置 `tempdb`。
 
--   审核将处于禁用状态，但仍可发出审核 DDL。 实际上，-m 应该足以满足大多数需要 SQL Server 审核重新配置的情况  。 有关审核配置中的安全性的更多详细信息，请参阅 [SQL Server 中的审核](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/dd392015(v=sql.100)#security)。
+-   审核将处于禁用状态，但仍可发出审核 DDL。 实际上，-m 应该足以满足大多数需要 SQL Server 审核重新配置的情况。 有关审核配置中的安全性的更多详细信息，请参阅 [SQL Server 中的审核](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/dd392015(v=sql.100)#security)。
   
  用最小配置启动服务器后，应更改相应的服务器选项值，然后停止并重新启动服务器。  
   

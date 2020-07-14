@@ -1,5 +1,6 @@
 ---
 title: 密码策略 | Microsoft Docs
+description: Windows 密码策略机制应用于使用 SQL Server 身份验证的登录名，还应用于具有密码的包含数据库用户。
 ms.custom: ''
 ms.date: 01/16/2019
 ms.prod: sql
@@ -32,16 +33,16 @@ helpviewer_keywords:
 ms.assetid: c0040c0a-a18f-45b9-9c40-0625685649b1
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: aa626cb69e22e56e1769d45b2cbfd652c51bc3b4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f3bd3bf3de9e70095ed217a160d7f29234a65cea
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68010821"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725932"
 ---
 # <a name="password-policy"></a>密码策略
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以使用 Windows 密码策略机制。 密码策略应用于使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的登录名，并且应用于具有密码的包含数据库用户。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以对在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]内部使用的密码应用在 Windows 中使用的相同复杂性策略和过期策略。 此功能取决于 `NetValidatePasswordPolicy` API。  

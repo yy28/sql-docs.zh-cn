@@ -1,5 +1,6 @@
 ---
 title: 示例：指定 XMLTEXT 指令 | Microsoft Docs
+description: 了解如何通过使用 EXPLICIT 模式在 SELECT 语句中指定 XMLTEXT 指令来处理 XML 文档中未使用的部分。
 ms.custom: ''
 ms.date: 04/05/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 52e3d6ea8cff9d1984ee11a510a6c21833034c29
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 93e6735f9b4e30a97d86366b512c27489a921f2a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006674"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632313"
 ---
 # <a name="example-specifying-the-xmltext-directive"></a>示例：指定 XMLTEXT 指令
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   此示例说明如何在使用 EXPLICIT 模式的 **语句中使用** XMLTEXT `SELECT` 指令处理溢出列中的数据。  
   
  请考虑一下 `Person` 表。 此表含有存储 XML 文档的未使用部分的 `Overflow` 列。  

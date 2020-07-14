@@ -4,18 +4,18 @@ ms.custom: seo-dt-2019
 ms.date: 08/10/2017
 ms.prod: sql
 ms.technology: data-warehouse
-ms.reviewer: jrasnick
 ms.topic: conceptual
 ms.assetid: 16ef8191-7587-45a3-9ee9-7d99b7088de3
 author: ronortloff
 ms.author: rortloff
+ms.reviewer: jrasnick
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1b6b024507d06149efc0bc2693b5bde2f67d482b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ab42dfbed020840aeb90042b81266fc58cc74688
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74401704"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627410"
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT（并行数据仓库）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "74401704"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
   
 CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }  AT ('<connection_string>')  
     [ WITH ( BATCH_SIZE = batch_size ) ]  
@@ -53,9 +53,9 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
  *table_name*  
  新表的名称。 有关允许的表名的详细信息，请参阅 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] 中的“对象命名规则”。  
   
- 远程表已创建为堆。 没有 CHECK 约束或触发。 远程表列的排序规则与源表列的排序规则相同。 这适用于类型为 char、nchar、varchar 和 nvarchar 的列     。  
+ 远程表已创建为堆。 没有 CHECK 约束或触发。 远程表列的排序规则与源表列的排序规则相同。 这适用于类型为 char、nchar、varchar 和 nvarchar 的列   。  
   
- connection_string   
+ connection_string  
  指定用于连接到远程服务器和数据库的 `Data Source`、`User ID` 和 `Password` 参数的字符串。  
   
  连接字符串是由分号分隔的键值对列表。 关键字不区分大小写。 忽略键值对之间的空格。 但是，值可能会区分大小写，具体取决于数据源。  
@@ -63,28 +63,28 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
  *数据源*  
  指定名称或 IP 地址和远程 SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 TCP 端口号的参数。  
   
- hostname 或 IP_address    
- 远程服务器计算机的名称或远程服务器的 IPv4 地址。 不支持 IPv6 地址。 可以在格式 Computer_Name\Instance_Name 或 IP_address\Instance_Name 中指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命名实例   。 服务器必须是远程的，因此才不会指定为（本地）。  
+ hostname 或 IP_address   
+ 远程服务器计算机的名称或远程服务器的 IPv4 地址。 不支持 IPv6 地址。 可以在格式 Computer_Name\Instance_Name 或 IP_address\Instance_Name 中指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命名实例 。 服务器必须是远程的，因此才不会指定为（本地）。  
   
- TCP 端口号   
- 连接的 TCP 端口号。 对于没有在默认端口 1433 上侦听的 SQL Server 实例，可以将其 TCP 端口号指定为 0 到 65535 之间的数字。 例如：ServerA,1450 或 10.192.14.27,1435    
+ TCP 端口号  
+ 连接的 TCP 端口号。 对于没有在默认端口 1433 上侦听的 SQL Server 实例，可以将其 TCP 端口号指定为 0 到 65535 之间的数字。 例如：ServerA,1450 或 10.192.14.27,1435   
   
 > [!NOTE]  
 >  建议使用 IP 地址连接到远程服务器。 根据网络配置，使用计算机名称进行连接可能需要额外的步骤，才能使用非设备 DNS 服务器将名称解析为正确的服务器。 使用 IP 地址连接时，不需要此步骤。 有关详细信息，请参阅 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] 中的“使用 DNS 转发器解析非设备 DNS 名称（分析平台系统）”。  
   
- user_name   
+ user_name  
  有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证登录名。 最多包含 128 个字符。  
   
- password   
+ password  
  登录密码。 最多包含 128 个字符。  
   
- batch_size   
- 每批的最大行数。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 将批处理中的行发送到目标服务器。  Batch_size 为一个大于或等于 0 的正整数。 默认为 0。  
+ batch_size  
+ 每批的最大行数。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 将批处理中的行发送到目标服务器。 Batch_size 为一个大于或等于 0 的正整数。 默认为 0。  
   
- WITH common_table_expression   
+ WITH common_table_expression  
  指定临时命名的结果集，这些结果集称为公用表表达式 (CTE)。 有关详细信息，请参阅 [WITH common_table_expression (Transact-SQL)](../../t-sql/queries/with-common-table-expression-transact-sql.md)。  
   
- SELECT \<select_criteria> 指定哪些数据将填充新远程表的查询谓词。 有关 SELECT 语句的信息，请参阅 [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)。  
+ SELECT \<select_criteria>：指定哪些数据将填充新远程表的查询谓词。 有关 SELECT 语句的信息，请参阅 [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)。  
   
 ## <a name="permissions"></a>权限  
  需要：  

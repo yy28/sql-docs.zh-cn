@@ -1,22 +1,21 @@
 ---
 title: JSON_MODIFY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/02/2020
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.reviewer: genemi
 ms.technology: t-sql
 ms.topic: language-reference
 ms.assetid: 96bc8255-a037-4907-aec4-1a9c30814651
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 3aed59e8c90b301cd3fbf7caca9a0e466746dd2d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 5e981958444fcb760d0baff036852d58aee0b1a2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635107"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752279"
 ---
 # <a name="json_modify-transact-sql"></a>JSON_MODIFY (Transact-SQL)
 
@@ -28,7 +27,7 @@ ms.locfileid: "81635107"
   
 ## <a name="syntax"></a>语法  
   
-```sql  
+```syntaxsql
 JSON_MODIFY ( expression , path , newValue )  
 ```  
   
@@ -37,33 +36,33 @@ JSON_MODIFY ( expression , path , newValue )
  *expression*  
  一个表达式。 通常是包含 JSON 文本的变量或列的名称。  
   
- 如果 expression 不包含有效 JSON，则 JSON_MODIFY 返回错误   。  
+ 如果 expression 不包含有效 JSON，则 JSON_MODIFY 返回错误。  
   
  *路径*  
  指定要更新的属性的 JSON 路径表达式。
 
- path 具有以下语法  ：  
+ path 具有以下语法：  
   
  `[append] [ lax | strict ] $.<json path>`  
   
 - *append*  
-    指定应将新值追加到通过 \<json path> 引用的数组的可选修饰符  。  
+    指定应将新值追加到通过 \<json path> 引用的数组的可选修饰符。  
   
 - *lax*  
-    指定通过 \<json path> 引用的属性不是必须存在  。 如果该属性不存在，则 JSON_MODIFY 尝试在指定路径上插入新值。 如果无法在路径上插入属性，则插入可能会失败。 如果未指定 lax  或 strict  ，则 lax  是默认模式。  
+    指定通过 \<json path> 引用的属性不是必须存在。 如果该属性不存在，则 JSON_MODIFY 尝试在指定路径上插入新值。 如果无法在路径上插入属性，则插入可能会失败。 如果未指定 lax 或 strict，则 lax 是默认模式。  
   
 - *strict*  
-    指定通过 \<json path> 引用的属性必须处于 JSON 表达式中  。 如果该属性不存在，则 JSON_MODIFY 返回错误。  
+    指定通过 \<json path> 引用的属性必须处于 JSON 表达式中。 如果该属性不存在，则 JSON_MODIFY 返回错误。  
   
-- \<json path>   
+- *\<json path>*  
     为要更新的属性指定路径。 有关详细信息，请参阅 [JSON 路径表达式 (SQL Server)](../../relational-databases/json/json-path-expressions-sql-server.md)。  
   
-在 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 和 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] 中，可提供变量作为 path 的值  。
+在 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 和 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] 中，可提供变量作为 path 的值。
 
-如果 path 格式无效，则 JSON_MODIFY 返回错误   。  
+如果 path 格式无效，则 JSON_MODIFY 返回错误。  
   
  *newValue*  
- path 指定的属性的新值  。  
+ path 指定的属性的新值。  
  新值必须是 [n]varchar 或 text。
   
  在宽松模式下，如果新值为 NULL，则 JSON_MODIFY 会删除指定键。  
@@ -72,7 +71,7 @@ JSON_MODIFY ( expression , path , newValue )
   
 ## <a name="return-value"></a>返回值
 
- 以正确格式化 JSON 文本的形式返回 expression  的更新值。  
+ 以正确格式化 JSON 文本的形式返回 expression 的更新值。  
   
 ## <a name="remarks"></a>备注
 
@@ -97,7 +96,7 @@ JSON_MODIFY ( expression , path , newValue )
   
  **查询**
   
-```syntaxsql
+```sql
 
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
 
@@ -156,7 +155,7 @@ PRINT @info
   
  **查询**
   
-```syntaxsql
+```sql
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
 
 PRINT @info
@@ -246,11 +245,11 @@ PRINT @stats
   
 ### <a name="example---modify-a-json-object"></a>示例 - 修改 JSON 对象
 
- JSON_MODIFY 将 newValue  参数视为纯文本（即使它包含正确格式化 JSON 文本）。 因此，函数的 JSON 输出会使用双引号括起，并且所有特殊字符都会进行转义，如下面的示例中所示。  
+ JSON_MODIFY 将 newValue 参数视为纯文本（即使它包含正确格式化 JSON 文本）。 因此，函数的 JSON 输出会使用双引号括起，并且所有特殊字符都会进行转义，如下面的示例中所示。  
   
  **查询**  
   
-```syntaxsql
+```sql
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
 
 PRINT @info
@@ -274,11 +273,11 @@ PRINT @info
 }
 ```  
   
- 若要避免自动转义，请使用 JSON_QUERY 函数提供 newValue  。 JSON_MODIFY 知道 JSON_MODIFY 返回的值是正确格式化 JSON，因此它不会对值进行转义。  
+ 若要避免自动转义，请使用 JSON_QUERY 函数提供 newValue。 JSON_MODIFY 知道 JSON_MODIFY 返回的值是正确格式化 JSON，因此它不会对值进行转义。  
   
  **查询**  
   
-```syntaxsql
+```sql
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
 
 PRINT @info
@@ -308,13 +307,12 @@ PRINT @info
   
 ```sql  
 UPDATE Employee
-SET jsonCol=JSON_MODIFY(jsonCol,"$.info.address.town",'London')
+SET jsonCol=JSON_MODIFY(jsonCol,'$.info.address.town','London')
 WHERE EmployeeID=17
- 
 ```  
   
 ## <a name="see-also"></a>另请参阅
 
- [JSON 路径表达式 (SQL Server)](../../relational-databases/json/json-path-expressions-sql-server.md)   
- [JSON 数据 (SQL Server)](../../relational-databases/json/json-data-sql-server.md)  
+- [JSON 路径表达式 (SQL Server)](../../relational-databases/json/json-path-expressions-sql-server.md)   
+- [JSON 数据 (SQL Server)](../../relational-databases/json/json-data-sql-server.md)  
   

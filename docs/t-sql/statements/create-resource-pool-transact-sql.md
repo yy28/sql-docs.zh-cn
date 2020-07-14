@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 82712505-c6f9-4a65-a469-f029b5a2d6cd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4d2c0278199684db2355d76c624ed6349e8aefda
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: b043443f84ceb3b98484f88f4384c9e8e0a10442
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633950"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892518"
 ---
 # <a name="create-resource-pool-transact-sql"></a>CREATE RESOURCE POOL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中创建资源调控器资源池。 资源池表示数据库引擎实例的部分物理资源（内存、CPU 和 IO）。 数据库管理员可以使用资源调控器在多个资源池之间分发服务器资源，最多可为 64 个池。 资源调控器并非在每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中都提供。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
@@ -62,28 +62,28 @@ CREATE RESOURCE POOL pool_name
 ```  
   
 ## <a name="arguments"></a>参数  
-pool_name   
-资源池的用户定义名称。 pool_name 由字母数字组成，最多可包含 128 个字符，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中必须是唯一的，并且必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则  。  
+pool_name  
+资源池的用户定义名称。 pool_name 由字母数字组成，最多可包含 128 个字符，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中必须是唯一的，并且必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。  
   
-MIN_CPU_PERCENT = value   
-指定在出现 CPU 争用时资源池中的所有请求保证能接收的平均 CPU 带宽。 value 为整数且默认设置为 0  。 value 的允许范围是 0 到 100  。  
+MIN_CPU_PERCENT = value  
+指定在出现 CPU 争用时资源池中的所有请求保证能接收的平均 CPU 带宽。 value 为整数且默认设置为 0。 value 的允许范围是 0 到 100。  
   
-MAX_CPU_PERCENT =value   
-指定存在 CPU 争用时，资源池中的所有请求将接收的最大平均 CPU 带宽。 value 为整数且默认设置为 100  。 value 的允许范围是 1 到 100  。  
+MAX_CPU_PERCENT =value  
+指定存在 CPU 争用时，资源池中的所有请求将接收的最大平均 CPU 带宽。 value 为整数且默认设置为 100。 value 的允许范围是 1 到 100。  
   
-CAP_CPU_PERCENT =value     
+CAP_CPU_PERCENT =value   
 **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。  
   
-指定资源池中的所有请求都将收到的 CPU 带宽硬性上限。 将 CPU 最大带宽级别限制为与指定值相同。 value 为整数且默认设置为 100  。 value 的允许范围是 1 到 100  。  
+指定资源池中的所有请求都将收到的 CPU 带宽硬性上限。 将 CPU 最大带宽级别限制为与指定值相同。 value 为整数且默认设置为 100。 value 的允许范围是 1 到 100。  
   
 AFFINITY {SCHEDULER = AUTO | ( \<scheduler_range_spec> ) | NUMANODE = (\<NUMA_node_range_spec>)}      
 **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。  
   
 将资源池附加到特定的计划程序。 默认值为 AUTO。  
   
-AFFINITY SCHEDULER = (\<Scheduler_range_spec) 将资源池映射到由给定 ID 标识的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计划   。 这些 ID 映射到 [sys.dm_os_schedulers (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md) 的 scheduler_id 列中的值。 
+AFFINITY SCHEDULER = ( \<scheduler_range_spec> ) 将资源池映射到由给定 ID 标识的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计划 。 这些 ID 映射到 [sys.dm_os_schedulers (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md) 的 scheduler_id 列中的值。 
   
-当使用 AFFINITY NUMANODE = (\<NUMA_node_range_spec> ) 时，资源池会关联到映射至物理 CPU 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计划程序，而这些 CPU 与给定的 NUMA 节点或一系列节点相对应   。 您可以使用以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询发现物理 NUMA 配置与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计划程序 ID 之间的映射。 
+当使用 AFFINITY NUMANODE = ( \<NUMA_node_range_spec> ) 时，资源池会关联到映射至物理 CPU 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计划程序，而这些 CPU 与给定的 NUMA 节点或一系列节点相对应 。 您可以使用以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询发现物理 NUMA 配置与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计划程序 ID 之间的映射。 
   
 ```sql  
 SELECT osn.memory_node_id AS [numa_node_id], sc.cpu_id, sc.scheduler_id  
@@ -93,21 +93,21 @@ INNER JOIN sys.dm_os_schedulers AS sc
     AND sc.scheduler_id < 1048576;  
 ```  
   
-MIN_MEMORY_PERCENT =value      
-指定为此资源池保留的、不能与其他资源池共享的最小内存量。 value 为整数，默认设置为 0，value 的允许范围为 0 到 100   。  
+MIN_MEMORY_PERCENT =value    
+指定为此资源池保留的、不能与其他资源池共享的最小内存量。 value 为整数，默认设置为 0，value 的允许范围为 0 到 100 。  
   
-MAX_MEMORY_PERCENT =value      
-指定此资源池中的请求可使用的总服务器内存量。 value 为整数且默认设置为 100  。 value 的允许范围是 1 到 100  。  
+MAX_MEMORY_PERCENT =value    
+指定此资源池中的请求可使用的总服务器内存量。 value 为整数且默认设置为 100。 value 的允许范围是 1 到 100。  
   
-MIN_IOPS_PER_VOLUME =value      
+MIN_IOPS_PER_VOLUME =value    
 **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。  
   
-指定为资源池保留的每个磁盘卷每秒的最小 I/O 操作数 (IOPS)。 value 的允许范围是 0 到 2^31-1 (2,147,483,647)  。 指定 0 表示池没有最小值阈值。 默认值为 0。  
+指定为资源池保留的每个磁盘卷每秒的最小 I/O 操作数 (IOPS)。 value 的允许范围是 0 到 2^31-1 (2,147,483,647)。 指定 0 表示池没有最小值阈值。 默认值为 0。  
   
-MAX_IOPS_PER_VOLUME =value      
+MAX_IOPS_PER_VOLUME =value    
 **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。  
   
-指定可用于该资源池的每个磁盘卷每秒的最大 I/O 操作数 (IOPS)。 value 的允许范围是 0 到 2^31-1 (2,147,483,647)  。 指定 0 表示为池设置无限制的阈值。 默认值为 0。  
+指定可用于该资源池的每个磁盘卷每秒的最大 I/O 操作数 (IOPS)。 value 的允许范围是 0 到 2^31-1 (2,147,483,647)。 指定 0 表示为池设置无限制的阈值。 默认值为 0。  
   
 如果池的 `MAX_IOPS_PER_VOLUME` 设置为 0，则该池根本不受管控，可以采用系统中的所有 IOPS，即使其他池设置了 MIN_IOPS_PER_VOLUME 也是如此。 对于这种情况，建议在希望管控此池的 IO 时将该池的 `MAX_IOPS_PER_VOLUME` 值设置为较高的数字（例如，最大值 2^31-1）。  
   

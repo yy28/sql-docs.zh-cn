@@ -1,5 +1,6 @@
 ---
 title: 创建服务器角色 | Microsoft Docs
+description: 使用 SQL Server Management Studio 或 Transact-SQL 在 SQL Server 中创建服务器角色。 查看限制、局限性和必要权限。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: 74f19992-8082-4ed7-92a1-04fe676ee82d
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 869ee9f88d8cb52f10fbb9120b6815868f7de5fe
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5f90781fd5e293c4de5821fc89588b9b1e38ac0b
+ms.sourcegitcommit: 22f687e9e8b4f37b877b2d19c5090dade8fa26d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68094953"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85334263"
 ---
 # <a name="create-a-server-role"></a>创建服务器角色
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -69,19 +70,19 @@ ms.locfileid: "68094953"
   
 2.  展开 **“安全性”** 文件夹。  
   
-3.  右键单击“服务器角色”文件夹，然后选择“新建服务器角色…”   。  
+3.  右键单击“服务器角色”文件夹，然后选择“新建服务器角色…” 。  
   
-4.  在“新建服务器角色 - server\_role\_name”对话框的“常规”页上，在“服务器角色名称”框中输入新的服务器角色的名称。  
+4.  在“新建服务器角色 - server\_role\_name”对话框的“常规”页上，在“服务器角色名称”框中输入新的服务器角色的名称 。  
   
-5.  在 **“所有者”** 框中，输入拥有新角色的服务器主体的名称。 或者，单击省略号 (…) 打开“选择服务器登录名或角色”对话框   。  
+5.  在 **“所有者”** 框中，输入拥有新角色的服务器主体的名称。 或者，单击省略号 (…) 打开“选择服务器登录名或角色”对话框 。  
   
-6.  在“安全对象”  下，选择一个或多个服务器级别的安全对象。 当选择安全对象时，可以向此服务器角色授予或拒绝针对该安全对象的权限。  
+6.  在“安全对象”下，选择一个或多个服务器级别的安全对象。 当选择安全对象时，可以向此服务器角色授予或拒绝针对该安全对象的权限。  
   
-7.  在 **“权限: 显式”** 框中，选中相应的复选框以针对选定的安全对象授予、授予再授予或拒绝此服务器角色的权限。 如果某个权限无法针对所有选定的安全对象进行授予或拒绝，则该权限将表示为部分选择。  
+7.  在“权限: 显式”框中，选中相应的复选框以针对选定的安全对象授予、授予再授予或拒绝此服务器角色的权限。 如果某个权限无法针对所有选定的安全对象进行授予或拒绝，则该权限将表示为部分选择。  
   
 8.  在 **“成员”** 页上，使用 **“添加”** 按钮将代表个人或组的登录名添加到新的服务器角色。  
   
-9. 用户定义的服务器角色可以是另一个服务器角色的成员。 在“成员身份”  页上，选中一个复选框以使当前用户定义的服务器角色成为所选服务器角色的成员。  
+9. 用户定义的服务器角色可以是另一个服务器角色的成员。 在“成员身份”页上，选中一个复选框以使当前用户定义的服务器角色成为所选服务器角色的成员。  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -93,7 +94,7 @@ ms.locfileid: "68094953"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     --Creates the server role auditors that is owned the securityadmin fixed server role.  

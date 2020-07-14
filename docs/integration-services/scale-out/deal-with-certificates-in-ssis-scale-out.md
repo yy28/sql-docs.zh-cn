@@ -1,6 +1,6 @@
 ---
 title: 管理 SQL Server Integration Services Scale Out 的证书 | Microsoft Docs
-ms.description: This article describes how to manage certificates to secure communications between SSIS Scale Out Master and Scale Out Workers.
+description: 本文介绍如何管理证书来保护 SSIS Scale Out 主要角色和 Scale Out 辅助角色之间的通信。
 ms.date: 12/19/2017
 ms.prod: sql
 ms.prod_service: integration-services
@@ -10,12 +10,12 @@ ms.custom: performance
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: ab701d44e14bbbd6234f5301a5fb3abdba451ef2
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 425d307d6afe1da1edca7c3ed5796cee5a7b2c5b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488126"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733960"
 ---
 # <a name="manage-certificates-for-sql-server-integration-services-scale-out"></a>管理 SQL Server Integration Services Scale Out 的证书
 
@@ -29,13 +29,13 @@ ms.locfileid: "81488126"
 
 大多数情况下，Scale Out Master 证书在安装 Scale Out Master 的过程中配置。
 
-在 SQL Server 安装向导的“Integration Services Scale Out 配置 - Master 节点”  页中，可以选择新建自签名 TLS/SSL 证书，也可以选择使用现有 TLS/SSL 证书。
+在 SQL Server 安装向导的“Integration Services Scale Out 配置 - Master 节点”页中，可以选择新建自签名 TLS/SSL 证书，也可以选择使用现有 TLS/SSL 证书。
 
 ![主节点配置](media/master-config.PNG)
 
 **新证书**。 如果对证书没有特殊要求，可以选择新建自签名 TLS/SSL 证书。 可在证书中进一步指定 CN。 请确保 CN 中包含 Scale Out Worker 稍后使用的主终结点的主机名。 默认情况下，计算机名和主节点的 IP 地址也包含在内。 
 
-**现有证书**。 如果选择使用现有证书，请单击“浏览”  ，以从本地计算机的根  证书存储中选择 TLS/SSL 证书。
+**现有证书**。 如果选择使用现有证书，请单击“浏览”，以从本地计算机的根证书存储中选择 TLS/SSL 证书。
 
 ### <a name="change-the-scale-out-master-certificate"></a>更改 Scale Out Master 证书
 
@@ -81,7 +81,7 @@ netsh http add sslcert ipport=0.0.0.0:8391 certhash=01d207b300ca662f479beb884efe
 ```
 
 #### <a name="3-update-the-scale-out-master-service-configuration-file"></a>3.更新 Scale Out Master 服务配置文件
-在主节点上更新 Scale Out Master 服务配置文件 `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config`。 将 SSLCertThumbprint  更新为新 TLS/SSL 证书的指纹。
+在主节点上更新 Scale Out Master 服务配置文件 `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config`。 将 SSLCertThumbprint 更新为新 TLS/SSL 证书的指纹。
 
 #### <a name="4-restart-the-scale-out-master-service"></a>4.重启 Scale Out Master 服务
 
@@ -92,7 +92,7 @@ a.  将客户端 TLS/SSL 证书安装到工作器节点上的本地计算机的�
 
 b.  更新 Scale Out Worker 服务配置文件。
 
-在辅助节点上更新 Scale Out Worker 服务配置文件 `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`。 将 MasterHttpsCertThumbprint  更新为新 TLS/SSL 证书的指纹。
+在辅助节点上更新 Scale Out Worker 服务配置文件 `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`。 将 MasterHttpsCertThumbprint 更新为新 TLS/SSL 证书的指纹。
 
 c.  重启 Scale Out Worker 服务。
 

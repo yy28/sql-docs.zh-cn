@@ -1,5 +1,6 @@
 ---
 title: 本机编译存储过程中的 CASE 表达式
+description: 本机编译的 T-SQL 模块在某些版本的 SQL Server 中支持 CASE 表达式。 此示例在查询中实现 CASE 表达式。
 ms.custom: seo-dt-2019
 ms.date: 11/21/2017
 ms.prod: sql
@@ -11,17 +12,17 @@ ms.assetid: 2f82db01-da7e-4a7d-8bc0-48b245e6f768
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5c26cd8424000926030d37302606cece6a570668
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 51d1aed041e25ceaefea1a3237fb1e02848f2d77
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412645"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723199"
 ---
 # <a name="implementing-a-case-expression-in-a-natively-compiled-stored-procedure"></a>在本机编译的存储过程中实现 CASE 表达式
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-适用对象：**和自** 开始的 SQL Server[!INCLUDE[ssSDSFull_md](../../includes/sssdsfull-md.md)][!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
+适用对象：[!INCLUDE[ssSDSFull_md](../../includes/sssdsfull-md.md)] 和自 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 开始的 SQL Server
 
 本机编译的 T-SQL 模块支持 CASE 表达式。 下面的示例演示了在查询中使用 CASE 表达式的方法。 
 
@@ -44,9 +45,9 @@ EXEC dbo.usp_SOHOnlineOrderResult
 GO  
 ``` 
 
-适用对象：**和自** 开始的 SQL Server[!INCLUDE[ssSQL14-md](../../includes/ssSQL14-md.md)][!INCLUDE[ssSQL15-md](../../includes/ssSQL15-md.md)]
+适用对象：[!INCLUDE[ssSQL14-md](../../includes/ssSQL14-md.md)] 和自 [!INCLUDE[ssSQL15-md](../../includes/ssSQL15-md.md)] 开始的 SQL Server
 
-  本机编译的 T-SQL 模块不  支持 CASE 表达式。 以下示例演示一种在本机编译的存储过程中实现 CASE 表达式功能的方法。  
+  本机编译的 T-SQL 模块不支持 CASE 表达式。 以下示例演示一种在本机编译的存储过程中实现 CASE 表达式功能的方法。  
   
  代码示例使用表变量构造单个结果集。 这仅适合当于处理有限行数，因为它涉及到创建数据行的额外副本。  
   

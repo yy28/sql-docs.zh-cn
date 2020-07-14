@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 994018ab8b574bc313072f7a353ff999d645e0d9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 848c53ce4ca004cec84609b12869a98fa45fa78d
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292765"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469322"
 ---
 # <a name="error-handling-in-data"></a>数据中的错误处理
 
@@ -111,7 +111,7 @@ ms.locfileid: "71292765"
   
  如果没有相应的错误说明和列名，这两个数值可能没有多大用处。 下面是一些用于获取错误说明和列名的方法。  
   
--   可以通过将“数据查看器”附加到错误输出查看错误说明和列名。 在 SSIS 设计器中，右键单击通向错误输出的红色箭头，然后选择“启用数据查看器”。   
+-   可以通过将“数据查看器”附加到错误输出查看错误说明和列名。 在 SSIS 设计器中，右键单击通向错误输出的红色箭头，然后选择“启用数据查看器”。  
   
 -   可以通过启用日志记录并选择 **DiagnosticEx** 事件来查找列名称。 此事件将数据流列映射写入日志。 然后可以在此列映射中从其标识符查找列名称。 请注意，为了缩减日志大小， **DiagnosticEx** 事件不在其 XML 输出中保留空白。 若要提高可读性，请将日志复制到支持 XML 格式和语法突出显示的 XML 编辑器中 - 例如 Visual Studio 中的 XML 编辑器。 有关日志记录的详细信息，请参阅 [Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
@@ -144,7 +144,7 @@ ms.locfileid: "71292765"
   
     -   通过使用脚本的单独一行来调用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> 接口的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 方法，来包括其他列中的错误说明。  
   
-    -   通过使用脚本的单独一行来调用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetIdentificationStringByID%2A> 接口的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 方法，来包括其他列中的错误说明。  
+    -   使用一行脚本调用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 接口的[Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetIdentificationStringByID*] (/previous-versions/sql/sql-server-2016/mt657629(v=sql.130)) 方法，在其他列中包含列名称。  
   
      可以从想要捕获其错误的数据流组件的下游的任意位置将脚本组件添加到数据流的错误段。 通常应在错误行写入到目标之前立即放入脚本组件。 这样，脚本只查找已写入的错误行的说明。 数据流的错误段可能纠正某些错误，并且不将这些行写入错误目标。  
 

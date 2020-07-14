@@ -1,5 +1,6 @@
 ---
 title: 撤消对 XML 架构集合的权限 | Microsoft Docs
+description: 了解如何撤销对 XML 架构集合的权限。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4e542b70-2d56-4a65-8a39-96a1ed477ca6
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b3e6a69d61f65cb755fd96d8b0a310f002ab85a5
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 7952b6d917494f8d73edb24290c2f43f5f0d5d94
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664839"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752531"
 ---
 # <a name="revoke-permissions-on-an-xml-schema-collection"></a>撤消对 XML 架构集合的权限
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   可以使用下列一种方法撤消创建 XML 架构集合的权限：  
   
 -   撤消对关系架构的 ALTER 权限。 这样，主体就不能在关系架构中创建 XML 架构集合。 但是，主体仍然可以在同一数据库的其他关系架构中执行此操作。  

@@ -10,20 +10,20 @@ ms.technology: backup-restore
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c62a2dfb1a6728098c3faeed32ce842dbab4304e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9fe880bc4296985811d21b06b905b3ceb4bef58a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77146729"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85659472"
 ---
 # <a name="sql-server-back-up-applications---volume-shadow-copy-service-vss-and-sql-writer"></a>SQL Server 备份应用程序 - 卷影复制服务 (VSS) 和 SQL 编写器
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 SQL Server 通过提供一个编写器（SQL 编写器）来支持卷影复制服务 (VSS)，以便第三方备份应用程序可以使用 VSS 框架来备份数据库文件。 本文介绍了 SQL 编写器组件及其在 SQL Server 数据库的 VSS 快照创建和还原过程中的角色。 还介绍了如何配置和使用 SQL 编写器来处理 VSS 框架中的备份应用程序的详细信息。
 
 
-## <a name="introduction"></a>介绍
+## <a name="introduction"></a>简介
 
 SQL Server 支持使用卷影复制服务 (VSS) 从 SQL Server 数据创建快照。 这是通过提供与 VSS 兼容的编写器（SQL 编写器）来实现的，以便第三方备份应用程序可以使用 VSS 框架来备份数据库文件。 本文介绍了 SQL 编写器组件及其在 SQL Server 数据库的 VSS 快照创建和还原过程中的角色。 还介绍了有关如何配置和使用 SQL 编写器在 VSS 框架上下文中处理备份应用程序的详细信息。
 
@@ -190,9 +190,9 @@ VSS 框架定义了一组 API 供请求程序/备份应用程序使用。 备份
 
 ### <a name="backup-initialization"></a>备份初始化
 
-在备份的这个阶段，请求程序（备份应用程序）绑定到快照接口“IvssBackupComponents”，并对其进行初始化以准备备份  。 还会调用 VSS API“IVssGatherWriterMetadata”以指示 VSS 框架从所有编写器收集元数据  。
+在备份的这个阶段，请求程序（备份应用程序）绑定到快照接口“IvssBackupComponents”，并对其进行初始化以准备备份。 还会调用 VSS API“IVssGatherWriterMetadata”以指示 VSS 框架从所有编写器收集元数据。
 
-VSS 框架将使用“OnIdentify”事件调用每个注册的编写器，包括编写器元数据的 SQL 编写器  。 SQL 编写器将查询 SQL Server 实例，以获取每个数据库的备份元数据信息，并创建编写器元数据文档。 此阶段也称为元数据枚举。
+VSS 框架将使用“OnIdentify”事件调用每个注册的编写器，包括编写器元数据的 SQL 编写器。 SQL 编写器将查询 SQL Server 实例，以获取每个数据库的备份元数据信息，并创建编写器元数据文档。 此阶段也称为元数据枚举。
 
 编写器元数据文档包含从编写器传递到请求程序（备份应用程序）的信息。 编写器元数据文档包含以下信息：
 
@@ -204,7 +204,7 @@ VSS 框架将使用“OnIdentify”事件调用每个注册的编写器，包括
 
 ### <a name="sql-writer-metadata-document"></a>SQL 编写器元数据文档
 
-这是由编写器（在本例中是 SQL 编写器）使用“IVssCreateWriterMetadata”接口创建的 XML 文档，包含有关编写器状态和组件的信息  。 VSS API 文档中描述了编写器元数据文档的结构细节。 以下是 SQL 编写器元数据文档的一些详细信息。
+这是由编写器（在本例中是 SQL 编写器）使用“IVssCreateWriterMetadata”接口创建的 XML 文档，包含有关编写器状态和组件的信息。 VSS API 文档中描述了编写器元数据文档的结构细节。 以下是 SQL 编写器元数据文档的一些详细信息。
 
 - 编写器标识信息
     - **编写器名称** - L"SqlServerWriter"
@@ -236,10 +236,10 @@ SQL Server 中组件集结构的唯一扩展是引入全文目录。  全文目�
 本文档末尾提供了一个示例编写器元数据文档。
 
 ### <a name="backup-discovery"></a>备份发现
-在此阶段中，请求程序检查编写器元数据文档，并用需要备份的每个组件创建和填充“备份组件文档”  。 它还指定了所需的备份选项和参数，作为本文档的一部分。 对于 SQL 编写器，需要备份的每个数据库实例都是一个单独的组件。
+在此阶段中，请求程序检查编写器元数据文档，并用需要备份的每个组件创建和填充“备份组件文档”。 它还指定了所需的备份选项和参数，作为本文档的一部分。 对于 SQL 编写器，需要备份的每个数据库实例都是一个单独的组件。
 
 #### <a name="backup-components-document"></a>备份组件文档
-这是请求程序（使用“IVssBackupComponents”接口）在设置还原或备份操作过程中创建的 XML 文档  。 备份组件文档包含显式包含组件的列表，这些组件来自参与备份或还原操作的一个或多个编写器。 它不包含隐式包含的组件信息。 相反，编写器元数据文档只包含可能参与备份的编写器组件。 VSS API 文档中描述了备份组件文档的结构细节。
+这是请求程序（使用“IVssBackupComponents”接口）在设置还原或备份操作过程中创建的 XML 文档。 备份组件文档包含显式包含组件的列表，这些组件来自参与备份或还原操作的一个或多个编写器。 它不包含隐式包含的组件信息。 相反，编写器元数据文档只包含可能参与备份的编写器组件。 VSS API 文档中描述了备份组件文档的结构细节。
 
 #### <a name="prebackup-tasks"></a>预备份任务
 VSS下的预备份任务主要是创建包含备份数据的卷的卷影副本。 备份应用程序将从卷影副本而不是实际卷中保存数据。
@@ -247,7 +247,7 @@ VSS下的预备份任务主要是创建包含备份数据的卷的卷影副本�
 请求程序通常在准备备份和创建卷影副本期间等待编写器。 如果 SQL 编写器正在参与备份操作，那么它需要配置其文件及其本身，以准备备份和卷影复制。
 
 #### <a name="prepare-for-backup"></a>准备备份
-请求程序需要设置需要执行的备份操作的类型（“IVssBackupComponents::SetBackupState”），然后通过 VSS 通知编写器，以便使用“IVssBackupComponents::PrepareForBackup”准备备份操作   。
+请求程序需要设置需要执行的备份操作的类型（“IVssBackupComponents::SetBackupState”），然后通过 VSS 通知编写器，以便使用“IVssBackupComponents::PrepareForBackup”准备备份操作 。
 
 为 SQL 编写器提供对备份组件文档的访问权限，该文档详细说明了需要备份的数据库。 所有备份卷都应包含在卷快照集中。 SQL 编写器将检测损坏的数据库（备份卷在快照集外部），并在 PostSnapshot 事件期间使备份失败。
 
@@ -255,9 +255,9 @@ VSS下的预备份任务主要是创建包含备份数据的卷的卷影副本�
 
 **创建快照** 此阶段涉及 VSS 框架和 SQL 编写器之间的一系列交互。
 
-1. 准备快照  。 SQL 编写器将调用 SQL Server 以准备创建快照。
+1. 准备快照。 SQL 编写器将调用 SQL Server 以准备创建快照。
 1. _冻结_。SQL 编写器将调用 SQL Server 冻结快照中备份的每个数据库的所有数据库 I/O。 冻结事件返回到 VSS 框架后，VSS 将创建快照。
-1. 解冻  。 在此事件中，SQL 编写器将调用 SQL Server 实例以解冻或恢复正常的 I/O 操作。
+1. 解冻。 在此事件中，SQL 编写器将调用 SQL Server 实例以解冻或恢复正常的 I/O 操作。
 
 
 快照创建阶段很快（小于 60 秒），以防止阻止对数据库的所有写入。
@@ -289,7 +289,7 @@ VSS下的预备份任务主要是创建包含备份数据的卷的卷影副本�
 
 #### <a name="backup-termination"></a>备份终止
 
-请求程序通过释放“IVssBackupComponents”接口或通过调用“IVssBackupComponents::DeleteSnapshots”来终止卷影副本   。
+请求程序通过释放“IVssBackupComponents”接口或通过调用“IVssBackupComponents::DeleteSnapshots”来终止卷影副本 。
 
 ## <a name="restore-process"></a>还原过程
 
@@ -329,7 +329,7 @@ VSS下的预备份任务主要是创建包含备份数据的卷的卷影副本�
 IVssBackupComponents::SetAdditionalRestores(true)
 ```
 
-在备份组件文档中设置了所有所需的详细信息后，请求程序就会调用“IVssBackupComponents::PreRestore”，通过 VSS 生成将由编写器处理的预还原事件  。
+在备份组件文档中设置了所有所需的详细信息后，请求程序就会调用“IVssBackupComponents::PreRestore”，通过 VSS 生成将由编写器处理的预还原事件。
 
 SQL 编写器将检查提供的备份组件文档以标识适当的数据库，并删除自备份时间以来创建的任何其他文件。 它还会检查磁盘空间并关闭所有打开的数据库文件句柄，以便请求程序可以在还原阶段复制所需的数据。 此阶段允许在请求程序执行实际文件复制之前检测任何早期错误条件。 SQL Server 还会使数据库处于还原状态。  从现在起，只有成功还原才能启动数据库。
 
@@ -339,7 +339,7 @@ SQL 编写器将检查提供的备份组件文档以标识适当的数据库，�
 
 #### <a name="cleanup-and-termination"></a>清理和终止
 
-将所有数据还原到正确的位置后，请求程序将触发指示还原操作已完成的调用（IvssBackupComponents::PostRestore），此调用将指示 SQL 编写器可以启动还原后操作  。  此时，SQL 编写器将执行崩溃恢复的重做阶段。 如果未请求恢复（即请求程序未指定 SetAdditionalRestores(true)），恢复步骤的撤消阶段也将在此阶段执行。
+将所有数据还原到正确的位置后，请求程序将触发指示还原操作已完成的调用（IvssBackupComponents::PostRestore），此调用将指示 SQL 编写器可以启动还原后操作。  此时，SQL 编写器将执行崩溃恢复的重做阶段。 如果未请求恢复（即请求程序未指定 SetAdditionalRestores(true)），恢复步骤的撤消阶段也将在此阶段执行。
 
 ## <a name="backup-and-restore-option-details"></a>备份和还原选项详细信息
 
@@ -409,11 +409,11 @@ SQL 编写器在编写器元数据文档的数据库组件下报告包含递归�
 
 ### <a name="backup"></a>备份
 
-当使用 VSS 启动备份操作时，请求程序可以通过在备份组件文档（“IVssBackupComponents::SetBackupState”）中设置差异选项（“VSS_BT_DIFFERENTIAL”）来发出差异备份   。  SQL 编写器将部分文件信息（由 SQL Server 返回）传递给 VSS。  请求程序可以通过调用 VSS API（“IVssComponent::GetPartialFile”）来获取该文件信息  。 此部分文件信息允许请求程序仅选择更改的字节范围来备份数据库文件。
+当使用 VSS 启动备份操作时，请求程序可以通过在备份组件文档（“IVssBackupComponents::SetBackupState”）中设置差异选项（“VSS_BT_DIFFERENTIAL”）来发出差异备份 。  SQL 编写器将部分文件信息（由 SQL Server 返回）传递给 VSS。  请求程序可以通过调用 VSS API（“IVssComponent::GetPartialFile”）来获取该文件信息。 此部分文件信息允许请求程序仅选择更改的字节范围来备份数据库文件。
 
 在“预备份任务”阶段，SQL 编写器将确保每个选择的数据库都存在单个差异基准。
 
-在 PostSnapshot 事件期间，SQL 编写器将从 SQL Server 获取部分文件信息，并使用“IVssComponent::AddPartialFile”调用将其添加到备份组件文档中  。  
+在 PostSnapshot 事件期间，SQL 编写器将从 SQL Server 获取部分文件信息，并使用“IVssComponent::AddPartialFile”调用将其添加到备份组件文档中。  
 
   > [!NOTE]
   > 对于差异备份，SQL 编写器仅支持单个差异基准。 不支持多个基准。
@@ -422,7 +422,7 @@ SQL 编写器在编写器元数据文档的数据库组件下报告包含递归�
 
 对于在差异备份期间备份的每个数据库，SQL 编写器将存储每个数据库文件的部分文件信息。 请求程序或备份应用程序使用此信息在文件的实际备份期间仅将文件的相关部分复制到备份介质。 有关此部分文件信息格式的详细信息，请参阅“卷影复制服务”的文档。
 
-请求程序可以通过调用“IVssComponent::GetPartialFileCount”和“IVssComponent::GetPartialFile”来确定这些文件   。  “IVssComponent::GetPartialFile”将返回指向该文件的路径和文件名，以及指示需要在文件中备份的内容的范围字符串  。
+请求程序可以通过调用“IVssComponent::GetPartialFileCount”和“IVssComponent::GetPartialFile”来确定这些文件 。  “IVssComponent::GetPartialFile”将返回指向该文件的路径和文件名，以及指示需要在文件中备份的内容的范围字符串。
 
 有关部分文件信息检索的详细信息，请参阅 [VSS 文档](/windows/win32/vss/volume-shadow-copy-service-overview)。
 
@@ -516,11 +516,11 @@ SQL Server 全文目录是需要与其他数据库文件一起备份或还原的
 
 ### <a name="setting-the-base-timestamp"></a>设置基本时间戳
 
-基本时间戳在完整备份期间进行设置。  在“OnPostSnapshot()”中，编写器调用“IVssComponent::SetBackupStamp()”将时间戳与组件一起存储在备份文档中   。
+基本时间戳在完整备份期间进行设置。  在“OnPostSnapshot()”中，编写器调用“IVssComponent::SetBackupStamp()”将时间戳与组件一起存储在备份文档中 。
 
 ### <a name="differential-backup"></a>差异备份
 
-备份应用程序将从基本完整备份中检索此时间戳，并通过调用“IVssComponent::GetBackupStamp()”从上一个基本备份中检索基本时间戳，使该时间戳对编写器可用  。  然后通过调用“IVssBackupComponent::SetPreviousBackupStamp()”使它对编写器可用  。  然后，编写器通过调用 IVssComponent::GetPreviousBackupStamp() 检索该时间戳，并将其转换为可用于 IVssComponent::AddDifferencedFilesByLastModifyTime() 的时间戳   。  
+备份应用程序将从基本完整备份中检索此时间戳，并通过调用“IVssComponent::GetBackupStamp()”从上一个基本备份中检索基本时间戳，使该时间戳对编写器可用。  然后通过调用“IVssBackupComponent::SetPreviousBackupStamp()”使它对编写器可用。  然后，编写器通过调用 IVssComponent::GetPreviousBackupStamp() 检索该时间戳，并将其转换为可用于 IVssComponent::AddDifferencedFilesByLastModifyTime() 的时间戳 。  
 
 **备份应用程序在差异备份期间的责任** 在差异备份期间，备份应用程序负责：
 
@@ -538,19 +538,19 @@ SQL Server 全文目录是需要与其他数据库文件一起备份或还原的
 
 有时有必要为特殊目的进行备份。 例如，出于测试目的，可能需要创建数据库的副本。  这种备份不会影响数据库的总体备份和恢复进程。 使用 COPY_ONLY 选项指定备份是在“带外”完成的，不应影响备份的正常顺序。 SQL 编写器支持 SQL Server 实例的“仅复制”备份类型。
 
-在备份发现阶段，SQL 编写器将通过使用“IVssCreateWriterMetadata::SetBackupSchema”调用设置受支持的备份架构选项 VSS_BS_COPY 来指示其执行仅复制备份的能力  。 请求程序可以通过调用“IVssBackupComponents::SetBackupState”将 VSS_BACKUP_TYPE 选项设置为 VSS_BT_COPY，将备份类型设置为仅复制备份  。
+在备份发现阶段，SQL 编写器将通过使用“IVssCreateWriterMetadata::SetBackupSchema”调用设置受支持的备份架构选项 VSS_BS_COPY 来指示其执行仅复制备份的能力。 请求程序可以通过调用“IVssBackupComponents::SetBackupState”将 VSS_BACKUP_TYPE 选项设置为 VSS_BT_COPY，将备份类型设置为仅复制备份。
 
 选择仅复制备份时，假定磁盘上的文件将被复制到备份介质（由请求程序复制），而不考虑每个文件的备份历史记录的状态。 SQL Server 不会更新备份历史记录。 这种类型的备份将不会构成进一步差异备份操作的基准备份，而且它也不会影响以前差异备份的历史。
 
 ### <a name="restore-with-move"></a>移动式还原
 
-VSS 允许备份应用程序（请求程序）使用“IVssComponent::SetNewTarget”调用指定新的还原目标  。  在 PreRestore() 和 PostRestore() 中，SQL 编写器检查是否至少指定了一个新目标。 备份应用程序负责在实际文件还原/复制时间内将文件物理复制到新位置。
+VSS 允许备份应用程序（请求程序）使用“IVssComponent::SetNewTarget”调用指定新的还原目标。  在 PreRestore() 和 PostRestore() 中，SQL 编写器检查是否至少指定了一个新目标。 备份应用程序负责在实际文件还原/复制时间内将文件物理复制到新位置。
 
 只允许备份应用程序为物理路径指定新目标，而不允许指定文件规范。  例如，对于位于 c:\data\test.mdf 的数据库文件，不能更改实际的文件名 test.mdf。  只能更改路径 c:\data。  对于位于 c:\ ftdata\foo 的全文目录容器，由于 VSS 中的文件规范为“*”，而 VSS 中的路径规范为 c:\ ftdata\foo，因此可以更改整个路径。  
 
 ### <a name="database-rename"></a>数据库重命名
 
-请求程序可能需要用新名称还原 SQL 数据库，特别是当数据库要与原始数据库并排还原时。  在还原操作期间，请求程序可以通过使用 VSS 调用“IVssBackupComponents::SetRestoreOptions()”（在 wszRestoreOptions 参数中）将自定义还原选项设置为 "New Component Name" = <"New Name"> 来指定此选项  。
+请求程序可能需要用新名称还原 SQL 数据库，特别是当数据库要与原始数据库并排还原时。  在还原操作期间，请求程序可以通过使用 VSS 调用“IVssBackupComponents::SetRestoreOptions()”（在 wszRestoreOptions 参数中）将自定义还原选项设置为 "New Component Name" = <"New Name"> 来指定此选项。
 
 SQL 编写器将获取新组件名称值的全部内容，并将其用作还原数据库的新名称。 如果未指定任何选项，SQL 将使用其原始名称（组件名称）还原数据库。
 

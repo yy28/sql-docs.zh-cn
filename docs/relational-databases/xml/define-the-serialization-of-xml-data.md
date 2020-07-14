@@ -1,5 +1,6 @@
 ---
 title: 定义 XML 数据的序列化 | Microsoft Docs
+description: 了解在 SQL Server 中序列化 xml 数据时使用的规则。
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -18,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 37357c2d745dd741a872e151d72b5c453e91c1ec
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 0ddeb0b98f163feb49eb258db29a58bfa5dd1f57
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664582"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738436"
 ---
 # <a name="define-the-serialization-of-xml-data"></a>定义 XML 数据的序列化
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   将 xml 数据类型显式或隐式转换为 SQL 字符串或二进制类型时，将根据本主题中所述的规则对 xml 数据类型的内容进行序列化。  
   
 ## <a name="serialization-encoding"></a>序列化编码  
@@ -76,7 +77,7 @@ select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))
 ## <a name="entitization-of-xml-characters-during-serialization"></a>序列化期间 XML 字符的实体化  
  应该能够对每个序列化的 XML 结构进行重新分析。 因此，必须以实体化方式对某些字符进行序列化，从而在整个 XML 分析器的规范化阶段保留这些字符的往返能力。 不过，还必须对某些字符进行实体化，以便文档的格式正确并能够被分析。 下面是序列化期间应用的实体化规则：  
   
--   如果字符 &、\< 和 > 出现在属性值或元素内容中，始终将它们分别实体化为 &amp;、&lt; 和 &gt;。  
+-   如果字符 &、\<, and > 出现在属性值或元素内容中，始终将它们分别实体化为 &amp;、&lt; 和 &gt;。  
   
 -   因为 SQL Server 使用引号 (U+0022) 来闭合属性值，所以将属性值中的引号实体化为 &quot;。  
   

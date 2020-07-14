@@ -1,5 +1,6 @@
 ---
 title: 概述和使用方案 | Microsoft Docs
+description: 了解内存中 OLTP，它是 SQL Server 和 Azure SQL 数据库中用于优化事务处理的技术。 查看示例和其他资源。
 ms.custom: ''
 ms.date: 04/10/2017
 ms.prod: sql
@@ -11,16 +12,16 @@ ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 author: jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0b6fdfbbdd70ad0abf95c3860c2349cc55b5e12b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c4f98e06aa52d2fe7e3c0a911f793a038c8dee9a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75831859"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722421"
 ---
 # <a name="overview-and-usage-scenarios"></a>概述和使用方案
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 内存中 OLTP 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中用于优化事务处理、数据引入、数据加载和瞬态数据方案性能的核心技术。 本文概述了内存中 OLTP 的技术和使用方案。 使用该信息可确定内存中 OLTP 是否适合你的应用程序。 本文末尾部分给出的示例介绍了内存中 OLTP 对象、性能演示引用以及资源引用，可供后续步骤使用。
 
@@ -36,10 +37,10 @@ ms.locfileid: "75831859"
 
 若要在数据库中使用内存中 OLTP，应使用以下一个或多个对象类型：
 
-- 内存优化表  用于存储用户数据。 在创建时声明一个要进行内存优化的表。
-- 非持久表  用于瞬态数据，即用于缓存，或用于中间结果集（替代传统的临时表）。 非持久表是一种使用 DURABILITY=SCHEMA_ONLY 声明的内存优化表，也就是说，对这些表所做的更改不会引发任何 IO。 在不需要考虑耐久性的情况下，这可避免使用日志 IO 资源。
-- 内存优化表类型  用于表值参数 (TVP) 和存储过程中的中间结果集。 这些可用于替代传统表类型。 使用内存优化表类型声明的表变量和 TVP 会继承非持久内存优化表的优点：数据访问效率高，且不会引发 IO。
-- 本机编译的 T-SQL 模块  可用于通过减少处理操作所需的 CPU 周期，进一步减少单个事务所需的时间。 在创建时声明一个要本机编译的 Transact-SQL 模块。 此时，可本机编译以下 T-SQL 模块：存储过程、触发器和标量用户定义的函数。
+- 内存优化表 用于存储用户数据。 在创建时声明一个要进行内存优化的表。
+- 非持久表 用于瞬态数据，即用于缓存，或用于中间结果集（替代传统的临时表）。 非持久表是一种使用 DURABILITY=SCHEMA_ONLY 声明的内存优化表，也就是说，对这些表所做的更改不会引发任何 IO。 在不需要考虑耐久性的情况下，这可避免使用日志 IO 资源。
+- 内存优化表类型 用于表值参数 (TVP) 和存储过程中的中间结果集。 这些可用于替代传统表类型。 使用内存优化表类型声明的表变量和 TVP 会继承非持久内存优化表的优点：数据访问效率高，且不会引发 IO。
+- 本机编译的 T-SQL 模块 可用于通过减少处理操作所需的 CPU 周期，进一步减少单个事务所需的时间。 在创建时声明一个要本机编译的 Transact-SQL 模块。 此时，可本机编译以下 T-SQL 模块：存储过程、触发器和标量用户定义的函数。
 
 内存中 OLTP 内置于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中。 由于这些对象与其传统对象行为相似，因此仅对数据库和应用程序作出最小的更改，通常便可增益性能优势。 此外，还可将内存优化表和基于磁盘的传统表同时置于同一数据库，然后在二者间运行查询。 本文靠近末尾部分给出的 Transact-SQL 脚本中就每个对象类型各提供一个示例。
 

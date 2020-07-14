@@ -18,23 +18,23 @@ helpviewer_keywords:
 ms.assetid: c1050658-b19f-42ee-9a05-ecd6a73b896c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 13680aea1d34b83d76647d39d0f40b84609b2e8c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6cfbecf5689432a0e9053abf043225b9f9ff596b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67910654"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85631566"
 ---
 # <a name="grouping_id-transact-sql"></a>GROUPING_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  这是计算分组级别的函数。 仅当指定了 GROUP BY 时，GROUPING_ID 才能在 SELECT \<select> 列表、HAVING 或 ORDER BY 子句中使用。  
+  这是计算分组级别的函数。 指定 GROUP BY 时，GROUPING_ID 只能在 SELECT \<select> 列表、HAVING 或 ORDER BY 子句中使用。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
   
 GROUPING_ID ( <column_expression>[ ,...n ] )  
 ```  
@@ -47,10 +47,10 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
  **int**  
   
 ## <a name="remarks"></a>备注  
- GROUPING_ID \<column_expression> 必须与 GROUP BY 列表中的表达式完全匹配。 例如，如果按 DATEPART (yyyy, \<column name>) 进行分组，则使用 GROUPING_ID (DATEPART (yyyy, \<column name>))；或者如果按 \<column name> 进行分组，则使用 GROUPING_ID (\<column name>)   。  
+ GROUPING_ID \<column_expression> 必须与 GROUP BY 列表中的表达式完全匹配。 例如，如果按 DATEPART (yyyy, \<*column name*>) 分组，则使用 GROUPING_ID (DATEPART (yyyy, \<*column name*>))；或者，如果按 \<*column name*> 分组，则使用 GROUPING_ID (\<*column name*>)。  
   
 ## <a name="comparing-grouping_id--to-grouping-"></a>比较 GROUPING_ID () 与 GROUPING ()  
- GROUPING_ID (\<column_expression> [ ,...n ]) 将 GROUPING (\<column_expression>) 在每个输出行中为其列列表中的每个列返回的对应值作为 0、1 字符串输入。 GROUPING_ID 将该字符串解释为二进制数并返回对应的整数。 例如，请考虑以下语句：`SELECT a, b, c, SUM(d),``GROUPING_ID(a,b,c)``FROM T GROUP BY <group by list>`。 下表显示了 GROUPING_ID () 的输入值和输出值。  
+ GROUPING_ID (\<column_expression> [ **,** ...*n* ]) 将 GROUPING (\<column_expression>) 在每个输出行中为其列列表中的每个列返回的对应值作为 0 和 1 的字符串输入。 GROUPING_ID 将该字符串解释为二进制数并返回对应的整数。 例如，请考虑以下语句：`SELECT a, b, c, SUM(d),``GROUPING_ID(a,b,c)``FROM T GROUP BY <group by list>`。 下表显示了 GROUPING_ID () 的输入值和输出值。  
   
 |聚合的列|GROUPING_ID (a, b, c) 输入 = GROUPING(a) + GROUPING(b) + GROUPING(c)|GROUPING_ID () 输出|  
 |------------------------|---------------------------------------------------------------------------------------|------------------------------|  
@@ -63,7 +63,7 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
 |`abc`|`111`|`7`|  
   
 ## <a name="technical-definition-of-grouping_id-"></a>GROUPING_ID () 的技术定义  
- 每个 GROUPING_ID 参数都必须是 GROUP BY 列表的一个元素。 GROUPING_ID () 返回一个 integer 位图，其最低 N 位可能为文字  。 文字 bit 表明对应参数不是给定输出行的分组列  。 最低顺序 bit 对应于参数 N，第 N-1 个最低顺序 bit 对应于参数 1  <sup></sup>  。  
+ 每个 GROUPING_ID 参数都必须是 GROUP BY 列表的一个元素。 GROUPING_ID () 返回一个 integer 位图，其最低 N 位可能为文字。 文字 bit 表明对应参数不是给定输出行的分组列。 最低顺序 bit 对应于参数 N，第 N-1 个最低顺序 bit 对应于参数 1<sup></sup>。  
   
 ## <a name="grouping_id--equivalents"></a>GROUPING_ID () 等效项  
  对于单个分组查询，GROUPING (\<column_expression>) 与 GROUPING_ID (\<column_expression>) 等价，两者均返回 0。  
@@ -238,7 +238,7 @@ ORDER BY
 ### <a name="c-using-grouping_id--with-rollup-and-cube-to-identify-grouping-levels"></a>C. 将 GROUPING_ID () 与 ROLLUP 和 CUBE 一起使用以标识分组级别  
  下面示例中的代码演示如何使用 `GROUPING()` 来计算 `Bit Vector(base-2)` 列。 `GROUPING_ID()` 用于计算对应的 `Integer Equivalent` 列。 `GROUPING_ID()` 函数中的列顺序与 `GROUPING()` 函数所连接的列的列顺序相反。  
   
- 在这些示例中，`GROUPING_ID()` 用于为 `Grouping Level` 列中的每行创建一个值以标识分组级别。 分组级别并不总是从 1 开始的连续整数列表（0、1、2、...n）  。  
+ 在这些示例中，`GROUPING_ID()` 用于为 `Grouping Level` 列中的每行创建一个值以标识分组级别。 分组级别并不总是从 1 开始的连续整数列表（0、1、2、...n）。  
   
 > [!NOTE]  
 >  可以在 HAVING 子句中使用 GROUPING 和 GROUPING_ID 来筛选结果集。  

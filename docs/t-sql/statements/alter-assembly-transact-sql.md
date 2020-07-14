@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2881c4ee5145506158585611f61219983b764936
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2424982eebaed7a4d9b3d73ea7d4475b7ec758c2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68066116"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892571"
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   通过修改程序集的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目录属性更改程序集。 ALTER ASSEMBLY 将它刷新为保存其实现的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 模块的最新副本，并添加或删除与之关联的文件。 可以使用 [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md) 创建程序集。  
 
@@ -42,7 +42,7 @@ ms.locfileid: "68066116"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 ALTER ASSEMBLY assembly_name  
     [ FROM <client_assembly_specifier> | <assembly_bits> ]  
     [ WITH <assembly_option> [ ,...n ] ]  
@@ -68,13 +68,13 @@ ALTER ASSEMBLY assembly_name
 ```  
   
 ## <a name="arguments"></a>参数  
- assembly_name   
- 要修改的程序集的名称。 数据库中必须已存在 assembly_name  。  
+ assembly_name  
+ 要修改的程序集的名称。 数据库中必须已存在 assembly_name。  
   
  FROM \<client_assembly_specifier> | \<assembly_bits>  
  将程序集更新到保存其实现的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 模块的最新副本。 仅当没有与指定程序集关联的文件时才能使用此选项。  
   
- \<client_assembly_specifier> 指定刷新的程序集所在的网络位置或本地位置。 网络位置包括计算机名称、共享名称和该共享中的路径。 manifest_file_name 指定包含程序集清单的文件的名称  。  
+ \<client_assembly_specifier>：指定要刷新的程序集所在的网络位置或本地位置。 网络位置包括计算机名称、共享名称和该共享中的路径。 manifest_file_name 指定包含程序集清单的文件的名称。  
 
 > [!IMPORTANT]
 > Azure SQL 数据库不支持引用文件。
@@ -92,7 +92,7 @@ ALTER ASSEMBLY assembly_name
 >  EXTERNAL_ACCESS 和 UNSAFE 选项在包含的数据库中不可用。  
   
  VISIBILITY = { ON | OFF }  
- 指示在创建公共语言运行时 (CLR) 函数、存储过程、触发器、用户定义的类型以及针对它的用户定义的聚合函数时，该程序集是否可见。 如果设置为 OFF，则程序集只能由其他程序集调用。 如果存在已针对该程序集创建的现有 CLR 数据库对象，则无法更改程序集的可见性。 默认情况下，由 assembly_name 引用的任何程序集都上传为不可见  。  
+ 指示在创建公共语言运行时 (CLR) 函数、存储过程、触发器、用户定义的类型以及针对它的用户定义的聚合函数时，该程序集是否可见。 如果设置为 OFF，则程序集只能由其他程序集调用。 如果存在已针对该程序集创建的现有 CLR 数据库对象，则无法更改程序集的可见性。 默认情况下，由 assembly_name 引用的任何程序集都上传为不可见。  
   
  UNCHECKED DATA  
  默认情况下，如果 ALTER ASSEMBLY 必须验证各个表行的一致性，则它将失败。 该选项使您可以通过使用 DBCC CHECKTABLE 将检查推迟到以后的某个时间进行。 如果指定该选项，则即使数据库中存在包含下列项的表，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仍将执行 ALTER ASSEMBLY 语句：  
@@ -101,26 +101,26 @@ ALTER ASSEMBLY assembly_name
   
 -   直接或间接引用程序集中方法的 CHECK 约束。  
   
--   属于 CLR 用户定义类型且依赖于程序集的列，并且该类型实现的是 UserDefined（非 Native）序列化格式   。  
+-   属于 CLR 用户定义类型且依赖于程序集的列，并且该类型实现的是 UserDefined（非 Native）序列化格式 。  
   
 -   CLR 用户定义类型的列，这些列引用通过使用 WITH SCHEMABINDING 创建的视图。  
   
  如果存在 CHECK 约束，则它们将被禁用并标记为不可信。 任何包含依赖于程序集的列的表都被标记为包含未检查数据，直到对这些表进行了显式检查为止。  
   
- 只有 db_owner 和 db_ddlowner 固定数据库角色的成员才能指定该选项   。  
+ 只有 db_owner 和 db_ddlowner 固定数据库角色的成员才能指定该选项 。  
   
- 需要 ALTER ANY SCHEMA 权限来指定此选项  。  
+ 需要 ALTER ANY SCHEMA 权限来指定此选项。  
   
  有关详细信息，请参阅[实现程序集](../../relational-databases/clr-integration/assemblies-implementing.md)。  
   
- [ DROP FILE { file_name[ ,...n] | ALL } ]     
+ [ DROP FILE { file_name[ ,...n] | ALL } ]  
  从数据库中删除与程序集关联的文件名，或与该程序集关联的所有文件。 如果与下面的 ADD FILE 一起使用，则 DROP FILE 首先执行。 这样可以用相同的文件名替换文件。  
   
 > [!NOTE]  
 >  这种方法不适用于包含的数据库或 Azure SQL 数据库。  
   
- [ ADD FILE FROM { client_file_specifier [ AS file_name] | file_bitsAS file_name}      
- 将与程序集关联的文件（如源代码、调试文件或其他相关信息）上传到服务器中并使其在 sys.assembly_files 目录视图中可见  。 client_file_specifier 指定上传文件的源位置  。 可以改用 file_bits 来指定构成该文件的二进制值的列表  。 file_name 指定将文件存储到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中时所采用的名称。 如果指定 file_bits，则必须指定 file_name，如果指定 client_file_specifier，则可以选择指定 file_name    。 如果未指定 file_name，则 client_file_specifier 的 file_name 部分可用作 file_name    。  
+ [ ADD FILE FROM { client_file_specifier [ AS file_name] | file_bitsAS file_name}     
+ 将与程序集关联的文件（如源代码、调试文件或其他相关信息）上传到服务器中并使其在 sys.assembly_files 目录视图中可见。 client_file_specifier 指定上传文件的源位置。 可以改用 file_bits 来指定构成该文件的二进制值的列表。 file_name 指定将文件存储到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中时所采用的名称。 如果指定 file_bits，则必须指定 file_name，如果指定 client_file_specifier，则可以选择指定 file_name  。 如果未指定 file_name，则 client_file_specifier 的 file_name 部分可用作 file_name  。  
   
 > [!NOTE]  
 >  这种方法不适用于包含的数据库或 Azure SQL 数据库。  
@@ -141,13 +141,13 @@ ALTER ASSEMBLY assembly_name
   
 -   使用其他程序集调用的该程序集中的方法签名。  
   
--   与此程序集依赖的程序集列表，在此程序集的 DependentList 属性中引用  。  
+-   与此程序集依赖的程序集列表，在此程序集的 DependentList 属性中引用。  
   
 -   方法的可索引性，除非没有直接或间接与该方法相关的索引或持久化计算列。  
   
--   CLR 表值函数的 FillRow 方法名属性  。  
+-   CLR 表值函数的 FillRow 方法名属性。  
   
--   用户定义聚合的 Accumulate 和 Terminate 方法签名   。  
+-   用户定义聚合的 Accumulate 和 Terminate 方法签名 。  
   
 -   系统程序集。  
   
@@ -170,15 +170,15 @@ ALTER ASSEMBLY assembly_name
 ## <a name="permissions"></a>权限  
  需要对程序集具有 ALTER 权限。 其他要求如下：  
   
--   若要更改其现有权限集为 EXTERNAL_ACCESS 的程序集，则需要对服务器的 EXTERNAL ACCESS ASSEMBLY 权限  。  
+-   若要更改其现有权限集为 EXTERNAL_ACCESS 的程序集，则需要对服务器的 EXTERNAL ACCESS ASSEMBLY 权限。  
   
--   若要更改其现有权限集为 UNSAFE 的程序集，则需要对服务器的 UNSAFE ASSEMBLY 权限  。  
+-   若要更改其现有权限集为 UNSAFE 的程序集，则需要对服务器的 UNSAFE ASSEMBLY 权限。  
   
--   若要将程序集的权限集更改为 EXTERNAL_ACCESS，则需要对服务器的 EXTERNAL ACCESS ASSEMBLY 权限  。  
+-   若要将程序集的权限集更改为 EXTERNAL_ACCESS，则需要对服务器的 EXTERNAL ACCESS ASSEMBLY 权限。  
   
--   若要将程序集的权限集更改为 UNSAFE，则需要对服务器的 UNSAFE ASSEMBLY 权限  。  
+-   若要将程序集的权限集更改为 UNSAFE，则需要对服务器的 UNSAFE ASSEMBLY 权限。  
   
--   指定 WITH UNCHECKED DATA 需要 ALTER ANY SCHEMA 权限  。  
+-   指定 WITH UNCHECKED DATA 需要 ALTER ANY SCHEMA 权限。  
 
 
 ### <a name="permissions-with-clr-strict-security"></a>CLR 严格安全性的权限    

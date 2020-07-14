@@ -1,5 +1,6 @@
 ---
 title: 通配符组成部分和内容验证 | Microsoft Docs
+description: 了解如何使用 XML 元素和属性通配符组成部分来更加灵活地在内容模型中显示内容。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,22 +14,22 @@ helpviewer_keywords:
 ms.assetid: ffa7d974-3645-446c-8425-f0b22b6b060a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b8613bed755158854851483faf3ea6af4fb60402
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: e1fac8a7a0e7eafc4b3bb04809ad51ee2f1b970e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665347"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729816"
 ---
 # <a name="wildcard-components-and-content-validation"></a>通配符组成部分和内容验证
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   通配符组成部分用于更加灵活地在内容模型中显示内容。 在 XSD 语言中按照以下方式支持这些组成部分：  
   
--   元素通配符组成部分。 这些组成部分通过 **\<xsd:any>** 元素表示。  
+-   元素通配符组成部分。 这些组成部分通过 \<xsd:any> 元素表示。  
   
--   属性通配符组成部分。 这些组成部分通过 **\<xsd:anyAttribute>** 元素表示。  
+-   属性通配符组成部分。 这些组成部分通过 \<xsd:anyAttribute> 元素表示。  
   
- 这两个通配符元素（ **\<xsd:any>** 和 **\<xsd:anyAttribute>** ）都支持 **processContents** 属性的使用。 这将允许您指定特定的值，该值指示 XML 应用程序如何处理与这些通配符元素关联的文档内容的验证。 以下是不同的值及其作用：  
+ 这两个通配符元素（\<xsd:any> 和 \<xsd:anyAttribute>）都支持使用 processContents 属性  。 这将允许您指定特定的值，该值指示 XML 应用程序如何处理与这些通配符元素关联的文档内容的验证。 以下是不同的值及其作用：  
   
 -   **strict** 值指定对内容进行完整的验证。  
   

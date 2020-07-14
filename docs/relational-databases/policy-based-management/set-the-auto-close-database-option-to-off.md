@@ -1,5 +1,6 @@
 ---
 title: 将 AUTO_CLOSE 数据库选项设置为 OFF | Microsoft Docs
+description: 检查 AUTO_ CLOSE 选项是否为 OFF。 AUTO_ CLOSE 选项对 SQL Server 的性能有影响。
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: e6b03364-263a-4ec4-9794-de9869d396ce
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: acadbc6e8834c32983ae366133b2fbd5c96a586e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0dbcc137a97af6d447dafd44c71bdb8181c69577
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68021704"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774198"
 ---
 # <a name="set-the-auto_close-database-option-to-off"></a>将 AUTO_CLOSE 数据库选项设置为 OFF
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   此规则检查 AUTO_ CLOSE 选项是否设置为 OFF。 AUTO_CLOSE 设置为 ON 时，该选项可能导致频繁访问数据库而使性能下降，这是因为在每次连接后打开和关闭数据库增加了开销。 AUTO_CLOSE 还会在每次连接后刷新过程缓存。  
   
 ## <a name="best-practices-recommendations"></a>最佳做法建议  

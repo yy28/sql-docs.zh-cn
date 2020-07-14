@@ -1,5 +1,6 @@
 ---
 title: Transact-SQL 对内存中 OLTP 的支持 | Microsoft Docs
+description: 了解包含用于支持内存中 OLTP 的语法选项的 Transact-SQL 语句。 使用支持的功能的其他参考链接。
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: b1cc7c30-1747-4c21-88ac-e95a5e58baac
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c8f67f3745ea4dfc4aa1b37f5b681b14a4b608ba
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 27f21922951ad42dc4f26625a2558b03f0425715
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68081824"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753189"
 ---
 # <a name="transact-sql-support-for-in-memory-oltp"></a>对内存中 OLTP 的 Transact-SQL 支持
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句包含用于支持内存中 OLTP 的语法选项：  
   

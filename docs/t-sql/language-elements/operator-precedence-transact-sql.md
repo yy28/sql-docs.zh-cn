@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f04d2439-6fff-4e4c-801f-cc62faef510a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 37c1bac44b4dff2be7735f89243b6e273eca0775
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f4670ef04301bb8dc75828db97ee42d3379ecbfb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68121915"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706241"
 ---
 # <a name="operator-precedence-transact-sql"></a>运算符优先级 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   如果一个复杂表达式有多个运算符，则运算符优先级将确定操作序列。 执行顺序可能对结果值有明显的影响。  
   
@@ -36,9 +36,9 @@ ms.locfileid: "68121915"
 |1|~（位非）|  
 |2|*（乘）、/（除）、%（取模）|  
 |3|+（正）、-（负）、+（加）、+（串联）、-（减）、&（位与）、^（位异或）、&#124;（位或）|  
-|4|=、>、\<、>=、<=、<>、!=、!>、!<（比较运算符）|  
+|4|=、>、\<, >=、>=、<=、<>、!=、!>、!<（比较运算符）|  
 |5|NOT|  
-|6|和|  
+|6|AND|  
 |7|ALL、ANY、BETWEEN、IN、LIKE、OR、SOME|  
 |8|=（赋值）|  
   

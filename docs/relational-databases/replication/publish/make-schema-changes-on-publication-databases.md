@@ -1,5 +1,6 @@
 ---
 title: 对发布数据库进行架构更改 | Microsoft Docs
+description: 复制支持对已发布对象进行一系列架构更改。 了解默认传播到所有 SQL Server 订阅服务器的架构更改。
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 79f0e12422f299a78e28c5ca21c370d7a973771a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5e0da92258088cde7dec9d4981e270e87e09f67a
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287661"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807628"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>对发布数据库进行架构更改
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

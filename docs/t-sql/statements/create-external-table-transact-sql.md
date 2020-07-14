@@ -21,12 +21,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ee3ae71f906b56fa91698d5238e2391d928d8be2
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 8b208b63dd096f35faa151f6f739d5e20cc3917b
+ms.sourcegitcommit: 38639b67a135ca1a50a8e38fa61a089efe90e3f1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633363"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84454500"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -44,7 +44,7 @@ ms.locfileid: "81633363"
 
 ||||||
 |---|---|---|---|---|
-|\* SQL Server \*  &nbsp;|[SQL 数据库](create-external-table-transact-sql.md?view=azuresqldb-current)|[Azure Synapse<br />Analytics](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
+|\* SQL Server \*&nbsp;|[SQL 数据库](create-external-table-transact-sql.md?view=azuresqldb-current)|[Azure Synapse<br />Analytics](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -53,7 +53,7 @@ ms.locfileid: "81633363"
 
 此命令为 PolyBase 创建一个外部表，以访问存储在 Hadoop 群集或 Azure blob 存储中的数据（引用存储在 Hadoop 群集或 Azure blob 存储中的数据的 PolyBase 外部表）。
 
-适用范围：  SQL Server 2016 或更高版本
+适用范围：SQL Server 2016 或更高版本
 
 使用带有外部数据源的外部表进行 PolyBase 查询。 外部数据源用于建立连接以及支持以下这些用例：
 
@@ -91,13 +91,13 @@ column_name <data_type>
 
 ## <a name="arguments"></a>参数
 
-{ database_name.schema_name.table_name | schema_name.table_name | table_name } 要创建的表的一到三部分名称  。 对于外部表，SQL 仅存储表元数据以及有关 Hadoop 或 Azure blob 存储中引用的文件或文件夹的基本统计信息。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中不移动或存储任何实际数据。
+{ database_name.schema_name.table_name | schema_name.table_name | table_name } 要创建的表的一到三部分名称。 对于外部表，SQL 仅存储表元数据以及有关 Hadoop 或 Azure blob 存储中引用的文件或文件夹的基本统计信息。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中不移动或存储任何实际数据。
 
-\<column_definition> [ ,...n  ] CREATE EXTERNAL TABLE 支持配置列名、数据类型、为 Null 性和排序规则功能。 不能对外部表使用 DEFAULT CONSTRAINT。
+\<column_definition> [ ,...n ] CREATE EXTERNAL TABLE 支持配置列名、数据类型、为 Null 性和排序规则的功能。 不能对外部表使用 DEFAULT CONSTRAINT。
 
 列定义（包括数据类型和列数）必须与外部文件中的数据匹配。 如果存在不匹配，则在查询实际数据时会拒绝文件行。
 
-LOCATION = 'folder_or_filepath  ' 为 Hadoop 或 Azure blob 存储中的实际数据指定文件夹或文件路径和文件名。 位置从根文件夹开始。 根文件夹是外部数据源中指定的数据位置。
+LOCATION = 'folder_or_filepath' 为 Hadoop 或 Azure blob 存储中的实际数据指定文件夹或文件路径和文件名。 位置从根文件夹开始。 根文件夹是外部数据源中指定的数据位置。
 
 在 SQL Server 中，如果路径和文件夹不存在，则 CREATE EXTERNAL TABLE 语句会进行创建。 然后，可使用 INSERT INTO 将数据从本地 SQL Server 表导出到外部数据源。 有关详细信息，请参阅 [PolyBase 查询](/sql/relational-databases/polybase/polybase-queries)。
 
@@ -107,38 +107,38 @@ LOCATION = 'folder_or_filepath  ' 为 Hadoop 或 Azure blob 存储中的实际�
 
 ![外部表的递归数据](../../t-sql/statements/media/aps-polybase-folder-traversal.png "外部表的递归数据")
 
-若要更改默认值并且只从根文件夹进行读取，请在 core-site.xml 配置文件中将属性 \<polybase.recursive.traversal> 为“false”。 此文件位于 `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server` 下。 例如，`C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn` 。
+若要更改默认值并且只从根文件夹进行读取，请在 core-site.xml 配置文件中将属性 \<polybase.recursive.traversal> 设置为“false”。 此文件位于 `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server` 下。 例如，`C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`。
 
-DATA_SOURCE = external_data_source_name  指定包含外部数据位置的外部数据源的名称。 此位置是 Hadoop 文件系统 (HDFS)、Azure 存储 blob 容器或 Azure Data Lake Store。 要创建外部数据源，请使用 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)。
+DATA_SOURCE = external_data_source_name 指定包含外部数据位置的外部数据源的名称。 此位置是 Hadoop 文件系统 (HDFS)、Azure 存储 blob 容器或 Azure Data Lake Store。 要创建外部数据源，请使用 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)。
 
-FILE_FORMAT = external_file_format_name  指定为外部数据存储文件类型和压缩方法的外部文件格式对象的名称。 若要创建外部文件格式，请使用 [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)。
+FILE_FORMAT = external_file_format_name 指定为外部数据存储文件类型和压缩方法的外部文件格式对象的名称。 若要创建外部文件格式，请使用 [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)。
 
-拒绝选项 可以指定用于确定 PolyBase 如何处理它从外部数据源检索的脏  记录的拒绝参数。 如果实际数据类型或列数与外部表的列定义不匹配，则数据记录被视为“脏”记录。
+拒绝选项 可以指定用于确定 PolyBase 如何处理它从外部数据源检索的脏记录的拒绝参数。 如果实际数据类型或列数与外部表的列定义不匹配，则数据记录被视为“脏”记录。
 
 未指定或更改拒绝值时，PolyBase 会使用默认值。 使用 CREATE EXTERNAL TABLE 语句创建外部表时，有关拒绝参数的此信息会存储为附加元数据。 在将来的 SELECT 语句或 SELECT INTO SELECT 语句从外部表中选择数据时，PolyBase 会使用拒绝选项确定在实际查询失败之前可以拒绝的行数或行百分比。 查询会返回（部分）结果，直到超出拒绝阈值。 查询随后失败，并出现相应的错误消息。
 
-REJECT_TYPE = value  | percentage 说明 REJECT_VALUE 选项是指定为文本值还是百分比。
+REJECT_TYPE = value | percentage 说明 REJECT_VALUE 选项是指定为文本值还是百分比。
 
-值 REJECT_VALUE 是文本值，而非百分比。 当拒绝的行数超过 reject_value  时，PolyBase 查询会失败。
+值 REJECT_VALUE 是文本值，而非百分比。 当拒绝的行数超过 reject_value 时，PolyBase 查询会失败。
 
 例如，如果 REJECT_VALUE = 5 并且 REJECT_TYPE = value，则 PolyBase SELECT 查询会在拒绝了 5 行之后失败。
 
-百分比 REJECT_VALUE 是百分比，而非文本值。 当失败行的百分比  超过 reject_value  时，PolyBase 查询会失败。 每隔一段时间计算失败行的百分比。
+百分比 REJECT_VALUE 是百分比，而非文本值。 当失败行的百分比超过 reject_value 时，PolyBase 查询会失败。 每隔一段时间计算失败行的百分比。
 
-REJECT_VALUE = reject_value  指定在查询失败之前可以拒绝的行数的值或百分比。
+REJECT_VALUE = reject_value 指定在查询失败之前可以拒绝的行数的值或百分比。
 
-对于 REJECT_TYPE = value，reject_value  必须是介于 0 与 2,147,483,647 之间的整数。
+对于 REJECT_TYPE = value，reject_value 必须是介于 0 与 2,147,483,647 之间的整数。
 
-对于 REJECT_TYPE = percentage，reject_value  必须是介于 0 与 100 之间的浮点数。
+对于 REJECT_TYPE = percentage，reject_value 必须是介于 0 与 100 之间的浮点数。
 
-REJECT_SAMPLE_VALUE = reject_sample_value  当指定 REJECT_TYPE = percentage 时，此属性是必需的。 它确定在 PolyBase 重新计算拒绝的行的百分比之前要尝试检索的行数。
+REJECT_SAMPLE_VALUE = reject_sample_value 当指定 REJECT_TYPE = percentage 时，此属性是必需的。 它确定在 PolyBase 重新计算拒绝的行的百分比之前要尝试检索的行数。
 
-Reject_sample_value  参数必须是介于 0 与 2,147,483,647 之间的整数。
+Reject_sample_value 参数必须是介于 0 与 2,147,483,647 之间的整数。
 
-例如，如果 REJECT_SAMPLE_VALUE = 1000，则 PolyBase 会在尝试从外部数据文件导入 1000 行后计算失败行的百分比。 如果失败行的百分比小于 reject_value  ，则 PolyBase 会尝试检索另外 1000 行。 它在尝试导入每个另外 1000 行后会继续重新计算失败行的百分比。
+例如，如果 REJECT_SAMPLE_VALUE = 1000，则 PolyBase 会在尝试从外部数据文件导入 1000 行后计算失败行的百分比。 如果失败行的百分比小于 reject_value，则 PolyBase 会尝试检索另外 1000 行。 它在尝试导入每个另外 1000 行后会继续重新计算失败行的百分比。
 
 > [!NOTE]
-> 由于 PolyBase 按间隔计算失败行的百分比，因此失败行的实际百分比可能会超过 reject_value  。
+> 由于 PolyBase 按间隔计算失败行的百分比，因此失败行的实际百分比可能会超过 reject_value。
 
 示例：
 
@@ -154,7 +154,7 @@ SCHEMA_NAME 通过 SCHEMA_NAME 子句可以将外部表定义映射到远程数�
 
 OBJECT_NAME 通过 OBJECT_NAME 子句可以将外部表定义映射到远程数据库上具有不同名称的表。 使用此子句可消除本地和远程数据库上存在的对象名称之间的歧义。
 
-DISTRIBUTION（可选）。 只有 SHARD_MAP_MANAGER 类型的数据库才需要此参数。 此参数控制表是被视为分片表还是复制表。 使用 SHARDED（列名）表时，来自不同表的数据不会重叠   。 **REPLICATED** 指定表在每个分片上具有相同数据。 **ROUND_ROBIN** 指示将特定于应用程序的方法用于分发数据。
+DISTRIBUTION（可选）。 只有 SHARD_MAP_MANAGER 类型的数据库才需要此参数。 此参数控制表是被视为分片表还是复制表。 使用 SHARDED（列名）表时，来自不同表的数据不会重叠。 **REPLICATED** 指定表在每个分片上具有相同数据。 **ROUND_ROBIN** 指示将特定于应用程序的方法用于分发数据。
 
 ## <a name="permissions"></a>权限
 
@@ -222,7 +222,7 @@ SCHEMARESOLUTION 对象上的共享锁。
 
 ### <a name="a-create-an-external-table-with-data-in-text-delimited-format"></a>A. 创建外部表，其中包含采用带分隔符的文本格式的数据
 
-此示例演示创建包含采用带分隔符的文本文件设置格式的数据的外部表所需的所有步骤。 它定义外部数据源 mydatasource  和外部文件格式 myfileformat  。 这些数据库级别对象随后会在 CREATE EXTERNAL TABLE 语句中进行引用。 有关详细信息，请参阅 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) 和 [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)。
+此示例演示创建包含采用带分隔符的文本文件设置格式的数据的外部表所需的所有步骤。 它定义外部数据源 mydatasource 和外部文件格式 myfileformat。 这些数据库级别对象随后会在 CREATE EXTERNAL TABLE 语句中进行引用。 有关详细信息，请参阅 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) 和 [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)。
 
 ```sql
 CREATE EXTERNAL DATA SOURCE mydatasource
@@ -252,7 +252,7 @@ WITH (
 
 ### <a name="b-create-an-external-table-with-data-in-rcfile-format"></a>B. 创建外部表，其中包含采用 RCFile 格式的数据
 
-此示例演示创建包含格式为 RCFile 的数据的外部表所需的所有步骤。 它定义外部数据源 mydatasource_rc  和外部文件格式 myfileformat_rc  。 这些数据库级别对象随后会在 CREATE EXTERNAL TABLE 语句中进行引用。 有关详细信息，请参阅 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) 和 [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)。
+此示例演示创建包含格式为 RCFile 的数据的外部表所需的所有步骤。 它定义外部数据源 mydatasource_rc 和外部文件格式 myfileformat_rc。 这些数据库级别对象随后会在 CREATE EXTERNAL TABLE 语句中进行引用。 有关详细信息，请参阅 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) 和 [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)。
 
 ```sql
 CREATE EXTERNAL DATA SOURCE mydatasource_rc
@@ -335,7 +335,7 @@ WHERE cs.url = 'msdn.microsoft.com'
 
 ### <a name="f-import-data-from-hadoop-into-a-sql-table"></a>F. 将数据从 Hadoop 导入 SQL 表中
 
-此示例创建新 SQL 表 ms_user，它永久存储在标准 SQL 表 user  与外部表 ClickStream  之间进行联接的结果。
+此示例创建新 SQL 表 ms_user，它永久存储在标准 SQL 表 user 与外部表 ClickStream 之间进行联接的结果。
 
 ```sql
 SELECT DISTINCT user.FirstName, user.LastName
@@ -571,12 +571,12 @@ WITH
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|\* SQL 数据库 \*  &nbsp;|[Azure Synapse<br />Analytics](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|\* SQL 数据库 \*&nbsp;|[Azure Synapse<br />Analytics](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
 
-## <a name="overview-azure-sql-database"></a>概述：Azure SQL 数据库
+## <a name="overview-azure-sql-database"></a>概述：Azure SQL Database
 
 在 Azure SQL 数据库中，针对[弹性查询（预览版）](/azure/sql-database/sql-database-elastic-query-overview/)创建外部表。
 
@@ -608,9 +608,9 @@ column_name <data_type>
 
 ## <a name="arguments"></a>参数
 
-{ database_name.schema_name.table_name | schema_name.table_name | table_name } 要创建的表的一到三部分名称  。 对于外部表，SQL 仅存储表元数据以及有关 Azure SQL 数据库中引用的文件或文件夹的基本统计信息。 在 Azure SQL 数据库中不移动或存储任何实际数据。
+{ database_name.schema_name.table_name | schema_name.table_name | table_name } 要创建的表的一到三部分名称。 对于外部表，SQL 仅存储表元数据以及有关 Azure SQL 数据库中引用的文件或文件夹的基本统计信息。 在 Azure SQL 数据库中不移动或存储任何实际数据。
 
-\<column_definition> [ ,...n  ] CREATE EXTERNAL TABLE 支持配置列名、数据类型、为 Null 性和排序规则功能。 不能对外部表使用 DEFAULT CONSTRAINT。
+\<column_definition> [ ,...n ] CREATE EXTERNAL TABLE 支持配置列名、数据类型、为 Null 性和排序规则的功能。 不能对外部表使用 DEFAULT CONSTRAINT。
 
 > [!NOTE]
 > 对于 Azure SQL 数据库，`Text`、`nText` 和 `XML` 不是受外部表中的列支持的数据类型。
@@ -709,7 +709,7 @@ WITH
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[SQL 数据库](create-external-table-transact-sql.md?view=azuresqldb-current)|_Azure Synapse<br />Analytics_&nbsp;\*\* |[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[SQL 数据库](create-external-table-transact-sql.md?view=azuresqldb-current)|_Azure Synapse<br />Analytics_&nbsp;\*\*|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -754,16 +754,16 @@ column_name <data_type>
 
 ## <a name="arguments"></a>参数
 
-{ database_name.schema_name.table_name | schema_name.table_name | table_name } 要创建的表的一到三部分名称  。 对于外部表，仅需要表元数据以及有关 Azure Data Lake、Hadoop 或 Azure blob 存储中引用的文件或文件夹的基本统计信息。 创建外部表时，不会移动或存储任何实际数据。
+{ database_name.schema_name.table_name | schema_name.table_name | table_name } 要创建的表的一到三部分名称。 对于外部表，仅需要表元数据以及有关 Azure Data Lake、Hadoop 或 Azure blob 存储中引用的文件或文件夹的基本统计信息。 创建外部表时，不会移动或存储任何实际数据。
 
-\<column_definition> [ ,...n  ] CREATE EXTERNAL TABLE 支持配置列名、数据类型、为 Null 性和排序规则功能。 不能对外部表使用 DEFAULT CONSTRAINT。
+\<column_definition> [ ,...n ] CREATE EXTERNAL TABLE 支持配置列名、数据类型、为 Null 性和排序规则的功能。 不能对外部表使用 DEFAULT CONSTRAINT。
 
 > [!NOTE]
 > 对于 Azure SQL 仓库，`Text`、`nText` 和 `XML` 不是受外部表中的列支持的数据类型。
 
 列定义（包括数据类型和列数）必须与外部文件中的数据匹配。 如果存在不匹配，则在查询实际数据时会拒绝文件行。
 
-LOCATION = 'folder_or_filepath  ' 为 Azure Data Lake、Hadoop 或 Azure blob 存储中的实际数据指定文件夹或文件路径和文件名。 位置从根文件夹开始。 根文件夹是外部数据源中指定的数据位置。 如果路径和文件夹不存在，则 [CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md) 语句会进行创建。 `CREATE EXTERNAL TABLE` 不会创建路径和文件夹。
+LOCATION = 'folder_or_filepath' 为 Azure Data Lake、Hadoop 或 Azure blob 存储中的实际数据指定文件夹或文件路径和文件名。 位置从根文件夹开始。 根文件夹是外部数据源中指定的数据位置。 如果路径和文件夹不存在，则 [CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md) 语句会进行创建。 `CREATE EXTERNAL TABLE` 不会创建路径和文件夹。
 
 如果将 LOCATION 指定为一个文件夹，则从外部表中进行选择的 PolyBase 查询会从该文件夹及其所有子文件夹中检索文件。 正如 Hadoop 一样，PolyBase 不返回隐藏文件夹。 它也不返回文件名以下划线 (_) 或句点 (.) 开头的文件。
 
@@ -771,38 +771,38 @@ LOCATION = 'folder_or_filepath  ' 为 Azure Data Lake、Hadoop 或 Azure blob �
 
 ![外部表的递归数据](../../t-sql/statements/media/aps-polybase-folder-traversal.png "外部表的递归数据")
 
-若要更改默认值并且只从根文件夹进行读取，请在 core-site.xml 配置文件中将属性 \<polybase.recursive.traversal> 为“false”。 此文件位于 `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server` 下。 例如，`C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn` 。
+若要更改默认值并且只从根文件夹进行读取，请在 core-site.xml 配置文件中将属性 \<polybase.recursive.traversal> 设置为“false”。 此文件位于 `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server` 下。 例如，`C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`。
 
-DATA_SOURCE = external_data_source_name  指定包含外部数据位置的外部数据源的名称。 此位置位于 Azure Data Lake 中。 要创建外部数据源，请使用 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)。
+DATA_SOURCE = external_data_source_name 指定包含外部数据位置的外部数据源的名称。 此位置位于 Azure Data Lake 中。 要创建外部数据源，请使用 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)。
 
-FILE_FORMAT = external_file_format_name  指定为外部数据存储文件类型和压缩方法的外部文件格式对象的名称。 若要创建外部文件格式，请使用 [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)。
+FILE_FORMAT = external_file_format_name 指定为外部数据存储文件类型和压缩方法的外部文件格式对象的名称。 若要创建外部文件格式，请使用 [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)。
 
-拒绝选项 可以指定用于确定 PolyBase 如何处理它从外部数据源检索的脏  记录的拒绝参数。 如果实际数据类型或列数与外部表的列定义不匹配，则数据记录被视为“脏”记录。
+拒绝选项 可以指定用于确定 PolyBase 如何处理它从外部数据源检索的脏记录的拒绝参数。 如果实际数据类型或列数与外部表的列定义不匹配，则数据记录被视为“脏”记录。
 
 未指定或更改拒绝值时，PolyBase 会使用默认值。 使用 CREATE EXTERNAL TABLE 语句创建外部表时，有关拒绝参数的此信息会存储为附加元数据。 在将来的 SELECT 语句或 SELECT INTO SELECT 语句从外部表中选择数据时，PolyBase 会使用拒绝选项确定在实际查询失败之前可以拒绝的行数或行百分比。 查询会返回（部分）结果，直到超出拒绝阈值。 查询随后失败，并出现相应的错误消息。
 
-REJECT_TYPE = value  | percentage 说明 REJECT_VALUE 选项是指定为文本值还是百分比。
+REJECT_TYPE = value | percentage 说明 REJECT_VALUE 选项是指定为文本值还是百分比。
 
-值 REJECT_VALUE 是文本值，而非百分比。 当拒绝的行数超过 reject_value  时，PolyBase 查询会失败。
+值 REJECT_VALUE 是文本值，而非百分比。 当拒绝的行数超过 reject_value 时，PolyBase 查询会失败。
 
 例如，如果 REJECT_VALUE = 5 并且 REJECT_TYPE = value，则 PolyBase SELECT 查询会在拒绝了 5 行之后失败。
 
-百分比 REJECT_VALUE 是百分比，而非文本值。 当失败行的百分比  超过 reject_value  时，PolyBase 查询会失败。 每隔一段时间计算失败行的百分比。
+百分比 REJECT_VALUE 是百分比，而非文本值。 当失败行的百分比超过 reject_value 时，PolyBase 查询会失败。 每隔一段时间计算失败行的百分比。
 
-REJECT_VALUE = reject_value  指定在查询失败之前可以拒绝的行数的值或百分比。
+REJECT_VALUE = reject_value 指定在查询失败之前可以拒绝的行数的值或百分比。
 
-对于 REJECT_TYPE = value，reject_value  必须是介于 0 与 2,147,483,647 之间的整数。
+对于 REJECT_TYPE = value，reject_value 必须是介于 0 与 2,147,483,647 之间的整数。
 
-对于 REJECT_TYPE = percentage，reject_value  必须是介于 0 与 100 之间的浮点数。
+对于 REJECT_TYPE = percentage，reject_value 必须是介于 0 与 100 之间的浮点数。
 
-REJECT_SAMPLE_VALUE = reject_sample_value  当指定 REJECT_TYPE = percentage 时，此属性是必需的。 它确定在 PolyBase 重新计算拒绝的行的百分比之前要尝试检索的行数。
+REJECT_SAMPLE_VALUE = reject_sample_value 当指定 REJECT_TYPE = percentage 时，此属性是必需的。 它确定在 PolyBase 重新计算拒绝的行的百分比之前要尝试检索的行数。
 
-Reject_sample_value  参数必须是介于 0 与 2,147,483,647 之间的整数。
+Reject_sample_value 参数必须是介于 0 与 2,147,483,647 之间的整数。
 
-例如，如果 REJECT_SAMPLE_VALUE = 1000，则 PolyBase 会在尝试从外部数据文件导入 1000 行后计算失败行的百分比。 如果失败行的百分比小于 reject_value  ，则 PolyBase 会尝试检索另外 1000 行。 它在尝试导入每个另外 1000 行后会继续重新计算失败行的百分比。
+例如，如果 REJECT_SAMPLE_VALUE = 1000，则 PolyBase 会在尝试从外部数据文件导入 1000 行后计算失败行的百分比。 如果失败行的百分比小于 reject_value，则 PolyBase 会尝试检索另外 1000 行。 它在尝试导入每个另外 1000 行后会继续重新计算失败行的百分比。
 
 > [!NOTE]
-> 由于 PolyBase 按间隔计算失败行的百分比，因此失败行的实际百分比可能会超过 reject_value  。
+> 由于 PolyBase 按间隔计算失败行的百分比，因此失败行的实际百分比可能会超过 reject_value。
 
 示例：
 
@@ -814,7 +814,7 @@ Reject_sample_value  参数必须是介于 0 与 2,147,483,647 之间的整数�
 - 重新计算的失败行的百分比为 50%。 失败行的百分比已超过 30% 的拒绝值。
 - 在尝试返回前 200 行之后，PolyBase 查询失败，拒绝的行为 50%。 请注意，匹配行在 PolyBase 查询检测到超过拒绝阈值之前已返回。
 
-REJECTED_ROW_LOCATION = 目录位置 
+REJECTED_ROW_LOCATION = 目录位置
 
 指定应该写入拒绝行和对应错误文件的外部数据源中的目录。
 如果指定的路径不存在，PolyBase 将代你创建一个。 创建名称为“\_rejectedrows”的子目录。 除非在位置参数中明确命名，否则，“\_”字符将确保对该目录转义以进行其他数据处理。 在此目录中，存在根据负荷提交时间创建的文件夹，采用 YearMonthDay-HourMinuteSecond 格式（例如， 20180330-173205）。 在此文件夹中，将写入两种文件类型，_原因文件和数据文件。
@@ -829,7 +829,9 @@ REJECTED_ROW_LOCATION = 目录位置
 - **ALTER ANY SCHEMA**
 - **ALTER ANY EXTERNAL DATA SOURCE**
 - **ALTER ANY EXTERNAL FILE FORMAT**
-- **CONTROL DATABASE**
+
+> [!NOTE]
+> 仅创建 MASTER KEY、DATABASE SCOPED CREDENTIAL 和 EXTERNAL DATA SOURCE 时需要 CONTROL DATABASE 权限
 
 请注意，创建外部数据源的登录名必须有权对位于 Hadoop 或 Azure blob 存储中的外部数据源进行读取和写入。
 
@@ -980,13 +982,13 @@ column_name <data_type>
 
 ## <a name="arguments"></a>参数
 
-{ database_name.schema_name.table_name | schema_name.table_name | table_name } 要创建的表的一到三部分名称  。 对于外部表，Analytics Platform System 仅存储表元数据以及有关 Hadoop 或 Azure blob 存储中引用的文件或文件夹的基本统计信息。 在 Analytics Platform System 中不移动或存储任何实际数据。
+{ database_name.schema_name.table_name | schema_name.table_name | table_name } 要创建的表的一到三部分名称。 对于外部表，Analytics Platform System 仅存储表元数据以及有关 Hadoop 或 Azure blob 存储中引用的文件或文件夹的基本统计信息。 在 Analytics Platform System 中不移动或存储任何实际数据。
 
-\<column_definition> [ ,...n  ] CREATE EXTERNAL TABLE 支持配置列名、数据类型、为 Null 性和排序规则功能。 不能对外部表使用 DEFAULT CONSTRAINT。
+\<column_definition> [ ,...n ] CREATE EXTERNAL TABLE 支持配置列名、数据类型、为 Null 性和排序规则的功能。 不能对外部表使用 DEFAULT CONSTRAINT。
 
 列定义（包括数据类型和列数）必须与外部文件中的数据匹配。 如果存在不匹配，则在查询实际数据时会拒绝文件行。
 
-LOCATION = 'folder_or_filepath  ' 为 Hadoop 或 Azure blob 存储中的实际数据指定文件夹或文件路径和文件名。 位置从根文件夹开始。 根文件夹是外部数据源中指定的数据位置。
+LOCATION = 'folder_or_filepath' 为 Hadoop 或 Azure blob 存储中的实际数据指定文件夹或文件路径和文件名。 位置从根文件夹开始。 根文件夹是外部数据源中指定的数据位置。
 
 在 Analytics Platform System 中，如果路径和文件夹不存在，则 [CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md) 语句会进行创建。 `CREATE EXTERNAL TABLE` 不会创建路径和文件夹。
 
@@ -996,38 +998,38 @@ LOCATION = 'folder_or_filepath  ' 为 Hadoop 或 Azure blob 存储中的实际�
 
 ![外部表的递归数据](../../t-sql/statements/media/aps-polybase-folder-traversal.png "外部表的递归数据")
 
-若要更改默认值并且只从根文件夹进行读取，请在 core-site.xml 配置文件中将属性 \<polybase.recursive.traversal> 为“false”。 此文件位于 `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server` 下。 例如，`C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn` 。
+若要更改默认值并且只从根文件夹进行读取，请在 core-site.xml 配置文件中将属性 \<polybase.recursive.traversal> 设置为“false”。 此文件位于 `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server` 下。 例如，`C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`。
 
-DATA_SOURCE = external_data_source_name  指定包含外部数据位置的外部数据源的名称。 此位置是 Hadoop 或 Azure blob 存储。 要创建外部数据源，请使用 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)。
+DATA_SOURCE = external_data_source_name 指定包含外部数据位置的外部数据源的名称。 此位置是 Hadoop 或 Azure blob 存储。 要创建外部数据源，请使用 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)。
 
-FILE_FORMAT = external_file_format_name  指定为外部数据存储文件类型和压缩方法的外部文件格式对象的名称。 若要创建外部文件格式，请使用 [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)。
+FILE_FORMAT = external_file_format_name 指定为外部数据存储文件类型和压缩方法的外部文件格式对象的名称。 若要创建外部文件格式，请使用 [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)。
 
-拒绝选项 可以指定用于确定 PolyBase 如何处理它从外部数据源检索的脏  记录的拒绝参数。 如果实际数据类型或列数与外部表的列定义不匹配，则数据记录被视为“脏”记录。
+拒绝选项 可以指定用于确定 PolyBase 如何处理它从外部数据源检索的脏记录的拒绝参数。 如果实际数据类型或列数与外部表的列定义不匹配，则数据记录被视为“脏”记录。
 
 未指定或更改拒绝值时，PolyBase 会使用默认值。 使用 CREATE EXTERNAL TABLE 语句创建外部表时，有关拒绝参数的此信息会存储为附加元数据。 在将来的 SELECT 语句或 SELECT INTO SELECT 语句从外部表中选择数据时，PolyBase 会使用拒绝选项确定在实际查询失败之前可以拒绝的行数或行百分比。 查询会返回（部分）结果，直到超出拒绝阈值。 查询随后失败，并出现相应的错误消息。
 
-REJECT_TYPE = value  | percentage 说明 REJECT_VALUE 选项是指定为文本值还是百分比。
+REJECT_TYPE = value | percentage 说明 REJECT_VALUE 选项是指定为文本值还是百分比。
 
-值 REJECT_VALUE 是文本值，而非百分比。 当拒绝的行数超过 reject_value  时，PolyBase 查询会失败。
+值 REJECT_VALUE 是文本值，而非百分比。 当拒绝的行数超过 reject_value 时，PolyBase 查询会失败。
 
 例如，如果 REJECT_VALUE = 5 并且 REJECT_TYPE = value，则 PolyBase SELECT 查询会在拒绝了 5 行之后失败。
 
-百分比 REJECT_VALUE 是百分比，而非文本值。 当失败行的百分比  超过 reject_value  时，PolyBase 查询会失败。 每隔一段时间计算失败行的百分比。
+百分比 REJECT_VALUE 是百分比，而非文本值。 当失败行的百分比超过 reject_value 时，PolyBase 查询会失败。 每隔一段时间计算失败行的百分比。
 
-REJECT_VALUE = reject_value  指定在查询失败之前可以拒绝的行数的值或百分比。
+REJECT_VALUE = reject_value 指定在查询失败之前可以拒绝的行数的值或百分比。
 
-对于 REJECT_TYPE = value，reject_value  必须是介于 0 与 2,147,483,647 之间的整数。
+对于 REJECT_TYPE = value，reject_value 必须是介于 0 与 2,147,483,647 之间的整数。
 
-对于 REJECT_TYPE = percentage，reject_value  必须是介于 0 与 100 之间的浮点数。
+对于 REJECT_TYPE = percentage，reject_value 必须是介于 0 与 100 之间的浮点数。
 
-REJECT_SAMPLE_VALUE = reject_sample_value  当指定 REJECT_TYPE = percentage 时，此属性是必需的。 它确定在 PolyBase 重新计算拒绝的行的百分比之前要尝试检索的行数。
+REJECT_SAMPLE_VALUE = reject_sample_value 当指定 REJECT_TYPE = percentage 时，此属性是必需的。 它确定在 PolyBase 重新计算拒绝的行的百分比之前要尝试检索的行数。
 
-Reject_sample_value  参数必须是介于 0 与 2,147,483,647 之间的整数。
+Reject_sample_value 参数必须是介于 0 与 2,147,483,647 之间的整数。
 
-例如，如果 REJECT_SAMPLE_VALUE = 1000，则 PolyBase 会在尝试从外部数据文件导入 1000 行后计算失败行的百分比。 如果失败行的百分比小于 reject_value  ，则 PolyBase 会尝试检索另外 1000 行。 它在尝试导入每个另外 1000 行后会继续重新计算失败行的百分比。
+例如，如果 REJECT_SAMPLE_VALUE = 1000，则 PolyBase 会在尝试从外部数据文件导入 1000 行后计算失败行的百分比。 如果失败行的百分比小于 reject_value，则 PolyBase 会尝试检索另外 1000 行。 它在尝试导入每个另外 1000 行后会继续重新计算失败行的百分比。
 
 > [!NOTE]
-> 由于 PolyBase 按间隔计算失败行的百分比，因此失败行的实际百分比可能会超过 reject_value  。
+> 由于 PolyBase 按间隔计算失败行的百分比，因此失败行的实际百分比可能会超过 reject_value。
 
 示例：
 

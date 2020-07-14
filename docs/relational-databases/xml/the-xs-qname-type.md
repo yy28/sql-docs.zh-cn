@@ -1,5 +1,6 @@
 ---
 title: xs:QName 类型 | Microsoft Docs
+description: 了解如何将 xs:QName 类型用作 XML 架构限制元素或用作联合的成员类型。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 72c5bfde-b0b2-4372-bf36-97ba930dea06
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f25b1828191a695b21d733e1304dbaa3177e2a27
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 879ec2e1e4aaebfde4b3597df3d244380f2b4165
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80662935"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758514"
 ---
-# <a name="the-xsqname-type"></a>The xs:QName Type
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# <a name="the-xsqname-type"></a>xs:QName 类型
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持通过使用 XML 架构限制元素从 **xs:QName** 派生的类型。 当前， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也不支持将 **QName** 作为成员类型的联合类型。  
   
 ## <a name="example"></a>示例  

@@ -1,5 +1,6 @@
 ---
 title: 内存优化表的还原和恢复 | Microsoft Docs
+description: 了解还原在 SQL Server 中使用内存优化表的数据库与还原仅使用基于磁盘的表的数据库有何不同。
 ms.custom: ''
 ms.date: 12/31/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 294975b7-e7d1-491b-b66a-fdb1100d2acc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 03974bc83cb9c7d9b6202f04db84ae96fe791eb3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5393fec82a0e1ab082369970f15756dc59e91846
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908442"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722339"
 ---
 # <a name="restore-and-recovery-of-memory-optimized-tables"></a>内存优化表的还原和恢复
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 恢复或还原使用内存优化表的数据库的基础机制类似于仅使用基于磁盘表的数据库的机制。 但与基于磁盘的表不同，必须首先将内存优化表加载到内存中，然后数据库才可用于用户访问。 此要求会在数据库恢复中添加一个新步骤。  
   

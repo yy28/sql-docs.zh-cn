@@ -1,7 +1,8 @@
 ---
 title: 升级 Data Quality Services | Microsoft Docs
+description: 本文提供的信息介绍如何升级现有 SQL Server Data Quality Services (DQS) 安装。
 ms.custom: ''
-ms.date: 07/24/2017
+ms.date: 06/29/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -10,16 +11,16 @@ ms.assetid: f396666b-7754-4efc-9507-0fd114cc32d5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: fab545b34f257563466ec2f64911cdfaceca9456
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2ebd08b11c99f8b5de54be9fc882c1fd2751afab
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67934858"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900249"
 ---
 # <a name="upgrade-data-quality-services"></a>升级 Data Quality Services
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 本文提供的信息介绍如何升级现有 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]Data Quality Services (DQS) 安装。 升级 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Server 的过程中，还必须升级 DQS 数据库架构。  
   
@@ -45,7 +46,7 @@ ms.locfileid: "67934858"
   
     2.  在左窗格中，单击 **“安装”** 。  
   
-    3.  在右窗格中，单击“升级版本...”从 SQL Server 早期版本升级  。  
+    3.  在右窗格中，单击“升级版本...”从 SQL Server 早期版本升级。  
   
     4.  完成安装向导。  
   
@@ -58,18 +59,18 @@ ms.locfileid: "67934858"
   
     2.  在命令提示符下，将目录更改为 DQSInstaller.exe 出现的位置。 对于 SQL Server 的默认实例，可在 C:\Program Files\Microsoft SQL Server\MSSQL[nn].MSSQLSERVER\MSSQL\Binn 获取 DQSInstaller.exe 文件：  
 
-      >[!NOTE]
-      >在文件夹路径中，将 [nn] 替换为 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 的版本号。
-      >- SQL Server 2016：13
-      >- SQL Server 2017：14
-
-        ```  
+        >[!NOTE]
+        >在文件夹路径中，将 [nn] 替换为 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 的版本号。
+        >- 对于 SQL Server 2016：13
+        >- 对于 SQL Server 2017：14
+    
+        ```console
         cd C:\Program Files\Microsoft SQL Server\MSSQL[nn].MSSQLSERVER\MSSQL\Binn  
         ```  
   
     3.  在命令提示符下，键入以下命令，再按 Enter：  
   
-        ```  
+        ```console
         dqsinstaller.exe -upgrade  
         ```  
   
@@ -84,7 +85,7 @@ ms.locfileid: "67934858"
   
 2.  运行以下查询：  
   
-    ```  
+    ```sql
     SELECT * FROM DQS_MAIN.dbo.A_DB_VERSION WHERE STATUS=2;  
     SELECT * FROM DQS_PROJECTS.dbo.A_DB_VERSION WHERE STATUS=2;  
     ```  

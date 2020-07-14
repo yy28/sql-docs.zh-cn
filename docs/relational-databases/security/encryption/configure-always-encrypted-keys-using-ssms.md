@@ -1,5 +1,6 @@
 ---
 title: 使用 SQL Server Management Studio 预配 Always Encrypted 密钥 | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio 预配 Always Encrypted 的列主密钥和列加密密钥。
 ms.custom: ''
 ms.date: 10/01/2019
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 13bb5944c5907f3bebc9f01eb969b4b8979f8c97
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8b84de259222b9e2bde8c9b99f67328ea317e645
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287121"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765143"
 ---
 # <a name="provision-always-encrypted-keys-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 预配 Always Encrypted 密钥
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 本文提供了使用 [SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md) 预配 Always Encrypted 的列主密钥和列加密密钥的步骤。
 
@@ -34,14 +35,14 @@ ms.locfileid: "79287121"
 
 “新建列主密钥”  对话框允许你生成列主密钥或选择密钥存储中的现有密钥，并在数据库中为所创建或所选择的密钥创建列主密钥元数据。
 
-1.  使用**对象资源管理器**导航到数据库下面的“安全”>“始终加密密钥”  文件夹。
-2.  右键单击“列主密钥”文件夹，然后选择“新建列主密钥...”   。 
+1.  使用**对象资源管理器**导航到数据库下面的“安全”>“始终加密密钥”文件夹。
+2.  右键单击“列主密钥”文件夹，然后选择“新建列主密钥...” 。 
 3.  在“新建列主密钥”  对话框中，输入列主密钥元数据对象的名称。
 4.  选择密钥存储：
     - **证书存储 - 当前用户** - 指示当前用户证书存储在 Windows 证书存储中的位置，这是你的个人存储。 
     - **证书存储 - 本地计算机** - 指示本地计算机证书存储在 Windows 证书存储中的位置。 
-    - **Azure Key Vault** - 你需要登录到 Azure（单击“登录”）  。 登录后，即可选择你的一个 Azure 订阅和密钥保管库。
-    - **密钥存储提供程序(KSP)** - 指明可通过实现下一代加密技术 (CNG) API 的密钥存储提供程序 (KSP) 访问的密钥存储。 通常，这种存储是硬件安全模块 (HSM)。 选择此选项后，需要选择 KSP。 “Microsoft 软件密钥存储提供程序”  默认处于选中状态。 如果你想使用存储在 HSM 中的列主密钥，请为设备选择 KSP（必须在打开该对话框之前在计算机上安装并配置 KSP）。
+    - **Azure Key Vault** - 你需要登录到 Azure（单击“登录”）。 登录后，即可选择你的一个 Azure 订阅和密钥保管库。
+    - **密钥存储提供程序(KSP)** - 指明可通过实现下一代加密技术 (CNG) API 的密钥存储提供程序 (KSP) 访问的密钥存储。 通常，这种存储是硬件安全模块 (HSM)。 选择此选项后，需要选择 KSP。 “Microsoft 软件密钥存储提供程序” 默认处于选中状态。 如果你想使用存储在 HSM 中的列主密钥，请为设备选择 KSP（必须在打开该对话框之前在计算机上安装并配置 KSP）。
     -   **加密服务提供程序(CSP)** - 可通过实现加密 API (CAPI) 的加密服务提供程序 (CSP) 访问的密钥存储。 通常，这种存储是硬件安全模块 (HSM)。 选择此选项后，需要选择 CSP。  如果你想使用存储在 HSM 中的列主密钥，请为设备选择 CSP（必须在打开该对话框之前在计算机上安装并配置 CSP）。
     
     > [!NOTE]
@@ -49,10 +50,10 @@ ms.locfileid: "79287121"
    
     有关上述密钥存储的详细信息，请参阅[创建并存储 Always Encrypted 的列主密钥](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)。
 
-5. 如果使用的是 [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)]，并且 SQL Server 实例配置有安全 enclave，则可以选中“允许 enclave 计算”复选框以启用主密钥 enclave  。 有关详细信息，请参阅[具有安全 enclave 的 Always Encrypted](always-encrypted-enclaves.md)。 
+5. 如果使用的是 [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)]，并且 SQL Server 实例配置有安全 enclave，则可以选中“允许 enclave 计算”复选框以启用主密钥 enclave。 有关详细信息，请参阅[具有安全 enclave 的 Always Encrypted](always-encrypted-enclaves.md)。 
 
     > [!NOTE]
-    > 如果 SQL Server 实例未正确配置有安全 enclave，则不会显示“允许 enclave 计算”复选框  。
+    > 如果 SQL Server 实例未正确配置有安全 enclave，则不会显示“允许 enclave 计算”复选框。
 
 6.  选择密钥存储中的现有密钥，或者单击“生成密钥”  或“生成证书”  按钮，在密钥存储中创建一个密钥。 
 7.  单击“确定”  ，新密钥随即显示在列表中。 
@@ -67,9 +68,9 @@ ms.locfileid: "79287121"
 
 ### <a name="permissions-for-provisioning-a-column-master-key"></a>预配列主密钥所需的权限
 
-你需要具有数据库中的 ALTER ANY COLUMN MASTER KEY 数据库权限才能使此对话框创建列主密钥  。 若要使用此对话框创建新的列主密钥或在密钥存储创建中使用现有密钥，你可能需要具有密钥存储或/和密钥的相关权限：
+你需要具有数据库中的 ALTER ANY COLUMN MASTER KEY 数据库权限才能使此对话框创建列主密钥。 若要使用此对话框创建新的列主密钥或在密钥存储创建中使用现有密钥，你可能需要具有密钥存储或/和密钥的相关权限：
 - **证书存储 - 本地计算机** - 必须对用作列主密钥的证书具有读取访问权限，或者是计算机上的管理员。
-- **Azure Key Vault** - 你需要具有 get 和 list 权限才能选择和使用密钥，并且需要具有 create 权限才能创建新密钥    。 若要配置已启用 enclave 的列主密钥，你还需要具有 sign 权限才能生成密钥元数据的签名  。
+- **Azure Key Vault** - 你需要具有 get 和 list 权限才能选择和使用密钥，并且需要具有 create 权限才能创建新密钥  。 若要配置已启用 enclave 的列主密钥，你还需要具有 sign 权限才能生成密钥元数据的签名。
 - **密钥存储提供程序(CNG)** - 使用密钥存储或密钥时可能提示你提供必要的权限和凭据，具体取决于存储和 KSP 配置。
 - **加密服务提供程序(CAPI)** - 使用密钥存储或密钥时可能提示你提供必要的权限和凭据，具体取决于存储和 CSP 配置。
 
@@ -81,19 +82,19 @@ ms.locfileid: "79287121"
 “新建列加密密钥”  对话框允许生成列加密密钥、使用列主密钥对其加密，以及在数据库中创建列加密密钥元数据。
 
 1.  使用 **对象资源管理器**导航到数据库下面的“安全”/“始终加密密钥”  文件夹。
-2.  右键单击“列加密密钥”文件夹，然后选择“新建列加密密钥...”   。 
+2.  右键单击“列加密密钥”文件夹，然后选择“新建列加密密钥...” 。 
 3.  在“新建列加密密钥”  对话框中，输入列加密密钥元数据对象的名称。
 4.  在数据库中选择一个表示列主密钥的元数据对象。
-5.  单击“确定”。  
+5.  单击“确定”。 
 
 完成此对话框中的选择后，SQL Server Management Studio 会生成新的列加密密钥，然后它会从数据库中检索你所选的列主密钥的元数据。 然后，SSMS 会使用此列主密钥元数据来访问包含你的列主密钥的密钥存储并对列加密密钥进行加密。 最后，SSMS 通过生成并发出 [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) 语句，为数据库中新的列加密创建元数据数据。
 
 ### <a name="permissions-for-provisioning-a-column-encryption-key"></a>预配列加密密钥所需的权限
 
-你需要具有数据库中的 ALTER ANY COLUMN ENCRYPTION KEY 和 VIEW ANY COLUMN MASTER KEY DEFINITION 数据库权限才能使此对话框创建列加密密钥元数据以及访问列主密钥元数据   。
+你需要具有数据库中的 ALTER ANY COLUMN ENCRYPTION KEY 和 VIEW ANY COLUMN MASTER KEY DEFINITION 数据库权限才能使此对话框创建列加密密钥元数据以及访问列主密钥元数据 。
 若要访问密钥存储并使用列主密钥，可能需要密钥存储或/和密钥上的权限：
 - **证书存储 - 本地计算机** - 必须对用作列主密钥的证书具有读取访问权限，或者是计算机上的管理员。
-- **Azure Key Vault** - 需要包含列主密钥的保管库上的 get、unwrapKey、wrapKey、sign 和 verify 权限      。
+- **Azure Key Vault** - 需要包含列主密钥的保管库上的 get、unwrapKey、wrapKey、sign 和 verify 权限    。
 - **密钥存储提供程序(CNG)** - 使用密钥存储或密钥时可能提示你提供必要的权限和凭据，具体取决于存储和 KSP 配置。
 - **加密服务提供程序(CAPI)** - 使用密钥存储或密钥时可能提示你提供必要的权限和凭据，具体取决于存储和 CSP 配置。
 

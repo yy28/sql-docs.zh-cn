@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 8a7c149fbc59691519c1a85afe1ff64cc6da579a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: bde2baadb2a7cf5c6a11330443ab8e3c883455a9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823672"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759122"
 ---
 # <a name="restore-pages-sql-server"></a>还原页 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]在  中还原页。 页面还原的目的是还原一个或多个损坏的页，而不还原整个数据库。 通常，要进行还原的页已经由于在访问该页时遇到错误而标记为“可疑”。 可疑页在 [msdb](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 数据库的 **suspect_pages** 表中进行了标识。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "82823672"
     > [!WARNING]  
     >  如果损坏的页存储了重要的数据库元数据，则在联机页面还原尝试过程中对元数据的必需的更新可能失败。 在此情况下，你可以执行脱机页面还原，但首先，你必须创建一个 [结尾日志备份](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) （通过使用 RESTORE WITH NORECOVERY 备份事务日志）。  
   
--   页面还原利用了改进的页级错误报告（包含页校验和）和跟踪。 通过校验和或残缺写操作检测为已损坏的页（“损坏页”）  可以通过页还原操作进行还原。 仅还原显式指定的页。 每个指定页都被来自指定数据备份的页的副本替换。  
+-   页面还原利用了改进的页级错误报告（包含页校验和）和跟踪。 通过校验和或残缺写操作检测为已损坏的页（“损坏页”） 可以通过页还原操作进行还原。 仅还原显式指定的页。 每个指定页都被来自指定数据备份的页的副本替换。  
   
      在您还原随后的日志备份时，它们将仅适用于包含要还原的至少一页的数据库文件。 必须将不中断的日志备份链应用于最后一次完整或差异还原，以便让包含该页的文件组前进到当前的日志文件。 与文件还原中一样，每次传递日志重做，前滚集都会前进一步。 为了成功还原页，已还原的页必须恢复到与数据库一致的状态。  
   
@@ -114,9 +114,9 @@ ms.locfileid: "82823672"
   
 1.  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]连接到相应的 实例，在对象资源管理器中，单击服务器名称以展开服务器树。  
   
-2.  展开 **“数据库”** 。  根据具体的数据库，选择一个用户数据库，或展开“系统数据库”并选择一个系统数据库。  
+2.  展开 **“数据库”** 。 根据具体的数据库，选择一个用户数据库，或展开“系统数据库”并选择一个系统数据库。  
   
-3.   右键单击该数据库，指向 **“任务”** ，再指向 **“还原”** ，然后单击 **“页”** ，这将打开“还原页”对话框。  
+3.  右键单击该数据库，指向 **“任务”** ，再指向 **“还原”** ，然后单击 **“页”** ，这将打开“还原页”对话框。  
   
      **还原**  
      此部分执行的功能与 [还原数据库（常规页）](../../relational-databases/backup-restore/restore-database-general-page.md) 上的 **“还原到”** 的功能相同。  
@@ -136,8 +136,8 @@ ms.locfileid: "82823672"
     |标头|值|  
     |------------|------------|  
     |**名称**|备份集的名称。|  
-    |组件 |备份组件：“数据库”、“文件”或“\<空白>”（对于事务日志）    。|  
-    |类型 |执行的备份类型：“完整”、“差异”或“事务日志”    。|  
+    |组件|备份组件：  数据库、文件或 \<blank>（对于事务日志）。|  
+    |类型|执行的备份类型：“完整”、“差异”或“事务日志”  。|  
     |**Server**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 执行备份操作的实例的名称。|  
     |**Database**|备份操作中涉及的数据库的名称。|  
     |**位置**|备份集在卷中的位置。|  
@@ -164,7 +164,7 @@ ms.locfileid: "82823672"
   
      **页**  
   
-7.   若要还原在页网格中列出的页，请单击“确定”。  
+7.  若要还原在页网格中列出的页，请单击“确定”。  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  若要在 RESTORE DATABASE 语句中指定一页，需要知道该页所在文件的文件 ID 和该页的页 ID。 所需语法如下：  

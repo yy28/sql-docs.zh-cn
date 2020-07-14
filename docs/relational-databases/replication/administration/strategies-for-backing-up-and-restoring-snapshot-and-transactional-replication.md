@@ -1,5 +1,6 @@
 ---
 title: 快照复制和事务复制的备份和还原策略 | Microsoft Docs
+description: 了解有关在 SQL Server 中为快照和事务复制设计备份和还原策略的注意事项。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,15 +22,15 @@ ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 94135f0fea3373dbab2b1bfba363e9cd9e8385e8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 490dc9907114db22c0b506f6fa436f429cbd1fad
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71710345"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85740838"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>快照复制和事务复制的备份和还原策略
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/applies-to-version/sql-asdb.md)]
   在设计快照和事务复制的备份和还原策略时，需要考虑三个方面：  
   
 -   要备份哪些数据库。
@@ -207,15 +208,15 @@ ms.locfileid: "71710345"
   
     1.  在数据库 **B** 上重新创建发布。转到步骤 b。  
   
-    2.  在数据库 B 上重新创建对数据库 A 上的发布的订阅，同时指定该订阅应使用备份进行初始化（[sp_addsubscription ](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 的 `@sync_type` 参数的值为 initialize with backup）    。 转到步骤 c。  
+    2.  在数据库 B 上重新创建对数据库 A 上的发布的订阅，同时指定该订阅应使用备份进行初始化（[sp_addsubscription ](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 的 `@sync_type` 参数的值为 initialize with backup）  。 转到步骤 c。  
   
-    3.  在数据库 A 上重新创建对数据库 B 上的发布的订阅，同时指定订阅服务器已包含数据（[sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 的 `@sync_type` 参数的值为 replication support only）    。 转到步骤 8。  
+    3.  在数据库 A 上重新创建对数据库 B 上的发布的订阅，同时指定订阅服务器已包含数据（[sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 的 `@sync_type` 参数的值为 replication support only）  。 转到步骤 8。  
   
 8.  运行分发代理以同步数据库 **A** 和 **B** 上的订阅。如果发布的表中有标识列，则转到步骤 9。 否则，转到步骤 10。  
   
 9. 还原后，在数据库 **A** 中为每个表分配的标识范围也将在数据库 **B** 中使用。确保还原的数据库 **B** 已收到发生故障的数据库 **B** 中传播到数据库 **A** 和数据库 **C** 的所有更改；然后重设每个表的标识范围种子。  
   
-    1.  在数据库 B 上执行 [sp_requestpeerresponse](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)，并检索输出参数 `@request_id`  。 转到步骤 b。  
+    1.  在数据库 B 上执行 [sp_requestpeerresponse](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)，并检索输出参数 `@request_id`。 转到步骤 b。  
   
     2.  默认情况下，分发代理设置为连续运行；因此，令牌应该自动发送到所有节点。 如果分发代理未以连续模式运行，请运行该代理。 有关详细信息，请参阅[复制代理可执行文件概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)或[启动和停止复制代理 (SQL Server Management Studio)](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)。 转到步骤 c。  
   
@@ -231,7 +232,7 @@ ms.locfileid: "71710345"
   
     1.  停止对等拓扑中已发布表上的所有活动。 转到步骤 b。  
   
-    2.  在数据库 B 上执行 [sp_requestpeerresponse](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)，并检索输出参数 `@request_id`  。 转到步骤 c。  
+    2.  在数据库 B 上执行 [sp_requestpeerresponse](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)，并检索输出参数 `@request_id`。 转到步骤 c。  
   
     3.  默认情况下，分发代理设置为连续运行；因此，令牌应该自动发送到所有节点。 如果分发代理未以连续模式运行，请运行该代理。 转到步骤 d。  
   
@@ -245,7 +246,7 @@ ms.locfileid: "71710345"
   
     1.  在数据库 **B**上，查询 [MSpeer_lsns](../../../relational-databases/system-tables/mspeer-lsns-transact-sql.md) 表，以检索数据库 **B** 从 **C**收到的最近事务的日志序列号 (LSN)。  
   
-    2.  在数据库 B 上重新创建对数据库 C 上的发布的订阅，同时指定该订阅应基于 LSN 进行初始化（[sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)的 `@sync_type` 参数的值为 initialize from lsn）    。 转到步骤 b。  
+    2.  在数据库 B 上重新创建对数据库 C 上的发布的订阅，同时指定该订阅应基于 LSN 进行初始化（[sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)的 `@sync_type` 参数的值为 initialize from lsn）  。 转到步骤 b。  
   
     3.  在数据库 **C** 上重新创建对数据库 **B**上的发布的订阅，同时指定订阅服务器已包含数据。 转到步骤 13。  
   

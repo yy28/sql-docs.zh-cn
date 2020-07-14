@@ -1,5 +1,6 @@
 ---
 title: 内存优化表的索引 | Microsoft Docs
+description: 了解内存优化表上的索引与 SQL Server 和 Azure SQL 数据库中基于磁盘的表上的传统索引的不同之处。
 ms.custom: ''
 ms.date: 09/16/2019
 ms.prod: sql
@@ -11,16 +12,16 @@ ms.assetid: eecc5821-152b-4ed5-888f-7c0e6beffed9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6db09106a6ebd8128cc9a7c69b9094adbf732ad7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bbc6a5f1be39d3b46de9c9cb9abea5e17ecc0b41
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70929690"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723108"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>内存优化的表的索引
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 所有内存优化表都至少必须有一个索引，因为行正是通过索引才连接在一起。 在内存优化表中，每个索引也经过内存优化。 内存优化表中的索引与基于磁盘的表中的传统索引在以下几个方面不同：  
 
@@ -88,7 +89,7 @@ ms.locfileid: "70929690"
     )  
         WITH (  
         MEMORY_OPTIMIZED = ON,  
-        DURABILITY = SCHEMA\_AND_DATA);  
+        DURABILITY = SCHEMA_AND_DATA);  
     go  
         
         --------------------  
@@ -213,7 +214,7 @@ WHERE col1 = 'dn';
 
 ## <a name="summary-table-to-compare-index-use-scenarios"></a>比较索引使用方案的摘要表  
   
-下表列出了不同索引类型支持的所有操作。 “是”  表示索引能够有效地满足请求，“否”  表示索引无法有效地满足请求。 
+下表列出了不同索引类型支持的所有操作。 “是”表示索引能够有效地满足请求，“否”表示索引无法有效地满足请求。 
   
 | Operation | 内存优化， <br/> hash | 内存优化， <br/> 非聚集 | 基于磁盘， <br/> （非）聚集 |  
 | :-------- | :--------------------------- | :----------------------------------- | :------------------------------------ |  

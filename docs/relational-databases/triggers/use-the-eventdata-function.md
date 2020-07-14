@@ -13,15 +13,15 @@ ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aef51bd94bf7cffb3e9481b409477a3830fabffb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f49da6a68a3d0897dc545215c9260904cdb8bb11
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68058605"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727100"
 ---
 # <a name="use-the-eventdata-function"></a>使用 EVENTDATA 函数
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   使用 EVENTDATA 函数，可以捕获有关激发 DDL 触发器的事件的信息。 此函数返回 **xml** 值。 XML 架构包括下列信息：  
   
 -   事件时间。  
@@ -50,7 +50,7 @@ AS
   
  `CREATE TABLE NewTable (Column1 int);`  
   
- DDL 触发器中的 `EVENTDATA()` 语句将捕获不允许使用的 `CREATE TABLE` 语句文本。 通过对 EVENTDATA 生成的 **xml** 数据使用 XQuery 语句以及检索 \<CommandText> 元素来实现此操作。 有关详细信息，请参阅 [XQuery 语言参考 (SQL Server)](../../xquery/xquery-language-reference-sql-server.md)。  
+ DDL 触发器中的 `EVENTDATA()` 语句将捕获不允许使用的 `CREATE TABLE` 语句文本。 通过对 EVENTDATA 生成的 xml 数据使用 XQuery 语句以及检索 \<CommandText> 元素来实现此操作。 有关详细信息，请参阅 [XQuery 语言参考 (SQL Server)](../../xquery/xquery-language-reference-sql-server.md)。  
   
 > [!CAUTION]  
 >  EVENTDATA 将捕获 CREATE_SCHEMA 事件的数据以及相应 CREATE SCHEMA 定义的 <schema_element>（如果存在）。 此外，EVENTDATA 将 <schema_element> 定义识别为单独的事件。 因此，针对 CREATE_SCHEMA 事件和由 CREATE_SCHEMA 定义的 <schema_element> 表示的事件创建的 DDL 触发器可能两次返回相同的事件数据，如 `TSQLCommand` 数据。 例如，针对 CREATE_SCHEMA 事件和 CREATE_TABLE 事件创建的 DDL 触发器，将运行下列批处理：  
@@ -128,7 +128,7 @@ GO
 > [!NOTE]  
 >  如果需要返回事件数据，我们建议使用 XQuery **value()** 方法而不是 **query()** 方法。 **query()** 方法可在输出中返回 XML 和以“and”符转义的回车符和换行符 (CRLF) 实例，而 **value()** 方法无法在输出中呈现 CRLF 实例。  
   
- [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库还提供了类似的 DDL 触发器示例。 若要获得示例，请使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]找到 Database Triggers 文件夹。 此文件夹位于 **数据库的** Programmability [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 文件夹下。 右键单击“ddlDatabaseTriggerLog”  并选择“将数据库触发器脚本编写为”  。 默认情况下，DDL 触发器 ddlDatabaseTriggerLog  处于禁用状态。  
+ [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库还提供了类似的 DDL 触发器示例。 若要获得示例，请使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]找到 Database Triggers 文件夹。 此文件夹位于 **数据库的** Programmability [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 文件夹下。 右键单击“ddlDatabaseTriggerLog”并选择“将数据库触发器脚本编写为”。 默认情况下，DDL 触发器 ddlDatabaseTriggerLog 处于禁用状态。  
   
 ## <a name="see-also"></a>另请参阅  
  [DDL 事件](../../relational-databases/triggers/ddl-events.md)   

@@ -1,9 +1,10 @@
 ---
 title: 数据库级别的角色 | Microsoft Docs
+description: SQL Server 提供若干角色，它们是一些安全主体，用于对其他主体进行分组以管理数据库中的权限。
 ms.custom: ''
-ms.date: 07/11/2019
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, azure-synapse, pdw
 ms.reviewer: ''
 ms.technology: security
 ms.topic: conceptual
@@ -38,22 +39,22 @@ ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: edc3b7277646122dfec73f7b79445a8ca066e24c
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: f49b1139faade46df4d1b853c4bc0e9f25c4e111
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664465"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005671"
 ---
 # <a name="database-level-roles"></a>数据库级别的角色
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   为便于管理数据库中的权限， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供了若干“角色”  ，这些角色是用于对其他主体进行分组的安全主体。 它们类似于 ***Windows 操作系统中的*** 组 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 。 数据库级角色的权限作用域为数据库范围。  
 
-若要向数据库角色添加和删除成员，请使用 `ADD MEMBER` ALTER ROLE `DROP MEMBER` 语句的 [和](../../../t-sql/statements/alter-role-transact-sql.md) 选项。 [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] 不支持 `ALTER ROLE`的这种用法。 改为使用较早版本的 [sp_addrolemember](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) 和 [sp_droprolemember](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md) 过程。
+若要向数据库角色添加和删除成员，请使用 `ADD MEMBER` ALTER ROLE `DROP MEMBER` 语句的 [和](../../../t-sql/statements/alter-role-transact-sql.md) 选项。 [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] 和 Azure Synapse 不支持这样使用 `ALTER ROLE`。 改为使用较早版本的 [sp_addrolemember](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) 和 [sp_droprolemember](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md) 过程。
   
- 存在两种类型的数据库级角色：数据库中预定义的“固定数据库角色”  和可以创建的“用户定义的数据库角色”  。  
+ 存在两种类型的数据库级角色：数据库中预定义的“固定数据库角色”和可以创建的“用户定义的数据库角色”。  
   
  固定数据库角色是在数据库级别定义的，并且存在于每个数据库中。 **db_owner** 数据库角色的成员可以管理固定数据库角色成员身份。 msdb 数据库中还有一些特殊用途的数据库角色。  
   
@@ -64,16 +65,16 @@ ms.locfileid: "80664465"
 
 可以使用 GRANT、DENY 和 REVOKE 语句自定义用户定义数据库角色的权限。 有关详细信息，请参阅 [权限（数据库引擎）](../../../relational-databases/security/permissions-database-engine.md)。
 
-有关所有权限的列表，请参阅 [数据库引擎权限](https://aka.ms/sql-permissions-poster) 招贴。 （不能向数据库角色授予服务器级别权限。 不能向数据库角色添加登录名和其他服务器级别主体（如服务器角色）。 对于 [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]中的服务器级别安全性，请改为使用 [服务器角色](../../../relational-databases/security/authentication-access/server-level-roles.md) 。 不能通过 [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 和 [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]中的角色授予服务器级别权限。）
+有关所有权限的列表，请参阅 [数据库引擎权限](https://aka.ms/sql-permissions-poster) 招贴。 不能向数据库角色授予服务器级别权限。 不能向数据库角色添加登录名和其他服务器级别主体（如服务器角色）。 对于 [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]中的服务器级别安全性，请改为使用 [服务器角色](../../../relational-databases/security/authentication-access/server-level-roles.md) 。 不能通过 [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 和 Azure Synapse 中的角色授予服务器级别权限。
 
 ## <a name="fixed-database-roles"></a>固定数据库角色
   
- 下表显示了固定数据库角色及其能够执行的操作。 所有数据库中都有这些角色。 无法更改分配给固定数据库角色的权限，“公共”数据库角色除外  。   
+ 下表显示了固定数据库角色及其能够执行的操作。 所有数据库中都有这些角色。 无法更改分配给固定数据库角色的权限，“公共”数据库角色除外。   
   
 |固定数据库角色名|说明|  
 |-------------------------------|-----------------|  
-|**db_owner**|**db_owner** 固定数据库角色的成员可以执行数据库的所有配置和维护活动，还可以删除 [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]中的数据库。 （在 [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 和 [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]中，某些维护活动需要服务器级别权限，并且不能由 **db_owners**执行。）|  
-|**db_securityadmin**|db_securityadmin  固定数据库角色的成员可以仅修改自定义角色的角色成员资格和管理权限。 此角色的成员可能会提升其权限，应监视其操作。|  
+|**db_owner**|**db_owner** 固定数据库角色的成员可以执行数据库的所有配置和维护活动，还可以删除 [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]中的数据库。 （在 [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 和 Synapse Analytics 中，某些维护活动需要服务器级别权限，并且不能由 db_owners 执行。）|  
+|**db_securityadmin**|db_securityadmin 固定数据库角色的成员可以仅修改自定义角色的角色成员资格和管理权限。 此角色的成员可能会提升其权限，应监视其操作。|  
 |**db_accessadmin**|**db_accessadmin** 固定数据库角色的成员可以为 Windows 登录名、Windows 组和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名添加或删除数据库访问权限。|  
 |**db_backupoperator**|**db_backupoperator** 固定数据库角色的成员可以备份数据库。|  
 |**db_ddladmin**|**db_ddladmin** 固定数据库角色的成员可以在数据库中运行任何数据定义语言 (DDL) 命令。|  
@@ -86,9 +87,9 @@ ms.locfileid: "80664465"
 
 ![fixed_database_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-database-roles.png)
 
-## <a name="special-roles-for-sssds_md-and-sssdw_md"></a>[!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 和 [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]的特殊角色
+## <a name="special-roles-for-sssds_md-and-azure-synapse"></a>[!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 和 Azure Synapse 的特殊角色
 
-这些数据库角色仅存在于虚拟 master 数据库中。 他们的权限仅限于在 master 中执行的操作。 只能向这些角色添加 master 中的数据库用户。 无法向这些角色添加登录名，但可以基于登录名创建用户，然后向角色添加用户。 也可以向这些角色添加 master 中包含的数据库用户。 不过，如果向 master 中的 dbmanager  角色添加包含的数据库用户，这些用户无法用于新建数据库。
+这些数据库角色仅存在于虚拟 master 数据库中。 他们的权限仅限于在 master 中执行的操作。 只能向这些角色添加 master 中的数据库用户。 无法向这些角色添加登录名，但可以基于登录名创建用户，然后向角色添加用户。 也可以向这些角色添加 master 中包含的数据库用户。 不过，如果向 master 中的 dbmanager 角色添加包含的数据库用户，这些用户无法用于新建数据库。
 
 |角色名称|说明|  
 |--------------------|-----------------|
@@ -96,7 +97,7 @@ ms.locfileid: "80664465"
 |**loginmanager** | 可以创建和删除虚拟 master 数据库中的登录名。|
 
 > [!NOTE]
-> 服务器级别主体和 Azure Active Directory 管理员（如果已配置）具有 [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 和 [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)] 中的所有权限，且无需成为任何角色的成员。 有关详细信息，请参阅 [SQL 数据库身份验证和授权：授予访问权限](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/)。 
+> 服务器级别主体和 Azure Active Directory 管理员（如果已配置）具有 [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 和 Azure Synapse 中的所有权限，且无需成为任何角色的成员。 有关详细信息，请参阅 [SQL 数据库身份验证和授权：授予访问权限](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/)。 
   
 ## <a name="msdb-roles"></a>msdb 角色  
  msdb 数据库中包含下表显示的特殊用途的角色。  
@@ -128,8 +129,8 @@ ms.locfileid: "80664465"
 |[DROP ROLE (Transact-SQL)](../../../t-sql/statements/drop-role-transact-sql.md)|Command|从数据库中删除角色。|  
 |[sp_addrole (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)|Command|在当前数据库中创建新的数据库角色。|  
 |[sp_droprole (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)|Command|从当前数据库中删除数据库角色。|  
-|[sp_addrolemember (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)|Command|为当前数据库中的数据库角色添加数据库用户、数据库角色、Windows 登录名或 Windows 组。 [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] 除外的所有平台应改为使用 `ALTER ROLE` 。|  
-|[sp_droprolemember (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)|Command|从当前数据库的 SQL Server 角色中删除安全帐户。 [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] 除外的所有平台应改为使用 `ALTER ROLE` 。|
+|[sp_addrolemember (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)|Command|为当前数据库中的数据库角色添加数据库用户、数据库角色、Windows 登录名或 Windows 组。 除 [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] 和 Azure Synapse 外，所有平台都应改为使用 `ALTER ROLE` 。|  
+|[sp_droprolemember (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)|Command|从当前数据库的 SQL Server 角色中删除安全帐户。 除 [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] 和 Azure Synapse 外，所有平台都应改为使用 `ALTER ROLE` 。|
 |[GRANT](../../../t-sql/statements/grant-transact-sql.md)| 权限 | 向角色添加权限。
 |[DENY](../../../t-sql/statements/deny-transact-sql.md)| 权限 | 拒绝向角色授予权限。
 |[REVOKE](../../../t-sql/statements/revoke-transact-sql.md)| 权限 | 撤消以前授予或拒绝的权限。

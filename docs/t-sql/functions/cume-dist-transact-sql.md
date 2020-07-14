@@ -16,15 +16,15 @@ helpviewer_keywords:
 - CUME_DIST function
 - analytic functions, CUME_DIST
 ms.assetid: 491b07f3-9ffd-4cdd-93e5-5abb636fc5ef
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 05906cfd0e72531bf332ebca4215df047eb8e3fd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 21ee42a6901d24a0dcdd01c5c096a73cca4d95e4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68026450"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732464"
 ---
 # <a name="cume_dist-transact-sql"></a>CUME_DIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
@@ -44,7 +44,7 @@ CUME_DIST( )
 ## <a name="arguments"></a>参数  
 OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_)  
 
-_partition\_by\_clause_ 将 FROM 子句结果集划分为要应用函数的分区。 如果未指定 _partition\_by\_clause_ 参数，则 `CUME_DIST` 将查询结果集的所有行视为单个组。 _order\_by\_clause_ 确定操作发生的逻辑顺序。 `CUME_DIST` 需要 _order\_by\_clause_。 `CUME_DIST` 将不接受 OVER 语法的 \<行或 range 子句>。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。
+_partition\_by\_clause_ 将 FROM 子句结果集划分为要应用函数的分区。 如果未指定 _partition\_by\_clause_ 参数，则 `CUME_DIST` 将查询结果集的所有行视为单个组。 _order\_by\_clause_ 确定操作发生的逻辑顺序。 `CUME_DIST` 需要 _order\_by\_clause_。 `CUME_DIST` 不接受 OVER 语法的 \<rows or range clause>。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。
   
 ## <a name="return-types"></a>返回类型
 **float(53)**

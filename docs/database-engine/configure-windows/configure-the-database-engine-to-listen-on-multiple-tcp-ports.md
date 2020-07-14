@@ -1,5 +1,6 @@
 ---
 title: 将数据库引擎配置为侦听多个 TCP 端口 | Microsoft Docs
+description: 熟悉表格格式数据流 (TDS) 端点。 了解如何使用它们将 SQL Server 数据库引擎配置为侦听多个 TCP 端口。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,17 +17,17 @@ helpviewer_keywords:
 - tabular data stream
 - multiple ports
 ms.assetid: 8e955033-06ef-403f-b813-3d8241b62f1f
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 3055750ac7f52c4dfaaae3cef94021d9d024a50a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dc92b34d57f2406c1b5aa59cce67840af4c21918
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012720"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85697758"
 ---
 # <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>将数据库引擎配置为侦听多个 TCP 端口
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   本主题说明如何使用 SQL Server 配置管理器在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中将 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 配置为侦听多个 TCP 端口。 为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]启用 TCP/IP 后， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将侦听连接点上是否有传入的连接（由 IP 地址和 TCP 端口号组成）。下列过程将创建一个表格格式数据流 (TDS) 端点，以便 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 侦听其他 TCP 端口。  
   
  创建第二个 TDS 端点的可能原因包括：  
@@ -79,18 +80,18 @@ ms.locfileid: "68012720"
   
 2.  展开 _<instance_name>_ 的“协议”，然后单击“TCP/IP”。  
   
-3.  在右窗格中，右键单击要启用的每个禁用的 IP 地址，再单击“启用”  。  
+3.  在右窗格中，右键单击要启用的每个禁用的 IP 地址，再单击“启用”。  
   
-4.  右键单击“IPAll”  ，再单击“属性”  。  
+4.  右键单击“IPAll”，再单击“属性”。  
   
-5.  在 **“TCP 端口”** 框中，键入要 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 侦听的端口（用逗号分隔）。 在本示例中，如果列出了默认端口 1433，则键入 **,1500** ，随后框中将显示 **1433,1500**，然后单击“确定”  。  
+5.  在 **“TCP 端口”** 框中，键入要 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 侦听的端口（用逗号分隔）。 在本示例中，如果列出了默认端口 1433，则键入 **,1500** ，随后框中将显示 **1433,1500**，然后单击“确定” 。  
   
     > [!NOTE]  
-    >  如果不想对所有 IP 地址启用端口，则在属性框中只为所需地址配置其他端口。 然后，在控制台窗格中，右键单击“TCP/IP”  ，单击“属性”  ，然后在“全部侦听”  框中选择“否”  。  
+    >  如果不想对所有 IP 地址启用端口，则在属性框中只为所需地址配置其他端口。 然后，在控制台窗格中，右键单击“TCP/IP”，单击“属性”，然后在“全部侦听”框中选择“否”。  
   
 6.  在左窗格中，单击 **“SQL Server 服务”** 。  
   
-7.  在右侧窗格中，右键单击“SQL Server  _<instance_name>_ ”，然后单击“重新启动”  。  
+7.  在右侧窗格中，右键单击“SQL Server  _<instance_name>_ ”，然后单击“重新启动”。  
   
      [!INCLUDE[ssDE](../../includes/ssde-md.md)]重新启动后，错误日志将列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 要侦听的端口。  
   

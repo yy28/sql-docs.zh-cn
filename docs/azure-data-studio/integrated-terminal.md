@@ -1,40 +1,39 @@
 ---
 title: 集成终端
-titleSuffix: Azure Data Studio
 description: 了解 Azure Data Studio 中的集成终端。
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.prod: sql
-ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
+ms.prod: azure-data-studio
+ms.technology: ''
+ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 13a0e3c17f45e0ba136d83f832d3531bc8059884
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ecd96299a29619bdf52894b36782f6d71e3a0c19
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67959536"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774597"
 ---
 # <a name="integrated-terminal"></a>集成终端
 
-在 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 中，可以打开一个集成终端，该终端最初从工作区的根目录启动。 可以便捷实现该操作，因为不必切换窗口或更改现有终端的状态，即可执行一个快速命令行任务。
+在 Azure Data Studio 中，可以打开一个集成终端，该终端最初从工作区的根目录启动。 可以便捷实现该操作，因为不必切换窗口或更改现有终端的状态，即可执行一个快速命令行任务。
 
 打开终端：
 
-* 利用反撇号字符，使用 Ctrl+` 键盘快捷方式  。
-* 使用“视图” | “集成终端”菜单命令   。
-* 从命令面板 (Ctrl+Shift+P)，使用“视图: 切换集成终端”命令    。
+* 利用反撇号字符，使用 Ctrl+` 键盘快捷方式。
+* 使用“视图” | “集成终端”菜单命令 。
+* 从命令面板 (Ctrl+Shift+P)，使用“视图: 切换集成终端”命令  。
 
 ![终端](media/integrated-terminal/terminal-screen.png)
 
 > [!NOTE]
-> 如果更喜欢在 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 外部工作，仍然可以使用 Explorer 的“在命令提示符中打开”命令（在 Mac 或 Linux 中则为“在终端中打开”命令）打开外部 shell   。
+> 如果更喜欢在 Azure Data Studio 外部工作，仍然可以使用 Explorer 的“在命令提示符中打开”命令（在 Mac 或 Linux 中则为“在终端中打开”命令）打开外部 shell 。
 
 ## <a name="managing-multiple-terminals"></a>管理多个终端
 
-可以创建多个打开到不同位置的终端，并轻松在它们之间导航。 可以通过点击 TERMINAL 面板右上角的加号图标或通过触发 Ctrl+Shift+` 命令来添加终端实例   。 这会在下拉列表中创建可用于切换的另一个条目。
+可以创建多个打开到不同位置的终端，并轻松在它们之间导航。 可以通过点击 TERMINAL 面板右上角的加号图标或通过触发 Ctrl+Shift+` 命令来添加终端实例 。 这会在下拉列表中创建可用于切换的另一个条目。
 
 ![多个终端](media/integrated-terminal/terminal-multiple-instances.png)
 
@@ -66,7 +65,7 @@ ms.locfileid: "67959536"
 > 如果要作为集成终端使用，shell 可执行文件必须是控制台应用程序，以便能够重定向 `stdin/stdout/stderr`。
 
 > [!TIP]
-> 集成终端 shell 使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 权限运行。 如果需要使用提升的（管理员）或不同的权限运行 shell 命令，可以在终端内使用平台实用程序，如 `runas.exe`。
+> 集成终端 shell 使用 Azure Data Studio 权限运行。 如果需要使用提升的（管理员）或不同的权限运行 shell 命令，可以在终端内使用平台实用程序，如 `runas.exe`。
 
 ### <a name="shell-arguments"></a>Shell 参数
 
@@ -89,7 +88,7 @@ ms.locfileid: "67959536"
 
 ## <a name="terminal-key-bindings"></a><a id="key-bindings"></a>终端键绑定
 
-“视图:  切换集成终端”命令会被绑定到“Ctrl +`”，以快速将该集成终端面板切入和切出视图  。
+“视图: 切换集成终端”命令会被绑定到“Ctrl +`”，以快速将该集成终端面板切入和切出视图。
 
 下面是用于在集成终端内快速导航的键盘快捷方式：
 
@@ -100,25 +99,25 @@ ms.locfileid: "67959536"
 |**Ctrl+Up**|向上滚动|  
 |**Ctrl+Down**|向下滚动|  
 |**Ctrl+PageUp**|向上滚动页面|  
-|Ctrl+PageDown |向下滚动页面|  
-|Ctrl+Home |滚动到顶部|  
-|Ctrl+End |滚动到底部|  
-|Ctrl+K |清除终端|  
+|Ctrl+PageDown|向下滚动页面|  
+|Ctrl+Home|滚动到顶部|  
+|Ctrl+End|滚动到底部|  
+|Ctrl+K|清除终端|  
 
 还有其他可用且可以绑定到首选键盘快捷方式的终端命令。
 
 它们分别是：
 
-* `workbench.action.terminal.focus`设置用户帐户 ：聚焦终端。 这类似于切换，不同之处是如果终端可见，则聚焦终端而不是隐藏它。
-* `workbench.action.terminal.focusNext`设置用户帐户 ：将焦点放在下一个终端实例上。
-* `workbench.action.terminal.focusPrevious`设置用户帐户 ：将焦点放在前一个终端实例上。
-* `workbench.action.terminal.kill`设置用户帐户 ：删除当前终端实例。
-* `workbench.action.terminal.runSelectedText`设置用户帐户 ：在终端实例中运行选定的文本。
-* `workbench.action.terminal.runActiveFile`设置用户帐户 ：在终端实例中运行活动文件。
+* `workbench.action.terminal.focus`：聚焦终端。 这类似于切换，不同之处是如果终端可见，则聚焦终端而不是隐藏它。
+* `workbench.action.terminal.focusNext`：将焦点放在下一个终端实例上。
+* `workbench.action.terminal.focusPrevious`：将焦点放在前一个终端实例上。
+* `workbench.action.terminal.kill`：删除当前终端实例。
+* `workbench.action.terminal.runSelectedText`：在终端实例中运行选定的文本。
+* `workbench.action.terminal.runActiveFile`：在终端实例中运行活动文件。
 
 ### <a name="run-selected-text"></a>运行所选文本
 
-要使用 `runSelectedText` 命令，请在编辑器中选择文本，然后通过命令面板 (Ctrl+Shift+P)  运行命令“终端: 在活动终端中运行所选文本”   。 终端随即尝试运行所选文本：
+要使用 `runSelectedText` 命令，请在编辑器中选择文本，然后通过命令面板 (Ctrl+Shift+P) 运行命令“终端: 在活动终端中运行所选文本” 。 终端随即尝试运行所选文本：
 
 ![运行所选文本](media/integrated-terminal/terminal_run_selected.png)
 
@@ -128,15 +127,15 @@ ms.locfileid: "67959536"
 
 复制和粘贴的键绑定遵循平台标准：
 
-* Linux：Ctrl+Shift+C 和 Ctrl+Shift+V  
-* Mac：Cmd+C 和 Cmd+V  
-* Windows：Ctrl+C 和 Ctrl+V  
+* Linux：Ctrl+Shift+C 和 Ctrl+Shift+V 
+* Mac：Cmd+C 和 Cmd+V 
+* Windows：Ctrl+C 和 Ctrl+V 
 
 ### <a name="find"></a>查找
 
-集成终端具有可通过 Ctrl+F 触发的基本查找功能  。
+集成终端具有可通过 Ctrl+F 触发的基本查找功能。
 
-如果想通过 Ctrl+F 转到 shell 而不是在 Linux 和 Windows 上启动“查找”小组件，需要删除键绑定，如下所示  ：
+如果想通过 Ctrl+F 转到 shell 而不是在 Linux 和 Windows 上启动“查找”小组件，需要删除键绑定，如下所示：
 
 ```js
 { "key": "ctrl+f", "command": "-workbench.action.terminal.focusFindWidget",
@@ -145,9 +144,9 @@ ms.locfileid: "67959536"
 
 ### <a name="rename-terminal-sessions"></a>重命名终端会话
 
-现在可以使用以下命令来重命名集成终端会话：“终端:  重命名”(`workbench.action.terminal.rename`)。 新名称显示在终端选择下拉列表中。
+现在可以使用以下命令来重命名集成终端会话：“终端:重命名”(`workbench.action.terminal.rename`)。 新名称显示在终端选择下拉列表中。
 
 ### <a name="forcing-key-bindings-to-pass-through-the-terminal"></a>强制通过终端传递键绑定
 
-虽然焦点位于集成终端，但许多键绑定不会起作用，因为击键被传递给终端本身并由终端本身使用。 可通过 `terminal.integrated.commandsToSkipShell` 设置解决此情况。 它包含一组命令名称，其键绑定会跳过 shell 处理，转由 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 键绑定系统来处理。 默认情况下，除少数常用的键绑定外，其中还包括所有终端键绑定。
+虽然焦点位于集成终端，但许多键绑定不会起作用，因为击键被传递给终端本身并由终端本身使用。 可通过 `terminal.integrated.commandsToSkipShell` 设置解决此情况。 它包含一组命令名称，其键绑定会跳过 shell 处理，转由 Azure Data Studio 键绑定系统来处理。 默认情况下，除少数常用的键绑定外，其中还包括所有终端键绑定。
 

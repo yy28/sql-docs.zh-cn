@@ -1,5 +1,6 @@
 ---
 title: 唯一粒子归属约束 | Microsoft Docs
+description: 了解在 XSD 架构的类型具有可能不明确的内容模型的情况下，唯一粒子归属 (UPA) 约束规则如何拒绝该架构。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 6bb879e9-a5ee-402e-94e4-fe8cec5966b0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2c64ff3f819e0d30db6654cbeed6cf5c19e43aa7
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 9d7b6de76fdb5310a5121908779d4565a4b6ff1c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665215"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729832"
 ---
 # <a name="unique-particle-attribution-constraint"></a>唯一粒子归属约束
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   在 XSD 中，复杂内容模型受唯一粒子归属 (UPA) 约束规则的约束。 此规则要求实例文档中的每个元素明确地完全对应于其父级的内容模型中的一个 `<xsd:element>` 或 `<xsd:any>` 粒子。 任何包含具有可能不明确的内容模型的类型的架构都将被拒绝。  
   
  导致不明确的最常见原因是具有可变出现范围（例如 minOccurs < maxOccurs）的 `<xsd:any>` 通配符字符和粒子。 例如，以下内容模型是不明确的，因为 <`e1`> 元素既可以与 `<xsd:element>` 元素匹配，也可以与 `<xsd:any>` 元素匹配。  
@@ -81,11 +82,11 @@ ms.locfileid: "80665215"
 ## <a name="finding-more-information"></a>查找详细信息  
  以下文档由 World Wide Web 联合会 (W3C) 发布，其中包含唯一粒子归属约束的技术说明：  
   
- “XML Schema Part 1: Structures Second Edition, W3C Proposed Edited Recommendation”：  
+ “XML 架构第 1 部分：结构第二版 - W3C 已修正的提议推荐”：  
   
--   第 3.8.6 节：Constraints on Model Group Schema Components  
+-   第 3.8.6 节：模型组架构组件的相关约束  
   
--   附录 H：Analysis of the Unique Particle Attribution Constraint (non-normative)  
+-   附录 H：唯一粒子归属约束（非标准）的分析  
   
  若要查看该文档，请访问 [http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?linkid=48881)。  
   

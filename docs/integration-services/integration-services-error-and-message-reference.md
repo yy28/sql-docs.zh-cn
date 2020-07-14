@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0f4ca1a9362abb1004829d34a3c7783850b1f3b0
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: fb8a305b4cec56e9c17209068f1a192edbaaaae7
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087387"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469352"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services 错误和消息引用
 
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  下表按编号的升序列出了每个类别中的预定义 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 错误、警告和信息性消息及其数值代码和符号名称。 其中每个错误都定义为 <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> 命名空间的 <xref:Microsoft.SqlServer.Dts.Runtime> 类中的一个字段。  
+  下表按编号的升序列出了每个类别中的预定义 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 错误、警告和信息性消息及其数值代码和符号名称。 其中每个错误都定义为 <xref:Microsoft.SqlServer.Dts.Runtime> 命名空间的 [Microsoft.SqlServer.Dts.Runtime.Hresults](/dotnet/api/microsoft.sqlserver.dts.runtime.hresults) 类中的一个字段。  
   
  当遇到不带其说明的错误代码时此列表可能非常有用。 目前该列表中不包括故障排除信息。  
   
@@ -1058,7 +1058,7 @@ ms.locfileid: "82087387"
 >|0xC00470AC|-1073450836|DTS_E_EXPREVALINVALIDCASTSCALE|值 %1!d! 在向数据类型“%2”转换时，为小数位数参数指定的值 %1!d! 无效。 小数位数必须在 %3!d! 到 %4!d! 范围内， 但该类型转换的小数位数值超出了此范围。 小数位数不能超过指定的精度且必须为正值。|  
 >|0xC00470AD|-1073450835|DTS_E_NONSORTEDOUTPUTHASSORTKEYPOSITIONS|“%1”的 IsSorted 属性为 False，但其输出列的 SortKeyPositions 的 %2!lu! 为非零值。|  
 >|0xC00470AF|-1073450833|DTS_E_EXPREVALCONDITIONALOPCODEPAGEMISMATCH|对于 %2 类型的条件运算“%1”的操作数，它们的代码页必须匹配。 左操作数的代码页与右操作数的代码页不匹配。 对于指定类型的条件运算符，代码页必须相同。|  
->|0xC00470B1|-1073450831|DTS_E_REFERENCEDMETADATABADCOUNT|输入“%1”(%2!d!)引用了输入“%3”(%4!d!)，但是它们的列数不相同。 输入 %5!d! 有 %6!d! 列，而输入 %7!d! 有 %8!d!  列。|  
+>|0xC00470B1|-1073450831|DTS_E_REFERENCEDMETADATABADCOUNT|输入“%1”(%2!d!)引用了输入“%3”(%4!d!)，但是它们的列数不相同。 输入 %5!d! 有 %6!d! 列，而输入 %7!d! 有 %8!d! 列。|  
 >|0xC00470B2|-1073450830|DTS_E_OBJECTLINEAGEIDNOTFOUND|不存在沿袭 ID 为 %1!d! 的对象。|  
 >|0xC00470B3|-1073450829|DTS_E_FILENAMEOUTPUTCOLUMNOTFOUND|找不到此文件名的输出列。|  
 >|0xC00470B4|-1073450828|DTS_E_FILENAMEOUTPUTCOLUMNINVALIDDATATYPE|此文件名的输出列不是 Null 结束的 Unicode 字符串，其数据类型为 DT_WSTR。|  
@@ -1418,7 +1418,7 @@ ms.locfileid: "82087387"
 >|0xC02020D6|-1071636266|DTS_E_TXSAMPLINGINVALIDROWS|行数 %2!ld! 对于“%1”属性无效。 此值必须大于 0。|  
 >|0xC02020D7|-1071636265|DTS_E_RAWSTRINGINPUTTOOLONG|要求适配器写入的字符串长度为 %1!I64d! 个字节，而所有数据的长度必须小于 4294967295 个字节。|  
 >|0xC02020D9|-1071636263|DTS_E_ATLEASTONEINPUTMUSTBEMAPPEDTOOUTPUT|没有输入映射到输出。 “%1”必须至少有一个输入列映射到输出列。|  
->|0xC02020DB|-1071636261|DTS_E_CANNOTCONVERTDATATYPESWITHDIFFERENTCODEPAGES|不支持从“%1”(代码页为 %2!d!) 到“%3”(代码页为 %4!d!)  分层。|  
+>|0xC02020DB|-1071636261|DTS_E_CANNOTCONVERTDATATYPESWITHDIFFERENTCODEPAGES|不支持从“%1”(代码页为 %2!d!) 到“%3”(代码页为 %4!d!) 分层。|  
 >|0xC02020DC|-1071636260|DTS_E_COLUMNNOTMAPPEDTOEXTERNALMETADATACOLUMN|%1 的外部元数据列映射无效。  外部元数据列 ID 不能为零。|  
 >|0xC02020DD|-1071636259|DTS_E_COLUMNMAPPEDTONONEXISTENTEXTERNALMETADATACOLUMN|“%1”被映射到不存在的外部元数据列。|  
 >|0xC02020E5|-1071636251|DTS_E_UNABLETOWRITELOBDATATOBUFFER|无法为列“%1”将类型为 DT_TEXT、DT_NTEXT 或 DT_IMAGE 的长对象数据写入数据流任务缓冲区。|  

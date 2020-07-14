@@ -1,5 +1,6 @@
 ---
 title: 发布数据和数据库对象 | Microsoft Docs
+description: 本文汇总了可在 SQL Server 中为复制发布的表和其他数据库对象。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -42,12 +43,12 @@ ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 5db7d4d73c4d6c03ce31935a9eb874bdd605fa99
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 89f88671ec51fedbfd075d82685892378fb5e840
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287602"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807311"
 ---
 # <a name="publish-data-and-database-objects"></a>发布数据和数据库对象
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -205,7 +206,7 @@ ms.locfileid: "76287602"
   
     |properties|sp_addarticle 中的参数|  
     |--------------|---------------------------------|  
-    |标识范围管理|\@auto_identity_range  （已弃用）和 \@identityrangemangementoption |  
+    |标识范围管理|\@auto_identity_range（已弃用）和 \@identityrangemangementoption|  
     |发布服务器标识范围|**\@pub_identity_range**|  
     |标识范围|**\@identity_range**|  
     |标识范围阈值|**\@threshold**|  
@@ -222,7 +223,7 @@ ms.locfileid: "76287602"
     |订阅服务器中载选项|**\@subscriber_upload_options**|  
     |条件性删除跟踪|**\@delete_tracking**|  
     |错误补偿|**\@compensate_for_errors**|  
-    |标识范围管理|\@auto_identity_range  （已弃用）和 \@identityrangemangementoption |  
+    |标识范围管理|\@auto_identity_range（已弃用）和 \@identityrangemangementoption|  
     |发布服务器标识范围|**\@pub_identity_range**|  
     |标识范围|**\@identity_range**|  
     |标识范围阈值|**\@threshold**|  

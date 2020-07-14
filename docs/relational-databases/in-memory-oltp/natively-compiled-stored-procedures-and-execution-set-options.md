@@ -1,5 +1,6 @@
 ---
 title: 本机编译存储过程和设置选项
+description: 会话的 SET 选项不影响存储过程的执行，除非某些 SET 选项导致存储过程无法运行。
 ms.custom: seo-dt-2019
 ms.date: 10/26/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: c1869cf7-9030-4d18-85d6-0e419a4e9af7
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f626c997ac0615eefa7caede0f379c22fed25ab6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e92014f68ad400183bf2e0332a9ea7d2f1a7b2d2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412567"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722429"
 ---
 # <a name="natively-compiled-stored-procedures-and-execution-set-options"></a>本机编译存储过程和执行的 Set 选项
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 如 [ATOMIC 块](atomic-blocks-in-native-procedures.md)中所述，ATOMIC 块中修复了“会话”选项。 由于 ATOMIC 块为必需，存储过程的执行不会受到会话的 SET 选项的影响。 但是，某些 SET 选项（例如 SET NOEXEC 和 SET SHOWPLAN_XML）会导致存储过程（包括本机编译存储过程）不执行。   
   

@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 430905eb-d218-458c-bd48-aeee6fbb7446
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d9ba9a26022c194316089bf13eb4c1d6811b76c4
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: a97a4b529921ab61f0f5dce83a059f5e9129b9a9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220459"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748486"
 ---
 # <a name="configure-backup-compression-sql-server"></a>配置备份压缩 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  安装时，默认情况下关闭了备份压缩。 备份压缩的默认行为是由  “备份压缩默认值”选项服务器级配置选项定义的。 但是，您可以在创建单个备份或计划一系列例行备份时覆盖服务器级默认设置。 若要更改服务器级默认设置，请参阅 [查看或配置备份压缩默认值服务器配置选项](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)。  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  安装时，默认情况下关闭了备份压缩。 备份压缩的默认行为是由“备份压缩默认值”选项服务器级配置选项定义的。 但是，您可以在创建单个备份或计划一系列例行备份时覆盖服务器级默认设置。 若要更改服务器级默认设置，请参阅 [查看或配置备份压缩默认值服务器配置选项](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)。  
   
 ## <a name="override-the-backup-compression-default"></a>覆盖备份压缩默认设置  
  您可以更改单个备份、备份作业或日志传送配置的备份压缩行为。  
@@ -35,7 +35,7 @@ ms.locfileid: "82220459"
   
      有关如何为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例查看或配置备份压缩默认值选项的信息，请参阅[查看或配置备份压缩默认值服务器配置选项](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)。  
   
-     你可以通过在以下任意对话框中指定  “压缩备份”或  “不压缩备份”以在创建备份时覆盖服务器备份压缩默认值：  
+     你可以通过在以下任意对话框中指定“压缩备份”或“不压缩备份”以在创建备份时覆盖服务器备份压缩默认值：  
   
     -   [备份数据库（“选项”页）](../../relational-databases/backup-restore/back-up-database-backup-options-page.md)  
   

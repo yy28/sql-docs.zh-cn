@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 7b9a56b3-face-452e-a655-147dac306ba1
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: eada4b2dbd5a76418ec8de9f988a6291e175da5f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 39617f16278c74f978d604cfee02d01e408c5854
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67914275"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894556"
 ---
 # <a name="revoke-server-permissions-transact-sql"></a>REVOKE 服务器权限 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   删除服务器级 GRANT 和 DENY 权限。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "67914275"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
   
 REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]   
     { TO | FROM } <grantee_principal> [ ,...n ]  
@@ -55,12 +55,12 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>参数  
- permission   
+ permission  
  指定可对服务器授予的权限。 有关权限的列表，请参阅本主题后面的“备注”部分。  
   
- { TO | FROM } \<grantee_principal> 指定要从中撤消权限的主体。  
+ { TO | FROM } \<grantee_principal>：指定要从中撤消权限的主体。  
   
- AS \<grantor_principal> 指定一个主体，执行此查询的主体从该主体获得撤消权限的权利。  
+ AS \<grantor_principal>：指定一个主体，执行该查询的主体从中获得撤消权限的权利。  
   
  GRANT OPTION FOR  
  指示要撤消向其他主体授予指定权限的权限。 不会撤消该权限本身。  
@@ -74,22 +74,22 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 > [!CAUTION]  
 >  如果对授予了 WITH GRANT OPTION 权限的权限执行级联撤消，将同时撤消该权限的 GRANT 和 DENY 权限。  
   
- SQL_Server_login   
+ SQL_Server_login  
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。  
   
- SQL_Server_login_mapped_to_Windows_login   
+ SQL_Server_login_mapped_to_Windows_login  
  指定映射到 Windows 登录名的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。  
   
- SQL_Server_login_mapped_to_Windows_group   
+ SQL_Server_login_mapped_to_Windows_group  
  指定映射到 Windows 组的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。  
   
- SQL_Server_login_mapped_to_certificate   
+ SQL_Server_login_mapped_to_certificate  
  指定映射到证书的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。  
   
- SQL_Server_login_mapped_to_asymmetric_key   
+ SQL_Server_login_mapped_to_asymmetric_key  
  指定映射到非对称密钥的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。  
   
- server_role   
+ server_role  
  指定用户定义的服务器角色。  
   
 ## <a name="remarks"></a>备注  
@@ -134,7 +134,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 |EXTERNAL ACCESS ASSEMBLY|CONTROL SERVER|  
 |IMPERSONATE ANY LOGIN<br /><br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|CONTROL SERVER|  
 |SELECT ALL USER SECURABLES<br /><br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|CONTROL SERVER|  
-|关机|CONTROL SERVER|  
+|SHUTDOWN|CONTROL SERVER|  
 |UNSAFE ASSEMBLY|CONTROL SERVER|  
 |VIEW ANY DATABASE|VIEW ANY DEFINITION|  
 |VIEW ANY DEFINITION|CONTROL SERVER|  

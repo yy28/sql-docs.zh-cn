@@ -1,5 +1,6 @@
 ---
 title: 内存优化表的统计信息 | Microsoft Docs
+description: 了解查询优化器如何使用内存优化表中的有关列的统计信息来创建可提高内存中 OLTP 查询性能的查询计划。
 ms.custom: ''
 ms.date: 10/23/2016
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: e644766d-1d1c-43d7-83ff-8ccfe4f3af9f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4a86f94a141b1f15e2bfb7e9ff3c4428f5b33707
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 47e5ae11ff712dae493b4f836998138f42f06f67
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76909767"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734958"
 ---
 # <a name="statistics-for-memory-optimized-tables"></a>内存优化表的统计信息
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   查询优化器使用有关列的统计信息来创建可提高查询性能的查询计划。 从数据库中的表收集统计信息并将它保存在数据库元数据中。  
   
@@ -49,7 +50,7 @@ ms.locfileid: "76909767"
 
 3. 手动重新编译本机编译的存储过程以从更新的统计信息中受益。
 
-统计信息的一次性脚本  ：对于在较低兼容级别下创建的内存优化表，可以运行以下 Transact-SQL 脚本一次，以更新所有内存优化表的统计信息，并实现在以后自动更新统计信息（假定对数据库启用了 AUTO_UPDATE_STATISTICS）：
+统计信息的一次性脚本：对于在较低兼容级别下创建的内存优化表，可以运行以下 Transact-SQL 脚本一次，以更新所有内存优化表的统计信息，并实现在以后自动更新统计信息（假定对数据库启用了 AUTO_UPDATE_STATISTICS）：
 
 ```
 -- Assuming AUTO_UPDATE_STATISTICS is already ON for your database:
@@ -74,7 +75,7 @@ GO
 -- UPDATE STATISTICS [dbo].[MyMemoryOptimizedTable];
 ```
 
-验证是否已启用自动更新  ：以下脚本将验证在内存优化表中的统计信息是否启用了自动更新。 在运行前面的脚本后，它将在所有统计信息对象的 `1` 列中返回 `auto-update enabled` 。
+验证是否已启用自动更新：以下脚本将验证在内存优化表中的统计信息是否启用了自动更新。 在运行前面的脚本后，它将在所有统计信息对象的 `1` 列中返回 `auto-update enabled` 。
 
 ```
 SELECT 

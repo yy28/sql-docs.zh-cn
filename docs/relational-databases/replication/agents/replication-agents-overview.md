@@ -1,5 +1,6 @@
 ---
 title: 复制代理概述 | Microsoft Docs
+description: 了解 SQL Server 复制用于执行与跟踪更改和分发数据相关的任务的代理。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -25,12 +26,12 @@ ms.assetid: a35ecd7d-f130-483c-87e3-ddc8927bb91b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d4aba7ca9e46725d771ba36c50ccc4e380fabae7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 237bb89915a606e33ffadbbf62584ed801721494
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288102"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807821"
 ---
 # <a name="replication-agents-overview"></a>复制代理概述
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

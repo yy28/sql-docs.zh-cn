@@ -1,6 +1,6 @@
 ---
 title: 恢复可用性组数据库
-description: 介绍使用 SQL Server Management Studio (SSMS)、Transact-SQL (T-SQL) 或 SQL PowerShell 恢复在 Always On 可用性组中已暂停的数据库的步骤。
+description: 在 SQL Server 中使用 SQL Server Management Studio、Transact-SQL 或 PowerShell，恢复 Always On 可用性组中已挂起的可用性数据库。
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 20e9147b-e985-4caa-910e-fc4b38dbf9a1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 64a0bf6fff2869834f30a9e0e7a6694088550c8e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c8e44e677210316a74f44d8300ad0e10d8feece9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822601"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893120"
 ---
 # <a name="resume-an-availability-database-sql-server"></a>恢复可用性数据库 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   您可以通过使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中的 PowerShell，在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中恢复已挂起的可用性数据库。 恢复挂起的数据库会将数据库置于 SYNCHRONIZING 状态。 恢复主数据库还将恢复挂起主数据库时导致挂起的任何辅助数据库。 如果任何辅助数据库是从承载辅助副本的服务器实例中本地挂起的，则该辅助数据库必须进行本地恢复。 一旦给定的辅助数据库和相应的主数据库处于 SYNCHRONIZING 状态，则在辅助数据库上将恢复数据同步。  
   
 > [!NOTE]  
@@ -53,11 +53,11 @@ ms.locfileid: "74822601"
   
 1.  在对象资源管理器中，连接到承载要恢复的数据库所在的可用性副本的服务器实例，然后展开服务器树。  
   
-2.  依次展开“Always On 高可用性”  节点和“可用性组”  节点。  
+2.  依次展开“Always On 高可用性”节点和“可用性组”节点。  
   
 3.  展开该可用性组。  
   
-4.  展开“可用性数据库”  节点，右键单击该数据库，然后单击“恢复数据移动”  。  
+4.  展开“可用性数据库”节点，右键单击该数据库，然后单击“恢复数据移动”。  
   
 5.  在 **“恢复数据移动”** 对话框中，单击 **“确定”** 。  
   

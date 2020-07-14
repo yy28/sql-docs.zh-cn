@@ -1,5 +1,6 @@
 ---
 title: 将 EXPLICIT 模式与 FOR XML 一起使用 | Microsoft Docs
+description: 了解 FOR XML EXPLICIT 模式如何为从查询结果中生成 XML 提供最大的灵活性。
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: cd64762cced69019e1d58414b43af061933c4437
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 193eae657a73f6801546c7234b141dae8f422e67
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665025"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736549"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>将 EXPLICIT 模式与 FOR XML 一起使用
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   如主题 [使用 FOR XML 构造 XML](../../relational-databases/xml/for-xml-sql-server.md)中所述，使用 RAW 和 AUTO 模式不能很好地控制从查询结果生成的 XML 的形状。 但是，对于要从查询结果生成 XML，EXPLICIT 模式会提供非常好的灵活性。  
   
  必须以特定的方式编写 EXPLICIT 模式查询，以便将有关所需的 XML 的附加信息（如 XML 中的所需嵌套）显式指定为查询的一部分。 根据所请求的 XML，编写 EXPLICIT 模式查询可能会很烦琐。 您会发现 [使用 PATH 模式](../../relational-databases/xml/use-path-mode-with-for-xml.md) （具有嵌套）相对编写 EXPLICIT 模式查询而言更加简单。  
@@ -30,7 +31,7 @@ ms.locfileid: "80665025"
  因为将所需的 XML 描述为 EXPLICIT 模式查询的一部分，所以必须确保生成的 XML 格式正确且有效。  
   
 ## <a name="rowset-processing-in-explicit-mode"></a>EXPLICIT 模式下的行集处理  
- EXPLICIT 模式会将由查询执行生成的行集转换为 XML 文档。 为使 EXPLICIT 模式生成 XML 文档，行集必须具有特定的格式。 这需要您编写 SELECT 查询以生成具有特定格式的行集（通用表  ），以便处理逻辑随后可以生成所需的 XML。  
+ EXPLICIT 模式会将由查询执行生成的行集转换为 XML 文档。 为使 EXPLICIT 模式生成 XML 文档，行集必须具有特定的格式。 这需要您编写 SELECT 查询以生成具有特定格式的行集（通用表 ），以便处理逻辑随后可以生成所需的 XML。  
   
  首先，查询必须生成下列两个元数据列：  
   
@@ -112,7 +113,7 @@ ElementName!TagNumber!AttributeName!Directive
  下面是对格式各部分的说明。  
   
  *ElementName*  
- 是所生成元素的通用标识符。 例如，如果将 **Customers** 指定为 *ElementName*，将生成 \<Customers> 元素。  
+ 是所生成元素的通用标识符。 例如，如果将 Customers 指定为 ElementName，将生成 \<Customers> 元素。  
   
  *TagNumber*  
  是分配给元素的唯一标记值。 在两个元数据列（ **Tag** 和 **Parent**）的帮助下，此值将确定所得到的 XML 中的元素的嵌套。  

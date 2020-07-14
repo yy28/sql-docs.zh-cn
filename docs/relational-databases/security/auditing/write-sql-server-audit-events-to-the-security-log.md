@@ -1,5 +1,6 @@
 ---
 title: 将 SQL Server 审核事件写入安全日志 | Microsoft Docs
+description: 了解如何将 SQL Server 审核事件写入 Windows 安全日志。 了解使用该日志的限制和局限。
 ms.custom: ''
 ms.date: 09/21/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 6fabeea3-7a42-4769-a0f3-7e04daada314
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0c998b4d5ed5988d5a5e2a01bf0cbd611157f665
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 68228106bcd2620cb684bd61efec353fdb49585c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68095104"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85884837"
 ---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>将 SQL Server 审核事件写入安全日志  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 在高度安全环境中，Windows 安全日志是写入记录对象访问的事件的合适位置。 其他审核位置也受支持，但是更易被篡改。  
   
@@ -55,7 +56,7 @@ ms.locfileid: "68095104"
   
 1.  使用管理权限打开命令提示符。  
   
-    1.  在“开始”  菜单中，依次指向“所有程序”  、“附件”  ，右键单击“命令提示符”  ，然后单击“以管理员身份运行”  。  
+    1.  在“开始”菜单中，依次指向“所有程序”、“附件”，右键单击“命令提示符”，然后单击“以管理员身份运行”。  
   
     2.  在 **“用户帐户控制”** 对话框打开时，单击 **“继续”** 。  
   
@@ -75,11 +76,11 @@ ms.locfileid: "68095104"
   
 3.  在“本地安全策略”工具中，依次展开 **“安全设置”** 、 **“本地策略”** ，然后单击 **“用户权限分配”** 。  
   
-4.  在结果窗格中，双击“生成安全审核”  。  
+4.  在结果窗格中，双击“生成安全审核”。  
   
 5.  在 **“本地安全设置”** 选项卡上，单击 **“添加用户或组”** 。  
   
-6.  在“选择用户、计算机或组”  对话框中，键入用户帐户的名称，例如 **domain1\user1**，然后单击“确定”  ，或单击“高级”  并搜索帐户。  
+6.  在“选择用户、计算机或组”对话框中，键入用户帐户的名称，例如 **domain1\user1**，然后单击“确定”，或单击“高级”并搜索帐户。  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -95,7 +96,7 @@ ms.locfileid: "68095104"
   
 3.  在“本地安全策略”工具中，依次展开 **“安全设置”** 、 **“本地策略”** ，然后单击 **“审核策略”** 。  
   
-4.  在结果窗格中，双击“审核对象访问”  。  
+4.  在结果窗格中，双击“审核对象访问”。  
   
 5.  在 **“本地安全设置”** 选项卡上的 **“审核这些操作”** 区域中，选择 **“成功”** 和 **“失败”** 。  
   

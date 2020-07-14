@@ -1,5 +1,6 @@
 ---
 title: 内存优化顾问 | Microsoft Docs
+description: 在 SQL Server Management Studio 中使用内存优化顾问有助于将基于磁盘的表迁移到内存优化表。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0a148e1725d1ce74d206e85cd9a8fd2b88f18eb0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9579587e39b4becd16be9bcae1e206703eb4720c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68050189"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730864"
 ---
 # <a name="memory-optimization-advisor"></a>内存优化顾问
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   借助事务性能分析报告（请参阅 [确定是否应将表或存储过程移植到内存中 OLTP](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)），你可以了解数据库中的哪些表在移植后使用内存中 OLTP 会给你带来好处。 找到要移植以使用内存中 OLTP 的表之后，可使用 SQL Server Management Studio 中的内存优化顾问帮助你将基于磁盘的表迁移到内存优化的表中。  
   
@@ -53,7 +54,7 @@ ms.locfileid: "68050189"
   
  可操作警告将在左侧列中具有一个黄色的三角形。 如果存在可操作警告，您应该退出迁移，解决警告问题，然后重新开始迁移过程。 如果您没有解决警告问题，则迁移的表可能会导致失败。  
   
- 单击 **“生成报表”** 可生成包含这些警告的 HTML 报表。 单击“下一步”继续。   
+ 单击 **“生成报表”** 可生成包含这些警告的 HTML 报表。 单击“下一步”继续。  
   
 ### <a name="review-optimization-options"></a>检查优化选项  
  下一个屏幕可用于修改用于迁移到内存中 OLTP 的选项：  
@@ -91,7 +92,7 @@ ms.locfileid: "68050189"
 > [!WARNING]  
 >  只有在您明了与非持久表相关联的数据丢失风险的情况下，才选择此选项。  
   
- 单击“下一步”  以继续。  
+ 单击“下一步”以继续。  
   
 ### <a name="review-primary-key-conversion"></a>检查主键转换  
  下一个屏幕是 **“检查主键转换”** 。 内存优化顾问将检测到表中是否有一个或多个主键，并且基于主键元数据填充列的列表。 否则，如果您想要迁移到持久的内存优化表，则必须创建主键。  

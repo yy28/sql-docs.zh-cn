@@ -1,5 +1,6 @@
 ---
 title: Always Encrypted 加密 | Microsoft Docs
+description: 了解在 SQL Server 和 Azure SQL 数据库的 Always Encrypted 功能中派生加密材料的加密算法和机制。
 ms.custom: ''
 ms.date: 10/30/2019
 ms.prod: sql
@@ -12,15 +13,15 @@ ms.assetid: ae8226ff-0853-4716-be7b-673ce77dd370
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b0fe0e861e8139416250ffc2677230dbc2aeab6d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 364dbefa72708910d54977600ecb47942a5d96e1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73594407"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85627554"
 ---
 # <a name="always-encrypted-cryptography"></a>Always Encrypted 加密
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
   本文档介绍加密算法和机制，以派生在 [和](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) 中 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 始终加密 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)]功能中使用的加密材料。  
   
@@ -36,7 +37,7 @@ ms.locfileid: "73594407"
 ## <a name="data-encryption-algorithm"></a>数据加密算法  
  始终加密使用 **AEAD_AES_256_CBC_HMAC_SHA_256** 算法来加密数据库中的数据。  
   
- AEAD_AES_256_CBC_HMAC_SHA_256 派生自 [https://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05](https://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05) 中的规范草案  。 它按照 Encrypt-then-MAC 方法，将经验证加密方案配合关联数据使用。 也就是说，首先加密纯文本，然后基于生成的密码文本生成 MAC。  
+ AEAD_AES_256_CBC_HMAC_SHA_256 派生自 [https://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05](https://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05) 中的规范草案。 它按照 Encrypt-then-MAC 方法，将经验证加密方案配合关联数据使用。 也就是说，首先加密纯文本，然后基于生成的密码文本生成 MAC。  
   
  为了隐藏模式， **AEAD_AES_256_CBC_HMAC_SHA_256** 将使用操作的密码块链 (CBC) 模式，其中初始值送入了名为初始化向量 (IV) 的系统。 可在 [https://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf](https://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf) 找到 CBC 模式的完整说明。  
   
@@ -175,7 +176,7 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 |**xml**|N/A（不支持）|  
   
 ## <a name="net-reference"></a>.NET 参考  
- 有关本文档中讨论的算法的详细信息，请参阅 [.NET 参考](https://referencesource.microsoft.com/)中的 SqlAeadAes256CbcHmac256Algorithm.cs、SqlColumnEncryptionCertificateStoreProvider.cs 和 SqlColumnEncryptionCertificateStoreProvider.cs 文件    。  
+ 有关本文档中讨论的算法的详细信息，请参阅 [.NET 参考](https://referencesource.microsoft.com/)中的 SqlAeadAes256CbcHmac256Algorithm.cs、SqlColumnEncryptionCertificateStoreProvider.cs 和 SqlColumnEncryptionCertificateStoreProvider.cs 文件  。  
   
 ## <a name="see-also"></a>另请参阅  
  - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   

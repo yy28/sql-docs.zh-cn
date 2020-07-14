@@ -15,21 +15,21 @@ helpviewer_keywords:
 ms.assetid: d592b2b4-bc36-4eb9-9385-8fe4dff0dced
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5f6b63e0ff79f44b2900fb0f727436ed36401ee2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9ba6ba2d1238c75c29990a8ab2bd98ea419cc606
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68127461"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728381"
 ---
 # <a name="resource-database"></a>Resource 数据库
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Resource 数据库为只读数据库，它包含了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的所有系统对象。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统对象（如 sys.objects）在物理上保留在 Resource 数据库中，但在逻辑上却显示在每个数据库的 sys 架构中。 Resource 数据库不包含用户数据或用户元数据。  
   
  Resource 数据库可比较轻松快捷地升级到新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 在早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，进行升级需要删除和创建系统对象。 由于 Resource 数据库文件包含所有系统对象，因此，现在仅通过将单个 Resource 数据库文件复制到本地服务器便可完成升级。  
   
 ## <a name="physical-properties-of-resource"></a>Resource 的物理属性  
- Resource 数据库的物理文件名为 mssqlsystemresource.mdf 和 mssqlsystemresource.ldf。 这些文件位于 \<*drive*>:\Program Files\Microsoft SQL Server\MSSQL\<version>.\<*instance_name*>\MSSQL\Binn\，不应移动。 每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例都具有一个（也是唯一的一个）关联的 mssqlsystemresource.mdf 文件，并且实例间不共享此文件。  
+ Resource 数据库的物理文件名为 mssqlsystemresource.mdf 和 mssqlsystemresource.ldf。 这些文件位于 \<*drive*>:\Program Files\Microsoft SQL Server \MSSQL\<version>.\<*instance_name*>\MSSQL\Binn\ 中，不应移动。 每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例都具有一个（也是唯一的一个）关联的 mssqlsystemresource.mdf 文件，并且实例间不共享此文件。  
   
 > [!WARNING]  
 >  有时，升级和服务包会提供安装到 BINN 文件夹的新资源数据库。 不支持或建议更改资源数据库的位置。  

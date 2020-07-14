@@ -41,7 +41,7 @@
    sudo vi /etc/hosts
    ```
 
-   下面的示例演示了 node1 上的 `/etc/hosts`，并补充了 node1、node2 和 node3     。 在本文档中，node1 指托管主要副本的服务器  。 node2 和 node3 指托管次要副本的服务器   。
+   下面的示例演示了 node1 上的 `/etc/hosts`，并补充了 node1、node2 和 node3   。 在本文档中，node1 指托管主要副本的服务器。 node2 和 node3 指托管次要副本的服务器 。
 
     ```
     127.0.0.1   localhost localhost4 localhost4.localdomain4
@@ -77,7 +77,7 @@ ALTER EVENT SESSION  AlwaysOn_health ON SERVER WITH (STARTUP_STATE=ON);
 GO
 ```
 
-有关此 XE 会话的详细信息，请参阅 [AlwaysOn 扩展事件](https://msdn.microsoft.com/library/dn135324.aspx)。
+有关此 XE 会话的详细信息，请参阅 [Always On 扩展事件](../database-engine/availability-groups/windows/always-on-extended-events.md)。
 
 ## <a name="create-a-certificate"></a>创建证书
 

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 564e3500-c567-43dc-993b-9ab50e99cf3f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: fd74479464d23ab6ce85a92babf6ba92fa8baf49
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1bc39d9e7b3df8cdf7bb13afbefb25566623be67
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67984352"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766590"
 ---
 # <a name="deny-type-permissions-transact-sql"></a>DENY 类型权限 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   拒绝对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的类型的权限。  
 
@@ -33,7 +33,7 @@ ms.locfileid: "67984352"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 DENY permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name  
         TO <database_principal> [ ,...n ]  
     [ CASCADE ]  
@@ -51,11 +51,11 @@ DENY permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
 ```  
   
 ## <a name="arguments"></a>参数  
- permission   
+ permission  
  指定可对类型拒绝的权限。 有关权限的列表，请参阅本主题后面的“备注”部分。  
   
- ON TYPE :: [ schema_name.  ] type_name   
- 指定要对其拒绝权限的类型。 需要使用作用域限定符 (::)  。 如果未指定 schema_name，则使用默认架构  。 如果指定了 schema_name，则需要使用架构作用域限定符 (.)   。  
+ ON TYPE :: [ schema_name.  ] type_name  
+ 指定要对其拒绝权限的类型。 需要使用作用域限定符 (::)。 如果未指定 schema_name，则使用默认架构。 如果指定了 schema_name，则需要使用架构作用域限定符 (.)。  
   
  TO \<database_principal>  
  指定要对其拒绝权限的主体。  
@@ -66,47 +66,47 @@ DENY permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
  AS \<database_principal>  
  指定一个主体，执行该查询的主体从该主体获得拒绝授予该权限的权利。  
   
- Database_user   
+ Database_user  
  指定数据库用户。  
   
- Database_role   
+ Database_role  
  指定数据库角色。  
   
- Application_role   
+ Application_role  
    
  指定应用程序角色。  
   
- Database_user_mapped_to_Windows_User   
+ Database_user_mapped_to_Windows_User  
  
  指定映射到 Windows 用户的数据库用户。  
   
- Database_user_mapped_to_Windows_Group   
+ Database_user_mapped_to_Windows_Group  
  
  指定映射到 Windows 组的数据库用户。  
   
- Database_user_mapped_to_certificate   
+ Database_user_mapped_to_certificate  
  
  指定映射到证书的数据库用户。  
   
- Database_user_mapped_to_asymmetric_key   
+ Database_user_mapped_to_asymmetric_key  
   
  指定映射到非对称密钥的数据库用户。  
   
- Database_user_with_no_login   
+ Database_user_with_no_login  
  指定无相应服务器级主体的数据库用户。  
   
 ## <a name="remarks"></a>备注  
  类型是架构级的安全对象，包含于权限层次结构中作为其父级的架构中。  
   
 > [!IMPORTANT]  
->  GRANT、DENY 和 REVOKE 权限不适用于系统类型    。 可以为用户定义类型授予权限。 有关用户定义类型的详细信息，请参阅[使用 SQL Server 中的用户定义类型](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)。  
+>  GRANT、DENY 和 REVOKE 权限不适用于系统类型  。 可以为用户定义类型授予权限。 有关用户定义类型的详细信息，请参阅[使用 SQL Server 中的用户定义类型](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)。  
   
  下表列出了可拒绝的对类型最为具体的限定权限，以及隐含这些权限的更为通用的权限。  
   
 |类型权限|类型权限隐含的权限|架构权限隐含的权限|  
 |---------------------|--------------------------------|----------------------------------|  
 |CONTROL|CONTROL|CONTROL|  
-|在运行 CREATE 语句前执行|CONTROL|在运行 CREATE 语句前执行|  
+|EXECUTE|CONTROL|EXECUTE|  
 |REFERENCES|CONTROL|REFERENCES|  
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  

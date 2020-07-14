@@ -24,15 +24,15 @@ ms.assetid: df74fc36-20da-4efa-b412-c4e191786695
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 365abc8df7c64650e3be6c79bcd00725149ec25d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9fe651c706bcbe41ea688d0f9e661ff483a70d72
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68117302"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001495"
 ---
 # <a name="create-schema-transact-sql"></a>CREATE SCHEMA (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   在当前数据库中创建架构。 CREATE SCHEMA 事务还可以在新架构内创建表和视图，并可对这些对象设置 GRANT、DENY 或 REVOKE 权限。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68117302"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 CREATE SCHEMA schema_name_clause [ <schema_element> [ ...n ] ]  
@@ -59,7 +59,7 @@ CREATE SCHEMA schema_name_clause [ <schema_element> [ ...n ] ]
     }  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]  
@@ -69,22 +69,22 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
  *schema_name*  
  在数据库内标识架构的名称。  
   
- AUTHORIZATION owner_name   
+ AUTHORIZATION owner_name  
  指定将拥有架构的数据库级主体的名称。 此主体还可以拥有其他架构，并且可以不使用当前架构作为其默认架构。  
   
- table_definition   
+ table_definition  
  指定在架构内创建表的 CREATE TABLE 语句。 执行此语句的主体必须对当前数据库具有 CREATE TABLE 权限。  
   
- view_definition   
+ view_definition  
  指定在架构内创建视图的 CREATE VIEW 语句。 执行此语句的主体必须对当前数据库具有 CREATE VIEW 权限。  
   
- grant_statement   
+ grant_statement  
  指定可对除新架构外的任何安全对象授予权限的 GRANT 语句。  
   
- revoke_statement   
+ revoke_statement  
  指定可对除新架构外的任何安全对象撤消权限的 REVOKE 语句。  
   
- deny_statement   
+ deny_statement  
  指定可对除新架构外的任何安全对象拒绝授予权限的 DENY 语句。  
   
 ## <a name="remarks"></a>备注  
@@ -114,7 +114,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
   
  在某些情况下，用户可在没有数据库用户帐户（数据库中的数据库主体）的情况下使用数据库。 在以下情况下，可能会发生此错误：  
   
--   登录名具有 CONTROL SERVER 特权  。  
+-   登录名具有 CONTROL SERVER 特权。  
   
 -   Windows 用户没有单独的数据库用户帐户（数据库中的数据库主体），但以具有数据库用户帐户（Windows 组的数据库主体）的 Windows 组成员的身份访问数据库。  
   
@@ -123,7 +123,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
  若要允许基于 Windows 组的用户创建和拥有对象，此行为很有必要。 但这种行为可能将导致意外创建架构和用户。 为了避免隐式创建用户和架构，请尽可能显式创建数据库主体和分配默认架构。 或者，在数据库中创建对象时，使用由两部分或三部分组成的对象名称显式声明现有架构。  
 
 > [!NOTE]
->  不能在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 上隐式创建 Azure Active Directory 用户。 从外部提供程序创建 Azure AD 用户必须检查 AAD 中的用户状态，因此创建用户将会失败，并出现错误 2760：指定的架构名称 "\<user_name@domain>" 不存在或不具有使用权限。 然后出现错误 2759：由于前面的错误，CREATE SCHEMA 失败  。 要解决这些错误，请首先从外部提供程序创建 Azure AD 用户，然后重新运行创建该对象的语句。
+>  不能在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 上隐式创建 Azure Active Directory 用户。 从外部提供程序创建 Azure AD 用户必须检查 AAD 中的用户状态，因此创建用户将会失败，并出现错误 2760：指定的架构名称“\<user_name@domain>”不存在或你不具有使用它权限。 然后出现错误 2759：由于前面的错误，CREATE SCHEMA 失败。 要解决这些错误，请首先从外部提供程序创建 Azure AD 用户，然后重新运行创建该对象的语句。
  
   
 ## <a name="deprecation-notice"></a>不推荐使用的声明  
@@ -161,7 +161,7 @@ GO
   
 ```  
 CREATE SCHEMA Sales;  
-GO;  
+GO
   
 CREATE TABLE Sales.Region   
 (Region_id int NOT NULL,  

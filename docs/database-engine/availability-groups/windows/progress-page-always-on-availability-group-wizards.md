@@ -15,19 +15,19 @@ f1_keywords:
 ms.assetid: bd3b0306-8384-4120-a1c9-03825f0ae26a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 87201ed5c3d2368f54e2ffb0c57391322066a30b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2c11f154d37543488cebbc0bf6bafb1f002253f9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68014475"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888093"
 ---
 # <a name="progress-page-always-on-availability-group-wizards"></a>“结果”页（Always On 可用性组向导）
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   使用此对话框可以查看您在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中运行的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]向导的进度。 进度栏指示该向导正在执行的步骤的相对进度。  
   
-## <a name="uielement-list"></a>UIElement 列表  
+## <a name="ui-element-list"></a>UI 元素列表  
  **更多详细信息**  
  单击下箭头可显示进度网格，其中按顺序列出所有已完成的步骤，后面跟有当前正在进行的操作。 该网格包含以下列：  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68014475"
 |结果|说明|  
 |------------|-----------------|  
 |**错误**|指示此步骤操作遇到了错误。 单击该链接可显示一个描述该错误的消息对话框。|  
-|正在进行（完成百分比）   |指示操作正在发生，并且估计此步骤已完成的百分比。|  
+|正在进行（完成百分比）|指示操作正在发生，并且估计此步骤已完成的百分比。|  
 |**Success**|指示此步骤操作已成功完成。|  
   
  **更少详细信息**  

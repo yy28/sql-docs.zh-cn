@@ -15,15 +15,15 @@ ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 926822356c6e7f9f4d775ca0710ee2f815c0e7f5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1cc39f3a2a849bd60cda71c5988eeb0cadcd9a88
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74094498"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737595"
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>创建 SQL Server 代理作业以存档数据库邮件和事件日志
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   数据库邮件及其附件的副本与数据库邮件事件日志一起保存在 **msdb** 表中。 您可能希望定期减小这些表的大小并对不再需要的邮件和事件进行存档。 下列过程将创建一个 SQL Server 代理作业，以自动完成上述过程。  
   
 -   **开始之前：** [先决条件](#Prerequisites)、[建议](#Recommendations)、[权限](#Permissions)  
@@ -49,9 +49,9 @@ ms.locfileid: "74094498"
   
     1.  将所有邮件从数据库邮件表中复制到一个格式为 **DBMailArchive_** _<year_month>_ 且用上一个月份命名的新表中。  
   
-    2.  将与第一个步骤中复制的邮件相关的附件从数据库邮件表中复制到格式为 **DBMailArchive_Attachments_** <year_month>  且用上一个月份命名的新表中。  
+    2.  将与第一个步骤中复制的邮件相关的附件从数据库邮件表中复制到格式为 **DBMailArchive_Attachments_** <year_month> 且用上一个月份命名的新表中。  
   
-    3.  将数据库邮件事件日志中与第一个步骤中复制的邮件相关的事件从数据库邮件表中复制到格式为 **DBMailArchive_Log_** <year_month>  且用上一个月份命名的新表中。  
+    3.  将数据库邮件事件日志中与第一个步骤中复制的邮件相关的事件从数据库邮件表中复制到格式为 **DBMailArchive_Log_** <year_month> 且用上一个月份命名的新表中。  
   
     4.  从数据库邮件表中删除已传输邮件项的记录。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "74094498"
   
 ## <a name="to-create-a-sql-server-agent-job"></a>创建 SQL Server 代理作业  
   
-1.  在对象资源管理器中，展开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理，右键单击“作业”  ，然后单击“新建作业”  。  
+1.  在对象资源管理器中，展开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理，右键单击“作业”，然后单击“新建作业”。  
   
 2.  在 **“新建作业”** 对话框的 **“名称”** 框中，键入 **“存档数据库邮件”** 。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "74094498"
   
 2.  在 **“步骤名称”** 框中，键入 **“复制数据库邮件项”** 。  
   
-3.  在“类型”  框中，选择“Transact-SQL 脚本 (T-SQL)”  。  
+3.  在“类型”框中，选择“Transact-SQL 脚本 (T-SQL)”。  
   
 4.  在 **“数据库”** 框中，选择 **msdb**。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "74094498"
   
 2.  在 **“步骤名称”** 框中，键入 **“复制数据库邮件附件”** 。  
   
-3.  在“类型”  框中，选择“Transact-SQL 脚本 (T-SQL)”  。  
+3.  在“类型”框中，选择“Transact-SQL 脚本 (T-SQL)”。  
   
 4.  在 **“数据库”** 框中，选择 **msdb**。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "74094498"
   
 2.  在 **“步骤名称”** 框中，键入 **“复制数据库邮件日志”** 。  
   
-3.  在“类型”  框中，选择“Transact-SQL 脚本 (T-SQL)”  。  
+3.  在“类型”框中，选择“Transact-SQL 脚本 (T-SQL)”。  
   
 4.  在 **“数据库”** 框中，选择 **msdb**。  
   
@@ -160,7 +160,7 @@ ms.locfileid: "74094498"
   
 2.  在 **“步骤名称”** 框中，键入 **“从数据库邮件中删除行”** 。  
   
-3.  在“类型”  框中，选择“Transact-SQL 脚本 (T-SQL)”  。  
+3.  在“类型”框中，选择“Transact-SQL 脚本 (T-SQL)”。  
   
 4.  在 **“数据库”** 框中，选择 **msdb**。  
   
@@ -182,7 +182,7 @@ ms.locfileid: "74094498"
   
 2.  在 **“步骤名称”** 框中，键入 **“从数据库邮件事件日志中删除行”** 。  
   
-3.  在“类型”  框中，选择“Transact-SQL 脚本 (T-SQL)”  。  
+3.  在“类型”框中，选择“Transact-SQL 脚本 (T-SQL)”。  
   
 4.  在 **“命令”** 框中，键入以下语句以从数据库邮件事件日志中删除早于当前月份的行：  
   
@@ -208,7 +208,7 @@ ms.locfileid: "74094498"
   
 5.  在 **“频率”** 区域中，选择相应的选项以便定期运行该作业，比如每月一次。  
   
-6.  在“每天频率”  区域中，选择“在 \<时间> 执行一次”  。  
+6.  在“每天频率”区域中，选择“在 \<time> 执行一次” 。  
   
 7.  验证其他选项已按您希望的那样进行了配置，然后单击 **“确定”** 保存计划。  
   

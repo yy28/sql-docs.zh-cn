@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: d63ef5b6535c34e9b5d2087d96dbe615c7f1d8b3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 58c30fc1e88ec3b7e90549f28b13f91e3330675d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558537"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897250"
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>运行故障转移群集实例 - Linux 上的 SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 本文介绍如何在 Linux 上运行 SQL Server 故障转移群集实例 (FCI)。 如果尚未在 Linux 上创建 SQL Server FCI，请参阅[配置故障转移群集实例 - Linux 上的 SQL Server](sql-server-linux-shared-disk-cluster-configure.md)。 
 
@@ -43,9 +43,9 @@ FCI 的故障转移类似于 Windows Server 故障转移群集 (WSFC)。 如果�
    sudo pcs resource move <FCIResourceName> <NewHostNode> 
    ```
 
-   \<FCIResourceName > 是 SQL Server FCI 的 Pacemaker 资源名称。
+   \<FCIResourceName> 是 SQL Server FCI 的 Pacemaker 资源名称。
 
-   \<NewHostNode > 是要托管 FCI 的群集节点的名称。 
+   \<NewHostNode> 是要托管 FCI 的群集节点的名称。 
 
    不会获得任何确认。
 
@@ -53,7 +53,7 @@ FCI 的故障转移类似于 Windows Server 故障转移群集 (WSFC)。 如果�
 
 3.  故障转移完成后，通过发出 `sudo pcs resource clear <FCIResourceName>` 来删除该约束。 
 
-\<FCIResourceName > 是 FCI 的 Pacemaker 资源名称。 
+\<FCIResourceName> 是 FCI 的 Pacemaker 资源名称。 
 
 ## <a name="manual-failover-sles"></a>手动故障转移 (SLES)
 
@@ -66,7 +66,7 @@ crm resource migrate <FCIResourceName> <NewHostNode>
 
 \<FCIResourceName> 是故障转移群集实例的资源名称。 
 
-\<NewHostNode > 是新目标主机的名称。 
+\<NewHostNode> 是新目标主机的名称。 
 
 
 <!---

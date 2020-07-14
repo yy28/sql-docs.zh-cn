@@ -1,5 +1,6 @@
 ---
 title: 服务器属性（“安全性”页）| Microsoft Docs
+description: 熟悉 SQL Server 中的服务器安全设置。 了解控制服务器身份验证、代理帐户和其他功能的选项。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.serverproperties.security.f1
 ms.assetid: b8a131c7-e7bd-4203-bf26-234f1ebfe622
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 11a8e63d75f4194727344009dfac6f2fed77edaa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e864eced90a190dc7e7c0f204691ed02b9a2cff8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68031435"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724004"
 ---
 # <a name="server-properties---security-page"></a>服务器属性 -“安全性”页
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   使用此页可以查看或修改服务器安全选项。  
   
 ## <a name="server-authentication"></a>服务器身份验证  
@@ -37,7 +38,7 @@ ms.locfileid: "68031435"
 >  更改安全性配置后需要重新启动服务。 将服务器身份验证改为 SQL Server 和 Windows 身份验证模式时，不会自动启用 SA 帐户。 若要使用 SA 帐户，请执行带有 ENABLE 选项的 [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) 命令。  
   
 ## <a name="login-auditing"></a>登录审核  
- 无   
+ 无  
  关闭登录审核。  
   
  **仅限失败的登录**  

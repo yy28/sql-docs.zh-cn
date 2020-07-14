@@ -1,5 +1,6 @@
 ---
 title: 在 OPENXML 中指定元属性 | Microsoft Docs
+description: 了解如何在 OPENXML 语句中指定元属性特性，以便从 XML 节点提取信息。
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 29bfd1c6-3f9a-43c4-924a-53d438e442f4
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9354bf1c1539a7ba83f1af1eafdb27ed99041d76
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fd34411b00bfa89c5c69b0d71073ee1c0d4d2280
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68000703"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728121"
 ---
 # <a name="specify-metaproperties-in-openxml"></a>在 OPENXML 中指定元属性
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   XML 文档中的元属性特性用于描述 XML 项（例如元素节点、属性节点或其他任何 DOM 节点）的属性。 这些特性并不实际存在于 XML 文档文本中。 但是，OPENXML 将为所有 XML 项提供这些元属性。 通过这些元属性可以提取 XML 节点的信息（例如本地定位和命名空间信息）。 这些信息将提供比文字表现形式更加详细的信息。  
   
  可以使用 *ColPattern* 参数将这些元属性映射到 OPENXML 语句中的行集列。 这些列将包含它们所映射到的元属性的值。 有关 OPENXML 语法的详细信息，请参见 [OPENXML (Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md)。  
@@ -44,7 +45,7 @@ ms.locfileid: "68000703"
 |**\@mp:localname**|存储节点名的本地部分。 与前缀及命名空间 URI 一起用于命名元素节点或属性节点。|  
 |**\@mp:namespaceuri**|提供当前元素的命名空间 URI。 如果此特性的值为 NULL，则表明不存在命名空间。|  
 |**\@mp:prefix**|存储当前元素名的命名空间前缀。<br /><br /> 如果不存在前缀 (NULL) 且给定了 URI，则表明指定的命名空间为默认命名空间。 如果没有给定 URI，则表明没有附加命名空间。|  
-|**\@mp:prev**|存储相对于节点的前一个同级元素。 此特性将提供有关元素在文档中的排序顺序的信息。<br /><br /> **mp:prev\@** 包含父元素相同的上一个同级元素的 XML ID。 如果元素是同级列表的首个元素，\@mp:prev 为空。|  
+|**\@mp:prev**|存储相对于节点的前一个同级元素。 此特性将提供有关元素在文档中的排序顺序的信息。<br /><br /> \@mp:prev 包含父元素相同的上一个同级元素的 XML ID。 如果元素是同级列表的首个元素，\@mp:prev 为空。|  
 |**\@mp:xmltext**|用于处理目的。 它是元素及其属性以及 OPENXML 溢出处理中所使用的子元素的文本序列化。|  
   
  下表显示了使您得以检索关于层次结构的信息的其他父属性。  

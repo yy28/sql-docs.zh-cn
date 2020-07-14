@@ -4,22 +4,22 @@ titleSuffix: SQL Server
 description: 安装、更新和卸载 Linux 上的 SQL Server。 本文介绍了联机、脱机和无人参与的方案。
 author: VanMSFT
 ms.author: vanto
-ms.date: 03/13/2020
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: ea308fca55cd5cc19a6d8cd74427a87e8fbe9ee2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 915aaabeedeb7c240495e635ebb679c252112385
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79319837"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897317"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Linux 上的 SQL Server 的安装指南
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 本文提供有关在 Linux 上安装、更新和卸载 SQL Server 2017 和 SQL Server 2019 的指导。
 
@@ -47,7 +47,7 @@ SQL Server 在 Red Hat Enterprise Linux (RHEL)、SUSE Linux Enterprise Server (S
 
 | 平台 | 支持的版本 | 获取
 |-----|-----|-----
-| **Red Hat Enterprise Linux** | 版本 7.3、7.4、7.5、7.6 | [获取 RHEL 7.6](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
+| **Red Hat Enterprise Linux** | 7.3、7.4、7.5、7.6、8  | [获取 RHEL 7.6](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
 | **SUSE Linux Enterprise Server** | v12 SP2 | [获取 SLES v12 SP2](https://www.suse.com/products/server)
 | **Ubuntu** | 16.04 | [获取 Ubuntu 16.04](http://releases.ubuntu.com/xenial/)
 | **Docker 引擎** | 1.8+ | [获取 Docker](https://www.docker.com/get-started)
@@ -57,19 +57,14 @@ SQL Server 在 Red Hat Enterprise Linux (RHEL)、SUSE Linux Enterprise Server (S
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-| 平台 | 支持的版本 | 获取
-|-----|-----|-----
-| **Red Hat Enterprise Linux** | 7.3、7.4、7.5、7.6、8.0 | [获取 RHEL 8.0](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
-| **SUSE Linux Enterprise Server** | v12 SP2、SP3、SP4、SP5 | [获取 SLES v12](https://www.suse.com/products/server)
-| **Ubuntu** | 16.04、18.04 | [Get Ubuntu 18.04](http://releases.ubuntu.com/bionic/)
-| **Docker 引擎** | 1.8+ | [获取 Docker](https://www.docker.com/get-started)
+[!INCLUDE [linux-supported-platfoms-2019](../includes/linux-supported-platfoms-2019.md)]
 
 ::: moniker-end
 
 Microsoft 还支持使用 OpenShift 和 Kubernetes 部署和管理 SQL Server 容器。
 
 > [!NOTE]
-> SQL Server 在 Linux 上针对之前列出的发行版进行了测试且受支持。 如果选择在不受支持的操作系统上安装 SQL Server，请查看 [Microsoft SQL Server 的技术支持策略](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)的“支持策略”部分，以了解支持含义  。
+> SQL Server 在 Linux 上针对之前列出的发行版进行了测试且受支持。 如果选择在不受支持的操作系统上安装 SQL Server，请查看 [Microsoft SQL Server 的技术支持策略](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)的“支持策略”部分，以了解支持含义。
 
 ## <a name="system-requirements"></a><a id="system"></a> 系统要求
 
@@ -78,21 +73,21 @@ SQL Server 对 Linux 具有以下系统要求：
 |||
 |-----|-----|
 | **内存** | 2 GB |
-| **文件系统** | XFS 或 EXT4（其他文件系统均不受支持，如 BTRFS）    。 |
+| **文件系统** | XFS 或 EXT4（其他文件系统均不受支持，如 BTRFS）  。 |
 | **磁盘空间** | 6 GB |
 | **处理器速度** | 2 GHz |
 | **处理器核心数** | 2 个核心 |
 | **处理器类型** | 仅兼容 x64 |
 
-如果在生产中使用网络文件系统 (NFS) 远程共享，请注意以下支持要求  ：
+如果在生产中使用网络文件系统 (NFS) 远程共享，请注意以下支持要求：
 
-- 使用 NFS 版本 4.2 或更高版本  。 较早版本的 NFS 不支持现代文件系统常用的必需功能，例如 fallocate 和稀疏文件创建。
-- 仅在 NFS 装载上查找 /var/opt/mssql 目录  。 不支持其他文件，例如 SQL Server 系统二进制文件。
+- 使用 NFS 版本 4.2 或更高版本。 较早版本的 NFS 不支持现代文件系统常用的必需功能，例如 fallocate 和稀疏文件创建。
+- 仅在 NFS 装载上查找 /var/opt/mssql 目录。 不支持其他文件，例如 SQL Server 系统二进制文件。
 - 安装远程共享时，请确保 NFS 客户端使用“nolock”选项。
 
 ## <a name="configure-source-repositories"></a><a id="repositories"></a> 配置源存储库
 
-安装或升级 SQL Server 时，从配置的 Microsoft 存储库中获取最新版本的 SQL Server。 快速入门使用 SQL Server 的累积更新 (CU) 存储库  。 但是可以改为配置 GDR  存储库。 有关存储库以及如何配置存储库的详细信息，请参阅[为 Linux 上的 SQL Server 配置存储库](sql-server-linux-change-repo.md)。
+安装或升级 SQL Server 时，从配置的 Microsoft 存储库中获取最新版本的 SQL Server。 快速入门使用 SQL Server 的累积更新 (CU) 存储库。 但是可以改为配置 GDR 存储库。 有关存储库以及如何配置存储库的详细信息，请参阅[为 Linux 上的 SQL Server 配置存储库](sql-server-linux-change-repo.md)。
 
 ## <a name="install-sql-server"></a><a id="platforms"></a> 安装 SQL Server
 
@@ -111,7 +106,7 @@ SQL Server 对 Linux 具有以下系统要求：
 
 ## <a name="update-or-upgrade-sql-server"></a><a id="upgrade"></a> 更新或升级 SQL Server
 
-若要将“mssql-server”包更新到最新版本，请根据你的平台使用以下命令之一  ：
+若要将“mssql-server”包更新到最新版本，请根据你的平台使用以下命令之一：
 
 | 平台 | 包更新命令 |
 |-----|-----|
@@ -121,7 +116,7 @@ SQL Server 对 Linux 具有以下系统要求：
 
 这些命令将下载最新包，并替换 `/opt/mssql/` 下的二进制文件。 此操作不会影响到用户生成的数据库和系统数据库。
 
-若要升级 SQL Server，请首先[将配置的存储库更改](sql-server-linux-change-repo.md)为所需的 SQL Server 版本。 然后使用同一个 update  命令升级 SQL Server 版本。 这仅当两个存储库之间支持升级路径时才可行。
+若要升级 SQL Server，请首先[将配置的存储库更改](sql-server-linux-change-repo.md)为所需的 SQL Server 版本。 然后使用同一个 update 命令升级 SQL Server 版本。 这仅当两个存储库之间支持升级路径时才可行。
 
 ## <a name="rollback-sql-server"></a><a id="rollback"></a> 回滚 SQL Server
 
@@ -146,7 +141,7 @@ SQL Server 对 Linux 具有以下系统要求：
 
 1. 如果尚未安装，请安装 [SQL Server 命令行工具](sql-server-linux-setup-tools.md)。
 
-1. 使用“sqlcmd”运行显示 SQL Server 版本的 Transact-SQL 命令  。
+1. 使用“sqlcmd”运行显示 SQL Server 版本的 Transact-SQL 命令。
 
    ```bash
    sqlcmd -S localhost -U SA -Q 'select @@VERSION'
@@ -154,7 +149,7 @@ SQL Server 对 Linux 具有以下系统要求：
 
 ## <a name="uninstall-sql-server"></a><a id="uninstall"></a> 卸载 SQL Server
 
-若要删除 Linux 上的“mssql-server”包，请根据你的平台使用以下命令之一  ：
+若要删除 Linux 上的“mssql-server”包，请根据你的平台使用以下命令之一：
 
 | 平台 | 包删除命令 |
 |-----|-----|
@@ -175,7 +170,7 @@ sudo rm -rf /var/opt/mssql/
 - 按照[快速入门](#platforms)中的初始步骤注册存储库并安装 SQL Server。
 - 运行 `mssql-conf setup` 时，设置[环境变量](sql-server-linux-configure-environment-variables.md)并使用 `-n`（无提示）选项。
 
-以下示例使用“MSSQL_PID”环境变量配置 SQL Server 的开发人员版本  。 它还接受 EULA (ACCEPT_EULA) 并设置 SA 用户密码 (MSSQL_SA_PASSWORD)   。 该 `-n` 参数执行无提示安装，安装期间从环境变量中提取配置值。
+以下示例使用“MSSQL_PID”环境变量配置 SQL Server 的开发人员版本。 它还接受 EULA (ACCEPT_EULA) 并设置 SA 用户密码 (MSSQL_SA_PASSWORD) 。 该 `-n` 参数执行无提示安装，安装期间从环境变量中提取配置值。
 
 ```bash
 sudo MSSQL_PID=Developer ACCEPT_EULA=Y MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' /opt/mssql/bin/mssql-conf -n setup
@@ -198,7 +193,7 @@ sudo MSSQL_PID=Developer ACCEPT_EULA=Y MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>'
 
 1. **下载适用于平台的数据库引擎包**。 在[发行说明](../linux/sql-server-linux-release-notes.md)的包详细信息部分找到包下载链接。
 
-1. **将下载的包移动到 Linux 计算机**。 如果使用了不同的计算机下载包，则可以通过“scp”命令将包移至你的 Linux 计算机  。
+1. **将下载的包移动到 Linux 计算机**。 如果使用了不同的计算机下载包，则可以通过“scp”命令将包移至你的 Linux 计算机。
 
 1. **安装数据库引擎包**。 根据你的平台使用以下命令之一。 将此示例中的包文件名替换为下载的确切名称。
 
@@ -221,7 +216,7 @@ sudo MSSQL_PID=Developer ACCEPT_EULA=Y MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>'
 
    解决缺少的依赖项后，尝试再次安装 mssql-server 包。
 
-1. **完成 SQL Server 安装**。 使用“mssql-conf”完成 SQL Server 安装  ：
+1. **完成 SQL Server 安装**。 使用“mssql-conf”完成 SQL Server 安装：
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup

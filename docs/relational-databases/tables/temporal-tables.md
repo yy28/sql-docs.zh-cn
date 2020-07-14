@@ -11,16 +11,16 @@ ms.assetid: e442303d-4de1-494e-94e4-4f66c29b5fb9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7afb01d003e6221b30ea194ff711555b7e982f41
-ms.sourcegitcommit: 7ed12a64f7f76d47f5519bf1015d19481dd4b33a
+ms.openlocfilehash: 6f8ea5d4b1e91a3f1c3bf66dab4565ab457933c5
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80873173"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999851"
 ---
 # <a name="temporal-tables"></a>临时表
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 SQL Server 2016 以数据库功能的形式引入了对时态表（也称为由系统控制版本的时态表）的支持，其附带的内置支持可以提供表中存储的数据在任意时间点的相关信息，而不仅仅是数据在当前时刻正确的信息。 临时表是 ANSI SQL 2011 中引入的数据库功能。
 
@@ -47,7 +47,7 @@ SQL Server 2016 以数据库功能的形式引入了对时态表（也称为由�
   - [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)
   - [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)
   - [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)
-- **视频：** 有关时态表的 20 分钟讨论，请参阅 [Temporal in SQL Server 2016](https://channel9.msdn.com/Shows/Data-Exposed/Temporal-in-SQL-Server-2016)（SQL Server 2016 中的时态表）。
+- 视频：有关时态表的 20 分钟讨论，请参阅 [Temporal in SQL Server 2016](https://channel9.msdn.com/Shows/Data-Exposed/Temporal-in-SQL-Server-2016)（SQL Server 2016 中的时态表）。
 
 ## <a name="what-is-a-system-versioned-temporal-table"></a>什么是由系统控制版本的时态表
 
@@ -72,7 +72,7 @@ SQL Server 2016 以数据库功能的形式引入了对时态表（也称为由�
  表的系统版本控制是以一对表（当前表和历史记录表）的形式实现的。 在其中每个表中，以下两个附加 **datetime2** 列用于定义每行的有效期：
 
 - 期限开始时间列：系统在此列（通常表示为 **SysStartTime** 列）中记录行的开始时间。
-- 期限结束时间列：系统在此列（通常表示为 SysEndTime 列）中记录行的结束时间  。
+- 期限结束时间列：系统在此列（通常表示为 SysEndTime 列）中记录行的结束时间。
 
 当前表包含每个行的当前值。 历史记录表包含每个行的每个先前值（如果有），以及该行生效的开始时间和结束时间。
 
@@ -99,14 +99,14 @@ WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.EmployeeHistory));
 - **INSERTS：** 对于 **INSERT**，系统基于系统时钟将 **SysStartTime** 列的值设置为当前事务的开始时间（位于 UTC 时区），并将 **SysEndTime** 列的值指定为最大值 9999-12-31。 这会将行标记为已打开。
 - **UPDATES：** 对于 **UPDATE**，系统将行的先前值存储在历史记录表中，并基于系统时钟将 **SysEndTime** 列的值设置为当前事务的开始时间（位于 UTC 时区）。 这会将行标记为已关闭，并记录该行有效的期限。 在当前表中，将使用新值更新行，同时，系统会基于系统时钟将 **SysStartTime** 列的值设置为事务的开始时间（位于 UTC 时区）。 在当前表中， **SysEndTime** 列的更新行值将保留最大值 9999-12-31。
 - **DELETES：** 对于 **DELETE**，系统将行的先前值存储在历史记录表中，并基于系统时钟将 **SysEndTime** 列的值设置为当前事务的开始时间（位于 UTC 时区）。 这会将行标记为已关闭，并记录前一行有效的期限。 在当前表中，该行将被删除。 对当前表的查询不会返回此行。 处理历史记录数据的查询将返回已关闭的行的数据。
-- **MERGE：** 对于 MERGE，根据 MERGE 语句中被指定为操作的内容，该操作的行为与最多执行了三个语句（INSERT、UPDATE 和/或 DELETE）完全一样      。
+- **MERGE：** 对于 MERGE，根据 MERGE 语句中被指定为操作的内容，该操作的行为与最多执行了三个语句（INSERT、UPDATE 和/或 DELETE）完全一样    。
 
 > [!IMPORTANT]
 > 系统 datetime2 列中记录的时间基于事务本身的开始时间。 例如，在单个事务中插入的所有行具有对应于 **SYSTEM_TIME** 的开始时间段列中记录的相同 UTC 时间。
 
 ## <a name="how-do-i-query-temporal-data"></a>如何查询时态数据
 
-**SELECT** 语句 **FROM** _\<table\>_ 子句提供新的 **FOR SYSTEM_TIME** 子句和五个特定于时态表的从属子句，用于跨当前表和历史记录表查询数据。 支持对通过多个联接传播的，以及通过多个临时表顶层的视图传播的单个表直接使用这种新的 **SELECT** 语句语法。
+SELECT 语句 FROM\<table\> 子句提供新的 FOR SYSTEM_TIME 子句和五个特定于临时表的子子句，用于跨当前表和历史记录表查询数据 。 支持对通过多个联接传播的，以及通过多个临时表顶层的视图传播的单个表直接使用这种新的 **SELECT** 语句语法。
 
 ![Temporal-Querying](../../relational-databases/tables/media/temporal-querying.PNG "Temporal-Querying")
 
@@ -120,7 +120,7 @@ SELECT * FROM Employee
 ```
 
 > [!NOTE]
-> FOR SYSTEM_TIME 筛选出有效期持续时间为零 (SysStartTime = SysEndTime)    的行。
+> FOR SYSTEM_TIME 筛选出有效期持续时间为零 (SysStartTime = SysEndTime)   的行。
 > 如果你对同一事务中的同一个主键执行多项更新，将生成这些行。
 > 在这种情况下，临时查询只会返回发生事务之前的行版本，以及发生事务之后实际生成的行版本。
 > 如果需要在分析中包括这些行，请直接查询历史记录表。
@@ -129,14 +129,14 @@ SELECT * FROM Employee
 
 |表达式|符合条件的行|说明|
 |----------------|---------------------|-----------------|
-|**AS OF**<date_time>|SysStartTime \<= date_time AND SysEndTime > date_time|返回一个表，其行中包含过去指定时间点的实际（当前）值。 在内部，时态表及其历史记录表之间将进行联合，然后筛选结果以返回在 <date_time> 参数指定的时间点有效的行中的值  。 如果 system_start_time_column_name 值小于或等于 <date_time> 参数值，并且 system_end_time_column_name 值大于 <date_time> 参数值，则此行的值视为有效     。|
-|**FROM**<start_date_time>**TO**<end_date_time>|SysStartTime < end_date_time AND SysEndTime > start_date_time|返回一个表，其中包含在指定的时间范围内保持活动状态的所有行版本的值，不管这些版本是在 FROM 自变量的 <start_date_time> 参数之前开始活动，还是在 TO 自变量的 <end_date_time> 参数值之后停止活动   。 在内部，将在临时表及其历史记录表之间进行联合，然后筛选结果，以返回在指定时间范围内任意时间保持活动状态的所有行版本的值。 正好在 FROM 终结点定义的下限时间停止活动的行将被排除，正好在 TO 终结点定义的上限时间开始活动的记录也将被排除。|
+|**AS OF**<date_time>|SysStartTime \<= date_time AND SysEndTime > date_time|返回一个表，其行中包含过去指定时间点的实际（当前）值。 在内部，时态表及其历史记录表之间将进行联合，然后筛选结果以返回在 <date_time> 参数指定的时间点有效的行中的值。 如果 system_start_time_column_name 值小于或等于 <date_time> 参数值，并且 system_end_time_column_name 值大于 <date_time> 参数值，则此行的值视为有效   。|
+|**FROM**<start_date_time>**TO**<end_date_time>|SysStartTime < end_date_time AND SysEndTime > start_date_time|返回一个表，其中包含在指定的时间范围内保持活动状态的所有行版本的值，不管这些版本是在 FROM 自变量的 <start_date_time> 参数之前开始活动，还是在 TO 自变量的 <end_date_time> 参数值之后停止活动 。 在内部，将在临时表及其历史记录表之间进行联合，然后筛选结果，以返回在指定时间范围内任意时间保持活动状态的所有行版本的值。 正好在 FROM 终结点定义的下限时间停止活动的行将被排除，正好在 TO 终结点定义的上限时间开始活动的记录也将被排除。|
 |**BETWEEN**<start_date_time>**AND**<end_date_time>|SysStartTime \<= end_date_time AND SysEndTime > start_date_time|与上面的 **FOR SYSTEM_TIME FROM** <start_date_time>**TO** <end_date_time> 描述相同，不过，返回的行表包括在 <end_date_time> 终结点定义的上限时间激活的行。|
 |**CONTAINED IN** (<start_date_time> , <end_date_time>)|SysStartTime >= start_date_time AND SysEndTime \<= end_date_time|返回一个表，其中包含在 CONTAINED IN 参数的两个日期时间值定义的时间范围内打开和关闭的所有行版本的值。 正好在下限时间激活的记录，或者在上限时间停止活动的行将包括在内。|
 |**ALL**|所有行|返回属于当前表和历史记录表的行的联合。|
 
 > [!NOTE]
-> （可选）可以选择隐藏这些期限列，以便不显式引用这些期限列的查询不会返回这些列（**SELECT \* FROM** _\<table\>_ 方案）。 若要返回隐藏的列，只需在查询中显式引用隐藏的列。 同样，如果这些新的期限列不存在， **INSERT** 和 **BULK INSERT** 语句将会继续（并且列值将自动填充）。 有关使用 **HIDDEN** 子句的详细信息，请参阅 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md) 和 [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)的支持。
+> （可选）可以选择隐藏这些期限列，以便不显式引用这些期限列的查询不会返回这些列（SELECT \* FROM\<table\> 方案）。 若要返回隐藏的列，只需在查询中显式引用隐藏的列。 同样，如果这些新的期限列不存在， **INSERT** 和 **BULK INSERT** 语句将会继续（并且列值将自动填充）。 有关使用 **HIDDEN** 子句的详细信息，请参阅 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md) 和 [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)的支持。
 
 ## <a name="next-steps"></a>后续步骤
 

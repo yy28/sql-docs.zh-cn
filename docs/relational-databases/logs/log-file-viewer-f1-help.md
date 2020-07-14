@@ -1,5 +1,6 @@
 ---
 title: 日志文件查看器 F1 帮助 | Microsoft Docs
+description: 从 F1 帮助获取常用列、权限和 SQL Server 中日志文件查看器其他选项的指导。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2243845c-4880-4aa0-9ee8-0a97a128996b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a507bd5425686e7a33a8bbf49e6c8669effed031
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: caa7cb4a5a6f5e5f2d3b951f56c3fde0b30978c2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68084087"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784037"
 ---
 # <a name="log-file-viewer-f1-help"></a>日志文件查看器 F1 帮助
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   日志文件查看器显示来自许多不同组件的日志信息。 打开日志文件查看器后，请使用 **“选择日志”** 窗格选择要显示的日志。 每个日志显示适合于该类别日志的列。  
   
  日志是否可用取决于日志文件查看器的打开方式。 有关详细信息，请参阅 [打开日志文件查看器](../../relational-databases/logs/open-log-file-viewer.md)。  
@@ -40,7 +41,7 @@ ms.locfileid: "68084087"
  刷新选定日志的视图。 在应用任何筛选器设置时， **“刷新”** 按钮重新从目标服务器中读取选定的日志。  
   
  **筛选器**  
- 打开一个对话框，你可以使用该对话框指定用于筛选日志文件的设置，例如“连接”  、“日期”  或其他“常规”  筛选条件。  
+ 打开一个对话框，你可以使用该对话框指定用于筛选日志文件的设置，例如“连接” 、“日期” 或其他“常规”  筛选条件。  
   
  **搜索**  
  在日志文件中搜索特定文本。 不支持在搜索中使用通配符。  
@@ -49,13 +50,13 @@ ms.locfileid: "68084087"
  停止加载日志文件条目。 例如，如果远程或脱机日志文件需要较长时间才能加载，并且您只想查看最新的条目，则可以使用此选项。  
   
  **日志文件摘要**  
- 此信息窗格显示日志文件筛选摘要。 如果未对文件进行筛选，您将看到以下文本： **“未应用任何筛选器”** 。 如果对日志应用了筛选器，你将看到以下文本：“基于以下条件筛选日志条目: **筛选条件>”** \<。  
+ 此信息窗格显示日志文件筛选摘要。 如果未对文件进行筛选，您将看到以下文本： **“未应用任何筛选器”** 。 如果对日志应用了筛选器，将看到以下文本：基于以下条件筛选日志项：\<filter criteria>。  
   
  **所选行详细信息**  
  选择一行可以在页面底部显示有关所选事件行的其他详细信息。 在网格中，通过将列拖动到的新位置可以重新排列各列的顺序。 通过将网格标题中的列分隔条向左或向右拖动，可以调列的大小。 双击网格标题中的列分隔条，可以按内容宽度自动调整列的大小。  
   
  **实例**  
- 发生事件的实例的名称。 这显示为：计算机名称\\实例名称。  
+ 发生事件的实例的名称。 这显示为：计算机名称\\实例名称 。  
   
 ## <a name="frequently-displayed-columns"></a>经常显示的列  
  **Date**  

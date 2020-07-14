@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 091da030-a768-4aa3-9509-cc23bd719cea
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 33c1a7821f532249c13400c3937706267e22bf7d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ead3a0c0b9feeeffff7491995c63926ec64ad5f4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67914187"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765942"
 ---
 # <a name="revoke-symmetric-key-permissions-transact-sql"></a>REVOKE 对称密钥权限 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   撤消对对称密钥授予和拒绝的权限。  
    
@@ -32,7 +32,7 @@ ms.locfileid: "67914187"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
   
 REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]    
     ON SYMMETRIC KEY :: symmetric_key_name   
@@ -52,10 +52,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>参数  
- permission   
+ permission  
  指定可对对称密钥撤消的权限。 有关权限的列表，请参阅本主题后面的“备注”部分。  
   
- ON SYMMETRIC KEY ::asymmetric_key_name   
+ ON SYMMETRIC KEY ::asymmetric_key_name  
  指定要对其撤消权限的对称密钥。 需要作用域限定符 ::。  
   
  GRANT OPTION  
@@ -70,33 +70,33 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 > [!CAUTION]  
 >  如果对授予了 WITH GRANT OPTION 权限的权限执行级联撤消，将同时撤消该权限的 GRANT 和 DENY 权限。  
   
- { TO | FROM } \<database_principal>  
+ { TO | FROM } \<*database_principal*>  
  指定要从中撤消权限的主体。  
   
- AS \<database_principal> 指定一个主体，执行此查询的主体从该主体获得撤销该权限的权利。  
+ AS \<database_principal>：指定一个主体，执行该查询的主体从中获得撤消权限的权利。  
   
- Database_user   
+ Database_user  
  指定数据库用户。  
   
- Database_role   
+ Database_role  
  指定数据库角色。  
   
- Application_role   
+ Application_role  
  指定应用程序角色。  
   
- Database_user_mapped_to_Windows_User   
+ Database_user_mapped_to_Windows_User  
  指定映射到 Windows 用户的数据库用户。  
   
- Database_user_mapped_to_Windows_Group   
+ Database_user_mapped_to_Windows_Group  
  指定映射到 Windows 组的数据库用户。  
   
- Database_user_mapped_to_certificate   
+ Database_user_mapped_to_certificate  
  指定映射到证书的数据库用户。  
   
- Database_user_mapped_to_asymmetric_key   
+ Database_user_mapped_to_asymmetric_key  
  指定映射到非对称密钥的数据库用户。  
   
- Database_user_with_no_login   
+ Database_user_with_no_login  
  指定无相应服务器级主体的数据库用户。  
   
 ## <a name="remarks"></a>备注  

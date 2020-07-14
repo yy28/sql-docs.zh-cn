@@ -17,16 +17,16 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 9fcc5f3ebca860e35365bd640a3473b478e06b49
-ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
+ms.openlocfilehash: 33b12c2b68c067db1a47159c201f5cd04a9b1c45
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80550165"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759134"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>SQL Server 2017 中弃用的数据库引擎功能
 
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
 
   本主题介绍 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 中仍然可用但不推荐使用的 [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]功能。 在新的应用程序中不应使用这些不推荐使用的功能。  
   
@@ -50,7 +50,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 
 ## <a name="features-deprecated-in-the-next-version-of-sql-server"></a>SQL Server 的下一版本中弃用的功能
 
-以下 SQL Server 数据库引擎功能在下一个 SQL Server 版本中将被弃用。 请不要在新的开发工作中使用这些功能，并尽快修改当前还在使用这些功能的应用程序。 功能名称值在跟踪事件中显示为 ObjectName，而在性能计数器和 `sys.dm_os_performance_counters` 中显示为实例名称  。 **功能 ID** 值在跟踪事件中作为 ObjectId。
+以下 SQL Server 数据库引擎功能在下一个 SQL Server 版本中将被弃用。 请不要在新的开发工作中使用这些功能，并尽快修改当前还在使用这些功能的应用程序。 功能名称值在跟踪事件中显示为 ObjectName，而在性能计数器和 `sys.dm_os_performance_counters` 中显示为实例名称。 **功能 ID** 值在跟踪事件中作为 ObjectId。
 
 ### <a name="back-up-and-restore"></a>备份和还原
 
@@ -325,7 +325,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 
 | 不推荐使用的功能 | 替代功能 | 功能名称 |
 |--------------------|-------------|--------------|
-| :: 函数调用序列 | 替换为 SELECT *column_list* FROM sys.\<*function_name*>()。<br /><br />例如，将 `SELECT * FROM ::fn_virtualfilestats(2,1)`替换为 `SELECT * FROM sys.fn_virtualfilestats(2,1)`。 | “::”函数调用语法 |
+| :: 函数调用序列 | 替换为 SELECT column_list FROM sys.\<*function_name*>()。<br /><br />例如，将 `SELECT * FROM ::fn_virtualfilestats(2,1)`替换为 `SELECT * FROM sys.fn_virtualfilestats(2,1)`。 | “::”函数调用语法 |
 | 由三部分和四部分组成的列引用。 | 由两部分组成的名称是符合标准的行为。|两个以上的部分构成的列名称 |
 | 用引号引起来的字符串用作 SELECT 列表中表达式的列别名：<br /><br />'*string_alias*' = *expression* | *expression* [AS] *column_alias*<br /><br />*expression* [AS] [*column_alias*]<br /><br />*expression* [AS] "*column_alias*"<br /><br />*expression* [AS] '*column_alias*'<br /><br />*column_alias* = *expression* | 字符串文字作为列别名 |
 | 编号过程 | 无。 请勿使用。 | ProcNums |

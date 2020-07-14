@@ -1,7 +1,7 @@
 ---
 title: 快速入门：备份和还原数据库
 titleSuffix: SQL Server
-description: 本快速入门介绍如何在本地备份和还原 SQL Server 数据库。
+description: 本文介绍了如何在 SQL Server 中创建新数据库、备份数据库以及还原备份。
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
@@ -11,15 +11,15 @@ ms.prod: sql
 ms.technology: backup-restore
 ms.prod_service: backup-restore
 ms.assetid: ''
-ms.openlocfilehash: 97993d621de9b10d930feb2fc54f53bc83f00293
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6e261914baec4774d0e7ae1f343874e4a3154d42
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258645"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85669959"
 ---
 # <a name="quickstart-backup-and-restore-a-sql-server-database-on-premises"></a>快速入门：本地备份和还原 SQL Server 数据库
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 在本快速入门中，你将新建数据库、将其简单备份，然后将其还原。 
 
@@ -34,8 +34,8 @@ ms.locfileid: "75258645"
 ## <a name="create-a-test-database"></a>创建测试数据库 
 
 1. 启动 [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) 并连接到 SQL Server 实例。
-1. 打开“新建查询”窗口  。 
-1. 运行以下 TRANSACT-SQL (T-SQL) 代码来创建测试数据库。 刷新对象资源管理器中的“数据库”节点，查看新数据库   。 
+1. 打开“新建查询”窗口。 
+1. 运行以下 TRANSACT-SQL (T-SQL) 代码来创建测试数据库。 刷新对象资源管理器中的“数据库”节点，查看新数据库 。 
 
 ```sql
 USE [master]
@@ -72,10 +72,10 @@ GO
 要备份数据库，请执行以下操作： 
 
 1. 启动 [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) 并连接到 SQL Server 实例。
-1. 在对象资源管理器中，展开“数据库”节点   。  
-1. 右键单击数据库，将鼠标悬停在“任务”上，然后选择“备份...”   。 
-1. 在“目标”下，确认备份路径正确  。 如需更改它，请选择“删除”以删除现有路径，然后选择“添加”来键入新路径   。 可通过省略号导航到特定文件。 
-1. 选择“确定”以备份数据库  。 
+1. 在对象资源管理器中，展开“数据库”节点 。  
+1. 右键单击数据库，将鼠标悬停在“任务”上，然后选择“备份...” 。 
+1. 在“目标”下，确认备份路径正确。 如需更改它，请选择“删除”以删除现有路径，然后选择“添加”来键入新路径 。 可通过省略号导航到特定文件。 
+1. 选择“确定”以备份数据库。 
 
 ![执行 SQL 备份](media/quickstart-backup-restore-database/backup-db-ssms.png)
 
@@ -94,14 +94,14 @@ GO
 要还原数据库，请执行以下操作： 
 
 1. 启动 [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) 并连接到 SQL Server 实例。
-1. 在对象资源管理器中右键单击“数据库”节点，然后选择“还原数据库...”    。
+1. 在对象资源管理器中右键单击“数据库”节点，然后选择“还原数据库...”  。
 
     ![还原数据库](media/quickstart-backup-restore-database/restore-db-ssms1.png)
 
-1. 选择“设备:”，然后选择省略号 (...) 来查找备份文件  。 
-1. 选择“添加”，然后导航到 `.bak` 文件所在的位置  。 选择 `.bak` 文件，然后选择“确定”  。 
-1. 选择“确定”，关闭“选择备份设备”对话框   。 
-1. 选择“确定”以还原数据库备份  。 
+1. 选择“设备:”，然后选择省略号 (...) 来查找备份文件。 
+1. 选择“添加”，然后导航到 `.bak` 文件所在的位置。 选择 `.bak` 文件，然后选择“确定”。 
+1. 选择“确定”，关闭“选择备份设备”对话框 。 
+1. 选择“确定”以还原数据库备份。 
 
     ![还原数据库](media/quickstart-backup-restore-database/restore-db-ssms2.png)
 

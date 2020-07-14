@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c0bb4dfc3a0ac9109b210cfe02fb6a2e743f0ce5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7a2bbbbc6bb18e3239091e0d2902bf65b85deec2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907957"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883218"
 ---
 # <a name="troubleshooting-oracle-publishers"></a>对 Oracle 发布服务器进行故障排除
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   本主题列出配置和使用 Oracle 发布服务器时可能会引发的一系列问题。  
   
 ## <a name="an-error-is-raised-regarding-oracle-client-and-networking-software"></a>引发关于 Oracle 客户端和网络软件的错误  
@@ -67,9 +67,9 @@ ms.locfileid: "72907957"
 ## <a name="the-oracle-publisher-is-associated-with-another-distributor"></a>Oracle 发布服务器与另一分发服务器相关联  
  一个 Oracle 发布服务器只能与一个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器相关联。 如果有不同的分发服务器与 Oracle 发布服务器相关联，则必须先删除它才能使用另一分发服务器。 如果未先删除该分发服务器，就会收到以下错误消息之一：  
   
--   “Oracle 服务器实例‘\<*OraclePublisherName*>'’以前配置为将‘\<*SQLServerDistributorName*>’作为其分发服务器。 若要开始使用‘\<*NewSQLServerDistributorName*>’作为其分发服务器，必须删除 Oracle 服务器实例上的当前复制配置，而这将删除该服务器实例上的所有发布。”  
+-   “Oracle 服务器实例‘\<*OraclePublisherName*>以前已配置为使用‘\<*SQLServerDistributorName*>’作为其分发服务器。 若要开始使用‘\<*NewSQLServerDistributorName*>作为其分发服务器，必须删除 Oracle 服务器实例上的当前复制配置，而这将删除该服务器实例上的所有发布。”  
   
--   “Oracle 服务器‘\<*OracleServerName*>’已被定义为分发服务器‘\<*SQLServerDistributorName*>.*\<DistributionDatabaseName>*’上的发布服务器‘\<*OraclePublisherName*>’。 请删除此发布服务器或删除公共同义词‘ *\<SynonymName>* ’，以便重新创建。”  
+-   “已将 Oracle 服务器‘\<*OracleServerName*>指定为分发服务器‘\<*SQLServerDistributorName*>.\<DistributionDatabaseName>’上的发布服务器‘\<*OraclePublisherName*>’。 请删除此发布服务器或删除公共同义词‘\<SynonymName>’，以便重新创建。”  
   
  删除 Oracle 发布服务器时，会自动清除 Oracle 数据库中的复制对象。 但是，在某些情况下需要手动清除 Oracle 复制对象。 手动清除复制创建的 Oracle 复制对象：  
   
@@ -82,14 +82,14 @@ ms.locfileid: "72907957"
 ## <a name="sql-server-error-21663-is-raised-regarding-the-lack-of-a-primary-key"></a>引发关于缺少主键的 SQL Server 错误 21663  
  事务发布中的项目必须具备有效的主键。 如果它们不具备有效的主键，则在尝试添加项目时会收到以下错误消息：  
   
- “找不到源表 [\<*TableOwner*>].[\<*TableName*>] 的有效主键。”  
+ “找不到源表 [\<*TableOwner*>].[\<*TableName*>] 的有效主键”  
   
  有关主键要求的信息，请参阅主题 [Design Considerations and Limitations for Oracle Publishers](../../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md)中的“唯一索引和约束”部分。  
   
 ## <a name="sql-server-error-21642-is-raised-regarding-a-duplicate-linked-server-login"></a>引发关于重复链接服务器登录名的 SQL Server 错误 21642  
  在初始配置 Oracle 发布服务器时，会为发布服务器和分发服务器之间的连接创建一个链接服务器项。 该链接服务器的名称与 Oracle TNS 服务名称相同。 如果尝试创建具有相同名称的链接服务器，则会显示以下错误消息：  
   
- “异类发布服务器需要链接服务器。 名为‘ *\<LinkedServerName>* ’的链接服务器已存在。 请删除链接服务器或另选一个发布服务器名称。”  
+ “异类发布服务器需要链接服务器。 已有一个名为“\<LinkedServerName>”的链接服务器。 请删除链接服务器或另选一个发布服务器名称。”  
   
  如果尝试直接创建链接服务器，或者预先删除了 Oracle 发布服务器和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器之间的关系，而当前在尝试重新配置它，就会出现此错误。 如果尝试重新配置发布服务器时收到此错误，请用 [sp_dropserver &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md) 删除链接服务器。  
   
@@ -156,7 +156,7 @@ ms.locfileid: "72907957"
   
 2.  在 **“运行”** 对话框中，键入 **regedit**，然后单击 **“确定”** 。  
   
-3.  导航到 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\ *\<InstanceName>* \Providers。  
+3.  导航到 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\\<InstanceName>\Providers。  
   
      Providers 下应该包含一个名为 OraOLEDB.Oracle 的文件夹。 在此文件夹中应该有一个名为 **AllowInProcess**的 DWORD 值，它的值为 **1**。  
   
@@ -240,7 +240,7 @@ ms.locfileid: "72907957"
   
 3.  在 **“分发服务器属性”** 对话框中的 **“发布服务器”** 页上，清除 Oracle 发布服务器的复选框。  
   
-4.  单击“确定”。   
+4.  单击“确定”。  
   
  **删除 Oracle 发布服务器 (Transact-SQL)**  
   

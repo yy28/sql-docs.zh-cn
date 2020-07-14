@@ -8,16 +8,16 @@ ms.date: 06/28/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 5d341d7bbda403b405268fe253cff7d60cea4d0d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 72d1292b03bc518ec8dfbe7a8f2e5e281bc6978a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68077443"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896556"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>为 Linux 上的 SQL Server 创建和配置可用性组
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 本教程介绍如何为 Linux 上的 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 创建和配置可用性组 (AG)。 与 Windows 上的 [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] 及更早版本不同，你可以在创建或不创建基础 Pacemaker 群集的情况下启用 AG。 如果需要，稍后才会与群集进行集成。
 
@@ -82,7 +82,7 @@ sudo systemctl restart mssql-server
 -   [CREATE ENDPOINT](../t-sql/statements/create-endpoint-transact-sql.md)
 
 > [!NOTE]
-> 虽然你将创建可用性组，但终结点类型使用 FOR DATABASE_MIRRORING，因为某些基础特性曾与现已弃用的功能共享  。
+> 虽然你将创建可用性组，但终结点类型使用 FOR DATABASE_MIRRORING，因为某些基础特性曾与现已弃用的功能共享。
 
 此示例将为三节点配置创建证书。 实例名称为 LinAGN1、LinAGN2 和 LinAGN3。
 
@@ -320,19 +320,19 @@ sudo systemctl restart mssql-server
 
 本部分介绍如何使用 SSMS 和新可用性组向导创建群集类型为“外部”的 AG。
 
-1.  在 SSMS 中展开“AlwaysOn 可用性组”，右键单击“可用性组”并选择“新建可用性组向导”    。
+1.  在 SSMS 中展开“AlwaysOn 可用性组”，右键单击“可用性组”并选择“新建可用性组向导”  。
 
-2.  在“简介”对话框上单击“下一步”  。
+2.  在“简介”对话框上单击“下一步”。
 
-3.  在“指定可用性组选项”对话框中，输入可用性组的名称，并在下拉列表中选择“外部”或“无”群集类型。 在部署 Pacemaker 时应使用“外部”。 “无”适用于专用方案，如读取横向扩展。选择数据库级别运行状况检测选项是可选的。 有关此选项的详细信息，请参阅[可用性组数据库级别运行状况检测故障转移选项](../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md)。 单击“下一步”。 
+3.  在“指定可用性组选项”对话框中，输入可用性组的名称，并在下拉列表中选择“外部”或“无”群集类型。 在部署 Pacemaker 时应使用“外部”。 “无”适用于专用方案，如读取横向扩展。选择数据库级别运行状况检测选项是可选的。 有关此选项的详细信息，请参阅[可用性组数据库级别运行状况检测故障转移选项](../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md)。 单击“下一步”。
 
     ![](./media/sql-server-linux-create-availability-group/image3.png)
 
-4.  在“选择数据库”对话框中，选择将参与 AG 的数据库。 每个数据库在添加到 AG 之前必须具有完整备份。 单击“下一步”。 
+4.  在“选择数据库”对话框中，选择将参与 AG 的数据库。 每个数据库在添加到 AG 之前必须具有完整备份。 单击“下一步”。
 
-5.  在“指定副本”对话框中，单击“添加副本”  。
+5.  在“指定副本”对话框中，单击“添加副本”。
 
-6.  在“连接到服务器”对话框中，输入将作为次要副本的 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 的 Linux 实例的名称以及要连接的凭据。 单击“连接”  。
+6.  在“连接到服务器”对话框中，输入将作为次要副本的 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 的 Linux 实例的名称以及要连接的凭据。 单击“连接”。
 
 7.  对包含仅配置副本或其他次要副本的实例重复前两个步骤。
 
@@ -348,7 +348,7 @@ sudo systemctl restart mssql-server
 
 9.  如果要更改备份首选项，请单击“备份首选项”选项卡。有关 AG 备份首选项的详细信息，请参阅[配置可用性副本备份](../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)。
 
-10. 如果使用可读辅助数据库或创建群集类型为“无”的 AG 以进行读取扩展，则可以通过选择“侦听器”选项卡来创建侦听器。稍后还可以添加侦听器。 要创建侦听器，请选择选项“创建可用性组侦听器”并输入名称、TCP/IP 端口以及使用静态或自动分配的 DHCP IP 地址  。 请记住，对于群集类型为“无”的 AG，IP 应为静态，并设置为主 IP 地址。
+10. 如果使用可读辅助数据库或创建群集类型为“无”的 AG 以进行读取扩展，则可以通过选择“侦听器”选项卡来创建侦听器。稍后还可以添加侦听器。 要创建侦听器，请选择选项“创建可用性组侦听器”并输入名称、TCP/IP 端口以及使用静态或自动分配的 DHCP IP 地址。 请记住，对于群集类型为“无”的 AG，IP 应为静态，并设置为主 IP 地址。
 
     ![](./media/sql-server-linux-create-availability-group/image6.png)
 
@@ -360,15 +360,15 @@ sudo systemctl restart mssql-server
 
     c.  选择每个 URL，并从底部选择可读副本。 要进行多选，请按住 Shift 或单击并拖动。
 
-12. 单击“下一步”。 
+12. 单击“下一步”。
 
-13. 选择次要副本的初始化方法。 默认情况下是使用[自动种子设定](../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md)，这需要在所有参与 AG 的服务器上使用相同的路径。 也可以让向导进行备份、复制和还原（第二个选项）；如果已在副本上手动备份、复制和还原数据库，请将其连接（第三个选项）；或稍后添加数据库（最后一个选项）。 与证书一样，如果手动备份和复制证书，则需要在其他副本上设置备份文件的权限。 单击“下一步”。 
+13. 选择次要副本的初始化方法。 默认情况下是使用[自动种子设定](../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md)，这需要在所有参与 AG 的服务器上使用相同的路径。 也可以让向导进行备份、复制和还原（第二个选项）；如果已在副本上手动备份、复制和还原数据库，请将其连接（第三个选项）；或稍后添加数据库（最后一个选项）。 与证书一样，如果手动备份和复制证书，则需要在其他副本上设置备份文件的权限。 单击“下一步”。
 
-14. 在“验证”对话框中，如果所以内容都没有成功返回，请进行调查。 某些警告是可接受的而不是致命的，例如，不创建侦听器。 单击“下一步”。 
+14. 在“验证”对话框中，如果所以内容都没有成功返回，请进行调查。 某些警告是可接受的而不是致命的，例如，不创建侦听器。 单击“下一步”。
 
-15. 在“摘要”对话框中，单击“完成”  。 现在将开始创建 AG。
+15. 在“摘要”对话框中，单击“完成”。 现在将开始创建 AG。
 
-16. AG 创建完成后，单击“结果”上的“关闭”  。 现在可以在动态管理视图中以及 SSMS 中的 AlwaysOn 可用性组文件夹下查看副本上的 AG。
+16. AG 创建完成后，单击“结果”上的“关闭”。 现在可以在动态管理视图中以及 SSMS 中的 AlwaysOn 可用性组文件夹下查看副本上的 AG。
 
 ### <a name="use-transact-sql"></a>使用 Transact-SQL
 
@@ -463,11 +463,11 @@ sudo systemctl restart mssql-server
     
     有关此配置的一些注意事项：
     
-    - AGName 是可用性组的名称  。
-    - DBName 是将与可用性组一起使用的数据库的名称  。 它也可以是以逗号分隔的名称列表。
-    - ListenerName 是一个与任何基础服务器/节点不同的名称  。 它将与 IPAddress 一起在 DNS 中注册  。
-    - IPAddress 是与 ListenerName 关联的 IP 地址   。 它也是唯一的，与任何服务器/节点都不一样。 应用程序和最终用户将使用 ListenerName 或 IPAddress 连接到 AG   。
-    - SubnetMask 是 IPAddress 的子网掩码；例如，255.255.255.0   。
+    - AGName 是可用性组的名称。
+    - DBName 是将与可用性组一起使用的数据库的名称。 它也可以是以逗号分隔的名称列表。
+    - ListenerName 是一个与任何基础服务器/节点不同的名称。 它将与 IPAddress 一起在 DNS 中注册。
+    - IPAddress 是与 ListenerName 关联的 IP 地址 。 它也是唯一的，与任何服务器/节点都不一样。 应用程序和最终用户将使用 ListenerName 或 IPAddress 连接到 AG 。
+    - SubnetMask 是 IPAddress 的子网掩码；例如，255.255.255.0 。
 
 2.  在连接到其他副本的查询窗口中，执行以下操作将副本联接到 AG，并启动从主副本到次要副本的种子设定过程。
     
@@ -513,13 +513,13 @@ sudo systemctl restart mssql-server
     ```
     
     其中
-    - AGName 是可用性组的名称  。
-    - DBName 是将与可用性组一起使用的数据库的名称  。 它也可以是以逗号分隔的名称列表。
-    - PortOfEndpoint 是所创建终结点使用的端口号  。
-    - PortOfInstance 是 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 实例使用的端口号  。
-    - ListenerName 是一个与任何基础副本不同的名称，但实际不会使用该名称  。
-    - PrimaryReplicaIPAddress 是主要副本的 IP 地址  。
-    - SubnetMask 是 IPAddress 的子网掩码   。 例如，255.255.255.0。
+    - AGName 是可用性组的名称。
+    - DBName 是将与可用性组一起使用的数据库的名称。 它也可以是以逗号分隔的名称列表。
+    - PortOfEndpoint 是所创建终结点使用的端口号。
+    - PortOfInstance 是 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 实例使用的端口号。
+    - ListenerName 是一个与任何基础副本不同的名称，但实际不会使用该名称。
+    - PrimaryReplicaIPAddress 是主要副本的 IP 地址。
+    - SubnetMask 是 IPAddress 的子网掩码 。 例如，255.255.255.0。
     
 2.  将辅助副本联接到 AG 并启动自动种子设定。
     
@@ -582,7 +582,9 @@ Linux 上基于 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 的 Pa
 
 在 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 中创建可用性组后，如果指定了“外部”群集类型，则必须在 Pacemaker 中创建相应的资源。 与 AG 关联的资源有两个：AG 本身和 IP 地址。 如果不使用侦听器功能，则可以选择配置 IP 地址资源，但建议这样做。
 
-创建的 AG 资源是一种特殊的资源，称为克隆。 AG 资源基本上在每个节点上都有副本，并且有一个控制资源称为“master”。 master 与承载主副本的服务器相关联。 次要副本（常规副本或仅配置副本）被认为是从属副本，可以在故障转移时提升为主副本。
+创建的 AG 资源是一种特殊的资源，称为克隆。 AG 资源基本上在每个节点上都有副本，并且有一个控制资源称为“master”。 master 与承载主副本的服务器相关联。 其他资源承载次要副本（常规副本或仅配置副本），并且可以在故障转移时提升为主副本。
+
+[!INCLUDE [bias-sensitive-term-t](../includes/bias-sensitive-term-t.md)]
 
 1.  用以下语法创建 AG 资源：
 
@@ -616,7 +618,7 @@ Linux 上基于 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 的 Pa
     commit
     ```
     
-    其中 NameForAGResource 是针对 AG 的群集资源指定的唯一名称，AGName 是已创建的 AG 的名称   。
+    其中 NameForAGResource 是针对 AG 的群集资源指定的唯一名称，AGName 是已创建的 AG 的名称 。
  
 2.  为将与侦听器功能关联的 AG 创建 IP 地址资源。
 
@@ -636,7 +638,7 @@ Linux 上基于 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 的 Pa
           cidr_netmask=<Netmask>
     ```
     
-    其中 NameForIPResource 是 IP 资源的唯一名称，IPAddress 是分配给资源的静态 IP 地址   。 在 SLES 上还需要提供网络掩码。 例如，对于子网掩码，255.255.255.0 的值为 24  。
+    其中 NameForIPResource 是 IP 资源的唯一名称，IPAddress 是分配给资源的静态 IP 地址 。 在 SLES 上还需要提供网络掩码。 例如，对于子网掩码，255.255.255.0 的值为 24。
     
 3.  要确保 IP 地址和 AG 资源在同一节点上运行，必须配置并置约束。
 
@@ -654,7 +656,7 @@ Linux 上基于 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 的 Pa
     commit
     ```
     
-    其中 NameForIPResource 是 IP 资源的名称，NameForAGResource 是 AG 资源的名称，在 SLES 上，NameForConstraint 是约束的名称    。
+    其中 NameForIPResource 是 IP 资源的名称，NameForAGResource 是 AG 资源的名称，在 SLES 上，NameForConstraint 是约束的名称  。
 
 4.  创建排序约束以确保 AG 资源在 IP 地址之前启动并运行。 虽然并置约束意味着排序约束，但这将强制执行它。
 
@@ -672,7 +674,7 @@ Linux 上基于 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 的 Pa
     commit
     ```
     
-    其中 NameForIPResource 是 IP 资源的名称，NameForAGResource 是 AG 资源的名称，在 SLES 上，NameForConstraint 是约束的名称    。
+    其中 NameForIPResource 是 IP 资源的名称，NameForAGResource 是 AG 资源的名称，在 SLES 上，NameForConstraint 是约束的名称  。
 
 ## <a name="next-steps"></a>后续步骤
 

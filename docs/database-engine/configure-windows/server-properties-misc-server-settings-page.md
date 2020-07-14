@@ -1,5 +1,6 @@
 ---
 title: 服务器属性（“杂项服务器设置”页）| Microsoft Docs
+description: 熟悉 SQL Server 中的服务器设置。 了解控制新用户默认语言、查询超时和其他行为的选项。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.serverproperties.miscserversettings.f1
 ms.assetid: b170c066-30cd-42dd-8d34-aa129ea09551
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 62a8af2e4a82a0a0bdeec231db62c2166ed030de
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cd0f964c344901da4309605949ecb31d8c893adc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68030828"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726610"
 ---
 # <a name="server-properties---misc-server-settings-page"></a>服务器属性 -“杂项服务器设置”页
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   使用此页可以查看或修改服务器设置。  
   
 ## <a name="options"></a>选项  

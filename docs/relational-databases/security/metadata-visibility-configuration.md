@@ -1,5 +1,6 @@
 ---
 title: 元数据可见性配置 | Microsoft Docs
+description: 了解如何在 SQL Server 中为用户拥有或已具有访问权限的安全对象配置元数据可见性。
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -20,15 +21,15 @@ ms.assetid: 50d2e015-05ae-4014-a1cd-4de7866ad651
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eba613c3736024de71a67e7cdb749960e91e89ff
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 63c00456e36742d62074a65eb291dc19e23a2863
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68661217"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85979394"
 ---
 # <a name="metadata-visibility-configuration"></a>元数据可见性配置
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   元数据的可见性仅限用户所拥有的安全对象，或已授予用户某些权限的安全对象。 例如，如果用户获得了对表 `myTable`的 SELECT 或 INSERT 权限，则下面的查询将返回一行。  
   
 ```  
@@ -45,7 +46,7 @@ GO
   
 |||  
 |-|-|  
-|目录视图|[!INCLUDE[ssDE](../../includes/ssde-md.md)] sp_help 存储过程 |  
+|目录视图|[!INCLUDE[ssDE](../../includes/ssde-md.md)] sp_help 存储过程|  
 |公开元数据的内置函数|信息架构视图|  
 |兼容性视图|扩展属性|  
   
@@ -65,7 +66,7 @@ GO
   
 -   元数据生成的内置函数（如 OBJECTPROPERTYEX）可能返回 NULL。  
   
--   [!INCLUDE[ssDE](../../includes/ssde-md.md)] sp_help 存储过程可能只返回行子集或 NULL  。  
+-   [!INCLUDE[ssDE](../../includes/ssde-md.md)] sp_help 存储过程可能只返回行子集或 NULL。  
   
  SQL 模块（如存储过程和触发器）在调用方的安全上下文中运行，因此，它们只有有限的元数据访问性。 例如，在以下代码中，当存储过程尝试访问表 `myTable` （调用方对该表没有权限）的元数据时，返回空的结果集。 在早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，返回一行。  
   
@@ -104,7 +105,7 @@ GO
 ## <a name="benefits-and-limits-of-metadata-visibility-configuration"></a>元数据可见性配置的优点和限制  
  元数据可见性配置在整个安全计划中发挥着重要作用。 但在有些情况下，有经验的用户和已确定的用户可以强制公开某些元数据。 建议将元数据权限部署为多种深层防御中的一种。  
   
- 理论上可以通过控制查询中的谓词评估顺序，强制在错误消息中显示元数据。 此类“试错攻击”  的威胁并非是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 专有的。 它由关系代数中允许的关联转换和交换转换表示。 可以通过限制错误消息中返回的信息来降低此风险。 为了以此方式进一步限制元数据的可见性，可以使用跟踪标志 3625 启动服务器。 此跟踪标志限制错误消息中显示的信息量。 进一步有助于防止强制泄漏。 需要在错误消息的简洁性和用于调试的难易程度之间进行权衡。 有关详细信息，请参阅[数据库引擎服务启动选项](../../database-engine/configure-windows/database-engine-service-startup-options.md)和[跟踪标志 (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。  
+ 理论上可以通过控制查询中的谓词评估顺序，强制在错误消息中显示元数据。 此类“试错攻击”的威胁并非是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 专有的。 它由关系代数中允许的关联转换和交换转换表示。 可以通过限制错误消息中返回的信息来降低此风险。 为了以此方式进一步限制元数据的可见性，可以使用跟踪标志 3625 启动服务器。 此跟踪标志限制错误消息中显示的信息量。 进一步有助于防止强制泄漏。 需要在错误消息的简洁性和用于调试的难易程度之间进行权衡。 有关详细信息，请参阅[数据库引擎服务启动选项](../../database-engine/configure-windows/database-engine-service-startup-options.md)和[跟踪标志 (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。  
   
  下列元数据无法强制公开：  
   

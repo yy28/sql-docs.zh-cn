@@ -1,5 +1,6 @@
 ---
 title: 表或存储过程是否应移植到内存中 OLTP
+description: 使用 SQL Server Management Studio 中的事务性能分析报告来评估内存中 OLTP 能否提高数据库应用程序的性能。
 ms.custom: seo-dt-2019
 ms.date: 08/02/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8a11fe894dc9b1e0e9770565bef5f702e29c387f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1a445b423375a9ca577435424c0bd89016cd53f8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412700"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723268"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>确定表或存储过程是否应移植到内存中 OLTP
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   通过 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的事务性能分析报表，可帮助你评估内存中 OLTP 是否将改进数据库应用程序的性能。 该报表还能够指明在应用程序中启用内存中 OLTP 所必须完成的工作量。 在你标识了要移植到内存中 OLTP 的基于磁盘的表之后，可以使用 [内存优化顾问](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md)帮助你迁移表。 同样， [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md) 帮助您将存储过程移植到本机编译的存储过程。 有关迁移方法的信息，请参阅 [内存中 OLTP - 常见的工作负荷模式和迁移注意事项](https://msdn.microsoft.com/library/dn673538.aspx)。  
   
@@ -39,7 +40,7 @@ ms.locfileid: "74412700"
     > [!IMPORTANT]  
     >  数据库的性能取决于多种因素，不是所有这些因素都能被事务性能收集器发现和度量。 因此，事务性能分析报告不保证实际性能收益会符合其预测（如果作出任何预测）。  
   
- 安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 时选择“管理工具 - 基本”或“管理工具 - 高级”，或[下载 SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx) 时，事物性能分析报表和迁移顾问会作为 SQL Server Management Studio (SSMS) 的部分安装。    
+ 安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 时选择“管理工具 - 基本”或“管理工具 - 高级”，或[下载 SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx) 时，事物性能分析报表和迁移顾问会作为 SQL Server Management Studio (SSMS) 的部分安装 。    
   
 ## <a name="transaction-performance-analysis-reports"></a>事务性能分析报表  
  通过右键单击数据库，然后依次选择“报表”、“标准报表”、“事务性能分析概述”，可以在“对象资源管理器”中生成事务性能分析报表。 数据库需要有活动的工作负载或最近运行的工作负载，才能生成有意义的分析报表。  
@@ -107,9 +108,9 @@ ms.locfileid: "74412700"
   
 **使用 UI 命令生成迁移清单**  
   
-1.  在“对象资源管理器”  中，右键单击除系统数据库以外的数据库，单击“任务”  ，然后单击“生成内存中 OLTP 迁移清单”  。  
+1.  在“对象资源管理器”中，右键单击除系统数据库以外的数据库，单击“任务”，然后单击“生成内存中 OLTP 迁移清单”。  
   
-2.  在“生成内存中 OLTP 迁移清单”对话框中，单击“下一步”以导航到“配置清单生成选项”  页。 在该页上，执行下列操作。  
+2.  在“生成内存中 OLTP 迁移清单”对话框中，单击“下一步”以导航到“配置清单生成选项”页。 在该页上，执行下列操作。  
   
     1.  在“将清单保存到”  框中，输入文件夹路径。  
   
@@ -121,13 +122,13 @@ ms.locfileid: "74412700"
   
 3.  单击“下一步”  并确认任务列表列表与“配置清单生成选项”  页上的设置一致。  
   
-4.  单击“完成”  ，然后确认仅为选定的对象生成迁移清单报表。  
+4.  单击“完成” ，然后确认仅为选定的对象生成迁移清单报表。  
 
  将这些报表与内存优化顾问工具和本机编译顾问工具生成的报表进行比较，验证这些报表的准确性。 有关详细信息，请参阅 [Memory Optimization Advisor](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) 和 [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md)。  
   
 **使用 SQL Server PowerShell 生成迁移清单**  
   
-1.  在“对象资源管理器”  中，单击数据库，然后单击“启动 PowerShell”  。 验证出现了下面的提示。  
+1.  在“对象资源管理器” 中，单击数据库，然后单击“启动 PowerShell” 。 验证出现了下面的提示。  
   
     ```  
     PS SQLSERVER: \SQL\{Instance Name}\DEFAULT\Databases\{two-part DB Name}>  

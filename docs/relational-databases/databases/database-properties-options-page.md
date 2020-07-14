@@ -1,5 +1,6 @@
 ---
 title: 数据库属性（“选项”页）| Microsoft Docs
+description: 了解如何使用“数据库属性”对话框中的“选项”选项卡来查看或修改数据库的排序规则、恢复模式和其他设置。
 ms.custom: ''
 ms.date: 08/28/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 9ea3a23299c15a2d473b68f691345d69afaaf1eb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 98fcdb49facbc1bae6e7a0b76388c385a0fc05e8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79286741"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85630952"
 ---
 # <a name="database-properties-options-page"></a>数据库属性（“选项”页）
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   使用此页可以查看或修改所选数据库的选项。 有关此页上可用选项的详细信息，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md) 和 [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)  
   
@@ -29,7 +30,7 @@ ms.locfileid: "79286741"
  通过从列表中进行选择来指定数据库的排序规则。 有关详细信息，请参阅 [Set or Change the Database Collation](../../relational-databases/collations/set-or-change-the-database-collation.md)。  
   
  **恢复模式**  
- 指定下列模式之一来恢复数据库：“完整”  、“大容量日志”  或“简单”  。 有关恢复模式的详细信息，请参阅[恢复模式 (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md)。  
+ 指定下列模式之一来恢复数据库：**完整**、**大容量日志**或**简单**。 有关恢复模式的详细信息，请参阅[恢复模式 (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md)。  
   
  **兼容性级别**  
  指定数据库支持的最新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 有关可能的值，请参阅 [ALTER DATABASE (Transact-SQL) 兼容性级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。 升级 SQL Server 数据库时，如果可能，保留该数据库的兼容性级别，或更改为新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持的最低级别。 
@@ -44,7 +45,7 @@ ms.locfileid: "79286741"
  **自动关闭**  
  指定在上一个用户退出后，数据库是否完全关闭并释放资源。 可能的值包括 **True** 和 **False**。 如果设置为 **True**，则在上一个用户注销之后，数据库会完全关闭并释放其资源。  
 
- 自动创建增量统计信息   
+ 自动创建增量统计信息  
  指定在创建每个分区的统计信息时是否使用增量选项。 有关增量统计信息的信息，请参阅 [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)。  
   
  **自动创建统计信息**  
@@ -57,7 +58,7 @@ ms.locfileid: "79286741"
  指定数据库是否自动更新过期的优化统计信息。 可能的值包括 **True** 和 **False**。 如果设置为 **True**，则将在优化过程中自动生成优化查询需要但已过期的所有统计信息。 有关详细信息，请参阅 [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)。  
   
  **自动异步更新统计信息**  
- 如果设置为“True”，则启动自动更新过期统计信息的查询在编译前不会等待统计信息被更新  。 后续查询会在更新统计信息可用时使用。  
+ 如果设置为“True”，则启动自动更新过期统计信息的查询在编译前不会等待统计信息被更新。 后续查询会在更新统计信息可用时使用。  
   
  如果设置为 **False**，则启动自动更新过期统计信息的查询将等待，直到更新的统计信息可在查询优化计划中使用。  
   
@@ -121,20 +122,20 @@ ms.locfileid: "79286741"
  启用或禁用辅助参数截取。 这与 [Trace Flag 4136](https://support.microsoft.com/kb/980653)是等效的。  
   
  **查询优化器修复程序**  
- 启用或禁用主查询优化修补程序，而不考虑数据库的兼容级别。 这与 [Trace Flag 4199](https://support.microsoft.com/kb/974006)是等效的。  
+ 启用或禁用主查询优化修补程序，而不考虑数据库的兼容级别。 这与 [Trace Flag 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)是等效的。 有关详细信息，请参阅 [QUERY_OPTIMIZER_HOTFIXES](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#qo_hotfixes)。  
   
  **辅助查询优化器修补程序**  
- 启用或禁用辅助查询优化修补程序（如有），而不考虑数据库的兼容级别。 这与 [Trace Flag 4199](https://support.microsoft.com/kb/974006)是等效的。  
+ 启用或禁用辅助查询优化修补程序（如有），而不考虑数据库的兼容级别。 这与 [Trace Flag 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)是等效的。 有关详细信息，请参阅 [QUERY_OPTIMIZER_HOTFIXES](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#qo_hotfixes)。  
   
 ## <a name="filestream"></a>FILESTREAM  
  **FILESTREAM 目录名称**  
  为与所选数据库相关联的 FILESTREAM 数据指定目录名称。  
   
  **FILESTREAM 非事务访问**  
- 为从文件系统到 FileTables 中存储的 FILESTREAM 数据的非事务性访问指定以下选项之一： **OFF**、 **READ_ONLY**或 **FULL**。 如果在服务器上未启用 FILESTREAM，则该值将设置为 OFF 并且被禁用。 有关详细信息，请参阅 [FileTables (SQL Server)](../../relational-databases/blob/filetables-sql-server.md)。  
+ 为从文件系统到 FileTables 中存储的 FILESTREAM 数据的非事务性访问指定以下选项之一：**OFF**、**READ_ONLY** 或 **FULL**。 如果在服务器上未启用 FILESTREAM，则该值将设置为 OFF 并且被禁用。 有关详细信息，请参阅 [FileTables (SQL Server)](../../relational-databases/blob/filetables-sql-server.md)。  
   
 ## <a name="miscellaneous"></a>杂项  
-允许快照隔离   
+允许快照隔离  
 启用此功能。  
 
  **ANSI NULL 默认值**  
@@ -163,10 +164,10 @@ ms.locfileid: "79286741"
   
  如果设置为 **False**，则不维护相关统计信息。  
  
- 延迟持续性   
+ 延迟持续性  
  启用此功能。  
  
- 读提交快照处于打开状态   
+ 读提交快照处于打开状态  
  启用此功能。  
  
  **数值舍入中止**  
@@ -207,13 +208,13 @@ ms.locfileid: "79286741"
  指定在发生崩溃的情况下恢复指定数据库的最长时间（秒）。 有关详细信息，请参阅[数据库检查点 (SQL Server)](../../relational-databases/logs/database-checkpoints-sql-server.md)。  
 
 ## <a name="service-broker"></a>Service Broker  
-启用 Broker   
+启用 Broker  
 启用或禁用 Service Broker。  
 
-优先处理 Broker 优先级   
+优先处理 Broker 优先级  
 只读的 Service Broker 属性。  
 
-Service Broker 标识符   
+Service Broker 标识符  
 只读的标识符。  
 
 ## <a name="state"></a>状态  

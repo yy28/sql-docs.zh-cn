@@ -12,15 +12,15 @@ ms.assetid: cb93c620-4be9-4362-8bf0-af3f2048bdaf
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 85996d94387fb1a20c7ae21b94307428e21819d2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4ffc040643cf6906089c026eb216b4d9b084c0e4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68089503"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717798"
 ---
 # <a name="hash-warning-event-class"></a>Hash Warning 事件类
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Hash Warning 事件类可用于监视在哈希操作过程中何时发生哈希递归或哈希终止（哈希释放）。  
   
  当生成输入无法装入可用内存时，会发生哈希递归，这将导致输入分割成单独处理的多个分区。 如果这些分区中任何一个仍然大于可用内存，则该分区再拆分成子分区分别进行处理。 此拆分过程将一直继续到每个分区都小于可用内存，或达到最大递归级数（显示在 IntegerData 数据列）。  
@@ -40,10 +40,10 @@ ms.locfileid: "68089503"
  创建或更新联接涉及的列上的统计信息是减少发生哈希递归或哈希释放次数最有效的方法。  
   
 > [!NOTE]  
->  另外，“Grace 哈希联接”  和“递归哈希联接”  两词也用于描述哈希释放。  
+>  另外，“Grace 哈希联接”和“递归哈希联接”两词也用于描述哈希释放。  
   
 > [!IMPORTANT]  
->  若要确定查询优化器生成执行计划时 Hash Warning 事件发生的位置，还应在跟踪中收集一个 Showplan 事件类。 可以选择除了 Showplan Text 和 Showplan Text (Unencoded) 事件类（不会返回节点 ID）以外的任何 Showplan 事件类。 Showplan 中的节点 ID 标识查询优化器在生成查询执行计划时执行的每个运算。 这些运算称为“运算符”  ，Showplan 中的每个运算符都有一个节点 ID。 Hash Warning 事件的 ObjectID 列与 Showplan 中的节点 ID 对应，因此可确定哪个运算符或运算导致错误。  
+>  若要确定查询优化器生成执行计划时 Hash Warning 事件发生的位置，还应在跟踪中收集一个 Showplan 事件类。 可以选择除了 Showplan Text 和 Showplan Text (Unencoded) 事件类（不会返回节点 ID）以外的任何 Showplan 事件类。 Showplan 中的节点 ID 标识查询优化器在生成查询执行计划时执行的每个运算。 这些运算称为“运算符” ，Showplan 中的每个运算符都有一个节点 ID。 Hash Warning 事件的 ObjectID 列与 Showplan 中的节点 ID 对应，因此可确定哪个运算符或运算导致错误。  
   
 ## <a name="hash-warning-event-class-data-columns"></a>Hash Warning 事件类的数据列  
   
@@ -60,7 +60,7 @@ ms.locfileid: "68089503"
 |HostName|**nvarchar**|正在运行客户端的计算机的名称。 如果客户端提供了主机名，则填充此数据列。 若要确定主机名，请使用 HOST_NAME 函数。|8|是|  
 |IntegerData|**int**|递归级数（仅限于哈希递归）。|25|是|  
 |IsSystem|**int**|指示事件是发生在系统进程中还是发生在用户进程中。 1 = 系统，0 = 用户。|60|是|  
-|LoginName|**nvarchar**|用户的登录名（ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全登录名或 Windows 登录凭据，格式为“ *\<域>\\<用户名\>* ”）。|11|是|  
+|LoginName|**nvarchar**|用户的登录名（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全登录名或 Windows 登录凭据，格式为 \<DOMAIN>\\<username\>）。|11|是|  
 |LoginSid|**图像**|登录用户的安全标识号 (SID)。 您可以在 sys.server_principals 目录视图中找到此信息。 服务器中的每个登录名都具有唯一的 SID。|41|是|  
 |NTDomainName|**nvarchar**|用户所属的 Windows 域。|7|是|  
 |NTUserName|**nvarchar**|Windows 用户名。|6|是|  

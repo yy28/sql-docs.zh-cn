@@ -1,5 +1,6 @@
 ---
 title: 数据库属性（“文件”页）| Microsoft Docs
+description: 了解如何查看或修改数据库属性以及如何在 SQL Server Management Studio 中创建新数据库。
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -12,18 +13,18 @@ f1_keywords:
 ms.assetid: 3c030e51-db82-4b43-b1e5-8547ddd3de87
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: f3c0493192381bc3dedbf23ab1e01c0142e88be4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0ddd5b76d37f170ed195c6b08f6debcb0f032e77
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68099607"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756187"
 ---
 # <a name="database-properties-files-page"></a>数据库属性（“文件”页）
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   使用此页可以创建新的数据库，也可以查看或修改所选数据库的属性。 对于现有数据库，本主题适用于 **数据库属性（“文件”页）** ；另外，本主题还适用于 **新建数据库（“常规”页）** 。  
   
-## <a name="uielement-list"></a>UIElement 列表  
+## <a name="ui-element-list"></a>UI 元素列表  
  **数据库名称**  
  添加或显示数据库的名称。  
   
@@ -42,14 +43,14 @@ ms.locfileid: "68099607"
  **文件类型**  
  从列表中选择文件类型。 文件类型可以为 **“数据”** 、 **“日志”** 或 **“Filestream 数据”** 。 您无法修改现有文件的文件类型。  
   
- 如果要将文件（容器）添加到内存优化文件组，请选择“Filestream 数据”  。  
+ 如果要将文件（容器）添加到内存优化文件组，请选择“Filestream 数据”。  
   
  要将文件（容器）添加到 Filestream 数据文件组，必须启用 FILESTREAM。 可以通过 [服务器属性（“高级”页）](../../database-engine/configure-windows/server-properties-advanced-page.md) 对话框启用 FILESTREAM。  
   
  **文件组**  
- 从列表中为文件选择文件组。 默认情况下，文件组为 PRIMARY。 通过选择 **\<<新文件组>** ，然后在“新建文件组”  对话框中输入有关文件组的信息，可以创建新的文件组。 您也可以在 **“文件组”** 页上创建新的文件组。 您无法修改现有文件的文件组。  
+ 从列表中为文件选择文件组。 默认情况下，文件组为 PRIMARY。 通过选择 \<new filegroup>，然后在“新建文件组”对话框中输入有关文件组的信息，可以创建新的文件组。 您也可以在 **“文件组”** 页上创建新的文件组。 您无法修改现有文件的文件组。  
   
- 将文件（容器）添加到内存优化文件组时，“文件组”  字段将填充数据库的内存优化文件组的名称。  
+ 将文件（容器）添加到内存优化文件组时，“文件组”字段将填充数据库的内存优化文件组的名称。  
   
  **初始大小**  
  输入或修改文件的初始大小 (MB)。 默认情况下，这是 **model** 数据库的值。  

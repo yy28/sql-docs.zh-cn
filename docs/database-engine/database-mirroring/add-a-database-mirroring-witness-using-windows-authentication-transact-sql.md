@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: bf5e87df-91a4-49f9-ae88-2a6dcf644510
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4616e2c10657e1af8db9c706c518fdf690618303
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d62bfb55e8024e70f94f23eb1f9273fb91f3caa1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822307"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763935"
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>使用 Windows 身份验证添加数据库镜像见证服务器 (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   为了给数据库设置见证服务器，数据库所有者为见证服务器的角色分配数据库引擎实例。 见证服务器实例可以与主体服务器实例或镜像服务器实例运行于同一台计算机上，但这样会明显降低自动故障转移的可靠性。  
   
  极力建议见证服务器应位于另外一台计算机上。 给定的服务器可以参与到多个具有相同或不同伙伴的并发数据库镜像会话中。 给定的服务器在某些会话中可能是伙伴，而在其他会话中则是见证服务器。  
@@ -54,15 +54,15 @@ ms.locfileid: "74822307"
   
 3.  连接到主体服务器并执行下面的语句：  
   
-     ALTER DATABASE <database_name>  SET WITNESS **=** <server_network_address>   
+     ALTER DATABASE <database_name> SET WITNESS **=** <server_network_address>  
   
-     其中，<database_name>  是要镜像的数据库的名称（此名称在两个伙伴上相同），  <server_network_address> 是见证服务器实例的服务器网络地址。  
+     其中，<database_name> 是要镜像的数据库的名称（此名称在两个伙伴上相同），<server_network_address> 是见证服务器实例的服务器网络地址。  
   
      服务器网络地址的语法如下：  
   
      TCP<b>://</b> _\<system-address>_ <b>:</b> _\<port>_  
   
-     其中，\<system-address>  是明确标识目标计算机系统的字符串，\<port>  是伙伴服务器实例的镜像终结点使用的端口号。 有关详细信息，请参阅 [指定服务器网络地址（数据库镜像）](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)。  
+     其中，\<*system-address>* 是明确标识目标计算机系统的字符串，\<*port>* 是合作服务器实例的镜像终结点使用的端口号。 有关详细信息，请参阅 [指定服务器网络地址（数据库镜像）](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)。  
   
      例如，在主体服务器实例上，下面的 ALTER DATABASE 语句设置见证服务器。 数据库名称为“AdventureWorks”，系统地址为 DBSERVER3（见证服务器系统的名称），见证服务器的数据库镜像终结点使用的端口为 `7022`：  
   

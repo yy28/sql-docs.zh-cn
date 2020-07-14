@@ -11,16 +11,16 @@ ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 390e8d4c65951f7b2b6c1f17d161a8ddc6d71242
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e90efcea33406b176706ce8d6fe0196d3c825fb3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79434084"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727318"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>在对象资源管理器中管理事件会话
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   本主题讨论您可以在 **“对象资源管理器”** 中执行的将影响扩展事件的操作：  
   
@@ -77,7 +77,7 @@ STATE = STOP
   
 1.  依次展开 **“管理”** 、 **“扩展事件”** 和 **“会话”** 节点。  
   
-2.  右键单击要导出的会话，然后选择“导出会话”  。  
+2.  右键单击要导出的会话，然后选择“导出会话”。  
   
 3.  在 **“另存为”** 对话框中选择保存文件的位置，在 **“文件名”** 框中键入文件名，然后单击 **“保存”** 。  
   
@@ -94,13 +94,13 @@ STATE = STOP
   
 1.  在 **“对象资源管理器”** 中，依次展开 **“管理”** 和 **“扩展事件”** 节点。  
   
-2.  右键单击“会话”  ，然后选择“新建会话”  。  
+2.  右键单击“会话”，然后选择“新建会话”。  
   
 3.  指定会话的名称。  
   
 4.  展开 **“模板”** 下拉框。  
   
-5.  单击“\<文件位置 …>打开”并通过浏览找到要导入的会话（XML 文件）  。  
+5.  单击“\<File From ...>打开”并通过浏览找到要导入的会话（XML 文件）。  
   
  会话将出现在 **“会话”** 节点下。 默认情况下，不会启动会话。  
   
@@ -111,7 +111,7 @@ STATE = STOP
   
 1.  在 **“对象资源管理器”** 中，依次展开 **“管理”** 、 **“扩展事件”** 和 **“会话”** 节点。  
   
-2.  右键单击一个会话，然后选择“属性”  。  
+2.  右键单击一个会话，然后选择“属性”。  
   
 3.  在 **“选择页”** 部分，选择您要编辑的页。  
   
@@ -140,13 +140,13 @@ STATE = STOP
   
 1.  依次展开 **“管理”** 、 **“扩展事件”** 和 **“会话”** 节点。  
   
-2.  右键单击一个会话，然后选择“删除”  。  
+2.  右键单击一个会话，然后选择“删除”。  
   
 3.  在 **“删除对象”** 对话框中，单击 **“确定”** 。  
   
 4.  在完成对事件会话的修改后，单击 **“确定”** 。  
   
- 若要在“查询编辑器”  中删除一个扩展事件会话，请发出以下语句，并将 *session_name* 替换为你要删除的扩展事件会话的名称：  
+ 若要在“查询编辑器”中删除一个扩展事件会话，请发出以下语句，并将 *session_name* 替换为你要删除的扩展事件会话的名称：  
   
 ```  
 DROP EVENT SESSION [session_name]  

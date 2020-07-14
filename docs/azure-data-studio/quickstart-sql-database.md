@@ -1,31 +1,30 @@
 ---
 title: 连接并查询 Azure SQL 数据库
-titleSuffix: Azure Data Studio
 description: 本快速入门介绍如何使用 Azure Data Studio 连接到 SQL 数据库并运行查询
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.reviewer: alayu; maghan; sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
 ms.custom: seodec18; sqlfreshmay19; seo-lt-2019
 ms.date: 05/14/2019
-ms.openlocfilehash: 2ed7841c3e6205ad0a6df4f232f021aeb24983cd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 73e910b6d199a4918eafca067a95136e31ac079c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957071"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771954"
 ---
-# <a name="quickstart-use-name-sos-to-connect-and-query-azure-sql-database"></a>快速入门：使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 连接并查询 Azure SQL 数据库
+# <a name="quickstart-use-azure-data-studio-to-connect-and-query-azure-sql-database"></a>快速入门：使用 Azure Data Studio 连接和查询 Azure SQL 数据库
 
-在本快速入门中，你将使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 连接到 Azure SQL 数据库服务器。 随后，你将运行 Transact-SQL (T-SQL) 语句来创建和查询 TutorialDB 数据库，该数据库亦用于其他 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 教程。
+在本快速入门中，你将使用 Azure Data Studio 连接到 Azure SQL 数据库服务器。 随后，你将运行 Transact-SQL (T-SQL) 语句来创建和查询 TutorialDB 数据库，该数据库亦用于其他 Azure Data Studio 教程。
 
 ## <a name="prerequisites"></a>先决条件
 
-若要完成本快速入门，你需要 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 和 Azure SQL 数据库服务器。
+若要完成此快速入门，需要 Azure Data Studio 和 Azure SQL 数据库服务器。
 
-- [安装 [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)
+- [安装 Azure Data Studio](download.md)
 
 如果你没有 Azure SQL Server，请完成以下 Azure SQL 数据库快速入门之一。 请记住完全限定服务器名称和登录凭据以用于后续步骤：
 
@@ -36,9 +35,9 @@ ms.locfileid: "74957071"
 
 ## <a name="connect-to-your-azure-sql-database-server"></a>连接到 Azure SQL 数据库服务器
 
-使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 建立与 Azure SQL 数据库服务器的连接。
+使用 Azure Data Studio 建立与 Azure SQL 数据库服务器的连接。
 
-1. 首次运行 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 时，应该会打开“欢迎”页  。 如果没有看到“欢迎”页，请选择“帮助” > “欢迎”    。 选择“新建连接”以打开“连接”窗格   ：
+1. 首次运行 Azure Data Studio 时，应该会打开“欢迎”页。 如果没有看到“欢迎”页，请选择“帮助” > “欢迎”  。 选择“新建连接”以打开“连接”窗格 ：
    
    ![“新建连接”图标](media/quickstart-sql-database/new-connection-icon.png)
 
@@ -50,25 +49,25 @@ ms.locfileid: "74957071"
    | **身份验证** | SQL 登录名| 本教程使用 SQL 身份验证。 |
    | **用户名** | 服务器管理员帐户用户名 | 用于创建服务器的帐户的用户名。 |
    | **密码(SQL 登录名)** | 服务器管理员帐户密码 | 用于创建服务器的帐户的密码。 |
-   | **是否保存密码？** | 是或否 | 如果不想每次都输入密码，请选择“是”  。 |
+   | **是否保存密码？** | 是或否 | 如果不想每次都输入密码，请选择“是”。 |
    | **数据库名称** | *留空* | 仅连接到此处的服务器。 |
    | **服务器组** | 选择 <Default> | 可将此字段设置为创建的特定服务器组。 | 
 
    ![“新建连接”图标](media/quickstart-sql-database/new-connection-screen.png)  
 
-3. 选择“连接”  。
+3. 选择“连接”。
 
-4. 如果服务器没有可允许 Azure Data Studio 连接的防火墙规则，则会打开“新建防火墙规则”窗体  。 填写窗体以新建防火墙规则。 有关详细信息，请参阅[防火墙规则](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)。
+4. 如果服务器没有可允许 Azure Data Studio 连接的防火墙规则，则会打开“新建防火墙规则”窗体。 填写窗体以新建防火墙规则。 有关详细信息，请参阅[防火墙规则](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)。
 
    ![新建防火墙规则](media/quickstart-sql-database/firewall.png)  
 
-成功连接后，你的服务器将在“服务器”侧栏中打开  。
+成功连接后，你的服务器将在“服务器”侧栏中打开。
 
 ## <a name="create-the-tutorial-database"></a>创建教程数据库
 
-接下来的部分会创建在其他 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 教程中使用的 TutorialDB 数据库。
+接下来的部分会创建在其他 Azure Data Studio 教程中使用的 TutorialDB 数据库。
 
-1. 右键单击“服务器”侧栏中的 Azure SQL Server，然后选择“新建查询”   。
+1. 右键单击“服务器”侧栏中的 Azure SQL Server，然后选择“新建查询” 。
 
 1. 将此 SQL 粘贴到查询编辑器中。
 
@@ -85,7 +84,7 @@ ms.locfileid: "74957071"
    GO
    ```
 
-1. 在工具栏中选择“运行”  。 通知在显示查询进度的“消息”窗格中显示  。
+1. 在工具栏中选择“运行”。 通知在显示查询进度的“消息”窗格中显示。
 
 ## <a name="create-a-table"></a>创建表
 
@@ -99,7 +98,7 @@ ms.locfileid: "74957071"
 
 1. 创建 `Customers` 表。 
 
-   将查询编辑器中的上一个查询替换为此查询，然后选择“运行”  。
+   将查询编辑器中的上一个查询替换为此查询，然后选择“运行”。
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -121,7 +120,7 @@ ms.locfileid: "74957071"
 
 ## <a name="insert-rows-into-the-table"></a>在表中插入行
 
-将上一个查询替换为此查询，然后选择“运行”  。
+将上一个查询替换为此查询，然后选择“运行”。
 
    ```sql
    -- Insert rows into table 'Customers'
@@ -137,7 +136,7 @@ ms.locfileid: "74957071"
 
 ## <a name="view-the-result"></a>查看结果
 
-将上一个查询替换为此查询，然后选择“运行”  。
+将上一个查询替换为此查询，然后选择“运行”。
 
    ```sql
    -- Select rows from table 'Customers'

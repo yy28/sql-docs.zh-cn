@@ -1,5 +1,6 @@
 ---
 title: 将文件加载到 FileTable 中 | Microsoft Docs
+description: 了解如何在以各种方式存储文件时，将文件加载并迁移到 SQL Server 中的 FileTable。 了解有关大容量加载操作的信息。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: de6e6a237c0aa80e2793f33373ec664dfe93f953
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8be4fbed43f4d54fb199b687a3409337ded3ff3b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908712"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767962"
 ---
 # <a name="load-files-into-filetables"></a>将文件加载到 FileTable 中
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   说明如何将文件加载或迁移到 FileTable 中。  
   
 ##  <a name="loading-or-migrating-files-into-a-filetable"></a><a name="BasicsLoadNew"></a> 将文件加载或迁移到 FileTable  
@@ -40,7 +41,7 @@ ms.locfileid: "72908712"
   
 -   从命令提示符下、批处理文件或脚本中使用命令行选项（如 MOVE、COPY、XCOPY 或 ROBOCOPY）。  
   
--   用 C# 或 Visual Basic.NET 编写一个用于移动或复制文件的自定义应用程序。 从 System.IO 命名空间调用方法  。  
+-   用 C# 或 Visual Basic.NET 编写一个用于移动或复制文件的自定义应用程序。 从 System.IO 命名空间调用方法。  
   
 ###  <a name="example-migrating-files-from-the-file-system-into-a-filetable"></a><a name="HowToMigrateFiles"></a> 示例：将文件从文件系统迁移到 FileTable  
  在这种情况下，您的文件存储在文件系统中，并且您具有包含指向这些文件的指针的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的元数据表。 您要将文件移入 FileTable，然后用 FileTable UNC 路径替换元数据中每个文件的原始 UNC 路径。 [GetPathLocator (Transact-SQL)](../../relational-databases/system-functions/getpathlocator-transact-sql.md) 函数帮助你实现这一目标。  
@@ -53,7 +54,7 @@ ms.locfileid: "72908712"
   
 2.  使用 xcopy 或类似的工具将 .jpg 文件连同目录结构一起复制到 FileTable 的根目录下。  
   
-3.  通过使用类似于以下示例的代码修复 PhotoMetadata  表中的元数据：  
+3.  通过使用类似于以下示例的代码修复 PhotoMetadata 表中的元数据：  
 
 ```sql  
 --  Add a path locator column to the PhotoMetadata table.  

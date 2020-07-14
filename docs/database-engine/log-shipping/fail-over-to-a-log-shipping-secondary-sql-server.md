@@ -1,6 +1,6 @@
 ---
 title: 故障转移到日志传送辅助数据库
-description: 说明如何故障转移到 SQL Server 日志传送辅助数据库。
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL 故障转移到 SQL Server 日志传送辅助服务器。
 ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: edfe5d59-4287-49c1-96c9-dd56212027bc
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 29b2fcad38e2971f39f63b400d307a2f64459eea
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ba01642d09e9352b976978df1cfc78756ad79029
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79510008"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85696186"
 ---
 # <a name="fail-over-to-a-log-shipping-secondary-sql-server"></a>故障转移到日志传送辅助服务器 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   如果主服务器实例失败或需要维护，则在出现故障时转移到日志传送辅助服务器将十分有用。  
   
 ## <a name="preparing-for-a-controlled-failover"></a>为受控故障转移做准备  

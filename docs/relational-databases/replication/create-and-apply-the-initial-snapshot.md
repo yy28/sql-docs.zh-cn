@@ -1,5 +1,6 @@
 ---
 title: 创建和应用初始快照 | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio、Transact-SQL 或复制管理对象在 SQL Server 中创建和应用初始快照。
 ms.custom: ''
 ms.date: 11/20/2018
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 6f5bb78720f864a5fddcbe957f36290e097984ea
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1ac8f70f642faaa7b9cb9c1afa4ec721b8876599
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76284893"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85654342"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>创建并应用初始快照
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建和应用初始快照。 使用参数化筛选器的合并发布需要由两部分组成的快照。 有关详细信息，请参阅 [为包含参数化筛选器的合并发布创建快照](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
   快照由快照代理在创建发布后生成。 按以下方式生成：  
   
@@ -42,7 +43,7 @@ ms.locfileid: "76284893"
 
 若要查看或修改默认快照文件夹位置，请参阅  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]设置用户帐户 ：[修改快照选项](../../relational-databases/replication/snapshot-options.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]：[修改快照选项](../../relational-databases/replication/snapshot-options.md)  
   
 -   复制编程和 RMO 编程：[配置发布和分发](../../relational-databases/replication/configure-publishing-and-distribution.md)  
 
@@ -50,13 +51,13 @@ ms.locfileid: "76284893"
 
  可以在配置分发向导的 **“快照文件夹”** 页上指定默认快照位置。 有关使用此向导的详细信息，请参阅[配置发布和分发](../../relational-databases/replication/configure-publishing-and-distribution.md)。 如果在未配置为分发服务器的服务器上创建发布，请在新建发布向导的 **“快照文件夹”** 页上指定默认快照位置。 有关使用此向导的详细信息，请参阅[创建发布](../../relational-databases/replication/publish/create-a-publication.md)。  
   
- 在“分发服务器属性 - \<分发服务器>”对话框的“发布服务器”页上，修改默认快照位置。   有关详细信息，请参阅[查看和修改分发服务器和发布服务器属性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)。 在“发布属性 - \<发布>”对话框中设置每个发布的快照文件夹。  有关详细信息，请参阅 [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+ 在“分发服务器属性 - \<Distributor>”对话框的“发布服务器”页上，修改默认快照位置 。 有关详细信息，请参阅[查看和修改分发服务器和发布服务器属性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)。 在“发布属性 - \<Publication>”对话框中设置每个发布的快照文件夹。 有关详细信息，请参阅 [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 ### <a name="modify-the-default-snapshot-location"></a>修改默认快照位置  
   
-1.  在“分发服务器属性 - \<分发服务器>”对话框的“发布服务器”页上，单击要更改其默认快照位置的发布服务器的属性按钮 (…)。     
+1.  在“分发服务器属性 - \<Distributor>”对话框的“发布服务器”页上，单击要更改其默认快照位置的发布服务器的属性按钮 (...)  。  
   
-2.  在“分发服务器属性 - \<分发服务器>”对话框中，为“默认快照文件夹”属性输入一个值。    
+2.  在“分发服务器属性 - \<Publisher>”对话框中，为“默认快照文件夹”属性输入一个值 。  
   
     > [!NOTE]  
     >  快照代理必须对指定的目录具有写权限，而分发代理或合并代理必须具有读权限。 如果使用的是请求订阅，则必须指定一个共享目录作为通用命名约定 (UNC) 路径，如 \\\computername\snapshot。 有关详细信息，请参阅[保护快照文件夹](../../relational-databases/replication/security/secure-the-snapshot-folder.md)。  
@@ -71,7 +72,7 @@ ms.locfileid: "76284893"
 1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中连接到发布服务器，然后展开服务器节点。    
 2.  展开 **“复制”** 文件夹，再展开 **“本地发布”** 文件夹。    
 3.  右键单击要为其创建快照的发布，然后单击 **“查看快照代理状态”** 。    
-4.  在“查看快照代理状态 - \<发布>”对话框中，单击“启动”。      
+4.  在“查看快照代理状态 - \<Publication>”对话框中，单击“启动” 。    
  快照代理生成快照后，将显示一条消息，例如“[100%] 已生成 17 个项目的快照”。  
   
 ### <a name="in-replication-monitor"></a>在复制监视器中  
@@ -88,13 +89,13 @@ ms.locfileid: "76284893"
 
 1.  创建快照发布、事务发布或合并发布。 有关详细信息，请参阅 [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)。  
   
-2.  执行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)。 指定 \@publication 以及下列参数  ：  
+2.  执行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)。 指定 \@publication 以及下列参数：  
   
     -   **\@job_login**，用于指定快照代理在分发服务器上运行时所用的 Windows 身份验证凭据。  
   
     -   **\@job_password**，为提供的 Windows 凭据的密码。  
   
-    -   （可选）如果代理在连接到发布服务器时将使用 SQL Server 身份验证，请将 \@publisher_security_mode 的值指定为 0   。 在这种情况下，还必须为 \@publisher_login 和 \@publisher_password 指定 SQL Server 身份验证的登录信息   。  
+    -   （可选）如果代理在连接到发布服务器时将使用 SQL Server 身份验证，请将 \@publisher_security_mode 的值指定为 0 。 在这种情况下，还必须为 \@publisher_login 和 \@publisher_password 指定 SQL Server 身份验证的登录信息 。  
   
     -   （可选）快照代理作业的同步计划。 有关详细信息，请参阅 [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md)。  
   
@@ -103,7 +104,7 @@ ms.locfileid: "76284893"
   
 3.  向发布添加项目。 有关详细信息，请参阅 [定义项目](../../relational-databases/replication/publish/define-an-article.md)。  
   
-4.  在发布服务器上，对发布数据库执行 [sp_startpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-startpublication-snapshot-transact-sql.md)，并指定步骤 1 中 \@publication 的值  。  
+4.  在发布服务器上，对发布数据库执行 [sp_startpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-startpublication-snapshot-transact-sql.md)，并指定步骤 1 中 \@publication 的值。  
   
 ## <a name="apply-a-snapshot"></a>应用快照  
 

@@ -1,5 +1,6 @@
 ---
 title: Missing Join Predicate 事件类 | Microsoft Docs
+description: Missing Join Predicate 事件类表示正在 SQL Server 中运行的查询没有联接谓词。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ ms.assetid: 0668cb4d-5682-4140-aab5-7b0da5cd3479
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c59a45533e68eb1af5d3e62ee059aa022c5cc503
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0f0571750b7c8a9ba39c79bf640872c88241fe81
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115952"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756034"
 ---
 # <a name="missing-join-predicate-event-class"></a>Missing Join Predicate 事件类
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Missing Join Predicate 事件类表示正在执行无联接谓词的查询。 这可能导致长时间运行查询。 有关联接谓词的详细信息，请参阅[谓词 (Transact-SQL)](~/t-sql/queries/predicates.md)。  
   
 ## <a name="missing-join-predicate-event-class-data-columns"></a>Missing Join Predicate 事件类的数据列  

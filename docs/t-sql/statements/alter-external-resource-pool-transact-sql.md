@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 08/07/2019
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.topic: language-reference
 f1_keywords:
 - ALTER_EXTERNAL_RESOURCE_POOL_TSQL
@@ -17,15 +17,15 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ebab091b0e674339141c4ee2ea6d7c7993ccbabf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d1759d67fda0f9cef5290a4b93a5b3b712b49a73
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68893685"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85761923"
 ---
 # <a name="alter-external-resource-pool-transact-sql"></a>ALTER EXTERNAL RESOURCE POOL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
 更改一个 Resource Governor 外部池，该池用于指定外部进程可使用的资源。 
 
@@ -41,7 +41,7 @@ ms.locfileid: "68893685"
 
 ## <a name="syntax"></a>语法
 
-```
+```syntaxsql
 ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
 [ WITH (
     [ MAX_CPU_PERCENT = value ]
@@ -63,22 +63,22 @@ ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
   
 ## <a name="arguments"></a>参数
 
-{ pool_name | "default" }   
+{ pool_name | "default" }  
 现有用户定义外部资源池或安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时创建的默认外部资源池的名称。
 与 `ALTER EXTERNAL RESOURCE POOL` 一起使用时，"default" 必须用引号 ("") 引起来或用方括号 ([]) 括起来，以免与系统保留字 `DEFAULT` 冲突。
 
-MAX_CPU_PERCENT =value   
-指定在存在 CPU 争用时外部资源池中的所有请求可以接收的最大平均 CPU 带宽。 value 是一个整数  。 value 的允许范围是 1 到 100  。
+MAX_CPU_PERCENT =value  
+指定在存在 CPU 争用时外部资源池中的所有请求可以接收的最大平均 CPU 带宽。 value 是一个整数。 value 的允许范围是 1 到 100。
 
 AFFINITY {CPU = AUTO | ( \<CPU_range_spec> ) | NUMANODE = (\<NUMA_node_range_spec>)}  
 将外部资源池附加到特定的 CPU。
 
-AFFINITY CPU = ( **CPU_range_spec> ) 将外部资源池映射到由给定 CPU_ID 标识的**  CPU\<  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 使用 AFFINITY NUMANODE = ( **NUMA_node_range_spec> ) 时，会将外部资源池关联到对应于给定 NUMA 节点或节点范围的**  物理 CPU\<  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
+AFFINITY CPU = ( \<CPU_range_spec> ) 将外部资源池映射到由给定 CPU_ID 标识的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CPU 。 使用 AFFINITY NUMANODE = ( \<NUMA_node_range_spec> ) 时，会将外部资源池关联到对应于给定 NUMA 节点或节点范围的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物理 CPU 。
 
-MAX_MEMORY_PERCENT =value   
-指定此外部资源池中的请求可使用的总服务器内存量。 value 是一个整数  。 value 的允许范围是 1 到 100  。
+MAX_MEMORY_PERCENT =value  
+指定此外部资源池中的请求可使用的总服务器内存量。 value 是一个整数。 value 的允许范围是 1 到 100。
 
-MAX_PROCESSES =value   
+MAX_PROCESSES =value  
 指定外部资源池允许的最大进程数。 指定 0 以便为池设置无限阈值，此阈值之后仅受计算机资源约束。
 
 ## <a name="remarks"></a>备注
@@ -87,7 +87,7 @@ MAX_PROCESSES =value
 
 有关资源池的常规信息，请参阅 [Resource Governor 资源池](../../relational-databases/resource-governor/resource-governor-resource-pool.md)、[sys.resource_governor_external_resource_pools (Transact-SQL)](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md) 和 [sys.dm_resource_governor_external_resource_pool_affinity (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)。  
 
-有关使用外部资源池管理机器学习作业的特定信息，请参阅 [SQL Server 中机器学习的资源调控](../../advanced-analytics/r/resource-governance-for-r-services.md)。
+有关使用外部资源池管理机器学习作业的特定信息，请参阅 [SQL Server 中机器学习的资源调控](../../machine-learning/administration/resource-governor.md)。
 ## <a name="permissions"></a>权限
 
 需要 `CONTROL SERVER` 权限。
@@ -110,7 +110,7 @@ GO
 
 ## <a name="see-also"></a>另请参阅
 
-+ [SQL Server 中机器学习的资源调控](../../advanced-analytics/r/resource-governance-for-r-services.md)
++ [SQL Server 中机器学习的资源调控](../../machine-learning/administration/resource-governor.md)
 + [“已启用外部脚本”服务器配置选项](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)
 + [CREATE EXTERNAL RESOURCE POOL (Transact-SQL)](../../t-sql/statements/create-external-resource-pool-transact-sql.md)
 + [DROP EXTERNAL RESOURCE POOL (Transact-SQL)](../../t-sql/statements/drop-external-resource-pool-transact-sql.md)

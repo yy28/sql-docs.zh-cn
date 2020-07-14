@@ -1,5 +1,6 @@
 ---
 title: 数据库快照 (SQL Server) | Microsoft Docs
+description: 了解如何使用数据库快照在 SQL Server 中创建数据库的只读静态视图。 了解其优点、先决条件和限制。
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -18,18 +19,18 @@ helpviewer_keywords:
 ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 724511cb3a60278c6642eb31cbb3481fe92f0d72
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fdf81fde342a3c7f0e250d467e7b486d753a8588
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68300437"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85630821"
 ---
 # <a name="database-snapshots-sql-server"></a>数据库快照 (SQL Server)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-数据库快照是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库（源数据库  ）的只读静态视图。 自创建快照那刻起，数据库快照在事务上与源数据库一致。 数据库快照始终与其源数据库位于同一服务器实例上。 虽然数据库快照提供与创建快照时处于相同状态的数据的只读视图，但快照文件的大小随着对源数据库的更改而增大。 有关详细信息，请参阅下面的[功能概述](#FeatureOverview)部分。
+数据库快照是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库（源数据库）的只读静态视图。 自创建快照那刻起，数据库快照在事务上与源数据库一致。 数据库快照始终与其源数据库位于同一服务器实例上。 虽然数据库快照提供与创建快照时处于相同状态的数据的只读视图，但快照文件的大小随着对源数据库的更改而增大。 有关详细信息，请参阅下面的[功能概述](#FeatureOverview)部分。
   
  给定源数据库中可以存在多个快照。 在数据库所有者显式删除每个数据库快照之前，该快照将一直保留。  
   
@@ -51,7 +52,7 @@ ms.locfileid: "68300437"
 ##  <a name="feature-overview"></a><a name="FeatureOverview"></a> 功能概述  
  数据库快照在数据页级运行。 在第一次修改源数据库页之前，先将原始页从源数据库复制到快照。 快照将存储原始页，保留它们在创建快照时的数据记录。 对要进行第一次修改的每一页重复此过程。 对于用户而言，数据库快照似乎始终保持不变，因为对数据库快照的读操作始终访问原始数据页，而与页驻留的位置无关。  
   
- 为了存储复制的原始页，快照使用一个或多个“稀疏文件”  。 最初，稀疏文件实质上是空文件，不包含用户数据并且未被分配存储用户数据的磁盘空间。 随着源数据库中更新的页越来越多，文件的大小也不断增长。 下图说明了两种相对的更新模式对快照大小的影响。 更新模式 A 反映的是在快照使用期限内仅有 30% 的原始页更新的环境。 更新模式 B 反映的是在快照使用期限内有 80% 的原始页更新的环境。  
+ 为了存储复制的原始页，快照使用一个或多个“稀疏文件” 。 最初，稀疏文件实质上是空文件，不包含用户数据并且未被分配存储用户数据的磁盘空间。 随着源数据库中更新的页越来越多，文件的大小也不断增长。 下图说明了两种相对的更新模式对快照大小的影响。 更新模式 A 反映的是在快照使用期限内仅有 30% 的原始页更新的环境。 更新模式 B 反映的是在快照使用期限内有 80% 的原始页更新的环境。  
   
  ![备用更新模式和快照大小](../../relational-databases/databases/media/dbview-04.gif "备用更新模式和快照大小")  
   

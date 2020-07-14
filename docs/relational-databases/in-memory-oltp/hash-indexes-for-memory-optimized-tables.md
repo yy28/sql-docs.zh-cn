@@ -1,5 +1,6 @@
 ---
 title: 对哈希索引进行故障排除 - 内存优化表
+description: 使用此信息对 SQL Server 和 Azure SQL 数据库中内存优化表的哈希索引进行故障排除。
 ms.custom: seo-dt-2019
 ms.date: 12/01/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: e922cc3a-3d6e-453b-8d32-f4b176e98488
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6216e8e008bff92ce502aa6dda8025c5ef63f0ba
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 13117bad78c1cfc843bbe68caeb2abb5c5f64dff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412657"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723219"
 ---
 # <a name="troubleshooting-hash-indexes-for-memory-optimized-tables"></a>内存优化表的哈希索引疑难解答
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 ## <a name="prerequisite"></a>先决条件  
   
@@ -32,7 +33,7 @@ ms.locfileid: "74412657"
   
 创建内存优化表的哈希索引时，需要在创建时指定桶计数。 在大多数情况下，桶计数在理想情况下应该介于索引键中非重复值数目的 1 到 2 倍之间。 
 
-不过，即使 BUCKET_COUNT  不太低于或高于首选范围，哈希索引的性能依然很有可能是可忍受或可接受的。 至少应考虑为哈希索引指定约等于内存优化表数据增长后预计包含的行数的 BUCKET_COUNT  。  
+不过，即使 BUCKET_COUNT 不太低于或高于首选范围，哈希索引的性能依然很有可能是可忍受或可接受的。 至少应考虑为哈希索引指定约等于内存优化表数据增长后预计包含的行数的 BUCKET_COUNT。  
 假设数据不断增长的表包含 2,000,000 行，但预计会增长到原来的 10 倍（即 20,000,000 行）。 那么，首先可以指定一个为表中行数 10 倍的桶计数。 这样，便为行数增加提供了空间。  
   
 - 理想情况下，当行的数量达到初始桶计数时，你则会增加桶计数。  
@@ -114,7 +115,7 @@ ORDER BY [table], [index];
 1. 创建包含一些哈希索引的内存优化表。  
 2. 在表中填充数千行。  
     a. 取模运算符用于配置 StatusCode 列中的值重复率。  
-    b.保留“数据库类型”设置，即设置为“共享”。 此循环在大约 1 分钟内插入 262,144 行。  
+    b. 此循环在大约 1 分钟内插入 262,144 行。  
 3. 列显一条消息，要求你从 **sys.dm_db_xtp_hash_index_stats**运行上述 SELECT。  
 
 ```sql
@@ -170,8 +171,8 @@ go
   
 上述 `INSERT` 循环执行以下操作：  
   
-- 插入主键索引和 ix_OrderSequence  的唯一值。  
-- 插入了几十万行，但只呈现了 `StatusCode` 的 8 个非重复值。 因此，索引 ix_StatusCode  中的值重复率很高。  
+- 插入主键索引和 ix_OrderSequence 的唯一值。  
+- 插入了几十万行，但只呈现了 `StatusCode` 的 8 个非重复值。 因此，索引 ix_StatusCode 中的值重复率很高。  
   
 为了在桶计数不最佳时进行问题排查，请从 **sys.dm_db_xtp_hash_index_stats**检查 SELECT 的以下输出。 对于这些结果，我们添加 `WHERE Object_Name(h.object_id) = 'SalesOrder_Mem'` 到从 D.1 部分复制的 SELECT。  
   
@@ -217,7 +218,7 @@ go
   
 ### <a name="balancing-the-trade-off"></a>权衡取舍  
   
-OLTP 工作负载注重每个行。 全表扫描通常不是影响 OLTP 工作负载的关键因素。 因此，必须在内存使用量  与相等测试和插入操作性能  之间权衡取舍。  
+OLTP 工作负载注重每个行。 全表扫描通常不是影响 OLTP 工作负载的关键因素。 因此，必须在内存使用量与相等测试和插入操作性能之间权衡取舍。  
   
 **如果内存使用量是更大的考虑因素：**  
   

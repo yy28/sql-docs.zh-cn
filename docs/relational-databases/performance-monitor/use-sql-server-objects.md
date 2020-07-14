@@ -30,19 +30,19 @@ helpviewer_keywords:
 ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 12d392c73d1e68bee57bb0a534bd65d39e48946d
-ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
+ms.openlocfilehash: fc69b2a0615745966971ad83da2b0acadf3b2488
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82262147"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773151"
 ---
 # <a name="use-sql-server-objects"></a>使用 SQL Server 对象
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了对象和计数器，系统监视器可以使用它们监视运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的计算机中的活动。 对象可以是任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 锁或 Windows 进程。 每个对象有一个或多个计数器，用于确定所要监视对象的各方面信息。 例如， **SQL Server Locks** 对象包含名为 **Number of Deadlocks/sec** 和 **Lock Timeouts/sec**的计数器。  
   
- 如果计算机上有某一个给定资源类型的多个资源，则一些对象会有几个实例。 例如，如果一个系统有多个处理器，则 **Processor** 对象类型会有多个实例。 对于 **上的每个数据库，** Databases [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]对象类型都有一个实例。 某些对象类型（例如， **Memory Manager** 对象）只有一个实例。 如果一个对象类型有多个实例，则可以增加计数器以跟踪每个实例的统计信息，另外在许多情况下，同时跟踪所有实例的统计信息。 默认实例的计数器以 **SQLServer:** _\<对象名称>_ 格式显示。 命名实例计数器以 **MSSQL$** _\<实例名称>_ **:** _\<计数器名称>_ 或 **SQLAgent$** _\<实例名称>_ **:** _\<计数器名称>_ 格式显示。  
+ 如果计算机上有某一个给定资源类型的多个资源，则一些对象会有几个实例。 例如，如果一个系统有多个处理器，则 **Processor** 对象类型会有多个实例。 对于 **上的每个数据库，** Databases [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]对象类型都有一个实例。 某些对象类型（例如， **Memory Manager** 对象）只有一个实例。 如果一个对象类型有多个实例，则可以增加计数器以跟踪每个实例的统计信息，另外在许多情况下，同时跟踪所有实例的统计信息。 默认实例的计数器以 SQLServer:\<object name> 格式显示。 命名实例的计数器以 MSSQL$\<instance name>:\<counter name> 或 SQLAgent$\<instance name>:\<counter name> 格式显示。  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 性能计数器值是使用 Windows 性能计数器 (WPC) 引擎生成的。 某些计数器值不会直接由 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 计算。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会向 WPC 引擎提供基值，而引擎会执行所需计算（如百分比）。 [sys.dm_os_performance_counters (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) 动态管理视图为所有计数器提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成的原始值。 `cntr_type` 列指示计数器的类型。 WPC 引擎处理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计数器值的方式取决于此类型。 有关性能计数器类型的详细信息，请参阅 [WMI 文档](https://docs.microsoft.com/windows/win32/wmisdk/wmi-performance-counter-types)。
   

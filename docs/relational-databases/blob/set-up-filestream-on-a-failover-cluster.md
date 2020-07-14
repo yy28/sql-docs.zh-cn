@@ -1,5 +1,6 @@
 ---
 title: 在故障转移群集中设置 FILESTREAM | Microsoft Docs
+description: 了解如何在 SQL Server 的故障转移群集中设置 FILESTREAM，以及在设置之前要启用的功能。
 ms.custom: ''
 ms.date: 08/26/2016
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 6721f780-20b7-4109-8ddb-ac327310699e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3ef524c6ee823b80b25fa5cf5ee4584ba8b8d00c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 58ea828b434abbaaa939df25b9f6c59d26e3d144
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67912188"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765476"
 ---
 # <a name="set-up-filestream-on-a-failover-cluster"></a>在故障转移群集中设置 FILESTREAM
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   本主题说明了如何在故障转移群集中启用 FILESTREAM。 在尝试执行此过程之前，您应该先了解 [故障转移群集](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) 并启用 FILESTREAM。 有关如何启用 FILESTREAM 的信息，请参阅 [启用和配置 FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)。  
   
 ### <a name="to-set-up-filestream-on-a-failover-cluster"></a>在故障转移群集中设置 FILESTREAM  

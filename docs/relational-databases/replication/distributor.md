@@ -13,15 +13,15 @@ ms.assetid: 787f0e9c-09dd-438a-bc04-5b8f99c127b8
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 664ceea195e327b9c301ed1206eba014c8adf2a8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5d03c0c68750b2d2f5febbd024f7f1d5d32ec4d9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287869"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85653310"
 ---
 # <a name="distributor"></a>分发服务器
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   **“分发服务器”** 页出现在配置分发向导和新建发布向导中。 分发服务器是包含分发数据库并为所有类型的复制存储元数据和历史记录数据的服务器。 分发服务器还为事务复制存储事务。 分发服务器与发布服务器可以是同一服务器（本地分发服务器），也可以是不同的服务器（远程分发服务器）。 分发服务器的角色根据所实现的复制类型的不同而不同。 通常，对于事务复制，分发服务器角色要远比合并复制和快照复制重要。 合并和快照复制通常使用本地分发服务器，而对于繁忙的系统来说，为事务复制使用远程分发服务器可以提高性能。  
   
  分发服务器在其所在服务器上使用以下附加资源：  
@@ -35,7 +35,7 @@ ms.locfileid: "76287869"
  选作分发服务器的服务器应有足够的磁盘空间和处理器运算能力，以支持该服务器上的复制和任何其他活动。  
   
 ## <a name="options"></a>选项  
- **“\<服务器名>”将充当自己的分发服务器；SQL Server 将创建分发数据库和日志**  
+ **“\<ServerName>”将充当自己的分发服务器；SQL Server 将创建分发数据库和日志**  
  选择此选项可将所连接的服务器配置为分发服务器。  
   
  **使用以下服务器作为分发服务器(注意: 您选择的服务器必须已配置为分发服务器)**  

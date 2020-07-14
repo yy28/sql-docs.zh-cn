@@ -1,5 +1,6 @@
 ---
 title: 实现包含 FROM 或子查询的 UPDATE | Microsoft Docs
+description: 了解本机编译的 T-SQL 模块中的 Transact-SQL UPDATE 语句上支持哪些语法元素。
 ms.custom: ''
 ms.date: 11/17/2016
 ms.prod: sql
@@ -11,25 +12,25 @@ ms.assetid: 138f5b0e-f8a4-400f-b581-8062aebc62b6
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0c41165cf1e4a6b1ad8122cb674f8644f40d8ebe
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 95e55e1519ab61eee3bed031d0d80565e56b0a69
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68050264"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723154"
 ---
 # <a name="implementing-update-with-from-or-subqueries"></a>实现包含 FROM 或子查询的 UPDATE
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 
 
-在 Transact-SQL UPDATE 语句中，在本机编译的 T-SQL 模块中，不支持以下语法元素  ：
+在 Transact-SQL UPDATE 语句中，在本机编译的 T-SQL 模块中，不支持以下语法元素：
 
 - FROM 子句
 - 子查询
 
-与之相反，SELECT 语句上的本机编译模块支持前面的元素  。
+与之相反，SELECT 语句上的本机编译模块支持前面的元素。
 
 包含 FROM 子句的 UPDATE 语句通常用于基于表值参数 (TVP) 更新表格中的信息，或用于更新 AFTER 触发器的表格中的列。
 

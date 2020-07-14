@@ -1,5 +1,6 @@
 ---
 title: “代理 XP”服务器配置选项 | Microsoft Docs
+description: 了解如何使用 Agent XP 选项来启用 SQL Server 代理扩展存储过程。 查看使用此选项的示例。
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - Agent XPs option
 - extended stored procedures [SQL Server], SQL Server Agent
 ms.assetid: 2e1c6c64-5ce7-4357-98c7-ac7763a9f9de
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: e7e2e655be19ac8f84378930e1dfada525007504
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 19e6eb1601d0640e68ee17617154e4964a1f43a3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013159"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725269"
 ---
 # <a name="agent-xps-server-configuration-option"></a>“代理 XP”服务器配置选项
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   使用 **Agent XPs** 选项可以启用此服务器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理扩展存储过程。 如果禁用此选项，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象资源管理器将不显示 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 代理节点。  
   
@@ -43,9 +44,9 @@ ms.locfileid: "68013159"
 
 1. 在 Microsoft SQL Server Management Studio 中连接到数据库引擎。
 
-2.  在标准工具栏上，单击“新建查询”。 
+2.  在标准工具栏上，单击“新建查询”。
 
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 
   
 ```sql 
 sp_configure 'show advanced options', 1;  

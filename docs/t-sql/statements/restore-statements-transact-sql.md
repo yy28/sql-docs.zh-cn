@@ -40,12 +40,12 @@ ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3661b840340f4fb14e5dcc52f2ae0aa296b7520e
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: ba9a1a0b2922cba5c2aadef862bec56bbc66666b
+ms.sourcegitcommit: e6c260a139326f5a400a57ece812d39ef8b820bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922174"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86032446"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 语句 (Transact-SQL)
 
@@ -301,7 +301,7 @@ Note: URL is the format used to specify the location and the file name for the M
 |停止使用的关键字|替换为…|替换关键字的示例|
 |--------------------------|------------------|------------------------------------|
 |LOAD|RESTORE|`RESTORE DATABASE`|
-|TRANSACTION|日志|`RESTORE LOG`|
+|TRANSACTION|LOG|`RESTORE LOG`|
 |DBO_ONLY|RESTRICTED_USER|`RESTORE DATABASE ... WITH RESTRICTED_USER`|
 
 ### <a name="restore-log"></a>RESTORE LOG
@@ -320,13 +320,13 @@ RESTORE LOG 可以包括一个文件列表，从而允许在前滚过程中创�
 
 - RECOVERY（默认值）表示，应在完成当前备份前滚之后执行回滚。
 
-  恢复数据库要求要还原的整个数据集（“前滚集  ”）必须与数据库一致。 如果前滚集尚未前滚到与数据库保持一致的地步，并且指定了 RECOVERY，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将发出错误。 有关恢复过程的详细信息，请参阅[还原和恢复概述 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)。
+  恢复数据库要求要还原的整个数据集（“前滚集”）必须与数据库一致。 如果前滚集尚未前滚到与数据库保持一致的地步，并且指定了 RECOVERY，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将发出错误。 有关恢复过程的详细信息，请参阅[还原和恢复概述 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)。
 
 ## <a name="compatibility-support"></a>兼容性支持
-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 无法还原使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本创建的 master、model 和 msdb 备份    。
+[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 无法还原使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本创建的 master、model 和 msdb 备份  。
 
 > [!NOTE]
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份不会还原到比创建了备份的版本还早的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。
+> 无法将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份还原到比创建该备份的版本还早的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每个版本使用的默认路径与早期版本不同。 因此，若要还原在早期版本备份的默认位置创建的数据库，必须使用 MOVE 选项。 有关新的默认路径的信息，请参阅 [SQL Server 的默认实例和命名实例的文件位置](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)。
 
@@ -343,7 +343,7 @@ RESTORE 在出现错误之后可以重新启动。 此外，你可以指示 REST
 
 不允许在显式或隐式事务中使用 RESTORE。
 
-还原已损坏的 master 数据库需要使用特殊的过程  。 有关详细信息，请参阅[备份和还原系统数据库](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)。
+还原已损坏的 master 数据库需要使用特殊的过程。 有关详细信息，请参阅[备份和还原系统数据库](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)。
 
 还原数据库会清除要还原的数据库的计划缓存。 清除计划缓存将导致对所有后续执行计划进行重新编译，并可能导致查询性能暂时性地突然降低。 
 
@@ -363,7 +363,7 @@ RESTORE 在出现错误之后可以重新启动。 此外，你可以指示 REST
 
 ### <a name="restoring-a-database-enabled-for-vardecimal-storage"></a>还原为 vardecimal 存储启用的数据库
 
-使用 vardecimal 存储格式时，备份和还原可正常进行  。 有关 vardecimal  存储格式的详细信息，请参阅 [sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md)。
+使用 vardecimal 存储格式时，备份和还原可正常进行。 有关 vardecimal 存储格式的详细信息，请参阅 [sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md)。
 
 ### <a name="restore-full-text-data"></a>还原全文数据
 
@@ -405,7 +405,7 @@ RESTORE 语句也可用于对全文数据执行替代位置还原、差异还原
 通过还原受影响文件的全部内容，可以中止并重新启动还原顺序。
 
 ## <a name="reverting-a-database-to-a-database-snapshot"></a>将数据库恢复到数据库快照
-“恢复数据库操作”（使用 DATABASE_SNAPSHOT 选项指定）用于及时执行完整的源数据库恢复，该过程将使源数据库恢复到数据库快照时的状态，就是说，用在指定的数据库快照中维护的时间点数据覆盖源数据库  。 当前只能存在可以恢复到的快照。 然后，恢复操作重新生成日志（因此，以后无法将已恢复的数据库前滚到用户错误点）。
+“恢复数据库操作”（使用 DATABASE_SNAPSHOT 选项指定）用于及时执行完整的源数据库恢复，该过程将使源数据库恢复到数据库快照时的状态，就是说，用在指定的数据库快照中维护的时间点数据覆盖源数据库。 当前只能存在可以恢复到的快照。 然后，恢复操作重新生成日志（因此，以后无法将已恢复的数据库前滚到用户错误点）。
 
 丢失的数据仅限于创建快照后数据库更新的数据。 已恢复的数据库的元数据与创建快照时的元数据相同。 但是，恢复到快照将删除所有全文目录。
 
@@ -677,7 +677,7 @@ GO
 
 以下三个示例都涉及 Microsoft Azure 存储服务的使用。 存储帐户名称为 `mystorageaccount`。 数据文件的容器称为 `myfirstcontainer`。 备份文件的容器称为 `mysecondcontainer`。 已为每个容器创建具有读取、写入、删除和列表权限的存储访问策略。 已使用与存储访问策略相关联的共享访问签名创建 SQL Server 凭据。 针对使用 Microsoft Azure Blob 存储进行 SQL Server 备份和还原的信息，请参阅[使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。
 
-K1.  从 Microsoft Azure 存储服务还原完整数据库备份    
+K1.从 Microsoft Azure 存储服务还原完整数据库备份    
 位于 `mysecondcontainer` 的 `Sales` 的完整数据库备份将还原到 `myfirstcontainer`。 `Sales` 当前不在服务器上。
 
 ```sql
@@ -688,7 +688,7 @@ RESTORE DATABASE Sales
   STATS = 10;
 ```
 
-K2.  将完整数据库备份从 Microsoft Azure 存储服务还原到本地存储`Sales` 的完整数据库备份（位于 `mysecondcontainer`）会还原到本地存储。 `Sales` 当前不在服务器上。
+K2.将完整数据库备份从 Microsoft Azure 存储服务还原到本地存储`Sales` 的完整数据库备份（位于 `mysecondcontainer`）会还原到本地存储。 `Sales` 当前不在服务器上。
 
 ```sql
 RESTORE DATABASE Sales
@@ -698,7 +698,7 @@ RESTORE DATABASE Sales
   STATS = 10;
 ```
 
-K3.  将完整数据库备份从本地存储还原到 Microsoft Azure 存储服务
+K3.将完整数据库备份从本地存储还原到 Microsoft Azure 存储服务
 
 ```sql
 RESTORE DATABASE Sales
@@ -913,11 +913,11 @@ RESTORE DATABASE *database_name* 指定要将用户数据库还原到名为 *dat
 
 FROM DISK = '\\\\*UNC_path*\\*backup_directory*' [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 将从中还原备份文件的网络路径和目录。 例如，FROM DISK = '\\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup'。
 
-backup_directory  指定包含完整或差异备份的目录的名称。 例如，可以对完整或差异备份执行 RESTORE HEADERONLY 操作。
+backup_directory 指定包含完整或差异备份的目录的名称。 例如，可以对完整或差异备份执行 RESTORE HEADERONLY 操作。
 
-full_backup_directory  指定包含完整备份的目录的名称。
+full_backup_directory 指定包含完整备份的目录的名称。
 
-differential_backup_directory  指定包含差异备份的目录的名称。
+differential_backup_directory 指定包含差异备份的目录的名称。
 
 - 路径和备份目录必须已存在，并且必须指定为完全限定的通用命名约定 (UNC) 路径。
 - 备份目录的路径不能是本地路径，并且不能是任何[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]设备节点上的位置。

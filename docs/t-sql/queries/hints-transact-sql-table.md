@@ -36,15 +36,15 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 225a92fc082a2778a7146923a9d138d0ce86aa7b
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: cdc73ac23a6d95d46b6ec02bb1aeb194df96422a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087502"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731330"
 ---
 # <a name="hints-transact-sql---table"></a>提示 (Transact-SQL) - 表
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   通过指定锁定方法、一个或多个索引、查询处理操作（如表扫描或索引查找）或其他选项，表提示在数据操作语言 (DML) 语句执行期间覆盖查询优化器的默认行为。 表提示在 DML 语句的 FROM 子句中指定，仅影响在该子句中引用的表或视图。  
   
@@ -221,7 +221,7 @@ FORCESEEK [ **(** _index\_value_ **(** _index\_column\_name_ [ **,** ... _n_ ] *
 > [!CAUTION]  
 > 指定带参数的 FORCESEEK 限制优化器可以考虑的计划数大于指定不带参数的 FORCESEEK 时的计划数。 这可能导致更多情况下发生 `Plan cannot be generated` 错误。 在未来的版本中，对查询优化器进行内部修改后可允许考虑更多计划。  
   
-FORCESCAN 适用范围：  [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] SP1 及更高版本。
+FORCESCAN 适用范围：[!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] SP1 及更高版本。
 指定查询优化器仅使用索引扫描操作作为引用的表或视图的访问途经。 对于优化器低估受影响的行数并选择一个查找操作而非扫描操作的查询，FORCESCAN 提示很有用。 出现这样的情况时，授予该操作的内存量太小，查询性能将受影响。  
   
 指定 FORCESCAN 时有无 INDEX 提示均可。 与索引提示组合使用 (`INDEX = index_name, FORCESCAN`) 时，查询优化器在访问引用的表时仅考虑通过指定的索引扫描访问路径。 可以带索引提示 INDEX(0) 指定 FORCESCAN，以强制对基表执行表扫描操作。  

@@ -1,5 +1,6 @@
 ---
 title: 使用计算列提升常用的 XML 值 | Microsoft Docs
+description: 了解如何通过创建计算列来提升频繁使用的 XML 值，以便进行更高效的查询。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,15 +14,15 @@ ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 9ca8eb44f7dad50d22b36a1cd795b3695836cb6b
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 065b882ac2a3fdd2d43f9d7754b267384a163e89
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664882"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772101"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>使用计算列提升常用的 XML 值
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   如果主要是对少数元素和属性值进行查询，您可能希望将这些数量提升到关系列。 检索整个 XML 实例，但只对一小部分 XML 数据进行查询时，这很有用。 不必对 XML 列创建 XML 索引。 但可以对提升的列进行索引。 必须编写查询才能使用提升的列。 也就是说，查询优化器不会将对 XML 列的查询再定向到提升的列。  
   
  提升的列可以是同一个表中的计算列，也可以是表中用户维护的单独列。 从每个 XML 实例提升单一值时，这就足够了。 但是，对于多值属性，则必须为属性创建单独的表，如下节所述。  
@@ -51,7 +52,7 @@ ADD   ISBN AS dbo.udf_get_book_ISBN(xCol)
   
  可以按通常的方式对计算列创建索引。  
   
-### <a name="example-queries-on-a-computed-column-based-on-xml-data-type-methods"></a>示例：对基于 xml 数据类型方法的计算列的查询  
+### <a name="example-queries-on-a-computed-column-based-on-xml-data-type-methods"></a>示例：针对基于 xml 数据类型方法的计算列的查询  
  若要获得其 ISBN 为 0-7356-1588-2 的 <`book`>：  
   
 ```  
@@ -164,7 +165,7 @@ FROM     T JOIN tblPropAuthor ON T.pk = tblPropAuthor.propPK
 WHERE    tblPropAuthor.propAuthor = 'David'  
 ```  
   
-### <a name="example-solution-using-the-clr-streaming-table-valued-function"></a>示例：使用 CLR 流式表值函数的解决方案  
+### <a name="example-solution-using-the-clr-streaming-table-valued-function"></a>示例：使用 CLR 流式处理表值函数的解决方案  
  此解决方案包括下列步骤：  
   
 1.  定义 CLR 类 SqlReaderBase，它实现 ISqlReader，并通过在 XML 实例上应用路径表达式来生成流式表值输出。  

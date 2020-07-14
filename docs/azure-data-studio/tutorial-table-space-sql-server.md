@@ -1,23 +1,22 @@
 ---
 title: 启用表空间使用情况示例见解小组件
-titleSuffix: Azure Data Studio
 description: 本教程演示如何在 Azure Data Studio 数据库仪表板上启用表空间使用情况示例见解小组件。
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/10/2019
-ms.openlocfilehash: f22aba3fd2f2d006355fdd30aef6f196f2795f6c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8d2be24a72c098c5a6a0b5e3ecefbde9bbe39cd5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957011"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726704"
 ---
-# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-name-sos"></a>教程：使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 启用表空间使用情况示例见解小组件
+# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-azure-data-studio"></a>教程：使用 Azure Data Studio 启用表空间使用情况示例见解小组件
 
 本教程演示如何在数据库仪表板上启用见解小组件，从而提供有关数据库中所有表的空间使用情况的一览式视图。 在本教程中，你将学习如何执行以下操作：
 
@@ -28,28 +27,28 @@ ms.locfileid: "74957011"
 
 ## <a name="prerequisites"></a>先决条件
 
-本教程需要使用 SQL Server 或 Azure SQL 数据库 TutorialDB  。 若要创建 TutorialDB  数据库，请完成以下其中一项快速入门：
+本教程需要使用 SQL Server 或 Azure SQL 数据库 TutorialDB。 若要创建 TutorialDB 数据库，请完成以下其中一项快速入门：
 
 * [使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 连接并查询 SQL Server](quickstart-sql-server.md)
 * [使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 连接并查询 Azure SQL 数据库](quickstart-sql-database.md)
 
-## <a name="turn-on-a-management-insight-on-name-soss-database-dashboard"></a>在 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 的数据库仪表板上打开管理见解
+## <a name="turn-on-a-management-insight-on-azure-data-studios-database-dashboard"></a>在 Azure Data Studio 的数据库仪表板上打开管理见解
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] 具有内置的示例小组件，用于监视数据库中的表所使用的空间。
+Azure Data Studio 具有内置的示例小组件，用于监视数据库中的表所使用的空间。
 
-1. 按“Ctrl+Shift+P”打开“命令面板”，以打开“用户设置”    。
+1. 按“Ctrl+Shift+P”打开“命令面板”，以打开“用户设置”。
 
-2. 在搜索框中键入“设置”，然后选择“首选项:   打开用户设置”。
+2. 在搜索框中键入“设置”，然后选择“首选项:打开用户设置”。
 
-3. 在“设置搜索”输入框中键入“仪表板”，然后找到“dashboard.database.widgets”   。
+3. 在“设置搜索”输入框中键入“仪表板”，然后找到“dashboard.database.widgets”。
 
-4. 自定义“dashboard.database.widgets”设置时，需编辑“用户设置”部分中的“dashboard.database.widgets”条目    。
+4. 自定义“dashboard.database.widgets”设置时，需编辑“用户设置”部分中的“dashboard.database.widgets”条目  。
 
    ![搜索设置](media/tutorial-table-space-sql-server/search-settings.png)
 
-   如果“用户设置”部分中没有“dashboard.database.widgets”，请将鼠标悬停在“默认设置”列中的“dashboard.database.widgets”文本上，单击显示在文本左侧的齿轮图标，然后单击“设置 JSON 时复制”      。 如果弹出窗口显示“在设置中替换”，请勿单击它  ！ 转到右侧的“用户设置”列，找到“dashboard.database.widgets”部分，然后进入下一步   。
+   如果“用户设置”部分中没有“dashboard.database.widgets”，请将鼠标悬停在“默认设置”列中的“dashboard.database.widgets”文本上，单击显示在文本左侧的齿轮图标，然后单击“设置 JSON 时复制”  。 如果弹出窗口显示“在设置中替换”，请勿单击它！ 转到右侧的“用户设置”列，找到“dashboard.database.widgets”部分，然后进入下一步 。
 
-5. 在“dashboard.database.widgets”部分中，添加以下行  ：
+5. 在“dashboard.database.widgets”部分中，添加以下行：
 
    ```json
         {
@@ -64,13 +63,13 @@ ms.locfileid: "74957011"
         },
     ```
 
-   “dashboard.database.widgets”部分看起来应类似于下图  ：
+   “dashboard.database.widgets”部分看起来应类似于下图：
 
     ![搜索设置](./media/tutorial-table-space-sql-server/insight-table-space.png)
 
-6. 按“Ctrl+S”保存设置  。
+6. 按“Ctrl+S”保存设置。
 
-7. 右键单击“TutorialDB”打开数据库仪表板，然后单击“管理”   。
+7. 右键单击“TutorialDB”打开数据库仪表板，然后单击“管理” 。
 
 8. 查看*表空间*见解小组件，如下图所示：
 
@@ -78,11 +77,11 @@ ms.locfileid: "74957011"
 
 ## <a name="working-with-the-insight-chart"></a>使用见解图
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] 的见解图提供筛选和鼠标悬停详细信息。 尝试执行以下步骤：
+Azure Data Studio 的见解图提供筛选和鼠标悬停详细信息。 尝试执行以下步骤：
 
-1. 单击并切换图表上的 *row_count* 图例。 当你打开或关闭图例时，[!INCLUDE[name-sos](../includes/name-sos-short.md)] 会显示和隐藏数据系列。
+1. 单击并切换图表上的 *row_count* 图例。 当你打开或关闭图例时，Azure Data Studio 会显示和隐藏数据系列。
 
-2. 将鼠标指针悬停在图表上方。 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 会显示有关数据系列标签及其值的详细信息，如以下屏幕截图所示。
+2. 将鼠标指针悬停在图表上方。 Azure Data Studio 会显示有关数据系列标签及其值的详细信息，如以下屏幕截图所示。
 
    ![图表切换和图例](./media/tutorial-table-space-sql-server/insight-table-space-toggle.png)
 

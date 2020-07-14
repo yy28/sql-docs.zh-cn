@@ -1,5 +1,6 @@
 ---
 title: 向数据库中添加数据文件或日志文件 | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL 将数据或日志文件添加到 SQL Server 2019 中的数据库中。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 34e976dca163289450c3aa481d1f72bb46712046
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 563a075ec3cba0cc25980e59a228a5c319075caa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68137395"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727578"
 ---
 # <a name="add-data-or-log-files-to-a-database"></a>向数据库中添加数据文件或日志文件
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中向数据库添加数据文件或日志文件。  
   
  **本主题内容**  
@@ -62,7 +63,7 @@ ms.locfileid: "68137395"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的实例，然后展开该实例。  
   
-2.  展开“数据库”  ，右键单击要从中添加文件的数据库，然后单击“属性”  。  
+2.  展开“数据库”，右键单击要从中添加文件的数据库，然后单击“属性”。  
   
 3.  在 **“数据库属性”** 对话框中，选择 **“文件”** 页。  
   
@@ -72,11 +73,11 @@ ms.locfileid: "68137395"
   
 6.  选择文件类型：数据或日志。  
   
-7.  对于数据文件，从列表中选择应包含该文件的文件组，或选择“\<新文件组>”来创建新的文件组。 事务日志不能放在文件组中。  
+7.  对于数据文件，从列表中选择文件应属于的文件组，或选择 \<new filegroup> 以创建新的文件组。 事务日志不能放在文件组中。  
   
 8.  指定文件的初始大小。 根据数据库中您希望的最大数据量，使数据文件尽可能大。  
   
-9. 若要指定文件的增长方式，请在“自动增长”列中单击 (…)。 从下列选项中进行选择：  
+9. 若要指定文件的增长方式，请在“自动增长”列中单击 (…) 。 从下列选项中进行选择：  
   
     1.  若要允许当前选中的文件根据数据空间量的需求增加而增长，请选中 **“启用自动增长”** 复选框，然后从下列选项中进行选择：  
   
@@ -86,11 +87,11 @@ ms.locfileid: "68137395"
   
 10. 若要指定最大文件大小限制，请从下列选项中进行选择：  
   
-    1.  若要指定文件能够增长到的最大大小，请选择“限制文件增长(MB)”  并指定一个值。  
+    1.  若要指定文件能够增长到的最大大小，请选择“限制文件增长(MB)”并指定一个值。  
   
     2.  若要允许文件根据需要增长，请选择 **“不限制文件增长”** 。  
   
-    3.  若要防止文件增长，请清除 **“启用自动增长”** 复选框。 文件大小不会增长到超过“初始大小(MB)”  列中指定的值。  
+    3.  若要防止文件增长，请清除 **“启用自动增长”** 复选框。 文件大小不会增长到超过“初始大小(MB)”列中指定的值。  
   
     > [!NOTE]  
     >  最大数据库大小由可用磁盘空间量决定，许可限制由正在使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本决定。  
@@ -100,7 +101,7 @@ ms.locfileid: "68137395"
     > [!NOTE]  
     >  默认情况下，数据和事务日志放在相同的驱动器和路径中以适应单磁盘系统，但这对于生产环境可能并非最佳方式。 有关详细信息，请参阅 [数据库文件和文件组](../../relational-databases/databases/database-files-and-filegroups.md)。  
   
-12. 单击“确定”。   
+12. 单击“确定”。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -110,7 +111,7 @@ ms.locfileid: "68137395"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此实例向数据库添加由两个文件组成的文件组。 此示例在 `Test1FG1` 数据库中创建文件组 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ，然后将两个 5MB 的文件添加到该文件组。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此实例向数据库添加由两个文件组成的文件组。 此示例在 `Test1FG1` 数据库中创建文件组 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ，然后将两个 5MB 的文件添加到该文件组。  
   
  [!code-sql[DatabaseDDL#AlterDatabase2](../../relational-databases/databases/codesnippet/tsql/add-data-or-log-files-to_1.sql)]  
   

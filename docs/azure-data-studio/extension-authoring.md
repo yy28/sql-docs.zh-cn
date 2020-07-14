@@ -1,25 +1,24 @@
 ---
 title: 创建扩展
-titleSuffix: Azure Data Studio
 description: 了解如何创建扩展并将其添加到 Azure Data Studio
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: d0c43df8b24a33f3763dc5ff3a80e989b9b85038
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: adfff7f2aa0fbda1b5e8bdacaddfaef36d16342f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67959606"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774629"
 ---
 # <a name="extend-the-functionality-by-creating-azure-data-studio-extensions"></a>通过创建 Azure Data Studio 扩展来扩展功能
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] 中的扩展提供向基本 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 安装添加更多功能的简便方法。
+借助 Azure Data Studio 中的扩展，可轻松地向基本 Azure Data Studio 安装添加更多功能。
 
 扩展由 Azure Data Studio 团队 (Microsoft) 以及第三方社区（你）提供。
 
@@ -43,7 +42,7 @@ ms.locfileid: "67959606"
 
 **扩展性参考**
 
-若要了解 Azure Data Studio 扩展性，请参阅[扩展性概述](extensibility.md)。 还可在现有[示例](https://github.com/Microsoft/azuredatastudio/tree/master/samples)中查看如何使用 API 的示例。
+若要了解 Azure Data Studio 扩展性，请参阅[扩展性概述](extensibility.md)。 还可在现有[示例](https://github.com/Microsoft/azuredatastudio/tree/main/samples)中查看如何使用 API 的示例。
 
 
 ## <a name="debug-an-extension"></a>调试扩展
@@ -53,7 +52,7 @@ ms.locfileid: "67959606"
 步骤
 - 使用 [Visual Studio Code](https://code.visualstudio.com/) 打开扩展
 - 安装 Azure Data Studio 调试扩展
-- 按“F5”或单击“调试”图标，然后单击“启动”   。
+- 按“F5”或单击“调试”图标，然后单击“启动” 。
 - Azure Data Studio 的新实例在特殊模式（扩展开发主机）下启动，此新实例现在可以识别你的扩展。
 
 

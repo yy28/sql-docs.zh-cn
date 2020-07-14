@@ -17,16 +17,16 @@ ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1c6be1e3a8b05daf16ec845a307679620d2b1d00
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f1bd6350c31b29855915de1be8288ec1fcbe2a56
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68048715"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751112"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>创建、修改和删除空间索引
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  空间索引可以更高效地对数据类型为“geometry”  或“geography”  的列（空间数据列  ）执行特定操作。 可对空间数据列指定多个空间索引。 这非常有用，例如，对单一列中的不同分割参数建立索引时，就是如此。  
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+  空间索引可以更高效地对数据类型为“geometry”或“geography”的列（空间数据列）执行特定操作。 可对空间数据列指定多个空间索引。 这非常有用，例如，对单一列中的不同分割参数建立索引时，就是如此。  
   
  创建空间索引时有许多限制。 有关详细信息，请参阅本主题中的 [对空间索引的限制](#restrictions) 。  
   
@@ -48,15 +48,15 @@ ms.locfileid: "68048715"
   
 3.  展开要为其创建索引的表。  
   
-4.  右键单击“索引”  ，再选择“新建索引”  。  
+4.  右键单击“索引”，再选择“新建索引”。  
   
 5.  在 **“索引名称”** 字段中，输入索引的名称。  
   
-6.  在“索引类型”  下拉列表中，选择“空间”  。  
+6.  在“索引类型”下拉列表中，选择“空间”。  
   
 7.  若要指定想为其创建索引的空间数据列，请单击 **“添加”** 。  
   
-8.  在“从 **表名称> 中选择列”对话框中，通过选中相应的复选框，选择类型为 geometry 或 geography 的列** *\<*   。 然后，任何其他空间数据列将变为不可编辑状态。 如果要选择其他空间数据列，必须首先清除当前选定的列。 完成后，单击 **“确定”** 。  
+8.  在“从 \<table name> 中选择列”对话框中，通过选中相应的复选框，选择类型为 geometry 或 geography 的列 。 然后，任何其他空间数据列将变为不可编辑状态。 如果要选择其他空间数据列，必须首先清除当前选定的列。 完成后，单击 **“确定”** 。  
   
 9. 请在 **“索引键列”** 网格中验证您的列选择。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "68048715"
   
 11. 在 **“空间”** 页上，指定要用于索引的空间属性的值。  
   
-     在对类型为“geometry”的列创建索引时，必须指定范围框的（X-min、Y-min）和（X-max、 Y-max）坐标。        对于“geography”  类型列的索引，当你指定“地理网格”  分割方案后，边界框字段变为只读状态，因为地理网格分割不使用边界框。  
+     在对类型为“geometry”的列创建索引时，必须指定范围框的（X-min、Y-min）和（X-max、 Y-max）坐标。        对于“geography”类型列的索引，当你指定“地理网格”分割方案后，边界框字段变为只读状态，因为地理网格分割不使用边界框。  
   
      您还可以指定任意级别的分割方案的 **“每个对象的单元数”** 字段和网格密度的非默认值。 对于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ，每个对象的默认单元数为 16；对于 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或更高版本，则为 8。对于 **，默认网格密度为** “中” [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "68048715"
   
      有关这些属性的详细信息，请参阅 [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md)。  
   
-12. 单击“确定”。   
+12. 单击“确定”。  
   
 > [!NOTE]  
 >  若要对同一空间数据列或另一个空间数据列再创建一个空间索引，请重复上述步骤。  
@@ -81,7 +81,7 @@ ms.locfileid: "68048715"
  **在 Management Studio 中使用表设计器创建空间索引**  
  ##### <a name="to-create-a-spatial-index-in-table-designer"></a>在表设计器中创建空间索引  
   
-1.  在对象资源管理器中，右键单击要为其创建空间索引的表，然后单击“设计”  。  
+1.  在对象资源管理器中，右键单击要为其创建空间索引的表，然后单击“设计”。  
   
      此时，将在表设计器中打开该表。  
   
@@ -116,7 +116,7 @@ ms.locfileid: "68048715"
  **在 Management Studio 中使用表设计器删除空间索引**  
  ##### <a name="to-drop-a-spatial-index-in-table-designer"></a>在表设计器中删除空间索引  
   
-1.  在对象资源管理器中，右键单击具有要删除的空间索引的表，再单击“设计”  。  
+1.  在对象资源管理器中，右键单击具有要删除的空间索引的表，再单击“设计”。  
   
      此时，将在表设计器中打开该表。  
   

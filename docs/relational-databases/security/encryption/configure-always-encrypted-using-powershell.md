@@ -1,5 +1,6 @@
 ---
 title: 使用 PowerShell 配置 Always Encrypted | Microsoft Docs
+description: 了解如何导入和使用 SqlServer PowerShell 模块，该模块提供用于在 Azure SQL 数据库和 SQL Server 中配置 Always Encrypted 的 cmdlet。
 ms.custom: ''
 ms.date: 10/01/2019
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.assetid: 12f2bde5-e100-41fa-b474-2d2332fc7650
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5c90ea22849dd1d0437cdf058f639bbe546ccab9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 93cc3ccad555d366593632b3fc9975d070a67a0b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73594417"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765122"
 ---
 # <a name="configure-always-encrypted-using-powershell"></a>使用 PowerShell 配置 Always Encrypted
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 SqlServer PowerShell 模块提供用于在 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中配置 [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) 的 cmdlet。
 
@@ -30,7 +31,7 @@ SqlServer PowerShell 模块提供用于在 [!INCLUDE[ssSDSFull](../../../include
 
  有关其他建议，请参阅 [密钥管理安全注意事项](overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management)。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 在一台安全计算机（并非托管 SQL Server 实例的计算机）上安装 [SqlServer module](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/sqlserver) （SqlServer 模块）。 可通过 PowerShell 库直接安装该模块。  请参阅[下载说明](../../../ssms/download-sql-server-ps-module.md)了解详细信息。
 
@@ -52,13 +53,13 @@ Import-Module "SqlServer"
 ## <a name="connecting-to-a-database"></a><a name="connectingtodatabase"></a> 连接到数据库
 
 一些 Always Encrypted cmdlet 适用于数据库中的数据或元数据，并要求你首先应连接到数据库。 使用 SqlServer 模块配置 Always Encrypted 时，建议使用两种方法来连接到数据库： 
-1. 使用 Get-SqlDatabase cmdlet 进行连接  。
+1. 使用 Get-SqlDatabase cmdlet 进行连接。
 2. 使用 SQL Server PowerShell 提供程序进行连接。
 
 [!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ### <a name="using-get-sqldatabase"></a>使用 Get-SqlDatabase
-通过 Get-SqlDatabase cmdlet，可以连接到 SQL Server 或 Azure SQL 数据库中的数据库  。 它会返回一个数据库对象，随后你可以使用连接数据库的 cmdlet 的 InputObject 参数传递此对象  。 
+通过 Get-SqlDatabase cmdlet，可以连接到 SQL Server 或 Azure SQL 数据库中的数据库。 它会返回一个数据库对象，随后你可以使用连接数据库的 cmdlet 的 InputObject 参数传递此对象。 
 
 ### <a name="using-sql-server-powershell"></a>使用 SQL Server PowerShell
 

@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: 3b546560-720f-48b8-9d63-cf159290e9d4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 13c441771044ba6932b35fd59f593b9e635b0afe
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 166107c908fb83c5fe4fae83f67b9dc4984bbafb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907568"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726103"
 ---
 # <a name="add-or-edit-join"></a>添加或编辑联接
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   可以使用 **“添加联接”** 和 **“编辑联接”** 对话框为合并发布添加和编辑联接筛选器。  
   
 > [!NOTE]  
@@ -46,7 +46,7 @@ ms.locfileid: "72907568"
   
     -   如果要添加新的联接，则可以选择 **“使用生成器创建语句”** 或者 **“手动编写联接语句”** 。 如果您开始手动编写联接，那么将无法使用生成器。  
   
-         如果选择使用生成器，请使用网格中的列（ **“连接”** 、 **“筛选的表列”** 、 **“运算符”** 、和 **“联接的表列”** ）生成联接语句。 网格中的每个列都包含下拉列表框，允许你选择两个列和一个运算符（ **=** 、 **<>** 、 **<=** 、 **\<** 、 **>=** 、 **>** 、 **like**）。 结果显示在 **“预览”** 文本区域中。 如果联接涉及不止一对列，请从 **“连接”** 列中选择一个连接（ **AND**或 **OR** ），再输入另外两列和一个运算符。  
+         如果选择使用生成器，请使用网格中的列（ **“连接”** 、 **“筛选的表列”** 、 **“运算符”** 、和 **“联接的表列”** ）生成联接语句。 网格中的每个列都包含下拉列表框，你可用它来选择两个列和一个运算符（=、<>、<=、\<**, **>=、> 等）     。 结果显示在 **“预览”** 文本区域中。 如果联接涉及不止一对列，请从 **“连接”** 列中选择一个连接（ **AND**或 **OR** ），再输入另外两列和一个运算符。  
   
          如果选择手动编写语句，那么请在 **“联接语句”** 文本区域编写联接语句。 使用 **“筛选的表列”** 列表框和 **“联接的表列”** 列表框将列拖放到 **“联接语句”** 文本区域。  
   

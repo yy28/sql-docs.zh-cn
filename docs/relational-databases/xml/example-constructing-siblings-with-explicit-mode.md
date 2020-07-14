@@ -1,5 +1,6 @@
 ---
 title: 示例：使用 EXPLICIT 模式构造同级 | Microsoft Docs
+description: 查看 SQL 查询的示例，该查询将 EXPLICIT 模式与 FOR XML 子句结合使用来构造 XML 同级。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 8a57b765-a890-46a3-8b5f-5754e921ea6e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 606c83c59147bf6ef171d4fa4f802d13f55f8219
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e969fd0d003d44b3aaf97efad6e029d52e146dfa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006830"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633107"
 ---
 # <a name="example-constructing-siblings-with-explicit-mode"></a>示例：使用 EXPLICIT 模式构造同级
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   假定您要构造提供销售订单信息的 XML。 请注意，<`SalesPerson`> 和 <`OrderDetail`> 元素是同级。 每个订单都有一个 <`OrderHeader`> 元素、一个 <`SalesPerson`> 元素和一个或多个 <`OrderDetail`> 元素。  
   
 ```  

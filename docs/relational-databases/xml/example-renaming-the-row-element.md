@@ -1,5 +1,6 @@
 ---
 title: 示例：重命名 &lt;row&gt; 元素 | Microsoft Docs
+description: 查看示例了解如何通过在 FOR XML 子句中向 RAW 模式指定可选参数来重命名 XML 行元素。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: b042292a-0b6e-40a3-b254-71c06e626706
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c9a082f5bd5159f8b1dc32c3c9e2ba233cce817b
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: cc297571daec9825a91d4e35ebbac737d88b5619
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664526"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633044"
 ---
 # <a name="example-renaming-the-ltrowgt-element"></a>示例：重命名 &lt;row&gt; 元素
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   对于结果集中的每一行，RAW 模式都生成一个元素 `<row>`。 您可以通过向 RAW 模式指定一个可选参数为该元素指定另一个名称，如该查询中所示。 该查询为行集中的每一行返回一个 <`ProductModel`> 元素。  
   
 ## <a name="example"></a>示例  

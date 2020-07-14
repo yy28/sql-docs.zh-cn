@@ -1,5 +1,6 @@
 ---
 title: 示例：使用 AUTO 模式 | Microsoft Docs
+description: 查看使用 FOR XML AUTO 模式的查询的示例。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 11e8d0e4-df8a-46f8-aa21-9602d4f26cad
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1a280477dbc8a41292ff3ee3519ec74df4d5c7ea
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 68dfbbf0d1e2a2cf160b728b5f0acd9553be7922
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67943417"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775572"
 ---
 # <a name="examples-using-auto-mode"></a>示例：使用 AUTO 模式
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   下列示例说明了 AUTO 模式的使用。 这些查询中有许多都针对 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 示例数据库的 ProductModel 表的 Instructions 列中存储的自行车生产说明 XML 文档指定的。  
   
 ## <a name="example-retrieving-customer-order-and-order-detail-information"></a>示例：检索客户、订单和订单详细信息  
@@ -114,7 +115,7 @@ FOR XML AUTO;This is the partial result:
   
  `...`  
   
-## <a name="example-specifying-computed-columns-in-auto-mode"></a>示例：在 AUTO 模式下指定计算列  
+## <a name="example-specifying-computed-columns-in-auto-mode"></a>示例：在 AUTO 模式中指定计算列  
  此查询返回串联的各个客户名以及订单信息。 因为计算列被分配到在该点（在此例中是 <`SOH`>）出现的最内层级别， 因此，串联的客户名在结果中作为 <`SOH`> 元素的属性添加。  
   
 ```  
@@ -266,7 +267,7 @@ SELECT * FROM [Special Chars] FOR XML AUTO;
   
 -   通过使用相应的 Unicode 字符的十六进制值，对查询结果中返回的元素名及属性名中的特殊 XML 和 URL 字符进行编码。 在上面的结果中，元素名 <`Special Chars`> 作为 <`Special_x0020_Chars`> 返回。 属性名称 <`Col#&2`> 作为 <`Col_x0023__x0026_2`> 返回。 XML 和 URL 特殊字符都进行了编码。  
   
--   如果元素值或属性值包含 5 个标准 XML 字符实体（'、""、\<、> 和 &）中的任何一个，将始终使用 XML 字符编码对这些特殊 XML 字符进行编码。 在上面的结果中，属性 <`Col1`> 的值中的 `&` 值被编码为 `&`。 但是，# 字符仍保留为 #，因为它是有效的 XML 字符，而不是特殊的 XML 字符。  
+-   如果元素值或属性值包含 5 个标准 XML 字符实体（'、""、\<, > 和 &）中的任何一个，将始终使用 XML 字符编码对这些特殊 XML 字符进行编码。 在上面的结果中，属性 <`Col1`> 的值中的 `&` 值被编码为 `&`。 但是，# 字符仍保留为 #，因为它是有效的 XML 字符，而不是特殊的 XML 字符。  
   
 -   如果元素值或属性值包含 URL 中有特殊意义的任何特殊 URL 字符，则只能在 DBOBJECT URL 值中对它们进行编码，而且只有当该特殊字符是表名或列名的一部分时，才会对它们进行编码。 在结果中，作为表名 `#` 的一部分的字符 `Col#&2` 被编码为 `_x0023_ in the DBOJBECT URL`。  
   

@@ -1,5 +1,6 @@
 ---
 title: 虚影清除进程指南 | Microsoft Docs
+description: 了解虚影清除进程，这是一个后台进程，用于在 SQL Server 中删除页面中已标记为删除的记录。
 ms.custom: ''
 ms.date: 05/02/2018
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - ghost clean up process
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 34be16d305bbb42a23c686e9b2befdd83792d523
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 557f76e3f54811581e41ad15a5270a0c1e6e4057
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72890489"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859089"
 ---
 # <a name="ghost-cleanup-process-guide"></a>虚影清除进程指南
 
@@ -26,11 +27,11 @@ ms.locfileid: "72890489"
 
 ## <a name="ghost-records"></a>虚影记录
 
-从索引页的叶级别删除的记录不会从页面中物理删除，而会将该记录标记为“待删除”或“虚影”  。 这意味着该行保留在页面上，但行标题中的发生了一些变化，表明该行实际上是虚影。 这是为了在删除操作期间优化性能。 虚影对于行级锁定和快照隔离（此时需要维护旧版的行）都是必需的。
+从索引页的叶级别删除的记录不会从页面中物理删除，而会将该记录标记为“待删除”或“虚影”。 这意味着该行保留在页面上，但行标题中的发生了一些变化，表明该行实际上是虚影。 这是为了在删除操作期间优化性能。 虚影对于行级锁定和快照隔离（此时需要维护旧版的行）都是必需的。
 
 ## <a name="ghost-record-cleanup-task"></a>虚影记录清除任务
 
-标记为删除或虚影的记录由后台虚影清除进程清除  。 此后台进程在删除事务提交后的某个时间运行，并从页面上物理删除虚影记录。 虚影清除进程会以一个时间间隔自动运行（SQL Server 2012+ 每 5 秒钟运行一次、SQL Server 2008/2008R2 每 10 秒钟运行一次），并检查是否有任何页面已标记有虚影记录。 如果找到，它将转到相应位置并删除标记为删除或虚影的记录，每次执行时最多处理 10 个页面  。
+标记为删除或虚影的记录由后台虚影清除进程清除。 此后台进程在删除事务提交后的某个时间运行，并从页面上物理删除虚影记录。 虚影清除进程会以一个时间间隔自动运行（SQL Server 2012+ 每 5 秒钟运行一次、SQL Server 2008/2008R2 每 10 秒钟运行一次），并检查是否有任何页面已标记有虚影记录。 如果找到，它将转到相应位置并删除标记为删除或虚影的记录，每次执行时最多处理 10 个页面。
 
 记录被虚影化时，会将数据库标记为“具有虚影条目”，虚影清除进程只会扫描这些数据库。 删除所有虚影记录后，虚影清除进程也会将数据库标记为“没有虚影记录”，并在下次运行时跳过该数据库。 该进程还会跳过它无法加上共享锁的所有数据库，并在下次运行时再次尝试。
 

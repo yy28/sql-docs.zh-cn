@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - EOMONTH function
 ms.assetid: 1d060d8e-3297-4244-afef-57df2f8f92e2
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 481faddf2a0a12bcc44a8b4e677101afa68c37a4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3092c848f11ba62301755d9c112b49d6fb4d2fa7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67904380"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732401"
 ---
 # <a name="eomonth-transact-sql"></a>EOMONTH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -34,16 +34,16 @@ ms.locfileid: "67904380"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 EOMONTH ( start_date [, month_to_add ] )  
 ```  
   
 ## <a name="arguments"></a>参数  
-start_date   
+start_date  
 日期表达式，指定要为其返回该月的最后一天的日期。  
   
-month_to_add   
-可选的整数表达式，指定要加到 start_date 的月份数  。  
+month_to_add  
+可选的整数表达式，指定要加到 start_date 的月份数。  
   
 如果 month_to_add 参数具有值，则 `EOMONTH` 向 start_date 添加指定月份数，然后返回结果日期所在月份的最后一天 。 如果增加后超过有效的日期范围，`EOMONTH` 将引发错误。  
   
@@ -57,11 +57,12 @@ month_to_add
   
 ### <a name="a-eomonth-with-explicit-datetime-type"></a>A. 具有显式 datetime 类型的 EOMONTH  
   
-```  
+```sql 
 DECLARE @date DATETIME = '12/1/2011';  
 SELECT EOMONTH ( @date ) AS Result;  
 GO  
-```  
+```
+
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```  
@@ -74,13 +75,13 @@ Result
 
 ### <a name="b-eomonth-with-string-parameter-and-implicit-conversion"></a>B. 具有字符串参数与隐式转换的 EOMONTH  
   
-```  
+```sql
 DECLARE @date VARCHAR(255) = '12/1/2011';  
 SELECT EOMONTH ( @date ) AS Result;  
 GO  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```  
 Result  
@@ -92,13 +93,7 @@ Result
   
 ### <a name="c-eomonth-with-and-without-the-month_to_add-parameter"></a>C. 具有和不具有 month_to_add 参数的 EOMONTH  
   
-注意：以下结果集中显示的值反映了执行日期范围（含）
-        
-        12/01/2011
-        
-        and
-        
-        12/31/2011
+以下结果集中显示的值反映了执行日期范围 `12/01/2011` 到 `12/31/2011`（含这两个日期）。
 
 ```sql  
 DECLARE @date DATETIME = GETDATE();  
@@ -128,7 +123,4 @@ Last Month
 2011-11-30  
   
 (1 row(s) affected)  
-```  
-  
-  
-
+```

@@ -1,22 +1,21 @@
 ---
 title: PowerShell 扩展
-titleSuffix: Azure Data Studio
 description: 安装和使用 Azure Data Studio 中的 PowerShell
 ms.custom: seodec18
 ms.date: 04/19/2019
-ms.reviewer: alayu; sstein
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.reviewer: alayu, maghan, sstein
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 manager: matthend
-ms.openlocfilehash: fd5fabd1627968287c60fc8636964f4ac4831004
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 5f30d6078b28026dec2c6a4eef22eb1f3279755d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81484586"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85637735"
 ---
 # <a name="powershell-editor-support-for-azure-data-studio"></a>Azure Data Studio 的 PowerShell 编辑器支持
 
@@ -24,7 +23,6 @@ ms.locfileid: "81484586"
 现在，你可以使用 Azure Data Studio 提供的出色的、类似于 IDE 的接口编写和调试 PowerShell 脚本。
 
 ![PowerShell 扩展](media/powershell-extension/powershell-extension.png)
-
 
 ## <a name="features"></a>功能
 
@@ -39,7 +37,6 @@ ms.locfileid: "81484586"
 - 使用 <kbd>Ctrl</kbd>+F1<kbd></kbd> 为游标下的符号启动联机帮助
 - 基本交互式控制台支持！
 
-
 ## <a name="installing-the-extension"></a>安装扩展
 
 可以按照 [Azure Data Studio 文档](https://docs.microsoft.com/sql/azure-data-studio/extensions)中的步骤安装 PowerShell 扩展的官方版本。
@@ -53,9 +50,9 @@ azuredatastudio --install-extension PowerShell-<version>.vsix
 
 ## <a name="platform-support"></a>平台支持
 
-- Windows 7 到 10  （带 windows PowerShell v3 及更高版本和 PowerShell Core）
-- 带有 PowerShell Core（所有 PowerShell 支持的分发版）的 Linux 
-- macOS  （PowerShell Core）
+- Windows 7 到 10（带 windows PowerShell v3 及更高版本和 PowerShell Core）
+- 带有 PowerShell Core（所有 PowerShell 支持的分发版）的 Linux
+- macOS（PowerShell Core）
 
 阅读 [FAQ](https://github.com/PowerShell/vscode-powershell/wiki/FAQ) 获取常见问题的解答。
 
@@ -259,7 +256,7 @@ WideWorldImporters   Normal         3.2 GB     2.6 GB Simple       130 sa
 
 此扩展[根据 MIT 许可证获得授权](https://github.com/PowerShell/vscode-powershell/blob/master/LICENSE.txt)。 有关此项目的版本所包含的第三方二进制文件的详细信息，请参阅[第三方通知](https://github.com/PowerShell/vscode-powershell/blob/master/Third%20Party%20Notices.txt)文件。
 
-## <a name="code-of-conductconduct-md"></a>[行为准则][conduct-md]
+## <a name="code-of-conduct"></a>行为准则
 
 此项目采用了 [Microsoft 开放源代码行为准则][conduct-code]。
 有关详细信息，请参阅[行为准则常见问题解答][conduct-FAQ]，如有任何其他问题或评论，请联系 [opencode@microsoft.com][conduct-email]。

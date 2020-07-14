@@ -17,15 +17,15 @@ ms.assetid: 25e1fcc5-45d7-4c53-8c79-5493dfaa1c74
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3cb02f0cbb395b8e3f730e62139eb7b7d89b4c96
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bc37d9d18d75a9e24b1e894b28b8e7a0a29f602c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908107"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753112"
 ---
 # <a name="create-filtered-indexes"></a>创建筛选索引
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建筛选索引。 筛选索引是一种经过优化的非聚集索引，尤其适用于涵盖从定义完善的数据子集中选择数据的查询。 筛选索引使用筛选谓词对表中的部分行进行索引。 与全表索引相比，设计良好的筛选索引可以提高查询性能、减少索引维护开销并可降低索引存储开销。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "72908107"
   
     -   非唯一索引。 筛选索引可以是非唯一的，而索引视图必须是唯一的。  
   
--   筛选索引是针对一个表定义的，仅支持简单比较运算符。 如果需要引用多个表或具有复杂逻辑的筛选表达式，则应创建视图。  
+-   筛选索引是针对一个表定义的，仅支持简单[比较运算符](../../t-sql/language-elements/comparison-operators-transact-sql.md)。 如果需要引用多个表或具有复杂逻辑的筛选表达式，则应创建视图。 筛选的索引不支持 `LIKE` 运算符。 
   
 -   如果筛选索引表达式等效于查询谓词并且查询并未在查询结果中返回筛选索引表达式中的列，则筛选索引表达式中的列不需要作为筛选索引定义中的键或包含列。  
   
@@ -112,19 +112,19 @@ ms.locfileid: "72908107"
   
 3.  单击加号以便展开您要创建筛选索引的表。  
   
-4.  右键单击“索引”文件夹，指向“新建索引”，然后选择“非群集索引…”    。  
+4.  右键单击“索引”文件夹，指向“新建索引”，然后选择“非群集索引…”  。  
   
 5.  在 **“新建索引”** 对话框的 **“常规”** 页中，在 **“索引名称”** 框中输入新索引的名称。  
   
-6.  在“索引键列”下，单击“添加…”   。  
+6.  在“索引键列”下，单击“添加…” 。  
   
 7.  在“从 table\_name 选择列”对话框中，选中要添加到唯一索引的一个或多个表列的复选框。  
   
-8.  单击“确定”。   
+8.  单击“确定”。  
   
-9. 在“筛选器”页的“筛选表达式”下，输入要用于创建筛选索引的 SQL 表达式   。  
+9. 在“筛选器”页的“筛选表达式”下，输入要用于创建筛选索引的 SQL 表达式 。  
   
-10. 单击“确定”。   
+10. 单击“确定”。  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -134,7 +134,7 @@ ms.locfileid: "72908107"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     USE AdventureWorks2012;  
@@ -176,7 +176,7 @@ ms.locfileid: "72908107"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     USE AdventureWorks2012;  

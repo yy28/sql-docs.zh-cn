@@ -1,5 +1,6 @@
 ---
 title: 创建数据库架构 | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL（包括限制和局限）在 SQL Server 中创建架构。
 ms.custom: ''
 ms.date: 07/05/2017
 ms.prod: sql
@@ -18,15 +19,15 @@ ms.assetid: ed2a5522-f4d2-4111-95a4-d3e1e5081739
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 980b179f39edc3e93e5cb0bc105b6b2f8d12bb58
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: faa0ea1e841edfde76cdfeb4f3285116a47a50fd
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72903747"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005702"
 ---
 # <a name="create-a-database-schema"></a>创建数据库架构
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中创建架构。  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
@@ -53,19 +54,19 @@ ms.locfileid: "72903747"
   
 2.  展开要在其中创建新数据库架构的数据库。  
   
-3.  右键单击“安全性”文件夹，指向“新建”，并选择“架构”    。  
+3.  右键单击“安全性”文件夹，指向“新建”，并选择“架构”  。  
   
-4.  在“架构 - 新建”对话框中的“常规”页上，在“架构名称”框中输入新架构的名称    。  
+4.  在“架构 - 新建”对话框中的“常规”页上，在“架构名称”框中输入新架构的名称  。  
   
 5.  在 **“架构所有者”** 框中，输入要拥有该架构的数据库用户或角色的名称。 或者，单击 **“搜索”** 以打开 **“搜索角色和用户”** 对话框。  
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
 > [!NOTE]
-> 如果要使用 SSMS 针对 Azure SQL 数据库或 Azure SQL 数据仓库创建架构，则不会显示对话框   。 将需要运行生成的“创建架构模板 T-SQL 语句”。
+> 如果要使用 SSMS 针对 Azure SQL 数据库或 Azure SQL 数据仓库创建架构，则不会显示对话框 。 将需要运行生成的“创建架构模板 T-SQL 语句”。
   
 ### <a name="additional-options"></a>其他选项  
- “架构 - 新建”对话框还在两个其他页上提供了选项：“权限”和“扩展属性”    。  
+ “架构 - 新建”对话框还在两个其他页上提供了选项：“权限”和“扩展属性” 。  
   
 -   **“权限”** 页将列出所有可能的安全对象以及可授予登录名的针对这些安全对象的权限。  
   

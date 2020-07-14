@@ -1,5 +1,6 @@
 ---
 title: TRUSTWORTHY 数据库属性 | Microsoft Docs
+description: 了解 TRUSTWORTHY 数据库属性，该属性指明 SQL Server 实例是否信任该数据库及其内容。 默认为 OFF。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 64b2a53d-4416-4a19-acc0-664a61b45348
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ec745810697b325b8f1e1b2d5e67871136b9f089
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4db2515c51085e79d67e6ace4cbbe1abedc91023
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68126821"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736963"
 ---
 # <a name="trustworthy-database-property"></a>TRUSTWORTHY 数据库属性
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  TRUSTWORTHY 数据库属性用于指明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例是否信任该数据库以及其中的内容。 默认情况下，此设置为 OFF，但是可以使用 ALTER DATABASE 语句将其设置为 ON。 例如，`ALTER DATABASE AdventureWorks2012 SET TRUSTWORTHY ON;` 。  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  TRUSTWORTHY 数据库属性用于指明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例是否信任该数据库以及其中的内容。 默认情况下，此设置为 OFF，但是可以使用 ALTER DATABASE 语句将其设置为 ON。 例如，`ALTER DATABASE AdventureWorks2012 SET TRUSTWORTHY ON;`。  
   
 > [!NOTE]  
 >  必须是 **sysadmin** 固定服务器角色的成员才能设置此选项。  

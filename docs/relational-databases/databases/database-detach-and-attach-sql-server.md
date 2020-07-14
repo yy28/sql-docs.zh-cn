@@ -1,8 +1,8 @@
 ---
-title: 数据库分离和附加 (SQL Server) | Microsoft Docs
+title: 数据库分离和附加 (SQL Server)
 description: 可以分离并重新附加 SQL Server 数据库的数据和事务日志文件，以便将数据库更改为其他实例或移动数据库。
 ms.custom: ''
-ms.date: 11/26/2018
+ms.date: 06/30/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -28,15 +28,15 @@ helpviewer_keywords:
 ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a43fcc0dade0c030546e76bf36f242973f918d2e
-ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
+ms.openlocfilehash: e9922e70d8ee4327bfb01c9c8657e8fabfe6a28c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82138145"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756286"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>数据库分离和附加 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 可以分离数据库的数据和事务日志文件，然后将它们重新附加到同一或其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。 如果要将数据库更改到同一计算机的不同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例或要移动数据库，分离和附加数据库会很有用。  
   
   
@@ -63,7 +63,13 @@ ms.locfileid: "82138145"
   
     > [!NOTE]  
     > 不能分离或附加数据库快照。  
+
+-   数据库是 Always On 可用性组的一部分。  
   
+    在将数据库从可用性组中删除之前，无法分离该数据库。 有关详细信息，请参阅[从 Always On 可用性组中删除主数据库](../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md)。
+  
+
+
 -   该数据库正在某个数据库镜像会话中进行镜像。  
   
     除非终止该会话，否则无法分离该数据库。 有关详细信息，请参阅 [删除数据库镜像 (SQL Server)](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)。  
@@ -108,7 +114,7 @@ ms.locfileid: "82138145"
 附加时，数据库会启动。 通常，附加数据库时会将数据库重置为它分离或复制时的状态。 但是，附加和分离操作都会禁用数据库的跨数据库所有权链接。 有关如何启用链接的详细信息，请参阅 [cross db ownership chaining 服务器配置选项](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md)。 
 
  > [!IMPORTANT]
- > 为安全起见，，默认情况下，每当附加数据库时，is_broker_enabled、is_honoor_broker_priority_on 和 is_trustworthy_on 的选项均设置为 OFF    。 有关如何将这些选项设置为 ON 的详细信息，请参阅 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)。  有关元数据的详细信息，请参阅[使数据库在其他服务器上可用时管理元数据](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。
+ > 为安全起见，，默认情况下，每当附加数据库时，is_broker_enabled、is_honoor_broker_priority_on 和 is_trustworthy_on 的选项均设置为 OFF  。 有关如何将这些选项设置为 ON 的详细信息，请参阅 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)。  有关元数据的详细信息，请参阅[使数据库在其他服务器上可用时管理元数据](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。
   
 ### <a name="backup-and-restore-and-attach"></a>备份、还原及附加  
 与任何完全或部分脱机的数据库一样，不能附加正在还原文件的数据库。 如果停止了还原顺序，则可以附加数据库。 然后，可以重新启动还原顺序。  

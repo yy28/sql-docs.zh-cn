@@ -1,5 +1,6 @@
 ---
 title: SQL Server 证书和非对称密钥 | Microsoft Docs
+description: 了解 SQL Server 中的证书和非对称密钥，包括外部生成的或 SQL Server 生成的证书、工具及相关任务。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,17 +14,17 @@ ms.assetid: 8519aa2f-f09c-4c1c-96b5-abc24811e60c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8b330e97aa006b223120d13433bf2c317205b96c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f631e55edaacc56c5c8bae3aec3e374824857db4
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82153128"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001019"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>SQL Server 证书和非对称密钥
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
- 公钥加密是一种消息保密方式，在使用这种方式时用户将创建一个“公钥”和一个“私钥”   。 私钥是保密的，而公钥可以分发给其他人。 虽然密钥之间具有数学关系，但要想通过公钥推导出私钥却并不容易。 可使用公钥加密只能通过相应私钥解密的数据。 这可用于加密发送给私钥所有者的消息。 同样，私钥所有者可以加密只能通过公钥解密的数据。 这种用法构成了数字证书的基础，其中证书所含信息由私钥所有者（假定为内容作者）进行加密。 由于加密和解密密钥不同，因此称之为“非对称密钥”  。
+ 公钥加密是一种消息保密方式，在使用这种方式时用户将创建一个“公钥”和一个“私钥” 。 私钥是保密的，而公钥可以分发给其他人。 虽然密钥之间具有数学关系，但要想通过公钥推导出私钥却并不容易。 可使用公钥加密只能通过相应私钥解密的数据。 这可用于加密发送给私钥所有者的消息。 同样，私钥所有者可以加密只能通过公钥解密的数据。 这种用法构成了数字证书的基础，其中证书所含信息由私钥所有者（假定为内容作者）进行加密。 由于加密和解密密钥不同，因此称之为“非对称密钥”。
   
  证书和非对称密钥都属于非对称加密的使用方式。 证书通常用作非对称密钥的容器，因为它们可以包含更多信息，例如过期日期和颁发者。 这两种机制的加密算法之间存在差异，但相同密钥长度的加密强度是相同的。 通常，可以使用证书来加密数据库中其他类型的加密密钥，或者为代码模块签名。  
   
@@ -71,7 +72,7 @@ ms.locfileid: "82153128"
 |-|-|  
 |工具|目的|  
 |[New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate)|创建自签名证书。|  
-|[makecert](/windows/desktop/SecCrypto/makecert)|创建证书。 已弃用以支持 New-SelfSignedCertificate  。|  
+|[makecert](/windows/desktop/SecCrypto/makecert)|创建证书。 已弃用以支持 New-SelfSignedCertificate。|  
 |[sn](/dotnet/framework/tools/sn-exe-strong-name-tool)|创建对称密钥的强名称。|  
   
 ## <a name="related-tasks"></a>Related Tasks  

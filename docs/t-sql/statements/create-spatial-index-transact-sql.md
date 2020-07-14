@@ -22,23 +22,23 @@ helpviewer_keywords:
 ms.assetid: ee6b9116-a7ff-463a-a9f0-b360804d8678
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2bc1c2c7951efceca6d50a30098284f2bc3ef132
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a1f87c0c69a990ffa98a560998068b95b52df319
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982593"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766988"
 ---
 # <a name="create-spatial-index-transact-sql"></a>CREATE SPATIAL INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中指定的表和列创建空间索引。 可在向表中填入数据前创建索引。 可通过指定限定的数据库名称，针对另一个数据库中的表或视图创建索引。 空间索引要求表具有聚集主键。 有关空间索引的信息，请参阅[空间索引概述](../../relational-databases/spatial/spatial-indexes-overview.md)。  
+  对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中指定的表和列创建空间索引。 可在向表中填入数据前创建索引。 可通过指定限定的数据库名称，针对另一个数据库中的表或视图创建索引。 空间索引要求表具有聚集主键。 不能对索引视图指定空间索引。 有关空间索引的信息，请参阅[空间索引概述](../../relational-databases/spatial/spatial-indexes-overview.md)。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
-```
+```syntaxsql
 CREATE SPATIAL INDEX index_name
   ON <object> ( spatial_column_name )  
     {  
@@ -149,7 +149,7 @@ CREATE SPATIAL INDEX index_name
   
 ## <a name="arguments"></a>参数  
 
- index_name       
+ index_name     
  索引的名称。 索引名称在表中必须唯一，但在数据库中不必唯一。 索引名称必须符合[标识符](../../relational-databases/databases/database-identifiers.md)的规则。  
   
  ON \<object> ( *spatial_column_name* )     
@@ -167,11 +167,11 @@ CREATE SPATIAL INDEX index_name
 |**地理**|GEOGRAPHY_GRID|  
 |**地理**|GEOGRAPHY_AUTO_GRID|  
   
- 只能对类型为 geometry  或 geography  的列创建空间索引，否则会抛出错误。 如果为给定类型传递的参数无效，便会抛出错误。  
+ 只能对类型为 geometry 或 geography 的列创建空间索引，否则会抛出错误。 如果为给定类型传递的参数无效，便会抛出错误。  
   
  有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如何实现分割的信息，请参阅[空间索引概述](../../relational-databases/spatial/spatial-indexes-overview.md)。  
   
- ON filegroup_name        
+ ON filegroup_name      
  **适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  为指定文件组创建指定索引。 如果未指定位置并且表未分区，则索引将与基础表使用相同的文件组。 该文件组必须已存在。  
@@ -183,7 +183,7 @@ CREATE SPATIAL INDEX index_name
   
  在此上下文中，“default”一词不是关键字。 它是默认文件组的标识符，并且必须进行分隔（类似于 ON "default" 或 ON [default]）。 如果指定了 "default"，则当前会话的 QUOTED_IDENTIFIER 选项必须为 ON。 这是默认设置。 有关详细信息，请参阅 [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。  
   
- **object>::=\<**     
+ **\<object>::=**     
  要为其建立索引的完全限定对象或非完全限定对象。  
   
  database_name      
@@ -220,28 +220,28 @@ CREATE SPATIAL INDEX index_name
 BOUNDING_BOX      
 指定定义边界框四个坐标的一个数值四元组：左下角的最小 x 坐标和最小 y 坐标，以及右上角的最大 x 坐标和最大 y 坐标。  
   
- xmin        
+ xmin      
  指定边界框左下角的 x 坐标。  
   
- ymin        
+ ymin      
  指定边界框左下角的 y 坐标。  
   
- xmax       
+ xmax     
  指定边界框右上角的 x 坐标。  
   
- ymax       
+ ymax     
  指定边界框右上角的 y 坐标。  
   
- XMIN = xmin       
+ XMIN = xmin     
  指定边界框左下角 x 坐标的属性名称和值。  
   
- YMIN =ymin        
+ YMIN =ymin      
  指定边界框左下角 y 坐标的属性名称和值。  
   
- XMAX =xmax        
+ XMAX =xmax      
  指定边界框右上角 x 坐标的属性名称和值。  
   
- YMAX =ymax       
+ YMAX =ymax     
  指定边界框右上角 y 坐标的属性名称和值。  
   
  > [!NOTE]
@@ -281,7 +281,7 @@ GRIDS
  LOW    
  为给定级别的网格指定可能的最低网格密度。 LOW 等于 16 个单元（4x4 网格）。  
   
- MEDIUM       
+ MEDIUM     
  为给定级别的网格指定中等网格密度。 MEDIUM 等于 64 个单元（8x8 网格）。  
   
  HIGH     
@@ -293,8 +293,8 @@ GRIDS
 > [!WARNING]
 > 如果指定的密度无效，则会引发错误。  
   
-CELLS_PER_OBJECT =n       
-指定可由分割进程用于在索引中单个空间对象的每个对象的分割单元格数。 n 可以是介于 1 和 8192 之间（含 1 和 8192）的任何整数  。 如果传递的数字无效或者该数字大于指定分割的最大单元格数，则会引发错误。  
+CELLS_PER_OBJECT =n     
+指定可由分割进程用于在索引中单个空间对象的每个对象的分割单元格数。 n 可以是介于 1 和 8192 之间（含 1 和 8192）的任何整数。 如果传递的数字无效或者该数字大于指定分割的最大单元格数，则会引发错误。  
   
  CELLS_PER_OBJECT 的默认值如下：  
   
@@ -309,7 +309,7 @@ CELLS_PER_OBJECT =n
   
 “每个对象的单元格数”分割规则使用 CELLS_PER_OBJECT 值。 有关分割规则的信息，请参阅[空间索引概述](../../relational-databases/spatial/spatial-indexes-overview.md)。  
   
-PAD_INDEX = { ON | OFF }      
+PAD_INDEX = { ON | OFF }     
 **适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
 指定索引填充。 默认为 OFF。  
@@ -317,15 +317,15 @@ PAD_INDEX = { ON | OFF }
 ON     
 指示由 *fillfactor* 指定的可用空间百分比应用于索引的中间级页。  
   
-OFF 或未指定 fillfactor      
+OFF 或未指定 fillfactor     
 指示考虑到中间级页上的键集，将中间级页填充到接近其容量的程度，以留出足够的空间，使之至少能够容纳索引的最大的一行。  
   
-PAD_INDEX 选项只有在指定了 FILLFACTOR 时才有用，因为 PAD_INDEX 使用由 FILLFACTOR 指定的百分比。 如果为 FILLFACTOR 指定的百分比不够大，无法容纳一行，[!INCLUDE[ssDE](../../includes/ssde-md.md)]将在内部覆盖该百分比以允许最小值。 无论 fillfactor 的值有多小，中间级索引页上的行数永远都不会小于两行  。  
+PAD_INDEX 选项只有在指定了 FILLFACTOR 时才有用，因为 PAD_INDEX 使用由 FILLFACTOR 指定的百分比。 如果为 FILLFACTOR 指定的百分比不够大，无法容纳一行，[!INCLUDE[ssDE](../../includes/ssde-md.md)]将在内部覆盖该百分比以允许最小值。 无论 fillfactor 的值有多小，中间级索引页上的行数永远都不会小于两行。  
   
-FILLFACTOR =fillfactor       
+FILLFACTOR =fillfactor     
  **适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
- 指定一个百分比，指示在[!INCLUDE[ssDE](../../includes/ssde-md.md)]创建或重新生成索引的过程中，应将每个索引页面的叶级填充到什么程度。 fillfactor 必须是 1 到 100 之间的整数  。 默认值为 0。 如果 fillfactor 为 100 或 0，[!INCLUDE[ssDE](../../includes/ssde-md.md)]会创建完全填充叶级页的索引。  
+ 指定一个百分比，指示在[!INCLUDE[ssDE](../../includes/ssde-md.md)]创建或重新生成索引的过程中，应将每个索引页面的叶级填充到什么程度。 fillfactor 必须是 1 到 100 之间的整数。 默认值为 0。 如果 fillfactor 为 100 或 0，[!INCLUDE[ssDE](../../includes/ssde-md.md)]会创建完全填充叶级页的索引。  
   
 > [!NOTE]  
 > 填充因子的值 0 和 100 在所有方面都是相同的。
@@ -337,7 +337,7 @@ FILLFACTOR =fillfactor
   
  有关详细信息，请参阅 [为索引指定填充因子](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)。  
   
-SORT_IN_TEMPDB = { ON | OFF }        
+SORT_IN_TEMPDB = { ON | OFF }       
 **适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
   
  指定是否在 tempdb 中存储临时排序结果。 默认为 OFF。  
@@ -350,10 +350,10 @@ SORT_IN_TEMPDB = { ON | OFF }
   
  除在用户数据库中创建索引所需的空间外，tempdb 还必须有大约相同的额外空间来存储中间排序结果。 有关详细信息，请参阅[用于索引的 SORT_IN_TEMPDB 选项](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)。  
   
-IGNORE_DUP_KEY =OFF       
+IGNORE_DUP_KEY =OFF     
 对空间索引不起作用，这是因为此索引类型永远不唯一。 请不要将此选项设置为 ON，否则会引发错误。  
   
-STATISTICS_NORECOMPUTE = { ON | OFF}      
+STATISTICS_NORECOMPUTE = { ON | OFF}     
 指定是否重新计算分布统计信息。 默认为 OFF。  
   
  ON    
@@ -367,7 +367,7 @@ STATISTICS_NORECOMPUTE = { ON | OFF}
 > [!IMPORTANT]  
 > 如果禁用分布统计的自动重新计算，可能会妨碍查询优化器为涉及该表的查询选取最佳执行计划。  
   
-DROP_EXISTING = { ON | OFF }      
+DROP_EXISTING = { ON | OFF }     
 **适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
   
  指定应删除并重新生成已命名的先前存在的空间索引。 默认为 OFF。  
@@ -380,7 +380,7 @@ DROP_EXISTING = { ON | OFF }
   
  使用 DROP_EXISTING 不能更改索引类型。  
   
-ONLINE =OFF        
+ONLINE =OFF      
 指定在索引操作期间基础表和关联的索引不可用于查询和数据修改操作。 在此版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，空间索引不支持联机索引生成操作。 如果针对某个空间索引将此选项设置为 ON，则会引发错误。 请省略 ONLINE 选项或将 ONLINE 设为 OFF。  
   
  创建、重新生成或删除空间索引的脱机索引操作将获取表的架构修改 (Sch-M) 锁。 这样可以防止所有用户在操作期间访问基础表。  
@@ -388,7 +388,7 @@ ONLINE =OFF
 > [!NOTE]  
 > 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的各版本中均不提供联机索引操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
-ALLOW_ROW_LOCKS = { ON | OFF }      
+ALLOW_ROW_LOCKS = { ON | OFF }     
 **适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  指定是否允许行锁。 默认值为 ON。  
@@ -399,7 +399,7 @@ ALLOW_ROW_LOCKS = { ON | OFF }
  OFF     
  不使用行锁。  
   
-ALLOW_PAGE_LOCKS = { ON | OFF }      
+ALLOW_PAGE_LOCKS = { ON | OFF }     
 **适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
   
  指定是否允许使用页锁。 默认值为 ON。  
@@ -410,7 +410,7 @@ ALLOW_PAGE_LOCKS = { ON | OFF }
  OFF     
  不使用页锁。  
   
-MAXDOP =max_degree_of_parallelism        
+MAXDOP =max_degree_of_parallelism      
 **适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
  只在索引操作期间覆盖 `max degree of parallelism` 配置选项。 使用 MAXDOP 可以限制在执行并行计划的过程中使用的处理器数量。 最大数量为 64 个处理器。  
@@ -418,7 +418,7 @@ MAXDOP =max_degree_of_parallelism
 > [!IMPORTANT]  
 > 虽然从语法上讲支持 MAXDOP 选项，但当前 CREATE SPATIAL INDEX 始终只使用一个处理器。  
   
- max_degree_of_parallelism 可以是  ：  
+ max_degree_of_parallelism 可以是：  
   
  1     
  取消生成并行计划。  

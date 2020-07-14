@@ -1,5 +1,6 @@
 ---
 title: Database Mail XPs 服务器配置选项 | Microsoft Docs
+description: 了解“DatabaseMail XPs”选项。 查看启用此选项的不同方式，以便可在 SQL Server 中使用数据库邮件。
 ms.custom: ''
 ms.date: 11/27/2018
 ms.prod: sql
@@ -11,22 +12,22 @@ helpviewer_keywords:
 - Database Mail XPs option
 - Database Mail [SQL Server], enabling
 ms.assetid: e22c4e63-1792-473b-af11-14a7931ca9ed
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: e16286e558d860a346ba8fff366009f064e65f91
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0d495017b9bf2a5f58a5a880f1ce9696976ebd50
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68011962"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772571"
 ---
 # <a name="database-mail-xps-server-configuration-option"></a>Database Mail XPs 服务器配置选项
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 使用 **DatabaseMail XPs** 选项可以在此服务器上启用数据库邮件。 可能的值包括：  
   
-- `0`：数据库邮件不可用（默认值）。  
+- `0`：数据库邮件不可用（默认）。  
   
 - `1`：数据库邮件可用。  
   

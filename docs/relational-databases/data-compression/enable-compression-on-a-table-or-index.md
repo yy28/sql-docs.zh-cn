@@ -23,16 +23,16 @@ ms.assetid: b7442cff-e616-475a-9c5a-5a765089e5f2
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ea7316580a1c9d3ce2f68e0d701cd5885c52bc80
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 5d8ad2b1ccc0951276dccaf085c554fa7385b6e1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488006"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003912"
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>对表或索引启用压缩功能
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中对表或索引启用压缩功能。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "81488006"
   
 2.  若要压缩索引，请展开包含要压缩的索引的表，然后展开 **“索引”** 文件夹。  
   
-3.  右键单击要压缩的表或索引，指向“存储”并选择“管理压缩…”   。  
+3.  右键单击要压缩的表或索引，指向“存储”并选择“管理压缩…” 。  
   
 4.  在数据压缩向导中的 **“欢迎使用数据压缩向导”** 页上，单击 **“下一步”** 。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "81488006"
   
      **“选择压缩类型”** 页上提供了以下选项：  
   
-     “对所有分区使用相同压缩类型”  复选框  
+     “对所有分区使用相同压缩类型”复选框  
      选择此选项将为所有分区配置相同的压缩设置。 此操作将启用选择框并禁用网格中的 **“压缩类型”** 列。 选中此复选框后，相邻列表中的选项为 **“无”** 、 **“Row”** 和 **“Page”** 。  
   
      **分区号**  
@@ -100,10 +100,10 @@ ms.locfileid: "81488006"
      显示此分区当前所占的空间 (MB)。 此列为只读。  
   
      **请求的压缩空间**  
-     单击“计算”  之后，此列将显示在使用“压缩类型”  列中指定的设置进行压缩后每个分区的估计大小。 此列为只读。  
+     单击“计算”之后，此列将显示在使用“压缩类型”列中指定的设置进行压缩后每个分区的估计大小。 此列为只读。  
   
      **计算**  
-     单击此项可估算每个分区在使用“压缩类型”  列中指定的设置进行压缩之后的大小。  
+     单击此项可估算每个分区在使用“压缩类型”列中指定的设置进行压缩之后的大小。  
   
 6.  在 **“选择输出选项”** 页上，指定要如何完成压缩。 选择 **“创建脚本”** 可以基于向导中的前一页创建 SQL 脚本。 选择 **“立即运行”** 可以在完成向导中的其余页后创建新的已分区表。 选择 **“计划”** 可以在将来的预定时间创建新的已分区表。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "81488006"
   
      如果选择 **“计划”** ，则单击 **“更改计划”** 。  
   
-    1.  在“新建作业计划”对话框的“名称”框中，输入作业计划的名称   。  
+    1.  在“新建作业计划”对话框的“名称”框中，输入作业计划的名称 。  
   
     2.  在 **“计划类型”** 列表中选择计划类型：  
   
@@ -144,25 +144,25 @@ ms.locfileid: "81488006"
   
             -   如果选择 **“每月”** ，可以选择 **“天”** 或 **“特定日期”** 。  
   
-                -   如果选择 **“天”** ，请输入要运行作业计划的当月日期和作业计划的重复频率（月）。 例如，如果要每隔一个月在当月的 15 日运行计划作业，请选择“天”，在第一个框中输入“15”，在第二个框中输入“2”  。 请注意，第二个框中允许的最大数是“99”。  
+                -   如果选择 **“天”** ，请输入要运行作业计划的当月日期和作业计划的重复频率（月）。 例如，如果要每隔一个月在当月的 15 日运行计划作业，请选择“天”，在第一个框中输入“15”，在第二个框中输入“2”。 请注意，第二个框中允许的最大数是“99”。  
   
-                -   如果选择 **“特定日期”** ，请选择要运行作业计划的当月内一周的特定一天和作业计划的重复频率（月）。 例如，如果要每隔一个月在当月的最后一个工作日运行作业计划，请选择“天”，从第一个列表中选择“最后一周”，从第二个列表中选择“工作日”，然后在最后一个框中输入“2”    。 还可以从前两个列表中选择“第一周”  、“第二周”  、“第三周”  或“第四周”  以及特定工作日（例如星期日或星期三）。 请注意，最后一个框中允许的最大数是“99”。  
+                -   如果选择 **“特定日期”** ，请选择要运行作业计划的当月内一周的特定一天和作业计划的重复频率（月）。 例如，如果要每隔一个月在当月的最后一个工作日运行作业计划，请选择“天”，从第一个列表中选择“最后一周”，从第二个列表中选择“工作日”，然后在最后一个框中输入“2”  。 还可以从前两个列表中选择“第一周”、“第二周”、“第三周”或“第四周”以及特定工作日（例如：星期日或星期三）。 请注意，最后一个框中允许的最大数是“99”。  
   
         2.  在 **“每天频率”** 下，指定作业计划运行的当天作业计划的重复频率。  
   
             -   如果选择 **“执行一次，时间为:”** ，请在 **“执行一次，时间为:”** 框中输入运行作业计划的当天的特定时间。 输入当天的小时、分钟和秒以及 AM 或 PM。  
   
-            -   如果选择 **“执行间隔”** ，请在 **“频率”** 下指定所选日运行作业计划的频率。 例如，如果要在运行作业计划的当天每隔 2 小时重复一次，请选择“执行间隔”，在第一个框中输入“2”，然后从列表中选择“小时”   。 从此列表中还可以选择“分钟”  和“秒”  。 请注意，第一个框中允许的最大数是“100”。  
+            -   如果选择 **“执行间隔”** ，请在 **“频率”** 下指定所选日运行作业计划的频率。 例如，如果要在运行作业计划的当天每隔 2 小时重复一次，请选择“执行间隔”，在第一个框中输入“2”，然后从列表中选择“小时” 。 从此列表中还可以选择“分钟”和“秒”。 请注意，第一个框中允许的最大数是“100”。  
   
                  在 **“开始时间”** 框中，输入开始运行作业计划的时间。 在 **“结束时间”** 框中，输入停止重复作业计划的时间。 输入当天的小时、分钟和秒以及 AM 或 PM。  
   
         3.  在 **“持续时间”** 下的 **“开始日期”** 中，输入希望作业计划开始运行的日期。 选择 **“结束日期”** 或 **“无结束日期”** 以指示作业计划应在何时停止运行。 如果选择 **“结束日期”** ，输入希望作业计划停止运行的日期。  
   
-    5.  如果选择“执行一次”  ，请在“执行一次”  下的“日期”  框中输入将运行作业计划的日期。 在 **“时间”** 框中，输入将运行作业计划的时间。 输入当天的小时、分钟和秒以及 AM 或 PM。  
+    5.  如果选择“执行一次”，请在“执行一次”下的“日期”框中输入将运行作业计划的日期。 在 **“时间”** 框中，输入将运行作业计划的时间。 输入当天的小时、分钟和秒以及 AM 或 PM。  
   
     6.  在 **“摘要”** 下的 **“说明”** 中，验证所有作业计划设置均正确。  
   
-    7.  单击“确定”。   
+    7.  单击“确定”。  
   
      完成此页后，单击 **“下一步”** 。  
   
@@ -179,7 +179,7 @@ ms.locfileid: "81488006"
      指定每个操作的类型和名称。  
   
      **Status**  
-     指示向导操作作为一个整体返回的值是“成功”  还是“失败”  。  
+     指示向导操作作为一个整体返回的值是“成功”还是“失败”。  
   
      **消息**  
      提供从该进程中返回的任何错误或警告消息。  
@@ -188,10 +188,10 @@ ms.locfileid: "81488006"
      创建包含创建分区向导结果的报告。 这些选项是 **“查看报告”** 、 **“将报告保存到文件”** 、 **“将报告复制到剪贴板”** 和 **“将报告作为电子邮件发送”** 。  
   
      **查看报告**  
-     打开“查看报告”  对话框，其中包含关于创建分区向导进度的文本报告。  
+     打开“查看报告”对话框，其中包含关于创建分区向导进度的文本报告。  
   
      **将报告保存到文件**  
-     打开“将报告另存为”  对话框。  
+     打开“将报告另存为”对话框。  
   
      **将报告复制到剪贴板**  
      将向导的进度报告结果复制到剪贴板。  
@@ -199,17 +199,21 @@ ms.locfileid: "81488006"
      **“将报告作为电子邮件发送”**  
      将向导的进度报告结果复制到电子邮件。  
   
-     完成时，单击“关闭”  。  
+     完成时，单击“关闭” 。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
-  
+
+### <a name="sql-server"></a>SQL Server
+
+在 SQL Server 中，运行 `sp_estimate_data_compression_savings`，然后对表或索引启用压缩。 请参阅以下部分。 
+
 #### <a name="to-enable-compression-on-a-table"></a>对表启用压缩功能  
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例先执行存储过程 `sp_estimate_data_compression_savings` 以返回对象的估计大小（如果此对象使用的是 ROW 压缩设置）。 之后，此示例会对指定表中的所有分区启用 ROW 压缩。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例先执行存储过程 `sp_estimate_data_compression_savings` 以返回对象的估计大小（如果此对象使用的是 ROW 压缩设置）。 之后，此示例会对指定表中的所有分区启用 ROW 压缩。  
   
     ```sql  
     USE AdventureWorks2012;  
@@ -227,7 +231,7 @@ ms.locfileid: "81488006"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例先查询 `sys.indexes` 目录视图以返回 `index_id` 表上每个索引的名称和 `Production.TransactionHistory` 。 之后，此示例将执行存储过程 `sp_estimate_data_compression_savings` 以返回指定索引 ID 的估计大小（如果要使用 PAGE 压缩设置）。 最后，此示例将重新生成索引 ID 2 (`IX_TransactionHistory_ProductID`)，并指定 PAGE 压缩。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例先查询 `sys.indexes` 目录视图以返回 `index_id` 表上每个索引的名称和 `Production.TransactionHistory` 。 之后，此示例将执行存储过程 `sp_estimate_data_compression_savings` 以返回指定索引 ID 的估计大小（如果要使用 PAGE 压缩设置）。 最后，此示例将重新生成索引 ID 2 (`IX_TransactionHistory_ProductID`)，并指定 PAGE 压缩。  
   
     ```sql  
     USE AdventureWorks2012;   
@@ -245,7 +249,47 @@ ms.locfileid: "81488006"
   
     ALTER INDEX IX_TransactionHistory_ProductID ON Production.TransactionHistory REBUILD PARTITION = ALL WITH (DATA_COMPRESSION = PAGE);  
     GO  
+    ``` 
+    
+### <a name="on-azure-sql-database"></a>Azure SQL 数据库
+
+Azure SQL 数据库不支持 `sp_estimate_data_compression`。 以下脚本启用压缩，且不必估计压缩量。 
+
+#### <a name="to-enable-compression-on-a-table"></a>对表启用压缩功能  
+  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
+  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
+  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例会对指定表中的所有分区启用 ROW 压缩。  
+  
+    ```sql  
+    USE AdventureWorks2012;  
+    GO  
+
+    ALTER TABLE Production.TransactionHistory REBUILD PARTITION = ALL  
+    WITH (DATA_COMPRESSION = ROW);   
+    GO  
     ```  
+  
+#### <a name="to-enable-compression-on-an-index"></a>对索引启用压缩功能  
+  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
+  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
+  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例先查询 `sys.indexes` 目录视图以返回 `index_id` 表上每个索引的名称和 `Production.TransactionHistory` 。 最后，此示例将重新生成索引 ID 2 (`IX_TransactionHistory_ProductID`)，并指定 PAGE 压缩。  
+  
+    ```sql  
+    USE AdventureWorks2012;   
+    GO  
+    SELECT name, index_id  
+    FROM sys.indexes  
+    WHERE OBJECT_NAME (object_id) = N'TransactionHistory';  
+    
+    ALTER INDEX IX_TransactionHistory_ProductID ON Production.TransactionHistory REBUILD PARTITION = ALL WITH (DATA_COMPRESSION = PAGE);  
+    GO  
+    ``` 
   
  有关详细信息，请参阅 [ALTER TABLE (Transact-SQL) ](../../t-sql/statements/alter-table-transact-sql.md) 和 [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)。  
   

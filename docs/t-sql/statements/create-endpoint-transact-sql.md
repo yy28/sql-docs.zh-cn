@@ -31,15 +31,15 @@ helpviewer_keywords:
 ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0a320b01433ad95f4bd695a3f700b7e7bb9ba653
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7a8290a80438b41a201f268c7388c06d2d7df930
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67902827"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902292"
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   创建端点并定义其属性，包括可用于客户端应用程序的方法。 有关相关权限的信息，请参阅 [GRANT 终结点权限 (Transact-SQL)](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)。  
   
@@ -53,13 +53,13 @@ ms.locfileid: "67902827"
   
      在此部分中，需要定义端点上所支持的负载。 负载可以为以下多种支持类型中的一种：[!INCLUDE[tsql](../../includes/tsql-md.md)]、Service Broker、数据库镜像。 在此部分中，还需要提供语言特定信息。  
   
-> 请注意：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中已删除了本机 XML Web 服务（SOAP/HTTP 终结点）。  
+> **注意：** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中已删除了本机 XML Web 服务（SOAP/HTTP 终结点）。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 CREATE ENDPOINT endPointName [ AUTHORIZATION login ]  
 [ STATE = { STARTED | STOPPED | DISABLED } ]  
 AS { TCP } (  
@@ -108,13 +108,13 @@ FOR DATABASE_MIRRORING (
 ```  
   
 ## <a name="arguments"></a>参数  
- endPointName   
+ endPointName  
  所创建的端点的已分配名称。 在更新或删除端点时使用。  
   
- AUTHORIZATION login   
+ AUTHORIZATION login  
  指定被分配了新建端点对象的所有权的有效 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Windows 登录帐户。 如果没有指定 AUTHORIZATION，默认情况下调用方将成为新建对象的所有者。  
   
- 若要通过指定 AUTHORIZATION 分配所有权，调用方必须对指定的 login 具有 IMPERSONATE 权限  。  
+ 若要通过指定 AUTHORIZATION 分配所有权，调用方必须对指定的 login 具有 IMPERSONATE 权限。  
   
  若要重新分配所有权，请参阅 [ALTER ENDPOINT (Transact-SQL)](../../t-sql/statements/alter-endpoint-transact-sql.md)。  
   
@@ -127,7 +127,7 @@ FOR DATABASE_MIRRORING (
  DISABLED  
  端点被禁用。 在该状态下，服务器侦听端口请求但向客户端返回错误。  
   
- STOPPED   
+ STOPPED  
  端点被停止。 在该状态下，服务器不侦听端点端口，也不对使用端点的任何尝试请求进行响应。  
   
  若要更改状态，请使用 [ALTER ENDPOINT (Transact-SQL)](../../t-sql/statements/alter-endpoint-transact-sql.md)。  
@@ -159,30 +159,30 @@ FOR DATABASE_MIRRORING (
 > [!NOTE]  
 >  有关特定于 SERVICE_BROKER 的选项，请参阅本节后面的“SERVICE_BROKER 选项”。 有关特定于 DATABASE_MIRRORING 的选项，请参阅本节后面的“DATABASE_MIRRORING 选项”。  
   
- AUTHENTICATION **=authentication_options> 为此终结点指定连接需要的 TCP/IP 身份验证**\<。 默认值为 WINDOWS。  
+ AUTHENTICATION = \<authentication_options>：为此终结点指定连接需要的 TCP/IP 身份验证。 默认值为 WINDOWS。  
   
  支持的身份验证方法包括 NTLM 或 Kerberos 或这两种方法。  
   
 > [!IMPORTANT]  
 >  服务器实例上所有的镜像连接都只使用一个数据库镜像端点。 任何创建其他数据库镜像端点的尝试都将失败。  
   
- **authentication_options> ::=\<**  
+ \<authentication_options> ::=  
   
- WINDOWS [ { NTLM | KERBEROS | NEGOTIATE } ]    
+ WINDOWS [ { NTLM | KERBEROS | NEGOTIATE } ]   
  指定端点使用 Windows 身份验证协议进行连接以验证端点。 这是默认值。  
   
  如果指定某一授权方法（NTLM 或 KERBEROS），则始终将该方法用作身份验证协议。 默认值 NEGOTIATE 允许端点使用 Windows 协商协议在 NTLM 和 Kerberos 之间进行选择。  
   
- CERTIFICATE certificate_name   
- 指定端点使用 certificate_name 指定的证书验证连接以建立授权标识  。 远端点必须具有其公钥与指定证书的私钥相匹配的证书。  
+ CERTIFICATE certificate_name  
+ 指定端点使用 certificate_name 指定的证书验证连接以建立授权标识。 远端点必须具有其公钥与指定证书的私钥相匹配的证书。  
   
- WINDOWS [ { NTLM | KERBEROS | NEGOTIATE } ] CERTIFICATE certificate_name    
+ WINDOWS [ { NTLM | KERBEROS | NEGOTIATE } ] CERTIFICATE certificate_name  
  指定端点通过使用 Windows 身份验证尝试进行连接；如果该尝试失败，则尝试使用指定的证书。  
   
- CERTIFICATE certificate_name WINDOWS [ { NTLM | KERBEROS | NEGOTIATE } ]    
+ CERTIFICATE certificate_name WINDOWS [ { NTLM | KERBEROS | NEGOTIATE } ]  
  指定端点通过使用指定的证书尝试进行连接；如果该尝试失败，则尝试使用 Windows 身份验证。  
   
- ENCRYPTION = { DISABLED | SUPPORTED | REQUIRED } [ALGORITHM { AES | RC4 | AES RC4 | RC4 AES } ]    
+ ENCRYPTION = { DISABLED | SUPPORTED | REQUIRED } [ALGORITHM { AES | RC4 | AES RC4 | RC4 AES } ]   
  指定是否在过程中使用加密。 默认值为 REQUIRED。  
   
  DISABLED  
@@ -261,7 +261,7 @@ FOR DATABASE_MIRRORING (
   
  下列用户可以对 ENDPOINT 执行请求：  
   
--   sysadmin 固定服务器角色的成员   
+-   sysadmin 固定服务器角色的成员  
   
 -   端点的所有者  
   

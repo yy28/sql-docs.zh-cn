@@ -1,5 +1,6 @@
 ---
 title: “备份数据库”任务（维护计划）| Microsoft Docs
+description: 了解如何使用“备份数据库”任务将备份任务添加到 SQL Server 中的维护计划。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: ed1ef012-fa14-4ba5-bafe-d1527ba065b3
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 60183a9777098728ee258274a19aca4d65885b87
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f1a233cdd69f069ae425de644dfe8b6d1475dd86
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115829"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774405"
 ---
 # <a name="options-in-the-back-up-database-task-for-maintenance-plan"></a>维护计划的“备份数据库”任务中的选项
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   使用 **“‘备份数据库’任务”** 对话框可以将备份任务添加到维护计划。 备份数据库非常重要，因为当发生系统或硬件故障（或用户错误）对数据库造成某种破坏时，就需要用备份副本来还原数据。 此任务可用于执行完整备份、差异备份、文件和文件组备份以及事务日志备份。  
   
  **创建备份数据库任务**  
@@ -38,7 +39,7 @@ ms.locfileid: "68115829"
  创建一个新的服务器连接，在执行此任务时使用。 下面对 **“新建连接”** 对话框进行了介绍。  
   
  **数据库**  
- 指定受此任务影响的数据库。 选择此选项时，此下拉列表会提供以下选项： **“所有数据库”** 、 **“所有系统数据库”** 、 **“所有用户数据库”** 和 **“特定数据库”** 。  
+ 指定受此任务影响的数据库。 选择后，下拉列表会提供以下选项：“所有数据库”、“所有系统数据库”、“所有用户数据库”、“特定数据库”   。  
   
  **“所有数据库”**  
  生成的维护计划将对所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库运行维护任务。  
@@ -56,7 +57,7 @@ ms.locfileid: "68115829"
  显示要执行的备份类型。  
   
  **备份组件**  
- 选择“数据库”  将备份整个数据库。 选择 **“文件和文件组”** 将只备份部分数据库。 如果选择此选项，请提供文件或文件组名称。 如果在 **“数据库”** 框中选择了多个数据库，只能对 **“备份组件”** 指定 **“数据库”** 。 若要执行文件或文件组备份，请为每个数据库创建一个任务。  
+ 选择“数据库”将备份整个数据库。 选择 **“文件和文件组”** 将只备份部分数据库。 如果选择此选项，请提供文件或文件组名称。 如果在 **“数据库”** 框中选择了多个数据库，只能对 **“备份组件”** 指定 **“数据库”** 。 若要执行文件或文件组备份，请为每个数据库创建一个任务。  
   
  **备份集过期时间**  
  指定可用其他备份集覆盖此备份集的时间。  
@@ -65,10 +66,10 @@ ms.locfileid: "68115829"
  将数据库备份到文件或磁带。 只有连接到该数据库所在计算机的磁带设备才可用。  
   
  **跨一个或多个文件备份数据库**  
- 单击“添加”  将打开“选择备份目标”  对话框，并提供一个或多个磁盘位置，或磁带设备。  
+ 单击“添加”将打开“选择备份目标”对话框，并提供一个或多个磁盘位置，或磁带设备。  
   
  **如果备份文件存在**  
- 选择“追加”  可以将此备份添加到文件的末尾。 选择 **“覆盖”** 可以删除文件中的任意旧备份，并用此新备份替换它们。  
+ 选择“追加”可以将此备份添加到文件的末尾。 选择 **“覆盖”** 可以删除文件中的任意旧备份，并用此新备份替换它们。  
   
  **为每个数据库创建备份文件**  
  在文件夹框中指定的位置创建一个备份文件。 将为选定的每个数据库创建一个文件。  
@@ -126,7 +127,7 @@ ms.locfileid: "68115829"
  使用 Windows 身份验证连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例。  
   
  **使用特定用户名和密码**  
- 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 此选项不可用。  
+ 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例。 此选项不可用。  
   
  **用户名**  
  提供一个在进行身份验证时要使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 此选项不可用。  

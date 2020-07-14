@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 67f0b04b6ac0ce0fc9d8e20ac8b8088061a6ab0a
-ms.sourcegitcommit: 1f9fc7402b00b9f35e02d5f1e67cad2f5e66e73a
+ms.openlocfilehash: e2d32824b62cf54132c6168e5f44d93fa0cd6289
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82107998"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726153"
 ---
 # <a name="query-processing-architecture-guide"></a>查询处理体系结构指南
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 可处理对各种数据存储体系结构（例如，本地表、已分区表和分布在多个服务器上的表）执行的查询。 下面的主题介绍了 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 如何处理查询并通过执行计划缓存来优化查询重用。
 
@@ -33,13 +33,13 @@ ms.locfileid: "82107998"
 - 批模式执行
 
 ### <a name="row-mode-execution"></a>行模式执行
-行模式执行是一种与传统 RDMBS 表一起使用的查询处理方法，其中数据以行格式存储  。 当执行查询并且查询访问行存储表中的数据时，执行树运算符和子运算符会读取表格架构中指定的所有列中的每个所需行。 然后，从读取的每行开始，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 检索结果集所需的列，即 SELECT 语句、JOIN 谓词或筛选谓词所引用的列。
+行模式执行是一种与传统 RDMBS 表一起使用的查询处理方法，其中数据以行格式存储。 当执行查询并且查询访问行存储表中的数据时，执行树运算符和子运算符会读取表格架构中指定的所有列中的每个所需行。 然后，从读取的每行开始，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 检索结果集所需的列，即 SELECT 语句、JOIN 谓词或筛选谓词所引用的列。
 
 > [!NOTE]
 > 对于 OLTP 方案，行模式执行效率非常高，但在扫描大量数据时效率较低，例如数据仓库方案。
 
 ### <a name="batch-mode-execution"></a>批模式执行  
-批模式执行是一种查询处理方法，用于统一处理多个行（因此采用“批”一词）  。 批中的每列都作为一个矢量存储在单独的内存区域中，因此批模式处理是基于矢量的。 批模式处理还使用一些算法，这些算法针对多核 CPU 和新式硬件上的内存吞吐量增加进行了优化。      
+批模式执行是一种查询处理方法，用于统一处理多个行（因此采用“批”一词）。 批中的每列都作为一个矢量存储在单独的内存区域中，因此批模式处理是基于矢量的。 批模式处理还使用一些算法，这些算法针对多核 CPU 和新式硬件上的内存吞吐量增加进行了优化。      
 
 批模式执行与列存储存储格式紧密集成，并且围绕列存储存储格式进行了优化。 批模式处理在可能的情况下会对压缩数据运行，并消除了行模式执行所用的[交换运算符](../relational-databases/showplan-logical-and-physical-operators-reference.md#exchange)。 结果是并行性更佳和性能更快。    
 
@@ -425,8 +425,8 @@ ELSE IF @CustomerIDParameter BETWEEN 6600000 and 9999999
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 有一个用于存储执行计划和数据缓冲区的内存池。 池内分配给执行计划或数据缓冲区的百分比随系统状态动态波动。 内存池中用于存储执行计划的部分称为计划缓存。
 
 计划缓存为所有编译的计划提供了两个存储：
--  “对象计划”缓存存储 (OBJCP)，用于与持久化对象（存储过程、函数和触发器）相关的计划  。
--  “SQL 计划”缓存存储 (SQLCP)，用于与自动参数化、动态或已准备的查询相关的计划  。
+-  “对象计划”缓存存储 (OBJCP)，用于与持久化对象（存储过程、函数和触发器）相关的计划。
+-  “SQL 计划”缓存存储 (SQLCP)，用于与自动参数化、动态或已准备的查询相关的计划。
 
 下面的查询提供了有关这两个缓存存储的内存使用情况的信息：
 
@@ -437,8 +437,8 @@ WHERE name LIKE '%plans%';
 
 > [!NOTE]
 > 计划缓存有两个不用于存储计划的附加存储：     
-> -  “绑定树”缓存存储区 (PHDR)，用于在视图、约束和默认值的计划编译期间使用的数据结构  。 这些结构称为绑定树或 Algebrizer 树。      
-> -   “扩展存储过程”缓存存储 (XPROC)，用于预定义的系统过程（如使用 DLL 而非 Transact-SQL 语句定义的 `sp_executeSql` 或 `xp_cmdshell`）。 缓存的结构只包含在其中实现此过程的函数名称和 DLL 名称。      
+> -  “绑定树”缓存存储区 (PHDR)，用于在视图、约束和默认值的计划编译期间使用的数据结构。 这些结构称为绑定树或 Algebrizer 树。      
+> -  “扩展存储过程”缓存存储 (XPROC)，用于预定义的系统过程（如使用 DLL 而非 Transact-SQL 语句定义的 `sp_executeSql` 或 `xp_cmdshell`）。 缓存的结构只包含在其中实现此过程的函数名称和 DLL 名称。      
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 执行计划包含下列主要组件： 
 
@@ -491,17 +491,17 @@ GO
 
 ### <a name="caching-multiple-plans-for-the-same-query"></a>为同一个查询缓存多个计划 
 查询和执行计划在 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 中是唯一可识别的，与指纹非常类似：
--  “查询计划哈希”是在给定查询的执行计划上计算的二进制哈希值，用于唯一标识类似的执行计划  。 
--  “查询哈希”是在查询的 [!INCLUDE[tsql](../includes/tsql-md.md)] 文本上计算出的二进制哈希值，用于唯一标识查询  。 
+-  “查询计划哈希”是在给定查询的执行计划上计算的二进制哈希值，用于唯一标识类似的执行计划。 
+-  “查询哈希”是在查询的 [!INCLUDE[tsql](../includes/tsql-md.md)] 文本上计算出的二进制哈希值，用于唯一标识查询。 
 
-可以使用“计划句柄”从计划缓存中检索已编译的计划  ，该句柄是仅当计划保留在缓存中时才保持不变的暂时性标识符。 计划句柄是派生自整个批处理的已编译计划的一个哈希值。 即使批处理中的一个或多个语句重新编译，编译计划的计划句柄仍保持不变。
+可以使用“计划句柄”从计划缓存中检索已编译的计划，该句柄是仅当计划保留在缓存中时才保持不变的暂时性标识符。 计划句柄是派生自整个批处理的已编译计划的一个哈希值。 即使批处理中的一个或多个语句重新编译，编译计划的计划句柄仍保持不变。
 
 > [!NOTE]
 > 如果为批处理而不是单个语句编译了某个计划，则可以使用计划句柄和语句偏移来检索批处理中单个语句的计划。     
 > `sys.dm_exec_requests` DMV 包含每条记录的 `statement_start_offset` 和 `statement_end_offset` 列，它们表示当前正在执行的批处理或持久化对象的当前执行语句。 有关详细信息，请参阅 [sys.databases dm_exec_requests (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)。       
 > `sys.dm_exec_query_stats` DMV 同样包含每条记录中的这些列，它们引用语句在批处理或持久对象中的位置。 有关详细信息，请参阅 [sys.databases dm_exec_query_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)。     
 
-批处理的实际 [!INCLUDE[tsql](../includes/tsql-md.md)] 文本存储在单独的内存空间中，该位置与计划缓存，即 SQL Manager 缓存 (SQLMGR) 的存储位置不同  。 使用 SQL 句柄  ，可以从 SQL Manager 缓存检索已编译计划的 [!INCLUDE[tsql](../includes/tsql-md.md)] 文本，这是一个暂时性标识符，仅当至少有一个引用它的计划保留在计划缓存中时，它才保持不变。 SQL 句柄是派生自整个批处理文本的哈希值，并且保证对于每个批处理都唯一。
+批处理的实际 [!INCLUDE[tsql](../includes/tsql-md.md)] 文本存储在单独的内存空间中，该位置与计划缓存，即 SQL Manager 缓存 (SQLMGR) 的存储位置不同。 使用 SQL 句柄，可以从 SQL Manager 缓存检索已编译计划的 [!INCLUDE[tsql](../includes/tsql-md.md)] 文本，这是一个暂时性标识符，仅当至少有一个引用它的计划保留在计划缓存中时，它才保持不变。 SQL 句柄是派生自整个批处理文本的哈希值，并且保证对于每个批处理都唯一。
 
 > [!NOTE]
 > 与已编译的计划一样，[!INCLUDE[tsql](../includes/tsql-md.md)] 文本会按批存储，包括注释。 SQL 句柄包含整个批处理文本的 MD5 哈希，并且保证对于每个批处理都唯一。
@@ -685,7 +685,7 @@ sql_handle
 > [!NOTE]
 > 在 xEvents 不可用的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本中，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 探查器 [SP:Recompile](../relational-databases/event-classes/sp-recompile-event-class.md) 跟踪事件同样可用于报告语句级重新编译。
 > 跟踪事件 `SQL:StmtRecompile` 也报告语句级重新编译，并且此跟踪事件还可用于跟踪和调试重新编译。 `SP:Recompile` 仅针对存储过程和触发器生成，而 `SQL:StmtRecompile` 则针对存储过程、触发器、即席批查询、使用 `sp_executesql`执行的批处理、预定义查询和动态 SQL 生成。
-> `SP:Recompile` 和 `SQL:StmtRecompile` 的 EventSubClass 列都包含一个整数代码，用以指明重新编译的原因  。 [此处](../relational-databases/event-classes/sql-stmtrecompile-event-class.md)对代码进行了说明。
+> `SP:Recompile` 和 `SQL:StmtRecompile` 的 EventSubClass 列都包含一个整数代码，用以指明重新编译的原因。 [此处](../relational-databases/event-classes/sql-stmtrecompile-event-class.md)对代码进行了说明。
 
 > [!NOTE]
 > 当 `AUTO_UPDATE_STATISTICS` 数据库选项设置为 `ON` 时，如果查询以表或索引视图为目标，而自上次执行后，表或索引视图的统计信息已更新或其基数已发生很大变化，查询将被重新编译。 此行为适用于标准用户定义表、临时表以及由 DML 触发器创建的插入表和删除表。 如果过多的重新编译影响到查询性能，请考虑将此设置更改为 `OFF`。 当 `AUTO_UPDATE_STATISTICS` 数据库选项设置为 `OFF` 时，不会因统计信息或基数的更改而发生任何重新编译，但是，由 DML `INSTEAD OF` 触发器创建的插入表和删除表除外。 因为这些表是在 tempdb 中创建的，因此，是否重新编译访问这些表的查询取决于 tempdb 中 `AUTO_UPDATE_STATISTICS` 的设置。 请注意，在低于 2005 版的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，即使此设置为 `OFF`，查询也将继续基于 DML 触发器插入表和删除表的基数更改进行重新编译。
@@ -824,7 +824,7 @@ WHERE ProductSubcategoryID = 4;
 * 可折叠常量表达式，它们是 `+`、`-`、`*`、`/` 和 `%` 运算符的参数。 在考虑是否能够强制参数化时，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将认为满足下列条件之一的表达式是可折叠常量表达式：  
   * 表达式中没有列、变量、或子查询。  
   * 表达式包含 `CASE` 子句。  
-* 查询提示子句的参数。 这些参数包括 `FAST` 查询提示的 number_of_rows 参数  、`MAXDOP` 查询提示的 number_of_processors 参数  ，以及 `MAXRECURSION` 查询提示的 number 参数  。
+* 查询提示子句的参数。 这些参数包括 `FAST` 查询提示的 number_of_rows 参数、`MAXDOP` 查询提示的 number_of_processors 参数，以及 `MAXRECURSION` 查询提示的 number 参数。
 
 参数化在单条 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句内发生。 即，批处理中的单条语句将参数化。 在编译之后，参数化查询将在它最初提交时所在的批的上下文中执行。 如果缓存了查询的执行计划，则可以通过引用 sys.syscacheobjects 动态管理视图的 sql 列来确定此查询是否已参数化。 如果查询已参数化，参数的名称和数据类型在此列中已提交批的文本前面，如 (\@1 tinyint)。
 
@@ -834,7 +834,7 @@ WHERE ProductSubcategoryID = 4;
 #### <a name="data-types-of-parameters"></a>参数数据类型
 当 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 参数化文本时，参数将转换为下列数据类型：
 
-* 其大小适合 int 数据类型的整数文本将参数化为 int。对于较大的整数文本，如果它是包含任意比较运算符（包括 <、\<=、=、!=、>、>=、!\<、!>、<>、`ALL`、`ANY`、`SOME`、`BETWEEN` 和 `IN`）的谓词的组成部分，则将这些文本参数化为 numeric(38,0)。 如果它不是包含比较运算符的谓词的组成部分，则此类文本将参数化为数字，其精度仅够表示其大小，并且没有小数位。
+* 其大小适合 int 数据类型的整数文本将参数化为 int。对于较大的整数文本，如果它是包含任意比较运算符（包括 <、\<=, =, !=, >、>=、!\<, !>、<>、`ALL`、`ANY`、`SOME`、`BETWEEN` 和 `IN`）的谓词的组成部分，则将这些文本参数化为 numeric(38,0)。 如果它不是包含比较运算符的谓词的组成部分，则此类文本将参数化为数字，其精度仅够表示其大小，并且没有小数位。
 * 如果定点数值是包含比较运算符的谓词的组成部分，则此类数值将参数化为数字，其精度为 38，并且小数位数仅够表示其大小。 如果定点数值不是包含比较运算符的谓词的组成部分，则此类数值将参数化为数字，其精度和小数位数仅够表示其大小。
 * 浮点数值将参数化为 float(53)。
 * 如果非 Unicode 字符串文本在 8,000 个字符以内，将参数化为 varchar(8000)，如果多于 8,000 个字符，则参数化为 varchar(max)。
@@ -935,7 +935,7 @@ WHERE ProductID = 63;
 -   **TOP 关键字**        
     有关详细信息，请参阅 [TOP (Transact-SQL)](../t-sql/queries/top-transact-sql.md)。
 
-查询执行计划可能包含 QueryPlan  元素中的 NonParallelPlanReason  属性，该元素描述未使用并行度的原因。  此属性的值包括：
+查询执行计划可能包含 QueryPlan 元素中的 NonParallelPlanReason 属性，该元素描述未使用并行度的原因。  此属性的值包括：
 
 |NonParallelPlanReason 值|说明|
 |----|----|
@@ -972,15 +972,15 @@ WHERE ProductID = 63;
 ### <a name="degree-of-parallelism"></a><a name="DOP"></a>并行度
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 自动检测每个并行查询执行或索引数据定义语言 (DDL) 操作实例的最佳并行度。 此操作所依据的条件如下： 
 
-1. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 是否运行在具有多个微处理器或 CPU 的计算机（例如对称多处理计算机，即 SMP）上  。 只有具有多个 CPU 的计算机才能使用并行查询。 
+1. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 是否运行在具有多个微处理器或 CPU 的计算机（例如对称多处理计算机，即 SMP）上。 只有具有多个 CPU 的计算机才能使用并行查询。 
 
-2. 可用的工作线程是否足够  。 每个查询或索引操作均要求一定数量的工作线程才能执行。 执行并行计划比执行串行计划需要更多的工作线程，所需工作线程数会随着并行度的提高而增加。 无法满足特定并行度的并行计划的工作线程要求时，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]将自动减少并行度或完全放弃指定的工作负荷上下文中的并行计划。 然后执行串行计划（一个工作线程）。 
+2. 可用的工作线程是否足够。 每个查询或索引操作均要求一定数量的工作线程才能执行。 执行并行计划比执行串行计划需要更多的工作线程，所需工作线程数会随着并行度的提高而增加。 无法满足特定并行度的并行计划的工作线程要求时，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]将自动减少并行度或完全放弃指定的工作负荷上下文中的并行计划。 然后执行串行计划（一个工作线程）。 
 
-3. 所执行的查询或索引操作的类型  。 创建索引、重新生成索引或删除聚集索引等索引操作，以及大量占用 CPU 周期的查询最适合采用并行计划。 例如，大型表的联接、大型的聚合和大型结果集的排序等都很适合采用并行计划。 对于简单查询（常用于事务处理应用程序）而言，执行并行查询所需的额外协调工作会大于潜在的性能提升。 为了区别能够从并行计划中受益的查询和不能从中受益的查询，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 会将执行查询或索引操作的估计开销与[并行的开销阈值](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md)进行比较。 如果适合性测试发现其他值更适合正在运行的工作负载，用户可以使用 [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 更改默认值 5。 
+3. 所执行的查询或索引操作的类型。 创建索引、重新生成索引或删除聚集索引等索引操作，以及大量占用 CPU 周期的查询最适合采用并行计划。 例如，大型表的联接、大型的聚合和大型结果集的排序等都很适合采用并行计划。 对于简单查询（常用于事务处理应用程序）而言，执行并行查询所需的额外协调工作会大于潜在的性能提升。 为了区别能够从并行计划中受益的查询和不能从中受益的查询，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 会将执行查询或索引操作的估计开销与[并行的开销阈值](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md)进行比较。 如果适合性测试发现其他值更适合正在运行的工作负载，用户可以使用 [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 更改默认值 5。 
 
-4. 待处理的行数是否足够  。 如果查询优化器确定行数太少，则不引入交换运算符来分发行。 结果，运算符将串行执行。 以串行计划执行运算符可避免出现这样的情况：启动、分发和协调的开销超过并行执行运算符所获得的收益。
+4. 待处理的行数是否足够。 如果查询优化器确定行数太少，则不引入交换运算符来分发行。 结果，运算符将串行执行。 以串行计划执行运算符可避免出现这样的情况：启动、分发和协调的开销超过并行执行运算符所获得的收益。
 
-5. 当前的分发内容统计信息是否可用  。 如果不能达到最高并行度，则在放弃并行计划之前会考虑较低的并行度。 例如，创建视图的聚集索引后，将无法评估分发内容统计信息，因为聚集索引仍不存在。 在此情况下，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]无法为索引操作提供最高并行度。 不过，某些运算符（例如，排序和扫描）仍能从并行执行中获益。
+5. 当前的分发内容统计信息是否可用。 如果不能达到最高并行度，则在放弃并行计划之前会考虑较低的并行度。 例如，创建视图的聚集索引后，将无法评估分发内容统计信息，因为聚集索引仍不存在。 在此情况下，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]无法为索引操作提供最高并行度。 不过，某些运算符（例如，排序和扫描）仍能从并行执行中获益。
 
 > [!NOTE]
 > 并行索引操作只能在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition、Developer Edition 和 Evaluation Edition 中使用。
@@ -1000,16 +1000,16 @@ WHERE ProductID = 63;
 #### <a name="overriding-degrees-of-parallelism"></a>覆盖并行度
 并行度设置并行计划执行中要使用的处理器数量。 此配置可以在不同级别设置：
 
-1.  服务器级别，使用最大并行度 (MAXDOP) [服务器配置选项](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)  。</br> **适用于：** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+1.  服务器级别，使用最大并行度 (MAXDOP) [服务器配置选项](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。</br> **适用于：** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 
     > [!NOTE]
     > [!INCLUDE [sssqlv15-md](../includes/sssqlv15-md.md)] 介绍有关在安装过程中如何设置 MAXDOP 服务器配置的自动建议。 安装程序用户界面允许接受建议的设置或输入自己的值。 有关详细信息，请参阅[“数据库引擎配置 - MaxDOP”页](../sql-server/install/instance-configuration.md#maxdop)。
 
-2.  工作负载级别，请使用 MAX_DOP [Resource Governor 工作负载组配置选项](../t-sql/statements/create-workload-group-transact-sql.md)  。</br> **适用于：** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+2.  工作负载级别，请使用 MAX_DOP [Resource Governor 工作负载组配置选项](../t-sql/statements/create-workload-group-transact-sql.md)。</br> **适用于：** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 
-3.  数据库级别，请使用 MAXDOP [数据库范围的配置](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)  。</br> 适用对象：[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]  
+3.  数据库级别，请使用 MAXDOP [数据库范围的配置](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。</br> 适用对象：[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 
 
-4.  查询或索引语句级别，使用 MAXDOP [查询提示](../t-sql/queries/hints-transact-sql-query.md) 或 MAXDOP 索引选项   。 例如，可以使用 MAXDOP 选项来控制（增加或减少）联机索引操作的专用处理器数。 通过这种方式，您就可以在并发用户间平衡索引操作所使用的资源。</br> 适用对象：[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]  
+4.  查询或索引语句级别，使用 MAXDOP [查询提示](../t-sql/queries/hints-transact-sql-query.md) 或 MAXDOP 索引选项 。 例如，可以使用 MAXDOP 选项来控制（增加或减少）联机索引操作的专用处理器数。 通过这种方式，您就可以在并发用户间平衡索引操作所使用的资源。</br> 适用对象：[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 
 
 将“最大并行度”选项设置为 0 (默认值) 可使 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在执行并行计划时使用所有可用的处理器（最多可达 64 台处理器）。 尽管 MAXDOP 选项设置为 0 时，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 会将运行时目标设置为 64 个逻辑处理器，但如果需要，可以手动设置不同的值。 针对查询和索引将 MAXDOP 选项设置为 0 时，将允许 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在并行计划执行中针对给定的查询或索引使用所有可用的处理器（最多可达 64 个处理器）。 MAXDOP 并不是所有并行查询的强制值，而是所有符合并行性要求的查询的暂定目标值。 这意味着如果在运行时没有足够的可用工作线程，查询可能会以比 MAXDOP 服务器配置选项更低的并行度执行。
 
@@ -1195,7 +1195,7 @@ CREATE PARTITION FUNCTION myRangePF1 (int) AS RANGE LEFT FOR VALUES (3, 7, 10);
 
 ### <a name="displaying-partitioning-information-in-query-execution-plans"></a>显示查询执行计划中的分区信息
 
-可以使用 [!INCLUDE[tsql](../includes/tsql-md.md)] `SET` 语句 `SET SHOWPLAN_XML` 或 `SET STATISTICS XML`，或者使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio 中的图形执行计划输出来检查已分区表和已分区索引上的查询执行计划。 例如，单击“查询编辑器”工具栏上的“显示估计的执行计划”  可以显示编译时执行计划，单击“包括实际的执行计划”  可以显示运行时计划。 
+可以使用 [!INCLUDE[tsql](../includes/tsql-md.md)] `SET` 语句 `SET SHOWPLAN_XML` 或 `SET STATISTICS XML`，或者使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio 中的图形执行计划输出来检查已分区表和已分区索引上的查询执行计划。 例如，单击“查询编辑器”工具栏上的“显示估计的执行计划”  可以显示编译时执行计划，单击“包括实际的执行计划” 可以显示运行时计划。 
 
 使用这些工具，您可以确定以下信息：
 

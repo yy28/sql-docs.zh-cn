@@ -1,5 +1,6 @@
 ---
 title: 用于迁移评估的 PowerShell Cmdlet | Microsoft Docs
+description: 了解 Save-SqlMigrationReport，它将评估 SQL Server 数据库中对象针对内存中 OLTP 的迁移适用性。
 ms.custom: ''
 ms.date: 07/30/2019
 ms.prod: sql
@@ -11,22 +12,22 @@ ms.assetid: 117250d3-9982-47fe-94fd-6f29f6159940
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5272203fb1a1c0ac2f755a4da99c654b2595a7f0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f0c3489dab411718eb32e8ff4dd6c182ec59f2b8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68698306"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722384"
 ---
 # <a name="powershell-cmdlet-for-migration-evaluation"></a>用于迁移评估的 PowerShell Cmdlet
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 `Save-SqlMigrationReport` 工具可评估 SQL Server 数据库中多个对象的迁移适用性。
 
 目前，此 cmdlet 仅限于评估内存中 OLTP 的迁移适用性。 该 cmdlet 可以在提升的 Windows PowerShell 环境和 sqlps 中运行。
 
-作为直接运行此 PowerShell cmdlet 的替代方法，可以使用 SQL Server Management Studio (SSMS) 隐式运行此 cmdlet。 在 SSMS“对象资源管理器”  中，可以右键单击某个表，然后单击“内存优化顾问”  。
+作为直接运行此 PowerShell cmdlet 的替代方法，可以使用 SQL Server Management Studio (SSMS) 隐式运行此 cmdlet。 在 SSMS“对象资源管理器”中，可以右键单击某个表，然后单击“内存优化顾问”。
 
 ## <a name="syntax"></a>语法
 
@@ -55,15 +56,15 @@ Save-SqlMigrationReport
 - `-Schema`
 - `-Object`
 
-反之，如果未  指定 `-InputObject`，则必须指定 `-Server` 和 `-Database`。 如果指定 `-Server`，则可以选择通过指定 `-Schema` 或 `-Object` 或是同时指定两者来缩小范围。
+反之，如果未指定 `-InputObject`，则必须指定 `-Server` 和 `-Database`。 如果指定 `-Server`，则可以选择通过指定 `-Schema` 或 `-Object` 或是同时指定两者来缩小范围。
 
 | 参数名称 | 说明 |
 | :------------- | :---------- |
 | 数据库 | 目标 SQL Server 数据库的名称。 强制（当 `-Server` 为强制参数时）。<br/><br/> 在 SQLPS 中为可选。 |
 | FolderPath | 该 cmdlet 应在其中存储所生成的报告的文件夹。<br/><br/> 必需。 |
 | InputObject | 该 cmdlet 设定为目标的 SMO 对象。<br/><br/> 如果未提供 `-Server`，则在 Windows Powershell 环境中为强制参数。<br/><br/> 在 SQLPS 中为可选。 |
-| MigrationType | 该 cmdlet 设定为目标的迁移方案的类型。 目前，唯一的值是默认“OLTP”  。<br/><br/> 可选。 |
-| Object | 要报告的对象的名称。 可以是表或存储过程。 |
+| MigrationType | 该 cmdlet 设定为目标的迁移方案的类型。 目前，唯一的值是默认“OLTP”。<br/><br/> 可选。 |
+| 对象 | 要报告的对象的名称。 可以是表或存储过程。 |
 | 密码 | 必需（当 `-Username` 是必需参数时）。 |
 | 架构 | 拥有要报告的对象的架构的名称。<br/><br/> 可选。 |
 | 服务器 | 目标 SQL Server 实例的名称。 如果未提供 `-InputObject` 参数，则在 Windows Powershell 环境中为强制参数。<br/><br/> 在 SQLPS 中为可选。 |
@@ -72,7 +73,7 @@ Save-SqlMigrationReport
 
 ## <a name="prerequisites"></a>先决条件
 
-必须先安装名为 SqlServer  的模块，然后才能运行此 cmdlet：
+必须先安装名为 SqlServer 的模块，然后才能运行此 cmdlet：
 
 - `Install-Module -Name SqlServer`
 
@@ -100,14 +101,14 @@ Save-SqlMigrationReport `
 
 ## <a name="example-output-report"></a>示例输出报告
 
-在为 `-FolderPath` 参数指定的文件夹下，通过运行此 cmdlet 来创建以下两个文件夹路径。 这两个路径都以 server\_name  值开头：
+在为 `-FolderPath` 参数指定的文件夹下，通过运行此 cmdlet 来创建以下两个文件夹路径。 这两个路径都以 server\_name 值开头：
 
 - MyDatabaseName_31\Tables\
 - MyDatabaseName_31\Stored Procedures\
 
 每个对象报告文件都存储在相应的文件夹下。
 
-报告文件名具有扩展名 .html  。 例如，实际生成的文件名为 MigrationAdvisorChecklistReport_Table2_20190728.html  。
+报告文件名具有扩展名 .html。 例如，实际生成的文件名为 MigrationAdvisorChecklistReport_Table2_20190728.html。
 
 该 HTML 主要是具有以下标头的由两列组成的表：
 

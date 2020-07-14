@@ -20,18 +20,18 @@ helpviewer_keywords:
 - valid numeric type [SQL Server]
 - checking valid numeric type
 ms.assetid: 7aa816de-529a-4f6c-a99f-4d5a9ef599eb
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0c637c28f2bd090a47701b2e371fdde5cf4dba74
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 813d2b8be0797e510728e9d61f9e2bb965931e29
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82804144"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012834"
 ---
 # <a name="isnumeric-transact-sql"></a>ISNUMERIC (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   确定表达式是否为有效的数值类型。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "82804144"
   
 ## <a name="syntax"></a>语法  
   
-```  
+``` 
 ISNUMERIC ( expression )  
 ```  
   
@@ -53,44 +53,41 @@ ISNUMERIC ( expression )
 ## <a name="remarks"></a>备注  
  当输入表达式的计算结果为有效的 numeric 数据类型时，ISNUMERIC 返回 1；否则返回 0。 有效的 [numeric 数据类型](../../t-sql/data-types/numeric-types.md)包括以下类型：  
 
-|||
+| 区域 | 数字数据类型 |
 |-|-|
 | [精确数字](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md) | **bigint**、**int**、**smallint**、**tinyint**、**bit** |
 | [固定精度](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) | **decimal**、**numeric** |
 | [近似](../../t-sql/data-types/float-and-real-transact-sql.md) | **float**、**real** |
 | [货币值](../../t-sql/data-types/money-and-smallmoney-transact-sql.md) | **money**、 **smallmoney** |
 
-  
 > [!NOTE]  
->  对于不是数字的字符（如加号 (+)、减号 (-)）和有效货币符号（如美元符号 ($)）字符，ISNUMERIC 将返回 1。 有关货币符号的完整列表，请参阅 [money 和 smallmoney (Transact-SQL)](../../t-sql/data-types/money-and-smallmoney-transact-sql.md)。  
+> 对于不是数字的字符（如加号 (+)、减号 (-)）和有效货币符号（如美元符号 ($)）字符，ISNUMERIC 将返回 1。 有关货币符号的完整列表，请参阅 [money 和 smallmoney (Transact-SQL)](../../t-sql/data-types/money-and-smallmoney-transact-sql.md)。  
   
 ## <a name="examples"></a>示例  
  以下示例使用 `ISNUMERIC` 返回所有非数值的邮政编码。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT City, PostalCode  
 FROM Person.Address   
-WHERE ISNUMERIC(PostalCode)<> 1;  
+WHERE ISNUMERIC(PostalCode) <> 1;  
 GO  
 ```  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  以下示例使用 `ISNUMERIC` 返回所有非数值的邮政编码。  
   
-```  
+```sql
 USE master;  
 GO  
-SELECT name, isnumeric(name) AS IsNameANumber, database_id, isnumeric(database_id) AS IsIdANumber   
+SELECT name, ISNUMERIC(name) AS IsNameANumber, database_id, ISNUMERIC(database_id) AS IsIdANumber   
 FROM sys.databases;  
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)   
- [System Functions (Transact-SQL)](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
- [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  
-  
-  
+## <a name="see-also"></a>另请参阅
 
+- [表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)
+- [系统函数 (Transact-SQL)](../../relational-databases/system-functions/system-functions-category-transact-sql.md)
+- [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)

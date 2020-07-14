@@ -1,5 +1,6 @@
 ---
 title: 升级数据库引擎 | Microsoft Docs
+description: 本文提供了一些资源链接，这些资源可帮助你将 SQL Server 数据库引擎从 SQL Server 的以前版本升级到 SQL Server 2019。
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -14,16 +15,16 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7dcf58da00887f396568367982da97b9c75e32ad
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 492f663e09f8883d1994d1ee5af2c0ed9acbb111
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73531564"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748569"
 ---
 # <a name="upgrade-database-engine"></a>升级数据库引擎
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
   本部分中的文章可帮助将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库引擎从先前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
@@ -33,11 +34,11 @@ ms.locfileid: "73531564"
   
 3.  [完成数据库引擎升级](../../database-engine/install-windows/complete-the-database-engine-upgrade.md)。 在数据库引擎升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 并且数据库处于联机状态后，还需要完成一些步骤，包括制作新备份、升级数据库功能以启用新功能以及重新填充全文目录。 本文讨论了这些步骤。  
   
-4.  升级[数据库兼容性级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades)（适用于：**和**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]）。 当你的数据库在新版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中处于联机状态后，要执行的一个步骤可能是，通过更改数据库兼容性级别来升级数据库功能模式以启用新功能。 这可以手动完成，也可以通过查询优化助手完成。 
+4.  升级[数据库兼容性级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades)（适用于：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]）。 当你的数据库在新版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中处于联机状态后，要执行的一个步骤可能是，通过更改数据库兼容性级别来升级数据库功能模式以启用新功能。 这可以手动完成，也可以通过查询优化助手完成。 
 
     - [更改数据库兼容性模式和使用查询存储](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)。 手动更改数据库兼容性级别后，使用查询存储来监视性能并识别可能的回归。 本文讨论建议的过程，并提供建议的工作流。  
 
-    - [使用查询优化助手更改数据库兼容性模式](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)。 或者，要进行手动更改，请使用查询优化助手 (QTA) 作为指导，以完成更改数据库兼容性级别的建议过程  。 本文讨论此过程，并提供有关 QTA 工作流的说明。  
+    - [使用查询优化助手更改数据库兼容性模式](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)。 或者，要进行手动更改，请使用查询优化助手 (QTA) 作为指导，以完成更改数据库兼容性级别的建议过程。 本文讨论此过程，并提供有关 QTA 工作流的说明。  
 
     要详细了解更改数据库兼容性级别后可用的新功能和改进的行为，请参阅[兼容性级别之间的差异](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-stored-procedures)。
 

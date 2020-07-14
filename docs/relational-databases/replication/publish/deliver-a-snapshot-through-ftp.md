@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 99872c4f-40ce-4405-8fd4-44052d3bd827
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c6ec9ac5c4e868a9022a11cc153c9638cab737dc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c2ff609e78a0076cd3d6c0ff15348869cc717cfe
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71710989"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893281"
 ---
 # <a name="deliver-a-snapshot-through-ftp"></a>通过 FTP 传递快照
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中通过 FTP 传递快照。  
 
 默认情况下，快照存储在定义为通用命名约定 (UNC) 共享的文件夹中。 复制还允许指定用文件传输协议 (FTP) 共享取代 UNC 共享。 若要使用 FTP，必须先配置 FTP 服务器，然后配置要使用 FTP 的发布和一个或多个订阅。 有关如何配置 FTP 服务器的详细信息，请参阅 Internet 信息服务 (IIS) 文档。 如果为发布指定了 FTP 信息，则对此发布的订阅将默认使用 FTP。 仅当运行 IIS 的计算机通过防火墙与分发服务器相隔离时，才会使用 FTP 进行 Web 同步。 在这种情况下，FTP 可用于传输来自分发服务器和运行 IIS 的计算机的快照。 （快照始终使用 HTTPS 传输到订阅服务器。）  
@@ -35,7 +35,7 @@ ms.locfileid: "71710989"
   
 -   快照代理必须对指定的目录具有写权限，而分发代理或合并代理必须具有读权限。 如果使用请求订阅，就必须指定一个共享目录作为通用命名约定 (UNC) 路径，例如 \\\ftpserver\home\snapshots。 有关详细信息，请参阅[保护快照文件夹](../../../relational-databases/replication/security/secure-the-snapshot-folder.md)。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
   
 -   若要通过文件传输协议 (FTP) 传输快照文件，必须先配置一个 FTP 服务器。 有关详细信息，请参阅 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Internet Information Services (IIS) 文档。  
   
@@ -47,19 +47,19 @@ ms.locfileid: "71710989"
  如果可能，请在运行时提示用户输入其凭据。 如果将凭据存储在脚本文件中，则必须确保此文件的安全。  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 配置 FTP 服务器后，请在“发布属性 \<发布>”对话框中为该服务器指定目录和安全信息。 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+ 配置 FTP 服务器后，请在“发布属性 \<Publication>”对话框中为该服务器指定目录和安全信息。 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 #### <a name="to-specify-ftp-information"></a>指定 FTP 信息  
   
-1.  在“发布属性 - \<发布>”对话框中，从以下任一页面选择“允许订阅服务器下载使用 FTP 的快照文件”。  
+1.  在“发布属性 - \<Publication>”对话框中，从以下任一页面选择“允许订阅服务器下载使用 FTP 的快照文件”：   
   
-    -   “FTP 快照”页面，用于运行   之前版本的发布服务器的快照发布、事务发布以及合并发布[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]。  
+    -   “FTP 快照”页面，用于运行 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前版本的发布服务器的快照发布、事务发布以及合并发布。  
   
     -   **“FTP 快照和 Internet”** 页，用于运行 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更高版本的发布服务器的合并发布。  
   
 2.  为 **“FTP 服务器名称”** 、 **“端口号”** 、 **“从 FTP 根文件夹开始的路径”** 、 **“登录名”** 和 **“密码”** 指定值。  
   
-     例如，如果 FTP 服务器的根目录是 \\\ftpserver\home，但你想将快照存储在 \\\ftpserver\home\snapshots，请为“从 FTP 根文件夹开始的路径”属性指定 \snapshots\ftp（复制在创建快照文件时将“ftp”追加到快照文件夹路径）。   
+     例如，如果 FTP 服务器的根目录是 \\\ftpserver\home，但你想将快照存储在 \\\ftpserver\home\snapshots，请为“从 FTP 根文件夹开始的路径”属性指定 \snapshots\ftp（复制在创建快照文件时将“ftp”追加到快照文件夹路径）。  
   
 3.  指定快照代理应将快照文件写入在步骤 2 中指定的目录。 例如，若要让快照代理将快照文件写入 \\\ftpserver\home\snapshots\ftp，必须在下面两个位置之一指定路径 \\\ftpserver\home\snapshots：  
   
@@ -82,7 +82,7 @@ ms.locfileid: "71710989"
   
     -   （可选）`@ftp_port` - FTP 服务器所使用的端口。  
   
-    -   （可选）`@ftp_subdirectory` - 分配给 FTP 登录名的默认 FTP 目录的子目录。 例如，如果 FTP 服务器根目录是 \\\ftpserver\home 并要将快照存储在 \\\ftpserver\home\snapshots 下，则将 \snapshots\ftp  指定给 `@ftp_subdirectory`（复制在创建快照文件时将“ftp”追加到快照文件夹路径中）。  
+    -   （可选）`@ftp_subdirectory` - 分配给 FTP 登录名的默认 FTP 目录的子目录。 例如，如果 FTP 服务器根目录是 \\\ftpserver\home 并要将快照存储在 \\\ftpserver\home\snapshots 下，则将 \snapshots\ftp 指定给 `@ftp_subdirectory`（复制在创建快照文件时将“ftp”追加到快照文件夹路径中）。  
   
     -   （可选）`@ftp_login` - 连接到 FTP 服务器时使用的登录帐户。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "71710989"
   
     -   （可选）`@ftp_port` - FTP 服务器所使用的端口。  
   
-    -   （可选）`@ftp_subdirectory` - 分配给 FTP 登录名的默认 FTP 目录的子目录。 例如，如果 FTP 服务器根目录是 \\\ftpserver\home 并要将快照存储在 \\\ftpserver\home\snapshots 下，则将 \snapshots\ftp  指定给 `@ftp_subdirectory`（复制在创建快照文件时将“ftp”追加到快照文件夹路径中）。  
+    -   （可选）`@ftp_subdirectory` - 分配给 FTP 登录名的默认 FTP 目录的子目录。 例如，如果 FTP 服务器根目录是 \\\ftpserver\home 并要将快照存储在 \\\ftpserver\home\snapshots 下，则将 \snapshots\ftp 指定给 `@ftp_subdirectory`（复制在创建快照文件时将“ftp”追加到快照文件夹路径中）。  
   
     -   （可选）`@ftp_login` - 连接到 FTP 服务器时使用的登录帐户。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "71710989"
   
 1.  在订阅服务器上，对订阅数据库执行 [sp_addpullsubscription](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)。 指定 `@publisher` 和 `@publication`。  
   
-    -   在订阅服务器上，对订阅数据库执行 [sp_addpullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)。 指定 `@publisher`、`@publisher_db`、`@publication`，将用于运行订阅服务器上的分发代理的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 凭据指定给 `@job_login` 和 `@job_password`，并将值 true  指定给 `@use_ftp`。  
+    -   在订阅服务器上，对订阅数据库执行 [sp_addpullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)。 指定 `@publisher`、`@publisher_db`、`@publication`，将用于运行订阅服务器上的分发代理的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 凭据指定给 `@job_login` 和 `@job_password`，并将值 true 指定给 `@use_ftp`。  
   
 2.  在发布服务器上，对发布数据库执行 [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 以注册请求订阅。 有关详细信息，请参阅 [创建请求订阅](../../../relational-databases/replication/create-a-pull-subscription.md)。  
   

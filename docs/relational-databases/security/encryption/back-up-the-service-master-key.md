@@ -1,5 +1,6 @@
 ---
 title: 备份服务主密钥 | Microsoft Docs
+description: 了解如何使用 Transact-SQL 在 SQL Server 中备份服务主密钥。 服务主密钥是加密层次结构的根。
 ms.custom: ''
 ms.date: 01/02/2019
 ms.prod: sql
@@ -11,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: f60b917c-6408-48be-b911-f93b05796904
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 1fa730e1143516df2fe5f14c04afcbb9292ac67f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c333346b0c8ef728966f8e0b6d42a5be53d1b187
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957479"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895916"
 ---
 # <a name="back-up-the-service-master-key"></a>备份服务主密钥
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   本文介绍如何使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中备份服务主密钥。 服务主密钥是加密层次结构的根。 应当对服务主密钥进行备份，并将其存储在另外一个安全的位置。 创建该备份应该是首先在服务器上执行的管理操作之一。  
 
 ## <a name="before-you-begin"></a>开始之前  
@@ -51,7 +52,7 @@ ms.locfileid: "74957479"
   
 6. 在标准菜单栏上，单击 **“新建查询”** 。  
   
-7. 将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+7. 将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```sql
     -- Creates a backup of the service master key.

@@ -28,15 +28,15 @@ helpviewer_keywords:
 ms.assetid: e311c425-742a-4b0d-b847-8b974bf66d53
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2ae87d5c125ae3eac01013843c9fe2db183b9c1c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 832b8a0c0d66a1e9754366e7735ebbac84b3ac7b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68055958"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895550"
 ---
 # <a name="alter-xml-schema-collection-transact-sql"></a>ALTER XML SCHEMA COLLECTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   向现有 XML 架构集合中添加新架构组件。  
   
@@ -50,13 +50,13 @@ ALTER XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier ADD 'Schema Com
 ```  
   
 ## <a name="arguments"></a>参数  
- relational_schema   
+ relational_schema  
  标识关系架构的名称。 如果未指定，则假定为默认的关系架构。  
   
-  sql_identifier  
+ sql_identifier  
  是 XML 架构集合的 SQL 标识符。  
   
-    “架构组件”  
+ “架构组件”  
  要插入的架构组件。  
   
 ## <a name="remarks"></a>备注  
@@ -86,7 +86,7 @@ ALTER XML SCHEMA COLLECTION MyColl ADD '
   
  若要删除集合，请使用 [DROP XML SCHEMA COLLECTION (Transact SQL)](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md)。  
   
- 如果架构集合已经包含宽松验证通配符或  xs:anyType 类型的元素，则向架构集合中添加新的全局元素、类型或属性声明将导致重新验证该架构集合所约束的所有存储的数据。  
+ 如果架构集合已经包含宽松验证通配符或 xs:anyType 类型的元素，则向架构集合中添加新的全局元素、类型或属性声明将导致重新验证该架构集合所约束的所有存储的数据。  
   
 ## <a name="permissions"></a>权限  
  更改 XML SCHEMA COLLECTION 需要对集合具有 ALTER 权限。  
@@ -174,13 +174,13 @@ SET @MySchemaCollection  = N' copy the schema collection here';
 CREATE XML SCHEMA COLLECTION AS @MySchemaCollection;   
 ```  
   
- 示例中的变量为 `nvarchar(max)` 类型。 该变量也可以为 xml  数据类型，在这种情况下，它将隐式转换为字符串。  
+ 示例中的变量为 `nvarchar(max)` 类型。 该变量也可以为 xml 数据类型，在这种情况下，它将隐式转换为字符串。  
   
  有关详细信息，请参阅 [查看存储 XML 架构集合](../../relational-databases/xml/view-a-stored-xml-schema-collection.md)。  
   
- 可在  xml 类型列中存储架构集合。 在这种情况下，若要创建 XML 架构集合，请执行以下步骤：  
+ 可在 xml 类型列中存储架构集合。 在这种情况下，若要创建 XML 架构集合，请执行以下步骤：  
   
-1.  使用 SELECT 语句从列中检索该架构集合，然后将它分配给一个类型为 xml 或 varchar 的变量   。  
+1.  使用 SELECT 语句从列中检索该架构集合，然后将它分配给一个类型为 xml 或 varchar 的变量 。  
   
 2.  在 CREATE XML SCHEMA COLLECTION 语句中指定变量名称。  
   
@@ -242,7 +242,7 @@ GO
 ```  
   
 ### <a name="c-importing-a-schema-that-does-not-specify-a-target-namespace"></a>C. 导入未指定目标命名空间的架构  
- 如果向集合中导入未包含 targetNamespace 属性的架构，该架构的组件将与空字符串目标命名空间相关联，如下面的示例所示  。 注意，如果在集合中导入的一个或多个架构之间没有任何关联，将导致多个架构组件（可能不相关）都与默认的空字符串命名空间关联。  
+ 如果向集合中导入未包含 targetNamespace 属性的架构，该架构的组件将与空字符串目标命名空间相关联，如下面的示例所示。 注意，如果在集合中导入的一个或多个架构之间没有任何关联，将导致多个架构组件（可能不相关）都与默认的空字符串命名空间关联。  
   
 ```  
 -- Create a collection that contains a schema with no target namespace.  

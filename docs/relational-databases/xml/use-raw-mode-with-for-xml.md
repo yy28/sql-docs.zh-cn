@@ -1,5 +1,6 @@
 ---
 title: 将 RAW 模式与 FOR XML 一起使用 | Microsoft Docs
+description: 了解如何将 RAW 模式与 SQL 查询中的 FOR XML 子句一起使用以转换生成的 XML 数据。
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,16 +19,16 @@ ms.assetid: 02c1bc0b-760c-4589-9ab1-6927c6d9c734
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 1c82fc52acaf8d3bbd351463803ae682ccfebc1b
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: eaaa138461a2e3c96acf1b475de860ac0deeb1c4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664955"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784665"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>将 RAW 模式与 FOR XML 一起使用
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 RAW 模式可将查询结果集中的每一行转换为带有通用标识符 \<row> 或可能提供元素名称的 XML 元素。 默认情况下，非 NULL 行集中的每列值都将映射到 \<row> 元素的一个属性。 如果将 ELEMENTS 指令添加到 FOR XML 子句，则每列值都将映射到 \<row> 元素的子元素。 指定 ELEMENTS 指令之后，您还可以选择性地指定 XSINIL 选项以将结果集中的 NULL 列值映射到具有 `xsi:nil="true"` 属性的元素。
   
@@ -46,7 +47,7 @@ RAW 模式可将查询结果集中的每一行转换为带有通用标识符 \<r
   
 -   [示例：检索二进制数据](../../relational-databases/xml/example-retrieving-binary-data.md)  
   
--   [示例：重命名 <row> 元素](../../relational-databases/xml/example-renaming-the-row-element.md)  
+-   [示例：重命名 &#60;row&#62; 元素](../../relational-databases/xml/example-renaming-the-row-element.md)  
   
 -   [示例：为 FOR XML 生成的 XML 指定根元素](../../relational-databases/xml/example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md)  
   

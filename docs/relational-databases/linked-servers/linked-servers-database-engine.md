@@ -1,6 +1,6 @@
 ---
 title: 链接服务器（数据库引擎）| Microsoft Docs
-ms.date: 10/14/2019
+ms.date: 06/16/2020
 ms.prod: sql
 ms.technology: ''
 ms.prod_service: database-engine
@@ -19,21 +19,21 @@ ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: f63e94b8a9ca93d6a1403e17d4a8fa7205938066
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 070dbf1c8f79a0f89364e9d0705051d9ee076627
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165340"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734954"
 ---
 # <a name="linked-servers-database-engine"></a>链接服务器（数据库引擎）
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  通过链接服务器，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 和 [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index)可从远程数据源中读取数据，并针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之外的 OLE DB 数据源等远程数据库服务器执行命令。 通常，配置链接服务器是为了支持 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 实例或诸如 Oracle 等其他数据库产品上执行包含表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]语句。 许多类型的 OLE DB 数据源都可配置为链接服务器，包括 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access、Excel 和 Azure CosmosDB。
+  通过链接服务器，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 和 [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] 可从远程数据源中读取数据，并针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之外的 OLE DB 数据源等远程数据库服务器执行命令。 通常，配置链接服务器是为了支持 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 实例或诸如 Oracle 等其他数据库产品上执行包含表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]语句。 许多类型的 OLE DB 数据源都可配置为链接服务器，包括 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access、Excel 和 Azure CosmosDB。
 
 > [!NOTE]
-> [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 和 Azure SQL 数据库托管实例中提供链接服务器。 Azure SQL 数据库单一实例和弹性池中未启用链接服务器。 这些是部分[可在此处查找到的托管实例中的约束](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#linked-servers)。 
+> 链接服务器在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 和 [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] 中可用。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 单一实例和弹性池中未启用链接服务器。 这些是部分[可在此处查找到的托管实例中的约束](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#linked-servers)。 
 
 ## <a name="when-to-use-linked-servers"></a>何时使用链接服务器？
 
@@ -56,10 +56,10 @@ ms.locfileid: "74165340"
   
 “OLE DB 访问接口”  是管理特定数据源并与其交互的 DLL。 “OLE DB 数据源”  标识可通过 OLE DB 访问的特定数据库。 虽然通过链接服务器定义查询的数据源通常是数据库，但 OLE DB 访问接口对各种文件和文件格式仍可用。 这些文件和文件格式包括文本文件、电子表格数据和全文内容搜索的结果。  
   
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序 (PROGID：SQLNCLI11) 是适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的官方 OLE DB 提供程序。  
+从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始，[Microsoft OLE DB Driver for SQL Server (MSOLEDBSQL)](../../connect/oledb/oledb-driver-for-sql-server.md) (PROGID:MSOLEDBSQL) 是默认的 OLE DB 提供程序。 在早期版本中，[SQL Server Native Client OLE DB 提供程序 (SQLNCLI)](../../relational-databases/native-client/sql-server-native-client.md) (PROGID:SQLNCLI11) 是默认的 OLE DB 提供程序。
   
 > [!NOTE]  
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分布式查询旨在与任何实现所需 OLE DB 接口的 OLE DB 访问接口一起使用。 但是， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仅针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口和特定访问接口进行过测试。  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分布式查询旨在与任何实现所需 OLE DB 接口的 OLE DB 访问接口一起使用。 但是，已针对默认 OLE DB 提供程序测试了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 ## <a name="linked-server-details"></a>链接服务器详细信息  
  下图显示了链接服务器配置的基础。  
@@ -75,7 +75,7 @@ ms.locfileid: "74165340"
 > 使用 OLE DB 提供程序时，运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的帐户必须具有对安装提供程序的目录及其所有子目录的读取权限和执行权限。 这包括 Microsoft 发布的提供程序和任何第三方提供程序。
 
 > [!NOTE]
-> 使用完全委派时，链接服务器支持 Active Directory 传递身份验证。 自 SQL Server 2017 CU17 起，还支持使用约束委派的传递身份验证；但是，不支持[基于资源的约束委派](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview)。
+> 使用完全委派时，链接服务器支持 Active Directory 传递身份验证。 自 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU17 起，还支持使用约束委派的传递身份验证；但是不支持[基于资源的约束委派](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview)。
 
 ## <a name="managing-providers"></a>管理访问接口  
 有一组选项可以控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如何加载和使用注册表中指定的 OLE DB 访问接口。  
@@ -91,7 +91,7 @@ ms.locfileid: "74165340"
   
 -   通过运行 **sp_dropserver**删除链接服务器定义。 还可以使用此存储过程删除远程服务器。  
   
-还可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]来定义链接服务器。 在对象资源管理器中，右键单击“服务器对象”  ，选择“新建”  ，再选择“链接服务器”  。 通过右键单击链接服务器名称并选择“删除”  ，可以删除链接服务器定义。  
+还可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]来定义链接服务器。 在对象资源管理器中，右键单击“服务器对象”，选择“新建”，再选择“链接服务器”。 通过右键单击链接服务器名称并选择“删除”，可以删除链接服务器定义。  
   
  对链接服务器执行分布式查询时，请对每个要查询的数据源指定由四个部分组成的完全限定的表名。 这个四部分名称格式应为 _linked\_server\_name.catalog_ **.** _schema_ **.** _object\_name_。  
   
@@ -99,17 +99,12 @@ ms.locfileid: "74165340"
 > 可以定义链接服务器指回（环回）到在其上定义它们的服务器。 当在单服务器网络中测试使用分布式查询的应用程序时，环回服务器是很有用的。 环回链接服务器专用于测试，许多操作（如分布式事务）不支持该服务器。  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [创建链接服务器（SQL Server 数据库引擎）](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md)  
-  
- [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)  
-  
- [sp_addlinkedsrvlogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)  
-  
- [sp_dropserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)  
+ [创建链接服务器（SQL Server 数据库引擎）](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md)    
+ [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)    
+ [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)    
+ [sp_dropserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)    
   
 ## <a name="related-content"></a>相关内容  
- [sys.servers (Transact-SQL)](../../relational-databases/system-catalog-views/sys-servers-transact-sql.md)  
-  
+ [sys.servers (Transact-SQL)](../../relational-databases/system-catalog-views/sys-servers-transact-sql.md)    
  [sp_linkedservers (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)  
-  
-  
+

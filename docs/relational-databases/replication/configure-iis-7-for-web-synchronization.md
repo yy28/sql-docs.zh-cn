@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 908c5d532386f83078c0dbb7976462f2d282533e
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 2f0cc59a51573931c742e4a6303b72e103e747d6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529117"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774011"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>配置 IIS 7 以实现 Web 同步
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   本主题针对如何将 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) 版本 7 及更高版本用于合并复制的 Web 同步，介绍手动配置 IIS 的完整过程。 
   
@@ -50,13 +50,13 @@ ms.locfileid: "81529117"
   
 1.  在 IIS 计算机上安装 SQL Server 复制。
 
-2. 在正在运行 IIS 的计算机上为 replisapi.dll 创建一个新的文件目录。 可在任意所需位置创建该目录，但建议将该目录创建在 \<*驱动器*>:\Inetpub 目录下。 例如，可以创建目录 \<*驱动器*>:\Inetpub\SQLReplication\\。  
+2. 在正在运行 IIS 的计算机上为 replisapi.dll 创建一个新的文件目录。 可在任意位置创建该目录，但建议将该目录创建在 \<*drive*>:\Inetpub 目录下。 例如，可以创建目录 \<*drive*>:\Inetpub\SQLReplication\\。  
   
 3.  将 replisapi.dll 从目录 [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]com\ 复制到在步骤 1 中创建的文件目录。  
   
 4.  注册 replisapi.dll：  
   
-    1.  单击 **“启动”** ，再单击 **“运行”** 。 在“打开”  框中，输入 **cmd**，然后单击“确定”  。  
+    1.  单击 **“启动”** ，再单击 **“运行”** 。 在“打开”  框中，输入 **cmd**，然后单击“确定” 。  
   
     2.  在步骤 1 所创建的目录中，执行以下命令：  
   
@@ -68,9 +68,9 @@ ms.locfileid: "81529117"
   
     1.  在 **“Internet 信息服务(IIS)管理器”** 的 **“连接”** 窗格中，右键单击 **“默认网站”** ，然后选择 **“添加虚拟目录”** 。  
   
-    2.  对于“别名”  ，请输入 **SQLReplication**。  
+    2.  对于“别名” ，请输入 **SQLReplication**。  
   
-    3.  对于“物理路径”，输入 **\<驱动器>:\Inetpub\SQLReplication\\** ，然后单击“确定”。    
+    3.  对于“物理路径”，输入 \<drive>:\Inetpub\SQLReplication\\，然后单击“确定”。   
   
 7.  配置 IIS 以允许执行 replisapi.dll。  
   
@@ -84,9 +84,9 @@ ms.locfileid: "81529117"
   
     5.  从 **“模块”** 下拉列表中，选择 **“IsapiModule”** 。  
   
-    6.  对于“可执行文件”，输入 **\<驱动器>:\Inetpub\SQLReplication\replisapi.dll**。   
+    6.  对于“可执行文件”，输入 \<drive>:\Inetpub\SQLReplication\replisapi.dll。  
   
-    7.  对于“名称”  ，请输入 **Replisapi**。  
+    7.  对于“名称” ，请输入 **Replisapi**。  
   
     8.  依次单击 **“请求限制”** 按钮、 **“访问”** 选项卡和 **“执行”** 。  
   
@@ -157,7 +157,7 @@ ms.locfileid: "81529117"
   
 1.  在 **在ternet 在formation Services (IIS) Manager**中，单击 **“默认网站”.**  
   
-2.  从“操作”窗格中，单击“浏览 \*:443(https)”。    
+2.  从“操作”窗格中，单击“浏览 \*:443(https)”。   
   
 3.  Internet Explorer 随即打开并显示一条消息“此网站的安全证书有问题。”。 此警告向您表明关联的证书不是由认可的 CA 颁发的，因此可能不值得信任。 这个警告在意料之中，只需单击 **“继续浏览此网站(不推荐)”** 。  
   
@@ -210,7 +210,7 @@ ms.locfileid: "81529117"
   
     5.  确保 **“从此位置”** 显示的是本地计算机（而不是域）的名称。 如果此字段不显示本地计算机名称，请单击 **“位置”** 。 在 **“位置”** 对话框中，选择本地计算机，然后单击 **“确定”** 。  
   
-    6.  在“选择用户”  对话框和“IIS_IUSRS 属性”  对话框中，单击“确定”  。  
+    6.  在“选择用户”  对话框和“IIS_IUSRS 属性”  对话框中，单击“确定”。  
   
 3.  对包含 replisapi.dll 的文件夹授予最低帐户权限：  
   
@@ -218,11 +218,11 @@ ms.locfileid: "81529117"
   
     2.  在 **“安全性”** 选项卡上，单击 **“编辑”** 。  
   
-    3.  在“\<文件夹名> 的权限”对话框中，单击“添加”以添加在步骤 1 中创建的帐户。    
+    3.  在“\<foldername> 的权限”对话框中，单击“添加”以添加在步骤 1 中创建的帐户。   
   
     4.  确保 **“从此位置”** 显示的是本地计算机（而不是域）的名称。 如果此字段不显示本地计算机名称，请单击 **“位置”** 。 在 **“位置”** 对话框中，选择本地计算机，然后单击 **“确定”** 。  
   
-    5.  验证是否仅向该帐户授予了“读取”、“读取和执行”和“列出文件夹内容”权限。     
+    5.  验证是否仅向该帐户授予了“读取”、“读取和执行”和“列出文件夹内容”权限。    
   
     6.  选择所有不需要访问该目录的用户或组，然后依次单击 **“删除”** 和 **“确定”** 。  
   
@@ -251,7 +251,7 @@ ms.locfileid: "81529117"
   
     6.  在 **“用户名”** 和 **“密码”** 字段中，输入在步骤 1 中创建的帐户和密码，然后单击 **“确定”** 。  
   
-    7.  单击“确定”  关闭“应用程序池标识”  对话框，然后再次单击  “确定”关闭  “应用程序池默认设置”对话框。  
+    7.  单击“确定”  关闭“应用程序池标识”  对话框，然后再次单击  “确定”关闭 “应用程序池默认设置”对话框。  
   
 6.  将应用程序池与复制网站关联：  
   
@@ -307,7 +307,7 @@ ms.locfileid: "81529117"
     > [!NOTE]  
     >  为用户安装证书。 必须为要与 IIS 同步的每个用户执行该过程。  
   
-4.  在“连接到 \<服务器名>”对话框框中，指定合并代理将用于连接到 IIS 的登录名和密码。  在新建订阅向导中也要指定这些凭据。  
+4.  在“连接到 \<ServerName>”对话框框中，指定合并代理将用于连接到 IIS 的登录名和密码。 在新建订阅向导中也要指定这些凭据。  
   
 5.  在名为 **“SQL Websync 诊断信息”** 的 Internet Explorer 窗口中，验证该页中每个 **“状态”** 列的值是否都为 **SUCCESS**。  
   

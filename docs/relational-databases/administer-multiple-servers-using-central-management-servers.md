@@ -1,5 +1,6 @@
 ---
 title: 使用中央管理服务器管理多台服务器
+description: 了解如何在 SQL Server 中通过指定中央管理服务器并创建服务器组来管理多台服务器。
 ms.date: 08/12/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,15 +18,15 @@ ms.assetid: 427911a7-57d4-4542-8846-47c3267a5d9c
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: a2e2da55bd04ba29cf1c6ef81757488f8d50fd24
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fc7868735a05a81afe324755d880cc9e63353c7d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74055620"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754570"
 ---
 # <a name="administer-multiple-servers-using-central-management-servers"></a>使用中央管理服务器管理多台服务器
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
   您可以通过指定中央管理服务器并创建服务器组来管理多台服务器。  
   
 ## <a name="what-is-a-central-management-server-and-server-groups"></a>什么是中央管理服务器和服务器组？  

@@ -1,5 +1,6 @@
 ---
 title: 设置警告阈值 | Microsoft Docs
+description: 了解如何使用“设置警告阈值”对话框为 SQL Server 中的选定镜像数据库启用和配置警告阈值。
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: 17f93147-e7d9-4092-b4c2-c11b38051171
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 13b4922d1fba2d41878217cadc8d47d45928b4ef
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1d94a2c804f67657581f5ead059e6951f410e05f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68025216"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789643"
 ---
 # <a name="set-warning-thresholds"></a>设置警告阈值
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   使用该对话框可为在 **“数据库镜像监视器”** 对话框的导航树中选定的数据库启用和配置一个或多个警告阈值。  
   
  该对话框尝试连接到两个服务器实例上。 将异步建立这两个连接。 对话框显示每个伙伴的连接状态。 如果伙伴没有连接，则可单击 **“连接”** 。  
@@ -35,19 +36,19 @@ ms.locfileid: "68025216"
   
  该字段还指示当前监视器是否连接至该服务器实例。 可能的连接状态为：  
   
--   未连接到 server_instance_name    
+-   未连接到 server_instance_name  
   
--   正尝试连接到 server_instance_name    
+-   正尝试连接到 server_instance_name  
   
--   已连接到 server_instance_name    
+-   已连接到 server_instance_name  
   
     > [!NOTE]  
-    >  如果你不是 sysadmin 固定服务器角色的成员，状态将为“已连接到 server_instance_name (受限权限)”     。  
+    >  如果你不是 sysadmin 固定服务器角色的成员，状态将为“已连接到 server_instance_name (受限权限)” 。  
   
  每个伙伴服务器实例的名称将在单独的 *“服务器实例及其连接状态”* 字段中显示。 当监视器开始运行时，顶部字段会列出主体服务器。  
   
  **连接**/**取消**  
- “连接/取消”按钮和每个*服务器实例及其连接状态*字段相关联。 按钮状态取决于连接状态：  
+ “连接/取消” 按钮和每个*服务器实例及其连接状态*字段相关联。 按钮状态取决于连接状态：  
   
 -   如果未与服务器实例建立连接，则按钮文本为 **“连接”** 。 单击可连接到服务器实例。  
   
@@ -73,10 +74,10 @@ ms.locfileid: "68025216"
 |**如果最早的未发送事务的保留时间超出了阈值，则发出警告**|该阈值指示事务没有从发送队列发送到镜像服务器实例中的分钟数。 该值有助于测量数据丢失的可能性（以时间计）。|  
 |**如果镜像提交开销超过了阈值则发出警告**|该阈值指示每个事务的延迟的毫秒数（只适用于高安全模式）。 此延迟是主体服务器实例等待镜像服务器实例将事务日志记录写入重做队列时，所发生的开销量。|  
   
- 已在“**server instance>”处启用** *\<*   
+ 已在“\<server instance>”中启用  
  空白复选框指示当前在服务器实例中禁用该警告。 若要启用警告，请单击其复选框。  
   
- “**server instance>”处的阈值** *\<*   
+ “\<server instance>”的阈值  
  启用警告时，可在该列的左边设置阈值。 更新状态表时，如果达到指定阈值，则会触发事件。 如果在配置一个值后禁用阈值，该值将保留在字段中。如果重新启用警告，将继续使用该值。  
   
  未启用警告时，该字段将处于不活动状态。  

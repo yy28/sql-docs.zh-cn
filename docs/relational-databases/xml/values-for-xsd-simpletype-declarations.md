@@ -1,5 +1,6 @@
 ---
 title: '&lt;xsd:simpleType&gt; 声明的值 | Microsoft Docs'
+description: 查看适用于 <xsd:simpleType> 声明的所有已识别值的限制表。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 557b972d-3af9-40bf-8382-72b05c9de1c1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2bd50eb728047b911f25ea644d36adbd88f5097a
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 2738ba3387ac167eeadc83071dcce1f4a59304bb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664962"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775519"
 ---
 # <a name="values-for-ltxsdsimpletypegt-declarations"></a>&lt;xsd:simpleType&gt; 声明的值
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   下表根据所有已知的 XSD 简单类型枚举概述了已应用的限制。  
   
- 此外，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持在 **\<xsd:simpleType>** 声明中使用 NaN 值。 服务器拒绝包含 NaN 值的架构。  
+ 此外，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持在 \<xsd:simpleType> 声明中使用 NaN 值。 服务器拒绝包含 NaN 值的架构。  
   
 |简单类型|限制|  
 |-----------------|----------------|  

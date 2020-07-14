@@ -26,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: 2616d800-4853-4cf1-af77-d32d68d8c2ef
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 51707d97a738df13b7aae3c9e7208af76d440492
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a6c854560982ceddf7d6237d77ba81562e97fc9a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68141057"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85705940"
 ---
 # <a name="select-clause-transact-sql"></a>SELECT 子句 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   指定查询返回的列。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "68141057"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
   
 SELECT [ ALL | DISTINCT ]  
 [ TOP ( expression ) [ PERCENT ] [ WITH TIES ] ]   
@@ -70,10 +70,10 @@ SELECT [ ALL | DISTINCT ]
  DISTINCT  
  指定在结果集中只能包含唯一行。 对于 DISTINCT 关键字来说，Null 值是相等的。  
   
- TOP (expression ) [ PERCENT ] [ WITH TIES ]   
+ TOP (expression ) [ PERCENT ] [ WITH TIES ]  
  指示只能从查询结果集返回指定的第一组行或指定的百分比数目的行。 *expression* 可以是行数或行的百分比。  
   
- 为了能够向后兼容，支持在 SELECT 语句中使用不带括号的 TOP expression，但推荐不这样做  。 有关详细信息，请参阅 [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md)。  
+ 为了能够向后兼容，支持在 SELECT 语句中使用不带括号的 TOP expression，但推荐不这样做。 有关详细信息，请参阅 [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md)。  
   
 \< select_list > 要为结果集选择的列。 选择列表是以逗号分隔的一系列表达式。 可在选择列表中指定的表达式的最大数目是 4096。  
   
@@ -83,8 +83,8 @@ SELECT [ ALL | DISTINCT ]
  table_name | view_name | table_alias.*     
  将 \* 的作用域限制为指定的表或视图。  
   
- column_name   
- 要返回的列名。 请限定 column_name 以避免引用不明确，例如，当 FROM 子句中的两个表包含同名的列时会出现这种情况  。 例如，[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中的 SalesOrderHeader 和 SalesOrderDetail 表中均有名为 ModifiedDate 的列。 如果将这两个表加入查询，则可以在选择列表中指定 SalesOrderDetail 项的修改日期，即 SalesOrderDetail.ModifiedDat。  
+ column_name  
+ 要返回的列名。 请限定 column_name 以避免引用不明确，例如，当 FROM 子句中的两个表包含同名的列时会出现这种情况。 例如，[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中的 SalesOrderHeader 和 SalesOrderDetail 表中均有名为 ModifiedDate 的列。 如果将这两个表加入查询，则可以在选择列表中指定 SalesOrderDetail 项的修改日期，即 SalesOrderDetail.ModifiedDat。  
   
  *expression*  
  常量、函数以及由一个或多个运算符连接的列名、常量和函数的任意组合，或者是子查询。  
@@ -99,7 +99,7 @@ SELECT [ ALL | DISTINCT ]
   
  如果在 FROM 子句中有多个表具有 ROWGUIDCOL 属性，则必须用特定的表名限定 $ROWGUID，如 T1.$ROWGUID。  
   
- udt_column_name   
+ udt_column_name  
  要返回的公共语言运行时 (CLR) 用户定义类型列的名称。  
   
 > [!NOTE]  
@@ -108,14 +108,14 @@ SELECT [ ALL | DISTINCT ]
  { . | :: }  
  指定 CLR 用户定义类型的方法、属性或字段。 使用 . 用于实例（非静态）方法、属性或字段。 将 :: 用于静态方法、属性或字段。 若要调用 CLR 用户定义类型的方法、属性或字段，必须对类型具有 EXECUTE 权限。  
   
- property_name   
- udt_column_name 的公共属性  。  
+ property_name  
+ udt_column_name 的公共属性。  
   
- field_name   
- udt_column_name 的公共数据成员  。  
+ field_name  
+ udt_column_name 的公共数据成员。  
   
- method_name   
- 带一个或多个参数的 udt_column_name 的公共方法  。 method_name 不能是赋值函数方法  。  
+ method_name  
+ 带一个或多个参数的 udt_column_name 的公共方法。 method_name 不能是赋值函数方法。  
   
  以下示例通过调用名为 `Location` 类型的方法，从 `point` 表中选择 `Cities` 列的值（定义为 `Distance` 类型）：  
   
@@ -131,7 +131,7 @@ SELECT Location.Distance (@p)
 FROM Cities;  
 ```  
   
- column_ alias   
+ column_ alias  
  查询结果集内替换列名的可选名。 例如，可以为名为 quantity 的列指定别名，如 Quantity、Quantity to Date 或 Qty。  
   
  别名还可用于为表达式结果指定名称，例如：  
@@ -143,10 +143,10 @@ FROM Cities;
  FROM Sales.SalesOrderDetail;
  ```  
   
- column_alias 可以用于 ORDER BY 子句  。 但不能用于 WHERE、GROUP BY 或 HAVING 子句中。 如果查询表达式是 DECLARE CURSOR 语句的一部分，则不能在 FOR UPDATE 子句中使用 column_alias  。  
+ column_alias 可以用于 ORDER BY 子句。 但不能用于 WHERE、GROUP BY 或 HAVING 子句中。 如果查询表达式是 DECLARE CURSOR 语句的一部分，则不能在 FOR UPDATE 子句中使用 column_alias。  
   
 ## <a name="remarks"></a>备注  
- 选择列表中包含的 text 或 ntext 列返回的数据长度被设置为下列值中的最小值：text 列的实际大小、默认 TEXTSIZE 会话设置或硬编码应用程序限制    。 若要更改会话的返回文本长度，请使用 SET 语句。 默认情况下，用 SELECT 语句返回的文本数据的长度限制是 4,000 字节。  
+ 选择列表中包含的 text 或 ntext 列返回的数据长度被设置为下列值中的最小值：text 列的实际大小、默认 TEXTSIZE 会话设置或硬编码应用程序限制  。 若要更改会话的返回文本长度，请使用 SET 语句。 默认情况下，用 SELECT 语句返回的文本数据的长度限制是 4,000 字节。  
   
  如果发生下列两种情况中的一种，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 将引发编号为 511 的异常错误并回滚当前运行的语句：  
   

@@ -17,15 +17,15 @@ ms.assetid: 37574aac-181d-4aca-a2cc-8abff64237dc
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 64ad4f4ac71b88966f3ff9a963332619d7663917
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: abd315f75626b337c2183f34121aeb7660e0ed66
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72909291"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786878"
 ---
 # <a name="get-information-about-dml-triggers"></a>获取有关 DML 触发器的信息
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中获取有关 DML 触发器的信息。 此信息可包含针对某个表的触发器的类型、触发器的名称、其所有者以及创建或修改日期。 如果在创建触发器时未加密，您可获取该触发器的定义。 通过该定义，可以帮助您了解该触发器如何影响对其定义该触发器的表。 此外，您可以找出特定触发器使用的对象。 通过该信息，可在数据库中影响触发器的对象发生更改或删除它们时确定这些对象。  
   
  **本主题内容**  
@@ -62,7 +62,7 @@ ms.locfileid: "72909291"
   
 2.  展开您所需的数据库，再展开 **“表”** ，然后展开包含要查看其定义的触发器的表。  
   
-3.  展开“触发器”  ，右键单击需要的触发器，然后单击“修改”  。 将在查询窗口中显示 DML 触发器的定义。  
+3.  展开“触发器”，右键单击需要的触发器，然后单击“修改”。 将在查询窗口中显示 DML 触发器的定义。  
 
 #### <a name="to-view-the-dependencies-of-a-dml-trigger"></a>查看 DML 触发器的依赖关系  
   
@@ -70,11 +70,11 @@ ms.locfileid: "72909291"
   
 2.  展开您所需的数据库，再展开 **“表”** ，然后展开包含要查看的触发器及其依赖关系的表。  
   
-3.  展开“触发器”  ，右键单击需要的触发器，然后单击“查看依赖关系”  。  
+3.  展开“触发器”，右键单击需要的触发器，然后单击“查看依赖关系”。  
   
-4.  在“对象依赖关系”窗口中，若要查看依赖于 DML 触发器的对象，请选择“依赖于 \<DML 触发器名称> 的对象”。 将在 **“依赖关系”** 区域显示这些对象。  
+4.  在“对象依赖关系”窗口中，若要查看依赖于 DML 触发器的对象，请选择“依赖于 \<DML trigger name> 的对象”。 将在 **“依赖关系”** 区域显示这些对象。  
   
-     若要查看 DML 所依赖的对象，请选择“\<DML 触发器名称> 所依赖的对象”。 将在 **“依赖关系”** 区域显示这些对象。 展开每个节点以查看所有对象。  
+     若要查看 DML 所依赖的对象，请选择“\<DML trigger name> 所依赖的对象”。 将在 **“依赖关系”** 区域显示这些对象。 展开每个节点以查看所有对象。  
   
 5.  若要获取有关 **“依赖关系”** 区域中显示的对象的信息，请单击该对象。 在 **“所选对象”** 字段中，在 **“名称”** 、 **“类型”** 和 **“依赖关系类型”** 框中提供信息。  
   

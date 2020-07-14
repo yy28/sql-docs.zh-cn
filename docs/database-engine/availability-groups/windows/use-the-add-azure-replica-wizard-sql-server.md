@@ -1,6 +1,6 @@
 ---
 title: 将 Azure VM 配置为可用性组中的次要副本
-description: 通过使用“添加 Azure 副本向导”，你可以在混合 IT 环境中创建新的 Azure VM，将它配置为新的或现有 Always On 可用性组的辅助副本。
+description: 使用“添加 Azure 副本向导”在混合 IT 环境中创建 Azure VM，并将其配置为新的或现有 Always On 可用性组的辅助副本。
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2eb45257f2641b1e4e9f94865784f8910ebf27fd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 93f20096c1ccce60b5ea0e2299725a4037f71ae3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822662"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894183"
 ---
 # <a name="configure-azure-vm-as-a-secondary-replica-in-an-availability-group"></a>将 Azure VM 配置为可用性组中的次要副本
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   通过使用“添加 Azure 副本向导”，你可以在混合 IT 环境中创建新的 Azure VM，将它配置为新的或现有 Always On 可用性组的辅助副本。  
   
 
@@ -55,11 +55,11 @@ ms.locfileid: "74822662"
   
  启动“添加 Azure 副本向导”后，按以下步骤操作：  
   
-1.  首先，为你的 Azure 订阅下载管理证书。 单击“下载”  打开登录页面。  
+1.  首先，为你的 Azure 订阅下载管理证书。 单击“下载”打开登录页面。  
   
 2.  使用你的 Microsoft 帐户或组织帐户登录到 Microsoft Azure。 Microsoft 或组织帐户采用电子邮件地址格式，如 HYPERLINK "mailto:patc@contoso.com" patc@contoso.com。 有关 Azure 凭据的详细信息，请参阅 [Microsoft 组织帐户常见问题](https://technet.microsoft.com/jj592903) 和 [组织帐户登录问题的疑难解答](https://support.microsoft.com/kb/2756852)。  
   
-3.  然后单击 **“连接”** 连接到您的订阅。 连接后，下拉列表用 Azure 参数进行填充，例如“虚拟网络”  和“虚拟网络子网”  。  
+3.  然后单击 **“连接”** 连接到您的订阅。 连接后，下拉列表用 Azure 参数进行填充，例如“虚拟网络”和“虚拟网络子网”。  
   
 4.  为将承载新辅助副本的 Azure 虚拟机指定设置：  
   

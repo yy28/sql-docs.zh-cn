@@ -20,16 +20,16 @@ ms.assetid: 607c296f-8a6a-49bc-975a-b8d0c0914df7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 52f66f1922814f77f93dfdec8725c024c0a129ff
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cec953dc8bbb6f0baf51f996306f7a960ebc2fdd
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68495473"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007634"
 ---
 # <a name="set-operators---union-transact-sql"></a>集运算符 - UNION (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 将两个查询的结果连接到一个结果集中。 可控制结果集是否包含重复行：
 
@@ -38,10 +38,10 @@ ms.locfileid: "68495473"
 
 UNION 操作不同于 [JOIN](../queries/from-transact-sql.md) 操作 ：
 
-- UNION 连接两个查询中的结果集  。 但 UNION 不会从两个表收集的列中创建单独的行  。
-- JOIN 比较两个表中的列，以创建由两个表中的列组成的结果行  。
+- UNION 连接两个查询中的结果集。 但 UNION 不会从两个表收集的列中创建单独的行。
+- JOIN 比较两个表中的列，以创建由两个表中的列组成的结果行。
   
-下面列出了使用 UNION 合并两个查询结果集的基本规则  ：  
+下面列出了使用 UNION 合并两个查询结果集的基本规则：  
   
 -   所有查询中的列数和列的顺序必须相同。  
   
@@ -51,7 +51,7 @@ UNION 操作不同于 [JOIN](../queries/from-transact-sql.md) 操作 ：
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 { <query_specification> | ( <query_expression> ) }   
 { UNION [ ALL ]   
   { <query_specification> | ( <query_expression> ) } 
@@ -59,9 +59,9 @@ UNION 操作不同于 [JOIN](../queries/from-transact-sql.md) 操作 ：
 ```  
   
 ## <a name="arguments"></a>参数  
-\<query_specification> | ( \<query_expression> ) 查询规范或查询表达式，用以返回要与另一个查询规范或查询表达式所返回的数据合并的数据。 属于 UNION 运算的列定义不一定要相同，但必须可通过隐式转换实现兼容。 如果数据类型不同，则根据[数据类型优先级](../../t-sql/data-types/data-type-precedence-transact-sql.md)规则确定所产生的数据类型。 如果类型相同，但精度、确定位数或长度不同，那么结果以相同的表达式合并规则为依据。 有关详细信息，请参阅[精度、小数位数和长度 (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)。  
+\<query_specification> | ( \<query_expression> )：查询规范或查询表达式，用于返回要与另一个查询规范或查询表达式所返回的数据合并的数据。 属于 UNION 运算的列定义不一定要相同，但必须可通过隐式转换实现兼容。 如果数据类型不同，则根据[数据类型优先级](../../t-sql/data-types/data-type-precedence-transact-sql.md)规则确定所产生的数据类型。 如果类型相同，但精度、确定位数或长度不同，那么结果以相同的表达式合并规则为依据。 有关详细信息，请参阅[精度、小数位数和长度 (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)。  
   
-xml  数据类型的列必须相等。 所有的列必须类型化为 XML 架构或是非类型化的。 如果要类型化，这些列必须类型化为相同的 XML 架构集合。  
+xml 数据类型的列必须相等。 所有的列必须类型化为 XML 架构或是非类型化的。 如果要类型化，这些列必须类型化为相同的 XML 架构集合。  
   
 UNION  
 指定合并多个结果集并将其作为单个结果集返回。  
@@ -317,7 +317,7 @@ ORDER BY CustomerKey;
 ```  
   
 ### <a name="h-using-union-of-three-select-statements-to-show-effects-of-all-and-parentheses"></a>H. 使用三个 SELECT 语句的 UNION 来说明 ALL 和括号的作用  
-下面的示例使用 `UNION` 合并同一个表  的结果，以展示使用 `UNION` 时 ALL 和括号的效果。  
+下面的示例使用 `UNION` 合并同一个表的结果，以展示使用 `UNION` 时 ALL 和括号的效果。  
   
 第一个示例使用 `UNION ALL` 显示重复记录，并三次返回源表中的每一行。 第二个示例使用不带 `ALL` 的 `UNION`，删除三个 `SELECT` 语句的组合结果中的重复行，仅返回源表中的非重复行。  
   

@@ -1,5 +1,6 @@
 ---
 title: 针对内存中 OLTP 的标量用户定义函数 | Microsoft Docs
+description: 了解如何在 SQL Server 中为内存中 OLTP 创建和删除本机编译的标量用户定义函数。 本机编译可提高性能。
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: d2546e40-fdfc-414b-8196-76ed1f124bf5
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3914e8d5138dc2de4481276167165d1f4360c657
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 8914f495767e6942b12f5c4dd7b61fd4a6a5bebf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487756"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735033"
 ---
 # <a name="scalar-user-defined-functions-for-in-memory-oltp"></a>针对内存中 OLTP 的标量用户定义函数
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]中，可以创建和删除本机编译标量用户定义函数。 还可以修改这些用户定义函数。 本机编译可提高 Transact-SQL 中用户定义函数的计算性能。  
   

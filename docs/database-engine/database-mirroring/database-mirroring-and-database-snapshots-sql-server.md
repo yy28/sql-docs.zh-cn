@@ -1,6 +1,6 @@
 ---
 title: 数据库镜像和数据库快照
-description: 了解将数据库快照与数据库镜像一起使用的互操作性。
+description: 了解将数据库快照与数据库镜像一起使用的互操作性，以减轻 SQL Server 中报表的负载。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0bf1be90-7ce4-484c-aaa7-f8a782f57c5f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a184bdf227b412ea5464c86058d33903fa7d8d7a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b0a3e349633184bf838f2d9dc599d8355db6b100
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258814"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789707"
 ---
 # <a name="database-mirroring-and-database-snapshots-sql-server"></a>数据库镜像和数据库快照 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   可以利用为了实现可用性目标而维护的镜像数据库来减轻报表的负载。 若要将镜像数据库用于报表，可以在镜像数据库中创建数据库快照，并将客户端连接请求定向到最新的快照。 由于数据库快照只在创建快照时存在，因此，它是一个静态的、只读的并与其源数据库保持事务一致的快照。 若要在镜像数据库中创建数据库快照，数据库必须处于同步镜像状态。  
   
  与镜像数据库本身不同，客户端可以访问数据库快照。 只要镜像服务器与主体服务器进行通信，就可以将报表客户端连接定向到快照。 注意，由于数据库快照是静态的，因此没有新数据可用。 为了让用户能够使用相对较新的数据，必须定期创建新的数据库快照，并通过应用程序将传入客户端连接定向到最新的快照。  

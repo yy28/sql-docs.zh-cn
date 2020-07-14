@@ -25,29 +25,29 @@ ms.assetid: dc85caea-54d1-49af-b166-f3aa2f3a93d0
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 160d2e384dec5a0c0f3cc5ff40bcf62e3941d096
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: db5b1cc185c4fc3cb4c932867851703d8c134a14
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67948289"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999743"
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   从数据库中检索行，并允许从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的一个或多个表中选择一个或多个行或列。 虽然 SELECT 语句的完整语法较复杂，但其主要子句可归纳如下：  
   
 [ WITH { [ XMLNAMESPACES ,] [ \<common_table_expression> ] } ]
   
- SELECT select_list [ INTO new_table ]    
+ SELECT select_list [ INTO new_table ]   
   
- [ FROM table_source ] [ WHERE search_condition ]    
+ [ FROM table_source ] [ WHERE search_condition ]   
   
- [ GROUP BY group_by_expression ]   
+ [ GROUP BY group_by_expression ]  
   
- [ HAVING search_condition ]   
+ [ HAVING search_condition ]  
   
- [ ORDER BY order_expression [ ASC | DESC ] ]   
+ [ ORDER BY order_expression [ ASC | DESC ] ]  
   
  可在查询之间使用 UNION、EXCEPT 和 INTERSECT 运算符，以便将各个查询的结果合并或比较到一个结果集中。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "67948289"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 <SELECT statement> ::=    
@@ -80,7 +80,7 @@ SELECT [ ALL | DISTINCT ]
     [ HAVING < search_condition > ]   
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 [ WITH <common_table_expression> [ ,...n ] ]  
@@ -133,15 +133,15 @@ SELECT <select_criteria>
 8.  SELECT  
 9. DISTINCT  
 10. ORDER BY  
-11. 返回页首  
+11. TOP  
 
 > [!WARNING]
 > 上述顺序是常规顺序。 但是仍然存在不同于此顺序的少见情况。
 >
-> 例如，假设视图中具有聚集索引，该视图排除了一些表行，并且视图的 SELECT 列列表使用可将数据类型从 varchar 更改为 integer 的 CONVERT   。 在此情况下，CONVERT 可能会先于 WHERE 语句执行。 这种情况确实少见。 如果需要解决此问题，通常可通过某种方法修改视图来避免出现顺序不同的情况。 
+> 例如，假设视图中具有聚集索引，该视图排除了一些表行，并且视图的 SELECT 列列表使用可将数据类型从 varchar 更改为 integer 的 CONVERT 。 在此情况下，CONVERT 可能会先于 WHERE 语句执行。 这种情况确实少见。 如果需要解决此问题，通常可通过某种方法修改视图来避免出现顺序不同的情况。 
 
 ## <a name="permissions"></a>权限  
- 选择数据要求对表或视图具有 **SELECT** 权限，该权限可从更高级别的权限继承，例如针对架构的 **SELECT** 权限或针对表的 **CONTROL** 权限。 或者要求具有 db_datareader 或 db_owner 固定数据库角色或 sysadmin 固定服务器角色的成员身份    。 使用 SELECTINTO 创建新表既要求 CREATETABLE 权限，还要求拥有新表的架构上的 ALTERSCHEMA 权限    。  
+ 选择数据要求对表或视图具有 **SELECT** 权限，该权限可从更高级别的权限继承，例如针对架构的 **SELECT** 权限或针对表的 **CONTROL** 权限。 或者要求具有 db_datareader 或 db_owner 固定数据库角色或 sysadmin 固定服务器角色的成员身份  。 使用 SELECTINTO 创建新表既要求 CREATETABLE 权限，还要求拥有新表的架构上的 ALTERSCHEMA 权限  。  
   
 ## <a name="examples"></a>示例：   
 下面的示例使用 [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] 数据库。

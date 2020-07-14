@@ -1,6 +1,6 @@
 ---
 title: 可用性组次要副本上不会显示更改
-ms.description: Troubleshoot to determine why changes occurring on a primary replica are not reflected on the secondary replica for an Always On availability group.
+description: 了解如何确定对主要副本的更改在 Always On 可用性组的次要副本上未得到反映的原因。
 ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql
@@ -8,17 +8,17 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: conceptual
 ms.assetid: c602fd39-db93-4717-8f3a-5a98b940f9cc
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 55dc6787960fbb4979bbe0d21f27f0fa43437662
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: MashaMSFT
+ms.author: mathoma
+ms.openlocfilehash: 67131a066a9885547e04ff58c80cd9f05d365051
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75243012"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888001"
 ---
 # <a name="determine-why-changes-from-primary-replica-are-not-reflected-on-secondary-replica-for-an-always-on-availability-group"></a>确定对主要副本的更改在 Always On 可用性组的次要副本上未得到反映的原因
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   客户端应用程序在主要副本上成功完成更新，但查询次要副本显示更改未得到反映。 这种情况下，假定可用性的同步状态正常。 大多数情况下，此问题几分钟后可自行解决。  
   
  如果几分钟后，更改仍未反映在次要副本上映，那么同步工作流中可能出现了瓶颈。 瓶颈位置取决于次要副本是设置为同步提交还是异步提交。  
@@ -70,7 +70,7 @@ ms.locfileid: "75243012"
   
  此外，检查 [SQL Server:Availability Replica > Flow Control Time (ms/sec)](~/relational-databases/performance-monitor/sql-server-availability-replica.md) 和 [SQL Server:Availability Replica > Flow control/sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md) 这两个性能对象也很有用。将这两个值相乘，可得到最后一秒中等待清除流控制所花费的时间。 流控制等待时间越长，发送速率越低。  
   
- 下表列出了诊断网络延迟和吞吐量的有用指标。 可以使用其他 Windows 工具（如 ping.exe）来评估网络利用率  。  
+ 下表列出了诊断网络延迟和吞吐量的有用指标。 可以使用其他 Windows 工具（如 ping.exe）来评估网络利用率。  
   
 -   DMV [log_send_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)  
   
@@ -127,6 +127,6 @@ from sys.dm_hadr_database_replica_states
  如果重做线程确实滞后，需要调查次要副本性能降低的根本原因。 如果存在与报告工作负荷的 I/O 争用，可以使用 [Resource Governor](~/relational-databases/resource-governor/resource-governor.md) 来控制报告工作负荷所用的 CPU 周期，以在某种程度上间接控制采用的 I/O 周期。 例如，如果报告工作负荷要使用 10% 的 CPU，但工作负荷受到 I/O 限制，可以使用 Resource Governor 将 CPU 资源使用量限制为中止读取工作负荷的 5%，这可最大程度降低对 I/O 的影响。  
   
 ## <a name="next-steps"></a>后续步骤  
- [排除 SQL Server 2008 中的性能问题](https://msdn.microsoft.com/library/dd672789(v=sql.100).aspx) 
+ [排除 SQL Server 2008 中的性能问题](https://msdn.microsoft.com/library/dd672789(v=sql.100).aspx)
   
   

@@ -1,5 +1,6 @@
 ---
 title: 通过 SQL Server Management Studio 查询使用 Always Encrypted 的列 | Microsoft Docs
+description: 了解如何通过 SQL Server Management Studio 查询使用 Always Encrypted 的列。 检索存储在加密列中的密码文本值或文本值。
 ms.custom: ''
 ms.date: 10/31/2019
 ms.prod: sql
@@ -12,15 +13,15 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 221c5c0fa216b8d5fba7f133b717a3d102aea963
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f33d58a0fe9b61519c8946708dcd22c84dff90ba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287131"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85627407"
 ---
 # <a name="query-columns-using-always-encrypted-with-sql-server-management-studio"></a>通过 SQL Server Management Studio 查询使用 Always Encrypted 的列
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 本文介绍如何使用 [SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md) 查询使用 [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) 加密的列。 通过 SSMS，可以：
 - 检索存储在加密列中的密码文本值。 
@@ -71,7 +72,7 @@ ms.locfileid: "79287131"
 若要对任何查询结果进行解密或对任何查询参数（通过对 Transact-SQL 变量进行参数化而生成）进行加密，除了上述权限，还需具有访问保护目标列的列主密钥的权限：
 
 - **证书存储 - 本地计算机** 必须对用作列主密钥的证书具有 `Read` 访问权限，或必须是计算机上的管理员。   
-- Azure Key Vault  ：需要包含列主密钥的保管库上的 `get`、`unwrapKey` 和 `verify` 权限。
+- Azure Key Vault：需要包含列主密钥的保管库上的 `get`、`unwrapKey` 和 `verify` 权限。
 - **密钥存储提供程序(KSP)** ：在你使用密钥存储或密钥时，可能会提示你提供的必需权限和凭据，具体视存储和 KSP 配置而定。   
 - **加密服务提供程序(CSP)** ：在你使用密钥存储或密钥时，可能会提示你提供的必需权限和凭据，具体视存储和 CSP 配置而定。
 
@@ -86,25 +87,25 @@ ms.locfileid: "79287131"
 
 如果没有为连接启用 Always Encrypted，则用于 SQL Server 的 .NET Framework 数据提供程序（由 SSMS 使用）不会尝试加密查询参数或解密结果。
 
-可以在使用“连接到服务器”  对话框创建新连接或更改现有连接时启用或禁用 Always Encrypted。 
+可以在使用“连接到服务器”对话框创建新连接或更改现有连接时启用或禁用 Always Encrypted。 
 
 若要启用（禁用）Always Encrypted，请执行以下操作：
-1. 打开“连接到服务器”  对话框（有关详细信息，请参阅[连接到 SQL Server 实例](../../../ssms/tutorials/connect-query-sql-server.md#connect-to-a-sql-server-instance)）。
-1. 单击“选项 >>”  。
+1. 打开“连接到服务器”对话框（有关详细信息，请参阅[连接到 SQL Server 实例](../../../ssms/tutorials/connect-query-sql-server.md#connect-to-a-sql-server-instance)）。
+1. 单击“选项 >>”。
 1. 如果使用 SSMS 18 或更高版本：
-    1. 选择“Always Encrypted”  选项卡。
-    1. 若要启用 Always Encrypted，请选择“启用 Always Encrypted (列加密)”  。 若要禁用 Always Encrypted，请确保不选择“启用 Always Encrypted (列加密)”  。
-    1. 如果使用 [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)]，且 SQL Server 实例配置了安全 enclave，则可以指定 enclave 证明 url。 如果 SQL Server 实例未使用安全 enclave，请确保将“Enclave 证明 URL”  文本框留空。 有关详细信息，请参阅[具有安全 enclave 的 Always Encrypted](always-encrypted-enclaves.md)。
+    1. 选择“Always Encrypted”选项卡。
+    1. 若要启用 Always Encrypted，请选择“启用 Always Encrypted (列加密)”。 若要禁用 Always Encrypted，请确保不选择“启用 Always Encrypted (列加密)”。
+    1. 如果使用 [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)]，且 SQL Server 实例配置了安全 enclave，则可以指定 enclave 证明 url。 如果 SQL Server 实例未使用安全 enclave，请确保将“Enclave 证明 URL”文本框留空。 有关详细信息，请参阅[具有安全 enclave 的 Always Encrypted](always-encrypted-enclaves.md)。
 1. 如果使用 SSMS 17 或更低版本：
-    1. 选择“其他属性”  。
-    1. 若要启用 Always Encrypted，请键入 `Column Encryption Setting = Enabled`。 若要禁用 Always Encrypted，请指定 `Column Encryption Setting = Disabled`，或从“其他属性”  选项卡中删除“列加密设置”  设置（其默认值为“已禁用”  ）。   
- 1. 单击“连接”  。
+    1. 选择“其他属性”。
+    1. 若要启用 Always Encrypted，请键入 `Column Encryption Setting = Enabled`。 若要禁用 Always Encrypted，请指定 `Column Encryption Setting = Disabled`，或从“其他属性”选项卡中删除“列加密设置”设置（其默认值为“已禁用”）。   
+ 1. 单击“连接”。
 
 > [!TIP]
 > 在为现有“查询编辑器”窗口启用和禁用 Always Encrypted 之间进行切换：   
 > 1.    右键单击“查询编辑器”窗口中的任意位置。
-> 2.    选择“连接” > “更改连接…”   。这会为“查询编辑器”窗口的当前连接打开“连接到服务器”  对话框。 
-> 2.    按照以上步骤启用或禁用 Always Encrypted，然后单击“连接”  。  
+> 2.    选择“连接” > “更改连接…” 。这会为“查询编辑器”窗口的当前连接打开“连接到服务器”对话框。 
+> 2.    按照以上步骤启用或禁用 Always Encrypted，然后单击“连接”。  
    
 ## <a name="parameterization-for-always-encrypted"></a><a name="param"></a>Always Encrypted 参数化   
  
@@ -125,18 +126,18 @@ WHERE [SSN] = @SSN
 为当前的“查询编辑器”窗口启用/禁用 Always Encrypted 参数化：
 
 1. 在主菜单中，选择“查询”  。
-2. 选择“查询选项…”  。
-3. 导航到“执行”   > “高级”  。
-4. 选择或取消选择“启用 Always Encrypted 参数化”  。
-5. 单击“确定”。 
+2. 选择“查询选项…”。
+3. 导航到“执行” > “高级”。
+4. 选择或取消选择“启用 Always Encrypted 参数化” 。
+5. 单击“确定”。
 
 为以后的“查询编辑器”窗口启用/禁用 Always Encrypted 参数化：
 
 1. 在主菜单中，选择“工具”  。
-2. 选择“选项...”  。
-3. 导航到“查询执行”   > “SQL Server”   > “高级”  。
-4. 选择或取消选择“启用 Always Encrypted 参数化”  。
-5. 单击“确定”。 
+2. 选择“选项...”。
+3. 导航到“查询执行” > “SQL Server” > “高级”。
+4. 选择或取消选择“启用 Always Encrypted 参数化” 。
+5. 单击“确定”。
 
 如果在使用已启用 Always Encrypted 的数据库连接的“查询编辑器”窗口中执行查询，但没有为“查询编辑器”窗口启用参数化，便会看到启用提示。
 
@@ -172,7 +173,7 @@ DECLARE @NewSalary money = @Salary * 1.1; -- an expression used instead of a lit
  
 为了成功完成尝试的参数化操作：   
 - 用于要参数化的变量初始化的文字类型必须与变量声明中的类型匹配。   
-- 如果变量的声明类型是日期类型或时间类型，变量必须通过使用以下 ISO 8601 标准格式之一的字符串进行初始化。   
+- 如果变量的声明类型是日期类型或时间类型，变量必须通过使用以下 [ISO 8601 标准格式](https://docs.microsoft.com/sql/t-sql/functions/cast-and-convert-transact-sql#date-and-time-styles)之一的字符串进行初始化。    
 
 下面是会导致参数化错误的 Transact-SQL 变量声明的示例：   
 ```sql
@@ -182,9 +183,9 @@ DECLARE @Number int = 1.1 -- the type of the literal does not match the type of 
 ```
 SQL Server Management Studio 使用 Intellisense 来通知你哪些参数可成功进行参数化而哪些参数化尝试会失败（及其原因）。   
 
-可成功进行参数化的变量的声明将在“查询编辑器”中使用警告下划线进行标记。 如果将鼠标悬停在带有警告下划线标记的声明语句之上，便会看到参数化过程结果，其中包括（变量映射到的）所生成 [SqlParameter](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx) 对象的关键属性值：[SqlDbType](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqldbtype.aspx)、[Size](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.size.aspx)、[Precision](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.precision.aspx)、[Scale](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.scale.aspx)、[SqlValue](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqlvalue.aspx)。 还会在“错误列表”  视图的“警告”  选项卡中，显示已成功进行参数化的所有变量的完整列表。 若要打开“错误列表”  视图，请在主菜单中选择“视图”  ，然后选择“错误列表”  。    
+可成功进行参数化的变量的声明将在“查询编辑器”中使用警告下划线进行标记。 如果将鼠标悬停在带有警告下划线标记的声明语句之上，便会看到参数化过程结果，其中包括（变量映射到的）所生成 [SqlParameter](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx) 对象的关键属性值：[SqlDbType](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqldbtype.aspx)、[Size](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.size.aspx)、[Precision](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.precision.aspx)、[Scale](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.scale.aspx)、[SqlValue](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqlvalue.aspx)。 还会在“错误列表”  视图的“警告”  选项卡中，显示已成功进行参数化的所有变量的完整列表。 若要打开“错误列表”  视图，请在主菜单中选择“视图”  ，然后选择“错误列表” 。    
 
-如果 SQL Server Management Studio 已尝试对变量进行参数化，但是参数化操作失败，那么变量的声明将以错误下划线进行标记。 如果将鼠标悬停在带有错误下划线标记的声明语句之上，便会看到错误的相关结果。 还会在“错误列表”  视图的“错误”  选项卡中，显示所有变量的参数化错误的完整列表。 若要打开“错误列表”  视图，请在主菜单中选择“视图”  ，然后选择“错误列表”  。   
+如果 SQL Server Management Studio 已尝试对变量进行参数化，但是参数化操作失败，那么变量的声明将以错误下划线进行标记。 如果将鼠标悬停在带有错误下划线标记的声明语句之上，便会看到错误的相关结果。 还会在“错误列表”  视图的“错误”  选项卡中，显示所有变量的参数化错误的完整列表。 若要打开“错误列表”  视图，请在主菜单中选择“视图”  ，然后选择“错误列表” 。   
 
 下面的屏幕截图介绍的是具有六个变量声明的示例。 SQL Server Management Studio 已成功对前三个变量进行了参数化。 最后三个变量不符合参数化先决条件。因此，SQL Server Management Studio 不会尝试对它们进行参数化（声明不会以任何方式进行标记）。
 

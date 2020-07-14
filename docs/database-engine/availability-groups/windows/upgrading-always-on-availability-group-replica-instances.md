@@ -1,6 +1,6 @@
 ---
 title: 升级可用性组副本
-dsecription: Describes how to upgrade replicas that are participating in an Always On availability group.
+description: 了解如何在 SQL Server 升级期间通过执行滚动升级来减少主要副本的停机时间。
 ms.custom: seo-lt-2019
 ms.date: 01/10/2018
 ms.prod: sql
@@ -10,25 +10,25 @@ ms.topic: conceptual
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 77fba513e72982920c399002555e5b96745e8492
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0acb31fb6669213aed14721eb52c55b457ec1f2f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822198"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894196"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>升级 AlwaysOn 可用性组副本实例
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 在将托管 Always On 可用性组 (AG) 的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例升级到新的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 版本、新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务包或积累更新，或在安装到新的 Windows 服务包或积累更新时，可以通过执行滚动升级将主要副本的故障时间降低到仅需一次手动故障转移（或者如果无法故障转移回原始的主要副本，则需两次手动故障转移）。 在升级过程中，次要副本将不可用于故障转移或只读操作，并且在升级之后，次要副本可能需要花费一些时间来与主要副本节点保持同步，具体时间取决于主要副本节点上的活动量（因此需要较高的网络流量）。 另请注意，初始故障转移到运行较新版本 SQL Server 的次要副本后，可用性组中的数据库会运行升级进程，将其升级到最新版本。 在此期间这些数据库都没有可读副本。 初始故障转移之后的故障时间取决于可用性组中的数据库数量。 若计划故障回复至原始的主副本，那么在故障回复时将不会重复此步骤。
   
 >[!NOTE]  
 >本文仅讨论 SQL Server 本身的升级。 它不涵盖升级包含 Windows Server 故障转移群集 (WSFC) 的操作系统。 Windows Server 2012 R2 之前的操作系统不支持升级承载故障转移群集的 Windows 操作系统。 若要升级在 Windows Server 2012 R2 上运行的群集节点，请参阅[群集操作系统滚动升级](https://docs.microsoft.com/windows-server/failover-clustering/cluster-operating-system-rolling-upgrade)。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
 开始之前，请仔细阅读以下重要信息：  
   
-- [支持的版本和版本升级](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)：验证是否可以从 Windows 操作系统版本和 SQL Server 版本升级到 SQL Server 2016。 例如，不能直接从 SQL Server 2005 实例升级到 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。  
+- [支持的版本和版本升级](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)：验证是否可以从你的 Windows 操作系统版本和 SQL Server 版本升级到 SQL Server 2016。 例如，不能直接从 SQL Server 2005 实例升级到 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。  
   
 - [选择数据库引擎升级方法](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)：要按正确顺序升级，请检查支持的版本和版本升级以及环境中安装的其他组件，并据此选择适当的升级方法和步骤。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "74822198"
   
 - [安装 SQL Server 的硬件和软件要求](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)：查看安装 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 的软件要求。 如果需要其他软件，则应在升级过程开始之前在每个节点上安装该软件，从而最大程度减少故障时间。  
 
-- [检查更改数据捕获或复制是否用于任何 AG 数据库](#special-steps-for-change-data-capture-or-replication)：如果 AG 中的任何数据库已启用更改数据捕获 (CDC)，请完成这些[操作](#special-steps-for-change-data-capture-or-replication)。
+- [检查是否对任何 AG 数据库使用了更改数据捕获或复制](#special-steps-for-change-data-capture-or-replication):如果 AG 中的任何数据库已启用更改数据捕获 (CDC)，请完成这些[指令](#special-steps-for-change-data-capture-or-replication)。
 
 >[!NOTE]  
 >在滚动升级之外，不支持在同一 AG 中混合使用 SQL Server 实例版本，并且不应该长时间保持该状态，因为升级应该快速进行。 升级 SQL Server 2016 及更高版本的其他选项是使用分布式可用性组。
@@ -69,7 +69,7 @@ ms.locfileid: "74822198"
 -   在故障转移 AG 前，请验证故障转移目标的同步状态为 SYNCHRONIZED。  
 
   > [!WARNING]
-  > 将 SQL Server 的新实例或新版本安装到安装了旧版 SQL Server 的服务器可能会无意中“导致旧版 SQL Server 托管的任何可用性组中断。”  这是因为在安装 SQL Server 实例或版本期间，SQL Server 高可用性模块 (RHS.EXE) 会升级。 这会导致服务器上主要角色中的现有可用性组暂时中断。 因此，强烈建议在将较新版本的 SQL Server 安装到已托管具有可用性组的旧版 SQL Server 系统时执行以下操作之一：
+  > 将 SQL Server 的新实例或新版本安装到安装了旧版 SQL Server 的服务器可能会无意中“导致旧版 SQL Server 托管的任何可用性组中断。” 这是因为在安装 SQL Server 实例或版本期间，SQL Server 高可用性模块 (RHS.EXE) 会升级。 这会导致服务器上主要角色中的现有可用性组暂时中断。 因此，强烈建议在将较新版本的 SQL Server 安装到已托管具有可用性组的旧版 SQL Server 系统时执行以下操作之一：
   > - 在维护时段内安装新版本的 SQL Server。 
   > - 将可用性组故障转移到次要副本，这样在安装新 SQL Server 实例期间它便不再是主要副本。 
   
@@ -202,7 +202,7 @@ ms.locfileid: "74822198"
 
 >[!IMPORTANT]
 >- 验证各步骤间的同步。 在进行下一步前，确认同步提交副本在可用性组中同步，且全局主要副本与分布式 AG 中的转发器同步。 
->- 建议：每当验证同步时，在 SQL Server Management Studio 中刷新数据库节点和分布式 AG 节点  。 所有项同步后，保存每个副本状态的屏幕截图。 这有助于跟踪当前步骤，在进行下一步前确保一切运行正常，并帮助你在故障发生时进行故障排除。 
+>- **建议**：每当验证同步时，在 SQL Server Management Studio 中刷新数据库节点和分布式 AG 节点。 所有项同步后，保存每个副本状态的屏幕截图。 这有助于跟踪当前步骤，在进行下一步前确保一切运行正常，并帮助你在故障发生时进行故障排除。 
 
 
 ### <a name="diagram-example-for-a-rolling-upgrade-of-a-distributed-availability-group"></a>分布式可用性组的滚动升级的示例图

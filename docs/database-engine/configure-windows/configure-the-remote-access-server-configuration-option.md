@@ -1,5 +1,6 @@
 ---
 title: 配置 remote access 服务器配置选项 | Microsoft Docs
+description: 了解已弃用的远程访问选项的替代方法。 查看用于排查 SQL Server 连接问题的其他源。
 ms.custom: ''
 ms.date: 08/11/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - remote servers [SQL Server], stored procedure execution
 ms.assetid: f5de748d-1c55-4714-9661-38fe62e5095f
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 52d6f73b585f3d0857186bef9c6c440e8655adc1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: fba193e5f6493e722bd1171c333b4aa2e700ff50
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012339"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785801"
 ---
 # <a name="configure-the-remote-access-server-configuration-option"></a>配置远程访问服务器配置选项
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   本主题提供有关“远程访问”功能的信息。 此配置选项是一个模糊不清的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的通信功能，该功能已弃用，而且你可能不应当使用它。 如果你由于无法连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]而访问此页，请参阅以下主题之一：  
   
@@ -73,7 +74,7 @@ ms.locfileid: "68012339"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
--   “远程访问”  选项仅适用于使用 [sp_addserver](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md) 添加的服务器，包括此选项是为了向后兼容。  
+-   “远程访问”选项仅适用于使用 [sp_addserver](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md) 添加的服务器，包括此选项是为了向后兼容。  
   
 ###  <a name="security"></a><a name="Security"></a> Security  
   
@@ -98,7 +99,7 @@ ms.locfileid: "68012339"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例说明如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 将 `remote access` 选项的值设置为 `0`。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例说明如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 将 `remote access` 选项的值设置为 `0`。  
   
 ```sql  
 EXEC sp_configure 'remote access', 0 ;  

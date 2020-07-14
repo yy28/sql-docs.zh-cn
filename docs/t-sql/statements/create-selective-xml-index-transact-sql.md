@@ -12,15 +12,15 @@ dev_langs:
 ms.assetid: 1d769f62-f646-4057-b93a-bf5f90e935ed
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 30b70c57d90f7772368713ac378c809a3dd7c46e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 81bfeb64f7acded533c78d5937160dacb86af652
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68117198"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767034"
 ---
 # <a name="create-selective-xml-index-transact-sql"></a>CREATE SELECTIVE XML INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   对指定的表和 XML 列创建新的选择性 XML 索引。 选择性 XML 索引通过只对您通常查询的节点子集建立索引，改进 XML 索引和查询的性能。 您还可以创建辅助选择性 XML 索引。 有关信息，请参阅[创建、更改和删除辅助选择性 XML 索引](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md)。  
   
@@ -28,7 +28,7 @@ ms.locfileid: "68117198"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 CREATE SELECTIVE XML INDEX index_name  
     ON <table_object> (xml_column_name)  
     [WITH XMLNAMESPACES (<xmlnamespace_list>)]  
@@ -95,10 +95,10 @@ identifier
 ```  
   
 ##  <a name="arguments"></a><a name="Arguments"></a> 参数  
- index_name   
+ index_name  
  要创建的新索引的名称。 索引名称在表中必须唯一，但在数据库中不必唯一。 索引名称必须符合[标识符](../../relational-databases/databases/database-identifiers.md)的规则。  
   
- *\<* table_object> 是包含要建立索引的 XML 列的表。 使用以下格式之一：  
+ \<table_object> 是包含要建立索引的 XML 列的表。 使用以下格式之一：  
   
 -   `database_name.schema_name.table_name`  
   
@@ -108,14 +108,14 @@ identifier
   
 -   `table_name`  
   
- xml_column_name   
+ xml_column_name  
  XML 列的名称，该列中包含要建立索引的路径。  
   
- [WITH XMLNAMESPACES (  \<xmlnamespace_list>  )] 是要建立索引的路径使用的命名空间的列表。 有关 WITH XMLNAMESPACES 子句的语法的信息，请参阅 [WITH XMLNAMESPACES (Transact-SQL)](../../t-sql/xml/with-xmlnamespaces.md)。  
+ [WITH XMLNAMESPACES (\<xmlnamespace_list>) ] 是要建立索引的路径使用的命名空间的列表。 有关 WITH XMLNAMESPACES 子句的语法的信息，请参阅 [WITH XMLNAMESPACES (Transact-SQL)](../../t-sql/xml/with-xmlnamespaces.md)。  
   
- (\<promoted_node_path_list>) 是要使用可选优化提示建立索引的路径列表 。 有关可以在 CREATE 或 ALTER 语句中指定的路径和优化提示的信息，请参阅[为选择性 XML 索引指定路径和优化提示](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)。  
+ FOR (\<promoted_node_path_list>) 是要使用可选优化提示对其建立索引的路径列表 。 有关可以在 CREATE 或 ALTER 语句中指定的路径和优化提示的信息，请参阅[为选择性 XML 索引指定路径和优化提示](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)。  
   
- 有关通过 *\<* index_options> 获取索引选项的信息，请参阅 [CREATE XML INDEX（选择性 XML 索引）](../../t-sql/statements/create-xml-index-selective-xml-indexes.md)。  
+ WITH \<index_options> - 有关索引选项的信息，请参阅 [CREATE XML INDEX（选择性 XML 索引）](../../t-sql/statements/create-xml-index-selective-xml-indexes.md)。  
   
 ## <a name="best-practices"></a>最佳实践  
  在大多数情况下，通过创建选择性 XML 索引而不是普通 XML 索引，可以改善性能和提高存储效率。 但在以下条件之一成立时，不推荐使用选择性 XML 索引：  

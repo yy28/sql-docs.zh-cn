@@ -1,7 +1,8 @@
 ---
 title: 线程和任务体系结构指南 | Microsoft Docs
+description: 了解 SQL Server 中的线程和任务体系结构，包括任务计划、热添加 CPU 以及使用超过 64 个 CPU 的计算机的最佳做法。
 ms.custom: ''
-ms.date: 10/11/2019
+ms.date: 07/06/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,39 +15,134 @@ ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4c19e3ad3589cad6f7503ff9f0e92c090bef5035
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c6e8ee2bd3910f3b7ae4bbdba37b973c095fef00
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287351"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091905"
 ---
 # <a name="thread-and-task-architecture-guide"></a>线程和任务体系结构指南
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 
 ## <a name="operating-system-task-scheduling"></a>操作系统任务计划
 线程是操作系统可以执行的最小处理单位，借助线程可以将应用程序逻辑分为多个并行执行路径。 当复杂应用程序包含可同时执行的多个任务时，线程非常有用。 
 
-操作系统执行应用程序实例时，它将创建一个单元（称为进程）来管理该实例。 此进程包含一个执行线程。 它是由应用程序代码执行的一系列编程指令。 例如，如果一个简单应用程序具有一组可串行执行的指令，则会将该组指令作为单个任务处理，并且整个应用程序只有一个执行路径（或线程）。   更复杂的应用程序可能有几个任务，这些任务可以并行执行，而不是串行执行。  应用程序可以通过以下方式实现此操作：启动各个任务的独立进程（这属于资源密集型操作），或启动独立的线程（相对而言它消耗资源较少）。 而且，可以独立于与某进程关联的其他线程来安排每个线程的执行。
+操作系统执行应用程序实例时，它将创建一个单元（称为进程）来管理该实例。 此进程包含一个执行线程。 它是由应用程序代码执行的一系列编程指令。 例如，如果一个简单应用程序具有一组可串行执行的指令，则会将该组指令作为单个任务处理，并且整个应用程序只有一个执行路径（或线程）。  更复杂的应用程序可能有几个任务，这些任务可以并行执行，而不是串行执行。 应用程序可以通过以下方式实现此操作：启动各个任务的独立进程（这属于资源密集型操作），或启动独立的线程（相对而言它消耗资源较少）。 而且，可以独立于与某进程关联的其他线程来安排每个线程的执行。
 
 线程使复杂的应用程序能够更有效地利用处理器 (CPU)，即使在只有一个 CPU 的计算机上也是如此。 如果只有一个 CPU，则每次只能执行一个线程。 如果一个线程执行不使用 CPU 的长时间运行的操作（如磁盘读/写操作），则第一个操作完成之前可以执行另一个线程。 通过在其他线程等待操作完成的同时执行线程，应用程序可以最大限度地利用 CPU。 对于大量占用磁盘 I/O 的多用户应用程序（如数据库服务器），这尤其有效。 具有多个 CPU 的计算机可以同时在每个 CPU 上执行一个线程。 例如，如果某计算机有八个 CPU，则它可以同时执行八个线程。
 
 ## <a name="sql-server-task-scheduling"></a>SQL Server 任务计划
-在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的作用域中，请求是查询或批处理的逻辑表示形式。  请求还表示系统线程所需的操作，如检查点或日志编写器。 请求在其整个生存期期间以不同状态存在，并且在执行请求所需的资源不可用时请求可以累积等待，如[锁](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md#locks)或[闩锁](../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md#latches)。 有关请求状态的详细信息，请参阅 [sys.dm_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)。
+在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的作用域中，请求是查询或批处理的逻辑表示形式。 请求还表示系统线程所需的操作，如检查点或日志编写器。 请求在其整个生存期期间以不同状态存在，并且在执行请求所需的资源不可用时请求可以累积等待，如[锁](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md#locks)或[闩锁](../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md#latches)。 有关请求状态的详细信息，请参阅 [sys.dm_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)。
 
-任务表示满足请求所需完成的工作单元。  可以向单个请求分配一个或多个任务。 并行请求有多个并行执行（而非串行）的活动任务。 在任何给定的时间点，串行执行的请求均仅有一个活动任务。 任务在其整个生存期期间以不同状态存在。 有关任务状态的详细信息，请参阅 [sys.dm_os_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)。 处于“挂起”状态的任务正在等待执行任务所需的资源可用。 有关正在等待的任务的详细信息，请参阅 [sys.dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md)。
+任务表示满足请求所需完成的工作单元。 可以向单个请求分配一个或多个任务。 
+-  并行请求将包含并行执行（而不是串行执行）的多个活动任务，其中包含一个“父任务”（或协调任务）和多个“子任务” 。 并行请求的执行计划可能具有串行分支（计划中包含不并行执行的运算符的区域）。 父任务还负责执行这些串行运算符。
+-  在执行期间的任何给定时间点，串行请求都将只有一个活动任务。     
+任务在其整个生存期期间以不同状态存在。 有关任务状态的详细信息，请参阅 [sys.dm_os_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)。 处于“挂起”状态的任务正在等待执行任务所需的资源可用。 有关正在等待的任务的详细信息，请参阅 [sys.dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md)。
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 工作线程（又称为工作器或线程）是操作系统线程的逻辑表现形式。  执行串行请求时，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 将生成线程，以执行活动任务。 在[行模式](../relational-databases/query-processing-architecture-guide.md#execution-modes)下执行并行请求时，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 将分配线程，来协调负责完成已向其分配的任务的子线程。 为每个任务生成的工作线程数取决于以下因素：
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 工作线程（又称为工作器或线程）是操作系统线程的逻辑表现形式。 执行串行请求时，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 将生成工作线程，以执行活动任务 (1:1)。 在[行模式](../relational-databases/query-processing-architecture-guide.md#execution-modes)下执行并行请求时，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 将分配线程，来协调负责完成已向其分配的任务的子线程（也为 1:1），称为“父线程” 。 父线程具有与之关联的父任务。 为每个任务生成的工作线程数取决于以下因素：
 -   请求是否符合并行要求（由查询优化器确定）。
 -   根据当前负载，系统的实际可用的[并行度 (DOP)](../relational-databases/query-processing-architecture-guide.md#DOP) 是多少。 它可能不同于估计的 DOP，后者基于最大并行度 (MAXDOP) 的服务器配置。 例如，MAXDOP 的服务器配置可能是 8，但在运行时可用的 DOP 可能仅为 2，这样则会影响查询性能。 
 
 > [!NOTE]
-> 将按任务设置最大并行度 (MAXDOP) 限制，而非按请求限制  。 这意味着，在并行查询执行期间，单个请求可以生成多个任务，并且每个任务可以使用多个工作线程（数目最多达 MAXDOP 限制）。 有关 MAXDOP 的详细信息，请参阅[配置最大并行度服务器配置选项](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。
+> 将按任务设置最大并行度 (MAXDOP) 限制，而非按请求限制。 这意味着在并行查询执行期间，单个请求可以生成多个任务（数目最多达 MAXDOP 限制），并且每个任务将使用一个工作线程。 有关 MAXDOP 的详细信息，请参阅[配置最大并行度服务器配置选项](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。
 
-计划程序（又称为 SOS 计划程序）管理需要处理时间来代表任务执行工作的工作线程。  每个计划程序映射单个处理器 (CPU)。 线程可以在计划程序内活动的时间称为 OS 量程，最长为 4 毫秒。 量程时间到期后，线程将其时间转让给需要访问 CPU 资源的其他线程，并更改自己的状态。 用于将 CPU 资源访问最大化的线程之间的协作称为“协作计划”（又称为非抢先计划）  。 反之，线程状态更改会传播到与该线程关联的任务，并会传播到与相应任务关联的请求。 有关线程状态的详细信息，请参阅 [sys.dm_os_workers](../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)。 有关计划程序的详细信息，请参阅 [sys.dm_os_schedulers](../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)。 
+计划程序（又称为 SOS 计划程序）管理需要处理时间来代表任务执行工作的工作线程。 每个计划程序映射单个处理器 (CPU)。 线程可以在计划程序内活动的时间称为 OS 量程，最长为 4 毫秒。 量程时间到期后，线程将其时间转让给需要访问 CPU 资源的其他线程，并更改自己的状态。 用于将 CPU 资源访问最大化的线程之间的协作称为“协作计划”（又称为非抢先计划）。 反之，线程状态更改会传播到与该线程关联的任务，并会传播到与相应任务关联的请求。 有关线程状态的详细信息，请参阅 [sys.dm_os_workers](../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)。 有关计划程序的详细信息，请参阅 [sys.dm_os_schedulers](../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)。 
+
+总之，请求可能会生成一个或多个任务来执行工作单元 。 每个任务都分配给负责完成任务的“工作线程”。 必须对每个工作线程进行计划（置于计划程序上）以主动执行任务。 
+
+### <a name="scheduling-parallel-tasks"></a>计划并行任务
+假设使用 MaxDOP 8 配置 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，并且跨 NUMA 节点 0 和 1 为 24 个 CPU（计划程序）配置了 CPU 关联。 计划程序 0 到 11 属于 NUMA 节点 0，计划程序 12 到 23 属于 NUMA 节点 1。 应用程序向 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 发送以下查询（请求）：
+
+```sql
+SELECT h.SalesOrderID, h.OrderDate, h.DueDate, h.ShipDate
+FROM Sales.SalesOrderHeaderBulk AS h 
+INNER JOIN Sales.SalesOrderDetailBulk AS d ON h.SalesOrderID = d.SalesOrderID 
+WHERE (h.OrderDate >= '2014-3-28 00:00:00');
+```
+
+> [!TIP]
+> 示例查询可以使用 [AdventureWorks2016_EXT sample database](../samples/adventureworks-install-configure.md) 数据库执行。 表 `Sales.SalesOrderHeader` 和 `Sales.SalesOrderDetail` 放大了 50 倍，并重命名为 `Sales.SalesOrderHeaderBulk` 和 `Sales.SalesOrderDetailBulk`。
+
+执行计划显示两个表之间的[哈希联接](../relational-databases/performance/joins.md#hash)，并且每个运算符并行执行，如带有两个箭头的黄色圆圈所示。 每个并行运算符都是计划中不同的分支。 因此，以下执行计划中有三个分支。 
+
+![并行查询计划](../relational-databases/media/schedule-parallel-query-plan.png)
+
+> [!NOTE]
+> 如果将执行计划视为树，则“分支”是计划的一个区域，它将并行运算符之间的一个或多个运算符分组，也称为“交换迭代器”。 有关计划运算符的详细信息，请参阅 [Showplan 逻辑运算符和物理运算符参考](../relational-databases/showplan-logical-and-physical-operators-reference.md)。 
+
+虽然执行计划中有三个分支，但在执行期间的任何时候，只有两个分支可以在该执行计划中同时执行：
+1.  在 `Sales.SalesOrderHeaderBulk`（联接的生成输入）上使用聚集索引扫描的分支与在 `Sales.SalesOrderDetailBulk`（联接的探测输入）上使用聚集索引扫描的分支同时执行 。
+2. 在 `Sales.SalesOrderDetailBulk`（联接的探测输入）上使用聚集索引扫描的分支与已创建位图且当前正在执行哈希匹配的分支同时执行  。
+
+Showplan XML 显示预留了 16 个工作线程，并且这些线程用于 NUMA 节点 0 和 1：
+
+```xml
+<ThreadStat Branches="2" UsedThreads="16">
+  <ThreadReservation NodeId="0" ReservedThreads="8" />
+  <ThreadReservation NodeId="1" ReservedThreads="8" />
+</ThreadStat>
+```
+
+线程预留确保 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 有足够的工作线程来执行请求所需的所有任务。 可以跨所有 NUMA 节点预留线程，也可以仅在一个 NUMA 节点中预留。 线程预留在执行开始前于运行时完成，并且取决于计划程序的负载。 预留的工作线程数通常通过公式“并发分支数 * 运行时 DOP”得出，并排除父工作线程 。 每个分支限制为等于 MaxDOP 的工作线程数。 在此示例中有两个并发分支，MaxDOP 设置为 8，因此 2 * 8 = 16。
+
+作为参考，请从[实时查询统计信息](../relational-databases/performance/live-query-statistics.md)（其中一个分支已完成，两个分支同时执行）观察实时执行计划。
+
+![实时并行查询计划](../relational-databases/media/schedule-parallel-query-live-plan.png)
+
+[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 将分配一个工作线程来执行活动任务 (1:1)，在查询执行期间，可以通过查询 [sys.dm_os_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md) DMV 来观察到该任务，如以下示例所示：
+
+```sql
+SELECT parent_task_address, task_address, 
+       task_state, scheduler_id, worker_address
+FROM sys.dm_os_tasks
+WHERE session_id = <insert_session_id>
+ORDER BY parent_task_address, scheduler_id;
+```
+
+> [!TIP]
+> 对于父任务，列 `parent_task_address` 始终为 NULL。 
+
+[!INCLUDE[ssResult](../includes/ssresult-md.md)] 请注意，当前正在执行的分支有 17 个活动任务：16 个子任务对应于预留的线程以及父任务或协调任务。
+
+|parent_task_address|task_address|task_state|scheduler_id|worker_address|
+|--------|--------|--------|--------|--------|
+|Null|0x000001EF4758ACA8|SUSPENDED|3|0x000001EFE6CB6160|
+|0x000001EF4758ACA8|0x000001EFE43F3468|SUSPENDED|0|0x000001EF6DB70160|
+|0x000001EF4758ACA8|0x000001EEB243A4E8|SUSPENDED|0|0x000001EF6DB7A160|
+|0x000001EF4758ACA8|0x000001EC86251468|SUSPENDED|5|0x000001EEC05E8160|
+|0x000001EF4758ACA8|0x000001EFE3023468|SUSPENDED|5|0x000001EF6B46A160|
+|0x000001EF4758ACA8|0x000001EFE3AF1468|SUSPENDED|6|0x000001EF6BD38160|
+|0x000001EF4758ACA8|0x000001EFE4AFCCA8|SUSPENDED|6|0x000001EF6ACB4160|
+|0x000001EF4758ACA8|0x000001EFDE043848|SUSPENDED|7|0x000001EEA18C2160|
+|0x000001EF4758ACA8|0x000001EF69038108|SUSPENDED|7|0x000001EF6AEBA160|
+|0x000001EF4758ACA8|0x000001EFCFDD8CA8|SUSPENDED|8|0x000001EFCB6F0160|
+|0x000001EF4758ACA8|0x000001EFCFDD88C8|SUSPENDED|8|0x000001EF6DC46160|
+|0x000001EF4758ACA8|0x000001EFBCC54108|SUSPENDED|9|0x000001EFCB886160|
+|0x000001EF4758ACA8|0x000001EC86279468|SUSPENDED|9|0x000001EF6DE08160|
+|0x000001EF4758ACA8|0x000001EFDE901848|SUSPENDED|10|0x000001EFF56E0160|
+|0x000001EF4758ACA8|0x000001EF6DB32108|SUSPENDED|10|0x000001EFCC3D0160|
+|0x000001EF4758ACA8|0x000001EC8628D468|SUSPENDED|11|0x000001EFBFA4A160|
+|0x000001EF4758ACA8|0x000001EFBD3A1C28|SUSPENDED|11|0x000001EF6BD72160|
+
+> [!TIP]
+> 在非常繁忙的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 上，可以看到许多活动任务超出了预留线程设置的限制。 这些任务可以属于不再使用的分支，并且处于等待清理的暂时性状态。 
+
+请注意，16 个子任务中的每一个任务都分配了不同的工作线程（参见 `worker_address` 列），但是所有的工作线程都分配到由 8 个计划程序（0、5、6、7、8、9、10、11）组成的相同池，并且父任务将分配给此池之外的计划程序 (3)。
+
+> [!IMPORTANT]
+> 计划给定分支上的第一组并行任务后，[!INCLUDE[ssde_md](../includes/ssde_md.md)] 将对其他分支上的任何其他任务使用此相同的计划程序池。 这意味着同一组计划程序将用于整个执行计划中的所有并行任务，仅受 MaxDOP 的限制。      
+> [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 将始终尝试从同一 NUMA 节点为任务执行分配计划程序。 但是，分配给父任务的工作线程可能被置于与其他任务不同的 NUMA 节点中。
+
+工作线程只能在其量程（4 毫秒）期间在计划程序中保持活动状态，并且必须在该时间段结束后生成其计划程序，以便分配给另一个任务的工作线程可以变为活动状态。 当工作线程的量程到期且不再活动时，相应任务将处于 RUNNABLE 状态的 FIFO 队列中，直到再次进入 RUNNING 状态，假设该任务不需要访问当前不可用的资源（例如闩锁或锁），在这种情况下，该任务将处于 SUSPENDED 状态而不是 RUNNABLE 状态，直到这些资源可用为止。  
+
+> [!TIP] 
+> 对于上述 DMV 的输出，所有活动任务都处于 SUSPENDED 状态。 有关正在等待的任务的详细信息，请查询 [sys.dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md) DMV。 
+
+总之，一个并行请求将生成多个任务，其中每个任务必须分配给单个工作线程，且每个工作线程必须分配给单个计划程序。 因此，正在使用的计划程序的数量不能超过每个分支的并行任务数，这是 MaxDOP 设置的。 
 
 ### <a name="allocating-threads-to-a-cpu"></a>为 CPU 分配线程
-默认情况下，每个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例启动每个线程，操作系统根据负载从计算机上的处理器 (CPU) 中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例分发线程。 如果已在操作系统级别启用了进程关联，则操作系统会将每个线程分配给特定的 CPU。 与之相反，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 将 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 工作线程分配给在 CPU 之间平均分发线程的计划程序。  
+默认情况下，每个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例启动每个线程，操作系统根据负载从计算机上的处理器 (CPU) 中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例分发线程。 如果已在操作系统级别启用了进程关联，则操作系统会将每个线程分配给特定的 CPU。 与之相反，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 将 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 工作线程分配给在 CPU 之间平均分发线程的计划程序。 
     
 为了执行多任务处理，例如当多个应用程序访问同一组 CPU 时，操作系统有时会在不同 CPU 之间移动工作线程。 虽然从操作系统方面而言，这种活动是高效的，但是在高系统负荷的情况下，该活动会降低 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的性能，因为每个处理器缓存都会不断地重新加载数据。 如果将各个 CPU 分配给特定线程，则通过消除处理器的重新加载需要以及减少 CPU 之间的线程迁移（因而减少上下文切换），可以提高在这些条件下的性能；线程与处理器之间的这种关联称为“处理器关联”。 如果已经启用了关联，则操作系统会将每个线程分配给一个特定的 CPU。 
 
@@ -105,7 +201,7 @@ Microsoft Windows 使用从 1 到 31 的数值优先级系统计划线程的执�
 除调整最大并行度 (MAXDOP) 服务器配置选项以外，请考虑使用 [MAXDOP 选项](../t-sql/statements/alter-index-transact-sql.md)调整索引操作的并行度。 有关详细信息，请参阅 [配置并行索引操作](../relational-databases/indexes/configure-parallel-index-operations.md)。 有关调整最大并行度服务器配置选项的详细信息和指南，请参阅[配置最大并行度服务器配置选项](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。
 
 ### <a name="setting-the-maximum-number-of-worker-threads"></a>设置最大工作线程数
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将在启动时动态配置最大工作线程数服务器配置选项。  在启动时，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用可用 CPU 数和系统体系结构通过经过证实的[公式](../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md#Recommendations)确定此服务器配置。
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将在启动时动态配置最大工作线程数服务器配置选项。 在启动时，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用可用 CPU 数和系统体系结构通过经过证实的[公式](../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md#Recommendations)确定此服务器配置。
 
 此选项是一个高级选项，仅应由有经验的数据库管理员或认证的 SQL Server 专业人员更改。 如果怀疑存在性能问题，可能不是由于工作线程不可用。 很有可能是导致工作线程等待的因素造成的，例如 I/O。 在更改最大工作线程设置之前，最好找到导致性能问题的根本原因。 但是，如果需要手动设置最大工作线程数，必须始终将此配置值设置为至少为系统上存在的 CPU 数的七倍的值。 有关详细信息，请参阅[配置最大工作线程数](../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md)。
 
@@ -113,7 +209,7 @@ Microsoft Windows 使用从 1 到 31 的数值优先级系统计划线程的执�
 不建议在生产环境中使用 SQL 跟踪和 SQL Profiler。 运行这些工具的系统开销也会随着 CPU 的数目的增加而增加。 如果您必须在生产环境中使用 SQL 跟踪，请将跟踪事件的数目限制为最少。 请在负荷下仔细探查和测试每个跟踪事件，并且避免使用显著影响性能的事件组合。
 
 > [!IMPORTANT]
-> 已弃用 SQL 跟踪和 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]。 包含 Microsoft SQL Server 跟踪和重播对象的“Microsoft.SqlServer.Management.Trace”命名空间也已遭弃用  。 
+> 已弃用 SQL 跟踪和 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]。 包含 Microsoft SQL Server 跟踪和重播对象的“Microsoft.SqlServer.Management.Trace”命名空间也已遭弃用。 
 > [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)] 
 > 请改用扩展事件。 有关[扩展事件](../relational-databases/extended-events/extended-events.md)的详细信息，请参阅[快速入门：SQL Server 中的扩展事件](../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)和 [SSMS XEvent 探查器](../relational-databases/extended-events/use-the-ssms-xe-profiler.md)。
 

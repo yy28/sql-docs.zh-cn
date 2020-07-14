@@ -1,5 +1,6 @@
 ---
 title: 管理数据库引擎服务 | Microsoft Docs
+description: 熟悉 SQL Server 中提供的服务。 了解如何入门 SQL Server 配置管理器，可以使用它来管理各种服务。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,21 +23,21 @@ helpviewer_keywords:
 - administering SQL Server, services
 - SQL Server services
 ms.assetid: aa732e43-53ba-4eea-bb9b-089da0766fc1
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 5973b74accac8b35932edf54b51b83ec6a235aae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 162cf9d1f062d69daf671ed0bf8962b9ddb7ddf9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82178558"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85680974"
 ---
 # <a name="manage-the-database-engine-services"></a>管理数据库引擎服务
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作为服务在操作系统上运行。 服务是一种在系统后台运行的应用程序。 服务通常提供一些核心操作系统功能，例如 Web 服务、事件日志或文件服务。 运行的服务可以不在计算机桌面上显示用户界面。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理和一些其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件都作为服务运行。 这些服务通常会在操作系统启动时自动启动。 但是，也有些服务默认情况下不会自动启动，这取决于安装过程中如何进行指定。 本部分说明了如何管理各种 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。 登录到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例之前，您需要了解如何启动、停止、暂停、恢复和重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。 登录成功之后，就可以执行各种任务，如管理服务器或查询数据库。  
   
 ## <a name="using-the-sql-server-service"></a>使用 SQL Server 服务  
- 启动 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例时即启动了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。 启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务之后，用户便可以与服务器建立新的连接。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务可以在本地或远程作为服务来启动和停止。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务若是默认实例，则被称为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER)；若是命名实例，则被称为 MSSQL$\<实例名\>  。  
+ 启动 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例时即启动了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。 启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务之后，用户便可以与服务器建立新的连接。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务可以在本地或远程作为服务来启动和停止。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务若是默认实例，则被称为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER)；若是命名实例，则被称为 MSSQL$\<instancename\>。  
   
 ## <a name="using-sql-server-configuration-manager"></a>使用 SQL Server 配置管理器  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器可以停止、启动、或暂停各种 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。  
@@ -52,7 +53,7 @@ ms.locfileid: "82178558"
   
  **使用 Windows 8 访问 SQL Server 配置管理器**  
   
- 因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理控制台程序的一个管理单元而不是单独的程序，所以，当运行 Windows 8.0 时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器不显示为一个应用程序。 若要打开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器，请在“搜索”  超级按钮中的“应用”  下，键入 **SQLServerManager12.msc**（对于 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]）、**SQLServerManager11.msc**（对于 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]）或 **SQLServerManager10.msc**（对于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]），然后按 **Enter**。  
+ 因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理控制台程序的一个管理单元而不是单独的程序，所以，当运行 Windows 8.0 时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器不显示为一个应用程序。 若要打开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器，请在“搜索”超级按钮中的“应用”下，键入 **SQLServerManager12.msc**（对于 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]）、**SQLServerManager11.msc**（对于 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]）或 **SQLServerManager10.msc**（对于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]），然后按 **Enter**。  
   
 ## <a name="in-this-section"></a>本节内容  
   

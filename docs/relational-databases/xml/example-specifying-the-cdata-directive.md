@@ -1,5 +1,6 @@
 ---
 title: 示例：指定 CDATA 指令 | Microsoft Docs
+description: 查看有关如何在 CDATA 节中指定 CDATA 指令以包装指定数据的示例。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 949071e6-787f-480d-bb86-3ac16a027af1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b6c6c2f5e19e22cdff4b7f9ca282fc3406efd3fc
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 1e0c768d68c1bf7bb8d5c08b3967b4172fbdca36
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664783"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632630"
 ---
 # <a name="example-specifying-the-cdata-directive"></a>示例：指定 CDATA 指令
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   如果指令设置为 **CDATA**，则不对包含的数据进行实体编码，而是将其放入 CDATA 部分。 **CDATA** 属性必须没有名称。  
   
  以下查询将产品型号摘要说明包装在 CDATA 部分中。  

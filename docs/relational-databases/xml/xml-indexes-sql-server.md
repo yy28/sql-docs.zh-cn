@@ -1,5 +1,6 @@
 ---
 title: XML 索引 (SQL Server) | Microsoft Docs
+description: 了解对 xml 数据类型列创建 XML 索引如何通过提高查询性能使应用程序获益。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -33,15 +34,15 @@ helpviewer_keywords:
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b9cfd2d1e81d3778653a59b697dc740680169071
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8f5ab347d15e0363411640431f4d833f38e13234
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68096909"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729779"
 ---
 # <a name="xml-indexes-sql-server"></a>XML 索引 (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   可以对 **xml** 数据类型列创建 XML 索引。 它们对列中 XML 实例的所有标记、值和路径进行索引，从而提高查询性能。 在下列情况下，您的应用程序可以从 XML 索引中获益：  
   
 -   对 XML 列进行查询在您的工作负荷中很常见。 必须考虑数据修改过程中的 XML 索引维护开销。  
@@ -54,7 +55,7 @@ ms.locfileid: "68096909"
   
 -   辅助 XML 索引  
   
- **xml** 类型列的第一个索引必须是主 XML 索引。 使用主 XML 索引时，支持下列类型的辅助索引：PATH、VALUE 和 PROPERTY。 根据查询类型的不同，这些辅助索引可能有助于改善查询性能。  
+ **xml** 类型列的第一个索引必须是主 XML 索引。 使用主 XML 索引时，支持以下类型的辅助索引：PATH、VALUE 和 PROPERTY。 根据查询类型的不同，这些辅助索引可能有助于改善查询性能。  
   
 > [!NOTE]  
 >  除非为使用 **xml** 数据类型正确设置了数据库选项，否则无法创建或修改 XML 索引。 有关详细信息，请参阅 [结合使用具有全文搜索和 XML 列](../../relational-databases/xml/use-full-text-search-with-xml-columns.md)。  
@@ -98,7 +99,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 -   `//ContactRecord/PhoneNumber` ，其中只有最后两个步骤是已知的  
   
- 或  
+ OR  
   
 -   `/Book/*/Title` 其中，通配符 (`*`) 是指定在表达式中间的。  
   
@@ -142,7 +143,7 @@ USE AdventureWorks2012;SELECT InstructionsFROM Production.ProductModel WHERE Pro
   
 -   `/root/Location` ，仅指定一个路径  
   
- 或  
+ OR  
   
 -   `/root/Location/@LocationID[.="10"]` ，其中路径和节点值均指定。  
   

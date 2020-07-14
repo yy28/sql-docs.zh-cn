@@ -1,26 +1,26 @@
 ---
 title: 管理可用性组故障转移 - Linux 上的 SQL Server
 description: 本文介绍故障转移的类型：自动故障转移、计划的手动故障转移和强制手动故障转移。 自动故障转移和计划的手动故障转移会保留所有数据。
-author: MikeRayMSFT
-ms.author: mikeray
+author: tejasaks
+ms.author: tejasaks
 ms.reviewer: vanto
 ms.date: 03/01/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 635c567722fd5744aa56a16a6f48e8c4284f8ba8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 60dbfed32581a7646da590004c839fc7cf3d316f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216846"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892298"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Linux 上的 Always on 可用性组故障转移
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-在可用性组 (AG) 的上下文中，可用性副本的主要角色和次要角色通常在称为故障转移的过程中可互换。 存在三种故障转移形式：自动故障转移（无数据丢失）、计划的手动故障转移（无数据丢失）和强制手动故障转移（可能丢失数据）。最后一种形式通常称为“强制故障转移”  。 自动故障转移和计划的手动故障转移会保留所有数据。 AG 在可用性副本级别进行故障转移。 也就是说，AG 故障转移到其辅助副本之一（当前故障转移目标）。 
+在可用性组 (AG) 的上下文中，可用性副本的主要角色和次要角色通常在称为故障转移的过程中可互换。 存在三种故障转移形式：自动故障转移（无数据丢失）、计划的手动故障转移（无数据丢失）和强制手动故障转移（可能丢失数据）。最后一种形式通常称为“强制故障转移”。 自动故障转移和计划的手动故障转移会保留所有数据。 AG 在可用性副本级别进行故障转移。 也就是说，AG 故障转移到其辅助副本之一（当前故障转移目标）。 
 
 有关故障转移的背景信息，请参阅[故障转移和故障转移模式](../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)。
 
@@ -45,15 +45,15 @@ ms.locfileid: "80216846"
 
 #### <a name="step-1-manually-fail-over-by-moving-availability-group-resource"></a><a name="manualMove"></a> 步骤 1. 通过移动可用性组资源手动进行故障转移
 
-要手动将名为 ag_cluster 的 AG 资源故障转移到名为 nodeName2 的群集节点，请运行适用于你的分发的命令   ：
+要手动将名为 ag_cluster 的 AG 资源故障转移到名为 nodeName2 的群集节点，请运行适用于你的分发的命令 ：
 
-- RHEL/Ubuntu 示例 
+- RHEL/Ubuntu 示例
 
    ```bash
    sudo pcs resource move ag_cluster-master nodeName2 --master
    ```
 
-- SLES 示例 
+- SLES 示例
 
    ```bash
    crm resource migrate ag_cluster nodeName2
@@ -66,13 +66,13 @@ ms.locfileid: "80216846"
 
 在手动故障转移期间，`pcs` 命令 `move` 或 `crm` 命令 `migrate` 会为要放置在新目标节点上的资源添加位置约束。 若要查看新约束，请在手动移动资源后运行以下命令：
 
-- RHEL/Ubuntu 示例 
+- RHEL/Ubuntu 示例
 
    ```bash
    sudo pcs constraint list --full
    ```
 
-- SLES 示例 
+- SLES 示例
 
    ```bash
    crm config show
@@ -81,15 +81,30 @@ ms.locfileid: "80216846"
 因手动故障转移而创建的约束示例。 
  `Enabled on: Node1 (score:INFINITY) (role: Master) (id:cli-prefer-ag_cluster-master)`
 
-- RHEL/Ubuntu 示例 
+   > [!NOTE]
+   > Red Hat Enterprise Linux 8.x 和 Ubuntu 18.04 上 pacemaker 群集中的 AG 资源名称可能类似于 ag_cluster-clone，因为有关资源的命名法正在发展为使用“可升级克隆” 。 
+
+- RHEL/Ubuntu 示例
 
    在以下命令中，`cli-prefer-ag_cluster-master` 是需要删除的约束的 ID。 `sudo pcs constraint list --full` 会返回此 ID。 
    
    ```bash
+   sudo pcs resource clear ag_cluster-master  
+   ```
+   或
+   
+   ```bash
    sudo pcs constraint remove cli-prefer-ag_cluster-master  
    ```
-   
-- SLES 示例 
+  
+   或者，你可以在单个行中移动和清除自动生成的约束，如下所示。 下面的示例根据 Red Hat Enterprise Linux 8.x 使用“克隆”术语。 
+  
+   ```bash
+   sudo pcs resource move ag_cluster-clone --master nodeName2 && sleep 30 && sudo pcs resource clear ag_cluster-clone
+
+   ```
+  
+- SLES 示例
 
    在以下命令中，`cli-prefer-ms-ag_cluster` 是约束的 ID。 `crm config show` 会返回此 ID。 
    
@@ -162,7 +177,7 @@ ms.locfileid: "80216846"
 
 ## <a name="database-level-monitoring-and-failover-trigger"></a>数据库级别监视和故障转移触发器
 
-对于 `CLUSTER_TYPE=EXTERNAL`，故障转移触发器语义不同于 WSFC。 AG 位于 WSFC 中的 SQL Server 实例上时，转换数据库的 `ONLINE` 状态会导致 AG 运行状况报告错误。 在响应中，群集管理器触发故障转移操作。 在 Linux 上，SQL Server 实例不能与群集通信。 “由外而内”监视数据库运行状况  。 如果用户选择了数据库级故障转移监视和故障转移（通过在创建 AG 时设置选项 `DB_FAILOVER=ON`），则每次群集运行监视操作时，都会检查数据库状态是否为 `ONLINE`。 群集在 `sys.databases` 中查询状态。 对于不同于 `ONLINE` 的任何状态，群集将自动触发故障转移（如满足自动故障转移条件）。 故障转移的实际时间取决于监视操作的频率以及 sys.databases 中正在更新的数据库状态。
+对于 `CLUSTER_TYPE=EXTERNAL`，故障转移触发器语义不同于 WSFC。 AG 位于 WSFC 中的 SQL Server 实例上时，转换数据库的 `ONLINE` 状态会导致 AG 运行状况报告错误。 在响应中，群集管理器触发故障转移操作。 在 Linux 上，SQL Server 实例不能与群集通信。 “由外而内”监视数据库运行状况。 如果用户选择了数据库级故障转移监视和故障转移（通过在创建 AG 时设置选项 `DB_FAILOVER=ON`），则每次群集运行监视操作时，都会检查数据库状态是否为 `ONLINE`。 群集在 `sys.databases` 中查询状态。 对于不同于 `ONLINE` 的任何状态，群集将自动触发故障转移（如满足自动故障转移条件）。 故障转移的实际时间取决于监视操作的频率以及 sys.databases 中正在更新的数据库状态。
 
 自动故障转移至少需要一个同步副本。
 

@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: 89f8616b13f80642a62922d9a1e1023f153b23cb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c6c5ecf91349a94acb2b18156f28056ce04da3a1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558437"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892328"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>为 SQL Server 可用性组配置 SLES 群集
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 本指南介绍如何在 SUSE Linux Enterprise Server (SLES) 12 SP2 上为 SQL Server 创建三节点群集。 若要实现高可用性，Linux 上的可用性组需要三个节点，请参阅[可用性组配置的高可用性和数据保护](sql-server-linux-availability-group-ha.md)。 此群集层基于在 [Pacemaker](https://clusterlabs.org/) 之上生成的 SUSE [High Availability Extension (HAE)](https://www.suse.com/products/highavailability)。 
 
@@ -28,6 +28,7 @@ ms.locfileid: "75558437"
 >[!NOTE]
 >目前，SQL Server 在 Linux 上与 Pacemaker 集成不及在 Windows 上与 WSFC 集成的耦合性高。 Linux 上的 SQL Server 服务无法识别群集。 Pacemaker 控制群集资源的所有业务流程，包括可用性组资源。 在 Linux 上，不应该依赖提供 sys.dm_hadr_cluster 等群集信息的 Always On 可用性组动态管理视图 (DMV)。 此外，虚拟网络名称特定于 WSFC，Pacemaker 中无相同的等效项。 仍可创建一个侦听器，将其用于故障转移后的透明重新连接，但需要使用创建虚拟 IP 资源所用的 IP 在 DNS 服务器中手动注册侦听器名称（如以下部分所述）。
 
+[!INCLUDE [bias-sensitive-term-t](../includes/bias-sensitive-term-t.md)]
 
 ## <a name="roadmap"></a>路线图
 
@@ -313,8 +314,8 @@ commit
 1. 用户发出 resource migrate，将资源迁移到可用性组主要副本 - 从节点 1 到节点 2。
 2. 虚拟 IP 资源在节点 1 上停止。
 3. 虚拟 IP 资源在节点 2 上启动。 此时，IP 地址暂时指向节点 2，同时节点 2 仍为故障转移前的次要副本。 
-4. 节点 1 上的可用性组主要副本降级为从属副本。
-5. 节点 2 上的可用性组从属副本升级为主要副本。 
+4. 节点 1 上的可用性组主要副本降级。
+5. 节点 2 上的可用性组升级为主要副本。 
 
 若要防止 IP 地址暂时指向具有故障转移前的次要副本的节点，请添加排序约束。 若要添加排序约束，请在一个节点上运行以下命令： 
 

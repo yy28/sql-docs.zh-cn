@@ -2,7 +2,7 @@
 title: COPY INTO (Transact-SQL)（预览版）
 titleSuffix: (SQL Data Warehouse) - SQL Server
 description: 在 Azure SQL 数据仓库中使用 COPY 语句从外部存储帐户加载数据。
-ms.date: 04/30/2020
+ms.date: 06/19/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
 ms.reviewer: jrasnick
@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 455e75d13c8b083d37bbab1c6a15916871b1ffba
-ms.sourcegitcommit: c53bab7513f574b81739e5930f374c893fc33ca2
+ms.openlocfilehash: 5d2b3040c53c2bbffb6fd073fa9f385f78e28798
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82987433"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091671"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL)（预览版）
 
@@ -33,7 +33,7 @@ ms.locfileid: "82987433"
 
 - 权限较低的用户在加载时，不需要对数据仓库有严格的控制权限
 - 执行单个 T-SQL 语句，不需要创建任何其他数据库对象
-- 正确分析和加载 CSV 文件，其中分隔符  （字符串、字段、行）  在字符串分隔列中进行转义 
+- 正确分析和加载 CSV 文件，其中分隔符（字符串、字段、行）在字符串分隔列中进行转义
 - 指定更精细的权限模型，无需使用共享访问签名 (SAS) 来公开存储帐户密钥
 - 为 ERRORFILE 位置 (REJECTED_ROW_LOCATION) 使用一个不同的存储帐户
 - 为每个目标列自定义默认值，并指定要加载到特定目标列中的源数据字段
@@ -44,28 +44,34 @@ ms.locfileid: "82987433"
 > [!NOTE]  
 > COPY 语句目前提供公共预览版。
 
+请访问以下文档，了解使用 COPY 语句的综合示例和快速入门：
+
+- [快速入门：使用 COPY 语句批量加载数据](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql)
+- [快速入门：关于使用 COPY 语句及其支持的身份验证方法的示例](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql-examples)
+- [快速入门：使用丰富的 Synapse Studio UI（工作区预览版）创建 COPY 语句](https://docs.microsoft.com/azure/synapse-analytics/quickstart-load-studio-sql-pool)
+
 ## <a name="syntax"></a>语法  
 
 ```syntaxsql
 COPY INTO [schema.]table_name
 [(Column_list)] 
-FROM ‘<external_location>’ [,...n]
+FROM '<external_location>' [,...n]
 WITH  
  ( 
  [FILE_TYPE = {'CSV' | 'PARQUET' | 'ORC'} ]
  [,FILE_FORMAT = EXTERNAL FILE FORMAT OBJECT ]  
  [,CREDENTIAL = (AZURE CREDENTIAL) ]
- [,ERRORFILE = '[http(s)://storageaccount/container]/errorfile_directory[/]] 
+ [,ERRORFILE = '[http(s)://storageaccount/container]/errorfile_directory[/]]' 
  [,ERRORFILE_CREDENTIAL = (AZURE CREDENTIAL) ]
  [,MAXERRORS = max_errors ] 
- [,COMPRESSION = { 'Gzip' | 'DefaultCodec'|’Snappy’}] 
- [,FIELDQUOTE = ‘string_delimiter’] 
- [,FIELDTERMINATOR =  ‘field_terminator’]  
- [,ROWTERMINATOR = ‘row_terminator’]
+ [,COMPRESSION = { 'Gzip' | 'DefaultCodec'| 'Snappy'}] 
+ [,FIELDQUOTE = 'string_delimiter'] 
+ [,FIELDTERMINATOR =  'field_terminator']  
+ [,ROWTERMINATOR = 'row_terminator']
  [,FIRSTROW = first_row]
- [,DATEFORMAT = ‘date_format’] 
+ [,DATEFORMAT = 'date_format'] 
  [,ENCODING = {'UTF8'|'UTF16'}] 
- [,IDENTITY_INSERT = {‘ON’ | ‘OFF’}]
+ [,IDENTITY_INSERT = {'ON' | 'OFF'}]
 )
 ```
 
@@ -78,7 +84,7 @@ WITH
 要将数据复制到其中的表的名称。 目标表可以是临时或永久表，并且必须已存在于数据库中。 
 
 *(column_list)*  
-包含一列或多列的可选列表，用于将源数据字段映射到目标表列以加载数据。 必须用括号将 column_list 括起来，并且用逗号进行分隔  。 列列表的格式如下：
+包含一列或多列的可选列表，用于将源数据字段映射到目标表列以加载数据。 必须用括号将 column_list 括起来，并且用逗号进行分隔。 列列表的格式如下：
 
 [(Column_name [Default_value] [Field_number] [,...n])]
 
@@ -125,7 +131,7 @@ WITH
 - ORC：指定优化行纵栏表 (ORC) 格式。
 
 >[!NOTE]  
-> Polybase 中的文件类型“分隔文本”被替换为“CSV”文件格式，后者可以通过 FIELDTERMINATOR 参数配置默认逗号分隔符。 
+>Polybase 中的文件类型“分隔文本”被替换为“CSV”文件格式，后者可以通过 FIELDTERMINATOR 参数配置默认逗号分隔符。 
 
 *FILE_FORMAT = external_file_format_name*</br>
 *FILE_FORMAT* 仅适用于 Parquet 和 ORC 文件，用于指定为外部数据存储文件类型和压缩方法的外部文件格式对象的名称。 若要创建外部文件格式，请使用 [CREATE EXTERNAL FILE FORMAT](create-external-file-format-transact-sql.md?view=azure-sqldw-latest)。
@@ -143,7 +149,7 @@ WITH
 - 使用共享访问签名 (SAS) 进行身份验证
   
   - *IDENTITY：一个值为“共享访问签名”的常量*
-  - *SECRET：[共享访问签名](/azure/storage/common/storage-sas-overview)对存储帐户中的资源提供委托访问*   。
+  - *SECRET：[共享访问签名](/azure/storage/common/storage-sas-overview)对存储帐户中的资源提供委托访问*  。
   -  所需的最低权限：READ 和 LIST
   
 - 使用[*服务主体*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)进行身份验证
@@ -182,7 +188,7 @@ WITH
   
 - 使用共享访问签名 (SAS) 进行身份验证
   - *IDENTITY：一个值为“共享访问签名”的常量*
-  - *SECRET：[共享访问签名](/azure/storage/common/storage-sas-overview)对存储帐户中的资源提供委托访问*   。
+  - *SECRET：[共享访问签名](/azure/storage/common/storage-sas-overview)对存储帐户中的资源提供委托访问*  。
   - 所需的最低权限：READ、LIST、WRITE、CREATE、DELETE
   
 - 使用[*服务主体*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)进行身份验证
@@ -356,7 +362,7 @@ WITH (
 COPY INTO test_parquet
 FROM 'https://myaccount.blob.core.windows.net/myblobcontainer/folder1/*.parquet'
 WITH (
-    FILE_FORMAT = myFileFormat
+    FILE_FORMAT = myFileFormat,
     CREDENTIAL=(IDENTITY= 'Shared Access Signature', SECRET='<Your_SAS_Token>')
 )
 ```
@@ -369,7 +375,7 @@ FROM
 'https://myaccount.blob.core.windows.net/myblobcontainer/folder0/*.txt', 
     'https://myaccount.blob.core.windows.net/myblobcontainer/folder1'
 WITH ( 
-    FILE_TYPE = 'CSV'
+    FILE_TYPE = 'CSV',
     CREDENTIAL=(IDENTITY= '<client_id>@<OAuth_2.0_Token_EndPoint>',SECRET='<key>'),
     FIELDTERMINATOR = '|'
 )

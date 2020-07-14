@@ -1,5 +1,6 @@
 ---
 title: SQL Server 审核记录 | Microsoft Docs
+description: SQL Server 审核由审核操作项组成，这些操作项会记录到审核目标。 查看此摘要，了解可发送到目标的记录。
 ms.custom: ''
 ms.date: 08/03/2017
 ms.prod: sql
@@ -12,31 +13,31 @@ helpviewer_keywords:
 ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1c8728bdea0ce2dd5650a1f3ea8adf224b58424b
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: de70d3235e6c8087b4932fdab5006e12a56d5734
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922191"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885315"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server Audit Records
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核功能，可以对服务器级别和数据库级别事件组和事件进行审核。 有关详细信息，请参阅 [SQL Server Audit（数据库引擎）](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 列中的一个值匹配。  
   
- 审核由零个或多个审核操作项组成，这些操作项会记录到审核“  目标”。 审核目标可以是二进制文件、Windows 应用程序事件日志或 Windows 安全事件日志。 发送到目标的记录可以包含下表中介绍的元素：  
+ 审核由零个或多个审核操作项组成，这些操作项会记录到审核“ 目标”。 审核目标可以是二进制文件、Windows 应用程序事件日志或 Windows 安全事件日志。 发送到目标的记录可以包含下表中介绍的元素：  
   
 |列名称|说明|类型|始终可用|  
 |-----------------|-----------------|----------|----------------------|  
 |**event_time**|触发可审核操作的日期/时间。|**datetime2**|是|  
 |**sequence_no**|跟踪单个审核记录中的记录顺序，该记录太大而无法放在写入缓冲区中以进行审核。|**int**|是|  
-|**action_id**|操作的 ID<br /><br /> 提示：若要将 **action_id** 用作谓词，必须将它从字符串转换为数值。 有关详细信息，请参阅 [Filter SQL Server Audit on action_id / class_type predicate](https://docs.microsoft.com/archive/blogs/sqlsecurity/filter-sql-server-audit-on-action_id-class_type-predicate)（使用 action_id / class_type 谓词筛选 SQL Server 审核）。|**varchar(4)**|是|  
+|**action_id**|操作的 ID<br /><br /> 提示：要将 action_id 用作谓词，必须将它从字符串转换为数值。 有关详细信息，请参阅 [Filter SQL Server Audit on action_id / class_type predicate](https://docs.microsoft.com/archive/blogs/sqlsecurity/filter-sql-server-audit-on-action_id-class_type-predicate)（使用 action_id / class_type 谓词筛选 SQL Server 审核）。|**varchar(4)**|是|  
 |**succeeded**|指示触发审核事件的操作的权限检查是否成功或失败。 |**bit**<br /> - 1 = 成功， <br />0 = 失败|是|  
 |**permission_bitmask**|当适用时，显示授予、拒绝或撤消的权限|**bigint**|否|  
 |**is_column_permission**|指示列级别权限的标志|**bit** <br />- 1 = True, <br />0 = False|否|  
 |**session_id**|发生该事件的会话的 ID。|**int**|是|  
 |**server_principal_id**|在其中执行操作的登录上下文 ID。|**int**|是|  
 |**database_principal_id**|在其中执行操作的数据库用户上下文 ID。|**int**|否|  
-|object_id |发生审核的实体的主 ID。 此 ID 可以是：<br /><br /> 服务器对象<br /><br /> 数据库<br /><br /> 数据库对象<br /><br /> 架构对象|**int**|否|  
+|object_id|发生审核的实体的主 ID。 此 ID 可以是：<br /><br /> 服务器对象<br /><br /> 数据库<br /><br /> 数据库对象<br /><br /> 架构对象|**int**|否|  
 |**target_server_principal_id**|可审核操作适用的服务器主体。|**int**|是|  
 |**target_database_principal_id**|可审核操作适用的数据库主体。|**int**|否|  
 |**class_type**|发生审核的可审核实体的类型。|**varchar(2)**|是|  

@@ -1,5 +1,6 @@
 ---
 title: 针对包含数据库的安全最佳做法 | Microsoft Docs
+description: 了解并缓解对包含的数据库的独特威胁，包括 SQL Server 中与 USER WITH PASSWORD 身份验证过程相关的威胁。
 ms.custom: ''
 ms.date: 03/14/2016
 ms.prod: sql
@@ -12,20 +13,20 @@ ms.assetid: 026ca5fc-95da-46b6-b882-fa20f765b51d
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: jaszymas
-ms.openlocfilehash: 4d7b428534462779abeb72c65b05f551bfd4b0eb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 20b864e61050b4bd49582d5579f222091e8c7329
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75246129"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759002"
 ---
 # <a name="security-best-practices-with-contained-databases"></a>针对包含数据库的安全性最佳方法
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   包含的数据库面临着一些独有的威胁， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 管理员应该了解并缓解这些威胁。 大部分威胁与 **USER WITH PASSWORD** 身份验证过程相关，该过程会将身份验证的范围从 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 级别转到数据库级别。  
   
 ## <a name="threats-related-to-users"></a>与用户相关的威胁  
- 包含的数据库中具有 ALTER ANY USER 权限的用户（例如，db_owner 和 db_accessadmin 固定数据库角色的成员）可以在不告知 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员或者得到其允许的情况下授予该数据库的访问权限。 授予用户对包含数据库的访问权限会增加整个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例受到攻击的可能性。 管理员应了解访问控制的这种委托，而且在为包含数据库中的用户授予 **ALTER ANY USER** 权限时要非常谨慎。 所有数据库所有者都拥有 **ALTER ANY USER** 权限。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员应该定期审核包含数据库中的用户。  
+ 包含的数据库中具有 ALTER ANY USER 权限的用户（例如，db_owner 和 db_accessadmin 固定数据库角色的成员）可以在不告知 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员或者得到其允许的情况下授予该数据库的访问权限  。 授予用户对包含数据库的访问权限会增加整个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例受到攻击的可能性。 管理员应了解访问控制的这种委托，而且在为包含数据库中的用户授予 **ALTER ANY USER** 权限时要非常谨慎。 所有数据库所有者都拥有 **ALTER ANY USER** 权限。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员应该定期审核包含数据库中的用户。  
   
 ### <a name="accessing-other-databases-using-the-guest-account"></a>使用 guest 帐户访问其他数据库  
  数据库所有者和拥有 **ALTER ANY USER** 权限的数据库用户可以创建包含数据库用户。 在连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上包含的数据库后，如果其他数据库启用了 [!INCLUDE[ssDE](../../includes/ssde-md.md)]guest **帐户，包含数据库的用户就可以访问** 上的其他数据库。  
@@ -56,7 +57,7 @@ ALTER DATABASE DB1 SET TRUSTWORTHY ON;
 ### <a name="creating-a-user-that-duplicates-a-login"></a>创建复制登录名的用户  
  如果创建了一个有密码的包含数据库用户，所使用的名称与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名相同，而且在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名进行连接时将包含的数据库指定为初始目录，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名将无法连接。 该连接将被判定为包含数据库上的具有密码主体的包含数据库用户发起，而不是基于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的用户发起。 这可能导致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名遭遇到拒绝服务。  
   
--   最佳做法是， **sysadmin** 固定服务器角色的成员应该始终考虑在连接时不使用初始目录选项。 这样会使登录名连接到 master 数据库，并可避免数据库所有者滥用登录名的可能性。 然后，管理员可以通过使用 **USE** _\<数据库>_ 语句更改为包含的数据库。 您也可以将登录操作的默认数据库设置为包含的数据库，这样会先登录到 **master**数据库，然后再转而登录到包含的数据库。  
+-   最佳做法是， **sysadmin** 固定服务器角色的成员应该始终考虑在连接时不使用初始目录选项。 这样会使登录名连接到 master 数据库，并可避免数据库所有者滥用登录名的可能性。 然后，管理员可以通过使用 USE _\<database>_ 语句更改为包含的数据库。 您也可以将登录操作的默认数据库设置为包含的数据库，这样会先登录到 **master**数据库，然后再转而登录到包含的数据库。  
   
 -   最佳做法是，创建有密码的包含数据库用户时，其名称不得与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名相同。  
   

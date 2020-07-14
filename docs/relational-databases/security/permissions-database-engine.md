@@ -1,5 +1,6 @@
 ---
 title: 权限（数据库引擎）| Microsoft Docs
+description: 请参阅此 SQL Server 权限完整列表，了解哪些权限适用于你使用的平台。
 ms.custom: ''
 ms.date: 01/03/2017
 ms.prod: sql
@@ -19,15 +20,15 @@ ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8488462e75a6f836a1b77c49052a9cfdd0c82d2e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3f6155dd29c2d4afd5f422ad3499521451ccfc82
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68995852"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009392"
 ---
 # <a name="permissions-database-engine"></a>权限（数据库引擎）
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全对象都有可以授予主体的关联权限。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中的权限在分配给登录名和服务器角色的服务器级别，以及分配给数据库用户和数据库角色的数据库级别进行管理。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 的模型拥有与数据库权限相同的系统，但服务器级别权限不可用。 本主题包含权限的完整列表。 有关典型的权限实现，请参阅 [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)。  
   
@@ -51,13 +52,13 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
   
      授予更改特定安全对象的属性（所有权除外）的权限。 当授予对某个范围的 ALTER 权限时，也授予更改、创建或删除该范围内包含的任何安全对象的权限。 例如，对架构的 ALTER 权限包括在该架构中创建、更改和删除对象的权限。  
   
--   ALTER ANY \<*Server Securable*>，其中 *Server Securable* 可为任何服务器安全对象。  
+-   ALTER ANY \<*Server Securable*>，其中 Server Securable 可为任何服务器安全对象。  
   
-     授予创建、更改或删除“服务器安全对象”  的各个实例的权限。 例如，ALTER ANY LOGIN 将授予创建、更改或删除实例中的任何登录名的权限。  
+     授予创建、更改或删除“服务器安全对象” 的各个实例的权限。 例如，ALTER ANY LOGIN 将授予创建、更改或删除实例中的任何登录名的权限。  
   
--   ALTER ANY \<*Database Securable*>，其中 *Database Securable* 可为数据库级别的任何安全对象。  
+-   ALTER ANY \<*Database Securable*>，其中 Database Securable 可为任何数据库级别的安全对象。  
   
-     授予创建、更改或删除“数据库安全对象”  的各个实例的权限。 例如，ALTER ANY SCHEMA 将授予创建、更改或删除数据库中的任何架构的权限。  
+     授予创建、更改或删除“数据库安全对象” 的各个实例的权限。 例如，ALTER ANY SCHEMA 将授予创建、更改或删除数据库中的任何架构的权限。  
   
 -   TAKE OWNERSHIP  
   
@@ -71,15 +72,15 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
   
      允许被授权者模拟该用户。  
   
--   CREATE \<*服务器安全对象*>  
+-   CREATE \<*Server Securable*>  
   
-     授予被授权者创建“服务器安全对象”  的权限。  
+     授予被授权者创建“服务器安全对象” 的权限。  
   
--   CREATE \<*数据库安全对象*>  
+-   CREATE \<*Database Securable*>  
   
-     授予被授权者创建“数据库安全对象”  的权限。  
+     授予被授权者创建“数据库安全对象” 的权限。  
   
--   CREATE \<*包含架构的安全对象*>  
+-   CREATE \<*Schema-contained Securable*>  
   
      授予创建包含在架构中的安全对象的权限。 但是，若要在特定架构中创建安全对象，必须对该架构具有 ALTER 权限。  
   
@@ -102,9 +103,9 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |权限|适用于|  
 |----------------|----------------|  
 |ALTER|除 TYPE 外的所有对象类。|  
-|CONTROL|所有对象类： <br />AGGREGATE、<br />APPLICATION ROLE、<br />ASSEMBLY、<br />ASYMMETRIC KEY、<br />AVAILABILITY GROUP、<br />CERTIFICATE、<br />CONTRACT、<br />CREDENTIALS、DATABASE、<br />DATABASE SCOPED CREDENTIAL、<br /> DEFAULT、<br />ENDPOINT、<br />FULLTEXT CATALOG、<br />FULLTEXT STOPLIST、<br />FUNCTION、<br />LOGIN、<br />MESSAGE TYPE、<br />PROCEDURE、<br />QUEUE、 <br />REMOTE SERVICE BINDING、<br />ROLE、<br />ROUTE、<br />RULE、<br />SCHEMA、<br />SEARCH PROPERTY LIST、<br />SERVER、<br />SERVER ROLE、<br />SERVICE、<br />SYMMETRIC KEY、<br />SYNONYM、<br />TABLE、<br />TYPE、USER、<br />VIEW 和<br />XML SCHEMA COLLECTION|  
-|DELETE|除 DATABASE SCOPED CONFIGURATION 和 SERVER 外的所有对象类。|  
-|在运行 CREATE 语句前执行|CLR 类型、外部脚本、过程（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）、标量和聚合函数（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）以及同义词|  
+|CONTROL|所有对象类： <br />AGGREGATE、<br />APPLICATION ROLE、<br />ASSEMBLY、<br />ASYMMETRIC KEY、<br />AVAILABILITY GROUP、<br />CERTIFICATE、<br />CONTRACT、<br />CREDENTIALS、DATABASE、<br />DATABASE SCOPED CREDENTIAL、<br /> DEFAULT、<br />ENDPOINT、<br />FULLTEXT CATALOG、<br />FULLTEXT STOPLIST、<br />FUNCTION、<br />LOGIN、<br />MESSAGE TYPE、<br />PROCEDURE、<br />QUEUE、 <br />REMOTE SERVICE BINDING、<br />ROLE、<br />ROUTE、<br />RULE、<br />SCHEMA、<br />SEARCH PROPERTY LIST、<br />SERVER、<br />SERVER ROLE、<br />SERVICE、<br />SYMMETRIC KEY、<br />SYNONYM、<br />TABLE、<br />TYPE、<br /> USER、<br />VIEW 和<br />XML SCHEMA COLLECTION|  
+|DELETE|除 DATABASE SCOPED CONFIGURATION、SERVER 和 TYPE 外的所有对象类。|  
+|EXECUTE|CLR 类型、外部脚本、过程（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）、标量和聚合函数（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）以及同义词|  
 |IMPERSONATE|登录名和用户|  
 |INSERT|同义词、表和列、视图和列。 可以在数据库、架构或对象级别授予权限。|  
 |RECEIVE|[!INCLUDE[ssSB](../../includes/sssb-md.md)] 队列|  
@@ -212,7 +213,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |DATABASE|CREATE VIEW|CRVW|SERVER|CONTROL SERVER|  
 |DATABASE|CREATE XML SCHEMA COLLECTION|CRXS|SERVER|CONTROL SERVER|  
 |DATABASE|DELETE|DL|SERVER|CONTROL SERVER|  
-|DATABASE|在运行 CREATE 语句前执行|EX|SERVER|CONTROL SERVER|  
+|DATABASE|EXECUTE|EX|SERVER|CONTROL SERVER|  
 |DATABASE|EXECUTE ANY EXTERNAL SCRIPT|EAES<br /><br /> 适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （至[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 当前版本）。|SERVER|CONTROL SERVER|  
 |DATABASE|INSERT|IN|SERVER|CONTROL SERVER|  
 |DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> 仅适用于 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中使用 ALTER ANY CONNECTION。|SERVER|ALTER ANY CONNECTION|  
@@ -259,7 +260,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |OBJECT|ALTER|AL|SCHEMA|ALTER|  
 |OBJECT|CONTROL|CL|SCHEMA|CONTROL|  
 |OBJECT|DELETE|DL|SCHEMA|DELETE|  
-|OBJECT|在运行 CREATE 语句前执行|EX|SCHEMA|在运行 CREATE 语句前执行|  
+|OBJECT|EXECUTE|EX|SCHEMA|EXECUTE|  
 |OBJECT|INSERT|IN|SCHEMA|INSERT|  
 |OBJECT|RECEIVE|RC|SCHEMA|CONTROL|  
 |OBJECT|REFERENCES|RF|SCHEMA|REFERENCES|  
@@ -289,7 +290,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |SCHEMA|CONTROL|CL|DATABASE|CONTROL|  
 |SCHEMA|CREATE SEQUENCE|CRSO|DATABASE|CONTROL|  
 |SCHEMA|DELETE|DL|DATABASE|DELETE|  
-|SCHEMA|在运行 CREATE 语句前执行|EX|DATABASE|在运行 CREATE 语句前执行|  
+|SCHEMA|EXECUTE|EX|DATABASE|EXECUTE|  
 |SCHEMA|INSERT|IN|DATABASE|INSERT|  
 |SCHEMA|REFERENCES|RF|DATABASE|REFERENCES|  
 |SCHEMA|SELECT|SL|DATABASE|SELECT|  
@@ -326,7 +327,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |SERVER|EXTERNAL ACCESS ASSEMBLY|XA|不适用|不适用|  
 |SERVER|IMPERSONATE ANY LOGIN|IAL|不适用|不适用|  
 |SERVER|SELECT ALL USER SECURABLES|SUS|不适用|不适用|  
-|SERVER|关机|SHDN|不适用|不适用|  
+|SERVER|SHUTDOWN|SHDN|不适用|不适用|  
 |SERVER|UNSAFE ASSEMBLY|XU|不适用|不适用|  
 |SERVER|VIEW ANY DATABASE|VWDB|不适用|不适用|  
 |SERVER|VIEW ANY DEFINITION|VWAD|不适用|不适用|  
@@ -345,18 +346,18 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |SYMMETRIC KEY|REFERENCES|RF|DATABASE|REFERENCES|  
 |SYMMETRIC KEY|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
 |SYMMETRIC KEY|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
-|类型|CONTROL|CL|SCHEMA|CONTROL|  
-|类型|在运行 CREATE 语句前执行|EX|SCHEMA|在运行 CREATE 语句前执行|  
-|类型|REFERENCES|RF|SCHEMA|REFERENCES|  
-|类型|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
-|类型|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
+|TYPE|CONTROL|CL|SCHEMA|CONTROL|  
+|TYPE|EXECUTE|EX|SCHEMA|EXECUTE|  
+|TYPE|REFERENCES|RF|SCHEMA|REFERENCES|  
+|TYPE|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
+|TYPE|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
 |USER|ALTER|AL|DATABASE|ALTER ANY USER|  
 |USER|CONTROL|CL|DATABASE|CONTROL|  
 |USER|IMPERSONATE|IM|DATABASE|CONTROL|  
 |USER|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |XML SCHEMA COLLECTION|ALTER|AL|SCHEMA|ALTER|  
 |XML SCHEMA COLLECTION|CONTROL|CL|SCHEMA|CONTROL|  
-|XML SCHEMA COLLECTION|在运行 CREATE 语句前执行|EX|SCHEMA|在运行 CREATE 语句前执行|  
+|XML SCHEMA COLLECTION|EXECUTE|EX|SCHEMA|EXECUTE|  
 |XML SCHEMA COLLECTION|REFERENCES|RF|SCHEMA|REFERENCES|  
 |XML SCHEMA COLLECTION|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
@@ -417,7 +418,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 
 ## <a name="special-considerations-for-column-level-permissions"></a>列级权限的特殊注意事项
 
-授予列级权限语法 *<table_name>(\<column _name>)* 。 例如：
+使用语法 <table_name>(\<column _name>) 授予列级权限。 例如：
 ```sql
 GRANT SELECT ON OBJECT::Customer(CustomerName) TO UserJoe;
 ```

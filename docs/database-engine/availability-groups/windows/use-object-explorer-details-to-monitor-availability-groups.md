@@ -1,5 +1,6 @@
 ---
 title: 使用“对象资源管理器详细信息”来监视可用性组 | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio 来监视和管理现有的 Always On 可用性组、可用性副本和可用性数据库。
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9d0296e1427d4af206e101513bd54b0d67f7ff46
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e7ee1430cd764c02c05f2bf3f8f935d397a6155a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013627"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894166"
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>使用“对象资源管理器详细信息”来监视可用性组
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   本主题说明如何通过使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 的“对象资源管理器详细信息”窗格来监视和管理现有的 Always On 可用性组、可用性副本和可用性数据库。  
   
 > [!NOTE]  
@@ -40,9 +41,9 @@ ms.locfileid: "68013627"
   
 2.  在对象资源管理器中，连接到要在其上监视可用性组的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例，然后单击服务器名称以展开服务器树。  
   
-3.  依次展开“Always On 高可用性”  节点和“可用性组”  节点。  
+3.  依次展开“Always On 高可用性”节点和“可用性组”节点。  
   
-4.  **“对象资源管理器详细信息”** 窗格显示所连接的服务器实例为其承载副本的所有可用性组。 对于每个可用性组，“服务器实例(主)”  列都显示当前承载主要副本的服务器实例的名称。  若要显示有关给定的可用性组的详细信息，请在对象资源管理器中选择它。  
+4.  **“对象资源管理器详细信息”** 窗格显示所连接的服务器实例为其承载副本的所有可用性组。 对于每个可用性组，“服务器实例(主)”列都显示当前承载主要副本的服务器实例的名称。  若要显示有关给定的可用性组的详细信息，请在对象资源管理器中选择它。  
   
 5.  **“对象资源管理器详细信息”** 窗格随后显示此可用性组的 **“可用性副本”** 和 **“可用性数据库”** 节点：  
   
@@ -58,7 +59,7 @@ ms.locfileid: "68013627"
  **“可用性组”** 详细信息屏幕显示以下列：  
   
  **名称**  
- 列出所选可用性组的“可用性副本”、“可用性数据库”和“可用性组”侦听器等文件夹。     
+ 列出所选可用性组的“可用性副本”、“可用性数据库”和“可用性组”侦听器等文件夹。    
   
 ##  <a name="availability-replica-details"></a><a name="AvReplicaDetails"></a> 可用性副本详细信息  
  **“可用性副本”** 详细信息屏幕显示以下列：  
@@ -67,7 +68,7 @@ ms.locfileid: "68013627"
  显示承载可用性副本的服务器实例的名称，以及指示该服务器实例与本地服务器实例的当前连接状态的图标。  
   
  **角色**  
- 指示可用性副本的当前角色，即“主”  或“辅助”  。 有关 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 角色的详细信息，请参阅 [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)。  
+ 指示可用性副本的当前角色，即“主”或“辅助”。 有关 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 角色的详细信息，请参阅 [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)。  
   
  **辅助角色中的连接模式**  
  指示给定的可用性副本（正在执行辅助角色，也就是充当辅助副本）的数据库是否可以接受来自客户端的连接。  
@@ -114,7 +115,7 @@ ms.locfileid: "68013627"
   
 |值|说明|  
 |-----------|-----------------|  
-|正在同步|辅助数据库已收到主数据库尚未写入磁盘（硬编码）的事务日志记录。<br /><br /> 注意：在异步提交模式中，同步状态始终是“正在同步”  。|  
+|正在同步|辅助数据库已收到主数据库尚未写入磁盘（硬编码）的事务日志记录。<br /><br /> 注意：在异步提交模式中，同步状态始终是“正在同步”。|  
 |||  
   
  **已挂起**  

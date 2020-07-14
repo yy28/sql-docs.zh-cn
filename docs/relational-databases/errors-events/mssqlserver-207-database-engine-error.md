@@ -1,5 +1,6 @@
 ---
 title: MSSQLSERVER_207 | Microsoft Docs
+description: SQL Server 中关于无效列名的查询错误。 请查看错误的说明和可能的解决方法。
 ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
@@ -11,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: d1ab00c7-0331-437a-84fe-bae53b82feec
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0fa8c6371ba5889cde5afe2c66b036a1ec8c031d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 52115e3354d576e6d490e369f307cc119e611aa1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68056798"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780568"
 ---
 # <a name="mssqlserver_207"></a>MSSQLSERVER_207
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>详细信息  
   
-|||  
-|-|-|  
+| Attribute | 值 |  
+| :-------- | :---- |  
 |产品名称|SQL Server|  
 |事件 ID|207|  
 |事件源|MSSQLSERVER|  
@@ -71,7 +72,7 @@ ms.locfileid: "68056798"
   
     10. ORDER BY  
   
-    11. 返回页首  
+    11. TOP  
   
     因为列别名是在处理 SELECT 子句后定义的，所以当处理 GROUP BY 子句时列别名是未知的。  
   
@@ -115,7 +116,7 @@ ms.locfileid: "68056798"
     GROUP BY Year;  
     ```  
   
--   MERGE 语句中的 WHEN NOT MATCHED BY SOURCE 子句引用的是可以访问的值。 修改 MERGE 语句，使源表至少在 WHEN NOT MATCHED BY SOURCE 子句中返回一行。 例如，您可能需要添加或修订为子句指定的搜索条件。 或者，也可以更改该子句以指定没有引用源表的值。 例如，`WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = <expression, or other available value>` 。  
+-   MERGE 语句中的 WHEN NOT MATCHED BY SOURCE 子句引用的是可以访问的值。 修改 MERGE 语句，使源表至少在 WHEN NOT MATCHED BY SOURCE 子句中返回一行。 例如，您可能需要添加或修订为子句指定的搜索条件。 或者，也可以更改该子句以指定没有引用源表的值。 例如，`WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = <expression, or other available value>`。  
   
 ## <a name="see-also"></a>另请参阅  
 [MERGE (Transact-SQL)](~/t-sql/statements/merge-transact-sql.md)  

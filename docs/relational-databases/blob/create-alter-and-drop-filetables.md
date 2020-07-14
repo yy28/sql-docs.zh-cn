@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bb0dd2a0196fbc832b0d0afeb0f02889ac1369a4
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: c0df880a36a0822c3c397be4f2ed9aa14d47c2bc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000050"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768020"
 ---
 # <a name="create-alter-and-drop-filetables"></a>创建、更改和删除 FileTable
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   说明如何创建新的 FileTable 或者更改或删除现有的 FileTable。  
   
 ##  <a name="creating-a-filetable"></a><a name="BasicsCreate"></a> 创建 FileTable  
@@ -85,7 +85,7 @@ GO
 ```  
   
  **使用 SQL Server Management Studio 创建 FileTable**  
- 在对象资源管理器中，展开所选数据库下的对象，然后右键单击“Tables”  文件夹，选择“新建 FileTable”  。  
+ 在对象资源管理器中，展开所选数据库下的对象，然后右键单击“Tables”文件夹，选择“新建 FileTable”。  
   
  此选项将打开一个新的脚本窗口，其中包含一个 Transact-SQL 脚本模板，您可以自定义和运行此模板以创建 FileTable。 使用 **“查询”** 菜单上的 **“指定模板参数的值”** 选择可轻松指定脚本。  
   
@@ -97,7 +97,7 @@ GO
   
 -   由于一个 FileTable 包含一个 FILESTREAM 列，因此，FileTable 需要有效的 FILESTREAM 文件组。 可以指定有效的 FILESTREAM 文件组作为 **CREATE TABLE** 命令的一部分以创建 FileTable（可选）。 如果未指定文件组，则 FileTable 使用数据库的默认 FILESTREAM 文件组。 如果数据库没有 FILESTREAM 文件组，将引发错误。  
   
--   不能将表约束作为 CREATE TABLE…AS FILETABLE 语句的一部分创建  。 但是，您以后可以使用 **ALTER TABLE** 语句添加该约束。  
+-   不能将表约束作为 CREATE TABLE…AS FILETABLE 语句的一部分创建。 但是，您以后可以使用 **ALTER TABLE** 语句添加该约束。  
   
 -   不能在 **tempdb** 数据库或任何其他系统数据库中创建 FileTable。  
   
@@ -121,7 +121,7 @@ GO
 ```  
   
  **使用 SQL Server Management Studio 更改 FileTable 的目录**  
- 在对象资源管理器中，右键单击 FileTable，然后选择“属性”以打开“表属性”对话框。   在 **FileTable** 页上，为 **“FileTable 目录名称”** 输入新值。  
+ 在对象资源管理器中，右键单击 FileTable，然后选择“属性”以打开“表属性”对话框。  在 **FileTable** 页上，为 **“FileTable 目录名称”** 输入新值。  
   
 ###  <a name="requirements-and-restrictions-for-altering-a-filetable"></a><a name="ReqAlter"></a> 更改 FileTable 的要求和限制  
   
@@ -176,11 +176,11 @@ GO
 |检查约束|系统定义的检查约束强制执行下列要求：<br /><br /> 有效的文件名。<br /><br /> 有效的文件属性。<br /><br /> 父对象必须是目录。<br /><br /> 命名空间层次结构在文件操作过程中锁定。|  
   
  **系统定义的约束的命名约定**  
- 上述系统定义的约束采用以下格式命名：\<constraintType>_\<tablename>[\_\<columnname>]\_\<uniquifier>  ，其中：  
+ 上述系统定义的约束采用 \<constraintType>_\<tablename>[\_\<columnname>]\_\<uniquifier> 格式命名，其中：  
   
 -   *<constraint_type>* 为 CK（检查约束）、DF（默认约束）、FK（外键）、PK（主键）或 UQ（唯一约束）。  
   
--   *\<uniquifier>* 是系统生成的字符串以使名称唯一。 此字符串中可能包含 FileTable 的名称和唯一标识符。  
+-   \<uniquifier> 是系统生成的字符串以使名称唯一。 此字符串中可能包含 FileTable 的名称和唯一标识符。  
   
 ## <a name="see-also"></a>另请参阅  
  [管理 FileTable](../../relational-databases/blob/manage-filetables.md)  

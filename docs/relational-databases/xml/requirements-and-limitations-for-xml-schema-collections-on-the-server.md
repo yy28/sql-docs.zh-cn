@@ -1,5 +1,6 @@
 ---
 title: 要求和限制（XML 架构集合）| Microsoft Docs
+description: 了解在 SQL Server 中修改 XML 架构集合的要求和限制。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -24,34 +25,34 @@ ms.assetid: c2314fd5-4c6d-40cb-a128-07e532b40946
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: fe65ba7995dc21b4bb5f5889c8667e9c8dfb6c10
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b0d0e90f30e05cabed7082f87a6b7474c756a145
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75257624"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752565"
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>在服务器上使用 XML 架构集合的要求和限制
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   XML 架构定义语言 (XSD) 验证对使用 **xml** 数据类型的 SQL 列具有某些限制。 下表提供有关这些限制的详细信息，还提供了修改 XSD 架构的准则以使它可以与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]一起使用。 本部分中的主题提供有关使用这些特定限制和准则的其他信息。  
   
 |Item|限制|  
 |----------|----------------|  
 |**minOccurs** 和 **maxOccurs**|**minOccurs** 和 **maxOccurs** 属性的值必须符合 4 字节整数。 服务器拒绝不符合的架构。|  
-|**\<xsd:choice>**|如果架构中包含无子级的 **\<xsd:choice>** 粒子，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拒绝该架构，除非该粒子的 **minOccurs** 属性值定义为零。|  
-|**\<xsd:include>**|当前， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持此元素。 服务器拒绝包含此元素的 XML 架构。<br /><br /> 一种解决方法是，可以预处理包括 **\<xsd:include>** 指令的 XML 架构，来复制所有包含的架构的内容并将其合并为单个架构，以上载到服务器。 有关详细信息，请参阅 [预处理架构以便合并包括的架构](../../relational-databases/xml/preprocess-a-schema-to-merge-included-schemas.md)。|  
-|**\<xsd:key>** 、 **\<xsd:keyref>** 和 **\<xsd:unique>**|当前， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持这些用于强制唯一性或建立键和键引用的基于 XSD 的约束。 无法注册包含这些元素的 XML 架构。|  
+|**\<xsd:choice>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拒绝具有包含无子级的 \<xsd:choice> 粒子的架构，除非该粒子的 minOccurs 属性值定义为零 。|  
+|**\<xsd:include>**|当前， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持此元素。 服务器拒绝包含此元素的 XML 架构。<br /><br /> 解决方案是可以预处理包括 \<xsd:include> 指令的 XML 架构，以将任何包括的架构的内容复制并合并到单个架构，以便上传到服务器。 有关详细信息，请参阅 [预处理架构以便合并包括的架构](../../relational-databases/xml/preprocess-a-schema-to-merge-included-schemas.md)。|  
+|\<xsd:key>、\<xsd:keyref> 和 \<xsd:unique>  |当前， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持这些用于强制唯一性或建立键和键引用的基于 XSD 的约束。 无法注册包含这些元素的 XML 架构。|  
 |**\<xsd:redefine>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持此元素。 有关更新架构的其他方法的信息，请参阅 [<xsd: redefine> 元素](../../relational-databases/xml/the-xsd-redefine-element.md)一起使用。|  
-|**\<xsd:simpleType>** 值|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对带有除 **xs:time** 和 **xs:dateTime**以外的秒部分的简单类型仅支持毫秒精度，对 **xs:time** 和 **xs:dateTime**则支持 100 纳秒精度。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对所有已识别的 XSD 简单类型枚举具有限制。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持在 **\<xsd:simpleType>** 声明中使用“NaN”值。<br /><br /> 有关详细信息，请参阅[<xsd:simpleType> 声明的值](../../relational-databases/xml/values-for-xsd-simpletype-declarations.md)一起使用。|  
+|\<xsd:simpleType> 值|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对带有除 **xs:time** 和 **xs:dateTime**以外的秒部分的简单类型仅支持毫秒精度，对 **xs:time** 和 **xs:dateTime**则支持 100 纳秒精度。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对所有已识别的 XSD 简单类型枚举具有限制。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持在 \<xsd:simpleType> 声明中使用“NaN”值。<br /><br /> 有关详细信息，请参阅[<xsd:simpleType> 声明的值](../../relational-databases/xml/values-for-xsd-simpletype-declarations.md)一起使用。|  
 |**xsi:schemaLocation** 和 **xsi:noNamespaceSchemaLocation**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果在插入到 **xml** 数据类型的列或变量的 XML 实例数据中存在这些属性，则将忽略这些属性。|  
 |**xs:QName**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持从 **xs:QName** 派生的使用 XML 架构限制元素的类型。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持将 **xs:QName** 作为成员元素的联合类型。<br /><br /> 有关详细信息，请参阅 [The xs:QName Type](../../relational-databases/xml/the-xs-qname-type.md)。|  
 |将成员添加到现有替换组|无法将成员添加到 XML 架构集合中的现有替换组。 XML 架构中的替换组有以下限制：头元素和所有其成员元素必须在相同的 {CREATE &#124; ALTER} XML SCHEMA COLLECTION 语句中定义。|  
 |规范格式和模式限制|值的规范表示形式不能违反其类型的模式限制。 有关详细信息，请参阅 [Canonical Forms and Pattern Restrictions](../../relational-databases/xml/canonical-forms-and-pattern-restrictions.md)。|  
 |枚举方面|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持包含以下类型的 XML 架构：具有模式方面或违反这些方面的枚举的类型。|  
 |方面长度|**length**、 **minLength**和 **maxLength** 方面作为 **long** 类型存储。 此类型为 32 位类型。 因此，这些值的可接受值的范围是 2^31。|  
-|ID 属性|每个 XML 架构组件可在其上具有 ID 属性。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对 **ID** 类型的 **\<xsd:attribute>** 声明强制唯一性，但不存储这些值。 唯一性的强制的作用范围是 {CREATE &#124; ALTER} XML SCHEMA COLLECTION 语句。|  
+|ID 属性|每个 XML 架构组件可在其上具有 ID 属性。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对 ID 类型的 \<xsd:attribute> 声明强制唯一性，但不存储这些值 。 唯一性的强制的作用范围是 {CREATE &#124; ALTER} XML SCHEMA COLLECTION 语句。|  
 |ID 类型|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持类型为 **xs:ID**、 **xs:IDREF**或 **xs:IDREFS**的元素。 架构不会声明这种类型的元素或者从这种类型的限制或扩展派生的元素。|  
-|本地命名空间|必须为 **\<xsd:any>** 元素显式指定本地命名空间。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拒绝使用空字符串 ("") 作为命名空间属性的值的架构。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 而是要求显式使用“##local”以指示作为通配符实例的未限定元素或属性。|  
+|本地命名空间|必须为 \<xsd:any> 元素显式指定本地命名空间。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拒绝使用空字符串 ("") 作为命名空间属性的值的架构。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 而是要求显式使用“##local”以指示作为通配符实例的未限定元素或属性。|  
 |混合类型和简单内容|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持将混合类型限制为简单内容。 有关详细信息，请参阅 [Mixed Type and Simple Content](../../relational-databases/xml/mixed-type-and-simple-content.md)。|  
 |NOTATION 类型|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持 NOTATION 类型。|  
 |内存不足的情况|在使用大型 XML 架构集合时，可能会出现内存不足的情况。 有关此问题的解决方案，请参阅 [大型 XML 架构集合和内存不足的情况](../../relational-databases/xml/large-xml-schema-collections-and-out-of-memory-conditions.md)。|  
@@ -69,7 +70,7 @@ ms.locfileid: "75257624"
 |[通配符组成部分和内容验证](../../relational-databases/xml/wildcard-components-and-content-validation.md)|介绍了使用通配符、宽松验证和任何带有 XML 架构集合的类型元素的限制。|  
 |[<xsd: redefine> 元素](../../relational-databases/xml/the-xsd-redefine-element.md)|说明使用 \<xsd:redefine> 元素的限制并介绍了解决方法。|  
 |[xs:QName 类型](../../relational-databases/xml/the-xs-qname-type.md)|介绍与 xs:QName 类型有关的限制。|  
-|[<xsd:simpleType> 声明的值](../../relational-databases/xml/values-for-xsd-simpletype-declarations.md)|介绍了对 \<xsd:simpleType> 声明适用的限制。|  
+|[<xsd:simpleType> 声明的值](../../relational-databases/xml/values-for-xsd-simpletype-declarations.md)|介绍了 \<xsd:simpleType> 声明适用的限制。|  
 |[枚举分面](../../relational-databases/xml/enumeration-facets.md)|介绍与枚举方面有关的限制。|  
 |[混合类型和简单内容](../../relational-databases/xml/mixed-type-and-simple-content.md)|介绍将混合类型限制为简单内容的限制。|  
 |[大型 XML 架构集合和内存不足的情况](../../relational-databases/xml/large-xml-schema-collections-and-out-of-memory-conditions.md)|提供在大型架构集合有时发生内存不足时的解决方案。|  

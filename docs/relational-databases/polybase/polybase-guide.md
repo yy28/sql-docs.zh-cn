@@ -19,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions||>=aps-pdw-2016||=azure-sqldw-latest'
-ms.openlocfilehash: d90503571b10aa614af24a4ee35601b266ab290f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0772efddcd9743f23e1658c5e29e12310b029275
+ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80217114"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84818196"
 ---
 # <a name="what-is-polybase"></a>什么是 PolyBase？
 
@@ -93,7 +93,7 @@ PolyBase 支持在 SQL Server 中使用以下方案：
 
 ## <a name="performance"></a>性能
 
-- **将计算推送到 Hadoop。** 查询优化器制定了基于成本的决策，以在执行此操作将提升查询性能时将计算推送到 Hadoop。  它使用外部表上的统计以制定基于开销的决策。 推送计算会创建 MapReduce 作业并利用 Hadoop 的分布计算资源。
+- **将计算推送到 Hadoop。** 查询优化器制定基于成本的决策，以在执行此操作将提升查询性能时将计算推送到 Hadoop。  查询优化器使用外部表上的统计来制定基于成本的决策。 推送计算会创建 MapReduce 作业并利用 Hadoop 的分布计算资源。
 
 - **缩放计算资源。** 若要提高查询性能，可以使用 SQL Server [PolyBase 横向扩展组](../../relational-databases/polybase/polybase-scale-out-groups.md)。 这使并行数据可以在 SQL Server 实例和 Hadoop 节点之间传输，并为处理外部数据添加计算资源。
 

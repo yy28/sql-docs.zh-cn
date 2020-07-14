@@ -1,5 +1,6 @@
 ---
 title: 包含的数据库 | Microsoft Docs
+description: 了解包含的数据库、部分包含的数据库的优势和局限性，以及 SQL Server 2019 隔离数据库的方式。
 ms.custom: ''
 ms.date: 08/24/2016
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e42d7dbfe00ff957511d9853e39febd29b7aab66
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ee26ff95b5317d65e71fbdb91e39a2d56e9f5f95
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68137329"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756346"
 ---
 # <a name="contained-databases"></a>包含的数据库
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   “包含数据库”  是独立于其他数据库以及承载数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的一种数据库。  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以 4 种方法帮助用户使其数据库独立于实例。  
   
@@ -77,14 +78,14 @@ ms.locfileid: "68137329"
 >  启用部分包含数据库会将对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的访问控制委托给该数据库的所有者。 有关详细信息，请参阅 [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md)。  
   
  数据库边界  
- 由于部分包含数据库会区分数据库功能与实例功能，因此在这两个元素之间存在一条明确定义的边界，称为“数据库边界”  。  
+ 由于部分包含数据库会区分数据库功能与实例功能，因此在这两个元素之间存在一条明确定义的边界，称为“数据库边界” 。  
   
- 数据库边界之内是“数据库模型”  ，在这里开发和管理数据库。 位于数据库模型内部的实体示例包括：系统表（如 **sys.tables**）、具有密码的包含数据库用户以及当前数据库中由特定名称（包含两部分）引用的用户表。  
+ 数据库边界之内是“数据库模型” ，在这里开发和管理数据库。 位于数据库模型内部的实体示例包括：系统表（如 **sys.tables**）、具有密码的包含数据库用户以及当前数据库中由特定名称（包含两部分）引用的用户表。  
   
- 数据库边界之外是“管理模型”  ，这与实例级别的功能和管理有关。 位于数据库边界之外的实体示例包括：系统表（如 **sys.endpoints**）、映射到登录名的用户，以及另一个数据库中由特定名称（包含三部分）引用的用户表。  
+ 数据库边界之外是“管理模型” ，这与实例级别的功能和管理有关。 位于数据库边界之外的实体示例包括：系统表（如 **sys.endpoints**）、映射到登录名的用户，以及另一个数据库中由特定名称（包含三部分）引用的用户表。  
   
 ##  <a name="containment"></a><a name="containment"></a> 包含  
- 完全位于数据库内部的用户实体被视为“包含”  实体。 任何位于数据库之外的实体或任何需要与数据库之外的功能进行交互的实体均被视为“非包含”  实体。  
+ 完全位于数据库内部的用户实体被视为“包含” 实体。 任何位于数据库之外的实体或任何需要与数据库之外的功能进行交互的实体均被视为“非包含” 实体。  
   
  一般而言，用户实体分为以下几种包含类别：  
   

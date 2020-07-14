@@ -1,5 +1,6 @@
 ---
-title: 配置 two digit year cutoff 服务器配置选项 | Microsoft Docs
+title: 配置“两位数年份截止”服务器配置选项 | Microsoft Docs
+description: 熟悉“两位数年份截止”选项。 了解它如何确定 SQL Server 将两位数年份转换为四位数年份的方式。
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - two digit year cutoff option
 - four-digit years [SQL Server]
 ms.assetid: d94e81b6-f2e6-47ef-b497-ec3d827a1646
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 2c33209236b866816ce1c597ab5cfe1a8971d976
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8aa50fbd2eaa934c13704dc218084655c0f0f089
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012286"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764035"
 ---
 # <a name="configure-the-two-digit-year-cutoff-server-configuration-option"></a>配置两位数年份截止服务器配置选项
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   本主题说明了如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] “两位数年份截止” [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **“两位数年份截止”** 选项从 1753 到 9999 之间指定一个整数来表示缩略形式的年份，以将两位数的年份解释为四位数的年份。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 默认的时间范围是 1950-2049，表示截止年份为 2049。 这说明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将两位数年份 49 解释为 2049 年，将两位数年份 50 解释为 1950 年，而将两位数年份 99 解释为 1999 年。 若要维护向后兼容性，请将设置保持为默认值。  
   
@@ -74,7 +75,7 @@ ms.locfileid: "68012286"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例说明如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 将 `two digit year cutoff` 选项的值设置为 `2030`。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例说明如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 将 `two digit year cutoff` 选项的值设置为 `2030`。  
   
 ```sql  
 USE AdventureWorks2012 ;  

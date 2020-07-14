@@ -1,37 +1,34 @@
 ---
 title: 创建和自定义键盘快捷方式
-titleSuffix: Azure Data Studio
 description: 了解如何在 Azure Data Studio 中创建和自定义键盘快捷方式
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 8e577f50152eb5f86b81caa23cc493b92bbab270
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: da7ca6132a8727d4ea77b3549f1e4d6199741b3a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67959470"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774568"
 ---
-# <a name="keyboard-shortcuts-in-name-sos"></a>[!INCLUDE[name-sos](../includes/name-sos.md)] 中的键盘快捷方式
+# <a name="keyboard-shortcuts-in-azure-data-studio"></a>Azure Data Studio 中的键盘快捷方式
 
-本文提供了在 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 中快速查看、编辑和创建键盘快捷方式的步骤。
+本文提供了在 Azure Data Studio 中快速查看、编辑和创建键盘快捷方式的步骤。
 
-因为 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 从 Visual Studio Code 继承其键绑定功能，有关使用不同键盘布局等高级自定义的详细信息，请参阅 [Visual Studio Code 的键绑定](https://code.visualstudio.com/docs/getstarted/keybindings)一文。 某些键绑定功能可能不可用（例如，[!INCLUDE[name-sos](../includes/name-sos-short.md)] 中不支持键映射扩展）。
-
+因为 Azure Data Studio 从 Visual Studio Code 继承其键绑定功能，有关使用不同键盘布局等高级自定义的详细信息，请参阅 [Visual Studio Code 的键绑定](https://code.visualstudio.com/docs/getstarted/keybindings)一文。 某些键绑定功能可能不可用（例如，Azure Data Studio 中不支持键映射扩展）。
 
 ## <a name="open-the-keyboard-shortcuts-editor"></a>打开“键盘快捷方式”编辑器
 
 查看所有当前定义的键盘快捷方式：
 
-从“文件”菜单中打开“键盘快捷方式”编辑器   ：“文件” > “首选项” > “键盘快捷方式”（Mac 上为 [!INCLUDE[name-sos](../includes/name-sos-short.md)] > “首选项” > “键盘快捷方式”）       。
+从“文件”菜单中打开“键盘快捷方式”编辑器 ：“文件” > “首选项” > “键盘快捷方式”（Mac 上为“Azure Data Studio” > “首选项” > “键盘快捷方式”）     。
 
-除显示当前键绑定外，“键盘快捷方式”编辑器还会列出未定义键盘快捷方式的可用命令  。 借助“键盘快捷方式”编辑器，可以轻松更改、删除、重置和定义新的键绑定  。  
-
+除显示当前键绑定外，“键盘快捷方式”编辑器还会列出未定义键盘快捷方式的可用命令。 借助“键盘快捷方式”编辑器，可以轻松更改、删除、重置和定义新的键绑定。  
 
 ## <a name="edit-existing-keyboard-shortcuts"></a>编辑现有的键盘快捷方式
 
@@ -41,11 +38,11 @@ ms.locfileid: "67959470"
    > [!TIP]
    > 按键、按命令、按源等方式搜索，以返回所有相关的键盘快捷方式。
 
-1. 右键单击所需的条目，然后选择“更改键绑定” 
+2. 右键单击所需的条目，然后选择“更改键绑定”
 
    ![编辑键盘快捷方式](media/keyboard-shortcuts/change-keybinding.png)
 
-1. 按下所需的键组合，然后按 Enter 进行保存  。 
+3. 按下所需的键组合，然后按 Enter 进行保存。 
 
    ![保存键盘快捷方式](media/keyboard-shortcuts/save-keybinding.png)
 
@@ -53,10 +50,8 @@ ms.locfileid: "67959470"
 
 创建新的键盘快捷方式：
 
-1. 右键单击没有任何键绑定的命令，然后选择“添加键绑定”  。
+1. 右键单击没有任何键绑定的命令，然后选择“添加键绑定”。
 
    ![创建键盘快捷方式](media/keyboard-shortcuts/add-keybinding.png)
 
-1. 按下所需的键组合，然后按 Enter 进行保存  。
-
-
+2. 按下所需的键组合，然后按 Enter 进行保存。

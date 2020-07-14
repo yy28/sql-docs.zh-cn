@@ -1,5 +1,6 @@
 ---
 title: 隐藏 SQL Server 数据库引擎的实例 | Microsoft Docs
+description: 了解如何隐藏 SQL Server 数据库引擎实例。 客户端计算机不能使用 SQL Server Browser 服务来定位隐藏实例。
 ms.custom: ''
 ms.date: 08/19/2015
 ms.prod: sql
@@ -11,24 +12,24 @@ helpviewer_keywords:
 - Database Engine [SQL Server], hiding instances
 - hiding instances of Database Engine
 ms.assetid: 392de21a-57fa-4a69-8237-ced8ca86ed1d
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 28d7a01ce3c11ce332de7e7af70ff0c57746e840
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5be741205c17d32e9a2ddb253574c8dd50e4c4fe
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71682090"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772450"
 ---
 # <a name="hide-an-instance-of-sql-server-database-engine"></a>隐藏 SQL Server 数据库引擎的实例
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   本主题说明如何使用 SQL Server 配置管理器在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中隐藏 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器服务来枚举安装在计算机上的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例。 这使客户端应用程序可以浏览服务器，并帮助客户端区别同一台计算机上的多个 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例。 您可以使用以下过程防止 SQL Server Browser 服务向尝试通过使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] “浏览” **按钮来查找实例的客户端计算机公开** 实例。  
   
 ##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> 使用 SQL Server 配置管理器  
   
 #### <a name="to-hide-an-instance-of-the-sql-server-database-engine"></a>隐藏 SQL Server 数据库引擎实例  
   
-1.  在“SQL Server 配置管理器”中，展开“SQL Server 网络配置”、右键单击“**服务器实例> 的协议”，然后选择“属性”**   *\<*  。  
+1.  在“SQL Server 配置管理器”中，展开“SQL Server 网络配置”，右键单击“\<server instance> 的协议”，然后选择“属性”。    
   
 2.  在 **“标志”** 选项卡的 **“隐藏实例”** 框中，选择 **“是”** ，然后单击 **“确定”** 关闭对话框。 对于新连接，更改会立即生效。  
   

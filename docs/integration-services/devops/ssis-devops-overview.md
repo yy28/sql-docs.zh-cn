@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 946ea5d404db51c5241e5657524cf3dbc1a519a7
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: eb93961b516623f0a22b3baeae4bc29026c3a994
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83152161"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091778"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools"></a>SQL Server Integration Services (SSIS) DevOps 工具
 
@@ -74,7 +74,7 @@ start -Wait -FilePath msiexec -Args "/i AFP.msi /quiet /l* log.txt"
 cat log.txt
 ```
 
-- SSIS 生成任务不支持 EncryptSensitiveWithPassword 和 EncryptAllWithPassword 保护级别 。 请确保基本代码中的所有 SSIS 项目都不使用这两个保护级别，否则，SSIS 生成任务在执行过程中将挂起和超时。
+- SSIS 生成任务不支持 EncryptSensitiveWithPassword 和 EncryptAllWithPassword 保护级别 。 确保基本代码中的所有 SSIS 项目都不使用这两个保护级别，否则，SSIS 生成任务在执行过程中将停止响应和超时。
 
 ## <a name="ssis-deploy-task"></a>SSIS 部署任务
 
@@ -314,7 +314,7 @@ SSIS 目录配置的内联 JSON。 只有在选择“内联”作为配置文件
 |properties  |说明  |说明  |
 |---------|---------|---------|
 |name|参数的名称。|参数可以是项目参数，也可以是包参数 。 <br> 如果父项目中不存在参数，则将跳过参数。|
-|容器 (container)|参数的容器。|<li>如果参数是项目参数，则容器应为项目名称。 <li>如果它是包参数，则容器应为扩展名为 .dtsx 的包名称。 <li> 如果参数是连接管理器属性，则名称应采用以下格式：CM.\<连接管理器名称>.\<属性名称>。|
+|容器 (container)|参数的容器。|<li>如果参数是项目参数，则容器应为项目名称。 <li>如果它是包参数，则容器应为扩展名为 .dtsx 的包名称。 <li> 如果参数是连接管理器属性，则名称应采用以下格式：CM.\<Connection Manager Name>.\<Property Name>|
 |值|参数值。|<li>当 valueType 是引用对象时 ：值是对字符串类型中的环境变量的引用。 <li> 当 valueType 是文本时 ：此属性支持任何有效的布尔、数字和字符串 JSON 值  。 <br> 该值将转换为目标参数类型。 如果无法转换，则会发生错误。<li> Null 值无效。 任务将跳过此参数对象，并发出警告。|
 |valueType|参数值的类型。|有效类型包括： <br> 文本：value 属性表示文本值。 <br> 引用对象：value 属性表示对环境变量的引用。|
 
@@ -344,6 +344,12 @@ SSIS 目录配置的内联 JSON。 只有在选择“内联”作为配置文件
 |sensitive|环境变量的值是否是敏感值。|有效输入为： <br> true <br> *false*|
 
 ## <a name="release-notes"></a>发行说明
+
+### <a name="version-102"></a>版本 1.0.2
+
+发行日期：2020 年 5 月 26 日
+
+- 修复了配置工作完成后 SSIS 目录配置任务在某些情况下可能失败的问题。
 
 ### <a name="version-101"></a>版本 1.0.1
 

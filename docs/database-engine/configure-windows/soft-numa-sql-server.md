@@ -1,5 +1,6 @@
 ---
 title: 软件 NUMA (SQL Server) | Microsoft Docs
+description: 了解 SQL Server 2014 SP2 和更高版本中的 soft-NUMA。 了解如何使用自动 soft-NUMA 以及如何手动配置 SQL Server 以使用 soft-NUMA。
 ms.custom: ''
 ms.date: 02/13/2018
 ms.prod: sql
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ee31095ad1650ce17af6ddaa19237cd3ae73486d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7e65fb9a246013c756e5c2642836e57efcb1dd58
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288091"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789761"
 ---
 # <a name="soft-numa-sql-server"></a>软件 NUMA (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 新式处理器在每个插槽上都有多个内核。 通常每个插槽表示为单个 NUMA 节点。 SQL Server 数据库引擎在每个 NUMA 节点上划分多个不同内部结构和分区服务线程。  借助每个插槽包含 10 个或更多内核的处理器，使用软件 NUMA 拆分硬件 NUMA 节点通常可以提高可伸缩性和性能。 在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 之前，基于软件的 NUMA (soft-NUMA) 需要编辑注册表才能添加节点配置关联掩码，并且是针对主机级别而不是每个实例进行配置。 从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，当 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 服务启动时会在数据库实例级别自动配置 soft-NUMA。  
   
@@ -132,7 +133,7 @@ SET PROCESS AFFINITY CPU=4 TO 7;
   
 -   [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)：显示 SOFTNUMA 的当前值（0 或 1）  
   
--   [sys.dm_os_sys_info (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)：softnuma_configuration 和 softnuma_configuration_desc 列显示当前配置值   。  
+-   [sys.dm_os_sys_info (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)：softnuma_configuration 和 softnuma_configuration_desc 列显示当前配置值 。  
   
 > [!NOTE]
 > 虽然可以使用 [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 来查看自动软件 NUMA 的运行值，但不能使用 **sp_configure** 更改其值。 必须使用带有 `SET SOFTNUMA` 参数的 [ALTER SERVER CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-server-configuration-transact-sql.md) 语句。  

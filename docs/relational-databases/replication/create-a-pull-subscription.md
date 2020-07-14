@@ -1,5 +1,6 @@
 ---
 title: 创建请求订阅 | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio、Transact-SQL 或复制管理对象在 SQL Server 中创建请求订阅。
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: 41d1886d-59c9-41fc-9bd6-a59b40e0af6e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: ab4bb319460e3666c638b40a63b5676b81048dd1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4f2cf1f98203b89e25fa3b6c5d165c40798163df
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76284729"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773928"
 ---
 # <a name="create-a-pull-subscription"></a>创建请求订阅
 
@@ -33,7 +34,7 @@ No article in 2016+ should ever have the moniker 'sql-server-2014' on its metada
 Presently 'sql-server-2014' moniker is on this 'monikerRange'. This situation deserves further investigation.
 -->
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建请求订阅。  
   
  可以通过脚本设置 P2P 复制的请求订阅，但是不能通过向导这样做。  
@@ -81,7 +82,7 @@ Presently 'sql-server-2014' moniker is on this 'monikerRange'. This situation de
   
 3.  右键单击 **“本地订阅”** 文件夹，再单击 **“新建订阅”** 。  
   
-4.  在新建订阅向导的“发布”页上，从“发布服务器”下拉列表中选择“\<查找 SQL Server 发布服务器>”或“\<查找 Oracle 发布服务器>”。  
+4.  在“新建订阅向导”的“发布”页上，从“发布服务器”下拉列表中选择 \<Find SQL Server Publisher> 或 \<Find Oracle Publisher>   。  
   
 5.  在 **“连接到服务器”** 对话框中连接到发布服务器。  
   
@@ -127,15 +128,15 @@ Presently 'sql-server-2014' moniker is on this 'monikerRange'. This situation de
   
 2.  在订阅服务器上，执行 [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)。 指定 \@publisher、\@publisher_db、\@publication 以及下列参数：  
   
-    -   **subscriber_type\@** - 对于客户端订阅指定 local  ，对于服务器订阅指定 global  。  
+    -   \@subscriber_type - 对于客户端订阅指定 local，对于服务器订阅指定 global。  
   
-    -   **subscription_priority\@** – 指定订阅的优先级（从 0.00  到 99.99  ）。 只有服务器订阅要求指定优先级。  
+    -   \@subscription_priority – 指定订阅的优先级（从 0.00 到 99.99）。 只有服务器订阅要求指定优先级。  
   
          有关详细信息，请参阅 [高级合并复制冲突的检测和解决](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)。  
   
 3.  在订阅服务器上，执行 [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)。 指定下列参数：  
   
-    -   **publisher\@** 、**publisher_db\@** 和 **publication\@** 。  
+    -   \@publisher、\@publisher_db 和 \@publication。  
   
     -   订阅服务器中的合并代理运行时所使用的 \@job_login 和 \@job_password 指定的 Windows 凭据。  
   
@@ -148,7 +149,7 @@ Presently 'sql-server-2014' moniker is on this 'monikerRange'. This situation de
   
     -   该订阅的合并代理作业计划。 有关详细信息，请参阅 [创建事务发布的可更新订阅](publish/create-an-updatable-subscription-to-a-transactional-publication.md)。  
   
-4.  在发布服务器上，执行 [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)。 指定 \@publication、\@subscriber 和 \@subscriber_db，并将 \@subscription_type 的值指定为 pull。 这样便可注册请求订阅。  
+4.  在发布服务器上，执行 [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)。 指定 \@publication、\@subscriber 和 \@subscriber_db，并将 \@subscription_type 的值指定为 pull    。 这样便可注册请求订阅。  
   
 ###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 示例 (Transact-SQL)  
  以下示例创建事务发布的请求订阅。 第一个批处理在订阅服务器中执行，第二个批处理在发布服务器中执行。 登录名和密码在运行时使用 sqlcmd 脚本变量进行提供。  

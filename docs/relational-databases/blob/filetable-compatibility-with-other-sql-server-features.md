@@ -1,6 +1,6 @@
 ---
 title: FileTable 兼容性 | Microsoft Docs
-description: FileTable 与其他 SQL Server 功能的兼容性
+description: 了解 FileTable 如何与其他 SQL Server 功能配合使用。 了解 SQL Server 通过 Filetable 支持哪些功能以及它强制实施哪些约束。
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d199ba6ad64f3b259d7b94ac6180d12e83a311e1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a1899aefaeeef896112a903f1fe69b289740ef09
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75252704"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85642556"
 ---
 # <a name="filetable-compatibility-with-other-sql-server-features"></a>FileTable 与其他 SQL Server 功能的兼容性
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   说明 FileTable 如何与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的其他功能配合使用。  
   
 ##  <a name="alwayson-availability-groups-and-filetables"></a><a name="alwayson"></a> AlwaysOn 可用性组和 FileTable  
@@ -29,7 +29,7 @@ ms.locfileid: "75252704"
   
 -   [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]支持部分 FileTable 功能。 故障转移后，FileTable 数据在主副本上是可访问的，但是在可读辅助副本上不可访问。  
   
-    > **注意：**  请注意故障转移后支持所有 FILESTREAM 功能。 FILESTREAM 数据在可读辅助副本和新的主副本上均可访问。  
+    > **注意：** 请注意故障转移后支持所有 FILESTREAM 功能。 FILESTREAM 数据在可读辅助副本和新的主副本上均可访问。  
   
 -   FILESTREAM 和 FileTable 函数接受或返回虚拟网络名称 (VNN)，而非计算机名称。 有关这些函数的详细信息，请参阅 [Filestream 和 FileTable 函数 (Transact-SQL)](../../relational-databases/system-functions/filestream-and-filetable-functions-transact-sql.md)。  
   

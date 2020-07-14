@@ -1,5 +1,6 @@
 ---
 title: SQL Server 内存中 OLTP 内部组件
+description: 了解 SQL Server 内存中 OLTP 技术的实现，该技术将表声明为内存优化来实现内存中 OLTP 功能。
 ms.custom: seo-dt-2019
 ms.date: 09/14/2016
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: b14da361-a6b8-4d85-b196-7f2f13650f44
 author: jodebrui
 ms.author: jodebrui
-ms.openlocfilehash: d741f06741972637f7f9e6576a8dc5a21dabc681
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e13dc56d78a5305b8fb8221d5622d2cd49ade704
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412555"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734998"
 ---
 # <a name="sql-server-in-memory-oltp-internals-for-sql-server-2016"></a>SQL Server 2016 的 SQL Server 内存中 OLTP 内部组件
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 **摘要：** SQL Server 2014 中引入了内存中 OLTP，通常以其代号“Hekaton”相称。
 采用这种功能强大的技术，可以充分利用大量的内存以及几十个内核，将 OLTP 操作的性能提高 30 至 40 倍！ SQL Server 2016 消除了 SQL Server 2014 中发现的许多限制，继续投资于内存中 OLTP，同时增强内部处理算法，以便内存中 OLTP 可以实现更卓越的改进。 本文介绍了自 SQL Server 2016 RTM 起 SQL Server 2016 内存中 OLTP 技术的实施。 使用内存中 OLTP，可将表声明为“内存优化”，以启用内存中 OLTP 的功能。 内存优化表是完全事务性的，并可以通过 Transact-SQL 访问。 Transact-SQL 存储过程、触发器和标量 UDF 可编译为机器代码，以进一步提升内存优化表的性能。 该引擎专门针对高并发操作，不会发生阻塞。    
@@ -27,7 +28,7 @@ ms.locfileid: "74412555"
   
 **技术评审员：** Sunil Agarwal 和 Jos de Bruijn  
   
-**发布日期：** 2016 年 6 月  
+**发布时间：** 2016 年 6 月  
   
 **适用于：** SQL Server 2016  
   

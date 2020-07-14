@@ -24,16 +24,16 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ff70ad2a8aa50c0e4121a6a597b8e150d0f35a54
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 48dabb9e01a3b5dbddaa07cbe7534321207f1d0f
+ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82181088"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85834668"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 根据与源表联接的结果，对目标表运行插入、更新或删除操作。 例如，根据与另一个表的区别，在一个表中插入、更新或删除行，从而同步两个表。  
   
@@ -78,41 +78,12 @@ MERGE
     { [ <table_hint_limited> [ ,...n ] ]  
     [ [ , ] INDEX ( index_val [ ,...n ] ) ] }  
 }  
-  
-<table_source> ::=
-{  
-    table_or_view_name [ [ AS ] table_alias ] [ <tablesample_clause> ]
-        [ WITH ( table_hint [ [ , ]...n ] ) ]
-  | rowset_function [ [ AS ] table_alias ]
-        [ ( bulk_column_alias [ ,...n ] ) ]
-  | user_defined_function [ [ AS ] table_alias ]  
-  | OPENXML <openxml_clause>
-  | derived_table [ AS ] table_alias [ ( column_alias [ ,...n ] ) ]
-  | <joined_table>
-  | <pivoted_table>
-  | <unpivoted_table>
-}  
-  
+
 <merge_search_condition> ::=  
     <search_condition>  
   
 <merge_matched>::=  
     { UPDATE SET <set_clause> | DELETE }  
-  
-<set_clause>::=  
-SET  
-  { column_name = { expression | DEFAULT | NULL }  
-  | { udt_column_name.{ { property_name = expression  
-                        | field_name = expression }  
-                        | method_name ( argument [ ,...n ] ) }  
-    }  
-  | column_name { .WRITE ( expression , @Offset , @Length ) }  
-  | @variable = expression  
-  | @variable = column = expression  
-  | column_name { += | -= | *= | /= | %= | &= | ^= | |= } expression  
-  | @variable { += | -= | *= | /= | %= | &= | ^= | |= } expression  
-  | @variable = column { += | -= | *= | /= | %= | &= | ^= | |= } expression  
-  } [ ,...n ]
   
 <merge_not_matched>::=  
 {  
@@ -122,58 +93,7 @@ SET
 }  
   
 <clause_search_condition> ::=  
-    <search_condition>  
-  
-<search condition> ::=  
-    MATCH(<graph_search_pattern>) | <search_condition_without_match> | <search_condition> AND <search_condition>
-
-<search_condition_without_match> ::=
-    { [ NOT ] <predicate> | ( <search_condition_without_match> )
-    [ { AND | OR } [ NOT ] { <predicate> | ( <search_condition_without_match> ) } ]
-[ ,...n ]  
-
-<predicate> ::=
-    { expression { = | < > | ! = | > | > = | ! > | < | < = | ! < } expression
-    | string_expression [ NOT ] LIKE string_expression
-  [ ESCAPE 'escape_character' ]
-    | expression [ NOT ] BETWEEN expression AND expression
-    | expression IS [ NOT ] NULL
-    | CONTAINS
-  ( { column | * } , '< contains_search_condition >' )
-    | FREETEXT ( { column | * } , 'freetext_string' )
-    | expression [ NOT ] IN ( subquery | expression [ ,...n ] )
-    | expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
-  { ALL | SOME | ANY} ( subquery )
-    | EXISTS ( subquery ) }
-
-<graph_search_pattern> ::=
-    { <node_alias> {
-                      { <-( <edge_alias> )- }
-                    | { -( <edge_alias> )-> }
-                    <node_alias>
-                   }
-    }
-  
-<node_alias> ::=
-    node_table_name | node_table_alias
-
-<edge_alias> ::=
-    edge_table_name | edge_table_alias
-
-<output_clause>::=  
-{  
-    [ OUTPUT <dml_select_list> INTO { @table_variable | output_table }  
-        [ (column_list) ] ]  
-    [ OUTPUT <dml_select_list> ]  
-}  
-  
-<dml_select_list>::=  
-    { <column_name> | scalar_expression }
-        [ [AS] column_alias_identifier ] [ ,...n ]  
-  
-<column_name> ::=  
-    { DELETED | INSERTED | from_table_name } . { * | column_name }  
-    | $action  
+    <search_condition> 
 ```  
   
 ## <a name="arguments"></a>参数
@@ -189,30 +109,30 @@ TOP ( *expression* ) [ PERCENT ]
 由于 MERGE 语句对源表和目标表都进行完全表扫描，因此在使用 TOP 子句通过创建多个批处理来修改大型表时，I/O 性能有时会受到影响。 在这种情况下，请务必要确保所有连续批处理都以新行为目标。  
   
 *database_name*  
-target_table  所在数据库的名称。  
+target_table 所在数据库的名称。  
   
 *schema_name*  
-target_table  所属架构的名称。  
+target_table 所属架构的名称。  
   
 *target_table*  
 \<table_source> 中的数据行根据 \<clause_search_condition> 进行匹配的表或视图。 *target_table* 是由 MERGE 语句的 WHEN 子句指定的任何插入、更新或删除操作的目标。  
   
 如果 *target_table* 为视图，则针对它的任何操作都必须满足更新视图所需的条件。 有关详细信息，请参阅[通过视图修改数据](../../relational-databases/views/modify-data-through-a-view.md)。  
   
-target_table  不得是远程表。 target_table  不得有任何针对它定义的规则。  
+target_table 不得是远程表。 target_table 不得有任何针对它定义的规则。  
   
 [ AS ] *table_alias*  
 用于引用表的替代名称。  
   
 USING \<table_source>  
-指定根据 \<merge_search condition> 与 target_table  中的数据行进行匹配的数据源。 此匹配的结果指出了要由 MERGE 语句的 WHEN 子句采取的操作。 \<table_source> 可以是一个远程表，或者是一个能够访问远程表的派生表。
+指定根据 \<merge_search condition> 与 target_table 中的数据行进行匹配的数据源。 此匹配的结果指出了要由 MERGE 语句的 WHEN 子句采取的操作。 \<table_source> 可以是一个远程表，或者是一个能够访问远程表的派生表。
   
 \<table_source> 可以是一个派生表，它使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] [表值构造函数](../../t-sql/queries/table-value-constructor-transact-sql.md)通过指定多行来构造表。  
   
 有关此子句的语法和参数的详细信息，请参阅 [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)。  
   
 ON \<merge_search_condition>  
-指定联接 \<table_source> 与 target_table  以确定匹配位置所要满足的条件。
+指定联接 \<table_source> 与 target_table 以确定匹配位置所要满足的条件。
   
 > [!CAUTION]  
 > 请务必仅指定目标表中用于匹配目的的列。 也就是说，指定与源表中的对应列进行比较的目标表列。 请勿尝试通过在 ON 子句中筛选掉目标表中的行（如指定 `AND NOT target_table.column_x = value`）来提高查询性能。 这样做可能会返回意外和不正确的结果。  
@@ -220,15 +140,15 @@ ON \<merge_search_condition>
 WHEN MATCHED THEN \<merge_matched>  
 指定根据 \<merge_matched> 子句更新或删除 *target_table 中所有与 \<table_source> ON \<merge_search_condition> 返回的行匹配、且满足其他所有搜索条件的行。  
   
-MERGE 语句最多可以有两个 WHEN MATCHED 子句。 如果指定了两个子句，第一个子句必须随附 AND \<search_condition> 子句。 对于任何给定行，只有在未应用第一个 WHEN MATCHED 子句时，才会应用第二个 WHEN MATCHED 子句。 如果有两个 WHEN MATCHED 子句，一个必须指定 UPDATE 操作，另一个必须指定 DELETE 操作。 如果 \<merge_matched> 子句中指定的是 UPDATE，且根据 \<merge_search_condition> \<table_source> 中有多行与 target_table  中的一行匹配，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 便会返回错误。 MERGE 语句无法多次更新同一行，也无法更新和删除同一行。  
+MERGE 语句最多可以有两个 WHEN MATCHED 子句。 如果指定了两个子句，第一个子句必须随附 AND \<search_condition> 子句。 对于任何给定行，只有在未应用第一个 WHEN MATCHED 子句时，才会应用第二个 WHEN MATCHED 子句。 如果有两个 WHEN MATCHED 子句，一个必须指定 UPDATE 操作，另一个必须指定 DELETE 操作。 如果 \<merge_matched> 子句中指定的是 UPDATE，且根据 \<merge_search_condition> \<table_source> 中有多行与 target_table 中的一行匹配，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 便会返回错误。 MERGE 语句无法多次更新同一行，也无法更新和删除同一行。  
   
 WHEN NOT MATCHED [ BY TARGET ] THEN \<merge_not_matched>  
-指定针对 \<table_source> ON \<merge_search_condition> 返回且不与 target_table  中的行匹配、但满足其他搜索条件（若有）的所有行，将一行插入 target_table  中。 要插入的值是由 \<merge_not_matched> 子句指定的。 MERGE 语句只能有一个 WHEN NOT MATCHED [ BY TARGET ] 子句。
+指定针对 \<table_source> ON \<merge_search_condition> 返回且不与 target_table 中的行匹配、但满足其他搜索条件（若有）的所有行，将一行插入 target_table 中。 要插入的值是由 \<merge_not_matched> 子句指定的。 MERGE 语句只能有一个 WHEN NOT MATCHED [ BY TARGET ] 子句。
 
 WHEN NOT MATCHED BY SOURCE THEN \<merge_matched>  
-指定根据 \<merge_matched> 子句更新或删除 *target_table 中所有不与 \<table_source> ON \<merge_search_condition> 返回的行匹配、但满足其他所有搜索条件的行。  
+指定根据 \<merge_matched> 子句更新或删除 *target_table 中所有与 \<table_source> ON \<merge_search_condition> 返回的行不匹配而满足其他所有搜索条件的行。  
   
-MERGE 语句最多可以有两个 WHEN NOT MATCHED BY SOURCE 子句。 如果指定了两个子句，则第一个子句必须同时带有一个 AND \<clause_search_condition> 子句。 对于任何给定行，只有在未应用第一个 WHEN NOT MATCHED BY SOURCE 子句时，才会应用第二个 WHEN NOT MATCHED BY SOURC 子句。 如果有两个 WHEN NOT MATCHED BY SOURCE 子句，那么其中的一个必须指定 UPDATE 操作，而另一个必须指定 DELETE 操作。 在 \<clause_search_condition> 中只能引用目标表中的列。  
+MERGE 语句最多可以有两个 WHEN NOT MATCHED BY SOURCE 子句。 如果指定了两个子句，第一个子句必须随附 AND \<clause_search_condition> 子句。 对于任何给定行，只有在未应用第一个 WHEN NOT MATCHED BY SOURCE 子句时，才会应用第二个 WHEN NOT MATCHED BY SOURC 子句。 如果有两个 WHEN NOT MATCHED BY SOURCE 子句，那么其中的一个必须指定 UPDATE 操作，而另一个必须指定 DELETE 操作。 在 \<clause_search_condition> 中只能引用目标表中的列。  
   
 如果 \<table_source> 未返回任何行，无法访问源表中的列。 如果 \<merge_matched> 子句中指定的更新或删除操作引用了源表中的列，则会返回错误 207（列名无效）。 例如，由于无法访问源表中的 `WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = SourceTable.Col1`，因此 `Col1` 子句可能导致该语句失败。  
   
@@ -249,13 +169,13 @@ INDEX ( index_val [，...n ] )
 指定目标表上一个或多个索引的名称或 ID，以执行与源表的隐式联接。 有关详细信息，请参阅[表提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md)。  
   
 \<output_clause>  
-针对 *target_table* 中不按照任何特定顺序更新、插入或删除的所有行返回一行。 **$action** 可在 output 子句中指定。 $action 是类型为 nvarchar(10) 的列，它返回每一行中 3 个值中的一个   ：“INSERT”、“UPDATE”或“DELETE”（具体视对相应行完成的操作而定）。 有关该子句的参数和行为的详细信息，请参阅 [OUTPUT 子句 (Transact-SQL)](../../t-sql/queries/output-clause-transact-sql.md)。  
+针对 *target_table* 中不按照任何特定顺序更新、插入或删除的所有行返回一行。 **$action** 可在 output 子句中指定。 $action 是类型为 nvarchar(10) 的列，它返回每一行中 3 个值中的一个 ：“INSERT”、“UPDATE”或“DELETE”（具体视对相应行完成的操作而定）。 有关该子句的参数和行为的详细信息，请参阅 [OUTPUT 子句 (Transact-SQL)](../../t-sql/queries/output-clause-transact-sql.md)。  
   
 OPTION ( \<query_hint> [ ,...n ] )  
 指定使用优化器提示来自定义数据库引擎处理语句的方式。 有关详细信息，请参阅[查询提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)。  
   
 \<merge_matched>  
-指定更新或删除操作，应用于 target_table  中所有不与 \<table_source> ON \<merge_search_condition> 返回的行匹配、但满足其他所有搜索条件的行。  
+指定更新或删除操作，应用于 target_table 中所有不与 \<table_source> ON \<merge_search_condition> 返回的行匹配、但满足其他所有搜索条件的行。  
   
 UPDATE SET \<set_clause>  
 指定目标表中要更新的列或变量名称的列表，以及用来更新它们的值。  
@@ -269,7 +189,7 @@ DELETE
 指定要插入到目标表中的值。  
   
 (*column_list*)  
-要在其中插入数据的目标表中一个或多个列的列表。 必须使用单一部分名称格式来指定这些列，否则 MERGE 语句将失败。 必须用括号将 column_list 括起来，并且用逗号进行分隔  。  
+要在其中插入数据的目标表中一个或多个列的列表。 必须使用单一部分名称格式来指定这些列，否则 MERGE 语句将失败。 必须用括号将 column_list 括起来，并且用逗号进行分隔。  
   
 VALUES ( *values_list*)  
 返回要插入到目标表中的值的常量、变量或表达式的逗号分隔列表。 表达式不得包含 EXECUTE 语句。  
@@ -279,7 +199,7 @@ DEFAULT VALUES
   
 有关此子句的详细信息，请参阅 [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)。  
   
-\<search condition>  
+\<search_condition>  
 指定用于指定 \<merge_search_condition> 或 \<clause_search_condition> 的搜索条件。 有关此子句的参数的详细信息，请参阅[搜索条件 (Transact-SQL)](../../t-sql/queries/search-condition-transact-sql.md)。  
 
 \<graph search pattern>  
@@ -297,7 +217,7 @@ MERGE 语句需要一个分号 (;) 作为语句终止符。 如果运行没有�
   
 在数据库兼容级别设置为 100 或更高时，MERGE 为完全保留的关键字。 MERGE 语句可用于设置为 90 和 100 的数据库兼容性级别；不过，当数据库兼容性级别设置为 90 时，关键字不是完全保留。  
   
-使用已排入队列的更新复制时，请勿使用 MERGE  语句。 MERGE  和已排入队列的更新触发器不兼容。 使用 insert 或 update 语句替换 **MERGE** 语句。  
+使用已排入队列的更新复制时，请勿使用 MERGE 语句。 MERGE 和已排入队列的更新触发器不兼容。 使用 insert 或 update 语句替换 **MERGE** 语句。  
   
 ## <a name="trigger-implementation"></a>触发器的实现
 
@@ -305,9 +225,9 @@ MERGE 语句需要一个分号 (;) 作为语句终止符。 如果运行没有�
   
 如果目标表已针对 MERGE 语句完成的插入、更新或删除操作启用了对自己定义的 INSTEAD OF 触发器，它必须已针对 MERGE 语句中指定的所有操作启用了 INSTEAD OF 触发器。  
   
-如果对 target_table  定义了任何 INSTEAD OF UPDATE 或 INSTEAD OF DELETE 触发器，则不会运行更新或删除操作。 而是会触发触发器，并相应地填充 inserted  和 deleted  表。  
+如果对 target_table 定义了任何 INSTEAD OF UPDATE 或 INSTEAD OF DELETE 触发器，则不会运行更新或删除操作。 而是会触发触发器，并相应地填充 inserted 和 deleted 表。  
   
-如果对 target_table  定义了任何 INSTEAD OF INSERT 触发器，则不会执行插入操作。 而是相应地填充表。  
+如果对 target_table 定义了任何 INSTEAD OF INSERT 触发器，则不会执行插入操作。 而是相应地填充表。  
   
 ## <a name="permissions"></a>权限
 

@@ -1,25 +1,24 @@
 ---
 title: 通过扩展性添加其他功能
-titleSuffix: Azure Data Studio
 description: 了解用于扩展 Azure Data Studio 功能的扩展性模型和关键扩展性区域
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 8ca24836766307584c43e1636bb33f5bd198f585
-ms.sourcegitcommit: 1f9fc7402b00b9f35e02d5f1e67cad2f5e66e73a
+ms.openlocfilehash: 6409dd44381b1d927b07f8ecee043465eacdd14e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82107888"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774652"
 ---
-# <a name="getting-started-with-name-sos-extensibility"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)] 扩展性入门
+# <a name="azure-data-studio-extensibility"></a>Azure Data Studio 扩展性
 
-[!INCLUDE[name-sos](../includes/name-sos.md)] 具有多种扩展性机制，可以自定义用户体验并使这些自定义项可供整个用户社区使用。 核心 [!INCLUDE[name-sos](../includes/name-sos.md)] 平台基于 Visual Studio Code 构建，因此大多数 Visual Studio Code 扩展性 API 都可用。 此外，我们还为特定于数据管理的活动提供了额外的扩展点。
+Azure Data Studio 具有多种扩展性机制，可以自定义用户体验并使这些自定义项可供整个用户社区使用。 核心 Azure Data Studio 平台基于 Visual Studio Code 构建，因此大多数 Visual Studio Code 扩展性 API 都可用。 此外，我们还为特定于数据管理的活动提供了额外的扩展点。
 
 下面是一些关键扩展点：
 
@@ -32,7 +31,7 @@ ms.locfileid: "82107888"
 
 ## <a name="visual-studio-code-extensibility-apis"></a>Visual Studio Code 扩展性 API
 
-由于核心 [!INCLUDE[name-sos](../includes/name-sos.md)] 平台是基于 Visual Studio Code 构建的，因此，Visual Studio Code 网站上的[扩展创作](https://code.visualstudio.com/docs/extensions/overview)和[扩展 API](https://code.visualstudio.com/docs/extensionAPI/overview) 文档中提供了有关 Visual Studio Code 扩展性 API 的详细信息。
+由于核心 Azure Data Studio 平台是基于 Visual Studio Code 构建的，因此，Visual Studio Code 网站上的[扩展创作](https://code.visualstudio.com/docs/extensions/overview)和[扩展 API](https://code.visualstudio.com/docs/extensionAPI/overview) 文档中提供了有关 Visual Studio Code 扩展性 API 的详细信息。
 
 ## <a name="manage-dashboard-tab-panel-contributions"></a>管理仪表板选项卡面板贡献
 

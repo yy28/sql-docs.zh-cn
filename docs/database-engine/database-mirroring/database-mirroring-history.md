@@ -1,5 +1,6 @@
 ---
 title: 数据库镜像历史记录 | Microsoft Docs
+description: 了解如何在 SQL Server Management Studio 中查看位于指定服务器实例中的镜像数据库的镜像状态历史记录。
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: 1d6e4b10-4a23-47d7-9918-c417992f09d3
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 329eda4ba3c0bdabc355242d626a3d0ac89e6033
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d2fd21c91577d2e2db1773bbbcbff942842cf043
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006431"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751894"
 ---
 # <a name="database-mirroring-history"></a>数据库镜像历史记录
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   使用该对话框可以查看位于指定服务器实例中的镜像数据库的镜像状态历史记录。  
   
  **使用 SQL Server Management Studio 监视数据库镜像**  
@@ -73,7 +74,7 @@ ms.locfileid: "68006431"
 |**镜像状态**|数据库的状态：<br /><br /> 已断开连接<br /><br /> 正在挂起故障转移<br /><br /> Suspended<br /><br /> 已同步<br /><br /> 正在同步<br /><br /> 未知|  
 |**见证服务器连接**|见证服务器连接在数据库镜像会话中的状态，即连接或已断开连接。 如果没有见证服务器，则该值为 NULL。|  
 |**未发送日志**|主体服务器实例上的发送队列中的未发送日志的大小（以 KB 计）。|  
-|**发送时间**|主体服务器实例将当前位于发送队列中的日志发送到镜像服务器实例所需的近似时间量（发送速率  ）。 由于传入事务的速率变化很大，因此发送日志的时间只是一个估计值。 但是，发送速率对于粗略估计手动故障转移所需的时间非常有用。|  
+|**发送时间**|主体服务器实例将当前位于发送队列中的日志发送到镜像服务器实例所需的近似时间量（发送速率）。 由于传入事务的速率变化很大，因此发送日志的时间只是一个估计值。 但是，发送速率对于粗略估计手动故障转移所需的时间非常有用。|  
 |**发送速率**|将事务发送到镜像服务器实例的速率（以 KB/秒计）。|  
 |**新事务速率**|将传入事务输入到主体服务器日志的速率（以 KB/秒计）。 若要判断镜像是否落后、停滞或赶上，可将值与 **“发送时间”** 值进行比较。|  
 |**最早的未发送事务**|发送队列中最早的未发送事务的保留时间。 事务保留时间指示在将事务发送到镜像服务器实例之前将其保留的分钟数。 该值有助于测量数据丢失的可能性（以时间计）。|  

@@ -1,5 +1,6 @@
 ---
 title: 连接到其他计算机（SQL Server 配置管理器）| Microsoft Docs
+description: 了解如何管理远程计算机的服务。 了解如何使用 SQL Server 配置管理器或 SQL Server Management Studio 执行此任务。
 ms.custom: ''
 ms.date: 11/19/2019
 ms.prod: sql
@@ -10,18 +11,18 @@ ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server], other computers
 ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 03f409e11e037fcc406940d5a97e9934a77b96b4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e4a2ca1eea0ec4b42bba65b62525bb6d86e52c88
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74249757"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85651347"
 ---
 # <a name="scm-services---connect-to-another-computer"></a>SCM 服务 - 连接到其他计算机
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 本文介绍如何连接到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的另一台计算机。 按照第一个过程执行操作，打开 Windows 的“计算机管理” [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理控制台 (mmc)，连接到该计算机，然后展开“服务和应用程序”树。 遵循第二个过程，创建一个包含到远程计算机中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器的链接的文件。
 
@@ -34,11 +35,11 @@ ms.locfileid: "74249757"
 
 ### <a name="to-connect-to-another-computer-with-windows-computer-management"></a>使用 Windows 的“计算机管理”连接到另一台计算机
 
-1. 右键单击“开始”菜单按钮，然后单击“计算机管理 (本地)”   。
-2. 在“操作”菜单上，单击“连接到另一台计算机”   。
+1. 右键单击“开始”菜单按钮，然后单击“计算机管理 (本地)” 。
+2. 在“操作”菜单上，单击“连接到另一台计算机” 。
 3. 在 **“选择计算机”** 对话框中的 **“另一台计算机”** 文本框中，键入想要管理的计算机名，然后单击 **“确定”** 。
 
-   “计算机管理”将显示运行在远程计算机上的服务。 顶层节点更改为“计算机管理 **远程计算机>”** \<  。
+   “计算机管理”将显示运行在远程计算机上的服务。 顶级节点更改为“计算机管理 \<*remotecomputer*>”。
 
 4. 在控制台树中，依次展开 **“服务和应用程序”** 、 **“SQL Server 配置管理器”** 来管理远程计算机的服务。
 
@@ -46,17 +47,17 @@ ms.locfileid: "74249757"
 
 1. 在 **“开始”** 菜单上，单击 **“运行”** 。
 
-2. 在“打开”框中，键入 mmc -a（在 64 位计算机上键入 mmc /32 -a），以作者模式打开 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理控制台。
-3. 在“文件”  菜单上，单击“添加/删除管理单元”  。
-4. 在“添加/删除管理单元”  窗口中，单击“添加”  。
-5. 在“添加独立管理单元”  窗口中，单击“计算机管理”  ，再单击“添加”  。
+2. 在“打开”框中，键入 mmc -a（在 64 位计算机上键入 mmc /32 -a），以作者模式打开 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理控制台  。
+3. 在“文件”  菜单上，单击“添加/删除管理单元” 。
+4. 在“添加/删除管理单元”  窗口中，单击“添加” 。
+5. 在“添加独立管理单元”  窗口中，单击“计算机管理”  ，再单击“添加” 。
 6. 在 **“计算机管理”** 窗口中，单击 **“其他计算机”** ，键入要管理的远程计算机的名称，再单击 **“完成”** 。
-7. 在“添加单独管理单元”  窗口中，单击“关闭”  。
-8. 在“添加/删除管理单元”  窗口中，单击“确定”  。
-9. 依次展开“计算机管理（\<计算机名称>）”和“服务和应用程序”。
-10. 右键单击“SQL Server 配置管理器”  ，再单击“从此处新建窗口”  。
-11. 在“窗口”菜单上，单击“控制台根节点”，切换回第一个窗口，并删除该窗口   。
-12. 在“文件”  菜单上，单击“另存为”  ，使用文件扩展名为 **.msc** 的相应文件名将文件保存到目标文件夹。 关闭 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理控制台。
+7. 在“添加单独管理单元”  窗口中，单击“关闭” 。
+8. 在“添加/删除管理单元”  窗口中，单击“确定” 。
+9. 依次展开“计算机管理(\<computer name>)”和“服务和应用程序” 。
+10. 右键单击“SQL Server 配置管理器” ，再单击“从此处新建窗口” 。
+11. 在“窗口”菜单上，单击“控制台根节点”，切换回第一个窗口，并删除该窗口 。
+12. 在“文件”  菜单上，单击“另存为” ，使用文件扩展名为 **.msc** 的相应文件名将文件保存到目标文件夹。 关闭 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理控制台。
 13. 若要打开目标计算机中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器，请双击此文件。 如果需要，则在桌面上或 **“开始”** 菜单中保存到此文件的链接。
 
 > [!CAUTION]

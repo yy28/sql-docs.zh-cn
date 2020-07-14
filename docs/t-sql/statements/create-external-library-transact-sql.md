@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL LIBRARY (Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2019
+ms.date: 06/10/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: machine-learning
@@ -18,28 +18,29 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 manager: cgronlund
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-current||=sqlallproducts-allversions'
-ms.openlocfilehash: cb698f95037cb6ab39c5a98dbf725f9decc66cd0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 56b15b96bf6f54ea2d58569afedacb9027e3b367
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73536249"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735831"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
-
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-
-从指定的字节流或文件路径上传 R、Python 或 Java 包文件至数据库。 此语句充当一种通用机制，可供数据库管理员上传任何新的外部语言运行时和 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 支持的 OS 平台所需的项目。 
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||sqlallproducts-allversions"
+从指定的字节流或文件路径上传 R、Python 或 Java 包文件至数据库。 此语句充当一种通用机制，可供数据库管理员上传任何新的外部语言运行时和 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 支持的 OS 平台所需的项目。 
+
 > [!NOTE]
 > 在 SQL Server 2017 中，支持 R 语言和 Windows 平台。 SQL Server 2019 及更高版本支持 Windows 和 Linux 平台上的 R、Python 和外部语言。
 ::: moniker-end
 
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+从指定的字节流或文件路径上传 R 或 Python 包文件至数据库。 此语句充当数据库管理员上传所需项目的通用机制。 
+
 > [!NOTE]
-> 在 Azure SQL 数据库中，可以使用 sqlmlutils 来安装库  。 有关详细信息，请参阅[使用 sqlmlutils 添加包](/azure/sql-database/sql-database-machine-learning-services-add-r-packages#add-a-package-with-sqlmlutils)。
+> 在 Azure SQL 托管实例中，可以使用 sqlmlutils 安装库。 有关详细信息，请参阅[使用 sqlmlutils 安装 Python 包](https://docs.microsoft.com/sql/machine-learning/package-management/install-additional-python-packages-on-sql-server?context=/azure/azure-sql/managed-instance/context/ml-context&view=azuresqldb-mi-current)和[使用 sqlmlutils 安装新的 R 包](https://docs.microsoft.com/sql/machine-learning/package-management/install-additional-r-packages-on-sql-server?context=%2Fazure%2Fazure-sql%2Fmanaged-instance%2Fcontext%2Fml-context&view=azuresqldb-mi-current)。
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
@@ -113,14 +114,14 @@ WITH ( LANGUAGE = 'R' )
 ```
 ::: moniker-end
 
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
-## <a name="syntax-for-azure-sql-database"></a>Azure SQL 数据库的语法
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+## <a name="syntax-for-azure-sql-managed-instance"></a>Azure SQL 托管实例的语法
 
 ```text
 CREATE EXTERNAL LIBRARY library_name  
 [ AUTHORIZATION owner_name ]  
 FROM <file_spec> [ ,...2 ]  
-WITH ( LANGUAGE = 'R' )  
+WITH ( LANGUAGE = <language> )  
 [ ; ]  
 
 <file_spec> ::=  
@@ -133,6 +134,12 @@ WITH ( LANGUAGE = 'R' )
       varbinary_literal 
     | varbinary_expression 
 }
+
+<language> :: = 
+{
+      'R'
+    | 'Python'
+}
 ```
 ::: moniker-end
 
@@ -140,7 +147,7 @@ WITH ( LANGUAGE = 'R' )
 
 **library_name**
 
-将库添加到作用域为该用户的数据库中。 在特定用户或所有者的上下文中，库名称必须是唯一的。 例如，两个用户 RUser1 和 RUser2 可以分别独立上传 R 库 `ggplot2`。 不过，如果 RUser1  要上传新版 `ggplot2`，第二个实例要么必须以不同方式命名，要么必须替换现有库。 
+将库添加到作用域为该用户的数据库中。 在特定用户或所有者的上下文中，库名称必须是唯一的。 例如，两个用户 RUser1 和 RUser2 可以分别独立上传 R 库 `ggplot2` 。 不过，如果 RUser1 要上传新版 `ggplot2`，第二个实例要么必须以不同方式命名，要么必须替换现有库。 
 
 不能随意分配库名称；库名称应与在外部脚本中加载库时所需的名称相同。
 
@@ -150,7 +157,7 @@ WITH ( LANGUAGE = 'R' )
 
 对于数据库和运行时，数据库所有者所拥有的库均视为全局性的库。 换言之，数据库所有者可以创建库，而这些库包含一组由许多用户共享的公共库或包。 当由用户而不是 `dbo` 用户创建外部库时，该外部库便由该用户专用。
 
-当用户 **RUser1** 执行外部脚本时，`libPath` 值可包含多个路径。 第一个路径始终为数据库所有者创建的共享库的路径。 `libPath` 的第二部分指定包含由 RUser1 单独上传的包的路径  。
+当用户 **RUser1** 执行外部脚本时，`libPath` 值可包含多个路径。 第一个路径始终为数据库所有者创建的共享库的路径。 `libPath` 的第二部分指定包含由 RUser1 单独上传的包的路径。
 
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 **file_spec**
@@ -159,7 +166,7 @@ WITH ( LANGUAGE = 'R' )
 
 可以是以本地路径或网络路径的形式指定的文件。
 
-尝试访问 <client_assembly_specifier> 中指定的程序集时，SQL Server 会模拟当前 Windows 登录的安全上下文  。 如果 <client_assembly_specifier> 指定了网络位置（UNC 路径），则由于委托限制，当前登录名的模拟将不应用于网络位置  。 在这种情况下，将使用 SQL Server 服务帐户的安全上下文进行访问。 有关详细信息，请参阅[凭据（数据库引擎）](../../relational-databases/security/authentication-access/credentials-database-engine.md)。
+尝试访问 <client_assembly_specifier> 中指定的程序集时，SQL Server 会模拟当前 Windows 登录的安全上下文。 如果 <client_assembly_specifier> 指定了网络位置（UNC 路径），则由于委托限制，当前登录名的模拟将不应用于网络位置。 在这种情况下，将使用 SQL Server 服务帐户的安全上下文进行访问。 有关详细信息，请参阅[凭据（数据库引擎）](../../relational-databases/security/authentication-access/credentials-database-engine.md)。
 
 还可以为文件指定一个 OS 平台。 针对特定语言或运行时，每个 OS 平台只允许一个文件项目或内容。
 ::: moniker-end
@@ -170,7 +177,7 @@ WITH ( LANGUAGE = 'R' )
 
 如果需要创建库或更改现有库（并具有执行此操作的所需权限），但服务器上的文件系统受限，无法将库文件复制到服务器可以访问的位置，此选项会非常有用。
 
-::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 **PLATFORM = WINDOWS**
 
 为库的内容指定平台。 该值默认为正在运行 SQL Server 的主机平台。 因此，用户不需要指定该值。 如果支持多个平台或用户需要指定不同的平台，则需要此值。
@@ -184,18 +191,16 @@ WITH ( LANGUAGE = 'R' )
 在 SQL Server 2019 中，Windows 和 Linux 是受支持的平台。
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 **LANGUAGE = 'R'**
 
-指定包的语言。
-SQL Server 2017 中支持 R。
+指定包的语言。 SQL Server 2017 中支持 R。
 ::: moniker-end
 
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
-**LANGUAGE = 'R'**
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+**language**
 
-指定包的语言。
-Azure SQL 数据库中支持 R。
+指定包的语言。 在 Azure SQL 托管实例中，该值可以为 `R` 或 `Python`。
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
@@ -223,7 +228,7 @@ Azure SQL 数据库中支持 R。
 
 ## <a name="permissions"></a>权限
 
-需要 `CREATE EXTERNAL LIBRARY` 权限。 默认情况下，dbo  用户或担任 db_owner  角色的任何成员都有权创建外部库。 对于其他所有用户，必须使用 [GRANT](https://docs.microsoft.com/sql/t-sql/statements/grant-database-permissions-transact-sql) 语句显式授予他们权限，同时将 CREATE EXTERNAL LIBRARY 指定为特权。
+需要 `CREATE EXTERNAL LIBRARY` 权限。 默认情况下，dbo 用户或担任 db_owner 角色的任何成员都有权创建外部库。 对于其他所有用户，必须使用 [GRANT](https://docs.microsoft.com/sql/t-sql/statements/grant-database-permissions-transact-sql) 语句显式授予他们权限，同时将 CREATE EXTERNAL LIBRARY 指定为特权。
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 在 SQL Server 2019 中，除了“CREATE EXTERNAL LIBRARY”权限之外，用户还需要外部语言的引用权限才能为该外部语言创建外部库。
@@ -266,7 +271,7 @@ EXEC sp_execute_external_script
 
 ### <a name="installing-packages-with-dependencies"></a>安装具有依赖项的包
 
-如果想要安装的包有任何依赖项，务必要分析第一级和第二级依赖项，并在尝试安装目标包之前，确保所需的所有包都可用  。
+如果想要安装的包有任何依赖项，务必要分析第一级和第二级依赖项，并在尝试安装目标包之前，确保所需的所有包都可用。
 
 例如，假设想要安装新包 `packageA`：
 
@@ -275,7 +280,7 @@ EXEC sp_execute_external_script
 
 若要成功安装 `packageA`，则必须在将 `packageA` 添加到 SQL Server 的同时为 `packageB` 和 `packageC` 创建库。 同时请务必检查所需的包版本。
 
-在实践中，常用包的依赖项通常比简单示例复杂得多。 例如，ggplot2  可能需要超过 30 个包，而这些包可能还需要服务器上没有的其他包。 任何缺少的包或错误的包版本都可能会导致安装失败。
+在实践中，常用包的依赖项通常比简单示例复杂得多。 例如，ggplot2 可能需要超过 30 个包，而这些包可能还需要服务器上没有的其他包。 任何缺少的包或错误的包版本都可能会导致安装失败。
 
 由于仅通过查看程序包清单可能很难确定所有依赖项，因此建议使用 [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) 等包，以标识成功完成安装可能需要的所有包。
 

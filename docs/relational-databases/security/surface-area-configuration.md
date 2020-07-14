@@ -1,5 +1,6 @@
 ---
 title: 外围应用配置器 | Microsoft Docs
+description: 了解如何更改 SQL Server 安装的功能默认设置以及如何有选择地启用或禁用 SQL Server 的运行实例的功能。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: f741169c-1453-4ad2-830b-bf2be27d712f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d366634dcfc81fc62dded3205320fca53b193b52
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6ad0881cbc1c00bdebdd9244b56007ed51a66b86
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68127066"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736993"
 ---
 # <a name="surface-area-configuration"></a>Surface Area Configuration
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   在新安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的默认配置中，许多功能并未启用。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 只是有选择地安装和启动关键服务和功能，以最大限度地减少可能受到恶意用户攻击的功能数。 系统管理员可以在安装时更改这些设置，也可以有选择地启用或禁用运行中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的功能。 此外，如果从其他计算机进行连接，则在配置协议之前某些组件可能不可用。  
   
 > [!NOTE]  
@@ -40,7 +41,7 @@ ms.locfileid: "68127066"
   
     -   使用 **“SQL Server 服务”** 区域可以启动组件并配置自动启动选项。  
   
-    -   使用“SQL Server 网络配置”  区域可以启用连接协议和连接选项（如，TCP/IP 固定端口或强制加密）。  
+    -   使用“SQL Server 网络配置”区域可以启用连接协议和连接选项（如，TCP/IP 固定端口或强制加密）。  
   
  有关详细信息，请参阅 [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)。 此外，远程连接还取决于是否对防火墙进行了正确配置。 有关详细信息，请参阅 [配置 Windows 防火墙以允许 SQL Server 访问](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  
   
@@ -51,9 +52,9 @@ ms.locfileid: "68127066"
   
 1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的组件。  
   
-2.  在对象资源管理器中，右键单击服务器，然后单击“方面”  。  
+2.  在对象资源管理器中，右键单击服务器，然后单击“方面”。  
   
-3.  在“查看方面”  对话框中，展开“方面”  列表，然后选择相应的“外围应用配置器”  方面（“外围应用配置器”  、“Analysis Services 的外围应用配置器”  或“Reporting Services 的外围应用配置器”  ）。  
+3.  在“查看方面”对话框中，展开“方面”列表，然后选择相应的“外围应用配置器”方面（“外围应用配置器”、“Analysis Services 的外围应用配置器”或“Reporting Services 的外围应用配置器”）。  
   
 4.  在 **“方面属性”** 区域，选择要用于每个属性的值。  
   

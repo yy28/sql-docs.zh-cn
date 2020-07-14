@@ -1,5 +1,6 @@
 ---
 title: 加载 XML 数据 | Microsoft Docs
+description: 了解将 XML 数据传输到 SQL Server 数据库中的几种方法。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: d1741e8d-f44e-49ec-9f14-10208b5468a7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c30b896ca36d84866244553d6420db8c66287f59
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 01790e4eacf793926725770f980c8194013a155a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665134"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738407"
 ---
 # <a name="load-xml-data"></a>加载 XML 数据
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   您可以采用多种方式将 XML 数据传输到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中。 例如：  
   
 -   如果您的数据位于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的 [n]text 或 image 列中，则可以使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]导入表。 使用 ALTER TABLE 语句将列类型更改为 XML。  

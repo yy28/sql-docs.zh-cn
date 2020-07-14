@@ -9,12 +9,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ce461246f0afef31ab4b60b772f92aeeb479a4cb
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: 11e29a27597b7710ab38497a0b862aed9b65b404
+ms.sourcegitcommit: f66804e93cf4a7624bfa10168edbf1ed9a83cb86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606866"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83868435"
 ---
 # <a name="microsoft-connector-for-oracle"></a>Microsoft Connector for Oracle
 
@@ -27,7 +27,8 @@ ms.locfileid: "83606866"
 Microsoft Connector for Oracle 支持以下 Microsoft SQL Server 产品：
 
 - SQL Server 2019 CU1 及更高版本
-- 15.9.3 版本以后的 SQL Server Data Tools (SSDT)
+- 适用于 Visual Studio 2017 的 SQL Server Data Tools (SSDT) 15.9.3 或更高版本
+- 适用于 Visual Studio 2019 的 Microsoft SQL Server Data Tools (SSDT)
 
 支持以下 Oracle Database 版本的数据源：
 

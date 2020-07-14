@@ -1,5 +1,6 @@
 ---
 title: 更改本机编译的 T-SQL 模块 | Microsoft Docs
+description: 了解如何在 SQL Server 和 Azure SQL 数据库中对本机编译的存储过程和本机编译的 Transact-SQL 模块执行 ALTER 操作。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,21 +12,21 @@ ms.assetid: 010318a0-6807-47c3-8ecc-bb7cb60513f0
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6979d05d29b151a34edfe1c220c9d9a4d3046359
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1a91880504a74a7fae9d98018b31994ded63199c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73983007"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85668539"
 ---
 # <a name="altering-natively-compiled-t-sql-modules"></a>Altering Natively Compiled T-SQL Modules
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，可以使用 `ALTER` 语句在本机编译的存储过程和其他本机编译的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 模块上（如标量 UDF 和触发器）执行 `ALTER` 操作。  
   
 在对本机编译的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 模块执行 `ALTER` 时，系统会使用新定义重新编译模块。 在重新编译期间，旧版模块仍可继续执行。 在编译完成后，系统将阻止旧版模块的运行，并安装新版模块。 在更改本机编译的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 模块时，你可以修改以下选项。  
   
--   parameters  
+-   参数  
 -   EXECUTE AS  
 -   TRANSACTION ISOLATION LEVEL  
 -   LANGUAGE  

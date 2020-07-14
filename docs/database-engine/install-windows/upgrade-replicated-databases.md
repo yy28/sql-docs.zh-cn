@@ -1,5 +1,6 @@
 ---
 title: 升级或修补复制的数据库 | Microsoft Docs
+description: SQL Server 支持从以前版本的 SQL Server 升级复制的数据库，无需停止其他节点上的活动。
 ms.custom: ''
 ms.date: 07/24/2016
 ms.prod: sql
@@ -16,16 +17,16 @@ ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 46156a9e7b1180d5ed70f0dbcb6b25d2f608f0fc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0c2d6d5fc367e66b7a5ca84e2d1c290203f61b8d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72008463"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900222"
 ---
 # <a name="upgrade-or-patch-replicated-databases"></a>升级或修补复制的数据库
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   
   [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] 支持从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本升级复制数据库；在升级某一节点时，不需要停止其他节点的活动。 请务必遵守有关拓扑中支持哪些版本的规则：  
   
@@ -120,7 +121,7 @@ SQL Server 的升级路径因部署模式而异。 SQL Server 一般情况下提
 
 
   >[!NOTE]
-  > 为了减少停机时间，我们建议将分发服务器的“并行迁移”作为一个活动执行，将“就地升级到 SQL Server 2016”作为另一个活动执行   。 这样，可通过分阶段方法来降低风险和尽量减少停机时间。
+  > 为了减少停机时间，我们建议将分发服务器的“并行迁移”作为一个活动执行，将“就地升级到 SQL Server 2016”作为另一个活动执行 。 这样，可通过分阶段方法来降低风险和尽量减少停机时间。
 
 ## <a name="web-synchronization-for-merge-replication"></a>合并复制的 Web 同步  
  合并复制的 Web 同步选项要求将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制侦听器 (replisapi.dll) 复制到用于同步的 Internet Information Services (IIS) 服务器上的虚拟目录中。 配置 Web 同步时，该文件被配置 Web 同步向导复制到虚拟目录中。 若要升级安装在 IIS 服务器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件，必须将 replisapi.dll 从 COM 目录手动复制到 IIS 服务器上的虚拟目录。 有关配置 Web 同步的详细信息，请参阅 [配置 Web 同步](../../relational-databases/replication/configure-web-synchronization.md)。  

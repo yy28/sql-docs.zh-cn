@@ -1,78 +1,169 @@
 ---
-title: 使用 Azure Key Vault 设置 TDE 可扩展密钥管理
-description: 介绍为 Azure Key Vault 安装和配置 SQL Server 连接器的步骤。
+title: 使用 Azure 密钥保管库设置透明数据加密 (TDE) 可扩展密钥管理
+description: 为 Azure 密钥保管库安装和配置 SQL Server 连接器。
 ms.custom: seo-lt-2019
-ms.date: 09/12/2019
+ms.date: 06/15/2020
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
+- Extensible Key Management
 - EKM, with key vault setup
 - SQL Server Connector, setup
 - SQL Server Connector
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
-author: jaszymas
-ms.author: jaszymas
-ms.openlocfilehash: 1ccffc653225645de94355707ae2116982d2deb4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: f0be0697b0820b2d134e69742a7ffc50048b94e7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75557422"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883047"
 ---
-# <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>使用 Azure Key Vault 的 SQL Server TDE 可扩展密钥管理 - 安装步骤
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="set-up-sql-server-tde-extensible-key-management-by-using-azure-key-vault"></a>使用 Azure 密钥保管库设置 SQL Server TDE 可扩展密钥管理
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-  以下步骤演示了如何为 Azure Key Vault 安装和配置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器。  
+本文介绍如何为 Azure 密钥保管库安装和配置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器。  
   
-## <a name="before-you-start"></a>开始之前  
- 要将 Azure 密钥保管库用于 SQL Server，有几个先决条件：  
-  
--   必须具有 Azure 订阅  
-  
--   安装最新的 [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/)（5.2.0 或更高版本）。  
+## <a name="prerequisites"></a>先决条件
 
--   创建 Azure Active Directory  
-
--   通过查阅[Extensible Key Management Using Azure Key Vault &#40;SQL Server&#41;（使用 Azure 密钥保管库的可扩展密钥管理）](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)熟悉使用 Azure 密钥保管库的 EKM 存储的主体。  
-
--   已安装适当版本的 Visual Studio C++ 可再发行组件，该组件版本基于当前运行的 SQL Server 版本：
+在开始将 Azure 密钥保管库与 SQL Server 实例配合使用之前，请确保已满足以下先决条件：  
   
-SQL Server 版本  |可再发行组件安装链接    
----------|--------- 
-2008、2008 R2、2012、2014 | [适用于 Visual Studio 2013 的 Visual C++ 可再发行组件包](https://www.microsoft.com/download/details.aspx?id=40784)    
-2016 | [Visual C++ Redistributable for Visual Studio 2015](https://www.microsoft.com/download/details.aspx?id=48145)    
+- 必须拥有 Azure 订阅。
+  
+- 安装 [Azure PowerShell 5.2.0 版或更高版本](https://azure.microsoft.com/documentation/articles/powershell-install-configure/)。  
+
+- 创建 Azure Active Directory (Azure AD) 实例。
+
+- 查看[使用 Azure 密钥保管库的 EKM (SQL Server)](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)，以熟悉使用 Azure 密钥保管库的可扩展密钥管理 (EKM) 存储的主体。  
+
+- 安装基于当前运行的 SQL Server 版本的 Visual Studio C++ Redistributable 版本：
+  
+  SQL Server 版本  | Visual Studio C++ Redistributable 版本    
+  ---------|--------- 
+  2008、2008 R2、2012、2014 | [Visual C++ Redistributable Packages for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40784)    
+  2016 | [Visual C++ Redistributable for Visual Studio 2015](https://www.microsoft.com/download/details.aspx?id=48145)    
  
   
-## <a name="part-i-set-up-an-azure-active-directory-service-principal"></a>第 I 部分：设置 Azure Active Directory 服务主体  
- 为了向 Azure 密钥保管库授予 SQL Server 访问权限，你需要在 Azure Active Directory (AAD) 中具有服务主体帐户。  
+## <a name="step-1-set-up-an-azure-ad-service-principal"></a>步骤 1：设置 Azure AD 服务主体
+
+若要向 Azure 密钥保管库授予 SQL Server 实例访问权限，你需要在 Azure AD 中具有服务主体帐户。  
   
-1.  转到 [Azure 门户](https://ms.portal.azure.com/)，并登录。  
+1.  登录 [Azure 门户](https://ms.portal.azure.com/)，然后执行以下任一操作：
+
+    * 选择“Azure Active Directory”按钮。
+
+      ![“Azure 服务”窗格的屏幕截图](../../../relational-databases/security/encryption/media/ekm/ekm-part1-login-portal.png)
+
+    * 选择“更多服务”，然后在“所有服务”框中键入 Azure Active Directory。
+
+      ![“所有 Azure 服务”窗格的屏幕截图](../../../relational-databases/security/encryption/media/ekm/ekm-part1-select-aad.png)  
+
+1. 通过执行以下操作，将应用程序注册到 Azure Active Directory。 （有关详细的分步说明，请参阅 [Azure 密钥保管库博客文章](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/)中的“获取应用程序的标识”部分。）
+
+    a. 在“Azure Active Directory 概述”窗格中，选择“应用注册”。 
+
+    ![“Azure Active Directory 概述”窗格的屏幕截图](../../../relational-databases/security/encryption/media/ekm/ekm-part1-aad-app-register.png)
+
+    b. 在“应用注册”窗格中，选择“新建注册” 。
+
+    ![“应用注册”窗格的屏幕截图](../../../relational-databases/security/encryption/media/ekm/ekm-part1-aad-new-registration.png)  
+
+    c. 在“注册应用程序”窗格中，输入应用面向用户的名称，然后选择“注册”。
+
+    ![“注册应用程序”窗格的屏幕截图](../../../relational-databases/security/encryption/media/ekm/ekm-part1-aad-register.png)
+
+    d. 在左侧窗格中，选择“证书和密码”，然后选择“新建客户端密码” 。
+
+    ![“证书和密码”窗格的屏幕截图](../../../relational-databases/security/encryption/media/ekm/ekm-part1-aad-certs-secrets.png)  
+
+    e. 在“添加客户端密码”下，输入说明和适当的到期时间，然后选择“添加”。
+
+    ![“添加客户端密码”部分的屏幕截图](../../../relational-databases/security/encryption/media/ekm/ekm-part1-aad-add-secret.png)  
+
+    f. 在“证书和密码”窗格的“值”下，选择要用于在 SQL Server 中创建非对称密钥的客户端密码值旁边的“复制”按钮。
+
+    ![“证书和密码”窗格的屏幕截图](../../../relational-databases/security/encryption/media/ekm/ekm-part1-aad-new-secret.png)  
+
+    g. 在左侧窗格中，选择“概述”，然后在“应用程序(客户端) ID”框中，复制要用于在 SQL Server 中创建非对称密钥的值。
+
+    ![“概述”窗格中的“应用程序(客户端) ID”值的屏幕截图](../../../relational-databases/security/encryption/media/ekm/ekm-part1-aad-appid.png)  
+
+## <a name="step-2-create-a-key-vault"></a>步骤 2：创建 key vault
+
+选择要用于创建密钥保管库的方法。
+
+## <a name="azure-portal"></a>[Azure 门户](#tab/portal)
+
+### <a name="create-a-key-vault-by-using-the-azure-portal"></a>使用 Azure 门户创建密钥保管库 
+
+可以使用 Azure 门户创建密钥保管库，然后向其中添加 Azure AD 主体。
+
+1. 创建资源组。
+
+   通过 Azure 门户创建的所有 Azure 资源都必须包含在创建的资源组中，该资源组用于承载密钥保管库。 在本示例中，资源名称为 ContosoDevRG。 选择你自己的资源组和密钥保管库名称，因为所有密钥保管库名称都必须是全局唯一的。
+
+   在“创建资源组”窗格的“项目详细信息”下，输入值，然后选择“查看 + 创建”。
+      
+      ![“创建资源组”窗格的屏幕截图](../../../relational-databases/security/encryption/media/ekm/ekm-part2-create-resource-group.png)  
+
+1.  创建密钥保管库。
+
+    在“创建密钥保管库”窗格中，选择“基本信息”选项卡，输入适当的值，然后选择“查看 + 创建”。
+
+    ![“创建密钥保管库”窗格的屏幕截图](../../../relational-databases/security/encryption/media/ekm/ekm-part2-create-key-vault.png)  
+
+1.  在“访问策略”窗格中，选择“添加访问策略”。
+
+    ![“访问策略”窗格中的“添加访问策略”链接的屏幕截图](../../../relational-databases/security/encryption/media/ekm/ekm-part2-add-access-policy.png)  
+
+1.  在“添加访问策略”窗格中，执行以下操作：
   
-2.  将应用程序注册到 Azure Active Directory。 有关注册应用程序的详细步骤说明，请参阅 **Azure 密钥保管库博客** 中的 [获取应用程序的标识](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/)部分。  
+    a. 在“从模板配置(可选)”下拉列表中，选择“密钥管理”。
+    
+    b. 在左侧窗格中，选择“密钥权限”选项卡，然后验证是否选中了“获取”、“列出”、“解包密钥”和“包装密钥”复选框。
+
+    c. 选择 **添加** 。
+   
+    ![“添加访问策略”窗格的屏幕截图](../../../relational-databases/security/encryption/media/ekm/ekm-part2-access-policy-permission.png)
+
+1.  在左侧窗格中，选择“选择主体”选项卡，然后执行以下操作：
+
+    a. 在“主体”窗格的“选择”下，开始键入 Azure AD 应用程序的名称，然后在结果列表中选择要添加的应用程序。
+
+    ![“主体”窗格中的应用程序搜索框的屏幕截图](../../../relational-databases/security/encryption/media/ekm/ekm-part2-select-principal.png)  
+
+    b. 选择“选择”按钮，将主体添加到密钥保管库中。
+
+    ![“主体”窗格中的“选择”按钮的屏幕截图](../../../relational-databases/security/encryption/media/ekm/ekm-part2-save-principal.png)
+
+    c. 在左下方，选择“添加”以保存更改。
+
+    ![“添加访问策略”窗格中的“添加”按钮的屏幕截图](../../../relational-databases/security/encryption/media/ekm/ekm-part2-add-principal.png)
+ 
+1. 在“访问策略”窗格中，选择“保存”。
+   
+   ![“添加访问策略”窗格中的“保存”按钮的屏幕截图](../../../relational-databases/security/encryption/media/ekm/ekm-part2-save-access-policy.png)  
+ 
+## <a name="powershell"></a>[PowerShell](#tab/powershell)
+
+### <a name="create-a-key-vault-and-key-by-using-powershell"></a>使用 PowerShell 创建密钥保管库和密钥
+
+此处创建的密钥保管库和密钥将供 SQL Server 数据库引擎使用，以实现加密密钥保护。  
   
-3.  复制 **客户端 ID** 和 **客户端密码** 用于后续步骤，即用于向密钥保管库授予 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 访问权限。  
+> [!IMPORTANT] 
+> 创建密钥保管库的订阅必须在创建 Azure AD 服务主体的同一默认 Azure AD 实例中。 如果想要使用默认实例以外的 Azure AD 实例来创建 SQL Server 连接器的服务主体，则必须在创建密钥保管库之前更改 Azure 帐户中的默认 Azure AD 实例。 若要了解如何将默认 Azure AD 实例更改为要使用的实例，请参阅 [SQL Server 连接器维护与故障排除](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixB)的“常见问题”部分。  
   
- ![ekm-client-id](../../../relational-databases/security/encryption/media/ekm-client-id.png "ekm-client-id")  
   
- ![ekm-key-id](../../../relational-databases/security/encryption/media/ekm-key-id.png "ekm-key-id")  
-  
-## <a name="part-ii-create-a-key-vault-and-key"></a>第 II 部分：创建密钥保管库和密钥  
- 此处创建的密钥保管库和密钥将供 SQL Server 数据库引擎使用，以实现加密密钥保护。  
-  
-> [!IMPORTANT]  
->  在其中创建密钥保管库的订阅必须与创建 Azure Active Directory 服务主体位于同一默认的 Azure Active Directory 中。 如果想要使用默认 Active Directory 以外的 Active Directory 来创建 SQL Server 连接器的服务主体，必须在创建密钥保管库前先更改 Azure 帐户中的默认 Active Directory。 若要了解如何将默认 Active Directory 更改为希望使用的 Active Directory，请参考 SQL Server 连接器 [常见问题解答](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixB)。  
-  
-1.  **打开 PowerShell 并登录**  
-  
-     安装并启动最新的 [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/)（5.2.0 或更高版本）。 使用以下命令登录到你的 Azure 帐户：  
+1.  使用以下命令安装并登录到 [Azure PowerShell 5.2.0 或更高版本](https://azure.microsoft.com/documentation/articles/powershell-install-configure/)：  
   
     ```powershell  
     Connect-AzAccount  
     ```  
   
-     该语句返回：  
+    该语句返回：  
   
     ```  
     Environment           : AzureCloud  
@@ -83,17 +174,17 @@ SQL Server 版本  |可再发行组件安装链接
     ```  
   
     > [!NOTE]  
-    >  如果你有多个订阅并想要指定其中一个用于保管库，请使用 `Get-AzSubscription` 查看订阅，然后使用 `Select-AzSubscription` 选择适当的订阅。 否则，PowerShell 将默认为你选择一个订阅。  
+    > 如果你有多个订阅并想要指定一个订阅用于保管库，请运行 `Get-AzSubscription` 以查看订阅，然后运行 `Select-AzSubscription` 以选择正确的订阅。 否则，PowerShell 将默认为你选择一个订阅。  
   
-2.  **创建新的资源组**  
-  
-     资源组中必须包含通过 Azure 资源管理器创建的所有 Azure 资源。 创建资源组用于包含密钥保管库。 此示例使用 `ContosoDevRG`。 选择你自己的 **唯一** 资源组和密钥保管库名称，因为所有密钥保管库名称是全局唯一的。  
+1.  创建资源组。   
+
+    通过 PowerShell 创建的所有 Azure 资源都必须包含在创建的资源组中，该资源组用于承载密钥保管库。 在本示例中，资源名称为 ContosoDevRG。 选择你自己的资源组和密钥保管库名称，因为所有密钥保管库名称都必须是全局唯一的。  
   
     ```powershell  
     New-AzResourceGroup -Name ContosoDevRG -Location 'East Asia'  
     ```  
   
-     该语句返回：  
+    该语句返回：  
   
     ```  
     ResourceGroupName: ContosoDevRG  
@@ -104,30 +195,30 @@ SQL Server 版本  |可再发行组件安装链接
                         resourceGroups/ContosoDevRG  
     ```  
   
-    > [!NOTE]  
-    >  对于 `-Location parameter`参数，请使用命令 `Get-AzureLocation` 来确定如何将备用位置指定为本示例中的位置之一。 如需详细信息，请键入： `Get-Help Get-AzureLocation`  
+    > [!NOTE] 
+    > 对于 `-Location` 参数，请使用命令 `Get-AzureLocation` 来确定如何指定一个与本示例中的位置不同的位置。 如需更多信息，请键入 Get-Help Get-AzureLocation。  
   
-3.  **创建 Key Vault**  
-  
-     `New-AzKeyVault` cmdlet 需要一个资源组名称、一个密钥保管库名称和一个地理位置。 例如，对于名为 `ContosoDevKeyVault`的密钥保管库，请键入：  
+1.  创建密钥保管库。    
+
+    `New-AzKeyVault` cmdlet 需要一个资源组名称、一个密钥保管库名称和一个地理位置。 例如，对于名为 `ContosoEKMKeyVault` 的密钥保管库，请运行：  
   
     ```powershell  
-    New-AzKeyVault -VaultName 'ContosoDevKeyVault' `  
+    New-AzKeyVault -VaultName 'ContosoEKMKeyVault' `  
        -ResourceGroupName 'ContosoDevRG' -Location 'East Asia'  
     ```  
   
-     记录密钥保管库的名称。  
+    记录密钥保管库的名称。  
   
-     该语句返回：  
-  
+    该语句返回：
+
     ```  
-    Vault Name                       : ContosoDevKeyVault  
+    Vault Name                       : ContosoEKMKeyVault  
     Resource Group Name              : ContosoDevRG  
     Location                         : East Asia  
     ResourceId                       : /subscriptions/<subscription_id>/  
                                         resourceGroups/ContosoDevRG/providers/  
-                                        Microsoft/KeyVault/vaults/ContosoDevKeyVault  
-    Vault URI: https://ContosoDevKeyVault.vault.azure.net  
+                                        Microsoft/KeyVault/vaults/ContosoEKMKeyVault  
+    Vault URI: https://ContosoEKMKeyVault.vault.azure.net  
     Tenant ID                        : <tenant_id>  
     SKU                              : Standard  
     Enabled For Deployment?          : False  
@@ -144,221 +235,291 @@ SQL Server 版本  |可再发行组件安装链接
     Tags                             :  
     ```  
   
-4.  **为 Azure Active Directory 服务主体授予权限以访问密钥保管库**  
+1.  为 Azure AD 服务主体授予权限以访问 Azure 密钥保管库。  
   
-     你可以授权其他用户和应用程序使用密钥保管库。   
-    在本例中，让我们使用在第 I 部分中创建的 Azure Active Directory 服务主体来授权 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。  
+    你可以授权其他用户和应用程序使用密钥保管库。  对于我们的示例，让我们使用你在[步骤 1：设置 Azure AD 服务主体](#step-1-set-up-an-azure-ad-service-principal)中创建的服务主体来对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例授权。  
   
-    > [!IMPORTANT]  
-    >  Azure Active Directory 服务主体必须至少具有密钥保管库的 `get`、 `wrapKey` 和 `unwrapKey` 权限。  
+    > [!IMPORTANT] 
+    > Azure AD 服务主体对密钥保管库必须至少具有“get”、“list”、“wrapKey”和“unwrapKey”权限。  
   
-     如下所示，对 **参数使用第 I 部分的** 客户端 ID `ServicePrincipalName` 。 如果 `Set-AzKeyVaultAccessPolicy` 成功运行，则以无提示方式运行，并且无任何输出。  
+    如以下命令所示，将[步骤 1：设置 Azure AD 服务主体](#step-1-set-up-an-azure-ad-service-principal)中的“应用(客户端) ID”用于 `ServicePrincipalName` 参数。 如果 `Set-AzKeyVaultAccessPolicy` 成功运行，则以无提示方式运行，并且无任何输出。  
   
     ```powershell  
-    Set-AzKeyVaultAccessPolicy -VaultName 'ContosoDevKeyVault'`  
-      -ServicePrincipalName EF5C8E09-4D2A-4A76-9998-D93440D8115D `  
-      -PermissionsToKeys get, wrapKey, unwrapKey  
+    Set-AzKeyVaultAccessPolicy -VaultName 'ContosoEKMKeyVault' `  
+      -ServicePrincipalName 9A57CBC5-4C4C-40E2-B517-EA677 `  
+      -PermissionsToKeys get, list, wrapKey, unwrapKey  
     ```  
   
-     调用 `Get-AzKeyVault` cmdlet 以确认权限。 在“访问策略”下方的语句输出中，应看到作为有权访问此密钥保管库的另一个租户列出的 AAD 应用程序名称。  
+    调用 `Get-AzKeyVault` cmdlet 以确认权限。 在`Access Policies`下方的语句输出中，应看到作为有权访问此密钥保管库的另一个租户列出的 Azure AD 应用程序名称。  
   
        
-5.  **在密钥保管库中生成非对称密钥**  
-  
-     有以下两种方法可在 Azure 密钥保管库中生成密钥：1) 导入现有密钥或 2) 创建新密钥。  
+1.  在密钥保管库中生成非对称密钥。 可以通过以下两种方式之一实现此目的：导入现有密钥或创建新密钥。  
                   
-      > [!NOTE]
-        >  SQL Server 仅支持 2048 位 RSA 密钥。
+     > [!NOTE] 
+     > SQL Server 仅支持 2048 位 RSA 密钥。
         
-    ### <a name="best-practice"></a>最佳做法：
+### <a name="best-practices"></a>最佳做法
     
-    为了确保快速恢复密钥并能够访问 Azure 外的数据，建议采用以下最佳做法：
+为了确保快速恢复密钥并能够访问 Azure 外的数据，建议采用以下最佳做法：
  
-    1. 在本地 HSM 设备上创建加密密钥。 （确保此密钥是一个非对称的 RSA 2048 密钥，以便受 SQL Server 支持。）
-    2. 将加密密钥导入到 Azure 密钥保管库。 请参阅以下步骤了解如何执行此操作。
-    3. 在首次使用 Azure 密钥保管库中的密钥之前，先进行 Azure 密钥保管库密钥备份。 详细了解 [Backup-AzureKeyVaultKey](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault) 命令。
-    4. 每次更改密钥（例如添加 ACL、添加标记、添加键属性）时，务必再进行一次 Azure Key Vault 密钥备份。
+- 在本地硬件安全模块 (HSM) 设备上创建加密密钥。 确保使用非对称 RSA 2048 密钥，以便得到 SQL Server 的支持。
+- 将加密密钥导入到 Azure 密钥保管库。 此过程在后续部分中介绍。
+- 在首次使用 Azure 密钥保管库中的密钥之前，先进行 Azure 密钥保管库密钥备份。 有关详细信息，请参阅 [Backup-AzureKeyVaultKey](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault) 命令。
+- 每次更改密钥（例如添加 ACL、标记或密钥属性）时，务必再进行一次 Azure 密钥保管库密钥备份。
 
-        > [!NOTE]  
-        >  备份密钥是一项 Azure Key Vault 密钥操作，将返回一个可在任意位置保存的文件。
+  > [!NOTE]
+  > 备份密钥是一项 Azure Key Vault 密钥操作，将返回一个可在任意位置保存的文件。
 
-    ### <a name="types-of-keys"></a>密钥类型：
-    在 Azure Key Vault 中可以生成将用于 SQL Server 的两种类型的密钥。 这两种密钥都是非对称 2048 位 RSA 密钥。  
-  
-    -   **受软件保护的密钥：** 在软件中处理，在静止时加密。 在 Azure 虚拟机上执行对受软件保护的密钥的操作。 建议用于不在生产部署中使用的密钥。  
-  
-    -   **受 HSM 保护的密钥：** 由硬件安全模块 (HSM) 创建并保护，以增加安全性。 每个密钥版本的费用大约为 1 美元。  
-  
-        > [!IMPORTANT]  
-        >  SQL Server 连接器要求密钥名称只能使用字符 “a-z”、“A-Z”、“0-9” 和 “-”，其长度限制为 26 个字符。   
-        > Azure 密钥保管库中具有同一密钥名称的不同密钥版本不会使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器。 若要轮换 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用的 Azure Key Vault 密钥，请参阅 [SQL Server 连接器维护与故障排除](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)中的“密钥滚动更新”步骤。  
+### <a name="types-of-keys"></a>密钥类型
 
-    ### <a name="import-an-existing-key"></a>导入现有密钥   
+可以在与 SQL Server 配合使用的 Azure 密钥保管库中生成两种类型的密钥之一。 这两种密钥都是非对称 2048 位 RSA 密钥。  
   
-    如果已有 2048 位 RSA 软件保护密钥，则可以将该密钥上传到 Azure 密钥保管库。 例如，如果 `C:\\` 驱动器中保存了要上传到 Azure 密钥保管库的、名为 `softkey.pfx` 的 .PFX 文件，请键入以下内容，以便为该 .PFX 文件的密码 `securepfxpwd` 设置变量 `12987553` ：  
+  - **受软件保护的密钥**：在软件中处理，在静止时加密。 对受软件保护的密钥的操作在 Azure 虚拟机上进行。 对于不在生产部署中使用的密钥，建议使用此类型。  
+
+  - **受 HSM 保护的密钥**：由硬件安全模块创建并保护，以增加安全性。 每个密钥版本的费用大约为 1 美元。  
   
-    ``` powershell  
-    $securepfxpwd = ConvertTo-SecureString -String '12987553' `  
-      -AsPlainText -Force  
-    ```  
+    > [!IMPORTANT] 
+    > 对于 SQL Server 连接器，只能使用字符 a-z、A-Z、0-9 和连字符 (-)，且长度限制为 26 个字符。   
+    > Azure 密钥保管库中具有同一密钥名称的不同密钥版本不会使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器。 若要轮换 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用的 Azure 密钥保管库密钥，请参阅 [SQL Server 连接器维护与故障排除](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)的“A. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器的维护说明”部分中的密钥滚动更新步骤。  
+
+### <a name="import-an-existing-key"></a>导入现有密钥   
   
-    然后可以键入以下内容从 .PFX 文件导入密钥，以便硬件（建议）在密钥保管库服务中保护密钥：  
+如果已有 2048 位 RSA 软件保护密钥，则可以将该密钥上传到 Azure 密钥保管库。 例如，如果 `C:\\` 驱动器中保存了你要上传到 Azure 密钥保管库的、名为 softkey.pfx 的 PFX 文件，请运行以下命令来设置变量 `securepfxpwd`，以将 PFX 文件的密码设为 `12987553`：  
   
-    ``` powershell  
-        Add-AzureKeyVaultKey -VaultName 'ContosoKeyVault' `  
-          -Name 'ContosoFirstKey' -KeyFilePath 'c:\softkey.pfx' `  
-          -KeyFilePassword $securepfxpwd $securepfxpwd  -Destination 'HSM'  
-    ```  
+``` powershell  
+$securepfxpwd = ConvertTo-SecureString -String '12987553' `  
+  -AsPlainText -Force  
+```  
+
+然后可以运行以下命令从 PFX 文件导入密钥，以便硬件（建议）在密钥保管库服务中保护密钥：  
+  
+``` powershell  
+    Add-AzureKeyVaultKey -VaultName 'ContosoKeyVault' `  
+      -Name 'ContosoFirstKey' -KeyFilePath 'c:\softkey.pfx' `  
+      -KeyFilePassword $securepfxpwd $securepfxpwd  -Destination 'HSM'  
+```  
  
-    > [!IMPORTANT]  
-    > 强烈建议对生产情况导入非对称密钥，因为这样管理员就可以在密钥托管系统中托管密钥。 如果非对称密钥是在保管库中创建的，则无法托管，因为私有密钥无法离开保管库。 应托管用于保护关键数据的密钥。 丢失非对称密钥将导致永久性数据丢失。  
+> [!CAUTION]
+> 强烈建议对生产情况导入非对称密钥，因为这样管理员就可以在密钥托管系统中托管密钥。 如果非对称密钥是在保管库中创建的，则无法托管，因为私钥不能离开保管库。 应托管用于保护关键数据的密钥。 丢失非对称密钥将导致永久性数据丢失。  
 
-    ### <a name="create-a-new-key"></a>新建密钥
-    #### <a name="example"></a>示例：  
-    或者，可直接在 Azure Key Vault 中创建新的加密密钥，并使其受软件保护或受 HSM 保护。  在此示例中，让我们使用 `Add-AzureKeyVaultKey cmdlet` 创建受软件保护的密钥：  
+### <a name="create-a-new-key"></a>新建密钥 
 
-    ``` powershell  
-    Add-AzureKeyVaultKey -VaultName 'ContosoDevKeyVault' `  
-      -Name 'ContosoRSAKey0' -Destination 'Software'  
-    ```  
-  
-    该语句返回：  
-  
-    ```  
-    Attributes : Microsoft.Azure.Commands.KeyVault.Models.KeyAttributes  
-    Key        :  {"kid":"https:contosodevKeyVault.azure.net/keys/  
-                   ContosoRSAKey0/<guid>","dty":"RSA:,"key_ops": ...  
-    VaultName  : contosodevkeyvault  
-    Name       : contosoRSAKey0  
-    Version    : <guid>  
-    Id         : https://contosodevkeyvault.vault.azure.net:443/  
-                 keys/ContosoRSAKey0/<guid>  
-    ```  
- > [!IMPORTANT]  
- > 虽然密钥保管库支持具有多个版本的相同命名的密钥，但 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器使用的密钥不应受版本控制或对其进行滚动更新。 如果管理员想要滚动用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密的密钥，则应在保管库中创建一个具有不同名称的新密钥并用它来加密 DEK。  
-   
-  
-## <a name="part-iii-install-the-ssnoversion-connector"></a>第三部分：安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器  
- 从 [Microsoft 下载中心](https://go.microsoft.com/fwlink/p/?LinkId=521700)下载 SQL Server 连接器。 （此操作应由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 计算机的管理员完成。）  
+或者，可直接在 Azure 密钥保管库中创建新的加密密钥，并使其受软件保护或受 HSM 保护。  在本示例中，让我们使用 `Add-AzureKeyVaultKey` cmdlet 创建受软件保护的密钥：  
 
-> [!NOTE]  
->  已替换版本 1.0.0.440 和更早的版本，且生产环境不再支持这些版本。 要升级至版本 1.0.1.0 或更高版本，请访问 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=45344) ，并参照“升级 SQL Server 连接器”下 [SQL Server 连接器维护与故障排除](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)页面上的指南。
+``` powershell  
+Add-AzureKeyVaultKey -VaultName 'ContosoEKMKeyVault' `  
+  -Name 'ContosoRSAKey0' -Destination 'Software'  
+```  
+  
+该语句返回：  
+  
+```
+Attributes : Microsoft.Azure.Commands.KeyVault.Models.KeyAttributes  
+Key        :  {"kid":"https:contosoekmkeyvault.azure.net/keys/  
+                ContosoRSAKey0/<guid>","dty":"RSA:,"key_ops": ...  
+VaultName  : contosodevkeyvault  
+Name       : contosoRSAKey0  
+Version    : <guid>  
+Id         : https://contosoekmkeyvault.vault.azure.net:443/  
+              keys/ContosoRSAKey0/<guid>  
+```  
 
-> [!NOTE]  
-> 1\.0.5.0 版在指纹算法方面进行了一项重大更改。 升级到 1.0.5.0 版后，可能会遭遇数据库还原失败。 请参阅 KB 文章 [447099](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0)。
+> [!IMPORTANT] 
+> 虽然密钥保管库支持同名密钥的多个版本，但 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器使用的密钥不应受版本控制或对其进行滚动更新。 如果管理员想要滚动更新用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密的密钥，则应在密钥保管库中创建一个具有不同名称的新密钥并用它来加密 DEK。  
+
+---
+       
+## <a name="step-3-install-the-ssnoversion-connector"></a>步骤 3：安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器  
+
+从 [Microsoft 下载中心](https://go.microsoft.com/fwlink/p/?LinkId=521700)下载 SQL Server 连接器。 此下载操作应由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 计算机的管理员完成。  
+
+> [!NOTE] 
+> 已替换 1.0.0.440 版和更早的版本，且生产环境不再支持这些版本。 通过访问 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=45344)升级到 1.0.1.0 版或更高版本。 使用 [SQL Server 连接器维护与故障排除](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)页上“升级 SQL Server 连接器”下的说明。
+
+> [!NOTE]
+> 1\.0.5.0 版在指纹算法方面进行了一项重大更改。 升级到 1.0.5.0 版后，可能会遭遇数据库还原失败。 有关详细信息，请参阅[知识库文章 447099](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0)。
   
- ![ekm-connector-install](../../../relational-databases/security/encryption/media/ekm-connector-install.png "ekm-connector-install")  
+  ![SQL Server 连接器安装向导的屏幕截图](../../../relational-databases/security/encryption/media/ekm/ekm-connector-install.png)  
   
- 默认情况下，连接器安装在 C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault 中。 可在设置过程中更改此位置。 （若已更改，请调整以下脚本。）  
+默认情况下，连接器安装在 C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault 中。 可在设置过程中更改此位置。 如果更改了此位置，请在下一部分中调整脚本。  
   
- 该连接器没有接口，但如果安装成功，将在计算机上安装 **Microsoft.AzureKeyVaultService.EKM.dll** 这是加密 EKM 提供程序 DLL，需要使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 语句在 `CREATE CRYPTOGRAPHIC PROVIDER` 中注册。  
+该连接器没有接口，但如果安装成功，将在计算机上安装 Microsoft.AzureKeyVaultService.EKM.dll。 此程序集是加密 EKM 提供程序 DLL，需要使用 `CREATE CRYPTOGRAPHIC PROVIDER` 语句在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中注册。  
   
- SQL Server 连接器安装还允许你选择性地下载用于 SQL Server 加密的示例脚本。  
+SQL Server 连接器安装还允许你选择性地下载用于 SQL Server 加密的示例脚本。  
   
- 若要查看 SQL Server 连接器的错误代码说明、配置设置或维护任务，请访问本主题底部的附录：  
+若要查看 SQL Server 连接器的错误代码说明、配置设置或维护任务，请参阅：  
   
--   [A.SQL Server 连接器的维护说明](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixA)  
+- [A.SQL Server 连接器的维护说明](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixA)  
+- [C.SQL Server 连接器的错误代码说明](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixC)  
   
--   [C.SQL Server 连接器的错误代码说明](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixC)  
   
+## <a name="step-4-configure-ssnoversion"></a>步骤 4：配置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+
+有关此部分中每个操作所需的最低权限级别的说明，请参阅 [B. 常见问题](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixB)。  
   
-## <a name="part-iv-configure-ssnoversion"></a>第四部分：配置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
- 请参阅 [B. 常见问题解答](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixB)以查看本节中每个操作所需的最低权限级别的说明。  
+1.  运行 sqlcmd.exe 或打开 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Studio。  
   
-1.  **启动 sqlcmd.exe 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Studio。**  
-  
-2.  **配置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以使用 EKM**  
-  
-     执行以下 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本配置 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 以使用 EKM 提供程序。  
+1.  通过运行以下 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本，将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 配置为使用 EKM：  
   
     ```sql  
     -- Enable advanced options.  
     USE master;  
     GO  
-  
-    sp_configure 'show advanced options', 1;  
+
+    EXEC sp_configure 'show advanced options', 1;  
     GO  
     RECONFIGURE;  
     GO  
-  
+
     -- Enable EKM provider  
-    sp_configure 'EKM provider enabled', 1;  
+    EXEC sp_configure 'EKM provider enabled', 1;  
     GO  
     RECONFIGURE;  
     ```  
   
-3.  **将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器注册（创建）为 EKM 提供程序 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**  
+1. 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器注册为 EKM 提供程序。  
   
-     -- 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器（Azure Key Vault 的 EKM 提供程序）创建加密提供程序。    
-    此示例使用名称 `AzureKeyVault_EKM_Prov`。  
+    使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器（Azure 密钥保管库的 EKM 提供程序）创建加密提供程序。    
+    
+    在本示例中，提供程序名称为 `AzureKeyVault_EKM`。  
   
     ```sql  
-    CREATE CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov   
+    CREATE CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM   
     FROM FILE = 'C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll';  
     GO  
     ```  
+    
+    > [!NOTE]
+    > 文件路径长度不能超过 256 个字符。  
   
-    > [!NOTE]  
-    >  文件路径长度不能超过 256 个字符。  
+1. 为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名设置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 凭据以使用密钥保管库。  
   
+    必须将凭据添加到要使用密钥保管库中的密钥执行加密的每个登录名。 这些登录名可能包括：  
   
-4.  **为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名设置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 凭据以使用密钥保管库**  
+    - 使用密钥保管库来设置和管理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密方案的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理员登录名。  
   
-     必须将凭据添加到要使用密钥保管库中密钥执行加密的每个登录名。 这些登录名可能包括：  
+    - 可能启用 TDE 或其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密功能的其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名。  
   
-    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理员登录名，要使用密钥保管库以便设置并管理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密方案。  
+    凭据和登录名之间是一对一的映射关系。 也就是说，每个登录名必须具有唯一的凭据。  
   
-    -   其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名，已启用透明数据加密 (TDE) 或其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密功能。  
+    通过以下方式修改此 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本：  
   
-     凭据和登录名之间是一对一的映射关系。 也就是说，每个登录名必须具有唯一的凭据。  
+    - 编辑 `IDENTITY` 参数 (`ContosoEKMKeyVault`) 以指向 Azure 密钥保管库。
+      - 如果使用全局 Azure，请将 `IDENTITY` 参数替换为[步骤 2：创建密钥保管库](#step-2-create-a-key-vault)中的 Azure 密钥保管库的名称。
+      - 如果使用私有 Azure 云（例如，Azure 政府、Azure 中国世纪互联或 Azure 德国），请将 `IDENTITY` 参数替换为[使用 PowerShell 创建密钥保管库和密钥](#create-a-key-vault-and-key-by-using-powershell)部分的步骤 3 中返回的保管库 URI。 保管库 URI 中不能包含“https://”。   
+    - 将 `SECRET` 参数的第一部分替换为[步骤 1：设置 Azure AD 服务主体](#step-1-set-up-an-azure-ad-service-principal)中的 Azure Active Directory 客户端 ID。 在本示例中，“客户端 ID”为 `9A57CBC54C4C40E2B517EA677E0EFA00`。  
   
-     采用以下方式修改下面的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本：  
+      > [!IMPORTANT] 
+      > 确保删除“应用(客户端) ID”中的连字符。  
   
-    -   编辑 `IDENTITY` 参数 (`ContosoDevKeyVault`) 以指向 Azure 密钥保管库。
-        - 如果使用“全局 Azure”，请将 `IDENTITY` 参数替换为第 II 部分中的 Azure Key Vault 的名称  。
-        - 如果使用 **Azure 私有云** （例如， Azure 政府、Azure 中国或 Azure 德国），请将 `IDENTITY` 参数替换为第 II 部分的步骤 3 中返回的保管库 URI。 保管库 URI 中不能包含 “https://” 。   
-    -   将 `SECRET` 参数的第一部分替换为第 I 部分中的 Azure Active Directory **客户端 ID** 。在此示例中， **客户端 ID** 为 `EF5C8E094D2A4A769998D93440D8115D`。  
-  
-        > [!IMPORTANT]  
-        >  必须删除 **客户端 ID**中的连字符。  
-  
-    -   使用第 I 部分的 `SECRET` 客户端密码 **完成** 参数的第二部分。在此示例中，第 I 部分的 **客户端密码** 为 `Replace-With-AAD-Client-Secret`。 `SECRET` 参数的最终字符串是一长串 *不带连字符*的字母和数字。  
+    - 使用[步骤 1：设置 Azure AD 服务主体](#step-1-set-up-an-azure-ad-service-principal)中的“客户端密码”完成 `SECRET` 参数的第二部分。  在本示例中，“客户端密码”为 `08:k?[:XEZFxcwIPvVVZhTjHWXm7w1?m`。 `SECRET` 参数的最终字符串是一长串不带连字符的字母和数字。  
   
     ```sql  
     USE master;  
     CREATE CREDENTIAL sysadmin_ekm_cred   
-        WITH IDENTITY = 'ContosoDevKeyVault', -- for public Azure
-        -- WITH IDENTITY = 'ContosoDevKeyVault.vault.usgovcloudapi.net', -- for Azure Government
-        -- WITH IDENTITY = 'ContosoDevKeyVault.vault.azure.cn', -- for Azure China
-        -- WITH IDENTITY = 'ContosoDevKeyVault.vault.microsoftazure.de', -- for Azure Germany   
-        SECRET = 'EF5C8E094D2A4A769998D93440D8115DReplace-With-AAD-Client-Secret'   
-    FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov;  
+        WITH IDENTITY = 'ContosoEKMKeyVault',                            -- for public Azure
+        -- WITH IDENTITY = 'ContosoEKMKeyVault.vault.usgovcloudapi.net', -- for Azure Government
+        -- WITH IDENTITY = 'ContosoEKMKeyVault.vault.azure.cn',          -- for Azure China 21Vianet
+        -- WITH IDENTITY = 'ContosoEKMKeyVault.vault.microsoftazure.de', -- for Azure Germany
+               --<----Application (Client) ID ---><--Azure AD app (Client) ID secret-->
+        SECRET = '9A57CBC54C4C40E2B517EA677E0EFA0008:k?[:XEZFxcwIPvVVZhTjHWXm7w1?m'   
+    FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM;  
   
     -- Add the credential to the SQL Server administrator's domain login   
     ALTER LOGIN [<domain>\<login>]  
     ADD CREDENTIAL sysadmin_ekm_cred;  
     ```  
   
-     有关使用 **CREATE CREDENTIAL** 参数的变量和以编程方式从客户端 ID 中删除连字符的示例，请参阅[创建凭据 &#40;Transact-SQL&#41;](../../../t-sql/statements/create-credential-transact-sql.md)。  
+    有关使用 `CREATE CREDENTIAL` 参数的变量和以编程方式从客户端 ID 中删除连字符的示例，请参阅 [CREATE CREDENTIAL (Transact-SQL)](../../../t-sql/statements/create-credential-transact-sql.md)。  
   
-5.  **打开 Azure 密钥保管库密钥 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**  
+1. 在 SQL Server 实例中打开 Azure 密钥保管库密钥。  
+
+    无论是按照[步骤 2：创建密钥保管库](#step-2-create-a-key-vault)中所述创建新密钥还是导入非对称密钥，都需要打开该密钥。 可通过在以下 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本中提供密钥名称来打开它。  
   
-     无论是创建新密钥，还是按照第 II 部分所述导入非对称密钥，都需要打开该密钥。 通过在以下 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本中提供密钥名称来打开密钥。  
-  
-    -   将 `CONTOSO_KEY` 替换为希望该密钥在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中显示的名称。  
-  
-    -   将 `ContosoRSAKey0` 替换为 Azure 密钥保管库中的密钥的名称。  
+    - 将 `EKMSampleASYKey` 替换为希望该密钥在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中显示的名称。  
+    - 将 `ContosoRSAKey0` 替换为 Azure 密钥保管库中密钥的名称。  
   
     ```sql  
-    CREATE ASYMMETRIC KEY CONTOSO_KEY   
-    FROM PROVIDER [AzureKeyVault_EKM_Prov]  
+    CREATE ASYMMETRIC KEY EKMSampleASYKey   
+    FROM PROVIDER [AzureKeyVault_EKM]  
     WITH PROVIDER_KEY_NAME = 'ContosoRSAKey0',  
     CREATION_DISPOSITION = OPEN_EXISTING;  
     ```  
-## <a name="next-step"></a>下一步  
+    
+1. 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中在前面步骤创建的非对称密钥来创建新的登录名。
+
+     ```sql  
+    --Create a Login that will associate the asymmetric key to this login
+    CREATE LOGIN TDE_Login
+    FROM ASYMMETRIC KEY EKMSampleASYKey;
+    ```  
+
+1. 根据 SQL Server 中的非对称密钥创建新的登录名。 删除“步骤 4：配置 SQL Server”中的凭据映射，以便将凭据映射到新的登录名。
+
+     ```sql  
+    --Now drop the credential mapping from the original association
+    ALTER LOGIN [<domain>\<login>]
+    DROP CREDENTIAL sysadmin_ekm_cred;
+    ```     
+
+1. 更改新登录名，然后将 EKM 凭据映射到新登录名。
+
+     ```sql  
+    --Now drop the credential mapping from the original association
+    ALTER LOGIN TDE_Login
+    ADD CREDENTIAL sysadmin_ekm_cred;
+    ```  
+
+1. 创建将使用 Azure 密钥保管库密钥加密的测试数据库。
+
+     ```sql
+    --Create a test database that will be encrypted with the Azure key vault key
+    CREATE DATABASE TestTDE
+    ```  
+
+1. 使用非对称密钥 (EKMSampleASYKey) 创建数据库加密密钥。
+
+    ```sql  
+    --Create an ENCRYPTION KEY using the ASYMMETRIC KEY (EKMSampleASYKey)
+    CREATE DATABASE ENCRYPTION KEY   
+    WITH ALGORITHM = AES_256   
+    ```  
   
-现在你已完成基本配置，请参阅如何 [使用具有 SQL 加密功能的 SQL Server 连接器](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
+1. 加密测试数据库。 通过将 ENCRYPTION 设置为 ON 来启用 TDE。
+
+     ```sql  
+    --Enable TDE by setting ENCRYPTION ON
+    ALTER DATABASE TestTDE   
+    SET ENCRYPTION ON;  
+     ```  
+    
+1. 清理测试对象。 删除在此测试脚本中创建的所有对象。
+
+    ```sql  
+    -- CLEAN UP
+    USE Master
+    ALTER DATABASE [TestTDE] SET SINGLE_USER WITH ROLLBACK IMMEDIATE
+    DROP DATABASE [TestTDE]
+
+    ALTER LOGIN [TDE_Login] DROP CREDENTIAL [sysadmin_ekm_cred]
+    DROP LOGIN [TDE_Login]
+
+    DROP CREDENTIAL [sysadmin_ekm_cred]  
+
+    USE MASTER
+    DROP ASYMMETRIC KEY [EKMSampleASYKey]
+    DROP CRYPTOGRAPHIC PROVIDER [AzureKeyVault_EKM]
+    ```  
+    
+有关示例脚本，请参阅博客 [SQL Server Transparent Data Encryption and Extensible Key Management with Azure Key Vault](https://techcommunity.microsoft.com/t5/sql-server/intro-sql-server-transparent-data-encryption-and-extensible-key/ba-p/1427549)（使用 Azure 密钥保管库的 SQL Server 透明数据加密和可扩展密钥管理）。
+
+
+## <a name="next-steps"></a>后续步骤  
+  
+现在你已完成基本配置，请参阅[使用具有 SQL 加密功能的 SQL Server 连接器](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)。
   
 ## <a name="see-also"></a>另请参阅  
- [使用 Azure Key Vault 的可扩展密钥管理](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)   
-[SQL Server 连接器维护与故障排除](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)
+
+* [使用 Azure 密钥保管库的可扩展密钥管理](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)   
+* [SQL Server 连接器维护与故障排除](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)
+

@@ -1,5 +1,6 @@
 ---
 title: 监视（复制）| Microsoft Docs
+description: 了解用于跟踪 SQL Server 复制拓扑中的复制的活动和状态的监视工具。
 ms.custom: ''
 ms.date: 11/20/2018
 ms.prod: sql
@@ -19,12 +20,12 @@ ms.assetid: f182f43a-6af8-45bc-a708-08d5f7a6984a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d884bfe3517fa8b45c19f1d4d286992c2e5453c1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c463b8e1a0726fcde961b418fb12a902d7ce9b4e
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288037"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807950"
 ---
 # <a name="monitoring-replication"></a>监视（复制）
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -40,8 +41,8 @@ ms.locfileid: "76288037"
 
 以下工具可用于监视复制：  
   
--   SQL Server 复制监视器是监视复制最重要的工具，它可以显示以发布服务器为中心的所有复制活动视图  。 有关详细信息，请参阅 [Monitoring Replication](../../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)。 
--   SQL Server Management Studio - 提供对复制监视器的访问权限  。 它还允许您查看当前状态以及下列代理所记录的最后一条消息，还允许您启动和停止每个代理：日志读取器代理、快照代理、合并代理和分发代理。 有关详细信息，请参阅 [Monitor Replication Agents](../../../relational-databases/replication/monitor/monitor-replication-agents.md)。  
+-   SQL Server 复制监视器是监视复制最重要的工具，它可以显示以发布服务器为中心的所有复制活动视图。 有关详细信息，请参阅 [Monitoring Replication](../../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)。 
+-   SQL Server Management Studio - 提供对复制监视器的访问权限。 它还允许你查看当前状态以及由下列代理记录的最后一条消息，还允许你启动和停止每个代理：日志读取器代理、快照代理、合并代理和分发代理。 有关详细信息，请参阅 [Monitor Replication Agents](../../../relational-databases/replication/monitor/monitor-replication-agents.md)。  
   
 -   **Transact-SQL (T-SQL) 和复制管理对象 (RMO)** - 可通过这两个接口监视来自分发服务器的所有类型的复制。 合并复制还提供从发布服务器监视复制的功能。  
   

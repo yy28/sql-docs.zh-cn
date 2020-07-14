@@ -1,5 +1,6 @@
 ---
 title: 删除日志传送 (SQL Server) | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL 在 SQL Server 中删除日志传送。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 859373db-c744-4a4b-8479-45163f61e8cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 817bfeccb29de6b1531b83a48da4d78f8397b4ca
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a62ae437349e5a00ae119b4cc9130d1b8882752f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68058250"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85695819"
 ---
 # <a name="remove-log-shipping-sql-server"></a>删除日志传送 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中删除日志传送。  
   
  **本主题内容**  
@@ -51,7 +52,7 @@ ms.locfileid: "68058250"
   
 1.  连接到当前是日志传送主服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例并展开该实例。  
   
-2.  展开“数据库”  ，右键单击日志传送主数据库，再单击“属性”  。  
+2.  展开“数据库”，右键单击日志传送主数据库，再单击“属性”。  
   
 3.  在 **“选择页”** 下，单击 **“事务日志传送”** 。  
   

@@ -37,15 +37,15 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5f29027f7b9ab16b1cb9de5c92f5aaf7dccf9765
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: de62120fd28e67c4323a88f73bc5bac939aedc64
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634855"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002498"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   创建虚拟表，其内容（列和行）由查询定义。 使用此语句可以创建数据库中一个或多个表中数据的视图。 例如，可以将视图用于以下用途：  
   
@@ -90,28 +90,28 @@ AS <select_statement>
   
 ## <a name="arguments"></a>参数
 OR ALTER  
- 适用范围：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始）  。   
+ 适用范围：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始）。   
   
  有条件地删除视图（仅当其已存在时）。 
  
  *schema_name*  
  视图所属架构的名称。  
   
- view_name   
+ view_name  
  视图名称。 视图名称必须符合有关标识符的规则。 可以选择是否指定视图所有者名称。  
   
  *column*  
  视图中的列使用的名称。 仅在下列情况下需要列名：列是从算术表达式、函数或常量派生的；两个或更多的列可能会具有相同的名称（通常是由于联接的原因）；视图中的某个列的指定名称不同于其派生来源列的名称。 还可以在 SELECT 语句中分配列名。  
   
- 如果未指定 column，则视图列将获得与 SELECT 语句中的列相同的名称  。  
+ 如果未指定 column，则视图列将获得与 SELECT 语句中的列相同的名称。  
   
 > [!NOTE]  
->  在视图的各列中，列名的权限在 CREATE VIEW 或 ALTER VIEW 语句间均适用，与基础数据源无关。 例如，如果在 CREATE VIEW 语句中授予了 SalesOrderID 列上的权限，则 ALTER VIEW 语句可以将 SalesOrderID 列改名（例如改为 OrderRef），但仍具有与使用 SalesOrderID 的视图相关联的权限     。  
+>  在视图的各列中，列名的权限在 CREATE VIEW 或 ALTER VIEW 语句间均适用，与基础数据源无关。 例如，如果在 CREATE VIEW 语句中授予了 SalesOrderID 列上的权限，则 ALTER VIEW 语句可以将 SalesOrderID 列改名（例如改为 OrderRef），但仍具有与使用 SalesOrderID 的视图相关联的权限   。  
   
  AS  
  指定视图要执行的操作。  
   
- select_statement   
+ select_statement  
  定义视图的 SELECT 语句。 该语句可以使用多个表和其他视图。 需要相应的权限才能在已创建视图的 SELECT 子句引用的对象中选择。  
   
  视图不必是具体某个表的行和列的简单子集。 可以使用多个表或带任意复杂性的 SELECT 子句的其他视图创建视图。  
@@ -131,12 +131,12 @@ OR ALTER
   
 -   引用临时表或表变量。  
   
- 因为 select_statement 使用 SELECT 语句，所以按照 FROM 子句的指定，使用 \<join_hint> 和 \<table_hint> 提示是有效的  。 有关详细信息，请参阅 [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md) 和 [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)。 
+ 因为 select_statement 使用 SELECT 语句，所以按照 FROM 子句的指定，使用 \<join_hint> 和 \<table_hint> 提示是有效的。 有关详细信息，请参阅 [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md) 和 [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)。 
   
- UNION 或 UNION ALL 分隔的函数和多个 SELECT 语句可在 select_statement 中使用  。  
+ UNION 或 UNION ALL 分隔的函数和多个 SELECT 语句可在 select_statement 中使用。  
   
  CHECK OPTION  
- 要求对该视图执行的所有数据修改语句都必须符合 select_statement 中所设置的条件  。 通过视图修改行时，WITH CHECK OPTION 可确保提交修改后，仍可通过视图看到数据。  
+ 要求对该视图执行的所有数据修改语句都必须符合 select_statement 中所设置的条件。 通过视图修改行时，WITH CHECK OPTION 可确保提交修改后，仍可通过视图看到数据。  
   
 > [!NOTE]  
 >  即使指定了 CHECK OPTION，也不能依据视图来验证任何直接对视图的基础表执行的更新。  
@@ -147,7 +147,7 @@ OR ALTER
  对 [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) 表中包含 CREATE VIEW 语句文本的项进行加密。 使用 WITH ENCRYPTION 可防止在 SQL Server 复制过程中发布视图。  
   
  SCHEMABINDING  
- 将视图绑定到基础表的架构。 如果指定了 SCHEMABINDING，则不能按照将影响视图定义的方式修改基表或表。 必须首先修改或删除视图定义本身，才能删除将要修改的表的依赖关系。 使用 SCHEMABINDING 时，select_statement 必须包含所引用的表、视图或用户定义函数的两部分名称 (schema.object)     。 所有被引用对象都必须在同一个数据库内。  
+ 将视图绑定到基础表的架构。 如果指定了 SCHEMABINDING，则不能按照将影响视图定义的方式修改基表或表。 必须首先修改或删除视图定义本身，才能删除将要修改的表的依赖关系。 使用 SCHEMABINDING 时，select_statement 必须包含所引用的表、视图或用户定义函数的两部分名称 (schema.object)。 所有被引用对象都必须在同一个数据库内。  
   
  不能删除参与了使用 SCHEMABINDING 子句创建的视图的视图或表，除非该视图已被删除或更改而不再具有架构绑定。 否则，[!INCLUDE[ssDE](../../includes/ssde-md.md)]将引发错误。 另外，如果对参与具有架构绑定的视图的表执行 ALTER TABLE 语句，而这些语句又会影响视图定义，则这些语句将会失败。  
   
@@ -156,7 +156,7 @@ OR ALTER
   
  对于使用 VIEW_METADATA 创建的视图，浏览模式的元数据在描述结果集内视图中的列时，将返回视图名，而不返回基表名。  
   
- 当使用 WITH VIEW_METADATA 创建视图时，如果该视图具有 INSTEAD OF INSERT 或 INSTEAD OF UPDATE 触发器，则视图的所有列（timestamp 列除外）都可更新  。 有关可更新视图的详细信息，请参阅“备注”。  
+ 当使用 WITH VIEW_METADATA 创建视图时，如果该视图具有 INSTEAD OF INSERT 或 INSTEAD OF UPDATE 触发器，则视图的所有列（timestamp 列除外）都可更新。 有关可更新视图的详细信息，请参阅“备注”。  
   
 ## <a name="remarks"></a>备注  
  只能在当前数据库中创建视图。 CREATE VIEW 必须是查询批处理中的第一条语句。 视图最多可以包含 1,024 列。  
@@ -169,7 +169,7 @@ OR ALTER
   
  创建视图时，有关该视图的信息将存储在下列目录视图中：[sys.views](../../relational-databases/system-catalog-views/sys-views-transact-sql.md)、[sys.columns](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) 和 [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)。 CREATE VIEW 语句的文本将存储在 [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) 目录视图中。  
   
- 对通过 numeric 或 float 表达式定义的视图使用索引所得到的查询结果，可能不同于不对视图使用索引的类似查询所得到的结果   。 这种差异可能是由对基础表进行 INSERT、DELETE 或 UPDATE 操作时的舍入错误引起的。  
+ 对通过 numeric 或 float 表达式定义的视图使用索引所得到的查询结果，可能不同于不对视图使用索引的类似查询所得到的结果 。 这种差异可能是由对基础表进行 INSERT、DELETE 或 UPDATE 操作时的舍入错误引起的。  
   
  创建视图时，[!INCLUDE[ssDE](../../includes/ssde-md.md)]将保存 SET QUOTED_IDENTIFIER 和 SET ANSI_NULLS 的设置。 使用视图时，将使用这些原始设置来分析视图。 因此，访问视图时，SET QUOTED_IDENTIFIER 和 SET ANSI_NULLS 的任何客户端会话设置都不会影响视图定义。  
   
@@ -186,7 +186,7 @@ OR ALTER
   
 -   被修改的列不受 GROUP BY、HAVING 或 DISTINCT 子句的影响。  
   
--   TOP 在视图的 select_statement 中的任何位置都不会与 WITH CHECK OPTION 子句一起使用  。  
+-   TOP 在视图的 select_statement 中的任何位置都不会与 WITH CHECK OPTION 子句一起使用。  
   
  上述限制应用于视图的 FROM 子句中的任何子查询，就像其应用于视图本身一样。 通常情况下，[!INCLUDE[ssDE](../../includes/ssde-md.md)]必须能够明确跟踪从视图定义到一个基表的修改。 有关详细信息，请参阅[通过视图修改数据](../../relational-databases/views/modify-data-through-a-view.md)。  
   
@@ -263,7 +263,7 @@ FROM Tn;
         < col > { < | <= } < value2 >  
         ```
   
-    -   约束必须按照以下方式定义：`<col>` 的任何指定值最多只能满足一个 `C1, ..., Cn` 约束，从而使约束形成一组不联接或不重叠的间隔。 定义不联接的约束的列 `<col>` 称为分区列。 请注意，分区列在基础表中可能有不同的名称。 约束必须处于启用和信任状态，以使它们满足分区依据列的上述条件。 如果约束被禁用，则使用 ALTER TABLE 的 CHECK CONSTRAINT constraint_name 选项重新启用约束检查，并使用 WITH CHECK 选项对其进行验证  。  
+    -   约束必须按照以下方式定义：`<col>` 的任何指定值最多只能满足一个 `C1, ..., Cn` 约束，从而使约束形成一组不联接或不重叠的间隔。 定义不联接的约束的列 `<col>` 称为分区列。 请注意，分区列在基础表中可能有不同的名称。 约束必须处于启用和信任状态，以使它们满足分区依据列的上述条件。 如果约束被禁用，则使用 ALTER TABLE 的 CHECK CONSTRAINT constraint_name 选项重新启用约束检查，并使用 WITH CHECK 选项对其进行验证。  
   
          以下示例显示有效的约束集合：  
   
@@ -278,7 +278,7 @@ FROM Tn;
   
     -   分区列是表的 PRIMARY KEY 的一部分。  
   
-    -   分区列不能是计算列、标识列、默认列或 timestamp 列  。  
+    -   分区列不能是计算列、标识列、默认列或 timestamp 列。  
   
     -   如果成员表中的同一列上存在多个约束，则数据库引擎将忽略所有约束，且在确定视图是否为分区视图时不考虑这些约束。 若要满足分区视图的条件，确保在分区依据列上只有一个分区约束。  
   
@@ -296,7 +296,7 @@ FROM Tn;
   
     -   成员表在编号相同的列上具有所有 PRIMARY KEY 约束。  
   
-    -   视图中的所有成员表都具有相同的 ANSI 填充设置。 这可以使用 sp_configure 中的 user options 选项或 SET 语句进行设置   。  
+    -   视图中的所有成员表都具有相同的 ANSI 填充设置。 这可以使用 sp_configure 中的 user options 选项或 SET 语句进行设置 。  
   
 ## <a name="conditions-for-modifying-data-in-partitioned-views"></a>在分区视图中修改数据的条件  
  下面的限制适用于在分区视图中修改数据的语句：  
@@ -309,13 +309,13 @@ FROM Tn;
   
 -   不能通过 INSERT 或 UPDATE 语句修改视图中作为一个或多个成员表中的标识列的列。  
   
--   如果其中的一个成员表包含 timestamp 列，则无法使用 INSERT 或 UPDATE 语句来修改数据  。  
+-   如果其中的一个成员表包含 timestamp 列，则无法使用 INSERT 或 UPDATE 语句来修改数据。  
   
 -   如果一个成员表包含触发器或 ON UPDATE CASCADE/SET NULL/SET DEFAULT 或 ON DELETE CASCADE/SET NULL/SET DEFAULT 约束，则不能修改视图。  
   
 -   如果语句中存在与相同视图或任何成员表的自联接，则不允许对分区视图使用 INSERT、UPDATE 和 DELETE 操作。  
   
--   以下语句不支持将数据批量导入分区视图：bcp 或 BULK INSERT 和 INSERT ...  SELECT * FROM OPENROWSET(BULK...) 语句使用格式化文件大容量导入数据。 但是，可以使用 [INSERT](../../t-sql/statements/insert-transact-sql.md) 语句在分区视图中插入多行。  
+-   以下语句不支持将数据批量导入分区视图：bcp 或 BULK INSERT 和 INSERT ...SELECT * FROM OPENROWSET(BULK...) 语句使用格式化文件大容量导入数据。 但是，可以使用 [INSERT](../../t-sql/statements/insert-transact-sql.md) 语句在分区视图中插入多行。  
   
     > [!NOTE]  
     >  若要更新分区视图，用户必须具有对成员表的 INSERT、UPDATE 和 DELETE 权限。  
@@ -327,9 +327,9 @@ FROM Tn;
   
 -   将 XACT_ABORT SET 选项设置为 ON，以使 INSERT、UPDATE 或 DELETE 语句生效。  
   
--   在分区视图中引用的远程表的所有 smallmoney 类型的列都将映射为 money   。 因此，本地表中相应的列（在选择列表中的相同序号位置中）必须也为 money 类型  。  
+-   在分区视图中引用的远程表的所有 smallmoney 类型的列都将映射为 money 。 因此，本地表中相应的列（在选择列表中的相同序号位置中）必须也为 money 类型。  
   
--   数据库兼容级别为 110 和更高级别时，在分区视图中引用的远程表的所有 smalldatetime 类型的列都将映射为 smalldatetime   。 本地表中相应的列（在选择列表中的相同序号位置中）必须为 smalldatetime  。 这是对早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的行为的更改，在早期版本中，在分区视图中引用的远程表的所有 smalldatetime 类型的列都将映射为 datetime，并且本地表中相应的列必须为 datetime 类型    。 有关详细信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  
+-   数据库兼容级别为 110 和更高级别时，在分区视图中引用的远程表的所有 smalldatetime 类型的列都将映射为 smalldatetime 。 本地表中相应的列（在选择列表中的相同序号位置中）必须为 smalldatetime。 这是对早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的行为的更改，在早期版本中，在分区视图中引用的远程表的所有 smalldatetime 类型的列都将映射为 datetime，并且本地表中相应的列必须为 datetime 类型  。 有关详细信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  
   
 -   分区视图中的所有链接服务器都不能是环回链接服务器。 这是一个指向同一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的链接服务器。  
   
@@ -340,9 +340,9 @@ FROM Tn;
 ## <a name="considerations-for-replication"></a>有关复制的考虑事项  
  若要对复制所涉及的成员表创建分区视图，需要考虑下列事项：  
   
--   如果基础表涉及到包含更新订阅的合并复制或事务复制，请确保 uniqueidentifier 列也包含在选择列表中  。 
+-   如果基础表涉及到包含更新订阅的合并复制或事务复制，请确保 uniqueidentifier 列也包含在选择列表中。 
   
-     对分区视图进行的任何 INSERT 操作都必须为 uniqueidentifier 列提供 NEWID() 值  。 因为无法使用 DEFAULT 关键字，所以对 uniqueidentifier 列的任何 UPDATE 操作都必须提供 NEWID() 值  。  
+     对分区视图进行的任何 INSERT 操作都必须为 uniqueidentifier 列提供 NEWID() 值。 因为无法使用 DEFAULT 关键字，所以对 uniqueidentifier 列的任何 UPDATE 操作都必须提供 NEWID() 值。  
   
 -   通过视图进行的更新复制与在两个不同的数据库中复制表时相同：表由不同的复制代理进行处理，因此不能保证更新的顺序。  
   

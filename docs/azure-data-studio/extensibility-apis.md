@@ -1,25 +1,24 @@
 ---
 title: 扩展性 API
-titleSuffix: Azure Data Studio
 description: 了解 Azure Data Studio 的扩展性 API
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 8a4ebe26cbbf768222c7b97b95fa7df238faded3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c94935e7d8b1a72b6a99f83618fb0e8855379ed8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75001892"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774642"
 ---
 # <a name="azure-data-studio-extensibility-apis"></a>Azure Data Studio 扩展性 API
 
-[!INCLUDE[name-sos](../includes/name-sos.md)] 提供了一个 API，扩展可以使用该 API 与 Azure Data Studio 的其他部分（例如对象资源管理器）进行交互。 这些 API 可从 [`src/sql/azdata.d.ts`](https://github.com/Microsoft/azuredatastudio/blob/master/src/sql/azdata.d.ts) 文件中获得，如下所述。
+Azure Data Studio 提供了一个 API，扩展可以使用该 API 与 Azure Data Studio 的其他部分（例如对象资源管理器）进行交互。 这些 API 可从 [`src/sql/azdata.d.ts`](https://github.com/Microsoft/azuredatastudio/blob/main/src/sql/azdata.d.ts) 文件中获得，如下所述。
 
 ## <a name="connection-management"></a>连接管理
 `azdata.connection`
@@ -159,6 +158,6 @@ vscode.commands.registerCommand('mssql.objectexplorer.interact', () => {
 
 ## <a name="proposed-apis"></a>建议的 API
 
-我们添加了建议的 API，以允许扩展在对话框、向导和文档选项卡中显示自定义 UI 以及其他功能。 有关更多文档，请参阅[建议的 API 类型文件](https://github.com/Microsoft/azuredatastudio/blob/master/src/sql/azdata.proposed.d.ts)，但请注意，这些 API 随时可能发生更改。 有关如何使用其中一些 API 的示例，请参阅[“sqlservices”示例扩展](https://github.com/Microsoft/azuredatastudio/tree/master/samples/sqlservices)。
+我们添加了建议的 API，以允许扩展在对话框、向导和文档选项卡中显示自定义 UI 以及其他功能。 有关更多文档，请参阅[建议的 API 类型文件](https://github.com/Microsoft/azuredatastudio/blob/main/src/sql/azdata.proposed.d.ts)，但请注意，这些 API 随时可能发生更改。 有关如何使用其中一些 API 的示例，请参阅[“sqlservices”示例扩展](https://github.com/Microsoft/azuredatastudio/tree/main/samples/sqlservices)。
 
 

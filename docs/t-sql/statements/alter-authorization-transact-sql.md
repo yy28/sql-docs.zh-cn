@@ -26,16 +26,16 @@ ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 953faba1da7f4fbe1283d3aacf74a1c3e902ed2f
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: d3aded8f578733ac3c6274406dccef235e71c357
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81629947"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85978099"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   更改安全对象的所有权。    
     
@@ -122,14 +122,14 @@ ALTER AUTHORIZATION ON
 ```    
     
 ## <a name="arguments"></a>参数    
-\<class_type> 更改其所有者的实体的安全对象类。 OBJECT 是默认值。    
+\<class_type>：更改其所有者的实体的安全对象类。 OBJECT 是默认值。    
     
 |||    
 |-|-|    
 |OBJECT|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]Azure SQL 数据仓库、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。|    
 |ASSEMBLY|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
 |ASYMMETRIC KEY|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
-|AVAILABILITY GROUP |适用范围：  SQL Server 2012 和更高版本。|
+|AVAILABILITY GROUP |适用范围：SQL Server 2012 和更高版本。|
 |CERTIFICATE|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
 |CONTRACT|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。|    
 |DATABASE|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 有关详细信息，请参阅下面的 [ALTER AUTHORIZATION FOR 数据库](#AlterDB)部分。|    
@@ -145,14 +145,14 @@ ALTER AUTHORIZATION ON
 |SERVER ROLE|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。|    
 |SERVICE|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。|    
 |SYMMETRIC KEY|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
-|类型|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
+|TYPE|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
 |XML SCHEMA COLLECTION|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更高版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
     
- entity_name     
+ entity_name    
  实体名。    
     
- principal_name | SCHEMA OWNER     
- 将拥有实体的安全主体名称。 数据库对象必须为数据库主体、数据库用户或角色所拥有。 服务器对象（如数据库）必须为服务器主体（登录名）所拥有。 将 SCHEMA OWNER 指定为 principal_name，指示对象必须为拥有对象架构的主体所拥有   。    
+ principal_name | SCHEMA OWNER    
+ 将拥有实体的安全主体名称。 数据库对象必须为数据库主体、数据库用户或角色所拥有。 服务器对象（如数据库）必须为服务器主体（登录名）所拥有。 将 SCHEMA OWNER 指定为 principal_name，指示对象必须为拥有对象架构的主体所拥有。    
     
 ## <a name="remarks"></a>备注    
  ALTER AUTHORIZATION 可用于更改任何具有所有者的实体的所有权。 数据库包含的实体的所有权，可以转移给任何数据库级的主体。 服务器级实体的所有权只能转移给服务器级主体。    
@@ -185,7 +185,7 @@ ALTER AUTHORIZATION ON
 |-----------|---------------|    
 |OBJECT|无法更改触发器、约束、规则、默认值、统计信息、系统对象、队列、索引视图或具有索引视图的表的所有权。|    
 |SCHEMA|转移所有权时，将删除没有显式所有者的架构包含对象的权限。 无法更改 sys、dbo 或 information_schema 的所有者。|    
-|类型|无法更改属于 sys 或 information_schema 的 TYPE 的所有权。|    
+|TYPE|无法更改属于 sys 或 information_schema 的 TYPE 的所有权。|    
 |CONTRACT、MESSAGE TYPE 或 SERVICE|无法更改系统实体的所有权。|    
 |SYMMETRIC KEY|无法更改全局临时密钥的所有权。|    
 |CERTIFICATE 或 ASYMMETRIC KEY|无法将这些实体的所有权转移给角色或组。|    
@@ -255,7 +255,7 @@ ON d.owner_sid = sl.sid;
   
 ### <a name="best-practice"></a>最佳做法  
   
-将 Azure AD 组用作 db_owner 固定数据库角色的成员，而不是将 Azure AD 用户用作数据库的单个所有者  。 下面的步骤演示如何将禁用登录名配置为数据库所有者，并将 Azure Active Directory 组 (`mydbogroup`) 设为 db_owner 角色的成员  。 
+将 Azure AD 组用作 db_owner 固定数据库角色的成员，而不是将 Azure AD 用户用作数据库的单个所有者。 下面的步骤演示如何将禁用登录名配置为数据库所有者，并将 Azure Active Directory 组 (`mydbogroup`) 设为 db_owner 角色的成员。 
 1.  以 Azure AD 管理员身份登录 SQL Server，将数据库的所有者更改为禁用的 SQL Server 身份验证登录名。 例如，在用户数据库中执行：  
   ```    
   ALTER AUTHORIZATION ON database::testdb TO DisabledLogin;  
@@ -264,12 +264,12 @@ ON d.owner_sid = sl.sid;
   ```    
   CREATE USER [mydbogroup] FROM EXTERNAL PROVIDER;  
   ```    
-3.  在用户数据库中，将表示 Azure AD 组的用户添加到 db_owner 固定数据库角色  。 例如：  
+3.  在用户数据库中，将表示 Azure AD 组的用户添加到 db_owner 固定数据库角色。 例如：  
   ```    
   ALTER ROLE db_owner ADD MEMBER mydbogroup;  
   ```    
   
-现在，`mydbogroup` 成员可将数据库作为 db_owner 角色的成员进行集中管理  。  
+现在，`mydbogroup` 成员可将数据库作为 db_owner 角色的成员进行集中管理。  
 - 从 Azure AD 组中移除此组的成员时，他们会自动失去此数据库的 dbo 权限。  
 - 同样，如果向 `mydbogroup` Azure AD 组中添加新成员，他们将自动获得此数据库的 dbo 权限。  
   

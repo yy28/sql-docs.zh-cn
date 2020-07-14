@@ -1,6 +1,6 @@
 ---
 title: 查看可用性组侦听程序属性
-description: '介绍如何使用 SQL Server Management Studio (SSMS)、Transact-SQL (T-SQL) 或 SQL PowerShell 查看 Always On 可用性组侦听程序的属性。 '
+description: 介绍如何使用 SQL Server Management Studio、Transact-SQL 或 PowerShell 在 SQL Server 中查看 Always On 可用性组侦听程序的属性。
 ms.custom: seo-lt-2019
 ms.date: 07/11/2016
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: aca0d016-3228-40b8-bdc3-285ed6d9b280
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 74f8a0823f281a9260ba2d8ba322ac97c0e7056b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f2f148deff16e26b8eec4d3c34b0e602e5e7f06e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74821772"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893822"
 ---
 # <a name="view-availability-group-listener-properties-sql-server"></a>查看可用性组侦听器属性 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中查看 AlwaysOn 可用性组侦听程序的属性。  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -30,11 +30,11 @@ ms.locfileid: "74821772"
   
 1.  在对象资源管理器中，连接到服务器实例（其上承载要查看其侦听器的可用性组的任何可用性副本）。 单击服务器名称以展开服务器树。  
   
-2.  依次展开“Always On 高可用性”  节点和“可用性组”  节点。  
+2.  依次展开“Always On 高可用性”节点和“可用性组”节点。  
   
 3.  展开可用性组节点，然后展开 **“可用性组侦听器”** 节点。  
   
-4.  右键单击要查看的侦听器，然后选择“属性”  命令。  
+4.  右键单击要查看的侦听器，然后选择“属性”命令。  
   
 5.  这将打开 **“可用性组侦听器属性”** 对话框。 有关详细信息，请参阅本主题后面的 [可用性组侦听程序属性（对话框）](#AgListenerPropertiesDialog)。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "74821772"
  **侦听器 DNS 名称**  
  可用性组侦听器的网络名称。  
   
- 端口   
+ 端口  
  该侦听器使用的 TCP 端口。  
   
 > [!NOTE]  

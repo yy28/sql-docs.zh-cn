@@ -1,5 +1,6 @@
 ---
 title: 服务器属性（“数据库设置”页）| Microsoft Docs
+description: 熟悉 SQL Server 中的数据库设置。 了解控制备份行为、填充因子、文件位置和其他属性的选项。
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -8,20 +9,20 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.serverproperties.databasesettings.f1
 ms.assetid: 1cebdbd3-cbfd-4a02-bba6-a5addf4e3ada
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ms.custom: ''
 ms.date: 05/23/2019
-ms.openlocfilehash: d6d7982384d8e83db35e35feb2e106ddae727fac
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: a4f5a0dacaeeeadf0446df9e4d3cdf54fcad7be2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83152057"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784128"
 ---
 # <a name="server-properties---database-settings-page"></a>服务器属性 -“数据库设置”页
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   使用此页可以查看或修改数据库设置。  
   
 ## <a name="options"></a>选项
@@ -52,7 +53,7 @@ ms.locfileid: "83152057"
 
 #### <a name="compress-backup"></a>压缩备份
 
-在 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]（或更高版本）中，指示“backup compression default”  选项的当前设置。 此选项决定了用于压缩备份的服务器级默认设置，具体如下：
+在 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]（或更高版本）中，指示“backup compression default”选项的当前设置。 此选项决定了用于压缩备份的服务器级默认设置，具体如下：
 
 - 如果未选中 **“压缩备份”** 框，在默认情况下将不压缩新备份。
 
@@ -67,13 +68,13 @@ ms.locfileid: "83152057"
 
 #### <a name="backup-checksum"></a>备份校验和
 
-此选项可切换备份校验和默认值的 sp_configure 设置  。 使用此功能可轻松启用备份校验和默认值。
+此选项可切换备份校验和默认值的 sp_configure 设置。 使用此功能可轻松启用备份校验和默认值。
 
 ### <a name="recovery-interval-minutes"></a>恢复间隔(分钟)
 
 设置每个数据库恢复时所需的最大分钟数。 默认值为 0，指示由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]自动配置。 实际上，此选项表示每个数据库的恢复时间不超过 1 分钟，对于活动的数据库大约每 1 分钟有一个检查点。 有关详细信息，请参阅 [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)。  
   
-### <a name="data"></a>data
+### <a name="data"></a>数据
 
 指定数据文件的默认位置。 单击“浏览”按钮导航到新的默认位置。 直到重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，更改才会生效。  
   

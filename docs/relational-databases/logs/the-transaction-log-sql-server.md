@@ -1,5 +1,6 @@
 ---
 title: 事务日志 (SQL Server) | Microsoft Docs
+description: 了解事务日志。 每个 SQL Server 数据库都会记录系统发生故障时所需的全部事务和数据库修改。
 ms.custom: ''
 ms.date: 10/23/2019
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cd975ed830f9a0b705e516707d550697fbf34325
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 74220a441301bdb44c00a6e6a998861df2c6ce02
+ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287801"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85834758"
 ---
 # <a name="the-transaction-log-sql-server"></a>事务日志 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库都具有事务日志，用于记录所有事务以及每个事务对数据库所做的修改。
   
 事务日志是数据库的一个关键组件。 如果系统出现故障，你将需要依靠该日志将数据库恢复到一致的状态。 
@@ -143,7 +144,7 @@ ms.locfileid: "79287801"
   
 -   插入或追加新数据时，使用 [UPDATE](../../t-sql/queries/update-transact-sql.md) 语句中的 `.WRITE` 子句部分更新到大型值数据类型。 注意，在更新现有值时没有使用最小日志记录。 有关大型值数据类型的详细信息，请参阅[数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)。  
   
--   在[WRITETEXT](../../t-sql/queries/writetext-transact-sql.md) 、 [UPDATETEXT](../../t-sql/queries/updatetext-transact-sql.md) 和 **text**, **ntext**, 、 **image** 语句。 注意，在更新现有值时没有使用最小日志记录。  
+-   在“text”、“ntext”和“image”数据类型列中插入或追加新数据时的 [WRITETEXT](../../t-sql/queries/writetext-transact-sql.md) 和 [UPDATETEXT](../../t-sql/queries/updatetext-transact-sql.md) 语句。 注意，在更新现有值时没有使用最小日志记录。  
   
     > [!WARNING]
     > `WRITETEXT` 和 `UPDATETEXT` 语句已被弃用；请避免在新的应用程序中使用它们。  
@@ -157,8 +158,11 @@ ms.locfileid: "79287801"
         > [!WARNING]
         > `DBCC DBREINDEX` 语句已被弃用；请勿在新的应用程序中使用该语句。  
   
+        > [!NOTE]
+        > 索引生成操作使用最小日志记录，但在并发执行备份时可能会延迟。 此延迟由使用简单或大容量日志恢复模式时的最小日志记录缓冲池页的同步要求引起。 
+      
     -   [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) 新堆重新生成（如果适用）。 `DROP INDEX` 操作期间将始终完整记录索引页的释放操作。
-  
+
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks  
 **管理事务日志**  
   

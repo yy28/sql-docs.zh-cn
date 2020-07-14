@@ -1,7 +1,7 @@
 ---
 title: 加密与 Linux 上 SQL Server 的连接
 description: 本文介绍如何加密与 Linux 上 SQL Server 的连接。
-ms.date: 01/30/2018
+ms.date: 06/29/2020
 author: vin-yu
 ms.author: vinsonyu
 ms.reviewer: vanto
@@ -10,16 +10,16 @@ ms.prod: sql
 ms.technology: linux
 helpviewer_keywords:
 - Linux, encrypted connections
-ms.openlocfilehash: 975a312988a7df4bdb4fb2858d7b0fcbe95cea33
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 53da117e95d235b0de22b8265439721b94346024
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71016862"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894011"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>加密与 Linux 上 SQL Server 的连接
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Linux 上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可以使用传输层安全性 (TLS) 对通过网络在客户端应用程序与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例之间传输的数据进行加密。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在 Windows 和 Linux 上支持相同的 TLS 协议：TLS 1.2、1.1 和 1.0。 但是，配置 TLS 的步骤特定于运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的操作系统。  
 
@@ -44,33 +44,37 @@ TLS 用于加密从客户端应用程序到 [!INCLUDE[ssNoVersion](../includes/s
 > [!NOTE]
 > 在本示例中，我们使用自签名证书，此证书不应用于生产方案。 你应该使用 CA 证书。 
 
-        openssl req -x509 -nodes -newkey rsa:2048 -subj '/CN=mssql.contoso.com' -keyout mssql.key -out mssql.pem -days 365 
-        sudo chown mssql:mssql mssql.pem mssql.key 
-        sudo chmod 600 mssql.pem mssql.key   
-        sudo mv mssql.pem /etc/ssl/certs/ 
-        sudo mv mssql.key /etc/ssl/private/ 
+```bash
+openssl req -x509 -nodes -newkey rsa:2048 -subj '/CN=mssql.contoso.com' -keyout mssql.key -out mssql.pem -days 365 
+sudo chown mssql:mssql mssql.pem mssql.key 
+sudo chmod 600 mssql.pem mssql.key   
+sudo mv mssql.pem /etc/ssl/certs/ 
+sudo mv mssql.key /etc/ssl/private/ 
+```
 
 - **配置 SQL Server**
 
-        systemctl stop mssql-server 
-        cat /var/opt/mssql/mssql.conf 
-        sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssql.pem 
-        sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssql.key 
-        sudo /opt/mssql/bin/mssql-conf set network.tlsprotocols 1.2 
-        sudo /opt/mssql/bin/mssql-conf set network.forceencryption 0 
+```bash
+systemctl stop mssql-server 
+cat /var/opt/mssql/mssql.conf 
+sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssql.pem 
+sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssql.key 
+sudo /opt/mssql/bin/mssql-conf set network.tlsprotocols 1.2 
+sudo /opt/mssql/bin/mssql-conf set network.forceencryption 0 
+```
 
 - **在客户端计算机（Windows、Linux 或 macOS）上注册证书**
 
     -   如果使用 CA 签名证书，则必须将证书颁发机构 (CA) 证书而不是用户证书复制到客户端计算机。 
     -   如果使用自签名证书，只需根据分发版将 .pem 文件复制到以下文件夹中，然后执行命令启用它们 
-        - **Ubuntu**：将证书复制到 ```/usr/share/ca-certificates/```，将扩展名重命名为 .crt，使用 dpkg-reconfigure ca-certificates 将其作为系统 CA 证书启用。 
-        - **RHEL**：将证书复制到 ```/etc/pki/ca-trust/source/anchors/```，使用 ```update-ca-trust``` 将其作为系统 CA 证书启用。
-        - **SUSE**：将证书复制到 ```/usr/share/pki/trust/anchors/```，使用 ```update-ca-certificates``` 将其作为系统 CA 证书启用。
-        -  Windows：在当前用户 -> 受信任的根证书颁发机构 -> 证书下将 .pem 文件作为证书导入
+        - **Ubuntu**：将证书复制到 `/usr/share/ca-certificates/`，将其扩展重命名为 .crt，并使用 `dpkg-reconfigure ca-certificates` 将其作为系统 CA 证书启用。 
+        - **RHEL**：将证书复制到 `/etc/pki/ca-trust/source/anchors/`，并使用 `update-ca-trust` 将其作为系统 CA 证书启用。
+        - **SUSE**：将证书复制到 `/usr/share/pki/trust/anchors/`，并使用 `update-ca-certificates` 将其作为系统 CA 证书启用。
+        - Windows：在当前用户 -> 受信任的根证书颁发机构 -> 证书下将 .pem 文件作为证书导入
         - **macOS**： 
-           - 将证书复制到 ```/usr/local/etc/openssl/certs```
-           - 运行以下命令获取哈希值：```/usr/local/Cellar/openssl/1.0.2l/openssl x509 -hash -in mssql.pem -noout```
-           - 将证书重命名为值。 例如：```mv mssql.pem dc2dd900.0```。 确保 dc2dd900.0 在 ```/usr/local/etc/openssl/certs``` 中
+           - 将证书复制到 `/usr/local/etc/openssl/certs`
+           - 运行以下命令获取哈希值：`/usr/local/Cellar/openssl/1.0.2l/openssl x509 -hash -in mssql.pem -noout`
+           - 将证书重命名为值。 例如：`mv mssql.pem dc2dd900.0`。 确保 dc2dd900.0 在 `/usr/local/etc/openssl/certs` 中
     
 -   **连接字符串示例** 
 
@@ -79,53 +83,63 @@ TLS 用于加密从客户端应用程序到 [!INCLUDE[ssNoVersion](../includes/s
   
     - **SQLCMD** 
 
-            sqlcmd  -S <sqlhostname> -N -U sa -P '<YourPassword>' 
+        `sqlcmd  -S <sqlhostname> -N -U sa -P '<YourPassword>'`
+
     - **ADO.NET** 
 
-            "Encrypt=True; TrustServerCertificate=False;" 
+        `"Encrypt=True; TrustServerCertificate=False;"`
+
     - **ODBC** 
 
-            "Encrypt=Yes; TrustServerCertificate=no;" 
+        `"Encrypt=Yes; TrustServerCertificate=no;"`
+
     - **JDBC** 
-    
-            "encrypt=true; trustServerCertificate=false;" 
+
+        `"encrypt=true; trustServerCertificate=false;"`
 
 ## <a name="server-initiated-encryption"></a>服务器启动的加密 
 
 - **生成证书**（/CN 应与 SQL Server 主机完全限定的域名匹配）
-        
-        openssl req -x509 -nodes -newkey rsa:2048 -subj '/CN=mssql.contoso.com' -keyout mssql.key -out mssql.pem -days 365 
-        sudo chown mssql:mssql mssql.pem mssql.key 
-        sudo chmod 600 mssql.pem mssql.key   
-        sudo mv mssql.pem /etc/ssl/certs/ 
-        sudo mv mssql.key /etc/ssl/private/ 
+
+```bash
+openssl req -x509 -nodes -newkey rsa:2048 -subj '/CN=mssql.contoso.com' -keyout mssql.key -out mssql.pem -days 365 
+sudo chown mssql:mssql mssql.pem mssql.key 
+sudo chmod 600 mssql.pem mssql.key   
+sudo mv mssql.pem /etc/ssl/certs/ 
+sudo mv mssql.key /etc/ssl/private/ 
+```
 
 - **配置 SQL Server**
 
-        systemctl stop mssql-server 
-        cat /var/opt/mssql/mssql.conf 
-        sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssql.pem 
-        sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssql.key 
-        sudo /opt/mssql/bin/mssql-conf set network.tlsprotocols 1.2 
-        sudo /opt/mssql/bin/mssql-conf set network.forceencryption 1 
-        
+```bash
+systemctl stop mssql-server 
+cat /var/opt/mssql/mssql.conf 
+sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssql.pem 
+sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssql.key 
+sudo /opt/mssql/bin/mssql-conf set network.tlsprotocols 1.2 
+sudo /opt/mssql/bin/mssql-conf set network.forceencryption 1 
+```
+
 -   **连接字符串示例** 
 
     - **SQLCMD**
 
-            sqlcmd  -S <sqlhostname> -U sa -P '<YourPassword>' 
+        `sqlcmd  -S <sqlhostname> -U sa -P '<YourPassword>'`
+
     - **ADO.NET** 
 
-            "Encrypt=False; TrustServerCertificate=False;" 
+        `"Encrypt=False; TrustServerCertificate=False;"`
+
     - **ODBC** 
 
-            "Encrypt=no; TrustServerCertificate=no;"  
+        `"Encrypt=no; TrustServerCertificate=no;"`
+
     - **JDBC** 
-    
-            "encrypt=false; trustServerCertificate=false;" 
-            
+
+        `"encrypt=false; trustServerCertificate=false;"`
+
 > [!NOTE]
-> 如果客户端无法连接到 CA 来验证证书的真实性，请将“TrustServerCertificate”设置为 True 
+> 如果客户端无法连接到 CA 来验证证书的真实性，请将“TrustServerCertificate”设置为 True
 
 ## <a name="common-connection-errors"></a>常见的连接错误  
 

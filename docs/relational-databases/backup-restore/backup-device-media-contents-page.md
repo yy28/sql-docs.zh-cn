@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: 5fc7bd22-b6d8-4af1-8a58-2e7d0b994d08
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 90d6fdb147e6f7b40a9e8072a5c2836bd4e40bcd
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 43bb11503e312ca9a92251c1e77524e68077ccd9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220502"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728522"
 ---
 # <a name="backup-device-media-contents-page"></a>备份设备（“介质内容”页）
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   使用 **“备份设备”** 对话框可以查看备份信息。 此信息描述设备、介质、介质集以及备份集。  
   
  **使用 SQL Server Management Studio 查看备份设备的内容**  
@@ -60,8 +60,8 @@ ms.locfileid: "82220502"
 |标头|值|  
 |------------|------------|  
 |**名称**|备份集的名称。|  
-|类型 |备份对象：数据库、文件或 \<空白>（对于事务日志）  。|  
-|组件 |执行的备份类型：“完整”、“差异”或“事务日志”。|  
+|类型|备份对象：数据库、文件或 \<blank>（对于事务日志）。|  
+|组件|执行的备份类型：“完整”、“差异”或“事务日志”。|  
 |**Server**|执行备份操作的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例名。|  
 |**Database**|已备份数据库的名称。|  
 |**位置**|备份集在卷中的位置。|  

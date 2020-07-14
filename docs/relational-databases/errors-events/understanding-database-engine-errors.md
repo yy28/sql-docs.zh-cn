@@ -1,5 +1,6 @@
 ---
 title: 了解数据库引擎错误 | Microsoft Docs
+description: 了解 SQL Server 数据库引擎引发的错误的属性，以及如何从 sys.messages 访问所有系统错误消息和用户定义的错误消息。
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: ddaca9d3-956f-46a5-8cd3-a7a15ec75878
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 91ef40f0c1b5250cde244130b146479cf14fa9fc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 49e62b7fc66a462701ea65a537edee84c9735b86
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67903755"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009212"
 ---
 # <a name="understanding-database-engine-errors"></a>了解数据库引擎错误
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   由 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 引起的错误具有下表所述的属性。  
   
 |Attribute|说明|  
@@ -38,7 +39,7 @@ ms.locfileid: "67903755"
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例中所有系统和用户定义的错误消息都包含在 **sys.messages** 目录视图中。 可以使用 RAISERROR 语句将用户定义的错误返回到应用程序。  
   
- 所有数据库 API（如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SQLClient 命名空间、ActiveX 数据对象 (ADO)、OLE DB 和开放式数据库连接 (ODBC)）都会报告基本错误属性  。 此信息包括错误号和消息字符串。 但是，并非所有 API 都报告所有其他错误属性。  
+ 所有数据库 API（如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SQLClient 命名空间、ActiveX 数据对象 (ADO)、OLE DB 和开放式数据库连接 (ODBC)）都会报告基本错误属性。 此信息包括错误号和消息字符串。 但是，并非所有 API 都报告所有其他错误属性。  
   
  可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码中使用一些函数（如相关 CATCH 块作用域内的 ERROR_LINE、ERROR_MESSAGE、ERROR_NUMBER、ERROR_PROCEDURE、ERROR_SEVERITY 和 ERROR_STATE），来获得关于发生在 TRY…CATCH 结构的 TRY 块作用域内的错误信息。 有关详细信息，请参阅 [TRY...CATCH (Transact-SQL)](../../t-sql/language-elements/try-catch-transact-sql.md)。  
   

@@ -1,6 +1,6 @@
 ---
 title: SQL Server 安装指南
-ms.description: 'An index of content that helps you install SQL Server and associated components through various options such as the installation wizard, command prompt, or sysprep. '
+description: 内容索引，可帮助你使用安装向导、命令提示符或 sysprep 等选项安装 SQL Server 和关联组件。
 ms.custom: ''
 ms.date: 11/14/2019
 ms.prod: sql
@@ -15,16 +15,16 @@ ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 58773f430fc61a7817d7d3ee7c9e7b597716c438
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e11f2aa1a553933882e844dbf7c9452183c63c28
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79434174"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900350"
 ---
 # <a name="sql-server-installation-guide"></a>SQL Server 安装指南
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 本文是内容索引，提供关于在 Windows 上安装 SQL Server 的指南。
 
@@ -57,7 +57,7 @@ ms.locfileid: "79434174"
 
 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 的下载位置由版本决定：
 
-* “SQL Server Enterprise、Standard 和 Express Edition”  已获授权，可供生产之用。 对于企业版和标准版，请联系软件供应商获取安装媒体。 可以在 [Microsoft 许可页面](https://www.microsoft.com/licensing/product-licensing/sql-server)上找到采购信息和 Microsoft 合作伙伴目录。
+* “SQL Server Enterprise、Standard 和 Express Edition”已获授权，可供生产之用。 对于企业版和标准版，请联系软件供应商获取安装媒体。 可以在 [Microsoft 许可页面](https://www.microsoft.com/licensing/product-licensing/sql-server)上找到采购信息和 Microsoft 合作伙伴目录。
 * [免费版本 - 最新](https://www.microsoft.com/sql-server/sql-server-downloads)
 * [免费版本 - 其他](https://www.microsoft.com/evalcenter/evaluate-sql-server)
 

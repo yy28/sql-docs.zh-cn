@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 14839cec-6dbf-49c2-aa27-56847b09b4db
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8ae39654a19c73c71c602801b3aa5f594f7d0828
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bc784bc678dd5ebf52b06edc2af99e7efac08aaf
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908161"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882239"
 ---
 # <a name="specify-merge-replication-properties"></a>指定合并复制属性
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 本主题说明如何为合并复制指定各种属性。 
 
 ## <a name="merge-article-is-download-only"></a>合并项目仅供下载
@@ -38,19 +38,19 @@ ms.locfileid: "72908161"
   
 #### <a name="on-the-properties-tab-of-the-article-properties"></a>在“项目”页的“属性”选项卡上  
   
-1.  在新建发布向导或“发布属性 - \<发布>”对话框的“项目”页上，选择一个表，然后单击“项目属性”。    
+1.  在新建发布向导或“发布属性 - \<Publication>”对话框的“项目”页上，选择一个表，然后单击“项目属性”。      
 2.  单击 **“设置突出显示的表项目的属性”** 或 **“设置所有表项目的属性”** 。  
   
-3.  在“项目属性 - \<项目>”对话框的“属性”选项卡的“目标对象”部分中，为“同步方向”指定以下值之一：    
+3.  在“项目属性 - \<Article>”对话框的“属性”选项卡的“目标对象”部分中，为“同步方向”指定以下值之一：    
     -   **下载到订阅服务器，禁止订阅服务器更改**    
     -   **下载到订阅服务器，允许订阅服务器更改**    
-4.  如果处于“发布属性 - \<发布>”对话框中，请单击“确定”以保存并关闭该对话框。  
+4.  如果处于“发布属性 - \<Publication>”对话框中，请单击“确定”以保存并关闭该对话框 。  
 
 ###  <a name="use-transact-sql"></a>使用 Transact-SQL  
   
 #### <a name="new-article"></a>新项目  
   
-1.  执行 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)，为参数 `@subscriber_upload_options` 指定 1 值或 2 值。 这些数字分别与以下行为相对应：  
+1.  执行 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)，为参数 `@subscriber_upload_options` 指定 1 值或 2 值 。 这些数字分别与以下行为相对应：  
   
     -   **0** - 无限制（默认值）。 将订阅服务器上所做的更改上载到发布服务器。    
     -   **1** - 允许在订阅服务器上进行更改，但不会将它们上载到发布服务器。    
@@ -61,9 +61,9 @@ ms.locfileid: "72908161"
   
 #### <a name="existing-article"></a>现有项目
   
-1.  要确定项目是否仅用于下载，请执行 [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)，并验证结果集中项目“upload_options”的值  。 
+1.  要确定项目是否仅用于下载，请执行 [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)，并验证结果集中项目“upload_options”的值。 
   
-2.  如果在步骤 1 中返回的值为 0，则执行 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)，为参数 `@property` 指定值 subscriber_upload_options，为 `@force_invalidate_snapshot` 和 `@force_reinit_subscription` 指定值 1，并为 `@value` 指定值 1 或 2，这里的数字分别对应于以下行为：  
+2.  如果在步骤 1 中返回的值为 0，则执行 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)，为参数 `@property` 指定值 subscriber_upload_options，为 `@force_invalidate_snapshot` 和 `@force_reinit_subscription` 指定值 1，并为 `@value` 指定值 1 或 2，这里的数字分别对应于以下行为 ：  
   
     -   **1** - 允许在订阅服务器上进行更改，但不会将它们上载到发布服务器。    
     -   **2** - 不允许在订阅服务器上进行更改。  
@@ -84,16 +84,16 @@ ms.locfileid: "72908161"
   
 #### <a name="enable-interactive-conflict-resolution-for-an-article"></a>为项目启用交互式冲突解决方法  
   
-1.  在新建发布向导或“发布属性 - \<发布>”对话框的“项目”页上，选择一个表。 有关如何使用该向导和如何访问该对话框的详细信息，请参阅[创建发布](../../../relational-databases/replication/publish/create-a-publication.md)和[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。   
+1.  在新建发布向导或“发布属性 - \<Publication>”对话框的“项目” 页上，选择一个表。 有关如何使用该向导和如何访问该对话框的详细信息，请参阅[创建发布](../../../relational-databases/replication/publish/create-a-publication.md)和[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。   
 2.  单击 **“项目属性”** ，然后单击 **“设置突出显示的表项目的属性”** 或 **“设置所有表项目的属性”** 。    
-3.  在“项目属性 - \<项目>”或“项目属性 - \<项目类型>”页上，单击“冲突解决程序”选项卡。    
+3.  在“项目属性 - \<Article>”  或“项目属性 - \<ArticleType>”页上，单击“冲突解决程序”选项卡。    
 4.  选择 **“允许订阅服务器在按需同步时交互式解决冲突”** 。    
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]    
-6.  如果处于“发布属性 - \<发布>”对话框中，请单击“确定”以保存并关闭该对话框。  
+6.  如果处于“发布属性 - \<Publication>”对话框中，请单击“确定”以保存并关闭该对话框 。  
   
 #### <a name="specify-that-a-subscription-should-use-interactive-conflict-resolution"></a>指定订阅应使用交互式冲突解决方法  
   
-1.  在“订阅属性 - \<订阅服务器>: \<订阅数据库>”对话框中，为“交互式解决冲突”选项指定“True”值。 有关访问此对话框的详细信息，请参阅 [View and Modify Push Subscription Properties](../../../relational-databases/replication/view-and-modify-push-subscription-properties.md) 和 [View and Modify Pull Subscription Properties](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)。   
+1.  在“订阅属性 - \<Subscriber>: \<SubscriptionDatabase>”  对话框中，为“以交互方式解决冲突”选项指定“True”值。 有关访问此对话框的详细信息，请参阅 [View and Modify Push Subscription Properties](../../../relational-databases/replication/view-and-modify-push-subscription-properties.md) 和 [View and Modify Pull Subscription Properties](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)。   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ###  <a name="use-transact-sql"></a>使用 Transact-SQL  
@@ -127,14 +127,14 @@ ms.locfileid: "72908161"
 -   对于行级和列级跟踪，始终在行级执行冲突解决：入选行将覆盖落选行。 合并复制还允许您指定在逻辑记录级跟踪和解决冲突，但 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]没有提供这些选项。 有关在复制存储过程中设置这些选项的信息，请参阅 [定义合并表项目间的逻辑记录关系](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md)。  
   
 ### <a name="use-sql-server-management-studio"></a>使用 SQL Server Management Studio  
- 在“项目属性”对话框的“属性“选项卡上指定合并项目的行级或列级跟踪，该对话框可以在新发布向导和“发布属性 - \<发布>”对话框中找到。 有关如何使用该向导和如何访问该对话框的详细信息，请参阅[创建发布](../../../relational-databases/replication/publish/create-a-publication.md)和[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+ 在“项目属性”对话框的“属性“选项卡上指定合并项目的行级或列级跟踪，该对话框可以在新发布向导和“发布属性 - \<Publication>”对话框中找到。 有关如何使用该向导和如何访问该对话框的详细信息，请参阅[创建发布](../../../relational-databases/replication/publish/create-a-publication.md)和[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 #### <a name="specify-row--or-column-level-tracking"></a>指定行级别或列级别跟踪  
   
-1.  在新建发布向导或“发布属性 - \<发布>”对话框的“项目”页上，选择一个表。  
+1.  在新建发布向导或“发布属性 - \<Publication>”对话框的“项目” 页上，选择一个表。  
 2.  单击 **“项目属性”** ，然后单击 **“设置突出显示的表项目的属性”** 或 **“设置所有表项目的属性”** 。   
-3.  在“项目属性 \<项目>”对话框的“属性”选项卡上，为“跟踪级别”属性选择以下值之一：“行级跟踪”或“列级跟踪”。   
-4.  如果处于“发布属性 - \<发布>”对话框中，请单击“确定”以保存并关闭该对话框。  
+3.  在“项目属性 \<Article>”对话框的“属性”选项卡上，为“跟踪级别”属性选择以下值之一：  “行级别跟踪”或“列级别跟踪” 。   
+4.  如果处于“发布属性 - \<Publication>”对话框中，请单击“确定”以保存并关闭该对话框 。  
   
 ### <a name="use-transact-sql"></a>使用 Transact-SQL  
   

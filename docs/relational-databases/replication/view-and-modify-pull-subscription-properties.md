@@ -19,15 +19,15 @@ ms.assetid: 1601e54f-86f0-49e8-b023-87a5d1def033
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 024f76fd4f87f353908fc634ec486f579f2e7e79
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: eb0303d6279b8495d1f2f9480c6ac99486f124cb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286924"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720634"
 ---
 # <a name="view-and-modify-pull-subscription-properties"></a>查看和修改请求订阅属性
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中查看和修改请求订阅属性。  
   
  **本主题内容**  
@@ -41,7 +41,7 @@ ms.locfileid: "76286924"
      [复制管理对象 (RMO)](#RMOProcedure)  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 在“订阅属性 - \<发布服务器>：\<PublicationDatabase>”对话框（可从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 访问该对话框）中，可以从发布服务器或订阅服务器查看请求订阅属性。 可以从订阅服务器中查看更多属性，并且可以在订阅服务器上修改属性。 也可以从发布服务器的 **“所有订阅”** 选项卡上查看属性信息，此选项卡可以通过复制监视器访问。 有关启动复制监视器的信息，请参阅[启动复制监视器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
+ 在“订阅属性 - \<Publisher>: \<PublicationDatabase>”对话框中，查看发布服务器或订阅服务器的请求订阅属性，可通过 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 访问此对话框。 可以从订阅服务器中查看更多属性，并且可以在订阅服务器上修改属性。 也可以从发布服务器的 **“所有订阅”** 选项卡上查看属性信息，此选项卡可以通过复制监视器访问。 有关启动复制监视器的信息，请参阅[启动复制监视器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
   
 #### <a name="to-view-pull-subscription-properties-from-the-publisher-in-management-studio"></a>从 Management Studio 中的发布服务器查看请求订阅属性  
   
@@ -92,7 +92,7 @@ ms.locfileid: "76286924"
   
 #### <a name="to-change-the-properties-of-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>更改对快照发布或事务发布的请求订阅的属性  
   
-1.  在订阅服务器上，执行 [sp_change_subscription_properties](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)，同时指定 `@publisher`、`@publisher_db`、`@publication`，然后将 `@publication_type` 的值指定为 0（对于事务）或 1（对于快照），指定要更改为 `@property` 的订阅属性和要更改为 `@value` 的新值。  
+1.  在订阅服务器上，执行 [sp_change_subscription_properties](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)，同时指定 `@publisher`、`@publisher_db`、`@publication`，然后将 `@publication_type` 的值指定为 0（对于事务）或 1（对于快照），指定要更改为 `@property` 的订阅属性和要更改为 `@value` 的新值 。  
   
 2.  （可选）在订阅服务器上，对订阅数据库执行 [sp_changesubscriptiondtsinfo](../../relational-databases/system-stored-procedures/sp-changesubscriptiondtsinfo-transact-sql.md)。 为 `@jobid` 指定分发代理作业的 ID，并指定以下 Data Transformation Services (DTS) 包属性：  
   

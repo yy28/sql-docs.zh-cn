@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: be817f1fffd734dcf86f3b35d3215decbc9eb28d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d1a4dd8b5139498e558f718cdb5d0d22824f9655
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76706281"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896954"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>为 SQL Server 可用性组配置 RHEL 群集
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 本文档介绍如何在 Red Hat Enterprise Linux 上为 SQL Server 创建三节点可用性组群集。 若要实现高可用性，Linux 上的可用性组需要三个节点，请参阅[可用性组配置的高可用性和数据保护](sql-server-linux-availability-group-ha.md)。 集群层基于在 [Pacemaker](https://clusterlabs.org/) 的基础上构建的 Red Hat Enterprise Linux (RHEL) [HA 加载项](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)。 
 
@@ -167,7 +167,7 @@ pcs resource update ag_cluster meta failure-timeout=60s
 
 ## <a name="create-availability-group-resource"></a>创建可用性组资源
 
-若要创建可用性组资源，请使用 `pcs resource create` 命令并设置资源属性。 以下命令将为可用性组创建一个名为 `ag1` 的`ocf:mssql:ag` master/slave 类型的资源。
+若要创建可用性组资源，请使用 `pcs resource create` 命令并设置资源属性。 以下命令将为可用性组创建一个名为 `ag1` 的 `ocf:mssql:ag` master/subordinate 类型的资源。
 
 **RHEL 7**
 
@@ -177,7 +177,7 @@ sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeou
 
 **RHEL 8**
 
-随着 RHEL 8 可用，create 语法已发生了更改  。 如果使用的是 RHEL 8，术语 `master` 已更改为`promotable`  。 使用以下 create 命令，而不是上面的命令： 
+随着 RHEL 8 可用，create 语法已发生了更改。 如果使用的是 RHEL 8，术语 `master` 已更改为`promotable`。 使用以下 create 命令，而不是上面的命令： 
 
 ```bash
 sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=60s promotable notify=true

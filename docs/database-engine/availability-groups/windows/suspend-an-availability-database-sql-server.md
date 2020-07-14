@@ -1,6 +1,6 @@
 ---
 title: 挂起可用性数据库
-description: 了解如何使用 SQL Server Management Studio (SSMS)、Transact-SQL (T-SQL) 或 PowerShell 挂起 Always On 可用性组中数据库的数据移动。
+description: 了解如何使用 SQL Server Management Studio、Transact-SQL 或 PowerShell 挂起 Always On 可用性组中数据库的数据移动。
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -17,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 92f83bb31569a055bf9158a0388d9cb0630e9a1d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b56a461019a7b99bd73db3ed287020f0923b627f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75251273"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900717"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>挂起可用性数据库 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   您可以通过使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中的 PowerShell，在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中挂起可用性数据库。 请注意，挂起命令需要对承载要挂起或恢复的数据库的服务器实例发出。  
   
  挂起命令的效果取决于您挂起的是辅助数据库还是主数据库，如下所示：  
   
 |挂起的数据库|挂起命令的效果|  
 |------------------------|-------------------------------|  
-|辅助数据库|仅挂起本地辅助数据库，并且其同步状态变为 NOT SYNCHRONIZING。 其他辅助数据库不受影响。 挂起的数据库将停止接收和应用数据（日志记录），并且开始落在主数据库的后面。 可读辅助副本上的现有连接会保持可用状态。 可读辅助副本上挂起数据库的新连接在数据移动恢复之前一直处于禁用状态。<br /><br /> 主数据库仍然可用。 如果您挂起相应的每个辅助数据库，则主数据库将公开运行。<br /><br /> **\*\* 重要提示 \*\*** 当挂起辅助数据库时，对应主数据库的发送队列将累积未发送的事务日志记录。 与辅助副本的连接将返回在数据移动挂起时可用的数据。|  
+|辅助数据库|仅挂起本地辅助数据库，并且其同步状态变为 NOT SYNCHRONIZING。 其他辅助数据库不受影响。 挂起的数据库将停止接收和应用数据（日志记录），并且开始落在主数据库的后面。 可读辅助副本上的现有连接会保持可用状态。 可读辅助副本上挂起数据库的新连接在数据移动恢复之前一直处于禁用状态。 仅当使用侦听器和只读路由打开连接时，此行为才适用。<br /><br /> 主数据库仍然可用。 如果您挂起相应的每个辅助数据库，则主数据库将公开运行。<br /><br /> **\*\* 重要提示 \*\*** 当挂起辅助数据库时，对应主数据库的发送队列将累积未发送的事务日志记录。 与辅助副本的连接将返回在数据移动挂起时可用的数据。|  
 |主数据库|主数据库将停止数据移动到每个连接的辅助数据库。 主数据库将继续在公开模式下运行。 主数据库仍然保持对客户端可用，可读取辅助数据库上的现有连接保持可用并且可以建立新连接。|  
   
 > [!NOTE]  
@@ -83,11 +83,11 @@ ms.locfileid: "75251273"
   
 1.  在对象资源管理器中，连接到承载要挂起的数据库所在的可用性副本的服务器实例，然后展开服务器树。 有关详细信息，请参阅本主题前面的 [先决条件](#Prerequisites)。  
   
-2.  依次展开“Always On 高可用性”  节点和“可用性组”  节点。  
+2.  依次展开“Always On 高可用性”节点和“可用性组”节点。  
   
 3.  展开该可用性组。  
   
-4.  展开“可用性数据库”  节点，右键单击该数据库，然后单击“挂起数据移动”  。  
+4.  展开“可用性数据库”节点，右键单击该数据库，然后单击“挂起数据移动”。  
   
 5.  在 **“挂起数据移动”** 对话框中，单击 **“确定”** 。  
   
