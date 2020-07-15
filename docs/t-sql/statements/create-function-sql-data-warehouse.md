@@ -13,15 +13,15 @@ ms.assetid: 8cad1b2c-5ea0-4001-9060-2f6832ccd057
 author: juliemsft
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 3dd905b58478955bc58d0134e8ca56f9ac219ea7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ae8c2994e43ff6a90105dd39c203a455da2c9468
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79526772"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196765"
 ---
 # <a name="create-function-sql-data-warehouse"></a>CREATE FUNCTION（SQL 数据仓库）
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   在 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 中创建用户定义函数。 用户定义函数是接受参数、执行操作（例如复杂计算）并将操作结果以值的形式返回的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 例程。 返回值必须为标量（单个）值。 使用此语句可以创建可通过以下方式使用的重复使用的例程：  
   
@@ -39,7 +39,7 @@ ms.locfileid: "79526772"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 --Transact-SQL Scalar Function Syntax  
 CREATE FUNCTION [ schema_name. ] function_name   
 ( [ { @parameter_name [ AS ] parameter_data_type   
@@ -68,13 +68,13 @@ RETURNS return_data_type
  *schema_name*  
  用户定义函数所属的架构的名称。  
   
- function_name   
+ function_name  
  用户定义函数的名称。 函数名称必须符合标识符规则，并且在数据库中以及对其架构来说是唯一的。  
   
 > [!NOTE]  
 >  即使未指定参数，函数名称后也需要加上括号。  
   
- @parameter_name   
+ @parameter_name  
  用户定义函数中的参数。 可声明一个或多个参数。  
   
  一个函数最多可以有 2,100 个参数。 执行函数时，如果未定义参数的默认值，则用户必须提供每个已声明参数的值。  
@@ -82,20 +82,20 @@ RETURNS return_data_type
  通过将 at 符号 (@) 用作第一个字符来指定参数名称。 参数名称必须符合标识符规则。 参数是对应于函数的局部参数；其他函数中可使用相同的参数名称。 参数只能代替常量，而不能用于代替表名、列名或其他数据库对象的名称。  
   
 > [!NOTE]  
->  在传递存储过程或用户定义函数中的参数时，或在声明和设置批语句中的变量时，不会遵守 ANSI_WARNINGS。 例如，如果将一个变量定义为 char(3)，然后将其值设置为大于三个字符，则数据会被截断为定义的大小，并且 INSERT 或 UPDATE 语句可以成功执行  。  
+>  在传递存储过程或用户定义函数中的参数时，或在声明和设置批语句中的变量时，不会遵守 ANSI_WARNINGS。 例如，如果将一个变量定义为 char(3)，然后将其值设置为大于三个字符，则数据会被截断为定义的大小，并且 INSERT 或 UPDATE 语句可以成功执行。  
   
- parameter_data_type   
+ parameter_data_type  
  参数数据类型。 对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数，允许在 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 中支持所有标量数据类型。 不支持 timestamp (rowversion) 数据类型。  
   
- [ =default ]   
- 参数的默认值。 如果定义了 default 值，则无需指定此参数的值即可执行函数  。  
+ [ =default ]  
+ 参数的默认值。 如果定义了 default 值，则无需指定此参数的值即可执行函数。  
   
  如果函数的参数有默认值，则调用该函数以检索默认值时，必须指定关键字 DEFAULT。 此行为与在存储过程中使用具有默认值的参数不同，在后一种情况下，不提供参数同样意味着使用默认值。  
   
- return_data_type   
+ return_data_type  
  标量用户定义函数的返回值。 对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数，允许在 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 中支持所有标量数据类型。 不支持 timestamp (rowversion) 数据类型。 不允许光标和表的非标量类型。  
   
- function_body   
+ function_body  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句系列。  function_body 不能包含 SELECT 语句且不能引用数据库数据。  function_body 不能引用表或视图。 function body 可以调用其他确定性的函数但不能调用不确定性函数。 
   
  在标量函数中，function_body 是一系列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，这些语句一起使用可计算出标量值。  
@@ -103,7 +103,7 @@ RETURNS return_data_type
  *scalar_expression*  
  指定标量函数返回的标量值。  
   
- **function_option>::=\<** 
+ **\<function_option>::=** 
   
  指定函数将具有以下一个或多个选项：  
   
@@ -128,8 +128,8 @@ RETURNS return_data_type
   
  使用 ALTER 删除 SCHEMABINDING  
   
- RETURNS NULL ON NULL INPUT | CALLED ON NULL INPUT   
- 指定标量值函数的 OnNULLCall 属性  。 如果未指定，则默认为 CALLED ON NULL INPUT。 这意味着即使传递的参数为 NULL，也将执行函数体。  
+ RETURNS NULL ON NULL INPUT | CALLED ON NULL INPUT  
+ 指定标量值函数的 OnNULLCall 属性。 如果未指定，则默认为 CALLED ON NULL INPUT。 这意味着即使传递的参数为 NULL，也将执行函数体。  
   
 ## <a name="best-practices"></a>最佳实践  
  如果用户定义函数不是使用 SCHEMABINDING 子句创建的，则对基础对象进行的任何更改可能会影响函数定义并在调用函数时可能导致意外结果。 我们建议您实现以下方法之一，以便确保函数不会由于对于其基础对象的更改而过期：  
@@ -167,7 +167,7 @@ GO
   
  [sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)：显示用户定义函数中定义的参数的有关信息。  
   
- [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)：显示函数引用的基础对象。  
+ [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)：显示函数所引用的基础对象。  
   
 ## <a name="permissions"></a>权限  
  需要在数据库中具有 CREATE FUNCTION 权限，并对创建函数时所在的架构具有 ALTER 权限。  
@@ -175,7 +175,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-using-a-scalar-valued-user-defined-function-to-change-a-data-type"></a>A. 使用标量值用户定义函数更改数据类型。  
- 此简单函数将 int 数据类型作为输入，并返回 decimal(10,2) 数据类型作为输入   。  
+ 此简单函数将 int 数据类型作为输入，并返回 decimal(10,2) 数据类型作为输入 。  
   
 ```sql  
 CREATE FUNCTION dbo.ConvertInput (@MyValueIn int)  

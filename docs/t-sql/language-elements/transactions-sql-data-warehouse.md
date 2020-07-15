@@ -12,15 +12,15 @@ ms.assetid: 87e5e593-a121-4428-9d3c-3af876224e35
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 21e6d25305bd6abf4a3dc4555f2148a2fe385187
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ac7b9a500bb87dca74082c9d16874131eb82402d
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68121590"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197412"
 ---
 # <a name="transactions-sql-data-warehouse"></a>事务（SQL 数据仓库）
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   事务由一组全部提交或全部回滚的一个或多个数据库语句组成。 每个事务都是原子级的、一致的、孤立的和持久的 (ACID)。 如果事务成功，其中的所有语句都将提交。 如果事务失败，则组中至少有一个语句失败，然后整个组都将回滚。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "68121590"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 BEGIN TRANSACTION [;]  
 COMMIT [ TRAN | TRANSACTION | WORK ] [;]  
 ROLLBACK [ TRAN | TRANSACTION | WORK ] [;]  
@@ -78,7 +78,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
   
  如果运行时语句错误以外的错误使显式事务无法成功完成，[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 将自动回滚事务并释放该事物占用的所有资源。 例如，如果客户端与 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 实例的网络连接中断或客户端已注销应用程序，那么当网络向实例通知该中断后，该连接的所有未提交事务均会被回滚。  
   
- 如果批处理中出现运行时语句错误，[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 的行为将与设置为 ON 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XACT_ABORT 的行为一致，并且整个事务都将回滚   。 有关 XACT_ABORT 设置的详细信息，请参阅 [SET XACT_ABORT (Transact-SQL)](https://msdn.microsoft.com/library/ms188792.aspx)。  
+ 如果批处理中出现运行时语句错误，[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 的行为将与设置为 ON 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XACT_ABORT 的行为一致，并且整个事务都将回滚   。 有关 XACT_ABORT 设置的详细信息，请参阅 [SET XACT_ABORT (Transact-SQL)](https://msdn.microsoft.com/library/ms188792.aspx)  。  
   
 ## <a name="general-remarks"></a>一般备注  
  给定时间内，一个会话只能运行一个事务；不支持保存点和嵌套事务。  
