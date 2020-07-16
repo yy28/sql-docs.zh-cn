@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 47fb4212-2165-4fec-bc41-6d548465d7be
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 834f3e28b8e368b29c2465f44f6a23528ad32626
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f26d4324170b6a8c35b1785865c0ba614a3a181c
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781083"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279073"
 ---
 # <a name="mssqlserver_137"></a>MSSQLSERVER_137
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,12 +35,15 @@ ms.locfileid: "85781083"
 ## <a name="explanation"></a>说明  
 如果未首先声明某个变量就在 SQL 脚本中使用它，则会出现此错误。 在下面的示例中，由于未声明 \@mycol，因此针对 SET 和 SELECT 语句都将返回 137 错误。  
   
+```sql
 SET @mycol = 'ContactName';  
   
-SELECT @mycol;  
+SELECT @mycol; 
+```
   
 之所以发生此错误，一个更为复杂的原因就是使用在 EXECUTE 语句外部声明的变量。 例如，在 SELECT 语句中指定的变量 \@mycol 是 SELECT 语句的局部变量，因此它位于 EXECUTE 语句外部。  
   
+```sql
 USE AdventureWorks2012;  
   
 GO  
@@ -49,22 +52,25 @@ DECLARE @mycol nvarchar(20);
   
 SET @mycol = 'Name';  
   
-EXECUTE ('SELECT @mycol FROM Production.Product;');  
+EXECUTE ('SELECT @mycol FROM Production.Product;'); 
+```
   
 ## <a name="user-action"></a>用户操作  
 确认先声明 SQL 脚本中所使用的任何变量，然后再将其用在脚本中的其他位置。  
   
 重新编写该脚本，以便不在 EXECUTE 语句中引用在其外部声明的变量。 例如：  
   
+```sql
 USE AdventureWorks2012;  
   
 GO  
   
-DECLARE @mycol nvarchar(20);  
+DECLARE @mycol nvarchar(20) ;  
   
 SET @mycol = 'Name';  
   
-EXECUTE ('SELECT ' + @mycol + ' FROM Production.Product';) ;  
+EXECUTE ('SELECT ' + @mycol + ' FROM Production.Product';) ;
+```
   
 ## <a name="see-also"></a>另请参阅  
 [EXECUTE (Transact-SQL)](~/t-sql/language-elements/execute-transact-sql.md)  

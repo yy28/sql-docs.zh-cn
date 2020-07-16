@@ -11,15 +11,15 @@ ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 22f296db7717e81068ac52d6c3df547a0ba0d085
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6da86a89421fcee2c60bd0a46392dc1acc4cdd46
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73660783"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279509"
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT（Azure SQL 数据仓库）
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
 CREATE TABLE AS SELECT (CTAS) 是提供最重要的 T-SQL 功能之一。 它是一个完全并行化的操作，基于 SELECT 语句的输出创建新表。 CTAS 是创建表副本最便捷的方法。   
  
@@ -39,7 +39,7 @@ CREATE TABLE AS SELECT (CTAS) 是提供最重要的 T-SQL 功能之一。 它是
 
 ## <a name="syntax"></a>语法   
 
-```  
+```syntaxsql
 CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     [ ( column_name [ ,...n ] ) ]  
     WITH ( 
@@ -94,7 +94,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 ### <a name="table-distribution-options"></a>表分发选项
 
-`DISTRIBUTION` = `HASH` ( distribution_column_name  ) | ROUND_ROBIN | REPLICATE      
+`DISTRIBUTION` = `HASH` ( distribution_column_name ) | ROUND_ROBIN | REPLICATE      
 CTAS 语句需要分布选项，并且没有默认值。 这就不同于具有默认值的 CREATE TABLE。 
 
 有关详细信息以及如何选择最佳分布列的信息，请参阅 CREATE TABLE 中的[表分发选项](https://msdn.microsoft.com/library/mt203953/#TableDistributionOptions)部分。 
@@ -115,7 +115,7 @@ select 语句是 CTAS 和 CREATE TABLE 之间的根本区别。
  指定临时命名的结果集，这些结果集称为公用表表达式 (CTE)。 有关详细信息，请参阅 [WITH common_table_expression (Transact-SQL)](../../t-sql/queries/with-common-table-expression-transact-sql.md)。  
   
  `SELECT` *select_criteria*  
- 使用 SELECT 语句的结果填充新表。 select_criteria 是 SELECT 语句的主体，用于确定将哪些数据复制到新表中  。 有关 SELECT 语句的信息，请参阅 [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)。  
+ 使用 SELECT 语句的结果填充新表。 select_criteria 是 SELECT 语句的主体，用于确定将哪些数据复制到新表中。 有关 SELECT 语句的信息，请参阅 [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)。  
  
 ### <a name="query-hint"></a>查询提示
 用户可以将 MAXDOP 设置为一个整数值，以控制最大并行度。  当 MAXDOP 设置为 1 时，由单线程执行查询。
@@ -124,7 +124,7 @@ select 语句是 CTAS 和 CREATE TABLE 之间的根本区别。
 <a name="permissions-bk"></a>  
   
 ## <a name="permissions"></a>权限  
-CTAS 需要 select_criteria 中引用的任何对象的 `SELECT` 权限  。
+CTAS 需要 select_criteria 中引用的任何对象的 `SELECT` 权限。
 
 有关创建表的权限，请参阅 CREATE TABLE 中的[权限](https://msdn.microsoft.com/library/mt203953/#Permissions)。 
   
@@ -136,7 +136,6 @@ CTAS 需要 select_criteria 中引用的任何对象的 `SELECT` 权限  。
 <a name="limitations-bk"></a>
 
 ## <a name="limitations-and-restrictions"></a>限制和局限  
-Azure SQL 数据仓库尚不支持自动创建或自动更新统计信息。  为从查询中获取最佳性能，运行 CTAS 以及数据发生任何实质性更改之后，请务必创建关于所有表中所有列的统计信息。 有关详细信息，请参阅 [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)。
 
 可以在 Azure SQL 数据仓库支持的任何数据类型的列（字符串列除外）上创建有序的聚集列存储索引。  
 
@@ -167,7 +166,7 @@ Azure SQL 数据仓库尚不支持自动创建或自动更新统计信息。  �
 <a name="ctas-copy-table-bk"></a>
 
 ### <a name="a-use-ctas-to-copy-a-table"></a>A. 使用 CTAS 复制表 
-适用范围：Azure SQL 数据仓库和并行数据仓库
+适用对象：Azure SQL 数据仓库和并行数据仓库
 
 `CTAS` 最常见的用途之一就是创建表副本，使你可以更改 DDL。 例如，如果最初将表创建为 `ROUND_ROBIN`，现在希望将其更改为分布在列上的表，则可以使用 `CTAS` 更改分布列。 `CTAS` 还可用于更改分区、索引或列类型。
 
@@ -239,7 +238,7 @@ DROP TABLE FactInternetSales_old;
 <a name="ctas-change-column-attributes-bk"></a>
 
 ### <a name="b-use-ctas-to-change-column-attributes"></a>B. 使用 CTAS 更改列属性 
-适用范围：Azure SQL 数据仓库和并行数据仓库
+适用对象：Azure SQL 数据仓库和并行数据仓库
 
 本示例使用 CTAS 更改 DimCustomer2 表中多个列的数据类型、为 Null 性和排序规则。  
   
@@ -300,7 +299,7 @@ DROP TABLE DimCustomer2_old;
 <a name="ctas-change-distribution-method-bk"></a>
 
 ### <a name="c-use-ctas-to-change-the-distribution-method-for-a-table"></a>C. 使用 CTAS 更改表的分布方法
-适用范围：Azure SQL 数据仓库和并行数据仓库
+适用对象：Azure SQL 数据仓库和并行数据仓库
 
 此简单示例介绍如何改变表的分布方法。 为显示执行此操作的机制，它将哈希分布式表更改为轮循机制表，然后将轮循机制表更改回哈希分布式表。 最终的表与原始表相匹配。 
 
@@ -351,7 +350,7 @@ DROP TABLE [dbo].[DimSalesTerritory_old];
 <a name="ctas-change-to-replicated-bk"></a>
 
 ### <a name="d-use-ctas-to-convert-a-table-to-a-replicated-table"></a>D. 使用 CTAS 将表转换为复制表  
-适用范围：Azure SQL 数据仓库和并行数据仓库 
+适用对象：Azure SQL 数据仓库和并行数据仓库 
 
 此示例适用于将轮循机制表或哈希分布式表转换为复制表。 此特殊示例采用先前进一步改变分布类型的方法。  由于 DimSalesTerritory 是一个维度，而且可能是较小的表，因此可以选择重新创建该表作为复制表，从而避免在联接到其他表时数据发生移动。 
 
@@ -375,7 +374,7 @@ DROP TABLE [dbo].[DimSalesTerritory_old];
 ```
  
 ### <a name="e-use-ctas-to-create-a-table-with-fewer-columns"></a>E. 使用 CTAS 创建列数较少的表
-适用范围：Azure SQL 数据仓库和并行数据仓库 
+适用对象：Azure SQL 数据仓库和并行数据仓库 
 
 以下示例创建一个名为 `myTable (c, ln)` 的轮循机制分布式表。 新表仅包含两列。 它使用 SELECT 语句中的列别名作为列名。  
   
@@ -398,7 +397,7 @@ AS SELECT CustomerKey AS c, LastName AS ln
 <a name="ctas-query-hint-bk"></a>
 
 ### <a name="f-use-a-query-hint-with-create-table-as-select-ctas"></a>F. 在 CREATE TABLE AS SELECT (CTAS) 中使用查询提示  
-适用范围：Azure SQL 数据仓库和并行数据仓库
+适用对象：Azure SQL 数据仓库和并行数据仓库
   
 此查询显示在 CTAS 语句中使用查询联接提示的基本语法。 提交查询后，[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 在为每个单独的分布生成查询计划时应用哈希联接策略。 有关哈希联接查询提示的详细信息，请参阅 [OPTION 子句 (Transact-SQL)](../../t-sql/queries/option-clause-transact-sql.md).  
   
@@ -421,7 +420,7 @@ OPTION ( HASH JOIN );
 <a name="ctas-azure-blob-storage-bk"></a>
 
 ### <a name="g-use-ctas-to-import-data-from-azure-blob-storage"></a>G. 使用 CTAS 从 Azure Blob 存储导入数据  
-适用范围：Azure SQL 数据仓库和并行数据仓库  
+适用对象：Azure SQL 数据仓库和并行数据仓库  
 
 若要从外部表导入数据，只需使用 CREATE TABLE AS SELECT 从外部表进行选择。 从外部表选择数据到 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 中的语法与从常规表中选择数据的语法相同。  
   
@@ -503,7 +502,7 @@ AS SELECT * FROM ClickStreamExt
 <a name="ctas-replace-select-into-bk"></a>
 
 ### <a name="i-use-ctas-instead-of-selectinto"></a>I. 使用 CTAS 而不是 SELECT..INTO  
-适用范围：Azure SQL 数据仓库和并行数据仓库
+适用对象：Azure SQL 数据仓库和并行数据仓库
 
 SQL Server 代码通常借助 SELECT..INTO 来使用 SELECT 语句的结果填充表。 这是 SQL Server SELECT..INTO 语句的一个例子。
 
@@ -530,7 +529,7 @@ FROM    [dbo].[FactInternetSales]
 <a name="ctas-replace-implicit-joins-bk"></a>
 
 ### <a name="j-use-ctas-and-implicit-joins-to-replace-ansi-joins-in-the-from-clause-of-an-update-statement"></a>J. 使用 CTAS 和隐式联接替换 `UPDATE` 语句中 `FROM` 子句的 ANSI 联接  
-适用范围：Azure SQL 数据仓库和并行数据仓库  
+适用对象：Azure SQL 数据仓库和并行数据仓库  
 
 可能会发现更新很复杂，它使用 ANSI 联接语法将两个以上的表联接在一起，以执行 UPDATE 或 DELETE 操作。
 
@@ -613,7 +612,7 @@ DROP TABLE CTAS_acs
 <a name="ctas-replace-ansi-joins-bk"></a>
 
 ### <a name="k-use-ctas-to-specify-which-data-to-keep-instead-of-using-ansi-joins-in-the-from-clause-of-a-delete-statement"></a>K. 使用 CTAS 指定要保留的数据而不是使用 DELETE 语句中 FROM 子句的 ANSI 联接  
-适用范围：Azure SQL 数据仓库和并行数据仓库  
+适用对象：Azure SQL 数据仓库和并行数据仓库  
 
 有时，删除数据的最佳方法是使用 `CTAS`。 只需选择希望保留的数据，而不是删除数据。 这尤其适用于使用 ansi 联接语法的 `DELETE` 语句，因为 SQL 数据仓库不支持 `DELETE` 语句中 `FROM` 子句中的 ANSI 联接。
 
@@ -641,7 +640,7 @@ RENAME OBJECT dbo.DimProduct_upsert TO DimProduct;
 <a name="ctas-simplify-merge-bk"></a>
 
 ### <a name="l-use-ctas-to-simplify-merge-statements"></a>L. 使用 CTAS 简化 merge 语句  
-适用范围：Azure SQL 数据仓库和并行数据仓库  
+适用对象：Azure SQL 数据仓库和并行数据仓库  
 
 使用 `CTAS` 可以替换（至少部分替换）Merge 语句。 可以将 `INSERT` 和 `UPDATE` 合并为一个语句。 在第二个语句中需要关闭任何已删除的记录。
 
@@ -680,7 +679,7 @@ RENAME OBJECT dbo.[DimProduct_upsert]  TO [DimProduct];
 <a name="ctas-data-type-and-nullability-bk"></a>
 
 ### <a name="m-explicitly-state-data-type-and-nullability-of-output"></a>M. 显式声明数据类型和输出是否可为 null  
-适用范围：Azure SQL 数据仓库和并行数据仓库  
+适用对象：Azure SQL 数据仓库和并行数据仓库  
 
 将 SQL Server 代码迁移到 SQL 数据仓库时，可能会遇到这种类型的编码模式：
 
