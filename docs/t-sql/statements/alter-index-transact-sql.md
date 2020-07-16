@@ -46,14 +46,15 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e8c9b9fb9b58cee42c11e821e940966f2acce498
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6c16150f2023a863bbdcbecb138cc7ff6053b26a
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000713"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381211"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   通过禁用、重新生成或重新组织索引，或通过设置索引选项，修改现有的表索引或视图索引（行存储、列存储或 XML）。  
@@ -173,6 +174,9 @@ ALTER INDEX { index_name | ALL }
 }  
   
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>参数
 
  index_name  
@@ -677,8 +681,8 @@ ALTER INDEX 不能用于对索引重新分区或将索引移到其他文件组�
   
 设置行锁或页锁选项时，如果指定 ALL，这些设置将应用于所有索引。 基础表为堆时，通过以下方式应用这些设置：  
   
-|||  
-|-|-|  
+|选项|详细信息|
+|------|-------|
 |ALLOW_ROW_LOCKS = ON 或 OFF|应用于堆和任何关联的非聚集索引。|  
 |ALLOW_PAGE_LOCKS = ON|应用于堆和任何关联的非聚集索引。|  
 |ALLOW_PAGE_LOCKS = OFF|完全针对非聚集索引。 这意味着不允许对非聚集索引使用所有页锁。 在堆中，仅不允许使用有页的共享 (S) 锁、更新 (U) 锁和排他 (X) 锁。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]仍然可以获取意向页锁（IS、IU 或 IX），供内部使用。|  

@@ -22,16 +22,17 @@ helpviewer_keywords:
 ms.assetid: da4dc25e-72e0-4036-87ce-22de83160836
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e333a149ca50531be3eb89b8b9d249ea4d5996b9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest'
+ms.openlocfilehash: e983b85c4017ab282988142010770cc3f1e16378
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75871117"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381221"
 ---
 # <a name="alter-certificate-transact-sql"></a>ALTER CERTIFICATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
+
+[!INCLUDE [sql-asdb-asa-pdw](../../includes/applies-to-version/sql-asdb-asa-pdw.md)]
 
   更改用于加密证书私钥的密码，删除私钥或导入私钥（如果不存在）。 更改证书对于 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 的可用性。  
   
@@ -39,7 +40,7 @@ ms.locfileid: "75871117"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 ALTER CERTIFICATE certificate_name   
@@ -58,10 +59,13 @@ ALTER CERTIFICATE certificate_name
          [ DECRYPTION BY PASSWORD = 'current_password' ]  
          [ [ , ] ENCRYPTION BY PASSWORD = 'new_password' ]  
       }  
-```  
-  
-```  
--- Syntax for Parallel Data Warehouse  
+``` 
+ 
+> [!Note]
+> [!INCLUDE [Synapse preview note](../../includes/synapse-preview-note.md)]
+ 
+```syntaxsql  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 ALTER CERTIFICATE certificate_name   
 {  
@@ -72,7 +76,10 @@ ALTER CERTIFICATE certificate_name
 }  
 ```  
   
-## <a name="arguments"></a>参数  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
  certificate_name   
  数据库中标识证书的唯一名称。  
   
@@ -95,9 +102,9 @@ ALTER CERTIFICATE certificate_name
  指定解密私钥所需的密码。  
   
  ENCRYPTION BY PASSWORD = new_password   
- 指定用于对数据库中的证书私钥进行加密的密码。 new_password 必须符合运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的 Windows 密码策略要求。 有关详细信息，请参阅 [Password Policy](../../relational-databases/security/password-policy.md)。  
+ 指定用于对数据库中的证书私钥进行加密的密码。 new_password 必须符合运行  *实例的计算机的 Windows 密码策略要求*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 有关详细信息，请参阅 [Password Policy](../../relational-databases/security/password-policy.md)。  
   
- ACTIVE FOR BEGIN_DIALOG = { ON | OFF }  
+ ACTIVE FOR BEGIN_DIALOG  **{ ON | OFF }=**  
  使证书可用于 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 对话会话的发起方。  
   
 ## <a name="remarks"></a>备注  

@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2a99c7c1-ac2f-4637-aa7c-3d1bf514e500
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c9759a56800cd03c107fb9f578e9af2dbe86d1d5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a038026afd2e15ffda6f5f78a63704fa1d6bcad4
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760929"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86380940"
 ---
 # <a name="alter-trigger-transact-sql"></a>ALTER TRIGGER (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -135,7 +135,9 @@ AS { sql_statement
     [ <EXECUTE AS Clause> ]  
 ```  
   
-## <a name="arguments"></a>参数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
  *schema_name*  
  DML 触发器所属架构的名称。 DML 触发器的作用域是为其创建该触发器的表或视图的架构。 schema_name 仅在 DML 触发器及其对应的表或视图属于默认架构时可选。 不能为 DDL 或登录触发器指定 schema_name。  
   
