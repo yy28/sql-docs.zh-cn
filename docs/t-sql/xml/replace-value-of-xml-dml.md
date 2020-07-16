@@ -1,5 +1,5 @@
 ---
-title: replace value of (XML DML) | Microsoft Docs
+title: 替换 (XML DML) 的值
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c310f6df-7adf-493b-b56b-8e3143b13ae7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1269b119a6f8bdcfe14890a911a4dd6b0e618328
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 70ef0ec9f3cec26b7e0a55df770a3983d0d8594e
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731044"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393045"
 ---
 # <a name="replace-value-of-xml-dml"></a>替换 (XML DML) 的值
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,18 +36,20 @@ replace value of Expression1
 with Expression2  
 ```  
   
-## <a name="arguments"></a>参数  
-Expression1   
-标识其值要更新的节点。 它必须仅标识一个单个节点。 即 Expression1 必须是一个静态的单一实例  。 如果 XML 已类型化，则节点的类型必须是简单类型。 如果选择了多个节点，则会出现错误。 如果 Expression1 返回一个空序列，不会发生值替换，也不返回错误  。 *Expression1* 必须返回具有简单类型内容（列表或原子类型）的单个元素、文本节点或属性节点。 *Expression1* 不可能是联合类型、复杂类型、处理指令、文档节点或注释节点，否则会返回错误。  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
+Expression1  
+标识其值要更新的节点。 它必须仅标识一个单个节点。 即 Expression1 必须是一个静态的单一实例。 如果 XML 已类型化，则节点的类型必须是简单类型。 如果选择了多个节点，则会出现错误。 如果 Expression1 返回一个空序列，不会发生值替换，也不返回错误。 *Expression1* 必须返回具有简单类型内容（列表或原子类型）的单个元素、文本节点或属性节点。 *Expression1* 不可能是联合类型、复杂类型、处理指令、文档节点或注释节点，否则会返回错误。  
   
-Expression2   
-标识节点的新值。 它可以是返回简单类型节点的表达式，因为将隐式使用 **data()** 。 如果该值是值列表，update 语句将使用此列表替换旧值  。 在修改类型化的 XML 实例时，Expression2 必须是 Expression1 的相同类型或子类型   。 否则，将返回错误。 在修改非类型化的 XML 实例中，Expression2 必须是可以进行原子化的表达式  。 否则，将返回错误。  
+Expression2  
+标识节点的新值。 它可以是返回简单类型节点的表达式，因为将隐式使用 **data()** 。 如果该值是值列表，update 语句将使用此列表替换旧值。 在修改类型化的 XML 实例时，Expression2 必须是 Expression1 的相同类型或子类型 。 否则，将返回错误。 在修改非类型化的 XML 实例中，Expression2 必须是可以进行原子化的表达式。 否则，将返回错误。  
   
 ## <a name="examples"></a>示例  
-以下 replace value of XML DML 语句的示例说明如何在 XML 文档中更新节点  。  
+以下 replace value of XML DML 语句的示例说明如何在 XML 文档中更新节点。  
   
 ### <a name="a-replacing-values-in-an-xml-instance"></a>A. 在 XML 实例中替换值  
-在以下示例中，首先将文档实例分配给 xml 类型的变量  。 然后，replace value of XML DML 语句更新文档中的值  。  
+在以下示例中，首先将文档实例分配给 xml 类型的变量。 然后，replace value of XML DML 语句更新文档中的值。  
   
 ```sql
 DECLARE @myDoc xml;  
@@ -78,7 +80,7 @@ SELECT @myDoc;
 要更新的目标最多必须是一个通过在表达式的结尾添加“[1]”在路径表达式中显式指定的节点。  
   
 ### <a name="b-using-the-if-expression-to-determine-replacement-value"></a>B. 使用 if 表达式以确定替换值  
-可以在 replace value of XML DML 语句的 Expression2 中指定 if 表达式，如以下示例所示   。 Expression1 标识第一个生产车间的 LaborHours 属性将要更新。 Expression2 使用 if 表达式以确定 LaborHours 属性的新值  。  
+可以在 replace value of XML DML 语句的 Expression2 中指定 if 表达式，如以下示例所示 。 Expression1 标识第一个生产车间的 LaborHours 属性将要更新。 Expression2 使用 if 表达式以确定 LaborHours 属性的新值。  
   
 ```sql
 DECLARE @myDoc xml  
@@ -188,7 +190,7 @@ select Instructions
 from T  
 ```  
   
-当替换 LotSize 值时请注意使用 cast  。 当该值必须为特定类型时，这是必需的。 在此示例中，如果值为 500，则显式强制转换是不必要的。  
+当替换 LotSize 值时请注意使用 cast。 当该值必须为特定类型时，这是必需的。 在此示例中，如果值为 500，则显式强制转换是不必要的。  
   
 ## <a name="see-also"></a>另请参阅  
 [类型化的 XML 与非类型化的 XML 的比较](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   

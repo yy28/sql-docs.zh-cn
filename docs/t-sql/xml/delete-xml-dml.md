@@ -1,5 +1,5 @@
 ---
-title: delete (XML DML) | Microsoft Docs
+title: 删除 (XML DML)
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: b22c93a4-b84d-4356-af4c-6013322a4b71
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1e06e1679a8a416bbcdba8d1a2930ccd50f4ce74
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 340ad7968aeb31449f4b5200944ab591e08ae08b
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765638"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393095"
 ---
-# <a name="delete-xml-dml"></a>delete (XML DML)
+# <a name="delete-xml-dml"></a>删除 (XML DML)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   删除 XML 实例的节点。  
@@ -35,7 +35,9 @@ ms.locfileid: "85765638"
 delete Expression  
 ```  
   
-## <a name="arguments"></a>参数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
  *表达式*  
  识别要删除的节点的 XQuery 表达式。 删除该表达式选择的所有节点，以及所选节点中的所有节点或值。 如 [insert (XML DML)](../../t-sql/xml/insert-xml-dml.md) 中所介绍的，在文档中必须保持对现有节点的引用。 不能是构造的节点。 表达式不能是根 (/) 节点。 如果表达式返回空序列，则不进行删除，不返回错误。  
   

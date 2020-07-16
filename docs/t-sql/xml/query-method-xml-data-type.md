@@ -1,5 +1,5 @@
 ---
-title: query() 方法（xml 数据类型）| Microsoft Docs
+title: query() 方法（xml 数据类型）
 ms.custom: ''
 ms.date: 04/16/2020
 ms.prod: sql
@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: f48f6f7b-219f-463a-bf36-bc10f21afaeb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6e864e6c6b9b0d604d853fdcf11d07a18799c3d4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fa686b8cac90a783fa8286b739a6e88195fa8ba4
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893888"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393035"
 ---
 # <a name="query-method-xml-data-type"></a>query() 方法（xml 数据类型）
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-对 xml 数据类型的实例指定 XQuery  。 结果为 xml 类型  。 该方法返回非类型化的 XML 实例。  
+对 xml 数据类型的实例指定 XQuery。 结果为 xml 类型。 该方法返回非类型化的 XML 实例。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,17 +33,19 @@ ms.locfileid: "85893888"
 query ('XQuery')  
 ```  
   
-## <a name="arguments"></a>参数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
 XQuery  
 字符串，在 XML 实例中查询 XML 节点（如元素和属性）的 XQuery 表达式。  
   
 ## <a name="examples"></a>示例  
-本节提供使用 xml 数据类型的 query() 方法的示例  。  
+本节提供使用 xml 数据类型的 query() 方法的示例。  
   
 ### <a name="a-using-the-query-method-against-an-xml-type-variable"></a>A. 对 xml 类型的变量使用 query() 方法  
-以下示例声明了 xml 类型的变量 **myDoc 并将 XML 实例分配给它\@**  。 然后使用 query() 方法对文档指定 XQuery  。  
+以下示例声明了 xml 类型的变量 \@myDoc 并将 XML 实例分配给它 。 然后使用 query() 方法对文档指定 XQuery。  
   
-该查询检索 <`Features`> 元素的 <`ProductDescription`> 子元素：  
+该查询检索 <`ProductDescription`> 元素的 <`Features`> 子元素：  
   
 ```sql
 declare @myDoc xml  
@@ -68,7 +70,7 @@ SELECT @myDoc.query('/Root/ProductDescription/Features')
 ```  
   
 ### <a name="b-using-the-query-method-against-an-xml-type-column"></a>B. 对 XML 类型列使用 query() 方法  
-在以下示例中，使用 query() 方法对 AdventureWorks 数据库中 xml 类型的 CatalogDescription 列指定 XQuery     ：  
+在以下示例中，使用 query() 方法对 AdventureWorks 数据库中 xml 类型的 CatalogDescription 列指定 XQuery   ：  
   
 ```sql
 SELECT CatalogDescription.query('  
@@ -84,11 +86,11 @@ declare namespace wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-
   
 请注意上述查询中的以下项：  
   
--   CatalogDescription 列是类型化 xml  列，这意味着它有关联的架构集合。 在 [XQuery Prolog](../../xquery/modules-and-prologs-xquery-prolog.md) 中，namespace  关键字定义稍后用于查询主体的前缀。  
+-   CatalogDescription 列是类型化 xml 列，这意味着它有关联的架构集合。 在 [XQuery Prolog](../../xquery/modules-and-prologs-xquery-prolog.md) 中，namespace 关键字定义稍后用于查询主体的前缀。  
   
--   query() 方法构造 XML，即包含 ProductModelID 属性的 < **> 元素，其中 ProductModelID 属性值是从数据库中检索的**`Product`   。 有关 XML 构造的详细信息，请参阅 [XML 构造 (XQuery)](../../xquery/xml-construction-xquery.md)。  
+-   query() 方法构造 XML，即包含 ProductModelID 属性的 <`Product`> 元素，其中 ProductModelID 属性值是从数据库中检索的  。 有关 XML 构造的详细信息，请参阅 [XML 构造 (XQuery)](../../xquery/xml-construction-xquery.md)。  
   
--   WHERE 子句中的 [exist() 方法（XML 数据类型）](../../t-sql/xml/exist-method-xml-data-type.md)仅查找在 XML 中包含 <`Warranty`> 元素的行。 同样，namespace  关键字定义两个命名空间前缀。  
+-   WHERE 子句中的 [exist() 方法（XML 数据类型）](../../t-sql/xml/exist-method-xml-data-type.md)仅查找在 XML 中包含 <`Warranty`> 元素的行。 同样，namespace 关键字定义两个命名空间前缀。  
   
 以下输出显示了部分结果：  
   

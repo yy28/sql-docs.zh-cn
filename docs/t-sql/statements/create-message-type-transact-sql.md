@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 98fe0fff-1a2e-4ca2-b37f-83a06fdf098e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0a6f9ba5edd20795d7645b334694e6e80fa57c47
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 70cdaf07914a409e83c8fc291964d79ce706a808
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892546"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393185"
 ---
 # <a name="create-message-type-transact-sql"></a>CREATE MESSAGE TYPE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -55,7 +55,9 @@ CREATE MESSAGE TYPE message_type_name
 [ ; ]  
 ```  
   
-## <a name="arguments"></a>参数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
  message_type_name   
  要创建的消息类型的名称。 在当前数据库中创建一条新消息，并归 AUTHORIZATION 子句定义的主体数据库所有。 不能指定服务器、数据库和架构名称。  message_type_name 最多可具有 128 个字符。  
   

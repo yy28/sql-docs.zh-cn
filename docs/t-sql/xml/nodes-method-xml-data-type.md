@@ -1,5 +1,5 @@
 ---
-title: nodes() 方法（xml 数据类型）| Microsoft Docs
+title: nodes() 方法（xml 数据类型）
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -14,23 +14,23 @@ helpviewer_keywords:
 ms.assetid: 7267fe1b-2e34-4213-8bbf-1c953822446c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 65cff00f57d98746c77b51c38ed426a14d1dd066
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ee5721f2fef1117f1f4d6da5664a644f32dadb92
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731052"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393055"
 ---
 # <a name="nodes-method-xml-data-type"></a>nodes() 方法（xml 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-如果要将 xml 数据类型实例拆分为关系数据，则 nodes() 方法非常有用   。 它允许您标识将映射到新行的节点。  
+如果要将 xml 数据类型实例拆分为关系数据，则 nodes() 方法非常有用 。 它允许您标识将映射到新行的节点。  
   
-每个 xml 数据类型实例都有隐式提供的上下文节点  。 对于在列或变量中存储的 XML 实例来说，此节点是文档节点。 文档节点是位于每个 xml 数据类型实例顶部的隐式节点  。  
+每个 xml 数据类型实例都有隐式提供的上下文节点。 对于在列或变量中存储的 XML 实例来说，此节点是文档节点。 文档节点是位于每个 xml 数据类型实例顶部的隐式节点。  
   
-nodes() 方法的结果是一个包含原始 XML 实例的逻辑副本的行集  。 在这些逻辑副本中，每个行示例的上下文节点都被设置成由查询表达式标识的节点之一。 这样，后续的查询可以浏览与这些上下文节点相关的节点。  
+nodes() 方法的结果是一个包含原始 XML 实例的逻辑副本的行集。 在这些逻辑副本中，每个行示例的上下文节点都被设置成由查询表达式标识的节点之一。 这样，后续的查询可以浏览与这些上下文节点相关的节点。  
   
-您可以从行集中检索多个值。 例如，可以将 value() 方法应用于 nodes() 所返回的行集，从原始 XML 实例中检索多个值   。 当 value() 方法应用于 XML 实例时，它仅返回一个值  。  
+您可以从行集中检索多个值。 例如，可以将 value() 方法应用于 nodes() 所返回的行集，从原始 XML 实例中检索多个值 。 当 value() 方法应用于 XML 实例时，它仅返回一个值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,11 +39,13 @@ nodes() 方法的结果是一个包含原始 XML 实例的逻辑副本的行集 
 nodes (XQuery) as Table(Column)  
 ```  
   
-## <a name="arguments"></a>参数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
 *XQuery*  
 字符串文字，即一个 XQuery 表达式。 如果查询表达式构造节点，这些已构造的节点将在结果行集中显示。 如果查询表达式生成一个空序列，则行集也为空。 如果查询表达式静态生成一个包含原子值而不是节点的序列，将产生静态错误。  
   
-Table(Column)    
+Table(Column)   
 结果行集的表名称和列名称。  
   
 ## <a name="remarks"></a>备注  
@@ -88,7 +90,7 @@ ModelID      Instructions
              <Location LocationID="30" .../></root>  
 ```  
   
-然后，可以使用 xml 数据类型方法查询此行集  。 以下查询为每个生成的行提取上下文项的子树：  
+然后，可以使用 xml 数据类型方法查询此行集。 以下查询为每个生成的行提取上下文项的子树：  
   
 ```sql
 SELECT T2.Loc.query('.')  
@@ -106,15 +108,15 @@ ProductModelID  Instructions
 1        <Location LocationID="30" .../>  
 ```  
   
-返回的行集已对类型信息进行了维护。 可以将 xml 数据类型方法（例如 query()、value()、exist() 和 nodes()）应用于 nodes() 方法的结果       。 但不能将 modify() 方法用于修改 XML 实例  。  
+返回的行集已对类型信息进行了维护。 可以将 xml 数据类型方法（例如 query()、value()、exist() 和 nodes()）应用于 nodes() 方法的结果     。 但不能将 modify() 方法用于修改 XML 实例。  
   
 另外，行集中的上下文节点无法具体化。 即，无法在 SELECT 语句中使用此节点。 但是，可以在 IS NULL 和 COUNT(*) 中使用它。  
   
-使用 nodes() 方法的情况与使用 [OPENXML (Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md) 的情况相同，会提供 XML 的行集视图。 但是，在包含 XML 文档的若干行的表中使用 nodes() 方法时，无需使用游标  。  
+使用 nodes() 方法的情况与使用 [OPENXML (Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md) 的情况相同，会提供 XML 的行集视图。 但是，在包含 XML 文档的若干行的表中使用 nodes() 方法时，无需使用游标。  
   
-由 nodes() 方法返回的行集是未命名的行集  。 因此，必须通过使用别名来显式命名。  
+由 nodes() 方法返回的行集是未命名的行集。 因此，必须通过使用别名来显式命名。  
   
-nodes() 函数不能直接应用于用户定义函数的结果  。 若要将 nodes() 函数用于标量用户定义的函数结果，您可以执行以下任一操作  ：
+nodes() 函数不能直接应用于用户定义函数的结果。 若要将 nodes() 函数用于标量用户定义的函数结果，您可以执行以下任一操作：
  
 - 将用户定义函数的结果分配给一个变量
 - 使用派生表将列别名分配非用户定义的函数返回值，然后使用 `CROSS APPLY` 从别名中进行选择。  
@@ -199,7 +201,7 @@ go
 ```  
   
 ### <a name="specifying-the-nodes-method-against-a-column-of-xml-type"></a>针对 xml 类型的列指定 nodes() 方法  
-此示例中使用了自行车生产说明，该说明存储在 ProductModel 表的 Instructions xml 类型列中   。  
+此示例中使用了自行车生产说明，该说明存储在 ProductModel 表的 Instructions xml 类型列中 。  
   
 在以下示例中，已对 `ProductModel` 表中 xml 类型的 `Instructions` 列指定 `nodes()` 方法。  
   

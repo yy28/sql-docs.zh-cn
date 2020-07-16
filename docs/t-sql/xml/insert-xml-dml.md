@@ -1,5 +1,5 @@
 ---
-title: 插入 (XML DML) | Microsoft Docs
+title: 插入 (XML DML)
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0c95c2b3-5cc2-4c38-9e25-86493096c442
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fc19088f8ee34202b5157015ac9ef71a8d24922c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 895fda87dd1c78744f7f95b334927940c76fdcd7
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731074"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393065"
 ---
 # <a name="insert-xml-dml"></a>插入 (XML DML)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,9 @@ insert
                 )  
 ```  
   
-## <a name="arguments"></a>参数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
  Expression1  
  标识要插入的一个或多个节点。 这可以是一个常量 XML 实例、对应用修改方法的相同 XML 架构集合的类型化 XML 数据类型实例的引用、使用单独的 sql:column()/sql:variable() 函数的非类型化 XML 数据类型实例或者是一个 XQuery 表达式 。 该表达式可以得出节点、文本节点或一组有序的节点。 但它无法解得根 (/) 节点。 如果该表达式得出一个值或一组值，则这些值作为单个文本节点插入，各值之间以空格分隔开。 如果将多个节点指定为常量，则这些节点用括号括住，并以逗号分隔开。 但无法插入异构序列（如一组元素、属性或值）。 如果 Expression1 解析到一个空序列，不发生插入操作且不返回任何错误。  
   

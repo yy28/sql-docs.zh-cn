@@ -1,5 +1,5 @@
 ---
-title: value() 方法（xml 数据类型）| Microsoft Docs
+title: value() 方法（xml 数据类型）
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 298a7361-dc9a-4902-9b1e-49a093cd831d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c237be1e705fa5d6b13722ae3ef5bf47f0f9436c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 316b7fda88a274812f376a511ca5f26638f0cea6
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731024"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393005"
 ---
 # <a name="value-method-xml-data-type"></a>value() 方法（xml 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   对 XML 执行 XQuery，并返回 SQL 类型的值。 此方法将返回标量值。  
   
- 通常，可以使用此方法从 xml 类型列、参数或变量内存储的 XML 实例中提取值  。 这样，您就可以指定将 XML 数据与非 XML 列中的数据进行合并或比较的 SELECT 查询。  
+ 通常，可以使用此方法从 xml 类型列、参数或变量内存储的 XML 实例中提取值。 这样，您就可以指定将 XML 数据与非 XML 列中的数据进行合并或比较的 SELECT 查询。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,17 +35,19 @@ ms.locfileid: "85731024"
 value (XQuery, SQLType)  
 ```  
   
-## <a name="arguments"></a>参数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
  *XQuery*  
- 从 XML 实例内部检索数据的 XQuery 表达式（一种字符串文字）  。 XQuery 必须最多返回一个值。 否则，将返回错误。  
+ 从 XML 实例内部检索数据的 XQuery 表达式（一种字符串文字）。 XQuery 必须最多返回一个值。 否则，将返回错误。  
   
- SQLType   
- 要返回的首选 SQL 类型（一种字符串文字）。 此方法的返回类型与 SQLType 参数匹配  。 SQLType 不能为 xml 数据类型、公共语言运行时 (CLR) 用户定义类型、image、text、ntext 或 sql_variant 数据类型       。 SQLType 可以是用户定义数据类型 SQL  。  
+ SQLType  
+ 要返回的首选 SQL 类型（一种字符串文字）。 此方法的返回类型与 SQLType 参数匹配。 SQLType 不能为 xml 数据类型、公共语言运行时 (CLR) 用户定义类型、image、text、ntext 或 sql_variant 数据类型    。 SQLType 可以是用户定义数据类型 SQL。  
   
  value() 方法隐式使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] CONVERT 运算符并尝试将 XQuery 表达式（序列化字符串表示形式）的结果从 XSD 类型转换为由 [!INCLUDE[tsql](../../includes/tsql-md.md)] 转换指定的相应 SQL 类型。 有关 CONVERT 的类型强制转换规则的详细信息，请参阅 [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)。  
   
 > [!NOTE]  
->  由于性能原因，不在谓词中使用 value() 方法与关系值进行比较，而改用具有 sql:column() 的 exist()    。 如下面的示例 D 所示。  
+>  由于性能原因，不在谓词中使用 value() 方法与关系值进行比较，而改用具有 sql:column() 的 exist()  。 如下面的示例 D 所示。  
   
 ## <a name="examples"></a>示例  
   
@@ -100,7 +102,7 @@ ORDER BY Result desc
 ```  
   
 ### <a name="c-using-the-value-and-exist-methods-to-retrieve-values-from-an-xml-type-column"></a>C. 使用 value() 和 exist() 方法从 xml 类型的列中检索值  
- 以下示例显示同时使用 xml 数据类型的 `value()` 方法和 [exist() 方法](../../t-sql/xml/exist-method-xml-data-type.md)  。 `value()` 方法用于从 XML 中检索 `ProductModelID` 属性值。 `exist()` 子句中的 `WHERE` 方法用于从表中筛选行。  
+ 以下示例显示同时使用 xml 数据类型的 `value()` 方法和 [exist() 方法](../../t-sql/xml/exist-method-xml-data-type.md)。 `value()` 方法用于从 XML 中检索 `ProductModelID` 属性值。 `exist()` 子句中的 `WHERE` 方法用于从表中筛选行。  
   
  此查询将从把保修信息（<`Warranty`> 元素）作为功能之一的 XML 实例中检索产品型号 ID。 `WHERE` 子句中的条件使用 `exist()` 方法仅检索满足该条件的行。  
   

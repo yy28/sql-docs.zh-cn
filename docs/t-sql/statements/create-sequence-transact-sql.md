@@ -1,5 +1,5 @@
 ---
-title: CREATE SEQUENCE (Transact-SQL) | Microsoft Docs
+title: CREATE SEQUENCE (Transact-SQL)
 ms.custom: ''
 ms.date: 04/11/2017
 ms.prod: sql
@@ -22,14 +22,15 @@ helpviewer_keywords:
 ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 909bd52e325726f9874b29ebc791eb049e4c0daa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f350f2d2a9b1f4b90030f928792570cc80653916
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767044"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392955"
 ---
 # <a name="create-sequence-transact-sql"></a>CREATE SEQUENCE (Transact-SQL)
+
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   创建一个序列对象并指定其属性。 序列是用户定义的绑定到架构的对象，该对象可根据创建序列所依据的规范来生成数值序列。 这组数值以定义的间隔按升序或降序生成，并且可配置为用尽时重新启动（循环）。 序列不与特定表相关联，这一点与标识列不同。 应用程序将引用某一序列对象以便检索其下一个值。 序列与表之间的关系由应用程序控制。 用户应用程序可以引用一个序列对象，并跨多个行和表协调值。  
@@ -54,7 +55,9 @@ CREATE SEQUENCE [schema_name . ] sequence_name
     [ ; ]  
 ```  
   
-## <a name="arguments"></a>参数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
 sequence_name  
 指定数据库中标识序列的唯一名称。 类型为 sysname。  
   
@@ -240,7 +243,7 @@ SELECT * FROM sys.sequences WHERE name = 'TestSequence' ;
   
  输出的部分列表演示了默认值。  
   
-|||  
+| 输出 | 默认值|  
 |-|-|  
 |`start_value`|`-9223372036854775808`|  
 |`increment`|`1`|  

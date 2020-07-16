@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: d7a8bd93-e2d7-4a40-82ef-39069e65523b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 888be4bfe27530a726d7352494959af05fe240e6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d335faa965f3cd03cffcdece6f5e782ada8a59c5
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735818"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392905"
 ---
 # <a name="create-fulltext-catalog-transact-sql"></a>CREATE FULLTEXT CATALOG (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -61,7 +61,9 @@ CREATE FULLTEXT CATALOG catalog_name
   
 ```  
   
-## <a name="arguments"></a>参数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
  catalog_name   
  新目录的名称。 在当前数据库的所有目录名中，该目录名必须唯一。 与全文目录对应的文件名（请参阅 ON FILEGROUP）在数据库的所有文件中也必须唯一。 如果该目录名已用于数据库中的其他目录，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回错误。  
   

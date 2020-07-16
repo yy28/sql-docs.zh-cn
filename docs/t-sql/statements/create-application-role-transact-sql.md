@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 647386da-ee80-41cf-86c9-dd590f9d66b6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 370e5525e25c01086510612730ba6123161853bd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8f5b67b73f4be4d8403600821ddd35843c65f2b5
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735874"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86391772"
 ---
 # <a name="create-application-role-transact-sql"></a>CREATE APPLICATION ROLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +45,9 @@ CREATE APPLICATION ROLE application_role_name
     WITH PASSWORD = 'password' [ , DEFAULT_SCHEMA = schema_name ]  
 ```  
   
-## <a name="arguments"></a>参数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
  application_role_name   
  指定应用程序角色的名称。 该名称一定不能被用于引用数据库中任何主体。  
   
