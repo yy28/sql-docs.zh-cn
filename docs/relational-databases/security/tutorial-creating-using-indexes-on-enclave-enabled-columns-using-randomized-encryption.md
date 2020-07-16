@@ -13,15 +13,15 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 636b304d99ee244ef7a367fb8a474ebe8df312a0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9ddfb9836650028c0f6aae150a2f70e4758b6ca2
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75557749"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279275"
 ---
 # <a name="tutorial-create-and-use-indexes-on-enclave-enabled-columns-using-randomized-encryption"></a>教程：在使用随机加密且已启用 enclave 的列上创建并使用索引
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 本教程将介绍如何在使用[含安全 enclave 的 Always Encrypted](encryption/always-encrypted-enclaves.md) 中支持的随机加密且已启用 enclave 的列上创建和使用索引。 它将介绍：
 

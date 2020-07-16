@@ -24,15 +24,15 @@ ms.assetid: b9567832-e6a8-45b2-a3ed-ea12aa002f4b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 963e9c1ffba4c1286793c564e22cd1a122c795b3
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: df1813018defce81e6e7fcb69c206fc3e4d91195
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807082"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159935"
 ---
 # <a name="replication-publishing-model-overview"></a>复制发布模型概述
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   复制使用出版业术语表示复制拓扑中的组件，其中包括发布服务器、分发服务器、订阅服务器、发布、项目和订阅。 可借助杂志的概念来帮助理解 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制：  
   
 -   杂志出版商（发布服务器）生产一种或多种刊物（发布）  

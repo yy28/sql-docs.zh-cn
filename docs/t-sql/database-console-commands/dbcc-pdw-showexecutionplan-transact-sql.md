@@ -12,17 +12,17 @@ dev_langs:
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7fd267efe05da089cf72b1b9d1e4a04e6c18b83b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7d350d78a4a79bd66cd6bda5794b87d97cf043dc
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68809838"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196878"
 ---
 # <a name="dbcc-pdw_showexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-显示在特定 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 或 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 计算节点或控制节点上运行的查询的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行计划。 在计算节点和控制节点上运行查询时，使用它来解决查询性能问题。
+显示在特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 计算节点或控制节点上运行的查询的 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 执行计划。 在计算节点和控制节点上运行查询时，使用它来解决查询性能问题。
   
 了解在计算节点上运行的 SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查询的查询性能问题后，可通过几种方法来提高性能。 可提高计算节点上查询性能的方法包括创建多列统计信息、创建非聚集索引或使用查询提示。
   
@@ -31,13 +31,13 @@ ms.locfileid: "68809838"
 ## <a name="syntax"></a>语法  
 Azure SQL 数据仓库的语法：
 
-```sql
+```syntaxsql
 DBCC PDW_SHOWEXECUTIONPLAN ( distribution_id, spid )  
 [;]  
 ```  
 Azure 并行数据仓库语法：
   
-```sql
+```syntaxsql
 DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id, spid )  
 [;]  
 ```  

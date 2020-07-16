@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: cfaf0b5cdb8ddddc3a27ed5fb80b6fcfb7b8afbd
-ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
+ms.openlocfilehash: 822cd1efc21dbdeae7a5194bc659f73c00eddb7d
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85215154"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159735"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 选项 (Transact-SQL)
 
@@ -730,17 +730,17 @@ FORCED
 <a name="query-store"></a> \<query_store_options> ::=     
 **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始）
 
-ON | OFF [ FORCED ] | CLEAR [ ALL ]     
+ON | OFF | CLEAR [ ALL ]     
 控制查询存储是否在此数据库中启用，同时控制是否删除查询存储的内容。 有关详细信息，请参阅 [查询存储使用方案](../../relational-databases/performance/query-store-usage-scenarios.md)。
 
 ON     
 启用查询存储。
 
-OFF [ FORCED ]     
-禁用查询存储。 OFF 是默认值。 FORCED 是可选项。 FORCED 会中止所有正在运行的查询存储后台任务，并在查询存储关闭时跳过同步刷新。 使查询存储尽快关闭。 立即有效地关闭查询存储。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5 引入了 FORCED。
+OFF      
+禁用查询存储。 OFF 是默认值。 
 
 > [!NOTE]  
-> 无法在 Azure SQL 数据库的单一数据库和弹性池中禁用查询存储。 执行 ALTER DATABASE [database] SET QUERY_STORE = OFF 将返回警告“此版本的 SQL Server 不支持 'QUERY_STORE=OFF'”。 
+> 无法在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]的单一数据库和弹性池中禁用查询存储。 执行 `ALTER DATABASE [database] SET QUERY_STORE = OFF` 将返回警告 `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`。 
 
 CLEAR     
 删除查询存储的内容。

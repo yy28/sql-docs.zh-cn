@@ -26,15 +26,15 @@ ms.assetid: a35ecd7d-f130-483c-87e3-ddc8927bb91b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 237bb89915a606e33ffadbbf62584ed801721494
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 58c905c60a965308410f9b99dbf604e2f2f5a517
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807821"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159655"
 ---
 # <a name="replication-agents-overview"></a>复制代理概述
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   复制使用许多称为“代理”的独立程序执行与跟踪更改和分发数据关联的任务。 默认情况下，复制代理作为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理安排的作业运行，必须运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理，这些作业才能运行。 复制代理还可以从命令行以及由使用复制管理对象 (RMO) 的应用程序运行。 可以从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制监视器和 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]对复制代理进行管理。  
   
 ## <a name="sql-server-agent"></a>SQL Server 代理  

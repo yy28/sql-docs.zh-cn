@@ -13,15 +13,15 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2a6e27fb84267c1de09a3812747b063050b944e9
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 35a7f19d04edc8cdcacbd9d41ec27ce3c91f6fd1
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807730"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279363"
 ---
 # <a name="tutorial-always-encrypted-with-secure-enclaves-using-ssms"></a>教程：使用 SSMS 的具有安全 Enclave 的 Always Encrypted
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 本教程介绍如何开始使用[具有安全 enclave 的 Always Encrypted](encryption/always-encrypted-enclaves.md)。 它将介绍：
 - 如何创建基本环境，以便测试和评估具有安全 enclave 的 Always Encrypted。

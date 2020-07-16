@@ -1,7 +1,7 @@
 ---
 title: MSSQLSERVER_17204 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/03/2020
+ms.date: 07/10/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: PijoCoder
 ms.author: mathoma
-ms.openlocfilehash: 362f907187d7fe738216ea2000f2a5c48eca7b5f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1c0c799af360e10780c35ba6848031fb5a4d6737
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85780787"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279610"
 ---
 # <a name="mssqlserver_17207"></a>MSSQLSERVER_17207
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -103,7 +103,7 @@ STREAMFCB::Startup: Operating system error 2(The system cannot find the file spe
         Impersonating: DomainName\UserName
         ```
   
-1. 如果遇到 ```The system cannot find the file specified``` OS 错误 = 3：
+1. 如果遇到 `The system cannot find the file specified` OS 错误 = 3：
    - 查看错误消息中的完整路径。
    - 确保磁盘驱动器和文件夹路径可见并可从 Windows 资源管理器访问。
    - 查看 Windows 事件日志，以确定此磁盘驱动器是否存在任何问题。
@@ -113,7 +113,7 @@ STREAMFCB::Startup: Operating system error 2(The system cannot find the file spe
      - 如果产生错误的文件是一个事务日志文件，请查看主题 [CREATE DATABASE (Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md) 中“FOR ATTACH”和“FOR ATTACH_REBUILD_LOG”部分下的信息，以了解如何重新创建丢失的事务日志文件。
    - 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 尝试访问这些位置上的数据库文件之前，请确保任何磁盘或网络位置[如 iSCSI 驱动器]可用。 如果需要，请在群集管理员或服务控制管理器中创建所需的依赖项。
 
-1. 如果遇到 ```The process cannot access the file because it is being used by another process``` 操作系统错误 = 32：
+1. 如果遇到 `The process cannot access the file because it is being used by another process` 操作系统错误 = 32：
    - 使用 Windows Sysinternals 中的[进程资源管理器](https://docs.microsoft.com/sysinternals/downloads/process-explorer)或[句柄](https://docs.microsoft.com/sysinternals/downloads/handle)之类的工具来确定其他进程或服务是否已获取此数据库文件的排他锁。
    - 阻止该进程访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库文件。 常见示例包括防病毒程序（请参阅以下[知识库文章](https://support.microsoft.com/help/309422/choosing-antivirus-software-for-computers-that-run-sql-server)中的文件排除指南）。
    - 在群集环境中，确保前一个所属节点中的 sqlservr.exe 进程实际上已经将句柄释放到数据库文件。 通常不会发生这种情况，但群集或 I/O 路径的错误配置可能会导致此类问题。

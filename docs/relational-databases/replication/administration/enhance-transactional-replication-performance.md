@@ -23,15 +23,15 @@ ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: e386c475975e94408ed4260f35bb0646c6878575
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 40b83d154c5cef0526e5e4550910fb2e3e7dd115
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807986"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86160015"
 ---
 # <a name="enhance-transactional-replication-performance"></a>增强事务复制性能
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   在考虑 [增强常规复制性能](../../../relational-databases/replication/administration/enhance-general-replication-performance.md)中介绍的常规性能提示后，还需要考虑特定于事务复制的其他几个方面。  
   
 ## <a name="database-design"></a>数据库设计  

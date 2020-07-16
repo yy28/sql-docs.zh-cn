@@ -21,15 +21,15 @@ ms.assetid: 0e980725-e42f-4283-94cb-d8a6dba5df62
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: a752b21460c2dd337d12ee43acdd981dadd4335b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 60e89b8d24a96b6694a4e11352c8081e2df318f5
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288263"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159675"
 ---
 # <a name="replication-agent-profiles"></a>复制代理配置文件
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   在配置复制时，将在分发服务器上安装一组代理配置文件。 代理配置文件包含一组在代理每次运行时都要使用的参数：在代理启动过程中，每个代理都会登录到分发服务器，并查询其配置文件中的参数。 对于使用 Web 同步的合并订阅，配置文件会下载并存储在订阅服务器中。 如果配置文件发生了更改，订阅服务器中的配置文件将在合并代理下次运行时更新。 有关 Web 同步的详细信息，请参阅 [Web Synchronization for Merge Replication](../../../relational-databases/replication/web-synchronization-for-merge-replication.md)。  
   
  复制为每个代理提供一个默认的配置文件，同时还为日志读取器代理、分发代理和合并代理提供附加的预定义配置文件。 除了所提供的配置文件之外，您还可以创建符合自己应用程序要求的配置文件。 使用代理配置文件可以轻松地更改与该配置文件关联的所有代理的键参数。 例如，如果您有 20 个快照代理并且需要更改查询超时值（ **-QueryTimeout** 参数），则可以更新这些快照代理使用的配置文件，这样该此类型的所有代理将在下次运行时自动开始使用新值。  

@@ -17,15 +17,15 @@ ms.assetid: c9fa81b1-6c81-4c11-927b-fab16301a8f5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 2b66307976381ceb8085f72e553e010ee60e2974
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b2b202fe0bdaea2b722c713f3e2297ec85a44d1e
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287545"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86160075"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>复制已分区表和索引
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   由于使用分区可以快速而有效地管理和访问数据子集，并同时保持数据集合的完整性，因而使大型表或索引更易于管理。 有关详细信息，请参阅 [Partitioned Tables and Indexes](../../../relational-databases/partitions/partitioned-tables-and-indexes.md)。 复制支持分区，提供了一组属性来指定如何处理已分区表和索引。  
   
 ## <a name="article-properties-for-transactional-and-merge-replication"></a>事务复制和合并复制的项目属性  

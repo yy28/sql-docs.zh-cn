@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: f8356683-6680-4f1c-9eaf-5c29a9a9020d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 23c401f4af8785518d57c40a3bd0d54c6e89c99f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bd00cd524f0d8b1ea0f22e339e29cea1474bccdd
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895531"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86380910"
 ---
 # <a name="backup-service-master-key-transact-sql"></a>BACKUP SERVICE MASTER KEY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,9 @@ BACKUP SERVICE MASTER KEY TO FILE = 'path_to_file'
     ENCRYPTION BY PASSWORD = 'password'  
 ```  
   
-## <a name="arguments"></a>参数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
  FILE ='path_to_file'  
  指定要将服务主密钥导出到的文件的完整路径（包括文件名）。 此路径可以是本地路径，也可以是网络位置的 UNC 路径。  
   

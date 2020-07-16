@@ -14,15 +14,15 @@ ms.assetid: 3469b185-0ea5-4690-a71c-717230d886b6
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 943f2c6c1507753644c841aa013c5df78f926c80
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1b8745e278486d899d070757d58bae326f79551d
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286965"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159435"
 ---
 # <a name="article-options-for-transactional-replication"></a>事务复制的项目选项
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   事务发布中的项目具有多个选项。 使用事务复制，可以执行以下操作：  
   
 -   指定更改如何从发布服务器传播到订阅服务器。 有关详细信息，请参阅[指定如何传播事务项目的更改](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)。  

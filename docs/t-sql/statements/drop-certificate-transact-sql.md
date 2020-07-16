@@ -22,26 +22,30 @@ ms.assetid: 5704aa04-68a3-4b29-b62b-8868af487817
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2ea8b8b77ac4445bc40bea2a2dcc9359de0f6a09
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c9ace52421c194c7b3c2a7cc9d900cb611d900d5
+ms.sourcegitcommit: 4231364ab5bc15b74952ca5d20508b7ba9ca347e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67898281"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86291349"
 ---
 # <a name="drop-certificate-transact-sql"></a>DROP CERTIFICATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdb-asa-pdw](../../includes/applies-to-version/sql-asdb-asa-pdw.md)]
 
   从数据库中删除证书。  
   
 > [!IMPORTANT]  
 >  即使对于数据库不再启用加密，用于数据库加密的证书备份也应保留。 即使数据库不再加密，事务日志的某些部分仍可能保持受到保护，但在执行数据库的完整备份前，对于某些操作可能需要证书。 为了能够从在对数据库进行加密时创建的备份进行还原，也需要该证书。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md) 
+
+  
+> [!Note]
+> [!INCLUDE [Synapse preview note](../../includes/synapse-preview-note.md)]
   
 ## <a name="syntax"></a>语法  
   
-```  
+```synaxsql  
 DROP CERTIFICATE certificate_name  
 ```  
   

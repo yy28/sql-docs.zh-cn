@@ -17,15 +17,15 @@ ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 5ba7cad00855f3d63570491e27702a56727ebcfc
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 318b9e7a78612c6f89d9ccb75fc3d68a09c443c2
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807922"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159645"
 ---
 # <a name="replication-log-reader-agent"></a>复制日志读取器代理
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   复制日志读取器代理是一个可执行文件，用于监视为事务复制配置的每个数据库的事务日志，以及将标记为进行复制的事务从事务日志复制到分发数据库中。  
   
 > [!NOTE]  

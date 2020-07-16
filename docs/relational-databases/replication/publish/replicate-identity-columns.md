@@ -19,15 +19,15 @@ ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 8547753f7b00a4bfb057cc3587036022ee4c4e0a
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: a750eb05a8f4cb024e1837d46f028c72c76f4a29
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807164"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86160095"
 ---
 # <a name="replicate-identity-columns"></a>复制标识列
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   将 IDENTITY 属性分配到列时，[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将为在包含标识列的表中插入的新行自动生成顺序编号。 有关详细信息，请参阅 [IDENTITY（属性）&#40;Transact-SQL&#41;](../../../t-sql/statements/create-table-transact-sql-identity-property.md)。 因为包含的标识列可能是主键的一部分，所以请务必避免在标识列中出现重复值。 若要在多个节点上都有更新的复制拓扑中使用标识列，复制拓扑中的每个节点都必须使用不同范围的标识值，以避免出现重复。  
   
  例如，可以为发布服务器分配范围 1-100，为订阅服务器 A 分配范围 101-200，为订阅服务器 B 分配范围 201-300。 如果在发布服务器中插入行，例如标识值是 65，则将该值复制到每个订阅服务器。 复制在每个订阅服务器上插入数据时，不会增加订阅服务器表中的标识列值，而是插入文字值 65。 仅用户插入，而复制代理不插入，将导致标识列值增加。  

@@ -18,15 +18,15 @@ ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: cdf335fe061bfd6c7c8646f87b6b4c1798243e9b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ac80080f663d43f9084932ca697970d50c9f307c
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288141"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159615"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>为事务复制测量滞后时间和验证连接
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   本主题说明如何使用复制监视器、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中为事务复制测量滞后时间和验证连接。 事务复制提供了跟踪令牌功能，可以方便地测量事务复制拓扑中的滞后时间和验证发布服务器、分发服务器及订阅服务器之间的连接。 将令牌（少量数据）写入发布数据库的事务日志中，就像标记典型的复制事务一样对其进行标记，使用令牌可以执行以下计算：  
   
 -   计算在发布服务器上提交事务和在分发服务器上将相应命令插入分发数据库之间所间隔的时间。  

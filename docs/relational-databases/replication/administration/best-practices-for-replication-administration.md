@@ -15,15 +15,15 @@ ms.assetid: 850e8a87-b34c-4934-afb5-a1104f118ba8
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 90c7651b8f739ab3009c37db7f1e10374eb07156
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 5d1858b192819011fb9e8de8e6b7eb3fc361fced
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808010"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86160025"
 ---
 # <a name="best-practices-for-replication-administration"></a>复制管理最佳实践
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   在配置复制后，了解如何管理复制拓扑十分重要。 本主题介绍了许多方面的基本最佳实践指导原则，还提供了有关每一方面的详细信息的链接。 除遵循本主题中介绍的最佳实践指导原则之外，还请仔细阅读常见问题解答主题，以了解常见的问题：[复制管理常见问题解答](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)。  
   
  将最佳实践指导原则分成两个部分很有用：  

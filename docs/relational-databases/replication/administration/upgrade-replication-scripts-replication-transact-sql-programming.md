@@ -21,15 +21,15 @@ ms.assetid: 0b8720bd-f339-4842-bc8f-b35a46f6d3ee
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d5c50143bd5bb9e7891e92b6b539446e9df6b652
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b186061bc487129721526693af862a9d789c8551
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288344"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159695"
 ---
 # <a name="upgrade-replication-scripts-replication-transact-sql-programming"></a>升级复制脚本（复制 Transact-SQL 编程）
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本文件可用于以编程方式配置复制拓扑。 有关详细信息，请参阅[复制系统存储过程概念](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)。  
   
 > [!IMPORTANT]  

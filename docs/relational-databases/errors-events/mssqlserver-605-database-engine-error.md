@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: d8d3a22e-1ff8-48a4-891f-4c8619437e24
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d03b67e5a047d615a53e1053d39b75d41f7cbc09
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 514e0d342fb542ade5cefaf0f405f9caf1cd0b1d
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733819"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279583"
 ---
 # <a name="mssqlserver_605"></a>MSSQLSERVER_605
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,6 +54,7 @@ ms.locfileid: "85733819"
   
 1.  运行以下查询，确定与消息中指定的分配单元相关联的表。 用错误消息中说明的分配单元替换 `allocation_unit_id`。  
   
+    ```sql  
     USE`database_name`;  
   
     GO  
@@ -73,6 +74,7 @@ ms.locfileid: "85733819"
     ORDER BY au.allocation_unit_id;  
   
     GO  
+    ```
   
 2.  对与错误消息中说明的第二个分配单元 ID 相关联的表，执行不带 REPAIR 子句的 DBCC CHECKTABLE。  
   

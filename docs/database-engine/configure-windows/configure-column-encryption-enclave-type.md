@@ -11,15 +11,16 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6e16bbd33d9353c02cf72e3c931a5d8749197f5d
-ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
+ms.openlocfilehash: 39ad6bdc8911a0596d619f6d6a68de07d733dd6f
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84818361"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279410"
 ---
 # <a name="configure-the-enclave-type-for-always-encrypted-server-configuration-option"></a>配置 Always Encrypted 的 enclave 类型服务器配置选项
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+
+[!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 本文介绍如何为具有安全 enclave 的 Always Encrypted 启用或禁用安全 enclave。 有关详细信息，请参阅[具有安全 enclave 的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)。
 

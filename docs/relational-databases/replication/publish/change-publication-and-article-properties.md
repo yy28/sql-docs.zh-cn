@@ -17,15 +17,15 @@ ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: fe3d184b1a64dded731c0746a8264b4dc5809dd7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f2cea103f2bc9f19d06f19a1258b84d617957cc7
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286623"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159905"
 ---
 # <a name="change-publication-and-article-properties"></a>更改发布和项目属性
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   在创建发布后，可以更改大多数发布和项目属性，但有些发布和项目属性要求重新生成快照和/或重新初始化订阅。 本主题提供有关更改时需要以上一种或两种操作的所有属性的信息。  
   
 ## <a name="publication-properties-for-snapshot-and-transactional-replication"></a>快照和事务复制的发布属性  

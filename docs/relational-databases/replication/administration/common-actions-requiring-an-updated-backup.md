@@ -15,15 +15,15 @@ ms.assetid: a5975bf4-183e-42e3-b7d1-ad02f89d2e1d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 70d536ba9c0e4ae8c62c167397bd56686b8abab2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c66ce1e96a9f76be9a657b51551f1af95f8c731b
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288212"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86158865"
 ---
 # <a name="common-actions-requiring-an-updated-backup"></a>需要已更新备份的常用操作
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   如果执行定期日志备份，则在日志备份中应捕获所有与复制相关的更改。 如果不执行日志备份，就要在修改复制架构或拓扑之后，对发布、分发、订阅、 **msdb**数据库和 **master** 数据库执行备份。  
   
 ## <a name="publication-database"></a>发布数据库  

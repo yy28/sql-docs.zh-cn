@@ -16,15 +16,15 @@ ms.assetid: ccf68a13-e748-4455-8168-90e6d2868098
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: e20f38a055fba642795ed0c0d40d07cbff442a9b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9616c11a1d17f2634ef0b525dd23ac8b31203ddc
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286990"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159385"
 ---
 # <a name="transactional-articles---regenerate-to-reflect-schema-changes"></a>事务项目 - 重新生成以反映架构更改
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   默认情况下，事务复制通过发布中的每个表项目的内部过程生成的存储过程，在订阅服务器上进行所有数据更改。 三个过程（分别对应插入、更新和删除）将复制到订阅服务器并在插入、更新或删除复制到订阅服务器后执行。 对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 发布服务器上的表进行架构更改后，复制会通过调用同一组内部脚本过程自动重新生成这些过程，以便新过程与新架构相匹配（Oracle 发布服务器不支持复制架构更改）。  
   
  也可以指定自定义过程来替换一个或多个默认过程。 如果架构更改将影响过程，则应该更改自定义过程。 例如，如果一个过程引用了架构更改中删除的列，则对此列的引用应从过程中删除。 复制有两种方式将新的自定义过程传播到订阅服务器：  

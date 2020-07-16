@@ -19,15 +19,15 @@ ms.assetid: 816d2bda-ed72-43ec-aa4d-7ee3dc25fd8a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 821a45a08316bfdcf17ab57253b46641568aa4f8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d76163d161bfc6d64d4bbe7f0781c21cddb2eb16
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76285697"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159855"
 ---
 # <a name="replication-system-stored-procedures-concepts"></a>Replication System Stored Procedures Concepts
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
 
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，对复制拓扑中所有用户可配置的功能的编程访问是由系统存储过程提供的。 虽然可使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或 sqlcmd 命令行实用工具来单独执行存储过程，但编写可执行具有一定逻辑顺序的复制任务的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本文件也有诸多好处。  
   

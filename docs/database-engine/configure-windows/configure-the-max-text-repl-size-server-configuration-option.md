@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 3056cf64-621d-4996-9162-3913f6bc6d5b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 85a47542c9681cd2dc004dae788d77010e2e0efd
-ms.sourcegitcommit: da836a2e23bd2ed56d2a72983f7b5b18c6f13342
+ms.openlocfilehash: 372bf3cfbe8aa3138bad7e03cc6c666c09ad68d5
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85090555"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159705"
 ---
 # <a name="configure-the-max-text-repl-size-server-configuration-option"></a>配置 max text repl size 服务器配置选项
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sql-asdbmi.md)]
 
   本主题说明如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] max text repl size [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **max text repl size** 选项指定使用单个 INSERT、UPDATE、WRITETEXT 或 UPDATETEXT 语句可以向已复制列或已捕获列添加的 **text** **ntext** **varchar(max)** **nvarchar(max)** **varbinary(max)** **xml** 和 **image** 数据的最大大小（以字节为单位）。 默认值为 65536 个字节。 值为 -1 表示除了数据类型指定的限制之外，没有大小限制。  
   

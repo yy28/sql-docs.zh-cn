@@ -1,5 +1,5 @@
 ---
-title: Oracle 源 | Microsoft Docs
+title: Oracle 源
 ms.custom: ''
 ms.date: 08/14/2019
 ms.prod: sql
@@ -9,12 +9,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4444236d19c9d7c67aba5a36ba079e1dfa9189b0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: eced263351bc6c9add5fbd46894c08ccc65fb2be
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74542207"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196067"
 ---
 # <a name="oracle-source"></a>Oracle 源
 
@@ -51,12 +51,12 @@ Oracle 源的自定义属性如下所示。 所有属性均可读/写。
 
 |属性名称|数据类型|说明|
 |:-|:-|:-|
-|AccessMode|Integer（枚举）|用来访问数据库的模式。 可取值为“表名”  和“SQL 命令”  。 默认值为“表名”  。|
-|BatchSize|Integer|用于大容量加载的批处理的大小。 这是作为数组提取的记录数。 <br>此属性仅由高级编辑器  设置|
-|DefaultCodePage|Integer|当数据源没有代码页信息时，要使用的代码页。 <br>此属性仅由高级编辑器  设置。|
-|PreFetchCount|Integer|预提取的行数。 <br>此属性仅由高级编辑器  设置。|
-|SqlCommand|String|在 AccessMode 设置为“SQL 命令”时要执行的 SQL 命令。|
-|TableName|String|当 AccessMode 设置为“表名”时，包含要使用的数据的表的名称。|
+|AccessMode|Integer（枚举）|用来访问数据库的模式。 可取值为“表名”和“SQL 命令”。 默认值为“表名”。|
+|BatchSize|Integer|用于大容量加载的批处理的大小。 这是作为数组提取的记录数。 <br>此属性仅由高级编辑器设置|
+|DefaultCodePage|Integer|当数据源没有代码页信息时，要使用的代码页。 <br>此属性仅由高级编辑器设置。|
+|PreFetchCount|Integer|预提取的行数。 <br>此属性仅由高级编辑器设置。|
+|SqlCommand|字符串|在 AccessMode 设置为“SQL 命令”时要执行的 SQL 命令。|
+|TableName|字符串|当 AccessMode 设置为“表名”时，包含要使用的数据的表的名称。|
 
 ## <a name="configuring-the-oracle-source"></a>配置 Oracle 源
 
@@ -70,19 +70,19 @@ Oracle 源的自定义属性如下所示。 所有属性均可读/写。
 - [Oracle 源编辑器（“列”页）](#oracle-source-editor-columns-page)
 - [Oracle 源编辑器（“错误输出”页）](#oracle-source-editor-error-output-page)
 
-![](media/oracle-source.png)
+![Oracle 源](media/oracle-source.png)
 
-“高级编辑器”  对话框包含可以编程方式设置的属性。
+“高级编辑器”对话框包含可以编程方式设置的属性。
 
 打开 **“高级编辑器”** 对话框：
 
-- 在 Integration Services 项目的“数据流”  屏幕上，右键单击 Oracle 源，并选择“显示高级编辑器”  。
+- 在 Integration Services 项目的“数据流”屏幕上，右键单击 Oracle 源，并选择“显示高级编辑器”。
 
-若要详细了解可以在“高级编辑器”  对话框中设置的属性，请参阅 [Oracle 源的自定义属性](#oracle-source-custom-properties)。
+若要详细了解可以在“高级编辑器”对话框中设置的属性，请参阅 [Oracle 源的自定义属性](#oracle-source-custom-properties)。
 
 ## <a name="oracle-source-editor-connection-manager-page"></a>Oracle 源编辑器（“连接管理器”页）
 
-“Oracle 源编辑器”  对话框的“连接管理器”  页用于从数据库中选择 Oracle Database 作为源、表或视图。
+“Oracle 源编辑器”对话框的“连接管理器”页用于从数据库中选择 Oracle Database 作为源、表或视图。
 
 **打开 Oracle 源编辑器的“连接管理器”页的具体步骤**
 
@@ -93,11 +93,11 @@ Oracle 源的自定义属性如下所示。 所有属性均可读/写。
 
 **“ODBC 目标编辑器”**
 
-从列表中选择现有连接管理器，或单击“新建”  来新建 Oracle Connection Manager。
+从列表中选择现有连接管理器，或单击“新建”来新建 Oracle Connection Manager。
 
 **新建**
 
-单击 **“新建”** 。 此时，“Oracle Connection Manager 编辑器”  对话框打开，可以在其中新建连接管理器。
+单击 **“新建”** 。 此时，“Oracle Connection Manager 编辑器”对话框打开，可以在其中新建连接管理器。
 
 **数据访问模式**
 
@@ -105,7 +105,7 @@ Oracle 源的自定义属性如下所示。 所有属性均可读/写。
 
 |选项|说明|
 |:-|:-|
-|表或视图|从 Oracle 数据源中的表或视图检索数据。 选择此选项后，从“表名或视图名称”  列表中选择可用的表或视图。|
+|表或视图|从 Oracle 数据源中的表或视图检索数据。 选择此选项后，从“表名或视图名称”列表中选择可用的表或视图。|
 |SQL 命令|使用 SQL 查询从 Oracle 数据源中检索数据。 选择此选项后，请使用下列方式之一输入查询： <br>在 **“SQL 命令文本”** 字段中，输入 SQL 查询的文本。 <br>单击 **“浏览”** 从文本文件加载 SQL 查询。 <br>单击 **“分析查询”** 验证查询文本的语法。|
 
 **预览**
@@ -114,7 +114,7 @@ Oracle 源的自定义属性如下所示。 所有属性均可读/写。
 
 ## <a name="oracle-source-editor-columns-page"></a>Oracle 源编辑器（“列”页）
 
-“Oracle 源编辑器”  对话框的“列”  页用于将输出列映射到每个外部（源）列。
+“Oracle 源编辑器”对话框的“列”页用于将输出列映射到每个外部（源）列。
 
 **打开 Oracle 源编辑器的“列”页的具体步骤**
 
@@ -128,9 +128,9 @@ Oracle 源的自定义属性如下所示。 所有属性均可读/写。
 
 **可用外部列**
 
-可以选择的可用外部列的列表，以按选择的顺序添加到“外部列”  列表中。 此表不能用于添加或删除列。
+可以选择的可用外部列的列表，以按选择的顺序添加到“外部列”列表中。 此表不能用于添加或删除列。
 
-选中“全选”  复选框可以选择所有列。
+选中“全选”复选框可以选择所有列。
 
 **外部列**
 
@@ -146,7 +146,7 @@ Oracle 源的自定义属性如下所示。 所有属性均可读/写。
 
 ## <a name="oracle-source-editor-error-output-page"></a>Oracle 源编辑器（“错误输出”页）
 
-使用“Oracle 源编辑器”  对话框的“错误输出”  页，可以选择错误处理选项。
+使用“Oracle 源编辑器”对话框的“错误输出”页，可以选择错误处理选项。
 
 **打开 Oracle 源编辑器的“错误输出”页的具体步骤**
 

@@ -23,15 +23,15 @@ ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 3e9353cc5d22cae0f148661ca5a31651803bc00e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 71dc0b6a274b6545169cfcd20487c935086c7764
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286350"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159585"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>在复制监视器中查看发布和订阅状态
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制监视器显示发布和订阅的状态信息：  
   
 -   发布的状态由其订阅的最高优先级状态决定。 例如，如果对发布的一个订阅有错误，另一个订阅有性能问题，则显示发布的错误状态。  

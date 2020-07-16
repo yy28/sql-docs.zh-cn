@@ -1,7 +1,7 @@
 ---
 title: MSSQLSERVER_5228 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/04/2017
+ms.date: 07/10/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: PijoCoder
 ms.author: mathoma
-ms.openlocfilehash: 7faa39c696c6dd7dfc7e1055935ab96b3cb468f6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 42741b99b89a25b50cd19d647d9f17f2ffe085d3
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85679483"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279080"
 ---
 # <a name="mssqlserver_5120"></a>MSSQLSERVER_5120
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "85679483"
   诊断并更正该操作系统错误，然后重试操作。 有多种状态可帮助 Microsoft 缩小产品中出现错误的范围。 
   
 ### <a name="access-is-denied"></a>拒绝访问 
-如果收到 ```Access is Denied``` 操作系统错误 = 5，请考虑使用以下方法：
+如果收到 `Access is Denied` 操作系统错误 = 5，请考虑使用以下方法：
    -  通过在 Windows 资源管理器中查看文件的属性，检查文件的权限设置。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 Windows 组对各种文件资源预配访问控制。 确保相应的组[名称类似于 SQLServerMSSQLUser$ComputerName$MSSQLSERVER 或 SQLServerMSSQLUser$ComputerName$InstanceName]具有对错误消息中提及的数据库文件的必要权限。 有关更多详细信息，请参阅[配置数据库引擎访问的文件系统权限](../../2014/database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md)。 确保 Windows 组实际包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务启动帐户或服务 SID。
    -  查看当前正在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的用户帐户。 可以使用 Windows 任务管理器来获取此信息。 查找可执行文件“sqlservr.exe”的“用户名”值。 另外，如果你最近更改了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户，请注意，支持执行此操作的方法是使用 [SQL Server 配置管理器](../sql-server-configuration-manager.md)实用工具。 
    -  根据操作类型（在服务器启动期间打开数据库、附加数据库、还原数据库等），用于模拟和访问数据库文件的帐户可能会有所不同。 请查看[保护数据和日志文件](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105)?redirectedfrom=MSDN)主题，了解哪些操作为哪些帐户设置了哪些权限。 使用 Windows SysInternals [进程监视器](https://docs.microsoft.com/sysinternals/downloads/procmon)这样的工具，了解是否在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例服务启动帐户[或服务 SID] 或模拟帐户的安全上下文中执行了文件访问。
@@ -68,7 +68,7 @@ ms.locfileid: "85679483"
 ### <a name="attaching-files-that-reside-on-a-network-attached-storage"></a>附加位于网络连接存储上的文件  
 如果无法重新附加位于网络连接存储上的数据库，可能会在应用程序日志中记录类似如下的消息。
 
-```Msg 5120, Level 16, State 101, Line 1 Unable to open the physical file "\\servername\sharename\filename.mdf". Operating system error 5: (Access is denied.).```
+`Msg 5120, Level 16, State 101, Line 1 Unable to open the physical file "\\servername\sharename\filename.mdf". Operating system error 5: (Access is denied.).`
 
 之所以出现此问题，是因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在分离数据库时会重置文件权限。 当你尝试重新附加数据库时，将出现失败，因为共享权限受限。
 
@@ -76,13 +76,13 @@ ms.locfileid: "85679483"
 1. 使用 -T 启动选项启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 使用此启动选项可在 [SQL Server 配置管理器](../sql-server-configuration-manager.md)中打开跟踪标志 1802（有关 1802 的详细信息，请参阅 [跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)）。 若要详细了解如何更改启动参数，请参阅[数据库引擎服务启动选项](../../database-engine/configure-windows/database-engine-service-startup-options.md)。
 
 2. 使用以下命令拆离数据库。
-   ```tsql
+   ```sql
     exec sp_detach_db DatabaseName
     go 
    ```
 
 3. 使用以下命令重新附加数据库。
-   ```tsql
+   ```sql
    exec sp_attach_db DatabaseName, '\\Network-attached storage_Path\DatabaseMDFFile.mdf', '\\Network-attached storage_Path\DatabaseLDFFile.ldf'
    go
    ```
