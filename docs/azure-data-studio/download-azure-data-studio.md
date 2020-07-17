@@ -8,13 +8,13 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 6/15/2020
-ms.openlocfilehash: 249dfc97acea8228eef1234a41f1510e8b223788
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.date: 7/15/2020
+ms.openlocfilehash: 793dde7b683f5e66a6841367e82c78d64bf01f86
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774686"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406260"
 ---
 # <a name="download-and-install-azure-data-studio"></a>下载并安装 Azure Data Studio
 
@@ -27,9 +27,9 @@ Azure Data Studio 在 Windows、macOS 和 Linux 上运行。
 
 |平台|下载|发布日期| 版本 |
 |:---|:---|:---|:---|
-| Windows | [用户安装程序（推荐）](https://go.microsoft.com/fwlink/?linkid=2132348)<br>[系统安装程序](https://go.microsoft.com/fwlink/?linkid=2132347)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2132518) | 2020 年 6 月 15 日 | 1.19.0 |
-| macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2132519) | 2020 年 6 月 15 日 | 1.19.0 |
-| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2132350)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2132351)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2132349) | 2020 年 6 月 15 日| 1.19.0 |
+| Windows | [用户安装程序（推荐）](https://go.microsoft.com/fwlink/?linkid=2135512)<br>[系统安装程序](https://go.microsoft.com/fwlink/?linkid=2135513)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2135514) | 2020 年 7 月 15 日 | 1.20.0 |
+| macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2135266) | 2020 年 7 月 15 日 | 1.20.0 |
+| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2135515)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2135268)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2135267) | 2020 年 7 月 15 日| 1.20.0 |
 
 有关最新版本的详细信息，请参阅[发行说明](release-notes.md)。
 
@@ -41,32 +41,32 @@ Azure Data Studio 在 Windows、macOS 和 Linux 上运行。
 
 **用户安装程序**（推荐）
 
-1. 下载并运行[适用于 Windows 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 用户安装程序](https://go.microsoft.com/fwlink/?linkid=2132348)。
+1. 下载并运行[适用于 Windows 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 用户安装程序](https://go.microsoft.com/fwlink/?linkid=2135512)。
 2. 启动 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 应用。
 
 **系统安装程序**
 
-1. 下载并运行[适用于 Windows 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 系统安装程序](https://go.microsoft.com/fwlink/?linkid=2132347)。
+1. 下载并运行[适用于 Windows 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 系统安装程序](https://go.microsoft.com/fwlink/?linkid=2135513)。
 2. 启动 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 应用。
 
 **zip 文件**
 
-1. 下载[适用于 Windows 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip](https://go.microsoft.com/fwlink/?linkid=2132518)。
+1. 下载[适用于 Windows 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip](https://go.microsoft.com/fwlink/?linkid=2135514)。
 2. 浏览到下载文件并将其解压缩。
 3. `\azuredatastudio-windows\azuredatastudio.exe`运行
 
 ## <a name="get-azure-data-studio-for-macos"></a>获取适用于 macOS 的 Azure Data Studio
 
-1. 下载[适用于 macOS 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)]](https://go.microsoft.com/fwlink/?linkid=2132519)。
+1. 下载[适用于 macOS 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)]](https://go.microsoft.com/fwlink/?linkid=2135266)。
 2. 若要展开 zip 的内容，请双击。
 3. 若要使 Azure Data Studio 在启动板中可用，请将 Azure Data Studio.app 拖到“Applications”文件夹中  。
 
 ## <a name="get-azure-data-studio-for-linux"></a>获取适用于 Linux 的 Azure Data Studio
 
 1. 通过使用安装程序之一或 tar.gz 存档来下载适用于 Linux 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)]：
-    - [.deb](https://go.microsoft.com/fwlink/?linkid=2132350)
-    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2132351)
-    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2132349)
+    - [.deb](https://go.microsoft.com/fwlink/?linkid=2135515)
+    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2135268)
+    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2135267)
 1. 若要提取文件并启动 [!INCLUDE[name-sos](../includes/name-sos-short.md)]，请打开一个新的终端窗口并键入以下命令：
 
    **Debian 安装：**
@@ -165,11 +165,10 @@ Azure Data Studio 在 Windows、macOS 和 Linux 上运行，并在以下平台�
 
 ## <a name="recommended-system-requirements"></a>建议的系统要求
 
-|             | CPU 内核数 | 内存/RAM |
-|:-----------|:---------|:----------|
-| 建议 |     4     |      8 GB    |
-|   最小值   |     2     |      4 GB     |
-|             |           |            |
+| 推荐/最低 | CPU 内核数 | 内存/RAM |
+|---------------------|-----------|------------|
+| 建议         |     4     |   8 GB     |
+|   最小值           |     2     |   4 GB     |
 
 ## <a name="check-for-updates"></a>检查更新
 

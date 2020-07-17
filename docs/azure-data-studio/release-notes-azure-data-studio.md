@@ -8,17 +8,33 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 06/15/2020
-ms.openlocfilehash: 09b894fb6604c912bafaa0fc2856134fe970a721
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.date: 07/15/2020
+ms.openlocfilehash: 3f6766e32369c2002b6da7df62646572a4cf8507
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758414"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406250"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 发行说明
 
 **[下载并安装最新版本！](download.md)**
+
+## <a name="july-2020"></a>2020 年 7 月
+
+2020 年 7 月 15 日 &nbsp; / &nbsp; 版本：1.20.0
+
+&nbsp;
+
+| 更改 | 详细信息 |
+| :----- | :------ |
+| 新增了功能教程 | 用户现可从欢迎页面和命令面板中启动一个功能教程，查看“连接 viewlet”、“笔记本 viewlet”和“扩展市场”等常用功能的演练 |
+| 新笔记本功能 | &bull; &nbsp; Markdown 工具栏中的标头支持<br/> &bull; &nbsp; 文本单元格中的并排 Markdown 预览
+| 在查询编辑器中拖放列和表 | 用户现可将连接 viewlet 中的列和表直接拖放到查询编辑器中 |
+| 在活动栏中添加了 Azure 帐户图标 | 更易发现以用于登录 Azure |
+| 解决了 Bug 和问题 | 若要查看完整的修复内容列表，请参阅 [GitHub 上的 Bug 和问题](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22July+2020+Release%22+is%3Aclosed)。 |
+| &nbsp; | &nbsp; |
+
 
 ## <a name="june-2020"></a>2020 年 6 月
 
