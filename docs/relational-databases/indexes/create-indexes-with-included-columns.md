@@ -21,12 +21,12 @@ ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9aa3bdca463f48f35b5114d4aa905f05d50dc30f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1042bcf452b369b295476a662028350f75e2aaab
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760827"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279105"
 ---
 # <a name="create-indexes-with-included-columns"></a>创建带有包含列的索引
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "85760827"
  当查询中的所有列都作为键列或非键列包含在索引中时，带有包含性非键列的索引可以显著提高查询性能。 这样可以实现性能提升，因为查询优化器可以在索引中找到所有列值；不访问表或聚集索引数据，从而减少磁盘 I/O 操作。  
   
 > [!NOTE]  
-> 当索引包含查询引用的所有列时，它通常称为“覆盖查询”  。  
+> 当索引包含查询引用的所有列时，它通常称为“覆盖查询”。  
    
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
@@ -82,21 +82,21 @@ ms.locfileid: "85760827"
   
 3.  单击加号以便展开您要创建带有非键列的索引的表。  
   
-4.  右键单击“索引”文件夹，指向“新建索引”，然后选择“非群集索引…”    。  
+4.  右键单击“索引”文件夹，指向“新建索引”，然后选择“非群集索引…”  。  
   
 5.  在 **“新建索引”** 对话框的 **“常规”** 页中，在 **“索引名称”** 框中输入新索引的名称。  
   
-6.  在“索引键列”选项卡下，单击“添加…”   。  
+6.  在“索引键列”选项卡下，单击“添加…” 。  
   
 7.  在“从 _table\_name_ 中选择列”对话框中，选中要添加到索引的一个或多个表列的复选框。  
   
-8.  单击“确定”。   
+8.  单击“确定”。  
   
-9. 在“包含性列”选项卡下，单击“添加…”   。  
+9. 在“包含性列”选项卡下，单击“添加…” 。  
   
 10. 在“从 _table\_name_ 中选择列”对话框中，选中要作为非键列添加到索引的一个或多个表列的复选框。  
   
-11. 单击“确定”。   
+11. 单击“确定”。  
   
 12. 在 **“新建索引”** 对话框中，单击 **“确定”** 。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "85760827"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```sql  
     USE AdventureWorks2012;  

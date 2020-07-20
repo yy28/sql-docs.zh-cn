@@ -1,5 +1,5 @@
 ---
-title: CREATE ENDPOINT (Transact-SQL) | Microsoft Docs
+title: CREATE ENDPOINT (Transact-SQL)
 ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql
@@ -31,14 +31,15 @@ helpviewer_keywords:
 ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7a8290a80438b41a201f268c7388c06d2d7df930
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c095857b42255551d8686d3809b5e13e4b1d7889
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902292"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392735"
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
+
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   创建端点并定义其属性，包括可用于客户端应用程序的方法。 有关相关权限的信息，请参阅 [GRANT 终结点权限 (Transact-SQL)](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)。  
@@ -107,7 +108,9 @@ FOR DATABASE_MIRRORING (
 )  
 ```  
   
-## <a name="arguments"></a>参数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
  endPointName  
  所创建的端点的已分配名称。 在更新或删除端点时使用。  
   
@@ -168,7 +171,7 @@ FOR DATABASE_MIRRORING (
   
  \<authentication_options> ::=  
   
- WINDOWS [ { NTLM | KERBEROS | NEGOTIATE } ]   
+ WINDOWS [ { NTLM \| KERBEROS \| NEGOTIATE } ]   
  指定端点使用 Windows 身份验证协议进行连接以验证端点。 这是默认值。  
   
  如果指定某一授权方法（NTLM 或 KERBEROS），则始终将该方法用作身份验证协议。 默认值 NEGOTIATE 允许端点使用 Windows 协商协议在 NTLM 和 Kerberos 之间进行选择。  
@@ -176,13 +179,13 @@ FOR DATABASE_MIRRORING (
  CERTIFICATE certificate_name  
  指定端点使用 certificate_name 指定的证书验证连接以建立授权标识。 远端点必须具有其公钥与指定证书的私钥相匹配的证书。  
   
- WINDOWS [ { NTLM | KERBEROS | NEGOTIATE } ] CERTIFICATE certificate_name  
+ WINDOWS [ { NTLM \| KERBEROS \| NEGOTIATE } ] CERTIFICATE certificate_name  
  指定端点通过使用 Windows 身份验证尝试进行连接；如果该尝试失败，则尝试使用指定的证书。  
   
- CERTIFICATE certificate_name WINDOWS [ { NTLM | KERBEROS | NEGOTIATE } ]  
+ CERTIFICATE certificate_name WINDOWS [ { NTLM \| KERBEROS \| NEGOTIATE } ]  
  指定端点通过使用指定的证书尝试进行连接；如果该尝试失败，则尝试使用 Windows 身份验证。  
   
- ENCRYPTION = { DISABLED | SUPPORTED | REQUIRED } [ALGORITHM { AES | RC4 | AES RC4 | RC4 AES } ]   
+ ENCRYPTION = { DISABLED \| SUPPORTED \| REQUIRED } [ALGORITHM { AES \| RC4 \| AES RC4 \| RC4 AES } ]   
  指定是否在过程中使用加密。 默认值为 REQUIRED。  
   
  DISABLED  

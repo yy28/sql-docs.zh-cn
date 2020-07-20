@@ -11,12 +11,12 @@ ms.date: 10/02/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 5e732d55daa55a8a3abc171ead7b7b1e87e92992
-ms.sourcegitcommit: 7397706bbbc7296946e92ca9d4de93d4a5313c66
+ms.openlocfilehash: 9e50701d0486ee7bc00bf765d2a71cb4de0c0b25
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84203554"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196165"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>PolyBase Kerberos 连接疑难解答
 
@@ -52,7 +52,7 @@ ms.locfileid: "84203554"
 1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回到 KDC，传回 TGT，并请求 ST 以访问该特定安全资源。 此 ST 使用此受保护服务的私钥进行加密。
 1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将此 ST 转发给 Hadoop 并进行身份验证，以创建针对该服务的会话。
 
-![](./media/polybase-sqlserver.png)
+![Polybase SQL Server](./media/polybase-sqlserver.png)
 
 身份验证问题可归纳为上述四个步骤中的一步或多步。 PolyBase 引入了集成诊断工具，用于帮助确定故障点以加快调试进程。
 

@@ -33,14 +33,15 @@ ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3c9b007bd8714814cedeb33c78684f82bd6dd1e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: be4e5d401bd9269c3cedc0264648423259b7d948
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003433"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197435"
 ---
 # <a name="dbcc-show_statistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 DBCC SHOW_STATISTICS 显示表或索引视图的当前查询优化统计信息。 查询优化器使用统计信息估计查询结果中的基数或行数，这样，查询优化器可以创建高质量的查询计划。 例如，查询优化器可以使用基数估计在查询计划中选择索引查找运算符而不是索引扫描运算符，从而通过避免消耗大量资源的索引扫描来提高查询性能。
@@ -53,8 +54,8 @@ DBCC SHOW_STATISTICS 根据统计信息对象中存储的数据显示标题、�
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
-## <a name="syntax"></a>语法  
-  
+## <a name="syntax"></a>语法
+
 ```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
@@ -69,11 +70,14 @@ DBCC SHOW_STATISTICS ( table_or_indexed_view_name , target )
 
 DBCC SHOW_STATISTICS ( table_name , target )   
     [ WITH {STAT_HEADER | DENSITY_VECTOR | HISTOGRAM } [ ,...n ] ]  
-[;]  
-```  
-  
-## <a name="arguments"></a>参数  
- table_or_indexed_view_name   
+[;]
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
+
+ table_or_indexed_view_name  
  要显示其统计信息的表或索引视图的名称。  
   
  *table_name*  
@@ -86,12 +90,12 @@ DBCC SHOW_STATISTICS ( table_name , target )
  NO_INFOMSGS  
  取消严重级别从 0 到 10 的所有信息性消息。  
   
- STAT_HEADER | DENSITY_VECTOR | HISTOGRAM | STATS_STREAM [ ,n ]    
- 如果指定以上一个或多个选项，将根据指定的选项限制该语句返回的结果集。 如果没有指定任何选项，则返回所有统计信息。  
-  
+ STAT_HEADER \| DENSITY_VECTOR \| HISTOGRAM \| STATS_STREAM [ ,n ]：如果指定上述一个或多个选项，将根据指定的选项限制该语句返回的结果集。 如果没有指定任何选项，则返回所有统计信息。  
+
  STATS_STREAM 为 [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-## <a name="result-sets"></a>结果集  
+## <a name="result-sets"></a>结果集
+
 下表对指定 STAT_HEADER 时结果集中所返回的列进行了说明。
   
 |列名称|说明|  
@@ -101,7 +105,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
 |“行”|上次更新统计信息时表或索引视图中的总行数。 如果筛选统计信息或者统计信息与筛选索引对应，该行数可能小于表中的行数。 有关详细信息，请参阅[统计信息](../../relational-databases/statistics/statistics.md)。|  
 |Rows Sampled|用于统计信息计算的抽样总行数。 如果 Rows Sampled < Rows，显示的直方图和密度结果则是根据抽样行估计的。|  
 |步骤|直方图中的梯级数。 每个梯级都跨越一个列值范围，后跟上限列值。 直方图梯级是根据统计信息中的第一个键列定义的。 最大梯级数为 200。|  
-|密度|计算公式为 1/统计信息对象第一个键列中的所有值（不包括直方图边界值）的非重复值  。 查询优化器不使用此 Density 值，显示此值的目的是为了与 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前的版本实现向后兼容。|  
+|密度|计算公式为 1/统计信息对象第一个键列中的所有值（不包括直方图边界值）的非重复值。 查询优化器不使用此 Density 值，显示此值的目的是为了与 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前的版本实现向后兼容。|  
 |Average Key Length|统计信息对象中所有键列的每个值的平均字节数。|  
 |String Index|Yes 指示统计信息对象包含字符串摘要统计信息，以改进对使用 LIKE 运算符的查询谓词的基数估计；例如 `WHERE ProductName LIKE '%Bike'`。 字符串摘要统计信息与直方图分开存储，如果统计信息对象为 **char**、**varchar**、**nchar**、**nvarchar**、**varchar(max)** 、**nvarchar(max)** 、**text** 或 **ntext** 类型，则基于其第一个键列创建字符串摘要统计信息。|  
 |筛选表达式|包含在统计信息对象中的表行子集的谓词。 NULL = 未筛选的统计信息。 有关筛选谓词的详细信息，请参阅[创建筛选索引](../../relational-databases/indexes/create-filtered-indexes.md)。 有关筛选统计信息的详细信息，请参阅[统计信息](../../relational-databases/statistics/statistics.md)。|  
@@ -112,7 +116,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
   
 |列名称|说明|  
 |-----------------|-----------------|  
-|All Density|密度为 1/非重复值  。 结果显示统计信息对象中各列的每个前缀的密度，每个密度显示一行。 非重复值是每个行前缀和列前缀的列值的非重复列表。 例如，如果统计信息对象包含键列 (A, B, C)，结果将报告以下每个列前缀中非重复值列表的密度：(A)、(A,B) 和 (A, B, C)。 使用前缀 (A, B, C)，以下每个列表都是一个非重复值列表：(3, 5, 6)、(4, 4, 6)、(4, 5, 6) 和 (4, 5, 7)。 使用前缀 (A, B)，相同列值具有以下非重复值列表：(3, 5)、(4, 4) 和 (4, 5)|  
+|All Density|密度为 1/非重复值。 结果显示统计信息对象中各列的每个前缀的密度，每个密度显示一行。 非重复值是每个行前缀和列前缀的列值的非重复列表。 例如，如果统计信息对象包含键列 (A, B, C)，结果将报告以下每个列前缀中非重复值列表的密度：(A)、(A,B) 和 (A, B, C)。 使用前缀 (A, B, C)，以下每个列表都是一个非重复值列表：(3, 5, 6)、(4, 4, 6)、(4, 5, 6) 和 (4, 5, 7)。 使用前缀 (A, B)，相同列值具有以下非重复值列表：(3, 5)、(4, 4) 和 (4, 5)|  
 |Average Length|存储列前缀的列值列表的平均长度（以字节为单位）。 例如，如果列表 (3, 5, 6) 中的每个值都需要 4 个字节，则长度为 12 个字节。|  
 |列|为其显示 All density 和 Average length 的前缀中的列的名称。|  
   
@@ -130,14 +134,15 @@ DBCC SHOW_STATISTICS ( table_name , target )
 
 统计信息更新日期连同[直方图](#histogram)和[密度矢量](#density)一起存储在[统计信息 blob 对象](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)中，而不是存储在元数据中。 如果未读取到任何数据，无法生成统计信息数据，则不会创建统计信息 blob，该日期不可用，且 *updated* 列为 NULL。 针对谓词不返回任何行或新的空表，筛选的统计信息便是这种情况。
   
-## <a name="histogram"></a><a name="histogram"></a>直方图  
+## <a name="histogram"></a><a name="histogram"></a>直方图
+
 直方图度量数据集中每个非重复值的出现频率。 查询优化器根据统计信息对象第一个键列中的列值来计算直方图，它选择列值的方法是以统计方式对行进行抽样或对表或视图中的所有行执行完全扫描。 如果直方图是根据一组抽样行创建的，存储的总行数和非重复值总数则为估计值，且不必为整数。
   
 若要创建直方图，查询优化器将对列值进行排序，计算与每个非重复列值匹配的值数，然后将列值聚合到最多 200 个连续直方图梯级中。 每个梯级都包含一个列值范围，后跟上限列值。 该范围包括介于两个边界值之间的所有可能列值，但不包括边界值自身。 最小排序列值是第一个直方图梯级的上限值。
   
 下面的关系图显示包含六个梯级的直方图。 第一个上限值左侧的区域是第一个梯级。
   
-![](../../relational-databases/system-dynamic-management-views/media/a0ce6714-01f4-4943-a083-8cbd2d6f617a.gif "a0ce6714-01f4-4943-a083-8cbd2d6f617a")
+![直方图](../../relational-databases/system-dynamic-management-views/media/a0ce6714-01f4-4943-a083-8cbd2d6f617a.gif "a0ce6714-01f4-4943-a083-8cbd2d6f617a")
   
 对于每个直方图梯级：
 -   粗线表示上限值 (RANGE_HI_KEY) 和上限值的出现次数 (EQ_ROWS)  

@@ -8,12 +8,12 @@ ms.date: 12/11/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: da852f20d9109c5c4e2988cbdfc3915fe226718f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b48511e9e737f4fb775925d8a6bff81e31ef2a5a
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896522"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196755"
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>为 Linux 上的 SQL Server 部署 Pacemaker 群集
 
@@ -21,7 +21,7 @@ ms.locfileid: "85896522"
 
 本教程列出了为 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Always On 可用性组 (AG) 或故障转移群集实例 (FCI) 部署 Linux Pacemaker 群集所需完成的任务。 与紧密耦合的 Windows Server/ [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 堆栈不同，Linux 上 Pacemaker 群集的创建和可用性组 (AG) 的配置可以在 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 安装之前或之后完成。 在配置完群集之后，才集成和配置 AG 或 FCI 部署的 Pacemaker 部分的资源。
 > [!IMPORTANT]
-> 群集类型为 None 的 AG 不需要 Pacemaker 群集，也不能由 Pacemaker 管理  。 
+> 群集类型为 None 的 AG 不需要 Pacemaker 群集，也不能由 Pacemaker 管理。 
 
 > [!div class="checklist"]
 > * 安装高可用性加载项并安装 Pacemaker。
@@ -54,7 +54,7 @@ ms.locfileid: "85896522"
     sudo subscription-manager attach --pool=<PoolID>
     ```
     
-    其中，“PoolId”是上一步中高可用性订阅的池 ID  。
+    其中，“PoolId”是上一步中高可用性订阅的池 ID。
     
 4.  使存储库能够使用高可用性加载项。
     
@@ -81,8 +81,8 @@ sudo apt-get install pacemaker pcs fence-agents resource-agents
 > 在 SLES 上，创建群集时会初始化 HA 加载项。
 
 ## <a name="prepare-the-nodes-for-pacemaker-rhel-and-ubuntu-only"></a>为 Pacemaker 准备节点（仅限 RHEL 和 Ubuntu）
-Pacemaker 本身使用在名为 hacluster 的分发上创建的用户  。 在 RHEL 和 Ubuntu 上安装 HA 加载项时，将创建用户。
-1. 在将用作 Pacemaker 群集节点的每台服务器上，为群集使用的用户创建密码。 示例中使用的名称是 hacluster，但可以使用任何名称  。 参与 Pacemaker 群集的所有节点上使用的名称和密码必须相同。
+Pacemaker 本身使用在名为 hacluster 的分发上创建的用户。 在 RHEL 和 Ubuntu 上安装 HA 加载项时，将创建用户。
+1. 在将用作 Pacemaker 群集节点的每台服务器上，为群集使用的用户创建密码。 示例中使用的名称是 hacluster，但可以使用任何名称。 参与 Pacemaker 群集的所有节点上使用的名称和密码必须相同。
    
     ```bash
     sudo passwd hacluster
@@ -128,14 +128,14 @@ Pacemaker 本身使用在名为 hacluster 的分发上创建的用户  。 在 R
    sudo pcs cluster auth <Node1 Node2 ... NodeN> -u hacluster
    ```
    
-   其中 NodeX 是节点的名称  。
+   其中 NodeX 是节点的名称。
 2. 创建群集
    
    ```bash
    sudo pcs cluster setup --name <PMClusterName Nodelist> --start --all --enable
    ```
    
-   其中 PMClusterName 是分配给 Pacemaker 群集的名称，Nodelist 是由空格分隔的节点名称列表   。
+   其中 PMClusterName 是分配给 Pacemaker 群集的名称，Nodelist 是由空格分隔的节点名称列表 。
 
 **Ubuntu**
 
@@ -169,13 +169,13 @@ Ubuntu 的配置与 RHEL 类似。 但有一个主要区别：安装 Pacemaker �
    sudo crm status
    ```
    
-6. 将 hacluster 密码更改为  
+6. 将 hacluster 密码更改为 
    ```bash
    sudo passwd hacluster
    ```
    
-7. 如果为配置了用于管理的 IP 地址，可以在浏览器中对其进行测试，该过程同时还会测试 hacluster 的密码更改  。
-   ![](./media/sql-server-linux-deploy-pacemaker-cluster/image2.png)
+7. 如果为配置了用于管理的 IP 地址，可以在浏览器中对其进行测试，该过程同时还会测试 hacluster 的密码更改。
+   ![hacLuster](./media/sql-server-linux-deploy-pacemaker-cluster/image2.png)
    
 8. 在另一个将成为群集节点的 SLES 服务器上运行 
    ```bash
@@ -189,7 +189,7 @@ Ubuntu 的配置与 RHEL 类似。 但有一个主要区别：安装 Pacemaker �
    sudo crm status
    ```
    
-11. 将 hacluster 密码更改为  
+11. 将 hacluster 密码更改为 
    ```bash
    sudo passwd hacluster
    ```
@@ -199,8 +199,8 @@ Ubuntu 的配置与 RHEL 类似。 但有一个主要区别：安装 Pacemaker �
 ## <a name="install-the-sql-server-ha-and-sql-server-agent-packages"></a>安装 SQL Server HA 和 SQL Server 代理包
 如果尚未安装 SQL Server HA 包和 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 代理，请使用以下命令安装它们。 安装 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 后安装 HA 包需要重新启动 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 才能使用。 这些说明假定已经设置了 Microsoft 包的存储库，因为此时应安装 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]。
 > [!NOTE]
-> - 如果不将 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 代理用于日志传送或任何其他用途，则不必安装它，这时可以跳过包 mssql-server-agent  。
-> - 其他用于 Linux 上的 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]、[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 全文搜索 (mssql-server-fts) 和 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Integration Services (mssql-server-is) 的可选包对于高可用性、FCI 或 AG 都不是必需的。
+> - 如果不将 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 代理用于日志传送或任何其他用途，则不必安装它，这时可以跳过包 mssql-server-agent。
+> - 其他用于 Linux 上的 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]、[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 全文搜索 (mssql-server-fts) 和 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Integration Services (mssql-server-is) 的可选包对于高可用性、FCI 或 AG 都不是必需的 。
 
 **RHEL**
 

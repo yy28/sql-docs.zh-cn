@@ -14,19 +14,19 @@ f1_keywords:
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 81f446164fd12867c19273e6cf15018b749061a4
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 14a0cfa2227179d74d67d6e3ed16198da3323855
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925162"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279403"
 ---
 # <a name="ssis-catalog"></a>SSIS 目录
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  SSISDB 目录是使用已部署到 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 服务器的 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) 项目的中心点  。 例如，您可以设置项目和包参数，配置环境以便为包指定运行时值，执行包并对包进行故障排除，以及管理 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 服务器操作。  
+  SSISDB 目录是使用已部署到 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 服务器的 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) 项目的中心点。 例如，您可以设置项目和包参数，配置环境以便为包指定运行时值，执行包并对包进行故障排除，以及管理 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 服务器操作。  
  
 > [!NOTE]
 > 本文介绍常规 SSIS 目录及在本地运行的 SSIS 目录。 还可在 Azure SQL 数据库中创建 SSIS 目录，并在 Azure 中部署和运行 SSIS 包。 有关详细信息，请参阅[将 SQL Server Integration Services 工作负荷直接迁移到云](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)。
@@ -87,7 +87,7 @@ ms.locfileid: "82925162"
 ###  <a name="folder-project-environment"></a><a name="Folder"></a> 文件夹、项目和环境  
  重命名文件夹、项目或环境时，请考虑以下规则。  
   
--   无效字符包括 ASCII/Unicode 字符 1 到 31、引号 (")、小于号 (\<)、大于号 (>)、竖线 (|)、退格符 (\b)、null (\0) 和制表符 (\t)。  
+-   无效字符包括 ASCII/Unicode 字符 1 到 31、引号 (")、小于号 (\<), greater than (>)、竖线 (|)、退格符 (\b)、null (\0) 和制表符 (\t)。  
   
 -   名称不得包含前导空格或尾随空格。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "82925162"
 ###  <a name="environment-variable"></a><a name="EnvironmentVariable"></a> 环境变量  
  命名环境变量时，请考虑以下规则。  
   
--   无效字符包括 ASCII/Unicode 字符 1 到 31、引号 (")、小于号 (\<)、大于号 (>)、竖线 (|)、退格符 (\b)、null (\0) 和制表符 (\t)。  
+-   无效字符包括 ASCII/Unicode 字符 1 到 31、引号 (")、小于号 (\<), greater than (>)、竖线 (|)、退格符 (\b)、null (\0) 和制表符 (\t)。  
   
 -   名称不得包含前导空格或尾随空格。  
   
@@ -118,16 +118,16 @@ ms.locfileid: "82925162"
 -   后续字符可以是在 Unicode 标准 2.0 中定义的字母或数字，或是下划线 (_)。  
   
 ##  <a name="catalog-configuration"></a><a name="Configuration"></a> 目录配置  
- 通过调整目录属性来优化目录的行为方式。 目录属性定义如何对敏感数据进行加密，以及如何保留操作和项目版本控制数据。 若要设置目录属性，请使用“目录属性”  对话框，或调用 [catalog.configure_catalog（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md)存储过程。 若要查看属性，请使用对话框或查询 [catalog.catalog_properties（SSISDB 数据库）](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md)。 可以通过右键单击对象资源管理器中的“SSISDB”  来访问该对话框。  
+ 通过调整目录属性来优化目录的行为方式。 目录属性定义如何对敏感数据进行加密，以及如何保留操作和项目版本控制数据。 若要设置目录属性，请使用“目录属性”对话框，或调用 [catalog.configure_catalog（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md)存储过程。 若要查看属性，请使用对话框或查询 [catalog.catalog_properties（SSISDB 数据库）](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md)。 可以通过右键单击对象资源管理器中的“SSISDB”来访问该对话框。  
   
 ###  <a name="operations-and-project-version-cleanup"></a><a name="Cleanup"></a> 操作和项目版本清理  
  目录中很多操作的状态数据都存储在内部数据库表中。 例如，目录会跟踪包执行和项目部署的状态。 为了维持操作数据的大小，使用 **中的** “SSIS Server 维护作业” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 来删除旧数据。 在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时创建此 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 代理作业。  
   
  您可以使用相同名称将 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目部署到目录中的同一文件夹，以对其进行更新或重新部署。 默认情况下，每次重新部署某个项目时， **SSISDB** 目录都会保留早期版本的该项目。 为了维持操作数据的大小，使用了 **“SSIS 服务器维护作业”** 来删除旧版本的项目。  
  
-为了运行“SSIS 服务器维护作业”  ，SSIS 创建了 SQL Server 登录 **##MS_SSISServerCleanupJobLogin##** 。 此登录仅供 SSIS 进行内部使用。
+为了运行“SSIS 服务器维护作业” ，SSIS 创建了 SQL Server 登录 **##MS_SSISServerCleanupJobLogin##** 。 此登录仅供 SSIS 进行内部使用。
   
- 以下 **SSISDB** 目录属性将定义此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业的行为方式。 可以使用“目录属性”  对话框或使用 [catalog.catalog_properties（SSISDB 数据库）](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md)和 [catalog.configure_catalog（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md)查看和修改属性。  
+ 以下 **SSISDB** 目录属性将定义此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业的行为方式。 可以使用“目录属性”对话框或使用 [catalog.catalog_properties（SSISDB 数据库）](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md)和 [catalog.configure_catalog（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md)查看和修改属性。  
   
  **定期清理日志**  
  当此属性设置为 **True**时，操作清除作业步骤将会运行。  
@@ -135,7 +135,7 @@ ms.locfileid: "82925162"
  **保持期(天)**  
  定义可允许的操作数据的最长保存时间（以天为单位）。 将删除较旧的数据。  
   
- 最小值为一天。 最大值仅受到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] int 数据的最大值的限制  。 有关此数据类型的信息，请参阅 [int、bigint、smallint 和 tinyint (Transact-SQL)](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)。  
+ 最小值为一天。 最大值仅受到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] int 数据的最大值的限制。 有关此数据类型的信息，请参阅 [int、bigint、smallint 和 tinyint (Transact-SQL)](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)。  
   
  **定期删除旧版本**  
  当此属性设置为 **True**时，项目版本清除作业步骤将会运行。  
@@ -319,13 +319,13 @@ ms.locfileid: "82925162"
   
 2.  连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库引擎。  
   
-3.  在“对象资源管理器”中，展开服务器节点，右键单击“Integration Services 目录”  节点，然后单击“创建目录”  。  
+3.  在“对象资源管理器”中，展开服务器节点，右键单击“Integration Services 目录”  节点，然后单击“创建目录” 。  
   
 4.  单击 **“启用 CLR 集成”** 。  
   
      该目录使用 CLR 存储过程。  
   
-5.  单击“在 SQL Server 启动时启用自动执行 Integration Services 存储过程”  ，使 [catalog.startup](../../integration-services/system-stored-procedures/catalog-startup.md) 存储过程在每次重启 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 服务器后运行。  
+5.  单击“在 SQL Server 启动时启用自动执行 Integration Services 存储过程”，使 [catalog.startup](../../integration-services/system-stored-procedures/catalog-startup.md) 存储过程在每次重启 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 服务器后运行。  
   
      该存储过程对 SSISDB 目录的操作状态进行维护。 它可以修复在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 服务器实例出现故障时运行的任何包的状态。  
   
@@ -378,7 +378,7 @@ ms.locfileid: "82925162"
   
 2.  连接到 Microsoft SQL Server 数据库引擎。  
   
-3.  在对象资源管理器中，展开“Integration Services”  节点，右键单击“SSISDB”  ，然后单击“属性”  。  
+3.  在对象资源管理器中，展开“Integration Services”节点，右键单击“SSISDB”，然后单击“属性”。  
   
 ###  <a name="configure-the-options"></a><a name="options"></a> 配置选项  
   
@@ -397,7 +397,7 @@ ms.locfileid: "82925162"
 
   [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 包含 SSISDB 数据库。 查询 SSISDB 数据库中的视图可以检查 **SSISDB** 目录中存储的对象、设置和操作数据。 本主题说明如何备份和还原该数据库。  
   
- SSISDB 目录存储部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的包  。 有关该目录的详细信息，请参阅 [SSIS 目录](../../integration-services/catalog/ssis-catalog.md)。  
+ SSISDB 目录存储部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的包。 有关该目录的详细信息，请参阅 [SSIS 目录](../../integration-services/catalog/ssis-catalog.md)。  
   
 ###  <a name="to-back-up-the-ssis-database"></a><a name="backup"></a> 备份 SSIS 数据库  
   
@@ -421,13 +421,13 @@ ms.locfileid: "82925162"
   
     1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的对象资源管理器中，展开 **“安全性”** 节点，然后展开 **“登录名”** 节点。  
   
-    2.  右键单击 **##MS_SSISServerCleanupJobLogin##** ，然后依次单击“编写登录脚本为” > “CREATE 到” > “新查询编辑器窗口”。     
+    2.  右键单击 **##MS_SSISServerCleanupJobLogin##** ，然后依次单击“编写登录脚本为” > “CREATE 到” > “新查询编辑器窗口”。    
   
 5.  若要将 SSISDB 数据库还原到从未创建 SSISDB 目录的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，请执行以下操作，生成 sp_ssis_startup 的 CREATE PROCEDURE 脚本。 有关详细信息，请参阅 [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)。  
   
-    1.  在对象资源管理器中，展开“数据库”节点，然后展开“主” > “可编程性” > “存储过程”节点。      
+    1.  在对象资源管理器中，展开“数据库”节点，然后展开“主” > “可编程性” > “存储过程”节点。     
   
-    2.  右键单击“dbo.sp_ssis_startup”  ，再依次单击“将存储过程脚本编写为”   > “CREATE，并编写到”   > “新查询编辑器窗口”  。  
+    2.  右键单击“dbo.sp_ssis_startup”，再依次单击“将存储过程脚本编写为” > “CREATE，并编写到” > “新查询编辑器窗口”。  
   
 6.  确认 SQL Server 代理已启动  
   
@@ -435,7 +435,7 @@ ms.locfileid: "82925162"
   
     1.  在对象资源管理器中，展开 **“SQL Server 代理”** 节点，然后展开 **“作业”** 节点。  
   
-    2.  右键单击“SSIS 服务器维护作业”，再依次单击“将存储过程脚本编写为”   > “CREATE，并编写到”   > “新查询编辑器窗口”  。  
+    2.  右键单击“SSIS 服务器维护作业”，再依次单击“将存储过程脚本编写为” > “CREATE，并编写到” > “新查询编辑器窗口”。  
   
 ### <a name="to-restore-the-ssis-database"></a>还原 SSIS 数据库  
   
@@ -482,7 +482,7 @@ ms.locfileid: "82925162"
     EXEC sp_procoption N'sp_ssis_startup','startup','on'  
     ```  
   
-6.  通过在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中使用“登录属性”对话框，将 SSISDB 用户 ##MS_SSISServerCleanupJobUser##（SSISDB 数据库）映射到 ##MS_SSISServerCleanupJobLogin##。   
+6.  通过在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中使用“登录属性”对话框，将 SSISDB 用户 ##MS_SSISServerCleanupJobUser##（SSISDB 数据库）映射到 ##MS_SSISServerCleanupJobLogin##。  
   
 7.  使用下列方法之一还原主密钥。 有关加密的详细信息，请参阅 [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)。  
   
@@ -542,9 +542,9 @@ ms.locfileid: "82925162"
   
 1.  备份 SSIS 目录数据库 (SSISDB)。  
   
-2.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，展开本地服务器，然后展开“Integration Services 目录”  。  
+2.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，展开本地服务器，然后展开“Integration Services 目录” 。  
   
-3.  右键单击“SSISDB”  ，然后选择“数据库升级”  以启动 SSISDB 升级向导。 或者通过使用提升的权限在本地服务器上运行 `C:\Program Files\Microsoft SQL Server\140\DTS\Binn\ISDBUpgradeWizard.exe` 来启动 SSISDB 升级向导。
+3.  右键单击“SSISDB”，然后选择“数据库升级”以启动 SSISDB 升级向导。 或者通过使用提升的权限在本地服务器上运行 `C:\Program Files\Microsoft SQL Server\140\DTS\Binn\ISDBUpgradeWizard.exe` 来启动 SSISDB 升级向导。
   
      ![启动 SSISDB 升级向导](../../integration-services/service/media/ssisdb-upgrade-wizard-1.png)
 
@@ -598,7 +598,7 @@ ms.locfileid: "82925162"
   
 > [!IMPORTANT]  
 > -   必须在可用性组的 **主节点** 上执行这些步骤。
-> -   将 SSISDB 添加到 Always On 可用性组后，必须启用“Always On 的 SSIS 支持”   。  
+> -   将 SSISDB 添加到 Always On 可用性组后，必须启用“Always On 的 SSIS 支持”。  
 
 > [!NOTE]
 > 若要详细了解此过程，请参阅数据平台 MVP Marcos Freccia 发布的以下演练及附加屏幕截图：[将 SSISDB 添加到 SQL Server 2016 的 AG](https://marcosfreccia.com/2017/04/28/adding-ssisdb-to-ag-for-sql-server-2016/)。
@@ -607,33 +607,33 @@ ms.locfileid: "82925162"
   
 1.  启动 **SQL Server Management Studio** 并连接到你想要设置为适用于 SSISDB 的 AlwaysOn 高可用性组的 **主节点** 的群集中的 SQL Server 实例。  
   
-2.  在“对象资源管理器”中，展开服务器节点，右键单击“Integration Services 目录”  节点，然后单击“创建目录”  。  
+2.  在“对象资源管理器”中，展开服务器节点，右键单击“Integration Services 目录”  节点，然后单击“创建目录” 。  
   
 3.  单击 **“启用 CLR 集成”** 。 该目录使用 CLR 存储过程。  
   
 4.  单击“在 SQL Server 启动时启用自动执行 Integration Services 存储过程”  ，使 [catalog.startup](../system-stored-procedures/catalog-startup.md) 存储过程在每次重启 SSIS 服务器后运行。 该存储过程对 SSISDB 目录的操作状态进行维护。 它可以修复当 SSIS 服务器实例出现故障时正在运行的任何包的状态。  
   
-5.  输入 **密码**，然后单击“确定”  。 该密码保护用于对目录数据进行加密的数据库主密钥。 将该密码保存在安全的位置。 同时建议您也备份数据库主密钥。 有关详细信息，请参阅 [Back Up a Database Master Key](../../relational-databases/security/encryption/back-up-a-database-master-key.md)。  
+5.  输入 **密码**，然后单击“确定” 。 该密码保护用于对目录数据进行加密的数据库主密钥。 将该密码保存在安全的位置。 同时建议您也备份数据库主密钥。 有关详细信息，请参阅 [Back Up a Database Master Key](../../relational-databases/security/encryption/back-up-a-database-master-key.md)。  
   
 ####  <a name="step-2-add-ssisdb-to-an-always-on-availability-group"></a><a name="Step2"></a> 步骤 2：将 SSISDB 添加到 AlwaysOn 可用性组  
 将 SSISDB 数据库添加到 AlwaysOn 可用性组的方法与将任何其他用户数据库添加到可用性组的方法几乎相同。 请参阅 [使用可用性组向导](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)。  
   
-提供在“新建可用性组”  向导的“选择数据库”  页中创建 SSIS 目录时指定的密码。
+提供在“新建可用性组”向导的“选择数据库”页中创建 SSIS 目录时指定的密码。
 
 ![新建可用性组](../../integration-services/service/media/ssis-newavailabilitygroup.png "新建可用性组")  
   
 ####  <a name="step-3-enable-ssis-support-for-always-on"></a><a name="Step3"></a> 步骤 3：为 AlwaysOn 启用 SSIS 支持  
- 创建 Integration Service 目录后，右键单击“Integration Service 目录”  节点，再单击“启用 Always On 支持”  。 应该能看到以下“为 AlwaysOn 启用支持”  的对话框。 如果此菜单被禁用，请确认已安装所有必备组件，然后单击“刷新”  。  
+ 创建 Integration Service 目录后，右键单击“Integration Service 目录”节点，再单击“启用 Always On 支持”。 应该能看到以下“为 AlwaysOn 启用支持”  的对话框。 如果此菜单被禁用，请确认已安装所有必备组件，然后单击“刷新” 。  
   
  ![为 Always On 启用支持](../../integration-services/service/media/ssis-enablesupportforalwayson.png)  
   
 > [!WARNING]  
 >  为 AlwaysOn 启用 SSIS 支持之前，不支持 SSISDB 数据库的自动故障转移。  
   
- 表中列出了从 Always On 可用性组新添加的次要副本。 单击列表中每个副本的“连接…”按钮，然后输入身份验证凭据以连接到副本  。 用户帐户必须是每个副本上 sysadmin 组的成员，才能为 Always On 启用 SSIS 支持。 成功连接到每个副本后，单击“确定”  按钮以启用对 AlwaysOn 的 SSIS 支持。  
+ 表中列出了从 Always On 可用性组新添加的次要副本。 单击列表中每个副本的“连接…”按钮，然后输入身份验证凭据以连接到副本。 用户帐户必须是每个副本上 sysadmin 组的成员，才能为 Always On 启用 SSIS 支持。 成功连接到每个副本后，单击“确定”  按钮以启用对 AlwaysOn 的 SSIS 支持。  
  
-如果在完成其他先决性步骤后，关联菜单中的“启用 Always On 支持”  选项显示为已禁用，请尝试执行以下操作：
-1.  单击“刷新”  选项，刷新关联菜单。
+如果在完成其他先决性步骤后，关联菜单中的“启用 Always On 支持”选项显示为已禁用，请尝试执行以下操作：
+1.  单击“刷新”选项，刷新关联菜单。
 2.  确保连接到主节点。 必须在主节点上启用 Always On 支持。
 3.  确保 SQL Server 版本为 13.0 或更高版本。 仅在 SQL Server 2016 及更高版本上，SSIS 才支持 Always On。
 
@@ -644,7 +644,7 @@ ms.locfileid: "82925162"
   
 1.  从可用性组中删除 SSISDB 数据库。 有关详细信息，请参阅[将辅助数据库从可用性组删除 (SQL Server)](../../database-engine/availability-groups/windows/remove-a-secondary-database-from-an-availability-group-sql-server.md) 和[将主数据库从可用性组删除 (SQL Server)](../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md)。  
   
-2.  在升级向导中，单击“重新运行”  。 此时，将会通过“Always On 可用性组中的 SSISDB 检查”规则。  
+2.  在升级向导中，单击“重新运行”。 此时，将会通过“Always On 可用性组中的 SSISDB 检查”规则。  
   
 3.  单击“下一步”  以继续升级。  
   
@@ -652,15 +652,27 @@ ms.locfileid: "82925162"
   
  如果升级 SQL Server 时没有受到阻止，并且 SSISDB 位于 Always On 可用性组中，请在升级 SQL Server 数据库引擎后单独升级 SSISDB。 按照以下过程中所述，使用 SSIS 升级向导升级 SSISDB。  
   
-1.  将 SSISDB 数据库移出可用性组，或者如果 SSISDB 是可用性组中唯一的数据库，则删除可用性组。 在可用性组的主节点  上，启动 SQL Server Management Studio  来执行此任务。  
+1.  将 SSISDB 数据库移出可用性组，或者如果 SSISDB 是可用性组中唯一的数据库，则删除可用性组。 在可用性组的主节点上，启动 SQL Server Management Studio 来执行此任务。  
   
 2.  从所有 **副本节点**删除 SSISDB 数据库。  
   
-3.  在 **主节点**上升级 SSISDB 数据库。 在 SQL Server Management Studio 内的“对象资源管理器”  中，展开“Integration Services 目录”  ，右键单击“SSISDB”  ，然后选择“数据库升级”  。 按照“SSISDB 升级向导”  中的说明来升级数据库。 在主节点  上，本地启动 SSIDB 升级向导  。  
+3.  在 **主节点**上升级 SSISDB 数据库。 在 SQL Server Management Studio 内的“对象资源管理器” 中，展开“Integration Services 目录” ，右键单击“SSISDB” ，然后选择“数据库升级” 。 按照“SSISDB 升级向导”  中的说明来升级数据库。 在主节点上，本地启动 SSIDB 升级向导。  
   
 4.  按照[步骤 2：将 SSISDB 添加到 AlwaysOn 可用性组](#Step2)中的说明将 SSISDB 添加回可用性组。  
   
 5.  按照[步骤 3：为 AlwaysOn 启用 SSIS 支持](#Step3)中的说明进行操作。  
+
+
+## <a name="ssisdb-catalog-and-delegation-in-double-hop-scenarios"></a>双跃点方案中的 SSISDB 目录和委派
+
+默认情况下，针对 SSISDB 目录下存储的 SSIS 包的远程调用不支持凭据委派（这有时也称为双跃点）。 
+
+假设有这样一种情况：用户登录客户端计算机 A 并启动 SQL Server Management Studio (SSMS)。 在 SSMS 中，用户连接到计算机 B 上托管的 SQL Server，该计算机具有 SSISDB 目录。 SSIS 包存储在此 SSISDB 目录下，并且该包又连接到在计算机 C 上运行的 SQL Server 服务（该包也可访问其他任何服务）。 当用户从计算机 A 调用 SSIS 包的执行时，SSMS 会先将用户凭据从计算机 A 成功传递到计算机 B（SSIS 运行时进程正在执行该包）。 要成功完成执行，现在需要 SSIS 执行运行时进程 (ISServerExec.exe) 才能将用户凭据从计算机 B 委派给计算机 C。 但是，默认情况下不启用凭据委派。
+
+用户可通过将“信任此用户对任何服务的委派(仅 Kerberos)”的权限授予计算机B 上的 SQL Server 服务帐户（它将 ISServerExec.exe 作为子进程启动），启用凭据委派。 此过程是指针对 SQL Server 服务帐户设置无约束委派或开放式委派。 在授予此权限之前，请考虑它是否符合组织的安全要求。
+
+SSISDB 不支持约束委派。 在双跃点环境中，如果为约束委派设置了托管 SSISDB 目录的 SQL Server 服务帐户（在本例中为计算机 B），则 ISServerExec.exe 将无法将凭据委派给第三台计算机（计算机 C）。 这适用于启用 Windows Credential Guard 的情况，该情况强制要求设置约束委派。
+
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> 相关内容  
   

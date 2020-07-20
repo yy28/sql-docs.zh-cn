@@ -28,15 +28,15 @@ ms.assetid: fc976afd-1edb-4341-bf41-c4a42a69772b
 author: pmasl
 ms.author: umajay
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: e36315d58721fc6c50393b0bff10c7e8a2e3dee0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 38d542d84121b41311cd8aa64d4ec9747bfc2bf8
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757203"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279525"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [sql-asdb-asa.md](../../includes/applies-to-version/sql-asdb-asa.md)]
 
 收缩指定数据库中的数据文件和日志文件的大小。
   
@@ -52,7 +52,18 @@ DBCC SHRINKDATABASE
 )  
 [ WITH NO_INFOMSGS ]  
 ```  
-  
+
+```syntaxsql
+-- Azure Synapse Analytics (formerly SQL DW)
+
+DBCC SHRINKDATABASE   
+( database_name   
+     [ , target_percent ]   
+)  
+[ WITH NO_INFOMSGS ]
+
+```  
+
 ## <a name="arguments"></a>参数  
 _database\_name_ | _database\_id_ | 0  
 要收缩的数据库名称或 ID。 0 指定使用当前数据库。  
@@ -93,7 +104,7 @@ WITH NO_INFOMSGS
 ## <a name="remarks"></a>备注  
 
 >[!NOTE]
-> 当前，Azure SQL 数据仓库不支持 DBCC SHRINKDATABASE。 不建议运行此命令，因为这是 I/O 密集型操作，可能会使数据仓库离线。 此外，运行此命令后，还会对数据仓库快照产生成本影响。 
+> 不建议运行此命令，因为这是 I/O 密集型操作，可能会使数据仓库离线。 此外，运行此命令后，还会对数据仓库快照产生成本影响。 
 
 若要收缩特定数据库的所有数据和日志文件，请执行 DBCC SHRINKDATABASE 命令。 若要一次收缩一个特定数据库中的一个数据或日志文件，请执行 [DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md) 命令。
   
@@ -170,7 +181,14 @@ GO
 ```sql  
 DBCC SHRINKDATABASE (AdventureWorks2012, TRUNCATEONLY);  
 ```  
-  
+### <a name="c-shrinking-an-azure-synapse-analytics-database"></a>C. 缩小 Azure Synapse Analytics 数据库
+
+```
+DBCC SHRINKDATABASE (database_A);
+DBCC SHRINKDATABASE (database_B, 10); 
+
+```
+
 ## <a name="see-also"></a>另请参阅  
 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)  
 [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)  

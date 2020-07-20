@@ -8,12 +8,12 @@ ms.date: 06/28/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 72d1292b03bc518ec8dfbe7a8f2e5e281bc6978a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d2bc4c05c711645b0cff669acbf847da4998f5d2
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896556"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196735"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>为 Linux 上的 SQL Server 创建和配置可用性组
 
@@ -326,7 +326,7 @@ sudo systemctl restart mssql-server
 
 3.  在“指定可用性组选项”对话框中，输入可用性组的名称，并在下拉列表中选择“外部”或“无”群集类型。 在部署 Pacemaker 时应使用“外部”。 “无”适用于专用方案，如读取横向扩展。选择数据库级别运行状况检测选项是可选的。 有关此选项的详细信息，请参阅[可用性组数据库级别运行状况检测故障转移选项](../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md)。 单击“下一步”。
 
-    ![](./media/sql-server-linux-create-availability-group/image3.png)
+    ![创建可用性组 03](./media/sql-server-linux-create-availability-group/image3.png)
 
 4.  在“选择数据库”对话框中，选择将参与 AG 的数据库。 每个数据库在添加到 AG 之前必须具有完整备份。 单击“下一步”。
 
@@ -340,17 +340,17 @@ sudo systemctl restart mssql-server
 
     下面的示例显示具有两个副本的 AG，一个“外部”群集类型和一个“仅配置”副本。
 
-    ![](./media/sql-server-linux-create-availability-group/image4.png)
+    ![创建可用性组 04](./media/sql-server-linux-create-availability-group/image4.png)
 
     下面的示例显示具有两个副本的 AG，一个“无”群集类型和一个“仅配置”副本。
 
-    ![](./media/sql-server-linux-create-availability-group/image5.png)
+    ![创建可用性组 05](./media/sql-server-linux-create-availability-group/image5.png)
 
 9.  如果要更改备份首选项，请单击“备份首选项”选项卡。有关 AG 备份首选项的详细信息，请参阅[配置可用性副本备份](../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)。
 
 10. 如果使用可读辅助数据库或创建群集类型为“无”的 AG 以进行读取扩展，则可以通过选择“侦听器”选项卡来创建侦听器。稍后还可以添加侦听器。 要创建侦听器，请选择选项“创建可用性组侦听器”并输入名称、TCP/IP 端口以及使用静态或自动分配的 DHCP IP 地址。 请记住，对于群集类型为“无”的 AG，IP 应为静态，并设置为主 IP 地址。
 
-    ![](./media/sql-server-linux-create-availability-group/image6.png)
+    ![创建可用性组 06](./media/sql-server-linux-create-availability-group/image6.png)
 
 11. 如果为可读方案创建了侦听器，则 SSMS 17.3 或更高版本允许在向导中创建只读路由。 也可以稍后通过 SSMS 或 Transact-SQL 添加它。 立即添加只读路由：
 

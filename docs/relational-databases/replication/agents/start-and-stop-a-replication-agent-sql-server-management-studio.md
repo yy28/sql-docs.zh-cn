@@ -15,16 +15,16 @@ ms.assetid: 97977c4a-8c7c-4a22-9480-69aa812bd1e5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f578311d9daa9e54830ad5aa8330fc8bc2c7ac71
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5a73fcd84d31a5cde4cfed1e58a611ccac76ed42
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288084"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159355"
 ---
 # <a name="start-and-stop-a-replication-agent-sql-server-management-studio"></a>启动和停止复制代理 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  可以从   中的“作业”和“复制”文件夹以及复制监视器启动和停止代理  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]。 可启动和停止以下代理和作业：  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+  可以从 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中的“作业”和“复制”文件夹以及复制监视器启动和停止代理 。 可启动和停止以下代理和作业：  
   
 -   快照代理，用于所有发布。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "76288084"
   
 2.  展开 **“SQL Server 代理”** 文件夹，再展开 **“作业”** 文件夹。  
   
-3.  右键单击代理的作业，再单击 **“启动作业”** 或 **“停止作业”** 。 队列读取器代理的作业名称的格式为 **[\<分发服务器>].\<整数>** 。  
+3.  右键单击代理的作业，再单击 **“启动作业”** 或 **“停止作业”** 。 队列读取器代理的作业名称的格式为 [\<Distributor>].\<integer>。  
   
 ### <a name="to-start-and-stop-a-snapshot-agent-log-reader-agent-or-queue-reader-agent-from-replication-monitor"></a>从复制监视器启动和停止快照代理、日志读取器代理或队列读取器代理  
   

@@ -1,5 +1,5 @@
 ---
-title: WITH XMLNAMESPACES (Transact-SQL) | Microsoft Docs
+title: WITH XMLNAMESPACES (Transact-SQL)
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3b32662b-566f-454d-b7ca-e247002a9a0b
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fd1179c6951860dcb168e847ed748f3a69d82aff
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2883be875b827cc38e0412ba8ca75851b11543e8
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902226"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392685"
 ---
 # <a name="with-xmlnamespaces"></a>WITH XMLNAMESPACES
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,12 +60,14 @@ DEFAULT <xml_namespace_uri>
   
 ```  
   
-## <a name="arguments"></a>参数  
-  xml_namespace_uri  
- 统一资源标识符 (URI)，用于标识正在声明的 XML 命名空间。  xml_namespace_uri 是 SQL 字符串。  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
+ xml_namespace_uri  
+ 统一资源标识符 (URI)，用于标识正在声明的 XML 命名空间。 xml_namespace_uri 是 SQL 字符串。  
   
-  xml_namespace_prefix  
- 指定一个要映射并与在 xml_namespace_uri  中指定的命名空间 URI 值关联的前缀。  xml_namespace_prefix 必须为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符。  
+ xml_namespace_prefix  
+ 指定一个要映射并与在 xml_namespace_uri 中指定的命名空间 URI 值关联的前缀。 xml_namespace_prefix 必须为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符。  
   
 ## <a name="remarks"></a>备注  
  在还包括公用表表达式的语句中使用 WITH XMLNAMESPACES 子句时，WITH XMLNAMESPACES 子句必须位于语句中的公用表表达式的前面。  
@@ -90,7 +92,7 @@ DEFAULT <xml_namespace_uri>
 
 -   URI 字符串值按照当前数据库排序规则代码页进行编码，并且将内部转换为 Unicode。  
   
--   XML 命名空间 URI 将按照用于 xs:anyURI  的 XSD 空格折叠规则进行空格折叠。 另外，不会对 XML 命名空间 URI 值执行实体化和反实体化。  
+-   XML 命名空间 URI 将按照用于 xs:anyURI 的 XSD 空格折叠规则进行空格折叠。 另外，不会对 XML 命名空间 URI 值执行实体化和反实体化。  
 
 -   系统将检查 XML 命名空间 URI 中是否有无效的 XML 1.0 字符，如果发现这样的字符（例如，U+0007），将引发错误。  
   

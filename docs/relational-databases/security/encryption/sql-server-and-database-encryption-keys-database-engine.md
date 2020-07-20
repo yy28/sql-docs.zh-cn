@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: bd4a4e98f464c56e5c46c669b7ca26e5db5c814e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 82cd5d463b74fb432b781d6fd721badaa1e836c1
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883083"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279333"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>SQL Server 和数据库加密密钥（数据库引擎）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用加密密钥帮助保护存储在服务器数据库中的数据、凭据和连接信息。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的密钥分为两种：“对称”  和“非对称”  。 对称密钥使用相同的密码对数据进行加密和解密。 非对称密钥使用一个密码来加密数据（称为公  钥），使用另一个密码来解密数据（称为私  钥）。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用加密密钥帮助保护存储在服务器数据库中的数据、凭据和连接信息。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的密钥分为两种：“对称”和“非对称”。 对称密钥使用相同的密码对数据进行加密和解密。 非对称密钥使用一个密码来加密数据（称为公钥），使用另一个密码来解密数据（称为私钥）。  
   
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中，加密密钥包括一组用来保护敏感数据的公钥、私钥和对称密钥。 当第一次启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例时，将在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 初始化过程中创建对称密钥。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用此密钥来加密存储在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的敏感数据。 公钥和私钥由操作系统创建，用于保护对称密钥。 对于在数据库中存储敏感数据的每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例，都要创建一个公钥私钥对。  
   
@@ -30,7 +30,7 @@ ms.locfileid: "85883083"
 
 ### <a name="service-master-key"></a>服务主密钥
   
- 服务主密钥是 SQL Server 加密层次结构的根。 当第一次启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例时，将自动生成 SMK 并用于对链接的服务器密码、凭据和数据库主密钥进行加密。 SMK 是通过使用采用 Windows 数据保护 API (DPAPI) 的本地计算机密钥进行加密的。 DPAPI 使用从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户的 Windows 凭据和计算机的凭据派生的密钥。 服务主密钥只能由创建它时所用的服务帐户或可以访问该计算机凭据的主体进行解密。
+ 服务主密钥是 SQL Server 加密层次结构的根。 SMK 在第一次启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例时自动生成，用于对链接的服务器密码、凭据和每个数据库中的数据库主密钥进行加密。 SMK 是通过使用采用 Windows 数据保护 API (DPAPI) 的本地计算机密钥进行加密的。 DPAPI 使用从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户的 Windows 凭据和计算机的凭据派生的密钥。 服务主密钥只能由创建它时所用的服务帐户或可以访问该计算机凭据的主体进行解密。
 
 只有创建服务主密钥的 Windows 服务帐户或有权访问服务帐户名称和密码的主体能够打开服务主密钥。
 
@@ -58,7 +58,7 @@ ms.locfileid: "85883083"
 -   在服务器扩展部署（多个服务器同时共享单个数据库以及为该数据库提供可逆加密的密钥）中添加或删除服务器实例。  
   
 ## <a name="important-security-information"></a>重要的安全信息  
- 访问由服务主密钥保护的对象需要使用用来创建该密钥的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户或计算机帐户。 即，计算机与创建密钥的系统绑定在一起。 可以更改 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户或  计算机帐户，而不会失去对密钥的访问权限。 但是，如果同时更改两者，则将失去对服务主密钥的访问权限。 如果在不具有这两个元素中的任何一个的情况下失去了服务主密钥的访问权限，则将无法对使用原始密钥加密的数据和对象进行解密。  
+ 访问由服务主密钥保护的对象需要使用用来创建该密钥的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户或计算机帐户。 即，计算机与创建密钥的系统绑定在一起。 可以更改 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户或计算机帐户，而不会失去对密钥的访问权限。 但是，如果同时更改两者，则将失去对服务主密钥的访问权限。 如果在不具有这两个元素中的任何一个的情况下失去了服务主密钥的访问权限，则将无法对使用原始密钥加密的数据和对象进行解密。  
   
  如果没有服务主密钥，则将无法还原受服务主密钥保护的连接。  
   

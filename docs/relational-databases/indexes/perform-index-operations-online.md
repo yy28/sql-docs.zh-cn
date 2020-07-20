@@ -15,20 +15,22 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d04339ddb0a856ae026d7744f69da0d93bf63015
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 10561f70eaed5aad48e62f0cd4e87a1c2851bcbe
+ms.sourcegitcommit: 7ce4a81c1b91239c8871c50f97ecaf387f439f6c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753087"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86217775"
 ---
 # <a name="perform-index-operations-online"></a>联机执行索引操作
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中联机创建、重新生成或删除索引。 ONLINE 选项允许并发用户在执行这些索引操作期间访问基础表或聚集索引数据和任何关联非聚集索引。 例如，一个用户正在重新生成聚集索引时，该用户和其他用户可以继续更新和查询基础数据。 当脱机执行数据定义语言 (DDL) 操作（例如，生成或重新生成聚集索引）时，这些操作对基础数据和关联索引持有排他锁。 这样可以防止在索引操作未完成时对基础数据进行修改和查询。  
+  本主题说明如何使用 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中联机创建、重新生成或删除索引。 ONLINE 选项允许并发用户在执行这些索引操作期间访问基础表或聚集索引数据和任何关联非聚集索引。 例如，一个用户正在重新生成聚集索引时，该用户和其他用户可以继续更新和查询基础数据。 当脱机执行数据定义语言 (DDL) 操作（例如，生成或重新生成聚集索引）时，这些操作对基础数据和关联索引持有排他锁。 这样可以防止在索引操作未完成时对基础数据进行修改和查询。  
   
 > [!NOTE]  
->  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本中均不提供联机索引操作。 有关详细信息，请参阅 [SQL Server 的各版本和支持的功能](../../sql-server/editions-and-components-of-sql-server-version-15.md)。  
+>  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本中均不提供联机索引操作。 有关详细信息，请参阅 [SQL Server 的各版本和支持的功能](../../sql-server/editions-and-components-of-sql-server-version-15.md)。 
+>
+> 可在 Azure SQL 数据库中使用联机索引操作。
   
  **本主题内容**  
   
@@ -79,15 +81,15 @@ ms.locfileid: "85753087"
   
 4.  展开 **“索引”** 文件夹。  
   
-5.  右键单击要联机重新生成的索引，然后选择“属性”  。  
+5.  右键单击要联机重新生成的索引，然后选择“属性”。  
   
 6.  在 **“选择页”** 下，选择 **“选项”** 。  
   
 7.  选择 **“允许联机 DML 处理”** ，然后从列表中选择 **True** 。  
   
-8.  单击“确定”。   
+8.  单击“确定”。  
   
-9. 右键单击要联机重新生成的索引，然后选择“重新生成”  。  
+9. 右键单击要联机重新生成的索引，然后选择“重新生成”。  
   
 10. 在 **“重新生成索引”** 对话框中，确认正确的索引位于 **“要重新生成的索引”** 网格中，然后单击 **“确定”** 。  
   

@@ -1,5 +1,5 @@
 ---
-title: CREATE DATABASE ENCRYPTION KEY (Transact-SQL) | Microsoft Docs
+title: CREATE DATABASE ENCRYPTION KEY (Transact-SQL)
 ms.custom: ''
 ms.date: 08/24/2016
 ms.prod: sql
@@ -27,16 +27,17 @@ helpviewer_keywords:
 ms.assetid: 2ee95a32-5140-41bd-9ab3-a947b9990688
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: be32dee4bc70abcd44f7e156d2220650396fe80a
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest'
+ms.openlocfilehash: 1e0a3ee426281799ee535b686596b87fb13d41ae
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091706"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392795"
 ---
 # <a name="create-database-encryption-key-transact-sql"></a>CREATE DATABASE ENCRYPTION KEY (Transact-SQL)
-[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
+
+[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
  创建用于以透明方式加密数据库的加密密钥。 有关透明数据库加密的详细信息，请参阅[透明数据加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)。  
   
@@ -57,20 +58,27 @@ CREATE DATABASE ENCRYPTION KEY
 [ ; ]  
 ```  
   
+> [!Note]
+> [!INCLUDE [Synapse preview note](../../includes/synapse-preview-note.md)]
+   
 ```syntaxsql
--- Syntax for Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
 
 CREATE DATABASE ENCRYPTION KEY  
        WITH ALGORITHM = { AES_128 | AES_192 | AES_256 | TRIPLE_DES_3KEY }  
    ENCRYPTION BY SERVER CERTIFICATE Encryptor_Name   
 [ ; ]  
 ```  
-  
-## <a name="arguments"></a>参数  
-WITH ALGORITHM = { AES_128 | AES_192 | AES_256 | TRIPLE_DES_3KEY  }  
-指定用于加密密钥的加密算法。   
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
+
+WITH ALGORITHM = { AES_128 \| AES_192 \| AES_256 \| TRIPLE_DES_3KEY  }  
+指定用于加密密钥的加密算法。
+
 > [!NOTE]
->    从 SQL Server 2016 开始，除 AES_128、AES_192 和 AES_256 以外的所有算法都不再使用。 若要使用旧算法（不推荐），必须将数据库设置为兼容级别 120 或更低。  
+> 从 SQL Server 2016 开始，除 AES_128、AES_192 和 AES_256 以外的所有算法都不再使用。 若要使用旧算法（不推荐），必须将数据库设置为兼容级别 120 或更低。  
   
 ENCRYPTION BY SERVER CERTIFICATE Encryptor_Name  
 指定用于加密数据库加密密钥的加密程序的名称。  
@@ -79,7 +87,7 @@ ENCRYPTION BY SERVER ASYMMETRIC KEY Encryptor_Name
 指定用于加密数据库加密密钥的非对称密钥的名称。 要使用非对称密钥对数据库加密密钥进行加密，非对称密钥必须驻留在可扩展密钥管理提供程序上。  
   
 ## <a name="remarks"></a>备注  
-在可使用“透明数据库加密”(TDE) 加密数据库之前，需要设置一个数据库加密密钥  。 以透明方式加密数据库时，将在文件级别上加密整个数据库，而无需对代码进行特殊修改。 用于加密数据库加密密钥的证书或非对称密钥必须位于 master 系统数据库中。  
+在可使用“透明数据库加密”(TDE) 加密数据库之前，需要设置一个数据库加密密钥。 以透明方式加密数据库时，将在文件级别上加密整个数据库，而无需对代码进行特殊修改。 用于加密数据库加密密钥的证书或非对称密钥必须位于 master 系统数据库中。  
   
 只允许对用户数据库使用数据库加密语句。  
   

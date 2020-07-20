@@ -14,12 +14,12 @@ ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7975474859081eb5567c2ee12adf26f9e6501556
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 881385dbd03af3a2425a4b853ce4b194d474bb4d
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72689663"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196886"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>使用 AlwaysOn 可用性组配置复制
 
@@ -32,7 +32,7 @@ ms.locfileid: "72689663"
   
  无法使用 SQL Server 2012 和 SQL Server 2014 将分发数据库置于可用性组中。 SQL 2016 及更高版本支持将分发数据库置于可用性组中。 有关详细信息，请参阅[配置可用性组中的分发数据库](../../../relational-databases/replication/configure-distribution-availability-group.md)。
   
-1.  在分发服务器上配置分发。 如果要使用存储过程来进行配置，则运行 **sp_adddistributor**。 使用 \@password 参数来标识在远程发布服务器连接到分发服务器时将使用的密码  。 在设置远程分发服务器时，每台远程发布服务器上也将需要密码。  
+1.  在分发服务器上配置分发。 如果要使用存储过程来进行配置，则运行 **sp_adddistributor**。 使用 \@password 参数来标识在远程发布服务器连接到分发服务器时将使用的密码。 在设置远程分发服务器时，每台远程发布服务器上也将需要密码。  
   
     ```  
     USE master;  
@@ -52,7 +52,7 @@ ms.locfileid: "72689663"
         @security_mode = 1;  
     ```  
   
-3.  配置远程发布服务器。 如果要使用存储过程来配置分发服务器，则运行 **sp_adddistpublisher**。 \@security_mode 参数可用于确定如何将从复制代理运行的发布服务器验证存储过程连接到当前主要副本  。 如果设置为 1，则使用 Windows 身份验证来连接到当前主副本。 如果设置为 0，则将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证与指定的 \@login 和 \@password 值一起使用   。 指定的登录名和密码必须在每个辅助副本上均有效才能让验证存储过程成功地连接到相应的副本。  
+3.  配置远程发布服务器。 如果要使用存储过程来配置分发服务器，则运行 **sp_adddistpublisher**。 \@security_mode 参数可用于确定如何将从复制代理运行的发布服务器验证存储过程连接到当前主要副本。 如果设置为 1，则使用 Windows 身份验证来连接到当前主副本。 如果设置为 0，则将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证与指定的 \@login 和 \@password 值一起使用 。 指定的登录名和密码必须在每个辅助副本上均有效才能让验证存储过程成功地连接到相应的副本。  
   
     > [!NOTE]  
     >  如果任何已修改的复制代理在分发服务器之外的计算机上运行，则使用 Windows 身份验证连接到主副本的方法将要求为副本主机之间的通信配置 Kerberos 身份验证。 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名连接到当前主副本的方法无需 Kerberos 身份验证。  
@@ -72,7 +72,7 @@ ms.locfileid: "72689663"
   
  **在原始发布服务器上配置发布服务器**  
   
-1.  配置远程分发。 如果要使用存储过程来配置发布服务器，则运行 **sp_adddistributor**。 为 \@password 指定与在分发服务器上运行 sp_adddistrbutor 时使用的相同的值来设置分发   。  
+1.  配置远程分发。 如果要使用存储过程来配置发布服务器，则运行 **sp_adddistributor**。 为 \@password 指定与在分发服务器上运行 sp_adddistrbutor 时使用的相同的值来设置分发。  
   
     ```  
     exec sys.sp_adddistributor  
@@ -122,10 +122,10 @@ EXEC @installed = sys.sp_MS_replication_installed;
 SELECT @installed;  
 ```  
   
- 如果 \@installed 设置为 0，则必须将复制功能添加到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装中  。  
+ 如果 \@installed 设置为 0，则必须将复制功能添加到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装中。  
   
 ##  <a name="4-configure-the-secondary-replica-hosts-as-replication-publishers"></a><a name="step4"></a> 4.将辅助副本主机配置为复制发布服务器  
- 辅助副本不能充当复制发布服务器或重新发布服务器，但必须配置复制以便在故障转移之后辅助副本可以接管。 在分发服务器上，为每个辅助副本主机配置分发。 指定在向分发服务器添加原始发布服务器时所指定的相同的分发数据库和工作目录。 如果使用存储过程来配置分发，请使用 **sp_adddistpublisher** 将远程发布服务器与分发服务器关联起来。 如果对原始发布服务器使用了 \@login 和 \@password，则在你添加辅助副本主机作为发布服务器时为每个辅助副本主机指定相同的值   。  
+ 辅助副本不能充当复制发布服务器或重新发布服务器，但必须配置复制以便在故障转移之后辅助副本可以接管。 在分发服务器上，为每个辅助副本主机配置分发。 指定在向分发服务器添加原始发布服务器时所指定的相同的分发数据库和工作目录。 如果使用存储过程来配置分发，请使用 **sp_adddistpublisher** 将远程发布服务器与分发服务器关联起来。 如果对原始发布服务器使用了 \@login 和 \@password，则在你添加辅助副本主机作为发布服务器时为每个辅助副本主机指定相同的值 。  
   
 ```  
 EXEC sys.sp_adddistpublisher  
@@ -136,7 +136,7 @@ EXEC sys.sp_adddistpublisher
     @password = '**Strong password for publisher**';  
 ```  
   
- 在每个辅助副本主机上配置分发。 将原始发布服务器的分发服务器标识为远程分发服务器。 使用最初在分发服务器上运行 **sp_adddistributor** 时所使用的密码。 如果要使用存储过程来配置分发，请使用 sp_adddistributor 的 \@password 参数来指定密码   。  
+ 在每个辅助副本主机上配置分发。 将原始发布服务器的分发服务器标识为远程分发服务器。 使用最初在分发服务器上运行 **sp_adddistributor** 时所使用的密码。 如果要使用存储过程来配置分发，请使用 sp_adddistributor 的 \@password 参数来指定密码。  
   
 ```  
 EXEC sp_adddistributor   
@@ -224,9 +224,8 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
 -   [创建或配置可用性组侦听程序 (SQL Server)](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
- [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [AlwaysOn 可用性组：互操作性 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
- [SQL Server 复制](../../../relational-databases/replication/sql-server-replication.md)  
-  
-  
+- [针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
+- [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) 
+- [AlwaysOn 可用性组：互操作性 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
+- [SQL Server 复制](../../../relational-databases/replication/sql-server-replication.md)  
+- 如果使用非默认端口，请参阅[在 Always On 可用性组中演练发布服务器、分发服务器、订阅服务器](https://repltalk.com/2019/03/09/walkthrough-publisher-distributor-subscriber-in-alwayson-availability-groups)。

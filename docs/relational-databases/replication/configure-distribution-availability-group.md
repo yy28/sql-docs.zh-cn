@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 39d990e334c790840eab7c47634dde6c6f9ff065
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ad1dbfa9c39167d6bef9ae14afc4245225cfb4cb
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774054"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159825"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>在 Always On 可用性组中设置复制分发数据库
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -74,7 +74,7 @@ SQL Server 2017 CU6 和 SQL Server 2016 SP2-CU3 通过以下机制，引入对 A
    >[!NOTE]
    >在次要副本上执行任何复制存储过程之前（例如 `sp_dropdistpublisher`、`sp_dropdistributiondb`、`sp_dropdistributor`、`sp_adddistributiondb`、`sp_adddistpublisher`），请确保此副本已完全同步。
 
-- 分发数据库 AG 中的所有次要副本都必须为可读取。
+- 分发数据库 AG 中的所有次要副本都应可读。 如果次要副本不可读，则无法在特定次要副本上访问 SQL Server Management Studio 上的分发服务器属性，但复制将继续正常工作。 
 - 分发数据库 AG 中的所有节点都需要使用相同的域帐户来运行 SQL Server 代理，并且该域帐户需要对每个节点都具有相同的特权。
 - 如果任何复制代理在代理帐户下运行，则代理帐户需要存在于分发数据库 AG 的每个节点中，并且对每个节点都具有相同的特权。
 - 在参与分发数据库 AG 的所有副本中，更改分发服务器或分发数据库属性。
@@ -117,12 +117,18 @@ SQL Server 2017 CU6 和 SQL Server 2016 SP2-CU3 通过以下机制，引入对 A
 
    `@working_directory` 的值应为独立于 DIST1、DIST2 和 DIST3 的网路路径。
 
-1. 在 DIST2 和 DIST3 上，运行：  
+1. 在 DIST2 和 DIST3 上，如果副本可作为次要副本读取，请运行以下代码：  
 
    ```sql
    sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
    ```
 
+   如果副本不可作为次要副本读取，请执行故障转移，使副本成为主要副本，然后运行以下代码 
+
+   ```sql
+   sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
+   ```
+   
    `@working_directory` 的值应与上一步相同。
 
 ### <a name="publisher-workflow"></a>发布服务器工作流
@@ -196,12 +202,18 @@ SQL Server 2017 CU6 和 SQL Server 2016 SP2-CU3 通过以下机制，引入对 A
    sp_adddistributiondb 'distribution'
    ```
 
-4. 在 DIST3 上，运行： 
+4. 在 DIST3 上，如果副本可作为次要副本读取，请运行以下代码： 
 
    ```sql
    sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
    ```
 
+   如果副本不可作为次要副本读取，请执行故障转移，使副本成为主要副本，然后运行以下代码：
+
+   ```sql
+   sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
+   ```
+   
    此 `@working_directory` 值应与为 DIST1 和 DIST2 指定的值相同。
 
 4. 在 DIST3 中，必须重新创建指向订阅服务器的链接服务器。

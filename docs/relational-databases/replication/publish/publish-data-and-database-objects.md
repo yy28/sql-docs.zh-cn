@@ -43,15 +43,15 @@ ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 89f88671ec51fedbfd075d82685892378fb5e840
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 7c1b58a9396daba1a4b10b4a52fd02eaa30fc642
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807311"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159535"
 ---
 # <a name="publish-data-and-database-objects"></a>发布数据和数据库对象
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   创建发布时，可以选择希望发布的表和其他数据库对象。 您可以使用复制来发布下列数据库对象。  
   
 |数据库对象|快照复制和事务复制|合并复制|  
@@ -183,7 +183,7 @@ ms.locfileid: "83807311"
   
 -   对于使用字符模式快照（用于非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器以及 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] 订阅服务器）的发布中的项目：默认情况下，所有者保留为空。 所有者默认为与分发代理或合并代理连接到订阅服务器所使用的帐户关联的所有者。  
   
- 可通过**项目属性 - \<** _项目_ **>** 对话框和以下存储过程更改对象所有者：**sp_addarticle**、**sp_addmergearticle**、**sp_changearticle** 和 **sp_changemergearticle**。 有关详细信息，请参阅[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)、[定义项目](../../../relational-databases/replication/publish/define-an-article.md)和[查看和修改项目属性](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)。  
+ 可通过“项目属性 - \<**_Article_**>”对话框更改对象所有者，也可通过以下存储过程进行更改：sp_addarticle、sp_addmergearticle、sp_changearticle 和 sp_changemergearticle    。 有关详细信息，请参阅[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)、[定义项目](../../../relational-databases/replication/publish/define-an-article.md)和[查看和修改项目属性](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)。  
   
 ### <a name="publishing-data-to-subscribers-running-previous-versions-of-sql-server"></a>将数据发布到运行 SQL Server 早期版本的订阅服务器  
   

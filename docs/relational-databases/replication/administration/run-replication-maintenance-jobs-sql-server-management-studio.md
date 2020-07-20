@@ -14,15 +14,15 @@ ms.assetid: 0dc485a0-5a50-41eb-a29d-f2b2fb920174
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 19ad038e69144b4f9f570ef9d647a5f528945542
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7c53fe453c141af32e1b31aad4ec15dc29351d96
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288334"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86158905"
 ---
 # <a name="run-replication-maintenance-jobs-sql-server-management-studio"></a>执行复制维护作业 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   复制使用下列维护作业：  
   
 -   **重新初始化数据验证失败的订阅**  
@@ -37,7 +37,7 @@ ms.locfileid: "76288334"
   
 -   **过期订阅清除**  
   
- 从   的“作业”文件夹和复制监视器的“代理”选项卡启动和停止这些作业[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]  。 有关启动复制监视器的信息，请参阅[启动复制监视器](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)。 在“作业属性 - \<作业>”对话框中查看和修改每个作业的属性，可从同一文件夹和选项卡中访问此对话框。  
+ 从 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 的“作业”文件夹和复制监视器的“代理”选项卡启动和停止这些作业 。 有关启动复制监视器的信息，请参阅[启动复制监视器](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)。 在“作业属性 - \<Job>”对话框中查看和修改每个作业的属性，可从同一文件夹和选项卡中访问此对话框。  
   
 ### <a name="to-start-or-stop-a-replication-maintenance-job-in-management-studio"></a>在 Management Studio 中启动或停止复制维护作业  
   
@@ -63,7 +63,7 @@ ms.locfileid: "76288334"
   
 3.  右键单击一个作业，然后单击 **“属性”** 。  
   
-4.  在“作业属性 - \<作业>”对话框中，根据需要修改任意属性，然后单击“确定”。  
+4.  在“作业属性 - \<Job>”对话框中，根据需要修改任意属性，然后单击“确定” 。  
   
 ### <a name="to-view-and-modify-properties-for-a-replication-maintenance-job-in-replication-monitor"></a>在复制监视器中查看和修改复制维护作业的属性  
   
@@ -73,7 +73,7 @@ ms.locfileid: "76288334"
   
 3.  在网格中右键单击一个作业，然后单击 **“属性”** 。  
   
-4.  在“作业属性 - \<作业>”对话框中，根据需要修改任意属性，然后单击“确定”。  
+4.  在“作业属性 - \<Job>”对话框中，根据需要修改任意属性，然后单击“确定” 。  
   
 ## <a name="see-also"></a>另请参阅  
  [启动和停止复制代理 (SQL Server Management Studio)](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)   

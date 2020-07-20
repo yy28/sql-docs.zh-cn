@@ -13,15 +13,15 @@ ms.assetid: e9582244-7d00-45f4-be16-020a65c76a5e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 2e115bd7007d967429495a18a1421ee4bd46687d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9038bb495fe5fcfafefed71e7e5da14f5c0935b6
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287714"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159765"
 ---
 # <a name="refresh-data-in-replication-monitor"></a>刷新复制监视器中的数据
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   在复制监视器中，可以自动或手动刷新主窗口和详细信息窗口（从主窗口启动的那些窗口）。 若要手动刷新窗口，请按 F5 键。 默认情况下，主窗口每五分钟自动刷新一次。每个发布服务器的刷新速率均可以自定义。  
   
  从缓存查询复制监视器中显示的数据。有关缓存和刷新复制监视器之间的关系的信息，请参阅[缓存、刷新和复制监视器性能](../../../relational-databases/replication/monitor/caching-refresh-and-replication-monitor-performance.md)。 有关启动复制监视器的信息，请参阅[启动复制监视器](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
@@ -44,7 +44,7 @@ ms.locfileid: "76287714"
   
     3.  右键单击订阅，然后单击 **“查看详细信息”** 。  
   
-2.  在“订阅 \<SubscriptionName>”详细信息窗口中，单击“操作”，然后单击“自动刷新”。 刷新速率由 **“发布服务器设置”** 对话框中的 **“刷新速率”** 设置决定。  
+2.  在“订阅 \<SubscriptionName>”详细信息窗口中，单击“操作”，然后单击“自动刷新”  。 刷新速率由 **“发布服务器设置”** 对话框中的 **“刷新速率”** 设置决定。  
   
 ## <a name="see-also"></a>另请参阅  
  [监视复制](../../../relational-databases/replication/monitor/monitoring-replication.md)  

@@ -18,15 +18,15 @@ ms.assetid: 4513a18d-dd6e-407a-b009-49dc9432ec7e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 346e0686062b130a76b6d95781665d1a8223e3b4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f6f3b56ec2a45420e56add4d3e746bcca5fb6eba
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287260"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159495"
 ---
 # <a name="secure-the-publisher"></a>保护发布服务器的安全
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   
 以下复制代理将连接到发布服务器：  
   
@@ -43,7 +43,7 @@ ms.locfileid: "76287260"
  PAL 是用于保护发布服务器中发布的主要机制。 PAL 的功能与 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 的访问控制列表相似。 创建发布时，复制将为该发布创建 PAL。 可把 PAL 配置为包含被授权访问发布的登录名和组的列表。 当一个代理连接到发布服务器或分发服务器并请求访问某个发布时，PAL 中的身份验证信息将与此代理提供的发布服务器登录名进行比较。 此过程为发布服务器提供了额外的安全性，方法是：阻止客户端工具使用发布服务器和分发服务器登录名在发布服务器中直接进行修改  
   
 > [!NOTE]  
->  复制操作在发布服务器中为每个发布创建一个角色，强制应用 PAL 成员身份。 对于合并复制，该角色的名称采用 **Msmerge_** _\<PublicationID>_ 的形式；对于事务性复制和快照复制，该角色的名称采用 **MSReplPAL_** _\<PublicationDatabaseID>_ **_** _\<PublicationID>_ 的形式。  
+>  复制操作在发布服务器中为每个发布创建一个角色，强制应用 PAL 成员身份。 对于合并复制，该角色的名称采用 Msmerge_\<PublicationID> 的形式；对于事务性复制和快照复制，该角色的名称采用 MSReplPAL_\<PublicationDatabaseID>_\<PublicationID> 的形式。  
   
  默认情况下，PAL 中包括的登录名是： **sysadmin** 固定服务器角色在创建发布时的成员，以及用于创建发布的登录名。 默认情况下，发布数据库中属于 **sysadmin** 固定服务器角色或 **db_owner** 固定数据库角色的成员的所有登录名都可订阅发布，而不用显式添加到 PAL 中。  
   

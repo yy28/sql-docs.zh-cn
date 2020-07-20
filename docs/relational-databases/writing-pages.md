@@ -13,12 +13,12 @@ ms.assetid: 409c8753-03c4-436d-839c-6a5879971551
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c5ffdb81cd5c1242a6a97dcb978683488c5a755b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f9bf3a75323a18b500c5bec35e0a01cb48fa754e
+ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998303"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86302006"
 ---
 # <a name="writing-pages"></a>写入页
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,9 +48,9 @@ ms.locfileid: "85998303"
  惰性编写器是一个系统进程，它会删除缓冲区高速缓存中的不常用页，以保证存在可用的缓冲区。 首先将脏页写入磁盘。 
 
 * 勤奋写入   
- 勤奋写入进程会写入与无日志记录的操作（例如大容量插入和选择插入）相关联的脏数据页。 该进程允许以并行方式创建和写入新页。 也就是说，调用操作不必等待整个操作完成，即可将页写入磁盘。
+ 勤奋写入进程会写入与最少记录的操作（例如大容量插入和选择插入）相关联的脏数据页。 该进程允许以并行方式创建和写入新页。 也就是说，调用操作不必等待整个操作完成，即可将页写入磁盘。
 
-* Checkpoint   
+* 检查点   
  检查点进程定期在缓冲区高速缓存中扫描包含来自指定数据库的页的缓冲区，然后将所有脏页写入磁盘。 CHECKPOINT 可创建一个检查点，在该点保证全部脏页都已写入磁盘，从而在以后的恢复过程中节省时间。 用户可使用 CHECKPOINT 命令请求检查点操作，否则 [!INCLUDE[ssDE](../includes/ssde-md.md)] 会根据上次检查点之后使用的日志空间量和经过的时间生成自动检查点。 另外，在发生特定活动时会生成检查点。 例如，在数据库中添加或删除了数据或日志文件时，或在 SQL Server 实例停止时。 有关详细信息，请参阅 [检查点和日志的活动部分](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)。
 
 惰性写入、勤奋写入和检查点进程均不等待 I/O 操作完成。 它们始终使用异步（或重叠）I/O，并将继续执行其他工作，之后再检查 I/O 是否成功。 因此，SQL Server 在执行相应任务时可充分利用 CPU 和 I/O 资源。

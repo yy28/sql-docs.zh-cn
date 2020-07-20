@@ -18,12 +18,12 @@ ms.assetid: 1c92ec7e-ae53-4498-8bfd-c66a42a24d54
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f3820ea3e450e00f2cdf812e52170ada80495c74
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 775feb5c2393c8b482deb2deb919fc93576e3ce6
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85638902"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279038"
 ---
 # <a name="enable-and-disable-change-tracking-sql-server"></a>启用和禁用更改跟踪 (SQL Server)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,7 @@ SET CHANGE_TRACKING = ON
 (CHANGE_RETENTION = 2 DAYS, AUTO_CLEANUP = ON)  
 ```  
   
- 你还可以通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 数据库属性（“ChangeTracking”页） [数据库属性（“ChangeTracking”页）](../../relational-databases/databases/database-properties-changetracking-page.md) 中启用更改跟踪。  
+ 你还可以通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 数据库属性（“ChangeTracking”页） [数据库属性（“ChangeTracking”页）](../../relational-databases/databases/database-properties-changetracking-page.md) 中启用更改跟踪。 如果数据库包含内存优化表，则无法使用 SQL Server Management Studio 启用更改跟踪。 若要启用，请使用 T-SQL。
   
  可以在启用更改跟踪时指定 CHANGE_RETENTION 和 AUTO_CLEANUP 选项，并且可以在启用更改跟踪后随时更改这些值。  
   

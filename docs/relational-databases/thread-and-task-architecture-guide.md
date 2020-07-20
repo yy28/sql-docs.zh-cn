@@ -15,12 +15,12 @@ ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c6e8ee2bd3910f3b7ae4bbdba37b973c095fef00
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: df923a4a1509520b95e5efcf87e9eac51497e4a8
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091905"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86158915"
 ---
 # <a name="thread-and-task-architecture-guide"></a>线程和任务体系结构指南
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,16 @@ ms.locfileid: "86091905"
 -  在执行期间的任何给定时间点，串行请求都将只有一个活动任务。     
 任务在其整个生存期期间以不同状态存在。 有关任务状态的详细信息，请参阅 [sys.dm_os_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)。 处于“挂起”状态的任务正在等待执行任务所需的资源可用。 有关正在等待的任务的详细信息，请参阅 [sys.dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md)。
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 工作线程（又称为工作器或线程）是操作系统线程的逻辑表现形式。 执行串行请求时，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 将生成工作线程，以执行活动任务 (1:1)。 在[行模式](../relational-databases/query-processing-architecture-guide.md#execution-modes)下执行并行请求时，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 将分配线程，来协调负责完成已向其分配的任务的子线程（也为 1:1），称为“父线程” 。 父线程具有与之关联的父任务。 为每个任务生成的工作线程数取决于以下因素：
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 工作线程（又称为工作器或线程）是操作系统线程的逻辑表现形式。 执行串行请求时，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 将生成工作线程，以执行活动任务 (1:1)。 在[行模式](../relational-databases/query-processing-architecture-guide.md#execution-modes)下执行并行请求时，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 将分配一个工作线程来协调负责完成已有任务的子线程（也为一对一的关系），该进程被称为“父线程”（或协调线程） 。 父线程具有与之关联的父任务。 父线程是请求的入口点，甚至在引擎分析查询之前就存在。 父线程主要负责： 
+-  协调并行扫描。
+-  启动子并行线程。
+-  从并行线程收集行并发送到客户端。
+-  执行本地和全局聚合。    
+
+> [!NOTE]
+> 如果查询计划具有串行和并行分支，则其中一个并行任务将负责执行串行分支。 
+
+为每个任务生成的工作线程数取决于以下因素：
 -   请求是否符合并行要求（由查询优化器确定）。
 -   根据当前负载，系统的实际可用的[并行度 (DOP)](../relational-databases/query-processing-architecture-guide.md#DOP) 是多少。 它可能不同于估计的 DOP，后者基于最大并行度 (MAXDOP) 的服务器配置。 例如，MAXDOP 的服务器配置可能是 8，但在运行时可用的 DOP 可能仅为 2，这样则会影响查询性能。 
 
@@ -72,19 +81,18 @@ WHERE (h.OrderDate >= '2014-3-28 00:00:00');
 > 如果将执行计划视为树，则“分支”是计划的一个区域，它将并行运算符之间的一个或多个运算符分组，也称为“交换迭代器”。 有关计划运算符的详细信息，请参阅 [Showplan 逻辑运算符和物理运算符参考](../relational-databases/showplan-logical-and-physical-operators-reference.md)。 
 
 虽然执行计划中有三个分支，但在执行期间的任何时候，只有两个分支可以在该执行计划中同时执行：
-1.  在 `Sales.SalesOrderHeaderBulk`（联接的生成输入）上使用聚集索引扫描的分支与在 `Sales.SalesOrderDetailBulk`（联接的探测输入）上使用聚集索引扫描的分支同时执行 。
-2. 在 `Sales.SalesOrderDetailBulk`（联接的探测输入）上使用聚集索引扫描的分支与已创建位图且当前正在执行哈希匹配的分支同时执行  。
+1.  在 `Sales.SalesOrderHeaderBulk`（联接的生成输入）上使用聚集索引扫描的分支单独执行。
+2.  然后，在 `Sales.SalesOrderDetailBulk`（联接的探测输入）上使用聚集索引扫描的分支与已创建位图且当前正在执行哈希匹配的分支同时执行  。
 
-Showplan XML 显示预留了 16 个工作线程，并且这些线程用于 NUMA 节点 0 和 1：
+Showplan XML 显示预留了 16 个工作线程，并且这些线程用于 NUMA 节点 0：
 
 ```xml
 <ThreadStat Branches="2" UsedThreads="16">
-  <ThreadReservation NodeId="0" ReservedThreads="8" />
-  <ThreadReservation NodeId="1" ReservedThreads="8" />
+  <ThreadReservation NodeId="0" ReservedThreads="16" />
 </ThreadStat>
 ```
 
-线程预留确保 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 有足够的工作线程来执行请求所需的所有任务。 可以跨所有 NUMA 节点预留线程，也可以仅在一个 NUMA 节点中预留。 线程预留在执行开始前于运行时完成，并且取决于计划程序的负载。 预留的工作线程数通常通过公式“并发分支数 * 运行时 DOP”得出，并排除父工作线程 。 每个分支限制为等于 MaxDOP 的工作线程数。 在此示例中有两个并发分支，MaxDOP 设置为 8，因此 2 * 8 = 16。
+线程预留确保 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 有足够的工作线程来执行请求所需的所有任务。 可跨多个 NUMA 节点预留线程，也可仅在一个 NUMA 节点中预留。 线程预留在执行开始前于运行时完成，并且取决于计划程序的负载。 预留的工作线程数通常通过公式“并发分支数 * 运行时 DOP”得出，并排除父工作线程 。 每个分支限制为等于 MaxDOP 的工作线程数。 在此示例中有两个并发分支，MaxDOP 设置为 8，因此 2 * 8 = 16。
 
 作为参考，请从[实时查询统计信息](../relational-databases/performance/live-query-statistics.md)（其中一个分支已完成，两个分支同时执行）观察实时执行计划。
 
@@ -131,8 +139,8 @@ ORDER BY parent_task_address, scheduler_id;
 请注意，16 个子任务中的每一个任务都分配了不同的工作线程（参见 `worker_address` 列），但是所有的工作线程都分配到由 8 个计划程序（0、5、6、7、8、9、10、11）组成的相同池，并且父任务将分配给此池之外的计划程序 (3)。
 
 > [!IMPORTANT]
-> 计划给定分支上的第一组并行任务后，[!INCLUDE[ssde_md](../includes/ssde_md.md)] 将对其他分支上的任何其他任务使用此相同的计划程序池。 这意味着同一组计划程序将用于整个执行计划中的所有并行任务，仅受 MaxDOP 的限制。      
-> [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 将始终尝试从同一 NUMA 节点为任务执行分配计划程序。 但是，分配给父任务的工作线程可能被置于与其他任务不同的 NUMA 节点中。
+> 计划给定分支上的第一组并行任务后，[!INCLUDE[ssde_md](../includes/ssde_md.md)] 将对其他分支上的任何其他任务使用此相同的计划程序池。 这意味着同一组计划程序将用于整个执行计划中的所有并行任务，仅受 MaxDOP 的限制。  
+> [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 将始终尝试从同一 NUMA 节点分配计划程序来执行任务，并在计划程序可用时（以轮循方式）按顺序分配它们。 但是，分配给父任务的工作线程可能被置于与其他任务不同的 NUMA 节点中。
 
 工作线程只能在其量程（4 毫秒）期间在计划程序中保持活动状态，并且必须在该时间段结束后生成其计划程序，以便分配给另一个任务的工作线程可以变为活动状态。 当工作线程的量程到期且不再活动时，相应任务将处于 RUNNABLE 状态的 FIFO 队列中，直到再次进入 RUNNING 状态，假设该任务不需要访问当前不可用的资源（例如闩锁或锁），在这种情况下，该任务将处于 SUSPENDED 状态而不是 RUNNABLE 状态，直到这些资源可用为止。  
 
@@ -142,7 +150,7 @@ ORDER BY parent_task_address, scheduler_id;
 总之，一个并行请求将生成多个任务，其中每个任务必须分配给单个工作线程，且每个工作线程必须分配给单个计划程序。 因此，正在使用的计划程序的数量不能超过每个分支的并行任务数，这是 MaxDOP 设置的。 
 
 ### <a name="allocating-threads-to-a-cpu"></a>为 CPU 分配线程
-默认情况下，每个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例启动每个线程，操作系统根据负载从计算机上的处理器 (CPU) 中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例分发线程。 如果已在操作系统级别启用了进程关联，则操作系统会将每个线程分配给特定的 CPU。 与之相反，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 将 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 工作线程分配给在 CPU 之间平均分发线程的计划程序。 
+默认情况下，每个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例启动每个线程，操作系统根据负载从计算机上的处理器 (CPU) 中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例分发线程。 如果已在操作系统级别启用了进程关联，则操作系统会将每个线程分配给特定的 CPU。 与之相反，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 将 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 工作线程分配给在 CPU 之间以轮询方式平均分发线程的计划程序 。
     
 为了执行多任务处理，例如当多个应用程序访问同一组 CPU 时，操作系统有时会在不同 CPU 之间移动工作线程。 虽然从操作系统方面而言，这种活动是高效的，但是在高系统负荷的情况下，该活动会降低 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的性能，因为每个处理器缓存都会不断地重新加载数据。 如果将各个 CPU 分配给特定线程，则通过消除处理器的重新加载需要以及减少 CPU 之间的线程迁移（因而减少上下文切换），可以提高在这些条件下的性能；线程与处理器之间的这种关联称为“处理器关联”。 如果已经启用了关联，则操作系统会将每个线程分配给一个特定的 CPU。 
 

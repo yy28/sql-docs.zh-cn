@@ -1,5 +1,5 @@
 ---
-title: 实用工具资源管理器的 F1 帮助 | Microsoft Docs
+title: 实用工具资源管理器的 F1 帮助
 description: 熟悉 SQL Server 实用工具的各个方面提供的功能。 了解视图、仪表板和“实用工具管理”选项卡。
 ms.custom: ''
 ms.date: 08/19/2016
@@ -20,14 +20,15 @@ helpviewer_keywords:
 ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 264c809ce03cca9a6bb9b84300d3780a1ddc33f1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2e97a0e8ddae735865b4314e33f3a5ce6d365de0
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85640408"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197264"
 ---
 # <a name="utility-explorer-f1-help"></a>实用工具资源管理器的 F1 帮助
+
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   下面各部分介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具功能和关联的操作。  
   
@@ -124,11 +125,11 @@ ms.locfileid: "85640408"
  “列表”视图  
  顶部窗格中的列表视图显示与单独的数据层应用程序有关的数据。 运行状态图标按使用率类别为各数据层应用程序提供摘要状态：  
   
--   绿色的选中标记 - ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") - 没有违反资源使用策略的数据层应用程序的数目。 资源得到很好地利用。  
+-   绿色的选中标记 - :::image type="icon" source="media/well-utilized.png" border="false"::: - 没有违反资源使用策略的数据层应用程序的数目。 资源得到很好地利用。  
   
--   绿色向下箭头 - ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - 资源使用不足。  
+-   绿色向下箭头 - ![向下箭头](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - 资源使用不足。  
   
--   红色向上箭头 - ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") - 资源使用过度。  
+-   红色向上箭头 - ![向上箭头](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") - 资源使用过度。  
   
  可以通过将列表视图中的列向左或向右拖动，更改这些列在列表视图中的顺序。 可通过右键单击列标题并选择或取消选择列，添加或删除列表视图中的列。 右键单击菜单还提供了排序选项。 还可以通过单击列名称的顶部激活排序。  
   
@@ -266,11 +267,11 @@ ms.locfileid: "85640408"
   
  运行状态图标按使用率类别为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各实例提供摘要状态：  
   
--   绿色的选中标记 - ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") - 没有违反资源使用策略的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 托管实例的数目。 资源得到很好地利用。  
+-   绿色的选中标记 - ![绿色的选中标记](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") - 没有违反资源使用策略的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 托管实例的数目。 资源得到很好地利用。  
   
--   绿色向下箭头 - ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - 资源使用不足。  
+-   绿色向下箭头 - ![向下箭头](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - 资源使用不足。  
   
--   红色向上箭头 - ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") - 资源使用过度。  
+-   红色向上箭头 - ![向上箭头](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") - 资源使用过度。  
   
  可以通过将列表视图中的列向左或向右拖动，更改这些列在列表视图中的顺序。 可通过右键单击列标题并选择或取消选择列，添加或删除列表视图中的列。 右键单击菜单还提供了排序选项。 还可以通过单击列名称的顶部激活排序。  
   

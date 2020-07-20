@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: eb93961b516623f0a22b3baeae4bc29026c3a994
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: 6c5634130e2a9a4e6f2a394d067f0e679ab02827
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091778"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196069"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools"></a>SQL Server Integration Services (SSIS) DevOps 工具
 
@@ -313,9 +313,9 @@ SSIS 目录配置的内联 JSON。 只有在选择“内联”作为配置文件
 
 |properties  |说明  |说明  |
 |---------|---------|---------|
-|name|参数的名称。|参数可以是项目参数，也可以是包参数 。 <br> 如果父项目中不存在参数，则将跳过参数。|
-|容器 (container)|参数的容器。|<li>如果参数是项目参数，则容器应为项目名称。 <li>如果它是包参数，则容器应为扩展名为 .dtsx 的包名称。 <li> 如果参数是连接管理器属性，则名称应采用以下格式：CM.\<Connection Manager Name>.\<Property Name>|
-|值|参数值。|<li>当 valueType 是引用对象时 ：值是对字符串类型中的环境变量的引用。 <li> 当 valueType 是文本时 ：此属性支持任何有效的布尔、数字和字符串 JSON 值  。 <br> 该值将转换为目标参数类型。 如果无法转换，则会发生错误。<li> Null 值无效。 任务将跳过此参数对象，并发出警告。|
+|name|参数的名称。|<li>参数可以是项目参数，也可以是包参数。 <li>如果没有参数，则跳过它。 <li>如果参数是连接管理器属性，则名称格式应为 CM.\<Connection Manager Name>.\<Property Name>。 |
+|容器 (container)|参数的容器。|<li>如果参数是项目参数，则容器应为项目名称。 <li>如果它是包参数，则容器应为扩展名为 .dtsx 的包名称。|
+|值|参数值。|<li>当 valueType 是引用对象时 ：值是对字符串类型中的环境变量的引用。 <li> 当 valueType 是文本时 ：此属性支持任何有效的布尔、数字和字符串 JSON 值  。 <li> 该值将转换为目标参数类型。 如果无法转换，则会发生错误。<li> Null 值无效。 任务将跳过此参数对象，并发出警告。|
 |valueType|参数值的类型。|有效类型包括： <br> 文本：value 属性表示文本值。 <br> 引用对象：value 属性表示对环境变量的引用。|
 
 ##### <a name="reference-attributes"></a>引用属性

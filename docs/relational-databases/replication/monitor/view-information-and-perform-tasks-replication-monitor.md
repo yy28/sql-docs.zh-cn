@@ -16,15 +16,15 @@ ms.assetid: 92e28a07-d6a7-461b-a0b3-bd9bc6afcbe5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 1e78db0d3844ee7581bd57da1e57f14ee80e29cf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: be851d2ff0919125699a4e33c4b4d1d6445c0fc6
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286384"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159625"
 ---
 # <a name="view-information-and-perform-tasks-using-replication-monitor"></a>使用复制监视器查看信息和执行任务
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
 复制监视器提供大量选项卡和选项，用于查看信息和执行各种任务。 本文介绍使用复制监视器时可以查看和完成的各种事项。 
 
 
@@ -44,16 +44,16 @@ ms.locfileid: "76286384"
   
 -   **跟踪令牌**（仅限事务复制） - 此选项卡可以测量滞后时间，即在发布服务器上提交的事务与在订阅服务器上提交的相应事务之间间隔的时长。  
   
- 有关每个选项卡上各选项的详细信息，请选择右窗格中的选项卡，然后在菜单栏上选择“帮助”  。 有关启动复制监视器的信息，请参阅[启动复制监视器](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
+ 有关每个选项卡上各选项的详细信息，请选择右窗格中的选项卡，然后在菜单栏上选择“帮助”。 有关启动复制监视器的信息，请参阅[启动复制监视器](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
   
 ### <a name="perform-tasks"></a>执行任务
   
 1.  在左窗格中展开发布服务器组，再展开其中的一个发布服务器，然后选择其中的一个发布。   
-2.  要查看和修改发布属性，请右键单击该发布，然后选择“属性”  。    
-3.  要查看有关订阅的信息，请选择“所有订阅”选项卡，右键单击该订阅，然后选择“属性”   。 您还可以通过该选项卡访问更详细的信息和执行任务。 
-4.  要查看有关代理的信息，请选择“代理”选项卡  。您还可以通过该选项卡访问更详细的信息和执行任务。 
-5.  要查看有关代理警告和阈值的信息，请选择“警告”选项卡  。有关详细信息，请参阅 [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)。  
-6.  要查看有关跟踪令牌的信息，请选择“跟踪令牌”选项卡  。有关如何使用跟踪令牌的详细信息，请参阅 [为事务复制测量滞后时间和验证连接](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)。  
+2.  要查看和修改发布属性，请右键单击该发布，然后选择“属性”。    
+3.  要查看有关订阅的信息，请选择“所有订阅”选项卡，右键单击该订阅，然后选择“属性” 。 您还可以通过该选项卡访问更详细的信息和执行任务。 
+4.  要查看有关代理的信息，请选择“代理”选项卡。您还可以通过该选项卡访问更详细的信息和执行任务。 
+5.  要查看有关代理警告和阈值的信息，请选择“警告”选项卡。有关详细信息，请参阅 [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)。  
+6.  要查看有关跟踪令牌的信息，请选择“跟踪令牌”选项卡。有关如何使用跟踪令牌的详细信息，请参阅 [为事务复制测量滞后时间和验证连接](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)。  
   
 ## <a name="for-a-publisher"></a>针对发布服务器 
 
@@ -97,7 +97,7 @@ ms.locfileid: "76286384"
   
 1.  在左窗格中，展开发布服务器组，然后单击一个发布服务器。    
 2.  若要查看有关订阅的信息，请单击 **“订阅监视列表”** 选项卡。    
-3.  从“显示 \<订阅类型> 订阅”  下拉列表中选择要显示的订阅类型。 若要只查看处于给定状态（如同步）的订阅，请从 **“显示”** 下拉列表中选择一个选项。    
+3.  从“显示 \<SubscriptionType> 订阅”下拉列表中选择要显示的订阅类型。 若要只查看处于给定状态（如同步）的订阅，请从 **“显示”** 下拉列表中选择一个选项。    
 4.  若要查看和修改订阅属性，请右键单击该订阅，然后单击 **“属性”** 。 您还可以通过该选项卡访问更详细的信息和执行任务。 
   
   

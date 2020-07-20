@@ -14,15 +14,15 @@ ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: c86cfa1337323ed03cdb8b22cae9c951c110a139
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f50946b1540300bafbae9cac9b59b21dbb7eddf5
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286955"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159395"
 ---
 # <a name="transactional-articles---specify-how-changes-are-propagated"></a>事务项目 - 指定如何传播更改
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   通过使用事务复制，可以指定如何将数据更改从发布服务器传播到订阅服务器。 对于每个已发布表，可以指定下列四种方法之一，将每项操作（INSERT、UPDATE 或 DELETE）传播到订阅服务器：  
   
 -   指定事务复制应编写出脚本，并随后调用存储过程以将更改传播到订阅服务器（默认方法）。  
@@ -40,13 +40,13 @@ ms.locfileid: "76286955"
 ## <a name="default-and-custom-stored-procedures"></a>默认和自定义存储过程  
  默认情况下，复制为每个表项目创建的三个过程为：  
   
--   **sp_MSins_\<** *tablename* **>** ，用于处理插入。  
+-   sp_MSins_\<** *tablename* **>，用于处理插入。  
   
--   **sp_MSupd_\<** *tablename* **>** ，用于处理更新。  
+-   sp_MSupd_\<** *tablename* **>，用于处理更新。  
   
--   **sp_MSdel_\<** *tablename* **>** ，用于处理删除。  
+-   sp_MSdel_\<** *tablename* **>，用于处理删除。  
   
- 过程中使用的 **\<** _tablename_ **>** 取决于如何将项目添加到发布中，以及订阅数据库是否包含名称相同但所有者不同的表。  
+ 过程中使用的 \<**_tablename_**> 取决于如何将项目添加到发布中，以及订阅数据库是否包含名称相同但所有者不同的表。  
   
  所有这些过程都可以替换为在将项目添加到发布中时指定的自定义过程。 自定义过程用于应用程序需要自定义逻辑的情况，例如在订阅服务器上更新行时将数据插入审核表。 有关指定自定义存储过程的详细信息，请参阅上面列出的“如何”主题。  
   

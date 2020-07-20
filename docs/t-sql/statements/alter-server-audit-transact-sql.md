@@ -20,12 +20,12 @@ ms.assetid: 63426d31-7a5c-4378-aa9e-afcf4f64ceb3
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: ac2182dd3878f5b61ed4ae1fea6b2f2851f8c129
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8f61833c4c532056d7af9980360e04e9d124854d
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735986"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381291"
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -73,50 +73,52 @@ ALTER SERVER AUDIT audit_name
 <predicate_factor>::=   
     event_field_name { = | < > | ! = | > | > = | < | < = } { number | ' string ' }  
 ```  
-  
-## <a name="arguments"></a>参数  
- TO { FILE | APPLICATION_LOG | SECURITY |URL}  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
+ TO { FILE \| APPLICATION_LOG \| SECURITY \|URL}  
  确定审核目标的位置。 可用的选项包括二进制文件、Windows 应用程序日志或 Windows 安全日志。  
 
 > [!IMPORTANT]
 > 在 Azure SQL 数据库托管实例中，SQL 审核在服务器一级运行，并在 Azure Blob 存储中存储 `.xel` 文件。
   
- FILEPATH **= '** os_file\_path\__ **'**  
+ FILEPATH **= '** os\_file\_path **'**  
  审核记录的路径。 文件名是基于审核名称和审核 GUID 生成的。  
   
- MAXSIZE **=** max_size\__  
- 指定审核文件可增大到的最大大小。 max_size 值必须是后跟 MB、GB、TB 或 UNLIMITED 的整数      。 可以为 max_size 指定的最小大小为 2 MB，最大大小为 2,147,483,647 TB    。 如果指定为 UNLIMITED，则文件将增长到磁盘变满为止  。 指定一个小于 2 MB 的值将引发错误 MSG_MAXSIZE_TOO_SMALL。 默认值为 UNLIMITED  。  
+ MAXSIZE **=** max\_size  
+ 指定审核文件可增大到的最大大小。 max_size 值必须是后跟 MB、GB、TB 或 UNLIMITED 的整数   。 可以为 max_size 指定的最小大小为 2 MB，最大大小为 2,147,483,647 TB 。 如果指定为 UNLIMITED，则文件将增长到磁盘变满为止。 指定一个小于 2 MB 的值将引发错误 MSG_MAXSIZE_TOO_SMALL。 默认值为 UNLIMITED。  
   
- MAX_ROLLOVER_FILES **integer=UNLIMITED**   |    
+ MAX_ROLLOVER_FILES =integer | UNLIMITED  
  指定要保留在文件系统中的最大文件数。 设置为 MAX_ROLLOVER_FILES=0 时，可创建的滚动更新文件的数量不受任何限制。 默认值为 0。 可以指定的最大文件数为 2,147,483,647。  
   
- MAX_FILES = integer   
+ MAX_FILES = integer  
  指定可创建的审核文件的最大数目。 当达到此限制时，不滚动更新到第一个文件。 在达到 MAX_FILES 限制时，导致生成附加审核事件的任何操作都会失败并报告错误。  
 **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。  
   
- RESERVE_DISK_SPACE  **{ ON | OFF }=**  
+ RESERVE_DISK_SPACE = { ON | OFF }  
  此选项会按 MAXSIZE 值为磁盘上的文件预先分配大小。 仅在 MAXSIZE 不等于 UNLIMITED 时适用。 默认值为 OFF。  
   
- QUEUE_DELAY  **integer=**   
+ QUEUE_DELAY = integer  
  确定在强制处理审核操作之前可能经过的时间（以毫秒为单位）。 值 0 指示同步传递。 可设置的最小延迟值为 1000（1 秒），这是默认值。 最大值为 2,147,483,647（2,147,483.647 秒或者 24 天 20 小时 31 分钟 23.647 秒）。 指定无效数字将引发 MSG_INVALID_QUEUE_DELAY 错误。  
   
- ON_FAILURE  **{ CONTINUE | SHUTDOWN | FAIL_OPERATION}=**  
+ ON_FAILURE = { CONTINUE | SHUTDOWN | FAIL_OPERATION}  
  指示在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法写入审核日志时写入目标的实例是应失败、继续还是停止。  
   
  CONTINUE  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 操作将继续。 审核记录将不会保留。 审核将继续尝试将事件记入日志，并且在故障条件得到解决后恢复。 选择继续选项可以允许未经审核的活动，但可能违反了你的安全策略。 在[!INCLUDE[ssDE](../../includes/ssde-md.md)]的继续操作比维护完整审核更重要时，使用此选项。  
   
-关机  
-如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 出于任何原因无法将数据写入到审核目标，则强制关闭 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 执行 `ALTER` 语句的登录名必须具有 `SHUTDOWN` 内的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 权限。 即使稍后从执行的登录名中撤销 `SHUTDOWN` 权限，关闭行为仍然存在。 如果用户不具有此权限，则语句失败且无法修改审核。 在审核失败可能损害系统的安全或完整性时，使用此选项。 有关详细信息，请参阅 [SHUTDOWN](../../t-sql/language-elements/shutdown-transact-sql.md)。 
+SHUTDOWN  
+如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 出于任何原因无法将数据写入到审核目标，则强制关闭 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 执行 `ALTER` 语句的登录名必须具有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内的 `SHUTDOWN` 权限。 即使稍后从执行的登录名中撤销 `SHUTDOWN` 权限，关闭行为仍然存在。 如果用户不具有此权限，则语句失败且无法修改审核。 在审核失败可能损害系统的安全或完整性时，使用此选项。 有关详细信息，请参阅 [SHUTDOWN](../../t-sql/language-elements/shutdown-transact-sql.md)。 
   
  FAIL_OPERATION  
  如果数据库操作会导致审核的事件，则数据库操作将失败。 不会导致审核事件的操作可以继续，但也不会发生审核的事件。 审核将继续尝试将事件记入日志，并且在故障条件得到解决后恢复。 在维护完整审核比对[!INCLUDE[ssDE](../../includes/ssde-md.md)]的完全访问权限更重要时，使用此选项。  
  **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。   
   
- STATE  **{ ON | OFF }=**  
+ STATE = { ON | OFF }  
  启用或禁用审核收集记录。 更改运行的审核的状态（从 ON 到 OFF）将创建审核停止时的审核项、停止审核的主体以及停止审核的时间。  
   
- MODIFY NAME = new_audit_name   
+ MODIFY NAME = new_audit_name  
  更改审核的名称。 不能与任何其他选项一起使用。  
   
  predicate_expression  
@@ -128,7 +130,7 @@ ALTER SERVER AUDIT audit_name
  **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。  
   
  数字  
- 任何数值类型，包括 decimal  。 局限性在于缺少可用物理内存，或数值过大而无法用 64 位整数表示。  
+ 任何数值类型，包括 decimal。 局限性在于缺少可用物理内存，或数值过大而无法用 64 位整数表示。  
  **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。  
   
  ' string '  
@@ -144,7 +146,7 @@ ALTER SERVER AUDIT audit_name
   
  创建审核后无法更改审核的 GUID。  
  
- 在用户事务内不能使用 ALTER SERVER AUDIT 语句  。
+ 在用户事务内不能使用 ALTER SERVER AUDIT 语句。
  
 ## <a name="permissions"></a>权限  
  若要创建、更改或删除服务器审核主体，必须具有 ALTER ANY SERVER AUDIT 或 CONTROL SERVER 权限。  

@@ -2,7 +2,7 @@
 title: SQL Server 审核操作组和操作 | Microsoft Docs
 description: 了解 SQL Server Audit 中的服务器级、数据库级和审核级操作组和单个操作。
 ms.custom: ''
-ms.date: 10/19/2016
+ms.date: 07/13/2020
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: vanto
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 author: DavidTrigano
 ms.author: datrigan
-ms.openlocfilehash: cd25caf80cffef2810139ce1a2ab63269e5ec6ad
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 68943b7b57794d779656ca8537a7c59d4f486db8
+ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885595"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86301889"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>SQL Server 审核操作组和操作
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -78,8 +78,8 @@ ms.locfileid: "85885595"
 |APPLICATION_ROLE_CHANGE_PASSWORD_GROUP|更改应用程序角色的密码时将引发此事件。 等效于 [Audit App Role Change Password Event Class](../../../relational-databases/event-classes/audit-app-role-change-password-event-class.md)。|  
 |AUDIT_CHANGE_GROUP|创建、修改或删除任何审核时，均将引发此事件。 创建、修改或删除任何审核规范时，均将引发此事件。 任何针对某审核的更改均将在该审核中审核。 等效于 [Audit Change Audit Event Class](../../../relational-databases/event-classes/audit-change-audit-event-class.md)。|  
 |BACKUP_RESTORE_GROUP|发出备份或还原命令时，将引发此事件。 等效于 [审核备份和还原事件类](../../../relational-databases/event-classes/audit-backup-and-restore-event-class.md)。|  
-|BATCH_COMPLETED_GROUP|每当任何批处理文本、存储过程或事务管理操作执行完成时，都会引发此事件。 它在批处理完成后引发，并将审核从客户端发送的整个批处理或存储过程文本，其中包括结果。|  
-|BATCH_STARTED_GROUP|每当任何批处理文本、存储过程或事务管理操作开始执行时，都会引发此事件。 它在执行之前引发，并将审核从客户端发送的整个批处理或存储过程文本。|  
+|BATCH_COMPLETED_GROUP|每当任何批处理文本、存储过程或事务管理操作执行完成时，都会引发此事件。 它在批处理完成后引发，并将审核从客户端发送的整个批处理或存储过程文本，其中包括结果。 已在 SQL Server 2019 中添加。|  
+|BATCH_STARTED_GROUP|每当任何批处理文本、存储过程或事务管理操作开始执行时，都会引发此事件。 它在执行之前引发，并将审核从客户端发送的整个批处理或存储过程文本。 已在 SQL Server 2019 中添加。|  
 |BROKER_LOGIN_GROUP|引发此事件的目的是为了报告与 Service Broker 传输安全性相关的审核消息。 等效于 [Audit Broker Login Event Class](../../../relational-databases/event-classes/audit-broker-login-event-class.md)。|  
 |DATABASE_CHANGE_GROUP|创建、更改或删除数据库时将引发此事件。 创建、更改或删除任何数据库时均将引发此事件。 等效于 [Audit Database Management Event Class](../../../relational-databases/event-classes/audit-database-management-event-class.md)。|  
 |DATABASE_LOGOUT_GROUP|在包含数据库用户注销某一数据库时，会引发此事件。|  

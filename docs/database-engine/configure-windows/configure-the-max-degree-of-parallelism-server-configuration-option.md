@@ -17,12 +17,12 @@ ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: markingmyname
 ms.author: maghan
 ms.custom: contperfq4
-ms.openlocfilehash: 023c80f9f2e5ab5194c5e58ae2066e4758ad440c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f1b4b8db6d5af2ff76b85933ab4fcdc3f67e4987
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85697183"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159725"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>配置 max degree of parallelism 服务器配置选项
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "85697183"
   
 -   如果 affinity mask 选项不设置为默认值，则可能会限制可用于对称多处理 (SMP) 系统上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的处理器数。  
 
--   将按[任务](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)设置最大并行度 (MAXDOP) 限制。 它不是按[请求](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)限制或按查询限制。 这意味着，在并行查询期间，单个请求可以生成多个任务，然后将它们分配给计划程序。 有关详细信息，请参阅[线程和任务体系结构指南](../../relational-databases/thread-and-task-architecture-guide.md)。 
+-   将按[任务](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)设置最大并行度 (MAXDOP) 限制。 它不是按[请求](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)限制或按查询限制。 这意味着在并行查询执行期间，一个请求可生成多个任务（不超过 MAXDOP 限制），并且每个任务将使用一个工作线程和一个计划程序。 有关详细信息，请参阅[线程和任务体系结构指南](../../relational-databases/thread-and-task-architecture-guide.md)中的“计划并行任务”部分。 
   
 ###  <a name="recommendations"></a><a name="Recommendations"></a> 建议  
   

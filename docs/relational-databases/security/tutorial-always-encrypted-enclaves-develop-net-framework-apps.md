@@ -12,15 +12,15 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: b73d24edb139e36f11e05c854c9d10d885994e18
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 62c4954663f7553fd6df7461f5b5c967f7386721
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73595482"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279353"
 ---
 # <a name="tutorial-develop-a-net-framework-application-using-always-encrypted-with-secure-enclaves"></a>教程：开发使用具有安全 enclave 的 Always Encrypted 的 .NET Framework 应用程序
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 本教程介绍如何开发简单的应用程序，该应用程序可发出使用[具有安全 enclave 的 Always Encrypted](encryption/always-encrypted-enclaves.md) 的服务器端安全 enclave 的数据库查询。 
 
@@ -39,13 +39,13 @@ ms.locfileid: "73595482"
 
 3. 请确保项目至少面向 .NET Framework 4.7.2。 右键单击“解决方案资源管理器”中的项目，选择“属性”，将目标框架设置为“.NET Framework 4.7.2”。
 
-4. 通过转到“工具”  （主菜单）>“NuGet 包管理器”   > “包管理器控制台”  安装以下 NuGet 包。 在“包管理器控制台”中运行以下代码。
+4. 通过转到“工具”（主菜单）>“NuGet 包管理器” > “包管理器控制台”安装以下 NuGet 包。 在“包管理器控制台”中运行以下代码。
 
    ```powershell
    Install-Package Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders -IncludePrerelease
    ```
 
-5. 如果使用 Azure Key Vault 来存储列主密钥，通过转到“工具”  （主菜单）>“NuGet 包管理器”   > “包管理器控制台”  安装以下 NuGet 包。 在“包管理器控制台”中运行以下代码。
+5. 如果使用 Azure Key Vault 来存储列主密钥，通过转到“工具”（主菜单）>“NuGet 包管理器” > “包管理器控制台”安装以下 NuGet 包。 在“包管理器控制台”中运行以下代码。
 
    ```powershell
    Install-Package Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider -IncludePrerelease -Version 2.2.0
@@ -54,16 +54,16 @@ ms.locfileid: "73595482"
 
 7. 打开项目的 App.config 文件。
 
-8. 找到 \<configuration\> 部分，并添加或更新 \<configSections\> 部分。
+8. 找到 \<configuration\> 部分，然后添加或更新 \<configSections\> 部分。
 
-   a. 如果 \<configuration\> 部分不包含 \<configSections\> 部分，请直接在 \<configuration\> 下添加以下内容  。
+   a. 如果 \<configuration\> 部分不包含 \<configSections\> 部分，请直接在 \<configuration\> 下添加以下内容。
    
       ```xml
       <configSections>
          <section name="SqlColumnEncryptionEnclaveProviders" type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
       </configSections>
       ```
-   b. 如果 \<configruation\> 部分已包含 \<configSections\> 部分，请在 \<configSections\> 内添加以下行：
+   b. 如果 \<configruation\> 部分已包含 \<configSections\> 部分，请在 \<configSections\> 中添加以下行：
 
    ```xml
    <section name="SqlColumnEncryptionEnclaveProviders"  type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection, System.Data,  Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" /\>
@@ -97,7 +97,7 @@ ms.locfileid: "73595482"
 </configuration>
 ```
 ## <a name="step-2-implement-your-application-logic"></a>步骤 2：实现应用程序逻辑
-应用程序将连接到  [教程：通过 SSMS 开始使用具有安全 enclave 的 Always Encrypted](tutorial-getting-started-with-always-encrypted-enclaves.md) 中的 ContosoHR 数据库，它将运行一个包含“SSN”列上的 `LIKE` 谓词的查询和对“Salary”列运行范围比较   。
+应用程序将连接到[教程：通过 SSMS 开始使用具有安全 enclave 的 Always Encrypted](tutorial-getting-started-with-always-encrypted-enclaves.md) 中的 ContosoHR 数据库，它将运行一个包含“SSN”列上的 `LIKE` 谓词的查询和对“Salary”列运行范围比较 。
 
 1. 将 Program.cs 文件（由 Visual Studio 生成）的内容替换为以下代码。 使用你的服务器名称和环境的 enclave 证明 URL 更新数据库连接字符串。 此外，也可以更新数据库身份验证设置。
 

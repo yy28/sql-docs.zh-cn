@@ -15,20 +15,20 @@ ms.assetid: 8622db47-c223-48fa-87ff-0b4362cd069a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: dba4e3db3c34dd836e92cf3bc33d5a3517d534cf
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 7cd1c20e9fc0dd126fe74a7f9ae02bfd9343fc93
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807981"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159335"
 ---
 # <a name="distributor-and-publisher-information-script"></a>分发服务器和发布服务器信息脚本
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   此脚本使用系统表和复制存储过程回答有关分发服务器和发布服务器上的对象的常见问题。 此脚本可按原样使用，也可以作为自定义脚本的基础。 此脚本可能需要做两处修改才能在您的环境中运行：  
   
 -   将 `use AdventureWorks2012` 一行更改为使用您的发布数据库的名称。  
   
--   从 `exec sp_helparticle @publication='<PublicationName>'` 一行中删除注释 (`--`) 并用发布的名称替换 \<PublicationName>。  
+-   从 `exec sp_helparticle @publication='<PublicationName>'` 行中删除注释 (`--`)，并用发布的名称替换 \<PublicationName>。  
   
 ```  
 --********** Execute at the Distributor in the master database **********--  

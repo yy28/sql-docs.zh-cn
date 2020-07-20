@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a5d2e90088d844bbd897f2a0efae9379e9a1a585
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 9c0a353c91b952571932ae6d2abe318f70decc4a
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007488"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279215"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>列存储索引 - 新增功能
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,6 +49,9 @@ ms.locfileid: "86007488"
 |列存储索引具有一个非持久化计算列||||是|||   
   
  <sup>1</sup> 要创建只读非聚集列存储索引，请将索引存储在只读文件组内。  
+ 
+> [!NOTE]
+> [批处理模式](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution)操作的并行度 (DOP) 限制为 2（针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard Edition）和 1（针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web Edition 和 Express Edition）。 这是指在基于磁盘的表和内存优化表上创建的列存储索引。
 
 ## [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
  [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 将添加这些新功能。
@@ -85,22 +88,26 @@ ms.locfileid: "86007488"
   
 -   列存储支持索引碎片整理，即可以移除已删除的行而无需显式重新生成索引。 `ALTER INDEX ... REORGANIZE` 语句将根据内部定义的策略，以联机操作的方式从列存储移除已删除的行  
   
--   可以在 AlwaysOn 可读次要副本上访问列存储索引。 你可以将分析查询卸载到 AlwaysOn 次要副本，从而改进运行分析的性能。  
+-   可在 Always On 可读次要副本上访问列存储索引。 可将分析查询分流到 Always On 次要副本，从而改进运营分析的性能。  
   
--   为了改进性能，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会在表扫描期间计算聚合函数 `MIN`、`MAX`、`SUM`、`COUNT` 和 `AVG`，前提是数据类型不超过 8 个字节的长度，且不是字符串类型。 聚合列存储索引和非聚合列存储索引都支持聚合下推，不管有没有 Group By 子句。  
+-   聚合下推会在表扫描期间计算聚合函数 `MIN`、`MAX`、`SUM`、`COUNT` 和 `AVG`，前提是数据类型不超过 8 个字节的长度，且不是字符串数据类型。 无论有没有 `GROUP BY` 子句，聚合列存储索引和非聚合列存储索引都支持聚合下推。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上，此增强功能专用于企业版。
   
--   谓词下推可加快查询在比较 [v]archar 或 n[v]archar 类型的字符串时的速度。 这适用于常用的比较运算符，包括 LIKE 这样的使用位图筛选器的运算符。 这适用于 SQL Server 支持的所有排序规则。  
+-   通过字符串谓词下推，可使比较 VARCHAR/CHAR 或 NVARCHAR/NCHAR 类型的字符串的查询速度更快。 这适用于常用的比较运算符，包括 `LIKE` 等使用位图筛选器的运算符。 这适用于所有支持的排序规则。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上，此增强功能专用于企业版。 
+
+-   利用基于矢量的硬件功能增强批处理模式操作。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 会检测 AVX 2（高级矢量扩展）和 SSE 4（流式处理 SIMD 扩展 4）硬件扩展的 CPU 支持级别，并使用它们（若支持）。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上，此增强功能专用于企业版。
   
 ### <a name="performance-for-database-compatibility-level-130"></a>数据库兼容级别 130 的性能  
   
 -   对于使用任何下述操作的查询，新提供了批处理模式执行支持：  
-    -   SORT  
-    -   使用多个不同函数的聚合函数。 一些示例：`COUNT/COUNT`、`AVG/SUM`、`CHECKSUM_AGG`、`STDEV/STDEVP`。  
-    -   窗口聚合函数：`COUNT`、`COUNT_BIG`、`SUM`、`AVG`、`MIN`、`MAX` 和 `CLR`。  
-    -   窗口用户定义聚合：`CHECKSUM_AGG`、`STDEV`、`STDEVP`、`VAR`、`VARP` 和 `GROUPING`。  
-    -   窗口聚合分析函数：`LAG`、`LEAD`、`FIRST_VALUE`、`LAST_VALUE`、`PERCENTILE_CONT`、`PERCENTILE_DISC`、`CUME_DIST` 和 `PERCENT_RANK`。  
+    -   `SORT`  
+    -   使用多个不同函数的聚合函数。 一些示例：`COUNT/COUNT`、`AVG/SUM`、`CHECKSUM_AGG`、`STDEV/STDEVP`  
+    -   窗口聚合函数：`COUNT`、`COUNT_BIG`、`SUM`、`AVG`、`MIN`、`MAX` 和 `CLR`  
+    -   窗口用户定义聚合：`CHECKSUM_AGG`、`STDEV`、`STDEVP`、`VAR`、`VARP` 和 `GROUPING`  
+    -   窗口聚合分析函数：`LAG`、`LEAD`、`FIRST_VALUE`、`LAST_VALUE`、`PERCENTILE_CONT`、`PERCENTILE_DISC`、`CUME_DIST` 和 `PERCENT_RANK`  
+
 -   在 `MAXDOP 1` 下运行或使用串行查询计划以批处理模式执行的单线程查询。 以前，仅多线程查询以批处理执行的方式运行。  
--   内存优化表查询可以有 SQL 互操作模式的并行计划，不管是按行存储索引方式还是按列存储索引方式访问数据  
+
+-   无论是按行存储还是按列存储索引方式访问数据，内存优化表查询都可具有 SQL 互操作模式的并行计划。
   
 ### <a name="supportability"></a>可支持性  
 以下系统视图是针对列存储的新视图：  

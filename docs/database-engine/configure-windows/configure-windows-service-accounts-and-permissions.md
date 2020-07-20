@@ -51,12 +51,12 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d4ef0d67bdb86d08754ed23805b4c04e56cf37a9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0a70a3794a75ffb253e3e52917a075c11e22f865
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728676"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196936"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>配置 Windows 服务帐户和权限
 
@@ -83,6 +83,9 @@ ms.locfileid: "85728676"
 - **[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]** - 为商业智能应用程序提供联机分析处理 (OLAP) 和数据挖掘功能。 可执行文件为 \<MSSQLPATH>\OLAP\Bin\msmdsrv.exe。
 - **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]** - 管理、执行、创建、计划和传递报表。 可执行文件为 \<MSSQLPATH>\Reporting Services\ReportServer\Bin\ReportingServicesService.exe。
 - **[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]** - 为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的存储和执行提供管理支持。 可执行文件的路径为 \<MSSQLPATH>\130\DTS\Binn\MsDtsSrvr.exe
+
+   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 可能包括其他用于横向扩展部署的服务。 有关详细信息，请参阅[演练：安装 Integration Services (SSIS) Scale Out](../../integration-services/scale-out/walkthrough-set-up-integration-services-scale-out.md)。
+
 - **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser** - 向客户端计算机提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接信息的名称解析服务。 可执行文件的路径为 c:\Program Files (x86)\Microsoft SQL Server\90\Shared\sqlbrowser.exe
 - **全文搜索** - 对结构化和半结构化数据的内容和属性快速创建全文索引，从而为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供文档筛选和断字功能。
 - **SQL 编写器** - 允许备份和还原应用程序在卷影复制服务 (VSS) 框架中运行。

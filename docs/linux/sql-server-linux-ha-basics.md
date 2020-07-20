@@ -9,12 +9,12 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: c7b22e569f17ca7297483d0b5286ecc77a9a14e5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 67a5219e955ccd9d4b0303276823d8cafbce4963
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895310"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196840"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>有关 Linux 部署的 SQL Server 可用性基础知识
 
@@ -146,7 +146,7 @@ sudo firewall-cmd --permanent --add-service=high-availability
 
 此解决方案在某些方面与使用 Windows 部署群集配置相似，但在许多方面不同。 在 Windows 中，群集的可用性形式称为 Windows 服务器故障转移群集 (WSFC)，它内置于操作系统中，并且默认情况下启用创建 WSFC（故障转移群集）的功能处于禁用状态。 在 Windows 中，AG 和 FCI 基于 WSFC 构建，并且由于 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 提供的特定资源 DLL 而共享紧密集成。 这种紧密耦合的解决方案在很大程度上是可能的，因为它都来自一个供应商。
 
-![](./media/sql-server-linux-ha-basics/image1.png)
+![HA 基础知识](./media/sql-server-linux-ha-basics/image1.png)
 
 在 Linux 上，虽然每个支持的分发版都有可用的 Pacemaker，但每个分发版都可以自定义，且具有稍微不同的实现和版本。 本文说明部分将介绍其中一些差异。 群集层是开放源代码，因此即使它随分发版一起发布，也不像 Windows 下的 WSFC 那样紧密集成。 这就是 Microsoft 提供 mssql-server-ha 的原因，这样 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 和 Pacemaker 堆栈就可以为 AG 和 FCI 提供接近但不完全相同的体验，就像在 Windows 下一样。
 

@@ -24,17 +24,18 @@ helpviewer_keywords:
 ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6d4cae8c42f8a29842e62f94cfcd7a87e187b4e0
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: 1f287a864113bdd5cc1d8829ad080277c1a1d91d
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091624"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393175"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
+
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  如果为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]功能启用了 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 的实例，将创建新的可用性组。  
+如果为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]功能启用了 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 的实例，将创建新的可用性组。  
   
 > [!IMPORTANT]  
 >  在要用作新可用性组的初始主副本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上执行 CREATE AVAILABILITY GROUP。 此服务器实例必须驻留在 Windows Server 故障转移群集 (WSFC) 节点上。  
@@ -113,11 +114,14 @@ CREATE AVAILABILITY GROUP group_name
   
 ```  
   
-## <a name="arguments"></a>参数  
- group_name  
- 指定新可用性组的名称。 group_name 必须是一个有效的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][标识符](../../relational-databases/databases/database-identifiers.md)，并且它在 WSFC 群集的所有可用性组中必须是唯一的。 可用性组名称的最大长度为 128 个字符。  
-  
- AUTOMATED_BACKUP_PREFERENCE = { PRIMARY | SECONDARY_ONLY| SECONDARY | NONE }  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
+
+group_name  
+指定新可用性组的名称。 group_name 必须是一个有效的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][标识符](../../relational-databases/databases/database-identifiers.md)，并且它在 WSFC 群集的所有可用性组中必须是唯一的。 可用性组名称的最大长度为 128 个字符。  
+
+AUTOMATED_BACKUP_PREFERENCE = { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NONE }  
  指定在选择执行备份的位置时有关备份作业应该如何评估主副本的首选项。 您可以编写给定备份作业的脚本，以便纳入自动备份首选项。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不会强制执行首选项，因此它对即席备份没有影响，了解这一点很重要。  
   
  支持的值如下：  
@@ -143,7 +147,7 @@ CREATE AVAILABILITY GROUP group_name
 > [!NOTE]  
 >  若要查看现有可用性组的自动备份首选项，请选择 [sys.availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) 目录视图的 automated_backup_preference 或 automated_backup_preference_desc 列 。 此外，[sys.fn_hadr_backup_is_preferred_replica (Transact-SQL)](../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) 可用于确定首选备份副本。  此函数对至少一个副本返回 1（即使 `AUTOMATED_BACKUP_PREFERENCE = NONE`）。  
   
- FAILURE_CONDITION_LEVEL = { 1 | 2 | 3 | 4 | 5 }   
+ FAILURE_CONDITION_LEVEL = { 1 \| 2 \| 3 \| 4 \| 5 }   
  指定为此可用性组触发自动故障转移的失败条件。 FAILURE_CONDITION_LEVEL 在组级别设置，但仅针对为同步-提交可用性模式 (AVAILABILITY_MODE = SYNCHRONOUS_COMMIT) 配置的可用性副本。 此外，只有在主要副本和次要副本均配置为自动故障转移模式 (FAILOVER_MODE = AUTOMATIC) 并且次要副本当前与主要副本同步的情况下，失败条件才可以触发自动故障转移。  
   
  失败条件级别的范围 (1-5) 是从最少限制的级别 1 到最多限制的级别 5。 给定的条件级别包含所有限制较少的级别。 因此，最严格的条件级别 5 包含四个限制较少的级别 (1-4)，级别 4 包含级别 1-3，依此类推。 下表介绍了与各级别相对应的失败条件。  

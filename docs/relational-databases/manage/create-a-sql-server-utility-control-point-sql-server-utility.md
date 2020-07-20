@@ -1,5 +1,5 @@
 ---
-title: 创建 SQL Server 实用工具控制点（SQL Server 实用工具）| Microsoft Docs
+title: 创建 SQL Server 实用工具控制点（SQL Server 实用工具）
 description: 通过创建 SQL Server 实用工具控制点 (UCP) 来帮助确定资源使用瓶颈和整合机会。
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3203785a5850d2ac8a0d635ed9f899daeb2c52fe
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d29ab79c75adb436b45faab5e8161c8d01e6c533
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85776018"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196875"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>创建 SQL Server 实用工具控制点（SQL Server 实用工具）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -101,9 +101,9 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 >  支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具收集组与非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具收集组并行。 也就是说，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的某一托管实例是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具的成员时，该托管实例可由其他收集组监视。 但要注意的是，该托管实例上的所有收集组会将其数据上载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具管理数据仓库中。 有关详细信息，请参阅[在 SQL Server 的同一实例中运行实用工具和非实用工具收集组的注意事项](../../relational-databases/manage/run-utility-and-non-utility-collection-sets-on-same-sql-instance.md)和[配置你的实用工具控制点数据仓库（SQL Server 实用工具）](../../relational-databases/manage/configure-your-utility-control-point-data-warehouse-sql-server-utility.md)。  
   
 ## <a name="wizard-steps"></a>向导步骤  
- ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")  
+ ![创建 UCP](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")  
   
- 以下各节提供与用于创建新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP 的向导工作流中每一页有关的详细信息。 要启动向导以创建新的 UCP，则从 SSMS 的“视图”菜单中打开“实用工具资源管理器”窗格，然后单击“实用工具资源管理器”窗格顶部的 ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")“创建 UCP”按钮。  
+ 以下各节提供与用于创建新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP 的向导工作流中每一页有关的详细信息。 若要启动向导以创建新的 UCP，则从 SSMS 的“视图”菜单中打开“实用工具资源管理器”窗格，然后单击“实用工具资源管理器”窗格顶部的 ![创建 UCP](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")“创建 UCP”按钮。  
   
  单击下面列表中的链接可以导航到向导中某一页的详细信息：  
   
@@ -126,9 +126,9 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 ##  <a name="introduction-to-create-ucp-wizard"></a><a name="Welcome"></a> 创建 UCP 向导简介  
  如果您打开实用工具资源管理器并且没有连接的实用工具控制点，则必须连接到一个控制点或创建一个新的控制点。  
   
- 连接到现有 UCP - 如果在你的部署中已存在一个实用工具控制点，则可以通过单击“实用工具资源管理器”窗格顶部的 ![](../../relational-databases/manage/media/connect-to-utility.gif "Connect_to_Utility")“连接到实用工具”按钮连接到该实用工具控制点 。 若要连接到现有 UCP，您必须具有管理员凭据或是实用工具读取者角色的成员。 请注意，每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具只能有一个 UCP，并且只能从 SSMS 的某一实例连接到一个 UCP。  
+ **连接到现有 UCP** - 如果部署中已存在一个实用工具控制点，则可单击“实用工具资源管理器”窗格顶部的 ![连接到实用工具](../../relational-databases/manage/media/connect-to-utility.gif "Connect_to_Utility")“连接到实用工具”按钮连接到它。 若要连接到现有 UCP，您必须具有管理员凭据或是实用工具读取者角色的成员。 请注意，每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具只能有一个 UCP，并且只能从 SSMS 的某一实例连接到一个 UCP。  
   
- 创建新的 UCP - 要创建新的实用工具控制点，请单击“实用工具资源管理器”窗格顶部的 ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")“创建 UCP”按钮 。 若要创建一个新的 UCP，必须指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称并在连接对话框中提供管理员凭据。 请注意，每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具只能有一个 UCP。  
+ **创建新的 UCP** - 若要创建新的实用工具控制点，请单击“实用工具资源管理器”窗格顶部的 ![创建 UCP](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")“创建 UCP”按钮。 若要创建一个新的 UCP，必须指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称并在连接对话框中提供管理员凭据。 请注意，每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具只能有一个 UCP。  
   
 ##  <a name="specify-instance"></a><a name="Instance_name"></a> 指定实例  
  指定与您正创建的 UCP 有关的以下信息：  

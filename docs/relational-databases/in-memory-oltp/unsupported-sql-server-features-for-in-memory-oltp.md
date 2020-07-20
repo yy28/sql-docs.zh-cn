@@ -12,12 +12,12 @@ ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a2460e174ab0e8207c3e37f2e0dc999663a1dd8b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 611fb6d081167053240bcf105d28e63b74c69ada
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753170"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279217"
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>内存中 OLTP 不支持的 SQL Server 功能
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "85753170"
 |链接服务器|不能在与内存优化表相同的查询或事务中访问链接服务器。 有关详细信息，请参阅 [链接服务器（数据库引擎）](../../relational-databases/linked-servers/linked-servers-database-engine.md)。|  
 |大容量日志记录|无论数据库处于什么恢复模式，都将始终完整记录针对持久内存优化表的所有操作的日志。|  
 |最小日志记录|内存优化表不支持最小日志记录。 有关最小日志记录的详细信息，请参阅[事务日志 (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md) 和[在批量导入中按最小方式记录日志的前提条件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。|  
-|更改跟踪|无法在包含内存中 OLTP 对象的数据库上启用更改跟踪。 |
+|更改跟踪|内存优化表不支持更改跟踪。 |
 | DDL 触发器 | 内存中 OLTP 表或本机编译的模块不支持数据库级别和服务器级别的 DDL 触发器。 |  
 | 变更数据捕获 (CDC) | SQL Server 2017 CU15 及更高版本支持在具有内存优化表的数据库上启用 CDC。 这仅适用于数据库和数据库中的任何磁盘上表。 在更低版本的 SQL Server 中，CDC 不能与具有内存优化表的数据库一起使用，因为它在内部使用 DROP TABLE 的 DDL 触发器。 |  
 | 纤程模式 | 内存优化表不支持纤程模式：<br /><br />如果启用纤程模式，则不能创建具有内存优化文件组的数据库，也不能向现有数据库添加内存优化文件组。<br /><br />如果有包含内存优化文件组的数据库，可以启用纤程模式。 不过，启用纤程模式需要重新启动服务器。 在这种情况下，具有内存优化文件组的数据库将无法恢复。 随后将看到一条错误消息，建议禁用纤程模式，以使用具有内存优化文件组的数据库。<br /><br />如果启用纤程模式，附加和还原具有内存优化文件组的数据库会失败。 数据库将标记为可疑。<br /><br />有关详细信息，请参阅 [lightweight pooling 服务器配置选项](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md)。 |  

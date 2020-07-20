@@ -18,15 +18,15 @@ ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 420a68755ca7a8adbcc9cfa1dbbf40afaa5f76f7
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 11d2020fff776707da786babb18c07a0a7ab20b1
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808042"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159465"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>查看和修改复制安全设置
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中查看和修改复制安全设置。 例如，您可能需要将日志读取器代理到发布服务器的连接从 SQL Server 身份验证更改为 Windows 集成身份验证，或者您可能需要在 Window 帐户密码更改后更改用于运行代理作业的凭据。 有关每个代理所需权限的信息，请参阅 [R复制代理安全模式](../../../relational-databases/replication/security/replication-agent-security-model.md)。  
   
  **本主题内容**  
@@ -65,13 +65,13 @@ ms.locfileid: "83808042"
   
 1.  **“更新复制密码”** 对话框，可以通过 **的** “复制” [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]文件夹访问。 如果更改复制拓扑中某服务器上 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 帐户或 Windows 帐户的密码，请使用此对话框，而不用更新使用此帐户的每个代理的密码。 如果多台服务器上的代理使用相同的帐户，则必须连接到每台服务器并更改密码。 在复制使用该密码的所有地方的密码将被更新， 而其他地方（如链接服务器）的密码将不更新。  
   
-2.  “发布属性 - \<发布>”对话框的“代理安全性”页。  有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+2.  “发布属性 - \<Publication>”对话框的“代理安全性”页面 。 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
-3.  “订阅属性 - \<订阅>”对话框。 有关访问此对话框的详细信息，请参阅 [View and Modify Push Subscription Properties](../../../relational-databases/replication/view-and-modify-push-subscription-properties.md) 和 [View and Modify Pull Subscription Properties](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)。  
+3.  “订阅属性 - \<Subscription>”对话框。 有关访问此对话框的详细信息，请参阅 [View and Modify Push Subscription Properties](../../../relational-databases/replication/view-and-modify-push-subscription-properties.md) 和 [View and Modify Pull Subscription Properties](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)。  
   
-4.  “分发服务器属性 - \<分发服务器>”和“分发数据库属性 - \<数据库>”对话框。  有关访问这些对话框的详细信息，请参阅 [View and Modify Distributor and Publisher Properties](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)。  
+4.  “分发服务器属性 - \<Distributor>”和“分发数据库属性 - \<Database>”对话框 。 有关访问这些对话框的详细信息，请参阅 [View and Modify Distributor and Publisher Properties](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)。  
   
-5.  “发布服务器属性 - \<发布服务器>”对话框。 有关访问此对话框的详细信息，请参阅 [View and Modify Distributor and Publisher Properties](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)。  
+5.  “发布服务器属性 - \<Publisher>”对话框。 有关访问此对话框的详细信息，请参阅 [View and Modify Distributor and Publisher Properties](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)。  
 
 #### <a name="to-change-the-password-for-an-account-used-by-one-or-more-agents"></a>更改一个或多个代理所用帐户的密码  
   
@@ -90,7 +90,7 @@ ms.locfileid: "83808042"
   
 #### <a name="to-change-security-settings-for-the-snapshot-agent"></a>更改快照代理的安全设置  
   
-1.  在“发布属性 - \<发布>”对话框的“代理安全性”页上，单击“快照代理”文本框旁边的“安全设置”按钮。     
+1.  在“发布属性 - \<Publication>”对话框的“代理安全性”页面上，单击“快照代理”文本框旁边的“安全设置”按钮   。  
   
 2.  在 **“快照代理安全性”** 对话框中指定运行该代理的帐户：  
   
@@ -105,13 +105,13 @@ ms.locfileid: "83808042"
     -   在 **“密码”** 和 **“确认密码”** 文本框中，输入一个新的强密码。  
   
     > [!NOTE]  
-    >  如果发布服务器为 Oracle 发布服务器，则在“分发服务器属性 - \<分发服务器>”对话框中指定连接上下文。 有关更改上下文的过程，请参阅下面的内容。  
+    >  如果发布服务器为 Oracle 发布服务器，则在“分发服务器属性 - \<Distributor>”对话框中指定连接上下文。 有关更改上下文的过程，请参阅下面的内容。  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 #### <a name="to-change-security-settings-for-the-log-reader-agent"></a>更改日志读取器代理的安全设置  
   
-1.  在“发布属性 - \<发布>”对话框的“代理安全性”页上，单击“日志读取器代理”文本框旁边的“安全设置”按钮。     
+1.  在“发布属性 - \<Publication>”对话框的“代理安全性”页面上，单击“日志读取器代理”文本框旁边的“安全设置”按钮   。  
   
 2.  在 **“日志读取器代理安全性”** 对话框中指定运行该代理的帐户：  
   
@@ -126,7 +126,7 @@ ms.locfileid: "83808042"
     -   在 **“密码”** 和 **“确认密码”** 文本框中，输入一个新的强密码。  
   
     > [!NOTE]  
-    >  如果发布服务器为 Oracle 发布服务器，则在“分发服务器属性 - \<分发服务器>”对话框中指定连接上下文。 通过下面的过程更改上下文。  
+    >  如果发布服务器为 Oracle 发布服务器，则在“分发服务器属性 - \<Distributor>”对话框中指定连接上下文。 通过下面的过程更改上下文。  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -135,7 +135,7 @@ ms.locfileid: "83808042"
   
 #### <a name="to-change-the-context-under-which-the-snapshot-agent-and-log-reader-agent-for-an-oracle-publication-make-connections-to-the-publisher"></a>更改将 Oracle 发布的快照代理和日志读取器代理连接到发布服务器的上下文  
   
-1.  在“分发服务器属性 - \<分发服务器>”对话框的“发布服务器”页上，单击“发布服务器”旁边的属性按钮 ( **...** )。   
+1.  在“分发服务器属性 - \<Distributor>”对话框的“发布服务器”页面上，单击“发布服务器”旁边的属性按钮 (...)  。  
   
 2.  在 **“到发布服务器的代理连接”** 部分指定已配置的复制管理用户架构所使用的登录名和密码。 有关详细信息，请参阅[配置 Oracle 发布服务器](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)。  
   
@@ -143,7 +143,7 @@ ms.locfileid: "83808042"
   
 #### <a name="to-change-security-settings-for-the-distribution-agent-for-a-push-subscription"></a>更改推送订阅的分发代理的安全设置  
   
-1.  在发布服务器的“订阅属性 - \<订阅>”对话框中，可以进行以下更改：  
+1.  在发布服务器的“订阅属性 - \<Subscription>”对话框中，可进行以下更改：  
   
     -   若要更改运行分发代理并将其连接到分发服务器的帐户，请单击“代理进程帐户”行，再单击该行中的属性按钮 (...)。  在 **“分发代理安全性”** 对话框中指定帐户和密码。  
   
@@ -155,7 +155,7 @@ ms.locfileid: "83808042"
   
 #### <a name="to-change-security-settings-for-the-distribution-agent-for-a-pull-subscription"></a>更改请求订阅的分发代理的安全设置  
   
-1.  在订阅服务器的“订阅属性 - \<订阅>”对话框中，可以进行以下更改：  
+1.  在订阅服务器的“订阅属性 - \<Subscription>”对话框中，可进行以下更改：  
   
     -   若要更改运行分发代理并将其连接到订阅服务器的帐户，请单击“代理进程帐户”行，再单击该行中的属性按钮 (...)。  在 **“分发代理安全性”** 对话框中指定帐户和密码。  
   
@@ -167,7 +167,7 @@ ms.locfileid: "83808042"
   
 #### <a name="to-change-security-settings-for-the-merge-agent-for-a-push-subscription"></a>更改推送订阅的合并代理的安全设置  
   
-1.  在发布服务器的“订阅属性 - \<订阅>”对话框中，可以进行以下更改：  
+1.  在发布服务器的“订阅属性 - \<Subscription>”对话框中，可进行以下更改：  
   
     -   若要更改运行合并代理并将其连接到发布服务器的帐户，请单击“代理进程帐户”行，再单击该行中的属性按钮 (...)。  在 **“合并代理安全性”** 对话框中指定帐户和密码。  
   
@@ -177,7 +177,7 @@ ms.locfileid: "83808042"
   
 #### <a name="to-change-security-settings-for-the-merge-agent-for-a-pull-subscription"></a>更改请求订阅的合并代理的安全设置  
   
-1.  在订阅服务器的“订阅属性 - \<订阅>”对话框中，可以进行以下更改：  
+1.  在订阅服务器的“订阅属性 - \<Subscription>”对话框中，可进行以下更改：  
   
     -   若要更改运行合并代理并将其连接到订阅服务器的帐户，请单击“代理进程帐户”行，再单击该行中的属性按钮 (...)。  在 **“合并代理安全性”** 对话框中指定帐户和密码。  
   
@@ -187,9 +187,9 @@ ms.locfileid: "83808042"
   
 #### <a name="to-change-the-account-under-which-the-queue-reader-agent-runs"></a>更改运行队列读取器代理的帐户  
   
-1.  在“分发服务器属性 - \<分发服务器>”对话框的“常规”页上，单击分发数据库旁边的属性 (...) 按钮。    
+1.  在“分发服务器属性 - \<Distributor>”对话框的“常规”页面上，单击分发数据库旁边的属性按钮 (...)  。  
   
-2.  在“分发数据库属性 - \<数据库>”对话框中，单击“代理进程帐户”文本框旁边的“安全设置”按钮。    
+2.  在“分发数据库属性 - \<Database>”对话框中，单击“代理进程帐户”文本框旁边的“安全设置”按钮  。  
   
 3.  在 **“队列读取器代理安全性”** 对话框中，指定运行代理并将其连接到分发服务器的帐户：  
   
@@ -204,7 +204,7 @@ ms.locfileid: "83808042"
   
 #### <a name="to-change-the-context-under-which-the-queue-reader-agent-makes-connections-to-the-publisher"></a>更改将队列读取器代理连接到发布服务器的上下文  
   
-1.  在“分发服务器属性 - \<分发服务器>”对话框的“发布服务器”页上，单击“发布服务器”旁边的属性按钮 ( **...** )。   
+1.  在“分发服务器属性 - \<Distributor>”对话框的“发布服务器”页面上，单击“发布服务器”旁边的属性按钮 (...)  。  
   
 2.  在 **“到发布服务器的代理连接”** 部分，将 **“代理连接模式”** 选项指定为 **“模拟代理进程帐户”** 或 **“SQL Server 身份验证”** 。 如果指定 **“SQL Server 身份验证”** ，还需输入 **“登录名”** 和 **“密码”** 的值。  
   
@@ -219,7 +219,7 @@ ms.locfileid: "83808042"
   
 #### <a name="to-change-security-settings-for-an-immediate-updating-pull-subscription"></a>更改立即更新请求订阅的安全设置  
   
-1.  在订阅服务器的“订阅属性 - \<订阅>”对话框中，单击“发布服务器连接”行，然后单击行中的属性 (…) 按钮。    
+1.  在订阅服务器的“订阅属性 - \<Subscription>”对话框中，单击“发布服务器连接”行，然后单击行中的属性按钮 (…)  。  
   
 2.  在 **“输入连接信息”** 对话框中，请选择下列选项之一：  
   
@@ -236,11 +236,11 @@ ms.locfileid: "83808042"
   
 #### <a name="to-change-the-password-for-the-administrative-connection-from-the-publisher-to-the-distributor"></a>更改从发布服务器到分发服务器的管理连接的密码  
   
-1.  在“分发服务器属性 - \<分发服务器>”对话框的“发布服务器”页上，在“密码”和“确认密码”文本框中输入强密码。     
+1.  在“分发服务器属性 - \<Distributor>”对话框的“发布服务器”页面上，在“密码”和“确认密码”文本框中输入强密码   。  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-3.  在“发布服务器属性 - \<发布服务器>”对话框的“常规”页上，在“密码”和“确认密码”文本框中输入强密码。     
+3.  在“发布服务器属性 - \<Publisher>”对话框的“常规”页面上，在“密码”和“确认密码”文本框中输入强密码   。  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
