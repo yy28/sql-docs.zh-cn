@@ -1,5 +1,5 @@
 ---
-title: 统计信息 | Microsoft Docs
+title: 统计信息
 ms.custom: ''
 ms.date: 06/03/2020
 ms.prod: sql
@@ -23,14 +23,15 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4cda8a71b0023cfc5cb7e697bf98e06b4e8955f8
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b509109cd155d0990950afbd073709325b01f5b9
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012236"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196745"
 ---
 # <a name="statistics"></a>统计信息
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   查询优化器使用统计信息来创建可提高查询性能的查询计划。 对于大多数查询，查询优化器已为高质量查询计划生成必要的统计信息；但在一些情况下，需要创建附加的统计信息或修改查询设计以得到最佳结果。 本主题讨论用于高效使用查询优化统计信息的统计信息概念并提供指南。  
   
@@ -59,7 +60,7 @@ ms.locfileid: "86012236"
 
 下面的关系图显示包含六个梯级的直方图。 第一个上限值左侧的区域是第一个梯级。
   
-![](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "Histogram") 
+![直方图](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "直方图") 
   
 对于以上每个直方图步骤：
 -   粗线表示上限值 (range_high_key) 和上限值的出现次数 (equal_rows)  
