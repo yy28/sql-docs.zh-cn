@@ -10,11 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 316c3c95e0928fc4b1ed0c0d4235220c527e68f6
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 9c60bea64ad528a953101da7625347ca659b1c6d
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052743"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485091"
 ---
 # <a name="adventureworks-sample-databases"></a>AdventureWorks sample databases（AdventureWorks 示例数据库）
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "86052743"
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)或[Azure Data Studio](../azure-data-studio/download-azure-data-studio.md)
 
 
-## <a name="download-bak-files"></a>下载 .bak 文件 
+## <a name="download-backup-files"></a>下载备份文件 
 
 使用以下链接下载适用于你的方案的相应示例数据库。 
 
@@ -37,15 +38,17 @@ ms.locfileid: "86052743"
 - 数据**仓库（DW）** 数据适用于数据仓库工作负荷。 
 - **轻型（LT）** 数据是**OLTP**示例的轻型和 pared 关闭版本。 
 
+如果你不确定需要的内容，请从与你的 SQL Server 版本相匹配的 OLTP 版本开始。 
+
 |**OLTP** |**数据仓库** |**轻型**|
 |---------|---------|---------|
 |[AdventureWorks2019](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2019.bak)|[AdventureWorksDW2019](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2019.bak)|[AdventureWorksLT2019](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksLT2019.bak)|
 |[AdventureWorks2017](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2017.bak)|[AdventureWorksDW2017](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2017.bak)|[AdventureWorksLT2017](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksLT2017.bak)|
 |[AdventureWorks2016](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2016.bak)|[AdventureWorksDW2016](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2016.bak)|[AdventureWorksLT2016](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksLT2016.bak)|
-|[AdventureWorks2016_EXT .bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2016_EXT.bak)|[AdventureWorksDW2016_EXT .bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2016_EXT.bak)| 不适用 |
+|[AdventureWorks2016_EXT .bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2016_EXT.bak)|[AdventureWorksDW2016_EXT .bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2016_EXT.bak)| 不可用 |
 |[AdventureWorks2014](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2014.bak)|[AdventureWorksDW2014](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2014.bak)|[AdventureWorksLT2014](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksLT2014.bak)|
 |[AdventureWorks2012](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2012.bak)|[AdventureWorksDW2012](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2012.bak)|[AdventureWorksLT2012](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksLT2012.bak)|
-|[AdventureWorks2008R2](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks2008r2/adventure-works-2008r2-oltp.bak)| [AdventureWorksDW2008R2](https://github.com/microsoft/sql-server-samples/releases/download/adventureworks2008r2/adventure-works-2008r2-dw.bak) | 不适用 |
+|[AdventureWorks2008R2](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks2008r2/adventure-works-2008r2-oltp.bak)| [AdventureWorksDW2008R2](https://github.com/microsoft/sql-server-samples/releases/download/adventureworks2008r2/adventure-works-2008r2-dw.bak) | 不可用 |
 
 其他文件可直接在 GitHub 上找到： 
 
@@ -64,7 +67,7 @@ ms.locfileid: "86052743"
 
 若要在 SQL Server Management Studio 中还原数据库，请执行以下步骤：
 
-1. `.bak`从 "[下载 .bak 文件](#download-bak-files)" 部分中提供的链接之一下载相应的文件。
+1. `.bak`从 "[下载备份文件](#download-backup-files)" 部分中提供的链接之一下载相应的文件。
 2. 将该 `.bak` 文件移动到 SQL Server 的备份位置。 这不同于安装位置、实例名称和 SQL Server 版本。 例如，SQL Server 2019 的默认实例的默认位置是：
 
    `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup`. 
@@ -106,7 +109,7 @@ GO
 
 若要在 Azure Data Studio 中还原数据库，请执行以下步骤：
 
-1. `.bak`从 "[下载 .bak 文件](#download-bak-files)" 部分中提供的链接之一下载相应的文件。
+1. `.bak`从 "[下载备份文件](#download-backup-files)" 部分中提供的链接之一下载相应的文件。
 1. 将该 `.bak` 文件移动到 SQL Server 的备份位置。 这不同于安装位置、实例名称和 SQL Server 版本。 例如，SQL Server 2019 的默认实例的默认位置是：
 
     `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup`.
@@ -150,7 +153,7 @@ GO
 
 1. 连接到 Azure 门户。
 1. 选择导航窗格左上角的 "**创建资源**"。 
-1. 选择“数据库”，然后选择“SQL 数据库”********。 
+1. 选择 "**数据库**"，然后选择 " **SQL 数据库**"。 
 1. 填写所需信息以创建数据库。 
 1. 在 "**其他设置**" 选项卡上，选择 "**示例**" 作为 "**数据源**" 下的现有数据： 
 
