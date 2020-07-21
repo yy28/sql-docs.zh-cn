@@ -13,25 +13,25 @@ helpviewer_keywords:
 ms.assetid: 28c21277-cad8-406c-a955-07933a56982a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f816b913237a93f852bdeb8e2cbad9fcd6a7250c
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: 86e517d720acf11cca54ad2745ae74f668d2e1a9
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84969877"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554212"
 ---
 # <a name="mssqlserver_10060"></a>MSSQLSERVER_10060
     
 ## <a name="details"></a>详细信息  
   
-|||  
+|Attribute|值|  
 |-|-|  
 |产品名称|SQL Server|  
 |事件 ID|10060|  
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称||  
-|消息正文|在建立与服务器的连接时出错。  在连接到 SQL Server 时，在默认的设置下 SQL Server 不允许远程连接可能会导致此失败。 (提供程序: TCP 提供程序，错误: 0 - 由于被连接方在一段时间后未正确响应，或者连接的主机无法响应，连接尝试失败。)(Microsoft SQL Server，错误: 10060)|  
+|消息正文|在建立与服务器的连接时出错。  在连接到 SQL Server 时，在默认的设置下 SQL Server 不允许远程连接可能会导致此失败。 （提供程序：TCP 提供程序，错误:0 - 由于被连接方在一段时间后未正确响应，或者连接的主机无法响应，连接尝试失败。)(Microsoft SQL Server，错误:10060)|  
   
 ## <a name="explanation"></a>说明  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端无法连接到服务器。 发生此错误的原因可能是服务器上的防火墙拒绝该连接或服务器未配置为接受远程连接。  

@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: e0a01f3d-d0aa-4c38-8bcc-82e59de50512
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 11137ba334b66f20c7d9a6caaaf7d1ef42c15dec
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: e7ddd06b7a49cb0b7d1495e0960248c0aa6564d2
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84969477"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553732"
 ---
 # <a name="mssqlserver_17053"></a>MSSQLSERVER_17053
     
 ## <a name="details"></a>详细信息  
   
-|||  
+|Attribute|值|  
 |-|-|  
 |产品名称|SQL Server|  
 |事件 ID|17053|  
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|OS_ERROR|  
-|消息正文|%ls: 遇到操作系统错误 %ls。|  
+|消息正文|%ls:遇到操作系统错误 %ls。|  
   
 ## <a name="explanation"></a>说明  
  出现了一般性的操作系统错误。  不清楚会出现什么状态。  

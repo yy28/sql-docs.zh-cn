@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: d1ab00c7-0331-437a-84fe-bae53b82feec
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bd6044c08ecd5a73f539bfbc1139d6257c2db9d3
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 51c001019581c736ff3e27b13f5ebb6150fcd149
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85054202"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552132"
 ---
 # <a name="mssqlserver_207"></a>MSSQLSERVER_207
     
 ## <a name="details"></a>详细信息  
   
-|||  
+|Attribute|值|  
 |-|-|  
 |产品名称|SQL Server|  
 |事件 ID|207|  
@@ -70,7 +70,7 @@ ms.locfileid: "85054202"
   
     10. ORDER BY  
   
-    11. 返回页首  
+    11. TOP  
   
      因为列别名是在处理 SELECT 子句后定义的，所以当处理 GROUP BY 子句时列别名是未知的。  
   
@@ -114,7 +114,7 @@ ms.locfileid: "85054202"
     GROUP BY Year;  
     ```  
   
--   MERGE 语句中的 WHEN NOT MATCHED BY SOURCE 子句引用的是可以访问的值。 修改 MERGE 语句，使源表至少在 WHEN NOT MATCHED BY SOURCE 子句中返回一行。 例如，您可能需要添加或修订为子句指定的搜索条件。 或者，也可以更改该子句以指定没有引用源表的值。 例如，`WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = <expression, or other available value>` 。  
+-   MERGE 语句中的 WHEN NOT MATCHED BY SOURCE 子句引用的是可以访问的值。 修改 MERGE 语句，使源表至少在 WHEN NOT MATCHED BY SOURCE 子句中返回一行。 例如，您可能需要添加或修订为子句指定的搜索条件。 或者，也可以更改该子句以指定没有引用源表的值。 例如，`WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = <expression, or other available value>`。  
   
 ## <a name="see-also"></a>另请参阅  
  [MERGE (Transact-SQL)](/sql/t-sql/statements/merge-transact-sql)   

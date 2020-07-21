@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 314aebf1-6cdf-488d-a274-ce967fadb57b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 98e5ebb3a9dd798e5181c56e67c8ee770f0d6a10
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: adc730a651f1b2fce16cc0d907a6f2f2003fe1f8
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85031948"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553245"
 ---
 # <a name="mssqlserver_7987"></a>MSSQLSERVER_7987
     
 ## <a name="details"></a>详细信息  
   
-|||  
+|Attribute|值|  
 |-|-|  
 |产品名称|SQL Server|  
 |事件 ID|7987|  
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC2_PRE_CHECKS_CHAIN_LINKAGE_MISMATCH|  
-|消息正文|系统表预检查: 对象 ID O_ID 具有不匹配的链链接。 P_ID1->next = P_ID2，但是 P_ID2->prev = P_ID3。 由于不可修复的错误，Check 语句已终止。|  
+|消息正文|系统表预检查:对象 ID O_ID 具有不匹配的链链接。 P_ID1->next = P_ID2，但是 P_ID2->prev = P_ID3。 由于不可修复的错误，Check 语句已终止。|  
   
 ## <a name="explanation"></a>说明  
  DBCC CHECKDB 的第一个阶段用于对关键系统表的数据页进行简单检查。 如果找到任何错误，则无法修复它们；因此，DBCC CHECKDB 立即终止。  

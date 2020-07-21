@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 9638a764-4ac1-40ae-a614-2726ebcc6ba4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c7e691567bcc2a17d04e827caf3850f1d50c5d15
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 9557678be5fb53482fcb6eff8faf1183e27a4178
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032473"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553365"
 ---
 # <a name="mssqlserver_7906"></a>MSSQLSERVER_7906
     
 ## <a name="details"></a>详细信息  
   
-|||  
+|Attribute|值|  
 |-|-|  
 |产品名称|SQL Server|  
 |事件 ID|7906|  
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC2_FS_INVALID_TOP_LEVEL_FILE|  
-|消息正文|数据库错误: 文件 'FILE' 不是有效的 FileStream 文件。|  
+|消息正文|数据库错误:文件 FILE 不是有效的文件流文件。|  
   
 ## <a name="explanation"></a>说明  
  除一些特殊文件（如“filestream.hdr”）外，不应该直接在 Filestream 数据空间下找到文件。  

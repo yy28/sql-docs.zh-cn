@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 915f97de-9b74-41f8-8bd5-b2d061416718
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8e823c14fcb6e1a408d1589d0588a3fb966552d7
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: 7e46a807631bc18a1edb7c152969858333392997
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967947"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552272"
 ---
 # <a name="mssqlserver_1406"></a>MSSQLSERVER_1406
     
 ## <a name="details"></a>详细信息  
   
-|||  
+|Attribute|值|  
 |-|-|  
 |产品名称|SQL Server|  
 |事件 ID|1406|  
@@ -38,7 +38,7 @@ ms.locfileid: "84967947"
  删除数据库镜像。 然后可以恢复该镜像数据库以获得它的访问权。  
   
 ## <a name="see-also"></a>另请参阅  
- [在数据库镜像会话中强制服务 &#40;Transact-sql&#41;](../../database-engine/database-mirroring/force-service-in-a-database-mirroring-session-transact-sql.md)   
+ [在数据库镜像会话中强制服务 (Transact-SQL)](../../database-engine/database-mirroring/force-service-in-a-database-mirroring-session-transact-sql.md)   
  [删除数据库镜像 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
   
   

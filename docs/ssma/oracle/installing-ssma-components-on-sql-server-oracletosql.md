@@ -8,17 +8,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 helpviewer_keywords:
-- Installing the Extension Pack
+- Installing the extension pack
 - SQL Server Database Objects
 ms.assetid: 33070e5f-4e39-4b70-ae81-b8af6e4983c5
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 736807d427b08a1b3a32df1d295b84f4ea3d23d2
-ms.sourcegitcommit: fd7b268a34562d70d46441f689543ecce7df2e4d
+ms.openlocfilehash: 2495d1b61b0251deee1b86ce66c03b6474f36cd8
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86411657"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554822"
 ---
 # <a name="installing-ssma-components-on-sql-server-oracletosql"></a>在 SQL Server 上安装 SSMA 组件（OracleToSQL）
 
@@ -60,9 +60,7 @@ SSMA 扩展包将**sysdb**和**ssmatesterdb**数据库添加到的指定实例 [
 6. 在 "**准备安装**" 页上，选择 "**安装**"。
 7. 在 "**完成第一步安装**" 页上，选择 "**下一**步"。
   
-   此时将显示一个新对话框，您可以在其中选择扩展包安装的类型。
-
-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]扩展包安装的实例。
+   此时将显示一个新对话框。 选择扩展包类型。
   
 8. 选择所需的安装类型，然后单击 "**下一步**"。
 

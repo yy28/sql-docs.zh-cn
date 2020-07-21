@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 9fe3f67c-df3c-4642-a3a4-ccc0e138b632
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4df3e6edc789dfc95e41cec0b516fb335aa9a823
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: d057693dbc77a07ab7c71a24d7a2c80209b0e18c
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968009"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553902"
 ---
 # <a name="mssqlserver_1205"></a>MSSQLSERVER_1205
     
 ## <a name="details"></a>详细信息  
   
-|||  
+|Attribute|值|  
 |-|-|  
 |产品名称|SQL Server|  
 |事件 ID|1205|  

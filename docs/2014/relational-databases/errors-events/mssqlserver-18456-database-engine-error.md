@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 14b233839901167ca92a1d2aed5a8c1441fefe0e
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: d0f1216bf1b617a80288c6e5112674c2447979f4
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85034968"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552242"
 ---
 # <a name="mssqlserver_18456"></a>MSSQLSERVER_18456
     
 ## <a name="details"></a>详细信息  
   
-|||  
+|Attribute|值|  
 |-|-|  
 |产品名称|SQL Server|  
 |事件 ID|18456|  
@@ -68,7 +68,7 @@ ms.locfileid: "85034968"
 |7|登录已禁用，密码不正确。|  
 |8|密码不正确。|  
 |9|密码无效。|  
-|11|登录有效，但服务器访问失败。 导致此错误的一个可能原因是：Windows 用户作为本地管理员组的成员有权访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，但 Windows 没有提供管理员凭据。 若要连接，请使用“以管理员身份运行”选项启动连接程序，然后将 Windows 用户作为特定的登录名添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 |  
+|11|登录有效，但服务器访问失败。 导致此错误的一个可能原因是：Windows 用户作为本地管理员组的成员有权访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，但 Windows 没有提供管理员凭据。 若要连接，请使用“以管理员身份运行”选项启动连接程序，然后将 Windows 用户作为特定的登录名添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 |12|登录是有效的登录，但服务器访问失败。|  
 |18|必须更改密码。|  
   
@@ -76,7 +76,7 @@ ms.locfileid: "85034968"
   
  **其他不常见的可能原因**  
   
- 错误原因 **：尝试使用 SQL 身份验证登录失败。服务器仅配置为 Windows 身份验证。** 可能会在下列情况下返回。  
+ 在以下情况下可能会返回错误原因 **“尝试使用 SQL Server 身份验证登录失败。服务器配置为仅使用 Windows 身份验证。** 可能会在下列情况下返回。  
   
 -   当服务器配置为混合模式身份验证并且某个 ODBC 连接使用 TCP 协议，且该连接未显式指定该连接应使用某一可信连接时。  
   
@@ -89,11 +89,11 @@ ms.locfileid: "85034968"
   
 |Date|源|消息|  
 |----------|------------|-------------|  
-|2007-12-05 20:12:56.34|登录|错误: 18456，严重性: 14，状态: 8。|  
+|2007-12-05 20:12:56.34|登录|错误：18456，严重级别：14，状态：8.|  
 |2007-12-05 20:12:56.34|登录|用户‘<user_name>’登录失败。 [客户端: \<ip address>]|  
   
 > [!NOTE]  
->  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是使用 Windows 身份验证模式安装的，并随后更改为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 身份验证模式，则最初会禁用 **sa** 登录名。 这将导致状态7错误： "用户 ' sa ' 登录失败"。若要启用**sa**登录名，请参阅[更改服务器身份验证模式](../../database-engine/configure-windows/change-server-authentication-mode.md)。  
+>  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是使用 Windows 身份验证模式安装的，并随后更改为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 身份验证模式，则最初会禁用 **sa** 登录名。 这将导致状态 7 错误：“用户‘sa’登录失败。”若要启用 **sa** 登录名，请参阅[更改服务器身份验证模式](../../database-engine/configure-windows/change-server-authentication-mode.md)。  
   
 ## <a name="user-action"></a>用户操作  
  如果您尝试使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证进行连接，请验证是否将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置为使用混合身份验证模式。  
@@ -104,10 +104,10 @@ ms.locfileid: "85034968"
   
  如果错误指示状态 1，请与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员联系。  
   
- 如果您尝试使用您的管理员凭据进行连接，则通过使用“以管理员身份运行”选项启动您的应用程序。**** 在连接后，将您的 Windows 用户作为单独的登录名添加。  
+ 如果您尝试使用您的管理员凭据进行连接，则通过使用“以管理员身份运行”选项启动您的应用程序。 在连接后，将您的 Windows 用户作为单独的登录名添加。  
   
  如果[!INCLUDE[ssDE](../../includes/ssde-md.md)]支持包含的数据库，请确认在迁移到包含的数据库用户后未删除登录名。  
   
- 在本地连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例时，在 **NT AUTHORITY\NETWORK SERVICE** 下运行的服务的连接必须使用计算机完全限定域名进行身份验证。 有关详细信息，请参阅[如何在 ASP.NET 中使用 Network Service 帐户访问资源](https://msdn.microsoft.com/library/ff647402.aspx)  
+ 在本地连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例时，在 **NT AUTHORITY\NETWORK SERVICE** 下运行的服务的连接必须使用计算机完全限定域名进行身份验证。 有关详细信息，请参阅本主题中的[如何在 ASP.NET 中使用网络服务帐户来访问资源](https://msdn.microsoft.com/library/ff647402.aspx)  
   
   
