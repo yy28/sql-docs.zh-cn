@@ -13,25 +13,25 @@ helpviewer_keywords:
 ms.assetid: 567fb571-7cda-4ce8-a702-cdff2df5d419
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8fdf89a03e13c40e1b72d621c120db82356db1a7
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: f9bfdca119a99dd07512753beeb3e0399e4c53a2
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85034781"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552222"
 ---
 # <a name="mssqlserver_2"></a>MSSQLSERVER_2
     
 ## <a name="details"></a>详细信息  
   
-|||  
+|Attribute|值|  
 |-|-|  
 |产品名称|SQL Server|  
 |事件 ID|2|  
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称||  
-|消息正文|在建立与服务器的连接时出错。  在连接到 SQL Server 时，在默认的设置下 SQL Server 不允许远程连接可能会导致此失败。 （提供程序: 命名管道提供程序，错误：40 - 无法打开到 SQL Server 的连接）（.Net SqlClient 数据访问接口）|  
+|消息正文|在建立与服务器的连接时出错。  在连接到 SQL Server 时，在默认的设置下 SQL Server 不允许远程连接可能会导致此失败。 （提供程序：命名管道提供程序，错误: 40 - 无法打开到 SQL Server 的连接) (.Net SqlClient 数据提供程序)|  
   
 ## <a name="explanation"></a>说明  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 未响应客户端请求，可能是因为尚未启动服务器。  

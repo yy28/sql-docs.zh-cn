@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 121cf99d-0722-494c-be24-3369c1a0badc
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: af86c3453edc2d18eb11e0cd58b3c677e69dc468
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: a9feb602d9ddd68acf45fe58884b238bf830aac9
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85054162"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552032"
 ---
 # <a name="mssqlserver_2534"></a>MSSQLSERVER_2534
     
 ## <a name="details"></a>详细信息  
   
-|||  
+|Attribute|值|  
 |-|-|  
 |产品名称|SQL Server|  
 |事件 ID|2534|  
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC_PAGE_ALLOCATED_TO_OTHER_OBJECT|  
-|消息正文|表错误: 页 P_ID 的页头表明它已分配给对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID，分配单元 ID A_ID（类型为 TYPE），但是实际上分配给了另一对象。|  
+|消息正文|表错误:页 P_ID 的页头表明它已分配给对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID，分配单元 ID A_ID（类型为 TYPE），但是实际上分配给了另一对象。|  
   
 ## <a name="explanation"></a>说明  
  页头包含分配单元 ID *A_ID*，但该分配单元的索引分配映射 (IAM) 页都未分配该页。 因此，页头包含错误的分配单元 ID，而且该页还将具有一个匹配的 MSSQLServer_2533 错误，对应于实际分配该页的分配单元 ID。  

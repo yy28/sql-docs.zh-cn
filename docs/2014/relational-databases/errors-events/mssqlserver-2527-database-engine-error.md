@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 1cef90ef-9c39-44e6-bc7f-316c8f53c10c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 900707634a016ecfd29f9f676e68b4d2f557ccea
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: c6ff7823f868882db8ed260aabb3fc1bb05c4f42
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85034282"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552035"
 ---
 # <a name="mssqlserver_2527"></a>MSSQLSERVER_2527
     
 ## <a name="details"></a>详细信息  
   
-|||  
+|Attribute|值|  
 |-|-|  
 |产品名称|SQL Server|  
 |事件 ID|2527|  
@@ -40,7 +40,7 @@ ms.locfileid: "85034282"
  从备份还原离线文件。  
   
 ## <a name="see-also"></a>另请参阅  
- [sys. database_files &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)   
+ [sys.database_files (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)   
  [sys. master_files &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   
