@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: a8657a91-ec75-4649-a09a-21920e0030ff
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c34414754ea9d25ad89f6aba767197eb1dfc10d0
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: b427188ddf7b65511971c44ea0bf718f546484a6
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85033923"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551793"
 ---
 # <a name="mssqlserver_3151"></a>MSSQLSERVER_3151
     
 ## <a name="details"></a>详细信息  
   
-|||  
+|Attribute|值|  
 |-|-|  
 |产品名称|SQL Server|  
 |事件 ID|3151|  
@@ -35,6 +35,6 @@ ms.locfileid: "85033923"
  这是一般的错误消息，指示 **master** 数据库存在各种问题。  
   
 ## <a name="user-action"></a>用户操作  
- 检查错误日志以了解详细信息。 若要创建可用的 **master** 数据库，请使用 REBUILDDATABASE 选项运行 Setup.exe。 有关详细信息，请参阅 SQL Server 联机丛书中的“如何从命令提示符安装 SQL Server”。  
+ 检查错误日志以了解详细信息。 若要创建可用的 **master** 数据库，请使用 REBUILDDATABASE 选项运行 Setup.exe。 有关详细信息，请参阅“如何：从命令提示符安装 SQL Server”，位于 SQL Server 联机丛书。  
   
   

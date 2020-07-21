@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: cf19fbbb-7158-45f2-8778-8f3cad7f574a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ee17df699cb73513a23ef7d899e2289c065ad7c9
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 3004bbb67e8bb3e89bec4acfe9674f0b99f27169
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032526"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551042"
 ---
 # <a name="mssqlserver_7905"></a>MSSQLSERVER_7905
     
 ## <a name="details"></a>详细信息  
   
-|||  
+|Attribute|值|  
 |-|-|  
 |产品名称|SQL Server|  
 |事件 ID|7905|  
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC2_FS_INVALID_ROWSET_DIRECTORY|  
-|消息正文|数据库错误：目录 'DIRECTORY' 不是有效的 FileStream 目录。|  
+|消息正文|数据库错误:目录 DIRECTORY 不是有效的 FileStream 目录。|  
   
 ## <a name="explanation"></a>说明  
  行集目录的名称是分区的分区 ID，但特殊的行集目录名称（如“ghost”）除外。 如果无法将行集目录名称转换为分区 ID，则该目录不是有效的行集目录。  

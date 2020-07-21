@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 29800aa9-81aa-4371-992c-487dbb617f46
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 79137d0f70c05c6aa7b758f7e073d152681a14b4
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: fb8f855a1675ef1d85c93cfc0ba38d12054d9b88
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85054068"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551923"
 ---
 # <a name="mssqlserver_2570"></a>MSSQLSERVER_2570
     
 ## <a name="details"></a>详细信息  
   
-|||  
+|Attribute|值|  
 |-|-|  
 |产品名称|SQL Server|  
 |事件 ID|2570|  

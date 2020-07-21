@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 8f929d69-8eb4-4fe9-be52-b9680a7820db
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7bb0a1202eab8e172f3c9e4df04146ff41047389
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 1065002577235b5a2e36d60f4ac23eac7cad51f3
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85034177"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551912"
 ---
 # <a name="mssqlserver_2579"></a>MSSQLSERVER_2579
     
 ## <a name="details"></a>详细信息  
   
-|||  
+|Attribute|值|  
 |-|-|  
 |产品名称|SQL Server|  
 |事件 ID|2579|  
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC_EXTENT_OUT_OF_RANGE|  
-|消息正文|表错误：对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID，分配单元 ID A_ID（类型为 TYPE）中的区 P_ID 超出了此数据库的范围。|  
+|消息正文|表错误:对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID，分配单元 ID A_ID（类型为 TYPE）中的区 P_ID 超出了此数据库的范围。|  
   
 ## <a name="explanation"></a>说明  
  *P_ID* 是格式为 *(filenum:pageinfile)* 的 PageID。 此盘区的 *pageinfile* 大于数据库的文件 (*filenum)* 的物理大小。 此区被标记为在指示的分配单元 ID 的 IAM 页中进行分配。  

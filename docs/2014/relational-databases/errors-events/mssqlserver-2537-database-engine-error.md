@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 0af6ff69-d75a-4c39-8da2-9bd0695277c6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 140b1d4d212dc45386cebf32720f087fe6751a73
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 1c652d70a8d59c9c5dabd9fa1f259ff0b8dc926b
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85054149"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552022"
 ---
 # <a name="mssqlserver_2537"></a>MSSQLSERVER_2537
     
 ## <a name="details"></a>详细信息  
   
-|||  
+|Attribute|值|  
 |-|-|  
 |产品名称|SQL Server|  
 |事件 ID|2537|  
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC_RECORD_CHECK_FAILED|  
-|消息正文|表错误: 对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID，分配单元 ID A_ID (type TYPE)，页 P_ID，行 ROW_ID。 记录检查(CHECK_TEXT)失败。 值为 VALUE1 和 VALUE2。|  
+|消息正文|表错误:对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID，分配单元 ID A_ID（类型为 TYPE），页 P_ID，行 ROW_ID。 记录检查(CHECK_TEXT)失败。 值为 VALUE1 和 VALUE2。|  
   
 ## <a name="explanation"></a>说明  
  行 ROW_ID（或该行中的某列）未通过 CHECK_TEXT 所描述的测试或条件。  

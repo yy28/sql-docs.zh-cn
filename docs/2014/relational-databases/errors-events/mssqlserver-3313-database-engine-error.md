@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: a244227b-8553-42df-9435-034f906c4c74
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 94de98c248713927790efb0d04c4e1358df30e2b
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: b182b0443af16da0cd104272aeb0602c90b12f42
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85033691"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551637"
 ---
 # <a name="mssqlserver_3313"></a>MSSQLSERVER_3313
     
 ## <a name="details"></a>详细信息  
   
-|||  
+|Attribute|值|  
 |-|-|  
 |产品名称|SQL Server|  
 |事件 ID|3313|  
@@ -39,7 +39,7 @@ ms.locfileid: "85033691"
 ## <a name="user-action"></a>用户操作  
  此错误可能是由在某次尝试启动服务器实例或恢复数据库的过程中系统上存在的暂时性条件导致的。 此错误也可能是由当您每次尝试启动数据库时发生的永久性错误导致的。 有关原因的信息，请检查 Windows 事件日志以了解有关指示特定故障的先前错误。  
   
- 请注意，当遇到此错误状况时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通常在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] LOG 文件夹中生成三个文件  。 SQLDump*nnnn*.txt 文件包含与故障相关的高级诊断信息，包括有关事务的详细信息和遇到问题的页面。 此信息通常由产品支持小组用来分析故障的原因。  
+ 请注意，当遇到此错误状况时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通常在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] LOG 文件夹中生成三个文件。 SQLDump*nnnn*.txt 文件包含与故障相关的高级诊断信息，包括有关事务的详细信息和遇到问题的页面。 此信息通常由产品支持小组用来分析故障的原因。  
   
  有关错误 3313 出现原因的信息，请检查 Windows 事件日志以了解有关指示特定故障的先前错误。 相应的用户操作取决于 Windows 事件日志中的信息是否指示该 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误由暂时条件或永久性故障导致。 有关排除 3313 错误的用户操作的信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书。  
   

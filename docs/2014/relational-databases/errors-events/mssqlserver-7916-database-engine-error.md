@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 9bac3536-de14-4e98-84c2-bde9a59ba0d1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 21b31eedf61369d9c4d1cfdfd5f53eebd3f5341c
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: c888f81a23f6e5c44bab28ec21aa9245eb2c7d10
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85053684"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551018"
 ---
 # <a name="mssqlserver_7916"></a>MSSQLSERVER_7916
     
 ## <a name="details"></a>详细信息  
   
-|||  
+|Attribute|值|  
 |-|-|  
 |产品名称|SQL Server|  
 |事件 ID|7916|  
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC2_REPAIR_RECORD_DELETED|  
-|消息正文|修复: 对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID，分配单元 ID A_ID (类型为 TYPE)，页 P_ID，槽 S_ID 的记录已删除。 将重新生成索引。|  
+|消息正文|修复:对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID，分配单元 ID A_ID（类型为 TYPE），页 P_ID，槽 S_ID 的记录已删除。 将重新生成索引。|  
   
 ## <a name="explanation"></a>说明  
  这是来自 REPAIR 的信息性消息，指示已将指定记录从页中删除。  

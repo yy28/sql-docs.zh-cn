@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: d11b2b2c-3ae4-4023-b82f-05b561bfacce
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f13316bdd3147bb0ad63c8d4a2fb18f1fce74006
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 129e1d8aa2725594871eaa48c2c983767eb46d73
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85033409"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551552"
 ---
 # <a name="mssqlserver_3456"></a>MSSQLSERVER_3456
     
 ## <a name="details"></a>详细信息  
   
-|||  
+|Attribute|值|  
 |-|-|  
 |产品名称|SQL Server|  
 |事件 ID|3456|  
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|REC_REDOLSNMISMATCH|  
-|消息正文|对于事务 ID %S_XID，无法在数据库 '%.*ls' (数据库 ID 为 %d)的页 %S_PGID 上重做日志记录 %S_LSN。 页: LSN = %S_LSN，类型 = %ld。 日志: 操作码 = %ld，上下文 %ld，上一页的 LSN: %S_LSN。 请从数据库备份还原该数据库，或者修复它。|  
+|消息正文|对于事务 ID %S_XID，无法在数据库 '%.*ls' (数据库 ID 为 %d)的页 %S_PGID 上重做日志记录 %S_LSN。 页:LSN = %S_LSN，类型 = %ld。 日志:操作码 = %ld，上下文 %ld，上一页的 LSN: %S_LSN。 请从数据库备份还原该数据库，或者修复它。|  
   
 ## <a name="explanation"></a>说明  
  还原操作无法重做事务日志。 此错误使数据库进入 SUSPECT 状态。 主文件组以及可能其他文件组可疑并可能受损。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动过程中无法恢复数据库，因此无法使用该数据库。 需要用户执行操作来解决问题。  

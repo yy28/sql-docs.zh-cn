@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 52098678-0858-4a14-ad07-37ebbafca5fc
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 25eb85125f8349fa0dbe692c159f9ada33db16d2
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 41573b7ef067d8f51e0c491eed34859b3e31c525
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85031598"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86550850"
 ---
 # <a name="mssqlserver_8974"></a>MSSQLSERVER_8974
     
 ## <a name="details"></a>详细信息  
   
-|||  
+|Attribute|值|  
 |-|-|  
 |产品名称|SQL Server|  
 |事件 ID|8974|  
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC3_OFF_ROW_DATA_NODE_HAS_TWO_PARENTS|  
-|消息正文|表错误: 对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID，分配单元 ID A_ID (类型为 TYPE)。 页 P_ID2，槽 S_ID2 和页 P_ID3，槽 P_ID3 都指向了位于页 P_ID1，槽 S_ID1，文本 ID TEXT_ID 的行外数据节点。|  
+|消息正文|表错误:对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID，分配单元 ID A_ID (类型为 TYPE)。 页 P_ID2，槽 S_ID2 和页 P_ID3，槽 P_ID3 都指向了位于页 P_ID1，槽 S_ID1，文本 ID TEXT_ID 的行外数据节点。|  
   
 ## <a name="explanation"></a>说明  
  行外数据节点有两条数据或索引记录将其列为子节点。 一个节点只能有一个父节点。  

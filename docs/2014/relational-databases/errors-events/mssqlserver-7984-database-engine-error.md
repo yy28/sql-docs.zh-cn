@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: e3192f56-e4e2-41da-b132-65f1e7540b1a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6808103ef8da1d04d16e4cabc66c0e7af8666c65
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 77e3d8c99c0e2a72723b37f079831e15cdbe85b6
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032026"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86550942"
 ---
 # <a name="mssqlserver_7984"></a>MSSQLSERVER_7984
     
 ## <a name="details"></a>详细信息  
   
-|||  
+|Attribute|值|  
 |-|-|  
 |产品名称|SQL Server|  
 |事件 ID|7984|  
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC2_PRE_CHECKS_BAD_PAGE_TYPE|  
-|消息正文|系统表预检查: 对象 ID O_ID。 页 P_ID 具有意外的页类型 PAGETYPE。 由于不可修复的错误，Check 语句已终止。|  
+|消息正文|系统表预检查:对象 ID O_ID。 页 P_ID 具有意外的页类型 PAGETYPE。 由于不可修复的错误，Check 语句已终止。|  
   
 ## <a name="explanation"></a>说明  
  在指定对象的数据级别中找到了类型不是 DATA_PAGE 的页。 在 DBCC CHECKDB 命令检查的第一个阶段中引发了此错误。 在此阶段中，DBCC CHECKDB 对关键系统基表的数据页执行简单检查。  

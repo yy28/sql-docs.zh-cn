@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 6954ae84-ed0b-4f4c-9d0a-e73f3d71476c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 68f40ac3a566280526757bd8b83c784954ba3dde
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 33302a6bccca3d83ef16172eaac7dcfc156ec3a8
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032799"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551262"
 ---
 # <a name="mssqlserver_5231"></a>MSSQLSERVER_5231
     
 ## <a name="details"></a>详细信息  
   
-|||  
+|Attribute|值|  
 |-|-|  
 |产品名称|SQL Server|  
 |事件 ID|5231|  
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC4_DEADLOCK_SKIPPED_OBJECT|  
-|消息正文|对象 ID O_ID（对象 'NAME'）: 尝试锁定此对象以进行检查时出现死锁。 已跳过此对象，不会处理它。|  
+|消息正文|对象 ID O_ID （对象“NAME”）：尝试锁定此对象以进行检查时出现死锁。 已跳过此对象，不会处理它。|  
   
 ## <a name="explanation"></a>说明  
  在 DBCC 尝试锁定该对象时出现死锁，而且 DBCC 被选作死锁牺牲品。 不会处理该对象。  

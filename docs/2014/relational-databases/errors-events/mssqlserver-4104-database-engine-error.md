@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 52dc32d8-97ad-4ef0-834d-2e68f215d007
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0de7821aa966ecf52eeb214cf5b7fb0fe6eabef2
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 5125fd84b8eed24c957bc3ec2123d545bddc23c8
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85033249"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551492"
 ---
 # <a name="mssqlserver_4104"></a>MSSQLSERVER_4104
     
 ## <a name="details"></a>详细信息  
   
-|||  
+|Attribute|值|  
 |-|-|  
 |产品名称|SQL Server|  
 |事件 ID|4104|  
@@ -32,7 +32,7 @@ ms.locfileid: "85033249"
 |消息正文|无法绑定由多个部分组成的标识符 "%.*ls"。|  
   
 ## <a name="explanation"></a>说明  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中实体的名称称为其“标识符”  。 在引用实体（例如在查询中指定列名和表名）时可以使用标识符。 由多个部分组成的标识符包含一个或多个作为标识符前缀的限定符。 例如，表标识符可能以诸如包含表的数据库和架构的名称之类的限定符作为前缀，而列标识符可能以诸如表名称或表别名之类的限定符作为前缀。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中实体的名称称为其“标识符”。 在引用实体（例如在查询中指定列名和表名）时可以使用标识符。 由多个部分组成的标识符包含一个或多个作为标识符前缀的限定符。 例如，表标识符可能以诸如包含表的数据库和架构的名称之类的限定符作为前缀，而列标识符可能以诸如表名称或表别名之类的限定符作为前缀。  
   
  错误 4104 表示无法将指定的由多个部分组成的标识符映射到现有实体。 在以下情况下可能会返回此错误：  
   

@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: f4a1d0e8-f27f-4cb8-a25d-040b40555dcc
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f21ed9a490eadfbb26375abd187b9f7aecf8722f
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 92d14b196d3237f1eb9812b8b5eece42cdad2037
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032636"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551228"
 ---
 # <a name="mssqlserver_5250"></a>MSSQLSERVER_5250
     
 ## <a name="details"></a>详细信息  
   
-|||  
+|Attribute|值|  
 |-|-|  
 |产品名称|SQL Server|  
 |事件 ID|5250|  
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC4_CRITICAL_DATABASE_PAGE_CORRUPT|  
-|消息正文|数据库错误：数据库 'NAME'（数据库 ID DB_ID）的 PAGE_TYPE 页 P_ID 无效。 无法修复此错误。 您必须通过备份还原。|  
+|消息正文|数据库错误:数据库 NAME（数据库 ID DB_ID）的 PAGE_TYPE 页 P_ID 无效。 无法修复此错误。 您必须通过备份还原。|  
   
 ## <a name="explanation"></a>说明  
  指定数据库中的文件头页或引导页已损坏。  

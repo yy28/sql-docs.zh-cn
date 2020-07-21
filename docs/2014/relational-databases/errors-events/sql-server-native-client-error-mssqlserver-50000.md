@@ -11,24 +11,24 @@ helpviewer_keywords:
 ms.assetid: 5426d87a-d5d9-4984-b211-b07d69e834a2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3cc805042bff7259a311ca3f2acf4c26db59381b
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 9ea7a03ebe05bffee2c3e664bd233b23ea05c764
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85031132"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86550742"
 ---
 # <a name="mssqlserver_50000"></a>MSSQLSERVER_50000
     
 ## <a name="details"></a>详细信息  
   
-|||  
+|Attribute|值|  
 |-|-|  
 |产品名称|SQL Server|  
 |产品版本|11.0|  
 |事件 ID|50000|  
 |事件源|SETUP|  
-|组件|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client{2}|  
+|组件|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client|  
 |符号名称||  
 |消息正文|尝试从文件“%.*ls”中读取内容时出现网络错误。|  
   
