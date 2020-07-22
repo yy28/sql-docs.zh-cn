@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c4d0e649-0abb-4343-a3f0-3a702c8bbbdb
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 77de4f1e1fb5e76316101312f9c30b1b0663f0f0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 24d691b695a326e24a74a6489be33f41cebf9aa1
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85702817"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86556051"
 ---
 # <a name="stmpolyfromwkb-geography-data-type"></a>STMPolyFromWKB（geography 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85702817"
 STMPolyFromWKB ( 'WKB_multipolygon' , SRID )  
 ```  
   
-## <a name="arguments"></a>参数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
  WKB_multipolygon   
  希望返回的 geographyMultiPolygon 实例的 WKB 表示形式  。 WKB_multipolygon 是一个 varbinary(max) 表达式   。  
   

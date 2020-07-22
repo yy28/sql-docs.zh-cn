@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1d71dfd8-9d80-44c3-b6e1-64e99cde1fa0
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: dc24a1ed9998c478b7ca7a272c00d68656a2285e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f9dcc83f9b164f27d50e047792a069b148239872
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762238"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554924"
 ---
 # <a name="stpointfromtext-geometry-data-type"></a>STPointFromText（geometry 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85762238"
 STPointFromText ( 'point_tagged_text' , SRID )  
 ```  
   
-## <a name="arguments"></a>参数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
  point_tagged_text   
  希望返回的 geometryPoint 实例的 WKT 表示形式  。 point_tagged_text 是一个 nvarchar(max) 表达式   。  
   

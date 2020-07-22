@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 21784c66-2725-471b-9e2d-a8c2e3695197
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 67980ca0f7e58a9a3051cfd28d3d120acaabeb47
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2e09d6f8375d1c48ea86a31c632ca2d13273a53a
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736170"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555468"
 ---
 # <a name="convexhullaggregate-geography-data-type"></a>ConvexHullAggregate（geography 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85736170"
 ConvexHullAggregate ( geography_operand )  
 ```  
   
-## <a name="arguments"></a>参数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
  geography_operand   
  表示一组 geography 对象的 geography 类型表列   。  
   

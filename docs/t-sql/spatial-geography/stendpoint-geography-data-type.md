@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8974cd07-8ec4-4126-8fc2-fdcf322ccedd
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 83e7abc5c20e429cdac419241a7f3c02f1ae16ee
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 475b5e99cd7628992e90a2921c0bd726f8f69560
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85703811"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554397"
 ---
 # <a name="stendpoint-geography-data-type"></a>STEndPoint（geography 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85703811"
 .STEndPoint ( )  
 ```  
   
-## <a name="return-types"></a>返回类型  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>返回类型
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography   
   
  CLR 返回类型：SqlGeography   

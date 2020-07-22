@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 48e78948-5b14-41dd-85d1-169bba1c4195
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: a13ae1a62d6a1cac3059f4b149d7d828698202fb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a71683269a23c20531c6e5aba6ad609172d461fd
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762265"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554583"
 ---
 # <a name="stnuminteriorring-geometry-data-type"></a>STNumInteriorRing（geometry 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85762265"
 .STNumInteriorRing ( )  
 ```  
   
-## <a name="return-types"></a>返回类型  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>返回类型
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：int   
   
  CLR 返回类型：SqlInt32   

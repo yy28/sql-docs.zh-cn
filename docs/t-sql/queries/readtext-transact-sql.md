@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 91b69853-1381-4306-8343-afdb73105738
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 516c2c3efefd0c9a1384823b8eb1f6c04abd29c3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3b9ee26c8fcda094228e7bc5a26a4173c8a8d69b
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85705970"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554762"
 ---
 # <a name="readtext-transact-sql"></a>READTEXT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +43,9 @@ ms.locfileid: "85705970"
 READTEXT { table.column text_ptr offset size } [ HOLDLOCK ]  
 ```  
   
-## <a name="arguments"></a>参数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
 _table_ **.** _column_  
 要对其执行读取操作的表和列的名称。 表名和列名必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。 必须指定表名和列名。但是，可根据需要指定数据库名称和数据库所有者名称。  
   

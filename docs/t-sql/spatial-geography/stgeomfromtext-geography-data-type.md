@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3717987b-77d8-4ccf-a1db-5a8016ac1083
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 954711a5e462955c4d006221c13d99f1ccd9229f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 958ac16bf0e42da25cb14a4b69019a88c12d6758
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731087"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555392"
 ---
 # <a name="stgeomfromtext-geography-data-type"></a>STGeomFromText（geography 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,9 @@ ms.locfileid: "85731087"
 STGeomFromText ( 'geography_tagged_text' , SRID )  
 ```  
   
-## <a name="arguments"></a>参数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
  geography_tagged_text   
  要返回的 geography 实例的 WKT 表示形式  。 geography_tagged_text 是一个 nvarchar(max) 表达式   。  
   

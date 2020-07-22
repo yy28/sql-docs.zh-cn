@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7c18f5be-5a29-422e-8ca7-d8a5f38e03f5
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: fd517a8396b9e23eaafa761a7e0511fe6926d21f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c3f4d6e606ba37283fee75da148cfe1a54d3cf00
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762429"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554268"
 ---
 # <a name="stintersects-geometry-data-type"></a>STIntersects（geometry 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85762429"
 .STIntersects ( other_geometry )  
 ```  
   
-## <a name="arguments"></a>参数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
  *other_geometry*  
  将与调用 `STIntersects()` 的实例进行比较的另一个 geometry 实例。  
   

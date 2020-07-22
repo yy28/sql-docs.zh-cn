@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3e3fc065-555a-4bee-8b71-e92f3dc62a4f
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: b78da062fb43d04afb53b8e4743ad222d873fe32
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ec1a8795b6f54a9c4380ab42ddc2bfc341775556
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748716"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554321"
 ---
 # <a name="stcrosses-geometry-data-type"></a>STCrosses（geometry 数据类型）
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85748716"
 .STCrosses ( other_geometry )  
 ```  
   
-## <a name="arguments"></a>参数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
  *other_geometry*  
  将与调用 `STCrosses()` 的实例进行比较的另一个 geometry 实例。  
   

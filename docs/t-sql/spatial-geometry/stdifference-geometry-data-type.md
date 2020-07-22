@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 737f39bb-8750-4ffb-8594-23febc2f1075
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: d3c89b8573f7694093027073199788560f664f31
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e59117b9c94fc06de58201a5857929e152357602
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748695"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555025"
 ---
 # <a name="stdifference-geometry-data-type"></a>STDifference（geometry 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85748695"
 .STDifference ( other_geometry )  
 ```  
   
-## <a name="arguments"></a>参数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
  *other_geometry*  
  另一个 **geometry** 实例，指示要从调用 `STDifference()` 的实例中删除哪些点。  
   

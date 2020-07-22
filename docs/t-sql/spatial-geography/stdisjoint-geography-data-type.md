@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 98328a02-e018-47d6-aa93-de162b8aef62
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 966fba424556a0eb55bc100be376fca735b5620c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fb82d9ff68f8de003d08c8d88caf8e0d06d42b52
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736134"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555162"
 ---
 # <a name="stdisjoint-geography-data-type"></a>STDisjoint（geography 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85736134"
 .STDisjoint ( other_geography )  
 ```  
   
-## <a name="arguments"></a>参数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
  other_geography   
  与对其调用 STDisjoint() 的实例进行比较的其他 geography 实例  。  
   

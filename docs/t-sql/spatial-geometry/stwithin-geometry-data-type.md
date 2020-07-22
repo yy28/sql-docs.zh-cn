@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f845d28c-8029-4e2b-bcf0-71c52a592501
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 48f33e2fbc22a1d2cf9228ca5b7cbdc79d787445
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a3d7d00c901d317fb168d18f8ad81b62c30a8a06
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762124"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554573"
 ---
 # <a name="stwithin-geometry-data-type"></a>STWithin（geometry 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85762124"
 .STWithin ( other_geometry )  
 ```  
   
-## <a name="arguments"></a>参数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
  *other_geometry*  
  将与调用 `STWithin()` 的实例进行比较的另一个 geometry 实例。  
   

@@ -11,16 +11,16 @@ ms.assetid: 9dbe5a21-9335-4f8b-85fd-9da83df79946
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ccfa019be6924659f20b54f32192280fdd6d3faa
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a8b266ae9ac0acb9ff6a4ac357cf3fa3eaabf770
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002167"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555902"
 ---
 # <a name="changing-the-schema-of-a-system-versioned-temporal-table"></a>更改由系统控制版本的时态表的架构
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 使用 **ALTER TABLE** 语句添加、更改或删除列。
 
