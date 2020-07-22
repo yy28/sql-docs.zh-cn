@@ -12,16 +12,16 @@ ms.assetid: f4c44553-0f08-4731-ac47-7534990b8c8d
 author: Lingxi-Li
 ms.author: lingxl
 ms.reviewer: maghan
-ms.openlocfilehash: 985c582b6b04f03a77686d6ad3697a565100ead0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 64f79fc33e3dc5436df4a01e5398d0a262914d48
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762698"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913642"
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Azure Data Lake Store 连接管理器
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 SQL Server Integration Services (SSIS) 包可通过下列两种身份验证类型之一使用 Azure Data Lake Store 连接管理器连接 Azure Data Lake Storage Gen1 帐户：

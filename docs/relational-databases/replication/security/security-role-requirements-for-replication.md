@@ -15,15 +15,15 @@ ms.assetid: b324a80f-4319-4cb2-847b-1910c49d90e0
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: bb98851eb2dc285c6eab404f862992e2c044c9df
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: 85c71b94355aa845dcc15903552bbf77b6e8b206
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86159455"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914321"
 ---
 # <a name="security-role-requirements-for-replication"></a>Security Role Requirements for Replication
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   复制限制用户以用户登录名映射到的角色执行的特定操作。 复制向 **sysadmin** 固定服务器角色、 **db_owner** 固定数据库角色和发布访问列表 (PAL) 中的登录名授予了特定权限。  
   
 ## <a name="security-role-requirements-for-replication-setup"></a>复制设置的安全角色要求  

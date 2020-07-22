@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: e2e482b8-5f90-48c5-93fb-b412ed52659f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 17330bafe2655f0569f0828706d5e29ed2af3812
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2c15c03c5041aeebb2ac46776eb65921f4725bd8
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71285355"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914093"
 ---
 # <a name="connect-to-azure-blob-storage-sql-server-import-and-export-wizard"></a>连接到 Azure Blob 存储（SQL Server 导入和导出向导）
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 本主题介绍如何从 SQL Server 导入和导出向导的“选择数据源”或“选择目标”页连接到 Azure Blob 存储数据源    。

@@ -9,16 +9,16 @@ ms.topic: quickstart
 ms.assetid: ea3db39b-698b-4a74-8eb8-21dc7252dc1a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 40b71d77727435316c2595abba6db70119d4b152
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 58225c6728915c5b9dcd73937b2bd645bd08950f
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71285219"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86910094"
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>导入和导出向导的简单示例入门
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 通过浏览常见方案 - 从 Excel 电子表中将数据导入 SQL Server 数据库，了解 SQL Server 导入和导出向导中的内容。 即使计划使用其他源和目标，也可通过本主题最大程度地了解所需的向导相关内容。

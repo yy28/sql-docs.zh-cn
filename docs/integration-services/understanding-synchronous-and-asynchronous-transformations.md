@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 0bc2bda5-3f8a-49c2-aaf1-01dbe4c3ebba
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 81ce27c94fbad5e326f636bfcefb633dbf5ebc52
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1c2748384a8ea4901a21ffa94498da5405043227
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296481"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913708"
 ---
 # <a name="understanding-synchronous-and-asynchronous-transformations"></a>了解同步和异步转换
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   若要了解 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中同步转换与异步转换之间的区别，最好先了解同步转换。 如果同步转换无法满足您的需要，您的设计可能需要异步转换。  

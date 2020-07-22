@@ -11,16 +11,16 @@ f1_keywords:
 ms.assetid: fbf0aa37-fd9e-47e1-82b4-26c1359ec3da
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a945c51a5ba75c20a0925a4f548d98765379459b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2e37b76232b76590593c384da8e83bc099ce6c11
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296365"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913336"
 ---
 # <a name="complete-the-wizard-sql-server-import-and-export-wizard"></a>完成该向导（SQL Server 导入和导出向导）
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 指定是否要立即运行复制操作并选择性地保存该包后，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导会显示“完成该向导”  。 在此页面上，将查看你在向导中所做的选择，然后单击“完成”以启动复制操作。 

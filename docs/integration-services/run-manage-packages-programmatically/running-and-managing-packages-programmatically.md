@@ -10,16 +10,16 @@ ms.topic: reference
 ms.assetid: 1a08c75e-ce8c-45ee-81bd-32248bbdb2b2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6e2af58481babf1ba9e19465a67c530275db0402
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6d1b837a2271a74cb577ebd318a815eeb632dd66
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295688"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913283"
 ---
 # <a name="running-and-managing-packages-programmatically"></a>以编程方式运行和管理包
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   如果您需要在开发环境之外管理和运行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包，可以采用编程方式对包进行操作。 如果采用这种方法，则您有多种选择：  
@@ -32,14 +32,14 @@ ms.locfileid: "71295688"
   
  您可以只编写几行代码，从客户端应用程序加载和运行现有包。  
   
- 本节介绍并演示如何以编程方式运行现有包，以及如何从其他应用程序访问数据流的输出。 作为高级编程选项，可以按照[以编程方式生成包](../../integration-services/building-packages-programmatically/building-packages-programmatically.md)主题中的说明，已编程方式逐行创建 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。  
+ 本节介绍并演示如何以编程方式运行现有包，以及如何从其他应用程序访问数据流的输出。 作为高级编程选项，可以按照[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]以编程方式生成包[主题中的说明，已编程方式逐行创建 ](../../integration-services/building-packages-programmatically/building-packages-programmatically.md) 包。  
   
  本节还讨论其他可以用编程方式执行的管理任务，用于管理存储的包、正在运行的包和包角色。  
   
 ## <a name="running-packages-on-the-integration-services-server"></a>在 Integration Services 服务器上运行包  
  将包部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器时，可以使用 <xref:Microsoft.SqlServer.Management.IntegrationServices> 命名空间以编程方式运行包。 使用 .NET Framework 3.5 编译 Microsoft.SqlServer.Management.IntegrationServices 程序集。 如果您正在生成 .NET Framework 4.0 应用程序，可能需要将程序集引用直接添加到项目文件。  
   
- 您还可以使用该命名空间在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器上部署和管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。 有关命名空间和代码片段的概述，请参阅 blogs.msdn.com 上的博客文章 [SSIS 目录托管对象模型一瞥](https://go.microsoft.com/fwlink/?LinkId=253122)。  
+ 您还可以使用该命名空间在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器上部署和管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。 有关命名空间和代码片段的概述，请参阅 blogs.msdn.com 上的博客文章 [SSIS 目录托管对象模型一瞥](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892)。  
   
 ## <a name="in-this-section"></a>本节内容  
  [了解本地执行与远程执行之间的差异](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)  

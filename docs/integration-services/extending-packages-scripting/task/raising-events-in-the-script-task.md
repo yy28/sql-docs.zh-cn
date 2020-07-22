@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: 21ea07d1-e267-4fb1-a6cc-82c95a39beae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f213a9eb8375f05967700a6aeec81bae5e41ec1d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fa645e56314e460a70e9ee5c95fb02cecb8cc1e3
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71286050"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913194"
 ---
 # <a name="raising-events-in-the-script-task"></a>在脚本任务中引发事件
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   事件提供向包含包报告错误、警告和其他信息（如任务进度或状态）的方式。 包为管理事件通知提供事件处理程序。 脚本任务可通过对 Dts 对象的 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A> 属性调用方法来引发事件  。 有关 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包如何处理事件的详细信息，请参阅 [Integration Services (SSIS) 事件处理程序](../../../integration-services/integration-services-ssis-event-handlers.md)。  

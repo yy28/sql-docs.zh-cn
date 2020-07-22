@@ -19,15 +19,15 @@ ms.assetid: 3a409c2c-b77e-4001-b81a-1dcd918618ec
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 824e5c768ab36b7af5d228e5879eae4f05916051
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: 23803485a7734bf9f077aa70d136e8730055ccd0
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86159755"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913196"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>在复制监视器中设置阈值和警告
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制监视器显示发布和订阅的状态信息。 默认情况下，复制监视器只为未初始化的订阅显示警告，但是，您可以为其他情况启用警告。 建议您对拓扑启用警告，以便及时获悉有关状态和性能的信息。  
   
  启用警告时，需要指定阈值。 达到或超过该阈值时，将显示警告（除非需要显示更高优先级的问题）。 除了在复制监视器中显示警告之外，达到阈值也可以触发警报。 您可以为下列情况启用警告：  

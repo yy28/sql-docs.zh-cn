@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: e7a37b93-6d1d-42d5-9a65-de1790abf6a5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 198a1161d6af7f1b57f9480b3d00cd8dec3436d1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: baed2f92c1419731aec68ce8def41007842f7d9a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297428"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913219"
 ---
 # <a name="replicate-ssis-expression"></a>REPLICATE（SSIS 表达式）
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   返回多次复制后的字符表达式。 *times* 参数的计算结果必须为整数。  

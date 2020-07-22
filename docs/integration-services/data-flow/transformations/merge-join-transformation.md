@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: cd8b0412-f83b-4bd2-b227-e53dcfd941a8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f963a3f8bf82ed3de76e31b6872ac6475d6dfd83
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8aaed0cb230867a7eb7b7ad640e9535975dd34d9
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297842"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86906147"
 ---
 # <a name="merge-join-transformation"></a>Merge Join Transformation
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   合并联接转换提供了一个输出，该输出是通过使用 FULL、LEFT 或 INNER 联接将两个已排序数据集进行联接而生成的。 例如，可使用 LEFT 联接来联接包含产品信息的表与列出产品的制造国家/地区的表。 结果是一个列出所有产品及其产地国家/地区的表。  

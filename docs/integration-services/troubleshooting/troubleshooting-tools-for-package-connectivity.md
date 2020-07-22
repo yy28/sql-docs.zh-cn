@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 08a019f5-8ba7-4527-97c1-e9846d4022ff
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 70e53f37056357fbaff315d6cd432b2171eb478b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6be13d4e6ef84b22a50368e3818af6231a7a04e2
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295062"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913733"
 ---
 # <a name="troubleshooting-tools-for-package-connectivity"></a>包连接故障排除工具
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括一些功能和工具，您可以利用它们对在包和包从其提取和加载数据的数据源之间的连接进行故障排除。  

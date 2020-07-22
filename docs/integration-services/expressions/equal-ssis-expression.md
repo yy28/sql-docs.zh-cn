@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 36fd2354-7b93-4c95-9cf3-51ee24568950
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 106dba74e37f79e2f2e3811d97c108a56ae716cd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5a8e26da00bf530052b1ae7f342d40f922a71d25
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71289727"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86910737"
 ---
 # <a name="-equal-ssis-expression"></a>==（等于）（SSIS 表达式）
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   执行比较来确定两个表达式是否相等。 在执行比较前表达式计算器会自动转换多种数据类型。 有关详细信息，请参阅 [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md)。  

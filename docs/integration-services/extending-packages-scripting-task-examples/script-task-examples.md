@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: b0dd77ee-ee11-4cd9-87aa-61dd67f2fe1c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4994edf3598bdaf551c0401edb37ded69952db7f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fa626ad14f1b7f467c84557ea22fcd12d95b3ca3
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297023"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914108"
 ---
 # <a name="script-task-examples"></a>脚本任务示例
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   脚本任务是一个多用途工具，您可以在包中使用该工具以满足 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 附带的任务无法满足的几乎所有要求。 本主题列出了用于演示一些可用功能的脚本任务代码示例。  

@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 908bf2ac-fc84-4af8-a869-1cb43573d2df
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bfb94694f52ad27067dcff4f230a323143b07681
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 81ddd87771738659b99d29cda2e4ee35d92ff01d
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297258"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86903693"
 ---
 # <a name="developing-a-user-interface-for-a-custom-connection-manager"></a>为自定义连接管理器开发用户界面
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   重写基类的属性和方法的实现以提供自定义功能后，您可能需要为连接管理器创建自定义用户界面。 如果未创建自定义用户界面，用户只能使用“属性”窗口配置连接管理器。  

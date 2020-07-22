@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 050e8455-2ed0-4b6d-b3ea-4e80e6c28487
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ddc6240dbf0bf2ea0d6b8548763d25b6bc12126c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 08eaa7d908f421ec3dd4e321e47985f8d7dd6c04
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71287219"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86902257"
 ---
 # <a name="creating-a-custom-foreach-enumerator"></a>创建自定义 Foreach 枚举器
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   创建自定义 foreach 枚举器的步骤与创建其他任何 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 自定义对象的步骤相似。  

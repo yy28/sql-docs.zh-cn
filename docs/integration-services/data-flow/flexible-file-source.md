@@ -12,16 +12,16 @@ f1_keywords:
 - sql14.dts.designer.afpextfilesrc.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bdebcba1d6313c1e8c6363faa147a3e6a275e9dc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 996ee931207979b8741706673cdbf1ee02520613
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292399"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86912343"
 ---
 # <a name="flexible-file-source"></a>灵活的文件源
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 借助“灵活的文件源”组件，SSIS 包可读取各种受支持存储服务中的数据  。
 当前支持的存储服务为

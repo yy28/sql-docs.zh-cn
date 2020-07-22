@@ -11,16 +11,16 @@ f1_keywords:
 ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a16e270acae2a2685bcaf53045883eaa078ab03d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 144476d52d8577d59691a42b12a276f5cfc080b2
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71285933"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913363"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>列映射（SQL Server 导入和导出向导）
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   选择现有表和视图进行复制或查看提供的查询之后，如果单击“编辑映射”  ，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导会显示“列映射”  对话框。 在此页上，可指定并配置目标列以接收从源列复制的数据。 通常无需在此页上进行任何更改。

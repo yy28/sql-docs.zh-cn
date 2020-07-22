@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 586dd799-f383-4d6d-b1a1-f09233d14f0a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 98333f81a1e7c50434936c2df958da21366c6e9d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ac2db997c49df1ef482ab6b9dba5647426eb7bb3
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296988"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913434"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>在脚本组件编辑器中配置脚本组件
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   在脚本组件中编写自定义代码之前，必须选择要创建的数据流组件的类型：源、转换或目标，然后在“脚本转换编辑器”中配置组件的元数据和属性  。  

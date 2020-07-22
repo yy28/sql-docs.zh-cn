@@ -10,16 +10,16 @@ ms.topic: language-reference
 ms.assetid: b1a57d5e-3f03-4901-8b2b-bb8b371b595b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7e73f5f38ea1253a933d0f27221c41136b1a6315
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 2640a8a44472036b564a926a9f613cefead1922c
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053656"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86912949"
 ---
 # <a name="catalogrename_customized_logging_level"></a>catalog.rename_customized_logging_level 
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
   重命名现有的自定义日志记录级别。 有关自定义日志记录级别的详细信息，请参阅 [Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)。  
   

@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9c0e005ee8dbb1c01cdaf5d3af031fd9ffba31ac
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 50e6319c78bedccb0b34cd48a2d09e6b6cc0ba3a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71288259"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913494"
 ---
 # <a name="syntax-ssis"></a>语法 (SSIS)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 表达式语法与 C 和 C# 语言使用的语法类似。 表达式可包括多种元素，例如标识符（列和变量）、文字、运算符和函数。 本主题概述了表达式计算器语法在应用于不同的表达式元素时的特殊要求。  

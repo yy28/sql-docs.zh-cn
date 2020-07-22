@@ -9,16 +9,16 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: eced263351bc6c9add5fbd46894c08ccc65fb2be
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 6260504afcaabfefb6de7e6f262aa475479cf487
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196067"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913735"
 ---
 # <a name="oracle-source"></a>Oracle 源
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 Oracle 源从 Oracle Database 中提取数据，模式如下：
 

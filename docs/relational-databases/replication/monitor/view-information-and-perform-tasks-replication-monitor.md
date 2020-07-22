@@ -16,15 +16,15 @@ ms.assetid: 92e28a07-d6a7-461b-a0b3-bd9bc6afcbe5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: be851d2ff0919125699a4e33c4b4d1d6445c0fc6
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: b359aff3a8164c9d25782b0b10c05f1b68ac5230
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86159625"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86908856"
 ---
 # <a name="view-information-and-perform-tasks-using-replication-monitor"></a>使用复制监视器查看信息和执行任务
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
 复制监视器提供大量选项卡和选项，用于查看信息和执行各种任务。 本文介绍使用复制监视器时可以查看和完成的各种事项。 
 
 

@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: briancarrig
 ms.author: brcarrig
-ms.openlocfilehash: 0c71bda5a459c7993de824cdb6665978ba57166f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1ac71b9cf171e66486c40310bfd8be0e7bc6ae91
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892466"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86911333"
 ---
 # <a name="in-memory-database-systems-and-technologies"></a>内存中数据库系统和技术
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 本页面旨在用作 SQL Server 中的内存中功能和技术的参考页面。 内存中数据库系统的概念是指利用新式数据库系统中可用的更大内存容量的数据库系统。 内存中数据库本质上可以是关系数据库或非关系数据库。
 
@@ -36,19 +36,19 @@ ms.locfileid: "85892466"
 
 ## <a name="hybrid-buffer-pool"></a>混合缓冲池
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 [混合缓冲池](../database-engine/configure-windows/hybrid-buffer-pool.md)通过 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 为驻留在适用于 Windows 和 Linux 平台的可字节寻址的永久内存存储设备上的数据库文件扩展缓冲池。
 
 ## <a name="memory-optimized-tempdb-metadata"></a>内存优化 `tempdb` 元数据
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 引入了一个新功能，即[内存优化 tempdb 元数据](./databases/tempdb-database.md#memory-optimized-tempdb-metadata)，它有效地消除了某些争用瓶颈，并为 tempdb 繁重的工作负载解锁了新级别的可伸缩性。
 
 ## <a name="in-memory-oltp"></a>内存中 OLTP
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 [内存中 OLTP](./in-memory-oltp/in-memory-oltp-in-memory-optimization.md) 是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../includes/sssds-md.md)] 中用于优化事务处理、数据引入、数据加载和瞬态数据方案性能的数据库技术。
 

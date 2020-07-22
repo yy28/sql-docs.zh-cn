@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 404ecab7-7698-447b-93d6-dd256beb11ff
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 02cb2a76fdf24837546e8fc29326db79c8b2c977
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 004e697e4d890b615f078e4005f18bdbf4fc5417
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294906"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914023"
 ---
 # <a name="connecting-data-flow-components-programmatically"></a>以编程方式连接数据流组件
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   将组件添加到数据流任务后，连接这些组件以创建表示从源通过转换到目标的数据流的执行树。 使用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> 对象连接数据流中的组件。  

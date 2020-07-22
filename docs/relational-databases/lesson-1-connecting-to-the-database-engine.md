@@ -10,15 +10,15 @@ ms.topic: quickstart
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 87bdd407e59a1c019e2878971d3044deb777755b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2f75bd6226c66b77a9933cf083123c5725f57aa5
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725209"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86900001"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>第 1 课：连接到数据库引擎
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 安装 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]时，安装哪些工具取决于版本和您的安装选择。 本课将介绍主要的工具以及如何连接并执行一项基本功能（授权多个用户）。  
 

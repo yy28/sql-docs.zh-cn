@@ -22,15 +22,15 @@ ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 85fc251c57e9f5572dfc192e0e83c8e1611a3745
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: 47ce98ee7bb1e4cacc82b2125c0da08f5487c444
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86159715"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86902080"
 ---
 # <a name="enhance-general-replication-performance"></a>增强常规复制性能
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   按照本主题介绍的指导原则，可以提高应用程序和网络上的所有复制类型的常规性能。  
   
 ## <a name="server-and-network"></a>服务器和网络  

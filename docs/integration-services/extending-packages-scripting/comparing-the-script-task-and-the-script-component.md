@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 4b73753a-4239-491b-b7a6-abc63ba83d2d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e253e6a4e19982e5350161cde00bc7609ed7380d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 808e2fa48eee5deb6d9e612a1c2dd57e5d5b7813
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297011"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913459"
 ---
 # <a name="comparing-the-script-task-and-the-script-component"></a>比较脚本任务和脚本组件
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   脚本任务在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 设计器的“控制流”窗口中，脚本组件在“数据流”窗口中，它们在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中的用途非常不同。 任务是一般用途的控制流工具，而组件用作数据流中的源、转换或目标。 尽管它们的用途不同，但是脚本任务和脚本组件在所使用的编码工具和在包中供开发人员使用的对象方面还是有一些相似之处的。 了解它们的相似与不同之处有助于您更有效地使用任务和组件。  

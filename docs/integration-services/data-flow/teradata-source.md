@@ -9,16 +9,16 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f8eba07362ac5780d1d7790d5553aaa397b7847e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 16c534788803c2c29fc36817fb63e112c8c84b1f
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75245090"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86912333"
 ---
 # <a name="connect-to-the-teradata-source"></a>连接到 Teradata 源
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 Teradata 源使用以下内容从 Teradata 数据库提取数据：
 - 表或视图。

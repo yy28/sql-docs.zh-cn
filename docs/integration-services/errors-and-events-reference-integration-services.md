@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: cf4f0f14-8087-42d7-9b67-e4929228abd6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 64e805e5dd9b334afe252e2c1d43685e9c92b95f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4a35fad106dfac49d0e2f227c506658d91c420b2
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71290624"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914393"
 ---
 # <a name="errors-and-events-reference-integration-services"></a>错误和事件参考 (Integration Services)
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   本节包含与 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]有关的多个错误和事件的相关信息。 其中包括错误消息的原因和解决方法信息。  

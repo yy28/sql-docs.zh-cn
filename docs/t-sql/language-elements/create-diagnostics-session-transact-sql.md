@@ -12,12 +12,12 @@ ms.assetid: 662d019e-f217-49df-9e2f-b5662fa0342d
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0d4148e002ba84677e13e101a4830f0b6da10915
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1c7d3419d7dfe087dfbae8ce11d8afd68f461892
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68088974"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914043"
 ---
 # <a name="create-diagnostics-session-transact-sql"></a>CREATE DIAGNOSTICS SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68088974"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 Creating a new diagnostics session:  
 CREATE DIAGNOSTICS SESSION diagnostics_name AS N'{<session_xml>}';  
   
@@ -55,7 +55,9 @@ Removing results for a diagnostics session:
 DROP DIAGNOSTICS SESSION diagnostics_name ;  
 ```  
   
-## <a name="arguments"></a>参数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
  diagnostics_name   
  诊断会话的名称。 诊断会话名称只能包含 a-z、A-Z 和 0-9 的字符。 此外，诊断会话名称必须以字符开头。 diagnostics_name 限制在 127 个字符以内  。  
   
@@ -63,7 +65,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
  要在视图中保留的事件数。 例如，如果指定 100，则将在诊断会话中保留 100 个匹配筛选条件的最新事件。 如果找到的匹配事件少于 100 个，则诊断会话将包含少于 100 个事件。 max_item_count_num 必须至少为 100 且小于或等于 100,000  。  
   
  event_name   
- 定义要在诊断会话中收集的实际事件。  event_name 是 [sys.pdw_diag_events](../../relational-databases/system-catalog-views/sys-pdw-diag-events-transact-sql.md)（其中 `sys.pdw_diag_events.is_enabled='True'`）中列出的事件之一。  
+ 定义要在诊断会话中收集的实际事件。  event_name 是 *sys.pdw_diag_events*（其中 [）中列出的事件之一](../../relational-databases/system-catalog-views/sys-pdw-diag-events-transact-sql.md)`sys.pdw_diag_events.is_enabled='True'`。  
   
  filter_property_name   
  基于其限制结果的属性名称。 例如，如果想要基于会话 ID 实施限制，则 filter_property_name 应为 SessionId   。 有关 filter_property_name 的可能值的列表，请参阅下面的 property_name   。  

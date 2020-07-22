@@ -10,16 +10,16 @@ ms.topic: language-reference
 ms.assetid: 0aec1e34-f30b-4e5f-bba1-c26665cf2da6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b7239a3ce8d5995320c5b5546b38e82e1b9c4282
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 2d7db61c085f6ac085ce0585428d43cffcdb66cd
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053733"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913118"
 ---
 # <a name="catalogdelete_customized_logging_level"></a>catalog.delete_customized_logging_level 
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
   删除现有的自定义日志记录级别。 有关自定义日志记录级别的详细信息，请参阅 [Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)。  
   

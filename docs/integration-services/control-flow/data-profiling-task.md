@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 309fb584db245ee3da6b67e475a4881347f39bd5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e8076ccc258b7de7075bafc9f0a0f5c9bed6d6a0
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294211"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914821"
 ---
 # <a name="data-profiling-task"></a>数据事件探查任务
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   数据事件探查任务计算的各种配置文件可帮助您熟悉数据源并找出数据中要修复的问题。  

@@ -14,15 +14,15 @@ ms.assetid: fa36c4b4-bfa5-494e-92e3-07a02d7332c3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 5b3b3eb54bb02491aab2491227748fdff2867124
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: 08857f964f652c5663cda32ce442cf34e201c80c
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86159975"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86907213"
 ---
 # <a name="add-and-remove-publishers-from-replication-monitor"></a>从复制监视器中添加和删除发布服务器
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   如果从中启动复制监视器的服务器是发布服务器，则会自动将其添加到监视器中。 其他发布服务器可以通过 **“添加发布服务器”** 对话框来添加。 添加发布服务器后，该服务器便会显示在监视器左窗格中的某个组中。 默认情况下，包括 **“我的发布服务器”** 组，但还可以创建新组来管理一个或多个复制拓扑。 有关启动复制监视器的信息，请参阅[启动复制监视器](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
   
 ### <a name="to-add-a-sql-server-publisher"></a>添加 SQL Server 发布服务器  

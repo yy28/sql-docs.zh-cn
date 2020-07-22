@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: dfc09f71-7037-4cd5-a3cd-c79f8c714e22
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d964639bbcf7679c71191d4b3a8e2a455a4635e8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 37b453c91ce19289aa2f8b8684c163dc0fc638a0
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298553"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913964"
 ---
 # <a name="use-the-new-instance-wizard"></a>使用新建实例向导
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   “新建实例”向导用于为 CDC 服务创建新实例。 您从 CDC 设计器控制台打开“创建 Oracle CDC 实例”向导。 您可以在“新建实例”向导中执行以下操作。  
