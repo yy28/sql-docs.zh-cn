@@ -25,12 +25,12 @@ ms.assetid: 0e09d210-6f23-4129-aedb-3d56b2980683
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b6d76789908699653981077214f4df5e85bdc648
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 84f0dd9a38f118d71ca7417e2a241a03426e6753
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998892"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86483538"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -56,8 +56,10 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
      [ WITH NO_INFOMSGS ]   
 [;]  
 ```  
-  
-## <a name="arguments"></a>参数  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
  ( { plan_handle | sql_handle | pool_name } )     
 plan_handle 用于唯一标识已执行并且其计划驻留在计划缓存中的批处理的查询计划  。 plan_handle 为 varbinary(64)，可以从下列动态管理对象中获得计划句柄   ：  
  -   [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  

@@ -1,5 +1,5 @@
 ---
-title: DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL) | Microsoft Docs
+title: DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)
 ms.custom: ''
 ms.date: 07/03/2019
 ms.prod: sql
@@ -12,12 +12,12 @@ ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: f6821ae2ee11a6cd8e5713996cc04b3330a63300
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 946be938c591ce53a564bb96741681527c2734e6
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632323"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485220"
 ---
 # <a name="dbcc-showresultcachespaceused-transact-sql"></a>DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)
 
@@ -49,7 +49,6 @@ DBCC SHOWRESULTCACHESPACEUSED
 |data_space|bigint|用于数据的空间，单位为 KB。|  
 |index_space|bigint|用于索引的空间，单位为 KB。|  
 |unused_space|bigint|保留空间中未使用的空间，单位为 KB。|  
-
 
 ## <a name="see-also"></a>另请参阅
 

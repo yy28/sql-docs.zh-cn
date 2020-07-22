@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: fb804fa2-48eb-4878-a12f-4e0d5f4bc9e3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ade19ba855f4a11bcc354959865f9bc33416240e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5fb4e378dcba2a125c569d8fa96a1d279e88d724
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881937"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484543"
 ---
 # <a name="create-service-transact-sql"></a>CREATE SERVICE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,7 +45,9 @@ CREATE SERVICE service_name
 [ ; ]  
 ```  
   
-## <a name="arguments"></a>参数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
  service_name   
  要创建的服务的名称。 新服务在当前数据库中创建，由 AUTHORIZATION 子句中指定的主体数据库所有。 不能指定服务器、数据库和架构名称。 service_name 必须是有效的 sysname   。  
   

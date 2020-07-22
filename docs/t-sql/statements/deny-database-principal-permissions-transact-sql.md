@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: e2429a5d-e9be-4c05-be20-414d1038a63a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 10da9d407308c9ffe4a076378ca9f82b41ebc852
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4095c5fcfebdcaa531fc621684b95f4b1598142d
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85766707"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484813"
 ---
 # <a name="deny-database-principal-permissions-transact-sql"></a>DENY 数据库主体权限 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -67,7 +67,9 @@ DENY permission [ ,...n ]
   | Database_user_with_no_login   
 ```  
   
-## <a name="arguments"></a>参数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
  permission  
  指定可以拒绝的对数据库主体的权限。 有关权限的列表，请参阅本主题后面的“备注”部分。  
   
