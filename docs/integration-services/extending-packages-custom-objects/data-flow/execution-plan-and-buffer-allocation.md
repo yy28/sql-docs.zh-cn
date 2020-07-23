@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: 679d9ff0-641e-47c3-abb8-d1a7dcb279dd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: dba5ae3bf996f469f18a9802dd8cc8232a5bc885
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 08a6b6b3e557b11cac28201b5dd246d296e6b15c
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297241"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916156"
 ---
 # <a name="execution-plan-and-buffer-allocation"></a>执行计划和缓冲区分配
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   在执行之前，数据流任务会先检查其组件，并为每一个组件序列生成一个执行计划。 本节提供有关执行计划、如何查看执行计划以及如何基于执行计划分配输入和输出缓冲区的详细信息。  

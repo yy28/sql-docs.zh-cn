@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 844b0a958b241de985a22067b4e3175137e1c6bb
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: 86ef2c561979d7f2578863f35366ee33cb21dcdc
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087407"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915868"
 ---
 # <a name="install-integration-services-ssis"></a>安装 Integration Services (SSIS)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了单个安装程序来安装其包括 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 在内的任一组件或所有组件。 使用安装程序，可以在单台计算机上安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 或将其与其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件一起安装。
 

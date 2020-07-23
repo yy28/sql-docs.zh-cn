@@ -20,12 +20,12 @@ ms.assetid: 607c296f-8a6a-49bc-975a-b8d0c0914df7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cec953dc8bbb6f0baf51f996306f7a960ebc2fdd
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b3bbb0c09f819e686185f65dab28123b95f6e2f6
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007634"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915453"
 ---
 # <a name="set-operators---union-transact-sql"></a>集运算符 - UNION (Transact-SQL)
 
@@ -58,7 +58,9 @@ UNION 操作不同于 [JOIN](../queries/from-transact-sql.md) 操作 ：
   [ ...n ] }
 ```  
   
-## <a name="arguments"></a>参数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
 \<query_specification> | ( \<query_expression> )：查询规范或查询表达式，用于返回要与另一个查询规范或查询表达式所返回的数据合并的数据。 属于 UNION 运算的列定义不一定要相同，但必须可通过隐式转换实现兼容。 如果数据类型不同，则根据[数据类型优先级](../../t-sql/data-types/data-type-precedence-transact-sql.md)规则确定所产生的数据类型。 如果类型相同，但精度、确定位数或长度不同，那么结果以相同的表达式合并规则为依据。 有关详细信息，请参阅[精度、小数位数和长度 (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)。  
   
 xml 数据类型的列必须相等。 所有的列必须类型化为 XML 架构或是非类型化的。 如果要类型化，这些列必须类型化为相同的 XML 架构集合。  

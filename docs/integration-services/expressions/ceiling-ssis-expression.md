@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: c35bd4ee-1ab6-46ab-89a7-cf771527faa2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a50fd15830d3509cd086ad4b62938658e1866494
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: eb62380f0c779ee96a4bd305e8892418b4171077
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297679"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916449"
 ---
 # <a name="ceiling-ssis-expression"></a>CEILING（SSIS 表达式）
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   返回大于或等于数值表达式的最小整数。  

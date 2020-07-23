@@ -10,16 +10,16 @@ ms.topic: tutorial
 ms.assetid: 5c95ce51-e0fe-4fc5-95eb-2945929f2b13
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e95b86d2d29bb3883f6fd76db29f17e5936d1b53
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 44750102897653d8ec1329e66ecf3fc78165db79
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71283691"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917357"
 ---
 # <a name="lesson-1-5-add-and-configure-the-flat-file-source"></a>第 1-5 课：添加和配置平面文件源
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 在此任务中，向包中添加一个平面文件源并对其进行配置。 平面文件源是使用由平面文件连接管理器定义的元数据的数据流组件。 此元数据指定转换过程要从平面文件提取的数据的格式和结构。 平面文件源使用平面文件连接管理器中的格式定义从单个平面文件中提取数据。  
