@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b8a584ea-2a26-4936-965b-b84f026e39c0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 462fe9e3634ea1dfa844fe4a97f1086bdef82cba
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f83d85ab2a79a4f5f27143de655f7748fe7f0fd4
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716362"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915272"
 ---
 # <a name="sp_addsubscriber-transact-sql"></a>sp_addsubscriber (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
 
   向发布服务器添加新的订阅服务器，使其能够接收发布。 对于快照和事务发布，此存储过程在发布服务器的发布数据库中执行；对于使用远程分发服务器的合并发布，此存储过程在分发服务器执行。  
   
@@ -59,7 +59,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
     [ , [ @publisher = ] 'publisher' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @subscriber = ] 'subscriber'`要作为有效订阅服务器添加到此服务器上的发布的服务器的名称。 *订阅服务器*的**sysname**，无默认值。  
   
 `[ @type = ] type`订阅服务器的类型。 *类型*为**tinyint**，可以是下列值之一。  
@@ -101,13 +101,13 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
   
 `[ @frequency_type = ] frequency_type`用于计划复制代理的频率。 *frequency_type*为**int**，可以是下列值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**1**|一次性|  
 |**2**|按需|  
 |**4**|每天|  
 |**8**|每周|  
-|**16**|每月|  
+|**16**|每月一次|  
 |**32**|与“每月”选项相关|  
 |**64** （默认值）|自动启动|  
 |**128**|重复执行|  
@@ -122,10 +122,10 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`复制代理的日期。 如果*frequency_type*设置为**32** （每月相对），则使用此参数。 *frequency_relative_interval*为**int**，可以是下列值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
-|**1** （默认值）|First|  
-|**2**|秒|  
+|**1** （默认值）|第一个|  
+|**2**|Second|  
 |**4**|第三个|  
 |**8**|第四个|  
 |**16**|最后一个|  
@@ -140,10 +140,10 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
   
 `[ @frequency_subday = ] frequency_subday`在定义的时间段内重新计划的频率。 *frequency_subday*为**int**，可以是下列值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**1**|一次|  
-|**2**|秒|  
+|**2**|Second|  
 |**4** （默认值）|Minute|  
 |**8**|小时|  
   
@@ -203,7 +203,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
  只有**sysadmin**固定服务器角色的成员才能**sp_addsubscriber**执行。  
   
 ## <a name="see-also"></a>另请参阅  
- [创建推送订阅](../../relational-databases/replication/create-a-push-subscription.md)   
+ [ssSDSFull](../../relational-databases/replication/create-a-push-subscription.md)   
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [sp_changesubscriber &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
  [sp_dropsubscriber &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   

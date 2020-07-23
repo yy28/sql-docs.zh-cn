@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: cf2887fb779fbe66556c4b45098cba41b8128b44
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 60271f810de7d577bebdaac4ed0ceb6e48c08d68
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669407"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971770"
 ---
 # <a name="data-mining-extensions-dmx-operator-reference"></a>数据挖掘扩展插件 (DMX) 运算符参考
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   中的数据挖掘扩展插件（DMX）语言 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支持算术、赋值、比较、逻辑和一元运算符。 下表列出了 DMX 支持的运算符。  
   

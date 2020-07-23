@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0156d12fe2d3d3f62105dccf05f99c2eebab8833
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: e3e4e9a4d929d9533b10d87654f685e45dafd238
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670136"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970496"
 ---
 # <a name="select-from-ltmodelgt-prediction-join-dmx"></a>选择 &lt; 模型 &gt; 预测联接（DMX）
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   使用挖掘模型来预测外部数据源中的列状态。 此**预测联接**语句将源查询中的每个事例与该模型匹配。  
   
@@ -56,8 +56,8 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
  *expression*  
  可选。 一个返回标量值的表达式。  
   
-## <a name="remarks"></a>注解  
- ON 子句定义了源查询中的列与挖掘模型中的列之间的映射。 该映射用于将源查询中的列定向到挖掘模型中的列，这样便可将这些列用作输入以便创建预测。 \<*联接映射列表*中的列> 通过使用等号（=）进行关联，如下面的示例中所示：  
+## <a name="remarks"></a>备注  
+ ON 子句定义了源查询中的列与挖掘模型中的列之间的映射。 该映射用于将源查询中的列定向到挖掘模型中的列，这样便可将这些列用作输入以便创建预测。 中的列 \<*join mapping list*> 是使用等号（=）相关的，如下面的示例中所示：  
   
 ```  
 [MiningModel].ColumnA = [source data query].Column1 AND   
@@ -69,7 +69,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
  用于预测联接的源查询可以是表，也可以是单独查询。  
   
- 您可以在 "选择表达式" 列表中指定不返回表表达式 \< *select expression list*> 和 \< *条件表达式*> 的预测函数。  
+ 您可以指定不在和中返回表表达式的预测函数 \<*select expression list*> \<*condition expression*> 。  
   
  **自然预测联接**自动将源查询中的列名称与模型中的列名称相匹配。 如果使用**自然预测**，则可以省略 ON 子句。  
   

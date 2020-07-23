@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f4f4cd71f7ecfaa0f8221f599a2814c153af97be
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: ace89ae45aff0e740691025d2039213cfacebff9
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669873"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971825"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   创建基于现有挖掘结构的新挖掘模型。  当您使用**ALTER 挖掘 STRUCTURE**语句创建新的挖掘模型时，该结构必须已存在。 相反，在使用语句时， [&#40;DMX&#41;创建挖掘模型](../dmx/create-mining-model-dmx.md)，则可以创建一个模型并同时自动生成其基础挖掘结构。  
   
@@ -55,7 +55,7 @@ USING <algorithm> [(<parameter list>)]
  由提供程序定义的数据挖掘算法的名称。  
   
 > [!NOTE]  
->  可以使用[DMSCHEMA_MINING_SERVICES 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset)来检索当前提供程序支持的算法的列表。 若要查看当前实例中支持的算法 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，请参阅[数据挖掘属性](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties)。  
+>  可以使用[DMSCHEMA_MINING_SERVICES 行集](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126251(v=sql.110))来检索当前提供程序支持的算法的列表。 若要查看当前实例中支持的算法 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，请参阅[数据挖掘属性](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties)。  
   
  *参数列表*  
  可选。 由提供程序定义的算法所需参数的逗号分隔列表。  
@@ -63,7 +63,7 @@ USING <algorithm> [(<parameter list>)]
  *筛选条件*  
  应用于事例表中的列的筛选表达式。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  如果挖掘结构中包含组合键，则挖掘模型必须包括该结构中定义的所有键列。  
   
  如果模型不需要可预测列（例如，使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] 聚类分析和 [!INCLUDE[msCoName](../includes/msconame-md.md)] 顺序分析和聚类分析算法生成的模型），则不必在语句中包括列定义。 生成的模型中的所有属性都将被视为输入。  
@@ -121,7 +121,7 @@ USING <algorithm> [(<parameter list>)]
   
 |||  
 |-|-|  
-|**PREDICT**|该列可以由模型预测，并且它的值可用作输入以预测其他可预测列的值。|  
+|**准确**|该列可以由模型预测，并且它的值可用作输入以预测其他可预测列的值。|  
 |**PREDICT_ONLY**|此列可以由模型预测，但其值不可用于输入事例来预测其他可预测列的值。|  
   
 ## <a name="filter-criteria-expressions"></a>筛选条件表达式  

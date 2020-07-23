@@ -8,29 +8,29 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e45433b1a7e031c0aa5e549f9b2d48c036ef91c6
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 4da4243aaf7592e7c5a8a9df63ed1aea352448f4
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669779"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969878"
 ---
 # <a name="data-types-dmx"></a>数据类型 (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   使用数据挖掘扩展插件（DMX）在中定义新的挖掘模型时 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，必须为模型中的每一列提供一种数据类型。 该数据类型说明了数据挖掘算法在生成模型时将使用的数据。  
   
  数据类型取决于算法。 每种算法决定了受支持的数据类型及其使用方式。 Microsoft 算法支持下列数据类型：  
   
--   文本  
+-   Text  
   
 -   Long  
   
--   布尔值  
+-   布尔  
   
--   Double  
+-   双精度  
   
--   Date  
+-   日期  
   
  有关支持的数据类型的详细信息 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，请参阅数据[挖掘&#41;&#40;数据类型](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)。  
   

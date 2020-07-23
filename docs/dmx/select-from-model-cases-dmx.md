@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6753f90b76f70de9f7368a5656ba93b16a3740d1
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 1fa1da730fc370995b22927604f9550c865877f4
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669617"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970603"
 ---
 # <a name="select-from-ltmodelgtcases-dmx"></a>选择 "从 &lt; 模型" &gt; 。事例（DMX）
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   支持钻取功能，并返回用于为模型定型的事例。 如果对挖掘结构和挖掘模型都启用了钻取功能，并且具有相应的权限，则还可以返回未包括在模型中的结构列。  
   
@@ -53,7 +53,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
  *expression*  
  可选。 一个返回标量值的表达式。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  如果对挖掘模型和挖掘结构都启用了钻取功能，那么作为具有模型和结构钻取权限的角色成员的用户，可以访问没有包括在挖掘模型中的挖掘结构列。 因此，为了保护敏感数据或个人信息，应构造数据源视图来屏蔽个人信息，并且仅在必要时才对挖掘结构授予**AllowDrillthrough**权限。  
   
  [Lag &#40;DMX&#41;](../dmx/lag-dmx.md)函数可与时序模型一起使用，以返回或筛选每个事例与初始时间之间的时间延迟。  

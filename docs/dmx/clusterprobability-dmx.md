@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e06563d9b6a69bc8903a55ee1e67cda962f246ba
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 60c95521ba42dc5877c0e10a3f34453a497ad438
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669351"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969929"
 ---
 # <a name="clusterprobability-dmx"></a>ClusterProbability (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   返回输入事例属于指定分类的概率。  
   
@@ -27,22 +27,22 @@ ms.locfileid: "83669351"
 ClusterProbability([<Node_Caption>])  
 ```  
   
-## <a name="applies-to"></a>应用于  
+## <a name="applies-to"></a>应用到  
  只有在基础数据挖掘模型支持聚类分析时，此函数才可用。  
   
 ## <a name="return-type"></a>返回类型  
  一个标量值。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  以下语法使用挖掘模型内容架构行集来返回挖掘模型中存在的节点标题。  
   
 ```  
 SELECT NODE_CAPTION FROM <model>.CONTENT  
 ```  
   
- 有关使用此语法的详细信息，请参阅[SELECT FROM &#60;model&#62;。内容 &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md)。 有关挖掘模型内容架构行集的详细信息，请参阅[DMSCHEMA_MINING_MODEL_CONTENT 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset)。  
+ 有关使用此语法的详细信息，请参阅[SELECT FROM &#60;model&#62;。内容 &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md)。 有关挖掘模型内容架构行集的详细信息，请参阅[DMSCHEMA_MINING_MODEL_CONTENT 行集](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126267(v=sql.110))。  
   
- 如果 \< 未指定节点标题>，该函数将返回输入事例属于最可能分类的概率。 使用**群集**函数返回最可能的分类。  
+ 如果 \<node caption> 未指定，则函数将返回输入事例属于最可能分类的概率。 使用**群集**函数返回最可能的分类。  
   
 ## <a name="examples"></a>示例  
  以下示例返回指定实例存在于标记为 Cluster 2 的群集中的概率。  

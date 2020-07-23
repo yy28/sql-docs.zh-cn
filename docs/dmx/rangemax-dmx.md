@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9cbed9b946a873c9b1d4884aa119b25250a722d3
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 08882071e142fa97139dc2a89adffaa8e5d5f738
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83666857"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970656"
 ---
 # <a name="rangemax-dmx"></a>RangeMax (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   返回为离散化列发现的预测存储桶的高端值。  
   
@@ -27,13 +27,13 @@ ms.locfileid: "83666857"
 RangeMax(<scalar column reference>)  
 ```  
   
-## <a name="applies-to"></a>应用于  
+## <a name="applies-to"></a>应用到  
  标量列。  
   
 ## <a name="return-type"></a>返回类型  
  一个标量值。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  **RangeMax**函数可在[SELECT 不同于 &#60;模型 &#62; &#40;DMX&#41;](../dmx/select-distinct-from-model-dmx.md)查询中使用。 与这种类型的查询一起使用时，标量列引用可以包含连续或离散的可预测列或输入列。  
   
  与[SELECT FROM &#60;模型一起使用时&#62; 预测联接 &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)， **RangeMin**、 **RangeMid**和**RangeMax**函数返回指定 bucket 的实际边界值。 例如，如果对一个离散化列执行预测，查询将返回该离散化列中存储桶数的预测值。 **RangeMin**、 **RangeMid**和**RangeMax**函数描述了预测指定的存储桶。 当**RangeMax**函数与预测联接语句一起使用时，标量列引用只能包含离散的可预测列。  

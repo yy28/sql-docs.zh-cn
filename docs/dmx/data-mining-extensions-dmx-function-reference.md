@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c296948a41096c5c63b0e7019649d48bac8a23ca
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 7b25146ce36a0b58bb46bcacb4348f8e34221068
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669433"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971797"
 ---
 # <a name="data-mining-extensions-dmx-function-reference"></a>数据挖掘扩展插件 (DMX) 函数参考
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支持一些使用数据挖掘扩展插件 (DMX) 语言的函数。 这些函数扩展了预测查询的结果，在结果中包括了可进一步说明预测的信息。 通过使用这些函数，还可对预测结果的返回方式进行更好的控制。 下表提供了指向资源的链接，有助于您了解如何在 DMX 中使用函数。  
   

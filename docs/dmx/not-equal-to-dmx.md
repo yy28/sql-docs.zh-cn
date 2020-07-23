@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 808be4930e07559bb08594347d480e71434e29d2
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 1181e781da0e752cb68f0fbf1d8c84d257407a3e
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83668707"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86968473"
 ---
 # <a name="ltgt-not-equal-to-dmx"></a>&lt;&gt;（不等于）DMX-3
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   执行比较运算，以确定一个数据挖掘扩展插件 (DMX) 表达式的值是否不等于另一个 DMX 表达式的值。  
   

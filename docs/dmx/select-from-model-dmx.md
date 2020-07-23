@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6f6371df8d1ab987bf1f49d149ff7856ba2d111c
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 43a7157c5ec7889b2f8cb7018423d909f3db3cb7
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83666659"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970515"
 ---
 # <a name="select-from-ltmodelgt-dmx"></a>从模型中选择 &lt; &gt; （DMX）
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   执行空预测联接，并为指定列返回一个或多个最可能的值。 创建预测时只使用来自挖掘模型的内容。  
   
@@ -45,7 +45,7 @@ SELECT <expression list> [TOP <n>] FROM <model>
  *expression*  
  可选。 一个返回标量值的表达式。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  *表达式列表*中的列必须仅定义为预测或预测，或与可预测列相关。  
   
 ## <a name="naive-bayes-example"></a>Naive Bayes 示例  

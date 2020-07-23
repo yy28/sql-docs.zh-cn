@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7cfd0e6846fc377cda6fe9655fa3770748748e2c
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 16d77e459cc472430081e52b485763b4e0c62f50
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669800"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971728"
 ---
 # <a name="data-mining-extensions-dmx-syntax-elements"></a>数据挖掘扩展插件 (DMX) 语法元素
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   在中 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，您可以使用各种语法元素来定义可用于生成、管理和使用数据挖掘模型的数据挖掘扩展插件（DMX）语句。 下面各部分对这些语法元素进行了说明。  
   

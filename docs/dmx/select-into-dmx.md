@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: bf2e0f2d57ce8bf1834813d4e39d06afc9724fd7
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: a0a245d152ddd9946142f5f115ee1db64ee5998b
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670090"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970498"
 ---
 # <a name="select-into-dmx"></a>SELECT INTO (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   创建新的挖掘模型，该挖掘模型是根据现有挖掘模型的挖掘结构生成的。 **SELECT INTO**语句通过复制架构和其他不特定于实际算法的信息来创建新的挖掘模型。  
   
@@ -45,7 +45,7 @@ FROM <existing model>
  *现有模型*  
  要复制的现有模型的名称。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  如果现有模型已定型，则此语句执行时将自动处理新模型。 否则，新模型将保持未处理状态。  
   
  **SELECT INTO**语句仅在现有模型的结构与新模型的算法兼容时才起作用。 因此，此语句在快速创建并测试基于同一算法的模型时最为有用。 如果更改算法类型，则新算法必须支持现有模型中所有列的数据类型，否则处理模型时可能会出错。  

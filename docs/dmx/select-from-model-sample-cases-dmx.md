@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9e88ec6673a00e3776032f33390451207c2f399f
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 7eda9b0e13ee5cbf918d80f41b9a517906a56a57
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670109"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970497"
 ---
 # <a name="select-from-ltmodelgtsample_cases-dmx"></a>选择 "从 &lt; 模型" &gt; 。SAMPLE_CASES （DMX）
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   返回示例事例，用于代表为数据挖掘模型定型所用的事例。  
   
@@ -46,10 +46,10 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.SAMPLE_CASES
  *expression*  
  可选。 一个返回标量值的表达式。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  可能生成样本事例，但其可能并不实际存在于定型数据中。 返回的事例代表指定的内容节点。  
   
- 尽管 [!INCLUDE[msCoName](../includes/msconame-md.md)] 顺序分析和聚类分析算法是唯一 [!INCLUDE[msCoName](../includes/msconame-md.md)] 支持使用 SELECT FROM \< model> 的算法。SAMPLE_CASES，第三方算法还可以支持该算法。  
+ 尽管 [!INCLUDE[msCoName](../includes/msconame-md.md)] 顺序分析和聚类分析算法是唯一 [!INCLUDE[msCoName](../includes/msconame-md.md)] 支持使用 SELECT FROM 的算法 \<model> 。SAMPLE_CASES，第三方算法还可以支持该算法。  
   
 ## <a name="examples"></a>示例  
  以下示例可返回为目标邮件挖掘模型定型所用的样本事例。 在**WHERE**子句中使用[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)函数只返回与 "000000003" 节点关联的事例。 可以在架构行集的 NODE_UNIQUE_NAME 列中找到节点字符串。  

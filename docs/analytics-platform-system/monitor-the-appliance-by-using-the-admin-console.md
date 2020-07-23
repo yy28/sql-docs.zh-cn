@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 977e38016fbb58356d22ccfc5f783539e5f852d5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 88e1619ce37de7c7a334ee7d915115f2deef47ef
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74400946"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86941069"
 ---
 # <a name="monitor-the-appliance-with-the-admin-console---analytics-platform-system"></a>用管理控制台分析平台系统监视设备
 管理控制台是一个 SQL Server PDW web 应用程序，用于显示设备状态、运行状况和性能信息。 用户通过 Internet Explorer 连接到管理控制台。  
@@ -26,7 +26,7 @@ ms.locfileid: "74400946"
 主页  
 提供设备状态的快速摘要。  
   
-运行状况  
+健康产业  
 显示设备拓扑，其中显示每个节点内每个受监视组件的运行状况。 允许你查看节点组件的各个节点和属性的当前状态。  
   
 显示硬件和软件警报。  
@@ -44,13 +44,13 @@ ms.locfileid: "74400946"
 查询  
 显示正在运行的查询和最近完成的查询的列表。 它显示相关错误（如果有）。 还可以查看查询执行计划和节点执行信息的详细信息。  
   
-负载  
+加载  
 显示加载计划、PDW 加载的当前状态以及相关错误（如果有）。  
   
 备份/还原  
 显示 PDW 备份和还原操作的日志。  
   
-运行状况  
+健康产业  
 显示 PDW 拓扑，其中显示每个节点内每个受监视组件的运行状况。 允许你查看节点组件的各个节点和属性的当前状态。  
   
 显示硬件和软件警报。  
@@ -76,14 +76,13 @@ ms.locfileid: "74400946"
   
 -   控制节点群集的 IP 地址。  请从 SQL Server PDW 管理员那里获取此。  
   
-若要连接到管理控制台，请使用 Internet Explorer 和 https 浏览到控件节点群集的 IP 地址。 例如，如果控制节点群集的 IP 地址为`10.192.63.102`，则在浏览器`https://10.192.63.102`地址栏中输入。 第一个屏幕将请求您的**登录名**和**密码**。 提供 SQL Server 身份验证登录名和密码，或 Windows 身份验证登录名和 Windows 密码。 如果使用 Windows 身份验证登录名，管理控制台将使用模拟。  
+若要连接到管理控制台，请使用 Internet Explorer 和 https 浏览到控件节点群集的 IP 地址。 例如，如果控制节点群集的 IP 地址为 `10.192.63.102` ，则 `https://10.192.63.102` 在浏览器地址栏中输入。 第一个屏幕将请求您的**登录名**和**密码**。 提供 SQL Server 身份验证登录名和密码，或 Windows 身份验证登录名和 Windows 密码。 如果使用 Windows 身份验证登录名，管理控制台将使用模拟。  
   
 ## <a name="admin-console-tasks"></a><a name="RelatedTasks"></a>管理控制台任务  
 管理员控制台提供了以下功能：  
   
-|||  
-|-|-|  
-|**信息类型**|**如何在管理员控制台中访问**|  
+|信息类型|如何在管理员控制台中访问|
+|-|-|
 |设备的总体状态|单击顶部菜单中的 "**设备状态**" 或 "**主页**"。|  
 |警报|单击 "**警报**"。 有关详细信息，请参阅[了解 &#40;Analytics Platform System&#41;的管理控制台警报](understanding-admin-console-alerts.md)。|  
 |设备组件及其状态|单击顶部菜单中的 "**设备状态**" 或 "**主页**"。|  

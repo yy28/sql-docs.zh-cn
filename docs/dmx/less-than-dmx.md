@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e5cc8429a2fb61b6f7f94b45874ee89968c8be4e
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 54cf739762944683b1fe9063aa3e79896639ffc4
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670351"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969126"
 ---
 # <a name="lt-less-than-dmx"></a>&lt;（小于）DMX-3
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   执行比较运算，以确定一个数据挖掘扩展插件 (DMX) 表达式的值是否小于另一个 DMX 表达式的值。  
   

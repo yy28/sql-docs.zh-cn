@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 167bf7e17b172b9d3e6c58df1f52510f93a668aa
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: e2aaeedff9eb0d22d6a7175641177f803379adaa
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669997"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970263"
 ---
 # <a name="structure-and-usage-of-dmx-prediction-queries"></a>DMX 预测查询的结构和用法
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   在中 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，您可以使用数据挖掘扩展插件（DMX）中的预测查询，根据挖掘模型的结果来预测新数据集中的未知列值。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "83669997"
   
 -   **TOP**  
   
--   **从*** \< 模型>***预测联接**      
+-   **来源** *\<model>***预测联接**      
   
 -   **ON**  
   
@@ -60,7 +60,7 @@ ms.locfileid: "83669997"
   
 -   可以返回一列数据的函数。  
   
- **FROM** * \< model>* **预测联接**元素定义要用于创建预测的源数据。 对于单独查询，即为分配给列的一系列值。 对于空预测联接，该项将保留为空。  
+ **FROM** *\<model>* **预测联接**元素定义要用于创建预测的源数据。 对于单独查询，即为分配给列的一系列值。 对于空预测联接，该项将保留为空。  
   
  **ON**元素将挖掘模型中定义的列映射到外部数据集中的列。 如果要创建空预测联接查询或自然预测联接，则不必包括该元素。  
   

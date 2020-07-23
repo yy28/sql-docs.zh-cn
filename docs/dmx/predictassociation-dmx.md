@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0d34ea224efd5b218cafee58dec09ff4590b8511
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: a834c87c3febf0554ad07334000d62f1f9a93fee
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83668759"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86968141"
 ---
 # <a name="predictassociation-dmx"></a>PredictAssociation (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   预测关联的成员身份。  
   
@@ -29,13 +29,13 @@ ms.locfileid: "83668759"
 PredictAssociation(<table column reference>, option1, option2, n ...)  
 ```  
   
-## <a name="applies-to"></a>应用于  
+## <a name="applies-to"></a>应用到  
  包含可预测的嵌套表（包括关联和某些分类算法）的算法。 支持嵌套表的分类算法包括 [!INCLUDE[msCoName](../includes/msconame-md.md)] 决策树、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes 和 [!INCLUDE[msCoName](../includes/msconame-md.md)] 神经网络算法。  
   
 ## <a name="return-type"></a>返回类型  
- \<表表达式>  
+ \<table expression>  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  **PredictAssociation**函数的选项包括 EXCLUDE_NULL、INCLUDE_NULL、包含、异（默认）、INPUT_ONLY、INCLUDE_STATISTICS 和 INCLUDE_NODE_ID。  
   
 > [!NOTE]  

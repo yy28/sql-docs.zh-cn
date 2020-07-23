@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3f2f97ef9c7a1cdfa2bb1ba1b86dbe4cf60c8404
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: a91941241b61f74190b9ab1ef0c29dffded5dc79
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669925"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970231"
 ---
 # <a name="toppercent-dmx"></a>TopPercent (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   **TopPercent**函数按降序返回表中最前面的行，这些行的累积合计至少达到了指定的百分比。  
   
@@ -27,14 +27,14 @@ ms.locfileid: "83669925"
 TopPercent(<table expression>, <rank expression>, <percent>)  
 ```  
   
-## <a name="applies-to"></a>应用于  
- 返回表的表达式，如 \< 表列引用> 或返回表的函数。  
+## <a name="applies-to"></a>应用到  
+ 返回表的表达式，如 \<table column reference> ，或返回表的函数。  
   
 ## <a name="return-type"></a>返回类型  
- \<表表达式>  
+ \<table expression>  
   
-## <a name="remarks"></a>注解  
- **TopPercent**函数根据每行> 参数的排名表达式的计算所得值返回最顶层的行 \< ，这样， \< 排名表达式> 值的总和至少为百分比> 参数所指定的给定百分比） \< 。 当仍满足指定的百分比值时， **TopPercent**将返回尽可能少数量的元素。  
+## <a name="remarks"></a>备注  
+ **TopPercent**函数根据每行的参数的计算值，以降序顺序返回最顶层的行 \<rank expression> ，这样，值的总和 \<rank expression> 至少是参数所指定的给定百分比 \<percent> 。 当仍满足指定的百分比值时， **TopPercent**将返回尽可能少数量的元素。  
   
 ## <a name="examples"></a>示例  
  下面的示例创建一个针对使用[数据挖掘基础教程](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)生成的关联模型的预测查询。  

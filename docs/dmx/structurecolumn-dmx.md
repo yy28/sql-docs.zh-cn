@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 82317f4a4e5f4c4fddd4ffaf45c5897dfd4d0df5
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: cb07dd463ddbbc15942ca6f62c4ccb708a8c5efd
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669980"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970289"
 ---
 # <a name="structurecolumn-dmx"></a>StructureColumn (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   返回对应于指定事例的结构列的值，或者返回指定事例中的嵌套表的表值。  
   
@@ -32,11 +32,11 @@ StructureColumn('structure column name')
  事例或嵌套表挖掘结构列的名称。  
   
 ## <a name="result-type"></a>结果类型  
- 返回的类型取决于在 \< 结构列名称> 参数中引用的列的类型。 例如，如果引用的挖掘结构列包含标量值，函数将返回标量值。  
+ 返回的类型取决于参数中引用的列的类型 \<structure column name> 。 例如，如果引用的挖掘结构列包含标量值，函数将返回标量值。  
   
  如果引用的挖掘结构列是嵌套表，函数将返回表值。 返回的表值可用于 sub-SELECT 语句的 FROM 子句中。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  此函数是多态函数，可在允许有表达式（包括 SELECT 表达式列表、WHERE 条件表达式和 ORDER BY 表达式）的语句中的任意位置使用。  
   
  挖掘结构中的列的名称是字符串值，因此必须用单引号引起来：例如， `StructureColumn('` **列 1** `')` 。 如果多个列具有相同的名称，则该名称在包含 SELECT 语句的上下文中解析。  

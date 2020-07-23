@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ea538271bf84d7d5b4e0fbea0a860f68bb1f62b6
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 3413ec29cb2f1f3e710a1d52037161094ab713ce
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669619"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970617"
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM &lt; model &gt; （DMX）
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   返回模型中所选列的所有可能状态。 所返回的值会因指定列包含离散值、离散化数值或连续数值而有所变化。  
   
@@ -44,7 +44,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
  *expression*  
  可选。 一个返回标量值的表达式。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  **SELECT DISTINCT FROM**语句仅适用于单个列或具有一组相关列。 该子句不可用于一组不相关的列。  
   
  **SELECT DISTINCT FROM**语句允许直接引用嵌套表中的列。 例如：  
@@ -53,7 +53,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
 <model>.<table column reference>.<column reference>  
 ```  
   
- **SELECT DISTINCT FROM \< model>** 语句的结果不同，具体取决于列的类型。 下表说明了所支持的列类型和该语句的输出结果。  
+ **SELECT DISTINCT FROM \<model> **语句的结果不同，具体取决于列的类型。 下表说明了所支持的列类型和该语句的输出结果。  
   
 |列类型|输出|  
 |-----------------|------------|  

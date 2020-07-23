@@ -15,25 +15,31 @@ helpviewer_keywords:
 ms.assetid: 12400676-7f6b-4437-8fcb-ba9a33f35469
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ffaa8c718d2836a9fe92fbc2f280ae15173a10cb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e88ff3912b61147176b19df1c4f76267d6600f7f
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897740"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913561"
 ---
 # <a name="partition-function-catalog-views-transact-sql"></a>分区函数目录视图 (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   本节包含以下目录视图：  
-  
-|||  
-|-|-|  
-|[sys.partition_functions](../../relational-databases/system-catalog-views/sys-partition-functions-transact-sql.md)|[sys.partition_range_values](../../relational-databases/system-catalog-views/sys-partition-range-values-transact-sql.md)|  
-|[sys.partition_parameters](../../relational-databases/system-catalog-views/sys-partition-parameters-transact-sql.md)||  
+
+:::row:::
+    :::column:::
+        [sys.partition_functions](../../relational-databases/system-catalog-views/sys-partition-functions-transact-sql.md)
+        
+        [sys.partition_parameters](../../relational-databases/system-catalog-views/sys-partition-parameters-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [sys.partition_range_values](../../relational-databases/system-catalog-views/sys-partition-range-values-transact-sql.md)
+    :::column-end:::
+:::row-end:::
   
 ## <a name="see-also"></a>另请参阅  
- [Transact-sql&#41;的目录视图 &#40;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Transact-sql&#41;的系统视图 &#40;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

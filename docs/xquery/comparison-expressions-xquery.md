@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: dc671348-306f-48ef-9e6e-81fc3c7260a6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: db27f240030115ea24d8d32e2ffa1d5e4bf8921e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c0b96fbd075ed2b2f79ca8b92d09e2d2782d77dc
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729512"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922317"
 ---
 # <a name="comparison-expressions-xquery"></a>比较表达式 (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   XQuery 提供了下列类型的比较运算符：  
   
@@ -45,14 +45,14 @@ ms.locfileid: "85729512"
   
  下表中定义了常规运算符。  
   
-|运算符|描述|  
+|运算符|说明|  
 |--------------|-----------------|  
 |=|Equal|  
 |!=|不等于|  
 |\<|小于|  
 |>|大于|  
 |\<=|小于或等于|  
-|>=|大于或等于|  
+|>=|大于等于|  
   
  使用常规比较运算符比较两个序列时，如果第二个序列中存在某个值与第一个序列中的某个值比较结果为 True，则整个结果为 True。 否则为 False。 例如，(1, 2, 3) = (3, 4) 为 True，因为值 3 同时出现在两个序列中。  
   
@@ -140,14 +140,14 @@ WHERE ContactID=1
   
  下表中定义了值比较运算符。  
   
-|运算符|描述|  
+|运算符|说明|  
 |--------------|-----------------|  
-|eq|Equal|  
+|eq|等于|  
 |ne|不等于|  
 |lt|小于|  
 |gt|大于|  
 |le|小于或等于|  
-|ge|大于或等于|  
+|ge|大于等于|  
   
  如果根据所选的运算符两个值的比较结果相同，则表达式将返回 True。 否则将返回 False。 如果其中任何一个值是空序列，则表达式的结果为 False。  
   

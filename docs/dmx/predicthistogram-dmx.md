@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0b413a53aa0b5f423a5977ef051e55c2abf3f65e
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 94ec67fe103901f19af36b8be01ea21ceaa9ac85
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83666793"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86967796"
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   返回一个表示给定列预测的直方图的表。  
   
@@ -27,17 +27,17 @@ ms.locfileid: "83666793"
 PredictHistogram(<scalar column reference> | <cluster column reference>)  
 ```  
   
-## <a name="applies-to"></a>应用于  
+## <a name="applies-to"></a>应用到  
  一个标量列引用或群集列引用。 除 [!INCLUDE[msCoName](../includes/msconame-md.md)] 关联算法外，可以与所有算法类型一起使用。  
   
 ## <a name="return-type"></a>返回类型  
  表。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  直方图可以生成统计信息列。 返回的直方图的列结构取决于与**PredictHistogram**函数一起使用的列引用的类型。  
   
 ## <a name="scalar-columns"></a>标量列  
- 对于 \< 标量列引用>， **PredictHistogram**函数返回的直方图包含以下列：  
+ 对于 \<scalar column reference> ， **PredictHistogram**函数返回的直方图包含以下列：  
   
 -   要预测的值。  
   
@@ -58,7 +58,7 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
      **$AdjustedProbability**列是 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)] 数据挖掘规范的 OLE DB 的扩展。  
   
 ## <a name="cluster-columns"></a>群集列  
- **PredictHistogram**函数为群集列引用返回的直方图 \<> 包含以下列：  
+ **PredictHistogram**函数为返回的直方图 \<cluster column reference> 包含以下列：  
   
 -   **$Cluster** （表示群集名称）  
   

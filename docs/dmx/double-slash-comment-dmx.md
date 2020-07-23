@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: eb8a89ab069af8df69fd4fa70c24a8a191b059b6
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: e53b3823bd824ae1caab05ffe24cb8a3e904994d
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83668957"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969783"
 ---
 # <a name="double-slash-comment-dmx"></a>双斜杠（注释）（DMX）
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   指示 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 不应执行的文本字符串。 您可以在数据挖掘扩展 (DMX) 语句中嵌入注释，将其加在代码行末尾，或者单独插入一行。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "83668957"
  *Comment_Text*  
  包含注释文本的字符串。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  只将 // 用于单行注释。 使用//插入的注释由换行符分隔。  
   
  注释没有最大长度限制。  

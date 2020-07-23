@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: df52a83c2e60395e72b6f81903d0372d1dc05614
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: fdf58a943986dc43f82ef7023b68a2c6168a5518
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670241"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971707"
 ---
 # <a name="exists-dmx"></a>Exists (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   如果指定的子查询至少返回一行，则返回**true** 。  
   
@@ -28,13 +28,13 @@ EXISTS(<subquery>)
 ```  
   
 ## <a name="arguments"></a>参数  
- *量子*  
- Select 语句，格式为 SELECT * FROM \< 列名> [WHERE \< 谓词 list>]。  
+ subquery  
+ SELECT 语句，格式为 SELECT * FROM \<column name> [WHERE \<predicate list> ]。  
   
 ## <a name="result-type"></a>结果类型  
  如果子查询返回的结果集至少包含一行，则返回**true** ;否则，返回**false**。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  可以在 EXISTS 前面使用 NOT 关键字：例如 `WHERE NOT EXISTS (<subquery>)`。  
   
  添加到 EXISTS 的子查询参数中的列的列表是无关紧要的；函数仅检查满足条件的行是否存在。  

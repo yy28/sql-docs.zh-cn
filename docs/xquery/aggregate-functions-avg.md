@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 0cc60267-3c56-4a88-8ad7-bb07f0255d56
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a5ee393faed7f88bb155527d2233285d142b3a09
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: af6e9ba832a267c2f85bbe2f44f087399384179c
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726792"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914656"
 ---
 # <a name="aggregate-functions---avg"></a>聚合函数 - avg
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   返回一组数值的平均值。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "85726792"
 fn:avg($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  *$arg*  
  一组要计算平均值的原子值。  
   

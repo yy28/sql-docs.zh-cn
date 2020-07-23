@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 04b06d1cbe14ee83915bd5626337720acf9bd2a9
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: e011fc48b63aa653cd63e11678b84d8356370bd0
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670342"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969238"
 ---
 # <a name="lag-dmx"></a>Lag (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   返回当前事例的日期与定型集的最近日期之间的时间段。  
   
@@ -30,7 +30,7 @@ Lag()
 ## <a name="return-type"></a>返回类型  
  整型类型的标量值。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  如果对键 TIME 列位于嵌套表中的模型使用**Lag**函数，则该函数必须位于语句的子选择中。  
   
 ## <a name="examples"></a>示例  

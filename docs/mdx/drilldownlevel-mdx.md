@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b9c623a1e99053e796609dc82f27519f27c07a9d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6fdbc6ef265d51484160ab57a87e5672362326cc
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68049287"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970068"
 ---
 # <a name="drilldownlevel-mdx"></a>DrilldownLevel (MDX)
 
@@ -35,7 +35,7 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
  *Level_Expression*  
  （可选）。 显式标识要深化的级别的 MDX 表达式。 如果指定了级别表达式，请跳过下面的索引参数。  
   
- *索引*  
+ *Index*  
  （可选）。 有效的数值表达式，它指定在集中要深化的层次结构编号。 你可使用索引级别而不是 Level_Expression 显式标识要深化的级别。  
   
  *Include_Calc_Members*  
@@ -52,7 +52,7 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
   
  如果级别表达式和索引值均未指定，此函数将只检索指定集中引用的第一个维度的最低级别成员的子成员，然后用这些子成员按层次结构顺序构造一个集。  
   
- 通过查询 XMLA 属性 MdpropMdxDrillFunctions，可以验证服务器为钻取函数提供的支持级别;有关详细信息，请参阅[&#40;xmla&#41;支持的 Xmla 属性](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)。  
+ 通过查询 XMLA 属性 MdpropMdxDrillFunctions，可以验证服务器为钻取函数提供的支持级别;有关详细信息，请参阅[&#40;xmla&#41;支持的 Xmla 属性](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)。  
   
 ## <a name="examples"></a>示例  
  你可使用 Adventure Works 多维数据集在 SSMS 中的 MDX 查询窗口中尝试下面的示例。  

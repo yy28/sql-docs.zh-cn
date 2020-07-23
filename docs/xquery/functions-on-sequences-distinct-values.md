@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: f4c2bb53-2bec-4f1a-9c00-cf997fb7ae5b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1a82bfef35b0d8aec39f7f539f65e6ff1fe8f3ee
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 39b5db61e3709d8d9f1d9859f15d9e6c271b5e05
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753572"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917971"
 ---
 # <a name="functions-on-sequences---distinct-values"></a>基于序列的函数 - distinct-values
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   从 *$arg*指定的序列中删除重复值。 如果 *$arg*是空序列，则函数返回空序列。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "85753572"
 fn:distinct-values($arg as xdt:anyAtomicType*) as xdt:anyAtomicType*  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  *$arg*  
  原子值序列。  
   

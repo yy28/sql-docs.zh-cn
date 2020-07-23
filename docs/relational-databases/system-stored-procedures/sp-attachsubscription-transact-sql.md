@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b9bbda36-a46a-4327-a01e-9cd632e4791b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a1017c3332ca4e399984c01c68585d96aad86666
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c039ce9a5f54f3c0498ef613df15353217d91036
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716186"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923446"
 ---
 # <a name="sp_attachsubscription-transact-sql"></a>sp_attachsubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
 
   将现有的订阅数据库附加到任何订阅服务器。 此存储过程在新订阅服务器的主数据库中执行。  
   
@@ -52,7 +52,7 @@ sp_attachsubscription [ @dbname = ] 'dbname'
     [ , [ @db_master_key_password = ] 'db_master_key_password' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @dbname = ] 'dbname'`按名称指定目标订阅数据库的字符串。 *dbname*的值为**sysname**，无默认值。  
   
 `[ @filename = ] 'filename'`主 MDF （**master**数据文件）的名称和物理位置。 *filename*为**nvarchar （260）**，无默认值。  

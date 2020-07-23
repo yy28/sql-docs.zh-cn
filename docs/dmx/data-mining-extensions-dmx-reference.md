@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: eeaeef25f27f29234aaa5a96a9272b4bea43dca3
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 02c7185ebbf264ebf8ed8adda4915170f888e74b
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670405"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971771"
 ---
 # <a name="data-mining-extensions-dmx-reference"></a>数据挖掘扩展插件 (DMX) 参考
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   数据挖掘扩展插件（DMX）是一种可用于在中创建和使用数据挖掘模型的语言 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。 可以使用 DMX 创建新数据挖掘模型的结构、为这些模型定型并对其进行浏览、管理和预测。 DMX 由数据定义语言 (DDL) 语句、数据操作语言 (DML) 语句以及函数和运算符组成。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "83670405"
   
  使用 DMX 中的数据操作语句可以执行下列任务：  
   
--   使用[INSERT INTO](../dmx/insert-into-dmx.md)语句为挖掘模型定型。 执行该语句不会将实际源数据插入数据挖掘模型对象，但会创建有关说明算法所创建的挖掘模型的摘要信息。 " [ \< 源数据查询">](../dmx/source-data-query.md)中介绍了 INSERT INTO 语句的源查询。  
+-   使用[INSERT INTO](../dmx/insert-into-dmx.md)语句为挖掘模型定型。 执行该语句不会将实际源数据插入数据挖掘模型对象，但会创建有关说明算法所创建的挖掘模型的摘要信息。 中介绍了 INSERT INTO 语句的源查询 [\<source data query>](../dmx/source-data-query.md) 。  
   
 -   扩展 SELECT 语句以浏览模型定型过程中计算并存储在数据挖掘模型中的信息，如源数据的统计信息。 以下子句可用于扩展 SELECT 语句的强大功能：  
   
@@ -82,7 +82,7 @@ ms.locfileid: "83670405"
   
     -   [从 &#60;模型&#62; 中进行选择。DIMENSION_CONTENT &#40;DMX&#41;](../dmx/select-from-model-dimension-content-dmx.md)  
   
--   使用 SELECT 语句的[预测联接](../dmx/select-from-model-prediction-join-dmx.md)子句创建基于现有挖掘模型的预测。 在[ \< 源数据查询>](../dmx/source-data-query.md)中介绍了预测联接语句的源查询。  
+-   使用 SELECT 语句的[预测联接](../dmx/select-from-model-prediction-join-dmx.md)子句创建基于现有挖掘模型的预测。 中介绍了预测联接语句的源查询 [\<source data query>](../dmx/source-data-query.md) 。  
   
 -   使用[DELETE &#40;DMX&#41;](../dmx/delete-dmx.md)语句，从模型或结构中删除所有定型的数据。  
   

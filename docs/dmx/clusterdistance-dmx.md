@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 149285ac5888d6b23272b40fbbb1aef9cf55909e
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 5a4e589455a86f4ffe47e34a6d74d0b6890a5528
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669808"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969944"
 ---
 # <a name="clusterdistance-dmx"></a>ClusterDistance (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   **ClusterDistance**函数返回输入事例与指定分类之间的距离; 如果未指定分类，则返回输入事例与最可能分类的距离。  
   
@@ -27,13 +27,13 @@ ms.locfileid: "83669808"
 ClusterDistance([<ClusterID expression>])  
 ```  
   
-## <a name="applies-to"></a>应用于  
+## <a name="applies-to"></a>应用到  
  只有在基础数据挖掘模型支持聚类分析时，此函数才可用。 函数可用于任何类型的聚类分析模型（EM、K 平均值等），但结果会因算法而异。  
   
 ## <a name="return-type"></a>返回类型  
  一个标量值。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  **ClusterDistance**函数返回输入事例与该输入事例的概率最高的分类之间的距离。  
   
  在 K-Means 聚类分析中，由于所有事例只能属于一个分类，并且成员身份权值为 1.0，因此分类距离始终是 0。 但是，在 K-Means 中，假定每个分类有一个中点。 您可以通过查询或浏览挖掘模型内容中的 NODE_DISTRIBUTION 嵌套表来获取中点的值。 有关详细信息，请参阅 [聚类分析模型的挖掘模型内容（Analysis Services - 数据挖掘）](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining)。  
@@ -42,7 +42,7 @@ ClusterDistance([<ClusterID expression>])
   
  ClusterDistance （N） = 1-（membershipWeight （N））  
   
- 或者：  
+ 或：  
   
  ClusterDistance （N） = 1-ClusterProbability （N））  
   
@@ -75,7 +75,7 @@ NATURAL PREDICTION JOIN
   
  示例结果：  
   
-|表达式|  
+|Expression|  
 |----------------|  
 |0.0477390930705145|  
   

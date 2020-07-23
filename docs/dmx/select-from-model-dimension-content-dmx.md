@@ -8,17 +8,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7ffc372ad0c44208d246a2afc9259428e354e480
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: d16b8b01251be6703350a1a64bb9cdd2bdc5cadb
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669582"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970585"
 ---
 # <a name="select-from-ltmodelgtdimension_content-dmx"></a>选择 "从 &lt; 模型" &gt; 。DIMENSION_CONTENT （DMX）
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
-  挖掘模型可用作 OLAP 多维数据集中的一个维度，模型中的每个节点表示一个维度成员。 **从模型中选择 \<>。Dimension_CONTENT**语句以维度形式返回与其使用情况有关的模型的内容。  
+  挖掘模型可用作 OLAP 多维数据集中的一个维度，模型中的每个节点表示一个维度成员。 **SELECT FROM \<model> 。Dimension_CONTENT**语句以维度形式返回与其使用情况有关的模型的内容。  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,7 +45,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.Dimension_CONTENT
  *expression*  
  可选。 一个返回标量值的表达式。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  算法提供程序定义要返回的内容以及这些内容的组织方式。 例如，提供程序可能会限制维度内容中说明的节点数。  
   
  下表列出了可进行维度内容查询的列，以及每个列作为数据挖掘维度来执行的函数。  

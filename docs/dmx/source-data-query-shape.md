@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c6bdacd512dce26d423980cb5af3c91d5947cb24
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 4d5d93d4236b3cf86719c416ba87517401e4b4f5
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84881807"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970290"
 ---
 # <a name="ltsource-data-querygt---shape"></a>&lt;源数据查询 &gt; -形状
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   将多个数据源中的查询合并到一个层次结构表中（即具有嵌套表的表），该表将成为挖掘模型的事例表。  
   
@@ -38,7 +38,7 @@ APPEND ({ <child table query> }
 ]       
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  *主查询*  
  返回父表的查询。  
   
@@ -54,7 +54,7 @@ APPEND ({ <child table query> }
  *列表名称*  
  在父表中为嵌套表新追加的列名。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  必须按与父表和子表都相关的列对查询排序。  
   
 ## <a name="examples"></a>示例  

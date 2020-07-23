@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1ebb3054ab25729ef5d75034dbee1d720f4dd928
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5bed7dfcf82b7f768ba1dc1e98128424665af6bd
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68031240"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970038"
 ---
 # <a name="drilldownmembertop-mdx"></a>DrilldownMemberTop (MDX)
 
@@ -34,7 +34,7 @@ DrillDownMemberTop(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_Exp
  *Set_Expression2*  
  返回集的有效多维表达式 (MDX)。  
   
- *Count*  
+ *计数*  
  指定要返回的元组数的有效数值表达式。  
   
  *Numeric_Expression*  
@@ -60,7 +60,7 @@ DrillDownMemberTop(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_Exp
   
  **DrilldownMemberTop**函数类似于[DrilldownMember](../mdx/drilldownmember-mdx.md)函数，但对于第一个集中还存在于第二个集中的每个成员， **DrilldownMemberTop**函数将返回每个成员的最顶层子成员数。  
   
- 通过查询 XMLA 属性 MdpropMdxDrillFunctions，可以验证服务器为钻取函数提供的支持级别;有关详细信息，请参阅[&#40;xmla&#41;支持的 Xmla 属性](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)。  
+ 通过查询 XMLA 属性 MdpropMdxDrillFunctions，可以验证服务器为钻取函数提供的支持级别;有关详细信息，请参阅[&#40;xmla&#41;支持的 Xmla 属性](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)。  
   
 ## <a name="example"></a>示例  
  下例深化了服装类别，返回已发货订单数量最多的三个服装子类别。  

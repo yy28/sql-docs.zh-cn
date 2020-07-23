@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 30f5496247bb817d4ea7da08f95fe4a1b54dea5d
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 9a0c44e0ea90b253cee5564a327d49c34c1ae78a
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669792"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969888"
 ---
 # <a name="content-types-dmx"></a>内容类型 (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   除了数据类型信息以外，数据挖掘算法还需要其他信息（如内容类型）才能正常工作。 内容类型可帮助算法确定对列中数据的处理方式。  
   

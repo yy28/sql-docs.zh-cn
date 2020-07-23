@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 610e9f5d575134d3d6948528622637662b65c9f3
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 6359b17825e1f62c38492acb6747ca52a264c7bc
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669648"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970621"
 ---
 # <a name="reserved-keywords-dmx"></a>保留关键字 (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)]保留特定的关键字，供其独占使用。 除了 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 在数据挖掘扩展插件 (DMX) 语言参考中定义的位置以外，这些关键字不能用于 DMX 语句的任何其他位置。 这些受限制的 DMX 关键字包括下列成员：  
   

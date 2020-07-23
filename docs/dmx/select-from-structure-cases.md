@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: baa7ed6209daf3de76c20d8ff67a9b76a36be4e8
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 2e0fc30945396f22184e1d18c6b132d8e2e2d781
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670107"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970425"
 ---
 # <a name="select-from-ltstructuregtcases"></a>选择 "源 &lt; 结构" &gt; 。这
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   返回用于创建挖掘结构的事例。  
   
@@ -55,7 +55,7 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
  *expression*  
  可选。 一个返回标量值的表达式。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  如果对模型和结构都启用了钻取功能，则拥有挖掘结构和模型钻取权限的角色的任何成员都可以使用下面的语法返回模型中未包括的结构列。  
   
 ```  

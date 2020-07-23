@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 83a381e36a31542d6ad39ed9d26864350004af5c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 97b9f5fd13a6cfb017f128564f0f0cf93c22ad58
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68891142"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86967368"
 ---
 # <a name="mdx-data-manipulation---select"></a>MDX 数据操作 - SELECT
 
@@ -88,7 +88,7 @@ FROM
  *Set_Expression*  
  返回集的有效多维表达式 (MDX)。  
   
- *整数*  
+ *Integer*  
  一个介于 0 和 127 之间的整数。  
   
  *Cube_Name*  
@@ -116,7 +116,7 @@ FROM
   
  使用 subselect 语句中的 NON VISUAL 选项，可以筛选出成员，同时保留实际总数，而不是筛选出的总数。 这样，您可以查询前十位的销售（人员/产品/地区），并获取所有查询成员的实际销售总数，而不是返回的前十位的销售总数。 有关详细信息，请参阅下面的示例。  
   
- 当使用连接字符串参数\<*子查询 = 1*打开连接时，可以将计算成员包含在 SELECT query axis 子句> 中。[&#40;xmla&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)和参数用法， <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>请参阅支持的 xmla 属性。 下面是有关嵌套 select 语句中的计算成员的示例。  
+ \<SELECT query axis clause>使用连接字符串参数*子查询 = 1*时，可以将计算成员包含在中，请参阅[&#40;XMLA&#41;支持的 xmla 属性](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)和 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 参数用法。 下面是有关嵌套 select 语句中的计算成员的示例。  
   
 ## <a name="autoexists"></a>Autoexists  
  在 SELECT 语句中使用维度的两个或更多属性时，Analysis Services 会计算这些属性的表达式，以确保这些属性的成员得到适当限制，使它们满足所有其他属性的条件。 例如，假定您在处理来自 Geography 维度的属性。 如果您有一个表达式返回 City 属性中的所有成员，另一个表达式将 Country 属性中的成员限定为欧洲的所有国家/地区，则这将导致 City 成员仅限于属于欧洲国家的城市。 Analysis Services 的这一特性称为 Autoexists，并且仅适用于同一维度内的属性。 Autoexists 仅适用于同一维度中的属性，因为它试图阻止在一个属性表达式中排除的维度记录被包括在其他属性表达式中。 也可以将 Autoexists 理解为不同的属性表达式产生的维度记录的交集。 请参阅下面的以下示例：  
@@ -339,10 +339,10 @@ FROM
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
   
- 使用连接字符串中的 AUTOEXISTS = [1 | 2 | 3] 参数可以修改 Autoexists 行为;[&#40;xmla&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)和参数用法， <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>请参阅支持的 xmla 属性。  
+ 使用连接字符串中的 AUTOEXISTS = [1 | 2 | 3] 参数可以修改 Autoexists 行为;[&#40;xmla&#41;](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)和参数用法，请参阅支持的 xmla 属性 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 。  
   
 ## <a name="examples"></a>示例  
- 下面的示例返回从**艾德工作**多维`Measures.[Order Quantity]`数据集中包含在`Date`维度中的前八个月的日历年2003的成员的总和。  
+ 下面的示例返回 `Measures.[Order Quantity]` `Date` 从**艾德工作**多维数据集中包含在维度中的前八个月的日历年2003的成员的总和。  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8Months2003] AS  
@@ -377,7 +377,7 @@ WHERE
   
 |||||||  
 |-|-|-|-|-|-|  
-||**All Products**|**Accessories**|**Bikes**|**服装**|**组件**|  
+||**所有产品**|**配件**|**自行车**|**Clothing**|**组件**|  
 |**All Resellers**|**$80,450,596.98**|**$571,297.93**|**$66,302,381.56**|**$1,777,840.84**|**$11,799,076.66**|  
 |**Specialty Bike Shop**|**$6,756,166.18**|**$65,125.48**|**$6,080,117.73**|**$252,933.91**|**$357,989.07**|  
 |**Value Added Reseller**|**$34,967,517.33**|**$175,002.81**|**$30,892,354.33**|**$592,385.71**|**$3,307,774.48**|  
@@ -401,7 +401,7 @@ WHERE
   
 |||||  
 |-|-|-|-|  
-||**All Products**|**Accessories**|**服装**|  
+||**所有产品**|**配件**|**Clothing**|  
 |**All Resellers**|**$80,450,596.98**|**$571,297.93**|**$1,777,840.84**|  
 |**Value Added Reseller**|**$34,967,517.33**|**$175,002.81**|**$592,385.71**|  
 |**仓库**|**$38,726,913.48**|**$331,169.64**|**$932,521.23**|  
@@ -428,7 +428,7 @@ WHERE
   
 |||||  
 |-|-|-|-|  
-||All Products|Accessories|Clothing|  
+||All Products|配件|Clothing|  
 |All Resellers|$73,694,430.80|$506,172.45|$1,524,906.93|  
 |Value Added Reseller|$34,967,517.33|$175,002.81|$592,385.71|  
 |Warehouse|$38,726,913.48|$331,169.64|$932,521.23|  

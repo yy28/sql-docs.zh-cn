@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6c14bc8189bdea705ab37c66863d74bcef66e23c
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 0cd7b2e0a78f2d47349de2701572b2f9dc4b0095
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669820"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969918"
 ---
 # <a name="cluster-dmx"></a>Cluster (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   返回最可能包含输入事例的分类。  
   
@@ -27,15 +27,15 @@ ms.locfileid: "83669820"
 Cluster()  
 ```  
   
-## <a name="applies-to"></a>应用于  
+## <a name="applies-to"></a>应用到  
  只有在基础数据挖掘模型支持聚类分析时，此函数才可用。  
   
 ## <a name="return-type"></a>返回类型  
  **群集**函数不需要参数。  
   
- **Cluster**函数返回群集名称的标量值。 但是，如果使用此函数作为另一个函数的参数，则必须将其视为 \< 群集列引用>。  
+ **Cluster**函数返回群集名称的标量值。 但是，如果使用此函数作为另一个函数的参数，则必须将其视为 \<cluster column reference> 。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  **群集**还可以用作 `<` PredictHistogram 函数的群集列引用 `>` 。 **PredictHistogram**  
   
 ## <a name="examples"></a>示例  

@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2e17363aa255591977dc1a9e9ecb4ece04604814
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 1bddae4cf71b30a2a1365d0d5748170c0d5bac53
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670072"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969800"
 ---
 # <a name="import-dmx"></a>IMPORT (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   将挖掘模型或挖掘结构从 Analysis Services 备份文件 (.abf) 文件加载到服务器中。  
   
@@ -31,7 +31,7 @@ IMPORT FROM <filename>
  *filename*  
  一个包含要导入的文件的名称和位置的字符串。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  如果未指定对象，则系统将加载 .dmb 文件的所有内容。 如果 .dmb 文件包含服务器中不存在的数据库，则系统将创建该数据库。  
   
  只有数据库或服务器管理员才能导出或导入对象。  

@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d8e3b85f3d18b25f9dda1ef4f442ec0822257fae
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: a075f314af0eb8ea2eb0bc941ada0bc38e22fec3
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670030"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970397"
 ---
 # <a name="ltsource-data-querygt---openquery"></a>&lt;源数据查询 &gt; -OPENQUERY
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   将源数据查询替换为对现有数据源的查询。 INSERT，从预测联接中选择，并从自然预测联接语句中选择 "支持**OPENQUERY**"。  
   
@@ -34,10 +34,10 @@ OPENQUERY(<named datasource>, <query syntax>)
  *查询语法*  
  一个返回行集的查询语法。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  **OPENQUERY**通过支持数据源权限提供了一种更安全的访问外部数据的方法。 由于连接字符串存储在数据源中，因此管理员可以使用数据源的属性来管理对数据的访问。 有关数据源的详细信息，请参阅[支持的数据源 &#40;SSAS-多维&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional)。  
   
- 可以通过查询**MDSCHEMA_INPUT_DATASOURCES**架构行集来获取服务器上可用的数据源的列表。 有关使用**MDSCHEMA_INPUT_DATASOURCES**的详细信息，请参阅[MDSCHEMA_INPUT_DATASOURCES 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-input-datasources-rowset)。  
+ 可以通过查询**MDSCHEMA_INPUT_DATASOURCES**架构行集来获取服务器上可用的数据源的列表。 有关使用**MDSCHEMA_INPUT_DATASOURCES**的详细信息，请参阅[MDSCHEMA_INPUT_DATASOURCES 行集](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126243(v=sql.110))。  
   
  还可以通过使用下面的 DMX 查询来返回当前 Analysis Services 数据库中的数据源的列表：  
   

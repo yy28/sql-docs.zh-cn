@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 07cda29c288f574fd960398f8a607c04f1d8dce7
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: efe160fc3bb50f80b70c0d510eedd880f985f9b9
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669451"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971796"
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   在数据库中创建新的挖掘结构，并根据需要定义定型和测试分区。 创建挖掘结构后，可以使用[ALTER 挖掘 structure &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md)语句将模型添加到挖掘结构中。  
   
@@ -61,7 +61,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  默认值：REPEATABLE(0)  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  通过指定列的列表可以定义挖掘结构；如果需要，还可以指定列之间的层次结构关系，然后再根据需要将挖掘结构分为定型数据集和测试数据集。  
   
  可选的 SESSION 关键字指示该结构是一个只能在当前会话持续期间使用的临时结构。 会话终止时，该结构以及基于该结构的所有模型都将被删除。 若要创建临时挖掘结构和模型，必须首先设置数据库属性 AllowSessionMiningModels。 有关详细信息，请参阅 [Data Mining Properties](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties)。  
@@ -73,7 +73,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
 -   日期类型（必需）  
   
--   分布  
+-   分发  
   
 -   建模标志列表  
   
@@ -106,7 +106,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
  可以为一个列定义多个建模标志值。 但是，一个列只能有一个内容类型和数据类型。  
   
 ### <a name="column-relationships"></a>列关系  
- 您可以向任何列定义语句中添加子句，以说明两个列之间的关系。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]支持使用以下 \< 列关系> 子句。  
+ 您可以向任何列定义语句中添加子句，以说明两个列之间的关系。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]支持使用以下 \<column relationship> 子句。  
   
  **相关**  
  指示值的层次结构。 RELATED TO 列的目标可以是嵌套表的键列、事例行中具有离散值的列或另一个包含 RELATED TO 子句并指示更深层次结构的列。  

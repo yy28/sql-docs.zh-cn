@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0633540153f2dd9dfd60831a58744ea2d6331fbd
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: e7cc8176094ec49627018975b9e25fe5c30e12ca
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670297"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971706"
 ---
 # <a name="-equal-to-dmx"></a>=（等于）(DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   执行比较运算，以确定一个数据挖掘扩展插件 (DMX) 表达式的值是否等于另一个 DMX 表达式的值。  
   

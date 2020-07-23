@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: cf7389ee0097428bd5825c81abd36f3bdc5c02d2
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 7e05d629f46f1c94bbe9305510daf37c09a39c9b
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83667941"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969018"
 ---
 # <a name="modeling-flags-dmx"></a>建模标志 (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   可以在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中使用建模标志，为数据挖掘算法提供有关事例表中定义的数据的附加信息。 该算法可以使用该附加信息生成更精确的数据挖掘模型。 可以同时在挖掘结构列和挖掘模型列中定义建模标志。  
   

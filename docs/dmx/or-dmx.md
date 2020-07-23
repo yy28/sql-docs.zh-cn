@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9ce963b2322e19e4e3a98982a88f99d3546cabc2
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 21ac78f6ee0ed77bb9549f1749d73d29344a49d1
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83668737"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86968336"
 ---
 # <a name="or-dmx"></a>OR (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   一个逻辑运算符，用于对两个数值表达式执行逻辑或运算。  
   
@@ -37,7 +37,7 @@ Expression1 OR Expression2
 ## <a name="return-value"></a>返回值  
  如果任意一个参数或两个参数的计算结果为 TRUE，则返回 TRUE 布尔值；否则将返回 FALSE。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  在运算符执行逻辑或运算之前，两个参数均被视为布尔值（0 为 FALSE；否则为 TRUE）。 如果任何一个参数或两个参数的计算结果均为 TRUE，则该运算符将返回 TRUE。 如果*表达式*2 的计算结果为 TRUE 并且*表达式*2 的计算结果为 FALSE，则运算符返回 TRUE。  
   
  下表阐释了执行逻辑或运算的方式。  

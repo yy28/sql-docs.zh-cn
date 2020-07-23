@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6fdb1563f644b544fd9c0bd2ee0857bf4b403329
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 647f0cdaaef28f1da7ca51157388288cfdd729dc
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669836"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969945"
 ---
 # <a name="bottompercent-dmx"></a>BottomPercent (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   以升序的形式返回表中最下面的几行，这些行的累积合计至少达到指定百分比。  
   
@@ -28,20 +28,20 @@ BottomPercent(<table expression>, <rank expression>, <percent>)
 ```  
   
 ## <a name="arguments"></a>参数  
- *\<表表达式>*  
+ *\<Table expression>*  
  嵌套表列或表值表达式的名称。  
   
- *\<排名表达式>*  
+ *\<rank expression>*  
  嵌套表中的列，或计算结果为列的表达式。  
   
- *\<>百分比*  
+ *\<percent>*  
  指示总目标百分比的双精度数。  
   
 ## <a name="result-type"></a>结果类型  
  表。  
   
-## <a name="remarks"></a>注解  
- **BottomPercent**函数以升序顺序返回最底层的行。 排名基于 \< 每行> 参数的排名表达式的计算值，因此， \< 排名表达式> 值的总和至少为 \< 百分比> 参数指定的给定百分比。 当仍满足指定的百分比值时， **BottomPercent**将返回尽可能少数量的元素。  
+## <a name="remarks"></a>备注  
+ **BottomPercent**函数以升序顺序返回最底层的行。 排名基于每行的参数的计算值 \<rank expression> ，因此，值的总和 \<rank expression> 至少是参数所指定的给定百分比 \<percent> 。 当仍满足指定的百分比值时， **BottomPercent**将返回尽可能少数量的元素。  
   
 ## <a name="examples"></a>示例  
  下面的示例创建一个针对您在[数据挖掘基础教程](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)中生成的关联模型的预测查询。  

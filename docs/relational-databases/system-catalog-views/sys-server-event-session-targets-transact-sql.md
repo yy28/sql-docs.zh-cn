@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: dda4879d-57ae-4267-b410-1ef5c37404c7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f2dde670bb6a52bbfd103200112caaa6de09e74c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1053382a7236794cadd6637d6e19091cf7508496
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893759"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86908541"
 ---
 # <a name="sysserver_event_session_targets-transact-sql"></a>sys.server_event_session_targets (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   返回事件会话的每个事件目标所对应的行。  
   
@@ -46,13 +46,12 @@ ms.locfileid: "85893759"
 ## <a name="remarks"></a>备注  
  此视图具有下列关系基数。  
   
-||||  
-|-|-|-|  
-|From|功能|关系|  
+| From | 收件人 | 关系 |
+| ---- | -- | ------------ |
 |sys.server_event_session_targets.event_session_id|sys. server_event_sessions event_session_id|多对一|  
   
 ## <a name="see-also"></a>另请参阅  
- [Transact-sql&#41;的目录视图 &#40;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [&#40;Transact-sql&#41;的扩展事件目录视图](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
  [扩展事件](../../relational-databases/extended-events/extended-events.md)  
   

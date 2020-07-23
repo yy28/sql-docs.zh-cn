@@ -8,17 +8,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 15767abbbffd7ede7d7ae252c7e84589abad1a98
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 7117409372fcbcbc6ef3662a2355f063b2a99d98
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670017"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970266"
 ---
 # <a name="ltsource-data-querygt"></a>&lt;源数据查询&gt;
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
-  若要为数据挖掘模型定型并从挖掘模型创建预测，您必须访问数据库外部的数据 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。 使用 \< 数据挖掘扩展插件（DMX）中的源数据查询> 子句来定义此外部数据。 [INSERT INTO &#40;dmx&#41;](../dmx/insert-into-dmx.md)中，[从 &#60;模型中选择&#62; 预测联接 &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)，然后[选择 "从自然预测联接](../dmx/select-from-model-prediction-join-dmx.md)语句" "所有使用** \< 源数据查询>**"。  
+  若要为数据挖掘模型定型并从挖掘模型创建预测，您必须访问数据库外部的数据 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。 使用 \<source data query> 数据挖掘扩展插件（DMX）中的子句定义此外部数据。 [INSERT INTO &#40;dmx&#41;](../dmx/insert-into-dmx.md)中，[从 &#60;模型中选择&#62; 预测联接 &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)，然后选择 "从所有使用的[自然预测联接](../dmx/select-from-model-prediction-join-dmx.md)语句" **\<source data query>** 。  
   
 ## <a name="query-types"></a>查询类型  
  指定源数据最常用的三种方式包括：  
