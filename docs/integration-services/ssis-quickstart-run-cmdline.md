@@ -8,16 +8,16 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 964fdf4d4abb58d7baf27ee9e2f8b6900a7d0bbb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: abac052f7da501f298cc0166273ca624e2fc38f1
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295714"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921801"
 ---
 # <a name="run-an-ssis-package-from-the-command-prompt-with-dtexecexe"></a>使用 DTExec.exe 从命令提示符运行 SSIS 包
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 本快速入门演示如何通过运行包含相应参数的 `DTExec.exe`，从命令提示符处运行 SSIS 包。

@@ -29,12 +29,12 @@ ms.assetid: f8fe26a9-7911-497e-b348-4e69c7435dc1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6ef49eaecad32c4564fb75d05df1a20ff12c15f3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d30d04f709a4caac5f3ec266f1130737264029f3
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72278106"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922950"
 ---
 # <a name="commit-transaction-transact-sql"></a>COMMIT TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,14 +45,14 @@ ms.locfileid: "72278106"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 -- Applies to SQL Server (starting with 2008) and Azure SQL Database
   
 COMMIT [ { TRAN | TRANSACTION }  [ transaction_name | @tran_name_variable ] ] [ WITH ( DELAYED_DURABILITY = { OFF | ON } ) ]  
 [ ; ]  
 ```  
  
-```  
+```syntaxsql
 -- Applies to Azure SQL Data Warehouse and Parallel Data Warehouse Database
   
 COMMIT [ TRAN | TRANSACTION ] 
@@ -60,7 +60,9 @@ COMMIT [ TRAN | TRANSACTION ]
 ``` 
  
   
-## <a name="arguments"></a>参数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
  transaction_name   
  适用范围：SQL Server 和 Azure SQL 数据库 
  
@@ -81,7 +83,7 @@ COMMIT [ TRAN | TRANSACTION ]
   
  如果所提交的事务是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 分布式事务，COMMIT TRANSACTION 将触发 MS DTC 使用两阶段提交协议，以便提交所有涉及该事务的服务器。 如果本地事务跨越同一 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例上的两个或多个数据库，则该实例将使用内部的两阶段提交来提交所有涉及该事务的数据库。  
   
- 如果用于嵌套事务，内部事务的提交并不释放资源，也不使其修改成为永久修改。 只有在提交了外部事务时，数据修改才具有永久性，而且资源才会被释放。 当 @@TRANCOUNT 大于 1 时，每发出一个 COMMIT TRANSACTION 命令只会使 @@TRANCOUNT 按 1 递减。 当 @@TRANCOUNT 最终递减为 0 时，将提交整个外部事务。 因为 transaction_name 被 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 忽略，所以当存在显著内部事务时，发出一个引用外部事务名称的 COMMIT TRANSACTION 只会使 @@TRANCOUNT 按 1 递减。  
+ 如果用于嵌套事务，内部事务的提交并不释放资源，也不使其修改成为永久修改。 只有在提交了外部事务时，数据修改才具有永久性，而且资源才会被释放。 当 @@TRANCOUNT 大于 1 时，每发出一个 COMMIT TRANSACTION 命令只会使 @@TRANCOUNT 按 1 递减。 当 @@TRANCOUNT 最终递减为 0 时，将提交整个外部事务。 因为 transaction_name 被  *忽略，所以当存在显著内部事务时，发出一个引用外部事务名称的 COMMIT TRANSACTION 只会使 @* 按 1 递减[!INCLUDE[ssDE](../../includes/ssde-md.md)]@TRANCOUNT。  
   
  当 @@TRANCOUNT 为 0 时，发出 COMMIT TRANSACTION 将会导致出现错误；因为没有相应的 BEGIN TRANSACTION。  
   

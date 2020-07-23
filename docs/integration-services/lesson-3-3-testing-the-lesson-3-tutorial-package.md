@@ -10,16 +10,16 @@ ms.topic: tutorial
 ms.assetid: 1096a476-93cf-4474-86f5-27d6357eb380
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9cdb19c6df46e3c24625bfb740c82771f0adcc1d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b8a159e1f1e70fefed181f6f47715201731b63dc
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71283181"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922174"
 ---
 # <a name="lesson-3-3-test-the-lesson-3-tutorial-package"></a>第 3-3 课：测试第 3 课教程包
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

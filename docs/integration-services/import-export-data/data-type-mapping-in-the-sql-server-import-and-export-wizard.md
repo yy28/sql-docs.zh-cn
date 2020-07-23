@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: 669be403-cb17-4b12-bbbf-e7a74003c4b6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1610f98d77ba4a762a63f3ccf5a445393537d36b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 73c837f4bbdd8cb7c7a6060beaea6bc97eba0a02
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296341"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922383"
 ---
 # <a name="data-type-mapping-in-the-sql-server-import-and-export-wizard"></a>SQL Server 导入和导出向导中的数据类型映射
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导中，可在新的目标表和目标文件中设置列的名称、数据类型和数据类型属性，但不能指定列值的自定义转换。 因此，从源到目标的数据类型内置映射非常重要。  

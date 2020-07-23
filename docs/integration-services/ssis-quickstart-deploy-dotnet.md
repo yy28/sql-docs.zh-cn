@@ -8,16 +8,16 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 43820f44e789330ed437c104e385090a8179a2b3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a4928f4394169987d4e3d06b6ddc9f4a4a33837c
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74947106"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921903"
 ---
 # <a name="deploy-an-ssis-project-with-c-code-in-a-net-app"></a>使用 .NET 应用中的 C# 代码 部署 SSIS 项目
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 本快速入门演示如何写入用于连接数据库服务器和部署 SSIS 项目的 C# 代码。

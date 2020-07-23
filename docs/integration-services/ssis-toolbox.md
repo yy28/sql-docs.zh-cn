@@ -14,16 +14,16 @@ f1_keywords:
 ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5b6c50ffe5278003a70fcba77818cb8333800dc5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1d69335c7455dcd34fc5368a68c86193c2fc7526
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295623"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921802"
 ---
 # <a name="ssis-toolbox"></a>SSIS 工具箱
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   本地计算机上安装的所有组件都自动显示在“SSIS 工具箱”中  。 当安装其他组件时，在此工具箱内右键单击，然后单击“刷新工具箱”即会添加组件。   
