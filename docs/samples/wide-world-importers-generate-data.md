@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: af15f93b869fed56bed19a495c64810b0f2436c7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2936ac69cc4053e68fc92d2bb5c2cae95ac68673
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718591"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942197"
 ---
 # <a name="wideworldimporters-data-generation"></a>WideWorldImporters 数据生成
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -67,13 +67,13 @@ WideWorldImportersDW 可以任意增加用于性能测试的数据大小。 例�
 
 ### <a name="procedure-details"></a>过程详细信息
 
-#### <a name="name"></a>“属性”
+#### <a name="name"></a>名称
 
-    Application.Configuration_PopulateLargeSaleTable
+`Application.Configuration_PopulateLargeSaleTable`
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-  `@EstimatedRowsFor2012`**bigint** （默认值为12000000）
+`@EstimatedRowsFor2012`**bigint** （默认值为12000000）
 
 #### <a name="result"></a>结果
 

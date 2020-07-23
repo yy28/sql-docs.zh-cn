@@ -1,5 +1,5 @@
 ---
-title: 游标 | Microsoft Docs
+title: 游标（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0b114352-3c63-4d33-9220-182ede90e4aa
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: da899e4dc47daff03c31277b3edd4d9c642b87cb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3a7484de48edaecea56fc135ca3b803875f9557c
+ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305288"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86977774"
 ---
 # <a name="cursors"></a>游标
 应用程序使用*游标*来提取数据。 游标不同于结果集：结果集是与特定搜索条件相匹配的行集，而游标是将这些行返回到应用程序的软件。 应用于数据库的名称*游标*可能源自计算机终端上闪烁的光标。 就像该游标指示屏幕上的当前位置以及键入的字词将显示在哪个位置时，结果集上的游标将指示结果集中的当前位置和接下来返回的行。  
