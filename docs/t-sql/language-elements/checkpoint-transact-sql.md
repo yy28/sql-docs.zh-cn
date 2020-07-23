@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: ccdfc689-ad4e-44c0-83f7-0f2cfcfb6406
 author: juliemsft
 ms.author: jrasnick
-ms.openlocfilehash: edb989e798274860359a89d4a7a184ba19fd04b3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ec484e698234dc71282a11b07555be73cd2c694d
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85706648"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923364"
 ---
 # <a name="checkpoint-transact-sql"></a>CHECKPOINT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +50,9 @@ ms.locfileid: "85706648"
 CHECKPOINT [ checkpoint_duration ]  
 ```  
   
-## <a name="arguments"></a>参数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
  checkpoint_duration   
  以秒为单位指定手动检查点完成所需的时间。 如果指定 checkpoint_duration，则 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 会在请求的持续时间内尝试执行检查点。 checkpoint_duration 必须是一个数据类型为 int 的表达式，并且必须大于零   。 如果省略该参数，[!INCLUDE[ssDE](../../includes/ssde-md.md)]将调整检查点持续时间，以便最大程度地降低对数据库应用程序性能的影响。 checkpoint_duration 选项是高级选项  。  
   

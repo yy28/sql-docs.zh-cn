@@ -20,29 +20,29 @@ ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6c32db4bdc26e90faa74800076dade200c1348f6
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 129ac690a0615062bb620c8b81dfbdb16a41659e
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518637"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942669"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  创建用于定义存储在 Hadoop、Azure Blob 存储或 Azure Data Lake Store 的外部数据或用于与外部流相关的输入和输出流的外部文件格式对象。 创建外部文件格式是创建外部表的先决条件。 通过创建外部文件格式，可指定外部表引用的数据的实际布局。  
+创建用于定义存储在 Hadoop、Azure Blob 存储或 Azure Data Lake Store 的外部数据或用于与外部流相关的输入和输出流的外部文件格式对象。 创建外部文件格式是创建外部表的先决条件。 通过创建外部文件格式，可指定外部表引用的数据的实际布局。  
   
 支持以下文件格式：
   
--   带分隔符的文本  
+- 带分隔符的文本  
   
--   Hive RCFile  
+- Hive RCFile  
   
--   Hive ORC
+- Hive ORC
   
--   Parquet
+- Parquet
 
--   JSON - 仅适用于 Azure SQL Edge。
+- JSON - 仅适用于 Azure SQL Edge。
 
 
 若要创建外部表，请参阅 [CREATE EXTERNAL TABLE (Transact-SQL)](../../t-sql/statements/create-external-table-transact-sql.md)。
@@ -113,33 +113,33 @@ WITH (
 ```  
   
 ## <a name="arguments"></a>参数  
- *file_format_name*  
- 为外部文件格式指定名称。
+*file_format_name*  
+为外部文件格式指定名称。
   
- FORMAT_TYPE = [ PARQUET | ORC | RCFILE | DELIMITEDTEXT] 指定外部数据的格式。
+FORMAT_TYPE = [ PARQUET | ORC | RCFILE | DELIMITEDTEXT] 指定外部数据的格式。
   
-   -   PARQUET 指定 Parquet 格式。
+- PARQUET 指定 Parquet 格式。
   
-   -   ORC  
-   指定优化行纵栏表 (ORC) 格式。 此选项需要外部 Hadoop 群集上的 Hive 版本 0.11 或更高版本。 在 Hadoop 中，ORC 文件格式可提供比 RCFILE 文件格式更好的压缩和性能。
+- ORC  
+  指定优化行纵栏表 (ORC) 格式。 此选项需要外部 Hadoop 群集上的 Hive 版本 0.11 或更高版本。 在 Hadoop 中，ORC 文件格式可提供比 RCFILE 文件格式更好的压缩和性能。
 
-   -   RCFILE（与 SERDE_METHOD = SERDE_method 结合使用）指定记录纵栏表文件格式 (RcFile)。 此选项需要指定 Hive 序列化程序和反序列化程序 (SerDe) 方法。 如果在 Hadoop 中使用 Hive/HiveQL 查询 RC 文件，则此要求是相同的。 请注意，SerDe 方法区分大小写。
+- RCFILE（与 SERDE_METHOD = SERDE_method 结合使用）指定记录纵栏表文件格式 (RcFile)。 此选项需要指定 Hive 序列化程序和反序列化程序 (SerDe) 方法。 如果在 Hadoop 中使用 Hive/HiveQL 查询 RC 文件，则此要求是相同的。 请注意，SerDe 方法区分大小写。
 
-   使用 PolyBase 支持的两种 SerDe 方法指定 RCFile 的示例。
+  使用 PolyBase 支持的两种 SerDe 方法指定 RCFile 的示例。
 
-    -   FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe'
+  - FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe'
 
-    -   FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe'
+  - FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe'
 
-   -   DELIMITEDTEXT 指定具有列分隔符（也称为字段终止符）的文本格式。
+- DELIMITEDTEXT 指定具有列分隔符（也称为字段终止符）的文本格式。
    
-   -  JSON 指定 JSON 格式。 仅适用于 Azure SQL Edge。 
+- JSON 指定 JSON 格式。 仅适用于 Azure SQL Edge。 
   
- FIELD_TERMINATOR = *field_terminator*  
+FIELD_TERMINATOR = *field_terminator*  
 仅适用于带分隔符的文本文件。 字段终止符指定一个或多个字符，用于在带分隔符的文本文件中标记每个字段（列）的末尾。 默认值为竖线字符“|”。 若要获得有保证的支持，建议使用一个或多个 ascii 字符。
   
   
- 示例：  
+示例：  
   
 -   FIELD_TERMINATOR = '|'  
   
@@ -149,7 +149,7 @@ WITH (
   
 -   FIELD_TERMINATOR = '~|~'  
   
- STRING_DELIMITER = *string_delimiter*  
+STRING_DELIMITER = *string_delimiter*  
 为带分隔符的文本文件中的字符串类型数据指定字段终止符。 字符串分隔符的长度是一个或多个字符，并且用单引号括起来。 默认值是空字符串 ""。 若要获得有保证的支持，建议使用一个或多个 ascii 字符。
  
   

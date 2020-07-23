@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: ed530b0d-438d-4c93-8e91-13f2b2b6a8b2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cb86b202db40fb3bde858a43fb5dac550a2aaada
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f88355c8c2242d6dee36d52b7fb26e6016201ff4
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71299114"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923753"
 ---
 # <a name="add-copy-of-existing-package"></a>添加现有包的副本
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   可以使用 **“添加现有包的副本”** 对话框，将 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、文件系统或 SSIS 包存储区中存储的包副本添加到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目中。  

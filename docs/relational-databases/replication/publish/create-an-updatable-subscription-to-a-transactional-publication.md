@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f9ef89ed-36f6-431b-8843-25d445ec137f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 68f87213d310c909d266a20c235f1686f66e6902
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0d28fec80479a8eec877452763e78d4fadfa3d2c
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896810"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942830"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication"></a>创建事务发布的可更新订阅
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -101,7 +101,7 @@ ms.locfileid: "85896810"
     * `sync tran` - 使订阅支持立即更新。
     * `failover` - 支持对订阅进行立即更新，并将排队更新作为故障转移选项。
     > [!NOTE]  
->  `failover` 要求发布也支持排队更新订阅。 
+    >  `failover` 要求发布也支持排队更新订阅。 
  
 4. 在订阅服务器上，执行 [sp_addpullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)。 指定下列各项：
 
@@ -150,7 +150,7 @@ ms.locfileid: "85896810"
     * 分发服务器中的分发代理运行时所使用的 Windows 凭据： `@job_login` 和 `@job_password`。 
 
     > [!NOTE]  
->  在使用 Windows 集成身份验证时，总是使用 `@job_login` 和 `@job_password`指定的 Windows 凭据来建立连接。 分发代理始终使用 Windows 集成身份验证与分发服务器建立本地连接。 默认情况下，该代理将使用 Windows 集成身份验证连接到订阅服务器。 
+    >  在使用 Windows 集成身份验证时，总是使用 `@job_login` 和 `@job_password`指定的 Windows 凭据来建立连接。 分发代理始终使用 Windows 集成身份验证与分发服务器建立本地连接。 默认情况下，该代理将使用 Windows 集成身份验证连接到订阅服务器。 
 
     * （可选） `0` 的值 `@subscriber_security_mode` ，以及 SQL Server 登录信息 `@subscriber_login` 和 `@subscriber_password`（如果在连接到订阅服务器时需要使用 SQL Server 身份验证）。 
     * 该订阅的分发代理作业计划。
@@ -180,7 +180,7 @@ ms.locfileid: "85896810"
     * `queued failover` - 支持排队更新，并将立即更新作为故障转移选项。
 
     > [!NOTE]  
->  `queued failover` 要求发布也支持立即更新订阅。 若要故障转移到立即更新，必须使用 [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md) 定义将订阅服务器上的更改复制到发布服务器所用的凭据。
+    >  `queued failover` 要求发布也支持立即更新订阅。 若要故障转移到立即更新，必须使用 [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md) 定义将订阅服务器上的更改复制到发布服务器所用的凭据。
  
 4. 在订阅服务器上，执行 [sp_addpullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)。 指定下列参数：
 
