@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: ac3b74c1-ef54-4297-8062-1734324fffcc
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 58534c37ab2ee5d857bcf9ce823b3aa336c1f477
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1db13057275f9a255ad247bd5f86ca35d7bd29d3
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71291370"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919253"
 ---
 # <a name="import-column-transformation"></a>导入列转换
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   导入列转换从文件中读取数据并将数据添加到数据流中的列中。 通过此转换，包可将存储于各个单独文件中的文本和图像添加到数据流中。 例如，如果某个数据流将数据加载到存储产品信息的表中，则它可包含导入列转换以便从文件中导入每个产品的客户评论并将评论添加到数据流中。  

@@ -17,15 +17,15 @@ ms.assetid: cd253a17-0c85-42b4-912c-690169ebe799
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f2b5b186a5c2fde1537aff652169c9018f4a63f8
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: 8c3f1c186774b803794315644c5c8aa9f8cef7ce
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86158895"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918273"
 ---
 # <a name="compare-differences-between-replicated-tables-replication-programming"></a>比较复制表之间的差异（复制编程）
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   项目验证用于确定发布服务器和订阅服务器上的表项目的已发布数据是否不同，这可能表明无法收敛。 有关详细信息，请参阅[验证已复制的数据](../../../relational-databases/replication/validate-data-at-the-subscriber.md)。 但是，验证仅返回通过或失败信息，而不会提供任何有关源表和目标表之间存在哪些差异的信息。 **tablediff** 命令提示实用工具返回两个表之间存在的详细差异信息，甚至可生成 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本，以使订阅与发布服务器上的数据实现收敛。  
   
 > [!NOTE]  

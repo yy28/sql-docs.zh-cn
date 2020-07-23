@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 01e0495f-de35-4607-ba19-0539e801e8fd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 47753a678aa92b02024145a0159fda7eefcfae77
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 48d0d57c66a05a28a41de37b6bea0867fbe2c8e5
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297821"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919485"
 ---
 # <a name="select-a-dimension-table-and-keys-slowly-changing-dimension-wizard"></a>选择维度表和键（渐变维度向导）
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   使用 **“选择维度表和键”** 页可以选择要加载的维度表。 将数据流中的列映射到要加载的列。  

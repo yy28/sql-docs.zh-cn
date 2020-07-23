@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: c841345c-7d03-452f-9379-1c8c464f029c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3e54fc003f2bb61a5e94f521ddb1a0221261610e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4f0e3aadb76c9a75f2d0458e0c4163105c122d7a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71291432"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919326"
 ---
 # <a name="fixed-and-changing-attribute-options-slowly-changing-dimension-wizard"></a>固定的属性选项和变化的属性选项（渐变维度向导）
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   可以使用 **“固定的属性选项和变化的属性选项”** 对话框，指定如何对固定的属性和变化的属性中的更改进行响应。  

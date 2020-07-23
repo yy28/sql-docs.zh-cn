@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: cff8690c-07ac-46a0-aab5-20bd4848c677
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5badfcd6c8b9603e30e2a413bb6486fcf9d2c6b8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a444abac97c69755e234e39a9c6e3ae623af8d89
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71291236"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919573"
 ---
 # <a name="merge-transformation"></a>合并转换
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   合并转换将两个排序后的数据集合并为一个数据集。 根据每个数据集中的行的键列的值，将这些行插入到输出中。  

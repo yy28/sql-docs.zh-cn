@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 32194784-1684-40cd-9f91-1aba4d8360d3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6fca2fd4670fae2838eb0512c68483024bdb4dee
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c353401a2182461452e086da05d8f4e155a3ac2a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297841"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919548"
 ---
 # <a name="multicast-transformation"></a>多播转换
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   多播转换将其输入分发到一个或多个输出。 此转换与有条件拆分转换类似。 这两种转换都将一个输入定向到多个输出。 这两者之间的区别在于多播转换将每行定向到每个输出，而有条件拆分则将一行定向到单个输出。 有关详细信息，请参阅 [Conditional Split Transformation](../../../integration-services/data-flow/transformations/conditional-split-transformation.md)。  

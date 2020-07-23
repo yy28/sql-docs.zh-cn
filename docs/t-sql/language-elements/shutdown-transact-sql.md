@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c8b03ff9-688c-4fe8-86e8-bd6bd401c9a4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1f3d338531b2d7e7d76571ad2d04793c6200c63d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: db543ba464af2c71ba3390cb4574797713b8c764
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893391"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918768"
 ---
 # <a name="shutdown-transact-sql"></a>SHUTDOWN (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,9 @@ ms.locfileid: "85893391"
 SHUTDOWN [ WITH NOWAIT ]   
 ```  
   
-## <a name="arguments"></a>参数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
  WITH NOWAIT  
  可选。 在不对每个数据库执行检查点操作的情况下关闭 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在尝试终止全部用户进程后退出。 服务器重新启动时，将针对未完成事务执行回滚操作。  
   

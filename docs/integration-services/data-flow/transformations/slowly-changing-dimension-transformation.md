@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1fd5584a5c43762c4d732c677de225436e191a7e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 71fdb19fb47f953ceb6266be38d5c3b191a30f91
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297802"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919475"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>渐变维度转换
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   渐变维度转换协调数据仓库维度表中的记录更新与插入。 例如，可以用此转换配置转换输出，这些转换输出使用来自 AdventureWorks OLTP 数据库中的 Production.Products 表的数据在 [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] 数据库的 DimProduct 表中插入和更新记录。  

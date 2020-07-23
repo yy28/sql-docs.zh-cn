@@ -20,15 +20,15 @@ ms.assetid: f182f43a-6af8-45bc-a708-08d5f7a6984a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: ad64ec8bd3c9558f374e8963b1cc3093f42be4e6
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: fb514bd2a96e797a6ed0e2cdd275dd397762fe90
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86159795"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918662"
 ---
 # <a name="monitoring-replication"></a>监视（复制）
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   监视复制拓扑是部署复制的一个重要方面。 因为复制活动是分布式的，所以跟踪复制过程中涉及的所有计算机的活动和状态非常有必要。 使用各种监视工具，可以回答此类常见问题： 
 
 -   我的复制系统是否正常？

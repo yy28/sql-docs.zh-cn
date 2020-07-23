@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 9281c5f8-8da3-4ae8-8142-53c5919a4cfe
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 325d5cde9ae15bb58c6173a974f14f48847c3361
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c4df8e04fc2ef1c68dd1759db2915a13e0bbaf67
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71282478"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919169"
 ---
 # <a name="load-balancing-packages-on-remote-servers-by-using-sql-server-agent"></a>使用 SQL Server 代理在远程服务器上平衡包的负载
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   在必须运行很多包时，方便的做法是使用其他可用的服务器。 这种当所有包都处于一个父包控制下时使用其他服务器来运行这些包的方法称为负载平衡。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中，负载均衡是必须由包的所有者构建的手动过程。 服务器不自动执行负载平衡。 而且，在远程服务器上运行的包必须是整个包，而不能是其他包中的单个任务。  

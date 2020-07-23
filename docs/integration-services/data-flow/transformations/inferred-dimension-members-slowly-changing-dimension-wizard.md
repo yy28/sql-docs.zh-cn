@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 809e395f-2e10-48ff-8860-56403f130628
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6b8510ebf2b5499dfa9e90a80a49a8241543c4ff
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6e6a71efbd5036a409cad5613fc35612724538d2
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71291275"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919258"
 ---
 # <a name="inferred-dimension-members-slowly-changing-dimension-wizard"></a>推断维度成员（渐变维度向导）
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   可以使用 **“推断维度成员”** 对话框指定使用推断成员的选项。 当事实数据表引用尚未加载的维度成员时，存在推断成员。 当加载推断成员的数据后，可以更新现有记录，而不必创建一个新记录。  

@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 55a0951a-46f3-4f0f-9972-74cec9cc26b7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4ed4722261ca83d95345c8d8fc5024f1076be839
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cd247b193540076a1d0f922e94e752b1ea0456bb
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71282511"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919137"
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>Integration Services 包记录的事件
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包将各种事件消息记入 Windows 应用程序事件日志。 包会在包启动时、包停止时和特定问题出现时记录这些消息。  

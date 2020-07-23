@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: c4f43455-29ca-44ba-ac7f-ea729b1daf93
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0f1380370862b735e00799cbcb6a9ba46d69fd3f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bb0b1a81a495639aa170b2047df3dd517fac1716
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294416"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918937"
 ---
 # <a name="ftp-connection-manager"></a>FTP 连接管理器
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   FTP 连接管理器使得包可以连接到文件传输协议 (FTP) 服务器。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的 FTP 任务使用此连接管理器。  

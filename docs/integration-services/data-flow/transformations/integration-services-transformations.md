@@ -21,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: c70c4f6e-82dd-4948-b923-fd5193f67f7e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 26b22a82491d3f4c586c3fb259bf50c6d7216367
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ff200828c1204d15f648ec783fe720d86ac22dd1
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297905"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919243"
 ---
 # <a name="integration-services-transformations"></a>Integration Services 转换
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 转换是包的数据流中对数据进行聚合、合并、分发和修改的组件。 转换还可以执行查找操作并生成样本数据集。 本节介绍 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 所包括的转换并说明它们是如何工作的。  

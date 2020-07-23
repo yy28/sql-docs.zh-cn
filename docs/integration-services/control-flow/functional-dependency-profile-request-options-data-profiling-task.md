@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 6eb853aa-8016-490c-be4f-06ab8d7f5021
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6cf3c23908b3ec391afc7b9073796ab4c2f47100
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b2f4f0f63aa108f16a8649007c200d8f93261367
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298269"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918203"
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>函数依赖关系配置文件请求选项（数据事件探查任务）
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   可以使用 **“配置文件请求”** 页的 **“请求属性”** 窗格，为请求窗格中选定的 **“函数依赖关系配置文件请求”** 设置选项。 函数依赖关系配置文件报告一个列（依赖列）中的值对另一个列或另一个列集（决定列）中的值的依赖程度。 此配置文件还有助于标识数据中的问题，如值无效。 例如，您对邮政编码列与美国的州列之间的依赖关系进行事件探查， 在此配置文件中，同一邮政编码应始终对应相同的州，但配置文件发现依赖关系冲突。  

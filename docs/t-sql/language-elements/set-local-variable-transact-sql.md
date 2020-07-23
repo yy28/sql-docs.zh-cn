@@ -18,12 +18,12 @@ ms.assetid: d410e06e-061b-4c25-9973-b2dc9b60bd85
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 701893d6f3f1ded5b3d66684a66b8640b876242b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f2393d6e51eb7c5b0df6ff1d710829a772b58dfd
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005005"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918798"
 ---
 # <a name="set-local_variable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -65,7 +65,9 @@ Azure SQL 数据仓库和并行数据仓库语法：
 SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression  
 ```  
   
-## <a name="arguments"></a>参数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
 **@** _local_variable_  
 除 **cursor**、**text**、**ntext**、**image** 或 **table** 之外的任何类型的变量的名称。 变量名称必须以 at 符号 ( **) 开头@** 。 变量名称必须遵循有关[标识符](../../relational-databases/databases/database-identifiers.md)的规则。  
   

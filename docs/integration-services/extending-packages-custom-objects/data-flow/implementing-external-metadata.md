@@ -23,16 +23,16 @@ helpviewer_keywords:
 ms.assetid: 8f5bd3ed-3e79-43a4-b6c1-435e4c2cc8cc
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 530a0e9a472638d5c401488cc408adc3957007f4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 65757d974c6deb690248343140a157e81e083a70
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297222"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919648"
 ---
 # <a name="implementing-external-metadata"></a>实现外部元数据
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   组件与其数据源断开连接后，可以使用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100> 接口，针对组件的外部数据源中的列验证输入和输出列集合中的列。 使用此接口可以保留一份外部数据源中的列的快照，并可以将这些列映射到组件的输入和输出列集合中的列。  

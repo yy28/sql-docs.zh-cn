@@ -23,12 +23,12 @@ ms.assetid: b1019300-171a-4a1a-854f-e1e751de3565
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a76fa18b50c62127208db9430fafcfb5668225c1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: cf59a6245de8c1520dcd8196cc207fe2761d84c6
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004987"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918793"
 ---
 # <a name="set-operators---except-and-intersect-transact-sql"></a>SET 运算符 - EXCEPT 和 INTERSECT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,7 +55,9 @@ INTERSECT 返回由左右双侧输入查询运算符输出的非重复行。
 { <query_specification> | ( <query_expression> ) }  
 ```  
   
-## <a name="arguments"></a>参数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
 \<_query\_specification_> | ( \<_query\_expression_> )  
 查询规范或查询表达式返回与来自另一个查询规范或查询表达式的数据相比较的数据。 属于 EXCEPT 或 INTERSECT 运算的列定义不一定要相同。 但必须可通过隐式转换实现可比较。 如果数据类型不同，根据[数据类型优先顺序](../../t-sql/data-types/data-type-precedence-transact-sql.md)规则确定为执行比较而运行的数据类型。  
   

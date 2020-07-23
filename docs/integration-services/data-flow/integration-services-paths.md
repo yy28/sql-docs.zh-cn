@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f70ce04ebe25c752f3cc12d4888f1ff5c967b805
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4443598b2fa59e51a9c8ec6b5161b913f2890056
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292410"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918869"
 ---
 # <a name="integration-services-paths"></a>Integration Services 路径
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   路径将一个数据流组件的输出连接到另一个组件的输入，以此连接数据流中的两个组件。 路径具有源和目标。 例如，如果路径连接一个 OLE DB 源和一个排序转换，那么 OLE DB 源就是路径的源，而排序转换就是路径的目标。 源是路径开始处的组件，而目标是路径结束处的组件。  

@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 4f79c24a-e99a-4a06-8637-51eeec406259
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f53fe9d295fdd5cd34c6391332af12b9f6788668
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a4e5e945b1d6a43829d1e9cb3998335559808480
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294756"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918745"
 ---
 # <a name="create-the-sql-server-change-database"></a>创建 SQL Server 更改数据库
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   当您启动新建实例向导时，“创建 CDC 数据库”页将打开。 使用“创建 CDC 数据库”页可提供与新的 CDC 实例有关的信息并且创建新的更改数据库。  

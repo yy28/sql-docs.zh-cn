@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 68f0f1ea718d867b2fb26f08bb5b6c30e49dd739
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6f51c7dc5dcde2535e822a8f1d832e3747bdfd35
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71291225"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919533"
 ---
 # <a name="pivot-transformation"></a>透视转换
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   通过透视列值的输入数据，透视转换将规范的数据集转变成规范程度稍低、但更为简洁的版本。 例如，在列有客户名称、产品和购买数量的规范的 **Orders** 数据集中，任何购买多种产品的客户都有多行，每一行显示一种产品的详细订购信息。 此时，如果对产品列透视数据集，透视转换可以输出每个客户只有一行的数据集。 这一行列出该客户购买的所有产品，产品名称显示为列名，而数量则显示为产品列的值。 并非每个客户都购买所有产品，所以很多列可能包含空值。  

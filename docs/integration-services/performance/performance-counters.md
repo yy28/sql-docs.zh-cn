@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 890bd202912cea88491acd79906c873c44e53658
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 431c88eb4f341b55060c23a06b06cf5e599c38e0
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71282612"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918294"
 ---
 # <a name="performance-counters"></a>性能计数器
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 安装一组性能计数器，可用于监视数据流引擎的性能。 例如，可以监视 "Buffers spooled" 计数器，以确定在运行包时数据缓冲区是否正在临时写入磁盘。 此交换会降低性能并指示计算机内存不足。  
@@ -91,9 +91,9 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 2.  单击 **“性能”** 。  
   
-3.  在“性能”  对话框中，展开“性能日志和警报”  ，右键单击“计数器日志”  ，再单击“新建日志设置”  。 键入日志的名称。 例如，键入 **MyLog**。  
+3.  在“性能”对话框中，展开“性能日志和警报”，右键单击“计数器日志”，再单击“新建日志设置”。 键入日志的名称。 例如，键入 **MyLog**。  
   
-4.  单击“确定”。   
+4.  单击“确定”。  
   
 5.  在 **MyLog** 对话框中，单击 **“添加计数器”** 。  
   
@@ -107,15 +107,15 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
     -   选择 **“选择列表中的计数器”** ，然后选择要使用的性能计数器。  
   
-9. 单击“添加”  。  
+9. 单击“添加”。  
   
-10. 单击“关闭”  。  
+10. 单击“关闭”。  
   
 11. 在 **MyLog** 对话框中，检查 **“计数器”** 列表中记录日志的性能计数器的列表。  
   
 12. 若要添加其他计数器，请重复步骤 5 到步骤 10。  
   
-13. 单击“确定”。   
+13. 单击“确定”。  
   
     > [!NOTE]  
     >  必须使用属于 Administrators 组成员的本地帐户或域帐户启动性能日志和警报服务。  

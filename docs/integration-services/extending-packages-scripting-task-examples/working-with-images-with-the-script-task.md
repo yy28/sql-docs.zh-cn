@@ -23,16 +23,16 @@ helpviewer_keywords:
 ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bed89f0cade880f41122e921fbda146ae2abc28d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 35d6c312be1819d8f0e111566a909de0dd8b41c1
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296981"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918433"
 ---
 # <a name="working-with-images-with-the-script-task"></a>使用脚本任务处理图像
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   除文本和数值数据外，产品数据库或用户数据库还经常包含图像。 Microsoft .NET Framework 中的 System.Drawing 命名空间提供用于操作图像的类  。  

@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 9e512c3c-f89b-45f3-8281-cdb8f35a2b1f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c3e144b1e866bd4bce8b7f8709c11f5b125b1f84
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bb3cb54271e151720be7a479c5fc688fe2b7dac9
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71291443"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919353"
 ---
 # <a name="extend-a-dataset-by-using-the-merge-join-transformation"></a>使用合并联接转换扩展数据集
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   若要添加和配置合并联接转换，则包中必须已包含至少一个数据流任务和为合并联接转换提供输入的两个数据流组件。  

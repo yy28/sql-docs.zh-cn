@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: a6837043-ea70-4c6a-9c7a-6868b02b2adc
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 891e0fa855ec422efbdfd93abe9905f4ee7bffc0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8ef16c9c83419d6b404affc49e7200a739ab65f7
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297420"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919049"
 ---
 # <a name="replace-ssis-expression"></a>REPLACE（SSIS 表达式）
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   将表达式中的一个字符串替换为另一个字符串或空字符串后，返回一个字符表达式。  
