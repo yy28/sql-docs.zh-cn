@@ -1,5 +1,5 @@
 ---
-title: CREATE SYNONYM (Transact-SQL) | Microsoft Docs
+title: CREATE SYNONYM (Transact-SQL)
 ms.custom: ''
 ms.date: 04/11/2017
 ms.prod: sql
@@ -22,14 +22,15 @@ helpviewer_keywords:
 ms.assetid: 41313809-e970-449c-bc35-85da2ef96e48
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8f4fd357cb833832beb03e23e3b7ba6e1f26fb03
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7d4131868fbaf40c59be2b55aad5fe078490c824
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85766967"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484552"
 ---
 # <a name="create-synonym-transact-sql"></a>CREATE SYNONYM (Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   创建新的同义词。  
@@ -61,14 +62,16 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
 }  
 ```  
   
-## <a name="arguments"></a>参数  
- schema_name_1   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
+ schema_name_1  
  指定创建同义词所使用的架构。 如果未指定 *schema*，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会使用当前用户的默认架构。  
   
  *synonym_name*  
  新同义词的名称。  
   
- server_name   
+ server_name  
  **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
  基对象所在服务器的名称。  
@@ -76,7 +79,7 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
  *database_name*  
  基对象所在数据库的名称。 如果未指定 database_name，则使用当前数据库的名称  。  
   
- schema_name_2   
+ schema_name_2  
  基对象的架构的名称。 如果未指定 schema_name，则使用当前用户的默认架构  。  
   
  *object_name*  
@@ -89,15 +92,19 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
   
  可以为下列对象类型创建同义词：  
   
-|||  
-|-|-|  
-|程序集 (CLR) 存储过程|程序集 (CLR) 表值函数|  
-|程序集 (CLR) 标量函数|程序集聚合 (CLR) 聚合函数|  
-|复制筛选过程|扩展存储过程|  
-|SQL 标量函数|SQL 表值函数|  
-|SQL 内联表值函数|SQL 存储过程|  
-|查看|表<sup>1</sup>（用户定义）|  
-  
+- 程序集 (CLR) 存储过程
+- 程序集 (CLR) 表值函数
+- 程序集 (CLR) 标量函数
+- 程序集聚合 (CLR) 聚合函数
+- 复制筛选过程
+- 扩展存储过程
+- SQL 标量函数
+- SQL 表值函数
+- SQL 内联表值函数
+- SQL 存储过程
+- 表<sup>1</sup>（用户定义）
+- 查看
+
  <sup>1 包括局部临时表和全局临时表</sup>  
   
  不支持使用函数基对象的四部分名称。  

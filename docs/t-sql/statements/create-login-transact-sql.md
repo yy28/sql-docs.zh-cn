@@ -27,12 +27,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 57f44934fa5ecfe7c14b4c4b2427656ccd4ef633
-ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
+ms.openlocfilehash: 0670dcc41120f2bb6e2a7d3436a70e1bc476ffc9
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84255420"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554542"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -42,9 +42,7 @@ CREATE LOGIN 参与事务。 如果在事务内执行 CREATE LOGIN 并且该事�
 
 有关语法约定的详细信息，请参阅 [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。
 
-## <a name="click-a-product"></a>单击一个产品！
-
-在下一行中，单击你感兴趣的产品名称。 单击时此网页上的此位置会显示适合你单击的任何产品的不同内容。
+[!INCLUDE[select-product](../../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
@@ -519,7 +517,7 @@ GO
 
 ### <a name="e-creating-a-login-for-an-azure-ad-group"></a>E. 为 Azure AD 组创建登录
 
- 以下示例为 Azure AD 组 mygroup 创建一个登录名，该组位于 myaad 的 Azure AD 中 
+ 以下示例为 Azure AD 组 mygroup 创建一个登录名，该组位于 myaad 的 Azure AD 中
 
 ```sql
 CREATE LOGIN [mygroup] FROM EXTERNAL PROVIDER
@@ -528,7 +526,7 @@ GO
 
 ### <a name="f-creating-a-login-for-an-azure-ad-application"></a>F. 为 Azure AD 应用程序创建登录名
 
-以下示例为 Azure AD 应用程序 myapp 创建一个登录名，该应用程序位于 myaad 的 Azure AD 中 
+以下示例为 Azure AD 应用程序 myapp 创建一个登录名，该应用程序位于 myaad 的 Azure AD 中
 
 ```sql
 CREATE LOGIN [myapp] FROM EXTERNAL PROVIDER

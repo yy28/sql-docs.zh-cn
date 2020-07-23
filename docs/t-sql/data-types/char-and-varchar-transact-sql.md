@@ -1,5 +1,5 @@
 ---
-title: char 和 varchar (Transact-SQL) | Microsoft Docs
+title: char 和 varchar (Transact-SQL)
 ms.custom: ''
 ms.date: 11/19/2019
 ms.prod: sql
@@ -24,12 +24,12 @@ ms.assetid: 282cd982-f4fb-4b22-b2df-9e8478f13f6a
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 91fc0adb93b6c1165055e9e98b93a5d48dd44557
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 9d61590f3d59551c826951bbb29e34b58ba515e8
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002520"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554509"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char 和 varchar (Transact-SQL)
 
@@ -39,9 +39,9 @@ ms.locfileid: "86002520"
 
 ## <a name="arguments"></a>参数
 
-char [ ( n ) ] 固定大小字符串数据   。 n 用于定义字符串大小（以字节为单位），并且它必须为 1 到 8,000 之间的值  。 对于单字节编码字符集（如拉丁文），存储大小为 n 个字节，并且可存储的字符数也为 n。    对于多字节编码字符集，存储大小仍为 n 个字节，但可存储的字符数可能小于 n。   char 的 ISO 同义词是 character   。 有关字符集的详细信息，请参阅[单字节和多字节字符集](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)。
+char [ ( n ) ] 固定大小字符串数据   。 n 用于定义字符串大小（以字节为单位），并且它必须为 1 到 8,000 之间的值  。 对于单字节编码字符集（如拉丁文），存储大小为 n 个字节，并且可存储的字符数也为 n。 对于多字节编码字符集，存储大小仍为 n 个字节，但可存储的字符数可能小于 n。 char 的 ISO 同义词是 character   。 有关字符集的详细信息，请参阅[单字节和多字节字符集](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)。
 
-varchar [ ( n | max ) ] 可变大小字符串数据    。 使用 n  定义字符串大小（以字节为单位），可以是介于 1 和 8,000 之间的值；或使用 max  指明列约束大小上限为最大存储 2^31-1 个字节 (2GB)。 对于单字节编码字符集（如拉丁文），存储大小为 n + 2 个字节，并且可存储的字符数也为 n。    对于多字节编码字符集，存储大小仍为 n + 2 个字节，但可存储的字符数可能小于 n   。 varchar 的 ISO 同义词是 charvarying 或 charactervarying    。 有关字符集的详细信息，请参阅[单字节和多字节字符集](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)。
+varchar [ ( n | max ) ] 可变大小字符串数据    。 使用 n  定义字符串大小（以字节为单位），可以是介于 1 和 8,000 之间的值；或使用 max  指明列约束大小上限为最大存储 2^31-1 个字节 (2GB)。 对于单字节编码字符集（如拉丁文），存储大小为 n + 2 个字节，并且可存储的字符数也为 n。 对于多字节编码字符集，存储大小仍为 n + 2 个字节，但可存储的字符数可能小于 n   。 varchar 的 ISO 同义词是 charvarying 或 charactervarying    。 有关字符集的详细信息，请参阅[单字节和多字节字符集](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)。
 
 ## <a name="remarks"></a>备注
 

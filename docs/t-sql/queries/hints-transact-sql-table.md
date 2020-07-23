@@ -36,12 +36,12 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cdc73ac23a6d95d46b6ec02bb1aeb194df96422a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c73969d5bd4b02373d9a16d292504530a626650b
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731330"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555853"
 ---
 # <a name="hints-transact-sql---table"></a>提示 (Transact-SQL) - 表
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -120,7 +120,9 @@ WITH  ( <table_hint> [ [, ]...n ] )
 }   
 ```  
   
-## <a name="arguments"></a>参数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
 WITH **(** \<table_hint> **)** [ [ **,** ]...*n* ]  
 存在一些例外情况：只有在使用 WITH 关键字指定表提示时，才支持在 FROM 子句中使用这些提示。 指定表提示时必须使用括号。  
   
@@ -393,18 +395,20 @@ GO
 NOEXPAND 仅适用于*索引视图*。 索引视图是包含为其创建的唯一聚集索引的视图。 如果查询包含对同时存在于索引视图和基表中的列的引用，而且查询优化器确定执行查询的最佳方法是使用索引视图，则查询优化器将对视图使用索引。 此功能称为*索引视图匹配*。 在 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 之前，仅在特定版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中支持查询优化器自动使用索引视图。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
 但是，为了使优化器考虑使用索引视图进行匹配，或者使用通过 NOEXPAND 提示引用的索引视图，则必须将以下 SET 选项设置为 ON。  
- 
-> [!NOTE]  
+
+> [!NOTE]
 > [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 支持在不指定 NOEXPAND 提示的情况下自动使用索引视图。
-  
-||||  
-|-|-|-|  
-|ANSI_NULLS|ANSI_WARNINGS|CONCAT_NULL_YIELDS_NULL|  
-|ANSI_PADDING|ARITHABORT<sup>1</sup>|QUOTED_IDENTIFIER|  
-  
- <sup>1</sup> 如果 ANSI_WARNINGS 设置为 ON，则 ARITHABORT 将隐式设置为 ON。 因此，不必手动调整此设置。  
-  
- 另外，必须将 NUMERIC_ROUNDABORT 选项设置为 OFF。  
+
+- ANSI_NULLS
+- ANSI_PADDING
+- ANSI_WARNINGS
+- ARITHABORT<sup>1</sup>
+- CONCAT_NULL_YIELDS_NULL
+- QUOTED_IDENTIFIER
+
+<sup>1</sup> 如果 ANSI_WARNINGS 设置为 ON，则 ARITHABORT 将隐式设置为 ON。 因此，不必手动调整此设置。  
+
+另外，必须将 NUMERIC_ROUNDABORT 选项设置为 OFF。  
   
  若要强制优化器对索引视图使用索引，请指定 NOEXPAND 选项。 仅当查询中也命名了此视图时才能使用此提示。 如果某个查询没有在 FROM 子句中直接命名特定索引视图，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不提供用于在此查询中强制使用此视图的提示；但是，即使查询中未直接引用索引视图，查询优化器仍会考虑使用索引视图。 使用 NOEXPAND 表提示时，SQL Server 仅自动创建索引视图的统计信息。 忽略此提示可能会导致出现执行计划警告：缺少无法通过手动创建统计信息解决的统计信息。 查询优化期间，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将使用查询直接引用视图时自动或手动创建的视图统计信息，并使用 NOEXPAND 提示。    
   

@@ -1,5 +1,5 @@
 ---
-title: float 和 real (Transact-SQL) | Microsoft Docs
+title: float 和 real (Transact-SQL)
 ms.custom: ''
 ms.date: 09/10/2019
 ms.prod: sql
@@ -23,14 +23,15 @@ ms.assetid: 08ea66b7-624e-4d8b-86bc-750ff76cdfc5
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 75b888832f9694907af1fbab7031294f32fdda0e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 921f6e0b26f9187f8dcf241996b601e46ba1cb2e
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999232"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554497"
 ---
 # <a name="float-and-real-transact-sql"></a>float 和 real (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 用于表示浮点数值数据的大致数值数据类型。 浮点数据为近似值；因此，并非数据类型范围内的所有值都能精确地表示。 real 的 ISO 同义词为 float(24)   。
@@ -40,7 +41,7 @@ ms.locfileid: "85999232"
 ## <a name="syntax"></a>语法  
 float [ (_n_) ] 其中 n 为用于存储 float 数值尾数的位数（以科学记数法表示），因此可以确定精度和存储大小  。 如果指定了 n，则它必须是介于 1 和 53 之间的某个值    。 n 的默认值为 53   。
   
-|n 值 |Precision|存储大小|  
+|n 值|Precision|存储大小|  
 |---|---|---|
 |**1-24**|7 位数|4 个字节|  
 |**25-53**|15 位数|8 字节|  
@@ -49,12 +50,14 @@ float [ (_n_) ] 其中 n 为用于存储 float 数值尾数的位数（以科学
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将 n 视为下列两个可能值之一  。 如果 1<=n<=24，将 n 视为 24     。 如果 25<=n<=53，将 n 视为 53     。  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] float[(n)] 数据类型从 1 到 53 之间的所有 n 值均符合 ISO 标准      。 double precision 的同义词是 float(53)   。
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="remarks"></a>备注  
   
 |数据类型|范围|存储|  
 |---|---|---|
-|**float**|-1.79E + 308 至 -2.23E - 308、0 以及 2.23E - 308 至 1.79E + 308|取决于 n 的值 |  
+|**float**|-1.79E + 308 至 -2.23E - 308、0 以及 2.23E - 308 至 1.79E + 308|取决于 n 的值|  
 |**real**|-3.40E + 38 至 -1.18E - 38、0 以及 1.18E - 38 至 3.40E + 38|4 个字节|  
   
 ##  <a name="converting-float-and-real-data"></a>转换 float 和 real 数据  

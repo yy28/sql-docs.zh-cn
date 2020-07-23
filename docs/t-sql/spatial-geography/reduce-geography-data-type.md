@@ -1,5 +1,5 @@
 ---
-title: Reduce（geography 数据类型）| Microsoft Docs
+title: Reduce（geography 数据类型）
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c5dfa8c1-6764-41d8-9150-f3cb30633d3e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: db28891a7e1bed887f3a8d58a5994734d65b9185
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e0745bbe895fcc26aceb197c9779f44249825083
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85705838"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86556142"
 ---
 # <a name="reduce-geography-data-type-"></a>Reduce（geography 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,17 +38,18 @@ ms.locfileid: "85705838"
 .Reduce ( tolerance )  
 ```  
   
-## <a name="arguments"></a>参数  
-  
-|||  
-|-|-|  
-|术语|定义|  
-|tolerance |类型为 float 的值  。 tolerance 是输入到 Douglas-Peucker 算法的公差  。 tolerance 必须为正数  。|  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
+
+|术语|定义|
+|----|----------|
+|tolerance|类型为 float 的值  。 tolerance 是输入到 Douglas-Peucker 算法的公差  。 tolerance 必须为正数  。|  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
   
- CLR 返回类型：SqlGeography   
+ CLR 返回类型：SqlGeography  
   
 ## <a name="remarks"></a>备注  
  对于集合类型，此算法单独作用于包含在该实例中的每个 tolerance  。 此算法不修改 Point 实例  。  

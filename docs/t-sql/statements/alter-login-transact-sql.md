@@ -24,12 +24,12 @@ ms.assetid: e247b84e-c99e-4af8-8b50-57586e1cb1c5
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0610ec89a4475b9eb60922b1d52c7005d5692bb0
-ms.sourcegitcommit: 7ce4a81c1b91239c8871c50f97ecaf387f439f6c
+ms.openlocfilehash: 136706c3d7074b282eccb8ff910c7a57f8f41874
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86217795"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942259"
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN (Transact-SQL)
 
@@ -37,9 +37,7 @@ ms.locfileid: "86217795"
 
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
-## <a name="click-a-product"></a>单击一个产品！
-
-在下一行中，单击你感兴趣的产品名称。 单击时此网页上的此位置会显示适合你单击的任何产品的不同内容。
+[!INCLUDE[select-product](../../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
@@ -149,10 +147,10 @@ DROP CREDENTIAL 从登录名删除可扩展密钥管理 (EKM) 提供程序凭据
 
 不能使用带 DISABLE 参数的 ALTER LOGIN 来拒绝对 Windows 组的访问。 例如，ALTER LOGIN [domain\group] DISABLE 将返回下列错误信息：
 
-    `"Msg 15151, Level 16, State 1, Line 1
-    "Cannot alter the login '*Domain\Group*', because it does not exist or you do not have permission."`
+`"Msg 15151, Level 16, State 1, Line 1
+"Cannot alter the login '*Domain\Group*', because it does not exist or you do not have permission."`
 
-    This is by design.
+这是设计的结果。
   
 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中，对连接和服务器级别的防火墙规则进行身份验证时所需的登录数据会暂时缓存在每个数据库中。 此缓存定期刷新。 若要强制刷新身份验证缓存并确保数据库具有最新版本的登录表，请执行 [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)。
 
@@ -552,8 +550,8 @@ DROP CREDENTIAL 从登录名删除可扩展密钥管理 (EKM) 提供程序凭据
 
 不能使用带 DISABLE 参数的 ALTER_LOGIN 来拒绝对 Windows 组的访问。 这是设计的结果。 例如，ALTER_LOGIN [domain\group] DISABLE 将返回下列错误信息：
 
-    `"Msg 15151, Level 16, State 1, Line 1
-    "Cannot alter the login '*Domain\Group*', because it does not exist or you do not have permission."`
+`"Msg 15151, Level 16, State 1, Line 1
+"Cannot alter the login '*Domain\Group*', because it does not exist or you do not have permission."`
 
 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中，对连接和服务器级别的防火墙规则进行身份验证时所需的登录数据会暂时缓存在每个数据库中。 此缓存定期刷新。 若要强制刷新身份验证缓存并确保数据库具有最新版本的登录表，请执行 [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)。
 
@@ -906,8 +904,8 @@ UNLOCK 仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] �
 
 不能使用带 DISABLE 参数的 ALTER_LOGIN 来拒绝对 Windows 组的访问。 这是设计的结果。 例如，ALTER_LOGIN [domain\group] DISABLE 将返回下列错误信息：
 
-    `"Msg 15151, Level 16, State 1, Line 1
-    "Cannot alter the login '*Domain\Group*', because it does not exist or you do not have permission."`
+`"Msg 15151, Level 16, State 1, Line 1
+"Cannot alter the login '*Domain\Group*', because it does not exist or you do not have permission."`
 
 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中，对连接和服务器级别的防火墙规则进行身份验证时所需的登录数据会暂时缓存在每个数据库中。 此缓存定期刷新。 若要强制刷新身份验证缓存并确保数据库具有最新版本的登录表，请执行 [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)。
 

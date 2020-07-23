@@ -1,5 +1,5 @@
 ---
-title: DENY (Transact-SQL) | Microsoft Docs
+title: DENY (Transact-SQL)
 ms.custom: ''
 ms.date: 05/15/2017
 ms.prod: sql
@@ -27,14 +27,15 @@ ms.assetid: c32d1e01-9ee9-4665-a516-fcfece58078e
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e0b77901f1a4c625f241c057f22af6b5fd437f10
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e146021bf3bd601e01f6220ffcf42de970e63657
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012559"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484812"
 ---
 # <a name="deny-transact-sql"></a>DENY (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   拒绝为主体授予权限。 防止该主体通过组或角色成员身份继承权限。 DENY 优先于所有权限，但 DENY 不适用于 sysadmin 固定服务器角色的对象所有者或成员。
@@ -86,7 +87,9 @@ DENY
 }  
 ```  
   
-## <a name="arguments"></a>参数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
  ALL  
  该选项不拒绝所有可能权限。 拒绝 ALL 相当于拒绝下列权限。  
   
@@ -108,25 +111,25 @@ DENY
  PRIVILEGES  
  包含此参数是为了符合 ISO 标准。 请不要更改 ALL 的行为。  
   
- permission   
+ permission  
  权限的名称。 下面列出的子主题介绍了不同权限与安全对象之间的有效映射。  
   
  *column*  
  指定表中拒绝授予其权限的列名。 需要使用圆括号 ()。  
   
- class   
+ class  
  指定拒绝授予其权限的安全对象的类。 需要使用作用域限定符 ::  。  
   
- securable   
+ securable  
  指定拒绝授予其权限的安全对象。  
   
- TO principal   
+ TO principal  
  主体的名称。 可以对其拒绝安全对象权限的主体随安全对象而异。 有关有效的组合，请参阅下面列出的特定于安全对象的主题。  
   
  CASCADE  
  指示拒绝授予指定主体该权限，同时，对该主体授予了该权限的所有其他主体，也拒绝授予该权限。 当主体具有带 GRANT OPTION 的权限时，为必选项。  
   
- AS principal   
+ AS principal  
  指定执行此查询的主体要从哪个主体派生其拒绝该权限的权利。
 使用 AS principal 子句指示：记录为权限的拒绝者的主体应为执行该语句的用户以外的主体。 例如，假设用户 Mary 是 principal_id 12，用户 Raul 是主体 15。 Mary 执行 `DENY SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;` 现在，即使语句的实际执行者是用户 13 (Mary)，sys.database_permissions 表仍将指示 deny 语句的 grantor_prinicpal_id 为 15 (Raul)。
   
@@ -153,11 +156,12 @@ DENY
   
  被授予 CONTROL SERVER 权限的用户（如 sysadmin 固定服务器角色的成员）可以拒绝对服务器中任何安全对象授予权限。 被授予数据库 CONTROL 权限的用户（如 db_owner 固定数据库角色的成员）可以拒绝对数据库中任何安全对象授予权限。 被授予架构 CONTROL 权限的用户可以拒绝对架构中任何对象授予权限。 如果使用 AS 子句，那么指定主体必须拥有其权限被拒绝授予的安全对象。  
   
-## <a name="examples"></a>示例  
+## <a name="examples"></a>示例
+
  下表列出了安全对象以及描述特定于安全对象的语法的主题。  
   
-|||  
-|-|-|  
+|安全对象|语法|
+|----------|------|
 |应用程序角色|[DENY 数据库主体权限 (Transact-SQL)](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)|  
 |Assembly|[DENY 程序集权限 (Transact-SQL)](../../t-sql/statements/deny-assembly-permissions-transact-sql.md)|  
 |非对称密钥|[DENY 非对称密钥权限 (Transact-SQL)](../../t-sql/statements/deny-asymmetric-key-permissions-transact-sql.md)|  
@@ -172,7 +176,7 @@ DENY
 |函数|[DENY 对象权限 (Transact-SQL)](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
 |登录|[DENY 服务器主体权限 (Transact-SQL)](../../t-sql/statements/deny-server-principal-permissions-transact-sql.md)|  
 |消息类型|[DENY Service Broker 权限 (Transact-SQL)](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
-|Object|[DENY 对象权限 (Transact-SQL)](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
+|对象|[DENY 对象权限 (Transact-SQL)](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
 |队列|[DENY 对象权限 (Transact-SQL)](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
 |远程服务绑定|[DENY Service Broker 权限 (Transact-SQL)](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
 |角色|[DENY 数据库主体权限 (Transact-SQL)](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)|  

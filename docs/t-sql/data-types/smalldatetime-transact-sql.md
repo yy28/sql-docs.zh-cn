@@ -22,14 +22,15 @@ ms.assetid: 68b74610-d54c-4c8e-b4b2-7e3747546ee0
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2eaec4d3e43f0a24b0b7ed297589a2699e41bc2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ac0442c2dfe609d112c12ada4f2dedb3be20b8ee
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007992"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86556182"
 ---
 # <a name="smalldatetime-transact-sql"></a>smalldatetime (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 定义结合了一天中的时间的日期。 此时间为 24 小时制，秒始终为零 (:00)，并且不带秒小数部分。
@@ -39,10 +40,10 @@ ms.locfileid: "86007992"
   
 ## <a name="smalldatetime-description"></a>smalldatetime 说明
   
-|||  
-|-|-|  
+|属性|值|
+|--------|-----|
 |语法|**smalldatetime**|  
-|使用情况|DECLARE \@MySmalldatetime smalldatetime <br /><br /> CREATE TABLE Table1 ( Column1 smalldatetime ) |  
+|使用情况|DECLARE \@MySmalldatetime smalldatetime<br /><br /> CREATE TABLE Table1 ( Column1 smalldatetime )|  
 |默认的字符串文字格式<br /><br /> （用于下级客户端）|不适用|  
 |日期范围|1900-01-01 到 2079-06-06<br /><br /> 1900 年 1 月 1 日到 2079 年 6 月 6 日|  
 |时间范围|00:00:00 到 23:59:59<br /><br /> 2007-05-09 23:59:59 将舍入为<br /><br /> 2007-05-10 00:00:00|  
@@ -63,7 +64,7 @@ ms.locfileid: "86007992"
 当转换为日期和时间数据类型时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将会拒绝它无法识别为日期或时间的所有值。 有关对日期和时间数据使用 CAST 和 CONVERT 函数的信息，请参阅 [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)。
   
 ### <a name="converting-smalldatetime-to-other-date-and-time-types"></a>将 smalldatetime 转换为其他日期和时间类型
-本部分介绍当 smalldatetime 数据类型转换为其他日期和时间数据类型时发生的情况  。
+本部分介绍当 smalldatetime 数据类型转换为其他日期和时间数据类型时发生的情况。
   
 转换成 **date** 时，会复制年、月和日。 下面的代码显示将 `smalldatetime` 值转换为 `date` 值的结果。
   
@@ -81,7 +82,7 @@ SELECT @smalldatetime AS '@smalldatetime', @date AS 'date';
 --(1 row(s) affected)  
 ```  
   
-转换到 time(n) 时，会复制小时、分钟和秒钟  。 秒的小数部分设置为 0。 下面的代码显示将 `smalldatetime` 值转换为 `time(4)` 值的结果。
+转换到 time(n) 时，会复制小时、分钟和秒钟。 秒的小数部分设置为 0。 下面的代码显示将 `smalldatetime` 值转换为 `time(4)` 值的结果。
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '1955-12-13 12:43:10';  
@@ -97,7 +98,7 @@ SELECT @smalldatetime AS '@smalldatetime', @time AS 'time';
 --(1 row(s) affected)  
 ```  
   
-转换成 datetime 时，会将 smalldatetime 值复制到 datetime 值    。 秒的小数部分设置为 0。 下面的代码显示将 `smalldatetime` 值转换为 `datetime` 值的结果。
+转换成 datetime 时，会将 smalldatetime 值复制到 datetime 值  。 秒的小数部分设置为 0。 下面的代码显示将 `smalldatetime` 值转换为 `datetime` 值的结果。
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '1955-12-13 12:43:10';  
@@ -129,7 +130,7 @@ SELECT @smalldatetime AS '@smalldatetime', @datetimeoffset AS 'datetimeoffset(4)
 --(1 row(s) affected)  
 ```  
   
-转换成 datetime2(n) 时，会将 smalldatetime 值复制到 datetime2(n) 值    。 秒的小数部分设置为 0。 下面的代码显示将 `smalldatetime` 值转换为 `datetime2(4)` 值的结果。
+转换成 datetime2(n) 时，会将 smalldatetime 值复制到 datetime2(n) 值  。 秒的小数部分设置为 0。 下面的代码显示将 `smalldatetime` 值转换为 `datetime2(4)` 值的结果。
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '1955-12-13 12:43:10';  
@@ -157,7 +158,7 @@ SELECT
     ,CAST('2007-05-08 12:59:59.998' AS smalldatetime);  
 ```  
   
-|输入|输出|  
+|输入|Output|  
 |---|---|
 |2007-05-08 12:35:29|2007-05-08 12:35:00|  
 |2007-05-08 12:35:30|2007-05-08 12:36:00|  

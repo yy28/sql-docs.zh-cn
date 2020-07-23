@@ -1,5 +1,5 @@
 ---
-title: DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL) | Microsoft Docs
+title: DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
 ms.custom: ''
 ms.date: 07/16/2017
 ms.prod: sql
@@ -12,14 +12,15 @@ dev_langs:
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7d350d78a4a79bd66cd6bda5794b87d97cf043dc
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 0895a01f3110c90172ab763ebd0991c259da985d
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196878"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484598"
 ---
 # <a name="dbcc-pdw_showexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
+
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
 显示在特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 计算节点或控制节点上运行的查询的 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 执行计划。 在计算节点和控制节点上运行查询时，使用它来解决查询性能问题。
@@ -41,15 +42,15 @@ Azure 并行数据仓库语法：
 DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id, spid )  
 [;]  
 ```  
-  
+
 ## <a name="arguments"></a>参数  
- distribution_id   
+ distribution_id  
  正在运行查询计划的分发的标识符。 这必须为整数，并且不能为 NULL。 以 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 为目标时使用。  
   
- pdw_node_id   
+ pdw_node_id  
  正在运行查询计划的节点的标识符。 这必须为整数，并且不能为 NULL。 以设备为目标时使用。  
   
- spid   
+ spid  
  正在运行查询计划的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会话的标识符。 这必须为整数，并且不能为 NULL。  
   
 ## <a name="permissions"></a>权限  
@@ -96,5 +97,6 @@ DBCC PDW_SHOWEXECUTIONPLAN ( 201001, 375 );
 ```  
 
 ## <a name="see-also"></a>另请参阅
-[DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)](dbcc-pdw-showpartitionstats-transact-sql.md)  
-[DBCC PDW_SHOWSPACEUSED (Transact-SQL)](dbcc-pdw-showspaceused-transact-sql.md)
+
+- [DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)](dbcc-pdw-showpartitionstats-transact-sql.md)  
+- [DBCC PDW_SHOWSPACEUSED (Transact-SQL)](dbcc-pdw-showspaceused-transact-sql.md)

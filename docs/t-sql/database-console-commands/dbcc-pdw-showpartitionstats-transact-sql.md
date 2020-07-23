@@ -1,5 +1,5 @@
 ---
-title: DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL) | Microsoft Docs
+title: DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql
@@ -11,14 +11,15 @@ dev_langs:
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4cb7824e3efd5a0d6cca969a790834a4e61968cb
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 6d1a1a72fbe5ef1b8382901a62adfd95a907b765
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196905"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484258"
 ---
 # <a name="dbcc-pdw_showpartitionstats-transact-sql"></a>DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)
+
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
 显示 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 或 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 数据库中表格每个分区的大小和行数。
@@ -32,7 +33,7 @@ Show the partition stats for a table
 DBCC PDW_SHOWPARTITIONSTATS ( " [ database_name . [ schema_name ] . ] | [ schema_name.] table_name  ")  
 [;]  
 ```  
-  
+
 ## <a name="arguments"></a>参数  
  `[ database_name . [ schema_name ] . | schema_name . ] table_name`  
  要显示的表格的名称（具有一、二、三个部分）。  对于具有二或三个部分的名称，名称必须使用双引号 ("") 括起来。 可选择是否使用引号将具有一个部分的表格名称括起来。  
@@ -61,7 +62,8 @@ DBCC PDW_SHOWPARTITIONSTATS ("ssawPDW.dbo.FactInternetSales");
 DBCC PDW_SHOWPARTITIONSTATS ("dbo.FactInternetSales");  
 DBCC PDW_SHOWPARTITIONSTATS (FactInternetSales);  
 ```  
+
 ## <a name="see-also"></a>另请参阅
-[DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)](dbcc-pdw-showexecutionplan-transact-sql.md)  
-[DBCC PDW_SHOWSPACEUSED (Transact-SQL)](dbcc-pdw-showspaceused-transact-sql.md)  
- 
+
+- [DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)](dbcc-pdw-showexecutionplan-transact-sql.md)  
+- [DBCC PDW_SHOWSPACEUSED (Transact-SQL)](dbcc-pdw-showspaceused-transact-sql.md)  

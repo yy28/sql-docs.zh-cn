@@ -22,16 +22,16 @@ helpviewer_keywords:
 ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c93f0be480341abb59038db34616a94d4b475952
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dc4c1b81917e07ec23b543f64cb81942104ad31d
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298505"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923097"
 ---
 # <a name="multiple-flat-files-connection-manager"></a>多平面文件连接管理器
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   多平面文件连接管理器使包可以访问多个平面文件中的数据。 例如，数据流任务在循环容器（例如 For 循环容器）内时，平面文件源可以使用多平面文件连接管理器。 在容器的每个循环中，平面文件源从多平面文件连接管理器提供的下一个文件名加载数据。  
@@ -56,7 +56,7 @@ ms.locfileid: "71298505"
   
  当多平面文件连接管理器引用多个文件时，文件的路径由竖线 (|) 分隔。 连接管理器的 **ConnectionString** 属性的格式如下：  
   
- \<路径  路径>|\<  >  
+ \<*path*>|\<*path*>  
   
  也可以使用通配符来指定多个文件。 例如，若要引用 C 驱动器上的所有文本文件，可以将 **ConnectionString** 属性的值设置为 C:\\\*.txt。  
   
@@ -174,7 +174,7 @@ ms.locfileid: "71298505"
 |**竖线 {&#124;}** 。|列由竖线分隔。|  
   
  **重置列**  
- 通过单击“重置列”  可以删除除原始列之外的所有列。  
+ 通过单击“重置列”可以删除除原始列之外的所有列。  
   
 #### <a name="format--fixed-width"></a>格式 = 固定宽度  
  **字体**  
@@ -187,7 +187,7 @@ ms.locfileid: "71298505"
  为各列添加分隔符之前，先指定行的长度。 或者，拖动预览窗口中的垂直线，以标记行尾。 行宽值将自动更新。  
   
  **重置列**  
- 通过单击“重置列”  可以删除除原始列之外的所有列。  
+ 通过单击“重置列”可以删除除原始列之外的所有列。  
   
 #### <a name="format--ragged-right"></a>格式 = 右边未对齐  
   
@@ -215,10 +215,10 @@ ms.locfileid: "71298505"
 |**竖线 {&#124;}** 。|行由竖线分隔。|  
   
  **重置列**  
- 通过单击“重置列”  可以删除除原始列之外的所有列。  
+ 通过单击“重置列”可以删除除原始列之外的所有列。  
   
 ## <a name="multiple-flat-files-connection-manager-editor-advanced-page"></a>多平面文件连接管理器编辑器（“高级”页）
-  可以使用“多平面文件连接管理器编辑器”对话框的“高级”页，设置平面文件连接管理器连接到的文本文件中的属性（如每列的数据类型和分隔符）。    
+  可以使用“多平面文件连接管理器编辑器”对话框的“高级”页，设置平面文件连接管理器连接到的文本文件中的属性（如每列的数据类型和分隔符）。   
   
  默认情况下，字符串列的长度为 50 个字符。 您可以计算示例数据并自动调整这些列的长度，以免数据截断或超出列宽。 还可以更新其他元数据以便与目标列兼容。 例如，可以将只包含整型数据的列的数据类型更改为数值数据类型，例如 DT_I2。  
   
@@ -234,7 +234,7 @@ ms.locfileid: "71298505"
  **配置各列的属性**  
  选择左窗格中的列可在右窗格中查看列的属性。 请参阅下表以了解数据类型属性的说明。 列出的部分属性仅对某些平面文件格式是可配置的。  
   
-|properties|说明|  
+|属性|说明|  
 |--------------|-----------------|  
 |**ColumnType**|表示列是由分隔符分隔、还是固定宽度，或是右边未对齐。 此属性为只读。 在右边未对齐的文件中，除最后一列之外的每一列的宽度都固定，而最后一列由行分隔符终止。|  
 |**OutputColumnWidth**|指定值以字节数进行存储；对于 Unicode 文件，该值将显示为字符数。 在数据流任务中，此值用于设置平面文件源的输出列宽。<br /><br /> 注意：在对象模型中，此属性的名称为 MaximumWidth。|  
@@ -247,7 +247,7 @@ ms.locfileid: "71298505"
 |**InputColumnWidth**|指定值以字节数进行存储；对于 Unicode 文件，该值将显示为字符数。 对于分隔列，将忽略此值。<br /><br /> **注意** ：在对象模型中，此属性的名称为 ColumnWidth。|  
   
  **新建**  
- 单击“新建”  添加一个新列。 默认情况下，单击 **“新建”** 按钮将会在列表末尾添加新列。 该按钮还包括以下选项，可以在下拉列表中选择。  
+ 单击“新建”添加一个新列。 默认情况下，单击 **“新建”** 按钮将会在列表末尾添加新列。 该按钮还包括以下选项，可以在下拉列表中选择。  
   
 |值|说明|  
 |-----------|-----------------|  
@@ -256,13 +256,13 @@ ms.locfileid: "71298505"
 |**在其后插入**|在所选列后面插入新列。|  
   
  **删除**  
- 选择一列，然后单击“删除”  来删除该列。  
+ 选择一列，然后单击“删除”来删除该列。  
   
  **建议类型**  
- 使用“提供列类型建议”对话框可以评估所选的第一个文件中的示例数据，并获取对每列的数据类型和长度的建议。  有关详细信息，请参阅 [“提供列类型建议”对话框 UI 参考](../../integration-services/connection-manager/suggest-column-types-dialog-box-ui-reference.md)。  
+ 使用“提供列类型建议”对话框可以评估所选的第一个文件中的示例数据，并获取对每列的数据类型和长度的建议。 有关详细信息，请参阅 [“提供列类型建议”对话框 UI 参考](../../integration-services/connection-manager/suggest-column-types-dialog-box-ui-reference.md)。  
   
 ## <a name="multiple-flat-files-connection-manager-editor-preview-page"></a>多平面文件连接管理器编辑器（“预览”页）
-  可以使用“多平面文件连接管理器编辑器”对话框的“预览”页，查看选择的第一个源文件在按定义的样式划分为多列后的显示情况。    
+  可以使用“多平面文件连接管理器编辑器”对话框的“预览”页，查看选择的第一个源文件在按定义的样式划分为多列后的显示情况。   
   
  若要了解有关多平面文件连接管理器的详细信息，请参阅 [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)。  
   

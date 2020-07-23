@@ -1,5 +1,5 @@
 ---
-title: CREATE TRIGGER (Transact-SQL) | Microsoft Docs
+title: CREATE TRIGGER (Transact-SQL)
 description: CREATE TRIGGER 语句的 Transact-SQL 参考，该语句用于创建 DML、DDL 或登录触发器。
 ms.date: 10/30/2019
 ms.prod: sql
@@ -28,16 +28,16 @@ ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
 ms.reviewer: mathoma
-ms.openlocfilehash: 70a32b0f5c3a80d4d3c5af0cad7adcd1e15f5088
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2434250e8ea3fe4abd7c17ed5fc4041c63880321
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85766945"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86481731"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 创建 DML、DDL 或登录触发器。 触发器是一种特殊类型的存储过程，在数据库服务器中发生事件时自动运行。 如果用户尝试通过数据操作语言 (DML) 事件修改数据，DML 触发器运行。 DML 事件是针对表或视图的 INSERT、UPDATE 或 DELETE 语句。 此类触发器在任何有效事件触发时触发，无论表行是否受影响。 有关详细信息，请参阅 [DML Triggers](../../relational-databases/triggers/dml-triggers.md)。  
   
@@ -160,6 +160,8 @@ AS { sql_statement  [ ; ] [ ,...n ]  [ ; ] }
     [ EXECUTE AS Clause ]  
 ```  
   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>参数
 OR ALTER  
 **适用对象**：Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始）。 
@@ -172,7 +174,7 @@ DML 触发器所属架构的名称。 DML 触发器的范围限定为，对其�
 trigger_name  
 触发器的名称。 trigger_name 必须遵循[标识符](../../relational-databases/databases/database-identifiers.md)规则，但 trigger_name 不得以 # 或 ## 开头。  
   
-table | view   
+table | view  
 对其运行 DML 触发器的表或视图。 此表或视图有时称为“触发器表”或“触发器视图”。 可以根据需要指定表或视图的完全限定名称。 只有 INSTEAD OF 触发器才能引用视图。 无法对本地或全局临时表定义 DML 触发器。  
   
 DATABASE  
@@ -310,20 +312,27 @@ CREATE TRIGGER 必须是批处理中的第一条语句，并且只能应用于�
 无论是否记录，WRITETEXT 语句都不激活触发器。  
   
 不得在 DML 触发器中使用下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句：  
-  
-||||  
-|-|-|-|  
-|ALTER DATABASE|CREATE DATABASE|DROP DATABASE|  
-|RESTORE DATABASE|RESTORE LOG|RECONFIGURE|  
-  
+
+- ALTER DATABASE
+- CREATE DATABASE
+- DROP DATABASE
+- RESTORE DATABASE
+- RESTORE LOG
+- RECONFIGURE
+
 另外，如果对作为触发操作目标的表或视图使用 DML 触发器，也不得在 DML 触发器的主体中使用下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
   
-||||  
-|-|-|-|  
-|CREATE INDEX（包括 CREATE SPATIAL INDEX 和 CREATE XML INDEX）|ALTER INDEX|DROP INDEX|  
-|DBCC DBREINDEX|ALTER PARTITION FUNCTION|DROP TABLE|  
-|用于执行以下操作的 ALTER TABLE：<br /><br /> 添加、修改或删除列。<br /><br /> 切换分区。<br /><br /> 添加或删除 PRIMARY KEY 或 UNIQUE 约束。|||  
-  
+- CREATE INDEX（包括 CREATE SPATIAL INDEX 和 CREATE XML INDEX）
+- ALTER INDEX
+- DROP INDEX
+- DROP TABLE
+- DBCC DBREINDEX
+- ALTER PARTITION FUNCTION
+- 用于执行以下操作的 ALTER TABLE：
+    - 添加、修改或删除列。
+    - 切换分区。
+    - 添加或删除 PRIMARY KEY 或 UNIQUE 约束。
+
 > [!NOTE]  
 >  因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持针对系统表的用户定义的触发器，因此我们建议不要为系统表创建用户定义触发器。 
 
