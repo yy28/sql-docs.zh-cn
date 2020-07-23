@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: e62083ec-d127-48ea-aaa4-cca6017a29cb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 544740f7a6e0d292b1764a9bdfb565d1e7ce0f18
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a9527c0d73ed47e893e51e8e192c170a310172e4
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293952"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921115"
 ---
 # <a name="select-variables-page"></a>“选择变量”页
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   在配置脚本任务或脚本组件时，可以使用 **“选择变量”** 对话框为 **ReadOnlyVariables** 和 **ReadWriteVariables** 属性选择一个或多个变量。  

@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: bfff5b25-cfe1-449b-8e07-38cd511ac307
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bb6f782de8d271edf005f5adb69e8c3e6b8945d3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 983e78ef4eedaa8aee55bb3d4c6575519a7d6b27
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296234"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919963"
 ---
 # <a name="integration-services-backward-compatibility"></a>Integration Services 的向后兼容性
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   本主题介绍 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的不同版本之间的更改。 它包括不再可用或计划在将来的版本中删除的功能。 本部分还介绍对产品所做的更改，已知这些更改会使包含 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 功能的现有应用程序无法继续工作，或会使其行为发生变化。  

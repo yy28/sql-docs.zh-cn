@@ -23,12 +23,12 @@ ms.assetid: a5d5b050-203e-4355-ac85-e08ef5ca7823
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b8340e655cc46a856995c0baa3c3cad4036f6e2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f5d3108c49eb60a478c375e2afed320ee965361d
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004026"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919905"
 ---
 # <a name="between-transact-sql"></a>BETWEEN (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +43,9 @@ ms.locfileid: "86004026"
 test_expression [ NOT ] BETWEEN begin_expression AND end_expression  
 ```  
   
-## <a name="arguments"></a>参数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
  test_expression   
  要在由 begin_expression 和 end_expression 定义的范围内测试的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)   。 test_expression 的数据类型必须与 begin_expression 和 end_expression 的数据类型相同    。  
   

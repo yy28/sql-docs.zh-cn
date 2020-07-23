@@ -14,15 +14,15 @@ ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f50946b1540300bafbae9cac9b59b21dbb7eddf5
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: e7b267c0bfcfc7e12e2dc17c08bb6b18f2f36bf6
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86159395"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919897"
 ---
 # <a name="transactional-articles---specify-how-changes-are-propagated"></a>事务项目 - 指定如何传播更改
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   通过使用事务复制，可以指定如何将数据更改从发布服务器传播到订阅服务器。 对于每个已发布表，可以指定下列四种方法之一，将每项操作（INSERT、UPDATE 或 DELETE）传播到订阅服务器：  
   
 -   指定事务复制应编写出脚本，并随后调用存储过程以将更改传播到订阅服务器（默认方法）。  

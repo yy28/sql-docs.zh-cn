@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0230354bfe53de8c362bcdb70caa597652706ee2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3b3f51db976994dad9e29ea8f7187f0106da53ce
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293975"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920997"
 ---
 # <a name="setup-of-the-data-profiling-task"></a>设置数据事件探查任务
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   在可以查看源数据的配置文件之前，第一步是设置和运行数据事件探查任务。 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包内创建此任务。 若要配置数据事件探查任务，可以使用数据事件探查任务编辑器。 使用此编辑器，可以选择输出配置文件的位置以及要计算哪些配置文件。 设置此任务后，可以运行包来计算数据配置文件。  

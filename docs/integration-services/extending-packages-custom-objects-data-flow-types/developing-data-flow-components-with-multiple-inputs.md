@@ -10,16 +10,16 @@ ms.topic: reference
 ms.assetid: 3c7b50e8-2aa6-4f6a-8db4-e8293bc21027
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: df06f7dad35edcbdd299794a7724b3e52e7974f0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fee34f2e35920f8a470c549afec71c5bf4963913
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71287718"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920203"
 ---
 # <a name="developing-data-flow-components-with-multiple-inputs"></a>开发具有多个输入的数据流组件
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   如果其多个输入以不相等速率生成数据，则具有多个输入的数据流组件可能会占用过多的内存。 开发支持两个或多个输入的自定义数据流组件时，可以通过使用 Microsoft.SqlServer.Dts.Pipeline 命名空间中的下列成员来管理此内存压力：  

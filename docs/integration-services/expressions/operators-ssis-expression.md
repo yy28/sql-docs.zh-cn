@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 33df3a3d-1f5c-429b-a3b9-52b7d8689089
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b625b23dc45a3a5ed9abc00f0068ed3e7fbfeb58
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cce2d53a48a55dad2f8d8120e8a7fd091b062ebe
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297442"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921106"
 ---
 # <a name="operators-ssis-expression"></a>运算符（SSIS 表达式）
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   本部分介绍了表达式语言提供的运算符和表达式计算器使用的运算符优先级及结合性。  

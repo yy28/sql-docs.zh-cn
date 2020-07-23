@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 7731f91e-b8b3-4d96-a0d9-73f568547cb3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6255a348383804bb2bb37ae88b5d91dbc6db3eca
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 805332397fb843ea1496f1471a0b054fa53f8957
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293943"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920405"
 ---
 # <a name="sequence-container"></a>序列容器
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   序列容器可定义作为包控制流子集的控制流。 序列容器将包分组到多个单独的控制流中，每个控制流包含一个或多个在整体包控制流中运行的任务和容器。  

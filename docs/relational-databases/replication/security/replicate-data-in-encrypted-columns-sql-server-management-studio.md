@@ -16,15 +16,15 @@ ms.assetid: d1f8f586-e5a3-4a71-9391-11198d42bfa3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 4f7e7f7752bfa5aa7698914da1cf38fe1e823dfe
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: 1a119275f9508c69ab5c250e2a5a6e487d1b6502
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86160045"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920953"
 ---
 # <a name="replicate-data-in-encrypted-columns-sql-server-management-studio"></a>复制加密列中的数据 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   通过使用复制，您可以发布加密的列数据。 若要在订阅服务器上解密并使用此数据，则订阅服务器上也必须有用于在发布服务器上加密该数据的密钥。 复制并不提供安全机制来传输加密密钥。 您必须在订阅服务器上手动重新创建加密密钥。 本主题说明如何在发布服务器上加密列并确保订阅服务器上提供有加密密钥。  
   
  基本步骤如下所述：  

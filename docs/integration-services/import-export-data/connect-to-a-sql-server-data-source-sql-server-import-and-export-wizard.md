@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: 386cedbb-fae5-45ce-9363-c4a417f80a2f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f063ae9f49c294fa10413eb3b5d5b494838f2fc6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 31a3cba341ee6d7ec8aada3bf620ab23ab55bf9f
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773602"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920965"
 ---
 # <a name="connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard"></a>连接到 SQL Server 数据源（SQL Server 导入和导出向导）
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 本主题介绍如何从 SQL Server 导入和导出向导的“选择数据源”页或“选择目标”业连接到 Microsoft SQL Server。 有多种数据提供程序可用来连接 SQL Server。

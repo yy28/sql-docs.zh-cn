@@ -21,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: b694d21f-9919-402d-9192-666c6449b0b7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 973b20bbe86e0aaff8cf4732efd95e1f3b10c423
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0b4c465ddb7efab8c5e2398facc51e89425389cb
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297293"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920213"
 ---
 # <a name="developing-a-custom-transformation-component-with-synchronous-outputs"></a>开发具有同步输出的自定义转换组件
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   具有同步输出的转换组件接收来自上游组件的行，并在将行传递到下游组件时读取或修改这些行的列中的值。 这些转换组件还定义从上游组件提供的列派生的其他输出列，但是它们不会向数据流添加行。 有关同步组件和异步组件之间的差异的详细信息，请参阅[了解同步和异步转换](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)。  

@@ -16,15 +16,15 @@ ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 466e63894ac6f735032dad2af99679bdcf28d5d3
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: ee448df6c962596b146c3c933406a23063873d96
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86159405"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919943"
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>在事务复制中发布存储过程执行
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   如果在发布服务器上执行一个或多个存储过程并影响已发布的表，请考虑将这些存储过程作为存储过程执行项目包括在发布中。 初始化订阅时，过程定义（CREATE PROCEDURE 语句）将被复制到订阅服务器上；当在发布服务器上执行过程时，复制将在订阅服务器上执行相应的过程。 在执行大量批处理操作的情况下，这可以显著提高性能，因为这仅复制此过程执行而不需要为每一行复制各种更改。 例如，假设在发布数据库中创建下面的存储过程：  
   
 ```  

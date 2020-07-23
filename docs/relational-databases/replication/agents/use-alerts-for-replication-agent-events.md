@@ -22,15 +22,15 @@ ms.assetid: 8c42e523-7020-471d-8977-a0bd044b9471
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 7b8f3b70c3d161fe5bbd288ec3fd5566646c0637
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: 8a52154d55f1703cc2f7d1a9221021ab11d94177
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86159985"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919743"
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>对复制代理事件使用警报
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理提供了使用警报监视事件（如复制代理事件）的方法。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理监视与警报相关联的事件的 Windows 应用程序日志。 如果发生此类事件， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理将通过执行已定义的任务和/或向指定操作员发送电子邮件或寻呼消息的方式自动进行响应。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 包括一组预定义的复制代理警报，您可以配置这些警报以执行某项任务和/或通知某个操作员。 有关如何定义要执行的任务的详细信息，请参阅本主题中的“自动响应警报”部分。  
   
  将计算机配置为分发服务器时，会安装下列警报：  

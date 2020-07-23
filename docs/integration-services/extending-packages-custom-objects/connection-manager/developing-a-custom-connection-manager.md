@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: bda0b29e-57f5-4879-b04d-1396dc56daa8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7e8810b9f6aa5b167ff45607821d304af81123c2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b12f6d4259625e43fa0839963020921d7ad7ff0b
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71287743"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920003"
 ---
 # <a name="developing-a-custom-connection-manager"></a>开发自定义连接管理器
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 使用连接管理器封装连接到外部数据源所需的信息。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包括可支持与常用数据源（从企业数据库到文本文件和 Excel 工作表）的连接的各种连接管理器。 如果 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 支持的连接管理器和外部数据源不能完全满足您的需要，则可以创建自定义连接管理器。  

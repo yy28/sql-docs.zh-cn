@@ -23,16 +23,16 @@ helpviewer_keywords:
 ms.assetid: 1c3e92c7-a4fa-4fdd-b9ca-ac3069536274
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7e1d5cde6cef1d6ce53d29fb04f330aa2c06c1c8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: beacd62bb72ab59dfd5572edf2eea007d0c08b73
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71287924"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920223"
 ---
 # <a name="developing-a-custom-transformation-component-with-asynchronous-outputs"></a>开发具有异步输出的自定义转换组件
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   如果某个转换直到组件收到其所有输入行后才输出行，或者该转换不是为收到的每个输入行生成一个输出行，则可以使用具有异步输出的组件。 例如，聚合转换只有在它读取所有行之后才能计算各行的总和。 与之相反，如果可以在每个数据行传递给组件时就修改该行，则可以使用具有同步输出的组件。 您可以就地修改每行的数据，或者创建一个或多个新列，其中每一列的值与每个输入行对应。 有关同步组件和异步组件之间的差异的详细信息，请参阅[了解同步和异步转换](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)。  

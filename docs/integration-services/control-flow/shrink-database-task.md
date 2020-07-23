@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: e66286f8-97b1-4e5a-86b4-e56f1932b7d5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b403f8badbed6abdf0e946244515bc6367018a67
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 428c03cd4926b43db45a5de7adaadfbc99c31827
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293923"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920993"
 ---
 # <a name="shrink-database-task"></a>收缩数据库任务
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   收缩数据库任务可以减少 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库数据和日志文件的大小。  

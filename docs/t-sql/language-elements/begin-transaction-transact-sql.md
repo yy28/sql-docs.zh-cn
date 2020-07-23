@@ -30,12 +30,12 @@ ms.assetid: c6258df4-11f1-416a-816b-54f98c11145e
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6dc5c823a69d348e3206d55c3c49f8954204a794
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b0b37b62fd535f4d9a601f318fda494f872e6bea
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67910078"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919883"
 ---
 # <a name="begin-transaction-transact-sql"></a>BEGIN TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "67910078"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 --Applies to SQL Server and Azure SQL Database
  
 BEGIN { TRAN | TRANSACTION }   
@@ -56,7 +56,7 @@ BEGIN { TRAN | TRANSACTION }
 [ ; ]  
 ```  
  
-```  
+```syntaxsql
 --Applies to Azure SQL Data Warehouse and Parallel Data Warehouse
  
 BEGIN { TRAN | TRANSACTION }   
@@ -64,11 +64,13 @@ BEGIN { TRAN | TRANSACTION }
 ```  
 
   
-## <a name="arguments"></a>参数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
  transaction_name   
  适用范围：SQL Server（从 2008 版开始）和 Azure SQL Database 
  
- 分配给事务的名称。 transaction_name 必须符合标识符规则，但标识符所包含的字符数不能大于 32  。 仅在最外面的 BEGIN...COMMIT 或 BEGIN...ROLLBACK 嵌套语句对中使用事务名。 transaction_name 始终区分大小写，即使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例不区分大小写也是如此。  
+ 分配给事务的名称。 transaction_name 必须符合标识符规则，但标识符所包含的字符数不能大于 32  。 仅在最外面的 BEGIN...COMMIT 或 BEGIN...ROLLBACK 嵌套语句对中使用事务名。 transaction_name 始终区分大小写，即使  *实例不区分大小写也是如此*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
  @tran_name_variable   
  适用范围：SQL Server（从 2008 版开始）和 Azure SQL Database 

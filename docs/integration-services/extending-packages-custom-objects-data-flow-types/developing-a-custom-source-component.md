@@ -21,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: 4dc0f631-8fd6-4007-b573-ca67f58ca068
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0d2546e349859b8f059623f25b2e8ac971ba5643
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ea134d0ec6ca3a7868e21577d033a53b6a8e4f11
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297326"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920233"
 ---
 # <a name="developing-a-custom-source-component"></a>开发自定义源组件
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   开发人员可以通过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 编写可连接到自定义数据源的源组件，并可以将这些自定义数据源中的数据提供给数据流任务中的其他组件。 如果必须连接到无法使用现有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 源之一进行访问的数据源，则创建自定义源是非常重要的。  
