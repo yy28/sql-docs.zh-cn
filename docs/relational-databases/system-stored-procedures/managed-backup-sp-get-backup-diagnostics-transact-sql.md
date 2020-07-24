@@ -20,11 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2266a233-6354-464b-91ec-824ca4eb9ceb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 572cc4eb126114697d4fc4ecfeb9589458c46baa
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 7ce40edcea8e734aae84b5f24ec5f0e71890c7d6
+ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053490"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86977508"
 ---
 # <a name="managed_backupsp_get_backup_diagnostics-transact-sql"></a>managed_backup sp_get_backup_diagnostics （Transact-sql）
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "86053490"
   
  使用此存储过程可监视智能管理记录的扩展事件。[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]事件记录在此系统中，可以使用此存储过程进行查看和监视。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,7 +42,7 @@ ms.locfileid: "86053490"
 managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@begin_time = ] 'time1' ] [, [@end_time = ] 'time2'VARCHAR(255) = 'Xevent',@begin_time DATETIME = NULL,@end_time DATETIME = NULL  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>形参  
+##  <a name="arguments"></a><a name="Arguments"></a> 参数  
  @xevent_channel  
  扩展事件的类型。 默认值设置为返回之前 30 分钟内记录的所有事件。 记录的事件取决于所启用扩展事件的类型。 您可以使用此参数对存储过程进行筛选，仅显示特定类型的事件。 可以指定完整的事件名称，也可以指定一个子字符串，例如： **"admin**"、 **"分析"**、 **"操作"** 和 **"调试"**。 @event_channel为**VARCHAR （255）**。  
   
@@ -56,9 +57,8 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
 ## <a name="table-returned"></a>返回的表  
  此存储过程返回包含以下信息的表：  
   
-||||  
-|-|-|-|  
-|列名|数据类型|说明|  
+| 列名 | 数据类型 | 说明 |  
+| ----------- | --------- | ----------- |
 |event_type|NVARCHAR （512）|扩展事件的类型。|  
 |事件|NVARCHAR （512）|事件日志的摘要。|  
 |Timestamp|TIMESTAMP|显示事件发生时间的事件时间戳。|  

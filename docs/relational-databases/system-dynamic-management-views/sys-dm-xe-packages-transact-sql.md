@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2e5ecbe9-3ea8-45e6-a161-e31671a03e1d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a70105791ed9c6dea0371bd941dcae185ab05b2d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3ae80e8db245c5a70db238a17b5d09bb682b09b1
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898592"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942349"
 ---
 # <a name="sysdm_xe_packages-transact-sql"></a>sys.dm_xe_packages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,8 +35,8 @@ ms.locfileid: "85898592"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |name|**nvarchar(256)**|包的名称。 包自身便可显示说明。 不可为 null。|  
-|guid|**uniqueidentifier**|标识包的 GUID。 不可为 null。|  
-|description|**nvarchar （3072）**|包说明。 包作者设置的 descriptionis 不能为 null。|  
+|GUID|**uniqueidentifier**|标识包的 GUID。 不可为 null。|  
+|说明|**nvarchar （3072）**|包说明。 包作者设置的 descriptionis 不能为 null。|  
 |capabilities|**int**|说明此包的功能的位图。 可以为 Null。|  
 |capabilities_desc|**nvarchar(256)**|此包可能具有的所有功能的列表。 可以为 Null。|  
 |module_guid|**nvarchar(60)**|公开此包的模块的 GUID。 不可为 null。|  
@@ -52,9 +52,8 @@ ms.locfileid: "85898592"
   
 ## <a name="relationship-cardinalities"></a>关系基数  
   
-||||  
-|-|-|-|  
-|From|功能|关系|  
+| From | 收件人 | 关系 |
+| ---- | -- | ------------ |  
 |sys.dm_xe_packages.module_address|sys.dm_os_loaded_modules.base_address|多对一|  
   
 ## <a name="see-also"></a>另请参阅  

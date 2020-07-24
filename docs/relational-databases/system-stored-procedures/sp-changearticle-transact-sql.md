@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 223f1feb346a48a2afaae9e89437ba1b06bcd2c3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e0f9b47d2a8d5732aa42ed92f2b5af00524052e6
+ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717394"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86977531"
 ---
 # <a name="sp_changearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   更改事务或快照发布中的项目属性。 此存储过程在发布服务器上对发布数据库执行。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,7 +42,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
     [ , [ @publisher = ] 'publisher' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @publication = ] 'publication'`包含项目的发布的名称。 *发布*为**sysname**，默认值为 NULL。  
   
 `[ @article = ] 'article'`要更改其属性的项目的名称。 *项目*的默认值为**sysname**，默认值为 NULL。  
@@ -53,11 +53,11 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  下表说明项目的属性和这些属性的值。  
   
-|Property|值|说明|  
+|properties|值|说明|  
 |--------------|------------|-----------------|  
 |**creation_script**||用于创建目标表的项目架构脚本的路径和名称。 默认值为 NULL。|  
 |**del_cmd**||要执行的 DELETE 语句，否则从日志构造。|  
-|**2008**||项目的新说明项。|  
+|description||项目的新说明项。|  
 |**dest_object**||提供该列是为了向后兼容。 使用**dest_table**。|  
 |**dest_table**||新目标表。|  
 |**destination_owner**||目标对象所有者的名称。|  
@@ -210,9 +210,8 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ## <a name="valid-schema-options"></a>有效架构选项  
  下表根据复制类型（在顶部显示）和项目类型（在第一列中显示）描述*schema_option*的允许值。  
   
-|项目类型|复制类型||  
-|------------------|----------------------|------|  
-||事务性|快照|  
+| 项目类型 | 复制类型-事务性 | 复制类型-快照 |
+| ------------ | -------------------------------- | --------------------------- |
 |**logbased**|所有选项|所有选项，但**0x02**|  
 |**logbased manualfilter**|所有选项|所有选项，但**0x02**|  
 |**logbased manualview**|所有选项|所有选项，但**0x02**|  
@@ -242,7 +241,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
  [sp_addarticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [sp_articlecolumn &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
  [sp_droparticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
- [sp_helparticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
+ [sp_helparticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
  [sp_helparticlecolumns &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)  
   
   

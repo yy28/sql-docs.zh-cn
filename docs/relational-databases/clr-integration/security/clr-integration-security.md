@@ -2,7 +2,7 @@
 title: CLR 集成安全性 |Microsoft Docs
 description: 与 .NET Framework CLR 安全 SQL Server 的集成管理对象之间的访问。 对对象执行的安全检查取决于涉及的调用。
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 07/22/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: clr
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 86785198441bab1210f6b089293d4f174e8dd1b7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dd0f9f37b3381705a2e739276a7a044837fb20ad
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885790"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110162"
 ---
 # <a name="clr-integration-security"></a>CLR 集成安全性
 
@@ -56,7 +56,7 @@ ms.locfileid: "85885790"
  [允许部分可信任的调用方](https://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
  讨论当托管方法调用其他程序集中所包含类的方法时所产生的问题。  
   
- [应用程序域和 CLR 集成安全性](/sql/database-engine/dev-guide/allowing-partially-trusted-callers?view=sql-server-2014)  
+ [应用程序域和 CLR 集成安全性](/previous-versions/sql/2014/database-engine/dev-guide/allowing-partially-trusted-callers?view=sql-server-2014)  
  描述如何将程序集加载到应用程序域。  
   
 ## <a name="see-also"></a>另请参阅  

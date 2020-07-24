@@ -1,5 +1,5 @@
 ---
-title: 用 SCOM 监视
+title: 使用 System Center Operations Manager 监视 AP
 description: 使用 System Center Operations Manager （SCOM）监视分析平台系统（AP）设备。
 author: mzaman1
 ms.prod: sql
@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 0b244d85e601e46fe778298e723c0a7d01e669bb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 539c18efe43afcf5436c6913c20cab081974b7f5
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74400973"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86941119"
 ---
 # <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>监视 System Center Operations Manager 分析平台系统
 使用 System Center Operations Manager （SCOM）监视分析平台系统（AP）设备。
@@ -56,10 +56,10 @@ ms.locfileid: "74400973"
   
 ![工具关系图](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM3.png "SCOM_SCOM3")  
   
-### <a name="nodes"></a>节点  
+### <a name="nodes"></a>Nodes  
 最后，"节点" 视图允许您通过每个节点查看设备的运行状况：  
   
-![节点](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM4.png "SCOM_SCOM4")  
+![Nodes](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM4.png "SCOM_SCOM4")  
   
 ## <a name="see-also"></a>另请参阅  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

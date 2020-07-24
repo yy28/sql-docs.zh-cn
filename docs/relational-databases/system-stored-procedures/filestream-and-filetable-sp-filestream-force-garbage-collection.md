@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bc56f1434c0b1670495d30accdb70e0456295b01
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0068e1afb8f096b3758d45a770f1aac56512d0c6
+ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717440"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86977583"
 ---
 # <a name="sp_filestream_force_garbage_collection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ sp_filestream_force_garbage_collection
     [ , [ @filename = ] 'logical_file_name' ]
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  `[ @dbname = ]  'database_name'`  
  指示要运行垃圾回收器的数据库的名称。  
   
@@ -53,15 +53,14 @@ sp_filestream_force_garbage_collection
   
 ## <a name="return-code-values"></a>返回代码值  
   
-|||  
-|-|-|  
-|值|描述|  
+| 值 | 说明 |
+| ----- | ----------- |   
 |0|操作成功|  
 |1|操作失败|  
   
 ## <a name="result-sets"></a>结果集  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |*file_name*|指示 FILESTREAM 容器名称|  
 |*num_collected_items*|指示此容器中已回收（删除）的 FILESTREAM 项目（文件/目录）数。|  

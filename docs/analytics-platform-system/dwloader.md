@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 8ea941e45f5125beed0820c5d5242b0f86073f76
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f5236d35009c67eb6e205129cd629fa5f7eca54d
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401169"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942339"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>并行数据仓库的 dwloader 命令行加载器
 **dwloader**是并行数据仓库（PDW）命令行工具，它将表行批量加载到现有表中。 加载行时，您可以将所有行添加到表的末尾（*追加模式*或*fastappend 模式*），追加新行并更新现有行（*upsert 模式*），或在加载前删除所有现有行（*重新加载模式*）。  
@@ -43,7 +43,7 @@ ms.locfileid: "74401169"
   
 5.  运行**dwloader**。  
   
-    登录到加载服务器，并运行可执行文件**dwloader**并提供相应的命令行选项。  
+    登录到加载服务器，然后用适当的命令行选项运行可执行文件**dwloader.exe** 。  
   
 6.  验证结果。  
   
@@ -117,13 +117,13 @@ dwloader.exe
 ```  
   
 ## <a name="arguments"></a>参数  
-**-h**  
+-h  
 显示有关使用加载程序的简单帮助信息。 仅当未指定其他命令行参数时，才会显示帮助。  
   
 **-U** *login_name*  
 有效的 SQL Server 身份验证登录名，具有适当的权限来执行负载。  
   
-**-P** *密码*  
+-P password  
 SQL Server Authentication *login_name*的密码。  
   
 **-W**  
@@ -136,9 +136,9 @@ For information about configuring Windows Authentication, see [Security - Config
 **-f** *parameter_file_name*  
 使用参数文件*parameter_file_name*来代替命令行参数。 *parameter_file_name*可以包含除*user_name*和*password*以外的任何命令行参数。 如果在命令行和参数文件中指定了参数，则命令行将覆盖 file 参数。  
   
-参数文件包含一个参数，每行不**-** 含前缀。  
+参数文件包含一个参数， **-** 每行不含前缀。  
   
-示例：  
+示例:  
   
 `rt=percentage`  
   
@@ -193,17 +193,17 @@ For more information about this install option, see [Install dwloader Command-Li
   
 -   所有文件将被连接起来，并将其加载，就好像它们是一个文件，被拒绝的行会转向单个拒绝文件。  
   
-示例：  
+示例:  
   
--   -i \\\loadserver\loads\daily\\*. gz  
+-   -i \\ \loadserver\loads\daily \\ *. gz  
   
--   -i \\\loadserver\loads\daily\\* .txt  
+-   -i \\ \loadserver\loads\daily \\ * .txt  
   
--   -i \\\loadserver\loads\daily\monday. *  
+-   -i \\ \loadserver\loads\daily\monday. *  
   
 -   -i \\\loadserver\loads\daily\monday.txt  
   
--   -i \\\loadserver\loads\daily\\*  
+-   -i \\ \loadserver\loads\daily\\*  
   
 **-R** *load_failure_file_name*  
 如果存在加载失败， **dwloader**将存储未能加载的行，并且失败说明中名为*load_failure_file_name*的文件中的失败信息。 如果此文件已存在，dwloader 将覆盖现有文件。 *load_failure_file_name*是在第一次失败时创建的。 如果所有行都成功加载，则不会创建*load_failure_file_name* 。  
@@ -234,7 +234,7 @@ For more information about this install option, see [Install dwloader Command-Li
   
 若要在命令行中指定管道字符，请将其括在双引号 "|" 中。 这将避免命令行分析器解释。 其他字符用单引号括起来。  
   
-示例：  
+示例:  
   
 -t "|"  
   
@@ -274,7 +274,7 @@ LF 的示例：
 **-s** *string_delimiter*  
 用文本分隔的输入文件的 string 数据类型字段的分隔符。 字符串分隔符是一个或多个 ASCII 值。  可以将其指定为一个字符（例如，-s *）或十六进制值（例如，对双引号使用-s 0x22）。  
   
-示例：  
+示例:  
   
 些  
   
@@ -290,9 +290,9 @@ LF 的示例：
   
 此文件必须位于加载服务器上。 路径可以是 UNC、相对路径或绝对路径。 *Fixed_width_config_file*中的每一行都包含一个列的名称和该列的字符数。 每个列都有一个行，如下所示，文件中的顺序必须与目标表中的顺序匹配：  
   
-*column_name*=*num_chars*  
+*column_name* =*num_chars*  
   
-*column_name*=*num_chars*  
+*column_name* =*num_chars*  
   
 固定宽度配置文件示例：  
   
@@ -340,17 +340,17 @@ LF 的示例：
   
 需要使用 LF 作为 Unix。 Windows 需要 CR。  
   
-**-D** { **ymd** | ydm | mdy | myd | dmy |dym |*custom_date_format* }  
+**-D** { **ymd** \| ydm \| mdy \| myd \| dmy \| dym \| *custom_date_format* }  
 指定输入文件中所有日期时间字段的月（m）、日（d）和年（y）的顺序。 默认顺序为 ymd。 若要为同一源文件指定多个订单格式，请使用-dt 选项。  
   
-ymd |dmy  
+ymd \| dmy  
 ydm 和 dmy 允许相同的输入格式。 两者都允许在日期的开始或结束时间。 例如，对于**ydm**和**dmy**日期格式，输入文件中可能有2013-02-03 或02-03-2013。  
   
 ydm  
 只能将格式化为 ydm 的输入加载到数据类型为 datetime 和 smalldatetime 的列中。 不能将 ydm 值加载到 datetime2、date 或 datetimeoffset 数据类型的列中。  
   
 mdy  
-<month> <space> <day>mdy 允许<comma>。 <year>  
+mdy 允许 \<month> \<space> \<day> \<comma> \<year> 。  
   
 1975年1月1日 mdy 输入数据的示例：  
   
@@ -380,7 +380,7 @@ dym
   
 每行都包含目标表中列的名称及其日期时间格式。  
   
-示例：  
+示例:  
   
 `LastReceiptDate=ymd`  
   
@@ -443,12 +443,12 @@ upsert **-K***merge_column* [,.。。*n* ]
 使用-rt 百分比时，加载程序将按间隔（-rs 选项）计算百分比。 因此，失败行的百分比可能会超出*reject_value*。  
   
 **-rs** *reject_sample_size*  
-与用于指定`-rt percentage`增量百分比检查的选项一起使用。 例如，如果 reject_sample_size 为1000，加载程序将在尝试加载1000行后计算失败行的百分比。 它会在尝试加载每个附加的1000行后重新计算失败行的百分比。  
+与用于 `-rt percentage` 指定增量百分比检查的选项一起使用。 例如，如果 reject_sample_size 为1000，加载程序将在尝试加载1000行后计算失败行的百分比。 它会在尝试加载每个附加的1000行后重新计算失败行的百分比。  
   
 **-c**  
 删除 char、nchar、varchar 和 nvarchar 字段的左侧和右侧的空白字符。 将仅包含空格字符的每个字段转换为空字符串。  
   
-示例：  
+示例:  
   
 "" 截断为 ""  
   
@@ -490,7 +490,7 @@ upsert **-K***merge_column* [,.。。*n* ]
 ## <a name="return-code-values"></a>返回代码值  
 0（成功）或其他整数值（失败）  
   
-在命令窗口或批处理文件中，使用`errorlevel`显示返回代码。 例如：  
+在命令窗口或批处理文件中，使用 `errorlevel` 显示返回代码。 例如：  
   
 ```  
 dwloader  
@@ -499,7 +499,7 @@ if not %errorlevel%==0 echo Fail
 if %errorlevel%==0 echo Success  
 ```  
   
-使用 PowerShell 时，请`$LastExitCode`使用。  
+使用 PowerShell 时，请使用 `$LastExitCode` 。  
   
 ## <a name="permissions"></a>权限  
 需要对目标表具有 LOAD 权限和适用的权限（INSERT、UPDATE、DELETE）。 需要对临时数据库具有 CREATE 权限（用于创建临时表）。 如果未使用临时数据库，则需要在目标数据库上创建权限。 
@@ -552,15 +552,15 @@ For the maximum number of loads per appliance, see [Minimum and Maximum Values](
   
 追加模式分两个阶段加载数据。 阶段一阶段将数据从源文件同时加载到临时表中（可能会发生碎片）。 阶段2：将数据从临时表加载到最终表。 第二个阶段执行**INSERT INTO .。。选择 WITH （TABLOCK）** 操作。 下表显示了对最终表的锁定行为以及使用追加模式时的日志记录行为：  
   
-|表类型|多事务<br />模式（-m）|表为空|支持并发|Logging|  
+|表类型|多事务<br />模式（-m）|表为空|支持并发|日志记录|  
 |--------------|-----------------------------------|------------------|-------------------------|-----------|  
-|堆|是|是|是|轻微|  
-|堆|是|否|是|轻微|  
-|堆|否|是|否|轻微|  
-|堆|否|否|否|轻微|  
-|Cl|是|是|否|轻微|  
-|Cl|是|否|是|完全|  
-|Cl|否|是|否|轻微|  
+|堆|是|是|是|最少|  
+|堆|是|No|是|最少|  
+|堆|否|是|No|最少|  
+|堆|否|否|否|最少|  
+|Cl|是|是|No|最少|  
+|Cl|是|No|是|完全|  
+|Cl|否|是|No|最少|  
 |Cl|否|否|是|完全|  
   
 上表显示了使用追加模式加载到堆或聚集索引（CI）表中的**dwloader** ，其中包含或不包含多事务性标志，并且加载到空表或非空表中。 表中显示了每个这种负载组合的锁定和日志记录行为。 例如，如果在没有多事务性模式的情况下将 "追加" 模式加载到聚集索引中，并将其加载到空表中，则会在表中创建一个排他锁，并且日志记录是最少的。 这意味着，客户将无法加载（第二）阶段并同时查询到空表中。 但是，在非空表中加载具有相同配置的时，PDW 不会对表发出排他锁，并且可能会发生并发。 遗憾的是，发生了完整的日志记录，从而降低了处理速度。  
@@ -568,7 +568,7 @@ For the maximum number of loads per appliance, see [Minimum and Maximum Values](
 ## <a name="examples"></a>示例  
   
 ### <a name="a-simple-dwloader-example"></a>A. 简单的 dwloader 示例  
-下面的示例显示**加载程序**的启动，仅选择所需的选项。 其他选项取自全局配置文件*loadparamfile*。  
+下面的示例显示**加载程序**的启动，仅选择所需的选项。 其他选项取自全局配置文件*loadparamfile.txt*。  
   
 使用 SQL Server 身份验证的示例。  
   
@@ -598,13 +598,13 @@ dwloader.exe -U mylogin -P 123jkl -S 10.192.63.148  -i C:\SQLData\AWDimEmployees
 ```  
   
 ### <a name="b-load-data-into-an-adventureworks-table"></a>B. 将数据加载到 AdventureWorks 表中  
-下面的示例是将数据加载到**AdventureWorksPDW2012**的批处理脚本的一部分。  若要查看完整脚本，请打开**AdventureWorksPDW2012**安装包附带的 aw_create .bat 文件。 
+下面的示例是将数据加载到**AdventureWorksPDW2012**的批处理脚本的一部分。  若要查看完整脚本，请打开**AdventureWorksPDW2012**安装包附带的 aw_create.bat 文件。 
 
 <!-- Missing link
 For more information, see [Install AdventureWorksPDW2012](install-adventureworkspdw2012.md).  
 -->
 
-以下脚本代码片段使用 dwloader 将数据加载到 Dbo.dimaccount 表和 DimCurrency 表中。 此脚本使用的是以太网地址。 如果使用了 "无限"，则服务器将 *<appliance_name>* `-SQLCTL01`。  
+以下脚本代码片段使用 dwloader 将数据加载到 Dbo.dimaccount 表和 DimCurrency 表中。 此脚本使用的是以太网地址。 如果使用了 "无限"，则服务器将 *<appliance_name>* `-SQLCTL01` 。  
   
 ```  
 set server=10.193.63.134  
@@ -646,7 +646,7 @@ with (CLUSTERED INDEX(AccountKey),
 DISTRIBUTION = REPLICATE);  
 ```  
   
-下面是数据文件 Dbo.dimaccount 的一个示例，其中包含要加载到表 Dbo.dimaccount 中的数据。  
+下面是 DimAccount.txt 的数据文件示例，其中包含要加载到表 Dbo.dimaccount 中的数据。  
   
 ```  
 --Sample of data in the DimAccount.txt load file.  
@@ -675,7 +675,7 @@ C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwloader.exe -
   
 命令行参数说明：  
   
--   *C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwloader.exe*是 dwloader 的安装位置。  
+-   *C:\Program Files\Microsoft SQL Server 并行数据 Warehouse\100\dwloader.exe*是 dwloader.exe 的安装位置。  
   
 -   *-S*后跟控制节点的 IP 地址。  
   
@@ -685,15 +685,15 @@ C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwloader.exe -
   
 -   *-e UTF16*指示源文件使用 little endian 字符编码类型。  
   
--   *-i .\DimAccount.txt*指定数据位于当前目录中名为 dbo.dimaccount 的文件中。  
+-   *-i .\DimAccount.txt*指定数据位于一个名为 DimAccount.txt 的文件中，该文件位于当前目录中。  
   
 -   *-T AdventureWorksPDW2012*指定要接收数据的表的由三部分组成的名称。  
   
 -   *-R dbo.dimaccount*指定无法加载的行将写入名为 dbo.dimaccount 的文件。  
   
--   *-t "|"* 指示输入文件（Dbo.dimaccount）中的字段是用竖线分隔的。  
+-   *-t "|"* 指示输入文件中的字段（DimAccount.txt）是用竖线分隔的。  
   
--   *-r \r\n*以回车符和换行符结尾指定 dbo.dimaccount 中的每一行。  
+-   *-r \r\n*指定 DimAccount.txt 以回车符和换行符开头的每一行。  
   
 -   *-U <login_name>-P <password> *指定有权执行加载的登录名和密码。  
   

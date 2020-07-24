@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: c2c6af1a-3c44-4c9d-ad33-b381552c71af
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 97af6e8394ac8371f2ddd1baff2363079c898f84
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c178bae1f3da5ccc6ca4cfdd6b5645335141908f
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758543"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942299"
 ---
 # <a name="rds-methods"></a>RDS 方法
 > [!IMPORTANT]
 >  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件（有关详细信息，请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)）。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
-|||  
+|方法|说明|  
 |-|-|  
 |[取消（RDS）](../../../ado/reference/rds-api/cancel-method-rds.md)|取消执行挂起的异步方法调用。|  
 |[CancelUpdate （RDS）](../../../ado/reference/rds-api/cancelupdate-method-rds.md)|取消对**记录集**对象的当前行或新行所做的任何更改。|  

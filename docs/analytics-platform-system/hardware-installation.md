@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 60e27e2251cd2f613ca00266d76d4aaaf3b5c442
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2e6a0d89b4976076f14fe567b7a95e7cbb47c9f9
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401127"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942329"
 ---
 # <a name="hardware-installation-for-analytics-platform-system-aps-appliance"></a>用于分析平台系统（AP）设备的硬件安装
 本文介绍如何为 SQL Server PDW 设备移动、解包和安装硬件。 本文仅提供信息，旨在帮助你了解该过程。 在将你的设备转到你之前，应该先对其进行解压缩、安装和验证。 对于数据中心访问、电源和以太网连接等项目，需要客户参与。  
@@ -54,12 +54,12 @@ ms.locfileid: "74401127"
 ## <a name="install-additional-components"></a><a name="AfterMoving"></a>安装其他组件  
 使用以下清单来安装其他组件。  
   
-|任务|说明||  
-|--------|---------------|-|  
-|解包和机架网络交换机和配电|使用机架图将网络交换机和 Pdu 放置在机架中的适当位置。||  
-|根据电缆标签来连接无线网线和以太网电缆|请参阅布线示意图。 每个电缆的两端都有一个标签，用于指定需要连接的位置。||  
-|连接所有电源线|请参阅布线示意图。||  
-|打开电源到机架和 Pdu|将电源线连接到机架，将电源线连接到 Pdu。 **目前不要打开任何其他设备组件。**||  
+|任务|说明|
+|--------|---------------|
+|解包和机架网络交换机和配电|使用机架图将网络交换机和 Pdu 放置在机架中的适当位置。|
+|根据电缆标签来连接无线网线和以太网电缆|请参阅布线示意图。 每个电缆的两端都有一个标签，用于指定需要连接的位置。|
+|连接所有电源线|请参阅布线示意图。|
+|打开电源到机架和 Pdu|将电源线连接到机架，将电源线连接到 Pdu。 **目前不要打开任何其他设备组件。**|
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

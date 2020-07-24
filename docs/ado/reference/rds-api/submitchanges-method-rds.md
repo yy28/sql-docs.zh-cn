@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 250062a4-13c4-4bed-807d-8b9ad81536d4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3a11adb93f3de8f0887eefe964f1c85836ccc43e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3291b5ca72ab984ecd8487612384ece6d5b76f9a
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750584"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942274"
 ---
 # <a name="submitchanges-method-rds"></a>SubmitChanges 方法 (RDS)
 将本地缓存的可更新[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)的挂起的更改提交到[Connect](../../../ado/reference/rds-api/connect-property-rds.md)属性或[URL](../../../ado/reference/rds-api/url-property-rds.md)属性中指定的数据源。  
@@ -57,12 +57,17 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
   
  如果已设置**url**属性， **SubmitChanges**会将更改提交到 url 指定的位置。  
   
-## <a name="applies-to"></a>应用于  
-  
-|||  
-|-|-|  
-|[DataControl 对象 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|[DataFactory 对象 (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|  
-  
+## <a name="applies-to"></a>应用到  
+
+:::row:::
+    :::column:::
+        [DataControl 对象 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+    :::column-end:::
+    :::column:::
+        [DataFactory 对象 (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>另请参阅  
  [SubmitChanges 方法示例（VBScript）](../../../ado/reference/rds-api/submitchanges-method-example-vbscript.md)   
  [通讯簿命令按钮](../../../ado/guide/remote-data-service/address-book-command-buttons.md)   

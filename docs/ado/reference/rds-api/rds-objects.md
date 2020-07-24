@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: f2ac8b3b-f968-41c4-a504-7aee3538b7c7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 45f4851acf2d3c92807a571f6c8c6b436b86936b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7ba592cd0bb0dc10c094784fbb7d41585d5b6dd6
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764828"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942289"
 ---
 # <a name="rds-objects"></a>RDS 对象
 > [!IMPORTANT]
 >  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件（有关详细信息，请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)）。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
-|||  
+|对象|说明|  
 |-|-|  
 |[DataControl （RDS）](../../../ado/reference/rds-api/datacontrol-object-rds.md)|将数据查询**记录集**绑定到一个或多个控件（例如，文本框、网格控件或组合框）以在网页上显示**记录集**数据。<br /><br /> **DataControl**对象可安全地用于脚本编写。|  
 |[DataFactory （RDSServer）](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|实现为客户端应用程序提供对指定数据源的读/写数据访问的方法。<br /><br /> **DataFactory**对象对于脚本编写是不安全的。|  

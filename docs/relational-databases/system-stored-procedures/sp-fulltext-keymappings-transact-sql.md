@@ -20,18 +20,19 @@ ms.assetid: 2818fa42-072d-4664-a2f7-7ec363b51d81
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2281586bfe77b7cadaa2b3a8f7ae7a9b18c655ab
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: 000c71e284f77b5024cd45727803af55fa8d8b06
+ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091772"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86977729"
 ---
 # <a name="sp_fulltext_keymappings-transact-sql"></a>sp_fulltext_keymappings (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   返回文档标识符 (DocId) 和全文键值之间的映射。 DocId 列包含用于映射到全文索引表中的特定全文键值的**bigint**整数值。 满足搜索条件的 DocId 值将从全文引擎传递到数据库引擎，在数据库引擎中，它们被映射到要查询的基表中的全文键值。 全文键列是表的某一列上必需的唯一索引。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -68,7 +69,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 ## <a name="permissions"></a>权限  
  此函数是公用的，因此不需要任何特殊权限。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  下表说明了使用一个、两个或三个参数的效果。  
   
 |此参数列表 .。。|具有此结果 .。。|  
@@ -107,9 +108,8 @@ GO
   
  此示例返回表中的所有 DocId 和全文键，如下所示：  
   
-||||  
-|-|-|-|  
-||`docid`|`key`|  
+| TABLE | docid | key |
+| ----- | ----- | --- |
 |`1`|`1`|`1`|  
 |`2`|`2`|`2`|  
 |`3`|`3`|`3`|  
@@ -132,9 +132,8 @@ GO
   
  此示例返回以下结果。  
   
-||||  
-|-|-|-|  
-||`docid`|`key`|  
+| TABLE | docid | key |
+| ----- | ----- | --- |
 |`4`|`4`|`4`|  
   
 ## <a name="see-also"></a>另请参阅  
