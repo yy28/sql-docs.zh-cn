@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 55ee67c7-a583-42aa-849a-78264b4cb614
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 343d5ec73a9720085f450cde3f35a187cf4b7302
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b49fbddab49266ee5a5d530867c281e72878b6d7
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762808"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943019"
 ---
 # <a name="rightsenum"></a>RightsEnum
 指定组或用户对对象的权限。  
@@ -46,8 +46,13 @@ ms.locfileid: "82762808"
 |**adRightWriteOwner**|524288（&H80000）|用户或组有权修改对象的所有者。|  
 |**adRightWritePermissions**|262144（&H40000）|用户或组可以修改目录中对象的特定权限。|  
   
-## <a name="applies-to"></a>应用于  
-  
-|||  
-|-|-|  
-|[GetPermissions 方法 (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)|[SetPermissions 方法 (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)|
+## <a name="applies-to"></a>应用到  
+
+:::row:::
+    :::column:::
+        [GetPermissions 方法 (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)  
+    :::column-end:::
+    :::column:::
+        [SetPermissions 方法 (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)  
+    :::column-end:::
+:::row-end:::

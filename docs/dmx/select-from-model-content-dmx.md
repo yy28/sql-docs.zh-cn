@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0fe7de8ce6ee6f40d0d50ce76a148dc3d000a808
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 15294c85fc119aff6b8c3cc43b1a99a6b79dc141
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669589"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970595"
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>选择 "从 &lt; 模型" &gt; 。内容（DMX）
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   返回指定数据挖掘模型的挖掘模型架构行集。  
   
@@ -45,8 +45,8 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  *expression*  
  可选。 一个返回标量值的表达式。  
   
-## <a name="remarks"></a>注解  
- **从模型中选择** _ \<>_ **。CONTENT**语句返回特定于每种算法的内容。 例如，您可能希望在自定义应用程序中，使用某个关联规则模型的所有规则的说明。 您可以使用 "**从模型中选择" \<>。** 返回模型的 NODE_RULE 列中的值的内容语句。  
+## <a name="remarks"></a>备注  
+ **SELECT FROM** _\<model>_ **。CONTENT**语句返回特定于每种算法的内容。 例如，您可能希望在自定义应用程序中，使用某个关联规则模型的所有规则的说明。 您可以使用中的 "**选择" \<model> 。** 返回模型的 NODE_RULE 列中的值的内容语句。  
   
  下表列出了挖掘模型内容中包含的列。  
   

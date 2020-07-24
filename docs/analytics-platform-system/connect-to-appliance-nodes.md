@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: e1182d174e3281fda944c0b6490b114d4b6f2244
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b8a4936aeb696f8cca36cad419d7c64198d4b290
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401238"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942536"
 ---
 # <a name="connect-to-appliance-nodes-in-analytics-platform-system"></a>在分析平台系统中连接到设备节点
 本文介绍连接到 Analytics Platform System 设备中每个节点的各种方式。  
@@ -30,10 +30,9 @@ ms.locfileid: "74401238"
 > [!WARNING]  
 > 更改控件或计算节点上的数据库或表设置，而无需明确同意产品团队或 AP 客户支持团队可能会导致你的 AP 设备不受支持。
   
-|||  
-|-|-|  
-|**节点**|**访问方案**|  
-|控制节点|使用 web 浏览器访问在控制节点上运行的管理控制台。 有关详细信息，请参阅[使用管理控制台监视设备 &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)。<br /><br />所有客户端应用程序和工具均连接到控制节点，无论连接是使用以太网还是不受控制。<br /><br />若要配置到控制节点的以太网连接，请使用控制节点群集 IP 地址和端口**17001**。 例如，"192.168.0.1，17001"。<br /><br />若要配置到控制节点的未连接连接，请使用<strong> *appliance_domain*SQLCTL01</strong>和端口**17001**。 通过使用<strong> *appliance_domain*-SQLCTL01</strong>，设备的 DNS 服务器会将服务器连接到活动的未受服务网络。 若要将非设备服务器配置为使用此设置，请参阅配置不工作[网络适配器](configure-infiniband-network-adapters.md)。<br /><br />设备管理员连接到控制节点以执行管理操作。 例如，设备管理员从控制节点执行以下操作：<br /><br />配置**dwconfig**配置工具的分析平台系统。|  
+|节点|访问方案|
+|-|-|
+|控制节点|使用 web 浏览器访问在控制节点上运行的管理控制台。 有关详细信息，请参阅[使用管理控制台监视设备 &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)。<br /><br />所有客户端应用程序和工具均连接到控制节点，无论连接是使用以太网还是不受控制。<br /><br />若要配置到控制节点的以太网连接，请使用控制节点群集 IP 地址和端口**17001**。 例如，"192.168.0.1，17001"。<br /><br />若要配置到控制节点的未连接连接，请使用<strong> *appliance_domain*SQLCTL01</strong>和端口**17001**。 通过使用<strong> *appliance_domain*-SQLCTL01</strong>，设备的 DNS 服务器会将服务器连接到活动的未受服务网络。 若要将非设备服务器配置为使用此设置，请参阅配置不工作[网络适配器](configure-infiniband-network-adapters.md)。<br /><br />设备管理员连接到控制节点以执行管理操作。 例如，设备管理员从控制节点执行以下操作：<br /><br />用**dwconfig.exe**配置工具配置分析平台系统。|  
 |计算节点|计算节点连接由控制节点定向。 计算节点的 IP 地址永远不会作为参数输入到应用程序命令中。<br /><br />对于加载、备份、远程表复制和 Hadoop，SQL Server PDW 会直接在计算节点和非设备节点或服务器之间并行发送或接收数据。 这些应用程序通过连接到控件节点来连接 SQL Server PDW，然后，控制节点会指导 SQL Server PDW 在计算节点和非设备服务器之间建立通信。<br /><br />例如，这些数据传输操作与计算节点的直接连接并行发生：<br /><br />正在从加载服务器加载到 SQL Server PDW。<br /><br />将数据库从 SQL Server PDW 备份到备份服务器。<br /><br />将数据库从备份服务器还原到 SQL Server PDW。<br /><br />查询 SQL Server PDW 中的 Hadoop 数据。<br /><br />将数据从 SQL Server PDW 导出到外部 Hadoop 表。<br /><br />将 SQL Server PDW 表复制到远程 SMP SQL Server 数据库。|  
   
 ## <a name="connecting-to-the-ethernet-and-infiniband-networks"></a>连接到以太网和不工作网络  

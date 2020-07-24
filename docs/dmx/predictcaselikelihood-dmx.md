@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 18e988f55f68717f4e2054ec5c38869efba74ab1
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 3c1134e5cf1ca053cba52c943226f41fe3d4b625
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83668188"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971545"
 ---
 # <a name="predictcaselikelihood-dmx"></a>PredictCaseLikelihood (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   此函数返回输入事例适合现有模型的可能性。 仅适用于聚类分析模型。  
   
@@ -34,13 +34,13 @@ PredictCaseLikelihood([NORMALIZED|NONNORMALIZED])
  NONNORMALIZED  
  返回值包含事例的原始概率，即事例属性概率的乘积。  
   
-## <a name="applies-to"></a>应用于  
+## <a name="applies-to"></a>应用到  
  使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] 聚类分析和 [!INCLUDE[msCoName](../includes/msconame-md.md)] 顺序分析和聚类分析算法生成的模型。  
   
 ## <a name="return-type"></a>返回类型  
  介于 0 和 1 之间的双精度浮点数。 该数值越接近 1，则指示事例出现在此模型中的概率越高。 该数值越接近 0，则指示事例越不可能出现在此模型中。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  默认情况下， **PredictCaseLikelihood**函数的结果是规范化的。 通常，当事例中的属性个数增加，并且任何两个事例的原始概率之间的差异大大缩小时，规范化的值更为有用。  
   
  下面的公式用于计算规范化的值（给定 x 和 y）：  

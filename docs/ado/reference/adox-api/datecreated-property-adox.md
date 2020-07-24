@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2bf4b00d-045c-444e-8af7-8af6297ed418
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 566e815350bd59effc4802495bda4846e9a77691
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2a94ea4d86d727bc2258b853285eaa7ebc1e48bc
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759213"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942430"
 ---
 # <a name="datecreated-property-adox"></a>DateCreated 属性 (ADOX)
 指示对象的创建日期。  
@@ -33,12 +33,20 @@ ms.locfileid: "82759213"
 ## <a name="remarks"></a>备注  
  新追加的对象的**DateCreated**属性为 null。 追加新的[视图](../../../ado/reference/adox-api/view-object-adox.md)或[过程](../../../ado/reference/adox-api/procedure-object-adox.md)之后，必须调用[视图](../../../ado/reference/adox-api/views-collection-adox.md)或[过程](../../../ado/reference/adox-api/procedures-collection-adox.md)集合的[Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)方法，以获取**DateCreated**属性的值。  
   
-## <a name="applies-to"></a>应用于  
-  
-||||  
-|-|-|-|  
-|[过程对象 (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)|[表对象 (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)|[视图对象 (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)|  
-  
+## <a name="applies-to"></a>应用到  
+
+:::row:::
+    :::column:::
+        [过程对象 (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)  
+    :::column-end:::
+    :::column:::
+        [表对象 (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)  
+    :::column-end:::
+    :::column:::
+        [视图对象 (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>另请参阅  
  [DateCreated 和 DateModified 属性示例（VB）](../../../ado/reference/adox-api/datecreated-and-datemodified-properties-example-vb.md)   
  [DateModified 属性 (ADOX)](../../../ado/reference/adox-api/datemodified-property-adox.md)

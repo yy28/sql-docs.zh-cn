@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: e6b6e3a4-8952-4d79-81f4-51019c338374
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c3e398a48875f365dbe2fdc0b6540302d70f1da9
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: dd9992804702a3b968e0a42b3a50a777f0690d35
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763898"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942476"
 ---
 # <a name="delete-method-adox-collections"></a>Delete 方法（ADOX 集合）
 从集合中删除对象。  
@@ -48,7 +48,7 @@ Collection.Delete Name
 ```  
   
 #### <a name="parameters"></a>参数  
- *Name*  
+ *名称*  
  一个**变量**，它指定要删除的对象的名称或序号位置（索引）。  
   
 ## <a name="remarks"></a>备注  
@@ -56,14 +56,25 @@ Collection.Delete Name
   
  对于[表](../../../ado/reference/adox-api/tables-collection-adox.md)和[用户](../../../ado/reference/adox-api/users-collection-adox.md)集合，如果提供程序不支持删除表或用户，则会发生错误。 对于 "过程" 和 "[视图](../../../ado/reference/adox-api/views-collection-adox.md)" 集合，如果提供程序不支持保留命令，则**删除**[操作](../../../ado/reference/adox-api/procedures-collection-adox.md)将失败。  
   
-## <a name="applies-to"></a>应用于  
-  
-||||  
-|-|-|-|  
-|[列集合 (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)|[组集合 (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)|[索引集合 (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)|  
-|[项集合 (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)|[过程集合 (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)|[表集合 (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)|  
-|[用户集合 (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)|[视图集合 (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)||  
-  
+## <a name="applies-to"></a>应用到  
+
+:::row:::
+    :::column:::
+        [列集合 (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)  
+        [组集合 (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)  
+        [索引集合 (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)  
+    :::column-end:::
+    :::column:::
+        [项集合 (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)  
+        [过程集合 (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)  
+        [表集合 (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)  
+    :::column-end:::
+    :::column:::
+        [用户集合 (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)  
+        [视图集合 (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>另请参阅  
  [过程 Delete 方法示例（VB）](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
  [视图 Delete 方法示例 (VB)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)

@@ -1,5 +1,5 @@
 ---
-title: 生成多个行集结果的命令 | Microsoft Docs
+title: 生成多行集结果的命令（Native Client OLE DB 提供程序） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,11 +18,12 @@ ms.assetid: 4567668d-35fd-4162-b61f-f7536862cdcb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 696558bf856b6d316e3de7aea32e5162f68abde1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a8f689ecd7d6c66880f217a8ea262acc113591af
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002823"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942861"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>生成多个行集结果的命令
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,6 +52,6 @@ WCHAR*       wSQLString = L"SELECT * FROM Categories; "
 -   [使用 IMultipleResults 处理多个结果集](../../relational-databases/native-client-ole-db-commands/using-imultipleresults-to-process-multiple-result-sets.md)  
   
 ## <a name="see-also"></a>另请参阅  
- 命令  
+ [命令](../../relational-databases/native-client-ole-db-commands/commands.md)  
   
   

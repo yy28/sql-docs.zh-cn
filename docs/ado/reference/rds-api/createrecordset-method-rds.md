@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7ae2d78f4647e2aefa707e97349daa73d08ee492
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 53a391ccb25a32d628703543d95dc8e24668fcd5
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748843"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942489"
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset 方法 (RDS)
 创建一个空的、断开连接的[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
@@ -40,15 +40,15 @@ object.CreateRecordset(ColumnInfos)
 ```  
   
 #### <a name="parameters"></a>参数  
- *对象*  
+ *Object*  
  一个对象变量，它表示[RDSServer](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)或[RDS。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象。  
   
  *ColumnsInfos*  
  特性的一个**变量**数组，用于定义创建的**记录集中**的每一列。 每个列定义都包含一个包含四个必需属性和一个可选属性的数组。  
   
-|属性|说明|  
+|特性|说明|  
 |---------------|-----------------|  
-|“属性”|列标题的名称。|  
+|名称|列标题的名称。|  
 |类型|数据类型的整数。|  
 |大小|字符宽度的整数，与数据类型无关。|  
 |可空性|布尔值。|  
@@ -65,28 +65,28 @@ object.CreateRecordset(ColumnInfos)
   
  对于某些可变数据类型，可以将类型强制转换为替换列中所述的类型。 在创建并填充**记录集**之前，你将看不到替换项。 如果需要，可以检查实际数据类型。  
   
-|长度|返回的常量|Number|Substitution|  
+|长度|返回的常量|Number|替换|  
 |------------|--------------|------------|------------------|  
-|固定|**adTinyInt**|16||  
-|固定|**adSmallInt**|2||  
-|固定|**adInteger**|3||  
-|固定|**adBigInt**|20||  
-|固定|**adUnsignedTinyInt**|17||  
-|固定|**adUnsignedSmallInt**|18||  
-|固定|**adUnsignedInt**|19||  
-|固定|**adUnsignedBigInt**|21||  
-|固定|**adSingle**|4||  
-|固定|**adDouble**|5||  
-|固定|**adCurrency**|6||  
-|固定|**adDecimal**|14||  
-|固定|**adNumeric**|131||  
-|固定|**adBoolean**|11||  
-|固定|**adError**|10||  
-|固定|**adGuid**|72||  
-|固定|**adDate**|7||  
-|固定|**adDBDate**|133||  
-|固定|**adDBTime**|134||  
-|固定|**adDBTimestamp**|135|7|  
+|已修复|**adTinyInt**|16||  
+|已修复|**adSmallInt**|2||  
+|已修复|**adInteger**|3||  
+|已修复|**adBigInt**|20||  
+|已修复|**adUnsignedTinyInt**|17||  
+|已修复|**adUnsignedSmallInt**|18||  
+|已修复|**adUnsignedInt**|19||  
+|已修复|**adUnsignedBigInt**|21||  
+|已修复|**adSingle**|4||  
+|已修复|**adDouble**|5||  
+|已修复|**adCurrency**|6||  
+|已修复|**adDecimal**|14||  
+|已修复|**adNumeric**|131||  
+|已修复|**adBoolean**|11||  
+|已修复|**adError**|10||  
+|已修复|**adGuid**|72||  
+|已修复|**adDate**|7||  
+|已修复|**adDBDate**|133||  
+|已修复|**adDBTime**|134||  
+|已修复|**adDBTimestamp**|135|7|  
 |变量|**adBSTR**|8|130|  
 |变量|**adChar**|129|200|  
 |变量|**adVarChar**|200||  
@@ -98,12 +98,17 @@ object.CreateRecordset(ColumnInfos)
 |变量|**adVarBinary**|204||  
 |变量|**adLongVarBinary**|205|204|  
   
-## <a name="applies-to"></a>应用于  
-  
-|||  
-|-|-|  
-|[DataControl 对象 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|[DataFactory 对象 (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|  
-  
+## <a name="applies-to"></a>应用到  
+
+:::row:::
+    :::column:::
+        [DataControl 对象 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+    :::column-end:::
+    :::column:::
+        [DataFactory 对象 (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>另请参阅  
  [CreateRecordset 方法示例（VB）](../../../ado/reference/ado-api/createrecordset-method-example-vb.md)   
  [CreateRecordset 方法示例（VBScript）](../../../ado/reference/rds-api/createrecordset-method-example-vbscript.md)   

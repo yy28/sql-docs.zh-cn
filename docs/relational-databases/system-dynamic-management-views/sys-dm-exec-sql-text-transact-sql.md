@@ -20,12 +20,12 @@ ms.assetid: 61b8ad6a-bf80-490c-92db-58dfdff22a24
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b2a7a5e9f8410ab8ca66f0621d6a2c955258c28c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7ee50d943daf4f5970c162788659092ad31ef8c6
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734660"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943096"
 ---
 # <a name="sysdm_exec_sql_text-transact-sql"></a>sys.dm_exec_sql_text (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "85734660"
 sys.dm_exec_sql_text(sql_handle | plan_handle)  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 *sql_handle*  
 是一个标记，用于唯一标识已执行或当前正在执行的批处理。 *sql_handle*为**varbinary （64）**。 
 
@@ -110,7 +110,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
         WAITFOR DELAY '00:02:00';
       ```
       
-    2.  使用**交叉应用**。  
+  2.  使用**交叉应用**。  
     将使用**跨应用**将**dm_exec_requests**中的 sql_handle 传递给**dm_exec_sql_text sys.databases** 。 打开一个新的查询窗口，并传递步骤1中标识的 spid。 在此示例中，spid 的行为是 `59` 。
 
         ```sql
@@ -120,7 +120,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
         WHERE session_id = 59 -- modify this value with your actual spid
          ```      
  
-    2.  直接传递**sql_handle** 。  
+  2.  直接传递**sql_handle** 。  
 从**dm_exec_requests sys.databases**获取**sql_handle** 。 然后，将**sql_handle**直接传递到**sys.databases。 dm_exec_sql_text**。 打开一个新的查询窗口，并将步骤1中标识的 spid 传递到**sys.databases. dm_exec_requests**。 在此示例中，spid 的行为是 `59` 。 然后将返回的**sql_handle**作为参数传递给**sys.databases。 dm_exec_sql_text**。
 
         ```sql
@@ -178,11 +178,11 @@ WHERE s2.objectid is null
 ORDER BY s1.sql_handle, s1.statement_start_offset, s1.statement_end_offset;  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [动态管理视图和函数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+## <a name="see-also"></a>另请参阅  
+ [动态管理视图和函数 (Transact-SQL)](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [与执行相关的动态管理视图和函数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys. dm_exec_query_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
- [sys. dm_exec_requests &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
+ [sys.dm_exec_requests (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
  [sys. dm_exec_cursors &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)   
  [sys. dm_exec_xml_handles &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)   
  [sys. dm_exec_query_memory_grants &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   

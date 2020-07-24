@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: e4e04cbd-21fc-44a1-9f21-49aa68746934
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cb0250875bfaa9d23d483b4e95e0d8949e2a907a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8d868aaeb917c446e9f345924ab37c0b887dad3a
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758533"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942989"
 ---
 # <a name="rds-properties"></a>RDS 属性
 > [!IMPORTANT]
 >  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件（有关详细信息，请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)）。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
-|||  
+|properties|说明|  
 |-|-|  
 |[Connect （RDS）](../../../ado/reference/rds-api/connect-property-rds.md)|指示运行查询和更新操作的数据库名称。|  
 |[ExecuteOptions （RDS）](../../../ado/reference/rds-api/executeoptions-property-rds.md)|指示是否启用异步执行。|  

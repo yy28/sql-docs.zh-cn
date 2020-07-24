@@ -64,7 +64,7 @@ INSERT INTO [MINING MODEL] <model>
 ||未处理挖掘结构。|处理挖掘模型和挖掘结构。|  
 ||挖掘结构包含其他挖掘模型。|进程失败。 必须重新处理结构和关联的挖掘模型。|  
 |插入挖掘结构*\<structure>*|处理或未处理挖掘结构。|处理挖掘结构和关联的挖掘模型。|  
-|插入 *\<model>* 包含源查询的挖掘模型<br /><br /> 或<br /><br /> 插入 *\<structure>* 包含源查询的挖掘结构中|结构或模型已包含内容。|进程失败。 在执行此操作之前，必须通过使用[DELETE &#40;DMX&#41;](../dmx/delete-dmx.md)来清除这些对象。|  
+|插入 *\<model>* 包含源查询的挖掘模型<br /><br /> or<br /><br /> 插入 *\<structure>* 包含源查询的挖掘结构中|结构或模型已包含内容。|进程失败。 在执行此操作之前，必须通过使用[DELETE &#40;DMX&#41;](../dmx/delete-dmx.md)来清除这些对象。|  
   
 ## <a name="mapped-model-columns"></a>映射的模型列  
  通过使用 \<mapped model columns> 元素，您可以将数据源中的列映射到挖掘模型中的列。 \<mapped model columns>元素具有以下格式：  

@@ -42,9 +42,9 @@ DELETE FROM [MINING STRUCTURE] <structure>[.CONTENT]|[.CASES]
   
 |语句|结果|  
 |---------------|------------|  
-|从挖掘结构中删除*\<structure>*<br /><br /> 或<br /><br /> 从挖掘结构中删除 *\<structure>* 。CONTENT|对挖掘结构执行 ProcessClear。 从挖掘结构及其关联的挖掘模型中清除所有内容。|  
+|从挖掘结构中删除*\<structure>*<br /><br /> or<br /><br /> 从挖掘结构中删除 *\<structure>* 。CONTENT|对挖掘结构执行 ProcessClear。 从挖掘结构及其关联的挖掘模型中清除所有内容。|  
 |从挖掘结构中删除 *\<structure>* 。这|对挖掘结构执行 ProcessClearStructureOnly。 从挖掘结构中清除所有内容，但不改变与其关联的挖掘模型。 清除挖掘结构后，将无法钻取关联的挖掘模型。|  
-|从挖掘模型中删除*\<model>*<br /><br /> 或<br /><br /> 从挖掘模型中删除 *\<model>* 。CONTENT|对挖掘模型执行 ProcessClear，但保持状态值不变。 状态值是列的可能状态。 例如，性别列的状态值是男性和女性。|  
+|从挖掘模型中删除*\<model>*<br /><br /> or<br /><br /> 从挖掘模型中删除 *\<model>* 。CONTENT|对挖掘模型执行 ProcessClear，但保持状态值不变。 状态值是列的可能状态。 例如，性别列的状态值是男性和女性。|  
   
  有关处理类型的详细信息，请参阅[Type Element &#40;XMLA&#41;](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/type-element-xmla)。  
   

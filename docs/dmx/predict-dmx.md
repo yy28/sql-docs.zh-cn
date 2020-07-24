@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9a21336db54ab6fadaa219a3ef3d743dcf860087
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: d323794af598cb621b7fb8f9939cd2ae1c0f2746
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669272"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86968335"
 ---
 # <a name="predict-dmx"></a>Predict (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   **Predict**函数为指定列返回一个预测值或一组值。  
   
@@ -28,22 +28,22 @@ Predict(<scalar column reference>, [option1], [option2], [option n], [INCLUDE_NO
 Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NODE_ID], n)  
 ```  
   
-## <a name="applies-to"></a>应用于  
+## <a name="applies-to"></a>应用到  
  标量列引用或表列引用。  
   
 ## <a name="return-type"></a>返回类型  
- \<标量列引用>  
+ \<scalar column reference>  
   
- 或  
+ or  
   
- \<表列引用>  
+ \<table column reference>  
   
  返回类型取决于应用此函数的列的类型。  
   
 > [!NOTE]  
 >  INCLUSIVE、EXCLUSIVE、INPUT_ONLY 和 INCLUDE_STATISTICS 只适用于表列引用；EXCLUDE_NULL 和 INCLUDE_NULL 只适用于标量列引用。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  选项包括 EXCLUDE_NULL（默认值）、INCLUDE_NULL、INCLUSIVE、EXCLUSIVE（默认值）、INPUT_ONLY 和 INCLUDE_STATISTICS。  
   
 > [!NOTE]  

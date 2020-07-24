@@ -9,11 +9,12 @@ ms.topic: conceptual
 ms.assetid: 56d546e3-8747-4169-aace-693302667e94
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: b5be535275742efa87dec804e17a94ef6cc8d092
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d872066a2143c0fbe3a6b8a710023d91558422a0
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000162"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943149"
 ---
 # <a name="managing-passwords-db2tosql"></a>管理密码（DB2ToSQL）
 本部分介绍如何保护数据库密码，以及如何在服务器之间导入或导出数据库密码：  
@@ -45,30 +46,34 @@ SSMA 允许保护数据库的密码。
             
             示例 1：
             
-                Specify password
-                C:\SSMA\SSMAforDB2Console.EXE -securepassword -add all -s "D:\Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts\AssessmentReportGenerationSample.xml" -v "D:\Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts\ VariableValueFileSample.xml"
-                
-                Enter password for server_id 'XXX_1': xxxxxxx
-                
-                Re-enter password for server_id 'XXX_1': xxxxxxx
+            ```console
+            Specify password
+            C:\SSMA\SSMAforDB2Console.EXE -securepassword -add all -s "D:\Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts\AssessmentReportGenerationSample.xml" -v "D:\Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts\ VariableValueFileSample.xml"
+            
+            Enter password for server_id 'XXX_1': xxxxxxx
+            
+            Re-enter password for server_id 'XXX_1': xxxxxxx
+            ```
             
             示例 2：
             
-                C:\SSMA\SSMAforDB2Console.EXE -securepassword -add "source_1,target_1" -c "D:\Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts\ServersConnectionFileSample.xml" - v "D:\Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts\ VariableValueFileSample.xml" -o
-                
-                Enter password for server_id 'source_1': xxxxxxx
-                
-                Re-enter password for server_id 'source_1': xxxxxxx
-                
-                Enter password for server_id 'target_1': xxxxxxx
-                
-                Re-enter password for server_id 'target _1': xxxxxxx  
+            ```console
+            C:\SSMA\SSMAforDB2Console.EXE -securepassword -add "source_1,target_1" -c "D:\Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts\ServersConnectionFileSample.xml" - v "D:\Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts\ VariableValueFileSample.xml" -o
+            
+            Enter password for server_id 'source_1': xxxxxxx
+            
+            Re-enter password for server_id 'source_1': xxxxxxx
+            
+            Enter password for server_id 'target_1': xxxxxxx
+            
+            Re-enter password for server_id 'target _1': xxxxxxx  
+            ```
     
     -   **删除加密的密码**  
   
         在 `SSMAforDB2Console.exe` `-securepassword` `-remove` 命令行传递服务器 id 的情况下执行，并从本地计算机上的受保护存储文件中删除加密的密码。  
   
-        例如：  
+        示例：  
 
         ```console
         C:\SSMA\SSMAforDB2Console.EXE -securepassword -remove all
@@ -79,7 +84,7 @@ SSMA 允许保护数据库的密码。
   
         在 `SSMAforDB2Console.exe` `-securepassword` 命令行中使用和开关执行， `-list` 以列出其密码已加密的所有服务器 id。  
   
-        例如：  
+        示例：  
 
         ```console
         C:\SSMA\SSMAforDB2Console.EXE -securepassword -list

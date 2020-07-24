@@ -41,12 +41,12 @@ helpviewer_keywords:
 ms.assetid: 81b92baf-b6b9-4f4e-9f33-4503795518cd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 68e9625b1e5acb7ef0d7b8d1389895d8a96dcbef
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 24d86b384a1eb2916e488c17c99e4b9b5962dd1a
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763818"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942719"
 ---
 # <a name="name-property-adox"></a>Name 属性 (ADOX)
 指示对象的名称。  
@@ -64,14 +64,26 @@ ms.locfileid: "82763818"
 > [!NOTE]
 >  对于键，此属性在已追加到集合的**键**对象上是只读的。 对于表，对于已追加到集合的**表**对象，此属性是只读的。  
   
-## <a name="applies-to"></a>应用于  
-  
-||||  
-|-|-|-|  
-|[列对象 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)|[组对象 (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)|[索引对象 (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)|  
-|[项对象 (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)|[过程对象 (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)|[属性对象 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
-|[表对象 (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)|[用户对象 (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)|[视图对象 (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)|  
-  
+## <a name="applies-to"></a>应用到  
+
+:::row:::
+    :::column:::
+        [列对象 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
+        [组对象 (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)  
+        [索引对象 (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)  
+    :::column-end:::
+    :::column:::
+        [项对象 (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  
+        [过程对象 (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)  
+        [属性对象 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)  
+    :::column-end:::
+    :::column:::
+        [表对象 (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)  
+        [用户对象 (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)  
+        [视图对象 (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>另请参阅  
  [列和表追加方法，Name 属性示例（VB）](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
  [键 Append 方法、Key Type、RelatedColumn、RelatedTable 和 UpdateRule 属性示例（VB）](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   

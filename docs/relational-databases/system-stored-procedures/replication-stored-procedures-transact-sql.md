@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 10996a2a-3be4-4f66-9fc4-815d43fc6e52
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f02b55e6b798bd66e7e13a8ba8a40329fc0255e2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 64f75e38aea006fffc0b464bcaeabb4ff6d9fec4
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752801"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920083"
 ---
 # <a name="replication-stored-procedures-transact-sql"></a>复制存储过程 (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
 
   复制系统存储过程被记录并用作完成一次性任务（如实现复制）以及在批处理文件和脚本中使用的方法。  
   
@@ -150,7 +150,7 @@ ms.locfileid: "85752801"
 |[sp_helparticlecolumns &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)||  
   
 ## <a name="see-also"></a>另请参阅  
- [复制管理对象概念](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
+ [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [复制编程概念](../../relational-databases/replication/concepts/replication-programming-concepts.md)  
   
   

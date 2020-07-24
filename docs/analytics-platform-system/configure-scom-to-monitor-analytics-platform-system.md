@@ -1,5 +1,5 @@
 ---
-title: 用 SCOM 监视
+title: 配置 System Center Operations Manager 以监视 AP
 description: 按照以下步骤配置用于分析平台系统的 System Center Operations Manager （SCOM）管理包。 管理包是从 SCOM 监视分析平台系统所需的。
 author: mzaman1
 ms.prod: sql
@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 67029d235a1bc65b5ee0ab6f01f51dea42ebcc8b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0786cbc8230ecf29dd377a35fefc6969072512b3
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401301"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942209"
 ---
 # <a name="configure-system-center-operations-manager-scom-to-monitor-analytics-platform-system"></a>配置 System Center Operations Manager （SCOM）以监视分析平台系统
 按照以下步骤配置用于分析平台系统的 System Center Operations Manager （SCOM）管理包。 管理包是从 SCOM 监视分析平台系统所需的。  
@@ -37,7 +37,7 @@ ms.locfileid: "74401301"
   
 1.  为**Ap 观察**程序域用户创建包含**Windows**帐户类型的**ap 观察**程序运行方式帐户。  
   
-    1.  导航到 "**管理**" 窗格，右键单击 "**运行方式配置** -> **帐户**"，然后选择 "**创建运行方式帐户 ...** "  
+    1.  导航到 "**管理**" 窗格，右键单击 "**运行方式配置**  ->  **帐户**"，然后选择 "**创建运行方式帐户 ...** "  
   
         ![ConfigureScomCreateRunAsAccount](./media/configure-scom-to-monitor-analytics-platform-system/ConfigureScomCreateRunAsAccount.png "ConfigureScomCreateRunAsAccount")  
   
@@ -61,7 +61,7 @@ ms.locfileid: "74401301"
   
 2.  设置**MICROSOFT ap**观察程序帐户配置文件以使用**ap 观察**程序运行方式帐户。  
   
-    1.  导航到 "**管理** -> " "**运行方式配置** -> " 配置**文件**。  
+    1.  导航到 "**管理**" "  ->  **运行方式配置**" 配置  ->  **文件**。  
   
         ![AdministrationRunAsConfigurationProfiles](./media/configure-scom-to-monitor-analytics-platform-system/AdministrationRunAsConfigurationProfiles.png "AdministrationRunAsConfigurationProfiles")  
   
@@ -81,7 +81,7 @@ ms.locfileid: "74401301"
   
 3.  等待 AP 设备发现完成。  
   
-    1.  导航到 "**监视**" 窗格，打开 " **SQL Server 设备** -> "**Microsoft Analytics Platform System** -> **设备**状态 "视图。  
+    1.  导航到 "**监视**" 窗格，打开 " **SQL Server 设备**"  ->  **Microsoft Analytics Platform System**  ->  **设备**状态 "视图。  
   
         ![SqlServerApplianceMicrosoftApsAppliances](./media/configure-scom-to-monitor-analytics-platform-system/SqlServerApplianceMicrosoftApsAppliances.png "SqlServerApplianceMicrosoftApsAppliances")  
   

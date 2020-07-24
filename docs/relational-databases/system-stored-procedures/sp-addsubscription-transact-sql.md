@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4ff31939ce763f91ca706dfe9e7966b2a7b42f7d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d3550dad3292c7ff2a226d6bfc21b1f55e148d58
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716354"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918933"
 ---
 # <a name="sp_addsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
 
   将订阅添加到发布并设置订阅服务器的状态。 此存储过程在发布服务器上对发布数据库执行。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -75,7 +75,7 @@ sp_addsubscription [ @publication = ] 'publication'
     [ , [ @memory_optimized = ] memory_optimized ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  [ @publication =] "*发布*"  
  发布的名称。 *发布*为**sysname**，无默认值。  
   
@@ -94,7 +94,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @sync_type =] "*sync_type*"  
  订阅同步类型。 *sync_type*为**nvarchar （255）**，可以是下列值之一：  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |无|订阅服务器已包含发布表的架构和初始数据。<br /><br /> 注意：此选项已被弃用。 请改用仅支持复制。|  
 |automatic（默认值）|已发布表的架构和初始数据将首先传输到订阅服务器。|  
@@ -108,7 +108,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @status =] "*status*"  
  订阅状态。 *状态*为**sysname**，默认值为 NULL。 当此参数未显式设置时，复制会自动将其设置为下列值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |活动|订阅已初始化并可接受更改。 如果*sync_type*的值为 none、initialize with backup 或仅支持复制，则会设置此选项。|  
 |subscribed|订阅需要进行初始化。 如果*sync_type*的值为 "自动"，则会设置此选项。|  
@@ -122,7 +122,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @update_mode =] "*update_mode*"  
  更新的类型。*update_mode*为**nvarchar （30）**，可以是下列值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |read only（默认值）|该订阅是只读的。 在订阅服务器上所做的更改不会发送到发布服务器。|  
 |sync tran|支持立即更新订阅。 Oracle 发布服务器不支持。|  
@@ -135,7 +135,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @loopback_detection =] "*loopback_detection*"  
  指定分发代理是否将从订阅服务器发起的事务发送回该订阅服务器。 *loopback_detection*为**nvarchar （5）**，可以是下列值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |true|分发代理不将从订阅服务器上发起的事务发送回该订阅服务器。 与双向事务复制一起使用。 有关详细信息，请参阅[双向事务复制](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md)。|  
 |false|分发代理将在订阅服务器上发起的事务发送回订阅服务器。|  
@@ -144,13 +144,13 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @frequency_type =] *frequency_type*  
  安排分发任务所使用的频率。 *frequency_type*为 int，可以是下列值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |1|一次性|  
 |2|按需|  
 |4|每天|  
 |8|每周|  
-|16|每月|  
+|16|每月一次|  
 |32|与“每月”选项相关|  
 |64（默认值）|自动启动|  
 |128|重复执行|  
@@ -161,10 +161,10 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @frequency_relative_interval =] *frequency_relative_interval*  
  分发代理的日期。 如果*frequency_type*设置为32（每月相对），则使用此参数。 *frequency_relative_interval*为**int**，可以是下列值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
-|1|First|  
-|2|秒|  
+|1|第一个|  
+|2|Second|  
 |4|第三个|  
 |8|第四个|  
 |16|最后一个|  
@@ -176,10 +176,10 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @frequency_subday =] *frequency_subday*  
  在定义周期内重新调度的频率（分钟）。 *frequency_subday*为**int**，可以是下列值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |1|一次|  
-|2|秒|  
+|2|Second|  
 |4|Minute|  
 |8|小时|  
 |Null||  
@@ -241,7 +241,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @backupdevicetype =] "*backupdevicetype*"  
  指定从备份初始化订阅服务器时使用的备份设备的类型。 *backupdevicetype*的数据值为**nvarchar （20）**，可以是下列值之一：  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |logical（默认值）|备份设备是逻辑设备。|  
 |disk|备份设备是磁盘驱动器。|  
@@ -279,7 +279,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @subscriber_type =] *subscriber_type*  
  订阅服务器的类型。 *subscriber_type*为**tinyint**，可以是下列值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |0（默认值）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]订阅服务器|  
 |1|ODBC 数据源服务器|  
@@ -295,7 +295,7 @@ sp_addsubscription [ @publication = ] 'publication'
 ## <a name="remarks"></a>备注  
  sp_addsubscription 用于快照复制和事务复制。  
   
- 当 sysadmin 固定服务器角色的成员执行 sp_addsubscription 以创建推送订阅时，将隐式创建分发代理作业并将在 SQL Server 代理服务帐户下运行该作业。 建议你执行[sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) ，并为和指定不同的、特定于代理的 Windows 帐户的凭据 @job_login @job_password 。 有关详细信息，请参阅[复制代理安全模式](../../relational-databases/replication/security/replication-agent-security-model.md)。  
+ 当 sysadmin 固定服务器角色的成员执行 sp_addsubscription 以创建推送订阅时，将隐式创建分发代理作业并将在 SQL Server 代理服务帐户下运行该作业。 建议你执行[sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) ，并为和指定不同的、特定于代理的 Windows 帐户的凭据 @job_login @job_password 。 有关详细信息，请参阅 [复制代理安全模式](../../relational-databases/replication/security/replication-agent-security-model.md)。  
   
  sp_addsubscription 禁止 ODBC 和 OLE DB 订阅服务器访问下列发布：  
   
@@ -320,7 +320,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [!code-sql[HowTo#sp_addtranpushsubscription_agent](../../relational-databases/replication/codesnippet/tsql/sp-addsubscription-trans_1.sql)]  
   
 ## <a name="see-also"></a>另请参阅  
- [创建推送订阅](../../relational-databases/replication/create-a-push-subscription.md)   
+ [ssSDSFull](../../relational-databases/replication/create-a-push-subscription.md)   
  [创建非 SQL Server 订阅服务器的订阅](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addpushsubscription_agent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   

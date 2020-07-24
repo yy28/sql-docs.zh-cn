@@ -40,12 +40,12 @@ helpviewer_keywords:
 ms.assetid: a0bb2ed8-d4cb-4f92-8de7-769bbe0e6273
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6c3557af934ab7029822b5f9d3657828ee5d2a75
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c4d3874ea1289dd086d70f06434adc666691f521
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763758"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943179"
 ---
 # <a name="parentcatalog-property-adox"></a>ParentCatalog 属性 (ADOX)
 指定表、用户或列对象的父目录，以提供对特定于访问接口的属性的访问。  
@@ -58,12 +58,19 @@ ms.locfileid: "82763758"
   
  将表或列追加到与**ParentCatalog**不同的**目录**时出错。  
   
-## <a name="applies-to"></a>应用于  
-  
-|||  
-|-|-|  
-|[列对象 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)|[表对象 (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)|  
-|[用户对象 (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)||  
-  
+## <a name="applies-to"></a>应用到  
+
+:::row:::
+    :::column:::
+        [列对象 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
+    :::column-end:::
+    :::column:::
+        [表对象 (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)  
+    :::column-end:::
+    :::column:::
+        [用户对象 (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>另请参阅  
  [ParentCatalog 属性示例 (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)

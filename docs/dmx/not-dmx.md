@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 23aaa06f7da6c29cf1f082c27071d68fa0c6958a
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 98c40dba282c82f124d4e4ac009a046a44a283cb
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669193"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971625"
 ---
 # <a name="not-dmx"></a>NOT (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   一种逻辑运算符，用于对数值表达式执行逻辑非运算。  
   
@@ -34,7 +34,7 @@ NOT Expression1
 ## <a name="return-value"></a>返回值  
  一个布尔值，在参数的计算结果为 TRUE 时返回 FALSE；否则将返回 FALSE。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  在运算符执行逻辑非运算之前，该参数被视为布尔值（0 为 FALSE；否则为 TRUE）。 如果*表达式*值为 TRUE，则运算符返回 FALSE。 如果*表达式*值为 FALSE，则运算符返回 TRUE。 下表阐释了执行逻辑与运算的方式。  
   
 |如果 Expression1 为|则返回值为|  

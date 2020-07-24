@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 610d304f2634a4de8f8578fff3258f4b1f2dbc67
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 735df047307f78c238fbf29669f0e0b1e0933e37
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669290"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971552"
 ---
 # <a name="predictadjustedprobability-dmx"></a>PredictAdjustedProbability (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   返回指定状态调整后的概率。  
   
@@ -27,16 +27,16 @@ ms.locfileid: "83669290"
 PredictAdjustedProbability(<scalar column reference>, [<predicted state>])  
 ```  
   
-## <a name="applies-to"></a>应用于  
+## <a name="applies-to"></a>应用到  
  标量列。  
   
 ## <a name="return-type"></a>返回类型  
  一个标量值。  
   
-## <a name="remarks"></a>注解  
- 如果未提供预测状态，将使用具有最大可预测概率的状态，不包括缺少状态存储桶。 若要包含缺少的状态存储桶，请将 \< 预测状态> 设置为**INCLUDE_NULL**。  
+## <a name="remarks"></a>备注  
+ 如果未提供预测状态，将使用具有最大可预测概率的状态，不包括缺少状态存储桶。 若要包含缺少的状态存储桶，请将设置 \<predicted state> 为**INCLUDE_NULL**。  
   
- 若要为缺少的状态返回调整后的概率，请将 \< 预测状态> 设置为 NULL。  
+ 若要为缺少的状态返回调整后的概率，请将设置 \<predicted state> 为 NULL。  
   
  **PredictAdjustedProbability**函数是 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)] 数据挖掘规范 OLE DB 的扩展。  
   

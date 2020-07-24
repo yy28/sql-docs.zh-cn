@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7d0888082380c7380e5fb025bb70d4bd3c2e518b
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: ececf16131544b0a450d877b5c4ba43c2cd80466
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83666692"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970685"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   返回时序数据的未来预测值。 时序数据是连续的，可以存储在嵌套表或事例表中。 **PredictTimeSeries**函数始终返回嵌套表。  
   
@@ -37,7 +37,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 ```  
   
 ## <a name="arguments"></a>参数  
- * \< 表列引用>*， * \< 标量列引用>*  
+ *\<table column reference>*, *\<scalar column referenc>*  
  指定要预测的列的名称。 列可以包含标量数据或表格格式数据。  
   
  *n*  
@@ -52,7 +52,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
   
  *n end*必须是大于*n 开头的*整数。  
   
- *\<源查询>*  
+ *\<source query>*  
  定义用于进行预测的外部数据。  
   
  REPLACE_MODEL_CASES | EXTEND_MODEL_CASES  
@@ -65,9 +65,9 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
  这些参数仅在使用 PREDICTION JOIN 语句添加新数据时才可用。 如果使用 PREDICTION JOIN 查询并且没有指定参数，则默认值为 EXTEND_MODEL_CASES。  
   
 ## <a name="return-type"></a>返回类型  
- > 的 \< *表表达式*。  
+ 一个 \<*table expression*>。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  当使用 PREDICTION JOIN 语句添加新数据时，[!INCLUDE[msCoName](../includes/msconame-md.md)] 时序算法不支持历史预测。  
   
  在 PREDICTION JOIN 中，预测过程总是从原始定型系列的末尾之后的时间步长立即开始。 即使您添加新的数据也是如此。 因此， *n*参数和*n 启动*参数值必须是大于0的整数。  

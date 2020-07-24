@@ -32,7 +32,7 @@ ms.locfileid: "86913225"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |name|`sysname`|在 SQL 大数据群集中外部公开的服务的名称。 终结点的唯一标识符。 此视图的键。 不可为 null。 |  
-|description|`nvarchar(4000)`|服务说明。 不可为 null。 |
+|说明|`nvarchar(4000)`|服务说明。 不可为 null。 |
 |endpoint|`sysname`|终结点 url 或连接属性。 不可为 null。 |
 |protocol_desc|`sysname`|终结点协议说明 |
 
