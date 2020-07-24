@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: d7169a8e-92b1-49eb-9124-3b2f69755ddb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 061016b3a9f1283f82263a4f89fdb81acfc86889
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 947038e26a4367425576261594befff032f6eeea
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890910"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122723"
 ---
 # <a name="sysmail_help_profile_sp-transact-sql"></a>sysmail_help_profile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   列出有关一个或多个邮件配置文件的信息。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -49,12 +49,11 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
 ## <a name="result-sets"></a>结果集  
  返回包含以下列的结果集。  
   
-||||  
-|-|-|-|  
-|列名称|数据类型|说明|  
+| 列名称 | 数据类型 | 说明 |
+| ----------- | --------- | ----------- |
 |**profile_id**|**int**|配置文件 ID。|  
 |name|**sysname**|配置文件名。|  
-|**2008**|**nvarchar(256)**|配置文件的说明。|  
+|description|**nvarchar(256)**|配置文件的说明。|  
   
 ## <a name="remarks"></a>备注  
  指定配置文件名称或配置文件 id 时， **sysmail_help_profile_sp**返回有关该配置文件的信息。 否则， **sysmail_help_profile_sp**返回有关实例中的每个配置文件的信息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  

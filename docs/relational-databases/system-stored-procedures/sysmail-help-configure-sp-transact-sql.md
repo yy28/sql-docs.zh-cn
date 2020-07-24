@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fb13be5e26fb4bdb74b4776ca34ab42eacc7eb03
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 307b1a1259210890d0b21abdc7a26f0e321e49b3
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890902"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122681"
 ---
 # <a name="sysmail_help_configure_sp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   显示数据库邮件的配置设置。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,12 +47,11 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ## <a name="result-sets"></a>结果集  
  当未指定** \@ parameter_name**时，将返回包含以下列的结果集。  
   
-||||  
-|-|-|-|  
-|列名称|数据类型|说明|  
+| 列名称 | 数据类型 | 说明 |
+| ----------- | --------- | ----------- |
 |**paramname**|**nvarchar(256)**|配置参数的名称。|  
 |**paramvalue**|**nvarchar(256)**|配置参数的值。|  
-|**2008**|**nvarchar(256)**|配置参数的说明。|  
+|description|**nvarchar(256)**|配置参数的说明。|  
   
 ## <a name="remarks"></a>备注  
  存储过程**sysmail_help_configure_sp**列出实例的当前数据库邮件配置设置。  

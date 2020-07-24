@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: 87c7c39c-8e05-4e68-9272-45f908809c3b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8374beba2eda97df3817dc27c337e46f9ba57780
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 11242eae3f17e24c428aac3a6f344d937f15dd33
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890921"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122682"
 ---
 # <a name="sysmail_help_account_sp-transact-sql"></a>sysmail_help_account_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   列出有关数据库邮件帐户的信息（密码除外）。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -49,12 +49,11 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 ## <a name="result-sets"></a>结果集  
  返回包含下面列出的列的结果集。  
   
-||||  
-|-|-|-|  
-|列名称|数据类型|说明|  
+| 列名称 | 数据类型 | 说明 |
+| ----------- | --------- | ----------- |
 |**account_id**|**int**|帐户 ID。|  
 |name|**sysname**|帐户名称。|  
-|**2008**|**nvarchar(256)**|对帐户的说明。|  
+|description|**nvarchar(256)**|对帐户的说明。|  
 |**email_address**|**nvarchar(128)**|发送消息的电子邮件地址。|  
 |**display_name**|**nvarchar(128)**|帐户的显示名称。|  
 |**replyto_address**|**nvarchar(128)**|对于来自此帐户的消息发送答复的地址。|  

@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: 73b33c56-2bff-446a-b495-ae198ad74db1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3156ac4443bd116767ece63c37cbe0ff51198984
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: df5b364408b012a186ca090b6d3a6d7de77119cf
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890991"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122273"
 ---
 # <a name="sysmail_configure_sp-transact-sql"></a>sysmail_configure_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   更改数据库邮件的配置设置。 使用**sysmail_configure_sp**指定的配置设置适用于整个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -59,9 +59,8 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
 ## <a name="remarks"></a>备注  
  数据库邮件使用以下参数：  
   
-||||  
-|-|-|-|  
-|参数名称|说明|默认值|  
+| 参数名称 | 说明 | 默认值 |
+| -------------- | ----------- | ------------- |
 |*AccountRetryAttempts*|外部电子邮件进程尝试使用指定配置文件中的每个帐户发送电子邮件的次数。|**1**|  
 |*AccountRetryDelay*|外部邮件进程在两次尝试发送邮件之间的等待时间（以秒为单位）。|**5000**|  
 |*达到 databasemailexeminimumlifetime*|外部邮件进程保持活动状态的最少时间（以秒为单位）。 如果数据库邮件要发送多个邮件，增加此值可以使数据库邮件保持活动状态，避免频繁启动和停止的开销。|**600**|  

@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: 3ea68271-0a6b-4d77-991c-4757f48f747a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f8fae7b7f9ec0fbd5a8310bcbdacc6a436dd232c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: be5cfcdd06dfeea2215f3c65a2b672b68e28035f
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890876"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122683"
 ---
 # <a name="sysmail_help_profileaccount_sp-transact-sql"></a>sysmail_help_profileaccount_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   列出与一个或多个数据库邮件配置文件相关联的帐户。  
     
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -57,9 +57,8 @@ sysmail_help_profileaccount_sp
 ## <a name="result-sets"></a>结果集  
  返回包含以下列的结果集。  
   
-||||  
-|-|-|-|  
-|列名称|数据类型|说明|  
+| 列名称 | 数据类型 | 说明 |
+| ----------- | --------- | ----------- |
 |**profile_id**|**int**|配置文件的配置文件 ID。|  
 |**profile_name**|**sysname**|配置文件的名称。|  
 |**account_id**|**int**|帐户的帐户 ID。|  
