@@ -1,5 +1,6 @@
 ---
 title: DTA 建议的性能改进
+description: 了解数据库引擎优化顾问如何通过分析 SQL Server 中的数据库工作负载，建议行存储和列存储索引的组合。
 ms.custom: seo-dt-2019
 ms.date: 03/07/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2e51ea06-81cb-4454-b111-da02808468e6
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 3dcd1405bb41243bf2bd618d3fe8ed89393ed5d3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: abad80759ccfbc2d5315c5f89cf1dcce3172c9f4
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762836"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458279"
 ---
 # <a name="performance-improvements-using-database-engine-tuning-advisor-dta-recommendations"></a>使用数据库引擎优化顾问 (DTA) 改进性能的建议
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

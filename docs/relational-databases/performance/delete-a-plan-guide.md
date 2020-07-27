@@ -1,5 +1,6 @@
 ---
 title: 删除计划指南 | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL 在 SQL Server 中删除或放弃计划指南。 使用 Transact-SQL 删除数据库中的所有指南。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: aa4d3188-6927-43de-a3e3-90fc16eeaca7
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 3138d4fcda123d56af975b2f2cfd5d5e4c76536b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e93982c0ad59b7016902c64cd4dd81d0f81c270f
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85655621"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457305"
 ---
 # <a name="delete-a-plan-guide"></a>删除计划指南
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -49,7 +50,7 @@ ms.locfileid: "85655621"
   
 2.  单击加号以便展开 **“计划指南”** 文件夹。  
   
-3.  右键单击要删除的计划指南，然后选择“删除”  。  
+3.  右键单击要删除的计划指南，然后选择“删除”。  
   
 4.  在 **“删除对象”** 对话框中，确保已选择正确的计划指南，然后单击 **“确定”** 。  
 
@@ -61,7 +62,7 @@ ms.locfileid: "85655621"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     --Create a procedure on which to define the plan guide.  
@@ -102,7 +103,7 @@ ms.locfileid: "85655621"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     USE AdventureWorks2012;  

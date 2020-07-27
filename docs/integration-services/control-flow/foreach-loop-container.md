@@ -30,16 +30,16 @@ helpviewer_keywords:
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2266b837ce7822a6b03b3f6a26d4d1d818aade72
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 176e5f4d638f6093f7239c347cbc0d3e0e5b75bb
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298293"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918224"
 ---
 # <a name="foreach-loop-container"></a>Foreach 循环容器
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Foreach 循环容器定义包中的重复控制流。 循环的实现与编程语言中的 **Foreach** 循环结构类似。 在包中，通过使用 Foreach 枚举器启用循环。  Foreach 循环容器将重复指定枚举器的每个成员的控制流。  
@@ -168,7 +168,7 @@ ms.locfileid: "71298293"
   
 7.  （可选）单击“变量映射”  ，将对象属性映射到集合值，然后执行以下操作：  
   
-    1.  在“变量”  列表中选择变量，或单击 \<“新建变量”>  创建新的变量。  
+    1.  在“变量”列表中选择变量，或单击“\<New Variable>”创建新变量 。  
   
     2.  如果要添加新变量，那么请在 **“添加变量”** 对话框中设置该变量的属性，然后单击 **“确定”** 。  
   
@@ -179,7 +179,7 @@ ms.locfileid: "71298293"
   
 8.  也可以单击 **“表达式”** ，然后在 **“表达式”** 页上，为 Foreach 循环容器的属性创建属性表达式。 有关详细信息，请参阅 [添加或更改属性表达式](../../integration-services/expressions/add-or-change-a-property-expression.md)。  
   
-9. 单击“确定”。   
+9. 单击“确定”。  
 
 ## <a name="general-page---foreach-loop-editor"></a>“常规”页 - Foreach 循环编辑器
 可以使用 **“Foreach 循环编辑器”** 对话框的 **“常规”** 页，对 Foreach 循环容器进行命名和说明，该容器使用指定的枚举器重复集合中每个成员的工作流。  
@@ -217,7 +217,7 @@ ms.locfileid: "71298293"
 |**Foreach HDFS 文件枚举器**|在指定的 HDFS 位置枚举 HDFS 文件。 选择此值将显示“Foreach HDFS 文件枚举器”  部分中的动态选项。|  
 |**Foreach Azure Blob 枚举器**|枚举指定 blob 位置中的 blob 文件。 选择此值将显示 **“Foreach Azure Blob 枚举器”** 部分中的动态选项。|  
 |**Foreach ADLS 文件枚举器**|枚举指定 Data Lake Store 目录中的文件。 选择此值会显示“Foreach ADLS 文件枚举器”  部分中的动态选项。|
-|Foreach Data Lake Storage Gen2 文件枚举器 |枚举指定的 Data Lake Storage Gen2 目录中的文件。 选择此值会显示“Foreach Data Lake Storage Gen2 文件枚举器”部分中的动态选项  。|
+|Foreach Data Lake Storage Gen2 文件枚举器|枚举指定的 Data Lake Storage Gen2 目录中的文件。 选择此值会显示“Foreach Data Lake Storage Gen2 文件枚举器”部分中的动态选项  。|
   
  **表达式**  
  单击或展开 **表达式** 可以查看现有属性表达式的列表。 单击省略号按钮 (…) 可以添加枚举器属性的属性表达式，或编辑并计算现有属性表达式  。  
@@ -294,7 +294,7 @@ ms.locfileid: "71298293"
  您可以使用 Foreach ADO 枚举器枚举变量中存储的 ADO 或 ADO.NET 对象中的行或表。 例如，如果 Foreach 循环包括可将数据集写入变量的脚本任务，则可以使用 Foreach ADO 枚举器枚举数据集中的行。 如果变量包含 ADO.NET 数据集，则可以将枚举器配置为枚举多个表中的行或枚举表。  
   
  **ADO 对象源变量**  
- 从列表中选择用户定义的变量，或单击 **“新建变量...”\<** > 创建新变量。  
+ 从列表中选择用户定义的变量，或单击“\<**New variable...**>”创建新变量。  
   
 > [!NOTE]  
 >  变量必须有 Object 数据类型，否则会发生错误。  
@@ -314,7 +314,7 @@ ms.locfileid: "71298293"
  您可以使用 Foreach ADO.NET 架构行集枚举器枚举指定数据源的架构。 例如，如果 Foreach 循环包括执行 SQL 任务，则可以使用 Foreach ADO.NET 架构行集枚举器枚举架构（例如， **AdventureWorks** 数据库中的列），使用执行 SQL 任务获取架构权限。  
   
  **Connection**  
- 从列表中选择 ADO.NET 连接管理器，或单击 **“新建连接...”\<** > 创建新的 ADO.NET 连接管理器。  
+ 从列表中选择 ADO.NET 连接管理器，或单击“\<**New connection...**>”创建新的 ADO.NET 连接管理器。  
   
 > [!IMPORTANT]  
 >  ADO.NET 连接管理器必须使用 .NET provider for OLE DB。 如果连接到 SQL Server，则建议使用的访问接口为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **“连接管理器”** 对话框的 **.Net Providers for OleDb** 部分中列出的  Native Client。  
@@ -333,7 +333,7 @@ ms.locfileid: "71298293"
  您可以使用 Foreach 源变量枚举器枚举指定变量中的可枚举对象。 例如，如果 Foreach 循环包括运行查询并在变量中存储结果的执行 SQL 任务，则可以使用 Foreach 源变量枚举器枚举查询结果。  
   
  **变量**  
- 从列表中选择变量，或单击“\<新建变量...>”以创建新的变量  。  
+ 在列表中选择变量，或单击“\<**New variable...**>创建一个新变量。  
   
  **相关主题：** [Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -356,11 +356,11 @@ ms.locfileid: "71298293"
  **DocumentSource**  
  如果将 DocumentSourceType 设置为“直接输入”，请提供 XML 代码，或单击省略号按钮 (…) 以通过使用“文档源编辑器”对话框来提供 XML    。  
   
- 如果将 **DocumentSourceType** 设置为“文件连接”  ，请选择文件连接管理器，或单击 **“新建连接...”\<** > 创建新的连接管理器。  
+ 如果 DocumentSourceType 设置为“文件连接”，请选择“文件连接管理器”，或单击“\<**New connection...**>”创建新的连接管理器 。  
   
  **相关主题：** [文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)、[文件连接管理器编辑器](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- 如果将 **DocumentSourceType** 设置为“变量”  ，请选择现有变量，或单击 **“新建变量...”\<** > 创建新变量。  
+ 如果 DocumentSourceType 设置为“变量”，请选择现有变量，或单击“\<**New variable...**>”创建新变量 。  
   
  **相关主题：** [Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
   
@@ -386,11 +386,11 @@ ms.locfileid: "71298293"
  **OuterXPathString**  
  如果将 **OuterXPathStringSourceType** 设置为“直接输出”  ，请提供 XPath 字符串。  
   
- 如果将 **OuterXPathStringSourceType** 设置为“文件连接”  ，请选择文件连接管理器，或单击 **“新建连接...”\<** > 创建新的连接管理器。  
+ 如果 OuterXPathStringSourceType 设置为“文件连接”，请选择“文件连接管理器”，或单击“\<**New connection...**>创建新的连接管理器 。  
   
  **相关主题：** [文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)、[文件连接管理器编辑器](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- 如果将 **OuterXPathStringSourceType** 设置为“变量”  ，请选择现有变量，或单击 **“新建变量...”\<** > 创建新变量。  
+ 如果 OuterXPathStringSourceType 设置为“变量”，请选择现有变量，或单击“\<**New variable...**>创建新的变量 。  
   
  **相关主题：** [Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
   
@@ -409,11 +409,11 @@ ms.locfileid: "71298293"
  **InnerXPathString**  
  如果将 **InnerXPathStringSourceType** 设置为“直接输入”  ，请提供 XPath 字符串。  
   
- 如果将 **InnerXPathStringSourceType** 设置为“文件连接”  ，请选择文件连接管理器，或单击 **“新建连接...”\<** > 创建新的连接管理器。  
+ 如果 InnerXPathStringSourceType 设置为“文件连接”，请选择“文件连接管理器”，或单击“\<**New connection...**>创建新的连接管理器 。  
   
  **相关主题：** [文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)、[文件连接管理器编辑器](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- 如果将 **InnerXPathStringSourceType** 设置为“变量”  ，请选择现有变量，或单击 **“新建变量...”\<** > 创建新变量。  
+ 如果 InnerXPathStringSourceType 设置为“变量”，请选择现有变量，或单击“\<**New variable...**>创建新的变量 。  
   
  **相关主题：** [Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
   
@@ -421,7 +421,7 @@ ms.locfileid: "71298293"
  您可以使用 Foreach SMO 枚举器枚举 SQL Server 管理对象 (SMO) 对象。 例如，如果 Foreach 循环包括执行 SQL 任务，则可以使用 Foreach SMO 枚举器枚举 **AdventureWorks** 数据库中的表并运行计算每个表中行数的查询。  
   
  **Connection**  
- 选择现有 ADO.NET 连接管理器，或单击 **“新建连接...”\<** > 创建新的连接管理器。  
+ 选择现有 ADO.NET 连接管理器，或单击“\<**New connection...**>”以创建新的连接管理器。  
   
  相关主题：[ADO.NET 连接管理器](../../integration-services/connection-manager/ado-net-connection-manager.md)、[配置 ADO.NET 连接管理器](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
   
@@ -473,7 +473,7 @@ ms.locfileid: "71298293"
  **Blob 目录**  
  指定包含要枚举的 blob 文件的 blob 目录。 该 blob 目录是一个虚拟层次结构。  
   
- 以递归方式搜索   
+ 以递归方式搜索  
  指定是否在子目录中以递归方式搜索。
 
  **Blob 名称筛选器**  
@@ -500,10 +500,10 @@ ms.locfileid: "71298293"
 ####  <a name="enumerator--foreach-data-lake-storage-gen2-file-enumerator"></a><a name="ForeachBlobFsFile"></a> 枚举器 = Foreach Data Lake Storage Gen2 文件枚举器 
 借助 Foreach Data Lake Storage Gen2 文件枚举器，SSIS 包可枚举 Azure Data Lake Storage Gen2 中的文件  。
 
-AzureStorageConnection   
+AzureStorageConnection  
 指定现有的 Azure 存储连接管理器，或者新建一个引用 Data Lake Storage Gen2 服务的 Azure 存储连接管理器。
 
-FolderPath   
+FolderPath  
 指定要枚举其所含文件的文件夹的路径。
 
 **SearchRecursively**  
@@ -554,7 +554,7 @@ Data Lake Storage Gen2 由 [RBAC](https://docs.microsoft.com/azure/storage/commo
  选择要应用于该架构的约束。  
   
  **变量**  
- 使用变量来定义限制。 从列表中选择变量，或单击“新建变量...”以创建新的变量。   
+ 使用变量来定义限制。 从列表中选择变量，或单击“新建变量...”以创建新的变量。  
   
  **相关主题：** [Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   

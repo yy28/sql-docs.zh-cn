@@ -1,5 +1,6 @@
 ---
 title: 移动工作负荷组 | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL 将 Resource Governor 工作负载组移动到其他资源池。
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f2068636-6e53-486a-a6fc-c12de2a38424
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: d7db094db50938b08125b6605040eba935b77273
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a3ff2eff8f72499506aa129b064690693f1b14ff
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720462"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86456599"
 ---
 # <a name="move-a-workload-group"></a>移动工作负荷组
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "85720462"
   
 -   **开始之前：** [限制和局限](#LimitationsRestrictions)、[权限](#Permissions)  
   
--   若要移动工作负荷组，请使用  ：[SQL Server Management Studio](#MoveWGSSMS)、[Transact-SQL](#MoveWGTSQL)  
+-   若要移动工作负荷组，请使用：[SQL Server Management Studio](#MoveWGSSMS)、[Transact-SQL](#MoveWGTSQL)  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
  如果存在挂起的资源调控器配置操作，则无法移动工作负荷组。  
@@ -43,11 +44,11 @@ ms.locfileid: "85720462"
   
 1.  在对象资源管理器中，依次逐步展开 **“管理”** 节点直至 **“资源调控器”** 。  
   
-2.  右键单击“资源调控器”  ，然后单击“属性”  ，这将打开“资源调控器属性”页  。  
+2.  右键单击“资源调控器”  ，然后单击“属性” ，这将打开“资源调控器属性”页  。  
   
 3.  在 **“资源池”** 窗口中，单击包含要移动的工作负荷组的资源池。 此时， **“工作负荷组”** 窗口会列出该资源池中的工作负荷组。  
   
-4.  在“工作负荷组”  窗口中，右键单击要移动的工作负荷组左侧的向右箭头，然后单击“移到”  。 这将显示 **“移动工作负荷组”** 窗口。  
+4.  在“工作负荷组”窗口中，右键单击要移动的工作负荷组左侧的向右箭头，然后单击“移到”。 这将显示 **“移动工作负荷组”** 窗口。  
   
 5.  在窗口中显示可用的资源池。 单击要将工作负荷组移动到的资源池的名称，然后单击 **“确定”** 执行此操作。  
   

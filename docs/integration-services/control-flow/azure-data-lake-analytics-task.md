@@ -4,8 +4,6 @@ description: 使用 Data Lake Analytics 任务，可以将 U-SQL 作业提交到
 ms.custom: ''
 ms.date: 06/27/2019
 ms.prod: sql
-ms.prod_service: integration-services
-ms.reviewer: maghan
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
@@ -13,16 +11,17 @@ f1_keywords:
 - SQL14.DTS.DESIGNER.AFPADLSTASK.F1
 author: yanancai
 ms.author: yanacai
-ms.openlocfilehash: ab9a357e8215310b21fa2e401067f49176aeefd4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.reviewer: maghan
+ms.openlocfilehash: da776f4ccddcfaaa6c0f8e6af6363f2ef9a1f13d
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67947358"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913893"
 ---
 # <a name="azure-data-lake-analytics-task"></a>Azure Data Lake Analytics 任务
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -50,17 +49,19 @@ SourceType  指定的是 U-SQL 脚本源。 脚本在 SSIS 包执行期间提交
 
 |值|说明|  
 |-----------|-----------------|  
-|DirectInput |通过内联编辑器指定 U-SQL 脚本。 选择此值将显示动态选项 USQLStatement  。|  
+|DirectInput|通过内联编辑器指定 U-SQL 脚本。 选择此值将显示动态选项 USQLStatement  。|  
 |**文件连接**|指定包含 U-SQL 脚本的本地 .usql 文件。 选择此选项将显示动态选项 FileConnection  。|  
 |**变量**|指定包含 U-SQL 脚本的 SSIS 变量。 选择此值将显示动态选项 **SourceVariable**。|
+| &nbsp; | &nbsp; |
 
 基于 SourceType 的动态选项  指定的是，U-SQL 查询的脚本内容。 
 
 |SourceType|动态选项|  
 |-----------|-----------------|  
-|SourceType = DirectInput |直接在选项框中键入要提交的 U-SQL 查询，或选择浏览按钮 (...) 以在“输入 U-SQL 查询”  对话框中键入 U-SQL 查询。|  
-|SourceType = FileConnection |选择现有文件连接管理器，或选择“<新建连接...>”  以新建文件连接。 若要了解相关信息，请参阅[文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)和[文件连接管理器编辑器](../../integration-services/connection-manager/file-connection-manager-editor.md)。|  
-|SourceType = 变量 |选择现有变量，或选择“\<新建变量...>”  以新建变量。 若要了解相关信息，请参阅 [Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)和[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。|
+|SourceType = DirectInput|直接在选项框中键入要提交的 U-SQL 查询，或选择浏览按钮 (...) 以在“输入 U-SQL 查询”  对话框中键入 U-SQL 查询。|  
+|SourceType = FileConnection|选择现有文件连接管理器，或选择“<新建连接...>”  以新建文件连接。 若要了解相关信息，请参阅[文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)和[文件连接管理器编辑器](../../integration-services/connection-manager/file-connection-manager-editor.md)。|  
+|SourceType = 变量|选择现有变量，或选择“\<**New variable...**>”以创建新变量。 若要了解相关信息，请参阅 [Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)和[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。|
+| &nbsp; | &nbsp; |
 
 
 ### <a name="job-configuration"></a>作业配置
@@ -78,12 +79,13 @@ SourceType  指定的是 U-SQL 脚本源。 脚本在 SSIS 包执行期间提交
   |-----------|-----------------|
   |True|任务结果基于 U-SQL 作业执行结果。 作业成功先于任务成功。 作业失败先于任务失败。 任务成功或失败先于任务完成。|
   |False|任务结果基于 U-SQL 作业提交和准备结果。 作业提交成功并通过准备阶段先于任务成功。 作业提交失败或未通过准备阶段先于任务失败。 任务成功或失败先于任务完成。|
+  | &nbsp; | &nbsp; |
 
 - **TimeOut：** 指定作业执行的超时时间（以秒为单位）。 如果作业超时，就会被取消并标记为“失败”。 如果“Synchronous”  设置为“false”，便无法设置此属性。
 
 ## <a name="parameter-mapping-page-configuration"></a>“参数映射”页配置
 
-在“Azure Data Lake Analytics 任务编辑器”对话框的“参数映射”页中，可以将变量映射到 U-SQL 脚本中的参数（U-SQL 变量）。
+在“Azure Data Lake Analytics 任务编辑器”  对话框的“参数映射”  页中，可以将变量映射到 U-SQL 脚本中的参数（U-SQL 变量）。
 
 - **变量名：** 通过选择“添加”  添加参数映射后，从列表中选择系统变量或用户定义的变量。 也可以选择“<新建变量...>”  ，以通过“添加变量”  对话框来添加新变量。 若要了解相关信息，请参阅 [Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)。  
 
@@ -91,7 +93,7 @@ SourceType  指定的是 U-SQL 脚本源。 脚本在 SSIS 包执行期间提交
 
 以下是如何将参数传递到 U-SQL 脚本的示例。
 
-示例 U-SQL 脚本 
+示例 U-SQL 脚本
 ```
 @searchlog =
     EXTRACT UserId          int,
@@ -119,12 +121,13 @@ OUTPUT @rs1
       USING Outputters.Tsv(quoting:false, dateTimeFormat:null);
 ```
 
-请注意，输入和输出路径是在 \@in 和 \@out 参数中进行定义。 U-SQL 脚本中的 \@in 和 \@out 参数值是通过“参数映射”配置动态传递。
+请注意，输入和输出路径是在 **in\@** 和 **out\@** 参数中进行定义。 U-SQL 脚本中的 **in\@** 和 **out\@** 参数值是通过“参数映射”配置动态传递。
 
 |变量名称|参数名称|
 |-------------|--------------|
 |用户：Variable1|\@in|
 |用户：Variable2|\@out| 
+| &nbsp; | &nbsp; |
 
 ## <a name="expression-page-configuration"></a>“表达式”页配置
 

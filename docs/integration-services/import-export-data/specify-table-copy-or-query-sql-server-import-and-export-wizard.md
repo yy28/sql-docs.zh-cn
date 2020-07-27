@@ -11,16 +11,16 @@ f1_keywords:
 ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f561fd0e5817ecc03e8d5fe4cc8c32661ebdca21
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: da112bf3a58d33fd7fae154d5a437c309ab7d2a6
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296242"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914331"
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>指定表复制或查询（SQL Server 导入和导出向导）
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   提供有关数据目标以及有关如何连接到它的信息之后， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导会显示“指定表复制或查询”  。 在此页上，可选择以下选项之一。
@@ -56,7 +56,7 @@ ms.locfileid: "71296242"
 只要知道要导出的表的名称，仍可使用“编写查询”选项，即便通常不编写 SQL 查询也是如此  。 在“提供源查询”对话框（单击“下一步”后看到）中，以 `SELECT * FROM <name of table>` 形式输入查询   。 如果表名称包含空格或其他特殊字符，使用方括号将名称括起来，如 `SELECT * FROM [<name of table>]`。
 
 ### <a name="more-info"></a>更多信息
- “复制一个或多个表或视图的数据”  选项仅对在 ProviderDescriptors.xml 文件中有 ProviderDescription 部分的信息的那些访问接口可用。 （默认情况下，此文件位于 \<drive>:\Program Files\Microsoft SQL Server\130\DTS\ProviderDescriptors 中  。）此文件中的每个 ProviderDescription 部分都包含从相应访问接口检索元数据所需的信息。    
+ “复制一个或多个表或视图的数据”  选项仅对在 ProviderDescriptors.xml 文件中有 ProviderDescription 部分的信息的那些访问接口可用。 （默认情况下，此文件位于 \<*drive*>:\Program Files\Microsoft SQL Server\130\DTS\ProviderDescriptors 中。）此文件中的每个 ProviderDescription 部分都包含从相应访问接口检索元数据所需的信息。    
     
  默认情况下，ProviderDescriptors.xml 文件仅包含用于以下列表中的访问接口的 ProviderDescription 部分。    
     

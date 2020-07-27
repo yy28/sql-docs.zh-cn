@@ -1,5 +1,6 @@
 ---
 title: 配置存储 - NVDIMM-N 回写式缓存
+description: 了解如何将具有镜像 NVDIMM-N 回写式缓存的镜像存储空间设置为虚拟驱动器，以存储 SQL Server 事务日志。
 ms.custom: seo-dt-2019
 ms.date: 03/07/2017
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 861862fa-9900-4ec0-9494-9874ef52ce65
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: b2f0434041b7573bc8c32e2618a64a0f900561fb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bbd255dc2cd1a9bcb4bc146bcc6c6489b0cb1071
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85655744"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457333"
 ---
 # <a name="configuring-storage-spaces-with-a-nvdimm-n-write-back-cache"></a>配置具有 NVDIMM-N 回写式缓存的存储空间
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: aa1bee1a-ab06-44d8-9944-4bff03d73016
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6fa19857dc7c0651beeaedfdef8b843fcfc58c62
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 43629b22e6aca90065c139fb35d460384ad1ef1b
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296412"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923853"
 ---
 # <a name="creating-a-synchronous-transformation-with-the-script-component"></a>使用脚本组件创建同步转换
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的数据流中使用转换组件可以在数据从源传递到目标时修改和分析该数据。 具有同步输出的转换在每个输入行传递给该组件时对该行进行处理。 具有异步输出的转换在等到接收所有输入行之后才能完成处理。 本主题讨论同步转换。 有关异步转换的信息，请参阅[使用脚本组件创建异步转换](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)。 有关同步组件和异步组件之间的差异的详细信息，请参阅[了解同步和异步转换](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)。  
@@ -62,7 +62,7 @@ ms.locfileid: "71296412"
 -   创建一个或多个附加输出，如包含意外值的行的模拟错误输出。 使用“添加输出”  和“删除输出”  按钮以管理同步转换组件的输出。 所有输入行都定向到所有可用输出，除非您表示希望将每一行重定向到一个输出或其他输出。 可通过为输出上的 ExclusionGroup  属性指定一个非零的整数值来指示希望重定向行。 在 ExclusionGroup  中输入的用于标识输出的特定整数值并不重要，但是必须对指定的输出组使用同一个整数。  
   
     > [!NOTE]  
-    >  如果不希望输出所有行，还可以对单个输出使用非零 ExclusionGroup 属性值  。 但是，在这种情况下，必须为希望发送给输出的每一行显式调用 DirectRowTo\<outputbuffer> 方法。  
+    >  如果不希望输出所有行，还可以对单个输出使用非零 ExclusionGroup 属性值  。 但是，在这种情况下，你必须为想要发送给输出的每一行显式调用 DirectRowTo\<outputbuffer> 方法。  
   
 -   为输入和输出指定一个更具说明性的名称。 脚本组件可以使用这些名称来生成类型化取值函数属性，这些属性用于在脚本中引用输入和输出。  
   

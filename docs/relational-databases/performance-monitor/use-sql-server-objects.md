@@ -1,5 +1,6 @@
 ---
 title: 使用 SQL Server 对象 | Microsoft Docs
+description: 了解系统监视器用来在运行 SQL Server 实例的计算机中监视活动的 SQL Server 对象和计数器。
 ms.custom: ''
 ms.date: 03/17/2016
 ms.prod: sql
@@ -30,12 +31,12 @@ helpviewer_keywords:
 ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: fc69b2a0615745966971ad83da2b0acadf3b2488
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0b5f120e82f44966d42a9c511f8c240e9d74c493
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773151"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458606"
 ---
 # <a name="use-sql-server-objects"></a>使用 SQL Server 对象
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

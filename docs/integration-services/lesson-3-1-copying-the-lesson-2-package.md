@@ -10,16 +10,16 @@ ms.topic: tutorial
 ms.assetid: 4bd91402-4e37-41de-ab78-8ca5a1948a37
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4f30cba22276d467c218da4d09749fccb464ac5d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9448dada6a93e4cda928f75e06862ad42ee2eee5
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295993"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922233"
 ---
 # <a name="lesson-3-1-copy-the-lesson-2-package"></a>第 3-1 课：复制第 2 课包
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -39,13 +39,13 @@ ms.locfileid: "71295993"
 
     默认情况下，复制的包名称为 Lesson 3.dtsx。
 
-5.  在解决方案资源管理器中，双击“Lesson 3.dtsx”打开此包  
+5.  在解决方案资源管理器中，双击“Lesson 3.dtsx”打开此包
 
 6.  右键单击“控制流”设计图面背景的任意位置，再选择“属性”   。
 
 7.  在“属性”窗口中，将 Name 属性更改为 Lesson 3    。
 
-8.  选择 ID 属性框，选择下拉箭头，然后选择“\<生成新 ID>”   。
+8.  选择 ID 属性框，选择下拉箭头，然后选择 \<Generate New ID> 。
 
 ## <a name="add-the-completed-lesson-2-package"></a>添加已完成的第 2 课包
 

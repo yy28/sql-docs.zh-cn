@@ -1,5 +1,6 @@
 ---
 title: 监视内存使用量 | Microsoft Docs
+description: 监视 SQL Server 实例以确认内存使用量在正常范围内。 使用内存：可用字节和内存：Pages/sec 计数器。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 1aee3933-a11c-4b87-91b7-32f5ea38c87f
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 595b14797becec29232c4e09ab3bbc6b702cb898
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0d390a0ed1397a7f433c5582361def2f4022d09b
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787460"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86906146"
 ---
 # <a name="monitor-memory-usage"></a>监视内存使用量
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,30 +37,30 @@ ms.locfileid: "85787460"
   
  若要监视内存不足的情况，请使用下列对象计数器：  
   
--   **Memory: Available Bytes**  
+-   Memory:Available Bytes  
   
--   **Memory: Pages/sec**  
+-   Memory:Pages/sec  
   
  **Available Bytes** 计数器指示当前有多少内存（以字节为单位）可供进程使用。 **Pages/sec** 计数器指示由于页错误而从磁盘取回的页数，或由于页错误而写入磁盘以释放工作集空间的页数。  
   
- **Available Bytes** 计数器的值低表示计算机总内存不足或应用程序没有释放内存。 **Pages/sec** 计数器的比率高表示分页过多。 监视 **Memory: Page Faults/sec** 计数器以确保磁盘活动不是由分页导致。  
+ **Available Bytes** 计数器的值低表示计算机总内存不足或应用程序没有释放内存。 **Pages/sec** 计数器的比率高表示分页过多。 监视 **Memory:** Page Faults/sec 计数器以确保磁盘活动不是由分页造成。  
   
- 分页率偏低（以及由此产生的页错误）是正常的，即使计算机有大量的可用内存。 Microsoft Windows 虚拟内存管理器 (VMM) 在剪裁 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和其他进程的工作集大小时会收走这些进程的页。 此 VMM 活动会导致页错误。 若要确定分页过多是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 还是由其他进程导致，请监视用于 **进程实例的** Process: Page Faults/sec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计数器。  
+ 分页率偏低（以及由此产生的页错误）是正常的，即使计算机有大量的可用内存。 Microsoft Windows 虚拟内存管理器 (VMM) 在剪裁 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和其他进程的工作集大小时会收走这些进程的页。 此 VMM 活动会导致页错误。 若要确定分页过多是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 还是由另一个进程导致，请监视 **Process:** Page Faults/sec 计数器，该计数器属于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 处理实例。  
   
  有关解决分页过多的详细信息，请参阅 Windows 操作系统文档。  
   
 ## <a name="isolating-memory-used-by-sql-server"></a>隔离 SQL Server 所用的内存  
- 默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将根据可用系统资源动态改变其内存要求。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 需要更多内存，它会查询操作系统以确定是否有可用的空闲物理内存，然后使用可用内存。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 当前不需要分配给它的内存，它会将内存释放给操作系统。 但是，你可以覆盖此选项通过使用 **minservermemory**和 **maxservermemory** 服务器配置选项来动态使用内存。 有关详细信息，请参阅 [服务器内存选项](../../database-engine/configure-windows/server-memory-server-configuration-options.md)。  
+ 默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将根据可用系统资源动态改变其内存要求。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 需要更多内存，它会查询操作系统以确定是否有可用的空闲物理内存，然后使用可用内存。 如果 OS 的空闲内存不足，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会将内存释放回操作系统，直到内存不足的情况得以缓解，或者直到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 达到 minservermemory 限制。 但是，你可以覆盖此选项通过使用 **minservermemory**和 **maxservermemory** 服务器配置选项来动态使用内存。 有关详细信息，请参阅 [服务器内存选项](../../database-engine/configure-windows/server-memory-server-configuration-options.md)。  
   
  若要监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的内存量，请检查下列性能计数器：  
   
--   **Process: Working Set**  
+-   Process:Working Set  
   
--   **SQL Server: Buffer Manager: Buffer Cache Hit Ratio**  
+-   SQL Server：**Buffer Manager:Buffer Cache Hit Ratio**  
   
--   **SQL Server: Buffer Manager: Database Pages**  
+-   SQL Server：**Buffer Manager:Database pages**  
   
--   **SQL Server: Memory Manager: Total Server Memory (KB)**  
+-   SQL Server：**Memory Manager:Total Server Memory (KB)**  
   
  **WorkingSet** 计数器显示进程所用的内存量。 如果此内存量一直小于 **min server memory** 和 **max server memory** 服务器选项设置的内存量，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 被配置为使用过多内存。  
   

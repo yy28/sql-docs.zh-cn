@@ -1,5 +1,5 @@
 ---
-title: DBCC CHECKCONSTRAINTS (Transact-SQL) | Microsoft Docs
+title: DBCC CHECKCONSTRAINTS (Transact-SQL)
 ms.custom: ''
 ms.date: 11/14/2017
 ms.prod: sql
@@ -23,14 +23,15 @@ helpviewer_keywords:
 ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 1ca0b3f46cba5fc2e64babbba4dd591b8fb0b095
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f704b064998c584461e4708b52d9c2aa68f20fe7
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786558"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485068"
 ---
 # <a name="dbcc-checkconstraints-transact-sql"></a>DBCC CHECKCONSTRAINTS (Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 检查当前数据库中指定表上的指定约束或所有约束的完整性。
@@ -52,8 +53,10 @@ DBCC CHECKCONSTRAINTS
     ]  
 ```  
   
-## <a name="arguments"></a>参数  
- table_name | table_id | constraint_name | constraint_id     
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
+ table_name \| table_id \| constraint_name \| constraint_id     
  要检查的表或约束。 如果指定了 table_name 或 table_id，将对该表中所有启用的约束进行检查 。 如果指定了 constraint_name 或 constraint_id，则仅检查该约束 。 如果表标识符或约束标识符都未指定，则对当前数据库中所有表上的已启用约束进行检查。  
  约束名称唯一地标识其所属于的表。 有关详细信息，请参阅 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)。  
   

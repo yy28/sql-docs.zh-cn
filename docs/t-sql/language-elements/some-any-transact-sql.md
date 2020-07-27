@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 1f717ad6-f67b-4980-9397-577ecb0e5789
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 561f6a893803aba1e545356b05de9a5e86088476
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: aac202c19d4ec4870509c2c9baaacd394249d493
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85706145"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918780"
 ---
 # <a name="some--any-transact-sql"></a>SOME | ANY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,17 +43,19 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
      { SOME | ANY } ( subquery )   
 ```  
   
-## <a name="arguments"></a>参数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
  *scalar_expression*  
  为任意有效的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
- { = | <> | != | > | >= | !> | < | <= | !< }  
+ { = \| <> \| != \| > \| >= \| !> \| < \| <= \| !< }  
  任何有效的比较运算符。  
   
  SOME | ANY  
  指定应进行比较。  
   
- subquery   
+ subquery  
  包含某列结果集的子查询。 所返回列的数据类型必须是与 scalar_expression 相同的数据类型  。  
   
 ## <a name="result-types"></a>结果类型  

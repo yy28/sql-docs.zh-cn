@@ -1,5 +1,6 @@
 ---
 title: SQL Server - Broker Activation 对象 | Microsoft Docs
+description: 了解“SQLServer:BrokerActivation”性能对象，该对象包含一些性能计数器，这些计数器报告有关存储过程激活的信息。
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cd9b6880-c924-42c7-b333-09c303317c0b
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 0f2b877899a425397e7431d7b615c61356fb9d5a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 74031fb95207c1bb0a4916aa512893dd38aeb7b4
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787333"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458139"
 ---
 # <a name="sql-server-broker-activation-object"></a>SQL Server Broker Activation 对象
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

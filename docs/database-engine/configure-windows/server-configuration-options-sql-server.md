@@ -2,7 +2,7 @@
 title: 服务器配置选项 (SQL Server) | Microsoft Docs
 description: 了解如何管理和优化 SQL Server 资源。 查看可用的配置选项、可能的设置、默认值和重启要求。
 ms.custom: ''
-ms.date: 04/13/2017
+ms.date: 07/20/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e776fdc4ac65d640728bffad774ef3fbc253d172
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 6ffbb3df5a8a8dac4ce22c27a1194520e8b058de
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279451"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923598"
 ---
 # <a name="server-configuration-options-sql-server"></a>服务器配置选项 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "86279451"
 
 需要重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的选项最初只在 value 列中显示更改后的值。 在重新启动后，新值将出现在 value 列和 value_in_use 列中。
 
-但有些选项需要在重新启动服务器后，新的配置值才能生效。 如果设置了新值并在没有重新启动服务器的情况下运行 sp_configure，则新值将出现在配置选项的“value”列中，而不是出现在“value_in_use”列中。  重新启动服务器之后，新值出现在“value_in_use”列中。
+但有些选项需要在重新启动服务器后，新的配置值才能生效。 如果设置了新值并在没有重新启动服务器的情况下运行 sp_configure，则新值将出现在配置选项的“value”列中，而不是出现在“value_in_use”列中。 重新启动服务器之后，新值出现在“value_in_use”列中。
 
 自配置选项是指 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 根据系统需要进行调整的选项。 大多数情况下，这使您无需手动设置值。 例如，“最大工作线程数”选项和“用户连接数”选项。
 
@@ -149,7 +149,8 @@ ms.locfileid: "86279451"
 | [set working set size](../../database-engine/configure-windows/set-working-set-size-server-configuration-option.md) （A，RR，已过时） | 0 | 1 | 0 |
 | [show advanced options](../../database-engine/configure-windows/show-advanced-options-server-configuration-option.md) | 0 | 1 | 0 |
 | [SMO 和 DMO XP](../../database-engine/configure-windows/smo-and-dmo-xps-server-configuration-option.md) (A) | 0 | 1 | 1 |
-| [tempdb 元数据内存优化](../../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata) (A) <br/><br/> [!INCLUDE [sqlserver2019](../../includes/applies-to-version/sqlserver2019.md)] 列中的一个值匹配。| 0 | 1 | 0 |
+| [取消显示恢复模型错误](../../database-engine/configure-windows/suppress-recovery-model-errors-server-configuration-option.md) (A) <br/><br/>[!INCLUDE [asdbmi](../../includes/applies-to-version/_asdbmi.md)]| 0 | 1 | 0 |
+| [tempdb 元数据内存优化](../../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata) (A) <br/><br/> [!INCLUDE [sqlserver2019](../../includes/applies-to-version/sqlserver2019.md)].| 0 | 1 | 0 |
 | [transform noise words](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md) (A) | 0 | 1 | 0 |
 | [两位数年份截止](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md) (A) | 1753 | 9999 | 2049 |
 | [user connections](../../database-engine/configure-windows/configure-the-user-connections-server-configuration-option.md) （A，RR，SC） | 0 | 32767 | 0 |

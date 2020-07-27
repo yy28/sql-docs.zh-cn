@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f35ec3ad66199e6c13c648c9a2208f5bf88f439a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 581cdcddc2138b2d5cd78790be412e0ad0a9fdda
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293928"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920452"
 ---
 # <a name="send-mail-task"></a>发送邮件任务
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   发送邮件任务可以发送电子邮件。 通过使用发送邮件任务，包可以在包工作流中的任务成功或失败时发送邮件，也可为响应运行时包引发的事件而发送邮件。 例如，该任务可以通知数据库管理员，告知备份数据库任务是成功还是失败。  
@@ -105,7 +105,7 @@ ms.locfileid: "71293928"
   
 ### <a name="options"></a>选项  
  **SMTPConnection**  
- 从列表中选择一个 SMTP 连接管理器，或单击“\<新建连接…>”创建新的连接管理器  。  
+ 从列表中选择一个 SMTP 连接管理器，或单击“\<New connection...>”创建新的连接管理器。  
   
 > [!IMPORTANT]  
 >  SMTP 连接管理器仅支持匿名身份验证和 Windows 身份验证， 而不支持基本身份验证。  
@@ -153,13 +153,13 @@ ms.locfileid: "71293928"
   
 #### <a name="messagesourcetype--file-connection"></a>MessageSourceType = 文件连接  
  **MessageSource**  
- 在列表中选择一个文件连接管理器，或单击“\<新建连接…>”新建一个连接管理器  。  
+ 从列表中选择“文件连接管理器，或单击“\<**New connection...**>”创建新”的连接管理器。  
   
  **相关主题：** [文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)、[文件连接管理器编辑器](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="messagesourcetype--variable"></a>MessageSourceType = 变量  
  **MessageSource**  
- 从列表中选择变量，或单击“\<新建变量...>”以创建新的变量  。  
+ 在列表中选择变量，或单击“\<**New variable...**>”创建新变量。  
   
  **相关主题：** [Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   

@@ -1,6 +1,6 @@
 ---
 title: 虚拟化外部数据
-description: 此页面详细介绍了为关系数据源使用“创建外部表”向导的步骤
+description: 此页面详细介绍了为 ODBC 数据源使用“创建外部表”向导的步骤
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
@@ -10,14 +10,14 @@ ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.metadata: seo-lt-2019
-ms.openlocfilehash: f4bd7eec24be747fe6c0933d31467410bfecf2a9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c01095e77fa974088f8a10669aecf1a8c53fd11d
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75227505"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943000"
 ---
-# <a name="use-the-external-table-wizard-with-relational-data-sources"></a>对关系数据源使用“外部表”向导
+# <a name="use-the-external-table-wizard-with-odbc-data-sources"></a>对 ODBC 数据源使用“外部表”向导
 
 SQL Server 2019 的重要方案之一是能够虚拟化数据。 此过程允许将数据保留在其原始位置。 可以虚拟化 SQL Server 实例中的数据，以便可以对这些数据进行查询，如同 SQL Server 中的任何其他表一样  。 此过程可以最大限度地减少对 ETL 进程的需求。 此过程可通过使用 PolyBase 连接器来实现。 有关数据虚拟化的详细信息，请参阅 [PolyBase 入门](polybase-guide.md)。
 
@@ -28,12 +28,12 @@ SQL Server 2019 的重要方案之一是能够虚拟化数据。 此过程允许
 
 ## <a name="start-the-external-table-wizard"></a>启动外部表向导
 
-使用通过 [azdata cluster endpoints list](../../big-data-cluster/deployment-guidance.md#endpoints) 命令获取的 sql-server-master 终结点的 IP 地址/端口号连接到主实例 。 在对象资源管理器中展开  数据库节点。 然后从现有 SQL Server 实例中选择一个要虚拟化数据的数据库。 右键单击该数据库，并选择“创建外部表”以启动虚拟化数据向导  。 还可以从命令面板启动虚拟化数据向导。 在 Windows 中使用 Ctrl+Shift+P，或在 Mac 中使用 Cmd+Shift+P。
+使用通过 **azdata cluster endpoints list** 命令获取的 sql-server-master 终结点的 IP 地址/端口号连接到主实例[  ](../../big-data-cluster/deployment-guidance.md#endpoints)。 在对象资源管理器中展开  数据库节点。 然后从现有 SQL Server 实例中选择一个要虚拟化数据的数据库。 右键单击该数据库，并选择“创建外部表”以启动虚拟化数据向导  。 还可以从命令面板启动虚拟化数据向导。 在 Windows 中使用 Ctrl+Shift+P，或在 Mac 中使用 Cmd+Shift+P。
 
 ![虚拟化数据向导](media/data-virtualization/virtualize-data-wizard.png)
 ## <a name="select-a-data-source"></a>选择数据源
 
-如果从一个数据库中启动向导，目标下拉列表框将自动填充。 也可以选择在此页面上输入或更改目标数据库。 该向导支持的外部数据源类型为 SQL Server 和 Oracle。
+如果从一个数据库中启动向导，目标下拉列表框将自动填充。 也可以选择在此页面上输入或更改目标数据库。 该向导支持的外部数据源类型为 SQL Server、Oracle、MongoDB 和 Teradata。
 
 > [!NOTE]
 >默认情况下将突出显示 SQL Server。
@@ -56,7 +56,7 @@ SQL Server 2019 的重要方案之一是能够虚拟化数据。 此过程允许
 
 在此步骤中，输入外部数据源和凭据详细信息以创建外部数据源对象。 凭据用于使数据库对象连接到数据源。 输入外部数据源的名称。 示例为 Test。 提供外部数据源 SQL Server 连接详细信息。 输入希望在其中创建外部数据源的“服务器名称”和“数据库名称”   。
 
-下一步是配置凭据。 输入凭据的名称。 此名称是数据库作用域凭据，用于安全地存储创建的外部数据源的登录信息。 示例为 TestCred。 输入用户名和密码以连接到数据源。
+下一步是配置凭据。 输入凭据的名称。 此名称是数据库作用域凭据，用于安全地存储创建的外部数据源的登录信息。 示例为 `TestCred`。 输入用户名和密码以连接到数据源。
 
 ![外部数据源凭据](media/data-virtualization/data-source-credentials.png)
 
@@ -64,7 +64,7 @@ SQL Server 2019 的重要方案之一是能够虚拟化数据。 此过程允许
 
 在下一页上，选择想为其创建外部视图的表。 选择父级数据库时，子表也包括在其中。 选择表后，映射表将显示在右侧。 可在此处更改类型。 此外，也可以更改所选外部表本身的名称。
 
-![外部数据源凭据](media/data-virtualization/data-table-mapping.png)
+![外部数据源凭据](media/data-virtualization/data-table-map.png)
 
 > [!NOTE]
 >若要更改映射视图，可双击另一个所选表。

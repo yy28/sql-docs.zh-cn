@@ -10,16 +10,16 @@ ms.topic: tutorial
 ms.assetid: b613cef7-7993-4d89-a429-a8251d74d435
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2a16cd38eef12584f8d876e610bfda5d602c3076
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3d17145c0fc275d9023446436e4c052c441e8c94
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71283017"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922353"
 ---
 # <a name="lesson-6-4-deploy-the-lesson-6-package"></a>第 6-4 课：部署第 6 课包
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -38,7 +38,7 @@ ms.locfileid: "71283017"
   
 1.  依次选择“启动” > “所有程序” > “Microsoft SQL Server 2017”，然后选择“SQL Management Studio”     。  
   
-2.  在“连接到服务器”对话框中，查看默认设置，然后选择“连接”   。 若要连接，“服务器”名称必须是安装 SQL Server 的计算机的名称  。 如果“数据库引擎”为命名实例，则“服务器”名称必须是格式为 \<计算机名>\\\<实例名> 的实例名称    。 
+2.  在“连接到服务器”对话框中，查看默认设置，然后选择“连接”   。 若要连接，“服务器”名称必须是安装 SQL Server 的计算机的名称  。 如果“数据库引擎”为命名实例，则“服务器”名称必须是格式为 \<computer_name>\\\<instance_name> 的实例名称 。 
   
 3.  在“对象资源管理器”中，展开“Integration Services 目录”   。  
   

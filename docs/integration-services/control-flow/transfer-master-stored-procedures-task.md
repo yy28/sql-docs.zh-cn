@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 81702560-48a3-46d1-a469-e41304c7af8e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cee2dfed374c3f479e32b8d81602eff924287356
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fc3b10cd913f0cf2d270fd228ad4729f12ec0f53
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293849"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916079"
 ---
 # <a name="transfer-master-stored-procedures-task"></a>传输主存储过程任务
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   传输主存储过程任务在 **的实例上的** master [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库之间传输一个或多个用户定义的存储过程。 若要从 **master** 数据库传输存储过程，该过程的所有者必须是 dbo。  
@@ -107,10 +107,10 @@ ms.locfileid: "71293849"
   
 ### <a name="options"></a>选项  
  **SourceConnection**  
- 从列表中选择 SMO 连接管理器，或单击“\<新建连接...>”，创建与源服务器的新连接。  
+ 从列表中选择一个 SMO 连接管理器，或单击“\<New connection...>”以创建到源服务器的新连接。  
   
  **DestinationConnection**  
- 从列表中选择 SMO 连接管理器，或单击“\<新建连接...>”，创建与目标服务器的新连接。  
+ 从列表中选择一个 SMO 连接管理器，或单击“\<New connection...>”以创建到目标服务器的新连接。  
   
  **IfObjectExists**  
  选择该任务应如何处理目标服务器上的 **master** 数据库中已经存在的同名用户定义存储过程。  

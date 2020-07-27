@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: b9043428-ce26-45bb-910c-588d07579565
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4c4924ee6dd1c053119f7ceaf97cd1dbd4d7e95f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4197d1acc7a7faaa8414b6ff73e7d6876610cece
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294218"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919805"
 ---
 # <a name="data-profile-viewer"></a>数据配置文件查看器 (Data Profile Viewer)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   数据事件探查过程的下一步是查看和分析数据配置文件。 可以在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包内运行数据事件探查任务并计算数据配置文件之后，查看这些配置文件。 有关如何设置和运行数据事件探查任务的详细信息，请参阅 [设置数据事件探查任务](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)。  
@@ -37,7 +37,7 @@ ms.locfileid: "71294218"
   
 -   在“[!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器”中右键单击“数据事件探查”任务，然后单击“编辑”。 在 **“数据事件探查任务编辑器”** 的 **“常规”** 页上，单击 **“打开配置文件查看器”** 。  
   
--   在文件夹 \<drive>:\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn 中，运行 DataProfileViewer.exe。  
+-   在文件夹 \<drive>:\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn 中运行 DataProfileViewer.exe。  
   
  该查看器使用多个窗格来显示请求的配置文件和计算所得的结果，包含可选详细信息和明细功能：  
   
@@ -80,21 +80,21 @@ ms.locfileid: "71294218"
  单击可查找包含数据事件探查任务输出的已保存文件。  
   
  **“配置文件”** 窗格  
- 展开“配置文件”窗格中的树可以查看输出中包含的配置文件。  选择一个配置文件可以查看该配置文件的结果。  
+ 展开“配置文件”窗格中的树可以查看输出中包含的配置文件。 选择一个配置文件可以查看该配置文件的结果。  
   
- “消息”窗格   
+ “消息”窗格  
  显示状态消息。  
   
  “明细”  窗格  
  如果数据事件探查任务使用的数据源可用，则可显示与输出中的值匹配的数据行。  
   
- 例如，如果在查看针对美国各州的列的列值分布配置文件的输出，则 **“详细值分布”** 窗格可能包含值为 "WA" 的行。 双击“详细值分布”窗格中的行可以在明细窗格中查看该州列中值为 "WA" 的数据行。   
+ 例如，如果在查看针对美国各州的列的列值分布配置文件的输出，则 **“详细值分布”** 窗格可能包含值为 "WA" 的行。 双击“详细值分布”窗格中的行可以在明细窗格中查看该州列中值为 "WA" 的数据行。  
   
 ### <a name="dynamic-options"></a>动态选项  
   
 #### <a name="profile-type--column-length-distribution-profile"></a>配置文件类型 = 列长度分布配置文件  
   
-##### <a name="column-length-distribution-profile---column-pane"></a>列长度分布配置文件 - \<列> 窗格  
+##### <a name="column-length-distribution-profile---column-pane"></a>列长度分布配置文件 - \<column> 窗格  
  **最小长度**  
  显示此列中值的最小长度。  
   
@@ -115,14 +115,14 @@ ms.locfileid: "71294218"
  显示在进行事件探查的列中找到的列长度。  
   
  **Count**  
- 显示进行事件探查的列的值为“长度”列中显示的长度的行数。   
+ 显示进行事件探查的列的值为“长度”列中显示的长度的行数。  
   
  **百分比**  
- 显示进行事件探查的列的值为“长度”列中显示的长度的行数百分比。   
+ 显示进行事件探查的列的值为“长度”列中显示的长度的行数百分比。  
   
 #### <a name="profile-type--column-null-ratio-profile"></a>配置文件类型 = 列 Null 比率配置文件  
   
-##### <a name="column-null-ratio-profile---column-pane"></a>列 Null 比率配置文件 - <列\< 窗格  
+##### <a name="column-null-ratio-profile---column-pane"></a>列 Null 比率配置文件 - \<column> 窗格  
  **Null 计数**  
  显示进行事件探查的列为 Null 值的行数。  
   
@@ -134,7 +134,7 @@ ms.locfileid: "71294218"
   
 #### <a name="profile-type--column-pattern-profile"></a>配置文件类型 = 列模式配置文件  
   
-##### <a name="column-pattern-profile---column-pane"></a>列模式配置文件 - \<列> 窗格  
+##### <a name="column-pattern-profile---column-pane"></a>列模式配置文件 - \<column> 窗格  
  **行计数**  
  显示表或视图中的行数。  
   
@@ -143,15 +143,15 @@ ms.locfileid: "71294218"
  显示为进行事件探查的列计算的模式。  
   
  **百分比**  
- 显示行值与“模式”列中显示的模式匹配的行数百分比。   
+ 显示行值与“模式”列中显示的模式匹配的行数百分比。  
   
 #### <a name="profile-type--column-statistics-profile"></a>配置文件类型 = 列统计信息配置文件  
   
-##### <a name="column-statistics-profile---column-pane"></a>列统计信息配置文件 - \<列> 窗格  
+##### <a name="column-statistics-profile---column-pane"></a>列统计信息配置文件 - \<column> 窗格  
  **最低**  
  显示在进行事件探查的列中发现的最小值。  
   
-  最大值  
+ 最大值  
  显示在进行事件探查的列中发现的最大值。  
   
  **中间线**  
@@ -162,7 +162,7 @@ ms.locfileid: "71294218"
   
 #### <a name="profile-type--column-value-distribution-profile"></a>配置文件类型 = 列值分布配置文件  
   
-##### <a name="column-value-distribution-profile---column-pane"></a>列值分布配置文件 - \<列> 窗格  
+##### <a name="column-value-distribution-profile---column-pane"></a>列值分布配置文件 - \<column> 窗格  
  **非重复值数目**  
  显示在进行事件探查的列中发现的非重复值的计数。  
   
@@ -174,14 +174,14 @@ ms.locfileid: "71294218"
  显示在进行事件探查的列中发现的非重复值。  
   
  **Count**  
- 显示进行事件探查的列具有“值”列中显示的值的行数。   
+ 显示进行事件探查的列具有“值”列中显示的值的行数。  
   
  **百分比**  
- 显示进行事件探查的列具有“值”列中显示的值的行数的百分比。   
+ 显示进行事件探查的列具有“值”列中显示的值的行数的百分比。  
   
 #### <a name="profile-type--candidate-key-profile"></a>配置文件类型 = 候选键配置文件  
   
-##### <a name="candidate-key-profile---table-pane"></a>候选键配置文件 - \<表> 窗格  
+##### <a name="candidate-key-profile---table-pane"></a>候选键配置文件 - \<table> 窗格  
  **键列**  
  显示为作为候选键进行事件探查所选择的列。  
   
@@ -189,7 +189,7 @@ ms.locfileid: "71294218"
  显示候选键列或候选键列组合的强度（按百分比）。 键强度小于 100% 指示存在重复值。  
   
 ##### <a name="key-violations-pane"></a>“键冲突”窗格  
- **column1>、\<column2> 等\<**  
+ \<column1>、\<column2> 等  
  显示进行事件探查的列中找到的重复值。  
   
  **Count**  
@@ -212,10 +212,10 @@ ms.locfileid: "71294218"
 > [!NOTE]  
 >  数据中的错误值的高百分比可能导致函数依赖关系配置文件产生意外结果。 例如，在 90% 的行中，与邮政编码值“98052”对应的州值为“WI”。 配置文件将包含正确州值“WA”的行报告为冲突。  
   
- **决定列名称>\<**  
+ **\<determinant column name>**  
  显示在此函数依赖关系冲突实例中决定列或决定列组合的值。  
   
- **依赖列名称>\<**  
+ **\<dependent column name>**  
  显示在此函数依赖关系冲突实例中依赖列的值。  
   
  **支持计数**  
@@ -240,7 +240,7 @@ ms.locfileid: "71294218"
  显示列之间的重叠强度（按百分比）。 键强度小于 100% 指示存在在超集值中找不到子集值的情况。  
   
 ##### <a name="inclusion-violations-pane"></a>“包含冲突”窗格  
- **column1>、\<column2> 等\<**  
+ \<column1>、\<column2> 等  
  显示在单个或多个超集列中找不到的单个或多个子集列中的值。  
   
  **Count**  

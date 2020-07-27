@@ -59,12 +59,12 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1c83519d96d336da2e7577a2b9ea7d3693732d5c
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 71d274d8dbdf7ccdd0d6e508628cb7a89e191400
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86391822"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917216"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -349,10 +349,10 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
 
 ```
 
-## <a name="syntax-for-azure-synapse-analytics"></a>Azure Synapse Analytics 的语法
+## <a name="syntax-for-azure-synapse-analytics-and-parallel-data-warehouse"></a>Azure Synapse Analytics 和并行数据仓库的语法
 
 ```syntaxsql
--- Syntax for Azure Synapse Analytics and Analytics Platform System
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse
 
 ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_table_name | source_table_name }
 {
@@ -447,9 +447,9 @@ WHERE s.object_id = OBJECT_ID('<table_name>');
 
 只能通过下列方式更改数据类型为 text、ntext 和 image 的列：
 
-- text 更改为 varchar(max)、nvarchar(max) 或 xml   
-- ntext 更改为 varchar(max)、nvarchar(max) 或 xml   
-- image 更改为 varbinary(max) 
+- text 更改为 varchar(max)、nvarchar(max) 或 xml
+- ntext 更改为 varchar(max)、nvarchar(max) 或 xml
+- image 更改为 varbinary(max)
 
 更改某些数据类型可能导致更改相关数据。 例如，将 nchar 或 nvarchar 列更改为 char 或 varchar 可能会导致转换扩展字符。 有关详细信息，请参阅 [CAST 和 CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md)。 减少列的精度或确定位数可能会导致数据截断。
 
@@ -737,7 +737,7 @@ trigger_name
 
 若要启用更改跟踪，表必须具有一个主键。
 
-WITH ( TRACK_COLUMNS_UPDATED = { ON | OFF } )     
+WITH ( TRACK_COLUMNS_UPDATED = { ON | OFF } )  
 **适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 指定 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 是否跟踪哪些更改跟踪列已更新。 默认值为 OFF。
@@ -767,7 +767,7 @@ source_partition_number_expression 和 target_partition_number_expression 是可
 
 在版本 V12 成为只读格式之前，为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 CTP1 和 SQL 数据库生成的非聚集列存储索引。 必须将非聚集列存储索引重新生成为当前格式（可更新），才能执行任何 PARTITION 操作。
 
-SET ( FILESTREAM_ON = { partition_scheme_name \| filestream_filegroup_name \| "default" \| "NULL" })       
+SET ( FILESTREAM_ON = { partition_scheme_name \| filestream_filegroup_name \| "default" \| "NULL" })  
 **适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本）。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 不支持 `FILESTREAM`。
 
 指定 FILESTREAM 数据的存储位置。
@@ -782,7 +782,7 @@ filestream_filegroup_name 指定 FILESTREAM 文件组的名称。 文件组必�
 
 "NULL"  指定删除对表的 FILESTREAM 文件组的所有引用。 首先必须删除所有 FILESTREAM 列。 使用 SET FILESTREAM_ON="NULL"  可删除与表关联的所有 FILESTREAM 数据。
 
-SET ( SYSTEM_VERSIONING = { OFF | ON [ ( HISTORY_TABLE = schema_name .  history_table_name [ , DATA_CONSISTENCY_CHECK = { ON | OFF } ]) ] } )   
+SET ( SYSTEM_VERSIONING = { OFF | ON [ ( HISTORY_TABLE = schema_name . history_table_name [ , DATA_CONSISTENCY_CHECK = { ON | OFF } ]) ] } )  
  **适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 禁用或启用表的系统版本控制。 若要启用表的系统版本控制，系统将验证是否满足系统版本控制的数据类型、为 Null 性约束和主键约束要求。 如果你未使用 HISTORY_TABLE 参数，系统生成符合现有表的架构的新历史记录表，在两个表之间建立关联，让系统能够在历史记录表中记录当前表中每个记录的历史记录。 此历史记录表的名称为 `MSSQL_TemporalHistoryFor<primary_table_object_id>`。 如果你使用 HISTORY_TABLE 参数关联到现有历史记录表并使用此表，系统关联当前表和指定表。 关联到现有历史记录表时，可以选择执行数据一致性检查。 数据一致性检查可确保现有记录不重叠。 系统默认运行数据一致性检查。 有关详细信息，请参阅 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)。
@@ -792,7 +792,7 @@ HISTORY_RETENTION_PERIOD = { INFINITE \| number {DAY \| DAYS \| WEEK \| WEEKS \|
 
 指定时态表中历史数据的有限保留期或无限保留期。 如果省略，则假定为无限期保留。
 
-SET ( LOCK_ESCALATION = { AUTO \| TABLE \| DISABLE } )   
+SET ( LOCK_ESCALATION = { AUTO \| TABLE \| DISABLE } )  
 **适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 指定允许的对表的锁进行升级的方法。
@@ -956,7 +956,7 @@ MAX_DURATION = time [MINUTES ]
 
 SWITCH 或联机索引重新生成锁在运行 DDL 命令时以低优先级等待的等待时间（以分钟为单位指定的整数值）。 如果操作在 MAX_DURATION 时间内遭阻止，ABORT_AFTER_WAIT 操作之一便会运行。 MAX_DURATION 时间始终以分钟为单位，可以省略 MINUTES 一词。
 
-ABORT_AFTER_WAIT = [NONE | SELF | BLOCKERS } ]    
+ABORT_AFTER_WAIT = [NONE | SELF | BLOCKERS } ]  
 **适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 无  

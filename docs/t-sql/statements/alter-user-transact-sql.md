@@ -25,12 +25,12 @@ ms.assetid: 344fc6ce-a008-47c8-a02e-47fae66cc590
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6db50af7454526c910b3c2688e0a81fe261c2167
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: a486cc868c445e664977e67fd108aaca2873a595
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632195"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552739"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
 
@@ -38,9 +38,7 @@ ms.locfileid: "81632195"
 
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
-## <a name="click-a-product"></a>单击一个产品！
-
-在下一行中，单击你感兴趣的产品名称。 单击时此网页上的此位置会显示适合你单击的任何产品的不同内容。
+[!INCLUDE[select-product](../../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
@@ -73,13 +71,13 @@ NAME = newUserName
 
 ## <a name="arguments"></a>参数
 
- userName  指定在此数据库中用于识别该用户的名称。
+ userName 指定在此数据库中用于识别该用户的名称。
 
  LOGIN **=** _loginName_ 通过将用户的安全标识符 (SID) 更改为另一个登录名的 SID，使用户重新映射到该登录名。
 
- NAME =  newUserName  指定此用户的新名称。 newUserName 不能已存在于当前数据库中  。
+ NAME = newUserName 指定此用户的新名称。 newUserName 不能已存在于当前数据库中。
 
- DEFAULT_SCHEMA =  { schemaName  | NULL } 指定服务器在解析此用户的对象名时将搜索的第一个架构。 将默认架构设置为 NULL 将从 Windows 组中删除默认架构。 Windows 用户不能使用 NULL 选项。
+ DEFAULT_SCHEMA = { schemaName | NULL } 指定服务器在解析此用户的对象名时将搜索的第一个架构。 将默认架构设置为 NULL 将从 Windows 组中删除默认架构。 Windows 用户不能使用 NULL 选项。
 
  PASSWORD **=** '*password*' **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更高版本[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
 
@@ -88,16 +86,16 @@ NAME = newUserName
 > [!NOTE]
 > 此选项仅适用于包含的用户。 有关详细信息，请参阅[包含的数据库](../../relational-databases/databases/contained-databases.md)和 [sp_migrate_user_to_contained (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)。
 
- OLD_PASSWORD **=** _'oldpassword'_ 适用于  ：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更高版本 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
+ OLD_PASSWORD **=** _'oldpassword'_ 适用于：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更高版本 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
 
- 将替换为“password”的当前用户密码  。 密码是区分大小写的。 除非拥有 ALTER ANY USER 权限，否则需要具有 OLD_PASSWORD 才能更改密码   。 需要 OLD_PASSWORD 可防止拥有 IMPERSONATION 权限的用户更改密码   。
+ 将替换为“password”的当前用户密码。 密码是区分大小写的。 除非拥有 ALTER ANY USER 权限，否则需要具有 OLD_PASSWORD 才能更改密码。 需要 OLD_PASSWORD 可防止拥有 IMPERSONATION 权限的用户更改密码。
 
 > [!NOTE]
 > 此选项仅适用于包含的用户。
 
- DEFAULT_LANGUAGE **=** _{ NONE | \<lcid> | \<language name> | \<language alias> }_ 适用于  ：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更高版本。
+ DEFAULT_LANGUAGE ={ NONE | \<lcid> | \<language name> | \<language alias> } 适用于：（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本）。
 
- 指定将指派给用户的默认语言。 如果将此选项设置为 NONE，则默认语言将设置为数据库的当前默认语言。 如果之后更改数据库的默认语言，用户的默认语言将保持不变。 DEFAULT_LANGUAGE 可以为本地 ID (lcid)、语言的名称或语言别名  。
+ 指定将指派给用户的默认语言。 如果将此选项设置为 NONE，则默认语言将设置为数据库的当前默认语言。 如果之后更改数据库的默认语言，用户的默认语言将保持不变。 DEFAULT_LANGUAGE 可以为本地 ID (lcid)、语言的名称或语言别名。
 
 > [!NOTE]
 > 此选项只能在包含数据库中指定，且只能用于包含的用户。
@@ -113,14 +111,14 @@ NAME = newUserName
 
  默认架构将是服务器为此数据库用户解析对象名时将搜索的第一个架构。 除非另外指定，否则默认架构将是此数据库用户创建的对象所属的架构。
 
- 如果用户具有默认架构，则将使用默认架构。 如果用户不具有默认架构，但该用户是具有默认架构的组的成员，则将使用该组的默认架构。 如果用户不具有默认架构而且是多个组的成员，则该用户的默认架构将是具有最低 principle_id 的 Windows 组的架构和一个显式设置的默认架构。 如果不能为用户确定默认架构，则将使用 dbo 架构  。
+ 如果用户具有默认架构，则将使用默认架构。 如果用户不具有默认架构，但该用户是具有默认架构的组的成员，则将使用该组的默认架构。 如果用户不具有默认架构而且是多个组的成员，则该用户的默认架构将是具有最低 principle_id 的 Windows 组的架构和一个显式设置的默认架构。 如果不能为用户确定默认架构，则将使用 dbo 架构。
 
  可以将 DEFAULT_SCHEMA 设置为数据库中当前不存在的架构。 因此，可以在创建架构之前将 DEFAULT_SCHEMA 分配给用户。
 
  不能为映射到证书或非对称密钥的用户指定 DEFAULT_SCHEMA。
 
 > [!IMPORTANT]
-> 如果用户是 sysadmin 固定服务器角色的成员，则忽略 DEFAULT_SCHEMA 的值  。 sysadmin 固定服务器角色的所有成员都有默认架构 `dbo`  。
+> 如果用户是 sysadmin 固定服务器角色的成员，则忽略 DEFAULT_SCHEMA 的值。 sysadmin 固定服务器角色的所有成员都有默认架构 `dbo`。
 
  仅当新用户名的 SID 与在数据库中记录的 SID 匹配时，才能更改映射到 Windows 登录名或组的用户的名称。 此检查将帮助防止数据库中的 Windows 登录名欺骗。
 
@@ -146,17 +144,17 @@ NAME = newUserName
 ## <a name="security"></a>安全性
 
 > [!NOTE]
-> 拥有 ALTER ANY USER 权限的用户可以更改任何用户的默认架构  。 更改了架构的用户可能会在不知情的情况下从错误表中选择数据，或者从错误架构中执行代码。
+> 拥有 ALTER ANY USER 权限的用户可以更改任何用户的默认架构。 更改了架构的用户可能会在不知情的情况下从错误表中选择数据，或者从错误架构中执行代码。
 
 ### <a name="permissions"></a>权限
 
- 更改用户名需要具有 ALTER ANY USER 权限  。
+ 更改用户名需要具有 ALTER ANY USER 权限。
 
- 更改用户的目标登录名需要对数据库拥有 CONTROL 权限  。
+ 更改用户的目标登录名需要对数据库拥有 CONTROL 权限。
 
- 若要更改对数据库拥有 CONTROL 权限的用户名名称，则需要对数据库拥有 CONTROL 权限   。
+ 若要更改对数据库拥有 CONTROL 权限的用户名名称，则需要对数据库拥有 CONTROL 权限 。
 
- 更改默认架构或语言需要对用户拥有 ALTER 权限  。 用户可更改自己的默认架构或语言。
+ 更改默认架构或语言需要对用户拥有 ALTER 权限。 用户可更改自己的默认架构或语言。
 
 ## <a name="examples"></a>示例
 
@@ -252,15 +250,15 @@ ALTER USER userName
 
 ## <a name="arguments"></a>参数
 
- userName  指定在此数据库中用于识别该用户的名称。
+ userName 指定在此数据库中用于识别该用户的名称。
 
  LOGIN **=** _loginName_ 通过将用户的安全标识符 (SID) 更改为另一个登录名的 SID，使用户重新映射到该登录名。
 
  如果 ALTER USER 语句是 SQL 批处理中唯一的语句，则 Azure SQL 数据库将支持 WITH LOGIN 子句。 如果 ALTER USER 语句不是 SQL 批处理中唯一的语句或在动态 SQL 中执行，则不支持 WITH LOGIN 子句。
 
- NAME =  newUserName  指定此用户的新名称。 newUserName 不能已存在于当前数据库中  。
+ NAME = newUserName 指定此用户的新名称。 newUserName 不能已存在于当前数据库中。
 
- DEFAULT_SCHEMA =  { schemaName  | NULL } 指定服务器在解析此用户的对象名时将搜索的第一个架构。 将默认架构设置为 NULL 将从 Windows 组中删除默认架构。 Windows 用户不能使用 NULL 选项。
+ DEFAULT_SCHEMA = { schemaName | NULL } 指定服务器在解析此用户的对象名时将搜索的第一个架构。 将默认架构设置为 NULL 将从 Windows 组中删除默认架构。 Windows 用户不能使用 NULL 选项。
 
  PASSWORD **=** '*password*' **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更高版本[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
 
@@ -269,9 +267,9 @@ ALTER USER userName
 > [!NOTE]
 > 此选项仅适用于包含的用户。 有关详细信息，请参阅[包含的数据库](../../relational-databases/databases/contained-databases.md)和 [sp_migrate_user_to_contained (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)。
 
- OLD_PASSWORD **=** _'oldpassword'_ 适用于  ：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更高版本 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
+ OLD_PASSWORD **=** _'oldpassword'_ 适用于：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更高版本 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
 
- 将替换为“password”的当前用户密码  。 密码是区分大小写的。 除非拥有 ALTER ANY USER 权限，否则需要具有 OLD_PASSWORD 才能更改密码   。 需要 OLD_PASSWORD 可防止拥有 IMPERSONATION 权限的用户更改密码   。
+ 将替换为“password”的当前用户密码。 密码是区分大小写的。 除非拥有 ALTER ANY USER 权限，否则需要具有 OLD_PASSWORD 才能更改密码。 需要 OLD_PASSWORD 可防止拥有 IMPERSONATION 权限的用户更改密码。
 
 > [!NOTE]
 > 此选项仅适用于包含的用户。
@@ -287,14 +285,14 @@ ALTER USER userName
 
  默认架构将是服务器为此数据库用户解析对象名时将搜索的第一个架构。 除非另外指定，否则默认架构将是此数据库用户创建的对象所属的架构。
 
- 如果用户具有默认架构，则将使用默认架构。 如果用户不具有默认架构，但该用户是具有默认架构的组的成员，则将使用该组的默认架构。 如果用户不具有默认架构而且是多个组的成员，则该用户的默认架构将是具有最低 principle_id 的 Windows 组的架构和一个显式设置的默认架构。 如果不能为用户确定默认架构，则将使用 dbo 架构  。
+ 如果用户具有默认架构，则将使用默认架构。 如果用户不具有默认架构，但该用户是具有默认架构的组的成员，则将使用该组的默认架构。 如果用户不具有默认架构而且是多个组的成员，则该用户的默认架构将是具有最低 principle_id 的 Windows 组的架构和一个显式设置的默认架构。 如果不能为用户确定默认架构，则将使用 dbo 架构。
 
  可以将 DEFAULT_SCHEMA 设置为数据库中当前不存在的架构。 因此，可以在创建架构之前将 DEFAULT_SCHEMA 分配给用户。
 
  不能为映射到证书或非对称密钥的用户指定 DEFAULT_SCHEMA。
 
 > [!IMPORTANT]
-> 如果用户是 sysadmin 固定服务器角色的成员，则忽略 DEFAULT_SCHEMA 的值  。 sysadmin 固定服务器角色的所有成员都有默认架构 `dbo`  。
+> 如果用户是 sysadmin 固定服务器角色的成员，则忽略 DEFAULT_SCHEMA 的值。 sysadmin 固定服务器角色的所有成员都有默认架构 `dbo`。
 
  仅当新用户名的 SID 与在数据库中记录的 SID 匹配时，才能更改映射到 Windows 登录名或组的用户的名称。 此检查将帮助防止数据库中的 Windows 登录名欺骗。
 
@@ -320,17 +318,17 @@ ALTER USER userName
 ## <a name="security"></a>安全性
 
 > [!NOTE]
-> 拥有 ALTER ANY USER 权限的用户可以更改任何用户的默认架构  。 更改了架构的用户可能会在不知情的情况下从错误表中选择数据，或者从错误架构中执行代码。
+> 拥有 ALTER ANY USER 权限的用户可以更改任何用户的默认架构。 更改了架构的用户可能会在不知情的情况下从错误表中选择数据，或者从错误架构中执行代码。
 
 ### <a name="permissions"></a>权限
 
- 更改用户名需要具有 ALTER ANY USER 权限  。
+ 更改用户名需要具有 ALTER ANY USER 权限。
 
- 更改用户的目标登录名需要对数据库拥有 CONTROL 权限  。
+ 更改用户的目标登录名需要对数据库拥有 CONTROL 权限。
 
- 若要更改对数据库拥有 CONTROL 权限的用户名名称，则需要对数据库拥有 CONTROL 权限   。
+ 若要更改对数据库拥有 CONTROL 权限的用户名名称，则需要对数据库拥有 CONTROL 权限 。
 
- 更改默认架构或语言需要对用户拥有 ALTER 权限  。 用户可更改自己的默认架构或语言。
+ 更改默认架构或语言需要对用户拥有 ALTER 权限。 用户可更改自己的默认架构或语言。
 
 ## <a name="examples"></a>示例
 
@@ -426,17 +424,17 @@ ALTER USER userName
 
 ## <a name="arguments"></a>参数
 
- userName  指定在此数据库中用于识别该用户的名称。
+ userName 指定在此数据库中用于识别该用户的名称。
 
  LOGIN **=** _loginName_ 通过将用户的安全标识符 (SID) 更改为另一个登录名的 SID，使用户重新映射到该登录名。
 
  如果 ALTER USER 语句是 SQL 批处理中唯一的语句，则 Azure SQL 数据库将支持 WITH LOGIN 子句。 如果 ALTER USER 语句不是 SQL 批处理中唯一的语句或在动态 SQL 中执行，则不支持 WITH LOGIN 子句。
 
- NAME =  newUserName  指定此用户的新名称。 newUserName 不能已存在于当前数据库中  。
+ NAME = newUserName 指定此用户的新名称。 newUserName 不能已存在于当前数据库中。
 
- DEFAULT_SCHEMA =  { schemaName  | NULL } 指定服务器在解析此用户的对象名时将搜索的第一个架构。 将默认架构设置为 NULL 将从 Windows 组中删除默认架构。 Windows 用户不能使用 NULL 选项。
+ DEFAULT_SCHEMA = { schemaName | NULL } 指定服务器在解析此用户的对象名时将搜索的第一个架构。 将默认架构设置为 NULL 将从 Windows 组中删除默认架构。 Windows 用户不能使用 NULL 选项。
 
- PASSWORD = 'password'  
+ PASSWORD = 'password'
 
  指定正在更改的用户的密码。 密码是区分大小写的。
 
@@ -445,14 +443,14 @@ ALTER USER userName
 
  OLD_PASSWORD **=** _'oldpassword'_
 
- 将替换为“password”的当前用户密码  。 密码是区分大小写的。 除非拥有 ALTER ANY USER 权限，否则需要具有 OLD_PASSWORD 才能更改密码   。 需要 OLD_PASSWORD 可防止拥有 IMPERSONATION 权限的用户更改密码   。
+ 将替换为“password”的当前用户密码。 密码是区分大小写的。 除非拥有 ALTER ANY USER 权限，否则需要具有 OLD_PASSWORD 才能更改密码。 需要 OLD_PASSWORD 可防止拥有 IMPERSONATION 权限的用户更改密码。
 
 > [!NOTE]
 > 此选项仅适用于包含的用户。
 
- DEFAULT_LANGUAGE ={ NONE | \<lcid> | \<language name> | \<language alias> }  
+ DEFAULT_LANGUAGE ={ NONE | \<lcid> | \<language name> | \<language alias> }
 
- 指定将指派给用户的默认语言。 如果将此选项设置为 NONE，则默认语言将设置为数据库的当前默认语言。 如果之后更改数据库的默认语言，用户的默认语言将保持不变。 DEFAULT_LANGUAGE 可以为本地 ID (lcid)、语言的名称或语言别名  。
+ 指定将指派给用户的默认语言。 如果将此选项设置为 NONE，则默认语言将设置为数据库的当前默认语言。 如果之后更改数据库的默认语言，用户的默认语言将保持不变。 DEFAULT_LANGUAGE 可以为本地 ID (lcid)、语言的名称或语言别名。
 
 > [!NOTE]
 > 此选项只能在包含数据库中指定，且只能用于包含的用户。
@@ -468,14 +466,14 @@ ALTER USER userName
 
  默认架构将是服务器为此数据库用户解析对象名时将搜索的第一个架构。 除非另外指定，否则默认架构将是此数据库用户创建的对象所属的架构。
 
- 如果用户具有默认架构，则将使用默认架构。 如果用户不具有默认架构，但该用户是具有默认架构的组的成员，则将使用该组的默认架构。 如果用户不具有默认架构而且是多个组的成员，则该用户的默认架构将是具有最低 principle_id 的 Windows 组的架构和一个显式设置的默认架构。 如果不能为用户确定默认架构，则将使用 dbo 架构  。
+ 如果用户具有默认架构，则将使用默认架构。 如果用户不具有默认架构，但该用户是具有默认架构的组的成员，则将使用该组的默认架构。 如果用户不具有默认架构而且是多个组的成员，则该用户的默认架构将是具有最低 principle_id 的 Windows 组的架构和一个显式设置的默认架构。 如果不能为用户确定默认架构，则将使用 dbo 架构。
 
  可以将 DEFAULT_SCHEMA 设置为数据库中当前不存在的架构。 因此，可以在创建架构之前将 DEFAULT_SCHEMA 分配给用户。
 
  不能为映射到证书或非对称密钥的用户指定 DEFAULT_SCHEMA。
 
 > [!IMPORTANT]
-> 如果用户是 sysadmin 固定服务器角色的成员，则忽略 DEFAULT_SCHEMA 的值  。 sysadmin 固定服务器角色的所有成员都有默认架构 `dbo`  。
+> 如果用户是 sysadmin 固定服务器角色的成员，则忽略 DEFAULT_SCHEMA 的值。 sysadmin 固定服务器角色的所有成员都有默认架构 `dbo`。
 
  仅当新用户名的 SID 与在数据库中记录的 SID 匹配时，才能更改映射到 Windows 登录名或组的用户的名称。 此检查将帮助防止数据库中的 Windows 登录名欺骗。
 
@@ -515,15 +513,15 @@ ALTER USER userName
 - 检查登录名的指示类型是 `E` 还是 `X`。
 - PASSWORD 选项不能用于 Azure AD 用户。
 - 在所有迁移情况下，Windows 用户或组的角色和权限将自动转移到新的 Azure AD 用户或组。
-- 新的语法扩展 FROM EXTERNAL PROVIDER 可用于将 Windows 用户和组从 SQL 本地更改为 Azure AD 用户和组  。 使用此扩展时，Windows 域必须通过 Azure AD 联合，且所有 Windows 域成员必须存在于 Azure AD 中。 FROM EXTERNAL PROVIDER 语法适用于托管实例，并且应在以下情况下使用：Windows 用户在原始 SQL 实例上没有登录名，并且需要映射到独立的 Azure AD 数据库用户  。
+- 新的语法扩展 FROM EXTERNAL PROVIDER 可用于将 Windows 用户和组从 SQL 本地更改为 Azure AD 用户和组。 使用此扩展时，Windows 域必须通过 Azure AD 联合，且所有 Windows 域成员必须存在于 Azure AD 中。 FROM EXTERNAL PROVIDER 语法适用于托管实例，并且应在以下情况下使用：Windows 用户在原始 SQL 实例上没有登录名，并且需要映射到独立的 Azure AD 数据库用户。
 - 在这种情况下，允许的用户名可以是：
-- Widows 用户（域\用户  ）。
-- Windows 组（MyWidnowsGroup  ）。
-- Windows 别名（MyWindowsAlias  ）。
+- Widows 用户（域\用户）。
+- Windows 组（MyWidnowsGroup）。
+- Windows 别名（MyWindowsAlias）。
 - ALTER 命令的结果会将旧用户名替换为基于旧用户名的原始 SID 在 Azure AD 中找到的相应名称。 更改的名称将被替换并存储在数据库的元数据中：
-- （域\用户  ）将替换为 Azure AD user@domain.com。
-- （域\\MyWidnowsGroup  ）将替换为 Azure AD 组。
-- （MyWindowsAlias  ）将保持不变，但会在 Azure AD 中检查此用户的 SID。
+- （域\用户）将替换为 Azure AD user@domain.com。
+- （域\\MyWidnowsGroup）将替换为 Azure AD 组。
+- （MyWindowsAlias）将保持不变，但会在 Azure AD 中检查此用户的 SID。
 
 > [!NOTE]
 > 如果在 Azure AD 中找不到转换为 objectID 的原始用户的 SID，则 ALTER USER 命令将失败。
@@ -540,17 +538,17 @@ ALTER USER userName
 ## <a name="security"></a>安全性
 
 > [!NOTE]
-> 拥有 ALTER ANY USER 权限的用户可以更改任何用户的默认架构  。 更改了架构的用户可能会在不知情的情况下从错误表中选择数据，或者从错误架构中执行代码。
+> 拥有 ALTER ANY USER 权限的用户可以更改任何用户的默认架构。 更改了架构的用户可能会在不知情的情况下从错误表中选择数据，或者从错误架构中执行代码。
 
 ### <a name="permissions"></a>权限
 
- 更改用户名需要具有 ALTER ANY USER 权限  。
+ 更改用户名需要具有 ALTER ANY USER 权限。
 
- 更改用户的目标登录名需要对数据库拥有 CONTROL 权限  。
+ 更改用户的目标登录名需要对数据库拥有 CONTROL 权限。
 
- 若要更改对数据库拥有 CONTROL 权限的用户名名称，则需要对数据库拥有 CONTROL 权限   。
+ 若要更改对数据库拥有 CONTROL 权限的用户名名称，则需要对数据库拥有 CONTROL 权限 。
 
- 更改默认架构或语言需要对用户拥有 ALTER 权限  。 用户可更改自己的默认架构或语言。
+ 更改默认架构或语言需要对用户拥有 ALTER 权限。 用户可更改自己的默认架构或语言。
 
 ## <a name="examples"></a>示例
 
@@ -656,28 +654,28 @@ ALTER USER userName
 
 ## <a name="arguments"></a>参数
 
- userName  指定在此数据库中用于识别该用户的名称。
+ userName 指定在此数据库中用于识别该用户的名称。
 
  LOGIN **=** _loginName_ 通过将用户的安全标识符 (SID) 更改为另一个登录名的 SID，使用户重新映射到该登录名。
 
  如果 ALTER USER 语句是 SQL 批处理中唯一的语句，则 Azure SQL 数据库将支持 WITH LOGIN 子句。 如果 ALTER USER 语句不是 SQL 批处理中唯一的语句或在动态 SQL 中执行，则不支持 WITH LOGIN 子句。
 
- NAME =  newUserName  指定此用户的新名称。 newUserName 不能已存在于当前数据库中  。
+ NAME = newUserName 指定此用户的新名称。 newUserName 不能已存在于当前数据库中。
 
- DEFAULT_SCHEMA =  { schemaName  | NULL } 指定服务器在解析此用户的对象名时将搜索的第一个架构。 将默认架构设置为 NULL 将从 Windows 组中删除默认架构。 Windows 用户不能使用 NULL 选项。
+ DEFAULT_SCHEMA = { schemaName | NULL } 指定服务器在解析此用户的对象名时将搜索的第一个架构。 将默认架构设置为 NULL 将从 Windows 组中删除默认架构。 Windows 用户不能使用 NULL 选项。
 
 ## <a name="remarks"></a>备注
 
  默认架构将是服务器为此数据库用户解析对象名时将搜索的第一个架构。 除非另外指定，否则默认架构将是此数据库用户创建的对象所属的架构。
 
- 如果用户具有默认架构，则将使用默认架构。 如果用户不具有默认架构，但该用户是具有默认架构的组的成员，则将使用该组的默认架构。 如果用户不具有默认架构而且是多个组的成员，则该用户的默认架构将是具有最低 principle_id 的 Windows 组的架构和一个显式设置的默认架构。 如果不能为用户确定默认架构，则将使用 dbo 架构  。
+ 如果用户具有默认架构，则将使用默认架构。 如果用户不具有默认架构，但该用户是具有默认架构的组的成员，则将使用该组的默认架构。 如果用户不具有默认架构而且是多个组的成员，则该用户的默认架构将是具有最低 principle_id 的 Windows 组的架构和一个显式设置的默认架构。 如果不能为用户确定默认架构，则将使用 dbo 架构。
 
  可以将 DEFAULT_SCHEMA 设置为数据库中当前不存在的架构。 因此，可以在创建架构之前将 DEFAULT_SCHEMA 分配给用户。
 
  不能为映射到证书或非对称密钥的用户指定 DEFAULT_SCHEMA。
 
 > [!IMPORTANT]
-> 如果用户是 sysadmin 固定服务器角色的成员，则忽略 DEFAULT_SCHEMA 的值  。 sysadmin 固定服务器角色的所有成员都有默认架构 `dbo`  。
+> 如果用户是 sysadmin 固定服务器角色的成员，则忽略 DEFAULT_SCHEMA 的值。 sysadmin 固定服务器角色的所有成员都有默认架构 `dbo`。
 
  使用 WITH LOGIN 子句可以将用户重新映射到一个不同的登录名。 不能使用此子句重新映射以下用户：不具有登录名的用户、映射到证书的用户或映射到非对称密钥的用户。 只能重新映射 SQL 用户和 Windows 用户（或组）。 不能使用 WITH LOGIN 子句更改用户类型，例如将 Windows 帐户更改为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。
 
@@ -697,17 +695,17 @@ ALTER USER userName
 ## <a name="security"></a>安全性
 
 > [!NOTE]
-> 拥有 ALTER ANY USER 权限的用户可以更改任何用户的默认架构  。 更改了架构的用户可能会在不知情的情况下从错误表中选择数据，或者从错误架构中执行代码。
+> 拥有 ALTER ANY USER 权限的用户可以更改任何用户的默认架构。 更改了架构的用户可能会在不知情的情况下从错误表中选择数据，或者从错误架构中执行代码。
 
 ### <a name="permissions"></a>权限
 
- 更改用户名需要具有 ALTER ANY USER 权限  。
+ 更改用户名需要具有 ALTER ANY USER 权限。
 
- 更改用户的目标登录名需要对数据库拥有 CONTROL 权限  。
+ 更改用户的目标登录名需要对数据库拥有 CONTROL 权限。
 
- 若要更改对数据库拥有 CONTROL 权限的用户名名称，则需要对数据库拥有 CONTROL 权限   。
+ 若要更改对数据库拥有 CONTROL 权限的用户名名称，则需要对数据库拥有 CONTROL 权限 。
 
- 更改默认架构或语言需要对用户拥有 ALTER 权限  。 用户可更改自己的默认架构或语言。
+ 更改默认架构或语言需要对用户拥有 ALTER 权限。 用户可更改自己的默认架构或语言。
 
 ## <a name="examples"></a>示例
 
@@ -767,28 +765,28 @@ ALTER USER userName
 
 ## <a name="arguments"></a>参数
 
- userName  指定在此数据库中用于识别该用户的名称。
+ userName 指定在此数据库中用于识别该用户的名称。
 
  LOGIN **=** _loginName_ 通过将用户的安全标识符 (SID) 更改为另一个登录名的 SID，使用户重新映射到该登录名。
 
  如果 ALTER USER 语句是 SQL 批处理中唯一的语句，则 Azure SQL 数据库将支持 WITH LOGIN 子句。 如果 ALTER USER 语句不是 SQL 批处理中唯一的语句或在动态 SQL 中执行，则不支持 WITH LOGIN 子句。
 
- NAME =  newUserName  指定此用户的新名称。 newUserName 不能已存在于当前数据库中  。
+ NAME = newUserName 指定此用户的新名称。 newUserName 不能已存在于当前数据库中。
 
- DEFAULT_SCHEMA =  { schemaName  | NULL } 指定服务器在解析此用户的对象名时将搜索的第一个架构。 将默认架构设置为 NULL 将从 Windows 组中删除默认架构。 Windows 用户不能使用 NULL 选项。
+ DEFAULT_SCHEMA = { schemaName | NULL } 指定服务器在解析此用户的对象名时将搜索的第一个架构。 将默认架构设置为 NULL 将从 Windows 组中删除默认架构。 Windows 用户不能使用 NULL 选项。
 
 ## <a name="remarks"></a>备注
 
  默认架构将是服务器为此数据库用户解析对象名时将搜索的第一个架构。 除非另外指定，否则默认架构将是此数据库用户创建的对象所属的架构。
 
- 如果用户具有默认架构，则将使用默认架构。 如果用户不具有默认架构，但该用户是具有默认架构的组的成员，则将使用该组的默认架构。 如果用户不具有默认架构而且是多个组的成员，则该用户的默认架构将是具有最低 principle_id 的 Windows 组的架构和一个显式设置的默认架构。 如果不能为用户确定默认架构，则将使用 dbo 架构  。
+ 如果用户具有默认架构，则将使用默认架构。 如果用户不具有默认架构，但该用户是具有默认架构的组的成员，则将使用该组的默认架构。 如果用户不具有默认架构而且是多个组的成员，则该用户的默认架构将是具有最低 principle_id 的 Windows 组的架构和一个显式设置的默认架构。 如果不能为用户确定默认架构，则将使用 dbo 架构。
 
  可以将 DEFAULT_SCHEMA 设置为数据库中当前不存在的架构。 因此，可以在创建架构之前将 DEFAULT_SCHEMA 分配给用户。
 
  不能为映射到证书或非对称密钥的用户指定 DEFAULT_SCHEMA。
 
 > [!IMPORTANT]
-> 如果用户是 sysadmin 固定服务器角色的成员，则忽略 DEFAULT_SCHEMA 的值  。 sysadmin 固定服务器角色的所有成员都有默认架构 `dbo`  。
+> 如果用户是 sysadmin 固定服务器角色的成员，则忽略 DEFAULT_SCHEMA 的值。 sysadmin 固定服务器角色的所有成员都有默认架构 `dbo`。
 
  使用 WITH LOGIN 子句可以将用户重新映射到一个不同的登录名。 不能使用此子句重新映射以下用户：不具有登录名的用户、映射到证书的用户或映射到非对称密钥的用户。 只能重新映射 SQL 用户和 Windows 用户（或组）。 不能使用 WITH LOGIN 子句更改用户类型，例如将 Windows 帐户更改为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。
 
@@ -808,17 +806,17 @@ ALTER USER userName
 ## <a name="security"></a>安全性
 
 > [!NOTE]
-> 拥有 ALTER ANY USER 权限的用户可以更改任何用户的默认架构  。 更改了架构的用户可能会在不知情的情况下从错误表中选择数据，或者从错误架构中执行代码。
+> 拥有 ALTER ANY USER 权限的用户可以更改任何用户的默认架构。 更改了架构的用户可能会在不知情的情况下从错误表中选择数据，或者从错误架构中执行代码。
 
 ### <a name="permissions"></a>权限
 
- 更改用户名需要具有 ALTER ANY USER 权限  。
+ 更改用户名需要具有 ALTER ANY USER 权限。
 
- 更改用户的目标登录名需要对数据库拥有 CONTROL 权限  。
+ 更改用户的目标登录名需要对数据库拥有 CONTROL 权限。
 
- 若要更改对数据库拥有 CONTROL 权限的用户名名称，则需要对数据库拥有 CONTROL 权限   。
+ 若要更改对数据库拥有 CONTROL 权限的用户名名称，则需要对数据库拥有 CONTROL 权限 。
 
- 更改默认架构或语言需要对用户拥有 ALTER 权限  。 用户可更改自己的默认架构或语言。
+ 更改默认架构或语言需要对用户拥有 ALTER 权限。 用户可更改自己的默认架构或语言。
 
 ## <a name="examples"></a>示例
 

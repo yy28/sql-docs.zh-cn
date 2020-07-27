@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 52c4f92994068e0c5de8afd7233bd53c1244e38d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 410fb5cc9ebfe04b62b6d196e7757f2455234014
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216890"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920324"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>演练：将 SSIS 包作为 SQL 视图发布
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   本演练提供在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中将 SSIS 包作为 SQL 视图发布的详细步骤。  
@@ -44,9 +44,9 @@ ms.locfileid: "80216890"
   
     2.  在左窗格中展开“商业智能”  ，然后在树视图中单击“Integration Services”  。  
   
-    3.  选择“Integration Services 项目”（如果尚未选中）。   
+    3.  选择“Integration Services 项目”（如果尚未选中）。  
   
-    4.  在“项目名称”中指定 **SSISPackagePublishing** 。   
+    4.  在“项目名称”中指定 **SSISPackagePublishing** 。  
   
     5.  指定项目的位置。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "80216890"
   
 4.  在“控制流”中双击“数据流”组件打开“数据流设计器”。  
   
-5.  将 **源组件** 从工具箱拖到“数据流设计器”，然后并将它配置为从数据源提取数据。   
+5.  将 **源组件** 从工具箱拖到“数据流设计器”，然后并将它配置为从数据源提取数据。  
   
     1.  为了进行演练，请创建一个包含表 **Employee** 的测试数据库 **TestDB**。 创建包含三列： **ID**、 **FirstName** 和 **LastName**的表。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "80216890"
   
          ![数据流目标 - OLE DB 连接](../../integration-services/data-flow/media/dsd-oledbconnectionmanager.jpg "数据流目标 - OLE DB 连接")  
   
-6.  现在，将“数据流目标”从工具箱拖到数据流。  应该可以在工具箱的“常用”部分中找到此组件。  
+6.  现在，将“数据流目标”从工具箱拖到数据流。 应该可以在工具箱的“常用”部分中找到此组件。  
   
 7.  将数据流中的“OLE DB 源”  组件连接到“数据流目标”  组件。  
   
@@ -98,9 +98,9 @@ ms.locfileid: "80216890"
   
      ![数据馈送发布向导 -“简介”页](../../integration-services/data-flow/media/dsd-feedpublishingwizard-introductionpage.jpg "数据馈送发布向导 -“简介”页")  
   
-3.  在“包设置”页上执行以下任务：   
+3.  在“包设置”页上执行以下任务：  
   
-    1.  键入包含 SSIS 目录的的 SQL Server 实例的 **名称** ，或单击“浏览”选择服务器。   
+    1.  键入包含 SSIS 目录的的 SQL Server 实例的 **名称** ，或单击“浏览”选择服务器。  
   
          ![数据馈送发布向导 -“包设置”页](../../integration-services/data-flow/media/dsd-feedpublishingwizard-packagesettingspage.jpg "数据馈送发布向导 -“包设置”页")  
   
@@ -114,7 +114,7 @@ ms.locfileid: "80216890"
   
     4.  单击“下一步”  切换“发布设置”页  。  
   
-4.  在“发布设置”页上执行以下任务：   
+4.  在“发布设置”页上执行以下任务：  
   
     1.  选择要创建的视图的 **数据库** 。  
   
@@ -122,11 +122,11 @@ ms.locfileid: "80216890"
   
     2.  输入 **视图** 的 **名称**。 也可以从下拉列表中选择一个现有视图。  
   
-    3.  在“设置”列表中，指定要与视图关联的 **链接服务器** 的 **名称** 。  如果链接服务器尚不存在，向导将在创建视图之前创建链接服务器。 还可以在此处设置 **User32BitRuntime** 和 **Timeout** 的值。  
+    3.  在“设置”列表中，指定要与视图关联的 **链接服务器** 的 **名称** 。 如果链接服务器尚不存在，向导将在创建视图之前创建链接服务器。 还可以在此处设置 **User32BitRuntime** 和 **Timeout** 的值。  
   
-    4.  单击“高级”按钮。  你应会看到“高级设置”对话框。   
+    4.  单击“高级”按钮。 你应会看到“高级设置”对话框。  
   
-    5.  在“高级设置”对话框中执行以下操作：   
+    5.  在“高级设置”对话框中执行以下操作：  
   
         1.  指定要在其中创建视图的数据库架构（“架构”字段）。  
   
@@ -138,7 +138,7 @@ ms.locfileid: "80216890"
   
     6.  单击“下一步”  切换到“验证”页  。  
   
-5.  在“验证”页上，检查验证所有设置的值后返回的结果。  在以下示例中，你将看到针对链接服务器存在状态的 **警告** ，因为选定的 SQL Server 实例上不存在链接服务器。 如果你看到“结果”中包含“错误”，请将鼠标悬停在“错误”，这样便可以查看有关该错误的详细信息。 例如，如果你尚未启用“允许对 SSISOLEDB 提供程序使用 inprocess 选项”，则在执行链接服务器配置操作时会收到错误。  
+5.  在“验证”页上，检查验证所有设置的值后返回的结果。 在以下示例中，你将看到针对链接服务器存在状态的 **警告** ，因为选定的 SQL Server 实例上不存在链接服务器。 如果你看到“结果”中包含“错误”，请将鼠标悬停在“错误”，这样便可以查看有关该错误的详细信息。 例如，如果你尚未启用“允许对 SSISOLEDB 提供程序使用 inprocess 选项”，则在执行链接服务器配置操作时会收到错误。  
   
      ![数据馈送发布向导 -“验证”页](../../integration-services/data-flow/media/dsd-feedpublishingwizard-validationpage.jpg "数据馈送发布向导 -“验证”页")  
   
@@ -152,9 +152,9 @@ ms.locfileid: "80216890"
   
      现在，可以针对 TestDB 数据库执行以下 SQL 语句，来查询包的输出数据：SELECT * FROM [SSISPackageView]。  
   
-9. 若要将此报告保存为 XML 文件，请单击“保存报告”。   
+9. 若要将此报告保存为 XML 文件，请单击“保存报告”。  
   
-10. 查看发布过程的结果，然后单击“完成”关闭向导。   
+10. 查看发布过程的结果，然后单击“完成”关闭向导。  
   
     > [!NOTE]  
     >  不支持以下数据类型：text、ntext、image、nvarchar(max)、varchar(max) 和 varbinary(max)。  
@@ -164,9 +164,9 @@ ms.locfileid: "80216890"
   
 1.  启动 SQL Server Management Studio。  
   
-2.  展开“\<计算机名称>”、“数据库”、“\<你在向导中选择的数据库>”和“视图”。  
+2.  展开 \<**machine name**>、“数据库”、\<**database you selected in the wizard**> 和“视图” 。  
   
-3.  右键单击向导创建的“\<向导创建的视图>”，然后单击“选择前 1000 行”   。  
+3.  右键单击向导创建的 \<**view created by the wizard**>，然后单击“选择前 1000 行”。  
   
 4.  确认能够看到 SSIS 包的结果。  
   

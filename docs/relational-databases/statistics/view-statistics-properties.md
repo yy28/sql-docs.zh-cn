@@ -1,5 +1,6 @@
 ---
 title: 查看统计信息属性 | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL 显示 SQL Server 中表或索引视图的当前查询优化统计信息。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ ms.assetid: 0eaa2101-006e-4015-9979-3468b50e0aaa
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1fc876283635f3a3015efa957b90cf0d9d938386
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6ab4cc68a4fbc9e737498d68433de2effd9fe805
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001051"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457009"
 ---
 # <a name="view-statistics-properties"></a>查看统计信息属性
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -57,11 +58,11 @@ ms.locfileid: "86001051"
   
 4.  单击加号以便展开 **“统计信息”** 文件夹。  
   
-5.  双击要查看其属性的统计信息对象，然后选择“属性”  。  
+5.  双击要查看其属性的统计信息对象，然后选择“属性”。  
   
-6.  在“统计信息属性 - statistics_name”对话框的“选择页”窗格中，选择“详细信息”     。  
+6.  在“统计信息属性 - statistics_name”对话框的“选择页”窗格中，选择“详细信息” 。  
   
-     以下属性将显示在“统计信息属性 - statistics_name”对话框的“详细信息”页上    。  
+     以下属性将显示在“统计信息属性 - statistics_name”对话框的“详细信息”页上 。  
   
      **表名**  
      显示统计信息中所涉及表的名称。  
@@ -70,7 +71,7 @@ ms.locfileid: "86001051"
      显示存储统计信息的数据库对象的名称。  
   
      **INDEX 统计信息 statistics_name**  
-     此文本框显示从统计信息对象返回的属性。 此属性分为三个部分：统计信息头、密度向量和直方图。  
+     此文本框显示从统计信息对象返回的属性。 此属性可分为三个部分：统计信息头、密度向量和直方图。  
   
      下面的信息介绍结果集中为统计信息头返回的列。  
   
@@ -90,7 +91,7 @@ ms.locfileid: "86001051"
      直方图中的梯级数。 每个梯级都跨越一个列值范围，后跟上限列值。 直方图梯级是根据统计信息中的第一个键列定义的。 最大梯级数为 200。  
   
      **Density**  
-     计算公式为 1/统计信息对象第一个键列中的所有值（不包括直方图边界值）的非重复值  。 查询优化器不使用此 Density 值，显示此值的目的是为了与 SQL Server 2008 之前的版本实现向后兼容。  
+     计算公式为 1/统计信息对象第一个键列中的所有值（不包括直方图边界值）的非重复值。 查询优化器不使用此 Density 值，显示此值的目的是为了与 SQL Server 2008 之前的版本实现向后兼容。  
   
      **Average Key Length**  
      统计信息对象中所有键列的每个值的平均字节数。  
@@ -107,7 +108,7 @@ ms.locfileid: "86001051"
      下面的信息介绍结果集中为密度向量返回的列。  
   
      **All Density**  
-     密度为 1/非重复值  。 结果显示统计信息对象中各列的每个前缀的密度，每个密度显示一行。 非重复值是每个行前缀和列前缀的列值的非重复列表。 例如，如果统计信息对象包含键列 (A, B, C)，结果将报告以下每个列前缀中非重复值列表的密度：(A)、(A,B) 以及 (A, B, C)。 使用前缀 (A, B, C)，以下每个列表都是一个非重复值列表：(3, 5, 6)、(4, 4, 6)、(4, 5, 6) 和 (4, 5, 7)。 使用前缀 (A, B)，相同列值则具有以下非重复值列表：(3, 5)、(4, 4) 和 (4, 5)。  
+     密度为 1/非重复值。 结果显示统计信息对象中各列的每个前缀的密度，每个密度显示一行。 非重复值是每个行前缀和列前缀的列值的非重复列表。 例如，如果统计信息对象包含键列 (A, B, C)，结果将报告以下每个列前缀中非重复值列表的密度：(A)、(A,B) 和 (A, B, C)。 使用前缀 (A, B, C)，以下每个列表都是一个非重复值列表：(3, 5, 6)、(4, 4, 6)、(4, 5, 6) 和 (4, 5, 7)。 使用前缀 (A, B)，相同列值具有以下非重复值列表：(3, 5)、(4, 4) 和 (4, 5)。  
   
      **Average Length**  
      存储列前缀的列值列表的平均长度（以字节为单位）。 例如，如果列表 (3, 5, 6) 中的每个值都需要 4 个字节，则长度为 12 个字节。  
@@ -132,7 +133,7 @@ ms.locfileid: "86001051"
      **AVG_RANGE_ROWS**  
      重复列值位于直方图梯级内（不包括上限）的平均行数（如果 DISTINCT_RANGE_ROWS > 0，则为 RANGE_ROWS / DISTINCT_RANGE_ROWS）。  
   
-7.  单击“确定”。   
+7.  单击“确定”。  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -142,7 +143,7 @@ ms.locfileid: "86001051"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     USE AdventureWorks2012;  
@@ -160,7 +161,7 @@ ms.locfileid: "86001051"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     USE AdventureWorks2012;   

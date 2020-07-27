@@ -1,5 +1,6 @@
 ---
 title: SQL Server - ExecStatistics 对象 | Microsoft Docs
+description: 了解 SQLServer:ExecStatistics 对象，该对象提供了用于监视各种执行的计数器。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4f8557a8-345f-4622-a8a5-763a0388ad94
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: aaf66cf2be025262d0d59b7a06421689b93bab91
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1c6cf9cb90a6b19e3472e7d0fb41475b9deb47f6
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775901"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458372"
 ---
 # <a name="sql-server-execstatistics-object"></a>SQL Server ExecStatistics 对象
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "85775901"
   
  对象中的每个计数器均包含以下实例：  
   
-|Item|说明|  
+|项|说明|  
 |----------|-----------------|  
 |**平均执行时间 (ms)**|所选执行类型的平均执行时间。|  
 |**每秒的累积执行时间 (ms)**|所选执行类型每秒的累积执行时间。|  

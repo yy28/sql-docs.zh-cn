@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 1bf33885-9c5b-47e4-a549-f5920b66a1de
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: eb4812b48c9465659ca8c0739f0411a9e65660bf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e5747cc9fbac122e9bca7fa6a127fd74a4ec47ff
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293872"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916103"
 ---
 # <a name="transfer-jobs-task"></a>传输作业任务
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   传输作业任务在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例之间传输一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理作业。  
@@ -103,10 +103,10 @@ ms.locfileid: "71293872"
   
 ### <a name="options"></a>选项  
  **SourceConnection**  
- 从列表中选择 SMO 连接管理器，或单击“\<新建连接...>”，创建与源服务器的新连接。  
+ 从列表中选择一个 SMO 连接管理器，或单击“\<New connection...>”以创建到源服务器的新连接。  
   
  **DestinationConnection**  
- 从列表中选择 SMO 连接管理器，或单击“\<新建连接...>”，创建与目标服务器的新连接。  
+ 从列表中选择一个 SMO 连接管理器，或单击“\<New connection...>”以创建到目标服务器的新连接。  
   
  **TransferAllJobs**  
  选择该任务是应将全部的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业还是仅将指定的作业从源服务器复制到目标服务器。  
@@ -119,7 +119,7 @@ ms.locfileid: "71293872"
 |**False**|仅复制指定的作业。|  
   
  **JobsList**  
- 单击浏览按钮 (…)，选择要复制的作业。  必须至少选择一个作业。  
+ 单击浏览按钮 (…)，选择要复制的作业。 必须至少选择一个作业。  
   
 > [!NOTE]  
 >  在选择要复制的作业前，请指定 **SourceConnection** 。  

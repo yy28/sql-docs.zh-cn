@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: d2c48cff-46f4-4c70-b1f3-c88f9b8757f3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 183c95bf39c504c7444f1604206f5acef517a53d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a01b75cc3d3e804d9329b57676eecc28d17c121c
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71284171"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917442"
 ---
 # <a name="integration-services-user-interface"></a>Integration Services 用户界面
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   除了 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器选项卡上的设计图面外，还可通过用户界面访问下面的窗口和对话框，以便向包添加功能以及配置包对象的属性。  
@@ -51,7 +51,7 @@ ms.locfileid: "71284171"
 |**数字签名**|为包签名或从包中删除签名。|在 **SSIS** 菜单上，单击 **“数字签名”** 。<br /><br /> -或-<br /><br /> 右键单击“控制流”  选项卡的设计图面上任意位置，再单击“数字签名”  。|  
 |**设置断点**|对任务启用断点，并设置断点属性。|在“控制流”  选项卡的设计图面上，右键单击任务或容器，再单击“编辑断点”  。 若要对包设置断点，请右键单击“控制流”  选项卡的设计图面上的任意位置，再单击“编辑断点”  。|  
   
- **“入门”** 窗口提供指向示例、教程和视频内容的链接。 若要添加指向更多内容的链接，请修改 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]当前版本附带的 SamplesSites.xml 文件。 建议不要修改指定 RSS 源 URL 的 \<GettingStartedSamples> 元素值。 该文件位于 \<drive>:\Program Files\Microsoft SQL Server\110\DTS\Binn 文件夹中。 在 64 位计算机上，该文件位于 \<drive>:\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn 文件夹中。  
+ **“入门”** 窗口提供指向示例、教程和视频内容的链接。 若要添加指向更多内容的链接，请修改 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]当前版本附带的 SamplesSites.xml 文件。 建议不要修改指定 RSS 源 URL 的 \<GettingStartedSamples> 元素值。 该文件位于 \<drive>:\Program Files\Microsoft SQL Server\110\DTS\Binn 文件夹中。 在 64 位计算机上，该文件位于 \<drive>:\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn 文件夹中  
   
  如果 SamplesSites.xml 文件确已损坏，请用下面的默认 xml 替换该文件中的 xml。  
   

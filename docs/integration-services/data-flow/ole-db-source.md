@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b0793c48a6ea531dbca499b07ca28be9601e5843
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3a19cee0b650c82c513bd6f4d9d0b7afd11184b3
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292234"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913803"
 ---
 # <a name="ole-db-source"></a>OLE DB 源
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   OLE DB 源通过使用数据库表、视图或 SQL 命令，从各种兼容 OLE DB 的关系数据库中提取数据。 例如，OLE DB 源可以从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的表中提取数据。  
@@ -67,7 +67,7 @@ ms.locfileid: "71292234"
   
  OLE DB 源使用 OLE DB 连接管理器来连接到它从中提取数据的数据源。 取决于 OLE DB 连接管理器所使用的访问接口和连接管理器所连接的关系数据库管理系统 (RDBMS)，参数的命名和列出将应用不同的规则。 如果参数名是从 RDBMS 返回的，则可以使用参数名来将参数列表中的参数映射到 SQL 语句中的参数；否则，参数将按它们在参数列表中的序数位置映射到 SQL 语句中的参数。 支持的参数名类型按访问接口而各不相同。 例如，某些访问接口要求使用变量或列名称，而某些访问接口则要求使用诸如 0 或 Param0 这样的符号名称。 应当参阅访问接口对应的文档，了解有关在 SQL 语句中使用的参数名称的信息。  
   
- 使用 OLE DB 连接管理器时，不能使用参数化子查询，这是因为 OLE DB 源不能通过 OLE DB 访问接口派生参数信息。 但是，可以使用表达式将参数值连接到查询字符串并设置该源的 SqlCommand 属性。在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中，可以使用“OLE DB 源编辑器”对话框配置 OLE DB 源，并在“设置查询参数”对话框中将参数映射到变量。    
+ 使用 OLE DB 连接管理器时，不能使用参数化子查询，这是因为 OLE DB 源不能通过 OLE DB 访问接口派生参数信息。 但是，可以使用表达式将参数值连接到查询字符串并设置该源的 SqlCommand 属性。在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中，可以使用“OLE DB 源编辑器”对话框配置 OLE DB 源，并在“设置查询参数”对话框中将参数映射到变量。  
   
 ### <a name="specifying-parameters-by-using-ordinal-positions"></a>使用序号位置指定参数  
  如果没有返回参数名，则 **“设置查询参数”** 对话框中的 **“参数”** 列表中的参数列出顺序将控制运行时参数将映射哪个参数标记。 列表中的第一个参数将映射到 SQL 语句中的第一个 ?， 第二个参数映射到第二个 ?，以此类推。  
@@ -132,7 +132,7 @@ ms.locfileid: "71292234"
   
 1.  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中，向 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]包添加 OLE DB 源。  
   
-2.  右键单击源组件，然后单击“编辑”。   
+2.  右键单击源组件，然后单击“编辑”。  
   
 3.  单击 **“连接管理器”** 。  
   
@@ -157,7 +157,7 @@ ms.locfileid: "71292234"
  通过使用“数据视图”  对话框预览结果。 **预览版** 最多可以显示 200 行。  
   
 > [!NOTE]  
->  预览数据时，数据类型为 CLR 用户定义类型的列不包含数据。 而是显示值“\<数值太大，无法显示>”或 System.Byte[]。 使用 SQL OLE DB 访问接口访问数据源时，显示前一个值；使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 访问接口访问数据源时，显示后一个值。  
+>  预览数据时，数据类型为 CLR 用户定义类型的列不包含数据。 而是显示值 \<value too big to display> 或 System.Byte[]。 使用 SQL OLE DB 访问接口访问数据源时，显示前一个值；使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 访问接口访问数据源时，显示后一个值。  
   
 ### <a name="data-access-mode-dynamic-options"></a>数据访问模式动态选项  
   
@@ -210,7 +210,7 @@ ms.locfileid: "71292234"
  查看数据源的名称。  
   
  **列**  
- 查看在“OLE DB 源编辑器”对话框中“连接管理器”页上选择的外部（源）列。    
+ 查看在“OLE DB 源编辑器”对话框中“连接管理器”页上选择的外部（源）列。  
   
  **错误**  
  指定发生错误时应执行的操作：忽略失败、重定向行或使组件失败。  

@@ -1,5 +1,5 @@
 ---
-title: DBCC CLEANTABLE (Transact-SQL) | Microsoft Docs
+title: DBCC CLEANTABLE (Transact-SQL)
 ms.custom: ''
 ms.date: 11/14/2017
 ms.prod: sql
@@ -26,14 +26,15 @@ helpviewer_keywords:
 ms.assetid: 0dbbc956-15b1-427b-812c-618a044d07fa
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 706025b8be4a8b48f022a752ac60686e51cc7692
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a8294877bd557ae29ebc39b5b55534ed69088e29
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738177"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485258"
 ---
 # <a name="dbcc-cleantable-transact-sql"></a>DBCC CLEANTABLE (Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 回收表或索引视图中已删除的可变长度列的空间。
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
@@ -51,14 +52,16 @@ DBCC CLEANTABLE
 [ WITH NO_INFOMSGS ]  
 ```  
   
-## <a name="arguments"></a>参数  
-  database_name | database_id  | 0  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
+ database_name \| database_id \| 0   
  要清除的表所在的数据库。 如果指定 0，则使用当前数据库。 数据库名必须遵循有关[标识符](../../relational-databases/databases/database-identifiers.md)的规则。  
   
- *table_name* | *table_id* | *view_name*| *view_id*  
+ table_name \| table_id \| view_name \| view_id     
  要清除的表或索引视图。  
   
- batch_size   
+ batch_size  
  每个事务处理的行数。 如果未指定，或指定为 0，则该语句将在一个事务中处理整个表。  
   
  WITH NO_INFOMSGS  
@@ -159,8 +162,7 @@ FROM sys.dm_db_index_physical_stats(@db_id, @object_id, NULL, NULL , 'Detailed')
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
-[DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
- [sys.allocation_units (Transact-SQL)](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)  
-  
-  
+## <a name="see-also"></a>另请参阅
+
+- [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)
+- [sys.allocation_units (Transact-SQL)](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)

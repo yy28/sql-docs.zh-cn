@@ -29,16 +29,16 @@ helpviewer_keywords:
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: baad15da62c4452361fe8ff3cdf46582dd3727ea
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ba8e26a75af5508e2fe18390e92fda3aea73c648
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287881"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918334"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services (SSIS) 日志记录
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含可用来在包、容器和任务中执行日志记录的日志提供程序。 通过日志记录可以捕获有关包的运行时信息，从而帮助您在每次运行包时对其进行审核和故障排除。 例如，日志可以捕获运行包的操作员的姓名以及包开始和完成的时间。  
@@ -230,7 +230,7 @@ ms.locfileid: "79287881"
   
 3.  在 **“提供程序类型”** 列表中，选择一个日志提供程序，然后单击 **“添加”** 。  
   
-4.  在“配置”列中，选择连接管理器或单击“\<新建连接>”以为日志提供程序新建一个适当类型的连接管理器。 根据所选提供程序的不同，可以使用下列某个连接管理器：  
+4.  在“配置”列中，选择连接管理器或单击“\<New connection>”为日志提供程序新建一个适当类型的连接管理器 。 根据所选提供程序的不同，可以使用下列某个连接管理器：  
   
     -   对于文本文件，请使用文件连接管理器。 有关详细信息，请参阅 [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)  
   
@@ -258,7 +258,7 @@ ms.locfileid: "79287881"
   
 9. 在“详细信息”  选项卡上，单击“保存”  。 将显示 **“另存为”** 对话框。 找到要将日志记录配置保存到的文件夹，为新的日志配置键入文件名，然后单击 **“保存”** 。  
   
-10. 单击“确定”。   
+10. 单击“确定”。  
   
 11. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
 
@@ -312,7 +312,7 @@ ms.locfileid: "79287881"
  说明字段是可编辑的。 可以单击该字段，然后修改日志的默认说明。  
   
  **配置**  
- 在列表中选择一个现有的连接管理器或单击\<“新建连接...”>  以创建新的连接管理器。 根据日志提供程序的类型，您可以配置 OLE DB 连接管理器或文件连接管理器。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 事件日志的日志提供程序不需要任何连接。  
+ 从列表中选择现有的连接管理器，或单击“\<**New connection...**>”创建新的连接管理器。 根据日志提供程序的类型，您可以配置 OLE DB 连接管理器或文件连接管理器。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 事件日志的日志提供程序不需要任何连接。  
   
  相关主题： [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md) 、 [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)  
   
@@ -385,7 +385,7 @@ ms.locfileid: "79287881"
 ## <a name="enable-logging-for-package-execution-on-the-ssis-server"></a><a name="server_logging"></a>在 SSIS 服务器上启用包执行的日志记录
   本主题介绍在运行已经部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的包时，如何设置或更改该包的日志记录级别。 在运行包时设置的日志记录级别将覆盖你在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中设计时配置的包日志记录。 有关详细信息，请参阅 [在 SQL Server Data Tools 中启用包日志记录](#ssdt) 。  
   
- 在 SQL Server“服务器属性”中，“服务器日志记录级别”属性下，可以选择默认服务器范围内的日志记录级别。   可以从本主题中介绍的内置日志记录中选择一项，或者选择现有的自定义日志记录级别。 默认情况下，所选的日志记录级别适用于部署到 SSIS 目录的所有包。 同时也默认适用于运行 SSIS 包的 SQL 代理作业步骤。  
+ 在 SQL Server“服务器属性”中，“服务器日志记录级别”属性下，可以选择默认服务器范围内的日志记录级别。 可以从本主题中介绍的内置日志记录中选择一项，或者选择现有的自定义日志记录级别。 默认情况下，所选的日志记录级别适用于部署到 SSIS 目录的所有包。 同时也默认适用于运行 SSIS 包的 SQL 代理作业步骤。  
   
  此外，也可使用下列方法之一对单个包指定日志记录级别。 本主题涵盖第一种方法。  
   
@@ -399,7 +399,7 @@ ms.locfileid: "79287881"
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，导航到对象资源管理器中的包。  
   
-2.  右键单击包，然后选择“执行”。   
+2.  右键单击包，然后选择“执行”。  
   
 3.  在 **“执行包”** 对话框中，选择 **“高级”** 选项卡。  
   
@@ -424,7 +424,7 @@ ms.locfileid: "79287881"
 > [!TIP]  
 >  若要捕获包变量的值，必须将该变量的 **IncludeInDebugDump** 属性设置为 **True**。  
   
-1.  要创建和管理自定义日志记录级别，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，右键单击 SSISDB 数据库并选择“自定义日志记录级别”以打开“自定义日志记录级别管理”对话框。   “自定义日志记录级别”  列表包含所有现有的自定义日志记录级别。  
+1.  要创建和管理自定义日志记录级别，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，右键单击 SSISDB 数据库并选择“自定义日志记录级别”以打开“自定义日志记录级别管理”对话框。 “自定义日志记录级别”  列表包含所有现有的自定义日志记录级别。  
   
 2.  要 **创建** 新的自定义日志记录级别，请单击“创建”  ，然后提供名称和描述。 在“统计信息”  和“事件”  选项卡上，选择想要收集的统计信息和事件。 在“事件”  选项卡上，可以选择对单个事件选择“包括上下文”  。 然后单击“保存”  。  
   

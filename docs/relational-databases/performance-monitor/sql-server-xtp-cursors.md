@@ -1,5 +1,6 @@
 ---
 title: SQL Server XTP 游标 | Microsoft Docs
+description: 了解 SQL Server XTP 游标性能对象，该对象包含与内部内存中 OLTP 引擎游标相关的计数器。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 84bf4654-3ef7-4d7f-a269-c8bb4ed4acad
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: afe09ef4736425943b5a7e31e74ca202155173fb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4b140d5efbe33b2c274b50eb34c6ee601a347e09
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730299"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458088"
 ---
 # <a name="sql-server-xtp-cursors"></a>SQL Server XTP 游标
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

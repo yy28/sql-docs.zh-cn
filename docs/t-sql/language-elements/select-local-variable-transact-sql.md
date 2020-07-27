@@ -1,5 +1,5 @@
 ---
-title: SELECT @local_variable (Transact-SQL) | Microsoft Docs
+title: SELECT @local_variable (Transact-SQL)
 ms.custom: ''
 ms.date: 09/06/2017
 ms.prod: sql
@@ -25,14 +25,15 @@ ms.assetid: 8e1a9387-2c5d-4e51-a1fd-a2a95f026d6f
 author: rothja
 ms.author: jroth
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||= azure-sqldw-latest||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 415c2ff263a4a501de441cc04c0f845a1e3592bb
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 2f1d8bad77c52fcabb3190e28767c945718e1d72
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81630168"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86910529"
 ---
 # <a name="select-local_variable-transact-sql"></a>SELECT @local_variable (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   将局部变量设置为表达式的值。  
@@ -48,38 +49,43 @@ SELECT { @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expressio
     [ ,...n ] [ ; ]  
 ```  
   
-## <a name="arguments"></a>参数  
-@local_variable   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
+
+@local_variable  
  要为其赋值的声明变量。  
   
-{= | += | -= | \*= | /= | %= | &= | ^= | |= }   
+{= \| += \| -= \| \*= \| /= \| %= \| &= \| ^= \| \|= }  
 将右边的值赋给左边的变量。  
   
 复合赋值运算符：  
-  |运算符后的表达式 |action |   
-  |-----|-----|  
-  | = | 将后面的表达式赋给变量。 |  
-  | += | 添加并赋值 |   
-  | -= | 相减并赋值 |  
-  | \*= | 乘并赋值 |  
-  | /= | 除并赋值 |  
-  | %= | 取模并赋值 |  
-  | &= | “位与”并赋值 |  
-  | ^= | “位异或”并赋值 |  
-  | \|= | “位或”并赋值 |  
-  
- *expression*  
- 为任意有效的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 此参数包含一个标量子查询。  
-  
-## <a name="remarks"></a>备注  
- SELECT @local_variable 通常用于将单个值返回到变量中  。 但是，如果 expression 是列的名称，则可返回多个值  。 如果 SELECT 语句返回多个值，则将返回的最后一个值赋给变量。  
-  
- 如果 SELECT 语句没有返回行，变量将保留当前值。 如果 expression 是不返回值的标量子查询，则将变量设为 NULL  。  
-  
- 一个 SELECT 语句可以初始化多个局部变量。  
-  
-> [!NOTE]  
->  包含变量赋值的 SELECT 语句不能也用于执行通常的结果集检索操作。  
+
+| 运算符后的表达式 | action |  
+| -------- | ------ |  
+| = | 将后面的表达式赋给变量。 |  
+| += | 添加并赋值 |  
+| -= | 相减并赋值 |  
+| \*= | 乘并赋值 |  
+| /= | 除并赋值 |  
+| %= | 取模并赋值 |  
+| &= | “位与”并赋值 |  
+| ^= | “位异或”并赋值 |  
+| \|= | “位或”并赋值 |  
+
+*expression*  
+为任意有效的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 此参数包含一个标量子查询。  
+
+## <a name="remarks"></a>备注
+
+SELECT @local_variable 通常用于将单个值返回到变量中  。 但是，如果 expression 是列的名称，则可返回多个值  。 如果 SELECT 语句返回多个值，则将返回的最后一个值赋给变量。  
+
+如果 SELECT 语句没有返回行，变量将保留当前值。 如果 expression 是不返回值的标量子查询，则将变量设为 NULL  。  
+
+一个 SELECT 语句可以初始化多个局部变量。  
+
+> [!NOTE]
+> 包含变量赋值的 SELECT 语句不能也用于执行通常的结果集检索操作。  
   
 ## <a name="examples"></a>示例  
   
@@ -99,7 +105,7 @@ SELECT @var1 AS 'Company Name';
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```  
+ ```
  Company Name  
  ------------------------------  
  Generic Name  
@@ -121,7 +127,7 @@ SELECT @var1 AS 'Company Name' ;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```  
+```
 Company Name  
 ----------------------------  
 NULL  
@@ -132,5 +138,3 @@ NULL
  [表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)   
  [复合运算符 (Transact-SQL)](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)  
-  
-  

@@ -1,5 +1,6 @@
 ---
 title: 监视磁盘使用情况 | Microsoft Docs
+description: 监视 SQL Server 的磁盘活动包括监视磁盘 I/O 和检测过度分页，以及隔离 SQL Server 创建的磁盘活动。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 1525449c-ea7d-4222-b294-1ba1fe99c9ac
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: d1ee155b97823b419623d0296928db5334c71e7f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2bf6f22b6a3b76694c89bd480b289ecd0db1dce5
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787480"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458480"
 ---
 # <a name="monitor-disk-usage"></a>监视磁盘使用情况
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

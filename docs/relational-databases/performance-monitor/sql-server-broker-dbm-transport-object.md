@@ -1,5 +1,6 @@
 ---
 title: SQL Server - Broker - DBM Transport 对象 | Microsoft Docs
+description: 了解 Broker/DBM Transport 性能对象，该对象包含报告 Service Broker 和数据库镜像的网络信息的性能计数器。
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: eddb60b6-20a9-416c-adf3-4bc1687944fa
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: bf22e4f825d29a107f86fb486924b40da5af3752
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 218fd5f50061161c1b94bc22cdaf94c3202cfb6a
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787327"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458664"
 ---
 # <a name="sql-server-broker---dbm-transport-object"></a>SQL Server Broker - DBM Transport 对象
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

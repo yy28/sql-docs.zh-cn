@@ -15,12 +15,12 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 395d639cd62894c91fbf0690467e60aaeac57bea
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d32a8c6a2096cab67917db7a464b70eaf16ff6f5
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727094"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484418"
 ---
 # <a name="scalar-udf-inlining"></a>标量 UDF 内联
 
@@ -29,7 +29,7 @@ ms.locfileid: "85727094"
 本文介绍了标量 UDF 内联，这是[智能查询处理](../../relational-databases/performance/intelligent-query-processing.md)功能套件下的一项功能。 此功能提高了在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)] 开始）中调用标量 UDF 的查询性能。
 
 ## <a name="t-sql-scalar-user-defined-functions"></a>T-SQL 标量用户定义函数
-在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中实现并返回单个数据值的用户定义函数 (UDF) 称为 T-SQL 标量用户定义函数。 T-SQL UDF 是一种跨 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询实现代码重用和模块化的巧妙方法。 某些计算（如复杂的业务规则）在命令性 UDF 窗体中更易表示。 UDF 有助于构建复杂的逻辑，而无需编写复杂 SQL 查询的专业知识。
+在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中实现并返回单个数据值的用户定义函数 (UDF) 称为 T-SQL 标量用户定义函数。 T-SQL UDF 是一种跨 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询实现代码重用和模块化的巧妙方法。 某些计算（如复杂的业务规则）在命令性 UDF 窗体中更易表示。 UDF 有助于构建复杂的逻辑，而无需编写复杂 SQL 查询的专业知识。 有关 UDF 的详细信息，请参阅[创建用户定义的函数（数据库引擎）](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)。
 
 ## <a name="performance-of-scalar-udfs"></a>标量 UDF 的性能
 标量 UDF 通常会由于以下原因而最终导致性能欠佳：
@@ -144,7 +144,7 @@ SELECT C_NAME, dbo.customer_category(C_CUSTKEY) FROM CUSTOMER;
     - `UDF`：嵌套/递归函数调用<sup>2</sup>。
     - 其他：关系操作，例如 `EXISTS`、`ISNULL`。
 - UDF 不会调用任何与时间相关的内部函数（例如 `GETDATE()`）或具有副作用的函数<sup>3</sup>（例如 `NEWSEQUENTIALID()`）。
-- UDF使用 `EXECUTE AS CALLER` 子句（如果未指定 `EXECUTE AS` 子句，则为默认行为）。
+- UDF 使用 `EXECUTE AS CALLER` 子句（如果未指定 `EXECUTE AS` 子句，则为默认行为）。
 - UDF 不引用表变量或表值参数。
 - 调用标量 UDF 的查询不会在其 `GROUP BY` 子句中引用标量 UDF 调用。
 - 使用 `DISTINCT` 子句在其选择列表中调用标量 UDF 的查询没有 `ORDER BY` 子句。
@@ -154,25 +154,31 @@ SELECT C_NAME, dbo.customer_category(C_CUSTKEY) FROM CUSTOMER;
 - UDF 不引用用户定义类型。
 - 没有签名添加到 UDF。
 - UDF 不是配分函数。
-- UDF 不包含对公用表表达式 (CTE) 的引用
-- UDF 不包含对内联后可能改变结果的内部函数（例如 @@ROWCOUNT）的引用（Microsoft SQL Server 2019 CU2 中添加的限制）。
-- UDF 不包含作为参数传递给标量 UDF 的聚合函数（Microsoft SQL Server 2019 CU2 中添加的限制）。
-- UDF 不引用内置视图，例如 OBJECT_ID（Microsoft SQL Server 2019 CU2 中添加的限制）。
--   UDF 不引用 XML 方法（Microsoft SQL Server 2019 CU4 中添加的限制）。
--   UDF 不包含带有 ORDER BY 而没有“TOP 1”的 SELECT（Microsoft SQL Server 2019 CU4 中添加的限制）。
--   UDF 不包含与 ORDER BY 子句结合进行赋值的 SELECT 查询，例如 SELECT @x = @x +1 FROM table ORDER BY column_name（Microsoft SQL Server 2019 CU4 中添加的限制）。
-- UDF 不包含多个 RETURN 语句（SQL Server 2019 CU5 中添加的限制）。
-- UDF 不可从 RETURN 语句调用（SQL Server 2019 CU5 中添加的限制）。
-- UDF 不引用 STRING_AGG 函数（SQL Server 2019 CU5 中添加的限制）。 
+- UDF 不包含对公用表表达式 (CTE) 的引用。
+- UDF 不包含对内联后可能改变结果的内部函数（例如 `@@ROWCOUNT`）<sup>4</sup>。
+- UDF 不包含作为参数传递给标量 UDF 的聚合函数<sup>4</sup>。
+- UDF 不会引用内置视图（如 `OBJECT_ID`）<sup>4</sup>。
+- UDF 不引用 XML 方法<sup>5</sup>。
+- UDF 不包含 SELECT（带 `ORDER BY`，不带`TOP 1` 子句）<sup>5</sup>。
+- UDF 不包含与 `ORDER BY` 子句（如 `SELECT @x = @x + 1 FROM table1 ORDER BY col1`）一起用于执行赋值的 SELECT 查询<sup>5</sup>。
+- UDF 不包含多个 RETURN 语句<sup>6</sup>。
+- 不会从 RETURN 语句调用 UDF<sup>6</sup>。
+- UDF 不引用 `STRING_AGG` 函数<sup>6</sup>。 
 
-<sup>1</sup> 带变量累计/聚合（例如 `SELECT @val += col1 FROM table1`）的 `SELECT` 不支持内联。
+<sup>1</sup> 带变量累计/聚合的 `SELECT` 不支持内联（例如 `SELECT @val += col1 FROM table1`）。
 
 <sup>2</sup> 递归 UDF 将仅内联到某个深度。
 
 <sup>3</sup> 结果取决于当前系统时间的内部函数与时间相关。 举例来说，可以更新某些内部全局状态的内部函数就是具有副作用的函数。 每次调用此类函数都会根据内部状态返回不同的结果。
 
+<sup>4</sup>[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU2 中添加的限制
+
+<sup>5</sup>[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU4 中添加的限制
+
+<sup>6</sup>[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5 中添加的限制
+
 > [!NOTE]
-> 有关针对内联资格方案的最新 T-SQL 标量 UDF 内联修复和更改，请参阅知识库文章：[修复：SQL Server 2019 中的标量 UDF 内联问题](https://support.microsoft.com/en-us/help/4538581/fix-scalar-udf-inlining-issues-in-sql-server-2019)。
+> 有关针对内联资格方案的最新 T-SQL 标量 UDF 内联修复和更改，请参阅知识库文章：[修复：SQL Server 2019 中的标量 UDF 内联问题](https://support.microsoft.com/help/4538581)。
 
 ### <a name="checking-whether-or-not-a-udf-can-be-inlined"></a>检查 UDF 是否可以内联
 对于每个 T-SQL 标量 UDF，[sys.sql_modules](../system-catalog-views/sys-sql-modules-transact-sql.md) 目录视图都包含一个名为 `is_inlineable` 的属性，指示 UDF 是否可内联。 
@@ -233,7 +239,8 @@ GROUP BY L_SHIPDATE, O_SHIPPRIORITY ORDER BY L_SHIPDATE
 OPTION (USE HINT('DISABLE_TSQL_SCALAR_UDF_INLINING'));
 ```
 
-`USE HINT` 查询提示优先于数据库范围配置或兼容级别设置。
+> [!TIP]
+> `USE HINT` 查询提示优先于数据库范围配置或兼容级别设置。
 
 也可使用 `CREATE FUNCTION` 或 `ALTER FUNCTION` 语句中的 INLINE 子句为特定 UDF 禁用标量 UDF 内联。
 例如：
@@ -271,13 +278,14 @@ END
 1. 查询级别联接提示可能不再有效，因为内联可能会引入新联接。 必须改为使用本地联接提示。
 1. 无法索引引用内联标量UDF的视图。 如果需要在此类视图上创建索引，请禁用对引用的 UDF 的内联。
 1. [动态数据屏蔽](../security/dynamic-data-masking.md)与 UDF 内联的行为可能存在一些差异。 在某些情况下（取决于 UDF 中的逻辑），内联可能是更保守的 w.r.t 屏蔽输出列。 如果 UDF 中引用的列不是输出列，则它们不会被屏蔽。 
-1. 如果 UDF 引用内置函数（如 `SCOPE_IDENTITY()`、`@@ROWCOUNT` 或 `@@ERROR`），内置函数返回的值将随内联而变化。 这种行为上的更改是因为内联更改了 UDF 中语句的范围。 从 Microsoft SQL Server 2019 CU2 开始，如果 UDF 引用特定的内部函数（例如 @@ROWCOUNT）将阻止内联。
+1. 如果 UDF 引用内置函数（如 `SCOPE_IDENTITY()`、`@@ROWCOUNT` 或 `@@ERROR`），内置函数返回的值将随内联而变化。 这种行为上的更改是因为内联更改了 UDF 中语句的范围。 从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU2 开始，如果 UDF 引用某些内部函数（例如 `@@ROWCOUNT`），则将阻止内联。
 
 ## <a name="see-also"></a>另请参阅
+[创建用户定义的函数（数据库引擎）](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)   
 [SQL Server 数据库引擎和 Azure SQL 数据库的性能中心](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     
 [查询处理体系结构指南](../../relational-databases/query-processing-architecture-guide.md)     
 [Showplan 逻辑运算符和物理运算符参考](../../relational-databases/showplan-logical-and-physical-operators-reference.md)     
 [联接](../../relational-databases/performance/joins.md)     
 [演示智能查询处理](https://aka.ms/IQPDemos)     
-[修复：SQL Server 2019 中的标量 UDF 内联问题](https://support.microsoft.com/en-us/help/4538581/fix-scalar-udf-inlining-issues-in-sql-server-2019)     
+[修复：SQL Server 2019 中的标量 UDF 内联问题](https://support.microsoft.com/help/4538581)     
 

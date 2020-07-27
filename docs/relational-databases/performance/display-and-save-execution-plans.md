@@ -1,5 +1,6 @@
 ---
 title: 显示和保存执行计划 | Microsoft Docs
+description: 了解如何显示执行计划以及如何使用 SQL Server Management Studio 将执行计划保存到 XML 格式的文件中。
 ms.custom: ''
 ms.date: 08/21/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.assetid: bcd6f094-c613-4835-ae19-4caaadb4bb17
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2d049990cd2c60db36105d3c03da36bc25b4f4b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 19c0cee8d1ff56167032f7a0ff918b3adee24056
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749542"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457286"
 ---
 # <a name="display-and-save-execution-plans"></a>显示和保存执行计划
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "85749542"
   
 执行计划以图形方式显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查询优化器选择的数据检索方法。 执行计划使用图标表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中特定语句和查询的执行开销，而不是使用 [SET SHOWPLAN_ALL](../../t-sql/statements/set-showplan-all-transact-sql.md) 或 [SET SHOWPLAN_TEXT](../../t-sql/statements/set-showplan-text-transact-sql.md) 语句生成的表格表示形式。 这种图形表示法对了解查询的性能特征非常有用。  
 
-虽然 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查询优化器只生成一个执行计划，但存在估计的执行计划和实际的执行计划的概念   。
+虽然 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查询优化器只生成一个执行计划，但存在估计的执行计划和实际的执行计划的概念 。
 -  [估计的执行计划](../../relational-databases/performance/display-the-estimated-execution-plan.md)将返回由查询优化器在编译时生成的执行计划。 生成估计的执行计划不会确实执行查询或批处理，因此不包含任何运行时信息，如实际资源使用量度量值或运行时警告。 
 -  [实际的执行计划](../../relational-databases/performance/display-an-actual-execution-plan.md)将在查询或批处理完成执行后返回查询优化器生成的执行计划。 这包括资源使用量度量值和任何运行时警告的相关信息。  
 

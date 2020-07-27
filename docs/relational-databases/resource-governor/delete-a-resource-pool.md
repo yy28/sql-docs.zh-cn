@@ -1,5 +1,6 @@
 ---
 title: 删除资源池 | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL 删除资源池。 你必须具有 CONTROL SERVER 权限。
 ms.custom: ''
 ms.date: 03/17/2016
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3bdd348b-6582-4ffa-80ef-d49e50596ce5
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 65ebdd2cfac33202437d0c6f515a838ed71e9534
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1b2494442986bd24febc90318502736faf5f2367
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720490"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457849"
 ---
 # <a name="delete-a-resource-pool"></a>删除资源池
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "85720490"
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，打开对象资源管理器，并依次逐步展开 **“管理”** 节点直至其中并包含 **“资源调控器”** 。  
   
-2.  右键单击要删除的资源池，然后单击“删除”  。  
+2.  右键单击要删除的资源池，然后单击“删除”。  
   
 3.  在 **“删除对象”** 窗口的 **“要删除的对象”** 列表中，将列出资源池。 若要删除资源池，请单击 **“确定”** 。  
 

@@ -1,5 +1,6 @@
 ---
 title: 创建资源池 | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL 创建资源池。 你必须具有 CONTROL SERVER 权限。
 ms.custom: ''
 ms.date: 03/17/2016
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 44dd0567-a4c8-4c72-89ff-e76f6ddef344
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 4ddcb42d6a91eab41cddf3beb53c0de6a6b25d36
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cc46e2e759dbfec54064975281101cb694039786
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720535"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457539"
 ---
 # <a name="create-a-resource-pool"></a>创建资源池
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,11 +44,11 @@ ms.locfileid: "85720535"
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，打开对象资源管理器，并依次逐步展开 **“管理”** 节点直至其中并包含 **“资源调控器”** 。  
   
-2.  右键单击“Resource Governor”  ，再单击“属性”  。  
+2.  右键单击“Resource Governor”，再单击“属性”。  
   
 3.  在 **“资源池”** 网格中，单击空行中的第一列。 此列标记有星号 (*)。  
   
-4.  双击“名称”  列中的空单元格。 键入要用于该资源池的名称。  
+4.  双击“名称”列中的空单元格。 键入要用于该资源池的名称。  
   
 5.  在行中单击或双击要更改的任何其他单元，然后输入新值。  
   

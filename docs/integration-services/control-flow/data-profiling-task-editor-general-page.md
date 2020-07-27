@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 46eb7c7f0834f864aba8e3951f4caf9092f5bb7b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8c1d3d2c727deea49e68e9f58e3ad0bf14245899
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294202"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919771"
 ---
 # <a name="data-profiling-task-editor-general-page"></a>数据事件探查任务编辑器（常规页）
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   可以使用 **“数据事件探查任务编辑器”** 的 **“常规”** 页配置以下选项：  
@@ -56,15 +56,15 @@ ms.locfileid: "71294202"
   
 |值|说明|  
 |-----------|-----------------|  
-|**文件连接**|将配置文件输出保存到文件，位置为文件连接管理器中指定的位置。<br /><br /> 注意：请在“目标”选项中指定要使用的文件连接管理器。 |  
-|**变量**|将配置文件输出保存到包变量。<br /><br /> 注意：请在“目标”选项中指定要使用的包变量。 |  
+|**文件连接**|将配置文件输出保存到文件，位置为文件连接管理器中指定的位置。<br /><br /> 注意：请在“目标”选项中指定要使用的文件连接管理器。|  
+|**变量**|将配置文件输出保存到包变量。<br /><br /> 注意：请在“目标”选项中指定要使用的包变量。|  
   
  **目标**  
  指定哪个文件连接管理器或包变量包含数据配置文件输出：  
   
--   如果将 **“目标类型”** 选项设置为 **“文件连接”** ，则 **“目标”** 选项显示可用文件连接服务器。 选择这些连接管理器中的一个，或选择“\<新建文件连接>”创建新的文件连接管理器。  
+-   如果将 **“目标类型”** 选项设置为 **“文件连接”** ，则 **“目标”** 选项显示可用文件连接服务器。 选择其中某个连接管理器，或选择“\<New File connection>”创建新的文件连接管理器。  
   
--   如果将 **“目标类型”** 选项设置为 **“变量”** ，则 **“目标”** 选项显示 **“目标”** 列表中可用的包变量。 选择这些变量中的一个，或选择“\<新建变量>”创建新变量。  
+-   如果将 **“目标类型”** 选项设置为 **“变量”** ，则 **“目标”** 选项显示 **“目标”** 列表中可用的包变量。 选择其中某个变量，或选择“\<New Variable>创建新变量。  
   
  **OverwriteDestination**  
  如果输出文件已经存在，则指定是否将其覆盖。 默认值为 **False**。 只有在“目标类型”选项设置为“文件连接”时才使用此属性的值。 当“目标类型”选项设置为变量时，任务将始终覆盖该变量以前的值。  

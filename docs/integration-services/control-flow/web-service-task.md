@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 343d3d0d16a19e6d7e1610eff84f6e1aa8ff860a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4db56206a629a4bf392ef56641564208ff1a9d3c
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293802"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913808"
 ---
 # <a name="web-service-task"></a>Web 服务任务
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Web 服务任务执行 Web 服务方法。 可以将 Web 服务任务用于下列目的：  
@@ -87,7 +87,7 @@ ms.locfileid: "71293802"
   
 ### <a name="options"></a>选项  
  **HTTPConnection**  
- 在列表中选择一个文件连接管理器，或单击“\<新建连接…>”，新建一个连接管理器  。  
+ 从列表中选择连接管理器，或单击“\<**New connection...**>”以创建新的连接管理器。  
   
 > [!IMPORTANT]  
 >  HTTP 连接管理器仅支持匿名身份验证和基本身份验证， 而不支持 Windows 身份验证。  
@@ -145,7 +145,7 @@ ms.locfileid: "71293802"
  **名称**  
  列出为 Web 方法提供的输入名称。  
   
- 类型   
+ 类型  
  列出输入的数据类型。  
   
 > [!NOTE]  
@@ -173,13 +173,13 @@ ms.locfileid: "71293802"
   
 #### <a name="outputtype--file-connection"></a>OutputType = 文件连接  
  **File**  
- 在列表中选择一个文件连接管理器，或单击“\<新建连接…>”，新建一个连接管理器  。  
+ 从列表中选择“文件连接管理器”，或单击“\<**New Connection...**>”创建新的连接管理器。  
   
  **相关主题：** [文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)、[文件连接管理器编辑器](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="outputtype--variable"></a>OutputType = 变量  
  **变量**  
- 从列表中选择变量，或单击“\<新建变量...>”，创建新的变量  。  
+ 在列表中选择变量，或单击“\<**New Variable...**>”创建新变量。  
   
  **相关主题：** [Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   

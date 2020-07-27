@@ -10,16 +10,16 @@ ms.topic: tutorial
 ms.assetid: 56105f3f-e500-4669-8c8e-acf434527727
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e2b43837de8617af559e2a810c89115e5a3963d3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 348ec6768d7a1eb47c77759c039d0a465aabed65
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71283262"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922223"
 ---
 # <a name="lesson-3-2-add-and-configure-logging"></a>第 3-2 课：添加和配置日志记录
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -39,7 +39,7 @@ ms.locfileid: "71283262"
   
 5.  也可以修改“说明”  。  
   
-6.  在“配置”列中，选择“\<New Connection>”以指定 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 写入日志信息的位置   。  
+6.  在“配置”列中，选择“\<New Connection>”以指定 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 写入日志信息的位置 。  
   
     在“文件连接管理器编辑器”对话框中，对“使用类型”选择“创建文件”，然后选择“浏览”     。 默认情况下，“选择文件”对话框将打开项目文件夹，但你可以将日志信息保存到任何位置  。  
   

@@ -1,5 +1,6 @@
 ---
 title: 创建工作负荷组 | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL 创建工作负荷组。 必须具有 CONTROL SERVER 权限。
 ms.custom: ''
 ms.date: 03/17/2016
 ms.prod: sql
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - workload groups [SQL Server], create
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 60d01508250c68bfb6143f5f53596fe9fefc4973
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: eb23f8926cff87651ba0feda1b398112dec930af
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720503"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86456706"
 ---
 # <a name="create-a-workload-group"></a>创建工作负荷组
 
@@ -26,7 +27,7 @@ ms.locfileid: "85720503"
   
 -   **开始之前：** [限制和局限](#LimitationsRestrictions)、[权限](#Permissions)  
   
--   若要创建工作负荷组，请使用：  [SQL Server Management Studio](#CreRPProp)、[Transact-SQL](#CreRPTSQL)  
+-   若要创建工作负荷组，请使用：[SQL Server Management Studio](#CreRPProp)、[Transact-SQL](#CreRPTSQL)  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
@@ -48,7 +49,7 @@ ms.locfileid: "85720503"
   
 1.  在对象资源管理器中，依次逐步展开 **“管理”** 节点直至其中包含要修改的工作负荷组的资源池。  
   
-2.  右键单击“工作负荷组”  文件夹，然后单击“新建工作负荷组”  。  
+2.  右键单击“工作负荷组”文件夹，然后单击“新建工作负荷组”。  
   
 3.  在 **“资源池”** 网格中，确保突出显示要添加工作负荷组的资源池。  
   

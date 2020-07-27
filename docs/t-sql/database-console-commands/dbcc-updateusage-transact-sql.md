@@ -1,5 +1,5 @@
 ---
-title: DBCC UPDATEUSAGE (Transact-SQL) | Microsoft Docs
+title: DBCC UPDATEUSAGE (Transact-SQL)
 ms.custom: ''
 ms.date: 11/14/2017
 ms.prod: sql
@@ -33,14 +33,15 @@ helpviewer_keywords:
 ms.assetid: b8752ecc-db45-4e23-aee7-13b8bc3cbae2
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: fa1bd6767a81142e115e02d242a54b9715bf78f8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2528ac49fb62a41bebe55cb50392cb306ec93edf
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85643855"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484194"
 ---
 # <a name="dbcc-updateusage-transact-sql"></a>DBCC UPDATEUSAGE (Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 报告目录视图中的页数和行数错误并进行更正。 这些错误可能导致 sp_spaceused 系统存储过程返回不正确的空间使用报告。
@@ -57,14 +58,16 @@ DBCC UPDATEUSAGE
 ) [ WITH [ NO_INFOMSGS ] [ , ] [ COUNT_ROWS ] ]   
 ```  
   
-## <a name="arguments"></a>参数  
- database_name | database_id  | 0  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
+database_name \| database_id \| 0   
 要对其空间使用统计信息进行报告和更正的数据库的名称或 ID。 如果指定 0，则使用当前数据库。 数据库名称必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。  
   
-*table_name* | *table_id* | *view_name* | *view_id*  
+table_name \| table_id \| view_name \| view_id     
 要对其空间使用统计信息进行报告和更正的表或索引视图的名称或 ID。 表和视图的名称必须符合有关标识符的规则。  
   
-*index_id* | *index_name*  
+index_id \| index_name   
 要使用的索引的 ID 或名称。 如果未指定，语句将对指定的表或视图的所有索引进行处理。  
   
 WITH  

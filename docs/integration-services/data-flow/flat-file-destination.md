@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c837241abfaebe3776a21e03a9c2cbf4c4f5ee9d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bf49a6cd604350ca9b3e73ee96bb6c61b1977a60
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292534"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920861"
 ---
 # <a name="flat-file-destination"></a>平面文件目标
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   平面文件目标将数据写入文本文件。 文本文件可以为带分隔符格式、固定宽度格式、固定宽度并使用行分隔符格式或右边未对齐格式。  
@@ -91,7 +91,7 @@ ms.locfileid: "71292534"
  查看可用目标列的列表。 使用拖放操作将可用目标列映射到输入列。  
   
  **输入列**  
- 查看本主题中以前选择的输入列。 可以通过使用 **“可用输入列”** 列表来更改映射。 选择“\<ignore>”可以将该列排除在输出之外。  
+ 查看本主题中以前选择的输入列。 可以通过使用 **“可用输入列”** 列表来更改映射。 选择 \<ignore> 可以将该列排除在输出之外。  
   
  **目标列**  
  查看每个可用的目标列，包括已映射或未映射的目标列。  

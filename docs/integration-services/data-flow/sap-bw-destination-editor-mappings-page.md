@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: dfa1f1d6-6b64-4331-bdc5-eaa8b7aa41a1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 31c6ab812081d66980002ed0138f5b1ad63f62b5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a2878b4691515c835165f764e09735bafb617b0f
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298095"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917863"
 ---
 # <a name="sap-bw-destination-editor-mappings-page"></a>SAP BW 目标编辑器（“映射”页）
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   使用 **“SAP BW目标编辑器”** 的 **“映射”** 页将输入列映射到目标列。  
@@ -77,7 +77,7 @@ ms.locfileid: "71298095"
  **输入列**  
  查看您所选的输入列。  
   
- 要将不同输入列映射到相同目标列，请在该列表中选择不同输入列。 要删除映射，请选择“\<ignore>”以从输出中排除该输入列。  
+ 要将不同输入列映射到相同目标列，请在该列表中选择不同输入列。 要删除映射，请选择 \<ignore> 从输出中排除该输入列。  
   
  **目标列**  
  查看每个可用目标列，而不管是否已对该列进行映射。  

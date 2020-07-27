@@ -14,16 +14,16 @@ f1_keywords:
 ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6d3912e2b5cbf8051348191cf3efb6ed2d20d551
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 76257fd464a7107297d609bfb6a4ef150d6f58bc
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74687195"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913625"
 ---
 # <a name="azure-storage-connection-manager"></a>Azure 存储连接管理器
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 通过 Azure 存储连接管理器，SQL Server Integration Services (SSIS) 包可与 Azure 存储帐户进行连接。 连接管理器是[用于 Azure 的 SQL Server Integration Services (SSIS) 功能包](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)的一个组件。 
   
@@ -33,11 +33,15 @@ ms.locfileid: "74687195"
 
 - **服务：** 指定要连接到的存储服务。
 - **帐户名：** 指定存储帐户名。
-- **身份验证：** 指定要使用的身份验证方法。 支持 AccessKey 和 ServicePrincipal 身份验证。
+- **身份验证：** 指定要使用的身份验证方法。 支持 AccessKey、ServicePrincipal 和 SharedAccessSignature 身份验证。
     - **AccessKey：** 指定此身份验证方法的帐户密钥  。
     - **ServicePrincipal：** 对于此身份验证方法，请指定服务主体的应用程序 ID、应用程序密钥和租户 ID    。
       要使“测试连接”起作用，至少应向服务主体分配存储帐户的“存储 Blob 数据读取器”角色   。
       有关详细信息，请参阅[在 Azure 门户中使用 RBAC 授予对 Azure Blob 和队列数据的访问权限](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal)。
+    - **SharedAccessSignature：** 对于此身份验证方法，请至少指定共享访问签名的令牌。
+      若要测试连接，请另外指定要测试的资源范围。 可能是“服务”、“容器”或“Blob”  。
+      对于“容器”和“Blob”，请分别指定容器名称和 blob 路径 。
+      有关详细信息，请参阅 [Azure 存储共享访问签名概述](https://docs.microsoft.com/azure/storage/common/storage-sas-overview)。
 - **环境：** 指定托管存储帐户的云环境。
 
 ## <a name="managed-identities-for-azure-resources-authentication"></a>Azure 资源身份验证的托管标识
@@ -45,16 +49,16 @@ ms.locfileid: "74687195"
 
 有关 Azure 存储身份验证的常规信息，请参阅[使用 Azure Active Directory 验证对 Azure 存储的访问权限](https://docs.microsoft.com/azure/storage/common/storage-auth-aad)。 对 Azure 存储使用托管标识身份验证：
 
-1. [从 Azure 门户中查找数据工厂托管标识](https://docs.microsoft.com/azure/data-factory/data-factory-service-identity)。 转到数据工厂的“属性”  。 复制“托管标识应用 ID”（非托管标识对象 ID）   。
+1. [从 Azure 门户中查找数据工厂托管标识](https://docs.microsoft.com/azure/data-factory/data-factory-service-identity)。 转到数据工厂的“属性”。 复制“托管标识应用 ID”（非托管标识对象 ID） 。
 
 1. 在存储帐户中向托管标识授予适当权限。 有关角色的更多详细信息，请参阅[使用 RBAC 管理对 Azure 存储数据的访问权限](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal)。
 
-    - 作为源  ，在访问控制 (IAM) 中，至少授予“存储 Blob 数据读取器”  角色。
-    - 作为目标  ，在访问控制 (IAM) 中，至少授予“存储 Blob 数据参与者”  角色。
+    - 作为源，在访问控制 (IAM) 中，至少授予“存储 Blob 数据读取器”角色。
+    - 作为目标，在访问控制 (IAM) 中，至少授予“存储 Blob 数据参与者”角色。
 
 然后，为 Azure 存储连接管理器配置托管标识身份验证。 完成此操作的方法有两种：
 
-- **在设计时进行配置。** 在 SSIS 设计器中，双击 Azure 存储连接管理器以打开“Azure 存储连接管理器编辑器”  。 选择“使用托管标识在 Azure 上进行身份验证”  。
+- **在设计时进行配置。** 在 SSIS 设计器中，双击 Azure 存储连接管理器以打开“Azure 存储连接管理器编辑器”。 选择“使用托管标识在 Azure 上进行身份验证”。
     > [!NOTE]
     >  目前，当你在 SSIS 设计器或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 中运行 SSIS 包时，此选项不生效（表明托管标识身份验证不起作用）。
     

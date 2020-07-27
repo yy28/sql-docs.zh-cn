@@ -14,16 +14,16 @@ ms.assetid: 68dbdf81-032c-4a73-99f6-41420e053980
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.openlocfilehash: 3d458e7696719c383b03a5cc3f259de08e4b8c37
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6603041f72a434895aab20b5ab22bf771c90dcac
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68262784"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921243"
 ---
 # <a name="upgrade-integration-services-packages"></a>升级 Integration Services 包
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   在将 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 实例升级到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的当前版本时，现有的 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 包不会自动升级到当前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所使用的包格式。 您必须选择一种升级方法并手动升级包。  

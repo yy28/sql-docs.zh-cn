@@ -1,5 +1,6 @@
 ---
 title: SQL Server - Wait Statistics 对象 | Microsoft Docs
+description: 了解“SQLServer:Wait Statistics”性能对象，该对象包含报告有关等待状态的性能计数器。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cb7f917d-4291-4115-9b78-ee7692ebbb2d
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: b5b9a2ccdd73150eeaa1dda8403c4b73aed03009
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 64a21ac3072869f74c71997be5160b55758fc917
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758914"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457390"
 ---
 # <a name="sql-server-wait-statistics-object"></a>SQL Server Wait Statistics 对象
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "85758914"
   
  对象中的每个计数器均包含以下实例：  
   
-|Item|说明|  
+|项|说明|  
 |----------|-----------------|  
 |**平均等待时间(ms)**|所选类型等待的平均等待时间。|  
 |**每秒的累积等待时间(ms)**|所选类型等待的每秒累积等待时间。|  

@@ -1,5 +1,6 @@
 ---
 title: SQL Server - Workload Group Stats 对象 | Microsoft Docs
+description: 了解 SQLServer:Workload Group Stats 对象包含报告，该对象包含报告 Resource Governor 工作负荷组统计信息的性能计数器。
 ms.custom: ''
 ms.date: 12/04/2015
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ca20e4f6-50ec-4456-900d-87d280fde2b3
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 1413ab35860b20a80e1fcae07a0aa5534c1e3965
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6a189c02caaef100b2531b20a986befc5a069ba6
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758886"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458109"
 ---
 # <a name="sql-server-workload-group-stats-object"></a>SQLServer，Workload Group Stats 对象
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

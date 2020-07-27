@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 13ab80fe810559105027070e15ca64c87ddc4161
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3ef2d8078dedfb15c1f4be27d4970c7eaaf4731a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77903920"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919393"
 ---
 # <a name="derive-column-values-with-the-derived-column-transformation"></a>使用派生列转换派生列值
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   若要添加和配置派生列转换，包必须已包含至少一个数据流任务和一个源。  
@@ -48,7 +48,7 @@ ms.locfileid: "77903920"
     > [!NOTE]  
     >  如果表达式无效，表达式文本将突出显示，列上的工具提示将对错误进行说明。  
   
-7.  在“派生列”列表中，选择“\<作为新列添加>”以将表达式的计算结果写入新列，或选择一个现有列以用计算结果对其进行更新。  
+7.  在“派生列”列表中，选择“\<add as new column>”以将表达式的计算结果写入新列，或选择一个现有列以用计算结果对其进行更新 。  
   
      如果选择使用新列， **“派生列转换编辑器”** 对话框将对表达式求值，并根据数据类型、长度、精度、小数位数和代码页为列指定数据类型。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "77903920"
   
 10. 若要配置错误输出，请单击 **“配置错误输出”** 。 有关详细信息，请参阅 [Debugging Data Flow](../../../integration-services/troubleshooting/debugging-data-flow.md)。  
   
-11. 单击“确定”。   
+11. 单击“确定”。  
   
 12. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   

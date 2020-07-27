@@ -1,5 +1,6 @@
 ---
 title: SQL Server - Broker TO Statistics 对象 | Microsoft Docs
+description: 了解 SQLServer:Broker TO Statistics 性能对象，该对象报告有关 Service Broker 请求传输对象的信息。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: b5bc5dde-e540-4848-8aa3-5735c51df2fb
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 11f6ac4dbc4c4955b05f43ce65f5da231820c3da
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a3d71f2d4f3f523295c04b099e43415df5b0834b
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85656510"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458659"
 ---
 # <a name="sql-server-broker-to-statistics-object"></a>SQL Server Broker TO Statistics 对象
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  SQLServer:Broker TO Statistics 性能对象报告有关 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 对话框请求传输对象的次数以及传输对象写入 **tempdb**中的频率的信息。  
+  SQLServer:Broker TO Statistics 性能对象报告有关 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 对话框请求传输对象的次数以及传输对象写入 tempdb 中的频率的信息。  
   
  传输对象记录 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 对话框的消息传输状态。 这些对象存储在内存中。 为了释放内存， [!INCLUDE[ssSB](../../includes/sssb-md.md)] 会定期将各批非活动传输对象写入 **tempdb**的工作表中。  
   

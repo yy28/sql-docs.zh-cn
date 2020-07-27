@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 03edc659-e76d-48c0-a749-5f1899b6b507
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b374955ea4a07cd94de88202fe02ffbb572d0a1c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 52368632a7e2d871f91f4e7c60aad0a7f03dbcf9
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293652"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923263"
 ---
 # <a name="copy-a-package-in-sql-server-data-tools"></a>在 SQL Server Data Tools 中复制包
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   此主题介绍如何通过复制现有包来创建新的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包，以及如何更新新包的 **Name** 和 **GUID** 属性。  
@@ -37,7 +37,7 @@ ms.locfileid: "71293652"
   
 3.  验证已在解决方案资源管理器中选择要复制的包，或者包含该包的 SSIS 设计器的选项卡是活动的选项卡。  
   
-4.  在“文件”菜单上，单击“将\<包名>另存为”。  
+4.  在“文件”菜单上，单击“将 \<package name> 另存为”。  
   
     > [!NOTE]  
     >  必须在 SSIS 设计器中打开包，然后“另存为”  选项才会出现在“文件”  菜单中。  
@@ -52,7 +52,7 @@ ms.locfileid: "71293652"
   
 9. （可选）单击 **“控制流”** 选项卡的背景，并单击 **“属性”** 。  
   
-10. 在“属性”窗口中，单击 ID 属性的值，然后在下拉列表中单击“\<生成新 ID>”。  
+10. 在“属性”窗口中，单击 ID 属性的值，然后在下拉列表中单击 \<Generate New ID>。  
   
 11. 在 **“文件”** 菜单上，单击 **“保存选定项”** ，以保存新建的包。  
   

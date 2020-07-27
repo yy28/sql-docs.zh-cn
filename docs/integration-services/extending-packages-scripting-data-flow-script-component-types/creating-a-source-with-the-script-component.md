@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 547c4179-ea82-4265-8c6f-04a2aa77a3c0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6b3362c4761d6ad17618a2c390ada247be9071f1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7e936a0afefa71969cf9e27c2c222d8780532610
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296449"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914130"
 ---
 # <a name="creating-a-source-with-the-script-component"></a>使用脚本组件创建源
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的数据流中的源组件用于从数据源加载数据以传递到下游转换和目标。 通常通过现有连接管理器连接数据源。  
@@ -64,7 +64,7 @@ ms.locfileid: "71296449"
 -   您可能希望创建一个或多个附加输出，如包含意外值的行的模拟错误输出。 使用“添加输出”和“删除输出”按钮可以管理源组件的输出   。 所有输入行都定向到所有可用输出，除非你还为以下一些输出的 ExclusionGroup 属性指定了相同的非零值，你要在这些输出中将每一行只定向到共享同一 ExclusionGroup 值的输出之一   。 用于标识 ExclusionGroup 的所选特定整数值没有特殊要求  。  
   
     > [!NOTE]  
-    >  如果不希望输出所有行，还可以对单个输出使用非零 ExclusionGroup 属性值  。 但是，在这种情况下，必须为希望发送给输出的每一行显式调用 DirectRowTo\<outputbuffer> 方法  。  
+    >  如果不希望输出所有行，还可以对单个输出使用非零 ExclusionGroup 属性值  。 但是，在这种情况下，必须为希望发送给输出的每一行显式调用 DirectRowTo\<outputbuffer> 方法。  
   
 -   您可以为输出指定一个友好名称。 随后，将使用在自动生成的代码中创建的类型化取值函数属性，在脚本中通过输出的名称来引用输出。  
   

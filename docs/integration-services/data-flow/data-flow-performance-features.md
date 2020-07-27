@@ -23,16 +23,16 @@ helpviewer_keywords:
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0c5c86d90536d1ba7c8acd5402317ff364ffdc67
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ec9af02a6c7259741e75eae826bc9e15afe3aa80
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73637958"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86906733"
 ---
 # <a name="data-flow-performance-features"></a>数据流性能特点
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   本主题针对如何设计 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包提供建议，以避免出现常见性能问题。 本主题还提供有关可以用于对包的性能进行故障排除的功能和工具的信息。  
@@ -102,7 +102,7 @@ ms.locfileid: "73637958"
  无论采用何种数据流组件，为了改善性能您应该遵循下面两个通用指导原则：优化查询和避免不必要的字符串。  
   
 #### <a name="optimize-queries"></a>优化查询  
- 大量数据流组件都将在从源中提取数据时，或在查询操作中创建引用表时使用查询。 默认查询使用 SELECT * FROM \<表名> 语法。 这种类型的查询返回源表中的所有列。 在设计时使所有列可用，这意味着可以选择任意列作为查找列、传递列或源列。 但是，在选择了要使用的列后，您应该修改查询使其只包括那些所选择的列。 删除多余的列可以使包中的数据流更高效，因为列越少则创建的行越小。 因为行越小，可以置入一个缓冲区的行就越多，对数据集中所有行进行处理的工作量也就越少。  
+ 大量数据流组件都将在从源中提取数据时，或在查询操作中创建引用表时使用查询。 默认查询使用 SELECT * FROM \<tableName> 语法。 这种类型的查询返回源表中的所有列。 在设计时使所有列可用，这意味着可以选择任意列作为查找列、传递列或源列。 但是，在选择了要使用的列后，您应该修改查询使其只包括那些所选择的列。 删除多余的列可以使包中的数据流更高效，因为列越少则创建的行越小。 因为行越小，可以置入一个缓冲区的行就越多，对数据集中所有行进行处理的工作量也就越少。  
   
  您可以键入查询或使用查询生成器来构造查询。  
   
@@ -178,7 +178,7 @@ ms.locfileid: "73637958"
   
 -   technet.microsoft.com 上的技术文章 [Integration Services：性能优化技术](https://go.microsoft.com/fwlink/?LinkId=98900)  
   
--   SQLCAT 针对 BI 和 Analytics 的指南中的技术文章[通过将同步转换拆分为多个任务来增加管道的吞吐量](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20BI%20and%20Analytics.pdf) 
+-   SQLCAT 针对 BI 和 Analytics 的指南中的技术文章[通过将同步转换拆分为多个任务来增加管道的吞吐量](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20BI%20and%20Analytics.pdf)
   
 -   msdn.microsoft.com 上的技术文章 [数据加载性能指南](https://go.microsoft.com/fwlink/?LinkId=220816)。  
   

@@ -1,5 +1,6 @@
 ---
 title: 监视 CPU 使用率 | Microsoft Docs
+description: 监视 SQL Server 实例，以确定 CPU 使用率是否在正常范围内。 使用系统监视器查看 CPU 运行线程所花费的时间。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 2a02a3b6-07b2-4ad0-8a24-670414d19812
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 0ba69baf585aca6d6dd30c6a0ab0016a76ef6047
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2e81db69a70a54365ffe7da6fbe9933bb98848db
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787471"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458551"
 ---
 # <a name="monitor-cpu-usage"></a>监视 CPU 使用率
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +49,7 @@ ms.locfileid: "85787471"
   
      对应于处理器执行用户进程（例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]）所用时间的百分比。  
   
--   **System: Processor Queue Length**  
+-   **系统：Processor Queue Length**  
   
      对应于等待处理器时间的线程数。 当一个进程的线程需要的处理器循环数超过可获得的循环数时，就产生了处理器瓶颈。 如果有很多进程在争用处理器时间，可能需要安装一个速度更快的处理器。 如果使用的是多处理器系统，则可以增加一个处理器。  
   

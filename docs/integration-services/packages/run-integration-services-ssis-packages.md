@@ -21,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fe82e7d6746f3a5fc76fda3f960f069ef4345525
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 29d9fce968a000a2212ada9776d1b5f3a812c25f
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287381"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919155"
 ---
 # <a name="run-integration-services-ssis-packages"></a>运行 Integration Services (SSIS) 包
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   要运行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包，您可以根据包的存储位置使用某个工具。 下表中列出了这些工具。  
@@ -54,8 +54,8 @@ ms.locfileid: "79287381"
 |**dtexecui**<br /><br /> 有关详细信息，请参阅[执行包实用工具 (DtExecUI) 用户界面参考](../../integration-services/packages/execute-package-utility-dtexecui-ui-reference.md)|否|是|是|  
 |**SQL Server 代理**<br /><br /> 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业计划运行包。<br /><br /> 有关详细信息，请参阅 [SQL Server Agent Jobs for Packages](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)。|是|是|是|  
 |**内置存储过程**<br /><br /> 有关详细信息，请参阅 [catalog.start_execution（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)|是|否|否|  
-|托管 API，通过使用 <xref:Microsoft.SqlServer.Management.IntegrationServices> 命名空间中的类型和成员 |是|否|否|  
-|托管 API，通过使用 <xref:Microsoft.SqlServer.Dts.Runtime> 命名空间中的类型和成员 |目前不可用|是|是|  
+|托管 API，通过使用 <xref:Microsoft.SqlServer.Management.IntegrationServices> 命名空间中的类型和成员|是|否|否|  
+|托管 API，通过使用 <xref:Microsoft.SqlServer.Dts.Runtime> 命名空间中的类型和成员|目前不可用|是|是|  
 
 ## <a name="execution-and-logging"></a>执行和日志记录  
  可以启用[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包进行日志记录，这样就可以在日志文件中捕获运行时信息。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)。  
@@ -85,7 +85,7 @@ ms.locfileid: "79287381"
   
 1.  在“解决方案资源管理器”中，右键单击包含要运行的包的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目文件夹，然后单击“属性”  。  
   
-2.  在“\<项目名称> 属性页”  对话框中，单击“生成”  。  
+2.  在“\<project name>属性页”对话框中，单击“生成” 。  
   
 3.  更新 OutputPath 属性中的值以指定要用于设计时部署的文件夹，然后单击“确定”  。  
 
@@ -156,7 +156,7 @@ ms.locfileid: "79287381"
 ###  <a name="set-the-options-on-the-advanced-tab"></a><a name="advanced"></a> 设置“高级”选项卡上的选项  
  使用“高级”选项卡可以管理属性和其他包设置。  
   
- “添加”  、“编辑”  、“删除”   
+ “添加”  、“编辑”  、“删除”  
  单击以便添加、编辑或删除某一属性。  
   
  **日志记录级别**  

@@ -1,5 +1,5 @@
 ---
-title: DBCC SHOWCONTIG (Transact-SQL) | Microsoft Docs
+title: DBCC SHOWCONTIG (Transact-SQL)
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql
@@ -23,14 +23,15 @@ helpviewer_keywords:
 ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 3e177015f1d17ff28fe702a4c5998f97999b66ec
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dd596c6915c7df811ff06e7aa5a75472ee106a68
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882026"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485234"
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
+
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 显示指定的表或视图的数据和索引的碎片信息。
@@ -38,7 +39,7 @@ ms.locfileid: "85882026"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 请改用 [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)。  
   
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)） 
+适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -61,11 +62,13 @@ DBCC SHOWCONTIG
     ]  
 ```  
   
-## <a name="arguments"></a>参数  
- *table_name* | *table_id* | *view_name* | *view_id*  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
+ table_name \| table_id \| view_name \| view_id     
  要检查碎片信息的表或视图。 如果未指定，则检查当前数据库中的所有表和索引视图。 若要获取表或视图 ID，请使用 [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md) 函数。  
   
- *index_name* | *index_id*  
+ index_name \| index_id   
  要检查碎片信息的索引。 如果未指定，则该语句将处理指定表或视图的基本索引。 若要获取索引 ID，请使用 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) 目录视图。  
   
  WITH  
@@ -166,7 +169,7 @@ DBCC SHOWCONTIG 可确定表是否高度碎片化。 在对表进行数据修改
 -   重新生成索引。  
      使用 REBUILD 和 ALTER INDEX 重新生成索引。 有关详细信息，请参阅 [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)。  
   
- 结果集中的“每页的平均可用字节数”和“平均  页密度(满)”统计信息指示了索引页的填满程度。 **对于没有许多随机插入的索引，** “每页的平均可用字节数”应该较小，“平均  页密度(满)”数应该较大。 使用指定的 FILLFACTOR 选项删除并重建索引可改善统计信息。 另外，REORGANIZE 和 ALTER INDEX 可根据其 FILLFACTOR 选项压缩索引，从而改善统计信息。
+结果集中的“每页的平均可用字节数”和“平均  页密度(满)”统计信息指示了索引页的填满程度。 **对于没有许多随机插入的索引，** “每页的平均可用字节数”应该较小，“平均  页密度(满)”数应该较大。 使用指定的 FILLFACTOR 选项删除并重建索引可改善统计信息。 另外，REORGANIZE 和 ALTER INDEX 可根据其 FILLFACTOR 选项压缩索引，从而改善统计信息。
   
 > [!NOTE]  
 >  如果索引有很多随机插入和很满的页，则其页拆分数将增加。 这将导致更多的碎片。  

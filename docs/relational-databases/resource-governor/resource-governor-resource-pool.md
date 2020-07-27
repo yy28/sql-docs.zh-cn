@@ -1,5 +1,6 @@
 ---
 title: 资源调控器资源池 | Microsoft Docs
+description: SQL Server 资源调控器指定针对传入应用程序请求可在资源池内使用的 CPU、物理 IO 和内存的使用量的限制。
 ms.custom: ''
 ms.date: 10/20/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 0236841f3f3c6944d411fd18cb0222afb1802947
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bfc4c3eb6562c6424ecff4cfa8f311afe0a3510c
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729276"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457813"
 ---
 # <a name="resource-governor-resource-pool"></a>资源调控器资源池
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

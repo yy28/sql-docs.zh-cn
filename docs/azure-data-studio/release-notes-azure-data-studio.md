@@ -8,17 +8,33 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 07/15/2020
-ms.openlocfilehash: 3f6766e32369c2002b6da7df62646572a4cf8507
-ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
+ms.date: 07/17/2020
+ms.openlocfilehash: 5acbadb8d019b6d7d468f756bd25b70d890251c8
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86406250"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458882"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 发行说明
 
 **[下载并安装最新版本！](download.md)**
+
+## <a name="july-2020-hotfix"></a>2020 年 7 月（修补程序）
+
+2020 年 7 月 17 日 &nbsp; / &nbsp; 版本：1.20.1
+
+&nbsp;
+
+| 更改 | 详细信息 |
+| :----- | :------ |
+| 修补了 bug #11372“对象资源管理器拖放表不正确地包装了表名” | [#11372](https://github.com/microsoft/azuredatastudio/issues/11372)  |
+| 修补了 bug #11356“深色主题现为默认主题” | [#11356](https://github.com/microsoft/azuredatastudio/issues/11356)  |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issue"></a>已知问题
+
+- 某些用户已报告此版本中包含的新 Microsoft.Data.SqlClient v2.0.0 的连接错误。 用户已[按照以下说明](https://github.com/microsoft/azuredatastudio/issues/11367#issuecomment-659614111)成功连接
 
 ## <a name="july-2020"></a>2020 年 7 月
 
@@ -360,7 +376,7 @@ ms.locfileid: "86406250"
 
 | 更改 | 详细信息 |
 | :----- | :------ |
-| 将“服务器”选项卡重命名为“连接”  | |
+| 将“服务器”选项卡重命名为“连接” | |
 | 将 Azure 资源浏览器调整为“连接”下的 Azure viewlet | 用户现在可以在“连接”视图中通过 Azure viewlet 查看其 Azure SQL 实例，还可展开以查看每个服务器或数据库下的对象。|
 | SQL 笔记本改进 | &bull; &nbsp; 在工具栏中添加了用于清除所有单元格输出的按钮 <br/>&bull; &nbsp; 在工具栏中添加了用于运行所有单元格的按钮 <br/>&bull; &nbsp; 固定连接名称，而不是“附加到”下拉列表中的服务器名称（如果已设置） <br/>&bull; &nbsp; 修复了在使用相对图像路径时 markdown 中不呈现图像的问题 <br/>&bull; &nbsp; 改进了笔记本网格中的功能 - 添加了双击自动调整列尺寸功能和改进了鼠标滑轮支持 <br/>&bull; &nbsp; 改进了通过笔记本安装 Python 时的错误处理和 Python 安装复原能力 <br/>&bull; &nbsp; 改进了选择笔记本单元时的“全选”功能 <br/>&bull; &nbsp; 改进了笔记本的连接，防止关闭笔记本和影响对象资源管理器连接 <br/>&bull; &nbsp; 改进了笔记本体验，在笔记本断开连接时向用户显示消息，并且需要连接才能运行单元<br/>&bull; &nbsp; 改进了对未保存笔记本的支持，使其在 ADS 再次启动时在 ADS 中解除冻结 |
 | 解决了 Bug 和问题。 | 请参阅 [GitHub 上的 Bug 和问题](https://github.com/Microsoft/azuredatastudio/milestone/26?closed=1)。 |

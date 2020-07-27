@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6cce219b5e5d5d324e5e116bb9f55a931d7caaf8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c58323e0684b7b3e0397854cf6abec148f616248
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287701"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914013"
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC 数据库
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   一个 Oracle CDC 实例与在目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上具有相同名称的一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库相关联。 此数据库称为 Oracle CDC 数据库（或 CDC 数据库）。  
@@ -49,7 +49,7 @@ ms.locfileid: "79287701"
  在创建 CDC 数据库和设置 CDC 源 Oracle 表时，CDC 数据库所有者可授予镜像表的 SELECT 权限并且定义 SQL Server CDC 访问控制角色以便控制谁可以访问更改数据。  
   
 ## <a name="mirror-tables"></a>镜像表  
- 对于 Oracle 源数据库中的每个捕获表 \<架构名称>.\<表名称>，都将在 CDC 数据库中使用相同的架构和表名称创建一个类似的空表。 具有架构名称 `cdc` （不区分大小写）的 Oracle 源表无法捕获，因为 `cdc` 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 架构是为 SQL Server CDC 保留的。  
+ 对于 Oracle 源数据库中的每个捕获表 \<schema-name>.\<table-name>，将使用相同的架构和表名称在 CDC 数据库中创建一个类似的空表。 具有架构名称 `cdc` （不区分大小写）的 Oracle 源表无法捕获，因为 `cdc` 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 架构是为 SQL Server CDC 保留的。  
   
  镜像表是空的；在其中不存储任何数据。 它们用于启用 Oracle CDC 实例使用的标准 SQL Server CDC 基础结构。 为了防止数据插入或更新到镜像表中，对于 PUBLIC 将拒绝所有 UPDATE、DELETE 和 INSERT 操作。 这将确保不能修改镜像表。  
   

@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: aa6235337aab70ed826a5507e7bd8ff2a45c4636
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7e265f95741ba3957902e7f502232bc4c08bbcbd
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71286582"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914224"
 ---
 # <a name="understanding-the-script-component-object-model"></a>了解脚本组件对象模型
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   如[脚本组件的编码和调试](../../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)中所述，脚本组件项目包含三个项目项：  
@@ -119,27 +119,27 @@ public override void PreExecute()
   
 -   每个所选输入列的已命名类型化取值函数属性。 这些属性是只读或读/写的，取决于在“脚本转换编辑器”的“输入列”页中为该列指定的“使用类型”    。  
   
--   每个所选输入列的 \<column>_IsNull 属性  。 此属性也是只读或读/写的，取决于为该列指定的“使用类型”  。  
+-   每个所选输入列的 \<column>_IsNull 属性。 此属性也是只读或读/写的，取决于为该列指定的“使用类型”  。  
   
--   为每个已配置的输出使用 DirectRowTo\<outputbuffer> 方法  。 在将行筛选到位于同一 ExclusionGroup 中的多个输出之一时，将使用这些方法  。  
+-   每个已配置输出的 DirectRowTo\<outputbuffer> 方法。 在将行筛选到位于同一 ExclusionGroup 中的多个输出之一时，将使用这些方法  。  
   
 -   一个 NextRow 函数，用于获取下一个输入行，以及一个 EndOfRowset 函数，用于确定最后一个数据缓冲区是否已经处理   。 使用在 UserComponent 基类中实现的输入处理方法时，通常不需要这些函数  。 下一节提供有关 UserComponent 基类的详细信息  。  
   
 #### <a name="what-the-componentwrapper-project-item-provides"></a>ComponentWrapper 项目项提供的内容  
  ComponentWrapper 项目项包含从 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 派生的名为 UserComponent 的类  。 要用来编写自定义代码的 ScriptMain 类又派生自 UserComponent   。 UserComponent 类包含以下方法  ：  
   
--   ProcessInput 方法的重写实现  。 这是数据流引擎在运行时继调用 PreExecute 方法后调用的下一个方法，该方法可被调用多次  。 ProcessInput 将处理过程移交给 \<inputbuffer>_ProcessInput 方法   。 然后 ProcessInput 方法检查是否已到达输入缓冲区的末尾，如果已到达缓冲区末尾，则调用可重写的 FinishOutputs 方法和私有 MarkOutputsAsFinished 方法    。 然后，MarkOutputsAsFinished 方法对最后一个输出缓冲区调用 SetEndOfRowset   。  
+-   ProcessInput 方法的重写实现  。 这是数据流引擎在运行时继调用 PreExecute 方法后调用的下一个方法，该方法可被调用多次  。 ProcessInput 将处理过程移交给 \<inputbuffer>_ProcessInput 方法 。 然后 ProcessInput 方法检查是否已到达输入缓冲区的末尾，如果已到达缓冲区末尾，则调用可重写的 FinishOutputs 方法和私有 MarkOutputsAsFinished 方法    。 然后，MarkOutputsAsFinished 方法对最后一个输出缓冲区调用 SetEndOfRowset   。  
   
--   \<inputbuffer>_ProcessInput 方法的可重写实现  。 此默认实现只是遍历每个输入行并调用 \<inputbuffer>_ProcessInputRow  。  
+-   \<inputbuffer>_ProcessInput 方法的可重写实现。 此默认实现只是遍历每个输入行并调用 \<inputbuffer>_ProcessInputRow。  
   
--   \<inputbuffer>_ProcessInputRow 方法的可重写实现  。 默认实现为空。 通常会重写此方法以编写自定义数据处理代码。  
+-   \<inputbuffer>_ProcessInputRow 方法的可重写实现。 默认实现为空。 通常会重写此方法以编写自定义数据处理代码。  
   
 #### <a name="what-your-custom-code-should-do"></a>自定义代码应执行的操作  
  可以使用以下方法在 ScriptMain 类中处理输入  ：  
   
--   重写 \<inputbuffer>_ProcessInputRow 以便在每个输入行通过时处理其中的数据  。  
+-   重写 \<inputbuffer>_ProcessInputRow 以便在每个输入行通过时处理其中的数据。  
   
--   仅当你在遍历输入行时必须执行附加操作时，才重写 \<inputbuffer>_ProcessInput  。 （例如，必须测试 EndOfRowset，以便在所有行都处理完毕后进行其他一些操作。  ）调用 \<inputbuffer>_ProcessInputRow，执行行处理  。  
+-   仅当你在遍历输入行时必须执行附加操作时，才重写 \<inputbuffer>_ProcessInput。 （例如，必须测试 EndOfRowset，以便在所有行都处理完毕后进行其他一些操作。）调用 \<inputbuffer>_ProcessInputRow 以便执行行处理。  
   
 -   如果必须在关闭输出之前对输出进行一些操作，请重写 FinishOutputs  。  
   
@@ -153,7 +153,7 @@ public override void PreExecute()
   
 -   每个输出列的已命名类型化只写取值函数属性。  
   
--   每个所选输出列的只写 \<column>_IsNull 属性，可用于将列值设置为 null   。  
+-   每个所选输出列的只写 \<column>_IsNull 属性，可用于将列值设置为 null 。  
   
 -   一个 AddRow 方法，用于将空的新行添加到输出缓冲区  。  
   

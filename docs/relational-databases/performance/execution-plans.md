@@ -1,5 +1,6 @@
 ---
 title: 执行计划 | Microsoft Docs
+description: 了解查询优化器为 SQL Server 数据库引擎创建的用于运行查询的执行计划或查询计划。
 ms.custom: ''
 ms.date: 03/01/2020
 ms.prod: sql
@@ -16,12 +17,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753f
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 8f9a92ee9ac1ed87a20515a267a80b8372c95366
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9b0f95a4afa1397783547f2804d92dd3fc37b357
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751791"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457237"
 ---
 # <a name="execution-plans"></a>执行计划
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "85751791"
   `TableC`、 `TableB`、 `TableA`或  
   `TableB`、 `TableA`、 `TableC`或  
   `TableB`、 `TableC`、 `TableA`或  
-  `TableC`、`TableA`、`TableB`  
+  `TableC`, `TableA`, `TableB`  
 
 - **用于从每个表提取数据的方法。**  
   访问每个表中的数据一般也有不同的方法。 如果只需要有特定键值的几行，数据库服务器可以使用索引。 如果需要表中的所有行，数据库服务器则可以忽略索引并执行表扫描。 如果需要表中的所有行，而有一个索引的键列在 `ORDER BY`中，则执行索引扫描而非表扫描可能会省去对结果集的单独排序。 如果表很小，则对该表的几乎所有访问来说，表扫描可能都是最有效的方法。

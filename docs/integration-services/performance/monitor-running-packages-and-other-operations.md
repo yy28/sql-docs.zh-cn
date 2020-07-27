@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d7fd62f4f2f82e6dcc3921db7099b4f052db27b3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6f899ec9c1e006212483a49133ad343e93f20173
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287841"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918311"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>监视运行包和其他操作
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   您可以使用以下一个或多个工具监视 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包执行、项目验证和其他操作。 某些工具（如数据分流）只适用于部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的项目。  
@@ -70,7 +70,7 @@ ms.locfileid: "79287841"
   
 ### <a name="configure-the-options"></a>配置选项  
   
- 类型   
+ 类型  
  指定操作的类型。 下面是 **“类型”** 字段的可能值以及 Transact-SQL **catalog.operations** 视图的 operations_type 列中的相应值。  
   
 |||  
@@ -179,10 +179,10 @@ ms.locfileid: "79287841"
  **“所有验证”** 报告显示已在服务器上执行的所有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 验证的摘要。 摘要中显示每次验证的信息，如状态、开始时间和结束时间。 每个摘要条目包含一个指向在验证期间生成的消息的链接。 与 Integration Services 面板一样，您可以将筛选器应用于表，以便缩小显示的信息的范围。  
   
 ### <a name="custom-reports"></a>自定义报告  
- 可以将自定义报告（.rdl 文件）添加到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中“Integration Services 目录”节点下的 **SSISDB** 目录节点。 在添加报告前，请确认正在使用第三方命名约定以完全限定您引用的对象（如源表）。 否则， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 将显示错误。 命名约定为 \<数据库>.\<所有者>.\<对象>。 例如，SSISDB.internal.executions。  
+ 可以将自定义报告（.rdl 文件）添加到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中“Integration Services 目录”节点下的 **SSISDB** 目录节点。 在添加报告前，请确认正在使用第三方命名约定以完全限定您引用的对象（如源表）。 否则， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 将显示错误。 命名约定为 \<database>.\<owner>.\<object>例如，SSISDB.internal.executions。  
   
 > [!NOTE]  
->  将自定义报告添加到“数据库”  节点下的 **SSISDB** 节点时，可以不使用 SSISDB 前缀。  
+>  将自定义报告添加到“数据库”节点下的 **SSISDB** 节点时，可以不使用 SSISDB 前缀。  
   
  有关如何创建和添加自定义报告的说明，请参阅 [Add a Custom Report to Management Studio](../../ssms/object/add-a-custom-report-to-management-studio.md)。  
 
@@ -193,7 +193,7 @@ ms.locfileid: "79287841"
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，展开对象资源管理器中的 **“Integration Services 目录”** 节点。  
   
-2.  右键单击“SSISDB”  ，单击“报表”  ，然后单击“标准报表”  。  
+2.  右键单击“SSISDB”，单击“报表”，然后单击“标准报表”。  
   
 3.  单击以下一个或多个选项以查看报告。  
   

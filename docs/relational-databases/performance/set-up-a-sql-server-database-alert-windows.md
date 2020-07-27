@@ -1,5 +1,6 @@
 ---
 title: 设置 SQL Server 数据库警报 (Windows) | Microsoft Docs
+description: 了解如何创建在系统监视器计数器达到阈值时引发的警报。 作为响应，系统监视器可以启动应用程序。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 65d2c5c1-921f-4eff-9ef7-149170ab61e8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 1a4cb551f72b408210064f88e0387c2fc4f3d638
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 982feaae1638250c80091778cdbacbfc21b0b3af
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716883"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458699"
 ---
 # <a name="set-up-a-sql-server-database-alert-windows"></a>设置 SQL Server 数据库警报 (Windows)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,23 +27,23 @@ ms.locfileid: "85716883"
   
 ## <a name="set-up-a-sql-server-database-alert"></a>设置 SQL Server 数据库警报  
   
-1. 在“性能”窗口的导航树中，展开“性能日志和警报”   。  
+1. 在“性能”窗口的导航树中，展开“性能日志和警报” 。  
   
-2. 右键单击“警报”，再选择“新建警报设置”   。
+2. 右键单击“警报”，再选择“新建警报设置” 。
   
-3. 在“新建警报设置”对话框中，键入新警报的名称，再选择“确定”   。  
+3. 在“新建警报设置”对话框中，键入新警报的名称，再选择“确定” 。  
   
-4. 在新建警报对话框的“常规”选项卡上，添加一个“注释”   。 选择“添加”，向警报添加计数器  。  
+4. 在新建警报对话框的“常规”选项卡上，添加一个“注释” 。 选择“添加”，向警报添加计数器。  
   
      所有警报必须至少有一个计数器。  
   
-5. 在“添加计数器”对话框中，选择“性能对象”列表中的 SQL Server 对象   。 从“从列表中选择计数器”选择一个计数器  。  
+5. 在“添加计数器”对话框中，选择“性能对象”列表中的 SQL Server 对象 。 从“从列表中选择计数器”选择一个计数器。  
   
-6. 要为警报添加计数器，请选择“添加”  。 可以继续添加计数器，也可以选择“关闭”返回到新建警报对话框  。  
+6. 要为警报添加计数器，请选择“添加”。 可以继续添加计数器，也可以选择“关闭”返回到新建警报对话框。  
   
-7. 在新建警报对话框的“将触发警报，如果值是”列表中，选择“超过”或者“低于”    。 然后在“限制”中输入一个阈值  。  
+7. 在新建警报对话框的“将触发警报，如果值是”列表中，选择“超过”或者“低于”  。 然后在“限制”中输入一个阈值。  
   
-     当计数器的值大于或小于阈值时（取决于选择的是“超过”  还是“低于”  ），可生成警报。  
+     当计数器的值大于或小于阈值时（取决于选择的是“超过”还是“低于”），可生成警报。  
   
 8. 在 **“数据采样间隔”** 框中，设置采样频率。  
   

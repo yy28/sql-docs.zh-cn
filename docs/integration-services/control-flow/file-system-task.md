@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f170a279f591b496b4c69cbb80b4c719954c30ba
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 77a347078f86299118f80c9cae55d9dd04795a9d
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294130"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917893"
 ---
 # <a name="file-system-task"></a>文件系统任务
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   文件系统任务对文件系统中的文件和目录执行操作。 例如，通过使用文件系统任务，包可以创建、移动或删除目录和文件。 您还可以使用文件系统任务设置文件和目录的属性。 例如，文件系统任务可以让文件隐藏或只读。  
@@ -144,13 +144,13 @@ ms.locfileid: "71294130"
   
 #### <a name="isdestinationpathvariable--true"></a>IsDestinationPathVariable = True  
  **DestinationVariable**  
- 在列表中选择变量名称，或单击“\<新建变量...>”，创建一个新变量  。  
+ 从列表中选择变量名称，或单击“\<**New variable...**>”创建新变量。  
   
  **相关主题：** [Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 #### <a name="isdestinationpathvariable--false"></a>IsDestinationPathVariable = False  
  **DestinationConnection**  
- 在列表中选择一个文件连接管理器，或单击“\<新建连接…>”新建一个连接管理器  。  
+ 从列表中选择文件连接管理器，或单击“\<**New connection...**>”创建新的连接管理器。  
   
  **相关主题：** [文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)、[文件连接管理器编辑器](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
@@ -158,13 +158,13 @@ ms.locfileid: "71294130"
   
 #### <a name="issourcepathvariable--true"></a>IsSourcePathVariable = True  
  **SourceVariable**  
- 在列表中选择变量名称，或单击“\<新建变量...>”，创建一个新变量  。  
+ 从列表中选择变量名称，或单击“\<**New variable...**>”创建新变量。  
   
  **相关主题：** [Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 #### <a name="issourcepathvariable--false"></a>IsSourcePathVariable = False  
  **SourceConnection**  
- 在列表中选择一个文件连接管理器，或单击“\<新建连接…>”新建一个连接管理器  。  
+ 从列表中选择文件连接管理器，或单击“\<**New connection...**>”创建新的连接管理器。  
   
  **相关主题：** [文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)  
   
@@ -185,7 +185,7 @@ ms.locfileid: "71294130"
   
 #### <a name="operation--create-directory"></a>Operation = 创建目录  
  **UseDirectoryIfExists**  
- 指示“创建目录”操作是否使用具有指定名称的现有目录，而不创建新目录。   
+ 指示“创建目录”操作是否使用具有指定名称的现有目录，而不创建新目录。  
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 任务](../../integration-services/control-flow/integration-services-tasks.md)   

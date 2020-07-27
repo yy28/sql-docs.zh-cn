@@ -1,5 +1,6 @@
 ---
 title: 查看计划指南属性 | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL 在 SQL Server 中查看计划指南的属性。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8c0d2f39-59c1-4168-a649-65473f6a771b
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 814538af8afd11a1962d2c4efa225a29dba4fc27
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 18c1d7f663d5006cae078753e028caf133ec2c5c
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85655315"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458862"
 ---
 # <a name="view-plan-guide-properties"></a>查看计划指南属性
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +53,7 @@ ms.locfileid: "85655315"
   
 2.  单击加号以便展开 **“计划指南”** 文件夹。  
   
-3.  右键单击要查看其属性的计划指南，然后选择“属性”  。  
+3.  右键单击要查看其属性的计划指南，然后选择“属性”。  
   
      **“计划指南属性”** 对话框显示以下属性。  
   
@@ -83,7 +84,7 @@ ms.locfileid: "85655315"
      **Statement**  
      显示应用此计划指南的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
   
-4.  单击“确定”。   
+4.  单击“确定”。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -93,7 +94,7 @@ ms.locfileid: "85655315"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     -- If a plan guide named "Guide1" already exists in the AdventureWorks2012 database, delete it.  

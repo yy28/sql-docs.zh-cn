@@ -21,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: c3913c15-66aa-4b61-89b5-68488fa5f0a4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c4b3337be486123545a187337949da1c160343ad
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c7273296d1c316cb16ae40b5e7194d6b6d8846e0
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71286544"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913435"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>脚本组件的编码和调试
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中，脚本组件具有两种模式：元数据设计模式和代码设计模式。 打开“脚本转换编辑器”后，组件将进入元数据设计模式，你可以在该模式下配置元数据并设置组件属性  。 在元数据设计模式下，设置脚本组件的属性并配置输入和输出后，可以切换到代码设计模式，以编写自定义脚本。 有关元数据设计模式和代码设计模式的详细信息，请参阅[在脚本组件编辑器中配置脚本组件](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。  
@@ -174,7 +174,7 @@ public class ScriptMain : UserComponent
 |---------------------|-------------------|  
 |变量|使用 ComponentWrapper 项目项的 Variables 集合类中的命名取值函数属性和类型化取值函数属性，这些属性通过 ScriptMain 类的 Variables 属性公开     。<br /><br /> **PreExecute** 方法仅可访问只读变量。 **PostExecute** 方法既可访问只读变量，又可访问读/写变量。|  
 |连接|使用 ComponentWrapper 项目项的 Connections 集合类中的命名取值函数属性和类型化取值函数属性，这些属性通过 ScriptMain 类的 Connections 属性公开     。|  
-|事件|使用 ScriptMain 类的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> 属性和 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 接口的 Fire\<X> 方法引发事件。|  
+|事件|使用 ScriptMain 类的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> 属性和 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 接口的 Fire\<X> 方法引发事件 。|  
 |日志记录|使用 ScriptMain 类的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> 方法执行日志记录  。|  
   
 ## <a name="debugging-the-script-component"></a>调试脚本组件  

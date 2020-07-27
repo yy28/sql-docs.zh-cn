@@ -1,6 +1,6 @@
 ---
 title: SQL Server 管理对象支持 - 内存中 OLTP
-description: 介绍 SQL Server 管理对象 (SMO) 中支持内存中 OLTP 的项。
+description: 了解 SQL Server 管理对象 (SMO) 中支持内存中 OLTP 的项。 查看 Microsoft.SqlServer.Management.Smo 命名空间中的类型和成员。
 ms.custom: seo-dt-2019
 ms.date: 08/18/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ ms.assetid: 2b67292d-6d8e-4016-9063-a97461ffe57a
 author: CarlRabeler
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 429077aaa011b0de85af351d748baa5484c6e5e1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dc1693c1e0d2290fe097a8879240f4b0c6074dd8
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734989"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922111"
 ---
 # <a name="sql-server-management-objects-support-for-in-memory-oltp"></a>对内存中 OLTP 的 SQL Server 管理对象支持
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "85734989"
 
 ## <a name="smo-types-and-members"></a>SMO 的类型和成员
 
-以下类型和成员位于命名空间 Microsoft.SqlServer.Management.Smo 中，且它们支持内存中 OLTP  ：
+以下类型和成员位于命名空间 Microsoft.SqlServer.Management.Smo 中，且它们支持内存中 OLTP：
 
 - **<xref:Microsoft.SqlServer.Management.Smo.DurabilityType>** （枚举）
 - FileGroup. **<xref:Microsoft.SqlServer.Management.Smo.FileGroup.FileGroupType%2A>** （属性）

@@ -28,16 +28,16 @@ helpviewer_keywords:
 ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 23ae71eff12e7155580eff8238a459c47211c5de
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c76fff59151ffd2e291cd259fbe35fdffd9c4eec
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297758"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914251"
 ---
 # <a name="term-extraction-transformation"></a>字词提取转换
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   字词提取转换从转换输入列的文本中提取字词，然后将这些字词写入转换输出列。 该转换仅处理英文文本，并使用它自身的英语字典和有关英语的语言信息。  
@@ -153,7 +153,7 @@ ms.locfileid: "71297758"
   
 -   数字、标点符号和字母字符的组合。 例如， *A23B#99* 返回字词 *A23B*。  
   
--   字符：%、@，&、$、#、\*、;、。、  ！、？、\<>、+、=、^、~、|、\\/、（、）、[、]、{、}、" 和 '。  
+-   字符：%、@，&、$、#、\*、:、;、.、,、!、?、\<, >、+、=、^、~、|、\\、/、(、)、[、]、{、}、" 和 '。  
   
     > [!NOTE]  
     >  包括一个或多个句点 (.) 的首字母缩略词不分隔为多个句子。  
@@ -210,7 +210,7 @@ ms.locfileid: "71297758"
  指示在字词提取过程中是否通过指定包含排除字词的列来排除特定的字词。 如果选择要排除字词，则必须指定以下源属性：  
   
  **“无缓存”**  
- 选择现有的 OLE DB 连接管理器，或通过单击“新建”创建新的连接。   
+ 选择现有的 OLE DB 连接管理器，或通过单击“新建”创建新的连接。  
   
  **新建**  
  通过使用“配置 OLE DB 连接管理器”  对话框创建与数据库的新连接。  

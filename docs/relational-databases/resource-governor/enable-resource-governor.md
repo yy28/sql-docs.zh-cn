@@ -1,5 +1,6 @@
 ---
 title: 启用资源调控器 | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL 启用 Resource Governor。 必须具有 CONTROL SERVER 权限。
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4d17af53-cf11-4ce4-aab4-deda94a49836
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: acb23caea9e74af5a1f25f8d6d2acab31fbeb39f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7e58987e36ee4119b282a303265d2b6d898c9b0b
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720454"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457839"
 ---
 # <a name="enable-resource-governor"></a>启用资源调控器
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "85720454"
   
 -   **开始之前：** [限制和局限](#LimitationsRestrictions)、[权限](#Permissions)  
   
--   若要启用 Resource Governor，请使用：  [对象资源管理器](#RGOnObjEx)、[Resource Governor 属性](#RGOnProp)、[Transact-SQL](#RGOnTSQL)  
+-   若要启用 Resource Governor，请使用：[对象资源管理器](#RGOnObjEx)、[Resource Governor 属性](#RGOnProp)、[Transact-SQL](#RGOnTSQL)  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
  启用资源调控器会产生下列结果：  
@@ -46,14 +47,14 @@ ms.locfileid: "85720454"
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中打开对象资源管理器，并依次逐步展开 **“管理”** 节点直至 **“资源调控器”** 。  
   
-2.  右键单击“资源调控器”  ，再单击“启用”  。  
+2.  右键单击“资源调控器” ，再单击“启用” 。  
   
 ##  <a name="enable-resource-governor-using-resource-governor-properties"></a><a name="RGOnProp"></a> 使用资源调控器属性启用资源调控器  
  **使用“资源调控器属性”页启用资源调控器**  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中打开对象资源管理器，并依次逐步展开 **“管理”** 节点直至 **“资源调控器”** 。  
   
-2.  右键单击“资源调控器”  ，然后单击“属性”  ，这将打开“资源调控器属性”页  。  
+2.  右键单击“资源调控器”  ，然后单击“属性” ，这将打开“资源调控器属性”页  。  
   
 3.  单击 **“启用资源调控器”** 复选框，再单击 **“确定”** 。  
   

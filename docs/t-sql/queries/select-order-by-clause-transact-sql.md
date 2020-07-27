@@ -39,12 +39,12 @@ ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 296616f71102f5a5c68fe817b409273f6bf9428a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ebb1f9b6a1d2b9651b26c8649db89c0ca89fc5fa
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999777"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554752"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT - ORDER BY 子句 (Transact-SQL)
 
@@ -92,8 +92,10 @@ ORDER BY order_by_expression
 ]   
 ```  
   
-## <a name="arguments"></a>参数  
- order_by_expression   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
+ order_by_expression  
  指定用于对查询结果集进行排序的列或表达式。 可以将排序列指定为一个名称或列别名，也可以指定一个表示列在选择列表中所处位置的非负整数。  
   
  可以指定多个排序列。 别名必须是唯一的。 ORDER BY 子句中的排序列的顺序定义了排序结果集的结构。 也就是说，按第一列对结果集进行排序，然后按第二列对排序列表进行排序，依此类推。  
@@ -107,13 +109,13 @@ SELECT SCHEMA_NAME(schema_id) AS SchemaName FROM sys.objects
 ORDER BY SchemaName + ''; -- wrong
 ```
   
- COLLATE collation_name   
+ COLLATE collation_name  
  指定应根据 collation_name 中指定的排序规则执行 ORDER BY 操作，而不是根据表或视图中所定义的列的排序规则  。 collation_name 既可以是 Windows 排序规则名称，也可以是 SQL 排序规则名称  。 有关详细信息，请参阅 [排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)。 COLLATE 仅适用于类型为 char、varchar、nchar 和 nvarchar 的列     。  
   
  **ASC** | DESC  
  指定按升序或降序排列指定列中的值。 ASC 按从最低值到最高值的顺序进行排序。 DESC 按从最高值到最低值的顺序进行排序。 ASC 是默认排序顺序。 Null 值被视为最低的可能值。  
   
- OFFSET { integer_constant*offset_row_count_expression } { ROW | ROWS }*  |    
+ OFFSET { integer_constant*offset_row_count_expression } { ROW | ROWS }*  |   
  指定开始从查询表达式返回行之前跳过的行数。 该值可以是大于或等于零的整数常量或表达式。  
   
 **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].s  
@@ -124,7 +126,7 @@ ORDER BY SchemaName + ''; -- wrong
   
  在查询执行计划中，将在 TOP 查询运算符的 Offset 属性中显示偏移行数值  。  
   
- FETCH { FIRST | NEXT } { integer_constant*fetch_row_count_expression } { ROW | ROWS } ONLY* |    
+ FETCH { FIRST \| NEXT } { integer_constant \| fetch_row_count_expression } { ROW \| ROWS } ONLY   
  指定在处理 OFFSET 子句后返回的行数。 该值可以是大于或等于 1 的整数常量或表达式。  
   
 **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  

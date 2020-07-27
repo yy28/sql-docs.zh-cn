@@ -1,5 +1,5 @@
 ---
-title: CREATE USER (Transact-SQL) | Microsoft Docs
+title: CREATE USER (Transact-SQL)
 ms.custom: ''
 ms.date: 11/06/2019
 ms.prod: sql
@@ -29,14 +29,15 @@ ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b2790ce463d7ff6114bf96726d899cbe5d65f01f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 5873b926d56c07523d759e1383fbb101a1cfa6e1
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004735"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485033"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   向当前数据库添加用户。 下面列出了 12 种类型的用户，并给出了最基本的语法示例：  
@@ -171,7 +172,9 @@ CREATE USER user_name
 [;]  
 ```  
   
-## <a name="arguments"></a>参数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
  user_name  
  指定在此数据库中用于识别该用户的名称。 *user_name* 为 **sysname**。 它的长度最多是 128 个字符。 在创建基于 Windows 主体的用户时，除非指定其他用户名，否则 Windows 主体名称将成为用户名。  
   
@@ -222,7 +225,7 @@ ASYMMETRIC KEY asym_key_name
   
  指定要为其创建数据库用户的非对称密钥。  
   
-DEFAULT_LANGUAGE = { NONE | \<lcid> | \<language name> | \<language alias> }  
+DEFAULT_LANGUAGE = *{ NONE \| \<lcid> \| \<language name> \| \<language salias> }*  
  **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  为新用户指定默认语言。 如果为用户指定了默认语言并在之后更改数据库的默认语言，则用户的默认语言仍会保留为指定的语言。 如果未指定默认语言，用户的默认语言将为数据库的默认语言。 如果未指定用户的默认语言并在之后更改数据库的默认语言，用户的默认语言将更改为数据库的新默认语言。  

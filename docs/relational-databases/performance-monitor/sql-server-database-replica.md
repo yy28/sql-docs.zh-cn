@@ -1,5 +1,6 @@
 ---
 title: SQL Server，数据库副本 | Microsoft Docs
+description: 了解 SQLServer:Database Replica 性能对象，该对象包含有关 Always On 可用性组辅助数据库的性能计数器。
 ms.custom: ''
 ms.date: 08/24/2016
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a5f6bdce-2b13-4924-aaeb-b50b57d624d8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: db892b71ba5e86faf1b45b94cdef12b1850c22a5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d164d5d2ad9bba0cbb052941944e3808cf1dc822
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730837"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458331"
 ---
 # <a name="sql-server-database-replica"></a>SQL Server，数据库副本
 
@@ -41,7 +42,7 @@ ms.locfileid: "85730837"
 |**Redo Bytes Remaining**|为完成还原阶段而要重做的剩余的日志量 (KB)。|辅助副本|  
 |**Redone Bytes/sec**|在最后一秒在辅助数据库上重做的日志记录量。|辅助副本|  
 |**Total Log requiring undo**|必须撤消的日志总字节数 (KB)。|辅助副本|  
-|**Transaction Delay**|等待所有当前事务的未终止的提交确认的延迟时间（以毫秒为单位）。 除以“镜像写入事务/秒”，获得“平均事务延迟时间”   。 有关详细信息，请参阅 [SQL Server 2012 AlwaysOn – Part 12 – Performance Aspects and Performance Monitoring II](https://blogs.msdn.microsoft.com/saponsqlserver/2013/04/24/sql-server-2012-alwayson-part-12-performance-aspects-and-performance-monitoring-ii/)（SQL Server 2012 AlwaysOn - 第 12 节 - 性能方面和性能监视 II）|主副本|  
+|**Transaction Delay**|等待所有当前事务的未终止的提交确认的延迟时间（以毫秒为单位）。 除以“镜像写入事务/秒”，获得“平均事务延迟时间” 。 有关详细信息，请参阅 [SQL Server 2012 AlwaysOn – Part 12 – Performance Aspects and Performance Monitoring II](https://blogs.msdn.microsoft.com/saponsqlserver/2013/04/24/sql-server-2012-alwayson-part-12-performance-aspects-and-performance-monitoring-ii/)（SQL Server 2012 AlwaysOn - 第 12 节 - 性能方面和性能监视 II）|主副本|  
   
 ## <a name="see-also"></a>另请参阅
   

@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1e331b974bee3017e17e75dbf8c3ecb8506349b2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4f334633fa164a22f8e23175fd3ba6b25c4f6423
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298306"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917921"
 ---
 # <a name="execute-sql-task"></a>执行 SQL 任务
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   执行 SQL 任务从包中运行 SQL 语句或存储过程。 此任务可以包含单个 SQL 语句，也可以包含按顺序运行的多个 SQL 语句。 可以将执行 SQL 任务用于下列用途：  
@@ -148,7 +148,7 @@ ms.locfileid: "71298306"
  **相关主题：** [OLE DB 连接管理器](../../integration-services/connection-manager/ole-db-connection-manager.md)、[ODBC 连接管理器](../../integration-services/connection-manager/odbc-connection-manager.md)、[ADO 连接管理器](../../integration-services/connection-manager/ado-connection-manager.md)、[ADO.NET 连接管理器](../../integration-services/connection-manager/ado-net-connection-manager.md)、[SQL Server Compact Edition 连接管理器](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)  
   
  **Connection**  
- 从已定义的连接管理器的列表中选择连接。 要创建新连接，请选择“\<新建连接...>”  。  
+ 从已定义的连接管理器的列表中选择连接。 若要创建新的连接，请选择“\<**New connection...**>”。  
   
  **SQLSourceType**  
  选择任务运行的 SQL 语句的源类型。  
@@ -190,13 +190,13 @@ ms.locfileid: "71298306"
   
 #### <a name="sqlsourcetype--file-connection"></a>SQLSourceType = 文件连接  
  **文件连接**  
- 选择现有文件连接管理器，或单击“\<新建连接...>”，创建新的连接管理器  。  
+ 选择现有“文件连接管理器”，或单击 \<**New connection...**> 以创建新的连接管理器。  
   
  **相关主题：** [文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)、[文件连接管理器编辑器](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="sqlsourcetype--variable"></a>SQLSourceType = 变量  
  **SourceVariable**  
- 选择现有变量，或单击“\<新建变量...>”，创建一个新变量  。  
+ 选择现有变量或单击 \<**New variable...**> 以创建新变量。  
   
  **相关主题：** [Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
  
@@ -205,7 +205,7 @@ ms.locfileid: "71298306"
   
 ### <a name="options"></a>选项  
  **“变量名称”**  
- 通过单击“添加”添加了参数映射之后，请从列表中选择系统变量或用户定义的变量，或单击“\<新建变量...>”以使用“添加变量”对话框添加新变量    。  
+ 单击“添加”添加了参数映射后，请从列表中选择系统变量或用户定义的变量，或单击“\<**New variable...**>”以使用“添加变量”对话框添加新变量 。  
   
  **相关主题：** [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)  
   
@@ -244,7 +244,7 @@ ms.locfileid: "71298306"
  
   
  **“变量名称”**  
- 通过选择变量或单击“\<新建变量...>”使用“添加变量”对话框添加新的变量，将结果集映射到变量   。  
+ 选择变量或单击“\<**New variable...**>”使用“添加变量”对话框添加新的变量，将结果集映射到变量。  
   
  **添加**  
  单击此项可以添加结果集映射。  
@@ -282,7 +282,7 @@ SQL 语句和存储过程常常使用 **input** 参数、 **output** 参数和�
 |连接类型|参数标记|参数名称|示例 SQL 命令|  
 |---------------------|----------------------|--------------------|-------------------------|  
 |ADO|?|Param1, Param2, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
-|[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|\@\<参数名称>|\@\<参数名称>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
+|[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|\@\<parameter name>|\@\<parameter name>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
 |ODBC|?|1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
 |EXCEL 和 OLE DB|?|0, 1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
   
@@ -380,14 +380,14 @@ SQL 语句和存储过程常常使用 **input** 参数、 **output** 参数和�
 ###  <a name="use-parameters-with-stored-procedures"></a><a name="Stored_procedures"></a>在存储过程中使用参数  
  运行存储过程的 SQL 命令也可以使用参数映射。 与参数化查询的规则一样，参数标记和参数名称的使用规则取决于执行 SQL 所使用的连接管理器的类型。  
   
- 下表按连接管理器类型列出了 EXEC 命令的示例。 示例运行 **中的** uspGetBillOfMaterials [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)]存储过程。 该存储过程使用 `@StartProductID` 和 `@CheckDate` Input 参数  。  
+ 下表按连接管理器类型列出了 EXEC 命令的示例。 示例运行 **中的** uspGetBillOfMaterials [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)]存储过程。 该存储过程使用 `@StartProductID` 和 `@CheckDate` Input 参数。  
   
 |连接类型|EXEC 语法|  
 |---------------------|-----------------|  
 |EXCEL 和 OLEDB|`EXEC uspGetBillOfMaterials ?, ?`|  
 |ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> 有关 ODBC 调用语法的详细信息，请参阅 MSDN Library 中的 ODBC 程序员参考的 [Procedure Parameters](https://go.microsoft.com/fwlink/?LinkId=89462)（过程参数）主题。|  
-|ADO|如果 IsQueryStoredProcedure 设置为 False，则为 `EXEC uspGetBillOfMaterials ?, ?` <br /><br /> 如果 IsQueryStoredProcedure 设置为 True，则为 `uspGetBillOfMaterials` |  
-|[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|如果 IsQueryStoredProcedure 设置为 False，则为 `EXEC uspGetBillOfMaterials @StartProductID, @CheckDate` <br /><br /> 如果 IsQueryStoredProcedure 设置为 True，则为 `uspGetBillOfMaterials` |  
+|ADO|如果 IsQueryStoredProcedure 设置为 False，则为 `EXEC uspGetBillOfMaterials ?, ?`<br /><br /> 如果 IsQueryStoredProcedure 设置为 True，则为 `uspGetBillOfMaterials`|  
+|[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|如果 IsQueryStoredProcedure 设置为 False，则为 `EXEC uspGetBillOfMaterials @StartProductID, @CheckDate`<br /><br /> 如果 IsQueryStoredProcedure 设置为 True，则为 `uspGetBillOfMaterials`|  
   
  若要使用输出参数，则语法要求在每个参数标记后跟 OUTPUT 关键字。 例如，以下 output 参数语法是正确的： `EXEC myStoredProcedure ? OUTPUT`。  
   
@@ -421,7 +421,7 @@ SQL 语句和存储过程常常使用 **input** 参数、 **output** 参数和�
     |连接类型|参数标记|  
     |---------------------|----------------------|  
     |ADO|?|  
-    |ADO.NET 和 SQLMOBILE|\@\<参数名称>|  
+    |ADO.NET 和 SQLMOBILE|\@\<parameter name>|  
     |ODBC|?|  
     |EXCEL 和 OLE DB|?|  
   
@@ -444,7 +444,7 @@ SQL 语句和存储过程常常使用 **input** 参数、 **output** 参数和�
     |连接类型|参数名称|  
     |---------------------|--------------------|  
     |ADO|Param1, Param2, …|  
-    |ADO.NET 和 SQLMOBILE|\@\<参数名称>|  
+    |ADO.NET 和 SQLMOBILE|\@\<parameter name>|  
     |ODBC|1, 2, 3, …|  
     |EXCEL 和 OLE DB|0, 1, 2, 3, …|  
   
@@ -462,12 +462,12 @@ SQL 语句和存储过程常常使用 **input** 参数、 **output** 参数和�
     > [!IMPORTANT]  
     >  参数映射的顺序必须与参数在 SQL 语句中出现的顺序相同。  
   
-14. 单击“确定”。   
+14. 单击“确定”。  
 
 ##  <a name="get-the-values-of-return-codes"></a><a name="Return_codes"></a>获取返回代码的值  
  存储过程可以返回一个整数值（称为“返回代码”），以指示过程的执行状态。 若要在执行 SQL 任务中实现返回代码，需要使用 **ReturnValue** 类型的参数。  
   
- 下表按连接类型列出了实现返回代码的某些 EXEC 命令示例。 所有示例均使用 **input** 参数。 对于所有参数类型（“Input”、“Output”和“ReturnValue”），参数标记和参数名称的使用规则都是相同的    。  
+ 下表按连接类型列出了实现返回代码的某些 EXEC 命令示例。 所有示例均使用 **input** 参数。 对于所有参数类型（“Input”、“Output”和“ReturnValue”），参数标记和参数名称的使用规则都是相同的  。  
   
  某些语法不支持参数文字。 在此情况下，必须通过使用变量来提供参数值。  
   
@@ -475,7 +475,7 @@ SQL 语句和存储过程常常使用 **input** 参数、 **output** 参数和�
 |---------------------|-----------------|  
 |EXCEL 和 OLEDB|`EXEC ? = myStoredProcedure 1`|  
 |ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> 有关 ODBC 调用语法的详细信息，请参阅 MSDN Library 中的 ODBC 程序员参考的 [Procedure Parameters](https://go.microsoft.com/fwlink/?LinkId=89462)（过程参数）主题。|  
-|ADO|如果 IsQueryStoreProcedure 设置为 False，则为 `EXEC ? = myStoredProcedure 1` <br /><br /> 如果 IsQueryStoreProcedure 设置为 True，则为 `myStoredProcedure` |  
+|ADO|如果 IsQueryStoreProcedure 设置为 False，则为 `EXEC ? = myStoredProcedure 1`<br /><br /> 如果 IsQueryStoreProcedure 设置为 True，则为 `myStoredProcedure`|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|将 IsQueryStoreProcedure 设置为 **True**。<br /><br /> `myStoredProcedure`|  
   
  如上表中语法所示，执行 SQL 任务使用 **“直接输入”** 源类型来运行存储过程。 执行 SQL 任务还可以使用 **“文件连接”** 源类型来运行存储过程。 无论执行 SQL 任务是使用 **“直接输入”** 源类型还是使用 **“文件连接”** 源类型，都请使用 **ReturnValue** 类型的参数来实现返回代码。
@@ -509,9 +509,9 @@ SQL 语句和存储过程常常使用 **input** 参数、 **output** 参数和�
 ###  <a name="populate-a-variable-with-a-result-set"></a><a name="Populate_variable_with_result_set"></a>使用结果集填充变量  
  如果结果集类型为单行、行集或 XML，则可以将查询返回的结果集绑定到用户定义的变量。  
   
- 如果结果集类型为“单行”  ，则可以使用列名作为结果集名称，将返回结果中的列绑定到一个变量，也可以使用列列表中列的序号位置作为结果集名称。 例如，查询 `SELECT Color FROM Production.Product WHERE ProductID = ?` 的结果集名称可以是 **Color** 或 **0**。 如果查询返回多个列，而您要访问所有列中的值，则必须将每列绑定到一个不同的变量。 如果使用数字作为结果集名称，将列映射到变量，则数字将反映列在查询的列列表中显示的顺序。 例如，在查询 `SELECT Color, ListPrice, FROM Production.Product WHERE ProductID = ?`中，对 **Color** 列使用 0，对 **ListPrice** 列使用 1。 使用列名作为结果集名称的功能将依赖于所配置任务要使用的访问接口。 并非所有访问接口都使列名可用。  
+ 如果结果集类型为“单行” ，则可以使用列名作为结果集名称，将返回结果中的列绑定到一个变量，也可以使用列列表中列的序号位置作为结果集名称。 例如，查询 `SELECT Color FROM Production.Product WHERE ProductID = ?` 的结果集名称可以是 **Color** 或 **0**。 如果查询返回多个列，而您要访问所有列中的值，则必须将每列绑定到一个不同的变量。 如果使用数字作为结果集名称，将列映射到变量，则数字将反映列在查询的列列表中显示的顺序。 例如，在查询 `SELECT Color, ListPrice, FROM Production.Product WHERE ProductID = ?`中，对 **Color** 列使用 0，对 **ListPrice** 列使用 1。 使用列名作为结果集名称的功能将依赖于所配置任务要使用的访问接口。 并非所有访问接口都使列名可用。  
   
- 某些返回单个值的查询可能不包括列名称。 例如，语句 `SELECT COUNT (*) FROM Production.Product` 不返回列名称。 可以使用序数位置 0 作为结果名称来访问返回结果。 要按列名称访问返回结果，则查询必须包括 AS \<别名> 子句来提供列名称。 语句 `SELECT COUNT (*)AS CountOfProduct FROM Production.Product`提供 **CountOfProduct** 列。 然后可以使用 **CountOfProduct** 列名称或序数位置 0 来访问返回结果列。  
+ 某些返回单个值的查询可能不包括列名称。 例如，语句 `SELECT COUNT (*) FROM Production.Product` 不返回列名称。 可以使用序数位置 0 作为结果名称来访问返回结果。 要按列名称访问返回结果，则查询必须包括 AS \<alias name> 子句来提供列名称。 语句 `SELECT COUNT (*)AS CountOfProduct FROM Production.Product`提供 **CountOfProduct** 列。 然后可以使用 **CountOfProduct** 列名称或序数位置 0 来访问返回结果列。  
   
  如果结果集类型为“完整结果集”  或 **XML**，则必须使用 0 作为结果集名称。  
   
@@ -534,7 +534,7 @@ SQL 语句和存储过程常常使用 **input** 参数、 **output** 参数和�
   
  如果将变量映射到“单行”  结果集，则在满足以下条件时，SQL 语句返回的非字符串值将转换为字符串：  
   
--   **TypeConversionMode** 属性设置为 true。 在属性窗口中或通过使用“执行 SQL 任务编辑器”  设置属性值。  
+-   **TypeConversionMode** 属性设置为 true。 在属性窗口中或通过使用“执行 SQL 任务编辑器” 设置属性值。  
   
 -   转换不会导致数据截断。  
   
@@ -543,7 +543,7 @@ SQL 语句和存储过程常常使用 **input** 参数、 **output** 参数和�
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开包含所需包的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。  
   
-2.  在“解决方案资源管理器”  中，双击该包将其打开。  
+2.  在“解决方案资源管理器”中，双击该包将其打开。  
   
 3.  单击 **“控制流”** 选项卡。  
   
@@ -563,7 +563,7 @@ SQL 语句和存储过程常常使用 **input** 参数、 **output** 参数和�
   
      通常，可以将列名用作结果集名称，也可以将列列表中的列的序号位置用作结果集名称。 使用列名作为结果集名称的功能将依赖于配置任务要使用的访问接口。 并非所有访问接口都使列名可用。  
   
-11. 单击“确定”。   
+11. 单击“确定”。  
 
 ## <a name="troubleshoot-the-execute-sql-task"></a>执行 SQL 任务故障排除  
  可以记录执行 SQL 任务对外部数据访问接口的调用。 您可以使用这项日志记录功能对执行 SQL 任务运行的 SQL 命令进行故障排除。 若要记录执行 SQL 任务对外部数据访问接口的调用，请在包级别启用包日志记录并选择 **“诊断”** 事件。 有关详细信息，请参阅 [包执行的疑难解答工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)。  

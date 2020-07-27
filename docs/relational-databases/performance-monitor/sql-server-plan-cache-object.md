@@ -1,5 +1,6 @@
 ---
 title: SQL Server - Plan Cache 对象 | Microsoft Docs
+description: 了解 Plan Cache 对象，该对象提供用于监视 SQL Server 如何使用内存来存储对象（例如存储过程和触发器）的计数器。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 225e2b02-8d2f-4f29-9eba-f5847c36ea99
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 5bdbff06c1dbda2f31aa8e456878649e8d7f9508
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: faf553c33cf2f515abcad904bfc3c64bf228b546
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775782"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458746"
 ---
 # <a name="sql-server-plan-cache-object"></a>SQL Server Plan Cache 对象
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  **Plan Cache** 对象提供用于监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如何使用内存来存储对象（例如存储过程、即席和准备的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句以及触发器）的计数器。 可同时监视 **Plan Cache** 对象的多个实例，每个实例代表一个要监视的不同类型的计划。  
+  Plan Cache 对象提供用于监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如何使用内存来存储对象（例如存储过程、即席和准备的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句以及触发器）的计数器。 可同时监视 **Plan Cache** 对象的多个实例，每个实例代表一个要监视的不同类型的计划。  
   
  下表介绍了 **SQLServer:Plan Cache**计数器。  
   

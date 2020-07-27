@@ -1,5 +1,6 @@
 ---
 title: 启用或禁用计划指南 | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL 来禁用和启用计划指南。 禁用或启用数据库中的一个或所有计划指南。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b00ab550-5308-4cb8-8330-483cd1d25654
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 3bd43f7ae13f2c107915ef2e37655b5b7fe16b7f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 04180f951747b7517775ec7c222f679d043286c3
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85655398"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457269"
 ---
 # <a name="enable-or-disable-a-plan-guide"></a>启用或禁用计划指南
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -60,7 +61,7 @@ ms.locfileid: "85655398"
   
 2.  单击加号以便展开 **“计划指南”** 文件夹。  
   
-3.  右键单击要禁用或启用的计划指南，然后选择“禁用”  或“启用”  。  
+3.  右键单击要禁用或启用的计划指南，然后选择“禁用”或“启用”。  
   
 4.  在 **“禁用计划指南”** 或 **“启用计划指南”** 对话框中，验证所选操作已经成功，然后单击 **“关闭”** 。  
 
@@ -68,7 +69,7 @@ ms.locfileid: "85655398"
   
 1.  单击加号以便展开您要禁用或启用计划指南的数据库，然后单击加号以便展开 **“可编程性”** 文件夹。  
   
-2.  右键单击“计划指南”  文件夹，然后选择“全部启用”  或“全部禁用”  。  
+2.  右键单击“计划指南”文件夹，然后选择“全部启用”或“全部禁用”。  
   
 3.  在 **“禁用所有计划指南”** 或 **“启用所有计划指南”** 对话框中，验证所选操作已经成功，然后单击 **“关闭”** 。  
   
@@ -80,7 +81,7 @@ ms.locfileid: "85655398"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     --Create a procedure on which to define the plan guide.  
@@ -124,7 +125,7 @@ ms.locfileid: "85655398"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     --Disable all plan guides in the database.  

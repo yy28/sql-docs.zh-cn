@@ -15,15 +15,15 @@ ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e863a04214a27f61581f10c4a2610671bde43635
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0e992a6629f3dbff2e8ed5e3b2b9cc568a7b8811
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787256"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918063"
 ---
 # <a name="synonyms-database-engine"></a>同义词（数据库引擎）
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   同义词是用来实现下列用途的数据库对象：  
   
 -   为可以存在于本地或远程服务器上的其他数据库对象（称为基对象）提供备用名称。  
@@ -35,17 +35,37 @@ ms.locfileid: "85787256"
 若要解决这两个问题，您可以在 **Server2**上为 **Server1** 上的 **Employee** 表创建一个同义词 **EmpTable**。 这样，客户端应用程序只需使用由一个部分构成的名称 **EmpTable**来引用 **Employee** 表。 另外，如果 **Employee** 表的位置发生变化，则必须修改同义词 **EmpTable**以指向 **Employee** 表的新位置。 由于不存在 ALTER SYNONYM 语句，因此必须首先删除同义词 **EmpTable**，然后重新创建同名的同义词，但是要将同义词指向 **Employee**的新位置。  
   
 同义词从属于架构，并且与架构中的其他对象一样，其名称必须是唯一的。 可以为下列数据库对象创建同义词：  
-  
-|||  
-|-|-|  
-|程序集 (CLR) 存储过程|程序集 (CLR) 表值函数|  
-|程序集 (CLR) 标量函数|程序集 (CLR) 聚合函数|  
-|复制筛选过程|扩展存储过程|  
-|SQL 标量函数|SQL 表值函数|  
-|SQL 内联表值函数|SQL 存储过程|  
-|查看|表*（用户定义）|  
-  
- *包括本地和全局临时表  
+
+:::row:::
+    :::column:::
+        程序集 (CLR) 存储过程
+
+        程序集 (CLR) 标量函数
+
+        复制筛选过程
+
+        SQL 标量函数
+
+        SQL 内联表值函数
+
+        查看
+    :::column-end:::
+    :::column:::
+        程序集 (CLR) 表值函数
+
+        程序集 (CLR) 聚合函数
+
+        程序集 (CLR) 聚合函数
+
+        SQL 表值函数
+
+        SQL 存储过程
+
+        表*（用户定义）
+    :::column-end:::
+:::row-end:::
+
+*包括本地和全局临时表  
   
 > [!NOTE]  
 > 不支持使用函数基对象的四部分名称。  
@@ -63,23 +83,48 @@ ms.locfileid: "85787256"
 只有同义词所有者、 **db_owner**的成员或 **db_ddladmin** 的成员才能授予同义词的有关权限。  
   
 可以`GRANT`、`DENY`和`REVOKE`对同义词的下列所有权限或任一权限：  
-  
-|||  
-|-|-|  
-|CONTROL|DELETE|  
-|在运行 CREATE 语句前执行|INSERT|  
-|SELECT|TAKE OWNERSHIP|  
-|UPDATE|VIEW DEFINITION|  
-  
+
+:::row:::
+    :::column:::
+      CONTROL
+
+      EXECUTE
+
+      SELECT
+
+      UPDATE
+    :::column-end:::
+    :::column:::
+      DELETE
+
+      INSERT
+
+      TAKE OWNERSHIP
+
+      VIEW DEFINITION
+    :::column-end:::
+:::row-end:::
+
 ## <a name="using-synonyms"></a>使用同义词  
- 可以在一些 SQL 语句和表达式上下文中使用同义词替代其引用的基对象。 下表包含这些语句和表达式上下文的列表：  
-  
-|||  
-|-|-|  
-|SELECT|INSERT|  
-|UPDATE|DELETE|  
-|在运行 CREATE 语句前执行|嵌套的 SELECT|  
-  
+ 可以在一些 SQL 语句和表达式上下文中使用同义词替代其引用的基对象。 以下列包含这些语句和表达式上下文的列表：  
+
+:::row:::
+    :::column:::
+        SELECT
+
+        UPDATE
+
+        EXECUTE
+    :::column-end:::
+    :::column:::
+        INSERT
+
+        DELETE
+
+        嵌套的 SELECT
+    :::column-end:::
+:::row-end:::
+ 
  在以前说明的上下文中使用同义词时，该基对象会受到影响。 例如，如果某个同义词引用了基对象（表）并且将行插入同义词中，则实际上将行插入到引用的表中。  
   
 > [!NOTE]  
@@ -97,19 +142,36 @@ EXEC ('ALTER TABLE dbo.MyProduct
 ```  
   
 下列权限语句仅与同义词（而不是基对象）关联：  
-  
-|||  
-|-|-|  
-|GRANT|DENY|  
-|REVOKE||  
-  
+
+:::row:::
+    :::column:::
+        GRANT
+
+        REVOKE
+    :::column-end:::
+    :::column:::
+        DENY
+    :::column-end:::
+:::row-end:::
+
 因为同义词不绑定到架构，所以无法通过下列架构绑定表达式上下文引用：  
-  
-|||  
-|-|-|  
-|CHECK 约束|计算列|  
-|默认的表达式|规则表达式|  
-|绑定到架构的视图|绑定到架构的函数|  
+
+:::row:::
+    :::column:::
+        CHECK 约束
+
+        默认的表达式
+
+        绑定到架构的视图
+    :::column-end:::
+    :::column:::
+        计算列
+
+        规则表达式
+
+        绑定到架构的函数
+    :::column-end:::
+:::row-end:::
   
 有关绑定到架构的函数的详细信息，请参阅[创建用户定义的函数（数据库引擎）](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)。  
   

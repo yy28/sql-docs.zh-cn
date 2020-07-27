@@ -21,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 486339cc1c5ef550dbf4eee227bec3ad67ce0e3a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 94be603d8982e4c05baed997b1072afbe66c2eec
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294102"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915245"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   通过消息队列任务，可以使用消息队列（也称为 MSMQ）在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包之间发送和接收消息，或将消息发送到由自定义应用程序处理的应用程序队列。 这些消息可以采用简单文本格式、文件格式或变量及其值的格式。  
@@ -120,7 +120,7 @@ ms.locfileid: "71294102"
  指示是否使用消息队列（也称为 MSMQ）的 2000 格式。 默认值为 **False**。  
   
  **MSMQConnection**  
- 选择现有 MSMQ 连接管理器，或单击“\<新建连接...>”  以创建新的连接管理器。  
+ 选择现有 MSMQ 连接管理器，或单击“\<**New connection...**>”以创建新的连接管理器。  
   
  **相关主题**：[MSMQ 连接管理器](../../integration-services/connection-manager/msmq-connection-manager.md)、[MSMQ 连接管理器编辑器](../../integration-services/connection-manager/msmq-connection-manager-editor.md)  
   
@@ -156,17 +156,17 @@ ms.locfileid: "71294102"
   
 #### <a name="messagetype--data-file-message"></a>MessageType = 数据文件消息  
  **DataFileMessage**  
- 键入数据文件的路径，或单击省略号 (…) 后再定位到相应的文件。   
+ 键入数据文件的路径，或单击省略号 (…) 后再定位到相应的文件。  
   
 #### <a name="messagetype--variable-message"></a>MessageType = 变量消息  
  **VariableMessage**  
- 键入变量名称，或单击省略号 (…) 后再选择相应的变量。  各变量之间用逗号分隔。  
+ 键入变量名称，或单击省略号 (…) 后再选择相应的变量。 各变量之间用逗号分隔。  
   
  **相关主题：** 选择变量  
   
 #### <a name="messagetype--string-message"></a>MessageType = 字符串消息  
  **StringMessage**  
- 键入字符串消息，或单击省略号 (…) 后在“输入字符串消息”对话框中键入消息。    
+ 键入字符串消息，或单击省略号 (…) 后在“输入字符串消息”对话框中键入消息。  
   
 ## <a name="message-queue-task-editor-receive-page"></a>消息队列任务编辑器（“接收”页）
   可以使用“消息队列任务编辑器”对话框的“接收”页，配置消息队列任务以接收 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 消息队列 (MSMQ) 消息   。  
@@ -195,7 +195,7 @@ ms.locfileid: "71294102"
   
 #### <a name="messagetype--data-file-message"></a>MessageType = 数据文件消息  
  **SaveFileAs**  
- 键入要使用的文件的路径，或单击省略号按钮 (…) 后再定位到该文件。   
+ 键入要使用的文件的路径，或单击省略号按钮 (…) 后再定位到该文件。  
   
  **Overwrite**  
  指示在保存数据文件消息的内容时是否覆盖现有文件中的数据。 默认值为 **False**。  
@@ -216,7 +216,7 @@ ms.locfileid: "71294102"
   
 ##### <a name="filter--from-package"></a>Filter = 来源包  
  **标识符**  
- 如果选择应用筛选器，请键入可以从中接收消息的包的唯一标识符，或者单击省略号按钮 (…)，再指定包。   
+ 如果选择应用筛选器，请键入可以从中接收消息的包的唯一标识符，或者单击省略号按钮 (…)，再指定包。  
   
  **相关主题：** [选择包](../../integration-services/control-flow/select-a-package.md)  
   
@@ -230,7 +230,7 @@ ms.locfileid: "71294102"
 |**来源包**|该消息仅接收来自指定包的消息。 选择该值将显示动态选项 **Identifier**。|  
   
  **变量**  
- 键入变量名称，或单击“\<新建变量…>”，然后配置新的变量。   
+ 键入变量名称，或单击“\<**New variable...**>”，然后配置新的变量。  
   
  **相关主题：** [添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -242,7 +242,7 @@ ms.locfileid: "71294102"
   
 ##### <a name="filter--from-package"></a>Filter = 来源包  
  **标识符**  
- 如果选择应用筛选器，请键入可以从中接收消息的包的唯一标识符，或者单击省略号按钮 (…)，再指定包。   
+ 如果选择应用筛选器，请键入可以从中接收消息的包的唯一标识符，或者单击省略号按钮 (…)，再指定包。  
   
  **相关主题：** [选择包](../../integration-services/control-flow/select-a-package.md)  
   
@@ -252,7 +252,7 @@ ms.locfileid: "71294102"
   
 |值|说明|  
 |-----------|-----------------|  
-|无 |不对消息进行比较。|  
+|无|不对消息进行比较。|  
 |**完全匹配**|消息必须与 **CompareString** 选项中的字符串完全匹配。|  
 |**忽略大小写**|消息必须与 **CompareString** 选项中的字符串匹配，但在比较时不区分大小写。|  
 |**包含**|消息必须包含 **CompareString** 选项中的字符串。|  
@@ -266,7 +266,7 @@ ms.locfileid: "71294102"
   
 |值|说明|  
 |-----------|-----------------|  
-|无 |不对消息进行比较。|  
+|无|不对消息进行比较。|  
 |**完全匹配**|消息必须与 **CompareString** 选项中的字符串完全匹配。|  
 |**忽略大小写**|消息必须与 **CompareString** 选项中的字符串匹配，但在比较时不区分大小写。|  
 |**包含**|消息必须包含 **CompareString** 选项中的字符串。|  
@@ -275,7 +275,7 @@ ms.locfileid: "71294102"
  除非将 **Compare** 选项设置为“无”  ，否则请提供与消息进行比较的字符串。  
   
  **变量**  
- 键入保存接收到的消息的变量名，或单击“\<新建变量…>”，然后配置新的变量。   
+ 键入要保存接收到的消息的变量名，或单击“\<**New variable...**>”，然后配置新的变量。  
   
  **相关主题：** [添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   

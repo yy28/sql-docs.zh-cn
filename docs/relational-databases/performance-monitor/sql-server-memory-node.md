@@ -1,5 +1,6 @@
 ---
 title: SQL Server，内存节点 | Microsoft Docs
+description: 了解“内存节点”对象，该对象在 SQL Server 中的 NUMA 节点上提供监视服务器内存使用情况的计数器。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,19 +11,19 @@ ms.topic: conceptual
 ms.assetid: 55b28ba9-b6d5-4ea9-8103-db8a72f42982
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: cfa8eb11b89919a3a1f151a0deddd24528631fe1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9afe187c8a9a732145862040ab09f0377aa59a60
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775790"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458779"
 ---
 # <a name="sql-server-memory-node"></a>SQL Server、内存节点
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Microsoft **中的** “内存节点” [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象在 NUMA 节点上提供监视服务器内存使用情况的计数器。  
   
 ## <a name="memory-node-counters"></a>内存节点计数  
- 下表描述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“内存节点”计数器  。  
+ 下表描述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“内存节点”计数器。  
   
 |SQL Server Memory Manager 计数器|说明|  
 |----------------------------------------|-----------------|  

@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7f2e417ddefc0094fc6320deafea40251ba77372
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 53a05fea022a2ea0232bc44646509ee3a84028af
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76761851"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919200"
 ---
 # <a name="dtexec-utility"></a>dtexec 实用工具
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   dtexec  命令提示实用工具用于配置和执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。 使用 **dtexec** 实用工具，可以访问所有包配置和执行功能，如参数、连接、属性、变量、日志和进度指示器等。 使用 dtexec  实用工具，可以加载来自以下源的包：[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器、.ispac 项目文件、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库、[!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区和文件系统。  
@@ -68,22 +68,22 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
 ##  <a name="installation-considerations-on-64-bit-computers"></a><a name="bit"></a> 64 位计算机上的安装注意事项  
  在 64 位计算机上， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将安装 64 位版本的 **dtexec** 实用工具 (dtexec.exe)。 如果需要以 32 位模式运行某些包，则必须安装 32 位版本的 **dtexec** 实用工具。 若要安装 32 位版本的 **dtexec** 实用工具，必须在安装过程中选择“客户端工具”或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 。  
   
- 默认情况下，同时安装了 64 位和 32 位版本的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 命令提示实用工具的 64 位计算机将在命令提示符处运行 32 位版本。 运行 32 位版本的原因是：在 PATH 环境变量中，32 位版本的目录路径显示在 64 位版本的目录路径之前。 （通常，32 位目录路径是 \<drive>:\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn，而 64 位目录路径是\<drive>:\Program Files\Microsoft SQL Server\110\DTS\Binn。   ）  
+ 默认情况下，同时安装了 64 位和 32 位版本的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 命令提示实用工具的 64 位计算机将在命令提示符处运行 32 位版本。 运行 32 位版本的原因是：在 PATH 环境变量中，32 位版本的目录路径显示在 64 位版本的目录路径之前。 （通常，32 位目录路径是 \<drive>:\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn，而 64 位目录路径是 \<drive>:\Program Files\Microsoft SQL Server\110\DTS\Binn。 ）  
   
 > **注意：** 如果使用 SQL Server 代理来运行此实用工具，则 SQL Server 代理会自动使用 64 位版本的实用工具。 SQL Server 代理使用注册表（而非 PATH 环境变量）来找到此实用工具的正确可执行文件。  
   
  若要确保在命令提示符处运行 64 位版本的实用工具，可以执行以下操作之一：  
   
--   打开命令提示符窗口，更改为包含 64 位版本的实用工具的目录 (\<drive>:\Program Files\Microsoft SQL Server\110\DTS\Binn)，然后从该位置运行此实用工具  。  
+-   打开“命令提示符”窗口，更改到包含 64 位版本的实用工具的目录 (\<drive>:\Program Files\Microsoft SQL Server\110\DTS\Binn)，然后从该位置运行此实用工具。  
   
--   在命令提示符处，通过输入 64 位版本的实用工具的完整路径 (\<drive>:\Program Files\Microsoft SQL Server\110\DTS\Binn) 来运行此实用工具  。  
+-   在命令提示符处，输入 64 位版本的实用工具的完整路径 (\<drive>:\Program Files\Microsoft SQL Server\110\DTS\Binn) 来运行此实用工具。  
   
--   通过将 64 位路径 (\<drive>:\Program Files\Microsoft SQL Server\110\DTS\Binn) 置于 32 位路径 (\<drive>:\ Program Files(x86)\Microsoft SQL Server\110\DTS\Binn) 之前，可永久更改 PATH 环境变量中路径的顺序   。  
+-   将 64 位路径 (\<drive>:\Program Files\Microsoft SQL Server\110\DTS\Binn) 置于 32 位路径(\<drive>:\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn) 之前，可永久更改 PATH 环境变量中路径的顺序 。  
   
 ##  <a name="considerations-on-computers-with-side-by-side-installations"></a><a name="side"></a> 有关使用并行安装的计算机的注意事项  
  当在已安装 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 或 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 的计算机上安装 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 时，安装多个版本的 **dtexec** 实用工具。  
   
- 若要确保运行正确的实用工具版本，请在命令提示符处，通过输入完整路径 (\<drive>:\Program Files\Microsoft SQL Server\\<version\>\DTS\Binn) 来运行此实用工具  。  
+ 若要确保运行正确版本的实用工具，请在命令提示符处输入完整路径 (\<drive>:\Program Files\Microsoft SQL Server\\<version\>\DTS\Binn) 来运行此实用工具。  
   
 ##  <a name="phases-of-execution"></a><a name="phases"></a> 执行的阶段  
  该实用工具的执行过程经历四个阶段。 这些阶段如下所列：  
@@ -243,7 +243,7 @@ dtexec /option [value] [/option [value]]...
     /Dump 0xC020801C  
     ```  
   
-     **/Dump** _error code_：默认情况下，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将调试转储文件存储在 \<drive>:\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps 文件夹中  。  
+     **/Dump** _error code_：默认情况下，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将调试转储文件存储在 \<drive>:\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps 文件夹中。  
   
     > **注意：** 调试转储文件可能包含敏感信息。 使用访问控制列表 (ACL) 来限制对这些文件的访问，或将文件复制到具有受限访问权限的文件夹中。 例如，在将调试文件发送给 Microsoft 支持服务部门之前，建议您删除所有敏感信息或机密信息。  
   
@@ -255,7 +255,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/DumpOnError**：（可选）在包运行期间发生任何错误时，创建调试转储文件 .mdmp 和 .tmp。  
   
-     默认情况下，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将调试转储文件存储在 \<drive>:\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps 文件夹中  。  
+     默认情况下，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将调试转储文件存储在 \<drive>:\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps 文件夹中。  
   
     > **注意：** 调试转储文件可能包含敏感信息。 使用访问控制列表 (ACL) 来限制对这些文件的访问，或将文件复制到具有受限访问权限的文件夹中。 例如，在将调试文件发送给 Microsoft 支持服务部门之前，建议您删除所有敏感信息或机密信息。  
   

@@ -21,12 +21,12 @@ ms.assetid: 8429134f-c821-4033-a07c-f782a48d501c
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 83f9b8cf8fd74f980c6ea85a335058779cd5736b
-ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
+ms.openlocfilehash: 48b8dbac5a4ad484103dcceedb243a52cc7e621d
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85834728"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943089"
 ---
 # <a name="create-table-transact-sql-identity-property"></a>CREATE TABLE (Transact-SQL) IDENTITY（属性）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -45,11 +45,14 @@ IDENTITY [ (seed , increment) ]
 ```  
   
 ## <a name="arguments"></a>参数  
- seed   
+ seed  
  加载到表中的第一个行所使用的值。  
   
- increment   
- 与前一个加载的行的标识值相加的增量值。  
+ increment  
+ 与前一个加载的行的标识值相加的增量值。
+
+ > [!NOTE]
+ > 在 Azure Synapse Analytics 中，由于数据仓库的分布式体系结构，标识的值不是增量。 有关详细信息，请参阅[使用 IDENTITY 在 Synapse SQL 池中创建代理键](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-identity#allocation-of-values)。
   
  必须同时指定种子和增量，或者二者都不指定。 如果二者都未指定，则取默认值 (1,1)。  
   
@@ -62,8 +65,11 @@ IDENTITY [ (seed , increment) ]
   
  列上的标识属性不确保：  
   
--   **值的唯一性** - 唯一性必须通过“PRIMARY KEY”或“UNIQUE”约束或者通过“UNIQUE”索引来实现    。  
-  
+-   **值的唯一性** - 唯一性必须通过“PRIMARY KEY”或“UNIQUE”约束或者通过“UNIQUE”索引来实现  。 - 
+ 
+> [!NOTE]
+> Azure Synapse Analytics 不支持“PRIMARY KEY”、“UNIQUE”约束或“UNIQUE”索引  。 有关详细信息，请参阅[使用 IDENTITY 在 Synapse SQL 池中创建代理键](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-identity#what-is-a-surrogate-key)。
+
 -   **事务内的连续值** - 不保证插入多个行的事务能够为这些行获得连续的值，因为表上可能发生其他并发插入操作。 如果值必须是连续的，事务应针对表使用排他锁或使用 **SERIALIZABLE** 隔离级别。  
   
 -   **服务器重新启动或出现其他故障后的连续值** -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - 可能出于性能原因而缓存标识值，在数据库故障或服务器重新启动期间，一些分配的值可能丢失。 这可能导致在插入时标识值之间有间隔。 如果不允许有间隔，应用程序应使用自己的机制来生成键值。 将序列生成器与 **NOCACHE** 选项结合使用可以限制从未提交的事务的间隔。  

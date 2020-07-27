@@ -1,5 +1,6 @@
 ---
 title: SQL Server - General Statistics 对象 | Microsoft Docs
+description: 了解 SQLServer:General Statistics 对象，该对象提供计数器以监视服务器范围内的常规活动，例如当前的连接数。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: c738e549-d7e7-4211-9ec3-064ac140af7c
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 854345e3985d3254e774071e8e6cc4df36be177b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d146725df4f8c2eaffafb0c46f8062849857ad01
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775866"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458286"
 ---
 # <a name="sql-server-general-statistics-object"></a>SQL Server General Statistics 对象
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **中的** SQLServer:General Statistics [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象提供计数器，用于监视服务器范围内的常规活动，例如，当前的连接数和每秒与运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的计算机连接和断开的用户数。 这在大型联机事务处理 (OLTP) 类型系统（这种系统中有很多客户端与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例连接和断开连接）上工作时会非常有用。  
   
- 此表介绍了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] General Statistics 计数器  。  
+ 此表介绍了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] General Statistics 计数器。  
   
 |SQL Server General Statistics 计数器|说明|  
 |--------------------------------------------|-----------------|  

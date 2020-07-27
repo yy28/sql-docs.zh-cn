@@ -1,5 +1,6 @@
 ---
 title: SQL Server - Databases 对象 | Microsoft Docs
+description: 了解 SQLServer:Databases 对象，该对象提供计数器来监视大容量复制操作、备份和还原吞吐量以及事务日志活动。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: da5bdd3fe0ea6e53e3943054470011040e9fe0c3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d775ca3158b642c6184f9d6c909b349d49d779ef
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85655955"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457979"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server，Databases 对象
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +53,7 @@ ms.locfileid: "85655955"
 |**Log Flush Write Time (ms)**|执行在最后一秒完成的写入日志刷新信息的时间（毫秒）。|  
 |**Log Flushes/sec**|每秒日志刷新数目。|  
 |**Log Growths**|数据库事务日志增长的总次数。|  
-|**Log Pool Cache Misses/sec**|日志块在日志池中不可用的请求数。 “日志池”  是事务日志的内存中缓存。 这种缓存用于优化对恢复、事务复制、回滚和 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]日志的读取操作。|  
+|**Log Pool Cache Misses/sec**|日志块在日志池中不可用的请求数。 “日志池”是事务日志的内存中缓存。 这种缓存用于优化对恢复、事务复制、回滚和 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]日志的读取操作。|  
 |**Log Pool Disk Reads/sec**|日志池发出的提取日志块的磁盘读取数。|  
 |**Log Pool Hash Deletes/sec**|从日志池删除原始哈希条目的速率。|
 |**Log Pool Hash Inserts/sec**|原始哈希条目插入日志池的速率。|

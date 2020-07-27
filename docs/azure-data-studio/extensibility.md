@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 6409dd44381b1d927b07f8ecee043465eacdd14e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3595c9aac3b0b8a0419780cdeaf9b5547bfa97d1
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774652"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86483855"
 ---
 # <a name="azure-data-studio-extensibility"></a>Azure Data Studio 扩展性
 
@@ -48,9 +48,9 @@ Azure Data Studio 具有多种扩展性机制，可以自定义用户体验并�
 
 azuredatastudio 中支持 IntelliSense。
 
-## <a name="contributes-dashboard"></a>贡献仪表板
+### <a name="dashboard-contribution-points"></a>仪表板贡献点
 
-向仪表板贡献选项卡、容器、见解小组件。
+向仪表板贡献选项卡、容器和/或见解小组件。
 
 ![仪表板](media/extensibility/dashboard-page.png)
 

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4b0c002e-1ffd-4425-a980-11fdc1f24af7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 326cce7eaa06eca6e981e72ea60d4f4144442942
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ab67f5da461c944b1742c5a391b25f0b4e5d5118
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85708318"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922988"
 ---
 # <a name="all-transact-sql"></a>ALL (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,14 +39,16 @@ ms.locfileid: "85708318"
 scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )  
 ```  
   
-## <a name="arguments"></a>参数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
  *scalar_expression*  
  为任意有效的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
- { = | <> | != | > | >= | !> | < | <= | !< }  
+ { = \| <> \| != \| > \| >= \| !> \| < \| <= \| !< }  
  一个比较运算符。  
   
- subquery   
+ subquery  
  返回单列结果集的子查询。 返回列的数据类型必须与 scalar_expression 的数据类型相同  。  
   
  受限的 SELECT 语句，其中不允许使用 ORDER BY 子句和 INTO 关键字。  

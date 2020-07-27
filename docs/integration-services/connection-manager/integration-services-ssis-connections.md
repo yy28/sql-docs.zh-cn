@@ -23,16 +23,16 @@ helpviewer_keywords:
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7a09cef6ce1e90fe9fce7b7bd4b025598a387c1f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 29ecedb74759b3290ff5fb391b95048aeaba5e8d
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79112278"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923150"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services (SSIS) 连接
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包使用连接来执行不同的任务以及实现 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 功能：  
@@ -113,9 +113,9 @@ ms.locfileid: "79112278"
   
 |类型|说明|主题|  
 |----------|-----------------|-----------|  
-|ORACLE|连接到 Oracle \<版本信息\> 服务器。|Oracle 连接管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 的连接管理器组件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 还包括源和目标。 有关详细信息，请访问下载页 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526)。|  
+|ORACLE|连接到 Oracle \<version info\> 服务器。|Oracle 连接管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 的连接管理器组件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 还包括源和目标。 有关详细信息，请访问下载页 [Microsoft Connectors for Oracle and Teradata by Attunity](https://www.microsoft.com/download/details.aspx?id=55179)。|  
 |SAPBI|连接到 SAP NetWeaver BI 7 版系统。|SAP BI 连接管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 的连接管理器组件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 还包括源和目标。 有关详细信息，请访问下载页 [Microsoft SQL Server 2008 功能包](https://www.microsoft.com/download/details.aspx?id=30440)。|  
-|TERADATA|连接到 Teradata \<版本信息\> 服务器。|Teradata 连接管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 的连接管理器组件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 还包括源和目标。 有关详细信息，请访问下载页 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526)。|  
+|TERADATA|连接到 Teradata \<version info\> 服务器。|Teradata 连接管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 的连接管理器组件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 还包括源和目标。 有关详细信息，请访问下载页 [Microsoft Connectors for Oracle and Teradata by Attunity](https://www.microsoft.com/download/details.aspx?id=55179)。|  
   
 ### <a name="custom-connection-managers"></a>自定义连接管理器  
  您还可以编写自定义连接管理器。 有关详细信息，请参阅 [Developing a Custom Connection Manager](../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager.md)。  
@@ -226,7 +226,7 @@ ms.locfileid: "79112278"
   
      您添加的连接管理器将显示在 **“解决方案资源管理器”** 中的 **“连接管理器”** 节点下。 它还将显示在项目中所有包的 **“SSIS 设计器”** 窗口的 **“连接管理器”** 选项卡中。 此选项卡中的连接管理器名称具有 **(project)** 前缀，以便将此项目级别的连接管理器与包级别的连接管理器区别开来。  
   
-4.  或者，在“解决方案资源管理器”窗口中的“连接管理器”节点下或在“SSIS 设计器”窗口的“连接管理器”选项卡中，右键单击连接管理器，再单击“重命名”，然后修改连接管理器的默认名称。  
+4.  或者，在“解决方案资源管理器”  窗口中的“连接管理器”  节点下或在“SSIS 设计器”  窗口的“连接管理器”  选项卡中，右键单击连接管理器，再单击“重命名”  ，然后修改连接管理器的默认名称。  
   
     > [!NOTE]  
     >  在“SSIS 设计器”窗口的“连接管理器”选项卡中，不能覆盖连接管理器名称中的 (project) 前缀    。 这是设计的结果。  
@@ -238,7 +238,7 @@ ms.locfileid: "79112278"
   
 #### <a name="options"></a>选项  
  **连接管理器类型**  
- 选择一个连接类型，再单击“添加”，或双击一个连接类型，使用与各连接类型相应的编辑器来指定连接属性。   
+ 选择一个连接类型，再单击“添加”，或双击一个连接类型，使用与各连接类型相应的编辑器来指定连接属性。  
   
  **添加**  
  使用与各连接类型相应的编辑器指定连接属性。  
@@ -272,7 +272,7 @@ ms.locfileid: "79112278"
   
 ###  <a name="delete-a-shared-connection-manager-project-level-connection-manager"></a><a name="DeleteProjectLevel"></a> 删除共享连接管理器（项目级别连接管理器）  
   
-1.  若要删除项目级别的连接管理器，请在“解决方案资源管理器”窗口的“连接管理器”节点下，右键单击连接管理器，然后单击“删除”。 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 显示下面的警告消息：  
+1.  若要删除项目级别的连接管理器，请在“解决方案资源管理器”  窗口的“连接管理器”  节点下，右键单击连接管理器，然后单击“删除”  。 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 显示下面的警告消息：  
   
     > [!WARNING]  
     >  在您删除某一项目连接管理器后，使用该连接管理器的包可能会不运行。 不能撤消此操作。 是否要删除该连接管理器?  
@@ -299,7 +299,7 @@ ms.locfileid: "79112278"
   
 5.  在 **“属性”** 窗口中，编辑属性值。 **“属性”** 窗口提供对在连接管理器的标准编辑器中无法配置的一些属性的访问。  
   
-6.  单击“确定”。   
+6.  单击“确定”。  
   
 7.  若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   

@@ -1,5 +1,6 @@
 ---
 title: 数据压缩 | Microsoft Docs
+description: 使用 SQL Server 和 Azure SQL 数据库应用行和页面数据压缩，或列存储和列存储存档压缩。
 ms.custom: ''
 ms.date: 08/31/2017
 ms.prod: sql
@@ -23,14 +24,14 @@ ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 464f83e573f76bb74158fc8eee6a798089734006
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5da071f378edb771d4b1dc70ac8257febd78a522
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85679727"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86459005"
 ---
-# <a name="data-compression"></a>Data Compression
+# <a name="data-compression"></a>数据压缩
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 支持针对行存储表和索引的行和页压缩，并且支持针对列存储表和索引的列存储和列存储存档压缩。  
@@ -137,7 +138,7 @@ REBUILD PARTITION = ALL WITH (
 ### <a name="metadata"></a>元数据  
 下面的系统视图包含有关聚集索引的数据压缩的信息：  
 -   [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) - **type** 和 **type_desc** 列包括 CLUSTERED COLUMNSTORE 和 NONCLUSTERED COLUMNSTORE。  
--   [sys.partitions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) - data_compression 和 data_compression_desc 列包括 COLUMNSTORE 和 COLUMNSTORE_ARCHIVE   。  
+-   [sys.partitions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) - data_compression 和 data_compression_desc 列包括 COLUMNSTORE 和 COLUMNSTORE_ARCHIVE 。  
   
 过程 [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) 也可应用于列存储索引。  
   
@@ -186,7 +187,7 @@ REBUILD PARTITION = ALL WITH (
 |用户意图|为表或索引复制分区方案|复制压缩设置|脚本编写行为|  
 |-----------------|-----------------------------------------------------|------------------------------------|------------------------|  
 |复制分区方案并在该分区上的订阅服务器上启用压缩。|True|True|对分区方案和压缩设置均编写脚本。|  
-|复制分区方案，但不压缩订阅服务器上的数据。|True|False|对分区方案编写脚本，但不对分区的压缩设置编写脚本。|  
+|复制分区方案，但不压缩订阅服务器上的数据。|正确|错误|对分区方案编写脚本，但不对分区的压缩设置编写脚本。|  
 |不复制分区方案，也不压缩订阅服务器上的数据。|False|False|不对分区和压缩设置编写脚本。|  
 |如果发布服务器上的所有分区均压缩，则压缩订阅服务器上的表，但不复制分区方案。|False|True|检查是否对所有分区均启用了压缩。<br /><br /> 在表级别对压缩编写脚本。|  
   

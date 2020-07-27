@@ -1,5 +1,6 @@
 ---
 title: 实时查询统计信息 | Microsoft Docs
+description: 了解如何在 SQL Server Management Studio 中查看活动查询的实时执行计划。 使用执行统计信息调试查询性能问题。
 ms.custom: ''
 ms.date: 11/21/2018
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 2705923e404273046b828b2cc4144a3f65c296a9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0d23b18096f1be3feeaddbee6bc2517bcaae8130
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731802"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457871"
 ---
 # <a name="live-query-statistics"></a>实时查询统计信息
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,11 +41,11 @@ ms.locfileid: "85731802"
   
 ## <a name="to-view-live-query-statistics-for-one-query"></a>查看某查询的实时查询统计信息 
   
-1.  若要查看实时查询执行计划，请在工具菜单上单击“添加实时查询统计信息”图标  。  
+1.  若要查看实时查询执行计划，请在工具菜单上单击“添加实时查询统计信息”图标。  
   
      ![工具栏上的“实时查询统计信息”按钮](../../relational-databases/performance/media/livequerystatstoolbar.png "工具栏上的“实时查询统计信息”按钮")  
   
-     还可以查看实时查询执行计划，方法是在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中右键单击所选查询，然后单击“包含实时查询统计信息”  。  
+     还可以查看实时查询执行计划，方法是在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中右键单击所选查询，然后单击“包含实时查询统计信息”。  
   
      ![弹出菜单上的“实时查询统计信息”按钮](../../relational-databases/performance/media/livequerystatsmenu.png "弹出菜单上的“实时查询统计信息”按钮")  
   
@@ -54,7 +55,7 @@ ms.locfileid: "85731802"
   
 ## <a name="to-view-live-query-statistics-for-any-query"></a>查看任何查询的实时查询统计信息 
 
-此外，可以通过右键单击“进程”表或“活动的耗费大量资源的查询”表中的任何查询，从[活动监视器](../../relational-databases/performance-monitor/activity-monitor.md)中访问实时执行计划。  
+此外，可以通过右键单击“进程”表或“活动的耗费大量资源的查询”表中的任何查询，从[活动监视器](../../relational-databases/performance-monitor/activity-monitor.md)中访问实时执行计划  。  
   
  ![活动监视器中的“实时查询统计信息”按钮](../../relational-databases/performance/media/livequerystatsactmon.png "活动监视器中的“实时查询统计信息”按钮")  
   
@@ -62,9 +63,9 @@ ms.locfileid: "85731802"
  必须启用统计信息配置文件基础结构，实时查询统计信息才能捕获查询进度的相关信息。 开销有可能较大，具体取决于使用的版本。 有关此开销的详细信息，请参阅[查询分析基础结构](../../relational-databases/performance/query-profiling-infrastructure.md)。
   
 ## <a name="permissions"></a>权限  
-需要数据库级别 `SHOWPLAN` 权限才能填充“实时查询统计信息”结果页，还需要执行查询所需的所有权限  。
+需要数据库级别 `SHOWPLAN` 权限才能填充“实时查询统计信息”结果页，还需要执行查询所需的所有权限。
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上，需要服务器级别 `VIEW SERVER STATE` 权限才能查看实时统计信息。  
-对于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 高级层，需要数据库的 `VIEW DATABASE STATE` 权限才能查看实时统计信息。 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 标准层和基本层上，需要“服务器管理员”或“Azure Active Directory 管理员”帐户才能查看实时统计信息   。
+对于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 高级层，需要数据库的 `VIEW DATABASE STATE` 权限才能查看实时统计信息。 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 标准层和基本层上，需要“服务器管理员”或“Azure Active Directory 管理员”帐户才能查看实时统计信息 。
   
 ## <a name="see-also"></a>另请参阅  
  [执行计划](../../relational-databases/performance/execution-plans.md)    

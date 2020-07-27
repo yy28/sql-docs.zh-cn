@@ -1,5 +1,6 @@
 ---
 title: 子查询 (SQL Server) | Microsoft Docs
+description: 查看一个子查询示例，该子查询嵌套在 SELECT、INSERT、UPDATE 或 DELETE 语句或 SQL Server 中其他子查询中。
 ms.custom: ''
 ms.date: 02/18/2018
 ms.prod: sql
@@ -16,12 +17,12 @@ ms.assetid: bfc97432-c14c-4768-9dc5-a9c512f6b2bd
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a455e6a8bf07b41a35b9c71f9d024278d0387e65
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 4df3e14fc35abd0de05f87bb79d442e62df7dc1d
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002324"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457589"
 ---
 # <a name="subqueries-sql-server"></a>子查询 (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -105,7 +106,7 @@ GO
 -   按照惯例，由 `EXISTS` 引入的子查询的选择列表有一个星号 (\*)，而不是单个列名。 因为由 `EXISTS` 引入的子查询创建了存在测试并返回 TRUE 或 FALSE 而非数据，所以由 `EXISTS` 引入的子查询的规则与标准选择列表的规则相同。   
 
 ## <a name="qualifying-column-names-in-subqueries"></a><a name="qualifying"></a> 在子查询中限定列名
-在下列示例中，外部查询的 `WHERE` 子句中的 BusinessEntityID 列是由外部查询的 `FROM` 子句中的表名 (Sales.Store) 隐性限定的。 对子查询的选择列表中 CustomerID  的引用则是由子查询的 `FROM` 子句（即通过 Sales.Customer  表）来限定的。
+在下列示例中，外部查询的 `WHERE` 子句中的 BusinessEntityID 列是由外部查询的 `FROM` 子句中的表名 (Sales.Store) 隐性限定的。 对子查询的选择列表中 CustomerID 的引用则是由子查询的 `FROM` 子句（即通过 Sales.Customer 表）来限定的。
 
 ```sql
 USE AdventureWorks2016;
@@ -204,7 +205,7 @@ GO
 
 ## <a name="correlated-subqueries"></a><a name="correlated"></a> 相关子查询
 许多查询都可以通过执行一次子查询并将得到的值代入外部查询的 `WHERE` 子句中进行计算。 在包括相关子查询（也称为重复子查询）的查询中，子查询依靠外部查询获得值。 这意味着子查询是重复执行的，为外部查询可能选择的每一行均执行一次。
-此查询在 SalesPerson  表中检索奖金为 5000 且雇员标识号与 Employee  和 SalesPerson  表中的标识号相匹配的雇员的名和姓的一个实例。
+此查询在 SalesPerson 表中检索奖金为 5000 且雇员标识号与 Employee 和 SalesPerson 表中的标识号相匹配的雇员的名和姓的一个实例。
 
 ```sql
 USE AdventureWorks2016;
@@ -230,9 +231,9 @@ Saraiva José 282
 (2 row(s) affected)
 ```
 
-该语句中前面的子查询无法独立于外部查询进行计算。 它需要 Employee.BusinessEntityID  值，但是此值随 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 检查 Employee  中的不同行而改变。   
+该语句中前面的子查询无法独立于外部查询进行计算。 它需要 Employee.BusinessEntityID 值，但是此值随 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 检查 Employee 中的不同行而改变。   
 下面准确说明了如何计算此查询：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过将每一行的值代入内部查询，考虑 Employee 表中的每一行是否都包括在结果中。
-例如，如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 首先检查 `Syed Abbas` 行，那么变量 Employee.BusinessEntityID  将取值 285，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将该值代入内部查询。
+例如，如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 首先检查 `Syed Abbas` 行，那么变量 Employee.BusinessEntityID 将取值 285，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将该值代入内部查询。
 
 ```sql
 USE AdventureWorks2016;
@@ -324,7 +325,7 @@ WHERE e1.AddressID IN
 GO
 ```
 
-显式别名清楚地表明，在子查询中对 Person.Address  的引用并不等同于在外部查询中的该引用。   
+显式别名清楚地表明，在子查询中对 Person.Address 的引用并不等同于在外部查询中的该引用。   
 
 ### <a name="subqueries-with-in"></a><a name="in"></a> 使用 IN 的子查询
 通过 `IN`（或 `NOT IN`）引入的子查询结果是包含零个值或多个值的列表。 子查询返回结果之后，外部查询将利用这些结果。    
@@ -491,7 +492,7 @@ GO
 ### <a name="subqueries-in-update-delete-and-insert-statements"></a><a name="upsert"></a> UPDATE、DELETE 和 INSERT 语句中的子查询
 可以在 `UPDATE`、`DELETE`、`INSERT` 和 `SELECT` 数据操作 (DML) 语句中嵌套子查询。    
 
-以下示例使 Production.Product 表的 ListPrice 列中的值加倍。 `WHERE` 子句中的子查询将引用 Purchasing.ProductVendor  表以便将 Product  表中更新的行仅限制为 BusinessEntity  1540 对应的那些行。
+以下示例使 Production.Product 表的 ListPrice 列中的值加倍。 `WHERE` 子句中的子查询将引用 Purchasing.ProductVendor 表以便将 Product 表中更新的行仅限制为 BusinessEntity 1540 对应的那些行。
 
 ```sql
 USE AdventureWorks2016;

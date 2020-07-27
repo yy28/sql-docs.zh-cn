@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 17c1de2c-637f-45c2-a148-79294bae0af4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 60dcf1692fb8b805b9eef8fad228353104131c93
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fb26be1034632ce747c21239636f9b0a4ec08114
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295740"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913263"
 ---
 # <a name="save-packages"></a>保存包
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，通过使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器可以生成包，并将包作为 XML 文件（.dtsx 文件）保存到文件系统中。 还可以将包 XML 文件的副本保存到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的 msdb 数据库，或保存到包存储区。 包存储区表示 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务管理的文件系统位置中的文件夹。  
@@ -60,7 +60,7 @@ ms.locfileid: "71295740"
   
 1.  在解决方案资源管理器中，双击要保存其副本的包。  
   
-2.  在“文件”菜单上，单击“包文件\<的副本 > 另存为”。  
+2.  在“文件”菜单上，单击“将 \<package file> 的副本另存为” 。  
   
 3.  在 **“保存包的副本”** 对话框，在 **“包位置”** 列表中选择包的位置。 提供了以下选项：  
     -   SQL Server
@@ -85,9 +85,9 @@ ms.locfileid: "71295740"
   
     -   在 **“包保护级别”** 对话框中，选择不同的保护级别。  
   
-    -   单击“确定”。   
+    -   单击“确定”。  
   
-9. 单击“确定”。   
+9. 单击“确定”。  
 
 ## <a name="save-a-package-as-a-package-template"></a>将包保存为包模板
  本部分介绍在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中创建新的 Integration Services 包时如何制定自定义包以及将自定义包作为模板。 默认情况下，在将新包添加到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目中时， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 使用创建空包的包模板。 您无法替换此默认模板，但可以添加新的模板。  
@@ -108,9 +108,9 @@ ms.locfileid: "71295740"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，打开要在其中创建包的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目。  
   
-2.  在解决方案资源管理器中，右键单击项目，指向“添加”，然后单击“新建项”。    
+2.  在解决方案资源管理器中，右键单击项目，指向“添加”，然后单击“新建项”。  
   
-3.  在“添加新项 —\<项目名称>”对话框中，单击要用作模板的包。  
+3.  在“添加新项 -\<project name>”对话框中，单击要用作模板的包。  
   
      模板列表包括名为“新建 SSIS 包”的默认包模板。 包图标将标识可以用作包模板的模板。  
   

@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: dcd1e0912f1bf0adcbae79da1f1d34f92233f467
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4e8e6b9a30146aff61464f4aeda46cc49f07abe7
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294193"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920693"
 ---
 # <a name="execute-package-task"></a>执行包任务
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   执行包任务通过允许包将其他包作为工作流的组成部分运行来扩展 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的企业功能。  
@@ -191,7 +191,7 @@ ms.locfileid: "71294193"
   
 ##### <a name="location--sql-server"></a>位置 = SQL Server  
  **Connection**  
- 在列表中选择 OLE DB 连接管理器，或单击“\<新建连接...>”  以创建新的连接管理器。  
+ 从列表中选择一个 OLE DB 连接管理器，或单击 \<**New connection...**> 创建新的连接管理器。  
   
  **相关主题：** [OLE DB 连接管理器](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
@@ -200,7 +200,7 @@ ms.locfileid: "71294193"
   
 ##### <a name="location--file-system"></a>位置 = 文件系统  
  **Connection**  
- 在列表中选择一个文件连接管理器，或单击“\<新建连接…>”新建一个连接管理器  。  
+ 从列表中选择文件连接管理器，或单击 \<**New connection...**> 创建新的连接管理器。  
   
  **相关主题：** [文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)  
   

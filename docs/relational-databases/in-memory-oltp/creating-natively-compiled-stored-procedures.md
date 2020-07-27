@@ -12,29 +12,29 @@ ms.assetid: e6b34010-cf62-4f65-bbdf-117f291cde7b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5ef2ee1bbc863de8f3be94733beac3f04fa90b3c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2ce0672c59a10e22131effacededf87db25bdb92
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723289"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484608"
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>创建本机编译的存储过程
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 本机编译的存储过程未实现完整 [!INCLUDE[tsql](../../includes/tsql-md.md)] 可编程性和查询外围应用。 某些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 构造不能在本机编译的存储过程内使用。 有关详细信息，请参阅 [本机编译的 T-SQL 模块支持的功能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)。  
   
-但是，有几个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 功能，仅本机编译的存储过程支持这些功能：  
+本机编译存储过程仅支持以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 功能：  
   
 -   原子块。 有关详细信息，请参阅 [Atomic Blocks](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md)。  
   
--   参数和变量的 NOT NULL 约束。 不能将 **NULL** 值分配给声明为 **NOT NULL**的参数或变量。 有关详细信息，请参阅 [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)。  
+-   参数和变量的 `NOT NULL` 约束。 不能将 **NULL** 值分配给声明为 **NOT NULL**的参数或变量。 有关详细信息，请参阅 [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)。  
   
-    -   CREATE PROCEDURE dbo.myproc (@myVarchar  varchar(32)  **not null**) ...  
+    -   `CREATE PROCEDURE dbo.myproc (@myVarchar VARCHAR(32) NOT NULL) AS (...)`  
   
-    -   DECLARE @myVarchar  varchar(32)  **not null = "Hello"** ; -- *（必须初始化为一个值。）*  
+    -   `DECLARE @myVarchar VARCHAR(32) NOT NULL = "Hello"; -- Must initialize to a value.`  
   
-    -   SET @myVarchar **= null**; -- *（编译，但在运行时失败。）*  
+    -   `SET @myVarchar = NULL; -- Compiles, but fails during run time.`  
   
 -   本机编译存储过程的架构绑定。  
   

@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f762b5c7c5c4ce48c0c1bee660ed726b124e9c55
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2e3602a8e21d6d7fd9371331914c6157c5db2ca4
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295134"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920756"
 ---
 # <a name="debugging-control-flow"></a>调试控制流
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含一些功能和工具，你可以使用这些功能和工具对 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中的控制流进行故障排除。  
@@ -135,7 +135,7 @@ ms.locfileid: "71295134"
   
     -   若要在事件处理程序中设置断点，请单击“事件处理程序”选项卡，右键单击任务、For 循环容器、Foreach 循环容器或序列容器，再单击“编辑断点”   。  
   
-4.  在“设置断点 \<容器名称>”  对话框中，选择要启用的断点。  
+4.  在“设置断点 \<container name>”对话框中，选择要启用的断点。  
   
 5.  还可以修改每个断点的命中计数类型和命中计数数量。  
   

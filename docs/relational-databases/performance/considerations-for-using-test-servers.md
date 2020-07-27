@@ -1,5 +1,6 @@
 ---
 title: 使用测试服务器的注意事项 | Microsoft Docs
+description: 了解如何使用测试服务器优化生产服务器中的数据库。 这是数据库引擎优化顾问的重要优点。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 94e6c3e5-1f09-4616-9da2-4e44d066d494
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: ef09bd17effe13d415a30a1175e9279744813eca
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f0013940f887991a622cf3cbc6f6e3f72ad78d8b
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85655631"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457323"
 ---
 # <a name="considerations-for-using-test-servers"></a>使用测试服务器的注意事项
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,5 +1,6 @@
 ---
 title: SQL Server - External Scripts 对象 | Microsoft Docs
+description: 了解 SQLServer:External Scripts 对象，该对象提供计数器以监视与执行外部脚本关联的操作。
 ms.custom: ''
 ms.date: 03/21/2016
 ms.prod: sql
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 8a75ccce-b174-4937-bc92-8e413b55afe1
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 3d1a481dfc14e3c84df78f2950a140f1bb14c059
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fb8ded658e80c3530b916ea81595ac5fa5c99f52
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775868"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457408"
 ---
 # <a name="sql-server-external-scripts-object"></a>SQL Server，外部脚本对象
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **中的** SQLServer:External Scripts [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象可以提供计数器，以监视与执行外部脚本关联的操作。 有关执行外部脚本的信息，请参阅 [sp_execute_external_script (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。  
   
- 下表介绍了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] External Scripts 计数器  。  
+ 下表介绍了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] External Scripts 计数器。  
   
 |SQL Server 外部脚本计数器|说明|  
 |------------------------------------------|-----------------|  

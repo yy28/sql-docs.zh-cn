@@ -1,5 +1,6 @@
 ---
 title: 创建统计信息 | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL 在 SQL Server 中为表或索引视图的列创建查询优化统计信息。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.assetid: 95a455fb-664d-4c95-851e-c6b62d7ebe04
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0989fda3e2650843b24719e51cd0944713a9ac2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d7b91e2a3438e09de30a6be3c66bb4c22f9bd1ad
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012242"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458225"
 ---
 # <a name="create-statistics"></a>创建统计信息
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -68,7 +69,7 @@ ms.locfileid: "86012242"
   
 3.  单击加号以便展开您要创建新统计信息的表。  
   
-4.  右键单击“统计信息”文件夹，然后选择“新建统计信息…”   。  
+4.  右键单击“统计信息”文件夹，然后选择“新建统计信息…” 。  
   
      以下属性将显示在“新建表 _table\_name_ 的统计信息”对话框的“常规”页面上。  
   
@@ -150,7 +151,7 @@ ms.locfileid: "86012242"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     USE AdventureWorks2012;   

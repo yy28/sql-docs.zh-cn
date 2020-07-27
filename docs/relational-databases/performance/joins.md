@@ -1,5 +1,6 @@
 ---
 title: 联接 (SQL Server) | Microsoft Docs
+description: 了解 SQL Server 采用的联接操作类型。 SQL Server 使用联接操作支持垂直表分区或分列存储。
 ms.custom: ''
 ms.date: 07/19/2019
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f4b2bd
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1c7f2ff4782923eef9ee4d91fa0a7c69239e298c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c4c93c73aa3f20304a5e58fda096565d0db0456a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009685"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915841"
 ---
 # <a name="joins-sql-server"></a>联接 (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -245,7 +246,7 @@ WHERE [fo].[Quantity] = 361;
 - 数据库兼容性级别为 140 或更高级别。
 - 查询是 `SELECT` 语句（数据修改语句当前不符合条件）。
 - 联接符合同时由索引嵌套循环联接或哈希联接物理算法执行的条件。
-- 哈希联接将通过整体查询中的列存储索引状态或联接直接引用的列存储索引表使用[批处理模式](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution)。
+- 哈希联接使用批处理模式，通过整体查询中的列存储索引状态、联接直接引用的列存储索引表或通过使用[针对行存储功能批处理模式](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore)来启用。
 - 嵌套循环联接和哈希联接生成的替代解决方案的第一个子级（外部引用）应相同。
 
 ### <a name="adaptive-threshold-rows"></a>自适应阈值行

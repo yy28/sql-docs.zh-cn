@@ -25,16 +25,16 @@ helpviewer_keywords:
 ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b6f3217854bf72f3c7300c87aefceab24220401a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dd679e14920099a6383a414772bc162cdf470645
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71281941"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921951"
 ---
 # <a name="set-package-properties"></a>设置包属性
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供的图形界面创建包时，可以在“属性”窗口中设置包对象的各个属性。  
@@ -112,7 +112,7 @@ ms.locfileid: "71281941"
 |**CreatorComputerName**|创建包的计算机的名称。|  
 |**CreatorName**|包创建者的姓名。|  
 |**说明**|包功能说明。|  
-|**ID**|包 GUID，该属性是在创建包时分配的。 此属性为只读。 若要生成 **ID** 属性的新随机值，请在下拉列表中选择 \<“生成新 ID”\>。|  
+|**ID**|包 GUID，该属性是在创建包时分配的。 此属性为只读。 若要为 ID 属性生成新的随机值，请在下拉列表中选择 \<Generate New ID\> 。|  
 |**名称**|包的名称。|  
 |**PackageType**|包类型。 其值为： **Default**、 **DTSDesigner**、 **DTSDesigner100**、 **DTSWizard**、 **SQLDBMaint**和 **SQLReplication**。 此属性的默认值为 **Default**。 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType>。|  
   

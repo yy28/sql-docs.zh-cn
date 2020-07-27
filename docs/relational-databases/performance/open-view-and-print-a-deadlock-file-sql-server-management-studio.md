@@ -1,5 +1,6 @@
 ---
 title: 打开、查看和打印死锁文件 (SSMS)
+description: 了解如何捕获 SQL Server Profiler 生成的死锁信息并在 SQL Server Management Studio 中查看该信息。
 ms.custom: seo-dt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ ms.assetid: 5061b13f-2cb7-457a-b8d0-fbd437b510ab
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 61204492bad49c3d3d8ec01442cb9baca538a0f8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3c55ad170e9d6a9fe58865ab28ac75f018b6905b
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758869"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458329"
 ---
 # <a name="open-view-and-print-a-deadlock-file-in-sql-server-management-studio-ssms"></a>在 SQL Server Management Studio (SSMS) 中打开、查看和打印死锁文件
 
@@ -40,9 +41,9 @@ ms.locfileid: "85758869"
   
 2. 在 **“打开文件”** 对话框的 **“文件类型”** 框中选择 .xdl 文件类型。 现在就获得了一个筛选为只包含死锁文件的列表。  
   
-3. 选择要打印的死锁文件，然后选择“打开”  。  
+3. 选择要打印的死锁文件，然后选择“打开”。  
   
-4. 在“文件”  菜单上，选择“打印”  。  
+4. 在“文件”菜单上，选择“打印”。  
   
 ## <a name="see-also"></a>另请参阅  
  [保存死锁图形 (SQL Server Profiler)](../../relational-databases/performance/save-deadlock-graphs-sql-server-profiler.md)  

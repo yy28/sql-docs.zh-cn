@@ -1,5 +1,6 @@
 ---
 title: 监视资源使用情况（系统监视器）| Microsoft Docs
+description: 使用系统监视器可以测量 SQL Server 对象的性能、性能计数器以及其他对象（例如处理器和内存）的行为。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: f2993a28-0b81-46f2-aec0-6877fe990387
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 9f451dcfbe7f3463a1b99445efe52a3b31d02a75
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: caddd3cf64fec46e6878daa6a46e6661346fd905
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787442"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457989"
 ---
 # <a name="monitor-resource-usage-system-monitor"></a>监视资源使用情况（系统监视器）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

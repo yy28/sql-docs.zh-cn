@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c6076e4c02ccb4c91c88a22df7cd7c4a50b0f877
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 663ecd4dba689f394af61c4a26ff8edc1c241703
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295115"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86899890"
 ---
 # <a name="debugging-data-flow"></a>调试数据流
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器包含可用于解决 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中数据流问题的功能和工具。  
@@ -155,7 +155,7 @@ order by source_component_name desc
   
 6.  为每列设置 **“截断”** 选项。  
   
-7.  单击“确定”。   
+7.  单击“确定”。  
   
 8.  若要保存已更新的包，请在 **“文件”** 菜单中单击 **“保存选定项”** 。  
   
@@ -172,7 +172,7 @@ order by source_component_name desc
   
 4.  右键单击要配置其错误输出列的组件，再单击“显示高级编辑器”  。  
   
-5.  单击“输入和输出属性”选项卡并展开“\<组件名称> 错误输出”，然后展开“输出列”。  
+5.  单击“输入和输出属性”选项卡并展开“\<component name> 错误输出”，然后展开“输出列”  。  
   
 6.  单击某列，然后更新其属性。  
   
@@ -202,9 +202,9 @@ order by source_component_name desc
   
 4.  单击要将数据查看器附加到其数据流的数据流任务，然后单击 **“数据流”** 选项卡。  
   
-5.  右键单击两个数据流组件之间的路径，然后单击“编辑”。   
+5.  右键单击两个数据流组件之间的路径，然后单击“编辑”。  
   
-6.  在 **“常规”** 页上，可以查看和编辑路径属性。 例如，从“路径批注”下拉列表中，你可以选择要在路径旁边显示的批注。   
+6.  在 **“常规”** 页上，可以查看和编辑路径属性。 例如，从“路径批注”下拉列表中，你可以选择要在路径旁边显示的批注。  
   
 7.  在 **“元数据”** 页上，您可以查看列元数据并将元数据复制到剪贴板。  
   
@@ -215,7 +215,7 @@ order by source_component_name desc
     > [!NOTE]  
     >  在网格中，表示 DT_DATE、DT_DBTIME2、DT_FILETIME、DT_DBTIMESTAMP、DT_DBTIMESTAMP2 和 DT_DBTIMESTAMPOFFSET 数据类型的值显示为 ISO 8601 格式字符串，空间分隔符将替代 **T** 分隔符。 表示 DT_DATE 和 DT_FILETIME 数据类型的值包括七位秒小数。 因为 DT_FILETIME 数据类型仅存储三位秒小数，网格会将其余四位显示为零。 表示 DT_DBTIMESTAMP 数据类型的值包含三位秒小数。 对于表示 DT_DBTIME2、DT_DBTIMESTAMP2 和 DT_DBTIMESTAMPOFFSET 数据类型的值，秒小数的数字位数与为列数据类型指定的小数位数对应。 有关 ISO 8601 格式的详细信息，请参阅 [Date and Time Formats](https://msdn.microsoft.com/library/bed6e2c1-791a-4fa1-b29f-cbfdd1fa8d39)。 有关数据类型的详细信息，请参阅 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
   
-10. 单击“确定”。   
+10. 单击“确定”。  
 
 ## <a name="data-flow-taps"></a>数据分流
  运行时，可在包的数据流路径上添加数据分流点，并将数据分流点的输出定向到外部文件。 若要使用此功能，您必须使用项目部署工具将 SSIS 项目部署到 SSIS 服务器。 将包部署到服务器之后，需要对 SSISDB 数据库执行 T-SQL 脚本，以便在执行该包之前添加数据分流点。 下面是一个示例方案：  
@@ -249,7 +249,7 @@ EXEC [SSISDB].[catalog].[start_execution] @execid
   
  add_data_tap 存储过程的 dataflow_path_id_string 参数对应于您要添加数据分流点的数据流路径的 IdentificationString 属性。 若要获取 dataflow_path_id_string，请单击数据流路径（数据流中任务间的箭头），并记下“属性”窗口中 **IdentificationString** 属性的值。  
   
- 执行脚本时，输出文件存储在 \<程序文件>\Microsoft SQL Server\110\DTS\DataDumps 中。 如果已存在同名文件，则将创建带有后缀的新文件（例如：output[1].txt）。  
+ 执行脚本时，输出文件存储在 \<Program Files>\Microsoft SQL Server\110\DTS\DataDumps 中。 如果已存在同名文件，则将创建带有后缀的新文件（例如：output[1].txt）。  
   
  如前所述，也可使用 [catalog.add_data_tap_by_guid](../../integration-services/system-stored-procedures/catalog-add-data-tap-by-guid.md)存储过程代替使用 add_data_tap 存储过程。 此存储过程将数据流任务的 ID 用作参数，而不使用 task_package_path。 您可以从 Visual Studio 中的属性窗口获取数据流任务的 ID。  
   

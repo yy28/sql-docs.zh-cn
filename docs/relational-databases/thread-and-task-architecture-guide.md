@@ -15,12 +15,12 @@ ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df923a4a1509520b95e5efcf87e9eac51497e4a8
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: f61fad1afac14c2e6a27314e2a65371722ee9b23
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86158915"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485570"
 ---
 # <a name="thread-and-task-architecture-guide"></a>线程和任务体系结构指南
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "86158915"
 ## <a name="operating-system-task-scheduling"></a>操作系统任务计划
 线程是操作系统可以执行的最小处理单位，借助线程可以将应用程序逻辑分为多个并行执行路径。 当复杂应用程序包含可同时执行的多个任务时，线程非常有用。 
 
-操作系统执行应用程序实例时，它将创建一个单元（称为进程）来管理该实例。 此进程包含一个执行线程。 它是由应用程序代码执行的一系列编程指令。 例如，如果一个简单应用程序具有一组可串行执行的指令，则会将该组指令作为单个任务处理，并且整个应用程序只有一个执行路径（或线程）。  更复杂的应用程序可能有几个任务，这些任务可以并行执行，而不是串行执行。 应用程序可以通过以下方式实现此操作：启动各个任务的独立进程（这属于资源密集型操作），或启动独立的线程（相对而言它消耗资源较少）。 而且，可以独立于与某进程关联的其他线程来安排每个线程的执行。
+操作系统执行应用程序实例时，它将创建一个单元（称为进程）来管理该实例。 此进程包含一个执行线程。 它是由应用程序代码执行的一系列编程指令。 例如，如果一个简单应用程序具有一组可串行执行的指令，则会将该组指令作为单个任务处理，并且整个应用程序只有一个执行路径（或线程）。 更复杂的应用程序可能有几个任务，这些任务可以并行执行，而不是串行执行。 应用程序可以通过以下方式实现此操作：启动各个任务的独立进程（这属于资源密集型操作），或启动独立的线程（相对而言它消耗资源较少）。 而且，可以独立于与某进程关联的其他线程来安排每个线程的执行。
 
 线程使复杂的应用程序能够更有效地利用处理器 (CPU)，即使在只有一个 CPU 的计算机上也是如此。 如果只有一个 CPU，则每次只能执行一个线程。 如果一个线程执行不使用 CPU 的长时间运行的操作（如磁盘读/写操作），则第一个操作完成之前可以执行另一个线程。 通过在其他线程等待操作完成的同时执行线程，应用程序可以最大限度地利用 CPU。 对于大量占用磁盘 I/O 的多用户应用程序（如数据库服务器），这尤其有效。 具有多个 CPU 的计算机可以同时在每个 CPU 上执行一个线程。 例如，如果某计算机有八个 CPU，则它可以同时执行八个线程。
 
@@ -111,6 +111,9 @@ ORDER BY parent_task_address, scheduler_id;
 > [!TIP]
 > 对于父任务，列 `parent_task_address` 始终为 NULL。 
 
+> [!TIP]
+> 在非常繁忙的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 上，可以看到许多活动任务超出了预留线程设置的限制。 这些任务可以属于不再使用的分支，并且处于等待清理的暂时性状态。 
+
 [!INCLUDE[ssResult](../includes/ssresult-md.md)] 请注意，当前正在执行的分支有 17 个活动任务：16 个子任务对应于预留的线程以及父任务或协调任务。
 
 |parent_task_address|task_address|task_state|scheduler_id|worker_address|
@@ -133,9 +136,6 @@ ORDER BY parent_task_address, scheduler_id;
 |0x000001EF4758ACA8|0x000001EC8628D468|SUSPENDED|11|0x000001EFBFA4A160|
 |0x000001EF4758ACA8|0x000001EFBD3A1C28|SUSPENDED|11|0x000001EF6BD72160|
 
-> [!TIP]
-> 在非常繁忙的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 上，可以看到许多活动任务超出了预留线程设置的限制。 这些任务可以属于不再使用的分支，并且处于等待清理的暂时性状态。 
-
 请注意，16 个子任务中的每一个任务都分配了不同的工作线程（参见 `worker_address` 列），但是所有的工作线程都分配到由 8 个计划程序（0、5、6、7、8、9、10、11）组成的相同池，并且父任务将分配给此池之外的计划程序 (3)。
 
 > [!IMPORTANT]
@@ -147,7 +147,7 @@ ORDER BY parent_task_address, scheduler_id;
 > [!TIP] 
 > 对于上述 DMV 的输出，所有活动任务都处于 SUSPENDED 状态。 有关正在等待的任务的详细信息，请查询 [sys.dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md) DMV。 
 
-总之，一个并行请求将生成多个任务，其中每个任务必须分配给单个工作线程，且每个工作线程必须分配给单个计划程序。 因此，正在使用的计划程序的数量不能超过每个分支的并行任务数，这是 MaxDOP 设置的。 
+总而言之，并行请求将生成多个任务。 必须将每个任务分配到单个工作线程。 必须将每个工作线程分配到单个计划程序。 因此，正在使用的计划程序的数量不能超过每个分支的并行任务数，这是 MaxDOP 配置或查询提示设置的。 协调线程不影响 MaxDOP 限制。 
 
 ### <a name="allocating-threads-to-a-cpu"></a>为 CPU 分配线程
 默认情况下，每个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例启动每个线程，操作系统根据负载从计算机上的处理器 (CPU) 中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例分发线程。 如果已在操作系统级别启用了进程关联，则操作系统会将每个线程分配给特定的 CPU。 与之相反，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 将 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 工作线程分配给在 CPU 之间以轮询方式平均分发线程的计划程序 。

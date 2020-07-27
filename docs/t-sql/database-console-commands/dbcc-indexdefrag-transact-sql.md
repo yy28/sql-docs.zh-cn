@@ -1,5 +1,5 @@
 ---
-title: DBCC INDEXDEFRAG (Transact-SQL) | Microsoft Docs
+title: DBCC INDEXDEFRAG (Transact-SQL)
 ms.custom: ''
 ms.date: 07/16/2017
 ms.prod: sql
@@ -23,14 +23,15 @@ helpviewer_keywords:
 ms.assetid: 3c7df676-4843-44d0-8c1c-a9ab7e593b70
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: d1894e33de743e8e4b7f4053b7b77746cca3e124
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ca27b41cffa6ee319acf27e62bc26e1f27a82c44
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901667"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484281"
 ---
 # <a name="dbcc-indexdefrag-transact-sql"></a>DBCC INDEXDEFRAG (Transact-SQL)
+
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 指定表或视图的索引碎片整理。
@@ -38,7 +39,7 @@ ms.locfileid: "85901667"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]请改用 [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)。  
   
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)） 
+适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -54,17 +55,19 @@ DBCC INDEXDEFRAG
     [ WITH NO_INFOMSGS ]   
 ```  
   
-## <a name="arguments"></a>参数  
-  database_name | database_id  | 0  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
+ database_name \| database_id \| 0   
  包含要进行碎片整理的索引的数据库。 如果指定 0，则使用当前数据库。 数据库名称必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。  
   
- *table_name* | *table_id* | *view_name* | *view_id*  
+ table_name \| table_id \| view_name \| view_id     
  包含要进行碎片整理的索引的表或视图。 表和视图的名称必须符合有关标识符的规则。  
   
- *index_name* | *index_id*  
+ index_name \| index_id   
  要进行碎片整理的索引的名称或 ID。 如果未指定，该语句将针对指定表或视图的所有索引进行碎片整理。 索引名称必须符合标识符规则。  
   
- *partition_number* | 0  
+ partition_number \| 0  
  要进行碎片整理的索引的分区号。 如果未指定或指定 0，该语句将对指定索引的所有分区进行碎片整理。  
   
  WITH NO_INFOMSGS  

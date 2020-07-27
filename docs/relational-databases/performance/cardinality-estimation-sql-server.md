@@ -1,5 +1,6 @@
 ---
 title: 基数估计 (SQL Server) | Microsoft Docs
+description: SQL Server 查询优化器选择估计的处理成本最低的查询计划，该计划将根据已处理的行和成本模型来确定。
 ms.custom: ''
 ms.date: 02/24/2019
 ms.prod: sql
@@ -15,12 +16,12 @@ ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 36c7637d1408a8d37764bf18997d341db959d8e8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3806092674dde608bed9a962bcf939ac0379b374
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730287"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457697"
 ---
 # <a name="cardinality-estimation-sql-server"></a>基数估计 (SQL Server)
 
@@ -196,9 +197,9 @@ GO
   
     -   **估计的 I/O 成本**，以及一些涉及实际性能而不是行数预测的类似的估计  属性。  
   
-    -   **逻辑操作** 和 **物理操作**。  “并行”是一个不错的选择。  
+    -   **逻辑操作** 和 **物理操作**。 “并行”是一个不错的选择。  
   
-    -   **实际执行模式**。  “批处理”是一个不错的选择，优于“行”  。  
+    -   **实际执行模式**。 “批处理”是一个不错的选择，优于“行”  。  
   
 9. 将估计的行数与实际行数进行比较。 CE 的不准确率偏高或偏低 1% 还是 10%？  
   
@@ -236,7 +237,7 @@ GO
 
 3. 可以使用 `LEGACY_CARDINALITY_ESTIMATION` 查询提示，让单个查询使用较旧 CE，同时保留查询优化器中的其他改进。  
   
-为了实现更好的控制，可以强制系统在测试期间使用通过 CE 70 生成的计划  。 固定首选计划后，可以将整个数据库设置为使用最新兼容性级别和 CE。  该方法将在后面详细说明。  
+为了实现更好的控制，可以强制系统在测试期间使用通过 CE 70 生成的计划  。 固定首选计划后，可以将整个数据库设置为使用最新兼容性级别和 CE。 该方法将在后面详细说明。  
   
 ### <a name="how-to-force-a-particular-query-plan"></a>如何强制使用特定的查询计划  
   
@@ -244,7 +245,7 @@ GO
   
 - 执行 **sp_query_store_force_plan**。  
   
-- 在 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 中，展开“查询存储”节点，右键单击“资源使用排名靠前的节点”，然后单击“查看资源使用排名靠前的节点”    。 此时将显示“强制使用计划”和“取消强制使用计划”按钮。    
+- 在 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 中，展开“查询存储”节点，右键单击“资源使用排名靠前的节点”，然后单击“查看资源使用排名靠前的节点”    。 此时将显示“强制使用计划”和“取消强制使用计划”按钮。  
   
 有关查询存储的详细信息，请参阅 [《Monitoring Performance By Using the Query Store》](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)（使用查询存储监控性能）。  
   

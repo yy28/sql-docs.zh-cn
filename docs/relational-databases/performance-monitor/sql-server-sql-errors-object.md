@@ -1,5 +1,6 @@
 ---
 title: SQL Server - SQL Errors 对象 | Microsoft Docs
+description: 了解 SQLServer:SQL Errors 对象，该对象提供了一些计数器，以监视 SQL Server 中的 SQL Errors。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 6e5273ca-29cb-4618-88a2-70b9b8d6cf76
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: b8f99ab36545778981ed509ed0575c039916d42f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8d2b511f76fd659f1fcb3bd37d4041d57603b3cd
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758937"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457966"
 ---
 # <a name="sql-server-sql-errors-object"></a>SQL Server SQL Errors 对象
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Microsoft **中的** SQLServer:SQL Errors [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象提供了一些计数器，以监视 **SQL Errors**。  
   
- 下表介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL 错误计数器  。  
+ 下表介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL 错误计数器。  
   
 |SQL Server SQL Errors 计数器|说明|  
 |------------------------------------|-----------------|  

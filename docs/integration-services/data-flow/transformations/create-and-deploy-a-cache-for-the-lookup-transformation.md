@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e53569a8680ec3a6414aeeaa83e9322e77568ecf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d0f402739a63d4e11983c4ad1b50d0c2f337a9e1
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297977"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918844"
 ---
 # <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>为查找转换创建和部署缓存
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   可以为查找转换创建和部署缓存文件 (.caw)。 引用数据集存储在缓存文件中。  
@@ -90,7 +90,7 @@ ms.locfileid: "71297977"
   
 4.  配置项目以创建一个部署实用工具，再生成项目。 有关详细信息，请参阅 [Create a Deployment Utility](../../../integration-services/packages/create-a-deployment-utility.md)。  
   
-     将创建清单文件 \<项目名称>.SSISDeploymentManifest.xml，其中列出了项目、包及包配置中的杂项文件  。  
+     将创建一个清单文件 \<*project name*>.SSISDeploymentManifest.xml，其中列出了项目、包及包配置中的杂项文件。  
   
 5.  将包部署到文件系统。 有关详细信息，请参阅 [Deploy Packages by Using the Deployment Utility](../../../integration-services/packages/deploy-packages-by-using-the-deployment-utility.md)。  
   

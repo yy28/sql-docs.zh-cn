@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6829260583ebc3c1b0dec3fec5d3158ddbbea297
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5ab34cf592628a92f2dcf536e2eda400aecf80ad
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293530"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920858"
 ---
 # <a name="ado-net-destination"></a>ADO NET 目标
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   ADO NET 目标可将数据加载到各种使用数据库表或视图的兼容 [!INCLUDE[vstecado](../../includes/vstecado-md.md)]的数据库中。 你可以选择将这些数据加载到现有表或视图中，或者先创建一个新表，然后将这些数据加载到新表中。  
@@ -131,7 +131,7 @@ ms.locfileid: "71293530"
  查看可用目标列的列表。 使用拖放操作可以将表中的可用目标列映射到输入列。  
   
  **输入列**  
- 查看选定的输入列。 可以通过选择“\<忽略>”  以从输出中排除列来移除映射。  
+ 查看选定的输入列。 可选择“\<ignore>”从输出中排除列以删除映射。  
   
  **目标列**  
  查看每个可用目标列，而不管是否已对其进行映射。  

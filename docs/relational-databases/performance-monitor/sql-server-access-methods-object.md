@@ -1,5 +1,6 @@
 ---
 title: SQL Server - Access Methods 对象 | Microsoft Docs
+description: 了解“访问方法”计数器，这些计数器还可用于监视 SQL Server 中数据库内的数据量、索引和可用空间。
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 296cdb3433ff0e40ea73987ef5a53b985a550f1f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 485e7e4d762b415ad4a0d140a631e99b4c79983b
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787410"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458445"
 ---
 # <a name="sql-server-access-methods-object"></a>SQL Server Access Methods 对象
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "85787410"
   
 -   [sys.dm_db_session_space_usage (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)  
   
- 下表介绍了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Access Methods 计数器  。  
+ 下表介绍了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Access Methods 计数器。  
   
 |SQL Server Access Methods 计数器|说明|  
 |----------------------------------------|-----------------|  

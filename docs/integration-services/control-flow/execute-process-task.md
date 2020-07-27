@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 214f28fbb977414d4e14fdd14f2be53e9b705bc1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a47088f610dc016fe904b9b772e261b9bd2adcf0
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298338"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920677"
 ---
 # <a name="execute-process-task"></a>执行进程任务
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   执行进程任务在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包工作流中运行应用程序或批处理文件。 虽然可以使用执行进程任务打开任意标准应用程序（例如 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 或 [!INCLUDE[ofprword](../../includes/ofprword-md.md)]），但通常还是使用它来运行针对数据源执行的业务应用程序或批处理文件。 例如，可以使用执行进程任务来展开一个压缩的文本文件。 然后，包可将该文本文件用作包中数据流的数据源。 再举一个例子，您可以使用执行进程任务运行生成日销售额报表的自定义 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 应用程序。 然后，可以将该报表附加到发送邮件任务，并将其转发给通讯组列表。  
@@ -87,7 +87,7 @@ ms.locfileid: "71298338"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.ExecuteProcess.ExecuteProcess>  
   
 ## <a name="execute-process-task-editor-general-page"></a>执行进程任务编辑器（“常规”页）
-  可以使用“执行进程任务编辑器”对话框的“常规”页，对执行进程任务进行命名和说明。    
+  可以使用“执行进程任务编辑器”对话框的“常规”页，对执行进程任务进行命名和说明。  
   
 ### <a name="options"></a>选项  
  **名称**  
@@ -116,15 +116,15 @@ ms.locfileid: "71298338"
  键入包含可执行文件的文件夹的路径，或单击浏览 (…) 按钮定位到该文件夹  。  
   
  **StandardInputVariable**  
- 选择为进程提供输入的变量，或单击“\<新建变量...>”创建一个新变量  ：  
+ 选择为进程提供输入的变量，或单击 \<**New variable...**> 创建新的变量：  
   
  **相关主题：** [添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **StandardOutputVariable**  
- 选择用于捕获进程输出的变量，或单击“\<新建变量...>”创建一个新变量  。  
+ 选择捕获进程输出的变量，或单击 \<**New variable...**> 创建新的变量。  
   
  **StandardErrorVariable**  
- 选择用于捕获进程错误输出的变量，或单击“\<新建变量...>”创建一个新变量  。  
+ 选择捕获处理器的错误输出的变量，或单击 \<**New variable...**> 创建新的变量。  
   
  **FailTaskIfReturnCodeIsNotSuccessValue**  
  指示在进程退出代码与 **SuccessValue**中指定的值不同时任务是否失败。  

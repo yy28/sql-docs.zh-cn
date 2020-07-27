@@ -1,5 +1,6 @@
 ---
 title: SQL Server - Columnstore 对象 | Microsoft Docs
+description: 了解 SQLServer:Columnstore 对象，该对象提供计数器以监视 SQL Server 中执行的列存储索引。
 ms.custom: ''
 ms.date: 04/12/2016
 ms.prod: sql
@@ -10,19 +11,19 @@ ms.topic: conceptual
 ms.assetid: ae663a49-012f-4ffe-a332-f03157843052
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 8274597a9dddc42b9745d99add5160889f814572
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f00f4405144cec17b0b0266308ebc6df39336a70
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787318"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458404"
 ---
 # <a name="sql-server-columnstore-object"></a>SQL Server，列存储对象
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  SQLServer:Columnstore 对象提供计数器以监视在   中执行的列存储索引[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+  SQLServer:Columnstore 对象提供计数器以监视在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中执行的列存储索引。  
   
- 下表介绍了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Columnstore 计数器  。  
+ 下表介绍了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Columnstore 计数器。  
   
 |列存储计数器|说明|  
 |--------------------------|-----------------|  

@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3a73c3aaf23d74857c1c182e4505fb8d602543a8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8dbc3df45f628c55e0d9e1cbf7f3b05b1a746091
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297786"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914293"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>为合并转换和合并联接转换排序数据
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]中，合并转换和合并联接转换要求其输入为已排序的数据。 输入数据必须已经过物理排序，且必须对源或上游转换中的输出和输出列设置排序选项。 如果排序选项指示数据是已排序的，而数据实际上不是已排序的，则合并或合并联接操作的结果将是不可预知的。  
@@ -71,11 +71,11 @@ ms.locfileid: "71297786"
   
 3.  在 **“数据流”** 选项卡中，找到适当的源或上游转换，或将其从 **“工具箱”** 拖到设计图面上。  
   
-4.  右键单击组件，并单击“显示高级编辑器”。   
+4.  右键单击组件，并单击“显示高级编辑器”。  
   
 5.  单击 **“输入属性和输出属性”** 选项卡。  
   
-6.  单击“\<组件名称> 输出”，将“IsSorted”属性设置为 True。  
+6.  单击“\<component name> 输出”，将“IsSorted”属性设置为 True  。  
   
     > [!NOTE]  
     >  如果手动将输出的 **IsSorted** 属性设置为 **True** 且没有对数据进行排序，则当你运行该包时，可能会在下游合并或合并联接转换中产生缺失数据或错误数据比较。  
@@ -106,7 +106,7 @@ ms.locfileid: "71297786"
   
 9. 对每个已排序的列，重复步骤 8。  
   
-10. 单击“确定”。   
+10. 单击“确定”。  
   
 11. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   

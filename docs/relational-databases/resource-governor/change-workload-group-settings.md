@@ -1,5 +1,6 @@
 ---
 title: 更改工作负荷组设置 | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL 更改默认和用户定义的工作负载组设置。
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 73b6109c-2ad0-4915-b11b-d40d5a0fdc25
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 1e94646c6cab4a143fb87db9443d219d79262f39
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 882d0f15b946e49bf33338707ddeb2ea5354f922
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720558"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457549"
 ---
 # <a name="change-workload-group-settings"></a>更改工作负荷组设置
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "85720558"
   
 1.  在对象资源管理器中，依次逐步展开 **“管理”** 节点直至其中包含要修改的工作负荷组的 **“工作负荷组”** 文件夹。  
   
-2.  右键单击要修改的工作负荷组，然后单击“属性”  。  
+2.  右键单击要修改的工作负荷组，然后单击“属性”。  
   
 3.  在 **“资源调控器属性”** 页中，如果工作负荷组所在的行未自动选中，则在 **“资源池的工作负荷组”** 网格内将其选中。  
   

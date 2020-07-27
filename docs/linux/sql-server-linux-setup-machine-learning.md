@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning-services
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a38a6f46ca742dc280135590c2a4cece40ff13f6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 34e33ea3fbb3ff0ef10e237bc7bdc0ad61c223db
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882486"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484618"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-linux"></a>在 Linux 上安装 SQL Server 机器学习服务（Python 和 R）
 
@@ -276,7 +276,7 @@ sudo zypper install mssql-mlservices-packages-r
 
 其他配置主要通过 [mssql-conf 工具](sql-server-linux-configure-mssql-conf.md)完成。
 
-1. 添加用于运行 SQL Server 服务的 mssql 用户帐户。
+1. 包安装完成后，运行 mssql-conf 安装程序，按照提示设置 SA 密码并选择版本。 仅在尚未在 Linux 上配置 SQL Server 的情况下执行此步骤。 
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
@@ -299,7 +299,7 @@ sudo zypper install mssql-mlservices-packages-r
    sudo /opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 1
    ```
 
-4. （仅适用于 R 功能集成）请设置“MKL_CBWR”环境变量，以确保从 Intel 数学核心函数库 (MKL) 计算得到[一致的输出结果](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)  。
+4. （仅适用于 R 功能集成）请设置“MKL_CBWR”环境变量，以确保从 Intel 数学核心函数库 (MKL) 计算得到[一致的输出结果](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)。
 
    + 在用户的主目录中编辑或创建文件 `.bash_profile`，并将行 `export MKL_CBWR="AUTO"` 添加到该文件中。
 
@@ -384,21 +384,21 @@ sudo /opt/mssql/bin/mssql-conf setup accept-eula-ml
 
 ### <a name="rhel7-paths"></a>RHEL/7 路径
 
-|||
+|程序包|下载位置|
 |--|----|
 | mssql/mlservices 包 | [https://packages.microsoft.com/rhel/7/mssql-server-2019/](https://packages.microsoft.com/rhel/7/mssql-server-2019/) |
 | microsoft-r-open 包 | [https://packages.microsoft.com/rhel/7/prod/](https://packages.microsoft.com/rhel/7/prod/) | 
 
 ### <a name="ubuntu1604-paths"></a>Ubuntu/16.04 路径
 
-|||
+|程序包|下载位置|
 |--|----|
 | mssql/mlservices 包 | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/) |
 | microsoft-r-open 包 | [https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/) | 
 
 ### <a name="sles12-paths"></a>SLES/12 路径
 
-|||
+|程序包|下载位置|
 |--|----|
 | mssql/mlservices 包 | [https://packages.microsoft.com/sles/12/mssql-server-2019/](https://packages.microsoft.com/sles/12/mssql-server-2019/) |
 | microsoft-r-open 包 | [https://packages.microsoft.com/sles/12/prod/](https://packages.microsoft.com/sles/12/prod/) | 

@@ -8,13 +8,13 @@ ms.topic: tutorial
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.custom: ''
-ms.date: 04/27/2020
-ms.openlocfilehash: e4c431cba395b8e0c732fa7ac4ab96942cac7144
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.date: 07/01/2020
+ms.openlocfilehash: 7eb7af0577cb74f180991bf455c36c9122972643
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728863"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920447"
 ---
 # <a name="create-and-run-a-python-notebook"></a>创建和运行 Python 笔记本
 
@@ -26,65 +26,72 @@ ms.locfileid: "85728863"
 
 - [已安装 Azure Data Studio](download-azure-data-studio.md)
 
-## <a name="new-notebook"></a>新建笔记本
+## <a name="create-a-notebook"></a>创建笔记本
 
 以下步骤演示如何在 Azure Data Studio 中创建笔记本文件：
 
 1. 打开 Azure Data Studio。 如果系统提示连接到 SQL Server，则可以进行连接或单击“取消”  。
 
-1. 在“文件”菜单中，选择“新建笔记本”。  
+1. 在“文件”菜单中，选择“新建笔记本”。
 
-1. 对“内核”  选择“Python 3”  。
+1. 对“内核”  选择“Python 3”  。 “附加到”设置为“localhost”。
 
    :::image type="content" source="media/notebook-tutorial-python/set-kernel-and-attach-to-python.png" alt-text="设置内核":::
 
-1. 如果系统提示配置 Python，请在“为笔记本配置 Python”  中选择：
+可使用“文件”菜单中的“保存”或“另存为…”命令保存笔记本  。 
 
-   - “新 Python 安装”  ，用于为 Azure Data Studio 安装 Python 的新副本，或是
-   - “使用现有 Python 安装”  ，用于指定现有 Python 安装的路径
+若要打开笔记本，可以使用“文件”菜单中的“打开文件…”命令，选择“欢迎”页上的“打开文件”，或使用命令面板中的“文件：    打开”命令。
 
-## <a name="run-a-notebook-cell"></a>运行笔记本单元格
+## <a name="change-the-python-kernel"></a>更改 Python 内核
 
-可以创建包含代码或文本的单元格。 可以就地运行代码单元格，结果会在单元格完成运行之后显示在笔记本中。 文本单元格使你可以随代码散置设置了格式的文档。
+第一次连接到笔记本中的 Python 内核时，将显示“为笔记本配置 Python”页面。 可以选择以下任一项：
 
-### <a name="code"></a>代码
+- “新 Python 安装”  ，用于为 Azure Data Studio 安装 Python 的新副本，或是
+- “使用现有 Python 安装”  ，用于指定供 Azure Data Studio 使用的现有 Python 安装的路径
 
-选择工具栏中的“+代码”命令，添加一个新的 Python 代码单元格  。
-
-:::image type="content" source="media/notebook-tutorial-python/notebook-toolbar-python.png" alt-text="笔记本工具栏":::
-
-此示例将执行简单数学运算。
+若要查看活动 Python 内核的位置和版本，请创建一个代码单元格，并运行以下 Python 命令：
 
 ```python
-a = 1
-b = 2
-c = a/b
-print(c)
+import os
+import sys
+print(sys.version_info)
+print(os.path.dirname(sys.executable))
 ```
-可通过单击单元格左侧的播放按钮来运行单元格。 结果在下面出现。
 
-:::image type="content" source="media/notebook-tutorial-python/run-notebook-cell-python.png" alt-text="运行笔记本单元格":::
+连接到不同的 Python 安装：
 
-### <a name="text"></a>文本
+1. 在“文件”菜单中，选择“首选项”，然后选择“设置”    。
+1. 在“扩展”下滚动到“笔记本配置”   。
+1. 在“使用现有 Python”下，取消选中“笔记本使用的预先存在的 python 安装的本地路径”选项  。
+1. 重启 Azure Data Studio。
 
-选择工具栏中的“+文本”命令，添加一个新的文本单元格  。
+当 Azure Data Studio 启动并且你连接到 Python 内核时，将显示“为笔记本配置 Python”页面，你可以选择创建新 Python 安装或指定现有安装的路径。
 
-:::image type="content" source="media/notebook-tutorial-python/notebook-toolbar-python-text.png" alt-text="笔记本工具栏":::
+## <a name="run-a-code-cell"></a>运行代码单元格
 
-单元格更改为编辑模式，可以现在键入 markdown，会同时看到预览内容。
+可单击单元格左侧的“运行单元格”按钮（圆形黑色箭头），创建包含可就地运行的 SQL 代码的单元格。 单元格完成运行后，结果会显示在笔记本中。
 
-:::image type="content" source="media/notebook-tutorial-python/notebook-markdown-cell-python.png" alt-text="Markdown 单元格":::
+例如：
 
-选择文本单元格外部仅显示 markdown 文本。
+1. 选择工具栏中的“+代码”命令，添加一个新的 Python 代码单元格  。
 
-:::image type="content" source="media/notebook-tutorial-python/notebook-markdown-preview-python.png" alt-text="Markdown 文本":::
+   :::image type="content" source="media/notebook-tutorial-python/notebook-toolbar-python.png" alt-text="笔记本工具栏":::
+
+1. 将以下示例复制并粘贴到单元格，然后单击“运行单元格”。 此示例执行简单的数学运算，结果如下所示。
+
+   ```python
+   a = 1
+   b = 2
+   c = a/b
+   print(c)
+   ```
+
+   :::image type="content" source="media/notebook-tutorial-python/run-notebook-cell-python.png" alt-text="运行笔记本单元格":::
 
 ## <a name="next-steps"></a>后续步骤
 
 了解有关笔记本的详细信息：
 
-- [如何通过 SQL Server 使用笔记本](notebooks-guidance.md)
-
+- [通过 Kqlmagic 扩展 Python](notebooks-kqlmagic.md)
+- [如何使用 Azure Data Studio 中的笔记本](notebooks-guidance.md)
 - [创建和运行 SQL Server 笔记本](notebooks-tutorial-sql-kernel.md)
-
-- [如何管理 Azure Data Studio 中的笔记本](notebooks-manage-sql-server.md)

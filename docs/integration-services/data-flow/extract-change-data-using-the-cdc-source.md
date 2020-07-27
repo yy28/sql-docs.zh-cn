@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 604fbafb-15fa-4d11-8487-77d7b626eed8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 35e8d152cbffb5a5f34be4cda5c7e97fc8140d2d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 56eda2d73e9d60367529e078829900433bd8617e
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292808"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86906493"
 ---
 # <a name="extract-change-data-using-the-cdc-source"></a>使用 CDC 源提取更改数据
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   若要添加并配置 CDC 源，则包必须已包含至少一个数据流任务和一个 CDC 控制任务。  
@@ -72,7 +72,7 @@ ms.locfileid: "71292808"
   
 14. 可以单击 **“预览”** ，查看最多 200 行 CDC 源所提取的数据。  
   
-15. 单击“确定”。   
+15. 单击“确定”。  
   
 ## <a name="see-also"></a>另请参阅  
  [CDC 源编辑器（“连接管理器”页）](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)   

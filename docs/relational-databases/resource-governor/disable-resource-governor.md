@@ -1,5 +1,6 @@
 ---
 title: 禁用资源调控器 | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL 禁用 Resource Governor。 你必须具有 CONTROL SERVER 权限。
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2c2d2db0-34a5-4f50-b783-17693e3ce3f1
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 892227281f86bf25205d34c1df3457689de149c5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bc4aea056c466aaf7cbacc8a6871fac488d31ef7
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720477"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457861"
 ---
 # <a name="disable-resource-governor"></a>禁用资源调控器
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -54,14 +55,14 @@ ms.locfileid: "85720477"
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中打开对象资源管理器，并依次逐步展开 **“管理”** 节点直至 **“资源调控器”** 。  
   
-2.  右键单击“资源调控器”  ，再单击“禁用”  。  
+2.  右键单击“资源调控器”，再单击“禁用”。  
 
 ##  <a name="disable-resource-governor-using-resource-governor-properties"></a><a name="RGOffProp"></a> 使用资源调控器属性禁用资源调控器  
  **使用“资源调控器属性”页禁用资源调控器**  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中打开对象资源管理器，并依次逐步展开 **“管理”** 节点直至 **“资源调控器”** 。  
   
-2.  右键单击“资源调控器”  ，然后单击“属性”  ，这将打开“资源调控器属性”页  。  
+2.  右键单击“资源调控器”  ，然后单击“属性” ，这将打开“资源调控器属性”页  。  
   
 3.  单击 **“启用资源调控器”** 复选框，确保未选中该框，然后单击 **“确定”** 。  
   

@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: fe86d6e5-e415-406c-88f3-dc3ef71bd5f0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4f1a2e2122c4d141d8d702d027bf30d65db93f9c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3665ff6dd1b49eaafdf9ba91fd112c881cf4d339
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293835"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86905131"
 ---
 # <a name="transfer-sql-server-objects-task"></a>传输 SQL Server 对象任务
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   传输 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象任务在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例之间传输 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库中一种或多种类型的对象。 例如，该任务可以复制表和存储过程。 可以复制的对象的类型会因用作源的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本而异。 例如，只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库包括架构和用户定义聚合。  
@@ -148,13 +148,13 @@ ms.locfileid: "71293835"
   
 ### <a name="static-options"></a>静态选项  
  **SourceConnection**  
- 从列表中选择 SMO 连接管理器，或单击“\<新建连接...>”，创建与源服务器的新连接。  
+ 从列表中选择一个 SMO 连接管理器，或单击 \<New connection...> 创建与源服务器的新连接。  
   
  **SourceDatabase**  
  选择要从源服务器上的哪个数据库复制对象。  
   
  **DestinationConnection**  
- 从列表中选择 SMO 连接管理器，或单击“\<新建连接...>”，创建与目标服务器的新连接。  
+ 从列表中选择一个 SMO 连接管理器，或单击 \<New connection...> 创建与目标服务器的新连接。  
   
  **DestinationDatabase**  
  选择对象要复制到目标服务器上的哪个数据库。  
@@ -271,61 +271,61 @@ ms.locfileid: "71293835"
  选择该任务是复制指定源数据库中的所有用户定义函数还是仅复制所选用户定义函数。  
   
  **UserDefinedFunctionsList**  
- 单击此项将打开“选择用户定义函数”对话框。   
+ 单击此项将打开“选择用户定义函数”对话框。  
   
  **CopyAllDefaults**  
  选择该任务是复制指定源数据库中的所有默认值还是仅复制所选默认值。  
   
  **DefaultsList**  
- 单击此项将打开“选择默认值”对话框。   
+ 单击此项将打开“选择默认值”对话框。  
   
  **CopyAllUserDefinedDataTypes**  
  选择该任务是复制指定源数据库中的所有用户定义数据类型还是仅复制所选用户定义数据类型。  
   
  **UserDefinedDataTypesList**  
- 单击此项将打开“选择用户定义数据类型”对话框。   
+ 单击此项将打开“选择用户定义数据类型”对话框。  
   
  **CopyAllPartitionFunctions**  
  选择该任务是复制指定源数据库中的所有用户定义分区函数还是仅复制所选分区函数。 仅在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中支持。  
   
  **PartitionFunctionsList**  
- 单击此项将打开“选择分区函数”对话框。   
+ 单击此项将打开“选择分区函数”对话框。  
   
  **CopyAllPartitionSchemes**  
  选择该任务是复制指定源数据库中的所有分区方案还是仅复制所选分区方案。 仅在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中支持。  
   
  **PartitionSchemesList**  
- 单击此项将打开“选择分区方案”对话框。   
+ 单击此项将打开“选择分区方案”对话框。  
   
  **CopyAllSchemas**  
  选择该任务是复制指定源数据库中的所有架构还是仅复制所选架构。 仅在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中支持。  
   
  **SchemasList**  
- 单击此项将打开“选择架构”对话框。   
+ 单击此项将打开“选择架构”对话框。  
   
  **CopyAllSqlAssemblies**  
  选择该任务是复制指定源数据库中的所有 SQL 程序集还是仅复制所选 SQL 程序集。 仅在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中支持。  
   
  **SqlAssembliesList**  
- 单击此项将打开“选择 SQL 程序集”对话框。   
+ 单击此项将打开“选择 SQL 程序集”对话框。  
   
  **CopyAllUserDefinedAggregates**  
  选择该任务是复制指定源数据库中的所有用户定义聚合还是仅复制所选用户定义聚合。 仅在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中支持。  
   
  **UserDefinedAggregatesList**  
- 单击此项将打开“选择用户定义聚合”对话框。   
+ 单击此项将打开“选择用户定义聚合”对话框。  
   
  **CopyAllUserDefinedTypes**  
  选择该任务是复制指定源数据库中的所有用户定义类型还是仅复制所选用户定义类型。 仅在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中支持。  
   
  **UserDefinedTypes**  
- 单击此项将打开“选择用户定义类型”对话框。   
+ 单击此项将打开“选择用户定义类型”对话框。  
   
  **CopyAllXmlSchemaCollections**  
  选择该任务是复制指定源数据库中的所有 XML 架构集合还是仅复制所选 XML 架构集合。 仅在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中支持。  
   
  **XmlSchemaCollectionsList**  
- 单击此项将打开“选择 XML 架构集合”对话框。   
+ 单击此项将打开“选择 XML 架构集合”对话框。  
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../integration-services/integration-services-error-and-message-reference.md)   

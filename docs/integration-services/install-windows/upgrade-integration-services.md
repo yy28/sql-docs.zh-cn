@@ -16,23 +16,23 @@ ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.openlocfilehash: 0b7fd8a71f2636893f157b18630e2773b2f01951
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4f287a9853b27a58128176bfe740a3efc99a9258
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68262795"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919983"
 ---
 # <a name="upgrade-integration-services"></a>升级 Integration Services
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   如果计算机上当前安装了 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 或更高版本，可以升级到 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]。  
   
  当您在已安装了这些 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 早期版本之一的计算机上升级到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 时， [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 将与该早期版本并行安装。  
   
- 通过采用这一并行安装，将安装 dtexec 实用工具的多个版本。 若要确保运行正确的实用工具版本，请在命令提示符处，通过输入完整路径 (\<驱动器>:\Program Files\Microsoft SQL Server\\<version\>\DTS\Binn) 来运行此实用工具。 有关 dtexec 的详细信息，请参阅 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)。  
+ 通过采用这一并行安装，将安装 dtexec 实用工具的多个版本。 若要确保运行正确版本的实用工具，请在命令提示符处输入完整路径 (\<drive>:\Program Files\Microsoft SQL Server\\<version\>\DTS\Binn) 来运行此实用工具。 有关 dtexec 的详细信息，请参阅 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)。  
   
 > [!NOTE]  
 >  在以前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，在您安装了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 后，默认情况下 Users 组中的所有用户都已对 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务具有访问权限。 在您安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]时，用户无权访问 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务。 该服务默认是安全的。 在安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 后， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员必须运行 DCOM 配置工具 (Dcomcnfg.exe) 以便授予特定用户对 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务的访问权限。 有关详细信息，请参阅 [Integration Services 服务（SSIS 服务）](../../integration-services/service/integration-services-service-ssis-service.md)。  

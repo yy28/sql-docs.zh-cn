@@ -1,5 +1,5 @@
 ---
-title: sql_variant (Transact-SQL) | Microsoft Docs
+title: sql_variant (Transact-SQL)
 ms.custom: ''
 ms.date: 09/12/2017
 ms.prod: sql
@@ -20,14 +20,15 @@ helpviewer_keywords:
 ms.assetid: 01229779-8bc1-4c7d-890a-8246d4899250
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 81914007c22cf850693d2a38b0da83cd64cde6c5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a16ac1b62c5a0aad216db06dc4e11c8c7263da65
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754807"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86556195"
 ---
 # <a name="sql_variant-transact-sql"></a>sql_variant (Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 一种数据类型，用于存储 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持的各种数据类型的值。
@@ -36,10 +37,12 @@ ms.locfileid: "85754807"
   
 ## <a name="syntax"></a>语法  
   
-```sql
+```syntaxsql
 sql_variant  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="remarks"></a>备注  
 sql_variant 可以用在列、参数、变量和用户定义函数的返回值中  。 借助 sql_variant，这些数据库对象可以支持其他数据类型的值  。
   
@@ -97,18 +100,24 @@ sql_variant 数据类型在用于转换的数据类型层次结构列表中位�
 ## <a name="converting-sql_variant-data"></a>转换 sql_variant 数据  
 当处理 sql_variant 数据类型时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持将其他数据类型的对象隐式转换为 sql_variant 类型。 但是，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持从 sql_variant 数据隐式转换为其他数据类型的对象  。
   
-## <a name="restrictions"></a>限制  
-下表列出了无法使用 sql_variant 存储的值的类型  ：
-  
-|||  
-|-|-|  
-|**varchar(max)**|**varbinary(max)**|  
-|**nvarchar(max)**|**xml**|  
-|**text**|**ntext**|  
-|**图像**|**rowversion** (**timestamp**)|  
-|**sql_variant**|**地理**|  
-|**hierarchyid**|**geometry**|  
-|用户定义类型|**datetimeoffset**<sup>1</sup>| 
+## <a name="restrictions"></a>限制
+
+下表列出了无法使用 sql_variant 存储的值的类型：
+
+- **datetimeoffset**<sup>1</sup>
+- **地理**
+- **geometry**
+- **hierarchyid**
+- **图像**
+- **ntext**
+- **nvarchar(max)**
+- **rowversion** (**timestamp**)
+- **text**
+- **varchar(max)**
+- **varbinary(max)**
+- **sql_variant**
+- 用户定义类型
+- **xml**
 
 <sup>1</sup> SQL Server 2012 及更高版本均不限制 datetimeoffset  。
 

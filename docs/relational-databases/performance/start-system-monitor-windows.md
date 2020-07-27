@@ -1,5 +1,6 @@
 ---
 title: 启动系统监视器 (Windows) | Microsoft Docs
+description: 使用系统监视器收集性能数据计数器（例如处理器和内存使用）以及 SQL Server 资源（例如锁和事务）。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5e51bb79-5737-470b-9c47-fac330c001c5
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 58027f9fa617b5fb77fc02f1268197930ea169cf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e03d2d02e970a4e76988664254e0f6f26a78355b
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85655216"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457593"
 ---
 # <a name="start-system-monitor-windows"></a>启动系统监视器 (Windows)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "85655216"
   
 ## <a name="start-system-monitor-in-windows"></a>在 Windows 中启动系统监视器  
   
-在“开始”菜单上，指向“运行”，在“运行”对话框中键入“perfmon”，然后选择“确定”      。  
+在“开始”菜单上，指向“运行”，在“运行”对话框中键入“perfmon”，然后选择“确定”    。  
   
 ## <a name="see-also"></a>另请参阅  
  [运行系统监视器](../../relational-databases/performance-monitor/run-system-monitor.md)  

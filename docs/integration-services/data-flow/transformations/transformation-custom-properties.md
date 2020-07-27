@@ -41,16 +41,16 @@ helpviewer_keywords:
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d4046228f4b0d37e72949f9bc87eac13786e6bba
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e4baea69adce173ee5421605825008f7721b92bd
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71291135"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916662"
 ---
 # <a name="transformation-custom-properties"></a>Transformation Custom Properties
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 对象模型中，除了大多数数据流对象通用的属性以外，许多数据流对象还具有特定于该对象的自定义属性。 这些自定义属性仅在运行时可用，并未记录在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 托管编程参考文档中。  
@@ -264,7 +264,7 @@ ms.locfileid: "71291135"
   
 |properties|数据类型|说明|  
 |--------------|---------------|-----------------|  
-|分隔符|String|转换所使用的标记分隔符。 默认分隔符包括以下字符：空格 ( )、逗号 (,)、句点 (.)、分号 (;)、冒号 (:)、连字符 (-)、双直引号 (")、单直引号 (')、与号 (&)、斜杠 (/)、反斜杠 (\\)、at 符号 (@)、感叹号 (!)、问号 (?)、左括号 (()、右括号 ())、小于号 (\<)、大于号 (>)、左方括号 ([)、右方括号 (])、左大括号 ({)、右大括号 (})、竖线 (&#124;)、数字符号 (#)、星号 (*)、脱字号 (^) 和百分号 (%)。|  
+|分隔符|String|转换所使用的标记分隔符。 默认分隔符包括以下字符：空格 ( )、逗号 (,)、句点 (.)、分号 (;)、冒号 (:)、连字符 (-)、双直引号 (")、单直引号 (')、与号 (&)、斜杠 (/)、反斜杠 (\\)、at 符号 (@)、感叹号 (!)、问号 (?)、左括号 (()、右括号 ())、小于号 (\<), greater than (>)、左方括号 ([)、右方括号 (])、左大括号 ({)、右大括号 (})、竖线 (&#124;)、数字符号 (#)、星号 (*)、脱字号 (^) 和百分号 (%)。|  
 |Exhaustive|Boolean|该值用于指定是否将每个输入记录与所有其他输入记录进行比较。 值 **True** 主要用于调试目的。 此属性的默认值为 **False**。<br /><br /> 注意：此属性在模糊分组转换编辑器  中未提供，但可通过“高级编辑器”  进行设置。|  
 |MaxMemoryUsage|Integer|转换所使用的最大内存量。 此属性的默认值为 **0**，该值将启用动态内存使用。<br /><br /> 此属性的值可以使用属性表达式来指定。<br /><br /> 注意：此属性在模糊分组转换编辑器  中未提供，但可通过“高级编辑器”  进行设置。|  
 |MinSimilarity|Double|转换用来标识重复值的相似性阈值，以 0 和 1 之间的值表示。  此属性的默认值为 0.8。|  
@@ -298,7 +298,7 @@ ms.locfileid: "71291135"
 |properties|数据类型|说明|  
 |--------------|---------------|-----------------|  
 |CopyReferenceTable|Boolean|指定是否应为模糊查找索引结构和后续查找生成引用表副本。 此属性的默认值为 **True**。|  
-|分隔符|String|转换用来标记列值的分隔符。 默认分隔符包括以下字符：空格 ( )、逗号 (,)、句点 (.)、分号 (;)、冒号 (:)、连字符 (-)、双直引号 (")、单直引号 (')、与号 (&)、斜杠 (/)、反斜杠 (\\)、at 符号 (@)、感叹号 (!)、问号 (?)、左小括号 (()、右小括号 ())、小于号 (\<)、大于号 (>)、左方括号 ([)、右方括号 (])、左大括号 ({)、右大括号 (})、竖线 (&#124;)。 数字符号 (#)、星号 (*)、插入符号 (^) 和百分号 (%)。|  
+|分隔符|String|转换用来标记列值的分隔符。 默认分隔符包括以下字符：空格 ( )、逗号 (,)、句点 (.)、分号 (;)、冒号 (:)、连字符 (-)、双直引号 (")、单直引号 (')、与号 (&)、斜杠 (/)、反斜杠 (\\)、at 符号 (@)、感叹号 (!)、问号 (?)、左小括号 (()、右小括号 ())、小于号 (\<), greater than (>)、、左方括号 ([)、右方括号 (])、左大括号 ({)、右大括号 (})、竖线 (&#124;)。 数字符号 (#)、星号 (*)、插入符号 (^) 和百分号 (%)。|  
 |DropExistingMatchIndex|Boolean|一个值，用于指定当 MatchIndexOptions 未设置为 ReuseExistingIndex 时是否删除 MatchIndexName 中指定的匹配索引。 此属性的默认值为 **True**。|  
 |Exhaustive|Boolean|该值用于指定是否将每个输入记录与所有其他输入记录进行比较。 值 **True** 主要用于调试目的。 此属性的默认值为 **False**。<br /><br /> 注意：此属性在模糊查找转换编辑器  中未提供，但可通过“高级编辑器”  进行设置。|  
 |MatchIndexName|String|匹配索引的名称。 匹配索引是转换在其中创建和保存所使用的索引的表。 如果重复使用匹配索引，MatchIndexName 将指定要重复使用的索引。 MatchIndexName 必须是有效的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 标识符名称。 例如，如果名称包含空格，则必须用方括号将名称括起来。|  

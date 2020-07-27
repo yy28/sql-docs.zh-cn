@@ -1,6 +1,6 @@
 ---
 title: 打开活动监视器 (SSMS)
-description: 介绍如何打开 SQL Server Management Studio (SSMS) 中的活动监视器。
+description: 了解如何打开 SQL Server Management Studio 中的活动监视器。 活动监视器查询受监视的实例以获取要显示的信息。
 ms.custom: seo-dt-2019
 ms.date: 08/05/2016
 ms.prod: sql
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0a6eeb16-f02b-479d-9a60-543e40ebf46b
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 16d08bbc2b651ef21ee80be1e8af74a00b45a253
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d570faf51200708bcbd56371d68f53a12776d12e
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787441"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457463"
 ---
 # <a name="open-activity-monitor-in-sql-server-management-studio-ssms"></a>打开 SQL Server Management Studio (SSMS) 中的活动监视器
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,26 +38,26 @@ ms.locfileid: "85787441"
 ## <a name="open-activity-monitor"></a>打开活动监视器  
 
 ### <a name="keyboard-shortcut"></a>键盘快捷键  
- - 键入“Ctrl+Alt+A”可随时打开活动监视器。 
+ - 键入“Ctrl+Alt+A”可随时打开活动监视器。
 
  >**提示！** 将鼠标悬停在 SSMS 中的任何图标上方可了解该图标是什么，以及哪个键盘快捷键可激活它！
 
 ### <a name="toolbar"></a>工具栏
 
-在标准工具栏上，单击“活动监视器”图标  。 该图标位于中间，就在“撤消/重做”按钮的右边。
+在标准工具栏上，单击“活动监视器”图标。 该图标位于中间，就在“撤消/重做”按钮的右边。
 ![Activity_Monitor_icon](../../relational-databases/performance-monitor/media/activity-monitor-icon.png)  
   
-如果尚未连接到想要监视的 SQL Server 的实例，请完成“连接到服务器”  对话框。
+如果尚未连接到想要监视的 SQL Server 的实例，请完成“连接到服务器”对话框。
   
 ## <a name="launch-activity-monitor-and-object-explorer-on-startup"></a>在启动时启动活动监视器和对象资源管理器
   
 1.  从 **“工具”** 菜单中，单击 **“选项”** 。  
   
-2.  在“选项”对话框中，展开“环境”，再选择“启动”。     
+2.  在“选项”对话框中，展开“环境”，再选择“启动”。    
   
-3.  在“启动时”下拉列表中，选择“打开对象资源管理器和活动监视器”。    
+3.  在“启动时”下拉列表中，选择“打开对象资源管理器和活动监视器”。   
 
-4.  单击“确定”。 
+4.  单击“确定”。
 
 ![open_object_explorer](../../relational-databases/performance-monitor/media/open-object-explorer.png)
   
@@ -66,6 +66,6 @@ ms.locfileid: "85787441"
   
 1.   打开活动监视器。  
   
-2.   右键单击“概述”  ，选择“刷新间隔”  ，然后选择活动监视器获取新实例信息所用的间隔。  
+2.   右键单击“概述”，选择“刷新间隔”，然后选择活动监视器获取新实例信息所用的间隔。  
   
   

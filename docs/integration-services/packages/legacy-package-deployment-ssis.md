@@ -31,16 +31,16 @@ helpviewer_keywords:
 ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6fc3a1e41edd95a8e1cf9b4489732cff7ac2852d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4ab6bc0a45ec2ac3b72fb029e6ef3ec74601c183
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287391"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919193"
 ---
 # <a name="legacy-package-deployment-ssis"></a>早期包部署 (SSIS)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括一些工具和向导，它们简化了将包从开发计算机部署到生产服务器或其他计算机的过程。  
@@ -290,7 +290,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  通过重新运行包配置向导来编辑现有配置。  
   
  **删除**  
- 选择一个配置，再单击“删除”。   
+ 选择一个配置，再单击“删除”。  
   
  **箭头**  
  在列表中选择一个配置，再使用向上键和向下键可将其上移或下移。 配置将按照在列表中的显示顺序来进行加载。  
@@ -498,7 +498,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 2.  右键单击该项目，再单击“属性”  。  
   
-3.  在“\<project name> 属性页”对话框中，单击“部署实用工具”   。  
+3.  在“\<project name> 属性页”对话框中，单击“部署实用工具” 。  
   
 4.  若要在部署包时更新包配置，请将 **AllowConfigurationChanges** 设置为 **True**。  
   
@@ -506,7 +506,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 6.  还可以通过修改 **DeploymentOutputPath** 属性来更新部署实用工具的位置。  
   
-7.  单击“确定”。   
+7.  单击“确定”。  
   
 8.  在解决方案资源管理器中，右键单击该项目，再单击  “生成”。  
   
@@ -517,7 +517,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  部署文件夹的路径是在为其创建部署实用工具的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目的 DeploymentOutputPath 属性中指定的。 默认路径为 bin\Deployment，它相对于 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 对象。 有关详细信息，请参阅 [Create a Deployment Utility](../../integration-services/packages/create-a-deployment-utility.md)。  
   
- 可以使用包安装向导安装包。 若要启动向导，在将部署文件夹复制到服务器之后，请双击部署实用工具文件。 此文件名为 \<项目名称>.SSISDeploymentManifest，可以在目标计算机上的部署文件夹找到它。  
+ 可以使用包安装向导安装包。 若要启动向导，在将部署文件夹复制到服务器之后，请双击部署实用工具文件。 此文件名为 \<project name>.SSISDeploymentManifest，可以在目标计算机上的部署文件夹找到它。  
   
 > [!NOTE]  
 >  如果并行安装了不同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，根据你部署的包的版本，可能会遇到错误。 因为 .SSISDeploymentManifest 文件扩展名对于 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的所有版本是相同的，因此可能出现此错误。 针对最近安装的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]版本双击该文件调用安装程序 (dtsinstall.exe)，它的版本可能与部署实用工具文件的版本不同。 若要解决这个问题，请从命令行运行正确的 dtsinstall.exe 版本，并且提供部署实用工具文件的路径。  
@@ -540,7 +540,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 1.  在目标计算机上打开部署文件夹。  
   
-2.  双击清单文件（\<项目名称>.SSISDeploymentManifest），以启动包安装向导。  
+2.  双击清单文件 \<project name>.SSISDeploymentManifest，以启动包安装向导。  
   
 3.  在 **“部署 SSIS 包”** 页上，选择 **“SQL Server 部署”** 选项。  
   
@@ -595,7 +595,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **路径**  
  查看要配置的属性的路径。  
   
- 类型   
+ 类型  
  查看属性的数据类型。  
   
  **值**  

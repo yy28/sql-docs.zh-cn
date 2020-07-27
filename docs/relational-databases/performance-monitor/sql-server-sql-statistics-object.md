@@ -1,5 +1,6 @@
 ---
 title: SQL Server - SQL Statistics 对象 | Microsoft Docs
+description: 了解 SQLServer:SQL Statistics 对象，该对象提供计数器来监视编译和发送到 SQL Server 实例的请求类型。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 42dd497f32dc322a7b7808beca0779292198e5e2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ddb47208f37344a1c7a7985f877486d3254a68f4
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758947"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458116"
 ---
 # <a name="sql-server-sql-statistics-object"></a>SQL Server:SQL Statistics 对象
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "85758947"
   
  有关简单参数化和强制参数化的详细信息，请参阅 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)。  
   
- 下面列出了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Statistics 计数器  。  
+ 下面列出了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Statistics 计数器。  
   
 |SQL Server SQL Statistics 计数器|说明|  
 |----------------------------------------|-----------------|  

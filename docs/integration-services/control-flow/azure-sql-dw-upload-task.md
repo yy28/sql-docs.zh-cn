@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
 author: Lingxi-Li
 ms.author: lingxl
-ms.openlocfilehash: 584bd3a22c24dfccf8fab562202d66ce8689b55b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 52b4f561f29d78c170b334a4ea97486a30ba41c4
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67947197"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918893"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Azure SQL DW 上传任务
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -39,8 +39,8 @@ Azure SQL DW 上传任务  启用 SSIS 包，将表格数据从文件系统或 A
 
 SourceType  指定源数据存储的类型。 选择下列类型之一：
 
-*  FileSystem：源数据位于本地文件系统中。
-*  BlobStorage：源数据位于 Azure Blob 存储中。
+* FileSystem：源数据位于本地文件系统中。
+* BlobStorage：源数据位于 Azure Blob 存储中。
 
 以下是每个源类型的属性。
 
@@ -61,7 +61,7 @@ RetainFiles|指定是否保留已上传到 Azure 存储的文件。
 CompressionType|指定将文件上传到 Azure 存储时使用的压缩格式。 本地源不受影响。
 CompressionLevel|指定用于压缩格式的压缩级别。
 AzureDwConnection|指定 Azure SQL DW 的 ADO.NET 连接管理器。
-TableName|指定目标表的名称。 可选择现有的表名称，或通过选择“\<新建表...>”创建一个新表。
+TableName|指定目标表的名称。 可选择现有的表名称，或选择“\<New Table ...>”创建一个新表。
 TableDistribution|指定新表的分发方法。 已为 **TableName**指定新的表名称时适用。
 HashColumnName|指定用于哈希表分发的列。 已为 **TableDistribution** 指定 **HASH**时适用。
 
@@ -76,7 +76,7 @@ RowDelimiter|指定标记每一行末尾的字符。
 ColumnDelimiter|指定标记每一列末尾的一个或多个字符。 例如 &#124;（管道）、\t（制表符）、'（单引号），"（双引号）以及 0x5c（反斜杠）。
 CompressionType|指定用于源数据的压缩格式。
 AzureDwConnection|指定 Azure SQL DW 的 ADO.NET 连接管理器。
-TableName|指定目标表的名称。 可选择现有的表名称，或通过选择“\<新建表...>”创建一个新表。
+TableName|指定目标表的名称。 可选择现有的表名称，或选择“\<New Table ...>”创建一个新表。
 TableDistribution|指定新表的分发方法。 已为 **TableName**指定新的表名称时适用。
 HashColumnName|指定用于哈希表分发的列。 已为 **TableDistribution** 指定 **HASH**时适用。
 

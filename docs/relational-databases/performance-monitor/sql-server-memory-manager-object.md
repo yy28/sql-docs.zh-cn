@@ -1,5 +1,6 @@
 ---
 title: SQL Server - Memory Manager 对象 | Microsoft Docs
+description: 了解 Memory Manager 对象，该对象提供了在 SQL Server 中监视总体的服务器内存使用情况的计数器。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dbf49000-eeb0-4e9c-a361-5092363920dc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: bab9dfb83a918fe072cc4a97f974f77b0243d06e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ad1317d52ca3075a5726e528216f569bd91c2a15
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775800"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458789"
 ---
 # <a name="sql-server-memory-manager-object"></a>SQL Server Memory Manager 对象
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "85775800"
 -   是否可以通过添加更多内存或使更多内存可用于数据缓存或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部结构来改善查询性能。  
   
 ## <a name="memory-manager-counters"></a>Memory Manager 计数器  
- 下表说明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Memory Manager 计数器  。  
+ 下表说明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Memory Manager 计数器。  
   
 |SQL Server Memory Manager 计数器|说明|  
 |----------------------------------------|-----------------|  
@@ -39,10 +40,10 @@ ms.locfileid: "85775800"
 |**Free Memory (KB)**|指定服务器当前未使用的已提交内存量。|  
 |**Granted Workspace Memory (KB)**|指定当前授予执行哈希、排序、大容量复制和索引创建操作等进程的内存总量。|  
 |**Lock Blocks**|指定服务器上使用的锁块的当前数目（定期进行刷新）。 一个锁块代表一个单独的锁定资源，如表、页或行。|  
-|**Lock Blocks Allocated**|指定所分配的锁块的当前数量。 服务器启动时，分配的锁块数加上分配的锁拥有者块数依赖于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Locks 配置选项  。 若需要更多的锁块，此值会增加。|  
+|**Lock Blocks Allocated**|指定所分配的锁块的当前数量。 服务器启动时，分配的锁块数加上分配的锁拥有者块数依赖于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Locks 配置选项。 若需要更多的锁块，此值会增加。|  
 |**Lock Memory (KB)**|指定服务器用于锁的动态内存总量。|  
 |**Lock Owner Blocks**|指定当前正在服务器上使用的锁拥有者块的数目（定期进行刷新）。 一个锁拥有者块代表一个独立线程对某一对象上的一个锁的拥有权。 因此，若三个线程在一个页上各有一个共享 (S) 锁，就会有三个锁拥有者块。|  
-|**Lock Owner Blocks Allocated**|指定所分配的锁拥有者块的当前数量。 服务器启动时，分配的锁拥有者块数和分配的锁块数依赖于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Locks 配置选项  。 若需要更多的锁拥有者块，此数值会动态增加。|  
+|**Lock Owner Blocks Allocated**|指定所分配的锁拥有者块的当前数量。 服务器启动时，分配的锁拥有者块数和分配的锁块数依赖于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Locks 配置选项。 若需要更多的锁拥有者块，此数值会动态增加。|  
 |**Log Pool Memory (KB)**|服务器正用于日志池的动态内存的总量。| 
 |**Maximum Workspace Memory (KB)**|指示用于执行哈希、排序、大容量复制和索引创建操作等进程的最大可用内存数。|  
 |**Memory Grants Outstanding**|指定成功获得工作空间内存授权的进程总数。|  

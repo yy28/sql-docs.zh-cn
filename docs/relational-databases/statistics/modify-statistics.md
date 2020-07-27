@@ -1,5 +1,6 @@
 ---
 title: 修改统计信息 | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL 在 SQL Server 中修改现有统计信息。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: b06299ca-ed52-411a-b245-45eac4628c99
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 89497335ff395d3235f4bc59e1b0e86a11def404
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d39e99b4c50d1b077cf3871ba5d89b7a170d2f16
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012222"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458084"
 ---
 # <a name="modify-statistics"></a>修改统计信息
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -59,11 +60,11 @@ ms.locfileid: "86012222"
   
 4.  单击加号以便展开 **“统计信息”** 文件夹。  
   
-5.  右键单击要修改的统计信息对象，然后选择  “属性”。  
+5.  右键单击要修改的统计信息对象，然后选择“属性”。  
   
-6.  在“统计信息属性 - statistics_name”对话框中的“常规”页面上，单击“添加”、“删除”、“上移”、“下移”或上述任何组合，以更改统计信息的属性        。 请记住，某一列在“统计信息列”网格内的位置可能会显著影响统计信息的有用性  。  
+6.  在“统计信息属性 - statistics_name”对话框中的“常规”页面上，单击“添加”、“删除”、“上移”、“下移”或上述任何组合，以更改统计信息的属性     。 请记住，某一列在“统计信息列”网格内的位置可能会显著影响统计信息的有用性。  
   
-7.  单击“确定”。   
+7.  单击“确定”。  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **修改统计信息**  

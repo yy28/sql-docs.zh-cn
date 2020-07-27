@@ -3,18 +3,18 @@ title: Ubuntu：在 Linux 上安装 SQL Server
 description: 本快速入门介绍如何在 Ubuntu 上安装 SQL Server 2017 或 SQL Server 2019，然后使用 sqlcmd 创建和查询数据库。
 author: VanMSFT
 ms.author: vanto
-ms.date: 04/10/2020
+ms.date: 07/15/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: seo-lt-2019
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 98485bbe09cb7996aec6dacb93751ab1d69b17fe
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: cce5af380f3706ef6fd6f22578c2b693aff1ad7c
+ms.sourcegitcommit: 56f6892b3795da308d226d4b3c5c859ead2e830a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894147"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86438109"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>快速入门：安装 SQL Server 并在 Ubuntu 上创建数据库
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
@@ -25,6 +25,9 @@ ms.locfileid: "85894147"
 
 本快速入门介绍了如何在 Ubuntu 18.04 上安装 SQL Server 2017。 然后使用 sqlcmd 进行连接，创建第一个数据库并运行查询  。
 
+> [!TIP]
+> 本教程需要用户输入和 Internet 连接。 如果对无人参与或脱机安装过程感兴趣，请参阅 [Linux 上的 SQL Server 的安装指南](sql-server-linux-setup.md)。 有关受支持平台的列表，请参阅[发行说明](sql-server-linux-release-notes.md)。
+
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
@@ -32,10 +35,10 @@ ms.locfileid: "85894147"
 
 本快速入门介绍如何在 Ubuntu 18.04 上安装 SQL Server 2019。 然后使用 sqlcmd 进行连接，创建第一个数据库并运行查询  。
 
-::: moniker-end
-
 > [!TIP]
-> 本教程需要用户输入和 Internet 连接。 如果对无人参与或脱机安装过程感兴趣，请参阅 [Linux 上的 SQL Server 的安装指南](sql-server-linux-setup.md)。
+> 本教程需要用户输入和 Internet 连接。 如果对无人参与或脱机安装过程感兴趣，请参阅 [Linux 上的 SQL Server 的安装指南](sql-server-linux-setup.md)。 有关受支持平台的列表，请参阅[发行说明](sql-server-linux-release-notes-2019.md)。
+
+::: moniker-end
 
 ## <a name="prerequisites"></a>先决条件
 
@@ -214,9 +217,9 @@ ms.locfileid: "85894147"
    >   sudo apt-get install mssql-tools 
    >   ```
 
-1. **可选**：向 bash shell 中的 PATH 环境变量添加 `/opt/mssql-tools/bin/` 。
+1. **可选**：向 bash shell 中的 PATH 环境变量添加 `/opt/mssql-tools/bin/`。
 
-   要使 sqlcmd/bcp 能从登陆会话的 bash shell 进行访问，请使用下列命令修改 ~/.bash_profile 文件中的 PATH    ：
+   要使 sqlcmd/bcp 能从登陆会话的 bash shell 进行访问，请使用下列命令修改 ~/.bash_profile 文件中的 PATH  ：
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile

@@ -10,16 +10,16 @@ ms.custom: loading
 ms.date: 08/20/2018
 ms.author: chugu
 author: chugugrace
-ms.openlocfilehash: 8d78ab5befe5f95c07b6cb539d2629fdd9d003ae
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c8f697e2bd68a7cbfe7053a4a2f3054d6ed14b85
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75924996"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943121"
 ---
 # <a name="load-data-into-sql-server-or-azure-sql-database-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 将数据加载到 SQL Server 或 Azure SQL 数据库中
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-xxxx-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/ssis-appliesto-ssvrpluslinux-asdb-xxxx-xxx.md)]
 
 创建 SQL Server Integration Services (SSIS) 包，将数据加载到 SQL Server 或 [Azure SQL 数据库](/azure/sql-database/)中。 可以选择在数据通过 SSIS 数据流时对其进行重构、转换和清理。
 
@@ -53,7 +53,7 @@ ms.locfileid: "75924996"
 若要逐步完成本教程，需要以下各项：
 
 1. **SQL Server Integration Services (SSIS)** 。 SSIS 是 SQL Server 的一个组件，需要 SQL Server 的许可版、开发人员版或评估版。 要获取 SQL Server 评估版，请参阅[评估 SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm)。
-2.  Visual Studio（可选）。 要获取免费的 Visual Studio Community Edition，请参阅 [Visual Studio Community][Visual Studio Community]。 如果不想安装 Visual Studio，可以只安装 SQL Server Data Tools (SSDT)。 SSDT 安装的 Visual Studio 版本功能有限。
+2. Visual Studio（可选）。 要获取免费的 Visual Studio Community Edition，请参阅 [Visual Studio Community][Visual Studio Community]。 如果不想安装 Visual Studio，可以只安装 SQL Server Data Tools (SSDT)。 SSDT 安装的 Visual Studio 版本功能有限。
 3. **适用于 Visual Studio 的 SQL Server Data Tools (SSDT)** 。 要获取适用于 Visual Studio 的 SQL Server Data Tools，请参阅[下载 SQL Server Data Tools (SSDT)][Download SQL Server Data Tools (SSDT)]。
 4. 本教程将连接到 SQL Server 或 SQL 数据库实例并向其中加载数据。 必须具有在以下目标之一上连接、创建表和加载数据的权限：
    - Azure SQL 数据库  。 有关详细信息，请参阅 [Azure SQL 数据库](/azure/sql-database/)。  
@@ -75,105 +75,105 @@ Visual Studio 随即打开，并创建新的 Integration Services (SSIS) 项目�
 * 中间是包含多个选项卡的设计图面。 通常情况下，至少会使用“控制流”和“数据流”选项卡   。
 * 右侧是“解决方案资源管理器”和“属性”窗格   。
   
-    ![][01]
+    ![显示“工具箱”窗格、“设计”窗格、“解决方案资源管理器”窗格和“属性”窗格的 Visual Studio 屏幕截图。][01]
 
 ## <a name="create-the-basic-data-flow"></a>创建基本数据流
-1. 将“数据流任务”从“工具箱”拖动到“控制流”选项卡上的设计图面  。
+1. 将“数据流任务”从“工具箱”拖动到“控制流”选项卡上的设计图面。
    
-    ![][02]
+    ![显示将数据流任务拖动到“设计”窗格的“控制流”选项卡的 Visual Studio 屏幕截图。][02]
 2. 双击“数据流任务”以便切换到“数据流”选项卡。
-3. 从工具箱中的其他源列表中，将 ADO.NET 源拖到设计图面。 如果源适配器仍处于选中状态，请在“属性”窗格中将其名称更改为“SQL Server 源”   。
-4. 从“工具箱”的“其他目标”列表中，将 ADO.NET 目标拖动到 ADO.NET 源下的设计图面。 如果目标适配器仍处于选中状态，请在“属性”窗格中将其名称更改为“SQL 目标”   。
+3. 从工具箱中的其他源列表中，将 ADO.NET 源拖到设计图面。 如果源适配器仍处于选中状态，请在“属性”窗格中将其名称更改为“SQL Server 源” 。
+4. 从“工具箱”的“其他目标”列表中，将 ADO.NET 目标拖动到 ADO.NET 源下的设计图面。 如果目标适配器仍处于选中状态，请在“属性”窗格中将其名称更改为“SQL 目标” 。
    
-    ![][09]
+    ![将目标适配器拖动到源适配器正下方位置的屏幕截图。][09]
 
 ## <a name="configure-the-source-adapter"></a>配置源适配器
-1. 双击源适配器，打开“ADO.NET 源编辑器”  。
+1. 双击源适配器，打开“ADO.NET 源编辑器”。
    
-    ![][03]
-2. 在“ADO.NET 源编辑器”的“连接管理器”选项卡上，单击“ADO.NET 连接管理器”列表旁边的“新建”按钮，打开“配置 ADO.NET 连接管理器”对话框，并创建适用于 SQL Server 数据库的连接设置，本教程将从该数据库加载数据      。
+    ![ADO.NET 源编辑器的屏幕截图。 “连接管理器”选项卡可见，控件可用于配置数据流属性。][03]
+2. 在“ADO.NET 源编辑器”的“连接管理器”选项卡上，单击“ADO.NET 连接管理器”列表旁边的“新建”按钮，打开“配置 ADO.NET 连接管理器”对话框，并创建适用于 SQL Server 数据库的连接设置，本教程将从该数据库加载数据    。
    
-    ![][04]
-3. 在“配置 ADO.NET 连接管理器”对话框中，单击“新建”按钮，打开“连接管理器”对话框并创建新的数据连接    。
+    ![“配置 ADO.NET 连接管理器”对话框的屏幕截图。 控件可用于设置和配置连接管理器。][04]
+3. 在“配置 ADO.NET 连接管理器”对话框中，单击“新建”按钮，打开“连接管理器”对话框并创建新的数据连接  。
    
-    ![][05]
-4. 在“连接管理器”对话框中，执行以下操作  。
+    ![“连接管理器”对话框的屏幕截图。 控件可用于配置数据连接。][05]
+4. 在“连接管理器”对话框中，执行以下操作。
    
-   1. 对于“提供程序”，请选择 SqlClient 数据提供程序  。
-   2. 对于“服务器名称”，请输入 SQL Server 名称  。
-   3. 在“登录服务器”部分中，选择或输入身份验证信息  。
-   4. 在“连接到数据库”部分中，选择 AdventureWorks 示例数据库  。
+   1. 对于“提供程序”，请选择 SqlClient 数据提供程序。
+   2. 对于“服务器名称”，请输入 SQL Server 名称。
+   3. 在“登录服务器”部分中，选择或输入身份验证信息。
+   4. 在“连接到数据库”部分中，选择 AdventureWorks 示例数据库。
    5. 单击 **“测试连接”** 。
       
-       ![][06]
-   6. 在报告连接测试结果的对话框中，单击“确定”返回“连接管理器”对话框   。
-   7. 在“连接管理器”对话框中，单击“确定”返回“配置 ADO.NET 连接管理器”对话框    。
-5. 在“配置 ADO.NET 连接管理器”对话框中，单击“确定”返回“ADO.NET 源编辑器”    。
-6. 在“ADO.NET 源编辑器”的“表格或视图名称”列表中，选择 Sales.SalesOrderDetail 表    。
+       ![显示“确定”按钮和指示测试连接成功的文本的对话框的屏幕截图。][06]
+   6. 在报告连接测试结果的对话框中，单击“确定”返回“连接管理器”对话框 。
+   7. 在“连接管理器”对话框中，单击“确定”返回“配置 ADO.NET 连接管理器”对话框  。
+5. 在“配置 ADO.NET 连接管理器”对话框中，单击“确定”返回“ADO.NET 源编辑器”  。
+6. 在“ADO.NET 源编辑器”的“表格或视图名称”列表中，选择 Sales.SalesOrderDetail 表  。
    
-    ![][07]
-7. 单击“预览”在“预览查询结果”对话框中查看源表中的前 200 行数据   。
+    ![ADO.NET 源编辑器的屏幕截图。 在“表格或视图名称”列表中，选择 Sales.SalesOrderDetail 表。][07]
+7. 单击“预览”在“预览查询结果”对话框中查看源表中的前 200 行数据 。
    
-    ![][08]
-8. 在“预览查询结果”对话框中，单击“关闭”返回“ADO.NET 源编辑器”    。
-9. 在“ADO.NET 源编辑器”中，单击“确定”完成配置数据源   。
+    ![“预览查询结果”对话框的屏幕截图。 源表中的多行销售数据是可见的。][08]
+8. 在“预览查询结果”对话框中，单击“关闭”返回“ADO.NET 源编辑器”  。
+9. 在“ADO.NET 源编辑器”中，单击“确定”完成配置数据源 。
 
 ## <a name="connect-the-source-adapter-to-the-destination-adapter"></a>将源适配器连接到目标适配器
 1. 在设计图面上选择源适配器。
 2. 选择从源适配器延伸出来的蓝色箭头，并将其拖动到目标编辑器，直到完好入位。
    
-    ![][10]
+    ![显示源和目标适配器的屏幕截图。 从源适配器指向目标适配器的蓝色箭头。][10]
    
     在典型的 SSIS 包中，可在源和目标之间使用 SSIS 工具箱中的许多其他组件，以在数据通过 SSIS 数据流时对其重构、转换和清理。 为了使此示例尽可能简单，我们将源直接连接到目标。
 
 ## <a name="configure-the-destination-adapter"></a>配置目标适配器
-1. 双击目标适配器，打开“ADO.NET 目标编辑器”  。
+1. 双击目标适配器，打开“ADO.NET 目标编辑器”。
    
-    ![][11]
-2. 在“ADO.NET 目标编辑器”的“连接管理器”选项卡上，单击“连接管理器”列表旁边的“新建”按钮，打开“配置 ADO.NET 连接管理器”对话框，并创建适用于数据库的连接设置，本教程将向该数据库加载数据      。
-3. 在“配置 ADO.NET 连接管理器”对话框中，单击“新建”按钮，打开“连接管理器”对话框并创建新的数据连接    。
-4. 在“连接管理器”对话框中，执行以下操作  。
-   1. 对于“提供程序”，请选择 SqlClient 数据提供程序  。
-   2. 对于“服务器名称”，输入 SQL Server 或 SQL 数据库服务器的名称  。
-   3. 在“登录服务器”部分中，选择“使用 SQL Server 身份验证”或输入身份验证信息   。
-   4. 在“连接到数据库”部分中，选择现有数据库  。
+    ![ADO.NET 目标编辑器的屏幕截图。 “连接管理器”选项卡可见，其中包含用于配置数据流属性的控件。][11]
+2. 在“ADO.NET 目标编辑器”的“连接管理器”选项卡上，单击“连接管理器”列表旁边的“新建”按钮，打开“配置 ADO.NET 连接管理器”对话框，并创建适用于数据库的连接设置，本教程将向该数据库加载数据    。
+3. 在“配置 ADO.NET 连接管理器”对话框中，单击“新建”按钮，打开“连接管理器”对话框并创建新的数据连接  。
+4. 在“连接管理器”对话框中，执行以下操作。
+   1. 对于“提供程序”，请选择 SqlClient 数据提供程序。
+   2. 对于“服务器名称”，输入 SQL Server 或 SQL 数据库服务器的名称。
+   3. 在“登录服务器”部分中，选择“使用 SQL Server 身份验证”或输入身份验证信息 。
+   4. 在“连接到数据库”部分中，选择现有数据库。
     a. 单击 **“测试连接”** 。
-    b.保留“数据库类型”设置，即设置为“共享”。 在报告连接测试结果的对话框中，单击“确定”返回“连接管理器”对话框   。
-    c. 在“连接管理器”对话框中，单击“确定”返回“配置 ADO.NET 连接管理器”对话框    。
-5. 在“配置 ADO.NET 连接管理器”对话框中，单击“确定”返回“ADO.NET 目标编辑器”    。
-6. 在“ADO.NET 目标编辑器”中，单击“使用表格或视图”列表旁边的“新建”，打开“创建表格”对话框，创建包含与源表匹配的列列表的新目标表     。
+    b. 在报告连接测试结果的对话框中，单击“确定”返回“连接管理器”对话框 。
+    c. 在“连接管理器”对话框中，单击“确定”返回“配置 ADO.NET 连接管理器”对话框  。
+5. 在“配置 ADO.NET 连接管理器”对话框中，单击“确定”返回“ADO.NET 目标编辑器”  。
+6. 在“ADO.NET 目标编辑器”中，单击“使用表格或视图”列表旁边的“新建”，打开“创建表格”对话框，创建包含与源表匹配的列列表的新目标表   。
    
-    ![][12a]
-7. 在“创建表格”对话框中，执行以下操作  。
+    ![“创建表”对话框的屏幕截图。 用于创建目标表的 S Q L 代码可见。][12a]
+7. 在“创建表格”对话框中，执行以下操作。
    
-   1. 将目标表的名称更改为 SalesOrderDetail  。
+   1. 将目标表的名称更改为 SalesOrderDetail。
       
-       ![][12b]
+       ![“创建表”对话框的屏幕截图。 若要创建名为 SalesOrderDetail 的表，则可看到 S Q L 代码。][12b]
 
-   2. 单击“确定”创建表格并返回“ADO.NET 目标编辑器”   。
-8. 在“ADO.NET 目标编辑器”中，选择“映射”选项卡以查看源中的列如何映射到目标中的列   。
+   2. 单击“确定”创建表格并返回“ADO.NET 目标编辑器” 。
+8. 在“ADO.NET 目标编辑器”中，选择“映射”选项卡以查看源中的列如何映射到目标中的列 。
    
-    ![][13]
-9. 单击“确定”完成配置目标  。
+    ![ADO.NET 目标编辑器的“映射”选项卡的屏幕截图。 源表和目标表中具有相同名称的行连接列。][13]
+9. 单击“确定”完成配置目标。
 
 ## <a name="run-the-package-to-load-the-data"></a>运行包以加载数据
-单击工具栏上的“开始”按钮，或在“调试”菜单上选择其中一个“运行”选项，以运行包    。
+单击工具栏上的“开始”按钮，或在“调试”菜单上选择其中一个“运行”选项，以运行包  。
 
 以下段落介绍了使用本文中所述的第二个选项（即使用包含源和目标的数据流）创建包时所显示的内容。
 
 当包开始运行时，可看到黄色的旋转齿轮，指示活动以及目前为止处理的行数。
 
-![][14]
+![显示源和目标适配器的屏幕截图。 每个适配器上都有黄色的旋转轮，并且它们之间的文本为“89748 行”。][14]
 
 包运行完毕后，可看到绿色的对勾标记，指示操作成功以及从源加载到目标的数据总行数。
 
-![][15]
+![显示源和目标适配器的屏幕截图。 每个适配器上都有绿色的复选标记，并且它们之间的文本为“121317 行”。][15]
 
 祝贺你！ 已成功使用 SQL Server Integration Services 将数据加载到 SQL Server 或 Azure SQL 数据库。
 
 ## <a name="next-steps"></a>后续步骤
 
-- 了解如何在设计环境中调试包和排查包问题。 从此处开始：[用于包开发的故障排除工具][Troubleshooting Tools for Package Development]。
+- 了解如何在设计环境中调试包和排查包问题。 从此处开始：[包开发的疑难解答工具][Troubleshooting Tools for Package Development]。
 
 - 了解如何将 SSIS 项目和包部署到 Integration Services 服务器或其他存储位置。 从此处开始：[项目和包的部署][Deployment of Projects and Packages]。
 

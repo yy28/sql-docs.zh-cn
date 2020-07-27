@@ -27,16 +27,16 @@ helpviewer_keywords:
 ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 33ce0a748381e425371b6f36c1ceeaaba4b62501
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d7121efa290a8cea45804467243e11dbfd98f275
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296881"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921993"
 ---
 # <a name="package-management-ssis-service"></a>包管理（SSIS 服务）
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   包管理包括监视、管理、导入和导出包。  
@@ -130,7 +130,7 @@ ms.locfileid: "71296881"
   
     -   在 **“服务器类型”** 框中，选择 **“Integration Services”** 。  
   
-    -   在“服务器名称”框中，提供服务器名称，或者单击“\<浏览更多...>”，并找到要使用的服务器。  
+    -   在“服务器名称”框中，提供服务器名称或单击 \<Browse for more...>，并找到要使用的服务器 。  
   
 3.  如果对象资源管理器未打开，请在 **“视图”** 菜单上，单击 **“对象资源管理器”** 。  
   
@@ -138,7 +138,7 @@ ms.locfileid: "71296881"
   
 5.  展开子文件夹，找到要向其中导入包的文件夹。  
   
-6.  右键单击该文件夹，单击“导入包”。  然后请执行下列操作之一：  
+6.  右键单击该文件夹，单击“导入包”。 然后请执行下列操作之一：  
   
     -   若要从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例导入，请选择 **“SQL Server”** 选项，然后指定服务器并选择身份验证模式。 如果选择 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，请提供用户名和密码。  
   
@@ -166,7 +166,7 @@ ms.locfileid: "71296881"
   
     -   在 **“服务器类型”** 框中，选择 **“Integration Services”** 。  
   
-    -   在“服务器名称”框中，提供服务器名称，或者单击“\<浏览更多...>”，并找到要使用的服务器。  
+    -   在“服务器名称”框中，提供服务器名称或单击 \<Browse for more...>，并找到要使用的服务器 。  
   
 3.  如果对象资源管理器未打开，请在 **“视图”** 菜单上，单击 **“对象资源管理器”** 。  
   

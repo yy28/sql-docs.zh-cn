@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: 262babc6-eea5-4609-bc65-07d64cbcfee9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f540278d8f27eb091d4818f838d069c82a61159c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bfef4a0f2bf65166193e28610d5869e65c1023cb
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296217"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917558"
 ---
 # <a name="integration-services-programming-overview"></a>Integration Services 编程概述
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 具有将数据移动和转换与包控制流和管理分开的体系结构。 有两个截然不同的引擎定义此体系结构，对 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 进行编程可以扩展这两个引擎并使其自动化。 运行时引擎实现控制流和包管理基础结构，该基础结构使开发人员能够控制执行流并为日志记录、事件处理程序和变量设置选项。 数据流引擎是一个专用高性能引擎，专用于提取、转换和加载数据。 对 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 进行编程时，将针对这两个引擎进行编程。  
@@ -64,7 +64,7 @@ ms.locfileid: "71296217"
 ## <a name="locating-assemblies"></a>定位程序集  
  在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]中， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 程序集已升级到 .NET 4.0。 位于 \<drive>:\Windows\Microsoft.NET\assembly 中的 .NET 4 存在单独的全局程序集缓存。 您可在此路径下找到所有 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 程序集，一般位于 GAC_MSIL 文件夹中。  
   
- 与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 早期版本一样，核心 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 扩展性 .dll 文件也位于 *\<驱动器>* :\Program Files\Microsoft SQL Server\100\SDK\Assemblies 中。  
+ 与之前版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 一样，核心 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 扩展性 .dll 文件也位于 \<drive>:\Program Files\Microsoft SQL Server\100\SDK\Assemblies 中。  
   
 ## <a name="commonly-used-assemblies"></a>常用程序集  
  下表列出了使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 对 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 进行编程时常用的程序集。  

@@ -24,16 +24,16 @@ helpviewer_keywords:
 ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3c458257766e52898d0924b2f8ad57ddd2423b19
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c4941e8bfbb47a5d4d4e7139a6c761483dec7ad8
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295666"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921926"
 ---
 # <a name="ssis-designer"></a>SSIS 设计器
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器是用于创建和维护 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包的图形工具。 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器作为 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 项目的一部分，位于 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中。  
@@ -158,7 +158,7 @@ ms.locfileid: "71295666"
  **删除**  
  选择一个事件处理程序，再通过单击“删除”  将其从包中删除。  
   
- 单击此处为可执行文件 \<可执行文件名称\> 创建 \<事件处理程序名称\>   
+ 单击此处为可执行文件 \<executable name\> 创建一个 \<event handler name\>  
  单击此项可创建事件处理程序。  
   
  通过将代表 [!INCLUDE[ssIS](../includes/ssis-md.md)] 任务和容器的图形对象从 **“工具箱”** 拖至 **“事件处理程序”** 选项卡的设计图面，再通过使用优先约束定义其运行顺序来连接这些对象，即可创建控制流。  
@@ -168,7 +168,7 @@ ms.locfileid: "71295666"
 ## <a name="package-explorer-tab"></a>“包资源管理器”选项卡
 可以使用 **设计器的** “包资源管理器” [!INCLUDE[ssIS](../includes/ssis-md.md)] 选项卡查看包中的所有元素的层次结构视图，这些元素包括：配置、连接、事件处理程序、可执行对象（例如任务和容器）、日志提供程序、优先约束和变量。 如果包中包含数据流任务， **“包资源管理器”** 选项卡将包括一个包含数据流组件的层次结构视图的节点。  
   
- 可以右键单击某个包元素，再单击“属性”，以在“属性”窗口中显示该元素的属性；或者，也可以右键单击某个包元素，再单击“删除”，以删除该元素。    
+ 可以右键单击某个包元素，再单击“属性”，以在“属性”窗口中显示该元素的属性；或者，也可以右键单击某个包元素，再单击“删除”，以删除该元素。 
  
 ## <a name="progress-tab"></a>“进度”选项卡
 在 **中运行** 包时，可以使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] “进度” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]选项卡查看该包的执行进度。 **“进度”** 选项卡将列出以下内容：验证和执行该包及其可执行文件的开始时间、完成时间和已用时间；包的所有信息和警告；进度通知；包是否成功或失败以及在执行包的过程中生成的所有错误信息。  

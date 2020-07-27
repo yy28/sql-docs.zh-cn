@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: aa8a5454fb85c4a6bcfe53088549107f09b9772f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d98222a9f8663dfb2495220ee43af34c1f0c02d9
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298203"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920778"
 ---
 # <a name="provide-an-odata-source-query-at-runtime"></a>在运行时提供 OData 源查询
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
  可以通过向数据流任务的“[OData 源].[查询]”属性添加表达式，在运行时修改 OData 源查询   。  
@@ -33,7 +33,7 @@ ms.locfileid: "71298203"
   
 1.  右键单击“数据流任务”并选择“参数化…”选项   。  
   
-2.  在“参数化”对话框中，针对“属性”选择“[\<OData 源组件的名称>].[查询]”。  
+2.  在“参数化”对话框中，针对“属性”选择 [\<Name of the OData Source Component>].[Query]  。  
   
 3.  选择是 **“创建新参数”** 还是 **“使用现有参数”** 。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "71298203"
   
 6.  输入 **“表达式”** 。  
   
-7.  单击“确定”。   
+7.  单击“确定”。  
   
 > [!NOTE]  
 > 当使用此方法的时候，需要确保设置的值为正确编码的 URL。 从用户输入接收值时（例如，通过参数设置各个查询选项值），必须确保值已验证，以避免潜在的 SQL 注入类型攻击。  

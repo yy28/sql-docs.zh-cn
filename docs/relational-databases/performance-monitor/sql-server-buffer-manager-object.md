@@ -1,5 +1,6 @@
 ---
 title: SQL Server - Buffer Manager 对象 | Microsoft Docs
+description: 了解 Buffer Manager 对象，该对象提供用于监视页面内存的计数器、用于监视物理 I/O 的计数器以及缓冲池扩展。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9775ebde-111d-476c-9188-b77805f90e98
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 81f487db3622de86fdf041acab5acee93c68d1ee
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 63ecd1f64db0a3065bc513e935fc832292d5dd00
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85656443"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457417"
 ---
 # <a name="sql-server-buffer-manager-object"></a>SQL Server Buffer Manager 对象
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "85656443"
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 需要从磁盘读取数据的频率。 与其他操作（例如内存访问）相比，物理 I/O 会消耗大量时间。 尽可能减少物理 I/O 可以提高查询性能。  
   
 ## <a name="buffer-manager-performance-objects"></a>缓冲区管理器性能对象  
- 下表介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Buffer Manager 性能对象  。  
+ 下表介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Buffer Manager 性能对象。  
   
 |SQL Server Buffer Manager 计数器|说明|  
 |----------------------------------------|-----------------|  
@@ -58,7 +59,7 @@ ms.locfileid: "85656443"
 |**Extension pages writes/sec**|每秒向缓冲池扩展文件中写入的页数。|  
 |**Free list stalls/sec**|指示每秒必须等待空闲页面的请求数量。|  
 |**Integral Controller Slope**|缓冲池的集成控制器上次使用的斜率，乘以 -100 亿。| 
-|**Lazy writes/sec**|指示缓冲区管理器惰性编写器每秒写入的缓冲区数。 “惰性编写器”  是一个系统进程，用于成批刷新过期的脏缓冲区（包含更改的缓冲区，必须将这些更改写回磁盘，才能将缓冲区重用于其他页），并使它们可用于用户进程。 惰性编写器不需要为创建可用缓冲区而频繁执行检查点。|  
+|**Lazy writes/sec**|指示缓冲区管理器惰性编写器每秒写入的缓冲区数。 “惰性编写器”是一个系统进程，用于成批刷新过期的脏缓冲区（包含更改的缓冲区，必须将这些更改写回磁盘，才能将缓冲区重用于其他页），并使它们可用于用户进程。 惰性编写器不需要为创建可用缓冲区而频繁执行检查点。|  
 |**Page life expectancy**|指示页面在没有引用的情况下，在此节点的缓冲池中停留的时间（以秒计）。|  
 |**Page lookups/sec**|指示每秒要求在缓冲池中查找页的请求数。|  
 |**Page reads/sec**|指示每秒发生的物理数据库页读取数。 此统计信息显示的是所有数据库间的物理页读取总数。 由于物理 I/O 的开销大，可以通过使用更大的数据缓存、智能索引、更有效的查询或更改数据库设计等方法，将开销降到最低。|  

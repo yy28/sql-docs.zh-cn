@@ -1,5 +1,6 @@
 ---
 title: 使用模板配置资源调控器 | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio 中提供的模板配置资源调控器。 必须具有 CONTROL SERVER 权限。
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -11,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: f342dec2-d1d6-483e-b44e-98eb7d168b5e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: bb17a0d2b42528d886430e92b82908a3e08b5694
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b815330ad5088ca449ab3b73f540b3ec2e521629
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720522"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458209"
 ---
-# <a name="configure-resource-governor-using-a-template"></a>使用模板配置资源调控器
+# <a name="configure-resource-governor-using-a-template"></a>使用模板配置 Resource Governor
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中提供的模板配置资源调控器。  
   
 -   **开始之前：** [权限](#Permissions)  
   
--   要创建工作负载组，请使用：[模板](#ConfRGTemplate)   
+-   要创建工作负载组，请使用：[模板](#ConfRGTemplate)  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
  使用下列步骤可打开和修改创建资源池和资源池的工作负荷组的模板。 此外，该模板还可以创建分类器用户定义函数，以将新的连接传送到默认组或用户创建的工作负荷组。  
@@ -35,9 +36,9 @@ ms.locfileid: "85720522"
 ##  <a name="configure-resource-governor-using-a-template"></a><a name="ConfRGTemplate"></a> 使用模板配置资源调控器  
  **使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的“视图”  菜单上，单击“模板资源管理器”  。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的“视图”  菜单上，单击“模板资源管理器” 。  
   
-2.  在**模板资源管理器**中，展开“资源调控器”  ，然后双击“配置资源调控器”  。  
+2.  在**模板资源管理器**中，展开“资源调控器”，然后双击“配置资源调控器”。  
   
 3.  在 **“连接到数据库引擎”** 中，输入所需信息，然后单击 **“确定”** 。 查询编辑器中提供模板 Configure Resource Governor.sql。 使用此模板可创建和配置资源池、工作负荷组和分类器函数。  
   

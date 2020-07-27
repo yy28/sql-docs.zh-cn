@@ -10,16 +10,16 @@ ms.topic: tutorial
 ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a5a0b804cb1e5bf130179c7a91ec04fa0d064f12
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ada4d9c133bbcb96e1a5c19fa505c4d51eb8b343
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296050"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917263"
 ---
 # <a name="lesson-2-2-add-and-configure-the-foreach-loop-container"></a>第 2-2 课：添加和配置 Foreach 循环容器
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -56,7 +56,7 @@ ms.locfileid: "71296050"
   
 1.  双击“Foreach File in Folder”以重新打开“Foreach 循环编辑器”   。  
   
-2.   选择“集合”。  
+2.  选择“集合”。  
   
 3.  在“集合”  页上，选择“Foreach 文件枚举器”  。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "71296050"
   
 1.  选择“变量映射”  。  
   
-2.  在“变量映射”页的“变量”列中，选择空单元格，然后选择“\<新建变量…>”    。  
+2.  在“变量映射”页的“变量”列中，选择空单元格，然后选择“\<New Variable...>”  。  
   
 3.  在“添加变量”对话框中，对于“名称”，请键入 varFileName    。  
   

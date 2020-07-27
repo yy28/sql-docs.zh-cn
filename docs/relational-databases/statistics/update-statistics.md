@@ -1,5 +1,6 @@
 ---
 title: 更新统计信息 | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL 在 SQL Server 中为表或索引视图更新查询优化统计信息。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: 4b97c0b4-03ff-4cfb-9c3f-3b33290b7a2c
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ebc6222f85e452c8ec9d371365f9f60fcacd5234
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a4836b0ab47d31fac081ec95c21ef139d3da7e03
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012188"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458523"
 ---
 # <a name="update-statistics"></a>更新统计信息
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -57,9 +58,9 @@ ms.locfileid: "86012188"
   
 4.  单击加号以便展开 **“统计信息”** 文件夹。  
   
-5.  右键单击要更新的统计信息对象，然后选择  “属性”。  
+5.  右键单击要更新的统计信息对象，然后选择“属性”。  
   
-6.  在“统计信息属性 - statistics\_name”对话框中，选中“更新这些列的统计信息”复选框，然后单击“确定”。  
+6.  在“统计信息属性 - statistics\_name”对话框中，选中“更新这些列的统计信息”复选框，然后单击“确定” 。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -69,7 +70,7 @@ ms.locfileid: "86012188"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```sql  
     USE AdventureWorks2012;  
@@ -85,7 +86,7 @@ ms.locfileid: "86012188"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```sql  
     USE AdventureWorks2012;   
@@ -103,7 +104,7 @@ ms.locfileid: "86012188"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```sql  
     USE AdventureWorks2012;   

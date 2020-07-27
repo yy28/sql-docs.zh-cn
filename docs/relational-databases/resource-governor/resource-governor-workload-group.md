@@ -1,5 +1,6 @@
 ---
 title: 资源调控器工作负荷组 | Microsoft Docs
+description: 在 SQL Server Resource Governor 中，工作负荷组是具有相似分类标准的会话请求的容器。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a84c3c3f-55b6-4a30-9c42-13f082d9281e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 805608e50c04f6c602d9efc076840c9e76965a52
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 22e2c282e7f0a7450ec2997d150818607fdb5bcb
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726014"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458228"
 ---
 # <a name="resource-governor-workload-group"></a>资源调控器工作负荷组
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

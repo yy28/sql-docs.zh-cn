@@ -1,5 +1,6 @@
 ---
 title: 创建新的计划指南 | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL 创建计划指南。 计划指南将固定查询计划和查询提示应用于查询。
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: c8301bfe9073a31020fe4481edfff24d89b68994
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 46a3cc2e95093a9d4d3a69f1b5ca0e1eddb38d21
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85655638"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457337"
 ---
 # <a name="create-a-new-plan-guide"></a>创建新的计划指南
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "85655638"
 ##  <a name="create-a-plan-guide-using-ssms"></a><a name="SSMSProcedure"></a> 使用 SSMS 创建计划指南  
 1.  单击加号以便展开您要在其中创建计划指南的数据库，然后单击加号以便展开 **“可编程性”** 文件夹。  
   
-2.  右键单击“计划指南”文件夹，然后选择“新建计划指南…”。![select_plan_guide](../../relational-databases/performance/media/select-plan-guide.png)
+2.  右键单击“计划指南”文件夹，然后选择“新建计划指南…”。![select_plan_guide](../../relational-databases/performance/media/select-plan-guide.png) 
   
 3.  在 **“新建计划指南”** 对话框的 **“名称”** 框中，输入计划指南的名称。  
   
@@ -50,11 +51,11 @@ ms.locfileid: "85655638"
   
 5.  在 **“作用域类型”** 列表中，选择 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句在其中出现的实体的类型。 这便指定了用于将 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句与计划指南匹配的上下文。 可能的值为 **OBJECT**、 **SQL**和 **TEMPLATE**。  
   
-6.  在 **“作用域批处理”** 框中，请输入其中出现 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的批处理文本。 批处理文本不能包括 `USE`database 语句  。 只有在 **SQL** 选择为作用域类型时， **“作用域批处理”** 框才可用。 如果在 SQL 为作用域类型时在“作用域批处理”框中未输入任何内容，则将批处理文本的值设置为与 **“语句”** 框中相同的值。  
+6.  在 **“作用域批处理”** 框中，请输入其中出现 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的批处理文本。 批处理文本不能包括 `USE`database 语句。 只有在 **SQL** 选择为作用域类型时， **“作用域批处理”** 框才可用。 如果在 SQL 为作用域类型时在“作用域批处理”框中未输入任何内容，则将批处理文本的值设置为与 **“语句”** 框中相同的值。  
   
 7.  在 **“作用域批处理”** 列表中，输入其中包含该对象的架构的名称。 只有在 **“对象”** 选择为作用域类型时， **“作用域架构名称”** 框才可用。  
   
-8.  在“作用域对象名称”  框中，输入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程的名称、用户定义的标量函数的名称、多语句表值函数的名称或其中出现 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的 DML 触发器的名称。 只有在 **“对象”** 选择为作用域类型时， **“作用域对象名称”** 框才可用。  
+8.  在“作用域对象名称”框中，输入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程的名称、用户定义的标量函数的名称、多语句表值函数的名称或其中出现 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的 DML 触发器的名称。 只有在 **“对象”** 选择为作用域类型时， **“作用域对象名称”** 框才可用。  
   
 9. 在 **“参数”** 框中，输入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中嵌入的所有参数的参数名称和数据类型。  
   
@@ -66,7 +67,7 @@ ms.locfileid: "85655638"
   
 10. 在 **“提示”** 框中，输入要应用于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的查询提示或查询计划。 若要指定一个或多个查询提示，请输入一个有效的 OPTION 子句。  
   
-11. 单击“确定”。   
+11. 单击“确定”。  
 
 ![plan_guide](../../relational-databases/performance/media/plan-guide.png)  
 
@@ -75,7 +76,7 @@ ms.locfileid: "85655638"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```sql  
     -- creates a plan guide named Guide1 based on a SQL statement  

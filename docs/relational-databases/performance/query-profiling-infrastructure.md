@@ -1,5 +1,6 @@
 ---
 title: 查询分析基础结构 |Microsoft Docs
+description: 了解 SQL Server 数据库引擎如何访问查询执行计划上的运行时信息，以了解工作负载以及资源使用的驱动方式。
 ms.custom: ''
 ms.date: 04/23/2019
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 9a82afb6ef63963c414997e43fdd1d4ed6a42765
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 099bf39d869caf8e42575393276e1a7e5ddadb68
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279633"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457248"
 ---
 # <a name="query-profiling-infrastructure"></a>查询分析基础结构
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

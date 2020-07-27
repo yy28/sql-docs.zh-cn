@@ -22,16 +22,16 @@ helpviewer_keywords:
 ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a40336899e804ee634cf586078ec7c219f31c486
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e26918f5b545068ad5e121452dc704f7d72abe35
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297878"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919503"
 ---
 # <a name="script-component"></a>脚本组件
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   脚本组件承载脚本，并使包能够包含和运行自定义的脚本代码。 可以将包中的脚本组件用于下列目的：  
@@ -133,7 +133,7 @@ ms.locfileid: "71297878"
  为连接键入唯一的描述性名称。  
   
  **连接管理器**  
- 从可用的连接管理器列表中选择，或选择“\<新建连接>”以打开“添加 SSIS 连接管理器”对话框。  
+ 从可用的连接管理器列表中选择，或选择“\<New connection>”以打开“添加 SSIS 连接管理器”对话框 。  
   
  **说明**  
  输入连接的说明。  

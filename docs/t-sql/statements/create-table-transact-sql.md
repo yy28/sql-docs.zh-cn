@@ -1,5 +1,5 @@
 ---
-title: CREATE TABLE (Transact-SQL) | Microsoft Docs
+title: CREATE TABLE (Transact-SQL)
 ms.custom: ''
 ms.date: 02/24/2020
 ms.prod: sql
@@ -46,12 +46,12 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 384b474180e17eaed9827da2d2e2b2f9157c6f4b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: be5b8f28ec06b48f0f35d8d246ad12ccbc3c8292
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85766956"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86481998"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -343,6 +343,8 @@ column_name <data_type>
 }
 ```
 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>参数
 
 database_name 要在其中创建表的数据库的名称。 database_name 须指定现有数据库的名称。 如果未指定，则 database_name 默认为当前数据库。 当前连接的登录名必须与 database_name 所指定数据库中的一个现有用户 ID 关联，并且该用户 ID 必须具有 CREATE TABLE 权限。
@@ -578,7 +580,7 @@ FOREIGN KEY REFERENCES 为列中的数据提供引用完整性的约束。 FOREI
 
 ( ref_column [ ,... n ] ) 是 FOREIGN KEY 约束所引用的表中的一列或多列。
 
-ON DELETE { NO ACTION | CASCADE | SET NULL | SET DEFAULT } 指定如果已创建表中的行具有引用关系，并且被引用行已从父表中删除，则对这些行采取的操作。 默认值为 NO ACTION。
+ON DELETE { NO ACTION \| CASCADE \| SET NULL \| SET DEFAULT } 指定如果已创建表中的行具有引用关系，并且被引用行已从父表中删除，则对这些行采取的操作。 默认值为 NO ACTION。
 
 NO ACTION [!INCLUDE[ssDE](../../includes/ssde-md.md)]将引发错误，并回滚对父表中行的删除操作。
 
@@ -598,7 +600,7 @@ SET DEFAULT 如果父表中对应的行被删除，则组成外键的所有值�
 
 相反，如果指定了 `NO ACTION`，并且 ProductVendor 表中至少有一行引用了 Vendor 行，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 会引发错误并回滚对 Vendor 进行行的删除操作 。
 
-ON UPDATE { NO ACTION | CASCADE | SET NULL | SET DEFAULT } 指定在发生更改的表中，如果行有引用关系且引用的行在父表中被更新，则对这些行采取什么操作。 默认值为 NO ACTION。
+ON UPDATE { NO ACTION \| CASCADE \ SET NULL \| SET DEFAULT } 指定在发生更改的表中，如果行有引用关系且引用的行在父表中被更新，则对这些行采取什么操作。 默认值为 NO ACTION。
 
 NO ACTION [!INCLUDE[ssDE](../../includes/ssde-md.md)]将引发错误，并回滚对父表中相应行的更新操作。
 

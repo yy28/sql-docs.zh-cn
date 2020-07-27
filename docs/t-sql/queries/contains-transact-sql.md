@@ -34,16 +34,16 @@ helpviewer_keywords:
 ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1f0bf0dd95bbb209c0e6320c4ba91eb1bc84ff41
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 30942bd7f9c5ff8180eb9adfddedff72d1d97f05
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736316"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552568"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中搜索单个词和短语的精确或模糊（不太精确的）匹配项、在一定差别范围内的相近词或加权匹配项。 CONTAINS 是一个谓词，用于在 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 语句的 [WHERE 子句](../../t-sql/queries/where-transact-sql.md)中对包含基于字符的数据类型的全文检索列执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 全文搜索。  
   
@@ -140,7 +140,9 @@ CONTAINS (
   
 ```  
   
-## <a name="arguments"></a>参数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
  column_name  
  FROM 子句中所指定的表的全文索引列的名称。 列可以是 char、varchar、nchar、nvarchar、text、ntext、image、xml、varbinary 或 varbinary(max) 类型          。  
   
@@ -150,7 +152,7 @@ CONTAINS (
  \*  
  指定查询按给定的搜索条件在 FROM 子句中指定的表中搜索所有全文检索列。 CONTAINS 子句中的列必须来自包含全文索引的单个表。 除非指定 language_term，否则表的所有列的语言必须相同。  
   
- PROPERTY ( column_name , 'property_name')   
+ PROPERTY ( column_name , 'property_name')  
 **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。 
   
  指定在其中搜索指定搜索条件的文档属性。  
@@ -318,18 +320,18 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
  指定介于 0.0 和 1.0 之间的加权值。 \<weighted_term> 中的每个部分可能包含 weight_value 。 使用 weight_value 可更改查询的各个部分如何影响赋予与该查询匹配的每行的排名值。 WEIGHT 不影响 CONTAINS 查询的结果，但 WEIGHT 会影响 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 查询中的排名。  
   
 > [!NOTE]  
->  不管操作系统的区域设置如何，小数点分隔符始终为句点。  
+> 不管操作系统的区域设置如何，小数点分隔符始终为句点。  
   
- { AND | & } | { AND NOT | &! } | { OR | | }  
+ { AND \| & } \| { AND NOT \| &! } \| { OR \| \| }  
  指定两个包含搜索条件之间的逻辑运算。  
   
- { AND | & }  
+ { AND \| & }  
  指示匹配项必须满足这两个包含搜索条件。 可以使用 And 符 (&) 代替关键字 AND 来表示 AND 运算符。  
   
- { AND NOT | &! }  
+ { AND NOT \| &! }  
  指示匹配项中不能出现第二个搜索条件。 可以使用 And 符后跟感叹号 (&!) 代替关键字 AND NOT 来表示 AND NOT 运算符。  
   
- { OR | | }  
+ { OR \| \| }  
  指示匹配项必须满足这两个包含搜索条件之一。 可以使用竖线符号 (|) 代替关键字 OR 来表示 OR 运算符。  
   
  如果 \<contains_search_condition> 包含带括号的组，则首先计算这些带括号的组。 计算了带括号的组之后，将这些逻辑运算符用于包含搜索条件时，适用以下规则：  

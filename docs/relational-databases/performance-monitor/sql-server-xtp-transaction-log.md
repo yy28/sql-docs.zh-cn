@@ -1,5 +1,6 @@
 ---
 title: SQL Server XTP 事务日志 | Microsoft Docs
+description: 了解 SQL Server XTP 事务日志性能对象，该对象包含与 SQL Server 中的内存中 OLTP 事务日志活动相关的计数器。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d16491ef-4a25-4e02-88a7-ab7c0812904a
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 6a04e6cb09f40af918532613c32bddcaff11a57c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d167ee7ac85e206d79fdce0f13aba7c5d6f86827
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715204"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458072"
 ---
 # <a name="sql-server-xtp-transaction-log"></a>SQL Server XTP 事务日志
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

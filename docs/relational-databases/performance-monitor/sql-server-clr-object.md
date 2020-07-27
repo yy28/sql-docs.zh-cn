@@ -1,5 +1,6 @@
 ---
 title: SQL Server - CLR 对象 | Microsoft Docs
+description: 了解 SQLServer:CLR 对象，该对象提供了计数器以监视 Microsoft SQL Server 中的公共语言运行时的执行。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: bed788b0-a68e-4fb1-b001-03bf09ff868e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 9936cf11b0b8a71989f41cf6e7834bfe845cf7ed
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3748641366e41a44845084ef6b5f487f1465178d
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85656273"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458639"
 ---
 # <a name="sql-server-clr-object"></a>SQL Server CLR 对象
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  SQLServer:CLR 对象提供了计数器来监视   中的公共语言运行时 (CLR) 的执行[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+  SQLServer:CLR 对象提供了计数器来监视 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的公共语言运行时 (CLR) 的执行。  
   
- 下表介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR 计数器  。  
+ 下表介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR 计数器。  
   
 |CLR 计数器|说明|  
 |------------------|-----------------|  
