@@ -2,22 +2,22 @@
 title: 设置 Python 数据科学客户端
 description: 设置 Python 本地环境（Jupyter Notebook 或 PyCharm），以使用 Python 远程连接到 SQL Server 机器学习服务。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/04/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ef03354afd3aa2318317ca4c946463a5b7355c12
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 1857ba03808c4309f2573a7d8e58801d5f80199d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117770"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897215"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>在 SQL Server 机器学习服务上设置用于 Python 开发的数据科学客户端
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 从 SQL Server 2017 及更高版本开始，如果在[机器学习服务（数据库内）安装](../install/sql-machine-learning-services-windows-install.md)中包含 Python 选项，将提供 Python 集成功能。 
 
@@ -51,9 +51,9 @@ SSMS 需单独下载，它用于在 SQL Server 上创建和运行存储过程，
 
 1. 下载安装脚本。
 
-  + [https://aka.ms/mls-py](https://aka.ms/mls-py) 安装 Microsoft Python 包版本 9.2.1。 此版本对应于默认 SQL Server 实例。 
+   + [https://aka.ms/mls-py](https://aka.ms/mls-py) 安装 Microsoft Python 包版本 9.2.1。 此版本对应于默认 SQL Server 实例。 
 
-  + [https://aka.ms/mls93-py](https://aka.ms/mls93-py) 安装 Microsoft Python 包版本 9.3。 如果远程 SQL Server 实例[绑定到 Machine Learning Server 9.3](../install/upgrade-r-and-python.md)，则此版本是更好的选择。
+   + [https://aka.ms/mls93-py](https://aka.ms/mls93-py) 安装 Microsoft Python 包版本 9.3。 如果远程 SQL Server 实例[绑定到 Machine Learning Server 9.3](../install/upgrade-r-and-python.md)，则此版本是更好的选择。
 
 2. 使用提升的管理员权限打开 PowerShell 窗口（右键单击“以管理员身份运行”）  。
 
@@ -79,7 +79,7 @@ SSMS 需单独下载，它用于在 SQL Server 上创建和运行存储过程，
 
 2. 输入 `dir *.exe` 以列出可执行文件。 应该会显示“python.exe”、“pythonw.exe”和“uninstall-anaconda.exe”    。
 
-  ![Python 可执行文件列表](media/powershell-python-exe.png)
+   ![Python 可执行文件列表](media/powershell-python-exe.png)
    
 在具有多个 Python 版本的系统上，如果要加载 **revoscalepy** 和其他 Microsoft 包，请务必使用这个特定的 Python.exe。
 
@@ -94,17 +94,17 @@ Anaconda 包含 Jupyter Notebook。 下一步是创建笔记本，并运行包�
 
 1. 在 Powershell 提示符下，还是在 C:\Program Files\Microsoft\PyForMLS 目录中，打开“Scripts”文件夹中的 Jupyter Notebook：
 
-  ```powershell
-  .\Scripts\jupyter-notebook
-  ```
+   ```powershell
+   .\Scripts\jupyter-notebook
+   ```
 
-  应该会在默认浏览器中 (`https://localhost:8889/tree`) 打开一个笔记本。
+   应该会在默认浏览器中 (`https://localhost:8889/tree`) 打开一个笔记本。
 
-  另一种启动方法是双击“jupyter-notebook.exe”  。 
+   另一种启动方法是双击“jupyter-notebook.exe”  。 
 
 2. 单击“新建”，然后单击“Python 3”   。
 
-  ![选中了“新建”“Python 3”的 Jupyter Notebook](media/jupyter-notebook-new-p3.png)
+   ![选中了“新建”“Python 3”的 Jupyter Notebook](media/jupyter-notebook-new-p3.png)
 
 3. 输入 `import revoscalepy` 并运行该命令，以加载其中一个特定于 Microsoft 的库。
 
@@ -112,17 +112,17 @@ Anaconda 包含 Jupyter Notebook。 下一步是创建笔记本，并运行包�
 
 4. 输入一系列更复杂的语句。 此示例使用 [rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary) 针对某个本地数据集生成摘要统计信息。 其他函数用于获取示例数据的位置，以及为本地 .xdf 文件创建数据源对象。
 
-  ```python
-  import os
-  from revoscalepy import rx_summary
-  from revoscalepy import RxXdfData
-  from revoscalepy import RxOptions
-  sample_data_path = RxOptions.get_option("sampleDataDir")
-  print(sample_data_path)
-  ds = RxXdfData(os.path.join(sample_data_path, "AirlineDemoSmall.xdf"))
-  summary = rx_summary("ArrDelay+DayOfWeek", ds)
-  print(summary)
-  ```
+   ```python
+   import os
+   from revoscalepy import rx_summary
+   from revoscalepy import RxXdfData
+   from revoscalepy import RxOptions
+   sample_data_path = RxOptions.get_option("sampleDataDir")
+   print(sample_data_path)
+   ds = RxXdfData(os.path.join(sample_data_path, "AirlineDemoSmall.xdf"))
+   summary = rx_summary("ArrDelay+DayOfWeek", ds)
+   print(summary)
+   ```
 
 下面的屏幕截图显示了输入和部分输出（为简洁起见对输出进行了剪裁）。
 

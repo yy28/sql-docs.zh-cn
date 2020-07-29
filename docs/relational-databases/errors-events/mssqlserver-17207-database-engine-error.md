@@ -1,7 +1,7 @@
 ---
-title: MSSQLSERVER_17204 | Microsoft Docs
+title: MSSQLSERVER_17207
 ms.custom: ''
-ms.date: 07/10/2020
+ms.date: 07/25/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: PijoCoder
 ms.author: mathoma
-ms.openlocfilehash: 1c0c799af360e10780c35ba6848031fb5a4d6737
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 48bcd9ada3da7a1e95001487045105337b298d13
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279610"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87236174"
 ---
 # <a name="mssqlserver_17207"></a>MSSQLSERVER_17207
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -80,7 +80,7 @@ STREAMFCB::Startup: Operating system error 2(The system cannot find the file spe
 1. 要解决错误 17207，需要了解关联的操作系统错误代码并诊断该错误。 解决了操作系统错误后，可以尝试重启数据库（例如，使用 ALTER DATABASE SET ONLINE）或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，使受影响的数据库处于联机状态。 在某些情况下，可能无法解决操作系统错误，因此必须采取特定的纠正措施。 本节将介绍这些操作。
 1. 如果 17207 错误消息只包含错误代码，而不包含错误说明，则可以尝试在操作系统 shell 中运行以下命令来解析错误代码：net helpmsg <error code>。 如果收到的错误代码是一个 8 位数状态代码，可以参考[如何将 HRESULT 转换为 Win32 错误代码？](https://devblogs.microsoft.com/oldnewthing/20061103-07/?p=29133)之类的信息源解码这些状态代码，了解它们在操作系统中都代表什么错误。
 1. 如果收到 ```Access is Denied``` 操作系统错误 = 5，请考虑使用以下方法：
-   -  通过在 Windows 资源管理器中查看文件的属性，检查文件的权限设置。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 Windows 组对各种文件资源预配访问控制。 确保相应的组（名称类似于 SQLServerMSSQLUser$ComputerName$MSSQLSERVER 或 SQLServerMSSQLUser$ComputerName$InstanceName）具有对错误消息中提及的数据库文件的必要权限。 有关更多详细信息，请参阅[配置数据库引擎访问的文件系统权限](../../2014/database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md)。 确保 Windows 组实际包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务启动帐户或服务 SID。
+   -  通过在 Windows 资源管理器中查看文件的属性，检查文件的权限设置。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 Windows 组对各种文件资源预配访问控制。 确保相应的组（名称类似于 SQLServerMSSQLUser$ComputerName$MSSQLSERVER 或 SQLServerMSSQLUser$ComputerName$InstanceName）具有对错误消息中提及的数据库文件的必要权限。 有关更多详细信息，请参阅[配置数据库引擎访问的文件系统权限](/previous-versions/sql/2014/database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access?view=sql-server-2014)。 确保 Windows 组实际包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务启动帐户或服务 SID。
    -  查看当前正在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的用户帐户。 可以使用 Windows 任务管理器来获取此信息。 查找可执行文件“sqlservr.exe”的“用户名”值。 另外，如果你最近更改了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户，请注意，支持执行此操作的方法是使用 SQL Server 配置管理器实用工具。 有关详细信息，请参阅 [SQL Server 配置管理器](../sql-server-configuration-manager.md)。 
    -  根据操作类型（在服务器启动期间打开数据库、附加数据库、还原数据库等），用于模拟和访问数据库文件的帐户可能会有所不同。 请查看[保护数据和日志文件](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105)?redirectedfrom=MSDN)主题，了解哪些操作为哪些帐户设置了哪些权限。 使用 Windows SysInternals [进程监视器](https://docs.microsoft.com/sysinternals/downloads/procmon)之类的工具，了解是否在 SQL Server 实例服务启动帐户（或服务 SID）或模拟帐户的安全上下文中执行了文件访问。
 

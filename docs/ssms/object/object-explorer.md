@@ -26,16 +26,16 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 575c8d2ec6e6397f7a3444bcc718988b070e783d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4eae86044d8e0ec03268e23abc81df4945b46990
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257142"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245545"
 ---
 # <a name="object-explorer"></a>“对象资源管理器”
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供用于在 [!INCLUDE[ssDE](../../includes/ssde_md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]实例中管理对象的功能。  
   
 ## <a name="benefits-of-object-explorer"></a>对象资源管理器的优点  
@@ -49,5 +49,4 @@ ms.locfileid: "75257142"
 |介绍如何将对象资源管理器连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]实例。|[从对象资源管理器连接到实例](../../ssms/object/connect-to-an-instance-from-object-explorer.md)|  
 |介绍如何管理在对象资源管理器层次结构中表示为节点的对象。|[使用对象资源管理器管理对象](../../ssms/object/manage-objects-by-using-object-explorer.md)|  
 |介绍“对象资源管理器详细信息”窗格、服务器中所有对象的表格视图及管理这些对象的用户界面。|[对象资源管理器详细信息窗格](../../ssms/object/object-explorer-details-pane.md)|  
-|介绍在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中运行自定义报表的方法。|[Management Studio 中的自定义报告](../../ssms/object/custom-reports-in-management-studio.md)|  
-  
+|介绍在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中运行自定义报表的方法。|[Management Studio 中的自定义报告](../../ssms/object/custom-reports-in-management-studio.md)|

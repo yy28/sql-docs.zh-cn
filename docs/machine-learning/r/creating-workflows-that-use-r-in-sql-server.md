@@ -2,21 +2,21 @@
 title: 使用 R 创建 SSIS 和 SSRS 工作流
 description: 结合了 SQL Server 机器学习服务和 R 服务、Reporting Services (SSRS) 和 SQL Server Integration Services (SSIS) 的集成方案。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/17/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2b8d55e95991437e4d76911fd26afb5b1bc9c550
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 45443daacecb5423a8c5969b619391fea774bcd6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117740"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85680364"
 ---
 # <a name="create-ssis-and-ssrs-workflows-with-r-on-sql-server"></a>在 SQL Server 上使用 R 创建 SSIS 和 SSRS 工作流
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 本文介绍如何结合 SQL Server 两项重要功能和 SQL Server 机器学习服务的语言和数据科学功能来使用嵌入式 R 和 Python 脚本：SQL Server Integration Services (SSIS) 和 SQL Server Reporting Services SSRS。 SQL Server 中的 R 和 Python 库提供了统计和预测功能。 SSIS 和 SSRS 分别提供协调的 ETL 转换和可视化效果。 本文介绍如何在此工作流模式中将所有这些功能组合在一起：
 

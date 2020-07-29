@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: cd6f71f5c42418ab9357a9aaeec9788ae3ea0d65
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0e9a0b87e0275846b1c1b9535b9485dd1cbae066
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920955"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243421"
 ---
 # <a name="sql-server-express-security"></a>SQL Server Express 安全性
 
@@ -40,7 +40,7 @@ SQL Server Express 通常作为命名实例安装。 实例的默认名称为 `S
 ## <a name="external-resources"></a>外部资源  
 有关 SQL Server Express 的详细信息，请参阅以下资源。  
   
-|||  
+|资源|说明|
 |-|-|  
 |[Microsoft SQL Server 2005 Express Edition 联机丛书](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms165706(v=sql.90))|SQL Server 2005 Express Edition 的完整文档。|  
 |SQL Server 联机丛书中的[非管理员的用户实例](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms143684(v=sql.100))|描述如何创建和部署用户实例。|  

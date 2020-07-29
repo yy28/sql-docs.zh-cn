@@ -1,22 +1,22 @@
 ---
 title: 监视 SQL Server 合作伙伴 | Microsoft Docs
 description: 提供监视 SQL Server 解决方案的第三方合作伙伴列表。
-services: sql-server
 ms.topic: conceptual
 ms.custom: ''
 ms.date: 11/02/2017
 ms.prod: sql
+ms.technology: release-landing
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: acecd9a5ef362f591d71eee15550ee7daa96dfc4
-ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
+ms.openlocfilehash: 5b2ea5e22800d2fc8f65282f62fa52ce19e87722
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "81002812"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921764"
 ---
 # <a name="sql-server-monitoring-partners"></a>SQL Server 监视合作伙伴
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 要监视 SQL Server 服务，请从各种行业领先工具中进行选择。 本文重点介绍提供支持 Microsoft SQL Server 的监视解决方案的 Microsoft 合作伙伴公司。
 
 ## <a name="microsoft-monitoring-partners"></a>Microsoft 监视合作伙伴

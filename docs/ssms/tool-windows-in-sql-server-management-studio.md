@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: d3be5062-234c-43a8-8d47-cce111dd3c25
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 025a4a9ecb00e9827524652047970db0031dfc43
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2965cbdec8ad5a0db80ab52c75c14b0e1e32dc75
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243885"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87236741"
 ---
 # <a name="tool-windows-in-sql-server-management-studio"></a>SQL Server Management Studio 中的工具窗口
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 为所有开发和管理阶段提供了很多功能强大的工具窗口。 某些工具可用于任何 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 组件，而其他一些工具则只能用于某些组件。 下表标识了可以用于所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]组件的工具。  
   
-|||  
-|-|-|  
-|**工具**|**用途**|  
+|工具|目的|  
+|-|-|   
 |[对象资源管理器](../ssms/object/object-explorer.md)|浏览服务器、创建和定位对象、管理数据源以及查看日志。 可以从“视图”  菜单访问该工具。|  
 |[解决方案资源管理器](../ssms/solution/solution-explorer.md)|在称为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 脚本的项目中存储并组织脚本及相关连接信息。 可以将几个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 脚本存储为解决方案，并使用源代码管理工具管理随时间演进的脚本。 可以从“视图”  菜单访问该工具。|  
 |[模板资源管理器](../ssms/template/template-explorer.md)|基于现有模板创建查询。 还可以创建自定义查询，或改变现有模板以使它适合您自己的需要。 可以从“视图”  菜单访问该工具。|  

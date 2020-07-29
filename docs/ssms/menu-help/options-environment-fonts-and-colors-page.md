@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 97d8667e7c6972331471622685d8a0bb97303dcd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fac8e4cdb99d19da39f60585db3f77a27975983a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245730"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011837"
 ---
 # <a name="options-environment---fonts-and-colors-page"></a>选项（“环境” - “字体和颜色”页）
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 使用“选项”对话框可以为   中的各种用户界面元素建立自定义的字体和配色方案[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 在“工具”  菜单上，单击“选项”  ，展开“环境”  文件夹，然后选择“字体和颜色”  。  
   
 在更改配色方案的会话期间，更改不会生效。 您可以通过打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的另一个实例，并将其设置为您的更改要应用的环境，来评估颜色更改效果。  
   
-## <a name="uielement-list"></a>UIElement 列表  
+## <a name="ui-element-list"></a>UI 元素列表  
 **显示其设置**  
 列出可以为其更改字体和配色方案的所有用户界面元素。 从此列表中选择某项后，即可自定义“显示项”  中所选项的颜色设置。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "75245730"
 列出可以修改其前景色和背景色的项。  
   
 > [!NOTE]  
->  默认显示项为“文本”。 这样，分配给“文本”的属性将会被分配给其他显示项的属性覆盖。 例如，如果将蓝色分配给“文本”  并将绿色分配给“标识符”，则所有标识符将显示为绿色。 在此示例中，“标识符”属性覆盖了“文本”属性。  
+> 默认显示项为“文本”。 这样，分配给“文本”的属性将会被分配给其他显示项的属性覆盖。 例如，如果将蓝色分配给“文本”  并将绿色分配给“标识符”，则所有标识符将显示为绿色。 在此示例中，“标识符”属性覆盖了“文本”属性。  
   
 一些显示项包括：  
   

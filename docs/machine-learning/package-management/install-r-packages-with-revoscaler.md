@@ -2,23 +2,23 @@
 title: 使用 RevoScaleR 安装 R 包
 description: 了解如何使用 RevoScaleR 函数在附带机器学习服务或 R Services 的 SQL Server 上安装 R 包。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/20/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 1d5d832d41f6bd087c6e9b334ebeac03728f97b1
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 7f2978cd971f2259d7155d9d6c69c32ffe923ee5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117990"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723930"
 ---
 # <a name="use-revoscaler-to-install-r-packages"></a>使用 RevoScaleR 安装 R 包
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 本文介绍如何使用 [RevoScaleR](../r/ref-r-revoscaler.md)（9.0.1 版及更高版本）函数在附带机器学习服务或 R Services 的 SQL Server 上安装 R 包。 远程非管理员可以使用 RevoScaleR 函数在 SQL Server 上安装包，而无需直接访问服务器。
 

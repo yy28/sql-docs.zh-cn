@@ -20,12 +20,12 @@ ms.assetid: 73efa688-ae91-4014-98bc-1cabe47321f7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 71a3d8f8ce28fcc8918f2058d08f99df2982be5c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 05ada0fde26bdd1e22ceea152539daae8967c1d4
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68086715"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87113421"
 ---
 # <a name="is_rolemember-transact-sql"></a>IS_ROLEMEMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -36,12 +36,14 @@ ms.locfileid: "68086715"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
   
 IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )  
 ```  
   
-## <a name="arguments"></a>参数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
  **'** *role* **'**  
  要检查的数据库角色的名称。 role 为 sysname   。  
   
@@ -60,7 +62,7 @@ IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )
 ## <a name="remarks"></a>备注  
  请使用 IS_ROLEMEMBER 确定当前用户是否可以执行需要数据库角色权限的操作。  
   
- 如果 database_principal 基于 Windows 登录名，如 Contoso\Mary5，则 IS_ROLEMEMBER 返回 NULL，除非为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 授予或拒绝了 database_principal 的直接访问权限 。  
+ 如果 database_principal 基于 Windows 登录名，如 Contoso\Mary5，则 IS_ROLEMEMBER 返回 NULL，除非为  *授予或拒绝了 database_principal 的直接访问权限*  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
  如果未提供可选的 database_principal 参数，并且 database_principal 基于 Windows 域登录名，则它可能是通过 Windows 组成员身份而成为的数据库角色成员   。 要解析这种间接成员身份，IS_ROLEMEMBER 将从域控制器中请求 Windows 组成员身份信息。 如果无法访问域控制器或域控制器没有响应，则 IS_ROLEMEMBER 在返回角色成员身份信息时只考虑用户及其本地组。 如果指定的用户不是当前用户，则 IS_ROLEMEMBER 返回的值可能不同于验证器（如 Active Directory）上次进行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据更新。  
   
