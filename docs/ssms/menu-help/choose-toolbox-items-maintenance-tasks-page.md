@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b92c9054-7479-45d8-a54c-c1bb6699bdb3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: decc1918fbc8da03ce4724dfb0dd5ec69f8fed35
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0924181e87591db6ac7ac21fd8f70429802a19e1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257727"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001677"
 ---
 # <a name="choose-toolbox-items-maintenance-tasks-page"></a>选择工具箱项（“维护任务”页）
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 “自定义工具箱”  对话框的此选项卡可显示已经在你的计算机上注册的所有维护任务组件的列表，可以通过此选项卡更改工具箱中所显示的组件。 可以从“工具”菜单中打开“自定义工具箱”对话框。 若要对组件列表排序，请选择相应的列标题。  
   
 ## <a name="options"></a>选项  

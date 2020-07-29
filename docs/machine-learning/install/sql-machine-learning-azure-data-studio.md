@@ -2,21 +2,21 @@
 title: Azure Data Studio 笔记本（Python、R）
 description: 了解如何使用 SQL Server 机器学习服务在 Azure Data Studio 中的笔记本中运行 Python 和 R 脚本。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/09/2020
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4b6bb16013b75765ee5fdf6b1b52ab0bd65de37f
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 1c5e16667f311c3afff9b2ada9e17c8ffe3751c2
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487561"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916623"
 ---
 # <a name="run-python-and-r-scripts-in-azure-data-studio-notebooks-with-sql-server-machine-learning-services"></a>使用 SQL Server 机器学习服务在 Azure Data Studio 笔记本中运行 Python 和 R 脚本
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 了解如何使用 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)在 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) 笔记本中运行 Python 和 R 脚本。 Azure Data Studio 是一种跨平台数据库工具。
 
@@ -26,11 +26,9 @@ ms.locfileid: "81487561"
 
 - 安装并启用了 SQL Server 机器学习服务的服务器。 可以在 Windows、Linux 或大数据群集上使用机器学习服务：
 
-    - [在 Windows 上安装 SQL Server 机器学习服务](sql-machine-learning-services-windows-install.md)。
-
-    - [在 Linux 上安装 SQL Server 机器学习服务](../../linux/sql-server-linux-setup-machine-learning.md)。
-
-    - [通过机器学习服务在 SQL Server 大数据群集上运行 Python 和 R 脚本](../../big-data-cluster/machine-learning-services.md)。
+  - [在 Windows 上安装 SQL Server 机器学习服务](sql-machine-learning-services-windows-install.md)。
+  - [在 Linux 上安装 SQL Server 机器学习服务](../../linux/sql-server-linux-setup-machine-learning.md)。
+  - [通过机器学习服务在 SQL Server 大数据群集上运行 Python 和 R 脚本](../../big-data-cluster/machine-learning-services.md)。
 
 ## <a name="create-a-sql-notebook"></a>创建 SQL 笔记本
 
@@ -125,5 +123,7 @@ SQL Notebook 由代码单元格和文本单元格组成。 代码单元格用于
 
 ## <a name="next-steps"></a>后续步骤
 
+- [如何使用 Azure Data Studio 中的笔记本](../../azure-data-studio/notebooks-guidance.md)
+- [创建和运行 SQL Server 笔记本](../../azure-data-studio/notebooks-tutorial-sql-kernel.md)
 - [快速入门：通过 SQL Server 机器学习服务运行简单的 Python 脚本](../tutorials/quickstart-python-create-script.md)
 - [快速入门：通过 SQL Server 机器学习服务运行简单的 R 脚本](../tutorials/quickstart-r-create-script.md)

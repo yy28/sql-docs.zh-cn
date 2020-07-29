@@ -23,12 +23,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4b53758eaf1115b85a6c93600ead960f6f44a050
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2de53e7c941e28a3a498f984fc544f4733f71694
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000454"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87240039"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>SQL Server 索引体系结构和设计指南
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -216,18 +216,86 @@ ON Purchasing.PurchaseOrderDetail
 > [!NOTE]
 > 对于列存储索引，所有列在元数据中作为包含性列存储。 列存储索引中没有任何键列。  
 
-||| 
-|-|-|
-|[sys.indexes (Transact-SQL)](../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)|[sys.index_columns (Transact-SQL)](../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)|  
-|[sys.partitions (Transact-SQL)](../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)|[sys.internal_partitions (Transact-SQL)](../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|
-|[sys.dm_db_index_operational_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)|[sys.dm_db_index_physical_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)|  
-|[sys.column_store_segments (Transact-SQL)](../relational-databases/system-catalog-views/sys-column-store-segments-transact-sql.md)|[sys.column_store_dictionaries (Transact-SQL)](../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)|  
-|[sys.column_store_row_groups (Transact-SQL)](../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)|[sys.dm_db_column_store_row_group_operational_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)|
-|[sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md)|[sys.dm_column_store_object_pool (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-column-store-object-pool-transact-sql.md)|  
-|[sys.dm_db_column_store_row_group_operational_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)|[sys.dm_db_xtp_hash_index_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-hash-index-stats-transact-sql.md)| 
-|[sys.dm_db_xtp_index_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md)|[sys.dm_db_xtp_object_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-object-stats-transact-sql.md)|
-|[sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-nonclustered-index-stats-transact-sql.md)|[sys.dm_db_xtp_table_memory_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md)|
-|[sys.hash_indexes &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md)|[sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)|  
+:::row:::
+    :::column:::
+        [sys.indexes (Transact-SQL)](../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [sys.index_columns (Transact-SQL)](../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        [sys.partitions (Transact-SQL)](../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [sys.internal_partitions (Transact-SQL)](../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [sys.dm_db_index_operational_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [sys.dm_db_index_physical_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        [sys.column_store_segments (Transact-SQL)](../relational-databases/system-catalog-views/sys-column-store-segments-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [sys.column_store_dictionaries (Transact-SQL)](../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        [sys.column_store_row_groups (Transact-SQL)](../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [sys.dm_db_column_store_row_group_operational_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [sys.dm_column_store_object_pool (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-column-store-object-pool-transact-sql.md)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        [sys.dm_db_column_store_row_group_operational_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [sys.dm_db_xtp_hash_index_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-hash-index-stats-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [sys.dm_db_xtp_index_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [sys.dm_db_xtp_object_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-object-stats-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-nonclustered-index-stats-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [sys.dm_db_xtp_table_memory_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [sys.hash_indexes &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)
+    :::column-end:::
+:::row-end:::
 
 ##  <a name="clustered-index-design-guidelines"></a><a name="Clustered"></a> 聚集索引设计指南  
  聚集索引基于数据行的键值在表内排序和存储这些数据行。 每个表只能有一个聚集索引，因为数据行本身只能按一个顺序存储。 每个表几乎都对列定义聚集索引来实现下列功能：  

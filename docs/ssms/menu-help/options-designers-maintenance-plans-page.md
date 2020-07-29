@@ -12,18 +12,18 @@ f1_keywords:
 ms.assetid: 4445ae87-5eaa-4911-aec3-905610592005
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e1a6da50988a372514cf613f16896aea966fd153
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9cf4513c4094798f72b6e3f5012fd47afb29bdae
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245764"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001619"
 ---
 # <a name="options-designers---maintenance-plans-page"></a>选项（“设计器” - “维护计划”页）
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 使用“选项”  对话框可以确定在将新形状添加到设计图面时设计器的默认行为。 在“工具”  菜单上，单击“选项”  ，展开“设计器”  ，再选择“维护计划”  。  
   
-## <a name="uielement-list"></a>UIElement 列表  
+## <a name="ui-element-list"></a>UI 元素列表  
 **将新形状连接到默认选中的形状**  
 选中此复选框后，在将新形状添加到设计图面时它们会自动连接到其他形状。 清除此复选框后，在添加新形状时不会连接它们。 选中此复选框将启用以下框：  
   

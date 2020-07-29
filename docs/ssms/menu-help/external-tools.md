@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: d7dae88f-0781-4162-96cd-d3a3a4d82035
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f86cd81ce23c0e68854a10c3df6e2aa0019bf9ab
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3950d93088e98ebb5d69ae4a5647ee64f60a00d2
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257722"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001639"
 ---
 # <a name="external-tools"></a>外部工具
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 使用此对话框可以将外部工具（如 SQL Server 配置管理器或记事本）添加到“工具”  菜单。 通过添加外部工具，您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中工作的同时，便捷地启动其他应用程序。 启动此工具时，可以指定参数及工作目录。 此外，可以在“输出”窗口中显示某些工具的输出。 通过“工具”菜单可以打开“外部工具”对话框。  
   
 ## <a name="options"></a>选项  

@@ -19,12 +19,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b39ab62ed76269869ae8c9327f5aaa0996672fba
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: d1323c8736934a46fdb4ef8c4d8752364f8ae38d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053743"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87239307"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>事务锁定和行版本控制指南
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -71,14 +71,62 @@ ms.locfileid: "86053743"
   
  您可以使用显式事务中除下列语句之外的所有 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句：  
   
-||||  
-|-|-|-|  
-|ALTER DATABASE|CREATE DATABASE|DROP FULLTEXT INDEX|  
-|ALTER FULLTEXT CATALOG|CREATE FULLTEXT CATALOG|RECONFIGURE|  
-|ALTER FULLTEXT INDEX|CREATE FULLTEXT INDEX|RESTORE|  
-|BACKUP|DROP DATABASE|全文系统存储过程|  
-|CREATE DATABASE|DROP FULLTEXT CATALOG|sp_dboption 用于设置数据库选项，或在显式事务或隐式事务内部修改 master 数据库的任何系统过程。|  
-  
+:::row:::
+    :::column:::
+        ALTER DATABASE
+    :::column-end:::
+    :::column:::
+        CREATE DATABASE
+    :::column-end:::
+    :::column:::
+        DROP FULLTEXT INDEX
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        ALTER FULLTEXT CATALOG
+    :::column-end:::
+    :::column:::
+        CREATE FULLTEXT CATALOG
+    :::column-end:::
+    :::column:::
+        RECONFIGURE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        ALTER FULLTEXT INDEX
+    :::column-end:::
+    :::column:::
+        CREATE FULLTEXT INDEX
+    :::column-end:::
+    :::column:::
+        RESTORE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        BACKUP
+    :::column-end:::
+    :::column:::
+        DROP DATABASE
+    :::column-end:::
+    :::column:::
+        全文系统存储过程
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE DATABASE
+    :::column-end:::
+    :::column:::
+        DROP FULLTEXT CATALOG
+    :::column-end:::
+    :::column:::
+        sp_dboption 用于设置数据库选项，或在显式事务或隐式事务内部修改 master 数据库的任何系统过程。
+    :::column-end:::
+:::row-end:::
+
 > [!NOTE]  
 > UPDATE STATISTICS 可在显式事务内使用。 但是，UPDATE STATISTICS 提交独立于封闭的事务，并且不能回滚。  
   
@@ -90,13 +138,51 @@ ms.locfileid: "86053743"
   
  为连接将隐性事务模式设置为打开之后，当[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]实例首次执行下列任何语句时，都会自动启动一个事务：  
   
-||||  
-|-|-|-|  
-|ALTER TABLE|FETCH|REVOKE|  
-|CREATE|GRANT|SELECT|  
-|DELETE|INSERT|TRUNCATE TABLE|  
-|DROP|OPEN|UPDATE|  
-  
+:::row:::
+    :::column:::
+        ALTER TABLE
+    :::column-end:::
+    :::column:::
+        FETCH
+    :::column-end:::
+    :::column:::
+        REVOKE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE
+    :::column-end:::
+    :::column:::
+        GRANT
+    :::column-end:::
+    :::column:::
+        SELECT
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        DELETE
+    :::column-end:::
+    :::column:::
+        INSERT
+    :::column-end:::
+    :::column:::
+        TRUNCATE TABLE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        DROP
+    :::column-end:::
+    :::column:::
+        OPEN
+    :::column-end:::
+    :::column:::
+        UPDATE
+    :::column-end:::
+:::row-end:::
+
 -  **批处理级事务**  
    只能应用于多个活动结果集 (MARS)，在 MARS 会话中启动的 [!INCLUDE[tsql](../includes/tsql-md.md)] 显式或隐式事务变为批处理级事务。 当批处理完成时没有提交或回滚的批处理级事务自动由 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 进行回滚。  
   

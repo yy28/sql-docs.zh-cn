@@ -23,16 +23,16 @@ ms.author: maghan
 ms.reviewer: ''
 ms.date: 10/20/2016
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de184b30270ff301e343b1598327a449907fb508
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d48e64edfaaa1c3f5506f8c2c674101616254000
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75558253"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718424"
 ---
 # <a name="configure-firewall-rules-before-running-the-tsql-debugger"></a>运行 TSQL 调试器之前配置防火墙规则
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 必须配置 Windows 防火墙规则，以便在连接到 [!INCLUDE[tsql](../../includes/tsql-md.md)] 实例（运行该实例的计算机不同于运行 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器的计算机）时启用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 调试。
 

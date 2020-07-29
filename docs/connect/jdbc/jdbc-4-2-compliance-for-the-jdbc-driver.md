@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 36025ec0-3c72-4e68-8083-58b38e42d03b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 51e9e14fc53c4b9904e64180307f7da8939408ab
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1ff264c620123dcbb73c58373871f568ff1d249e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924639"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243398"
 ---
 # <a name="jdbc-42-compliance-for-the-jdbc-driver"></a>JDBC 驱动程序的 JDBC 4.2 合规性
 
@@ -59,14 +59,12 @@ ms.locfileid: "80924639"
   
 ## <a name="sqlserverresultset-class"></a>SQLServerResultSet 类
   
-||||  
-|-|-|-|  
 |新方法|说明|值得注意的实现|  
+|-|-|-|  
 ||使用对象值更新指定列。 有 4 种新的（重载）方法来支持新的 SQLType 接口。|按 java.sql.ResultSet 接口中所述实现。 有关详细信息，请参阅 [java.sql.ResultSet](https://docs.oracle.com/javase/8/docs/api/java/sql/ResultSet.html)。|  
   
  Microsoft JDBC Driver 4.2 for SQL Server 支持 Java Database Connectivity API 4.2 规范，并带有以下数据类型映射。  
   
-|||  
-|-|-|  
 |新的数据类型映射|说明|  
+|-|-|  
 |**Java 8 中新增的 Java 类：** <br /> <br /> LocalDate/LocalTime/LocalDateTime<br /><br /> OffsetTime/OffsetDateTime<br /><br /> **新的 JDBC 类型：**<br /><br /> TIME_WITH_TIMEZONE<br /><br /> TIMESTAMP_WITH_TIMEZONE<br /><br /> REF_CURSOR|REF_CURSOR 在 SQL Server 中不受支持。 如果使用此类型，驱动程序将引发 SQLFeatureNotSupportedException 异常。 该驱动程序支持 JDBC 4.2 规范中指定所有其他新的 Java 和 JDBC 类型映射。|  

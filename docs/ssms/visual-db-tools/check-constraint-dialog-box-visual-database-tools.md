@@ -9,20 +9,19 @@ f1_keywords:
 ms.assetid: ad0bbf7f-b0de-406a-bd0a-cb779816b101
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: cdcfe6cd4f0c48a6774b8e2518968b8c3d1997f2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0566d91cb0dfa5e2df23bb2e245a42fdb5bd73df
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78280931"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998938"
 ---
 # <a name="check-constraint-dialog-box-visual-database-tools"></a>“CHECK 约束”对话框 (Visual Database Tools)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 如果在表设计器中右键单击表定义网格，再单击“CHECK 约束”  ，则会显示此对话框。 此对话框包含附加到数据库中表的非唯一约束的一组属性。 应用于唯一约束的属性则包含在“索引/键”  对话框中。  
   

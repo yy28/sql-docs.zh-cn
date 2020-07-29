@@ -3,18 +3,19 @@ title: SQL Server 文档导航提示
 description: SQL Server 技术文档导航提示和技巧 - 介绍了中心页、目录和标题等内容，以及如何使用痕迹导航和版本筛选器。
 ms.date: 10/15/2019
 ms.prod: sql
+ms.technology: release-landing
 ms.reviewer: ''
 ms.custom: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5492b4ff50baa805989df3521b01856eb028328e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f85c97e36900d3c6f4372004819690a8ede49d22
+ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76831624"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83731597"
 ---
 # <a name="sql-server-docs-navigation-guide"></a>SQL Server 文档导航指南 
 

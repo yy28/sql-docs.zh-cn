@@ -15,17 +15,16 @@ helpviewer_keywords:
 ms.assetid: eda8dea2-eedd-43a7-85aa-92bd97783b5f
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: c9eaf5f0a26660439d9bfbc9db85c645d95553e3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 247f8fe68dca157a98b9e0c0a36445422cc3332f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255295"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999515"
 ---
 # <a name="reconcile-a-database-diagram-with-a-modified-database-visual-database-tools"></a>协调数据库关系图与已修改的数据库 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 当您准备好对数据库进行更新以与您的关系图匹配时，即可保存数据库关系图。 但是，如果其他用户在您打开关系图后更新了相应的数据库，他们的更改可能会影响您的关系图，同样如果您在其他用户打开关系图后更新数据库，那么您的更改也会影响他们的关系图。  
   
 保存关系图将通过改写其他用户的更改来使数据库与您的关系图一致，以便数据库与关系图匹配。  

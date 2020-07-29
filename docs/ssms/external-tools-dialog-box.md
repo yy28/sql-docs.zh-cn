@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: ba797203-24d0-4922-9b97-8ab483f1db14
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: deeb0a237d1982a92e08c056375fca277f095017
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d0b59445399a161e12bfdfeb5fad79f11f1bced9
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245034"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000141"
 ---
 # <a name="external-tools-dialog-box"></a>外部工具对话框
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 使用“外部工具”  对话框可以将外部工具（如 SQLCMD 或记事本）添加到“工具”  菜单中。 通过添加外部工具，在 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 环境中工作时可以轻松启动其他应用程序。 启动此工具时，可以指定参数及工作目录。 此外，“输出”  窗口中可以显示某些工具的输出。 通过“工具”菜单可以打开“外部工具”对话框。  
   
 ## <a name="options"></a>选项  

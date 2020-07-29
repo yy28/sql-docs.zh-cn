@@ -5,7 +5,7 @@ ms.date: 04/25/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.custom: ''
-ms.technology: install
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords:
 - build notes
@@ -14,15 +14,15 @@ ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 516a05c1a797278fd5de383acc39284d689ce191
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 1daf6c1205c33d0522f44105397be8b87dabda23
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151580"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728106"
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 发行说明
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
   本主题介绍 SQL Server 2016 版本的限制和问题，包括服务包。 有关新增功能的信息，请参阅 [《What's New in SQL Server 2016》](https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-2016)（SQL Server 2016 的新增功能）。
 
 - [![从评估中心下载](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) 从 **[评估中心](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)下载 SQL Server 2016**
@@ -42,49 +42,49 @@ SQL Server 2016 SP2 中包括与性能和缩放相关的改进。
 
 |Feature|说明|详细信息|
 |---|---|---|
-|分发数据库清除过程已改进 |   分发数据库表过大导致出现阻塞和死锁情况。 改进的清理过程旨在消除其中某些阻塞或死锁情况的发生。 |   [KB4040276](https://support.microsoft.com/help/4040276/fix-indirect-checkpoints-on-the-tempdb-database-cause-non-yielding)  |
-|更改跟踪清除    |   改进了更改跟踪端表的更改跟踪清除性能和效率。    |   [KB4052129](https://support.microsoft.com//help/4052129/update-for-manual-change-tracking-cleanup-procedure-in-sql-server-2016) |
-|利用 CPU 超时来取消 Resource Governor 请求   |   如果已达到请求的 CPU 阈值，则通过实际取消请求改进查询请求的处理工作。 已在跟踪标志 2422 下启用此行为。 |   [KB4038419](https://support.microsoft.com/help/4038419/add-cpu-timeout-to-resource-governor-request-max-cpu-time-sec)   |
-|用于在文件组中创建目标表的 SELECT INTO 语句    |   从 SQL Server 2016 SP2 开始，SELECT INTO T-SQL 语法支持在 T-SQL 语法中使用 ON <Filegroup name> 关键字将表加载到用户默认文件组以外的文件组。 |       |
-|TempDB 间接检查点已改进    |   已对 TempDB 的间接检查点进行改进，从而最大程度地减少 DPList 上的旋转锁争用。 此项改进让 SQL Server 2016 上的 TempDB 工作负载可以在为 TempDB 启用了间接检查点功能的情况下向外扩展。    |   [KB4040276](https://support.microsoft.com/help/4040276) |
-|大内存计算机上的数据库备份性能已改进  |   SQL Server 2016 SP2 优化了备份过程中对正在进行的 I/O 的排出方式，从而显著提高了中小型数据库的备份性能。 在 2TB 计算机上进行系统数据库备份时，可发现改进后的性能较以前提高了 100 倍以上。 当备份页面和备份 I/O 占用的时间超过缓冲池迭代时，数据库大小将增加，此时性能提高的幅度会降低。 对于在具备较大内存的大型高端服务器上托管多个小型数据库的客户，此项更改有助于提升备份性能。    |       |
-|为启用了 TDE 的数据库提供的 VDI 备份压缩支持   |   SQL Server 2016 SP2 添加了 VDI 支持，允许 VDI 备份解决方案将压缩功能用于启用了 TDE 的数据库。 借助此项改进，引进了新的备份格式，为启用了 TDE 的数据库提高备份压缩支持。 SQL Server 引擎将以透明的方式处理新的和旧的备份格式，从而还原备份。   |       |
-|复制代理配置文件参数的动态加载    |   凭借此项增强功能，可在不重启代理的情况下动态加载复制代理参数。 此更改仅适用于最常用的代理配置文件参数。 |       |
-|支持用于统计信息创建/更新的 MAXDOP 选项 |    此项增强功能允许为 CREATE/UPDATE 统计信息语句指定 MAXDOP 选项，并确保创建或重新生成所有类型索引过程中，在更新统计信息时采用的是正确的 MAXDOP 设置（如果存在 MAXDOP 选项）   |   [KB4041809](https://support.microsoft.com/help/4041809) |
-|增量统计信息的自动更新统计信息功能已改进 |    在某些情况下，如果表中的多个分区出现大量数据更改，递增统计信息的总修改计数器超过自动更新阈值，但是任何单独分区都未超过自动更新阈值，那么统计信息更新可能会推迟，直到该表中出现更多的修改。 已在跟踪标志 11024 下更正此行为。   |       |
+|分发数据库清除过程已改进   |   分发数据库表过大导致出现阻塞和死锁情况。 改进的清理过程旨在消除其中某些阻塞或死锁情况的发生。   |   [KB4040276](https://support.microsoft.com/help/4040276/fix-indirect-checkpoints-on-the-tempdb-database-cause-non-yielding)   |
+|更改跟踪清除   |   改进了更改跟踪端表的更改跟踪清除性能和效率。   |   [KB4052129](https://support.microsoft.com//help/4052129/update-for-manual-change-tracking-cleanup-procedure-in-sql-server-2016)   |
+|利用 CPU 超时来取消 Resource Governor 请求   |   如果已达到请求的 CPU 阈值，则通过实际取消请求改进查询请求的处理工作。 已在跟踪标志 2422 下启用此行为。   |   [KB4038419](https://support.microsoft.com/help/4038419/add-cpu-timeout-to-resource-governor-request-max-cpu-time-sec)   |
+|用于在文件组中创建目标表的 SELECT INTO 语句   |   从 SQL Server 2016 SP2 开始，SELECT INTO T-SQL 语法支持在 T-SQL 语法中使用 ON <Filegroup name> 关键字将表加载到用户默认文件组以外的文件组。   |      |
+|TempDB 间接检查点已改进   |   已对 TempDB 的间接检查点进行改进，从而最大程度地减少 DPList 上的旋转锁争用。 此项改进让 SQL Server 2016 上的 TempDB 工作负载可以在为 TempDB 启用了间接检查点功能的情况下向外扩展。   |   [KB4040276](https://support.microsoft.com/help/4040276)   |
+|大内存计算机上的数据库备份性能已改进   |   SQL Server 2016 SP2 优化了备份过程中对正在进行的 I/O 的排出方式，从而显著提高了中小型数据库的备份性能。 在 2TB 计算机上进行系统数据库备份时，可发现改进后的性能较以前提高了 100 倍以上。 当备份页面和备份 I/O 占用的时间超过缓冲池迭代时，数据库大小将增加，此时性能提高的幅度会降低。 对于在具备较大内存的大型高端服务器上托管多个小型数据库的客户，此项更改有助于提升备份性能。   |      |
+|为启用了 TDE 的数据库提供的 VDI 备份压缩支持   |   SQL Server 2016 SP2 添加了 VDI 支持，允许 VDI 备份解决方案将压缩功能用于启用了 TDE 的数据库。 借助此项改进，引进了新的备份格式，为启用了 TDE 的数据库提高备份压缩支持。 SQL Server 引擎将以透明的方式处理新的和旧的备份格式，从而还原备份。   |      |
+|复制代理配置文件参数的动态加载   |   凭借此项增强功能，可在不重启代理的情况下动态加载复制代理参数。 此更改仅适用于最常用的代理配置文件参数。   |      |
+|支持用于统计信息创建/更新的 MAXDOP 选项   |    此项增强功能允许为 CREATE/UPDATE 统计信息语句指定 MAXDOP 选项，并确保创建或重新生成所有类型索引过程中，在更新统计信息时采用的是正确的 MAXDOP 设置（如果存在 MAXDOP 选项）   |   [KB4041809](https://support.microsoft.com/help/4041809)   |
+|增量统计信息的自动更新统计信息功能已改进   |    在某些情况下，如果表中的多个分区出现大量数据更改，递增统计信息的总修改计数器超过自动更新阈值，但是任何单独分区都未超过自动更新阈值，那么统计信息更新可能会推迟，直到该表中出现更多的修改。 已在跟踪标志 11024 下更正此行为。   |      |
 
 SQL Server 2016 SP2 中包含与可支持性和诊断相关的改进。
 
 |Feature|说明|详细信息|
 |---|---|---|
-|对可用性组中数据库的完整 DTC 支持    |   SQL Server 2016 目前不支持可用性组中数据库的跨数据库事务。 我们在 SQL Server 2016 SP2 中引入了对可用性组数据库的分布式事务的完整支持。   |       |
-|更新到 sys.databases is_encrypted 列，准确反映 TempDB 的加密状态 |   对于 TempDB，sys.databases 中 is_encryptedcolumn 列的值为 1，即使是在关闭所有用户数据库的加密并重新启动 SQL Server 后也一样。 由于 TempDB 在这种情况下不再处于加密状态，因此该列中的值本该为 0。 从 SQL Server 2016 SP2 开始，sys.databases.is_encrypted 现可准确反映 TempDB 的加密状态。  |       |
-|用于生成已验证克隆和备份的新 DBCC CLONEDATABASE 选项   |   借助 SQL Server 2016 SP2，DBCC CLONEDATABASE 提供两个新选项：生成已验证克隆，或生成备份克隆。 使用 WITH VERIFY_CLONEDB 选项创建克隆数据库时，将创建并验证一致的数据库克隆，Microsoft 会为此提供支持，以便生产使用。 引进了新的属性来验证克隆是否已通过验证 SELECT DATABASEPROPERTYEX(‘clone_database_name’, ‘IsVerifiedClone’)。 使用 BACKUP_CLONEDB 选项创建克隆时，会在数据文件所在的同一文件夹中生成备份，以便客户将克隆移至不同的服务器或将其发送至 Microsoft 客户支持部门 (CSS) 进行故障排除。  |       |
-|DBCC CLONEDATABASE 的 Service Broker (SSB) 支持    |   已增强 DBCC CLONEDATABASE 命令，允许 SSB 对象的脚本编写。  |   [KB4092075](https://support.microsoft.com/help/4092075) |
-|用于监视 TempDB 版本存储空间使用情况的新 DMV    |   SQL Server 2016 SP2 中引入了新的 sys.dm_tran_version_store_space_usage DMV，用于监视 TempDB 的版本存储使用情况。 DBA 现可根据每个数据库的版本存储使用情况要求主动地规划 TempDB 大小，且在生产服务器上运行时无需任何性能开销。 |       |
-|对复制代理的完全转储支持 | 现在，如果复制代理遇到未经处理的异常，则会默认创建异常现象的微型转储。 这使得难以对未经处理的异常问题进行故障排除。 通过此更改，我们引入了新的注册表项，这将允许为复制代理创建完全转储。  |       |
-|针对可用性组的读取路由故障的扩展事件增强 |   在之前，如果存在路由列表但是其中没有可用于连接的服务器，则会激发 read_only_rout_fail xEvent。 SQL Server 2016 SP2 包含有助于故障排除的其他信息，并且还扩展了激发此 xEvent 的码位。  |       |
-|用于监视事务日志的新 DMV |   新增了 DMV sys.dm_db_log_stats，用于返回有关数据库的事务日志文件的摘要级别属性和信息。 |       |
-|用于监视 VLF 信息的新 DMV |   SQL Server 2016 SP2 引入了新的 DMV sys.dm_db_log_info，可公开类似于 DBCC LOGINFO 的 VLF 信息，用于监视、警报和避免客户遭遇潜在的 T 日志问题。    |       |
-|sys.dm_os_sys_info 中的处理器信息|   向 sys.dm_os_sys_info DMV 添加了新的列，用于公开与处理器相关的信息（如 socket_count 和 cores_per_numa）。  |       |
-|sys.dm_db_file_space_usage 中的盘区修改信息| 向 sys.dm_db_file_space_usage 添加了新的列，用于跟踪自上次完整备份以来修改的盘区数量。  |       |
-|sys.dm_exec_query_stats 中的段信息 |   向 sys.dm_exec_query_stats 添加了新的列，用于跟踪跳过和读取的列存储段数（如 total_columnstore_segment_reads 和 total_columnstore_segment_skips）。   |   [KB4051358](https://support.microsoft.com/help/4051358) |
-|为分发数据库设置正确的兼容级别  |   安装 Service Pack 后，分发数据库的兼容级别会更改为 90。 这是由于 sp_vupgrade_replication 存储过程中的代码路径。 SP 现已改为设置分发数据库的正确兼容级别。   |       |
-|公开已知的最新良好 DBCC CHECKDB 信息    |   添加了新的数据库选项，从而能以编程方式返回最新一次成功运行 DBCC CHECKDB 的日期。 用户现可查询 DATABASEPROPERTYEX([database], ‘lastgoodcheckdbtime’)，获取单个值，该值代表上一次在指定数据库上成功运行 DBCC CHECKDB 的日期/时间。  |       |
-|显示计划 XML 增强| [关于使用哪些统计信息编译查询计划的信息](https://blogs.msdn.microsoft.com/sql_server_team/sql-server-2017-showplan-enhancements/)，其中包括统计信息名称、修改计数器、采样百分比以及统计信息的上次更新时间。 请注意，这仅添加至 CE 模型 120 及更高版本。 例如，CE 70 并不支持。| |
+|对可用性组中数据库的完整 DTC 支持   |   SQL Server 2016 目前不支持可用性组中数据库的跨数据库事务。 我们在 SQL Server 2016 SP2 中引入了对可用性组数据库的分布式事务的完整支持。   |      |
+|更新到 sys.databases is_encrypted 列，准确反映 TempDB 的加密状态   |   对于 TempDB，sys.databases 中 is_encryptedcolumn 列的值为 1，即使是在关闭所有用户数据库的加密并重新启动 SQL Server 后也一样。 由于 TempDB 在这种情况下不再处于加密状态，因此该列中的值本该为 0。 从 SQL Server 2016 SP2 开始，sys.databases.is_encrypted 现可准确反映 TempDB 的加密状态。   |      |
+|用于生成已验证克隆和备份的新 DBCC CLONEDATABASE 选项   |   借助 SQL Server 2016 SP2，DBCC CLONEDATABASE 提供两个新选项：生成已验证克隆，或生成备份克隆。 使用 WITH VERIFY_CLONEDB 选项创建克隆数据库时，将创建并验证一致的数据库克隆，Microsoft 会为此提供支持，以便生产使用。 引进了新的属性来验证克隆是否已通过验证 SELECT DATABASEPROPERTYEX(‘clone_database_name’, ‘IsVerifiedClone’)。 使用 BACKUP_CLONEDB 选项创建克隆时，会在数据文件所在的同一文件夹中生成备份，以便客户将克隆移至不同的服务器或将其发送至 Microsoft 客户支持部门 (CSS) 进行故障排除。   |      |
+|DBCC CLONEDATABASE 的 Service Broker (SSB) 支持   |   已增强 DBCC CLONEDATABASE 命令，允许 SSB 对象的脚本编写。   |   [KB4092075](https://support.microsoft.com/help/4092075)   |
+|用于监视 TempDB 版本存储空间使用情况的新 DMV   |   SQL Server 2016 SP2 中引入了新的 sys.dm_tran_version_store_space_usage DMV，用于监视 TempDB 的版本存储使用情况。 DBA 现可根据每个数据库的版本存储使用情况要求主动地规划 TempDB 大小，且在生产服务器上运行时无需任何性能开销。   |      |
+|对复制代理的完全转储支持 | 现在，如果复制代理遇到未经处理的异常，则会默认创建异常现象的微型转储。 这使得难以对未经处理的异常问题进行故障排除。 通过此更改，我们引入了新的注册表项，这将允许为复制代理创建完全转储。   |      |
+|针对可用性组的读取路由故障的扩展事件增强   |   在之前，如果存在路由列表但是其中没有可用于连接的服务器，则会激发 read_only_rout_fail xEvent。 SQL Server 2016 SP2 包含有助于故障排除的其他信息，并且还扩展了激发此 xEvent 的码位。   |      |
+|用于监视事务日志的新 DMV |   新增了 DMV sys.dm_db_log_stats，用于返回有关数据库的事务日志文件的摘要级别属性和信息。   |      |
+|用于监视 VLF 信息的新 DMV |   SQL Server 2016 SP2 引入了新的 DMV sys.dm_db_log_info，可公开类似于 DBCC LOGINFO 的 VLF 信息，用于监视、警报和避免客户遭遇潜在的 T 日志问题。   |      |
+|sys.dm_os_sys_info 中的处理器信息|   向 sys.dm_os_sys_info DMV 添加了新的列，用于公开与处理器相关的信息（如 socket_count 和 cores_per_numa）。   |      |
+|sys.dm_db_file_space_usage 中的盘区修改信息|   向 sys.dm_db_file_space_usage 添加了新的列，用于跟踪自上次完整备份以来修改的盘区数量。   |      |
+|sys.dm_exec_query_stats 中的段信息   |   向 sys.dm_exec_query_stats 添加了新的列，用于跟踪跳过和读取的列存储段数（如 total_columnstore_segment_reads 和 total_columnstore_segment_skips）。   |   [KB4051358](https://support.microsoft.com/help/4051358)   |
+|为分发数据库设置正确的兼容级别   |   安装 Service Pack 后，分发数据库的兼容级别会更改为 90。 这是由于 sp_vupgrade_replication 存储过程中的代码路径。 SP 现已改为设置分发数据库的正确兼容级别。   |      |
+|公开已知的最新良好 DBCC CHECKDB 信息   |   添加了新的数据库选项，从而能以编程方式返回最新一次成功运行 DBCC CHECKDB 的日期。 用户现可查询 DATABASEPROPERTYEX([database], ‘lastgoodcheckdbtime’)，获取单个值，该值代表上一次在指定数据库上成功运行 DBCC CHECKDB 的日期/时间。   |      |
+|显示计划 XML 增强|   [关于使用哪些统计信息编译查询计划的信息](https://blogs.msdn.microsoft.com/sql_server_team/sql-server-2017-showplan-enhancements/)，其中包括统计信息名称、修改计数器、采样百分比以及统计信息的上次更新时间。 请注意，这仅添加至 CE 模型 120 及更高版本。 例如，CE 70 并不支持。| |
 | |如果查询优化器采用“行目标”逻辑，则向显示计划 XML 添加新属性 [EstimateRowsWithoutRowgoal](https://blogs.msdn.microsoft.com/sql_server_team/more-showplan-enhancements-row-goal/)。| |
 | |实际显示计划 XML 中的新运行时属性 [UdfCpuTime and UdfElapsedTime](https://blogs.msdn.microsoft.com/sql_server_team/more-showplan-enhancements-udfs/)，用于跟踪标量的用户定义函数 (UDF) 所花费的时间。| |
-| |在实际显示计划 XML 中将 CXPACKET 等待类型添加到[可能的前 10 等待列表](https://blogs.msdn.microsoft.com/sql_server_team/new-showplan-enhancements/) - 并行查询的执行经常涉及 CXPACKET 等待，但是实际显示计划 XML 中不会报告这种类型的等待。 |       |
+| |在实际显示计划 XML 中将 CXPACKET 等待类型添加到[可能的前 10 等待列表](https://blogs.msdn.microsoft.com/sql_server_team/new-showplan-enhancements/) - 并行查询的执行经常涉及 CXPACKET 等待，但是实际显示计划 XML 中不会报告这种类型的等待。   |      |
 | |扩展运行时溢出警告，从而报告在并行运算符溢出期间写入到 TempDB 的页数。| |
-|对使用补充字符排序规则的数据库的复制支持  |   现已对使用补充字符排序规则的数据库提供复制支持。 |       |
-|通过可用性组故障转移，对 Service Broker 进行正确的处理 |   在目前的执行情况中，如果在可用性组数据库上启用了 Service Broker，则 AG 故障转移期间，主要副本发起的所有 Service Broker 连接均保持打开状态。 在 AG 故障转移期间，这一改进会关闭所有此类打开的连接。 |       |
-|通过添加 |   新的 [CXCONSUMER](https://blogs.msdn.microsoft.com/sql_server_team/making-parallelism-waits-actionable/) 等待，改进了并行等待故障排除。   |       |
-|已针对相同信息改进 DMV 之间的一致性 |   sys.dm_exec_session_wait_stats DMV 现在跟踪与 sys.dm_os_wait_stats DMV 一致的 CXPACKET 和 CXCONSUMER 等待。 |       |
+|对使用补充字符排序规则的数据库的复制支持   |   现已对使用补充字符排序规则的数据库提供复制支持。   |      |
+|通过可用性组故障转移，对 Service Broker 进行正确的处理   |   在目前的执行情况中，如果在可用性组数据库上启用了 Service Broker，则 AG 故障转移期间，主要副本发起的所有 Service Broker 连接均保持打开状态。 在 AG 故障转移期间，这一改进会关闭所有此类打开的连接。   |      |
+|通过添加   |   新的 [CXCONSUMER](https://blogs.msdn.microsoft.com/sql_server_team/making-parallelism-waits-actionable/) 等待，改进了并行等待故障排除。   |      |
+|已针对相同信息改进 DMV 之间的一致性   |   sys.dm_exec_session_wait_stats DMV 现在跟踪与 sys.dm_os_wait_stats DMV 一致的 CXPACKET 和 CXCONSUMER 等待。   |      |
 |查询内并行死锁的故障排除已改进 | 在 xEvent 字段名称 worktable_physical_writes 中添加了新的 exchange_spill 扩展事件，用于报告并行运算符溢出期间写入到 TempDB 的页数。| |
 | |sys.dm_exec_query_stats、sys.dm_exec_procedure_stats 和 sys.dm_exec_trigger_stats DMV 中的溢出列（如 total_spills）现也包括并行运算符溢出的数据。| |
 | |已针对并行死锁情况对 XML 死锁图进行改进，将更多属性添加到了 exchangeEvent 资源。| |
 | |已针对涉及批处理模式运算符的死锁对 XML 死锁图进行改进，将更多属性添加到了 SyncPoint 资源。| |
-|部分复制代理配置文件参数的动态重载 |   在目前复制代理的执行情况中，代理配置文件参数中产生的任何更改都要求停止并重启代理。 此改进允许在不重启复制代理的情况下动态重载参数。   |       |
+|部分复制代理配置文件参数的动态重载   |   在目前复制代理的执行情况中，代理配置文件参数中产生的任何更改都要求停止并重启代理。 此改进允许在不重启复制代理的情况下动态重载参数。   |      |
 
 ![horizontal-bar.png](media/horizontal-bar.png)
 

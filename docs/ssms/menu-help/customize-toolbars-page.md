@@ -12,18 +12,18 @@ f1_keywords:
 ms.assetid: 51ce6254-5682-43ff-8beb-4116a75c652e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1d6297151c5f31c88d108835f1c6c4955bfbccf8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 52bd2e24ec2819d18f965fa7cd08eba8b4c351f1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75242192"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001663"
 ---
 # <a name="customize-toolbars-page"></a>自定义（“工具栏”页）
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 使用“工具栏”  选项卡可以创建、重命名、删除和重置工具栏。 通过在“工具”菜单上单击“自定义”，再单击“工具栏”，可以访问此选项卡。  
   
-## <a name="uielement-list"></a>UIElement 列表  
+## <a name="ui-element-list"></a>UI 元素列表  
 **工具栏**  
 显示内置的工具栏以及您所创建的所有其他工具栏。 显示某个工具栏时，在此对话框中该工具栏左侧会出现一个复选标记。  
   

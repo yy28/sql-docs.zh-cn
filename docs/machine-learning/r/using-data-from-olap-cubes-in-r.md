@@ -2,22 +2,22 @@
 title: 在 R 中使用来自 OLAP 多维数据集的数据
 description: 本文介绍了 olapR API，并概述了适用于不熟悉多维数据集数据库的 R 用户的 OLAP 和 MDX。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 04/15/2018
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 99f67fb0fb52717eaa42e229a1b60c82f6223fad
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: f27866a242cb03839a67a8f68478bc786222aa64
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117230"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86967895"
 ---
 # <a name="using-data-from-olap-cubes-in-r"></a>在 R 中使用来自 OLAP 多维数据集的数据
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 olapR 包是由 Microsoft 提供的 R 包，可与 Machine Learning Server 和 SQL Server 结合使用，让你可以运行 MDX 查询，以获取来自 OLAP 多维数据集的数据  。 通过此包，无需创建链接服务器或清除平展行集；可以直接从 R 中获取 OLAP 数据。
 
@@ -99,7 +99,7 @@ MDX（即多维表达式的缩写）是用于查询多维数据集的语言。 M
 
 有关查询服务器属性的信息，请参阅以下文章：
 
-+ [OLE DB for OLAP 架构行集](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets)
++ [OLE DB for OLAP 架构行集](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126079(v=sql.110))
 
 ### <a name="writeback-is-not-supported"></a>不支持写回
 

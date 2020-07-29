@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 26add1c0-56e5-47a8-b489-ae56784a7ee9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 329b354b5b5e3fe66637962d2808742083c4cfac
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5da7bd5ba3424699d2cf523a60a1cff855ccdd6e
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895752"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111553"
 ---
 # <a name="filegroup_name-transact-sql"></a>FILEGROUP_NAME (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,9 @@ ms.locfileid: "85895752"
 FILEGROUP_NAME ( filegroup_id )   
 ```  
   
-## <a name="arguments"></a>参数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
  *filegroup_id*  
 
 文件组名 `FILEGROUP_NAME` 将返回的文件组 ID 号。 filegroup_id  具有 smallint  数据类型。  

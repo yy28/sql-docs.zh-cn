@@ -2,6 +2,7 @@
 title: SQL Server 2019 隐私补充 | Microsoft Docs
 ms.date: 09/20/2019
 ms.prod: sql
+ms.technology: release-landing
 ms.reviewer: mikeray
 ms.custom: ''
 ms.topic: conceptual
@@ -10,16 +11,16 @@ helpviewer_keywords: ''
 author: MsSQLGirl
 ms.author: jukoesma
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: bbb8a21ee63e0a14778ee57874ba0ef385ac6cba
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 393656057ae547c770f37e1e7db4c5b5373ac1bd
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "71150290"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914671"
 ---
 # <a name="sql-server-2019-privacy-supplement"></a>SQL Server 2019 隐私补充
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 本文总结了已启用 Internet 的功能，这些功能可收集并向 Microsoft 发送匿名功能使用情况和诊断数据。 SQL Server 可能会收集标准计算机信息，并可能会将有关使用情况和性能的数据传输给 Microsoft 进行分析，以便改进产品的质量、安全性和可靠性。 本文用作整个 [Microsoft 隐私声明](https://go.microsoft.com/fwlink/?LinkId=521839)的附录。 本文中的数据分类仅适用于 SQL Server 本地产品版本。 它不适用于：
 

@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: 6551aa7e-31a1-4636-852a-819bc53d658b
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 3f333e275441f211457e14800cae14d19bd83b2a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9ec5e22aab5aceec28f5a1566ca2984782616f95
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245373"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999547"
 ---
 # <a name="add-tables-to-queries-visual-database-tools"></a>向查询中添加表 (Visual Database Tools)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 创建查询时，实际是在从表或其他表结构对象（视图和某些用户定义的函数）中检索数据。 若要在查询中使用这些对象中的任何对象，可将其添加到“关系图”  窗格中。  
   
 ### <a name="to-add-a-table-or-table-valued-object-to-a-query"></a>向查询中添加表或表值对象  

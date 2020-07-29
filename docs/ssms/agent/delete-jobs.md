@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: bffb915e-bc84-4417-aa35-183243ca3312
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d9b62de40a27cf7ebe6422f7ce64124cde0273ca
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 038ce655c054a52388efbe6853c28c95edb57895
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75242470"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87237669"
 ---
 # <a name="delete-jobs"></a>删除作业
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
 > [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
@@ -43,9 +42,8 @@ ms.locfileid: "75242470"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|||  
-|-|-|  
-|**说明**|**主题**|  
+|说明|主题|  
+|-|-|   
 |介绍如何删除一个或多个 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业。|[删除一个或多个作业](../../ssms/agent/delete-one-or-more-jobs.md)|  
 |介绍如何配置 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理，以在作业成功、失败或完成时自动将其删除。|[Automatically Delete a Job](../../ssms/agent/automatically-delete-a-job.md)|  
   

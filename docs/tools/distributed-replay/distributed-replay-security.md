@@ -12,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 25bc62c6ea0785cf9abb05909fdc2f2563932b07
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 944fc1a9b5769c797ed9fa372e45c17931814983
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151110"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85681544"
 ---
 # <a name="distributed-replay-security"></a>分布式重播安全性
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 在安装和使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 功能之前，应查看本主题中的重要安全信息。 本主题介绍了您使用分布式重播之前所需的安装后安全配置步骤。 本主题还介绍了与数据保护相关的重要注意事项和重要删除步骤。  
   

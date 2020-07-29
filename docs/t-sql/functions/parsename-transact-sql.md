@@ -22,12 +22,12 @@ ms.assetid: abf34f99-9ee9-460b-85b2-930ca5c4b5ae
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1f2cda4a044f6980a5998371f1a7b0f70397e259
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 915cf95799a80a0d8841206f4b23b04fba5fec5f
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737991"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112374"
 ---
 # <a name="parsename-transact-sql"></a>PARSENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -45,6 +45,8 @@ ms.locfileid: "85737991"
 PARSENAME ('object_name' , object_piece )
 ```  
   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>参数
 
 “object_name”参数具有要检索其指定部分的对象的名称。 此参数是可选的限定对象名称。 如果对象名称的所有部分都是限定的，则此名称可包含四部分：服务器名称、数据库名称、架构名称以及对象名称。  “object_name”字符串的每个部分都是 sysname 类型，它等效于 nvarchar(128) 或 256 个字节。 如果字符串的任何部分超过 256 个字节，PARSENAME 将对该部分返回 NULL，因为它不是有效的 sysname。

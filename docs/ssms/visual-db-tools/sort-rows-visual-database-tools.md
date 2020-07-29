@@ -12,17 +12,16 @@ helpviewer_keywords:
 ms.assetid: 780ef467-f96e-4373-8235-6dacbedb05a2
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: b87e69d006d96913f5d119ed39a7d33d553fb7f7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d7d7409f6f52c7fa178eb276f6878d22854d0157
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255015"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999324"
 ---
 # <a name="sort-rows-visual-database-tools"></a>对行进行排序 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 您可以对查询结果中的行进行排序。 也就是说，可以对特定的列或一组列进行命名，该列或这些列的值决定结果集中行的顺序。  
   
 > [!NOTE]  

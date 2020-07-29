@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: e2d32824b62cf54132c6168e5f44d93fa0cd6289
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ff4ab76193c13b03fbd4d7fab05cbf212d1aae4b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726153"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247602"
 ---
 # <a name="query-processing-architecture-guide"></a>查询处理体系结构指南
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -481,13 +481,61 @@ GO
 
 对于给定的执行，更改以下任意 SET 选项都将影响重用计划的能力，因为 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 执行[恒定折叠](#ConstantFolding)并且这些选项会影响此类表达式的结果：
 
-|||   
-|-----------|------------|------------|    
-|ANSI_NULL_DFLT_OFF|FORCEPLAN|ARITHABORT|    
-|DATEFIRST|ANSI_PADDING|NUMERIC_ROUNDABORT|    
-|ANSI_NULL_DFLT_ON|LANGUAGE|CONCAT_NULL_YIELDS_NULL|    
-|DATEFORMAT|ANSI_WARNINGS|QUOTED_IDENTIFIER|    
-|ANSI_NULLS|NO_BROWSETABLE|ANSI_DEFAULTS|    
+:::row:::
+    :::column:::
+        ANSI_NULL_DFLT_OFF
+    :::column-end:::
+    :::column:::
+        FORCEPLAN
+    :::column-end:::
+    :::column:::
+        ARITHABORT
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        DATEFIRST
+    :::column-end:::
+    :::column:::
+        ANSI_PADDING
+    :::column-end:::
+    :::column:::
+        NUMERIC_ROUNDABORT
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        ANSI_NULL_DFLT_ON
+    :::column-end:::
+    :::column:::
+        LANGUAGE
+    :::column-end:::
+    :::column:::
+        CONCAT_NULL_YIELDS_NULL
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        DATEFORMAT
+    :::column-end:::
+    :::column:::
+        ANSI_WARNINGS
+    :::column-end:::
+    :::column:::
+        QUOTED_IDENTIFIER
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        ANSI_NULLS
+    :::column-end:::
+    :::column:::
+        NO_BROWSETABLE
+    :::column-end:::
+    :::column:::
+        ANSI_DEFAULTS
+    :::column-end:::
+:::row-end:::
 
 ### <a name="caching-multiple-plans-for-the-same-query"></a>为同一个查询缓存多个计划 
 查询和执行计划在 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 中是唯一可识别的，与指纹非常类似：
@@ -671,16 +719,70 @@ sql_handle
 `sql_statement_recompile` 扩展事件 (xEvent) 报告语句级重新编译。 当任何类型的批处理需要语句级重新编译时，都将发生此 xEvent。 这包括存储过程、触发器、即席批处理和查询。 可以通过几个接口来提交批处理，这类接口包括 sp_executesql、动态 SQL、“准备”方法或“执行”方法。
 `sql_statement_recompile` xEvent 的 `recompile_cause` 列包含一个整数代码，指示重新编译的原因。 下表包含可能的原因：
 
-|||
-|----|----|  
-|架构已更改|统计信息已更改|  
-|编译延迟|SET 选项已更改|  
-|临时表已更改|远程行集已更改|  
-|`FOR BROWSE` 权限已更改|查询通知环境已更改|  
-|分区视图已更改|游标选项已更改|  
-|`OPTION (RECOMPILE)` 已请求|参数化计划已刷新|  
-|影响数据库版本的计划已更改|查询存储计划强制执行策略已更改|  
-|查询存储计划强制执行失败|查询存储缺少计划|
+:::row:::
+    :::column:::
+        架构已更改
+    :::column-end:::
+    :::column:::
+        统计信息已更改
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        编译延迟
+    :::column-end:::
+    :::column:::
+        SET 选项已更改
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        临时表已更改
+    :::column-end:::
+    :::column:::
+        远程行集已更改
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        `FOR BROWSE` 权限已更改
+    :::column-end:::
+    :::column:::
+        查询通知环境已更改
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        分区视图已更改
+    :::column-end:::
+    :::column:::
+        游标选项已更改
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        `OPTION (RECOMPILE)` 已请求
+    :::column-end:::
+    :::column:::
+        参数化计划已刷新
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        影响数据库版本的计划已更改
+    :::column-end:::
+    :::column:::
+        查询存储计划强制执行策略已更改
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        查询存储计划强制执行失败
+    :::column-end:::
+    :::column:::
+        查询存储缺少计划
+    :::column-end:::
+:::row-end:::
 
 > [!NOTE]
 > 在 xEvents 不可用的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本中，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 探查器 [SP:Recompile](../relational-databases/event-classes/sp-recompile-event-class.md) 跟踪事件同样可用于报告语句级重新编译。

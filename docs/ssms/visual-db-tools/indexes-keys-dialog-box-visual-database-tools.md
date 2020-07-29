@@ -12,17 +12,16 @@ f1_keywords:
 ms.assetid: 9e4060ba-80c3-468f-bccb-e12e99f672c2
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 7043ec4173bf1a14ca80b915e1ea6ac10fd0d72d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f251517d488324028af33e2749955cbb91c1193e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75224924"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85980638"
 ---
 # <a name="indexes---keys-dialog-box-visual-database-tools"></a>“索引 - 键”对话框 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 使用此对话框可以创建或修改索引、主键和唯一键。 若要访问此对话框，请打开具有索引或键的表定义，右键单击表定义网格，再单击“索引/键”  。  
   
 > [!NOTE]  

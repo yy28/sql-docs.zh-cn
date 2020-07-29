@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6926c31163108da988338920ce77389e9300a0aa
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: af98af52bfe6416c489be821fa2d8b27092fac27
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151600"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918351"
 ---
 # <a name="sqllogship-application"></a>sqllogship 应用程序
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
   **sqllogship** 应用程序用于执行日志传送配置中的备份、复制或还原操作以及相关的清理任务。 这些操作是在特定的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例上针对特定数据库执行的。  
   
  ![主题链接图标](../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标")关于语法约定，请参阅[命令提示实用工具参考（数据库引擎）](../tools/command-prompt-utility-reference-database-engine.md)。  

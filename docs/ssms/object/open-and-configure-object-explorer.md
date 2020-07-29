@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: a138ba3d-d00b-420c-917e-e586d590d30f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 07a21139575c3eedfddec9f22254fe82a5b5659c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b1bda1521bf3982f66179a170c6aba7990db81ea
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257134"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001892"
 ---
 # <a name="open-and-configure-object-explorer"></a>打开和配置对象资源管理器
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的“视图”菜单打开对象资源管理器。 使用“工具”  菜单上的“选项”  配置对象资源管理器选项。  
   
 ## <a name="viewing-object-explorer"></a>查看对象资源管理器  

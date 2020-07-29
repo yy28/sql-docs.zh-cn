@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5b61b32ab266c4068f610b9138bf3fc8ea364f0e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9e9ecc82ab14bf73ab52219301ca5843673b3ba4
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245703"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001580"
 ---
 # <a name="local-audit-for-ssms-usage-and-diagnostic-data-collection"></a>SSMS 使用情况和诊断数据收集的本地审核
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 SQL Server Management Studio (SSMS) 包含已启用 Internet 的功能，这些功能可收集并向 Microsoft 发送匿名功能使用情况和诊断数据。 SSMS 可能会收集标准计算机信息以及有关使用情况和性能的信息，并可能会将这些信息传输给 Microsoft 进行分析，以便改进 SSMS 的质量、安全性和可靠性。 我们不会收集你的姓名、地址或其他联系信息。 有关详细信息，请参阅 [Microsoft 隐私声明](https://privacy.microsoft.com/privacystatement)和 [SQL Server 隐私补充](https://go.microsoft.com/fwlink/?LinkID=868444)。
 

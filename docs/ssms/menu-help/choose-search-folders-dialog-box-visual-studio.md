@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 2eaba888-68b2-4bc1-8f62-e96e710c3db9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a31e9e898101c15c032db1be5f348bf28267d52c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 15d6c1e0cf13da4b8dd0fe38ffcf57e555bdd650
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253291"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85982871"
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>“选择搜索文件夹”对话框 (Visual Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 使用该对话框，您可以组合、保存和修改自己命名的搜索文件夹集，并指定文件夹的搜索顺序。 若要显示此对话框，请在“在文件中查找”、“在文件中替换”或“查找和替换”窗口上，选择“查找范围”下拉列表旁的“浏览(...)”按钮。  
   
 向“选择的文件夹”  列表中添加文件夹，在“文件夹集”  字段中为此文件夹集键入名称，再单击“应用”  保存此文件夹集。 然后，在“在文件中查找”和“在文件中替换”的“查找范围”下拉列表中，可以通过名称来选择此自定义搜索范围。 若要从“查找范围”  列表中删除自定义文件夹集，请在“文件夹集”  字段中选择其名称，再单击“删除”  。  

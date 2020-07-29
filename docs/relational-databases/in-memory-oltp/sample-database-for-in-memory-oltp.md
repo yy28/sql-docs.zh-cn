@@ -12,12 +12,12 @@ ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4859a35269e0664b07f08db795e3e57a4c8feb70
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4eaa35280b4f469f6fcf49fe9d73f4b33bfda672
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735041"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245194"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>内存中 OLTP 的示例数据库
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -465,14 +465,12 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
  刚刚创建数据库之后的快照：  
   
-||||  
-|-|-|-|  
-|type|name|**pages_MB**|  
+| type | name | pages_MB |
+| ---- | ---- | -------- |
 |MEMORYCLERK_XTP|默认|94|  
 |MEMORYCLERK_XTP|DB_ID_5|877|  
 |MEMORYCLERK_XTP|默认|0|  
 |MEMORYCLERK_XTP|默认|0|  
-||||
   
  默认内存分配器包含系统范围内存结构，相对较小。 用户数据库（在此例中是 ID 为 5 的数据库）的内存分配器大约为 900 MB。  
   
@@ -490,9 +488,8 @@ WHERE t.type='U'
   
  下表显示此查询对于全新示例安装的结果：  
   
-||||  
-|-|-|-|  
-|**表名**|**memory_allocated_for_table_kb**|**memory_allocated_for_indexes_kb**|  
+| 表名称 | memory_allocated_for_table_kb | memory_allocated_for_indexes_kb |
+| ---------- | ----------------------------- | ------------------------------- |
 |SpecialOfferProduct_inmem|64|3840|  
 |DemoSalesOrderHeaderSeed|1984|5504|  
 |SalesOrderDetail_inmem|15316|663552|  
@@ -500,7 +497,6 @@ WHERE t.type='U'
 |SpecialOffer_inmem|3|8192|  
 |SalesOrderHeader_inmem|7168|147456|  
 |Product_inmem|124|12352|  
-||||
 
  可以看到，这些表相当小：SalesOrderHeader_inmem 大约为 7 MB，SalesOrderDetail_inmem 大约为 15 MB。  
   
@@ -516,14 +512,12 @@ SELECT type
 FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'  
 ```  
   
-||||  
-|-|-|-|  
-|type|name|**pages_MB**|  
+| type | name | pages_MB |
+| ---- | ---- | -------- |
 |MEMORYCLERK_XTP|默认|146|  
 |MEMORYCLERK_XTP|DB_ID_5|7374|  
 |MEMORYCLERK_XTP|默认|0|  
 |MEMORYCLERK_XTP|默认|0|  
-||||
 
  可以看到，SQL Server 将稍小于 8 GB 的大小用于示例数据库中的内存优化表和索引。  
   
@@ -538,9 +532,8 @@ ON dms.object_id=t.object_id
 WHERE t.type='U'  
 ```  
   
-||||  
-|-|-|-|  
-|**表名**|**memory_allocated_for_table_kb**|**memory_allocated_for_indexes_kb**|  
+| 表名称 | memory_allocated_for_table_kb | memory_allocated_for_indexes_kb |
+| ---------- | ----------------------------- | ------------------------------- |
 |SalesOrderDetail_inmem|5113761|663552|  
 |DemoSalesOrderDetailSeed|64|10368|  
 |SpecialOffer_inmem|2|8192|  
@@ -548,7 +541,6 @@ WHERE t.type='U'
 |Product_inmem|111|12032|  
 |SpecialOfferProduct_inmem|64|3712|  
 |DemoSalesOrderHeaderSeed|1984|5504|  
-||||
 
  可以看到共有约 6.5 GB 的数据。 请注意，表 SalesOrderHeader_inmem 和 SalesOrderDetail_inmem 上的索引大小与插入销售订单之前的索引大小相同。 索引大小未更改是因为这两个表都使用哈希索引，而哈希索引是静态的。  
   
@@ -564,14 +556,12 @@ SELECT type
 FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'  
 ```  
   
-||||  
-|-|-|-|  
-|type|name|**pages_MB**|  
+| type | name | pages_MB |
+| ---- | ---- | -------- |
 |MEMORYCLERK_XTP|默认|2261|  
 |MEMORYCLERK_XTP|DB_ID_5|7396|  
 |MEMORYCLERK_XTP|默认|0|  
 |MEMORYCLERK_XTP|默认|0|  
-||||
 
  这是预期行为：事务工作负荷运行时将回收内存。  
   
@@ -584,14 +574,12 @@ SELECT type
 FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'  
 ```  
   
-||||  
-|-|-|-|  
-|type|name|**pages_MB**|  
+| type | name | pages_MB |
+| ---- | ---- | -------- |
 |MEMORYCLERK_XTP|默认|1863|  
 |MEMORYCLERK_XTP|DB_ID_5|7390|  
 |MEMORYCLERK_XTP|默认|0|  
 |MEMORYCLERK_XTP|默认|0|  
-||||
 
 ### <a name="disk-utilization-for-memory-optimized-tables"></a>内存优化表的磁盘利用率  
  可以使用查询获得数据库检查点文件在给定时间的总体磁盘上大小：  
@@ -616,11 +604,9 @@ FROM sys.filegroups f JOIN sys.database_files df
 WHERE f.type=N'FX'  
 ```  
   
-||  
-|-|  
-|**磁盘上大小 (MB)**|  
+| 磁盘上大小（以 MB 为单位） |
+| ------------------ |
 |2312|  
-||
 
  可以看到，检查点文件的磁盘上大小 (2.3 GB) 与实际数据大小（接近 30 MB）之间存在巨大差异。  
   
@@ -643,14 +629,12 @@ ORDER BY state, file_type
   
  对于示例的初始状态，结果类似于下面这样（对于有 16 个逻辑处理器的服务器）：  
   
-|||||  
-|-|-|-|-|  
-|**state_desc**|**file_type_desc**|**计数**|**磁盘上大小 (MB)**|  
+| state_desc | file_type_desc | count | 磁盘上大小 (MB) |
+| ---------- | -------------- | ----- | --------------- |
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
 |UNDER CONSTRUCTION|DATA|1|128|  
 |UNDER CONSTRUCTION|DELTA|1|8|  
-|||||
 
  可以看到，大部分空间由预先创建的数据和差异文件使用。 SQL Server 为每个逻辑处理器预先创建一对（数据、差异）文件。 此外，数据文件的预设大小为 128 MB，差异文件的预设大小为 8 MB，以便更高效地向这些文件插入数据。  
   
@@ -666,11 +650,9 @@ FROM sys.filegroups f JOIN sys.database_files df
 WHERE f.type=N'FX'  
 ```  
   
-||  
-|-|  
-|**磁盘上大小 (MB)**|  
+| 磁盘上大小（以 MB 为单位） |
+| ------------------ |
 |8828|
-||
   
  磁盘上大小接近 9 GB，这接近于数据的内存中大小。  
   
@@ -691,14 +673,12 @@ GROUP BY state, state_desc, file_type, file_type_desc
 ORDER BY state, file_type  
 ```  
   
-|||||  
-|-|-|-|-|  
-|**state_desc**|**file_type_desc**|**计数**|**磁盘上大小 (MB)**|  
+| state_desc | file_type_desc | count | 磁盘上大小 (MB) |
+| ---------- | -------------- | ----- | --------------- |
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
 |UNDER CONSTRUCTION|DATA|1|128|  
 |UNDER CONSTRUCTION|DELTA|1|8|  
-|||||
 
  我们仍有 16 对预先创建的文件，准备好在关闭检查点时执行。  
   
@@ -716,11 +696,9 @@ FROM sys.filegroups f JOIN sys.database_files df
 WHERE f.type=N'FX'  
 ```  
   
-||  
-|-|  
-|**磁盘上大小 (MB)**|  
+| 磁盘上大小（以 MB 为单位） |
+| ------------------ |
 |11839|
-||
   
  差不多 12 GB，这显著大于演示重置之前的 9 GB。 这是因为某些检查点文件合并已启动，但是某些合并目标尚未安装，某些合并源文件尚未清理，如下所示：  
   
@@ -739,9 +717,8 @@ GROUP BY state, state_desc, file_type, file_type_desc
 ORDER BY state, file_type  
 ```  
   
-|||||  
-|-|-|-|-|  
-|**state_desc**|**file_type_desc**|**计数**|**磁盘上大小 (MB)**|  
+| state_desc | file_type_desc | count | 磁盘上大小 (MB) |
+| ---------- | -------------- | ----- | --------------- |
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
 |ACTIVE|DATA|38|5152|  
@@ -750,7 +727,6 @@ ORDER BY state, file_type
 |MERGE TARGET|DELTA|7|56|  
 |MERGED SOURCE|DATA|13|1772|  
 |MERGED SOURCE|DELTA|13|455|  
-|||||
 
  事务活动在系统中进行时，合并目标会进行安装，合并源会进行清理。  
   
@@ -773,16 +749,14 @@ GROUP BY state, state_desc, file_type, file_type_desc
 ORDER BY state, file_type  
 ```  
   
-|||||  
-|-|-|-|-|  
-|**state_desc**|**file_type_desc**|**计数**|**磁盘上大小 (MB)**|  
+| state_desc | file_type_desc | count | 磁盘上大小 (MB) |
+| ---------- | -------------- | ----- | --------------- |
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
 |UNDER CONSTRUCTION|DATA|2|268|  
 |UNDER CONSTRUCTION|DELTA|2|16|  
 |ACTIVE|DATA|41|5608|  
 |ACTIVE|DELTA|41|328|  
-|||||
 
  在此例中，有两个检查点文件对处于“尚在构造”状态，这意味着多个文件对已变为“尚在构造”状态（可能是因为工作负荷的并发级别较高）。 多个并发线程同时需要一个新文件对，因而将一对从“预先创建”变为“尚在构造”。  
   

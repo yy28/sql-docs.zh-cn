@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e6beaea4-164c-4078-95ae-b9e28b0aefe8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f9a66712c7547a5fce852c23cdccd57465d794f1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 429c56bed55931e4e30be6b2730638eb93113bd8
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918807"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245594"
 ---
 # <a name="sql-server-configuration-manager"></a>SQL Server 配置管理器
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "86918807"
 
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器是一种工具，用于管理与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]相关联的服务、配置 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用的网络协议以及从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 客户端计算机管理网络连接配置。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器随 SQL Server 一起安装。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器是一种可以通过“开始”菜单访问的 [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理控制台管理单元，也可以将其添加到任何其他 [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理控制台的显示界面中。 [!INCLUDE[msCoName](../includes/msconame-md.md)]管理控制台 (mmc.exe) 使用 SQLServerManager.msc\<version>.msc 文件（例如 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 的 SQLServerManager13.msc）打开配置管理器  。 需要相应的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器版本来管理此特定版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 以下是在 C 盘安装 Windows 的情况下最新的五个版本的路径。  
   
-|||  
+|版本|路径|  
 |-|-|
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2019|C:\Windows\SysWOW64\SQLServerManager15.msc| 
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2017|C:\Windows\SysWOW64\SQLServerManager14.msc|  

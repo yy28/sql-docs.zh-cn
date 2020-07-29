@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c0df880a36a0822c3c397be4f2ed9aa14d47c2bc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5356b49095c1a2601425f3b58c877117a2b45306
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85768020"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246606"
 ---
 # <a name="create-alter-and-drop-filetables"></a>创建、更改和删除 FileTable
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -121,7 +121,7 @@ GO
 ```  
   
  **使用 SQL Server Management Studio 更改 FileTable 的目录**  
- 在对象资源管理器中，右键单击 FileTable，然后选择“属性”以打开“表属性”对话框。  在 **FileTable** 页上，为 **“FileTable 目录名称”** 输入新值。  
+ 在对象资源管理器中，右键单击 FileTable，然后选择“属性”以打开“表属性”对话框。 在 **FileTable** 页上，为 **“FileTable 目录名称”** 输入新值。  
   
 ###  <a name="requirements-and-restrictions-for-altering-a-filetable"></a><a name="ReqAlter"></a> 更改 FileTable 的要求和限制  
   
@@ -160,9 +160,8 @@ GO
  **创建新的 FileTable 时创建的索引**  
  创建新的 FileTable 时，还会创建以下系统定义的索引：  
   
-|||  
+|列|索引类型|  
 |-|-|  
-|**“列”**|**索引类型**|  
 |[path_locator] ASC|主键，非聚集|  
 |[parent_path_locator] ASC，<br /><br /> [name] ASC|唯一，非聚集|  
 |[stream_id] ASC|唯一，非聚集|  

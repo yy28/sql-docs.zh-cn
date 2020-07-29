@@ -5,7 +5,7 @@ ms.custom: sqlfreshmay19
 ms.date: 02/19/2020
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: install
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords:
 - Setup [SQL Server], software
@@ -43,17 +43,17 @@ helpviewer_keywords:
 - disk space [SQL Server]
 - localized SQL Server versions
 ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 4dce96a698b9d4c84adbfdafdfbb7ac9056aac05
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.author: mikeray
+author: MikeRayMSFT
+ms.openlocfilehash: 0a8b1dc044dba9fc7ee8fef3623b82405bd9e109
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79428168"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245632"
 ---
 # <a name="sql-server-2019-hardware-and-software-requirements"></a>SQL Server 2019：硬件和软件要求
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 本文列出了在 Windows 操作系统上安装和运行 SQL Server 2019 至少需要满足的硬件和软件要求。
 
@@ -123,11 +123,20 @@ ms.locfileid: "79428168"
 
 以下 Windows Server 版本支持在 Server Core 模式上安装 SQL Server 2019：
 
-|                              |
-| :------------------------  |
-| Windows Server 2019 Core | 
-| Windows Server 2016 Core |
-| &nbsp; | 
+:::row:::
+    :::column:::
+        Windows Server 2019 Core
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        Windows Server 2016 Core
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
 
 有关如何在 Server Core 上安装 SQL Server 的详细信息，请参阅[在 Server Core 上安装 SQL Server](../../database-engine/install-windows/install-sql-server-on-server-core.md)。 
 

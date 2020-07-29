@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6e11159f-df1f-4681-9b37-c4a5e5f2fca1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1210df560b91cab1239e6fa4b1b2ca0a6446b04a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1b0466252ead4c5bc1dca28d69890c9d04ef1824
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253285"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001685"
 ---
 # <a name="advanced-save-options"></a>高级保存选项
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 使用此对话框可以选择语言编码方案，并指定要在每一行的末尾插入的字符。 若要访问“高级存储选项”  对话框，请在“文件”  菜单上，单击“ **.sql 另存为”** <query name>  ，打开“文件另存为”  对话框，再单击“保存”  按钮上的向下箭头，然后单击“编码保存”  。  
   
 ## <a name="options"></a>选项  

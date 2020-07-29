@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1e6c430d-3a2a-468e-a3d5-ef5459c36c15
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: ad03ee3c5c9cc0128bb281ff695c1f51cc518d6e
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: d634a2e790edb01747014e930e677e18a1f8b0a3
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457767"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243808"
 ---
 # <a name="activity-monitor"></a>活动监视器
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "86457767"
 
 ## <a name="more-information"></a>详细信息  
    
-|||  
+|说明|主题|  
 |-|-|  
 |说明如何打开活动监视器和如何设置活动监视器刷新间隔。|[打开活动监视器 (SQL Server Management Studio)](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)|  
 |链接到关于服务器性能和活动监视的主题。|[服务器性能和活动监视](../../relational-databases/performance/server-performance-and-activity-monitoring.md)|  

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8adce9ad-6a08-4d20-b1cf-d3c45544d8de
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bbd04e9eef6d0775407e9b9893c59daefd7dc0a9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b138877b9afd07f85b90cb5ae2f7197790475c79
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448388"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942309"
 ---
 # <a name="prepare-data-for-reporting-services-mobile-reports"></a>Prepare data for Reporting Services mobile reports
   
@@ -23,14 +23,15 @@ ms.locfileid: "79448388"
 ## <a name="date-and-time-formats"></a>日期和时间格式 
 当处理日期和时间间隔以便用于移动报表，尤其是处理 TimeNavigator 时，正确设置日期/时间列的格式至关重要，以便 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 可以根据此设置进行识别。 以下是有效的日期/时间格式的示例：  
   
-    05/01/2009    
-    2009-05-01    
-    05/01/2009 14:57:32.8    
-    2009-05-01 14:57:32.8    
-    2009-05-01T14:57:32.8375298-04:00    
-    5/01/2008 14:57:32.80 -07:00    
-    1 May 2008 2:57:32.8 PM    
-    Fri, 15 May 2009 20:10:57 GMT    
+`05/01/2009`    
+`2009-05-01`    
+`05/01/2009 14:57:32.8`    
+`2009-05-01 14:57:32.8`    
+`2009-05-01T14:57:32.8375298-04:00`    
+`5/01/2008 14:57:32.80 -07:00`    
+`1 May 2008 2:57:32.8 PM`    
+`Fri, 15 May 2009 20:10:57 GMT`    
+
   
 在大多数情况下，基于日期和时间的数据集都可以采用一个或多个日期/时间间隔进行描述，例如，每小时、每天、每月、每季度和每年。 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 可以组合多个具有不同粒度的表并将其显示在单个移动报表中。 但要记住原始数据集中的相关间隔时间，因为这将有助于确定向最终移动报表中的用户显示何种日期/时间筛选器选项。  
 

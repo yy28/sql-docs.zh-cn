@@ -13,17 +13,16 @@ f1_keywords:
 ms.assetid: 195dda61-308a-4c94-8f57-1fd01ab1e521
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 71b15d02b5f334b7a3c50cf3c16b939eba3c1f96
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9999de74cdff0b977fd55d74a2229193ca1d5cff
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255389"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003196"
 ---
 # <a name="post-save-notifications-dialog-box-visual-database-tools"></a>“保存后的通知”对话框 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 如果在尝试保存对表的更改遇到错误，则会显示此对话框。 此对话框将列出已成功保存在数据库中的对象、未保存的对象以及遇到的错误。  
   
 ## <a name="options"></a>选项  

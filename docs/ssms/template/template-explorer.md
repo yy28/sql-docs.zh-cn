@@ -19,16 +19,16 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 22864ca365917d295f8111580cb833097fb31c46
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3720799e0af4dbd7d01b6703be87bd9ac16b0587
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75247193"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001537"
 ---
 # <a name="template-explorer"></a>Template Explorer
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了多种模板。 模板即包含 SQL 脚本的样板文件，可用于在数据库中创建对象。 首次打开模板资源管理器时，会将模板的副本置于 C:\Users AppData\Roaming\Microsoft\SQL Server Management Studio\130\Templates 下的用户文件夹中。  
   
 您可以在模板资源管理器中浏览可用模板，然后打开该模板以便将代码纳入代码编辑器窗口中。 也可以创建自定义模板。  

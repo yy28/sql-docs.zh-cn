@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8b0085829346cd09f813e62fe50b1ce22f85b7f5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: afcafeeb554e60c84c3d5e5051db354721371416
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80342871"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86972125"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>导出到 Microsoft Word（报表生成器和 SSRS）
 
@@ -151,7 +151,7 @@ ms.locfileid: "80342871"
 > [!IMPORTANT]  
 >  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 (.doc) 呈现扩展插件不推荐使用。 有关详细信息，请参阅 [SQL Server 2016 的 SQL Server Reporting Services 中不推荐使用的功能](~/reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)。  
   
- 如果安装了针对 Word、Excel 和 PowerPoint 的 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] Office 兼容包，Word 呈现器将与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 2003 兼容。 有关详细信息，请参阅 [用于 Word、Excel 和 PowerPoint 的 Microsoft Office 兼容包](https://www.microsoft.com/download/details.aspx?id=1285)。
+ 如果安装了针对 Word、Excel 和 PowerPoint 的 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] Office 兼容包，Word 呈现器将与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 2003 兼容。 有关详细信息，请参阅 [用于 Word、Excel 和 PowerPoint 的 Microsoft Office 兼容包](https://www.microsoft.com/download/office.aspx)。
   
  与 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 兼容的以前版本的 Word 呈现扩展插件已重命名为 Word 2003。 默认情况下，只提供 Word 呈现扩展插件。 您必须更新 Reporting Services 配置文件，才能使用 Word 2003 呈现扩展插件。 Word 2003 呈现器生成的文件的内容类型为 **application/vnd.ms-word** ，并且文件的文件扩展名为 .doc。  
   

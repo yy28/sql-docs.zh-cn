@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 49541441-179c-40d3-ba0c-01bcae545984
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 91ff60508e0c22ae202cd6984b5c8d5ad84cc879
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 07972c72c89d5098c528ab65f886b1935d47b2a1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257203"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001971"
 ---
 # <a name="delete-objects"></a>删除对象
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 使用此对话框可以删除数据库或数据库对象。  
   
-## <a name="uielement-list"></a>UIElement 列表  
+## <a name="ui-element-list"></a>UI 元素列表  
 **要删除的对象**  
 显示要删除的对象的名称、类型、所有者和状态，以及在执行过程中的所有错误消息。  
   

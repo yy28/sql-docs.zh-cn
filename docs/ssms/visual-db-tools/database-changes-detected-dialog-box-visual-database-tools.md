@@ -13,17 +13,16 @@ f1_keywords:
 ms.assetid: 91f13086-371f-46a2-9f46-804c1415f3ed
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: b3944c7fa09ba71ea79eef976bab8ad4e88a56ef
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: eff88edb726854bdc24fe334190d9014a2693a97
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254701"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999958"
 ---
 # <a name="database-changes-detected-dialog-box-visual-database-tools"></a>“检测到数据库更改”对话框 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 如果尝试保存数据库关系图或选定的表，但某些将受保存操作影响的数据库对象对于数据库已经过期，则会显示此对话框。 如果接受对话框中显示的更改，则将更新数据库以匹配关系图并改写其他用户所做的更改。  
   
 > [!NOTE]  

@@ -20,15 +20,15 @@ ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 90ef549988aefd2740d10cf12b04fb5510400ab8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2e302910a5a7870ed7c57a7325e6686f42a15707
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77478468"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999722"
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>孤立用户疑难解答 (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   当数据库用户是基于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 主 **数据库中的登录名，但该登录名在** 主 **数据库中已不存在时，** 中会出现孤立用户。 当删除登录名，或者将数据库移动到另一台不存在该登录名的服务器时会出现这种情况。 本主题介绍如何找到孤立用户，并将它们重新映射到登录名。  
   

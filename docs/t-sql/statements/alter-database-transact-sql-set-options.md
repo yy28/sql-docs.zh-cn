@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 822cd1efc21dbdeae7a5194bc659f73c00eddb7d
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: 4d03eef91636b454b03f20d40c7a602ea8dc3fc5
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86159735"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111267"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 选项 (Transact-SQL)
 
@@ -51,9 +51,20 @@ ms.locfileid: "86159735"
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-> |||||
-> |---|---|---|---|
-> |**_\* SQL Server \*_** &nbsp;|[SQL 数据库<br />单一数据库/弹性池](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL 数据库<br />托管实例](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)|||
+:::row:::
+    :::column:::
+        **_\* SQL Server \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [SQL 数据库<br />单一数据库/弹性池](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
+    :::column-end:::
+    :::column:::
+        [SQL 数据库<br />托管实例](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -1075,7 +1086,7 @@ OFF
 > [!IMPORTANT]
 > 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中，ANSI_PADDING 将始终为 ON，将该选项显式设置为 OFF 的任何应用程序都将产生错误。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 建议始终将 ANSI_PADDING 设置为 ON。 创建或操作计算列或索引视图的索引时，ANSI_PADDING 必须为 ON。
 
-当 ANSI_PADDING 设置为 ON 时，会将允许为 Null 值的 char(_n_) 和 binary(_n_) 列填充到列长度。  当 ANSI_PADDING 为 OFF 时，会剪裁尾随空格和零。 始终将不允许为 Null 值的 char(_n_) 和 binary(_n_) 列填充到列长度 。
+当 ANSI_PADDING 设置为 ON 时，会将允许为 Null 值的 char(_n_) 和 binary(_n_) 列填充到列长度。 当 ANSI_PADDING 为 OFF 时，会剪裁尾随空格和零。 始终将不允许为 Null 值的 char(_n_) 和 binary(_n_) 列填充到列长度 。
 
 连接级设置（使用 SET 语句设置）覆盖 ANSI_PADDING 的默认数据库级别设置。 默认情况下，ODBC 和 OLE DB 客户端发出连接级 SET 语句，将会话的 ANSI_PADDING 设置为 ON。 客户端在连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例时运行该语句。 有关详细信息，请参阅 [SET ANSI_PADDING](../../t-sql/statements/set-ansi-padding-transact-sql.md)。
 
@@ -1229,13 +1240,39 @@ NO_WAIT
 
 通过设置以下选项之一来清除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计划缓存：
 
-|||
-|-|-|
-|OFFLINE|READ_WRITE|
-|ONLINE|MODIFY FILEGROUP DEFAULT|
-|MODIFY_NAME|MODIFY FILEGROUP READ_WRITE|
-|COLLATE|MODIFY FILEGROUP READ_ONLY|
-|READ_ONLY||
+:::row:::
+    :::column:::
+        OFFLINE
+    :::column-end:::
+    :::column:::
+        ONLINE
+    :::column-end:::
+    :::column:::
+        MODIFY_NAME
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        COLLATE
+    :::column-end:::
+    :::column:::
+        READ_ONLY
+    :::column-end:::
+    :::column:::
+        READ_WRITE
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        MODIFY FILEGROUP DEFAULT
+    :::column-end:::
+    :::column:::
+        MODIFY FILEGROUP READ_WRITE
+    :::column-end:::
+    :::column:::
+        MODIFY FILEGROUP READ_ONLY
+    :::column-end:::
+:::row-end:::
 
 在下列情况下，也会刷新计划缓存。
 
@@ -1423,9 +1460,20 @@ SET QUERY_STORE = ON
 ::: moniker-end
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 
-> ||||
-> |---|---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|**_\* SQL 数据库<br />单一数据库/弹性池 \*_** &nbsp;|[SQL 数据库<br />托管实例](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)||[Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
+:::row:::
+    :::column:::
+        [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
+    :::column-end:::
+    :::column:::
+        **_\* SQL 数据库<br />单一数据库/弹性池 \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [SQL 数据库<br />托管实例](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -2013,7 +2061,7 @@ OFF
 > [!IMPORTANT]
 > 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中，ANSI_PADDING 将始终为 ON，将该选项显式设置为 OFF 的任何应用程序都将产生错误。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 建议始终将 ANSI_PADDING 设置为 ON。 创建或操作计算列或索引视图的索引时，ANSI_PADDING 必须为 ON。
 
-当 ANSI_PADDING 设置为 ON 时，会将允许为 Null 值的 char(_n_) 和 binary(_n_) 列填充到列长度。  当 ANSI_PADDING 为 OFF 时，会剪裁尾随空格和零。 始终将不允许为 Null 值的 char(_n_) 和 binary(_n_) 列填充到列长度 。
+当 ANSI_PADDING 设置为 ON 时，会将允许为 Null 值的 char(_n_) 和 binary(_n_) 列填充到列长度。 当 ANSI_PADDING 为 OFF 时，会剪裁尾随空格和零。 始终将不允许为 Null 值的 char(_n_) 和 binary(_n_) 列填充到列长度 。
 
 连接级设置（使用 SET 语句设置）覆盖 ANSI_PADDING 的默认数据库级别设置。 默认情况下，ODBC 和 OLE DB 客户端发出连接级 SET 语句，将会话的 ANSI_PADDING 设置为 ON。 客户端在连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例时运行该语句。 有关详细信息，请参阅 [SET ANSI_PADDING](../../t-sql/statements/set-ansi-padding-transact-sql.md)。
 
@@ -2304,9 +2352,20 @@ SET QUERY_STORE = ON
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
-> ||||
-> |---|---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[SQL 数据库<br />单一数据库/弹性池](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |**_\* SQL 数据库<br />托管实例 \*_** &nbsp;||[Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
+:::row:::
+    :::column:::
+        [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
+    :::column-end:::
+    :::column:::
+        [SQL 数据库<br />单一数据库/弹性池](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
+    :::column-end:::
+    :::column:::
+        **_\* SQL 数据库<br />托管实例 \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -2823,7 +2882,7 @@ OFF
 > [!IMPORTANT]
 > 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中，ANSI_PADDING 将始终为 ON，将该选项显式设置为 OFF 的任何应用程序都将产生错误。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 建议始终将 ANSI_PADDING 设置为 ON。 创建或操作计算列或索引视图的索引时，ANSI_PADDING 必须为 ON。
 
-当 ANSI_PADDING 设置为 ON 时，会将允许为 Null 值的 char(_n_) 和 binary(_n_) 列填充到列长度。  当 ANSI_PADDING 为 OFF 时，会剪裁尾随空格和零。 始终将不允许为 Null 值的 char(_n_) 和 binary(_n_) 列填充到列长度 。
+当 ANSI_PADDING 设置为 ON 时，会将允许为 Null 值的 char(_n_) 和 binary(_n_) 列填充到列长度。 当 ANSI_PADDING 为 OFF 时，会剪裁尾随空格和零。 始终将不允许为 Null 值的 char(_n_) 和 binary(_n_) 列填充到列长度 。
 
   连接级设置（使用 SET 语句设置）覆盖 ANSI_PADDING 的默认数据库级别设置。 默认情况下，ODBC 和 OLE DB 客户端发出连接级 SET 语句，将会话的 ANSI_PADDING 设置为 ON。 客户端在连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例时运行该语句。 有关详细信息，请参阅 [SET ANSI_PADDING](../../t-sql/statements/set-ansi-padding-transact-sql.md)。
 
@@ -3087,9 +3146,20 @@ SET QUERY_STORE = ON
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
 
-> ||||
-> |---|---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[SQL 数据库<br />单一数据库/弹性池](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL 数据库<br />托管实例](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|**_\* Azure Synapse<br />Analytics \*_** &nbsp;||||
+:::row:::
+    :::column:::
+        [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
+    :::column-end:::
+    :::column:::
+        [SQL 数据库<br />单一数据库/弹性池](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
+    :::column-end:::
+    :::column:::
+        [SQL 数据库<br />托管实例](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        **_\* Azure Synapse<br />Analytics \*_** &nbsp;
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 

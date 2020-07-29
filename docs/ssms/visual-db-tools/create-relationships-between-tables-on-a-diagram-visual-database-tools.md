@@ -11,17 +11,16 @@ helpviewer_keywords:
 ms.assetid: 28e9630c-dff4-46cc-bb0e-fe77998b6ac2
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: eb0d82c1693c452462b8bef2e55cd4e41b13689b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 665de2b5956d769a31ee24a1dbb5966ea1f1c49a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79198380"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000030"
 ---
 # <a name="create-relationships-between-tables-on-a-diagram-visual-database-tools"></a>在关系图中创建表间的关系（可视化数据库工具）
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 您可以在关系图设计器中通过在各个表之间拖动列来创建不同表的列之间的关系。  
   
 ### <a name="to-create-a-relationship-graphically"></a>以图形方式创建关系  

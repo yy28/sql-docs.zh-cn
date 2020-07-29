@@ -21,12 +21,12 @@ ms.assetid: 52fd6e8d-650c-4f66-abcf-67765aa5aa83
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb85e014f600ea2d88f4022694a490ef5d4a8c6c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: fc4e974d05305fcb5598f7dce7c98992073d5611
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003683"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111877"
 ---
 # <a name="rtrim-transact-sql"></a>RTRIM (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +41,9 @@ ms.locfileid: "86003683"
 RTRIM ( character_expression )  
 ```  
   
-## <a name="arguments"></a>参数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
  *character_expression*  
  字符数据的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 character_expression 可以是常量、变量，也可以是字符列或二进制数据列  。  
   

@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: c7b84355-71ba-402d-85af-23826f18b7da
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 971432a363eb18129c560c5738a9cc65e77b01a4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 608c24801a19e003751d6455f86cd11e4c053719
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257600"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001831"
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>将自定义报表与对象资源管理器节点属性一起使用
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 如果自定义报表引用所选对象资源管理器节点的报表参数，则将在此节点的上下文中执行自定义报表。 这样，自定义报表可以使用当前上下文（如当前数据库）或者数据库或服务器对象。  
   
 ## <a name="object-explorer-node-report-parameters"></a>对象资源管理器节点的报表参数  
