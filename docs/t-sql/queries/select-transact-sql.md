@@ -25,12 +25,12 @@ ms.assetid: dc85caea-54d1-49af-b166-f3aa2f3a93d0
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: db5b1cc185c4fc3cb4c932867851703d8c134a14
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b0c6ba071498bb3c5fafac38618723046bd82bdc
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999743"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248724"
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,9 +39,9 @@ ms.locfileid: "85999743"
   
 [ WITH { [ XMLNAMESPACES ,] [ \<common_table_expression> ] } ]
   
- SELECT select_list [ INTO new_table ]   
+ SELECT select_list [ INTO new_table ]  
   
- [ FROM table_source ] [ WHERE search_condition ]   
+ [ FROM table_source ] [ WHERE search_condition ]  
   
  [ GROUP BY group_by_expression ]  
   
@@ -102,16 +102,63 @@ SELECT <select_criteria>
   
 ## <a name="remarks"></a>备注  
  由于 SELECT 语句的复杂性，下面按子句说明详细的语法元素和参数：  
-  
-|||  
-|-|-|  
-|[WITH XMLNAMESPACES](../../t-sql/xml/with-xmlnamespaces.md)<br /><br /> [WITH common_table_expression](../../t-sql/queries/with-common-table-expression-transact-sql.md)|[HAVING](../../t-sql/queries/select-having-transact-sql.md)|  
-|[SELECT 子句](../../t-sql/queries/select-clause-transact-sql.md)|[UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md)|  
-|[INTO 子句](../../t-sql/queries/select-into-clause-transact-sql.md)|[EXCEPT 和 INTERSECT](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)|  
-|[FROM](../../t-sql/queries/from-transact-sql.md)|[ORDER BY](../../t-sql/queries/select-order-by-clause-transact-sql.md)|  
-|[WHERE](../../t-sql/queries/where-transact-sql.md)|[FOR 子句](../../t-sql/queries/select-for-clause-transact-sql.md)|  
-|[GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md)|[OPTION 子句](../../t-sql/queries/option-clause-transact-sql.md)|  
-  
+
+:::row:::
+    :::column:::
+        [WITH XMLNAMESPACES](../../t-sql/xml/with-xmlnamespaces.md)
+    :::column-end:::
+    :::column:::
+        [HAVING](../../t-sql/queries/select-having-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [WITH common_table_expression](../../t-sql/queries/with-common-table-expression-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [SELECT 子句](../../t-sql/queries/select-clause-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [EXCEPT 和 INTERSECT](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [INTO 子句](../../t-sql/queries/select-into-clause-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [ORDER BY](../../t-sql/queries/select-order-by-clause-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [FROM](../../t-sql/queries/from-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [FOR 子句](../../t-sql/queries/select-for-clause-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [WHERE](../../t-sql/queries/where-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [OPTION 子句](../../t-sql/queries/option-clause-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md)
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+
  SELECT 语句中的子句顺序非常重要。 可以省略可选子句，但这些子句在使用时必须按适当的顺序出现。  
   
  只有当这些语句的选择列表包含给函数的局部变量赋值的表达式时，在用户定义函数中才允许有 SELECT 语句。  

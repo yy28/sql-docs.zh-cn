@@ -9,16 +9,16 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 610f837c5354a72c665da067fcc8fea582ac6de3
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: bc83184b6cac6ab574090f8059e2a79fa9ca69ca
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83152009"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942765"
 ---
 # <a name="what-are-big-data-clusters-2019"></a>什么是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]？
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 从 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 开始，借助 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 可部署在 Kubernetes 上运行的 SQL Server、Spark 和 HDFS 容器的可缩放群集。 这些组件并行运行以确保可读取、写入和处理 Transact-SQL 或 Spark 中的大数据，这样你就可以借助大量大数据轻松合并并分析高价值关系数据。
 
@@ -85,7 +85,7 @@ SQL Server 大数据群集是由 [Kubernetes](https://kubernetes.io/docs/concept
 
 Kubernetes 是一个开放源代码容器业务流程协调程序，可以根据需要缩放容器部署。 下表定义了一些重要的 Kubernetes 术语：
 
-|||
+|术语|描述|
 |:--|:--|
 | **Cluster** | Kubernetes 群集是一组称为节点的计算机。 一个节点控制群集并被指定为主节点；其余节点是工作器节点。 Kubernetes 主节点负责在工作器节点之间分配工作，并负责监视群集的运行状况。 |
 | **Node** | 节点运行容器化应用程序。 它可以是物理计算机或虚拟机。 Kubernetes 群集可以混合包含物理计算机节点和虚拟机节点。 |
@@ -106,7 +106,7 @@ Kubernetes 是一个开放源代码容器业务流程协调程序，可以根据
 
 ### <a name="compute-pool"></a><a id="computeplane"></a> 计算池
 
-计算池为群集提供计算资源。 它包含在 Linux 上的 SQL Server Pod 上运行的节点。 计算池中的 Pod 分为用于特定处理任务的 SQL Compute  实例。 
+计算池为群集提供计算资源。 它包含在 Linux 上的 SQL Server Pod 上运行的节点。 计算池中的 Pod 分为用于特定处理任务的 SQL Compute实例。 
 
 ### <a name="data-pool"></a><a id="dataplane"></a> 数据池
 

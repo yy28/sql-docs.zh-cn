@@ -5,25 +5,25 @@ description: azdata bdc app status 命令的参考文章。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8322db228d67fc4341e3138c8a79079114065ba5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 41aadf95f90580130fb37b03e9db146c29288812
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74820940"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942939"
 ---
 # <a name="azdata-bdc-app-status"></a>azdata bdc app status
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-以下文章提供了 `azdata` 工具中 `bdc app status` 命令的参考。 有关其他 `azdata` 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)
+以下文章提供了 `azdata` 工具中 `sql` 命令的参考。 有关其他 `azdata` 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)。
 
 ## <a name="commands"></a>命令
-|     |     |
+| 命令 | 描述 |
 | --- | --- |
 [azdata bdc app status show](#azdata-bdc-app-status-show) | 应用服务状态。
 ## <a name="azdata-bdc-app-status-show"></a>azdata bdc app status show
@@ -58,7 +58,7 @@ azdata bdc app status show --resource appproxy
 #### `--output -o`
 输出格式。  允许的值：json、jsonc、table、tsv。  默认值：json。
 #### `--query -q`
-JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/)，获取详细信息和示例。
+JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org)，获取详细信息和示例。
 #### `--verbose`
 提高日志记录详细程度。 使用 --debug 获取完整的调试日志。
 

@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 8333c2120868f8d929d937faa155b7d595abff20
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 41ecd01badd21d8c3198dfb661d63b7d14753d76
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75246247"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002612"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>演练：添加和更改数据库关系图
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 本演练说明了如何创建和修改数据库关系图以及如何通过数据库关系图组件更改数据库。 您将看到如何向关系图添加表、如何创建表之间的关系、如何对列创建约束和索引以及如何更改每个表的信息级别。  
   
 ## <a name="prerequisites"></a>必备条件  

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6a33e74a-0cf9-4ae1-a1e4-4a137a3ea39d
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 3d4300f1a9d5e31751201bd17f2448eac6c37424
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 105e3ebe3b5d19461732dfcaaac415f707ea4e44
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85714573"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112343"
 ---
 # <a name="trigger_nestlevel-transact-sql"></a>TRIGGER_NESTLEVEL (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,9 @@ ms.locfileid: "85714573"
 TRIGGER_NESTLEVEL ( [ object_id ] , [ 'trigger_type' ] , [ 'trigger_event_category' ] )  
 ```  
   
-## <a name="arguments"></a>参数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
  object_id   
  触发器的对象 ID。 如果指定了 object_id，则返回为该语句执行指定触发器的次数  。 如果未指定 object_id，则返回为该语句执行全部触发器的次数  。  
   

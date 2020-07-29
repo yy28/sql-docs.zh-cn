@@ -12,15 +12,15 @@ helpviewer_keywords:
 - conversions [OLE DB], client to server
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: a5a4dd3540f4171847014e6175b84bd861b7abb6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ccf1505fd896b627a83fe2ee7b3d1e6e19ab556e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67995134"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244871"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>在客户端和服务器之间执行的转换
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -70,9 +70,8 @@ ms.locfileid: "67995134"
 |15|将保留 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 之前的 datetime 转换语义  。 秒舍入为最接近的 1/300 秒。|  
 |16|嵌入 SSVARIANT 客户端结构的指定类型值的转换行为与未嵌入 SSVARIANT 客户端结构的相同类型和相同值的行为相同。|  
   
-||||  
-|-|-|-|  
 |类型|长度（以字符为单位）|缩放|  
+|-|-|-|  
 |DBTIME2|8, 10..18|0,1..9|  
 |DBTIMESTAMP|19, 21..29|0,1..9|  
 |DBTIMESTAMPOFFSET|26, 28..36|0,1..9|  

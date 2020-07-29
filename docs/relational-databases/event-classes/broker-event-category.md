@@ -14,12 +14,12 @@ ms.assetid: 470dc93c-0dda-4d89-829b-937738d59b31
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e31a222a0d8229019e844f2cac64a1a108760779
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 924959b2c5c5b9782a1e73e404644299ba5bd5d8
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717809"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971515"
 ---
 # <a name="broker-event-category"></a>Broker 事件类别
 
@@ -45,6 +45,6 @@ ms.locfileid: "85717809"
  还为 Service Broker 提供了两个安全审核事件。 有关这些事件的详细信息，请参阅 [Audit Broker Login 事件类](../../relational-databases/event-classes/audit-broker-login-event-class.md) 和 [Audit Broker Conversation 事件类](../../relational-databases/event-classes/audit-broker-conversation-event-class.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [“安全审核”事件类别](/bi-reference/trace-events/security-audit-event-category)  
+ [“安全审核”事件类别](https://docs.microsoft.com/analysis-services/trace-events/security-audit-event-category)  
   
   

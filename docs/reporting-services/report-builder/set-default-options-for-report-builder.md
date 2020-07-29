@@ -11,19 +11,19 @@ f1_keywords:
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cad43cd9b4a842cd022e9139b7b303b15134af6f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dc526ec022d139288fd057ac1cd7889653cecba5
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80290777"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859760"
 ---
 # <a name="set-default-options-for-report-builder"></a>设置报表生成器的默认选项
   在报表生成器中，可以设置大量有用的默认设置，以使报表创作更加容易和快速。  例如，如果你可以设置或更改默认报表服务器，除非另行指定，否则报表生成器会将你的报表自动保存到同一报表服务器。  
   
 -   在报表生成器中，单击“文件” > “选项”   。  
   
-## <a name="uielement-list"></a>UIElement 列表  
+## <a name="ui-element-list"></a>UI 元素列表  
  **默认使用此报表服务器或 SharePoint 站点**  
  您的管理员可能已配置了此选项。 此值可以为以 http:// 或 https:// 开头的格式正确的 URL。 此设置决定了默认情况下在表/矩阵和图表向导中显示哪些数据源连接。 另外，报表将在此服务器上进行处理，并且您可以引用此服务器上的资源。  
   

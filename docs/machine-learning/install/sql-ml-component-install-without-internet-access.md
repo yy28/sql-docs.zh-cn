@@ -2,22 +2,22 @@
 title: 没有 Internet 访问权限的安装
 description: 在隔离在网络防火墙之后的计算机上安装 SQL Server 机器学习 R 和 Python。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/04/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9bdcec8602a9552fdc7ffac0be3badb26b19646e
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: d51ac079bf06938826bc343b1b3317e558964655
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118250"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247976"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>在无 Internet 访问的情况下在计算机上安装 SQL Server 机器学习 R 和 Python
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 默认情况下，安装程序会连接到 Microsoft 下载站点以获取在 SQL Server 上进行机器学习所需的组件和更新的组件。 如果防火墙约束阻止安装程序访问这些站点，你可以使用连接到 Internet 的设备下载文件、将文件传输到脱机服务器，然后进行安装设置。
 
@@ -215,4 +215,4 @@ SQL Server R Services 的初始脱机安装需要与联机安装相同的配置�
 
 ## <a name="next-steps"></a>后续步骤
 
-有关任何不熟悉的消息和日志条目的帮助，请参阅[升级和安装常见问题解答 - 机器学习服务](../r/upgrade-and-installation-faq-sql-server-r-services.md)。
+有关任何不熟悉的消息和日志条目的帮助，请参阅[升级和安装常见问题解答 - 机器学习服务](../troubleshooting/upgrade-and-installation-faq-sql-server-r-services.md)。

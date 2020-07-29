@@ -26,12 +26,12 @@ ms.assetid: 89c5ae32-89c6-47e1-979e-15d97908b9f1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 386b3af5eb7a5f69ac02c4e07f3318494ad56582
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1e45fad8edfcc54e35d5a0c4ad0536a5586439d6
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011437"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112055"
 ---
 # <a name="dateadd-transact-sql"></a>DATEADD (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +48,9 @@ ms.locfileid: "86011437"
 DATEADD (datepart , number , date )  
 ```  
   
-## <a name="arguments"></a>参数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
 *datepart*  
 `DATEADD` 要将其与整数值相加的 date 的一部分    。 此表列出了所有有效的 datepart 参数  。 
 

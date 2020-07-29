@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7f25c8c6-b601-41f2-9553-be0a2ee0751a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9823a3075e1b333bfbe7c0f68e2f5cdedec6c979
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7884f54d3a33a0ba975f90a7660dd98489f88ace
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86899465"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971559"
 ---
 # <a name="analysis-services-execute-ddl-task"></a>Analysis Services 执行 DDL 任务
 
@@ -44,9 +44,9 @@ ms.locfileid: "86899465"
 ## <a name="ddl-statements"></a>DDL 语句  
  DDL 语句表示为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 脚本语言 (ASSL) 中的语句，并且嵌入 XML for Analysis (XMLA) 命令中。  
   
--   ASSL 用于定义和说明 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例及其包含的数据库和数据库对象。 有关详细信息，请参阅 [Analysis Services 脚本语言（支持 XMLA 的 ASSL）](/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)。  
+-   ASSL 用于定义和说明 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例及其包含的数据库和数据库对象。 有关详细信息，请参阅 [Analysis Services 脚本语言（支持 XMLA 的 ASSL）](https://docs.microsoft.com/analysis-services/assl/analysis-services-scripting-language-assl-for-xmla)。  
   
--   XMLA 是用于向 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例发送操作命令（如 Create、Alter 或 Process）的命令语言。 有关详细信息，请参阅 [XML for Analysis (XMLA) 参考](/bi-reference/xmla/xml-for-analysis-xmla-reference)。  
+-   XMLA 是用于向 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例发送操作命令（如 Create、Alter 或 Process）的命令语言。 有关详细信息，请参阅 [XML for Analysis (XMLA) 参考](https://docs.microsoft.com/analysis-services/xmla/xml-for-analysis-xmla-reference)。  
   
  如果 DDL 代码存储在单独的文件中，则“ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 执行 DDL”任务使用文件连接管理器来指定该文件的路径。 有关详细信息，请参阅 [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)。  
   

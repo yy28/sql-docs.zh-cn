@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: 98baaac4-0727-4ce4-8bfe-c63793ae69b8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f835927ba9927b5614ac0660ce3cad2ae96ae483
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 14bc7634ab3b8b3ad54f8544dc694bb955bd55ce
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78261716"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001612"
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>SQL Server Management Studio 键盘快捷键
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 为用户提供了两种键盘方案。 默认情况下使用的是 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 方案，即使用基于 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 的键盘快捷键。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 还提供了类似于 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 中的标准方案的键盘方案。 若要更改键盘方案或添加其他键盘快捷键，请在 **“工具”** 菜单中单击 **“选项”** 。 在 **“环境”** 下的 **“键盘”** 页中选择所需的键盘方案。  
   

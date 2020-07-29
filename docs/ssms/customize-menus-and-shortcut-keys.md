@@ -1,9 +1,8 @@
 ---
 title: 自定义菜单和快捷键
 ms.custom: seo-lt-2019
-ms.date: 01/19/2017
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,17 +19,17 @@ ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: e2b398a1acd5e91a55e18f25b2094f9b671c70b8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: de57e987e933b7dee45b1dd9ff91698dd43488ee
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243922"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000177"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>自定义菜单和快捷键
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-借助于键盘快捷键，可以通过按 ALT+\<single letter> 来选择菜单命令或按钮。 例如，若要打开“编辑”  菜单，请按 Alt+E。 使用“自定义”  对话框可以重排和修改工具栏按钮、菜单和菜单命令。 本文还针对使用鼠标和仅使用键盘更改设置提供了相关说明。  
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+借助于键盘快捷键，可以通过按 Alt+ *\<single letter>* 来选择菜单命令或按钮。 例如，若要打开“编辑”  菜单，请按 Alt+E。 使用“自定义”  对话框可以重排和修改工具栏按钮、菜单和菜单命令。 本文还针对使用鼠标和仅使用键盘更改设置提供了相关说明。  
   
 用于存储过程的键盘快捷键（使用 Ctrl 键）可以从“工具”/“选项”对话框的“键盘”页中创建。  
   

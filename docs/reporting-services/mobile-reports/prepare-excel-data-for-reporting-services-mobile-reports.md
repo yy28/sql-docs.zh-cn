@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 16698f8d-bfc7-4eca-9e97-82c99d8bc08e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ef25e90b8a9deb641a72006faf0a0c903a554ba5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f3a760b0ae100259b8102f303f0747e0da81223e
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448377"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942319"
 ---
 # <a name="prepare-excel-data-for-reporting-services-mobile-reports"></a>为 Reporting Services 移动报表准备 Excel 数据
   
@@ -70,11 +70,11 @@ ms.locfileid: "79448377"
   
 日期字段对于许多移动报表都至关重要，因此应在 Excel 中将单元格的格式正确设置为日期。 在某些情况下，这意味着需要转换。 下面是一些公式示例，用于在 Excel 中将单元格从文本转换为日期。  
   
-    Week 24-2013=DATE(MID(A2,9,4),1,-2)-WEEKDAY(DATE(MID(A2,9,4),1,3))+MID(A2,6,2)*7  
-  
-    2013/03/21=DATEVALUE(A1)  
-  
-    2013-mar-12=DATEVALUE(RIGHT(A1,2)&"-"&MID(A1,6,3)&"-"&LEFT(A1,4))  
+`Week 24-2013=DATE(MID(A2,9,4),1,-2)-WEEKDAY(DATE(MID(A2,9,4),1,3))+MID(A2,6,2)*7`  
+
+`2013/03/21=DATEVALUE(A1)`  
+
+`2013-mar-12=DATEVALUE(RIGHT(A1,2)&"-"&MID(A1,6,3)&"-"&LEFT(A1,4))`  
   
 转换单元格后，必须通过选择这些单元格，或从“类别”列表中依次选择整列 >“上下文”菜单 >“设置单元格格式” > “日期”来将其格式设置为日期     。 还可以使用 Excel 文本分列向导将文本单元格转换为格式正确的日期。  
   

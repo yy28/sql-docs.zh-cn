@@ -9,16 +9,16 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a138a8451211436d55da537b9d8a45d26c534e48
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8a3ca863818d11471b0ae6aadd38458faf8b9daf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80215737"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85661080"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-in-kubernetes"></a>使用 Kubernetes 上的 SQL Server 大数据群集进行数据暂留
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 [永久性卷](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)提供了插件模型，可用于 Kubernetes 中的存储。 在此模型中，存储的提供方式是根据它的使用方式抽象而来。 因此，你可以提供自己的高可用性存储并将其插入到 SQL Server 大数据群集中。 这样一来，你就能完全控制所需的存储类型、可用性和性能。 Kubernetes 支持[各种存储解决方案](https://kubernetes.io/docs/concepts/storage/storage-classes/#provisioner)，包括 Azure 磁盘和文件、网络文件系统 (NFS) 和本地存储。
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f0be0697b0820b2d134e69742a7ffc50048b94e7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 66cca17f97ed856d30a7098ebc14692db75c19b1
+ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883047"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86976787"
 ---
 # <a name="set-up-sql-server-tde-extensible-key-management-by-using-azure-key-vault"></a>使用 Azure 密钥保管库设置 SQL Server TDE 可扩展密钥管理
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -483,6 +483,7 @@ SQL Server 连接器安装还允许你选择性地下载用于 SQL Server 加密
     --Create an ENCRYPTION KEY using the ASYMMETRIC KEY (EKMSampleASYKey)
     CREATE DATABASE ENCRYPTION KEY   
     WITH ALGORITHM = AES_256   
+    ENCRYPTION BY SERVER ASYMMETRIC KEY EKMSampleASYKey;
     ```  
   
 1. 加密测试数据库。 通过将 ENCRYPTION 设置为 ON 来启用 TDE。

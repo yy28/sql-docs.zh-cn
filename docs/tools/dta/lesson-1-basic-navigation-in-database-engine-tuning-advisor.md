@@ -10,20 +10,19 @@ helpviewer_keywords:
 ms.assetid: ad49b2e0-a5e3-49d2-80fd-9f4eaa3652cb
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-dt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 3e7f0abd6003583858fbf323f96b4cf203236083
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 16843ff8599e9cda540c2a9f3ac264c8edc2dc88
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286641"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726923"
 ---
 # <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor-dta"></a>第 1 课：数据库引擎优化顾问 (DTA) 基本导览
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 数据库引擎优化顾问提供了一种基于图形用户界面 (GUI) 的方式来查看优化会话和优化建议报表。 本课程将介绍如何启动工具以及如何配置显示。 在本课程的结尾，您将了解启动工具的各种方式以及如何配置其显示，从而支持定期执行的优化任务。  
 

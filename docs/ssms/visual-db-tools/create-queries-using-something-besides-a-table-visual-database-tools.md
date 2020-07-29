@@ -12,17 +12,16 @@ helpviewer_keywords:
 ms.assetid: 8e4a1f0a-8a42-4733-be8d-e21d6dbddb33
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 52ddb76ab1e4b6e04d043bd56c3ec55cef94e52b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2495d18fa283b8eecaec238fb4779068358c4df0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254304"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004217"
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>使用表以外的对象创建查询 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 每次编写检索查询时，必须明确说明所需的列和行以及查询处理器应从何处查找原始数据。 一般情况下，此类原始数据由一个表或几个联接在一起的表组成。 不过，原始数据也可以来自表以外的源。 事实上，它可以来自视图、查询、同义词或可返回表的用户定义函数。  
   
 ## <a name="using-a-view-in-place-of-a-table"></a>使用视图代替表  

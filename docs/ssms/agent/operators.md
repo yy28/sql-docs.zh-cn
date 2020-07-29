@@ -22,18 +22,17 @@ helpviewer_keywords:
 ms.assetid: 38e8488f-2669-4cea-b9c3-5f394a663678
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3e5ecdc830550570f43484c61a87e315e9fc7661
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a500a4c03562d024bb64a65053fe1afc374844c8
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75247634"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246436"
 ---
 # <a name="operators"></a>运算符
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
 > [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
@@ -122,9 +121,8 @@ ms.locfileid: "75247634"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|||  
+|任务|主题|  
 |-|-|  
-|**任务**|**主题**|  
 |与创建操作员相关的任务|[创建操作员](../../ssms/agent/create-an-operator.md)<br /><br />[Designate a Fail-Safe Operator](../../ssms/agent/designate-a-fail-safe-operator.md)|  
 |与分配警报相关的任务|[向操作员分配警报](../../ssms/agent/assign-alerts-to-an-operator.md)<br /><br />[定义对警报的响应 (SQL Server Management Studio)](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br />[sp_add_notification (Transact-SQL)](https://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)<br /><br />[向操作员分配警报](../../ssms/agent/assign-alerts-to-an-operator.md)|  
   

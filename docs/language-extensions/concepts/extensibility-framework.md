@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 069736c17191e3583e5a6868c90e640acb6585b2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3e52727922f03a6ae078477b8af6cf0171acd053
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73658872"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722553"
 ---
 # <a name="extensibility-architecture-in-sql-server-language-extensions"></a>SQL Server 语言扩展中的扩展性体系结构
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 了解用于 SQL Server 语言扩展的扩展性体系结构，该体系结构允许在 SQL Server 中运行外部代码。 SQL Server 2019 支持 Java。 代码在语言运行时环境中作为核心数据库引擎的扩展执行。
 
@@ -46,7 +46,7 @@ The following diagram visually describes opportunities and benefits of the exten
   
   ![Linux 上的组件体系结构](../media/generic-architecture-linux.png "WindowsLinux 上的组件体系结构")
   
-组件包括 Launchpad  服务，用于调用外部运行时（例如 Java）和特定于库的逻辑，以便加载解释器和库。
+组件包括 Launchpad 服务，用于调用外部运行时（例如 Java）和特定于库的逻辑，以便加载解释器和库。
 
 <a name="launchpad"></a>
 
@@ -58,7 +58,7 @@ The following diagram visually describes opportunities and benefits of the exten
 |-------------------|-----------|---------------------|
 | 用于 Java 的 JavaLauncher.dll | Java 扩展 | SQL Server 2019 |
 
-[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 服务在 SQLRUserGroup  下运行，后者将 [AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation) 用于执行隔离。
+[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 服务在 SQLRUserGroup 下运行，后者将 [AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation) 用于执行隔离。
 
 为每个已添加了 SQL Server 机器语言扩展的数据库引擎实例创建单独的 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 服务。 每个数据库引擎实例都有一个 Launchpad 服务，因此如果有多个具有外部脚本支持的实例，则每个实例都有一个 Launchpad 服务。 数据库引擎实例会绑定到为它创建的 Launchpad 服务。 存储过程或 T-SQL 中对外部脚本的所有调用都会导致 SQL Server 服务调用为同一实例创建的 Launchpad 服务。
 

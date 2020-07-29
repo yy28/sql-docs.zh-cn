@@ -1,5 +1,6 @@
 ---
 title: 将 SQL Server Reporting Services 报表查看器 Web 部件添加到 SharePoint 页 | Microsoft Docs
+description: 通过将报表查看器 Web 部件添加到 SharePoint 页，从 SQL Server Reporting Services 或 Power BI 报表服务器显示报表。
 ms.date: 11/26/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -7,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7a101278bed81bf1c901cf22d25d82f46e8c94e7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8a70d7619f878b7091e7a49e05caf93dd814e3a0
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77256724"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83767391"
 ---
 # <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>将 SQL Server Reporting Services 报表查看器 Web 部件添加到 SharePoint 页
 
@@ -22,7 +23,7 @@ ms.locfileid: "77256724"
 
 ![SharePoint 页上的报表查看器 Web 部件](media/sharepoint-report-viewer-web-part-on-page.png)
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 * 为了成功加载报表，需要为 Kerberos 约束委派配置 Windows Token Service (C2WTS) 声明。 有关如何配置 C2WTS 的详细信息，请参阅 [Windows Token Service (C2WTS) 和 Reporting Services 声明](../install-windows/claims-to-windows-token-service-c2wts-and-reporting-services.md)。
 
@@ -32,17 +33,17 @@ ms.locfileid: "77256724"
 
 ## <a name="add-web-part"></a>添加 Web 部件
 
-1. 在 SharePoint 网站上，选择左上角的“齿轮”  图标，并选择“添加页”  。
+1. 在 SharePoint 网站上，选择左上角的“齿轮”图标，并选择“添加页”。
 
     ![从齿轮图标向 sharepoint 站点添加页。](media/sharepoint-add-a-page.png)
 
-2. 命名页，并选择“创建”  。
+2. 命名页，并选择“创建”。
 
-3. 在页设计器中，选择功能区中的“插入”  选项卡。 然后选择“部件”部分中的“Web 部件”。
+3. 在页设计器中，选择功能区中的“插入”选项卡。 然后选择“部件”部分中的“Web 部件”。
 
     ![从 office 功能区插入 Web 部件。](media/sharepoint-insert-web-part.png)
 
-4. 在“类别”  下，选择 **SQL Server Reporting Services（本机模式）。 在“部件”  下，选择“报表查看器”  。 然后选择“添加”  。
+4. 在“类别”下，选择 **SQL Server Reporting Services（本机模式）。 在“部件”下，选择“报表查看器”。 然后选择“添加”。
 
     ![添加报表查看器 Web 部件。](media/sharepoint-report-viewer-web-part.png)
 
@@ -52,19 +53,19 @@ ms.locfileid: "77256724"
 
 若要配置指向特定报表的 Web 部件，请执行以下步骤。
 
-1. 在编辑 SharePoint 页时，选择 Web 部件右上方的向下键，并选择“编辑 Web 部件”  。
+1. 在编辑 SharePoint 页时，选择 Web 部件右上方的向下键，并选择“编辑 Web 部件”。
 
     ![编辑 Web 部件下拉列表中的网页。](media/sharepoint-edit-web-part.png)
 
-2. 为承载报表的报表服务器输入“报表服务器 URL”  。 URL 看起来应类似于 https://myrsserver/reportserver。
+2. 为承载报表的报表服务器输入“报表服务器 URL”。 URL 看起来应类似于 https://myrsserver/reportserver。
 
-3. 输入想要在 Web 部件中显示的报表的路径和名称。 这看起来应类似于 /AdventureWorks Sample Reports/Company Sales  。 在此示例中，报表“公司销售额”  位于名为 AdventureWorks 示例报表  的文件夹中。
+3. 输入想要在 Web 部件中显示的报表的路径和名称。 这看起来应类似于 /AdventureWorks Sample Reports/Company Sales。 在此示例中，报表“公司销售额”位于名为 AdventureWorks 示例报表的文件夹中。
 
 4. 如果报表需要参数，则在提供报表服务器 URL 和报表名称后，选择“参数”部分中的“负载参数”。
 
-5. 选择“确定”  将所做更改保存到 Web 部件配置。
+5. 选择“确定”将所做更改保存到 Web 部件配置。
 
-6. 在 Office 功能区中选择“保存”  ，将所做更改保存到 SharePoint 页。
+6. 在 Office 功能区中选择“保存”，将所做更改保存到 SharePoint 页。
 
 ![SharePoint 页上的报表查看器 Web 部件](media/sharepoint-report-viewer-web-part-on-page.png)
 

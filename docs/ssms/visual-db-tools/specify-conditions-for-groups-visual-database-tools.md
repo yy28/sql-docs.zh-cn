@@ -12,17 +12,16 @@ helpviewer_keywords:
 ms.assetid: 269ad9c5-3261-4526-badf-7be3c869f229
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 7e6c1bee30fb6ef4cd73772e7f62c2a51ebcd03f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 97a416830b2849b41e88dbf7c66f03f98027e7b9
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254956"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999292"
 ---
 # <a name="specify-conditions-for-groups-visual-database-tools"></a>为组指定条件 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 可以通过指定应用于整个组的条件（HAVING 子句）来限制查询中出现的组。 对数据进行分组和聚合后，将应用 HAVING 子句中的条件。 只有满足条件的组才会出现在查询中。  
   
 例如，您可能希望看到 `titles` 表中每个出版商出版的所有书籍的平均价格，但只显示平均价格超过 10.00 美元的部分。 在这种情况下，您可以为 HAVING 子句指定如下条件： `AVG(price) > 10`。  

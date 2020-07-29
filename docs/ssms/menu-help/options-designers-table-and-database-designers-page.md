@@ -12,18 +12,18 @@ f1_keywords:
 ms.assetid: b43f4b97-17b9-4004-a824-f77b9e145741
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 09df28c2bcd304733250a90813773ede3a29c2ed
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d7b15f63893dfc052902f245cbb4a52220fd00c5
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245714"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001603"
 ---
 # <a name="options-designers---table-and-database-designers-page"></a>选项（“设计器”-“表设计器和数据库设计器”页）
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 使用此页可确定设计器的默认行为。 若要访问这些设置，请在“工具”  菜单上，单击“选项  ”，展开“设计器”  文件夹，再单击“表设计器”  。  
   
-## <a name="uielement-list"></a>UIElement 列表  
+## <a name="ui-element-list"></a>UI 元素列表  
 **为表设计器更新重写连接字符串的超时值**  
 允许为表设计器的操作设置新的超时值。 这在表设计器影响大型表，需要更多的时间完成表修改时非常有用。  
   

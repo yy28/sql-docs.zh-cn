@@ -9,15 +9,15 @@ ms.topic: overview
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 57755782f2907eff25db942600cebc63f09598e0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f5ef0b9dd1023f662850e6e680507f5bf4041051
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73658819"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921054"
 ---
 # <a name="what-is-sql-server-language-extensions"></a>什么是 SQL Server 语言扩展？
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 语言扩展是 SQL Server 的一项功能，用于执行外部代码。 可以使用[扩展性框架](concepts/extensibility-framework.md)在外部代码中使用关系数据。
 

@@ -12,17 +12,16 @@ f1_keywords:
 ms.assetid: cc392987-1aab-45f5-b5af-a26be53409bf
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: b53bed28d05d490b9b6d603260917f7ffbb4d047
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e5b8873d5387bf80159c8687310b2116f16874b9
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75242184"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000744"
 ---
 # <a name="table-properties-visual-database-tools"></a>表属性 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 如果您在表设计器中右键单击，再选择“属性”，则会在“属性”窗口中显示这些属性。 除非另行说明，否则在选定表后可以在“属性”窗口中编辑这些属性。  
   
 > [!NOTE]  

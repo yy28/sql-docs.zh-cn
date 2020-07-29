@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: 59ff07bd-a147-47e1-969f-3b260a9e2763
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: c857e3113f2af09aa51edce03ecf8453c272a097
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 33f980cc239c10d115bd3b41130bdc728a3991e1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75246202"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002576"
 ---
 # <a name="work-with-diagram-layout-visual-database-tools"></a>使用关系图布局 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 您可以自定义数据库关系图的外观。  
   
 ## <a name="in-this-section"></a>本节内容  

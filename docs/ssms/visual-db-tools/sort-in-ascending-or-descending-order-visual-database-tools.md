@@ -12,17 +12,16 @@ helpviewer_keywords:
 ms.assetid: d61cc55b-9ee8-4ecf-a32f-6459ae43910b
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: fbef85b0211b49319298b29f7e935d6c2bc51db4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 947ff75c1eb3f0a20b0bc3c415645254a7c4b6c4
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255031"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85976773"
 ---
 # <a name="sort-in-ascending-or-descending-order-visual-database-tools"></a>按升序或降序进行排序 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 通过在 **ORDER BY** 子句中使用 **ASC** 或 **DESC** 关键字，可以按结果集中的一列或多列以升序或降序对查询结果进行排序。  
   
 > [!NOTE]  

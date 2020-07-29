@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: 3b54cbbe-d8c6-424d-92f1-aa58179f4da8
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: ad92ad29414afcf849ef0dd8a1ade0463748af35
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 5b86d0a8ee13a4190d45d8a82cc08dea949acf26
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151487"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732004"
 ---
 # <a name="tutorial-database-engine-tuning-advisor"></a>教程：Database Engine Tuning Advisor
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 欢迎使用数据库引擎优化顾问教程。 数据库引擎优化顾问检查指定数据库中处理查询的方式，然后建议如何通过修改数据库结构（例如索引、索引视图和分区）来改善查询处理性能。  
   

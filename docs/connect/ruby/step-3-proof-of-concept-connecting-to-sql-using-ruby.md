@@ -1,7 +1,7 @@
 ---
 title: 步骤 3：使用 Ruby 连接到 SQL 的概念证明 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/08/2017
+ms.date: 06/22/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cac20b18-0a6d-4243-bbda-a5d1b9476441
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 10ff3f651695b172396b89dc7de97d62a2824e84
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d0431ce7aaa9c7e40196c689591b7d56ec5d42ef
+ms.sourcegitcommit: 4fe7b0d5e8ef1bc076caa3819f7a7b058635a486
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926719"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85263781"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-ruby"></a>步骤 3：使用 Ruby 连接到 SQL 的概念证明
 
@@ -25,7 +25,7 @@ ms.locfileid: "80926719"
   
 [TinyTDS::Client](https://github.com/rails-sqlserver/tiny_tds) 函数用于连接到 SQL 数据库。  
   
-``` ruby
+```ruby
     require 'tiny_tds'  
     client = TinyTds::Client.new username: 'yourusername@yourserver', password: 'yourpassword',  
     host: 'yourserver.database.windows.net', port: 1433,  
@@ -36,11 +36,13 @@ ms.locfileid: "80926719"
   
 复制以下代码并将它粘贴到空文件中。 将文件命名为 test.rb。 然后，在命令提示符下输入以下命令以执行该文件：  
   
+```ruby
     ruby test.rb  
+```
   
 在代码示例中，[TinyTds::Result](https://github.com/rails-sqlserver/tiny_tds) 函数用于检索针对 SQL 数据库执行的查询所返回的结果集。 此函数接受查询并返回结果集。 可使用 [result.each do |row|](https://github.com/rails-sqlserver/tiny_tds) 循环访问结果集。  
   
-``` ruby 
+```ruby 
     require 'tiny_tds'    
     print 'test'       
     client = TinyTds::Client.new username: 'yourusername@yourserver', password: 'yourpassword',  
@@ -60,7 +62,7 @@ ms.locfileid: "80926719"
   
 为符合 Microsoft SQL Server [日期时间](../../t-sql/data-types/datetime-transact-sql.md)格式，请使用 [strftime](https://ruby-doc.org/core-2.2.0/Time.html#method-i-strftime) 函数转换成对应的日期时间格式。  
   
-``` ruby
+```ruby
     require 'tiny_tds'  
     client = TinyTds::Client.new username: 'yourusername@yourserver', password: 'yourpassword',  
     host: 'yourserver.database.windows.net', port: 1433,  

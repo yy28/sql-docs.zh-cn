@@ -11,12 +11,12 @@ ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7331bc542db301e519b8a75c43b47129c845bb45
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4f3f9aef2003676c90d049a894a03c816225def3
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901583"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244068"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>选择数据库引擎升级方法
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "85901583"
   
 > [!NOTE]  
 >  你也可以考虑升级 Azure SQL 数据库或虚拟化 SQL Server 环境作为你升级计划的一部分。 这些文章已超出本文的范围，但这里有一些链接：
->   - [Azure 虚拟机上 SQL Server 的概述](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)
+>   - [Azure 虚拟机上 SQL Server 的概述](https://azure.microsoft.com/services/virtual-machines/sql-server/#overview)
 >   - [Azure SQL 数据库](https://azure.microsoft.com/services/sql-database/) 
 >   - [选择 Azure 中的 SQL Server 选项](https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/)。  
   

@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: b29c9716-e5c3-4003-9efb-3ade2197b630
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 187d1b8492719a35f470d718cd9d5727628f76e1
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 0096fbcfe97806865224f20f6a3e8ffacb1cd76e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151765"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731939"
 ---
 # <a name="xml-input-file-sample-with-user-specified-configuration-dta"></a>使用用户指定配置 (DTA) 的 XML 输入文件示例
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 此 XML 输入文件示例使用 **Configuration** 元素来指定用户指定的配置，请将此示例文件复制并粘贴到你喜欢的 XML 编辑器或文本编辑器中。 这样将使您能够执行假设分析。 假设分析过程中将涉及使用 **Configuration** 元素为待优化的数据库指定一组假设的物理设计结构。 然后，可以使用数据库引擎优化顾问基于该假设配置对运行工作负荷进行效果分析，以查看它是否改进了查询处理性能。 此类分析具有的优点是，在评估新配置时不会引起实际实施它的开销。 如果假设配置未达到您期望的性能改进，则可以很容易的重新更改配置并进行分析，直到配置可以达到所需的结果。  
   

@@ -12,17 +12,16 @@ f1_keywords:
 ms.assetid: fc76e234-ec9c-4a19-a65b-cb558ec8268e
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 09b73a3f3065a7f953441566c71093a5701045ca
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3dd3f15ba7b6b42b95d8789d204bc44c2afb3f7d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75246310"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002661"
 ---
 # <a name="validation-warnings-dialog-box-visual-database-tools"></a>“验证警告”对话框 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 如果尝试保存的修改具有潜在的破坏性副作用，或者数据库提交操作很可能会失败，则会显示此对话框。 此对话框可指示这些副作用可能会是什么或提交操作可能失败的原因。 使用此对话框可以选择继续修改还是取消操作。  
   
 > [!NOTE]  

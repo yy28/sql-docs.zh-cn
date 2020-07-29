@@ -23,12 +23,12 @@ ms.assetid: 74aa7ccc-8575-4018-80cf-14aeca379687
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b48d0a768bae5a058c2868ae3b30f3f48f06ef40
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d5ce9bf9bc9c1e9c03e86ff696a8684c9f54bafc
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85991436"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111773"
 ---
 # <a name="year-transact-sql"></a>YEAR (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,7 +45,9 @@ ms.locfileid: "85991436"
 YEAR ( date )  
 ```  
   
-## <a name="arguments"></a>参数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
  *date*  
  一个表达式，它可以解析为 time、date、smalldatetime、datetime、datetime2 或 datetimeoffset 值       。 date 参数可以是表达式、列表达式、用户定义变量或字符串文字  。  
   

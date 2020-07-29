@@ -1,7 +1,7 @@
 ---
 title: 教程：将 Azure Blob 存储服务用于 SQL Server 2016
 ms.custom: seo-dt-2019
-ms.date: 01/10/2019
+ms.date: 07/22/2020
 ms.prod: sql
 ms.technology: ''
 ms.prod_service: database-engine
@@ -14,12 +14,12 @@ applies_to:
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cd01280d2777fdab926c2e733224dc94b5fef834
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4e8d09fd7af7501427490178ef7cc9624b7e98a1
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86906003"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247262"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>教程：将 Azure Blob 存储服务用于 SQL Server 2016
 
@@ -37,7 +37,7 @@ Microsoft Azure Blob 存储服务的 SQL Server 集成支持最初是 SQL Server
 - 获取免费的 [Azure 帐户](https://azure.microsoft.com/offers/ms-azr-0044p/)。
 - 创建 [Azure 存储帐户](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=portal)。
 - 安装 [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
-- 预配[运行 SQL Server 的 Azure VM](https://azure.microsoft.com/documentation/articles/virtual-machines-provision-sql-server/)
+- 预配[运行 SQL Server 的 Azure VM](https://azure.microsoft.com/services/virtual-machines/sql-server/)
 - 安装 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
 - 下载 [AdventureWorks2016 示例数据库](https://docs.microsoft.com/sql/samples/adventureworks-install-configure)。
 - 将用户帐户分配到 [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) 角色，并授予[更改任意凭据](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql)权限。 
@@ -180,7 +180,7 @@ SQL Server 凭据是一个对象，用于存储连接到 SQL Server 以外资源
 本部分将介绍如何将本地 SQL Server 2016 实例中的 AdventureWorks2016 数据库备份到在[第 1 部分](#1---create-stored-access-policy-and-shared-access-storage)中所创建的 Azure 容器。
   
 > [!NOTE]  
-> 如果要将 SQL Server 2012 SP1 CU2 或更高版本数据库或 SQL Server 2014 数据库备份到此 Azure 容器，则可以通过 [此处](https://docs.microsoft.com/sql/relational-databases/backup-restore/sql-server-backup-to-url?view=sql-server-2014) 记录的已弃用语法，使用 WITH CREDENTIAL 语法备份到 URL。  
+> 如果要将 SQL Server 2012 SP1 CU2 或更高版本数据库或 SQL Server 2014 数据库备份到此 Azure 容器，则可以通过 [此处](/previous-versions/sql/2014/relational-databases/backup-restore/sql-server-backup-to-url?view=sql-server-2014) 记录的已弃用语法，使用 WITH CREDENTIAL 语法备份到 URL。  
   
 若要将数据库备份到 Blob 存储，请执行以下步骤：  
   

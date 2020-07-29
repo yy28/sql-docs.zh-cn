@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: 910ed516-cb84-481b-95d0-cba3e89afdba
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 57ceb0963f303a1674642b65ef6c2089fd86ef70
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 162f2e872d1feedd3cecdf54b766ed8e3a43365b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254253"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999999"
 ---
 # <a name="create-self-joins-manually-visual-database-tools"></a>手动创建自联接 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 即使表在数据库中没有自反关系，您也可将它与自身联接。 例如，可使用自联接查找生活在同一市县的作者对。  
   
 与任何联接一样，自联接至少需要两个表。 不同之处在于，您不是向查询中添加第二个表，而是添加同一个表的第二个实例。 这样，可将表的第一个实例中的列与第二个实例中的同一列相比较，以便对列中的值相互进行比较。 [查询和视图设计器](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) 为表的第二个实例分配一个别名。  

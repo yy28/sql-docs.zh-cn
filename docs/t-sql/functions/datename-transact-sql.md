@@ -25,12 +25,12 @@ ms.assetid: 11855b56-c554-495d-aad4-ba446990153b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5b6d048217cb27a0215485334e54ed9ed93defa1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d6cc4e3155662e7674ce058bf975ef93c8033420
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011383"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112497"
 ---
 # <a name="datename-transact-sql"></a>DATENAME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,7 +47,9 @@ ms.locfileid: "86011383"
 DATENAME ( datepart , date )  
 ```  
   
-## <a name="arguments"></a>参数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
 *datepart*  
 `DATENAME` 将返回的 date 参数的特定部分  。 此表列出了所有有效的 datepart 参数  。
 

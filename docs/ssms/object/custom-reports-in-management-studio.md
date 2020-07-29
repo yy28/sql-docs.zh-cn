@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1ba3f758-f39b-4f5f-91ca-516cedc78979
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0e5dafb96c0bb94fcb2dd0134fefb3f96b7c5708
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 515bb92125c48f963bc6d6c2dfa0836bcb9ef14e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257229"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001985"
 ---
 # <a name="custom-reports-in-management-studio"></a>Management Studio 中的自定义报表
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，很多对象资源管理器节点都显示一组由 [!INCLUDE[msCoName](../../includes/msconame_md.md)]创建的标准报表。 这些报表汇总了通常请求的服务器信息。 从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 开始，管理员可以从 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] 中运行使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]创建的自定义报表。  
   
 ## <a name="implementation"></a>实现  

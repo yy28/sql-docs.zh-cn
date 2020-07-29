@@ -2,22 +2,22 @@
 title: 教程适用的航空航班演示数据
 Description: 创建一个包含 R 和 Python 中的航空数据集的数据库。 本数据集用于 Microsoft SQL Server 机器学习服务的 R 和 Python 教程。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 10/22/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9bb8d26acb21ff38725c6e993c0b6080a35410f1
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 4f697287bff5ad4734d11c3d6391154a3a970470
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116680"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727996"
 ---
 #  <a name="airline-flight-arrival-demo-data-for-sql-server-python-and-r-tutorials"></a>SQL Server Python 和 R 教程适用的航空航班到达演示数据
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 在此练习中，创建一个 SQL Server 数据库，用于存储从 R 或 Python 内置航空演示数据集导入的数据。 R 和 Python 发行版提供了等效的数据，你可以使用 Management Studio 将这些数据导入到 SQL Server 数据库中。
 

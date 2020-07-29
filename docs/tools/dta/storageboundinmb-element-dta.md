@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: a8374910-bf68-4edb-b464-53a3a705e7f4
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: c300ee1935b408078d5e7eeb0c0f25ea8ec03f80
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: aa47493eb1e102cbb7d606672496b2b99a2a2d64
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83150530"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732034"
 ---
 # <a name="storageboundinmb-element-dta"></a>StorageBoundInMB 元素 (DTA)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 指定数据库引擎优化顾问优化建议（索引和分区集）可用的最大空间 (MB)。  
   

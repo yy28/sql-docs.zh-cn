@@ -2,7 +2,7 @@
 title: sqlservr 应用程序
 description: sqlservr 应用程序可以在命令提示符下启动、停止、暂停和继续 SQL Server 的实例。
 ms.custom: seo-lt-2019
-ms.date: 08/01/2019
+ms.date: 07/22/2020
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -23,16 +23,16 @@ helpviewer_keywords:
 ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 56498901eb6f7eed8fa58f73bae58daddb36f874
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 1302360b6ab5175bed5a9776d7de5389c3d40c00
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83150568"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112569"
 ---
 # <a name="sqlservr-application"></a>sqlservr 应用程序
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 sqlservr 应用程序可以在命令提示符下启动、停止、暂停和继续 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的实例。
 
@@ -86,7 +86,7 @@ sqlservr [-s instance_name] [-c] [-d master_path] [-f]
 |参数 | 详细信息|
 |:-----|:-----|
 |**-h** | 启用 AWE 时，在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 早期版本的 32 位实例中为热添加内存元数据保留虚拟内存地址空间。 通过 [!INCLUDE[sssql14](../includes/sssql14-md.md)] 支持。 有关详细信息，请参阅 [SQL Server 2016 中不再使用的 SQL Server 功能](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)。|
-|**-g** | *memory_to_reserve*<br/><br>适用于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 32 位实例的早期版本。 通过 [!INCLUDE[sssql14](../includes/sssql14-md.md)] 支持。 指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 为位于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 进程中但在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 内存池之外的内存分配保留的内存整数量 (MB)。 有关详细信息，请参阅 [SQL Server 2014“服务器内存配置选项”文档](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options?view=sql-server-2014)。|
+|**-g** | *memory_to_reserve*<br/><br>适用于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 32 位实例的早期版本。 通过 [!INCLUDE[sssql14](../includes/sssql14-md.md)] 支持。 指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 为位于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 进程中但在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 内存池之外的内存分配保留的内存整数量 (MB)。 有关详细信息，请参阅 [SQL Server 2014“服务器内存配置选项”文档](/previous-versions/sql/2014/database-engine/configure-windows/server-memory-server-configuration-options?view=sql-server-2014)。|
 | &nbsp; | &nbsp; |
 
 ## <a name="see-also"></a>另请参阅
