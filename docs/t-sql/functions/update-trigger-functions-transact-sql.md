@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 8e3be25b-2e3b-4d1f-a610-dcbbd8d72084
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 6baeb311e52588c63fc24d38143a0e5a54c96801
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 528f02ccc8e341700b64cc0a73e0e3185d16a8ee
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85714535"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87113261"
 ---
 # <a name="update---trigger-functions-transact-sql"></a>UPDATE - 触发器函数 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +46,9 @@ ms.locfileid: "85714535"
 UPDATE ( column )   
 ```  
   
-## <a name="arguments"></a>参数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
  *column*  
  要为 INSERT 或 UPDATE 操作测试的列的名称。 由于表名是在触发器的 ON 子句中指定的，因此不要在列名前包含表名。 列可以是 [ 支持的任何](../../t-sql/data-types/data-types-transact-sql.md)数据类型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 但是，计算列不能用于此上下文。  
   

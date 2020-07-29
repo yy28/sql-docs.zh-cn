@@ -23,18 +23,17 @@ helpviewer_keywords:
 ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 61bf9d30ef6e789e56784ac78bf95215f377e85a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5cc337a6a6676e47ac2541d0559829ad4ec6e6ae
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75256115"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247389"
 ---
 # <a name="manage-job-steps"></a>管理作业步骤
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
 > [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
@@ -203,9 +202,8 @@ Set oServer = nothing
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|||  
+|说明|主题|  
 |-|-|  
-|**说明**|**主题**|  
 |描述如何创建带有可执行程序的作业步骤。|[创建 CmdExec 作业步骤](../../ssms/agent/create-a-cmdexec-job-step.md)|  
 |介绍如何重置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理权限。|[配置帐户以创建和管理 SQL Server 代理作业](../../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)|  
 |介绍如何创建 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作业步骤。|[Create a Transact-SQL Job Step](../../ssms/agent/create-a-transact-sql-job-step.md)|  

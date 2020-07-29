@@ -20,17 +20,16 @@ helpviewer_keywords:
 ms.assetid: ba4e1202-31a2-444d-8365-c68a530ef223
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 38dfe12c0690e87ee0e57555a2d8ff67e6ff7673
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2a58e332836d99b236eb0a09916ec6f16f2a8761
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253521"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011724"
 ---
 # <a name="include-or-exclude-rows-visual-database-tools"></a>包含或排除行 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 若要限制 SELECT 查询应返回的行数，请创建搜索条件或筛选条件。 在 SQL 中，搜索条件出现在语句的 WHERE 子句中，或者如果创建的是聚合查询，则搜索条件将出现在 HAVING 子句中。  
   
 > [!NOTE]  

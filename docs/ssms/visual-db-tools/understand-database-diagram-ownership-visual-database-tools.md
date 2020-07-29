@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 4a27a48e-c4ef-4017-82b8-0cac4d0bbcac
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: faebe8539698fbe605035dff737065864c70929b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 170851e58273695a588b9359ba07460eab6d6884
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241835"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004132"
 ---
 # <a name="understand-database-diagram-ownership-visual-database-tools"></a>了解数据库关系图所有权 (Visual Database Tools)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 若要使用数据库关系图设计器，必须先由 db_owne 角色（ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的一个角色）的成员对其进行设置，以控制对关系图的访问。 每个关系图都有一个而且只有一个所有者，即创建该关系图的用户。 有关设置关系图的详细信息，请参阅[设置数据库关系图设计器(../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)。  
   

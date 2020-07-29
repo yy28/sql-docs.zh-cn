@@ -9,16 +9,16 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 722c826f5b9a9dd7d1ebe7e1cf444b779f7d4e67
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: a4f4f5651d14fde272de66506aca7abed51cc7de
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606769"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784318"
 ---
 # <a name="restore-a-database-into-the-sql-server-big-data-cluster-master-instance"></a>将数据库还原到 SQL Server 大数据群集主实例
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 本文介绍如何将现有数据库还原到 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 的主实例中。 建议使用备份、复制和还原。
 
@@ -36,13 +36,13 @@ ms.locfileid: "83606769"
 将备份文件复制到 Kubernetes 群集的主实例 Pod 中的 SQL Server 容器。
 
 ```bash
-kubectl cp <path to .bak file> master-0:/tmp -c mssql-server -n <name of your big data cluster>
+kubectl cp <path to .bak file> master-0:/var/tmp/<.bak filename> -c mssql-server -n <name of your big data cluster>
 ```
 
 示例：
 
 ```bash
-kubectl cp ~/Downloads/AdventureWorks2016CTP3.bak master-0:/tmp -c mssql-server -n clustertest
+kubectl cp ~/Downloads/AdventureWorks2016CTP3.bak master-0:/var/tmp/AdventureWorks2016CTP3.bak -c mssql-server -n clustertest
 ```
 
 然后，验证是否已将备份文件复制到 Pod 容器。
@@ -58,6 +58,7 @@ exit
 
 ```bash
 kubectl exec -it master-0 -n clustertest -c mssql-server -- bin/bash
+cd /var/
 ls /tmp
 exit
 ```

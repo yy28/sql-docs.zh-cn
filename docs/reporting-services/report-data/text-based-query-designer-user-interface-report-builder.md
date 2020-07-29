@@ -1,5 +1,6 @@
 ---
 title: 基于文本的查询设计器用户界面（报表生成器）| Microsoft Docs
+description: 使用基于文本的查询设计器可以用数据源支持的查询语言来指定查询，还可以运行查询并在运行时查看结果。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 89fddca5-bd96-4128-9072-5348d1b6e02c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6fd76ce7d20349301d3bfeb70b4ed1c24325cbdc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 99635d5c2b863f3c4b958ab0e5ff7beb128fe5c8
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "72251202"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458909"
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>基于文本的查询设计器用户界面（报表生成器）
   使用基于文本的查询设计器可以用数据源支持的查询语言来指定查询，还可以运行查询并在运行时查看结果。 您可以指定多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，为自定义数据处理扩展插件指定查询或命令语法，还可以指定指定为表达式的查询。 因为基于文本的查询设计器不会对查询进行预处理，并且能适应任何类型的查询语法，所以成为了众多数据源类型的默认查询设计器工具。  
@@ -34,7 +35,7 @@ ms.locfileid: "72251202"
 ## <a name="text-based-query-designer-toolbar"></a>基于文本的查询设计器工具栏  
  基于文本的查询设计器为所有命令类型都提供一个单一工具栏。 下表列出了该工具栏中的每个按钮及其功能。  
   
-|按钮|说明|  
+|Button|描述|  
 |------------|-----------------|  
 |**编辑为文本**|在基于文本的查询设计器和图形查询设计器之间切换。 并非所有的数据源类型都支持图形查询设计器。|  
 |**导入**|从文件或报表中导入现有的查询。 仅支持 sql 和 rdl 文件类型|  
@@ -42,7 +43,7 @@ ms.locfileid: "72251202"
 |**命令类型**|选择 **Text**、 **StoredProcedure**或 **TableDirect**。 如果存储过程带有参数，则单击工具栏上的 **“运行”** 时，将出现 **“定义查询参数”** 对话框，您可以根据需要填入值。 所支持的命令类型因数据源类型而异。 例如，仅 OLE DB 和 ODBC 支持 **TableDirect**。<br /><br /> 注意：如果存储过程返回多个结果集，则仅使用第一个结果集填充数据集。|  
   
 ### <a name="command-type-text"></a>命令类型 Text  
- 创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据集时，默认情况下，关系查询设计器将会打开。 若要切换为基于文本的查询设计器，请单击工具栏上的“编辑为文本”切换按钮  。 基于文本的查询设计器将显示两个窗格：“查询”窗格和“结果”窗格。 下图标出了每个窗格。  
+ 创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据集时，默认情况下，关系查询设计器将会打开。 若要切换为基于文本的查询设计器，请单击工具栏上的“编辑为文本”切换按钮。 基于文本的查询设计器将显示两个窗格：“查询”窗格和“结果”窗格。 下图标出了每个窗格。  
   
  ![用于关系数据查询的通用查询设计器](../../reporting-services/report-data/media/rsqd-dsaw-sql-generic.gif "用于关系数据查询的通用查询设计器")  
   
@@ -51,7 +52,7 @@ ms.locfileid: "72251202"
 |窗格|函数|  
 |----------|--------------|  
 |查询|显示 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询文本。 使用此窗格可以编写或编辑 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询。|  
-|结果|显示查询的结果。 若要运行查询，请右键单击任意窗格，然后单击“运行”，或者单击工具栏中的“运行”按钮   。|  
+|结果|显示查询的结果。 若要运行查询，请右键单击任意窗格，然后单击“运行”，或者单击工具栏中的“运行”按钮 。|  
   
 #### <a name="example"></a>示例  
  以下查询将从用于 **Person** 架构的 AdventureWorks2014 数据库的 **ContactType** 表返回名称列表。  
@@ -63,7 +64,7 @@ SELECT Name FROM Person.ContactType
  单击工具栏上的 **“运行”** 时，将运行 **“查询”** 窗格中的命令，并在 **“结果”** 窗格中显示结果。 结果集显示 20 种类型的联系人列表，例如，所有者或销售代理。  
   
 ### <a name="command-type-storedprocedure"></a>命令类型 StoredProcedure  
- 选择“Command typeStoredProcedure”时，基于文本的查询设计器将显示两个窗格：“查询”窗格和“结果”窗格  。 在“查询”窗格中输入存储过程的名称，然后单击工具栏中的 **“运行”** 按钮。 如果存储过程使用参数，将打开 **“定义查询参数”** 对话框。 输入存储过程的参数值。 对于每个存储过程输入参数，都会创建一个报表参数。  
+ 选择“Command typeStoredProcedure”时，基于文本的查询设计器将显示两个窗格：“查询”窗格和“结果”窗格。 在“查询”窗格中输入存储过程的名称，然后单击工具栏中的 **“运行”** 按钮。 如果存储过程使用参数，将打开 **“定义查询参数”** 对话框。 输入存储过程的参数值。 对于每个存储过程输入参数，都会创建一个报表参数。  
   
  下图显示运行存储过程时的“查询”和“结果”窗格。 在此示例中，输入参数为常量。  
   
@@ -74,7 +75,7 @@ SELECT Name FROM Person.ContactType
 |窗格|函数|  
 |----------|--------------|  
 |查询|显示存储过程的名称和所有输入参数。|  
-|结果|显示查询的结果。 若要运行查询，请右键单击任意窗格，然后单击“运行”，或者单击工具栏中的“运行”按钮   。|  
+|结果|显示查询的结果。 若要运行查询，请右键单击任意窗格，然后单击“运行”，或者单击工具栏中的“运行”按钮 。|  
   
 #### <a name="example"></a>示例  
  以下查询将调用 AdventureWorks2014 存储过程 **uspGetWhereUsedProductID**。 在运行查询时，您必须为产品标识号参数输入一个值。  
@@ -83,7 +84,7 @@ SELECT Name FROM Person.ContactType
 uspGetWhereUsedProductID  
 ```  
   
- 单击“运行”  ( **!** ) 按钮。 提示输入查询参数的值时，请使用下表来输入值。  
+ 单击“运行”( **!** ) 按钮。 提示输入查询参数的值时，请使用下表来输入值。  
   
 |||  
 |-|-|  
@@ -93,7 +94,7 @@ uspGetWhereUsedProductID
  对于指定日期，结果集显示使用指定组件号的 13 个产品标识符列表。  
   
 ### <a name="command-type-tabledirect"></a>命令类型 TableDirect  
- 选择“Command typeTableDirect”时，基于文本的查询设计器将显示两个窗格：“查询”窗格和“结果”窗格  。 如果输入一个表并单击 **“运行”** 按钮，则将返回该表的所有列。  
+ 选择“Command typeTableDirect”时，基于文本的查询设计器将显示两个窗格：“查询”窗格和“结果”窗格。 如果输入一个表并单击 **“运行”** 按钮，则将返回该表的所有列。  
   
 #### <a name="example"></a>示例  
  对于数据源类型 OLE DB，以下数据集查询将为 AdventureWorks2014 数据库中的所有联系人类型返回结果集。  

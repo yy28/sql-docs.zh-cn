@@ -23,15 +23,15 @@ helpviewer_keywords:
 - system usernames [SQL Server]
 - users [SQL Server], names
 ms.assetid: 565984cd-60c6-4df7-83ea-2349b838ccb2
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 86c10915b811578f82e50bd4322439863e610766
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dcea6953d22c0f01f0fd9ecf130698af1ac1703a
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76315617"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110748"
 ---
 # <a name="system_user-transact-sql"></a>SYSTEM_USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -45,7 +45,9 @@ ms.locfileid: "76315617"
 ```  
 SYSTEM_USER  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="return-types"></a>返回类型  
  **nvarchar(128)**  
   
@@ -54,7 +56,7 @@ SYSTEM_USER
   
  如果用户名与登录名不同，则 SYSTEM_USER 返回登录名。  
   
- 如果当前用户使用 Windows 身份验证登录到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，则 SYSTEM_USER 返回如下形式的 Windows 登录标识名称：DOMAIN\\user_login_name 。 但是，如果当前用户使用 SQL Server 身份验证登录到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，则 SYSTEM_USER 返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录标识名称，例如为作为  `WillisJo` 登录的用户返回 `WillisJo`。  
+ 如果当前用户使用 Windows 身份验证登录到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，则 SYSTEM_USER 返回如下形式的 Windows 登录标识名称：DOMAIN*user_login_name*\\  。 但是，如果当前用户使用 SQL Server 身份验证登录到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，则 SYSTEM_USER 返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录标识名称，例如为作为  `WillisJo` 登录的用户返回 `WillisJo`。  
   
  SYSTEM_USER 返回当前执行的上下文的名称。 如果已使用 EXECUTE AS 语句进行上下文切换，则 SYSTEM_USER 将返回模拟的上下文的名称。  
 

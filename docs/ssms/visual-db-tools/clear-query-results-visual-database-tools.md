@@ -15,17 +15,16 @@ helpviewer_keywords:
 ms.assetid: 4ed9692e-5170-47d4-8b0b-028c967d47ff
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: e43a4142c970c1e096478a65bf7753db7ea54a36
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 96ac7ab3424c43d35c3ee6996a3eadcd5b98a709
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255487"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003864"
 ---
 # <a name="clear-query-results-visual-database-tools"></a>清除查询结果 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 在“查询和视图设计器”  中运行查询后，可以清除“结果”窗格。 此过程适用于通过使用对象资源管理器中的“打开视图”  或“打开表”  选项创建的查询。 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，当在查询编辑器中运行查询之后，除非关闭查询编辑器窗口或运行其他查询，否则不能清除“结果”窗格。  
   
 > [!NOTE]  

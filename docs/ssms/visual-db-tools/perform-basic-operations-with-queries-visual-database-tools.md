@@ -12,17 +12,16 @@ helpviewer_keywords:
 ms.assetid: 88dbdbfe-bc60-4e11-b338-dbe7f26566d5
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 7fc8c17fc24ee9567e355a42dfae875d30335e49
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 95811ef98c430bf5b2b0373ad4dcd7a862351b11
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255396"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003211"
 ---
 # <a name="perform-basic-operations-with-queries-visual-database-tools"></a>执行基本的查询操作 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 以下基本操作适用于大部分或全部查询：  
   
 ## <a name="in-this-section"></a>本节内容  

@@ -2,22 +2,22 @@
 title: 结果的性能优化
 description: 本文总结了测试各种优化方法的两个案例研究的方法、结果和结论。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/29/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1313cc2074058b104ea0939d02cdac30ddf28595
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 1af68324f613c0e47cd8cc5eaca73dca5881db04
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486766"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242319"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>R Services 的性能：结果和资源
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 本文是系列文章中的第四篇也是最后一篇文章，这些文章介绍了 R Services 的性能优化。 本文总结了测试各种优化方法的两个案例研究的方法、结果和结论。
 
@@ -337,7 +337,7 @@ RevoScaleR 和 MicrosoftML 包都用于在涉及大型数据集的复杂 R 解�
 
 许多用户已经注意到，第一次加载 R（或 Python）运行时的时候，会有稍微的暂停。 如这些测试中所述，出于此原因，通常会测量第一次运行的时间，但随后将其丢弃。 后续的高速缓存可能会导致第一次运行和第二次运行之间出现明显的性能差异。 在 SQL Server 和外部运行时之间移动数据时还存在一些开销，如果数据通过网络传递而不是直接从 SQL Server 中加载时，则尤其如此。
 
-出于上述所有原因，不存在用于缓解此初始加载时间的单一解决方案，因为性能影响因任务不同而具有明显差异。 例如，为批中的单行评分执行高速缓存；因此，连续评分操作的速度要快得多，且模型和 R 运行时都不会重载。 还可以使用[本机评分](../sql-native-scoring.md)以避免完全加载 R 运行时。
+出于上述所有原因，不存在用于缓解此初始加载时间的单一解决方案，因为性能影响因任务不同而具有明显差异。 例如，为批中的单行评分执行高速缓存；因此，连续评分操作的速度要快得多，且模型和 R 运行时都不会重载。 还可以使用[本机评分](../predictions/native-scoring-predict-transact-sql.md)以避免完全加载 R 运行时。
 
 对于定型大型模型或对大量批进行评分，与避免数据移动或避免流式处理和并行处理所产生的收益相比，其开销可能是最小的。 请参阅此博客文章，了解更多性能指导：
 

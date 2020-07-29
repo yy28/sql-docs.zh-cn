@@ -2,22 +2,22 @@
 title: 数据科学解决方案模板
 description: 本文介绍了演示最佳做法和提供构建基块以帮助实现机器学习解决方案的行业特定的模板。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/29/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6d323178152e07726c818971c8c7e8ee297c20af
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: b039af528200782d788394f49e0bd74ed2b54dd4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116980"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728641"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>数据科学方案和解决方案模板
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 本文介绍了大量 SQL Server 机器学习解决方案模板。 这些模板演示最佳做法并提供构建基块，帮助快速实现机器学习解决方案。 每个模板都旨在解决特定行业的特定数据科学问题。
 每个模板中的任务从数据准备和特征工程扩展到模型定型和计分。 

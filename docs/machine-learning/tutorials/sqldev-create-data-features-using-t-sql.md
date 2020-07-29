@@ -2,22 +2,22 @@
 title: R + T-SQL 教程：数据特征
 description: 介绍如何向存储过程添加计算以用于 R 机器学习模型的教程。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 10/19/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6970fd92fc1b655e0df66cdb548a044e3bdc746e
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: c5b588f9cb94d39753040e3251d9a4b2e1f12d49
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116060"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85670959"
 ---
 # <a name="lesson-2-create-data-features-using-r-and-t-sql"></a>第 2 课：使用 R 和 T-SQL 创建数据特征
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 本文属于有关如何在 SQL Server 中使用 R 的 SQL 开发者教程。
 

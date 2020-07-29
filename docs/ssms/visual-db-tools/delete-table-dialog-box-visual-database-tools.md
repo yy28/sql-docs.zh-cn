@@ -12,17 +12,16 @@ f1_keywords:
 ms.assetid: 56a60bfd-1353-4228-b23e-e887da2228a2
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 3e8c3e50bc2e68953b36b80a6f3ffa3aba373145
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 806ad42b0b519b974367cef3429d1ba9c947caa4
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75251833"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008321"
 ---
 # <a name="delete-table-dialog-box-visual-database-tools"></a>“删除表”对话框 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 使用此对话框可以指定要从中删除记录的表。 当您将查询的类型更改为 DELETE 查询时，如果“关系图”窗格中显示了多个表，则将显示此对话框。  
   
 选择要从中删除记录的表，再选择“确定”  。  

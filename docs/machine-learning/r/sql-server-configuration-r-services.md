@@ -2,22 +2,22 @@
 title: 进行配置以供 R 使用
 description: 本文提供有关用于运行 SQL Server R Services 的计算机的硬件和网络配置的指导。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/29/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6daadcd1e98e19f2d4f43c4b5a6c95f1cf137697
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 1bfd7de9d7ee576c726a6b4473937cc1d9a294ff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486701"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730896"
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>进行 SQL Server 配置以供 R 使用
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 本文是基于两个案例研究介绍 R Services 的性能优化的系列文章中的第二篇。  本文提供有关用于运行 SQL Server R Services 的计算机的硬件和网络配置的指导。 它还包含有关配置解决方案中使用的 SQL Server 实例、数据库或表的方式的信息。 由于在 SQL Server 中使用 NUMA 模糊了硬件和数据库优化之间的界限，因此第三部分将详细讨论 CPU 关联和资源调控。
 

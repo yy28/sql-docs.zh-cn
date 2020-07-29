@@ -20,12 +20,12 @@ ms.assetid: 4ec6b46e-9438-4f0f-8b96-461edd84280a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: faf7bdc41d4f6eefdf217447ae9bf0b552b6cfc2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3c7c8ebd6256980842ca85f10f200518fe0bac2a
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007959"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87113204"
 ---
 # <a name="acos-transact-sql"></a>ACOS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +40,9 @@ ms.locfileid: "86007959"
 ACOS ( float_expression )  
 ```  
   
-## <a name="arguments"></a>参数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
 *float_expression*  
 float 类型或可隐式转换为 float 类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)  。 仅介于 -1.00 到 1.00 之间的值有效。 对于超出此范围的值，将返回 NULL 且 ASIN 将报告域错误。
   

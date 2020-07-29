@@ -10,12 +10,12 @@ ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2bea423a9ea039dbc9f0128c7d6b6f106ee03fe
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5a8691ed6a84fce3eb12c8e13b2235356486c42f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79198404"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248696"
 ---
 # <a name="lesson-1-create-and-query-database-objects"></a>第 1 课：创建和查询数据库对象
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -226,11 +226,23 @@ ms.locfileid: "79198404"
   
 ### <a name="useful-functions-in-a-select-statement"></a>SELECT 语句中的有用函数  
 有关可以在 SELECT 语句中用来处理数据的一些函数的信息，请参阅下列主题：  
-  
-|||  
-|-|-|  
-|[字符串函数 (Transact-SQL)](../t-sql/functions/string-functions-transact-sql.md)|[日期和时间数据类型及函数 (Transact-SQL)](../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)|  
-|[数学函数 (Transact-SQL)](../t-sql/functions/mathematical-functions-transact-sql.md)|[文本与图像函数 (Transact-SQL)](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|  
+
+:::row:::
+    :::column:::
+        [字符串函数 (Transact-SQL)](../t-sql/functions/string-functions-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [日期和时间数据类型及函数 (Transact-SQL)](../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        [数学函数 (Transact-SQL)](../t-sql/functions/mathematical-functions-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [文本与图像函数 (Transact-SQL)](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)
+    :::column-end:::
+:::row-end:::
 
 ## <a name="create-views-and-stored-procedures"></a>创建视图和存储过程
 视图是存储的 SELECT 语句，而存储过程是以批处理方式执行的一条或多条 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句。  

@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 050242e1-9b79-4ade-91a9-580707b9d2d9
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3208c2543292fd67ec36ad25dd5a065e08988ca6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 643c58adfed622b6a5d57e6056dcea316b6cf5ec
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245786"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243728"
 ---
 # <a name="specify-job-responses"></a>指定作业响应
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
 > [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
@@ -46,9 +45,8 @@ ms.locfileid: "75245786"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|||  
+|说明|主题|  
 |-|-|  
-|**说明**|**主题**|  
 |描述如何向操作员通知作业状态。|[Notify an Operator of Job Status](../../ssms/agent/notify-an-operator-of-job-status.md)|  
 |介绍如何将作业状态写入 Windows 应用程序日志。|[将作业状态写入 Windows 应用程序日志](../../ssms/agent/write-the-job-status-to-the-windows-application-log.md)|  
   

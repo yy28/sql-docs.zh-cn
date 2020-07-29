@@ -9,16 +9,16 @@ ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 776c54ef7475b1ff7c5679f98e994a1b42784262
-ms.sourcegitcommit: 52925f1928205af15dcaaf765346901e438ccc25
+ms.openlocfilehash: dedae90b5242282fb550ebc59c5a4d98d21506f3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80607840"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764071"
 ---
 # <a name="how-to-upgrade-big-data-clusters-2019"></a>如何升级 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 升级路径取决于 SQL Server 大数据群集 (BDC) 的当前版本。 若要从支持的版本（包括常规分发版本 (GDR)、累积更新 (CU) 或快速修补工程 (QFE) 更新）升级，可以就地升级。 不支持从 BDC 的客户技术预览版 (CTP) 或候选发布版本进行就地升级。 需要删除并重新创建群集。 以下部分介绍了每个场景的步骤：
 

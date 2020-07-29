@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: 3f57d0f0-4781-46ec-82cd-b751dc5affef
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 666b10f91db9fa5cdf53dd2a826b38752708e3cd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 338493592a01031542d316df2c454bb09ff9b68d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80216969"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755309"
 ---
 # <a name="alerts"></a>警报
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 > [!IMPORTANT]  
 > [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
@@ -82,7 +81,7 @@ ms.locfileid: "80216969"
     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理在指定事件的事件消息中包含特定文本字符串时发出警报。 例如，可以定义警报来响应包含特定表名或特定约束的消息。  
   
 ## <a name="selecting-a-performance-condition"></a>选择性能条件  
-可以指定警报来响应特定的性能条件。 在这种情况下，需要指定要监视的性能计数器、警报的阈值以及警报发生时计数器必须执行的操作。 若要设置性能条件，必须在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的“新建警报”  或“警报属性”  对话框中的“常规”  页上定义下列项：  
+可以指定警报来响应特定的性能条件。 在这种情况下，需要指定要监视的性能计数器、警报的阈值以及警报发生时计数器必须执行的操作。 若要设置性能条件，必须在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的“新建警报”或“警报属性”对话框中的“常规”页上定义下列项：  
   
 -   **Object**  
   
@@ -98,9 +97,9 @@ ms.locfileid: "80216969"
   
 -   **计数器** 和 **值**  
   
-    警报的阈值和导致警报的行为。 阈值是数字。 行为是下列之一：“低于”  、“等于”  或“大于”  指定的值。 **值** 是描述性能条件计数器的数字。 例如，若要为性能对象 **SQLServer:Locks** 设置在 **Lock Wait Time** 超过 30 分钟时要发生的警报，则可以选择“大于”  并“指定 30 作为值”  。  
+    警报的阈值和导致警报的行为。 阈值是数字。 行为是下列之一：“低于”、“等于”或“大于”指定的值。 **值** 是描述性能条件计数器的数字。 例如，若要为性能对象 **SQLServer:Locks** 设置在 **Lock Wait Time** 超过 30 分钟时要发生的警报，则可以选择“大于”并“指定 30 作为值”。  
   
-    又如，可以为性能对象 **SQLServer:Transactions** 指定在 **tempdb** 中的可用空间低于 1000 KB 时发出警报。 若要这样设置，应当选择计数器 **Free space in tempdb (KB)** 、“小于”  和“值”  **1000**。  
+    又如，可以为性能对象 **SQLServer:Transactions** 指定在 **tempdb** 中的可用空间低于 1000 KB 时发出警报。 若要这样设置，应当选择计数器 **Free space in tempdb (KB)** 、“小于”和“值” **1000**。  
   
     > [!NOTE]  
     > 性能数据被周期性地采样，这会在达到阈值与发出性能警报之间造成短暂的延迟（几秒钟）。  
@@ -114,7 +113,7 @@ ms.locfileid: "80216969"
   
   
 ## <a name="selecting-a-wmi-event"></a>选择 WMI 事件  
-可以指定发出警报来响应特定的 WMI 事件。 若要选择 WMI 事件，必须在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的“新建警报”  或“警报属性”  对话框中的“常规”  页上定义下列内容：  
+可以指定发出警报来响应特定的 WMI 事件。 若要选择 WMI 事件，必须在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的“新建警报”或“警报属性”对话框中的“常规”页上定义下列内容：  
   
 -   **Namespace**  
   

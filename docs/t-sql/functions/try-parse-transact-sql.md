@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - TRY_PARSE function
 ms.assetid: 292bac1d-edd8-468c-8ff1-8c7de625bc55
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 3533d69ebaac7cf535de0e835bdbfdef9c5fbb4b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 776cee4cf286f3b25b531dd6b6cd16798ea21b03
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70152051"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112241"
 ---
 # <a name="try_parse-transact-sql"></a>TRY_PARSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
@@ -39,7 +39,9 @@ ms.locfileid: "70152051"
 TRY_PARSE ( string_value AS data_type [ USING culture ] )  
 ```  
   
-## <a name="arguments"></a>参数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>参数
  string_value   
  nvarchar(4000) 值，表示要分析为指定数据类型的格式化值  。  
   
@@ -51,7 +53,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
  *区域性*  
  可选字符串，它标识对 string_value 进行格式化的区域性  。  
   
- 如果未提供 culture 参数，则使用当前会话的语言  。 可以使用 SET LANGUAGE 语句隐式或显式设置此语言。 culture 接受 .NET Framework 支持的任何区域性；它不局限于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 显式支持的语言。 如果 culture 参数无效，PARSE 将引发错误  。  
+ 如果未提供 culture 参数，则使用当前会话的语言  。 可以使用 SET LANGUAGE 语句隐式或显式设置此语言。 culture 接受 .NET Framework 支持的任何区域性；它不局限于  *显式支持的语言*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果 culture 参数无效，PARSE 将引发错误  。  
   
 ## <a name="return-types"></a>返回类型  
  返回表达式的结果（已转换为请求的数据类型）；如果强制转换失败，则返回 Null。  

@@ -2,22 +2,22 @@
 title: 使用 olapR 在 R 中创建 MDX 查询
 description: 使用 SQL Server 中的 olapR 包库在 R 语言脚本中编写 MDX 查询。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 05/22/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: dceaaa9848b754de65d213e570f33780c3be95bd
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 501449396ee20b763047ac16d23e32b3e98aa366
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117630"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722530"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>如何使用 olapR 在 R 中创建 MDX 查询
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) 包支持对 SQL Server Analysis Services 中托管的多维数据集执行 MDX 查询。 可以针对现有多维数据集生成查询，浏览维度和其他多维数据集对象，并粘贴进现有 MDX 查询以检索数据。
 

@@ -2,22 +2,22 @@
 title: 在 R 中创建基于分区的模型
 description: 了解如何对在使用 SQL Server 机器学习基于分区的建模功能时动态创建的分区数据进行建模、训练和使用。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 04/30/2020
 ms.topic: tutorial
 ms.author: davidph
 author: dphansen
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9c45fa9db06980f05bdaf059aae857a36b326c24
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: bf294501b1cb613bf97b581a30a193469c78b9f6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606679"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756396"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>教程：在 SQL Server 中使用 R 创建基于分区的模型
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 在 SQL Server 2019 中，“基于分区的建模”功能可用于根据分区数据创建和训练模型。 对于自然分割为给定分类方案的分层数据（例如地理区域、日期和时间、年龄或性别），可以对整个数据集执行脚本，并能够对在所有这些操作中保持不变的分区进行建模、训练和评分。 
 

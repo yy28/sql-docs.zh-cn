@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5982ca65-74fe-44e3-aef9-00a65a0db169
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fb0036acec4ec0c416f6fa01ccf99663be741514
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e97723d6ea047aa86641c9074ff235c682519e7a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789464"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245187"
 ---
 # <a name="maintenance-plans"></a>维护计划
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,9 +63,8 @@ ms.locfileid: "85789464"
 ## <a name="related-tasks"></a>Related Tasks  
  参考以下主题以开始使用维护计划。  
   
-|||  
+|说明|主题|  
 |-|-|  
-|**说明**|**主题**|  
 |配置“代理 XP”服务器配置选项以启用 SQL Server 代理扩展存储过程。|[“代理 XP”服务器配置选项](../../database-engine/configure-windows/agent-xps-server-configuration-option.md)|
 |说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 创建维护计划。|[创建维护计划](../../relational-databases/maintenance-plans/create-a-maintenance-plan.md)|  
 |说明如何使用维护计划设计图面创建维护计划。|[创建维护计划（维护计划设计图面）](../../relational-databases/maintenance-plans/create-a-maintenance-plan-maintenance-plan-design-surface.md)|  

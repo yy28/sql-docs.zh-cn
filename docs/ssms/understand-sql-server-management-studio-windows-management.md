@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: bebf8383-dcaf-466e-84f5-63b81c9cfe52
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6e0bc52b8053de12b20e273efefe2f582a6e746c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ee287295ca0d1e9912f5bb2f349f868734bcbc5b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245496"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010803"
 ---
 # <a name="understand-sql-server-management-studio-windows-management"></a>了解 SQL Server Management Studio Windows 管理
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的工具窗口是功能强大、灵活和高效的系统，使用该窗口可以：  
   
 -   最大化用于开发和管理的用户工作区。  

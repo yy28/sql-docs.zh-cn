@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 01d2738b6a095646d1585857fdee7760079672c3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b6fe67dc138f9c3661732f1c1cbbf5038d9013f1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75252207"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009348"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>SQL Server Management Studio 中的用户帮助
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 通过“帮助”菜单和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 联机丛书提供用户帮助。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 中的“帮助”菜单以几种不同的途径提供有关 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的信息。 它还提供了对以前无法在“帮助”环境中使用的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 社区和 MSDN 在线资源的访问。 此外，现在可以将“帮助”环境配置为在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 环境中启动或在其自身的关联外部窗口中启动。  
   
 ## <a name="the-help-interface"></a>“帮助”界面  

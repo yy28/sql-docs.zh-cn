@@ -12,17 +12,16 @@ helpviewer_keywords:
 ms.assetid: 18de47b1-f936-427d-b852-fe6d20334f71
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 5c1a8b952d0723c4fd1c54ab2b841ed818017c9f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3328277c15511a94603436c7c845671e9fd8dc86
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254309"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000067"
 ---
 # <a name="create-outer-joins-visual-database-tools"></a>创建外部联接 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 默认情况下， [查询和视图设计器](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) 在表之间创建内部联接。 内部联接消除了与其他表中的行不匹配的行。 但是，外部联接可以从 FROM 子句中提到的至少一个表或视图中返回所有行，只要这些行符合任何 WHERE 或 HAVING 搜索条件。 若要在结果集中包含在联接表无匹配项的数据行，可以创建外部联接。  
   
 在创建外部联接时，表在 SQL 语句中出现的顺序（反映在 SQL 窗格中）非常重要。 添加的第一个表成为“左”表，而第二个表成为“右”表。 （表在 [“关系图”窗格](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md) 中实际出现的顺序并不重要。）当指定左外部联接或右外部联接时，引用的顺序是将这些表添加到查询中的顺序，以及它们在 [SQL 窗格](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)中的 SQL 语句中出现的顺序。  

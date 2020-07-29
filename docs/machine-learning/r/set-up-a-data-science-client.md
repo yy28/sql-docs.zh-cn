@@ -2,22 +2,22 @@
 title: 设置 R 数据科学客户端
 description: 在开发工作站上安装本地 R 库和工具，以便远程连接到 SQL Server。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 06/13/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 160365ea9782f50376a34eb87a3bf6893ce404c9
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: a42d3203455d4273410b9b216c19e7a9d1da4e3a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117370"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896384"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>在 SQL Server 上建立 R 开发的数据科学客户端
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 从 SQL Server 2016 及更高版本开始，如果在 [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) 或 [SQL Server 机器学习服务（数据库内）](../install/sql-machine-learning-services-windows-install.md)安装中包含 R 语言选项，则可使用 R 集成功能。 
 
@@ -48,12 +48,12 @@ Microsoft 的 R 包提供多种产品和服务。 建议在本地工作站上安
 
 2. 在安装向导中，接受或更改默认安装路径，接受或更改组件列表，并接受 Microsoft R Client 许可条款。
 
-  安装完成后，欢迎屏幕将向你介绍产品和文档。
+   安装完成后，欢迎屏幕将向你介绍产品和文档。
 
 3. 创建 MKL_CBWR 系统环境变量，以确保从 Intel 数学核心函数库 (MKL) 计算得到一致的输出结果。
 
-  + 在“控制面板”中，单击“系统和安全” > “系统” > “高级系统设置” > “环境变量”     。
-  + 创建名为 MKL_CBWR 的新系统变量，并将值设置为“AUTO”   。
+   + 在“控制面板”中，单击“系统和安全” > “系统” > “高级系统设置” > “环境变量”     。
+   + 创建名为 MKL_CBWR 的新系统变量，并将值设置为“AUTO”   。
 
 ## <a name="2---locate-executables"></a>2 - 查找可执行文件
 
@@ -74,7 +74,7 @@ Microsoft 的 R 包提供多种产品和服务。 建议在本地工作站上安
 
 1. 打开 C:\Program Files\Microsoft\R Client\R_SERVER\bin\x64 并双击 RGui 以使用 R 命令提示符启动 R 会话  。
 
-  从 Microsoft 程序文件夹启动 R 会话时，会自动加载多个包，包括 RevoScaleR。 
+   从 Microsoft 程序文件夹启动 R 会话时，会自动加载多个包，包括 RevoScaleR。 
 
 2. 在命令提示符下输入 `print(Revo.version)` 以返回 RevoScaleR 包版本信息。 应为 9.2.1 或 9.3.0 版的 RevoScaleR。
 
@@ -103,7 +103,7 @@ Microsoft 的 R 包提供多种产品和服务。 建议在本地工作站上安
 
 ## <a name="5---test-connections"></a>5 - 测试连接
 
- 作为验证步骤，请使用 RGUI 和 RevoScaleR 确认与远程服务器的连接  。 必须为[远程连接](https://docs.microsoft.com/sql/database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server)启用 SQL Server，且必须具有权限，包括用户登录名和要连接的数据库。 
+作为验证步骤，请使用 RGUI 和 RevoScaleR 确认与远程服务器的连接  。 必须为[远程连接](https://docs.microsoft.com/sql/database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server)启用 SQL Server，且必须具有权限，包括用户登录名和要连接的数据库。 
 
 以下步骤假定演示数据库 [NYCTaxi_Sample](../tutorials/demo-data-nyctaxi-in-sql.md) 和 Windows 身份验证。
 
@@ -113,78 +113,78 @@ Microsoft 的 R 包提供多种产品和服务。 建议在本地工作站上安
 
 3. 输入在远程服务器上执行的演示脚本。 必须修改以下示例脚本，使其包含远程 SQL Server 实例的有效名称。 此会话以本地会话开始，但 rxSummary 函数在远程 SQL Server 实例上执行  。
 
-  ```R
-  # Define a connection. Replace server with a valid server name.
-  connStr <- "Driver=SQL Server;Server=<your-server-name>;Database=NYCTaxi_Sample;Trusted_Connection=true"
+   ```R
+   # Define a connection. Replace server with a valid server name.
+   connStr <- "Driver=SQL Server;Server=<your-server-name>;Database=NYCTaxi_Sample;Trusted_Connection=true"
   
-  # Specify the input data in a SQL query.
-  sampleQuery <-"SELECT DISTINCT TOP(100) tip_amount FROM [dbo].nyctaxi_sample ORDER BY tip_amount DESC;"
+   # Specify the input data in a SQL query.
+   sampleQuery <-"SELECT DISTINCT TOP(100) tip_amount FROM [dbo].nyctaxi_sample ORDER BY tip_amount DESC;"
   
-  # Define a remote compute context based on the remote server.
-  cc <-RxInSqlServer(connectionString=connStr)
+   # Define a remote compute context based on the remote server.
+   cc <-RxInSqlServer(connectionString=connStr)
 
-  # Execute the function using the remote compute context.
-  rxSummary(formula = ~ ., data = RxSqlServerData(sqlQuery=sampleQuery, connectionString=connStr), computeContext=cc)
-  ```
+   # Execute the function using the remote compute context.
+   rxSummary(formula = ~ ., data = RxSqlServerData(sqlQuery=sampleQuery, connectionString=connStr), computeContext=cc)
+   ```
 
-  **结果：**
+   **结果：**
 
-  此脚本连接到远程服务器上的数据库，提供查询，创建用于远程代码执行的计算上下文 `cc` 指令，然后提供 RevoScaleR 函数 rxSummary 以返回查询结果的统计摘要  。
+   此脚本连接到远程服务器上的数据库，提供查询，创建用于远程代码执行的计算上下文 `cc` 指令，然后提供 RevoScaleR 函数 rxSummary 以返回查询结果的统计摘要  。
 
-  ```R
-    Call:
-  rxSummary(formula = ~., data = RxSqlServerData(sqlQuery = sampleQuery, 
-      connectionString = connStr), computeContext = cc)
+   ```R
+     Call:
+   rxSummary(formula = ~., data = RxSqlServerData(sqlQuery = sampleQuery, 
+       connectionString = connStr), computeContext = cc)
 
-  Summary Statistics Results for: ~.
-  Data: RxSqlServerData(sqlQuery = sampleQuery, connectionString = connStr) (RxSqlServerData Data Source)
-  Number of valid observations: 100 
+   Summary Statistics Results for: ~.
+   Data: RxSqlServerData(sqlQuery = sampleQuery, connectionString = connStr) (RxSqlServerData Data Source)
+   Number of valid observations: 100 
   
-  Name       Mean   StdDev   Min Max ValidObs MissingObs
-  tip_amount 63.245 31.61087 36  180 100      0     
-  ```
+   Name       Mean   StdDev   Min Max ValidObs MissingObs
+   tip_amount 63.245 31.61087 36  180 100      0     
+   ```
 
 4. 获取并设置计算上下文。 设置好计算上下文后，它将在会话期间保持有效。 如果不确定计算是本地的还是远程的，请运行以下命令来查明。指定连接字符串的结果表示远程计算上下文。
 
-  ```R
-  # Return the current compute context.
-  rxGetComputeContext()
+   ```R
+   # Return the current compute context.
+   rxGetComputeContext()
 
-  # Revert to a local compute context.
-  rxSetComputeContext("local")
-  rxGetComputeContext()
+   # Revert to a local compute context.
+   rxSetComputeContext("local")
+   rxGetComputeContext()
 
-  # Switch back to remote.
-  connStr <- "Driver=SQL Server;Server=<your-server-name>;Database=NYCTaxi_Sample;Trusted_Connection=true"
-  cc <-RxInSqlServer(connectionString=connStr)
-  rxSetComputeContext(cc)
-  rxGetComputeContext()
-  ```  
+   # Switch back to remote.
+   connStr <- "Driver=SQL Server;Server=<your-server-name>;Database=NYCTaxi_Sample;Trusted_Connection=true"
+   cc <-RxInSqlServer(connectionString=connStr)
+   rxSetComputeContext(cc)
+   rxGetComputeContext()
+   ```  
 
 5. 返回有关数据源中变量的信息，包括名称和类型。
 
-  ```R
-  rxGetVarInfo(data = inDataSource)
-  ```
-  结果包括 23 个变量。
+   ```R
+   rxGetVarInfo(data = inDataSource)
+   ```
+   结果包括 23 个变量。
 
 
 6. 生成散点图以了解两个变量之间是否存在依赖关系。 
 
-  ```R
-  # Set the connection string. Substitute a valid server name for the placeholder.
-  connStr <- "Driver=SQL Server;Server=<your database name>;Database=NYCTaxi_Sample;Trusted_Connection=true"
+   ```R
+   # Set the connection string. Substitute a valid server name for the placeholder.
+   connStr <- "Driver=SQL Server;Server=<your database name>;Database=NYCTaxi_Sample;Trusted_Connection=true"
 
-  # Specify a query on the nyctaxi_sample table.
-  # For variables on each axis, remove nulls. Use a WHERE clause and <> to do this.
-  sampleQuery <-"SELECT DISTINCT TOP 100 * from [dbo].[nyctaxi_sample] WHERE fare_amount <> '' AND  tip_amount <> ''"
-  cc <-RxInSqlServer(connectionString=connStr)
+   # Specify a query on the nyctaxi_sample table.
+   # For variables on each axis, remove nulls. Use a WHERE clause and <> to do this.
+   sampleQuery <-"SELECT DISTINCT TOP 100 * from [dbo].[nyctaxi_sample] WHERE fare_amount <> '' AND  tip_amount <> ''"
+   cc <-RxInSqlServer(connectionString=connStr)
 
-  # Generate a scatter plot.
-  rxLinePlot(fare_amount ~ tip_amount, data = RxSqlServerData(sqlQuery=sampleQuery, connectionString=connStr, computeContext=cc), type="p")
-  ```
+   # Generate a scatter plot.
+   rxLinePlot(fare_amount ~ tip_amount, data = RxSqlServerData(sqlQuery=sampleQuery, connectionString=connStr, computeContext=cc), type="p")
+   ```
 
-  下面的屏幕截图显示了输入和散点图输出。
+   下面的屏幕截图显示了输入和散点图输出。
 
    ![RGUI 中的散点图](media/rclient-setup-scatterplot.png "NYC 出租车演示数据的散点图")
 
@@ -206,10 +206,10 @@ Microsoft 的 R 包提供多种产品和服务。 建议在本地工作站上安
 
 1. 在 RStudio 中，[更新 R 路径](https://support.rstudio.com/hc/articles/200486138-Using-Different-Versions-of-R)以指向提供 RevoScaleR、Microsoft R Open 和其他 Microsoft 包的 R 环境。 
 
-  + 对于 R Client 安装，请查找 C:\Program Files\Microsoft\R Client\R_SERVER\bin\x64
-  + 对于独立服务器，请查找 C:\Program Files\Microsoft SQL Server\140\R_SERVER\Library 或 C:\Program Files\Microsoft SQL Server\130\R_SERVER\Library
+   + 对于 R Client 安装，请查找 C:\Program Files\Microsoft\R Client\R_SERVER\bin\x64
+   + 对于独立服务器，请查找 C:\Program Files\Microsoft SQL Server\140\R_SERVER\Library 或 C:\Program Files\Microsoft SQL Server\130\R_SERVER\Library
 
-2. 关闭，然后再打开 RStudio。
+1. 关闭，然后再打开 RStudio。
 
 重新打开 RStudio 时，来自 R Client（或独立服务器）的 R 可执行文件是默认的 R 引擎。
 
@@ -230,16 +230,16 @@ Microsoft 的 R 包提供多种产品和服务。 建议在本地工作站上安
 
 2. 左侧窗格包含预安装模板的列表。 单击“R”，然后选择“R 项目”   。 在“名称”框中，键入 `dbtest`，然后单击“确定”   。 
 
-  Visual Studio 会创建一个新的项目文件夹和一个默认的脚本文件 `Script.R`。 
+   Visual Studio 会创建一个新的项目文件夹和一个默认的脚本文件 `Script.R`。 
 
 3. 在脚本文件的第一行键入 `.libPaths()`，然后按 Ctrl+Enter。
 
-  当前 R 库路径应显示在“R 交互窗口”中  。 
+   当前 R 库路径应显示在“R 交互窗口”中  。 
 
 4. 单击“R 工具”菜单并选择“Windows”以查看可以在工作区中显示的其他 R 特定窗口的列表   。
  
-  + 按 Ctrl+3，查看当前库中包的帮助。
-  + 按 Ctrl+8，查看“变量资源管理器”中的 R 变量  。
+   + 按 Ctrl+3，查看当前库中包的帮助。
+   + 按 Ctrl+8，查看“变量资源管理器”中的 R 变量  。
 
 ## <a name="next-steps"></a>后续步骤
 

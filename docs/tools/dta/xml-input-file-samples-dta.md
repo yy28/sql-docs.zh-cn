@@ -8,20 +8,19 @@ ms.topic: conceptual
 ms.assetid: 1ed28805-a9ae-43ca-92da-101ba0c0c43a
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: ee25d62dcfee23facfb8c4aecb87e5880a100d23
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: acfc7ece997debd1ca77ec8441907ab4e99d0dcd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151736"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731969"
 ---
 # <a name="xml-input-file-samples-dta"></a>XML 输入文件示例 (DTA)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 本节包含可以用于 **dta** 命令行工具的 XML 输入文件示例。 此工具是数据库引擎优化顾问的用户界面之一，数据库引擎优化顾问是一种可用于优化数据库以改进查询性能的工具。 数据库引擎优化顾问可分析工作负荷对一个数据库或多个数据库的影响。 工作负荷是一组针对要优化的数据库执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 在完成工作负荷影响的分析后，数据库引擎优化顾问将创建关于添加索引、索引视图或分区策略（将提高数据库查询性能）的建议。
 

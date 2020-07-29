@@ -5,18 +5,18 @@ ms.topic: conceptual
 ms.custom: ''
 ms.date: 09/17/2017
 ms.prod: sql
-ms.technology: ''
+ms.technology: release-landing
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: f483b643d2d1b1c8ec1e58c0772de021092b2594
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 026ad974a3b743283d2d2810a2e0a4fdf8588ff2
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75656932"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923033"
 ---
 # <a name="sql-server-managing-partners"></a>SQL Server 管理合作伙伴
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 要管理 SQL Server 服务，请从各种行业领先工具中进行选择。  本文重点介绍提供支持 Microsoft SQL Server 的管理解决方案的 Microsoft 合作伙伴公司。
 
 ## <a name="our-management-partners"></a>我们的管理合作伙伴
