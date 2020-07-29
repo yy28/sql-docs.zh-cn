@@ -12,17 +12,16 @@ f1_keywords:
 ms.assetid: fc9d1639-5efa-44fe-a04f-4d4d0def2833
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: f45d48eb6c0904dcd4c77471a100006b30a06c2d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 04e1ac34a1c16dd5b0936634938f9edb0d8328aa
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255150"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010669"
 ---
 # <a name="save-change-script-dialog-box-visual-database-tools"></a>“保存更改脚本”对话框 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 此对话框可显示您在上次保存表以后所做更改的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。 使用该对话框还可以将脚本保存到位于所选位置的文本文件中。  
   
 当您在表设计器中对表进行的更改尚未保存时，则可访问此对话框。 在“表设计器”  菜单上，单击“生成更改脚本”  。  

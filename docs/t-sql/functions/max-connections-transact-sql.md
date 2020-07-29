@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 57eb9f4b-548f-4212-9684-a11d831c4732
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6f005f603a3fa63fa55a94f3e8900758f5799279
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5aef95dbc330d59992513823abcb572ff3c98d8f
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899157"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110382"
 ---
 # <a name="x40x40max_connections-transact-sql"></a>&#x40;&#x40;MAX_CONNECTIONS (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,9 @@ ms.locfileid: "85899157"
 @@MAX_CONNECTIONS  
 ```  
   
-## <a name="return-types"></a>返回类型  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>返回类型
  **integer**  
   
 ## <a name="remarks"></a>备注  

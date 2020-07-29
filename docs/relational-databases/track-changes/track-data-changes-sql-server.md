@@ -20,12 +20,12 @@ ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 94e1353d8fb3d49a71b98e53f6ec92a6db469e2b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f854ae440a51d1f9b3b873dad9f0aa21e88f3ab5
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786076"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247286"
 ---
 # <a name="track-data-changes-sql-server"></a>跟踪数据更改 (SQL Server)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -159,9 +159,8 @@ ms.locfileid: "85786076"
   
 ## <a name="related-tasks-required"></a>相关任务（必需）  
   
-|||  
+|任务|主题|  
 |-|-|  
-|**任务**|**主题**|  
 |提供变更数据捕获的概述。|[关于变更数据捕获 (SQL Server)](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)|  
 |介绍如何启用和禁用针对数据库或表的变更数据捕获。|[启用和禁用变更数据捕获 (SQL Server)](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)|  
 |介绍如何管理和监视变更数据捕获。|[管理和监视变更数据捕获 (SQL Server)](../../relational-databases/track-changes/administer-and-monitor-change-data-capture-sql-server.md)|  

@@ -2,22 +2,22 @@
 title: 在存储过程中部署 R 代码
 description: 在 SQL Server 存储过程中嵌入 R 语言代码，使其可以供任何有权访问 SQL Server 数据库的客户端应用程序可用。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/15/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 324cf4446a593175fd5a8cd11b2abc24bff7d2d7
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 9790f5a5d82584bb0d09fda92c1a7048d384e119
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486801"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242314"
 ---
 # <a name="operationalize-r-code-using-stored-procedures-in-sql-server-machine-learning-services"></a>在 SQL Server 机器学习服务中使用存储过程操作 R 代码
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 在 SQL Server 机器学习服务中使用 R 和 Python 功能时，将解决方案移动到生产环境的最常见方法是在存储过程中嵌入代码。 本文总结了 SQL 开发人员在使用 SQL Server 操作 R 代码时要考虑的要点。
 
@@ -46,7 +46,7 @@ ms.locfileid: "81486801"
 
 + 实时评分，针对小批量进行了优化
 + 单行评分，用于从应用程序进行调用
-+ [本机评分](../sql-native-scoring.md)，可从 SQL Server 快速进行批量预测，而无需调用 R
++ [本机评分](../predictions/native-scoring-predict-transact-sql.md)，可从 SQL Server 快速进行批量预测，而无需调用 R
 
 本演练提供了在批处理和单行模式下使用存储过程进行评分的示例：
 

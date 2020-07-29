@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: 7338dad0-965d-44ba-8c1a-b993acb7156d
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 81c66fe885c7e700366cc12129734710094824d3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d810785665e4ecb2e8c59ba3832687724e65c7b1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255521"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007406"
 ---
 # <a name="collapse-groups-of-rows-visual-database-tools"></a>折叠行组 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 您可以创建这样的一个查询结果，其中每个结果行都与来自原始数据的一整组行相对应。 在拆叠行时应谨记以下几点：  
   
 -   **可以消除重复行** 有些查询可以创建显示多个相同行的结果集。 例如，可以创建这样的结果集：每行都包含作者所在市县的市县名和省市自治区名，但如果一个市县包含多个作者，则将会生成多个相同的行。 生成的 SQL 结果可能类似以下形式：  

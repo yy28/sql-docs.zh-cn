@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fea000eb9b428c58fa01afdd9724b7b4418789cc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8c3a13ad090b378e00ed43d0319100ec8e8a0638
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257156"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001913"
 ---
 # <a name="object-explorer-details-pane"></a>对象资源管理器详细信息窗格
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 对象资源管理器详细信息是 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的一个组件，它提供服务器中所有对象的表格视图，并显示一个用于管理这些对象的用户界面。 对象资源管理器的功能根据服务器的类型稍有不同，但一般都包括用于数据库的开发功能和用于所有服务器类型的管理功能。  
   
 默认情况下，“对象资源管理器详细信息”窗格在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 是可见的。 如果看不到对象资源管理器，请在“视图”  菜单上单击“对象资源管理器详细信息”  或按 **F7**。  

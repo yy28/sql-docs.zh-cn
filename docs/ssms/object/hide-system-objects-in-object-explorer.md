@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c01d8804-838c-4f75-b78c-80e41e4fffdc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a6220224834743ec356e8e67ecc89f13afc02e1e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 05864efb35ecd5fcd49e8f8b90cd8093984a9f78
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257192"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001958"
 ---
 # <a name="hide-system-objects-in-object-explorer"></a>在对象资源管理器中隐藏系统对象
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的对象资源管理器中隐藏系统对象。 对象资源管理器的“数据库”  节点包含系统对象，如系统数据库。 使用“工具”  /“选项”  页可以隐藏系统对象。 某些系统对象（如系统函数和系统数据类型）并不受此设置的影响。  
   
 ## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>使用 SQL Server Management Studio  

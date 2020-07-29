@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 75a385cb2898c48e980f7f6b539d9a21879d8c56
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8d89f8352f7ab00911a54335825f1bce7a446b7a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75240522"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007790"
 ---
 # <a name="save-as"></a>另存为
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 用于将当前项的实例以指定的文件格式保存到指定位置。 单击“文件”  菜单上的“将  *另存为”<file>*   （其中， *<file>* 是当前项的名称），或者在代码编辑器中按 Alt+F，再按 Alt+ A。  
   
 ## <a name="central-panel"></a>中央面板  

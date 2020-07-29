@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e2b0e0f7-717c-48e6-bcd2-a325d938a833
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2d6400652dfaac6074f19a343b9a4cf2c0ffbab8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 39b0c100c4ba80a24d0acd7ab2fdebaa32f1b1f7
+ms.sourcegitcommit: 7397706bbbc7296946e92ca9d4de93d4a5313c66
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920334"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84203234"
 ---
 # <a name="getfunctioncolumns-method-sqlserverdatabasemetadata"></a>getFunctionColumns 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,15 +37,15 @@ public ResultSet getFunctionColumns(java.lang.String catalog,
   
  一个包含目录名称的字符串  。 如果该名称为空字符串 ""，则结果将包括无目录的函数。 如果此字符串为“null”，目录名称则不可用于搜索  。  
   
- schemaPattern   
+ schemaPattern  
   
  一个包含架构名称模式的字符串  。 如果该名称为空字符串 ""，则结果将包括无架构的函数。 如果此字符串为“null”，架构名称则不可用于搜索  。  
   
- functionNamePattern   
+ functionNamePattern  
   
  一个包含函数名称的字符串  。  
   
- columnNamePattern   
+ columnNamePattern  
   
  一个包含参数名称的字符串  。  
   
@@ -79,7 +79,7 @@ public ResultSet getFunctionColumns(java.lang.String catalog,
 |REMARKS|**字符串**|有关列或参数的注释。|  
 |COLUMN_DEF|**字符串**|列的默认值。<br /><br /> **注意：** 此信息可在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中使用，且特定于 JDBC 驱动程序。|  
 |SQL_DATA_TYPE|**smallint**|此列与 DATA_TYPE 列相同，datetime 和 ISO interval 数据类型除外    。<br /><br /> **注意：** 此信息可在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中使用，且特定于 JDBC 驱动程序。|  
-|SQL_DATETIME_SUB|**smallint**|如果 SQL_DATA_TYPE 的值为 SQL_DATETIME 或 SQL_INTERVAL，则为 datetime ISO interval 子代码      。 对于 datetime  和 ISO interval  以外的数据类型，该列为 NULL。<br /><br /> **注意：** 此信息可在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中使用且特定于 JDBC 驱动程序。|  
+|SQL_DATETIME_SUB|**smallint**|如果 SQL_DATA_TYPE 的值为 SQL_DATETIME 或 SQL_INTERVAL，则为 datetime ISO interval 子代码      。 对于 datetime  和 ISO interval  以外的数据类型，该列为 NULL。<br /><br /> **注意：** 此信息可在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中使用，且特定于 JDBC 驱动程序。|  
 |CHAR_OCTET_LENGTH|**int**|基于二进制和字符的最大长度的参数或列。 对于其他数据类型，该值为 NULL。|  
 |ORDINAL_POSITION|**int**|对于输入和输出参数，它表示从 1 开始的位置。<br /><br /> 对于结果集列，它指从 1 开始的结果集的列的位置。<br /><br /> 对于返回值，该值为 0。|  
 |IS_NULLABLE|**字符串**|确定参数或列的可为 Null 性。<br /><br /> 可以为下列值之一：<br /><br /> 是  ：参数或列可包括 NULL 值。<br /><br /> 否  ：参数或列不可包括 NULL 值。<br /><br /> 空字符串 ("")：未知。|  

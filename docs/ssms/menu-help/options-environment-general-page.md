@@ -13,19 +13,19 @@ f1_keywords:
 ms.assetid: c32ccdb8-2cf8-4c78-b474-a3abd3dbbd13
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 808fcde7587a68f45bda472ba51e03bddc0884af
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f1370fcb02e75a5ed9173c8111a79ce17eea8490
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245742"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007864"
 ---
 # <a name="options-environment---general-page"></a>选项（“环境”-“常规”页）
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 使用“选项”  对话框可以配置 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 启动操作、常规窗口管理选项和其他常规设置。 在“工具”  菜单上，单击“选项”  ，展开“环境”  文件夹，再单击“常规”  。
 
-## <a name="uielement-list"></a>UIElement 列表
+## <a name="ui-element-list"></a>UI 元素列表
 
 **“关闭”按钮只影响活动工具窗口**
 

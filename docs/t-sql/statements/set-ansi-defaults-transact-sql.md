@@ -21,12 +21,12 @@ ms.assetid: bd721d97-6e23-488b-8c8c-c0453d5b3b86
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f3886e6688f6e880a736885b55e5427dc0a98b8d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 6d1cc88f04a85957f21cb215a19c56efa8dc7d9b
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634531"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112779"
 ---
 # <a name="set-ansi_defaults-transact-sql"></a>SET ANSI_DEFAULTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -55,14 +55,40 @@ ANSI_DEFAULTS 是服务器端设置，可以为所有客户端连接启用此行
   
 当启用 (ON) 时，此选项将启用下列 ISO 设置：  
   
-|||  
-|-|-|  
-|SET ANSI_NULLS|SET CURSOR_CLOSE_ON_COMMIT|  
-|SET ANSI_NULL_DFLT_ON|SET IMPLICIT_TRANSACTIONS|  
-|SET ANSI_PADDING|SET QUOTED_IDENTIFIER|  
-|SET ANSI_WARNINGS||  
-|||
-  
+:::row:::
+    :::column:::
+        SET ANSI_NULLS
+    :::column-end:::
+    :::column:::
+        SET CURSOR_CLOSE_ON_COMMIT
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        SET ANSI_NULL_DFLT_ON
+    :::column-end:::
+    :::column:::
+        SET IMPLICIT_TRANSACTIONS
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        SET ANSI_PADDING
+    :::column-end:::
+    :::column:::
+        SET QUOTED_IDENTIFIER
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        SET ANSI_WARNINGS
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+
+&nbsp;
+
 这些 ISO 标准 SET 选项共同定义了用户工作会话、运行触发器或存储过程执行期间的查询处理环境。 不过，这些 SET 选项并未包括遵守 ISO 标准所需的所有选项。  
   
 在处理计算列和索引视图上的索引时，必须将这四个默认选项（`ANSI_NULLS`、`ANSI_PADDING`、`ANSI_WARNINGS` 和 `QUOTED_IDENTIFIER`）设置为 ON。 这些默认选项是七个 SET 选项中的一部分，当您在计算列和索引视图上创建和更改索引时，必须给这七个选项分配必需的值。 其他 SET 选项 `ARITHABORT` (ON)、`CONCAT_NULL_YIELDS_NULL` (ON) 和 `NUMERIC_ROUNDABORT` (OFF)。 有关计算列上的索引视图和索引所必需的 SET 选项设置的详细信息，请参阅[使用 SET 语句时的注意事项](../../t-sql/statements/set-statements-transact-sql.md#considerations-when-you-use-the-set-statements)。  
@@ -71,12 +97,31 @@ ANSI_DEFAULTS 是服务器端设置，可以为所有客户端连接启用此行
   
 当发出 SET ANSI_DEFAULTS 时，QUOTED_IDENTIFIER 将在分析时进行设置，而下列选项则在执行时进行设置：  
   
-|||  
-|-|-|  
-|SET ANSI_NULLS|SET ANSI_WARNINGS|  
-|SET ANSI_NULL_DFLT_ON|SET CURSOR_CLOSE_ON_COMMIT|  
-|SET ANSI_PADDING|SET IMPLICIT_TRANSACTIONS|  
-  
+:::row:::
+    :::column:::
+        SET ANSI_NULLS
+    :::column-end:::
+    :::column:::
+        SET ANSI_WARNINGS
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        SET ANSI_NULL_DFLT_ON
+    :::column-end:::
+    :::column:::
+        SET CURSOR_CLOSE_ON_COMMIT
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        SET ANSI_PADDING
+    :::column-end:::
+    :::column:::
+        SET IMPLICIT_TRANSACTIONS
+    :::column-end:::
+:::row-end:::
+
 ## <a name="permissions"></a>权限  
 要求 **公共** 角色具有成员身份。  
   

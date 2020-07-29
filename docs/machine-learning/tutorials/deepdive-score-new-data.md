@@ -2,22 +2,22 @@
 title: 使用 RevoScaleR 对数据进行评分
 description: RevoScaleR 教程 8：如何在 SQL Server 中使用 R 语言对数据进行评分。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9f0722eeef0b8364da789c8f3787c21c1398527e
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 58e58dcf3112566c09070cc6e522b29ffff6f3b9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116750"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757137"
 ---
 # <a name="score-new-data-sql-server-and-revoscaler-tutorial"></a>对新数据进行评分（SQL Server 和 RevoScaleR 教程）
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 这是介绍如何在 SQL Server 中使用 [RevoScaleR 函数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)的 [RevoScaleR 教程系列](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的第 8 个教程。
 

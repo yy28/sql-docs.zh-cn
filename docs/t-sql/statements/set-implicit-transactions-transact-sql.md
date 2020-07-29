@@ -24,17 +24,17 @@ ms.assetid: a300ac43-e4c0-4329-8b79-a1a05e63370a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eba14b85c18ed8f64288839f5758ed4c4e456e08
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e2ca06a2b34d0c4823ad6e548ddba58f0c5589d9
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004972"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110271"
 ---
 # <a name="set-implicit_transactions-transact-sql"></a>SET IMPLICIT_TRANSACTIONS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  为了连接，将 BEGIN TRANSACTION 模式设置为“隐式”。   
+  为了连接，将 BEGIN TRANSACTION 模式设置为“隐式”。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,18 +45,65 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF }
 ```  
   
 ## <a name="remarks"></a>备注  
- 为 ON 时，系统处于“隐式”事务模式。  这意味着如果 @@TRANCOUNT = 0，下列任一 Transact-SQL 语句都会开始新事务。 这等同于先执行一个不可见的 BEGIN TRANSACTION：  
-  
-||||  
-|-|-|-|  
-|ALTER TABLE|FETCH|REVOKE|  
-|BEGIN TRANSACTION|GRANT|SELECT（参见下面的例外情况。）|  
-|CREATE|INSERT|TRUNCATE TABLE|  
-|DELETE|OPEN|UPDATE|  
-|DROP|。|。|  
-||||
-  
- 为 OFF 时，上述每个 T-SQL 语句都受一个不可见的 BEGIN TRANSACTION 和一个不可见的 COMMIT TRANSACTION 语句限制。 为 OFF 时，事务模式为自动提交。  如果 T-SQL 代码发出了一个可见 BEGIN TRANSACTION，那么事务模式为显式。   
+ 为 ON 时，系统处于“隐式”事务模式。 这意味着如果 @@TRANCOUNT = 0，下列任一 Transact-SQL 语句都会开始新事务。 这等同于先执行一个不可见的 BEGIN TRANSACTION：  
+
+:::row:::
+    :::column:::
+        ALTER TABLE
+    :::column-end:::
+    :::column:::
+        FETCH
+    :::column-end:::
+    :::column:::
+        REVOKE
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        BEGIN TRANSACTION
+    :::column-end:::
+    :::column:::
+        GRANT
+    :::column-end:::
+    :::column:::
+        SELECT（参见下面的例外情况。）
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        CREATE
+    :::column-end:::
+    :::column:::
+        INSERT
+    :::column-end:::
+    :::column:::
+        TRUNCATE TABLE
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        DELETE
+    :::column-end:::
+    :::column:::
+        OPEN
+    :::column-end:::
+    :::column:::
+        UPDATE
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        DROP
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+
+&nbsp;
+
+ 为 OFF 时，上述每个 T-SQL 语句都受一个不可见的 BEGIN TRANSACTION 和一个不可见的 COMMIT TRANSACTION 语句限制。 为 OFF 时，事务模式为自动提交。 如果 T-SQL 代码发出了一个可见 BEGIN TRANSACTION，那么事务模式为显式。  
   
  有几点需要说明：  
   

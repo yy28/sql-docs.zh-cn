@@ -2,22 +2,22 @@
 title: 什么是独立的 Machine Learning Server 或 R Server？
 description: SQL Server 安装程序中独立 R Server 和 Machine Learning Server 的简介概述
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 08/13/2019
-ms.topic: overview
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c745265e1668983a0420bce0d7af35aeecb6daa2
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 08f9a001c828eb9f391b51f7d4257641ab99d551
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117450"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753423"
 ---
 # <a name="what-are-standalone-machine-learning-server-or-r-server-in-sql-server"></a>什么是 SQL Server 中独立的 Machine Learning Server 或 R Server？
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 SQL Server 为独立于 SQL Server 运行的独立 R Server 或 Machine Learning Server 提供安装支持。 根据 SQL Server 版本，独立服务器具有开放源代码 R 基础（可能是 Python），它们与 Microsoft 提供的具有大规模统计和预测分析功能的高性能库重叠。 库还能启用通过 R 或 Python 编写脚本的机器学习任务。 
 

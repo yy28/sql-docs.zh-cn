@@ -17,17 +17,16 @@ helpviewer_keywords:
 ms.assetid: 6d2c14e1-3d73-4d10-ae5b-7f2b5d6c4ea8
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: a4edde16397c865d0bc79e280e382857afde8714
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1ae545c95c1863346c96d009140eb6709b4fcc4e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79198464"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008303"
 ---
 # <a name="design-database-diagrams-visual-database-tools"></a>设计数据库关系图 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 数据库设计器是一种可视化工具，它允许您对所连接的数据库进行设计和可视化处理。 设计数据库时，您可以使用数据库设计器创建、编辑或删除表、列、键、索引、关系和约束。 为使数据库可视化，您可创建一个或多个关系图，以显示数据库中的部分或全部表、列、键和关系。  
   
 ![阐释表关系的数据库关系图](../../ssms/visual-db-tools/media/dv3w7c1.gif "阐释表关系的数据库关系图")  

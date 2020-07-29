@@ -2,22 +2,22 @@
 title: 安装预先定型的模型
 description: 向 SQL Server 机器学习服务（R 或 Python）或 SQL Server R Services 添加预先定型的模型，这些模型用于情绪分析和图像特征化。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 07/30/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 97da2ed795d002fa47900eb21ead90b48b525387
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: aa50fd62b3f1d3c1d40f3603b6a0b3fc4182497f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118230"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771763"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>在 SQL Server 上安装预先定型的机器学习模型
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 本文介绍如何使用 Powershell 将用于情绪分析和图像特征化的免费预先定型的机器学习模型添加到具有 R 或 Python 集成的 SQL Server 实例   。 预先定型的模型由 Microsoft 生成并且可供使用，作为安装后任务添加到实例中。 有关这些模型的详细信息，请参阅本文的[资源](#bkmk_resources)部分。
 

@@ -9,16 +9,16 @@ ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0955875255acc695133700fd0b5a0b30cdf9045e
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: 7695cf6d88fd05fdbffba28663c910889797ace9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606050"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772841"
 ---
 # <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>教程：从 SQL Server 大数据群集中查询 Oracle
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 本教程演示如何从 SQL Server 2019 大数据群集中查询 Oracle 数据。 若要运行本教程，需要有 Oracle 服务器的访问权限。 如果没有访问权限，可通过本教程了解数据虚拟化如何适用于 SQL Server 大数据群集中的外部数据源。
 

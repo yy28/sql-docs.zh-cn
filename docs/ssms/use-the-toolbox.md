@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 16733e39-4dc5-416f-ab10-c1d823f79d2d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6a7d9029d775b2d1255d683e6b4c3b9d44ccdb31
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1bf323be4adf219bcf00dbf48fb6c40433b3611d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75252198"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009357"
 ---
 # <a name="use-the-toolbox"></a>使用工具箱
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 您可以选择工具箱中的项、文本和控件并将其拖至窗体、页和设计器，也可以将这些项从上述源位置拖回到工具箱中，以备将来再次使用。 例如，在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中，可以将任务拖到“维护计划”上。  
   
 工具箱中的项被划分到各选项卡。 以下是常用的工具箱任务及其使用方法的参考表：  

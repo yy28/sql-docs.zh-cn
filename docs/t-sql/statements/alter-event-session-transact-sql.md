@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: da006ac9-f914-4995-a2fb-25b5d971cd90
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1227c893dbbb3999182140e6b63a9f74206c4ec4
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: 819799dbabbe28a254dbc1cbe1a069f6664a9eea
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301854"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111252"
 ---
 # <a name="alter-event-session-transact-sql"></a>ALTER EVENT SESSION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -118,9 +118,8 @@ ON SERVER
 
 ## <a name="arguments"></a>参数
   
-|||  
-|-|-|  
 |术语|定义|  
+|-|-|
 |event_session_name|是现有事件会话的名称。|  
 |STATE = START | STOP|启动或停止事件会话。 此参数仅在 ALTER EVENT SESSION 应用到事件会话对象时才有效。|  
 |ADD EVENT \<event_specifier>|将由 \<event_specifier> 标识的事件与该事件会话建立关联。|

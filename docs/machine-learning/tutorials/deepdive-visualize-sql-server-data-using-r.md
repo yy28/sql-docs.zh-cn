@@ -2,22 +2,22 @@
 title: 使用 RevoScaleR 实现数据的可视化效果
 description: RevoScaleR 教程 6：如何在 SQL Server 中使用 R 语言实现数据的可视化效果。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4cc97db70461797e2e37614ae33d23ed51b21147
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 04ab3d5fc6d4d877dfca18c650bad16e75fa46e8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116720"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756423"
 ---
 #  <a name="visualize-sql-server-data-using-r-sql-server-and-revoscaler-tutorial"></a>使用 R 实现 SQL Server 数据的可视化效果（SQL Server 和 RevoScaleR 教程）
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 这是 [RevoScaleR 教程](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的第 6 个教程，RevoScaleR 教程介绍如何在 SQL Server 中使用 [RevoScaleR 函数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)。
 

@@ -2,22 +2,22 @@
 title: 用扩展事件监视脚本
 description: 了解如何使用扩展事件来监视和疑难解答与 SQL Server 机器学习服务、SQL Server Launchpad 以及 Python 或 R 作业外部脚本有关的操作。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/04/2020
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bfc3c95a4184cede01fb077ee232c02458c97cbf
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 65ede143baab867d77704ce4e776515d5d7d32de
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118900"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110171"
 ---
 # <a name="monitor-python-and-r-scripts-with-extended-events-in-sql-server-machine-learning-services"></a>在 SQL Server 机器学习服务中使用扩展事件监视 Python 和 R 脚本
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 了解如何使用扩展事件来监视和疑难解答与 SQL Server 机器学习服务、SQL Server Launchpad 以及 Python 或 R 作业外部脚本有关的操作。
 
@@ -94,7 +94,7 @@ SQL Server 机器学习服务启动在 SQL Server 进程外部运行的一些服
   
     若要捕获与 Launchpad 相关的事件，请将 .xml 文件放在 SQL Server 实例的 Binn 目录中  。 在默认安装中，此目录为：
 
-    `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\MSSQL\Binn` 列中的一个值匹配。  
+    `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\MSSQL\Binn`.  
   
 + **BXLServer** 是使用外部脚本语言支持 SQL 可扩展性的附属进程，如 R 和 Python。 为每个外部语言实例启动单独的 BxlServer 实例。
   
@@ -135,7 +135,7 @@ SQL Server 机器学习服务启动在 SQL Server 进程外部运行的一些服
 下面的示例显示了 Launchpad 服务的事件跟踪定义：
 
 ```xml
-\<?xml version="1.0" encoding="utf-8"?>  
+<?xml version="1.0" encoding="utf-8"?>  
 <event_sessions>  
 <event_session name="sqlsatelliteut" maxMemory="1" dispatchLatency="1" MaxDispatchLatency="2 SECONDS">  
     <description owner="hay">Xevent for sql tdd runner.</description>  
@@ -158,7 +158,7 @@ SQL Server 机器学习服务启动在 SQL Server 进程外部运行的一些服
 下面的示例显示了 BXLServer 可执行文件的事件跟踪定义。
   
 ```xml
-\<?xml version="1.0" encoding="utf-8"?>  
+<?xml version="1.0" encoding="utf-8"?>  
 <event_sessions>  
  <event_session name="sqlsatelliteut" maxMemory="1" dispatchLatency="1" MaxDispatchLatency="2 SECONDS">  
     <description owner="hay">Xevent for sql tdd runner.</description>  

@@ -17,17 +17,16 @@ helpviewer_keywords:
 ms.assetid: 330bd48c-9427-4967-b58e-b7c492d5ee36
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 75346207a2f91744c78db783bf40edd679ebcbb8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fbd00cd0d6bdd06e23ec65ddb73ffbfa65649199
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75258344"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009297"
 ---
 # <a name="multiuser-environments-visual-database-tools"></a>多用户环境 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 多用户环境是指如下环境：在该环境中，其他用户可以连接到您正在使用的同一数据库，并对其进行修改。 因此，多个用户可能同时对同一数据库对象进行操作。 这样，在多用户环境中，在您进行更改时，数据库可能会受到其他用户所做更改的影响；反之亦然。  
   
 在多用户环境中使用数据库的关键问题是访问权限。 您所拥有的数据库权限决定了您可以对数据库执行的操作范围。 例如，若要对数据库中的对象进行更改，您必须对该数据库具有相应的写权限。 有关数据库中的权限的详细信息，请参阅数据库文档。 有关详细信息，请参阅[权限和 Visual Database Tools (Visual Database Tools)](../../ssms/visual-db-tools/permissions-and-visual-database-tools-visual-database-tools.md)  

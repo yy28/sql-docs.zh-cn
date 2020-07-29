@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: fc7ed4f2-ad3d-47fc-a3ef-51e5bb069ef0
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: b85d852b4eee542632af0afbbf561fec47fac35a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: db41d89c4e8ec8b7142b8c77d16426c06fac7596
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255281"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999476"
 ---
 # <a name="reconcile-changes-made-by-multiple-users-visual-database-tools"></a>协调多个用户所做的更改 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 在多用户环境中，多个用户可以同时对同一个对象进行更改。 当您在表或数据库关系图设计器中处理对象的结构时，可能会出现这种情况；对于查询和视图设计器的“结果”窗格内所返回结果中的值，也会出现这种情况。 这可能导致您需要解决的冲突。  
   
 ## <a name="conflicts-in-the-table-or-database-diagram-designers"></a>表设计器或数据库关系图设计器中的冲突  

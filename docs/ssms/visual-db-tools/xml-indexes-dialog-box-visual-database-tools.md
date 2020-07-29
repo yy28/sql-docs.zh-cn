@@ -11,17 +11,16 @@ f1_keywords:
 ms.assetid: eef38310-4498-4ccc-bb77-5bbd1c7cc477
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 38be046b5c99e56a76c716117708d4eeb88ac9fd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b6753441008d5c88681a0931be512e70a3e54458
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75246177"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002557"
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>“XML 索引”对话框 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 使用“XML 索引”  对话框可为 XML 数据类型的列创建索引，这些列不能使用“索引/键”  对话框创建索引。 每个 XML 列都可以有多个 XML 索引，但最先创建的索引（主索引）将成为其他索引（二级索引）的基础。 删除主 XML 索引后，二级索引也会随之删除。  
   
 ## <a name="options"></a>选项  
