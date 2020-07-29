@@ -16,16 +16,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/07/2017
-ms.openlocfilehash: 74f521a83f63d1604e96deda8313fd11f07235c4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 95331f9861db63bed63870a373981c5309ff3e04
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75256216"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011809"
 ---
 # <a name="move-a-registered-server-or-registered-server-group"></a>移动已注册的服务器或已注册的服务器组
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 本主题说明如何通过在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中移动已注册服务器或服务器组来整理服务器。 服务器组可以包括注册服务器，也可以包含其他服务器组。 服务器和服务器组都可以从一个服务器组移动到另一个服务器组。  
 

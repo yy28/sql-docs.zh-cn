@@ -2,22 +2,22 @@
 title: 在 Azure 虚拟机上安装
 description: 在 Azure 云中的虚拟机上，使用 SQL Server 机器学习服务运行 Python 和 R 数据科学以及机器学习解决方案。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 01/02/2020
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d81237f67c82fd7cc8b9259fcd7a0202ffb7fd4b
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 7516d23ade89b4d82858c209f46498207f06cde5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118440"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882126"
 ---
 # <a name="install-sql-server-machine-learning-services-with-python-and-r-on-an-azure-virtual-machine"></a>在 Azure 虚拟机上安装带有 Python 和 R 的 SQL Server 机器学习服务
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 了解如何在 Azure 虚拟机上安装带有 SQL Server 机器学习服务的 Python 和 R。 通过此操作，无需再执行机器学习服务的安装和配置任务。
 

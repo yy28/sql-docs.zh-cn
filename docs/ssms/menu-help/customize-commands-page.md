@@ -12,18 +12,18 @@ f1_keywords:
 ms.assetid: c8965f2c-51d9-437d-a6f3-8ac2075ede6b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8c4e138eb6b530377b76fcb6e6fb21a2694bce63
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: df3c48dcab1ee71f8cfee1932099b034729451e3
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255702"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000414"
 ---
 # <a name="customize-commands-page"></a>自定义（“命令”页）
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 使用此对话框，您可以在工具栏和菜单上添加和删除命令，以及更改用于工具栏按钮或菜单命令的图像。 可以通过在“工具”  菜单上单击“自定义  ”，再单击“命令”  ，来访问“命令”  页。  
   
-## <a name="uielement-list"></a>UIElement 列表  
+## <a name="ui-element-list"></a>UI 元素列表  
 **类别**  
 指定在“命令”  列表框中显示的命令集。 命令的类别基于环境当前支持的工具和设计器所提供的菜单标题。 此标题列表是动态的，所以根据工具和设计器的不同，以及对它们所做的任何自定义设置，类别和菜单标题的顺序会有所变化。 因此，来自不同设计器的两个菜单可能具有相同的名称，所以相同的标题可以会出现两次，却提供不同的命令集。  
   

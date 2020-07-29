@@ -18,12 +18,12 @@ ms.assetid: e7f917ba-bf4a-4fe0-b342-a91bcf88a71b
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f7b8e84e35e2af64a83c323474bfc46a81553c7c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8aa10e165dff3f32227f52880afebb8de24f2d12
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003757"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248508"
 ---
 # <a name="ranking-functions-transact-sql"></a>排名函数 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,11 +31,23 @@ ms.locfileid: "86003757"
   排名函数为分区中的每一行返回一个排名值。 根据所用函数的不同，某些行可能与其他行接收到相同的值。 排名函数具有不确定性。  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 提供下列排名函数：  
-  
-|||  
-|-|-|  
-|[RANK](../../t-sql/functions/rank-transact-sql.md)|[NTILE](../../t-sql/functions/ntile-transact-sql.md)|  
-|[DENSE_RANK](../../t-sql/functions/dense-rank-transact-sql.md)|[ROW_NUMBER](../../t-sql/functions/row-number-transact-sql.md)|  
+
+:::row:::
+    :::column:::
+        [RANK](../../t-sql/functions/rank-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [NTILE](../../t-sql/functions/ntile-transact-sql.md)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        [DENSE_RANK](../../t-sql/functions/dense-rank-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [ROW_NUMBER](../../t-sql/functions/row-number-transact-sql.md)
+    :::column-end:::
+:::row-end:::
   
 ## <a name="examples"></a>示例  
  以下示例显示了用在同一查询中的四个排名函数。 有关函数特定的示例，请参阅每个排名函数。  
