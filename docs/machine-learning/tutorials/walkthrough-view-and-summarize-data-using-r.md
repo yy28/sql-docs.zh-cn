@@ -2,22 +2,22 @@
 title: R 教程：浏览数据
 description: 教程演示如何使用 R 函数对 SQL Server 上的数据库内分析进行可视化并生成统计摘要。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e74224851d2c475cd89160b362ba163d53c00f61
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 18fd4df2d2ae5764b5f3e9becaa872f863ed5ee5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81115690"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781776"
 ---
 # <a name="view-and-summarize-sql-server-data-using-r-walkthrough"></a>使用 R 查看并汇总 SQL Server 数据（演练）
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 本课程介绍 RevoScaleR 包中的功能，并指导你完成以下任务  ：
 

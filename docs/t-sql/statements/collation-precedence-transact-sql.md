@@ -26,12 +26,12 @@ ms.assetid: 58c4e64b-5634-4c29-aa22-33193282dd27
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 51c3975cb0db2b93ebcaefcc6d2c423da62ba0e0
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 09d9ff8e9944faa4d5dcbd9f24f2ab5a359962e2
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011330"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111199"
 ---
 # <a name="collation-precedence"></a>排序规则优先级
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -227,16 +227,63 @@ a
  对于返回字符串但不使用字符串输入的内置函数，结果字符串为强制默认并被赋以当前数据库的排序规则，或是包含引用该函数的用户定义函数、存储过程或触发器的数据库的排序规则。  
   
  下列函数区分排序规则，并且它们的输出字符串具有输入字符串的排序规则标签：  
-  
-|||  
-|-|-|  
-|CHARINDEX|REPLACE|  
-|DIFFERENCE|REVERSE|  
-|ISNUMERIC|RIGHT|  
-|LEFT|SOUNDEX|  
-|LEN|STUFF|  
-|LOWER|SUBSTRING|  
-|PATINDEX|UPPER|  
+
+:::row:::
+    :::column:::
+        CHARINDEX
+    :::column-end:::
+    :::column:::
+        REPLACE
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        DIFFERENCE
+    :::column-end:::
+    :::column:::
+        REVERSE
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        ISNUMERIC
+    :::column-end:::
+    :::column:::
+        RIGHT
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        LEFT
+    :::column-end:::
+    :::column:::
+        SOUNDEX
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        LEN
+    :::column-end:::
+    :::column:::
+        STUFF
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        LOWER
+    :::column-end:::
+    :::column:::
+        SUBSTRING
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        PATINDEX
+    :::column-end:::
+    :::column:::
+        UPPER
+    :::column-end:::
+:::row-end:::
   
 ## <a name="see-also"></a>另请参阅  
  [COLLATE (Transact-SQL)](~/t-sql/statements/collations.md)   

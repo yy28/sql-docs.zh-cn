@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: 7f976d2b-1a16-47f8-85e6-d7c2bf6a84b8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 54a65b4c8e6afe0605b4006a8d79838abc93cb74
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dc594973c527d6754cfa5e48cdcc553fed789dea
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245767"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001633"
 ---
 # <a name="options-designers---analysis-services-designers---general"></a>选项（“设计器”-“Analysis Services 设计器”-“常规”）
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 使用“设计器”  、“维护计划”  、“Analysis Services”  和“常规”  页可以确定 Analysis Services 设计器的默认行为。  
   
 ## <a name="connectivity"></a>连接  

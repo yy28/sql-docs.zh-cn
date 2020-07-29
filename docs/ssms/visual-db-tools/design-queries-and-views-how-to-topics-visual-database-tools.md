@@ -20,17 +20,16 @@ helpviewer_keywords:
 ms.assetid: 200903f4-1208-4563-9dca-26aabaacfa20
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 2b19f1152ad5db39d60592fb23d29234db0d00fa
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d736b1071b30cee921fcf766ab1fdeaaea543702
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254666"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008294"
 ---
 # <a name="design-queries-and-views-how-to-topics-visual-database-tools"></a>设计查询和视图操作指南主题 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 查询和视图设计器可以帮助您创建和维护应用程序的数据检索和数据操作部分。  
   
 ## <a name="in-this-section"></a>本节内容  

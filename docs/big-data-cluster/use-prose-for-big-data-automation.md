@@ -2,23 +2,23 @@
 title: 生成用于执行数据整理任务的代码
 titleSuffix: Azure Data Studio
 description: 本文介绍如何在 Azure Data Studio 中使用 PROSE 代码加速器自动生成可用于执行常见数据整理任务的代码。
-author: MikeRayMSFT
-ms.author: mikeray
+author: dphansen
+ms.author: davidph
 ms.reviewer: mihaelab
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.technology: big-data-cluster
-ms.openlocfilehash: e21c172bf886695a3d424d25907a0c36e4b22f20
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.technology: machine-learning-bdc
+ms.openlocfilehash: 548db45e97fed2a5d955eef947c6d21004d439d2
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67957686"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243438"
 ---
 # <a name="data-wrangling-using-prose-code-accelerator"></a>使用 PROSE 代码加速器进行数据整理
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 PROSE 代码加速器可生成用于执行数据整理任务的可读 Python 代码。 在 Azure Data Studio 中的笔记本上工作时，可以无缝混合生成的代码和手动编写的代码。 本文概述了如何使用代码加速器。
 
@@ -113,8 +113,8 @@ builder.learn().code()
 另一种常见场景是检测字符串列中的模式，以便进行清除或分组。 例如，你的一个日期列中可能有多种不同格式的日期。 为了标准化这些值，你可能想要使用正则表达式来编写条件语句。
 
 
-|   |名称                      |BirthDate      |
-|---|:-------------------------|:--------------|
+|行|名称                      |BirthDate      |
+|--:|:-------------------------|:--------------|
 | 0 |Bertram du Plessis        |1995           |
 | 1 |Naiara Moravcikova        |未知        |
 | 2 |Jihoo Spel                |2014           |

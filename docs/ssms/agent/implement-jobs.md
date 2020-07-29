@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 69e06724-25c7-4fb3-8a5b-3d4596f21756
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9770382558af7e77090235775c133dbeaeabff51
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2c5de395fdf9f546eb467712145fda29580914b4
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75242347"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246207"
 ---
 # <a name="implement-jobs"></a>执行作业
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
 > [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
@@ -38,9 +37,8 @@ ms.locfileid: "75242347"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|||  
-|-|-|  
-|**说明**|**主题**|  
+|说明|主题|  
+|-|-|   
 |包含有关创建作业和分配所有权的信息。|[创建作业](../../ssms/agent/create-jobs.md)|  
 |包含有关将作业组织到目录的信息。|[组织作业](../../ssms/agent/organize-jobs.md)|  
 |说明可以创建的各种作业步骤以及如何管理它们。|[管理作业步骤](../../ssms/agent/manage-job-steps.md)|  

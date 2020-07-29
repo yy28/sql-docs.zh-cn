@@ -5,16 +5,16 @@ description: 本文介绍如何配置 HDFS 分层，以将外部 Azure Data Lake
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 11/05/2019
+ms.date: 06/29/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 543db5b96f9a2b02d579b7b6686049ff19af99d7
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: b0206ca193e6c03624c0d40d0c66e7474b00a7a0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606519"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730654"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>如何在大数据群集中装载 ADLS Gen2 以实现 HDFS 分层
 
@@ -48,7 +48,7 @@ ms.locfileid: "83606519"
 1. 在右侧导航栏中选择“应用注册”，并创建新的注册
 1. 创建 Web 应用程序，然后按照向导操作。 记住在此处创建的应用的名称。 稍后需要以授权用户的身份将此名称添加到 ADLS 帐户。 在选择应用程序时，另请注意概述中的应用程序客户端 ID。
 1. 创建 web 应用程序后，请转到“证书和密码”，创建“新客户端密码”并选择密钥持续时间。 “添加”密码。
-1.     返回“应用注册”页面，然后单击顶部的“终结点”。 记下“OAuth 令牌终结点(v2)”URL
+1. 返回“应用注册”页面，然后单击顶部的“终结点”。 记下“OAuth 令牌终结点(v2)”URL
 1. 现在应为 OAuth 记下以下内容：
 
     - Web 应用程序的“应用程序客户端 ID”
@@ -71,13 +71,13 @@ ms.locfileid: "83606519"
 
 请注意，在提供凭据时，需要删除逗号“,”之间的所有换行符或空格。 下面的格式设置只是为了便于阅读。
 
-   ```text
-    set MOUNT_CREDENTIALS=fs.azure.account.auth.type=OAuth,
-    fs.azure.account.oauth.provider.type=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider,
-    fs.azure.account.oauth2.client.endpoint=[token endpoint],
-    fs.azure.account.oauth2.client.id=[Application client ID],
-    fs.azure.account.oauth2.client.secret=[client secret]
-   ```
+```console
+   set MOUNT_CREDENTIALS=fs.azure.account.auth.type=OAuth,
+   fs.azure.account.oauth.provider.type=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider,
+   fs.azure.account.oauth2.client.endpoint=[token endpoint],
+   fs.azure.account.oauth2.client.id=[Application client ID],
+   fs.azure.account.oauth2.client.secret=[client secret]
+```
 
 ## <a name="use-access-keys-to-mount"></a>使用访问密钥进行装载
 
@@ -94,10 +94,10 @@ ms.locfileid: "83606519"
 
 请注意，在提供凭据时，需要删除逗号“,”之间的所有换行符或空格。 下面的格式设置只是为了便于阅读。
 
-   ```text
-   set MOUNT_CREDENTIALS=fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net,
-   fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>
-   ```
+```console
+set MOUNT_CREDENTIALS=fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net,
+fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>
+```
 
 ## <a name="mount-the-remote-hdfs-storage"></a><a id="mount"></a>装载远程 HDFS 存储
 

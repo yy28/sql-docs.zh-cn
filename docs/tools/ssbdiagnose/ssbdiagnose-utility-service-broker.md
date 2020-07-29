@@ -23,20 +23,19 @@ helpviewer_keywords:
 ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 9454e30cefa778a45b4fda2a1db7e3ef9c60eb7a
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: e9b797710617be71643cbe1a7b2c721c90fe5a5e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83150558"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748608"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose 实用工具 (Service Broker)
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 **ssbdiagnose** 实用工具可报告 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 会话或 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服务配置中的问题。 可为两个服务或单个服务执行配置检查。 检查出的问题在命令提示符窗口以人工读取文本的形式报告，或输出为可重定向到文件或其他程序的格式化 XML。
 
@@ -307,7 +306,7 @@ WHERE database_id = DB_ID();
  **事件**  
  报告 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 事件，该事件指示 **RUNTIME** 报告期间监视的会话所遇到的问题。 **ssbdiagnose** 在每次生成事件时都进行报告。 如果多个会话都遇到相同问题，则会多次报告相关事件。  
   
- 问题   
+ 问题  
  报告导致 **ssbdiagnose** 无法完成配置分析或无法监视会话的问题。  
   
 ## <a name="sqlcmd-environment-variables"></a>sqlcmd 环境变量  

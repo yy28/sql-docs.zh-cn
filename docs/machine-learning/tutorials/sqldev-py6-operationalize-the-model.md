@@ -2,22 +2,22 @@
 title: Python + T-SQL：运行预测
 description: 本教程介绍如何使用 T-SQL 函数在 SQL Server 存储过程中操作嵌入式 Python 脚本
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/02/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 00e4ba99b23abff0147627239093328e6f483ffb
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 0d6994aade329150d2715eca92181f4cf2773c40
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81115820"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775322"
 ---
 # <a name="run-predictions-using-python-embedded-in-a-stored-procedure"></a>使用存储过程中嵌入的 Python 来运行预测
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 本文属于[适用于 SQL 开发者的数据库内 Python 分析](sqldev-in-database-python-for-sql-developers.md)这一教程。 
 

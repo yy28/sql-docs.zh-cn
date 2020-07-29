@@ -11,12 +11,12 @@ ms.assetid: 60e5d6f6-a26d-4bba-aada-42e382bbcd38
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4eb809ddbd1acfdd3a01f5601b30e9cf6e9259e0
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 6f9392a6ef282d1a3201e5edb2a4fa026adc5752
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555252"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122766"
 ---
 # <a name="temporal-table-security"></a>临时表安全性
 
@@ -58,15 +58,15 @@ ms.locfileid: "86555252"
 
 ## <a name="security-of-the-create-temporal-table-statement"></a>CREATE Temporal TABLE 语句的安全性
 
-||创建新的历史记录表|重用现有的历史记录表|
-|-|------------------------------|----------------------------------|
+| Feature | 创建新的历史记录表 | 重用现有的历史记录表 |
+| ------- | ------------------------ | ---------------------------- |
 |所需的权限|数据库中的**CREATE TABLE** 权限<br /><br /> 在其中创建当前和历史记录表的架构上的**ALTER** 权限|数据库中的**CREATE TABLE** 权限<br /><br /> 将在其中创建当前表的架构上的**ALTER** 权限<br /><br /> 指定其作为创建临时表的**CONTROL** 语句的一部分的历史记录表上的 **CONTROL** 权限|
 |审核|审核显示用户尝试创建两个对象。 操作可能由于缺少在数据库中创建表的权限或缺少改变任一表的架构的权限而失败。|审核显示临时表已创建。 操作可能由于缺少在数据库中创建表的权限、缺少改变临时表的架构的权限或缺少对历史记录表的权限而失败。|
 
 ## <a name="security-of-the-alter-temporal-table-set-system_versioning-onoff-statement"></a>ALTER Temporal TABLE SET (SYSTEM_VERSIONING ON/OFF) 语句的安全性
 
-||创建新的历史记录表|重用现有的历史记录表|
-|-|------------------------------|----------------------------------|
+| Feature | 创建新的历史记录表 | 重用现有的历史记录表 |
+| ------- | ------------------------ | ---------------------------- |
 |所需的权限|数据库中的**CONTROL** 权限<br /><br /> 数据库中的**CREATE TABLE** 权限<br /><br /> 在其中创建历史记录表的架构上的**ALTER** 权限|被更改的原始表上的**CONTROL** 权限<br /><br /> 指定其作为**CONTROL** 语句的一部分的历史记录表上的 **CONTROL** 权限|
 |审核|审核显示临时表已更改，同时创建了历史记录表。 操作可能由于缺少在数据库中创建表的权限、缺少改变历史记录表的架构的权限或缺少修改临时表的权限而失败。|审核显示临时表已更改，但操作需要对历史记录表的访问权限。 操作可能由于缺少对历史记录表或当前表的权限而失败。|
 

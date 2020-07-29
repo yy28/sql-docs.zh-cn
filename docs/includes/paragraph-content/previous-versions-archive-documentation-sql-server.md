@@ -5,16 +5,17 @@
 
 这些存档至少包括以下较早版本的相关文档：
 
+- SQL Server 2014
 - SQL Server 2012
 - SQL Server 2008 R2
 - SQL Server 2008
 - SQL Server 2005
 
-[SQL Server 2014 文档](https://docs.microsoft.com/sql/2014-toc/index?view=sql-server-2014)仍在主要的 Docs 地址中提供。
+[SQL Server 2014 文档](/previous-versions/sql/2014/index?view=sql-server-2014)仍在主要的 Docs 地址中提供。
 
 [SQL Server 2019 文档](https://docs.microsoft.com/sql/sql-server?view=sql-server-ver15)在主要的 Docs 地址中提供。 然后使用页面顶部附近的“版本控制”下拉列表来选择其他感兴趣的版本。
 
-有关 SQL Server 早期版本的文档的详细信息，请参阅[以前版本的 SQL Server 文档](/sql/toc/previous-versions-sql-server)。
+有关 SQL Server 早期版本的文档的详细信息，请参阅[以前版本的 SQL Server 文档](/previous-versions/sql/)。
 
 <!-- GM:
 On links to file 'previous-versions-sql-server.md', append 

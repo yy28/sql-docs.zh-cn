@@ -9,16 +9,16 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0cb2f253f56fc58e215d1c800788294e2df7b0aa
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: f7199663209c2d9a0dc51baa0e6986f16722ef94
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606625"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773648"
 ---
 # <a name="what-is-the-master-instance-in-a-sql-server-big-data-cluster"></a>什么是 SQL Server 大数据群集中的主实例？
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 本文介绍 SQL Server 主实例在 SQL Server 2019 大数据群集中的角色。 主实例是一个在大数据群集中运行的 SQL Server 实例，用于管理连接性、横向扩展查询、元数据和用户数据库以及机器学习服务。
 

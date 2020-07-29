@@ -2,22 +2,22 @@
 title: 创建 Python 模型 - revoscalepy
 description: 使用 revoscalepy 函数编写 Python 脚本，以创建在 SQL Server 中远程运行的数据科学模型。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 10/25/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5faa8688f3036f80b947ccc5d99c09c4612f26fb
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 268b8626fc3a121adfded58c1184b332da04139c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116020"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730444"
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model-that-runs-remotely-on-sql-server"></a>将 Python 与 revoscalepy 配合使用，创建在 SQL Server 上远程运行的模型
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 来自 Microsoft 的 [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) Python 库提供了用于数据探索、可视化、转换和分析的数据科学算法。 该库在 SQL Server 中的 Python 集成方案中具有重要的战略意义。 在多核服务器上，revoscalepy 函数可并行运行  。 在具有中央服务器和客户端工作站（单独的物理计算机，均具有相同的 revoscalepy 库）的分布式体系结构中，可编写在本地启动的 Python 代码，但随后需将执行转移到数据所在的远程 SQL server 实例  。
 

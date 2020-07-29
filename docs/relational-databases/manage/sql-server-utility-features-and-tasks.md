@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c48779de7f7edccd4401e1d60740b7cff6a046cd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2378ecd42d821a818a539350f872ed0d12099a8d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755695"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242958"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>SQL Server 实用工具的功能和任务
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,9 +40,8 @@ ms.locfileid: "85755695"
 ## <a name="related-tasks"></a>Related Tasks  
  参考以下主题可以开始使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具。  
   
-|||  
+|说明|主题|  
 |-|-|  
-|**说明**|**主题**|  
 |介绍配置服务器以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的同一实例中运行实用工具和非实用工具收集组时的注意事项。|[在 SQL Server 的同一实例中运行实用工具和非实用工具收集组的注意事项](../../relational-databases/manage/run-utility-and-non-utility-collection-sets-on-same-sql-instance.md)|  
 |介绍如何创建 SQL Server 实用工具控制点。|[创建 SQL Server 实用工具控制点（SQL Server 实用工具）](../../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md)|  
 |介绍如何连接到 SQL Server 实用工具。|[连接到 SQL Server 实用工具](../../relational-databases/manage/connect-to-a-sql-server-utility.md)|  

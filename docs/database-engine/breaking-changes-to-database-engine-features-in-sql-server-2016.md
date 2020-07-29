@@ -3,7 +3,7 @@ title: 数据库引擎：中断性变更 | Microsoft Docs
 titleSuffix: SQL Server 2016
 description: 了解 SQL Server 2016 (13.x) 及更早版本中的数据库引擎变更，这些变更可能会在升级后破坏之前版本的功能。
 ms.custom: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 07/22/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8c6dad3c9ec55f9e895cc9f7ed430ed5816a73a8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bddfd0b06bfc64d68534548cfb90ea09ed2d4076
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751266"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87235969"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2016"></a>SQL Server 2016 中数据库引擎功能的中断性变更
 
@@ -40,7 +40,7 @@ ms.locfileid: "85751266"
 
 ## <a name="previous-versions"></a><a name="previous-versions"></a> 先前版本  
 
-有关 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 和一些早期版本中重大更改的信息，请参阅 [SQL Server 2014 中数据库引擎功能的重大更改](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md?view=sql-server-2014)。
+有关 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 和一些早期版本中重大更改的信息，请参阅 [SQL Server 2014 中数据库引擎功能的重大更改](/previous-versions/sql/2014/database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016)。
 
 #### <a name="archived-documentation-for-very-old-versions-of-sql-server"></a>较早版本的 SQL Server 的存档文档
 

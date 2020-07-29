@@ -17,12 +17,12 @@ ms.assetid: 2f3ce5f5-c81c-4470-8141-8144d4f218dd
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3240f9cd3e94418572482a5e73950e2b522ec663
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7df37d9b9339ef98e438e15678c0781df2875a18
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786885"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247252"
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>确定性函数和不确定性函数
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,20 +39,126 @@ ms.locfileid: "85786885"
   
  内置函数类别中除字符串函数以外的下列内置函数始终具有确定性。  
   
-||||  
-|-|-|-|  
-|ABS|DATEDIFF|POWER|  
-|ACOS|DAY|RADIANS|  
-|ASIN|DEGREES|ROUND|  
-|ATAN|EXP|SIGN|  
-|ATN2|FLOOR|SIN|  
-|CEILING|ISNULL|SQUARE|  
-|COALESCE|ISNUMERIC|SQRT|  
-|COS|LOG|TAN|  
-|COT|LOG10|YEAR|  
-|DATALENGTH|MONTH||  
-|DATEADD|NULLIF||  
-  
+:::row:::
+    :::column:::
+        ABS
+    :::column-end:::
+    :::column:::
+        DATEDIFF
+    :::column-end:::
+    :::column:::
+        POWER
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        ACOS
+    :::column-end:::
+    :::column:::
+        DAY
+    :::column-end:::
+    :::column:::
+        RADIANS
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        ASIN
+    :::column-end:::
+    :::column:::
+        DEGREES
+    :::column-end:::
+    :::column:::
+        ROUND
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        ATAN
+    :::column-end:::
+    :::column:::
+        EXP
+    :::column-end:::
+    :::column:::
+        SIGN
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        ATN2
+    :::column-end:::
+    :::column:::
+        FLOOR
+    :::column-end:::
+    :::column:::
+        SIN
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CEILING
+    :::column-end:::
+    :::column:::
+        ISNULL
+    :::column-end:::
+    :::column:::
+        SQUARE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        COALESCE
+    :::column-end:::
+    :::column:::
+        ISNUMERIC
+    :::column-end:::
+    :::column:::
+        SQRT
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        COS
+    :::column-end:::
+    :::column:::
+        LOG
+    :::column-end:::
+    :::column:::
+        TAN
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        COT
+    :::column-end:::
+    :::column:::
+        LOG10
+    :::column-end:::
+    :::column:::
+        YEAR
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        DATALENGTH
+    :::column-end:::
+    :::column:::
+        MONTH
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        DATEADD
+    :::column-end:::
+    :::column:::
+        NULLIF
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+ 
  下列函数并非始终是确定性函数，但是在以确定性方式指定后，可用于索引视图或计算列的索引。  
   
 |函数|注释|  
@@ -68,28 +174,159 @@ ms.locfileid: "85786885"
   
  其他类别中的下列内置函数始终为非确定性函数。  
   
-|||  
-|-|-|  
-|@@CONNECTIONS|GETDATE|  
-|@@CPU_BUSY|GETUTCDATE|  
-|@@DBTS|GET_TRANSMISSION_STATUS|  
-|@@IDLE|LAG|  
-|@@IO_BUSY|LAST_VALUE|  
-|@@MAX_CONNECTIONS|LEAD|  
-|@@PACK_RECEIVED|MIN_ACTIVE_ROWVERSION|  
-|@@PACK_SENT|NEWID|  
-|@@PACKET_ERRORS|NEWSEQUENTIALID|  
-|@@TIMETICKS|NEXT VALUE FOR|  
-|@@TOTAL_ERRORS|NTILE|  
-|@@TOTAL_READ|PARSENAME|  
-|@@TOTAL_WRITE|PERCENTILE_CONT|  
-|AT TIME ZONE|PERCENTILE_DISC|
-|CUME_DIST|PERCENT_RANK|  
-|CURRENT_TIMESTAMP|RAND|  
-|DENSE_RANK|RANK|  
-|FIRST_VALUE|ROW_NUMBER|   
-|FORMAT|TEXTPTR|  
-  
+:::row:::
+    :::column:::
+        @@CONNECTIONS
+    :::column-end:::
+    :::column:::
+        GETDATE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        @@CPU_BUSY
+    :::column-end:::
+    :::column:::
+        GETUTCDATE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        @@DBTS
+    :::column-end:::
+    :::column:::
+        GET_TRANSMISSION_STATUS
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        @@IDLE
+    :::column-end:::
+    :::column:::
+        LAG
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        @@IO_BUSY
+    :::column-end:::
+    :::column:::
+        LAST_VALUE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        @@MAX_CONNECTIONS
+    :::column-end:::
+    :::column:::
+        LEAD
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        @@PACK_RECEIVED
+    :::column-end:::
+    :::column:::
+        MIN_ACTIVE_ROWVERSION
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        @@PACK_SENT
+    :::column-end:::
+    :::column:::
+        NEWID
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        @@PACKET_ERRORS
+    :::column-end:::
+    :::column:::
+        NEWSEQUENTIALID
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        @@TIMETICKS
+    :::column-end:::
+    :::column:::
+        NEXT VALUE FOR
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        @@TOTAL_ERRORS
+    :::column-end:::
+    :::column:::
+        NTILE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        @@TOTAL_READ
+    :::column-end:::
+    :::column:::
+        PARSENAME
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        @@TOTAL_WRITE
+    :::column-end:::
+    :::column:::
+        PERCENTILE_CONT
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        AT TIME ZONE
+    :::column-end:::
+    :::column:::
+        PERCENTILE_DISC
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        CUME_DIST
+    :::column-end:::
+    :::column:::
+        PERCENT_RANK
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CURRENT_TIMESTAMP
+    :::column-end:::
+    :::column:::
+        RAND
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        DENSE_RANK
+    :::column-end:::
+    :::column:::
+        RANK
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        FIRST_VALUE
+    :::column-end:::
+    :::column:::
+        ROW_NUMBER
+    :::column-end:::
+:::row-end:::   
+:::row:::
+    :::column:::
+        FORMAT
+    :::column-end:::
+    :::column:::
+        TEXTPTR
+    :::column-end:::
+:::row-end:::
+ 
 ## <a name="calling-extended-stored-procedures-from-functions"></a>从函数中调用扩展存储过程  
  由于扩展存储过程会对数据库产生副面影响，因此调用扩展存储过程的函数为不确定性函数。 负面影响为对数据库全局状态的更改，如更新表、更新文件或网络等外部资源；例如，修改文件或发送电子邮件。 从用户定义函数中执行扩展存储过程时，不要依赖于返回一致的结果集。 建议不要使用对数据库产生负面影响的用户定义函数。  
   
