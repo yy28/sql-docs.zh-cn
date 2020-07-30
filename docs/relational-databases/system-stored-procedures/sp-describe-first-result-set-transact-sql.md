@@ -18,15 +18,15 @@ ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2033ae81a030fa57e2f4aaf962e5dd35f9a9a318
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8e3696f537cc538e011d3d037e82e54ed892da35
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831177"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394370"
 ---
 # <a name="sp_describe_first_result_set-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   返回批处理的第一个可能结果集的元数据 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 如果批处理没有返回结果，则返回一个空的结果集。 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 无法通过执行静态分析来确定将执行的第一个查询的元数据，则将引发错误。 动态管理视图[sys.databases dm_exec_describe_first_result_set &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)返回相同的信息。  
   
@@ -41,7 +41,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
     [ , [ @browse_information_mode = ] <tinyint> ] ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ \@tsql = ] 'Transact-SQL_batch'`一个或多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 *Transact-sql SQL_batch*可以是**nvarchar （***n***）** 或**nvarchar （max）**。  
   
 `[ \@params = ] N'parameters'`\@params 为批处理参数提供声明字符串 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，这与 sp_executesql 类似。 参数可以为**nvarchar （n）** 或**nvarchar （max）**。  
@@ -269,7 +269,7 @@ ELSE
     SELECT d FROM t2; '  
 ```  
   
- Result： \< 未知列名称> **varchar （20） NULL**  
+ Result： \<Unknown Column Name> **varchar （20） NULL**  
   
 #### <a name="column-name-forced-to-be-identical-through-aliasing"></a>通过别名强制列名称完全相同  
  与前面的例子相同，但通过列别名，列具有相同名称。  

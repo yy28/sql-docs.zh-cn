@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4a3618b7-d2b8-43c6-a1fd-7a4e6fa8c7d0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 36293c1f2393e9a57351fc8cd19dcc6e3338f5cc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 26d71bbe370e41683da44aafecd32c9e3050a223
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301253"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362753"
 ---
 # <a name="sqlcolumns-function"></a>SQLColumns 函数
 **度**  
@@ -49,7 +49,7 @@ SQLRETURN SQLColumns(
      SQLSMALLINT    NameLength4);  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *StatementHandle*  
  送语句句柄。  
   
@@ -89,20 +89,20 @@ SQLRETURN SQLColumns(
  *NameLength4*  
  送**ColumnName*的长度（字符）。  
   
-## <a name="returns"></a>返回  
+## <a name="returns"></a>返回值  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_STILL_EXECUTING、SQL_ERROR 或 SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>诊断  
  当**SQLColumns**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO 时，可以通过使用*HandleType*的 SQL_HANDLE_STMT 和*StatementHandle*的*句柄*调用**SQLGetDiagRec**来获取关联的 SQLSTATE 值。 下表列出了通常由**SQLColumns**返回的 SQLSTATE 值，并对该函数的上下文中的每个值进行了说明："（DM）" 表示法位于驱动程序管理器返回的 SQLSTATEs 的说明之前。 除非另有说明，否则与每个 SQLSTATE 值相关联的返回代码将 SQL_ERROR。  
   
-|SQLSTATE|错误|说明|  
+|SQLSTATE|错误|描述|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|驱动程序特定的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |08S01|通信链接失败|在函数完成处理之前，驱动程序与连接到的数据源之间的通信链接失败。|  
 |24000|无效的游标状态|在*StatementHandle*上打开了游标，并且调用了**SQLFetch**或**SQLFetchScroll** 。 如果**SQLFetch**或**SQLFetchScroll**未返回 SQL_NO_DATA，驱动程序管理器将返回此错误，如果**SQLFetch**或**SQLFetchScroll**已 SQL_NO_DATA 返回，则由驱动程序返回。<br /><br /> 在*StatementHandle*上打开了游标，但尚未调用**SQLFetch**或**SQLFetchScroll** 。|  
 |40001|序列化失败|由于另一个事务发生资源死锁，事务已回滚。|  
 |40003|语句完成情况未知|在执行此函数的过程中关联的连接失败，无法确定事务的状态。|  
-|HY000|常规错误|发生了一个错误，该错误没有特定的 SQLSTATE，没有为其定义实现特定的 SQLSTATE。 MessageText 缓冲区中的**SQLGetDiagRec**返回的错误消息描述了错误及其原因。 * \**|  
+|HY000|常规错误|发生了一个错误，该错误没有特定的 SQLSTATE，没有为其定义实现特定的 SQLSTATE。 * \* MessageText*缓冲区中的**SQLGetDiagRec**返回的错误消息描述了错误及其原因。|  
 |HY001|内存分配错误|驱动程序无法分配支持执行或完成此函数所需的内存。|  
 |HY008|操作已取消|已为*StatementHandle*启用异步处理。 函数被调用，在完成执行之前，在*StatementHandle*上调用了**SQLCancel**或**SQLCancelHandle** 。 然后，在*StatementHandle*上再次调用该函数。<br /><br /> 函数被调用，在完成执行之前，从多线程应用程序中的另一个线程调用*StatementHandle*上的**SQLCancel**或**SQLCancelHandle** 。|  
 |HY009|空值指针的使用无效|SQL_ATTR_METADATA_ID 语句特性设置为 SQL_TRUE， *CatalogName*参数为 null 指针，SQL_CATALOG_NAME 的*InfoType*返回支持的目录名称。<br /><br /> （DM） SQL_ATTR_METADATA_ID 语句特性设置为 SQL_TRUE， *SchemaName*、 *TableName*或*ColumnName*参数为 null 指针。|  
@@ -118,7 +118,7 @@ SQLRETURN SQLColumns(
 |IM017|在异步通知模式下禁用轮询|无论何时使用通知模型，都将禁用轮询。|  
 |IM018|尚未调用**SQLCompleteAsync**来完成此句柄上先前的异步操作。|如果句柄上的上一个函数调用返回 SQL_STILL_EXECUTING 并且启用了通知模式，则必须在句柄上调用**SQLCompleteAsync** ，以执行后处理并完成操作。|  
   
-## <a name="comments"></a>说明  
+## <a name="comments"></a>注释  
  此函数通常在语句执行之前用于从数据源的目录中检索有关一个或多个表的列的信息。 **SQLColumns**可用于检索**SQLTables**返回的所有类型的项的数据。 除基表外，这可能包括（但不限于）视图、同义词、系统表等。 与此相反，函数**SQLColAttribute**和**SQLDescribeCol**描述结果集中的列，而函数**SQLNumResultCols**返回结果集中的列数。 有关详细信息，请参阅[目录数据的使用](../../../odbc/reference/develop-app/uses-of-catalog-data.md)。  
   
 > [!NOTE]  
@@ -148,16 +148,25 @@ SQLRETURN SQLColumns(
 |RADIX|NUM_PREC_RADIX|  
   
  以下列已添加到**SQLColumns** for ODBC 3 返回的结果集中。*x*：  
-  
-|||  
-|-|-|  
-|CHAR_OCTET_LENGTH|ORDINAL_POSITION|  
-|COLUMN_DEF|SQL_DATA_TYPE|  
-|IS_NULLABLE|SQL_DATETIME_SUB|  
-  
+
+:::row:::
+    :::column:::
+        CHAR_OCTET_LENGTH  
+        COLUMN_DEF  
+    :::column-end:::
+    :::column:::
+        IS_NULLABLE  
+        ORDINAL_POSITION  
+    :::column-end:::
+    :::column:::
+        SQL_DATA_TYPE  
+        SQL_DATETIME_SUB  
+    :::column-end:::
+:::row-end:::
+
  下表列出了结果集中的列。 列18（IS_NULLABLE）以外的其他列可由驱动程序定义。 应用程序应通过从结果集的末尾倒计时而不是指定显式序号位置，来获取对特定于驱动程序的列的访问权限。 有关详细信息，请参阅[目录函数返回的数据](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md)。  
   
-|列名称|列<br /><br /> 数字|数据类型|说明|  
+|列名称|列<br /><br /> number|数据类型|注释|  
 |-----------------|-----------------------|---------------|--------------|  
 |TABLE_CAT （ODBC 1.0）|1|Varchar|目录名称;如果不适用于数据源，则为 NULL。 如果驱动程序为某些表（而不是其他表）支持目录，例如当驱动程序从不同 Dbms 检索数据时，它将为没有目录的表返回空字符串（""）。|  
 |TABLE_SCHEM （ODBC 1.0）|2|Varchar|架构名称;如果不适用于数据源，则为 NULL。 如果驱动程序支持某些表的架构，而不支持其他表的架构，例如当驱动程序从不同 Dbms 检索数据时，它将为没有架构的表返回空字符串（""）。|  
@@ -285,7 +294,7 @@ int main() {
   
 ## <a name="related-functions"></a>相关函数  
   
-|有关以下方面的信息|查看|  
+|有关以下方面的信息|请参阅|  
 |---------------------------|---------|  
 |将缓冲区绑定到结果集中的列|[SQLBindCol 函数](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
 |正在取消语句处理|[SQLCancel 函数](../../../odbc/reference/syntax/sqlcancel-function.md)|  

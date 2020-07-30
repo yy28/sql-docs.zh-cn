@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 0bc33f9fd40a29ab2da19d682fcbdbbb6cd40206
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: faa4c6066af0d7c516434176817d8c7f49672be5
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882560"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363040"
 ---
 # <a name="data-matching"></a>数据匹配
 
@@ -73,7 +73,7 @@ ms.locfileid: "85882560"
 ## <a name="in-this-section"></a>本节内容  
  可以在 DQS 中执行以下与匹配相关的任务：  
   
-|||  
+|任务说明|主题|  
 |-|-|  
 |在匹配策略中创建和测试匹配规则|[创建匹配策略](../data-quality-services/create-a-matching-policy.md)|  
 |在数据质量项目中运行匹配|[运行匹配项目](../data-quality-services/run-a-matching-project.md)|  

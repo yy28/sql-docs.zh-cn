@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 201580b71086dfe39e669966070dae2dca72e3eb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7d7da3f994ed0741ef7ca6bcbe4d6003eea981c7
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68105304"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363407"
 ---
 # <a name="instr-mdx"></a>Instr (MDX)
 
@@ -26,7 +26,7 @@ ms.locfileid: "68105304"
 InStr([start, ]searched_string, search_string[, compare])  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *start*  
  （可选）设置每个搜索的起始位置的一个数值表达式。 如果省略此值，则搜索将会在第一个字符位置开始。 如果 start 为 null，则函数返回值未定义。  
   
@@ -47,9 +47,9 @@ InStr([start, ]searched_string, search_string[, compare])
 |条件|返回值|  
 |---------------|------------------|  
 |String1 为零长度|零 (0)|  
-|String1 为 Null|未定义|  
+|String1 为 Null|undefined|  
 |String2 为零长度|start|  
-|String2 为 Null|未定义|  
+|String2 为 Null|undefined|  
 |找不到 String2|零 (0)|  
 |start 大于 Len(String2)|零 (0)|  
   
@@ -95,9 +95,8 @@ from [Adventure Works]
   
  下表显示了获得的结果。  
   
-|||  
+|度量值中的字段|结果|  
 |-|-|  
-||结果|  
 |lowercase found in lowercase string|16|  
 |uppercase found in lowercase string|16|  
 |searched string is empty|0|  

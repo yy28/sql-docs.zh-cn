@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2fad3fa2-5729-4b96-99d4-2c6edfab0a54
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 17a287b38eb1dd1c1d9e3cee6943f7c069a39c61
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 36cc006382bab28a93beed1ce8c6e48896719674
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67944620"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395172"
 ---
 # <a name="user-interface-reference-mysqltosql"></a>用户界面参考 (MySQLToSQL)
 本部分包括有关 MySQL SQL Server 迁移助手（SSMA）的帮助主题。  
@@ -22,9 +22,8 @@ ms.locfileid: "67944620"
 ## <a name="in-this-section"></a>本节内容  
 下表列出了 "SSMA" 对话框：  
   
-|||  
+|主题|描述|  
 |-|-|  
-|**主题**|**说明**|  
 |[&#40;MySQLToSQL&#41;的高级对象选择](../../ssma/mysql/advanced-object-selection-mysqltosql.md)|使用 "**高级对象选择**" 对话框可以通过使用筛选条件查找数据库对象，然后选择或清除这些对象。|  
 |[评估报表 &#40;MySQLToSQL&#41;](../../ssma/mysql/assessment-report-mysqltosql.md)|使用报表查看将 MySQL 对象转换为 Transact-sql 语法的结果，并估计迁移到 SQL Server 的时间和复杂性。|  
 |[连接到 MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-mysql-mysqltosql.md)|使用 "**连接到 mysql** " 对话框连接到要迁移的 MySQL 数据库。|  

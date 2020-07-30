@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f137e8c377c94a60fdcfd8f1534069cef4b28f66
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1034d96ce0d683d38139636d53471d23581807a1
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68887436"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362797"
 ---
 # <a name="mdx-data-definition---create-subcube"></a>MDX 数据定义 - CREATE SUBCUBE
 
@@ -28,7 +28,7 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
                                                   | NON VISUAL ( Select_Statement )  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *Cube_Name*  
  为受限的多维数据集或透视提供名称的有效字符串表达式，该名称将作为子多维数据集的名称。  
   
@@ -89,9 +89,8 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
  生成下列结果：  
   
-|||||  
+|业务类型 + 类别|All Products|配件|Clothing|  
 |-|-|-|-|  
-||All Products|Accessories|Clothing|  
 |All Resellers|$2031079.39|$506,172.45|$1,524,906.93|  
 |Value Added Reseller|$767388.52|$175,002.81|$592,385.71|  
 |Warehouse|$1263690.86|$331,169.64|$932,521.23|  
@@ -118,9 +117,8 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
  生成以下不同的结果：  
   
-|||||  
+|业务类型 + 类别|All Products|配件|Clothing|  
 |-|-|-|-|  
-||All Products|Accessories|Clothing|  
 |All Resellers|$80,450,596.98|$571,297.93|$1,777,840.84|  
 |Value Added Reseller|$34,967,517.33|$175,002.81|$592,385.71|  
 |Warehouse|$38,726,913.48|$331,169.64|$932,521.23|  

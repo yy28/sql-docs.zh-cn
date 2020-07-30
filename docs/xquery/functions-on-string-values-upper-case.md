@@ -35,7 +35,7 @@ ms.locfileid: "87107219"
 fn:upper-case($arg as xs:string?) as xs:string  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
   
 |术语|定义|  
 |-|-|

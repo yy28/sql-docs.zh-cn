@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 51eff161-6ecd-4ee4-8187-1dd8ef4814bd
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 895dcfdd5acaa580b8ee719a3edac67d7308f605
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c9375c6050c3f401a47857c385348da1478f21ca
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897549"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362668"
 ---
 # <a name="building-a-knowledge-base"></a>生成知识库
 
@@ -25,7 +25,7 @@ ms.locfileid: "85897549"
 ## <a name="in-this-section"></a>本节内容  
  您可以对知识库执行以下操作：  
   
-|||  
+|操作说明|主题|  
 |-|-|  
 |从头开始、从现有知识库或从一个 .dqs 数据文件创建新的知识库。|[创建知识库](../data-quality-services/create-a-knowledge-base.md)|  
 |打开一个现有知识库以便执行知识发现、域管理或者添加匹配策略。|[打开知识库](../data-quality-services/open-a-knowledge-base.md)|  

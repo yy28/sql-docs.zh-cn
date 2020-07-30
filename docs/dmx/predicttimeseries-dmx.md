@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ececf16131544b0a450d877b5c4ba43c2cd80466
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: ff8525e9742009e5a5ada680160f20d5e8063d86
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970685"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363517"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -36,7 +36,7 @@ PredictTimeSeries(<scalar column reference>, n, REPLACE_MODEL_CASES | EXTEND_MOD
 PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES | EXTEND_MODEL_CASES) PREDICTION JOIN <source query>  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *\<table column reference>*, *\<scalar column referenc>*  
  指定要预测的列的名称。 列可以包含标量数据或表格格式数据。  
   
@@ -65,7 +65,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
  这些参数仅在使用 PREDICTION JOIN 语句添加新数据时才可用。 如果使用 PREDICTION JOIN 查询并且没有指定参数，则默认值为 EXTEND_MODEL_CASES。  
   
 ## <a name="return-type"></a>返回类型  
- 一个 \<*table expression*>。  
+ \<*table expression*>。  
   
 ## <a name="remarks"></a>备注  
  当使用 PREDICTION JOIN 语句添加新数据时，[!INCLUDE[msCoName](../includes/msconame-md.md)] 时序算法不支持历史预测。  
@@ -147,7 +147,7 @@ ON
   
  原始预测：  
   
-||||  
+|Model Region|ReportingDate|数量|  
 |-|-|-|  
 |M200 Pacific|7/25/2008 12:00:00 AM|46|  
 |M200 Pacific|8/25/2008 12:00:00 AM|44|  
@@ -155,7 +155,7 @@ ON
   
  更新的预测：  
   
-||||  
+|Model Region|ReportingDate|数量|  
 |-|-|-|  
 |M200 Pacific|7/25/2008 12:00:00 AM|91|  
 |M200 Pacific|8/25/2008 12:00:00 AM|89|  

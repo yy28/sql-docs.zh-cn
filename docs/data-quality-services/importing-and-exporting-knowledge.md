@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 12537c9d-31e4-40b0-a411-cb343abbe96a
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 638a5f791f7997cc96b22bde47f41198a9946133
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 517e672cdb5bb7a6991f83b72f25f937ecbb6359
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882780"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362817"
 ---
 # <a name="importing-and-exporting-knowledge"></a>导入和导出知识
 
@@ -28,7 +28,7 @@ ms.locfileid: "85882780"
 ## <a name="in-this-section"></a>本节内容  
  您可以执行下列导入和导出操作：  
   
-|||  
+|操作说明|主题|  
 |-|-|  
 |将知识库中的域导出到 .dqs 数据文件中|[将域导出到 .dqs 文件](../data-quality-services/export-a-domain-to-a-dqs-file.md)|  
 |将域从 .dqs 数据文件导入到现有知识库中|[从 .dqs 文件导入域](../data-quality-services/import-a-domain-from-a-dqs-file.md)|  

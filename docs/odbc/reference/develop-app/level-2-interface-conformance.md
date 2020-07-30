@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 2dc87840-f2fe-43dd-9d7b-bd95523081d9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3ee57d716cbb93f855e1fd78d41bff62a681eb6c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3b8c18a77cfd843a6bb7b70494e62dcb9efc4582
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306158"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363387"
 ---
 # <a name="level-2-interface-conformance"></a>级别 2 接口一致性
 2级接口一致性级别包括第1级接口一致性级别功能以及以下功能：  
   
-|||  
+|功能编号|说明|  
 |-|-|  
 |201|使用数据库表和视图的由三部分构成的名称。 （有关详细信息，请参阅[第1级接口一致性](../../../odbc/reference/develop-app/level-1-interface-conformance.md)中的两部分命名支持功能101。）|  
 |202|通过调用**SQLDescribeParam**描述动态参数。|  

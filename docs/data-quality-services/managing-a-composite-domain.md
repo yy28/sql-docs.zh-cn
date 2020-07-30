@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 47821eff-800b-4053-8d36-e42bbc267f54
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 0f6c31e8e1cb40c5fbb00eaaf42c8734a8392f74
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2d463b65247dc5606605f1760ef6a259b5f534e9
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898083"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363047"
 ---
 # <a name="managing-a-composite-domain"></a>管理复合域
 
@@ -29,7 +29,7 @@ ms.locfileid: "85898083"
 ## <a name="in-this-section"></a>本节内容  
  通过使用复合域，您可以执行以下操作：  
   
-|||  
+|操作说明|主题|  
 |-|-|  
 |为由多个未进行分析的相关字词构成的数据字段创建语义表示形式|[创建复合域](../data-quality-services/create-a-composite-domain.md)|  
 |在您将复杂数据映射到复合域时，可以基于知识对数据进行分析，并且可以对分隔符进行分析。 DQS 将首先尝试使用与单一域有关的知识来确定复杂字符串的部分如何属于单一域。|[创建复合域](../data-quality-services/create-a-composite-domain.md)|  

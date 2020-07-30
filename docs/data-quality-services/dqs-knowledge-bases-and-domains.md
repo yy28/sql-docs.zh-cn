@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: a4eff5b70e83b92e1c99e1d7c4b1c351dec35b7e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c677a999454f307f90b0f0444e67069ce81dfcc3
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895381"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362483"
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>DQS 知识库和域
 
@@ -146,7 +146,7 @@ ms.locfileid: "85895381"
 ## <a name="in-this-section"></a>本节内容  
  您可以对知识库和它的域执行以下操作：  
   
-|||  
+|操作说明|主题|  
 |-|-|  
 |创建、打开知识库，将知识添加到知识库，以及对知识库执行发现|[生成知识库](../data-quality-services/building-a-knowledge-base.md)|  
 |对域和知识库执行导入和导出操作|[导入和导出知识](../data-quality-services/importing-and-exporting-knowledge.md)|  

@@ -18,15 +18,15 @@ ms.assetid: f328c9eb-8211-4863-bafa-347e1bf7bb3f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9e5875d4160ca3bb3e06670d02426e7b3cfe097c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 695e879b4f6eb5ab54a0d83636bcbef5f9f3c65f
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832569"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396016"
 ---
 # <a name="sp_prepare-transact-sql"></a>sp_prepare (Transact SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
 准备参数化 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句并返回执行的语句*句柄*。  `sp_prepare` 通过在表格格式数据流 (TDS) 包中指定 ID = 11 来调用。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "82832569"
 sp_prepare handle OUTPUT, params, stmt, options  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *柄*  
  是 SQL Server 生成的已*准备的句柄*标识符。 *句柄*是带有**int**返回值的必需参数。  
   
@@ -51,7 +51,7 @@ sp_prepare handle OUTPUT, params, stmt, options
  *options*  
  一个可选参数，它返回游标结果集列的说明。 *选项*需要以下 int 输入值：  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   

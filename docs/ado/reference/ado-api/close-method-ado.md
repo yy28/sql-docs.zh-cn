@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3cdf27d1-a180-4cff-8e42-95dec5fb1b55
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 44fb6e03fba467b9b7123111d1845d18e4144739
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 939bf1d65c73b2aa83c54c7a5b936e3228719ba5
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748916"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242787"
 ---
 # <a name="close-method-ado"></a>Close 方法 (ADO)
 关闭打开的对象和所有依赖对象。  
@@ -53,13 +53,19 @@ object.Close
   
  如果使用[Clone](../../../ado/reference/ado-api/clone-method-ado.md)方法创建打开的**Recordset**对象的副本，则关闭原始或克隆不会影响任何其他副本。  
   
-## <a name="applies-to"></a>应用于  
-  
-|||  
-|-|-|  
-|[连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[记录对象 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)|  
-|[记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[流对象 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
-  
+## <a name="applies-to"></a>适用于  
+
+:::row:::
+    :::column:::
+        [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+        [记录对象 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
+    :::column-end:::
+    :::column:::
+        [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+        [流对象 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>另请参阅  
  [Open 和 Close 方法示例（VB）](../../../ado/reference/ado-api/open-and-close-methods-example-vb.md)   
  [Open 和 Close 方法示例（VBScript）](../../../ado/reference/ado-api/open-and-close-methods-example-vbscript.md)   

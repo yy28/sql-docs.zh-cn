@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 077a6c6a-2c57-42c9-a4fd-4cf0e65cf7e2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e283bbc13f0d0dda055b047b027f7b9816502df5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 969296e377d398615ad95cf1337c3f9f97d5eb5c
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300677"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363397"
 ---
 # <a name="sql-conformance-levels-odbc-driver-for-oracle"></a>SQL 一致性级别（Oracle ODBC 驱动程序）
 > [!IMPORTANT]  
@@ -32,42 +32,94 @@ ms.locfileid: "81300677"
 -   左外部联接和右外部联接  
   
 -   数值函数：  
-  
-    |||||  
-    |-|-|-|-|  
-    |Abs|日志|round|tan|  
-    |Ceiling|Log10|second|truncate|  
-    |Cos|Mod|签名||  
-    |Exp|Pi|sin||  
-    |层|强力|sqrt||  
-  
+
+    :::row:::
+        :::column:::
+            Abs  
+            Ceiling  
+            Cos  
+            Exp  
+            Floor  
+        :::column-end:::
+        :::column:::
+            日志  
+            Log10  
+            Mod  
+            Pi  
+            电源  
+        :::column-end:::
+        :::column:::
+            round  
+            second  
+            签名  
+            sin  
+            sqrt  
+        :::column-end:::
+        :::column:::
+            tan  
+            truncate  
+        :::column-end:::
+    :::row-end:::
+    
 -   日期函数：  
-  
-    |||||  
-    |-|-|-|-|  
-    |Curdate|Dayofweek|monthname|second|  
-    |Curtime|Dayofyear|minute|week|  
-    |Dayname|Hour|now|year|  
-    |Dayofmonth|月份|quarter||  
-  
+
+    :::row:::
+        :::column:::
+            Curdate  
+            Curtime  
+            Dayname  
+            Dayofmonth  
+        :::column-end:::
+        :::column:::
+            Dayofweek  
+            Dayofyear  
+            小时  
+            月份  
+        :::column-end:::
+        :::column:::
+            monthname  
+            minute  
+            now  
+            quarter  
+        :::column-end:::
+        :::column:::
+            second  
+            week  
+            year  
+        :::column-end:::
+    :::row-end:::
+
 -   字符串函数：  
-  
-    |||||  
-    |-|-|-|-|  
-    |Ascii|Left|右|ucase|  
-    |Char|长度|rtrim||  
-    |Concat|Ltrim|soundex||  
-    |Lcase|将|substring||  
-  
+
+    :::row:::
+        :::column:::
+            Ascii  
+            Char  
+            Concat  
+            Lcase  
+        :::column-end:::
+        :::column:::
+            Left  
+            Length  
+            Ltrim  
+            替换  
+        :::column-end:::
+        :::column:::
+            右  
+            rtrim  
+            soundex  
+            substring  
+        :::column-end:::
+        :::column:::
+            ucase  
+        :::column-end:::
+    :::row-end:::
+
 -   类型转换函数：  
-  
-    ||  
-    |-|  
-    |转换|  
-  
+
+    转换  
+
 -   系统函数：  
   
-    ||  
-    |-|  
-    |Ifnull|  
-    |User|
+    Ifnull  
+    用户

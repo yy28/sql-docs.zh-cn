@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: ee3f5c08-0583-4f3b-8354-ef71b6086a7e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3d31d5fe8aea1df4e7937104580efb820ba6f031
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 29f59cf06eac1ce0f6589ad9c7cba8491e8383b5
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306178"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363421"
 ---
 # <a name="level-1-interface-conformance"></a>级别 1 接口一致性
 1级接口一致性级别包括核心接口一致性级别功能，以及通常在 OLTP 关系 DBMS 中可用的附加功能，例如事务。 除了核心接口一致性级别中的功能，应用程序还可以使用1级接口相容的驱动程序来执行以下操作：  
   
-|||  
+|功能编号|描述|  
 |-|-|  
 |101|指定数据库表和视图的架构（使用由两部分组成的命名）。 （有关详细信息，请参阅第[2 级接口一致性](../../../odbc/reference/develop-app/level-2-interface-conformance.md)中的三部分命名功能201。）|  
 |102|调用 ODBC 函数的真正异步执行，其中适用的 ODBC 函数在给定连接上全部同步或全部异步。|  

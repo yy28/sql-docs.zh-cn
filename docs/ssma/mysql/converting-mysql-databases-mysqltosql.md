@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ac21850b-fb32-4704-9985-5759b7c688c7
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 51604ba389e103798ab067245f210bd565a719e7
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: ce84ae70a1b09cd744528b132dcc7052cdde8816
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293664"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394272"
 ---
 # <a name="converting-mysql-databases-mysqltosql"></a>转换 MySQL 数据库 (MySQLToSQL)
 连接到 MySQL、连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure，并设置项目和数据映射选项后，可以将 MySQL 数据库对象转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 数据库对象。  
@@ -31,9 +31,8 @@ ms.locfileid: "84293664"
 ## <a name="conversion-results"></a>转换结果  
 下表显示了转换哪些 MySQL 对象以及生成的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象：  
   
-|||  
+|MySQL 对象|生成的 SQL Server 对象|  
 |-|-|  
-|**MySQL 对象**|**生成的 SQL Server 对象**|  
 |具有依赖对象（如索引）的表|SSMA 创建具有依赖对象的表。 表将与所有索引和约束一起转换。 索引将转换为单独 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的对象。<br /><br />**空间数据类型映射**只能在表节点级执行。<br /><br />有关表转换设置的详细信息，请参阅[转换设置](conversion-settings-mysqltosql.md)|  
 |函数|如果该函数可以直接转换为 Transact-sql，则 SSMA 将创建一个函数。 在某些情况下，该函数必须转换为存储过程。 可以通过在项目设置中使用**函数转换**来完成此操作。 在这种情况下，SSMA 创建存储过程和调用存储过程的函数。<br /><br />**提供的选项：**<br /><br />根据项目设置进行转换<br /><br />转换为函数<br /><br />转换为存储过程<br /><br />有关函数转换设置的详细信息，请参阅[转换设置](conversion-settings-mysqltosql.md)|  
 |过程|如果可以将该过程直接转换为 Transact-sql，SSMA 会创建一个存储过程。 在某些情况下，必须在自治事务中调用存储过程。 在这种情况下，SSMA 创建两个存储过程：一个用于实现过程，另一个用于调用实现存储过程。|  
@@ -106,7 +105,7 @@ ms.locfileid: "84293664"
   
 -   可以从迁移中排除对象。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 元数据资源管理器和 MySQL 元数据资源管理器中，先清除项旁边的复选框，然后将对象加载到中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 并从 MySQL 迁移数据。  
   
-## <a name="next-step"></a>后续步骤  
+## <a name="next-step"></a>下一步  
 迁移过程的下一步是将[转换的数据库对象加载到 SQL Server &#40;MySQLToSQL 中&#41;](../../ssma/mysql/loading-converted-database-objects-into-sql-server-mysqltosql.md)  
   
 ## <a name="see-also"></a>另请参阅  

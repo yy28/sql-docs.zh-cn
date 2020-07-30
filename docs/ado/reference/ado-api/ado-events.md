@@ -13,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: 0ded5ad9-8f83-4224-95af-38512783b972
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e1b69ced6c5d55b3b393ec30247c1a9f35f9fc57
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a93353be1737b38e7acb557a682e84cbb947c2a1
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747328"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242867"
 ---
 # <a name="ado-events"></a>ADO 事件
 
-|||  
+|事件|描述|  
 |-|-|  
 |[BeginTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|在**BeginTrans**操作后调用。|  
 |[CommitTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|在**CommitTrans**操作后调用。|  
 |[ConnectComplete](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|在连接开始后调用。|  
-|[取消](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|在连接结束后调用。|  
+|[断开连接](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|在连接结束后调用。|  
 |[EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|尝试移到超过**记录集**末尾的行时调用。|  
 |[ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)|执行完命令后调用。|  
 |[FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|在将较长异步操作中的所有记录都检索到**记录集**后调用。|  

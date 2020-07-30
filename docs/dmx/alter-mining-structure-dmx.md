@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ace89ae45aff0e740691025d2039213cfacebff9
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 8022ee6fd8cb9bf9de79a7a83d3ee0d6166606b5
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971825"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362217"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -35,7 +35,7 @@ USING <algorithm> [(<parameter list>)]
 [,FILTER(<filter criteria>)]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *构造*  
  要向其中添加挖掘模型的挖掘结构的名称。  
   
@@ -108,9 +108,8 @@ USING <algorithm> [(<parameter list>)]
 > [!NOTE]  
 >  NOT_NULL 建模标志应用于挖掘结构列。 有关详细信息，请参阅 [CREATE MINING STRUCTURE (DMX)](../dmx/create-mining-structure-dmx.md)。  
   
-|||  
-|-|-|  
 |术语|定义|  
+|-|-|  
 |**回归量**|指示该算法可以在回归算法的回归公式中使用指定列。|  
 |**MODEL_EXISTENCE_ONLY**|指示该属性列的值没有该属性的存在重要。|  
   
@@ -119,7 +118,7 @@ USING <algorithm> [(<parameter list>)]
 ### <a name="prediction-clause"></a>预测子句  
  预测子句说明使用预测列的方式。 下表将列出可能的子句。  
   
-|||  
+|子句|说明|  
 |-|-|  
 |**准确**|该列可以由模型预测，并且它的值可用作输入以预测其他可预测列的值。|  
 |**PREDICT_ONLY**|此列可以由模型预测，但其值不可用于输入事例来预测其他可预测列的值。|  
