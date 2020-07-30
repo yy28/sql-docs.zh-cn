@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fbc22ea4b3673d6ed4d0d4ee581da8fadb473fb8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d09e76a26e0364857c70469ef1308f21e298727b
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888052"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395042"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>复制、更改跟踪和更改数据捕获 - AlwaysOn 可用性组
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -205,12 +205,11 @@ ms.locfileid: "85888052"
 ### <a name="restrictions"></a>限制  
  针对 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]的复制所支持的组合：  
   
-|||||  
+|复制|发布者|分发服务器|订阅者|  
 |-|-|-|-|  
-||**发布者**|**分发服务器**|**订阅服务器**|  
-|**事务性**|是<br /><br /> 注意：不包括对双向和相互事务复制的支持。|是|是| 
+|**事务性**|是<br /><br /> 注意：不包括对双向和相互事务复制的支持。|是|“是”| 
 |**P2P**|否|否|否|  
-|**合并**|是|否|否|  
+|**合并**|“是”|否|否|  
 |**快照**|是|否|是|
   
  **不支持将分发服务器数据库用于数据库镜像。  

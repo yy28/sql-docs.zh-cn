@@ -13,19 +13,19 @@ ms.assetid: 596f5092-75ab-4a19-8582-588687c7b089
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 886f3f7c77b0283acbdf6235db05775c697bcc63
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6c547a2d5fc04d07b17d38cc721bebbe04326e55
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85721615"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363113"
 ---
 # <a name="mssql_eng021798"></a>MSSQL_ENG021798
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
     
 ## <a name="message-details"></a>消息详细信息  
   
-|||  
+|Attribute|值|  
 |-|-|  
 |产品名称|SQL Server|  
 |事件 ID|21798|  
@@ -41,7 +41,7 @@ ms.locfileid: "85721615"
   
 -   存储过程 **sp_addpublication** 在执行 [sp_addlogreader_agent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md) 之前执行。 这适用于所有的事务发布。  
   
--   存储过程 **sp_addpublication** 在执行 [sp_addqreader_agent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql.md) 之前执行。 这适用于为排队更新订阅启用的事务发布（sp_addpublication 的 `@allow_queued_tran` 参数的值为 TRUE）  。  
+-   存储过程 **sp_addpublication** 在执行 [sp_addqreader_agent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql.md) 之前执行。 这适用于为排队更新订阅启用的事务发布（sp_addpublication 的 `@allow_queued_tran` 参数的值为 TRUE）。  
   
  存储过程 **sp_addlogreader_agent** 和 **sp_addqreader_agent** 各创建一个代理作业并允许您指定运行代理的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户。 对于 **sysadmin** 角色中的用户，如果未执行 **sp_addlogreader_agent** 和 **sp_addqreader_agent** ，则将隐式创建代理作业；代理在分发服务器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务帐户的上下文中运行。 尽管 **sp_addlogreader_agent** 和 **sp_addqreader_agent** 对于 **sysadmin** 角色中的用户不是必须的，但是为了安全起见，最好为代理指定单独的帐户。 有关详细信息，请参阅 [复制代理安全模式](../../relational-databases/replication/security/replication-agent-security-model.md)。  
   

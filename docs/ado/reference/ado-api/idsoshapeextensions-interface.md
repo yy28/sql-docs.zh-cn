@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ad4ba313-1161-4bc7-b8f6-4083305bc81e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7d49db4cb1d471d06b6e834e46218307bc25a008
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 02eedbeaf8c9d85f3a896b8991661461825b2b19
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758703"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242667"
 ---
 # <a name="idsoshapeextensions-interface"></a>IDSOShapeExtensions 接口
 获取形状提供程序的基础 OLE DB 数据源对象。  
@@ -36,7 +36,7 @@ public:
   
 ## <a name="methods"></a>方法  
   
-|||  
+|方法|描述|  
 |-|-|  
 |[GetDataProviderDSO 方法](../../../ado/reference/ado-api/getdataproviderdso-method.md)|从形状提供程序检索基础 OLE DB 数据源对象。|  
   

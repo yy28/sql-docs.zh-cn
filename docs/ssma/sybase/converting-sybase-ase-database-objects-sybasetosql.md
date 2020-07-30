@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 509cb65d-2f54-427a-83d7-37919cc4e3e3
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 507ac2a61043260435a18c90fb473130988e7f35
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0785c3ecc6335494ed4c34f8919e3ad766236631
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67948516"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394507"
 ---
 # <a name="converting-sap-ase-database-objects-sybasetosql"></a>转换 SAP ASE 数据库对象（SybaseToSQL）
-连接到 SAP 自适应服务器企业版（ASE）、连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] azure sql 以及设置项目和数据映射选项后，可以将 SAP 自适应服务器企业版（ase）数据库对象转换[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]为或 azure SQL 数据库对象。  
+连接到 SAP 自适应服务器企业版（ASE）、连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AZURE sql 以及设置项目和数据映射选项后，可以将 SAP 自适应服务器企业版（ase）数据库对象转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 azure SQL 数据库对象。  
   
 ## <a name="the-conversion-process"></a>转换过程  
-转换数据库对象将从 ASE 获取对象定义，将它们转换为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]类似或 SQL Azure 的对象，然后将此信息加载到 SSMA 元数据。 它不会将信息加载到实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL 中。 然后，可以使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL 元数据资源管理器查看对象及其属性。
+转换数据库对象将从 ASE 获取对象定义，将它们转换为类似 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 的对象，然后将此信息加载到 SSMA 元数据。 它不会将信息加载到实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 AZURE SQL 中。 然后，可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 AZURE SQL 元数据资源管理器查看对象及其属性。
   
 在转换过程中，SSMA 会将输出消息打印到 "输出" 窗格，并将错误消息打印到 "**错误列表**" 窗格。 使用输出和错误信息来确定是否必须修改 ASE 数据库或转换过程以获取所需的转换结果。  
   
@@ -54,27 +54,57 @@ ms.locfileid: "67948516"
   
 > [!NOTE]  
 > 某些 SAP ASE 系统功能与行为中的等效 SQL Server 系统函数并不完全匹配。 为了模拟 SAP ASE 行为，SSMA 会在名为 "2ss" 的架构下的已转换 SQL Server 数据库中生成用户定义的函数。 根据项目设置，某些 SQL Server 系统函数将替换为这些模拟函数。 SSMA 创建以下用户定义函数：  
-  
-||||  
-|-|-|-|  
-|**char_length_nvarchar**|**index_colorder**|**ssma_datepart**|  
-|**char_length_varchar**|**inttohex**|**substring_nvarchar**|  
-|**charindex_nvarchar**|**ssma_datediff**|**substring_varbinary**|  
-|**charindex_varchar**|**hextoint**|**substring_varchar**|  
-|**ulowsurr**|**to_unichar**|**ssma_current_time**|  
-|**uhighsurr**|||  
-  
+
+:::row:::
+    :::column:::
+        **char_length_nvarchar**  
+        **char_length_varchar**  
+        **charindex_nvarchar**  
+        **charindex_varchar**  
+        **hextoint**  
+        **index_colorder**  
+    :::column-end:::
+    :::column:::
+        **inttohex**  
+        **ssma_current_time**  
+        **ssma_datediff**  
+        **ssma_datepart**  
+        **substring_nvarchar**  
+        **substring_varbinary**  
+    :::column-end:::
+    :::column:::
+        **substring_varchar**  
+        **to_unichar**  
+        **uhighsurr**  
+        **ulowsurr**  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="objects-not-supported-in-azure-sql"></a>Azure SQL 中不支持的对象  
 SSMA for SAP ASE 在转换为本地 SQL Server 时使用以下 T-sql 关键字，但 SQL Azure T-sql 语法不支持这些关键字：  
-  
-||||  
-|-|-|-|  
-|CHECKPOINT|CREATE/ALTER/DROP DEFAULT|CREATE/DROP RULE|  
-|DBCC TRACEOFF|DBCC TRACEON|GRANT/REVOKE/DENY ALL|  
-|KILL|READTEXT|SELECT INTO|  
-|SET OFFSETS|SETUSER|SHUTDOWN|  
-|WRITETEXT|||  
-  
+
+:::row:::
+    :::column:::
+        CHECKPOINT  
+        CREATE/ALTER/DROP DEFAULT  
+        CREATE/DROP RULE  
+        DBCC TRACEOFF  
+        DBCC TRACEON  
+    :::column-end:::
+    :::column:::
+        GRANT/REVOKE/DENY ALL  
+        KILL  
+        READTEXT  
+        SELECT INTO  
+        SET OFFSETS  
+    :::column-end:::
+    :::column:::
+        SETUSER  
+        SHUTDOWN  
+        WRITETEXT  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="viewing-conversion-problems"></a>查看转换问题  
 某些 SAP ASE 对象可能不会转换。 您可以通过查看摘要转换报告来确定转换成功率。  
   
@@ -120,7 +150,7 @@ SSMA for SAP ASE 在转换为本地 SQL Server 时使用以下 T-sql 关键字�
   
 -   可以更改 SAP ASE 对象，以删除或修改有问题的代码。 若要将更新的代码加载到 SSMA 中，必须更新元数据。 有关详细信息，请参阅[连接到 SAP ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md)。  
   
--   可以从迁移中排除对象。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "Azure Sql 元数据资源管理器" 和 "Sybase 元数据资源管理器" 中，清除项旁边[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的复选框，然后将对象加载到或 Azure SQL，并从 SAP ASE 迁移数据。  
+-   可以从迁移中排除对象。 在 " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AZURE Sql 元数据资源管理器" 和 "Sybase 元数据资源管理器" 中，清除项旁边的复选框，然后将对象加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Azure SQL，并从 SAP ASE 迁移数据。  
   
 ## <a name="next-steps"></a>后续步骤  
 迁移过程的下一步是将[转换的数据库对象加载到 SQL Server/SQL Azure （SybaseToSQL）](https://msdn.microsoft.com/4c59256f-99a8-4351-9559-a455813dbd06)。  

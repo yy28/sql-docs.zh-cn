@@ -16,13 +16,14 @@ ms.assetid: 754d3f30-7d94-4b67-8dac-baf2699ce9c6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 513e7846ace058a3d0013351b9d21157401ff463
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a9ad3e29da828e22a656b151659062149a65bf42
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002779"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242264"
 ---
-# <a name="using-imultipleresults-to-process-multiple-result-sets"></a>使用 IMultipleResults 处理多个结果集
+# <a name="using-imultipleresults-to-process-multiple-result-sets-in-sql-server-native-client"></a>在 SQL Server Native Client 中使用 IMultipleResults 处理多个结果集
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   使用者使用**IMultipleResults**接口处理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序命令执行返回的结果。 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序提交要执行的命令时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将执行语句并返回任何结果。  
@@ -53,6 +54,6 @@ COMPUTE
 >  当使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 游标时，命令执行将创建游标。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回游标创建是成功还是失败；因此，与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的往返将在命令执行返回时完成。 随后，每个 GetNextRows 调用成为一个往返****。 这样，可以存在多个活动命令对象，每个对象分别处理作为服务器游标提取结果的行集。 有关详细信息，请参阅[行集和 SQL Server 游标](../../relational-databases/native-client-ole-db-rowsets/rowsets-and-sql-server-cursors.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- 命令  
+ [命令](../../relational-databases/native-client-ole-db-commands/commands.md)  
   
   

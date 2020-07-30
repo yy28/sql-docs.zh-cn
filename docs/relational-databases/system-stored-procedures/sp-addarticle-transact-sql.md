@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0483a157-e403-4fdb-b943-23c1b487bef0
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 35aa02236cf3e8a11d03539042ccdaf9049dd8f9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9201e8f74a62315132743c36669892b7bd3cc90f
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731709"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394752"
 ---
 # <a name="sp_addarticle-transact-sql"></a>sp_addarticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -68,14 +68,14 @@ sp_addarticle [ @publication = ] 'publication'
     [ , [ @fire_triggers_on_snapshot = ] 'fire_triggers_on_snapshot' ]   
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @publication = ] 'publication'`包含项目的发布的名称。 名称在数据库中必须是唯一的。 *发布*为**sysname**，无默认值。  
   
 `[ @article = ] 'article'`项目的名称。 该名称在发布中必须唯一。 *项目*是**sysname**，无默认值。  
   
 `[ @source_table = ] 'source_table'`此参数已弃用;改用*source_object* 。  
   
- *Oracle 发布服务器不支持该参数。*  
+ *Oracle 发布服务器不支持此参数。*  
   
 `[ @destination_table = ] 'destination_table'`与*source_table*或存储过程不同的目标（订阅）表的名称。 *destination_table*的类型为**sysname**，默认值为 NULL，这意味着*source_table*等于*destination_table * *。*  
   
@@ -87,7 +87,7 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @type = ] 'type'`项目的类型。 *类型*为**sysname**，可以为以下值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**aggregate schema only**|仅具有架构的聚合函数。|  
 |**func schema only**|仅具有架构的函数。|  
@@ -111,34 +111,34 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @ins_cmd = ] 'ins_cmd'`复制此项目的插入时所使用的复制命令类型。 *ins_cmd*为**nvarchar （255）**，可以是下列值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**NONE**|不执行任何操作。|  
-|**CALL sp_MSins_**<br /> **_table_** （默认值）<br /><br /> \- 或 -<br /><br /> **CALL custom_stored_procedure_name**|在订阅服务器中调用要执行的存储过程。 若要使用此复制方法，请使用*schema_option*指定自动创建存储过程，或在项目的每个订阅服务器的目标数据库中创建指定的存储过程。 *custom_stored_procedure*是用户创建的存储过程的名称。 <strong>sp_MSins_*表*</strong>包含用于替换参数 *_table*部分的目标表的名称。 指定*destination_owner*时，它会预置目标表名称。 例如，对于订阅服务器上的**生产**架构拥有的**ProductCategory**表，该参数将为 `CALL sp_MSins_ProductionProductCategory` 。 对于对等复制拓扑中的项目， *_table*追加 GUID 值。 不支持将*custom_stored_procedure*指定为更新订阅服务器。|  
+|**CALL sp_MSins_**<br /> **_table_** （默认值）<br /><br /> -或-<br /><br /> **CALL custom_stored_procedure_name**|在订阅服务器中调用要执行的存储过程。 若要使用此复制方法，请使用*schema_option*指定自动创建存储过程，或在项目的每个订阅服务器的目标数据库中创建指定的存储过程。 *custom_stored_procedure*是用户创建的存储过程的名称。 <strong>sp_MSins_*表*</strong>包含用于替换参数 *_table*部分的目标表的名称。 指定*destination_owner*时，它会预置目标表名称。 例如，对于订阅服务器上的**生产**架构拥有的**ProductCategory**表，该参数将为 `CALL sp_MSins_ProductionProductCategory` 。 对于对等复制拓扑中的项目， *_table*追加 GUID 值。 不支持将*custom_stored_procedure*指定为更新订阅服务器。|  
 |**SQL**或 NULL|复制 INSERT 语句。 需要为 INSERT 语句提供项目中发布的所有列的值。 对插入复制以下命令：<br /><br /> `INSERT INTO <table name> VALUES (c1value, c2value, c3value, ..., cnvalue)`|  
   
  有关详细信息，请参阅[指定如何传播事务项目的更改](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)。  
   
 `[ @del_cmd = ] 'del_cmd'`复制该项目的删除时所使用的复制命令类型。 *del_cmd*为**nvarchar （255）**，可以是下列值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**NONE**|不执行任何操作。|  
-|**CALLsp_MSdel_**<br /> **_table_** （默认值）<br /><br /> \- 或 -<br /><br /> **CALL custom_stored_procedure_name**|在订阅服务器中调用要执行的存储过程。 若要使用此复制方法，请使用*schema_option*指定自动创建存储过程，或在项目的每个订阅服务器的目标数据库中创建指定的存储过程。 *custom_stored_procedure*是用户创建的存储过程的名称。 <strong>sp_MSdel_*表*</strong>包含用于替换参数 *_table*部分的目标表的名称。 指定*destination_owner*时，它会预置目标表名称。 例如，对于订阅服务器上的**生产**架构拥有的**ProductCategory**表，该参数将为 `CALL sp_MSdel_ProductionProductCategory` 。 对于对等复制拓扑中的项目， *_table*追加 GUID 值。 不支持将*custom_stored_procedure*指定为更新订阅服务器。|  
-|**XCALL sp_MSdel_**<br /> **_数据表_**<br /><br /> \- 或 -<br /><br /> **XCALL custom_stored_procedure_name**|采用 XCALL 样式参数调用存储过程。 若要使用此复制方法，请使用*schema_option*指定自动创建存储过程，或在项目的每个订阅服务器的目标数据库中创建指定的存储过程。 对于更新订阅服务器，不允许指定用户创建的存储过程。|  
+|**CALLsp_MSdel_**<br /> **_table_** （默认值）<br /><br /> -或-<br /><br /> **CALL custom_stored_procedure_name**|在订阅服务器中调用要执行的存储过程。 若要使用此复制方法，请使用*schema_option*指定自动创建存储过程，或在项目的每个订阅服务器的目标数据库中创建指定的存储过程。 *custom_stored_procedure*是用户创建的存储过程的名称。 <strong>sp_MSdel_*表*</strong>包含用于替换参数 *_table*部分的目标表的名称。 指定*destination_owner*时，它会预置目标表名称。 例如，对于订阅服务器上的**生产**架构拥有的**ProductCategory**表，该参数将为 `CALL sp_MSdel_ProductionProductCategory` 。 对于对等复制拓扑中的项目， *_table*追加 GUID 值。 不支持将*custom_stored_procedure*指定为更新订阅服务器。|  
+|**XCALL sp_MSdel_**<br /> **_数据表_**<br /><br /> -或-<br /><br /> **XCALL custom_stored_procedure_name**|采用 XCALL 样式参数调用存储过程。 若要使用此复制方法，请使用*schema_option*指定自动创建存储过程，或在项目的每个订阅服务器的目标数据库中创建指定的存储过程。 对于更新订阅服务器，不允许指定用户创建的存储过程。|  
 |**SQL**或 NULL|复制 DELETE 语句。 为 DELETE 语句提供所有主键列值。 对删除复制以下命令：<br /><br /> `DELETE FROM <table name> WHERE pkc1 = pkc1value AND pkc2 = pkc2value AND pkcn = pkcnvalue`|  
   
  有关详细信息，请参阅[指定如何传播事务项目的更改](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)。  
   
 `[ @upd_cmd = ] 'upd_cmd'`复制此项目的更新时使用的复制命令类型。 *upd_cmd*为**nvarchar （255）**，可以是下列值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**NONE**|不执行任何操作。|  
-|**CALL sp_MSupd_**<br /> **_数据表_**<br /><br /> \- 或 -<br /><br /> **CALL custom_stored_procedure_name**|在订阅服务器中调用要执行的存储过程。 若要使用此复制方法，请使用*schema_option*指定自动创建存储过程，或在项目的每个订阅服务器的目标数据库中创建指定的存储过程。|  
-|**MCALL sp_MSupd_**<br /> **_数据表_**<br /><br /> \- 或 -<br /><br /> **MCALL custom_stored_procedure_name**|采用 MCALL 样式参数调用存储过程。 若要使用此复制方法，请使用*schema_option*指定自动创建存储过程，或在项目的每个订阅服务器的目标数据库中创建指定的存储过程。 *custom_stored_procedure*是用户创建的存储过程的名称。 <strong>sp_MSupd_*表*</strong>包含用于替换参数 *_table*部分的目标表的名称。 指定*destination_owner*时，它会预置目标表名称。 例如，对于订阅服务器上的**生产**架构拥有的**ProductCategory**表，该参数将为 `MCALL sp_MSupd_ProductionProductCategory` 。 对于对等复制拓扑中的项目， *_table*追加 GUID 值。 对于更新订阅服务器，不允许指定用户创建的存储过程。|  
-|**SCALL sp_MSupd_**<br /> **_table_** （默认值）<br /><br /> \- 或 -<br /><br /> **SCALL custom_stored_procedure_name**|采用 SCALL 样式参数调用存储过程。 若要使用此复制方法，请使用*schema_option*指定自动创建存储过程，或在项目的每个订阅服务器的目标数据库中创建指定的存储过程。 *custom_stored_procedure*是用户创建的存储过程的名称。 <strong>sp_MSupd_*表*</strong>包含用于替换参数 *_table*部分的目标表的名称。 指定*destination_owner*时，它会预置目标表名称。 例如，对于订阅服务器上的**生产**架构拥有的**ProductCategory**表，该参数将为 `SCALL sp_MSupd_ProductionProductCategory` 。 对于对等复制拓扑中的项目， *_table*追加 GUID 值。 对于更新订阅服务器，不允许指定用户创建的存储过程。|  
-|**XCALL sp_MSupd_**<br /> **_数据表_**<br /><br /> \- 或 -<br /><br /> **XCALL custom_stored_procedure_name**|采用 XCALL 样式参数调用存储过程。 若要使用此复制方法，请使用*schema_option*指定自动创建存储过程，或在项目的每个订阅服务器的目标数据库中创建指定的存储过程。 对于更新订阅服务器，不允许指定用户创建的存储过程。|  
+|**CALL sp_MSupd_**<br /> **_数据表_**<br /><br /> -或-<br /><br /> **CALL custom_stored_procedure_name**|在订阅服务器中调用要执行的存储过程。 若要使用此复制方法，请使用*schema_option*指定自动创建存储过程，或在项目的每个订阅服务器的目标数据库中创建指定的存储过程。|  
+|**MCALL sp_MSupd_**<br /> **_数据表_**<br /><br /> -或-<br /><br /> **MCALL custom_stored_procedure_name**|采用 MCALL 样式参数调用存储过程。 若要使用此复制方法，请使用*schema_option*指定自动创建存储过程，或在项目的每个订阅服务器的目标数据库中创建指定的存储过程。 *custom_stored_procedure*是用户创建的存储过程的名称。 <strong>sp_MSupd_*表*</strong>包含用于替换参数 *_table*部分的目标表的名称。 指定*destination_owner*时，它会预置目标表名称。 例如，对于订阅服务器上的**生产**架构拥有的**ProductCategory**表，该参数将为 `MCALL sp_MSupd_ProductionProductCategory` 。 对于对等复制拓扑中的项目， *_table*追加 GUID 值。 对于更新订阅服务器，不允许指定用户创建的存储过程。|  
+|**SCALL sp_MSupd_**<br /> **_table_** （默认值）<br /><br /> -或-<br /><br /> **SCALL custom_stored_procedure_name**|采用 SCALL 样式参数调用存储过程。 若要使用此复制方法，请使用*schema_option*指定自动创建存储过程，或在项目的每个订阅服务器的目标数据库中创建指定的存储过程。 *custom_stored_procedure*是用户创建的存储过程的名称。 <strong>sp_MSupd_*表*</strong>包含用于替换参数 *_table*部分的目标表的名称。 指定*destination_owner*时，它会预置目标表名称。 例如，对于订阅服务器上的**生产**架构拥有的**ProductCategory**表，该参数将为 `SCALL sp_MSupd_ProductionProductCategory` 。 对于对等复制拓扑中的项目， *_table*追加 GUID 值。 对于更新订阅服务器，不允许指定用户创建的存储过程。|  
+|**XCALL sp_MSupd_**<br /> **_数据表_**<br /><br /> -或-<br /><br /> **XCALL custom_stored_procedure_name**|采用 XCALL 样式参数调用存储过程。 若要使用此复制方法，请使用*schema_option*指定自动创建存储过程，或在项目的每个订阅服务器的目标数据库中创建指定的存储过程。 对于更新订阅服务器，不允许指定用户创建的存储过程。|  
 |**SQL**或 NULL|复制 UPDATE 语句。 UPDATE 语句在所有的列值和主键列值中提供。 对更新复制以下命令：<br /><br /> `UPDATE <table name> SET c1 = c1value, SET c2 = c2value, SET cn = cnvalue WHERE pkc1 = pkc1value AND pkc2 = pkc2value AND pkcn = pkcnvalue`|  
   
 > [!NOTE]  
@@ -150,7 +150,7 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @pre_creation_cmd = ] 'pre_creation_cmd'`指定当应用此项目的快照时，如果在订阅服务器上检测到同名的现有对象，系统应执行的操作。 *pre_creation_cmd*为**nvarchar （10）**，可以是下列值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**无**|不使用命令。|  
 |**delete**|在应用快照之前从目标表中删除数据。 水平筛选项目时，将只删除筛选子句所指定的列中的数据。 定义水平筛选时，不支持用于 Oracle 发布服务器。|  
@@ -164,7 +164,7 @@ sp_addarticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  如果该值为 NULL，则系统将为依赖于其他项目属性的项目自动生成有效的架构选项。 "备注" 中给出的 "**默认架构选项**" 表显示根据项目类型和复制类型的组合所选择的值。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**0x00**|禁用快照代理的脚本并使用*creation_script*。|  
 |**0x01**|生成对象创建脚本（CREATE TABLE、CREATE PROCEDURE 等）。 该值是存储过程项目的默认值。|  
@@ -251,7 +251,7 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @auto_identity_range = ] 'auto_identity_range'`启用和禁用在创建发布时对其进行的自动标识范围处理。 *auto_identity_range*为**nvarchar （5）**，可以为以下值之一：  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |true|启用自动标识范围处理|  
 |**false**|禁用自动标识范围处理|  
@@ -285,7 +285,7 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @identityrangemanagementoption = ] identityrangemanagementoption`指定如何处理项目的标识范围管理。 *identityrangemanagementoption*的数据值为**nvarchar （10）**，可以为以下值之一。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**无**|复制不会显式执行标识范围管理。 仅当为了保持与 SQL Server 早期版本的向后兼容性时，才建议使用该选项。 禁止用于对等复制。|  
 |**手动**|使用 NOT FOR REPLICATION 标记标识列，以启用手动标识范围处理。|  
@@ -342,9 +342,8 @@ sp_addarticle [ @publication = ] 'publication'
 ## <a name="default-schema-options"></a>默认架构选项  
  此表描述了通过复制设置的默认值（如果用户未指定*schema_options* ），其中此值取决于复制类型（在顶部显示）和项目类型（在第一列中显示）。  
   
-|项目类型|复制类型||  
+|项目类型|事务复制|快照复制|  
 |------------------|----------------------|------|  
-||事务性|快照|  
 |**aggregate schema only**|**0x01**|**0x01**|  
 |**func schema only**|**0x01**|**0x01**|  
 |**indexed view schema only**|**0x01**|**0x01**|  
@@ -366,9 +365,8 @@ sp_addarticle [ @publication = ] 'publication'
 ## <a name="valid-schema-options"></a>有效架构选项  
  此表根据复制类型（在顶部显示）和项目类型（在第一列中显示）描述*schema_option*的允许值。  
   
-|项目类型|复制类型||  
+|项目类型|事务复制|快照复制|  
 |------------------|----------------------|------|  
-||事务性|快照|  
 |**logbased**|所有选项|所有选项，但**0x02**|  
 |**logbased manualfilter**|所有选项|所有选项，但**0x02**|  
 |**logbased manualview**|所有选项|所有选项，但**0x02**|  
@@ -393,13 +391,13 @@ sp_addarticle [ @publication = ] 'publication'
  只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_addarticle**。  
   
 ## <a name="see-also"></a>另请参阅  
- [定义项目](../../relational-databases/replication/publish/define-an-article.md)   
+ [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
  [sp_articlecolumn &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
  [sp_articlefilter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)   
  [sp_articleview &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)   
  [sp_changearticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
  [sp_droparticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
- [sp_helparticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
+ [sp_helparticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
  [sp_helparticlecolumns &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)   
  [复制存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [发布数据和数据库对象](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  

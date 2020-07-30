@@ -1,5 +1,5 @@
 ---
-title: sys. sysdatabases （Transact-sql） |Microsoft Docs
+title: sys.sys数据库（Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,24 +21,24 @@ ms.assetid: 60a93880-62f1-4eda-a886-f046706ba90c
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2b0dab1ca5f21ced6a54192a4b0173ead68fd6f5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c32503ffe44cf45dbff9608e0baa9127e39b1a4d
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68089165"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87393264"
 ---
 # <a name="syssysdatabases-transact-sql"></a>sys.sysdatabases (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
-  实例[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的每个数据库在各占一行。 首[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]次安装时， **sysdatabases**包含**master**、 **model**、 **msdb**和**tempdb**数据库的条目。  
+  实例中的每个数据库在各占一行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]首次安装时， **sysdatabases**包含**master**、 **model**、 **msdb**和**tempdb**数据库的条目。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|name |**sysname**|数据库名称|  
+|name|**sysname**|数据库名称|  
 |**dbid**|**smallint**|数据库 ID|  
 |**sid**|**varbinary （85）**|数据库创建者的系统 ID|  
 |**mode**|**smallint**|用于创建数据库时在内部锁定该数据库。|  
@@ -48,7 +48,7 @@ ms.locfileid: "68089165"
 |**保护**|**datetime**|保留供将来使用。|  
 |**category**|**int**|包含用于复制的信息位图：<br /><br /> 1 = 为快照或事务复制而发布。<br /><br /> 2 = 订阅快照或事务发布。<br /><br /> 4 = 为合并复制而发布。<br /><br /> 8 = 订阅合并发布。<br /><br /> 16 = 发布数据库。|  
 |**cmptlevel**|**tinyint**|数据库的兼容级别。 有关详细信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。|  
-|**名字**|**nvarchar(260)**|数据库主文件的操作系统路径和名称。<br /><br /> **filename**对**dbcreator**、 **SYSADMIN**、具有 CREATE any database 权限的数据库所有者或具有以下权限之一的被授权者可见： ALTER any DATABASE，CREATE any database，VIEW any DEFINITION。 若要返回路径和文件名，请查询[sys.sysfiles](../../relational-databases/system-compatibility-views/sys-sysfiles-transact-sql.md)兼容性视图或 " [sys. database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) " 视图。|  
+|**filename**|**nvarchar(260)**|数据库主文件的操作系统路径和名称。<br /><br /> **filename**对**dbcreator**、 **SYSADMIN**、具有 CREATE any database 权限的数据库所有者或具有以下权限之一的被授权者可见： ALTER any DATABASE，CREATE any database，VIEW any DEFINITION。 若要返回路径和文件名，请查询 " [sys.sys文件](../../relational-databases/system-compatibility-views/sys-sysfiles-transact-sql.md)" 兼容性视图或 " [sys. database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) " 视图。|  
 |**version**|**smallint**|用于创建数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代码的内部版本号。 [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
 ## <a name="see-also"></a>另请参阅  

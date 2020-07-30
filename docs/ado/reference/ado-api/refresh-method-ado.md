@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 089b7ca7-684f-4259-8032-5bd1ecc54426
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 48fc3a1adf8dbeae010e4035ac4f2e390c015e54
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0688fc8b45f444ca8c711f3229623484fa2139a8
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82756537"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242577"
 ---
 # <a name="refresh-method-ado"></a>Refresh 方法 (ADO)
 更新集合中的对象，以反映提供程序提供的和特定于提供程序的对象。  
@@ -53,18 +53,36 @@ collection.Refresh
 ### <a name="properties"></a>属性  
  对某些对象的**Properties**集合使用**Refresh**方法将使用提供程序公开的动态属性来填充集合。 这些属性提供了有关特定于提供程序的功能的信息，而不是 ADO 支持的内置属性。  
   
-## <a name="applies-to"></a>应用于  
-  
-||||  
-|-|-|-|  
-|[轴集合](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)|[列集合](../../../ado/reference/adox-api/columns-collection-adox.md)|[CubeDefs 集合](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)|  
-|[维度集合](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)|[错误集合](../../../ado/reference/ado-api/errors-collection-ado.md)|[字段集合](../../../ado/reference/ado-api/fields-collection-ado.md)|  
-|[组集合](../../../ado/reference/adox-api/groups-collection-adox.md)|[层次结构集合](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)|[索引集合](../../../ado/reference/adox-api/indexes-collection-adox.md)|  
-|[键集合](../../../ado/reference/adox-api/keys-collection-adox.md)|[色阶集合](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)|[成员集合](../../../ado/reference/ado-md-api/members-collection-ado-md.md)|  
-|[Parameters 集合](../../../ado/reference/ado-api/parameters-collection-ado.md)|[位置集合](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)|[过程集合](../../../ado/reference/adox-api/procedures-collection-adox.md)|  
-|[Properties 集合](../../../ado/reference/ado-api/properties-collection-ado.md)|[表集合](../../../ado/reference/adox-api/tables-collection-adox.md)|[用户集合](../../../ado/reference/adox-api/users-collection-adox.md)|  
-|[视图集合](../../../ado/reference/adox-api/views-collection-adox.md)|||  
-  
+## <a name="applies-to"></a>适用于  
+
+:::row:::
+    :::column:::
+        [轴集合](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)  
+        [列集合](../../../ado/reference/adox-api/columns-collection-adox.md)  
+        [CubeDefs 集合](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)  
+        [维度集合](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)  
+        [错误集合](../../../ado/reference/ado-api/errors-collection-ado.md)  
+        [字段集合](../../../ado/reference/ado-api/fields-collection-ado.md)  
+        [组集合](../../../ado/reference/adox-api/groups-collection-adox.md)  
+    :::column-end:::
+    :::column:::
+        [层次结构集合](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)  
+        [索引集合](../../../ado/reference/adox-api/indexes-collection-adox.md)  
+        [键集合](../../../ado/reference/adox-api/keys-collection-adox.md)  
+        [色阶集合](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)  
+        [成员集合](../../../ado/reference/ado-md-api/members-collection-ado-md.md)  
+        [Parameters 集合](../../../ado/reference/ado-api/parameters-collection-ado.md)  
+    :::column-end:::
+    :::column:::
+        [位置集合](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)  
+        [过程集合](../../../ado/reference/adox-api/procedures-collection-adox.md)  
+        [Properties 集合](../../../ado/reference/ado-api/properties-collection-ado.md)  
+        [表集合](../../../ado/reference/adox-api/tables-collection-adox.md)  
+        [用户集合](../../../ado/reference/adox-api/users-collection-adox.md)  
+        [视图集合](../../../ado/reference/adox-api/views-collection-adox.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>另请参阅  
  [Refresh 方法示例（VB）](../../../ado/reference/ado-api/refresh-method-example-vb.md)   
  [Refresh 方法示例（VC + +）](../../../ado/reference/ado-api/refresh-method-example-vc.md)   

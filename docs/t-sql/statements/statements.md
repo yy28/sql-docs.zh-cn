@@ -13,16 +13,16 @@ ms.assetid: d8d6f62a-e815-425c-a80e-a63fd34ec275
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 287b86bd9cc368d2a04ea7f7be5e1397e2d6aab9
-ms.sourcegitcommit: 2e6c4104dca8680064eb64a7a79a3e15e1b4365f
+ms.openlocfilehash: 0fc44d29ca0b94f03fd94e89d5ba442f53fdf5da
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "85942916"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87391953"
 ---
 # <a name="transact-sql-statements"></a>Transact-SQL 语句
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 SQL 语句是工作的原子单元，要么完全成功，要么完全失败。 SQL 语句是一组指令，由标识符、参数、变量、名称、数据类型和成功编译的 SQL 保留字组成。 如果 `BeginTransaction` 命令未指定启动事务，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会为 SQL 语句创建隐式事务。 如果此语句成功，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会始终提交隐式事务；如果此命令失败，则会回滚隐式事务。  
 

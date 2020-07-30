@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6d626d35-0bf3-4f24-9934-ad9c9c91273a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 05efe4c1e31f1ee9c7b7abd130a9d9c810ab12f4
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b7a338d3e157c39389a7f6911dd04d9c5fb25740
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764308"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242507"
 ---
 # <a name="description-property-ado-md"></a>Description 属性 (ADO MD)
 返回当前对象的文本说明。  
@@ -38,9 +38,18 @@ ms.locfileid: "82764308"
   
  此属性仅在属于[级别](../../../ado/reference/ado-md-api/level-object-ado-md.md)对象的**成员**对象上受支持。 从属于某个[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)对象的**成员**对象引用此属性时，将发生错误。  
   
-## <a name="applies-to"></a>应用于  
-  
-||||  
-|-|-|-|  
-|[CubeDef 对象 (ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)|[维度对象 (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|[层次结构对象 (ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|  
-|[级别对象 (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)|[成员对象 (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)||
+## <a name="applies-to"></a>适用于  
+
+:::row:::
+    :::column:::
+        [CubeDef 对象 (ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)  
+        [维度对象 (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)  
+    :::column-end:::
+    :::column:::
+        [层次结构对象 (ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)  
+        [级别对象 (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)  
+    :::column-end:::
+    :::column:::
+        [成员对象 (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
+    :::column-end:::
+:::row-end:::

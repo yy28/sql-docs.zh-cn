@@ -1,6 +1,6 @@
 ---
 title: sys. database_automatic_tuning_options （Transact-sql） |Microsoft Docs
-description: 了解如何在 SQL 数据库上查看自动优化选项
+description: 了解如何在 SQL 数据库上查看自动优化选项。 查看所需权限并查看其他可用资源。
 ms.custom: ''
 ms.date: 07/20/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ ms.assetid: 16b47d55-8019-41ff-ad34-1e0112178067
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6660bc43a6db9437ba628c0856760aac4ccd52f5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4de2851505d7c5c240d792ecacdaa6bf3d1c6c3e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787150"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242947"
 ---
 # <a name="sysdatabase_automatic_tuning_options-transact-sql"></a>sys.databases \_ 自动 \_ Tuning_options （transact-sql）
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 52d0a96c-14fb-4ad9-b004-4d821bc0a6db
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 448510f237fc4ce56368d7f2d74b72f63de87c61
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 375f0a0b81f71294b67200f8137ee381a638b8ac
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764568"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242907"
 ---
 # <a name="activeconnection-property-ado"></a>ActiveConnection 属性 (ADO)
 指示指定的[命令](../../../ado/reference/ado-api/command-object-ado.md)、[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)或[记录](../../../ado/reference/ado-api/record-object-ado.md)对象当前属于哪个[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。  
@@ -67,12 +67,20 @@ ms.locfileid: "82764568"
 > [!NOTE]
 >  使用 http 方案的 Url 将自动调用[用于 Internet 发布的 Microsoft OLE DB 提供程序](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)。 有关详细信息，请参阅[绝对和相对 url](../../../ado/guide/data/absolute-and-relative-urls.md)。  
   
-## <a name="applies-to"></a>应用于  
-  
-||||  
-|-|-|-|  
-|[命令对象 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)|[记录对象 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)|[记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
-  
+## <a name="applies-to"></a>适用于  
+
+:::row:::
+    :::column:::
+        [命令对象 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
+    :::column-end:::
+    :::column:::
+        [记录对象 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
+    :::column-end:::
+    :::column:::
+        [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>另请参阅  
  [ActiveConnection、CommandText、CommandTimeout、CommandType、Size 和 Direction 属性示例（VB）](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
  [ActiveConnection、CommandText、CommandTimeout、CommandType、Size 和 Direction 属性示例（VC + +）](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   

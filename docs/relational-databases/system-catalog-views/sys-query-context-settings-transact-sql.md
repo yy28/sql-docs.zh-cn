@@ -20,15 +20,15 @@ ms.assetid: 3c1887df-6bd8-491e-82fc-d25ad9589faf
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d39fe1b573e038459853857496c651e9ad2af83b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2413e629e969fb0aa7dff93dc2959f1b7a007b10
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831463"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394002"
 ---
 # <a name="sysquery_context_settings-transact-sql"></a>sys. query_context_settings （Transact-sql）
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   包含影响与查询关联的上下文设置的语义的相关信息。 中有多个可用的上下文设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，它们会影响查询语义（定义正确的查询结果）。 在不同设置下编译的相同查询文本可能会产生不同的结果（具体取决于基础数据）。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "82831463"
 |-----------------|---------------|-----------------|  
 |**context_settings_id**|**bigint**|主密钥。 此值在查询的显示计划 XML 中公开。|  
 |**set_options**|**varbinary(8)**|用于反映多个 SET 选项的状态的位掩码。 有关详细信息，请参阅[sys.databases&#41;dm_exec_plan_attributes &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)。|  
-|**language_id**|**smallint**|语言的 id。 有关详细信息，请参阅[sys.syslanguages &#40;transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)。|  
+|**language_id**|**smallint**|语言的 id。 有关详细信息，请参阅[&#40;transact-sql&#41;sys.sys语言](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)。|  
 |**date_format**|**smallint**|日期格式。 有关详细信息，请参阅 [SET DATEFORMAT (Transact-SQL)](../../t-sql/statements/set-dateformat-transact-sql.md).|  
 |**date_first**|**tinyint**|日期第一个值。 有关详细信息，请参阅 [SET DATEFIRST (Transact-SQL)](../../t-sql/statements/set-datefirst-transact-sql.md).|  
 |**status**|**varbinary （2）**|位掩码字段，指示执行查询的查询或上下文的类型。 <br />列值可以组合多个标志（用十六进制表示）：<br /><br /> 0x0-常规查询（无特定标志）<br /><br /> 0x1-通过一个游标 Api 存储过程执行的查询<br /><br /> 0x2-查询通知<br /><br /> 0x4-内部查询<br /><br /> 0x8-无通用参数化的自动参数化查询<br /><br /> 0x10-游标提取刷新查询<br /><br /> 0x20-在游标更新请求中使用的查询<br /><br /> 0x40-打开游标时返回初始结果集（游标自动提取）<br /><br /> 0x80-加密查询<br /><br /> 0x100-查询行级别安全性谓词的上下文|  
@@ -59,8 +59,8 @@ ms.locfileid: "82831463"
  [sys. query_store_wait_stats &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)   
  [sys. query_store_runtime_stats_interval &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [相关视图、函数和过程](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [Transact-sql&#41;的目录视图 &#40;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [查询存储存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
+ [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [查询存储存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)  
   
   

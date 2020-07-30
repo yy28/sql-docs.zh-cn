@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bcc1b02671d73e9056babb417ba2fa22a4d6cf0e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b69826fbbc45751247ce2eba6fe74ad251189dea
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762538"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242687"
 ---
 # <a name="filter-property"></a>Filter 属性
 指示[记录集中](../../../ado/reference/ado-api/recordset-object-ado.md)数据的筛选器。  
@@ -43,7 +43,7 @@ ms.locfileid: "82762538"
 
 -   *FieldName*必须是**记录集中**的有效字段名称。 如果字段名称包含空格，则必须用方括号将该名称括起来。  
   
--   运算符必须是下列之一： \< 、>、 \< =、>=、 <>、= 或**LIKE**。  
+-   运算符必须是下列其中一项： \<, > 、 \<=, > =、 <>、= 或**LIKE**。  
   
 -   值是用于比较字段值的值（例如，"Smith"、#8/24/95 #、12.345 或 $50.00）。 使用单引号将字符串和井号（#）与日期一起使用。 对于数字，可以使用小数点、美元符号和科学记数法。 如果运算符**类似**，则值可以使用通配符。 仅星号（*）和百分号（%）允许使用通配符，并且它们必须是字符串中的最后一个字符。 值不能为空。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "82762538"
 -   而是将此筛选器构造为  
  `(LastName = 'Smith' AND FirstName = 'John') OR (LastName = 'Jones' AND FirstName = 'John')`  
   
--   在**LIKE**子句中，可以在模式的开头和结尾使用通配符。 例如，可以使用 `LastName Like '*mit*'`。 或者使用**LIKE** ，只能在模式的末尾使用通配符。 例如，`LastName Like 'Smit*'` 。  
+-   在**LIKE**子句中，可以在模式的开头和结尾使用通配符。 例如，你可以使用 `LastName Like '*mit*'`。 或者使用**LIKE** ，只能在模式的末尾使用通配符。 例如 `LastName Like 'Smit*'`。  
   
  例如，使用筛选器常量可以在批处理更新模式下更轻松地解决单个记录冲突，只允许查看在上一次[UpdateBatch 方法](../../../ado/reference/ado-api/updatebatch-method.md)方法调用期间受影响的记录。  
   
@@ -90,14 +90,14 @@ ms.locfileid: "82762538"
   
 下表总结了**adFilterPendingRecords**对不同筛选和修改组合的影响。 左侧列显示可能的修改。 可以对任何非键控字段、单键控表中的键字段或多键表中的任何键字段进行修改。 顶部行显示了筛选条件。 筛选可以基于任何非键控字段、单键控表中的键字段或多键表中的任何键字段。 交叉单元显示结果。 **+** 加号表示应用**adFilterPendingRecords**会导致非空**记录集**。 **-** 负号表示空**记录集**。  
   
-||非键|单个键|多个键|
+|各种|非键|单个键|多个键|
 |-|--------------|----------------|-------------------|
 |**非键**|+|+|+|
-|**单个键**|+|-|不可用|
-|**多个键**|+|不可用|+|
+|**单个键**|+|-|空值|
+|**多个键**|+|空值|+|
 |||||
   
-## <a name="applies-to"></a>应用于
+## <a name="applies-to"></a>适用于
 
 [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   

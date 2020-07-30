@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6e34d886-005a-40dc-bd5c-6adcbf81e5cd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ca14531410942a77add7c6c99756b64bf99e785c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 89de6b52bd7987a2bdd2b8bee8e5c58b38d6074f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764518"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242697"
 ---
 # <a name="fieldattributeenum"></a>FieldAttributeEnum
 指定[Field](../../../ado/reference/ado-api/field-object.md)对象的一个或多个属性。  
   
-|返回的常量|值|说明|  
+|返回的常量|值|描述|  
 |--------------|-----------|-----------------|  
 |**adFldCacheDeferred**|0x1000|指示提供程序缓存字段值，并且后续读取是从缓存中完成的。|  
 |**adFldFixed**|0x10|指示字段包含固定长度数据。|  
@@ -63,8 +63,13 @@ ms.locfileid: "82764518"
 |AdoEnums. FieldAttribute。未指定|  
 |AdoEnums. FieldAttribute|  
   
-## <a name="applies-to"></a>应用于  
-  
-|||  
-|-|-|  
-|[Append 方法 (ADO)](../../../ado/reference/ado-api/append-method-ado.md)|[Attributes 属性 (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)|
+## <a name="applies-to"></a>适用于  
+
+:::row:::
+    :::column:::
+        [Append 方法 (ADO)](../../../ado/reference/ado-api/append-method-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Attributes 属性 (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)  
+    :::column-end:::
+:::row-end:::

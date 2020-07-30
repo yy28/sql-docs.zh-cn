@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 55d273c4-ccee-48ef-ba90-8893d04313c8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 43fc33ea851f86bc159b98a6d10991bda42dbbad
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1e71fd3a753da8d05e99f1cc8c9837323db61f03
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758923"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242437"
 ---
 # <a name="bookmarkenum"></a>BookmarkEnum
 指定指示操作开始位置的书签。  
   
-|返回的常量|值|说明|  
+|返回的常量|值|描述|  
 |--------------|-----------|-----------------|  
 |**adBookmarkCurrent**|0|从当前记录开始。|  
 |**adBookmarkFirst**|1|从第一条记录开始。|  
@@ -40,8 +40,13 @@ ms.locfileid: "82758923"
 |AdoEnums|  
 |AdoEnums. LAST|  
   
-## <a name="applies-to"></a>应用于  
-  
-|||  
-|-|-|  
-|[GetRows 方法 (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)|[Move 方法 (ADO)](../../../ado/reference/ado-api/move-method-ado.md)|
+## <a name="applies-to"></a>适用于  
+
+:::row:::
+    :::column:::
+        [GetRows 方法 (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Move 方法 (ADO)](../../../ado/reference/ado-api/move-method-ado.md)  
+    :::column-end:::
+:::row-end:::

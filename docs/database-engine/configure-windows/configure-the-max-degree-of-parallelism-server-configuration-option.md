@@ -17,12 +17,12 @@ ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: markingmyname
 ms.author: maghan
 ms.custom: contperfq4
-ms.openlocfilehash: f1b4b8db6d5af2ff76b85933ab4fcdc3f67e4987
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: 375d0b39fe0f898961d1386445b3b8e3f2945ee4
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86159725"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363289"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>配置 max degree of parallelism 服务器配置选项
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "86159725"
 
 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，请使用以下准则配置“最大并行度”服务器配置值：
 
-||||
+|服务器配置|处理器数目|指南|
 |----------------|-----------------|-----------------|
 |具有单个 NUMA 节点的服务器|小于或等于 8 个逻辑处理器|将 MAXDOP 保持为小于或等于逻辑处理器的数量|
 |具有单个 NUMA 节点的服务器|大于 8 个逻辑处理器|将 MAXDOP 保持为 8 个|
@@ -75,7 +75,7 @@ ms.locfileid: "86159725"
   
 从 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，请使用以下准则配置“最大并行度”服务器配置值：
 
-||||
+|服务器配置|处理器数目|指南|
 |----------------|-----------------|-----------------|
 |具有单个 NUMA 节点的服务器|小于或等于 8 个逻辑处理器|将 MAXDOP 保持为小于或等于逻辑处理器的数量|
 |具有单个 NUMA 节点的服务器|大于 8 个逻辑处理器|将 MAXDOP 保持为 8 个|

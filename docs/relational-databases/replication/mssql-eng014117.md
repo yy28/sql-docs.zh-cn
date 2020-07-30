@@ -13,19 +13,19 @@ ms.assetid: e5906a76-9511-4c47-8826-8c765b58a39d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: a21564e102d8267c2ac7ca719c7a10a2d973e89c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bbe865097ab6fcaa50726339c077fc2979c4affc
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85721912"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362714"
 ---
 # <a name="mssql_eng014117"></a>MSSQL_ENG014117
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
     
 ## <a name="message-details"></a>消息详细信息  
   
-|||  
+|Attribute|值|  
 |-|-|  
 |产品名称|SQL Server|  
 |事件 ID|14117|  
@@ -37,7 +37,7 @@ ms.locfileid: "85721912"
 ## <a name="explanation"></a>说明  
  如果下列之一或两者均为 True，则会出现此错误：  
   
--   msdb..MSdistributiondbs  中缺少指定分发数据库的条目。  
+-   msdb..MSdistributiondbs 中缺少指定分发数据库的条目。  
   
 -   在 master  数据库中没有本地服务器入口，或者存在的入口不正确。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "85721912"
   
      如果 @@SERVERNAME 的值对于某个群集实例是不正确的，则必须使用群集管理器更改该名称。 有关详细信息，请参阅 [AlwaysOn 故障转移群集实例 (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。  
   
- 验证已正确注册分发服务器实例后，请验证分发数据库是否已在 msdb..MSdistributiondbs  中列出。 如果未列出：  
+ 验证已正确注册分发服务器实例后，请验证分发数据库是否已在 msdb..MSdistributiondbs 中列出。 如果未列出：  
   
 1.  请编写分发配置的脚本。 有关详细信息，请参阅 [Scripting Replication](../../relational-databases/replication/scripting-replication.md)。  
   

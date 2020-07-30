@@ -1,5 +1,6 @@
 ---
 title: sys. dm_db_rda_migration_status （Transact-sql） |Microsoft Docs
+description: 了解对于 SQL Server 本地实例上每个启用 Stretch 的表中的每批已迁移数据，sys.databases dm_db_rda_migration_status 包含一行。
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,11 +19,12 @@ helpviewer_keywords:
 ms.assetid: faf3901c-a0e0-4e0c-8b1b-86d9f15f34dd
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 1e383b01ce40dbb03f5134bf5374b9b39bc2a99e
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 87e69284a4fdcac90420ec8a091fd1bd66933bb0
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053483"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87238777"
 ---
 # <a name="stretch-database---sysdm_db_rda_migration_status"></a>Stretch Database-sys. dm_db_rda_migration_status
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -40,7 +42,7 @@ ms.locfileid: "86053483"
 |**migrated_rows**|**bigint**|在此批处理中迁移的行数。|  
 |**start_time_utc**|**datetime**|批处理开始时的 UTC 时间。|  
 |**end_time_utc**|**datetime**|批处理完成时的 UTC 时间。|  
-|error_number |**int**|如果批失败，则出现错误的错误号;否则为 null。|  
+|error_number|**int**|如果批失败，则出现错误的错误号;否则为 null。|  
 |**error_severity**|**int**|如果批失败，则为发生的错误的严重级别;否则为 null。|  
 |**error_state**|**int**|如果批失败，则为发生的错误的状态;否则为 null。<br /><br /> **Error_state**指示发生错误的条件或位置。|  
   

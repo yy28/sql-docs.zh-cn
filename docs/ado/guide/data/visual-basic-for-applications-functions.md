@@ -15,38 +15,144 @@ helpviewer_keywords:
 ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 155eda8cf8361abff080d52db9a226fa9237b2eb
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2d7493fbba302ce23279374177819bfa7ff9b2e5
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763008"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242917"
 ---
 # <a name="visual-basic-for-applications-functions"></a>Visual Basic for Applications 函数
 以下 Visual Basic for Applications 函数可用于数据定形 CALC 表达式：  
-  
-|||||||  
-|-|-|-|-|-|-|  
-|Abs|Asc|Atn|CBool|CByte|CCur|  
-|Cdate|CDbl|Chr|ChrB|ChrW|Chr$|  
-|ChrB $|CInt|CLng|Cos|CSng|CStr|  
-|Cvar|CVDate|CVErr|日期|Date$|DateAdd|  
-|DateDiff|DatePart|DateSerial|DateValue|天|DDB|  
-|Error|Error$|Exp|Fix|格式|Format$|  
-|FV|Hex|Hex$|小时|IIF|InStr|  
-|int|IPmt|IRR|IsDate|IsEmpty|IsError|  
-|IsNull|IsNumeric|IsObject|LCase|LCase$|左|  
-|Leftb 将|Left$|Leftb 将 $|Len|日志|LTrim|  
-|LTrim$|Mid|Mid$|Minute|MIRR|月份|  
-|现在|NPer|NPV|Oct|Oct$|Pmt|  
-|PPmt|PV|QBColor|费率|RGB|权限|  
-|Rightb 将|Right$|Rightb 将 $|Rnd|RTrim|RTrim $|  
-|秒|Sgn|Sin|SLN|Space|Space$|  
-|Sqr|Str|Str$|StrComp|StrConv|String|  
-|String$|SYD|Tan|时间|Time$|Timer|  
-|TimeSerial|TimeValue|Trim|Trim$|TypeName|UCase|  
-|UCase$|Val|VarType|星期|年||  
-  
+
+:::row:::
+    :::column:::
+        Abs  
+        Asc  
+        Atn  
+        CBool  
+        CByte  
+        CCur  
+        CDate  
+        CDbl  
+        Chr  
+        ChrB  
+        ChrW  
+        Chr$  
+        ChrB $  
+        CInt  
+        CLng  
+        Cos  
+        CSng  
+        CStr  
+        Cvar  
+    :::column-end:::
+    :::column:::
+        CVDate  
+        CVErr  
+        Date  
+        Date$  
+        DateAdd  
+        DateDiff  
+        DatePart  
+        DateSerial  
+        DateValue  
+        天  
+        DDB  
+        错误  
+        Error$  
+        Exp  
+        Fix  
+        格式  
+        Format$  
+        FV  
+        Hex  
+    :::column-end:::
+    :::column:::
+        Hex$  
+        小时  
+        IIF  
+        InStr  
+        int  
+        IPmt  
+        IRR  
+        IsDate  
+        IsEmpty  
+        IsError  
+        IsNull  
+        IsNumeric  
+        IsObject  
+        LCase  
+        LCase$  
+        Left  
+        Leftb 将  
+        Left$  
+        Leftb 将 $  
+    :::column-end:::
+    :::column:::
+        Len  
+        日志  
+        LTrim  
+        LTrim$  
+        Mid  
+        Mid$  
+        Minute  
+        MIRR  
+        月份  
+        Now  
+        NPer  
+        NPV  
+        Oct  
+        Oct$  
+        Pmt  
+        PPmt  
+        PV  
+        QBColor  
+        费率  
+    :::column-end:::
+    :::column:::
+        RGB  
+        Right  
+        Rightb 将  
+        Right$  
+        Rightb 将 $  
+        Rnd  
+        RTrim  
+        RTrim $  
+        秒  
+        Sgn  
+        正弦  
+        SLN  
+        Space  
+        Space$  
+        Sqr  
+        Str  
+        Str$  
+        StrComp  
+        StrConv  
+    :::column-end:::
+    :::column:::
+        字符串  
+        String$  
+        SYD  
+        Tan  
+        时间  
+        Time$  
+        Timer  
+        TimeSerial  
+        TimeValue  
+        Trim  
+        Trim$  
+        TypeName  
+        UCase  
+        UCase$  
+        Val  
+        VarType  
+        星期  
+        年份  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>另请参阅  
  [访问分层记录集中的行](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
  [数据定形概述](../../../ado/guide/data/data-shaping-overview.md)   
