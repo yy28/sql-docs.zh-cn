@@ -1,5 +1,6 @@
 ---
 title: srv_alloc（扩展存储过程 API）| Microsoft Docs
+description: 了解扩展存储过程 API 中的 srv_alloc 以及它如何动态分配内存。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 91505c59-a273-452f-b71d-5e8205c21863
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b8abc88b653c372849f5a3d7eb9d62f00abb64e5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b2caa2f1a3959a723854c94a474a20e966f54fb5
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85678873"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332377"
 ---
 # <a name="srv_alloc-extended-stored-procedure-api"></a>srv_alloc（扩展存储过程 API）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,8 +44,8 @@ size
 );  
 ```  
   
-## <a name="arguments"></a>自变量  
- size   
+## <a name="arguments"></a>参数  
+ *大小*  
  指定要分配的字节数。  
   
 ## <a name="returns"></a>返回  

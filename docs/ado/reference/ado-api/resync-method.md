@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 73b355d4-a4c0-434b-bfc4-039b1c76b32e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 54c92fad618ffaad9b22a8ed73b287c0a5716959
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6907bfa9b83370074db9d9e2e522ed49d2c96e7e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82756302"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243208"
 ---
 # <a name="resync-method"></a>重新同步方法
 刷新当前[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象中的数据，或从基础数据库刷新[记录](../../../ado/reference/ado-api/record-object-ado.md)对象的[字段](../../../ado/reference/ado-api/fields-collection-ado.md)集合中的数据。  
@@ -64,12 +64,17 @@ Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues
   
  重新**同步**不会修改**字段**对象的**状态值**，除非在调用重新**同步**时发生错误。 例如，如果该字段不存在，则提供程序将返回**字段**对象的相应**状态值**，如**adFieldDoesNotExist**。 返回的**状态值**可以在 "**状态**" 属性的值中以逻辑方式组合。  
   
-## <a name="applies-to"></a>应用于  
-  
-|||  
-|-|-|  
-|[字段集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
-  
+## <a name="applies-to"></a>应用到  
+
+:::row:::
+    :::column:::
+        [字段集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)  
+    :::column-end:::
+    :::column:::
+        [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>另请参阅  
  [Resync 方法示例（VB）](../../../ado/reference/ado-api/resync-method-example-vb.md)   
  [Resync 方法示例（VC + +）](../../../ado/reference/ado-api/resync-method-example-vc.md)   

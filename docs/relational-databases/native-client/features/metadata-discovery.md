@@ -10,13 +10,14 @@ ms.assetid: ec3c0f4f-f838-43ce-85f2-cf2761e2aac5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 70b9f117e5db28d81f53ef5d0b547b23656310fd
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 86bf3fe8ed183ebc4b3c361044f3e7b3c741cca8
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009050"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245775"
 ---
-# <a name="metadata-discovery"></a>元数据发现
+# <a name="metadata-discovery-in-sql-server-native-client"></a>SQL Server Native Client 中的元数据发现
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   中的元数据发现改进 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 允许 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 应用程序确保从执行查询返回的列或参数元数据与执行查询之前指定的元数据格式相同或与其兼容。 如果执行查询后返回的元数据与执行该查询之前指定的元数据格式不兼容，您将会收到错误。  
@@ -25,7 +26,7 @@ ms.locfileid: "86009050"
   
  如果使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的 Native Client 开发应用程序 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] ，但连接到早于的服务器版本 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] ，则元数据发现功能将与服务器版本相对应。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中增强了以下 bcp 函数，以提供改进的元数据发现：  
   
 -   [bcp_columns](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)  

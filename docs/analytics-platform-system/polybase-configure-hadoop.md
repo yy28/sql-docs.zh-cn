@@ -9,14 +9,14 @@ ms.date: 12/13/2019
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019, seo-lt-2019
-ms.openlocfilehash: dc796ff58c5320e60011dc46dd45468177a98ed8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2989be74f4c180d07a6270a8ba5f685460780fbd
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75245385"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243471"
 ---
-# <a name="configure-polybase-to-access-external-data-in-hadoop"></a>配置 PolyBase 以访问 Hadoop 中的外部数据
+# <a name="configure-polybase-in-parallel-data-warehouse-to-access-external-data-in-hadoop"></a>将 PolyBase 配置为并行数据仓库以访问 Hadoop 中的外部数据
 
 本文介绍如何在 AP 设备上使用 PolyBase 查询 Hadoop 中的外部数据。
 
@@ -55,7 +55,7 @@ PolyBase 支持两个 Hadoop 提供程序：Hortonworks 数据平台 (HDP) 和 C
   
 1. 打开与 PDW 控制节点的远程桌面连接。
 
-2. 在控制节点上查找文件**yarn-site.xml** 。 通常情况下，该路径为：  
+2. 在控制节点上查找**yarn-site.xml**的文件。 通常情况下，该路径为：  
 
    ```xml  
    C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\Hadoop\conf\  
@@ -63,7 +63,7 @@ PolyBase 支持两个 Hadoop 提供程序：Hortonworks 数据平台 (HDP) 和 C
 
 3. 对于 Hadoop 计算机，在 Hadoop 配置目录中查找类似文件。 在文件中，查找并复制配置密钥 yarn.application.classpath 的值。  
   
-4. 在 "控制" 节点上的**yarn 文件中，** 找到**yarn**属性。 将 Hadoop 计算机的值粘贴到值元素中。  
+4. 在 "控制" 节点上的**yarn.site.xml 文件中，** 找到 " **yarn** " 属性。 将 Hadoop 计算机的值粘贴到值元素中。  
   
 5. 对于所有 CDH 5.X 版本，你都需要将 mapreduce.application.classpath 配置参数添加到 yarn.site.xml 文件的末尾或添加到 mapred-site.xml 文件中。 HortonWorks 在 yarn.application.classpath 配置中包括了这些配置。 有关示例，请参阅 [PolyBase 配置](../relational-databases/polybase/polybase-configuration.md)。
 
@@ -102,7 +102,7 @@ PolyBase 支持两个 Hadoop 提供程序：Hortonworks 数据平台 (HDP) 和 C
 </configuration>
 ```
 
-如果选择将两个配置设置分解为 mapred-site.xml 和 yarn-site.xml，则文件将如下所示：
+如果选择将两个配置设置分解到 mapred-site.xml 和 yarn-site.xml 中，则文件将如下所示：
 
 **yarn-site.xml**
 

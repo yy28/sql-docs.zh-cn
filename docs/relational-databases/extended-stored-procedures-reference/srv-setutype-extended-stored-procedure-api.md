@@ -1,5 +1,6 @@
 ---
 title: srv_setutype（扩展存储过程 API）| Microsoft Docs
+description: 了解 srv_setutype。 srv_setutype 为行中的列设置用户定义的数据类型。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6160f15d-1b68-411e-ab6d-491ec288f264
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 70cacca6e6694d914c4b66b7e6eb813b012cf2b3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9ecdbaef663059146f3ca6bd4a88305e12d4f495
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755817"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248183"
 ---
 # <a name="srv_setutype-extended-stored-procedure-api"></a>srv_setutype（扩展存储过程 API）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +51,7 @@ user_type
 );  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  srvproc**  
  指向作为特定客户端连接句柄的 SRV_PROC 结构的指针。 该结构包含扩展存储过程 API 库用于管理应用程序和客户端之间的通信和数据的信息。  
   
@@ -60,7 +61,7 @@ user_type
  *user_type*  
  指定用户定义数据类型的代码。  
   
-## <a name="returns"></a>返回  
+## <a name="returns"></a>返回值  
  SUCCEED 或 FAIL。 如果相应列不存在，则返回 FAIL。  
   
 ## <a name="remarks"></a>备注  

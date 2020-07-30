@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8a4c079f-9f4f-4545-801d-85983b8db71e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 46718126ede409caa749b3a49dfaaffe118afc77
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7bfa47120814058adbc5c2e5f3650a79b2202afb
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761825"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243178"
 ---
 # <a name="type-property-ado"></a>Type 属性 (ADO)
 指示[参数](../../../ado/reference/ado-api/parameter-object.md)、[字段](../../../ado/reference/ado-api/field-object.md)或[属性](../../../ado/reference/ado-api/property-object-ado.md)对象的操作类型或数据类型。  
@@ -34,12 +34,20 @@ ms.locfileid: "82761825"
   
  对于所有其他对象， **Type**属性为只读。  
   
-## <a name="applies-to"></a>应用于  
-  
-||||  
-|-|-|-|  
-|[字段对象](../../../ado/reference/ado-api/field-object.md)|[参数对象](../../../ado/reference/ado-api/parameter-object.md)|[属性对象 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
-  
+## <a name="applies-to"></a>应用到  
+
+:::row:::
+    :::column:::
+        [字段对象](../../../ado/reference/ado-api/field-object.md)  
+    :::column-end:::
+    :::column:::
+        [参数对象](../../../ado/reference/ado-api/parameter-object.md)  
+    :::column-end:::
+    :::column:::
+        [属性对象 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>另请参阅  
  [Type 属性示例（字段）（VB）](../../../ado/reference/ado-api/type-property-example-field-vb.md)   
  [Type 属性示例（属性）（VC + +）](../../../ado/reference/ado-api/type-property-example-property-vc.md)   

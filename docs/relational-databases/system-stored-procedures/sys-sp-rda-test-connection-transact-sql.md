@@ -1,5 +1,6 @@
 ---
 title: sys. sp_rda_test_connection （Transact-sql） |Microsoft Docs
+description: 了解如何使用 sp_rda_test_connection 来测试从 SQL Server 到远程 Azure 服务器的连接，并报告可能阻止数据迁移的问题。
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -16,11 +17,12 @@ helpviewer_keywords:
 ms.assetid: e2ba050c-d7e3-4f33-8281-c9b525b4edb4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4edd3cfc40225b4b040c73fb0d3ba929d16debc5
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 8a49ec06172f7e28828566383137ed2d165c1e89
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053583"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246486"
 ---
 # <a name="syssp_rda_test_connection-transact-sql"></a>sys. sp_rda_test_connection （Transact-sql）
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -40,7 +42,7 @@ EXECUTE sys.sp_rda_test_connection
   
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  @database_name= N '*db_name*'  
  已启用延伸的 SQL Server 数据库的名称。 此参数是可选的。  
   

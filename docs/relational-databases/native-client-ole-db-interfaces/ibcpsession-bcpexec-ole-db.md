@@ -1,5 +1,5 @@
 ---
-title: IBCPSession::BCPExec (OLE DB) | Microsoft Docs
+title: IBCPSession：： BCPExec （Native Client OLE DB 提供程序） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,13 +16,14 @@ ms.assetid: 0f4ebb63-cf03-4e53-846e-6c3021cde007
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a0ee6699908f1a194ff10e51c6df07121de6b7c2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ab4bcd943b88585b34f8e2c78e414b73a65b0e72
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998170"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247752"
 ---
-# <a name="ibcpsessionbcpexec-ole-db"></a>IBCPSession::BCPExec (OLE DB)
+# <a name="ibcpsessionbcpexec-native-client-ole-db-provider"></a>IBCPSession：： BCPExec （Native Client OLE DB 提供程序）
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   执行大容量复制操作。  
@@ -42,7 +43,7 @@ HRESULT BCPExec(
   
  BCPExec 方法是可能胜任任何时间长度的唯一大容量复制方法****。 因此，它是支持异步模式的唯一大容量复制方法。 若要使用异步模式，请在调用 BCPExec 方法之前，将特定于提供程序的会话属性 SSPROP_ASYNCH_BULKCOPY 设置为 VARIANT_TRUE****。 此属性位于 DBPROPSET_SQLSERVERSESSION 属性集中。 若要完成测试，请用相同参数调用 BCPExec 方法****。 如果大容量复制尚未完成，则 BCPExec 方法会返回 DB_S_ASYNCHRONOUS****。 它还会在 pRowsCopied 参数中返回已发送到服务器或从服务器接收的行数的状态计数**。 发送到服务器的行直到到达批的末尾时才会提交。  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  pRowsCopied**[out]  
  指向 DWORD 的指针。 BCPExec 方法用成功复制的行数填充 DWORD****。 如果将 pRowsCopied 参数设置为 NULL，则 BCPExec 方法会忽略该参数******。  
   

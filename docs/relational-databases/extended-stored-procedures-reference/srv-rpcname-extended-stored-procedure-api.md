@@ -1,5 +1,6 @@
 ---
 title: srv_rpcname（扩展存储过程 API）| Microsoft Docs
+description: 了解扩展存储过程 API 中 srv_rpcname 如何返回当前远程存储过程的过程名称组件。
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 0a1424e4-3319-4836-b8d8-5e0344cc683f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 999f949466efe5ed39fe20534f99138d5013f588
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 99e901a9ae1a14644d522b23747f1d242f8c95d3
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755923"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248277"
 ---
 # <a name="srv_rpcname-extended-stored-procedure-api"></a>srv_rpcname（扩展存储过程 API）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,14 +48,14 @@ len
 );  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  srvproc**  
  指向作为特定客户端连接句柄（在这里为接收远程存储过程的句柄）的 SRV_PROC 结构的指针。 该结构包含扩展存储过程 API 库用于管理应用程序和客户端之间的通信和数据的信息。  
   
  *长度*  
  指向接收数据库名称长度的整型变量的指针。 如果 len 为 NULL，则不返回远程存储过程名称的长度**。  
   
-## <a name="returns"></a>返回  
+## <a name="returns"></a>返回值  
  一个 DBCHAR 指针，指向当前远程存储过程的远程存储过程名称部分的以 NULL 值结束的字符串。 如果当前无远程存储过程，则返回 NULL，且 len 设置为 -1**。  
   
 ## <a name="remarks"></a>备注  

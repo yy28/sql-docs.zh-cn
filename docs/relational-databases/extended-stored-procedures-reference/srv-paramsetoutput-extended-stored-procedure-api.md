@@ -1,5 +1,6 @@
 ---
 title: srv_paramsetoutput（扩展存储过程 API）
+description: 了解扩展存储过程 API 中 srv_paramsetoutput 如何设置返回参数的值。
 ms.custom: seo-dt-2019
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f2810e19-e513-458b-8925-5756b6ee1313
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5b00f2fedd9c1053e332aaee8691207fbf990649
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3e406d8a9f2b9bc6b2f03239dee435364f481af9
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755952"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248381"
 ---
 # <a name="srv_paramsetoutput-extended-stored-procedure-api"></a>srv_paramsetoutput（扩展存储过程 API）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,7 +57,7 @@ fNull
 );  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  srvproc**  
  客户端连接的句柄。  
   
@@ -72,7 +73,7 @@ fNull
  fNull**  
  指示返回参数的值是否为 NULL 的标志。 如果应将该参数设置为 NULL，请将此标志设置为 TRUE。 默认值是 FALSE。 如果 fNull 设置为 TRUE，cbLen 应设置为 0，否则该函数将失败****。  
   
-## <a name="returns"></a>返回  
+## <a name="returns"></a>返回值  
  如果成功设置了参数信息，则返回 SUCCEED，否则返回 FAIL。 以下情况下返回 FAIL：  
   
 -   该参数不是返回参数，或者  

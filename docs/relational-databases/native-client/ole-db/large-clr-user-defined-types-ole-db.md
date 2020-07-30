@@ -13,13 +13,14 @@ ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d67e41f3dfaed9ef59e586368d8b80dda2936669
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e851332ad3f8485e7c716101942b1cdc0c6838bb
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010502"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243862"
 ---
-# <a name="large-clr-user-defined-types-ole-db"></a>大型 CLR 用户定义类型 (OLE DB)
+# <a name="large-clr-user-defined-types-in-sql-server-native-client-ole-db"></a>SQL Server Native Client （OLE DB）中的大型 CLR 用户定义类型
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   本主题讨论 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中为支持大型公共语言运行时 (CLR) 用户定义类型 (UDT) 而对 OLE DB 进行的更改。  
@@ -120,13 +121,13 @@ ms.locfileid: "86010502"
 |绑定数据类型|UDT 到服务器|非 UDT 到服务器|UDT 来自服务器|非 UDT 来自服务器|  
 |----------------------|-------------------|------------------------|---------------------|--------------------------|  
 |DBTYPE_UDT|支持 (5)|错误 (1)|支持 (5)|错误 (4)|  
-|DBTYPE_BYTES|支持 (5)|空值|支持 (5)|空值|  
-|DBTYPE_WSTR|支持 (2)、(5)|空值|支持 (3)、(5)、(6)|空值|  
-|DBTYPE_BSTR|支持 (2)、(5)|空值|支持 (3)、(5)|空值|  
-|DBTYPE_STR|支持 (2)、(5)|空值|支持 (3)、(5)|空值|  
-|DBTYPE_IUNKNOWN|支持 (6)|空值|支持 (6)|空值|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|支持 (5)|空值|支持 (3)、(5)|空值|  
-|DBTYPE_VARIANT (VT_BSTR)|支持 (2)、(5)|空值|空值|空值|  
+|DBTYPE_BYTES|支持 (5)|N/A|支持 (5)|N/A|  
+|DBTYPE_WSTR|支持 (2)、(5)|N/A|支持 (3)、(5)、(6)|N/A|  
+|DBTYPE_BSTR|支持 (2)、(5)|N/A|支持 (3)、(5)|N/A|  
+|DBTYPE_STR|支持 (2)、(5)|N/A|支持 (3)、(5)|N/A|  
+|DBTYPE_IUNKNOWN|支持 (6)|N/A|支持 (6)|N/A|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|支持 (5)|N/A|支持 (3)、(5)|N/A|  
+|DBTYPE_VARIANT (VT_BSTR)|支持 (2)、(5)|N/A|空值|空值|  
   
 ### <a name="key-to-symbols"></a>符号含义  
   

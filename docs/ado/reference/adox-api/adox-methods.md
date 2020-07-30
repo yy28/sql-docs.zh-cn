@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 8de11ef7-034c-4613-91df-2244171f0b9a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 59149594d618350c9188d40eb6ade51b3aecde68
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8b2af54e33aeaa42cab3de76f1ffc6bf5fd758dd
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764118"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243098"
 ---
 # <a name="adox-methods"></a>ADOX 方法
 
-|||  
+|方法|说明|  
 |-|-|  
 |[追加（列）](../../../ado/reference/adox-api/append-method-adox-columns.md)|向**Columns**集合添加一个新的**列**对象。|  
 |[追加（组）](../../../ado/reference/adox-api/append-method-adox-groups.md)|向**Groups**集合添加一个新的**组**对象。|  

@@ -1,5 +1,5 @@
 ---
-title: IBCPSession::BCPWriteFmt (OLE DB) | Microsoft Docs
+title: IBCPSession：： BCPWriteFmt （Native Client OLE DB 提供程序） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,13 +16,14 @@ ms.assetid: add50425-2ed6-411a-a391-4ce63c364892
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f6965eef7fe484ce603b05982745b36bbac39196
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3650544f0c6ce69489590918dd97fcf4d4d81c58
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008457"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247718"
 ---
-# <a name="ibcpsessionbcpwritefmt-ole-db"></a>IBCPSession::BCPWriteFmt (OLE DB)
+# <a name="ibcpsessionbcpwritefmt-native-client-ole-db-provider"></a>IBCPSession：： BCPWriteFmt （Native Client OLE DB 提供程序）
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   将每一列的格式信息写入格式化文件。  
@@ -42,7 +43,7 @@ HRESULT BCPWriteFmt(
   
  若要加载已保存的格式化文件，请使用 [IBCPSession::BCPReadFmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md) 方法。  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  pwszFormatFile**[in]  
  包含数据文件格式值的文件的路径和文件名。  
   

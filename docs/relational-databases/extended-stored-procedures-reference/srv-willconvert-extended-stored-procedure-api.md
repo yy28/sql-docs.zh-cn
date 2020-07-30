@@ -1,5 +1,6 @@
 ---
 title: srv_willconvert（扩展存储过程 API）| Microsoft Docs
+description: 了解 srv_willconvert 如何确定特定数据类型转换在 ODS 库中是否可用。
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6f4db5fd-215a-461c-95e4-17697852733e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0d9ba59555ce590c460854481d916e30ef942cba
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ef515b200221a6bb439a65a02e546017046dd0e4
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755807"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248202"
 ---
 # <a name="srv_willconvert-extended-stored-procedure-api"></a>srv_willconvert（扩展存储过程 API）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,14 +48,14 @@ desttype
 );  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  srctype**  
  指示要转换的数据的数据类型。 该参数可以为任意一种扩展存储过程 API 数据类型。  
   
  desttype**  
  指示源数据要转换成的目标数据类型。 该参数可以为任意一种扩展存储过程 API 数据类型。  
   
-## <a name="returns"></a>返回  
+## <a name="returns"></a>返回值  
  如果支持数据类型转换，则为 TRUE；否则为 FALSE。  
   
 ## <a name="remarks"></a>备注  

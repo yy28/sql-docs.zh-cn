@@ -1,5 +1,5 @@
 ---
-title: 行集 | Microsoft Docs
+title: 行集（Native Client OLE DB 提供程序）
 description: 使所有数据访问接口能够以表格形式公开结果集数据。 在 OLE DB 中，使用行集功能，这是一组包含数据列的行。
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,13 +18,14 @@ ms.assetid: 5e7b3cbe-3670-4e18-8172-2226e0b6b142
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c0006be5acbff458e278d1719fcc5e6fe7d34ec6
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2254c566e30cec9e0869e1a09c850e7013e0482a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86013110"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246821"
 ---
-# <a name="rowsets"></a>行集
+# <a name="rowsets-native-client-ole-db-provider"></a>行集（Native Client OLE DB 提供程序）
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   行集是一组包含数据列的行。 行集是使所有 OLE DB 数据访问接口能够以表格形式公开结果集数据的中心对象。  
@@ -61,7 +62,7 @@ ms.locfileid: "86013110"
   
 -   [使用 IRow 提取单行](../../relational-databases/native-client-ole-db-rowsets/fetching-a-single-row-with-irow.md)  
   
--   [书签](../../relational-databases/native-client-ole-db-rowsets/bookmarks.md)  
+-   书签  
   
 -   [更新行集中的数据](../../relational-databases/native-client-ole-db-rowsets/updating-data-in-rowsets.md)  
   

@@ -29,12 +29,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eade5e3328993176f8795d27e511902a42468192
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 724290f48b0f33d586a797629766b36bae49ddb6
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764866"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332634"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>XPath 数据类型 (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "85764866"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不执行针对节点集的位置选择：例如，XPath 查询 `Customer[3]` 意味着第三个客户；但在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中不支持此类型的位置选择。 因此，不会实现 XPath 规范所述的节点集到**字符串**或节点集到**数字**的转换。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用“任何”语义，而 XPath 规范指定“第一个”语义。 例如，根据 W3C XPath 规范，XPath 查询 `Order[OrderDetail/@UnitPrice > 10.0]` 会选择包含**单价**大于10.0 的第一个**OrderDetail**的订单。 在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，此 XPath 查询选择具有**单价**大于10.0 的所有**OrderDetail**的订单。  
   
- 转换为**布尔值**将生成一个存在测试;因此，XPath 查询 `Products[@Discontinued=true()]` 等效于 sql 表达式 "products. 废止 is not null"，而不是 sql 表达式 "products. 废止 = 1"。 若要使查询等效于后面的 SQL 表达式，请首先将节点集转换为非**布尔**类型，如**number**。 例如 `Products[number(@Discontinued) = true()]`。  
+ 转换为**布尔值**将生成一个存在测试;因此，XPath 查询 `Products[@Discontinued=true()]` 等效于 sql 表达式 "products. 废止 is not null"，而不是 sql 表达式 "products. 废止 = 1"。 若要使查询等效于后面的 SQL 表达式，请首先将节点集转换为非**布尔**类型，如**number**。 例如，`Products[number(@Discontinued) = true()]`。  
   
  因为如果运算符对于节点集中任一节点为 TRUE，则大多数运算符均定义为 TRUE；所以，在节点集为空时，这些运算的计算结果始终为 FALSE。 因此，如果 A 为空，则 `A = B` 和 `A != B` 均为 FALSE，并且 `not(A=B)` 和 `not(A!=B)` 均为 TRUE。  
   
@@ -90,13 +90,13 @@ ms.locfileid: "85764866"
   
 |XDR 数据类型|等效<br /><br /> XPath 数据类型|使用的 SQL Server 转换|  
 |-------------------|------------------------------------|--------------------------------|  
-|Nonebin.base64bin.hex|不可用|NoneEmployeeID|  
+|Nonebin.base64bin.hex|N/A|NoneEmployeeID|  
 |boolean|boolean|CONVERT(bit, EmployeeID)|  
-|number、int、float、i1、i2、i4、i8、r4、r8、ui1、ui2、ui4、ui8|数字|CONVERT(float(53), EmployeeID)|  
-|id、idref、idrefsentity、entities、enumerationnotation、nmtoken、nmtokens、chardate、Timedate、Time.tz、string、uri、uuid|字符串|CONVERT(nvarchar(4000), EmployeeID, 126)|  
+|number、int、float、i1、i2、i4、i8、r4、r8、ui1、ui2、ui4、ui8|number|CONVERT(float(53), EmployeeID)|  
+|id、idref、idrefsentity、entities、enumerationnotation、nmtoken、nmtokens、chardate、Timedate、Time.tz、string、uri、uuid|string|CONVERT(nvarchar(4000), EmployeeID, 126)|  
 |fixed14.4|无（在 XPath 中没有等效于 fixed14.4 XDR 数据类型的数据类型）|CONVERT(money, EmployeeID)|  
-|date|字符串|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
-|time<br /><br /> time.tz|字符串|SUBSTRING(CONVERT(nvarchar(4000), EmployeeID, 126), 1 + CHARINDEX(N'T', CONVERT(nvarchar(4000), EmployeeID, 126)), 24)|  
+|date|string|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
+|time<br /><br /> time.tz|string|SUBSTRING(CONVERT(nvarchar(4000), EmployeeID, 126), 1 + CHARINDEX(N'T', CONVERT(nvarchar(4000), EmployeeID, 126)), 24)|  
   
  日期和时间转换的设计目的是在数据库中使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime**数据类型还是**字符串**存储该值。 请注意， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime**数据类型不使用**时区**，其精度比 XML **time**数据类型的精度更小。 若要包括**时区**数据类型或其他精度，请 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用**字符串**类型将数据存储在中。  
   
@@ -126,12 +126,11 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
   
  如下表中所示，这一转换同样适用于其他 XPath 表达式（例如文字表达式或复合表达式）。  
   
-||||||  
-|-|-|-|-|-|  
-||X 未知|X 为**字符串**|X 为**数字**|X 是**布尔值**|  
-|string(X)|CONVERT (nvarchar(4000), X, 126)|-|CONVERT (nvarchar(4000), X, 126)|CASE WHEN X THEN N'true' ELSE N'false' END|  
-|number(X)|CONVERT (float(53), X)|CONVERT (float(53), X)|-|CASE WHEN X THEN 1 ELSE 0 END|  
-|boolean(X)|-|LEN （X） > 0|X != 0|-|  
+|   | X 未知 | X 为字符串 | X 为数字 | X 是布尔值 |
+| - | ------------ | ----------- | ----------- | ------------ |
+| **string(X)** |CONVERT (nvarchar(4000), X, 126)|-|CONVERT (nvarchar(4000), X, 126)|CASE WHEN X THEN N'true' ELSE N'false' END|  
+| **number(X)** |CONVERT (float(53), X)|CONVERT (float(53), X)|-|CASE WHEN X THEN 1 ELSE 0 END|  
+| **boolean(X)** |-|LEN （X） > 0|X != 0|-|  
   
 ## <a name="examples"></a>示例  
   

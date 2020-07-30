@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: da9ccd1f-d402-41a2-940c-45556fc5340d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9b611546b63dec8484785ba855f299925933e89e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ecf53c6743e20ec3fe960d10dd16f5577a7d69f0
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760233"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242747"
 ---
 # <a name="count-property-ado"></a>Count 属性 (ADO)
 指示集合中的对象数。  
@@ -35,18 +35,36 @@ ms.locfileid: "82760233"
   
  如果**Count**属性为零，则集合中不存在任何对象。  
   
-## <a name="applies-to"></a>应用于  
-  
-||||  
-|-|-|-|  
-|[轴集合 (ADO MD)](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)|[列集合 (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)|[CubeDefs 集合 (ADO MD)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)|  
-|[维度集合 (ADO MD)](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)|[错误集合 (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)|[字段集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|  
-|[组集合 (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)|[层次结构集合 (ADO MD)](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)|[索引集合 (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)|  
-|[项集合 (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)|[级别集合 (ADO MD)](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)|[成员集合 (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)|  
-|[参数集合 (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)|[位置集合 (ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)|[过程集合 (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)|  
-|[属性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)|[表集合 (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)|[用户集合 (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)|  
-|[视图集合 (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)|||  
-  
+## <a name="applies-to"></a>应用到  
+
+:::row:::
+    :::column:::
+        [轴集合 (ADO MD)](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)  
+        [列集合 (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)  
+        [CubeDefs 集合 (ADO MD)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)  
+        [维度集合 (ADO MD)](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)  
+        [错误集合 (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)  
+        [字段集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)  
+        [组集合 (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)  
+    :::column-end:::
+    :::column:::
+        [层次结构集合 (ADO MD)](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)  
+        [索引集合 (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)  
+        [项集合 (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)  
+        [级别集合 (ADO MD)](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)  
+        [成员集合 (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)  
+        [参数集合 (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)  
+    :::column-end:::
+    :::column:::
+        [位置集合 (ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)  
+        [过程集合 (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)  
+        [属性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)  
+        [表集合 (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)  
+        [用户集合 (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)  
+        [视图集合 (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>另请参阅  
  [Count 属性示例（VB）](../../../ado/reference/ado-api/count-property-example-vb.md)   
  [Count 属性示例（VC + +）](../../../ado/reference/ado-api/count-property-example-vc.md)   

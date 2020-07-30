@@ -9,20 +9,20 @@ ms.topic: reference
 ms.assetid: 35b4d6fa-ebb9-49d3-aaab-d4e37b6f3760
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: fbbad615b2b4f18e9e46ad931a00e7a2d8bee804
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 636080d7247345cca8f6a6b74fbd19c9e8a487d9
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756916"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246132"
 ---
 # <a name="localdb_error_instance_already_shared"></a>LOCALDB_ERROR_INSTANCE_ALREADY_SHARED
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="details"></a>详细信息  
   
-|||  
-|-|-|  
+| Attribute | 值 |
+| --------- | ----- |
 |产品名称|SQL Server|  
 |事件 ID|284|  
 |事件源|SQL Server 本地数据库运行时 12.0|  

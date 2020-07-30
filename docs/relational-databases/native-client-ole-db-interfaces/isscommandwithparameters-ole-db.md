@@ -1,5 +1,5 @@
 ---
-title: ISSCommandWithParameters (OLE DB) | Microsoft Docs
+title: ISSCommandWithParameters （Native Client OLE DB 提供程序）
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,13 +16,14 @@ ms.assetid: 3419b7f3-36a3-4863-816e-e641e4e90496
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 56ca60d6baf5d90869c008bd9673b899a8dc7a33
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: de38a824824e35faac5ee40e691569f2abaae685
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005333"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246886"
 ---
-# <a name="isscommandwithparameters-ole-db"></a>ISSCommandWithParameters (OLE DB)
+# <a name="isscommandwithparameters-native-client-ole-db-provider"></a>ISSCommandWithParameters （Native Client OLE DB 提供程序）
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   **ISSCommandWithParameters**公开对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML 和用户定义类型（UDT）的支持。 这是一个可选接口，它继承自 core OLE DB interface **ICommandWithParameters**。 除了从**ICommandWithParameters**继承的三个方法;**GetParameterInfo**、 **MapParameterNames**和**SetParameterInfo**;**ISSCommandWithParameters**提供了两种新方法用于处理特定于服务器的数据类型。  

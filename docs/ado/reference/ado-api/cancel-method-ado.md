@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e0db4e15-6787-41e2-8f13-9e9b524d620a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dd6fc7b58d49c788242e029fa004ec38534c8e38
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 25b6de609d286847fe7458353203dd7f4b9c7b4b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763538"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242423"
 ---
 # <a name="cancel-method-ado"></a>Cancel 方法 (ADO)
 取消执行挂起的异步方法调用。  
@@ -43,19 +43,28 @@ object.Cancel
   
 |如果*对象*为|对此方法的最后一次异步调用被终止|  
 |----------------------|-------------------------------------------------------------|  
-|[命令](../../../ado/reference/ado-api/command-object-ado.md)|[运行](../../../ado/reference/ado-api/execute-method-ado-command.md)|  
-|[连接](../../../ado/reference/ado-api/connection-object-ado.md)|[Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md)或[Open](../../../ado/reference/ado-api/open-method-ado-connection.md)|  
+|[命令](../../../ado/reference/ado-api/command-object-ado.md)|[执行](../../../ado/reference/ado-api/execute-method-ado-command.md)|  
+|[Connection](../../../ado/reference/ado-api/connection-object-ado.md)|[Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md)或[Open](../../../ado/reference/ado-api/open-method-ado-connection.md)|  
 |[记录](../../../ado/reference/ado-api/record-object-ado.md)|[CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md)、 [DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md)、 [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md)或[Open](../../../ado/reference/ado-api/open-method-ado-record.md)|  
 |[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)|[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)|  
-|[Stream](../../../ado/reference/ado-api/stream-object-ado.md)|[打开](../../../ado/reference/ado-api/open-method-ado-stream.md)|  
+|[流](../../../ado/reference/ado-api/stream-object-ado.md)|[打开](../../../ado/reference/ado-api/open-method-ado-stream.md)|  
   
-## <a name="applies-to"></a>应用于  
-  
-||||  
-|-|-|-|  
-|[命令对象 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)|[连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[记录对象 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)|  
-|[记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[流对象 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)||  
-  
+## <a name="applies-to"></a>应用到  
+
+:::row:::
+    :::column:::
+        [命令对象 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
+        [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+    :::column-end:::
+    :::column:::
+        [记录对象 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
+        [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+    :::column-end:::
+    :::column:::
+        [流对象 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>另请参阅  
  [Cancel 方法示例（VB）](../../../ado/reference/ado-api/cancel-method-example-vb.md)   
  [Cancel 方法示例（VBScript）](../../../ado/reference/rds-api/cancel-method-example-vbscript.md)   

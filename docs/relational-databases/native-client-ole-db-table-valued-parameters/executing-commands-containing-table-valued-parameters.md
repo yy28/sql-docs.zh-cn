@@ -13,13 +13,14 @@ ms.assetid: 7ecba6f6-fe7a-462a-9aa3-d5115b6d4529
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9e8002707f862e5a489d8aeae71e18f19dec102d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 85dfdf19da0187832fcec316099688d2807de65b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86013053"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246771"
 ---
-# <a name="executing-commands-containing-table-valued-parameters"></a>执行包含表值参数的命令
+# <a name="executing-sql-server-native-client-commands-containing-table-valued-parameters"></a>执行包含表值参数 SQL Server Native Client 命令
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   执行包含表值参数的命令需要两个阶段：  

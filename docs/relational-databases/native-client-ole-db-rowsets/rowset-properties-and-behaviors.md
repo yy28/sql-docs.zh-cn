@@ -1,5 +1,5 @@
 ---
-title: 行集属性和行为 | Microsoft Docs
+title: 行集属性和行为（Native Client OLE DB 提供程序）
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,13 +16,14 @@ ms.assetid: 9baabcb6-0114-42f2-89f8-d8d66b3c8c14
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d66aa7280bb2ce7f92211054713469626b4f6a3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 15f9884944eb5d0298e5536fa5b2f43f3aa46c96
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86013129"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246846"
 ---
-# <a name="rowset-properties-and-behaviors"></a>行集属性和行为
+# <a name="rowset-properties-and-behaviors-native-client-ole-db-provider"></a>行集属性和行为（Native Client OLE DB 提供程序）
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   这是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序行集属性。  
@@ -78,7 +79,7 @@ ms.locfileid: "86013129"
 |DBPROP_REPORTMULTIPLECHANGES|此行集属性不是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序实现的。 尝试读取或写入属性值将生成错误。|  
 |DBPROP_RETURNPENDINGINSERTS|R/W：只读<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明：调用提取行的方法时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序不返回挂起的插入行。|  
 |DBPROP_ROWRESTRICT|R/W：只读<br /><br /> 默认值：VARIANT_TRUE<br /><br /> 说明： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序行集不支持基于行的访问权限。 如果对行集公开 IRowsetChange 接口，使用者可调用 SetData 方法********。|  
-|DBPROP_ROWSET_ASYNCH|R/W：读取/写入<br /><br /> 默认值：0<br /><br /> 说明：为异步行集处理而提供。 此属性位于行集属性组和 DBPROPSET_ROWSET 属性集中。 类型为 VT_14。<br /><br /> Native Client 支持的位掩码中唯一的值 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是**DBPROPVAL_ASYNCH_INITIALIZE**。|  
+|DBPROP_ROWSET_ASYNCH|R/W：读取/写入<br /><br /> 默认值：0<br /><br /> 说明：提供异步行集处理。 此属性位于行集属性组和 DBPROPSET_ROWSET 属性集中。 类型为 VT_14。<br /><br /> Native Client 支持的位掩码中唯一的值 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是**DBPROPVAL_ASYNCH_INITIALIZE**。|  
 |DBPROP_ROWTHREADMODEL|R/W：只读<br /><br /> 默认值：DBPROPVAL_RT_FREETHREAD<br /><br /> 说明： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序支持从单个使用者的多个执行线程访问其对象。|  
 |DBPROP_SERVERCURSOR|R/W：读取/写入<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明：设置后，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 游标将用于支持行集。 有关详细信息，请参阅[行集和 SQL Server 游标](../../relational-databases/native-client-ole-db-rowsets/rowsets-and-sql-server-cursors.md)。|  
 |DBPROP_SERVERDATAONINSERT|R/W：读取/写入<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明：插入的服务器数据。<br /><br /> VARIANT_TRUE：在将插入传输到服务器时，访问接口将从服务器检索数据以更新本地行缓存。<br /><br /> VARIANT_FALSE：访问接口不针对新插入的行检索服务器值。|  

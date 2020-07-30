@@ -1,5 +1,6 @@
 ---
 title: srv_paraminfo（扩展存储过程 API）| Microsoft Docs
+description: 了解扩展存储过程 API 中 srv_paraminfo 如何返回有关参数的信息。
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: ee2afd4e-0d91-462b-9403-98d481546330
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9a291487402d4299176b583f4bc6e25e297f314a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 78057c092942455e41f48e0f9f12a9502c1a67ee
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756712"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332330"
 ---
 # <a name="srv_paraminfo-extended-stored-procedure-api"></a>srv_paraminfo（扩展存储过程 API）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +63,7 @@ pfNull
 );  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  srvproc**  
  客户端连接的句柄。  
   

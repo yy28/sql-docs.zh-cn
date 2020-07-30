@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7a8c92a4b6a76cb9d15048d6f058038363970cb8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dcb01ae9771f748ad62faba37cea103f1c7acc8c
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68036591"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362647"
 ---
 # <a name="toppercent-mdx"></a>TopPercent (MDX)
 
@@ -31,7 +31,7 @@ TopPercent(Set_Expression, Percentage, Numeric_Expression)
  *Set_Expression*  
  返回集的有效多维表达式 (MDX)。  
   
- *一定*  
+ *百分比*  
  有效的数值表达式，指定要返回的元组的百分比。  
   
 > [!IMPORTANT]  
@@ -67,11 +67,11 @@ WHERE([Product].[Product Categories].[Bikes])
   
  上面的表达式生成以下结果：  
   
-||Reseller Sales Amount|  
+|城市|Reseller Sales Amount|  
 |-|---------------------------|  
 |Toronto|$3508904.84|  
 |London|$1521530.09|  
-|Seattle|$1209418.16|  
+|西雅图|$1209418.16|  
 |Paris|$1170425.18|  
   
  使用下面的查询可以获取原始数据集，并返回 588 行：  
@@ -102,7 +102,7 @@ FROM [Adventure Works]
   
  上述查询会返回以下结果；为便于阅读，中间部分的行已删除。  
   
-||Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|  
+|观光自行车|Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|  
 |-|---------------------------|---------------------------------|---------------------------|  
 |Touring-2000 Blue, 50|$157444.56|$163112.57|（$5668.01）|  
 |旅行-2000 蓝，46|$321027.03|$333021.50|（$11994.47）|  
@@ -122,7 +122,7 @@ FROM [Adventure Works]
   
  请注意，查询要求百分之百 (100%)；这意味着应返回所有行。 但是，由于*Numeric_Expression*中有负值，因此只返回一行。  
   
-||Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|  
+|观光自行车|Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|  
 |-|---------------------------|---------------------------------|---------------------------|  
 |Touring-2000 Blue, 50|$157444.56|$163112.57|（$5668.01）|  
   

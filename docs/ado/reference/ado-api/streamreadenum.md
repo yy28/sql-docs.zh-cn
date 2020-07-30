@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cfa1b416-003a-436f-a21b-bd2397e54db3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 33cb0b24806b0b4568a1d7eabc5a55aab4a9872b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 92c599665548c36b8349290b02d197393f707fbf
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759593"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243188"
 ---
 # <a name="streamreadenum"></a>StreamReadEnum
 指定是应从[流](../../../ado/reference/ado-api/stream-object-ado.md)对象中读取整个流还是下一行。  
@@ -33,8 +33,13 @@ ms.locfileid: "82759593"
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
  这些常量没有 ADO/WFC 等效项。  
   
-## <a name="applies-to"></a>应用于  
-  
-|||  
-|-|-|  
-|[Read 方法](../../../ado/reference/ado-api/read-method.md)|[ReadText 方法](../../../ado/reference/ado-api/readtext-method.md)|
+## <a name="applies-to"></a>应用到  
+
+:::row:::
+    :::column:::
+        [Read 方法](../../../ado/reference/ado-api/read-method.md)  
+    :::column-end:::
+    :::column:::
+        [ReadText 方法](../../../ado/reference/ado-api/readtext-method.md)  
+    :::column-end:::
+:::row-end:::

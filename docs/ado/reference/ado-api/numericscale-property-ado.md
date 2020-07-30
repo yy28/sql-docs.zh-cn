@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 29a02992-64be-4fcd-be13-445cba205893
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3970ab8d8f446c4269e4b79c306d2dd9d2cf0426
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 38a44aeac4a2238e7d0087ec458df9f77086aa0c
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762326"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242627"
 ---
 # <a name="numericscale-property-ado"></a>NumericScale 属性 (ADO)
 指示[参数](../../../ado/reference/ado-api/parameter-object.md)或[字段](../../../ado/reference/ado-api/field-object.md)对象中数值的小数位数。  
@@ -36,12 +36,17 @@ ms.locfileid: "82762326"
   
  对于**字段**对象， **NumericScale**通常是只读的。 但是，对于已追加到[记录](../../../ado/reference/ado-api/record-object-ado.md)的[字段](../../../ado/reference/ado-api/fields-collection-ado.md)集合的新**字段**对象， **NumericScale**仅在指定了**字段**的[值](../../../ado/reference/ado-api/value-property-ado.md)属性并且数据提供程序已通过调用[Fields](../../../ado/reference/ado-api/fields-collection-ado.md)集合的[Update](../../../ado/reference/ado-api/update-method.md)方法成功添加了新**字段**之后，才是可读/写的。  
   
-## <a name="applies-to"></a>应用于  
-  
-|||  
-|-|-|  
-|[参数对象](../../../ado/reference/ado-api/parameter-object.md)|[字段对象](../../../ado/reference/ado-api/field-object.md)|  
-  
+## <a name="applies-to"></a>应用到  
+
+:::row:::
+    :::column:::
+        [字段对象](../../../ado/reference/ado-api/field-object.md)  
+    :::column-end:::
+    :::column:::
+        [参数对象](../../../ado/reference/ado-api/parameter-object.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>另请参阅  
  [NumericScale 和 Precision 属性示例（VB）](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vb.md)   
  [NumericScale 和 Precision 属性示例（VC + +）](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vc.md)   

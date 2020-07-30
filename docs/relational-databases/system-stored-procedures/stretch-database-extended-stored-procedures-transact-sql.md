@@ -1,5 +1,6 @@
 ---
 title: 扩展存储过程（Transact-sql）
+description: 了解在使用启用 Stretch 的数据库时可以使用的扩展存储过程。 请参阅如何协调列并执行其他任务。
 titleSuffix: SQL Server Stretch Database
 ms.custom: seo-dt-2019
 ms.date: 06/10/2016
@@ -14,11 +15,12 @@ helpviewer_keywords:
 ms.assetid: bda29952-4b8b-4295-ab78-f24dcb0b03c6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9f1266fb9967dc429160377bcc1b42d227be5222
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 11afc18f35c23c4a0a55f51eed39ab830f0ce8ad
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052897"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245754"
 ---
 # <a name="stretch-database-extended-stored-procedures-transact-sql"></a>Stretch Database 扩展存储过程（Transact-sql）
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

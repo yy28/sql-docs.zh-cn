@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2c57eca6-9336-4b06-ba10-9fef5926b1d0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5d22757951cad59c10bc1d7eea85ea8ee11ed0ad
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 456b11972fcb9b7bb20ee07b58e36d2daa5cc0da
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757623"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242380"
 ---
 # <a name="datatypeenum"></a>DataTypeEnum
 指定[字段](../../../ado/reference/ado-api/field-object.md)、[参数](../../../ado/reference/ado-api/parameter-object.md)或[属性](../../../ado/reference/ado-api/property-object-ado.md)的数据类型。 下表的 "说明" 列中的括号内显示了相应的 OLE DB 类型指示器。  
@@ -114,9 +114,15 @@ ms.locfileid: "82757623"
 |AdoEnums. OLEDBTYPE.VARWCHAR|  
 |AdoEnums. WCHAR|  
   
-## <a name="applies-to"></a>应用于  
-  
-|||  
-|-|-|  
-|[Append 方法 (ADO)](../../../ado/reference/ado-api/append-method-ado.md)|[CreateParameter 方法 (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)|  
-|[CreateRecordset 方法 (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)|[Type 属性 (ADO)](../../../ado/reference/ado-api/type-property-ado.md)|
+## <a name="applies-to"></a>应用到  
+
+:::row:::
+    :::column:::
+        [Append 方法 (ADO)](../../../ado/reference/ado-api/append-method-ado.md)  
+        [CreateParameter 方法 (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)  
+    :::column-end:::
+    :::column:::
+        [CreateRecordset 方法 (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)  
+        [Type 属性 (ADO)](../../../ado/reference/ado-api/type-property-ado.md)  
+    :::column-end:::
+:::row-end:::

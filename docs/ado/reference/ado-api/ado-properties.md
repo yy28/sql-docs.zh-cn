@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e413913d3064b4302d4673098b82d220acc23aa1
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ef825848ee0e2c43a1a70441009a590c41ce5526
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764558"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242837"
 ---
 # <a name="ado-properties"></a>ADO 属性
 
-|||  
+|属性|说明|  
 |-|-|  
 |[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|指示当前记录所在的页。|  
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|指示**记录集**对象的当前记录的序号位置。|  
@@ -53,19 +53,19 @@ ms.locfileid: "82764558"
 |[方向](../../../ado/reference/ado-api/direction-property.md)|指示**参数**是表示输入参数和/或输出参数，还是如果参数是来自存储过程的返回值，则为。|  
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|指示当前记录的编辑状态。|  
 |[EOS](../../../ado/reference/ado-api/eos-property.md)|指示当前位置是否在流的末尾。|  
-|[Filter](../../../ado/reference/ado-api/filter-property.md)|指示**记录集中**数据的筛选器。|  
+|[筛选器](../../../ado/reference/ado-api/filter-property.md)|指示**记录集中**数据的筛选器。|  
 |[HelpContext 和帮助](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)|指示与**错误**对象关联的帮助文件和主题。<br /><br /> "上下文 ID" 为帮助文件中的**主题返回一个**上下文 ID，作为一个**长**值。<br /><br /> "**帮助文件" 返回一个****字符串**值，该值的计算结果为帮助文件的完全解析路径。|  
-|[索引](../../../ado/reference/ado-api/index-property.md)|指示当前对**记录集**对象有效的索引的名称。|  
+|[Index](../../../ado/reference/ado-api/index-property.md)|指示当前对**记录集**对象有效的索引的名称。|  
 |[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)|指示**连接**对象的隔离级别。|  
-|[项](../../../ado/reference/ado-api/item-property-ado.md)|按名称或序号指示集合中的特定成员。|  
+|[项目](../../../ado/reference/ado-api/item-property-ado.md)|按名称或序号指示集合中的特定成员。|  
 |[LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md)|指示要在文本**流**对象中用作行分隔符的二进制字符。|  
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|指示在编辑过程中放置在记录上的锁的类型。|  
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|指示哪些记录将被封送回服务器。|  
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|指示要从查询返回到**记录集**的最大记录数。|  
 |[模式](../../../ado/reference/ado-api/mode-property-ado.md)|指示用于修改**连接**、**记录**或**流**对象中的数据的可用权限。|  
-|[Name](../../../ado/reference/ado-api/name-property-ado.md)|指示对象的名称。|  
+|[名称](../../../ado/reference/ado-api/name-property-ado.md)|指示对象的名称。|  
 |[NativeError](../../../ado/reference/ado-api/nativeerror-property-ado.md)|指示特定**错误**对象的特定于提供程序的错误代码。|  
-|[多种](../../../ado/reference/ado-api/number-property-ado.md)|指示唯一标识**错误**对象的数字。|  
+|[数字](../../../ado/reference/ado-api/number-property-ado.md)|指示唯一标识**错误**对象的数字。|  
 |[NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)|指示**参数**或**字段**对象中数值的小数位数。|  
 |[OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)|指示在进行任何更改之前，记录中是否存在**字段**的值。|  
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|指示**Recordset**对象包含多少页数据。|  
@@ -78,7 +78,7 @@ ms.locfileid: "82764558"
 |[提供程序](../../../ado/reference/ado-api/provider-property-ado.md)|指示**连接**对象的访问接口的名称。|  
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|指示**记录集**对象中的记录数。|  
 |[RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)|指示**记录**对象的类型。|  
-|[总行](../../../ado/reference/ado-api/row-property-ado.md)|获取或设置**ADORecordConstruction**对象上/的 OLE DB**行**对象。|  
+|[行](../../../ado/reference/ado-api/row-property-ado.md)|获取或设置**ADORecordConstruction**对象上/的 OLE DB**行**对象。|  
 |[RowPosition](../../../ado/reference/ado-api/rowposition-property-ado.md)|获取或设置**ADORecordsetConstruction**对象上/的 OLE DB **RowPosition**对象。|  
 |[行集](../../../ado/reference/ado-api/rowset-property-ado.md)|获取或设置**ADORecordsetConstruction**对象上/的 OLE DB**行集**对象。|  
 |[源（ADO 错误）](../../../ado/reference/ado-api/source-property-ado-error.md)|指示最初生成错误的对象或应用程序的名称。|  
@@ -89,11 +89,11 @@ ms.locfileid: "82764558"
 |[状态（ADO 字段）](../../../ado/reference/ado-api/status-property-ado-field.md)|指示**Field**对象的状态。|  
 |[状态（ADO 记录集）](../../../ado/reference/ado-api/status-property-ado-recordset.md)|指示当前记录的有关批更新或其他大容量操作的状态。|  
 |[StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)|指示在分层**记录集**对象中，对基础子记录（即*章节*）的引用是否在父行位置发生更改时更改。|  
-|[Stream 属性](../../../ado/reference/ado-api/stream-property.md)|获取或设置**ADOStreamConstruction**对象上/的 OLE DB**流**对象。|  
-|[Type](../../../ado/reference/ado-api/type-property-ado.md)|指示**参数**、**字段**或**属性**对象的操作类型或数据类型。|  
+|[流属性](../../../ado/reference/ado-api/stream-property.md)|获取或设置**ADOStreamConstruction**对象上/的 OLE DB**流**对象。|  
+|类型|指示**参数**、**字段**或**属性**对象的操作类型或数据类型。|  
 |[类型（ADO 流）](../../../ado/reference/ado-api/type-property-ado-stream.md)|指示**流**中包含的数据的类型（二进制或文本）。|  
 |[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)|指示数据库中**字段**对象的当前值。|  
-|值|指示赋给**字段**、**参数**或**属性**对象的值。|  
+|[值](../../../ado/reference/ado-api/value-property-ado.md)|指示赋给**字段**、**参数**或**属性**对象的值。|  
 |[Version](../../../ado/reference/ado-api/version-property-ado.md)|指示 ADO 版本号。|  
   
 ## <a name="see-also"></a>另请参阅  

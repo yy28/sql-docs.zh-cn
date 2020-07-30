@@ -9,12 +9,12 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: e609beb77b92a6dbaf95f39bf5a2a6971a7ae5c4
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 684979981878590c0fbd8d56c648525b25e7c8b6
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85039830"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243075"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>分析平台系统中的新增功能-横向扩展 MPP 数据仓库
 请参阅最新的设备更新 Microsoft Analytics Platform System （AP）的新增功能。 AP 是托管 MPP SQL Server 并行数据仓库的扩展本地设备。 
@@ -65,6 +65,8 @@ PolyBase 现在支持读取 UTF16 （LE）编码的带分隔符的文本文件�
 
 ### <a name="aps-informatica-connector-for-informatica-1020-published"></a>AP Informatica connector for Informatica 10.2.0 已发布
 我们发布了新版本的 Informatica 连接器，适用于使用 Informatica 版本10.2.0 和10.2.0 修补程序1的 AP。 可以从[下载站点](https://www.microsoft.com/download/details.aspx?id=57472)下载新的连接器。
+> [!NOTE]
+> 用于 Informatica 10.2.0 或10.2.0 修补程序1的 AP Informatica connector 不适用于 strict TLS 1.2，要求 TLS 1.0 和1.1 完全正常运行。
 
 #### <a name="supported-versions"></a>支持的版本
 

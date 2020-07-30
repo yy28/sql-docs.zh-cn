@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eaa856cc-c786-462e-890c-c896261b1741
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d62837bd06798fd8ce7b51b0345cf5e5a6463e4b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0ecc08dde974826846058d4d8927df202367d28d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763158"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242404"
 ---
 # <a name="cancelupdate-method-ado"></a>CancelUpdate 方法 (ADO)
 在调用[Update](../../../ado/reference/ado-api/update-method.md)方法之前，取消对[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)对象的当前行或新行所做的任何更改，或[记录](../../../ado/reference/ado-api/record-object-ado.md)对象的[字段](../../../ado/reference/ado-api/fields-collection-ado.md)集合。  
@@ -44,12 +44,17 @@ recordset.CancelUpdaterecord.Fields.CancelUpdate
 ## <a name="record"></a>Record  
  **CancelUpdate**方法取消[字段](../../../ado/reference/ado-api/field-object.md)对象的任何挂起的插入或删除操作，并取消现有字段的挂起更新并将其还原为原始值。 **字段**集合中所有字段的[Status](../../../ado/reference/ado-api/status-property-ado-recordset.md)属性都设置为**adFieldOK**。  
   
-## <a name="applies-to"></a>应用于  
-  
-|||  
-|-|-|  
-|[字段集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
-  
+## <a name="applies-to"></a>应用到  
+
+:::row:::
+    :::column:::
+        [字段集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)  
+    :::column-end:::
+    :::column:::
+        [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>另请参阅  
  [Update 和 CancelUpdate 方法示例（VB）](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vb.md)   
  [Update 和 CancelUpdate 方法示例（VC + +）](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vc.md)   

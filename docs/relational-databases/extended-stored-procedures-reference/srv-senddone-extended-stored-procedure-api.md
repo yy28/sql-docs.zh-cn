@@ -1,5 +1,6 @@
 ---
 title: srv_senddone（扩展存储过程 API）| Microsoft Docs
+description: 了解扩展存储过程 API 中 srv_senddone 如何将结果完成消息发送到客户端。
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1fc4f1d5-56d4-43f6-b5e4-0c0cc295cba3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5b5f7722daf7ebbdda988cf3fb41ac1ab5b06049
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 424ef5a1050def714e7f42483cb2c8d16ecfb99b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755858"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248241"
 ---
 # <a name="srv_senddone-extended-stored-procedure-api"></a>srv_senddone（扩展存储过程 API）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,14 +55,14 @@ count
   
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  srvproc**  
  指向作为特定客户端连接句柄（在这里为接收语言请求的句柄）的 SRV_PROC 结构的指针。 该结构包含扩展存储过程 API 库用于管理应用程序和客户端之间的通信和数据的信息。  
   
  *status*  
  各种 status 标志的 2 字节字段**。 通过与 status 标志值一起使用 AND 和 OR 逻辑运算符，可以设置多个标志**。 下表列出了可能的 status 标志**。  
   
-|状态标志|描述|  
+|状态标志|说明|  
 |-----------------|-----------------|  
 |SRV_DONE_COUNT|count 参数包含有效计数**。|  
 |SRV_DONE_ERROR|当前客户端命令收到了错误。|  

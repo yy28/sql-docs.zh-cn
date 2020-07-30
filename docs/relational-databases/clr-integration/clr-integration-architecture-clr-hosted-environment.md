@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 04e60b218439a67e0fd0d57f6c36cc725217931b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6730ee9db626356ceb8f569928717af851896b07
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727637"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246392"
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>CLR 集成体系结构 - CLR 宿主环境
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -154,12 +154,11 @@ Thread.EndThreadAffinity();
 ###### <a name="security-permission-sets"></a>安全性：权限集  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允许用户指定部署到数据库中的代码的可靠性和安全性要求。 将程序集上载到数据库中时，程序集的作者可以为该程序集指定三个权限集之一： SAFE、EXTERNAL_ACCESS 和 UNSAFE。  
   
-|||||  
+|功能|SAFE|EXTERNAL_ACCESS|UNSAFE|  
 |-|-|-|-|  
-|权限集|SAFE|EXTERNAL_ACCESS|UNSAFE|  
 |代码访问安全性|仅执行|执行和访问外部资源|非受限|  
-|编程模型限制|是|是|无限制|  
-|可验证性要求|是|是|No|  
+|编程模型限制|“是”|“是”|无限制|  
+|可验证性要求|“是”|是|否|  
 |调用本机代码的能力|否|否|是|  
   
  SAFE 是最可靠和安全的模式，并且在允许的编程模型方面也具有相关的限制。 给 SAFE 程序集授予了足够的权限，以便运行、执行计算以及访问本地数据库。 SAFE 程序集需要具有可验证的类型安全性，并且不允许调用非托管代码。  

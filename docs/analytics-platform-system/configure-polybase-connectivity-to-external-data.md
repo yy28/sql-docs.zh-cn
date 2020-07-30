@@ -9,14 +9,14 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 3b754fb2de33a230bc7d27f239b2778d2849fd5a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 352f51e0d53c9dc145b1faf1832faf59587fef6f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401275"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243088"
 ---
-# <a name="what-is-polybase"></a>什么是 PolyBase？
+# <a name="configure-polybase-connectivity"></a>配置 PolyBase 连接
 PolyBase 允许分析平台系统（AP）处理可从外部数据源读取数据并将数据写入外部数据源的 Transact-sql 查询。 访问外部数据的相同查询也可以在你的 AP 中包含关系表。 这样，你便可以将外部源中的数据与你的 AP 数据库中的高价值关系数据组合在一起。
 
 ![PolyBase 逻辑](media/polybase/polybase-logical.png)

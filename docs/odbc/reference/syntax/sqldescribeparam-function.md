@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1f5b63c4-2f3e-44da-b155-876405302281
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: be6d076ca121923a4b6769c7dad5269c3fd642ca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c55668bb565bd383d170e7bf331630bf8b6adef1
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301157"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246596"
 ---
 # <a name="sqldescribeparam-function"></a>SQLDescribeParam 函数
 **度**  
@@ -47,7 +47,7 @@ SQLRETURN SQLDescribeParam(
       SQLSMALLINT *   NullablePtr);  
 ```  
   
-## <a name="argument"></a>参数  
+## <a name="arguments"></a>参数  
  *StatementHandle*  
  送语句句柄。  
   
@@ -57,9 +57,9 @@ SQLRETURN SQLDescribeParam(
  *DataTypePtr*  
  输出指向要在其中返回参数的 SQL 数据类型的缓冲区的指针。 此值从 IPD 的 SQL_DESC_CONCISE_TYPE 记录 "字段中读取。 这将是 "附录 D：数据类型" 的 " [SQL 数据类型](../../../odbc/reference/appendixes/sql-data-types.md)" 部分或特定于驱动程序的 sql 数据类型的值之一。  
   
- ODBC 3 中的。*x*、SQL_TYPE_DATE、SQL_TYPE_TIME 或 SQL_TYPE_TIMESTAMP 将分别在日期、时间或时间戳数据的* \*DataTypePtr*中返回;在 ODBC 2 中。将返回*x*、SQL_DATE、SQL_TIME 或 SQL_TIMESTAMP。 当 ODBC 2 时，驱动程序管理器会执行所需的映射。*x*应用程序正在使用 ODBC 3。*x*驱动程序或 ODBC 3。*x*应用程序正在使用 ODBC 2。*x*驱动程序。  
+ ODBC 3 中的。在* \* DataTypePtr*中，将分别为日期、时间或时间戳数据返回*x*、SQL_TYPE_DATE、SQL_TYPE_TIME 或 SQL_TYPE_TIMESTAMP; 在 ODBC 2 中为。*x*将返回 x、SQL_DATE、SQL_TIME 或 SQL_TIMESTAMP。 当 ODBC 2 时，驱动程序管理器会执行所需的映射。*x*应用程序正在使用 ODBC 3。*x*驱动程序或 ODBC 3。*x*应用程序正在使用 ODBC 2。*x*驱动程序。  
   
- 当*ColumnNumber*等于0（对于书签列）时，将在* \*DataTypePtr*中为可变长度书签返回 SQL_BINARY。 （如果 ODBC 3 使用书签，则返回 SQL_INTEGER。使用 ODBC 2 的*x*应用程序。*x*驱动程序或 ODBC 2。使用 ODBC 3 的*x*应用程序。*x*驱动程序。）  
+ 当*ColumnNumber*等于0（对于书签列）时，将在* \* DataTypePtr*中为可变长度书签返回 SQL_BINARY。 （如果 ODBC 3 使用书签，则返回 SQL_INTEGER。使用 ODBC 2 的*x*应用程序。*x*驱动程序或 ODBC 2。使用 ODBC 3 的*x*应用程序。*x*驱动程序。）  
   
  有关详细信息，请参阅附录 D：数据类型中的[SQL 数据类型](../../../odbc/reference/appendixes/sql-data-types.md)。 有关特定于驱动程序的 SQL 数据类型的信息，请参阅驱动程序的文档。  
   
@@ -90,7 +90,7 @@ SQLRETURN SQLDescribeParam(
 |07009|描述符索引无效|（DM）为参数*ParameterNumber*指定的值小于1。<br /><br /> 为参数*ParameterNumber*指定的值大于关联的 SQL 语句中参数的数目。<br /><br /> 参数标记是非 DML 语句的一部分。<br /><br /> 参数标记是**选择**列表的一部分。|  
 |08S01|通信链接失败|在函数完成处理之前，驱动程序与连接到的数据源之间的通信链接失败。|  
 |21S01|插入值列表与列列表不匹配|**INSERT**语句中的参数数目与语句中指定的表中的列数不匹配。|  
-|HY000|常规错误|发生了一个错误，该错误没有特定的 SQLSTATE，没有为其定义实现特定的 SQLSTATE。 MessageText 缓冲区中的**SQLGetDiagRec**返回的错误消息描述了错误及其原因。 * \**|  
+|HY000|常规错误|发生了一个错误，该错误没有特定的 SQLSTATE，没有为其定义实现特定的 SQLSTATE。 * \* MessageText*缓冲区中的**SQLGetDiagRec**返回的错误消息描述了错误及其原因。|  
 |HY001|内存分配错误|驱动程序无法分配支持执行或完成此函数所需的内存。|  
 |HY008|操作已取消|已为*StatementHandle*启用异步处理。 函数被调用，在完成执行之前，在*StatementHandle*上调用了**SQLCancel**或**SQLCancelHandle** 。 然后，在*StatementHandle*上再次调用该函数。<br /><br /> 函数被调用，在完成执行之前，从多线程应用程序中的另一个线程调用*StatementHandle*上的**SQLCancel**或**SQLCancelHandle** 。|  
 |HY010|函数序列错误|（DM）在为*StatementHandle*调用**SQLPrepare**或**SQLExecDirect**之前调用了该函数。<br /><br /> （DM）为与*StatementHandle*关联的连接句柄调用了异步执行的函数。 调用**SQLDescribeParam**函数时，此异步函数仍在执行。<br /><br /> （DM）为*StatementHandle*调用了异步执行的函数（而不是此函数），并且在调用此函数时仍在执行。<br /><br /> （DM） **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**或**SQLSetPos**调用了*StatementHandle*并返回 SQL_NEED_DATA。 在为所有执行时数据参数或列发送数据之前，将调用此函数。|  
@@ -171,7 +171,7 @@ free(LenOrIndArray);
   
 ## <a name="related-functions"></a>相关函数  
   
-|有关以下方面的信息|查看|  
+|有关以下方面的信息|请参阅|  
 |---------------------------|---------|  
 |将缓冲区绑定到参数|[SQLBindParameter 函数](../../../odbc/reference/syntax/sqlbindparameter-function.md)|  
 |正在取消语句处理|[SQLCancel 函数](../../../odbc/reference/syntax/sqlcancel-function.md)|  

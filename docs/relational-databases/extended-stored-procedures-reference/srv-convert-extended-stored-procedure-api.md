@@ -1,5 +1,6 @@
 ---
 title: srv_convert（扩展存储过程 API）| Microsoft Docs
+description: 了解扩展存储过程 API 中 srv_convert 如何将数据从一种数据类型更改为另一种数据类型。
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 216b4a31-786e-4361-8a33-e5f6e9790f90
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 60acbb6044842c097aa222b7a831addac7cf11d0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f3148ecd51a44bf6c0c9f03546d3bf750c1df1c0
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85678700"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332364"
 ---
 # <a name="srv_convert-extended-stored-procedure-api"></a>srv_convert（扩展存储过程 API）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +63,7 @@ destlen
 );  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  srvproc**  
  指向作为特定客户端连接句柄的 SRV_PROC 结构的指针。 该结构包含扩展存储过程 API 用于管理应用程序和客户端之间的通信和数据的所有控制信息。 如果提供了 srvproc 句柄，在发生错误时它则会被传递给扩展存储过程 API 错误处理程序函数**。  
   
@@ -78,7 +79,7 @@ destlen
  desttype**  
  指示要将源转换为何种数据类型。 该参数可以为任意一种扩展存储过程 API 数据类型。  
   
- dest**  
+ *目的*  
  指向接收转换后的数据的目标变量的指针。 如果该指针为 NULL，srv_convert 将调用用户提供的错误处理程序（如果有的话），并返回 -1****。  
   
  如果 desttype 为 SRVDECIMAL 或 SRVNUMERIC，则 dest 参数必须为指向 DBNUMERIC 或 DBDECIMAL 结构的指针，并且此结构的精度和小数位数字段必须已设置为所需的值****。 您可以使用 DEFAULTPRECISION 指定一个默认精度，使用 DEFAULTSCALE 指定一个默认小数位数。  

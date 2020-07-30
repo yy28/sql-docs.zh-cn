@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4134e34cc494185ec384bd9900ba578e9fa3034d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: db4b5d86c59e35ac3a7aa66684115668d19ead42
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82755863"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243198"
 ---
 # <a name="save-method"></a>Save 方法
 将[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)保存到文件或[流](../../../ado/reference/ado-api/stream-object-ado.md)对象中。  
@@ -87,12 +87,17 @@ rsXML.Save xDOM, adPersistXML   'Save Recordset directly into a DOM tree.
   
  使用 UTF-8 格式保存以 XML 格式保存的**记录集**。 将此类文件加载到 ADO 流时，除非将流的字符集属性设置为适用于 UTF-8 格式的适当值，否则 Stream 对象将不会尝试从流中打开**记录集**。  
   
-## <a name="applies-to"></a>应用于  
-  
-|||  
-|-|-|  
-|[记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[流对象 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
-  
+## <a name="applies-to"></a>应用到  
+
+:::row:::
+    :::column:::
+        [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+    :::column-end:::
+    :::column:::
+        [流对象 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>另请参阅  
  [Save 和 Open 方法示例（VB）](../../../ado/reference/ado-api/save-and-open-methods-example-vb.md)   
  [保存并打开方法示例（VC + +）](../../../ado/reference/ado-api/save-and-open-methods-example-vc.md)   
