@@ -15,15 +15,15 @@ ms.assetid: 09830897-cc10-46b8-95f5-e0e9681b668c
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3ef1d3001078b4f1217bad60646d28a26319d80c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5cb7e20e8f310b6cb6786c2d4cc1a62409dc81c6
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68016241"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396992"
 ---
 # <a name="table-column-properties-sql-server-management-studio"></a>表列属性 (SQL Server Management Studio)
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
   这些属性显示在表设计器的底部窗格中。 除非另行说明，否则在选定列后可以在“属性”窗口中编辑这些属性。 **“列属性”** 可以按类别或字母顺序显示。 许多属性仅针对特定的数据类型显示或有所更改。  
   

@@ -12,12 +12,12 @@ helpviewer_keywords: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 104fbedea8199f0a6fb092c3ee1524bbfb4b903f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b02f1325e97cc27b9ae0457bc964f25150851144
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787310"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396596"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL 数据库中的智能查询处理
 
@@ -446,6 +446,5 @@ OPTION(RECOMPILE, USE HINT('DISALLOW_BATCH_MODE'));
 [SQL Server 数据库引擎和 Azure SQL 数据库的性能中心](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     
 [查询处理体系结构指南](../../relational-databases/query-processing-architecture-guide.md)    
 [显示计划逻辑运算符和物理运算符参考](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
-[联接](../../relational-databases/performance/joins.md)    
-[演示自适应查询处理](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/intelligent-query-processing)       
+[联接](../../relational-databases/performance/joins.md)       
 [演示智能查询处理](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/intelligent-query-processing)   

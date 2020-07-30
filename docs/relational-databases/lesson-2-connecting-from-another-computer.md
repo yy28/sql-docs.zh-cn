@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0022e0e740e9c4268ddf08340029c2e74a101437
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 77b0617fbaa8ea90388f40e16ed2b61cfd3bb2b8
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922849"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396496"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>第 2 课：从其他计算机进行连接
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -48,18 +48,18 @@ ms.locfileid: "86922849"
     > [!NOTE]  
     > 因为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器是 [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理控制台程序的一个管理单元而不是单独的程序，所以 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器在新版本的 Windows 中不显示为一个应用程序。 文件名包含表示 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本号的数字。 若要从“运行”命令打开配置管理器，以下是在 C 驱动器上安装 Windows 时最后四个版本的路径。  
   
-    |||  
+    |版本|路径|  
     |-|-|
     |[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]|C:\Windows\SysWOW64\SQLServerManager14.msc|
     |[!INCLUDE[ssSQL16](../includes/sssql16-md.md)]|C:\Windows\SysWOW64\SQLServerManager13.msc|  
     |[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]|C:\Windows\SysWOW64\SQLServerManager12.msc|  
     |[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|
   
-2.  在“SQL Server 配置管理器”中，展开“SQL Server 网络配置”，然后单击“<InstanceName> 的协议”     。  
+2.  在“SQL Server 配置管理器”中，展开“SQL Server 网络配置”，然后单击“<InstanceName> 的协议”  。  
   
     默认实例（未命名实例）作为 **MSSQLSERVER**列出。 如果您已经安装了某个命名实例，则您提供的名称将会列出。 [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] 作为 **SQLEXPRESS**安装，除非你在安装过程中更改了该名称。  
   
-3.  在协议列表中，右键单击要启用的协议 (**TCP/IP**)，再单击“启用”  。  
+3.  在协议列表中，右键单击要启用的协议 (**TCP/IP**)，再单击“启用”。  
   
     > [!NOTE]  
     > 对网络协议进行更改后，必须重新启动 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 服务；但此操作是在下一任务中完成的。  
@@ -72,19 +72,19 @@ ms.locfileid: "86922849"
   
 #### <a name="configure-sql-server-to-listen-on-a-specific-port"></a>配置 SQL Server 以侦听特定端口  
   
-1.  在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器中，展开“SQL Server 网络配置”  ，然后单击要配置的服务器实例。  
+1.  在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器中，展开“SQL Server 网络配置”，然后单击要配置的服务器实例。  
   
 2.  在右窗格中，双击 **TCP/IP**。  
   
-3.  在“TCP/IP 属性”  对话框中，单击“IP 地址”  选项卡。  
+3.  在“TCP/IP 属性”对话框中，单击“IP 地址”选项卡。  
   
-4.  在 **IPAll** 部分的“TCP 端口”  框中，键入可用的端口号。 对于本教程，我们将使用 **49172**。  
+4.  在 **IPAll** 部分的“TCP 端口”框中，键入可用的端口号。 对于本教程，我们将使用 **49172**。  
   
-5.  单击“确定”  关闭对话框，然后单击表明必须重新启动服务的警告上的“确定”  。  
+5.  单击“确定”关闭对话框，然后单击表明必须重新启动服务的警告上的“确定”。  
   
 6.  在左窗格中，单击 **“SQL Server 服务”** 。  
   
-7.  在右窗格中，右键单击 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例，再单击“重新启动”  。 当 [!INCLUDE[ssDE](../includes/ssde-md.md)] 重新启动时，它将侦听端口 **49172**。  
+7.  在右窗格中，右键单击 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例，再单击“重新启动”。 当 [!INCLUDE[ssDE](../includes/ssde-md.md)] 重新启动时，它将侦听端口 **49172**。  
   
 ## <a name="opening-ports-in-the-firewall"></a><a name="firewall"></a>打开防火墙的端口  
 防火墙系统有助于阻止对计算机资源进行未经授权的访问。 若要在防火墙打开时从其他计算机连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，必须打开防火墙的端口。  
@@ -98,11 +98,11 @@ ms.locfileid: "86922849"
   
 1.  在 **“开始”** 菜单上，单击 **“运行”** ，键入 **WF.msc**，然后单击 **“确定”** 。  
   
-2.  在“高级安全 Windows 防火墙”  的左窗格中，右键单击“入站规则”  ，然后在操作窗格中单击“新建规则”  。  
+2.  在“高级安全 Windows 防火墙”的左窗格中，右键单击“入站规则”，然后在操作窗格中单击“新建规则”。  
   
 3.  在 **“规则类型”** 对话框中，选择 **“端口”** ，然后单击 **“下一步”** 。  
   
-4.  在 **“协议和端口”** 对话框中，选择 **TCP**。 选择“特定本地端口”  ，然后键入 [!INCLUDE[ssDE](../includes/ssde-md.md)] 实例的端口号。 为默认实例键入 1433。 如果要配置命名实例，并在上一个任务中配置了固定端口，则键入 **49172** 。 单击“下一步”。   
+4.  在 **“协议和端口”** 对话框中，选择 **TCP**。 选择“特定本地端口”，然后键入 [!INCLUDE[ssDE](../includes/ssde-md.md)] 实例的端口号。 为默认实例键入 1433。 如果要配置命名实例，并在上一个任务中配置了固定端口，则键入 **49172** 。 单击“下一步”。  
   
 5.  在 **“操作”** 对话框中，选择 **“允许连接”** ，然后单击 **“下一步”** 。  
   
@@ -121,14 +121,14 @@ ms.locfileid: "86922849"
   
 1.  在另一台包含 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 客户端工具的计算机中，使用授权的帐户进行登录以连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，然后打开 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]。  
   
-2.  在“连接到服务器”  对话框中，确认是否已在“服务器类型”  框中选中“数据库引擎”  。  
+2.  在“连接到服务器”对话框中，确认是否已在“服务器类型”框中选中“数据库引擎”。  
   
-3.  在“服务器名称”  框中，键入 **tcp:** 以便指定协议，后跟计算机名称、逗号以及端口号。 为了连接到默认实例，端口 1433 为隐式端口并可省略；因此，请键入 **tcp:** _<computer_name>_ 。 在命名实例的示例中，请键入 **tcp:** _<computer_name>_ **,49172**。  
+3.  在“服务器名称”框中，键入 **tcp:** 以便指定协议，后跟计算机名称、逗号以及端口号。 为了连接到默认实例，端口 1433 为隐式端口并可省略；因此，请键入 **tcp:** _<computer_name>_ 。 在命名实例的示例中，请键入 **tcp:** _<computer_name>_ **,49172**。  
   
     > [!NOTE]  
-    > 如果你在“服务器名称”  框中省略 **tcp:** ，则客户端将按照在客户端配置中指定的顺序依次尝试所有启用的协议。  
+    > 如果你在“服务器名称”框中省略 **tcp:** ，则客户端将按照在客户端配置中指定的顺序依次尝试所有启用的协议。  
   
-4.  在“身份验证”  框中，确认已选中“Window 身份验证”  ，然后单击“连接”  。  
+4.  在“身份验证”框中，确认已选中“Window 身份验证”，然后单击“连接”。  
   
 ## <a name="connecting-using-the-sql-server-browser-service"></a><a name="browser"></a>使用 SQL Server Browser 服务进行连接  
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser 服务侦听对 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 资源的传入请求，并提供有关计算机中安装的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例的信息。 当 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser 服务运行时，用户可以通过提供计算机名称和实例名（而不是计算机名称和端口号）连接到命名实例。 由于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser 会接收未经身份验证的 UDP 请求，因此，不会在安装过程中始终处于打开状态。 有关该服务及其启用时间的说明，请参阅 [SQL Server Browser 服务（数据库引擎和 SSAS）](../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)。  

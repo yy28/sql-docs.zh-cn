@@ -10,12 +10,12 @@ ms.assetid: ef94e843-9f88-45a2-86c4-a0af268738c4
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 6366ed7d6346fb6240a5d56ae6cc4d91575f2ed0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c470cf8ea61851b80f04bce716bc7c83c54929b0
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68259785"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396896"
 ---
 # <a name="working-with-ssma-for-access-console-accesstosql"></a>使用 SSMA for Access Console （AccessToSQL）
 现在可通过命令行中的控制台应用程序访问 Microsoft SQL Server 迁移助手（SSMA）的访问权限。 脚本文件构成应用程序的输入，用于执行命令。 作为控制台应用程序，SSMA 启用了脚本级交互，减少了迁移循环，并扩展了迁移工作量。  
@@ -24,9 +24,8 @@ ms.locfileid: "68259785"
   
 本部分中涵盖的主题包括：  
   
-|||  
+|主题|说明|  
 |-|-|  
-|**主题**|**说明**|  
 |[SSMA for Access Console &#40;AccessToSQL&#41;入门](../../ssma/access/getting-started-with-ssma-for-access-console-accesstosql.md)|说明执行控制台应用程序的过程。|  
 |[SSMA 控制台中的命令行选项 &#40;AccessToSQL&#41;](../../ssma/access/command-line-options-in-ssma-console-accesstosql.md)|描述用于操作 SSMA 控制台应用程序的命令行选项和参数。|  
 |[&#40;AccessToSQL&#41;创建脚本文件](../../ssma/access/creating-script-files-accesstosql.md)|说明如何创建脚本文件。|  

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 29d8787c-632e-4ff7-9ccc-3f7ad40480ec
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 01aa8586e97677ed8d1071ec4dc2cb65a6aa0436
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 62136073116141c206c36d5fcca8dd5b417de0e4
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68086192"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396415"
 ---
 # <a name="working-with-ssma-for-oracle-console-db2tosql"></a>使用 SSMA for Oracle 控制台（DB2ToSQL）
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]DB2 的迁移助手（SSMA）版本现在可通过命令行中的控制台应用程序进行访问。 脚本文件构成应用程序的输入，用于执行命令。 作为控制台应用程序，SSMA 启用了脚本级交互，减少了迁移循环，并扩展了迁移工作量。  
@@ -23,16 +23,15 @@ ms.locfileid: "68086192"
   
 本部分中涵盖的主题包括：  
   
-|||  
+|主题|说明|  
 |-|-|  
-|**主题**|**说明**|  
 |[SSMA for DB2 Console &#40;DB2ToSQL&#41;入门](../../ssma/db2/getting-started-with-ssma-for-db2-console-db2tosql.md)|说明执行控制台应用程序的过程。|  
 |[SSMA 控制台中的命令行选项 &#40;DB2ToSQL&#41;](../../ssma/db2/command-line-options-in-ssma-console-db2tosql.md)|描述用于操作 SSMA 控制台应用程序的命令行选项和参数。|  
 |[&#40;DB2ToSQL&#41;创建脚本文件](../../ssma/db2/creating-script-files-db2tosql.md)|说明如何创建脚本文件。|  
 |[创建变量值文件 &#40;DB2ToSQL&#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md)|说明如何创建变量值文件。|  
 |[&#40;DB2ToSQL 创建服务器连接文件&#41;](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)|说明如何创建服务器连接文件。|  
 |[执行 SSMA 控制台 &#40;DB2ToSQL&#41;](../../ssma/db2/executing-the-ssma-console-db2tosql.md)|介绍用于运行 SSMA 控制台应用程序的脚本文件命令。|  
-|[使用示例控制台脚本文件 &#40;DB2ToSQL&#41;](../../ssma/db2/working-with-the-sample-console-script-files-db2tosql.md)|介绍如何轻松自定义示例文件和产品中提供的脚本|  
+|[使用示例控制台脚本文件 &#40;DB2ToSQL&#41;](../../ssma/db2/working-with-the-sample-console-script-files-db2tosql.md)|介绍如何轻松自定义示例文件和产品中提供的脚本。|  
 |[&#40;DB2ToSQL&#41;管理密码](../../ssma/db2/managing-passwords-db2tosql.md)|介绍密码加密和解密以及导入/导出密码信息。|  
 |[&#40;DB2ToSQL 生成报告&#41;](../../ssma/db2/generating-reports-db2tosql.md)|列出用于生成报表的命令。|  
 |[&#40;DB2ToSQL 的疑难解答&#41;](../../ssma/db2/troubleshooting-db2tosql.md)|提供有关修复迁移问题的简要信息。|  

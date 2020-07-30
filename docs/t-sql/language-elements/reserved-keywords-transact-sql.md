@@ -18,15 +18,15 @@ ms.assetid: ed8b3e27-6796-40f0-aef3-0cac5e0e2418
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 523a39498ebeae9652ded5834a5ebb73a8e90b70
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: f963294781eea57c7957000d0daa1d149be3cd89
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248719"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396339"
 ---
 # <a name="reserved-keywords-transact-sql"></a>保留关键字 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将保留关键字用于定义、操作和访问数据库。 保留关键字是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语言语法的一部分，用于分析和理解 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句和批处理。 尽管在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 脚本中使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 保留关键字作为标识符和对象名在语法上是可行的，但规定只能使用分隔标识符。  
   

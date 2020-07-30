@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 20b3f22e-16a2-4a87-b4eb-c277be6bf5c8
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 0b52f18f8a7247faae24f266c6d8dba3d6c2ea4c
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: d7fe937b95049788f4b488df2d36451df67c4c09
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293634"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396396"
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>映射 MySQL 和 SQL Server 字符集 (MySQLToSQL)
 可以为 MySQL 字符数据类型、表达式和文本指定字符集（字符集）。  
@@ -77,9 +77,8 @@ ms.locfileid: "84293634"
   
     以下提供了 MySQL 数据库与根元数据节点级别上的目标数据库之间的字符集映射：  
   
-    ||||  
+    |字符集名称|字符集说明|目标字符集类型（默认值）|  
     |-|-|-|  
-    |**字符集名称**|**字符集说明**|**目标字符集类型（默认值）**|  
     |big5|Big5 繁体中文|NCHAR/NVARCHAR （默认值）|  
     |dec8|12月西部欧洲|CHAR/VARCHAR （默认值）|  
     |cp850|DOS 西欧|CHAR/VARCHAR （默认值）|  

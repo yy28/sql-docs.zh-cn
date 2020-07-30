@@ -20,15 +20,15 @@ ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c66a822991bb347b429b1524f0b04aa768cb38f4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f358296320ebeeefcc6004a59754ba8e8052e789
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833951"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396666"
 ---
 # <a name="syssql_expression_dependencies-transact-sql"></a>sys.sql_expression_dependencies (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
   当前数据库中用户定义实体的每个按名称依赖项在此表中均占一行。 这包括本机编译标量用户定义函数和其他模块之间的依赖项 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 两个实体之间的依赖关系是在另一个实体（称为 "*引用实体* *"）的*持久化 SQL 表达式中按名称显示的。 例如，在视图定义中引用表时，作为引用实体的视图将依赖于表这个被引用的实体。 如果删除该表，则该视图不可用。  
   
@@ -73,12 +73,12 @@ ms.locfileid: "82833951"
 |实体类型|引用实体|被引用的实体|  
 |-----------------|------------------------|-----------------------|  
 |表|是*|是|  
-|视图|是|是|  
+|视图|“是”|“是”|  
 |筛选索引|是**|否|  
 |筛选统计信息|是**|否|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程***|是|是|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程***|“是”|“是”|  
 |CLR 存储过程|否|是|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 用户定义函数|是|是|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 用户定义函数|“是”|“是”|  
 |CLR 用户定义函数|否|是|  
 |CLR 触发器（DML 和 DDL）|否|否|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 触发器|是|否|  
