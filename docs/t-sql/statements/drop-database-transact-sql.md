@@ -25,16 +25,16 @@ ms.assetid: 477396a9-92dc-43c9-9b97-42c8728ede8e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 43a0382495c04a3fa34e00cb4e85d0b7ab04336e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5dc64b473319421eab790c438ba75c073852d3c5
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982194"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396991"
 ---
 # <a name="drop-database-transact-sql"></a>DROP DATABASE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中删除一个或多个用户数据库或数据库快照。
 
@@ -42,12 +42,12 @@ ms.locfileid: "73982194"
 
 ## <a name="syntax"></a>语法
 
-```
+```syntaxsql
 -- SQL Server Syntax
 DROP DATABASE [ IF EXISTS ] { database_name | database_snapshot_name } [ ,...n ] [;]
 ```
 
-```
+```syntaxsql
 -- Azure SQL Database, Azure SQL Data Warehouse and Analytics Platform System Syntax
 DROP DATABASE database_name [;]
 ```
@@ -77,7 +77,7 @@ database_snapshot_name
 执行数据库删除操作会从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中删除数据库，并删除该数据库使用的物理磁盘文件。 执行删除操作时，如果数据库或它的任意一个文件处于脱机状态，则不会删除磁盘文件。 可使用 Windows 资源管理器手动删除这些文件。 若要从当前服务器删除数据库，但不从文件系统删除文件，请使用 [sp_detach_db](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)。
 
 > [!WARNING]
-> 删除具有与其关联的 FILE_SNAPSHOT 备份的数据库将成功，但不会删除具有关联快照的数据库文件，以免使引用这些数据库文件的备份失效。 将截断该文件，但不会以物理方式将其删除，以保持 FILE_SNAPSHOT 备份不受影响。 有关详细信息，请参阅[使用 Microsoft Azure Blob 存储服务执行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 适用于：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)。
+> 删除具有与其关联的 FILE_SNAPSHOT 备份的数据库将成功，但不会删除具有关联快照的数据库文件，以免使引用这些数据库文件的备份失效。 将截断该文件，但不会以物理方式将其删除，以保持 FILE_SNAPSHOT 备份不受影响。 有关详细信息，请参阅[使用 Microsoft Azure Blob 存储服务执行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 适用于：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)  。
 
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 

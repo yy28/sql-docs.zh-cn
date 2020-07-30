@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: beb82f2fd894af71bb6f291dcc6f86a995f8dd85
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7add1259778bf189c981d5b302e989bf7bc233c3
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68138329"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396557"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>项目设置（类型映射）(MySQLToSQL)
 "类型映射项目设置" 允许您为 SSMA 项目设置默认的类型映射。  
@@ -48,9 +48,8 @@ ms.locfileid: "68138329"
 ## <a name="type-mappings"></a>类型映射  
 下表显示源和目标数据类型之间的默认映射  
   
-|||  
+|MySQL 数据类型|SQL Server 数据类型|  
 |-|-|  
-|**MySQL 数据类型**|**SQL Server 数据类型**|  
 |bigint|bigint|  
 |bigint [*。255]|bigint|  
 |binary|binary [1]|  
@@ -86,22 +85,22 @@ ms.locfileid: "68138329"
 |datetime|datetime2 [0]|  
 |dec|Decimal|  
 |dec [*。65]|decimal [*] [0]|  
-|dec [*。65] [\*.。为期|decimal [*] [\*]|  
-|Decimal|Decimal|  
+|dec [*。65] [ \* .。为期|decimal [*] [ \* ]|  
+|decimal|decimal|  
 |decimal [*。65]|decimal [*] [0]|  
-|decimal [*。65] [\*.。为期|decimal [*] [\*]|  
-|double|float [53]|  
+|decimal [*。65] [ \* .。为期|decimal [*] [ \* ]|  
+|Double|float [53]|  
 |双精度|float [53]|  
-|双精度 [*。255] [\*.。为期|数值 [*] [\*]|  
-|double [*。255] [\*.。为期|数值 [*] [\*]|  
+|双精度 [*。255] [ \* .。为期|数值 [*] [ \* ]|  
+|double [*。255] [ \* .。为期|数值 [*] [ \* ]|  
 |fixed|numeric|  
-|fixed [* .。。65] [\*.。为期|数值 [*] [\*]|  
-|FLOAT|float [24]|  
-|float [*。255] [\*.。为期|数值 [*] [\*]|  
+|fixed [* .。。65] [ \* .。为期|数值 [*] [ \* ]|  
+|float|float [24]|  
+|float [*。255] [ \* .。为期|数值 [*] [ \* ]|  
 |float [*。53]|float [53]|  
 |int|int|  
 |int [*。255]|int|  
-|整数|int|  
+|integer|int|  
 |integer [*。255]|int|  
 |longblob|varbinary(max)|  
 |longtext|nvarchar(max)|  
@@ -132,13 +131,13 @@ ms.locfileid: "68138329"
 |nchar [2 .0]|nchar [*]|  
 |numeric|numeric|  
 |数值 [*。65]|数值 [*] [0]|  
-|数值 [*。65] [\*.。为期|数值 [*] [\*]|  
+|数值 [*。65] [ \* .。为期|数值 [*] [ \* ]|  
 |nvarchar|nvarchar [1]|  
 |nvarchar [0 .0]|nvarchar [1]|  
 |nvarchar [2.. 4000]|nvarchar [*]|  
 |nvarchar [4001 ... *]|nvarchar(max)|  
 |real|float [53]|  
-|real [* .。。255] [\*.。为期|数值 [*] [\*]|  
+|real [* .。。255] [ \* .。为期|数值 [*] [ \* ]|  
 |serial|bigint|  
 |smallint|smallint|  
 |smallint [* .。。255]|smallint|  
@@ -156,18 +155,18 @@ ms.locfileid: "68138329"
 |无符号 bigint [*。255]|bigint|  
 |无符号 dec|Decimal|  
 |无符号 dec [*。65]|decimal [*] [0]|  
-|无符号 dec [*。65] [\*.。为期|decimal [*] [\*]|  
+|无符号 dec [*。65] [ \* .。为期|decimal [*] [ \* ]|  
 |无符号小数|Decimal|  
 |无符号十进制 [*。65]|decimal [*] [0]|  
-|无符号十进制 [*。65] [\*.。为期|decimal [*] [\*]|  
+|无符号十进制 [*。65] [ \* .。为期|decimal [*] [ \* ]|  
 |无符号 double|float [53]|  
 |无符号双精度|float [53]|  
-|无符号双精度 [*。255] [\*.。为期|数值 [*] [\*]|  
-|无符号 double [*。255] [\*.。为期|数值 [*] [\*]|  
+|无符号双精度 [*。255] [ \* .。为期|数值 [*] [ \* ]|  
+|无符号 double [*。255] [ \* .。为期|数值 [*] [ \* ]|  
 |未签名固定|numeric|  
-|未签名固定 [*。65] [\*.。为期|数值 [*] [\*]|  
+|未签名固定 [*。65] [ \* .。为期|数值 [*] [ \* ]|  
 |无符号 float|float [24]|  
-|无符号 float [*。255] [\*.。为期|数值 [*] [\*]|  
+|无符号 float [*。255] [ \* .。为期|数值 [*] [ \* ]|  
 |无符号 float [*。53]|float [53]|  
 |unsigned int|bigint|  
 |无符号 int [*。255]|bigint|  
@@ -177,9 +176,9 @@ ms.locfileid: "68138329"
 |未签名的 mediumint [*。255]|int|  
 |无符号数字|numeric|  
 |无符号数值 [*。65]|数值 [*] [0]|  
-|无符号数值 [*。65] [\*.。为期|数值 [*] [\*]|  
+|无符号数值 [*。65] [ \* .。为期|数值 [*] [ \* ]|  
 |无符号 real|float [53]|  
-|无符号实际 [*。255 [[\*。为期|数值 [*] [\*]|  
+|无符号实际 [*。255 [[ \* 。为期|数值 [*] [ \* ]|  
 |无符号 smallint|int|  
 |无符号 smallint [*。255]|int|  
 |无符号 tinyint|tinyint|  

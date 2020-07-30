@@ -18,15 +18,15 @@ ms.assetid: 4c3d6a02-08e4-414b-90be-36b89a0e5a3a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 02cff18af9c0824d7f28e5685f5fc63a0bf45128
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 25ec8e19343d707fefdda9049428280b1dfddb80
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821152"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396776"
 ---
 # <a name="sysdm_exec_function_stats-transact-sql"></a>sys. dm_exec_function_stats （Transact-sql）
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   返回缓存函数的聚合性能统计信息。 视图为每个缓存的函数计划返回一行，行的生存期与函数保持缓存的时间相同。 从缓存中移除某个函数后，将从此视图中删除相应的行。 此时，将引发类似于 **sys.dm_exec_query_stats** 的 Performance Statistics SQL 跟踪事件。 返回有关标量函数的信息，其中包括内存中函数和 CLR 标量函数。 不返回有关表值函数的信息。  
   
@@ -39,8 +39,8 @@ ms.locfileid: "82821152"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|函数所在的数据库 ID。|  
-|**object_id**|**int**|函数的对象标识号。|  
-|type |**char(2)**|对象的类型： FN = 标量值函数|  
+|object_id|**int**|函数的对象标识号。|  
+|type|**char(2)**|对象的类型： FN = 标量值函数|  
 |**type_desc**|**nvarchar(60)**|对象类型的说明： SQL_SCALAR_FUNCTION|  
 |**sql_handle**|**varbinary(64)**|这可用于与在此函数中执行的**dm_exec_query_stats**中的查询相关联。|  
 |**plan_handle**|**varbinary(64)**|内存中计划的标识符。 该标识符是瞬态的，仅当计划保留在缓存中时，它才保持不变。 此值可用于**sys.databases dm_exec_cached_plans**动态管理视图。<br /><br /> 当本机编译的函数查询内存优化表时，将始终为0x000。|  

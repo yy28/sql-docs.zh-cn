@@ -26,15 +26,15 @@ ms.assetid: f0022a05-50dd-4620-961d-361b1681d375
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f99e3497a8b1c2061ed54348943f1d087ed29bb
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 11b7ec3592e73d890a6abab1e0d5df39e53eef18
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977687"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396446"
 ---
 # <a name="sp_refreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   更新当前数据库中指定的非绑定到架构的存储过程、用户定义函数、视图、DML 触发器、数据库级 DDL 触发器或服务器级 DDL 触发器的元数据。 如果更改这些对象的基础对象，则这些对象的持久元数据（如参数的数据类型）将会过时。
   
@@ -55,7 +55,7 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
   
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @name = ] 'module\_name'`存储过程、用户定义函数、视图、DML 触发器、数据库级 DDL 触发器或服务器级 DDL 触发器的名称。 *module_name*不能是公共语言运行时（CLR）存储过程或 CLR 函数。 *module_name*不能是绑定到架构的。 *module_name*为**nvarchar**，无默认值。 *module_name*可以是由多个部分组成的标识符，但只能引用当前数据库中的对象。  
   
 `[ , @namespace = ] ' \<class> '`指定模块的类。 如果*module_name*是 DDL 触发器， \<class> 则是必需的。 *\<class>* 为**nvarchar**（20）。 有效输入为：  
