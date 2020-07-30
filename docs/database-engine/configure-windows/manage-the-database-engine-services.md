@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: aa732e43-53ba-4eea-bb9b-089da0766fc1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 162cf9d1f062d69daf671ed0bf8962b9ddb7ddf9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bb2cfc1df70f22f3e0fb90cd3d9cf552e6e01d60
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85680974"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362231"
 ---
 # <a name="manage-the-database-engine-services"></a>管理数据库引擎服务
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,20 +56,53 @@ ms.locfileid: "85680974"
  因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理控制台程序的一个管理单元而不是单独的程序，所以，当运行 Windows 8.0 时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器不显示为一个应用程序。 若要打开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器，请在“搜索”超级按钮中的“应用”下，键入 **SQLServerManager12.msc**（对于 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]）、**SQLServerManager11.msc**（对于 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]）或 **SQLServerManager10.msc**（对于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]），然后按 **Enter**。  
   
 ## <a name="in-this-section"></a>本节内容  
-  
-|||  
-|-|-|  
-|[管理服务的安全要求](../../database-engine/configure-windows/security-requirements-for-managing-services.md)|[防止 SQL Server 实例自动启动（SQL Server 配置管理器）](../../database-engine/configure-windows/scm-services-prevent-automatic-startup-of-an-instance.md)|  
-|[配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)|[为 SQL Server 更改服务启动帐户（SQL Server 配置管理器）](../../database-engine/configure-windows/scm-services-change-the-service-startup-account.md)|  
-|[在网络上或不在网络上运行 SQL Server](../../database-engine/configure-windows/run-sql-server-with-or-without-a-network.md)|[配置服务器启动选项（SQL Server 配置管理器）](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md)|  
-|[SQL Server Browser 服务（数据库引擎和 SSAS）](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)|[更改 SQL Server 使用的帐户的密码（SQL Server 配置管理器）](../../database-engine/configure-windows/scm-services-change-the-password-of-the-accounts-used.md)|  
-|[数据库引擎服务启动选项](../../database-engine/configure-windows/database-engine-service-startup-options.md)|[配置 SQL Server 错误日志](../../database-engine/configure-windows/scm-services-configure-sql-server-error-logs.md)|  
-|[启动、停止、暂停、继续、重新启动数据库引擎、SQL Server 代理或 SQL Server Browser 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)|[更改服务器身份验证模式](../../database-engine/configure-windows/change-server-authentication-mode.md)|  
-|[在单用户模式下启动 SQL Server](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md)|[SQL 编写器服务](../../database-engine/configure-windows/sql-writer-service.md)|  
-|[以最小配置启动 SQL Server](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)|[广播关闭消息（命令提示符）](../../database-engine/configure-windows/broadcast-a-shutdown-message-command-prompt.md)|  
-|[连接到其他计算机（SQL Server 配置管理器）](../../database-engine/configure-windows/scm-services-connect-to-another-computer.md)|[登录到 SQL Server 实例（命令提示符）](../../database-engine/configure-windows/log-in-to-an-instance-of-sql-server-command-prompt.md)|  
-|[将 SQL Server 实例设置为自动启动（SQL Server 配置管理器）](../../database-engine/configure-windows/scm-services-set-an-instance-to-start-automatically.md)|[配置数据库引擎访问的文件系统权限](../../database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md)|  
-  
+
+:::row:::
+    :::column:::
+        [管理服务的安全要求](../../database-engine/configure-windows/security-requirements-for-managing-services.md)
+
+        [配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)
+
+        [配置数据库引擎访问的文件系统权限](../../database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md)
+
+        [在网络上或不在网络上运行 SQL Server](../../database-engine/configure-windows/run-sql-server-with-or-without-a-network.md)
+
+        [SQL Server Browser 服务（数据库引擎和 SSAS）](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)
+
+        [数据库引擎服务启动选项](../../database-engine/configure-windows/database-engine-service-startup-options.md)
+
+        [启动、停止、暂停、继续、重新启动数据库引擎、SQL Server 代理或 SQL Server Browser 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)
+
+        [在单用户模式下启动 SQL Server](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md)
+
+        [以最小配置启动 SQL Server](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)
+    :::column-end:::
+    :::column:::
+        [连接到其他计算机（SQL Server 配置管理器）](../../database-engine/configure-windows/scm-services-connect-to-another-computer.md)
+
+        [将 SQL Server 实例设置为自动启动（SQL Server 配置管理器）](../../database-engine/configure-windows/scm-services-set-an-instance-to-start-automatically.md)
+
+        [防止 SQL Server 实例自动启动（SQL Server 配置管理器）](../../database-engine/configure-windows/scm-services-prevent-automatic-startup-of-an-instance.md)
+
+        [为 SQL Server 更改服务启动帐户（SQL Server 配置管理器）](../../database-engine/configure-windows/scm-services-change-the-service-startup-account.md)
+
+        [配置服务器启动选项（SQL Server 配置管理器）](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md)
+
+        [更改 SQL Server 使用的帐户的密码（SQL Server 配置管理器）](../../database-engine/configure-windows/scm-services-change-the-password-of-the-accounts-used.md)
+
+        [配置 SQL Server 错误日志](../../database-engine/configure-windows/scm-services-configure-sql-server-error-logs.md)
+    :::column-end:::
+    :::column:::
+        [更改服务器身份验证模式](../../database-engine/configure-windows/change-server-authentication-mode.md)
+
+        [SQL 编写器服务](../../database-engine/configure-windows/sql-writer-service.md)
+
+        [广播关闭消息（命令提示符）](../../database-engine/configure-windows/broadcast-a-shutdown-message-command-prompt.md)
+
+        [登录到 SQL Server 实例（命令提示符）](../../database-engine/configure-windows/log-in-to-an-instance-of-sql-server-command-prompt.md)
+    :::column-end:::
+:::row-end:::
+
 ## <a name="related-content"></a>相关内容  
  [配置 SQL Server 代理](../../ssms/agent/configure-sql-server-agent.md)  
   

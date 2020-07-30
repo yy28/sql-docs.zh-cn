@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d774df3329c6c9e49e9e1bd9a86dbeaf30ac5765
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 425fdeb973918744b4aeab423629939a2a84f97a
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287141"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411369"
 ---
 # <a name="plan-for-host-guardian-service-attestation"></a>规划主机保护者服务证明
 
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 使用[具有安全 enclave 的 Always Encrypted](always-encrypted-enclaves.md) 时，需要确保客户端应用程序在 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 进程中与可信 enclave 通信。 对于基于虚拟化的安全性 (VBS) enclave，此要求包括验证 enclave 内的代码是否有效，以及承载 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 的计算机是否可信。 远程证明通过引入可以验证 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 计算机的标识（以及可以选择验证配置）的第三方来实现此目标。 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 必须先向证明服务提供有关其操作环境的信息以获取健康证书，然后才能使用 enclave 运行查询。 此健康证书随后会发送到客户端，后者可以通过证明服务独立验证其真实性。 客户端信任健康证书后，便知道它在与可信 VBS enclave 通信，并会发出将使用该 enclave 的查询。
 

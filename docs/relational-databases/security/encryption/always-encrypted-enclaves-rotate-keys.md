@@ -10,15 +10,15 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 39d90da404fd6bc230a3308c76b48fdc26da2b8f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5420d49b6e5d165168610d002424e3a3b9499748
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73595812"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411053"
 ---
 # <a name="rotate-enclave-enabled-keys"></a>轮换已启用 enclave 的密钥
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 在 Always Encrypted 中，密钥轮换是将现有列主密钥或列加密密钥替换为新密钥的过程。 本文介绍当初始密钥和/或目标（新）密钥是已启用 enclave 的密钥时，特定于[具有安全 enclave 的 Always Encrypted](always-encrypted-enclaves.md) 的密钥轮换的用例和注意事项。 有关管理 Always Encrypted 密钥的一般准则和流程，请参阅 [Always Encrypted 密钥管理概述](overview-of-key-management-for-always-encrypted.md)。 
 
