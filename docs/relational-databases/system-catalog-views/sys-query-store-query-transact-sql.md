@@ -21,15 +21,15 @@ ms.assetid: bdee149e-7556-4fc3-8242-925dd4b7b6ac
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 073c90b18d9f6fb8b75bf5da44f3d3817d8f296c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 676c7a8c20c6374d9ceff521622f030c8f8fb983
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831404"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396376"
 ---
 # <a name="sysquery_store_query-transact-sql"></a>sys. query_store_query （Transact-sql）
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   包含有关查询及其关联的总体运行时执行统计信息的信息。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "82831404"
 |**query_id**|**bigint**|主密钥。|  
 |**query_text_id**|**bigint**|外键。 联接到[sys.databases query_store_query_text &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)|  
 |**context_settings_id**|**bigint**|外键。 联接到[sys.databases&#41;的 query_context_settings &#40;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)。<br/>**注意：** Azure SQL 数据仓库将始终返回零（0）。|  
-|**object_id**|**bigint**|查询所属的数据库对象的 ID （存储过程、触发器、CLR UDF/UDAgg 等）。 如果查询不是作为数据库对象（即席查询）的一部分执行，则为0。<br/>**注意：** Azure SQL 数据仓库将始终返回零（0）。|  
+|object_id|**bigint**|查询所属的数据库对象的 ID （存储过程、触发器、CLR UDF/UDAgg 等）。 如果查询不是作为数据库对象（即席查询）的一部分执行，则为0。<br/>**注意：** Azure SQL 数据仓库将始终返回零（0）。|  
 |**batch_sql_handle**|**varbinary(64)**|查询所属的语句批处理的 ID。 仅当查询引用临时表或表变量时才填充。<br/>**注意：** Azure SQL 数据仓库将始终返回*NULL*。|  
 |**query_hash**|**binary （8）**|基于逻辑查询树的单个查询的 MD5 哈希。 包含优化器提示。|  
 |**is_internal_query**|**bit**|查询是在内部生成的。<br/>**注意：** Azure SQL 数据仓库将始终返回零（0）。|  
@@ -78,8 +78,8 @@ ms.locfileid: "82831404"
  [sys. query_store_runtime_stats &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
  [sys. query_store_runtime_stats_interval &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [相关视图、函数和过程](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [Transact-sql&#41;的目录视图 &#40;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [查询存储存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
+ [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [查询存储存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)  
   
   

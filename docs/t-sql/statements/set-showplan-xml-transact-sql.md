@@ -24,16 +24,16 @@ ms.assetid: a467a1b3-10a5-43c4-9085-13d8aed549c9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 890c84330005c3d9f6c4b30a06662d67dfef46f2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c76ef14e97a44b2e33c816c678700e9f4496ae2d
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67941652"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87397041"
 ---
 # <a name="set-showplan_xml-transact-sql"></a>SET SHOWPLAN_XML (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回有关如何以定义好的 XML 文档格式执行上述语句的详细信息。
 
@@ -41,7 +41,7 @@ ms.locfileid: "67941652"
 
 ## <a name="syntax"></a>语法
 
-```
+```syntaxsql
 SET SHOWPLAN_XML { ON | OFF }
 ```
 
@@ -61,7 +61,7 @@ SET SHOWPLAN_XML 可以为应用程序（如 **sqlcmd** 实用工具）将输出
 SET SHOWPLAN_XML 将返回一组 XML 文档信息。 SET SHOWPLAN_XML ON 语句之后的每个批处理都将在单个文档输出中得到反映。 每个文档都包含批处理中语句的文本，后跟执行步骤的详细信息。 该文档可以显示估计的开销、行数、访问的索引数、执行的运算符的类型、联接次序以及有关执行计划的详细信息。
 
 > [!NOTE]
-> 如果在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中选择了“包括实际的执行计划”，则该 SET 选项不会生成 XML 显示计划输出。 请在使用该 SET 选项之前清除“包括实际的执行计划”按钮  。
+> 如果在  **中选择了“包括实际的执行计划”，则该 SET 选项不会生成 XML 显示计划输出**[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 请在使用该 SET 选项之前清除“包括实际的执行计划”按钮  。
 
 ### <a name="location-of-showplan-output"></a>显示计划输出的位置
 
@@ -83,7 +83,7 @@ SET SHOWPLAN_XML 将返回一组 XML 文档信息。 SET SHOWPLAN_XML ON 语句�
 
 - 对于包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句引用的对象（如表、视图等）的所有数据库，具有 SHOWPLAN 权限。
 
-对于其他所有语句，如 DDL、USE database_name、SET、DECLARE、动态 SQL 等，只需要具有执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的相应权限。
+对于其他所有语句，如 DDL、USE database_name、SET、DECLARE、动态 SQL 等，只需要具有执行  *语句的相应权限*[!INCLUDE[tsql](../../includes/tsql-md.md)]。
 
 ## <a name="examples"></a>示例
 

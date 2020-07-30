@@ -20,15 +20,15 @@ ms.assetid: fa3e321f-6fe5-45ff-b397-02a0dd3d6b7d
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f74fcfb00286d79699eed1e40c3dc36f907026ec
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a2110eea5c008f06f7bdd6637dda7222ad5f50d2
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82811777"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396286"
 ---
 # <a name="sysdm_io_virtual_file_stats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   返回数据和日志文件的 I/O 统计信息。 此动态管理视图替换[fn_virtualfilestats](../../relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql.md)函数。  
   
@@ -90,7 +90,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 |**file_handle**|**varbinary**|用于此文件的 Windows 文件句柄。|  
 |**io_stall_queued_read_ms**|**bigint**|不适**用于：**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 。<br /><br /> 针对读的 IO 资源调控所引入的总 IO 延迟。 不可为 null。 有关详细信息，请参阅[sys.databases&#41;dm_resource_governor_resource_pools &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)。|  
 |**io_stall_queued_write_ms**|**bigint**|不适**用于：**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 。<br /><br />  针对写的 IO 资源调控所引入的总 IO 延迟。 不可为 null。|
-|**pdw_node_id**|**int**|**适用于：** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>分布的节点的标识符。
+|pdw_node_id|**int**|**适用于：** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>分布的节点的标识符。
  
 ## <a name="remarks"></a>备注
 只要启动 SQL Server （MSSQLSERVER）服务，计数器就会初始化为空。
@@ -122,9 +122,9 @@ WHERE database_name = 'tempdb' AND file_id = 2;
 ```
 
 ## <a name="see-also"></a>另请参阅  
- [动态管理视图和函数 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [与 SQL&#41;相关的动态管理视图和函数 &#40;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys. database_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
+ [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   
   
