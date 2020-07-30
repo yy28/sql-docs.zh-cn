@@ -21,15 +21,15 @@ ms.assetid: b4d05439-6360-45db-b1cd-794f4a64935e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cc78decc0c911376b61cc429ba538be11cbaded6
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 25272b586e84b498cfaa9da17a772692dad6f48a
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831432"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87393982"
 ---
 # <a name="sysquery_store_plan-transact-sql"></a>sys.query_store_plan (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   包含有关与查询关联的每个执行计划的信息。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "82831432"
 |**is_forced_plan**|**bit**|当用户执行存储过程**sys. sp_query_store_force_plan**时，计划标记为 "强制"。 强制机制*并不保证*确切地将此计划用于**query_id**引用的查询。 计划强制再次编译查询，并通常为**plan_id**所引用的计划生成完全相同或类似的计划。 如果计划强制不成功，则**force_failure_count**会递增，并且**last_force_failure_reason**会按失败原因进行填充。 <br/>**注意：** Azure SQL 数据仓库将始终返回零（0）。|  
 |**is_natively_compiled**|**bit**|计划包括本机编译的内存优化过程。 （0 = FALSE，1 = TRUE）。 <br/>**注意：** Azure SQL 数据仓库将始终返回零（0）。|  
 |**force_failure_count**|**bigint**|强制此计划失败的次数。 仅当重新编译查询（*而不是每次执行*时）时，它才会递增。 每次将**is_plan_forced**从**FALSE**更改为**TRUE**时，它都会重置为0。 <br/>**注意：** Azure SQL 数据仓库将始终返回零（0）。|  
-|**last_force_failure_reason**|**int**|计划强制失败的原因。<br /><br /> 0：无故障，否则导致强制失败的错误的错误号<br /><br /> 8637： ONLINE_INDEX_BUILD<br /><br /> 8683： INVALID_STARJOIN<br /><br /> 8684： TIME_OUT<br /><br /> 8689： NO_DB<br /><br /> 8690： HINT_CONFLICT<br /><br /> 8691： SETOPT_CONFLICT<br /><br /> 8694： DQ_NO_FORCING_SUPPORTED<br /><br /> 8698： NO_PLAN<br /><br /> 8712： NO_INDEX<br /><br /> 8713： VIEW_COMPILE_FAILED<br /><br /> \<其他值>： GENERAL_FAILURE <br/>**注意：** Azure SQL 数据仓库将始终返回零（0）。|  
+|**last_force_failure_reason**|**int**|计划强制失败的原因。<br /><br /> 0：无故障，否则导致强制失败的错误的错误号<br /><br /> 8637： ONLINE_INDEX_BUILD<br /><br /> 8683： INVALID_STARJOIN<br /><br /> 8684： TIME_OUT<br /><br /> 8689： NO_DB<br /><br /> 8690： HINT_CONFLICT<br /><br /> 8691： SETOPT_CONFLICT<br /><br /> 8694： DQ_NO_FORCING_SUPPORTED<br /><br /> 8698： NO_PLAN<br /><br /> 8712： NO_INDEX<br /><br /> 8713： VIEW_COMPILE_FAILED<br /><br /> \<other value>： GENERAL_FAILURE <br/>**注意：** Azure SQL 数据仓库将始终返回零（0）。|  
 |**last_force_failure_reason_desc**|**nvarchar(128)**|Last_force_failure_reason_desc 的文本说明。<br /><br /> ONLINE_INDEX_BUILD：查询在目标表具有正在联机生成的索引时尝试修改数据<br /><br /> INVALID_STARJOIN：计划包含无效的 StarJoin 规范<br /><br /> TIME_OUT：优化器在搜索由强制计划指定的计划时超出了允许的操作数<br /><br /> NO_DB：在计划中指定的数据库不存在<br /><br /> HINT_CONFLICT：无法编译查询，因为计划与查询提示冲突<br /><br /> DQ_NO_FORCING_SUPPORTED：无法执行查询，因为计划与分布式查询或全文操作的使用冲突。<br /><br /> NO_PLAN：查询处理器无法生成查询计划，因为无法验证强制计划是否对查询有效<br /><br /> NO_INDEX：计划中指定的索引已不存在<br /><br /> VIEW_COMPILE_FAILED：由于在计划中引用的索引视图中存在问题，无法强制执行查询计划<br /><br /> GENERAL_FAILURE：常规强制错误（未涉及以上原因） <br/>**注意：** Azure SQL 数据仓库将始终返回*NONE*。|  
 |**count_compiles**|**bigint**|规划编译统计信息。|  
 |**initial_compile_start_time**|**datetimeoffset**|规划编译统计信息。|  
@@ -94,7 +94,7 @@ ms.locfileid: "82831432"
  [sys.query_store_wait_stats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
  [sys. query_store_runtime_stats_interval &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [相关视图、函数和过程](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [Transact-sql&#41;的目录视图 &#40;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [查询存储存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
   
   

@@ -9,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: 538c93cf-c5bb-43d5-b758-186d9fb00c19
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: e6918dac33ce0e69116f713cb8906b2774d00575
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd22c1c53bb95519f65fd044f80e35f44cc2b7ae
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68084551"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394672"
 ---
 # <a name="project-settings-conversion-db2tosql"></a>项目设置（转换）（DB2ToSQL）
-"**项目设置**" 对话框的 "转换" 页包含用于自定义 SSMA 将 DB2 语法转换[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]为语法的方式的设置。  
+"**项目设置**" 对话框的 "转换" 页包含用于自定义 SSMA 将 DB2 语法转换为语法的方式的设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 "**项目设置**" 和 "**默认项目设置**" 对话框中提供了 "转换" 窗格：  
   
@@ -45,7 +45,7 @@ ms.locfileid: "68084551"
   
 `WHERE ROWNUM < expression and Field1 >= 2`  
   
-下面的示例显示生成[!INCLUDE[tsql](../../includes/tsql-md.md)]的：  
+下面的示例显示生成的 [!INCLUDE[tsql](../../includes/tsql-md.md)] ：  
   
 `DELETE TOP (expression-1)`  
   
@@ -80,17 +80,17 @@ TOP 要求 TOP 子句表达式的计算结果为一个整数。 如果整数为�
   
 -   如果选择 "**使用 INSERT、update、delete 语句**"，SSMA 会将合并语句转换为 INSERT、UPDATE、delete 语句。  
   
--   如果选择**使用 MERGE 语句**，SSMA 会将合并语句转换为中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]merge 语句。  
+-   如果选择**使用 MERGE 语句**，SSMA 会将合并语句转换为中的 merge 语句 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 > [!WARNING]  
-> 此项目设置选项仅在2008、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 中可用。  
+> 此项目设置选项仅在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012、2014中可用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 在 "**模式**" 框中选择转换模式时，SSMA 将应用以下设置：  
   
 **默认/乐观/完整模式：** 使用 MERGE 语句  
   
 ### <a name="convert-calls-to-subprograms-that-use-default-arguments"></a>将调用转换为使用默认参数的 subprograms  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]函数不支持省略函数调用中的参数。 另外， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]函数和过程不支持表达式作为默认参数值。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]函数不支持省略函数调用中的参数。 另外， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 函数和过程不支持表达式作为默认参数值。  
   
 -   如果选择 **"是"** ，并且函数调用省略了参数，则 SSMA 会将关键字**默认值**插入函数并调用正确的位置。 然后，它将使用警告标记调用。  
   
@@ -129,7 +129,7 @@ TOP 要求 TOP 子句表达式的计算结果为一个整数。 如果整数为�
 ### <a name="convert-foreign-keys-with-set-null-referential-action-on-column-that-is-not-null"></a>将外键转换为不为 NULL 的列上的 SET NULL 引用操作  
 DB2 允许创建外键约束，因为在被引用列中不允许 null 值，所以无法执行 SET NULL 操作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不允许进行这样的外键配置。  
   
--   如果选择 **"是"**，则 SSMA 将生成 DB2 中的引用操作，但需要在将约束加载到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之前进行手动更改。 例如，可以选择 "无操作" 而不是 "设置为 NULL"。  
+-   如果选择 **"是"**，则 SSMA 将生成 DB2 中的引用操作，但需要在将约束加载到之前进行手动更改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 例如，可以选择 "无操作" 而不是 "设置为 NULL"。  
   
 -   如果选择 "**否**"，则约束将被标记为错误。  
   
@@ -138,7 +138,7 @@ DB2 允许创建外键约束，因为在被引用列中不允许 null 值，所�
 **默认/乐观/完整模式：** 不  
   
 ### <a name="convert-function-calls-to-procedure-calls"></a>将函数调用转换为过程调用  
-某些 DB2 函数被定义为自治事务或包含在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]无效的语句。 在这些情况下，SSMA 会创建一个过程和一个函数，该函数是过程的包装器。 转换后的函数会调用实现过程。  
+某些 DB2 函数被定义为自治事务或包含在中无效的语句 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 在这些情况下，SSMA 会创建一个过程和一个函数，该函数是过程的包装器。 转换后的函数会调用实现过程。  
   
 SSMA 可以将对包装函数的调用转换为对过程的调用。 这会创建更易于阅读的代码，并可提高性能。 但是，上下文并不总是允许它;例如，不能将 SELECT 列表中的函数调用替换为过程调用。 SSMA 有几个选项可用于涵盖常见案例：  
   
@@ -153,7 +153,7 @@ SSMA 可以将对包装函数的调用转换为对过程的调用。 这会创�
 **默认/乐观/完整模式：** 尽可能  
   
 ### <a name="convert-lock-table-statements"></a>Convert LOCK TABLE 语句  
-SSMA 可以将许多 LOCK TABLE 语句转换为表提示。 SSMA 无法转换包含 PARTITION、SUBPARTITION、 @dblink和 NOWAIT 子句的任何 LOCK TABLE 语句，并将此类语句与转换错误消息一起标记。  
+SSMA 可以将许多 LOCK TABLE 语句转换为表提示。 SSMA 无法转换包含 PARTITION、SUBPARTITION、和 NOWAIT 子句的任何 LOCK TABLE 语句 @dblink ，并将此类语句与转换错误消息一起标记。  
   
 -   如果选择 **"是"**，SSMA 会将支持的锁表语句转换为表提示。  
   
@@ -161,9 +161,8 @@ SSMA 可以将许多 LOCK TABLE 语句转换为表提示。 SSMA 无法转换包
   
 下表显示了 SSMA 如何转换 DB2 锁定模式：  
   
-|||  
-|-|-|  
 |DB2 锁定模式|SQL Server 表提示|  
+|-|-|  
 |行共享|ROWLOCK、HOLDLOCK|  
 |行独占|ROWLOCK、XLOCK、HOLDLOCK|  
 |共享更新 = 行共享|ROWLOCK、HOLDLOCK|  
@@ -176,7 +175,7 @@ SSMA 可以将许多 LOCK TABLE 语句转换为表提示。 SSMA 无法转换包
 **默认/乐观/完整模式：** 是的  
   
 ### <a name="convert-open-for-statements-for-ref-cursor-out-parameters"></a>为 REF CURSOR OUT 参数转换开放式语句  
-在 DB2 中，可以使用开放式语句将结果集返回到类型为 REF CURSOR 的 subprogram 的 OUT 参数。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，存储过程直接返回 SELECT 语句的结果。  
+在 DB2 中，可以使用开放式语句将结果集返回到类型为 REF CURSOR 的 subprogram 的 OUT 参数。 在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，存储过程直接返回 SELECT 语句的结果。  
   
 SSMA 可以将多个打开的语句转换为 SELECT 语句。  
   
@@ -200,9 +199,9 @@ SSMA 可以将 DB2 记录转换为分隔变量，并将其转换为具有特定�
 **默认/乐观/完整模式：** 是的  
   
 ### <a name="convert-substr-function-calls-to-substring-function-calls"></a>将 SUBSTR 函数调用转换为子字符串函数调用  
-SSMA 可以将 DB2 SUBSTR 函数调用转换[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]为**子字符串**函数调用，具体取决于参数的数目。 如果 SSMA 无法转换 SUBSTR 函数调用，或参数的数目不受支持，则 SSMA 会将 SUBSTR 函数调用转换为自定义 SSMA 函数调用。  
+SSMA 可以将 DB2 SUBSTR 函数调用转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **子字符串**函数调用，具体取决于参数的数目。 如果 SSMA 无法转换 SUBSTR 函数调用，或参数的数目不受支持，则 SSMA 会将 SUBSTR 函数调用转换为自定义 SSMA 函数调用。  
   
--   如果选择 **"是"**，SSMA 会将使用三个参数的 SUBSTR 函数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]调用转换为**子字符串**。 其他 SUBSTR 函数将被转换为调用自定义 SSMA 函数。  
+-   如果选择 **"是"**，SSMA 会将使用三个参数的 SUBSTR 函数调用转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **子字符串**。 其他 SUBSTR 函数将被转换为调用自定义 SSMA 函数。  
   
 -   如果选择 "**否**"，SSMA 会将 SUBSTR 函数调用转换为自定义 SSMA 函数调用。  
   
@@ -215,7 +214,7 @@ SSMA 可以将 DB2 SUBSTR 函数调用转换[!INCLUDE[ssNoVersion](../../include
 ### <a name="convert-subtypes"></a>转换子类型  
 SSMA 可以通过两种方式转换 PL/SQL 子类型：  
   
--   如果选择 **"是"**，则 SSMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将从子类型创建用户定义类型，并将其用于此子类型的每个变量。  
+-   如果选择 **"是"**，则 SSMA 将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 从子类型创建用户定义类型，并将其用于此子类型的每个变量。  
   
 -   如果选择 "**否**"，则 SSMA 将用基础类型替换子类型的所有源声明，并像平常一样转换结果。 在这种情况下，不会在中创建其他类型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
@@ -224,7 +223,7 @@ SSMA 可以通过两种方式转换 PL/SQL 子类型：
 **默认/乐观/完整模式：** 不  
   
 ### <a name="convert-synonyms"></a>转换同义词  
-以下 DB2 对象的同义词可迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]：  
+以下 DB2 对象的同义词可迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ：  
   
 -   表和对象表  
   
@@ -246,7 +245,7 @@ SSMA 可以通过两种方式转换 PL/SQL 子类型：
   
 无法迁移其他同义词。 SSMA 将生成同义词的错误消息以及使用同义词的所有引用。  
   
--   如果选择 **"是"**，SSMA 会[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]根据前面的列表创建同义词和直接对象引用。  
+-   如果选择 **"是"**，SSMA 会 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 根据前面的列表创建同义词和直接对象引用。  
   
 -   如果选择 "**否**"，则 SSMA 将为此处列出的所有同义词创建直接对象引用。  
   
@@ -270,21 +269,21 @@ SSMA 可以将 DB2 TO_CHAR （日期、格式）转换为 sysdb 数据库中的�
 ### <a name="convert-transaction-processing-statements"></a>转换事务处理语句  
 SSMA 可以转换 DB2 事务处理语句：  
   
--   如果选择 **"是"**，SSMA 会将 DB2 事务处理[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]语句转换为语句。  
+-   如果选择 **"是"**，SSMA 会将 DB2 事务处理语句转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语句。  
   
 -   如果选择 "**否**"，则 SSMA 会将事务处理语句标记为转换错误。  
   
 > [!NOTE]  
-> DB2 隐式打开事务。 若要在上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]模拟此行为，你必须手动添加 BEGIN TRANSACTION 语句，你希望在何处开始事务。 或者，你可以在会话开始时对命令执行 SET IMPLICIT_TRANSACTIONS。 SSMA 在用自治事务转换子例程时，自动添加 SET IMPLICIT_TRANSACTIONS。  
+> DB2 隐式打开事务。 若要在上模拟此行为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，你必须手动添加 BEGIN TRANSACTION 语句，你希望在何处开始事务。 或者，你可以在会话开始时对命令执行 SET IMPLICIT_TRANSACTIONS。 SSMA 在用自治事务转换子例程时，自动添加 SET IMPLICIT_TRANSACTIONS。  
   
 在 "**模式**" 框中选择转换模式时，SSMA 将应用以下设置：  
   
 **默认/乐观/完整模式：** 是的  
   
 ### <a name="emulate-db2-null-behavior-in-order-by-clauses"></a>在 ORDER BY 子句中模拟 DB2 null 行为  
-NULL 值在和 DB2 中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的排序方式不同：  
+NULL 值在和 DB2 中的排序方式不同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ：  
   
--   在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，NULL 值是排序列表中的最小值。 在升序列表中，将首先显示 NULL 值。  
+-   在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，NULL 值是排序列表中的最小值。 在升序列表中，将首先显示 NULL 值。  
   
 -   在 DB2 中，NULL 值为排序列表中的最大值。 默认情况下，NULL 值显示在升序列表的最后。  
   
@@ -303,9 +302,9 @@ SSMA 可以通过检查是否有 NULL 值来模拟 DB2 顺序。 然后，它首
 **完整模式：** 是的  
   
 ### <a name="emulate-row-count-exceptions-in-select"></a>在 SELECT 中模拟行计数异常  
-如果带有 INTO 子句的 SELECT 语句未返回任何行，则 DB2 将引发 NO_DATA_FOUND 异常。 如果该语句返回两行或更多行，则会引发 TOO_MANY_ROWS 异常。 如果行计数与[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]一个不同，则中的转换后的语句不会引发任何异常。  
+如果带有 INTO 子句的 SELECT 语句未返回任何行，则 DB2 将引发 NO_DATA_FOUND 异常。 如果该语句返回两行或更多行，则会引发 TOO_MANY_ROWS 异常。 如果行计数与一个不同，则中的转换后的语句 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不会引发任何异常。  
   
--   如果选择 **"是"**，则 SSMA 会在每个 select 语句后面添加对 sysdb 过程 db_error_exact_one_row_check 的调用。 此过程模拟 NO_DATA_FOUND 和 TOO_MANY_ROWS 异常。 这是默认设置，它允许尽可能关闭复制 DB2 行为。 如果源代码包含处理这些错误的异常处理程序，则应始终选择 **"是"** 。 请注意，如果 SELECT 语句发生在用户定义函数中，则此模块将转换为存储过程，因为执行存储过程和引发异常与[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]函数上下文不兼容。  
+-   如果选择 **"是"**，则 SSMA 会在每个 select 语句后面添加对 sysdb 过程 db_error_exact_one_row_check 的调用。 此过程模拟 NO_DATA_FOUND 和 TOO_MANY_ROWS 异常。 这是默认设置，它允许尽可能关闭复制 DB2 行为。 如果源代码包含处理这些错误的异常处理程序，则应始终选择 **"是"** 。 请注意，如果 SELECT 语句发生在用户定义函数中，则此模块将转换为存储过程，因为执行存储过程和引发异常与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 函数上下文不兼容。  
   
 -   如果选择 "**否**"，则不会生成任何异常。 当 SSMA 转换用户定义函数，并且你希望它保留在中时，这可能很有用。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
@@ -324,9 +323,9 @@ SSMA 可以通过检查是否有 NULL 值来模拟 DB2 顺序。 然后，它首
 **默认/乐观/完整模式：** 条  
   
 ### <a name="generate-rowid-column"></a>生成 ROWID 列  
-当 SSMA 在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]创建表时，可以创建 ROWID 列。 迁移数据时，每行都将获取由 newid （）函数生成的新的 UNIQUEIDENTIFIER 值。  
+当 SSMA 在中创建表时 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，可以创建 ROWID 列。 迁移数据时，每行都将获取由 newid （）函数生成的新的 UNIQUEIDENTIFIER 值。  
   
--   如果选择 **"是**"，则将在所有表上创建 ROWID [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]列并在插入值时生成 guid。 如果计划使用 SSMA 测试人员，请始终选择 **"是"** 。  
+-   如果选择 **"是**"，则将在所有表上创建 ROWID 列并在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 插入值时生成 guid。 如果计划使用 SSMA 测试人员，请始终选择 **"是"** 。  
   
 -   如果选择 "**否**"，则不会将 ROWID 列添加到表中。  
   
@@ -360,9 +359,9 @@ SSMA 可以通过检查是否有 NULL 值来模拟 DB2 顺序。 然后，它首
 **默认/乐观/完整模式：** 内  
   
 ### <a name="use-isnull-in-string-concatenation"></a>在字符串串联中使用 ISNULL  
-DB2 并[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回不同的结果。 DB2 将空值视为空字符集。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回 NULL。  
+DB2 并 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回不同的结果。 DB2 将空值视为空字符集。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回 NULL。  
   
--   如果选择 **"是"**，则 SSMA 会将 DB2 串联字符（| |） [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]替换为串联字符（+）。 SSMA 还会检查连接两侧的表达式是否为 NULL 值。  
+-   如果选择 **"是"**，则 SSMA 会将 DB2 串联字符（| |）替换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 串联字符（+）。 SSMA 还会检查连接两侧的表达式是否为 NULL 值。  
   
 -   如果选择 "**否**"，则 SSMA 将替换串联字符，但不会检查是否存在 NULL 值。  
   
@@ -422,7 +421,7 @@ DB2 并[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回不同的�
 ### <a name="convert-returning-clause-in-delete-statement-to-output"></a>将 DELETE 语句中的返回子句转换为输出  
 DB2 提供返回子句作为立即获取已删除值的方法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通过 OUTPUT 子句提供该功能。  
   
--   如果选择 **"是"**，SSMA 会将 DELETE 语句中的返回子句转换为 OUTPUT 子句。 由于表中的触发器可以更改值，因此返回的值可能不同[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]于 DB2 中的值。  
+-   如果选择 **"是"**，SSMA 会将 DELETE 语句中的返回子句转换为 OUTPUT 子句。 由于表中的触发器可以更改值，因此返回的值可能不同于 DB2 中的值 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 -   如果选择 "**否**"，则 SSMA 将在 DELETE 语句之前生成 select 语句以检索返回值。  
   
@@ -433,7 +432,7 @@ DB2 提供返回子句作为立即获取已删除值的方法。 [!INCLUDE[ssNoV
 ### <a name="convert-returning-clause-in-insert-statement-to-output"></a>将 INSERT 语句中的返回子句转换为输出  
 DB2 提供返回子句作为立即获取插入值的方法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通过 OUTPUT 子句提供该功能。  
   
--   如果选择 **"是"**，SSMA 会将 INSERT 语句中的返回子句转换为输出。 由于表中的触发器可以更改值，因此返回的值可能不同[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]于 DB2 中的值。  
+-   如果选择 **"是"**，SSMA 会将 INSERT 语句中的返回子句转换为输出。 由于表中的触发器可以更改值，因此返回的值可能不同于 DB2 中的值 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 -   如果选择 "**否**"，SSMA 将通过从引用表中插入和选择值来模拟 DB2 功能。  
   
@@ -444,7 +443,7 @@ DB2 提供返回子句作为立即获取插入值的方法。 [!INCLUDE[ssNoVers
 ### <a name="convert-returning-clause-in-update-statement-to-output"></a>将 UPDATE 语句中的返回子句转换为输出  
 DB2 提供返回子句作为立即获取更新值的方法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通过 OUTPUT 子句提供该功能。  
   
--   如果选择 **"是"**，SSMA 会将 UPDATE 语句中的返回子句转换为 OUTPUT 子句。 由于表中的触发器可以更改值，因此返回的值可能不同[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]于 DB2 中的值。  
+-   如果选择 **"是"**，SSMA 会将 UPDATE 语句中的返回子句转换为 OUTPUT 子句。 由于表中的触发器可以更改值，因此返回的值可能不同于 DB2 中的值 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 -   如果选择 "**否**"，SSMA 将在 UPDATE 语句之后生成 select 语句，以检索返回值。  
   

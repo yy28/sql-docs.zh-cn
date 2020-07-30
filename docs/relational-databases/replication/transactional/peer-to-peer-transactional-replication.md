@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d85b1f3460dc55f7d6cd24420f2d86bb0f9623c2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 656b05414327e35b5aff1a982a0313835ded20a4
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901239"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394646"
 ---
 # <a name="peer-to-peer---transactional-replication"></a>对等事务复制
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -157,7 +157,7 @@ ms.locfileid: "85901239"
 ### <a name="maintenance-considerations"></a>维护注意事项  
  一些操作需要让系统静止。 也就是说，停止所有节点上已发布表中的活动，并确保每个节点都已收到来自所有其他节点的更改。  
   
-||仅使用 SQL Server 2005 对等，或混合使用 SQL Server 2005 对等与 SQL Server 2008 对等和更高版本|仅使用 SQL Server 2005 对等，或混合使用 SQL Server 2005 对等与 SQL Server 2008 对等和更高版本|SQL2008 对等和更高版本|SQL2008 对等和更高版本|  
+|操作|仅使用 SQL Server 2005 对等，或混合使用 SQL Server 2005 对等与 SQL Server 2008 对等和更高版本|仅使用 SQL Server 2005 对等，或混合使用 SQL Server 2005 对等与 SQL Server 2008 对等和更高版本|SQL2008 对等和更高版本|SQL2008 对等和更高版本|  
 |-|------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|------------------------------|------------------------------|  
 |向拓扑添加节点|完整拓扑中的 2 个节点：无需处于静止状态。 改用 `sync_type = 'initialize with backup'`|2 个以上节点：需要处于静止状态。|`sync_type = 'replication support only'`：需要处于静止状态。|`sync_type = 'initialize with backup'` 和 `'initialize from lsn'`：无需处于静止状态。|  
   

@@ -20,15 +20,15 @@ ms.assetid: bb2d2550-9c0e-4a88-b50c-12e481d4d3ae
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 76d96e9342ca66f4133b8993b2409960e6091301
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d022af78318203a9f7c5d4f1e7c5d01c2f091ce1
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75246145"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395984"
 ---
 # <a name="grant-search-property-list-permissions-transact-sql"></a>授予搜索属性列表权限 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   授予搜索属性列表的权限。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "75246145"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
   
 GRANT permission [ ,...n ] ON   
     SEARCH PROPERTY LIST :: search_property_list_name  
@@ -49,7 +49,7 @@ GRANT permission [ ,...n ] ON
  permission   
  权限的名称。 本主题后面的“备注”部分中介绍了不同权限与安全对象之间的有效映射。  
   
- ON SEARCH PROPERTY LIST ::search_property_list_name  
+ ON SEARCH PROPERTY LIST ::search_property_list_name    
  指定要授予权限的搜索属性列表。 需要使用作用域限定符 ::  。  
   
  **查看现有搜索属性列表**  

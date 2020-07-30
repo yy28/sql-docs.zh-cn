@@ -11,12 +11,12 @@ ms.assetid: a98a5e07-eb5e-47b9-a6f2-e2cb3a18309c
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: 86cc0909140190ca7731ddc647fc979a6cd21c7a
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: a822aa1e9c30e245b61bd43c0af60b94fae33fe1
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293616"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394907"
 ---
 # <a name="project-settings-conversion-oracletosql"></a>项目设置（转换）(OracleToSQL)
 "**项目设置**" 对话框的 "转换" 页包含用于自定义 SSMA 将 Oracle 语法转换为语法的方式的设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
@@ -29,16 +29,14 @@ ms.locfileid: "84293616"
   
 ## <a name="conversion-messages"></a>转换消息  
   
-|||  
-|-|-|  
 |术语|定义|  
+|-|-|  
 |**生成有关应用的问题的消息**|指定 SSMA 是否在转换过程中生成信息性消息，在 "输出" 窗格中显示它们，并将它们添加到转换后的代码中。<br /><br />在 "**模式**" 框中选择转换模式时，SSMA 将应用以下设置：<br /><br />**默认/乐观模式：** 不<br /><br />**完整模式：** 不|  
   
 ## <a name="miscellaneous-options"></a>其他选项  
   
-|||  
-|-|-|  
 |术语|定义|  
+|-|-|  
 |**将 ROWNUM 表达式强制转换为整数**|当 SSMA 转换 ROWNUM 表达式时，它会将该表达式转换为 TOP 子句，后跟表达式。 以下示例显示了 Oracle DELETE 语句中的 ROWNUM：<br /><br />`DELETE FROM Table1`<br /><br />`WHERE ROWNUM < expression and Field1 >= 2`<br /><br />下面的示例显示生成的 [!INCLUDE[tsql](../../includes/tsql-md.md)] ：<br /><br />`DELETE TOP (expression-1)`<br /><br />`FROM Table1`<br /><br />`WHERE Field1>=2`<br /><br />TOP 要求 TOP 子句表达式的计算结果为一个整数。 如果整数为负数，则该语句将产生错误。<br /><br />如果选择 **"是"**，SSMA 会将表达式强制转换为整数。<br /><br />如果选择 "**否**"，则 SSMA 会将所有非整数表达式标记为转换后的代码中的错误。<br /><br />在 "**模式**" 框中选择转换模式时，SSMA 将应用以下设置：<br /><br />**默认/完整模式：** 不<br /><br />**乐观模式：** 是的|  
 |**默认架构映射**|此设置指定 Oracle 架构映射到 SQL Server 架构的方式。 此设置提供了两个选项：<br /><br />**数据库架构：** 在此模式下，Oracle 架构 "sch1" 默认映射到 SQL Server 数据库 "sch1" 中 SQL Server 架构的 "dbo"。<br /><br />架构**到架构：** 在此模式下，Oracle 架构 "sch1" 默认映射到 "sch1" SQL Server "连接" 对话框中提供的默认 SQL Server 数据库中的 ""。<br /><br />在 "**模式**" 框中选择转换模式时，SSMA 将应用以下设置：<br /><br />**默认/乐观/完整模式：** 架构到数据库|  
 |**MERGE 语句的转换方法**|如果选择 "**使用 INSERT、update、delete 语句**"，SSMA 会将合并语句转换为 INSERT、UPDATE、delete 语句。<br /><br />如果选择**使用 MERGE 语句**，SSMA 会将合并语句转换为中的 merge 语句 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。<br /><br />**注意：** 此项目设置选项仅在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012、2014中可用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。<br /><br />在 "**模式**" 框中选择转换模式时，SSMA 将应用以下设置：<br /><br />**默认/乐观/完整模式：** 使用 MERGE 语句|  
@@ -69,18 +67,16 @@ ms.locfileid: "84293616"
   
 ## <a name="returning-clause-conversion"></a>返回子句转换  
   
-|||  
-|-|-|  
 |术语|定义|  
+|-|-|  
 |**将 DELETE 语句中的返回子句转换为输出**|Oracle 提供返回子句作为立即获取已删除值的方法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通过 OUTPUT 子句提供该功能。<br /><br />如果选择 **"是"**，SSMA 会将 DELETE 语句中的返回子句转换为 OUTPUT 子句。 由于表中的触发器可以更改值，因此返回的值可能与在 Oracle 中的值不同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。<br /><br />如果选择 "**否**"，则 SSMA 将在 DELETE 语句之前生成 select 语句以检索返回值。<br /><br />在 "**模式**" 框中选择转换模式时，SSMA 将应用以下设置：<br /><br />**默认/乐观/完整模式：** 是的|  
 |**将 INSERT 语句中的返回子句转换为输出**|Oracle 提供返回子句作为立即获取插入值的方法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通过 OUTPUT 子句提供该功能。<br /><br />如果选择 **"是"**，SSMA 会将 INSERT 语句中的返回子句转换为输出。 由于表中的触发器可以更改值，因此返回的值可能与在 Oracle 中的值不同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。<br /><br />如果选择 "**否**"，SSMA 将通过从引用表中插入和选择值来模拟 Oracle 功能。<br /><br />在 "**模式**" 框中选择转换模式时，SSMA 将应用以下设置：<br /><br />**默认/乐观/完整模式：** 是的|  
 |**将 UPDATE 语句中的返回子句转换为输出**|Oracle 提供返回子句作为立即获取更新值的方法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通过 OUTPUT 子句提供该功能。<br /><br />如果选择 **"是"**，SSMA 会将 UPDATE 语句中的返回子句转换为 OUTPUT 子句。 由于表中的触发器可以更改值，因此返回的值可能与在 Oracle 中的值不同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。<br /><br />如果选择 "**否**"，SSMA 将在 UPDATE 语句之后生成 select 语句，以检索返回值。<br /><br />在 "**模式**" 框中选择转换模式时，SSMA 将应用以下设置：<br /><br />**默认/乐观/完整模式：** 是的|  
   
 ## <a name="sequence-conversion"></a>序列转换  
   
-|||  
-|-|-|  
 |术语|定义|  
+|-|-|  
 |**转换序列生成器**|在 Oracle 中，您可以使用序列生成唯一标识符。<br /><br />SSMA 可以将序列转换为以下项。<br /><br />使用 SQL Server 序列生成器（此选项仅在转换为 SQL Server 2012 和 SQL Server 2014）时可用。<br /><br />使用 SSMA 序列生成器。<br /><br />使用列标识。<br /><br />转换为 SQL Server 2012 或 SQL Server 2014 时的默认选项是使用 SQL Server 序列生成器。 但 SQL Server 2012 和 SQL Server 2014 不支持获取当前序列值（例如 Oracle sequence currval 方法的值）。 有关迁移 Oracle sequence currval 方法的指导，请参阅 SSMA 团队博客网站。<br /><br />SSMA 还提供了一个用于将 Oracle 序列转换为 SSMA 序列模拟器的选项。 当你转换到2012之前的 SQL Server 时，这是默认选项<br /><br />最后，还可以将分配给表中的列的序列转换为 SQL Server 标识值。 您必须在 "Oracle**表**" 选项卡上指定序列与标识列之间的映射|  
 |**在触发器外转换 CURRVAL**|仅当转换序列生成器设置为**使用列标识**时可见。 由于 Oracle 序列是与表分离的对象，因此许多使用序列的表都使用触发器来生成和插入新的序列值。 SSMA 注释掉这些语句，或在注释掉会生成错误时将其标记为错误。<br /><br />如果选择 **"是"**，SSMA 将在转换后的序列 CURRVAL 上将所有引用标记为外部触发器，并发出警告。<br /><br />如果选择 "**否**"，则 SSMA 会将转换后的序列 CURRVAL 上对外部触发器的所有引用标记为错误。|  
   

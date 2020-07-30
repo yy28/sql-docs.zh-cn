@@ -20,15 +20,15 @@ ms.assetid: 96513cb4-a9c0-4834-97a4-ddc0777b8415
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8be5b497f3046afb4ed9d56ccde0f6f00ede919a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 89c928a768f77e8183d49bac0cde8b85616ef468
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75244549"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394062"
 ---
 # <a name="deny-search-property-list-permissions-transact-sql"></a>拒绝搜索属性列表权限 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   拒绝搜索属性列表的权限。  
  
@@ -37,7 +37,7 @@ ms.locfileid: "75244549"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 DENY permission [ ,...n ] ON  
         SEARCH PROPERTY LIST :: search_property_list_name  
     TO database_principal [ ,...n ] [ CASCADE ]  
@@ -48,7 +48,7 @@ DENY permission [ ,...n ] ON
  permission   
  权限的名称。 本主题后面的“备注”部分中介绍了不同权限与安全对象之间的有效映射。  
   
-ON SEARCH PROPERTY LIST ::search_property_list_name  
+ON SEARCH PROPERTY LIST ::search_property_list_name    
  指定要拒绝权限的搜索属性列表。 需要使用作用域限定符 ::。  
   
 database_principal   

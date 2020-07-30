@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3fd983ad-e206-45db-9054-417c9b5bb815
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f6a2540f4b1a3cb35f697ce4e27a51b99f5bdf84
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f392b232e81c0f6dcb2fcd546acf91a714f5c7ee
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893330"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394380"
 ---
 # <a name="heterogeneous-database-replication"></a>异类数据库复制  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "85893330"
 
 -   将数据发布到 Oracle 以及从 Oracle 发布数据具有以下限制条件：  
 
-  | |2016 或更早版本 |2017 或更高版本 |
+  |场景|2016 或更早版本 |2017 或更高版本 |
   |-------|-------|--------|
   |从 Oracle 复制 |仅支持 Oracle 10g 或更早版本 |仅支持 Oracle 10g 或更早版本 |
   |复制到 Oracle |最高为 Oracle 12c |不支持 |
@@ -44,7 +44,7 @@ ms.locfileid: "85893330"
 ## <a name="publishing-data-from-oracle"></a>从 Oracle 发布数据  
  您可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 从 Oracle 发布数据，其大多数功能和简单易用性与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 快照复制和事务复制相同。 此功能需要 Oracle 10g 版本或更早版本。 从 Oracle 发布数据非常适合于下列情形：  
   
-|场景|说明|  
+|方案|说明|  
 |--------------|-----------------|  
 |[!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 应用程序部署|使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 开发，同时还能处理从非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库复制的数据。|  
 |数据仓库临时服务器|使 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 临时数据库与非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库保持同步。|  

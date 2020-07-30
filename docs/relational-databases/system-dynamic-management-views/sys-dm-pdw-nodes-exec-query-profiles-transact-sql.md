@@ -13,20 +13,20 @@ ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 7237e7f7b49916e09f4a8c5cab0d7d49486cb971
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cb63045fa1a34898e9c195e7a5c75bdf6b34b15a
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73145652"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394342"
 ---
 # <a name="sysdm_pdw_nodes_exec_query_profiles-transact-sql"></a>sys. dm_pdw_nodes_exec_query_profiles （Transact-sql）
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 在执行查询时监视实时数据仓库查询进度。   
   
 ## <a name="table-returned"></a>返回的表  
-返回的计数器基于每个运算符和每个线程。 结果是动态的，并且不匹配现有选项的结果，例如`SET STATISTICS XML ON` ，查询完成后仅创建输出。  
+返回的计数器基于每个运算符和每个线程。 结果是动态的，并且不匹配现有选项的结果，例如， `SET STATISTICS XML ON` 查询完成后仅创建输出。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -66,7 +66,7 @@ ms.locfileid: "73145652"
 |segment_read_count|**int**|迄今为止的段预读数。|  
 |segment_skip_count|**int**|迄今为止跳过的段数。| 
 |actual_read_row_count|**bigint**|应用驻留谓词之前由运算符读取的行数。| 
-|estimated_read_row_count|**bigint**|**适用于：** 从[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 开始。 <br/>在应用残留谓词之前估计要由运算符读取的行数。|  
+|estimated_read_row_count|**bigint**|**适用于：** 从 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 开始。 <br/>在应用残留谓词之前估计要由运算符读取的行数。|  
   
 ## <a name="remarks"></a>备注  
 [Dm_exec_query_profiles](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql?view=sql-server-ver15)应用相同的备注。  

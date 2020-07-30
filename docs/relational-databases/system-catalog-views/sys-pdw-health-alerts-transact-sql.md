@@ -10,15 +10,15 @@ ms.assetid: 49c01e5f-ee47-41a0-871d-35a759f50851
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2e3ab735a19342e1ecc1a941a185832edae61262
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: f28f48d8530111e2de12bbb6f075b69147ad1cff
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627449"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396033"
 ---
 # <a name="syspdw_health_alerts-transact-sql"></a>sys. pdw_health_alerts （Transact-sql）
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   存储系统上可能发生的不同警报的属性;这是一个用于警报的目录表。  
   
@@ -29,11 +29,11 @@ ms.locfileid: "84627449"
 |alert_name|**nvarchar(255)**|警报的名称。|NOT NULL|  
 |state|**nvarchar(32)**|警报的状态。|NOT NULL<br /><br /> 可能的值：<br /><br /> 营业<br /><br /> 'NonOperational'<br /><br /> 降级<br /><br /> 因|  
 |severity|**nvarchar(32)**|警报的严重性。|NOT NULL<br /><br /> 可能的值：<br /><br /> 条<br /><br /> 出现<br /><br /> 条|  
-|类型|**nvarchar(32)**|警报的类型。|NOT NULL<br /><br /> 可能的值：<br /><br /> StatusChange-设备状态已更改。<br /><br /> 阈值-值超出了阈值。|  
+|type|**nvarchar(32)**|警报类型。|NOT NULL<br /><br /> 可能的值：<br /><br /> StatusChange-设备状态已更改。<br /><br /> 阈值-值超出了阈值。|  
 |description|**nvarchar(4000)**|警报的说明。|NOT NULL|  
 |condition|**nvarchar(255)**|Type = 阈值时使用。 定义如何计算警报阈值。|Null|  
-|状态|**nvarchar(32)**|警报状态|Null|  
-|condition_value|**bit**|指示是否允许在系统操作过程中出现警报。|Null<br /><br /> 可能值<br /><br /> 0-不生成警报。<br /><br /> 1-生成警报。|  
+|status|**nvarchar(32)**|警报状态|Null|  
+|condition_value|**bit**|指示是否允许在系统操作过程中出现警报。|Null<br /><br /> 可能的值<br /><br /> 0-不生成警报。<br /><br /> 1-生成警报。|  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL 数据仓库和并行数据仓库目录视图](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  

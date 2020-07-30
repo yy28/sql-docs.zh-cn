@@ -10,12 +10,12 @@ ms.assetid: c1f3b3f0-0f3e-4e07-b745-2fbdde85c67e
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: f6a2bb7e10e487d65c0fa8dfd406a30f9acd557a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1b78f6ccae739b6fe70fc813959daa44adca7c22
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68265528"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394872"
 ---
 # <a name="command-line-options-in-the-ssma-console-accesstosql"></a>SSMA 控制台中的命令行选项（AccessToSQL）
 Microsoft 为你提供了一组强大的命令行选项来执行和控制 SSMA 活动。 后续部分提供了更多详细信息。  
@@ -25,7 +25,7 @@ Microsoft 为你提供了一组强大的命令行选项来执行和控制 SSMA �
   
 出于本部分的目的，术语 "option" 也称为 "switch"。  
   
-选项不区分大小写，并且可以以 "**-**" 或 "**/**" 字符开头。  
+选项不区分大小写，并且可以以 " **-** " 或 " **/** " 字符开头。  
   
 如果指定了选项，则必须指定相应的选项参数。  
   
@@ -117,16 +117,12 @@ Xmloutput 提供了两个选项，即：
   
 `"C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml"  -e c:\SsmaProjects\CommonEnvironment`  
   
-||  
-|-|  
-||  
-  
 ### <a name="secure-password-option--psecurepassword"></a>安全密码选项：-p/securepassword  
 此选项指示服务器连接的加密密码。 它与所有其他选项的不同之处在于，它不会执行任何与迁移相关的活动中的任何脚本或帮助，但有助于管理迁移项目中使用的服务器连接的密码加密。  
   
 不能输入任何其他选项或密码作为命令行参数。 否则，会导致错误。 有关详细信息，请参阅[管理密码](managing-passwords-accesstosql.md)部分。  
   
-支持以下子选项`-p/securepassword`：  
+支持以下子选项 `-p/securepassword` ：  
   
 -   若要为指定的服务器 ID 或服务器连接文件中定义的所有服务器 Id 添加密码或更新现有密码，请执行以下操作：  
   

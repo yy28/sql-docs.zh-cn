@@ -11,12 +11,12 @@ ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2984f165c686226337af7edfb94e4c4216eb5eab
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6e853d79f42fd8f8ca87b4ab4a82dd6f24635e93
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899667"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395032"
 ---
 # <a name="install-sql-server-with-sysprep"></a>使用 SysPrep 安装 SQL Server
 
@@ -102,7 +102,7 @@ ms.locfileid: "85899667"
   
 9. 在 **“功能选择”** 页上，选择要安装的组件：  
   
-    |||  
+    |安装|组件|  
     |-|-|  
     |[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SysPrep|[!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication<br /><br /> 全文功能<br /><br /> 数据库引擎服务<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式下的<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]<br /><br /> 可再发行的功能<br /><br /> 共享功能|  
   

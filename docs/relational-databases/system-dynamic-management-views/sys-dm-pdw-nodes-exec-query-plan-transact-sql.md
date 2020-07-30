@@ -13,15 +13,15 @@ ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 96b499ea5bc38d2a4cf9c380116108009ea46086
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6a11571ab7e4de54dbae73ae1f1252c88c2e2dca
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73145632"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395928"
 ---
 # <a name="syspdw_nodes_dm_exec_query_plan-transact-sql"></a>sys. pdw_nodes_dm_exec_query_plan （Transact-sql）
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 以 XML 格式返回计划句柄指定的批查询的显示计划。 计划句柄指定的计划可以处于缓存或正在执行状态。  
 
@@ -29,7 +29,7 @@ ms.locfileid: "73145632"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**pdw_node_id**|**int**|与节点关联的唯一数字 ID。| 
+|pdw_node_id|**int**|与节点关联的唯一数字 ID。| 
 |**dbid**|**smallint**|在编译对应于此计划的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句时有效的上下文数据库的 ID。 对于计划外和预定义 SQL 语句，是编译语句的数据库的 ID。<br /><br /> 此列可为空值。|  
 |**objectid**|**int**|此查询计划的对象（如存储过程或用户定义函数）的 ID。 对于即席批处理和已准备好的批处理，此列为 **null**。<br /><br /> 此列可为空值。|  
 |**数字**|**smallint**|为存储过程编号的整数。 对于即席批处理和已准备好的批处理，此列为 **null**。<br /><br /> 此列可为空值。| 
@@ -40,7 +40,7 @@ ms.locfileid: "73145632"
 [Dm_exec_query_plan](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql?view=sql-server-ver15)应用相同的备注。  
   
 ## <a name="permissions"></a>权限  
- 要求**sysadmin**对服务器具有 sysadmin `VIEW SERVER STATE`服务器角色或权限。  
+ 要求对服务器具有**sysadmin**服务器角色或 `VIEW SERVER STATE` 权限。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL 数据仓库和并行数据仓库动态管理视图 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  

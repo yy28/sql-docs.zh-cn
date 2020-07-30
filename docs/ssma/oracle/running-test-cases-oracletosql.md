@@ -10,15 +10,15 @@ ms.assetid: fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: 79d3905c130e37c973a79a40369f97ae8f30ac5b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7905c76803bf637e581af934f473b070d44a6b09
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266550"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394858"
 ---
 # <a name="running-test-cases-oracletosql"></a>运行测试用例 (OracleToSQL)
-当 SSMA 测试人员运行测试用例时，它将执行选择用于测试的对象，并创建有关验证结果的报表。 如果两个平台上的结果相同，则测试已成功。 Oracle 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之间对象的对应关系根据当前 SSMA 项目的架构映射设置来确定。  
+当 SSMA 测试人员运行测试用例时，它将执行选择用于测试的对象，并创建有关验证结果的报表。 如果两个平台上的结果相同，则测试已成功。 Oracle 和之间对象的对应关系 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 根据当前 SSMA 项目的架构映射设置来确定。  
   
 成功测试的必需要求是所有 Oracle 对象都转换并加载到目标数据库。 此外，还应迁移表数据，以便同步两个平台上的表的内容。  
   
@@ -41,9 +41,8 @@ SSMA 测试人员检查测试开始之前是否满足所有先决条件。 如�
   
 假定验证的表名为 USER_TABLE。 对于此类表，将在 Oracle 中创建以下辅助对象。  
   
-||||  
-|-|-|-|  
 |名称|类型|说明|  
+|-|-|-|  
 |USER_TABLE $ .Trg|触发器|触发审核已验证表中的更改。|  
 |USER_TABLE $ AUD|表|其中保存已删除和覆盖的行的表。|  
 |USER_TABLE $ AUDID|表|其中保存新行和更改行的表。|  
@@ -52,18 +51,16 @@ SSMA 测试人员检查测试开始之前是否满足所有先决条件。 如�
 |USER_TABLE $ NEW_ID|view|已插入和已更改行的标识。|  
 |USER_TABLE $ OLD|view|简化的已删除和覆盖的行的表示形式。|  
   
-以下对象是在的已验证表的架构中创建[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的。  
+以下对象是在的已验证表的架构中创建的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
-||||  
-|-|-|-|  
 |名称|类型|说明|  
+|-|-|-|  
 |USER_TABLE $ .Trg|触发器|触发审核已验证表中的更改。|  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在 ssmatesterdb 数据库的中创建了以下对象。  
+在 ssmatesterdb 数据库的中创建了以下对象 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
-||||  
-|-|-|-|  
 |名称|类型|说明|  
+|-|-|-|  
 |USER_TABLE $ Aud|表|其中保存已删除和覆盖的行的表。|  
 |USER_TABLE $ AudID|表|其中保存新行和更改行的表。|  
 |USER_TABLE|view|简化表修改的表示形式。|  
