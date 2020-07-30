@@ -13,11 +13,12 @@ ms.assetid: 7ac098db-9147-4883-8da9-a58ab24a0d31
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 02dacc3323d331c2442e12518146681bdc45cb23
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 298e16b814251cf0068436cb5c1a6331aef8c1b4
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004376"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332410"
 ---
 # <a name="datetime-data-type-conversions-from-c-to-sql"></a>由 C 到 SQL 的 datetime 数类型转换
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -26,23 +27,22 @@ ms.locfileid: "86004376"
   
  下表中介绍的转换适用于在客户端上所进行的转换。 如果客户端指定的参数的秒的小数部分精度不同于服务器上定义的精度，则客户端转换可能会成功，但在调用**SQLExecute**或**SQLExecuteDirect**时，服务器将返回错误。 特别是，ODBC 将秒的小数部分的任何截断视为错误，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 行为是舍入; 例如，当从**datetime2 （6）** 到**datetime2 （2）** 时，将发生舍入。 Datetime 列值舍入为 1/300 秒，服务器将 smalldatetime 列的秒数设置为零。  
   
-|||||||||  
-|-|-|-|-|-|-|-|-|  
-||SQL_TYPE_DATE|SQL_TYPE_TIME|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_SS_TIMSTAMPOFFSET|SQL_CHAR|SQL_WCHAR|  
-|SQL_C_DATE|1|-|-|1,6|1,5,6|1,13|1,13|  
-|SQL_C_TIME|-|1|1|1,7|1、5、7|1,13|1,13|  
-|SQL_C_SS_TIME2|-|1,3|1,10|1,7|1、5、7|1,13|1,13|  
-|SQL_C_BINARY(SQL_SS_TIME2_STRUCT)|空值|空值|1,10,11|空值|空值|空值|空值|  
-|SQL_C_TYPE_TIMESTAMP|1,2|1,3,4|1,4,10|1,10|1,5,10|1,13|1,13|  
-|SQL_C_SS_TIMESTAMPOFFSET|1,2,8|1,3,4,8|1,4,8,10|1,8,10|1,10|1,13|1,13|  
-|SQL_C_BINARY(SQL_SS_TIMESTAMPOFFSET_STRUCT)|空值|空值|空值|空值|1,10,11|空值|空值|  
-|SQL_C_CHAR/SQL_WCHAR (date)|9|9|9|9,6|9,5,6|空值|空值|  
-|SQL_C_CHAR/SQL_WCHAR (time2)|9|9，3|9,10|9,7,10|9,5,7,10|空值|空值|  
-|SQL_C_CHAR/SQL_WCHAR (datetime)|9,2|9，3，4|9,4,10|9,10|9,5,10|空值|空值|  
-|SQL_C_CHAR/SQL_WCHAR (datetimeoffset)|9,2,8|9、3、4、8|9,4,8,10|9,8,10|9,10|空值|空值|  
-|SQL_C_BINARY(SQL_DATE_STRUCT)|1,11|空值|空值|空值|空值|空值|空值|  
-|SQL_C_BINARY(SQL_TIME_STRUCT)|空值|空值|空值|空值|空值|空值|空值|  
-|SQL_C_BINARY(SQL_TIMESTAMP_STRUCT)|空值|空值|空值|空值|空值|空值|空值|  
+|   | SQL_TYPE_DATE | SQL_TYPE_TIME | SQL_SS_TIME2 | SQL_TYPE_TIMESTAMP | SQL_SS_TIMSTAMPOFFSET | SQL_CHAR | SQL_WCHAR |
+| - | ------------- | ------------- | ------------ | ------------------ | --------------------- | -------- | --------- |
+| **SQL_C_DATE** |1|-|-|1,6|1,5,6|1,13|1,13|  
+| **SQL_C_TIME** |-|1|1|1,7|1、5、7|1,13|1,13|  
+| **SQL_C_SS_TIME2** |-|1,3|1,10|1,7|1、5、7|1,13|1,13|  
+| **SQL_C_BINARY(SQL_SS_TIME2_STRUCT)** |空值|空值|1,10,11|空值|空值|空值|空值|  
+| **SQL_C_TYPE_TIMESTAMP** |1,2|1,3,4|1,4,10|1,10|1,5,10|1,13|1,13|  
+| **SQL_C_SS_TIMESTAMPOFFSET** |1,2,8|1,3,4,8|1,4,8,10|1,8,10|1,10|1,13|1,13|  
+| **SQL_C_BINARY(SQL_SS_TIMESTAMPOFFSET_STRUCT)** |空值|空值|空值|空值|1,10,11|空值|空值|  
+| **SQL_C_CHAR/SQL_WCHAR (date)** |9|9|9|9,6|9,5,6|空值|空值|  
+| **SQL_C_CHAR/SQL_WCHAR (time2)** |9|9，3|9,10|9,7,10|9,5,7,10|空值|空值|  
+| **SQL_C_CHAR/SQL_WCHAR (datetime)** |9,2|9，3，4|9,4,10|9,10|9,5,10|空值|空值|  
+| **SQL_C_CHAR/SQL_WCHAR (datetimeoffset)** |9,2,8|9、3、4、8|9,4,8,10|9,8,10|9,10|空值|空值|  
+| **SQL_C_BINARY(SQL_DATE_STRUCT)** |1,11|空值|空值|空值|空值|空值|空值|  
+| **SQL_C_BINARY(SQL_TIME_STRUCT)** |空值|空值|空值|空值|空值|空值|空值|  
+| **SQL_C_BINARY(SQL_TIMESTAMP_STRUCT)** |空值|空值|空值|空值|空值|空值|空值|  
   
 ## <a name="key-to-symbols"></a>符号含义  
   
@@ -78,10 +78,10 @@ ms.locfileid: "86004376"
   
      秒的小数部分位数（小数位数）根据下表的目标列的大小确定：  
   
-    ||||  
-    |-|-|-|  
-    |类型|暗指的小数位数<br /><br /> 0|暗指的小数位数<br /><br /> 1. 9|  
-    |SQL_C_TYPE_TIMESTAMP|19|21..29|  
+    |   | 暗指的小数位数 | 暗指的小数位数 |
+    | - | ------------- | ------------- |
+    | 类型 | 0 | 1. 9 |  
+    |**SQL_C_TYPE_TIMESTAMP** |19|21..29|  
   
      但是，对于 SQL_C_TYPE_TIMESTAMP，如果秒的小数部分可以在不丢失数据的情况下由三位数表示，并且列大小为 23 或更大，则生成确切的三位数的秒小数部分。 此行为确保使用早期 ODBC 驱动程序开发的应用程序的向后兼容性。  
   

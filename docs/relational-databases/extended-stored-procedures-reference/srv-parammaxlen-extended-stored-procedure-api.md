@@ -1,5 +1,6 @@
 ---
 title: srv_parammaxlen（扩展存储过程 API）| Microsoft Docs
+description: 了解 srv_parammaxlen 如何返回远程存储过程调用参数的最大数据长度。
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 49bfc29d-f76a-4963-b0e6-b8532dfda850
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 936dddfc9faecc48f61ac61e390aca7b82533314
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d0a89b5bf724bb3e1fc8afe335c5458a4ee09c4d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756701"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248401"
 ---
 # <a name="srv_parammaxlen-extended-stored-procedure-api"></a>srv_parammaxlen（扩展存储过程 API）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +55,7 @@ n
  *n*  
  指示参数的编号。 第一个参数是 1。  
   
-## <a name="returns"></a>返回  
+## <a name="returns"></a>返回值  
  参数数据的最大长度（以字节为单位）。 如果没有第 n 个参数或没有任何远程存储过程，则返回 -1**。  
   
  如果参数为以下数据类型之一，则此函数返回以下值 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  

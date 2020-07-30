@@ -1,5 +1,5 @@
 ---
-title: 执行命令 | Microsoft Docs
+title: 执行命令（Native Client OLE DB 提供程序） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -17,13 +17,14 @@ ms.assetid: bb0b3cbf-fe45-46ba-b2ec-c5a39e3c7081
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ba04931d5bfddd3e61df2a272d085dd6337d9a85
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 4bb82c242e5bf04d0ceb233814bb2f9eeef9281f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005272"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247637"
 ---
-# <a name="executing-a-command"></a>执行命令
+# <a name="executing-a-sql-server-native-client-command"></a>执行 SQL Server Native Client 命令
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   与数据源建立连接后，使用者调用 IDBCreateSession::CreateSession**** 方法来创建会话。 该会话充当命令、行集或事务工厂。  

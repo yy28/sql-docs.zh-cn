@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 65145ce8f77c352fb24a2a206d99828298b6a60c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a08f7c896b48f6cb76c9805d3bea9910a8f5bda8
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747260"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242857"
 ---
 # <a name="ado-methods"></a>ADO 方法
 
-|||  
+|方法|描述|  
 |-|-|  
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|为可更新的**记录集**对象创建新记录。|  
-|[附加](../../../ado/reference/ado-api/append-method-ado.md)|将对象追加到集合。 如果集合是**字段**，则可以在将其追加到集合之前创建新的**字段**对象。|  
+|[Append](../../../ado/reference/ado-api/append-method-ado.md)|将对象追加到集合。 如果集合是**字段**，则可以在将其追加到集合之前创建新的**字段**对象。|  
 |[AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)|将数据追加到大文本或二进制数据**字段**，或追加到**参数**对象。|  
 |[BeginTrans、CommitTrans 和 RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)|管理**连接**对象中的事务处理，如下所示：<br /><br /> **BeginTrans** -开始新的事务。<br /><br /> **CommitTrans** -保存所有更改并结束当前事务。 它还可能会启动新的事务。<br /><br /> **RollbackTrans** -取消所有更改并结束当前事务。 它还可能会启动新的事务。|  
 |[取消](../../../ado/reference/ado-api/cancel-method-ado.md)|取消执行挂起的异步方法调用。|  
@@ -45,7 +45,7 @@ ms.locfileid: "82747260"
 |[Execute （ADO 命令）](../../../ado/reference/ado-api/execute-method-ado-command.md)|执行在**CommandText**属性中指定的查询、SQL 语句或存储过程。|  
 |[Execute （ADO 连接）](../../../ado/reference/ado-api/execute-method-ado-connection.md)|执行指定的查询、SQL 语句、存储过程或特定于提供程序的文本。|  
 |[查找](../../../ado/reference/ado-api/find-method-ado.md)|在**记录集中**搜索满足指定条件的行。|  
-|[平](../../../ado/reference/ado-api/flush-method-ado.md)|将 ADO 缓冲区中的**流**的内容强制转换为与**流**关联的基础对象。|  
+|[刷新](../../../ado/reference/ado-api/flush-method-ado.md)|将 ADO 缓冲区中的**流**的内容强制转换为与**流**关联的基础对象。|  
 |[get_OLEDBCommand 方法](../../../ado/reference/ado-api/get-oledbcommand-method.md)|返回基础 OLEDB 命令，首先将在 ADO 命令上设置的所有参数信息传播到 OLEDB 命令。|  
 |[GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md)|返回一个**记录集**，其行表示此**记录**所表示的目录中的文件和子目录。|  
 |[GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md)|返回大文本或二进制数据**字段**对象的全部或部分内容。|  
@@ -65,7 +65,7 @@ ms.locfileid: "82747260"
 |[put_OLEDBCommand 方法](../../../ado/reference/ado-api/put-oledbcommand-method.md)|此方法不执行任何操作-始终返回 S_OK。|  
 |[读取](../../../ado/reference/ado-api/read-method.md)|从**流**对象中读取指定数目的字节。|  
 |[ReadText](../../../ado/reference/ado-api/readtext-method.md)|从文本**流**对象中读取指定数目的字符。|  
-|[全部](../../../ado/reference/ado-api/refresh-method-ado.md)|更新集合中的对象，以反映提供程序提供的和特定于提供程序的对象。|  
+|[“刷新”](../../../ado/reference/ado-api/refresh-method-ado.md)|更新集合中的对象，以反映提供程序提供的和特定于提供程序的对象。|  
 |[重新](../../../ado/reference/ado-api/requery-method.md)|通过重新执行对象所基于的查询来更新**记录集**对象中的数据。|  
 |[重新同步](../../../ado/reference/ado-api/resync-method.md)|刷新当前**记录集**对象中的数据，或从基础数据库刷新**记录**对象的**字段**集合中的数据。|  
 |[保存](../../../ado/reference/ado-api/save-method.md)|将**记录集**保存到文件或**流**对象中。|  

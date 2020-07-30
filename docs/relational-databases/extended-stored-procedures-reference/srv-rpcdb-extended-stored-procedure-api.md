@@ -1,5 +1,6 @@
 ---
 title: srv_rpcdb（扩展存储过程 API）| Microsoft Docs
+description: 了解扩展存储过程 API 中 srv_rpcdb 如何返回当前远程存储过程的数据库名称组件。
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d52bfd22-7a7c-4ab0-af65-df96ff359e6f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 38c989a2108a8a877159e9dd5b5c6cffd52ce885
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0dbc2b25db5eedb4e48db2e4053952f5c52517c9
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755900"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248278"
 ---
 # <a name="srv_rpcdb-extended-stored-procedure-api"></a>srv_rpcdb（扩展存储过程 API）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +50,7 @@ SRV_PROC * srvproc,int *len );
  *长度*  
  指向接收数据库名称长度的 int 变量的指针****。 如果 len 为 NULL，则不返回数据库名称的长度**。  
   
-## <a name="returns"></a>返回  
+## <a name="returns"></a>返回值  
  一个 DBCHAR 指针，指向当前远程存储过程的数据库名称部分的以 NULL 值结束的字符串。 如果当前无远程存储过程，则返回 NULL，且 len 参数设置为 -1**。  
   
 ## <a name="remarks"></a>备注  

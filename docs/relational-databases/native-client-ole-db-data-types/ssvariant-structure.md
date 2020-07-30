@@ -1,5 +1,5 @@
 ---
-title: SSVARIANT 结构 | Microsoft Docs
+title: SSVARIANT 结构（Native Client OLE DB 提供程序）
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,20 +15,21 @@ ms.assetid: d13c6aa6-bd49-467a-9093-495df8f1e2d9
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5d87c4a4537683d9dbb9817a0a3c022f23f2b846
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ddd98b45cf44f840dfc236f8a0a1b5d809db7288
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998200"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87331929"
 ---
-# <a name="ssvariant-structure"></a>SSVARIANT 结构
+# <a name="ssvariant-structure-in-sql-server-native-client"></a>SQL Server Native Client 中的 SSVARIANT 结构
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   在 sqlncli.msi 中定义的**SSVARIANT**结构与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLEDB 访问接口中的 DBTYPE_SQLVARIANT 值相对应。  
   
  SSVARIANT**** 是一个分类化的联合。 根据 vt 成员的值，使用者可以确定要读取的成员。 vt 值与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型相对应。 因此，SSVARIANT 结构可以具有任何 SQL Server 类型****。 有关标准 OLE DB 类型的数据结构的详细信息，请参阅[类型指示器](https://go.microsoft.com/fwlink/?LinkId=122171)。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  如果 DataTypeCompat==80，几个 SSVARIANT 子类型都将成为字符串****。 例如，以下 vt 值将在 SSVARIANT 中显示为 VT_SS_WVARSTRING****：  
   
 -   VT_SS_DATETIMEOFFSET  

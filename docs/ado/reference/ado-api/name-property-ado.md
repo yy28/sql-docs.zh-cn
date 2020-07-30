@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cfd0e29c-8310-44ab-85c3-5761184b865d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 38846bcb832df7cc535d35d8f07fb636f2db37f7
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 368def89951e7d0eacca9b999b647abd949c3b10
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762418"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243228"
 ---
 # <a name="name-property-ado"></a>Name 属性 (ADO)
 指示对象的名称。  
@@ -40,13 +40,19 @@ ms.locfileid: "82762418"
   
  可以按序号引用检索对象的**Name**属性，之后可以按名称直接引用对象。 例如，如果 `rstMain.Properties(20).Name` 生成 `Updatability` ，则可以随后将此属性称为 `rstMain.Properties("Updatability")` 。  
   
-## <a name="applies-to"></a>应用于  
-  
-|||  
-|-|-|  
-|[命令对象 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)|[字段对象](../../../ado/reference/ado-api/field-object.md)|  
-|[参数对象](../../../ado/reference/ado-api/parameter-object.md)|[属性对象 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
-  
+## <a name="applies-to"></a>适用于  
+
+:::row:::
+    :::column:::
+        [命令对象 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
+        [字段对象](../../../ado/reference/ado-api/field-object.md)  
+    :::column-end:::
+    :::column:::
+        [参数对象](../../../ado/reference/ado-api/parameter-object.md)  
+        [属性对象 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>另请参阅  
  [特性和名称属性示例（VB）](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   
  [特性和名称属性示例（VC + +）](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)   

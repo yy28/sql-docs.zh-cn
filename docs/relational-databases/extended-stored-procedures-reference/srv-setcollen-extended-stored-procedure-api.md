@@ -1,5 +1,6 @@
 ---
 title: srv_setcollen（扩展存储过程 API）| Microsoft Docs
+description: 了解 srv_setcollen 如何以字节为单位指定可变长度列的当前数据长度或允许空值的列。
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3c60f1c3-4562-463a-a259-12df172788bd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5b1947a1fe9f08b8eb14a2285ee114b002f94260
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e87c0728bf68fb7cae076d25cbda0ac43a7ed3ef
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760867"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332456"
 ---
 # <a name="srv_setcollen-extended-stored-procedure-api"></a>srv_setcollen（扩展存储过程 API）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,7 +61,7 @@ len
  *长度*  
  指示列数据的长度（以字节为单位）。 长度为 0 表示列数据值为 Null。  
   
-## <a name="returns"></a>返回  
+## <a name="returns"></a>返回值  
  SUCCEED 或 FAIL。  
   
 ## <a name="remarks"></a>备注  

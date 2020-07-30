@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: d7b06d72-f792-4328-93a2-5006b9e2c581
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 72fa5fd287b285ca7f917c5969b0e27e11837d25
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c727f73abed5fe9a30ebf191e2c6da60f8baa13a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749301"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242887"
 ---
 # <a name="ado-dynamic-properties"></a>ADO 动态属性
 可以将动态属性添加到[连接](../../../ado/reference/ado-api/connection-object-ado.md)、[命令](../../../ado/reference/ado-api/command-object-ado.md)或[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象的[properties](../../../ado/reference/ado-api/properties-collection-ado.md)集合。 这些属性的来源是数据提供程序，例如[用于 SQL Server 的 OLE DB 提供程序](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)或服务提供程序（如[用于 OLE DB 的 Microsoft 游标服务](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)）。 有关特定动态属性的详细信息，请参阅相应的数据提供程序或服务提供程序文档。  
@@ -26,7 +26,7 @@ ms.locfileid: "82749301"
   
  以下动态属性特别有趣，还在前面提到的源中进行了介绍。 以下列表的 ADO 帮助主题中记录了 ADO 的特殊功能。  
   
-|||  
+|动态属性|描述|  
 |-|-|  
 |[优化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|指定是否应在此字段上创建索引。|  
 |[提示](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)|指定 OLE DB 提供程序是否应提示用户提供初始化信息。|  

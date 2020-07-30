@@ -9,20 +9,20 @@ ms.topic: reference
 ms.assetid: ff67bda8-7e5c-4b06-8d7b-9985b6059a98
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 8b21d9137483b7d7b76c6e91f0fd44363bf58f7c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cdb7c78a8301ec11ddd54329c4c68943ea66afd2
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85641797"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245188"
 ---
 # <a name="localdb_error_insufficient_buffer"></a>LOCALDB_ERROR_INSUFFICIENT_BUFFER
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="details"></a>详细信息  
   
-|||  
-|-|-|  
+| Attribute | 值 |
+| --------- | ----- |
 |产品名称|SQL Server|  
 |事件 ID|276|  
 |事件源|SQL Server 本地数据库运行时 12.0|  

@@ -1,5 +1,6 @@
 ---
 title: srv_message_handler（扩展存储过程 API）
+description: 了解 srv_message_handler 以及它如何调用已安装的扩展存储过程 API 消息处理程序。
 ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 41bcd057-436f-4fa8-8293-fc8057a30877
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5841cdb3f57c0c4b6e33737d8c08b3ff0437e800
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2edc96558c00b43dfe9d9b346ad75c32b42af1cd
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756731"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332352"
 ---
 # <a name="srv_message_handler-extended-stored-procedure-api"></a>srv_message_handler（扩展存储过程 API）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -78,11 +79,11 @@ oserrtextlen
  severity   
  错误的标准 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 严重性值。 该数字必须介于 0 和 24 之间。  
   
- State   
+ State  
  错误的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 状态值。  
   
  oserrnum**  
- 操作系统错误编号。 忽略此参数。  
+ 操作系统错误编号。 此参数忽略。  
   
  errtext**  
  扩展存储过程错误 errornum 的说明**。  
@@ -91,12 +92,12 @@ oserrtextlen
  扩展存储过程错误字符串 errtext 的长度**。  
   
  oserrtext**  
- 操作系统错误 oserrnum 的说明**。 忽略此参数。  
+ 操作系统错误 oserrnum 的说明**。 此参数忽略。  
   
  oserrtextlen**  
  操作系统错误字符串 oserrtext 的长度**。  
   
-## <a name="returns"></a>返回  
+## <a name="returns"></a>返回值  
  SUCCEED 或 FAIL。  
   
 ## <a name="remarks"></a>备注  

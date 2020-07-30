@@ -1,5 +1,6 @@
 ---
 title: srv_pfieldex（扩展存储过程 API）| Microsoft Docs
+description: 了解扩展存储过程 API 中 srv_pfieldex 如何返回指向包含所请求 SRV_PROC 字段的数据的指针。
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d4e9a34b-b3a3-434f-8556-768bd20d145a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d2294e12af7e22a70ab064a2c3d1163007631eef
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ee0bf315964d5710d657abf2288a2b9a79b3c00b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755911"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248284"
 ---
 # <a name="srv_pfieldex-extended-stored-procedure-api"></a>srv_pfieldex（扩展存储过程 API）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +63,7 @@ len
  *长度*  
  指向一个 int 变量的指针，该变量包含所返回的 field 值的长度（以字节为单位）******。 如果 len 为 NULL，则不返回长度**。 返回 NULL 时，*len 设置为 0**。  
   
-## <a name="returns"></a>返回  
+## <a name="returns"></a>返回值  
  一个指针，指向其类型取决于 field 的数据**。 len 为 NULL 或 srvproc 为 NULL 时，则返回 NULL****。 如果 field 未知，则返回 NULL**。 返回 NULL 时，*len 设置为 0**。  
   
 > [!IMPORTANT]  

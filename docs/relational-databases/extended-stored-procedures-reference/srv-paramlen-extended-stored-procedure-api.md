@@ -1,5 +1,6 @@
 ---
 title: srv_paramlen（扩展存储过程 API）| Microsoft Docs
+description: 了解扩展存储过程 API 中 srv_paramlen 如何返回远程存储过程调用参数的数据长度。
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d1fe92ff-cad6-4396-8216-125e5642e81e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 55d9c6bf2e64509872faf02fa653499a28efb300
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e76d1f4a68d0c15d1f0a0b33627d18ade97669cf
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756724"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248406"
 ---
 # <a name="srv_paramlen-extended-stored-procedure-api"></a>srv_paramlen（扩展存储过程 API）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +55,7 @@ n
  *n*  
  指示参数的编号。 第一个参数是 1。  
   
-## <a name="returns"></a>返回  
+## <a name="returns"></a>返回值  
  参数数据的实际长度（字节）。 如果没有第 n 个参数或没有远程存储过程，则返回 -1**。 如果第 n 个参数为 NULL，则返回 0**。  
   
  如果参数为以下 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 系统数据类型之一，则此函数返回以下值 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。  

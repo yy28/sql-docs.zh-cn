@@ -1,5 +1,6 @@
 ---
 title: srv_setcoldata（扩展存储过程 API）| Microsoft Docs
+description: 在扩展存储过程 API 中了解 srv_setcoldata 指定列数据的当前地址。
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2e19205a-25ca-4d4a-916b-d591cf2c892b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 70612b61740c0467de31c01bb5383012ea953aea
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3c9d151ca52e52d550d7eba42cb6e53af1d8417e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755827"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248210"
 ---
 # <a name="srv_setcoldata-extended-stored-procedure-api"></a>srv_setcoldata（扩展存储过程 API）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,10 +58,10 @@ data
  *column*  
  指示指定其地址的列的编号。 列的编号从 1 开始。  
   
- *数据*  
+ *data*  
  指向列的数据的指针。 在将列数据替换为对 srv_setcoldata 的其他调用或调用 srv_senddone 之前，不能释放为 data 分配的内存**********。  
   
-## <a name="returns"></a>返回  
+## <a name="returns"></a>返回值  
  SUCCEED 或 FAIL。  
   
 ## <a name="remarks"></a>备注  

@@ -1,5 +1,5 @@
 ---
-title: ISSAsynchStatus::WaitForAsynchCompletion (OLE DB) | Microsoft Docs
+title: ISSAsynchStatus：： WaitForAsynchCompletion （Native Client OLE DB 提供程序） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,13 +16,14 @@ ms.assetid: 9f65e9e7-eb93-47a1-bc42-acd4649fbd0e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c8f806124958f1b162e2b8f369345459be1ce1fd
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f5c3af0d700ff8ad4d06af98a4b0387bd9e0f850
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005346"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246891"
 ---
-# <a name="issasynchstatuswaitforasynchcompletion-ole-db"></a>ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)
+# <a name="issasynchstatuswaitforasynchcompletion-in-sql-server-native-client-ole-db"></a>SQL Server Native Client （OLE DB）中的 ISSAsynchStatus：： WaitForAsynchCompletion
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   一直等待，直到异步执行的操作完成或发生超时。  
@@ -55,7 +56,7 @@ HRESULT WaitForAsynchCompletion(
 > [!NOTE]  
 >  除了上面列出的返回代码值之外，ISSAsynchStatus::WaitForAsynchCompletion 方法还支持由核心 OLEDB ICommand::Execute 和 IDBInitialize::Initialize 方法返回的返回代码值************。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  在经过超时值（毫秒）或完成挂起操作之前，ISSAsynchStatus::WaitForAsynchCompletion 方法将不会返回值****。 **Command**对象具有**CommandTimeout**属性，该属性控制查询在超时之前将运行的秒数。如果将**CommandTimeout**属性与**ISSAsynchStatus：： WaitForAsynchCompletion**方法结合使用，则将忽略该属性。  
   
  对于异步操作，将忽略超时属性。 ISSAsynchStatus::WaitForAsynchCompletion 的超时参数指定在将控制权返回到调用方之前将经过的最大时间量****。 如果此超时值已到期，将返回 DB_S_ASYNCHRONOUS。 超时从不会取消异步操作。 如果应用程序需要取消在超时期限内未完成的异步操作，则它必须等待发生超时，然后，如果返回 DB_S_ASYNCHRONOUS，则显式取消此操作。  

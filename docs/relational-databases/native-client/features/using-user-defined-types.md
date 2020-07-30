@@ -21,14 +21,14 @@ ms.assetid: e15d8169-3517-4323-9c9e-0f5c34aff7df
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4c6b6cf14925b7baace60a7de6c7aeaf3057de46
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ff6c333b587433eafabc73cb3b63559e26c7f4f7
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303192"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243833"
 ---
-# <a name="using-user-defined-types"></a>使用用户定义类型
+# <a name="using-user-defined-types-in-sql-server-native-client"></a>在 SQL Server Native Client 中使用用户定义的类型
 [!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md](../../../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
 
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 介绍了用户定义类型 (UDT)。 UDT 可将对象和自定义数据结构存储在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中，从而扩展了 SQL 类型系统。 UDT 可以包含多种数据类型并且可具有行为，这使它们不同于由单一 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 系统数据类型构成的传统别名数据类型。 使用生成可验证代码的 .NET 公共语言运行时 (CLR) 所支持的任何语言都可以定义 UDT， 这包括 Microsoft Visual c #<sup>®</sup>和 Visual Basic<sup>®</sup> .net。 数据公开为 .NET 类或结构的字段和属性，行为则由类或结构的方法来定义。  
@@ -36,13 +36,13 @@ ms.locfileid: "81303192"
  UDT 可用作表的列定义、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 批处理中的变量，还可用作 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 函数或存储过程的参数。  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB 访问接口  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序支持将 udt 作为二进制类型和元数据信息，这使你可以将 udt 作为对象进行管理。 UDT 列公开为 DBTYPE_UDT，且其元数据通过核心 OLE DB 接口 IColumnRowset 和新增的 [ISSCommandWithParameters](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md) 接口公开****。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序支持将 udt 作为二进制类型和元数据信息，这使你可以将 udt 作为对象进行管理。 UDT 列公开为 DBTYPE_UDT，且其元数据通过核心 OLE DB 接口 IColumnRowset 和新增的 [ISSCommandWithParameters](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md) 接口公开****。  
   
 > [!NOTE]  
 >  IRowsetFind::FindNextRow 方法不适用于 UDT 数据类型****。 如果将 UDT 用作搜索列类型，则返回 DB_E_BADCOMPAREOP。  
   
 ### <a name="data-bindings-and-coercions"></a>数据绑定和强制  
- 下表说明将所列数据类型与某一 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] UDT 一同使用时出现的绑定和强制。 使用 DBTYPE_UDT 的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序公开 UDT 列。 可以通过适当的架构行集获取元数据，这样即可将您自行定义的类型作为对象来管理。  
+ 下表说明将所列数据类型与某一 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] UDT 一同使用时出现的绑定和强制。 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] DBTYPE_UDT 的 Native Client OLE DB 提供程序公开 UDT 列。 可以通过适当的架构行集获取元数据，这样即可将您自行定义的类型作为对象来管理。  
   
 |数据类型|到服务器<br /><br /> **UDT**|到服务器<br /><br /> **non-UDT**|从服务器<br /><br /> **UDT**|从服务器<br /><br /> **non-UDT**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
@@ -53,7 +53,7 @@ ms.locfileid: "81303192"
 |DBTYPE_STR|支持<sup>3,6</sup>|N/A<sup>2</sup>|支持<sup>4,6</sup>|N/A<sup>2</sup>|  
 |DBTYPE_IUNKNOWN|不支持|N/A<sup>2</sup>|不支持|N/A<sup>2</sup>|  
 |DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|支持<sup>6</sup>|N/A<sup>2</sup>|支持<sup>4</sup>|N/A<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|支持<sup>3,6</sup>|N/A<sup>2</sup>|不适用|N/A<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|支持<sup>3,6</sup>|N/A<sup>2</sup>|空值|N/A<sup>2</sup>|  
   
  <sup>1</sup>如果使用 ICommandWithParameters::SetParameterInfo 指定 DBTYPE_UDT 之外的服务器类型，而取值函数类型为 DBTYPE_UDT，则执行该语句时将出错（DB_E_ERRORSOCCURRED；参数状态为 DBSTATUS_E_BADACCESSOR）****。 否则，数据发送到服务器，但服务器会返回错误，指明不存在将 UDT 转换为参数的数据类型的隐式转换。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "81303192"
 #### <a name="the-procedure_parameters-schema-rowset"></a>PROCEDURE_PARAMETERS 架构行集  
  在 PROCEDURE_PARAMETERS 架构行集中添加了以下内容。  
   
-|列名称|类型|说明|  
+|列名称|类型|描述|  
 |-----------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|由三部分组成的名称标识符。|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|由三部分组成的名称标识符。|  
@@ -92,9 +92,9 @@ ms.locfileid: "81303192"
 |SS_UDT_ASSEMBLY_TYPENAME|DBTYPE_WSTR|程序集限定名，其中包括 CLR 引用所需的类型名称和所有程序集标识。|  
   
 #### <a name="the-sql_assemblies-schema-rowset"></a>SQL_ASSEMBLIES 架构行集  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序公开了一种特定于访问接口的新架构行集，用于描述已注册的 udt。 可以将 ASSEMBLY 服务器指定为 DBTYPE_WSTR，但它在行集中不存在。 如果未指定，行集将默认使用当前服务器。 下表中定义了 SQL_ASSEMBLIES 架构行集。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序公开了一种特定于访问接口的新架构行集，用于描述已注册的 udt。 可以将 ASSEMBLY 服务器指定为 DBTYPE_WSTR，但它在行集中不存在。 如果未指定，行集将默认使用当前服务器。 下表中定义了 SQL_ASSEMBLIES 架构行集。  
   
-|列名称|类型|说明|  
+|列名称|类型|描述|  
 |-----------------|----------|-----------------|  
 |ASSEMBLY_CATALOG|DBTYPE_WSTR|包含该类型的程序集的目录名称。|  
 |ASSEMBLY_SCHEMA|DBTYPE_WSTR|包含该类型的程序集的架构名称或所有者名称。 尽管程序集的作用域为数据库而不是架构，但它们仍具有在此所反映的所有者。|  
@@ -106,7 +106,7 @@ ms.locfileid: "81303192"
 #### <a name="the-sql_assemblies_-dependencies-schema-rowset"></a>SQL_ASSEMBLIES_ DEPENDENCIES 架构行集  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序公开了特定于提供程序的架构行集，用于描述指定服务器的程序集依赖项。 ASSEMBLY_SERVER 可由调用方指定为 DBTYPE_WSTR，但在该行集中不存在。 如果未指定，行集将默认使用当前服务器。 SQL_ASSEMBLY_DEPENDENCIES 架构行集在下表中定义。  
   
-|列名称|类型|说明|  
+|列名称|类型|描述|  
 |-----------------|----------|-----------------|  
 |ASSEMBLY_CATALOG|DBTYPE_WSTR|包含该类型的程序集的目录名称。|  
 |ASSEMBLY_SCHEMA|DBTYPE_WSTR|包含该类型的程序集的架构名称或所有者名称。 尽管程序集的作用域为数据库而不是架构，但它们仍具有在此所反映的所有者。|  
@@ -116,7 +116,7 @@ ms.locfileid: "81303192"
 #### <a name="the-sql_user_types-schema-rowset"></a>SQL_USER_TYPES 架构行集  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序公开新的架构行集，SQL_USER_TYPES，用于描述何时添加指定服务器的注册 Udt。 UDT_SERVER 必须由调用方指定为 DBTYPE_WSTR，但它在该行集中不存在。 在下表中定义 SQL_USER_TYPES 架构行集。  
   
-|列名称|类型|说明|  
+|列名称|类型|描述|  
 |-----------------|----------|-----------------|  
 |UDT_CATALOGNAME|DBTYPE_WSTR|对于 UDT 列，此属性是一个字符串，它指定定义 UDT 的目录的名称。|  
 |UDT_SCHEMANAME|DBTYPE_WSTR|对于 UDT 列，此属性是一个字符串，它指定定义 UDT 的架构的名称。|  
@@ -126,7 +126,7 @@ ms.locfileid: "81303192"
 #### <a name="the-columns-schema-rowset"></a>COLUMNS 架构行集  
  COLUMNS 架构行集添加了以下列。  
   
-|列名称|类型|说明|  
+|列名称|类型|描述|  
 |-----------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|对于 UDT 列，此属性是一个字符串，它指定定义 UDT 的目录的名称。|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|对于 UDT 列，此属性是一个字符串，它指定定义 UDT 的架构的名称。|  
@@ -137,9 +137,9 @@ ms.locfileid: "81303192"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 向许多 core OLE DB 属性集添加新值或更改。  
   
 #### <a name="the-dbpropset_sqlserverparameter-property-set"></a>DBPROPSET_SQLSERVERPARAMETER 属性集  
- 为了通过 OLE DB 支持 Udt，Native Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实现了新的 DBPROPSET_SQLSERVERPARAMETER 属性集，该属性集包含以下值。  
+ 为了通过 OLE DB 支持 Udt， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 实现了新的 DBPROPSET_SQLSERVERPARAMETER 属性集，该属性集包含以下值。  
   
-|名称|类型|说明|  
+|名称|类型|描述|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_UDT_CATALOGNAME|DBTYPE_WSTR|由三部分组成的名称标识符。<br /><br /> 对于 UDT 参数，此属性是一个字符串，它指定定义用户定义类型的目录的名称。|  
 |SSPROP_PARAM_UDT_SCHEMANAME|DBTYPE_WSTR|由三部分组成的名称标识符。<br /><br /> 对于 UDT 参数，此属性是一个字符串，它指定定义用户定义类型的架构的名称。|  
@@ -150,7 +150,7 @@ ms.locfileid: "81303192"
 #### <a name="the-dbpropset_sqlservercolumn-property-set"></a>DBPROPSET_SQLSERVERCOLUMN 属性集  
  为了支持在**ITableDefinition**接口中创建表， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 将以下三个新列添加到 DBPROPSET_SQLSERVERCOLUMN 属性集。  
   
-|名称|说明|类型|说明|  
+|名称|描述|类型|描述|  
 |----------|-----------------|----------|-----------------|  
 |SSPROP_COL_UDT_CATALOGNAME|UDT_CATALOGNAME|VT_BSTR|对于 DBTYPE_UDT 类型的列，此属性是一个字符串，它指定定义 UDT 的目录的名称。|  
 |SSPROP_COL_UDT_SCHEMANAME|UDT_SCHEMANAME|VT_BSTR|对于 DBTYPE_UDT 类型的列，此属性是一个字符串，它指定定义 UDT 的架构的名称。|  
@@ -179,9 +179,9 @@ ms.locfileid: "81303192"
 >  ISSCommandWithParameters 接口也利用新的 SSPARAMPROPS 结构****。  
   
 #### <a name="the-icolumnsrowset-interface"></a>IColumnsRowset 接口  
- 除了**ISSCommandWithParameters**接口以外，Native Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]还会向从调用**IColumnsRowset：： GetColumnRowset**方法返回的行集添加新值，包括以下内容。  
+ 除了**ISSCommandWithParameters**接口以外， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 还会向从调用**IColumnsRowset：： GetColumnRowset**方法返回的行集添加新值，包括以下内容。  
   
-|列名|类型|说明|  
+|列名|类型|描述|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_UDT_CATALOGNAME|DBTYPE_WSTR|UDT 目录名称标识符。|  
 |DBCOLUMN_SS_UDT_SCHEMANAME|DBTYPE_WSTR|UDT 架构名称标识符。|  
@@ -191,7 +191,7 @@ ms.locfileid: "81303192"
  通过查看上面指定的添加的 UDT 元数据，可以在 DBCOLUMN_TYPE 设置为 DBTYPE_UDT 时将服务器 UDT 列与其他二进制类型区分开。 如果该数据不完整，服务器类型为 UDT。 对于非 UDT 服务器类型，这些列的返回结果始终为 NULL。  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>SQL Server Native Client ODBC 驱动程序  
- 在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序中进行了多项更改，以支持 udt。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序将[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] UDT 映射到 SQL_SS_UDT 驱动程序特定的 SQL 数据类型标识符。 UDT 列呈现为 SQL_SS_UDT。 如果通过使用 UDT 的**ToString**或**ToXMLString**方法或通过**CAST/CONVERT**函数，在 SQL 语句中将 udt 列显式映射到另一种类型，则结果集中列的类型将反映该列转换为的实际类型。  
+ 在 Native Client ODBC 驱动程序中进行了多项更改 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，以支持 udt。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驱动程序将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] UDT 映射到 SQL_SS_UDT 驱动程序特定的 SQL 数据类型标识符。 UDT 列呈现为 SQL_SS_UDT。 如果通过使用 UDT 的**ToString**或**ToXMLString**方法或通过**CAST/CONVERT**函数，在 SQL 语句中将 udt 列显式映射到另一种类型，则结果集中列的类型将反映该列转换为的实际类型。  
   
 ### <a name="sqlcolattribute-sqldescribeparam-sqlgetdescfield"></a>SQLColAttribute、SQLDescribeParam、SQLGetDescField  
  添加了四个新的驱动程序特定的描述符字段，以提供要通过[SQLColAttribute](../../../relational-databases/native-client-odbc-api/sqlcolattribute.md)、 [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md)和[SQLGetDescField](../../../relational-databases/native-client-odbc-api/sqlgetdescfield.md)函数检索的结果集或存储过程/参数化查询的 udt 参数的附加信息。  
