@@ -1,5 +1,6 @@
 ---
 title: sys. sp_rda_set_query_mode （Transact-sql） |Microsoft Docs
+description: 使用 sys. sp_rda_set_query_mode 指定是否针对当前启用 Stretch 的数据库及其表的查询返回本地和远程数据或仅返回本地数据。
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -16,11 +17,12 @@ helpviewer_keywords:
 ms.assetid: 65a0b390-cf87-4db7-972a-1fdf13456c88
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 06aa5b76b321206a936340cc5bfd8715dbf14f52
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: b2fbef46606f182e2c9833d2ce421c61fc421105
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052989"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243328"
 ---
 # <a name="syssp_rda_set_query_mode-transact-sql"></a>sys. sp_rda_set_query_mode （Transact-sql）
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -45,7 +47,7 @@ sp_rda_set_query_mode [ @mode = ] @mode
   
 -   **LOCAL_ONLY**针对启用 Stretch 的表的查询仅返回本地数据。  
   
--   **LOCAL_AND_REMOTE**针对启用 Stretch 的表的查询将返回本地和远程数据。 这是默认行为。  
+-   **LOCAL_AND_REMOTE**针对启用 Stretch 的表的查询将返回本地和远程数据。 此选项为默认行为。  
   
  [ @force =] * \@ force*  
  如果希望在不验证的情况下更改查询模式，则可以将此值设置为1。  
@@ -56,7 +58,7 @@ sp_rda_set_query_mode [ @mode = ] @mode
 ## <a name="permissions"></a>权限  
  需要 db_owner 权限。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  以下扩展存储过程还为已启用延伸的数据库设置查询模式。  
   
 -   **sp_rda_deauthorize_db**  

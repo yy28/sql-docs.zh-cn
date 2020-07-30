@@ -1,5 +1,6 @@
 ---
 title: srv_rpcowner（扩展存储过程 API）| Microsoft Docs
+description: 了解扩展存储过程 API 中 srv_rpcowner 如何返回当前远程存储过程的所有者组件。
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e81a60e6-14ea-47bc-a11c-3d7635344447
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6c427b572b6c9320c3ebe320c4469f3571641fa4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 64e9fa0970367ccac5d4fca5bf6b9815ad0e0e17
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755871"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248266"
 ---
 # <a name="srv_rpcowner-extended-stored-procedure-api"></a>srv_rpcowner（扩展存储过程 API）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +55,7 @@ len
  *长度*  
  指向接收所有者名称长度的整数变量的指针。 参数 len 可为 NULL，在这种情况下不会返回所有者组件的长度**。  
   
-## <a name="returns"></a>返回  
+## <a name="returns"></a>返回值  
  一个 DBCHAR 指针，指向当前远程存储过程的以 Null 值结束的所有者组件。 如果当前无远程存储过程，则返回 NULL，且 len 设置为 -1**。  
   
 ## <a name="remarks"></a>备注  

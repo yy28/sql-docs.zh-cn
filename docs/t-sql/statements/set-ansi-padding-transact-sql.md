@@ -24,15 +24,15 @@ ms.assetid: 92bd29a3-9beb-410e-b7e0-7bc1dc1ae6d0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fcbc2f6ae35c72f86ccbbc6d34f45384c88c2fd9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 29ae3ce5c5398a6ac8006f8b3af7ceb0477576fb
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68041899"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396516"
 ---
 # <a name="set-ansi_padding-transact-sql"></a>SET ANSI_PADDING (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
   对列存储长度小于列的定义大小的值以及在 **char**、 **varchar**、 **binary**和 **varbinary** 数据中含有尾随空格的值的方式进行控制。  
   
@@ -40,13 +40,13 @@ ms.locfileid: "68041899"
   
 ## <a name="syntax"></a>语法
   
-```
+```syntaxsql
 -- Syntax for SQL Server
 
 SET ANSI_PADDING { ON | OFF }
 ```
 
-```
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
 
 SET ANSI_PADDING ON

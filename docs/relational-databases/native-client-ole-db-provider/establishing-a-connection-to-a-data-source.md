@@ -1,5 +1,5 @@
 ---
-title: 建立与数据源的连接 | Microsoft Docs
+title: 建立与数据源的连接（Native Client OLE DB 提供程序） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,13 +17,14 @@ ms.assetid: 7ebd1394-cc8d-4bcf-92f3-c374a26e7ba0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4f3f0c654edce21a4ec5543d9488938b65d964f0
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1dc465bfa63a0822fc4a1de7b13611c0d1121017
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005293"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248166"
 ---
-# <a name="establishing-a-connection-to-a-data-source"></a>建立与数据源的连接
+# <a name="establishing-a-connection-to-a-sql-server-native-client-data-source"></a>建立与 SQL Server Native Client 数据源的连接
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   若要访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序，使用者必须首先通过调用**CoCreateInstance**方法创建数据源对象的实例。 每个 OLE DB 访问接口都具有一个唯一的类标识符 (CLSID)。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序，CLSID_SQLNCLI10 类标识符。 您还可以使用符号 SQLNCLI_CLSID，该符号将解析为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 您引用的 sqlncli.msi 中使用的 Native Client OLE DB 提供程序。  

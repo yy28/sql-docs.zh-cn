@@ -1,5 +1,6 @@
 ---
 title: srv_paramset（扩展存储过程 API）| Microsoft Docs
+description: 了解扩展存储过程 API 中 srv_paramset 如何设置远程存储过程调用返回参数的值。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2a509206-a1b8-4b20-b0a2-ef680cef7bd8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a8a2f3caa15eeb6e7ff25f511b4a0e92de68b383
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 645b87be7c1b5955975a370e9e1b49e6608272b3
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756684"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248338"
 ---
 # <a name="srv_paramset-extended-stored-procedure-api"></a>srv_paramset（扩展存储过程 API）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,13 +61,13 @@ len
  *n*  
  指示要设置的参数的编号。 第一个参数是 1。  
   
- *数据*  
+ *data*  
  是指向要发送回客户端的数据值的指针，该数据值将作为远程存储过程返回参数。  
   
  *长度*  
  指定要返回的数据的实际长度。 如果参数的数据类型的长度为常量且该数据类型不允许 null 值（例如 srvbit 或 srvint1），则将会忽略 len******。  
   
-## <a name="returns"></a>返回  
+## <a name="returns"></a>返回值  
  如果参数值设置成功，则返回 SUCCEED，否则返回 FAIL。 如果属于以下情况则返回 FAIL：无当前远程存储过程、没有第 n 个远程存储过程参数、参数不是返回参数以及 len 参数是非法的****。  
   
  如果 len 为 0，则返回 NULL**。 将 len 设置为 0 是将 NULL 返回给客户端的唯一方法**。  

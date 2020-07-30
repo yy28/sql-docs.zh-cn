@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2509b32c-a995-4364-9152-d8c83129bdd8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 13a24320f7b49d8d2a0e1341bff2d9a4cca575dd
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5e504b442116f0a137d40a0932b00e51753deae5
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765308"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243148"
 ---
 # <a name="activeconnection-property-ado-md"></a>ActiveConnection 属性 (ADO MD)
 指示当前单元集或目录当前属于哪个 ADO[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。  
@@ -56,12 +56,17 @@ ms.locfileid: "82765308"
 "Location=C:\MSDASDK\samples\oledb\olap\data\bobsvid.cub;Provider=msolap"  
 ```  
   
-## <a name="applies-to"></a>应用于  
-  
-|||  
-|-|-|  
-|[目录对象 (ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)|[单元集对象 (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)|  
-  
+## <a name="applies-to"></a>适用于  
+
+:::row:::
+    :::column:::
+        [目录对象 (ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)  
+    :::column-end:::
+    :::column:::
+        [单元集对象 (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>另请参阅  
  [单元集示例（VB）](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [Connection 对象（ADO）](../../../ado/reference/ado-api/connection-object-ado.md)   

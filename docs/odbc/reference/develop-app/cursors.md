@@ -18,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: 0b114352-3c63-4d33-9220-182ede90e4aa
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3a7484de48edaecea56fc135ca3b803875f9557c
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 2457667e374587e5e91a4c758dfbe641a0b02f78
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977774"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247117"
 ---
-# <a name="cursors"></a>游标
+# <a name="odbc-cursors"></a>ODBC 游标
 应用程序使用*游标*来提取数据。 游标不同于结果集：结果集是与特定搜索条件相匹配的行集，而游标是将这些行返回到应用程序的软件。 应用于数据库的名称*游标*可能源自计算机终端上闪烁的光标。 就像该游标指示屏幕上的当前位置以及键入的字词将显示在哪个位置时，结果集上的游标将指示结果集中的当前位置和接下来返回的行。  
   
  ODBC 中的游标模型基于嵌入式 SQL 中的游标模型。 这些模型之间的一个明显差异就是游标的打开方式。 在嵌入的 SQL 中，必须显式声明并打开游标，然后才能使用。 在 ODBC 中，当执行创建结果集的语句时，将隐式打开游标。 当游标打开时，它将定位在结果集的第一行之前。 在嵌入式 SQL 和 ODBC 中，游标在应用程序使用完后必须关闭。  

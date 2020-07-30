@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5b977956-e252-4861-8425-f1aaf6b80130
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5192713ead82cc486fbbdba643cf426c0849ddad
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e5960495a9c5069aa9145d5aee47365b84b7175c
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764958"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243118"
 ---
 # <a name="uniquename-property-ado-md"></a>UniqueName 属性 (ADO MD)
 指示当前对象的明确名称。  
@@ -32,12 +32,18 @@ ms.locfileid: "82764958"
 ## <a name="return-values"></a>返回值  
  返回一个**字符串**，并且为只读。  
   
-## <a name="applies-to"></a>应用于  
+## <a name="applies-to"></a>适用于  
   
-|||  
-|-|-|  
-|[维度对象 (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|[层次结构对象 (ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|  
-|[级别对象 (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)|[成员对象 (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)|  
-  
+:::row:::
+    :::column:::
+        [维度对象 (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)  
+        [层次结构对象 (ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)  
+    :::column-end:::
+    :::column:::
+        [级别对象 (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)  
+        [成员对象 (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>另请参阅  
  [Name 属性 (ADO MD)](../../../ado/reference/ado-md-api/name-property-ado-md.md)

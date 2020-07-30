@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6b2a9c31-1a7e-40db-8a53-30720d0f6cc1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6c0d75e8f9fb6d11315e327edd6f7d064c13e063
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: aeeb7bcbb79231a2d6ed842459355a09e2889e4f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759493"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243168"
 ---
 # <a name="update-method"></a>Update 方法
 保存对记录[集](../../../ado/reference/ado-api/recordset-object-ado.md)对象的当前行所做的任何更改，或[记录](../../../ado/reference/ado-api/record-object-ado.md)对象的[字段](../../../ado/reference/ado-api/fields-collection-ado.md)集合。  
@@ -66,12 +66,17 @@ record.Fields.Update
   
  例如，**删除方法删除的字段**会立即标记为删除，但仍保留在集合中。 若要实际从提供程序的集合中删除这些字段，必须调用**Update**方法。  
   
-## <a name="applies-to"></a>应用于  
-  
-|||  
-|-|-|  
-|[字段集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
-  
+## <a name="applies-to"></a>适用于  
+
+:::row:::
+    :::column:::
+        [字段集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)  
+    :::column-end:::
+    :::column:::
+        [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>另请参阅  
  [Update 和 CancelUpdate 方法示例（VB）](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vb.md)   
  [Update 和 CancelUpdate 方法示例（VC + +）](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vc.md)   

@@ -1,5 +1,6 @@
 ---
 title: srv_pfield（扩展存储过程 API）| Microsoft Docs
+description: 了解扩展存储过程 API 中 srv_pfield 如何返回有关数据库连接的信息。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a61e4c1f-e65b-48ea-a7d1-3e1544af389d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2711fa3c1e7035b75228b02e9d52de8fd3dcd6d3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 12d985ca974f923f37db9d19de048e14af143271
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755937"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248306"
 ---
 # <a name="srv_pfield-extended-stored-procedure-api"></a>srv_pfield（扩展存储过程 API）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,7 +58,7 @@ len
  *定义域*  
  指定连接将返回的数据。  
   
-|值|返回|  
+|值|返回值|  
 |-----------|-------------|  
 |SRV_APPLNAME|客户端建立连接时提供的应用程序名称。|  
 |SRV_BCPFLAG|一个标志，如果客户端正在准备执行大容量复制操作，则为 TRUE；否则为 FALSE。|  
@@ -82,7 +83,7 @@ len
  *长度*  
  指向一个 int 变量的指针，该变量包含所返回的 field 值的长度******。 如果 len 为 NULL，则不返回字符串的长度**。  
   
-## <a name="returns"></a>返回  
+## <a name="returns"></a>返回值  
  指向一个以 null 值结束的字符串的指针，该字符串包含 SRV_PROC 结构中指定字段的当前值。 如果此字段为空，则返回指向空字符串的有效指针，并且 len 包含 0**。 如果此字段为未知，则返回 NULL 并且 len 包含值 -1**。  
   
 > [!IMPORTANT]  

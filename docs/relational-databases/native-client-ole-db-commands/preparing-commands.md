@@ -1,5 +1,5 @@
 ---
-title: 准备命令 | Microsoft Docs
+title: 准备命令（Native Client OLE DB 提供程序）
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,18 +16,19 @@ ms.assetid: 09ec0c6c-0a44-4766-b9b7-5092f676ee54
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 731f03b29f48d8e1970bdddd1f6ee2d1a7748c3e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6d9d789b9abdc9af6b392b57d046d9d9c80d0747
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002803"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247036"
 ---
-# <a name="preparing-commands"></a>准备命令
+# <a name="preparing-commands-in-sql-server-native-client"></a>在 SQL Server Native Client 中准备命令
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口支持命令准备，以优化多次执行的单个命令。不过，命令准备会带来开销，使用者不必准备执行次数多于一次的命令。 一般而言，如果命令的执行次数超过三次，则应当进行准备。  
   
- 出于性能方面的考虑，命令准备会延迟至命令执行之时。 这是默认行为。 待准备命令中的任何错误，直到执行命令或执行元属性操作时才会发现。 将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 属性 SSPROP_DEFERPREPARE 设置为 FALSE 可以关闭此默认行为。  
+ 出于性能方面的考虑，命令准备会延迟至命令执行之时。 此选项为默认行为。 待准备命令中的任何错误，直到执行命令或执行元属性操作时才会发现。 将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 属性 SSPROP_DEFERPREPARE 设置为 FALSE 可以关闭此默认行为。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，直接执行命令（即不提前准备命令）时，会创建并缓存一个执行计划。 如果再次执行该 SQL 语句，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会采用有效的算法将新的语句与缓存中的现有执行计划进行匹配，然后再次使用该语句的执行计划。  
   
@@ -54,6 +55,6 @@ ms.locfileid: "86002803"
  命令对象在 tempdb 中最多具有一个临时存储过程****。 任何现有的临时存储过程都表示特定命令对象的当前命令文本。  
   
 ## <a name="see-also"></a>另请参阅  
- 命令  
+ [命令](../../relational-databases/native-client-ole-db-commands/commands.md)  
   
   

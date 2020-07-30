@@ -1,5 +1,6 @@
 ---
 title: sys. sp_rda_reconcile_batch （Transact-sql） |Microsoft Docs
+description: 了解如何使用 sys. sp_rda_reconcile_batch 将启用 Stretch 的 SQL Server 表中的批 ID 与存储在远程 Azure 表中的批 ID 进行协调。
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -16,11 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6d21eac3-7b6c-4fe0-8bc4-bf503f3948a6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c8ce7b946005eca97d57ef709557ec9b4334339c
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: aa97030851e13eac020564eec7931a00595b8884
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053060"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247086"
 ---
 # <a name="syssp_rda_reconcile_batch-transact-sql"></a>sys. sp_rda_reconcile_batch （Transact-sql）
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -48,7 +50,7 @@ sp_rda_reconcile_batch @objname = '@objname'
 ## <a name="permissions"></a>权限  
  需要 db_owner 权限。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  如果要删除已迁移到 Azure 的数据，请执行以下操作。  
   
 1.  暂停数据迁移。 有关详细信息，请参阅[暂停和恢复数据迁移 &#40;Stretch Database&#41;](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md)。  

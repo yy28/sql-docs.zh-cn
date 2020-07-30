@@ -9,14 +9,14 @@ ms.date: 10/26/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: f275c77556e8abe8932e241075b9e24e2ae5db77
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4a1007529db6d861d3090fbbdcb6c85975fb882a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289675"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243493"
 ---
-# <a name="polybase-configuration-and-security-for-hadoop"></a>Hadoop 的 PolyBase 配置和安全
+# <a name="configure-polybase-hadoop-security"></a>配置 PolyBase Hadoop 安全性
 
 本文提供了对影响到 Hadoop 的 AP PolyBase 连接的各种配置设置的参考。 有关 PolyBase 的操作实例，请参阅[什么是 polybase](configure-polybase-connectivity-to-external-data.md)。
 
@@ -115,7 +115,7 @@ ms.locfileid: "79289675"
 4. 创建数据库范围内的凭据对象，以指定每个 Hadoop 用户的身份验证信息。 请参阅 [PolyBase T-SQL 对象](../relational-databases/polybase/polybase-t-sql-objects.md)。
 
 ## <a name="hadoop-encryption-zone-setup"></a><a id="encryptionzone"></a>Hadoop 加密区域设置
-如果使用 Hadoop 加密区域，请修改 core-site.xml 和 hdfs-site.xml，如下所示。 提供运行 KMS 服务的 ip 地址和相应的端口号。 CDH 上的 KMS 的默认端口为16000。
+如果使用 Hadoop 加密区域修改 core-site.xml 和 hdfs-site.xml，请执行以下所述。 提供运行 KMS 服务的 ip 地址和相应的端口号。 CDH 上的 KMS 的默认端口为16000。
 
 **core-site.xml**
 ```xml

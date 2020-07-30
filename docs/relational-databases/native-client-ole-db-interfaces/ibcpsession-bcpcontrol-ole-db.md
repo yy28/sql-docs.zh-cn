@@ -1,5 +1,5 @@
 ---
-title: IBCPSession::BCPControl (OLE DB) | Microsoft Docs
+title: IBCPSession：： BCPControl （Native Client OLE DB 提供程序） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,13 +16,14 @@ ms.assetid: d58f3fe1-45e3-4e46-8e9c-000971829d99
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b189b1faa38c9b9e40fb13c3dd55e57c4f9318d8
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 98d21ab0c4bb17ca9e701a17b5abd8d3da2438dc
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006036"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247772"
 ---
-# <a name="ibcpsessionbcpcontrol-ole-db"></a>IBCPSession::BCPControl (OLE DB)
+# <a name="ibcpsessionbcpcontrol-native-client-ole-db-provider"></a>IBCPSession：： BCPControl （Native Client OLE DB 提供程序）
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   设置大容量复制操作的选项。  
@@ -30,7 +31,7 @@ ms.locfileid: "86006036"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
+
 HRESULT BCPControl(   
       int eOption,  
       void *iValue);  
@@ -43,7 +44,7 @@ HRESULT BCPControl(
   
  eOption** 的可能值为：  
   
-|选项|说明|  
+|选项|描述|  
 |------------|-----------------|  
 |BCP_OPTION_ABORT|停止正在进行的大容量复制操作。 可以从其他线程调用 eOption 参数为 BCP_OPTION_ABORT 的 BCPControl 方法，以停止正在运行的大容量复制操作******。 忽略 iValue** 参数。|  
 |BCP_OPTION_BATCH|每批的行数。 默认值为 0，在提取数据时，该默认值表示表中的所有行；在将数据复制到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，该默认值表示用户数据文件中的所有行。 值小于 1 则将 BCP_OPTION_BATCH 重置为默认值。|  

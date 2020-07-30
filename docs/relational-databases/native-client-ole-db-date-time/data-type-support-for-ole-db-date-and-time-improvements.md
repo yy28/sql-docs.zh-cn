@@ -1,5 +1,5 @@
 ---
-title: 针对 OLE DB 日期和时间改进的数据类型支持 | Microsoft Docs
+title: 日期和时间改进的数据类型支持（Native Client OLE DB 提供程序） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,13 +14,14 @@ ms.assetid: d40e3fd6-9057-4371-8236-95cef300603e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d414c4aaf8e316d4662448f7e19b847468bee0c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 0a39a9c4d99ed94db0d70575f0047698b1a15074
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005464"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245828"
 ---
-# <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>针对 OLE DB 日期和时间改进的数据类型支持
+# <a name="sql-server-native-client-data-type-support-for-ole-db-date-and-time-improvements"></a>SQL Server Native Client 数据类型对 OLE DB 日期和时间改进的支持
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   本主题提供有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期/时间数据类型 OLE DB （Native Client）类型的信息。  
@@ -73,7 +74,7 @@ ms.locfileid: "86005464"
   
  已对以下现有 OLE DB 结构的实现进行了修改，以支持新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期和时间数据类型。 不过未更改定义。  
   
--   DBTYPE_DATE（这是自动化 DATE 类型。 它在内部表示为 double****。 整数部分是自 1899 年 12 月 30 日以来的天数，小数部分是不足一天的部分。 此类型的精确度为 1 秒，因此具有有效的 0 刻度。）  
+-   DBTYPE_DATE（这是自动化 DATE 类型。 它在内部表示为**double**。 整数部分是自 1899 年 12 月 30 日以来的天数，小数部分是不足一天的部分。 此类型的精确度为 1 秒，因此具有有效的 0 刻度。）  
   
 -   DBTYPE_DBDATE  
   
@@ -172,14 +173,14 @@ enum SQLVARENUM {
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>ITableDefinition::CreateTable 中的数据类型映射  
  以下类型映射用于 ITableDefinition::CreateTable 所使用的 DBCOLUMNDESC 结构：  
   
-|OLE DB 数据类型 (wType**)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型|说明|  
+|OLE DB 数据类型 (wType**)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型|注释|  
 |----------------------------------|-----------------------------------------|-----------|  
 |DBTYPE_DBDATE|date||  
 |DBTYPE_DBTIMESTAMP|**datetime2**(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序检查 DBCOLUMDESC *bScale*成员，以确定秒的小数部分精度。|  
 |DBTYPE_DBTIME2|**** time(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序检查 DBCOLUMDESC *bScale*成员，以确定秒的小数部分精度。|  
 |DBTYPE_DBTIMESTAMPOFFSET|**** datetimeoffset(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序检查 DBCOLUMDESC *bScale*成员，以确定秒的小数部分精度。|  
   
- 应用程序以 wType** 指定 DBTYPE_DBTIMESTAMP 时，它可以通过在 pwszTypeName** 中提供类型名称来覆盖到 datetime2**** 的映射。 如果指定 datetime****，则 bScale** 必须为 3。 如果指定 smalldatetime****，则 bScale** 必须为 0。 如果*bScale*与*wType*和*pwszTypeName*不一致，将返回 DB_E_BADSCALE。  
+ 应用程序以 wType** 指定 DBTYPE_DBTIMESTAMP 时，它可以通过在 pwszTypeName** 中提供类型名称来覆盖到 datetime2**** 的映射。 如果指定 datetime****，则 bScale** 必须为 3。 如果指定 smalldatetime****，则 bScale** 必须为 0。 如果 bScale** 与 wType** 和 pwszTypeName** 不一致，则返回 DB_E_BADSCALE。  
   
 ## <a name="see-also"></a>另请参阅  
  [日期和时间改进 (OLE DB)](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  

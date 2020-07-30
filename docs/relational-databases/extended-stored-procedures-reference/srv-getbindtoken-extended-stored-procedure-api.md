@@ -1,5 +1,6 @@
 ---
 title: srv_getbindtoken（扩展存储过程 API）| Microsoft Docs
+description: 了解 srv_getbindtoken 如何获取在当前客户端会话中调用扩展存储过程的事务的绑定令牌。
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c947d011-08ac-4fb8-b925-3da6e0999277
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 254bec49759ceff269f112d65156042271471b81
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 60e552bda81690d6c7a2dcc387389030bd929584
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756759"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248455"
 ---
 # <a name="srv_getbindtoken-extended-stored-procedure-api"></a>srv_getbindtoken（扩展存储过程 API）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,7 +57,7 @@ bindtoken
  bindtoken**  
  指向要复制绑定令牌的缓冲区的指针。 该绑定令牌用以 Null 值结束的字符串表示。 指定的缓冲区长度至少为 255 个字节。  
   
-## <a name="returns"></a>返回  
+## <a name="returns"></a>返回值  
  SUCCEED 或 FAIL。  
   
 ## <a name="remarks"></a>备注  

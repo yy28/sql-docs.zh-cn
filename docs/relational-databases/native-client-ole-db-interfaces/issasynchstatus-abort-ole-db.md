@@ -1,5 +1,5 @@
 ---
-title: ISSAsynchStatus::Abort (OLE DB) | Microsoft Docs
+title: ISSAsynchStatus：： Abort （Native Client OLE DB 提供程序） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -16,13 +16,14 @@ ms.assetid: 2a4bd312-839a-45a8-a299-fc8609be9a2a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eb263a1b61f7da765eff38d9b10eba683e8d86d2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a713f210c04032d9b24d90c59ad1088b1a1cd0d8
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005382"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246921"
 ---
-# <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
+# <a name="issasynchstatusabort-native-client-ole-db-provider"></a>ISSAsynchStatus：： Abort （Native Client OLE DB 提供程序）
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   取消异步执行的操作。  
@@ -70,7 +71,7 @@ HRESULT Abort(
   
  已对在初始化阶段异步取消的行集调用 ISSAsynchStatus::Abort****。 该行集处于僵停状态。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  中止行集或数据源对象的初始化可能使行集或数据源对象最后处于僵停状态，以至于除了 IUnknown 方法以外的所有方法都返回 E_UNEXPECTED****。 发生这种情况时，使用者的唯一可能操作是释放行集或数据源对象。  
   
  如果调用 ISSAsynchStatus::Abort 并为 eOperation 传递除了 DBASYNCHOP_OPEN 以外的值，将返回 S_OK******。 这并不意味着操作已完成或取消。  

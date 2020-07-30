@@ -1,5 +1,6 @@
 ---
 title: srv_paramname（扩展存储过程 API）| Microsoft Docs
+description: 了解扩展存储过程 API 中 srv_paramname 如何返回远程存储过程调用参数的名称。
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1a53d707-7b06-49cc-a0df-ac727cfe953f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9905b5f148ccbf94bb4ca85f85164b5289d0dcec
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: df8add84e06ea06445a070cd94f5b2033fd4c7d1
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756696"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248405"
 ---
 # <a name="srv_paramname-extended-stored-procedure-api"></a>srv_paramname（扩展存储过程 API）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +53,7 @@ SRV_PROC * srvproc,intn, int *len );
  *长度*  
  提供指向一个 int 变量的指针，该变量包含参数名称的长度（以字节为单位）****。 如果 len 为 NULL，则不返回远程存储过程参数名称的长度**。  
   
-## <a name="returns"></a>返回  
+## <a name="returns"></a>返回值  
  指向包含参数名称的 Null 值结束字符串的指针。 参数名称的长度存储在 len 中**。 如果没有第 n 个参数或没有远程存储过程，则返回 NULL，len 会设置为 -1，并且会发送信息性错误消息****。 如果参数名称为 NULL，len 则将设置为 0，并且返回以 null 值终止的空字符串**。  
   
 ## <a name="remarks"></a>备注  

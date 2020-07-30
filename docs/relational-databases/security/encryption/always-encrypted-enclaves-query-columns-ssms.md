@@ -10,15 +10,15 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6bee04f4a794a503b89b73d4ef4a6a1cef897b4b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 50f44a01383a307ac462c0f4fcb3e9e3f67d66fa
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73595592"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411503"
 ---
 # <a name="query-columns-using-always-encrypted-with-secure-enclaves-with-ssms"></a>通过 SSMS 查询使用具有安全 enclave 的 Always Encrypted 的列
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 本文介绍如何使用 SQL Server Management Studio 发出对[具有安全 enclave 的 Always Encrypted](always-encrypted-enclaves.md) 使用服务器端安全 enclave 的查询，包括：
 - 触发就地加密操作的查询。

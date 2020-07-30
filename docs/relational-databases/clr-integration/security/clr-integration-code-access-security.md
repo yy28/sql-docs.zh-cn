@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2111cfe0-d5e0-43b1-93c3-e994ac0e9729
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1e155e9c6f0e8a85eaf7ec905f9c9b471160a9ec
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b2706faaf181e609df6209758e60b2a46c87aa46
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885905"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248616"
 ---
 # <a name="clr-integration-code-access-security"></a>CLR 集成代码访问安全性
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -104,14 +104,13 @@ ms.locfileid: "85885905"
 ## <a name="permission-set-summary"></a>权限集汇总  
  下表总结了对**SAFE**、 **EXTERNAL_ACCESS**和**不安全**权限集授予的限制和权限。  
   
-|||||  
+|功能|**防**|**EXTERNAL_ACCESS**|**UNSAFE**|   
 |-|-|-|-|  
-||**防**|**EXTERNAL_ACCESS**|**UNSAFE**|  
-|**代码访问安全权限**|仅执行|执行和访问外部资源|不受限制（包括 P/Invoke）|  
-|**编程模型限制**|是|是|无限制|  
-|**可验证性要求**|是|是|No|  
-|**本地数据访问**|是|是|是|  
-|**调用本机代码的能力**|否|否|是|  
+|代码访问安全权限|仅执行|执行和访问外部资源|不受限制（包括 P/Invoke）|  
+|编程模型限制|“是”|“是”|无限制|  
+|可验证性要求|“是”|“是”|否|  
+|本地数据访问|“是”|“是”|“是”|  
+|调用本机代码的能力|否|否|是|  
   
 ## <a name="see-also"></a>另请参阅  
  [CLR 集成安全性](../../../relational-databases/clr-integration/security/clr-integration-security.md)   

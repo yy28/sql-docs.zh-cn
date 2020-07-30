@@ -1,5 +1,6 @@
 ---
 title: sys. sp_rda_get_rpo_duration （Transact-sql） |Microsoft Docs
+description: 使用 sys. sp_rda_get_rpo_duration 获取已迁移数据的小时数，SQL Server 保留在临时表中以完全还原远程 Azure 数据库。
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -16,11 +17,12 @@ helpviewer_keywords:
 ms.assetid: 35882067-3072-47ff-9024-ca453c0f49a7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8e903c3b41a8a191122fdf8499ee6b4c82dbe308
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 3e50e313e49b955b40497f28b2cb9265cf7717e3
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052991"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243348"
 ---
 # <a name="syssp_rda_get_rpo_duration-transact-sql"></a>sys. sp_rda_get_rpo_duration （Transact-sql）
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -39,14 +41,14 @@ sp_rda_get_rpo_duration @durationinhours output
     
 ```    
     
-## <a name="output-parameter"></a>Output 参数    
+## <a name="output-parameter"></a>输出参数    
  *\@durationinhours*    
   为当前已启用延伸的数据库 SQL Server 保留的已迁移数据的小时数（非 null 整数值）。    
     
 ## <a name="permissions"></a>权限    
  需要 db_owner 权限。    
     
-## <a name="remarks"></a>注解    
+## <a name="remarks"></a>备注    
  通过运行[&#40;transact-sql&#41;sp_rda_set_rpo_duration](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md)来更改值。    
     
 ## <a name="see-also"></a>另请参阅    

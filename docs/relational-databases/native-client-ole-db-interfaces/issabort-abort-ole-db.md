@@ -1,5 +1,5 @@
 ---
-title: ISSAbort::Abort (OLE DB) | Microsoft Docs
+title: ISSAbort：： Abort （Native Client OLE DB 提供程序） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,13 +16,14 @@ ms.assetid: a5bca169-694b-4895-84ac-e8fba491e479
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e71843d190389b806b5726a42436582f79d52ae2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 03a6e0119db3cabce4184af5ea387522bd3602c0
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005398"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246936"
 ---
-# <a name="issabortabort-ole-db"></a>ISSAbort::Abort (OLE DB)
+# <a name="issabortabort-native-client-ole-db-provider"></a>ISSAbort：： Abort （Native Client OLE DB 提供程序）
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   取消当前行集以及与当前命令关联的任何批处理命令。  
@@ -39,14 +40,14 @@ HRESULT Abort(void);
 ```  
   
 ## <a name="remarks"></a>备注  
- 如果要中止的命令位于存储过程中，则将终止存储过程（以及已调用该过程的任何过程）以及包含此存储过程调用的命令批处理的执行。 如果服务器正在将结果集传输到客户端，则将停止此过程。 如果客户端不希望使用结果集，则在释放行集之前调用 ISSAbort::Abort 将加快行集释放，但是，如果存在打开的事务且 XACT_ABORT 为 ON，则当调用 ISSAbort::Abort 时，将回滚此事务********  
+ 如果要中止的命令位于存储过程中，则执行存储过程（以及已调用该过程的所有过程）以及包含该存储过程调用的命令批处理。 如果服务器正在将结果集传输到客户端，则将停止此过程。 如果客户端不希望使用结果集，则在释放行集之前调用 ISSAbort::Abort 将加快行集释放，但是，如果存在打开的事务且 XACT_ABORT 为 ON，则当调用 ISSAbort::Abort 时，将回滚此事务********  
   
- **ISSAbort：： Abort**返回 S_OK 后，关联的**IMultipleResults**接口将进入不可用状态，并将 DB_E_CANCELED 返回给所有方法调用（ **IUnknown**接口定义的方法除外），直到它被释放。 如果在调用 Abort 之前已从 IMultipleResults 获取了 IRowset，则它也会进入不可用状态，并对所有方法调用返回 DB_E_CANCELED（由 IUnknown 接口和 IRowset::ReleaseRows 定义的方法除外），直到在成功调用 ISSAbort::Abort 之后释放它为止************************。  
+ 在 ISSAbort::Abort 返回 S_OK 后，关联的 IMultipleResults 接口将进入不可用状态并对于所有方法调用返回 DB_E_CANCELED（由 IUnknown 接口定义的方法除外），直到释放它为止************。 如果在调用 Abort 之前已从 IMultipleResults 获取了 IRowset，则它也会进入不可用状态，并对所有方法调用返回 DB_E_CANCELED（由 IUnknown 接口和 IRowset::ReleaseRows 定义的方法除外），直到在成功调用 ISSAbort::Abort 之后释放它为止************************。  
   
 > [!NOTE]  
 >  从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 开始，如果服务器 XACT_ABORT 状态为 ON，则当连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，ISSAbort::Abort 的执行将终止并回滚当前所有的隐式或显式事务****。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的较早版本不中止当前事务。  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  无。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -60,7 +61,7 @@ HRESULT Abort(void);
  批处理未取消。  
   
  E_FAIL  
- 发生了特定于提供程序的错误;有关详细信息，请使用[ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)接口。  
+ 出现特定于提供程序的错误;有关详细信息，请使用[ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)接口。  
   
  E_UNEXPECTED  
  意外调用了该方法。 例如，因为已调用 ISSAbort::Abort，所以对象处于僵停状态****。  

@@ -9,20 +9,20 @@ ms.topic: reference
 ms.assetid: fa082dca-bf88-46e7-b61e-7ac8835a3493
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 488199547cd5b96190b30ab415b08f9be2b4bd66
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 053fb88279d0aa2ad664e50d4b9c6bbb454f2adb
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85641272"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245928"
 ---
 # <a name="localdb_error_unknown_language_id"></a>LOCALDB_ERROR_UNKNOWN_LANGUAGE_ID
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="details"></a>详细信息  
   
-|||  
-|-|-|  
+| Attribute | 值 |
+| --------- | ----- |
 |产品名称|SQL Server|  
 |事件 ID|270|  
 |事件源|SQL Server 本地数据库运行时 12.0|  

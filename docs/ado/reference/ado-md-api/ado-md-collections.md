@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 01c53429-ccc9-4077-b738-d3c1f43bd76c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5e3b3d1cc3884c7febc396e4af3918c156859762
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f04c25b012ba8ae84a9012beba7d3a664fbaa4d4
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765238"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243138"
 ---
 # <a name="ado-md-collections"></a>ADO MD 集合
 
-|||  
+|集合|描述|  
 |-|-|  
 |[Axes](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)|包含定义单元集的**轴**对象。|  
 |[CubeDefs](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)|包含**CubeDef**对象，这些对象表示多维目录中的多维数据集。|  

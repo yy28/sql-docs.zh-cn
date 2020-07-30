@@ -14,13 +14,14 @@ ms.assetid: 921a24d1-ea09-4a3c-980a-4dcbd0a43d31
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c674c515bd07f50e067ae25152702c5e6529033c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f5aa77741211b7f0fd1a118621aac9c8bf911902
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006457"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248174"
 ---
-# <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>使用 ODBC CALL 执行存储过程并处理输出
+# <a name="execute-sql-server-native-client-stored-procedure-with-odbc-call-and-process-output"></a>执行具有 ODBC 调用和进程输出的 SQL Server Native Client 存储过程
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 存储过程可具有整数返回代码和输出参数。 返回代码和输出参数位于从服务器发送的最后一个数据包中，因此直到行集完全释放时它们才可供应用程序使用。 如果命令返回多个结果，则输出参数数据在 IMultipleResults::GetResult 返回 DB_S_NORESULT 时或 IMultipleResults 接口完全释放时（以二者中最先发生的为准）可用********。  

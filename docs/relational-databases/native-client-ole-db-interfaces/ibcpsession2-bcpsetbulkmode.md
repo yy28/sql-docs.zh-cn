@@ -1,5 +1,5 @@
 ---
-title: IBCPSession2::BCPSetBulkMode | Microsoft Docs
+title: IBCPSession2：： BCPSetBulkMode （Native Client OLE DB 提供程序） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -13,13 +13,14 @@ ms.assetid: babba19f-e67b-450c-b0e6-523a0f9d23ab
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12788578b865e24f390a3e49d97fa66388ecb4aa
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: dc8b48c6a9dab071df8fa3df1977f62afb91659d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008431"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247694"
 ---
-# <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
+# <a name="ibcpsession2bcpsetbulkmode-native-client-ole-db-provider"></a>IBCPSession2：： BCPSetBulkMode （Native Client OLE DB 提供程序）
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   IBCPSession2::BCPSetBulkMode 提供用于指定列格式的 [IBCPSession::BCPColFmt (OLE DB)](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) 的替代方法。 不同于设置单个列格式属性的 IBCPSession::BCPColFmt，IBCPSession2::BCPSetBulkMode 设置所有属性。  
@@ -37,7 +38,7 @@ HRESULT BCPSetBulkMode (
 );  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  *property*  
  类型为 BYTE 的常量。 相关的常量列表，请参阅“备注”部分中的表。  
   
@@ -53,7 +54,7 @@ HRESULT BCPSetBulkMode (
  cbRow  
  行终止符值的长度（以字节为单位）。  
   
-## <a name="returns"></a>返回  
+## <a name="returns"></a>返回值  
  IBCPSession2::BCPSetBulkMode 可以返回以下值之一：  
   
 |||  
@@ -64,14 +65,14 @@ HRESULT BCPSetBulkMode (
 |**E_INVALIDARG**|参数无效。|  
 |**E_OUTOFMEMORY**|内存不足错误。|  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  可以使用 IBCPSession2::BCPSetBulkMode 从查询或表中创建大容量复制。 使用 IBCPSession2::BCPSetBulkMode 向外大容量复制查询语句时，必须先调用该方法，再调用 `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, ...)` 来指定查询语句。  
   
  应该避免在单个命令文本内将 RPC 调用语法与批查询语法结合使用（例如 `{rpc func};SELECT * from Tbl`）。  这将导致 ICommandPrepare::Prepare 返回错误，并阻止你检索元数据。 如果需要在单个命令文本内结合执行存储过程和批查询，请使用 ODBC CALL 语法（例如 `{call func}; SELECT * from Tbl`）。  
   
  下表列出了 property 参数的常量**。  
   
-|properties|说明|  
+|属性|描述|  
 |--------------|-----------------|  
 |BCP_OUT_CHARACTER_MODE|指定字符输出模式。<br /><br /> 对应于 BCP.EXE 和 IBCPSession::BCPColFmt 中的 -c 选项，同时将 eUserDataType** 属性设置为 BCP_TYPE_SQLCHARACTER****。|  
 |BCP_OUT_WIDE_CHARACTER_MODE|指定 Unicode 输出模式。<br /><br /> 对应于 BCP.EXE 和 IBCPSession::BCPColFmt 中的 -w 选项，同时将 eUserDataType** 属性设置为 BCP_TYPE_SQLNCHAR****。|  

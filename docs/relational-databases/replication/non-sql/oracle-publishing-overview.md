@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2e013259-0022-4897-a08d-5f8deb880fa8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7814090b688f362737e7cd045bca9edd32c34bcb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3326dab096a1b275bc06bfb0949eeb88b2d4fe30
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883635"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87397159"
 ---
 # <a name="oracle-publishing-overview"></a>Oracle Publishing Overview  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "85883635"
 
 -   将数据发布到 Oracle 以及从 Oracle 发布数据具有以下限制条件：  
 
-  |       | 2016 或更早版本 |2017 或更高版本 |
+  |场景| 2016 或更早版本 |2017 或更高版本 |
   |-------|-------|--------|
   |从 Oracle 复制 |仅支持 Oracle 10g 或更早版本 |仅支持 Oracle 10g 或更早版本 |
   |复制到 Oracle |最高为 Oracle 12c |不支持 |

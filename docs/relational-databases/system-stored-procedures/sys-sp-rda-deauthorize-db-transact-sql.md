@@ -1,5 +1,6 @@
 ---
 title: sys. sp_rda_deauthorize_db （Transact-sql） |Microsoft Docs
+description: 了解如何使用 sys. sp_rda_deauthorize_db 删除已启用 Stretch 的数据库和远程 Azure 数据库之间经过身份验证的连接。
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -16,11 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2e362e15-2cd5-4856-9f0b-54df56b0866b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bc01f07e3a07200970066e6ed505b29b3ccb9c09
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 11e039ad6c0550942632be6f34d23972e1897e2b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053395"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243353"
 ---
 # <a name="syssp_rda_deauthorize_db-transact-sql"></a>sys. sp_rda_deauthorize_db （Transact-sql）
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -41,7 +43,7 @@ sp_rda_deauthorize_db
 ## <a name="permissions"></a>权限  
  需要 db_owner 权限。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  运行**sp_rda_deauthorize_db**后，针对已启用延伸的数据库和表的所有查询都将失败。 也就是说，查询模式设置为 "已禁用"。 若要退出此模式，请执行以下操作之一。  
   
 -   运行[sp_rda_reauthorize_db &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md)重新连接到远程 Azure 数据库。 此操作会自动将查询模式重置为 LOCAL_AND_REMOTE，这是 Stretch Database 的默认行为。 也就是说，查询从本地和远程数据返回结果。  

@@ -1,5 +1,5 @@
 ---
-title: 枚举 OLE DB 数据源 (OLE DB) | Microsoft Docs
+title: 枚举 OLE DB 数据源（Native Client OLE DB 提供程序） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,13 +13,14 @@ ms.assetid: ba240060-3237-4fb8-b2fb-b87fda2b1e7a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 39603f82baede88cda48a12094241883051ecffa
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c61674c160d4d0f9171b63d1d051f8d41230eccc
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004563"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247856"
 ---
-# <a name="enumerate-ole-db-data-sources-ole-db"></a>枚举 OLE DB 数据源 (OLE DB)
+# <a name="enumerate-sql-server-native-client-ole-db-data-sources-ole-db"></a>枚举数据源 OLE DB SQL Server Native Client （OLE DB）
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   此示例显示如何使用枚举器对象列出可用数据源。  
@@ -50,7 +51,7 @@ ms.locfileid: "86004563"
 6.  通过调用 IRowset::GetData 从行集中该行的副本检索数据，然后处理这些数据****。  
   
 ## <a name="example"></a>示例  
- 使用 ole32.lib 编译并执行以下 C++ 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，请将连接字符串从 L"(local)" 更改为 L"(local)\\\name"，其中 name 是命名实例。 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保 INCLUDE 环境变量包含包含 sqlncli.msi 的目录。  
+ 使用 ole32.lib 编译并执行以下 C++ 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，请将连接字符串从 L "（local）" 更改为 L "（local） \\ \name"，其中 name 为命名实例。 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保 INCLUDE 环境变量包含包含 sqlncli.msi 的目录。  
   
 ```  
 // compile with: ole32.lib  

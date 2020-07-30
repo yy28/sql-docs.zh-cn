@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 87b7b030776c1c18bb13307bf97db721fe472bd3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ca6449308f9683bccf55e58d9cec6d5d5a97a59e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68105328"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247131"
 ---
 # <a name="iif-mdx"></a>IIf (MDX)
 
@@ -27,8 +27,8 @@ ms.locfileid: "68105328"
 IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])  
 ```  
   
-## <a name="arguments"></a>参数  
- IIf 函数使用三个参数： iif （\<condition>， \<then branch>， \<否则 branch>）。  
+## <a name="arguments"></a>自变量  
+ IIf 函数使用三个参数： iif （ \<condition> ， \<then branch> ， \<else branch> ）。  
   
  *Logical_Expression*  
  计算结果为**true** （1）或**false** （0）的条件。 它必须是有效的多维表达式 (MDX) 逻辑表达式。  
@@ -63,7 +63,7 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
   
  在提示中，EAGER 和 STRICT 是互斥的；可以在不同表达式的相同 IIF(,,) 中使用它们。  
   
- 有关详细信息，请参阅[IIF 函数查询提示](https://go.microsoft.com/fwlink/?LinkId=269540)，请参阅 SQL Server Analysis Services 2008 和[MDX IIF 函数和 CASE 语句的执行计划和计划提示](https://go.microsoft.com/fwlink/?LinkId=269565)。  
+ 有关详细信息，请参阅[IIF 函数查询提示](http://www.ssas-info.com/analysis-services-articles/50-mdx/1103-iif-function-query-hints-in-sql-server-analysis-services-2008)，请参阅 SQL Server Analysis Services 2008 和[MDX IIF 函数和 CASE 语句的执行计划和计划提示](https://go.microsoft.com/fwlink/?LinkId=269565)。  
   
 ## <a name="examples"></a>示例  
  下面的查询显示在计算度量值中，在度量值 Internet 销售额大于或小于 $10000 时返回两个不同字符串值中的一个的**IIF**的简单用法：  
