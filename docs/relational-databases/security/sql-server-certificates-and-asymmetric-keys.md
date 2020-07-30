@@ -14,12 +14,12 @@ ms.assetid: 8519aa2f-f09c-4c1c-96b5-abc24811e60c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f631e55edaacc56c5c8bae3aec3e374824857db4
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 0da744d41c2135038e14a8aef71e088df7ba851d
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001019"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332646"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>SQL Server 证书和非对称密钥
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -68,9 +68,8 @@ ms.locfileid: "86001019"
 ## <a name="tools"></a>工具  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 提供了用于生成证书和强名称密钥文件的工具和实用工具。 与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语法相比，这些工具在密钥生成过程中提供了更加丰富的灵活选择。 您可以使用这些工具创建具有更复杂的密钥长度的 RSA 密钥，然后将其导入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 下表介绍了在哪里可以找到这些工具。  
   
-|||  
-|-|-|  
-|工具|目的|  
+| 工具 | 目的 |
+| ---- | ------- |
 |[New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate)|创建自签名证书。|  
 |[makecert](/windows/desktop/SecCrypto/makecert)|创建证书。 已弃用以支持 New-SelfSignedCertificate。|  
 |[sn](/dotnet/framework/tools/sn-exe-strong-name-tool)|创建对称密钥的强名称。|  

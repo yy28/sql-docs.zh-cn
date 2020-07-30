@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3792c294-5161-4538-a908-22a5fc50b85f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6e78ab5988d88447539da7c492f0b02943693844
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b9a25677f79ede93f8ea24e979d80dd13adff4fe
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762608"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242757"
 ---
 # <a name="connectmodeenum"></a>ConnectModeEnum
 指定可用于修改[连接](../../../ado/reference/ado-api/connection-object-ado.md)中的数据、打开[记录](../../../ado/reference/ado-api/record-object-ado.md)或为**Record**和[Stream](../../../ado/reference/ado-api/stream-object-ado.md)对象的[Mode](../../../ado/reference/ado-api/mode-property-ado.md)属性指定值的可用权限。  
@@ -52,9 +52,15 @@ ms.locfileid: "82762608"
 |AdoEnums. ConnectMode. 未知|  
 |AdoEnums. ConnectMode|  
   
-## <a name="applies-to"></a>应用于  
-  
-|||  
-|-|-|  
-|[Mode 属性 (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)|[Open 方法（ADO 记录）](../../../ado/reference/ado-api/open-method-ado-record.md)|  
-|[Open 方法（ADO 流）](../../../ado/reference/ado-api/open-method-ado-stream.md)|[流对象 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|
+## <a name="applies-to"></a>应用到  
+
+:::row:::
+    :::column:::
+        [Mode 属性 (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)  
+        [Open 方法（ADO 记录）](../../../ado/reference/ado-api/open-method-ado-record.md)  
+    :::column-end:::
+    :::column:::
+        [Open 方法（ADO 流）](../../../ado/reference/ado-api/open-method-ado-stream.md)  
+        [流对象 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+    :::column-end:::
+:::row-end:::
