@@ -18,12 +18,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 794d2f682c5a32ee348d229cfd2413687a57843e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d70d9599dda2f71edff911ad42821fdf101b524c
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85637815"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363167"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>次要副本到主要副本读/写连接重定向（Always On 可用性组）
 
@@ -62,7 +62,7 @@ ms.locfileid: "85637815"
 
 默认情况下，未对副本设置读/写副本连接重定向。 次要副本处理连接请求的方式取决于是否将次要副本设置为允许连接以及连接字符串中的 `ApplicationIntent` 设置。 下表显示次要副本如何处理基于 `SECONDARY_ROLE (ALLOW CONNECTIONS = )` 和 `ApplicationIntent` 的连接。
 
-||`SECONDARY_ROLE (ALLOW CONNECTIONS = NO)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`|
+|`ApplicationIntent` 值|`SECONDARY_ROLE (ALLOW CONNECTIONS = NO)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`|
 |-----|-----|-----|-----|
 |`ApplicationIntent=ReadWrite`<br/> 默认|连接失败|连接失败|连接成功<br/>读取成功<br/>写入失败|
 |`ApplicationIntent=ReadOnly`|连接失败|连接成功|连接成功
@@ -73,7 +73,7 @@ ms.locfileid: "85637815"
 
 设置读/写连接重定向后，副本处理连接请求的行为方式有所不同。 连接行为仍然取决于 `SECONDARY_ROLE (ALLOW CONNECTIONS = )` 和 `ApplicationIntent` 设置。 下表显示包含 `READ_WRITE_ROUTING` 集的次要副本如何处理基于 `SECONDARY_ROLE (ALLOW CONNECTIONS = )` 和 `ApplicationIntent` 的连接。
 
-||`SECONDARY_ROLE (ALLOW CONNECTIONS = NO)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`|
+|`ApplicationIntent` 值|`SECONDARY_ROLE (ALLOW CONNECTIONS = NO)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`|
 |-----|-----|-----|-----|
 |`ApplicationIntent=ReadWrite`<br/>默认|连接失败|连接失败|连接路由到主要副本|
 |`ApplicationIntent=ReadOnly`|连接失败|连接成功|连接成功

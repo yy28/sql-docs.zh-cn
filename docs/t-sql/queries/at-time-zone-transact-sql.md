@@ -16,16 +16,16 @@ ms.assetid: 311f682f-7f1b-43b6-9ea0-24e36b64f73a
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: a315658aa6d4278e12dbccd13bfa4817dec36976
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: e27399d2decb00317895017f8a375deb89581d05
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807881"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395070"
 ---
 # <a name="at-time-zone-transact-sql"></a>AT TIME ZONE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 将 inputdate 转换为目标时区中相应的 datetimeoffset 值。 如果所提供的 inputdate 没有偏移信息，则函数应用时区偏移时会假设 inputdate 值位于目标时区中 。 如果 inputdate 是作为 datetimeoffset 值提供的，则 AT TIME ZONE 子句会使用时区转换规则将其转换到目标时区中 。  
 

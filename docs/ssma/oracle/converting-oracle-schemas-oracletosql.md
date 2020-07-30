@@ -13,12 +13,12 @@ ms.assetid: e021182d-31da-443d-b110-937f5db27272
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: 5eaf0970f5bc7d3aef49e83906a32295e9138cd9
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: 844d602168c063c90034469466ade816431481d4
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293574"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395162"
 ---
 # <a name="converting-oracle-schemas-oracletosql"></a>转换 Oracle 架构 (OracleToSQL)
 连接到 Oracle、连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并设置项目和数据映射选项后，可以将 Oracle 数据库对象转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库对象。  
@@ -34,9 +34,8 @@ ms.locfileid: "84293574"
 ## <a name="conversion-results"></a>转换结果  
 下表显示了转换哪些 Oracle 对象以及生成的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象：  
   
-|||  
-|-|-|  
 |Oracle 对象|生成的 SQL Server 对象|  
+|-|-|  
 |函数|如果函数可以直接转换为，则 [!INCLUDE[tsql](../../includes/tsql-md.md)] SSMA 将创建一个函数。<br /><br />在某些情况下，该函数必须转换为存储过程。 在这种情况下，SSMA 创建存储过程和调用存储过程的函数。|  
 |过程|如果可以将该过程直接转换为 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，则 SSMA 将创建一个存储过程。<br /><br />在某些情况下，必须在自治事务中调用存储过程。 在这种情况下，SSMA 创建两个存储过程：一个用于实现过程，另一个用于调用实现存储过程。|  
 |包|SSMA 创建一组由类似对象名称统一的存储过程和函数。|  
@@ -114,7 +113,7 @@ ms.locfileid: "84293574"
   
 -   可以从迁移中排除对象。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "元数据资源管理器" 和 "Oracle 元数据资源管理器" 中，清除项旁的复选框，然后将对象加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Oracle 并从 Oracle 迁移数据。  
   
-## <a name="next-step"></a>后续步骤  
+## <a name="next-step"></a>下一步  
 迁移过程的下一步是将已[转换的对象加载到 SQL Server 中](loading-converted-database-objects-into-sql-server-oracletosql.md)。  
   
 ## <a name="see-also"></a>另请参阅  

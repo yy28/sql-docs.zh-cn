@@ -17,16 +17,16 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 28a61eb05b015be7eee85a7376a3c0ce84cac27f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 27f83649fc0549854fa131bf1a859f0c20ebf65c
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112863"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394782"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 **OPENJSON** 是一种表值函数，可分析 JSON 文本，并以行和列的形式从 JSON 输入返回对象和属性。 换句话说，**OPENJSON** 对 JSON 文档提供行集视图。 可以显式指定行集中的列以及用于填充列的 JSON 属性路径。 由于 **OPENJSON** 返回一组行，因此可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的 `FROM` 子句中使用 **OPENJSON**，就如同可以使用任何其他表、视图或表值函数一样。  
   

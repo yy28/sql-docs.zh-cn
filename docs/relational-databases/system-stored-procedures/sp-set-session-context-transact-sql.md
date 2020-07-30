@@ -18,15 +18,15 @@ ms.assetid: 7a3a3b2a-1408-4767-a376-c690e3c1fc5b
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a57bf4acff6f8d0d08f86852de5ecc0411211c67
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 11a3bae7cc6cbf025370a947c8fa3194f978d419
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68104395"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394500"
 ---
 # <a name="sp_set_session_context-transact-sql"></a>sp_set_session_context （Transact-sql）
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 在会话上下文中设置键值对。  
   
@@ -42,13 +42,13 @@ sp_set_session_context [ @key= ] N'key', [ @value= ] 'value'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @key= ]N'key'  
+ [ @key =] N'key '  
  要设置的键，类型为**sysname**。 最大密钥大小为128个字节。  
   
- [ @value= ]负值  
+ [ @value =] "value"  
  **Sql_variant**类型的指定键的值。 如果将值设置为 NULL，则释放内存。 最大大小为 8,000 个字节。  
   
- [ @read_only= ]{0 | 1}  
+ [ @read_only =] {0 | 1}  
  类型**位**的标志。 如果为1，则无法在此逻辑连接上再次更改指定键的值。 如果为0（默认值），则该值可以更改。  
   
 ## <a name="permissions"></a>权限  
@@ -78,7 +78,7 @@ EXEC sys.sp_set_session_context @key = N'user_id', @value = 4, @read_only = 1;
 ## <a name="see-also"></a>另请参阅  
  [CURRENT_TRANSACTION_ID &#40;Transact-sql&#41;](../../t-sql/functions/current-transaction-id-transact-sql.md)   
  [SESSION_CONTEXT &#40;Transact-sql&#41;](../../t-sql/functions/session-context-transact-sql.md)   
- [行级别安全性](../../relational-databases/security/row-level-security.md)   
+ [行级安全性](../../relational-databases/security/row-level-security.md)   
  [CONTEXT_INFO &#40;Transact-sql&#41;](../../t-sql/functions/context-info-transact-sql.md)   
  [SET CONTEXT_INFO (Transact-SQL)](../../t-sql/statements/set-context-info-transact-sql.md)  
   

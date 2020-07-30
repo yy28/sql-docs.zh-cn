@@ -21,15 +21,15 @@ ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e90e93d0c56d96cc88b5be0eeed8680bf29c83cf
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 484ae60390202e09625166a266c3972d927086f9
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834104"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395136"
 ---
 # <a name="sysquery_store_runtime_stats-transact-sql"></a>sys. query_store_runtime_stats （Transact-sql）
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   包含有关查询的运行时执行统计信息的信息。  
   
@@ -93,11 +93,11 @@ ms.locfileid: "82834104"
 |**min_log_bytes_used**|**bigint**|查询计划在聚合间隔内使用的数据库日志中的最小字节数。<br/>**注意：** Azure SQL 数据仓库将始终返回零（0）。|
 |**max_log_bytes_used**|**bigint**|查询计划在聚合间隔内使用的数据库日志中的最大字节数。<br/>**注意：** Azure SQL 数据仓库将始终返回零（0）。|
 |**stdev_log_bytes_used**|**float**|查询计划在聚合间隔内使用的数据库日志中的字节数的标准偏差。<br/>**注意：** Azure SQL 数据仓库将始终返回零（0）。|  
-|**avg_tempdb_space_used**|**float**|聚合间隔内查询计划的平均页读取数。 （表示为读取的多个8KB 页）。<br><br/>**适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从开始 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] ）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。|
-|**last_tempdb_space_used**|**bigint**|聚合间隔内查询计划的最后页读取次数。 （表示为读取的多个8KB 页）。<br><br/>**适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从开始 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] ）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。|
-|**min_tempdb_space_used**|**bigint**|聚合间隔内查询计划的最小页读取数。 （表示为读取的多个8KB 页）。<br><br/>**适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从开始 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] ）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。|
-|**max_tempdb_space_used**|**bigint**|聚合间隔内查询计划的最大页读取数。（表示为读取的多个8KB 页）。<br><br/>**适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从开始 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] ）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。|
-|**stdev_tempdb_space_used**|**float**|查询计划在聚合间隔内的页读取标准偏差。 （表示为读取的多个8KB 页）。<br><br/>**适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从开始 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] ）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。|
+|**avg_tempdb_space_used**|**float**|聚合间隔内查询计划的平均页读取数。 （表示为读取的多个8KB 页）。<br><br/>**适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|
+|**last_tempdb_space_used**|**bigint**|聚合间隔内查询计划的最后页读取次数。 （表示为读取的多个8KB 页）。<br><br/>**适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|
+|**min_tempdb_space_used**|**bigint**|聚合间隔内查询计划的最小页读取数。 （表示为读取的多个8KB 页）。<br><br/>**适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|
+|**max_tempdb_space_used**|**bigint**|聚合间隔内查询计划的最大页读取数。（表示为读取的多个8KB 页）。<br><br/>**适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|
+|**stdev_tempdb_space_used**|**float**|查询计划在聚合间隔内的页读取标准偏差。 （表示为读取的多个8KB 页）。<br><br/>**适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|
 |**avg_page_server_io_reads**|**float**|聚合间隔内查询计划的页服务器 i/o 读取平均次数。 （表示为读取的多个8KB 页）。<br><br/>**适用于：** Azure SQL Database 超大规模</br>**注意：** Azure SQL 数据仓库、Azure SQL DB、MI （非超大规模）将始终返回零（0）。|
 |**last_page_server_io_reads**|**bigint**|聚合间隔内查询计划的最后页服务器 i/o 读取次数。 （表示为读取的多个8KB 页）。<br><br/>**适用于：** Azure SQL Database 超大规模</br>**注意：** Azure SQL 数据仓库、Azure SQL DB、MI （非超大规模）将始终返回零（0）。|
 |**min_page_server_io_reads**|**bigint**|聚合间隔内查询计划的最小页服务器 i/o 读取次数。 （表示为读取的多个8KB 页）。<br><br/>**适用于：** Azure SQL Database 超大规模</br>**注意：** Azure SQL 数据仓库、Azure SQL DB、MI （非超大规模）将始终返回零（0）。|
@@ -116,7 +116,7 @@ ms.locfileid: "82834104"
  [sys.query_store_wait_stats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
  [sys. query_store_runtime_stats_interval &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [相关视图、函数和过程](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [Transact-sql&#41;的目录视图 &#40;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [查询存储存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)    
+ [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [查询存储存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)    
  [Query Store 最佳实践](../../relational-databases/performance/best-practice-with-the-query-store.md)   
   
