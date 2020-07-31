@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: e7a3c58612761e046b71cddf35c87680bb6e9528
-ms.sourcegitcommit: f66804e93cf4a7624bfa10168edbf1ed9a83cb86
+ms.openlocfilehash: fd6563881127b7a5c1cf134711a52fdedde629c4
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83868376"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435154"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>使用 DMA 评估企业和合并评估报告
 
@@ -36,8 +36,8 @@ ms.locfileid: "83868376"
   - [Power BI 桌面](/power-bi/fundamentals/desktop-get-the-desktop)。
   - [Azure PowerShell 模块](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
 - 下载并解压缩：
-  - [DMA 报告 Power BI 模板](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/2/PowerBI-Reports.zip)。
-  - [LoadWarehouse 脚本](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/1/LoadWarehouse1.zip)。
+  - [DMA 报告 Power BI 模板](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/2/PowerBI-Reports.zip)。
+  - [LoadWarehouse 脚本](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/3/LoadWarehouse1.zip)。
 
 ## <a name="loading-the-powershell-modules"></a>加载 PowerShell 模块
 
@@ -46,7 +46,7 @@ ms.locfileid: "83868376"
 若要加载模块，请执行以下步骤：
 
 1. 导航到 C:\Program Files\WindowsPowerShell\Modules，并创建名为**DataMigrationAssistant**的文件夹。
-2. 打开[PowerShell 模块](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/4/PowerShell-Modules2.zip)，然后将它们保存到所创建的文件夹中。
+2. 打开[PowerShell 模块](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/1/PowerShell-Modules2.zip)，然后将它们保存到所创建的文件夹中。
 
       ![PowerShell 模块](../dma/media//dma-consolidatereports/dma-powershell-modules.png)
 
@@ -80,7 +80,6 @@ ms.locfileid: "83868376"
 >
 > 对于默认实例，请将实例名称设置为 MSSQLServer。
 
-
 使用 csv 文件导入数据时，请确保数据**实例名称**和**数据库名称**只有两列，并且这些列没有标头行。
 
  ![csv 文件内容](../dma/media//dma-consolidatereports/dma-csv-file-contents.png)
@@ -97,7 +96,7 @@ ms.locfileid: "83868376"
 - DatabaseName
 - AssessmentFlag
 
-![SQL Server 表内容](../dma/media//dma-consolidatereports/dma-sql-server-table-contents.png)
+![SQL Server 表内容](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-database-inventory.png)
 
 如果此数据库不在工具计算机上，请确保工具计算机具有与此 SQL Server 实例的网络连接。
 
@@ -105,44 +104,56 @@ ms.locfileid: "83868376"
 
 请记住，根据对象的数量和复杂性，评估可能会花费很长时间（小时 +），因此将评估划分为可管理的区块是明智之举。
 
+### <a name="if-using-an-instance-inventory"></a>如果使用实例清单
+
+创建名为**EstateInventory**的数据库和名为**InstanceInventory**的表。 包含此清单数据的表可以具有任意数量的列，只要存在以下四列：
+
+- ServerName
+- InstanceName
+- Port
+- AssessmentFlag
+
+![SQL Server 表内容](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-instance-inventory.png)
+
 ## <a name="running-a-scaled-assessment"></a>运行缩放评估
 
 将 PowerShell 模块加载到模块目录并创建清单后，需要通过打开 PowerShell 并运行 dmaDataCollector 函数来运行缩放评估。
- 
+
   ![dmaDataCollector 函数列表](../dma/media//dma-consolidatereports/dma-dmaDataCollector-function-listing.png)
 
 下表描述了与 dmaDataCollector 函数关联的参数。
 
-|参数  |说明 |
+|参数  |描述 |
 |---------|---------|
 |**getServerListFrom** | 你的清单。 可能的值为**SqlServer**和**CSV**。<br/>有关详细信息，请参阅[创建 SQL server 清点](#create-inventory)。 |
 |**csvPath** | CSV 清单文件的路径。  仅当**getServerListFrom**设置为**CSV**时使用。 |
 |**服务器** | 在**getServerListFrom**参数中使用**SqlServer**时清单的 SQL Server 实例名称。 |
-|**Database** | 承载库存表的数据库。 |
+|**databaseName** | 承载库存表的数据库。 |
+|**useInstancesOnly** | 位标志，用于指定是否使用实例列表进行评估。  如果设置为0，则 DatabaseInventory 表将用于生成评估目标列表。 |
 |**AssessmentName** | DMA 评估的名称。 |
-|**TargetPlatform** | 要执行的评估目标类型。  可能的值包括**AzureSQLDatabase**、 **SQLServer2012**、 **2014**、 **sqlserver2016-ssei-expr**、 **SQLServerLinux2017**、 **SQLServerWindows2017**和**ManagedSqlServer**。 |
+|**TargetPlatform** | 要执行的评估目标类型。  可能的值包括**AzureSQLDatabase**、 **ManagedSqlServer**、 **SQLServer2012**、 **2014**、 **sqlserver2016-ssei-expr**、 **SQLServerLinux2017**、 **SQLServerWindows2017**、 **SqlServerWindows2019**和**SqlServerLinux2019**。  |
 |**AuthenticationMethod** | 用于连接到要评估的 SQL Server 目标的身份验证方法。 可能的值为**和 sqlauth**和**WindowsAuth**。 |
 |**OutputLocation** | 要在其中存储 JSON 评估输出文件的目录。 评估可能需要很长时间，具体取决于要评估的数据库数和数据库中的对象数。 所有评估完成后，文件将写入。 |
 
 如果出现错误，则将终止此进程启动的命令窗口。  查看错误日志以确定失败的原因。
- 
+
   ![错误日志位置](../dma/media//dma-consolidatereports/dma-error-log-file-location.png)
 
 ## <a name="consuming-the-assessment-json-file"></a>使用评估 JSON 文件
 
 完成评估后，便可以将数据导入到 SQL Server 进行分析。 若要使用评估 JSON 文件，请打开 PowerShell 并运行 dmaProcessor 函数。
- 
+
   ![dmaProcessor 函数列表](../dma/media//dma-consolidatereports/dma-dmaProcessor-function-listing.png)
 
 下表描述了与 dmaProcessor 函数关联的参数。
 
-|参数  |说明 |
+|参数  |描述 |
 |---------|---------|
 |**processTo** | 将处理 JSON 文件的位置。 可能的值为**SQLServer**和**AzureSQLDatabase**。 |
 |**服务器** | 数据将处理到的 SQL Server 实例。  如果为**processTo**参数指定**AzureSQLDatabase** ，则仅包含 SQL Server 名称（不包括. database.windows.net）。 面向 Azure SQL 数据库时，系统将提示你提供两个登录名;第一种是 Azure 租户凭据，第二种是 Azure SQL Server 的管理员登录名。 |
 |**CreateDMAReporting** | 要创建的用于处理 JSON 文件的临时数据库。  如果指定的数据库已经存在，并且将此参数设置为1，则不会创建对象。  此参数可用于重新创建已删除的单个对象。 |
 |**CreateDataWarehouse** | 创建 Power BI 报表将使用的数据仓库。 |
-|**Database** | DMAReporting 数据库的名称。 |
+|**databaseName** | DMAReporting 数据库的名称。 |
 |**warehouseName** | 数据仓库数据库的名称。 |
 |**jsonDirectory** | 包含 JSON 评估文件的目录。  如果目录中有多个 JSON 文件，则逐个处理它们。 |
 
@@ -157,8 +168,8 @@ DmaProcessor 完成对评估文件的处理后，数据将加载到 ReportData �
     此脚本将从 DMAReporting 数据库中的 ReportData 表获取数据，并将其加载到仓库。  如果在此加载过程中出现任何错误，则这些错误可能是由于维度表中的条目丢失而导致的。
 
 2. 加载数据仓库。
- 
-      ![已加载 LoadWarehouse 内容](../dma/media//dma-consolidatereports/dma-LoadWarehouse-loaded.png)
+
+  ![已加载 LoadWarehouse 内容](../dma/media//dma-consolidatereports/dma-load-warehouse-loaded.png)
 
 ## <a name="set-your-database-owners"></a>设置数据库所有者
 
@@ -166,7 +177,7 @@ DmaProcessor 完成对评估文件的处理后，数据将加载到 ReportData �
 
 还可以使用 LoadWarehouse 脚本提供用于设置数据库所有者的基本 TSQL 语句。
 
-  ![LoadWarehouse 设置所有者](../dma/media//dma-consolidatereports/dma-LoadWarehouse-set-owners.png)
+  ![LoadWarehouse 设置所有者](../dma/media//dma-consolidatereports/dma-load-warehouse-set-owners.png)
 
 ## <a name="dma-reports"></a>DMA 报表
 
@@ -250,7 +261,7 @@ Power BI 报表中显示的详细信息如以下部分所示。
 - 尚未就绪
 
 ### <a name="issues-word-cloud"></a>颁发 Word Cloud
- 
+
   ![DMA 问题 WordCloud](../dma/media//dma-consolidatereports/dma-issues-word-cloud.png)
 
 此视觉对象显示了选择上下文（"所有"、"实例"、"数据库 [倍数"）中当前出现的问题。 屏幕上显示的字符越大，该类别中的问题就越多。 将鼠标指针悬停在某个字上将显示该类别中出现的问题数。
@@ -280,7 +291,7 @@ Power BI 报表中显示的详细信息如以下部分所示。
   ![DMA 修正计划报告](../dma/media//dma-consolidatereports/dma-remediation-plan-report.png)
 
 还可以通过使用 "**可视化筛选器**" 边栏选项卡中的筛选器自行使用修补计划报表来生成自定义修正计划。
- 
+
   ![DMA 修正计划报表筛选器选项](../dma/media//dma-consolidatereports/dma-remediation-plan-report-filter-options.png)
 
 ### <a name="script-disclaimer"></a>脚本声明
