@@ -20,15 +20,15 @@ ms.assetid: 45969884-cd61-48e8-aee5-c725c78e3e4c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 754c254a208adbb40a2efc44934bbcc40608ec85
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d27f44c0d0bcec96d6d4c0d5f4da63038485a1f7
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830788"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442561"
 ---
 # <a name="sysdm_db_xtp_hash_index_stats-transact-sql"></a>sys.dm_db_xtp_hash_index_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   这些统计信息可用来了解和优化存储桶计数。 它还可用于检测索引键具有许多重复项的情况。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "82830788"
   
 有关详细信息，请参阅[内存优化表的哈希索引](../../relational-databases/sql-server-index-design-guide.md#hash_index)。  
   
-|列名称|类型|说明|  
+|列名称|类型|描述|  
 |-----------------|----------|-----------------|  
 |object_id|**int**|父表的对象 ID。|  
 |xtp_object_id|**bigint**|内存优化表的 ID。|  
@@ -112,7 +112,7 @@ ms.locfileid: "82830788"
   ORDER BY [user_table], [internal_table_type], [index]; 
 ```
 
-请注意，不能更改内部表的索引 BUCKET_COUNT，因此应仅将此查询的输出视为 "信息性"。 因此不需要执行任何操作。  
+请注意，不能更改内部表的索引 BUCKET_COUNT，因此应仅将此查询的输出视为 "信息性"。 不需要执行任何操作。  
 
 此查询不应返回任何行，除非您使用的功能利用了内部表的哈希索引。 以下内存优化表包含列存储索引。 创建此表后，将看到内部表的哈希索引。
 

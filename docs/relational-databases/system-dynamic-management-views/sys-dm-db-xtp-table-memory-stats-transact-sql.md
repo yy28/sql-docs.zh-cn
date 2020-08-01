@@ -21,15 +21,15 @@ ms.assetid: ad0efc06-3d9c-4861-9dfa-a7a87822d0c8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f6ea40fa0a40e90b0ab31912bcda185cc21258b0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0fcac0218e78887aecb4d2ce7e6bbba4ebe24d0a
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830751"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442892"
 ---
 # <a name="sysdm_db_xtp_table_memory_stats-transact-sql"></a>sys.dm_db_xtp_table_memory_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   返回当前数据库中每个 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 表（用户和系统）的内存使用情况统计信息。 系统表具有负的对象 ID，并且用于为 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 引擎存储运行时信息。 与用户对象不同，系统表是内部的，并且只存在于内存中，因此，通过目录视图看不到它们。 系统表用于存储信息，例如存储中所有数据/差异文件的元数据、合并请求、要筛选行的差异文件的水印、已删除表以及用于恢复和备份的相关信息。 假定 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 引擎可具有最多 8,192 个数据和差异文件对，则对于大型内存中数据库，系统表占用的内存可能是几 MB。  
   

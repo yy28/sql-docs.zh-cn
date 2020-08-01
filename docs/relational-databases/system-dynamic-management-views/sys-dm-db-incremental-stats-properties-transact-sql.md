@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: aa0db893-34d1-419c-b008-224852e71307
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1f958e122277e28665b10ff27be4c0224574690d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 20e4f7f015cc5d1ced1802e192c36f6c86471f0b
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820896"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442922"
 ---
 # <a name="sysdm_db_incremental_stats_properties-transact-sql"></a>sys.dm_db_incremental_stats_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   返回当前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中指定数据库对象（表）的增量统计信息属性。 使用 `sys.dm_db_incremental_stats_properties` （包含分区号）类似于 `sys.dm_db_stats_properties` （用于非增量统计信息）。 
   
@@ -38,8 +38,8 @@ ms.locfileid: "82820896"
 sys.dm_db_incremental_stats_properties (object_id, stats_id)  
 ```  
   
-## <a name="arguments"></a>参数  
- *object_id*  
+## <a name="arguments"></a>自变量  
+ object_id  
  当前数据库中要请求其某个增量统计信息属性的对象的 ID。 *object_id* 是 **int**。  
   
  *stats_id*  
@@ -59,7 +59,7 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
 |unfiltered_rows|**bigint**|应用筛选表达式（用于筛选的统计信息）之前表中的总行数。 如果未筛选统计信息，则 unfiltered_rows 等于行列中返回的值。|  
 |modification_counter|**bigint**|自上次更新统计信息以来前导统计信息列（构建直方图的列）的总修改次数。<br /><br /> 此列不包含有关内存优化表的信息。|  
   
-## <a name="remarks"></a><a name="Remarks"></a> 备注  
+## <a name="remarks"></a><a name="Remarks"></a> 注释  
  `sys.dm_db_incremental_stats_properties` 在满足以下任一条件时将返回空的行集：  
   
 -   `object_id` 或 `stats_id` 为 NULL。   
@@ -86,8 +86,8 @@ SELECT * FROM sys.dm_db_incremental_stats_properties (object_id('PartitionTable'
 有关其他使用建议，请参阅  [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)。
   
 ## <a name="see-also"></a>另请参阅  
- [DBCC SHOW_STATISTICS &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
- [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
+ [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
+ [sys.stats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
  [与对象相关的动态管理视图和函数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)   
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
  [sys. dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   

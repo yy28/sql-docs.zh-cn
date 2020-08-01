@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 32746558-097b-4749-989e-519aadf7e3f4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e0b69deb64cc4ea04c007fd3d3328cb4154cc3e8
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b6b8c5c9a593177155f2f22d7dba4e38515e0dce
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242614"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472603"
 ---
 # <a name="objectstateenum"></a>ObjectStateEnum
 指定对象是打开还是关闭，连接到数据源，执行命令，或检索数据。  
   
-|返回的常量|值|说明|  
+|返回的常量|值|描述|  
 |--------------|-----------|-----------------|  
 |**adStateClosed**|0|指示对象已关闭。|  
 |**adStateOpen**|1|指示对象已打开。|  
@@ -44,11 +44,7 @@ ms.locfileid: "87242614"
 |AdoEnums.ObjectState.EXECUTING|  
 |AdoEnums.ObjectState.FETCHING|  
   
-## <a name="applies-to"></a>应用到  
-  
-|||  
-|-|-|  
-|||
+## <a name="applies-to"></a>适用于  
 
 :::row:::
     :::column:::
