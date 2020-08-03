@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 951a6967e51d877efdd68b4f4a6f118c5ec1e6e7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 08ef8be56e34d7f0e62a02c5a9819f0f5c41344b
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897344"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362666"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>监视 Always On 可用性组的性能
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -26,14 +26,13 @@ ms.locfileid: "85897344"
   
  ![可用性组数据同步](media/always-onag-datasynchronization.gif "可用性组数据同步")  
   
-|||||  
+|序列|步骤说明|注释|有用的指标|  
 |-|-|-|-|  
-|**序列**|**步骤说明**|**注释**|**有用的指标**|  
 |1|日志生成|日志数据已刷新到磁盘。 必须将此日志复制到次要副本。 日志记录会进入发送队列。|[SQL Server:Database > Log bytes flushed\sec](~/relational-databases/performance-monitor/sql-server-databases-object.md)|  
 |2|捕获|捕获每个数据库的日志，并将其发送到相应的伙伴队列（每个数据库/副本对一个）。 只要已连接可用性副本且数据移动未因任何原因暂停，此捕获进程便会持续运行，并且数据库/副本对显示为“正在同步”或“已同步”。 如果捕获进程不能以足够快的速度扫描消息并将其排入队列，则会构建日志发送队列。|[SQL Server:Availability Replica > Bytes Sent to Replica\sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md)，这是为该可用性副本排队的所有数据库消息总和的聚合。<br /><br /> 主要副本上的 [log_send_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB) 和 [log_bytes_send_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)（KB/秒）。|  
 |3|Send|每个数据库副本队列中的消息均取消排队，并跨网络发送到相应的次要副本。|[SQL Server:Availability Replica > Bytes sent to transport\sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md)|  
 |4|接收和缓存|每个辅助副本都会接收并缓存消息。|性能计数器 [SQL Server:Availability Replica > Log Bytes Received/sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md)|  
-|5|强化|在次要副本上刷新日志以进行强化。 日志刷新后，会将确认发送回主要副本。<br /><br /> 强化日志后，即可避免数据丢失。|性能计数器 [SQL Server:Database > Log Bytes Flushed/sec](~/relational-databases/performance-monitor/sql-server-databases-object.md)<br /><br /> 等待类型 [HADR_LOGCAPTURE_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  
+|5|强化|在次要副本上刷新日志以进行强化。 日志刷新后，系统会将确认消息发送回主要副本。<br /><br /> 强化日志后，即可避免数据丢失。|性能计数器 [SQL Server:Database > Log Bytes Flushed/sec](~/relational-databases/performance-monitor/sql-server-databases-object.md)<br /><br /> 等待类型 [HADR_LOGCAPTURE_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  
 |6|重做|重做次要副本上的刷新页面。 页面在等待重做时会保留在重做队列中。|[SQL Server:Database Replica > Redone Bytes/sec](~/relational-databases/performance-monitor/sql-server-database-replica.md)<br /><br /> [redo_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB) 和 [redo_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)。<br /><br /> 等待类型 [REDO_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  
   
 ##  <a name="flow-control-gates"></a>流控制门  
@@ -41,13 +40,12 @@ ms.locfileid: "85897344"
   
  在主要副本上捕获日志后，它们会受制于两个级别的流控制，如下表所示。  
   
-|||||  
+|级别|门数|消息数量|有用的指标|  
 |-|-|-|-|  
-|**Level**|**门数**|**消息数量**|**有用的指标**|  
-|传输|每个可用性副本 1 个|8192|扩展事件 database_transport_flow_control_action |  
-|数据库|每个可用性数据库 1 个|11200 (x64)<br /><br /> 1600 (x86)|[DBMIRROR_SEND](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)<br /><br /> 扩展事件 hadron_database_flow_control_action |  
+|传输|每个可用性副本 1 个|8192|扩展事件 database_transport_flow_control_action|  
+|数据库|每个可用性数据库 1 个|11200 (x64)<br /><br /> 1600 (x86)|[DBMIRROR_SEND](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)<br /><br /> 扩展事件 hadron_database_flow_control_action|  
   
- 达到任一门的消息阈值后，则不再向特定副本或为特定数据库发送消息日志。 接收到已发送消息的确认消息，以使发送的消息数量低于阈值后，可以发送消息。  
+ 达到任一门的消息阈值后，则不再向特定副本或为特定数据库发送消息日志。 接收到已发送消息的确认消息，以使发送的消息数量低于阈值后，便可以发送消息了。  
   
  除了流控制门，还有另一个因素可阻止发送日志消息。 副本同步可确保按日志序列号 (LSN) 的顺序来发送和应用消息。 发送日志消息前，其 LSN 还会检查最低已确认的 LSN 号，确保其小于阈值之一（具体取决于消息类型）。 如果两个 LSN 号之间的差距大于阈值，则不会发送消息。 差距再次低于阈值后，则会发送消息。  
   
@@ -346,7 +344,7 @@ ms.locfileid: "85897344"
   
     -   **字段**：`Add(@EstimatedRecoveryTime, 60)`  
   
-    -   **运算符**：<=   
+    -   **运算符**：<=  
   
     -   **值**：`600`  
   
@@ -360,7 +358,7 @@ ms.locfileid: "85897344"
   
     -   **字段**：`@EstimatedDataLoss`  
   
-    -   **运算符**：<=   
+    -   **运算符**：<=  
   
     -   **值**：`3600`  
   
@@ -374,7 +372,7 @@ ms.locfileid: "85897344"
   
     -   **字段**：`@LocalReplicaRole`  
   
-    -   **运算符**：=   
+    -   **运算符**：=  
   
     -   **值**：`Primary`  
   
@@ -388,19 +386,19 @@ ms.locfileid: "85897344"
   
         -   **检查条件**：`RTO`  
   
-        -   **针对目标**：IsPrimaryReplica AvailabilityGroup 中的每个 DatabaseReplicaState    
+        -   **针对目标**：IsPrimaryReplica AvailabilityGroup 中的每个 DatabaseReplicaState  
   
              此设置确保仅在本地可用性副本是其主要副本的可用性组上对策略进行评估。  
   
         -   **评估模式**：**按计划**  
   
-        -   **计划**：CollectorSchedule_Every_5min   
+        -   **计划**：CollectorSchedule_Every_5min  
   
-        -   **已启用**：已选中   
+        -   **已启用**：已选中  
   
     -   “说明”页  ：  
   
-        -   **类别**：可用性数据库警告   
+        -   **类别**：可用性数据库警告  
   
              通过此设置，策略评估结果可显示在 Always On 仪表板中。  
   
@@ -416,17 +414,17 @@ ms.locfileid: "85897344"
   
         -   **检查条件**：`RPO`  
   
-        -   **针对目标**：IsPrimaryReplica AvailabilityGroup 中的每个 DatabaseReplicaState    
+        -   **针对目标**：IsPrimaryReplica AvailabilityGroup 中的每个 DatabaseReplicaState  
   
         -   **评估模式**：**按计划**  
   
-        -   **计划**：CollectorSchedule_Every_30min   
+        -   **计划**：CollectorSchedule_Every_30min  
   
-        -   **已启用**：已选中   
+        -   **已启用**：已选中  
   
     -   “说明”页  ：  
   
-        -   **类别**：可用性数据库警告   
+        -   **类别**：可用性数据库警告  
   
         -   **说明**：可用性数据库已超过时间为 1 小时的 RPO。  应立即调查可用性副本上的性能问题。  
   

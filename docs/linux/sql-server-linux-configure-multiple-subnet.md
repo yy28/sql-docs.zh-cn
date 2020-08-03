@@ -2,19 +2,19 @@
 title: 配置多子网可用性组和 FCI (Linux)
 description: 了解如何为 Linux 上的 SQL Server 配置多子网 Always On 可用性组和故障转移群集实例 (FCI)。
 ms.custom: seo-lt-2019
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: vanto
-ms.date: 12/01/2017
+author: liweiSecurity
+ms.author: liweiyin
+ms.reviewer: VanMSFT
+ms.date: 07/28/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 3a18e668d1a62a74396530e37243d75a5a86aee2
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 5abe1d99f753e0f41ca74a0864079293800dc1df
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196962"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362962"
 ---
 # <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>配置多子网 Always On 可用性组和故障转移群集实例
 
@@ -57,28 +57,42 @@ ms.locfileid: "86196962"
 2. 编辑生成的文件。 查找 `<resources>` 部分。 你会看到为 AG 或 FCI 创建的各种资源。 查找与 IP 地址相关联的资源。 添加 `<instance attributes>` 部分，其中包含第二个 IP 地址的信息，该 IP 地址位于现有 IP 地址的上方或下方，但在 `<operations>` 前。 与以下语法类似：
 
     ```xml
-    <instance attributes id="<NameForAttribute>" score="<Score>">
-        <rule id="<RuleName>" score="INFINITY">
-            <expression id="<ExpressionName>" attribute="\#uname" operation="eq" value="<NodeNameInSubnet2>" />
-        </rule>
-        <nvpair id="<NameForSecondIP>" name="ip" value="<IPAddress>"/>
-        <nvpair id="<NameForSecondIPNetmask>" name="cidr\_netmask" value="<Netmask>"/>
+    <instance attributes id="<NameForAttribute>">
+        <nvpair id="<NameForIP>" name="ip" value="<IPAddress>"/>
     </instance attributes>
     ```
     
-    其中，NameForAttribute 是该属性的唯一名称，Score 是分配给该属性的数字（这一数字必须大于分配给主子网的数字），RuleName 是规则的名称，ExpressionName 是表达式的名称，NodeNameInSubnet2 是另一子网中节点的名称，NameForSecondIP 是与第二个 IP 地址相关联的名称，IPAddress 是第二个子网的 IP 地址，NameForSecondIPNetmask 是与网络掩码关联的名称，Netmask 是第二个子网的网络掩码        。
+    其中，NameForAttribute 是此属性的唯一名称，NameForIP 是与 IP 地址关联的名称，IPAddress 是第二个子网的 IP 地址  。
     
     下面显示了一个示例。
     
     ```xml
-    <instance attributes id="Node3-2nd-IP" score="2">
-        <rule id="Subnet2-IP" score="INFINITY">
-            <expression id="Subnet2-Node" attribute="\#uname" operation="eq" value="Node3" />
-        </rule>
-        <nvpair id="IP-In-Subnet-2" name="ip" value="192.168.2.102"/>
-        <nvpair id="Netmask-For-IP2" name="cidr\_netmask" value="24" />
+    <instance attributes id="virtualip-instance_attributes">
+        <nvpair id="virtualip-instance_attributes-ip" name="ip" value="192.168.1.102"/>
     </instance attributes>
     ```
+    
+    默认情况下，导出的 CIB XML 文件中只有一个 <instance/>。 假设有两个子网，你只需有两个 <instance/> 条目即可。
+    下例展示了两个子网的条目
+    
+    ```xml
+    <instance attributes id="virtualip-instance_attributes1">
+        <rule id="Subnet1-IP" score="INFINITY" boolean-op="or">
+            <expression id="Subnet1-Node1" attribute="#uname" operation="eq" value="Node1" />
+            <expression id="Subnet1-Node2" attribute="#uname" operation="eq" value="Node2" />
+        </rule>
+        <nvpair id="IP-In-Subnet1" name="ip" value="192.168.1.102"/>
+    </instance attributes>
+    <instance attributes id="virtualip-instance_attributes2">
+        <rule id="Subnet2-IP" score="INFINITY">
+            <expression id="Subnet2-Node1" attribute="#uname" operation="eq" value="Node3" />
+        </rule>
+        <nvpair id="IP-In-Subnet2" name="ip" value="192.168.2.102"/>
+    </instance attributes>
+    ```
+   
+   如果子网具有多个服务器，将使用 'boolean-op="or"'。
+
 
 3. 导入修改后的 CIB，重新配置 Pacemaker。
 
@@ -99,6 +113,11 @@ ms.locfileid: "86196962"
 ### <a name="check-and-verify-failover"></a>检查并验证故障转移
 
 1. CIB 成功应用更新的配置后，请在 Pacemaker 中对与 IP 地址资源关联的 DNS 名称执行 Ping 命令。 结果应反映与当前承载 AG 或 FCI 的子网关联的 IP 地址。
+
 2. 阻止 AG 或 FCI 转移到另一个子网。
+
 3. AG 或 FCI 完全联机后，对与 IP 地址关联的 DNS 名称执行 Ping 命令。 结果应反映第二个子网中的 IP 地址。
+
 4. 如果需要，请阻止 AG 或 FCI 回到原始子网。
+
+下面的 CSS 帖子显示了如何为三个子网配置 CIB，请查看详细信息：[通过修改 CIB 配置多子网 AlwaysOn 可用性组](https://techcommunity.microsoft.com/t5/sql-server-support/configure-multiple-subnet-alwayson-availability-groups-by/ba-p/1544838)。

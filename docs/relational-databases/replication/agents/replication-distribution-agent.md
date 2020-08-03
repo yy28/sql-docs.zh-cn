@@ -17,12 +17,12 @@ ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 51a34db68f77193c42662476656d46e5fa2f6092
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c9e762060e3afdc5df7802249e99075de66ef751
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87109407"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395018"
 ---
 # <a name="replication-distribution-agent"></a>复制分发代理
 [!INCLUDE[sql-asdb](../../../includes/applies-to-version/sql-asdb.md)]
@@ -110,7 +110,7 @@ distrib [-?]
  包含订阅的初始快照的文件夹路径。  
   
  **-BcpBatchSize** _bcp_batch_size_  
- 在一次大容量复制操作中发送的行数。  执行 **bcp in** 操作时，批的大小为要作为一个事务发送到服务器的行数，并且也是分发代理记录 bcp 进度消息之前必须发送的行数。 当执行 **bcp out** 操作时，将使用固定批大小 **1000** 。  
+ 在一次大容量复制操作中发送的行数。 执行 **bcp in** 操作时，批的大小为要作为一个事务发送到服务器的行数，并且也是分发代理记录 bcp 进度消息之前必须发送的行数。 当执行 **bcp out** 操作时，将使用固定批大小 **1000** 。  
   
  **-CommitBatchSize** _commit_batch_size_  
  发出 COMMIT 语句前要发给订阅服务器的事务数。 默认值为 100，最大值为 10000。
@@ -133,10 +133,10 @@ distrib [-?]
  **-DistributorPassword** _distributor_password_  
  分发服务器密码。  
   
- **-DistributorSecurityMode** [ **0**| **1**]  
+ -DistributorSecurityMode [ 0\| 1]    
  指定分发服务器的安全模式。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 值为 0，表示为  身份验证模式，值为 1，表示为 Windows 身份验证模式（默认）。  
   
- **-EncryptionLevel** [ **0** | **1** | **2** ]  
+ -EncryptionLevel [ 0 \| 1 \| 2 ]     
  是分发代理在建立连接时使用的传输层安全性 (TLS)（旧称为“安全套接字层 (SSL)”）加密的级别。  
   
 |EncryptionLevel 值|说明|  
@@ -157,10 +157,10 @@ distrib [-?]
  为扩展事件 XML 配置文件指定路径和文件名。 通过该扩展事件 XML 配置文件，您可以配置会话并且启用事件跟踪。  
   
  **-FileTransferType** [ **0**| **1**]  
- 指定文件传输类型。  值为 **0** ，表示 UNC（通用命名约定），值为 1，表示 FTP（文件传输协议）。  
+ 指定文件传输类型。 值为 **0** ，表示 UNC（通用命名约定），值为 1，表示 FTP（文件传输协议）。  
   
  **-FtpAddress** _ftp_address_  
- 分发服务器的 FTP 服务网络地址。  未指定该参数时，使用 DistributorAddress。  如果未指定 **DistributorAddress** ，将使用 Distributor。  
+ 分发服务器的 FTP 服务网络地址。 未指定该参数时，使用 DistributorAddress。 如果未指定 **DistributorAddress** ，将使用 Distributor。  
   
  **-FtpPassword** _ftp_password_  
  用于连接到 FTP 服务的用户密码。  
@@ -169,9 +169,9 @@ distrib [-?]
  分发服务器 FTP 服务的端口号。 如果不指定，则使用 FTP 服务的默认端口号 (21)。  
   
  **-FtpUserName**  _ftp_user_name_  
- 用于连接到 FTP 服务的用户名。  如果不指定，则使用 anonymous。  
+ 用于连接到 FTP 服务的用户名。 如果不指定，则使用 anonymous。  
   
- **-HistoryVerboseLevel** [ **0** | **1** | **2** | **3** ]  
+ -HistoryVerboseLevel [ 0 \| 1 \| 2 \| 3 ]      
  指定分发操作期间记录的历史信息量。 选择 1 可将历史日志记录对性能的影响减小到最低限度。  
   
 |HistoryVerboseLevel 值|说明|  
@@ -191,10 +191,10 @@ distrib [-?]
  登录超时前等待的秒数。 默认值为 15 秒。  
   
  **-MaxBcpThreads** _number_of_threads_  
- 指定可以并行执行的大容量复制操作的数量。 同时存在的线程和 ODBC 连接的最大数量为 **MaxBcpThreads** 或显示在分发数据库中同步事务中的大容量复制请求数中较小的那一个。 **MaxBcpThreads** 的值必须大于 **0** ，并且不存在任何硬编码的上限。  默认值是处理器数目的 **2**倍，最大值为 8。 应用于使用并发快照选项在发布服务器上生成的快照时，不管为 **MaxBcpThreads**指定了什么数值，都将使用一个线程。  
+ 指定可以并行执行的大容量复制操作的数量。 同时存在的线程和 ODBC 连接的最大数量为 **MaxBcpThreads** 或显示在分发数据库中同步事务中的大容量复制请求数中较小的那一个。 **MaxBcpThreads** 的值必须大于 **0** ，并且不存在任何硬编码的上限。 默认值是处理器数目的 **2**倍，最大值为 8。 应用于使用并发快照选项在发布服务器上生成的快照时，不管为 **MaxBcpThreads**指定了什么数值，都将使用一个线程。  
   
  **-MaxDeliveredTransactions** _number_of_transactions_  
- 一次同步期间应用于订阅服务器的推送事务或请求事务的最大数量。  值为 0，表示最大值为无穷多个事务。 订阅服务器可使用其他值缩短从发布服务器请求的同步的持续时间。  
+ 一次同步期间应用于订阅服务器的推送事务或请求事务的最大数量。 值为 0，表示最大值为无穷多个事务。 订阅服务器可使用其他值缩短从发布服务器请求的同步的持续时间。  
   
 > [!NOTE]  
 >  如果同时指定了 -MaxDeliveredTransactions 和 -Continuous，分发代理将传送指定数目的事务，然后停止（即使指定了 -Continuous）。 在作业完成后，您必须重新启动分发代理。  
@@ -217,7 +217,7 @@ distrib [-?]
  代理输出文件的路径。 如果未提供文件名，则向控制台发送该输出。 如果指定的文件名已存在，会将输出追加到该文件。  
   
  **-OutputVerboseLevel** [ **0**| **1**| **2**]  
- 指定输出是否应提供详细内容。 如果详细级别为 0，则只输出错误消息。 如果详细级别为 1，则输出所有进度报告消息。  如果详细级别为 2（默认），则输出所有错误消息和进度消息，这对调试很有帮助。  
+ 指定输出是否应提供详细内容。 如果详细级别为 0，则只输出错误消息。 如果详细级别为 1，则输出所有进度报告消息。 如果详细级别为 2（默认），则输出所有错误消息和进度消息，这对调试很有帮助。  
   
  **-PacketSize** _packet_size_  
  数据包大小（按字节计）。 默认值为 4096（字节）。  
@@ -250,7 +250,7 @@ distrib [-?]
  订阅服务器密码。 如果 **SubscriberSecurityMode** 为 **0** （对于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证），则必须指定此参数。  
   
  **-SubscriberSecurityMode** [ **0**| **1**]  
- 指定订阅服务器的安全模式。  值为 0 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，表示为  身份验证，值为 1，表示为 Windows 身份验证模式（默认）。  
+ 指定订阅服务器的安全模式。 值为 0 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，表示为  身份验证，值为 1，表示为 Windows 身份验证模式（默认）。  
   
  **-SubscriberType** [ **0**| **1**| **3**]  
  指定分发代理使用的订阅服务器连接类型。  
@@ -261,7 +261,7 @@ distrib [-?]
 |**1**|ODBC 数据源|  
 |**3**|OLE DB 数据源|  
   
- **-SubscriptionStreams** [**0**|**1**|**2**|...**64**]  
+ -SubscriptionStreams [0\|1\|2\|...64]      
  每个分发代理允许的连接数，用于将成批更改并行应用于订阅服务器，同时保留在使用单线程时具有的多种事务特征。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 对于  发布服务器，支持介于 1 到 64 之间的值。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 只有当发布服务器和分发服务器均在  或更高版本上运行时，才支持此参数。 对于非 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器或对等订阅，不支持此参数或者参数必须为 0。  
   
 > [!NOTE]  
@@ -277,7 +277,7 @@ distrib [-?]
  在给定订阅服务器上生成或使用的订阅表的名称。 如果未指定，将使用 [MSreplication_subscriptions (Transact-SQL)](../../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) 表。 可将此选项用于不支持长文件名的数据库管理系统 (DBMS)。  
   
  **-SubscriptionType** [ **0**| **1**| **2**]  
- 指定分发的订阅类型。  值为 **0** ，表示推送订阅，值为 **1** ，表示请求订阅，值为 2，表示匿名订阅。  
+ 指定分发的订阅类型。 值为 **0** ，表示推送订阅，值为 **1** ，表示请求订阅，值为 2，表示匿名订阅。  
   
  **-TransactionsPerHistory** [ **0**| **1**|...**10000**]  
  指定历史日志记录的事务间隔。 如果自历史日志记录上一实例之后的已提交事务数大于此选项，将记录历史记录消息。 默认值为 100。 值 **0** 表示无限 **TransactionsPerHistory**。 See the preceding **–MessageInterval**parameter.  
@@ -302,7 +302,7 @@ distrib [-?]
   
 |更新的内容|  
 |---------------------|  
-| 添加了 -ExtendedEventConfigFile 参数。|  
+|添加了 -ExtendedEventConfigFile 参数。|  
 |添加了 -MultiSubnetFailover 参数。|  
   
 ## <a name="see-also"></a>另请参阅  

@@ -1,6 +1,6 @@
 ---
 title: 用户和工作区设置
-description: 如何通过修改用户和工作区设置来自定义 Azure Data Studio。
+description: 了解如何根据自己的喜好使用各项设置来自定义 Azure Data Studio 的编辑器、用户界面和功能行为。
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: azure-data-studio
@@ -9,12 +9,12 @@ ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 00c7248050d3bf7e0d5d31df6a1e628dbcc03605
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 71f1f27bc58f64d3a1bcf8bcc3f8e96594e2e771
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758386"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411203"
 ---
 # <a name="modify-user-and-workspace-settings"></a>修改用户和工作区设置
 

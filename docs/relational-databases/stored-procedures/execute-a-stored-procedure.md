@@ -1,5 +1,6 @@
 ---
 title: 执行存储过程 | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL 在 SQL Server 2019 (15.x) 中执行存储过程。
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ ms.assetid: a0b1337d-2059-4872-8c62-3f967d8b170f
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 34ee89bdbd6e87aef9691795099cb61b17413a6a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 0dc360ab3faf724830f61b4572cff93425203ec4
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000991"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332608"
 ---
 # <a name="execute-a-stored-procedure"></a>执行存储过程
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -135,7 +136,7 @@ ms.locfileid: "86000991"
   
 2.  展开所需的数据库，然后依次展开 **“可编程性”** 和 **“存储过程”** 。  
   
-3.  右键单击所需的用户定义存储过程，然后单击“执行存储过程”  。  
+3.  右键单击所需的用户定义存储过程，然后单击“执行存储过程”。  
   
 4.  在 **“执行过程”** 对话框中，为每个参数指定一个值以及它是否应传递 Null 值。  
   
@@ -164,7 +165,7 @@ ms.locfileid: "86000991"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例演示如何执行应有一个参数的存储过程。 该示例执行 `uspGetEmployeeManagers` 存储过程，并将值  `6` 指定为 `@EmployeeID` 参数。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例演示如何执行应有一个参数的存储过程。 该示例执行 `uspGetEmployeeManagers` 存储过程，并将值  `6` 指定为 `@EmployeeID` 参数。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -179,7 +180,7 @@ GO
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例演示如何使用 [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) 设置过程自动执行。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例演示如何使用 [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) 设置过程自动执行。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -195,7 +196,7 @@ EXEC sp_procoption @ProcName = '<procedure name>'
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例说明如何使用 [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) 阻止过程自动执行。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例说明如何使用 [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) 阻止过程自动执行。  
   
 ```sql  
 USE AdventureWorks2012;  

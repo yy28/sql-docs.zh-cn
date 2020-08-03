@@ -1,6 +1,6 @@
 ---
 title: 使用 Windows 身份验证 (Kerberos) 连接 SQL Server
-description: 了解如何启用 Kerberos 以对 Azure Data Studio 使用 Active Directory 身份验证
+description: 了解如何使用 Microsoft Kerberos 集成身份验证将 Azure Data Studio 连接到 SQL Server。
 ms.prod: azure-data-studio
 ms.technology: ''
 author: markingmyname
@@ -9,12 +9,12 @@ ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: c2e6b303217d420d439d510fc3fc24886657684b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 325d066ec88045380c45dc2784e6766a4f549757
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774662"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411153"
 ---
 # <a name="connect-azure-data-studio-to-your-sql-server-using-windows-authentication---kerberos"></a>使用 Windows 身份验证将 Azure Data Studio 连接到 SQL Server - Kerberos
 

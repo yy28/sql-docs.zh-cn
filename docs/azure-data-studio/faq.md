@@ -1,6 +1,6 @@
 ---
 title: Azure Data Studio 常见问题解答
-description: 有关 Azure Data Studio 的常见问题解答 (FAQ)。
+description: 获取有关 Azure Data Studio 的常见问题的解答，例如“它有什么作用？”、“它的受众是谁？”、“费用是多少？”。
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.topic: conceptual
@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: dfcab918073fedd80def91d3556e15f632a62edc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 123618a84b07aa2215a2666f9d427f669247c5d7
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774612"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411093"
 ---
 # <a name="azure-data-studio-faq"></a>Azure Data Studio 常见问题解答
 
@@ -80,14 +80,14 @@ GitHub 上提供了 Azure Data Studio 及其数据提供程序的源代码。 �
 
 |Feature|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Azure 登录|是|是|
+|Azure 登录|“是”|“是”|
 |仪表板|是| |
 |扩展|是| |
 |集成终端|是||
-|“对象资源管理器”|是|是|
-|对象脚本|是|是|
+|“对象资源管理器”|“是”|“是”|
+|对象脚本|“是”|“是”|
 |项目系统|是||
-|从表中选择|是|是|
+|从表中选择|“是”|“是”|
 |源代码管理|是||
 |任务窗格|是||
 |主题|是||
@@ -104,8 +104,8 @@ GitHub 上提供了 Azure Data Studio 及其数据提供程序的源代码。 �
 |:---|:---|:---|
 |图表查看器|是||
 |将结果导出为 CSV、JSON、XLSX|是||
-|IntelliSense|是|是|
-|代码片段|是|是|
+|IntelliSense|“是”|“是”|
+|代码片段|“是”|“是”|
 |显示计划|预览|是|
 |客户端统计信息||是|
 |实时查询统计信息||是|
@@ -120,7 +120,7 @@ GitHub 上提供了 Azure Data Studio 及其数据提供程序的源代码。 �
 
 |Feature|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Windows|是|是|
+|Windows|“是”|“是”|
 |macOS|是||
 |Linux|是||
 
@@ -136,7 +136,7 @@ GitHub 上提供了 Azure Data Studio 及其数据提供程序的源代码。 �
 
 |Feature|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|备份/还原|是|是|
+|备份/还原|“是”|“是”|
 |平面文件导入|预览|是|
 |SQL 代理|预览|是|
 |SQL Profiler|预览|是|

@@ -18,16 +18,16 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 5d2b3040c53c2bbffb6fd073fa9f385f78e28798
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: 6d18996610899fd348b179495ab78af2e2717f83
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091671"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395993"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL)（预览版）
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 本文介绍如何在 Azure SQL 数据仓库中使用 COPY 语句从外部存储帐户加载数据。 COPY 语句为 SQL 数据仓库中的高吞吐量数据引入提供了最大的灵活性。 使用 COPY 可以实现以下功能：
 
@@ -217,7 +217,7 @@ WITH
 *MAXERRORS = max_errors*</br>
 *MAXERRORS* 指定允许加载的最大拒绝行数，超过该数量后将取消 COPY 操作。 COPY 操作无法导入的每一行都将被忽略并且计为一个错误。 如果未指定 max_errors，则默认值为 0。
 
-*COMPRESSION = { 'DefaultCodec '| ’Snappy’ | ‘GZIP’ | ‘NONE’}*</br>
+COMPRESSION = { 'DefaultCodec '\| ’Snappy’ \| ‘GZIP’ \| ‘NONE’}</br>
 *COMPRESSION* 是一个可选参数，用于指定外部数据的数据压缩方法。
 
 - CSV 支持 GZIP
@@ -250,7 +250,7 @@ ROW TERMINATOR 的 UTF-8 不支持扩展的 ASCII 和多字节字符。
 *FIRSTROW  = First_row_int*</br>
 *FIRSTROW* 适用于 CSV，它为 COPY 命令指定在所有文件中最先读取的行号。 值从 1 开始，1 是默认值。 如果值设置为二，则在加载数据时，会跳过每个文件中的第一行（标头行）。 如果有行终止符，则跳过该行。
 
-*DATEFORMAT = { ‘mdy’ | ‘dmy’ | ‘ymd’ | ‘ydm’ | ‘myd’ | ‘dym’ }*</br>
+DATEFORMAT = { ‘mdy’ \| ‘dmy’ \| ‘ymd’ \| ‘ydm’ \| ‘myd’ \| ‘dym’ }</br>
 DATEFORMAT 仅适用于 CSV，它指定映射到 SQL Server 日期格式的日期格式。 有关所有 Transact-SQL 日期和时间数据类型及函数的概述，请参阅[日期和时间数据类型及函数 (Transact-SQL)](../functions/date-and-time-data-types-and-functions-transact-sql.md?view=sql-server-ver15)。 COPY 命令中的 DATEFORMAT 优先于[在会话级别配置的 DATEFORMAT](set-dateformat-transact-sql.md?view=sql-server-ver15)。
 
 *ENCODING = ‘UTF8’ | ‘UTF16’*</br>

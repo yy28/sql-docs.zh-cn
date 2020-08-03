@@ -18,12 +18,12 @@ ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 08e432e0470074a5861c070d26110478353817b2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 03cff187ee251278274af6f7c97e4598235fde38
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727068"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363419"
 ---
 # <a name="create-indexed-views"></a>创建索引视图
 
@@ -107,29 +107,29 @@ ms.locfileid: "85727068"
 
 - 必须使用 `WITH SCHEMABINDING` 选项创建视图。
 - 视图必须仅引用与视图位于同一数据库中的基表。 视图无法引用其他视图。
+
+- 如果存在 `GROUP BY`，则 VIEW 定义必须包含 `COUNT_BIG(*)`，并且不得包含 `HAVING`。 这些 `GROUP BY` 限制仅适用于索引视图定义。 即使某个索引视图不满足这些 `GROUP BY` 限制，查询也可以在其执行计划中使用该视图。
+- 如果视图定义包含 `GROUP BY` 子句，则唯一聚集索引的键只能引用 `GROUP BY` 子句中指定的列。
+
 - 视图定义中的 SELECT 语句不能包含下列 Transact-SQL 元素：
 
-   ||||
-   |-|-|-|
+   | Transact-SQL 元素 | （续） | （续） |
+   | --------------------- | ----------- | ----------- |
    |`COUNT`|ROWSET 函数（`OPENDATASOURCE`、`OPENQUERY`、`OPENROWSET` 和 `OPENXML`）|`OUTER` 联接（`LEFT`、`RIGHT` 或 `FULL`）|
    |派生表（通过在 `FROM` 子句中指定 `SELECT` 语句来定义）|自联接|使用 `SELECT *` 或 `SELECT <table_name>.*` 来指定列|
    |`DISTINCT`|`STDEV`、`STDEVP`、`VAR`、`VARP` 或 `AVG`|公用表表达式 (CTE)|
    |float<sup>1</sup>、text、ntext、image、XML 或 filestream 列|子查询|包括排名或聚合开窗函数的 `OVER` 子句|
    |全文谓词（`CONTAINS`、`FREETEXT`）|引用可为空的表达式的 `SUM` 函数|`ORDER BY`|
    |CLR 用户定义聚合函数|`TOP`|`CUBE`、`ROLLUP` 或 `GROUPING SETS` 运算符|
-   |`MIN`、`MAX`|`UNION`、`EXCEPT` 或 `INTERSECT` 运算符|`TABLESAMPLE`|
-   |表变量|`OUTER APPLY` 或 `CROSS APPLY`|`PIVOT`、`UNPIVOT`|
+   |`MIN`, `MAX`|`UNION`、`EXCEPT` 或 `INTERSECT` 运算符|`TABLESAMPLE`|
+   |表变量|`OUTER APPLY` 或 `CROSS APPLY`|`PIVOT`, `UNPIVOT`|
    |稀疏列集|内联 (TVF) 或多语句表值函数 (MSTVF)|`OFFSET`|
    |`CHECKSUM_AGG`|||
-   |&nbsp;|&nbsp;|&nbsp;|
-  
-    <sup>1</sup> 索引视图可以包含 float 列；但聚集索引键中不能包含此类列。
 
-- 如果存在 `GROUP BY`，则 VIEW 定义必须包含 `COUNT_BIG(*)`，并且不得包含 `HAVING`。 这些 `GROUP BY` 限制仅适用于索引视图定义。 即使某个索引视图不满足这些 `GROUP BY` 限制，查询也可以在其执行计划中使用该视图。
-- 如果视图定义包含 `GROUP BY` 子句，则唯一聚集索引的键只能引用 `GROUP BY` 子句中指定的列。
+   <sup>1</sup> 索引视图可以包含 float 列；但聚集索引键中不能包含此类列。
 
-> [!IMPORTANT]
-> 临时查询顶部不支持索引视图（使用 `FOR SYSTEM_TIME` 子句的查询）。
+   > [!IMPORTANT]
+   > 临时查询顶部不支持索引视图（使用 `FOR SYSTEM_TIME` 子句的查询）。
 
 ### <a name="recommendations"></a><a name="Recommendations"></a> 建议
 

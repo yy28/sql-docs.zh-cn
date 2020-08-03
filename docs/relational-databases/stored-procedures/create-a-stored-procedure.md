@@ -1,5 +1,6 @@
 ---
 title: 创建存储过程 | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio 和 Transact-SQL CREATE PROCEDURE 语句来创建 Transact-SQL 存储过程。
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: 76e8a6ba-1381-4620-b356-4311e1331ca7
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a401e9120283f2235124c71653aa8418fe701afe
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: dde2beed868314f315bf51e9fa8174ba01b09e3e
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001017"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332656"
 ---
 # <a name="create-a-stored-procedure"></a>创建存储过程
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +50,7 @@ ms.locfileid: "86001017"
   
 2.  依次展开 **“数据库”** 、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库和 **“可编程性”** 。  
   
-3.  右键单击“存储过程”  ，再单击“新建存储过程”  。  
+3.  右键单击“存储过程”，再单击“新建存储过程”。  
   
 4.  在 **“查询”** 菜单上，单击 **“指定模板参数的值”** 。  
   
@@ -68,7 +69,7 @@ ms.locfileid: "86001017"
     |@Datatype_For_Param2|**nvarchar**(50)|  
     |Default_Value_For_Param2|Null|  
   
-6.  单击“确定”。   
+6.  单击“确定”。  
   
 7.  在 **“查询编辑器”** 中，使用以下语句替换 SELECT 语句：  
   
@@ -83,11 +84,11 @@ ms.locfileid: "86001017"
   
 9. 若要创建该过程，请在 **“查询”** 菜单上单击 **“执行”** 。 该过程作为数据库中的对象创建。  
   
-10. 若要查看在对象资源管理器中列出的过程，请右键单击“存储过程”  ，然后选择“刷新”  。  
+10. 若要查看在对象资源管理器中列出的过程，请右键单击“存储过程”，然后选择“刷新”。  
   
-11. 若要运行该过程，请在对象资源管理器中右键单击存储过程名称 **HumanResources.uspGetEmployeesTest**，然后选择“执行存储过程”  。  
+11. 若要运行该过程，请在对象资源管理器中右键单击存储过程名称 **HumanResources.uspGetEmployeesTest**，然后选择“执行存储过程”。  
   
-12. 在“执行过程”  窗口中，输入 Margheim 作为参数 @LastName 的值，并输入值 Diane 作为参数 @FirstName 的值。  
+12. 在“执行过程”窗口中，输入 Margheim 作为参数 @LastName 的值，并输入值 Diane 作为参数 @FirstName 的值。  
   
 > [!WARNING]  
 >  验证所有用户的输入。 验证前请勿连接用户输入。 绝对不要执行根据尚未验证的用户输入构造的命令。  
@@ -99,7 +100,7 @@ ms.locfileid: "86001017"
   
 2.  从 **“文件”** 菜单中，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 该示例将使用其他过程名称创建与上述相同的存储过程。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 该示例将使用其他过程名称创建与上述相同的存储过程。  
   
     ```  
     USE AdventureWorks2012;  

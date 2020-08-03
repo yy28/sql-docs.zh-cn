@@ -1,6 +1,6 @@
 ---
 title: 连接并查询 Azure SQL 数据库
-description: 本快速入门介绍如何使用 Azure Data Studio 连接到 SQL 数据库并运行查询
+description: 学习本快速入门，了解如何使用 Azure Data Studio 连接到 Azure SQL 数据库服务器，然后创建和查询数据库。
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.reviewer: alayu; maghan; sstein
@@ -9,12 +9,12 @@ author: yualan
 ms.author: alayu
 ms.custom: seodec18; sqlfreshmay19; seo-lt-2019
 ms.date: 05/14/2019
-ms.openlocfilehash: 73e910b6d199a4918eafca067a95136e31ac079c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f7ceb73d25d69e1d8e8f33b2c6a23b0ff7bff636
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771954"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411293"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-azure-sql-database"></a>快速入门：使用 Azure Data Studio 连接和查询 Azure SQL 数据库
 

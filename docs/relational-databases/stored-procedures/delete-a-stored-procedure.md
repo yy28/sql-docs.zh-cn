@@ -1,5 +1,6 @@
 ---
 title: 删除存储过程 | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL 在 SQL Server 2019 (15.x) 中删除存储过程。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: 232dbf4d-392a-406f-af3a-579518cd8e46
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f880c5c03fdae1b41b53342a85e55b0590cf815
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 58b042c3d8f2ddac50789419f0d5e5d76ebb5fc8
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001007"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332624"
 ---
 # <a name="delete-a-stored-procedure"></a>删除存储过程
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "86001007"
   
 -   **开始之前：** [限制和局限](#Restrictions)、[安全性](#Security)  
   
--   要删除该过程，请使用：  [SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
+-   要删除该过程，请使用：[SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
@@ -54,7 +55,7 @@ ms.locfileid: "86001007"
   
 2.  展开 **“数据库”** 、过程所属的数据库以及 **“可编程性”** 。  
   
-3.  展开  “存储过程”，右键单击要删除的过程，再单击  “删除”。  
+3.  展开“存储过程”，右键单击要删除的过程，再单击“删除”。  
   
 4.  若要查看依赖于过程的对象，请单击 **“显示依赖关系”** 。  
   

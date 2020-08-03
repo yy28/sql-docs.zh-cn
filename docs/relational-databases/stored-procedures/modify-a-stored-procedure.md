@@ -1,5 +1,6 @@
 ---
 title: 修改存储过程 | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL 在 SQL Server 2019 (15.x) 中修改存储过程。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: 13396239-6100-48ce-aa34-461358d99c92
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 40c56e38106212d4f1f7a7d099dfdbad48b322c6
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f70272f01918af1d7cb91000e0ce15904b1e5518
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000972"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332604"
 ---
 # <a name="modify-a-stored-procedure"></a>修改存储过程
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "86000972"
   
 -   **开始之前：** [限制和局限](#Restrictions)、[安全性](#Security)  
   
--   要更改该过程，请使用：  [SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
+-   要更改该过程，请使用：[SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
@@ -56,7 +57,7 @@ ms.locfileid: "86000972"
   
 2.  展开 **“数据库”** 、过程所属的数据库以及 **“可编程性”** 。  
   
-3.  展开“存储过程”  ，右键单击要修改的过程，再单击“修改”  。  
+3.  展开“存储过程”，右键单击要修改的过程，再单击“修改”。  
   
 4.  修改存储过程的文本。  
   

@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 29a53d4ccb5958a191bf06f4565cc8f908376086
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: e0dc290a3e514d8de7a63a6afb4a0ed6453b6107
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552772"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332506"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -65,10 +65,17 @@ ms.locfileid: "86552772"
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-||||
-|---|---|---|
-|**_\* SQL Server \*_** &nbsp;|[SQL 数据库<br />托管实例](backup-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
-||||
+:::row:::
+    :::column:::
+        **_\* SQL Server \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [SQL 数据库<br />托管实例](backup-transact-sql.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        [Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -234,9 +241,9 @@ TO \<backup_device> [ ,...n ] 指示附带的[备份设备](../../relational-dat
 
 指定用于备份操作的逻辑备份设备或物理备份设备。
 
-{ logical_device_name | @logical\_device\_name\_var } 适用范围：SQL Server 要将数据库备份到的备份设备的逻辑名称。 逻辑名称必须遵守标识符规则。 如果作为变量 (@logical_device_name_var) 提供，则可以将该备份设备名称指定为字符串常量（@logical\_device\_name\_var= 逻辑备份设备名称）或任何字符串数据类型（ntext 或 text 数据类型除外）的变量。
+{ logical_device_name \| @logical\_device\_name\_var } 适用范围：SQL Server 要将数据库备份到的备份设备的逻辑名称。 逻辑名称必须遵守标识符规则。 如果作为变量 (@logical_device_name_var) 提供，则可以将该备份设备名称指定为字符串常量（@logical\_device\_name\_var= 逻辑备份设备名称）或任何字符串数据类型（ntext 或 text 数据类型除外）的变量。
 
-{ DISK | TAPE | URL} = { 'physical\_device\_name' | @physical\_device\_name\_var | 'NUL' } 适用范围：  磁盘、磁带和用于 SQL Server 的 URL。
+{ DISK \| TAPE \| URL} = { 'physical\_device\_name' \| @physical\_device\_name\_var \| 'NUL' } 适用范围：  磁盘、磁带和用于 SQL Server 的 URL。
 指定磁盘文件或磁带设备，或者 Microsoft Azure 存储服务。 此 URL 格式用于创建到 Microsoft Azure 存储服务的备份。 有关详细信息和示例，请参阅[使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 如需教程，请参阅[教程：将 SQL Server 备份和还原到 Microsoft Azure Blob 存储服务](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)。
 
 > [!NOTE]
@@ -664,7 +671,7 @@ BACKUP 语句的 `TO` 子句中指定的每个备份设备均对应于一个媒�
 > [!NOTE]
 > 如果磁带介质为空或磁盘备份文件不存在，则所有这些交互将写入介质标头并继续进行。 如果介质不为空但缺少有效的介质标头，则这些操作将反馈相关信息，指出这是无效的 MTF 介质，然后终止备份操作。
 
-||NOINIT|INIT|
+|Skip 选项|NOINIT|INIT|
 |------|------------|----------|
 |NOSKIP|如果卷中包含有效的介质标头，则验证介质名称是否匹配给定的 `MEDIANAME`（如果有）。 如果匹配，则追加备份集，同时保留所有现有的备份集。<br /> 如果卷中不含有效的介质标头，则会发生错误。|如果卷中包含有效的介质标头，将执行以下检查：<br /><ul><li>如果指定了 `MEDIANAME`，则验证给定的介质名称是否匹配介质标头的介质名称。<sup>1</sup></li><li>确保介质上没有未过期的备份集。 如果有，则终止备份。</li></ul><br />如果这些检查都通过了，则覆盖该介质上的所有备份集，只保留介质标头。<br /> 如果卷中不含有效的介质标头，则使用指定的 `MEDIANAME` 和 `MEDIADESCRIPTION`（如果有）生成一个介质标头。|
 |SKIP|如果卷中包含有效的介质标头，则追加备份集，并保留所有现有备份集。|如果卷中包含有效的<sup>2</sup> 介质标头，则覆盖介质上的所有备份集，仅保留介质标头。<br /> 如果介质为空，则使用指定的 `MEDIANAME` 和 `MEDIADESCRIPTION`（如果有）生成一个介质标头。|
@@ -929,9 +936,17 @@ WHERE r.command LIKE 'BACKUP%'
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
-> ||||
-> |---|---|---|
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|\* SQL 数据库<br />托管实例 \*&nbsp;|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
+:::row:::
+    :::column:::
+        [SQL Server](backup-transact-sql.md?view=sql-server-2016)
+    :::column-end:::
+    :::column:::
+        \* SQL 数据库<br />托管实例 \*&nbsp;
+    :::column-end:::
+    :::column:::
+        [Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -1111,9 +1126,17 @@ WITH STATS = 5, COPY_ONLY;
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
-> ||||
-> |---|---|---|
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[SQL 数据库<br />托管实例](backup-transact-sql.md?view=azuresqldb-mi-current)|\* Analytics<br />Platform System (PDW) \* &nbsp;|
+:::row:::
+    :::column:::
+        [SQL Server](backup-transact-sql.md?view=sql-server-2016)
+    :::column-end:::
+    :::column:::
+        [SQL 数据库<br />托管实例](backup-transact-sql.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        \* Analytics<br />Platform System (PDW) \* &nbsp;
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 

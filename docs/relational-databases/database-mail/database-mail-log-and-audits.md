@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 846589ee-5fe5-4ab3-b335-0c253e569f99
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 8e8b0ce1e5924a2186529fb7f7b301b85d0d547c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4354def42884887539693073bf3108d7227170de
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726492"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363562"
 ---
 # <a name="database-mail-log-and-audits"></a>数据库邮件日志和审核
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -34,9 +34,8 @@ ms.locfileid: "85726492"
   
 ## <a name="database-mail-auditing-tasks"></a>数据库邮件审核任务  
   
-|||  
+|查看和管理数据库邮件日志|指向主题的链接|  
 |-|-|  
-|**查看和管理数据库邮件日志**|**指向主题的链接**|  
 |检查各个邮件的传递状态|[检查使用数据库邮件发送的电子邮件的状态](../../relational-databases/database-mail/check-the-status-of-e-mail-messages-sent-with-database-mail.md)|  
 |清理数据库邮件消息、附件和日志条目|[sysmail_delete_mailitems_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md)<br /><br /> [sysmail_delete_log_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md)|  
 |存档数据库邮件和日志|[创建 SQL Server 代理作业以存档数据库邮件和事件日志](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)|  

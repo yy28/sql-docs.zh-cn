@@ -1,5 +1,6 @@
 ---
 title: 查看存储过程的依赖关系 | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL 在 SQL Server 2019 (15.x) 中查看存储过程依赖项。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: 6ae0a369-1bc7-4ae4-be89-2b483697cd1f
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aea9d3e1e073bfb4e34b1cc4250f2af64921d65f
-ms.sourcegitcommit: 3ea90a17a04827d573a281a4d62e72dba974504f
+ms.openlocfilehash: 7b59fe000bb72cdfb7286c5efba0de009439c555
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84332573"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332196"
 ---
 # <a name="view-the-dependencies-of-a-stored-procedure"></a>查看存储过程的依赖关系
 [!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md](../../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "84332573"
 ##  <a name="Top"></a>   
 -   **开始之前：** [限制和局限](#Restrictions)、[安全性](#Security)  
   
--   要查看过程的依赖关系，请使用：  [SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
+-   要查看过程的依赖关系，请使用：[SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
@@ -60,13 +61,13 @@ ms.locfileid: "84332573"
   
 2.  展开 **“数据库”** 、过程所属的数据库以及 **“可编程性”** 。  
   
-3.  展开  “存储过程”，右键单击此过程，再单击  “查看依赖关系”。  
+3.  展开“存储过程”，右键单击此过程，再单击“查看依赖关系”。  
   
 4.  查看依赖于过程的对象的列表。  
   
 5.  查看过程所依赖的对象的列表。  
   
-6.  单击“确定”。   
+6.  单击“确定”。  
   
 ###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **在查询编辑器中查看过程的依赖关系**  

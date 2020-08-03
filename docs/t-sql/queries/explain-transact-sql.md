@@ -10,16 +10,16 @@ ms.assetid: 4846a576-57ea-4068-959c-81e69e39ddc1
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: c4ebe0f59ede7d82ac15260eaa4f2265453fcc57
-ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
+ms.openlocfilehash: 7383e63ecb96a32c9b1f0087a138bc9f862eb722
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82138235"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395152"
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL) 
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
   返回 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 语句的查询计划，但不运行该语句。 使用 EXPLAIN 预览需要数据移动的操作和查看查询操作的预计成本。 `WITH RECOMMENDATIONS` 适用于 Azure SQL 数据仓库（预览）
   
@@ -32,7 +32,7 @@ EXPLAIN [WITH_RECOMMENDATIONS] SQL_statement
   
 ## <a name="arguments"></a>参数
 
- SQL_statement   
+ SQL_statement  
 
  EXPLAIN 将在其上运行的 [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 语句。 SQL_statement 可以是以下任何命令  ：SELECT、INSERT、UPDATE、DELETE、CREATE TABLE AS SELECT、CREATE REMOTE TABLE。
 
@@ -69,11 +69,11 @@ WITH_RECOMMENDATIONS  （预览）
 |XML 标记|摘要、属性和内容|  
 |-------------|--------------------------------------|  
 |\<dsql_query>|顶级/文档元素。|
-|\<sql>|回显 SQL_statement  。|  
+|\<sql>|回显 SQL_statement。|  
 |\<params>|这次不使用此标记。|
-|\<materialized_view_candidates>（预览）|包含推荐具体化视图的 CREATE 语句以提高 SQL 语句的性能。| 
+|\<materialized_view_candidates>（预览版）|包含推荐具体化视图的 CREATE 语句以提高 SQL 语句的性能。| 
 |\<dsql_operations>|总结和包含了查询步骤，以及查询的成本信息。 还包含所有 `<dsql_operation>` 块。 此标记包含整个查询的计数信息：<br /><br /> `<dsql_operations total_cost=total_cost total_number_operations=total_number_operations>`<br /><br /> total_cost 是要运行的查询的总预计时间（以毫秒为单位）  。<br /><br /> total_number_operations 是查询的操作总数量  。 并行和在多个节点上运行的操作将计为单个操作。|  
-|\<dsql_operation>|描述查询计划中的单个操作。 \<dsql_operation> 将操作类型包含为属性：<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> operation_type  是在 [sys.dm_pdw_request_steps (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md) 中找到的值之一。<br /><br /> `\<dsql_operation>` 块中的内容取决于操作类型。<br /><br /> 请参阅下表。|  
+|\<dsql_operation>|描述查询计划中的单个操作。 \<dsql_operation> 标记将操作类型包含为属性：<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> operation_type  是在 [sys.dm_pdw_request_steps (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md) 中找到的值之一。<br /><br /> `\<dsql_operation>` 块中的内容取决于操作类型。<br /><br /> 请参阅下表。|  
   
 |操作类型|内容|示例|  
 |--------------------|-------------|-------------|  
@@ -127,7 +127,7 @@ GO
   
 3.  在“显示”区域中，检查“行号”   。  
   
-4.  单击“确定”。   
+4.  单击“确定”。  
   
  **EXPLAIN 输出示例**  
   

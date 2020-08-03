@@ -1,7 +1,7 @@
 ---
 title: CREATE LOGIN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/17/2020
+ms.date: 07/29/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -27,12 +27,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 08056878aabb707433dc22ca891798feb96ef329
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 11f67835fe3cd74b63a9f2921850376ff4805881
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245226"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411039"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -51,10 +51,10 @@ CREATE LOGIN 参与事务。 如果在事务内执行 CREATE LOGIN 并且该事�
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL 数据库<br />单一数据库/弹性池](create-login-transact-sql.md?view=azuresqldb-current)
+        [Azure SQL 数据库<br />单一数据库/弹性池](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL 数据库<br />托管实例](create-login-transact-sql.md?view=azuresqldb-mi-current)
+        [Azure SQL<br />托管实例](create-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)
@@ -284,10 +284,10 @@ CHECK_EXPIRATION = OFF ;
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\*SQL 数据库<br />单一数据库/弹性池\*_**
+        \* Azure SQL 数据库<br />单一数据库/弹性池 \*
     :::column-end:::
     :::column:::
-        [SQL 数据库<br />托管实例](create-login-transact-sql.md?view=azuresqldb-mi-current)
+        [Azure SQL<br />托管实例](create-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)
@@ -402,10 +402,10 @@ GO
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL 数据库<br />单一数据库/弹性池](create-login-transact-sql.md?view=azuresqldb-current)
+        [Azure SQL 数据库<br />单一数据库/弹性池](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        **_\*SQL 数据库<br />托管实例\*_**
+        \* Azure SQL<br />托管实例 \*
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)
@@ -495,7 +495,7 @@ SID **=** *sid* 用于重新创建登录名。 仅适用于 SQL Server 身份验
 - 只有属于 `sysadmin` 角色的 SQL 服务器级主体（登录名）可以针对 Azure AD 主体执行以下操作：
   - EXECUTE AS USER
   - EXECUTE AS LOGIN
-- 从另一个 Azure AD 目录导入的外部（来宾）用户无法直接配置为托管实例的 Azure AD 管理员。 而是需将外部用户加入 Azure AD 启用安全机制的组，并将该组配置为实例管理员。
+- 无法通过 Azure 门户将从另一个 Azure AD 目录导入的外部（来宾）用户直接配置为 SQL 托管实例的 Azure AD 管理员。 而是需将外部用户加入 Azure AD 启用安全机制的组，并将该组配置为实例管理员。 可使用 PowerShell 或 Azure CLI 将各来宾用户设置为实例管理员。
 - 登录名不会复制到故障转移组中的辅助实例。 登录名保存在 master 数据库中，它是系统数据库，因而不进行异地复制。 若要解决此问题，用户必须在辅助实例上创建具有相同 SID 的登录名。
 
 ```SQL
@@ -601,10 +601,10 @@ GO
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL 数据库<br />单一数据库/弹性池](create-login-transact-sql.md?view=azuresqldb-current)
+        [Azure SQL 数据库<br />单一数据库/弹性池](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL 数据库<br />托管实例](create-login-transact-sql.md?view=azuresqldb-mi-current)
+        [Azure SQL<br />托管实例](create-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_**
@@ -729,10 +729,10 @@ GO
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL 数据库<br />单一数据库/弹性池](create-login-transact-sql.md?view=azuresqldb-current)
+        [Azure SQL 数据库<br />单一数据库/弹性池](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL 数据库<br />托管实例](create-login-transact-sql.md?view=azuresqldb-mi-current)
+        [Azure SQL<br />托管实例](create-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)

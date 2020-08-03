@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a4dff5292a3cd0bfcd46e2615bc755665ff3e49d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4f65282964494ba1fdb160b1e755922a60ad80d8
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897891"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394982"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -150,7 +150,7 @@ replmerg [-?]
  **-DistributorPassword** _distributor_password_  
  分发服务器密码。  
   
- **-DistributorSecurityMode** [ **0**| **1**]  
+ -DistributorSecurityMode [ 0\| 1]    
  指定分发服务器的安全模式。 值 **0** 指示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证模式（默认设置），值 **1** 指示 Windows 身份验证模式。  
   
  **-DownloadGenerationsPerBatch** _download_generations_per_batch_  
@@ -165,7 +165,7 @@ replmerg [-?]
  **-DynamicSnapshotLocation** _dynamic_snapshot_location_  
  当发布使用参数化行筛选器时所筛选数据快照文件的位置。  
   
- **-EncryptionLevel** [ **0** | **1** | **2** ]  
+ -EncryptionLevel [ 0 \| 1 \| 2 ]     
  是合并代理在建立连接时使用的传输层安全性 (TLS)（旧称为“安全套接字层 (SSL)”）加密的级别。  
   
 |EncryptionLevel 值|说明|  
@@ -179,7 +179,7 @@ replmerg [-?]
 
  有关详细信息，请参阅[查看和修改复制安全设置](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)。  
   
- **-ExchangeType** [ **1**| **2**| **3**]  
+ -ExchangeType [ 1\| 2\| 3]     
 > [!WARNING]
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] 要限制上载，请改用 sp_addmergearticle 的 \@subscriber_upload_options 。  
   
@@ -195,13 +195,13 @@ replmerg [-?]
   
  若要使用 **ExchangeType** 将合并复制的上载和下载阶段分隔为单独的会话，则必须先在将 **ExchangeType** 设为 1 的情况下运行合并代理，然后将该值设为 2 再运行一次合并代理。 不以这两个参数运行合并代理将导致系统删除元数据并需要您重新初始化订阅（不上载）。  
   
- **-FastRowCount** [**0**|**1**]  
+ **-FastRowCount** [**0**\|**1**]  
  指定应为行计数验证使用何种行计数计算类型。 值 **1** （默认值）表示快速方法。 值 **0** 表示完全行计数方法。  
   
- **-FileTransferType** [**0**|**1**]  
- 指定文件传输类型。  值为 **0** ，表示 UNC（通用命名约定），值为 1，表示 FTP（文件传输协议）。  
+ **-FileTransferType** [**0**\|**1**]  
+ 指定文件传输类型。 值为 **0** ，表示 UNC（通用命名约定），值为 1，表示 FTP（文件传输协议）。  
   
- **-ForceConvergenceLevel** [**0**|**1**|**2** ( **Publisher**| **Subscriber**| **Both**)]  
+ -ForceConvergenceLevel [0\|1\|2 ( Publisher\| Subscriber\| Both)]        
  指定合并代理应使用的收敛级别，可以为以下值之一：  
   
 |ForceConvergenceLevel 值|说明|  
@@ -222,7 +222,7 @@ replmerg [-?]
  **-FtpUserName** _ftp_user_name_  
  用于连接到 FTP 服务的用户名。 如果不指定，则使用 anonymous。  
   
- **-HistoryVerboseLevel** [**1**|**2**|**3**]  
+ **-HistoryVerboseLevel** [**1**\|**2**\|**3**]  
  指定在合并操作期间记录的历史记录数量。 选择 **1**可将历史日志记录对性能的影响减至最小。  
   
 |HistoryVerboseLevel 值|说明|  
@@ -235,7 +235,7 @@ replmerg [-?]
  **-Hostname** _host_name_  
  本地计算机的网络名。 默认为本地计算机名称。  
   
- **-InteractiveResolution** [**0**|**1**]  
+ **-InteractiveResolution** [**0**\|**1**]  
  指定在同步期间发生冲突时是否使用交互式冲突解决方法。 默认值为 **0**，指示不使用交互式冲突解决方法。  
   
  **-InternetLogin** _internet_login_  
@@ -253,7 +253,7 @@ replmerg [-?]
  **-InternetProxyServer**  *internet_proxy_server*  
  指定当访问 *internet_url*中指定的 HTTP 资源时要使用的代理服务器。  
   
- **-InternetSecurityMode** [**0**|**1**]  
+ **-InternetSecurityMode** [**0**\|**1**]  
  指定在 Web 同步期间连接到 Web 服务器时所使用的 IIS 安全模式。 值为 **0** ，表示为基本身份验证，值为 **1** ，表示为 Windows 集成身份验证（默认）。  
   
  **-InternetTimeout** _internet_timeout_  
@@ -282,16 +282,16 @@ replmerg [-?]
  **-MaxUploadChanges** _number_of_upload_changes_  
  指定应从订阅服务器上载到发布服务器的已更改行的最大数量。 上载的行数可能会由于以下原因大于指定的最大值：处理了所有生成或可能运行了并行的目标线程，这两种情况在第一次传递中均会处理至少 100 个更改。 默认情况下将发送所有已准备好上载的更改。  
   
- **-MetadataRetentionCleanup** [**0**|**1**]  
+ **-MetadataRetentionCleanup** [**0**\|**1**]  
  指定是否基于发布的保持期从 [MSmerge_genhistory](../../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md)、 [MSmerge_contents](../../../relational-databases/system-tables/msmerge-contents-transact-sql.md)、 [MSmerge_tombstone](../../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)、 [MSmerge_past_partition_mappings](../../../relational-databases/system-tables/msmerge-past-partition-mappings-transact-sql.md)和 [MSmerge_current_partition_mappings](../../../relational-databases/system-tables/msmerge-current-partition-mappings.md) 中删除元数据。 默认值为 **1**，指示应执行清除操作。 值为 **0** 指示不应自动执行清除操作。  
   
  **-Output** _output_path_and_file_name_  
  代理输出文件的路径。 如果未提供文件名，则向控制台发送该输出。 如果指定的文件名已存在，会将输出追加到该文件。  
   
- **-OutputVerboseLevel** [**0**|**1**|**2**]  
- 指定输出是否应提供详细内容。 如果详细级别为 0，则只输出错误消息。 如果详细级别为 **1**，则输出所有的进度报告消息。  如果详细级别为 2（默认），则输出所有错误消息和进度消息，这对调试很有帮助。  
+ **-OutputVerboseLevel** [**0**\|**1**\|**2**]  
+ 指定输出是否应提供详细内容。 如果详细级别为 0，则只输出错误消息。 如果详细级别为 **1**，则输出所有的进度报告消息。 如果详细级别为 2（默认），则输出所有错误消息和进度消息，这对调试很有帮助。  
   
- **-ParallelUploadDownload** [**0**|**1**]  
+ **-ParallelUploadDownload** [**0**\|**1**]  
  指定合并代理是否应并行处理上载到发布服务器和下载到订阅服务器的更改，这对于具有高带宽的大容量环境很有用。 如果 **ParallelUploadDownload** 为 **1**，则启用并行处理。  
   
  **-PacketSize**  
@@ -312,7 +312,7 @@ replmerg [-?]
  **-PublisherPassword** _publisher_password_  
  发布服务器密码。 如果 **PublisherSecurityMode** 为 **0** （对于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证），则必须指定此参数。  
   
- **-PublisherSecurityMode** [**0**|**1**]  
+ **-PublisherSecurityMode** [**0**\|**1**]  
  指定发布服务器的安全模式。 值 **0** 指示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证（默认值），值 **1** 指示 Windows 身份验证模式。  
   
  **-QueryTimeOut** _query_time_out_seconds_  
@@ -327,7 +327,7 @@ replmerg [-?]
  **-SubscriberDatabasePath** _subscriber_database_path_  
  如果 **SubscriberType** 为 **2** （允许建立到 Jet 数据库的连接，而无需 ODBC 数据源名称 (DSN)），则为 Jet 数据库（.mdb 文件）的路径。  
   
- **-SubscriberDBAddOption** [**0**| **1**| **2**| **3**]  
+ -SubscriberDBAddOption [0\| 1\| 2\| 3]      
  指定是否存在现有的订阅服务器数据库。  
   
 |SubscriberDBAddOption 值|说明|  
@@ -346,22 +346,22 @@ replmerg [-?]
  **-SubscriberPassword** _subscriber_password_  
  订阅服务器密码。 如果 **SubscriberSecurityMode** 为 **0** （对于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证），则必须指定此参数。  
   
- **-SubscriberSecurityMode** [ **0**| **1**]  
+ -SubscriberSecurityMode [ 0\| 1]    
  指定订阅服务器的安全模式。 值 **0** 指示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证（默认值），值 **1** 指示 Windows 身份验证模式。  
   
- **-SubscriberConflictClean** [ **0**| **1**]  
+ -SubscriberConflictClean [ 0\| 1]    
  如果在同步期间清除了订阅服务器上的冲突表，则值 **1** 指示订阅服务器上的冲突表已清除。 此参数仅用于对使用分散冲突日志记录的发布的订阅。  
   
- **-SubscriberType** [ **0**| **1**| **3**| **4**| **5**| **6**| **7**| **8**]  
+ -SubscriberType [ 0\| 1\| 3\| 4\| 5\| 6\| 7\| 8]          
  指定合并代理所使用的订阅服务器连接的类型。 仅支持将此参数设置为默认值 **0** 。  
   
- **-SubscriptionType**[ **0**| **1**| **2**]  
+ -SubscriptionType[ 0\| 1\| 2]     
  指定分发的订阅类型。 值为 **0** ，表示推送订阅（默认值），值为 **1** ，表示请求订阅，值为 **2** ，表示匿名订阅。  
   
- **-SyncToAlternate** [ **0|1**]  
+ -SyncToAlternate [ 0\|1]   
  指定合并代理是否在订阅服务器和备用发布服务器之间进行同步。 值为 **1** 表示它是备用发布服务器。 默认值为 **0**。  
  
- **-T** [**101|102**]  
+ -T [101\|102]   
  可实现更多合并代理附加功能的跟踪标志。 设置为值 101 可获取更多详细的日志记录信息，帮助确定合并复制同步过程的每个步骤所花费的时间。 值 102 与跟踪标志 101 写入相同的统计信息，不同的是会将信息写入 <Distribution server>..msmerge_history 表 。 通过使用 `-output` 和 `-outputverboselevel` 参数，在使用跟踪标志 101 时启用合并代理日志记录。  例如，将以下参数添加到合并代理，然后重启代理：`-T 101, -output, -outputverboselevel`。 
  
  **-UploadGenerationsPerBatch** _upload_generations_per_batch_  
@@ -376,7 +376,7 @@ replmerg [-?]
  **-UseInprocLoader**  
  通过让合并代理在将快照文件应用于订阅服务器时使用 BULK INSERT 命令，提高初始快照的性能。 不推荐使用此参数，因为它与 XML 数据类型不兼容。 如果不复制 XML 数据，则可以使用此参数。 此参数不能用于字符模式快照。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 如果使用此参数，订阅服务器上的  服务帐户必须具有快照 .bcp 数据文件所在目录的读取权限。 如果不使用此参数，则代理加载的 ODBC 驱动程序将从文件中读取，从而不使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户的安全上下文。  
   
- **-Validate** [**0**|**1**|**2**|**3**]  
+ **-Validate** [**0**\|**1**\|**2**\|**3**]  
  指定是否应在合并会话结束时执行验证，以及如果要执行验证，应执行哪种类型的验证。 建议值为 **3** 。  
   
 |Validate 值|说明|  

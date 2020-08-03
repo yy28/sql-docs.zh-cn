@@ -17,12 +17,12 @@ ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 4570d85074e2d339162aefa681bc92d35c99f3bd
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 09334d8eedab294de3015cdcaf0ac5b1c61c9239
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86906225"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395005"
 ---
 # <a name="replication-log-reader-agent"></a>复制日志读取器代理
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -93,10 +93,10 @@ logread [-?]
  **-DistributorPassword** _distributor_password_  
  分发服务器密码。  
   
- **-DistributorSecurityMode** [ **0**| **1**]  
+ -DistributorSecurityMode [ 0\| 1]    
  指定分发服务器的安全模式。 值为 **0** ，表示为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证模式（默认值），值为 **1** ，表示为 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 身份验证模式。  
   
- **-EncryptionLevel** [ **0** | **1** | **2** ]  
+ -EncryptionLevel [ 0 \| 1 \| 2 ]     
  是日志读取器代理在建立连接时使用的传输层安全性 (TLS)（旧称为“安全套接字层 (SSL)”）加密的级别。  
   
 |EncryptionLevel 值|说明|  
@@ -113,7 +113,7 @@ logread [-?]
  **-ExtendedEventConfigFile** _configuration_path_and_file_name_  
  为扩展事件 XML 配置文件指定路径和文件名。 通过该扩展事件 XML 配置文件，您可以配置会话并且启用事件跟踪。  
   
- **-HistoryVerboseLevel** [ **0**| **1**| **2**]  
+ -HistoryVerboseLevel [ 0\| 1\| 2]     
  指定在日志读取器运行期间记录的历史记录数量。 选择 1 可将历史日志记录对性能的影响减小到最低限度。  
   
 |HistoryVerboseLevel 值|说明|  
@@ -142,12 +142,12 @@ logread [-?]
   
  如果源上没有可用的已复制事务，代理将向分发服务器报告无事务消息。 此选项可指定代理在报告另一条无事务消息前将等待多长时间。 在上次处理已复制事务后，如果代理在源上没有检测到任何可用的事务，则总是会报告一条无事务消息。 默认值为 60 秒。  
  
- -MultiSubnetFailover [0|1] 指定是否启用 MultiSubnetFailover 属性。 如果你的应用程序要连接到不同子网上的 AlwaysOn 可用性组 (AG)，则将 MultiSubnetFailover 设置为 1 (true) 会加快检测（当前）活动服务器以及与服务器的连接。
+ -MultiSubnetFailover [0\|1] 指定是否启用 MultiSubnetFailover 属性。 如果你的应用程序要连接到不同子网上的 AlwaysOn 可用性组 (AG)，则将 MultiSubnetFailover 设置为 1 (true) 会加快检测（当前）活动服务器以及与服务器的连接。
   
  **-Output** _output_path_and_file_name_  
  代理输出文件的路径。 如果未提供文件名，则向控制台发送该输出。 如果指定的文件名已存在，会将输出追加到该文件。  
   
- **-OutputVerboseLevel** [ **0**| **1**| **2** | **3** | **4** ]  
+ -OutputVerboseLevel [ 0\| 1\| 2 \| 3 \| 4 ]       
  指定输出是否应提供详细内容。  
   
 |值|说明|  
@@ -172,7 +172,7 @@ logread [-?]
  **-PublisherFailoverPartner** _server_name_[ **\\** _instance_name_]  
  指定参加与发布数据库进行的数据库镜像会话的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移伙伴实例。 有关详细信息，请参阅 [数据库镜像和复制 (SQL Server)](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)。  
   
- **-PublisherSecurityMode** [ **0**| **1**]  
+ -PublisherSecurityMode [ 0\| 1]    
  指定发布服务器的安全模式。 值 **0** 指示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证（默认值），值 **1** 指示 Windows 身份验证模式。  
   
  **-PublisherLogin** _publisher_login_  
@@ -204,7 +204,7 @@ logread [-?]
   
 |更新的内容|  
 |---------------------|  
-| 添加了 -ExtendedEventConfigFile 参数。|  
+|添加了 -ExtendedEventConfigFile 参数。|  
 |添加了 -MultiSubnetFailover 参数。|
   
 ## <a name="see-also"></a>另请参阅  

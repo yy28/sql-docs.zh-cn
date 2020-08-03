@@ -1,6 +1,6 @@
 ---
 title: 使用见解小组件监视服务器和数据库
-description: 了解 Azure Data Studio 中的见解小组件
+description: 了解如何使用 Azure Data Studio 见解小组件将监视服务器和数据库的查询转换为有深刻见解的可视化效果。
 ms.custom: seodec18, sqlfreshmay19, seo-lt-2019
 ms.date: 05/14/2019
 ms.prod: azure-data-studio
@@ -9,12 +9,12 @@ ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1568251dba79998c07e05b78b2d156cebbb0e7fd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3307093404ddc09b6db085f1cc275273280913d3
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774598"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411103"
 ---
 # <a name="manage-servers-and-databases-with-insight-widgets-in-azure-data-studio"></a>使用 Azure Data Studio 中的见解小组件管理服务器和数据库
 

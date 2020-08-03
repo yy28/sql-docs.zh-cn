@@ -20,16 +20,16 @@ ms.assetid: ''
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 67f844ff5955f51b0c878f2a3161cc4762834f74
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9125903880247cd3aece0715ffcd3a9e34b35a36
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79112255"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396172"
 ---
 # <a name="create-workload-classifier-transact-sql"></a>CREATE WORKLOAD CLASSIFIER (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 创建用于工作负荷管理的分类器对象。  分类器根据分类器语句定义中指定的参数将传入请求分配给工作负荷组。  对提交的每个请求评估分类器。  如果请求与分类器不匹配，则将其分配给默认工作负荷组。  默认工作负荷组是 smallrc 资源类。
 
@@ -40,7 +40,7 @@ ms.locfileid: "79112255"
   
 ## <a name="syntax"></a>语法
 
-```
+```syntaxsql
 CREATE WORKLOAD CLASSIFIER classifier_name  
 WITH  
     (   WORKLOAD_GROUP = 'name'  
@@ -56,7 +56,7 @@ WITH
 
 ## <a name="arguments"></a>参数
 
- classifier_name   
+ classifier_name  
  指定用于标识工作负荷分类器的名称。  classifier_name 为 sysname。  最长可为 128 个字符，并且在实例中必须是唯一的。
 
  *WORKLOAD_GROUP* =  *'name'*    
@@ -84,7 +84,7 @@ SELECT COUNT(*)
 ```
 
 *WLM_CONTEXT*  
-指定可作为请求分类依据的会话上下文值。  上下文是类型为 nvarchar(255) 的可选参数。  在提交设置会话上下文的请求之前，请使用变量名称为 `wlm_context` 的 [sys.sp_set_session_context](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md?view=azure-sqldw-latest)。
+指定可作为请求分类依据的会话上下文值。  上下文是类型为 nvarchar(255) 的可选参数。  在提交设置会话上下文的请求之前，请使用变量名称为 [ 的 ](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md?view=azure-sqldw-latest)sys.sp_set_session_context`wlm_context`。
 
 示例：
 
@@ -118,7 +118,7 @@ CREATE WORKLOAD CLASSIFIER wcELTLoads WITH
  ,END_TIME       = '02:00' )
 ```
 
-*IMPORTANCE* = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }  
+IMPORTANCE = { LOW \| BELOW_NORMAL \| NORMAL \| ABOVE_NORMAL \| HIGH }  
 指定请求的相对重要性。  重要性为以下值之一：
 
 - LOW

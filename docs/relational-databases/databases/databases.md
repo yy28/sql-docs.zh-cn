@@ -16,12 +16,12 @@ ms.assetid: 316eea58-81b8-4bf3-a1fc-801946740e94
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 85c45ef2facc4a477c0851c2f2e89a7960eda001
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4d69fbd48f7d7f713d9a10806c65c144fff84d6d
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85630771"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87361372"
 ---
 # <a name="databases"></a>数据库
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,28 +40,43 @@ ms.locfileid: "85630771"
  大多数使用数据库的人员都使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 工具。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 工具有一个图形用户界面，用于创建数据库和数据库中的对象。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 还具有一个查询编辑器，用于通过编写 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句与数据库进行交互。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装磁盘进行安装，也可以从 MSDN 中下载。 有关 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 工具的详细信息，请参阅 [SQL Server Management Studio (SSMS)](../../ssms/sql-server-management-studio-ssms.md)。
   
 ## <a name="in-this-section"></a>本节内容  
-  
-|||  
-|-|-|  
-|[系统数据库](../../relational-databases/databases/system-databases.md)|[删除数据库中的数据文件或日志文件](../../relational-databases/databases/delete-data-or-log-files-from-a-database.md)|  
-|[包含的数据库](../../relational-databases/databases/contained-databases.md)|[显示数据库的数据和日志空间信息](../../relational-databases/databases/display-data-and-log-space-information-for-a-database.md)|  
-|[Microsoft Azure 中的 SQL Server 数据文件](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)|[增加数据库的大小](../../relational-databases/databases/increase-the-size-of-a-database.md)|  
-|[数据库文件和文件组](../../relational-databases/databases/database-files-and-filegroups.md)|[重命名数据库](../../relational-databases/databases/rename-a-database.md)|  
-|[数据库状态](../../relational-databases/databases/database-states.md)|[将数据库设置为单用户模式](../../relational-databases/databases/set-a-database-to-single-user-mode.md)|  
-|[文件状态](../../relational-databases/databases/file-states.md)|[收缩数据库](../../relational-databases/databases/shrink-a-database.md)|  
-|[估计数据库的大小](../../relational-databases/databases/estimate-the-size-of-a-database.md)|[收缩文件](../../relational-databases/databases/shrink-a-file.md)|  
-|[将数据库复制到其他服务器](../../relational-databases/databases/copy-databases-to-other-servers.md)|[查看或更改数据库的属性](../../relational-databases/databases/view-or-change-the-properties-of-a-database.md)|  
-|[数据库分离和附加 (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)|[查看 SQL Server 实例的数据库列表](../../relational-databases/databases/view-a-list-of-databases-on-an-instance-of-sql-server.md)|  
-|[向数据库中添加数据文件或日志文件](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)|[查看或更改数据库的兼容级别](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)|  
-|[更改数据库的配置设置](../../relational-databases/databases/change-the-configuration-settings-for-a-database.md)|[使用维护计划向导](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)|  
-|[创建数据库](../../relational-databases/databases/create-a-database.md)|[创建用户定义的数据类型别名](../../relational-databases/databases/create-a-user-defined-data-type-alias.md)|  
-|[删除数据库](../../relational-databases/databases/delete-a-database.md)|[数据库快照 (SQL Server)](../../relational-databases/databases/database-snapshots-sql-server.md)|  
-  
+
+:::row:::
+    :::column:::
+        [系统数据库](../../relational-databases/databases/system-databases.md)  
+        [包含的数据库](../../relational-databases/databases/contained-databases.md)  
+        [Microsoft Azure 中的 SQL Server 数据文件](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)  
+        [数据库文件和文件组](../../relational-databases/databases/database-files-and-filegroups.md)  
+        [数据库状态](../../relational-databases/databases/database-states.md)  
+        [文件状态](../../relational-databases/databases/file-states.md)  
+        [估计数据库的大小](../../relational-databases/databases/estimate-the-size-of-a-database.md)  
+        [将数据库复制到其他服务器](../../relational-databases/databases/copy-databases-to-other-servers.md)  
+        [数据库分离和附加 (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)  
+        [向数据库中添加数据文件或日志文件](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)  
+        [更改数据库的配置设置](../../relational-databases/databases/change-the-configuration-settings-for-a-database.md)  
+        [创建数据库](../../relational-databases/databases/create-a-database.md)  
+        [删除数据库](../../relational-databases/databases/delete-a-database.md)  
+    :::column-end:::
+    :::column:::
+        [删除数据库中的数据文件或日志文件](../../relational-databases/databases/delete-data-or-log-files-from-a-database.md)  
+        [显示数据库的数据和日志空间信息](../../relational-databases/databases/display-data-and-log-space-information-for-a-database.md)  
+        [增加数据库的大小](../../relational-databases/databases/increase-the-size-of-a-database.md)  
+        [重命名数据库](../../relational-databases/databases/rename-a-database.md)  
+        [将数据库设置为单用户模式](../../relational-databases/databases/set-a-database-to-single-user-mode.md)  
+        [收缩数据库](../../relational-databases/databases/shrink-a-database.md)  
+        [收缩文件](../../relational-databases/databases/shrink-a-file.md)  
+        [查看或更改数据库的属性](../../relational-databases/databases/view-or-change-the-properties-of-a-database.md)  
+        [查看 SQL Server 实例的数据库列表](../../relational-databases/databases/view-a-list-of-databases-on-an-instance-of-sql-server.md)  
+        [查看或更改数据库的兼容级别](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)  
+        [使用维护计划向导](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)  
+        [创建用户定义的数据类型别名](../../relational-databases/databases/create-a-user-defined-data-type-alias.md)  
+        [数据库快照 (SQL Server)](../../relational-databases/databases/database-snapshots-sql-server.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="related-content"></a>相关内容  
  [索引](../../relational-databases/indexes/indexes.md)  
   
  [视图](../../relational-databases/views/views.md)  
   
  [存储过程（数据库引擎）](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)  
-  
-  

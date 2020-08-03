@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 4d03eef91636b454b03f20d40c7a602ea8dc3fc5
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: e06355d91e73430c203711515fb9501caebfd291
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111267"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87331987"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 选项 (Transact-SQL)
 
@@ -524,7 +524,7 @@ OFF
 \<db_encryption_option> ::=     
 控制数据库加密状态。
 
-ENCRYPTION { ON | OFF | SUSPEND | RESUME }     
+ENCRYPTION { ON \| OFF \| SUSPEND \| RESUME }     
 ON     
 设置要加密的数据库。
 
@@ -797,7 +797,7 @@ OFF
 
 SIZE_BASED_CLEANUP_MODE 的类型为 **nvarchar**。
 
-QUERY_CAPTURE_MODE { ALL | AUTO | CUSTOM | NONE }     
+QUERY_CAPTURE_MODE { ALL \| AUTO \| CUSTOM \| NONE }     
 指定当前处于活动状态的查询捕获模式。 每个模式都定义了特定的查询捕获策略。
 
 > [!NOTE]
@@ -924,7 +924,7 @@ TORN_PAGE_DETECTION
 
 为数据库启用或禁用 Stretch Database。 有关详细信息，请参阅 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)。
 
-REMOTE_DATA_ARCHIVE = { ON ( SERVER = \<server_name> , { CREDENTIAL = \<db_scoped_credential_name> | FEDERATED_SERVICE_ACCOUNT = ON | OFF } )| OFF     
+REMOTE_DATA_ARCHIVE = { ON ( SERVER = \<server_name> , { CREDENTIAL = \<db_scoped_credential_name> \| FEDERATED_SERVICE_ACCOUNT = ON \| OFF } )\| OFF     
 ON     
 为数据库启用 Stretch Database。 有关详细信息，包括附加的先决条件，请参阅[为数据库启用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)。
 
@@ -1914,7 +1914,7 @@ AUTO 当磁盘上的大小达到 max_storage_size_mb 的 90% 时，将自动激�
 
 SIZE_BASED_CLEANUP_MODE 的类型为 **nvarchar**。
 
-QUERY_CAPTURE_MODE { ALL | AUTO | CUSTOM | NONE }     
+QUERY_CAPTURE_MODE { ALL \| AUTO \| CUSTOM \| NONE }     
 指定当前处于活动状态的查询捕获模式。 每个模式都定义了特定的查询捕获策略。   
 
 > [!NOTE]
@@ -2093,7 +2093,7 @@ OFF
 
 可通过查看 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图中的 `is_arithabort_on` 列来确定此选项的状态。 还可通过查看 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 函数的 `IsArithmeticAbortEnabled` 属性来确定状态。
 
-COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 }     
+COMPATIBILITY_LEVEL = { 150 \| 140 \| 130 \| 120 \| 110 \| 100 }     
 有关详细信息，请参阅 [ALTER DATABASE 兼容级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。
 
 CONCAT_NULL_YIELDS_NULL { ON | OFF }     
@@ -2740,7 +2740,7 @@ AUTO 当磁盘上的大小达到 max_storage_size_mb 的 90% 时，将自动激�
 
 SIZE_BASED_CLEANUP_MODE 的类型为 **nvarchar**。
 
-QUERY_CAPTURE_MODE { ALL | AUTO | CUSTOM | NONE }     
+QUERY_CAPTURE_MODE { ALL \| AUTO \| CUSTOM \| NONE }     
 指定当前处于活动状态的查询捕获模式。
 
 ALL     
@@ -2914,7 +2914,7 @@ OFF
 
   可通过查看 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图中的 `is_arithabort_on` 列来确定此选项的状态。 还可通过查看 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 函数的 `IsArithmeticAbortEnabled` 属性来确定状态。
 
-COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 }     
+COMPATIBILITY_LEVEL = { 150 \| 140 \| 130 \| 120 \| 110 \| 100 }     
 有关详细信息，请参阅 [ALTER DATABASE 兼容级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。
 
 CONCAT_NULL_YIELDS_NULL { ON | OFF }     

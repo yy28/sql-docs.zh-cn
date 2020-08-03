@@ -1,5 +1,6 @@
 ---
 title: OLE 自动化结果集 | Microsoft Docs
+description: 了解以下内容：如果 OLE 自动化属性或方法返回的一维或二维数组中的数据，则该数组将作为结果集返回到客户端。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: b2f99e33-2303-427c-94b9-9d55f8e2a6ab
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b11a58d6b5b838fc5add9f8303be0758a6ce7c31
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8e3498ed53137443b647e2d1e93fbec5c7d49ef5
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000950"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332583"
 ---
 # <a name="ole-automation-result-sets"></a>OLE 自动化结果集
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,9 +37,8 @@ ms.locfileid: "86000950"
   
  如果一列中的所有数据值具有相同的数据类型，此数据类型将用于整个列。 当一个列中的数据值的数据类型不同时，将根据下表选择整个列的数据类型。 若要使用下表，请沿着左侧行轴找到一种数据类型，再沿着最上面的列轴找到第二种数据类型。 行和列的交点会说明结果集这一列的数据类型。  
   
-||||||||  
-|-|-|-|-|-|-|-|  
-||**int**|**float**|**money**|**datetime**|**varchar**|**nvarchar**|  
+|   | **int** | **float** | **money** | **datetime** | **varchar** | **nvarchar** |
+| - | ------- | --------- | --------- | ------------ | ----------- | ------------ |
 |**int**|**int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**float**|**float**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**money**|**money**|**money**|**money**|**varchar**|**varchar**|**nvarchar**|  

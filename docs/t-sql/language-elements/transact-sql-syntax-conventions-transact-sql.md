@@ -28,15 +28,15 @@ ms.assetid: 35fbcf7f-8b55-46cd-a957-9b8c7b311241
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b7b42f9f9db95954509c6e47c28b317eab0626c4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cee1bcbb781319c4cabc2265962350d2480d9d97
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73981903"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87392577"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Transact-SQL 语法约定 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 下表列出了 [!INCLUDE[tsql](../../includes/tsql-md.md)] 参考的语法关系图中使用的约定，并进行了说明。  
   
@@ -52,29 +52,29 @@ ms.locfileid: "73981903"
 |[  ..._n_]|指示前面的项可以重复 _n_ 次。 匹配项由逗号分隔。|  
 |[...n  ]|指示前面的项可以重复 _n_ 次。 每一项由空格分隔。|  
 |;|[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句终止符。 虽然此版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中大部分语句都不需要分号，但今后发布的版本需要分号。|  
-|\<label> ::=|语法块的名称。 使用此约定，可以对能在一条语句中的多个位置使用的过长语法段或语法单元进行分组和标记。 可使用语法块的各个位置用括在尖括号内的标签指明：\<label>。<br /><br /> 集是表达式的集合，例如 \<分组集>；列表是集的集合，例如 \<组合元素列表>。|  
+|\<label> ::=|语法块的名称。 使用此约定，可以对能在一条语句中的多个位置使用的过长语法段或语法单元进行分组和标记。 可使用语法块的各个位置用括在尖括号内的标签指明：\<label>。<br /><br /> 集是表达式的集合，例如 \<grouping set>；列表是集的集合，例如 \<composite element list>。|  
   
 ## <a name="multipart-names"></a>多部分名称  
 除非另外指定，否则，所有对数据库对象名的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 引用将是由四部分组成的名称，格式如下：  
   
-server\_name  .[database\_name  ].[schema\_name  ].object\_name   
+server\_name  .[database\_name  ].[schema\_name  ].object\_name  
   
-| database\_name  .[schema\_name  ].object\_name   
+| database\_name  .[schema\_name  ].object\_name  
  
-| schema\_name  .object\_name   
+| schema\_name  .object\_name  
   
 | _object\_name_  
   
 _server\_name_  
 指定链接的服务器名称或远程服务器名称。  
   
-database\_name   
+database\_name  
 如果对象驻留在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本地实例中，则指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的名称。 如果对象在链接服务器中，则 database_name 将指定 OLE DB 目录  。  
   
-schema\_name   
+schema\_name  
 如果对象在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中，则指定包含对象的架构的名称。 如果对象在链接服务器中，则 schema_name 将指定 OLE DB 架构名称  。  
   
-object\_name   
+object\_name  
 对象的名称。  
   
 引用某个特定对象时，不必总是指定服务器、数据库和架构，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 也能标识对象。 不过，如果找不到对象，便会返回错误。  
@@ -86,14 +86,14 @@ object\_name
   
 |对象引用格式|说明|  
 |-----------------------------|-----------------|  
-|server  .database  .schema  .object |四个部分的名称。|  
-|server  .database  ..object |省略架构名称。|  
-|server  ..schema  .object |省略数据库名称。|  
-|server  ...object |省略数据库和架构名称。|  
-|database  .schema  .object |省略服务器名。|  
-|database  ..object |省略服务器和架构名称。|  
-|schema  .object |省略服务器和数据库名称。|  
-|对象 |省略服务器、数据库和架构名称。|  
+|server  .database  .schema  .object|四个部分的名称。|  
+|server  .database  ..object|省略架构名称。|  
+|server  ..schema  .object|省略数据库名称。|  
+|server  ...object|省略数据库和架构名称。|  
+|database  .schema  .object|省略服务器名。|  
+|database  ..object|省略服务器和架构名称。|  
+|schema  .object|省略服务器和数据库名称。|  
+|对象|省略服务器、数据库和架构名称。|  
   
 ## <a name="code-example-conventions"></a>代码示例约定  
 除非专门说明，否则，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 参考中提供的示例都已使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 及其以下选项的默认设置进行了测试：  

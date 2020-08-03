@@ -12,15 +12,16 @@ helpviewer_keywords:
 ms.assetid: a4b0f23b-bdc8-425f-b0b9-e0621894f47e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4b4786490fdf680125915fc69513290c3a8a4921
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: bc0c2453f8b9a2331a31ab917539bddeb1d31fa9
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914634"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411013"
 ---
 # <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>教程：使用证书为存储过程签名
-[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database SQL Managed Instance](../includes/applies-to-version/sql-asdb-asdbmi.md)]
 本教程说明了如何使用由 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]生成的证书对存储过程进行签名。  
   
 > [!NOTE]  
@@ -154,7 +155,7 @@ EXECUTE TestCreditRatingSP;
 GO  
 ```  
   
-运行以下代码，使用 `EXECUTE AS` 语句将用户上下文更改为 `TestCreditRatingUser` 帐户并运行存储过程。 此时您将看到用户上下文设置为 USER MAPPED TO CERTIFICATE 上下文。  
+运行以下代码，使用 `EXECUTE AS` 语句将用户上下文更改为 `TestCreditRatingUser` 帐户并运行存储过程。 此时您将看到用户上下文设置为 USER MAPPED TO CERTIFICATE 上下文。 请注意，不支持在包含的数据库、Azure SQL 数据库或 Azure Synapse Analytics 中使用此选项。
   
 ```sql  
 EXECUTE AS LOGIN = 'TestCreditRatingUser';  

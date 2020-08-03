@@ -1,6 +1,6 @@
 ---
 title: 创建和自定义键盘快捷方式
-description: 了解如何在 Azure Data Studio 中创建和自定义键盘快捷方式
+description: 了解如何使用基于 Visual Studio Code 的功能查看、编辑和创建 Azure Data Studio 中的键盘快捷方式。
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.topic: conceptual
@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: da7ca6132a8727d4ea77b3549f1e4d6199741b3a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 008c44e8e0ca61d4b2e84ba9e25863d4ffa78fa7
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774568"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411068"
 ---
 # <a name="keyboard-shortcuts-in-azure-data-studio"></a>Azure Data Studio 中的键盘快捷方式
 

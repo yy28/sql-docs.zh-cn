@@ -106,8 +106,8 @@ QUIT
 
 除“sqlcmd”以外，还可以使用以下跨平台工具来管理 SQL Server  :
 
-|||
-|---|---|
+| 工具 | 说明 |
+| ---- | ----------- |
 | [Azure Data Studio](../azure-data-studio/index.yml) | 跨平台 GUI 数据库管理实用程序。 |
 | [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | 一种跨平台 GUI 代码编辑器，它使用 mssql 扩展运行 Transact-SQL 语句。 |
 | [PowerShell Core](../linux/sql-server-linux-manage-powershell-core.md) | 基于 cmdlet 的跨平台自动化和配置工具。 |
@@ -117,7 +117,7 @@ QUIT
 
 Windows 上的 SQL Server 工具连接到 Linux 上的 SQL Server 实例，操作方式与连接到任何远程 SQL Server 实例一样。
 
-如果有一台可以连接到 Linux 计算机的 Windows 计算机，请从运行 sqlcmd  的 Windows 命令提示符尝试执行本主题中的相同步骤。 仅验证所使用的是目标 Linux 计算机名称或 IP 地址，而非 localhost，并确保 TCP 端口 1433 已打开。 如果从 Windows 进行连接存在任何问题，请参阅[连接故障排除建议](../linux/sql-server-linux-troubleshooting-guide.md#connection)。
+如果有一台可以连接到 Linux 计算机的 Windows 计算机，请从运行 sqlcmd 的 Windows 命令提示符尝试执行本主题中的相同步骤。 仅验证所使用的是目标 Linux 计算机名称或 IP 地址，而非 localhost，并确保 TCP 端口 1433 已打开。 如果从 Windows 进行连接存在任何问题，请参阅[连接故障排除建议](../linux/sql-server-linux-troubleshooting-guide.md#connection)。
 
 有关在 Windows 上运行，但连接到 Linux 上的 SQL Server 的其他工具，请参阅：
 
@@ -129,12 +129,10 @@ Windows 上的 SQL Server 工具连接到 Linux 上的 SQL Server 实例，操�
 
 有关其他安装方案，请参阅以下资源：
 
-|||
-|---|---|
-| [升级](../linux/sql-server-linux-setup.md#upgrade) | 了解如何升级 Linux 版 SQL Server 的现有安装 |
-| [卸载](../linux/sql-server-linux-setup.md#uninstall) | 在 Linux 上卸载 SQL Server |
-| [无人参与安装](../linux/sql-server-linux-setup.md#unattended) | 了解如何编写无提示安装脚本 |
-| [脱机安装](../linux/sql-server-linux-setup.md#offline) | 了解如何手动下载脱机安装程序包 |
+* [升级](../linux/sql-server-linux-setup.md#upgrade)：了解如何升级 Linux 版 SQL Server 的现有安装
+* [卸载](../linux/sql-server-linux-setup.md#uninstall)：在 Linux 上卸载 SQL Server
+* [无人参与的安装](../linux/sql-server-linux-setup.md#unattended)：了解如何编写无提示安装脚本
+* [脱机安装](../linux/sql-server-linux-setup.md#offline)：了解如何手动下载脱机安装程序包
 
 > [!TIP]
 > 有关常见问题的解答，请参阅 [Linux 上的 SQL Server 常见问题解答](../linux/sql-server-linux-faq.md)。

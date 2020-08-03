@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b56afed2447f21f6595bec39873d4298b4762027
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4618c69eb24901580118a6fc6b4119689f1e9663
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85651747"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362657"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>为 Kerberos 连接注册服务主体名称
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -83,7 +83,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
 **默认实例**  
   
--    MSSQLSvc/\<FQDN>:\<port> | MSSQLSvc/\<FQDN>，其中：  
+-   MSSQLSvc/\<FQDN>:\<port> | MSSQLSvc/\<FQDN>，其中：  
   
     -   **MSSQLSvc** 是要注册的服务。  
   
@@ -94,9 +94,9 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
     > [!NOTE]
     > 新 SPN 格式不需要端口号。 这意味着，多端口服务器或不使用端口号的协议都可以使用 Kerberos 身份验证。  
    
-|||  
+|SPN 格式|说明|  
 |-|-|  
-|MSSQLSvc/\<FQDN>:<port>|使用 TCP 时访问接口生成的默认 SPN。 \<port> 为 TCP 端口号。|  
+|MSSQLSvc/\<FQDN>:\<port>|使用 TCP 时访问接口生成的默认 SPN。 \<port> 为 TCP 端口号。|  
 |MSSQLSvc/\<FQDN>|使用除 TCP 之外的协议时访问接口生成的用于默认实例的默认 SPN。 \<FQDN> 为完全限定的域名。|  
 |MSSQLSvc/\<FQDN>:\<instancename>|使用除 TCP 之外的协议时访问接口生成的用于命名实例的默认 SPN。 \<instancename> 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例的名称。|  
 

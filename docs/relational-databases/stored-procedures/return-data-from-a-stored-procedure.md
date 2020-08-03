@@ -1,5 +1,6 @@
 ---
 title: 从存储过程返回数据 | Microsoft Docs
+description: 了解如何使用结果集、输出参数和返回代码将数据从过程返回到调用程序。
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: 7a428ffe-cd87-4f42-b3f1-d26aa8312bf7
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 26e0636a7a657f2eaa6882eeaa56f99a15bc8ed9
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1b80bb286222789fc74e5767df2ce2b9c1b5e785
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998007"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332399"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>从存储过程中返回数据
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -133,7 +134,7 @@ GO
     >  关闭状态只有在返回时才有影响。 例如，可以在过程中关闭游标，稍后再打开游标，然后将该游标的结果集返回给调用批处理、过程或触发器。  
   
 ### <a name="examples-of-cursor-output-parameters"></a>cursor 输出参数的示例  
- 下例创建使用 cursor  数据类型指定输出参数 `@currency_cursor` 的过程。 然后在批处理中调用该过程。  
+ 下例创建使用 cursor 数据类型指定输出参数 `@currency_cursor` 的过程。 然后在批处理中调用该过程。  
  
  首先，创建以下过程，在 Currency 表上声明并打开一个游标。  
   

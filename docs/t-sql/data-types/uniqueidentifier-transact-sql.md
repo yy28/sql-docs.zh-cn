@@ -20,15 +20,15 @@ ms.assetid: b026035b-f3d2-4d70-989d-3884b4ca0233
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5471791b3f75130bc2fb262a05683aa953f7f3a8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1f7233d92e3b6a568d64f0b23817838d65dcbc74
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68000447"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396268"
 ---
 # <a name="uniqueidentifier-transact-sql"></a>uniqueidentifier (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 16 字节 GUID。
   
@@ -37,7 +37,7 @@ uniqueidentifier 数据类型的列或局部变量可通过以下方式初始化
 -   通过使用 [NEWID](../../t-sql/functions/newid-transact-sql.md) 或 [NEWSEQUENTIALID](../../t-sql/functions/newsequentialid-transact-sql.md) 函数。    
 -   通过从 xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx 形式的字符串常量进行转换，其中，每个 x 都是 0-9 或 a-f 范围内的十六进制数字。 例如，6F9619FF-8B86-D011-B42D-00C04FC964FF 为有效的 uniqueidentifier 值  。  
   
-比较运算符可与 uniqueidentifier 值一起使用  。 不过，排序不是通过比较两个值的位模式来实现的。 可针对 uniqueidentifier 值执行的运算只有比较运算（=、<>、\<、>、\<=、>=）以及检查是否为 NULL（IS NULL 和 IS NOT NULL）。 不能使用其他算术运算符。 除 IDENTITY 之外的所有列约束和属性均可对 uniqueidentifier 数据类型使用  。
+比较运算符可与 uniqueidentifier 值一起使用  。 不过，排序不是通过比较两个值的位模式来实现的。 可针对 uniqueidentifier 值执行的运算只有比较运算（=、<>、\<, >、\<=, >=）以及检查是否为 NULL（IS NULL 和 IS NOT NULL）。 不能使用其他算术运算符。 除 IDENTITY 之外的所有列约束和属性均可对 uniqueidentifier 数据类型使用  。
   
 具有更新订阅的合并复制和事务复制使用 uniqueidentifier 列来确保在表的多个副本中唯一地标识行  。
   

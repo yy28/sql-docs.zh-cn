@@ -1,5 +1,6 @@
 ---
 title: 指定参数 | Microsoft Docs
+description: 了解如何将值传递给参数以及在过程调用期间如何使用每个参数属性。
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 56a9e844499d8cee843b596380edb726f3efdabe
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: eb9b80387573d0145c6510d9377ac959939dd536
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998137"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332322"
 ---
 # <a name="specify-parameters"></a>指定参数
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -171,7 +172,7 @@ GO
  执行 `usp_GetList` 以返回价格低于 $700 的 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 产品（自行车）的列表。 输出参数 \@cost 和 \@compareprices 用于控制流语言，以便在“消息”窗口中返回消息。  
   
 > [!NOTE]  
->  OUTPUT 变量必须在过程创建和变量使用期间进行定义。 参数名称和变量名称不一定要匹配。 不过，数据类型和参数定位必须匹配（除非使用的是 **listprice= \@variable**）  。  
+>  OUTPUT 变量必须在过程创建和变量使用期间进行定义。 参数名称和变量名称不一定要匹配。 不过，数据类型和参数定位必须匹配（除非使用的是 \@listprice= _variable_）。  
   
 ```  
 DECLARE @ComparePrice money, @Cost money ;  

@@ -1,5 +1,6 @@
 ---
 title: 查看存储过程的定义 | Microsoft Docs
+description: 了解如何在对象资源管理器中查看过程的定义，以及如何在查询编辑器中使用系统存储过程、系统函数和对象目录视图来查看过程的定义。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ ms.assetid: 93318587-a0c5-4788-946f-3b5dc8372ea9
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 72ee7154ec834e30522d0eb49486b7de6ccb34ce
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 10b39b46beeb3add46e56065f5671dbfedd9ed2b
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85997423"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332536"
 ---
 # <a name="view-the-definition-of-a-stored-procedure"></a>查看存储过程的定义
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -61,7 +62,7 @@ ms.locfileid: "85997423"
   
 2.  展开 **“数据库”** 、过程所属的数据库以及 **“可编程性”** 。  
   
-3.  展开“存储过程”，右键单击该过程，再单击“编写存储过程脚本为”，然后单击下列选项之一： “CREATE 到”、“ALTER 到”或“DROP 和 CREATE 到”。    
+3.  展开“存储过程”，右键单击该过程，再单击“编写存储过程脚本为”，然后单击下列选项之一： “CREATE 到”、“ALTER 到”或“DROP 和 CREATE 到”。  
   
 4.  选择“新建查询编辑器窗口”。 这将显示过程定义。  
 

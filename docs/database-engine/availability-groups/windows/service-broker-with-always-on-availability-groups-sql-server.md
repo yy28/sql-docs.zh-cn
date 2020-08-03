@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 881c20e5-1c99-44eb-b393-09fc5ea0f122
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 13dd1cb62f139a672e53b0945e94fc3ba25abc63
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 10eb6fdf211b15cdc5b9f11d7f85cb45c050019a
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883141"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332246"
 ---
 # <a name="service-broker-with-always-on-availability-groups-sql-server"></a>Service Broker 与 AlwaysOn 可用性组 (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "85883141"
      有关详细信息，请参阅 [CREATE ENDPOINT (Transact-SQL)](../../../t-sql/statements/create-endpoint-transact-sql.md)的信息。  
 
     > [!NOTE]  
-    SQL Server Broker 不支持多子网识别。 请务必使用设置为 0 的“registerallprovidersip”，并检查将必要的权限提供给 https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server 中定义的 DNS 上的群集时是否未在 DNS 上使用静态 IP。 尝试使用已禁用的 IP 时，Broker 可能会延迟“CONVERSING”状态的消息。
+    SQL Server Service Broker 不支持多子网识别。 将 `RegisterAllProvidersIP` 设置为 0，并验证群集是否在 DNS 中具有使用静态 IP 地址所需的权限。 有关详细信息，请参阅[配置可用性组侦听程序](create-or-configure-an-availability-group-listener-sql-server.md)。 尝试使用已禁用的 IP 地址时，Service Broker 可能会延迟“CONVERSING”状态的消息。
 
 3.  **授予针对端点的 CONNECT 权限。**  
   

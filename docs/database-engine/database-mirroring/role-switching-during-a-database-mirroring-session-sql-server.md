@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 624b42ae39cddd56c2401db346c497e6914fe7a0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3aefc181c1dc42e939579dcdce274a27086dd1ed
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735164"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362227"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>数据库镜像会话期间的角色切换 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -67,11 +67,11 @@ ms.locfileid: "85735164"
   
  下表概述了在每种运行模式下支持的故障转移形式。  
   
-||高性能|没有见证服务器的高安全性模式|具有见证服务器的高安全性模式|  
+|故障转移形式|高性能|没有见证服务器的高安全性模式|具有见证服务器的高安全性模式|  
 |-|----------------------|-----------------------------------------|--------------------------------------|  
 |自动故障转移 (automatic failover)|否|否|是|  
 |手动故障转移|否|是|是|  
-|强制服务|是|是|否|  
+|强制服务|是|“是”|否|  
   
  在角色切换之后，某些元数据必须存在于伙伴双方上，以确保所有的数据库用户均可访问新的主体数据库。 此外，必须对新的主体服务器创建备份作业，以确保数据库继续进行定期备份。 有关详细信息，请参阅[角色切换后登录名和作业的管理 (SQL Server)](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)。  
   

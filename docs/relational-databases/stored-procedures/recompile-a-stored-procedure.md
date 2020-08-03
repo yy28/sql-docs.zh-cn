@@ -1,5 +1,6 @@
 ---
 title: 重新编译存储过程 | Microsoft Docs
+description: 详细了解如何使用 Transact-SQL 重新编译 SQL Server 2019 (15.x) 中的存储过程。
 ms.custom: ''
 ms.date: 10/28/2019
 ms.prod: sql
@@ -15,12 +16,12 @@ ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df92be946b13a4643f6ddca870ea98ff64b3d9d9
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ec11628388263463bbb7ca3f00f8611768380fd3
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002743"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332547"
 ---
 # <a name="recompile-a-stored-procedure"></a>重新编译存储过程
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -72,7 +73,7 @@ ms.locfileid: "86002743"
   
 1. 在标准菜单栏上，单击 **“新建查询”** 。  
   
-1. 将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 该示例将创建过程定义。  
+1. 将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 该示例将创建过程定义。  
 
    ```sql
    USE AdventureWorks2012;  
@@ -95,7 +96,7 @@ ms.locfileid: "86002743"
   
 ### <a name="to-recompile-a-stored-procedure-by-using-the-with-recompile-option"></a>使用 WITH RECOMPILE 选项重新编译存储过程   
   
-选择“新建查询”，将以下代码示例复制粘贴到查询窗口，然后单击“执行”   。 此操作将执行该过程，并重新编译过程的查询计划。  
+选择“新建查询”，将以下代码示例复制粘贴到查询窗口，然后单击“执行” 。 此操作将执行该过程，并重新编译过程的查询计划。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -106,7 +107,7 @@ GO
   
 ### <a name="to-recompile-a-stored-procedure-by-using-sp_recompile"></a>使用 sp_recompile 重新编译存储过程  
 
-选择“新建查询”，将以下示例复制粘贴到查询窗口，然后单击“执行”   。 这将不执行过程，但将该过程标记为重新编译，以便在下次执行该过程时更新其查询计划。  
+选择“新建查询”，将以下示例复制粘贴到查询窗口，然后单击“执行” 。 这将不执行过程，但将该过程标记为重新编译，以便在下次执行该过程时更新其查询计划。  
 
 ```sql  
 USE AdventureWorks2012;  

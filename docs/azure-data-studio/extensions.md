@@ -1,6 +1,6 @@
 ---
 title: 添加扩展
-description: 将扩展市场中的扩展添加到 Azure Data Studio
+description: Microsoft 和第三方提供了很多扩展，请了解如何选择和安装它们来将功能添加到 Azure Data Studio。
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.topic: conceptual
@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 10/03/2019
-ms.openlocfilehash: d049b80197fdd50e3f7da5a449c35e092366fa51
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: eb6578f69ab9c0ded637ef9762ea50cfd18a25bb
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483652"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411113"
 ---
 # <a name="extend-the-functionality-of-azure-data-studio"></a>扩展 Azure Data Studio 的功能
 

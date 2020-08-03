@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 5bdcd20f-532d-4ee6-b2c7-18dbb7584a87
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5324c46fb8a4eb67d2364ee3bcbd5e21674a5c7a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2be2bcf872af3be6caf8bb2b13af70347fcf1106
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85630991"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87361247"
 ---
 # <a name="database-properties-mirroring-page"></a>数据库属性（“镜像”页）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "85630991"
   
  如果向导成功完成，所采取的操作将取决于镜像是否已经开始，具体情况如下：  
   
-|||  
+|镜像状态|采取的操作|  
 |-|-|  
 |如果镜像尚未开始。|属性页将缓存连接信息，并且缓存一个指示镜像数据库是否具有伙伴属性集的值。<br /><br /> 在该向导结尾，将提示您使用默认服务器网络地址和运行模式开始数据库镜像。 如果需要更改地址或运行模式，请单击 **“不开始镜像”** 。|  
 |如果镜像已经开始。|如果在向导中更改了见证服务器，它将相应地进行设置。|  

@@ -1,5 +1,6 @@
 ---
 title: 存储过程（数据库引擎）| Microsoft Docs
+description: 了解以下内容：SQL Server 中的存储过程是由一个或多个 Transact-SQL 语句或对 .NET Framework 公共语言运行时方法的引用构成的一个组。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: cc6daf62-9663-4c3e-950a-ab42e2830427
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 73243b7be6587b1e811ac040c5977207748b3889
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 68fbf67a8ff58c4f768c56a84e45c11fd4480c05
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003101"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332210"
 ---
 # <a name="stored-procedures-database-engine"></a>存储过程（数据库引擎）
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -79,9 +80,8 @@ ms.locfileid: "86003101"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|||  
-|-|-|  
-|**任务说明**|**主题**|  
+| 任务说明 | 主题 |
+| ---------------- | ----- |
 |介绍如何创建存储过程。|[创建存储过程](../../relational-databases/stored-procedures/create-a-stored-procedure.md)|  
 |介绍如何修改存储过程。|[修改存储过程](../../relational-databases/stored-procedures/modify-a-stored-procedure.md)|  
 |介绍如何删除存储过程。|[删除存储过程](../../relational-databases/stored-procedures/delete-a-stored-procedure.md)|  

@@ -1,6 +1,6 @@
 ---
 title: PowerShell 扩展
-description: 安装和使用 Azure Data Studio 中的 PowerShell
+description: 了解如何安装和使用 Azure Data Studio PowerShell 扩展，它为脚本的编写和调试提供丰富的 Powershell 编辑器支持。
 ms.custom: seodec18
 ms.date: 04/19/2019
 ms.reviewer: alayu, maghan, sstein
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 manager: matthend
-ms.openlocfilehash: 5f30d6078b28026dec2c6a4eef22eb1f3279755d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a0c6a37af62422f65329ef1bbe2e66efbdc5eeb0
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85637735"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411313"
 ---
 # <a name="powershell-editor-support-for-azure-data-studio"></a>Azure Data Studio 的 PowerShell 编辑器支持
 

@@ -21,12 +21,12 @@ ms.assetid: 50d2e015-05ae-4014-a1cd-4de7866ad651
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 63c00456e36742d62074a65eb291dc19e23a2863
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 80b0606f38f50b067f706bc5dad4d094ea49a4b2
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85979394"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332036"
 ---
 # <a name="metadata-visibility-configuration"></a>元数据可见性配置
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,21 +43,43 @@ GO
   
 ## <a name="scope-and-impact-of-metadata-visibility-configuration"></a>元数据可见性配置的作用域和影响  
  元数据可见性配置仅可应用于下列安全对象。  
-  
-|||  
-|-|-|  
-|目录视图|[!INCLUDE[ssDE](../../includes/ssde-md.md)] sp_help 存储过程|  
-|公开元数据的内置函数|信息架构视图|  
-|兼容性视图|扩展属性|  
+
+:::row:::
+    :::column:::
+        目录视图
+
+        公开元数据的内置函数
+
+        兼容性视图
+    :::column-end:::
+    :::column:::
+         [!INCLUDE[ssDE](../../includes/ssde-md.md)] sp_help 存储过程
+
+        信息架构视图
+
+        扩展属性
+    :::column-end:::
+:::row-end:::
   
  元数据可见性配置不能应用于下列安全对象。  
-  
-|||  
-|-|-|  
-|日志传送系统表|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理系统表|  
-|数据库维护计划系统表|备份系统表|  
-|复制系统表|复制及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理 **sp_help** 存储过程|  
-  
+
+:::row:::
+    :::column:::
+        日志传送系统表
+
+        数据库维护计划系统表
+
+        复制系统表
+    :::column-end:::
+    :::column:::
+         [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理系统表
+
+        备份系统表
+
+        复制及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理 **sp_help** 存储过程
+    :::column-end:::
+:::row-end:::
+
  有限的元数据可访问性意味着：  
   
 -   假定 **public** 可访问元数据的应用程序将中断。  
@@ -118,26 +140,28 @@ GO
     -   用户没有被拒绝对该对象具有 VIEW DEFINITION 权限，并且还对其具有 CONTROL、ALTER 或 TAKE OWNERSHIP 权限。 所有其他用户看到的是 NULL。  
   
 -   在下列目录视图中找到的定义列：  
-  
-    |||  
-    |-|-|  
-    |**sys.all_sql_modules**|**sys.sql_modules**|  
-    |**sys.server_sql_modules**|**sys.check_constraints**|  
-    |**sys.default_constraints**|**sys.computed_columns**|  
-    |**sys.numbered_procedures**||  
-  
+
+    - **sys.all_sql_modules**  
+    - **sys.server_sql_modules**  
+    - **sys.default_constraints**
+    - **sys.numbered_procedures**
+    - **sys.sql_modules**
+    - **sys.check_constraints**
+    - **sys.computed_columns**
+
 -   **syscomments** 兼容视图中的 **ctext** 列。  
   
 -   **sp_helptext** 过程的输出。  
   
--   信息架构视图中的以下列：  
-  
-    |||  
-    |-|-|  
-    |INFORMATION_SCHEMA.CHECK_CONSTRAINTS.CHECK_CLAUSE|INFORMATION_SCHEMA.COLUMNS.COLUMN_DEFAULT|  
-    |INFORMATION_SCHEMA.DOMAINS.DOMAIN_DEFAULT|INFORMATION_SCHEMA.ROUTINE_COLUMNS.COLUMN_DEFAULT|  
-    |INFORMATION_SCHEMA.ROUTINES.ROUTINE_DEFINITION|INFORMATION_SCHEMA.VIEWS.VIEW_DEFINITION|  
-  
+-   信息架构视图中的以下列：
+
+    - INFORMATION_SCHEMA.CHECK_CONSTRAINTS.CHECK_CLAUSE
+    - INFORMATION_SCHEMA.DOMAINS.DOMAIN_DEFAULT
+    - INFORMATION_SCHEMA.ROUTINES.ROUTINE_DEFINITION
+    - INFORMATION_SCHEMA.COLUMNS.COLUMN_DEFAULT
+    - INFORMATION_SCHEMA.ROUTINE_COLUMNS.COLUMN_DEFAULT
+    - INFORMATION_SCHEMA.VIEWS.VIEW_DEFINITION
+
 -   OBJECT_DEFINITION() 函数  
   
 -   存储在 **sys.sql_logins**的 password_hash 列中的值。  不具有 CONTROL SERVER 权限的用户可以看到该列中的 NULL 值。  
@@ -177,19 +201,45 @@ GO
   
  所有用户均可查看由 DB_ID() 函数和 DB_NAME() 函数返回的元数据。  
   
- 下表列出了对 **public** 角色可见的目录视图。  
-  
-|||  
-|-|-|  
-|**sys.partition_functions**|**sys.partition_range_values**|  
-|**sys.partition_schemes**|**sys.data_spaces**|  
-|**sys.filegroups**|**sys.destination_data_spaces**|  
-|**sys.database_files**|**sys.allocation_units**|  
-|**sys.partitions**|**sys.messages**|  
-|**sys.schemas**|**sys.configurations**|  
-|**sys.sql_dependencies**|**sys.type_assembly_usages**|  
-|**sys.parameter_type_usages**|**sys.column_type_usages**|  
-  
+ 下表列出了对 public 角色可见的目录视图。  
+
+:::row:::
+    :::column:::
+        **sys.partition_functions**
+
+        **sys.partition_schemes**
+
+        **sys.filegroups**
+
+        **sys.database_files**
+
+        **sys.partitions**
+
+        **sys.schemas**
+
+        **sys.sql_dependencies**
+
+        **sys.parameter_type_usages**
+    :::column-end:::
+    :::column:::
+        **sys.partition_range_values**
+
+        **sys.data_spaces**
+
+        **sys.destination_data_spaces**
+
+        **sys.allocation_units**
+
+        **sys.messages**
+
+        **sys.configurations**
+
+        **sys.type_assembly_usages**
+
+        **sys.column_type_usages**
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>另请参阅  
  [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)   
  [DENY (Transact-SQL)](../../t-sql/statements/deny-transact-sql.md)   
