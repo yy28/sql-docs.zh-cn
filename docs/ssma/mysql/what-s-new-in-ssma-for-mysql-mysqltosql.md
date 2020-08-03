@@ -4,21 +4,28 @@ description: 了解每个版本对 MySQL （MySQLToSQL） SQL Server 迁移助�
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 7/2/2020
+ms.date: 7/31/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 ms.author: alexiva
-ms.openlocfilehash: 1c0292d05624e2d3cb8640d719fc2c0e29474cb0
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 0511e67a355f960dcc3af90324142d5662b38627
+ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000377"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87477359"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>SSMA for MySQL 中的新增功能 (MySQLToSql)
 
 本文列出了每个版本中的 MySQL 更改 SQL Server 迁移助手（SSMA）。
+
+## <a name="ssma-v812"></a>SSMA v 8.12
+
+SSMA for MySQL 的8.12 版本包含以下更改：
+
+* 临时表 DDL 的转换
 
 ## <a name="ssma-v811"></a>SSMA v 8.11
 

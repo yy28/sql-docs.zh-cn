@@ -4,21 +4,31 @@ description: 了解每个版本的 SQL Server 迁移助手（SSMA） for Access 
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 7/2/2020
+ms.date: 7/31/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 ms.author: alexiva
-ms.openlocfilehash: 7e898fa94dda37342765001ba87283b986ac9eb1
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: 06fd04921d217bf81861c76a5b09769039be5ee7
+ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091761"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87477369"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>SSMA for Access （AccessToSQL）中的新增功能
 
 本文列出了每个版本中的访问更改 SQL Server 迁移助手（SSMA）。
+
+## <a name="ssma-v812"></a>SSMA v 8.12
+
+用于访问的 SSMA 的8.12 版本包含以下更改：
+
+* 支持 `BigInt` （ `Large Number` ）数据类型
+* 改进了列类型解析
+* 改进了列验证规则的转换
+* 使用最新的可用 ACE OLE DB 提供程序进行数据迁移
 
 ## <a name="ssma-v811"></a>SSMA v 8.11
 
