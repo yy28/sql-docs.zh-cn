@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f17290773a3becf0b33b28eb5e95bf914d53af06
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ceea117b0b266fdc7649e8e786b034039fae3507
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901727"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522001"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Master Data Services 的高可用性和灾难恢复
 
@@ -324,7 +324,7 @@ AG 只能在现有数据库上创建。 因此，可在一个节点上创建 MDS
 
    图 18
 
-9. 在“选择数据同步”页上，单击“完整”，然后指定每个节点都能访问的网络共享********。 单击 **“下一步”** 以继续。 请参阅图 19。
+9. 在“选择数据同步”页上，单击“完整”，然后指定每个节点都能访问的网络共享********。 单击“下一步”以继续。 请参阅图 19。
 
    此网络共享用于存储数据库备份以创建次要副本。 如果它不适用于你的组织，请选择其他数据同步选项。 请参阅[SQL Server 2016 Always On 可用性组](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)，了解如何使用其他选项创建辅助副本。 图 17 还列出了其他选项。
 
@@ -332,7 +332,7 @@ AG 只能在现有数据库上创建。 因此，可在一个节点上创建 MDS
 
    图 19 
 
-10. 在“验证”页上，确保所有验证均传递成功，并更正所有错误****。 单击 **“下一步”** 以继续。
+10. 在“验证”页上，确保所有验证均传递成功，并更正所有错误****。 单击“下一步”以继续。
 
 11. 在“摘要”页上查看所有配置设置，然后单击“完成”********。 此操作将创建并配置可用性组。
 
@@ -386,11 +386,11 @@ AG 只能在现有数据库上创建。 因此，可在一个节点上创建 MDS
 
    有关 Master Data Service 的详细信息，请参阅 [Master Data Services](../master-data-services-overview-mds.md)。
 
-## <a name="conclusion"></a>结束语
+## <a name="conclusion"></a>结论
 
 在此白皮书中，我们已了解如何将 Master Data Services 后端数据库设置为 AG 的一部分并进行配置。 此配置在 Master Data Services 后端数据库上提供高可用性和灾难恢复。 若要实现此配置，需要安装和配置 Windows Server 故障转移群集、AG 和 Master Data Services。
 
-## <a name="feedback"></a>反馈
+## <a name="feedback-comments"></a>反馈评论
 
 此白皮书对您有帮助吗？ 请单击文章顶部的“评论”向我们提供反馈****。 
 

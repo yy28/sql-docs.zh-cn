@@ -18,15 +18,15 @@ ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: a3745f00e8e2e6d7ed0386a128ee6bcec2adebea
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2c40ef34ffcde3f7a1d02f6ba45963bd83df841a
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831163"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522541"
 ---
 # <a name="sp_describe_undeclared_parameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)] 
+[!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)] 
 
   返回一个结果集，其中包含有关在批处理中未声明的参数的元数据 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 考虑在** \@ tsql**批处理中使用但未在** \@ params**中声明的每个参数。 每个此类参数在返回的结果集中各占一行，并包含推断的参数类型信息。 如果** \@ tsql**输入批处理没有参数中声明的** \@ 参数，则**该过程返回一个空结果集。  
   
@@ -63,7 +63,7 @@ sp_describe_undeclared_parameters
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int NOT NULL**|在结果集中包含参数的序号位置。 第一个参数的位置将指定为 1。|  
-|**name**|**sysname 不为 NULL**|包含参数的名称。|  
+|name|**sysname 不为 NULL**|包含参数的名称。|  
 |**suggested_system_type_id**|**int NOT NULL**|包含 sys.databases 中指定的参数数据类型的**system_type_id** 。<br /><br /> 对于 CLR 类型，即使**system_type_name**列返回 NULL，该列也会返回值240。|  
 |**suggested_system_type_name**|**nvarchar （256） NULL**|包含数据类型名称。 包含为参数数据类型指定的参数（例如，length、precision、scale）。 如果数据类型是用户定义的别名类型，则会在此处指定基本系统类型。 如果数据类型是 CLR 用户定义数据类型，则在此列中返回 NULL。 如果无法推断参数类型，则返回 NULL。|  
 |**suggested_max_length**|**smallint NOT NULL**|请参阅 sys.databases。 对于**max_length**列说明。|  
@@ -121,7 +121,7 @@ sp_describe_undeclared_parameters
   
 -   数据类型不依赖于所有输入的未声明参数的表达式。  
   
- 例如，请考虑 `SELECT dbo.tbl(@p1) + c1 FROM t1 WHERE c2 = @p2 + 2` 查询。 表达式 dbo.tbl （ \@ p1） + c1 和 c2 具有数据类型，并且 expression \@ p1 和 \@ p2 + 2 不存在。  
+ 例如，考虑查询 `SELECT dbo.tbl(@p1) + c1 FROM t1 WHERE c2 = @p2 + 2`。 表达式 dbo.tbl （ \@ p1） + c1 和 c2 具有数据类型，并且 expression \@ p1 和 \@ p2 + 2 不存在。  
   
  在执行此步骤后，如果任何表达式（对 UDF 的调用除外）有两个没有数据类型的参数，类型推断将失败并发生错误。 例如，下面的语句均产生错误：  
   
@@ -159,7 +159,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 -   要将语句转换到的数据类型。  
   
- 例如，请考虑 `SELECT * FROM t WHERE @p1 = dbo.tbl(@p2 + c1)` 查询。 Then E （ \@ p1） = \@ P1，e （ \@ p2） = \@ P2 + c1，TT （ \@ p1）是声明的返回数据类型 dbo.tbl，tt （ \@ p2）是 dbo.tbl 的声明的参数数据类型。  
+ 例如，考虑查询 `SELECT * FROM t WHERE @p1 = dbo.tbl(@p2 + c1)`。 Then E （ \@ p1） = \@ P1，e （ \@ p2） = \@ P2 + c1，TT （ \@ p1）是声明的返回数据类型 dbo.tbl，tt （ \@ p2）是 dbo.tbl 的声明的参数数据类型。  
   
  如果 \@ p 不包含在步骤2开头列出的任何表达式中，则类型推导算法将确定 e （ \@ p）是包含 p 的最大标量表达式 \@ ，而类型推导算法不会计算 e （p）的目标数据类型 TT （ \@ p） \@ 。 例如，如果查询为 SELECT， `@p + 2` 则 E （ \@ p） = \@ p + 2，并且没有 TT （ \@ p）。  
   
@@ -177,7 +177,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
      \@P1、 \@ p2 和 p3 的数据类型 \@ 将为 c1 的数据类型、dbo.tbl 的返回数据类型，以及 dbo.tbl 的参数数据类型。  
   
-     一种特殊情况，如果 \@ p 是 \< 、>、 \< = 或 >= 运算符的参数，则简单的扣缴规则将不适用。 类型推断算法使用下一节介绍的一般推断规则。 例如，如果 c1 是 char(30) 数据类型的列，请考虑下面两个查询：  
+     作为一种特殊情况，如果 \@ p 是 a、= 运算符的参数，则 \<, > 简单的 \<=, or > 扣缴规则不适用。 类型推断算法使用下一节介绍的一般推断规则。 例如，如果 c1 是 char(30) 数据类型的列，请考虑下面两个查询：  
   
     ```sql
     SELECT * FROM t WHERE c1 = @p  
