@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 5d3ee42f28fed73a4dd513b10d01948552fdd6d5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fe93023bfbcd285d8d50a90bb11ea532eb066f2c
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901543"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472183"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>使用 mssql-conf 工具配置 Linux 上的 SQL Server
 
@@ -24,7 +24,7 @@ ms.locfileid: "85901543"
 
 mssql-conf 是随 SQL Server 2017 for Red Hat Enterprise Linux、SUSE Linux Enterprise Server 和 Ubuntu 安装的配置脚本。 它会修改存储配置值的 [mssql.conf 文件](#mssql-conf-format)。 可使用 mssql-conf 实用工具设置以下参数：
 
-|||
+|参数|描述|
 |---|---|
 | [代理](#agent) | 启用 SQL Server 代理。 |
 | [排序规则](#collation) | 为 Linux 上的 SQL Server 设置新排序规则。 |
@@ -52,7 +52,7 @@ mssql-conf 是随 SQL Server 2017 for Red Hat Enterprise Linux、SUSE Linux Ente
 
 mssql-conf 是随 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] for Red Hat Enterprise Linux、SUSE Linux Enterprise Server 和 Ubuntu 安装的配置脚本。 可以使用此实用工具设置以下参数：
 
-|||
+|参数|描述|
 |---|---|
 | [代理](#agent) | 启用 SQL Server 代理 |
 | [排序规则](#collation) | 为 Linux 上的 SQL Server 设置新排序规则。 |

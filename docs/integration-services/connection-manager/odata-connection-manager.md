@@ -13,12 +13,12 @@ f1_keywords:
 - sql13.dts.designer.odataconnectionmanager.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0f97998b439fca6e0290966e2ee8fc2bdd785150
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 788aaa50e7bf083a91a4c919708e0677fc190476
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919650"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472433"
 ---
 # <a name="odata-connection-manager"></a>OData 连接管理器
 
@@ -61,9 +61,8 @@ ms.locfileid: "86919650"
 ## <a name="odata-connection-manager-properties"></a>OData 连接管理器属性  
  下表介绍 OData 连接管理器的属性。  
   
-|||  
-|-|-|  
 |properties|说明|  
+|-|-|  
 |URL|服务文档的 URL。|  
 |UserName|用于进行身份验证的用户名（如果需要）。|  
 |密码|用于进行身份验证的密码（如果需要）。|  

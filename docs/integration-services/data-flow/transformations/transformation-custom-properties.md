@@ -41,12 +41,12 @@ helpviewer_keywords:
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e4baea69adce173ee5421605825008f7721b92bd
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fb2e93d5266b28ad7be189cd14034aca49abc3a1
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916662"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472497"
 ---
 # <a name="transformation-custom-properties"></a>Transformation Custom Properties
 
@@ -60,19 +60,42 @@ ms.locfileid: "86916662"
  某些转换属性可以使用属性表达式进行设置。 有关详细信息，请参阅 [可以使用表达式设置的数据流属性](https://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8)。  
   
 ## <a name="transformations-with-custom-properties"></a>包含自定义属性的转换  
-  
-||||  
-|-|-|-|  
-|[聚合](#aggregate)|[导出列](#extract)|[行计数](#rowcount)|  
-|[审核](#audit)|[模糊分组](#fgroup)|[行抽样](#rowsamp)|  
-|[缓存转换](#cachetransform)|[模糊查找](#flookup)|[脚本组件](#script)|  
-|[字符映射](#charmap)|[导入列](#insert)|[渐变维度](#scd)|  
-|[有条件拆分](#condsplit)|[查找](#lookup)|[Sort](#sort)|  
-|[复制列](#copymap)|[合并联接](#mjoin)|[字词提取](#textract)|  
-|[数据转换](#dataconv)|[OLE DB 命令](#oledbcmd)|[字词查找](#tlookup)|  
-|[数据挖掘查询](#dmquery)|[百分比抽样](#percent)|[逆透视](#unpivot)|  
-|[派生列](#derived)|[透视](#pivot)||  
-  
+
+:::row:::
+    :::column:::
+        [聚合](#aggregate)  
+        [审核](#audit)  
+        [缓存转换](#cachetransform)  
+        [字符映射](#charmap)  
+        [有条件拆分](#condsplit)  
+        [复制列](#copymap)  
+        [数据转换](#dataconv)  
+        [数据挖掘查询](#dmquery)  
+        [派生列](#derived)  
+    :::column-end:::
+    :::column:::
+        [导出列](#extract)  
+        [模糊分组](#fgroup)  
+        [模糊查找](#flookup)  
+        [导入列](#insert)  
+        [查找](#lookup)  
+        [合并联接](#mjoin)  
+        [OLE DB 命令](#oledbcmd)  
+        [百分比抽样](#percent)  
+        [透视](#pivot)  
+    :::column-end:::
+    :::column:::
+        [行计数](#rowcount)  
+        [行抽样](#rowsamp)  
+        [脚本组件](#script)  
+        [渐变维度](#scd)  
+        [Sort](#sort)  
+        [字词提取](#textract)  
+        [字词查找](#tlookup)  
+        [逆透视](#unpivot)  
+    :::column-end:::
+:::row-end:::
+
 ### <a name="transformations-without-custom-properties"></a>不包含自定义属性的转换  
  以下转换不包含组件级、输入级或输出级自定义属性：[合并转换](../../../integration-services/data-flow/transformations/merge-transformation.md)、[多播转换](../../../integration-services/data-flow/transformations/multicast-transformation.md)和 [Union All 转换](../../../integration-services/data-flow/transformations/union-all-transformation.md)。 这些转换仅使用对所有数据流组件均通用的属性。  
   

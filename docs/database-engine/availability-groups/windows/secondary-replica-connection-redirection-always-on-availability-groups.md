@@ -18,12 +18,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d70d9599dda2f71edff911ad42821fdf101b524c
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 2554a93ab1b7be6dc0a81c0ddb63797b8146a444
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363167"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472443"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>次要副本到主要副本读/写连接重定向（Always On 可用性组）
 
@@ -62,7 +62,7 @@ ms.locfileid: "87363167"
 
 默认情况下，未对副本设置读/写副本连接重定向。 次要副本处理连接请求的方式取决于是否将次要副本设置为允许连接以及连接字符串中的 `ApplicationIntent` 设置。 下表显示次要副本如何处理基于 `SECONDARY_ROLE (ALLOW CONNECTIONS = )` 和 `ApplicationIntent` 的连接。
 
-|`ApplicationIntent` 值|`SECONDARY_ROLE (ALLOW CONNECTIONS = NO)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`|
+|<code>ApplicationIntent</code> 值|<code>SECONDARY_ROLE (ALLOW CONNECTIONS = NO)</code>|<code>SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)</code>|<code>SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)</code>|
 |-----|-----|-----|-----|
 |`ApplicationIntent=ReadWrite`<br/> 默认|连接失败|连接失败|连接成功<br/>读取成功<br/>写入失败|
 |`ApplicationIntent=ReadOnly`|连接失败|连接成功|连接成功
@@ -73,7 +73,7 @@ ms.locfileid: "87363167"
 
 设置读/写连接重定向后，副本处理连接请求的行为方式有所不同。 连接行为仍然取决于 `SECONDARY_ROLE (ALLOW CONNECTIONS = )` 和 `ApplicationIntent` 设置。 下表显示包含 `READ_WRITE_ROUTING` 集的次要副本如何处理基于 `SECONDARY_ROLE (ALLOW CONNECTIONS = )` 和 `ApplicationIntent` 的连接。
 
-|`ApplicationIntent` 值|`SECONDARY_ROLE (ALLOW CONNECTIONS = NO)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`|
+|<code>ApplicationIntent</code> 值|<code>SECONDARY_ROLE (ALLOW CONNECTIONS = NO)</code>|<code>SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)</code>|<code>SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)</code>|
 |-----|-----|-----|-----|
 |`ApplicationIntent=ReadWrite`<br/>默认|连接失败|连接失败|连接路由到主要副本|
 |`ApplicationIntent=ReadOnly`|连接失败|连接成功|连接成功

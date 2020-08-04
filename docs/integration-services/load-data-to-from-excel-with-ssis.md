@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 78bc5fe4d059a644c3490c94b02b5880c5d488d0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c75779e244087072d36c041edd22d4a6fb3109b2
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922729"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435434"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 从 Excel 导入数据或将数据导出到 Excel
 
@@ -253,8 +253,6 @@ Excel 驱动程序读取指定源中一定数量的行（默认情况下为八�
 若要将大于 255 个字符的字符串成功地保存到 Excel 列中，驱动程序必须将该目标列的数据类型识别为 **memo** ，而不是 **string**。
 
 -   如果现有目标表已包含数据行，则由驱动程序采样的前几行在备注列中必须包含至少一个值超过 255 个字符的实例。
-
--   如果新目标表是在包设计或运行时创建的，或通过导入和导出向导创建的，则相应的 `CREATE TABLE` 语句必须使用 LONGTEXT（或其同义词之一）作为目标备注列的数据类型。 在向导中，通过单击“列映射”页上的“创建目标表”选项旁的“编辑 SQL”，检查 `CREATE TABLE` 语句并对其进行修订    。
 
 ## <a name="related-content"></a>相关内容
 
