@@ -1,6 +1,6 @@
 ---
 title: 在命令提示符下运行数据库实验助手
-description: 在命令提示符下运行数据库实验助手
+description: 了解如何在数据库实验助手 (DEA) 中捕获跟踪，然后从命令提示符中分析结果。
 ms.custom: seo-lt-2019
 ms.date: 02/25/2020
 ms.prod: sql
@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: 674f40b16437547956178293c5b491b11c8b2f89
-ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
+ms.openlocfilehash: 161258d8359ce46b9ff2afb2a878c008059772db
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85215484"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565526"
 ---
 # <a name="run-database-experimentation-assistant-at-a-command-prompt"></a>在命令提示符下运行数据库实验助手
 
-本文介绍如何在数据库实验助手（DEA）中捕获跟踪，然后在命令提示符下分析结果。
+本文介绍如何在数据库实验助手 (DEA) 捕获跟踪，然后在命令提示符下分析结果。
 
    > [!NOTE]
    > 若要了解有关每个 DEA 操作的详细信息，请尝试运行以下命令：
@@ -47,15 +47,15 @@ ms.locfileid: "85215484"
 | 选项| 说明 |  
 | --- | --- |
 | -n, --name | 请求跟踪文件名 |
-| -x，--format | 请求trace 的格式（Trace = 0，XEvents = 1） |
+| -x，--format | 请求trace 的格式 (Trace = 0，XEvents = 1)  |
 | -d、--duration | 请求捕获的最大持续时间（分钟） |
 | -l, --location | 请求用于在主计算机上存储跟踪/xevent 文件的输出文件夹的位置 |
-| -t，--type | （默认值：0） Sql Server 的类型/版本（SqlServer = 0、AzureSQLDB = 1、Azure SQL 托管实例 = 2） |
+| -t，--type |  (默认值： 0) 类型/版本的 Sql Server (SqlServer = 0、AzureSQLDB = 1、Azure SQL 托管实例 = 2)  |
 | -h、--host | 请求要开始捕获 SQL Server 的主机名和/或实例名 |
-| -e，--加密 | （默认值： True）加密与 SQL Server 实例的连接。 默认值为 true |
-| --信任 | （默认值： False）连接到 SQL Server 实例时信任服务器证书。 默认值为 false |
-| -f，--databasename | （默认值：）要筛选跟踪的数据库的名称，如果未指定，将在所有数据库上启动捕获 |
-| -m、--authmode | （默认值：0）身份验证模式（Windows = 0，Sql 身份验证 = 1） |
+| -e，--加密 |  (默认值： True) 加密与 SQL Server 实例的连接。 默认值为 true |
+| --信任 |  (默认值：在连接到 SQL Server 实例时) 信任服务器证书。 默认值为 false |
+| -f，--databasename |  (默认值：要筛选跟踪的数据库 ) 名称，如果未指定，将在所有数据库上启动捕获 |
+| -m、--authmode |  (默认值： 0) 身份验证模式， (Windows = 0，Sql Authentication = 1)  |
 | -u，--username | 用于连接到 SQL Server 的用户名 |
 | -p，--password | 用于连接到 SQL Server 的密码 |
 
@@ -72,11 +72,11 @@ ms.locfileid: "85215484"
 
 3. 使用 StartReplayCaptureTrace 在运行 SQL Server 的目标计算机上启动跟踪捕获。
 
-    a.  在 SQL Server Management Studio （SSMS）中，打开 <Dea_InstallPath \> \Scripts\StartReplayCaptureTrace.sql。
+    a.  在 SQL Server Management Studio (SSMS) ，打开 <Dea_InstallPath \> \Scripts\StartReplayCaptureTrace.sql。
 
     b.  运行， `Set @durationInMins=0` 以便跟踪捕获不会在指定的时间后自动停止。
 
-    c.  若要设置每个跟踪文件的最大文件大小，请运行 `Set @maxfilesize` 。 建议的大小为200（以 MB 为单位）。
+    c.  若要设置每个跟踪文件的最大文件大小，请运行 `Set @maxfilesize` 。 建议的大小为 200 (以 MB) 为单位。
 
     d.  编辑 `@Tracefile` 以为跟踪文件设置唯一名称。
 
@@ -120,15 +120,15 @@ ms.locfileid: "85215484"
 | -a，--traceA | 请求实例的事件文件的文件路径。 示例 C:\traces\Sql2008trace.trc。  如果有一批文件，请选择第一个文件，DEA 将自动检查滚动更新文件。 如果文件在 blob 中，则提供要在其中存储事件文件的文件夹路径。  示例 C:\traces\ |
 | -b，--traceB | 请求B 实例的事件文件的文件路径。 示例 C:\traces\Sql2014trace.trc。 如果有一批文件，请选择第一个文件，DEA 将自动检查滚动更新文件。 如果文件在 blob 中，则提供要在其中存储事件文件的文件夹路径。  示例 C:\traces\ |
 | -r，--ReportName | 请求当前分析的名称。 将使用此名称标识生成的分析报告。 |
-| -t，--type | （默认值：0） Sql Server 的类型/版本（SqlServer = 0、AzureSQLDB = 1、Azure SQL 托管实例 = 2） |
+| -t，--type |  (默认值： 0) 类型/版本的 Sql Server (SqlServer = 0、AzureSQLDB = 1、Azure SQL 托管实例 = 2)  |
 | -h、--host | 请求SQL Server 主机名和/或实例名 |
-| -e，--加密 | （默认值： True）加密与 SQL Server 实例的连接。 默认值为 true |
-| --信任 | （默认值： False）连接到 SQL Server 实例时信任服务器证书。 默认值为 false |
-| -m、--authmode | （默认值：0）身份验证模式（Windows = 0，Sql 身份验证 = 1） |
+| -e，--加密 |  (默认值： True) 加密与 SQL Server 实例的连接。 默认值为 true |
+| --信任 |  (默认值：在连接到 SQL Server 实例时) 信任服务器证书。 默认值为 false |
+| -m、--authmode |  (默认值： 0) 身份验证模式， (Windows = 0，Sql Authentication = 1)  |
 | -u，--username | 用于连接到 SQL Server 的用户名 |
 | --p | 用于连接到 SQL Server 的密码 |
-| --ab | （默认值： False）跟踪 A 的存储位置在 blob 中。 如果使用，还必须指定--阿尔（跟踪 Blob Url） |
-| --bb | （默认值： False）跟踪 B 的存储位置在 blob 中。 如果使用，还必须指定--bbu （Trace B Blob Url） |
+| --ab |  (默认值： False) 跟踪 A 的存储位置在 blob 中。 如果使用，还必须指定--阿尔 (跟踪 Blob Url)  |
+| --bb |  (默认值： False) 跟踪 B 的存储位置在 blob 中。 如果使用，还必须指定--bbu (Trace B Blob Url)  |
 | --阿尔 | 使用 SAS 密钥的实例的 Blob URL |
 | --bbu | 带有 SAS 密钥的 B 实例的 Blob URL |
 

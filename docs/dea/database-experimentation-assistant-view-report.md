@@ -1,6 +1,6 @@
 ---
 title: 查看 SQL Server 升级的分析报告
-description: 在数据库实验助手中查看分析报表
+description: 了解如何在数据库实验助手 (DEA) 中查看和了解性能见解的分析报告。
 ms.custom: seo-lt-2019
 ms.date: 02/04/2020
 ms.prod: sql
@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: 2a6d027c1fb1834e4033a11a498bfc8cdad4561f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5850f3f78590b5ceccea49033b401055180d715e
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76977562"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565486"
 ---
 # <a name="view-analysis-reports-in-database-experimentation-assistant"></a>在数据库实验助手中查看分析报表
 
-使用数据库实验助手（DEA）[创建分析报表](database-experimentation-assistant-create-report.md)后，可以根据所执行的 A/B 测试查看报表的性能见解。
+使用数据库实验助手 (DEA) [创建分析报表](database-experimentation-assistant-create-report.md)后，可以根据所执行的 A/B 测试来查看性能见解的报表。
 
 ## <a name="open-an-existing-analysis-report"></a>打开现有分析报表
 
@@ -81,8 +81,8 @@ ms.locfileid: "76977562"
    您可以找到该查询的摘要统计信息，如执行次数、平均持续时间、平均 CPU、平均读/写和错误计数。  如果查询是错误查询，则 "**错误信息**" 选项卡将显示有关错误的更多详细信息。  在 "**查询计划信息**" 选项卡上，可以找到有关目标1和目标2上的查询所使用的查询计划的信息。
 
    > [!NOTE]
-   > 如果要分析扩展事件（。.XEL）文件，则不会收集查询计划信息，以限制用户计算机上的内存压力。
+   > 如果要分析扩展事件 (。.XEL) 文件，则不会收集查询计划信息，以限制用户计算机上的内存压力。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - 若要了解如何在命令提示符下生成分析报告，请参阅[在命令提示符下运行](database-experimentation-assistant-run-command-prompt.md)。

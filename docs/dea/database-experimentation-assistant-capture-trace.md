@@ -1,6 +1,6 @@
 ---
 title: 捕获 SQL Server 升级的跟踪
-description: 在数据库实验助手中捕获跟踪 SQL Server 升级
+description: 使用数据库实验助手 (DEA) 来创建跟踪文件，其中包含已捕获服务器事件的日志。
 ms.custom: seo-lt-2019
 ms.date: 12/12/2019
 ms.prod: sql
@@ -12,20 +12,20 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
-ms.openlocfilehash: 1c87d791d5a5a16ec3b0d07c6a630f133a7f673c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c560aa2c5ba4b5113ce711601a4e85aab2788240
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289825"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565589"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>在数据库实验助手中捕获跟踪
 
-您可以使用数据库实验助手（DEA）来创建具有捕获服务器事件日志的跟踪文件。 捕获的服务器事件是在特定时间段内发生在特定服务器上的事件。 每个服务器必须运行一次跟踪捕获。
+您可以使用数据库实验助手 (DEA) 来创建跟踪文件，其中包含已捕获服务器事件的日志。 捕获的服务器事件是在特定时间段内发生在特定服务器上的事件。 每个服务器必须运行一次跟踪捕获。
 
 在开始跟踪捕获之前，请确保备份所有目标数据库。
 
-SQL Server 中的查询缓存可能会影响评估结果。 建议在服务应用程序中重新启动 SQL Server 服务（MSSQLSERVER），以提高评估结果的一致性。
+SQL Server 中的查询缓存可能会影响评估结果。 建议在服务应用程序中重新启动 SQL Server 服务 (MSSQLSERVER) ，以提高评估结果的一致性。
 
 ## <a name="configure-a-trace-capture"></a>配置跟踪捕获
 
@@ -36,8 +36,8 @@ SQL Server 中的查询缓存可能会影响评估结果。 建议在服务应�
 2. 在 "**新建捕获**" 页上的 "**捕获详细信息**" 下，输入或选择以下信息：
 
     - **捕获名称**：输入捕获的跟踪文件的名称。
-    - **Format**：指定捕获的格式（Trace 或 XEvents）。
-    - **持续时间**：选择希望跟踪捕获运行的时间长度（以分钟为单位）。
+    - **Format**：指定捕获 (Trace 或 XEvents) 的格式。
+    - **持续时间**：选择想要跟踪捕获运行的时间长度 (以分钟) 。
     - **捕获位置**：选择跟踪文件的目标路径。
 
         > [!NOTE]
@@ -47,7 +47,7 @@ SQL Server 中的查询缓存可能会影响评估结果。 建议在服务应�
 
 4. 在 "**捕获详细信息**" 下，输入或选择以下信息：
 
-    - **服务器类型**：指定 SQL Server 的类型（**SqlServer**、 **AzureSqlDb**、 **AzureSqlManagedInstance**）。
+    - **服务器类型**：指定 SQL Server (**SqlServer**、 **AzureSqlDb**、 **AzureSqlManagedInstance**) 的类型。
     - **服务器名称**：指定 SQL Server 的服务器名称或 IP 地址。
     - **身份验证类型**：对于身份验证类型，请选择 " **Windows**"。
     - **数据库名称**：输入要在其上启动数据库跟踪的数据库的名称。 如果未指定数据库，则会在服务器上的所有数据库中捕获跟踪。
@@ -66,7 +66,7 @@ SQL Server 中的查询缓存可能会影响评估结果。 建议在服务应�
 
     ![监视捕获进度](./media/database-experimentation-assistant-capture-trace/dea-capture-running.png)
 
-2. 跟踪捕获运行完毕后，新的跟踪（. trace.dat.trc）文件将保存在初始配置过程中特定的**捕获位置**。
+2. 跟踪捕获运行完毕后，新的跟踪 () 文件将保存在初始配置过程中特定的**捕获位置**。
 
     ![已完成跟踪捕获](./media/database-experimentation-assistant-capture-trace/dea-capture-complete.png)
 
@@ -80,23 +80,23 @@ SQL Server 中的查询缓存可能会影响评估结果。 建议在服务应�
 
 下表列出了 DEA 为跟踪收集的事件和相应的列数据：
   
-|事件名称|文本数据（1）|二进制数据（2）|数据库 ID （3）|主机名（8）|应用程序名称（10）|登录名（11）|SPID （12）|开始时间（14）|结束时间（15）|数据库名称（35）|事件序列（51）|IsSystem （60）|  
+|事件名称|文本数据 (1) |二进制数据 (2) |数据库 ID (3) |主机名 (8) |应用程序名称 (10) |登录名 (11) |SPID (12) |开始时间 (14) |结束时间 (15) |数据库名称 (35) |事件序列 (51) |IsSystem (60) |  
 |---|---|---|---|---|---|---|---|---|---|---|---|---|  
-|**RPC：已完成（10）**||*|*|*|*|*|*|*|*|*|*|*|  
-|**RPC：正在启动（11）**||*|*|*|*|*|*|*||*|*|*|  
-|**RPC 输出参数（100）**|*||*|*|*|*|*|*||*|*|*|  
-|**SQL： BatchCompleted （12）**|*||*|*|*|*|*|*|*|*|*|*|  
-|**SQL： BatchStarting （13）**|*||*|*|*|*|*|*||*|*|*|  
-|**审核登录（14）**|*|*|*|*|*|*|*|*||*|*|*|  
-|**审核注销（15）**|*||*|*|*|*|*|*|*|*|*|*|  
-|**Existingconnection 事件类（17）**|*|*|*|*|*|*|*|*||*|*|*|  
-|**Cursoropen 事件类（53）**|*||*|*|*|*|*|*||*|*|*|  
-|**Cursorprepare 事件类（70）**|*||*|*|*|*|*|*||*|*|*|  
-|**准备 SQL （71）**|||*|*|*|*|*|*||*|*|*|  
-|**Exec 准备的 SQL （72）**|||*|*|*|*|*|*||*|*|*|  
-|**Cursorexecute 事件类（74）**|*||*|*|*|*|*|*||*|*|*|  
-|**Cursorunprepare 事件类（77）**|*||*|*|*|*|*|*||*|*|*|  
-|**Cursorclose 事件类（78）**|*||*|*|*|*|*|*||*|*|*|  
+|**RPC：已完成 (10) **||*|*|*|*|*|*|*|*|*|*|*|  
+|**RPC：正在启动 (11) **||*|*|*|*|*|*|*||*|*|*|  
+|**RPC 输出参数 (100) **|*||*|*|*|*|*|*||*|*|*|  
+|**SQL： BatchCompleted (12) **|*||*|*|*|*|*|*|*|*|*|*|  
+|**SQL： BatchStarting (13) **|*||*|*|*|*|*|*||*|*|*|  
+|**审核登录 (14) **|*|*|*|*|*|*|*|*||*|*|*|  
+|**审核注销 (15) **|*||*|*|*|*|*|*|*|*|*|*|  
+|**Existingconnection 事件类 (17) **|*|*|*|*|*|*|*|*||*|*|*|  
+|**Cursoropen 事件类 (53) **|*||*|*|*|*|*|*||*|*|*|  
+|**Cursorprepare 事件类 (70) **|*||*|*|*|*|*|*||*|*|*|  
+|**准备 SQL (71) **|||*|*|*|*|*|*||*|*|*|  
+|**Exec 预定义 SQL (72) **|||*|*|*|*|*|*||*|*|*|  
+|**Cursorexecute 事件类 (74) **|*||*|*|*|*|*|*||*|*|*|  
+|**Cursorunprepare 事件类 (77) **|*||*|*|*|*|*|*||*|*|*|  
+|**Cursorclose 事件类 (78) **|*||*|*|*|*|*|*||*|*|*|  
 
 **问：在运行跟踪捕获时，生产服务器上是否会产生性能影响？**
 
@@ -131,22 +131,22 @@ SQL Server 中的查询缓存可能会影响评估结果。 建议在服务应�
 
 如果在运行跟踪捕获时出现错误，请确认：
 
-- 运行 SQL Server 的计算机的名称有效。 若要确认，请尝试使用 SQL Server Management Studio （SSMS）连接到运行 SQL Server 的计算机。
+- 运行 SQL Server 的计算机的名称有效。 若要确认，请尝试通过使用 SQL Server Management Studio (SSMS) 连接到运行 SQL Server 的计算机。
 - 防火墙配置不会阻止与运行 SQL Server 的计算机的连接。
 - 用户具有[重播常见问题解答](https://docs.microsoft.com/sql/dea/database-experimentation-assistant-replay-trace?view=sql-server-ver15#frequently-asked-questions-about-trace-replay)中列出的权限。
-- 跟踪名称不遵循标准翻转约定（捕获\_1）。 改为尝试跟踪名称（如\_Capture 1A 或 Capture1）。
+- 跟踪名称不遵循标准翻转约定 (捕获 \_ 1) 。 改为尝试跟踪名称（如 Capture \_ 1a 或 Capture1）。
 
 下面是你可能会看到的一些可能的错误以及解决这些错误的解决方案：
 
 |可能的错误|解决方案|  
 |---|---|  
-|无法在目标 SQL Server 上启动跟踪，请检查您是否具有所需的权限，以及 SQL Server 帐户是否有权访问指定的跟踪文件路径 Sql 错误代码（53）|运行 DEA 工具的用户必须有权访问运行 SQL Server 的计算机。 必须为用户分配 sysadmin 角色。|  
-|无法在目标 SQL Server 上启动跟踪，请检查您是否具有所需的权限，以及 SQL Server 帐户是否有权访问指定的跟踪文件路径 Sql 错误代码（19062）|指定的跟踪路径可能不存在，或者该文件夹不具有运行 SQL Server 服务所使用的帐户（例如，NETWORK SERVICE）的写入权限。 路径必须存在，并且必须具有启动跟踪所需的权限。|  
+|无法在目标 SQL Server 上启动跟踪，请检查您是否具有所需的权限，以及 SQL Server 帐户是否有权访问指定的跟踪文件路径 Sql 错误代码 (53) |运行 DEA 工具的用户必须有权访问运行 SQL Server 的计算机。 必须为用户分配 sysadmin 角色。|  
+|无法在目标 SQL Server 上启动跟踪，请检查您是否具有所需的权限，以及 SQL Server 帐户是否有权访问指定的跟踪文件路径 Sql 错误代码 (19062) |指定的跟踪路径可能不存在，或者文件夹对于运行 SQL Server 服务的帐户不具有写入权限 (例如，网络服务) 。 路径必须存在，并且必须具有启动跟踪所需的权限。|  
 |当前正在目标服务器上运行的 DEA 跟踪。|目标服务器上已运行活动跟踪。 当服务器范围内的跟踪已在运行时，无法启动新跟踪。|  
 |无法打开请求的数据库来捕获跟踪。 此错误可能是由数据库名称不正确引起的。|指定的数据库不存在，或当前用户无法访问该数据库。 使用正确的数据库名称。|  
 
 如果看到标记为 " *Sql 错误代码*" 的任何其他错误，请参阅[数据库引擎错误](https://docs.microsoft.com/sql/relational-databases/errors-events/database-engine-events-and-errors)以了解详细说明。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - 若要了解如何在重播捕获的跟踪之前配置 SQL Server 中的 Distributed Replay 工具，请参阅[为数据库实验助手配置 Distributed Replay](database-experimentation-assistant-configure-replay.md)。

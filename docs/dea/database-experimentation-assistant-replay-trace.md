@@ -1,6 +1,6 @@
 ---
 title: 重播跟踪以进行 SQL Server 升级
-description: 使用数据库实验助手 SQL Server 升级重播跟踪
+description: 了解如何使用数据库实验助手 SQL Server 升级重播捕获的跟踪。
 ms.custom: seo-lt-2019
 ms.date: 12/12/2019
 ms.prod: sql
@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
-ms.openlocfilehash: 50f082edef5d9a6d4e95b7e37ef6d75f22eb6f2a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 85143440cc92cdc427be673667e22be6957cbe50
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289145"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565496"
 ---
 # <a name="replay-a-trace-in-database-experimentation-assistant"></a>在数据库实验助手中重播跟踪
 
-在数据库实验助手（DEA）中，可以针对已升级的测试环境重播捕获的跟踪文件。 例如，请考虑在 SQL Server 2008 R2 上运行的生产工作负荷。 工作负荷的跟踪文件必须重播两次：一次是在生产环境中运行的同一版本的 SQL Server，并在具有升级目标 SQL Server 版本的环境上第二次运行，如 SQL Server 2016。
+在数据库实验助手 (DEA) 中，可以针对升级后的测试环境重播捕获的跟踪文件。 例如，请考虑在 SQL Server 2008 R2 上运行的生产工作负荷。 工作负荷的跟踪文件必须重播两次：一次是在生产环境中运行的同一版本的 SQL Server，并在具有升级目标 SQL Server 版本的环境上第二次运行，如 SQL Server 2016。
 
 > [!NOTE]
 > 重播跟踪要求您手动将虚拟机或物理计算机设置为运行 Distributed Replay 跟踪。 有关详细信息，请参阅[Configure Distributed Replay for 数据库实验助手](database-experimentation-assistant-configure-replay.md)。
@@ -41,20 +41,20 @@ ms.locfileid: "79289145"
 2. 在 "**新重播**" 页上的 "**重放详细信息**" 下，输入或选择以下信息：
 
     - **重播名称**：输入跟踪重播的名称。
-    - **源跟踪格式**：指定源跟踪文件的格式（Trace 或 XEvents）。
+    - **源跟踪格式**：指定源跟踪文件 (Trace 或 XEvents) 的格式。
     - **源文件的完整路径**：指定源跟踪文件的完整路径。 如果使用的是 DReplay，则该文件必须存在于充当 DReplay 控制器的计算机上，并且用户帐户需要访问文件和文件夹。
-    - **重播工具**：指定重播工具（DReplay 或内置工具）。
+    - **重播工具**： (DReplay 或内置) 指定重播工具。
     - **控制器计算机名称**：指定充当 Distributed Replay 控制器的计算机的名称。
     - **重播跟踪位置**：指定用于存储与跟踪重播关联的跟踪文件/XEvents 的路径。
 
         > [!NOTE]
         > 对于 Azure SQL 数据库或 Azure SQL 数据库托管实例，需要提供 Azure blob 存储帐户的 SAS URI。
 
-3. 通过选择 **"是，我已经手动还原了数据库**" 复选框来验证是否已还原数据库。
+3. 通过选择 **"是，手动还原数据库 () "** 复选框，验证是否已将数据库还原 () 。
 
 4. 在 " **SQL Server 连接详细信息**" 下，输入或选择以下信息：
 
-    - **服务器类型**：指定 SQL Server 的类型（**SqlServer**、 **AzureSqlDb**、 **AzureSqlManagedInstance**）。
+    - **服务器类型**：指定 SQL Server (**SqlServer**、 **AzureSqlDb**、 **AzureSqlManagedInstance**) 的类型。
     - **服务器名称**：指定 SQL Server 的服务器名称或 IP 地址。
     - **身份验证类型**：对于身份验证类型，请选择 " **Windows**"。
     - **数据库名称**：输入要在其上启动服务器端跟踪的数据库的名称。 如果未指定数据库，则会在服务器上的所有数据库中捕获跟踪。
@@ -118,26 +118,26 @@ SQL Server 是有状态的关系数据库管理系统。 若要正确运行 A/B 
 
 **问：如何查看在重播期间收集的跟踪事件？**
 
-打开目标跟踪文件，并在 SQL 事件探查器中查看它。 或者，如果你想要对重播捕获进行修改，则所有 SQL Server 脚本都可在 C\\： Program Files （x86）\\Microsoft Corporation\\数据库实验助手\\脚本\\StartReplayCapture 中使用。
+打开目标跟踪文件，并在 SQL 事件探查器中查看它。 或者，如果你想要对重播捕获进行修改，则所有 SQL Server 脚本都将在 C： \\ Program 文件 (x86) \\ Microsoft Corporation \\ 数据库实验助手 \\ 脚本 \\ StartReplayCapture 中使用。
 
 **问：重播期间 DEA 收集哪些跟踪事件？**
 
-DEA 捕获包含与性能相关的信息的跟踪事件。 捕获配置位于 StartReplayCaptureTrace 脚本中。 这些事件是 SQL Server [sp_trace_setevent （transact-sql）参考文档](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)中列出的跟踪事件的典型事件。
+DEA 捕获包含与性能相关的信息的跟踪事件。 捕获配置位于 StartReplayCaptureTrace 脚本中。 这些事件是 SQL Server [sp_trace_setevent (transact-sql) 参考文档](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)中列出的跟踪事件的典型事件。
 
 ## <a name="troubleshoot-trace-replay"></a>跟踪重播疑难解答
 
 **问：为什么无法连接到运行 SQL Server 的计算机？**
 
-- 确认运行 SQL Server 的计算机的名称有效。 若要确认，请尝试使用 SQL Server Management Studio （SSMS）连接到服务器。
+- 确认运行 SQL Server 的计算机的名称有效。 若要确认，请尝试通过使用 SQL Server Management Studio (SSMS) 连接到服务器。
 - 确认防火墙配置不会阻止与运行 SQL Server 的计算机的连接。
 - 确认用户具有所需的用户权限。
 - 确认 Distributed Replay 客户端的服务帐户有权访问运行 SQL Server 的计算机。
 
-可在% temp%\\DEA 中的日志中获取更多详细信息。 如果问题仍然存在，请与产品团队联系。
+可在% temp% DEA 中的日志中获取更多详细信息 \\ 。 如果问题仍然存在，请与产品团队联系。
 
 **问：为什么无法连接到 Distributed Replay 控制器？**
 
-- 验证 Distributed Replay 控制器服务是否正在控制器计算机上运行。 若要验证，请使用 Distributed Replay 管理工具（运行命令`dreplay.exe status -f 1`）。
+- 验证 Distributed Replay 控制器服务是否正在控制器计算机上运行。 若要验证，请使用 Distributed Replay 管理工具 (运行命令 `dreplay.exe status -f 1`) "。
 - 如果远程启动重播：
   - 确认运行 DEA 的计算机可以成功地 ping 控制器。 根据**配置重播环境**页面上的说明，确认防火墙设置允许连接。 有关详细信息，请参阅文章[SQL Server Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/sql-server-distributed-replay?view=sql-server-2017)。
   - 请确保 Distributed Replay 控制器的用户可以使用 DCOM 远程启动和远程激活。

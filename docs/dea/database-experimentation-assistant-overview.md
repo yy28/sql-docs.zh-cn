@@ -1,6 +1,6 @@
 ---
 title: 数据库实验助手概述
-description: 数据库实验助手概述
+description: 了解数据库实验助手 (DEA) 的详细信息，例如如何评估特定工作负荷的目标 SQL Server 目标版本。
 ms.date: 12/12/2019
 ms.prod: sql
 ms.suite: sql
@@ -11,16 +11,16 @@ author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: dce2bfcafeb95a72e6584e4b619f1e4e5e12bdf1
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 94bfd77da2658a4cb6b0e5e07868605f1c12140c
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759153"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565547"
 ---
 # <a name="overview-of-database-experimentation-assistant"></a>数据库实验助手概述
 
-数据库实验助手（DEA）是一种试验解决方案，用于 SQL Server 升级。 DEA 可帮助你评估特定工作负载的 SQL Server 目标版本。 客户从早期版本的 SQL Server （从2005开始）升级到更高版本的 SQL Server 可以使用该工具提供的分析指标。
+数据库实验助手 (DEA) 是 SQL Server 升级的试验解决方案。 DEA 可帮助你评估特定工作负载的 SQL Server 目标版本。 从 2005) 开始，从到最新版本 SQL Server 的 SQL Server 升级 (的客户可以使用该工具提供的分析指标。
 
 DEA 分析指标包括：
 
@@ -32,7 +32,7 @@ DEA 分析指标包括：
 
 ## <a name="get-dea"></a>获取 DEA
 
-若要安装 DEA，请[下载](https://www.microsoft.com/download/details.aspx?id=54090)最新版本的工具。 然后，运行**DatabaseExperimentationAssistant**文件。
+若要安装 DEA，请[下载](https://www.microsoft.com/download/details.aspx?id=54090)最新版本的工具。 然后，运行**DatabaseExperimentationAssistant.exe**文件。
 
 ## <a name="solution-architecture-for-comparing-workloads"></a>用于比较工作负载的解决方案体系结构
 
@@ -45,7 +45,7 @@ DEA 分析指标包括：
 下面是运行 DEA 的一些先决条件：
 
 - 最低硬件要求：具有 3.5 GB RAM 的单核计算机。
-- 理想硬件要求：8核 CPU （具有 3.5 GB 或更大的 RAM）。 具有8个以上内核的处理器不会提高 DEA 运行时间。
+- 理想硬件要求：具有 3.5 GB RAM (8 核 CPU) 。 具有8个以上内核的处理器不会提高 DEA 运行时间。
 - 存储、B 和报表分析数据库需要额外33% 的性能跟踪大小。
 
 ## <a name="configure-dea"></a>配置 DEA
@@ -54,7 +54,7 @@ DEA 分析指标包括：
 
 ### <a name="required-configuration-for-workload-comparison-using-dea"></a>使用 DEA 进行工作负荷比较所需的配置
 
-DEA 使用 Windows 身份验证连接到数据库服务器。 确保运行 DEA 的用户可以使用 Windows 身份验证连接到数据库服务器（源、目标和分析）。
+DEA 使用 Windows 身份验证连接到数据库服务器。 确保运行 DEA 的用户可以使用 Windows 身份验证连接到数据库服务器 (源、目标和分析) 。
 
 **捕获配置要求**
 
@@ -97,21 +97,21 @@ DEA 具有支持 internet 的功能，该功能可将遥测信息发送给 Micro
 
 可以收集四种事件类型的遥测数据：
 
-- **TraceEvent**：应用程序的使用情况事件（例如，"触发停止捕获"）。
+- **TraceEvent**：应用程序 (的使用事件例如，"触发停止捕获" ) 。
 - **异常**：应用程序使用期间引发了异常。
-- **DiagnosticEvent**：一种事件日志，用于在出现问题时帮助诊断（*不*发送给 Microsoft）。
+- **DiagnosticEvent**：一种事件日志，用于在出现问题时帮助诊断 (*未*发送到 Microsoft) 。
 - **FeedbackEvent**：通过应用程序提交的用户反馈。
 
 收集和发送遥测数据是可选的。 若要指定收集的事件以及收集的事件是否发送给 Microsoft，请执行以下步骤：
 
-1. 中转到安装 DEA 的位置（例如，C： \\ Program Files （x86） \\ Microsoft Corporation \\ 数据库实验助手）。
-2. 打开并修改 .config 文件**DEA** （适用于应用程序），并修改**DEACmd** （适用于 CLI）以根据需要处理方案：
-    - 若要停止收集事件类型，请将*事件*（例如， **TraceEvent**）的值设置为**false**。 若要再次开始收集事件，请将值设置为**true**。
+1. 请参阅 DEA 的安装位置 (例如，C： \\ Program Files (x86) \\ Microsoft Corporation \\ 数据库实验助手) 。
+2. 打开并修改应用程序) **DEA.exe.config** (的 .config 文件，并根据需要为 CLI (**DEACmd.exe.config**) 来处理方案：
+    - 若要停止收集事件类型，请设置*事件* (的值，例如，将**TraceEvent**) 为**false**。 若要再次开始收集事件，请将值设置为**true**。
     - 若要停止保存事件的本地副本，请将**TraceLoggerEnabled**的值设置为**false**。 若要再次开始保存本地副本，请将值设置为**true**。
     - 若要停止向 Microsoft 发送事件，请将**AppInsightsLoggerEnabled**的值设置为**false**。 若要再次开始向 Microsoft 发送事件，请将值设置为**true**。
 
 DEA 由[Microsoft 隐私声明](https://aka.ms/dea-privacy)控制。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [工作负载比较过程的概述](database-experimentation-assistant-get-started.md)，其中介绍了在两个环境中比较工作负荷时所涉及的过程。
