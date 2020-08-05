@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d9a3f6e52547b40adefd2b94ab320ae4784837aa
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: 23df9963bccefaa5a637c7b93196f37e722ac3e4
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301991"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332009"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -163,7 +163,7 @@ ALTER AVAILABILITY GROUP group_name
  group_name  
  指定新可用性组的名称。 group_name 必须是一个有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符，并且它在 WSFC 群集的所有可用性组中必须是唯一的。  
   
- AUTOMATED_BACKUP_PREFERENCE = { PRIMARY | SECONDARY_ONLY| SECONDARY | NONE }  
+ AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY \| SECONDARY_ONLY\| SECONDARY \| NONE }  
  指定在选择执行备份的位置时有关备份作业应该如何评估主副本的首选项。 您可以编写给定备份作业的脚本，以便纳入自动备份首选项。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不会强制执行首选项，因此它对即席备份没有影响，了解这一点很重要。  
   
  仅在主要副本上受支持。  
@@ -191,7 +191,7 @@ ALTER AVAILABILITY GROUP group_name
 > [!NOTE]  
 >  若要查看现有可用性组的自动备份首选项，请选择 [sys.availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) 目录视图的 automated_backup_preference 或 automated_backup_preference_desc 列 。 此外，[sys.fn_hadr_backup_is_preferred_replica (Transact-SQL)](../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) 可用于确定首选备份副本。  此函数始终对至少一个副本返回 1（即使 `AUTOMATED_BACKUP_PREFERENCE = NONE`）。  
   
- FAILURE_CONDITION_LEVEL = { 1 | 2 | 3 | 4 | 5 }   
+ FAILURE_CONDITION_LEVEL = { 1 \| 2 \| 3 \| 4 \| 5 }   
  指定将为此可用性组触发自动故障转移的失败条件。 FAILURE_CONDITION_LEVEL 在组级别设置，但仅针对为同步-提交可用性模式 (AVAILABILITY_MODE = SYNCHRONOUS_COMMIT) 配置的可用性副本。 此外，只有在主要副本和次要副本均配置为自动故障转移模式 (FAILOVER_MODE = AUTOMATIC) 并且次要副本当前与主要副本同步的情况下，失败条件才可以触发自动故障转移。  
   
  仅在主要副本上受支持。  
@@ -276,7 +276,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
   
  有关 WSFC 节点和服务器实例的先决条件的信息，请参阅[针对 Always On 可用性组的先决条件、限制和建议 (SQL Server)](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。  
   
- ENDPOINT_URL ='TCP://system-address:port'   
+ ENDPOINT_URL ='TCP://system-address:port'  
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例（该实例将承载要添加或修改的可用性副本）的[数据库镜像终结点](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)的 URL 路径。  
   
  ENDPOINT_URL 在 ADD REPLICA ON 子句中是必需的，在 MODIFY REPLICA ON 子句中是可选的。  有关详细信息，请参阅 [在添加或修改可用性副本时指定终结点 URL (SQL Server)](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)配置服务器实例时遇到的典型问题。  
@@ -348,7 +348,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
   
  有关详细信息，请参阅[活动次要副本：次要副本备份（Always On 可用性组）](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
   
- SECONDARY_ROLE ( ... )   
+ SECONDARY_ROLE ( ... )  
  指定在此可用性副本当前拥有辅助角色（即它是辅助副本）时将要生效的角色特有设置。 在括号内指定一个或两个辅助角色选项。 如果指定两个选项，则使用以逗号分隔的列表。  
   
  辅助角色选项如下所示：  
@@ -377,7 +377,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
 > [!NOTE]  
 >  对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的命名实例，应将 Transact-SQL 侦听器配置为使用特定端口。 有关详细信息，请参阅[将服务器配置为侦听特定 TCP 端口（SQL Sever 配置管理器）](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)。  
   
- PRIMARY_ROLE ( ... )   
+ PRIMARY_ROLE ( ... )  
  指定在此可用性副本当前拥有主角色（即它是主副本）时将要生效的角色特有设置。 在括号内指定一个或两个主角色选项。 如果指定两个选项，则使用以逗号分隔的列表。  
   
  主角色选项如下所示：  
@@ -391,7 +391,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
  ALL  
  主副本中的数据库允许所有连接。 此选项为默认行为。  
   
- READ_ONLY_ROUTING_LIST = { ('\<server_instance>' [ ,...n ] ) | NONE }     
+ READ_ONLY_ROUTING_LIST = { ('\<server_instance>' [ ,...n ] ) | NONE }  
  指定一个以逗号分隔的服务器实例列表，这些实例承载在以辅助角色运行时满足以下要求的此可用性组的可用性副本：  
   
 -   被配置为允许所有连接或只读连接（参阅上文 SECONDARY_ROLE 选项的 ALLOW_CONNECTIONS 参数）。  
@@ -410,7 +410,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
  无  
  指定此可用性副本为主副本时将不支持只读路由。 此选项为默认行为。 与 MODIFY REPLICA ON 一起使用时，此值将禁用现有列表（如果有）。  
 
- READ_WRITE_ROUTING_URL = { ('\<server_instance>') }    
+ READ_WRITE_ROUTING_URL = { ('\<server_instance>') }  
  适用对象：SQL Server（从 SQL Server 2019 (15.x) 开始） 
 
  指定服务器实例，这些实例承载在以主角色运行时满足以下要求的此可用性组的可用性副本：
@@ -470,7 +470,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
   
  有关强制故障转移的限制、先决条件和建议的信息，以及强制故障转移对可用性组中以前的主数据库的影响，请参阅[执行可用性组的强制手动故障转移 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)。  
   
- ADD LISTENER '_dns\_name_'( \<add_listener_option> )    
+ ADD LISTENER '_dns\_name_'( \<add_listener_option> )  
  为此可用性组定义新的可用性组侦听器。 仅在主要副本上受支持。  
   
 > [!IMPORTANT]
@@ -587,7 +587,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
   
  例如： `WITH IP ( ('2001::4898:23:1002:20f:1fff:feff:b3a3') ) , PORT = 7777`  
   
- MODIFY LISTENER '_dns\_name_'( \<modify\_listener\_option\> )    
+ MODIFY LISTENER '_dns\_name_'( \<modify\_listener\_option\> )  
  修改此可用性组的现有可用性组侦听器。 仅在主要副本上受支持。  
   
  \<modify\_listener\_option\>  

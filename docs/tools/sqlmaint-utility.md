@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ff9734eea7e81d9c5e2ad8acbecf1fc9a60f09de
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: aaa935a955610ce5acb75a4b70141f8252cb3092
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151581"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918341"
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint 实用工具
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
   如果成功运行，则**sqlmaint** 实用工具可以对一个或多个数据库执行一组指定的维护操作。 使用 **sqlmaint** 可以运行 DBCC 检查、备份数据库及其事务日志、更新统计信息以及重新生成索引。 所有数据库维护活动都会生成报表，可以将此报表发送到指定的文本文件、HTML 文件或电子邮件帐户。 **sqlmaint** 可以执行使用早期版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]创建的数据库维护计划。 若要从命令提示符运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 维护计划，请使用 [dtexec 实用工具](../integration-services/packages/dtexec-utility.md)。  
   
 > [!IMPORTANT]  
@@ -130,8 +130,8 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
   
  *sqlmaint* 访问远程服务器时， **html_file** 需要完整的 UNC 文件名。  
   
- **-DelHtmlRpt** \<*time_period*>  
- 指定报表文件创建后的时间间隔超出 \<*time_period*> 时，删除报表目录中的所有 HTML 报表。 **-DelHtmlRpt** 将查找名称符合由 *html_file* 参数生成的模式的文件。 如果 *html_file* 为 c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint.htm，则 **-DelHtmlRpt** 将导致 **sqlmaint** 删除任何名称与 C:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint\*.htm 模式匹配的文件，以及早于指定 \<*time_period*> 的文件。  
+ -DelHtmlRpt \<*time_period*>  
+ 指定报表文件创建后的时间间隔超出 \<*time_period*> 时，删除报表目录中的所有 HTML 报表。 **-DelHtmlRpt** 将查找名称符合由 *html_file* 参数生成的模式的文件。 如果 html_file 为 c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint.htm，则 -DelHtmlRpt 将导致 sqlmaint 删除任何名称与 C:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint\*.htm 模式匹配的文件，以及早于指定 \<*time_period*> 的文件。  
   
  **-RmUnusedSpace** _threshold_percent free_percent_  
  指定从 **-D**. 指定的数据库中删除未使用的空间。 该选项仅适用于定义为自动增长的数据库。 *Threshold_percent* 指定在 **sqlmaint** 可以尝试删除未使用数据空间之前数据库必须达到的大小 (MB)。 如果数据库小于 *threshold_percent*，则不采取任何操作。 *Free_percent* 指定数据库中必须保留的未使用空间的大小，以数据库最终大小的百分比表示。 例如，如果一个 200 MB 的数据库包含 100 MB 数据，则将 *free_percent* 指定为 10 将使数据库最终大小变为 110 MB。 请注意，如果数据库小于 *free_percent* 加上数据库中数据量的大小，则数据库不会扩展。 例如，如果 108 MB 的数据库有 100 MB 数据，则将 *free_percent* 指定为 10 不会将数据库扩展为 110 MB，而是仍保持为 108 MB。  

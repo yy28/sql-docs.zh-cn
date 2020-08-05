@@ -9,16 +9,16 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c156e117b3a26c09feb5afb3bb2f3ee1c594c43b
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: 60aa2f27f83b4b3e91f22e54cb85fa0794a5355f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606599"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730638"
 ---
 # <a name="configure-hdfs-tiering-on-big-data-clusters-2019"></a>在 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 上配置 HDFS 分层
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 借助 HDFS 分层，可以在 HDFS 中装载与 HDFS 兼容的外部文件系统。 本文介绍如何为 SQL Server 大数据群集配置 HDFS 分层。 目前，我们支持连接到 Azure Data Lake Storage Gen2 和 Amazon S3。 
 
