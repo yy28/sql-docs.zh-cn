@@ -1,6 +1,6 @@
 ---
 title: SQL Server 中央管理服务器扩展
-description: 安装和使用 Azure Data Studio 的 SQL Server 中央管理服务器扩展（预览版）
+description: 了解如何安装和使用 SQL Server 中央管理服务器扩展（预览），这是用于对服务器进行分组并向组应用操作的扩展。
 ms.reviewer: alayu, maghan, sstein
 ms.prod: azure-data-studio
 ms.technology: ''
@@ -9,12 +9,12 @@ author: yualan
 ms.author: alayu
 ms.custom: seodec18
 ms.date: 06/06/2019
-ms.openlocfilehash: 5c866ee04194bcbb1d26598766483f03019ebb47
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6f28601245c239b9ffed0379b43123a300d23d30
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758354"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522491"
 ---
 # <a name="sql-server-central-management-servers-extension-preview"></a>SQL Server 中央管理服务器扩展（预览版）
 
@@ -31,7 +31,7 @@ ms.locfileid: "85758354"
 1. 选择所需的扩展（SQL Server 中央管理服务器），然后选择“安装”以进行安装  。
 
 ### <a name="how-do-i-start-central-management-servers"></a>如何启动中央管理服务器？
- 可以通过单击“连接”图标 (Ctrl/Cmd + G) 来查看中心管理服务器。 首次下载扩展时，CMS 视图将被最小化，可单击“中央管理服务器”将其打开 
+ 可以通过单击“连接”图标 (Ctrl/Cmd + G) 来查看中心管理服务器。 首次下载扩展时，CMS 视图将被最小化，可单击“中央管理服务器”将其打开
 
 ## <a name="next-steps"></a>后续步骤
 若要从概念上了解有关中央管理服务器的详细信息，[请参阅此处](https://docs.microsoft.com/sql/ssms/register-servers/create-a-central-management-server-and-server-group)。

@@ -15,12 +15,12 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: d32a8c6a2096cab67917db7a464b70eaf16ff6f5
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: b1a8d91cc9da7cb0707211464e53b2cccaf0a111
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484418"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435587"
 ---
 # <a name="scalar-udf-inlining"></a>标量 UDF 内联
 
@@ -131,7 +131,7 @@ SELECT C_NAME, dbo.customer_category(C_CUSTKEY) FROM CUSTOMER;
 -  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也推断出了隐式 `GROUP BY O_CUSTKEY on ORDERS` 并使用 IndexSpool + StreamAggregate 实现了它。
 -  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 现在在所有运算符中都使用并行。
 
-根据 UDF 中逻辑的复杂性，所生成的查询计划也可能变得更大更复杂。 我们可以看到，UDF 中的操作现在不再是黑盒，因此查询优化器能够降低成本并优化这些操作。 此外，由于 UDF 不再在计划中，因此将用完全避免函数调用开销的计划来取代迭代 UDF 调用。
+根据 UDF 中逻辑的复杂性，所生成的查询计划也可能变得更大更复杂。 正如我们所看到的，UDF 内部的操作现在不再是不透明盒，因此查询优化器能够对这些操作进行成本计算和优化。 此外，由于 UDF 不再在计划中，因此将用完全避免函数调用开销的计划来取代迭代 UDF 调用。
 
 ## <a name="inlineable-scalar-udfs-requirements"></a>可内联标量 UDF 要求
 <a name="requirements"></a>如果满足所有以下条件，则标量 T-SQL UDF 可以内联：

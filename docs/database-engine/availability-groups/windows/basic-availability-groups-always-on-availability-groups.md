@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 285adbc7-ac9b-40f6-b4a9-3f1591d3b632
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cee7b5274347e26b595f81d78b51946c7d5ce39b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 851d6a801a83f8e66bbab3da2f1836a0bbdccf21
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896176"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435221"
 ---
 # <a name="basic-always-on-availability-groups-for-a-single-database"></a>单一数据库的基本 Always On 可用性组
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -45,11 +45,14 @@ ms.locfileid: "85896176"
 - 仅 Standard Edition 服务器支持基本可用性组。 
 
 - 基本可用性组不能为分布式可用性组的一部分。 
+
+- 可能有多个基本可用性组连接到一个 SQL Server 实例。
+
   
 ## <a name="configuration"></a>配置  
  可以在任意两个 SQL Server 2016 Standard Edition 服务器上创建 AlwaysOn 基本可用性组。 当创建基本可用性组时，必须在创建期间指定两个副本。  
   
- 若要创建基本可用性组，请使用 **CREATE AVAILABILITY GROUP** transact-SQL 命令并指定“WITH BASIC”  选项（默认值为“ADVANCED”  ）。 从版本 17.8 开始，还可以使用 SQL Server Management Studio 中的 UI 创建基本可用性组。 有关详细信息，请参阅 [CREATE AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/create-availability-group-transact-sql.md)。 
+ 若要创建基本可用性组，请使用 **CREATE AVAILABILITY GROUP** transact-SQL 命令并指定“WITH BASIC”选项（默认值为“ADVANCED”）。 从版本 17.8 开始，还可以使用 SQL Server Management Studio 中的 UI 创建基本可用性组。 有关详细信息，请参阅 [CREATE AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/create-availability-group-transact-sql.md)。 
 
 请参阅以下有关使用 Transact-SQL (T-SQL) 创建基本可用性组的示例： 
 

@@ -1,6 +1,6 @@
 ---
 title: SQL Server 导入扩展
-description: 安装和使用 Azure Data Studio 的 SQL Server 导入扩展（预览版）
+description: 了解如何安装和使用 Azure Data Studio 的 SQL Server 导入扩展（预览），这是将 .txt 和 .csv 文件转换为 SQL 表的向导。
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.reviewer: alayu, maghan, sstein
@@ -9,12 +9,12 @@ ms.technology: ''
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: a2795282c7a43c5ae582a059ae8b56d1f592e6e6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cac73bebca185f40deb1b1bac4a77c6ceb20264e
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758347"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522451"
 ---
 # <a name="sql-server-import-extension-preview"></a>SQL Server 导入扩展（预览版）
 
@@ -45,9 +45,9 @@ SQL Server 导入扩展（预览版）将 .txt 和 .csv 文件转换为 SQL 表�
     
     单击“浏览”选择文件  。 它应该根据文件名自动填充表名，但也可以自行更改。
 
-    默认情况下，架构将是 dbo，但可进行更改。 单击“下一步”继续。 
+    默认情况下，架构将是 dbo，但可进行更改。 单击“下一步”继续。
     ![输入文件](media/sql-server-import-extension/import-wizard-input-file.png)
-1. 向导将根据前 50 行生成预览。 除验证数据是否准确外，此页上没有其他操作。 单击“下一步”继续。 
+1. 向导将根据前 50 行生成预览。 除验证数据是否准确外，此页上没有其他操作。 单击“下一步”继续。
     ![打开导入向导](media/sql-server-import-extension/import-wizard-preview-data.png)
 2. 在此页上，可以更改列名、数据类型、是否为主键或是否允许 null 值。 可以根据需要执行任意数量的更改。 单击“导入数据”继续操作  。
     ![打开导入向导](media/sql-server-import-extension/import-wizard-modify-columns.png)
