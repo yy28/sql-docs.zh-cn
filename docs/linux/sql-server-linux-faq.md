@@ -7,12 +7,12 @@ ms.date: 10/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: bd1c4ad80abb5e6df26ea09fc19e83b457fee87c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a41223036980a77a45094f2a64c22b898902548c
+ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895340"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87477349"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Linux 上的 SQL Server 的常见问题解答 (FAQ)
 
@@ -163,5 +163,9 @@ ms.locfileid: "85895340"
 1. 是否可以更改已安装的 mssql 帐户和组中的 SQL Server 文件和目录的所有权？
 
    我们不支持更改默认安装中的 SQL Server 目录和文件的所有权。 mssql 帐户和组专门用于 SQL Server 且不支持交互式登录访问。
-
+   
+ 1. SQL Server 数据和日志目录是否支持符号链接？ 
+    
+    否，SQL Server 数据和日志目录不支持符号链接。 若要更改默认数据和日志目录，请参阅[更改默认数据或日志目录位置](sql-server-linux-configure-mssql-conf.md#datadir)。
+    
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

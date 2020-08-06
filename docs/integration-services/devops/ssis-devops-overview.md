@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6c5634130e2a9a4e6f2a394d067f0e679ab02827
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: c89ff705077782d0cf8287f0d1bc010ce609cc72
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196069"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472473"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools"></a>SQL Server Integration Services (SSIS) DevOps 工具
 
@@ -117,7 +117,7 @@ cat log.txt
 
 但特定身份验证类型是否受支持取决于目标服务器类型和代理类型。 下表列出了详细的支持矩阵。
 
-| |Microsoft 托管代理|自托管代码|
+|目标服务器类型|Microsoft 托管代理|自托管代码|
 |---------|---------|---------|
 |本地 SQL Server 或 VM |空值|Windows 身份验证|
 |Azure SQL|SQL Server 身份验证 <br> Active Directory - 密码|SQL Server 身份验证 <br> Active Directory - 密码 <br> Active Directory - 集成|
@@ -197,7 +197,7 @@ SSIS 目录配置的内联 JSON。 只有在选择“内联”作为配置文件
 
 但特定身份验证类型是否受支持取决于目标服务器类型和代理类型。 下表列出了详细的支持矩阵。
 
-| |Microsoft 托管代理|自托管代码|
+|目标服务器类型|Microsoft 托管代理|自托管代码|
 |---------|---------|---------|
 |本地 SQL Server 或 VM |空值|Windows 身份验证|
 |Azure SQL|SQL Server 身份验证 <br> Active Directory - 密码|SQL Server 身份验证 <br> Active Directory - 密码 <br> Active Directory - 集成|
@@ -294,7 +294,7 @@ SSIS 目录配置的内联 JSON。 只有在选择“内联”作为配置文件
 
 ##### <a name="folder-attributes"></a>文件夹属性
 
-|properties  |说明  |说明  |
+|Property  |说明  |说明  |
 |---------|---------|---------|
 |name  |目录文件夹的名称。|如果文件夹不存在，将创建一个文件夹。|
 |description|目录文件夹的说明。|将跳过 NULL 值。|
@@ -303,7 +303,7 @@ SSIS 目录配置的内联 JSON。 只有在选择“内联”作为配置文件
 
 ##### <a name="project-attributes"></a>项目属性
 
-|properties  |说明  |说明  |
+|Property  |说明  |说明  |
 |---------|---------|---------|
 |name|项目名称。 |如果父文件夹中不存在项目，则将跳过项目对象。|
 |parameters|参数对象的数组。 每个对象都包含参数的配置信息。|有关参数对象的架构，请参阅“参数属性”。|
@@ -311,7 +311,7 @@ SSIS 目录配置的内联 JSON。 只有在选择“内联”作为配置文件
 
 ##### <a name="parameter-attributes"></a>参数属性
 
-|properties  |说明  |说明  |
+|Property  |说明  |说明  |
 |---------|---------|---------|
 |name|参数的名称。|<li>参数可以是项目参数，也可以是包参数。 <li>如果没有参数，则跳过它。 <li>如果参数是连接管理器属性，则名称格式应为 CM.\<Connection Manager Name>.\<Property Name>。 |
 |容器 (container)|参数的容器。|<li>如果参数是项目参数，则容器应为项目名称。 <li>如果它是包参数，则容器应为扩展名为 .dtsx 的包名称。|
@@ -320,14 +320,14 @@ SSIS 目录配置的内联 JSON。 只有在选择“内联”作为配置文件
 
 ##### <a name="reference-attributes"></a>引用属性
 
-|properties  |说明  |说明  |
+|Property  |说明  |说明  |
 |---------|---------|---------|
 |environmentFolder|环境的文件夹名称。|如果文件夹不存在，将创建一个文件夹。 <br> 值可以是“.”，它表示引用环境的项目的父文件夹。|
 |environmentName|引用的环境的名称。|如果环境不存在，将创建指定的环境。|
 
 ##### <a name="environment-attributes"></a>环境属性
 
-|properties  |说明  |说明  |
+|Property  |说明  |说明  |
 |---------|---------|---------|
 |name|环境的名称。|如果环境不存在，将创建环境。|
 |description|环境的说明。|将跳过 NULL 值。|

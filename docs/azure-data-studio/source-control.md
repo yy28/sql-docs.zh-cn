@@ -1,6 +1,6 @@
 ---
 title: 源代码管理
-description: 了解如何在 Azure Data Studio 中配置源代码管理
+description: Azure Data Studio 支持使用 Git 进行源代码管理 (SCM)。 了解如何打开现有的 Git 存储库，以及如何初始化新存储库。
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.topic: conceptual
@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: c4f586e355ad31422c75a5abb10a4c7e42f5eda6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c8b3ad59ac518eebefa9fbb073544fdb7791a419
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758369"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522501"
 ---
 # <a name="source-control-in-azure-data-studio"></a>Azure Data Studio 中的源代码管理
 
@@ -26,7 +26,7 @@ Azure Data Studio 附带 Git 源控制管理器 (SCM)，但仍需要[安装 Git�
 
 ## <a name="open-an-existing-git-repository"></a>打开现有 Git 存储库
 
-1. 在“文件”菜单下，选择“打开文件夹...” 
+1. 在“文件”菜单下，选择“打开文件夹...”
 2. 浏览到包含 Git 所跟踪文件的文件夹，然后单击“选择文件夹”。 可在此处选择本地存储库中的子文件夹。
 
 ## <a name="initialize-a-new-git-repository"></a>初始化新 Git 存储库

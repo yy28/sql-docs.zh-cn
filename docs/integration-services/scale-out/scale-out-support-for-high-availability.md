@@ -1,6 +1,6 @@
 ---
 title: Scale Out 对高可用性的支持 | Microsoft Docs
-description: 本文介绍如何配置高可用性 SSIS Scale Out
+description: 了解如何配置 SQL Server Integration Services (SSIS) Scale Out Master 端来实现高可用性。
 ms.custom: performance
 ms.date: 05/23/2018
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: edd0418c3dc47089db309a66ad30a6f7f75a1280
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 75eeaf7b9402de747c49ad69f64731c2de6962c9
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922093"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522889"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Scale Out 对高可用性的支持
 
@@ -73,7 +73,7 @@ Scale Out Master 端的高可用性则通过[针对 SSIS 目录的 Always On](..
 
 使用登录名 ##MS_SSISLogDBWorkerAgentLogin##（其密码是自动生成的）在 SSISDB 中进行日志记录  。 要让日志记录适用于 SSISDB 的所有副本，请执行以下操作
 
-### <a name="61-change-the-password-of-ms_ssislogdbworkeragentlogin-on-the-primary-sql-server"></a>6.1 更改主 SQL Server 上 ##MS_SSISLogDBWorkerAgentLogin## 的密码 
+### <a name="61-change-the-password-of-ms_ssislogdbworkeragentlogin-on-the-primary-sql-server"></a>6.1 更改主 SQL Server 上 ##MS_SSISLogDBWorkerAgentLogin## 的密码
 
 ### <a name="62-add-the-login-to-the-secondary-sql-server"></a>6.2 将该登录名添加到辅助 SQL Server
 

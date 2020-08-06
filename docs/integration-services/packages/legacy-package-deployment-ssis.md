@@ -31,12 +31,12 @@ helpviewer_keywords:
 ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4ab6bc0a45ec2ac3b72fb029e6ef3ec74601c183
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1ce860d112f171e4cc341c2b2e2b03149720e6b9
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919193"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472486"
 ---
 # <a name="legacy-package-deployment-ssis"></a>早期包部署 (SSIS)
 
@@ -47,7 +47,7 @@ ms.locfileid: "86919193"
   
  包部署过程中有四个步骤：  
   
-1.  第一个可选步骤是可选的，包括创建在运行时更新包元素属性的包配置。 部署包时会自动包括这些配置。  
+1.  第一步是可选的，涉及创建在运行时更新包元素的属性的包配置。 部署包时会自动包括这些配置。  
   
 2.  第二步是生成 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目，用于创建包部署实用工具。 项目的部署实用工具包含要部署的包  
   

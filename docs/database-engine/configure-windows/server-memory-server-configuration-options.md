@@ -22,17 +22,17 @@ helpviewer_keywords:
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 27e39532a3b6198fd6d54c7b58407e76c487325a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8620da6349efe012e9e0d75d6ddf5efada437832
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751906"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442817"
 ---
 # <a name="server-memory-configuration-options"></a>服务器内存配置选项
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-重新配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例使用的 SQL Server 进程的内存量（以 MB 为单位）。  有两个服务器内存选项：min server memory 和 max server memory。  这些选项会更改 SQL Server 内存管理器可分配给 SQL Server 进程的内存量。
+重新配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例使用的 SQL Server 进程的内存量（以 MB 为单位）。  有两个服务器内存选项：min server memory 和 max server memory。 这些选项会更改 SQL Server 内存管理器可分配给 SQL Server 进程的内存量。
   
 这些选项的默认设置和允许的最小值为：
 
@@ -77,9 +77,14 @@ ms.locfileid: "85751906"
   
 2.  单击 **“内存”** 节点。  
   
-3.  在“服务器内存选项”中，为“最小服务器内存”和“最大服务器内存”输入所需的内存量。  
+3.  在 **“服务器内存选项”** 中，为 **“最小服务器内存”** 和 **“最大服务器内存”** 输入所需的内存量。  
   
      使用默认设置，将允许 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 根据可用系统资源动态更改其内存需求。 建议按[上述内容](#max_server_memory)设置 max server memory。 
+
+下面的屏幕截图演示了所有这三个步骤： 
+
+:::image type="content" source="media/server-memory-server-configuration-options/configure-memory-in-ssms.png" alt-text="在 SSMS 中配置内存":::
+
   
 ## <a name="lock-pages-in-memory-lpim"></a>锁定内存页 (LPIM) 
 此 Windows 策略将确定哪些帐户可以使用进程将数据保留在物理内存中，从而阻止系统将数据分页到磁盘的虚拟内存中。 锁定内存中的页可以在发生将内存分页到磁盘时保持服务器的响应能力。 已向有权运行 sqlservr.exe 的帐户授予 Windows 锁定内存页 (LPIM) 用户权限时，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard Edition 和更高版本的实例中将“锁定内存页”选项设置为“打开”。  

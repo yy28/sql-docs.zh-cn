@@ -1,6 +1,6 @@
 ---
 title: 安装：PowerShell 所需状态配置
-description: 了解如何使用 PowerShell Desired State Configuration (DSC) 安装 SQL Server。
+description: 使用 PowerShell DSC 安装 SQL Server，并了解 Windows Server 2016 上 SQL Server 2017 独立实例的初始设置。
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.devlang: PowerShell
@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: randomnote1
 ms.author: dareist
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7e7b3f2d8673972100e01413e5688353cb7c87a6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f33fff4f29650e54803d47dc2188ec67d5594f89
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258986"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472379"
 ---
 # <a name="install-sql-server-with-powershell-desired-state-configuration"></a>使用 PowerShell Desired State Configuration 安装 SQL Server
 

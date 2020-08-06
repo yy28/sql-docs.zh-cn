@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3ad3743b35570ddb0f4644b909ca06339444143e
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 27ccecb8293adff8fe5f2aaa3062a871d745c587
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87410933"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435440"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>具有安全 Enclave 的 Always Encrypted
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -27,7 +27,7 @@ SQL Server 2016 中引入的 Always Encrypted 可保护敏感数据的机密性�
 
 如果没有本文中所讨论的增强功能，Always Encrypted 会通过在客户端加密数据并且从不允许数据或相应的加密密钥以纯文本形式显示在 SQL Server 引擎中来保护数据。 因此，数据库内的加密列上的功能受到严格限制。 SQL Server 可以对加密数据执行的唯一操作是相等比较（仅适用于确定性加密）。 数据库内不支持所有其他操作，包括加密操作（初始数据加密或密钥轮换）或富计算（例如，模式匹配）。 用户需要将数据移出数据库才能对客户端执行这些操作。
 
-具有安全 enclave 的 Always Encrypted 通过允许在服务器端对安全 enclave 内的纯文本数据进行计算来解决这些限制。 安全 enclave 是 SQL Server 进程内受保护的内存区域，并充当用于处理 SQL Server 引擎中的敏感数据的受信任执行环境。 安全 enclave 显示为托管计算机上的其余 SQL Server 和其他进程的黑盒。 无法从外部查看 enclave 内的任何数据或代码，即使采用调试程序也是如此。  
+具有安全 enclave 的 Always Encrypted 通过允许在服务器端对安全 enclave 内的纯文本数据进行计算来解决这些限制。 安全 enclave 是 SQL Server 进程内受保护的内存区域，并充当用于处理 SQL Server 引擎中的敏感数据的受信任执行环境。 安全 enclave 对托管计算机上的 SQL Server 其余部分和其他进程显示为不透明盒。 无法从外部查看 enclave 内的任何数据或代码，即使采用调试程序也是如此。  
 
 
 Always Encrypted 使用安全 enclave，如下图中所示：

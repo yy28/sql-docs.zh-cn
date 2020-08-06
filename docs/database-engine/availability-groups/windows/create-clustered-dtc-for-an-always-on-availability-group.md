@@ -11,16 +11,16 @@ ms.assetid: 0e332aa4-2c48-4bc4-a404-b65735a02cea
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 96c706d58e0f90f4f10b89a724f7d87fa94e41f3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 956cedfe3fd637b170f560863bf12eb79a9973b8
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72586767"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522919"
 ---
 # <a name="create-clustered-dtc-resource-for-an-always-on-availability-group"></a>为 AlwaysOn 可用性组创建群集 DTC 资源
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[sql windows only](../../../includes/applies-to-version/sql-windows-only.md)]
 
 本主题介绍如何为 SQL Server AlwaysOn 可用性组完整配置群集 DTC 资源。 完整配置过程可能要长达一小时才能完成。 
 
@@ -115,7 +115,7 @@ foreach ($node in $nodes) {
     New-NetFirewallRule -CimSession $node -DisplayName 'SQL Server Mirroring' -Description 'Port 5022 for SQL Server Mirroring' -Action Allow -Direction Inbound -Protocol TCP -LocalPort 5022 -RemotePort Any -LocalAddress Any -RemoteAddress Any;
     };
 ```  
-## <a name="3--configure-in-doubt-xact-resolution"></a>3.配置“未决事务解析”  
+## <a name="3--configure-in-doubt-xact-resolution"></a>3.配置“未决事务解析” 
 此脚本针对未决事务将“未决事务解析”服务器配置选项配置为“假设提交”  。  在 SQL Server Management Studio (SSMS) 中以 **SQLCMD 模式**对 `SQLNODE1` 运行以下 T-SQL 脚本。
 
 ```sql  

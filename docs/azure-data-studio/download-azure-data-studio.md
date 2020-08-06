@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
 ms.date: 7/17/2020
-ms.openlocfilehash: a5f16cc15fc44a1b07b11159ac0accc6a47afc60
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: c0b701bb23b5ada0f3a4a58d23064bd79acd80ad
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411173"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442393"
 ---
 # <a name="download-and-install-azure-data-studio"></a>下载并安装 Azure Data Studio
 
@@ -172,7 +172,9 @@ Azure Data Studio 在 Windows、macOS 和 Linux 上运行，并在以下平台�
 
 ## <a name="check-for-updates"></a>检查更新
 
-若要检查最新更新，请单击窗口左下角的齿轮图标，然后单击“检查更新”
+若要检查是否有最新更新，请单击窗口左下角的齿轮图标，然后单击“检查是否有更新”。
+
+在脱机环境中，可以通过[直接在以前安装的版本上安装最新版本](#download-and-install-azure-data-studio)来应用更新。  不需要卸载旧版 Azure Data Studio，因为安装程序会更新当前安装的应用程序（若有）。
 
 ## <a name="supported-sql-offerings"></a>支持的 SQL 产品/服务
 

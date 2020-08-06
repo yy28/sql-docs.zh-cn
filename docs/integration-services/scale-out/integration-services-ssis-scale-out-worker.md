@@ -1,6 +1,6 @@
 ---
 title: SQL Server Integration Services (SSIS) Scale Out Worker | Microsoft Docs
-description: 本文介绍 SSIS Scale Out 的 Scale Out Master 组件
+description: 详细了解 SQL Server Integration Services (SSIS) Scale Out 的 Scale Out Master 组件。
 ms.custom: performance
 ms.date: 01/19/2019
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: b77fbcf909d534304bbaf2a27ca55daccb2a94c4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1fb3f2699133881ad4baba73f47b0f8548735402
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918973"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522301"
 ---
 # <a name="integration-services-ssis-scale-out-worker"></a>Integration Services (SSIS) Scale Out Worker
 
@@ -30,8 +30,8 @@ Scale Out Worker 运行 Scale Out Worker 服务以从 Scale Out Master 中请求
 
 |配置  |说明  |默认值|
 |---------|---------|---------|
-|DisplayName|Scale Out Worker 的显示名称。 没有在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017 中使用。 |计算机名称|
-|说明|Scale Out Worker 的说明。 没有在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017 中使用。 |空|
+|DisplayName|Scale Out Worker 的显示名称。 没有在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017 中使用。|计算机名称|
+|说明|Scale Out Worker 的说明。 没有在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017 中使用。|空|
 |MasterEndpoint|连接到 Scale Out Master 的终结点。|该终结点在 Scale Out Worker 安装期间设置|
 |MasterHttpsCertThumbprint|用于验证 Scale Out Master 的客户端 TLS/SSL 证书的指纹|客户端证书的指纹在 Scale Out Worker 安装期间指定。|
 |WorkerHttpsCertThumbprint|用于对 Scale Out Worker 进行身份验证的 Scale Out Master 证书的指纹。|证书的指纹在 Scale Out Worker 安装期间自动创建并安装|

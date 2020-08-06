@@ -1,6 +1,6 @@
 ---
 title: 使用 Transact-SQL 编辑器创建数据库对象
-description: 本教程演示 Azure Data Studio 中用于简化 T-SQL 的使用的主要功能。
+description: 请按照本教程的说明操作，了解如何使用 Transact-SQL 编辑器来执行核心数据库任务，包括创建和搜索数据库对象。
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.topic: tutorial
@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
-ms.openlocfilehash: b8e5bd6cb986601baf97a02a3f167432e0c29b95
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 172eee223f04ee37cc7b530cdb4db891afad36d8
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726736"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522411"
 ---
 # <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---azure-data-studio"></a>教程：使用 Transact-SQL 编辑器创建数据库对象 - Azure Data Studio
 
@@ -118,7 +118,7 @@ Azure Data Studio 提供了使用查看定义功能查看对象定义的功能�
 1. 按 Ctrl + N，打开新的编辑器。 
 
 2. 在编辑器中键入“sql”，使用向下键移动到“sqlCreateStoredProcedure”，然后按 Tab（或 Enter）以加载创建存储过程片段   。
-3. 对于 StoredProcedureName，键入“setCustomer”，对于 SchemaName，键入“dbo”   
+3. 对于 StoredProcedureName，键入“setCustomer”，对于 SchemaName，键入“dbo”
 
 3. 将 @param 占位符替换为以下参数定义：
 

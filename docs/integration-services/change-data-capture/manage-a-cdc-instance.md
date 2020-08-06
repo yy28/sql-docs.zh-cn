@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a275dbc088774355c3546b7234174e5b7b585e43
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 929e6730ade53eeff07552652ff2905665fc4a49
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922523"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472540"
 ---
 # <a name="manage-a-cdc-instance"></a>管理 CDC 实例
 
@@ -71,7 +71,7 @@ ms.locfileid: "86922523"
   
 -   **状态**：一个指示 CDC 实例的当前状态的图标。 下面将介绍这些状态。  
   
-    |||  
+    |图标|状态和说明|  
     |-|-|  
     |![错误](../../integration-services/change-data-capture/media/error.gif "错误")|**错误**。 Oracle CDC 实例因为发生了不可重试的错误而未运行。 以下子状态可用：<br /><br /> **配置不当**：发生了需要手动干预的配置错误。<br /><br /> **要求提供密码**：没有为 Oracle CDC 实例设置密码或密码无效。<br /><br /> **意外**。 所有其他不可恢复错误。|  
     |![确定](../../integration-services/change-data-capture/media/okay.gif "确定")|**正在运行**：CDC 实例正在运行并且正在处理更改记录。 以下子状态可用：<br /><br /> **空闲**：所有更改记录都已处理并且存储在目标更改表中。 没有活动事务。<br /><br /> **正在处理**：存在正处理、但尚未写入更改表的更改记录。|  

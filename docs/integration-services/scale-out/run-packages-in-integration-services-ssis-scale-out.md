@@ -1,6 +1,6 @@
 ---
 title: 在 SQL Server Integration Services (SSIS) Scale Out 中运行包 | Microsoft Docs
-description: 本文介绍如何在 Scale Out 中运行 SSIS 包
+description: 了解如何使用各种方法在 Scale Out 中运行 SQL Server Integration Services (SSIS) 包。
 ms.custom: performance
 ms.date: 12/13/2017
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.author: haoqian
 ms.reviewer: maghan
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
-ms.openlocfilehash: 522b522c5afeedd71314bb53f0c4679828bf44e1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8de8aeb3b41c8ae44020c0cb0d4cca656ee96418
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914843"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522939"
 ---
 # <a name="run-packages-in-integration-services-ssis-scale-out"></a>在 Integration Services (SSIS) Scale Out 中运行包
 

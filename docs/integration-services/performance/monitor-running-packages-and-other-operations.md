@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6f899ec9c1e006212483a49133ad343e93f20173
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4506f95337319d0b4a8fa4f63c99a182360cfa2b
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918311"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472484"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>监视运行包和其他操作
 
@@ -73,7 +73,7 @@ ms.locfileid: "86918311"
  类型  
  指定操作的类型。 下面是 **“类型”** 字段的可能值以及 Transact-SQL **catalog.operations** 视图的 operations_type 列中的相应值。  
   
-|||  
+|类型字段说明|operations_type 值|  
 |-|-|  
 |Integration Services 初始化|1|  
 |操作清除（SQL 代理作业）|2|  
