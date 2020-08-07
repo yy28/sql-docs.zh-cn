@@ -1,5 +1,5 @@
 ---
-title: 评估用于转换的 DB2 架构（DB2ToSQL） |Microsoft Docs
+title: 评估用于转换 (DB2ToSQL) 的 DB2 架构 |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,20 +7,20 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 8892f5a4-72ba-4406-8649-7a9d67f4c1d9
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 506b9a32b465c9006fe4030bd6fcbb8ba4d0f136
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: b889b896a70fa43ee3909ff251a3d91125e878b8
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938338"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937396"
 ---
-# <a name="assessing-db2-schemas-for-conversion-db2tosql"></a>评估用于转换的 DB2 架构（DB2ToSQL）
-在加载对象并将数据迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之前，您应该确定迁移的复杂程度以及迁移所需的时间。 SSMA 可以创建一个评估报表，显示将成功转换的对象的百分比。 SSMA 还使你能够查看导致转换失败的特定问题。  
+# <a name="assessing-db2-schemas-for-conversion-db2tosql"></a>评估用于转换 (DB2ToSQL) 的 DB2 架构
+在加载对象并将数据迁移到之前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，您应该确定迁移的复杂程度以及迁移所需的时间。 SSMA 可以创建一个评估报表，显示将成功转换的对象的百分比。 SSMA 还使你能够查看导致转换失败的特定问题。  
   
 ## <a name="creating-assessment-reports"></a>创建评估报表  
-当它创建此评估报表时，SSMA 会将所选 DB2 数据库[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]对象转换为语法，然后显示结果。  
+当它创建此评估报表时，SSMA 会将所选 DB2 数据库对象转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语法，然后显示结果。  
   
 **创建评估报表**  
   
@@ -34,7 +34,7 @@ ms.locfileid: "67938338"
   
     SSMA 会在窗口底部的状态栏中显示进度。 如果 "输出" 窗格可见，还会在 "输出" 窗格中看到消息。  
   
-    评估完成后，将显示 " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DB2：评估报表" 窗口的迁移助手。  
+    评估完成后， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将显示 "DB2：评估报表" 窗口的迁移助手。  
   
 ## <a name="using-assessment-reports"></a>使用评估报表  
 "评估报表" 窗口包含三个窗格：  
@@ -74,7 +74,7 @@ ms.locfileid: "67938338"
   
     -   在 DB2 中，可以修改 DB2 对象，以删除或修改有问题的代码。 若要将更新的代码加载到 SSMA 中，必须更新元数据。 有关详细信息，请参阅[连接到 DB2 数据库 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)。  
   
-    -   可以从迁移中排除对象。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "元数据资源管理器" 和 "Db2 元数据资源管理器" 中，清除项旁边[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的复选框，然后将对象加载到 db2 并从 DB2 迁移数据。  
+    -   可以从迁移中排除对象。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "元数据资源管理器" 和 "Db2 元数据资源管理器" 中，清除项旁边的复选框，然后将对象加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] db2 并从 DB2 迁移数据。  
   
 ## <a name="next-step"></a>下一步  
 [转换 DB2 架构 &#40;DB2ToSQL&#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md)  

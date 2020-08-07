@@ -1,5 +1,5 @@
 ---
-title: 项目设置（迁移）（SybaseToSQL） |Microsoft Docs
+title: " (迁移的项目设置)  (SybaseToSQL) |Microsoft Docs"
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 82f8857f-7ab1-4738-ab6e-b1e95ea94924
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: baa268431f9741e3dfe016476abdf051f8f54a09
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 5e8a8f9c88537d0dc807efe7baf387ea917468d3
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68028711"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87930864"
 ---
 # <a name="project-settings-migration-sybasetosql"></a>项目设置（迁移）(SybaseToSQL)
-"**项目设置**" 对话框的 "迁移" 页包含用于自定义 SSMA 将数据从 Sybase 自适应服务器企业（ASE） [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]迁移到的方式的设置。  
+"**项目设置**" 对话框的 "迁移" 页包含的设置可用于自定义 SSMA 将数据从 Sybase 自适应服务器企业 (ASE) 迁移到的方式 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 "**项目设置**" 和 "**默认项目设置**" 对话框中提供了 "迁移" 窗格。  
   
@@ -29,16 +29,16 @@ ms.locfileid: "68028711"
   
 |术语|定义|  
 |--------|--------------|  
-|**替换不受支持的日期**|指定 SSMA 是否应更正早于最早[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日期**时间**日期（01年1月 1753 1 日）的日期。<br /><br />若要保留当前日期值，请选择 "**不执行任何操作**"。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不会接受日期时间列中01年1月 1753 1 日之前的日期。 如果使用旧日期，则必须将日期时间值转换为字符值。<br /><br />若要将1753年1月之前的日期转换为 NULL，请选择 "**替换为 null**"。<br /><br />若要将1753年1月之前的日期替换为支持的日期，请选择 "**替换为支持的最早日期**"。<br /><br />**默认模式**：不执行任何操作<br /><br />**乐观模式**：不执行任何操作<br /><br />**完全模式**：替换为支持的最接近日期|  
+|**替换不受支持的日期**|指定 SSMA 是否应更正早于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) 1753 年1月1日 (01 月之前**的日期日期**。<br /><br />若要保留当前日期值，请选择 "**不执行任何操作**"。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不会接受日期时间列中01年1月 1753 1 日之前的日期。 如果使用旧日期，则必须将日期时间值转换为字符值。<br /><br />若要将1753年1月之前的日期转换为 NULL，请选择 "**替换为 null**"。<br /><br />若要将1753年1月之前的日期替换为支持的日期，请选择 "**替换为支持的最早日期**"。<br /><br />**默认模式**：不执行任何操作<br /><br />**乐观模式**：不执行任何操作<br /><br />**完全模式**：替换为支持的最接近日期|  
   
 ## <a name="migration-engine"></a>迁移引擎  
   
 |术语|定义|  
 |--------|--------------|  
-|**迁移引擎**|指定数据迁移期间使用的数据库引擎。 客户端数据迁移指的是 SSMA 客户端从源检索数据并将数据大容量插入到 SQL Server 中。 服务器端数据迁移是指在 SQL Server "框上运行的 SSMA 数据迁移引擎（大容量复制程序）作为 SQL 代理作业，该作业从源检索数据并直接插入 SQL Server，从而避免额外的客户端跃点（更好的性能）。<br /><br />**默认模式**：客户端数据迁移引擎<br /><br />**乐观模式**：客户端数据迁移引擎<br /><br />**完整模式**：客户端数据迁移引擎|  
+|**迁移引擎**|指定数据迁移期间使用的数据库引擎。 客户端数据迁移指的是 SSMA 客户端从源检索数据并将数据大容量插入到 SQL Server 中。 服务器端数据迁移指的是 SSMA 数据迁移引擎， (大容量复制程序) 在 SQL Server 框上运行的 SQL 代理作业从数据源中检索数据，并直接插入 SQL Server，从而避免了额外的客户端跃点 (更好的性能) 。<br /><br />**默认模式**：客户端数据迁移引擎<br /><br />**乐观模式**：客户端数据迁移引擎<br /><br />**完整模式**：客户端数据迁移引擎|  
   
 > [!IMPORTANT]  
-> 当 "**迁移引擎**" 选项设置为 "**服务器端数据迁移引擎**" 时，将显示一个新的项目设置选项 "**使用32位服务器端数据迁移引擎**"。 它指定是否使用32位或64位大容量复制程序（BCP）实用程序来迁移数据。  
+> 当 "**迁移引擎**" 选项设置为 "**服务器端数据迁移引擎**" 时，将显示一个新的项目设置选项 "**使用32位服务器端数据迁移引擎**"。 它指定是否使用32位或64位大容量复制程序 (BCP) 实用工具来迁移数据。  
   
 ## <a name="miscellaneous-options"></a>其他选项  
   
@@ -61,7 +61,7 @@ ms.locfileid: "68028711"
   
 |术语|定义|  
 |--------|--------------|  
-|**并行数据迁移模式**|指定用于分叉线程以启用并行数据迁移的模式。 在 Auto 模式下，SSMA 选择线程数（默认为10）以迁移数据。 在自定义模式下，用户可以指定分叉于迁移数据的线程数（最小值为1，最大值为100）。 目前，只有客户端数据迁移引擎支持并行数据迁移。<br /><br />**默认模式**：自动<br /><br />**乐观模式**：自动<br /><br />**完全模式**：自动|  
+|**并行数据迁移模式**|指定用于分叉线程以启用并行数据迁移的模式。 在 Auto 模式下，SSMA 会选择默认情况下 (10) 线程数，以迁移数据。 在自定义模式下，用户可以指定分叉于迁移数据的线程数 (最小值为1，最大值为 100) 。 目前，只有客户端数据迁移引擎支持并行数据迁移。<br /><br />**默认模式**：自动<br /><br />**乐观模式**：自动<br /><br />**完全模式**：自动|  
   
 > [!IMPORTANT]  
 > 如果将 "**并行数据迁移模式**" 选项设置为 "**自定义**"，则会显示新的项目设置选项 "**线程计数**"。 它指定用于数据迁移的线程数。  

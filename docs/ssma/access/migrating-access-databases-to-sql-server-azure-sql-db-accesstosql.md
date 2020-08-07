@@ -14,18 +14,18 @@ helpviewer_keywords:
 - procedure, migration
 - recommended migration process
 ms.assetid: 76a3abcf-2998-4712-9490-fe8d872c89ca
-author: Shamikg
-ms.author: Shamikg
-manager: murato
-ms.openlocfilehash: d35f359186fca7d862ee8da8f4c4932d849c421b
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: c8c0fbd289aea92c78d97a4d41a93255c9e196bf
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823543"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938016"
 ---
 # <a name="migrating-access-databases-to-sql-server---azure-sql-database-accesstosql"></a>将 Access 数据库迁移到 SQL Server-Azure SQL 数据库 (AccessToSQL) 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]迁移助手 (SSMA) 是一种提供综合性环境的工具，可帮助你快速将 Access 数据库迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure。 通过使用 SSMA，你可以查看访问和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 数据库对象、评估要迁移的 access 数据库、转换 access 数据库对象、将其加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure，以及迁移数据。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]迁移助手 (SSMA) 是一种提供综合性环境的工具，可帮助你快速将 Access 数据库迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure。 通过使用 SSMA，你可以查看 Access 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 AZURE SQL 数据库对象、评估用于迁移的 access 数据库、转换 access 数据库对象、将其加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure，以及迁移数据。  
   
 ## <a name="recommended-migration-process"></a>建议的迁移过程  
 若要成功地将对象和数据迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 的访问，请使用以下过程：  
@@ -59,6 +59,6 @@ ms.locfileid: "87823543"
   
 你还可以使用迁移向导来指导你完成此过程。 有关详细信息，请参阅[迁移向导](migration-wizard-accesstosql.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [使用 SQL Server 迁移助手进行访问的入门](getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  
 [准备要迁移的 Access 数据库](preparing-access-databases-for-migration-accesstosql.md)

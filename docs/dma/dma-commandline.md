@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 0b589d9f5bf90b78d6689ff3b37f09f15fe344b8
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: a4fdc0343d1346833fd58c4e2fa0240e1a2af668
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864914"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87950972"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>从命令行运行数据迁移助手
 
@@ -106,7 +106,7 @@ Catalog=DatabaseName;Integrated Security=true"
 /AssessmentResultCsv="C:\\temp\\Results\\AssessmentReport.csv"
 ```
 
-**针对目标平台 SQL Azure 数据库的单一数据库评估，将结果保存到 json 和 .csv 文件**
+**针对目标平台 Azure SQL 数据库的单一数据库评估，将结果保存到 json 和 .csv 文件**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment" 
@@ -155,7 +155,7 @@ DmaCmd.exe /Action=AssessTargetReadiness
 
 ```
 
-**针对目标平台 SQL Azure 数据库的单一数据库评估，将结果保存到 json 和 .csv 文件**
+**针对目标平台 Azure SQL 数据库的单一数据库评估，将结果保存到 json 和 .csv 文件**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment" 
@@ -304,7 +304,7 @@ DmaCmd.exe
 |`/SkuRecommendationSubscriptionId` | 订阅的 ID。 | 是 <br> 最新价格的 () 
 |`/SkuRecommendationDatabasesToRecommend` | 要 (推荐的以空格分隔的数据库列表，例如 "Database1" "Database2" "Database3" ) 。 名称区分大小写，必须用双引号括起来。 如果省略，则提供所有数据库的建议。 | N
 |`/AzureAuthenticationTenantId` | 身份验证租户。 | 是 <br> 最新价格的 () 
-|`/AzureAuthenticationClientId` | 用于身份验证的 AAD 应用的客户端 ID。 | 是 <br> 最新价格的 () 
+|`/AzureAuthenticationClientId` | 用于身份验证的 Azure AD 应用的客户端 ID。 | 是 <br> 最新价格的 () 
 |`/AzureAuthenticationInteractiveAuthentication` | 设置为 true 可弹出窗口。 | 是 <br> 最新价格的 ()  <br> (选择3个身份验证选项中的一个选项-选项 1) 
 |`/AzureAuthenticationCertificateStoreLocation` | 设置为证书存储位置 (例如 "CurrentUser" ) 。 | 是 <br>最新价格的 ()  <br>  (选择3个身份验证选项之一-选项 2) 
 |`/AzureAuthenticationCertificateThumbprint` | 设置为证书指纹。 | 是 <br> 最新价格的 ()  <br> (选择3个身份验证选项之一-选项 2) 
@@ -379,6 +379,6 @@ DmaCmd.exe
 /SkuRecommendationPreventPriceRefresh=true  
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [数据迁移助手](https://aka.ms/get-dma)下载。
 - 本文介绍[适用于你的本地数据库的 AZURE SQL 数据库的正确 SKU](https://aka.ms/dma-sku-recommend-sqldb)。

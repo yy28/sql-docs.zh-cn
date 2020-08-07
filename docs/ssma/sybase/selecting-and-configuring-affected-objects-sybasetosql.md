@@ -1,5 +1,5 @@
 ---
-title: 选择并配置受影响的对象（SybaseToSQL） |Microsoft Docs
+title: 选择并配置受影响的对象 (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Tester Component,Affected Objects
 ms.assetid: a219df74-543a-4aec-aeeb-79f90ac3e2ee
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 3aa7ccc8d559f7017fd2a9bf0bc20bc7ae191c46
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: c9efc329f80e880a58ec9926db677c4a71604e2c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68020987"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87930408"
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>选择并配置受影响的对象 (SybaseToSQL)
 在此页上，您可以选择表和外键，在 SSMA 验证在上一步中选择的对象的执行结果时应比较的更改。 此外，还可以自定义验证参数。  
@@ -33,13 +33,13 @@ ms.locfileid: "68020987"
   
 -   数据类型  
   
--   Precision  
+-   精度  
   
 -   缩放  
   
 -   规则  
   
--   默认  
+-   默认值  
   
 -   标识  
   
@@ -110,9 +110,9 @@ SQL 选项卡包含所选表的 "创建表" SQL。
 -   如果选择 " **False**"，则比较会考虑字母大小写。  
   
 ## <a name="comparing-sql"></a>比较 SQL  
-您可以在 "**比较 SQL** " 页上查看 SSMA 测试器生成的 SELECT 语句。 测试人员将逐行比较这些语句的结果集。 Sybase 结果集的每个后续行应等于中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]生成的结果集的下一行。  
+您可以在 "**比较 SQL** " 页上查看 SSMA 测试器生成的 SELECT 语句。 测试人员将逐行比较这些语句的结果集。 Sybase 结果集的每个后续行应等于中生成的结果集的下一行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
-您可以编辑这些 SELECT 语句以提供自定义验证。 若要保存 Sybase 和 in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]语句中的更改，请相应地使用 source 和 target SQL 下的 "**应用**" 按钮。  
+您可以编辑这些 SELECT 语句以提供自定义验证。 若要保存 Sybase 和 in 语句中的更改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请相应地使用 source 和 TARGET SQL 下的 "**应用**" 按钮。  
   
 ## <a name="next-step"></a>下一步  
 [自定义调用顺序 &#40;SybaseToSQL&#41;](../../ssma/sybase/customizing-calls-order-sybasetosql.md)  

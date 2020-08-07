@@ -1,5 +1,5 @@
 ---
-title: sys. dm_os_sys_info （Transact-sql） |Microsoft Docs
+title: sys. dm_os_sys_info (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2018
 ms.prod: sql
@@ -22,12 +22,12 @@ ms.assetid: 20f6bc9c-839a-4fa4-b3f3-a6c47d1b69af
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b384190b6ffeee077f6658d0701f036c3f7746a
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 4ce8584d48a20f35b090b957b1455c444e5b4b83
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396814"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87928685"
 ---
 # <a name="sysdm_os_sys_info-transact-sql"></a>sys.dm_os_sys_info (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "87396814"
 |**bpool_visible**|**int**|**适用于：** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]到 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 。<br /><br /> 在进程虚拟地址空间中可直接访问的缓冲池中的 8 KB 缓冲区数。 当未使用地址窗口化扩展插件 (AWE)，缓冲区池已获取其内存目标 (bpool_committed = bpool_commit_target) 时，bpool_visible 的值与 bpool_committed 的值相等。当在 32 位版本的 SQL Server 上使用 AWE 时，bpool_visible 表示用于访问由缓冲池区分配的物理内存的 AWE 映射窗口的大小。 此映射窗口的大小由进程地址空间绑定，因此，可见数量将小于提交数量，并且通过为数据库页之外的其他用途而消耗内存的内部组件会进一步减少可见数量。 如果 bpool_visible 的值太低，则可能收到内存不足错误。|  
 |**visible_target_kb**|**int**|适用于：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 与**committed_target_kb**相同。 不可为 Null。|  
 |**stack_size_in_bytes**|**int**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 创建的每个线程的调用堆栈的大小。 不可为 Null。|  
-|**os_quantum**|**bigint**|表示非抢先任务的量程（以毫秒数度量）。 量程（秒） = **os_quantum** /CPU 时钟速度。 不可为 Null。|  
+|**os_quantum**|**bigint**|表示非抢先任务的量程（以毫秒数度量）。 量程 (（秒）) = **os_quantum** /CPU 时钟速度。 不可为 Null。|  
 |**os_error_mode**|**int**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程的错误模式。 不可为 Null。|  
 |**os_priority_class**|**int**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程的优先级类。 可以为 NULL。<br /><br /> 32 = 正常（错误日志将指出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正以正常的优先级基数 (=7) 启动）。<br /><br /> 128 = 高（错误日志将指出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正以高优先级基数启动）。  (=13)。）<br /><br /> 有关详细信息，请参阅 [配置 priority boost 服务器配置选项](../../database-engine/configure-windows/configure-the-priority-boost-server-configuration-option.md)。|  
 |**max_workers_count**|**int**|表示可以创建的最大工作线程数。 不可为 Null。|  
@@ -61,7 +61,7 @@ ms.locfileid: "87396814"
 |**scheduler_total_count**|**int**|表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的计划程序总数。 不可为 Null。|  
 |**deadlock_monitor_serial_number**|**int**|指定当前死锁监视序列的 ID。 不可为 Null。|  
 |**sqlserver_start_time_ms_ticks**|**bigint**|表示上次启动时的**ms_tick**数字 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 与当前 ms_ticks 列进行比较。 不可为 Null。|  
-|**sqlserver_start_time**|**datetime**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上次启动时的日期和时间。 不可为 Null。|  
+|**sqlserver_start_time**|**datetime**|指定上次启动的本地系统日期和时间 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 不可为 Null。|  
 |**affinity_type**|**int**|适用于：[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 及更高版本。<br /><br /> 指定当前使用中的服务器 CPU 进程关联的类型。 不可为 Null。 有关详细信息，请参阅[ALTER SERVER CONFIGURATION &#40;transact-sql&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)。<br /><br /> 1 = MANUAL<br /><br /> 2 = AUTO|  
 |**affinity_type_desc**|**varchar(60)**|适用于：[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 及更高版本。<br /><br /> 介绍**affinity_type**列。 不可为 Null。<br /><br /> MANUAL = 已为至少一个 CPU 设置关联。<br /><br /> AUTO = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以自由地在 CPU 之间移动线程。|  
 |**process_kernel_time_ms**|**bigint**|适用于：[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 及更高版本。<br /><br /> 内核模式下所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 线程所用的总时间（毫秒）。 该值可能会大于单处理器时钟，因为它包括服务器上所有处理器的时间。 不可为 Null。|  
@@ -69,10 +69,10 @@ ms.locfileid: "87396814"
 |**time_source**|**int**|适用于：[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 及更高版本。<br /><br /> 指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用于检索时钟时间的 API。 不可为 Null。<br /><br /> 0 = QUERY_PERFORMANCE_COUNTER<br /><br /> 1 = MULTIMEDIA_TIMER|  
 |**time_source_desc**|**nvarchar(60)**|适用于：[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 及更高版本。<br /><br /> 介绍**time_source**列。 不可为 Null。<br /><br /> QUERY_PERFORMANCE_COUNTER = [QueryPerformanceCounter](https://go.microsoft.com/fwlink/?LinkId=163095) API 检索时钟时间。<br /><br /> MULTIMEDIA_TIMER = 用于检索时钟时间的[多媒体计时器](https://go.microsoft.com/fwlink/?LinkId=163094)API。|  
 |**virtual_machine_type**|**int**|适用于：[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 及更高版本。<br /><br /> 指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是否正在虚拟环境下运行。  不可为 Null。<br /><br /> 0 = NONE<br /><br /> 1 = HYPERVISOR<br /><br /> 2 = OTHER|  
-|**virtual_machine_type_desc**|**nvarchar(60)**|适用于：[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 及更高版本。<br /><br /> 介绍**virtual_machine_type**列。 不可为 Null。<br /><br /> 无 = 未 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在虚拟机中运行。<br /><br /> 虚拟机监控程序 = 正在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 运行虚拟机监控程序的操作系统托管的虚拟机（使用硬件辅助虚拟化的主机操作系统）中运行。<br /><br /> OTHER = 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 由不使用硬件助理（如 Microsoft VIRTUAL PC）的操作系统托管的虚拟机中运行。|  
+|**virtual_machine_type_desc**|**nvarchar(60)**|适用于：[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 及更高版本。<br /><br /> 介绍**virtual_machine_type**列。 不可为 Null。<br /><br /> 无 = 未 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在虚拟机中运行。<br /><br /> 虚拟机监控程序 = 正在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 由运行虚拟机监控程序的 OS 托管的虚拟机内运行 (使用硬件辅助虚拟化) 的主机操作系统。<br /><br /> OTHER = 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 由不使用硬件助理（如 Microsoft VIRTUAL PC）的操作系统托管的虚拟机中运行。|  
 |**softnuma_configuration**|**int**|适用于：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本。<br /><br /> 指定 NUMA 节点的配置方式。 不可为 Null。<br /><br /> 0 = OFF 表示硬件默认值<br /><br /> 1 = 自动软件 NUMA<br /><br /> 2 = 通过注册表手动进行软件 NUMA|  
 |**softnuma_configuration_desc**|**nvarchar(60)**|适用于：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本。<br /><br /> OFF = 软 NUMA 功能已关闭<br /><br /> ON = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自动确定适用于软件 numa 的 numa 节点大小<br /><br /> 手动 = 手动配置的软件 NUMA|
-|**process_physical_affinity**|**nvarchar （3072）** |**适用于：** 从开始 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 。<br /><br />信息有待提供。 |
+|**process_physical_affinity**|**nvarchar (3072) ** |**适用于：** 从开始 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 。<br /><br />信息有待提供。 |
 |**sql_memory_model**|**int**|**适用于：** [!INCLUDE[sssql11](../../includes/sssql11-md.md)]SP4、 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 及更高版本。<br /><br />指定用于分配内存的内存模型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 不可为 Null。<br /><br />1 = 常规内存模型<br />2 = 锁定内存页<br /> 3 = 内存中的大型页面|
 |**sql_memory_model_desc**|**nvarchar(120)**|**适用于：** [!INCLUDE[sssql11](../../includes/sssql11-md.md)]SP4、 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 及更高版本。<br /><br />指定用于分配内存的内存模型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 不可为 Null。<br /><br />**CONVENTIONAL**  =  传统 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用的是常规内存模型来分配内存。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户在启动过程中没有锁定页面的内存特权，则这是默认的 sql 内存模型。<br />**LOCK_PAGES**  =  LOCK_PAGES [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用锁定内存页来分配内存。 这是默认的 sql 内存管理器，在 SQL Server 启动期间 SQL Server 服务帐户拥有 "锁定内存页" 特权。<br /> **LARGE_PAGES**  =  LARGE_PAGES [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用内存中的大型页分配内存。 SQL Server 使用大型页面分配器仅 SQL Server 在服务器启动期间和跟踪标志834打开时，将内存分配给 Enterprise edition。|
 |pdw_node_id|**int**|**适用于：** [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  

@@ -1,5 +1,5 @@
 ---
-title: 映射源和目标数据类型（AccessToSQL） |Microsoft Docs
+title: 映射源和目标数据类型 (AccessToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,20 +13,20 @@ helpviewer_keywords:
 - source data types
 - target data types
 ms.assetid: b362a075-16e7-423f-b63f-e1e9f02844a9
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: e0600778b938a7736ab1112f31bbe4828605cdaf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: c67cb826d5a5dce7c142cba3ded468b851cef337
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67907162"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938216"
 ---
-# <a name="mapping-source-and-target-data-types-accesstosql"></a>映射源和目标数据类型（AccessToSQL）
-Access 数据库类型与[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库类型不同。 将 Access 数据库对象转换为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]对象时，必须指定如何将数据类型从访问映射到。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 您可以接受默认的数据类型映射，也可以自定义映射，如下面的过程所示。  
+# <a name="mapping-source-and-target-data-types-accesstosql"></a>映射源和目标数据类型 (AccessToSQL) 
+Access 数据库类型与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库类型不同。 将 Access 数据库对象转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象时，必须指定如何将数据类型从访问映射到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 您可以接受默认的数据类型映射，也可以自定义映射，如下面的过程所示。  
   
 ## <a name="default-mappings"></a>默认映射  
-SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，请参阅[项目设置（类型映射）](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)。  
+SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，请参阅[项目设置 (类型映射) ](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)。  
   
 ## <a name="customizing-data-type-mappings"></a>自定义数据类型映射  
 通过使用 "**项目设置**" 对话框，可以自定义为项目中的所有数据库和数据库对象映射类型的方式。 项目的类型映射适用于没有自定义类型映射的所有数据库和数据库对象。  
@@ -63,7 +63,7 @@ SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，�
   
         这使您可以为相同数据类型的较小值和较大值自定义数据映射。  
   
-    4.  在 "**目标类型**" 下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]选择目标数据类型。  
+    4.  在 "**目标类型**" 下，选择目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型。  
   
         某些类型需要目标数据类型长度。 如果需要，请在 "**替换为**" 框中输入新的数据长度，然后单击 **"确定"**。  
   
@@ -77,7 +77,7 @@ SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，�
   
         这使您可以为相同数据类型的较小值和较大值自定义数据映射。  
   
-    4.  在 "**目标类型**" 下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]选择目标数据类型。  
+    4.  在 "**目标类型**" 下，选择目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型。  
   
         某些类型需要目标数据类型长度。 如果需要，请在 "**替换为**" 框中输入新的数据长度，然后单击 **"确定"**。  
   
@@ -85,7 +85,7 @@ SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，�
   
     1.  在 "类型映射" 窗格中，选择 "类型映射" 列表中包含要删除的数据类型映射的行。  
   
-    2.  单击 **“删除”**。  
+    2.  单击“删除”。  
   
 ## <a name="next-steps"></a>后续步骤  
 迁移过程的下一步是[将 access 数据库对象转换为 SQL Server 对象](converting-access-database-objects-accesstosql.md)  

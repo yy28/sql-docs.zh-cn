@@ -17,15 +17,15 @@ helpviewer_keywords:
 - user interface
 - user interface overview
 ms.assetid: 462a731f-08f1-44e1-9eeb-4deac6d2f6c5
-author: Shamikg
-ms.author: Shamikg
-manager: murato
-ms.openlocfilehash: b27d773bc8fd928e7db2e29c7a01492fb97df78f
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: d622396e9e650aa3e9fc1b3855e1dfc1634bc34e
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823944"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938764"
 ---
 # <a name="getting-started-with-sql-server-migration-assistant-for-access-accesstosql"></a>SQL Server 迁移助手访问 (AccessToSQL) 入门
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]迁移助手 (SSMA) 的访问权限允许您快速将 Access 数据库对象转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 AZURE Sql 数据库对象，将生成的对象上传到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Azure sql 数据库，以及将数据从 Access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 azure sql 数据库迁移到 azure sql database。 如有必要，还可以将 Access 表链接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 AZURE Sql 数据库表，以便可以继续使用现有的 access 前端应用程序 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Azure sql 数据库。  
@@ -132,6 +132,6 @@ SSMA 包含以下菜单：
   
 -   "错误列表" 窗格在列表中显示可以排序的错误、警告和信息性消息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [将 Access 数据库迁移到 SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

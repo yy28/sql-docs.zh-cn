@@ -1,5 +1,5 @@
 ---
-title: 项目设置（加载对象）（AccessToSQL） |Microsoft Docs
+title: " (加载对象)  (AccessToSQL) 的项目设置 |Microsoft Docs"
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,16 +7,16 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 9ec1c1e8-a3e1-4e81-bf49-631f87daa209
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: c8aebc643d3d313dcf97bbe69044ee795649ba46
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 8786ecd3affd1b67bb0e036bf01317942b6ec05b
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67929429"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937536"
 ---
-# <a name="project-settings-loading-objects-accesstosql"></a>项目设置（加载对象）（AccessToSQL）
+# <a name="project-settings-loading-objects-accesstosql"></a>项目设置 (加载对象)  (AccessToSQL) 
 通过 "加载对象" 项目设置，你可以配置如何将 Access 数据库对象与 SQL Server 数据库对象进行同步。  
   
 默认操作指定用于刷新 Access 数据库中的对象的默认设置，以及用于将对象与 SQL Server 数据库同步的默认设置。 有关详细信息，请参阅[Refresh From Database &#40;AccessToSQL&#41;](../../ssma/access/refresh-from-database-accesstosql.md)  

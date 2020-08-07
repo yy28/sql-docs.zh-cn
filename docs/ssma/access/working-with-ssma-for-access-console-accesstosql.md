@@ -1,5 +1,5 @@
 ---
-title: 使用 SSMA for Access Console （AccessToSQL） |Microsoft Docs
+title: 使用 SSMA 访问控制台 (AccessToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 08/17/2017
@@ -7,24 +7,24 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: ef94e843-9f88-45a2-86c4-a0af268738c4
-author: Shamikg
-ms.author: Shamikg
-manager: murato
-ms.openlocfilehash: c470cf8ea61851b80f04bce716bc7c83c54929b0
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: d46435bcf975036fc92926f50651dd5eff7c8080
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396896"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937299"
 ---
-# <a name="working-with-ssma-for-access-console-accesstosql"></a>使用 SSMA for Access Console （AccessToSQL）
-现在可通过命令行中的控制台应用程序访问 Microsoft SQL Server 迁移助手（SSMA）的访问权限。 脚本文件构成应用程序的输入，用于执行命令。 作为控制台应用程序，SSMA 启用了脚本级交互，减少了迁移循环，并扩展了迁移工作量。  
+# <a name="working-with-ssma-for-access-console-accesstosql"></a>使用 SSMA 访问控制台 (AccessToSQL) 
+现在可通过命令行通过控制台应用程序访问 Microsoft SQL Server 迁移助手 (SSMA) 。 脚本文件构成应用程序的输入，用于执行命令。 作为控制台应用程序，SSMA 启用了脚本级交互，减少了迁移循环，并扩展了迁移工作量。  
   
 本部分介绍使用 SSMA 控制台应用程序迁移 Access 数据库的过程。  
   
 本部分中涵盖的主题包括：  
   
-|主题|说明|  
+|主题|描述|  
 |-|-|  
 |[SSMA for Access Console &#40;AccessToSQL&#41;入门](../../ssma/access/getting-started-with-ssma-for-access-console-accesstosql.md)|说明执行控制台应用程序的过程。|  
 |[SSMA 控制台中的命令行选项 &#40;AccessToSQL&#41;](../../ssma/access/command-line-options-in-ssma-console-accesstosql.md)|描述用于操作 SSMA 控制台应用程序的命令行选项和参数。|  
@@ -37,6 +37,6 @@ ms.locfileid: "87396896"
 |[&#40;AccessToSQL 生成报告&#41;](../../ssma/access/generating-reports-accesstosql.md)|列出用于生成报表的命令。|  
 |[&#40;AccessToSQL 的疑难解答&#41;](../../ssma/access/troubleshooting-accesstosql.md)|提供有关修复迁移问题的简要信息。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [使用 SSMA 访问控制台入门](getting-started-with-ssma-for-access-console-accesstosql.md)  
   

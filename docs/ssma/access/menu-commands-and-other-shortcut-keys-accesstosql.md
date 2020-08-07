@@ -1,5 +1,5 @@
 ---
-title: 菜单命令和其他快捷键（AccessToSQL） |Microsoft Docs
+title: 菜单命令和其他快捷键 (AccessToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,16 +7,16 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 04bba43a-7bed-4d3c-bb62-8e9ab2adf9e3
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: cbfb9aa200560cf8d2b4ae42486f8a39b179e88b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: f7e5aa6a3b6d663c21ff57abda09ee9308a0a2af
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67907131"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937782"
 ---
-# <a name="menu-commands-and-other-shortcut-keys-accesstosql"></a>菜单命令和其他快捷键（AccessToSQL）
+# <a name="menu-commands-and-other-shortcut-keys-accesstosql"></a>菜单命令和其他快捷键 (AccessToSQL) 
 以下各节介绍访问菜单命令的键盘快捷方式，以及 SSMA for Access 应用程序的各种对话框中使用的其他快捷键。  
   
 ## <a name="file-menu-commands"></a>“文件”菜单命令  
@@ -82,7 +82,7 @@ ms.locfileid: "67907131"
 |创建报表。|ALT + T + C|  
 |转换架构。|ALT + T + N 或 CTRL + R|  
 |从 access 数据库刷新。|ALT + T + R|  
-|与 SQL Server 或 SQL Azure 数据库同步。|ALT + T + S|  
+|与 SQL Server 或 Azure SQL 数据库同步。|ALT + T + S|  
 |另存为脚本。|ALT + T + A|  
 |迁移数据。|ALT + T + M|  
 |停止当前操作。|ALT + T + O|  

@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 95b95de2-db05-4422-825d-43968ecfd01c
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: e68a58135e28989c2661ee531e2b4bf3c86a0104
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 89c22a7151a7c7aa94c76d5278edd5911b9f2b6d
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76910220"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937710"
 ---
 # <a name="new-gui-features-in-ssma-for-access-to-sql"></a>SSMA 中的新 GUI 功能，用于访问 SQL
 本章介绍 SSMA 用户界面的新功能  
@@ -54,14 +54,14 @@ ms.locfileid: "76910220"
   
 -   单击 SQL 窗口左侧的灰色区域  
   
--   使用 Ctrl + Shift +&lt;0-9&gt;设置编号书签  
+-   使用 Ctrl + Shift + &lt; 0-9 &gt; 设置编号书签  
   
 ### <a name="bookmark-navigation"></a>书签导航  
 可以通过以下方式遍历书签：  
   
 -   在 SQL 窗口的顶部使用 "下一书签" 按钮、上一个书签  
   
--   使用 Ctrl +&lt;0 ... 9&gt;查找编号书签  
+-   使用 Ctrl + &lt; 0 ... 9 &gt; 查找编号书签  
   
 -   使用按钮在 "管理书签" 对话框中转到或查看源  
   

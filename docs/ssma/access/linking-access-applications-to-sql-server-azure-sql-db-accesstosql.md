@@ -21,18 +21,18 @@ helpviewer_keywords:
 - slow performance
 - unlinking tables
 ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
-author: Shamikg
-ms.author: Shamikg
-manager: murato
-ms.openlocfilehash: aadb041b3b9005d0e593e97974090250129ed33d
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: d19ed1ddfa2c64b653c02d887b9605ea132ae1bc
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823842"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938387"
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-database-accesstosql"></a>将访问应用程序链接到 SQL Server-Azure SQL 数据库 (AccessToSQL) 
-如果要将现有的 Access 应用程序用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则可以将原始访问表链接到已迁移 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 的表。 链接会修改你的 Access 数据库，以便你的查询、窗体、报表和数据访问页使用或 SQL Azure 数据库中的数据， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 而非 access 数据库中的数据。  
+如果要将现有的 Access 应用程序用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则可以将原始访问表链接到已迁移 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 的表。 链接会修改你的 Access 数据库，以便你的查询、窗体、报表和数据访问页使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 AZURE SQL 数据库中的数据，而非 access 数据库中的数据。  
   
 > [!NOTE]  
 > 访问表将保留在 Access 中，但不会随 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 更新一起更新。 链接表并验证功能后，您可能需要删除访问表。  
@@ -154,6 +154,6 @@ Recordset.LastModified
   
 **解决方法：** 您可以定义只返回那些具有受支持数据类型的行的访问查询。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [将 Access 数据库迁移到 SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

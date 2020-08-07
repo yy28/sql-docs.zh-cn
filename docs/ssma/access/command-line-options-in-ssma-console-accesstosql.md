@@ -1,5 +1,5 @@
 ---
-title: SSMA 控制台中的命令行选项（AccessToSQL） |Microsoft Docs
+title: SSMA 控制台中的命令行选项 (AccessToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 08/19/2017
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: c1f3b3f0-0f3e-4e07-b745-2fbdde85c67e
-author: Shamikg
-ms.author: Shamikg
-manager: murato
-ms.openlocfilehash: 1b78f6ccae739b6fe70fc813959daa44adca7c22
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: ca276036465ca5228fd5c52ca7d4b7de3fdbf13f
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394872"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938876"
 ---
-# <a name="command-line-options-in-the-ssma-console-accesstosql"></a>SSMA 控制台中的命令行选项（AccessToSQL）
+# <a name="command-line-options-in-the-ssma-console-accesstosql"></a>SSMA 控制台中的命令行选项 (AccessToSQL) 
 Microsoft 为你提供了一组强大的命令行选项来执行和控制 SSMA 活动。 后续部分提供了更多详细信息。  
   
 ## <a name="command-line-options-in-the-ssma-console"></a>SSMA 控制台中的命令行选项  

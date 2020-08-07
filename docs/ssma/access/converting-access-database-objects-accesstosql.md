@@ -1,5 +1,5 @@
 ---
-title: 转换 Access 数据库对象（AccessToSQL） |Microsoft Docs
+title: 将 Access 数据库对象转换 (AccessToSQL) |Microsoft Docs
 description: 了解如何在连接到 SQL Server/Azure SQL 数据库后选择访问数据库对象，然后将架构转换为 SQL Server/SQL 数据库架构。
 ms.prod: sql
 ms.custom: ''
@@ -28,17 +28,17 @@ helpviewer_keywords:
 - translating Access to SQL Azure
 - translating Access to SQL Server
 ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: f15fc6cee7f66128af7646b9605234e60830b8db
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 6109f523cce37e64bd13ccf9bf783b07a26fe94e
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84302802"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87939046"
 ---
-# <a name="converting-access-database-objects-accesstosql"></a>转换 Access 数据库对象（AccessToSQL）
-添加 Access 数据库并连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 后，SSMA 将显示 access 的元数据以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 数据库对象。 你现在可以选择 "访问数据库对象"，然后将架构转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 架构。  
+# <a name="converting-access-database-objects-accesstosql"></a>将 Access 数据库对象转换 (AccessToSQL) 
+添加访问数据库并连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 后，SSMA 将显示 Access 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Azure SQL 数据库对象的元数据。 你现在可以选择 "访问数据库对象"，然后将架构转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 架构。  
   
 ## <a name="the-conversion-process"></a>转换过程  
 转换数据库对象将从访问元数据获取对象定义，并将其转换为等效 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的语法，然后将此信息加载到项目中。 然后，可以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 元数据资源管理器查看或 SQL Azure 对象及其属性。  
@@ -49,7 +49,7 @@ ms.locfileid: "84302802"
 在转换过程中，SSMA 会将状态输出到 "输出" 窗格，并将错误、警告和信息性消息输出到 "错误列表" 窗格中。 使用此信息来确定是否需要修改 Access 数据库或转换过程以获取所需的转换结果。 你还可以使用为[迁移准备 Access 数据库](preparing-access-databases-for-migration-accesstosql.md)主题中的信息来确定不会转换哪些内容。  
   
 ## <a name="setting-conversion-options"></a>设置转换选项  
-转换对象之前，请在 "**项目设置**" 对话框中查看项目转换选项。 使用此对话框，可以设置 SSMA 如何转换已编制索引的备注列、主键、外键约束、时间戳和无索引的表。 有关详细信息，请参阅[项目设置（转换）](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)  
+转换对象之前，请在 "**项目设置**" 对话框中查看项目转换选项。 使用此对话框，可以设置 SSMA 如何转换已编制索引的备注列、主键、外键约束、时间戳和无索引的表。 有关详细信息，请参阅[项目设置 (转换) ](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)  
   
 ## <a name="conversion-results"></a>转换结果  
 下表显示了要转换的访问对象以及生成的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 的对象：  
@@ -57,10 +57,10 @@ ms.locfileid: "84302802"
 |Access 对象|产生 SQL Server 对象|  
 |-----------------|-------------------------------|  
 |表|表|  
-|柱形图|柱形图|  
-|index|index|  
+|列|列|  
+|索引|索引|  
 |外键 (foreign key)|外键 (foreign key)|  
-|query|view<br /><br />大多数 SELECT 查询都转换为视图。 其他查询（如更新查询）不会迁移。<br /><br />不会转换带参数的 SELECT 查询，也不会进行交叉选项卡查询。|  
+|query|查看<br /><br />大多数 SELECT 查询都转换为视图。 其他查询（如更新查询）不会迁移。<br /><br />不会转换带参数的 SELECT 查询，也不会进行交叉选项卡查询。|  
 |report|未转换|  
 |表单|未转换|  
 |宏|未转换|  
@@ -107,15 +107,15 @@ ms.locfileid: "84302802"
   
 1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 元数据资源管理器中，选择要更改的表或索引。  
   
-2.  在 "**表**" 选项卡上，单击要更改的属性，然后输入或选择新设置。 例如，可以将 nvarchar （15）更改为 nvarchar （20），或选中复选框以使表列可以为 null。  
+2.  在 "**表**" 选项卡上，单击要更改的属性，然后输入或选择新设置。 例如，可以将 nvarchar (15) 更改为 nvarchar (20) ，或选中复选框以使表列可以为 null。  
   
     将光标移出已更改的属性单元。 可以通过单击另一行或按 Tab 键来执行此操作。  
   
-3.  单击“应用”。  
+3.  单击“**应用**”。  
   
 你现在可以在 " **SQL** " 选项卡上查看代码中的更改。  
   
-## <a name="next-step"></a>后续步骤  
+## <a name="next-steps"></a>后续步骤  
 迁移过程的下一步是将已[转换的数据库对象加载到 SQL Server](loading-converted-database-objects-into-sql-server-accesstosql.md)  
   
 ## <a name="see-also"></a>另请参阅  

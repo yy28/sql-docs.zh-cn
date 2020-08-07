@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 724f0fc6a38388d9366f3c46090ddaf22cd64a34
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 40ad7c3d165b0869f3cba9e6f703cd9e33ef199f
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887816"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87948175"
 ---
 # <a name="creating-an-assembly"></a>创建程序集
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -77,13 +77,13 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
   
  若要在中创建**EXTERNAL_ACCESS**或**UNSAFE**程序集 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，必须满足以下两个条件之一：  
   
-1.  程序集经过了强名称签名或使用证书进行了 Authenticode 签名。 此强名称（或证书）是在中 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 作为非对称密钥（或证书）创建的，并且具有具有**外部访问程序集**权限（对于外部访问程序集）或**unsafe assembly**权限（对于不安全的程序集）的相应登录名。  
+1.  程序集经过了强名称签名或使用证书进行了 Authenticode 签名。 此强名称 (或证书) 在中创建 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 为非对称密钥 (或证书) ，并且具有具有**外部访问**程序集权限的相应登录名 (或不安全程序集) 的不**安全程序**集权限 (。  
   
-2.  数据库所有者（DBO）具有**外部访问程序集**（对于**外部访问**程序集）或**不安全程序集**（对于**不安全**程序集），并且数据库的 "[可信数据库" 属性](../../../relational-databases/security/trustworthy-database-property.md)设置为 **"开**"。  
+2.  数据库所有者 (DBO) 具有外部**访问**程序集的**外部访问 (程序集**) **或不**安全程序**集的**外部访问程序集或不安全程序集 (权限，并且数据库的[可信数据库属性](../../../relational-databases/security/trustworthy-database-property.md)设置为**ON**。  
 
  在加载程序集（包括执行）时，也将检查上面所列的两个条件。 至少必须满足这些条件之一才能加载程序集。  
   
- 建议不要将数据库上的 "[可信数据库" 属性](../../../relational-databases/security/trustworthy-database-property.md)设置为 **"仅在**服务器进程中运行公共语言运行时（CLR）代码"。 而是建议在 master 数据库中通过程序集文件创建非对称密钥。 然后，必须创建映射到此非对称密钥的登录名，并且必须向该登录名授予**EXTERNAL ACCESS assembly**或**UNSAFE ASSEMBLY**权限。  
+ 建议不要将数据库上的 "[可信数据库" 属性](../../../relational-databases/security/trustworthy-database-property.md)设置为 **"仅在**服务器进程中运行公共语言运行时 (CLR) 代码。 而是建议在 master 数据库中通过程序集文件创建非对称密钥。 然后，必须创建映射到此非对称密钥的登录名，并且必须向该登录名授予**EXTERNAL ACCESS assembly**或**UNSAFE ASSEMBLY**权限。  
   
  以下 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句执行创建非对称密钥所需的步骤，将登录名映射到此密钥，然后将**EXTERNAL_ACCESS**权限授予该登录名。 必须运行以下 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句，然后才能运行 CREATE ASSEMBLY 语句。  
   
@@ -135,7 +135,4 @@ WITH PERMISSION_SET = UNSAFE;
  [更改程序集](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)   
  [删除程序集](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md)   
  [CLR 集成代码访问安全性](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
- [TRUSTWORTHY 数据库属性](../../../relational-databases/security/trustworthy-database-property.md)   
- [允许部分可信任的调用方](https://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
-  
-  
+ [TRUSTWORTHY 数据库属性](../../../relational-databases/security/trustworthy-database-property.md)

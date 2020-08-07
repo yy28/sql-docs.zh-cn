@@ -1,5 +1,5 @@
 ---
-title: ISQLServerErrorInfo：： GetErrorInfo （Native Client OLE DB 提供程序） |Microsoft Docs
+title: ISQLServerErrorInfo：： GetErrorInfo (Native Client OLE DB 提供程序) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,14 +16,14 @@ ms.assetid: 83265c9c-eaf9-41f0-9f73-b0ae0972f0d5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0305e9755f6ccd671d0f3e9fbeb852f2d4393c70
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: f9ce6ced9e5de3f7474d8dd16797213042ad4705
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243908"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87947528"
 ---
-# <a name="isqlservererrorinfogeterrorinfo-native-client-ole-db-provider"></a>ISQLServerErrorInfo：： GetErrorInfo （Native Client OLE DB 提供程序）
+# <a name="isqlservererrorinfogeterrorinfo-native-client-ole-db-provider"></a>ISQLServerErrorInfo：： GetErrorInfo (Native Client OLE DB 提供程序) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   返回一个指针，该指针指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误详细信息的 Native Client OLE DB provider SSERRORINFO 结构。  
@@ -40,7 +40,7 @@ HRESULT GetErrorInfo(
    OLECHAR**ppErrorStrings);  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  ppSSErrorInfo[out]**  
  指向 SSERRORINFO 结构的指针。 如果方法失败或者不存在与该错误关联的任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 信息，则访问接口不会分配任何内存，并且会确保 ppSSErrorInfo 参数在输出时为一个空指针**。  
   
@@ -89,7 +89,7 @@ SSERRORINFO;
  结构中的指针引用在 ppErrorStrings 参数中返回的字符串中的地址**。  
   
 ## <a name="see-also"></a>另请参阅  
- [ISQLServerErrorInfo &#40;OLE DB&#41;](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)   
+ [ISQLServerErrorInfo &#40;OLE DB&#41;](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15)   
  [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   

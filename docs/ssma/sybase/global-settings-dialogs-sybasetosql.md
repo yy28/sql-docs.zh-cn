@@ -1,5 +1,5 @@
 ---
-title: 全局设置（对话框）（SybaseToSQL） |Microsoft Docs
+title: 全局设置 (对话框)  (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -7,16 +7,16 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: e11452b7-ba94-4367-a745-5ccf1764acec
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 484460c56ae043561f8f19313e6f09743ba2caed
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 4dc7bf9bf6b8f2e20fb8254a3a27ca2e293a0174
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029077"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931458"
 ---
-# <a name="global-settings-dialogs--sybasetosql"></a>全局设置（对话框）（SybaseToSQL）
+# <a name="global-settings-dialogs--sybasetosql"></a>全局设置 (对话框)  (SybaseToSQL) 
 使用 "**全局设置**" 对话框的 "对话框" 页可以指定 SSMA 的默认用户操作和警告设置。  
   
 若要访问 "**工具**" 菜单上的对话框设置，请选择 "**全局设置**"，单击左侧窗格底部的 " **GUI** "，然后选择 "**对话框**"。  

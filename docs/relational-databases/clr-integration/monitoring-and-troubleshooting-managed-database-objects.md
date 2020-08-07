@@ -1,6 +1,6 @@
 ---
 title: 对托管数据库对象进行监视和故障排除
-description: 有关可用于对托管数据库对象和程序集（CLR）进行监视和故障排除的工具的信息。
+description: 有关可用于监视托管数据库对象和程序集并对其进行故障排除的工具的信息 (CLR) 。
 ms.custom: seo-lt-2019
 ms.date: 03/17/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a7b589ac-104d-4b68-b4aa-9f5fc192b13d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a9b05b11fcf3110b9f51d1f9cb44fdabb4a3ba36
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 760fcc2212991f0841f4ded3dd2932e551c26060
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728452"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87947878"
 ---
 # <a name="monitoring-and-troubleshooting-managed-database-objects"></a>托管数据库对象监视和故障排除
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -28,9 +28,9 @@ ms.locfileid: "85728452"
 ## <a name="profiler-trace-events"></a>事件探查器跟踪事件  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供 SQL 跟踪和事件通知来监视数据库引擎中发生的事件。 通过记录指定事件，SQL 跟踪可以帮助您解决性能问题、审核数据库活动、收集用于测试环境的示例数据、调试 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句和存储过程以及为性能分析工具收集数据。 有关详细信息，请参阅[SQL 跟踪](../../relational-databases/sql-trace/sql-trace.md)和[扩展事件](../../relational-databases/extended-events/extended-events.md)。  
   
-|事件|说明|  
+|事件|描述|  
 |-----------|-----------------|  
-|[Assembly Load 事件类](/sql/database-engine/assembly-load-event-class)|用于监视程序集加载请求（成功和失败）。|  
+|[Assembly Load 事件类](https://docs.microsoft.com/sql/relational-databases/event-classes/sql-server-event-class-reference)|用于监视程序集加载请求（成功和失败）。|  
 |[Sql： BatchStarting 事件类](../../relational-databases/event-classes/sql-batchstarting-event-class.md)， [Sql： BatchCompleted 事件类](../../relational-databases/event-classes/sql-batchcompleted-event-class.md)|提供有关已开始或完成的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理的信息。|  
 |[Sp：启动事件类](../../relational-databases/event-classes/sp-starting-event-class.md)， [SP： Completed 事件类](../../relational-databases/event-classes/sp-completed-event-class.md)|用于监视 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程的执行。|  
 |[Sql： StmtStarting 事件类](../../relational-databases/event-classes/sql-stmtstarting-event-class.md)， [Sql： StmtCompleted 事件类](../../relational-databases/event-classes/sql-stmtcompleted-event-class.md)|用于监视 CLR 和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 例程的执行。|  

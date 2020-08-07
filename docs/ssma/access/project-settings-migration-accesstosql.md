@@ -1,5 +1,5 @@
 ---
-title: 项目设置（迁移）（AccessToSQL） |Microsoft Docs
+title: " (迁移的项目设置)  (AccessToSQL) |Microsoft Docs"
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,17 +10,17 @@ helpviewer_keywords:
 - Migration settings
 - Project Settings dialog box, Migration
 ms.assetid: 4caebc9c-8680-4b99-a8fa-89c43161c95d
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 3e3d979b6f3c5943723fb5dd8f37831adfbc1305
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 973a957f3c2c758aaf83116d9cba1cc8f50a3adc
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67929397"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937696"
 ---
-# <a name="project-settings-migration-accesstosql"></a>项目设置（迁移）（AccessToSQL）
-通过迁移项目设置，你可以配置如何将数据迁移[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到或 SQL Azure。  
+# <a name="project-settings-migration-accesstosql"></a> (迁移的项目设置)  (AccessToSQL) 
+通过迁移项目设置，你可以配置如何将数据迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure。  
   
 "**项目设置**" 和 "**默认项目设置**" 对话框中提供了 "迁移" 窗格。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "67929397"
 -   **完整模式**： False  
   
 **激发触发器**  
-指定 SSMA 在向[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表中添加数据时是否应激发插入触发器。  
+指定 SSMA 在向表中添加数据时是否应激发插入触发器 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 -   **默认模式**： False  
   
@@ -48,7 +48,7 @@ ms.locfileid: "67929397"
 -   **完整模式**： False  
   
 **保留标识**  
-指定 SSMA 在将数据添加到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时是否保留访问标识值。 如果此值为 False， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]则分配标识值。  
+指定 SSMA 在将数据添加到时是否保留访问标识值 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果此值为 False，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分配标识值。  
   
 -   **默认模式**： True  
   
@@ -57,7 +57,7 @@ ms.locfileid: "67929397"
 -   **完整模式**： False  
   
 **保留 Null**  
-指定 SSMA 在将数据添加到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时是否保留源数据中的空值，而不考虑在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指定的默认值。  
+指定 SSMA 在将数据添加到时是否保留源数据中的空值 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，而不考虑在中指定的默认值 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 -   **默认模式**： True  
   
@@ -75,7 +75,7 @@ ms.locfileid: "67929397"
 -   **完整模式**： True  
   
 **替换不受支持的日期**  
-指定 SSMA 是否应更正早于最早[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日期时间日期（01年1月 1753 1 日）的访问日期。  
+指定 SSMA 是否应更正早于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 1753 年1月) 之前的日期时间早于最早日期的访问日期 (。  
   
 -   若要保留当前日期值，请选择 "**不执行任何操作**"。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不会接受日期时间列中01年1月 1753 1 日之前的日期。 如果使用旧日期，则必须将日期时间值转换为字符值。  
   
@@ -87,5 +87,5 @@ ms.locfileid: "67929397"
 数据迁移期间使用的批大小。 每个批处理后记录一个事务。 默认情况下，所有方案的批大小均为10000。  
   
 ## <a name="see-also"></a>另请参阅  
-[用户界面参考（访问）](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
+[ (访问) 的用户界面参考](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

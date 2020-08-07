@@ -1,5 +1,5 @@
 ---
-title: SSMA 控制台中的命令行选项（DB2ToSQL） |Microsoft Docs
+title: SSMA 控制台中的命令行选项 (DB2ToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,16 +7,16 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 237354e9-25c4-4386-9d1f-ca0618d4a9a0
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 51c0253dce8e95a5a25110b47b348397c967af94
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 32167639a12d86a7bf3cf84b3895537af551d8d5
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938265"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937037"
 ---
-# <a name="command-line-options-in-ssma-console-db2tosql"></a>SSMA 控制台中的命令行选项（DB2ToSQL）
+# <a name="command-line-options-in-ssma-console-db2tosql"></a>SSMA 控制台中的命令行选项 (DB2ToSQL) 
 Microsoft 为你提供了一个强大的 set 命令行选项，用于执行和控制 SSMA 活动。 后续部分将详细介绍相同的内容。  
   
 ## <a name="command-line-options-in-ssma-console"></a>SSMA 控制台中的命令行选项  
@@ -24,7 +24,7 @@ Microsoft 为你提供了一个强大的 set 命令行选项，用于执行和�
   
 出于本部分的目的，术语 "option" 也称为 "switch"。  
   
-选项不区分大小写，并且可以以 "**-**" 或 "**/**" 字符开头。  
+选项不区分大小写，并且可以以 " **-** " 或 " **/** " 字符开头。  
   
 如果指定了选项，则必须指定相应的选项参数。  
   
@@ -121,7 +121,7 @@ Microsoft 为你提供了一个强大的 set 命令行选项，用于执行和�
   
 不能输入任何其他选项或密码作为命令行参数。 否则，会导致错误。 有关详细信息，请参阅[管理密码](https://msdn.microsoft.com/56d546e3-8747-4169-aace-693302667e94)部分。  
   
-支持以下子选项`-p/securepassword`：  
+支持以下子选项 `-p/securepassword` ：  
   
 -   为指定的服务器 ID 或服务器连接文件中定义的所有服务器 Id 添加密码到受保护的存储。 下面的-overwrite 选项将更新密码（如果已存在）：  
   

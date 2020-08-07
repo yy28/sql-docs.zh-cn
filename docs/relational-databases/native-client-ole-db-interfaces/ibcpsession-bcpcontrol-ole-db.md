@@ -1,5 +1,5 @@
 ---
-title: IBCPSession：： BCPControl （Native Client OLE DB 提供程序） |Microsoft Docs
+title: IBCPSession：： BCPControl (Native Client OLE DB 提供程序) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,14 +16,14 @@ ms.assetid: d58f3fe1-45e3-4e46-8e9c-000971829d99
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 98d21ab0c4bb17ca9e701a17b5abd8d3da2438dc
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 42f50ec668d61d9244f6f2ba413095fb1642a964
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247772"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87941886"
 ---
-# <a name="ibcpsessionbcpcontrol-native-client-ole-db-provider"></a>IBCPSession：： BCPControl （Native Client OLE DB 提供程序）
+# <a name="ibcpsessionbcpcontrol-native-client-ole-db-provider"></a>IBCPSession：： BCPControl (Native Client OLE DB 提供程序) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   设置大容量复制操作的选项。  
@@ -64,7 +64,7 @@ HRESULT BCPControl(
 |BCP_OPTION_TEXTFILE|数据文件不是二进制文件而是文本文件。 BCP 将通过检查数据文件的前两个字节中的 Unicode 字节标记来确定该文本文件是否是 Unicode。|  
 |BCP_OPTION_UNICODEFILE|如果设置为 TRUE，则此选项指定输入文件是 Unicode 文件格式。|  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  ** eOption[in]  
  设置为以上备注一节中所列的选项之一。  
   
@@ -76,7 +76,7 @@ HRESULT BCPControl(
  方法成功。  
   
  E_FAIL  
- 出现特定于提供程序的错误;有关详细信息，请使用[ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)接口。  
+ 出现特定于提供程序的错误;有关详细信息，请使用[ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15)接口。  
   
  E_UNEXPECTED  
  意外调用了该方法。 例如，在调用此函数前，未调用 [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) 方法。  

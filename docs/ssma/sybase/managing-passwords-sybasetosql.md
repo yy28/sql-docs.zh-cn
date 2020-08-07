@@ -1,5 +1,5 @@
 ---
-title: 管理密码（SybaseToSQL） |Microsoft Docs
+title: " (SybaseToSQL) 管理密码 |Microsoft Docs"
 ms.custom: ''
 ms.date: 07/07/2020
 ms.prod: sql
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Sybase Console,Managing Passwords
 - Sybase Console,Securing Password
 ms.assetid: 9b6a70f9-6840-4140-a059-bb7bd7ccc67c
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: a228f8d624d3a4250d10a258a7e51c9162d885a2
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 2d32e4d6129aa566d34c566f11cb7dde735f3783
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86159845"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931055"
 ---
 # <a name="managing-passwords-sybasetosql"></a>管理密码 (SybaseToSQL)
 本部分介绍如何保护数据库密码，以及如何在服务器之间导入或导出数据库密码。
@@ -131,5 +131,5 @@ SSMA 控制台应用程序允许将本地计算机上的文件中存在的加密
 8. 请确认密码： xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx  
   
 ## <a name="see-also"></a>另请参阅  
-[执行 SSMA 控制台（Sybase）](https://msdn.microsoft.com/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
+[执行 SSMA 控制台 (Sybase) ](https://msdn.microsoft.com/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
   

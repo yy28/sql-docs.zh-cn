@@ -1,5 +1,5 @@
 ---
-title: 全局设置（编辑器）（AccessToSQL） |Microsoft Docs
+title: 全局设置 (编辑器)  (AccessToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,16 +7,16 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 5a0abfda-912a-4dfc-acf7-0e0a6cae15c5
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: d2c57efc70353d3499096a2faceb55ce21037411
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 16bcd1255e1094412d8ff48917bab145aae19632
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67986405"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938368"
 ---
-# <a name="global-settings-editor-accesstosql"></a>全局设置（编辑器）（AccessToSQL）
+# <a name="global-settings-editor-accesstosql"></a>全局设置 (编辑器)  (AccessToSQL) 
 使用 "**全局设置**" 对话框的 "编辑器" 页可以指定代码编辑器窗口的设置。  
   
 若要访问编辑器设置，请在 "**工具**" 菜单上选择 "**全局设置**"，单击左侧窗格底部的 " **GUI** "，然后选择 "**编辑器**"。  

@@ -1,5 +1,5 @@
 ---
-title: 查找数据库向导（选择位置）（AccessToSQL） |Microsoft Docs
+title: 查找数据库向导 (选择位置)  (AccessToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,22 +9,22 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Find Databases Wizard
 ms.assetid: 00b2d32a-998b-47a7-b25c-589b5bd6777a
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 82558c7839263a777a15d374acff28b4c40103d4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 06a6135425a8baf19d28d99b74e761f229f977fd
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68024756"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938658"
 ---
-# <a name="find-databases-wizard-select-locations-accesstosql"></a>查找数据库向导（选择位置）（AccessToSQL）
+# <a name="find-databases-wizard-select-locations-accesstosql"></a>查找数据库向导 (选择位置)  (AccessToSQL) 
 在 "查找数据库" 向导的 "选择位置" 页上，输入用于查找 Access 数据库的搜索参数。  
   
 若要打开 "查找数据库向导"，请在 "**文件**" 菜单上单击 "**查找数据库**"。 有关如何使用此对话框的详细信息，请参阅[添加和删除 Access 数据库文件](adding-and-removing-access-database-files-accesstosql.md)  
   
 ## <a name="options"></a>选项  
-**浏览**  
+**“浏览”**  
 单击浏览计算机或网络。 选择要搜索的文件夹或位置，然后单击 **"确定"**。 单击 "**添加**" 将此位置添加到列表。  
   
 **路径框**  
@@ -36,7 +36,7 @@ ms.locfileid: "68024756"
 **添加**  
 将 "路径" 文本框中的位置添加到位置列表。  
   
-**全部**  
+**替换**  
 如果选择了 "位置" 列表中的项，则 "路径" 文本框中的项将替换所选的项。  
   
 **删除**  
@@ -55,9 +55,9 @@ ms.locfileid: "68024756"
 若要查找与大小条件匹配的数据库，请在第一个框中选择一个比较字符，为大小输入一个数字，然后从第三个框中选择 "字节"、"千字节" 或 "兆字节"。  
   
 **所有者**  
-输入所有者的完整 Windows 用户名。 这可能会被格式化为*域*\\*用户*。  
+输入所有者的完整 Windows 用户名。 这可能会被格式化为*域* \\ *用户*。  
   
 ## <a name="see-also"></a>另请参阅  
 [添加和删除 Access 数据库文件](adding-and-removing-access-database-files-accesstosql.md)  
-[用户界面参考（访问）](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
+[ (访问) 的用户界面参考](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

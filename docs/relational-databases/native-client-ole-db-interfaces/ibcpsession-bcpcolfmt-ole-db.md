@@ -1,5 +1,5 @@
 ---
-title: IBCPSession：： BCPColFmt （Native Client OLE DB 提供程序） |Microsoft Docs
+title: IBCPSession：： BCPColFmt (Native Client OLE DB 提供程序) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,14 +16,14 @@ ms.assetid: 2852f4ba-f1c6-4c4c-86b2-b77e4abe70de
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e2899c671b312edff56c11568a74a67d3f961d9e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b9d686223d5b5261426195b3ca659cf7909b9e38
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247796"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87941227"
 ---
-# <a name="ibcpsessionbcpcolfmt-native-client-ole-db-provider"></a>IBCPSession：： BCPColFmt （Native Client OLE DB 提供程序）
+# <a name="ibcpsessionbcpcolfmt-native-client-ole-db-provider"></a>IBCPSession：： BCPColFmt (Native Client OLE DB 提供程序) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   在程序变量与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 列之间创建绑定。  
@@ -72,12 +72,12 @@ HRESULT BCPColFmt(
   
  **注意**[IBCPSession::BCPWriteFmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md) 函数可以用于持久化通过 BCPColFmt 提供的格式规范****。  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  idxUserDataCol[in]**  
  用户的数据文件中字段的索引。  
   
  eUserDataType[in]**  
- 用户的数据文件中字段的数据类型。 可用的数据类型在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 带有 BCP_TYPE_XXX 格式的 Native Client 头文件（sqlncli.msi）中列出，如 BCP_TYPE_SQLINT4。 如果指定 BCP_TYPE_DEFAULT 值，则访问接口将尝试使用与表或视图列相同的类型。 当 eUserDataType 参数是 BCP_TYPE_SQLDECIMAL 或 BCP_TYPE_SQLNUMERIC 时，对于源为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和目标为文件的大容量复制操作****：  
+ 用户的数据文件中字段的数据类型。 可用的数据类型在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 头文件中列出 (带有 BCP_TYPE_XXX 格式的 sqlncli.msi) ，例如 BCP_TYPE_SQLINT4。 如果指定 BCP_TYPE_DEFAULT 值，则访问接口将尝试使用与表或视图列相同的类型。 当 eUserDataType 参数是 BCP_TYPE_SQLDECIMAL 或 BCP_TYPE_SQLNUMERIC 时，对于源为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和目标为文件的大容量复制操作****：  
   
 -   如果源列的数据类型不是 decimal 或 numeric，则使用默认的精度和小数位数。  
   
@@ -117,7 +117,7 @@ HRESULT BCPColFmt(
  方法成功。  
   
  E_FAIL  
- 出现特定于提供程序的错误，有关详细信息，请使用[ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)接口。  
+ 出现特定于提供程序的错误，有关详细信息，请使用[ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15)接口。  
   
  E_UNEXPECTED  
  意外调用了该方法。 例如，在调用该方法之前，未调用 [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) 方法。  

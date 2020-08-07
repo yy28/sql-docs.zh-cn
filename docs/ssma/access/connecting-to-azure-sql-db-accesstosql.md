@@ -17,14 +17,14 @@ helpviewer_keywords:
 - SQL Azure, reconnecting
 - SQL Azure, synchronizing metadata
 ms.assetid: 1ba0d113-dc05-4431-8689-e14a8821bafd
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 529962cbc303a66102f833374e42c6cfb8981b87
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 3bb372b329ce516cae2ab26ece02721d7934b228
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87822514"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938906"
 ---
 # <a name="connecting-to-azure-sql-database-accesstosql"></a>连接到 Azure SQL 数据库 (AccessToSQL) 
 若要将 Access 数据库迁移到 SQL Azure，你必须连接到 SQL Azure 的目标实例。 在连接时，SSMA 将获取 SQL Azure 实例中所有数据库的元数据，并在 SQL Azure 元数据资源管理器中显示数据库元数据。 SSMA 存储有关连接到的 SQL Azure 实例的信息，但不存储密码。  
@@ -72,7 +72,7 @@ ms.locfileid: "87822514"
 如果 SQL Azure 帐户中没有数据库，可以使用单击 "**浏览**" 按钮上显示的 "**创建 Azure 数据库**" 选项来创建第一个数据库。  
   
 ## <a name="synchronizing-sql-azure-metadata"></a>同步 SQL Azure 元数据  
-不会自动更新与 SQL Azure 数据库有关的元数据。 SQL Azure 元数据资源管理器中的元数据是首次连接到 SQL Azure 或上次手动更新元数据时的元数据的快照。 您可以为所有数据库或任何单个数据库或数据库对象手动更新元数据。  
+有关 Azure SQL 数据库中的数据库的元数据不会自动更新。 SQL Azure 元数据资源管理器中的元数据是首次连接到 SQL Azure 或上次手动更新元数据时的元数据的快照。 您可以为所有数据库或任何单个数据库或数据库对象手动更新元数据。  
   
 **同步元数据**  
   
@@ -96,10 +96,10 @@ ms.locfileid: "87822514"
   
 重新连接到 SQL Azure 的过程与建立连接的过程相同。  
   
-## <a name="next-step"></a>下一步  
+## <a name="next-steps"></a>后续步骤  
 迁移的下一步取决于你的项目需求：  
   
--   若要自定义访问架构与 SQL Azure 数据库和架构之间的映射，请参阅[将访问数据库映射到 SQL Server 架构](mapping-source-and-target-databases-accesstosql.md)。  
+-   若要自定义访问架构与 Azure SQL 数据库之间的映射，请参阅[将访问数据库映射到 SQL Server 架构](mapping-source-and-target-databases-accesstosql.md)。  
   
 -   若要自定义项目的配置选项，请参阅[设置项目选项](setting-conversion-and-migration-options-accesstosql.md)。  
   

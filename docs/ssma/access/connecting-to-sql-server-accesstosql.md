@@ -1,5 +1,5 @@
 ---
-title: 正在连接到 SQL Server （AccessToSQL） |Microsoft Docs
+title: 正在连接到 SQL Server (AccessToSQL) |Microsoft Docs
 description: 了解如何连接到 SQL 数据库的目标实例以迁移 Access 数据库。 SSMA 获取有关 SQL 数据库中的数据库的元数据。
 ms.prod: sql
 ms.custom: ''
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - SQL Server, connecting to
 - SQL Server, reconnecting
 ms.assetid: f84cf007-ddf1-4396-a07c-3e0729abc769
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 757c0e040a047f96a6dcf364638f76593904adf1
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 612921c1640b97135c96a5f81c3099722bf5bb4c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395856"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87939087"
 ---
-# <a name="connecting-to-sql-server-accesstosql"></a>连接到 SQL Server （AccessToSQL）
+# <a name="connecting-to-sql-server-accesstosql"></a>连接到 SQL Server (AccessToSQL) 
 若要将 Access 数据库迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，你必须连接到的目标实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 在连接时，SSMA 将获取实例中的数据库的元数据， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元数据资源管理器中显示数据库元数据。 SSMA 存储有关您连接到的实例的信息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，但不存储密码。  
   
 到 SQL Server 的连接保持活动状态，直到关闭项目。 重新打开项目时，如果需要与服务器建立活动连接，则必须重新连接到 SQL Server。 在将数据库对象加载到 SQL Server 和迁移数据之前，可以脱机工作。  
@@ -59,7 +59,7 @@ ms.locfileid: "87395856"
   
 2.  在 "**服务器名称**" 框中，输入或选择实例的名称 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
-    -   如果要连接到本地计算机上的默认实例，则可以输入**localhost**或点（**.**）。  
+    -   如果要连接到本地计算机上的默认实例，则可以输入**localhost**或点 (**。**) 。  
   
     -   如果要连接到另一台计算机上的默认实例，请输入计算机的名称。  
   
@@ -79,9 +79,9 @@ ms.locfileid: "87395856"
   
 5.  在 "**身份验证**" 下拉菜单中，选择要用于连接的身份验证类型。 若要使用当前的 Windows 帐户，请选择 " **Windows 身份验证**"。 若要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名，请选择 " **SQL Server 身份验证**"，然后提供用户名和密码。  
   
-6.  对于安全连接，将添加两个控件： "**加密连接**" 复选框和 " **TrustServerCertificate** " 复选框。 仅当 "**加密连接**" 复选框处于选中状态时**TrustServerCertificate**复选框可见。 选中 "**加密连接**" （true）并取消选中**TrustServerCertificate** （false）后，将验证 SQL Server SSL 证书。 验证服务器证书是 SSL 握手过程的一部分，这可确保服务器是要连接到的正确服务器。 为了确保这一点，证书必须安装在客户端和服务器端。  
+6.  对于安全连接，将添加两个控件： "**加密连接**" 复选框和 " **TrustServerCertificate** " 复选框。 仅当 "**加密连接**" 复选框处于选中状态时**TrustServerCertificate**复选框可见。 选中 "**加密连接**" (true) 并取消选中 " **TrustServerCertificate** " (false) ，将验证 SQL Server SSL 证书。 验证服务器证书是 SSL 握手过程的一部分，这可确保服务器是要连接到的正确服务器。 为了确保这一点，证书必须安装在客户端和服务器端。  
   
-7.  单击“连接”。  
+7.  单击“连接” 。  
   
 **更高版本兼容性**  
   
@@ -95,7 +95,7 @@ ms.locfileid: "87395856"
   
 4.  版本兼容性对于 SQL Azure 无效。  
   
-|项目类型与目标服务器版本|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005（版本：1.x）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008（版本：8.x）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012（版本： 11. x）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014（版本： 12. x）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016（版本： 13. x）|SQL Azure|  
+|项目类型与目标服务器版本|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005 (版本： 6.x) |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008 (版本： 8.x) |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012 (版本： 11. x) |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 (版本：) |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016 (版本：十三) |SQL Azure|  
 |-|-|-|-|-|-|-|
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|是|是|是|是|是||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||是|是|是|是||
@@ -105,7 +105,7 @@ ms.locfileid: "87395856"
 |SQL Azure||||||是|
   
 > [!IMPORTANT]  
-> 数据库对象的转换是根据项目类型执行的，而不是按连接到的 SQL Server 版本来执行的。 在 SQL Server 2005 项目的情况下，即使你连接到 SQL Server 的更高版本（SQL Server 2008/SQL Server 2012/SQL Server 2014/SQL Server 2016），也会按 SQL Server 2005 执行转换。  
+> 数据库对象的转换是根据项目类型执行的，而不是按连接到的 SQL Server 版本来执行的。 在 SQL Server 2005 项目的情况下，即使连接到 SQL Server (SQL Server 2008/SQL Server 2012/SQL Server 2014/SQL Server 2016) 的更高版本，也会按 SQL Server 2005 执行转换。  
   
 ## <a name="synchronizing-sql-server-metadata"></a>同步 SQL Server 元数据  
 如果在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接后架构发生更改，则可以将元数据与服务器同步。  

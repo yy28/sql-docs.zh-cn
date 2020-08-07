@@ -1,5 +1,5 @@
 ---
-title: 运行测试用例（SybaseToSQL） |Microsoft Docs
+title: " (SybaseToSQL) 运行测试用例 |Microsoft Docs"
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -9,17 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Tester Component,Execution Steps
 ms.assetid: 195ffdef-cfde-4bf4-a3ae-e7402bb07972
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 73047e0741d4dee12ecec3e83df308e3f7abd343
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: d828142d83f21cf38663241d593fe197b9715592
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68021019"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87930478"
 ---
 # <a name="running-test-cases-sybasetosql"></a>运行测试用例 (SybaseToSQL)
-当 SSMA 测试人员运行测试用例时，它将执行选择用于测试的对象，并创建有关验证结果的报表。 如果两个平台上的结果相同，则测试已成功。 Sybase 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之间对象的对应关系根据当前 SSMA 项目的架构映射设置来确定。  
+当 SSMA 测试人员运行测试用例时，它将执行选择用于测试的对象，并创建有关验证结果的报表。 如果两个平台上的结果相同，则测试已成功。 Sybase 和之间对象的对应关系 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 根据当前 SSMA 项目的架构映射设置来确定。  
   
 成功测试的必需要求是所有 Sybase 对象都转换并加载到目标数据库。 此外，还应迁移表数据，以便同步两个平台上的表的内容。  
   
@@ -30,7 +30,7 @@ ms.locfileid: "68021019"
   
 2.  在 "**连接到 Sybase** " 对话框中，输入连接信息，然后单击 "**连接**"。  
   
-测试完成后，将创建测试用例报表。 单击 "**报告**" 按钮以查看[查看测试用例报表 &#40;SybaseToSQL&#41;](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md)"。 测试的结果（测试用例报表）会自动存储在[使用测试存储库 &#40;SybaseToSQL&#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md)中供以后使用。  
+测试完成后，将创建测试用例报表。 单击 "**报告**" 按钮以查看[查看测试用例报表 &#40;SybaseToSQL&#41;](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md)"。 测试 (测试用例报告) 的结果会自动存储在[使用测试存储库 &#40;SybaseToSQL&#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md)以供以后使用。  
   
 ## <a name="test-case-execution-steps"></a>测试用例执行步骤  
   
@@ -38,13 +38,13 @@ ms.locfileid: "68021019"
 SSMA 测试人员检查测试开始之前是否满足所有先决条件。 如果未满足某些条件，则会显示错误消息。  
   
 ### <a name="initialization"></a>初始化  
-在此步骤中，SSMA 测试人员在 Sybase 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上创建辅助对象（表、触发器和视图）。 如果表比较模式**仅更改**，则它们允许跟踪在受影响的表中所做的更改。  
+在此步骤中，SSMA 测试器会在 Sybase 和)  (表、触发器和视图中创建辅助对象 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果表比较模式**仅更改**，则它们允许跟踪在受影响的表中所做的更改。  
   
 假定验证的表名为 USER_TABLE。 对于此类表，将在 Sybase 中创建以下辅助对象。  
   
-以下对象在 SSMATESTER2005db 或 SSMATESTER2008db 数据库中的 Sybase 处创建，在 ssmatesterdb_syb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库中创建。  
+以下对象在 SSMATESTER2005db 或 SSMATESTER2008db 数据库中的 Sybase 处创建，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ssmatesterdb_syb 数据库中创建。  
   
-|名称|类型|说明|  
+|名称|类型|描述|  
 |--------|--------|---------------|  
 |USER_TABLE $ .Trg|触发器|触发审核已验证表中的更改。|  
 |USER_TABLE $ Aud|表|其中保存已删除和覆盖的行的表。|  
@@ -54,9 +54,9 @@ SSMA 测试人员检查测试开始之前是否满足所有先决条件。 如�
 |USER_TABLE $ new_id|查看|已插入和已更改行的标识。|  
 |USER_TABLE $ old|查看|简化的已删除和覆盖的行的表示形式。|  
   
-以下对象在 Sybase 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的已验证表的数据库中创建。  
+以下对象在 Sybase 和的已验证表的数据库中创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
-|名称|类型|说明|  
+|名称|类型|描述|  
 |--------|--------|---------------|  
 |USER_TABLE $ .Trg|触发器|触发审核已验证表中的更改。|  
   
