@@ -1,6 +1,6 @@
 ---
 title: 工作负载比较过程概述
-description: 数据库实验助手（DEA）是一种用于在 SQL Server 环境中进行更改的 A/B 测试解决方案，如升级或新索引。
+description: 数据库实验助手 (DEA) 是一个 A/B 测试解决方案，适用于 SQL Server 环境中的更改，例如升级或新索引。
 ms.date: 12/12/2019
 ms.prod: sql
 ms.prod_service: dea
@@ -8,20 +8,20 @@ ms.suite: sql
 ms.technology: dea
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
-author: HJToland3
-ms.author: rajsell
+author: pochiraju
+ms.author: rajpo
 ms.reviewer: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 36e36060e16ff85ba2b1fa58d9d900231cf6581f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a5a508a31d510d4004ece8d82c01615352739dce
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75258524"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87951212"
 ---
 # <a name="overview-of-the-workload-comparison-process"></a>工作负载比较过程概述
 
-数据库实验助手（DEA）可帮助你评估源服务器上的工作负荷（在当前环境中）在你的新环境中将如何执行。 DEA 指导你完成三个阶段，以运行 A/B 测试：
+数据库实验助手 (DEA) 可帮助你评估源服务器上的工作负荷在当前环境中的 (，) 将在你的新环境中执行。 DEA 指导你完成三个阶段，以运行 A/B 测试：
 
 - 正在捕获源服务器上的工作负荷跟踪。
 - 在目标1和目标2上重播捕获的工作负载跟踪。
@@ -50,9 +50,9 @@ SQL Server A/B 测试的第二个阶段是重播在两个目标服务器上捕�
 
 注意事项：
 
-- 若要重播工作负载跟踪，你的计算机必须设置为运行 Distributed Replay （DReplay）跟踪。
+- 若要重播工作负载跟踪，你的计算机必须设置为 (DReplay) 跟踪运行 Distributed Replay。
 - 请确保通过使用源服务器的备份来还原目标服务器上的数据库。
-- 建议在服务应用程序中重新启动 SQL Server 服务（MSSQLSERVER），以提高评估结果的一致性。 SQL Server 中的查询缓存可能会影响评估结果。
+- 建议在服务应用程序中重新启动 SQL Server 服务 (MSSQLSERVER) ，以提高评估结果的一致性。 SQL Server 中的查询缓存可能会影响评估结果。
 
 ## <a name="analyzing-the-replayed-workload-traces"></a>分析重播的工作负载跟踪
 
@@ -60,7 +60,7 @@ SQL Server A/B 测试的第二个阶段是重播在两个目标服务器上捕�
 
 注意事项：
 
-- 如果缺少一个或多个组件，则当你尝试生成新的分析报表（需要 Internet 连接）时，会显示包含下载链接的 "先决条件" 页面。
+- 如果缺少一个或多个组件，则当你尝试生成新的分析报表时，将会显示 "先决条件" 页面，其中包含用于下载的链接， (需要) Internet 连接。
 - 若要查看在工具的早期版本中生成的报表，必须先更新该架构。
 
 ## <a name="see-also"></a>请参阅

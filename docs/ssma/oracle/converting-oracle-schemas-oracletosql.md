@@ -1,5 +1,5 @@
 ---
-title: 转换 Oracle 架构（OracleToSQL） |Microsoft Docs
+title: 将 Oracle 架构转换 (OracleToSQL) |Microsoft Docs
 description: 在设置选项并连接到 Oracle 和 SQL Server 后，了解如何将 Oracle 数据库对象转换 SQL Server 为 SSMA for Oracle 的数据库对象。
 ms.prod: sql
 ms.custom: ''
@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Conversion Results
 ms.assetid: e021182d-31da-443d-b110-937f5db27272
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 844d602168c063c90034469466ade816431481d4
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 907c04d8acd0859b71d1b31d2839c23d5e4b85e8
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395162"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935056"
 ---
 # <a name="converting-oracle-schemas-oracletosql"></a>转换 Oracle 架构 (OracleToSQL)
 连接到 Oracle、连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并设置项目和数据映射选项后，可以将 Oracle 数据库对象转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库对象。  
@@ -39,13 +39,13 @@ ms.locfileid: "87395162"
 |函数|如果函数可以直接转换为，则 [!INCLUDE[tsql](../../includes/tsql-md.md)] SSMA 将创建一个函数。<br /><br />在某些情况下，该函数必须转换为存储过程。 在这种情况下，SSMA 创建存储过程和调用存储过程的函数。|  
 |过程|如果可以将该过程直接转换为 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，则 SSMA 将创建一个存储过程。<br /><br />在某些情况下，必须在自治事务中调用存储过程。 在这种情况下，SSMA 创建两个存储过程：一个用于实现过程，另一个用于调用实现存储过程。|  
 |包|SSMA 创建一组由类似对象名称统一的存储过程和函数。|  
-|序列|SSMA 创建序列对象（SQL Server 2012 或 SQL Server 2014）或模拟 Oracle 序列。|  
+|序列|SSMA SQL Server 2012 或 SQL Server 2014) 或模拟 Oracle 序列 (创建序列对象。|  
 |具有依赖对象（如索引和触发器）的表|SSMA 创建具有依赖对象的表。|  
 |具有依赖对象（如触发器）的视图|SSMA 创建具有依赖对象的视图。|  
-|具体化视图|**SSMA 在 SQL server 上创建索引视图，但有一些例外情况。如果具体化视图包含一个或多个以下构造，转换将失败：**<br /><br />用户定义函数<br /><br />SELECT、WHERE 或 GROUP BY 子句中的非确定性字段/函数/表达式<br /><br />在 SELECT *、WHERE 或 GROUP BY 子句中使用 Float 列（上一问题的特例）<br /><br />自定义数据类型（包括嵌套表）<br /><br />计数（非重复 &lt; 字段 &gt; ）<br /><br />FETCH<br /><br />OUTER 联接（LEFT、RIGHT 或 FULL）<br /><br />子查询，其他视图<br /><br />过度、排名、潜在顾客、日志<br /><br />MIN、MAX<br /><br />UNION、减法、INTERSECT<br /><br />HAVING|  
+|具体化视图|**SSMA 在 SQL server 上创建索引视图，但有一些例外情况。如果具体化视图包含一个或多个以下构造，转换将失败：**<br /><br />用户定义函数<br /><br />SELECT、WHERE 或 GROUP BY 子句中的非确定性字段/函数/表达式<br /><br />在 SELECT *、WHERE 或 GROUP BY 子句中使用 Float 列 (上一问题的特殊情况) <br /><br />自定义数据类型 (包括嵌套表) <br /><br />计数 (非重复 &lt; 字段 &gt;) <br /><br />FETCH<br /><br />OUTER 联接（LEFT、RIGHT 或 FULL）<br /><br />子查询，其他视图<br /><br />过度、排名、潜在顾客、日志<br /><br />MIN、MAX<br /><br />UNION、减法、INTERSECT<br /><br />HAVING|  
 |触发器|**SSMA 基于以下规则创建触发器：**<br /><br />在触发器转换为 INSTEAD of 触发器之前。<br /><br />AFTER 触发器转换为 AFTER 触发器。<br /><br />INSTEAD of 触发器会转换为 INSTEAD of 触发器。 在同一操作中定义的多个 INSTEAD of 触发器合并为一个触发器。<br /><br />使用游标模拟行级触发器。<br /><br />级联触发器将转换为多个单独的触发器。|  
 |同义词|**为以下对象类型创建同义词：**<br /><br />表和对象表<br /><br />视图和对象视图<br /><br />存储过程<br /><br />函数<br /><br />**以下对象的同义词由直接对象引用解析和替换：**<br /><br />序列<br /><br />包<br /><br />Java 类架构对象<br /><br />用户定义的对象类型<br /><br />不能迁移其他同义词的同义词，并将其标记为错误。<br /><br />不会为具体化视图创建同义词。|  
-|用户定义的类型|**SSMA 不支持转换用户定义的类型。用户定义的类型（包括其在 PL/SQL 程序中的用法）标记有以下规则所述的特殊转换错误：**<br /><br />将用户定义类型的表列转换为 VARCHAR （8000）。<br /><br />存储过程或函数的用户定义类型的参数转换为 VARCHAR （8000）。<br /><br />PL/SQL 块中用户定义类型的变量转换为 VARCHAR （8000）。<br /><br />对象表转换为标准表。<br /><br />对象视图转换为标准视图。|  
+|用户定义的类型|**SSMA 不支持转换用户定义的类型。用户定义的类型（包括其在 PL/SQL 程序中的用法）标记有以下规则所述的特殊转换错误：**<br /><br />用户定义类型的表列转换为 VARCHAR (8000) 。<br /><br />存储过程或函数的用户定义类型的参数转换为 VARCHAR (8000) 。<br /><br />PL/SQL 块中用户定义类型的变量转换为 VARCHAR (8000) 。<br /><br />对象表转换为标准表。<br /><br />对象视图转换为标准视图。|  
   
 ## <a name="converting-oracle-database-objects"></a>转换 Oracle Database 对象  
 若要转换 Oracle 数据库对象，请首先选择要转换的对象，然后让 SSMA 执行转换。 若要在转换过程中查看输出消息，请在 "**视图**" 菜单上选择 "**输出**"。  

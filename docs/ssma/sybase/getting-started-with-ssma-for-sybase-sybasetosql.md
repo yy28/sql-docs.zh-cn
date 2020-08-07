@@ -1,6 +1,6 @@
 ---
-title: 用于 SAP ASE 的 SSMA （SybaseToSQL）的入门 |Microsoft Docs
-description: 了解 SAP ASE 安装过程的 SQL Server 迁移助手（SSMA），并熟悉 SSMA 用户界面。
+title: SSMA for SAP ASE (SybaseToSQL) 入门Microsoft Docs
+description: 了解 SAP ASE 安装过程的 SQL Server 迁移助手 (SSMA) ，并熟悉 SSMA 用户界面。
 ms.custom: ''
 ms.date: 09/30/2017
 ms.prod: sql
@@ -8,22 +8,22 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: c4098516-f0fc-4690-97bb-3766dfd43156
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 57a7a4d3f8bee507c11700f383d5bb02adb4172c
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: cd6e32470673a87a410530298972b251d2807e4b
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293934"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931807"
 ---
-# <a name="getting-started-with-ssma-for-sap-ase-sybasetosql"></a>SSMA for SAP ASE 的入门（SybaseToSQL）
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SAP ASE 迁移助手（SSMA）可让你快速将 SAP 自适应服务器企业（ASE）数据库架构转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 AZURE Sql 数据库架构、将生成的架构上传到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Azure sql 数据库，以及将数据从 SAP ASE 迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 azure sql 数据库。  
+# <a name="getting-started-with-ssma-for-sap-ase-sybasetosql"></a>SSMA for SAP ASE (SybaseToSQL) 的入门
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]利用 SAP ASE 迁移助手 (SSMA) ，可以快速将 SAP 自适应服务器企业 () ASE 转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 AZURE Sql 数据库架构，并将生成的架构上传到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 azure sql 数据库，以及将数据从 SAP ase 迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 azure sql 数据库。  
   
 本主题介绍了安装过程，并帮助你熟悉 SSMA 用户界面。  
   
 ## <a name="installing-and-licensing-ssma"></a>安装和授权 SSMA  
-若要使用 SSMA，首先必须在可以访问 SAP ASE 的源实例和目标实例的计算机上安装 SSMA 客户端程序 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 AZURE SQL 数据库。 若要使用服务器端数据迁移，必须在运行的计算机上安装扩展包和至少一个 SAP ASE 提供程序（OLE DB 或 ADO.NET） [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 这些组件支持数据迁移并模拟 SAP ASE 系统功能。 有关安装说明，请参阅[安装 SSMA FOR SAP ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)。  
+若要使用 SSMA，首先必须在可以访问 SAP ASE 的源实例和目标实例的计算机上安装 SSMA 客户端程序 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 AZURE SQL 数据库。 若要使用服务器端数据迁移，必须在运行的计算机上安装扩展包和至少一个 SAP ASE 提供程序 (OLE DB 或 ADO.NET) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 这些组件支持数据迁移并模拟 SAP ASE 系统功能。 有关安装说明，请参阅[安装 SSMA FOR SAP ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)。  
   
 若要启动 SSMA，请单击 "**开始**"，指向 "**所有程序**"，指向 " ** [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sybase 迁移助手**"，然后选择 " ** [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 迁移助手用于 sybase**"。 首次启动 SSMA 时，将出现 "授权" 对话框。 必须先使用 Windows Live ID 对 SSMA 进行授权，然后才能使用 SSMA。 安装说明中提供了有关安装[SSMA For Sybase Client &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)主题的许可说明。  
   
@@ -59,7 +59,7 @@ Sybase 元数据资源管理器显示有关 SAP ASE 的源实例上的数据库�
 #### <a name="sql-server-or-sql-azure-metadata-explorer"></a>SQL Server 或 SQL Azure 元数据资源管理器  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 元数据资源管理器显示有关的实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 AZURE SQL 数据库的信息。 当你连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 AZURE SQL 数据库的实例时，SSMA 会检索有关该实例的元数据，并将其存储在项目文件中。  
   
-你可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 元数据资源管理器来选择已转换的 SAP ASE 数据库对象，然后将这些对象加载（同步）到实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Azure SQL 数据库。  
+你可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 元数据资源管理器选择转换后的 SAP ASE 数据库对象，然后将这些对象的 (同步) 到实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Azure SQL 数据库。  
   
 有关详细信息，请参阅将[转换的数据库对象加载到 SQL Server &#40;SybaseToSQL&#41;](../../ssma/sybase/loading-converted-database-objects-into-sql-server-sybasetosql.md)。  
   
@@ -109,6 +109,6 @@ SSMA 包含以下菜单：
   
 -   "错误列表" 窗格在列表中显示可以排序的错误、警告和信息性消息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [将 SAP ASE 数据库迁移到 SQL Server-Azure SQL 数据库 &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
 [用户界面参考 &#40;SybaseToSQL&#41;](../../ssma/sybase/user-interface-reference-sybasetosql.md)  

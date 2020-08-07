@@ -1,5 +1,5 @@
 ---
-title: 法律声明（SSMA for Access） |Microsoft Docs
+title: 法律公告 (访问) 的 SSMA |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - disclaimer
 - legal notice
 ms.assetid: d614b508-48ad-459e-ae86-79ee9d027a73
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: d22a41b67d4b33d573a1c3ecc5f2235560cceea3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 5c15aa77726228d4bb7e55cd450affdfe5e4da42
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67947517"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938220"
 ---
-# <a name="legal-notice-ssma-for-access"></a>法律声明（SSMA for Access）
+# <a name="legal-notice-ssma-for-access"></a>法律公告 (SSMA 访问权限) 
 本文档（包括本文档中使用的示例应用程序）仅供参考，并在无任何明示或暗示担保的情况下提供。 本文档中的信息（包括 URL 和其他 Internet 网站引用）如有更改，恕不另行通知。 由于使用本文档而带来的任何风险或后果均由用户自行承担。  
   
 本文档中包含的示例主要用于说明概念以及特定语句或子句的合理用法。 大多数示例不包括完整的生产系统通常所包含的全部代码，因为其中删除了某些常用的数据验证和错误处理，以便使示例突出特定的概念或语句。 对这些示例或所包括的源代码，我们不提供技术支持。  

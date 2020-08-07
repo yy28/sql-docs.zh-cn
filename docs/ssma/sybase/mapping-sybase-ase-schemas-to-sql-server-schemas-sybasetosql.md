@@ -9,17 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Schema Mapping
 ms.assetid: 2c927003-c49d-4fe1-8e3e-5b2899166268
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 212b5719c1ef8bac3e44ec33b786a032acef1d9f
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: acd4b7c13b2f8674f120c7f5b49f503a7f8fb5bc
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865325"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931222"
 ---
 # <a name="mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql"></a>将 Sybase ASE 架构映射到 SQL Server 架构 (SybaseToSQL)
-在 Sybase 自适应服务器企业 (ASE) 中，每个数据库都有一个或多个架构。 默认情况下，SSMA 将数据库和架构中的所有对象迁移到或 SQL Azure 中的相同数据库和架构 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 不过，你可以自定义 ASE 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 数据库与架构之间的映射。  
+在 Sybase 自适应服务器企业 (ASE) 中，每个数据库都有一个或多个架构。 默认情况下，SSMA 将数据库和架构中的所有对象迁移到或 SQL Azure 中的相同数据库和架构 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 但是，你可以自定义 ASE 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 AZURE SQL 数据库之间的映射。  
   
 ## <a name="ase-and-sql-server-or-sql-azure-schemas"></a>ASE、SQL Server 或 SQL Azure 架构  
 ASE 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 都通过使用两部分表示法作为*数据库*来指定数据库及其架构。 例如，在 ASE**演示**数据库中，可能有一个**dbo**架构。 该数据库和架构对指定为**demo. dbo**。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 具有相同的数据库和架构，则该对也指定为**demo. dbo**。  
@@ -51,7 +51,7 @@ ASE 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 
   
 -   映射到 SQL Azure  
   
-您可以将源数据库映射到连接的目标 SQL Azure 数据库或连接的目标 SQL Azure 数据库中的任何架构。 如果将源架构映射到已连接目标数据库下的任何非现有架构，则系统会提示您输入消息 **"目标元数据中不存在架构"。它将在同步过程中创建。是否要继续？"** 单击" 是 "。  
+可以将源数据库映射到连接的目标 Azure SQL 数据库，或映射到连接的目标 Azure SQL 数据库中的任何架构。 如果将源架构映射到已连接目标数据库下的任何非现有架构，则系统会提示您输入消息 **"目标元数据中不存在架构"。它将在同步过程中创建。是否要继续？"** 单击" 是 "。  
   
 ## <a name="reverting-to-the-default-database-and-schema"></a>恢复到默认数据库和架构  
 如果自定义 ASE 架构与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 架构之间的映射，则可以将映射恢复为默认值。  

@@ -1,5 +1,5 @@
 ---
-title: 访问清单架构（AccessToSQL） |Microsoft Docs
+title: 访问清单架构 (AccessToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -34,24 +34,24 @@ helpviewer_keywords:
 - SSMA_Access_InventoryTables
 - tables, inventory
 ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: c140489877be5f34bc6d7a5b20a4ce36fdb3820f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: caf6c1045b02a84cf2dec0aba56c5c1c050277c1
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68068947"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934148"
 ---
-# <a name="access-inventory-schemas-accesstosql"></a>访问清单架构（AccessToSQL）
-以下各节描述了在将访问架构导出到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时由 SSMA 创建的表。  
+# <a name="access-inventory-schemas-accesstosql"></a>访问清单架构 (AccessToSQL) 
+以下各节描述了在将访问架构导出到时由 SSMA 创建的表 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="databases"></a>数据库  
 数据库元数据将导出到**SSMA_Access_InventoryDatabases**表。 此表包含以下列：  
   
 |列名|数据类型|说明|  
 |---------------|-------------|---------------|  
-|**DatabaseId**|**uniqueidentifier**|唯一标识每个数据库的 GUID。 此列也是表的主键。|  
+|**数据库 ID**|**uniqueidentifier**|唯一标识每个数据库的 GUID。 此列也是表的主键。|  
 |**DatabaseName**|**nvarchar(4000)**|访问数据库的名称。|  
 |**ExportTime**|**datetime**|此元数据由 SSMA 创建的日期和时间。|  
 |**FilePath**|**nvarchar(4000)**|Access 数据库的完整路径和文件名。|  
@@ -76,10 +76,10 @@ ms.locfileid: "68068947"
   
 |列名|数据类型|说明|  
 |---------------|-------------|---------------|  
-|**DatabaseId**|**uniqueidentifier**|标识包含此表的数据库。|  
+|**数据库 ID**|**uniqueidentifier**|标识包含此表的数据库。|  
 |**TableId**|**uniqueidentifier**|用于唯一标识表的 GUID。 此列也是表的主键。|  
 |**TableName**|**nvarchar(4000)**|表的名称。|  
-|**RowsCount**|**int**|该表中的行数。|  
+|**RowsCount**|**int**|表中的行数。|  
 |**有效性**|**nvarchar(4000)**|定义表的有效输入的规则。 如果不存在验证规则，则字段将包含空字符串。|  
 |**LinkedTable**|**nvarchar(4000)**|与表关联的另一个表（如果有）。 链接表允许使用该表添加、删除和更新其他表。|  
 |**ExternalSource**|**nvarchar(4000)**|与表关联的数据源（如果有）。 如果表已链接，则它具有在此字段中指定的外部数据源。|  
@@ -89,14 +89,14 @@ ms.locfileid: "68068947"
   
 |列名|数据类型|说明|  
 |---------------|-------------|---------------|  
-|**DatabaseId**|**uniqueidentifier**|标识包含此列的数据库。|  
+|**数据库 ID**|**uniqueidentifier**|标识包含此列的数据库。|  
 |**TableId**|**uniqueidentifier**|标识包含此列的表。|  
 |**ColumnId**|**int**|用于标识列的递增整数。 **ColumnId**是表的主键。|  
 |**ColumnName**|**nvarchar(4000)**|列的名称。|  
 |**IsNullable**|**bit**|指定列是否可以包含 null 值。 如果值为1，则列可以包含 null 值。 如果该值为0，则列不能包含 null 值。 请注意，验证规则还可用于防止 null 值。|  
 |**DataType**|**nvarchar(4000)**|列的访问数据类型，例如**文本**或**Long**。|  
 |**IsAutoIncrement**|**bit**|指定列是否自动增加整数值。 如果值为1，则整数会自动递增。|  
-|**Ordinal**|**smallint**|表中列的顺序（从零开始）。|  
+|**序号**|**smallint**|表中列的顺序（从零开始）。|  
 |**值**|**nvarchar(4000)**|列的默认值。|  
 |**有效性**|**nvarchar(4000)**|用于验证在列中添加或更新的数据的规则。|  
   
@@ -105,7 +105,7 @@ ms.locfileid: "68068947"
   
 |列名|数据类型|说明|  
 |---------------|-------------|---------------|  
-|**DatabaseId**|**uniqueidentifier**|标识包含此索引的数据库。|  
+|**数据库 ID**|**uniqueidentifier**|标识包含此索引的数据库。|  
 |**TableId**|**uniqueidentifier**|标识包含此索引的表。|  
 |**IndexId**|**int**|用于标识索引的递增整数。 此列是表的主键。|  
 |**IndexName**|**nvarchar(4000)**|索引的名称。|  
@@ -119,7 +119,7 @@ ms.locfileid: "68068947"
   
 |列名|数据类型|说明|  
 |---------------|-------------|---------------|  
-|**DatabaseId**|**uniqueidentifier**|标识包含此外键的数据库。|  
+|**数据库 ID**|**uniqueidentifier**|标识包含此外键的数据库。|  
 |**TableId**|**uniqueidentifier**|标识包含此外键的表。|  
 |**ForeignKeyId**|**int**|标识外键的递增整数。 此列是表的主键。|  
 |**ForeignKeyName**|**nvarchar(4000)**|索引的名称。|  
@@ -135,7 +135,7 @@ ms.locfileid: "68068947"
   
 |列名|数据类型|说明|  
 |---------------|-------------|---------------|  
-|**DatabaseId**|**uniqueidentifier**|标识包含此查询的数据库。|  
+|**数据库 ID**|**uniqueidentifier**|标识包含此查询的数据库。|  
 |**QueryId**|**int**|用于标识查询的递增整数。 此列是表的主键。|  
 |**QueryName**|**nvarchar(4000)**|查询的名称。|  
 |**QueryText**|**nvarchar(4000)**|SQL 查询代码，如 SELECT 语句。|  
@@ -143,12 +143,12 @@ ms.locfileid: "68068947"
 |**QueryType**|**nvarchar(4000)**|指定查询的类型，例如**Select**或**SetOperation**。|  
 |**ExternalSource**|**nvarchar(4000)**|如果查询引用外部数据源，则这是查询使用的连接字符串。|  
   
-## <a name="forms"></a>表单  
+## <a name="forms"></a>窗体  
 表单元数据将导出到**SSMA_Access_InventoryForms**表。 此表包含以下列：  
   
 |列名|数据类型|说明|  
 |---------------|-------------|---------------|  
-|**DatabaseId**|**uniqueidentifier**|标识包含此窗体的数据库。|  
+|**数据库 ID**|**uniqueidentifier**|标识包含此窗体的数据库。|  
 |**FormId**|**int**|用于标识窗体的递增整数。 此列是表的主键。|  
 |**FormName**|**nvarchar(4000)**|窗体的名称。|  
   
@@ -157,7 +157,7 @@ ms.locfileid: "68068947"
   
 |列名|数据类型|说明|  
 |---------------|-------------|---------------|  
-|**DatabaseId**|**uniqueidentifier**|标识包含宏的数据库。|  
+|**数据库 ID**|**uniqueidentifier**|标识包含宏的数据库。|  
 |**MacroId**|**int**|用于标识宏的递增整数。 此列是表的主键。|  
 |**MacroName**|**nvarchar(4000)**|宏的名称。|  
   
@@ -166,7 +166,7 @@ ms.locfileid: "68068947"
   
 |列名|数据类型|说明|  
 |---------------|-------------|---------------|  
-|**DatabaseId**|**uniqueidentifier**|标识包含报表的数据库。|  
+|**数据库 ID**|**uniqueidentifier**|标识包含报表的数据库。|  
 |**ReportId**|**int**|用于标识报表的递增整数。 此列是表的主键。|  
 |**ReportName**|**nvarchar(4000)**|报表的名称。|  
   
@@ -175,7 +175,7 @@ ms.locfileid: "68068947"
   
 |列名|数据类型|说明|  
 |---------------|-------------|---------------|  
-|**DatabaseId**|**uniqueidentifier**|标识包含模块的数据库。|  
+|**数据库 ID**|**uniqueidentifier**|标识包含模块的数据库。|  
 |**ModuleId**|**int**|标识模块的递增整数。 此列是表的主键。|  
 |**ModuleName**|**nvarchar(4000)**|模块的名称。|  
   

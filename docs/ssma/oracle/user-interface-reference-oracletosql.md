@@ -1,5 +1,5 @@
 ---
-title: 用户界面参考（OracleToSQL） |Microsoft Docs
+title: 用户界面引用 (OracleToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,23 +7,23 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 160d4784-d108-4705-932d-763558912804
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 664a1f861603c9ff52355660b4601a482d55ffbb
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: f0fa992181878a185fc6ba12719f3b2edc5fa9ae
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87390659"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932938"
 ---
 # <a name="user-interface-reference-oracletosql"></a>用户界面参考 (OracleToSQL)
-本部分包含用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Oracle 迁移助手（SSMA）的帮助主题。  
+本节包括适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Oracle 迁移助手 (SSMA) 的帮助主题。  
   
 ## <a name="in-this-section"></a>本节内容  
 下表列出了 "SSMA" 对话框：  
   
-|主题|说明|  
+|主题|描述|  
 |-|-|  
 |[&#40;OracleToSQL&#41;的高级对象选择](../../ssma/oracle/advanced-object-selection-oracletosql.md)|使用 "**高级对象选择**" 对话框可以通过使用筛选条件查找数据库对象，然后选择或清除这些对象。|  
 |[评估报表 &#40;OracleToSQL&#41;](../../ssma/oracle/assessment-report-oracletosql.md)|使用 "评估" 报告查看将 Oracle 对象转换为语法的结果 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，并估计迁移到的时间和复杂性 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  

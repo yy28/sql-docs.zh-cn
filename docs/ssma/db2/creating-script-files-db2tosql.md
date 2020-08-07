@@ -1,5 +1,5 @@
 ---
-title: 创建脚本文件（DB2ToSQL） |Microsoft Docs
+title: 创建脚本文件 (DB2ToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,16 +7,16 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: ec23d188-b890-49b8-9a88-446df96269e4
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 324aff21d677c213148922f7e06f267e08740c13
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: F
+ms.author: alexiva
+ms.openlocfilehash: ac87b3459a5a2ae5c8477ce0674facaf361f03b0
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67989834"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933828"
 ---
-# <a name="creating-script-files-db2tosql"></a>创建脚本文件（DB2ToSQL）
+# <a name="creating-script-files-db2tosql"></a> (DB2ToSQL) 创建脚本文件
 启动 SSMA 控制台应用程序之前的第一个步骤是创建脚本文件，并在需要时创建变量值文件和服务器连接文件。  
   
 脚本文件可以分为三个部分，即即：  
@@ -40,7 +40,7 @@ ms.locfileid: "67989834"
   
     -   destination：指定是否需要将输出打印到文件或 stdout。 默认情况下，此值为 false。  
   
-    -   文件名：文件的路径（可选）。  
+    -   文件名：文件路径 (可选) 。  
   
     -   抑制消息：抑制控制台上的消息。 默认情况下，此值为 "false"。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "67989834"
   
     </output-providers>  
     ```  
-    *或*  
+    *or*  
   
     ```xml  
     <...All commands...>  
@@ -79,13 +79,13 @@ ms.locfileid: "67989834"
     </...All commands...>  
     ```  
   
-2.  **数据迁移连接提供程序：** 此项指定要将哪个源/目标服务器视为数据迁移。  源-使用情况-上次使用指示上次使用的源服务器用于数据迁移。 类似目标-使用-上次使用指示上次使用的目标服务器用于数据迁移。 用户还可以通过使用属性 "源-服务器" 或 "目标-服务器" 来指定服务器（源或目标）。  
+2.  **数据迁移连接提供程序：** 此项指定要将哪个源/目标服务器视为数据迁移。  源-使用情况-上次使用指示上次使用的源服务器用于数据迁移。 类似目标-使用-上次使用指示上次使用的目标服务器用于数据迁移。 用户还可以通过使用属性 "源-服务器" 或 "目标服务器" 指定服务器 (源或目标) 。  
   
     只能使用一个或另一个指定的属性，例如：  
   
-    -   源-使用-上次使用 = "true" （默认值）或源-服务器 = "source_servername"  
+    -   源-使用-上次使用 = "true" (默认) 或源-server = "source_servername"  
   
-    -   目标-使用-上次使用 = "true" （默认值）或目标-服务器 = "target_servername"  
+    -   目标-使用-上次使用 = "true" (默认) 或目标-server = "target_servername"  
   
     **示例：**  
   
@@ -98,7 +98,7 @@ ms.locfileid: "67989834"
   
     </output-providers>  
     ```  
-    *或*  
+    *or*  
   
     ```xml  
     <migrate-data>  
@@ -114,7 +114,7 @@ ms.locfileid: "67989834"
   
     模式包括：  
   
-    -   **ask-用户-** 提示用户继续（"是"）或错误（"否"）。  
+    -   **ask-用户-** 提示用户继续 ( "是" ) 或 ( "否" ) 时出现错误。  
   
     -   **错误-** 控制台将显示错误并停止执行。  
   
@@ -131,7 +131,7 @@ ms.locfileid: "67989834"
   
     </output-providers>  
     ```  
-    *或*  
+    *or*  
   
     ```xml  
     <!-- Connect to target database -->  
@@ -164,7 +164,7 @@ ms.locfileid: "67989834"
   
     </output-providers>  
     ```  
-    *或*  
+    *or*  
   
     ```xml  
     <!--synchronization-->  
@@ -175,7 +175,7 @@ ms.locfileid: "67989834"
   
     </synchronize-target>  
     ```  
-    *或*  
+    *or*  
   
     ```xml  
     <!--data migration-->  
@@ -199,7 +199,7 @@ ms.locfileid: "67989834"
   
     -   skip：控制台将跳过数据库中已存在的对象  
   
-    -   ask-user：提示用户输入（"是"/"否"）  
+    -   ask-user：提示用户输入 ( "是"/"否" )   
   
     **示例：**  
   
@@ -210,7 +210,7 @@ ms.locfileid: "67989834"
   
     </output-providers>  
     ```  
-    *或*  
+    *or*  
   
     ```xml  
     <convert-schema object-name="<object-name>">  
@@ -263,7 +263,7 @@ ms.locfileid: "67989834"
   
     </output-providers>  
     ```  
-    *或*  
+    *or*  
   
     ```xml  
     <...All commands...>  
@@ -305,7 +305,7 @@ ms.locfileid: "67989834"
   
     </output-providers>  
     ```  
-    *或*  
+    *or*  
   
     ```xml  
     <...All commands...>  
@@ -319,9 +319,9 @@ ms.locfileid: "67989834"
   
     这里出现两种情况：  
   
-    1.  如果 override 选项为**false**，则搜索顺序为 "受保护的存储&gt;-脚本文件&gt;-服务器连接文件&gt; -提示用户"。  
+    1.  如果 override 选项为**false**，则搜索顺序为 "受保护的存储- &gt; 脚本文件- &gt; 服务器连接文件- &gt; 提示用户"。  
   
-    2.  如果 override 选项为**true**，则搜索顺序为 "脚本文件-&gt;服务器连接文件-&gt;提示用户"。  
+    2.  如果 override 选项为**true**，则搜索顺序为 "脚本文件- &gt; 服务器连接文件- &gt; 提示用户"。  
   
     **示例：**  
   
@@ -343,7 +343,7 @@ ms.locfileid: "67989834"
 ## <a name="script-commands"></a>脚本命令  
 脚本文件包含一系列 XML 格式的迁移工作流命令。 SSMA 控制台应用程序按脚本文件中显示的命令顺序处理迁移。  
   
-例如，DB2 数据库中特定表的典型数据迁移遵循： Schema&gt;表的层次结构。  
+例如，DB2 数据库中特定表的典型数据迁移遵循： Schema 表的层次结构 &gt; 。  
   
 成功执行脚本文件中的所有命令后，SSMA 控制台应用程序将退出并将控件返回给用户。 脚本文件的内容具有更多或更少的静态，其中包含的变量信息包含在[创建变量值文件 &#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)或（在脚本文件的单独节中，用于变量值）。  
   
@@ -372,19 +372,19 @@ ms.locfileid: "67989834"
   
 </ssma-script-file>  
 ```  
-产品目录的 "示例控制台脚本" 文件夹中提供了包含3个脚本文件（用于执行各种方案）、变量值文件和服务器连接文件的模板：  
+产品目录的 "示例控制台脚本" 文件夹中提供了包含3个脚本文件的模板 (用于执行各种方案) 、变量值文件和服务器连接文件：  
   
--   AssessmentReportGenerationSample  
+-   AssessmentReportGenerationSample.xml  
   
--   ConversionAndDataMigrationSample  
+-   ConversionAndDataMigrationSample.xml  
   
--   SqlStatementConversionSample  
+-   SqlStatementConversionSample.xml  
   
--   VariableValueFileSample  
+-   VariableValueFileSample.xml  
   
--   ServersConnectionFileSample  
+-   ServersConnectionFileSample.xml  
   
-更改中显示的用于关联的参数后，可以执行这些模板（文件）。  
+更改中显示的用于关联性的参数后，可以 (文件) 执行模板。  
   
 脚本命令的完整列表，可在[执行 SSMA 控制台 &#40;DB2ToSQL](../../ssma/db2/executing-the-ssma-console-db2tosql.md)中找到&#41;  
   

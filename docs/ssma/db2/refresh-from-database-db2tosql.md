@@ -1,5 +1,5 @@
 ---
-title: 从数据库刷新（DB2ToSQL） |Microsoft Docs
+title: 从数据库刷新 (DB2ToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,16 +7,16 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 613a8368-b372-443f-8252-fb6dc31a003d
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: a53c3005aca2e599d8ceb0b973a58bcf2ca5e14c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 2efc0667bd69e43cfe3d3246c0622fad18ff21e3
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68060130"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933358"
 ---
-# <a name="refresh-from-database-db2tosql"></a>从数据库刷新（DB2ToSQL）
+# <a name="refresh-from-database-db2tosql"></a>从数据库刷新 (DB2ToSQL) 
 "**从数据库刷新**" 对话框允许您从 DB2 数据库中选择要刷新的对象。 对话框中的行是根据元数据的状态进行颜色编码的：  
   
 -   如果对象元数据已在本地进行更改，并且在 DB2 数据库中，则行为蓝色。  
@@ -32,19 +32,19 @@ ms.locfileid: "68060130"
 若要访问 "**从数据库刷新**" 对话框，请在 DB2 元数据资源管理器中右键单击对象，然后单击 "**从数据库刷新**"。  
   
 ## <a name="options"></a>选项  
-**Collapse （-）**  
+**折叠 (-) **  
 折叠所有对象组以隐藏单个对象。  
   
-**展开（+）**  
+**展开 (+) **  
 展开 "所有对象组" 以显示单个对象。  
   
 **隐藏/显示相等对象**  
 如果对象元数据在 DB2 数据库中和 SSMA 中是相同的，则隐藏列表中的对象。  
   
-**从数据库刷新（箭头按钮）**  
+**从数据库刷新 (箭头按钮) **  
 使用箭头按钮指定应在 SSMA 中更新所选对象的元数据。  
   
-**不从数据库刷新（X 按钮）**  
+**不从数据库刷新 (X 按钮) **  
 使用 X 按钮指定不应在 SSMA 中更新所选对象的元数据。  
   
 **图例**  

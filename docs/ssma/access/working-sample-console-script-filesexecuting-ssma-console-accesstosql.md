@@ -7,61 +7,61 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: ad75b648-d119-4119-98f0-d18f058be68d
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: d6fea9a78928e2944cba1571737008965d679759
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: e18677df3b1997c994e940cf41930771f7a1cd38
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938387"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937451"
 ---
-# <a name="working-with-the-sample-console-script-filesexecuting-the-ssma-console-accesstosql"></a>使用示例控制台脚本 FilesExecuting SSMA 控制台（AccessToSQL）
+# <a name="working-with-the-sample-console-script-filesexecuting-the-ssma-console-accesstosql"></a>使用示例控制台脚本 FilesExecuting SSMA 控制台 (AccessToSQL) 
 提供了一些示例文件，其中包含有关用户参考和使用情况的产品。 本部分介绍了如何轻松地自定义这些脚本以满足最终用户需求。  
   
 ## <a name="sample-console-script-files"></a>示例控制台脚本文件  
 以下示例控制台脚本文件涵盖了用于用户引用的不同方案：  
   
--   ServersConnectionFileSample  
+-   ServersConnectionFileSample.xml  
   
--   VariableValueFileSample  
+-   VariableValueFileSample.xml  
   
--   AssessmentReportGenerationSample  
+-   AssessmentReportGenerationSample.xml  
   
--   ConversionAndDataMigrationSample  
+-   ConversionAndDataMigrationSample.xml  
   
--   **ServersConnectionFileSample：**  
+-   **ServersConnectionFileSample.xml：**  
   
     -   此示例为源数据库和目标数据库提供了不同的连接模式，用户可以根据需要选择任何模式。 此示例包含服务器定义。  
   
-    -   用户只需将值更改为所需的源和目标服务器定义，就可以连接到所需的数据库。 在本示例中，提供了所有值作为可在**VariableValueFileSample**中使用的变量值。 可以从用户的工作服务器连接文件中删除所有其他连接参数。  
+    -   用户只需将值更改为所需的源和目标服务器定义，就可以连接到所需的数据库。 在本示例中，提供了所有值作为可在**VariableValueFileSample.xml**中使用的变量值。 可以从用户的工作服务器连接文件中删除所有其他连接参数。  
   
     -   有关连接到源服务器和目标服务器的详细信息，请参阅[创建服务器连接文件 &#40;AccessToSQL&#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md) 。  
   
--   **VariableValueFileSample：** 已在示例控制台脚本文件中使用的所有变量，并`ServersConnectionFileSample.xml`已在此文件中进行排序。 若要执行示例控制台脚本，用户必须只需将示例变量值替换为用户定义的变量值，并将此文件作为附加命令行参数和脚本文件一起传递。  
+-   **VariableValueFileSample.xml：** 已在示例控制台脚本文件中使用的所有变量，并已 `ServersConnectionFileSample.xml` 在此文件中进行排序。 若要执行示例控制台脚本，用户必须只需将示例变量值替换为用户定义的变量值，并将此文件作为附加命令行参数和脚本文件一起传递。  
   
     有关变量值文件的详细信息，请参阅[创建变量值文件 &#40;AccessToSQL&#41;](../../ssma/access/creating-variable-value-files-accesstosql.md)。  
   
--   **AssessmentReportGenerationSample：** 此示例使用户能够生成一个 xml 评估报表，用户可以在开始转换和迁移数据之前，使用该报表进行分析。  
+-   **AssessmentReportGenerationSample.xml：** 此示例使用户能够生成一个 xml 评估报表，用户可以在开始转换和迁移数据之前，使用该报表进行分析。  
   
-    在`generate-assessment-report`命令中，用户必须 mandatorily 将`object-name`属性中的变量值（请参阅**VariableValueFileSample**）更改为用户正在使用的数据库名称。 根据指定的对象类型，还必须更改`object-type`值。  
+    在 `generate-assessment-report` 命令中，用户必须 mandatorily 更改变量值 (将属性中的**VariableValueFileSample.xml**) 引用 `object-name` 到用户正在使用的数据库名称。 根据指定的对象类型， `object-type` 还必须更改值。  
   
-    如果用户必须评估多个对象/数据库，他可以指定多`metabase-object`个节点，如示例`generate-assessment-report`控制台脚本文件的命令示例4中所示。  
+    如果用户必须评估多个对象/数据库，他可以指定多个 `metabase-object` 节点，如 `generate-assessment-report` 示例控制台脚本文件的命令示例4中所示。  
   
     有关生成报表的详细信息，请参阅[&#40;AccessToSQL&#41;中生成报表](../../ssma/access/generating-reports-accesstosql.md)。  
   
     > [!NOTE]  
-    > -   确保将变量值 file 命令行参数传递到控制台应用程序，并以用户指定的值更新 VariableValueFileSample。  
-    > -   确保将服务器连接文件命令行参数传递到控制台应用程序，并用正确的服务器参数值更新 ServersConnectionFileSample。  
+    > -   确保将变量值 "文件" 命令行参数传递到控制台应用程序，并以用户指定的值更新 VariableValueFileSample.xml。  
+    > -   确保将服务器连接文件命令行参数传递到控制台应用程序，并用正确的服务器参数值更新 ServersConnectionFileSample.xml。  
   
--   **ConversionAndDataMigrationSample：** 使用此示例，用户可以执行端到端迁移，从转换到数据迁移。 下面列出了需要更改的必需属性值的列表：  
+-   **ConversionAndDataMigrationSample.xml：** 使用此示例，用户可以执行端到端迁移，从转换到数据迁移。 下面列出了需要更改的必需属性值的列表：  
   
-    |命令名：|说明|特性|  
+    |命令名：|描述|属性|  
     |----------------|---------------|-------------|  
     |`map-schema`|将源数据库映射到目标架构的架构。|`source-schema:`指定需要转换的源数据库。<br /><br />`sql-server-schema`：指定要迁移到的目标数据库|  
-    |`convert-schema`|执行从源到目标架构的架构转换。<br /><br />如果用户必须评估多个对象/数据库，他可以指定多`metabase-object`个节点，如示例`convert-schema`控制台脚本文件的命令示例4中所示。|`object-name`：指定需要转换的源数据库/对象名称。 确保根据在中`object-type`指定的对象类型更改相应的`object-name`|  
-    |`synchronize-target`|将目标对象与目标数据库同步。<br /><br />如果用户必须评估多个对象/数据库，他可以指定多`metabase-object`个节点，如示例`synchronize-target`控制台脚本文件的命令示例3中所示。|`object-name:`指定需要创建的 sql server 数据库/对象名称。 确保根据在中`object-type`指定的对象类型更改相应的`object-name`|  
-    |`migrate-data`|将源数据迁移到目标。<br /><br />如果用户必须评估多个对象/数据库，他可以指定多`metabase-object`个节点，如示例`migrate-data`控制台脚本文件的命令示例2中所示。|`object-name:`指定需要迁移的源数据库/表名称。 确保根据在中`object-type`指定的对象类型更改相应的`object-name`|  
+    |`convert-schema`|执行从源到目标架构的架构转换。<br /><br />如果用户必须评估多个对象/数据库，他可以指定多个 `metabase-object` 节点，如 `convert-schema` 示例控制台脚本文件的命令示例4中所示。|`object-name`：指定需要转换的源数据库/对象名称。 确保 `object-type` 根据在中指定的对象类型更改相应的`object-name`|  
+    |`synchronize-target`|将目标对象与目标数据库同步。<br /><br />如果用户必须评估多个对象/数据库，他可以指定多个 `metabase-object` 节点，如 `synchronize-target` 示例控制台脚本文件的命令示例3中所示。|`object-name:`指定需要创建的 sql server 数据库/对象名称。 确保 `object-type` 根据在中指定的对象类型更改相应的`object-name`|  
+    |`migrate-data`|将源数据迁移到目标。<br /><br />如果用户必须评估多个对象/数据库，他可以指定多个 `metabase-object` 节点，如 `migrate-data` 示例控制台脚本文件的命令示例2中所示。|`object-name:`指定需要迁移的源数据库/表名称。 确保 `object-type` 根据在中指定的对象类型更改相应的`object-name`|  
   
 ## <a name="see-also"></a>另请参阅  
 [创建变量值文件 &#40;AccessToSQL&#41;](../../ssma/access/creating-variable-value-files-accesstosql.md)  

@@ -1,5 +1,5 @@
 ---
-title: 将 DB2 数据迁移到 SQL Server （DB2ToSQL） |Microsoft Docs
+title: 将 DB2 数据迁移到 SQL Server (DB2ToSQL) |Microsoft Docs
 description: 在同步已转换的对象之后，了解如何将数据从 DB2 数据库迁移到 SQL Server 或 Azure SQL 数据库。
 ms.prod: sql
 ms.custom: ''
@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 86cbd39f-6dac-409a-9ce1-7dd54403f84b
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 408bf80b8c8a6f70488333f476422dedb9db1887
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: c4d2511774944e7115172dda7832b10ed967cf1f
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293964"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933784"
 ---
-# <a name="migrating-db2-data-into-sql-server-db2tosql"></a>将 DB2 数据迁移到 SQL Server （DB2ToSQL）
+# <a name="migrating-db2-data-into-sql-server-db2tosql"></a>将 DB2 数据迁移到 SQL Server (DB2ToSQL) 
 使用成功同步转换后的对象后 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，可以将数据从 DB2 迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 > [!IMPORTANT]  
@@ -26,7 +26,7 @@ ms.locfileid: "84293964"
 ## <a name="setting-migration-options"></a>设置迁移选项  
 在将数据迁移到之前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请在 "**项目设置**" 对话框中查看项目迁移选项。  
   
--   使用此对话框，您可以设置迁移批大小、表锁定、约束检查、null 值处理和标识值处理等选项。 有关项目迁移设置的详细信息，请参阅[项目设置（迁移）](https://msdn.microsoft.com/48aaa8e6-a9cb-487d-9ba5-fc3f1c4786ae)。  
+-   使用此对话框，您可以设置迁移批大小、表锁定、约束检查、null 值处理和标识值处理等选项。 有关项目迁移设置的详细信息，请参阅[项目设置 (迁移) ](https://msdn.microsoft.com/48aaa8e6-a9cb-487d-9ba5-fc3f1c4786ae)。  
   
 -   使用 "**项目设置**" 对话框中的**迁移引擎**，用户可以使用两种类型的数据迁移引擎来执行迁移过程：  
   
@@ -93,7 +93,7 @@ ms.locfileid: "84293964"
   
     若要连接到目标数据库 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请在 "**连接到 SQL Server** " 对话框中输入连接凭据，然后单击 "**连接**"。 有关连接到的详细信息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请参阅[连接到 SQL Server](https://msdn.microsoft.com/b59803cb-3cc6-41cc-8553-faf90851410e)  
   
-    消息将显示在 "**输出**" 窗格中。 迁移完成后，将显示 "**数据迁移" 报表**。 如果任何数据未迁移，请单击包含错误的行，然后单击 "**详细信息**"。 完成报表后，单击 "**关闭**"。 有关数据迁移报表的详细信息，请参阅[数据迁移报表（SSMA Common）](https://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)  
+    消息将显示在 "**输出**" 窗格中。 迁移完成后，将显示 "**数据迁移" 报表**。 如果任何数据未迁移，请单击包含错误的行，然后单击 "**详细信息**"。 完成报表后，单击 "**关闭**"。 有关数据迁移报表的详细信息，请参阅[数据迁移报表 (SSMA Common) ](https://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)  
   
 > [!NOTE]  
 > 当 SQL Express edition 用作目标数据库时，只允许客户端数据迁移，不支持服务器端数据迁移。  

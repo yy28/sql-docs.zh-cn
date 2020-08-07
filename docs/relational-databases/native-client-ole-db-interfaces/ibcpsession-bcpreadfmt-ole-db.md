@@ -1,5 +1,5 @@
 ---
-title: IBCPSession：： BCPReadFmt （Native Client OLE DB 提供程序） |Microsoft Docs
+title: IBCPSession：： BCPReadFmt (Native Client OLE DB 提供程序) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,14 +16,14 @@ ms.assetid: e2a12050-94e4-48a3-8a48-b780d646f116
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fda3b39b227b959c28268d47ced774821ad7041b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 60834d371439c26474dbe528ad156bfae2fd8460
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247736"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87941800"
 ---
-# <a name="ibcpsessionbcpreadfmt-native-client-ole-db-provider"></a>IBCPSession：： BCPReadFmt （Native Client OLE DB 提供程序）
+# <a name="ibcpsessionbcpreadfmt-native-client-ole-db-provider"></a>IBCPSession：： BCPReadFmt (Native Client OLE DB 提供程序) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   从格式化文件中读取每一列的格式信息。  
@@ -54,7 +54,7 @@ HRESULT BCPReadFmt(
  方法成功。  
   
  E_FAIL  
- 出现访问接口特定的错误；要获取详细信息，请使用 [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) 接口。  
+ 出现访问接口特定的错误；要获取详细信息，请使用 [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15) 接口。  
   
  E_OUTOFMEMORY  
  内存不足错误。  

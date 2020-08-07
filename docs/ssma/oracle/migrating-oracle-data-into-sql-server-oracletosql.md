@@ -1,5 +1,5 @@
 ---
-title: 将 Oracle 数据迁移到 SQL Server （OracleToSQL） |Microsoft Docs
+title: 将 Oracle 数据迁移到 SQL Server (OracleToSQL) |Microsoft Docs
 description: 了解如何在同步已转换的对象之后，使用 SSMA for Oracle 应用程序将数据从 Oracle 数据库迁移到 SQL Server。
 ms.prod: sql
 ms.custom: ''
@@ -11,26 +11,26 @@ helpviewer_keywords:
 - Oracle Data Migration, Client-Side Migration
 - Oracle Data Migration,Server-Side Migration
 ms.assetid: e23c5268-41ed-4e55-9fe7-a11376202a13
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: f617b850482383400d599d7608644f27da58f17e
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 16f2223c49fc6fac5b096263c90aadc4a0a2ab61
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293814"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933478"
 ---
 # <a name="migrating-oracle-data-into-sql-server-oracletosql"></a>将 Oracle 数据迁移到 SQL Server (OracleToSQL)
 使用成功同步转换后的对象后 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，可以将数据从 Oracle 迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 > [!IMPORTANT]  
-> 如果正在使用的引擎是服务器端数据迁移引擎，则必须在运行 SSMA 的计算机上安装 Oracle 扩展包和 Oracle 提供程序的 SSMA，然后才能迁移数据。 SQL Server 代理服务也必须正在运行。 有关如何安装扩展包的详细信息，请参阅[安装服务器组件（OracleToSQL）](https://msdn.microsoft.com/33070e5f-4e39-4b70-ae81-b8af6e4983c5)  
+> 如果正在使用的引擎是服务器端数据迁移引擎，则必须在运行 SSMA 的计算机上安装 Oracle 扩展包和 Oracle 提供程序的 SSMA，然后才能迁移数据。 SQL Server 代理服务也必须正在运行。 有关如何安装扩展包的详细信息，请参阅[ (OracleToSQL 安装服务器组件) ](https://msdn.microsoft.com/33070e5f-4e39-4b70-ae81-b8af6e4983c5)  
   
 ## <a name="setting-migration-options"></a>设置迁移选项  
 在将数据迁移到之前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请在 "**项目设置**" 对话框中查看项目迁移选项。  
   
--   使用此对话框，您可以设置迁移批大小、表锁定、约束检查、null 值处理和标识值处理等选项。 有关项目迁移设置的详细信息，请参阅[项目设置（迁移）（OracleToSQL）](https://msdn.microsoft.com/fcd6b988-633b-4b2b-9f36-6368b5e86b60)。  
+-   使用此对话框，您可以设置迁移批大小、表锁定、约束检查、null 值处理和标识值处理等选项。 有关项目迁移设置的详细信息，请参阅[ (迁移的项目设置)  (OracleToSQL) ](https://msdn.microsoft.com/fcd6b988-633b-4b2b-9f36-6368b5e86b60)。  
   
 -   使用 "**项目设置**" 对话框中的**迁移引擎**，用户可以使用两种类型的数据迁移引擎来执行迁移过程：  
   
@@ -97,7 +97,7 @@ ms.locfileid: "84293814"
   
     若要连接到目标数据库 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请在 "**连接到 SQL Server** " 对话框中输入连接凭据，然后单击 "**连接**"。 有关连接到的详细信息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请参阅[连接到 SQL Server](https://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536)  
   
-    消息将显示在 "**输出**" 窗格中。 迁移完成后，将显示 "**数据迁移" 报表**。 如果任何数据未迁移，请单击包含错误的行，然后单击 "**详细信息**"。 完成报表后，单击 "**关闭**"。 有关数据迁移报表的详细信息，请参阅[数据迁移报表（SSMA Common）](https://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)  
+    消息将显示在 "**输出**" 窗格中。 迁移完成后，将显示 "**数据迁移" 报表**。 如果任何数据未迁移，请单击包含错误的行，然后单击 "**详细信息**"。 完成报表后，单击 "**关闭**"。 有关数据迁移报表的详细信息，请参阅[数据迁移报表 (SSMA Common) ](https://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)  
   
 > [!NOTE]  
 > 当 SQL Express edition 用作目标数据库时，只允许客户端数据迁移，不支持服务器端数据迁移。  

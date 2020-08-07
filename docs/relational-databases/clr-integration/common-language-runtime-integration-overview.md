@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7be9e644-36a2-48fc-9206-faf59fdff4d7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c2982f3c078e23529eff2c8cb050ea66628d49da
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 57f889fdbf7e52b470c1ceb8b4015cad78e4cad9
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864518"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934356"
 ---
 # <a name="common-language-runtime-integration"></a>公共语言运行时集成
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,13 +41,13 @@ ms.locfileid: "87864518"
 
 ## <a name="when-to-use-clr-modules"></a>何时使用 CLR 模块？
 
-通过 CLR 集成，你可以实现 .Net Framework 中可用的复杂功能，例如正则表达式、用于访问外部资源 (服务器、web 服务、数据库) 、自定义加密等的代码。服务器端 CLR 集成的一些优点包括：
+通过 CLR 集成，你可以实现 .NET Framework 中可用的复杂功能，例如正则表达式、用于访问外部资源 (服务器、web 服务、数据库) 、自定义加密等的代码。服务器端 CLR 集成的一些优点包括：
   
 -   **更好的编程模型。** .NET Framework 语言在许多方面都比 Transact-SQL 丰富，它为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 开发人员提供了以前没有的构造和功能。 开发人员还可以利用 .NET Framework 库的功能，它提供了大量可用于快速有效地解决编程问题的类。  
   
 -   **改进了安全和安全性。** 托管代码在数据库引擎承载的公共语言运行时环境中运行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 利用这一特点为在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本中提供的扩展存储过程提供更安全更可靠的替代方法。  
   
--   **能够定义数据类型和聚合函数。** 用户定义类型和用户定义聚合是两个新的托管数据库对象，这两个对象扩展了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的存储和查询功能。  
+-   **能够定义数据类型和聚合函数。** 用户定义类型和用户定义聚合是两个新的托管数据库对象，这些对象扩展了的存储和查询功能 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 -   **通过标准化环境简化了开发。** 数据库开发集成到将来版本的  Visual Studio .NET 开发环境中。 开发人员在开发和调试数据库对象和脚本时所使用的工具与他们编写中间层或客户端层的 .NET Framework 组件和服务时所使用的工具相同。  
   

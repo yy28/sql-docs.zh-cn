@@ -1,5 +1,5 @@
 ---
-title: 编辑类型映射（SybaseToSQL） |Microsoft Docs
+title: 编辑类型映射 (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 513f071a-d5e6-4ed5-acca-269bf76323c5
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: cd8dfbd7aa4205424c45861f6ada1113f76d344e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 043eb1a2eaf9325d8a252598b26317017d92fa94
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029174"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931963"
 ---
 # <a name="edit-type-mapping-sybasetosql"></a>编辑类型映射 (SybaseToSQL)
 利用 "**编辑类型映射**" 对话框，您可以指定如何在源数据库对象和目标数据库对象之间映射类型。  
@@ -29,21 +29,21 @@ ms.locfileid: "68029174"
   
 ## <a name="options"></a>选项  
 **源类型**  
-选择要映射到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型的源数据类型。  
+选择要映射到数据类型的源数据类型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 如果数据类型的长度可变，以下字段将显示在 "**源类型**" 下：  
   
 **From**  
-指定此映射的最小长度。 例如，对于**nchar**数据类型，可以输入10来指定此映射适用于从**nchar （10）** 开始的范围。  
+指定此映射的最小长度。 例如，对于**nchar**数据类型，可以输入10来指定此映射适用于从**nchar (10) **开始的范围。  
   
-**功能**  
-指定此映射的最大长度。 例如，对于**nchar**数据类型，可以输入20来指定此映射适用于以**nchar （20）** 结束的范围。  
+**收件人**  
+指定此映射的最大长度。 例如，对于**nchar**数据类型，可以输入20来指定此映射适用于以**nchar (20) **结束的范围。  
   
 **目标类型**  
-选择源[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型要映射到的数据类型。 当 SSMA 在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]创建表或存储过程时，源数据类型将更改为此数据类型。  
+选择 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 源数据类型要映射到的数据类型。 当 SSMA 在中创建表或存储过程时 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，源数据类型将更改为此数据类型。  
   
 如果数据类型的长度可变，以下字段将显示在 "**目标类型**" 下：  
   
 **替换为**  
-指定此映射的目标长度。 例如，对于**nvarchar**数据类型，可以输入20来指定应将指定的源数据类型映射到**nvarchar （20）**。  
+指定此映射的目标长度。 例如，对于**nvarchar**数据类型，可以输入20来指定应将指定的源数据类型映射到**nvarchar (20) **。  
   

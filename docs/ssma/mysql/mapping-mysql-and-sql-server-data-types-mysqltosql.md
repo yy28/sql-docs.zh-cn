@@ -10,17 +10,17 @@ helpviewer_keywords:
 - Mapping, customize data type mapping
 - Mapping, Type mapping
 ms.assetid: 14f98054-13b4-4231-a6b0-2452f3b9941d
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: d0b29deae2e0bdba81318130df46e30683717c86
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 604f9ce8e26e3d2221cd9a4bf7732c56ba3296c0
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823462"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935350"
 ---
 # <a name="mapping-mysql-and-sql-server-data-types-mysqltosql"></a>映射 MySQL 和 SQL Server 数据类型 (MySQLToSQL)
-MySQL 数据库类型与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 数据库类型不同。 将 MySQL 数据库对象转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 对象时，必须指定如何将数据类型从 MySQL 映射到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure。 您可以接受默认的数据类型映射，也可以自定义映射，如下面的过程所示。  
+MySQL 数据库类型与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 AZURE SQL 数据库类型不同。 将 MySQL 数据库对象转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 对象时，必须指定如何将数据类型从 MySQL 映射到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure。 您可以接受默认的数据类型映射，也可以自定义映射，如下面的过程所示。  
   
 ## <a name="default-mappings"></a>默认映射  
 SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，请参阅[项目设置 &#40;类型映射&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md)。  
@@ -68,9 +68,9 @@ SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，�
   
     这使您可以为相同数据类型的较小值和较大值自定义数据映射。 在 "**目标类型**" 下，选择目标 SQL Server 或 SQL Azure 数据类型。  
   
-    1.  某些类型需要目标数据类型长度。 如果需要，请在 "**替换为**" 框中输入新的数据长度，然后单击 **"确定"**。  
+    -  某些类型需要目标数据类型长度。 如果需要，请在 "**替换为**" 框中输入新的数据长度，然后单击 **"确定"**。  
   
-    2.  某些类型需要目标数据类型的**精度**和**小数位数**。 如果需要，请在 "**替换为**" 框中输入新的精度和小数位数，然后单击 **"确定"** 。  
+    -  某些类型需要目标数据类型的**精度**和**小数位数**。 如果需要，请在 "**替换为**" 框中输入新的精度和小数位数，然后单击 **"确定"**。  
   
 -   **若要删除数据类型映射，请执行以下操作：**  
   

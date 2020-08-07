@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: ac993a6d-0283-4823-8793-6b217677dfa3
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: fb68a40da645046d94dcd5e8b14ac90f0c53d8bc
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 57a6f527da05c4f62d9055b70193af6ce74275f7
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87822589"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935488"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-mysqltosql"></a>将转换数据库对象加载到 SQL Server (MySQLToSQL)
-将 MySQL 数据库转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 后，可以将生成的数据库对象加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 中。 您可以使用 SSMA 创建这些对象，也可以编写对象脚本并自己运行脚本。 此外，SSMA 使你能够用或 SQL Azure 数据库的实际内容更新目标元数据 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+将 MySQL 数据库转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 后，可以将生成的数据库对象加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 中。 您可以使用 SSMA 创建这些对象，也可以编写对象脚本并自己运行脚本。 此外，SSMA 允许你用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 AZURE SQL 数据库的实际内容更新目标元数据。  
   
 ## <a name="choosing-between-synchronization-and-scripts"></a>在同步和脚本之间进行选择  
 如果要在不进行修改的情况下将转换后的数据库对象加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure，则可以让 SSMA 直接创建或重新创建数据库对象。 此方法既简单又简单，但不允许自定义定义 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 对象的 transact-sql 代码。  
@@ -25,10 +25,10 @@ ms.locfileid: "87822589"
 如果要修改用于创建对象的 Transact-sql，或者要对创建对象进行更多的控制，请使用 SSMA 创建脚本。 然后，你可以修改这些脚本，单独创建每个对象，甚至使用 SQL Server 代理来计划创建这些对象。  
   
 ## <a name="using-ssma-to-synchronize-objects-with-sql-server"></a>使用 SSMA 将对象与 SQL Server 同步  
-若要使用 SSMA 创建 SQL Server 或 SQL Azure 数据库对象，请在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 元数据资源管理器中选择对象，然后将对象与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 同步，如以下过程中所示。 默认情况下，如果对象已存在于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 中，并且 SSMA 元数据具有对这些对象的定义的一些本地更改或更新，则 SSMA 将更改或 SQL Azure 中的对象定义 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 您可以通过编辑**项目设置**来更改默认行为。  
+若要使用 SSMA 创建 SQL Server 或 Azure SQL 数据库对象，请在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 元数据资源管理器中选择对象，然后将对象与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 同步，如以下过程中所示。 默认情况下，如果对象已存在于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 中，并且 SSMA 元数据具有对这些对象的定义的一些本地更改或更新，则 SSMA 将更改或 SQL Azure 中的对象定义 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 您可以通过编辑**项目设置**来更改默认行为。  
   
 > [!NOTE]  
-> 您可以选择现有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的或 SQL Azure 的数据库对象，这些对象不会从 MySQL 数据库转换。 但是，SSMA 不会重新创建或更改这些对象。  
+> 你可以选择现有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的或 AZURE SQL 数据库对象，这些对象不会从 MySQL 数据库转换。 但是，SSMA 不会重新创建或更改这些对象。  
   
 ##### <a name="to-synchronize-objects-with-sql-server-or-sql-azure"></a>与 SQL Server 或 SQL Azure 同步对象  
   

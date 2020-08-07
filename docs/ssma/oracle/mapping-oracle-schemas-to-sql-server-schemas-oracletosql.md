@@ -1,5 +1,5 @@
 ---
-title: 将 Oracle 架构映射到 SQL Server 架构（OracleToSQL） |Microsoft Docs
+title: 将 Oracle 架构映射到 SQL Server 架构 (OracleToSQL) |Microsoft Docs
 description: 了解如何自定义 Oracle 架构与 SQL Server 的 Oracle 映射的 SSMA 或接受默认值。
 ms.prod: sql
 ms.custom: ''
@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 0edeaa08-9c5d-4e3a-bc15-b9a1f0c8a9dc
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 5639687a22749ccb8315262347807bb44ac79210
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 8d9511ae5c6d5a937e3686d0db45c578aec151c3
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293824"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934716"
 ---
 # <a name="mapping-oracle-schemas-to-sql-server-schemas-oracletosql"></a>将 Oracle 架构映射到 SQL Server 架构 (OracleToSQL)
 在 Oracle 中，每个数据库都有一个或多个架构。 默认情况下，SSMA 将 Oracle 架构中的所有对象迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 名为的数据库的架构。 但是，你可以自定义 Oracle 架构和数据库之间的映射 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
@@ -24,7 +24,7 @@ ms.locfileid: "84293824"
 ## <a name="oracle-and-sql-server-schemas"></a>Oracle 和 SQL Server 架构  
 Oracle 数据库包含架构。 的实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含多个数据库，每个数据库都可以有多个架构。  
   
-架构的 Oracle 概念映射到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的概念及其架构。 例如，Oracle 可能有一个名为**HR**的架构。 的实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能有一个名为**HR**的数据库，该数据库中的数据库是架构。 一个架构是**dbo** （或数据库所有者）架构。 默认情况下，Oracle schema **hr**将映射到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库，架构**hr. dbo**。 SSMA 是指 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作为架构的数据库和架构的组合。  
+架构的 Oracle 概念映射到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的概念及其架构。 例如，Oracle 可能有一个名为**HR**的架构。 的实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能有一个名为**HR**的数据库，该数据库中的数据库是架构。 一个架构是**dbo** (或数据库所有者) 架构。 默认情况下，Oracle schema **hr**将映射到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库，架构**hr. dbo**。 SSMA 是指 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作为架构的数据库和架构的组合。  
   
 您可以修改 Oracle 和架构之间的映射 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
@@ -39,11 +39,11 @@ Oracle 数据库包含架构。 的实例 [!INCLUDE[ssNoVersion](../../includes/
   
 2.  在右侧窗格中，单击 "**架构映射**" 选项卡。  
   
-    你将看到所有 Oracle 架构的列表，后跟目标值。 此目标以两部分表示法（*数据库*）表示， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 其中你的对象和数据将迁移到其中。  
+    你将看到所有 Oracle 架构的列表，后跟目标值。 此目标以两部分表示法表示， (*database. schema*) 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 其中迁移对象和数据的位置。  
   
 3.  选择包含要更改的映射的行，然后单击 "**修改**"。  
   
-    在 "**选择目标架构**" 对话框中，您可以浏览可用目标数据库和架构，或在两部分表示法（数据库架构）的文本框中键入数据库和架构名称，然后单击 **"确定"**。  
+    在 "**选择目标架构**" 对话框中，您可以浏览可用目标数据库和架构，或在两部分表示形式的文本框中输入数据库和架构名称 (database. Schema) ，然后单击 **"确定"**。  
   
 4.  "**架构映射**" 选项卡上的目标更改。  
   

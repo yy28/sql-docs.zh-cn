@@ -1,5 +1,5 @@
 ---
-title: 准备用于迁移的 Access 数据库（AccessToSQL） |Microsoft Docs
+title: 准备访问数据库以迁移 (AccessToSQL) |Microsoft Docs
 description: 了解如何确定要迁移到 SQL Server 或 Azure SQL 数据库的访问数据库，并确保这些数据库已准备好进行迁移。
 ms.prod: sql
 ms.custom: ''
@@ -19,17 +19,17 @@ helpviewer_keywords:
 - versions of Access
 - workgroup security
 ms.assetid: 9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114
-author: Shamikg
-ms.author: Shamikg
-manager: murato
-ms.openlocfilehash: 1b0fe1ef2f51da9e64954040e58440a9e7eee58e
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 038ffa60562a443c916d0143fa432d3e5da87bc4
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293716"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937778"
 ---
-# <a name="preparing-access-databases-for-migration-accesstosql"></a>准备要迁移的 Access 数据库（AccessToSQL）
+# <a name="preparing-access-databases-for-migration-accesstosql"></a>准备用于迁移的 Access 数据库 (AccessToSQL) 
 在将 Access 数据库迁移到之前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，必须确定要迁移的数据库，并确保这些数据库已准备好进行迁移。  
   
 ## <a name="determining-when-to-migrate-to-sql-server"></a>确定何时迁移到 SQL Server  
@@ -38,7 +38,7 @@ Jet 数据库引擎是一种灵活、易于使用的数据管理解决方案，�
 将数据库迁移到之后 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，可以继续使用链接表进行访问，也可以手动将应用程序迁移到与 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 直接交互的基于 .NET Framework 的代码 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="determining-which-databases-to-migrate"></a>确定要迁移的数据库  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]迁移助手（SSMA）访问权限可以找到访问数据库。 然后，你可以将有关这些数据库的元数据导出至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 有关如何导出和查询元数据的详细信息，请参阅[导出访问清单](exporting-an-access-inventory-accesstosql.md)。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]迁移助手 (SSMA) 的访问权限可以找到访问数据库。 然后，你可以将有关这些数据库的元数据导出至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 有关如何导出和查询元数据的详细信息，请参阅[导出访问清单](exporting-an-access-inventory-accesstosql.md)。  
 
    > [!NOTE]
    > 并非所有访问功能和设置都受支持，或者可以轻松地转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 在开始迁移数据库之前，请参阅[不兼容的访问功能](incompatible-access-features-accesstosql.md)。
@@ -76,6 +76,6 @@ SSMA 无法迁移使用工作组保护的数据库。 若要从 Access 数据库
 ### <a name="documenting-databases"></a>记录数据库  
 你可能还需要记录 Access 数据库的属性，例如数据库对象的列表、文件大小和权限。 若要在 Access 中生成此文档，请在 "**工具**" 菜单上，指向 "**分析**"，然后单击 "已**记录**"。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [将 Access 数据库迁移到 SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
 [将访问应用程序链接到 SQL Server](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)

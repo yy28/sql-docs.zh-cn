@@ -1,5 +1,5 @@
 ---
-title: SSMA for DB2 中的新 GUI 功能（DB2ToSQL） |Microsoft Docs
+title: SSMA for DB2 (DB2ToSQL) 中的新 GUI 功能 |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,16 +7,16 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a8ed33e9-185a-492d-a4cf-2fded1aa5c70
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 5d3fb45d6220d10e9a6d5cc786fc09f33ce5ee59
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 872eb991483bb1615f3260d64ed5e5438fd1c2ce
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76909707"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933538"
 ---
-# <a name="new-gui-features-in-ssma-for-db2-db2tosql"></a>SSMA for DB2 中的新 GUI 功能（DB2ToSQL）
+# <a name="new-gui-features-in-ssma-for-db2-db2tosql"></a>SSMA for DB2 中的新 GUI 功能 (DB2ToSQL) 
 本章介绍 SSMA 用户界面的新增功能。  
   
 ## <a name="layouts"></a>布局  
@@ -54,14 +54,14 @@ ms.locfileid: "76909707"
   
 -   单击 SQL 窗口左侧的灰色区域  
   
--   使用 Ctrl + Shift +&lt;0-9&gt;设置编号书签  
+-   使用 Ctrl + Shift + &lt; 0-9 &gt; 设置编号书签  
   
 ### <a name="bookmark-navigation"></a>书签导航  
 可以通过以下方式遍历书签：  
   
 -   在 SQL 窗口的顶部使用 "下一书签" 按钮、上一个书签  
   
--   使用 Ctrl +&lt;0 ... 9&gt;查找编号书签  
+-   使用 Ctrl + &lt; 0 ... 9 &gt; 查找编号书签  
   
 -   使用按钮在 "管理书签" 对话框中转到或查看源  
   

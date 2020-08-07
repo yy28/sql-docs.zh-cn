@@ -1,5 +1,5 @@
 ---
-title: SQL 模式（MySQLToSQL） |Microsoft Docs
+title: SQL 模式 (MySQLToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: d840ee51-b863-4e77-84aa-37d3f094bfed
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 2c9dbd2b42ebde4cdfea602c3ad50c4b7d100bb2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 4bc4b59984cc9e2e1f7a6c358f24e3fc0d2e86be
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67944655"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935096"
 ---
 # <a name="sql-modes-mysqltosql"></a>SQL 模式 (MySQLToSQL)
 MySQL 的 SSMA 可以在不同的 SQL 模式下运行，并且可以针对不同的客户端以不同的方式应用这些模式。  
@@ -38,7 +38,7 @@ MySQL 的 SSMA 可以在不同的 SQL 模式下运行，并且可以针对不同
 ## <a name="inherited-sql-modes"></a>继承的 SQL 模式  
 这些是 SQL 模式，它们继承自相应的父节点。  
   
-除了函数 category、过程类别、事件类别和触发器，这些 SQL 模式在所有级别（数据库、表类别、语句类别、视图类别、表、视图、函数、过程、UDF 和事件对象）都存在。  
+除函数 category、过程类别、事件类别和触发器外，这些 SQL 模式 (数据库、表类别、语句类别、视图类别、表、视图、函数、过程、UDF 和事件对象) 的所有级别存在。  
   
 > [!NOTE]  
 > 通过选择 "**从父项继承**" 复选框，可以从父节点继承继承的 SQL 模式。 默认情况下，此复选框保持选中状态。  

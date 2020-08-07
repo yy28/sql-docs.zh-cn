@@ -1,5 +1,5 @@
 ---
-title: 使用 SSMA for MySQL 控制台（MySQLToSQL） |Microsoft Docs
+title: 使用 SSMA for MySQL 控制台 (MySQLToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 08/15/2017
@@ -7,23 +7,23 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 240aaad1-d65d-4dea-b60b-315cb1ac733d
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: dbff8b99dffebdc32e3d4d7e681eccc451899016
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 757bcd943b1af7c428d666fecacdaf6db7afcae3
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394948"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935134"
 ---
 # <a name="working-with-ssma-for-mysql-console-mysqltosql"></a>使用 SSMA for MySQL 控制台 (MySQLToSQL)
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]现在，可通过命令行通过控制台应用程序访问 MySQL 迁移助手（SSMA）。 脚本文件构成应用程序的输入，用于执行命令。 作为控制台应用程序，SSMA 启用了脚本级交互，减少了迁移循环，并扩展了迁移工作量。  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]现在，迁移助手 (SSMA) 的 MySQL 可通过控制台应用程序在命令行上访问。 脚本文件构成应用程序的输入，用于执行命令。 作为控制台应用程序，SSMA 启用了脚本级交互，减少了迁移循环，并扩展了迁移工作量。  
   
 本部分介绍使用 SSMA 控制台应用程序迁移 MySQL 数据库的过程。  
   
 本部分中涵盖的主题包括：  
   
-|主题|说明|  
+|主题|描述|  
 |-|-|  
 |[SSMA for MySQL Console &#40;MySQLToSQL&#41;入门](../../ssma/mysql/getting-started-with-ssma-for-mysql-console-mysqltosql.md)|说明执行控制台应用程序的过程。|  
 |[SSMA 控制台中的命令行选项 &#40;MySQLToSQL&#41;](../../ssma/mysql/command-line-options-in-ssma-console-mysqltosql.md)|描述用于操作 SSMA 控制台应用程序的命令行选项和参数。|  

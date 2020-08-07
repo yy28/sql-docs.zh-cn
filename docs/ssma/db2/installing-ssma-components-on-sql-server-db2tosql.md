@@ -1,5 +1,5 @@
 ---
-title: 在 SQL Server 上安装 SSMA 组件（DB2ToSQL） |Microsoft Docs
+title: 在 SQL Server 上安装 SSMA 组件 (DB2ToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,20 +7,20 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: cf2b724b-4ca7-470a-8dd7-fa95b1e060a4
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 3801526bfec64fa8efeb992ec7552a232d2e13c8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 18d0ff301ae0c15a4d8fc8bb81d33553c3f87e12
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67989509"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937143"
 ---
-# <a name="installing-ssma-components-on-sql-server-db2tosql"></a>在 SQL Server 上安装 SSMA 组件（DB2ToSQL）
-在此版本的 SSMA 中，不需要在支持数据迁移和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DB2 提供程序的 SSMA 扩展包上单独安装来启用服务器到服务器连接。  
+# <a name="installing-ssma-components-on-sql-server-db2tosql"></a>在 SQL Server 上安装 SSMA 组件 (DB2ToSQL) 
+在此版本的 SSMA 中，不需要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持数据迁移和 DB2 提供程序的 SSMA 扩展包上单独安装来启用服务器到服务器连接。  
   
 ## <a name="ssma-for-db2-extension-pack"></a>DB2 扩展包的 SSMA  
-SSMA 扩展包将数据库的架构添加到指定的实例中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 **Sysdb**架构包含迁移数据所需的表和存储过程，以及模拟 DB2 系统功能的用户定义函数。  
+SSMA 扩展包将数据库的架构添加到指定的实例中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 **Sysdb**架构包含迁移数据所需的表和存储过程，以及模拟 DB2 系统功能的用户定义函数。  
   
 ## <a name="see-also"></a>另请参阅  
 [安装 SSMA for DB2 Client &#40;DB2ToSQL&#41;](../../ssma/db2/installing-ssma-for-db2-client-db2tosql.md)  

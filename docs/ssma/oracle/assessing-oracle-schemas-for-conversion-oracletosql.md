@@ -1,5 +1,5 @@
 ---
-title: 评估 Oracle 架构以进行转换（OracleToSQL） |Microsoft Docs
+title: 评估用于转换 (OracleToSQL) 的 Oracle 架构 |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,21 +9,21 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Analyzing Conversion Problems
 ms.assetid: 4de9bcf6-1346-4740-87f9-7f24a8226357
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 0ff56be1b7da0376250c7ed021ae78d7144a7645
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: f8aaa58da9e9ace704d6214dcc56cab997fe082e
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68264552"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935059"
 ---
 # <a name="assessing-oracle-schemas-for-conversion-oracletosql"></a>评估 Oracle 架构以进行转换 (OracleToSQL)
-在加载对象并将数据迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之前，您应该确定迁移的复杂程度以及迁移所需的时间。 SSMA 可以创建一个评估报表，显示将成功转换的对象的百分比。 SSMA 还使你能够查看导致转换失败的特定问题。  
+在加载对象并将数据迁移到之前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，您应该确定迁移的复杂程度以及迁移所需的时间。 SSMA 可以创建一个评估报表，显示将成功转换的对象的百分比。 SSMA 还使你能够查看导致转换失败的特定问题。  
   
 ## <a name="creating-assessment-reports"></a>创建评估报表  
-当它创建此评估报表时，SSMA 会将选定的 Oracle 数据库[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]对象转换为语法，然后显示结果。  
+当它创建此评估报表时，SSMA 会将选定的 Oracle 数据库对象转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语法，然后显示结果。  
   
 **创建评估报表**  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68264552"
   
     SSMA 会在窗口底部的状态栏中显示进度。 如果 "输出" 窗格可见，还会在 "输出" 窗格中看到消息。  
   
-    评估完成后，将显示 " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Oracle：评估报表的迁移助手" 窗口。  
+    评估完成后， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将显示 "Oracle：评估报表的迁移助手" 窗口。  
   
 ## <a name="using-assessment-reports"></a>使用评估报表  
 "评估报表" 窗口包含三个窗格：  
@@ -77,7 +77,7 @@ ms.locfileid: "68264552"
   
     -   在 Oracle 中，您可以修改 Oracle 对象，以删除或修改有问题的代码。 若要将更新的代码加载到 SSMA 中，必须更新元数据。 有关详细信息，请参阅[连接到 Oracle Database &#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md)。  
   
-    -   可以从迁移中排除对象。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "元数据资源管理器" 和 "Oracle 元数据资源管理器" 中，清除项旁[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的复选框，然后将对象加载到 Oracle 并从 Oracle 迁移数据。  
+    -   可以从迁移中排除对象。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "元数据资源管理器" 和 "Oracle 元数据资源管理器" 中，清除项旁的复选框，然后将对象加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Oracle 并从 Oracle 迁移数据。  
   
 ## <a name="next-step"></a>下一步  
 [将 Oracle 架构转换 &#40;OracleToSQL&#41;](../../ssma/oracle/converting-oracle-schemas-oracletosql.md)  

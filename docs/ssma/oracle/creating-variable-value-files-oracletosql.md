@@ -1,5 +1,5 @@
 ---
-title: 创建变量值文件（OracleToSQL） |Microsoft Docs
+title: 创建变量值文件 (OracleToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,23 +10,23 @@ helpviewer_keywords:
 - Variable Value File Creation
 - Variable Value File, Variable Value File Validation
 ms.assetid: f583d81a-8e34-41b1-8100-ee3a6a82213b
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 87db0ebd006e2ca87ddc4744a4bbcd396a827712
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 763785b09adf1a562d497d4c1b448ec03d502bfc
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266123"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934924"
 ---
 # <a name="creating-variable-value-files-oracletosql"></a>创建变量值文件 (OracleToSQL)
 变量值文件是一个 XML 文件，其中包含命令的参数值（例如），这是经常从一台服务器迁移到另一台服务器的源服务器或目标服务器名称。 当发生大量的数据库迁移时，将在主脚本文件中创建多个用于存储每个源服务器的值的变量文件，并在命令行上使用 **-v**开关来引用这些文件。 这有助于在包含多个变量文件中的变量值的几个脚本文件中维护静态值。  
   
 > [!NOTE]  
-> 1.  变量名称以 $ （美元）符号为前缀和后缀。 如果变量值文件中没有为变量赋值，则在分析脚本文件时将遇到错误，从而导致控制台执行过程停止。  
-> 2.  的转义符**$** 是**$$**。 如果参数的变量或静态值的值包含**$** （美元）符号，则**$$** 必须指定，以将其视为字符而不是变量。  
-> 3.  出于可维护性目的，可以在元素`'variable-group'`内声明变量以实现用户定义变量的逻辑分离。  此元素不是必需的。  
+> 1.  变量名称以 $ (美元) 符号为前缀并带有后缀。 如果变量值文件中没有为变量赋值，则在分析脚本文件时将遇到错误，从而导致控制台执行过程停止。  
+> 2.  的转义符 **$** 是 **$$** 。 如果参数的变量或静态值的值包含 **$** (美元) 符号，则 **$$** 必须指定，以将其视为字符而不是变量。  
+> 3.  出于可维护性目的，可以在元素内声明变量 `'variable-group'` 以实现用户定义变量的逻辑分离。  此元素不是必需的。  
   
 **示例：**  
   
@@ -51,7 +51,7 @@ ms.locfileid: "68266123"
   
 </variables>  
 ```  
-**示例2：**  
+**示例 2：**  
   
 ```  
 <!--Sample of variable value file commands-->  
@@ -91,5 +91,5 @@ ms.locfileid: "68266123"
 操作控制台的下一步是[&#40;OracleToSQL 创建服务器连接文件&#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)  
   
 ## <a name="see-also"></a>另请参阅  
-[创建服务器文件（Oracle）](https://msdn.microsoft.com/002f129e-0868-48ad-a4b4-c68b5007e12e)  
+[ (Oracle) 创建服务器文件](https://msdn.microsoft.com/002f129e-0868-48ad-a4b4-c68b5007e12e)  
   

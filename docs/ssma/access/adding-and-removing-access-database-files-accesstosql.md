@@ -1,5 +1,5 @@
 ---
-title: 添加和删除 Access 数据库文件（AccessToSQL） |Microsoft Docs
+title: " (AccessToSQL) 中添加和移除 Access 数据库文件 |Microsoft Docs"
 description: 了解如何在 SSMA 项目中添加或删除 Access 数据库，以将 Access 数据迁移到 SQL Server 或 Azure SQL 数据库。
 ms.prod: sql
 ms.custom: ''
@@ -27,16 +27,16 @@ helpviewer_keywords:
 - scanning for database files
 - searching for database files
 ms.assetid: e944c740-4c8a-4bc1-b0ed-be57bc06dced
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 6806792fa828a5ebb4ea3a7a5a7e813626bff523
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 597de64479014e44f38c7073b6bc88e76a3137b4
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293684"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934128"
 ---
-# <a name="adding-and-removing-access-database-files-accesstosql"></a>添加和删除 Access 数据库文件（AccessToSQL）
+# <a name="adding-and-removing-access-database-files-accesstosql"></a>在 AccessToSQL) 中添加和删除 Access 数据库文件 (
 若要将访问数据迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure，必须将一个或多个 access 数据库添加到 SSMA 项目。 这些数据库必须是 Access 97 或更高版本。 如果你的数据库来自早期版本的 Access，则必须将数据库转换为较新的版本。 为此，请在 Access 97 或更高版本中打开并保存数据库，然后将它们添加到 SSMA。  
   
 ## <a name="what-happens-when-you-add-access-database-files"></a>添加 Access 数据库文件后会出现什么情况？  
@@ -128,7 +128,7 @@ ms.locfileid: "84293684"
   
 2.  右键单击该数据库，然后选择 "**删除数据库**"。  
   
-## <a name="next-step"></a>后续步骤  
+## <a name="next-step"></a>下一步  
 迁移过程的下一步是[连接到 SQL Server](https://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536)。  
   
 ## <a name="see-also"></a>另请参阅  

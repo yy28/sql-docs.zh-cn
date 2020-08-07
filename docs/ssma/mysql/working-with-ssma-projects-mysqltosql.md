@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Working with SSMA projects, Open project
 - Working with SSMA projects, Save project
 ms.assetid: 9e4394e9-f177-41d9-839e-5d53a9c9b840
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 2d9bec916103214169f549a0b555a46fd0d65fdb
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 98315541dc7eb2df1e77e32bcd34744b98708557
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87862438"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935106"
 ---
 # <a name="working-with-ssma-projects-mysqltosql"></a>处理 SSMA 项目 (MySQLToSQL)
 若要将 MySQL 数据库迁移到 SQL Server 或 SQL Azure，必须先创建 SSMA 项目。 项目是包含以下信息的文件：  
@@ -83,7 +83,7 @@ SSMA 包含一些设置，用于转换和加载数据库、迁移数据以及将
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
   
-    -   Azure SQL Database  
+    -   Azure SQL 数据库  
   
 然后单击 **"确定"**  
   
@@ -105,7 +105,7 @@ SSMA 创建项目文件。
   
 1.  对于显示 "**缺少元数据**" 状态的每个数据库，请选中数据库名称旁边的复选框。 保存元数据可能需要几分钟时间。 如果此时不想保存元数据，请不要选中任何复选框。  
   
-2.  单击“保存”。  
+2.  单击“保存”  。  
   
 SSMA 将分析 MySQL 架构，并将元数据保存到项目文件。  
   

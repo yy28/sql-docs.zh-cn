@@ -1,5 +1,5 @@
 ---
-title: 管理备份（SybaseToSQL） |Microsoft Docs
+title: " (SybaseToSQL) 管理备份 |Microsoft Docs"
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -9,21 +9,21 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Tester Component,Managing Backups
 ms.assetid: 266d987c-ecc5-4fa4-bfdf-8c584f1a1332
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: b10d8704a6badaed7cb10888e266fcdc7bb339f3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 2a7a32804d3c4cb08f593398e901bed66d124b2a
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68028921"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931075"
 ---
 # <a name="managing-backups-sybasetosql"></a>管理备份 (SybaseToSQL)
 使用 Sybase 备份管理，你可以在运行测试之前或之后备份和还原表数据。 还可以通过 "管理备份内容" 对话框管理备份内容。  
   
 ## <a name="sybase-backup-management"></a>Sybase 备份管理  
   
-### <a name="backup"></a>备份  
+### <a name="backup"></a>Backup  
 若要打开 "备份" 对话框，请在 "测试人员" 菜单上指向 "Sybase 备份管理"，然后单击 "备份 ..."。在备份对话框中，你将找到 Sybase 元数据树，其中显示了已加载的 Sybase 架构的所有表。 选择要执行备份的一个或多个表。  
   
 对话框中提供了以下按钮：  
@@ -59,7 +59,7 @@ ms.locfileid: "68028921"
 ## <a name="sql-server-backup-management"></a>SQL Server 备份管理  
 SQL Server 备份管理，你可以在运行测试之前或之后备份和还原表数据。 还可以通过 "管理备份内容" 对话框管理备份内容。  
   
-### <a name="backup"></a>备份  
+### <a name="backup"></a>Backup  
 若要打开 "备份" 对话框，请在 "测试人员" 菜单上指向 "SQL Server 备份管理"，然后单击 "备份 ..."。 在备份对话框中，你将找到 SQL Server 元数据树，其中显示了已加载的 SQL Server 数据库的所有表。 选择要执行备份的一个或多个表。  
   
 对话框中提供了以下按钮：  

@@ -9,17 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Loading Converted Database Objects
 ms.assetid: 4c59256f-99a8-4351-9559-a455813dbd06
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 54054cd433e860135dd30bbfeeac255fa1a7c8fb
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: a6eccefe78840973f0275bd8453872a675e2d9ae
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865375"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931683"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-sybasetosql"></a>将转换数据库对象加载到 SQL Server (SybaseToSQL)
-将 Sybase 自适应服务器企业 (ASE) 数据库对象转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 后，可以将生成的数据库对象加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 中。 您可以使用 SSMA 创建这些对象，也可以编写对象脚本并自己运行脚本。 此外，SSMA 使你能够用或 SQL Azure 数据库的实际内容更新目标元数据 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+将 Sybase 自适应服务器企业 (ASE) 数据库对象转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 后，可以将生成的数据库对象加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 中。 您可以使用 SSMA 创建这些对象，也可以编写对象脚本并自己运行脚本。 此外，SSMA 允许你用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 AZURE SQL 数据库的实际内容更新目标元数据。  
   
 ## <a name="choosing-between-synchronization-and-scripts"></a>在同步和脚本之间进行选择  
 如果要在不进行修改的情况下将转换后的数据库对象加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure，则可以让 SSMA 直接创建或重新创建数据库对象。 此方法既简单又简单，但不允许自定义 [!INCLUDE[tsql](../../includes/tsql-md.md)] 定义或 SQL Azure 对象的代码（而不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储过程）。  
@@ -27,10 +27,10 @@ ms.locfileid: "87865375"
 如果要修改 [!INCLUDE[tsql](../../includes/tsql-md.md)] 用于在或 SQL Azure 中创建对象的， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或者如果想要更好地控制如何在或 SQL Azure 中创建对象 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请使用 SSMA 创建 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。 然后，你可以修改这些脚本，单独创建每个对象，甚至使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 代理来计划创建这些对象。  
   
 ## <a name="using-ssma-to-load-objects-into-sql-server-or-sql-azure"></a>使用 SSMA 将对象加载到 SQL Server 或 SQL Azure  
-若要使用 SSMA 创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 数据库对象，请在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 元数据资源管理器中选择对象，然后将对象与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 同步，如以下过程中所示。 默认情况下，如果对象已存在于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 中，并且 SSMA 元数据具有对这些对象的定义的一些本地更改或更新，则 SSMA 将更改或 SQL Azure 中的对象定义 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 您可以通过编辑**项目设置**来更改默认行为。  
+若要使用 SSMA 创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 AZURE SQL 数据库对象，请在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 元数据资源管理器 "中选择对象，然后将对象与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 同步，如以下过程中所示。 默认情况下，如果对象已存在于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 中，并且 SSMA 元数据具有对这些对象的定义的一些本地更改或更新，则 SSMA 将更改或 SQL Azure 中的对象定义 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 您可以通过编辑**项目设置**来更改默认行为。  
   
 > [!NOTE]  
-> 您可以选择 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不是从 ASE 数据库转换的现有或 SQL Azure 的数据库对象。 但是，SSMA 不会重新创建或更改这些对象。  
+> 你可以选择 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不是从 ASE 数据库转换的现有或 AZURE SQL 数据库对象。 但是，SSMA 不会重新创建或更改这些对象。  
   
 **与 SQL Server 或 SQL Azure 同步对象**  
   

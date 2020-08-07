@@ -1,5 +1,5 @@
 ---
-title: 故障排除（AccessToSQL） |Microsoft Docs
+title: " (AccessToSQL) 的疑难解答 |Microsoft Docs"
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,16 +7,16 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 04cd7ffa-5402-4aba-90dd-8b562dd4b0bb
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: ea7cfd8940bdfbcda32d7a7338906db020b8c34a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: d86b8f573e8539971dae9d9386d4b255977f5d3d
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68051476"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933863"
 ---
-# <a name="troubleshooting-accesstosql"></a>故障排除（AccessToSQL）
+# <a name="troubleshooting-accesstosql"></a> (AccessToSQL 的疑难解答) 
 不太常见的情况是在执行控制台脚本或命令的中间运行迁移问题。  
   
 可修复的错误可能与以下内容相关：  

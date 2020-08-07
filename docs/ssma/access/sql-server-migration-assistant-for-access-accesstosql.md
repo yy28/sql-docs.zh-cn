@@ -1,5 +1,5 @@
 ---
-title: SQL Server 迁移助手访问权限（AccessToSQL） |Microsoft Docs
+title: SQL Server 迁移助手访问 (AccessToSQL) |Microsoft Docs
 description: 了解 SSMA for Access，并按照逐步说明将 Access 数据库迁移到 SQL Server 或 Azure SQL 数据库。
 ms.prod: sql
 ms.custom: ''
@@ -8,19 +8,19 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 40c1eb02-26b2-44ba-969d-6c430c61c281
-author: Jtoland
-ms.author: Jtoland
-manager: murato
-ms.openlocfilehash: 2e4ce80a111efcf978da55cab280205b08acdd1f
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: fdb846a0b43bd9816faf931d936c456093ac26e3
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84292934"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933991"
 ---
-# <a name="sql-server-migration-assistant-for-access-accesstosql"></a>SQL Server 迁移助手访问权限（AccessToSQL）
+# <a name="sql-server-migration-assistant-for-access-accesstosql"></a>SQL Server 迁移助手访问 (AccessToSQL) 
 
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Access 迁移助手（SSMA）是一种用于迁移数据库 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 的工具[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在 windows 和 linux 上访问版本 2010 97 到2012、2014、2016、2017、windows 和 linux 上的2019、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] windows 和 linux 或 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Azure SQL 数据库。 SSMA for Access 将 Access 数据库对象转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 AZURE sql 数据库对象，将这些对象加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Azure sql 数据库，然后将数据从 Access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 azure sql 数据库迁移到 azure sql database。
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]迁移助手 (SSMA) 的访问权限是一种用于迁移数据库 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 的工具[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在 windows 和 linux 上访问版本 2010 97 到2012、2014、2016、2017、windows 和 linux 上的2019、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] windows 和 linux 或 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Azure SQL 数据库。 SSMA for Access 将 Access 数据库对象转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 AZURE sql 数据库对象，将这些对象加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Azure sql 数据库，然后将数据从 Access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 azure sql 数据库迁移到 azure sql database。
   
 本文档介绍如何 SSMA 访问，并提供有关将 Access 数据库迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 AZURE SQL 数据库的分步说明，并提供迁移后可能出现的问题的相关信息。  
   

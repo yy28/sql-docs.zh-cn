@@ -9,15 +9,15 @@ ms.suite: sql
 ms.technology: dea
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
-author: HJToland3
-ms.author: jtoland
+author: pochiraju
+ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: 161258d8359ce46b9ff2afb2a878c008059772db
-ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
+ms.openlocfilehash: c7443ed363a4968415b651e460bbc4f69cb7415b
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565526"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87951102"
 ---
 # <a name="run-database-experimentation-assistant-at-a-command-prompt"></a>在命令提示符下运行数据库实验助手
 
@@ -44,7 +44,7 @@ ms.locfileid: "87565526"
 
 使用命令启动新的工作负荷捕获时 `Deacmd.exe` ，可以使用以下附加选项：
 
-| 选项| 说明 |  
+| 选项| 描述 |  
 | --- | --- |
 | -n, --name | 请求跟踪文件名 |
 | -x，--format | 请求trace 的格式 (Trace = 0，XEvents = 1)  |
@@ -115,7 +115,7 @@ ms.locfileid: "87565526"
 
 使用 DEA 命令分析跟踪时，可以使用以下附加选项：
 
-| 选项| 说明 |  
+| 选项| 描述 |  
 | --- | --- |
 | -a，--traceA | 请求实例的事件文件的文件路径。 示例 C:\traces\Sql2008trace.trc。  如果有一批文件，请选择第一个文件，DEA 将自动检查滚动更新文件。 如果文件在 blob 中，则提供要在其中存储事件文件的文件夹路径。  示例 C:\traces\ |
 | -b，--traceB | 请求B 实例的事件文件的文件路径。 示例 C:\traces\Sql2014trace.trc。 如果有一批文件，请选择第一个文件，DEA 将自动检查滚动更新文件。 如果文件在 blob 中，则提供要在其中存储事件文件的文件夹路径。  示例 C:\traces\ |

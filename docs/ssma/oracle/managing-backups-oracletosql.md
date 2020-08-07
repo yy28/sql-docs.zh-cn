@@ -1,5 +1,5 @@
 ---
-title: 管理备份（OracleToSQL） |Microsoft Docs
+title: " (OracleToSQL) 管理备份 |Microsoft Docs"
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,22 +10,22 @@ helpviewer_keywords:
 - Oracle Backup Management
 - SQL Server Backup Management
 ms.assetid: a1a03ef9-b6e8-4127-bad0-eae261251472
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: a11948b901e0f687b1daf537faa7b836c4618206
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: b9e091db3e04eb0b82458e60f860dfb829076863
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68262972"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934718"
 ---
 # <a name="managing-backups-oracletosql"></a>管理备份 (OracleToSQL)
 Oracle 备份管理允许您在运行测试之前或之后备份和还原表数据。 还可以通过 "管理备份内容" 对话框管理备份内容。  
   
 ## <a name="oracle-backup-management"></a>Oracle 备份管理  
   
-### <a name="backup"></a>备份  
+### <a name="backup"></a>Backup  
 若要打开 "备份" 对话框，请在 "测试人员" 菜单上指向 "Oracle 备份管理"，然后单击 "备份 ..."。在备份对话框中，你将找到 Oracle 元数据树，其中显示了已加载的 Oracle 架构的所有表。 选择要执行备份的一个或多个表。  
   
 对话框中提供了以下按钮：  
@@ -61,7 +61,7 @@ Oracle 备份管理允许您在运行测试之前或之后备份和还原表数�
 ## <a name="sql-server-backup-management"></a>SQL Server 备份管理  
 SQL Server 备份管理，你可以在运行测试之前或之后备份和还原表数据。 还可以通过 "管理备份内容" 对话框管理备份内容。  
   
-### <a name="backup"></a>备份  
+### <a name="backup"></a>Backup  
 若要打开 "备份" 对话框，请在 "测试人员" 菜单上指向 "SQL Server 备份管理"，然后单击 "备份 ..."。 在备份对话框中，你将找到 SQL Server 元数据树，其中显示了已加载的 SQL Server 数据库的所有表。 选择要执行备份的一个或多个表。  
   
 对话框中提供了以下按钮：  

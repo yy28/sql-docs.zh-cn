@@ -1,5 +1,5 @@
 ---
-title: 项目设置（类型映射）（MySQLToSQL） |Microsoft Docs
+title: 项目设置 (类型映射)  (MySQLToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 7add1259778bf189c981d5b302e989bf7bc233c3
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 79c86ee63638dcc520aa9bb590b8a616172cb1e4
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396557"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935172"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>项目设置（类型映射）(MySQLToSQL)
 "类型映射项目设置" 允许您为 SSMA 项目设置默认的类型映射。  
@@ -68,7 +68,7 @@ ms.locfileid: "87396557"
 |blob [0 .0]|varbinary [1]|  
 |blob [2. 8000]|varbinary [*]|  
 |blob [8001]|varbinary(max)|  
-|bool|bit|  
+|布尔|bit|  
 |boolean|bit|  
 |char|nchar [1]|  
 |char 字节|binary [1]|  
@@ -95,7 +95,7 @@ ms.locfileid: "87396557"
 |double [*。255] [ \* .。为期|数值 [*] [ \* ]|  
 |fixed|numeric|  
 |fixed [* .。。65] [ \* .。为期|数值 [*] [ \* ]|  
-|float|float [24]|  
+|FLOAT|float [24]|  
 |float [*。255] [ \* .。为期|数值 [*] [ \* ]|  
 |float [*。53]|float [53]|  
 |int|int|  

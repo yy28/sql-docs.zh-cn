@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 07abef8a-28e8-4a66-927c-c9a5b8c938ef
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: bb652a1d3a0d9c5ee08a936e24e521948d264fa8
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: d3835e8988a04082d0f4666e0564029de3f767a9
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823297"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933508"
 ---
 # <a name="working-with-ssma-projects-db2tosql"></a>使用 SSMA 项目 (DB2ToSQL) 
 若要将 DB2 数据库迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请先创建一个 SSMA 项目。 项目是包含以下信息的文件：  
@@ -75,7 +75,7 @@ SSMA 包含多个用于转换和加载数据库对象、迁移数据以及将 SS
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
-    -   Azure SQL Database  
+    -   Azure SQL 数据库  
   
 ## <a name="customizing-project-settings"></a>自定义项目设置  
 除了定义适用于所有新 SSMA 项目的默认项目设置，你还可以自定义每个项目的设置。 有关详细信息，请参阅[设置项目选项 &#40;OracleToSQL&#41;](../../ssma/oracle/setting-project-options-oracletosql.md)和相关部分。  

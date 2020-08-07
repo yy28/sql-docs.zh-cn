@@ -1,5 +1,5 @@
 ---
-title: 生成报告（MySQLToSQL） |Microsoft Docs
+title: " (MySQLToSQL) 生成报表 |Microsoft Docs"
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,25 +9,25 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Generating reports
 ms.assetid: 1c0202e8-546d-4cb3-a37f-1d2e35d53839
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 1741b8e638142adc7fb33398e329197bdc97220d
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: f61387e6ca77ed93b7b23f335fc5b1f46c343ff2
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395372"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935529"
 ---
 # <a name="generating-reports-mysqltosql"></a>生成报告 (MySQLToSQL)
 使用命令执行的某些活动的报告在对象树级别的 SSMA 控制台中生成。  
   
 使用以下过程来生成报表：  
   
-1.  指定**写入摘要-报表-报表-到**参数。 相关报表存储为文件名（如果已指定），或存储在指定的文件夹中。 文件名按下表中所述进行系统预定义，其中， ** &lt; n &gt; **是在每次执行同一命令时以数字递增的唯一文件号。  
+1.  指定**写入摘要-报表-报表-到**参数。 如果在指定的) 或文件夹中指定，相关报表将存储为文件名 (。 文件名按下表中所述进行系统预定义，其中， ** &lt; n &gt; **是在每次执行同一命令时以数字递增的唯一文件号。  
   
     报告 vis-vis 命令包括：  
   
-    |Sl. 不能。|命令|报表标题|  
+    |Sl. 否。|Command|报表标题|  
     |-|-|-|  
     |1|生成-评估-报表|AssessmentReport &lt; n &gt; 。XML|  
     |2|转换-架构|SchemaConversionReport &lt; n &gt; 。XML|  
@@ -39,11 +39,11 @@ ms.locfileid: "87395372"
     > [!IMPORTANT]  
     > 输出报告不同于评估报告。 前者是有关执行的命令的性能报告，后者是用于编程的 XML 报告。  
   
-    对于输出报表的命令选项（从 Sl 开始）。 不能。 2-4），请参阅[执行 SSMA 控制台 &#40;MySQLToSQL&#41;](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md)部分。  
+    对于输出报表的命令选项 (Sl。 否。 2-4) ，请参阅[执行 SSMA 控制台 &#40;MySQLToSQL&#41;](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md)部分。  
   
 2.  使用报表详细级别设置指示输出报表中所需的详细信息的范围：  
   
-    |Sl. 不能。|命令和参数|输出描述|  
+    |Sl. 否。|命令和参数|输出描述|  
     |-|-|-|  
     |1|verbose = "false"|生成活动的汇总报表。|  
     |2|verbose = "true"|为每个活动生成汇总且详细的状态报告。|  
@@ -53,7 +53,7 @@ ms.locfileid: "87395372"
   
 3.  使用错误报告设置来指示错误报告中所需的详细信息的范围：  
   
-    |Sl. 不能。|命令和参数|输出描述|  
+    |Sl. 否。|命令和参数|输出描述|  
     |-|-|-|  
     |1|报告错误 = "false"|没有关于错误/警告/信息消息的详细信息。|  
     |2|报告错误 = "true"|详细的错误/警告/信息消息。|  
@@ -99,7 +99,7 @@ ms.locfileid: "87395372"
   
 />  
 ```  
-**对象名称：** 指定被视为同步的对象（它还可以具有单个对象名称或组对象名称）。  
+**对象名称：** 指定 () 用于同步的对象 (它还可以具有单个对象名称或) 的组对象名称。  
   
 **错误：** 指定是否将同步错误指定为警告或错误。 针对出错的可用选项：  
   
@@ -129,7 +129,7 @@ ms.locfileid: "87395372"
   
 />  
 ```  
-**对象名称：** 指定要刷新的对象（它还可以具有单个对象名称或组对象名称）。  
+**对象名称：** 指定 () 用于刷新的对象 (它还可以具有单个对象名称或) 的组对象名称。  
   
 **错误：** 指定是否将刷新错误指定为警告或错误。 针对出错的可用选项：  
   
@@ -140,5 +140,5 @@ ms.locfileid: "87395372"
 -   fail-脚本  
   
 ## <a name="see-also"></a>另请参阅  
-[执行 SSMA 控制台（MySQL）](https://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
+[ (MySQL 执行 SSMA 控制台) ](https://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
   

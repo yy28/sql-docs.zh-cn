@@ -1,5 +1,5 @@
 ---
-title: 项目设置（GUI）（AccessToSQL） |Microsoft Docs
+title: " (GUI)  (AccessToSQL) 的项目设置 |Microsoft Docs"
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,16 +7,16 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: e0f611ac-7b67-4245-8d1c-804c1c44c935
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: e460a5b571988de65f1d3921f73f011520e6ca15
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 53495af2e2fc0e97ac91f42cf3cc282cfc0f4f2f
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67929444"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937566"
 ---
-# <a name="project-settings-gui-accesstosql"></a>项目设置（GUI）（AccessToSQL）
+# <a name="project-settings-gui-accesstosql"></a> (GUI 的项目设置)  (AccessToSQL) 
 GUI 项目设置允许您配置数据在 "**数据**" 选项卡上的显示方式，以及是否包括具有评估报告的数据报告。  
   
 "**项目设置**" 和 "**默认项目设置**" 对话框中提供了 GUI 窗格。  

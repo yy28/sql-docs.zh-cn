@@ -1,5 +1,5 @@
 ---
-title: 管理密码（AccessToSQL） |Microsoft Docs
+title: " (AccessToSQL) 管理密码 |Microsoft Docs"
 ms.prod: sql
 ms.custom: ''
 ms.date: 07/01/2020
@@ -7,16 +7,16 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: b099d0f9-dd37-4c87-8b6f-ed0177881ea4
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: df94b295e7695dc79c78876b5d42f8a0ece7dce6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 0023e6d04b2f339fbd67337b7b241da2df275a79
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897581"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938041"
 ---
-# <a name="managing-passwords-accesstosql"></a>管理密码（AccessToSQL）
+# <a name="managing-passwords-accesstosql"></a> (AccessToSQL) 管理密码
 本部分介绍如何保护数据库密码，以及如何在服务器之间导入或导出数据库密码：  
   
 1.  保护密码  
@@ -131,5 +131,5 @@ SSMA 控制台应用程序允许将本地计算机上的文件中存在的加密
 7. 请确认密码： xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx  
 
 ## <a name="see-also"></a>另请参阅  
-[执行 SSMA 控制台（Access）](https://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
+[执行 SSMA 控制台 (访问) ](https://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
   
