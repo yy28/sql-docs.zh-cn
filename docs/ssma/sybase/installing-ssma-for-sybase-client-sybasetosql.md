@@ -1,6 +1,6 @@
 ---
-title: 为 SAP ASE 客户端安装 SSMA （SybaseToSQL） |Microsoft Docs
-description: 了解适用于 SAP 自适应服务器企业（ASE）的 SQL Server 迁移助手（SSMA）的安装先决条件，以及如何安装。
+title: 为 SAP ASE 客户端 (SybaseToSQL) 安装 SSMA |Microsoft Docs
+description: 了解 SQL Server 迁移助手 (SSMA) 适用于 SAP 自适应服务器企业 (ASE) 和安装方法的安装先决条件。
 ms.custom: ''
 ms.date: 07/14/2020
 ms.prod: sql
@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: e770c2f2-52b9-4471-a207-0d35df41399c
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 288b6458fc8429077472ba3ba7ad49e6d6fd7565
-ms.sourcegitcommit: fd7b268a34562d70d46441f689543ecce7df2e4d
+ms.openlocfilehash: 5907a7cc5b93594beef8f7bd54f27f20b93fbb99
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86411165"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864854"
 ---
-# <a name="installing-ssma-for-sap-ase-client-sybasetosql"></a>安装 SSMA for SAP ASE 客户端（SybaseToSQL）
+# <a name="installing-ssma-for-sap-ase-client-sybasetosql"></a>安装 SSMA for SAP ASE client (SybaseToSQL) 
 
-SSMA 客户端包括用于连接到 SAP 自适应服务器企业版（ASE）数据库服务器和的实例的程序文件、或的实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 、将 ASE 数据库对象转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 语法、将对象加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或，然后将 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 数据迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 。
+SSMA 客户端包括用于连接到 SAP 自适应服务器企业 (ASE) 数据库服务器和实例或的程序文件 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 、将 ASE 数据库对象转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 语法、将其加载到或语法，然后将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 数据迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 。
 
 本主题提供安装 SSMA 的安装先决条件和说明。
 
@@ -33,7 +33,7 @@ SSMA 旨在与 SAP ASE 11.9.2 或更高版本以及所有版本结合使用 [!IN
 - [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 或更高版本。
 - [!INCLUDE[msCoName](../../includes/msconame_md.md)].NET Framework 版本4.7.2 或更高版本。 你可以从[.NET Framework 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=48882)获取它。
 - Sybase OLE DB/ADO.Net/ODBC 提供程序和与 SAP ASE 数据库服务器的连接，其中包含要迁移的数据库。 可以从 SAP ASE 产品媒体安装提供程序。 有关连接的详细信息，请参阅[连接到 SYBASE ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md)。
-- 访问承载目标实例的计算机上的和足够的权限， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或者 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 您将在其中迁移数据库对象和数据的。 有关详细信息，请参阅连接[到 SQL Server &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sql-server-sybasetosql.md) / [连接到 Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md)。
+- 访问承载目标实例的计算机上的和足够的权限， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或者 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 您将在其中迁移数据库对象和数据的。 有关详细信息，请参阅连接[到 SQL Server &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sql-server-sybasetosql.md) / [连接到 Azure SQL 数据库 &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md)。
 - 建议使用 4 GB RAM。
 
 ## <a name="installing-the-ssma-for-sybase-client"></a>为 Sybase 客户端安装 SSMA

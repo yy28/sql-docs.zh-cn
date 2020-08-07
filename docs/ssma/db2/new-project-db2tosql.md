@@ -1,5 +1,5 @@
 ---
-title: 新建项目（DB2ToSQL） |Microsoft Docs
+title: 新项目 (DB2ToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 66437b45-4686-4fc7-a91b-ebde45e0f1b0
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 8e9edc319a539d438cdb7eb126694812d9084d24
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a670a9766388d4ba1d1908a71ef7a32147f60fc
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68084624"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87824024"
 ---
-# <a name="new-project-db2tosql"></a>新建项目（DB2ToSQL）
+# <a name="new-project-db2tosql"></a>新项目 (DB2ToSQL) 
 使用 "**新建项目**" 对话框创建新的 SSMA 项目。 若要访问 "**新建项目**" 对话框，请在 "**文件**" 菜单上单击 "**新建项目**"。  
   
 ## <a name="options"></a>选项  
@@ -35,5 +35,5 @@ ms.locfileid: "68084624"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
--   Azure SQL DB  
+-   Azure SQL 数据库  
   

@@ -1,7 +1,7 @@
 ---
 title: 'sys. pdw_nodes_column_store_row_groups (Transact-sql) '
 ms.custom: seo-dt-2019
-ms.date: 03/03/2017
+ms.date: 08/05/2020
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ''
@@ -12,12 +12,12 @@ ms.assetid: 17a4c925-d4b5-46ee-9cd6-044f714e6f0e
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 1e65d2212dea9f8d2bbe9aad1854a2b8cd904dd3
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 88dd890b9d3f691fa671916b34daf8b2258aa2bc
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197346"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823902"
 ---
 # <a name="syspdw_nodes_column_store_row_groups-transact-sql"></a>sys. pdw_nodes_column_store_row_groups (Transact-sql) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -31,13 +31,13 @@ ms.locfileid: "86197346"
 |**partition_number**|**int**|保存行组*row_group_id*的表分区的 ID。 你可以使用*partition_number*将此 DMV 加入 sys.databases。|  
 |**row_group_id**|**int**|此行组的 ID。 这在分区中是唯一的。|  
 |**dellta_store_hobt_id**|**bigint**|delta 行组的 hobt_id；或如果行组类型不是 delta，则为 NULL。 delta 行组是正在接受新记录的读/写行组。 增量行组具有**打开**状态。 delta 行组仍采用行存储格式，并且尚未压缩成列存储格式。|  
-|State |**tinyint**|与 state_description 关联的 ID 号。<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
+|State|**tinyint**|与 state_description 关联的 ID 号。<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
 |**state_desccription**|**nvarchar(60)**|行组的持久状态的说明：<br /><br /> OPEN-正在接受新记录的读/写行组。 开放的行组仍采用行存储格式，并且尚未压缩成列存储格式。<br /><br /> 已关闭-已填充但尚未由元组移动器进程压缩的行组。<br /><br /> 压缩-已填充和压缩的行组。|  
 |**total_rows**|**bigint**|行组中物理存储的总行数。 一些行可能已删除，但它们仍被存储。 一个行组中的最大行数为 1,048,576（十六进制 FFFFF）。|  
 |**deleted_rows**|**bigint**|在标记为删除的行组中物理存储的行数。<br /><br /> 对于增量行组，始终为0。|  
 |**size_in_bytes**|**int**|此行组中所有页面的组合大小（以字节为单位）。 此大小不包括存储元数据或共享字典所需的大小。|  
-|**pdw_node_id**|**int**|节点的唯一 id [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。|  
-|**distribution_id**|**int**|分布的唯一 id。|
+|pdw_node_id|**int**|节点的唯一 id [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。|  
+|distribution_id|**int**|分布的唯一 id。|
   
 ## <a name="remarks"></a>备注  
  针对每个表中具有聚合或非聚合列存储索引的每个列存储行组返回一行。  
@@ -51,12 +51,12 @@ ms.locfileid: "86197346"
  如果列存储行组已填充，它将进行压缩并停止接受新行。 当从压缩组中删除行时，这些行将保留但标记为已删除。 对压缩组的更新将实现为压缩组中的删除以及对打开组的插入。  
   
 ## <a name="permissions"></a>权限  
- 需要 VIEW SERVER STATE 权限****。  
+ 需要 VIEW SERVER STATE 权限  。  
   
 ## <a name="examples-sssdw-and-sspdw"></a>示例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  下面的示例将**sys. pdw_nodes_column_store_row_groups**表联接到其他系统表，以返回有关特定表的信息。 计算的 `PercentFull` 列是对行组效率的估计。 若要查找单个表的信息，请删除 WHERE 子句前面的注释连字符，并提供表名称。  
   
-```  
+```sql
 SELECT IndexMap.object_id,   
   object_name(IndexMap.object_id) AS LogicalTableName,   
   i.name AS LogicalIndexName, IndexMap.index_id, NI.type_desc,   
@@ -75,14 +75,15 @@ JOIN sys.pdw_nodes_indexes AS NI
 JOIN sys.pdw_nodes_column_store_row_groups AS CSRowGroups  
     ON CSRowGroups.object_id = NI.object_id   
     AND CSRowGroups.pdw_node_id = NI.pdw_node_id  
-AND CSRowGroups.index_id = NI.index_id      
+    AND CSRowGroups.index_id = NI.index_id      
+WHERE total_rows > 0
 --WHERE t.name = '<table_name>'   
 ORDER BY object_name(i.object_id), i.name, IndexMap.physical_name, pdw_node_id;  
 ```  
 
 下面的 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 示例对聚集列存储的每个分区的行以及打开、关闭或压缩的行组中的行数进行计数：  
 
-```
+```sql
 SELECT
     s.name AS [Schema Name]
     ,t.name AS [Table Name]
@@ -92,14 +93,16 @@ SELECT
     ,SUM(CASE WHEN rg.State = 2 THEN rg.Total_Rows ELSE 0 END) AS [Rows in Closed Row Groups]
     ,SUM(CASE WHEN rg.State = 3 THEN rg.Total_Rows ELSE 0 END) AS [Rows in COMPRESSED Row Groups]
 FROM sys.pdw_nodes_column_store_row_groups rg
-JOIN sys.pdw_nodes_tables pt
-ON rg.object_id = pt.object_id AND rg.pdw_node_id = pt.pdw_node_id AND pt.distribution_id = rg.distribution_id
-JOIN sys.pdw_table_mappings tm
-ON pt.name = tm.physical_name
-INNER JOIN sys.tables t
-ON tm.object_id = t.object_id
-INNER JOIN sys.schemas s
-ON t.schema_id = s.schema_id
+  JOIN sys.pdw_nodes_tables pt
+    ON rg.object_id = pt.object_id
+    AND rg.pdw_node_id = pt.pdw_node_id
+    AND pt.distribution_id = rg.distribution_id
+  JOIN sys.pdw_table_mappings tm
+    ON pt.name = tm.physical_name
+  INNER JOIN sys.tables t
+    ON tm.object_id = t.object_id
+  INNER JOIN sys.schemas s
+    ON t.schema_id = s.schema_id
 GROUP BY s.name, t.name, rg.partition_number
 ORDER BY 1, 2
 ```

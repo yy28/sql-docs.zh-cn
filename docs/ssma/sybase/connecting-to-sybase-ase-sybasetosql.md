@@ -1,6 +1,6 @@
 ---
-title: 连接到 SAP ASE （SybaseToSQL） |Microsoft Docs
-description: 了解如何连接到自适应服务器，以将 SAP 自适应服务器企业版（ASE）数据库迁移到 SQL Server 或 Azure SQL 数据库。
+title: 连接到 SAP ASE (SybaseToSQL) |Microsoft Docs
+description: 了解如何连接到自适应服务器，以将 SAP 自适应服务器企业 (ASE) 数据库迁移到 SQL Server 或 Azure SQL 数据库。
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: a45a2330-9175-4c9e-af38-ef920e350614
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 0558e86380c6cec822103a22b746b5af05437cae
-ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
+ms.openlocfilehash: ff1a2144dd9a8f18e71a5e9fa54343bd414f070a
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84306086"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864804"
 ---
-# <a name="connecting-to-sap-ase-sybasetosql"></a>连接到 SAP ASE （SybaseToSQL）
+# <a name="connecting-to-sap-ase-sybasetosql"></a>连接到 SAP ASE (SybaseToSQL) 
 
-若要将 SAP 自适应服务器企业版（ASE）数据库迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure，必须连接到包含要迁移的数据库的自适应服务器。 当你连接时，SSMA 将获取有关自适应服务器上的所有数据库的元数据，并在 Sybase 元数据资源管理器窗格中显示数据库元数据。 SSMA 存储有关数据库服务器的信息，但不存储密码。  
+若要将 SAP 自适应服务器企业 (ASE) 数据库迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure，必须连接到包含要迁移的数据库的自适应服务器。 当你连接时，SSMA 将获取有关自适应服务器上的所有数据库的元数据，并在 Sybase 元数据资源管理器窗格中显示数据库元数据。 SSMA 存储有关数据库服务器的信息，但不存储密码。  
   
 到 ASE 的连接会一直保持活动状态，直到关闭项目。 重新打开项目时，如果需要与服务器建立活动连接，则必须重新连接到 ASE。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "84306086"
 4. 如果选择 "**标准" 模式**，请提供以下值：  
   
     1. 在 "**服务器名称**" 框中，输入或选择数据库服务器的名称或 IP 地址。  
-    2. 如果数据库服务器未配置为接受默认端口（5000）上的连接，请在 "**服务器端口**" 框中输入用于 Sybase 连接的端口号。  
+    2. 如果数据库服务器未配置为接受默认端口 (5000) 上的连接，请在 "**服务器端口**" 框中输入用于 Sybase 连接的端口号。  
     3. 在 "**用户名**" 框中，输入具有所需权限的 Sybase 帐户。  
     4. 在 "**密码**" 框中，输入指定用户名的密码。  
   
@@ -109,10 +109,10 @@ ms.locfileid: "84306086"
   
 4. 如果要求您检查当前对象，则单击 **"是"**。  
   
-## <a name="next-step"></a>后续步骤  
+## <a name="next-step"></a>下一步  
   
 - 迁移过程的下一步是连接到实例， [SQL Server](connecting-to-sql-server-sybasetosql.md)  /  [连接到实例 SQL Azure](connecting-to-azure-sql-db-sybasetosql.md)  
   
 ## <a name="see-also"></a>另请参阅
 
-[将 Sybase ASE 数据库迁移到 SQL Server-Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[将 Sybase ASE 数据库迁移到 SQL Server-Azure SQL 数据库 &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  

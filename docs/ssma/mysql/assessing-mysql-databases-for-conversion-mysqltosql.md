@@ -1,5 +1,5 @@
 ---
-title: 评估用于转换的 MySQL 数据库（MySQLToSQL） |Microsoft Docs
+title: 评估用于转换 (MySQLToSQL) 的 MySQL 数据库 |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 2a56a003-3b0f-453a-963c-00c9e40933ec
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: ae9210444311267569d5f240d40252d4fe024877
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 85923b0252eb24012c12e0c19937e076806b78bd
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68139210"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823802"
 ---
 # <a name="assessing-mysql-databases-for-conversion-mysqltosql"></a>评估 MySQL 数据库以进行转换 (MySQLToSQL)
-在加载对象并将数据迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 之前，您应该确定迁移的复杂程度以及迁移所需的时间。 SSMA 可以创建一个评估报表，显示将成功转换的对象的百分比。 SSMA 还使你能够查看导致转换失败的特定问题。  
+在加载对象并将数据迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 之前，您应该确定迁移的复杂程度以及迁移所需的时间。 SSMA 可以创建一个评估报表，显示将成功转换的对象的百分比。 SSMA 还使你能够查看导致转换失败的特定问题。  
   
 ## <a name="creating-assessment-reports"></a>创建评估报表  
-当它创建此评估报表时，SSMA 会将所选 MySQL 数据库[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]对象转换为或 SQL Azure 语法，然后显示结果。  
+当它创建此评估报表时，SSMA 会将所选 MySQL 数据库对象转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 语法，然后显示结果。  
   
 **创建评估报表**  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68139210"
   
     SSMA 会在窗口底部的状态栏中显示进度。 如果 "输出" 窗格可见，还会在 "输出" 窗格中看到消息。  
   
-    评估完成后，将显示 " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] MySQL 迁移助手 for MySQL"。  
+    评估完成后， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将显示 "MySQL 迁移助手 For MySQL"。  
   
 ## <a name="using-assessment-reports"></a>使用评估报表  
 "评估报表" 窗口包含三个窗格：  
@@ -76,11 +76,11 @@ ms.locfileid: "68139210"
   
 -   在 MySQL 中，可以修改 MySQL 对象，以删除或修改有问题的代码。 若要将更新的代码加载到 SSMA 中，必须更新元数据。 有关详细信息，请参阅[连接到 MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)。  
   
--   可以从迁移中排除对象。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 元数据资源管理器和 MySQL 元数据资源管理器中，先清除项旁边的复选框[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，然后将对象加载到 MySQL 或 SQL Azure 并从 MySQL 迁移数据。  
+-   可以从迁移中排除对象。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 元数据资源管理器和 MySQL 元数据资源管理器中，先清除项旁边的复选框，然后将对象加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] MySQL 或 SQL Azure 并从 MySQL 迁移数据。  
   
 ## <a name="next-step"></a>下一步  
 [&#40;MySQLToSQL&#41;转换 MySQL 数据库](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
 ## <a name="see-also"></a>另请参阅  
-[将 MySQL 数据库迁移到 SQL Server-Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[将 MySQL 数据库迁移到 SQL Server-Azure SQL 数据库 &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

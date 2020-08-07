@@ -1,6 +1,6 @@
 ---
-title: SSMA for Oracle 中的新增功能（OracleToSQL） |Microsoft Docs
-description: 了解针对每个版本的 Oracle （SSMA）对 SQL Server 迁移助手（OracleToSQL）的更改。
+title: SSMA for Oracle (OracleToSQL) 的新增功能 |Microsoft Docs
+description: 了解针对每个版本的 Oracle (OracleToSQL) SQL Server 迁移助手 (SSMA) 的更改。
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
@@ -10,16 +10,16 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 ms.author: alexiva
-ms.openlocfilehash: 1601ae2430ced8a30a04d8ab52d97dbb9bbb095a
-ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
+ms.openlocfilehash: c456c383625f43a5fef7f675edcd86ede6ca2515
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87477449"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87862398"
 ---
-# <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>SSMA for Oracle 中的新增功能（OracleToSQL）
+# <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>Oracle (OracleToSQL 的 SSMA 中的新增功能) 
 
-本文列出了每个版本中 Oracle 更改的 SQL Server 迁移助手（SSMA）。
+本文列出了每个版本的 Oracle 更改 SQL Server 迁移助手 (SSMA) 。
 
 ## <a name="ssma-v812"></a>SSMA v 8.12
 
@@ -53,7 +53,7 @@ SSMA for Oracle 的6.x 版包含以下更改：
 
 * 动态 SQL 字符串文本的转换
 * 转换 `LAG` `FIRST_VALUE` 和 `LAST_VALUE` 分析函数
-* 添加对基本 `ALTER TRIGGER` / `ALTER INDEX` DDL （启用/禁用等）的支持
+* 添加对基本 `ALTER TRIGGER` / `ALTER INDEX` DDL (启用/禁用等支持 ) 
 * 改善了与内置函数名称匹配的列的转换
 * 为可执行筛选的列生成筛选的唯一索引 `NULL`
 * 改进了 Azure SQL 数据仓库的变量声明转换
@@ -99,7 +99,7 @@ SSMA for Oracle 的 v4.0 版本在图形用户界面中提供了细微的修复�
 
 此外，SSMA for Oracle 已通过以下支持得到增强：
 
-* 将所选对象数限制为990（Oracle `WHERE .. IN (..)` 子句限制为1000项）。
+* 将所选对象数限制为 990 (Oracle `WHERE .. IN (..)` 子句限制为1000个项目) 。
 * 将数据从迁移 `RAW` 到 `UNIQUEIDENTIFIER` 。
 * 子句分析 `PARALLEL_ENABLE` 。
 
@@ -113,7 +113,7 @@ SSMA for Oracle 的 v4.0 版本在图形用户界面中提供了细微的修复�
 
 ## <a name="ssma-v84"></a>SSMA v2。0
 
-SSMA for Oracle 的 v2.0 版本使用旨在解决辅助功能问题的目标修补程序进行了增强，并修复了与最大索引列（为32，而不是16）相关的 bug，以支持 SQL Server 2016 及更高版本。
+SSMA for Oracle 的 v2.0 版本使用旨在解决辅助功能问题的目标修补程序进行了增强，并修复了与最大索引列相关的 bug (允许32而不是 16) 用于 SQL Server 2016 及更高版本。
 
 此外，此版本的 SSMA for Oracle 添加了 `SYS_REFCURSOR` 作为存储过程参数的转换 `OUT` 。
 
@@ -136,7 +136,7 @@ SSMA for Oracle 的 v 8.3 版本通过旨在改进质量和转换指标的目标
 * 添加对的支持 `DBMS_OUTPUT.ENABLE` / `DISABLE` 。
 * 删除 `CAST AS FLOAT` `BINARY_FLOAT` `BINARY_DOUBLE` 默认数据迁移查询中的和列。
 * 如果当前值已更改，则修复序列刷新。
-* `ROWNUM`如果存在具有相同名称的列，请修复与伪列（等）的误解相关的 bug。
+* 修复与伪列 (等相关错误相关的 bug `ROWNUM` ，如 ) 是否存在具有相同名称的列。
 * 修复在转换循环时出现不明确的可 `FOR` 解析标识符的崩溃。
 
 此外，此版本还包括一组旨在提高质量和转换指标的目标修补程序，以及对的修复：
@@ -159,16 +159,16 @@ SSMA for Oracle 的 v 8.3 版本通过旨在改进质量和转换指标的目标
 
 SSMA for Oracle 的 v2.0 版本通过旨在改进质量和转换指标的目标修补程序进行了增强。 此版本还提供以下新增功能：
 
-* 支持作为目标**Azure SQL 数据库托管实例**。 你现在可以创建面向 Azure SQL 数据库托管实例的新项目：
+* 支持作为目标的**AZURE SQL 托管实例**。 你现在可以创建面向 Azure SQL 托管实例的新项目：
 
-  ![SQL DB MI 项目](../media/ssma-newproject-sqldbmi.png)
+  ![SQL MI 项目](../media/ssma-newproject-sqldbmi.png)
 
   > [!NOTE]
-  > 还更新了 SSMA for Oracle 扩展包，以允许 Azure SQL 数据库托管实例上的远程安装：
+  > 还更新了 SSMA for Oracle 扩展包，以允许在 Azure SQL 托管实例上进行远程安装：
   >
   > ![Oracle 扩展包的 SSMA](../media/ssma-oracle-ext-pack.png)
 
-  作为 Azure SQL 数据库托管实例目标时，某些功能（包括测试人员和服务器端数据迁移）不受支持。 在[此处](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/migrate-your-oracle-database-to-azure-sql-database-managed-instance-using-ssma-8-0/)阅读详细信息。
+  面向 Azure SQL 托管实例时，某些功能（包括测试人员和服务器端数据迁移）不受支持。 在[此处](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/migrate-your-oracle-database-to-azure-sql-database-managed-instance-using-ssma-8-0/)阅读详细信息。
 
 * 转换后**修补顾问**。 [在此处](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)了解详细信息。
 
@@ -196,7 +196,7 @@ SSMA for Oracle 的 v 7.9 版本包含以下更改：
 * 改进质量和转换指标的目标修补程序。
 * 支持将 "Continue" 语句从 Oracle 迁移到 SQL Server。
 * 支持在 SSMA 命令行中更改数据类型映射和项目首选项。
-* 支持使用 SQL Server Integration Services （SSIS）迁移数据。 转换架构后，可以使用右键单击上下文菜单选项创建 SSIS 包。
+* 支持使用 SQL Server Integration Services (SSIS) 迁移数据。 转换架构后，可以使用右键单击上下文菜单选项创建 SSIS 包。
 * 还更改了 SSMA 中的 Azure SQL 数据库连接对话框以指定完全限定的服务器名称。 在以前版本的 SSMA 中，必须在项目设置中显式提到 Azure SQL 数据库前缀。
 
 ## <a name="ssma-v78"></a>SSMA v 7。8
@@ -215,13 +215,13 @@ SSMA for Oracle 的7.4 版版本包含以下更改：
 SSMA for Oracle 的 v4.0 版本包含以下更改：
 
 * SSMA for Oracle 已通过可提高质量和转换指标的目标修补程序进行了增强。
-* 基于热门需求，SSMA for Oracle 的32位版本将恢复。 与之前的实现（在7.4 之前）相比，有两个安装包，但不能并行安装。 因此，你必须根据你拥有的连接组件选择最适合的版本。 如果可能，始终最好使用64位版本。
-* SQL Server 2017 支持现已正式成为 Linux 上支持的 Oracle 扩展包（新的远程安装选项）。 请注意，在 Linux 上安装时，扩展包功能是有限的，因为不支持测试人员和服务器端数据迁移功能。
-* SSMA for Oracle 允许您将具体化视图作为常规表进行迁移（可通过**项目设置**  ->  **同步**  ->  **发现具体化视图的支持表**）中的设置进行配置。
+* 基于热门需求，SSMA for Oracle 的32位版本将恢复。 与上一次实现)  (v 7.4 之前的实现相比，有两个安装包，但不能并行安装。 因此，你必须根据你拥有的连接组件选择最适合的版本。 如果可能，始终最好使用64位版本。
+* SQL Server 2017 支持现已正式拥有 Linux 上支持的 Oracle 扩展包 (新的远程安装选项) 。 请注意，在 Linux 上安装时，扩展包功能是有限的，因为不支持测试人员和服务器端数据迁移功能。
+* SSMA for Oracle 允许您将具体化视图作为常规表迁移， (可通过**项目设置**  ->  **同步**  ->  **发现) 的具体化视图的支持表**中的设置进行配置。
 
 ## <a name="ssma-v76"></a>SSMA v 7。6
 
-适用于 Oracle 的 SSMA 的版本7.6 版本通过改进质量和转换指标的目标修补程序进行了增强，并支持 SQL Server 2017 （公共预览版）。 对 Windows 和 Linux 上的 SQL Server 2017 的支持是公共预览版，不应用于生产迁移。
+SSMA for Oracle 的版本7.6 版本通过目标修补程序进行了增强，这些修补程序可提高质量和转换指标，并支持 (公共预览) SQL Server 2017。 对 Windows 和 Linux 上的 SQL Server 2017 的支持是公共预览版，不应用于生产迁移。
 
 ## <a name="ssma-v75"></a>SSMA 7。5
 
@@ -259,7 +259,7 @@ SSMA for Oracle 的7.3 版包含以下更改：
 
 * 根据客户的反馈，改进了质量和转换指标与目标修复。
 * 通过以下各项公开的 SSMA 扩展性框架：
-  * 将功能导出到 SQL Server Data Tools （SSDT）项目。
+  * 将功能导出到 SQL Server Data Tools (SSDT) 项目。
     * 你现在可以将 SSMA 中的架构脚本导出到 SSDT 项目。 您可以使用架构脚本来进行其他架构更改并部署您的数据库。
 
       ![另存为 SSDT 项目命令](../media/export-schema-scripts_red.png)
@@ -281,7 +281,7 @@ SSMA for Oracle 的 v2.0 版本包含以下更改：
 
 * Windows 和 Linux 上的 SQL Server 2017 现在是支持迁移的目标平台。 此功能在 technical preview 中，允许将架构和数据移动到目标 SQL server。
 * SSMA 现在支持自动更新，以下载最新版本的 SSMA。
-* SSMA 可安装二进制文件现在通过 Windows Installer 包文件（.msi）传递。
+* SSMA 可安装二进制文件现在通过 Windows Installer 包文件 ( .msi) 提供。
 
 ## <a name="may-2016"></a>2016 年 5 月
 
@@ -303,7 +303,7 @@ SSMA for Oracle 的5月2016版包含以下更改：
   >   * 闪回
   >   * 闪回数据库
 
-* 添加了 Oracle VPD 策略到 SQL Server 策略对象（Oracle 行级别安全性）的转换。
+* 将 Oracle VPD 策略的转换添加到了 SQL Server 策略对象 (Oracle) 行级别安全性。
 * 缩短了 Oracle 初始加载的时间。
 * 改进的分析器和解析程序。
 * 移除了 .NET 2.0 的安装程序检查。
@@ -319,7 +319,7 @@ SSMA for Oracle 的5月2016版包含以下更改：
 SSMA for Oracle 2016 年3月预览版本添加了对的支持：
 
 * 迁移到 SQL Server 2016。
-* 迁移 Oracle 行级别安全性（有一些限制）。
+* 将 Oracle 行级别安全性 (迁移) 存在一些限制。
 * 将 Oracle in memory 表迁移到 SQL Server 列存储。
 
 ## <a name="january-2016"></a>2016 年 1 月
@@ -327,9 +327,9 @@ SSMA for Oracle 2016 年3月预览版本添加了对的支持：
 SSMA for Oracle 的2014年1月维护版本包含以下更改：
 
 * 添加了对聚集索引的支持。
-* 固定速度缓慢的 Oracle 架构查询（RFC 5076207）。
+* 修复了 (RFC 5076207) 的缓慢 Oracle 架构查询。
 * 修复了从控制台连接到 Azure。
-* 向 SSMA 添加了 "查看日志" 菜单项（RFC 5706203）。
+* 已将 "查看日志" 菜单项添加到 SSMA (RFC 5706203) 。
 * 添加了遥测。
 
 ## <a name="july-2014"></a>2014 年 7 月
@@ -337,7 +337,7 @@ SSMA for Oracle 的2014年1月维护版本包含以下更改：
 SSMA for Oracle 的2014年7月发行版本包含以下更改：
 
 * 添加了对 Azure SQL 数据库的支持。
-* 扩展包功能已移动到架构以支持 Azure SQL DB。
+* 扩展包功能已移动到架构以支持 Azure SQL 数据库。
 * 添加了对 Oracle 具体化视图的支持。
 * 添加了对 SQL Server 2014 内存优化表的支持。
 * 为具有超过10k 对象的数据库测试了性能改进。
@@ -378,9 +378,9 @@ SSMA for Oracle 的2011年4月版包含以下更改：
 * 添加了对连接和迁移到的支持 [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] 。
 * 增强了客户端数据迁移引擎，支持并行数据迁移。
 * 提高了 `Simple` `Bulk` 恢复模式和日志记录的数据迁移性能。
-* 添加了对 SSMA 早期版本创建的项目的后向兼容性支持（4.0 和4.2）。
-* 添加了一种功能，该功能能够安装 SSMA for Oracle 5.0 5.0 产品（早期版本的 SSMA，4.0 和4.2）。
-* 添加了对报表用户定义类型（包括子类型、 `VARRAY` 、 `NESTED TABLE` 、对象表和对象视图）的支持以及它们在 PL/SQL 块中的用法以及特殊错误消息。
+* 添加了对早期版本的 SSMA (v4.0 和 4.2) 创建的项目的向后兼容性的支持。
+* 添加了一种功能，用于安装 SSMA for Oracle (SxS) ，以及 SSMA (v4.0 和4.2 版) 的早期版本。
+* 添加了对报表用户定义类型的支持 (包括子类型、 `VARRAY` 、 `NESTED TABLE` 、对象表和对象视图) 及其在 PL/SQL 块中的用法以及特殊错误消息。
 
 ## <a name="july-2010"></a>2010 年 7 月
 

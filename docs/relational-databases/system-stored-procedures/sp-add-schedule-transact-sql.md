@@ -1,5 +1,5 @@
 ---
-title: sp_add_schedule （Transact-sql） |Microsoft Docs
+title: sp_add_schedule (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 88dafeff6621a181b3720917235705d4e0b12e2d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d4ee3f039613865aab68860f93ab74279068a7da
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85878289"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865305"
 ---
 # <a name="sp_add_schedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -53,10 +53,10 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
     [ , [ @originating_server = ] server_name ] /* internal */  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @schedule_name = ] 'schedule_name'`计划的名称。 *schedule_name* **sysname**，无默认值。  
   
-`[ @enabled = ] enabled`指示计划的当前状态。 *enabled*为**tinyint**，默认值为**1** （已启用）。 如果为**0**，则不启用计划。 如果不启用计划，则作业不会按此计划运行。  
+`[ @enabled = ] enabled`指示计划的当前状态。 *enabled*为**tinyint**，默认值为**1** (启用) 。 如果为**0**，则不启用计划。 如果不启用计划，则作业不会按此计划运行。  
   
 `[ @freq_type = ] freq_type`指示何时执行作业的值。 *freq_type*的数据值为**int**，默认值为**0**，可以是下列值之一。  
   
@@ -65,21 +65,21 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**1**|一次|  
 |**4**|每天|  
 |**8**|每周|  
-|**16**|每月|  
+|**16**|每月一次|  
 |**32**|每月，相对于*freq_interval*|  
 |**64**|SQL 代理服务启动时运行|  
-|**128**|计算机处于空闲状态时运行（ [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)中不支持） |  
+|**128**|当计算机处于空闲状态时运行 (在[AZURE SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)中不受支持)  |  
   
 `[ @freq_interval = ] freq_interval`作业的执行日期。 *freq_interval*的值为**int**，默认值为**1**，并且取决于*freq_type*的值。  
   
 |*Freq_type*的值|对*freq_interval*的影响|  
 |---------------------------|--------------------------------|  
-|**1** （一次）|*freq_interval*未使用。|  
-|**4** （每天）|每*freq_interval*天。|  
-|**8** （每周）|*freq_interval*是以下一个或多个（与 or 逻辑运算符结合使用）：<br /><br /> **1** = 星期日<br /><br /> **2** = 星期一<br /><br /> **4** = 星期二<br /><br /> **8** = 星期三<br /><br /> **16** = 星期四<br /><br /> **32** = 星期五<br /><br /> **64** = 星期六|  
-|**16** （每月）|*Freq_interval*月中的第几天。|  
-|**32** （每月相对）|*freq_interval*是以下项之一：<br /><br /> **1** = 星期日<br /><br /> **2** = 星期一<br /><br /> **3** = 星期二<br /><br /> **4** = 星期三<br /><br /> **5** = 星期四<br /><br /> **6** = 星期五<br /><br /> **7** = 星期六<br /><br /> **8** = 日<br /><br /> **9** = 工作日<br /><br /> **10** = 周末|  
-|**64** （当 SQLServerAgent 服务启动时）|*freq_interval*未使用。|  
+|**1** (一次) |*freq_interval*未使用。|  
+|**4** (每日) |每*freq_interval*天。|  
+|**8** (每周) |*freq_interval*是 (与或逻辑运算符组合在一起的一个或多个) ：<br /><br /> **1** = 星期日<br /><br /> **2** = 星期一<br /><br /> **4** = 星期二<br /><br /> **8** = 星期三<br /><br /> **16** = 星期四<br /><br /> **32** = 星期五<br /><br /> **64** = 星期六|  
+|每月**16** () |*Freq_interval*月中的第几天。|  
+|**32** (月相对) |*freq_interval*是以下项之一：<br /><br /> **1** = 星期日<br /><br /> **2** = 星期一<br /><br /> **3** = 星期二<br /><br /> **4** = 星期三<br /><br /> **5** = 星期四<br /><br /> **6** = 星期五<br /><br /> **7** = 星期六<br /><br /> **8** = 日<br /><br /> **9** = 工作日<br /><br /> **10** = 周末|  
+|**64**启动 SQLServerAgent 服务时 () |*freq_interval*未使用。|  
 |**128**|*freq_interval*未使用。|  
   
 `[ @freq_subday_type = ] freq_subday_type`指定*freq_subday_interval*的单位。 *freq_subday_type*的数据值为**int**，默认值为**0**，可以是下列值之一。  
@@ -93,7 +93,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
 `[ @freq_subday_interval = ] freq_subday_interval`每次执行作业之间要发生的*freq_subday_type*周期数。 *freq_subday_interval*的值为**int**，默认值为**0**。 注意：间隔应大于 10 秒。 *freq_subday_type*等于**1**的情况下，将忽略*freq_subday_interval* 。  
   
-`[ @freq_relative_interval = ] freq_relative_interval`如果*freq_interval*为32（每月相对），则为每月*freq_interval*的作业。 *freq_relative_interval*的数据值为**int**，默认值为**0**，可以是下列值之一。 如果*freq_type*不等于32，则将忽略*freq_relative_interval* 。  
+`[ @freq_relative_interval = ] freq_relative_interval`如果*freq_interval*为 32 (月相对) ，则每个月*freq_interval*的作业出现。 *freq_relative_interval*的数据值为**int**，默认值为**0**，可以是下列值之一。 如果*freq_type*不等于32，则将忽略*freq_relative_interval* 。  
   
 |值|说明（单位）|  
 |-----------|--------------------------|  
@@ -101,7 +101,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**2**|秒|  
 |**4**|第三个|  
 |**8**|第四个|  
-|**16**|最后一个|  
+|**16**|上一个|  
   
 `[ @freq_recurrence_factor = ] freq_recurrence_factor`作业的计划执行之间的周数或月数。 仅当*freq_type*为**8**、 **16**或**32**时才使用*freq_recurrence_factor* 。 *freq_recurrence_factor*的值为**int**，默认值为**0**。  
   
@@ -126,7 +126,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 `[ @originating_server = ] server_name` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或**1** (失败)   
   
 ## <a name="result-sets"></a>结果集  
  无  
@@ -135,7 +135,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 为管理作业提供了一种图形化的简便方法，建议使用此方法来创建和管理作业基础结构。  
   
 ## <a name="permissions"></a>权限  
- 默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
+ 默认情况下， **sysadmin**固定服务器角色的成员可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
   

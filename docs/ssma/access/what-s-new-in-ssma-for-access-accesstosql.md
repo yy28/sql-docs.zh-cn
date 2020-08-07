@@ -1,6 +1,6 @@
 ---
-title: SSMA for Access （AccessToSQL）中的新增功能 |Microsoft Docs
-description: 了解每个版本的 SQL Server 迁移助手（SSMA） for Access （AccessToSQL）的更改。
+title: SSMA for Access (AccessToSQL) 的新增功能 |Microsoft Docs
+description: 了解针对每个版本的 Access (AccessToSQL) SQL Server 迁移助手 (SSMA) 的更改。
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
@@ -10,22 +10,22 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 ms.author: alexiva
-ms.openlocfilehash: 06fd04921d217bf81861c76a5b09769039be5ee7
-ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
+ms.openlocfilehash: 1175a66a0d87296204825542dfb4021b568c30e6
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87477369"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863757"
 ---
-# <a name="whats-new-in-ssma-for-access-accesstosql"></a>SSMA for Access （AccessToSQL）中的新增功能
+# <a name="whats-new-in-ssma-for-access-accesstosql"></a>SSMA for Access (AccessToSQL) 的新增功能
 
-本文列出了每个版本中的访问更改 SQL Server 迁移助手（SSMA）。
+本文列出了每个版本中的访问更改 SQL Server 迁移助手 (SSMA) 。
 
 ## <a name="ssma-v812"></a>SSMA v 8.12
 
 用于访问的 SSMA 的8.12 版本包含以下更改：
 
-* 支持 `BigInt` （ `Large Number` ）数据类型
+* 支持 `BigInt` (`Large Number`) 数据类型
 * 改进了列类型解析
 * 改进了列验证规则的转换
 * 使用最新的可用 ACE OLE DB 提供程序进行数据迁移
@@ -77,14 +77,14 @@ ms.locfileid: "87477369"
 
 通过对 SQL server 中的 JSON 功能进行 Azure Active Directory 身份验证和基本支持，以及旨在提高可用性和性能的目标修补程序集，增强了用于访问的 SSMA 的版本8.5。
 
-此外，SSMA for Access 现在支持转换多个标准函数（ `ISNULL` 、等 `IIF` ）。
+此外，SSMA for Access 现在支持 )  (、等多个标准函数的转换。 `ISNULL` `IIF`
 
 > [!IMPORTANT]
 > 对于 SSMA 的8.5，.NET 4.7.2 是必备组件。 如果需要安装此版本，可以从[此处](https://dotnet.microsoft.com/download/dotnet-framework/net472)下载运行时文件。
 
 ## <a name="ssma-v84"></a>SSMA v2。0
 
-使用旨在解决辅助功能问题的目标修补程序，以及修复与最大索引列相关的错误（为32而不是16） SQL Server 2016 及更高版本，增强了用于访问的 SSMA 的 v2.0 版本。
+使用旨在解决辅助功能问题的目标修补程序来增强 SSMA for Access 的 v2.0 版本，并修复与 max 索引列相关的 bug， (为 SQL Server 2016 及更高版本启用32，而不是 16) 。
 
 > [!IMPORTANT]
 > 对于 SSMA 版本7.4，8.4，.NET 4.5.2 是必备组件。
@@ -114,9 +114,9 @@ SSMA for Access 的 v 8.3 版本通过旨在提高质量和转换指标的目标
 
 使用旨在提高质量和转换指标的目标修补程序，增强了 SSMA for Access 的8.0 版本。 此版本还提供以下新增功能：
 
-* 支持作为目标**Azure SQL 数据库托管实例**。 你现在可以创建面向 Azure SQL 数据库托管实例的新项目：
+* 支持作为目标的**AZURE SQL 托管实例**。 你现在可以创建面向 Azure SQL 托管实例的新项目：
 
-  ![SQL DB MI 项目](../media/ssma-newproject-sqldbmi.png)
+  ![SQL MI 项目](../media/ssma-newproject-sqldbmi.png)
 
 * 转换后**修补顾问**。 [在此处](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Accelerate-your-Oracle-migrations-with-new-machine-learning/ba-p/368733)了解详细信息。
 
@@ -150,11 +150,11 @@ SSMA for Access 的 v 8.3 版本通过旨在提高质量和转换指标的目标
 用于访问的 SSMA 的 v4.0 版本包含以下更改：
 
 * 改进质量和转换指标的目标修补程序。
-* 基于常用需求，SSMA for Access 的32位版本已恢复。 与之前的实现（在7.4 之前）相比，有两个安装包，但不能并行安装。 因此，你必须根据你拥有的连接组件选择最适合的版本。 如果可能，始终最好使用64位版本。
+* 基于常用需求，SSMA for Access 的32位版本已恢复。 与上一次实现)  (v 7.4 之前的实现相比，有两个安装包，但不能并行安装。 因此，你必须根据你拥有的连接组件选择最适合的版本。 如果可能，始终最好使用64位版本。
 
 ## <a name="ssma-v76"></a>SSMA v 7。6
 
-用于访问的 SSMA 的版本7.6 版本通过改进质量和转换指标的目标修补程序进行了增强，并支持 SQL Server 2017 （公共预览版）。 对 Windows 和 Linux 上的 SQL Server 2017 的支持是公共预览版，不应用于生产迁移。
+用于访问的 SSMA 的版本7.6 版本通过改进质量和转换指标的目标修补程序进行了增强，并支持 (公共预览) SQL Server 2017。 对 Windows 和 Linux 上的 SQL Server 2017 的支持是公共预览版，不应用于生产迁移。
 
 ## <a name="ssma-v75"></a>SSMA 7。5
 
@@ -179,7 +179,7 @@ SSMA for Access 的 v 8.3 版本通过旨在提高质量和转换指标的目标
 
 * 根据客户的反馈，改进了质量和转换指标与目标修复。
 * 通过以下各项公开的 SSMA 扩展性框架：
-  * 将功能导出到 SQL Server Data Tools （SSDT）项目。
+  * 将功能导出到 SQL Server Data Tools (SSDT) 项目。
     * 你现在可以将 SSMA 中的架构脚本导出到 SSDT 项目。 您可以使用架构脚本来进行其他架构更改并部署您的数据库。
 
         ![另存为 SSDT 项目命令](../media/export-schema-scripts_red.png)
@@ -200,7 +200,7 @@ SSMA for Access 的7.2 版本包含以下更改：
 
 * Windows 和 Linux 上的 SQL Server 2017 现在是支持迁移的目标平台。 此功能在 technical preview 中，支持将架构和数据移动到目标 SQL server。
 * SSMA 现在支持自动更新，以下载最新版本的 SSMA。
-* SSMA 可安装二进制文件现在通过 Windows Installer 包文件（.msi）传递。
+* SSMA 可安装二进制文件现在通过 Windows Installer 包文件 ( .msi) 提供。
 
 ## <a name="may-2016"></a>2016 年 5 月
 
@@ -222,20 +222,20 @@ SSMA for Access 的2016年3月预览版增加了对迁移到 SQL Server 2016 的
 
 用于访问的 SSMA 的2016年1月维护版本包含以下更改：
 
-* 修复了默认 GUID 字段的无效函数（RFC 3894811）。
-* 修复了在将记录导入到 SQL 数据库（Azure）时系统停止响应的问题（RFC 4919573）。
-* 向 SSMA 添加了 "查看日志" 菜单项（RFC 5706203）。
+* 修复了默认 GUID 字段 (RFC 3894811) 的无效函数。
+* 修复了在将记录导入到 SQL 数据库 (Azure)  (RFC 4919573) 时系统停止响应的问题。
+* 已将 "查看日志" 菜单项添加到 SSMA (RFC 5706203) 。
 * 添加了遥测。
 
 ## <a name="july-2014"></a>2014 年 7 月
 
 SSMA 的2014年7月发行版本包含以下更改：
 
-* 改进了 Azure SQL DB 代码转换。
-* 已将扩展包功能移到架构以支持 Azure SQL DB。
+* 改进了 Azure SQL 数据库代码转换。
+* 已将扩展包功能移到架构以支持 Azure SQL 数据库。
 * 针对具有超过10k 对象的数据库测试性能改进。
 * 添加了用于处理大量对象的 UI 改进。
-* 添加了对 "知名" LOB 架构的突出显示的支持（以便在转换时忽略它们）。
+* 添加了对 "知名" LOB 架构的突出显示的支持 (以便在转换) 中将其忽略。
 * 增加了转换速度改进。
 * 添加了对在 UI 中显示对象计数的支持。
 * 将报表大小减少25% 以上。
@@ -268,7 +268,7 @@ SSMA 的2014年7月发行版本包含以下更改：
 * 添加了 "SSMA for Access" 的单个可安装，它 [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)] 支持 [!INCLUDE [ssSQL10](../../includes/sssql10-md.md)] 、 [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] 和 Azure SQL。
 * 添加了连接的功能 [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] 。
 * 为实现向后兼容性而添加了用于访问控制台版本支持的 SSMA。 可以打开先前版本的 SSMA v 5.0 创建的项目。
-* 添加了一种功能，可将 SSMA v 5.0 产品并行（SxS）与较旧版本的 SSMA 产品一起安装。
+* 添加了一种功能，可将 SSMA v 5.0 产品与较旧版本的 SSMA 产品 (SxS) 并行安装。
 
 ## <a name="july-2010"></a>2010 年 7 月
 

@@ -24,14 +24,14 @@ ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 382a1d94b46eeef39ca90103691afe45389002e3
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: aadb041b3b9005d0e593e97974090250129ed33d
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293764"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823842"
 ---
-# <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>将访问应用程序链接到 SQL Server-Azure SQL DB （AccessToSQL）
+# <a name="linking-access-applications-to-sql-server---azure-sql-database-accesstosql"></a>将访问应用程序链接到 SQL Server-Azure SQL 数据库 (AccessToSQL) 
 如果要将现有的 Access 应用程序用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则可以将原始访问表链接到已迁移 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 的表。 链接会修改你的 Access 数据库，以便你的查询、窗体、报表和数据访问页使用或 SQL Azure 数据库中的数据， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 而非 access 数据库中的数据。  
   
 > [!NOTE]  
@@ -49,14 +49,14 @@ ms.locfileid: "84293764"
   
 2.  右键单击 "**表**"，然后选择 "**链接**"。  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]迁移助手（SSMA） for Access 备份原始访问表并创建链接表。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]迁移助手 (SSMA) 的访问权限备份原始访问表并创建链接表。  
   
 链接表后，SSMA 中的表将显示一个小链接图标。 在 Access 中，表以 "链接的" 图标显示，它是一个指向它的箭头。  
   
 在 Access 中打开表时，将使用键集游标检索数据。 因此，对于大型表，不会一次检索所有数据。 但是，浏览表时，Access 会根据需要检索其他数据。  
   
 > [!IMPORTANT]  
-> 若要将 access 表链接到 Azure 数据库，需要 SQL Server Native Client （SNAC）版本10.5 或更高版本。   
+> 若要将 access 表链接到 Azure 数据库，需要 SQL Server Native Client (SNAC) 版本10.5 或更高版本。   
 > 你可以从[Microsoft® SQL Server® 2008 R2 功能包](https://www.microsoft.com/download/details.aspx?id=44272)中获取 SNAC 的最新版本。  
   
 ## <a name="unlinking-access-tables"></a>取消链接访问表  
@@ -112,12 +112,12 @@ ms.locfileid: "84293764"
   
 -   不能修改传递查询。 修改查询结果或添加新记录必须以另一种方式完成，例如通过在窗体上使用显式的 "**修改**" 或 "**添加**" 按钮来绑定到查询。  
   
--   某些查询需要用户输入，但传递查询不支持用户输入。 用户输入可以由提示输入参数的 Visual Basic for Applications （VBA）代码获取，也可以通过用作输入控件的窗体来获取。 在这两种情况下，VBA 代码都会向服务器提交带有用户输入的查询。  
+-   某些查询需要用户输入，但传递查询不支持用户输入。 用户输入可通过 Visual Basic for Applications 提示输入参数 (VBA) 代码，或通过用作输入控件的窗体来获取。 在这两种情况下，VBA 代码都会向服务器提交带有用户输入的查询。  
   
 ### <a name="auto-increment-columns-are-not-updated-until-the-record-is-updated"></a>只有在更新记录后，才能更新自动增量列  
 **原因：** 调用 RecordSet 后，在记录更新之前，"自动递增" 列可用。 在或 SQL Azure 中，这种情况并不成立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 标识列新值的新值仅在保存新记录之后才可用。  
   
-**解决方法：** 在访问标识字段之前，请运行以下 Visual Basic for Applications （VBA）代码：  
+**解决方法：** 在访问标识字段之前，请运行以下 Visual Basic for Applications (VBA) 代码：  
   
 ```  
 Recordset.Update  
@@ -145,7 +145,7 @@ Recordset.LastModified
 **解决方法：** 使用修改表架构 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，然后在 "访问" 中更新链接。  
   
 ### <a name="hyperlink-functionality-is-lost-after-migrating-data"></a>在迁移数据后，超链接功能丢失  
-**原因：** 迁移数据后，列中的超链接会丢失其功能，并成为简单的**nvarchar （max）** 列。  
+**原因：** 迁移数据后，列中的超链接会丢失其功能，并成为简单的**nvarchar (最大) **列。  
   
 **解决方法：** 无。  
   

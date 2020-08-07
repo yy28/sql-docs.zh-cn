@@ -1,6 +1,6 @@
 ---
-title: SSMA for SAP ASE 中的新增功能（SybaseToSQL） |Microsoft Docs
-description: 了解每个版本对 Sybase （SybaseToSQL） SQL Server 迁移助手（SSMA）的更改。
+title: SAP ASE (SybaseToSQL) 中 SSMA 的新增功能 |Microsoft Docs
+description: 了解针对每个版本的 Sybase (SybaseToSQL) SQL Server 迁移助手 (SSMA) 的更改。
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
@@ -10,16 +10,16 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 ms.author: alexiva
-ms.openlocfilehash: 53ae61f78bed3ee262844f5242f3499d8981501b
-ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
+ms.openlocfilehash: 8391c9642bb7ee0849ea4627b42ac580c4d44d20
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87477319"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864704"
 ---
-# <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>SSMA for SAP ASE 中的新增功能（SybaseToSQL）
+# <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>SAP ASE (SybaseToSQL 的 SSMA 中的新增功能) 
 
-本文列出了每个版本中的 SAP ASE SQL Server 迁移助手（以前称为 SSMA）的更改。
+本文列出了适用于 SAP ASE 的 SQL Server 迁移助手 (SSMA) ， (以前的 SSMA 用于 Sybase) 每个版本中的更改。
 
 ## <a name="ssma-v812"></a>SSMA v 8.12
 
@@ -73,14 +73,14 @@ SSMA for SAP ASE 的 8.8 8.8 版本包括：
 
 通过对 SQL server 中的 JSON 功能进行 Azure Active Directory 身份验证和基本支持（一组旨在提高可用性和性能的目标修补程序），增强了 SSMA for SAP ASE 的版本8.5 版本。
 
-此外，SSMA for SAP ASE 现在允许您隐藏系统表和视图（将它们从转换中排除）。
+此外，SSMA for SAP ASE 现在允许您隐藏系统表和视图， (将它们从转换) 中排除。
 
 > [!IMPORTANT]
 > 对于 SSMA 的8.5，.NET 4.7.2 是必备组件。 如果需要安装此版本，可以从[此处](https://dotnet.microsoft.com/download/dotnet-framework/net472)下载运行时文件。
 
 ## <a name="ssma-v84"></a>SSMA v2。0
 
-SSMA for SAP ASE 的 v2.0 版本增强了目标修补程序，这些修补程序旨在解决辅助功能问题，并修复了与最大索引列（32而不是16）相关的 bug，以支持 SQL Server 2016 及更高版本。
+SSMA for SAP ASE 的 v2.0 版本增强了目标修补程序，这些修补程序旨在解决辅助功能问题，并修复了与最大索引列相关的 bug (允许32而不是 16) 用于 SQL Server 2016 及更高版本。
 
 > [!IMPORTANT]
 > 使用 SSMA 版本7.4 到8.4，.NET 4.5.2 是必备组件。
@@ -114,9 +114,9 @@ SSMA for SAP ASE 的7.4 版已通过一组旨在提高质量和转换指标的�
 
 SSMA for SAP ASE 的 v2.0 版本增强了目标修补程序，旨在提高质量和转换指标。 此外，此版本还提供以下新增功能：
 
-* 支持作为目标**Azure SQL 数据库托管实例**。 你现在可以创建面向 Azure SQL 数据库托管实例的新项目：
+* 支持作为目标的**AZURE SQL 托管实例**。 你现在可以创建面向 Azure SQL 托管实例的新项目：
 
-  ![SQL DB MI 项目](../media/ssma-newproject-sqldbmi.png)
+  ![SQL 数据库 MI 项目](../media/ssma-newproject-sqldbmi.png)
 
 * 转换后**修补顾问**。 [在此处](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)了解详细信息。
 
@@ -136,7 +136,7 @@ SSMA for SAP ASE 的 v 7.9 版本包含以下更改：
 
 * 改进质量和转换指标的目标修补程序。
 * 支持在 SSMA 命令行中更改数据类型映射和项目首选项。
-* 支持使用 SQL Server Integration Services （SSIS）迁移数据。 转换架构后，可以使用右键单击上下文菜单选项创建 SSIS 包。
+* 支持使用 SQL Server Integration Services (SSIS) 迁移数据。 转换架构后，可以使用右键单击上下文菜单选项创建 SSIS 包。
 * 还更改了 SSMA 中的 Azure SQL 数据库连接对话框以指定完全限定的服务器名称。 在以前版本的 SSMA 中，必须在项目设置中显式提到 Azure SQL 数据库前缀。
 
 ## <a name="ssma-v78"></a>SSMA v 7。8
@@ -151,18 +151,18 @@ SSMA for SAP ASE 的7.4 版版本包含以下更改：
 SSMA for SAP ASE 的 v4.0 版本包含以下更改：
 
 * SAP ASE 的 SSMA 已通过改进质量和转换指标的目标修补程序进行了增强。
-* 基于常用需求，SSMA for SAP ASE 的32位版本已恢复。 与上一实现相比（到7.4 之前），有两个安装包，但不能并行安装。 因此，你必须根据你拥有的连接组件选择最适合的版本。 如果可能，始终最好使用64位版本。
+* 基于常用需求，SSMA for SAP ASE 的32位版本已恢复。 与前一个实现 (到) v 7.4 之前的实现相比，有两个安装包，但不能并行安装。 因此，你必须根据你拥有的连接组件选择最适合的版本。 如果可能，始终最好使用64位版本。
 
 ## <a name="ssma-v76"></a>SSMA v 7。6
 
 SSMA for SAP ASE 的版本7.6 版本包含以下更改：
 
-* 目标修补程序，可提高质量和转换指标，并支持 SQL Server 2017 （公共预览版）。 对 Windows 和 Linux 上的 SQL Server 2017 的支持是公共预览版，不应用于生产迁移。
+* 旨在提高质量和转换指标以及支持 SQL Server 2017 (公共预览) 的目标修补程序。 对 Windows 和 Linux 上的 SQL Server 2017 的支持是公共预览版，不应用于生产迁移。
 * 支持 Sybase 函数的转换。
 
 ## <a name="ssma-v75"></a>SSMA 7。5
 
-适用于 SAP ASE 的 SSMA （以前的 SSMA）的7.5 版本包含以下更改：
+适用于 SAP ASE 的 SSMA 的 v 7.5 版本 (以前 SSMA 用于 Sybase) 包含以下更改：
 
 * 确保为残障人士提供更好的辅助功能的多项改进。
 * 支持 `CREATE OR REPLACE` 语法。
@@ -185,7 +185,7 @@ SSMA for SAP ASE 的版本7.6 版本包含以下更改：
 
 * 根据客户的反馈，改进了质量和转换指标与目标修复。
 * 通过以下各项公开的 SSMA 扩展性框架：
-  * 将功能导出到 SQL Server Data Tools （SSDT）项目。
+  * 将功能导出到 SQL Server Data Tools (SSDT) 项目。
     * 你现在可以将 SSMA 中的架构脚本导出到 SSDT 项目。 您可以使用架构脚本来进行其他架构更改并部署您的数据库。
 
         ![另存为 SSDT 项目命令](../media/export-schema-scripts_red.png)
@@ -207,7 +207,7 @@ SSMA for SAP ASE 的版本7.6 版本包含以下更改：
 
 * Windows 和 Linux 上的 SQL Server 2017 现在是支持迁移的目标平台。 此功能在 technical preview 中，支持将架构和数据移动到目标 SQL server。
 * 支持自动更新，以下载最新版本的 SSMA （如果可用）。
-* SSMA 可安装二进制文件现在通过 Windows Installer 包文件（.msi）传递。
+* SSMA 可安装二进制文件现在通过 Windows Installer 包文件 ( .msi) 提供。
 
 ## <a name="may-2016"></a>2016 年 5 月
 
@@ -229,18 +229,18 @@ Sybase 的 SSMA 2016 版包含以下更改：
 
 用于 Sybase 的 SSMA 的2016年1月维护版本包含以下更改：
 
-* 向 SSMA 添加了 "查看日志" 菜单项（RFC 5706203）。
+* 已将 "查看日志" 菜单项添加到 SSMA (RFC 5706203) 。
 * 添加了遥测。
 
 ## <a name="july-2014"></a>2014 年 7 月
 
 SSMA 的2014年7月发行版本包含以下更改：
 
-* 改进了 Azure SQL DB 代码转换。
-* 已将扩展包功能移到架构以支持 Azure SQL DB。
+* 改进了 Azure SQL 数据库代码转换。
+* 已将扩展包功能移到架构以支持 Azure SQL 数据库。
 * 增加了针对具有超过10k 对象的数据库测试的性能改进。
 * 添加了用于处理大量对象的 UI 改进。
-* 添加了突出显示众所周知的 LOB 架构的功能（因此可以在转换时忽略它们）。
+* 添加了突出显示已知 LOB 架构 (的功能，因此可以在转换) 中将其忽略。
 * 增加了转换速度改进。
 * 添加了在 UI 中显示对象计数的功能。
 * 将报表大小减少25% 以上。
@@ -277,10 +277,10 @@ SSMA 2011 年7月发行版本在数据迁移过程中提供了改进的错误报
 * 添加了正确地将区分大小写的 Sybase 数据库转换和迁移到区分大小写的 SQL Server 的功能。
 * 添加了对将 Sybase ASE 非 ANSI 联接 SQL Server 语句转换为 DELETE 和 UPDATE 语句的支持。
 * 提供了使用 Sybase ASE ODBC 提供程序和 Sybase ASE ADO.NET 提供程序连接到 Sybase ASE 服务器的其他连接选项。
-* 删除了名为的单独数据库的依赖项 `SysDB` ，该数据库包含 Sybase 模拟函数（作为扩展包的一部分安装）。
+* 删除了名为的单独数据库的依赖项 `SysDB` ，其中包含作为扩展包) 的一部分 (安装的 Sybase 模拟函数。
 * 添加了在群集上安装适用于 Sybase 扩展包的 SSMA 的功能 [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] 。
-* 添加了 SSMA 早期版本创建的项目的向后兼容性（4.0 和4.2）。
-* 添加了一项功能，该功能能够安装 SSMA for Sybase v1.0 product （SxS）与较旧版本的 SSMA （v4.0 和4.2）。
+* 添加了早期版本的 SSMA 创建的项目的向后兼容性 (v4.0 和 4.2) 。
+* 添加了一项功能，该功能能够安装 SSMA for Sybase v1.0 (SxS) ，以及 SSMA (v4.0 和4.2 版) 的早期版本。
 
 ## <a name="july-2010"></a>2010 年 7 月
 
@@ -297,7 +297,7 @@ SSMA 2011 年7月发行版本在数据迁移过程中提供了改进的错误报
 SSMA 的2008年6月发行版包含以下更改：
 
 * 添加了 SSMA 测试器，该测试器自动测试数据库对象转换和 SSMA 进行的数据迁移。 完成所有 SSMA 迁移步骤后，使用 SSMA 测试人员验证转换后的对象是否以相同方式工作，并确保所有数据都已正确传输。
-* 添加了预 SQL 转换。 用户现在可以为要在转换中使用的每个源过程指定临时表（及其他对象）声明。
+* 添加了预 SQL 转换。 用户现在可以为要在转换中使用的每个源过程指定临时表 (和其他对象) 声明。
 * 增加了对象转换的改进：
   * 联接转换已修订。
   * 聚合和非聚合，无需按子句分组。

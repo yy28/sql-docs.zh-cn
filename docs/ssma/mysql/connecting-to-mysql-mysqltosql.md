@@ -1,5 +1,5 @@
 ---
-title: 连接到 MySQL （MySQLToSQL） |Microsoft Docs
+title: 正在连接到 MySQL (MySQLToSQL) |Microsoft Docs
 description: 了解如何连接到目标 iMySQL 数据库以迁移 MySQL 数据库。 SSMA 获取有关 Azure SQL 数据库中的数据库的元数据。
 ms.prod: sql
 ms.custom: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 084c7020-f729-4f91-90e0-143f85fa68d1
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: d82a23735cde22773c693dce5f6e8dc86b9654b4
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: ff5d88c5269fc1b6e03029004d92a5360b82b65b
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293654"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87822493"
 ---
 # <a name="connecting-to-mysql-mysqltosql"></a>连接到 MySQL (MySQLToSQL)
 若要将 MySQL 数据库迁移到 SQL Server 或 SQL Azure，你必须连接到要迁移的 MySQL 数据库。 在连接时，SSMA 将获取有关所有 MySQL 架构的元数据，然后在 "MySQL 元数据资源管理器" 窗格中显示该架构。 SSMA 存储有关数据库服务器的信息，但不存储密码。  
@@ -34,7 +34,7 @@ ms.locfileid: "84293654"
   
 -   "Information_schema" 上的 "选择" 特权  
   
--   Mysql 上的 "选择" 特权（适用于 Udf）  
+-   针对 Udf 的 mysql (上的 "选择" 特权)   
   
 ## <a name="establishing-a-connection-to-mysql"></a>与 MySQL 建立连接  
 连接到数据库时，SSMA 将读取数据库元数据，然后将此元数据添加到项目文件。 当 SSMA 将对象转换为 SQL Server 或 SQL Azure 语法，并在将数据迁移到 SQL Server 或 SQL Azure 时，此元数据由使用。 可以在 MySQL 元数据资源管理器窗格中浏览此元数据，并查看单个数据库对象的属性。  
@@ -44,11 +44,11 @@ ms.locfileid: "84293654"
   
 **连接到 MySQL**  
   
-1.  在 "**文件**" 菜单上，选择 "**连接到 MySQL** " （此选项将在创建项目后启用）。  
+1.  在 "**文件**" 菜单上，选择 "**连接到 MySQL** (在创建项目) 后将启用此选项。  
   
     如果以前已连接到 MySQL，则命令名称将**重新连接到 mysql**。  
   
-2.  在 "**提供程序**" 框中，选择 "MySQL ODBC 5.1 驱动程序（受信任）"。 它是 "标准" 模式下的默认提供程序。  
+2.  在 "**提供程序**" 框中，选择 "MySQL ODBC 5.1 驱动程序 (信任的) "。 它是 "标准" 模式下的默认提供程序。  
   
 3.  在 "**模式**" 框中，选择 "**标准模式**"。 它是默认模式。  
   
@@ -62,14 +62,14 @@ ms.locfileid: "84293654"
   
     3.  在 "**密码**" 框中，输入指定用户名的密码。  
   
-5.  **SSL：** 如果希望安全地连接到 MySQL，请通过选中**SSL**复选框来使用安全套接字层（SSL）。  
+5.  **SSL：** 如果希望安全地连接到 MySQL，请通过选中 " **ssl** " 复选框， (ssl) 使用安全套接字层。  
   
-6.  **配置：** 它提供通过安全套接字层（SSL）配置到 MySQL 的连接的选项。  
+6.  **配置：** 它提供了一个选项，用于通过安全套接字层 (SSL) 配置与 MySQL 的连接。  
   
     > [!NOTE]  
     > 若要启用**配置**，SSL 必须设置为**True**。  
   
-    单击 "配置" 按钮时，会显示一个对话框。 若要在连接到 MySQL 数据库时使用加密，必须在对话框中定义以下三个证书文件的路径： "隐私增强邮件证书（PEM）"：  
+    单击 "配置" 按钮时，会显示一个对话框。 若要在连接到 MySQL 数据库时使用加密，必须定义该对话框中提供的以下三个证书文件的路径 [隐私增强邮件证书 (PEM) ]：  
   
     -   **SSL 证书颁发机构：** 指定带有可信 SSL Ca 列表的文件的路径。  
   
@@ -111,9 +111,9 @@ ms.locfileid: "84293654"
   
 5.  单击“确定”。  
   
-## <a name="next-step"></a>后续步骤  
+## <a name="next-step"></a>下一步  
 迁移过程的下一步是[连接到 SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
   
 ## <a name="see-also"></a>另请参阅  
-[将 MySQL 数据库迁移到 SQL Server-Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[将 MySQL 数据库迁移到 SQL Server-Azure SQL 数据库 &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

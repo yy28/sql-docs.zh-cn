@@ -1,6 +1,6 @@
 ---
-title: 将 DB2 数据库迁移到 SQL Server （DB2ToSQL） |Microsoft Docs
-description: 使用此建议过程将 DB2 数据库迁移到使用 SQL Server 迁移助手的 SQL Server 或 Azure SQL 数据库（SSMA）。
+title: 将 DB2 数据库迁移到 SQL Server (DB2ToSQL) |Microsoft Docs
+description: 使用此推荐的过程，使用 SQL Server 迁移助手 (SSMA) 将 DB2 数据库迁移到 SQL Server 或 Azure SQL 数据库。
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 14d2e655-af7e-4aa5-ba28-0e3d0d025518
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: a351723f12261e07c4cdbd1d707224278067522e
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: c66e88ff81cc8f7d06d3d946be8e476b175d1b47
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293674"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823674"
 ---
-# <a name="migrating-db2-databases-to-sql-server-db2tosql"></a>将 DB2 数据库迁移到 SQL Server （DB2ToSQL）
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]DB2 的迁移助手（SSMA）是一个全面的环境，可帮助你快速将 DB2 数据库迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 AZURE SQL DB。 通过使用 SSMA for DB2，你可以查看数据库对象和数据、评估要迁移的数据库、将数据库对象迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 AZURE SQL 数据库，以及将数据迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 AZURE sql 数据库。 请注意，不能迁移 SYS 和 SYSTEM DB2 架构。  
+# <a name="migrating-db2-databases-to-sql-server-db2tosql"></a>将 DB2 数据库迁移到 SQL Server (DB2ToSQL) 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]DB2 的迁移助手 (SSMA) 是一个全面的环境，可帮助你快速将 DB2 数据库迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 AZURE SQL 数据库。 通过使用 SSMA for DB2，你可以查看数据库对象和数据、评估要迁移的数据库、将数据库对象迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 AZURE Sql 数据库，以及将数据迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Azure sql 数据库。 请注意，不能迁移 SYS 和 SYSTEM DB2 架构。  
   
 ## <a name="recommended-migration-process"></a>建议的迁移过程  
 若要成功地将对象和数据从 DB2 数据库迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 AZURE SQL 数据库，请使用以下过程：  

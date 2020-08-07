@@ -1,5 +1,5 @@
 ---
-title: 使用 SSMA 项目（OracleToSQL） |Microsoft Docs
+title: 使用 SSMA 项目 (OracleToSQL) |Microsoft Docs
 description: 了解如何创建 SSMA 项目，其中包含要 SQL Server 迁移的 Oracle 数据库的元数据，以及设置和连接信息。
 ms.prod: sql
 ms.custom: ''
@@ -13,12 +13,12 @@ ms.assetid: ee5d94c0-c7a6-4779-bd32-729bdaf61e1b
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: 285665d1720b941523871d00fed9a0d2239c7d78
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: 772bb36e42af5e96d40b4026327d90e4552218e7
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84294034"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87862376"
 ---
 # <a name="working-with-ssma-projects-oracletosql"></a>处理 SSMA 项目 (OracleToSQL)
 若要将 Oracle 数据库迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请先创建一个 SSMA 项目。 项目是包含以下信息的文件：  
@@ -65,7 +65,7 @@ SSMA 包含一些设置，用于转换和加载数据库对象、迁移数据以
   
 1.  在“文件”菜单上，单击“新建项目”。********  
   
-    将显示“新建项目”对话框。  
+    此时将出现“新建项目”对话框。  
   
 2.  在 "**名称**" 框中，输入项目的名称。  
   
@@ -81,7 +81,7 @@ SSMA 包含一些设置，用于转换和加载数据库对象、迁移数据以
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
-    -   Azure SQL DB  
+    -   Azure SQL Database  
   
 ## <a name="customizing-project-settings"></a>自定义项目设置  
 除了定义适用于所有新 SSMA 项目的默认项目设置，你还可以自定义每个项目的设置。 有关详细信息，请参阅[设置项目选项 &#40;OracleToSQL&#41;](../../ssma/oracle/setting-project-options-oracletosql.md)。  
@@ -120,8 +120,8 @@ SSMA 包含一些设置，用于转换和加载数据库对象、迁移数据以
   
 3.  若要重新连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请在 "**文件**" 菜单上单击 "**重新连接" SQL Server**。  
   
-## <a name="next-step"></a>后续步骤  
-迁移过程的下一步是[连接到 Oracle Database （OracleToSQL）](https://msdn.microsoft.com/e276cdbf-3ebc-4ba8-b40d-a7a42befa2b6)。  
+## <a name="next-step"></a>下一步  
+迁移过程的下一步是[连接到 Oracle Database (OracleToSQL) ](https://msdn.microsoft.com/e276cdbf-3ebc-4ba8-b40d-a7a42befa2b6)。  
   
 ## <a name="see-also"></a>另请参阅  
 [将 Oracle 数据库迁移到 SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  

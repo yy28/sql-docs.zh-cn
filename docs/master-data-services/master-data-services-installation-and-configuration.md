@@ -11,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 777d0b497bae5e52c49fb95e1e7ff3e7387ea676
-ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
+ms.openlocfilehash: d636d13512993d64a9abd88e61412f76790c7590
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85834768"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823745"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services 的安装和配置
 
@@ -130,16 +130,16 @@ ms.locfileid: "85834768"
   
 3.  在 "**数据库服务器**" 页上，指定 SQL Server 实例。 
 
-    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]添加对 SQL Server 托管实例的支持。 将**SQL Server 实例**的值设置为 Azure SQL 数据库托管实例的主机。 例如 `xxxxxx.xxxxxx.database.windows.net`。
+    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]添加对 SQL Server 托管实例的支持。 将**SQL Server 实例**的值设置为托管实例的主机。 例如 `xxxxxx.xxxxxx.database.windows.net`。
 
 4. 选择**身份验证类型**，然后单击 "**测试连接**" 以确认你可以使用所选身份验证类型的凭据连接到数据库。 单击“下一步”。
 
-    >对于 [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] ，若要连接到 AZURE SQL 数据库托管实例，请使用以下身份验证类型之一：
+    >对于 [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] ，若要连接到托管实例，请使用以下身份验证类型之一：
     >
     >- Azure Active Directory 集成身份验证：**当前用户– Active Directory 集成**
     >- SQL Server 身份验证： **SQL Server 帐户**。
     >
-    >在 Azure SQL 数据库托管实例中，用户必须是 `sysadmin` 固定服务器角色的成员。
+    >在 SQL 托管实例中，用户必须是 `sysadmin` 固定服务器角色的成员。
 
     > [!NOTE]  
     >  选择“当前用户 - 集成安全性”作为身份验证类型时，“用户名”框为只读，并且显示登录到计算机的 Windows 用户帐户的名称********。 如果在 Azure 虚拟计算机 (VM) 上运行 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]，“用户名”框显示 VM 名称以及该 VM 上本地管理员帐户的用户名****。 
@@ -204,7 +204,7 @@ ms.locfileid: "85834768"
      ![mds_2016ConfigManager_WebConfig_Completed](../master-data-services/media/mds-2016configmanager-webconfig-completed.png)  
  
      
-15. 单击“应用” 。 显示“配置完成”消息框****。 在消息框中单击“确定”，启动 Web 应用程序****。 网站地址为 "https://*server 名称* / *web 应用程序*/"。 
+15. 单击“应用”。 显示“配置完成”消息框****。 在消息框中单击“确定”，启动 Web 应用程序****。 网站地址为 "https://*server 名称* / *web 应用程序*/"。 
 
 
 ![mds_2016ConfigurationComplete_MessageBox](../master-data-services/media/mds-2016configurationcomplete-messagebox.png) 

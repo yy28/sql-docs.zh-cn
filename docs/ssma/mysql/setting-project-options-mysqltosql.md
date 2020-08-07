@@ -1,5 +1,5 @@
 ---
-title: 设置项目选项（MySQLToSQL） |Microsoft Docs
+title: " (MySQLToSQL) 设置项目选项 |Microsoft Docs"
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 08820d88-e157-4d49-9401-38580dd7ec2d
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 346fcd2ea7f83abcb9a5c23a22cb0eded76acc0e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d5c85c551ba70d28b4af7eb87126c51ef5a4ff75
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67944681"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863518"
 ---
 # <a name="setting-project-options-mysqltosql"></a>设置项目选项 (MySQLToSQL)
 对于每个 SSMA 项目，可以设置项目级别的选项。 这些选项指定如何转换对象、迁移数据的方式以及源数据类型映射到目标数据类型的方式。  在将对象转换为 SQL Server 或 SQL Azure 或将数据迁移到 SQL Server 或 SQL Azure 之前，请验证配置选项是否适用于该项目。  
@@ -28,7 +28,7 @@ SSMA 有五组项目设置：
   
 -   项目信息  
   
--   常规（转换、迁移和 SQL Azure）  
+-   常规 (转换、迁移和 SQL Azure)   
   
 -   Synchronization  
   
@@ -54,13 +54,13 @@ SSMA 有五组项目设置：
   
 -   [&#40;迁移的项目设置&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-migration-mysqltosql.md)  
   
--   [项目设置（GUI）（SSMA 常见）](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)  
+-   [ (GUI 的项目设置)  (SSMA 通用) ](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)  
   
 -   [项目设置 &#40;类型映射&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md)  
   
 -   [&#40;同步的项目设置&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md)  
   
--   [&#40;Azure SQL DB&#41; &#40;MySQLToSQL 的项目设置&#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md)  
+-   [&#40;Azure SQL 数据库的项目设置&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md)  
   
 ## <a name="setting-project-options"></a>设置项目选项  
 在 SSMA 中，可以配置所有项目的默认设置。 这些设置将保存到 SSMA 配置文件，并应用于你创建的任何新项目。  

@@ -1,5 +1,5 @@
 ---
-title: sys. dm_os_job_object （Azure SQL Database） |Microsoft Docs
+title: dm_os_job_object (Azure SQL 数据库) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2020
 ms.service: sql-database
@@ -19,12 +19,12 @@ ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: dfed6ad282fe702b0f7f3fa484476524118805ad
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e421efbd15f15d56b6446fc39f73bcba04478800
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754153"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865275"
 ---
 # <a name="sysdm_os_job_object-azure-sql-database"></a>sys.dm_os_job_object（Azure SQL 数据库）
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "85754153"
 |列|数据类型|说明|  
 |-------------|---------------|-----------------|  
 |cpu_rate|**int**|指定在每个计划间隔期间 SQL Server 线程可以使用的处理器周期的部分。 此值在10000循环计划间隔内报告为可用循环的百分比，乘以逻辑 Cpu 数。 例如，在具有8个逻辑 Cpu 的 SQL Server 实例上，值为800，这意味着线程可以使用 Cpu 的容量完全相同。|
-|cpu_affinity_mask|**bigint**|一个位掩码，用于描述 SQL Server 进程可以在处理器组中使用的逻辑处理器。 例如，cpu_affinity_mask 255 （二进制文件 1111 1111）表示可以使用前8个逻辑处理器。 <br /><br />提供此列是为了向后兼容。 它不报告处理器组，当处理器组包含超过64个逻辑处理器时，报告的值可能不正确。 `process_physical_affinity`改为使用列确定处理器关联。|
+|cpu_affinity_mask|**bigint**|一个位掩码，用于描述 SQL Server 进程可以在处理器组中使用的逻辑处理器。 例如，cpu_affinity_mask 255 (1111 1111 in binary) 意味着可以使用前8个逻辑处理器。 <br /><br />提供此列是为了向后兼容。 它不报告处理器组，当处理器组包含超过64个逻辑处理器时，报告的值可能不正确。 `process_physical_affinity`改为使用列确定处理器关联。|
 |cpu_affinity_group|**int**|SQL Server 使用的处理器组的数目。|
 |memory_limit_mb|**bigint**|作业对象中所有进程的最大提交内存量（以 MB 为单位），可以累积使用 SQL Server。| 
 |process_memory_limit_mb |**bigint**|作业对象中的单个进程（例如 SQL Server）可以使用的最大提交内存量（以 MB 为单位）。|
@@ -49,12 +49,12 @@ ms.locfileid: "85754153"
 |read_operation_count |**bigint**|自创建作业对象之后 SQL Server 颁发的本地磁盘上的读取 IO 操作总数。 |
 |peak_process_memory_used_mb|**bigint**|自创建作业对象以来，作业对象中单个进程使用的内存量（以 MB 为单位），例如 SQL Server。| 
 |peak_job_memory_used_mb|**bigint**|自创建作业对象以来，作业对象中所有进程已累积使用的内存的最大内存量（以 MB 为单位）。|
-|process_physical_affinity|**nvarchar （3072）**|用于描述 SQL Server 进程可在每个处理器组中使用的逻辑处理器的位掩码。 此列中的值由一个或多个值对组成，每个值对括在大括号中。 在每个对中，第一个值是处理器组号，第二个值是该处理器组的关联位掩码。 例如，值 `{{0,a}{1,2}}` 表示处理器组的关联掩码 `0` 为 `a` （ `1010` 在二进制中，指示使用的是处理器2和4），而处理器组的关联掩码 `1` 是 `2` （ `10` 以二进制表示，表示使用的是处理器2）。|
+|process_physical_affinity|**nvarchar (3072) **|用于描述 SQL Server 进程可在每个处理器组中使用的逻辑处理器的位掩码。 此列中的值由一个或多个值对组成，每个值对括在大括号中。 在每个对中，第一个值是处理器组号，第二个值是该处理器组的关联位掩码。 例如，值 `{{0,a}{1,2}}` 表示处理器组的关联掩码 `0` `a` `1010` 以二进制形式 (，这表示) 使用处理器2和4，而处理器组的关联掩码 `1` `2` `10` 以二进制形式 (，这表示使用) 处理器2。|
   
 ## <a name="permissions"></a>权限  
-在 SQL 数据库托管实例上，需要 `VIEW SERVER STATE` 权限。 在 SQL 数据库上，需要在数据库中拥有 `VIEW DATABASE STATE` 权限。  
+在 SQL 托管实例上，需要 `VIEW SERVER STATE` 权限。 在 SQL 数据库上，需要在数据库中拥有 `VIEW DATABASE STATE` 权限。  
  
 ## <a name="see-also"></a>另请参阅  
 
-有关托管实例的信息，请参阅[SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)。
+有关托管实例的信息，请参阅[SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)。
   

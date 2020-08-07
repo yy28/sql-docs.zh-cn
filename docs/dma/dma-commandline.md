@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 62626e8a9f3cfe5bf9272378b26e3bb0ab2f6b1a
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 0b589d9f5bf90b78d6689ff3b37f09f15fe344b8
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925351"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864914"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>从命令行运行数据迁移助手
 
-在版本2.1 及更高版本中，安装数据迁移助手时，它还将在 *% ProgramFiles% \\ Microsoft 数据迁移助手 \\ *中安装 dmacmd。 使用 dmacmd 在无人参与模式下评估数据库，并将结果输出到 JSON 或 CSV 文件。 评估多个数据库或大型数据库时，此方法特别有用。 
+在版本2.1 及更高版本中，安装数据迁移助手时，它还将在 *% ProgramFiles% \\ Microsoft 数据迁移助手 \\ *中安装 dmacmd.exe。 使用 dmacmd.exe 在无人参与模式下评估数据库，并将结果输出到 JSON 或 CSV 文件。 评估多个数据库或大型数据库时，此方法特别有用。 
 
 > [!NOTE]
-> Dmacmd 仅支持运行评估。 此时不支持迁移。
+> Dmacmd.exe 仅支持运行评估。 此时不支持迁移。
 
-## <a name="assessments-using-the-command-line-interface-cli"></a>使用命令行接口（CLI）进行评估
+## <a name="assessments-using-the-command-line-interface-cli"></a>使用命令行界面 (CLI 进行评估) 
 
 ```
 DmaCmd.exe /AssessmentName="string"
@@ -40,37 +40,37 @@ DmaCmd.exe /AssessmentName="string"
 /AssessmentResultJson="file"|/AssessmentResultCsv="file"
 ```
 
-|参数  |说明  | 必需（是/否）
+|参数  |描述  | 必需 (Y/N) 
 |---------|---------|---------------|
-| `/help or /?`     | 如何使用 dmacmd 帮助文本        | N
+| `/help or /?`     | 如何使用 dmacmd.exe 帮助文本        | N
 |`/AssessmentName`     |   评估项目的名称   | 是
-|`/AssessmentDatabases`     | 用空格分隔的连接字符串列表。 数据库名称（初始目录）区分大小写。 | 是
-|`/AssessmentSourcePlatform`     | 评估的源平台： <br>支持的评估值： SqlOnPrem、RdsSqlServer （默认值） <br>目标准备情况评估支持的值： SqlOnPrem、RdsSqlServer （默认）、Cassandra （预览版）   | N
-|`/AssessmentTargetPlatform`     | 评估的目标平台：  <br> 支持的评估值： AzureSqlDatabase、ManagedSqlServer、SqlServer2012、2014、Sqlserver2016-ssei-expr、SqlServerLinux2017 和 SqlServerWindows2017 （默认值）  <br> 目标准备情况评估支持的值： ManagedSqlServer （默认值）、CosmosDB （预览版）   | N
+|`/AssessmentDatabases`     | 用空格分隔的连接字符串列表。 数据库名称 (初始目录) 区分大小写。 | 是
+|`/AssessmentSourcePlatform`     | 评估的源平台： <br>支持的评估值： SqlOnPrem、RdsSqlServer (默认值)  <br>目标准备情况评估支持的值： SqlOnPrem、RdsSqlServer (默认) 、Cassandra (预览)    | N
+|`/AssessmentTargetPlatform`     | 评估的目标平台：  <br> 支持的评估值： AzureSqlDatabase、ManagedSqlServer、SqlServer2012、2014、Sqlserver2016-ssei-expr、SqlServerLinux2017 和 SqlServerWindows2017 (默认值)   <br> 目标准备情况评估支持的值： ManagedSqlServer (默认) ，CosmosDB (预览)    | N
 |`/AssessmentEvaluateFeatureParity`  | 运行功能奇偶校验规则。 如果源平台为 RdsSqlServer，则目标平台 AzureSqlDatabase 不支持功能奇偶校验评估  | N
-|`/AssessmentEvaluateCompatibilityIssues`     | 运行兼容性规则  | 是 <br> （需要 AssessmentEvaluateCompatibilityIssues 或 AssessmentEvaluateRecommendations。）
-|`/AssessmentEvaluateRecommendations`     | 运行功能建议        | 是 <br> （需要 AssessmentEvaluateCompatibilityIssues 或 AssessmentEvaluateRecommendations）
+|`/AssessmentEvaluateCompatibilityIssues`     | 运行兼容性规则  | 是 <br> 需要 (AssessmentEvaluateCompatibilityIssues 或 AssessmentEvaluateRecommendations。 ) 
+|`/AssessmentEvaluateRecommendations`     | 运行功能建议        | 是 <br> 需要 (AssessmentEvaluateCompatibilityIssues 或 AssessmentEvaluateRecommendations) 
 |`/AssessmentOverwriteResult`     | 覆盖结果文件    | N
-|`/AssessmentResultJson`     | JSON 结果文件的完整路径     | 是 <br> （需要 AssessmentResultJson 或 AssessmentResultCsv）
-|`/AssessmentResultCsv`    | CSV 结果文件的完整路径   | 是 <br> （需要 AssessmentResultJson 或 AssessmentResultCsv）
+|`/AssessmentResultJson`     | JSON 结果文件的完整路径     | 是 <br> 需要 (AssessmentResultJson 或 AssessmentResultCsv) 
+|`/AssessmentResultCsv`    | CSV 结果文件的完整路径   | 是 <br> 需要 (AssessmentResultJson 或 AssessmentResultCsv) 
 |`/AssessmentResultDma`    | Dma 结果文件的完整路径   | N
 |`/Action`    | 使用 SkuRecommendation 获取 SKU 建议。 <br> 使用 AssessTargetReadiness 来执行目标准备情况评估。 <br> 使用 AzureMigrateUpload 将 AzzessmentResultInputFolder 中的所有 DMA 评估文件上传到 Azure Migrate。操作类型用法/Action = AzureMigrateUpload   | N
-|`/SourceConnections`    | 连接字符串的空格分隔列表。 数据库名称（初始目录）是可选的。 如果未提供任何数据库名称，则对该源上的所有数据库进行评估。   | 是 <br> （如果 Action 为 "AssessTargetReadiness"，则为必需）
-|`/TargetReadinessConfiguration`    | 描述名称、源连接和结果文件的值的 XML 文件的完整路径。   | 是 <br> （需要 TargetReadinessConfiguration 或 SourceConnections）
+|`/SourceConnections`    | 连接字符串的空格分隔列表。 数据库名称 (初始目录) 是可选的。 如果未提供任何数据库名称，则对该源上的所有数据库进行评估。   | 是 <br> 如果操作是 "AssessTargetReadiness"，则 (必需的 ) 
+|`/TargetReadinessConfiguration`    | 描述名称、源连接和结果文件的值的 XML 文件的完整路径。   | 是 <br> 需要 (TargetReadinessConfiguration 或 SourceConnections) 
 |`/FeatureDiscoveryReportJson`    | 功能发现 JSON 报表的路径。 如果生成此文件，则可以使用它再次运行目标就绪评估，而无需连接到源。 | N
 |`/ImportFeatureDiscoveryReportJson`    | 先前创建的功能发现 JSON 报表的路径。 将使用此文件，而不是源连接。   | N
 |`/EnableAssessmentUploadToAzureMigrate`    | 允许将评估结果上传和发布到 Azure Migrate   | N
-|`/AzureCloudEnvironment`    |选择要连接到的 Azure 云环境，默认为 Azure 公有云。 支持的值： Azure （默认值）、AzureChina、AzureGermany、AzureUSGovernment。   | N 
-|`/SubscriptionId`    |Azure 订阅 id。   | 是 <br> （如果指定了 EnableAssessmentUploadToAzureMigrate 参数，则为必需）
-|`/AzureMigrateProjectName`    |要将评估结果上载到 Azure Migrate 项目名称。   | 是 <br> （如果指定了 EnableAssessmentUploadToAzureMigrate 参数，则为必需）
-|`/ResourceGroupName`    |Azure Migrate 资源组名称。   | 是 <br> （如果指定了 EnableAssessmentUploadToAzureMigrate 参数，则为必需）
-|`/AssessmentResultInputFolder`    |包含的输入文件夹路径。要上载到 Azure Migrate 的 DMA 评估文件。   | 是 <br> （如果操作为 AzureMigrateUpload，则为必需）
+|`/AzureCloudEnvironment`    |选择要连接到的 Azure 云环境，默认为 Azure 公有云。 支持的值： Azure (默认) 、AzureChina、AzureGermany、AzureUSGovernment。   | N 
+|`/SubscriptionId`    |Azure 订阅 ID。   | 是 <br> 如果指定了 EnableAssessmentUploadToAzureMigrate 参数，则 (必需的) 
+|`/AzureMigrateProjectName`    |要将评估结果上载到 Azure Migrate 项目名称。   | 是 <br> 如果指定了 EnableAssessmentUploadToAzureMigrate 参数，则 (必需的) 
+|`/ResourceGroupName`    |Azure Migrate 资源组名称。   | 是 <br> 如果指定了 EnableAssessmentUploadToAzureMigrate 参数，则 (必需的) 
+|`/AssessmentResultInputFolder`    |包含的输入文件夹路径。要上载到 Azure Migrate 的 DMA 评估文件。   | 是 <br> 如果操作为 AzureMigrateUpload，则 (必需) 
 
 
 
 ## <a name="examples-of-assessments-using-the-cli"></a>使用 CLI 评估的示例
 
-**Dmacmd**
+**Dmacmd.exe**
 
   `Dmacmd.exe /? or DmaCmd.exe /help`
 
@@ -243,7 +243,7 @@ DmaCmd.exe /Action=AssessTargetReadiness
   <OverwriteResult>true</OverwriteResult><!-- or false -->
 </TargetReadinessConfiguration>
 ```
-**评估并上传到 Azure 公有云中 Azure Migrate （默认值）**
+** (默认) 评估并上传到 Azure 公有云中 Azure Migrate**
 ```
 DmaCmd.exe
 /Action="Assess" 
@@ -264,12 +264,12 @@ DmaCmd.exe
 /EnableAssessmentUploadToAzureMigrate
 
 ```
-**将 DMA 评估文件批量上传到 Azure 公有云中 Azure Migrate （默认值）**
+**批量上传 DMA 评估文件以在 Azure 公有云中 Azure Migrate (默认) **
 ```
 DmaCmd.exe 
 /Action="AzureMigrateUpload" 
 /AssessmentResultInputFolder="C:\assessments\results" 
-/SubscriptionId="subscription Id" 
+/SubscriptionId="Subscription Id" 
 /AzureMigrateProjectName="Azure Migrate project name" 
 /ResourceGroupName="Resource Group name" 
 /AzureAuthenticationInteractiveAuthentication
@@ -277,9 +277,9 @@ DmaCmd.exe
 /EnableAssessmentUploadToAzureMigrate
 
 ```
-## <a name="azure-sql-databasemanaged-instance-sku-recommendations-using-the-cli"></a>使用 CLI 的 Azure SQL 数据库/托管实例 SKU 建议
+## <a name="azure-sql-database--azure-sql-managed-instance-sku-recommendations-using-the-cli"></a>使用 CLI 的 azure SQL 数据库/Azure SQL 托管实例 SKU 建议
 
-这些命令支持 Azure SQL 数据库单一数据库和托管实例部署选项的建议。
+这些命令支持 Azure SQL 数据库单一数据库和 Azure SQL 托管实例部署选项的建议。
 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
@@ -290,33 +290,33 @@ DmaCmd.exe
 /SkuRecommendationPreventPriceRefresh=true 
 ```
 
-|参数  |说明  | 必需（是/否）
+|参数  |描述  | 必需 (Y/N) 
 |---------|---------|---------------|
 |`/Action=SkuRecommendation` | 使用 DMA 命令行执行 SKU 评估 | 是
 |`/SkuRecommendationInputDataFilePath` | 从承载数据库的计算机收集到的性能计数器文件的完整路径 | 是
-|`/SkuRecommendationTsvOutputResultsFilePath` | TSV 结果文件的完整路径 | 是 <br> （需要 TSV 或 JSON 或 HTML 文件路径）
-|`/SkuRecommendationJsonOutputResultsFilePath` | JSON 结果文件的完整路径 | 是 <br> （需要 TSV 或 JSON 或 HTML 文件路径）
-|`/SkuRecommendationHtmlResultsFilePath` | HTML 结果文件的完整路径 | 是 <br> （需要 TSV 或 JSON 或 HTML 文件路径）
-|`/SkuRecommendationPreventPriceRefresh` | 防止价格刷新发生。 如果在脱机模式下运行（例如 true），则使用。 | 是 <br> （为静态价格选择此参数或需要选择以下所有参数以获取最新价格）
-|`/SkuRecommendationCurrencyCode` | 显示价格的货币（例如 "USD"） | 是 <br> （适用于最新价格）
-|`/SkuRecommendationOfferName` | 产品/服务名称（例如，"BC-OP-NT-AZR-Ms-azr-0003p"）。 有关详细信息，请参阅[Microsoft Azure 产品/服务详细](https://azure.microsoft.com/support/legal/offer-details/)信息页。 | 是 <br> （适用于最新价格）
-|`/SkuRecommendationRegionName` | 区域名称（例如 "WestUS"） | 是 <br> （适用于最新价格）
-|`/SkuRecommendationSubscriptionId` | 订阅的 ID。 | 是 <br> （适用于最新价格）
-|`/SkuRecommendationDatabasesToRecommend` | 要为其建议的数据库的以空格分隔的列表（例如，"Database1" "Database2" "Database3"）。 名称区分大小写，必须用双引号括起来。 如果省略，则提供所有数据库的建议。 | N
-|`/AzureAuthenticationTenantId` | 身份验证租户。 | 是 <br> （适用于最新价格）
-|`/AzureAuthenticationClientId` | 用于身份验证的 AAD 应用的客户端 ID。 | 是 <br> （适用于最新价格）
-|`/AzureAuthenticationInteractiveAuthentication` | 设置为 true 可弹出窗口。 | 是 <br> （适用于最新价格） <br>（选择3个身份验证选项中的一个选项-选项1）
-|`/AzureAuthenticationCertificateStoreLocation` | 设置为证书存储位置（例如 "CurrentUser"）。 | 是 <br>（适用于最新价格） <br> （选择3个身份验证选项之一-选项2）
-|`/AzureAuthenticationCertificateThumbprint` | 设置为证书指纹。 | 是 <br> （适用于最新价格） <br>（选择3个身份验证选项之一-选项2）
-|`/AzureAuthenticationToken` | 设置为证书标记。 | 是 <br> （适用于最新价格） <br>（选择3个身份验证选项之一-选项3）
+|`/SkuRecommendationTsvOutputResultsFilePath` | TSV 结果文件的完整路径 | 是 <br>  (要求 TSV 或 JSON 或 HTML 文件路径) 
+|`/SkuRecommendationJsonOutputResultsFilePath` | JSON 结果文件的完整路径 | 是 <br>  (要求 TSV 或 JSON 或 HTML 文件路径) 
+|`/SkuRecommendationHtmlResultsFilePath` | HTML 结果文件的完整路径 | 是 <br>  (要求 TSV 或 JSON 或 HTML 文件路径) 
+|`/SkuRecommendationPreventPriceRefresh` | 防止价格刷新发生。 如果在脱机模式下运行，则使用 (例如 true) 。 | 是 <br>  (为 "静态价格" 选择此参数，或者需要选择以下所有参数以获取最新价格) 
+|`/SkuRecommendationCurrencyCode` | 显示价格的货币 (例如 "USD" )  | 是 <br> 最新价格的 () 
+|`/SkuRecommendationOfferName` | 提议名称 (例如 "BC-OP-NT-AZR-Ms-azr-0003p" ) 。 有关详细信息，请参阅[Microsoft Azure 产品/服务详细](https://azure.microsoft.com/support/legal/offer-details/)信息页。 | 是 <br> 最新价格的 () 
+|`/SkuRecommendationRegionName` | 区域名称 (例如 "WestUS" )  | 是 <br> 最新价格的 () 
+|`/SkuRecommendationSubscriptionId` | 订阅的 ID。 | 是 <br> 最新价格的 () 
+|`/SkuRecommendationDatabasesToRecommend` | 要 (推荐的以空格分隔的数据库列表，例如 "Database1" "Database2" "Database3" ) 。 名称区分大小写，必须用双引号括起来。 如果省略，则提供所有数据库的建议。 | N
+|`/AzureAuthenticationTenantId` | 身份验证租户。 | 是 <br> 最新价格的 () 
+|`/AzureAuthenticationClientId` | 用于身份验证的 AAD 应用的客户端 ID。 | 是 <br> 最新价格的 () 
+|`/AzureAuthenticationInteractiveAuthentication` | 设置为 true 可弹出窗口。 | 是 <br> 最新价格的 ()  <br> (选择3个身份验证选项中的一个选项-选项 1) 
+|`/AzureAuthenticationCertificateStoreLocation` | 设置为证书存储位置 (例如 "CurrentUser" ) 。 | 是 <br>最新价格的 ()  <br>  (选择3个身份验证选项之一-选项 2) 
+|`/AzureAuthenticationCertificateThumbprint` | 设置为证书指纹。 | 是 <br> 最新价格的 ()  <br> (选择3个身份验证选项之一-选项 2) 
+|`/AzureAuthenticationToken` | 设置为证书标记。 | 是 <br> 最新价格的 ()  <br> (选择3个身份验证选项之一-选项 3) 
 
 ## <a name="examples-of-sku-assessments-using-the-cli"></a>使用 CLI 评估 SKU 的示例
 
-**Dmacmd**
+**Dmacmd.exe**
 
 `Dmacmd.exe /? or DmaCmd.exe /help`
 
-**带有价格刷新的 Azure SQL DB/MI SKU 建议（获取最新价格）-交互式身份验证** 
+**Azure SQL Database/Azure SQL 托管实例带有价格刷新的 SKU 建议 (获取最新价格) -交互身份验证** 
 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
@@ -333,7 +333,7 @@ DmaCmd.exe
 /AzureAuthenticationInteractiveAuthentication=true 
 ```
 
-**带有价格刷新的 Azure SQL DB/MI SKU 建议（获取最新价格）-证书身份验证**
+**Azure SQL Database/Azure SQL 托管实例带有价格刷新的 SKU 建议 (获取最新价格) 证书身份验证**
 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
@@ -351,7 +351,7 @@ DmaCmd.exe
 /AzureAuthenticationCertificateThumbprint=<Your Certificate Thumbprint>  
 ```
 
-**Azure SQL DB SKU/MI 建议和价格刷新（获取最新价格）-令牌身份验证并指定要建议的数据库**
+**带有价格刷新的 azure SQL 数据库/Azure SQL 托管实例建议 (获取最新价格) 令牌身份验证，并指定要建议的数据库**
   
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
@@ -369,7 +369,7 @@ DmaCmd.exe
 /AzureAuthenticationToken=<Your Authentication Token> 
 ```
 
-**不使用价格刷新的 Azure SQL DB/MI SKU 建议（使用静态价格）** 
+**Azure SQL Database/Azure SQL 托管实例不含价格刷新的 SKU 建议 (使用静态价格) ** 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
 /SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"

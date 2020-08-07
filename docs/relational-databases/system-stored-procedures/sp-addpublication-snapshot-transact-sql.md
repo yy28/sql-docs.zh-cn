@@ -1,5 +1,5 @@
 ---
-title: sp_addpublication_snapshot （Transact-sql） |Microsoft Docs
+title: sp_addpublication_snapshot (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/15/2018
 ms.prod: sql
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 192b6214-df6e-44a3-bdd4-9d933a981619
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 68540299b14af875f6625771d9d47f81f048f43d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d8b5f827126afca81baeafe5f5c35e3d94666fcc
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716533"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865255"
 ---
 # <a name="sp_addpublication_snapshot-transact-sql"></a>sp_addpublication_snapshot (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -64,7 +64,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |值|说明|  
 |-----------|-----------------|  
 |**1**|一次。|  
-|**4** （默认值）|每天。|  
+|**4** (默认值) |每天。|  
 |**8**|每周。|  
 |**16**|每月。|  
 |**32**|每月，相对于频率间隔。|  
@@ -76,8 +76,8 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |frequency_type 的值|对 frequency_interval 的影响|  
 |------------------------------|-----------------------------------|  
 |**1**|*frequency_interval*未使用。|  
-|**4** （默认值）|每*frequency_interval*天，默认为每天。|  
-|**8**|*frequency_interval*为以下一个或多个（与[&#124; （位或）](../../t-sql/language-elements/bitwise-or-transact-sql.md)逻辑运算符结合使用：<br /><br /> **1** = 星期日 &#124;<br /><br /> **2** = 星期一 &#124;<br /><br /> **4** = 星期二 &#124;<br /><br /> **8** = 星期三 &#124;<br /><br /> **16** = 星期四 &#124;<br /><br /> **32** = 星期五 &#124;<br /><br /> **64** = 星期六|  
+|**4** (默认值) |每*frequency_interval*天，默认为每天。|  
+|**8**|*frequency_interval*是以下 (中的一个或多个[&#124; (按位 or) ](../../t-sql/language-elements/bitwise-or-transact-sql.md)逻辑运算符) ：<br /><br /> **1** = 星期日 &#124;<br /><br /> **2** = 星期一 &#124;<br /><br /> **4** = 星期二 &#124;<br /><br /> **8** = 星期三 &#124;<br /><br /> **16** = 星期四 &#124;<br /><br /> **32** = 星期五 &#124;<br /><br /> **64** = 星期六|  
 |**16**|*Frequency_interval*月中的第几天。|  
 |**32**|*frequency_interval*是以下项之一：<br /><br /> **1** = 星期日 &#124;<br /><br /> **2** = 星期一 &#124;<br /><br /> **3** = 星期二 &#124;<br /><br /> **4** = 星期三 &#124;<br /><br /> **5** = 星期四 &#124;<br /><br /> **6** = 星期五 &#124;<br /><br /> **7** = 星期六 &#124;<br /><br /> **8** = 日 &#124;<br /><br /> **9** = 工作日 &#124;<br /><br /> **10** = 周末|  
 |**64**|*frequency_interval*未使用。|  
@@ -89,7 +89,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |-----------|-----------------|  
 |**1**|一次|  
 |**2**|秒|  
-|**4** （默认值）|Minute|  
+|**4** (默认值) |Minute|  
 |**8**|小时|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday*的间隔。 *frequency_subday_interval*的值为**int**，默认值为5，表示每5分钟一次。  
@@ -106,7 +106,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
   
 `[ @active_end_time_of_day = ] active_end_time_of_day`停止计划快照代理的时间，格式为 HHMMSS。 *active_end_time_of_day*的值为**int**，默认值为235959，表示 11:59:59 P.M.。 以24小时制计量。  
   
-`[ @snapshot_job_name = ] 'snapshot_agent_name'`如果正在使用现有作业，则为现有快照代理作业名称。 *snapshot_agent_name*的默认值为**nvarchar （100）** ，默认值为 NULL。 此参数只限内部使用，创建新发布时不应指定它。 如果指定*snapshot_agent_name* ，则*job_login*和*job_password*必须为 NULL。  
+`[ @snapshot_job_name = ] 'snapshot_agent_name'`如果正在使用现有作业，则为现有快照代理作业名称。 *snapshot_agent_name*为**nvarchar (100) ** ，默认值为 NULL。 此参数只限内部使用，创建新发布时不应指定它。 如果指定*snapshot_agent_name* ，则*job_login*和*job_password*必须为 NULL。  
   
 `[ @publisher_security_mode = ] publisher_security_mode`连接到发布服务器时代理所使用的安全模式。 *publisher_security_mode*为**smallint**，默认值为1。 **0**指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证， **1**指定 Windows 身份验证。 对于非发布服务器，必须指定**0**值 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
@@ -117,7 +117,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 > [!IMPORTANT]  
 >  请不要将身份验证信息存储在脚本文件中。 为了提高安全性，建议您在运行时提供登录名和密码。  
   
-`[ @job_login = ] 'job_login'`运行代理时所用的帐户的登录名。 在 Azure SQL 数据库托管实例上，使用 SQL Server 帐户。 *job_login*为**nvarchar （257）**，默认值为 NULL。 此帐户始终用于到分发服务器的代理连接。 创建新的快照代理作业时，必须提供此参数。  
+`[ @job_login = ] 'job_login'`运行代理时所用的帐户的登录名。 在 Azure SQL 托管实例上，使用 SQL Server 帐户。 *job_login*为**nvarchar (257) **，默认值为 NULL。 此帐户始终用于到分发服务器的代理连接。 创建新的快照代理作业时，必须提供此参数。  
   
 > [!NOTE]
 >  对于非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器，此登录名必须与[&#40;transact-sql&#41;sp_adddistpublisher](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)中指定的相同。  
@@ -133,7 +133,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 >  在发布服务器上创建快照代理时，不应使用*publisher* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或**1** (失败)   
   
 ## <a name="remarks"></a>备注  
  **sp_addpublication_snapshot**用于快照复制、事务复制和合并复制。  

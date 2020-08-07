@@ -1,5 +1,5 @@
 ---
-title: 在 SQL Server 上安装 SSMA 组件（SybaseToSQL） |Microsoft Docs
+title: 在 SQL Server 上安装 SSMA 组件 (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 07/14/2020
 ms.prod: sql
@@ -9,20 +9,20 @@ ms.topic: conceptual
 ms.assetid: 5ad9e12c-2cdb-4dd2-8703-05a23242d19d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 06bddd3929efa4477039300f38fbdcf301680085
-ms.sourcegitcommit: fd7b268a34562d70d46441f689543ecce7df2e4d
+ms.openlocfilehash: 1c66255f57a69db0807ab1620cafd60444f296c8
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86411595"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865385"
 ---
-# <a name="installing-ssma-components-on-sql-server-sybasetosql"></a>在 SQL Server 上安装 SSMA 组件（SybaseToSQL）
+# <a name="installing-ssma-components-on-sql-server-sybasetosql"></a>在 SQL Server 上安装 SSMA 组件 (SybaseToSQL) 
 
 除了安装 SSMA 外，还必须在运行的计算机上安装组件，才能使用服务器端数据迁移 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 这些组件包括支持数据迁移的 SSMA 扩展包和用于启用服务器到服务器连接的 Sybase 提供程序。
 
 ## <a name="ssma-for-sybase-extension-pack"></a>用于 Sybase 扩展包的 SSMA
 
-SSMA 扩展包将数据库、 **sysdb**和**ssmatesterdb_syb**添加到指定的实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 **Sysdb**数据库包含迁移数据所需的表和存储过程。 **Ssmatester_syb**数据库包含架构**ssma_sybase_utilities**，在该架构中创建 ssma 测试器组件使用的对象（表、触发器和视图）。
+SSMA 扩展包将数据库、 **sysdb**和**ssmatesterdb_syb**添加到指定的实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 **Sysdb**数据库包含迁移数据所需的表和存储过程。 **Ssmatester_syb**数据库包含架构**ssma_sybase_utilities**，在这种情况下，将在其中创建 ssma 测试器组件使用的对象 (表、触发器和视图) 。
 
 此外，在将数据迁移到时 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，SSMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会在服务器端数据迁移引擎用于迁移数据时创建代理作业。
 
@@ -70,7 +70,7 @@ SSMA 扩展包将数据库、 **sysdb**和**ssmatesterdb_syb**添加到指定的
 
 11. 在下一页上，选择 "**安装实用程序数据库*n* " 并安装扩展包库**，其中*n*是版本号。 如果计划使用测试人员功能，请选择 "**安装测试人员数据库**" 复选框，然后选择 "**下一步**"。
 
-    将使用在此数据库中创建数据迁移所需的表和存储过程来创建**sysdb**数据库。
+    **Sysdb**数据库是使用 (在此数据库中创建的，这些表和存储过程是使用) 在此数据库中创建的。
 
     如果选中了 "**安装测试器数据库**" 选项，则将创建**ssmatesterdb_syb**数据库。
 

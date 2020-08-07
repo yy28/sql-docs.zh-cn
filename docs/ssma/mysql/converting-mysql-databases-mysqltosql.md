@@ -1,5 +1,5 @@
 ---
-title: 转换 MySQL 数据库（MySQLToSQL） |Microsoft Docs
+title: 将 MySQL 数据库转换 (MySQLToSQL) |Microsoft Docs
 description: 了解如何在连接和设置项目和数据映射选项后，通过 SSMA 将 MySQL 数据库对象转换为 SQL Server 或 Azure SQL 数据库对象。
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ac21850b-fb32-4704-9985-5759b7c688c7
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: ce84ae70a1b09cd744528b132dcc7052cdde8816
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: c6f8e53a13d5950138f71ed9b4858419eb70f07f
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394272"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823282"
 ---
 # <a name="converting-mysql-databases-mysqltosql"></a>转换 MySQL 数据库 (MySQLToSQL)
 连接到 MySQL、连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure，并设置项目和数据映射选项后，可以将 MySQL 数据库对象转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 数据库对象。  
@@ -39,7 +39,7 @@ ms.locfileid: "87394272"
 |数据库转换|作为 MySQL 对象的数据库不是由 SSMA for MySQL 直接转换而成。 MySQL 数据库处理起来更像架构名称，并且在转换过程中所有物理参数都将丢失。 SSMA for MySQL 使用[映射 mysql SQL Server 数据库 &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)将对象从 MySQL 数据库映射到适当的 SQL Server 数据库/架构对。|  
 |触发器转换|**SSMA 基于以下规则创建触发器：**<br /><br />在触发器转换为 INSTEAD of T-sql 触发器之前<br /><br />触发器在 T-sql 触发器转换为之后，在 T-sql 触发器中，每行都有或不包含迭代。|  
 |视图转换|SSMA 创建具有依赖对象的视图|  
-|语句转换|-每个 SQL 语句对象可能包含单个 MySQL 语句（如 DDL、DML 和其他类型的语句）或 BEGIN .。。结束块。<br />-   多**语句转换： BEGIN .。。结束块转换**SQL 语句还可以包含 BEGIN .。。END 块，如过程、函数或触发器定义中的一个。 对于单个 MySQL 语句对象，应以相同的方式转换这些块。|  
+|语句转换|-每个 SQL 语句对象可能包含单个 MySQL 语句 (如 DDL、DML 和其他类型的语句) 或 BEGIN .。。结束块。<br />-   多**语句转换： BEGIN .。。结束块转换**SQL 语句还可以包含 BEGIN .。。END 块，如过程、函数或触发器定义中的一个。 对于单个 MySQL 语句对象，应以相同的方式转换这些块。|  
   
 ## <a name="converting-mysql-database-objects"></a>转换 MySQL 数据库对象  
 若要转换 MySQL 数据库对象，请首先选择要转换的对象，然后让 SSMA 执行转换。 若要在转换过程中查看输出消息，请在 "**视图**" 菜单上选择 "**输出**"。  
@@ -109,5 +109,5 @@ ms.locfileid: "87394272"
 迁移过程的下一步是将[转换的数据库对象加载到 SQL Server &#40;MySQLToSQL 中&#41;](../../ssma/mysql/loading-converted-database-objects-into-sql-server-mysqltosql.md)  
   
 ## <a name="see-also"></a>另请参阅  
-[将 MySQL 数据库迁移到 SQL Server-Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[将 MySQL 数据库迁移到 SQL Server-Azure SQL 数据库 &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

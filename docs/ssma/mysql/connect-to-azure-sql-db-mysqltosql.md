@@ -1,5 +1,5 @@
 ---
-title: 连接到 Azure SQL DB （MySQLToSQL） |Microsoft Docs
+title: " (MySQLToSQL) 连接到 Azure SQL 数据库 |Microsoft Docs"
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 81623d27-25af-444f-9779-1edb8c6fb470
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 12da1aa42f468b92e1833410e635183aabf3a384
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6cf82511b7819b6c7b0451facc85ef35dc8cf9fc
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68103237"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823790"
 ---
-# <a name="connect-to-azure-sql-db-mysqltosql"></a>连接到 Azure SQL DB (MySQLToSQL)
+# <a name="connect-to-azure-sql-database-mysqltosql"></a>连接到 Azure SQL 数据库 (MySQLToSQL) 
 使用 "连接到 SQL Azure" 对话框连接到要迁移的 SQL Azure 数据库。  
   
 若要访问此对话框，请在 "**文件**" 菜单上，选择 "**连接到 SQL Azure**"。 如果以前已连接，则该命令将**重新连接到 SQL Azure。**  
@@ -54,7 +54,7 @@ SSMA 建议将加密连接 SQL Azure。
   
 2.  如果没有数据库，将显示以下两个菜单项。  
   
-    1.  **（未找到数据库）** 已禁用并且始终灰显  
+    1.  ** (找不到任何数据库) 该数据库**处于禁用状态并始终灰显  
   
     2.  **创建新数据库**，该数据库仅在 SQL Azure 帐户上没有数据库时才启用。 单击此菜单项时，将显示 "创建 Azure 数据库" 对话框，其中包含数据库名称和大小。  
   

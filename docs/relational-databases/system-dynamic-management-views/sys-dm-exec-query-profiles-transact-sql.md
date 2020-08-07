@@ -1,5 +1,5 @@
 ---
-title: sys. dm_exec_query_profiles （Transact-sql） |Microsoft Docs
+title: sys. dm_exec_query_profiles (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/25/2019
 ms.prod: sql
@@ -20,12 +20,12 @@ ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8efc79ed772d92986af87a707cf64f4c0f9cbdcf
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 51dd6f1d831931fcd8e14e38a3ca94ae440dae1a
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442549"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865365"
 ---
 # <a name="sysdm_exec_query_profiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -56,8 +56,8 @@ ms.locfileid: "87442549"
 |first_row_time|**bigint**|打开第一行时的时间戳（毫秒）。|  
 |last_row_time|**bigint**|打开最后一行时的时间戳（毫秒）。|  
 |close_time|**bigint**|关闭时的时间戳（毫秒）。|  
-|elapsed_time_ms|**bigint**|到目前为止，目标节点的操作所用的总运行时间（毫秒）。|  
-|cpu_time_ms|**bigint**|到目前为止，目标节点的操作使用的总 CPU 时间（毫秒）。|  
+|elapsed_time_ms|**bigint**|到目前为止，目标节点的操作所用的总运行时间 (（以毫秒为单位）) 。|  
+|cpu_time_ms|**bigint**|到目前为止，目标节点的操作使用的总 CPU 时间 (（以毫秒为单位）) 。|  
 |database_id|**smallint**|包含要对其进行读写的对象的数据库的 ID。|  
 |object_id|**int**|要对其进行读写的对象的标识符。 引用 sys.objects.object_id。|  
 |index_id|**int**|打开其行级的索引（如果有）。|  
@@ -89,7 +89,7 @@ ms.locfileid: "87442549"
 > 正在调查的查询必须在启用了查询分析基础结构**后**开始，在查询开始后启用它将不会在中生成结果 `sys.dm_exec_query_profiles` 。 有关如何启用查询分析基础结构的详细信息，请参阅[查询分析基础结构](../../relational-databases/performance/query-profiling-infrastructure.md)。
 
 ## <a name="permissions"></a>权限  
-在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 托管实例上，要求具有 `VIEW DATABASE STATE` 数据库角色的权限和成员身份 `db_owner` 。   
+在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 和 AZURE SQL 托管实例上，需要 `VIEW DATABASE STATE` 数据库角色的权限和成员身份 `db_owner` 。   
 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
    
 ## <a name="examples"></a>示例  

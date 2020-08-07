@@ -1,5 +1,5 @@
 ---
-title: 在 SQL Server 上安装 SSMA 组件（MySQLToSql） |Microsoft Docs
+title: 在 SQL Server 上安装 SSMA 组件 (MySQLToSql) |Microsoft Docs
 description: 在运行 SQL Server 的服务器上安装组件以支持 SSMA 的 MySQL 数据库转换，包括 SSMA 扩展包和 MySQL 提供程序。
 ms.prod: sql
 ms.custom: ''
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 6772d0c5-258f-4d7b-afb0-b5f810e71af1
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 9b598915222610470bc9cf2e618cea65d725c5fb
-ms.sourcegitcommit: fd7b268a34562d70d46441f689543ecce7df2e4d
+ms.openlocfilehash: a38808c64209edb094c986e63305707a0a834edb
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86411271"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823663"
 ---
-# <a name="installing-ssma-components-on-sql-server-mysqltosql"></a>在 SQL Server 上安装 SSMA 组件（MySQLToSql）
+# <a name="installing-ssma-components-on-sql-server-mysqltosql"></a>在 SQL Server 上安装 SSMA 组件 (MySQLToSql) 
 
 除了安装 SSMA 外，还必须在运行的计算机上安装组件 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 这些组件包括支持数据迁移的 SSMA 扩展包以及用于启用服务器到服务器连接的 MySQL 提供程序。
 
@@ -72,7 +72,7 @@ SSMA 扩展包将数据库**sysdb**添加到指定的实例 [!INCLUDE[ssNoVersio
 
 11. 在下一个对话框中，选择 "**安装实用程序数据库*n* " 并安装扩展包库**，其中*n*是版本号，然后单击 "**下一步**"。
 
-    将使用在此数据库中创建数据迁移所需的表和存储过程来创建**sysdb**数据库。
+    **Sysdb**数据库是使用 (在此数据库中创建的，这些表和存储过程是使用) 在此数据库中创建的。
 
 12. 若要将实用工具安装到的另一个实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请选择 **"是"**，然后单击 "**下一步**"。 或者，若要退出向导，请单击 "**否**"。
 

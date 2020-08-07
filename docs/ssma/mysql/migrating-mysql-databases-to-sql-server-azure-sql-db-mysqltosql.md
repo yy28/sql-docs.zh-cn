@@ -1,6 +1,6 @@
 ---
 title: 将 MySQL 数据库迁移到 SQL Server-Azure SQL 数据库 |Microsoft Docs
-description: 使用此建议过程将 MySQL 数据库迁移到使用 SQL Server 迁移助手的 SQL Server 或 Azure SQL 数据库（SSMA）。
+description: 使用此推荐的过程，使用 SQL Server 迁移助手 (SSMA) 将 MySQL 数据库迁移到 SQL Server 或 Azure SQL 数据库。
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 8006f9a0-394d-4238-8dc5-44255134628b
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 0daee899775b5a8bb3a0e4b6ee0eef4a93eca00b
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: c6f360e67621288e6c04381931a7c0df0de3e256
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293586"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87862353"
 ---
-# <a name="migrating-mysql-databases-to-sql-server---azure-sql-db-mysqltosql"></a>将 MySQL 数据库迁移到 SQL Server-Azure SQL DB （MySQLToSql）
-MySQL SQL Server 迁移助手（SSMA）是一种全面的环境，可帮助你快速将 MySQL 数据库迁移到 SQL Server 或 SQL Azure。 通过使用 SSMA for MySQL，你可以查看数据库对象和数据、评估要迁移的数据库、将数据库对象迁移到 SQL Server 或 SQL Azure，然后将数据迁移到 SQL Server 或 SQL Azure。  
+# <a name="migrating-mysql-databases-to-sql-server---azure-sql-database-mysqltosql"></a>将 MySQL 数据库迁移到 SQL Server-Azure SQL 数据库 (MySQLToSql) 
+MySQL SQL Server 迁移助手 (SSMA) 是一个全面的环境，可帮助你快速将 MySQL 数据库迁移到 SQL Server 或 SQL Azure。 通过使用 SSMA for MySQL，你可以查看数据库对象和数据、评估要迁移的数据库、将数据库对象迁移到 SQL Server 或 SQL Azure，然后将数据迁移到 SQL Server 或 SQL Azure。  
   
 ## <a name="recommended-migration-process"></a>建议的迁移过程  
 若要成功地将对象和数据从 MySQL 数据库迁移到 SQL Server 或 SQL Azure，请使用以下过程：  
@@ -33,7 +33,7 @@ MySQL SQL Server 迁移助手（SSMA）是一种全面的环境，可帮助你�
   
 4.  [将 MySQL 数据库映射到 SQL Server 架构 &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)  
   
-5.  [连接到 Azure SQL DB &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
+5.  [连接到 Azure SQL 数据库 &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
   
 6.  （可选）[评估用于转换 &#40;MySQLToSQL&#41;的 MySQL 数据库](../../ssma/mysql/assessing-mysql-databases-for-conversion-mysqltosql.md)以评估用于转换的数据库对象并估计转换时间。  
   
@@ -47,7 +47,7 @@ MySQL SQL Server 迁移助手（SSMA）是一种全面的环境，可帮助你�
   
     -   同步数据库对象。  
   
-10. [将 MySQL 数据迁移到 SQL Server-Azure SQL DB &#40;MySQLToSQL&#41;](../../ssma/mysql/migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md)  
+10. [将 MySQL 数据迁移到 SQL Server-Azure SQL 数据库 &#40;MySQLToSQL&#41;](../../ssma/mysql/migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md)  
   
 11. 如有必要，请更新数据库应用程序。  
   

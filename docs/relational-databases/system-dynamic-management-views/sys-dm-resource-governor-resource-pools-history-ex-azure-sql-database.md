@@ -1,5 +1,5 @@
 ---
-title: sys. dm_resource_governor_resource_pools_history_ex （Transact-sql） |Microsoft Docs
+title: sys. dm_resource_governor_resource_pools_history_ex (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/27/2019
 ms.prod: sql
@@ -20,23 +20,23 @@ ms.assetid: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 04f0346e15043c105030b94eb96633e1f31b64d9
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: 30c024fb1d1298e0ba2f2e4e49b2acf04d9b7619
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627311"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823892"
 ---
-# <a name="sysdm_resource_governor_resource_pools_history_ex-transact-sql"></a>sys. dm_resource_governor_resource_pools_history_ex （Transact-sql）
+# <a name="sysdm_resource_governor_resource_pools_history_ex-transact-sql"></a>sys. dm_resource_governor_resource_pools_history_ex (Transact-sql) 
 
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
-返回一个 Azure SQL 数据库的资源池统计信息的持续时间为20秒的快照，最大为32分钟（128 recs）。  
+在 Azure SQL 数据库的资源池统计信息的总) 中，在过去32分钟 (128 recs 返回快照20秒。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**pool_id**|int|资源池的 ID。 不可为 null。
-|**name**|sysname|资源池的名称。 不可为 null。|
+|name|sysname|资源池的名称。 不可为 null。|
 |**snapshot_time**|datetime2|拍摄的资源池统计信息快照的日期时间|
 |**duration_ms**|int|当前快照与前一个快照之间的持续时间|
 |**statistics_start_time**|datetime2|为该池重置统计信息的时间。 不可为 null。|
@@ -61,49 +61,49 @@ ms.locfileid: "84627311"
 |**delta_read_io_completed**|int|自上次拍摄快照以来完成的读取 Io 总数。 不可为 null。|
 |**delta_read_io_throttled**|int|自快照以来限制的读取 Io 总数。 可以为 Null。 如果没有为 IO 调控资源池，则为 null。|
 |**delta_read_bytes**|bigint|自上次拍摄快照以来读取的总字节数。 不可为 null。|
-|**delta_read_io_stall_ms**|int|自上次快照以来读取 IO 到达和完成之间的总时间（毫秒）。 不可为 null。|
-|**delta_read_io_stall_queued_ms**|int|自上一次快照以来读取 IO 到达和出现问题之间的总时间（毫秒）。 可以为 Null。 如果没有为 IO 调控资源池，则为 null。 非零 delta_read_io_stall_queued_ms 表示 IO 受到 RG 的影响。|
+|**delta_read_io_stall_ms**|int|自上一次快照以来读取 IO 到达和完成之间的总时间 (（以毫秒为单位）) 。 不可为 null。|
+|**delta_read_io_stall_queued_ms**|int|自上一次快照以来，读取 IO 到达和问题之间的总时间 (（以毫秒为单位）) 。 可以为 Null。 如果没有为 IO 调控资源池，则为 null。 非零 delta_read_io_stall_queued_ms 表示 IO 受到 RG 的影响。|
 |**delta_write_io_queued**|int|自上次拍摄快照以来排队的总写入 Io。 可以为 Null。 如果没有为 IO 调控资源池，则为 null。|
 |**delta_write_io_issued**|int|自上次拍摄快照以来发出的写入 Io 总数。 可以为 Null。 如果没有为 IO 调控资源池，则为 null。|
 |**delta_write_io_completed**|int|自上次快照以来完成的写入 Io 总数。 不可为 Null。|
 |**delta_write_io_throttled**|int|自上一次快照以来限制的写入 Io 总数。 不可为 Null。|
 |**delta_write_bytes**|bigint|自上次拍摄快照以来写入的总字节数。 不可为 null。|
-|**delta_write_io_stall_ms**|int|自上次快照以来写入 IO 到达和完成之间的总时间（毫秒）。 不可为 null。|
-|**delta_write_io_stall_queued_ms**|int|自上一次快照以来写入 IO 到达和问题之间的总时间（毫秒）。 可以为 Null。 如果没有为 IO 调控资源池，则为 null。|
-|**delta_io_issue_delay_ms**|int|自上次快照以来，计划的问题与 IO 的实际问题之间的总时间（毫秒）。 可以为 Null。 如果没有为 IO 调控资源池，则为 null。|
-|**max_iops_per_volume**|int|此池的每个磁盘卷的最大 IO 数（IOPS）。 可以为 Null。 如果没有为 IO 调控资源池，则为 null。|
+|**delta_write_io_stall_ms**|int|自上次拍摄快照以来写入 IO 到达和完成之间的总时间 (（以毫秒为单位）) 。 不可为 null。|
+|**delta_write_io_stall_queued_ms**|int|自上一次快照以来写入 IO 到达和问题之间的总时间 (（以毫秒为单位）) 。 可以为 Null。 如果没有为 IO 调控资源池，则为 null。|
+|**delta_io_issue_delay_ms**|int|自上一次快照以来，计划的问题与 IO 的实际问题之间的总时间 (（以毫秒为单位）) 。 可以为 Null。 如果没有为 IO 调控资源池，则为 null。|
+|**max_iops_per_volume**|int|此池的每个磁盘卷设置的每秒最大 IO (IOPS) 。 可以为 Null。 如果没有为 IO 调控资源池，则为 null。|
 |**max_memory_kb**|bigint|该资源池可拥有的最大内存量（以 KB 为单位）。 这取决于当前设置和服务器状态。 不可为 null。
-|**max_log_rate_kb**|bigint|资源池级别的最大日志速率（每秒千字节）。|
+|**max_log_rate_kb**|bigint|资源池级别 (每秒千字节的最大对数速率) 。|
 |**max_data_space_kb**|bigint|此弹性池的最大弹性池存储限制设置（以 kb 为单位）。|
 |**max_session**|int|池的会话限制|
 |**max_worker**|int|池的辅助角色限制|
 |**min_cpu_percent**|int|存在 CPU 争用时此资源池中所有请求有保障的平均 CPU 带宽的当前配置。 不可为 null。|
 |**max_cpu_percent**|int|存在 CPU 争用时允许此资源池中的所有请求使用的最大平均 CPU 带宽的当前配置。 不可为 null。|
 |**cap_cpu_percent**|int|资源池中的所有请求都将收到的 CPU 带宽硬性上限。 将 CPU 最大带宽级别限制为指定的级别。 允许的值范围为 1 到 100。 不可为 null。|
-|**min_vcores**|decimal （5，2）|存在 CPU 争用时此资源池中所有请求有保障的平均 CPU 带宽的当前配置。  以 Vcore 为单位|
-|**max_vcores**|decimal （5，2）|存在 CPU 争用时允许此资源池中的所有请求使用的最大平均 CPU 带宽的当前配置。  In Vcore|
-|**cap_vcores**|decimal （5，2）|资源池中的所有请求都将收到的 CPU 带宽硬性上限。  在 Vcore 上的单元中|
+|**min_vcores**|decimal (5，2) |存在 CPU 争用时此资源池中所有请求有保障的平均 CPU 带宽的当前配置。  以 Vcore 为单位|
+|**max_vcores**|decimal (5，2) |存在 CPU 争用时允许此资源池中的所有请求使用的最大平均 CPU 带宽的当前配置。  In Vcore|
+|**cap_vcores**|decimal (5，2) |资源池中的所有请求都将收到的 CPU 带宽硬性上限。  在 Vcore 上的单元中|
 |**instance_cpu_count**|int|为实例配置的 CPU 数|
-|**instance_cpu_percent**|decimal （5，2）|为实例配置的 CPU 百分比|
-|**instance_vcores**|decimal （5，2）|为实例配置的 Vcore 数|
-|**delta_log_bytes_used**|decimal （5，2）|自上一次快照以来的池级别的总日志生成（以字节为单位）|
-|**avg_login_rate_percent**|decimal （5，2）|自上一次快照以来的登录次数与登录限制|
-|**delta_vcores_used**|decimal （5，2）|自上一次拍摄快照以来 Vcore 计数的计算利用率。|
-|**cap_vcores_used_percent**|decimal （5，2）|以池的限制百分比形式表示的平均计算使用率。|
-|**instance_vcores_used_percent**|decimal （5，2）|平均计算使用率（以 SQL 实例限制的百分比表示）。|
-|**avg_data_io_percent**|decimal （5，2）|以基于池的限制的百分比形式表示的平均 I/O 使用率。|
-|**avg_log_write_percent**|decimal （5，2）|以池的限制百分比形式表示的平均写入资源使用率。|
-|**avg_storage_percent**|decimal （5，2）|以池的存储限制百分比形式表示的平均存储使用率。|
-|**avg_allocated_storage_percent**|decimal （5，2）|弹性池中所有数据库分配的数据空间百分比。 这是为弹性池分配的数据空间与数据最大大小的比率。 有关详细信息，请参阅 SQL DB 中的文件空间管理|
-|**max_worker_percent**|decimal （5，2）|以基于池的限制的百分比形式表示的最大并发工作线程（请求）数量。|
-|**max_session_percent**|decimal （5，2）|以基于池的限制的百分比形式表示的最大并发会话（请求）数量。|
+|**instance_cpu_percent**|decimal (5，2) |为实例配置的 CPU 百分比|
+|**instance_vcores**|decimal (5，2) |为实例配置的 Vcore 数|
+|**delta_log_bytes_used**|decimal (5，2) |自上一次快照以来，在池级别)  (的日志生成总计数|
+|**avg_login_rate_percent**|decimal (5，2) |自上一次快照以来的登录次数与登录限制|
+|**delta_vcores_used**|decimal (5，2) |自上一次拍摄快照以来 Vcore 计数的计算利用率。|
+|**cap_vcores_used_percent**|decimal (5，2) |以池的限制百分比形式表示的平均计算使用率。|
+|**instance_vcores_used_percent**|decimal (5，2) |平均计算使用率（以 SQL 实例限制的百分比表示）。|
+|**avg_data_io_percent**|decimal (5，2) |以基于池的限制的百分比形式表示的平均 I/O 使用率。|
+|**avg_log_write_percent**|decimal (5，2) |以池的限制百分比形式表示的平均写入资源使用率。|
+|**avg_storage_percent**|decimal (5，2) |以池的存储限制百分比形式表示的平均存储使用率。|
+|**avg_allocated_storage_percent**|decimal (5，2) |弹性池中所有数据库分配的数据空间百分比。 这是为弹性池分配的数据空间与数据最大大小的比率。 有关详细信息，请参阅 SQL 数据库中的文件空间管理|
+|**max_worker_percent**|decimal (5，2) |以基于池的限制的百分比形式表示的最大并发工作线程（请求）数量。|
+|**max_session_percent**|decimal (5，2) |以基于池的限制的百分比形式表示的最大并发会话（请求）数量。|
 |||
 
 ## <a name="permissions"></a>权限
 
 此视图需要 VIEW SERVER STATE 权限。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 用户可以使用此动态管理视图来监视用户工作负荷池的近乎实时的资源消耗以及 Azure SQL 数据库实例的系统内部池。
 

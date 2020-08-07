@@ -1,6 +1,6 @@
 ---
 title: 将 Access 数据库迁移到 SQL Server-Azure SQL 数据库 |Microsoft Docs
-description: 使用此建议过程将 Access 数据库迁移到使用 SQL Server 迁移助手的 SQL Server 或 Azure SQL 数据库（SSMA）。
+description: 使用此推荐的过程，使用 SQL Server 迁移助手 (SSMA) 将 Access 数据库迁移到 SQL Server 或 Azure SQL 数据库。
 ms.prod: sql
 ms.custom: ''
 ms.date: 08/15/2017
@@ -17,15 +17,15 @@ ms.assetid: 76a3abcf-2998-4712-9490-fe8d872c89ca
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: d3cbe1565642d43aabf3e36604fac5bfc2979c65
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: d35f359186fca7d862ee8da8f4c4932d849c421b
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293734"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823543"
 ---
-# <a name="migrating-access-databases-to-sql-server---azure-sql-db-accesstosql"></a>将 Access 数据库迁移到 SQL Server-Azure SQL DB （AccessToSQL）
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]迁移助手（SSMA）是一种提供综合性环境的工具，可帮助你快速将 Access 数据库迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure。 通过使用 SSMA，你可以查看访问和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 数据库对象、评估要迁移的 access 数据库、转换 access 数据库对象、将其加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure，以及迁移数据。  
+# <a name="migrating-access-databases-to-sql-server---azure-sql-database-accesstosql"></a>将 Access 数据库迁移到 SQL Server-Azure SQL 数据库 (AccessToSQL) 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]迁移助手 (SSMA) 是一种提供综合性环境的工具，可帮助你快速将 Access 数据库迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure。 通过使用 SSMA，你可以查看访问和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 数据库对象、评估要迁移的 access 数据库、转换 access 数据库对象、将其加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure，以及迁移数据。  
   
 ## <a name="recommended-migration-process"></a>建议的迁移过程  
 若要成功地将对象和数据迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 的访问，请使用以下过程：  

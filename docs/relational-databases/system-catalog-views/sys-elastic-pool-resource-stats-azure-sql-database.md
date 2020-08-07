@@ -18,12 +18,12 @@ author: CarlRabeler
 ms.author: carlrab
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 34f524eb8e6c7a64a53f64eda67a370aace745c3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4c6d2e7cccc7e1aa07327480415c0acd2a3db192
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85648897"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87822828"
 ---
 # <a name="syselastic_pool_resource_stats-azure-sql-database"></a>sys.elastic_pool_resource_stats（Azure SQL 数据库）
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -39,15 +39,15 @@ ms.locfileid: "85648897"
 |**start_time**|**datetime2**|指示15秒报告间隔的开始时间的 UTC 时间。|  
 |**end_time**|**datetime2**|指示15秒报表间隔结束时间的 UTC 时间。|  
 |**elastic_pool_name**|**nvarchar(128)**|弹性数据库池的名称。|  
-|**avg_cpu_percent**|**decimal （5，2）**|以池的限制百分比形式表示的平均计算使用率。|  
-|**avg_data_io_percent**|**decimal （5，2）**|以基于池的限制的百分比形式表示的平均 I/O 使用率。|  
-|**avg_log_write_percent**|**decimal （5，2）**|以池的限制百分比形式表示的平均写入资源使用率。|  
-|**avg_storage_percent**|**decimal （5，2）**|以池的存储限制百分比形式表示的平均存储使用率。|  
-|**max_worker_percent**|**decimal （5，2）**|以基于池的限制的百分比形式表示的最大并发工作线程（请求）数量。|  
-|**max_session_percent**|**decimal （5，2）**|以基于池的限制的百分比形式表示的最大并发会话（请求）数量。|  
+|**avg_cpu_percent**|**decimal (5，2) **|以池的限制百分比形式表示的平均计算使用率。|  
+|**avg_data_io_percent**|**decimal (5，2) **|以基于池的限制的百分比形式表示的平均 I/O 使用率。|  
+|**avg_log_write_percent**|**decimal (5，2) **|以池的限制百分比形式表示的平均写入资源使用率。|  
+|**avg_storage_percent**|**decimal (5，2) **|以池的存储限制百分比形式表示的平均存储使用率。|  
+|**max_worker_percent**|**decimal (5，2) **|以基于池的限制的百分比形式表示的最大并发工作线程（请求）数量。|  
+|**max_session_percent**|**decimal (5，2) **|以基于池的限制的百分比形式表示的最大并发会话（请求）数量。|  
 |**elastic_pool_dtu_limit**|**int**|在该时间间隔内该弹性池的当前最大弹性池 DTU 设置。|  
 |**elastic_pool_storage_limit_mb**|**bigint**|在该时间间隔内该弹性池的当前最大弹性池存储限制设置（以兆字节为单位）。|
-|**avg_allocated_storage_percent**|**decimal （5，2）**|弹性池中所有数据库分配的数据空间百分比。  这是为弹性池分配的数据空间与数据最大大小的比率。  有关详细信息，请参阅[SQL DB 中的文件空间管理](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|  
+|**avg_allocated_storage_percent**|**decimal (5，2) **|弹性池中所有数据库分配的数据空间百分比。  这是为弹性池分配的数据空间与数据最大大小的比率。  有关详细信息，请参阅[SQL 数据库中的文件空间管理](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|  
   
 ## <a name="remarks"></a>备注
 
@@ -80,7 +80,7 @@ ORDER BY end_time DESC;
 ## <a name="see-also"></a>另请参阅
 
  [通过弹性数据库应对爆炸性增长](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)   
- [创建和管理 SQL 数据库弹性数据库池（预览版）](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)   
+ [创建和管理 SQL 数据库弹性数据库池 (预览) ](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)   
  [resource_stats &#40;Azure SQL 数据库&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
  [dm_db_resource_stats &#40;Azure SQL 数据库&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)  
   

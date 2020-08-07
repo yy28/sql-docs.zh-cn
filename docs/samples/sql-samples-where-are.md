@@ -1,6 +1,6 @@
 ---
 title: Microsoft SQL 示例 |Microsoft Docs
-description: 示例数据库的文档和 Microsoft SQL 产品示例的链接。
+description: 查看有关 WideWorldImporters 和 AdventureWorks 示例数据库、Azure 示例和模板以及 Microsoft SQL 产品的代码示例的信息。
 ms.date: 04/04/2018
 ms.reviewer: ''
 ms.prod: sql
@@ -9,12 +9,12 @@ ms.technology: samples
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3ea8f0ae2c998b02343ae3a7575325afe2ef6820
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f453fd2395d887a1c0c7c1b4eed755eb96a39294
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718581"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87898623"
 ---
 # <a name="sql-samples"></a>SQL 示例
 
@@ -33,7 +33,7 @@ Microsoft SQL 产品的示例数据库和代码示例的位置。
 
 ## <a name="wideworldimporters-sample-database"></a>WideWorldImporters 示例数据库
 
-WideWorldImporters （WWI）是一个示例数据库，它使用当前功能、工具和设计方法展示数据库设计。 WideWorldImporters 下载包含 OLTP 和 OLAP 数据库，生成这些数据库是为了在2016和更高版本 SQL Server 上运行。 
+WideWorldImporters (WWI) 是一个示例数据库，它使用当前功能、工具和设计方法展示数据库设计。 WideWorldImporters 下载包含 OLTP 和 OLAP 数据库，生成这些数据库是为了在2016和更高版本 SQL Server 上运行。 
 
 数据库下载和示例位于 GitHub 存储库[SQL Server](https://github.com/Microsoft/sql-server-samples) 。
 

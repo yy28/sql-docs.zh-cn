@@ -1,5 +1,5 @@
 ---
-title: sp_addlinkedserver （Transact-sql） |Microsoft Docs
+title: sp_addlinkedserver (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/12/2016
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fed3adb0-4c15-4a1a-8acd-1b184aff558f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fce303bf12158014dd2dfc28da19b900f2cd46f3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 401fd85dec1370f81845b77de6e078ea18269891
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85877809"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823319"
 ---
 # <a name="sp_addlinkedserver-transact-sql"></a>sp_addlinkedserver (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,15 +42,15 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
      [ , [ @catalog= ] 'catalog' ]   
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 [ @server =] * \' 服务器 \' *          
 要创建的链接服务器的名称。 *server* 的数据类型为 **sysname**，无默认值。  
   
 [ @srvproduct =] * \' product_name \' *          
-要添加为链接服务器的 OLE DB 数据源的产品名称。 *product_name*为**nvarchar （** 128 **）**，默认值为 NULL。 如果不需要指定**SQL Server**、 *provider_name*、 *data_source*、*位置*、 *provider_string*和*目录*。  
+要添加为链接服务器的 OLE DB 数据源的产品名称。 *product_name*为**nvarchar (** 128 **) **，默认值为 NULL。 如果不需要指定**SQL Server**、 *provider_name*、 *data_source*、*位置*、 *provider_string*和*目录*。  
   
 [ @provider =] * \' provider_name \' *          
-与此数据源对应的 OLE DB 访问接口的唯一编程标识符 (PROGID)。 对于当前计算机上安装的指定 OLE DB 提供程序， *provider_name*必须是唯一的。 *provider_name*为**nvarchar （128）**，默认值为 NULL;但是，如果省略*provider_name* ，则使用 sqlncli.msi。 
+与此数据源对应的 OLE DB 访问接口的唯一编程标识符 (PROGID)。 对于当前计算机上安装的指定 OLE DB 提供程序， *provider_name*必须是唯一的。 *provider_name*为**nvarchar (128) **，默认值为 NULL;但是，如果省略*provider_name* ，则使用 sqlncli.msi。 
 
 > [!NOTE]
 > 使用 SQLNCLI.MSI 将重定向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序的最新版本。 OLE DB 提供程序应以指定的 PROGID 在注册表中注册。
@@ -59,13 +59,13 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
 > 以前的 Microsoft OLE DB Provider for SQL Server (SQLOLEDB) 和 SQL Server Native Client OLEDB 提供程序 (SQLNCLI) 仍然不推荐使用，不建议在新的开发工作中使用它们。 相反，请使用新的 [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL)，其将使用最新的服务器功能进行更新。
   
 [ @datasrc =] * \' data_source \' *          
- 由 OLE DB 访问接口解释的数据源的名称。 *data_source*为**nvarchar （** 4000 **）**。 *data_source*作为 DBPROP_INIT_DATASOURCE 属性传递以初始化 OLE DB 提供程序。  
+ 由 OLE DB 访问接口解释的数据源的名称。 *data_source* (4000 **) **为**nvarchar **。 *data_source*作为 DBPROP_INIT_DATASOURCE 属性传递以初始化 OLE DB 提供程序。  
   
 [ @location =] * \' 位置 \' *          
- 由 OLE DB 访问接口解释的数据库的位置。 *location*的值为**nvarchar （** 4000 **）**，默认值为 NULL。 *location*作为 DBPROP_INIT_LOCATION 属性传递以初始化 OLE DB 提供程序。  
+ 由 OLE DB 访问接口解释的数据库的位置。 *location* (4000 **) **为**NVARCHAR **，默认值为 NULL。 *location*作为 DBPROP_INIT_LOCATION 属性传递以初始化 OLE DB 提供程序。  
   
 [ @provstr =] * \' provider_string \' *          
- OLE DB 访问接口特定的连接字符串，它可标识唯一的数据源。 *provider_string*为**nvarchar （** 4000 **）**，默认值为 NULL。 *provstr*传递给 IDataInitialize，或设置为 DBPROP_INIT_PROVIDERSTRING 属性以初始化 OLE DB 提供程序。  
+ OLE DB 访问接口特定的连接字符串，它可标识唯一的数据源。 *provider_string*为**nvarchar (** 4000 **) **，默认值为 NULL。 *provstr*传递给 IDataInitialize，或设置为 DBPROP_INIT_PROVIDERSTRING 属性以初始化 OLE DB 提供程序。  
   
  当针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序创建链接服务器时，可以通过使用 server 关键字 as server =*servername* \\ *instancename*指定的特定实例来指定实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *servername*是运行的计算机的名称 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ， *instancename*是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户将连接到的特定实例的名称。  
   
@@ -88,14 +88,14 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
 |-------------------------------|---------------------|-------------------|--------------------|------------------|--------------|----------------------|-------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] <sup>1</sup> （默认值）||||||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序||**SQLNCLI**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的网络名称（用于默认实例）|||数据库名称（可选）|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序||**SQLNCLI**|*servername* \\*instancename* （用于特定实例）|||数据库名称（可选）|  
-|Oracle，版本 8 及更高版本|Oracle Provider for OLE DB|Any|**OraOLEDB.Oracle**|用于 Oracle 数据库的别名||||  
-|Access/Jet|Microsoft OLE DB Provider for Jet|Any|**Microsoft.Jet.OLEDB.4.0**|Jet 数据库文件的完整路径||||  
-|ODBC 数据源|Microsoft OLE DB Provider for ODBC|Any|**MSDASQL**|ODBC 数据源的系统 DSN||||  
-|ODBC 数据源|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for ODBC|Any|**MSDASQL**|||ODBC 连接字符串||  
-|文件系统|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Indexing Service|Any|**MSIDXS**|索引服务目录名称||||  
-|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 电子表格|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet|Any|**Microsoft.Jet.OLEDB.4.0**|Excel 文件的完整路径||Excel 5。0||  
-|IBM DB2 数据库|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for DB2|Any|**DB2OLEDB**|||请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] DB2 文档 OLE DB 提供程序。|DB2 数据库的目录名称|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序||**SQLNCLI**|*servername* \\特定实例的*instancename* () |||数据库名称（可选）|  
+|Oracle，版本 8 及更高版本|Oracle Provider for OLE DB|任意|**OraOLEDB.Oracle**|用于 Oracle 数据库的别名||||  
+|Access/Jet|Microsoft OLE DB Provider for Jet|任意|**Microsoft.Jet.OLEDB.4.0**|Jet 数据库文件的完整路径||||  
+|ODBC 数据源|Microsoft OLE DB Provider for ODBC|任意|**MSDASQL**|ODBC 数据源的系统 DSN||||  
+|ODBC 数据源|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for ODBC|任意|**MSDASQL**|||ODBC 连接字符串||  
+|文件系统|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Indexing Service|任意|**MSIDXS**|索引服务目录名称||||  
+|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 电子表格|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet|任意|**Microsoft.Jet.OLEDB.4.0**|Excel 文件的完整路径||Excel 5。0||  
+|IBM DB2 数据库|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for DB2|任意|**DB2OLEDB**|||请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] DB2 文档 OLE DB 提供程序。|DB2 数据库的目录名称|  
   
  <sup>1</sup>通过这种设置链接服务器的方式，可以强制链接服务器的名称与的远程实例的网络名称相同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 使用*data_source*指定服务器。  
   
@@ -113,7 +113,7 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
 > 使用**sp_addlinkedserver**创建链接服务器时，将为所有本地登录名添加默认自映射。 对于非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供程序， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 经过身份验证的登录名可能能够获取服务帐户下的访问接口的访问权限 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 管理员应考虑使用 `sp_droplinkedsrvlogin <linkedserver_name>, NULL` 删除全局映射。  
   
 ## <a name="permissions"></a>权限  
- `sp_addlinkedserver`语句需要 `ALTER ANY LINKED SERVER` 权限。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]（"**新建链接服务器**" 对话框的实现方式是需要 `sysadmin` 固定服务器角色的成员身份。）  
+ `sp_addlinkedserver`语句需要 `ALTER ANY LINKED SERVER` 权限。  (" [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **新建链接服务器**" 对话框的实现方式是需要 `sysadmin` 固定服务器角色的成员身份。 )   
   
 ## <a name="examples"></a>示例  
   
@@ -182,7 +182,7 @@ GO
 ```  
   
 ### <a name="c-using-the-microsoft-ole-db-provider-for-odbc-with-the-data_source-parameter"></a>C. 将 Microsoft OLE DB Provider for ODBC 与 data_source 参数一起使用  
- 下面的示例创建一个名为的链接服务器 `SEATTLE Payroll` ，该服务器使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC 的 OLE DB 提供程序（ `MSDASQL` ）和*data_source*参数。  
+ 下面的示例创建一个名为的链接服务器 `SEATTLE Payroll` ，该服务器使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC (`MSDASQL`) 和*Data_source*参数的 OLE DB 提供程序。  
   
 > [!NOTE]  
 > 在使用该链接服务器之前，必须在该服务器中将指定的 ODBC 数据源名称定义为系统 DSN。  
@@ -287,7 +287,7 @@ EXEC sp_addlinkedserver
 ### <a name="g-add-a-sssdsfull-as-a-linked-server-for-use-with-distributed-queries-on-cloud-and-on-premises-databases"></a>G. 添加 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 作为链接服务器，以便用于云和本地数据库上的分布式查询  
  您可以添加一个 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 作为链接服务器，然后将它用于跨本地数据库和云数据库的分布式查询。 这是跨本地企业网络和 Azure 云的数据库混合解决方案的组件。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Box 产品包含 "分布式查询" 功能，通过该功能，您可以编写查询，将来自本地数据源和数据的数据与定义为链接服务器的远程源（包括来自非数据源的数据）组合在一起 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 每个 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]（虚拟 master 除外）可以添加为单个链接服务器，然后在您的数据库应用程序中像任何其他数据库一样直接使用它。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Box 产品包含 "分布式查询" 功能，通过该功能，您可以编写查询，以便将来自本地数据源和数据的数据与远程源中的数据合并， (包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) 定义为链接服务器的非数据源的数据。 每个 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]（虚拟 master 除外）可以添加为单个链接服务器，然后在您的数据库应用程序中像任何其他数据库一样直接使用它。  
   
  使用 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 的好处包括便于管理、高可用性和可伸缩性、使用熟悉的开发模型以及采用关系数据模型。 您的数据库应用程序要求决定了它将在云中如何使用 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 您可以立即将所有数据移到 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，或逐渐迁移一部分数据而将其余数据保留在本地。 对于此类混合数据库应用程序， [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 现在可以添加为链接服务器，并且数据库应用程序可以发出分布式查询，以便将数据与 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 本地数据源组合在一起。  
   
@@ -295,7 +295,7 @@ EXEC sp_addlinkedserver
   
 ```sql  
 -- Configure the linked server  
--- Add one Azure SQL DB as Linked Server  
+-- Add one Azure SQL Database as Linked Server  
 EXEC sp_addlinkedserver  
   @server='myLinkedServer', -- here you can specify the name of the linked server  
   @srvproduct='',       
@@ -326,7 +326,7 @@ SELECT * FROM myLinkedServer.myDatabase.dbo.myTable
   
 ## <a name="see-also"></a>另请参阅  
  [分布式查询存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
- [sp_addlinkedsrvlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
+ [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
  [sp_dropserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
  [sp_serveroption &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   

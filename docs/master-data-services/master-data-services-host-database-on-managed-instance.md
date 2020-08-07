@@ -1,6 +1,6 @@
 ---
 title: 在托管实例上托管数据库
-description: 本文介绍如何在托管实例上配置 Master Data Service （MDS）数据库。
+description: 了解如何创建和配置 Master Data Services (MDS) 数据库，并将其托管在 Azure SQL 托管实例上。
 ms.custom: ''
 ms.date: 07/01/2019
 ms.prod: sql
@@ -12,34 +12,34 @@ ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: v-redu
 ms.author: lle
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a6c318a1fca182e60a5df7fb5d1569433f65d25d
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 616fa3791b0dbc154282f5273cd7fb4e1eb3c1f5
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812911"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87878947"
 ---
 # <a name="host-an-mds-database-on-a-managed-instance"></a>在托管实例上托管 MDS 数据库
 
 [!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-  本文介绍如何在托管实例上配置 Master Data Services （MDS）数据库。
+  本文介绍如何为托管实例上的 MDS) 数据库配置 Master Data Services (。
   
-## <a name="preparation"></a>准备工作
+## <a name="preparation"></a>准备
 
-若要做好准备，需要创建并配置 Azure SQL 数据库托管实例并配置 web 应用程序计算机。
+若要准备，需要创建并配置 Azure SQL 托管实例并配置 web 应用程序计算机。
 
 ### <a name="create-and-configure-the-database"></a>创建并配置数据库
 
-1. 使用虚拟网络创建 Azure SQL 数据库托管实例。 有关详细信息，请参阅[快速入门：创建 AZURE SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started)。
+1. 使用虚拟网络创建托管实例。 有关详细信息，请参阅[快速入门：创建 SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started)。
 
 1. 配置点到站点连接。 有关说明，请参阅[使用本机 Azure 证书身份验证配置与 VNet 的点到站点连接 Azure 门户](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal)。
 
-1. 配置 SQL 数据库托管实例 Azure Active Directory 身份验证。 有关详细信息，请参阅[通过 SQL 配置和管理 Azure Active Directory authentication](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure) 。
+1. 配置 SQL 托管实例 Azure Active Directory 身份验证。 有关详细信息，请参阅[通过 SQL 配置和管理 Azure Active Directory authentication](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure) 。
 
 ### <a name="configure-web-application-machine"></a>配置 web 应用程序计算机
 
-1. 安装点到站点连接证书和 VPN 以确保计算机可以访问 SQL 数据库托管实例。 有关说明，请参阅[使用本机 Azure 证书身份验证配置与 VNet 的点到站点连接 Azure 门户](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal)。
+1. 安装点到站点连接证书和 VPN 以确保计算机可以访问托管实例。 有关说明，请参阅[使用本机 Azure 证书身份验证配置与 VNet 的点到站点连接 Azure 门户](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal)。
 
 1. 安装以下角色和功能：
    - 角色：
@@ -75,7 +75,7 @@ ms.locfileid: "85812911"
      - .NET Framework 4.5 高级服务
      - ASP.NET 4.5
      - WCF Services
-     - HTTP 激活（必需）
+     - HTTP 激活 (必需) 
      - TCP 端口共享
      - Windows Process Activation Service
      - 进程模型
@@ -110,20 +110,20 @@ ms.locfileid: "85812911"
 
 1. 打开 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] ，然后在左窗格中选择 "**数据库配置**"。
 
-1. 选择 "**创建数据库**" 以打开 "**创建数据库向导**"。 选择“**下一页**”。
+1. 选择 "**创建数据库**" 以打开 "**创建数据库向导**"。 选择“下一步”  。
 
-1. 在 "**数据库服务器**" 页上，完成 " **SQL Server 实例**" 字段，然后选择 "**身份验证类型**"。 选择 "**测试连接**" 以确认你可以通过所选的身份验证类型使用凭据连接到数据库。 选择“**下一页**”。
+1. 在 "**数据库服务器**" 页上，完成 " **SQL Server 实例**" 字段，然后选择 "**身份验证类型**"。 选择 "**测试连接**" 以确认你可以通过所选的身份验证类型使用凭据连接到数据库。 选择“下一步”  。
 
    > [!NOTE]
    > - SQL Server 实例如下所示 `xxxxxxx.xxxxxxx.database.windows.net` 。
    > - 对于托管实例，请选择 **"SQL Server 帐户"** 和 **"当前用户– Active Directory 集成"** 身份验证类型。
-   > - 如果选择 "**当前用户– Active Directory 集成**为身份验证类型"，则 "**用户名**" 字段为只读，并显示当前登录的 Windows 用户帐户。 如果在 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Azure 虚拟机（vm）上运行 SQL Server 2019，则 "**用户名**" 字段将显示 vm 上的本地管理员帐户的 vm 名称和用户名。
+   > - 如果选择 "**当前用户– Active Directory 集成**为身份验证类型"，则 "**用户名**" 字段为只读，并显示当前登录的 Windows 用户帐户。 如果在 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Azure 虚拟机上运行 SQL Server 2019 (vm) ，则 "**用户名**" 字段将显示 vm 上的本地管理员帐户的 vm 名称和用户名。
 
    身份验证必须包含托管实例的 **"sysadmin"** 规则。
 
    ![mds-SQLServer2019-CreateDBConnect](../master-data-services/media/mds-sqlserver2019-config-mi-createdbconnect.png "mds-SQLServer2019-MI_CreateDBConnect")  
 
-1. 在“数据库名称”**** 字段中键入名称。 （可选）若要选择 Windows 排序规则，请清除 " **SQL Server 默认排序规则**" 复选框，然后选择一个或多个可用选项。 例如，**区分大小写**。 选择“**下一页**”。
+1. 在“数据库名称”**** 字段中键入名称。 （可选）若要选择 Windows 排序规则，请清除 " **SQL Server 默认排序规则**" 复选框，然后选择一个或多个可用选项。 例如，**区分大小写**。 选择“下一步”  。
 
    ![mds-SQLServer2019-CreatedDBName](../master-data-services/media/mds-sqlserver2019-config-mi-createddbname.png "mds-SQLServer2019-MI_CreatedDBName")
 
@@ -228,7 +228,7 @@ MDS 还支持 Active Directory 密码身份验证和 SQL Server 身份验证，�
 
 1. 完成所有任务后，选择 "**完成**"。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Master Data Services 数据库](../master-data-services/master-data-services-database.md)
 - [主数据管理器 Web 应用程序](../master-data-services/master-data-manager-web-application.md)

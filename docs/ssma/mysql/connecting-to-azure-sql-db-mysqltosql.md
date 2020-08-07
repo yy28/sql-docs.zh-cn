@@ -1,5 +1,5 @@
 ---
-title: 连接到 Azure SQL DB （MySQLToSQL） |Microsoft Docs
+title: " (MySQLToSQL) 连接到 Azure SQL 数据库 |Microsoft Docs"
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: d0b6f16a-1880-459d-a0c7-28b7ef15c56a
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 7fb6740681c08cb915755b3362352f139e078c4c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: da3e0d05abf24bdd7100769ecfbb597e2953a9d5
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68103196"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87822556"
 ---
-# <a name="connecting-to-azure-sql-db-mysqltosql"></a>连接到 Azure SQL DB (MySQLToSQL)
+# <a name="connecting-to-azure-sql-database-mysqltosql"></a>连接到 Azure SQL 数据库 (MySQLToSQL) 
 若要将 MySQL 数据库迁移到 SQL Azure，你必须连接到 SQL Azure 的目标实例。 在连接时，SSMA 将获取 SQL Azure 实例中所有数据库的元数据，并在 SQL Azure 元数据资源管理器中显示数据库元数据。 SSMA 存储连接到但不存储密码的 SQL Azure 实例的信息。  
   
 到 SQL Azure 的连接保持活动状态，直到关闭项目。 重新打开项目时，如果需要与服务器建立活动连接，则必须重新连接到 SQL Azure。 在将数据库对象加载到 SQL Azure 和迁移数据之前，可以脱机工作。  
@@ -29,7 +29,7 @@ ms.locfileid: "68103196"
 ## <a name="required-sql-azure-permissions"></a>必需的 SQL Azure 权限  
 用于连接 SQL Azure 的帐户需要不同的权限，具体取决于帐户执行的操作：  
   
--   若要将 MySQL 对象[!INCLUDE[tsql](../../includes/tsql-md.md)]转换为语法、从 SQL Azure 更新元数据，或者将转换的语法保存到脚本中，该帐户必须有权登录到 SQL Azure 实例。  
+-   若要将 MySQL 对象转换为 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语法、从 SQL Azure 更新元数据，或者将转换的语法保存到脚本中，该帐户必须有权登录到 SQL Azure 实例。  
   
 -   若要将数据库对象加载到 SQL Azure 中，最低权限要求是目标数据库中**db_owner**数据库角色的成员身份。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "68103196"
   
 **连接到 SQL Azure**  
   
-1.  在 "**文件**" 菜单上，选择 "**连接到 SQL Azure** （创建项目后启用此选项）"。  
+1.  在 "**文件**" 菜单上，选择 "**连接到 SQL Azure** (在创建项目) 后启用此选项。  
   
     如果以前已连接到 SQL Azure，则命令名称将**重新连接到 SQL Azure**。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "68103196"
   
 6.  SSMA 建议将加密连接 SQL Azure。  
   
-7.  单击“连接”  。  
+7.  单击“连接” 。  
   
 > [!IMPORTANT]  
 > SSMA for MySQL 不支持连接到 SQL Azure 中的**master**数据库。  
@@ -87,5 +87,5 @@ ms.locfileid: "68103196"
 -   如果不需要执行这些任务中的任何一种，可以将 MySQL 数据库对象定义转换为 SQL Azure 对象定义。 有关详细信息，请参阅将[MySQL 数据库转换 &#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
 ## <a name="see-also"></a>另请参阅  
-[将 MySQL 数据库迁移到 SQL Server-Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[将 MySQL 数据库迁移到 SQL Server-Azure SQL 数据库 &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: fd6563881127b7a5c1cf134711a52fdedde629c4
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: dd3b2d26b79cf612c18a201a2b077323b1b68420
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435154"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823239"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>使用 DMA 评估企业和合并评估报告
 
@@ -76,7 +76,7 @@ ms.locfileid: "87435154"
 ### <a name="if-using-a-csv-file"></a>如果使用 CSV 文件
 
 > [!IMPORTANT]
-> 确保将清单文件保存为逗号分隔（CSV）文件。
+> 确保清单文件以逗号分隔 (CSV) 文件格式保存。
 >
 > 对于默认实例，请将实例名称设置为 MSSQLServer。
 
@@ -100,9 +100,9 @@ ms.locfileid: "87435154"
 
 如果此数据库不在工具计算机上，请确保工具计算机具有与此 SQL Server 实例的网络连接。
 
-对 CSV 文件使用 SQL Server 表的好处是，你可以使用 "评估标志" 列控制为评估选取的实例/数据库，这样可以更轻松地将评估拆分为较小的区块。  然后，你可以跨多个评估（请参阅本文后面的运行评估部分），这比维护多个 CSV 文件更容易。
+对 CSV 文件使用 SQL Server 表的好处是，你可以使用 "评估标志" 列控制为评估选取的实例/数据库，这样可以更轻松地将评估拆分为较小的区块。  然后，你可以跨多个评估 (请参阅本文后面的运行评估一节) ，这比维护多个 CSV 文件更容易。
 
-请记住，根据对象的数量和复杂性，评估可能会花费很长时间（小时 +），因此将评估划分为可管理的区块是明智之举。
+请记住，根据对象的数量和复杂性，评估可能会花费很长时间 (小时 +) ，因此，将评估划分为可管理的区块是明智之举。
 
 ### <a name="if-using-an-instance-inventory"></a>如果使用实例清单
 
@@ -110,7 +110,7 @@ ms.locfileid: "87435154"
 
 - ServerName
 - InstanceName
-- Port
+- 端口
 - AssessmentFlag
 
 ![SQL Server 表内容](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-instance-inventory.png)
@@ -150,7 +150,7 @@ ms.locfileid: "87435154"
 |参数  |描述 |
 |---------|---------|
 |**processTo** | 将处理 JSON 文件的位置。 可能的值为**SQLServer**和**AzureSQLDatabase**。 |
-|**服务器** | 数据将处理到的 SQL Server 实例。  如果为**processTo**参数指定**AzureSQLDatabase** ，则仅包含 SQL Server 名称（不包括. database.windows.net）。 面向 Azure SQL 数据库时，系统将提示你提供两个登录名;第一种是 Azure 租户凭据，第二种是 Azure SQL Server 的管理员登录名。 |
+|**服务器** | 数据将处理到的 SQL Server 实例。  如果为**processTo**参数指定**AzureSQLDatabase** ，则仅包含 SQL Server 名称 (不包含 database.windows.net) 。 面向 Azure SQL 数据库时，系统将提示你提供两个登录名;第一种是 Azure 租户凭据，第二种是 Azure SQL Server 的管理员登录名。 |
 |**CreateDMAReporting** | 要创建的用于处理 JSON 文件的临时数据库。  如果指定的数据库已经存在，并且将此参数设置为1，则不会创建对象。  此参数可用于重新创建已删除的单个对象。 |
 |**CreateDataWarehouse** | 创建 Power BI 报表将使用的数据仓库。 |
 |**databaseName** | DMAReporting 数据库的名称。 |
@@ -197,7 +197,7 @@ DmaProcessor 完成对评估文件的处理后，数据将加载到 ReportData �
 
 若要使用 DMA 报表，请使用书签和切片器进行筛选：
 
-- 评估类型（Azure SQL DB、Azure SQL MI、SQL 内部部署） 
+- 评估类型 (Azure SQL 数据库、Azure SQL 托管实例 SQL Server)  
 - Instance Name
 - 数据库名称
 - 团队名称
@@ -212,8 +212,8 @@ DmaProcessor 完成对评估文件的处理后，数据将加载到 ReportData �
 
 您可以使用书签来切换报表上下文：
 
-- Azure SQL DB 云评估
-- Azure SQL MI 云评估
+- Azure SQL 数据库云评估
+- Azure SQL 托管实例云评估
 - 本地评估
 
 ![DMA 报表视图书签](../dma/media//dma-consolidatereports/dma-report-bookmarks1.png)
@@ -241,7 +241,7 @@ Power BI 报表中显示的详细信息如以下部分所示。
 
   ![DMA 就绪百分比](../dma/media//dma-consolidatereports/dma-readiness-percentage.png)
 
-此视觉对象根据选择上下文（"所有"、"实例"、"数据库" [倍数 of]）进行更新。
+此视觉对象根据选择上下文进行更新， ("所有"、"实例"、"数据库 [倍数 of] ) "。
 
 ### <a name="readiness-count"></a>就绪计数
 
@@ -264,7 +264,7 @@ Power BI 报表中显示的详细信息如以下部分所示。
 
   ![DMA 问题 WordCloud](../dma/media//dma-consolidatereports/dma-issues-word-cloud.png)
 
-此视觉对象显示了选择上下文（"所有"、"实例"、"数据库 [倍数"）中当前出现的问题。 屏幕上显示的字符越大，该类别中的问题就越多。 将鼠标指针悬停在某个字上将显示该类别中出现的问题数。
+此视觉对象显示当前在选择上下文中出现的问题， (所有内容、实例、数据库 [倍数 of] ) 。 屏幕上显示的字符越大，该类别中的问题就越多。 将鼠标指针悬停在某个字上将显示该类别中出现的问题数。
 
 ### <a name="database-readiness"></a>数据库准备情况
 
@@ -274,7 +274,7 @@ Power BI 报表中显示的详细信息如以下部分所示。
 
 - InstanceDatabase
 - ChangeCategory
-- 标题
+- Title
 - ObjectType
 - ImpactedObjectName
 
@@ -296,4 +296,4 @@ Power BI 报表中显示的详细信息如以下部分所示。
 
 ### <a name="script-disclaimer"></a>脚本声明
 
-*任何 Microsoft 标准支持计划或服务均不支持本文中提供的示例脚本。所有脚本都按原样提供，无任何形式的保证。Microsoft 进一步否认所有默示保证，包括但不限于适销性或特定用途适用性的任何默示保证。由于示例脚本和文档的使用或性能而产生的全部风险仍随你一起提供。在任何情况下，Microsoft 及其作者如果因使用或不能使用示例脚本或文档而导致的任何损害（包括但不限于业务利润损失、业务中断、业务信息丢失或其他 pecuniary 丢失）所涉及的任何其他责任（包括但不限于或不能使用示例脚本或文档），即使 Microsoft 已被告知此类损失的可能性，也不承担任何责任。 搜寻权限，然后在其他站点/存储库/博客上重新发布这些脚本。*
+*任何 Microsoft 标准支持计划或服务均不支持本文中提供的示例脚本。所有脚本都按原样提供，无任何形式的保证。Microsoft 进一步否认所有默示保证，包括但不限于适销性或特定用途适用性的任何默示保证。由于示例脚本和文档的使用或性能而产生的全部风险仍随你一起提供。在任何情况下，Microsoft 及其作者或者，无论是由于使用还是不能使用示例脚本或文档而导致的任何损害（包括但不限于业务利润损失、业务中断、业务信息丢失或其他 pecuniary 丢失) ，无论是由于使用还是不能使用示例脚本或文档，而导致的任何损害）都有责任，无论是否有可能导致此类损害，都应承担任何其他责任。 (搜寻权限，然后在其他站点/存储库/博客上重新发布这些脚本。*

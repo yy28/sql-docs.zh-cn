@@ -1,5 +1,5 @@
 ---
-title: 数据迁移助手（SQL Server）中的新增功能 |Microsoft Docs
+title: 数据迁移助手 (SQL Server) 的新增功能 |Microsoft Docs
 description: 了解数据迁移助手 SQL Server 和 Azure SQL 数据库的每个版本的新增功能。
 ms.custom: ''
 ms.date: 11/05/2019
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 287e3396ec26652f43754be313b02e3bf7d9831d
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 2becdd3e5ab0c6980ffbb4b4f4a5d50584f6fd35
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82924621"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864894"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>数据迁移助手的新增功能
 
@@ -27,7 +27,7 @@ ms.locfileid: "82924621"
 
 ## <a name="data-migration-assistant-v-52"></a>数据迁移助手 v 5。2
 数据迁移助手的5.2 版本提供对以下内容的支持：
-- 将评估上载到 Azure Migrate，并支持 Azure 政府和国内云（主权产品）。  此功能可用于评估迁移到 Azure SQL 的 SQL Server 数据空间的准备情况。
+- 将评估上传到 Azure Migrate，并支持 Azure 政府和国内云 (主权) 。  此功能可用于评估迁移到 Azure SQL 的 SQL Server 数据空间的准备情况。
 - 支持对 Azure 政府和国内云的 Azure Migrate 上传评估的命令行。  现在，你可以将评估完全自动上载到 Azure 迁移项目，以获取合并的 Azure SQL 就绪状态报告。 
 
 ## <a name="data-migration-assistant-v-50"></a>数据迁移助手 v 5。0
@@ -36,14 +36,14 @@ ms.locfileid: "82924621"
 
 - 适用于 Windows 的 SQL Server 2019 和 SQL Server 2019 （适用于 Linux）作为目标以便进行评估和升级。
 - 保存和加载评估，包括对保存和加载在数据迁移助手早期版本中创建的评估的支持。
-- 评估托管在 SSISDB 和包存储区中的 SSIS 包中的 SQL Server Integration Services （SSIS）项目。 数据库迁移助手检测在源包中使用的不受支持、部分支持或弃用的功能和兼容性问题，并提供有助于解决这些问题的建议。
+- 评估托管在 SSISDB 和包存储区中的 SSIS 包中的 SQL Server Integration Services () SSIS。 数据库迁移助手检测在源包中使用的不受支持、部分支持或弃用的功能和兼容性问题，并提供有助于解决这些问题的建议。
 - 从外部应用程序评估 SQL 查询，例如 c # 源代码中的 SQL 查询。 用户可以使用数据访问迁移工具包为 c # 源代码中使用的 SQL 查询生成完整的 JSON 报表，然后将报表上传到数据迁移助手。
 
 此外，此版本的数据迁移助手提供附加的增强功能和 bug 修复，并且该工具已更新为 .Net 4.7.2。
 
 ## <a name="data-migration-assistant-v45"></a>数据迁移助手4。5
 
-数据迁移助手的版本4.5 版本提供对将文件系统中托管的 SQL Server Integration Services （SSIS）包迁移到 Azure SQL Database 或 Azure SQL 数据库托管实例的支持。
+数据迁移助手的版本4.5 版本提供对将文件系统中托管的 SQL Server Integration Services (SSIS) 包迁移到 Azure SQL 数据库或 SQL 托管实例的评估。
 
 ## <a name="data-migration-assistant-v44"></a>数据迁移助手 v1。0
 
@@ -53,12 +53,12 @@ ms.locfileid: "82924621"
 
 数据迁移助手的版本4.3 版本提供对的支持：
 
-- 基于工作负荷评估的 Azure SQL 数据库托管实例的 SKU 建议。
+- 基于工作负荷评估的 Azure SQL 托管实例的 SKU 建议。
 - RDS SQL Server 作为评估的源。
-- 作为目标的 Azure SQL 数据库托管实例的代理作业评估。
+- 作为目标的 Azure SQL 托管实例的代理作业评估。
 - 忽略某些评估规则的功能;dma 评估结果中将不会显示在 DMA 中配置的 "ignoreErrorCodes" 属性中指定的错误代码列表。
 - 在作业活动步骤中评估 T-sql 查询并提供相应的建议
-- 扩展事件评估（公共预览版）。
+- 扩展事件评估 (公共预览版) 。
 
 此外，此版本的 DMA 提高了在数据库中处理大量架构对象的性能，并提供了与相关的 bug 修复：
 
@@ -67,15 +67,15 @@ ms.locfileid: "82924621"
 
 ## <a name="data-migration-assistant-v42"></a>数据迁移助手4。2
 
-数据迁移助手的4.2 版在从本地 SQL Server 迁移到 Azure SQL 数据库托管实例时，为一个或多个服务器实例的目标准备情况评估提供命令行支持。 现在，客户可以使用数据迁移助手命令行来收集有关其数据库架构的元数据、检测阻止程序，并了解影响迁移到 Azure SQL 数据库托管实例的部分支持或不支持的功能。 然后，可以使用提供的 Power BI 模板来呈现结果。
+数据迁移助手4.2 版在从本地 SQL Server 迁移到 SQL 托管实例时，为一个或多个服务器实例的目标准备情况评估提供命令行支持。 现在，客户可以使用数据迁移助手命令行来收集有关其数据库架构的元数据、检测阻止程序，并了解影响迁移到 SQL 托管实例的部分支持或不支持的功能。 然后，可以使用提供的 Power BI 模板来呈现结果。
 
 ## <a name="data-migration-assistant-v41"></a>数据迁移助手4。1
 
-数据迁移助手的4.1 版本引入了对迁移到 Azure SQL 数据库托管实例的本地 SQL Server 数据库的全面评估的支持。
+数据迁移助手的4.1 版本引入了对迁移到 SQL 托管实例的本地 SQL Server 数据库的全面评估的支持。
 
-评估工作流可帮助检测以下问题，这些问题可能会影响迁移到 Azure SQL 数据库托管实例：
+评估工作流可帮助检测以下问题，这些问题可能会影响迁移到 SQL 托管实例：
 
-- **支持的或部分支持的功能**。 数据迁移助手评估源 SQL Server 数据库，了解目标 Azure SQL 数据库托管实例部分支持或不支持的功能。 然后，该工具提供一组全面的建议、Azure 中可用的替代方法和缓解措施，以便客户在计划迁移项目时可以将此信息纳入考虑。
+- **支持的或部分支持的功能**。 数据迁移助手评估源 SQL Server 数据库中的数据，以了解在目标 SQL 托管实例上部分支持或不支持的功能。 然后，该工具提供一组全面的建议、Azure 中可用的替代方法和缓解措施，以便客户在计划迁移项目时可以将此信息纳入考虑。
 
 - **兼容性问题**。 数据迁移助手还会标识与以下方面相关的兼容性问题：
 
@@ -83,14 +83,14 @@ ms.locfileid: "82924621"
   - 行为更改：报告的架构对象可能会继续工作，但它们可能会表现出不同的行为，例如性能下降。
   - 信息问题：这些对象不会影响迁移，但可能已从功能 SQL Server 版本中弃用。
 
-完成评估后，请使用[Azure 数据库迁移服务](https://azure.microsoft.com/services/database-migration/)（DMS）执行将 SQL Server 数据库迁移到 Azure SQL 数据库托管实例。  DMS 支持[脱机](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-managed-instance)（一次）和[联机](https://docs.microsoft.com/azure/dms/tutorial-sql-server-managed-instance-online)（最小停机）数据库迁移到 Azure SQL 数据库托管实例。
+完成评估后，使用我们的[Azure 数据库迁移服务](https://azure.microsoft.com/services/database-migration/) (DMS) ，将 SQL Server 数据库迁移到 SQL 托管实例。  DM 同时支持[脱机](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-managed-instance) (一次性) 和[联机](https://docs.microsoft.com/azure/dms/tutorial-sql-server-managed-instance-online) (最短的停机时间) 将数据库迁移到 SQL 托管实例。
 
 ## <a name="data-migration-assistant-v40"></a>数据迁移助手 v4。0
 
-数据迁移助手的 v2.0 版本引入了 Azure SQL 数据库 SKU 建议功能，该功能允许用户根据从承载数据库的计算机收集的性能计数器来识别最低建议的 Azure SQL 数据库 SKU。 此功能提供与定价层、计算级别和最大数据大小以及每月估计成本相关的建议。 它还提供将所有数据库批量预配到 Azure 的功能。
+数据迁移助手的 v2.0 版本引入了 Azure SQL 数据库 SKU 建议功能，该功能允许用户根据从计算机上收集的性能计数器（ (s) 托管数据库）确定最小的推荐 Azure SQL 数据库 SKU。 此功能提供与定价层、计算级别和最大数据大小以及每月估计成本相关的建议。 它还提供将所有数据库批量预配到 Azure 的功能。
 
 > [!NOTE]
-> 当前只能通过命令行接口（CLI）使用此功能。
+> 此功能当前仅通过命令行界面 (CLI) 提供。
 
 有关更多详细信息，请参阅文章[为本地数据库标识正确的 AZURE SQL 数据库 SKU](dma-sku-recommend-sql-db.md)。
 
@@ -106,15 +106,15 @@ ms.locfileid: "82924621"
 
 数据迁移助手对受列出的问题影响的对象执行自动架构转换，并在继续进行架构转换之前提示用户进行确认。 用户可以查看建议的代码更改，然后接受或拒绝任何给定数据库对象的所有转换。
 
-数据迁移助手使用 Microsoft 程序合成（PROSE）技术建议代码修补程序。 了解有关[PROSE](https://microsoft.github.io/prose/)的详细信息。
+数据迁移助手使用 Microsoft 程序合成 (PROSE) 技术建议代码修补程序。 了解有关[PROSE](https://microsoft.github.io/prose/)的详细信息。
 
 ## <a name="data-migration-assistant-v35"></a>数据迁移助手3。5
 
 数据迁移助手的3.5 版包含以下添加项：
 
-- 迁移到 Azure SQL Database 的显著性能改进（基准测试表明，此过程比以前版本的数据迁移助手更快四倍。
+- 迁移到 Azure SQL Database (基准测试的显著性能改进表明，此过程比以前版本的数据迁移助手) 快四倍。
 - 内存占用量经过进一步优化，可以提高迁移工作流的稳定性。
-- 在架构和数据迁移过程中跳过评估的功能（如果在迁移之前已经执行了评估并解决了任何中断的架构对象）。
+- 如果在迁移) 之前已经执行了评估并解决了任何中断的架构对象，则能够在架构和数据迁移过程中跳过评估 (。
 - 解决此问题的解决方法，即，当为备份文件提供了无效的网络共享路径时，在将本地 SQL Server 本地版本升级到更高版本或在 Azure Vm 上 SQL Server 时，该工具会崩溃。
 
 ## <a name="data-migration-assistant-v34"></a>数据迁移助手3。4
@@ -124,7 +124,7 @@ ms.locfileid: "82924621"
 - 支持 SQL Server 2017 作为迁移到 Azure SQL 数据库的源。
 - 增强了稳定性、性能和评估规则的正确性。
 
-## <a name="ddata-migration-assistant-v33"></a>Data 迁移助手3。3
+## <a name="data-migration-assistant-v33"></a>数据迁移助手3。3
 
 数据迁移助手的3.3 版，可以在 Windows 和 Linux 上将本地 SQL Server 实例迁移到新版本的 SQL Server 2017。 尽管适用于 Windows 和 Linux 的总体迁移工作流是相同的，但对于 Linux 的 SQL Server 2017，需要考虑几个额外的注意事项。
 
@@ -141,7 +141,7 @@ Linux 和 Windows 使用不同的路径格式。 因此，迁移到 Linux 上的
 
 ### <a name="migrating-windows-logins"></a>迁移 Windows 登录名
 
-当 Linux 上的 SQL Server 2017 正式支持 Active Directory （AD）登录名的迁移时，它需要其他配置才能成功运行。 有关在 Linux 上的 SQL Server 2017 上设置 Active Directory 登录名的详细信息，请参阅文章[Active Directory 身份验证 Linux 上的 SQL Server](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-authentication) 。 执行所需的配置后，安装完成，你可以像平常一样迁移 Active Directory 登录名。 标准的 SQL 身份验证按预期方式工作，无需进行任何其他设置。
+在 Linux 上 SQL Server 2017 正式支持 Active Directory (AD) 登录名的迁移时，它需要其他配置才能成功运行。 有关在 Linux 上的 SQL Server 2017 上设置 Active Directory 登录名的详细信息，请参阅文章[Active Directory 身份验证 Linux 上的 SQL Server](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-authentication) 。 执行所需的配置后，安装完成，你可以像平常一样迁移 Active Directory 登录名。 标准的 SQL 身份验证按预期方式工作，无需进行任何其他设置。
 
 ## <a name="data-migration-assistant-v32"></a>数据迁移助手3。2
 
@@ -182,7 +182,7 @@ Linux 和 Windows 使用不同的路径格式。 因此，迁移到 Linux 上的
 
 - 发现可能影响升级到 SQL Server 本地版本的问题。 任何发现都被描述为兼容性问题，并分为以下几个方面：
   - 重大更改
-  - 行为变更
+  - 行为更改
   - 已弃用的功能
 - 发现目标 SQL Server 平台中的新功能，数据库在升级后可从中受益。 任何发现均被描述为功能建议，并分为以下几个方面：
   - 性能

@@ -1,5 +1,5 @@
 ---
-title: 连接到 Azure SQL DB （AccessToSQL） |Microsoft Docs
+title: " (AccessToSQL) 连接到 Azure SQL 数据库 |Microsoft Docs"
 description: 了解如何连接到 Azure SQL 数据库的目标实例以迁移 Access 数据库。 SSMA 获取有关 Azure SQL 数据库中的数据库的元数据。
 ms.prod: sql
 ms.custom: ''
@@ -19,14 +19,14 @@ helpviewer_keywords:
 ms.assetid: 1ba0d113-dc05-4431-8689-e14a8821bafd
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: f07d63387a6abd55aa2a130f2809681b00a71b19
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: 529962cbc303a66102f833374e42c6cfb8981b87
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293124"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87822514"
 ---
-# <a name="connecting-to-azure-sql-db-accesstosql"></a>连接到 Azure SQL DB （AccessToSQL）
+# <a name="connecting-to-azure-sql-database-accesstosql"></a>连接到 Azure SQL 数据库 (AccessToSQL) 
 若要将 Access 数据库迁移到 SQL Azure，你必须连接到 SQL Azure 的目标实例。 在连接时，SSMA 将获取 SQL Azure 实例中所有数据库的元数据，并在 SQL Azure 元数据资源管理器中显示数据库元数据。 SSMA 存储有关连接到的 SQL Azure 实例的信息，但不存储密码。  
   
 到 SQL Azure 的连接保持活动状态，直到关闭项目。 重新打开项目时，如果需要与服务器建立活动连接，则必须重新连接到 SQL Azure。 在将数据库对象加载到 SQL Azure 和迁移数据之前，可以脱机工作。  
@@ -50,13 +50,13 @@ ms.locfileid: "84293124"
   
 **连接到 SQL Azure**  
   
-1.  在 "**文件**" 菜单上，选择 "**连接到 SQL Azure** （创建项目后启用此选项）"。  
+1.  在 "**文件**" 菜单上，选择 "**连接到 SQL Azure** (在创建项目) 后启用此选项。  
   
     如果以前连接到 SQL Azure，则命令名称将**重新连接到 SQL Azure**。  
   
 2.  在 "连接" 对话框中，输入或选择 SQL Azure 的服务器名称。  
   
-3.  输入，选择或**浏览**数据库名称。  
+3.  输入、选择或**浏览**数据库名称。  
   
 4.  输入或选择 "**用户名**"。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "84293124"
   
 6.  SSMA 建议将加密连接 SQL Azure。  
   
-7.  单击“连接”。  
+7.  单击“连接” 。  
   
 > [!IMPORTANT]  
 > SSMA for Access 不支持连接到 SQL Azure 中的**master**数据库。  
@@ -96,7 +96,7 @@ ms.locfileid: "84293124"
   
 重新连接到 SQL Azure 的过程与建立连接的过程相同。  
   
-## <a name="next-step"></a>后续步骤  
+## <a name="next-step"></a>下一步  
 迁移的下一步取决于你的项目需求：  
   
 -   若要自定义访问架构与 SQL Azure 数据库和架构之间的映射，请参阅[将访问数据库映射到 SQL Server 架构](mapping-source-and-target-databases-accesstosql.md)。  

@@ -1,5 +1,5 @@
 ---
-title: 映射 MySQL 和 SQL Server 数据类型（MySQLToSQL） |Microsoft Docs
+title: " (MySQLToSQL) 映射 MySQL 和 SQL Server 数据类型 |Microsoft Docs"
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: 14f98054-13b4-4231-a6b0-2452f3b9941d
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 99e86d99a4214b1ccdf317e75218fe22bb2c7af7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d0b29deae2e0bdba81318130df46e30683717c86
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67908992"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823462"
 ---
 # <a name="mapping-mysql-and-sql-server-data-types-mysqltosql"></a>映射 MySQL 和 SQL Server 数据类型 (MySQLToSQL)
-MySQL 数据库类型与[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 数据库类型不同。 将 MySQL 数据库对象转换为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 对象时，必须指定如何将数据类型从 MySQL 映射到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。 您可以接受默认的数据类型映射，也可以自定义映射，如下面的过程所示。  
+MySQL 数据库类型与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 数据库类型不同。 将 MySQL 数据库对象转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 对象时，必须指定如何将数据类型从 MySQL 映射到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure。 您可以接受默认的数据类型映射，也可以自定义映射，如下面的过程所示。  
   
 ## <a name="default-mappings"></a>默认映射  
 SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，请参阅[项目设置 &#40;类型映射&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md)。  
   
 ## <a name="type-mapping-inheritance"></a>类型映射继承  
-您可以在项目级别、对象类别级别（如所有存储过程）或对象级别自定义类型映射。 除非在较低级别上被重写，否则将从较高级别继承设置。 例如，如果在项目级别将**smallint**映射到**int** ，则项目中的所有对象都将使用此映射，除非你在对象或类别级别自定义映射。  
+您可以在项目级别自定义类型映射、对象类别级别 (例如所有存储过程) 或对象级别）。 除非在较低级别上被重写，否则将从较高级别继承设置。 例如，如果在项目级别将**smallint**映射到**int** ，则项目中的所有对象都将使用此映射，除非你在对象或类别级别自定义映射。  
   
 查看 SSMA 中的 "**类型映射**" 选项卡时，背景会进行颜色编码，以显示继承了哪些类型的映射。 对于任何继承的类型映射，类型映射的背景为黄色; 对于在当前级别指定的任何映射，背景为白色。  
   
@@ -76,11 +76,11 @@ SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，�
   
     1.  在 "类型映射" 窗格中，选择 "类型映射" 列表中包含要删除的数据类型映射的行。  
   
-    2.  单击 **“删除”**。  
+    2.  单击“删除”。  
   
 ## <a name="next-step"></a>下一步  
 迁移过程的下一步是[创建一个评估报表](assessing-mysql-databases-for-conversion-mysqltosql.md)，或[将 MySQL 数据库对象转换为 SQL Server 或 SQL Azure 语法](converting-mysql-databases-mysqltosql.md)。 如果创建报表，则在评估期间会自动转换 MySQL 对象。  
   
 ## <a name="see-also"></a>另请参阅  
-[将 MySQL 数据库迁移到 SQL Server-Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[将 MySQL 数据库迁移到 SQL Server-Azure SQL 数据库 &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

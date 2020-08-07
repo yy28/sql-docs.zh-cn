@@ -1,6 +1,6 @@
 ---
-title: 安装 SSMA for MySQL client （MySQLToSQL） |Microsoft Docs
-description: 了解适用于 MySQL 客户端的 SQL Server 迁移助手（SSMA）的安装先决条件，以及如何安装。
+title: 安装 SSMA for MySQL client (MySQLToSQL) |Microsoft Docs
+description: 了解 SQL Server 迁移助手 (SSMA) for MySQL client 和如何安装的安装必备组件。
 ms.prod: sql
 ms.custom: ''
 ms.date: 07/14/2020
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: ede3128c-370d-45a5-a815-3d94eecaea30
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7dc2cb4216386e13c57d31f121809a604e91b67d
-ms.sourcegitcommit: fd7b268a34562d70d46441f689543ecce7df2e4d
+ms.openlocfilehash: d6bda2cad0761dbb53fcc4bb66d29829841f249d
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86411605"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87824027"
 ---
-# <a name="installing-ssma-for-mysql-client-mysqltosql"></a>安装 SSMA for MySQL client （MySQLToSQL）
+# <a name="installing-ssma-for-mysql-client-mysqltosql"></a>安装 SSMA for MySQL client (MySQLToSQL) 
 
 SSMA for MySQL 客户端包含执行以下任务的程序文件：
 
@@ -42,7 +42,7 @@ SSMA for MySQL 旨在使用 MySQL 4.1 或更高版本，以及2012或更高版�
 - [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] 版本4.7.2 或更高版本。 你可以从[.NET Framework 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=48882)获取它。
 - MySQL ODBC 5.1 驱动程序和与要迁移的 MySQL 数据库的连接。 你可以从 MySQL 网站安装 MySQL。 有关连接的详细信息，请参阅[连接到 MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)。
 - 在宿主目标实例的计算机上访问和足够的权限，你将在该计算机上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 迁移数据库对象和数据。 有关详细信息，请参阅[连接到 SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)。
-- 如果是 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 项目，则对要在 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 其中迁移数据库对象和数据的实例的访问权限和足够权限。 有关详细信息，请参阅[连接到 AZURE SQL DB &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)。
+- 如果是 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 项目，则对要在 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 其中迁移数据库对象和数据的实例的访问权限和足够权限。 有关详细信息，请参阅[连接到 AZURE SQL 数据库 &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)。
 - 建议使用 4 GB RAM。
 
 ## <a name="installing-ssma-for-mysql-client"></a>安装 SSMA for MySQL 客户端

@@ -1,6 +1,6 @@
 ---
-title: SSMA for DB2 中的新增功能（DB2ToSQL） |Microsoft Docs
-description: 了解每个版本的 DB2 （SSMA）对 SQL Server 迁移助手（DB2ToSQL）的更改。
+title: SSMA for DB2 (DB2ToSQL) 的新增功能 |Microsoft Docs
+description: 了解有关每个版本的 DB2 (DB2ToSQL) SQL Server 迁移助手 (SSMA) 的更改。
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
@@ -10,16 +10,16 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
 ms.author: alexiva
-ms.openlocfilehash: c9a6d0b5eee611de7009247484dbb9b7591982d5
-ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
+ms.openlocfilehash: 9706f1f2313594ded00cc0fa7e1335bb194b8313
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87477249"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87862474"
 ---
-# <a name="whats-new-in-ssma-for-db2-db2tosql"></a>SSMA for DB2 中的新增功能（DB2ToSQL）
+# <a name="whats-new-in-ssma-for-db2-db2tosql"></a>DB2 (DB2ToSQL 的 SSMA 中的新增功能) 
 
-本文列出了每个版本中的 DB2 更改 SQL Server 迁移助手（SSMA）。
+本文列出了每个版本中的 DB2 更改 SQL Server 迁移助手 (SSMA) 。
 
 ## <a name="ssma-v812"></a>SSMA v 8.12
 
@@ -32,7 +32,7 @@ ms.locfileid: "87477249"
 
 用于 DB2 的 SSMA 的8.11 版本包含以下更改：
 
-* 支持 DB2 for i （7.1 及更高版本）
+* 支持 DB2 for i (7.1 及更高版本) 
 * 转换 `SQLSTATE` 和`SQLCODE`
 * 函数内带副作用的运算符的转换错误消息
 * 使用 MSAL.NET 库进行交互式 Azure Active Directory 身份验证
@@ -109,7 +109,7 @@ SSMA for DB2 的 v4.0 版本包括全新的 DB2 语法分析器，以及图形�
 
 ## <a name="ssma-v84"></a>SSMA v2。0
 
-SSMA for DB2 的 v2.0 版本使用旨在解决辅助功能问题的目标修补程序进行了增强，并修复了与 SQL Server 2016 及更高版本的最大索引列（32而不是16）相关的 bug。
+SSMA for DB2 的 v2.0 版本使用旨在解决辅助功能问题的目标修补程序进行了增强，并修复了与最大索引列相关的 bug (允许32而不是 16) 用于 SQL Server 2016 及更高版本。
 
 > [!IMPORTANT]
 > 对于 SSMA 版本7.4，8.4，.NET 4.5.2 是必备组件。
@@ -121,12 +121,12 @@ SSMA for DB2 的 v 8.3 版本通过旨在改进质量和转换指标的目标修
 * 解决辅助功能问题。
 * 为 SQL Server 中的类型添加基本支持 `hierarchyid` 。
 * 将 z/OS 发现查询中的 TRIM 函数用法替换为 `RTRIM` / `LTRIM` 。
-* 允许用户在以 "标准模式" （默认值为）连接时指定包集合 `NULLID` 。
+* 允许用户在 "标准模式" 下连接时指定包集合 (默认为 `NULLID`) 。
 * 添加的转换 `CREATE TABLE AS SELECT` 。
 * 改进全局临时表的转换。
 * 解决了对象唯一检查顺序的问题，以便在名称发生冲突的情况下为表设置优先级。
 * 解决为 `DATE` z/OS 加载和的默认列值的问题 `TIMESTAMP` 。
-* 支持 Unicode 换行符（也称为 `NEL` ）。
+* 支持 Unicode 换行符 (也称为 `NEL`) 。
 * 解决带有缺少子句的游标转换问题 `RETURN TO` 。
 * 添加对标签和的支持 `GOTO` 。
 
@@ -152,9 +152,9 @@ SSMA for DB2 的 "7.4 版" 版本得到了增强，可提供旨在提高质量�
 
 SSMA for DB2 的 v2.0 版本得到了增强，可提供旨在提高质量和转换指标的目标修补程序。 此版本还提供以下新增功能：
 
-* 支持作为目标**Azure SQL 数据库托管实例**。 你现在可以创建面向 Azure SQL 数据库托管实例的新项目：
+* 支持作为目标的**AZURE SQL 托管实例**。 你现在可以创建面向 Azure SQL 托管实例的新项目：
 
-  ![SQL DB MI 项目](../media/ssma-newproject-sqldbmi.png)
+  ![SQL MI 项目](../media/ssma-newproject-sqldbmi.png)
 
 * 转换后**修补顾问**。 [在此处](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)了解详细信息。
 
@@ -177,7 +177,7 @@ SSMA for DB2 的 v2.0 版本得到了增强，可提供旨在提高质量和转�
 
 * 改进质量和转换指标的目标修补程序。
 * 支持在 SSMA 命令行中更改数据类型映射和项目首选项。
-* 支持使用 SQL Server Integration Services （SSIS）迁移数据。 转换架构后，可以使用右键单击上下文菜单选项创建 SSIS 包。
+* 支持使用 SQL Server Integration Services (SSIS) 迁移数据。 转换架构后，可以使用右键单击上下文菜单选项创建 SSIS 包。
 * 还更改了 SSMA 中的 Azure SQL 数据库连接对话框以指定完全限定的服务器名称。 在以前版本的 SSMA 中，必须在项目设置中显式提到 Azure SQL 数据库前缀。
 
 ## <a name="ssma-v78"></a>SSMA v 7。8
@@ -192,11 +192,11 @@ SSMA for DB2 的 v2.0 版本得到了增强，可提供旨在提高质量和转�
 用于 DB2 的 SSMA 的 v4.0 版本包含以下更改：
 
 * 改进质量和转换指标的目标修补程序。
-* 基于常用需求，SSMA for DB2 的32位版本已恢复。 与之前的实现（在7.4 之前）相比，有两个安装包，但不能并行安装。 因此，你必须根据你拥有的连接组件选择最适合的版本。 如果可能，始终最好使用64位版本。
+* 基于常用需求，SSMA for DB2 的32位版本已恢复。 与) v 7.4 之前的实现 (相比，有两个安装包，但不能并行安装。 因此，你必须根据你拥有的连接组件选择最适合的版本。 如果可能，始终最好使用64位版本。
 
 ## <a name="ssma-v76"></a>SSMA v 7。6
 
-SSMA for DB2 的版本7.6 版本增强了目标修补程序，可改进质量和转换指标，并支持 SQL Server 2017 （公共预览版）。 对 Windows 和 Linux 上的 SQL Server 2017 的支持是公共预览版，不应用于生产迁移。
+SSMA for DB2 的版本7.6 版本通过目标修补程序增强，这些修补程序可提高质量和转换指标，并支持 SQL Server 2017 (公共预览) 。 对 Windows 和 Linux 上的 SQL Server 2017 的支持是公共预览版，不应用于生产迁移。
 
 ## <a name="ssma-v75"></a>SSMA 7。5
 
@@ -221,7 +221,7 @@ SSMA for DB2 的版本7.5 版本增强了几项改进，以确保为残障人士
 
 * 根据客户的反馈，改进了质量和转换指标与目标修复。
 * 通过以下各项公开的 SSMA 扩展性框架：
-  * 将功能导出到 SQL Server Data Tools （SSDT）项目。
+  * 将功能导出到 SQL Server Data Tools (SSDT) 项目。
     * 你现在可以将 SSMA 中的架构脚本导出到 SSDT 项目。 您可以使用架构脚本来进行其他架构更改并部署您的数据库。
 
       ![另存为 SSDT 项目命令](../media/export-schema-scripts_red.png)
@@ -243,7 +243,7 @@ SSMA for DB2 的 v2.0 版本包含以下更改：
 
 * Windows 和 Linux 上的 SQL Server 2017 现在是支持迁移的目标平台。 此功能在 technical preview 中，允许将架构和数据移动到目标 SQL server。
 * 支持自动更新，以下载最新版本的 SSMA （如果可用）。
-* SSMA 可安装二进制文件现在通过 Windows Installer 包文件（.msi）传递。
+* SSMA 可安装二进制文件现在通过 Windows Installer 包文件 ( .msi) 提供。
 
 ## <a name="may-2016"></a>2016 年 5 月
 
@@ -251,7 +251,7 @@ DB2 的 SSMA 2016 版包含以下更改：
 
 * 添加了对 SQL Server 2016 的支持。
 * 添加了 DB2 内存中和常规表的转换，以便 SQL Server 内存中和 hekaton 的功能。
-* 添加了 DB2 访问控制到 SQL Server 策略对象的转换（用于 DB2 的行级别安全性）。
+* 添加了 DB2 访问控制的转换，以便为 DB2)  (行级别安全性 SQL Server 策略对象。
 * 添加了 DB2 系统版本控制表到 SQL Server 临时表的转换。
 * 改进了 DB2 分析器和解析程序。
 * 移除了 .NET 2.0 的安装程序检查。
@@ -271,9 +271,9 @@ SSMA 的2016年1月维护版本包含以下更改：
   
 * 添加了对许多标准函数的支持。
 * 修复了 DB2 分析器错误。
-* 修复了 DB2 v9.x zOS 支持（RFC 5690920）。
+* 修复了 DB2 v9.x zOS (RFC 5690920) 支持。
 * 修复了转换期间的 DB2 未解决标识符错误。
-* 向 SSMA 添加了 "查看日志" 菜单项（RFC 5706203）。
+* 已将 "查看日志" 菜单项添加到 SSMA (RFC 5706203) 。
 * 添加了遥测。
   
 ## <a name="november-2014"></a>2014 年 11 月

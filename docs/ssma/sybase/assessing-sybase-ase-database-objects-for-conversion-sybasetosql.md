@@ -1,5 +1,5 @@
 ---
-title: 评估 SAP ASE 数据库对象的转换（SybaseToSQL） |Microsoft Docs
+title: 评估用于转换 (SybaseToSQL) 的 SAP ASE 数据库对象 |Microsoft Docs
 ms.custom: ''
 ms.date: 12/01/2017
 ms.prod: sql
@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: eb996b7c-1eef-4f73-b5e6-2fa6faf7336c
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: c65c19ee3b95303afb0e1ae0a950efe548c8f0af
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8941c243b6741b42b7c3e628305431812ad3f8d7
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68083535"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864834"
 ---
-# <a name="assessing-sap-ase-database-objects-for-conversion-sybasetosql"></a>评估 SAP ASE 数据库对象的转换（SybaseToSQL）
-在加载对象并将数据迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL 之前，你应该确定迁移的复杂性以及所需的时间。 SSMA 可以创建一个评估报表，显示将成功转换为[!INCLUDE[tsql](../../includes/tsql-md.md)]的对象和过程的百分比。 SSMA 还允许您查看可能导致转换失败的特定问题。  
+# <a name="assessing-sap-ase-database-objects-for-conversion-sybasetosql"></a>评估用于转换 (SybaseToSQL) 的 SAP ASE 数据库对象
+在加载对象并将数据迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 AZURE SQL 之前，你应该确定迁移的复杂性以及所需的时间。 SSMA 可以创建一个评估报表，显示将成功转换为的对象和过程的百分比 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 SSMA 还允许您查看可能导致转换失败的特定问题。  
   
 ## <a name="create-assessment-reports"></a>创建评估报表  
-创建此评估报告时，SSMA 会将所选 SAP 自适应服务器企业（ASE）数据库[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]对象转换为或 Azure SQL 语法，然后显示结果。  
+创建此评估报告时，SSMA 会将所选 SAP 自适应服务器企业 (ASE) 数据库对象转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 AZURE SQL 语法，然后显示结果。  
   
 **创建评估报表**  
   
@@ -34,7 +34,7 @@ ms.locfileid: "68083535"
   
     SSMA 在窗口底部的状态栏中显示进度。 如果 "输出" 窗格可见，则还会看到任何相关的消息。  
   
-    评估完成后，将显示 " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sybase：评估报表" 窗口的迁移助手。  
+    评估完成后， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将显示 "Sybase：评估报表" 窗口的迁移助手。  
   
 ## <a name="use-assessment-reports"></a>使用评估报告  
 "评估报表" 窗口包含三个窗格：  
@@ -43,7 +43,7 @@ ms.locfileid: "68083535"
   
 -   右窗格的内容因在左窗格中选择的项而异。  
   
-    如果选择了一组对象（如架构）或表，则右窗格将显示两个窗格。 "**转换统计信息**" 窗格显示所选对象的转换统计信息。 "**按类别**列出的对象" 窗格显示对象或对象类别的转换统计信息。  
+    如果选择了一组对象 (如架构) 或表，则右窗格将显示两个窗格。 "**转换统计信息**" 窗格显示所选对象的转换统计信息。 "**按类别**列出的对象" 窗格显示对象或对象类别的转换统计信息。  
   
     如果选择了 "存储过程"、"视图" 或 "触发器"，则右窗格包含统计信息、源代码和目标代码。  
   
@@ -71,11 +71,11 @@ ms.locfileid: "68083535"
   
     -   在 ASE 中，可以更改 ASE 对象，以删除或修改有问题的代码。 若要将更新的代码加载到 SSMA 中，必须更新元数据。 有关详细信息，请参阅[连接到 SYBASE ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md)。  
   
-    -   可以从迁移中排除对象。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure Sql 元数据资源管理器和 "Sybase 元数据资源管理器" 中，先清除项旁边的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]复选框，然后将对象加载到或 Azure SQL 中，并从 ASE 迁移数据。
+    -   可以从迁移中排除对象。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 AZURE Sql 元数据资源管理器和 "Sybase 元数据资源管理器" 中，先清除项旁边的复选框，然后将对象加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Azure SQL 中，并从 ASE 迁移数据。
   
 ## <a name="next-steps"></a>后续步骤  
 [将 SAP ASE 数据库对象转换 &#40;SybaseToSQL&#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)  
   
 ## <a name="see-also"></a>另请参阅  
-[将 SAP ASE 数据库迁移到 SQL Server-Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[将 SAP ASE 数据库迁移到 SQL Server-Azure SQL 数据库 &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

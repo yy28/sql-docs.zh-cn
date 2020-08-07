@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
-ms.openlocfilehash: 85143440cc92cdc427be673667e22be6957cbe50
-ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
+ms.openlocfilehash: ae88f4473414e83a2ffbddee5c47fa40c552115a
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565496"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823362"
 ---
 # <a name="replay-a-trace-in-database-experimentation-assistant"></a>在数据库实验助手中重播跟踪
 
@@ -48,7 +48,7 @@ ms.locfileid: "87565496"
     - **重播跟踪位置**：指定用于存储与跟踪重播关联的跟踪文件/XEvents 的路径。
 
         > [!NOTE]
-        > 对于 Azure SQL 数据库或 Azure SQL 数据库托管实例，需要提供 Azure blob 存储帐户的 SAS URI。
+        > 对于 Azure SQL 数据库或 Azure SQL 托管实例，需要提供 Azure blob 存储帐户的 SAS URI。
 
 3. 通过选择 **"是，手动还原数据库 () "** 复选框，验证是否已将数据库还原 () 。
 
@@ -163,6 +163,6 @@ UNC 路径与 Distributed Replay 不兼容。 Distributed Replay 路径必须是
   
 此问题已在 2017 SQL Server 的最新累积更新1中解决。 下载[SQL Server 2017 的累积更新 1](https://support.microsoft.com/help/4038634/cumulative-update-1-for-sql-server-2017)的最新版本。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - 若要创建分析报表来帮助获取有关建议更改的信息，请参阅[创建报表](database-experimentation-assistant-create-report.md)。

@@ -1,6 +1,6 @@
 ---
-title: SSMA for MySQL 中的新增功能（MySQLToSql） |Microsoft Docs
-description: 了解每个版本对 MySQL （MySQLToSQL） SQL Server 迁移助手（SSMA）的更改。
+title: SSMA for MySQL 中的新增功能 (MySQLToSql) |Microsoft Docs
+description: 了解每个版本的 SQL Server 迁移助手 (SSMA) for MySQL (MySQLToSQL) 的更改。
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
@@ -10,16 +10,16 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 ms.author: alexiva
-ms.openlocfilehash: 0511e67a355f960dcc3af90324142d5662b38627
-ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
+ms.openlocfilehash: 7c9b0a65da5038f2b8871ae9ae680d3a8bd9bf33
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87477359"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863463"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>SSMA for MySQL 中的新增功能 (MySQLToSql)
 
-本文列出了每个版本中的 MySQL 更改 SQL Server 迁移助手（SSMA）。
+本文列出了每个版本中的 MySQL 更改 SQL Server 迁移助手 (SSMA) 。
 
 ## <a name="ssma-v812"></a>SSMA v 8.12
 
@@ -80,7 +80,7 @@ SSMA for MySQL 的 v4.0 版本在图形用户界面中提供了细微的修复�
 
 ## <a name="ssma-v84"></a>SSMA v2。0
 
-SSMA for MySQL 的 v2.0 版本增强了目标修补程序，旨在解决辅助功能问题，并修复了与最大索引列（为32，而不是16）相关的 bug，以支持 SQL Server 2016 及更高版本。
+SSMA for MySQL 的 v2.0 版本增强了目标修补程序，旨在解决辅助功能问题，并修复了与最大索引列相关的 bug (允许32而不是 16) 用于 SQL Server 2016 及更高版本。
 
 > [!IMPORTANT]
 > 对于 SSMA 版本7.4，8.4，.NET 4.5.2 是必备组件。
@@ -114,9 +114,9 @@ SSMA for MySQL 的7.4 版是通过旨在提高质量和转换指标的目标修�
 
 SSMA for MySQL 的 v2.0 版本增强了旨在提高质量和转换指标的目标修补程序。 此版本还提供以下新增功能：
 
-* 支持作为目标**Azure SQL 数据库托管实例**。 你现在可以创建面向 Azure SQL 数据库托管实例的新项目：
+* 支持作为目标的**AZURE SQL 托管实例**。 你现在可以创建面向 Azure SQL 托管实例的新项目：
 
-  ![SQL DB MI 项目](../media/ssma-newproject-sqldbmi.png)
+  ![SQL MI 项目](../media/ssma-newproject-sqldbmi.png)
 
 * 转换后**修补顾问**。 [在此处](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)了解详细信息。
 
@@ -140,7 +140,7 @@ SSMA for MySQL 的 v 7.9 版本包含以下更改：
 * 改进质量和转换指标的目标修补程序。
 * 部分支持将空间数据类型从 MySQL 迁移到 Azure SQL Database。
 * 支持在 SSMA 命令行中更改数据类型映射和项目首选项。
-* 支持使用 SQL Server Integration Services （SSIS）迁移数据。 转换架构后，可以使用右键单击上下文菜单选项创建 SSIS 包。
+* 支持使用 SQL Server Integration Services (SSIS) 迁移数据。 转换架构后，可以使用右键单击上下文菜单选项创建 SSIS 包。
 * 还更改了 SSMA 中的 Azure SQL 数据库连接对话框以指定完全限定的服务器名称。 在以前版本的 SSMA 中，必须在项目设置中显式提到 Azure SQL 数据库前缀。
 
 ## <a name="ssma-v78"></a>SSMA v 7。8
@@ -155,12 +155,12 @@ SSMA for MySQL 的7.4 版版本包含以下更改：
 SSMA for MySQL 的 v4.0 版本包含以下更改：
 
 * SSMA for MySQL 已通过可提高质量和转换指标的目标修补程序进行了增强。
-* 基于常用需求，SSMA for MySQL 的32位版本已恢复。 与之前的实现（在7.4 之前）相比，有两个安装包，但不能并行安装。 因此，你必须根据你拥有的连接组件选择最适合的版本。 如果可能，始终最好使用64位版本。
+* 基于常用需求，SSMA for MySQL 的32位版本已恢复。 与上一次实现)  (v 7.4 之前的实现相比，有两个安装包，但不能并行安装。 因此，你必须根据你拥有的连接组件选择最适合的版本。 如果可能，始终最好使用64位版本。
 * SSMA for MySQL 现在具有 ODBC 连接字符串连接模式，该模式允许你使用与 MySQL 兼容的任何第三方 ODBC 驱动程序。
 
 ## <a name="ssma-v76"></a>SSMA v 7。6
 
-SSMA for MySQL 的版本7.6 版本已通过可提高质量和转换指标的目标修补程序进行了增强，并支持 SQL Server 2017 （公共预览版）。 对 Windows 和 Linux 上的 SQL Server 2017 的支持是公共预览版，不应用于生产迁移。
+SSMA for MySQL 的版本7.6 版本已增强，可提高质量和转换指标，并支持 SQL Server 2017 (公共预览) 。 对 Windows 和 Linux 上的 SQL Server 2017 的支持是公共预览版，不应用于生产迁移。
 
 ## <a name="ssma-v75"></a>SSMA 7。5
 
@@ -184,7 +184,7 @@ SSMA for MySQL 的7.3 版包含以下更改：
 
 * 根据客户的反馈，改进了质量和转换指标与目标修复。
 * 通过以下各项公开的 SSMA 扩展性框架：
-  * 将功能导出到 SQL Server Data Tools （SSDT）项目。
+  * 将功能导出到 SQL Server Data Tools (SSDT) 项目。
     * 你现在可以将 SSMA 中的架构脚本导出到 SSDT 项目。 您可以使用架构脚本来进行其他架构更改并部署您的数据库。
 
       ![另存为 SSDT 项目命令](../media/export-schema-scripts_red.png)
@@ -206,7 +206,7 @@ SSMA for MySQL 的 v2.0 版本包含以下更改：
 
 * Windows 和 Linux 上的 SQL Server 2017 现在是支持迁移的目标平台。 此功能在 technical preview 中，允许将架构和数据移动到目标 SQL server。
 * SSMA 现在支持自动更新，以下载最新版本的 SSMA。
-* SSMA 可安装二进制文件现在通过 Windows Installer 包文件（.msi）传递。
+* SSMA 可安装二进制文件现在通过 Windows Installer 包文件 ( .msi) 提供。
 
 ## <a name="may-2016"></a>2016 年 5 月
 
@@ -231,18 +231,18 @@ SSMA for MySQL 的2016年3月预览版本添加了对迁移到 SQL Server 2016 �
 
 SSMA for MySQL 的版本2016的维护版本包含以下更改：
 
-* 向 SSMA 添加了 "查看日志" 菜单项（RFC 5706203）。
+* 已将 "查看日志" 菜单项添加到 SSMA (RFC 5706203) 。
 * 添加了遥测。
   
 ## <a name="july-2014"></a>2014 年 7 月
 
 SSMA for MySQL 的2014年7月发行版本包含以下更改：
   
-* 改进了 Azure SQL DB 代码转换。
-* 扩展包功能已移动到架构以支持 Azure SQL DB。
+* 改进了 Azure SQL 数据库代码转换。
+* 扩展包功能已移动到架构以支持 Azure SQL 数据库。
 * 针对具有超过10k 对象的数据库测试了性能改进。
 * 用于处理大量对象的 UI 改进。
-* 突出显示众所周知的 LOB 架构（以便它们在转换时被忽略）。
+* 突出显示众所周知的 LOB 架构 (以便在转换) 时可以将其忽略。
 * 转换速度得到改进。
 * 在 UI 中显示对象计数。
 * 报表大小减少25% 以上。
@@ -272,7 +272,7 @@ SSMA for MySQL 的2011年4月版包含以下更改：
 * 增强了客户端数据迁移引擎，支持并行数据迁移。
 * 通过简单和大容量日志恢复模式改进了数据迁移性能。
 * SSMA for MySQL 控制台版本支持向后兼容性。 可以打开先前版本的 SSMA v 5.0 创建的项目。
-* SSMA for MySQL 5.0 版产品可与较旧版本的 SSMA 产品并行安装（SxS）。
+* SSMA for MySQL 5.0 版产品可与 SSMA 产品的旧版本并行安装 (SxS) 。
   
 ## <a name="july-2010"></a>2010 年 7 月
 

@@ -1,6 +1,6 @@
 ---
-title: 将 Oracle 数据库迁移到 SQL Server （OracleToSQL） |Microsoft Docs
-description: 使用此建议过程将 Oracle 数据库迁移到使用 SQL Server 迁移助手的 SQL Server 或 Azure SQL 数据库（SSMA）。
+title: 将 Oracle 数据库迁移到 SQL Server (OracleToSQL) |Microsoft Docs
+description: 使用此推荐的过程，使用 SQL Server 迁移助手 (SSMA) 将 Oracle 数据库迁移到 SQL Server 或 Azure SQL 数据库。
 ms.prod: sql
 ms.custom: ''
 ms.date: 04/22/2018
@@ -11,18 +11,18 @@ ms.assetid: 1d196dd6-4322-4c98-bb72-602c57d96134
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: 67fb6eeba0a1385d3d764dfa2d8e55f40f34455a
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: f6d6860f1f30c970148555d81a158a7ec98a72f3
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84294044"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863483"
 ---
 # <a name="migrating-oracle-databases-to-sql-server-oracletosql"></a>将 Oracle 数据库迁移到 SQL Server (OracleToSQL)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Oracle 迁移助手（SSMA）是一个全面的环境，可帮助你快速将 Oracle 数据库迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AZURE SQL DB 或 AZURE Sql 数据仓库。 通过使用 SSMA for Oracle，你可以查看数据库对象和数据、评估要迁移的数据库、将数据库对象迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AZURE SQL db 或 AZURE Sql 数据仓库，然后将数据迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AZURE sql Db 或 Azure Sql 数据仓库。 请注意，不能迁移系统和 Oracle 架构。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Oracle 迁移助手 (SSMA) 是一个全面的环境，可帮助你快速将 Oracle 数据库迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AZURE Sql Database 或 AZURE Sql 数据仓库。 通过使用 SSMA for Oracle，你可以查看数据库对象和数据、评估要迁移的数据库、将数据库对象迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、AZURE Sql 数据库或 AZURE Sql 数据仓库，然后将数据迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure sql Database 或 Azure Sql 数据仓库。 请注意，不能迁移系统和 Oracle 架构。
   
 ## <a name="recommended-migration-process"></a>建议的迁移过程  
-若要成功地将对象和数据从 Oracle 数据库迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AZURE SQL DB 或 AZURE Sql 数据仓库，请使用以下过程：
+若要成功地将对象和数据从 Oracle 数据库迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AZURE Sql Database 或 AZURE Sql 数据仓库，请使用以下过程：
   
 1.  [创建新的 SSMA 项目](working-with-ssma-projects-oracletosql.md)。  
   

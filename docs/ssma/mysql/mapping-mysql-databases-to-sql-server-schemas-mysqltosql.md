@@ -1,5 +1,5 @@
 ---
-title: 将 MySQL 数据库映射到 SQL Server 架构（MySQLToSQL） |Microsoft Docs
+title: 将 MySQL 数据库映射到 SQL Server 架构 (MySQLToSQL) |Microsoft Docs
 description: 了解如何为 MySQL 架构与 SQL Server 或 Azure SQL 数据库之间的 MySQL 映射自定义 SSMA 或接受默认值。
 ms.prod: sql
 ms.custom: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5c6fb445-92ae-4933-b77d-80230931c024
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: f70cf22db8d4a9c957465ea86f286c41098538c5
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: 5fa0585a82a7c96fac8992b82f631364c27d3b87
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293704"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823630"
 ---
 # <a name="mapping-mysql-databases-to-sql-server-schemas-mysqltosql"></a>将 MySQL 数据库映射到 SQL Server 架构 (MySQLToSQL)
 默认情况下，SSMA for MySQL 将 MySQL 架构中的所有对象迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 名为的或 SQL Azure 数据库的架构。 不过，你可以自定义 MySQL 架构和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 数据库之间的映射。  
@@ -26,7 +26,7 @@ ms.locfileid: "84293704"
 ## <a name="mysql-and-sql-server-or-sql-azure-schemas"></a>MySQL、SQL Server 或 SQL Azure 架构  
 架构的 MySQL 概念映射到数据库的 SQL Server 概念及其架构之一。 SSMA 是指作为架构的数据库和架构的 SQL Server 组合。  
   
-架构的 MySQL 概念映射到数据库的 SQL Server 概念及其架构之一。 例如，MySQL 可能有一个名为**HR**的架构。 SQL Server 的实例可能有一个名为**HR**的数据库，该数据库中的数据库是架构。 一个架构是**dbo** （或数据库所有者）架构。 默认情况下，MySQL schema **hr**将映射到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库，架构**hr. dbo**。 SSMA 是指 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作为架构的数据库和架构的组合。  
+架构的 MySQL 概念映射到数据库的 SQL Server 概念及其架构之一。 例如，MySQL 可能有一个名为**HR**的架构。 SQL Server 的实例可能有一个名为**HR**的数据库，该数据库中的数据库是架构。 一个架构是**dbo** (或数据库所有者) 架构。 默认情况下，MySQL schema **hr**将映射到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库，架构**hr. dbo**。 SSMA 是指 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作为架构的数据库和架构的组合。  
   
 可以修改 MySQL 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Azure 架构之间的映射。  
   
@@ -41,11 +41,11 @@ ms.locfileid: "84293704"
   
 2.  在右侧窗格中，单击 "**架构映射**" 选项卡。  
   
-    你将看到所有 MySQL 架构的列表，后跟目标值。 此目标以两部分表示法（*数据库*）表示， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 其中，或 SQL Azure 将迁移对象和数据的位置。  
+    你将看到所有 MySQL 架构的列表，后跟目标值。 此目标以两部分表示法表示， (*database. schema*) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 其中将迁移对象和数据。  
   
 3.  选择包含要更改的映射的行，然后单击 "**修改**"。  
   
-    在 "**选择目标架构**" 对话框中，您可以浏览可用目标数据库和架构，或在两部分表示法（数据库架构）的文本框中键入数据库和架构名称，然后单击 **"确定"**。  
+    在 "**选择目标架构**" 对话框中，您可以浏览可用目标数据库和架构，或在两部分表示形式的文本框中输入数据库和架构名称 (database. Schema) ，然后单击 **"确定"**。  
   
 4.  "**架构映射**" 选项卡上的目标更改。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "84293704"
   
 ## <a name="see-also"></a>另请参阅  
 [&#40;转换的项目设置&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)  
-[连接到 Azure SQL DB &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
-[将 MySQL 数据库迁移到 SQL Server-Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[连接到 Azure SQL 数据库 &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
+[将 MySQL 数据库迁移到 SQL Server-Azure SQL 数据库 &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
 [连接到 SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
   

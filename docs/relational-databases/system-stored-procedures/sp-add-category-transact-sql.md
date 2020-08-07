@@ -1,5 +1,5 @@
 ---
-title: sp_add_category （Transact-sql） |Microsoft Docs
+title: sp_add_category (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 251c9992285084123df7afb3c27678c2886b531c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 323a86b4efbaa63d8858341c68908e30258d4889
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879999"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865285"
 ---
 # <a name="sp_add_category-transact-sql"></a>sp_add_category (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "85879999"
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
  > [!IMPORTANT]  
- > [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+ > 在[AZURE SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)上，目前不支持所有 SQL Server 代理功能。 有关详细信息，请参阅[AZURE sql 托管实例与 SQL Server 的 t-sql 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
   
 ## <a name="syntax"></a>语法  
   
@@ -44,27 +44,27 @@ sp_add_category
      { [ @name = ] 'name' }  
 ```  
   
-## <a name="arguments"></a>参数  
-`[ @class = ] 'class'`要添加的类别的类。 *类*为**varchar （8）** ，其默认值为 JOB，可以是下列值之一。  
+## <a name="arguments"></a>自变量  
+`[ @class = ] 'class'`要添加的类别的类。 *类*是**varchar (8) ** ，其默认值为 JOB，可以是下列值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |JOB|添加作业类别。|  
 |ALERT|添加警报类别。|  
 |OPERATOR|添加操作员类别。|  
   
-`[ @type = ] 'type'`要添加的类别的类型。 *类型*为**varchar （12）**，默认值为**LOCAL**，可以是下列值之一。  
+`[ @type = ] 'type'`要添加的类别的类型。 *类型*为**varchar (12) **，默认值为**LOCAL**，可以是下列值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |LOCAL|本地作业类别。|  
 |多服务器|多服务器作业类别。|  
-|NONE|除作业之外的类的类别 **。**|  
+|无|除作业之外的类的类别 **。**|  
   
 `[ @name = ] 'name'`要添加的类别的名称。 该名称在指定类中必须是唯一的。 *名称*为**sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或**1** (失败)   
   
 ## <a name="result-sets"></a>结果集  
  无  

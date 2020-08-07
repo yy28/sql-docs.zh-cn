@@ -1,5 +1,5 @@
 ---
-title: sys.databases （Transact-sql） |Microsoft Docs
+title: sys.databases (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/07/2018
 ms.prod: sql
@@ -20,12 +20,12 @@ ms.assetid: 8fc65915-8bd6-425b-95d9-6a8468cb1e48
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 831447faa71c3386f394e456f3cbf1243f222083
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b15dc8ebf9bbe9616ada47627a638b7d34d7c278
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901688"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87862852"
 ---
 # <a name="sysroutes-transact-sql"></a>sys.routes (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,8 +39,8 @@ ms.locfileid: "85901688"
 |principal_id|**int**|拥有路由的数据库主体的标识符。 可以为 null.|  
 |**remote_service_name**|**nvarchar(256)**|远程服务的名称。 可以为 null.|  
 |**broker_instance**|**nvarchar(128)**|承载远程服务的 Broker 的标识符。 可以为 null.|  
-|**生存期**|**datetime**|路由过期的日期和时间。 注意，该值不使用本地时区， 而是显示 UTC 的过期时间。 可以为 null.|  
-|**address**|**nvarchar(256)**|Service Broker 将远程服务的消息发送到的网络地址。 可以为 null. 对于 SQL 数据库托管实例，地址必须是本地的。|  
+|**lifetime**|**datetime**|路由过期的日期和时间。 注意，该值不使用本地时区， 而是显示 UTC 的过期时间。 可以为 null.|  
+|**address**|**nvarchar(256)**|Service Broker 将远程服务的消息发送到的网络地址。 可以为 null. 对于 SQL 托管实例，地址必须是本地的。|  
 |**mirror_address**|**nvarchar(256)**|在地址中指定的服务器镜像伙伴的网络地址。 可以为 null.|  
   
 ## <a name="permissions"></a>权限  

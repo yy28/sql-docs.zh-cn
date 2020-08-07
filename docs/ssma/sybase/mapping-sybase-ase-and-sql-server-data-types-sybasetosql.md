@@ -1,5 +1,5 @@
 ---
-title: 映射 Sybase ASE 和 SQL Server 数据类型（SybaseToSQL） |Microsoft Docs
+title: 将 Sybase ASE 和 SQL Server 数据类型映射 (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: 784365d3-df4e-47ab-8ee0-d8392b52f510
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 79313d2344f6feb978a064f3fbd92e1f7bc7dce5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 11d17d35dd8118c2afb9310ffcc45dcbea021f6c
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68028890"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865355"
 ---
 # <a name="mapping-sybase-ase-and-sql-server-data-types-sybasetosql"></a>映射 Sybase ASE 和 SQL Server 数据类型 (SybaseToSQL)
-Sybase 自适应服务器企业（ASE）数据库类型与[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 数据库类型不同。 将 ASE 数据库对象转换为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 对象时，必须指定如何将数据类型从 ASE 映射到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。 你可以接受默认的数据类型映射，也可以自定义映射，如以下部分所示。  
+Sybase 自适应服务器企业 (ASE) 数据库类型与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 数据库类型不同。 将 ASE 数据库对象转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 对象时，必须指定如何将数据类型从 ASE 映射到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure。 你可以接受默认的数据类型映射，也可以自定义映射，如以下部分所示。  
   
 ## <a name="default-mappings"></a>默认映射  
 SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，请参阅[项目设置 &#40;类型映射&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md)。  
   
 ## <a name="type-mapping-inheritance"></a>类型映射继承  
-您可以在项目级别、对象类别级别（如所有存储过程）或对象级别自定义类型映射。 除非在较低级别重写，否则将从较高级别继承设置。 例如，如果在项目级别将**smallmoney**映射到**money** ，则项目中的所有对象都将使用此映射，除非你在对象类别级别或对象级别自定义映射。  
+您可以在项目级别自定义类型映射、对象类别级别 (例如所有存储过程) 或对象级别）。 除非在较低级别重写，否则将从较高级别继承设置。 例如，如果在项目级别将**smallmoney**映射到**money** ，则项目中的所有对象都将使用此映射，除非你在对象类别级别或对象级别自定义映射。  
   
 查看 SSMA 中的 "**类型映射**" 选项卡时，背景会进行颜色编码，以显示继承了哪些类型的映射。 对于任何继承的类型映射，类型映射的背景为黄色; 对于在当前级别指定的任何映射，背景为白色。  
   
@@ -51,7 +51,7 @@ SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，�
   
 2.  若要添加新映射，请执行以下操作：  
   
-    1.  单击 **“添加”** 。  
+    1.  单击 **添加**。  
   
     2.  在 "**源类型**" 下，选择要映射的 ASE 数据类型。  
   
@@ -59,15 +59,15 @@ SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，�
   
         这使您可以为相同数据类型的较小值和较大值自定义数据映射。  
   
-    4.  在 "**目标类型**" 下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]选择目标或 SQL Azure 数据类型。  
+    4.  在 "**目标类型**" 下，选择目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 数据类型。  
   
         某些类型需要目标数据类型长度。 如果需要，请在 "**替换为**" 框中输入新的数据长度。  
   
-    5.  单击“确定”。   
+    5.  单击“确定”。  
   
 3.  若要编辑数据类型映射，请执行以下操作：  
   
-    1.  单击 **“编辑”**。  
+    1.  单击 **“编辑”** 。  
   
     2.  在 "**源类型**" 下，选择要映射的 ASE 数据类型。  
   
@@ -75,7 +75,7 @@ SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，�
   
         这使您可以为相同数据类型的较小值和较大值自定义数据映射。  
   
-    4.  在 "**目标类型**" 下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]选择目标或 SQL Azure 数据类型。  
+    4.  在 "**目标类型**" 下，选择目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 数据类型。  
   
         某些类型需要目标数据类型长度。 如果需要，请在 "**替换为**" 框中输入新的数据长度，然后单击 **"确定"**。  
   
@@ -83,7 +83,7 @@ SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，�
   
     1.  在 "类型映射" 列表中选择包含要删除的数据类型映射的行。  
   
-    2.  单击 **“删除”**。  
+    2.  单击“删除”。  
   
         不能删除继承的映射。 但是，在特定对象或对象类别上，自定义映射会重写继承的映射。  
   
@@ -91,5 +91,5 @@ SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，�
 迁移过程的下一步是[创建一个评估报表](assessing-sybase-ase-database-objects-for-conversion-sybasetosql.md)，或[将 Sybase ASE 数据库对象转换为 SQL Server 或 SQL Azure 语法](converting-sybase-ase-database-objects-sybasetosql.md)。 如果创建评估报告，则在评估期间会自动转换 Sybase ASE 对象。  
   
 ## <a name="see-also"></a>另请参阅  
-[将 Sybase ASE 数据库迁移到 SQL Server-Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[将 Sybase ASE 数据库迁移到 SQL Server-Azure SQL 数据库 &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

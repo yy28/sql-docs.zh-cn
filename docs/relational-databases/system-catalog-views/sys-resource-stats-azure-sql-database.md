@@ -1,5 +1,5 @@
 ---
-title: sys. resource_stats （Azure SQL Database） |Microsoft Docs
+title: resource_stats (Azure SQL 数据库) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/13/2018
 ms.service: sql-database
@@ -19,17 +19,17 @@ ms.assetid: 02379a1b-3622-4578-8c59-a1b8f1a17914
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: a72bb16eddc55f5cf741a7809665b44ada4a7a30
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: be336780f5bbfd45660ea376c0d689b577f052da
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717572"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87822810"
 ---
 # <a name="sysresource_stats-azure-sql-database"></a>sys.resource_stats (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-  返回 Azure SQL 数据库的 CPU 使用率和存储数据。 在五分钟的间隔内收集和聚合数据。 对于每个用户数据库，资源消耗发生变化的每五分钟报告时段都有一行。 返回的数据包括 CPU 使用率、存储大小更改和数据库 SKU 修改。 不带更改的空闲数据库可能每五分钟间隔没有行。 历史数据保留大约 14 天。  
+  返回 Azure SQL 数据库的 CPU 使用率和存储数据。 在五分钟间隔内收集并聚合数据。 对于每个用户数据库，资源消耗发生变化的每五分钟报告时段都有一行。 返回的数据包括 CPU 使用率、存储大小更改和数据库 SKU 修改。 不带更改的空闲数据库可能每五分钟间隔没有行。 历史数据保留大约 14 天。  
   
  根据与数据库关联的 Azure SQL 数据库服务器的版本， **sys.databases resource_stats**视图的定义有所不同。 在升级到新的服务器版本时，请考虑这些不同之处和应用程序所需的任何修改。  
   
@@ -42,18 +42,18 @@ ms.locfileid: "85717572"
 |database_name|**nvarchar(128)**|用户数据库的名称。|  
 |sku|**nvarchar(128)**|数据库的服务层。 下面是可能的值：<br /><br /> 基本<br /><br /> Standard<br /><br /> 高级<br /><br />常规用途<br /><br />业务关键|  
 |storage_in_megabytes|**float**|时间段的最大存储大小（以 mb 为单位），包括数据库数据、索引、存储过程和元数据。|  
-|avg_cpu_percent|**decimal （5，2）**|平均计算使用率（以服务层限制的百分比表示）。|  
-|avg_data_io_percent|**decimal （5，2）**|平均 I/O 使用率（以基于服务层限制的百分比表示）。 对于超大规模数据库，请参阅[资源利用率统计信息中的数据 IO](https://docs.microsoft.com/azure/sql-database/sql-database-hyperscale-performance-diagnostics#data-io-in-resource-utilization-statistics)。|  
-|avg_log_write_percent|**decimal （5，2）**|平均写入资源使用率（以服务层限制的百分比表示）。|  
-|max_worker_percent|**decimal （5，2）**|以百分比表示的最大并发工作线程数（以百分比表示）。<br /><br /> 最大值当前是根据并发辅助进程计数的15秒的时间间隔计算的五分钟间隔。|  
-|max_session_percent|**decimal （5，2）**|基于数据库服务层的限制的最大并发会话数（以百分比表示）。<br /><br /> 最大值当前根据并发会话计数的15秒的时间间隔计算出五分钟间隔。|  
+|avg_cpu_percent|**decimal (5，2) **|平均计算使用率（以服务层限制的百分比表示）。|  
+|avg_data_io_percent|**decimal (5，2) **|平均 I/O 使用率（以基于服务层限制的百分比表示）。 对于超大规模数据库，请参阅[资源利用率统计信息中的数据 IO](https://docs.microsoft.com/azure/sql-database/sql-database-hyperscale-performance-diagnostics#data-io-in-resource-utilization-statistics)。|  
+|avg_log_write_percent|**decimal (5，2) **|平均写入资源使用率（以服务层限制的百分比表示）。|  
+|max_worker_percent|**decimal (5，2) **| (请求的最大并发工作线程数) 以数据库的服务层限制为百分比。<br /><br /> 最大值当前是根据并发辅助进程计数的15秒的时间间隔计算的五分钟间隔。|  
+|max_session_percent|**decimal (5，2) **|基于数据库服务层的限制的最大并发会话数（以百分比表示）。<br /><br /> 最大值当前根据并发会话计数的15秒的时间间隔计算出五分钟间隔。|  
 |dtu_limit|**int**|此数据库在此时间间隔内的当前最大数据库 DTU 设置。 |
-|xtp_storage_percent|**decimal （5，2）**|内存中 OLTP 的存储利用率，以服务层的限制（在报表间隔结束时）的百分比表示。 这包括用于存储以下内存中 OLTP 对象的内存：内存优化表、索引和表变量。 它还包括用于处理 ALTER TABLE 操作的内存。<br /><br /> 如果未在数据库中使用内存中 OLTP，则返回0。|
-|avg_login_rate_percent|**decimal （5，2）**|标识为仅供参考。 不支持。 不保证以后的兼容性。|
-|avg_instance_cpu_percent|**decimal （5，2）**|SQL 数据库进程的平均 CPU 使用率（以百分比表示）。|
-|avg_instance_memory_percent|**decimal （5，2）**|作为 SQL DB 进程百分比的平均数据库内存使用率。|
-|cpu_limit|**decimal （5，2）**|此数据库在此时间间隔内的 Vcore 的数目。 对于使用基于 DTU 的模型的数据库，此列为 NULL。|
-|allocated_storage_in_megabytes|**float**|用于存储数据库数据的格式化文件空间量（以 MB 为单位）。 格式化文件空间也称为 "分配的数据空间"。  有关详细信息，请参阅： [SQL DB 中的文件空间管理](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|
+|xtp_storage_percent|**decimal (5，2) **|内存中 OLTP 的存储利用率，以服务层限制的百分比表示 (在报告间隔) 结束。 这包括用于存储以下内存中 OLTP 对象的内存：内存优化表、索引和表变量。 它还包括用于处理 ALTER TABLE 操作的内存。<br /><br /> 如果未在数据库中使用内存中 OLTP，则返回0。|
+|avg_login_rate_percent|**decimal (5，2) **|标识为仅供参考。 不支持。 不保证以后的兼容性。|
+|avg_instance_cpu_percent|**decimal (5，2) **|SQL 数据库进程的平均 CPU 使用率（以百分比表示）。|
+|avg_instance_memory_percent|**decimal (5，2) **|作为 SQL 数据库进程的百分比的平均数据库内存使用率。|
+|cpu_limit|**decimal (5，2) **|此数据库在此时间间隔内的 Vcore 的数目。 对于使用基于 DTU 的模型的数据库，此列为 NULL。|
+|allocated_storage_in_megabytes|**float**|用于存储数据库数据的格式化文件空间量（以 MB 为单位）。 格式化文件空间也称为 "分配的数据空间"。  有关详细信息，请参阅： [SQL Database 中的文件空间管理](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|
   
 > [!TIP]  
 >  有关这些限制和服务层的详细信息，请参阅主题[服务层](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)。  

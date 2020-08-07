@@ -1,7 +1,7 @@
 ---
-title: sp_execute_external_script （Transact-sql） |Microsoft Docs
+title: sp_execute_external_script (Transact-sql) |Microsoft Docs
 ms.custom: ''
-ms.date: 05/28/2020
+ms.date: 08/06/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 10c29ab8faed05c2fb2750e1e4de17b2fc1fb2b3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a1ef1dc0f4b59b5eaf8f0ea4978a4eacde023e31
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790400"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87877964"
 ---
 # <a name="sp_execute_external_script-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 
@@ -36,7 +36,7 @@ ms.locfileid: "85790400"
 
 机器学习服务、 [Python](../../machine-learning/concepts/extension-python.md)和[R](../../machine-learning/concepts/extension-r.md)是受支持的语言。 对于语言扩展，Java 是支持的，但必须用[CREATE EXTERNAL Language](../../t-sql/statements/create-external-language-transact-sql.md)定义。
 
-若要执行**sp_execute_external_script**，必须首先安装机器学习服务或语言扩展。 有关详细信息，请参阅在 Windows 和[linux](../../linux/sql-server-linux-setup-machine-learning.md)[上安装 SQL Server 机器学习服务（Python 和 R）](../../machine-learning/install/sql-machine-learning-services-windows-install.md) ，或在 Windows 和[Linux](../../linux/sql-server-linux-setup-language-extensions.md)[上安装 SQL Server 语言扩展](../../language-extensions/install/install-sql-server-language-extensions-on-windows.md)。
+若要执行**sp_execute_external_script**，必须首先安装机器学习服务或语言扩展。 有关详细信息，请参阅在 Windows 和[linux](../../linux/sql-server-linux-setup-machine-learning.md)[上安装 SQL Server 机器学习服务 (Python 和 R) ](../../machine-learning/install/sql-machine-learning-services-windows-install.md) ，或在 Windows 和[Linux](../../linux/sql-server-linux-setup-language-extensions.md)[上安装 SQL Server 语言扩展](../../language-extensions/install/install-sql-server-language-extensions-on-windows.md)。
 ::: moniker-end
 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
@@ -44,7 +44,7 @@ ms.locfileid: "85790400"
 
 机器学习服务、 [Python](../../machine-learning/concepts/extension-python.md)和[R](../../machine-learning/concepts/extension-r.md)是受支持的语言。
 
-若要执行**sp_execute_external_script**，必须先安装机器学习服务。 有关详细信息，请参阅[在 Windows 上安装 SQL Server 机器学习服务（Python 和 R）](../../machine-learning/install/sql-machine-learning-services-windows-install.md)。
+若要执行**sp_execute_external_script**，必须先安装机器学习服务。 有关详细信息，请参阅[在 Windows 上 (Python 和 R) 安装 SQL Server 机器学习服务](../../machine-learning/install/sql-machine-learning-services-windows-install.md)。
 ::: moniker-end
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
@@ -52,7 +52,7 @@ ms.locfileid: "85790400"
 
 对于 R 服务， [r](../../machine-learning/concepts/extension-r.md)是支持的语言。
 
-若要执行**sp_execute_external_script**，你必须首先安装 R Services。 有关详细信息，请参阅[在 Windows 上安装 SQL Server 机器学习服务（Python 和 R）](../../machine-learning/install/sql-r-services-windows-install.md)。
+若要执行**sp_execute_external_script**，你必须首先安装 R Services。 有关详细信息，请参阅[在 Windows 上 (Python 和 R) 安装 SQL Server 机器学习服务](../../machine-learning/install/sql-r-services-windows-install.md)。
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
@@ -101,7 +101,7 @@ sp_execute_external_script
 ## <a name="arguments"></a>自变量
  ** \@ language** = N "*language*"  
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
- 指示脚本语言。 *语言*为**sysname**。 有效值为**R**、 **Python**和通过[创建外部语言](../../t-sql/statements/create-external-language-transact-sql.md)（例如，Java）定义的任何语言。
+ 指示脚本语言。 *语言*为**sysname**。 有效值为**R**、 **Python**以及用[CREATE EXTERNAL Language](../../t-sql/statements/create-external-language-transact-sql.md) (（例如，Java) ）定义的任何语言。
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
  指示脚本语言。 *语言*为**sysname**。 在 SQL Server 2017 中，有效值为**R**和**Python**。
@@ -113,9 +113,9 @@ sp_execute_external_script
  指示脚本语言。 *语言*为**sysname**。 在 Azure SQL 托管实例中，有效值为**R**和**Python**。
 ::: moniker-end
 
- ** \@ script** = N "*script*" 外部语言脚本指定为文本或变量输入。 *脚本*为**nvarchar （max）**。  
+ ** \@ script** = N "*script*" 外部语言脚本指定为文本或变量输入。 *脚本*为**nvarchar (max) **。  
 
-`[ @input_data_1 =  N'input_data_1' ]`以查询形式指定外部脚本使用的输入数据 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 *Input_data_1*的数据类型为**nvarchar （max）**。
+`[ @input_data_1 =  N'input_data_1' ]`以查询形式指定外部脚本使用的输入数据 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 *Input_data_1*的数据类型** (max) 为 nvarchar **。
 
 `[ @input_data_1_name = N'input_data_1_name' ]`指定用于表示由定义的查询的变量名称 @input_data_1 。 外部脚本中的变量的数据类型取决于语言。 对于 R，输入变量是数据帧。 对于 Python，输入必须为表格格式。 *input_data_1_name* **sysname**。  默认值为*InputDataSet*。  
 
@@ -127,7 +127,7 @@ sp_execute_external_script
 
 `[ @output_data_1_name =  N'output_data_1_name' ]`指定包含在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 完成存储过程调用后要返回到的数据的外部脚本中的变量的名称。 外部脚本中的变量的数据类型取决于语言。 对于 R，输出必须是数据帧。 对于 Python，输出必须为 pandas 数据帧。 *output_data_1_name* **sysname**。  默认值为*OutputDataSet*。  
 
-`[ @parallel = 0 | 1 ]`通过将 `@parallel` 参数设置为1来启用对 R 脚本的并行执行。 此参数的默认值为0（无并行）。 如果 `@parallel = 1` 和输出正在直接流式传输到客户端计算机，则 `WITH RESULT SETS` 需要子句并且必须指定输出架构。  
+`[ @parallel = 0 | 1 ]`通过将 `@parallel` 参数设置为1来启用对 R 脚本的并行执行。 此参数的默认值为 0 (不) 并行度。 如果 `@parallel = 1` 和输出正在直接流式传输到客户端计算机，则 `WITH RESULT SETS` 需要子句并且必须指定输出架构。  
 
  + 对于不使用 RevoScaleR 函数的 R 脚本，使用 `@parallel` 参数对于处理大型数据集非常有利，假设脚本可以完全并行化。 例如，使用带有模型的 R `predict` 函数生成新的预测时，将设置 `@parallel = 1` 为查询引擎的提示。 如果可以并行化查询，行将按照**MAXDOP**设置进行分布。  
   
@@ -143,7 +143,7 @@ sp_execute_external_script
 > 查询树由 SQL 机器学习控制，用户无法对查询执行任意操作。
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-使用**sp_execute_external_script**执行使用支持的语言编写的脚本。 支持的语言是用于机器学习服务的**Python**和**R** ，以及使用[创建外部语言](../../t-sql/statements/create-external-language-transact-sql.md)（例如，Java）定义的任何语言，使用语言扩展。
+使用**sp_execute_external_script**执行使用支持的语言编写的脚本。 支持的语言是用于机器学习服务的**Python**和**R** ，以及使用[CREATE EXTERNAL language](../../t-sql/statements/create-external-language-transact-sql.md)定义的任何语言 (例如，Java) 用于语言扩展。
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 使用**sp_execute_external_script**执行使用支持的语言编写的脚本。 支持的语言为 SQL Server 2017 机器学习服务中的**Python**和**R** 。
@@ -177,7 +177,7 @@ sp_execute_external_script
 可以通过指定并行执行脚本 `@parallel=1` 。 如果输入查询可并行化，则应将参数设置为 `@parallel=1` 的一部分 `sp_execute_external_script` 。 默认情况下，查询优化器在超过 `@parallel=1` 256 行的表下运行，但如果想要显式处理此操作，则此脚本会将参数作为演示。
 
 > [!Tip]
-> 对于训练工作负载，可以将 `@parallel` 用于任意训练脚本，甚至是那些使用非 Microsoft-rx 算法的脚本。 通常，只有 RevoScaleR 算法（带有 rx 前缀）支持在 SQL Server 的训练方案中并行执行。 但使用 SQL Server vNext 中的新参数，可以并行化脚本，该脚本调用未使用该功能专门设计的函数。
+> 对于训练工作负载，可以将 `@parallel` 用于任意训练脚本，甚至是那些使用非 Microsoft-rx 算法的脚本。 通常，只有 RevoScaleR 算法（带有 rx 前缀）支持在 SQL Server 的训练方案中并行执行。 但在 SQL Server 2019 及更高版本中，可以使用新参数并行化脚本，该脚本调用未使用该功能专门设计的函数。
 ::: moniker-end
 
 ### <a name="streaming-execution-for-python-and-r-scripts"></a>Python 和 R 脚本的流式执行  
@@ -219,7 +219,7 @@ sp_execute_external_script
 
 如果输入包含的**日期时间**值不符合 R 中允许的值范围，则将值转换为**NA**。 这是必需的，因为 SQL 机器学习允许使用比 R 语言支持的更大的值范围。
 
-尽管 `+Inf` `-Inf` 这两种语言都使用 IEEE 754，但浮点值（例如，、、 `NaN` ）在 SQL 机器学习中不受支持。 当前行为直接将值直接发送到 SQL;因此，SQL 客户端将引发错误。 因此，这些值将转换为**NULL**。
+Float 值 (例如，、 `+Inf` `-Inf` `NaN`) 在 SQL 机器学习中不受支持，尽管这两种语言都使用 IEEE 754。 当前行为直接将值直接发送到 SQL;因此，SQL 客户端将引发错误。 因此，这些值将转换为**NULL**。
 
 ## <a name="permissions"></a>权限
 
@@ -322,7 +322,7 @@ GO
 
 要进行评分，还可以使用本机 [PREDICT](../../t-sql/queries/predict-transact-sql.md) 函数，此函数无需调用 Python 或 R 运行时，因此更加快速。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 + [SQL 机器学习](../../machine-learning/index.yml)
 + [SQL Server 语言扩展](../../language-extensions/language-extensions-overview.md)。 
@@ -332,6 +332,6 @@ GO
 + [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
 + [“已启用外部脚本”服务器配置选项](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)   
 + [SERVERPROPERTY (Transact-SQL)](../../t-sql/functions/serverproperty-transact-sql.md)   
-+ [SQL Server - External Scripts 对象](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md)  
++ [SQL Server，外部脚本对象](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md)  
 + [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)  
 + [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) 

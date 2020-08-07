@@ -1,5 +1,5 @@
 ---
-title: 新建项目（OracleToSQL） |Microsoft Docs
+title: 新项目 (OracleToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +10,12 @@ ms.assetid: 16849cfd-050c-4ac7-bd3d-a929aebb5010
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: 02d1d499cb9030b737028e59219fd779bde295c6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 135d0ef298a0b3ddc8d617080d535a71bfe80586
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68264675"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864824"
 ---
 # <a name="new-project-oracletosql"></a>新建项目 (OracleToSQL)
 使用 "**新建项目**" 对话框创建新的 SSMA 项目。 若要访问 "**新建项目**" 对话框，请在 "**文件**" 菜单上单击 "**新建项目**"。  
@@ -40,5 +40,5 @@ ms.locfileid: "68264675"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
--   Azure SQL DB  
+-   Azure SQL 数据库  
   

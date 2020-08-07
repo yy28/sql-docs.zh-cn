@@ -15,23 +15,23 @@ author: markingmyname
 ms.author: maghan
 ms.custom: ''
 ms.date: 03/15/2017
-ms.openlocfilehash: 292e2e14f8837aefb076256ec9d61ab7e2cf4032
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 97954598f44b5fa66a6558aae4964cc1651f6f70
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879950"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865063"
 ---
 # <a name="sp_add_jobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
 
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-将步骤（操作）添加到 SQL 代理作业。
+将步骤 (操作) 添加到 SQL 代理作业。
 
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 > [!IMPORTANT]
-> 在[Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)上，大多数（但不是所有） SQL Server 代理作业类型都受支持。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> 在[AZURE SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)上，大多数（但不是所有） SQL Server 代理作业类型都受支持。 有关详细信息，请参阅[AZURE sql 托管实例与 SQL Server 的 t-sql 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 ## <a name="syntax"></a>语法
 
@@ -59,7 +59,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
          | [ @proxy_name = ] 'proxy_name' } ]
 ```  
   
-## <a name="arguments"></a>参数
+## <a name="arguments"></a>自变量
 
 `[ @job_id = ] job_id`要向其中添加步骤的作业的标识号。 *job_id*的值为**uniqueidentifier**，默认值为 NULL。
 
@@ -72,11 +72,11 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 
 `[ @step_name = ] 'step_name'`步骤的名称。 *step_name* **sysname**，无默认值。
 
-`[ @subsystem = ] 'subsystem'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理服务用来执行*命令*的子系统。 *子系统*为**nvarchar （40）**，可以是下列值之一。
+`[ @subsystem = ] 'subsystem'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理服务用来执行*命令*的子系统。 *子系统*为**nvarchar (40) **，可以是以下值之一。
 
-|值|说明|
+|值|描述|
 |-----------|-----------------|
-|'**ActiveScripting**'|活动脚本<br /><br /> ** \* \* 重要 \* 提示 \* **[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|
+|'**ActiveScripting**'|活动脚本<br /><br /> **\*\* 重要说明 \*\*** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|
 |'**CmdExec**'|操作系统命令或可执行程序|
 |"**分发**"|复制分发代理作业|
 |"**Snapshot**"|复制快照代理作业|
@@ -87,9 +87,9 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |'**ANALYSISCOMMAND**'|Analysis Services 命令 (XMLA)。|
 |"**SSIS**"|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包执行|  
 |"**PowerShell**"|PowerShell 脚本|  
-|"**TSQL**" （默认值）|[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句|
+|"**TSQL**" (默认值) |[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句|
 
-`[ @command = ] 'command'`由**SQLServerAgent**服务通过*子系统*执行的命令。 *command*的值为**nvarchar （max）**，默认值为 NULL。 SQL Server 代理提供标记替换功能；在编写软件程序时，它可提供与变量相同的灵活性。
+`[ @command = ] 'command'`由**SQLServerAgent**服务通过*子系统*执行的命令。 *命令*为**nvarchar (max) **，默认值为 NULL。 SQL Server 代理提供标记替换功能；在编写软件程序时，它可提供与变量相同的灵活性。
 
 > [!IMPORTANT]
 > 作业步骤中使用的所有标记现在必须附带转义宏，否则，这些作业步骤将会失败。 此外，您现在还必须用括号将标记名称括起来，并在标记语法开头加上美元符号 (`$`)。 例如：
@@ -99,7 +99,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 有关这些令牌并更新作业步骤以使用新令牌语法的详细信息，请参阅[在作业步骤中使用令牌](../../ssms/agent/use-tokens-in-job-steps.md)。
 
 > [!IMPORTANT]
-> 对 Windows 事件日志拥有写入权限的任何 Windows 用户都可以访问由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理警报或 WMI 警报激活的作业步骤。 为了防范此安全隐患，默认情况下，可以在由警报激活的作业中使用的特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理标记已被禁用。 这些标记包括： **DBN**、 **SVR**、 **a-ERR**、**严重性**、 **a-MSG**和**WMI （**_property_**）**。 请注意，在此版本中，对标记的使用扩展至所有警报。
+> 对 Windows 事件日志拥有写入权限的任何 Windows 用户都可以访问由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理警报或 WMI 警报激活的作业步骤。 为了防范此安全隐患，默认情况下，可以在由警报激活的作业中使用的特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理标记已被禁用。 这些标记包括： **DBN**、 **SVR**、 **a-ERR**、**严重性**、 **a-MSG**和**WMI (**_属性_**) **。 请注意，在此版本中，对标记的使用扩展至所有警报。
 >
 > 如果您需要使用这些标记，请首先确保只有可信任的 Windows 安全组（如 Administrators 组）成员才对安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机的事件日志拥有写入权限。 然后在对象资源管理器中右键单击“SQL Server 代理”****，选择“属性”****，并在“警报系统”**** 页上选择“为警报的所有作业响应替换标记”**** 以启用这些标记。
 
@@ -129,7 +129,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 
 `[ @on_fail_step_id = ] fail_step_id`如果步骤失败并且*fail_action*为**4**，则该作业中要执行的步骤的 ID。 *fail_step_id*的值为**int**，默认值为**0**。  
 
-`[ @server = ] 'server'`[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]*服务器*为**nvarchar （30）**，默认值为 NULL。  
+`[ @server = ] 'server'`[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]*服务器* ** (30) 为 nvarchar **，默认值为 NULL。  
 
 `[ @database_name = ] 'database'`要在其中执行步骤的数据库的名称 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 *database 的数据*值为**sysname**，默认值为 NULL，在这种情况下，将使用**master**数据库。 不允许用方括号 ([ ]) 将名称括起来。 对于 ActiveX 作业步骤，*数据库*是该步骤使用的脚本语言的名称。  
 
@@ -141,7 +141,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 
 `[ @os_run_priority = ] run_priority`保护.
 
-`[ @output_file_name = ] 'file_name'`此步骤的输出保存到的文件的名称。 *file_name*为**nvarchar （200）**，默认值为 NULL。 *file_name*可以包含 " *command*" 下列出的一个或多个令牌。 此参数仅对在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 、 **CmdExec**、 **PowerShell**、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 或子系统上运行的命令有效 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。  
+`[ @output_file_name = ] 'file_name'`此步骤的输出保存到的文件的名称。 *file_name*为**nvarchar (200) **，默认值为 NULL。 *file_name*可以包含 " *command*" 下列出的一个或多个令牌。 此参数仅对在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 、 **CmdExec**、 **PowerShell**、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 或子系统上运行的命令有效 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。  
 
 `[ @flags = ] flags`控制行为的选项。 *flags*为**int**，可以是下列值之一。  
 
@@ -161,7 +161,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 
 ## <a name="return-code-values"></a>返回代码值
 
-**0** （成功）或**1** （失败）
+**0** (成功) 或**1** (失败) 
 
 ## <a name="result-sets"></a>结果集
 
@@ -179,7 +179,7 @@ SQL Server Management Studio 为管理作业提供了一种图形化的简便方
 
 ## <a name="permissions"></a>权限
 
- 默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：
+ 默认情况下， **sysadmin**固定服务器角色的成员可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：
 
 - **SQLAgentUserRole**
 

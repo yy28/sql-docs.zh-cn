@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: d49a56c7d545a69729f222daad1e9504802e7bcc
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: c9757642736362745bd37607cacf74eeee962125
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942367"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87824062"
 ---
 # <a name="installation-and-configuration"></a>安装和配置
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -23,7 +23,7 @@ Wide World 导入 OLTP 数据库安装和配置说明。
 
 ## <a name="prerequisites"></a>先决条件
 
-- [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) （或更高版本）或[Azure SQL 数据库](https://azure.microsoft.com/services/sql-database/)。 有关该示例的完整版本，请使用 SQL Server Evaluation/开发人员/企业版。
+- [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) (或更高版本) 或[Azure SQL 数据库](https://azure.microsoft.com/services/sql-database/)。 有关该示例的完整版本，请使用 SQL Server Evaluation/开发人员/企业版。
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。 为获得最佳结果，请使用2016年6月版或更高版本。
 
 ## <a name="download"></a>下载
@@ -48,15 +48,15 @@ Wide World 导入 OLTP 数据库安装和配置说明。
 1. 打开 SQL Server Management Studio，然后连接到目标 SQL Server 实例。
 2. 右键单击 "**数据库**" 节点，然后选择 "**还原数据库**"。
 3. 选择 "**设备**"，并单击按钮 **...**
-4. 在对话框中**选择 "备份设备**"，单击 "**添加**"，导航到服务器文件系统中的数据库备份，并选择备份。 单击“确定”  。
+4. 在对话框中**选择 "备份设备**"，单击 "**添加**"，导航到服务器文件系统中的数据库备份，并选择备份。 单击“确定”。
 5. 如果需要，在 "**文件**" 窗格中更改数据文件和日志文件的目标位置。 请注意，最佳做法是将数据和日志文件放在不同的驱动器上。
-6. 单击“确定”  。 这将启动数据库还原。 完成后，会在 SQL Server 实例上安装数据库 WideWorldImporters。
+6. 单击“确定”。 这将启动数据库还原。 完成后，会在 SQL Server 实例上安装数据库 WideWorldImporters。
 
 ### <a name="azure-sql-database"></a>Azure SQL Database
 
 若要将 bacpac 导入新的 SQL 数据库，可以使用 Management Studio。
 
-1. 可有可无如果你尚未在 Azure 中安装 SQL Server，请导航到[Azure 门户](https://portal.azure.com/)并创建新的 SQL 数据库。 在创建数据库的过程中，您将创建一个服务器。 记下服务器。
+1.  (可选) 如果你还没有 Azure 中的 SQL Server，请导航到[Azure 门户](https://portal.azure.com/)并创建新的 SQL 数据库。 在创建数据库的过程中，您将创建一个服务器。 记下服务器。
    - 请参阅[此教程](https://azure.microsoft.com/documentation/articles/sql-database-get-started/)，在几分钟内创建数据库
 2. 打开 SQL Server Management Studio 并连接到 Azure 中的服务器。
 3. 右键单击 "**数据库**" 节点，然后选择 "**导入数据层应用程序**"。
@@ -68,7 +68,7 @@ Wide World 导入 OLTP 数据库安装和配置说明。
 
 ### <a name="full-text-indexing"></a>全文索引
 
-示例数据库可以使用全文索引。 但是，默认情况下不会随 SQL Server 安装该功能-需要在安装 SQL Server 的过程中选择此功能（在 Azure SQL DB 中默认启用）。 因此，安装后步骤是必需的。
+示例数据库可以使用全文索引。 但是，默认情况下不会随 SQL Server 安装该功能-在 SQL Server 安装过程中，你需要选择它， (默认情况下，它在 Azure SQL 数据库) 中处于启用状态。 因此，安装后步骤是必需的。
 
 1. 在 SQL Server Management Studio 中，连接到 WideWorldImporters 数据库并打开一个新的查询窗口。
 2. 运行以下 T-sql 命令，以便在数据库中使用全文索引：`EXECUTE Application.Configuration_ApplyFullTextIndexing`

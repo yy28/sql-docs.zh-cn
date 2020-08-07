@@ -1,5 +1,5 @@
 ---
-title: sp_add_job （Transact-sql） |Microsoft Docs
+title: sp_add_job (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e6a2cc2c6dcb1eb1d9068a5107f504683eb516bf
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bf9351455ffa21978821590e06edaa93e7f70405
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879979"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865345"
 ---
 # <a name="sp_add_job-transact-sql"></a>sp_add_job (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "85879979"
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
  > [!IMPORTANT]  
- > [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+ > 在[AZURE SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)上，目前不支持所有 SQL Server 代理功能。 有关详细信息，请参阅[AZURE sql 托管实例与 SQL Server 的 t-sql 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
  
 ## <a name="syntax"></a>语法  
   
@@ -56,12 +56,12 @@ sp_add_job [ @job_name = ] 'job_name'
      [ , [ @job_id = ] job_id OUTPUT ]   
 ```  
   
-## <a name="arguments"></a>参数  
-`[ @job_name = ] 'job_name'`作业的名称。 名称必须是唯一的，不能包含百分号（ **%** ）字符。 *job_name*为**nvarchar （128）**，无默认值。  
+## <a name="arguments"></a>自变量  
+`[ @job_name = ] 'job_name'`作业的名称。 该名称必须唯一，并且不能包含 (**%**) 字符的百分比。 *job_name*为**nvarchar (128) **，无默认值。  
   
-`[ @enabled = ] enabled`指示添加的作业的状态。 *enabled*为**tinyint**，默认值为1（已启用）。 如果为**0**，则不启用作业，并且该作业不会根据其计划运行。但是，可以手动运行它。  
+`[ @enabled = ] enabled`指示添加的作业的状态。 *enabled*为**tinyint**，默认值为 1 (启用) 。 如果为**0**，则不启用作业，并且该作业不会根据其计划运行。但是，可以手动运行它。  
   
-`[ @description = ] 'description'`作业的说明。 *description*的值为**nvarchar （512）**，默认值为 NULL。 如果省略*说明*，则使用 "无可用说明"。  
+`[ @description = ] 'description'`作业的说明。 *描述*为**nvarchar (512) **，默认值为 NULL。 如果省略*说明*，则使用 "无可用说明"。  
   
 `[ @start_step_id = ] step_id`作业要执行的第一个步骤的标识号。 *step_id*的值为**int**，默认值为1。  
   
@@ -78,7 +78,7 @@ sp_add_job [ @job_name = ] 'job_name'
 |**0**|从不|  
 |**1**|成功时|  
 |**2** （默认值）|失败时|  
-|**3**|始终|  
+|**3**|Always|  
   
 `[ @notify_level_email = ] email_level`一个值，该值指示在完成该作业后何时发送电子邮件。 *email_level*的值为**int**，默认值为**0**，表示从不。 *email_level*使用与*eventlog_level*相同的值。  
   
@@ -100,7 +100,7 @@ sp_add_job [ @job_name = ] 'job_name'
 `[ @job_id = ] _job_idOUTPUT`如果成功创建，则分配给作业的作业标识号。 *job_id*是**uniqueidentifier**类型的输出变量，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或**1** (失败)   
   
 ## <a name="result-sets"></a>结果集  
  无  

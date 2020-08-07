@@ -1,5 +1,5 @@
 ---
-title: sp_add_jobschedule （Transact-sql） |Microsoft Docs
+title: sp_add_jobschedule (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 07/28/2016
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7c7f644b94c405fa4072ecd7d7c448f6ea865404
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f69b827981a53024dbf22d4b3e3d2f64fd4b720f
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879971"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865116"
 ---
 # <a name="sp_add_jobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "85879971"
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
   > [!IMPORTANT]  
-  > [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+  > 在[AZURE SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)上，目前不支持所有 SQL Server 代理功能。 有关详细信息，请参阅[AZURE sql 托管实例与 SQL Server 的 t-sql 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 ## <a name="syntax"></a>语法  
   
@@ -54,17 +54,17 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
      [ , [ @schedule_uid = ] _schedule_uid OUTPUT ]
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @job_id = ] job_id`向其中添加计划的作业的作业标识号。 *job_id*是**uniqueidentifier**，无默认值。  
   
-`[ @job_name = ] 'job_name'`向其中添加计划的作业的名称。 *job_name*为**nvarchar （128）**，无默认值。  
+`[ @job_name = ] 'job_name'`向其中添加计划的作业的名称。 *job_name*为**nvarchar (128) **，无默认值。  
   
 > [!NOTE]  
 >  必须指定*job_id*或*job_name* ，但不能同时指定两者。  
   
-`[ @name = ] 'name'`计划的名称。 *名称*为**nvarchar （128）**，无默认值。  
+`[ @name = ] 'name'`计划的名称。 *name*为**nvarchar (128) **，无默认值。  
   
-`[ @enabled = ] enabled_flag`指示计划的当前状态。 *enabled_flag*为**tinyint**，默认值为**1** （已启用）。 如果为**0**，则不启用计划。 禁用该计划时，将不运行作业。  
+`[ @enabled = ] enabled_flag`指示计划的当前状态。 *enabled_flag*为**tinyint**，默认值为**1** (启用) 。 如果为**0**，则不启用计划。 禁用该计划时，将不运行作业。  
   
 `[ @freq_type = ] frequency_type`指示何时执行作业的值。 *frequency_type*的数据值为**int**，默认值为**0**，可以是下列值之一：  
   
@@ -73,7 +73,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |**1**|一次|  
 |**4**|每天|  
 |**8**|每周|  
-|**16**|每月|  
+|**16**|每月一次|  
 |**32**|每月，相对于*frequency_interval。*|  
 |**64**|在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务启动时运行。|  
 |**128**|在计算机空闲时运行。|  
@@ -82,12 +82,12 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
 |值|效果|  
 |-----------|------------|  
-|**1** （一次）|*frequency_interval*未使用。|  
-|**4** （每天）|每*frequency_interval*天。|  
-|**8** （每周）|*frequency_interval*是以下一个或多个（与 or 逻辑运算符结合使用）：<br /><br /> 1 = 星期日<br /><br /> 2 = 星期一<br /><br /> 4 = 星期二<br /><br /> 8 = 星期三<br /><br /> 16 = 星期四<br /><br /> 32 = 星期五<br /><br /> 64 = 星期六|  
-|**16** （每月）|*Frequency_interval*月中的第几天。|  
-|**32** （每月相对）|*frequency_interval*是以下项之一：<br /><br /> 1 = 星期日<br /><br /> 2 = 星期一<br /><br /> 3 = 星期二<br /><br /> 4 = 星期三<br /><br /> 5 = 星期四<br /><br /> 6 = 星期五<br /><br /> 7 = 星期六<br /><br /> 8 = 天<br /><br /> 9 = 工作日<br /><br /> 10 = 休息日|  
-|**64** （ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动代理服务时）|*frequency_interval*未使用。|  
+|**1** (一次) |*frequency_interval*未使用。|  
+|**4** (每日) |每*frequency_interval*天。|  
+|**8** (每周) |*frequency_interval*是 (与或逻辑运算符组合在一起的一个或多个) ：<br /><br /> 1 = 星期日<br /><br /> 2 = 星期一<br /><br /> 4 = 星期二<br /><br /> 8 = 星期三<br /><br /> 16 = 星期四<br /><br /> 32 = 星期五<br /><br /> 64 = 星期六|  
+|每月**16** () |*Frequency_interval*月中的第几天。|  
+|**32** (月相对) |*frequency_interval*是以下项之一：<br /><br /> 1 = 星期日<br /><br /> 2 = 星期一<br /><br /> 3 = 星期二<br /><br /> 4 = 星期三<br /><br /> 5 = 星期四<br /><br /> 6 = 星期五<br /><br /> 7 = 星期六<br /><br /> 8 = 天<br /><br /> 9 = 工作日<br /><br /> 10 = 休息日|  
+|**64** ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务启动时) |*frequency_interval*未使用。|  
 |**128**|*frequency_interval*未使用。|  
   
 `[ @freq_subday_type = ] frequency_subday_type`指定*frequency_subday_interval*的单位。 *frequency_subday_type*是**int**，没有默认值，可以是下列值之一：  
@@ -100,7 +100,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
 `[ @freq_subday_interval = ] frequency_subday_interval`每次执行作业之间要发生的*frequency_subday_type*周期数。 *frequency_subday_interval*的值为**int**，默认值为0。  
   
-`[ @freq_relative_interval = ] frequency_relative_interval`当*frequency_type*设置为**32** （每月相对）时，进一步定义*frequency_interval* 。  
+`[ @freq_relative_interval = ] frequency_relative_interval`当*frequency_type*设置为**32** (每月相对) 时，进一步定义*frequency_interval* 。  
   
  *frequency_relative_interval*是**int**，没有默认值，可以是下列值之一：  
   
@@ -110,7 +110,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |**2**|秒|  
 |**4**|第三个|  
 |**8**|第四个|  
-|**16**|最后一个|  
+|**16**|上一个|  
   
  *frequency_relative_interval*指示间隔的发生次数。 例如，如果*frequency_relative_interval*设置为**2**， *frequency_type*设置为**32**， *frequency_interval*设置为**3**，则计划作业将在每月的第二个星期二发生。  
   
@@ -140,7 +140,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  作业计划现在可以独立于作业进行管理。 若要将计划添加到作业，请使用**sp_add_schedule**创建计划，并**sp_attach_schedule**将计划附加到作业。  
   
 ## <a name="permissions"></a>权限  
- 默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
+ 默认情况下， **sysadmin**固定服务器角色的成员可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
   

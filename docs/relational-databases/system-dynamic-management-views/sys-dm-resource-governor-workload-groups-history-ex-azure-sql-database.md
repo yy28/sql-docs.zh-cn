@@ -1,5 +1,5 @@
 ---
-title: sys. dm_resource_governor_workload_groups_history_ex （Azure SQL Database） |Microsoft Docs
+title: dm_resource_governor_workload_groups_history_ex (Azure SQL 数据库) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2019
 ms.prod: sql
@@ -18,23 +18,23 @@ helpviewer_keywords:
 - sys.dm_resource_governor_workload_groups_history_ex dynamic management view
 author: joesackmsft
 ms.author: josack
-ms.openlocfilehash: 41378ba13c6c85059313595161aeeb4226c6731e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0b112762df3ca05411594b1e1c03a04817c094d9
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718735"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823312"
 ---
 # <a name="sysdm_resource_governor_workload_groups_history_ex-azure-sql-database"></a>sys.dm_resource_governor_workload_groups_history_ex（Azure SQL 数据库）
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-返回一个 Azure SQL 数据库的资源池统计信息的持续时间为20秒的快照，最大为32分钟（128 recs）。
+在 Azure SQL 数据库的资源池统计信息的总) 中，在过去32分钟 (128 秒内返回快照20秒。
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**pool_id**| int |资源池的 ID。 不可为 null。|
 |**group_id**| int |工作负荷组的 ID。 不可为 null。|
-|**name**| nvarchar(256) |工作负荷组的名称。 不可为 null。|
+|name| nvarchar(256) |工作负荷组的名称。 不可为 null。|
 |**snapshot_time**| datetime |拍摄的资源组统计快照的日期时间。|
 |**duration_ms**| int |当前快照与前一个快照之间的持续时间。|
 |**active_worker_count**| int |当前快照中的总工作进程数。|
@@ -51,13 +51,13 @@ ms.locfileid: "85718735"
 |**delta_reads_issued**| int |自上次拍摄快照以来发出的读取 Io 总数。 可以为 Null。 如果资源组不属于 IO，则为 Null。|
 |**delta_reads_completed**| int |自上次拍摄快照以来完成的读取 Io 总数。 不可为 null。|
 |**delta_read_bytes**| bigint |自上次拍摄快照以来读取的总字节数。 不可为 null。|
-|**delta_read_stall_ms**| int |自上次快照以来读取 IO 到达和完成之间的总时间（毫秒）。 不可为 null。|
-|**delta_read_stall_queued_ms**| int |自上一次快照以来读取 IO 到达和出现问题之间的总时间（毫秒）。 可以为 Null。 如果资源组不属于 IO，则为 Null。 非零 delta_read_stall_queued_ms 表示 IO 受到 RG 的影响。|
+|**delta_read_stall_ms**| int |自上一次快照以来读取 IO 到达和完成之间的总时间 (（以毫秒为单位）) 。 不可为 null。|
+|**delta_read_stall_queued_ms**| int |自上一次快照以来，读取 IO 到达和问题之间的总时间 (（以毫秒为单位）) 。 可以为 Null。 如果资源组不属于 IO，则为 Null。 非零 delta_read_stall_queued_ms 表示 IO 受到 RG 的影响。|
 |**delta_writes_queued**| int |自上次拍摄快照以来排队的总写入 Io。 可以为 Null。 如果资源组不属于 IO，则为 Null。|
 |**delta_writes_issued**| int |自上次拍摄快照以来发出的写入 Io 总数。 可以为 Null。 如果资源组不属于 IO，则为 Null。|
 |**delta_writes_completed**| int |自上次快照以来完成的写入 Io 总数。 不可为 null。|
 |**delta_writes_bytes**| bigint |自上次拍摄快照以来写入的总字节数。 不可为 null。|
-|**delta_write_stall_ms**| int |自上次快照以来写入 IO 到达和完成之间的总时间（毫秒）。 不可为 null。|
+|**delta_write_stall_ms**| int |自上次拍摄快照以来写入 IO 到达和完成之间的总时间 (（以毫秒为单位）) 。 不可为 null。|
 |**delta_background_writes**| int |自上一次快照以来后台任务执行的总写入数。|
 |**delta_background_write_bytes**| bigint |自上一次快照以来后台任务所执行的总写入大小（以字节为单位）。|
 |**delta_log_bytes_used**| bigint |自上次快照以来使用的日志（字节）。|
@@ -70,7 +70,7 @@ ms.locfileid: "85718735"
 |**max_io**| int |组的最大 IO 限制。|
 |**max_global_io**| int |标识为仅供参考。 不支持。 不保证以后的兼容性。
 |**max_queued_io**| int |标识为仅供参考。 不支持。 不保证以后的兼容性。|
-|**max_log_rate_kb**| bigint |资源组级别的最大日志速率（每秒千字节）。|
+|**max_log_rate_kb**| bigint |资源组级别 (每秒千字节的最大对数速率) 。|
 |**max_session**| int |组的会话限制。|
 |**max_worker**| int |组的辅助角色限制。|
 |||

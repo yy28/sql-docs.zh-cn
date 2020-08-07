@@ -1,5 +1,5 @@
 ---
-title: sys. dm_exec_query_stats （Transact-sql） |Microsoft Docs
+title: sys. dm_exec_query_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/30/2019
 ms.prod: sql
@@ -20,12 +20,12 @@ ms.assetid: eb7b58b8-3508-4114-97c2-d877bcb12964
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a2df86c9850dddb7532602476d2ce9ffcaebad62
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f73452beb45c9f5df4b806d937043f22c5c0dbe1
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734700"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865315"
 ---
 # <a name="sysdm_exec_query_stats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "85734700"
 |**last_logical_reads**|**bigint**|上次执行计划时所执行的逻辑读取次数。<br /><br /> 当查询内存优化的表时，此项将始终为 0。|  
 |**min_logical_reads**|**bigint**|此计划在单个执行期间所执行的最少逻辑读取次数。<br /><br /> 当查询内存优化的表时，此项将始终为 0。|  
 |**max_logical_reads**|**bigint**|此计划在单个执行期间所执行的最多逻辑读取次数。<br /><br /> 当查询内存优化的表时，此项将始终为 0。|  
-|**total_clr_time**|**bigint**|在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 公共语言运行时（CLR）对象内使用的时间（以微秒为单位报告，但仅精确到毫秒），在编译后此计划的执行。 CLR 对象可以是存储过程、函数、触发器、类型和聚合。|  
+|**total_clr_time**|**bigint**|时间，以微秒为单位报告 (但仅精确到毫秒) ，在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 公共语言运行)  (时内使用此计划自编译后的执行此计划。 CLR 对象可以是存储过程、函数、触发器、类型和聚合。|  
 |**last_clr_time**|**bigint**|在上一次执行此计划期间，在 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 公共语言运行时 (CLR) 对象内执行所用的时间（以微秒为单位报告，但仅精确到毫秒）。 CLR 对象可以是存储过程、函数、触发器、类型和聚合。|  
 |**min_clr_time**|**bigint**|此计划在单次执行期间在 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR 对象内所用的最小时间（以微秒为单位报告，但仅精确到毫秒）。 CLR 对象可以是存储过程、函数、触发器、类型和聚合。|  
 |**max_clr_time**|**bigint**|此计划在单次执行期间在 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR 内所用的最大时间（以微秒为单位报告，但仅精确到毫秒）。 CLR 对象可以是存储过程、函数、触发器、类型和聚合。|  
@@ -71,8 +71,8 @@ ms.locfileid: "85734700"
 |**last_elapsed_time**|**bigint**|最近一次完成执行此计划所用的时间（以微秒为单位报告，但仅精确到毫秒）。|  
 |**min_elapsed_time**|**bigint**|任何一次完成执行此计划所用的最小时间（以微秒为单位报告，但仅精确到毫秒）。|  
 |**max_elapsed_time**|**bigint**|任何一次完成执行此计划所用的最大时间（以微秒为单位报告，但仅精确到毫秒）。|  
-|**query_hash**|**Binary （8）**|对查询计算的二进制哈希值，用于标识具有类似逻辑的查询。 可以使用查询哈希确定仅仅是文字值不同的查询的聚合资源使用情况。|  
-|**query_plan_hash**|**binary （8）**|对查询执行计划计算的二进制哈希值，用于标识类似的查询执行计划。 可以使用查询计划哈希查找具有类似执行计划的查询的累积成本。<br /><br /> 当本机编译的存储过程查询内存优化的表时，此项将始终为 0x000。|  
+|**query_hash**|**二进制 (8) **|对查询计算的二进制哈希值，用于标识具有类似逻辑的查询。 可以使用查询哈希确定仅仅是文字值不同的查询的聚合资源使用情况。|  
+|**query_plan_hash**|**二进制 (8) **|对查询执行计划计算的二进制哈希值，用于标识类似的查询执行计划。 可以使用查询计划哈希查找具有类似执行计划的查询的累积成本。<br /><br /> 当本机编译的存储过程查询内存优化的表时，此项将始终为 0x000。|  
 |**total_rows**|**bigint**|查询返回的总行数。 不可为 null。<br /><br /> 当本机编译的存储过程查询内存优化的表时，此项将始终为 0。|  
 |**last_rows**|**bigint**|上一次执行查询返回的行数。 不可为 null。<br /><br /> 当本机编译的存储过程查询内存优化的表时，此项将始终为 0。|  
 |**min_rows**|**bigint**|查询在一次执行过程中所返回的最小行数。 不可为 null。<br /><br /> 当本机编译的存储过程查询内存优化的表时，此项将始终为 0。|  
@@ -115,11 +115,11 @@ ms.locfileid: "85734700"
 |**last_spills**|**bigint**|上次执行查询时溢出的页数。<br /><br /> **适用**于：从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|  
 |**min_spills**|**bigint**|此查询在一次执行期间溢出的最小页数。<br /><br /> **适用**于：从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|  
 |**max_spills**|**bigint**|此查询在一次执行期间溢出的最大页数。<br /><br /> **适用**于：从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|  
-|**pdw_node_id**|**int**|此分发所在的节点的标识符。<br /><br /> **适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
-|**total_page_server_reads**|**bigint**|此计划自编译以来执行的远程页面服务器读取的总次数。<br /><br /> **适用于：** Azure SQL DB 超大规模 |  
-|**last_page_server_reads**|**bigint**|上次执行计划时所执行的远程页面服务器读取次数。<br /><br /> **适用于：** Azure SQL DB 超大规模 |  
-|**min_page_server_reads**|**bigint**|此计划在单次执行期间所执行的最少远程页面服务器读取次数。<br /><br /> **适用于：** Azure SQL DB 超大规模 |  
-|**max_page_server_reads**|**bigint**|此计划在单次执行期间所执行的远程页面服务器读取次数上限。<br /><br /> **适用于：** Azure SQL DB 超大规模 |  
+|pdw_node_id|**int**|此分发所在的节点的标识符。<br /><br /> **适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
+|**total_page_server_reads**|**bigint**|此计划自编译以来执行的远程页面服务器读取的总次数。<br /><br /> **适用于：** Azure SQL Database 超大规模 |  
+|**last_page_server_reads**|**bigint**|上次执行计划时所执行的远程页面服务器读取次数。<br /><br /> **适用于：** Azure SQL Database 超大规模 |  
+|**min_page_server_reads**|**bigint**|此计划在单次执行期间所执行的最少远程页面服务器读取次数。<br /><br /> **适用于：** Azure SQL Database 超大规模 |  
+|**max_page_server_reads**|**bigint**|此计划在单次执行期间所执行的远程页面服务器读取次数上限。<br /><br /> **适用于：** Azure SQL Database 超大规模 |  
 > [!NOTE]
 > <sup>1</sup>对于启用统计信息收集时的本机编译的存储过程，以毫秒为单位收集工作线程时间。 如果查询执行的时间不到1毫秒，则该值将为0。  
   
@@ -173,7 +173,7 @@ WHERE qt.text like '%SELECT%'
 ORDER BY qs.execution_count DESC;  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
 [与执行相关的动态管理视图和函数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)    
 [sys. dm_exec_sql_text &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)    
 [sys. dm_exec_query_plan &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
