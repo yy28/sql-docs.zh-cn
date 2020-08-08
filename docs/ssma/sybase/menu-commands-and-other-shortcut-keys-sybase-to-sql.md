@@ -1,5 +1,5 @@
 ---
-title: 菜单命令和其他快捷键（Sybase 到 SQL） |Microsoft Docs
+title: 菜单命令和其他快捷键 (Sybase 到 SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1ca622b2-55d8-4666-b80a-8d9791cd3d3b
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: ea6081cb68d084bf51132824a143fc6fdd544399
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 8f6ea6e9b9e0971967b58b005e4fe554b397edb0
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68028882"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934668"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-sybase-to-sql"></a>菜单命令和其他快捷键 (Sybase SQL)
 以下各节介绍访问菜单命令的键盘快捷方式，以及用于 Sybase 应用程序的 SSMA 的各种对话框中使用的其他快捷键。  
@@ -79,7 +79,7 @@ ms.locfileid: "68028882"
 |创建报表。|ALT + T + C|  
 |转换架构。|ALT + T + N 或 CTRL + R|  
 |从 Sybase 数据库刷新。|ALT + T + R|  
-|与 SQL Server 或 SQL Azure 数据库同步。|ALT + T + S|  
+|与 SQL Server 或 Azure SQL 数据库同步。|ALT + T + S|  
 |另存为脚本。|ALT + T + A|  
 |迁移数据。|ALT + T + M|  
 |停止当前操作。|ALT + T + O|  

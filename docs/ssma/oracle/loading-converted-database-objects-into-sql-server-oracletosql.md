@@ -1,5 +1,5 @@
 ---
-title: 将转换后的数据库对象加载到 SQL Server （OracleToSQL） |Microsoft Docs
+title: 将转换后的数据库对象加载到 SQL Server (OracleToSQL) |Microsoft Docs
 description: 了解如何使用 SSMA for Oracle 将从 Oracle 转换的数据库对象加载到 SQL Server 实例中。
 ms.prod: sql
 ms.custom: ''
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Synchronization, Securing Objects in SQL Server
 - Synchronization,Scripting Objects
 ms.assetid: a8ae33b2-1883-4785-922b-ea0e31c0b37a
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 69c4d30b3a803cfd5eb8e196f540c33952de3bf5
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 37d75a6454388c19caaa483d83cc5f6a230dab30
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293844"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934757"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-oracletosql"></a>将转换数据库对象加载到 SQL Server (OracleToSQL)
 将 Oracle 架构转换为 SQL Server 后，可以将生成的数据库对象加载到 SQL Server 中。 您可以使用 SSMA 创建这些对象，也可以编写对象脚本并自己运行脚本。 此外，SSMA 使你可以通过 SQL Server 数据库的实际内容来更新目标元数据。  
@@ -53,7 +53,7 @@ ms.locfileid: "84293844"
   
     操作签名可以有三种状态：  
   
-    -   向左箭头表示将在数据库中保存元数据的内容（默认值）。  
+    -   向左箭头表示元数据的内容将保存在数据库 (默认的) 中。  
   
     -   向右箭头表示数据库内容将覆盖 SSMA 元数据。  
   
@@ -102,12 +102,12 @@ ms.locfileid: "84293844"
   
 有关如何使用查询编辑器来运行脚本的详细信息，请参阅 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] SQL Server 联机丛书中的 "查询"。  
   
-还可以通过使用**sqlcmd**实用程序和 SQL Server 代理从命令行运行脚本。 有关**sqlcmd**的详细信息，请参阅 SQL Server 联机丛书中的 "sqlcmd 实用工具"。 有关 SQL Server 代理的详细信息，请参阅 SQL Server 联机丛书中的 "自动执行管理任务（SQL Server 代理）"。  
+还可以通过使用**sqlcmd**实用程序和 SQL Server 代理从命令行运行脚本。 有关**sqlcmd**的详细信息，请参阅 SQL Server 联机丛书中的 "sqlcmd 实用工具"。 有关 SQL Server 代理的详细信息，请参阅 SQL Server 联机丛书中的 "自动执行管理任务 (SQL Server 代理) "。  
   
 ## <a name="securing-objects-in-sql-server"></a>在 SQL Server 中保护对象  
 将转换后的数据库对象加载到 SQL Server 后，您可以对这些对象授予和拒绝权限。 在将数据迁移到 SQL Server 之前，最好先执行此操作。 有关如何帮助保护 SQL Server 中对象的信息，请参阅 SQL Server 联机丛书中的 "数据库和数据库应用程序的安全注意事项"。  
   
-## <a name="next-step"></a>后续步骤  
+## <a name="next-step"></a>下一步  
 迁移过程的下一步是将[数据迁移到 SQL Server](migrating-oracle-data-into-sql-server-oracletosql.md)。  
   
 ## <a name="see-also"></a>另请参阅  

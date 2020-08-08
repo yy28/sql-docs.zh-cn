@@ -1,5 +1,5 @@
 ---
-title: 数据迁移设置（DB2ToSQL） |Microsoft Docs
+title: 数据迁移设置 (DB2ToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,21 +7,21 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 573e673e-a194-4cb2-9aba-aaac6e1a225c
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 4efd9989e0893d8941f3f6fcb9496f5f4744b0e6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 8336dd3279084a8af3734b89e3f3693a0f190e4c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67989739"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933818"
 ---
-# <a name="data-migration-settings-db2tosql"></a>数据迁移设置（DB2ToSQL）
+# <a name="data-migration-settings-db2tosql"></a>数据迁移设置 (DB2ToSQL) 
   
 ## <a name="data-migration-settings"></a>数据迁移设置  
 **数据迁移设置**允许用户编写自定义查询以进行数据迁移。  
   
--   当 "**扩展数据迁移选项**" 设置为 "**显示**" 时，此选项卡可用，在项目设置中设置为 "**隐藏**" 时，此选项卡处于隐藏状态。 有关项目迁移设置的详细信息，请参阅[项目设置（迁移）](https://msdn.microsoft.com/48aaa8e6-a9cb-487d-9ba5-fc3f1c4786ae) 。  
+-   当 "**扩展数据迁移选项**" 设置为 "**显示**" 时，此选项卡可用，在项目设置中设置为 "**隐藏**" 时，此选项卡处于隐藏状态。 有关项目迁移设置的详细信息，请参阅[项目设置 (迁移) ](https://msdn.microsoft.com/48aaa8e6-a9cb-487d-9ba5-fc3f1c4786ae) 。  
   
 -   自定义 SQL 语句的分析将在表节点的 "**数据迁移设置**" 选项卡中实现。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "67989739"
     -   如果未选中此文本框，则迁移的数据将添加到目标数据库中的现有数据。  
   
 2.  **使用自定义选择：**  
-     此选项允许用户修改**select**语句（**select**语句允许用户选择要在目标数据库上显示的数据）。  
+     此选项允许用户修改 (**select**语句中提供的**select**语句，使用户能够选择要在目标数据库) 显示的数据。  
   
     1.  默认情况下，此 textbox 处于未选中状态。  
   

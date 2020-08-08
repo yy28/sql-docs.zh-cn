@@ -1,5 +1,5 @@
 ---
-title: 高级对象选择（AccessToSQL） |Microsoft Docs
+title: " (AccessToSQL) 的高级对象选择 |Microsoft Docs"
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,16 +7,16 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 4d2b367f-8ac7-4534-b66f-10300ef64ebc
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: d65cac7c857e8b6357dc31ca130dcdbdaa43b58f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 42042451cb0b2197dd54270d4eca1bb990eb233d
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67910702"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934048"
 ---
-# <a name="advanced-object-selection--accesstosql"></a>高级对象选择（AccessToSQL）
+# <a name="advanced-object-selection--accesstosql"></a> (AccessToSQL) 的高级对象选择
 通过 "**高级对象部分**" 对话框，您可以使用对象名称中的字符串和子字符串筛选数据库对象，然后选择或取消选择这些对象。 SSMA 对所选对象执行转换和迁移操作。  
   
 若要访问此对话框，请在元数据资源管理器中右键单击，然后选择 "**高级对象选择**"。  
@@ -41,7 +41,7 @@ ms.locfileid: "67910702"
 **仅显示已加载项**  
 切换类别或项的显示。 选择此按钮后，SSMA 将显示与筛选条件匹配的所有项以及之前加载的项。 如果未选择此按钮，SSMA 会显示类别文件夹。  
   
-**筛选器**  
+**Filter**  
 输入要用于筛选项的字符串。 例如，若要查找项目名称中包含字符串 "ID" 的所有可用项，请在 "**筛选器**" 框中输入字符串 "id"。  
   
 如果项与筛选条件匹配，则键入字符串时将显示类别或项。 若要查看匹配项，我们建议您单击 "**仅显示已加载项**" 按钮。  

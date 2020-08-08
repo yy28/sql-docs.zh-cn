@@ -27,20 +27,20 @@ helpviewer_keywords:
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6730ee9db626356ceb8f569928717af851896b07
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 8824e427b71c26a8b6145db7cf60bbfc110e9ed5
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246392"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934368"
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>CLR 集成体系结构 - CLR 宿主环境
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   与 .NET Framework 公共语言运行时 (CLR) 集成的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使数据库程序员可以使用诸如 Visual C#、Visual Basic .NET 和 Visual C++ 等语言。 函数、存储过程、触发器、数据类型和聚合即属于程序员可以用这些语言编写的业务逻辑种类。  
   
-  CLR 具有垃圾回收的内存、抢先式线程处理、元数据服务（类型反射）、代码可验证性和代码访问安全性。 CLR 使用元数据来完成以下任务：查找和加载类、在内存中安排实例、解析方法调用、生成本机代码、强制安全性以及设置运行时上下文边界。  
+  CLR 具有垃圾回收的内存、抢先式线程处理、元数据服务 (类型反射) 、代码可验证性和代码访问安全性。 CLR 使用元数据来完成以下任务：查找和加载类、在内存中安排实例、解析方法调用、生成本机代码、强制安全性以及设置运行时上下文边界。  
   
- CLR 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作为运行时环境以不同的方式处理内存、线程和同步。 本文介绍了这两个运行时的集成方式，以便统一管理所有系统资源。 本文还介绍了如何集成 CLR 代码访问安全性（CAS）和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性以为用户代码提供可靠且安全的执行环境。  
+ CLR 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作为运行时环境以不同的方式处理内存、线程和同步。 本文介绍了这两个运行时的集成方式，以便统一管理所有系统资源。 本文还介绍了如何集成 CLR 代码访问安全性 (CAS) 和安全性， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 从而为用户代码提供可靠且安全的执行环境。  
   
 ## <a name="basic-concepts-of-clr-architecture"></a>CLR 体系结构的基本概念  
  在 .NET Framework 中，程序员使用高级语言实现定义其结构的类（例如，类的字段或属性）和方法。 其中某些方法可能是静态函数。 编译该程序时会生成一个名为程序集的文件以及一个清单，程序集包含用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 中间语言 (MSIL) 编译的代码，清单则包含对依赖程序集的所有引用。  
@@ -66,7 +66,7 @@ ms.locfileid: "87246392"
  不同的线程化、计划和内存管理的模型给需要支持成千上万的并发用户会话的关系数据库管理系统 (RDBMS) 带来了集成挑战。 体系结构应确保直接调用线程化、内存和同步基元的应用程序编程接口 (API) 的用户代码不损害系统的可伸缩性。  
   
 ###### <a name="security"></a>安全性  
- 在数据库中运行的用户代码在访问诸如表和列的数据库对象时，必须遵守 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证和授权规则。 此外，数据库管理员应能从在数据库中运行的用户代码控制对操作系统资源的访问，如文件和网络访问。 这种做法非常重要，因为托管编程语言（不同于 Transact-sql 之类的非托管语言）提供 Api 来访问此类资源。 系统必须为用户代码提供安全的方法来访问[!INCLUDE[ssDE](../../includes/ssde-md.md)]进程之外的计算机资源。 有关详细信息，请参阅 [CLR Integration Security](../../relational-databases/clr-integration/security/clr-integration-security.md)。  
+ 在数据库中运行的用户代码在访问诸如表和列的数据库对象时，必须遵守 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证和授权规则。 此外，数据库管理员应能从在数据库中运行的用户代码控制对操作系统资源的访问，如文件和网络访问。 这种做法非常重要，因为托管编程语言 (不同于非托管语言，如 Transact-sql) 提供 Api 来访问此类资源。 系统必须为用户代码提供安全的方法来访问[!INCLUDE[ssDE](../../includes/ssde-md.md)]进程之外的计算机资源。 有关详细信息，请参阅 [CLR Integration Security](../../relational-databases/clr-integration/security/clr-integration-security.md)。  
   
 ###### <a name="performance"></a>性能  
  在[!INCLUDE[ssDE](../../includes/ssde-md.md)]中运行的托管用户代码与在服务器外运行的同一代码相比，应具有同等的计算性能。 从托管用户代码进行数据库访问没有本机 [!INCLUDE[tsql](../../includes/tsql-md.md)] 快。 有关详细信息，请参阅[CLR 集成的性能](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)。  
@@ -78,7 +78,7 @@ ms.locfileid: "87246392"
  类型安全代码是仅以定义完善的方式访问内存结构的代码。 例如，给定有效的对象引用，类型安全代码可以按对应于实际字段成员的固定偏移量来访问内存。 但是，如果代码以任意偏移量访问内存，该偏移量可能超出也可能不超出属于该对象的内存范围，则它就不是类型安全的代码。 在 CLR 中加载程序集时，在使用实时 (JIT) 编译方式编译 MSIL 之前，运行时执行验证阶段，该阶段检查代码以确定其类型是否安全。 成功通过此验证的代码称为可验证的类型安全代码。  
   
 ###### <a name="application-domains"></a>应用程序域  
- CLR 支持应用程序域作为主机进程内的执行区的概念，在其中可以加载和执行托管代码程序集。 应用程序域边界提供程序集之间的隔离。 根据静态变量和数据成员的可见性以及是否可以动态调用代码对这些程序集进行隔离。 应用程序域也提供加载和卸载代码的机制。 只能通过卸载应用程序域，从内存中卸载代码。 有关详细信息，请参阅[应用程序域和 CLR 集成安全性](https://msdn.microsoft.com/library/54ee904e-e21a-4ee7-b4ad-a6f6f71bd473)。  
+ CLR 支持应用程序域作为主机进程内的执行区的概念，在其中可以加载和执行托管代码程序集。 应用程序域边界提供程序集之间的隔离。 根据静态变量和数据成员的可见性以及是否可以动态调用代码对这些程序集进行隔离。 应用程序域也提供加载和卸载代码的机制。 只能通过卸载应用程序域，从内存中卸载代码。 有关详细信息，请参阅[应用程序域和 CLR 集成安全性](https://docs.microsoft.com/previous-versions/sql/2014/database-engine/dev-guide/application-domains-and-clr-integration-security?view=sql-server-2014)。  
   
 ###### <a name="code-access-security-cas"></a>代码访问安全性 (CAS)  
  CLR 安全系统通过给代码分配权限，提供了一种控制托管代码可以执行何种操作的方法。 基于代码标识（例如，程序集的签名或代码的来源）分配代码访问权限。  
@@ -110,11 +110,11 @@ ms.locfileid: "87246392"
   
  在某些情况下，长时间运行的托管代码将自动生成，某些情况下将不会。 在以下情况下，长时间运行的托管代码将自动产生：
  
- - 如果代码调用 SQL OS （例如，查询数据）
+ - 如果代码调用 SQL OS (来查询数据，例如) 
  - 如果分配足够的内存来触发垃圾回收
  - 如果代码通过调用 OS 函数进入抢先模式
 
- 不执行上述任何操作的代码（例如，仅包含计算的紧凑循环）不会自动生成计划程序，这可能导致系统中的其他工作负荷长时间等待。 在这些情况下，由开发人员通过调用 .NET Framework 的 preemtive （）函数或通过在预计长时间运行的任何代码部分以 BeginThreadAffinity （）显式进入模式，来明确地生成该方法。 下面的代码示例演示如何使用这些方法中的每种方法手动生成。
+ 不执行上述任何操作的代码（例如，仅包含计算的紧凑循环）不会自动生成计划程序，这可能导致系统中的其他工作负荷长时间等待。 在这些情况下，由开发人员通过调用 .NET Framework 的 preemtive ( # A1 函数，或在预计长时间运行的任何代码部分中以 BeginThreadAffinity ( # A3 显式进入模式，来明确地生成。 下面的代码示例演示如何使用这些方法中的每种方法手动生成。
 
  ```c#
 // Example 1: Manually yield to SOS scheduler.
@@ -157,8 +157,8 @@ Thread.EndThreadAffinity();
 |功能|SAFE|EXTERNAL_ACCESS|UNSAFE|  
 |-|-|-|-|  
 |代码访问安全性|仅执行|执行和访问外部资源|非受限|  
-|编程模型限制|“是”|“是”|无限制|  
-|可验证性要求|“是”|是|否|  
+|编程模型限制|是|是|无限制|  
+|可验证性要求|是|是|否|  
 |调用本机代码的能力|否|否|是|  
   
  SAFE 是最可靠和安全的模式，并且在允许的编程模型方面也具有相关的限制。 给 SAFE 程序集授予了足够的权限，以便运行、执行计算以及访问本地数据库。 SAFE 程序集需要具有可验证的类型安全性，并且不允许调用非托管代码。  

@@ -1,5 +1,5 @@
 ---
-title: 法律声明（适用于 Oracle 的 SSMA） |Microsoft Docs
+title: 适用于 Oracle) 的法律公告 (SSMA |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 12f7b46f-9228-46d8-9877-cc6a7948c64b
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 3380531a26e062d6b06c2f08cb5bc36a8df55004
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 913ca29a043d6422d818221f5d13dea3029a21e8
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68262985"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934736"
 ---
 # <a name="legal-notice-ssma-for-oracle"></a>法律声明 (SSMA for Oracle)
 本文档（包括本文档中使用的示例应用程序）仅供参考，并在无任何明示或暗示担保的情况下提供。 本文档中的信息（包括 URL 和其他 Internet 网站引用）如有更改，恕不另行通知。 由于使用本文档而带来的任何风险或后果均由用户自行承担。  

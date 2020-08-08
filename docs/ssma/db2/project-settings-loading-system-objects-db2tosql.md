@@ -1,5 +1,5 @@
 ---
-title: 项目设置（加载系统对象）（DB2ToSQL） |Microsoft Docs
+title: " (加载系统对象)  (DB2ToSQL) 的项目设置 |Microsoft Docs"
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 9a545233-1b0a-488a-a1ec-c33aa608dcc1
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 5c12a2ddb97c6d599e5adfc57277e0a5f64288e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 188634d6e4efcfb72aaa6fd890bc180a499bf5b9
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68060191"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933678"
 ---
-# <a name="project-settingsloading-system-objects-db2tosql"></a>项目设置（加载系统对象）（DB2ToSQL）
-您可以在 "**项目设置**" 对话框的 "加载系统对象" 页中指定 SSMA 转换和加载到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]哪些 DB2 系统对象。  
+# <a name="project-settingsloading-system-objects-db2tosql"></a> ()  (DB2ToSQL 加载系统对象的项目设置) 
+您可以在 "**项目设置**" 对话框的 "加载系统对象" 页中指定 SSMA 转换和加载到哪些 DB2 系统对象 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 "**项目设置**" 和 "**默认项目设置**" 对话框中提供了 "加载系统对象" 窗格：  
   

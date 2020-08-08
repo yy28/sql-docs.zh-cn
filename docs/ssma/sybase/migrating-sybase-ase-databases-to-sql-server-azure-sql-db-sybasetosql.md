@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: ed7952d4-8331-44d7-bccf-3440e17238b2
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 15c3b7d8594f9b0700c7cb1f429a89947c16655b
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: e0a938d615b15dc7b280a6c6b9337a546e0059bf
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865295"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934657"
 ---
 # <a name="migrating-sap-ase-databases-to-sql-server---azure-sql-database-sybasetosql"></a>将 SAP ASE 数据库迁移到 SQL Server-Azure SQL 数据库 (SybaseToSQL) 
 SAP 自适应服务器企业 (ASE)  (SSMA) 是一个全面的环境，可帮助你快速将 SAP ASE 数据库迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 AZURE SQL 数据库。 SQL Server 迁移助手 通过使用 SSMA for SAP ASE，你可以查看数据库对象和数据、评估要迁移的数据库、将数据库对象迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 AZURE Sql 数据库，以及将数据迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Azure sql 数据库。  
@@ -45,7 +45,7 @@ SAP 自适应服务器企业 (ASE)  (SSMA) 是一个全面的环境，可帮助�
   
 9. 如有必要，请更新数据库应用程序。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [安装 SSMA for SAP ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)  
 [SSMA for SAP ASE &#40;SybaseToSQL&#41;的入门](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)  
   

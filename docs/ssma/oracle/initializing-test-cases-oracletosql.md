@@ -1,5 +1,5 @@
 ---
-title: 初始化测试用例（OracleToSQL） |Microsoft Docs
+title: " (OracleToSQL) 初始化测试用例 |Microsoft Docs"
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,20 +7,20 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 45897363-cfc2-44bb-817b-7561e60b7410
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: ae6a7bbeb70ae53280877a1f88a006743eea0655
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 63439231e63170f94e9a1f56662b2d75d8db0816
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68264372"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934746"
 ---
 # <a name="initializing-test-cases-oracletosql"></a>初始化测试用例 (OracleToSQL)
 在此步骤中，您将为新的测试用例指定初始信息。  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>parameters  
 **测试用例名称**  
 输入名称以标识测试用例。  
   

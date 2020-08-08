@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Connecting to SQL Server,Synchronizing SQL Server Metadata
 ms.assetid: 1b2a8059-1829-4904-a82f-9c06de1e245f
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 283b91e9cbe263e870856066d94dc2d1cd72dd68
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: c810b85b2e59d02b26ee0b831bbbafe2ede5ba28
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863486"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935029"
 ---
 # <a name="connecting-to-sql-server-oracletosql"></a>连接到 SQL Server (OracleToSQL)
 若要将 Oracle 数据库迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 R2 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014，你必须连接到这些目标实例中的任何一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 在连接时，SSMA 将获取实例中所有数据库的元数据， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元数据资源管理器中显示数据库元数据。 SSMA 存储有关您连接到的实例的信息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，但不存储密码。  
@@ -82,7 +82,7 @@ ms.locfileid: "87863486"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果创建的项目 SQL Server 2012，你将能够连接到2012和2014和2016。  
   
-|项目类型与目标服务器版本|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005<br />  (版本： 1.x) |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008<br />  (版本： 8.x) |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 <br /> (版本： 11. x) |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 <br /> (版本： 12. x) |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 <br /> (版本：十三) |Azure SQL Database|  
+|项目类型与目标服务器版本|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005<br />  (版本： 1.x) |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008<br />  (版本： 8.x) |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 <br /> (版本： 11. x) |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 <br /> (版本： 12. x) |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 <br /> (版本：十三) |Azure SQL 数据库|  
 |-|-|-|-|-|-|-|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|是|是|是|是|是||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||是|是|是|是||

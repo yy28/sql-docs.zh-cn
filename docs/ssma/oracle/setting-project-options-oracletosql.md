@@ -1,5 +1,5 @@
 ---
-title: 设置项目选项（OracleToSQL） |Microsoft Docs
+title: " (OracleToSQL) 设置项目选项 |Microsoft Docs"
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,18 +9,18 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Configuration Options and Modes
 ms.assetid: a324d07d-cfdf-43bd-98a0-acf332c5a4db
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 6947a51b731b22b28ffbaa509f7cd38be5e7ebc5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: e104c2ed456567074b796d68d5a82769ac67e5ac
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266529"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932958"
 ---
 # <a name="setting-project-options-oracletosql"></a>设置项目选项 (OracleToSQL)
-对于每个 SSMA 项目，可以设置项目级别选项。 这些选项指定对象转换、对象加载、用户界面和数据迁移设置。 在将对象转换为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或将数据迁移[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到之前，请验证配置选项是否适用于项目。  
+对于每个 SSMA 项目，可以设置项目级别选项。 这些选项指定对象转换、对象加载、用户界面和数据迁移设置。 在将对象转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或将数据迁移到之前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请验证配置选项是否适用于项目。  
   
 SSMA 可让你配置所有项目的默认选项。 这些选项将应用于您创建的任何新项目。 然后，你可以自定义每个项目的选项。  
   
@@ -29,7 +29,7 @@ SSMA 有五组项目设置：
   
 -   项目信息  
   
--   常规（转换、迁移、加载对象）  
+-   常规 (转换、迁移、加载对象)   
   
 -   Synchronization  
   
@@ -39,7 +39,7 @@ SSMA 有五组项目设置：
   
 它还具有四种配置这些设置的模式：  
   
--   默认  
+-   默认值  
   
 -   乐观  
   
@@ -47,7 +47,7 @@ SSMA 有五组项目设置：
   
 -   自定义  
   
-对于大多数用户，建议使用默认模式。 乐观模式会保留更多当前 Oracle 语法，并且更易于阅读。 但是，保持当前语法可能不准确。 如果必须将 Oracle 语法转换为等效[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]语法，则完整模式将执行最完整的转换，但生成的代码可能更难以读取。 在 "自定义" 模式下，设置选项。  
+对于大多数用户，建议使用默认模式。 乐观模式会保留更多当前 Oracle 语法，并且更易于阅读。 但是，保持当前语法可能不准确。 如果必须将 Oracle 语法转换为等效 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语法，则完整模式将执行最完整的转换，但生成的代码可能更难以读取。 在 "自定义" 模式下，设置选项。  
   
 有关设置以及如何在每个模式下应用这些设置的详细信息，请参阅以下主题：  
   
@@ -97,7 +97,7 @@ SSMA 有五组项目设置：
   
 -   若要自定义源和目标数据类型的映射，请参阅[&#40;OracleToSQL&#41;映射 Oracle 和 SQL Server 数据类型](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md)。  
   
--   否则，你可以将 Oracle 数据库对象定义转换为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]对象定义。 有关详细信息，请参阅将[Oracle 架构转换 &#40;OracleToSQL&#41;](../../ssma/oracle/converting-oracle-schemas-oracletosql.md)。  
+-   否则，你可以将 Oracle 数据库对象定义转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象定义。 有关详细信息，请参阅将[Oracle 架构转换 &#40;OracleToSQL&#41;](../../ssma/oracle/converting-oracle-schemas-oracletosql.md)。  
   
 ## <a name="see-also"></a>另请参阅  
 [将 Oracle 和 SQL Server 数据类型映射 &#40;OracleToSQL&#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md)  

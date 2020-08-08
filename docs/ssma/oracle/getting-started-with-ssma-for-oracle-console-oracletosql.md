@@ -1,5 +1,5 @@
 ---
-title: SSMA for Oracle Console （OracleToSQL）的入门 |Microsoft Docs
+title: SSMA for Oracle Console (OracleToSQL) 入门 |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Oracle Console, Console Output Conventions
 - Oracle Console, Launching Console
 ms.assetid: 667a5e4a-6848-4973-a72d-1287f64718ac
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 25cd6eb9c811548e6300c944c65c5530185d46e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 57170c17538ccd997c5bc4d2e12ab53914b3727c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68264505"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934886"
 ---
 # <a name="getting-started-with-ssma--for-oracle-console-oracletosql"></a>SSMA for Oracle 控制台入门 (OracleToSQL)
 本部分介绍了启动和开始 Oracle 控制台应用程序的过程。 本文还列出了在典型的 SSMA 控制台输出窗口中使用的约定。  
@@ -28,9 +28,9 @@ ms.locfileid: "68264505"
   
 1.  中转到 "**开始**"，然后指向 "**所有程序**"。  
   
-2.  单击 " ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用于 Oracle 命令提示符的迁移助手**快捷方式" 快捷方式。  
+2.  单击 " ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用于 Oracle 命令提示符的迁移助手**快捷方式" 快捷方式。  
   
-    它显示 "SSMA 控制台使用情况" `(/? Help)`菜单和，以帮助你开始使用控制台应用程序。  
+    它显示 "SSMA 控制台使用情况" 菜单和 `(/? Help)` ，以帮助你开始使用控制台应用程序。  
   
 ## <a name="procedure-for-using-the-ssma-console"></a>使用 SSMA 控制台的过程  
 在 Windows 系统上成功启动控制台后，可以使用以下步骤来处理它：  
@@ -50,15 +50,15 @@ ms.locfileid: "68264505"
 2.  [生成报表](generating-reports-oracletosql.md)以查看详细的 xml 输出报告，以便进行评估/conversion 和数据迁移。 还可以为刷新和同步命令生成详细的错误报告。  
   
 ## <a name="ssma-console-output-conventions"></a>SSMA 控制台输出约定  
-执行 SSMA 脚本命令和选项后，控制台程序会在控制台上向用户显示结果和消息（信息、错误等），或在需要时将其重定向到 xml 输出文件。 输出中的每种消息类型都用一种独特的颜色表示。 例如，以白色表示的短信表示脚本文件命令;绿色颜色表示用户输入的提示，等等。  
+执行 SSMA 脚本命令和选项后，控制台程序会在控制台上显示 (信息、错误等 ) 的结果和消息，或者，如果需要，则重定向到 xml 输出文件。 输出中的每种消息类型都用一种独特的颜色表示。 例如，以白色表示的短信表示脚本文件命令;绿色颜色表示用户输入的提示，等等。  
   
 ![SSMAConsoleOutput_Oracle](../../ssma/db2/media/ssmaconsoleoutput_oracle.jpg "SSMAConsoleOutput_Oracle")  
   
 下表中的控制台输出的颜色解释：  
   
-|Color|说明|  
+|颜色|说明|  
 |---------|---------------|  
-|Red|执行过程中出现错误|  
+|红色|执行过程中出现错误|  
 |灰色|日期和时间戳，向用户发送消息|  
 |白色|脚本文件命令，消息类型|  
 |Yellow|警告|  

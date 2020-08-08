@@ -1,5 +1,5 @@
 ---
-title: 映射 Oracle 和 SQL Server 数据类型（OracleToSQL） |Microsoft Docs
+title: " (OracleToSQL) 映射 Oracle 和 SQL Server 数据类型 |Microsoft Docs"
 description: 了解如何自定义 Oracle 数据类型与 SQL Server 的 Oracle 映射的 SSMA 或接受默认值。
 ms.prod: sql
 ms.custom: ''
@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Type Mapping Inheritance
 ms.assetid: 05da1495-63b9-47b7-86e2-6746394a2d8a
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 8a9cb39213ed2809b7074a474edf5e4e20bd9122
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 656132dafce39e6007601b75956fd73714638716
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293830"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934768"
 ---
 # <a name="mapping-oracle-and-sql-server-data-types-oracletosql"></a>映射 Oracle 和 SQL Server 数据类型 (OracleToSQL)
 Oracle 数据库类型与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库类型不同。 将 Oracle 数据库对象转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象时，必须指定如何将数据类型从 oracle 映射到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 你可以接受默认的数据类型映射，也可以自定义映射，如以下部分所示。  
@@ -27,7 +27,7 @@ Oracle 数据库类型与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.m
 SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，请参阅[项目设置 &#40;类型映射&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-type-mapping-oracletosql.md)。  
   
 ## <a name="type-mapping-inheritance"></a>类型映射继承  
-您可以在项目级别、对象类别级别（如所有存储过程）或对象级别自定义类型映射。 除非在较低级别上被重写，否则将从较高级别继承设置。 例如，如果在项目级别将**smallmoney**映射到**money** ，则项目中的所有对象都将使用此映射，除非你在对象或类别级别自定义映射。  
+您可以在项目级别自定义类型映射、对象类别级别 (例如所有存储过程) 或对象级别）。 除非在较低级别上被重写，否则将从较高级别继承设置。 例如，如果在项目级别将**smallmoney**映射到**money** ，则项目中的所有对象都将使用此映射，除非你在对象或类别级别自定义映射。  
   
 查看 SSMA 中的 "**类型映射**" 选项卡时，背景会进行颜色编码，以显示继承了哪些类型的映射。 对于任何继承的类型映射，类型映射的背景为黄色; 对于在当前级别指定的任何映射，背景为白色。  
   
@@ -52,7 +52,7 @@ SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，�
   
 2.  若要添加新映射，请执行以下操作：  
   
-    1.  单击“添加”。  
+    1.  单击 **添加**。  
   
     2.  在 "**源类型**" 下，选择要映射的 Oracle 数据类型。  
   

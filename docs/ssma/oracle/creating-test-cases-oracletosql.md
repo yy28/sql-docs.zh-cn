@@ -1,5 +1,5 @@
 ---
-title: 创建测试用例（OracleToSQL） |Microsoft Docs
+title: " (OracleToSQL) 创建测试用例 |Microsoft Docs"
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Test Case Wizard
 ms.assetid: 22f38901-ec35-4707-a911-784e6ad8dafb
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 697f7049a60aa7ae2b8c89d1fb6c5ce8e3d29312
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 270d904c11df5ab28062cd83672071319ca6f17f
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266126"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934950"
 ---
 # <a name="creating-test-cases-oracletosql"></a>创建测试用例 (OracleToSQL)
 使用测试用例向导创建测试。 通过此向导，您可以通过选择已测试和已验证的对象并指定测试参数来创建测试用例。  
@@ -25,7 +25,7 @@ ms.locfileid: "68266126"
 ## <a name="starting-the-test-case-wizard"></a>启动测试用例向导  
 若要启动测试用例向导，请单击 **"测试器" 菜单上**的 "**新建测试用例 ...** "。  
   
-启动后，向导将在源 Oracle 服务器上查找架构 SSMATESTER_ORACLE。 它是用于存储辅助对象的测试人员扩展架构。 如果测试用例向导找不到 SSMATESTER_ORACLE，则将显示建议创建架构的对话框窗口。 （这种情况通常发生在首次运行 SSMA 测试器的过程中。）  
+启动后，向导将在源 Oracle 服务器上查找架构 SSMATESTER_ORACLE。 它是用于存储辅助对象的测试人员扩展架构。 如果测试用例向导找不到 SSMATESTER_ORACLE，则将显示建议创建架构的对话框窗口。  (在首次运行 SSMA 测试器期间通常会发生此情况。 )   
   
 如果收到对话框窗口，请单击 **"是"** 在源服务器上创建 SSMATESTER_ORACLE 架构。 请注意，你必须拥有 Oracle 权限才能创建新用户并在此用户的架构中创建对象。  
   

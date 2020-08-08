@@ -1,5 +1,5 @@
 ---
-title: 查看测试用例报表（SybaseToSQL） |Microsoft Docs
+title: 查看测试用例报表 (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Tester Component,Test Case Reports
 ms.assetid: cb75d281-43ef-4f4a-b754-2c4ee3b62ae7
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 8a6d45f7e621f9b6516d4cc1211a8627174ae9b3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 99bad46468ff0138c07f531c9e32cdecc4fda5be
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67944600"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934521"
 ---
 # <a name="viewing-test-case-reports-sybasetosql"></a>查看测试用例报表 (SybaseToSQL)
 "测试用例" 报表显示测试验证结果和常规测试信息。 如果测试失败，还会显示有关已验证对象中的任何不匹配数据的信息。  
@@ -35,11 +35,11 @@ ms.locfileid: "67944600"
 **先决条件错误**  
 显示在**先决条件**步骤中发生的任何错误。 通常情况下，会跳过它。  
   
-**初始化**。  
+**初始化**  
 显示**成功**或**失败**的执行状态。  
   
 **测试对象结果**  
-比较结果（成功或失败）与 SSMA 测试人员在失败情况下检测到的不匹配。  
+结果比较 (成功或失败) 以及 SSMA 测试人员在失败情况下检测到的不匹配。  
   
 **定稿**  
 显示**成功**或**失败**的执行状态。  

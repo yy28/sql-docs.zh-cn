@@ -1,5 +1,5 @@
 ---
-title: 使用适用于 Oracle 控制台的 SSMA （DB2ToSQL） |Microsoft Docs
+title: 使用 SSMA for Oracle Console (DB2ToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,23 +7,23 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 29d8787c-632e-4ff7-9ccc-3f7ad40480ec
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 62136073116141c206c36d5fcca8dd5b417de0e4
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: acf7affd211dc95d05f8fe6ce8b29f05292ad46c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396415"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933548"
 ---
-# <a name="working-with-ssma-for-oracle-console-db2tosql"></a>使用 SSMA for Oracle 控制台（DB2ToSQL）
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]DB2 的迁移助手（SSMA）版本现在可通过命令行中的控制台应用程序进行访问。 脚本文件构成应用程序的输入，用于执行命令。 作为控制台应用程序，SSMA 启用了脚本级交互，减少了迁移循环，并扩展了迁移工作量。  
+# <a name="working-with-ssma-for-oracle-console-db2tosql"></a>使用 SSMA for Oracle Console (DB2ToSQL) 
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]现在，可以通过命令行中的控制台应用程序访问 DB2 的迁移助手 (SSMA) 版本。 脚本文件构成应用程序的输入，用于执行命令。 作为控制台应用程序，SSMA 启用了脚本级交互，减少了迁移循环，并扩展了迁移工作量。  
   
 本部分介绍使用 SSMA 控制台应用程序迁移 DB2 数据库的过程。  
   
 本部分中涵盖的主题包括：  
   
-|主题|说明|  
+|主题|描述|  
 |-|-|  
 |[SSMA for DB2 Console &#40;DB2ToSQL&#41;入门](../../ssma/db2/getting-started-with-ssma-for-db2-console-db2tosql.md)|说明执行控制台应用程序的过程。|  
 |[SSMA 控制台中的命令行选项 &#40;DB2ToSQL&#41;](../../ssma/db2/command-line-options-in-ssma-console-db2tosql.md)|描述用于操作 SSMA 控制台应用程序的命令行选项和参数。|  

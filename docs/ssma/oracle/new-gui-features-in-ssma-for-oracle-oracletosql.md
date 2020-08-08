@@ -1,5 +1,5 @@
 ---
-title: SSMA for Oracle 中的新 GUI 功能（OracleToSQL） |Microsoft Docs
+title: SSMA for Oracle (OracleToSQL) 中的新 GUI 功能 |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 62e2d30f-a73f-42d9-a6ab-3510a8198f4e
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 295372026ec0a1eed0abb4e62a10bc56fd279d56
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 511095f8b6910f95a7f3e4105fce102bb2a9522e
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76910210"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933128"
 ---
-# <a name="new-gui-features-in-ssma-for-oracle-oracletosql"></a>SSMA for Oracle 中的新 GUI 功能（OracleToSQL）
+# <a name="new-gui-features-in-ssma-for-oracle-oracletosql"></a>SSMA for Oracle 中的新 GUI 功能 (OracleToSQL) 
 本章介绍 SSMA 用户界面的新增功能。  
   
 ## <a name="layouts"></a>布局  
@@ -55,14 +55,14 @@ ms.locfileid: "76910210"
   
 -   单击 SQL 窗口左侧的灰色区域  
   
--   使用 Ctrl + Shift +&lt;0-9&gt;设置编号书签  
+-   使用 Ctrl + Shift + &lt; 0-9 &gt; 设置编号书签  
   
 ### <a name="bookmark-navigation"></a>书签导航  
 可以通过以下方式遍历书签：  
   
 -   在 SQL 窗口的顶部使用 "下一书签" 按钮、上一个书签  
   
--   使用 Ctrl +&lt;0 ... 9&gt;查找编号书签  
+-   使用 Ctrl + &lt; 0 ... 9 &gt; 查找编号书签  
   
 -   使用按钮在 "管理书签" 对话框中转到或查看源  
   

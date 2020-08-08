@@ -1,5 +1,5 @@
 ---
-title: 使用用于 Sybase 控制台的 SSMA （SybaseToSQL） |Microsoft Docs
+title: 使用 SSMA for Sybase Console (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -7,23 +7,23 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: c465e477-c479-4aa8-918d-58bf30884789
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: df1539bde5064dc9ae9211029631bb233be0f469
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 8a5921282769cb4c8a696a4718ad07bb3f8d7622
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396783"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934510"
 ---
 # <a name="working-with-ssma-for-sybase-console-sybasetosql"></a>使用 SSMA for Sybase 控制台 (SybaseToSQL)
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]现在，可通过命令行上的控制台应用程序访问迁移助手（SSMA），用于 Sybase 自适应服务器 Enterprise （ASE）的发布。 脚本文件构成应用程序的输入，用于执行命令。 作为控制台应用程序，SSMA 启用了脚本级交互，减少了迁移循环，并扩展了迁移工作量。  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]迁移助手 (SSMA) ，为 Sybase 自适应服务器企业 (ASE) 发布，现在可以通过命令行的控制台应用程序进行访问。 脚本文件构成应用程序的输入，用于执行命令。 作为控制台应用程序，SSMA 启用了脚本级交互，减少了迁移循环，并扩展了迁移工作量。  
   
 本部分介绍使用 SSMA 控制台应用程序迁移 ASE 数据库的过程。  
   
 本部分中涵盖的主题包括：  
   
-|主题|说明|  
+|主题|描述|  
 |-|-|  
 |[入门，用于 Sybase 控制台 &#40;SybaseToSQL&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-console-sybasetosql.md)|说明执行控制台应用程序的过程。|  
 |[SSMA 控制台中的命令行选项 &#40;SybaseToSQL&#41;](../../ssma/sybase/command-line-options-in-ssma-console-sybasetosql.md)|描述用于操作 SSMA 控制台应用程序的命令行选项和参数。|  
@@ -37,5 +37,5 @@ ms.locfileid: "87396783"
 |[&#40;SybaseToSQL 的疑难解答&#41;](../../ssma/sybase/troubleshooting-sybasetosql.md)|提供有关修复迁移问题的简要信息。|  
   
 ## <a name="see-also"></a>另请参阅  
-[入门用于 Sybase 控制台的 SSMA （SybaseToSQL）](https://msdn.microsoft.com/43219dbe-bcfa-427d-9242-f07b1455f15f)  
+[入门，用于 Sybase 控制台 (SybaseToSQL) ](https://msdn.microsoft.com/43219dbe-bcfa-427d-9242-f07b1455f15f)  
   

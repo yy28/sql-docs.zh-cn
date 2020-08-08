@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
-author: Jtoland
-ms.author: Jtoland
-ms.openlocfilehash: a8349922c991877c8cf9139cfedf3f458c2d68b8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 35f0b2698497c1c87ed6d54eab2dc82496318619
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758437"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932468"
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server Migration Assistant
 
@@ -44,7 +44,7 @@ SSMA 支持以下目标版本。
 - SQL Server 2016
 - Windows 和 Linux 上的 SQL Server 2017
 - Windows 和 Linux 上的 SQL Server 2019
-- Azure SQL Database
+- Azure SQL 数据库
 - Azure SQL 托管实例
 - Azure SQL 数据仓库 * *
 
@@ -60,7 +60,7 @@ SSMA 支持以下目标版本。
  
 ## <a name="getting-ssma-support"></a>获取 SSMA 支持  
 
-**Microsoft SQL Server 迁移助手的帮助和支持（SSMA）：**  
+**) Microsoft SQL Server 迁移助手 (的帮助和支持：**  
   
 - **产品帮助**-若要访问产品支持，请启动 SSMA，并选择 "帮助" 菜单或按 F1 键。  
   

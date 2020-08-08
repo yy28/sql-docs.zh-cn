@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Project Options Setting
 ms.assetid: 97b70fc8-1f68-4f15-8e22-db5b784ea4ec
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: b2b16054a0a866d7772243a04cb8f5955931cfc4
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 04efa94a93cc313e520eaebb8448c48e1b106ec6
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864744"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934616"
 ---
 # <a name="setting-project-options-sybasetosql"></a>设置项目选项 (SybaseToSQL)
 对于每个 SSMA 项目，可以设置项目级别选项。 这些选项指定对象转换、对象加载、SQL azure、用户界面和数据迁移设置。 在将对象转换为或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure 或将数据迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 之前，请验证配置选项是否适用于项目。  
@@ -38,7 +38,7 @@ SSMA 有五组项目设置：
   
 它还具有四种配置这些设置的模式：  
   
-1.  默认  
+1.  默认值  
   
 2.  乐观  
   

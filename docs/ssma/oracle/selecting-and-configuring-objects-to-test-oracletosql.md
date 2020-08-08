@@ -1,5 +1,5 @@
 ---
-title: 选择并配置要测试的对象（OracleToSQL） |Microsoft Docs
+title: 选择并配置要测试 (OracleToSQL) 的对象 |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Selection of Objects to Test,Parameter Comparison Settings
 ms.assetid: 29fb6542-5c1f-4b14-a822-87700beb7623
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: e0a8e7650534d50c5e5d7c3b02f2857764d9c2ca
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: fd5a65e50889d461b0922fa255680a76863ca0a4
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68264642"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932758"
 ---
 # <a name="selecting-and-configuring-objects-to-test-oracletosql"></a>选择并配置要测试的对象 (OracleToSQL)
 在此步骤中，您将选择要测试的对象，并配置用于比较过程的输出参数和函数的返回值的设置。  
@@ -76,7 +76,7 @@ ms.locfileid: "68264642"
   
 -   如果选择**False**，则比较的字符串将保留尾随空格。  
   
-## <a name="specify-input-values-for-procedures-and-functions-call-values"></a>指定过程和函数的输入值（调用值）  
+## <a name="specify-input-values-for-procedures-and-functions-call-values"></a> (调用值指定过程和函数的输入值)   
 您可以在 "**调用值**" 页上指定输入参数值。 "**添加调用**" 按钮添加一个具有空参数值的新调用。 "**删除调用**" 按钮用于删除当前调用。  
   
 ## <a name="next-step"></a>下一步  

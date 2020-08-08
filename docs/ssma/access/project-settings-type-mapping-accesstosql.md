@@ -1,5 +1,5 @@
 ---
-title: 项目设置（类型映射）（AccessToSQL） |Microsoft Docs
+title: 项目设置 (类型映射)  (AccessToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - SQL Server data types
 - Type Mapping settings
 ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 01154cf477435e9dc5335606d0c11a05aecc492b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 2b25cb2dbe5b92e0ece7ef28a842a2585ea9961d
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68066661"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933988"
 ---
-# <a name="project-settings-type-mapping-accesstosql"></a>项目设置（类型映射）（AccessToSQL）
+# <a name="project-settings-type-mapping-accesstosql"></a> (类型映射的项目设置)  (AccessToSQL) 
 "类型映射项目设置" 允许您为 SSMA 项目设置默认的类型映射。 还可以为单个数据库对象指定类型映射。 有关详细信息，请参阅[映射源和目标数据类型](mapping-source-and-target-data-types-accesstosql.md)。  
   
 "**项目设置**" 和 "**默认项目设置**" 对话框中提供了类型映射：  
@@ -37,28 +37,28 @@ ms.locfileid: "68066661"
 要映射的 Access 数据类型。  
   
 **目标类型**  
-指定访问[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型的目标或 SQL Azure 数据类型。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指定访问数据类型的目标或 SQL Azure 数据类型。  
   
 下表显示源和目标数据类型之间的默认映射。  
   
 |Access 数据类型|SQL Server 数据类型|  
 |--------------------|------------------------|  
-|**binary [\*.。\*]**|**varbinary [\*]**|  
+|**binary [ \* ... \* ]**|**varbinary [ \* ]**|  
 |**boolean**|**bit**|  
-|**byte**|**tinyint**|  
+|byte|**tinyint**|  
 |**货币**|**money**|  
 |**date**|**datetime**|  
 |**decimal**|**float**|  
 |**double**|**float**|  
-|**guid.empty**|**uniqueidentifier**|  
+|**guid**|**uniqueidentifier**|  
 |**integer**|**smallint**|  
 |**long**|**int**|  
 |**longbinary**|**varbinary(max)**|  
 |**"**|**nvarchar(max)**|  
 |**备注**-Access 97|**varchar(max)**|  
-|single |**real**|  
-|**文本 [\*.。\*]**|**nvarchar [\*]**|  
-|**文本 [\*.。] \*** -用于访问97|**varchar [\*]**|  
+|single|**real**|  
+|**文本 [ \* ... \* ]**|**nvarchar [ \* ]**|  
+|**text [ \* ... \* ]** -Access 97|**varchar [ \* ]**|  
   
 **添加**  
 单击此可将数据类型添加到 "映射" 列表中。  
@@ -74,5 +74,5 @@ ms.locfileid: "68066661"
   
 ## <a name="see-also"></a>另请参阅  
 [映射源和目标数据类型](mapping-source-and-target-data-types-accesstosql.md)  
-[用户界面参考（访问）](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
+[ (访问) 的用户界面参考](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

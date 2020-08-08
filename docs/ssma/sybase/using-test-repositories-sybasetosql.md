@@ -1,5 +1,5 @@
 ---
-title: 使用测试存储库（SybaseToSQL） |Microsoft Docs
+title: 使用测试存储库 (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Tester Component,Test Repositories
 ms.assetid: c359c25c-db2a-4a20-afa9-62d87a62df72
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: a94bd053dac04c4d595e4f2077c02d1d79858e56
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: ba0879ca35e40d7ea2d1466db97cabd3cb6abd18
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68020843"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934548"
 ---
 # <a name="using-test-repositories-sybasetosql"></a>使用测试存储库 (SybaseToSQL)
 SSMA 测试储存库存储 SSMA 测试程序测试用例和测试结果以供以后使用。 存储库数据保存在**ssmatesterdb_syb**数据库的架构**ssma_sybase_utilities**的 SQL Server 表**TestCaseRepository**和**RunTestCaseResultRepository**中。  
@@ -65,7 +65,7 @@ SSMA 测试储存库存储 SSMA 测试程序测试用例和测试结果以供以
   
 -   已启动：测试用例运行日期。  
   
--   Result：测试执行的简短摘要（此单元格的工具提示显示了测试执行的完整摘要）。  
+-   Result：测试执行的简短摘要 (此单元格的工具提示显示测试执行) 的完整摘要。  
   
 "测试结果" 页上提供了以下按钮：  
   

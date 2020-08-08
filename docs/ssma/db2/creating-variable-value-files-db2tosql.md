@@ -1,5 +1,5 @@
 ---
-title: 创建变量值文件（DB2ToSQL） |Microsoft Docs
+title: 创建变量值文件 (DB2ToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,22 +7,22 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 122f3fbe-46a0-40df-ac3b-d43bf33d96ba
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 945b7e86641c796e79bfb87b8b7b5de25949e4c2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: f5a1b2fe01fd9800ee9d56e3a01f9861bfb3a046
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67989771"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933852"
 ---
-# <a name="creating-variable-value-files-db2tosql"></a>创建变量值文件（DB2ToSQL）
+# <a name="creating-variable-value-files-db2tosql"></a>创建变量值文件 (DB2ToSQL) 
 变量值文件是一个 XML 文件，其中包含命令的参数值（例如），这是经常从一台服务器迁移到另一台服务器的源服务器或目标服务器名称。 当发生大量的数据库迁移时，将在主脚本文件中创建多个用于存储每个源服务器的值的变量文件，并在命令行上使用 **-v**开关来引用这些文件。 这有助于在包含多个变量文件中的变量值的几个脚本文件中维护静态值。  
   
 > [!NOTE]  
-> 1.  变量名称以 $ （美元）符号为前缀和后缀。 如果变量值文件中没有为变量赋值，则在分析脚本文件时将遇到错误，从而导致控制台执行过程停止。  
-> 2.  的转义符**$** 是**$$**。 如果参数的变量或静态值的值包含**$** （美元）符号，则**$$** 必须指定，以将其视为字符而不是变量。  
-> 3.  出于可维护性目的，可以在元素`'variable-group'`内声明变量以实现用户定义变量的逻辑分离。  此元素不是必需的。  
+> 1.  变量名称以 $ (美元) 符号为前缀并带有后缀。 如果变量值文件中没有为变量赋值，则在分析脚本文件时将遇到错误，从而导致控制台执行过程停止。  
+> 2.  的转义符 **$** 是 **$$** 。 如果参数的变量或静态值的值包含 **$** (美元) 符号，则 **$$** 必须指定，以将其视为字符而不是变量。  
+> 3.  出于可维护性目的，可以在元素内声明变量 `'variable-group'` 以实现用户定义变量的逻辑分离。  此元素不是必需的。  
   
 **示例：**  
   
@@ -47,7 +47,7 @@ ms.locfileid: "67989771"
   
 </variables>  
 ```  
-**示例2：**  
+**示例 2：**  
   
 ```  
 <!--Sample of variable value file commands-->  

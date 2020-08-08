@@ -1,5 +1,5 @@
 ---
-title: 项目设置（同步）（OracleToSQL） |Microsoft Docs
+title: " (同步)  (OracleToSQL) 的项目设置 |Microsoft Docs"
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: e223fb7d-05ec-4fa5-8973-d845c33a23dd
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 743ed010107c9557c84b1683f7a81b369ca7cf3c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 697bf746f438d45731e78c0c39d28677c3be6ddd
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266590"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933201"
 ---
 # <a name="project-settingssynchronization-oracletosql"></a>项目设置（同步）(OracleToSQL)
-"**项目设置**" 对话框的 "同步" 页包含用于自定义 SSMA 将数据库对象（如表和存储过程）加载和刷新到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的方式的设置。  
+"**项目设置**" 对话框的 "同步" 页包含用于自定义 SSMA 将数据库对象（如表和存储过程）加载和刷新到的方式的设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 默认操作选项指定用于刷新 Oracle 数据库中的对象的默认设置，并指定与 SQL Server 数据库同步对象的默认设置。 有关详细信息，请参阅[从数据库中刷新-Oracle](../../ssma/oracle/refresh-from-database-oracletosql.md)。  
   
@@ -30,7 +30,7 @@ ms.locfileid: "68266590"
   
 ## <a name="miscellaneous-options"></a>其他选项  
 **多次**  
-指定在将对象加载到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时 SSMA 应执行的尝试次数。 当前尝试中未加载到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的对象将重试，直到 SSMA 达到当前同步过程中的最大尝试次数。 默认值设置为**2**  
+指定在将对象加载到时 SSMA 应执行的尝试次数 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 当前尝试中未加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的对象将重试，直到 SSMA 达到当前同步过程中的最大尝试次数。 默认值设置为**2**  
   
 ## <a name="synchronization-for-oracle-options"></a>Oracle 选项同步  
 **对本地和远程对象的操作更改**  

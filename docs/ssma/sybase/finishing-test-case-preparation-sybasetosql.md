@@ -1,5 +1,5 @@
 ---
-title: 完成测试用例准备（SybaseToSQL） |Microsoft Docs
+title: 完成测试用例准备 (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Tester Component,Test Case Settings
 ms.assetid: 8b2a49b0-4296-4f3f-9e56-323aa6a6fa8e
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: c3085d17804866015a78e93556dd5373d3a1b8cd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: bbc833070b127d885bf223340a1c5e35388f9cdb
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029137"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931622"
 ---
 # <a name="finishing-test-case-preparation-sybasetosql"></a>完成测试用例准备 (SybaseToSQL)
 向导的最后一页显示测试用例说明以及有关测试中涉及的对象的信息。 此外，在此页上，您可以设置测试执行选项。  

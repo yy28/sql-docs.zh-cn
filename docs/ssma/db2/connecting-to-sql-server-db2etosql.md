@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: b59803cb-3cc6-41cc-8553-faf90851410e
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 84c9a0a994e087314fcd8d1ae66e1bb5a79fedba
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: d04d44abe758ffb15e57944a624ac5b7a87546d4
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863649"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933936"
 ---
 # <a name="connecting-to-sql-server-db2etosql"></a>连接到 SQL Server (DB2eToSQL) 
 若要将 DB2 数据库迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 或 Azure SQL 数据库，必须连接到这些目标实例中的任何一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 在连接时，SSMA 将获取实例中所有数据库的元数据， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元数据资源管理器中显示数据库元数据。 SSMA 存储有关您连接到的实例的信息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，但不存储密码。  
@@ -78,7 +78,7 @@ ms.locfileid: "87863649"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果创建的项目 SQL Server 2012，你将能够连接到2012和2014和2016。  
   
-|项目类型与目标服务器版本|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 <br /> (版本： 11. x) |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 <br /> (版本： 12. x) |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 <br /> (版本：十三) |Azure SQL Database|  
+|项目类型与目标服务器版本|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 <br /> (版本： 11. x) |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 <br /> (版本： 12. x) |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 <br /> (版本：十三) |Azure SQL 数据库|  
 |-|-|-|-|-|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|是|是|是||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||是|是||  

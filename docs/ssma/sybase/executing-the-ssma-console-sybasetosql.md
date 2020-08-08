@@ -1,5 +1,5 @@
 ---
-title: 执行 SSMA 控制台（SybaseToSQL） |Microsoft Docs
+title: 执行 SSMA 控制台 (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/27/2017
 ms.prod: sql
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - Sybase Console,Script File Commands
 - Sybase Console,Script Generation Commands
 ms.assetid: ea8950b7-fabc-4aa4-89f8-9573a2617d70
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 602bc0ac1584f9ff369efa8a2484a16a97a92285
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: ee279098aa195cdc8cb1f5b7d50cf5ba7a8a73c5
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029151"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931673"
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>执行 SSMA 控制台 (SybaseToSQL)
 Microsoft 为你提供了一组可靠的脚本文件命令来执行和控制 SSMA 活动。 后续部分将详细介绍相同的内容。  
@@ -145,7 +145,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令来执行和控制 SSM
 ### <a name="reconnect-source-database"></a>重新连接-源-数据库  
 此命令重新连接到源数据库，但不会加载任何元数据，而与 "连接源-数据库" 命令不同。  
   
-如果无法建立与源的连接，则会生成错误，并且控制台应用程序将停止执行。  
+如果 (无法建立与源) 的连接，则会生成错误，并且控制台应用程序将停止执行。  
   
 **语法示例：**  
   
@@ -170,7 +170,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令来执行和控制 SSM
   
 此命令将重新连接到目标数据库，但不会加载任何元数据，这与连接目标数据库命令不同。  
   
-如果无法建立与目标的连接，则会生成错误，并且控制台应用程序将停止执行。  
+如果无法建立与目标) 的 (连接，则会生成错误，并且控制台应用程序将停止执行。  
   
 **语法示例：**  
   
@@ -189,25 +189,25 @@ Microsoft 为你提供了一组可靠的脚本文件命令来执行和控制 SSM
   
 在执行命令期间，无法连接到源数据库服务器也会导致终止控制台应用程序。  
   
--   `conversion-report-folder:`指定可在其中存储评估报表的文件夹。 （可选特性）  
+-   `conversion-report-folder:`指定可在其中存储评估报表的文件夹。  (可选特性)   
   
--   `object-name:`指定为评估报告生成而考虑的对象（支持单个对象名称或组对象名称）。  
+-   `object-name:`指定 () 为评估报表生成的对象 (支持单个对象名称或) 的组对象名称。  
   
--   `object-type:`指定对象名称属性中的对象的类型（如果指定了对象类别，则对象类型将为 "category"）。  
+-   `object-type:`指定对象名称属性中的对象的类型 (如果指定了对象类别，则对象类型将为 "category" ) 。  
   
 -   `conversion-report-overwrite:`指定是否覆盖评估报告文件夹（如果已存在）。  
   
-    **默认值：** false。 （可选特性）  
+    **默认值：** false。  (可选特性)   
   
 -   `write-summary-report-to:`指定将生成报表的路径。  
   
-    如果仅提到文件夹路径，则按名称**&lt;AssessmentReport n&gt;。创建 XML** 。 （可选特性）  
+    如果仅提到文件夹路径，则按名称**AssessmentReport &lt; n &gt; 。创建 XML** 。  (可选特性)   
   
     报表创建包含两个进一步的子类别：  
   
-    -   `report-errors`（= "true/false"，默认值为 "false" （可选属性））  
+    -   `report-errors` (= "true/false"，默认值为 "false" (可选属性) # A3  
   
-    -   `verbose`（= "true/false"，默认值为 "false" （可选属性））  
+    -   `verbose` (= "true/false"，默认值为 "false" (可选属性) # A3  
   
 **语法示例：**  
   
@@ -230,7 +230,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令来执行和控制 SSM
   
 />  
 ```  
-或  
+or  
   
 ```xml  
 <generate-assessment-report  
@@ -255,25 +255,25 @@ Microsoft 为你提供了一组可靠的脚本文件命令来执行和控制 SSM
   
 如果在执行此命令之前未执行源或目标数据库连接，或者与源或目标数据库服务器之间的连接在命令执行过程中失败，则会生成错误并退出控制台应用程序。  
   
--   `conversion-report-folder:`指定可在其中存储评估报表的文件夹。 （可选特性）  
+-   `conversion-report-folder:`指定可在其中存储评估报表的文件夹。  (可选特性)   
   
--   `object-name:`指定考虑用于转换架构的源对象（支持单个对象名称或组对象名称）。  
+-   `object-name:`指定 (s) 的源对象，该对象用于转换架构 (支持单个对象名称或) 的组对象名称。  
   
--   `object-type:`指定对象名称属性中的对象的类型（如果指定了对象类别，则对象类型将为 "category"）。  
+-   `object-type:`指定对象名称属性中的对象的类型 (如果指定了对象类别，则对象类型将为 "category" ) 。  
   
 -   `conversion-report-overwrite:`指定是否覆盖评估报告文件夹（如果已存在）。  
   
-    **默认值：** false。 （可选特性）  
+    **默认值：** false。  (可选特性)   
   
 -   `write-summary-report-to:`指定将生成汇总报表的路径。  
   
-    如果仅提到文件夹路径，则按名称**&lt;SchemaConversionReport n&gt;。创建 XML** 。 （可选特性）  
+    如果仅提到文件夹路径，则按名称**SchemaConversionReport &lt; n &gt; 。创建 XML** 。  (可选特性)   
   
     报表创建包含两个进一步的子类别：  
   
-    -   `report-errors`（= "true/false"，默认值为 "false" （可选属性））  
+    -   `report-errors` (= "true/false"，默认值为 "false" (可选属性) # A3  
   
-    -   `verbose`（= "true/false"，默认值为 "false" （可选属性））  
+    -   `verbose` (= "true/false"，默认值为 "false" (可选属性) # A3  
   
 **语法示例：**  
   
@@ -295,7 +295,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令来执行和控制 SSM
   
 />  
 ```  
-或  
+or  
   
 ```xml  
 <convert-schema  
@@ -314,19 +314,19 @@ Microsoft 为你提供了一组可靠的脚本文件命令来执行和控制 SSM
 ### <a name="migrate-data"></a>迁移-数据  
 此命令将源数据迁移到目标。  
   
--   `object-name:`指定考虑用于迁移数据的源对象（支持单个对象名称或组对象名称）。  
+-   `object-name:`指定 () 的源对象，该对象用于迁移数据 (支持单个对象名称或) 的组对象名称。  
   
--   `object-type:`指定对象名称属性中的对象的类型（如果指定了对象类别，则对象类型将为 "category"）。  
+-   `object-type:`指定对象名称属性中的对象的类型 (如果指定了对象类别，则对象类型将为 "category" ) 。  
   
 -   `write-summary-report-to:`指定将生成报表的路径。  
   
-    如果仅提到文件夹路径，则按名称**&lt;DataMigrationReport n&gt;。创建 XML** 。 （可选特性）  
+    如果仅提到文件夹路径，则按名称**DataMigrationReport &lt; n &gt; 。创建 XML** 。  (可选特性)   
   
     报表创建包含两个进一步的子类别：  
   
-    -   `report-errors`（= "true/false"，默认值为 "false" （可选属性））  
+    -   `report-errors` (= "true/false"，默认值为 "false" (可选属性) # A3  
   
-    -   `verbose`（= "true/false"，默认值为 "false" （可选属性））  
+    -   `verbose` (= "true/false"，默认值为 "false" (可选属性) # A3  
   
 **语法示例：**  
   
@@ -351,7 +351,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令来执行和控制 SSM
   
 </migrate-data>  
 ```  
-或  
+or  
   
 ```xml  
 <migrate-data  
@@ -399,9 +399,9 @@ sql-server-schema="<target-schema>"/>
   
 如果在执行此命令之前未执行目标数据库连接，或者与目标数据库服务器之间的连接在命令执行过程中失败，则会生成错误并退出控制台应用程序。  
   
--   `object-name:`指定用于与目标数据库同步的目标对象（支持单个对象名称或组对象名称）。  
+-   `object-name:`指定要与目标数据库同步)  (的目标对象， (支持单个对象名或) 的组对象名称。  
   
--   `object-type:`指定对象名称属性中的对象的类型（如果指定了对象类别，则对象类型将为 "category"）。  
+-   `object-type:`指定对象名称属性中的对象的类型 (如果指定了对象类别，则对象类型将为 "category" ) 。  
   
 -   `on-error:`指定是否将同步错误指定为警告或错误。 针对出错的可用选项：  
   
@@ -411,7 +411,7 @@ sql-server-schema="<target-schema>"/>
   
     -   fail-脚本  
   
--   `report-errors-to:`指定同步操作的错误报告的位置（可选属性）。 如果仅指定了文件夹路径，则创建按名称**TargetSynchronizationReport**的文件。  
+-   `report-errors-to:`指定同步操作的错误报告位置 (可选属性) 。 如果仅指定了文件夹路径，则创建按名称**TargetSynchronizationReport.XML**文件。  
   
 **语法示例：**  
   
@@ -460,9 +460,9 @@ fail-script>" (optional)
   
 此命令需要一个或多个元数据库节点作为命令行参数。  
   
--   `object-name:`指定从源数据库（支持单个对象名称或组对象名称）进行刷新所考虑的源对象。  
+-   `object-name:`指定 (s) 从源数据库中进行刷新的源对象， (支持单个对象名称或) 的组对象名称。  
   
--   `object-type:`指定在对象名属性中指定的对象的类型（如果指定了对象类别，则对象类型将为 "category"）。  
+-   `object-type:`指定对象名属性中指定的对象的类型 (如果指定了对象类别，则对象类型将为 "category" ) 。  
   
 -   `on-error:`指定是否将刷新错误作为警告或错误调用。 针对出错的可用选项：  
   
@@ -472,7 +472,7 @@ fail-script>" (optional)
   
     -   fail-脚本  
   
--   `report-errors-to:`指定刷新操作的错误报告的位置（可选属性）。 如果仅指定了文件夹路径，则创建按名称**SourceDBRefreshReport**的文件。  
+-   `report-errors-to:`指定刷新操作的错误报告位置 (可选属性) 。 如果仅指定了文件夹路径，则创建按名称**SourceDBRefreshReport.XML**文件。  
   
 **语法示例：**  
   
@@ -518,15 +518,15 @@ fail-script>" (optional)
   
 此命令需要一个或多个元数据库节点作为命令行参数。  
   
--   `object-name:`指定要保存其脚本的对象（支持单个对象名称或组对象名称）。  
+-   `object-name:`指定要保存其脚本 ( (s) 对象，支持单个对象名称或) 的组对象名称。  
   
--   `object-type:`指定对象名称属性中的对象的类型（如果指定了对象类别，则对象类型将为 "category"）。  
+-   `object-type:`指定对象名称属性中的对象的类型 (如果指定了对象类别，则对象类型将为 "category" ) 。  
   
 -   `metabase:`指定它是源元数据库还是目标元数据库。  
   
--   `destination:`指定必须在其中保存脚本的路径或文件夹。 如果未指定文件名，则将提供格式为（object_name 特性值）的文件名。将提供 out。
+-   `destination:`指定必须在其中保存脚本的路径或文件夹。 如果未指定文件名，则将提供格式 (object_name 属性值) 的文件名。
   
--   `overwrite:`如果为 true，则它将覆盖相同的文件名（如果存在）。 它可以具有值（true/false）。  
+-   `overwrite:`如果为 true，则它将覆盖相同的文件名（如果存在）。 它的值可以为 true/false)  (。  
   
 **语法示例：**  
   
@@ -545,7 +545,7 @@ fail-script>" (optional)
   
 />  
 ```  
-或  
+or  
   
 ```xml  
 <save-as-script  
@@ -568,27 +568,27 @@ fail-script>" (optional)
   
 -   `destination`指定是否应将输出存储在文件中。  
   
-    如果未指定此属性，则转换后的 T-sql 语句将显示在控制台上。 （可选特性）  
+    如果未指定此属性，则转换后的 T-sql 语句将显示在控制台上。  (可选特性)   
   
--   `conversion-report-folder`指定可在其中存储评估报表的文件夹。 （可选特性）  
+-   `conversion-report-folder`指定可在其中存储评估报表的文件夹。  (可选特性)   
   
 -   `conversion-report-overwrite`指定是否覆盖评估报告文件夹（如果已存在）。  
   
-    **默认值：** false。 （可选特性）  
+    **默认值：** false。  (可选特性)   
   
--   `write-converted-sql-to`指定应将转换后的 T-sql 存储到的文件（或）文件夹路径。 如果文件夹路径与`sql-files`属性一起指定，则每个源文件都具有在指定文件夹下创建的相应目标 t-sql 文件。 当文件夹路径与`sql`属性一起指定时，转换后的 t-sql 会写入到指定文件夹下名为 Result 的文件中。  
+-   `write-converted-sql-to`指定文件 (或应存储已转换 T-sql 的) 文件夹路径。 如果文件夹路径与属性一起指定，则 `sql-files` 每个源文件都具有在指定文件夹下创建的相应目标 t-sql 文件。 当文件夹路径与属性一起指定时 `sql` ，转换后的 t-sql 会写入到指定文件夹下名为 Result 的文件中。  
   
 -   `sql`指定要转换的 Sybase sql 语句，可以使用 ";" 分隔一条或多条语句  
   
 -   `sql-files`指定必须转换为 T-sql 代码的 sql 文件的路径。  
   
--   `write-summary-report-to`指定将在其中生成汇总报表的路径。 如果仅提到文件夹路径，则创建按名称**ConvertSQLReport**的文件。 （可选特性）  
+-   `write-summary-report-to`指定将在其中生成汇总报表的路径。 如果仅提到文件夹路径，则创建按名称**ConvertSQLReport.XML**文件。  (可选特性)   
   
     创建摘要报表包含两个进一步的子类别，即：  
   
-    -   报告错误（= "true/false"，默认值为 "false" （可选属性））。  
+    -   报告错误 (= "true/false"，默认值为 "false" (可选属性) # A3。  
   
-    -   verbose （= "true/false"，默认值为 "false" （可选特性））。  
+    -   详细 (= "true/false"，默认值为 "false" (可选属性) # A3。  
   
 此命令需要一个或多个元数据库节点作为命令行参数。  
   
@@ -661,7 +661,7 @@ fail-script>" (optional)
 ```  
   
 ## <a name="next-steps"></a>后续步骤  
-有关命令行选项的信息，请参阅[SSMA 控制台中的命令行选项（AccessToSQL）](../access/command-line-options-in-ssma-console-accesstosql.md)。  
+有关命令行选项的信息，请参阅[SSMA 控制台中的命令行选项 (AccessToSQL) ](../access/command-line-options-in-ssma-console-accesstosql.md)。  
   
 有关示例控制台脚本文件的信息，请参阅使用[示例控制台脚本文件 &#40;SybaseToSQL&#41;](../../ssma/sybase/working-with-the-sample-console-script-files-sybasetosql.md)  
   

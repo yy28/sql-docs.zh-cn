@@ -1,5 +1,5 @@
 ---
-title: 全局设置（编辑器）（OracleToSQL） |Microsoft Docs
+title: 全局设置 (编辑器)  (OracleToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a63e4112-4b5d-4b7a-a5c2-06a24e86ab1b
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 6fcb9915f6945e2dc8413a4c28003428a4ad3e07
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 8b1b5ffbd6a32fd148cb9eaa654b3f47df042923
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68264423"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934810"
 ---
 # <a name="global-settings-editor-oracletosql"></a>全局设置（编辑器）(OracleToSQL)
 使用 "**全局设置**" 对话框的 "编辑器" 页可以指定代码编辑器窗口的设置。  

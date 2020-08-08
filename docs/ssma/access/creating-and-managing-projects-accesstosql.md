@@ -15,14 +15,14 @@ helpviewer_keywords:
 - saving metadata
 - saving projects
 ms.assetid: f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 034d15572b214a6afbd34be78528c57241a21caa
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: ed3c26296f856c87875e2f50766a57c3f6d0c66e
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823847"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934066"
 ---
 # <a name="creating-and-managing-projects-accesstosql"></a> (AccessToSQL) 创建和管理项目
 若要将 Access 数据库迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure，必须先创建 SSMA 项目。 项目是一个文件，其中包含有关要迁移到或 SQL Azure 的数据库的元数据 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或将接收迁移对象和数据的 SQL Azure 的元数据、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接信息和项目设置。  
@@ -89,7 +89,7 @@ SSMA 创建项目文件。 你现在可以执行[添加一个或多个 Access �
   
         保存元数据可能需要几分钟时间。 如果此时不想保存元数据，请不要选中任何复选框。  
   
-    2.  单击“保存”。  
+    2.  单击“保存”  。  
   
         SSMA 将分析访问架构，并将元数据保存到项目文件。  
   

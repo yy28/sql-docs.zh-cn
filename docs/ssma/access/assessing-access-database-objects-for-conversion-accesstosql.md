@@ -1,5 +1,5 @@
 ---
-title: 评估 Access 数据库对象的转换（AccessToSQL） |Microsoft Docs
+title: 评估 Access 数据库对象的 AccessToSQL) 的转换 (|Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - SQL, assessing
 - syntax, assessing
 ms.assetid: 8b9e23d6-da62-437a-8c05-8ad2628b9441
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 4c2f5bc6953ab0e96397ca728391cbe22a73dd50
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: d45df17f82bf52d6d059b2efbf69a39cedb949f0
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67910692"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934078"
 ---
-# <a name="assessing-access-database-objects-for-conversion-accesstosql"></a>评估 Access 数据库对象的转换（AccessToSQL）
-在加载对象并将数据迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 之前，你应该确定要成功完成多少迁移，以及转换可能需要多长时间。 SSMA 可以创建一个评估报告，该报告显示已成功转换为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的对象的百分比，或 SQL Azure 语法和时间估计来执行迁移。 SSMA 还使你能够查看导致转换失败的特定问题。  
+# <a name="assessing-access-database-objects-for-conversion-accesstosql"></a>评估 Access 数据库对象的转换 (AccessToSQL) 
+在加载对象并将数据迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 之前，你应该确定要成功完成多少迁移，以及转换可能需要多长时间。 SSMA 可以创建一个评估报告，该报告显示已成功转换为的对象的百分比， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 语法和时间估计来执行迁移。 SSMA 还使你能够查看导致转换失败的特定问题。  
   
 ## <a name="creating-assessment-reports"></a>创建评估报表  
-创建评估报表时，SSMA 会将选定的 Access 数据库对象转换为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 语法，然后显示结果。  
+创建评估报表时，SSMA 会将选定的 Access 数据库对象转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 语法，然后显示结果。  
   
 **创建评估报表**  
   
@@ -43,7 +43,7 @@ ms.locfileid: "67910692"
   
     SSMA 在窗口底部的状态栏中显示进度。 如果 "输出" 窗格可见，还会在 "输出" 窗格中看到消息。  
   
-评估完成后，将显示 " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]访问迁移助手：评估报告" 窗口。  
+评估完成后， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将显示 "访问迁移助手：评估报告" 窗口。  
   
 ## <a name="using-assessment-reports"></a>使用评估报表  
 "评估报表" 窗口包含三个窗格： "资源管理器"、"详细信息" 窗格和 "消息" 窗格。  

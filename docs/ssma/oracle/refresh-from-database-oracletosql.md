@@ -1,5 +1,5 @@
 ---
-title: 从数据库刷新（OracleToSQL） |Microsoft Docs
+title: 从数据库刷新 (OracleToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 84492f44-c368-4c75-954d-7307a2d2bbc0
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: ba9a56c5fb47be4db081aebb3753db2c3e9ed6ad
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 694953d914b9811208f2ea143f93e2c91878f07b
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266545"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933008"
 ---
 # <a name="refresh-from-database-oracletosql"></a>从数据库刷新 (OracleToSQL)
 **通过 "从数据库刷新**" 对话框，您可以从 Oracle 数据库中选择要刷新的对象。 对话框中的行是根据元数据的状态进行颜色编码的：  
@@ -33,19 +33,19 @@ ms.locfileid: "68266545"
 若要访问**从数据库刷新**对话框，请在 Oracle 元数据资源管理器中右键单击对象，然后单击 "**从数据库刷新**"。  
   
 ## <a name="options"></a>选项  
-**Collapse （-）**  
+**折叠 (-) **  
 折叠所有对象组以隐藏单个对象。  
   
-**展开（+）**  
+**展开 (+) **  
 展开 "所有对象组" 以显示单个对象。  
   
 **隐藏/显示相等对象**  
 如果在 Oracle 数据库和 SSMA 中，对象元数据相同，则隐藏列表中的对象。  
   
-**从数据库刷新（箭头按钮）**  
+**从数据库刷新 (箭头按钮) **  
 使用箭头按钮指定应在 SSMA 中更新所选对象的元数据。  
   
-**不从数据库刷新（X 按钮）**  
+**不从数据库刷新 (X 按钮) **  
 使用 X 按钮指定不应在 SSMA 中更新所选对象的元数据。  
   
 **图例**  

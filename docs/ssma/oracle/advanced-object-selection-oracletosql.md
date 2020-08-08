@@ -1,5 +1,5 @@
 ---
-title: 高级对象选择（OracleToSQL） |Microsoft Docs
+title: " (OracleToSQL) 的高级对象选择 |Microsoft Docs"
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: c978fba4-c953-4ed0-a21d-1b38e7225552
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 36bf17e1667596582ed60fd6c35d6f74fc81a231
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 0dd1d8f5f5006760145d132a11db1df60dedddd7
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68264544"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935019"
 ---
 # <a name="advanced-object-selection--oracletosql"></a>高级对象选择 (OracleToSQL)
 通过 "**高级对象部分**" 对话框，您可以使用对象名称中的字符串和子字符串筛选数据库对象，然后选择或取消选择这些对象。 SSMA 对所选对象执行转换和迁移操作。  
@@ -42,7 +42,7 @@ ms.locfileid: "68264544"
 **仅显示已加载项**  
 切换类别或项的显示。 选择此按钮后，SSMA 将显示与筛选条件匹配的所有项以及之前加载的项。 如果未选择此按钮，SSMA 会显示类别文件夹。  
   
-**筛选器**  
+**Filter**  
 输入要用于筛选项的字符串。 例如，若要查找项目名称中包含字符串 "ID" 的所有可用项，请在 "**筛选器**" 框中输入字符串 "id"。  
   
 如果项与筛选条件匹配，则键入字符串时将显示类别或项。 若要查看匹配项，我们建议您单击 "**仅显示已加载项**" 按钮。  

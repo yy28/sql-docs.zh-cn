@@ -1,5 +1,5 @@
 ---
-title: 项目设置（转换）（DB2ToSQL） |Microsoft Docs
+title: " (转换的项目设置)  (DB2ToSQL) |Microsoft Docs"
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,16 +7,16 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 538c93cf-c5bb-43d5-b758-186d9fb00c19
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: cd22c1c53bb95519f65fd044f80e35f44cc2b7ae
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 998d8cc8e39599fd24994e241c1da02fa87b863e
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394672"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933708"
 ---
-# <a name="project-settings-conversion-db2tosql"></a>项目设置（转换）（DB2ToSQL）
+# <a name="project-settings-conversion-db2tosql"></a> (转换的项目设置)  (DB2ToSQL) 
 "**项目设置**" 对话框的 "转换" 页包含用于自定义 SSMA 将 DB2 语法转换为语法的方式的设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 "**项目设置**" 和 "**默认项目设置**" 对话框中提供了 "转换" 窗格：  
@@ -118,7 +118,7 @@ TOP 要求 TOP 子句表达式的计算结果为一个整数。 如果整数为�
   
 -   如果选择 **"是"**，则 SSMA 将创建一个 WHILE 循环，其中集合元素逐个检索。  
   
--   如果选择 "**否**"，则 SSMA 将使用节点（）方法从集合生成行集，并将其用作单个表。 这会更有效，但会使输出代码更易读。  
+-   如果选择 "**否**"，则 SSMA 将使用节点 ( ) 方法从集合中生成行集，并将其用作单个表。 这会更有效，但会使输出代码更易读。  
   
 在 "**模式**" 框中选择转换模式时，SSMA 将应用以下设置：  
   
@@ -253,18 +253,18 @@ SSMA 可以通过两种方式转换 PL/SQL 子类型：
   
 **默认/乐观/完整模式：** 是的  
   
-### <a name="convert-to_chardate-format"></a>转换 TO_CHAR （date，format）  
-SSMA 可以将 DB2 TO_CHAR （日期、格式）转换为 sysdb 数据库中的过程。  
+### <a name="convert-to_chardate-format"></a>转换 TO_CHAR (日期、格式)   
+SSMA 可以将 DB2 TO_CHAR (日期、格式) 转换为 sysdb 数据库中的过程。  
   
--   如果选择 "**使用 TO_CHAR_DATE 函数**"，SSMA 会将 TO_CHAR （日期、格式）转换为使用英语转换的 TO_CHAR_DATE 函数。  
+-   如果选择 "**使用 TO_CHAR_DATE 函数**"，SSMA 会将 TO_CHAR (日期、格式) 转换为使用英语转换的 TO_CHAR_DATE 函数。  
   
--   如果选择 "**使用 TO_CHAR_DATE_LS 函数（NLS）**"，SSMA 会将 TO_CHAR （日期、格式）转换为使用会话语言进行转换的 TO_CHAR_DATE_LS 函数  
+-   如果选择 "**使用 TO_CHAR_DATE_LS 函数" (NLS 服务) **，则 SSMA 会将 TO_CHAR (DATE，格式) 转换为使用会话语言进行转换 TO_CHAR_DATE_LS 函数  
   
 在 "**模式**" 框中选择转换模式时，SSMA 将应用以下设置：  
   
 **默认/乐观模式：** 使用 TO_CHAR_DATE 函数  
   
-**完整模式：** 使用 TO_CHAR_DATE_LS 函数（NLS 护理）  
+**完整模式：** 使用 TO_CHAR_DATE_LS 函数 (NLS 护理)   
   
 ### <a name="convert-transaction-processing-statements"></a>转换事务处理语句  
 SSMA 可以转换 DB2 事务处理语句：  
@@ -323,7 +323,7 @@ SSMA 可以通过检查是否有 NULL 值来模拟 DB2 顺序。 然后，它首
 **默认/乐观/完整模式：** 条  
   
 ### <a name="generate-rowid-column"></a>生成 ROWID 列  
-当 SSMA 在中创建表时 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，可以创建 ROWID 列。 迁移数据时，每行都将获取由 newid （）函数生成的新的 UNIQUEIDENTIFIER 值。  
+当 SSMA 在中创建表时 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，可以创建 ROWID 列。 迁移数据时，每行都将获取 newid ( # A1 函数生成的新的唯一标识符值。  
   
 -   如果选择 **"是**"，则将在所有表上创建 ROWID 列并在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 插入值时生成 guid。 如果计划使用 SSMA 测试人员，请始终选择 **"是"** 。  
   
@@ -348,7 +348,7 @@ SSMA 可以通过检查是否有 NULL 值来模拟 DB2 顺序。 然后，它首
 **默认/乐观/完整模式：** 是的  
   
 ### <a name="local-modules-conversion"></a>本地模块转换  
-定义 DB2 嵌套 subprogram （在独立存储过程或函数中声明）转换的类型。  
+定义在独立存储过程或函数) 转换中声明的 DB2 嵌套 subprogram (的类型。  
   
 -   如果选择 "**内联**"，则嵌套的 subprogram 调用将替换为其正文。  
   
@@ -361,7 +361,7 @@ SSMA 可以通过检查是否有 NULL 值来模拟 DB2 顺序。 然后，它首
 ### <a name="use-isnull-in-string-concatenation"></a>在字符串串联中使用 ISNULL  
 DB2 并 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回不同的结果。 DB2 将空值视为空字符集。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回 NULL。  
   
--   如果选择 **"是"**，则 SSMA 会将 DB2 串联字符（| |）替换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 串联字符（+）。 SSMA 还会检查连接两侧的表达式是否为 NULL 值。  
+-   如果选择 **"是"**，SSMA 将替换 DB2 串联字符 (| |与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 串联字符 (+) ) 。 SSMA 还会检查连接两侧的表达式是否为 NULL 值。  
   
 -   如果选择 "**否**"，则 SSMA 将替换串联字符，但不会检查是否存在 NULL 值。  
   
@@ -395,9 +395,9 @@ DB2 并 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回不同�
   
 ### <a name="use-native-convert-function-when-possible"></a>尽可能使用本机转换函数  
   
--   如果选择 **"是"**，则在可能的情况下，SSMA 会将 TO_CHAR （日期，格式）转换为本机转换函数。  
+-   如果选择 **"是"**，则在可能的情况下，SSMA 会将 TO_CHAR (日期、格式) 转换为本机转换函数。  
   
--   如果选择 "**否**"，则 SSMA 会将 TO_CHAR （日期、格式）转换为 TO_CHAR_DATE 或 TO_CHAR_DATE_LS （它由 "转换 TO_CHAR （日期，格式）" 选项定义。  
+-   如果你选择 "**否**"，则 SSMA 会将 TO_CHAR (日期、格式) 转换为 TO_CHAR_DATE 或 TO_CHAR_DATE_LS， (它是通过 "转换 TO_CHAR (日期，格式) " 选项) 来定义的。  
   
 在 "**模式**" 框中选择转换模式时，SSMA 将应用以下设置：  
   
@@ -458,13 +458,13 @@ DB2 提供返回子句作为立即获取更新值的方法。 [!INCLUDE[ssNoVers
   
 SSMA 可以将序列转换为以下项。  
   
--   使用 SQL Server 序列生成器（此选项仅在转换为 SQL Server 2012 和 SQL Server 2014）时可用。  
+-   仅当转换为 SQL Server 2012 和 SQL Server 2014) 时，才可以使用 SQL Server 序列生成器 (此选项。  
   
 -   使用 SSMA 序列生成器。  
   
 -   使用列标识。  
   
-转换为 SQL Server 2012 或 SQL Server 2014 时的默认选项是使用 SQL Server 序列生成器。 但 SQL Server 2012 和 SQL Server 2014 不支持获取当前序列值（例如 DB2 序列 currval 方法的值）。 有关迁移 DB2 sequence currval 方法的指导，请参阅 SSMA 团队博客网站。  
+转换为 SQL Server 2012 或 SQL Server 2014 时的默认选项是使用 SQL Server 序列生成器。 但是，SQL Server 2012 和 SQL Server 2014 不支持获取当前序列值 (如 DB2 序列 currval 方法) 的值）。 有关迁移 DB2 sequence currval 方法的指导，请参阅 SSMA 团队博客网站。  
   
 SSMA 还提供了一个用于将 DB2 序列转换为 SSMA 序列模拟器的选项。 当你转换到2012之前的 SQL Server 时，这是默认选项  
   

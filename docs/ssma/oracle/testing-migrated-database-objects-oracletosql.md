@@ -1,5 +1,5 @@
 ---
-title: 测试迁移的数据库对象（OracleToSQL） |Microsoft Docs
+title: " (OracleToSQL) 中测试已迁移的数据库对象 |Microsoft Docs"
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f03ef5e1-66e6-4c84-ada2-252dd5ada82f
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 858c564c965fe7105c86a3087923887097e4ddac
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 9e7c63986cde88c7a1ccbf67f8dd3751bb6d41b0
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266483"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932828"
 ---
 # <a name="testing-migrated-database-objects-oracletosql"></a>测试迁移的数据库对象 (OracleToSQL)
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Oracle 测试人员迁移助手（SSMA 测试人员）会自动测试数据库对象转换和 SSMA 创建的数据迁移。 完成所有 SSMA 迁移步骤后，使用 SSMA 测试人员验证转换后的对象是否以相同方式工作，并确保所有数据都已正确传输。  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]迁移助手用于 Oracle 测试人员 (SSMA 测试器) 会自动测试数据库对象转换和 SSMA 进行的数据迁移。 完成所有 SSMA 迁移步骤后，使用 SSMA 测试人员验证转换后的对象是否以相同方式工作，并确保所有数据都已正确传输。  
   
 可以通过 SSMA 测试人员测试以下对象类型：  
   
@@ -32,7 +32,7 @@ ms.locfileid: "68266483"
   
 -   独立语句。  
   
-SSMA 测试人员在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]执行选择用于测试的对象。 之后，它会根据以下条件比较结果：  
+SSMA 测试人员在中执行选择用于测试的对象 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 之后，它会根据以下条件比较结果：  
   
 -   表数据中的更改是否相同？  
   
@@ -43,7 +43,7 @@ SSMA 测试人员在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 -   结果集是否相同？  
   
 > [!NOTE]  
-> 注重! 切勿在生产系统上使用 SSMA 测试人员。 在测试执行过程中，将修改源架构和数据。 同时，对于某些类型的已测试代码，完全还原原始状态可能是不可能的。  
+> 注意! 切勿在生产系统上使用 SSMA 测试人员。 在测试执行过程中，将修改源架构和数据。 同时，对于某些类型的已测试代码，完全还原原始状态可能是不可能的。  
   
 ## <a name="prerequisites"></a>先决条件  
 如果要使用 SSMA 测试器，请在打开 "**安装测试人员数据库**" 选项的情况下安装 SSMA Oracle 扩展包。  
@@ -52,9 +52,9 @@ SSMA 测试人员在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
   
 此外，请验证以下各项：  
   
--   Oracle 客户端工具安装在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]运行的计算机上。  
+-   Oracle 客户端工具安装在运行的计算机上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库引擎上已启用公共语言运行时（CLR）集成。  
+-   数据库引擎上已启用 CLR) 集成 (公共语言运行时 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 请注意，当前版本的 SSMA 测试人员不支持同一源或目标服务器上的不同用户并行执行。  
   

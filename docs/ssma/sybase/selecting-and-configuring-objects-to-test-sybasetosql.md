@@ -1,5 +1,5 @@
 ---
-title: 选择并配置要测试的对象（SybaseToSQL） |Microsoft Docs
+title: 选择并配置要测试 (SybaseToSQL) 的对象 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Tester Component,Parameter Comparision Setting
 - Tester Component,Selecting Objects
 ms.assetid: 89c23aad-bfee-4917-bc16-175288390ac0
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 2951d4c3bf1eae73ffd066d796b0e3dda4d28cf6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 31cc868cfe2d6fa7cc87e3fc6f89c868c43d17c3
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68020964"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934636"
 ---
 # <a name="selecting-and-configuring-objects-to-test-sybasetosql"></a>选择并配置要测试的对象 (SybaseToSQL)
 在此步骤中，您将选择要测试的对象，并配置用于比较过程的输出参数和函数的返回值的设置。  
@@ -76,7 +76,7 @@ ms.locfileid: "68020964"
   
 -   如果选择**False**，则比较的字符串将保留尾随空格。  
   
-## <a name="specify-input-values-for-procedures-and-functions-call-values"></a>指定过程和函数的输入值（调用值）  
+## <a name="specify-input-values-for-procedures-and-functions-call-values"></a> (调用值指定过程和函数的输入值)   
 您可以在 "**调用值**" 页上指定输入参数值。 "**添加调用**" 按钮添加一个具有空参数值的新调用。 "**删除调用**" 按钮删除当前调用。  
   
 ## <a name="next-step"></a>下一步  

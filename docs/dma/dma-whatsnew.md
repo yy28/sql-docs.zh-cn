@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 2becdd3e5ab0c6980ffbb4b4f4a5d50584f6fd35
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 19753cddaba236d0de75e492962bd6c8ad2675e2
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864894"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988504"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>数据迁移助手的新增功能
 
@@ -154,7 +154,7 @@ Linux 和 Windows 使用不同的路径格式。 因此，迁移到 Linux 上的
 
 数据迁移助手的3.1 版本包括以下添加内容：
 
-- 改进了对 Azure SQL 数据库的评估建议，如数据库排序规则、使用不受支持的系统存储过程和 CLR 对象。
+- 针对 Azure SQL 数据库的评估建议，按数据库排序规则，使用不受支持的系统存储过程和 CLR 对象。
 - 迁移到 Azure SQL 数据库时，兼容性级别为130、120、110和100的评估指南。
 
 ## <a name="data-migration-assistant-v30"></a>数据迁移助手3。0
@@ -181,15 +181,15 @@ Linux 和 Windows 使用不同的路径格式。 因此，迁移到 Linux 上的
 数据迁移助手的1.0 版是初始版本，它提供了：
 
 - 发现可能影响升级到 SQL Server 本地版本的问题。 任何发现都被描述为兼容性问题，并分为以下几个方面：
-  - 重大更改
+  - 重大变化
   - 行为更改
-  - 已弃用的功能
+  - 弃用的功能
 - 发现目标 SQL Server 平台中的新功能，数据库在升级后可从中受益。 任何发现均被描述为功能建议，并分为以下几个方面：
   - 性能
   - 安全性
   - 存储
 - 执行评估的新式用户体验。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [数据迁移助手概述](../dma/dma-overview.md)

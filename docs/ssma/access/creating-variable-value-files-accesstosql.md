@@ -1,5 +1,5 @@
 ---
-title: 创建变量值文件（AccessToSQL） |Microsoft Docs
+title: 创建变量值文件 (AccessToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 08/17/2017
@@ -7,22 +7,22 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 808595c3-8ef1-40bd-a93e-5cf237950e08
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 051ded7d675f81998718b858c71488ba968ec680
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 6d208be8fb7ebf8d1c33b0df5d7c49dd28a412a7
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006602"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933966"
 ---
-# <a name="creating-variable-value-files-accesstosql"></a>创建变量值文件（AccessToSQL）
-变量值文件是一个 XML 文件，其中包含经常跨服务器迁移更改的命令（如源或目标服务器名称）的参数值。 当发生大量的数据库迁移时，将在主脚本文件中创建多个用于存储每个源服务器的值的变量文件，并在命令行上使用 **-v**开关来引用这些文件。 此行为有助于在包含多个变量文件中的变量值的几个脚本文件中维护静态值。  
+# <a name="creating-variable-value-files-accesstosql"></a>创建变量值文件 (AccessToSQL) 
+变量值文件是一个 XML 文件，其中包含命令的参数值 (例如，通常跨服务器迁移更改) 源或目标服务器名称。 当发生大量的数据库迁移时，将在主脚本文件中创建多个用于存储每个源服务器的值的变量文件，并在命令行上使用 **-v**开关来引用这些文件。 此行为有助于在包含多个变量文件中的变量值的几个脚本文件中维护静态值。  
   
 > [!NOTE]  
-> -  变量名称以 $ （美元）符号为前缀和后缀。 如果变量值文件中没有为变量赋值，则会在分析脚本文件时出现错误，从而导致控制台执行过程停止。  
-> -  的转义符**$** 是**$$**。 如果参数的变量或静态值的值包含**$** （美元）符号，则**$$** 必须指定，以将其视为字符而不是变量。  
-> -  出于可维护性目的，可以在元素`'variable-group'`内声明变量以实现用户定义变量的逻辑分离。  此元素不是必需的。  
+> -  变量名称以 $ (美元) 符号为前缀并带有后缀。 如果变量值文件中没有为变量赋值，则会在分析脚本文件时出现错误，从而导致控制台执行过程停止。  
+> -  的转义符 **$** 是 **$$** 。 如果参数的变量或静态值的值包含 **$** (美元) 符号，则 **$$** 必须指定，以将其视为字符而不是变量。  
+> -  出于可维护性目的，可以在元素内声明变量 `'variable-group'` 以实现用户定义变量的逻辑分离。  此元素不是必需的。  
   
 **示例：**  
   
@@ -49,7 +49,7 @@ ms.locfileid: "68006602"
   
 </variables>  
 ```  
-**示例2：**  
+**示例 2：**  
   
 ```xml  
 <!--Sample of variable value file commands-->  
@@ -90,9 +90,9 @@ ms.locfileid: "68006602"
 ## <a name="variable-value-file-validation"></a>变量值文件验证  
 用户可以根据 "架构" 文件夹中提供的架构定义文件 ConsoleScriptVariablesSchema 来轻松地验证其变量值文件 **。**  
   
-## <a name="next-step"></a>下一步  
+## <a name="next-step"></a>后续步骤  
 操作控制台的下一步是[&#40;AccessToSQL 创建服务器连接文件&#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
   
-## <a name="see-also"></a>另请参阅  
-[创建服务器连接文件（Access）](https://msdn.microsoft.com/829153be-aa8e-4162-87e8-69882feecf19)  
+## <a name="see-also"></a>请参阅  
+[ (访问) 创建服务器连接文件](https://msdn.microsoft.com/829153be-aa8e-4162-87e8-69882feecf19)  
   

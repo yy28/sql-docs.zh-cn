@@ -1,5 +1,5 @@
 ---
-title: 连接到 DB2 （DB2ToSQL） |Microsoft Docs
+title: 连接到 DB2 (DB2ToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,16 +7,16 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 9d485fd0-ab5d-402a-a59a-e9982a61b7de
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 2a14b3a5de4292b01fd6fdb2df67bd4839d1a8d9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 7180e78e7ec34e9c75d25dac51101e28291b1f4c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68141085"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933840"
 ---
-# <a name="connect-to-db2-db2tosql"></a>连接到 DB2 （DB2ToSQL）
+# <a name="connect-to-db2-db2tosql"></a>连接到 DB2 (DB2ToSQL) 
 使用 "**连接到 db2** " 对话框连接到要迁移的 DB2 数据库。  
   
 若要访问此对话框，请在 "**文件**" 菜单上选择 "**连接到 DB2**"。 如果以前已连接，则该命令将**重新连接到 DB2**。  
@@ -30,7 +30,7 @@ ms.locfileid: "68141085"
   
 -   在 "标准" 模式下，为提供程序、服务器名称、服务器端口、DB2 SID、用户名和密码输入或选择值。  
   
--   在 TNSNAME 模式下，输入 DB2 数据库的连接标识符（TNS 别名）、用户名和密码。  
+-   在 TNSNAME 模式下，输入连接标识符 (DB2 数据库的 TNS 别名) 、用户名和密码。  
   
 -   在连接字符串模式下，你将提供一个连接字符串。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "68141085"
 输入 DB2 服务器的名称。 默认服务器名称与计算机名称相同。 这是一个标准模式选项。  
   
 **服务器端口**  
-如果使用的端口号不是1521（默认值），则连接到 DB2 时，请输入端口号。 这是一个标准模式选项。  
+如果使用的端口号不是 1521 (默认) 连接到 DB2，请输入端口号。 这是一个标准模式选项。  
   
 **连接标识符**  
 输入 DB2 连接标识符。 这是在本地 tnsnames.ora. tnsnames.ora 文件中定义的数据库的别名。  

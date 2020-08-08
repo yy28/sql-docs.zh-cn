@@ -1,5 +1,5 @@
 ---
-title: 故障排除（SybaseToSQL） |Microsoft Docs
+title: " (SybaseToSQL) 的疑难解答 |Microsoft Docs"
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Sybase Console,Troubleshooting
 ms.assetid: 8684ed23-c36b-46f6-9687-30ad7f47f876
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 2ecbd6235e0ebec1850bb959aec2aa25832e857f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 81796da3f15586fca400e4b3d4f07819ebe58308
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68020877"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934566"
 ---
 # <a name="troubleshooting-sybasetosql"></a>故障排除 (SybaseToSQL)
 不太常见的情况是在执行控制台脚本或命令的中间运行迁移问题。  
