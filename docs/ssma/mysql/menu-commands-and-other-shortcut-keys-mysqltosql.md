@@ -1,5 +1,5 @@
 ---
-title: 菜单命令和其他快捷键（MySQLToSQL） |Microsoft Docs
+title: 菜单命令和其他快捷键 (MySQLToSQL) |Microsoft Docs
 description: 了解访问菜单命令的键盘快捷方式，以及在 SSMA for MySQL 应用程序的各种对话框中使用的其他快捷键。
 ms.prod: sql
 ms.custom: ''
@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 9ae780dc-b33f-4861-a996-176bae9e7211
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 04450495d85eed7ab198090afcc2a4ac9cffb4c0
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: fc847eecec3f84cda54e2820a444036a016ec9a8
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293598"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935266"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-mysqltosql"></a>菜单命令和其他快捷键 (MySQLToSQL)
 以下部分介绍了访问菜单命令的键盘快捷方式，以及 SSMA for MySQL 应用程序的各种对话框中使用的其他快捷键。  
@@ -80,7 +80,7 @@ ms.locfileid: "84293598"
 |创建报表。|ALT + T + C|  
 |转换架构。|ALT + T + N 或 CTRL + R|  
 |从 MySQL 数据库刷新。|ALT + T + R|  
-|与 SQL Server 或 SQL Azure 数据库同步。|ALT + T + S|  
+|与 SQL Server 或 Azure SQL 数据库同步。|ALT + T + S|  
 |另存为脚本。|ALT + T + A|  
 |迁移数据。|ALT + T + M|  
 |停止当前操作。|ALT + T + O|  

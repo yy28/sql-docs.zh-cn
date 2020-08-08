@@ -1,5 +1,5 @@
 ---
-title: 项目设置（迁移）（MySQLToSQL） |Microsoft Docs
+title: " (迁移的项目设置)  (MySQLToSQL) |Microsoft Docs"
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 2f3c989626f36c003937723869b5e17d1a405ea9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: fe0c1ac52a72a627cf6b266fdb9636878be85c1a
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67908854"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935196"
 ---
 # <a name="project-settings-migration-mysqltosql"></a>项目设置（迁移）(MySQLToSQL)
 "**项目设置**" 对话框的 "迁移" 页包含用于自定义 SSMA 将数据从 MySQL 迁移到 SQL Server 的方式的设置。  
@@ -54,10 +54,10 @@ ms.locfileid: "67908854"
   
 |术语|定义|  
 |--------|--------------|  
-|**迁移引擎**|指定数据迁移期间使用的数据库引擎。 客户端数据迁移指的是 SSMA 客户端从源检索数据并将数据大容量插入到 SQL Server 中。 服务器端数据迁移是指在 SQL Server "框上运行的 SSMA 数据迁移引擎（大容量复制程序）作为 SQL 代理作业，该作业从源检索数据并直接插入 SQL Server，从而避免额外的客户端跃点（更好的性能）。<br /><br />**默认模式**：客户端数据迁移引擎<br /><br />**乐观模式**：客户端数据迁移引擎<br /><br />**完整模式**：客户端数据迁移引擎|  
+|**迁移引擎**|指定数据迁移期间使用的数据库引擎。 客户端数据迁移指的是 SSMA 客户端从源检索数据并将数据大容量插入到 SQL Server 中。 服务器端数据迁移指的是 SSMA 数据迁移引擎， (大容量复制程序) 在 SQL Server 框上运行的 SQL 代理作业从数据源中检索数据，并直接插入 SQL Server，从而避免了额外的客户端跃点 (更好的性能) 。<br /><br />**默认模式**：客户端数据迁移引擎<br /><br />**乐观模式**：客户端数据迁移引擎<br /><br />**完整模式**：客户端数据迁移引擎|  
   
 > [!IMPORTANT]  
-> 当 "**迁移引擎**" 选项设置为 "**服务器端数据迁移引擎**" 时，将显示一个新的项目设置选项 "**使用32位服务器端数据迁移引擎**"。 它指定是否使用32位或64位大容量复制程序（BCP）实用程序来迁移数据。  
+> 当 "**迁移引擎**" 选项设置为 "**服务器端数据迁移引擎**" 时，将显示一个新的项目设置选项 "**使用32位服务器端数据迁移引擎**"。 它指定是否使用32位或64位大容量复制程序 (BCP) 实用工具来迁移数据。  
   
 ### <a name="misc"></a>杂项  
   
@@ -70,7 +70,7 @@ ms.locfileid: "67908854"
   
 |术语|定义|  
 |--------|--------------|  
-|**并行数据迁移模式**|指定用于分叉线程以启用并行数据迁移的模式。 在 Auto 模式下，SSMA 选择线程数（默认为10）以迁移数据。 在自定义模式下，用户可以指定分叉于迁移数据的线程数（最小值为1，最大值为100）。 目前，只有客户端数据迁移引擎支持并行数据迁移。<br /><br />**默认模式**：自动<br /><br />**乐观模式**：自动<br /><br />**完全模式**：自动|  
+|**并行数据迁移模式**|指定用于分叉线程以启用并行数据迁移的模式。 在 Auto 模式下，SSMA 会选择默认情况下 (10) 线程数，以迁移数据。 在自定义模式下，用户可以指定分叉于迁移数据的线程数 (最小值为1，最大值为 100) 。 目前，只有客户端数据迁移引擎支持并行数据迁移。<br /><br />**默认模式**：自动<br /><br />**乐观模式**：自动<br /><br />**完全模式**：自动|  
   
 > [!IMPORTANT]  
 > 如果将 "**并行数据迁移模式**" 选项设置为 "**自定义**"，则会显示新的项目设置选项 "**线程计数**"。 它指定用于数据迁移的线程数。  

@@ -1,5 +1,5 @@
 ---
-title: 项目设置（转换）（MySQLToSQL） |Microsoft Docs
+title: " (转换的项目设置)  (MySQLToSQL) |Microsoft Docs"
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 7ad5fe44-6445-4ba8-a457-5af792631f11
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 7a8ad0b6c4c1e836a3eacca1f497d7ed229dbfc4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 378bc98dd24eff758e6f4e368f4e97e211d1f2a8
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67908871"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935216"
 ---
 # <a name="project-settings-conversion-mysqltosql"></a>项目设置（转换）(MySQLToSQL)
 "**项目设置**" 对话框的 "转换" 页包含用于自定义 SSMA 将 MySQL 语法转换为 SQL Server 或 SQL Azure 语法的方式的设置。  
@@ -50,7 +50,7 @@ ms.locfileid: "67908871"
 |-|-|  
 |**术语**|**定义**|  
 |**枚举数据类型转换**|指定应如何转换 MySQL 枚举数据类型，使其转换为 NVARCHAR 或转换为数字<br /><br />**默认模式**：转换为 NVARCHAR<br /><br />**乐观模式**：转换为 NVARCHAR<br /><br />**完整模式**：转换为 NVARCHAR|  
-|**设置数据类型转换**|指定如何转换 MySQL 集数据类型，并将其转换为 NVARCHAR （L）/Convert to BINARY （L）<br /><br />**默认模式**：转换为 NVARCHAR （L）<br /><br />**乐观模式**：转换为 NVARCHAR （L）<br /><br />**完整模式**：转换为 NVARCHAR （L）|  
+|**设置数据类型转换**|指定如何转换 MySQL 集数据类型，如何转换为 NVARCHAR (L) /Convert to BINARY (L) <br /><br />**默认模式**：转换为 NVARCHAR (L) <br /><br />**乐观模式**：转换为 NVARCHAR (L) <br /><br />**完整模式**：转换为 NVARCHAR (L) |  
   
 ### <a name="generic"></a>泛型  
   
@@ -108,7 +108,7 @@ ms.locfileid: "67908871"
 |**与 Binary 数据类型之间的转换**|指定如何处理二进制数据类型的隐式和显式转换。<br /><br />**默认模式**：乐观<br /><br />**乐观模式**：乐观<br /><br />**完全模式**：精确|  
 |**转换为日期/时间数据类型**|指定如何处理转换为日期/时间数据类型的隐式转换和显式转换。<br /><br />**默认模式**：模拟 MySQL 格式<br /><br />**乐观模式**：使用 SQL Server 格式<br /><br />**完整模式**：模拟 MySQL 格式|  
 |**精度超过38的数字文本**|指定如何转换精度超过38的数字文本。<br /><br />**默认模式**：尽可能舍入<br /><br />**开放式模式**：如果可能，则进行舍入<br /><br />**完全模式**：尽可能舍入|  
-|**零-日期不能为 NULL 列**|指定如何处理零日期、零日期或无效日期/时间值的非 NULL 列的赋值。<br /><br />**默认模式**： GETDATE （）<br /><br />**乐观模式**： GETDATE （）<br /><br />**完整模式**： GETDATE （）|  
+|**零-日期不能为 NULL 列**|指定如何处理零日期、零日期或无效日期/时间值的非 NULL 列的赋值。<br /><br />**默认模式**： GETDATE ( # A1<br /><br />**乐观模式**： GETDATE ( # A1<br /><br />**完全模式**： GETDATE ( # A1|  
   
 ## <a name="see-also"></a>另请参阅  
 [用户界面参考 &#40;MySQLToSQL&#41;](../../ssma/mysql/user-interface-reference-mysqltosql.md)  

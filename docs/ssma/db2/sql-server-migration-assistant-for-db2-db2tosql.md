@@ -1,5 +1,5 @@
 ---
-title: DB2 的 SQL Server 迁移助手（DB2ToSQL） |Microsoft Docs
+title: DB2 (DB2ToSQL) 的 SQL Server 迁移助手 |Microsoft Docs
 description: 了解 SSMA for DB2 并按照逐步说明将 DB2 数据库迁移到 SQL Server 或 Azure SQL 数据库。
 ms.prod: sql
 ms.custom: ''
@@ -8,18 +8,18 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 7633f631-ffad-469a-8441-8831a6a9f932
-author: Jtoland
-ms.author: Jtoland
-manager: murato
-ms.openlocfilehash: 6788a977f4f818d72baa7d8c0b7bbc1ad927da4c
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 6ade3ce31bed08bdb7b25b09ec0d5bbcf91405f1
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293707"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87936476"
 ---
-# <a name="sql-server-migration-assistant-for-db2-db2tosql"></a>DB2 的 SQL Server 迁移助手（DB2ToSQL）
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Db2 的迁移助手（SSMA）是一种将 db2 数据库迁移到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的工具[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 和 linux 上的2012、2014、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2017、windows 和 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] linux 上的2019或 Azure SQL 数据库。 SSMA for DB2 将 DB2 数据库对象转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库对象，在中创建这些对象， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 然后将数据从 DB2 迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Azure SQL 数据库。  
+# <a name="sql-server-migration-assistant-for-db2-db2tosql"></a>DB2 (DB2ToSQL) 的 SQL Server 迁移助手
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Db2 的迁移助手 (SSMA) 是将 db2 数据库迁移到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的工具[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 和 linux 上的2012、2014、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2017、windows 和 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] linux 上的2019或 Azure SQL 数据库。 SSMA for DB2 将 DB2 数据库对象转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库对象，在中创建这些对象， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 然后将数据从 DB2 迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Azure SQL 数据库。  
   
 本文档介绍 SSMA for DB2，并提供有关将 DB2 数据库迁移到的分步说明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 下表显示了可帮助你了解更多详细信息的文章：  
   

@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 81623d27-25af-444f-9779-1edb8c6fb470
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 6cf82511b7819b6c7b0451facc85ef35dc8cf9fc
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 7180e123572016661fa4de4a2b38a12f8480d89c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823790"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935986"
 ---
 # <a name="connect-to-azure-sql-database-mysqltosql"></a>连接到 Azure SQL 数据库 (MySQLToSQL) 
-使用 "连接到 SQL Azure" 对话框连接到要迁移的 SQL Azure 数据库。  
+使用 "连接到 SQL Azure" 对话框连接到要迁移的 Azure SQL 数据库中的数据库。  
   
 若要访问此对话框，请在 "**文件**" 菜单上，选择 "**连接到 SQL Azure**"。 如果以前已连接，则该命令将**重新连接到 SQL Azure。**  
   
@@ -26,7 +26,7 @@ ms.locfileid: "87823790"
   
 选择或输入用于连接到 SQL Azure 的服务器名称。  
   
-**Database**  
+**数据库**  
   
 选择，输入或**浏览**数据库名称。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "87823790"
   
 **用户名**  
   
-输入 SSMA 将用于连接 SQL Azure 数据库的用户名  
+输入 SSMA 将用于连接到 Azure SQL 数据库的用户名  
   
 **密码**  
   

@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Connecting to SQL Azure, SQL Azure permissions
 - Connecting to SQL Azure, synchronization
 ms.assetid: d0b6f16a-1880-459d-a0c7-28b7ef15c56a
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: da3e0d05abf24bdd7100769ecfbb597e2953a9d5
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 8e288b91c92d8d086d5b066f95868fa0fa733bb9
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87822556"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935927"
 ---
 # <a name="connecting-to-azure-sql-database-mysqltosql"></a>连接到 Azure SQL 数据库 (MySQLToSQL) 
 若要将 MySQL 数据库迁移到 SQL Azure，你必须连接到 SQL Azure 的目标实例。 在连接时，SSMA 将获取 SQL Azure 实例中所有数据库的元数据，并在 SQL Azure 元数据资源管理器中显示数据库元数据。 SSMA 存储连接到但不存储密码的 SQL Azure 实例的信息。  
@@ -63,7 +63,7 @@ ms.locfileid: "87822556"
 > SSMA for MySQL 不支持连接到 SQL Azure 中的**master**数据库。  
   
 ## <a name="synchronizing-sql-azure-metadata"></a>同步 SQL Azure 元数据  
-不会自动更新与 SQL Azure 数据库有关的元数据。 SQL Azure 元数据资源管理器中的元数据是首次连接到 SQL Azure 或上次手动更新元数据时的元数据的快照。 您可以为所有数据库或任何单个数据库或数据库对象手动更新元数据。  
+有关 Azure SQL 数据库中的数据库的元数据不会自动更新。 SQL Azure 元数据资源管理器中的元数据是首次连接到 SQL Azure 或上次手动更新元数据时的元数据的快照。 您可以为所有数据库或任何单个数据库或数据库对象手动更新元数据。  
   
 **同步元数据**  
   
@@ -78,7 +78,7 @@ ms.locfileid: "87822556"
 ## <a name="next-step"></a>下一步  
 迁移的下一步取决于你的项目需求：  
   
--   若要自定义 MySQL 架构与 SQL Azure 数据库和架构之间的映射，请参阅[将 Mysql 数据库映射到 SQL Server 架构 &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)  
+-   若要自定义 MySQL 架构与 Azure SQL 数据库之间的映射，请参阅[将 Mysql 数据库映射到 SQL Server 架构 &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)  
   
 -   若要自定义项目的配置选项，请参阅[设置项目选项 &#40;MySQLToSQL&#41;](../../ssma/mysql/setting-project-options-mysqltosql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: PredictTimeSeries （DMX） |Microsoft Docs
+title: PredictTimeSeries (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ff8525e9742009e5a5ada680160f20d5e8063d86
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: bf63bb1002e1e4ae467838b84314e1cbaaf93275
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363517"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87943045"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -36,7 +36,7 @@ PredictTimeSeries(<scalar column reference>, n, REPLACE_MODEL_CASES | EXTEND_MOD
 PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES | EXTEND_MODEL_CASES) PREDICTION JOIN <source query>  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  *\<table column reference>*, *\<scalar column referenc>*  
  指定要预测的列的名称。 列可以包含标量数据或表格格式数据。  
   
@@ -193,7 +193,7 @@ WHERE ([Model Region] = 'M200 Europe'
   
 -   根据新扩展的模型返回其余三个时间段的新预测。  
   
- 下表列出示例 2 查询的结果。 请注意，针对 M200 Europe 返回的前两个值与您提供的新值完全相同。 此行为是默认设置；如果您希望在新数据末尾启动预测，则必须指定开始和结束时间步长。 有关如何执行此操作的示例，请参阅[第5课：扩展时序模型](https://msdn.microsoft.com/library/7aad4946-c903-4e25-88b9-b087c20cb67d)。  
+ 下表列出示例 2 查询的结果。 请注意，针对 M200 Europe 返回的前两个值与您提供的新值完全相同。 此行为是默认设置；如果您希望在新数据末尾启动预测，则必须指定开始和结束时间步长。  
   
  另请注意，由于没有向太平洋地区提供新数据， 因此，[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 返回所有（五个）时间段的新预测。  
   

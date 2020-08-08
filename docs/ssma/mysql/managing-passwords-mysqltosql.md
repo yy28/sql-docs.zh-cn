@@ -1,5 +1,5 @@
 ---
-title: 管理密码（MySQLToSQL） |Microsoft Docs
+title: " (MySQLToSQL) 管理密码 |Microsoft Docs"
 ms.prod: sql
 ms.custom: ''
 ms.date: 07/06/2020
@@ -10,13 +10,14 @@ helpviewer_keywords:
 - Password management, importing or exporting encrypted password
 - Password management, securing password
 ms.assetid: 4ffbc587-ea3f-49ad-bc42-a654f672325e
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: fc06af58a8e669b836a88490ebcbc7c971ca2f4f
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 55e387cf1f45f557b2e1bbbdce8a119bba03f6f8
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053553"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935286"
 ---
 # <a name="managing-passwords-mysqltosql"></a>管理密码 (MySQLToSQL)
 本文介绍如何保护数据库密码，以及如何在服务器之间导入或导出数据库密码。
@@ -133,5 +134,5 @@ SSMA 控制台应用程序允许将本地计算机上的文件中存在的加密
 8. 请确认密码： xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx  
   
 ## <a name="see-also"></a>另请参阅  
-[执行 SSMA 控制台（MySQL）](https://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
+[ (MySQL 执行 SSMA 控制台) ](https://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
   

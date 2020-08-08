@@ -1,5 +1,5 @@
 ---
-title: 故障排除（DB2ToSQL） |Microsoft Docs
+title: " (DB2ToSQL) 的疑难解答 |Microsoft Docs"
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,16 +7,16 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: e88038c6-fd35-479c-a76f-aabd42d2efef
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: e0ab2e7721522e0671d195ec79a35bba72d462c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: b5decdd8ed0f5d2f3c7edab5542ec5348e82fe41
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68059974"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87936238"
 ---
-# <a name="troubleshooting-db2tosql"></a>故障排除（DB2ToSQL）
+# <a name="troubleshooting-db2tosql"></a> (DB2ToSQL 的疑难解答) 
 不太常见的情况是在执行控制台脚本或命令的中间运行迁移问题。  
   
 可修复的错误可能与以下内容相关：  

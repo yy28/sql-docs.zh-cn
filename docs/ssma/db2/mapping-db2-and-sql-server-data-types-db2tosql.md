@@ -1,5 +1,5 @@
 ---
-title: 映射 DB2 和 SQL Server 数据类型（DB2ToSQL） |Microsoft Docs
+title: 映射 DB2 和 SQL Server 数据类型 (DB2ToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,23 +7,23 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: e7e939a8-5e76-4509-beaf-5acd1cab505e
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 1e9baab08f4295b2c51fd942f6153cc9425dd958
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 50320d85d957e71d317f263d820d4fca5a079547
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68141009"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87936870"
 ---
-# <a name="mapping-db2-and-sql-server-data-types-db2tosql"></a>映射 DB2 和 SQL Server 数据类型（DB2ToSQL）
-DB2 数据库类型与[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库类型不同。 将 DB2 数据库对象转换为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]对象时，必须指定如何将数据类型从 db2 映射到。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 你可以接受默认的数据类型映射，也可以自定义映射，如以下部分所示。  
+# <a name="mapping-db2-and-sql-server-data-types-db2tosql"></a>映射 DB2 和 SQL Server 数据类型 (DB2ToSQL) 
+DB2 数据库类型与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库类型不同。 将 DB2 数据库对象转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象时，必须指定如何将数据类型从 db2 映射到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 你可以接受默认的数据类型映射，也可以自定义映射，如以下部分所示。  
   
 ## <a name="default-mappings"></a>默认映射  
 SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，请参阅[项目设置 &#40;类型映射&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-type-mapping-db2tosql.md)。  
   
 ## <a name="type-mapping-inheritance"></a>类型映射继承  
-您可以在项目级别、对象类别级别（如所有存储过程）或对象级别自定义类型映射。 除非在较低级别上被重写，否则将从较高级别继承设置。 例如，如果在项目级别将**smallmoney**映射到**money** ，则项目中的所有对象都将使用此映射，除非你在对象或类别级别自定义映射。  
+您可以在项目级别自定义类型映射、对象类别级别 (例如所有存储过程) 或对象级别）。 除非在较低级别上被重写，否则将从较高级别继承设置。 例如，如果在项目级别将**smallmoney**映射到**money** ，则项目中的所有对象都将使用此映射，除非你在对象或类别级别自定义映射。  
   
 查看 SSMA 中的 "**类型映射**" 选项卡时，背景会进行颜色编码，以显示继承了哪些类型的映射。 对于任何继承的类型映射，类型映射的背景为黄色; 对于在当前级别指定的任何映射，背景为白色。  
   
@@ -48,7 +48,7 @@ SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，�
   
 2.  若要添加新映射，请执行以下操作：  
   
-    1.  单击 **“添加”** 。  
+    1.  单击 **添加**。  
   
     2.  在 "**源类型**" 下，选择要映射的 DB2 数据类型。  
   
@@ -56,7 +56,7 @@ SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，�
   
         这使您可以为相同数据类型的较小值和较大值自定义数据映射。  
   
-    4.  在 "**目标类型**" 下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]选择目标数据类型。  
+    4.  在 "**目标类型**" 下，选择目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型。  
   
         某些类型需要目标数据类型长度。 如果需要，请在 "**替换为**" 框中输入新的数据长度。  
   
@@ -64,7 +64,7 @@ SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，�
   
 3.  若要修改数据类型映射，请执行以下操作：  
   
-    1.  单击 **“编辑”**。  
+    1.  单击 **“编辑”** 。  
   
     2.  在 "**源类型**" 下，选择要映射的 DB2 数据类型。  
   
@@ -72,7 +72,7 @@ SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，�
   
         这使您可以为相同数据类型的较小值和较大值自定义数据映射。  
   
-    4.  在 "**目标类型**" 下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]选择目标数据类型。  
+    4.  在 "**目标类型**" 下，选择目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型。  
   
         某些类型需要目标数据类型长度。 如果需要，请在 "**替换为**" 框中输入新的数据长度，然后[!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -80,7 +80,7 @@ SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，�
   
     1.  在 "类型映射" 列表中选择包含要删除的数据类型映射的行。  
   
-    2.  单击 **“删除”**。  
+    2.  单击“删除”。  
   
         不能删除继承的映射。 但是，在特定对象或对象类别上，自定义映射会重写继承的映射。  
   

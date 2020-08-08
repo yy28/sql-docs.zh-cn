@@ -1,5 +1,5 @@
 ---
-title: 用户界面参考（DB2ToSQL） |Microsoft Docs
+title: 用户界面引用 (DB2ToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,22 +7,22 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 98ecc4ff-9416-48a2-af0f-86852cf69dab
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 29b7aa1a0e7aca34bee82180854a3b2ca63cafb4
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: c01e871490f5362e610339c6626252c700eea3f6
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394536"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87936513"
 ---
-# <a name="user-interface-reference-db2tosql"></a>用户界面参考（DB2ToSQL）
-本部分包括有关 DB2 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 迁移助手（SSMA）的帮助主题。  
+# <a name="user-interface-reference-db2tosql"></a>用户界面参考 (DB2ToSQL) 
+本部分包括有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DB2 迁移助手 (SSMA) 的帮助主题。  
   
 ## <a name="in-this-section"></a>本节内容  
 下表列出了 "SSMA" 对话框：  
   
-|主题|说明|  
+|主题|描述|  
 |-|-|  
 |[&#40;DB2ToSQL&#41;的高级对象选择](../../ssma/db2/advanced-object-selection-db2tosql.md)|使用 "**高级对象选择**" 对话框可以通过使用筛选条件查找数据库对象，然后选择或清除这些对象。|  
 |[评估报表 &#40;DB2ToSQL&#41;](../../ssma/db2/assessment-report-db2tosql.md)|使用 "评估" 报告查看将 DB2 对象转换为语法的结果 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，并估计迁移到的时间和复杂性 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  

@@ -1,5 +1,5 @@
 ---
-title: 连接到 MySQL （MySQLToSQL） |Microsoft Docs
+title: 连接到 MySQL (MySQLToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 94099d01-ab19-4d58-a172-340c86b4a0f3
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 3fe4b59a5131838357d7f58e5333e0ba6b9c80f2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 66ec484ca6bd442f936eb852db48f34c89099d11
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68103234"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935976"
 ---
 # <a name="connect-to-mysql-mysqltosql"></a>连接到 MySQL (MySQLToSQL)
 使用 "**连接到 mysql** " 对话框连接到要迁移的 MySQL 数据库。  
@@ -24,7 +24,7 @@ ms.locfileid: "68103234"
 ## <a name="options"></a>选项  
 **提供程序**  
   
-可用的 MySQL 提供程序为 MySQL ODBC 5.1 驱动程序（受信任）。  
+可用的 MySQL 提供程序是 (可信) 的 MySQL ODBC 5.1 驱动程序。  
   
 **模式**  
   
@@ -48,16 +48,16 @@ ms.locfileid: "68103234"
   
 **SSL**  
   
-如果希望安全地连接到 MySQL，请通过选中**SSL**复选框来使用安全套接字层（SSL）。  
+如果希望安全地连接到 MySQL，请通过选中 " **ssl** " 复选框， (ssl) 使用安全套接字层。  
   
-**配置**  
+**将“报表”**  
   
-它提供通过安全套接字层（SSL）配置到 MySQL 的连接的选项。  
+它提供了一个选项，用于通过安全套接字层 (SSL) 配置与 MySQL 的连接。  
   
 > [!NOTE]  
 > 若要启用**配置**，SSL 必须设置为**True**。  
   
-单击 "配置" 按钮时，会显示一个对话框。 若要在连接到 MySQL 数据库时使用加密，必须在对话框中定义以下三个证书文件的路径： "隐私增强邮件证书（PEM）"：  
+单击 "配置" 按钮时，会显示一个对话框。 若要在连接到 MySQL 数据库时使用加密，必须定义该对话框中提供的以下三个证书文件的路径 [隐私增强邮件证书 (PEM) ]：  
   
 -   **SSL 证书颁发机构：** 指定带有可信 SSL Ca 列表的文件的路径。  
   

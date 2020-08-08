@@ -1,5 +1,5 @@
 ---
-title: 项目设置（GUI）（DB2ToSQL） |Microsoft Docs
+title: " (GUI)  (DB2ToSQL) 的项目设置 |Microsoft Docs"
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,16 +7,16 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: b2cdb71a-f301-45b3-878c-382356c93b4b
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 22825425e7f3eb18994e37efa996fcd784a257f9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: c3a4f83fea29cd9e5928f4d5505ff62899c8d653
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68084543"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87936543"
 ---
-# <a name="project-settings-gui-db2tosql"></a>项目设置（GUI）（DB2ToSQL）
+# <a name="project-settings-gui-db2tosql"></a> (GUI 的项目设置)  (DB2ToSQL) 
 GUI 项目设置允许您配置数据在 "**数据**" 选项卡上的显示方式，以及是否在转换后显示评估报告。  
   
 "**项目设置**" 和 "**默认项目设置**" 对话框中提供了 GUI 窗格。  

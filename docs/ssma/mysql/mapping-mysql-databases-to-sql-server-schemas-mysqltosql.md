@@ -11,17 +11,17 @@ helpviewer_keywords:
 - Mapping, Modifying target database and schema
 - Mapping, reverting to default database and schema
 ms.assetid: 5c6fb445-92ae-4933-b77d-80230931c024
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 5fa0585a82a7c96fac8992b82f631364c27d3b87
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: ded91465a2a9c7b5a0e8ddcdc219b2af5a84395e
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823630"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935332"
 ---
 # <a name="mapping-mysql-databases-to-sql-server-schemas-mysqltosql"></a>将 MySQL 数据库映射到 SQL Server 架构 (MySQLToSQL)
-默认情况下，SSMA for MySQL 将 MySQL 架构中的所有对象迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 名为的或 SQL Azure 数据库的架构。 不过，你可以自定义 MySQL 架构和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 数据库之间的映射。  
+默认情况下，SSMA for MySQL 将 MySQL 架构中的所有对象迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 名为的或 AZURE SQL 数据库的架构。 但是，你可以自定义 MySQL 架构和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 AZURE SQL 数据库之间的映射。  
   
 ## <a name="mysql-and-sql-server-or-sql-azure-schemas"></a>MySQL、SQL Server 或 SQL Azure 架构  
 架构的 MySQL 概念映射到数据库的 SQL Server 概念及其架构之一。 SSMA 是指作为架构的数据库和架构的 SQL Server 组合。  

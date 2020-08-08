@@ -1,5 +1,5 @@
 ---
-title: 法律声明（DB2toSQL） |Microsoft Docs
+title: 法律声明 (DB2toSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,16 +7,16 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: d2e558b8-7208-44b4-82b3-4b411a34a8c9
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 2a99cc9b4eaa1ca45d1d72d3cf3fbab6e6b3571e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: bb579ff317bdf829ee39e227cee9bf082451a43d
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68141042"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87936824"
 ---
-# <a name="legal-notice-db2tosql"></a>法律声明（DB2toSQL）
+# <a name="legal-notice-db2tosql"></a>法律公告 (DB2toSQL) 
 本文档（包括本文档中使用的示例应用程序）仅供参考，并在无任何明示或暗示担保的情况下提供。 本文档中的信息（包括 URL 和其他 Internet 网站引用）如有更改，恕不另行通知。 由于使用本文档而带来的任何风险或后果均由用户自行承担。  
   
 本文档中包含的示例主要用于说明概念以及特定语句或子句的合理用法。 大多数示例不包括完整的生产系统通常所包含的全部代码，因为其中删除了某些常用的数据验证和错误处理，以便使示例突出特定的概念或语句。 对这些示例或所包括的源代码，我们不提供技术支持。  

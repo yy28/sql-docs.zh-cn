@@ -1,5 +1,5 @@
 ---
-title: 项目设置（类型映射）（DB2ToSQL） |Microsoft Docs
+title: 项目设置 (类型映射)  (DB2ToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: cf426c69-6a8e-4d19-951d-6661d5ae2562
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 7c0866a753bb61cb688ffe491e1de77431ddcb22
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: f56ae792c632928f05a8733b27074779352a37db
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68060164"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87936656"
 ---
-# <a name="project-settings-type-mapping-db2tosql"></a>项目设置（类型映射）（DB2ToSQL）
-"**项目设置**" 对话框的 "类型映射" 页包含用于自定义 SSMA 将 DB2 数据类型转换[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]为数据类型的方式的设置。  
+# <a name="project-settings-type-mapping-db2tosql"></a> (类型映射的项目设置)  (DB2ToSQL) 
+"**项目设置**" 对话框的 "类型映射" 页包含用于自定义 SSMA 将 DB2 数据类型转换为数据类型的方式的设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 "类型映射" 页在 "**项目设置**" 和 "**默认项目设置**" 对话框中可用。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "68060164"
 映射的 DB2 数据类型。  
   
 **目标类型**  
-指定 DB2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型的目标数据类型。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指定 DB2 数据类型的目标数据类型。  
   
 请参阅下一节中的表，了解用于 DB2 类型映射的默认 SSMA。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "68060164"
 ### <a name="default-argument-type-and-return-value-type-mapping"></a>默认参数类型和返回值类型映射  
 下表包含自变量和返回值的默认数据类型映射。  
   
-|DB2 数据类型|默认[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型|  
+|DB2 数据类型|默认 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型|  
 |-----------------|-------------------------------------------------------------------------|  
 |bfile|varbinary(max)|  
 |binary_double|float [53]|  
@@ -75,11 +75,11 @@ ms.locfileid: "68060164"
 |双精度|float [53]|  
 |FLOAT|float [53]|  
 |int|int|  
-|整数|int|  
+|integer|int|  
 |long|varchar(max)|  
 |长整型|varbinary(max)|  
-|长整型 [\*。8000]<sup>\*</sup>|varbinary [\*]|  
-|long raw [8001\*]<sup>\*</sup>|varbinary(max)|  
+|长整型 [ \* 。8000]<sup>\*</sup>|varbinary [ \* ]|  
+|long raw [8001 \* ]<sup>\*</sup>|varbinary(max)|  
 |国家字符|nvarchar(max)|  
 |国家字符不同|nvarchar(max)|  
 |国家字符|nvarchar(max)|  
@@ -87,7 +87,7 @@ ms.locfileid: "68060164"
 |国家字符可变<sup>\*</sup>|nvarchar(max)|  
 |nchar|nvarchar(max)|  
 |nclob|nvarchar(max)|  
-|数字|float [53]|  
+|number|float [53]|  
 |numeric|float [53]|  
 |nvarchar2|nvarchar(max)|  
 |pls_integer|int|  
@@ -112,156 +112,156 @@ ms.locfileid: "68060164"
 ### <a name="default-column-type-mapping"></a>默认列类型映射  
 下表包含列的默认类型映射。  
   
-|DB2 数据类型|默认[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型|  
+|DB2 数据类型|默认 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型|  
 |-----------------|-------------------------------------------------------------------------|  
 |bfile|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
 |blob|varbinary(max)|  
 |char|char|  
-|char 改变 [\*.。\*]|varchar [\*]|  
-|char [\*.。\*]|char [\*]|  
+|char 改变 [ \* ... \* ]|varchar [ \* ]|  
+|char [ \* ... \* ]|char [ \* ]|  
 |character|char|  
-|字符变化 [\*。\*]|varchar [\*]|  
-|字符 [\*.。\*]|char [\*]|  
+|字符变化 [ \* ... \* ]|varchar [ \* ]|  
+|字符 [ \* ... \* ]|char [ \* ]|  
 |clob|varchar(max)|  
 |date|datetime2 [0]|  
 |dec|dec [38] [0]|  
-|dec [\*.。。\*]|dec [\*] [0]|  
-|dec [\*.。。\*][\*..\*]|dec [\*] [\*]|  
+|dec [ \* ... \* ]|dec [ \* ] [0]|  
+|dec [ \* ... \* ][\*..\*]|dec [ \* ] [ \* ]|  
 |Decimal|decimal [38] [0]|  
-|decimal [\*.。\*]|decimal [\*] [0]|  
-|decimal [\*.。\*][\*..\*]|decimal [\*] [\*]|  
+|decimal [ \* ... \* ]|decimal [ \* ] [0]|  
+|decimal [ \* ... \* ][\*..\*]|decimal [ \* ] [ \* ]|  
 |双精度|float [53]|  
 |FLOAT|float [53]|  
-|float [\*.。53]|float [\*]|  
-|float [54 ...\*]|float [53]|  
+|float [ \* .。53]|float [ \* ]|  
+|float [54 ... \* ]|float [53]|  
 |int|int|  
-|整数|int|  
+|integer|int|  
 |long|varchar(max)|  
 |长整型|varbinary(max)|  
-|长整型 [\*。8000]|varbinary [\*]|  
-|long raw [8001\*]|varbinary(max)|  
+|长整型 [ \* 。8000]|varbinary [ \* ]|  
+|long raw [8001 \* ]|varbinary(max)|  
 |长 varchar|varchar(max)|  
-|long [\*.。8000]|varchar [\*]|  
-|long [8001\*]|varchar(max)|  
+|long [ \* .。8000]|varchar [ \* ]|  
+|long [8001 \* ]|varchar(max)|  
 |国家字符|nchar|  
-|国家字符变化 [\*。\*]|nvarchar [\*]|  
-|国家字符 [\*.。\*]|nchar [\*]|  
+|国家字符变化 [ \* ... \* ]|nvarchar [ \* ]|  
+|国家字符 [ \* .. \* ]|nchar [ \* ]|  
 |国家字符|nchar|  
-|国家字符变化 [\*。\*]|nvarchar [\*]|  
-|国家字符 [\*.。\*]|nchar [\*]|  
+|国家字符变化 [ \* ... \* ]|nvarchar [ \* ]|  
+|国家字符 [ \* ... \* ]|nchar [ \* ]|  
 |nchar|nchar|  
-|nchar [\*]|nchar [\*]|  
+|nchar [ \* ]|nchar [ \* ]|  
 |nclob|nvarchar(max)|  
-|数字|float [53]|  
-|number [\*.。\*]|数值 [\*]|  
-|number [\*.。\*][\*..\*]|numeric [\*] [\*]|  
+|number|float [53]|  
+|number [ \* ... \* ]|数值 [ \* ]|  
+|number [ \* ... \* ][\*..\*]|numeric [ \* ] [ \* ]|  
 |numeric|numeric|  
-|数值 [\*。\*]|数值 [\*]|  
-|数值 [\*。\*][\*..\*]|numeric [\*] [\*]|  
-|nvarchar2 [\*.。\*]|nvarchar [\*]|  
-|raw [\*.。。\*]|varbinary [\*]|  
+|数值 [ \* ... \* ]|数值 [ \* ]|  
+|数值 [ \* ... \* ][\*..\*]|numeric [ \* ] [ \* ]|  
+|nvarchar2 [ \* ... \* ]|nvarchar [ \* ]|  
+|raw [ \* ... \* ]|varbinary [ \* ]|  
 |real|float [53]|  
 |rowid|uniqueidentifier|  
 |smallint|smallint|  
 |timestamp|datetime2|  
 |带有本地时区的时间戳|datetimeoffset|  
-|带有本地时区的时间戳\*[。\*]|datetimeoffset [\*]|  
+|带有本地时区的时间戳 [ \* ... \* ]|datetimeoffset [ \* ]|  
 |带时区的时间戳|datetimeoffset|  
-|带时区的时间戳\*[。\*]|datetimeoffset [\*]|  
-|timestamp [\*。\*]|datetime2 [\*]|  
+|带有时区的时间戳 [ \* ... \* ]|datetimeoffset [ \* ]|  
+|timestamp [ \* ... \* ]|datetime2 [ \* ]|  
 |Urowid|uniqueidentifier|  
-|urowid [\*.。\*]|uniqueidentifier|  
-|varchar [\*.。。\*]|varchar [\*]|  
-|varchar2 [\*.。\*]|varchar [\*]|  
+|urowid [ \* ... \* ]|uniqueidentifier|  
+|varchar [ \* ... \* ]|varchar [ \* ]|  
+|varchar2 [ \* ... \* ]|varchar [ \* ]|  
 |Xmltype|xml|  
   
 ### <a name="default-local-variable-type-mapping"></a>默认局部变量类型映射  
 下表包含本地变量的默认类型映射。  
   
-|DB2 数据类型|默认[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型|  
+|DB2 数据类型|默认 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型|  
 |-----------------|-------------------------------------------------------------------------|  
 |Bfile|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
 |binary_interger|int|  
 |Blob|varbinary(max)|  
-|Boolean|bit|  
+|布尔|bit|  
 |Char|char|  
-|char 改变 [\*.。8000]|varchar [\*]|  
-|char 改变 [8001\*]|varchar(max)|  
-|char [\*.。8000]|char [\*]|  
-|char [8001\*]|varchar(max)|  
+|char 改变 [ \* .。8000]|varchar [ \* ]|  
+|char 改变 [8001 \* ]|varchar(max)|  
+|char [ \* .。8000]|char [ \* ]|  
+|char [8001 \* ]|varchar(max)|  
 |字符|char|  
-|字符变化 [\*。8000]|varchar [\*]|  
-|字符变化 [8001\*]|varchar(max)|  
-|字符 [\*.。8000]|char [\*]|  
-|字符 [8001\*]|varchar(max)|  
+|字符变化 [ \* 。8000]|varchar [ \* ]|  
+|字符变化 [8001 \* ]|varchar(max)|  
+|字符 [ \* .。8000]|char [ \* ]|  
+|字符 [8001 \* ]|varchar(max)|  
 |clob|varchar(max)|  
 |date|datetime2 [0]|  
 |dec|dec [38] [0]|  
-|dec [\*.。。\*]|dec [\*] [0]|  
-|dec [\*.。。\*][\*..\*]|dec [\*] [\*]|  
+|dec [ \* ... \* ]|dec [ \* ] [0]|  
+|dec [ \* ... \* ][\*..\*]|dec [ \* ] [ \* ]|  
 |Decimal|decimal [38] [0]|  
-|decimal [\*.。\*]|decimal [\*] [0]|  
-|decimal [\*.。\*][\*..\*]|decimal [\*] [\*]|  
+|decimal [ \* ... \* ]|decimal [ \* ] [0]|  
+|decimal [ \* ... \* ][\*..\*]|decimal [ \* ] [ \* ]|  
 |双精度|float [53]|  
 |Float|float [53]|  
-|float [\*.。53]|float [\*]|  
-|float [54 ...\*]|float [53]|  
-|Int|int|  
+|float [ \* .。53]|float [ \* ]|  
+|float [54 ... \* ]|float [53]|  
+|int|int|  
 |Integer|int|  
-|integer [\*.。\*]|数值 [\*] [0]|  
+|integer [ \* ... \* ]|数值 [ \* ] [0]|  
 |Long|varchar(max)|  
 |长整型|varbinary(max)|  
-|长整型 [\*。8000]|varbinary [\*]|  
-|long raw [8001\*]|varbinary(max)|  
+|长整型 [ \* 。8000]|varbinary [ \* ]|  
+|long raw [8001 \* ]|varbinary(max)|  
 |国家字符|nchar|  
-|国家字符变化 [\*。4000]|nvarchar [\*]|  
-|国家字符变化 [4001 ...\*]|nvarchar(max)|  
-|国家字符 [\*.。4000]|nchar [\*]|  
-|国家字符 [4001 ...\*]|nvarchar(max)|  
+|国家字符变化 [ \* 。4000]|nvarchar [ \* ]|  
+|国家字符变化 [4001 ... \* ]|nvarchar(max)|  
+|国家字符 [ \* .。4000]|nchar [ \* ]|  
+|国家字符 [4001 ... \* ]|nvarchar(max)|  
 |国家字符|nchar|  
-|国家字符 [\*.。4000]|nvarchar [\*]|  
-|国家字符 [4001 ...\*]|nvarchar(max)|  
-|国家字符变化 [\*。4000]|nvarchar [\*]|  
-|国家字符变化 [4001 ...\*]|nvarchar(max)|  
+|国家字符 [ \* .。4000]|nvarchar [ \* ]|  
+|国家字符 [4001 ... \* ]|nvarchar(max)|  
+|国家字符变化 [ \* 。4000]|nvarchar [ \* ]|  
+|国家字符变化 [4001 ... \* ]|nvarchar(max)|  
 |Nchar|nchar|  
-|nchar [\*.。。4000]|nchar [\*]|  
-|nchar [4001 ...\*]|nvarchar(max)|  
-|nchar 不同 [\*。4000]|nvarchar [\*]|  
-|nchar 不同 [4001 ...\*]|nvarchar(max)|  
+|nchar [ \* .。。4000]|nchar [ \* ]|  
+|nchar [4001 ... \* ]|nvarchar(max)|  
+|nchar 不同 [ \* 。4000]|nvarchar [ \* ]|  
+|nchar 不同 [4001 ... \* ]|nvarchar(max)|  
 |Nclob|nvarchar(max)|  
-|数字|float [53]|  
-|number [\*.。\*]|数值 [\*]|  
-|number [\*.。\*][\*..\*]|numeric [\*] [\*]|  
-|Numeric|数值 [38] [0]|  
-|数值 [\*。\*]|数值 [\*]|  
-|数值 [\*。\*][\*..\*]|numeric [\*] [\*]|  
-|nvarchar2 [\*.。4000]|nvarchar [\*]|  
-|nvarchar2 [4001 ...\*]|nvarchar(max)|  
+|Number|float [53]|  
+|number [ \* ... \* ]|数值 [ \* ]|  
+|number [ \* ... \* ][\*..\*]|numeric [ \* ] [ \* ]|  
+|数字|数值 [38] [0]|  
+|数值 [ \* ... \* ]|数值 [ \* ]|  
+|数值 [ \* ... \* ][\*..\*]|numeric [ \* ] [ \* ]|  
+|nvarchar2 [ \* .。4000]|nvarchar [ \* ]|  
+|nvarchar2 [4001 ... \* ]|nvarchar(max)|  
 |pls_integer|int|  
-|raw [\*.。。8000]|varbinary [\*]|  
-|raw [8001\*]|varbinary(max)|  
+|raw [ \* .。。8000]|varbinary [ \* ]|  
+|raw [8001 \* ]|varbinary(max)|  
 |Real|float [53]|  
 |Rowid|uniqueidentifier|  
 |Signtype|smallint|  
 |Smallint|smallint|  
-|string [\*.。8000]|varchar [\*]|  
-|string [8001\*]|varchar(max)|  
+|string [ \* .。8000]|varchar [ \* ]|  
+|string [8001 \* ]|varchar(max)|  
 |timestamp|datetime2|  
 |带有本地时区的时间戳|datetimeoffset|  
 |带时区的时间戳|datetimeoffset|  
-|带有本地时区的时间戳\*[。\*]|datetimeoffset [\*]|  
-|带时区的时间戳\*[。\*]|datetimeoffset [\*]|  
-|timestamp [\*。\*]|datetime2 [\*]|  
+|带有本地时区的时间戳 [ \* ... \* ]|datetimeoffset [ \* ]|  
+|带有时区的时间戳 [ \* ... \* ]|datetimeoffset [ \* ]|  
+|timestamp [ \* ... \* ]|datetime2 [ \* ]|  
 |Urowid|uniqueidentifier|  
-|urowid [\*.。\*]|uniqueidentifier|  
-|varchar [\*.。。8000]|varchar [\*]|  
-|varchar [8001\*]|varchar(max)|  
-|varchar2 [\*.。8000]|varchar [\*]|  
-|varchar2 [8001\*]|varcha （max）|  
+|urowid [ \* ... \* ]|uniqueidentifier|  
+|varchar [ \* .。。8000]|varchar [ \* ]|  
+|varchar [8001 \* ]|varchar(max)|  
+|varchar2 [ \* .。8000]|varchar [ \* ]|  
+|varchar2 [8001 \* ]|varcha (最大) |  
 |Xmltype|xml|  
   
 ## <a name="see-also"></a>另请参阅  

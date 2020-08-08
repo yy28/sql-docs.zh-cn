@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 8c06420a-533b-4de0-948d-a0c6b368c544
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 4125f73ec34418261d0308221c448cae1fb06298
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 9deb8a87399f1934f1d105ad31a2c51540acddd9
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87862308"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935228"
 ---
 # <a name="project-settings-azure-sql-database-mysqltosql"></a> (Azure SQL 数据库的项目设置)  (MySQLToSQL) 
-SQL Azure 项目设置允许您配置要添加到连接对话框中的 SQL Azure 数据库后缀，还允许在 SQL Azure 连接中实现检测信号机制。  
+通过 SQL Azure 项目设置，你可以配置要添加到连接对话框中的 Azure SQL 数据库后缀，还允许在 SQL Azure 连接中实现检测信号机制。  
   
 "SQL Azure" 窗格在 "**项目设置**" 和 "**默认项目设置**" 对话框中可用。  
   
@@ -27,7 +27,7 @@ SQL Azure 项目设置允许您配置要添加到连接对话框中的 SQL Azure
   
 ## <a name="options"></a>选项  
   
-## <a name="connectivity"></a>连接性  
+## <a name="connectivity"></a>连接  
 **检测信号间隔**  
   
 指定一个时间间隔，该时间间隔用于检测信号机制以使 SQL Azure 连接以 "分钟：秒" 格式保持活动状态。  

@@ -1,5 +1,5 @@
 ---
-title: 从数据库刷新（MySQLToSQL） |Microsoft Docs
+title: 从数据库刷新 (MySQLToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 59a6db8f-2db6-4071-9005-928a7231de92
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 5acc3153d7305f404c5fc6a0478b83cc0c98bad6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: a3ca412381cf31edce8cf735fab630a6db92e5df
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68066697"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935161"
 ---
 # <a name="refresh-from-database-mysqltosql"></a>从数据库刷新 (MySQLToSQL)
 **通过 "从数据库刷新**" 对话框，您可以从 MySQL 数据库中选择要刷新的对象。 对话框中的行是根据元数据的状态进行颜色编码的：  
@@ -36,10 +36,10 @@ ms.locfileid: "68066697"
 |||  
 |-|-|  
 |**术语**|**定义**|  
-|**Collapse （-）**|折叠所有对象组以隐藏单个对象。|  
-|**展开（+）**|展开 "所有对象组" 以显示单个对象。|  
+|**折叠 (-) **|折叠所有对象组以隐藏单个对象。|  
+|**展开 (+) **|展开 "所有对象组" 以显示单个对象。|  
 |**隐藏/显示相等对象**|如果对象元数据在 MySQL 数据库和 SSMA 中是相同的，则隐藏列表中的对象。|  
-|**从数据库刷新（箭头按钮）**|使用箭头按钮指定应在 SSMA 中更新所选对象的元数据。|  
-|**不从数据库刷新（X 按钮）**|使用 X 按钮指定不应在 SSMA 中更新所选对象的元数据。|  
+|**从数据库刷新 (箭头按钮) **|使用箭头按钮指定应在 SSMA 中更新所选对象的元数据。|  
+|**不从数据库刷新 (X 按钮) **|使用 X 按钮指定不应在 SSMA 中更新所选对象的元数据。|  
 |**图例**|显示 "**图例**" 对话框。 图例包含行颜色和元数据状态之间的映射。<br /><br />若要使 "**图例**" 对话框位于 "**从数据库刷新**" 对话框的顶部，请选中 "**顶部显示**" 复选框。|  
   

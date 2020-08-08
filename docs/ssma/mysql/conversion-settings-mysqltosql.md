@@ -1,5 +1,5 @@
 ---
-title: 转换设置（MySQLToSQL） |Microsoft Docs
+title: MySQLToSQL) 的转换设置 (|Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f551cf6e-1575-4206-9cca-975b5b43a6b8
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: debdd549dc010f7be6b9d9b37a4caf649d4e106a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: c34a379f2bd4fd47c31a4b664e8f56cc1ffba2be
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68103126"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935821"
 ---
 # <a name="conversion-settings-mysqltosql"></a>转换设置 (MySQLToSQL)
 **"设置"** 选项卡允许用户设置节点级别设置。 选项卡将在以下元数据库节点上提供：  
@@ -75,5 +75,5 @@ ms.locfileid: "68103126"
     3.  单击 "**应用**" 按钮后，用户所做的设置将保存在级联首选项文件中。  
   
 ## <a name="see-also"></a>另请参阅  
-[项目设置（转换）（MySQL 到 SQL）](https://msdn.microsoft.com/7ad5fe44-6445-4ba8-a457-5af792631f11)  
+[ ()  (MySQL 转换为 SQL 的项目设置) ](https://msdn.microsoft.com/7ad5fe44-6445-4ba8-a457-5af792631f11)  
   
