@@ -1,5 +1,5 @@
 ---
-title: sp_query_store_force_plan （Transact-sql） |Microsoft Docs
+title: sp_query_store_force_plan (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2016
 ms.prod: sql
@@ -21,14 +21,15 @@ ms.assetid: 0068f258-b998-4e4e-b47b-e375157c8213
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8b8cfc9116440bfba43f16fd1c05bd004fcca0cb
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6aeea1c726e190945095b478e960266908019e0b
+ms.sourcegitcommit: 95be98587f6a3730ca75a77676dd952c45e4f53a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012659"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88046783"
 ---
-# <a name="sp_query_store_force_plan-transact-sql"></a>sp_query_store_force_plan （Transact-sql）
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+# <a name="sp_query_store_force_plan-transact-sql"></a>sp_query_store_force_plan (Transact-sql) 
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   为特定查询启用强制特定计划。  
   
@@ -42,7 +43,7 @@ ms.locfileid: "86012659"
 sp_query_store_force_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @query_id = ] query_id`查询的 id。 *query_id*是**bigint**，无默认值。  
   
 `[ @plan_id = ] plan_id`要强制执行的查询计划的 id。 *plan_id*是**bigint**，无默认值。  
@@ -50,7 +51,7 @@ sp_query_store_force_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
   
 ## <a name="permissions"></a>权限  
  要求对数据库具有**ALTER**权限。
