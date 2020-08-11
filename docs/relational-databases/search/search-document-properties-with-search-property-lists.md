@@ -19,12 +19,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: e838636d3d52fa05933601c2ad9fae1f6006f7b4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: daead13f4a3069966d1ede9aa677c47c8a784099
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629164"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934296"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>使用搜索属性列表搜索文档属性
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -88,7 +88,7 @@ ms.locfileid: "85629164"
   
     -   **从现有搜索属性列表创建**  
   
-     有关详细信息，请参阅 [New Search Property List](/sql/database-engine/new-search-property-list)。  
+     有关详细信息，请参阅 [New Search Property List](https://docs.microsoft.com/sql/t-sql/statements/create-search-property-list-transact-sql)。  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -201,7 +201,7 @@ GO
   
     2.  若要添加某个文档属性，请在该列表底部的空行中单击，然后在 **\*** 右侧为这个新属性输入值。  
   
-         有关这些值的信息，请参阅 [搜索属性列表编辑器](/sql/database-engine/search-property-list-editor)。 有关如何获取由 Microsoft 定义的属性的这些值的信息，请参阅 [查找搜索属性的属性集 GUID 和属性整数 ID](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)。 有关由独立软件供应商 (ISV) 定义的属性的信息，请参阅该供应商提供的文档。  
+         有关这些值的信息，请参阅 [搜索属性列表编辑器](https://docs.microsoft.com/sql/t-sql/statements/create-search-property-list-transact-sql)。 有关如何获取由 Microsoft 定义的属性的这些值的信息，请参阅 [查找搜索属性的属性集 GUID 和属性整数 ID](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)。 有关由独立软件供应商 (ISV) 定义的属性的信息，请参阅该供应商提供的文档。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

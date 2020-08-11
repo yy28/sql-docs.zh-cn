@@ -1,1 +1,1 @@
-Azure SQL 数据库托管实例
+Azure SQL 托管实例

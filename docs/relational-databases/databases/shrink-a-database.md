@@ -20,12 +20,12 @@ ms.assetid: 83afbf74-fd50-4c39-831c-b1f473a50620
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5cacfade7921a099d618704b3145f5de2acd2b73
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5761ee136c23cd82296f154e7e87d4756410c55a
+ms.sourcegitcommit: 6f49804b863fed44968ea5829e2c26edc5988468
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715513"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87807510"
 ---
 # <a name="shrink-a-database"></a>收缩数据库
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,9 +57,7 @@ ms.locfileid: "85715513"
   
 -   收缩后的数据库不能小于数据库的最小大小。 最小大小是在数据库最初创建时指定的大小，或是上一次使用文件大小更改操作（如 DBCC SHRINKFILE）设置的显式大小。 例如，如果数据库最初创建时的大小为 10 MB，后来增长到 100 MB，则该数据库最小只能收缩到 10 MB，即使已经删除数据库的所有数据也是如此。  
   
--   不能在备份数据库时收缩数据库。 反之，也不能在数据库执行收缩操作时备份数据库。  
-  
--   遇到 xVelocity 内存优化的列存储索引时，DBCC SHRINKDATABASE 将会失败。 遇到 columnstore 索引之前完成的工作将会成功，因此数据库可能会较小。 若要完成 DBCC SHRINKDATABASE，请在执行 DBCC SHRINKDATABASE 前禁用所有列存储索引，然后重新生成列存储索引。  
+-   不能在备份数据库时收缩数据库。 反之，也不能在数据库执行收缩操作时备份数据库。
   
 ###  <a name="recommendations"></a><a name="Recommendations"></a> 建议  
   
