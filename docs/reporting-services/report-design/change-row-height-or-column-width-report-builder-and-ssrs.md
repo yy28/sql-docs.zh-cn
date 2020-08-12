@@ -1,5 +1,6 @@
 ---
 title: 更改行高或列宽（报表生成器）| Microsoft Docs
+description: 了解如何在报表生成器中使用呈现的报表的文本框属性来设置列宽或固定行高。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f061c204-5cd5-4467-9a9c-8a12803d93ba
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5396ca15db85405053f8c003fb643e26b13f46fe
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 485dc6918cad6fef9c55256f07de299af377b2d4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77078924"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044038"
 ---
 # <a name="change-row-height-or-column-width-report-builder-and-ssrs"></a>更改行高或列宽（报表生成器和 SSRS）
   设置行高时，您所指定的是呈现的报表中行的最大高度。 但默认情况下，行中的文本框设置为可在运行时沿垂直方向增长，以容纳其中的数据，这会使行超过您指定的高度。 若要设置固定行高，您必须更改文本框的属性，使其不会自动增高。  
@@ -52,7 +53,7 @@ ms.locfileid: "77078924"
 3.  在“属性”窗格中，将 CanGrow 设置为 **False**。  
   
     > [!NOTE]  
-    >  如果没有看到“属性”窗格，请单击“视图”菜单上的“属性”   。  
+    >  如果没有看到“属性”窗格，请单击“视图”菜单上的“属性” 。  
   
 ### <a name="to-change-column-width"></a>更改列宽  
   

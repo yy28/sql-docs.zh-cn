@@ -5,20 +5,20 @@ description: 本文介绍 SQL Server 大数据群集的安全性概念。 此内
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 10/23/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0fc816325d4008d1913f0e07e3032677a0eddb4d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f0d19589c057df0af9ffea711edd8963bc381e2d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77074415"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730678"
 ---
 # <a name="security-concepts-for-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 的安全性概念
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 本文将介绍大数据群集中与安全性相关的一些重要概念
 
@@ -83,17 +83,21 @@ Hadoop 组件不支持混合模式身份验证；也就是说，无法使用基�
 部署期间需要定义的登录凭据包括：
 
 群集管理员用户名：
+
  + `AZDATA_USERNAME=<username>`
 
 群集管理员密码：  
  + `AZDATA_PASSWORD=<password>`
 
 > [!NOTE]
-> 请注意，在非 AD 模式下，必须将用户名“root”与上述密码结合使用，以便对网关 (Knox) 进行身份验证以访问 HDFS/Spark。
+> 请注意，在非 AD 模式下，必须将用户名与上述密码结合使用，以便对网关 (Knox) 进行身份验证以访问 HDFS/Spark。 在 SQL Server 2019 CU5 之前，用户名是 `root`。
+> 
+> [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 
 ## <a name="next-steps"></a>后续步骤
 
-若要了解有关 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 的详细信息，请参阅以下资源：
+[什么是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]？](big-data-cluster-overview.md)
 
-- [什么是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]？](big-data-cluster-overview.md)
-- [Workshop:Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 体系结构](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+[Workshop:Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 体系结构](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+
+[Kubernetes RBAC](kubernetes-rbac.md)

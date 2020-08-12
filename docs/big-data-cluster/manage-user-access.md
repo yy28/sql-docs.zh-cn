@@ -8,16 +8,16 @@ ms.date: 12/06/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9f9cca7e761b8f8ec3f5b87e9a195a0eb8b5da6d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 94719ef65023b1afd4edcf7770887323d0267127
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76259455"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730624"
 ---
 # <a name="manage-big-data-cluster-access-in-active-directory-mode"></a>在 Active Directory 模式下管理大数据群集
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 本文介绍如何更新 clusterAdmins 和 clusterUsers 部署过程中提供的 Active Directory 组。
 
@@ -25,9 +25,9 @@ ms.locfileid: "76259455"
 
 可以在部署配置文件的“安全”部分中提供 Active Directory 组，这是大数据群集中授权的两个主要角色的一部分：
 
-* `clusterAdmins`设置用户帐户 ：此参数采用一个 Active Directory 组。 此组的成员将获取整个群集的管理员权限。 它们具有 SQL Server 中的 sysadmin  权限、Hadoop 分布式文件系统 (HDFS) 和 Spark 中的超级用户  权限，以及控制器中的管理员  权限。
+* `clusterAdmins`：此参数采用一个 Active Directory 组。 此组的成员将获取整个群集的管理员权限。 它们具有 SQL Server 中的 sysadmin 权限、Hadoop 分布式文件系统 (HDFS) 和 Spark 中的超级用户权限，以及控制器中的管理员权限。
 
-* `clusterUsers`设置用户帐户 ：这些 Active Directory 组是在群集中不具有管理员权限的普通用户。 它们有权登录到 SQL Server 主实例，但默认情况下，它们无权访问对象或数据。
+* `clusterUsers`：这些 Active Directory 组是在群集中不具有管理员权限的普通用户。 它们有权登录到 SQL Server 主实例，但默认情况下，它们无权访问对象或数据。
 
 在部署后向大数据群集授予其他 Active Directory 组权限的一种方法是，在部署过程中将其他用户和组添加到已命名的组。 
 
@@ -79,9 +79,9 @@ ms.locfileid: "76259455"
    kubectl port-forward controldb-0 1433:1433 --address 0.0.0.0 -n <cluster name>
    ```
 
-1. 使用前面的连接将行插入到角色表中。 以大写字母形式键入 REALM  值。
+1. 使用前面的连接将行插入到角色表中。 以大写字母形式键入 REALM 值。
 
-   如果要授予管理员权限，请使用 \<角色名称>  中的 bdcAdmin  角色。 对于非管理员用户，请使用 bdcUser  角色。
+   如果要授予管理员权限，请使用 \<role name> 中的 bdcAdmin 角色 。 对于非管理员用户，请使用 bdcUser 角色。
 
    ```sql
    USE controller;

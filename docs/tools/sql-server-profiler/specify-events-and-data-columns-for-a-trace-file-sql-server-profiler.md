@@ -1,6 +1,7 @@
 ---
 title: 指定跟踪文件的事件和数据列
 titleSuffix: SQL Server Profiler
+description: 了解如何指定 SQL Server Profiler 捕获跟踪中的事件数据时所包括的事件类和数据列。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 9c4ba5002eab9fd0c495d19aa662c1252824a445
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 624ee18dfeb1fb73f0b7ba77eab8466ab90f6130
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307728"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734188"
 ---
 # <a name="specify-events-and-data-columns-for-a-trace-file-sql-server-profiler"></a>指定跟踪文件的事件和数据列 (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 本主题介绍了如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]指定跟踪的事件类和数据列。  
   
@@ -37,11 +38,11 @@ ms.locfileid: "75307728"
 4.  若要在跟踪中包括事件，请选中每个事件类的 **“事件”** 列中的复选框，或者选中对应于事件的数据列。  
   
 > [!IMPORTANT]  
->  如果跟踪要与系统监视器或性能监视器数据关联，则必须在跟踪中包括“开始时间”  和“结束时间”  数据列。  
+>  如果跟踪要与系统监视器或性能监视器数据关联，则必须在跟踪中包括“开始时间”**** 和“结束时间”**** 数据列。  
   
  如果已选中对应于事件的复选框，在包括事件类时，跟踪中也将包括关联的数据列。 如果选中某个特定列的复选框，跟踪中将只包括该列。  
   
-1.  若要从某个事件类删除数据列，请从事件类行中的数据列清除复选框，或右键单击列标题并选择“取消选择列”  选项。  
+1.  若要从某个事件类删除数据列，请从事件类行中的数据列清除复选框，或右键单击列标题并选择“取消选择列”**** 选项。  
   
 2.  或者，对跟踪应用筛选器。 有关详细信息，请参阅[在跟踪中筛选事件 (SQL Server Profiler)](../../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)  
   

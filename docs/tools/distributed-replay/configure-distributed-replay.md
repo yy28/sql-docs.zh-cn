@@ -12,15 +12,15 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: b1385a3bcc755844f5af803f16d247f0692d9fbb
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 5ec828e6aa1df2ad38c7a3f831d9f8432dc681b2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82999377"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85681867"
 ---
 # <a name="configure-distributed-replay"></a>Configure Distributed Replay
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 配置详细信息在 Distributed Replay 控制器、客户端以及安装有管理工具的位置的 XML 文件中指定。 这些文件包括下面的文件：  
   
 -   [控制器配置文件](#DReplayController)  
@@ -34,7 +34,7 @@ ms.locfileid: "82999377"
 ##  <a name="controller-configuration-file-dreplaycontrollerconfig"></a><a name="DReplayController"></a>控制器配置文件：DReplayController.config  
  当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分布式重播控制器服务启动时，它将从控制器配置文件 `DReplayController.config`加载日志记录级别。 此文件位于安装有分布式重播控制器服务的文件夹内：  
   
- \<控制器安装路径>\DReplayController.config   
+ **\<controller installation path>\DReplayController.config**  
   
  控制器配置文件指定的日志记录级别包括：  
   
@@ -55,7 +55,7 @@ ms.locfileid: "82999377"
 ##  <a name="client-configuration-file-dreplayclientconfig"></a><a name="DReplayClient"></a>客户端配置文件：DReplayClient.config  
  当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分布式重播客户端服务启动时，它将从客户端配置文件 `DReplayClient.config`加载配置设置。 此文件位于每台客户端上安装有分布式重播客户端服务的文件夹内：  
   
- \<客户端安装路径>\DReplayClient.config   
+ **\<client installation path>\DReplayClient.config**  
   
  客户端配置文件指定的设置包括：  
   
@@ -86,7 +86,7 @@ ms.locfileid: "82999377"
   
  默认情况下，预处理配置文件位于安装有管理工具的文件夹中：  
   
- \<管理工具安装路径>\DReplayAdmin\DReplay.exe.preprocess.config   
+ **\<administration tool installation path>\DReplayAdmin\DReplay.exe.preprocess.config**  
   
  预处理配置设置在预处理配置文件的 `<PreprocessModifiers>` 元素的子级 XML 元素中指定。 这些设置包括：  
   
@@ -115,7 +115,7 @@ ms.locfileid: "82999377"
   
  默认情况下，重播配置文件位于安装有管理工具的文件夹中：  
   
- \<管理工具安装路径>\DReplayAdmin\DReplay.exe.replay.config   
+ **\<administration tool installation path>\DReplayAdmin\DReplay.exe.replay.config**  
   
  重播配置设置在重播配置文件的 `<ReplayOptions>` 和 `<OutputOptions>` 元素的子级 XML 元素中指定。  
   

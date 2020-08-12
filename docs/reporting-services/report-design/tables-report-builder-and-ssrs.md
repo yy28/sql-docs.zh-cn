@@ -1,5 +1,6 @@
 ---
 title: 表（报表生成器和 SSRS）| Microsoft Docs
+description: 通过使用单个字段或多个字段，或者通过在报表生成器中的分页报表中编写自己的表达式来显示详细数据或分组数据。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0a95c339-c5aa-49ad-b1c8-72824b7a9c82
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 319f221116d49cab52b0c01a273db565a9049669
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cac6edf23b15cbb6dc100c84a7035b425798d9d4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574735"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067111"
 ---
 # <a name="tables-report-builder--and-ssrs"></a>表（报表生成器和 SSRS）
  在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]中，可以使用表显示详细信息数据或分组数据，也可以使用分页报表同时显示这两种数据。   
@@ -42,7 +43,7 @@ ms.locfileid: "65574735"
   
  ![设计图面上的表模板，选中](../../reporting-services/report-design/media/rs-tabletemplatenewselected.gif "设计图面上的表模板，选中")  
   
- 数据行的行句柄显示详细信息符号（![包含 3 条用于详细信息行的平行线的行控点](../../reporting-services/report-design/media/rs-icontablix-detailsrow.gif "详细信息行的 3 条平行线的行控点")）。 若要显示这些行中的数据，可将字段从“报表数据”窗格拖到表头行或详细信息行中的表单元格。 两行会同时填充。 若要添加其他列，请将字段拖到表中，直到看到插入点。 在将数据集字段添加到表之后，可以更改日期和货币的默认格式以控制它们在报表中的显示方式。 下面的关系图显示了具有以下字段的表数据区域：Date、Order、Product、Qty 和 Line Total。  
+ 数据行的行句柄显示详细信息符号（![包含 3 条用于详细信息行的平行线的行控点](../../reporting-services/report-design/media/rs-icontablix-detailsrow.gif "详细信息行的 3 条平行线的行控点")）。 若要显示这些行中的数据，可将字段从“报表数据”窗格拖到表头行或详细信息行中的表单元格。 两行会同时填充。 若要添加其他列，请将字段拖到表中，直到看到插入点。 在将数据集字段添加到表之后，可以更改日期和货币的默认格式以控制它们在报表中的显示方式。 下图展示了包含下面这些字段的表数据区域：“Date”、“Order”、“Product”、“Qty”和“Line Total”。  
   
  ![带有以粗体显示的列标题的表的设计](../../reporting-services/report-design/media/rs-basictabledetailsformatteddesign.gif "带有以粗体显示的列标题的表的设计")  
   

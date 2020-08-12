@@ -1,5 +1,6 @@
 ---
 title: SqlPackage.exe
+description: 了解如何通过 SqlPackage.exe 自动执行数据库开发任务。 查看示例和可用参数、属性和 SQLCMD 变量。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -9,12 +10,12 @@ author: pensivebrian
 ms.author: broneill
 ms.reviewer: alayu; sstein
 ms.date: 03/17/2020
-ms.openlocfilehash: 1ee42c97fe4e032835ccb2f8a07ea51fe70114ac
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: 1209945c167f26dd7011cc4ce210e61ac24f7134
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81303138"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85441254"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -94,7 +95,7 @@ sqlpackage.exe /Action:Script /SourceFile:"C:\sqlpackageoutput\output_current_ve
 
 ### <a name="properties-specific-to-the-extract-action"></a>特定于 Extract 操作的属性
 
-|properties|值|说明|
+|properties|Value|说明|
 |---|---|---|
 |**/p:**|CommandTimeout=(INT32 '60')|指定针对 SQL Server 执行查询时的命令超时（以秒为单位）。|
 |**/p:**|DacApplicationDescription=(STRING)|定义要存储在 DACPAC 元数据中的应用程序说明。|
@@ -121,7 +122,7 @@ SqlPackage.exe 发布操作增量更新目标数据库的架构以便匹配源�
 
 ### <a name="help-for-publish-action"></a>有关 Publish 操作的帮助
 
-|参数|缩写|值|说明|
+|参数|缩写|值|描述|
 |---|---|---|---|
 |**/Action:**|**/a**|发布|指定要执行的操作。 |
 |**/AccessToken:**|**/at**|{string}| 指定要在连接到目标数据库时使用的基于令牌的身份验证访问令牌。 |
@@ -269,7 +270,7 @@ SqlPackage.exe 导出操作将活动数据库从 SQL Server 或 Azure SQL 数据
   
 ### <a name="help-for-export-action"></a>有关 Export 操作的帮助
 
-|参数|缩写|值|说明|
+|参数|缩写|值|描述|
 |---|---|---|---|
 |**/Action:**|**/a**|导出|指定要执行的操作。 |
 |**/AccessToken:**|**/at**|{string}| 指定要在连接到目标数据库时使用的基于令牌的身份验证访问令牌。 |
@@ -333,7 +334,7 @@ SqlPackage.exe 导入操作将架构和表数据从 BACPAC 包（.bacpac 文件�
 
 特定于 Import 操作的属性：
 
-|properties|值|说明|
+|properties|Value|说明|
 |---|---|---|
 |**/p:**|CommandTimeout=(INT32 '60')|指定针对 SQL Server 执行查询时的命令超时（以秒为单位）。|
 |**/p:**|DatabaseEdition=({Basic&#124;Standard&#124;Premium&#124;DataWarehouse&#124;GeneralPurpose&#124;BusinessCritical&#124;Hyperscale&#124;Default} 'Default')|定义 Azure SQL 数据库的版本。|
@@ -352,7 +353,7 @@ SqlPackage.exe 报告操作创建将由发布操作完成的更改的 XML 报表
   
 ### <a name="help-for-deployreport-action"></a>有关 DeployReport 操作的帮助
 
-|参数|缩写|值|说明|
+|参数|缩写|值|描述|
 |---|---|---|---|
 |**/Action:**|**/a**|DeployReport|指定要执行的操作。 |
 |**/AccessToken:**|**/at**|{string}| 指定要在连接到目标数据库时使用的基于令牌的身份验证访问令牌。 |

@@ -9,16 +9,16 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a78074b7e32df18de1308d2354d98079d074f9bf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c051a634199bf6a8adc9a0b52a73196f68901893
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73531944"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730605"
 ---
 # <a name="manage-big-data-clusters-for-sql-server-controller-dashboard"></a>管理 SQL Server 控制器仪表板的大数据群集
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 除了 azdata 和群集状态笔记本以外，还可以通过另一种方法查看 SQL Server 大数据群集的状态  。 现在可以通过“连接”viewlet 添加 SQL Server 大数据群集控制器  。 这样，就可以使用仪表板查看群集运行状况。
 
@@ -27,8 +27,8 @@ ms.locfileid: "73531944"
 
 若要启动笔记本，需要满足以下必备条件：
 
-* 已安装 [Azure Data Studio 预览体验内部版本](https://docs.microsoft.com/sql/big-data-cluster/deploy-big-data-tools?view=sqlallproducts-download-and-install-azure-data-studio-sql-server-2019-release-candidate-rc)的最新版本
-* 已在 Azure Data Studio 中安装 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 扩展
+* [Azure Data Studio](https://aka.ms/getazuredatastudio) 的最新版本
+* [已在 Azure Data Studio 中安装 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 扩展](../azure-data-studio/data-virtualization-extension.md)
 
 除上述内容外，SQL Server 2019 大数据群集还需要：
 

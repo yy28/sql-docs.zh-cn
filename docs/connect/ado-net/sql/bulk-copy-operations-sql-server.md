@@ -1,21 +1,21 @@
 ---
 title: SQL Server 中的大容量复制操作
 description: 介绍适用于 SQL Server 的 .NET 数据提供程序的大容量复制功能。
-ms.date: 09/30/2019
+ms.date: 06/15/2020
 ms.assetid: 83a7a0d2-8018-4354-97b9-0b1d99f8342b
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: c827ae70d9aa344f52de1d76c482beaef90c09aa
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4896bfdb419cfbd8e2cf6302a0a818407d6a596c
+ms.sourcegitcommit: 6b3569977b034554883a94d73d1c4df6e2f74fe2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78897027"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85107012"
 ---
 # <a name="bulk-copy-operations-in-sql-server"></a>SQL Server 中的大容量复制操作
 
@@ -32,7 +32,7 @@ Microsoft SQL Server 包含一个名为 bcp 的受欢迎的命令行实用工具
 - 事务中的大容量复制操作  
   
 > [!NOTE]
->  在使用 .NET Framework 1.1 版或更低版本时（不支持 <xref:Microsoft.Data.SqlClient.SqlBulkCopy> 类），可以使用 <xref:Microsoft.Data.SqlClient.SqlCommand> 对象执行 SQL Server Transact-SQL BULK INSERT 语句。  
+>  在使用 .NET Framework 1.1 版或更低版本时（不支持 <xref:Microsoft.Data.SqlClient.SqlBulkCopy> 类），可以使用  **对象执行 SQL Server Transact-SQL BULK INSERT 语句**<xref:Microsoft.Data.SqlClient.SqlCommand>。  
   
 ## <a name="in-this-section"></a>在本节中  
 [大容量复制示例设置](bulk-copy-example-setup.md)  
@@ -46,6 +46,9 @@ Microsoft SQL Server 包含一个名为 bcp 的受欢迎的命令行实用工具
   
 [事务和大容量复制操作](transaction-bulk-copy-operations.md)  
 介绍了如何在事务中执行大容量复制操作，包括如何提交或回滚事务。  
+
+[大容量复制操作的顺序提示](bulk-copy-order-hints.md)  
+介绍如何使用顺序提示来提升大容量复制性能。
   
 ## <a name="next-steps"></a>后续步骤
 - [SQL Server 和 ADO.NET](index.md)

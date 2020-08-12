@@ -1,48 +1,50 @@
 ---
 title: 教程：准备数据以在 R 中执行聚类
 titleSuffix: SQL machine learning
-description: 此系列教程由四个部分组成，这是第二部分。你将从 SQL 数据库准备数据，以便通过 SQL 机器学习在 R 中执行聚类分析。
+description: 此系列教程由四个部分组成，这是第二部分。你将从数据库准备数据，以便通过 SQL 机器学习在 R 中执行聚类分析。
 ms.prod: sql
 ms.technology: machine-learning
 ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: adeda8bf04333bb256daea8ebc3cab1288f9aebf
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: a83268efebbe53a12806c3e52a38e3c5ea2d94e2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83607020"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728548"
 ---
 # <a name="tutorial-prepare-data-to-perform-clustering-in-r-with-sql-machine-learning"></a>教程：准备数据以通过 SQL 机器学习在 R 中执行聚类分析
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-此系列教程由四个部分组成，这是第二部分。你将从 SQL 数据库准备数据，以便在 SQL 数据库机器学习服务中或大数据群集上通过 R 执行聚类分析。
+此系列教程由四个部分组成，这是第二部分。你将从数据库准备数据，以便在 SQL Server 机器学习服务中或大数据群集上通过 R 执行聚类分析。
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-此系列教程由四个部分组成，这是第二部分。你将从 SQL 数据库准备数据，以便通过 SQL 数据库机器学习服务在 R 中执行聚类分析。
+此系列教程由四个部分组成，这是第二部分。你将从数据库准备数据，以便通过 SQL Server 机器学习服务在 R 中执行聚类分析。
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-此系列教程由四个部分组成，这是第二部分。你将从 SQL 数据库准备数据，以便通过 SQL Database R Services 在 R 中执行聚类分析。
+此系列教程由四个部分组成，这是第二部分。你将从数据库准备数据，以便通过 SQL Server 2016 R Services 在 R 中执行聚类分析。
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+此系列教程由四个部分组成，这是第二部分。你将从数据库准备数据，以便通过 Azure SQL 托管实例机器学习服务在 R 中执行聚类分析。
 ::: moniker-end
 
 本文将指导如何进行以下操作：
 
 > [!div class="checklist"]
 > * 使用 R 沿不同维度分离客户
-> * 将数据从 SQL 数据库加载到 R 数据帧中
+> * 将数据从数据库加载到 R 数据帧中
 
 在[第一部分](r-clustering-model-introduction.md)中，你安装了必备条件并还原了示例数据库。
 
 [第三部分](r-clustering-model-build.md)介绍如何在 R 中创建和训练 K-Means 聚类分析模型。
 
-在[第四部分](r-clustering-model-deploy.md)中，你将了解如何在 SQL 数据库中创建存储过程，以便基于新数据在 R 中执行聚类分析。
+在[第四部分](r-clustering-model-deploy.md)中，你将了解如何在数据库中创建存储过程，以便基于新数据在 R 中执行聚类分析。
 
 ## <a name="prerequisites"></a>先决条件
 
@@ -63,9 +65,9 @@ ms.locfileid: "83607020"
 ```r
 # Define the connection string to connect to the tpcxbb_1gb database
 
-connStr <- "Driver=SQL Server;Server=ServerName;Database=tpcxbb_1gb;Trusted_Connection=TRUE"
+connStr <- "Driver=SQL Server;Server=ServerName;Database=tpcxbb_1gb;uid=Username;pwd=Password"
 
-#Define the query to select data from SQL Server
+#Define the query to select data
 input_query <- "
 SELECT ss_customer_sk AS customer
     ,round(CASE 
@@ -124,7 +126,7 @@ LEFT OUTER JOIN (
         SUM(sr_return_amt) AS returns_money
     FROM store_returns
     GROUP BY sr_customer_sk
-    ) returned ON ss_customer_sk = sr_customer_sk
+    ) returned ON ss_customer_sk = sr_customer_sk";
 ```
 
 ## <a name="load-the-data-into-a-data-frame"></a>将数据加载到数据帧中
@@ -132,7 +134,7 @@ LEFT OUTER JOIN (
 现在，使用以下脚本将查询结果返回到一个 R 数据帧中。
 
 ```r
-# Query SQL Server using input_query and get the results back
+# Query using input_query and get the results back
 # to data frame customer_data
 
 library(RODBC)
@@ -141,7 +143,7 @@ ch <- odbcDriverConnect(connStr)
 
 customer_data <- sqlQuery(ch, input_query)
 
-# Take a look at the data just loaded from SQL Server
+# Take a look at the data just loaded
 head(customer_data, n = 5);
 ```
 
@@ -165,7 +167,7 @@ head(customer_data, n = 5);
 在此教程系列的第二部分中，你已了解如何执行以下操作：
 
 * 使用 R 沿不同维度分离客户
-* 将数据从 SQL 数据库加载到 R 数据帧中
+* 将数据从数据库加载到 R 数据帧中
 
 若要创建使用此客户数据的机器学习模型，请按照本教程系列的第三部分进行操作：
 

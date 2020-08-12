@@ -1,5 +1,6 @@
 ---
 title: 设置线条、颜色和图像的格式（报表生成器）| Microsoft Docs
+description: 了解在报表生成器中使用线条、颜色、数据区域和图像的方法。 直观地将各项关联起来以提高报表生成器中的可读性。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -21,12 +22,12 @@ f1_keywords:
 ms.assetid: 0f5f0d2a-9537-4152-b441-b40d7f04cf4c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8567c1f331c17cd0875c2d4f1b94423b3c3ce347
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cc3cacd9321b65dc652fa7323553b445949501fc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079856"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048262"
 ---
 # <a name="formatting-lines-colors-and-images-report-builder-and-ssrs"></a>设置线条、颜色和图像的格式（报表生成器和 SSRS）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 可以设置线条、颜色、数据区域、图像和其他报表项的格式。  
@@ -37,7 +38,7 @@ ms.locfileid: "77079856"
 ## <a name="borders-lines-and-gridlines"></a>边框、线条和网格线  
  使用边框、线条和网格线可以直观地将页中的项关联在一起，并有助于报表读者轻松读取报表的内容。 通过使用预定义的边框样式，您可以快速地在文本框、文本框组或图像周围添加边框。 此外，还可以更改边框、线条和网格线的样式、宽度和颜色。 边框通常添加在整个选定项的周围，或沿着项边缘的边框添加，例如，沿着文本框底部的边框。  
   
- 若要设置文本框、报表布局或图像周围的边框和网格线的格式，请使用报表项的 **“属性”** 对话框中的 **“边框”** 选项卡。 例如，如果要在图像周围添加边框，请右键单击该图像然后在 **“图像属性”** 对话框中，单击 **“边框”** 。  
+ 若要设置文本框、报表布局或图像周围的边框和网格线的格式，请使用报表项的 **“属性”** 对话框中的 **“边框”** 选项卡。 例如，如果要在图像周围添加边框，请右键单击该图像然后在 **“图像属性”** 对话框中，单击 **“边框”**。  
   
  除了标准边框外，还可以对图表应用其他边框。 有关详细信息，请参阅[向图表添加边框（报表生成器和 SSRS）](../../reporting-services/report-design/add-a-border-frame-to-a-chart-report-builder-and-ssrs.md)。  
   

@@ -4,21 +4,21 @@ titleSuffix: SQL machine learning
 description: 本教程系列由四个部分组成。你将在 Python 中构建线性回归模型，以通过 SQL 机器学习预测雪橇租赁次数。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2020
+ms.date: 05/26/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b34687440763f2c514016989542ae3f2d7c0e6ed
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 3495fb429754fdd38a203d1d9ce5e8afee60363e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606906"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730462"
 ---
 # <a name="python-tutorial-predict-ski-rental-with-linear-regression-with-sql-machine-learning"></a>Python 教程：通过 SQL 机器学习使用线性回归来预测雪橇租赁
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 在这个由四个部分组成的教程系列中，你将在 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)中或[大数据群集](../../big-data-cluster/machine-learning-services.md)上使用 Python 和线性回归来预测雪橇租赁次数。 本教程使用 [Azure Data Studio 中的 Python 笔记本](../../azure-data-studio/sql-notebooks.md)。
@@ -26,15 +26,18 @@ ms.locfileid: "83606906"
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 在这个由四个部分组成的教程系列中，你将在 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)中使用 Python 和线性回归来预测雪橇租赁次数。 本教程使用 [Azure Data Studio 中的 Python 笔记本](../../azure-data-studio/sql-notebooks.md)。
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+在这个由四个部分组成的教程系列中，你将在 [Azure SQL Server 托管实例机器学习服务](/azure/azure-sql/managed-instance/machine-learning-services-overview)中使用 Python 和线性回归来预测雪橇租赁次数。 本教程使用 [Azure Data Studio 中的 Python 笔记本](../../azure-data-studio/sql-notebooks.md)。
+::: moniker-end
 
 假设你有一家雪橇租赁公司，你希望预测未来某个日期的雪橇租赁次数。 此信息可帮助你准备好库存、人员和设施。
 
-在本系列的第一部分，你将设置必备组件。 在第二和第三部分，你将在某个笔记本中开发一些 Python 脚本，以准备数据并训练机器学习模型。 然后，在第四部分，你将使用 T-SQL 存储过程在 SQL Server 中运行这些 Python 脚本。
+在本系列的第一部分，你将设置必备组件。 在第二和第三部分，你将在某个笔记本中开发一些 Python 脚本，以准备数据并训练机器学习模型。 然后，在第三部分，你将使用 T-SQL 存储过程在数据库中运行这些 Python 脚本。
 
 本文将指导如何进行以下操作：
 
 > [!div class="checklist"]
-> * 将示例数据库导入 SQL Server 
+> * 导入示例数据库
 
 在[第二部分](python-ski-rental-linear-regression-prepare-data.md)中，你将了解如何将数据从数据库加载到 Python 数据帧中，并在 Python 中准备数据。
 
@@ -50,6 +53,11 @@ ms.locfileid: "83606906"
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 * SQL Server 机器学习服务 - 有关如何安装机器学习服务的信息，请参阅 [Windows 安装指南](../install/sql-machine-learning-services-windows-install.md)。 
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+* Azure SQL 托管实例机器学习服务。 有关如何注册的说明，请参阅 [Azure SQL 托管实例机器学习服务概述](/azure/azure-sql/managed-instance/machine-learning-services-overview)。
+
+* 使用 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) 将示例数据库还原到 Azure SQL 托管实例。
+::: moniker-end
 
 * Python IDE - 本教程在 [Azure Data Studio](../../azure-data-studio/what-is.md) 中使用 Python 笔记本。 有关详细信息，请参阅[如何使用 Azure Data Studio 中的笔记本](../../azure-data-studio/sql-notebooks.md)。
 
@@ -62,7 +70,7 @@ ms.locfileid: "83606906"
   * sklearn
 
   若要安装这些包：
-  1. 在 Azure Data Studio 中，选择“管理包”。
+  1. 在 Azure Data Studio 笔记本中，选择“管理包”。
   2. 在“管理包”窗格中，选择“添加新包”选项卡。
   3. 对于以下每个包，输入包名称，单击“搜索”，然后单击“安装”。
 
@@ -77,6 +85,7 @@ ms.locfileid: "83606906"
 > 如果在大数据群集上使用机器学习服务，请了解如何[将数据库还原成 SQL Server 大数据群集主实例](../../big-data-cluster/data-ingestion-restore-database.md)。
 ::: moniker-end
 
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 1. 下载文件 [TutorialDB.bak](https://sqlchoice.blob.core.windows.net/sqlchoice/static/TutorialDB.bak)。
 
 1. 使用以下详细信息，按 Azure Data Studio 中[从备份文件还原数据库](../../azure-data-studio/tutorial-backup-restore-sql-server.md#restore-a-database-from-a-backup-file)中的说明操作：
@@ -90,20 +99,33 @@ ms.locfileid: "83606906"
    USE TutorialDB;
    SELECT * FROM [dbo].[rental_data];
    ```
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+1. 下载文件 [TutorialDB.bak](https://sqlchoice.blob.core.windows.net/sqlchoice/static/TutorialDB.bak)。
 
-1. 通过运行以下 SQL 命令来启用外部脚本：
+1. 按照 SQL Server Management Studio 中的[将数据库还原到托管实例](/azure/sql-database/sql-database-managed-instance-get-started-restore)中的说明，使用以下详细信息：
 
-    ```sql
-    sp_configure 'external scripts enabled', 1;
-    RECONFIGURE WITH override;
-    ```
+   * 从下载的 **TutorialDB.bak** 文件中导入
+   * 将目标数据库命名为“TutorialDB”
+
+1. 可以通过查询 dbo.rental_data 表来验证是否存在还原的数据集：
+
+   ```sql
+   USE TutorialDB;
+   SELECT * FROM [dbo].[rental_data];
+   ```
+::: moniker-end
+
+## <a name="clean-up-resources"></a>清理资源
+
+如果不打算继续学习本教程，请删除 TutorialDB 数据库。
 
 ## <a name="next-steps"></a>后续步骤
 
 在本系列教程的第一部分中，你已完成以下步骤：
 
 * 安装必备组件
-* 将示例数据库导入 SQL Server
+* 导入示例数据库
 
 若要从 TutorialDB 数据库中准备数据，请按照本教程系列的第二部分进行操作：
 

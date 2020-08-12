@@ -1,6 +1,7 @@
 ---
 title: 将跟踪结果保存到表
 titleSuffix: SQL Server Profiler
+description: 了解如何使用 SQL Server Profiler 将跟踪结果保存到 SQL Server 数据库中的表。 了解如何指定要保存的最大行数。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 6fb406988c9aeb92e7f0c1d3689e5b513a7ea0d3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bc7cb3a37d2fc7683321ca666f408f475b9ffa02
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307435"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726901"
 ---
 # <a name="save-trace-results-to-a-table-sql-server-profiler"></a>将跟踪结果保存到表 (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 本主题说明如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]将跟踪结果保存到数据库表。  
   
@@ -31,19 +32,19 @@ ms.locfileid: "75307435"
      将出现“跟踪属性”对话框。 **“跟踪属性”** 对话框。  
   
     > [!NOTE]  
-    >  如果选择“建立连接后立即开始跟踪”  ，则不会显示“跟踪属性”  对话框，而是开始跟踪。 若要关闭此设置，请在“工具”  菜单上，单击“选项”  ，然后清除“建立连接后立即开始跟踪”  复选框。  
+    >  如果选择“建立连接后立即开始跟踪”，则不会显示“跟踪属性”对话框，而是开始跟踪。 若要关闭此设置，请在“工具”菜单上，单击“选项”，然后清除“建立连接后立即开始跟踪”复选框。  
   
 2.  在 **“跟踪名称”** 框中，键入跟踪的名称，然后单击 **“保存到表”** 。  
   
 3.  在 **“连接到服务器”** 对话框中，连接到将包含跟踪表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。  
   
-4.  在“目标表”  对话框中，从“数据库”  列表中选择一个数据库。  
+4.  在“目标表”对话框中，从“数据库”列表中选择一个数据库。  
   
 5.  在 **“所有者”** 列表中，选择此跟踪的所有者。  
   
 6.  在 **“表”** 列表中，键入或选择跟踪结果的表名。 单击“确定” **。**  
   
-7.  在“跟踪属性”  对话框中，选中“设置最大行数(以千为单位)”  复选框以指定要保存的最大行数。  
+7.  在“跟踪属性”对话框中，选中“设置最大行数(以千为单位)”复选框以指定要保存的最大行数。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  

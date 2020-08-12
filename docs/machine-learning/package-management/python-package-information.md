@@ -4,34 +4,36 @@ description: 了解如何获取关于 SQL Server 机器学习服务上安装的 
 ms.custom: ''
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/01/2020
-ms.topic: conceptual
+ms.date: 06/03/2020
+ms.topic: how-to
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fb08940a9a6c9c15d8c633f5b3c439514bc43646
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: cecd267627b32b989913ace5e374c74543e69ba4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83605949"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85671100"
 ---
 # <a name="get-python-package-information"></a>获取 Python 包信息
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-本文介绍如何获取关于 SQL Server 机器学习服务上安装的 Python 包的信息（包括版本和安装位置）。 示例 Python 脚本显示如何列出安装路径和版本等包信息。
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+本文介绍如何获取 [SQL Server 的机器学习服务上](../sql-server-machine-learning-services.md)以及[大数据群集](../../big-data-cluster/machine-learning-services.md)上安装的 Python 包的相关信息（包括版本和安装位置）。 示例 Python 脚本显示如何列出安装路径和版本等包信息。
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+本文介绍如何获取关于 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)上安装的 Python 包的信息（包括版本和安装位置）。 示例 Python 脚本显示如何列出安装路径和版本等包信息。
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+本文介绍如何获取关于 [Azure SQL 托管实例机器学习服务](/azure/azure-sql/managed-instance/machine-learning-services-overview)上安装的 Python 包的信息（包括版本和安装位置）。 示例 Python 脚本显示如何列出安装路径和版本等包信息。
+::: moniker-end
 
 ## <a name="default-python-library-location"></a>Python 库默认位置
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 使用 SQL Server 安装机器学习时，会在实例级别为安装的每种语言创建一个包库。 实例库是注册到 SQL Server 中的安全文件夹。
-::: moniker-end
-
-::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
-使用 SQL Server 安装机器学习时，会在实例级别为安装的每种语言创建一个包库。
-::: moniker-end
 
 在 SQL Server 上的数据库内运行的所有脚本或代码都必须加载实例库中的函数。 SQL Server 无法访问安装到其他库的包。 这也适用于远程客户端：在服务器计算上下文中运行的任何 Python 代码只能使用实例库中安装的包。
 若要保护服务器资产，只能由计算机管理员修改默认实例库。
@@ -59,7 +61,7 @@ sp_configure 'external scripts enabled', 1;
 RECONFIGURE WITH override;
 ```
 
-运行以下语句来验证当前实例的默认库。 此示例返回 Python `sys.path` 变量中包含的文件夹列表。 此列表包括当前目录和标准库路径。
+如果想验证当前实例的默认库，请运行以下 SQL 语句。 此示例返回 Python `sys.path` 变量中包含的文件夹列表。 此列表包括当前目录和标准库路径。
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -68,6 +70,11 @@ EXECUTE sp_execute_external_script
 ```
 
 有关变量 `sys.path` 以及如何使用它为模块设置解释器搜索路径的详细信息，请参阅[模块搜索路径](https://docs.python.org/2/tutorial/modules.html#the-module-search-path)。
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+> [!NOTE]
+> 请勿尝试使用 pip 或类似方法直接在 SQL 包库中安装 Python 包。 相反，请使用 sqlmlutils 在 SQL 实例中安装包。 有关详细信息，请参阅[使用 sqlmlutils 安装 Python 包](install-additional-python-packages-on-sql-server.md)。
+::: moniker-end
 
 ## <a name="default-microsoft-python-packages"></a>默认 Microsoft Python 包
 
@@ -123,7 +130,7 @@ EXECUTE sp_execute_external_script
   @language = N'Python',
   @script = N'
 import pkg_resources
-pkg_name = "pandas"
+pkg_name = "scikit-learn"
 try:
     version = pkg_resources.get_distribution(pkg_name).version
     print("Package " + pkg_name + " is version " + version)
@@ -135,22 +142,13 @@ except:
 结果：
 
 ```text
-STDOUT message(s) from external script: Package pandas is version 0.23.4
+STDOUT message(s) from external script: Package scikit-learn is version 0.20.2
 ```
 
-下面的示例输出 `pandas` 包的版本。
+<a name="bkmk_SQLPythonVersion"></a>
+## <a name="view-the-version-of-python"></a>查看 Python 版本
 
-```sql
-EXECUTE sp_execute_external_script
-  @language = N'Python',
-  @script = N'
-import pkg_resources
-pkg_name = "pandas"
-print(pkg_name + " package is version " + pkg_resources.get_distribution(pkg_name).version)
-'
-```
-
-下面的示例返回 Python 的版本。
+以下示例代码返回 SQL Server 的实例中安装的 Python 版本。
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -163,9 +161,9 @@ print(sys.version)
 
 ## <a name="next-steps"></a>后续步骤
 
-::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 + [使用 Python 工具来安装包](install-python-packages-standard-tools.md)
 ::: moniker-end
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 + [使用 sqlmlutils 来安装新的 Python 包](install-additional-r-packages-on-sql-server.md)
 ::: moniker-end

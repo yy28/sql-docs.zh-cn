@@ -1,5 +1,6 @@
 ---
 title: 指定序列的图表区域（报表生成器）| Microsoft Docs
+description: 了解报表生成器中作为顶级容器（包含外部边框、图表标题和图例）的图表区域。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,15 +12,15 @@ f1_keywords:
 ms.assetid: dc3c365b-c263-402a-bf6f-c2a7081db073
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 32f16dd226167c180de81a456a6493f1c717b481
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4a537d0319bb3cb035a8bff5891c24449de77777
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080954"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057567"
 ---
 # <a name="specify-a-chart-area-for-a-series-report-builder-and-ssrs"></a>指定序列的图表区（报表生成器和 SSRS）
-  在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，“图表”  为包括外部边框、图表标题和图例的顶级容器。 默认情况下，图表包含一个“图表区域”  。 图表区在图表表面上不可见，但您可将图表区当作只包含轴标签、轴标题和一个或多个序列的绘图区的容器。 下图说明了单个图表中的多个图表区的概念。  
+  在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，“图表”为包括外部边框、图表标题和图例的顶级容器。 默认情况下，图表包含一个“图表区域”。 图表区在图表表面上不可见，但您可将图表区当作只包含轴标签、轴标题和一个或多个序列的绘图区的容器。 下图说明了单个图表中的多个图表区的概念。  
   
  ![显示图表区域关系图](../../reporting-services/report-design/media/chartareasdiagram.gif "显示图表区域关系图")  
   
@@ -32,13 +33,13 @@ ms.locfileid: "77080954"
   
 ## <a name="to-associate-a-series-with-a-new-chart-area"></a>将序列与新的图表区相关联  
   
-1.  右键单击图表上的任意位置并选择“添加新图表区域”  。 图表上将出现一个新的空白图表区。  
+1.  右键单击图表上的任意位置并选择“添加新图表区域”。 图表上将出现一个新的空白图表区。  
   
-2.  右键单击图表上的序列或右键单击“图表数据”窗格中的相应区域中的序列或数据字段，然后单击“序列属性”  。  
+2.  右键单击图表上的序列或右键单击“图表数据”窗格中的相应区域中的序列或数据字段，然后单击“序列属性”****。  
   
 3.  在 **“轴和图表区”** 中，选择要在其中显示序列的图表区。  
   
-4.  （可选）将图表区垂直对齐。 若要执行此操作，请右键单击图表并选择“图表区域属性”  。 在 **“对齐”** 中，选择要将选中的图表区与其对齐的另一图表区。  
+4.  （可选）将图表区垂直对齐。 若要执行此操作，请右键单击图表并选择“图表区域属性”。 在 **“对齐”** 中，选择要将选中的图表区与其对齐的另一图表区。  
   
 ## <a name="see-also"></a>另请参阅  
  [图表中的多个序列（报表生成器和 SSRS）](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md)   

@@ -1,6 +1,6 @@
 ---
 title: 报表中的分页（报表生成器和 SSRS）| Microsoft Docs
-description: 分页指的是分页报表内的页数以及报表项在这些页上的排列方式。 Reporting Services 中的分页取决于用来查看和传递报表的呈现扩展插件。
+description: 了解报表生成器中分页报表内的页数以及报表项在这些页上的排列方式。
 ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e0894b0d-dc5b-4a75-8142-75092972a034
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2c3ce298553ebe5103cc8639a3a86e14977725ce
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8b308503f2aafb1fcbfd88b3e7509906cafad8a1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75247340"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006162"
 ---
 # <a name="pagination-in-reports-report-builder--and-ssrs"></a>报表中的分页（报表生成器和 SSRS）
   分页指的是分页报表内的页数以及报表项在这些页上的排列方式。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的分页方式因您用来查看和传递报表的呈现扩展插件而异。 在报表服务器上运行报表时，相应报表使用的是 HTML 呈现器。 HTML 遵循一组特定的分页规则。 如果将同一报表导出为其他格式，例如 PDF，系统会使用 PDF 呈现器并应用另一组规则；因此，该报表的分页方式就会不同。 若要成功设计一个对用户而言易于阅读、对准备用于传递报表的呈现器而言最优的报表，需要了解在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中用于控制分页的规则。  
@@ -35,21 +35,21 @@ ms.locfileid: "75247340"
 ## <a name="the-physical-page"></a>物理页  
  物理页大小为纸张大小。 您为报表指定的纸张大小控制着报表的呈现方式。 以硬分页符格式呈现的报表会根据物理页大小在水平方向和垂直方向上插入分页符，以便在以硬分页符文件格式打印或查看时提供最佳的阅读体验。 以软分页符格式呈现的报表会根据物理页大小在水平方向上插入分页符，以便在 Web 浏览器中查看时提供最佳的阅读体验。  
   
- 默认情况下，页面大小为 8.5 x 11 英寸，但可以通过以下方式更改此大小：使用“报表属性”窗格、“页面设置”对话框，或在“属性”窗格中更改 PageHeight 和 PageWidth 属性    。 页大小不会扩大或收缩以容纳表体的内容。 如果希望报表显示在单个页上，则物理页上必须能够容纳表体中的所有内容。 如果无法容纳并且您使用的是硬分页符格式，则报表将需要占用其他页。 如果表体因扩大而超过了物理页的右边缘，则会在水平方向上插入一个分页符。 如果表体因扩大而超过了物理页的下边缘，则会在垂直方向上插入一个分页符。  
+ 默认情况下，页面大小为 8.5 x 11 英寸，但可以通过以下方式更改此大小：使用“报表属性”窗格、“页面设置”对话框，或在“属性”窗格中更改 PageHeight 和 PageWidth 属性************。 页大小不会扩大或收缩以容纳表体的内容。 如果希望报表显示在单个页上，则物理页上必须能够容纳表体中的所有内容。 如果无法容纳并且您使用的是硬分页符格式，则报表将需要占用其他页。 如果表体因扩大而超过了物理页的右边缘，则会在水平方向上插入一个分页符。 如果表体因扩大而超过了物理页的下边缘，则会在垂直方向上插入一个分页符。  
   
  如果要覆盖报表中定义的物理页大小，可以使用您用来导出报表的特定呈现器的“设备信息”设置来指定物理页大小。 有关详细信息，请参阅 [Reporting Services Device Information Settings](../device-information-settings-for-rendering-extensions-reporting-services.md)（Reporting Services 设备信息设置）。  
   
 ### <a name="margins"></a>边距  
- 边距从物理页大小的边缘开始向内绘制到指定的边距设置。 如果一个报表项延伸至边距区域内，则会裁剪该项以便不呈现重叠区域。 如果您指定的边距大小导致页的水平宽度或垂直宽度等于零，则边距设置默认为零。 可通过以下方法指定边距：使用“报表属性”窗格、“页面设置”对话框，或在“属性”窗格中更改 TopMargin、BottomMargin、LeftMargin 和 RightMargin 属性    。 如果要覆盖报表中定义的边距大小，可以使用您用来导出报表的特定呈现器的“设备信息”设置来指定边距大小。  
+ 边距从物理页大小的边缘开始向内绘制到指定的边距设置。 如果一个报表项延伸至边距区域内，则会裁剪该项以便不呈现重叠区域。 如果您指定的边距大小导致页的水平宽度或垂直宽度等于零，则边距设置默认为零。 可通过以下方法指定边距：使用“报表属性”窗格、“页面设置”对话框，或在“属性”窗格中更改 TopMargin、BottomMargin、LeftMargin 和 RightMargin 属性************。 如果要覆盖报表中定义的边距大小，可以使用您用来导出报表的特定呈现器的“设备信息”设置来指定边距大小。  
   
- 为边距、列间距、页眉和页脚分配空间后剩下的物理页区域称为“可用页区域”  。 只有在您以硬分页符呈现器格式呈现和打印报表时才会应用边距。 下图指示了一个物理页的边距和可用页区域。  
+ 为边距、列间距、页眉和页脚分配空间后剩下的物理页区域称为“可用页区域” **。 只有在您以硬分页符呈现器格式呈现和打印报表时才会应用边距。 下图指示了一个物理页的边距和可用页区域。  
   
  ![带有边距和可用区域的物理页。](../../reporting-services/report-design/media/rspagemargins.gif "带有边距和可用区域的物理页。")  
   
 ### <a name="newsletter-style-columns"></a>新闻稿样式列  
  报表可分成多列（就像报纸中的各栏一样），这些列被视为在同一物理页上呈现的逻辑页。 这些列按从左到右、从上到下的方式排列，各列之间以空白隔开。 如果报表分成多个列，则每个物理页被垂直划分为多个列，每列被视为一个逻辑页。 例如，假定在一个物理页上有两列。 报表内容将首先填充第一列，然后填充第二列。 如果在前两列中不能完全容纳此报表，则此报表会依次填充下一页上的第一列和第二列。 将按从左到右、从上到下的顺序继续填充列，直到呈现完所有报表项为止。 如果您指定的列大小导致水平宽度或垂直宽度等于零，则列间距默认为零。  
   
- 可通过以下方法指定列：使用“报表属性”窗格、“页面设置”对话框，或在“属性”窗格中更改 TopMargin、BottomMargin、LeftMargin 和 RightMargin 属性    。 如果要使用未定义的边距大小，可以使用您用来导出报表的特定呈现器的“设备信息”设置来指定边距大小。 只有在以 PDF 或图像格式呈现和打印报表时才会应用列。 下图指示了一个包含多个列的页的可用页区域。  
+ 可通过以下方法指定列：使用“报表属性”窗格、“页面设置”对话框，或在“属性”窗格中更改 TopMargin、BottomMargin、LeftMargin 和 RightMargin 属性************。 如果要使用未定义的边距大小，可以使用您用来导出报表的特定呈现器的“设备信息”设置来指定边距大小。 只有在以 PDF 或图像格式呈现和打印报表时才会应用列。 下图指示了一个包含多个列的页的可用页区域。  
   
  ![带有所述列的物理页。](../../reporting-services/report-design/media/rspagecolumns.gif "带有所述列的物理页。")  
   
@@ -70,7 +70,7 @@ ms.locfileid: "75247340"
   
 -   ResetPageNumber 指示在出现分页符是否应将页码重置为 1。 如果此属性的求值结果为 True，则重置页码。  
   
- 可以在“Tablix 属性”、“矩形属性”或“组属性”对话框中设置 BreakLocation 属性，但必须在报表生成器的“属性”窗格中设置 Disabled、ResetPageNumber 和 PageName 属性    。 如果“属性”窗格中的属性按类别进行组织，则您将在 **PageBreak** 类别中找到这些属性。 对于组， **PageBreak** 类别位于 **“组”** 类别内。  
+ 可以在“Tablix 属性”、“矩形属性”或“组属性”对话框中设置 BreakLocation 属性，但必须在报表生成器的“属性”窗格中设置 Disabled、ResetPageNumber 和 PageName 属性************。 如果“属性”窗格中的属性按类别进行组织，则您将在 **PageBreak** 类别中找到这些属性。 对于组， **PageBreak** 类别位于 **“组”** 类别内。  
   
  可以使用常量以及简单或复杂表达式来设置 Disabled 和 ResetPageNumber 属性的值。 但是，不能将表达式用于 BreakLocation 属性。 有关编写和使用表达式的详细信息，请参阅[表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)。  
   

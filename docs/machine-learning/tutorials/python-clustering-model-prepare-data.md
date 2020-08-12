@@ -5,23 +5,22 @@ description: 此教程包括四个部分，在第二部分中，你将准备 SQL
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
-ms.date: 04/15/2020
+ms.date: 05/21/2020
 ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 25ccde4580e43ce68b74ef32f37f9c92cad12dfe
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 436546f7b84d561a3605912a7af55a0a1ad19315
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606839"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730497"
 ---
 # <a name="python-tutorial-prepare-data-to-categorize-customers-with-sql-machine-learning"></a>Python 教程：准备数据以通过 SQL 机器学习对客户进行聚类分析
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 此教程包括四分部分，在第二部分中，你将使用 Python 从数据库还原和准备数据。 在本系列的后续部分中，你将在 SQL Server 机器学习服务中或大数据群集上通过 Python 使用这些数据训练并部署聚类分析模型。
@@ -29,12 +28,15 @@ ms.locfileid: "83606839"
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 此教程包括四分部分，在第二部分中，你将使用 Python 从数据库还原和准备数据。 在本系列的后续部分中，使用这些数据在 Python 中通过 SQL Server 机器学习服务来定型和部署聚类分析模型。
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+此教程包括四分部分，在第二部分中，你将使用 Python 从数据库还原和准备数据。 在本系列的后面部分，将通过 Azure SQL 托管实例机器学习服务在 Python 中使用此数据训练和部署聚类分析模型。
+::: moniker-end
 
 本文将指导如何进行以下操作：
 
 > [!div class="checklist"]
 > * 使用 Python 按不同维度对客户进行分隔
-> * 将 SQL 数据库中的数据加载到 Python 数据帧中
+> * 将数据库中的数据加载到 Python 数据帧中
 
 在[第一部分](python-clustering-model.md)中，你安装了必备条件并还原了示例数据库。
 
@@ -75,7 +77,7 @@ from sklearn import cluster as sk_cluster
 ################################################################################################
 
 # Connection string to connect to SQL Server named instance.
-conn_str = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER=<SQL Server>; DATABASE=tpcxbb_1gb; Trusted_Connection=yes')
+conn_str = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER=<server>; DATABASE=tpcxbb_1gb; UID=<username>; PWD=<password>')
 
 input_query = '''SELECT
 ss_customer_sk AS customer,

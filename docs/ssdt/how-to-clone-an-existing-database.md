@@ -1,23 +1,23 @@
 ---
 title: 克隆现有数据库
+description: 了解如何克隆数据库。 查看创建新数据库、复制数据库架构及其数据所涉及的步骤。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: aad3594a-11cf-4e68-a622-071a93d43875
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 79dc8d87ab950336766283be20d79536b31a3cdd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 03dedf5c30c8370195243c11406552d12edd8394
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241592"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518897"
 ---
-# <a name="how-to-clone-an-existing-database"></a>如何克隆现有数据库
+# <a name="how-to-clone-an-existing-database"></a>如何：克隆现有数据库
 
 此任务将使用您在以前的过程中学习的某些步骤来创建新数据库并将现有数据移植到其中。 此外，它还使用[如何：使用架构比较来比较不同数据库定义](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)中讨论的步骤以同步源和项目数据库的架构。  
   
@@ -28,13 +28,13 @@ ms.locfileid: "75241592"
   
 ### <a name="to-create-a-development-database"></a>创建开发数据库  
   
-1.  在 SQL Server 对象资源管理器  中，在“SQL Server”  节点下，展开你的连接的服务器实例。  
+1.  在 SQL Server 对象资源管理器中，在“SQL Server”节点下，展开你的连接的服务器实例。  
   
-2.  右键单击“数据库”  节点，然后选择“添加新数据库”  。  
+2.  右键单击“数据库”节点，然后选择“添加新数据库”。  
   
-3.  将这个新数据库重命名为 TradeDev  。  
+3.  将这个新数据库重命名为 TradeDev。  
   
-4.  右键单击“SQL Server 对象资源管理器”中的“Trade”数据库，然后选择“架构比较”。 按照[如何：使用架构比较来比较不同数据库定义](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)主题中的步骤，选择原始的 Trade  数据库作为源，选择新的 TradeDev  数据库作为目标。 这将使用来自 Trade 的架构更新 TradeDev。  
+4.  右键单击“SQL Server 对象资源管理器”中的“Trade”数据库，然后选择“架构比较”。 按照[如何：使用架构比较来比较不同数据库定义](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)主题中的步骤，选择原始的 Trade**** 数据库作为源，选择新的 TradeDev**** 数据库作为目标。 这将使用来自 Trade 的架构更新 TradeDev。  
   
 ### <a name="to-replicate-data"></a>复制数据  
   
@@ -44,11 +44,11 @@ ms.locfileid: "75241592"
   
 2.  在工具栏中单击“最大行”旁边的“脚本”按钮。  
   
-3.  在脚本窗口打开后，请确保 Connected 显示在 Transact\-SQL 脚本窗格之下的状态栏中。 如果显示 Disconnected，则单击“连接”  按钮（工具栏中最左侧的按钮）并且输入你的服务器信息和凭据。  
+3.  在脚本窗口打开后，请确保 Connected 显示在 Transact\-SQL 脚本窗格之下的状态栏中。 如果显示 Disconnected，则单击“连接”按钮（工具栏中最左侧的按钮）并且输入你的服务器信息和凭据。  
   
-4.  在“连接”/“断开连接”按钮旁的“数据库”下拉菜单中，选择 TradeDev。 这类似于 Transact\-SQL`USE` 语句，并且将确保代码编辑器中的脚本将对 TradeDev  数据库执行。  
+4.  在“连接”/“断开连接”按钮旁的“数据库”下拉菜单中，选择 TradeDev。 这类似于 Transact\-SQL`USE` 语句，并且将确保代码编辑器中的脚本将对 TradeDev**** 数据库执行。  
   
-5.  单击“执行查询”  按钮以执行 `INSERT` 语句。 这会将来自 `Suppliers` 数据库的 `Trade` 表的所有行插入到 `Suppliers` 数据库的 `TradeDev` 表中。  
+5.  单击“执行查询”按钮以执行 `INSERT` 语句。 这会将来自 `Suppliers` 数据库的 `Trade` 表的所有行插入到 `Suppliers` 数据库的 `TradeDev` 表中。  
   
 6.  为 `Trade` 数据库中的所有表重复上述步骤，以便它们复制到 `TradeDev` 数据库中。  
   

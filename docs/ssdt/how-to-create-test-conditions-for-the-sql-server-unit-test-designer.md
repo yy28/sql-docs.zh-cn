@@ -1,21 +1,21 @@
 ---
 title: 为 SQL Server 单元测试设计器创建测试条件
+description: 请参阅如何扩展 TestCondition 类，为 SQL Server 单元测试设计器创建自定义测试条件。 查看自定义测试条件的示例。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 48076062-1ef5-419a-8a55-3c7b4234cc35
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 75d65bb7b30a8a48a35ada0c929ddf4698ad8408
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e34ca98e6a6a9423bd0237c980e15b91fcdd9aa6
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241480"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518887"
 ---
 # <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>如何：为 SQL Server 单元测试设计器创建测试条件
 
@@ -26,15 +26,15 @@ ms.locfileid: "75241480"
   
 1.  在 Visual Studio 中，创建一个类库项目。  
   
-2.  在“项目”  菜单上，单击“添加引用”  。  
+2.  在“项目”菜单上，单击“添加引用”。  
   
-3.  单击 .NET  选项卡。  
+3.  单击 .NET 选项卡。  
   
-4.  在“组件名称”  列表中，选择“System.ComponentModel.Composition”  ，然后单击“确定”  。  
+4.  在“组件名称”列表中，选择“System.ComponentModel.Composition”，然后单击“确定”。  
   
-5.  添加所需的程序集引用。 右键单击项目节点，然后单击“添加引用”  。 单击“浏览”  ，并导航到 C:\Program Files (x86)\\MicrosoftSQL Server\110\DAC\Bin 文件夹。 选择 Microsoft.Data.Tools.Schema.Sql.dll 并单击“添加”，然后单击“确定”。  
+5.  添加所需的程序集引用。 右键单击项目节点，然后单击“添加引用”。 单击“浏览”，并导航到 C:\Program Files (x86)\\MicrosoftSQL Server\110\DAC\Bin 文件夹。 选择 Microsoft.Data.Tools.Schema.Sql.dll 并单击“添加”，然后单击“确定”。  
   
-6.  在“项目”  菜单上，单击“卸载项目”  。  
+6.  在“项目”菜单上，单击“卸载项目”。  
   
 7.  在“解决方案资源管理器”中右键单击项目，然后选择“编辑 <project name>.csproj”。  
   
@@ -45,11 +45,11 @@ ms.locfileid: "75241480"
     <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.Sql.UnitTesting.targets" Condition="'$(VisualStudioVersion)' != ''" />  
     ```  
   
-9. 保存文件并将其关闭。 在“解决方案资源管理器”  中右键单击该项目，然后选择“重新加载项目”  。  
+9. 保存文件并将其关闭。 在“解决方案资源管理器”中右键单击该项目，然后选择“重新加载项目”。  
   
 10. 从 [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) 类派生你的类。  
   
-11. 用强名称为程序集签名。 有关更多信息，请参见[如何：使用强名称为程序集签名](https://msdn.microsoft.com/library/xc31ft41.aspx)。  
+11. 用强名称为程序集签名。 有关详细信息，请参阅[操作说明：使用强名称为程序集签名](https://msdn.microsoft.com/library/xc31ft41.aspx)。  
   
 12. 生成类库。  
   
@@ -179,7 +179,7 @@ namespace Ssdt.Samples.SqlUnitTesting
 |特性参数|位置|说明|  
 |-----------------------|------------|---------------|  
 |DisplayName|1|在“测试条件”组合框中标识字符串。 此名称必须唯一。 如果两个条件具有相同的显示名称，将向用户显示找到的第一个条件，并且在 Visual Studio 错误管理器将显示警告。|  
-|ImplementingType|2|该参数用于唯一标识扩展。 您需要更改该参数以便匹配您要放置特性的类型。 本示例使用 ResultSetColumnCountCondition  类型，因此请使用 typeof(ResultSetColumnCountCondition)  。 如果你的类型是 NewTestCondition  ，请使用 typeof(NewTestCondition)  。|  
+|ImplementingType|2|该参数用于唯一标识扩展。 您需要更改该参数以便匹配您要放置特性的类型。 本示例使用 ResultSetColumnCountCondition 类型，因此请使用 typeof(ResultSetColumnCountCondition)。 如果你的类型是 NewTestCondition，请使用 typeof(NewTestCondition)。|  
   
 在这个示例中，您添加两个属性。 自定义测试条件的用户可以使用 ResultSet 属性指定应验证其列计数的结果集。 然后，用户可以使用 Count 属性指定期望的列计数。  
   

@@ -1,21 +1,21 @@
 ---
 title: 扩展数据库功能
+description: 了解如何扩展数据库功能。 查看有关自定义测试条件、生成和部署参与者以及其他功能扩展的信息。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 1c43d9e4-6fb1-4d15-a5fb-cd572daf2951
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 4006237a90f876228108504b90a26d371af4fc1d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cd0ba3850c401c57b0f478eba1ba6f8013f4a4d0
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241662"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518947"
 ---
 # <a name="extending-the-database-features"></a>扩展数据库功能
 

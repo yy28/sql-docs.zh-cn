@@ -1,7 +1,7 @@
 ---
 title: Microsoft.Data.SqlClient 命名空间简介
 description: Microsoft.Data.SqlClient 命名空间的简介页面。
-ms.date: 09/30/2019
+ms.date: 06/23/2019
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,26 +10,129 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 9a5f787e9cd95e3d2966e5bc2b722aada5b97032
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3a4f0611d3708aba9557deb81ab702f29e7a7462
+ms.sourcegitcommit: 22f687e9e8b4f37b877b2d19c5090dade8fa26d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928999"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85334588"
 ---
 # <a name="introduction-to-microsoftdatasqlclient-namespace"></a>Microsoft.Data.SqlClient 命名空间简介
 
-[!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
+[!INCLUDE [Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
+
+## <a name="release-notes-for-microsoftdatasqlclient-20"></a>Microsoft.Data.SqlClient 2.0 发行说明
+
+GitHub 存储库中也提供了发行说明：[2.0 发行说明](https://github.com/dotnet/SqlClient/tree/master/release-notes/2.0)。
+
+### <a name="breaking-changes"></a>中断性变更
+
+- Enclave 提供程序接口 `SqlColumnEncryptionEnclaveProvider` 的访问修饰符已从 `public` 更改为 `internal`。
+
+- `SqlClientMetaDataCollectionNames` 类中的常量已更新，以反映 SQL Server 中的更改。
+
+- 驱动程序现在将在目标 SQL Server 强制执行 TLS 加密时执行服务器证书验证，这是 Azure 连接的默认设置。
+
+- `SqlDataReader.GetSchemaTable()` 现在返回空 `DataTable`，而不是 `null`。
+
+- 驱动程序现执行十进制小数位舍入以匹配 SQL Server 行为。 为实现后向兼容性，可使用 AppContext 开关启用之前的截断行为。
+
+- 对于使用 Microsoft.Data.SqlClient 的 .NET Framework 应用程序，之前下载到 `bin\x64` 和 `bin\x86` 文件夹的 SNI.dll 文件现命名为 `Microsoft.Data.SqlClient.SNI.x64.dll` 和 ` Microsoft.Data.SqlClient.SNI.x86.dll` 并将下载到 `bin` 目录。
+
+- 从 `SqlConnectionStringBuilder` 获取连接字符串时，新的连接字符串属性同义词将替换旧的属性，以确保一致性。 [阅读详细信息](#new-connection-string-property-synonyms)
+
+### <a name="new-features"></a>新增功能
+
+#### <a name="dns-failure-resiliency"></a>DNS 故障复原
+
+驱动程序现会将 IP 地址从每个成功连接缓存到支持该功能的 SQL Server 终结点。 如果在连接尝试期间发生 DNS 解析失败，驱动程序将尝试使用该服务器的已缓存 IP 地址（如存在）建立连接。 
+
+#### <a name="eventsource-tracing"></a>EventSource 跟踪
+
+此版本引入了对捕获用于调试应用程序的事件跟踪日志的支持。 若要捕获这些事件，客户端应用程序必须侦听来自 SqlClient 的 EventSource 实现的事件：
+
+```
+Microsoft.Data.SqlClient.EventSource
+```
+
+有关详细信息，请参阅如何[在 SqlClient 中启用事件跟踪](enable-eventsource-tracing.md)。
+
+#### <a name="enabling-managed-networking-on-windows"></a>在 Windows 上启用托管网络
+
+新的 AppContext 开关“Switch.Microsoft.Data.SqlClient.UseManagedNetworkingOnWindows”支持在 Windows 上使用托管的 SNI 实现进行测试和调试。 此开关将切换驱动程序的行为，以便在 Windows 上的 .NET Core 2.1+ 和 .NET Standard 2.0+ 项目中使用托管的 SNI，从而消除对 Microsoft.Data.SqlClient 库的本机库的所有依赖项。
+
+```csharp
+AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.UseManagedNetworkingOnWindows", true);
+```
+
+有关驱动程序中可用开关的完整列表，请参阅 [SqlClient 中的 AppContext 开关](appcontext-switches.md)。
+
+#### <a name="enabling-decimal-truncation-behavior"></a>启用小数截断行为 
+
+默认情况下，驱动程序将舍入十进制数据小数位，这与 SQL Server 一样。 为实现后向兼容性，可将 AppContext 开关“Switch.Microsoft.Data.SqlClient.TruncateScaledDecimal”设置为“true” 。
+
+```csharp
+AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.TruncateScaledDecimal", true);
+```
+
+#### <a name="new-connection-string-property-synonyms"></a>新的连接字符串属性同义词
+
+已为以下现有的连接字符串属性添加了新的同义词，避免在包含多个字词的属性周围出现间距混淆。 旧属性名称将继续得到支持以实现后向兼容性，但在从 [SqlConnectionStringBuilder](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlconnectionstringbuilder) 中提取连接字符串时，新的连接字符串属性现在将包括在内。
+
+|现有的连接字符串属性|新的同义词|
+|-----------------------------------|-----------|
+| ApplicationIntent | 应用程序意向 |
+| ConnectRetryCount | 连接重试计数 |
+| ConnectRetryInterval | 连接重试间隔 |
+| PoolBlockingPeriod | 池阻塞期 |
+| MultipleActiveResultSets | 多重活动结果集 |
+| MultiSubnetFailover | 多重子网故障转移 |
+| TransparentNetworkIPResolution | 透明网络 IP 解析 |
+| TrustServerCertificate | 信任服务器证书 |
+
+#### <a name="sqlbulkcopy-rowscopied-property"></a>SqlBulkCopy RowsCopied 属性
+
+RowsCopied 属性提供对已在正在进行的大容量复制操作中处理的行数的只读访问。 此值不一定等于添加到目标表中的最终行数。 
+
+#### <a name="connection-open-overrides"></a>连接打开替代
+
+可替代 SqlConnection.Open() 的默认行为，以禁用由暂时性错误触发的 10 秒延迟和自动连接重试。
+
+```csharp
+using SqlConnection sqlConnection = new SqlConnection("Data Source=(local);Integrated Security=true;Initial Catalog=AdventureWorks;");
+sqlConnection.Open(SqlConnectionOverrides.OpenWithoutRetry);
+```
+
+> [!NOTE]
+> 请注意，此替代只能应用于 SqlConnection.Open()，而不能应用于 SqlConnection.OpenAsync()。
+
+#### <a name="username-support-for-active-directory-interactive-mode"></a>对 Active Directory 交互模式的用户名支持
+
+对 .NET Framework 和 .NET Core 使用 Azure Active Directory 交互身份验证模式时，可在连接字符串中指定用户名
+
+使用“用户 ID”或“UID”连接字符串属性设置用户名 ：
+
+```
+"Server=<server name>; Database=<db name>; Authentication=Active Directory Interactive; User Id=<username>;"
+```
+
+#### <a name="order-hints-for-sqlbulkcopy"></a>SqlBulkCopy 的排序提示
+
+可提供排序提示，提高对具有聚集索引的表进行大容量复制操作的性能。 有关详细信息，请参阅[大容量复制操作](sql/bulk-copy-order-hints.md)一节。
+
+#### <a name="sni-dependency-changes"></a>SNI 依赖项更改
+
+Windows 上的 Microsoft.Data.SqlClient（.NET Core 和 .NET Standard）现依赖于 Microsoft.Data.SqlClient.SNI.runtime，取代了先前对 runtime.native.System.Data.SqlClient.SNI 的依赖 。 新的依赖项增加了对 ARM 平台以及 Windows 上已受支持的 ARM64、x64 和 x86 平台的支持。
 
 ## <a name="release-notes-for-microsoftdatasqlclient-110"></a>Microsoft.Data.SqlClient 1.1.0 的发行说明
 
 GitHub 存储库中也提供了发行说明：[1.1 发行说明](https://github.com/dotnet/SqlClient/tree/master/release-notes/1.1)。
 
-### <a name="new-features"></a>新功能
+### <a name="new-features"></a>新增功能
 
 #### <a name="always-encrypted-with-secure-enclaves"></a>具有安全 Enclave 的 Always Encrypted
 
-从 Microsoft SQL Server 2016 开始，提供 Always Encrypted。 从 Microsoft SQL Server 2019 开始，提供安全 enclave。 为了使用 enclave 功能，连接字符串应包括所需的证明协议和证明 URL。 示例：
+从 Microsoft SQL Server 2016 开始，提供 Always Encrypted。 从 Microsoft SQL Server 2019 开始，提供安全 enclave。 为使用 Enclave 功能，连接字符串应包括所需的证明协议和证明 URL。 例如：
 
 ```
 Attestation Protocol=HGS;Enclave Attestation Url=<attestation_url_for_HGS>
@@ -63,7 +166,7 @@ GitHub 存储库中也提供了发行说明：[1.0 发行说明](https://github.
 
 ### <a name="data-classification"></a>数据分类
 
-当基础源支持该功能并包含有关[数据敏感度和分类](../../relational-databases/security/sql-data-discovery-and-classification.md)的元数据时，数据分类会引入一组新的 API，公开有关通过 SqlDataReader 检索到的对象的只读数据敏感度和分类信息。
+当基础源支持该功能并包含有关[数据敏感度和分类](../../relational-databases/security/sql-data-discovery-and-classification.md)的元数据时，数据分类会引入一组新的 API，公开有关通过 SqlDataReader 检索到的对象的只读数据敏感度和分类信息。 有关示例应用程序，请参阅 [SqlClient 中的数据发现和分类](https://github.com/dotnet/SqlClient/tree/master/release-notes/1.1)。
 
 ```csharp
 public class SqlDataReader
@@ -103,11 +206,11 @@ namespace Microsoft.Data.SqlClient.DataClassification
 
 ### <a name="utf-8-support"></a>UTF-8 支持
 
-UTF-8 支持不需要更改任何应用程序代码。 当服务器支持 UTF-8 且基础列排序规则为 UTF-8 时，这些 SqlClient 更改只会优化客户端与服务器之间的通信。 请参阅 [SQL Server 2019 预览版的新增功能](../../sql-server/what-s-new-in-sql-server-ver15.md)中的 UTF-8 部分。
+UTF-8 支持不需要更改任何应用程序代码。 当服务器支持 UTF-8 且基础列排序规则为 UTF-8 时，这些 SqlClient 更改会优化客户端与服务器之间的通信。 请参阅 [SQL Server 2019 预览版的新增功能](../../sql-server/what-s-new-in-sql-server-ver15.md)中的 UTF-8 部分。
 
 ### <a name="always-encrypted-with-enclaves"></a>具有 enclave 的 Always Encrypted
 
-通常，使用 .NET Framework 上的 System.Data.SqlClient 和内置列主密钥存储提供程序  的现有文档现在还应与 .NET Core 一起使用。
+通常，使用 .NET Framework 上的 System.Data.SqlClient 和内置列主密钥存储提供程序**** 的现有文档现在还应与 .NET Core 一起使用。
 
  [配合使用 Always Encrypted 和 .NET Framework 数据提供程序进行开发](../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
 
@@ -115,7 +218,7 @@ UTF-8 支持不需要更改任何应用程序代码。 当服务器支持 UTF-8 
 
 ### <a name="authentication"></a>身份验证
 
-可以使用“身份验证”  连接字符串选项来指定不同的身份验证模式。 有关详细信息，请参阅 [SqlAuthenticationMethod 的文档](https://docs.microsoft.com/dotnet/api/system.data.sqlclient.sqlauthenticationmethod?view=netframework-4.7.2)。
+可以使用“身份验证”连接字符串选项来指定不同的身份验证模式。 有关详细信息，请参阅 [SqlAuthenticationMethod 的文档](https://docs.microsoft.com/dotnet/api/system.data.sqlclient.sqlauthenticationmethod?view=netframework-4.7.2)。
 
 > [!NOTE]
 > 自定义密钥存储提供程序（如 Azure 密钥保管库提供程序）将需要更新以支持 Microsoft.Data.SqlClient。 同样，还需要更新 enclave 提供程序以支持 Microsoft.Data.SqlClient。

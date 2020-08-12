@@ -1,5 +1,6 @@
 ---
 title: 添加或删除页眉或页脚（报表生成器）| Microsoft Docs
+description: 了解如何在报表生成器中向页眉或页脚添加静态文本、图像、线条、矩形和边框。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 72988623-fee8-4a05-9f72-8fcb8e668576
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: adb2d9d24bc353c7d1c64c328b342b24022faef8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ab6d1585b254e8c03d9e471b32d3429cc489f8a7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081557"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056538"
 ---
 # <a name="add-or-remove-a-page-header-or-footer-report-builder-and-ssrs"></a>添加或删除页眉或页脚（报表生成器和 SSRS）
   您可以向页眉或页脚添加静态文本、图像、线条、矩形和边框。 如果您希望在页眉或页脚中添加变量或计算数据，还可以在文本框中包含表达式和数据绑定图像。  
@@ -28,10 +29,10 @@ ms.locfileid: "77081557"
   
 1.  打开报表。  
   
-2.  在设计图面上，右键单击该报表，指向“插入”，然后单击“页眉”或“页脚”    。  
+2.  在设计图面上，右键单击该报表，指向“插入”，然后单击“页眉”或“页脚”  。  
   
 > [!NOTE]  
->  只有当页眉或页脚不是报表的一部分时，才会显示“页眉”和“页脚”选项   。  
+>  只有当页眉或页脚不是报表的一部分时，才会显示“页眉”和“页脚”选项 。  
   
 ### <a name="to-configure-a-page-header-or-footer"></a>配置页眉或页脚  
   
@@ -47,15 +48,15 @@ ms.locfileid: "77081557"
   
     -   **图像**  
   
-3.  右键单击页眉，然后单击“页眉属性”  添加边框、背景图像或颜色，或调整页眉宽度。 然后单击“确定”  。  
+3.  右键单击页眉，然后单击“页眉属性”**** 添加边框、背景图像或颜色，或调整页眉宽度。 然后单击“确定”。  
   
-4.  右键单击页脚，然后单击“页脚属性”  添加边框、背景图像或颜色，或调整页脚宽度。 然后单击“确定”  。  
+4.  右键单击页脚，然后单击“页脚属性”**** 添加边框、背景图像或颜色，或调整页脚宽度。 然后单击“确定”。  
   
 ### <a name="to-remove-a-page-header-or-footer"></a>删除页眉或页脚  
   
 1.  打开报表。  
   
-2.  在设计图面上，右键单击页眉或页脚，然后单击“删除”  。  
+2.  在设计图面上，右键单击页眉或页脚，然后单击“删除”。  
   
 > [!NOTE]  
 >  一旦删除，报表中将不再包含页眉或页脚。 如果随后再次添加页眉或页脚，您之前添加到页眉或页脚中的任何项都将不再显示。  

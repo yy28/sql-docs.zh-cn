@@ -1,5 +1,6 @@
 ---
 title: 设置和配置度量单位（报表生成器）| Microsoft Docs
+description: 了解如何使用报表生成器中的表达式设置和配置分页报表中的度量单位。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a15a96c3-7d2c-433e-a440-4ea051e967a9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7651373c21b2e22d88a11d196e3f5c0322b07fe0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f0d8da0aff1c553feec2c77f90cc4b43a2a7ef54
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081020"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84886561"
 ---
 # <a name="set-and-configure-measurement-units-report-builder-and-ssrs"></a>设置和配置度量单位（报表生成器和 SSRS）
   在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，指示器使用以下两个度量单位之一：百分比或数值。   
@@ -26,46 +27,46 @@ ms.locfileid: "77081020"
   
 ## <a name="to-use-the-numeric-state-measurement-unit"></a>使用数字状态度量单位  
   
-1.  右键单击要更改的指示器，然后单击“指示器属性”  。  
+1.  右键单击要更改的指示器，然后单击“指示器属性”。  
   
 2.  在左窗格中单击 **“值和状态”** 。  
   
 3.  在 **“状态度量单位”** 列表中，单击 **“数字”** 。  
   
-     或者，单击“表达式”(fx) 按钮，编辑设置该选项的值的表达式   。  
+     或者，单击“表达式”(fx) 按钮，编辑设置该选项的值的表达式。  
   
 4.  对于指示器集中的每个图标，在 **“开始”** 和 **“结束”** 文本框中更新值。  
   
-     或者，单击“表达式”(fx) 按钮，编辑设置“开始”和“结束”选项的值的表达式     。  
+     或者，单击“表达式”(fx) 按钮，编辑设置“开始”和“结束”选项的值的表达式 。  
   
     > [!NOTE]  
-    >  “开始”和“结束”文本框中的值必须是数字   。  
+    >  “开始”和“结束”文本框中的值必须是数字 。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="to-use-the-percentage-measurement-unit"></a>使用百分比度量单位  
   
-1.  右键单击要更改的指示器，然后单击“指示器属性”  。  
+1.  右键单击要更改的指示器，然后单击“指示器属性”。  
   
 2.  在左窗格中单击 **“值和状态”** 。  
   
 3.  在 **“状态度量单位”** 列表中，单击 **“百分比”** 。  
   
-     或者，单击“表达式”(fx) 按钮，编辑设置该选项的值的表达式   。  
+     或者，单击“表达式”(fx) 按钮，编辑设置该选项的值的表达式。  
   
 4.  还可以更改 **“最小值”** 和 **“最大值”** 选项以使用特定值，而非自动检测指示器使用的数据的最小值和最大值。 **“最小值”** 必须小于 **“最大值”** 。  
   
     > [!NOTE]  
     >  如果您显式设置最小值和最大值，则指示器将使用该值范围，而与数据中的实际最小值和最大值无关。 这意味着，在确定要在报表中显示的指示器图标的计算中，将排除低于最小值的值和高于最大值的值。  
   
-     或者，单击“表达式”(fx) 按钮，编辑设置该选项的值的表达式   。  
+     或者，单击“表达式”(fx) 按钮，编辑设置该选项的值的表达式。  
   
 5.  对于指示器集中的每个图标，在 **“开始”** 和 **“结束”** 文本框中更新值。  
   
-     或者，单击“表达式”(fx) 按钮，编辑设置“开始”和“结束”选项的值的表达式     。  
+     或者，单击“表达式”(fx) 按钮，编辑设置“开始”和“结束”选项的值的表达式 。  
   
     > [!NOTE]  
-    >  “开始”和“结束”文本框中的值必须是数字   。  
+    >  “开始”和“结束”文本框中的值必须是数字 。  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

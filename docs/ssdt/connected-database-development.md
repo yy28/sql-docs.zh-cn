@@ -1,21 +1,21 @@
 ---
 title: 连接的数据库开发
+description: 了解 SQL Server Data Tools 如何与连接的数据库一起工作。 了解如何浏览实体、设计表、编辑脚本和执行其他任务。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 21f7f959-7b8e-4335-8681-bebcd957692c
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 068418e04624d912671e5b390823fb0903ba50af
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 340df9136dd674f4d340779dfc3d2d5e4db32042
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75256131"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85519067"
 ---
 # <a name="connected-database-development"></a>连接的数据库开发
 
@@ -28,7 +28,7 @@ ms.locfileid: "75256131"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|说明|  
+|主题|描述|  
 |---------|---------------|  
 |[如何：连接到数据库并浏览现有对象](../ssdt/how-to-connect-to-a-database-and-browse-existing-objects.md)|连接到数据库并浏览其实体。|  
 |[如何：使用表设计器创建数据库对象](../ssdt/how-to-create-database-objects-using-table-designer.md)|使用新的表设计器设计表和管理表关系。|  

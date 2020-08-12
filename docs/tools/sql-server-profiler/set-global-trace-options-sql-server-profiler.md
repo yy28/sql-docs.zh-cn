@@ -1,6 +1,7 @@
 ---
 title: 设置全局跟踪选项
 titleSuffix: SQL Server Profiler
+description: 了解如何设置全局跟踪选项以及 SQL Server Profiler 的特定实例可应用于所有跟踪的选项。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,24 +12,24 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: c66bb6a8a2f894cb80fd17c9fce24a0d98d027f2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 65f9f3c32da239c7ae6f41dfbe74b7ee8bb9ce41
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307944"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726858"
 ---
 # <a name="set-global-trace-options-sql-server-profiler"></a>设置全局跟踪选项 (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 本主题介绍了如何设置应用于随特定的 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]实例创建的所有跟踪的选项。  
   
 ### <a name="to-set-global-trace-options"></a>设置全局跟踪选项  
   
-1.  在“工具”  菜单上，单击“选项”  。  
+1.  在“工具”  菜单上，单击“选项” 。  
   
-2.  在“常规选项”  对话框中，单击“选择字体”  修改显示选项，再单击“确定”  。  
+2.  在“常规选项”对话框中，单击“选择字体”修改显示选项，再单击“确定”。  
   
 3.  根据需要选择 **“建立连接后立即开始跟踪”** 。  
   
@@ -46,21 +47,21 @@ ms.locfileid: "75307944"
   
     -   **默认重播线程数** ：控制重播期间使用的处理器线程数。 线程数越多，重播越快，但这会导致重播期间服务器的性能降低。 建议将该项设置为 **4**。 下表列出了可用选项：  
   
-        |值|说明|  
+        |值|描述|  
         |-----------|-----------------|  
         |**2**|最小值。 使用两个线程重播。|  
         |**4**|默认值。|  
         |**255**|最大值。 设置为最大值会影响其他进程的性能。|  
   
-    -   “默认 Health Monitor 等待间隔(秒)”  设置重播线程可以阻塞其他进程的最长时间（以秒为单位）。 下表说明了这些值。  
+    -   “默认 Health Monitor 等待间隔(秒)”设置重播线程可以阻塞其他进程的最长时间（以秒为单位）。 下表说明了这些值。  
   
-        |值|说明|  
+        |值|描述|  
         |-----------|-----------------|  
         |**0**|最小值。 设置为 **0** 表示 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 永远不会停止阻塞进程。|  
         |**3600**|默认值。 允许不超过 **3600** 秒（1 小时）的阻塞进程。|  
         |**86400**|最大值。 允许不超过 **86400** 秒（一天）的阻塞进程。|  
   
-    -   “默认 Health Monitor 轮询间隔(秒)”  设置阻塞进程的轮询重播线程的频率。 下表说明了这些值。  
+    -   “默认 Health Monitor 轮询间隔(秒)”设置阻塞进程的轮询重播线程的频率。 下表说明了这些值。  
   
         |值|说明|  
         |-----------|-----------------|  

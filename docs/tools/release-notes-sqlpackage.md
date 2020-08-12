@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 0b034a0c0d449bd85afbfd46fa407e34921b8cf2
-ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
+ms.openlocfilehash: 84a7a8261e2fc3d2031b1b38b8ee7709ad015e39
+ms.sourcegitcommit: 48d60fe6b6991303a88936fb32322c005dfca2d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82262126"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353094"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>SqlPackage.exe 的发行说明
 
@@ -34,6 +34,21 @@ Or, if there is no relationship, remove 'DacFx' from the metadata 'title:'.
 I discussed this with SStein (SteveStein).
 Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 -->
+
+## <a name="1851-sqlpackage"></a>18.5.1 sqlpackage
+
+|平台|下载|发布日期|版本|构建
+|:---|:---|:---|:---|:---|
+|Windows|[MSI 安装程序](https://go.microsoft.com/fwlink/?linkid=2134206)|2020 年 6 月 24 日|18.5.1|15.0.4826.1|
+|macOS .NET Core |[zip 文件](https://go.microsoft.com/fwlink/?linkid=2134312)|2020 年 6 月 24 日| 18.5.1|15.0.4826.1|
+|Linux .NET Core |[zip 文件](https://go.microsoft.com/fwlink/?linkid=2134311)|2020 年 6 月 24 日| 18.5.1|15.0.4826.1|
+|Windows .NET Core |[zip 文件](https://go.microsoft.com/fwlink/?linkid=2134310)|2020 年 6 月 24 日| 18.5.1|15.0.4826.1|
+
+### <a name="fixes"></a>修复项
+| Feature | 详细信息 |
+| :------ | :------ |
+| 部署 | 修复了 18.5 中引入的倒退，在将 dacpac（具有使用外部登录名的用户）导入或部署到本地时出现“"type" 附近的语法不正确”错误 | 
+
 ## <a name="185-sqlpackage"></a>18.5 sqlpackage
 
 |平台|下载|发布日期|版本|构建
@@ -44,7 +59,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 |Windows .NET Core |[zip 文件](https://go.microsoft.com/fwlink/?linkid=2128143)|2020 年 4 月 28 日| 18.5|15.0.4769.1|
 
 ### <a name="features"></a>功能
-| Feature | 详细信息 |
+| 功能 | 详细信息 |
 | :------ | :------ |
 | 部署 | 现在 SQL Server 2008 及更高版本、Azure SQL 数据库和 Azure SQL 数据仓库支持数据敏感度分类 |
 | 部署 | 针对表约束添加 Azure SQL 数据仓库支持 |
@@ -60,7 +75,6 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 ### <a name="fixes"></a>修复项
 | Fix | 详细信息 |
 | :-- | :------ |
-| 部署 | 修复数据库的发布 dacpac，其中包含一个过去会引发错误“对象引用未设置为某个对象的实例”的外部用户。 |
 | 部署 | 修复将 json 路径分析为表达式的问题 |
 | 部署 | 修复为 AlterAnyDatabaseScopedConfiguration 和 AlterAnySensitivityClassification 权限生成 GRANT 语句的问题 |
 | 部署 | 修复无法识别外部脚本权限的问题 |
@@ -71,6 +85,13 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | ScriptDom | 修复无法识别在内联索引之后定义的内联约束的 ScriptDom bug |
 | ScriptDom | 修复 ScriptDom SYSTEM_TIME 在批处理语句中缺少右括号的问题 |
 | Always Encrypted | 修复 #tmpErrors 表在 sqlpackage 重新连接并且临时表已消失时无法删除（因为临时表会在连接终止时消失）的问题 |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>已知问题
+| Feature | 详细信息 |
+| :------ | :------ |
+| 部署 |  18.5 中引入了一个倒退，在将 dacpac（具有使用外部登录名的用户）导入或部署到本地时出现“"type" 附近的语法不正确”错误。 使用 sqlpackag 18.4 可暂时避开此问题，将在下一个 sqlpackag 版本中进行修复。 | 
+| .NET Core | 由于 Microsoft.Data.SqlClient 中的这个[已知问题](https://github.com/dotnet/SqlClient/issues/559)，导入具有敏感度分类的 bacpacs 失败，并显示“重大内部连接错误”消息。 此问题将在下一个 sqlpackage 版本中修复。 |
 | &nbsp; | &nbsp; |
 
 ## <a name="1841-sqlpackage"></a>18.4.1 sqlpackage
@@ -90,7 +111,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 ### <a name="known-issues"></a>已知问题 
 
-| Feature | 详细信息 |
+| 功能 | 详细信息 |
 | :------ | :------ |
 | 部署 |  在 18.4.1 中引入了一个退行性问题，导致“对象引用未设置为对象的实例”。 作为具有外部登录名的用户部署 dacpac 或导入 bacpac 时出错。 使用 sqlpackag 18.4 可暂时避开此问题，将在下一个 sqlpackag 版本中进行修复。 | 
 | &nbsp; | &nbsp; |
@@ -106,7 +127,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 ### <a name="features"></a>功能
 
-| Feature | 详细信息 |
+| 功能 | 详细信息 |
 | :------ | :------ |
 | 部署 | 添加对部署到 Azure SQL 数据仓库 (GA) 的支持。 | 
 | 平台 | 适用于 macOS、Linux 和 Windows 的 sqlpackage .NET Core GA。 | 
@@ -118,7 +139,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 ### <a name="known-issues"></a>已知问题 
 
-| Feature | 详细信息 |
+| 功能 | 详细信息 |
 | :------ | :------ |
 | ScriptDom |  ScriptDom 分析回归在 18.3.1 中引入，其中“重命名”被错误地视为顶级令牌，导致分析失败。 此问题将在下一个 sqlpackage 版本中修复。 | 
 | &nbsp; | &nbsp; |

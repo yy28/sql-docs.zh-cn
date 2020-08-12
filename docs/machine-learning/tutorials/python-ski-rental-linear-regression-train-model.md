@@ -4,27 +4,30 @@ titleSuffix: SQL machine learning
 description: 此系列教程由四个部分组成，这是第三部分。你将在 Python 中训练线性回归模型，以通过 SQL 机器学习预测雪橇租赁次数。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2020
+ms.date: 05/21/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2d2335c982a75d924bfc60293632650b2d887527
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 827c79e39cd646b81b5ee79d440a8bc48574210c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606529"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730467"
 ---
 # <a name="python-tutorial-train-a-linear-regression-model-with-sql-machine-learning"></a>Python 教程：通过 SQL 机器学习训练线性回归模型
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 此系列教程由四个部分组成。在第三部分中，引导你在 Python 中定型线性回归模型。 在本系列的下一部分中，你将在机器学习服务中或大数据群集上将此模型部署到 SQL Server 数据库中。
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 此系列教程由四个部分组成。在第三部分中，引导你在 Python 中定型线性回归模型。 在本系列的下一部分中，使用机器学习服务在 SQL Server 数据库中部署此模型。
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+此系列教程由四个部分组成。在第三部分中，引导你在 Python 中定型线性回归模型。 在本系列的下一部分中，你将使用机器学习服务在 Azure SQL 托管实例数据库中部署此模型。
 ::: moniker-end
 
 本文将指导如何进行以下操作：

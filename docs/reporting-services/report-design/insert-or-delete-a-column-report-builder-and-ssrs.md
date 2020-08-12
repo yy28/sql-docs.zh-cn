@@ -1,5 +1,6 @@
 ---
 title: 插入或删除列（报表生成器）| Microsoft Docs
+description: 在分页报表的 Tablix 数据区域中添加或删除列。 在报表生成器中，Tablix 数据区域可以是一个表、矩阵或列表。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e9db79e2-7e7d-4359-a706-cb746c94182a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 243b6ea1838e3e6d8666114172ca9c51684878b0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 93b625462a1f4898bae7388842e5825c915eaf93
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082034"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061738"
 ---
 # <a name="insert-or-delete-a-column-report-builder-and-ssrs"></a>插入或删除列（报表生成器和 SSRS）
   可以在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表中的 Tablix 数据区域中添加或删除列。 Tablix 数据区域可以是一个表、矩阵或列表。 下面的过程不适用于图表和仪表数据区域。  
@@ -31,29 +32,29 @@ ms.locfileid: "77082034"
   
 ## <a name="to-insert-a-column-in-a-selected-data-region"></a>在所选数据区域中插入列  
   
--   右键单击要插入列的位置对应的列图柄，再单击“插入列”  ，然后单击“左侧”  或“右侧”  。  
+-   右键单击要插入列的位置对应的列图柄，再单击“插入列”，然后单击“左侧”或“右侧”。  
   
      \- 或 -  
   
--   右键单击要插入行的数据区域中的单元，再单击“插入列”  ，然后单击“左侧”  或“右侧”  。  
+-   右键单击要插入行的数据区域中的单元，再单击“插入列”，然后单击“左侧”或“右侧”。  
   
 ## <a name="to-delete-a-column-from-a-selected-data-region"></a>删除所选数据区域中的列  
   
--   选择要删除的列，右键单击任一所选列的图柄，然后单击“删除列”  。  
+-   选择要删除的列，右键单击任一所选列的图柄，然后单击“删除列”****。  
   
      \- 或 -  
   
--   右键单击要删除的列所在的数据区域中的单元，然后单击“删除列”  。  
+-   右键单击要删除的列所在的数据区域中的单元，然后单击“删除列”。  
   
 ## <a name="to-insert-a-column-in-a-group-in-a-selected-data-region"></a>在所选数据区域的组中插入列  
   
--   在要插入列的 Tablix 数据区域的列组区域中，右键单击插入位置的列组单元，再单击“插入列”  ，然后单击“左侧 - 组外部”  、“左侧 - 组内部”  、“右侧 - 组内部”  或“右侧 - 组外部”  。  
+-   在要插入列的 Tablix 数据区域的列组区域中，右键单击插入位置的列组单元，再单击“插入列”****，然后单击“左侧 - 组外部”****、“左侧 - 组内部”****、“右侧 - 组内部”**** 或“右侧 - 组外部”****。  
   
      此时将在您单击过的列组单元所表示的组的内部或外部添加一列。  
   
 ## <a name="to-delete-a-column-from-a-group-in-a-selected-data-region"></a>删除所选数据区域的组中的列  
   
--   右键单击要删除的列所在的 Tablix 数据区域的列组区域中的列组单元，然后单击“删除列”  。  
+-   右键单击要删除的列所在的 Tablix 数据区域的列组区域中的列组单元，然后单击“删除列”****。  
   
 ## <a name="see-also"></a>另请参阅  
  [了解组（报表生成器和 SSRS）](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)   

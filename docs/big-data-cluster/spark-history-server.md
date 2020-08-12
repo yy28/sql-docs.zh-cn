@@ -6,20 +6,20 @@ author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
 ms.metadata: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a2e1297ee6d32adc59810f3a4f9379e600f1464f
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: 7139b427e58e1aabc516c562def45f986ece1c9d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606499"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728027"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-big-data-clusters-2019-in-spark-history-server"></a>在 Spark History Server 中调试和诊断 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 上的 Spark 应用程序
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 本文提供有关如何使用扩展的 Spark History Server 调试和诊断 SQL Server 大数据群集中的 Spark 应用程序的指南。 这些调试和诊断功能内置于 Spark History Server 中且由 Microsoft 提供支持。 扩展插件包括“数据”选项卡和“图形”选项卡以及“诊断”选项卡。在“数据”选项卡中，用户可以检查 Spark 作业的输入和输出数据。 在“图形”选项卡中，用户可以检查数据流并重播作业图。 在“诊断”选项卡中，用户可以参考数据倾斜、时间偏差和执行程序使用情况分析。
 
@@ -28,7 +28,7 @@ ms.locfileid: "83606499"
 开放源代码提供的 Spark History Server 用户体验丰富了以下内容，其中包括作业特定数据、作业图的交互式可视化效果和大数据群集数据流。 
 
 ### <a name="open-the-spark-history-server-web-ui-by-url"></a>通过 URL 打开 Spark History Server Web UI
-通过浏览到以下 URL 打开 Spark History Server，并将 `<Ipaddress>` 和 `<Port>` 替换为大数据群集特定信息。 请注意，在基本身份验证（用户名/密码）大数据群集设置中，当系统提示登录网关 (Knox) 终结点时，必须提供**根**用户登录信息。 要获取更多信息，请参阅：[部署 SQL Server 大数据群集](quickstart-big-data-cluster-deploy.md)
+通过浏览到以下 URL 打开 Spark History Server，并将 `<Ipaddress>` 和 `<Port>` 替换为大数据群集特定信息。 对于在 SQL Server 2019 CU 5 之前部署且具有基本身份验证（用户名/密码）大数据群集设置的群集，当系统提示登录网关 (Knox) 终结点时，必须提供 root 用户的登录信息。 请参阅[部署 SQL Server 大数据群集](quickstart-big-data-cluster-deploy.md)。 [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 
 ```
 https://<Ipaddress>:<Port>/gateway/default/sparkhistory
@@ -193,7 +193,13 @@ Spark History Server Web UI 如下所示：
 + 单击颜色图标以选中或取消选中所有草稿中的相应内容。
 
     ![选择图表](./media/apache-azure-spark-history-server/sparkui-diagnosis-select-chart.png)
+    
+## <a name="spark--yarn-logs"></a>Spark/Yarn 日志
+除 Spark History Server 外，还可以在此处分别查找 Spark 和 Yarn 日志：
+* Spark 事件日志：hdfs:///system/spark-events
+* Yarn 日志：hdfs:///tmp/logs/root/logs-tfile
 
+注意：这两种日志的默认保持期为 7 天。 如果要更改保持期，请参阅[配置 Apache Spark 和 Apache Hadoop](configure-spark-hdfs.md) 页面。 无法更改位置。
 
 ## <a name="known-issues"></a>已知问题
 Spark History Server 具有以下已知问题：

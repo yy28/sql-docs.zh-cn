@@ -1,32 +1,35 @@
 ---
 title: Python 教程：部署群集模型
+titleSuffix: SQL machine learning
 description: 此系列教程由四个部分组成，这是第四部分。你将通过 SQL 机器学习在 Python 中部署聚类分析模型。
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
-ms.date: 08/27/2019
+ms.date: 05/21/2020
 ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0343c3c410c8cf7b76b391fecd6ff57bff5e80d3
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 93b01f213ccac6d6ede0965cc55f3e11a12623ed
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606429"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730516"
 ---
 # <a name="python-tutorial-deploy-a-model-to-categorize-customers-with-sql-machine-learning"></a>Python 教程：部署一个模型以通过 SQL 机器学习对客户进行分类
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-此系列教程由四个部分组成，这是第四部分。你将在 SQL Server 机器学习服务中或大数据群集上将在 Python 中开发的聚类分析模型部署到 SQL 数据库中。
+此系列教程由四个部分组成，这是第四部分。你将通过 SQL Server 机器学习服务或在大数据群集上将在 Python 中开发的聚类分析模型部署到数据库中。
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-在这个由四个部分组成的教程系列的第四部分中，你将使用 SQL Server 机器学习服务将 Python 中开发的聚类分析模型部署到 SQL 数据库中。
+此系列教程由四个部分组成，这是第四部分。你将使用 SQL Server 机器学习服务将在 Python 中开发的聚类分析模型部署到数据库中。
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+此系列教程由四个部分组成，这是第四部分。你将使用 Azure SQL 托管实例机器学习服务将在 Python 中开发的聚类分析模型部署到数据库中。
 ::: moniker-end
 
 为了定期执行聚类分析，在新客户注册时，你需要能够从任何应用调用 Python 脚本。 为此，可以通过将 Python 脚本置于 SQL 存储过程中，在数据库中部署 Python 脚本。 由于模型在数据库中执行，因此可以轻松地使用存储在数据库中的数据对其进行训练。
@@ -42,7 +45,7 @@ ms.locfileid: "83606429"
 
 在[第一部分](python-clustering-model.md)中，你安装了必备条件并还原了示例数据库。
 
-在[第二部分](python-clustering-model-prepare-data.md)中，你学习了如何从 SQL 数据库准备数据以执行聚类分析。
+在[第二部分](python-clustering-model-prepare-data.md)中，你了解了如何从数据库准备数据以执行聚类分析。
 
 在[第三部分](python-clustering-model-build.md)中，你了解了如何在 Python 中创建和定型 K-Means 聚类分析模型。
 
@@ -130,7 +133,7 @@ END;
 GO
 ```
 
-## <a name="perform-clustering-in-sql-database"></a>在 SQL 数据库中执行聚类分析
+## <a name="perform-clustering"></a>执行聚类分析
 
 创建存储过程后，执行以下脚本，以使用该过程执行聚类分析。
 

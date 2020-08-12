@@ -1,21 +1,21 @@
 ---
 title: SQL Server 单元测试的自定义测试条件
+description: 了解如何安装 SQL Server 单元测试的自定义测试条件。 查看安装未创建的测试条件所涉及的风险。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 32a15d61-e908-4ae1-a238-4fd0f988d8c8
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 2852d075b6d5b1f55b76fea6b32443ea14e74384
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 829132cdd70afb725720ba629ae556ea07f09a56
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245532"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518737"
 ---
 # <a name="custom-test-conditions-for-sql-server-unit-tests"></a>SQL Server 单元测试的自定义测试条件
 

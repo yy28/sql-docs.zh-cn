@@ -1,23 +1,23 @@
 ---
 title: 使用查询编辑现有表
+description: 了解如何使用 Transact-SQL 查询来编辑表的定义或数据。 查看编辑表定义和向表中插入行的示例。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 58f4de8e-97b4-4bcb-953f-f3d428432491
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 56411bfffbaebeb07adf23b456a20523342db21d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e1ebdca633ff866d51fcc20aa05993bb5969e4b2
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241407"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518807"
 ---
-# <a name="how-to-edit-an-existing-table-using-queries"></a>如何使用查询编辑现有表
+# <a name="how-to-edit-an-existing-table-using-queries"></a>如何：使用查询编辑现有表
 
 可以通过编写 Transact\-SQL 查询编辑表或其数据的定义。 若要以直观方式查看或输入表中的数据，请使用[连接的数据库开发](../ssdt/connected-database-development.md)中介绍的数据编辑器。  
   
@@ -28,15 +28,15 @@ ms.locfileid: "75241407"
   
 1.  在“SQL Server 对象资源管理器”中展开 Trade 数据库的“表”节点，然后右键单击 dbo.Suppliers。  
   
-2.  选择“视图设计器”  以便在表设计器中查看表架构。  
+2.  选择“视图设计器”以便在表设计器中查看表架构。  
   
-3.  为 Address  列选中“允许 Null 值”  框。 请注意，脚本窗格中的相应代码将立即更改为 `NULL`。  
+3.  为 Address 列选中“允许 Null 值”框。 请注意，脚本窗格中的相应代码将立即更改为 `NULL`。  
   
 4.  按照[如何：使用 Power Buffer 更新连接的数据库](../ssdt/how-to-update-a-connected-database-with-power-buffer.md)主题中的步骤更新数据库。  
   
 ### <a name="to-populate-data-in-new-tables-using-a-transact-sql-query"></a>使用 Transact\-SQL 查询在新表中填充数据  
   
-1.  右键单击 Trade  数据库节点并选择“新建查询”  。  
+1.  右键单击 Trade 数据库节点并选择“新建查询”。  
   
 2.  在脚本窗格中，粘贴以下代码。  
   
@@ -56,9 +56,9 @@ ms.locfileid: "75241407"
     GO  
     ```  
   
-3.  单击“执行查询”  按钮以运行该查询。 “消息”  窗格中的以下内容指示这些行已成功添加到表中。  
+3.  单击“执行查询”按钮以运行该查询。 “消息”窗格中的以下内容指示这些行已成功添加到表中。  
   
-（2 行受影响）（1 行受影响）（2 行受影响）   
+（2 行受影响）（1 行受影响）（2 行受影响）  
   
 4.  用下面部分中的代码替换脚本窗格中的代码并且执行该查询。 这将尝试向 `Products` 表中添加 `ShelfLife` 为 6 的一个新行。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "75241407"
     GO  
     ```  
   
-5.  “消息”  窗格指示 `INSERT` 语句与现有 CHECK 约束冲突，这会将 `ShelfLife` 的值限制为低于 5。 由于该语句未能满足现有约束，因此将不更新 Products 表。  
+5.  “消息”窗格指示 `INSERT` 语句与现有 CHECK 约束冲突，这会将 `ShelfLife` 的值限制为低于 5。 由于该语句未能满足现有约束，因此将不更新 Products 表。  
   
 6.  用以下代码更改该代码并且再次运行该查询。 请注意，此时该行成功更新。  
   

@@ -1,21 +1,21 @@
 ---
 title: 安装和管理功能扩展
+description: 了解如何安装功能扩展，以便可以增强 SQL Server Data Tools 的功能。 了解安装不同类型的扩展的位置。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 9cdc8cd5-c36f-4bee-a191-87ed457803e7
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 04/26/2017
-ms.openlocfilehash: 7ef7a61b87c11c63070d1e7713d2aae0ad87f547
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fd971797825b0af5b98ab498ce96549aad468e0c
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241390"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518977"
 ---
 # <a name="how-to-install-and-manage-feature-extensions"></a>如何：安装和管理功能扩展
 

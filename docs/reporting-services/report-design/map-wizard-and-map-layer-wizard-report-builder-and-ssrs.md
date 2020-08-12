@@ -1,5 +1,6 @@
 ---
 title: 地图向导和地图层向导（报表生成器）| Microsoft Docs
+description: 了解如何使用报表生成器中的地图向导或地图层向导自动创建地图、添加地图层或更改地图层选项。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 02be70284a4a32c69618659f1271165677628845
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b139dc1b0aaa0b2d1477d182cf128d0f93795ca3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77078571"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048325"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>地图向导和地图层向导（报表生成器和 SSRS）
  在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，地图向导和地图层向导可以自动执行创建地图、添加地图层或更改现有层上的地图层选项的任务。  
@@ -44,7 +45,7 @@ ms.locfileid: "77078571"
   
  单击向导页标题以获得相应的帮助内容。 您看到的页面取决于您选择的地图类型、空间数据源和分析数据源。  
   
-1.  [选择空间数据的源](#SpatialDataSource)。 空间数据可以来自地图库，即环境系统研究会公司。或来自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关系数据库中的空间数据。  
+1.  [选择空间数据的源](#SpatialDataSource)。 空间数据可来自地图库、Environmental Systems Research Institute, Inc. (ESRI) 形状文件，或来自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关系数据库中的空间数据。  
   
     -   [什么是空间数据？](#SpatialData)  
   
@@ -106,7 +107,7 @@ ms.locfileid: "77078571"
  可以为每层使用相同或不同的空间数据源，但必须在每次添加层时指定源。 当空间数据来自地图库或 ESRI 形状文件时，空间数据源不是单独的报表项。 它不显示在“报表数据”窗格中。  
   
 ###  <a name="what-is-spatial-data"></a><a name="SpatialData"></a> 什么是空间数据？  
- 空间数据包含定义地理或几何元素的坐标。 在地图中，空间数据定义“地图元素”  ：定义区域或形状的多边形、定义路线或路径的线条，以及定义标记或图钉的点。 空间数据在数据源中以二进制格式存储，并指定为坐标集。 例如，点是 X 和 Y 坐标 (X Y)，线条是两组坐标 ((X1 Y1), (X2 Y2))，多边形是四组或更多坐标，其中第一组和最后一组坐标是相同的 ((X1 Y1), (X2 Y2), (X3 Y3), (X1 Y1))。  
+ 空间数据包含定义地理或几何元素的坐标。 在地图中，空间数据定义“地图元素” **：定义区域或形状的多边形、定义路线或路径的线条，以及定义标记或图钉的点。 空间数据在数据源中以二进制格式存储，并指定为坐标集。 例如，点是 X 和 Y 坐标 (X Y)，线条是两组坐标 ((X1 Y1), (X2 Y2))，多边形是四组或更多坐标，其中第一组和最后一组坐标是相同的 ((X1 Y1), (X2 Y2), (X3 Y3), (X1 Y1))。  
   
  有关详细信息，请参阅所用空间数据类型的文档。  
   
@@ -119,7 +120,7 @@ ms.locfileid: "77078571"
  若要扩展地图库，可以在地图库目录中添加或删除报表，并添加文件夹对地图进行组织。 有关详细信息，请参阅[地图（报表生成器和 SSRS）](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)。  
   
 ###  <a name="what-is-an-esri-shapefile"></a><a name="Shapefile"></a> What is an ESRI shapefile?  
- ESRI 形状文件是一个文件集，其中的数据符合 Environmental Systems Research Institute, Inc. (ESRI) 形状文件空间数据格式。 该文件集通常包含 \<filename.shp> 文件（包含空间数据）和一个支持文件 \<filename.dbf>   。  
+ ESRI 形状文件是一个文件集，其中的数据符合 Environmental Systems Research Institute, Inc. (ESRI) 形状文件空间数据格式。 该文件集通常包含 \<filename>.shp 文件（包含空间数据）和一个支持文件 \<filename>.dbf 。  
   
  当您将形状文件指定为空间数据源而该文件位于您的本地计算机中时，空间数据将自动嵌入到报表中。 若要动态使用 ESRI 文件中的空间数据，必须执行以下操作：  
   

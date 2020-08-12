@@ -8,22 +8,21 @@ ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f13efaa9181521a40d6f3ba9a5cdeef7da3d2afc
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: af3826d5153e2be157a74c96037bff51c6039e7c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606980"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728559"
 ---
 # <a name="tutorial-deploy-a-predictive-model-in-r-with-sql-machine-learning"></a>教程：通过 SQL 机器学习在 R 中部署预测模型
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-在这个由四个部分组成的教程系列的第四部分中，你将使用机器学习服务将在 R 中开发的机器学习模型部署到 SQL Server 中。
+在这个由四个部分组成的教程系列的第四部分中，你将把用 R 开发的机器学习模型部署到 SQL Server 机器学习服务或大数据群集中。
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 在这个由四个部分组成的教程系列的第四部分中，你将使用机器学习服务将在 R 中开发的机器学习模型部署到 SQL Server 中。
@@ -31,11 +30,13 @@ ms.locfileid: "83606980"
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 在这个由四个部分组成的教程系列的第四部分中，你将使用 SQL Server R Services 将在 R 中开发的机器学习模型部署到 SQL Server 中。
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+在这个由四个部分组成的教程系列的第四部分中，你将使用机器学习服务将在 R 中开发的机器学习模型部署到 Azure SQL 托管实例中。
+::: moniker-end
 
 本文将指导如何进行以下操作：
 
 > [!div class="checklist"]
-
 > * 创建生成机器学习模型的存储过程
 > * 将模型存储在数据库表中
 > * 创建使用模型进行预测的存储过程
@@ -66,11 +67,14 @@ AS
 BEGIN
     EXECUTE sp_execute_external_script @language = N'R'
         , @script = N'
+rental_train_data$Month   <- factor(rental_train_data$Month);
+rental_train_data$Day     <- factor(rental_train_data$Day);
 rental_train_data$Holiday <- factor(rental_train_data$Holiday);
 rental_train_data$Snow    <- factor(rental_train_data$Snow);
 rental_train_data$WeekDay <- factor(rental_train_data$WeekDay);
 
 #Create a dtree model and train it using the training data set
+library(rpart);
 model_dtree <- rpart(RentalCount ~ Month + Day + WeekDay + Snow + Holiday, data = rental_train_data);
 #Serialize the model before saving it to the database table
 trained_model <- as.raw(serialize(model_dtree, connection=NULL));
@@ -157,6 +161,8 @@ BEGIN
     EXECUTE sp_execute_external_script @language = N'R'
         , @script = N'
 #Convert types to factors
+rentals$Month   <- factor(rentals$Month);
+rentals$Day     <- factor(rentals$Day);
 rentals$Holiday <- factor(rentals$Holiday);
 rentals$Snow    <- factor(rentals$Snow);
 rentals$WeekDay <- factor(rentals$WeekDay);
@@ -202,12 +208,12 @@ RentalCount_Predicted
 332.571428571429
 ```
 
-你已在 SQL 数据库中成功创建、训练并部署了一个模型。 然后，你在存储过程中使用了该模型来基于新数据对值进行预测。
+你已在数据库中成功创建、训练并部署了一个模型。 然后，你在存储过程中使用了该模型来基于新数据对值进行预测。
 
 
 ## <a name="clean-up-resources"></a>清理资源
 
-使用完 TutorialDB 数据库后，将其从 SQL Server 中删除。
+使用完 TutorialDB 数据库后，将其从服务器中删除。
 
 ## <a name="next-steps"></a>后续步骤
 

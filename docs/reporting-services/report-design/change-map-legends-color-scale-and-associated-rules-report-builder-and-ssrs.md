@@ -1,5 +1,6 @@
 ---
 title: 更改地图图例、色阶和关联的规则（报表生成器和 SSRS）| Microsoft Docs
+description: 了解如何更改地图图例，以帮助用户解释报表生成器中地图上的数据可视化效果。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -31,12 +32,12 @@ f1_keywords:
 ms.assetid: a1d691b2-c5ae-420f-af60-b7c54a7385a4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2d8df41eb7c0a0463648898c08091dd8f8c01f29
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: deb79a6a1216f584bdbda3a54b276326e5152f01
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65581734"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054235"
 ---
 # <a name="change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs"></a>更改地图图例、色阶和关联的规则（报表生成器和 SSRS）
   在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，地图中可以包含地图图例、色阶和距离刻度。 地图的这些部分可帮助用户解释地图上的数据可视化。  
@@ -55,11 +56,11 @@ ms.locfileid: "65581734"
   
 #### <a name="to-change-the-position-of-a-legend-relative-to-the-viewport"></a>更改图例相对于视区的位置  
   
-1.  在“设计”视图中，右键单击图例，然后打开“\<报表项>属性”页。  
+1.  在“设计”视图中，右键单击图例并打开 _\<report item>_ “属性”页。  
   
 2.  在 **“位置”** 中，通过单击指定图例要在视区中显示的相对位置。  
   
-3.  若要在视区之外显示图例，请选择“在视区外显示\<报表项>”。  
+3.  若要在视区之外显示图例，请选择“在视区外显示 \<report item> ”。  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -70,7 +71,7 @@ ms.locfileid: "65581734"
   
 #### <a name="to-change-the-layout-of-a-map-legend"></a>更改地图图例的布局  
   
-1.  在“设计”视图中，右键单击图例并打开“图例属性”  页。  
+1.  在“设计”视图中，右键单击图例并打开“图例属性”页。  
   
 2.  在 **“图例布局”** 中，单击要用于图例的表布局。 当您单击不同的选项时，设计图面上的布局将发生变化。  
   
@@ -80,20 +81,20 @@ ms.locfileid: "65581734"
   
 #### <a name="to-show-or-hide-a-map-legend-title"></a>显示或隐藏地图图例标题  
   
--   右键单击设计图面上的地图图例，然后单击“显示图例标题”  。  
+-   右键单击设计图面上的地图图例，然后单击“显示图例标题”。  
   
 ##  <a name="to-show-or-hide-a-color-scale-title"></a><a name="ColorScaleTitle"></a> 显示或隐藏色阶标题  
   
 #### <a name="to-show-or-hide-a-color-scale-title"></a>显示或隐藏色阶标题  
   
--   右键单击设计图面上的色阶，然后单击“显示色阶标题”  。  
+-   右键单击设计图面上的色阶，然后单击“显示色阶标题”。  
   
 ##  <a name="to-move-items-out-of-the-first-legend"></a><a name="MoveItems"></a> 将项目移出第一个图例  
  根据需要创建任意数量的附加图例，然后更新每一地图层的规则，以指定要在其中显示规则结果的图例。  
   
 #### <a name="to-create-a-new-legend"></a>创建新图例  
   
--   在“设计”视图中，在地图视区之外右键单击地图，然后单击“添加图例”  。  
+-   在“设计”视图中，在地图视区之外右键单击地图，然后单击“添加图例”。  
   
      一个新的图例将出现在地图上。  
   
@@ -101,11 +102,11 @@ ms.locfileid: "65581734"
   
 1.  在“设计”视图中，单击地图直到出现“地图”窗格。  
   
-2.  右键单击具有所需数据的层，然后单击“\<地图元素类型>颜色规则”。  
+2.  右键单击具有所需数据的层，然后单击 _\<map element type>_ “颜色规则”。  
   
 3.  单击 **“图例”** 。  
   
-4.  在“在此图例中显示”  下拉列表中，单击要将规则结果显示在其中的图例的名称。  
+4.  在“在此图例中显示”下拉列表中，单击要将规则结果显示在其中的图例的名称。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -115,7 +116,7 @@ ms.locfileid: "65581734"
   
 1.  在“设计”视图中，单击地图直到出现“地图”窗格。  
   
-2.  右键单击具有所需数据的层，然后单击“\<地图元素类型>颜色规则”。  
+2.  右键单击具有所需数据的层，然后单击 _\<map element type>_ “颜色规则”。  
   
 3.  单击 **“应用模板样式”** 。  
   
@@ -129,7 +130,7 @@ ms.locfileid: "65581734"
   
 1.  在“设计”视图中，单击地图直到出现“地图”窗格。  
   
-2.  右键单击具有所需数据的层，然后单击“\<地图元素类型>颜色规则”。  
+2.  右键单击具有所需数据的层，然后单击 _\<map element type>_ “颜色规则”。  
   
 3.  单击 **“使用调色板实现数据的可视化效果”** 。  
   
@@ -137,7 +138,7 @@ ms.locfileid: "65581734"
   
 4.  在 **“数据字段”** 中，键入某个字段的名称，该字段包含要通过颜色实现可视化效果的分析数据。  
   
-5.  在“调色板”中  ，从下拉列表选择要使用的调色板的名称。  
+5.  在“调色板”中，从下拉列表选择要使用的调色板的名称。  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -147,7 +148,7 @@ ms.locfileid: "65581734"
   
 1.  在“设计”视图中，单击地图直到出现“地图”窗格。  
   
-2.  右键单击具有所需数据的层，然后单击“\<地图元素类型>颜色规则”。  
+2.  右键单击具有所需数据的层，然后单击 _\<map element type>_ “颜色规则”。  
   
 3.  单击 **“使用颜色范围实现数据的可视化效果”** 。  
   
@@ -169,7 +170,7 @@ ms.locfileid: "65581734"
   
 1.  在“设计”视图中，单击地图直到出现“地图”窗格。  
   
-2.  右键单击具有所需数据的层，然后单击“\<地图元素类型>颜色规则”。  
+2.  右键单击具有所需数据的层，然后单击 _\<map element type>_ “颜色规则”。  
   
 3.  单击 **“使用自定义颜色实现数据的可视化效果”** 。  
   
@@ -187,9 +188,9 @@ ms.locfileid: "65581734"
   
 1.  在“设计”视图中，单击地图直到出现“地图”窗格。  
   
-2.  右键单击具有所需数据的层，然后单击“\<地图元素类型>颜色规则”。  
+2.  右键单击具有所需数据的层，然后单击 _\<map element type>_ “颜色规则”。  
   
-3.  选中“使用 **规则类型> 可视化数据”选项**\<。 若要使用分布选项，必须根据与层关联的分析数据，在 **“分布”** 页上创建范围。  
+3.  选择“使用 \<rule type> 对数据进行可视化”选项。 若要使用分布选项，必须根据与层关联的分析数据，在 **“分布”** 页上创建范围。  
   
 4.  单击 **“分布”** 。  
   
@@ -219,14 +220,14 @@ ms.locfileid: "65581734"
   
 1.  在“设计”视图中，单击地图直到出现“地图”窗格。  
   
-2.  右键单击具有所需数据的层，然后单击“\<地图元素类型>规则”。  
+2.  右键单击具有所需数据的层，然后单击 _\<map element type>_ “规则”。  
   
-3.  验证是否已选中“使用 **规则类型> 可视化数据”** \<  。  
+3.  验证是否已选中“使用 \<*rule type*> 对数据进行可视化”。  
   
 4.  在 **“数据字段”** 中，验证选择了您要该层上实现可视化的分析数据。  
   
     > [!NOTE]  
-    >  如果下拉列表中没有显示任何字段，则右键单击该层，然后单击“层数据”以打开“地图层数据属性”对话框的“分析数据”页，并验证你已为此层指定了分析数据  。  
+    >  如果下拉列表中没有显示任何字段，则右键单击该层，然后单击“层数据”以打开“地图层数据属性”对话框的“分析数据”页，并验证你已为此层指定了分析数据****。  
   
 5.  单击 **“图例”** 。  
   
@@ -240,14 +241,14 @@ ms.locfileid: "65581734"
   
 1.  在“设计”视图中，单击地图直到出现“地图”窗格。  
   
-2.  右键单击具有所需数据的层，然后单击“\<地图元素类型>颜色规则”。  
+2.  右键单击具有所需数据的层，然后单击 _\<map element type>_ “颜色规则”。  
   
-3.  选择要使用的颜色规则选项。 若要在地图图例或色阶中显示项，必须选择“使用 **规则类型> 可视化数据”** \<选项之一。  
+3.  选择要使用的颜色规则选项。 若要在地图图例或色阶中显示项，必须选择“使用 \<rule type> 对数据进行可视化”选项之一。  
   
 4.  在 **“数据字段”** 中，验证选择了您要该层上实现可视化的分析数据。  
   
     > [!NOTE]  
-    >  如果下拉列表中没有显示任何字段，则右键单击该层，然后单击“层数据”以打开“地图层数据属性”对话框的“分析数据”页，并验证你已为此层指定了分析数据  。  
+    >  如果下拉列表中没有显示任何字段，则右键单击该层，然后单击“层数据”以打开“地图层数据属性”对话框的“分析数据”页，并验证你已为此层指定了分析数据****。  
   
 5.  单击 **“图例”** 。  
   
@@ -261,7 +262,7 @@ ms.locfileid: "65581734"
   
 1.  在“设计”视图中，单击地图直到出现“地图”窗格。  
   
-2.  右键单击具有所需数据的层，然后单击“\<地图元素类型>规则”。  
+2.  右键单击具有所需数据的层，然后单击 _\<map element type>_ “规则”。  
   
 3.  单击 **“图例”** 。  
   
@@ -274,7 +275,7 @@ ms.locfileid: "65581734"
   
 1.  在“设计”视图中，单击地图直到出现“地图”窗格。  
   
-2.  右键单击具有所需数据的层，然后单击“\<地图元素类型>规则”。  
+2.  右键单击具有所需数据的层，然后单击 _\<map element type>_ “规则”。  
   
 3.  单击 **“图例”** 。  
   
@@ -286,7 +287,7 @@ ms.locfileid: "65581734"
  [地图（报表生成器和 SSRS）](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
  [添加、更改或删除地图或地图层（报表生成器和 SSRS）](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)   
  [自定义地图或地图层的数据和显示（报表生成器和 SSRS）](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [报表故障排除：地图报表（报表生成器和 SSRS）](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
+ [报表故障排除：映射报表（报表生成器和 SSRS）](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
  [地图向导和地图层向导（报表生成器和 SSRS）](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
   
   

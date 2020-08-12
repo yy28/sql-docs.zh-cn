@@ -1,5 +1,6 @@
 ---
 title: 创建文档结构图（报表生成器）| Microsoft Docs
+description: 了解如何使用文档结构图提供一组导航链接，这些链接指向报表生成器中所呈现报表中的报表项。
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c6f1d18c8559625c6e58b45b4e9810ed29e0ef28
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bfb17d88af0c5901e0cb4ee0097d02c0225693d2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082294"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061051"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>创建文档结构图（报表生成器和 SSRS）
 
@@ -64,7 +65,7 @@ ms.locfileid: "77082294"
   
 2.  在“行组”窗格中，右键单击相应的组，然后单击 **“编辑组”** 。 将打开 **“Tablix 组属性”** 对话框的 **“常规”** 页。  
   
-3.  单击“高级”。   
+3.  单击“高级”。  
   
 4.  在 **“文档结构图”** 列表框中，键入或选择与组表达式匹配的表达式。  
   

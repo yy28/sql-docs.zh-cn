@@ -2,20 +2,20 @@
 title: 什么是应用程序部署？
 titleSuffix: SQL Server Big Data Clusters
 description: 本文介绍 SQL Server 2019 大数据群集上的应用程序部署。
-author: jeroenterheerdt
-ms.author: jterh
+author: cloudmelon
+ms.author: melqin
 ms.reviewer: mikeray
 ms.metadata: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4b647ab4d03d110ce303388a8b62461f28033b6c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4423e6fe624c27c0b9c06d3ff59c56648762af99
+ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76831571"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85215446"
 ---
 # <a name="what-is-application-deployment-on-a-big-data-cluster"></a>什么是大数据群集上的应用程序部署？
 
@@ -52,6 +52,28 @@ output: #output parameter the app expects and the type
 如果在 `spec.yaml` 文件中设置了 `schedule`，那么，在创建 ReplicaSet 并启动 pod 后，会创建一个 cron 作业。 最后，会创建一个可用于管理和运行应用程序的 Kubernetes 服务（请参阅下文）。
 
 执行应用程序时，应用程序的 Kubernetes 服务会将请求代理给副本并返回结果。
+
+## <a name="security-considerations-for-applications-deployments-on-openshift"></a><a id="app-deploy-security"></a> OpenShift 上的应用程序部署的安全注意事项
+
+SQL Server 2019 CU5 支持在 Red Hat OpenShift 上部署大数据群集，并且支持 BDC 的更新安全模型，因此不再需要特权容器。 对于使用 SQL Server 2019 CU5 的所有新部署，容器除了是非特权容器之外，还默认以非根用户身份运行。
+
+在 CU5 版本中，使用[应用部署](concept-application-deployment.md)接口部署的应用程序的安装步骤仍将以根用户身份运行。 这是必需的，因为在安装期间会安装应用程序将使用的其他包。 作为应用程序的一部分部署的其他用户代码将以低特权用户身份运行。 
+
+此外，CAP_AUDIT_WRITE 功能是允许使用 cron 作业计划 SSIS 应用程序所必需的一项可选功能。 当应用程序的 yaml 规范文件指定计划时，应用程序将通过 cron 作业触发，而这需要其他功能。  或者，可以通过 Web 服务调用使用 azdata app run 按需触发应用程序，而这不需要 CAP_AUDIT_WRITE 功能。 
+
+> [!NOTE]
+> [OpenShift 部署项目](deploy-openshift.md)中的自定义 SCC 不包括此功能，因为大数据群集的默认部署不需要此功能。 若要启用此功能，必须首先更新自定义 SCC yaml 文件，以将 CAP_AUDIT_WRITE 包含在 
+
+```yml
+...
+allowedCapabilities:
+- SETUID
+- SETGID
+- CHOWN
+- SYS_PTRACE
+- AUDIT_WRITE
+...
+```
 
 ## <a name="how-to-work-with-application-deployment"></a>如何使用应用程序部署
 

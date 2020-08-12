@@ -1,5 +1,6 @@
 ---
 title: 在数据区域中添加或删除组（报表生成器）| Microsoft Docs
+description: 考虑向数据区域添加一个组，以便按特定值或表达式集来组织数据，以在报表生成器中显示和计算。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4de53c3c-c6fc-49ce-b692-3609fc0b3ec5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e559dc00246fb0b990c81de99c8036356a64034f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b7db1160377fa16f2b00b150dcd2957c20f62af8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081576"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056563"
 ---
 # <a name="add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs"></a>在数据区域中添加或删除组（报表生成器和 SSRS）
 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表中，如果你希望在显示或计算时根据特定值或表达式集来组织数据，可向数据区域添加组。 组具有标识该组所包含的数据集数据的名称和表达式。 有关组的详细信息，请参阅 [了解组（报表生成器和 SSRS）](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)。  
@@ -32,7 +33,7 @@ ms.locfileid: "77081576"
 1.  将字段从 **“报表数据”** 窗格拖到 **“行组”** 窗格或 **“列组”** 窗格。  
   
     > [!NOTE]  
-    >  如果未显示“分组”窗格，请在“视图”选项卡上，单击“分组”  。  
+    >  如果未显示“分组”窗格，请在“视图”选项卡上，单击“分组”。  
   
 2.  使用向导栏将该字段拖到组层次结构之上或之下，将其放置到相应位置作为现有组的父组或子组。  
   
@@ -44,7 +45,7 @@ ms.locfileid: "77081576"
   
 2.  在 **“名称”** 中，键入组的名称。  
   
-3.  在“组表达式”中，键入表达式，或者单击表达式按钮 (fx)，创建表达式   。  
+3.  在“组表达式”中，键入表达式，或者单击表达式按钮 (fx)，创建表达式 。  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -52,7 +53,7 @@ ms.locfileid: "77081576"
   
 ## <a name="to-add-a-details-group-to-a-tablix-data-region"></a>向 tablix 数据区域添加详细信息组  
   
-1.  在“分组”窗格中，右键单击作为最内部的子组的组，而非“详细信息”组  。 单击 **“添加组”** ，然后单击 **“子组”** 。 此时将打开 **“Tablix 组”** 对话框。  
+1.  在“分组”窗格中，右键单击作为最内部的子组的组，而非“详细信息”组。 单击 **“添加组”** ，然后单击 **“子组”** 。 此时将打开 **“Tablix 组”** 对话框。  
   
 2.  在 **“组表达式”** 中，使表达式保留为空白。 详细信息组没有任何表达式。  
   
@@ -66,29 +67,29 @@ ms.locfileid: "77081576"
   
 1.  在报表设计图面上，单击 Tablix 数据区域中的任意位置以将其选中。 “分组”窗格随即显示行组和列组。  
   
-2.  右键单击该组，然后单击“组属性”  。  
+2.  右键单击该组，然后单击“组属性”。  
   
 3.  在 **“名称”** 中，键入组的名称。  
   
-4.  在“组表达式”中，键入或选择简单表达式，或者单击表达式 (fx) 按钮，创建组表达式   。  
+4.  在“组表达式”中，键入或选择简单表达式，或者单击表达式 (fx) 按钮，创建组表达式 。  
   
 5.  单击 **“添加”** 以创建其他表达式。 使用逻辑与组合指定的所有表达式，以便指定该组的数据。  
   
-6.  （可选）单击“分页符”设置分页符选项  。  
+6.  （可选）单击“分页符”设置分页符选项。  
   
-7.  （可选）单击“排序”，选择或键入指定组中的值的排序顺序的表达式  。  
+7.  （可选）单击“排序”，选择或键入指定组中的值的排序顺序的表达式。  
   
-8.  （可选）单击“可见性”，选择该项的可见性选项  。  
+8.  （可选）单击“可见性”，选择该项的可见性选项。  
   
-9. （可选）单击“筛选器”，设置该组的筛选器  。  
+9. （可选）单击“筛选器”，设置该组的筛选器。  
   
-10. （可选）单击“变量”，定义以该组作为作用域、并且可以从任何子组访问的变量  。  
+10. （可选）单击“变量”，定义以该组作为作用域、并且可以从任何子组访问的变量。  
   
 11. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="to-delete-a-group-from-a-tablix-data-region"></a>删除 Tablix 数据区域中的组  
   
-1.  在“分组”窗格中，右键单击组，然后单击“删除组”  。  
+1.  在“分组”窗格中，右键单击组，然后单击“删除组”。  
   
 2.  在 **“删除组”** 对话框中，请选择下列选项之一：  
   
@@ -100,7 +101,7 @@ ms.locfileid: "77081576"
   
 ## <a name="to-delete-a-details-group-from-a-tablix-data-region"></a>删除 Tablix 数据区域中的详细信息组  
   
-1.  在“分组”窗格中，右键单击详细信息组，然后单击“删除组”  。  
+1.  在“分组”窗格中，右键单击详细信息组，然后单击“删除组”。  
   
 2.  在 **“删除组”** 对话框中，请选择下列选项之一：  
   

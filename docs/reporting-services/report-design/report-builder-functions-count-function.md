@@ -1,5 +1,6 @@
 ---
 title: Count 函数（报表生成器）| Microsoft Docs
+description: 了解 Count 函数，该函数返回在给定范围上下文中计算的、由表达式指定的非 Null 值的计数。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7b50b101-daf8-4fb0-ae04-57384755779f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c37b4999f0fb2dd7cbf14322348e5836e8b38e32
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3e0213d580935112e48df2f8a774ac49202ee7af
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081303"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044092"
 ---
 # <a name="report-builder-functions---count-function"></a>报表生成器函数 - Count 函数
   返回在给定作用域上下文中计算的，由表达式指定的非 Null 值的计数。  
@@ -28,7 +29,7 @@ ms.locfileid: "77081303"
 Count(expression, scope, recursive)  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *expression*  
  （**Variant** 或 **Binary**）要对其执行聚合的表达式，例如， `=Fields!FieldName.Value`。  
   
@@ -60,7 +61,7 @@ Count(expression, scope, recursive)
   
  示例  
   
-## <a name="description"></a>说明  
+## <a name="description"></a>描述  
  下面的代码示例显示一个表达式，该表达式为默认作用域和父组作用域计算 `Size` 的非 Null 值数。 该表达式将添加至属于子组 `GroupbySubcategory`的行的某个单元格中。 父组是 `GroupbyCategory`。 该表达式显示 `GroupbySubcategory` （默认作用域）和 `GroupbyCategory` （父组作用域）的结果。  
   
 > [!NOTE]  

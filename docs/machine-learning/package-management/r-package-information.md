@@ -4,24 +4,32 @@ description: 学习如何了解在 SQL Server 机器学习服务和 SQL Server R
 ms.custom: ''
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/01/2020
-ms.topic: conceptual
+ms.date: 05/27/2020
+ms.topic: how-to
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 78dc96f3568bd2a19f2604d76d47010f9d9104a0
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 877728812d36a7d4db8370254c0fdccbe1011350
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606479"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723936"
 ---
 # <a name="get-r-package-information"></a>获取 R 包信息
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-本文介绍如何了解在 SQL Server 机器学习服务和 SQL Server R Services 中安装的 R 包。 示例 R 脚本显示如何列出包信息，如安装路径和版本。
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+本文介绍如何获取在 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)和[大数据群集](../../big-data-cluster/machine-learning-services.md)上安装的 R 包的相关信息。 示例 R 脚本显示如何列出包信息，如安装路径和版本。
+::: moniker-end
+::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
+本文介绍如何获取在 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)上安装的 R 包的相关信息。 示例 R 脚本显示如何列出包信息，如安装路径和版本。
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+本文介绍如何获取在 [Azure SQL 托管实例机器学习服务](/azure/azure-sql/managed-instance/machine-learning-services-overview)上安装的 R 包的相关信息。 示例 R 脚本显示如何列出包信息，如安装路径和版本。
+::: moniker-end
 
 ## <a name="default-r-library-location"></a>默认 R 库位置
 
@@ -90,7 +98,7 @@ GO
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 
 在安装过程中选择了 R 功能时，将随 SQL Server 机器学习服务一起安装以下 Microsoft R 包。
 
@@ -174,6 +182,6 @@ print(packageDescription("MicrosoftML"))
 ::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
 + [使用 R 工具安装包](install-r-packages-standard-tools.md)
 ::: moniker-end
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 + [使用 sqlmlutils 安装新的 R 包](install-additional-r-packages-on-sql-server.md)
 ::: moniker-end

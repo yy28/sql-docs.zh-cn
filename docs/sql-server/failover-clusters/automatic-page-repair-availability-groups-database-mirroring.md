@@ -1,6 +1,6 @@
 ---
 title: 可用性组和数据库镜像的自动页修复
-description: '当数据库参与 Always On 可用性组或数据库镜像关系时，将自动修复某些类型的页损坏。 本主题提供有关错误类型及其可能解决方法的信息。 '
+description: 了解当数据库参与 Always On 可用性组或数据库镜像时，如何自动修复某些类型的页损坏。
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7c8d58b7bdc836f44871560c0d1e9908d1f72f23
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 861ffae3a6bb9451ca9dc9d5c8684e5b211a3b93
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74822640"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729135"
 ---
 # <a name="automatic-page-repair-availability-groups-database-mirroring"></a>自动页修复（可用性组：数据库镜像）
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   数据库镜像和 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]支持自动页修复。 在某些类型的错误导致页损坏，使其无法读取后，数据库镜像伙伴（主体或镜像）或可用性副本（主副本或辅助副本）将尝试自动修复该页。 无法读取该页的伙伴/副本将从其伙伴或从其他副本请求该页的新副本。 如果此请求成功，则将以可读副本替换不可读的页，并且这通常会解决该错误。  
   
  一般来说，数据库镜像和 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 以等效方式处理 I/O 错误。 下面将具体介绍几个差异。  
@@ -69,7 +69,7 @@ ms.locfileid: "74822640"
 ##  <a name="handling-io-errors-on-the-principalprimary-database"></a><a name="PrimaryIOErrors"></a> 处理主体/主数据库上的 I/O 错误  
  在主体/主数据库中，仅当数据库处于 SYNCHRONIZED 状态且主体/主数据库仍向镜像/辅助数据库发送数据库日志记录时，才会尝试自动页修复。 自动页修复尝试中操作的基本顺序如下：  
   
-1.  当主体/主数据库中的数据页上发生读取错误时，主体/主数据库将使用相应的错误状态在 [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 表中插入一行。 对于数据库镜像，主体服务器将从镜像服务器请求该页的副本。 对于 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]，主体数据库将向所有辅助数据库广播请求，并且从第一个响应中获取该页。 此请求指定当前在刷新日志末尾的页 ID 和 LSN。 此页将标记为“还原已挂起”  。 这将使它在自动页修复尝试期间不可访问。 修复尝试期间对此页的访问尝试将失败，并显示错误 829（还原已挂起）。  
+1.  当主体/主数据库中的数据页上发生读取错误时，主体/主数据库将使用相应的错误状态在 [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 表中插入一行。 对于数据库镜像，主体服务器将从镜像服务器请求该页的副本。 对于 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]，主体数据库将向所有辅助数据库广播请求，并且从第一个响应中获取该页。 此请求指定当前在刷新日志末尾的页 ID 和 LSN。 此页将标记为“还原已挂起” 。 这将使它在自动页修复尝试期间不可访问。 修复尝试期间对此页的访问尝试将失败，并显示错误 829（还原已挂起）。  
   
 2.  收到页请求后，镜像/辅助数据库将等待，直到将日志重做到请求中指定的 LSN 处。 然后，镜像/辅助数据库将在其数据库副本中尝试访问此页。 如果可以访问此页，则镜像/辅助数据库将此页的副本发送到主体/主数据库。 否则，镜像/辅助数据库将向主体/主数据库返回错误，并且自动页修复失败。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "74822640"
  自动页修复是一个运行在后台的异步进程。 因此，请求不可读的页的数据库操作将失败，并且不管导致失败的条件是什么均返回错误代码。 当开发用于镜像数据库或可用性数据库的应用程序时，应截获失败操作的异常。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误代码为 823、824 或 829，则应稍后重试操作。  
   
 
-##  <a name="how-to-view-automatic-page-repair-attempts"></a><a name="ViewAPRattempts"></a> How To: View Automatic Page-Repair Attempts  
+##  <a name="how-to-view-automatic-page-repair-attempts"></a><a name="ViewAPRattempts"></a> 如何：查看自动页修复尝试  
  下面的动态管理视图返回对应于给定可用性数据库或镜像数据库上最新自动页修复尝试的行，每个数据库最多可对应 100 行。  
   
 -   **AlwaysOn 可用性组：**  

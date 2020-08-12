@@ -4,20 +4,20 @@ titleSuffix: SQL machine learning
 description: 本文介绍适用于 SQL 机器学习的 Python 教程。 了解如何运行脚本和构建机器学习模型。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2020
+ms.date: 05/21/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7127be209c9637eb0c1cc701d16f0d157f90be54
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: f93fc25139a69f80afa15840d254c33d2195b335
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83605789"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730453"
 ---
 # <a name="python-tutorials-for-sql-machine-learning"></a>适用于 SQL 机器学习的 Python 教程
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 本文介绍适用于 [SQL Server 上的机器学习服务](../sql-server-machine-learning-services.md)和[大数据群集上的机器学习服务](../../big-data-cluster/machine-learning-services.md)的 Python 教程和快速入门。
@@ -25,17 +25,28 @@ ms.locfileid: "83605789"
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 本文介绍 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)的 Python 教程和快速入门。
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+本文介绍 [Azure SQL 托管实例机器学习服务](/azure/azure-sql/managed-instance/machine-learning-services-overview)的 Python 教程和快速入门。
+::: moniker-end
 
 <a name="bkmk_pythontutorials"></a>
 
 ## <a name="python-tutorials"></a>Python 教程
 
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 | 教程 | 说明 |
 |-|-|
 | [使用线性回归预测雪橇租赁](python-ski-rental-linear-regression.md) | 使用 Python 和线性回归来预测滑雪租赁数量。 在 Azure Data Studio 中使用笔记本准备数据并培训模型，并使用 T-SQL 进行模型部署。 |
 | [使用 k-means 聚类分析对客户进行分类](python-clustering-model.md) | 使用 Python 开发和部署 K-Means 群集模型，对客户进行分类。 在 Azure Data Studio 中使用笔记本准备数据并培训模型，并使用 T-SQL 进行模型部署。 |
 | [使用 Revoscalepy 创建模型](use-python-revoscalepy-to-create-model.md) | 演示如何使用 SQL Server 作为计算上下文来运行远程 Python 客户端中的代码。 本教程使用 revoscalepy 库中的 rxLinMod 创建模型 。 |
 | [适用于 SQL 开发者的 Python 数据分析](sqldev-in-database-python-for-sql-developers.md) | 本端到端演练演示使用 T-SQL 构建完整的 Python 解决方案的过程。 |
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current"
+| 教程 | 说明 |
+|-|-|
+| [使用线性回归预测雪橇租赁](python-ski-rental-linear-regression.md) | 使用 Python 和线性回归来预测滑雪租赁数量。 在 Azure Data Studio 中使用笔记本准备数据并培训模型，并使用 T-SQL 进行模型部署。 |
+| [使用 k-means 聚类分析对客户进行分类](python-clustering-model.md) | 使用 Python 开发和部署 K-Means 群集模型，对客户进行分类。 在 Azure Data Studio 中使用笔记本准备数据并培训模型，并使用 T-SQL 进行模型部署。 |
+::: moniker-end
 
 ## <a name="python-quickstarts"></a>Python 快速入门
 

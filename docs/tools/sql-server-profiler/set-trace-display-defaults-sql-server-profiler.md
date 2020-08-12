@@ -1,6 +1,7 @@
 ---
 title: 设置跟踪显示默认值
 titleSuffix: SQL Server Profiler
+description: 浏览 SQL Server Profiler 在跟踪中默认使用的工具选项（如字体类型、大小和样式）并了解如何调整它们。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,22 +12,22 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 4a1958ee112b1453a6b86a5e520737b0945147c5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9a1e746b4f418c23e22dafc6c07b211c188b8a13
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307936"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726874"
 ---
 # <a name="set-trace-display-defaults-sql-server-profiler"></a>设置跟踪显示默认值 (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 本主题说明如何设置工具选项来指定 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 用于在跟踪窗口中显示跟踪的字体类型、大小和字形。 还可以指定 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 使用为操作系统配置的区域设置来显示所有日期和时间。  
   
 ### <a name="to-set-trace-display-defaults"></a>设置跟踪显示默认值  
   
-1.  在“工具”  菜单上，单击“选项”  。  
+1.  在“工具”  菜单上，单击“选项” 。  
   
 2.  在 **“常规选项”** 对话框中，单击 **“选择字体”** 。  
   
