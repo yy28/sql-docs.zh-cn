@@ -1,6 +1,6 @@
 ---
 title: 故障转移群集实例管理和维护
-description: 了解 SQL Server 故障转移群集实例的管理和维护。
+description: 了解如何通过 SQL Server 安装程序或故障转移群集管理器管理单元来维护和管理 SQL Server 故障转移群集实例。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 2d5c63e9-8061-45c3-94db-8dd3100b8a91
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5788d52a119fe6bada56ac2def9d2fbfb2c09cb0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c5a6abf9599591bf1619b951926626fc337cf170
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75230070"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85887791"
 ---
 # <a name="failover-cluster-instance-administration-and-maintenance"></a>故障转移群集实例管理和维护
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   诸如从现有 Always On 故障转移群集实例 (FCI) 中添加或删除节点等此类维护任务均使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序来完成。 其他管理任务（如更改 IP 地址资源、从某些 FCI 情形中恢复）则使用故障转移群集管理器管理单元来完成，该管理单元专用于 Windows Server 故障转移群集 (WSFC) 服务。  
   
 ## <a name="maintaining-a-failover-cluster-instance"></a>维护故障转移群集实例  

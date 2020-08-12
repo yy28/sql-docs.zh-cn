@@ -1,30 +1,34 @@
 ---
 title: 快速入门：在 Python 中定型模型
-description: 在本快速入门中，你将使用 Python 创建并训练预测模型。 将此模型保存到 SQL Server 实例中的表，然后通过 SQL Server 机器学习服务使用此模型来通过新数据预测值。
+titleSuffix: SQL machine learning
+description: 在本快速入门中，你将使用 Python 创建并训练预测模型。 将此模型保存到数据库的表中，然后通过 SQL 机器学习使用此模型来通过新数据预测值。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/28/2020
+ms.date: 05/21/2020
 ms.topic: quickstart
 author: cawrites
 ms.author: chadam
-ms.reviewer: garye
+ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 929491de1eb99835133d04d396023b84680af9f4
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 7fe03849217dfe6e8ad7acedc39d891c5168f9c8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606859"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772373"
 ---
-# <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-server-machine-learning-services"></a>快速入门：通过 SQL Server 机器学习服务在 Python 中创建预测模型并对其进行评分
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-machine-learning"></a>快速入门：通过 SQL 机器学习在 Python 中创建预测模型并对其进行评分
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 在本快速入门中，你将使用 Python 创建并训练预测模型。 将此模型保存到 SQL Server 实例中的表，然后在 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)中或[大数据群集](../../big-data-cluster/machine-learning-services.md)上使用此模型基于新数据来预测值。
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 在本快速入门中，你将使用 Python 创建并训练预测模型。 将此模型保存到 SQL Server 实例中的表，然后通过 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)使用此模型来通过新数据预测值。
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+在本快速入门中，你将使用 Python 创建并训练预测模型。 将此模型保存到数据库的表中，然后通过 [Azure SQL 托管实例机器学习服务](/azure/azure-sql/managed-instance/machine-learning-services-overview)使用此模型来通过新数据预测值。
 ::: moniker-end
 
 你将创建并执行 SQL 中运行的两个存储过程。 第一个存储过程使用经典 Iris 花卉数据集，并生成 Naïve Bayes 模型，用于根据花卉特征预测 Iris 种类。 第二个存储过程用于评分，它调用第一个过程中生成的模型，从而根据新数据输出一组预测。 通过将 Python 代码用于 SQL 存储过程，操作会包含在 SQL 中，可重复使用，并且可以由其他存储过程和客户端应用程序进行调用。
@@ -38,15 +42,19 @@ ms.locfileid: "83606859"
 
 ## <a name="prerequisites"></a>先决条件
 
+若要运行本快速入门，需要具备以下先决条件。
+
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 - SQL Server 机器学习服务。 有关如何安装机器学习服务的信息，请参阅 [Windows 安装指南](../install/sql-machine-learning-services-windows-install.md)或 [Linux 安装指南](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)。 还可以[启用 SQL Server 大数据群集上的机器学习服务](../../big-data-cluster/machine-learning-services.md)。
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 - SQL Server 机器学习服务。 有关如何安装机器学习服务的信息，请参阅 [Windows 安装指南](../install/sql-machine-learning-services-windows-install.md)。 
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+- Azure SQL 托管实例机器学习服务。 有关如何注册的说明，请参阅 [Azure SQL 托管实例机器学习服务概述](/azure/azure-sql/managed-instance/machine-learning-services-overview)。
+::: moniker-end
 
-- 一个用于运行包含 R 脚本的 SQL 查询的工具。 本快速入门使用 [Azure Data Studio](../../azure-data-studio/what-is.md)。
-
+- 用于运行包含 Python 脚本的 SQL 查询的工具。 本快速入门使用 [Azure Data Studio](../../azure-data-studio/what-is.md)。
 
 - 本练习所用的示例数据是 Iris 示例数据。 按照 [Iris 演示数据](demo-data-iris-in-sql.md)中的说明创建示例数据库 irissql。
 
@@ -54,7 +62,7 @@ ms.locfileid: "83606859"
 
 在本步骤中，将创建一个用于生成模型的存储过程，以预测结果。
 
-1. 打开 Azure Data Studio，连接到你的 SQL Server 实例，并打开一个新的查询窗口。
+1. 打开 Azure Data Studio，连接到 SQL 实例，然后打开一个新的查询窗口。
 
 1. 连接到 irissql 数据库。
 
@@ -66,11 +74,11 @@ ms.locfileid: "83606859"
 1. 复制以下代码，以创建新的存储过程。
 
    在运行时，此过程将调用 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 以启动 Python 会话。 
-   
-   Python 代码所需的输入将作为输入参数在此存储过程中进行传递。 输出将是基于适用于机器学习算法的 Python scikit-learn 库的定型模型。 
+
+   Python 代码所需的输入将作为输入参数在此存储过程中进行传递。 输出将是基于适用于机器学习算法的 Python scikit-learn 库的定型模型。
 
    此代码使用 [pickle](https://docs.python.org/2/library/pickle.html) 来序列化模型。 将使用 iris_data 表的 0 到 4 列中的数据定型该模型。 
-   
+
    该过程的第二部分中所示的参数阐明了数据输入和模型输出。 你希望存储过程中运行的 Python 代码尽可能具有明确定义的输入和输出，这些输入和输出到在运行时传入的存储过程输入和输出。
 
     ```sql
@@ -100,7 +108,7 @@ ms.locfileid: "83606859"
 
 在本步骤中，需要执行过程以运行嵌入代码，并创建已定型和已序列化的模型作为输出。 
 
-存储在 SQL Server 中以供重复使用的模型将序列化为字节流，并存储在数据库表中的 VARBINARY(MAX) 列。 创建、定型、序列化模型并将其保存到数据库之后，在对工作负载评分时可通过其他过程或 [PREDICT T-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) 函数调用该模型。
+存储在数据库中以供重复使用的模型将序列化为字节流，并存储在数据库表中的 VARBINARY(MAX) 列。 创建、定型、序列化模型并将其保存到数据库之后，在对工作负载评分时可通过其他过程或 [PREDICT T-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) 函数调用该模型。
 
 1. 运行以下脚本以执行过程。 用于运行存储过程的特定语句是第四行的 `EXECUTE`。
 
@@ -183,13 +191,11 @@ ms.locfileid: "83606859"
 
 ## <a name="conclusion"></a>结束语
 
-在本练习中，你了解了如何创建专用于不同任务的存储过程，其中每个存储过程都使用了系统存储过程 `sp_execute_external_script` 来启动 Python 进程。 Python 进程的输入作为参数传递到 `sp_execute_external`。 Python 脚本本身和 SQL Server 数据库中的数据变量都作为输入进行传递。
+在本练习中，你了解了如何创建专用于不同任务的存储过程，其中每个存储过程都使用了系统存储过程 `sp_execute_external_script` 来启动 Python 进程。 Python 进程的输入作为参数传递到 `sp_execute_external`。 Python 脚本本身和数据库中的数据变量都作为输入进行传递。
 
 通常，只应计划将 Azure Data Studio 与经过优化的 Python 代码结合使用，或与返回基于行的输出的简单 Python 代码结合使用。 Azure Data Studio 作为工具支持 T-SQL 之类的查询语言并返回平展行集。 如果代码生成散点图或直方图等可视化输出，则需要可在存储过程之外呈现图像的独立工具或最终用户应用程序。
 
 对于一些习惯了编写完全包含型脚本（可处理各种操作）的 Python 开发人员而言，可能没必要将任务组织到独立的过程中。 但定型和评分的用例不同。 可通过分离任务，将每个任务置于不同的计划，并限定每个操作的权限范围。
-
-同样，也可以利用 SQL Server 的资源功能（如并行处理、资源调控），或通过编写脚本来使用 [microsoftml](../python/ref-py-microsoftml.md) 中支持流式处理和并行执行的算法。 通过将定型和评分分离，可以针对特定工作负载进行优化。
 
 最后一个优点是可以使用参数修改进程。 在本练习中，创建了模型（本示例中名为“Naive Bayes”）的 Python 代码作为输入传递到另一个存储过程，该过程在评分过程中调用该模型。 本练习仅使用一个模型，但可以想象到，在评分任务中将模型参数化会使该脚本更为有用。
 

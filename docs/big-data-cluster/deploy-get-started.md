@@ -5,20 +5,20 @@ description: 了解用于部署 SQL Server 大数据群集的步骤和资源。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0f6600b6578abe0a9b72dff8fee2d815b0771c0c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4caaacd2d71d00d874a793129eef2f4144f03190
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82178128"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784296"
 ---
 # <a name="get-started-with-big-data-clusters-2019-deployment"></a>开始 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 部署
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 本文概述了如何部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]。 本文向你介绍概念并提供用于理解部署方案的框架。 具体部署步骤因客户端和服务器的平台选择而异。 有关 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 的简介，请参阅 [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md)
 
@@ -41,16 +41,7 @@ ms.locfileid: "82178128"
 
 ## <a name="client-tools"></a><a id="tools"></a> 客户端工具
 
-大数据群集需要一组特定的客户端工具。 将大数据群集部署到 Kubernetes 之前，应安装以下工具：
-
-| 工具 | 说明 |
-|---|---|
-| **azdata** | 部署和管理大数据群集。 |
-| **kubectl** | 创建和管理基础 Kubernetes 群集。 |
-| **Azure Data Studio** | 使用大数据群集的图形界面。 |
-| **SQL Server 2019 扩展** | 启用大数据群集功能的 Azure Data Studio 扩展。 |
-
-对于不同方案，需要使用其他工具。 每篇文章都应说明用于执行特定任务的必需工具。 有关工具和安装链接的完整列表，请参阅[安装 SQL Server 2019 大数据工具](deploy-big-data-tools.md)。
+大数据群集需要一组特定的客户端工具。 将大数据群集部署到 Kubernetes 之前，应安装部署所需的工具。 对于不同方案，需要使用特定的工具。 每篇文章都应说明用于执行特定任务的必需工具。 有关工具和安装链接的完整列表，请参阅[安装 SQL Server 2019 大数据工具](deploy-big-data-tools.md)。
 
 ## <a name="kubernetes"></a>Kubernetes
 
@@ -58,7 +49,11 @@ ms.locfileid: "82178128"
 
 - **Azure Kubernetes 服务 (AKS)** ：AKS 支持在 Azure 中部署托管的 Kubernetes 群集。 用户仅管理和维护代理节点。 使用 AKS，无需为群集预配硬件。 还可轻松使用 [python 脚本](quickstart-big-data-cluster-deploy.md)或[部署笔记本](notebooks-deploy.md)创建 AKS 群集和部署大数据群集，只需一步即可完成。 有关为大数据群集部署配置 AKS 的详细信息，请参阅[为 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 配置 Azure Kubernetes 服务](deploy-on-aks.md)。
 
+- **Azure Red Hat OpenShift (ARO)** ：ARO 允许在 Azure 中部署托管的 Red Hat OpenShift 群集。 用户仅管理和维护代理节点。 使用 ARO，无需为群集预配自己的硬件。 还可轻松使用 [python 脚本](quickstart-big-data-cluster-deploy-aro.md)来创建 ARO 群集和部署大数据群集，只需一步即可完成。 此部署模型在 SQL Server 2019 CU5 中引入。 
+
 - **多台计算机**：还可以将 Kubernetes 部署到多台 Linux 计算机，这些计算机可以是物理服务器或虚拟机。 可使用 [Kubeadm](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/) 工具创建 Kubernetes 群集。 可使用 [bash 脚本](deployment-script-single-node-kubeadm.md)自动执行此类部署。 如果已有想要用于大数据群集的现有基础结构，此方法会很有效。 有关将 kubeadm 部署用于大数据群集的详细信息，请参阅[在多台计算机上为 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 部署配置 Kubernetes](deploy-with-kubeadm.md)  。
+
+- **Red Hat OpenShift**：部署到自己的 Red Hat OpenShift 群集。 相关信息请参阅[在 OpenShift 本地和 Azure Red Hat OpenShift 上部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deploy-openshift.md)。 此部署模型在 SQL Server 2019 CU5 中引入。
 
 ## <a name="deploy-a-big-data-cluster"></a>部署大数据群集
 

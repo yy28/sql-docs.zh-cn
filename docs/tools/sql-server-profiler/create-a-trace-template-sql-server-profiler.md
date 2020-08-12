@@ -1,6 +1,7 @@
 ---
 title: 创建跟踪模板
 titleSuffix: SQL Server Profiler
+description: 了解如何在 SQL Server Profiler 中创建新的跟踪模板。 了解如何向模板添加筛选器以及如何添加或删除事件和数据列。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 2944e21afee17f66eef51723f4e552c947f43db8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: af272f50f281a8c3a564913cfb91be8abcab2898
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307311"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774871"
 ---
 # <a name="create-a-trace-template-sql-server-profiler"></a>创建跟踪模板 (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   本主题介绍如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]创建新的跟踪模板。  
   
 ### <a name="to-create-a-trace-template"></a>创建跟踪模板  
@@ -45,9 +46,9 @@ ms.locfileid: "75307311"
   
     -   添加事件时，默认情况下将包含所有相关数据列。 若要从跟踪中删除某个事件的数据列，请清除此事件的该数据列中的复选框。  
   
-    -   若要添加筛选器，请单击数据列的名称，然后在 **“编辑筛选器”** 对话框中指定筛选条件。 也可以右键单击数据列名称，再单击“编辑列筛选器”  ，以启动“编辑筛选器”  对话框。 单击 **“确定”** 以添加筛选器。  
+    -   若要添加筛选器，请单击数据列的名称，然后在 **“编辑筛选器”** 对话框中指定筛选条件。 也可以右键单击数据列名称，再单击“编辑列筛选器”，以启动“编辑筛选器”对话框。 单击 **“确定”** 以添加筛选器。  
   
-8.  单击“保存”  。  
+8.  单击“保存”。  
   
 ## <a name="see-also"></a>另请参阅  
  [指定跟踪文件的事件和数据列 (SQL Server Profiler)](../../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   

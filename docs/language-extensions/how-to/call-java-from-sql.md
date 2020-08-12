@@ -4,20 +4,20 @@ titleSuffix: SQL Server Language Extensions
 description: 了解如何使用 SQL Server 扩展从 SQL Server 存储过程调用 Java 类。
 author: dphansen
 ms.author: davidph
-ms.date: 11/05/2019
+ms.date: 06/25/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bdff924b63b11eda850378987498e8601367d3fe
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5aa8659b57349efb7378209006bbada148206bcb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73658898"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735125"
 ---
 # <a name="how-to-call-the-java-runtime-in-sql-server-language-extensions"></a>如何在 SQL Server 语言扩展中调用 Java 运行时
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 [SQL Server 语言扩展](../language-extensions-overview.md)使用 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 系统存储过程作为接口来调用 Java 运行时。 
 
@@ -114,6 +114,20 @@ with result sets ((column1 int))
 ```
 
 有关详细信息，请参阅 [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)。
+
+## <a name="loopback-connection-to-sql-server"></a>到 SQL Server 的环回连接
+
+使用环回连接通过 JDBC 连接回 SQL Server，以从 `sp_execute_external_script` 执行的 Java 中读取或写入数据。 当无法使用 `sp_execute_external_script` 的 InputDataSet 和 OutputDataSet 参数时，可以使用此选项 。
+若要在 Windows 中建立环回连接，请使用以下示例：
+
+```
+jdbc:sqlserver://localhost:1433;databaseName=Adventureworks;integratedSecurity=true;
+``` 
+
+若要在 Linux 中建立环回连接，JDBC 驱动程序需要以下证书中定义的三个连接属性：
+
+[Client-Certificate-Authenication](https://github.com/microsoft/mssql-jdbc/wiki/Client-Certificate-Authentication-for-Loopback-Scenarios)
+
 
 ## <a name="next-steps"></a>后续步骤
 

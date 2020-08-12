@@ -1,6 +1,7 @@
 ---
 title: 在跟踪时查找值或数据列
 titleSuffix: SQL Server Profiler
+description: 了解如何在跟踪运行时使用 SQL Server Profiler 搜索跟踪输出中的特定值或数据列。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: e78150643556a418226cff36e9aaa2a3fa3f555c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 697674390fe11ff569451dcb0153482f7b8aefd8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307208"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789978"
 ---
 # <a name="find-a-value-or-data-column-while-tracing-sql-server-profiler"></a>在跟踪时查找值或数据列 (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 本主题说明如何在使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]运行跟踪时，在跟踪输出中搜索特定值或数据列。  
   
@@ -30,7 +31,7 @@ ms.locfileid: "75307208"
   
 2.  在 **“编辑”** 菜单中，单击 **“查找”** 。  
   
-3.  在  “查找”对话框中的  “查找内容”文本框中，输入搜索值，并选择指定数据列。  
+3.  在“查找”对话框中的“查找内容”文本框中，输入搜索值，并选择指定数据列。  
   
 4.  若要查找下一个匹配值，请单击 **“查找下一个”** 。  
   

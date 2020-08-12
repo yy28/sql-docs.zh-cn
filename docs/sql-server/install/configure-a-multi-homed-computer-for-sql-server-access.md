@@ -1,5 +1,6 @@
 ---
 title: 配置多宿主计算机以允许访问
+description: 了解如何配置 SQL Server 和 Windows 防火墙，以便为多宿主环境中的 SQL Server 实例提供网络连接。
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - multi-homed computer [SQL Server] configuring ports
 - firewall systems [Database Engine], multi-homed computer
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: d8733c9a4624bcadb60eb5cfa70cf81f242f43a7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 74f365ec21285609055d8ecc04690787f5870802
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244459"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894905"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>将多宿主计算机配置为允许 SQL Server 访问
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   当服务器必须提供与两个或更多个网络或网络子网的连接时，典型的方案是使用多宿主计算机。 此计算机通常位于外围网络（也称为 DMZ、外围安全区域或屏蔽子网）中。 本文介绍如何在多宿主环境中配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和高级安全 Windows 防火墙，以便为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例提供多个网络连接。  
   
@@ -56,7 +57,7 @@ ms.locfileid: "75244459"
   
 #### <a name="to-determine-the-ip-addresses-available-on-the-computer"></a>确定计算机上可用的 IP 地址  
   
-1.  在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机上，依次单击“开始”  和“运行”  ，键入 **cmd**，然后[!INCLUDE[clickOK](../../includes/clickok-md.md)]。  
+1.  在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机上，依次单击“开始”和“运行”，键入 **cmd**，然后[!INCLUDE[clickOK](../../includes/clickok-md.md)]。  
   
 2.  在“命令提示符”窗口中，键入 **ipconfig,** ，然后按 Enter 列出此计算机上可用的 IP 地址。  
   
@@ -69,15 +70,15 @@ ms.locfileid: "75244459"
   
 1.  单击 **“开始”** ，依次指向 **“所有程序”** 、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]和 **“配置工具”** ，然后单击 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器”** 。  
   
-2.  在“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器”的控制台窗格中，依次展开“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 网络配置”、“\<实例名称> 的协议”，然后双击“TCP/IP”。  
+2.  在“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器”的控制台窗格中，依次展开“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 网络配置”、“\<instance name> > 的协议”，然后双击“TCP/IP”   。  
   
-3.  在“TCP/IP 属性”  对话框的“IP 地址”  选项卡上，将显示若干个 IP 地址，格式为：**IP1**、**IP2**...，一直到 **IPAll**。 这些 IP 地址中有一个是环回适配器的 IP 地址 (127.0.0.1)。 其他 IP 地址是计算机上配置的各个 IP 地址。  
+3.  在“TCP/IP 属性”对话框的“IP 地址”选项卡上，将显示若干个 IP 地址，格式为：**IP1**、**IP2**...，一直到 **IPAll**。 这些 IP 地址中有一个是环回适配器的 IP 地址 (127.0.0.1)。 其他 IP 地址是计算机上配置的各个 IP 地址。  
   
 4.  对于任意 IP 地址，如果 **“TCP 动态端口”** 对话框中包含 **0**，则指示 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 正在侦听动态端口。 本示例使用固定端口，而不是使用在重新启动时会发生更改的动态端口。 因此，如果 **“TCP 动态端口”** 对话框中包含 **0**，则删除 0。  
   
 5.  请注意为要配置的每个 IP 地址列出的 TCP 端口。 对于本示例，假设两个 IP 地址都侦听默认端口 1433。  
   
-6.  如果不希望 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用某些可用端口，则请在 **“协议”** 选项卡上将 **“全部侦听”** 值更改为 **“否”** ；在 **“IP 地址”** 选项卡上，将不想使用的 IP 地址的 **“活动”** 值更改为 **“否”** 。  
+6.  如果不希望 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用某些可用端口，则请在 **“协议”** 选项卡上将 **“全部侦听”** 值更改为 **“否”**；在 **“IP 地址”** 选项卡上，将不想使用的 IP 地址的 **“活动”** 值更改为 **“否”** 。  
   
 ## <a name="configuring-windows-firewall-with-advanced-security"></a>配置高级安全 Windows 防火墙  
  知道计算机所使用的 IP 地址和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所使用的端口后，就可以创建防火墙规则，然后为特定的 IP 地址配置这些规则。  
@@ -86,15 +87,15 @@ ms.locfileid: "75244459"
   
 1.  在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机上，以管理员身份登录。  
   
-2.  依次单击“开始”  、“运行”  ，键入 **wf.msc**，然后单击“确定”  。  
+2.  依次单击“开始” 、“运行” ，键入 **wf.msc**，然后单击“确定” 。  
   
-3.  在“用户帐户控制”对话框中，单击“继续”使用管理员凭据打开高级安全 Windows 防火墙管理单元   。  
+3.  在“用户帐户控制”对话框中，单击“继续”使用管理员凭据打开高级安全 Windows 防火墙管理单元 。  
   
 4.  在 **“概述”** 页上，确认已启用 Windows 防火墙。  
   
 5.  在左窗格中，单击 **“入站规则”** 。  
   
-6.  右键单击“入站规则”，然后单击“新建规则”以打开“新建入站规则向导”    。  
+6.  右键单击“入站规则”，然后单击“新建规则”以打开“新建入站规则向导”  。  
   
 7.  可以为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 程序创建规则。 但是，由于本示例使用固定端口，所以请选择 **“端口”** ，然后单击 **“下一步”** 。  
   
@@ -121,13 +122,13 @@ ms.locfileid: "75244459"
   
 #### <a name="to-configure-the-firewall-rule-for-a-specific-ip-addresses"></a>为特定的 IP 地址配置防火墙规则  
   
-1.  在“高级安全 Windows 防火墙”的“入站规则”页上，右键单击刚创建的规则，然后单击“属性”    。  
+1.  在“高级安全 Windows 防火墙”的“入站规则”页上，右键单击刚创建的规则，然后单击“属性”  。  
   
 2.  在 **“规则属性”** 对话框中，选择 **“范围”** 选项卡。  
   
 3.  在 **“本地 IP 地址”** 区域中，选择 **“下列 IP 地址”** ，然后单击 **“添加”** 。  
   
-4.  在 **“IP 地址”** 对话框中，选择 **“此 IP 地址或子网”** ，然后键入要配置的 IP 地址之一。  
+4.  在 **“IP 地址”** 对话框中，选择 **“此 IP 地址或子网”**，然后键入要配置的 IP 地址之一。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

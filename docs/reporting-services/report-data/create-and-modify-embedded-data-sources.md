@@ -1,5 +1,6 @@
 ---
 title: 创建和修改嵌入的数据源 | Microsoft Docs
+description: 了解如何创建和修改在报表定义中定义且仅供该报表使用的嵌入的数据源。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1c38c2e8-7a29-4f79-a4a3-85ed2b13723b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f2ce2535a28661e40e845aa87936f3c23353e544
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0e5f9aed11beacf056916e44e6f2df391444eae0
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74190848"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85808447"
 ---
 # <a name="create-and-modify-embedded-data-sources"></a>创建和修改嵌入的数据源
   嵌入数据源在报表定义中定义并只由该报表使用。  
@@ -29,7 +30,7 @@ ms.locfileid: "74190848"
   
 3.  确认是否已选中“嵌入连接”  ，然后执行以下操作。  
   
-    1.  从“类型”下拉列表中，选择一个数据源类型，例如“Microsoft SQL Server”或“OLE DB”    。  
+    1.  从“类型”下拉列表中，选择一个数据源类型，例如“Microsoft SQL Server”或“OLE DB”  。  
   
     2.  采用以下备选方案之一指定连接字符串：  
   
@@ -55,7 +56,7 @@ ms.locfileid: "74190848"
   
 3.  确认选中 **“使用嵌在我的报表中的连接”** 。  
   
-    1.  从“选择连接类型”下拉列表中，选择一个数据源类型，例如“Microsoft SQL Server”或“OLE DB”    。  
+    1.  从“选择连接类型”下拉列表中，选择一个数据源类型，例如“Microsoft SQL Server”或“OLE DB”  。  
   
     2.  采用以下备选方案之一指定连接字符串：  
   

@@ -1,5 +1,6 @@
 ---
 title: 在关系查询设计器中生成查询（报表生成器和 SSRS）
+description: 了解如何在关系查询设计器中生成查询，以便可以指定要为报表数据集从外部数据源中检索哪些数据。
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
@@ -9,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/25/2019
-ms.openlocfilehash: 9895582db682497dd272010466d05f0bebd93b1a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5ead07a1cf2afa13189b76c0c6eb75a472699543
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74190908"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85808477"
 ---
 # <a name="build-a-query-in-the-relational-query-designer-report-builder-and-ssrs"></a>在关系查询设计器中生成查询（报表生成器和 SSRS）
 
@@ -45,7 +46,7 @@ ms.locfileid: "74190908"
   
 ### <a name="to-build-a-query-for-an-embedded-dataset-in-report-design-view"></a>在报表设计视图中为嵌入数据集生成查询  
   
-1.  打开查询设计器。 在“报表数据”窗格中，右键单击该数据集，然后单击“查询”  。  
+1.  打开查询设计器。 在“报表数据”窗格中，右键单击该数据集，然后单击“查询”。  
   
      将打开与数据源关联的查询设计器。  
   
@@ -67,9 +68,9 @@ ms.locfileid: "74190908"
   
 2.  在“应用的筛选器”窗格工具栏中，单击 **“添加筛选器”** 。 此时将显示一个新的筛选器行。  
   
-3.  在“字段名称”中，单击以显示字段的下拉列表，然后单击要作为筛选依据的字段名称  。 例如，若要按数量进行筛选，则单击包含项数的字段。  
+3.  在“字段名称”中，单击以显示字段的下拉列表，然后单击要作为筛选依据的字段名称****。 例如，若要按数量进行筛选，则单击包含项数的字段。  
   
-4.  在“运算符”中，单击以显示运算符的下拉列表，然后选择要在筛选器中使用的比较运算符  。  
+4.  在“运算符”中，单击以显示运算符的下拉列表，然后选择要在筛选器中使用的比较运算符。  
   
 5.  在 **“值”** 中，键入要作为筛选依据的值。 例如，若要针对大于 100 的数量进行筛选，则键入 100。  
   
@@ -83,7 +84,7 @@ ms.locfileid: "74190908"
   
 ### <a name="to-view-a-query-result-set"></a>查看查询结果集  
   
-1.  在查询设计器工具栏中，单击“运行查询(!)”  。  
+1.  在查询设计器工具栏中，单击“运行查询(!)”。  
   
     > [!NOTE]  
     >  查询设计器使用设计时凭据运行查询并检索结果集。 有关详细信息，请参阅[为报表数据源指定凭据和连接信息](specify-credential-and-connection-information-for-report-data-sources.md)  

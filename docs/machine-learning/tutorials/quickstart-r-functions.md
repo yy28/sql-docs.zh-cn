@@ -4,22 +4,22 @@ titleSuffix: SQL machine learning
 description: 本快速入门介绍如何通过 SQL 机器学习使用 R 数学和实用程序函数。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/23/2020
+ms.date: 05/21/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c769862ab2ab1b06169ae5191217945cf8220c9b
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: a056d73ae28d822c12752ac60f31df5022acf28b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606644"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772364"
 ---
 # <a name="quickstart-r-functions-with-sql-machine-learning"></a>快速入门：通过 SQL 机器学习使用 R 函数
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 本快速入门介绍如何在 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)中或[大数据群集](../../big-data-cluster/machine-learning-services.md)上使用 R 数学和实用程序函数。 通常在 T-SQL 中难以实现的统计函数在 R 中只需几行代码就可以实现。
@@ -29,6 +29,9 @@ ms.locfileid: "83606644"
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 本快速入门介绍如何通过 [SQL Server R Services](../r/sql-server-r-services.md) 使用 R 数学和实用程序函数。 通常在 T-SQL 中难以实现的统计函数在 R 中只需几行代码就可以实现。
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+本快速入门介绍在 [Azure SQL 托管实例机器学习服务](/azure/azure-sql/managed-instance/machine-learning-services-overview)中使用 R 时如何使用数据结构和数据类型。 将了解如何在 R 与 SQL 托管实例之间迁移数据，以及可能出现的常见问题。
 ::: moniker-end
 
 ## <a name="prerequisites"></a>先决条件
@@ -43,6 +46,9 @@ ms.locfileid: "83606644"
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 - SQL Server 2016 R Services。 有关如何安装 R Services 的信息，请参阅 [Windows 安装指南](../install/sql-r-services-windows-install.md)。
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+- Azure SQL 托管实例机器学习服务。 有关如何注册的说明，请参阅 [Azure SQL 托管实例机器学习服务概述](/azure/azure-sql/managed-instance/machine-learning-services-overview)。
 ::: moniker-end
 
 - 一个用于运行包含 R 脚本的 SQL 查询的工具。 本快速入门使用 [Azure Data Studio](../../azure-data-studio/what-is.md)。
@@ -106,21 +112,19 @@ EXECUTE MyRNorm @param1 = 100,@param2 = 50, @param3 = 3
 
 默认安装的 **utils** 包提供各种实用工具函数来调查当前 R 环境。 如果你发现 R 代码在 SQL Server 和外部环境中的执行方式存在差异，那么这些函数会很有用。
 
-例如，你可以使用 R `memory.limit()` 函数获取当前 R 环境的内存。 因为 `utils` 包默认情况下已安装但未加载，因此你必须首先使用 `library()` 函数加载该包。
+例如，可以使用 R 中的系统计时函数（例如 `system.time` 和 `proc.time`）来捕获 R 进程使用的时间并分析性能问题。 有关示例，请参阅教程[创建数据特征](../tutorials/walkthrough-create-data-features.md)，其中的解决方案嵌入了 R 计时函数。
 
 ```sql
 EXECUTE sp_execute_external_script
       @language = N'R'
     , @script = N'
         library(utils);
-        mymemory <- memory.limit();
-        OutputDataSet <- as.data.frame(mymemory);'
-    , @input_data_1 = N' ;'
-WITH RESULT SETS (([Col1] int not null));
+        start.time <- proc.time();
+        
+        # Run R processes
+        
+        elapsed_time <- proc.time() - start.time;'
 ```
-
-> [!TIP]
-> 许多用户喜欢使用 R 中的系统计时函数（例如 `system.time` 和 `proc.time`）来捕获 R 进程使用的时间并分析性能问题。 有关示例，请参阅教程[创建数据特征](../tutorials/walkthrough-create-data-features.md)，其中的解决方案嵌入了 R 计时函数。
 
 ## <a name="next-steps"></a>后续步骤
 

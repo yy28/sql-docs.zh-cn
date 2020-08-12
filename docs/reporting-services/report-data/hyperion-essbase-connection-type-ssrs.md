@@ -1,5 +1,6 @@
 ---
 title: Hyperion Essbase 连接类型 | Microsoft Docs
+description: 了解如何从 Hyperion Essbase 外部数据源检索多维数据以将其包含在报表中。
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e65c3ca2bd6866ede2eb9924f8465e5b66d37c0b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d6ee62393c6b9a74dee16acf532d474a7a344b54
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079025"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85808428"
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Hyperion Essbase 连接类型 (SSRS)
   若要在报表中包含来自 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 外部数据源的数据，您必须拥有一个基于 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]类型的报表数据源的数据集。 此内置数据源类型基于 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]的数据扩展插件，让你可以从 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 外部数据源检索多维数据。  
@@ -75,11 +76,11 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ### <a name="predefined-field-properties"></a>预定义的字段属性  
- 通常受多个数据访问接口支持并出现在报表数据集的基础 MDX 查询中的预定义字段属性。 例如，MDX 维度属性 MEMBER_UNIQUE_NAME 映射到预定义报表数据集字段属性 **UniqueName**。 若要在文本框中包含唯一名称值，请使用表达式 `=Fields!` *\<FieldName>* `.UniqueName`。  
+ 通常受多个数据访问接口支持并出现在报表数据集的基础 MDX 查询中的预定义字段属性。 例如，MDX 维度属性 MEMBER_UNIQUE_NAME 映射到预定义报表数据集字段属性 **UniqueName**。 若要在文本框中包含唯一名称值，请使用表达式 `=Fields!`\<FieldName>`.UniqueName`。  
   
  下表提供了可以用于 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 数据源的预定义字段属性的列表。  
   
-|**属性**|类型 |**说明或所需的值**|  
+|**Property**|**Type**|**说明或所需的值**|  
 |------------------|--------------|---------------------------------------|  
 |**值**|**Object**|指定字段的数据值。<br /><br /> 对于维度属性，它映射到 MEMBER_CAPTION。 对于度量值，它映射到数据值。|  
 |**IsMissing**|**布尔值**|指示是否在结果数据集中找到了该字段。|  
@@ -92,7 +93,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ### <a name="custom-properties"></a>自定义属性  
- 为某个数据访问接口所支持并出现在报表数据集的基础 MDX 查询中的自定义字段属性，但这些属性不作为该数据集的字段出现在报表“数据集”窗格中。 例如， **Long Names** 是为某个维度级别定义的成员属性。 若要在文本框中包含该值，请使用表达式 `=Fields!` *\<FieldName>* `("Long Names")`。 表达式中的字段名区分大小写。  
+ 为某个数据访问接口所支持并出现在报表数据集的基础 MDX 查询中的自定义字段属性，但这些属性不作为该数据集的字段出现在报表“数据集”窗格中。 例如， **Long Names** 是为某个维度级别定义的成员属性。 若要在文本框中包含该值，请使用表达式 `=Fields!`\<FieldName>`("Long Names")`。 表达式中的字段名区分大小写。  
   
  可以使用以下语法在表达式中引用自定义扩展属性：  
   
@@ -100,7 +101,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
  下表显示了可用于 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 数据源的自定义字段属性。  
   
-|**属性**|类型 |**说明或所需的值**|  
+|**Property**|**Type**|**说明或所需的值**|  
 |------------------|--------------|---------------------------------------|  
 |**FORMAT_STRING**|**字符串**|针对度量值定义，是可作为 String 类型的 **FormattedValue** 。|  
   

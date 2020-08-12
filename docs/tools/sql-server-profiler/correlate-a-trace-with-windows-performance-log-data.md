@@ -1,6 +1,7 @@
 ---
 title: 将跟踪与 Windows 性能日志数据关联
 titleSuffix: SQL Server Profiler
+description: 了解如何将 Windows 性能日志与某个跟踪相关联，以便可以从 SQL Server Profiler 的系统监视器对象和计数器中查看数据。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,26 +12,26 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 07/12/2017
-ms.openlocfilehash: b9fca7d522d21706681ddfa714d45e8d18b3d4c1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 10fc6d48bc8187e49cac7d2dcfffb806419b1799
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307327"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774895"
 ---
 # <a name="correlate-a-trace-with-windows-performance-log-data"></a>将跟踪与 Windows 性能日志数据关联
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，您可以打开 Microsoft Windows 性能日志、选择要与跟踪关联的计数器，并在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 图形用户界面中将所选性能计数器与跟踪一起显示。 选择跟踪窗口中的事件时， [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的系统监视器数据窗口窗格中的红色竖线用于指示与所选跟踪事件关联的性能日志数据。  
   
- 若要将跟踪与性能计数器关联，请打开包含 StartTime  和 EndTime  数据列的跟踪文件或表，然后在  **的“文件”** [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]菜单上，单击“导入性能数据”  。 然后您就可以打开性能日志，选择要与跟踪关联的系统监视器对象和计数器。  
+ 若要将跟踪与性能计数器关联，请打开包含 StartTime**** 和 EndTime**** 数据列的跟踪文件或表，然后在  的“文件”[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **** 菜单上，单击“导入性能数据”****。 然后您就可以打开性能日志，选择要与跟踪关联的系统监视器对象和计数器。  
   
 ### <a name="to-correlate-a-trace-with-performance-log-data"></a>将跟踪与性能日志数据关联  
   
 1.  在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]中，打开保存的跟踪文件或跟踪表。 不能关联仍在收集事件数据的运行中的跟踪。 为实现与系统监视器数据的准确关联，跟踪必须同时包含 **StartTime** 和 **EndTime** 数据列。  
   
-2.  在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **“文件”** 菜单上，单击“导入性能数据”  。  
+2.  在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **“文件”** 菜单上，单击“导入性能数据”。  
   
 3.  在 **“打开”** 对话框中，选择包含性能日志的文件。 必须在捕获跟踪数据的同一时间段捕获性能日志数据。  
   
@@ -44,7 +45,7 @@ ms.locfileid: "75307327"
   
 1.  在“控制面板”中，打开 **“管理工具”** ，再双击 **“性能”** 。  
   
-2.  在“性能”  对话框中，展开“性能日志和警报”  ，右键单击“计数器日志”  ，再单击“新建日志设置”  。  
+2.  在“性能”对话框中，展开“性能日志和警报”，右键单击“计数器日志”，再单击“新建日志设置”。  
   
 3.  键入计数器日志的名称，然后单击 **“确定”** 。  
   

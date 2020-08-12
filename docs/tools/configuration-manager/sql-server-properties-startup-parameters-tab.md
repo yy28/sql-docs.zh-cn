@@ -1,5 +1,6 @@
 ---
 title: SQL Server 属性（“启动参数”选项卡）
+description: 使用“SQL Server 属性”对话框的“启动参数”选项卡来添加或删除启动参数，这可能影响数据库引擎的性能。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,22 +12,22 @@ ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2d5a4c5cb279cb4cfd4bbe1baa63f89dc1289436
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f13952b4c01bbbb65e3afc9909482a53ce327f32
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306771"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894511"
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>SQL Server 属性（“启动参数”选项卡）
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   使用此对话框可以添加或删除 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的启动参数。 启动参数可能会对 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 性能产生很大影响。 在添加或更改启动参数前，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的主题“使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务启动选项”。  
   
 ## <a name="options"></a>选项  
  **指定启动参数**  
  若要添加某一参数，请键入该参数，然后单击 **“添加”** 。  
   
- 若要修改所需的参数之一，请在 **“现有参数”** 框中键入该参数，更改 **“指定启动参数”** 框中的值，然后单击 **“更新”** 。  
+ 若要修改所需的参数之一，请在 **“现有参数”** 框中键入该参数，更改 **“指定启动参数”** 框中的值，然后单击 **“更新”**。  
   
  **“现有参数”**  
  若要删除某一参数，请选择该参数，然后单击 **“删除”** 。  

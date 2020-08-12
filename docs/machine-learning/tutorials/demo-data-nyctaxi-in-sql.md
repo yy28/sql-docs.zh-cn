@@ -2,22 +2,22 @@
 title: 教程适用的纽约市出租车演示数据
 description: 创建包含纽约市出租车示例数据的数据库。 此数据集用于 SQL Server 机器学习服务的 R 和 Python 教程。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 10/31/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e55076a539cb2a932c2f1e0c432daf774899518f
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 46ad967b9ecd40b84cf7871e7b9ef113fe686953
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116660"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85814052"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>用于 SQL Server Python 和 R 教程的纽约市出租车演示数据
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 本文介绍了如何设置一个示例数据库，该数据库包含来自[纽约市出租车和轿车委员会](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)的公共数据。 此数据用于多个 R 和 Python 教程，用于 SQL Server 上的数据库内分析。 为了使示例代码运行速度更快，我们创建了一个具有代表性的 1% 采样数据。 在你的系统上，数据库备份文件略大于 90 MB，在主数据表中提供 170 万行。
 
@@ -34,17 +34,22 @@ ms.locfileid: "81116660"
 
 文件大小约为 90 MB。
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+>[!NOTE]
+>若要还原 [SQL Server 大数据群集](../../big-data-cluster/big-data-cluster-overview.md)上的示例数据库，请下载[NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak) 并遵循[将数据库还原到 SQL Server 大数据群集主实例](../../big-data-cluster/data-ingestion-restore-database.md)中的说明进行操作。
+::: moniker-end
+
 1. 单击 [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak) 下载数据库备份文件。
 
 2. 将该文件复制到 C:\Program files\Microsoft SQL Server\MSSQL-instance-name\MSSQL\Backup 文件夹。
 
-3. 在 Management Studio 中，右键单击“数据库”，然后选择“还原文件和文件组”   。
+3. 在 Management Studio 中，右键单击“数据库”，然后选择“还原文件和文件组” 。
 
-4. 输入“NYCTaxi_Sample”作为数据库名称  。
+4. 输入“NYCTaxi_Sample”作为数据库名称。
 
-5. 单击“从设备”，然后打开文件选择页以选择备份文件  。 单击“添加”以选择 NYCTaxi_Sample.bak  。
+5. 单击“从设备”，然后打开文件选择页以选择备份文件。 单击“添加”以选择 NYCTaxi_Sample.bak。
 
-6. 选中“还原”复选框，然后单击“确定”以还原数据库   。
+6. 选中“还原”复选框，然后单击“确定”以还原数据库 。
 
 ## <a name="review-database-objects"></a>查看数据库对象
    
@@ -77,7 +82,7 @@ ms.locfileid: "81116660"
 
 作为验证步骤，运行查询以确认已上传数据。
 
-1. 在“对象资源管理器”中的“数据库”下，右键单击“NYCTaxi_Sample”数据库，然后启动一个新查询  。
+1. 在“对象资源管理器”中的“数据库”下，右键单击“NYCTaxi_Sample”数据库，然后启动一个新查询。
 
 2. 运行一些简单的查询：
 
@@ -87,7 +92,7 @@ ms.locfileid: "81116660"
     ```
 数据库包含 170 万行。
 
-3. 数据库内是一个包含数据集的 nyctaxi_sample 表  。 表已针对基于集的计算进行了优化，并且添加了[列存储索引](../../relational-databases/indexes/columnstore-indexes-overview.md)。 运行此语句，以生成表的快速摘要。
+3. 数据库内是一个包含数据集的 nyctaxi_sample 表。 表已针对基于集的计算进行了优化，并且添加了[列存储索引](../../relational-databases/indexes/columnstore-indexes-overview.md)。 运行此语句，以生成表的快速摘要。
 
     ```sql
     SELECT DISTINCT [passenger_count]

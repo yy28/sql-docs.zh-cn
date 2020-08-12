@@ -1,26 +1,25 @@
 ---
 title: 快速入门：Python 函数
-description: 本快速入门介绍了如何将 Python 数学和实用工具函数与 SQL Server 机器学习服务结合使用。
+titleSuffix: SQL machine learning
+description: 在本快速入门中，你将学习如何在 SQL 机器学习中运用 Python 数学函数和效用函数。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/28/2020
+ms.date: 05/21/2020
 ms.topic: quickstart
 author: cawrites
 ms.author: chadam
-ms.reviewer: garye
+ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6afe1685956c43e30ace59f3e5cc794a2abbd88f
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 5aef8010c48e08931998f1bd7e49c3797ef4e81a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606696"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784084"
 ---
-# <a name="quickstart-python-functions-with-sql-server-machine-learning-services"></a>快速入门：结合使用 Python 函数和 SQL Server 机器学习服务
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="quickstart-python-functions-with-sql-machine-learning"></a>快速入门：在 SQL 机器学习中使用 Python 函数
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 本快速入门介绍如何在 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)中或[大数据群集](../../big-data-cluster/machine-learning-services.md)上使用 Python 数学和实用程序函数。 统计函数在 T-SQL 中实现起来通常很复杂，但在 Python 中只需几行代码就可以完成。
@@ -28,18 +27,29 @@ ms.locfileid: "83606696"
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 本快速入门介绍如何将 Python 数学和实用程序函数与 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)结合使用。 统计函数在 T-SQL 中实现起来通常很复杂，但在 Python 中只需几行代码就可以完成。
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+在本快速入门中，你会学习如何将 Python 数学函数和效用函数用于 [Azure SQL 托管实例机器学习服务](/azure/azure-sql/managed-instance/machine-learning-services-overview)。 统计函数在 T-SQL 中实现起来通常很复杂，但在 Python 中只需几行代码就可以完成。
+::: moniker-end
 
 ## <a name="prerequisites"></a>先决条件
 
-- 本快速入门需要使用安装了 Python 语言的 [SQL Server 机器学习服务](../install/sql-machine-learning-services-windows-install.md)访问 SQL Server 实例。
+若要运行本快速入门，需要具备以下先决条件。
 
-  SQL Server 实例可以位于 Azure 虚拟机中，也可以位于本地。 请注意，默认情况下禁用外部脚本编写功能，因此可能需要在开始之前[启用外部脚本编写](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature)并验证 SQL Server Launchpad 服务是否正在运行。
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+- SQL Server 机器学习服务。 有关如何安装机器学习服务的信息，请参阅 [Windows 安装指南](../install/sql-machine-learning-services-windows-install.md)或 [Linux 安装指南](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)。 还可以[启用 SQL Server 大数据群集上的机器学习服务](../../big-data-cluster/machine-learning-services.md)。
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+- SQL Server 机器学习服务。 有关如何安装机器学习服务的信息，请参阅 [Windows 安装指南](../install/sql-machine-learning-services-windows-install.md)。 
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+- Azure SQL 托管实例机器学习服务。 要了解如何注册，请参阅 [Azure SQL 托管实例机器学习服务概述](/azure/azure-sql/managed-instance/machine-learning-services-overview)。
+::: moniker-end
 
-- 你还需要一个工具来运行包含 Python 脚本的 SQL 查询。 可使用任何数据库管理或查询工具运行这些脚本，只要它可以连接到 SQL Server 实例，并运行 T-SQL 查询或存储过程即可。 本快速入门使用 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio)。
+- 用于运行包含 Python 脚本的 SQL 查询的工具。 本快速入门使用 [Azure Data Studio](../../azure-data-studio/what-is.md)。
 
 ## <a name="create-a-stored-procedure-to-generate-random-numbers"></a>创建一个存储过程来生成随机数字
 
-为简单起见，使用 Python `numpy` 包，该包是在安装了 Python 的 SQL Server 机器学习服务的情况下默认安装和加载的。 此包中包含数百个用于执行常用统计任务的函数，其中，`random.normal` 函数在给定了标准差和平均数的情况下使用正态分布生成指定数量的随机数字。
+为简单起见，我们使用默认安装并加载的 Python `numpy` 包。 此包中包含数百个用于执行常用统计任务的函数，其中，`random.normal` 函数在给定了标准差和平均数的情况下使用正态分布生成指定数量的随机数字。
 
 例如，以下 Python 代码在给定了标准差 3 的情况下返回平均数为 50 的 100 个数字。
 
@@ -60,9 +70,7 @@ OutputDataSet = pandas.DataFrame(numpy.random.normal(size=100, loc=50, scale=3))
 WITH RESULT SETS(([Density] FLOAT NOT NULL));
 ```
 
-如果你希望更轻松地生成不同的一组随机数字，那该怎么办？
-
-与 SQL Server 结合使用时操作非常简单。 定义一个存储过程，从用户那里获取参数，然后将这些参数作为变量传递给 Python 脚本。
+如果你希望更轻松地生成不同的一组随机数字，那该怎么办？ 定义一个存储过程，从用户那里获取参数，然后将这些参数作为变量传递给 Python 脚本。
 
 ```sql
 CREATE PROCEDURE MyPyNorm (
@@ -119,11 +127,7 @@ elapsed_time = time.time() - start_time
 
 ## <a name="next-steps"></a>后续步骤
 
-若要在 SQL Server 中使用 Python 创建机器学习模型，请遵循以下快速入门：
+若要在 SQL 机器学习中使用 Python 创建机器学习模型，请按以下快速入门操作：
 
 > [!div class="nextstepaction"]
-> [快速入门：通过 SQL Server 机器学习服务在 Python 中创建预测模型并对其进行评分](quickstart-python-train-score-model.md)
-
-有关 SQL Server 机器学习服务的详细信息，请参阅：
-
-- [什么是 SQL Server 机器学习服务（Python 和 R）？](../sql-server-machine-learning-services.md)
+> [快速入门：在 Python 中创建预测模型并对其进行评分](quickstart-python-train-score-model.md)

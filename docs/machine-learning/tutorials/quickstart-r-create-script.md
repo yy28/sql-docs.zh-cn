@@ -4,22 +4,22 @@ titleSuffix: SQL machine learning
 description: 通过 SQL 机器学习运行一组简单的 R 脚本。 了解如何使用存储过程 sp_execute_external_script 执行该脚本。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/23/2020
+ms.date: 05/21/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ed4f4899869dbc9609f29d935c80a7df88fa3d4c
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 2327b6644725c77949b49c661bc7d02d13c4e47d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606749"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772352"
 ---
 # <a name="quickstart-run-simple-r-scripts-with-sql-machine-learning"></a>快速入门：通过 SQL 机器学习运行简单的 R 脚本
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 在本快速入门中，你将在 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)中或[大数据群集](../../big-data-cluster/machine-learning-services.md)上运行一组简单的 R 脚本。 你将了解如何在 SQL Server 实例中使用存储过程 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 执行该脚本。
@@ -29,6 +29,9 @@ ms.locfileid: "83606749"
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 在本快速入门中，你将使用 [SQL Server R Services](../r/sql-server-r-services.md) 运行一组简单的 R 脚本。 你将了解如何在 SQL Server 实例中使用存储过程 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 执行该脚本。
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+在本快速入门中，将使用 [Azure SQL 托管实例机器学习服务](/azure/azure-sql/managed-instance/machine-learning-services-overview)运行一组简单的 R 脚本。 你将了解如何在数据库中使用存储过程 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 执行该脚本。
 ::: moniker-end
 
 ## <a name="prerequisites"></a>先决条件
@@ -43,6 +46,9 @@ ms.locfileid: "83606749"
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 - SQL Server 2016 R Services。 有关如何安装 R Services 的信息，请参阅 [Windows 安装指南](../install/sql-r-services-windows-install.md)。 
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+- Azure SQL 托管实例机器学习服务。 有关如何注册的说明，请参阅 [Azure SQL 托管实例机器学习服务概述](/azure/azure-sql/managed-instance/machine-learning-services-overview)。
 ::: moniker-end
 
 - 一个用于运行包含 R 脚本的 SQL 查询的工具。 本快速入门使用 [Azure Data Studio](../../azure-data-studio/what-is.md)。
@@ -198,12 +204,7 @@ GO
 
 ## <a name="check-r-version"></a>检查 R 版本
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
-如果要查看随 SQL Server 机器学习服务安装的 R 版本，请运行以下脚本。
-::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-如果要查看随 SQL Server 2016 R Services 安装的 R 版本，请运行以下脚本。
-::: moniker-end
+若要查看已安装的 R 的版本，请运行以下脚本。
 
 ```sql
 EXECUTE sp_execute_external_script @language = N'R'

@@ -1,5 +1,6 @@
 ---
 title: 在“报表数据”窗格中添加、编辑和刷新字段（报表生成器）| Microsoft Docs
+description: 详细了解数据集以及如何在报表生成器的报表数据窗格中添加、编辑和刷新字段。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2e36f0fe-8100-4513-b169-14d611646f81
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c6bc3c94923c3ebdb6e2897c4d3aaedbc58621c9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 419e4fa24e6c22dd60eed70dd2b2e3871447f061
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082580"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813138"
 ---
 # <a name="add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs"></a>在“报表数据”窗格中添加、编辑和刷新字段（报表生成器和 SSRS）
   数据集字段是在对外部数据源运行数据集查询时返回的表示数据的字段名称的内置集合。  
@@ -29,10 +30,10 @@ ms.locfileid: "77082580"
   
 ### <a name="to-add-a-query-field"></a>添加查询字段  
   
-1.  在“报表数据”窗格中，右键单击数据集，再单击“添加查询字段”  。  
+1.  在“报表数据”窗格中，右键单击数据集，再单击“添加查询字段”。  
   
     > [!NOTE]  
-    >  如果看不到“报表数据”窗格，请单击“视图”菜单上的“报表数据”   。  
+    >  如果看不到“报表数据”窗格，请单击“视图”菜单上的“报表数据” 。  
   
 2.  在 **“数据集属性”** 对话框的 **“字段”** 页中，单击 **“添加”** ，再单击 **“查询字段”** 。 将向网格底部添加一个新行。  
   
@@ -47,7 +48,7 @@ ms.locfileid: "77082580"
   
 ### <a name="to-add-a-calculated-field"></a>添加计算字段  
   
-1.  在“报表数据”窗格中，右键单击数据集，再单击“添加计算字段”  。  
+1.  在“报表数据”窗格中，右键单击数据集，再单击“添加计算字段”。  
   
 2.  在 **“数据集属性”** 对话框的 **“字段”** 页中，单击 **“添加”** ，再单击 **“计算字段”** 。 将向网格底部添加一个新行。  
   
@@ -65,7 +66,7 @@ ms.locfileid: "77082580"
   
 ### <a name="to-edit-a-query-field-or-a-dataset-field"></a>编辑查询字段或数据集字段  
   
-1.  在“报表数据”窗格中，右键单击字段，然后单击“字段属性”  。  
+1.  在“报表数据”窗格中，右键单击字段，然后单击“字段属性”。  
   
 2.  在 **“数据集属性”** 对话框的 **“字段”** 页中，单击现有字段来选择行。  
   
@@ -77,11 +78,11 @@ ms.locfileid: "77082580"
   
 1.  在“报表数据”窗格中，展开数据集以显示字段集合。  
   
-2.  右键单击要删除的字段，再单击“删除”  。  
+2.  右键单击要删除的字段，再单击“删除”。  
   
 ### <a name="to-refresh-the-field-collection-in-the-report-data-pane-for-a-shared-dataset"></a>为共享数据集刷新“报表数据”窗格中的字段集合  
   
-1.  在“报表数据”窗格中，右键单击该数据集，然后单击“查询”  。  
+1.  在“报表数据”窗格中，右键单击该数据集，然后单击“查询”。  
   
 2.  单击 **“刷新字段”** 。  
   

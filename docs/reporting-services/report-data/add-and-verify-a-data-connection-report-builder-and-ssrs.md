@@ -1,5 +1,6 @@
 ---
 title: 添加和验证数据连接（报表生成器）| Microsoft Docs
+description: 了解如何使用报表生成器添加和验证数据连接，以验证指定的凭据是否足够。
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
@@ -9,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/01/2017
-ms.openlocfilehash: 26ea58eaaaffbbd0c53d78ca971f472413be322b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e128bf4402074ecce5b65951f0d2463368c08bf6
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082256"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812142"
 ---
 # <a name="add-and-verify-a-data-connection-report-builder-and-ssrs"></a>添加和验证数据连接（报表生成器和 SSRS）
 
@@ -52,9 +53,9 @@ ms.locfileid: "77082256"
 
 2. 单击 **“测试连接”** 。
 
-3. 如果连接成功，则显示以下消息：“已成功地创建连接”。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3. 如果连接成功，则显示以下消息：“已成功创建连接”。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
-4. 如果连接失败，则显示以下消息：“无法连接到数据源”。  
+4. 如果连接不成功，则显示以下消息：“无法连接到数据源”。  
 
 5. 单击 **“详细信息”** ，然后使用该信息来解决问题。
 

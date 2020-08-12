@@ -1,6 +1,7 @@
 ---
 title: 导出跟踪模板
 titleSuffix: SQL Server Profiler
+description: 了解如何使用 SQL Server Profiler 将跟踪模板导出为模板文件，以便可以将模板与其他 SQL Server Profiler 实例一起使用。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 82e3bab1f7042029462e3d50b3c7e550fe9eba86
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8348b393da3dde8b8f941a882cf227b9bd99953b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307272"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774831"
 ---
 # <a name="export-a-trace-template-sql-server-profiler"></a>导出跟踪模板 (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 本主题介绍了如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]导出现有跟踪模板以另存为模板文件 (.tdf)。 导出跟踪模板并将其保存为文件后，可以将该模板用于另一个 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]实例。  
   
@@ -28,7 +29,7 @@ ms.locfileid: "75307272"
   
 1.  在 **“文件”** 菜单上，指向 **“模板”** ，然后单击 **“导出模板”** 。  
   
-2.  在“选择模板名称”  对话框中，从“选择模板名称”  列表中选择要导出的模板，然后单击“确定”  。  
+2.  在“选择模板名称”对话框中，从“选择模板名称”列表中选择要导出的模板，然后单击“确定”。  
   
      将显示 **“另存为”** 对话框。  
   

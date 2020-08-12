@@ -1,5 +1,6 @@
 ---
 title: 注册标准 .NET Framework 数据提供程序 | Microsoft Docs
+description: 注册标准 .NET Framework 数据提供程序，从而使用第三方 .NET Framework 数据提供程序检索 Reporting Services 报表数据集的数据。
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d92add64-e93c-4598-8508-55d1bc46acf6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0f9435584579e36e46d55aa6723e0ade60b6642b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b50cd7f19db42111e22b26007e7bb1ca9ee48ff3
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081947"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812122"
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>注册标准 .NET Framework 数据访问接口 (SSRS)
   若要使用第三方 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据提供程序检索 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表数据集的数据，需要在以下两个位置部署和注册 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据提供程序程序集：报表创作客户端和报表服务器。 在报表创作客户端上，必须将数据访问接口注册为数据源类型并将其与查询设计器相关联。 然后，可以在创建报表数据集时选择此数据访问接口作为数据源类型。 关联的查询设计器会打开，帮助您为此数据源类型创建查询。 在报表服务器上，必须将该数据访问接口注册为数据源类型。 然后，可以处理使用此数据访问接口从数据源检索数据的已发布报表。  
@@ -34,7 +35,7 @@ ms.locfileid: "77081947"
   
 #### <a name="to-install-a-data-provider-assembly-on-the-report-server"></a>在报表服务器上安装数据访问接口程序集  
   
-1.  在要在其上使用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据访问接口的报表服务器上，导航到 bin 目录的默认位置。 报表服务器 bin 目录的默认位置为 \<驱动器>:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer\bin  。  
+1.  在要在其上使用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据访问接口的报表服务器上，导航到 bin 目录的默认位置。 报表服务器 bin 目录的默认位置为 \<drive>:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer\bin。  
   
 2.  将程序集从临时位置复制到报表服务器的 bin 目录中。 也可以选择将程序集加载到全局程序集缓存 (GAC) 中。 有关详细信息，请参阅 MSDN 上的 [SDK 文档中的](https://go.microsoft.com/fwlink/?linkid=63912) Working with Assemblies and the Global Assembly Cache [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] （使用程序集和全局程序集缓存）。  
   
@@ -56,10 +57,10 @@ ms.locfileid: "77081947"
   
 4.  添加 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据访问接口的条目。  
   
-    |Attribute|说明|  
+    |特性|描述|  
     |---------------|-----------------|  
-    |**名称**|提供数据访问接口的唯一名称，例如 **MyNETDataProvider**。 **Name** 属性的最大长度是 255 个字符。 该名称在配置文件的 **Extension** 元素内的所有条目中必须唯一。 创建新数据源时，此处包含的值显示在数据源类型下拉列表中。|  
-    |类型 |输入包括实现 <xref:System.Data.IDbConnection> 接口的类的完全限定命名空间在内的逗号分隔的列表，后跟 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据提供程序程序集的名称（不包含 .dll 文件扩展名）。|  
+    |**Name**|提供数据访问接口的唯一名称，例如 **MyNETDataProvider**。 **Name** 属性的最大长度是 255 个字符。 该名称在配置文件的 **Extension** 元素内的所有条目中必须唯一。 创建新数据源时，此处包含的值显示在数据源类型下拉列表中。|  
+    |类型|输入包括实现 <xref:System.Data.IDbConnection> 接口的类的完全限定命名空间在内的逗号分隔的列表，后跟 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据提供程序程序集的名称（不包含 .dll 文件扩展名）。|  
   
      例如，对于部署到报表服务器的 bin 目录中的 DLL，该条目应如下所示：  
   
@@ -107,7 +108,7 @@ ms.locfileid: "77081947"
   
 #### <a name="to-install-a-data-provider-assembly-on-the-report-designer-client"></a>在报表设计器客户端上安装数据访问接口程序集  
   
-1.  在要在其上使用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据访问接口的报表设计器客户端上，导航到 PrivateAssemblies 目录的默认位置。 PrivateAssemblies 目录的默认位置为 \<驱动器>:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies  。  
+1.  在要在其上使用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据访问接口的报表设计器客户端上，导航到 PrivateAssemblies 目录的默认位置。 PrivateAssemblies 目录的默认位置为 \<drive>:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies。  
   
 2.  将程序集从临时位置复制到报表设计器客户端的 PrivateAssemblies 目录中。 也可以选择将程序集加载到全局程序集缓存 (GAC) 中。 有关详细信息，请参阅 MSDN 上的 [SDK 文档中的](https://go.microsoft.com/fwlink/?linkid=63912) Working with Assemblies and the Global Assembly Cache [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] （使用程序集和全局程序集缓存）。  
   
@@ -129,10 +130,10 @@ ms.locfileid: "77081947"
   
 4.  添加该数据访问接口的条目。  
   
-    |Attribute|说明|  
+    |特性|描述|  
     |---------------|-----------------|  
-    |**名称**|提供数据访问接口的唯一名称，例如 **MyNETDataProvider**。 **Name** 属性的最大长度是 255 个字符。 该名称在配置文件的 **Extension** 元素内的所有条目中必须唯一。 创建新数据源时，在此处包含的值显示在数据源类型下拉列表中。|  
-    |类型 |输入包括实现 <xref:System.Data.IDbConnection> 接口的类的完全限定命名空间在内的逗号分隔的列表，后跟 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据提供程序程序集的名称（不包含 .dll 文件扩展名）。|  
+    |**Name**|提供数据访问接口的唯一名称，例如 **MyNETDataProvider**。 **Name** 属性的最大长度是 255 个字符。 该名称在配置文件的 **Extension** 元素内的所有条目中必须唯一。 创建新数据源时，在此处包含的值显示在数据源类型下拉列表中。|  
+    |类型|输入包括实现 <xref:System.Data.IDbConnection> 接口的类的完全限定命名空间在内的逗号分隔的列表，后跟 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据提供程序程序集的名称（不包含 .dll 文件扩展名）。|  
   
      例如，对于部署到 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 的 PrivateAssemblies 目录中的 DLL，该条目应如下所示：  
   

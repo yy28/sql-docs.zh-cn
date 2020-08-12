@@ -8,19 +8,18 @@ ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4d168b32b85e4d0bbf42e166e175d9951de4dd31
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 2b57a54c66259fe16c3143e0328476279a1aea01
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83607000"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748501"
 ---
 # <a name="tutorial-create-a-predictive-model-in-r-with-sql-machine-learning"></a>教程：通过 SQL 机器学习在 R 中创建预测模型
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 此系列教程由四个部分组成，这是第三部分。你将在 R 中训练预测模型。在此系列的下一部分中，你将在机器学习服务中或大数据群集上将此模型部署到 SQL Server 数据库中。
@@ -29,7 +28,10 @@ ms.locfileid: "83607000"
 此系列教程由四个部分组成，这是第三部分。你将在 R 中训练预测模型。在此系列的下一部分中，你将通过机器学习服务将此模型部署到 SQL Server 数据库中。
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-此系列教程由四个部分组成，这是第三部分。你将在 R 中训练预测模型。在此系列的下一部分中，你将通过 SQL Server R Services 将此模型部署到 SQL Server 数据库中。
+此系列教程由四个部分组成，这是第三部分，将在 R 中训练预测模型。在此系列的下一部分中，将通过 SQL Server R Services 将此模型部署到数据库中。
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+此系列教程由四个部分组成，这是第三部分，将在 R 中训练预测模型。在此系列的下一部分中，将通过机器学习服务将此模型部署到 Azure SQL 托管实例数据库中。
 ::: moniker-end
 
 本文将指导如何进行以下操作：
@@ -41,7 +43,7 @@ ms.locfileid: "83607000"
 
 在[第一部分](r-predictive-model-introduction.md)中，你了解了如何还原示例数据库。
 
-在[第二部分](r-predictive-model-prepare-data.md)中，你了解了如何将数据从数据库加载到 Python 数据帧中，并在 R 中准备数据。
+在[第二部分](r-predictive-model-prepare-data.md)中，了解了如何将数据从数据库加载到 Python 数据框中，并在 R 中准备数据。
 
 在[第四部分](r-predictive-model-deploy.md)中，你将了解如何将模型存储到数据库中，然后通过你在第二和第三部分中开发的 Python 脚本来创建存储过程。 存储过程将在服务器上运行，以便基于新数据进行预测。
 
@@ -67,6 +69,7 @@ actual_counts <- test_data$RentalCount;
 model_lm <- lm(RentalCount ~  Month + Day + WeekDay + Snow + Holiday, data = train_data);
 
 #Model 2: Use rpart to create a decision tree model, trained with the training data set
+library(rpart);
 model_rpart  <- rpart(RentalCount ~ Month + Day + WeekDay + Snow + Holiday, data = train_data);
 ```
 

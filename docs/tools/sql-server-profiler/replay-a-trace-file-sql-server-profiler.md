@@ -1,6 +1,7 @@
 ---
 title: 重播跟踪文件
 titleSuffix: SQL Server Profiler
+description: 获取通过在 SQL Server Profiler 中重播跟踪文件来解决问题的帮助。 了解重播功能和选项。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 0c658f692fcc1e58275c98e6cfd958dd8c73020f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e473cfa21a026563bc2ac71b39e25d66d4c6a619
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307524"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774781"
 ---
 # <a name="replay-a-trace-file-sql-server-profiler"></a>重播跟踪文件 (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 重播是指打开已保存的跟踪并对其重播的功能。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 具有多线程播放引擎，能模拟用户连接和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。 重播对于解决应用程序或进程问题是很有用的。 在您确定问题并进行更正后，请对更正后的应用程序或进程运行发现该潜在问题的跟踪。 然后，重播原始跟踪并比较结果。  
   
@@ -40,22 +41,22 @@ ms.locfileid: "75307524"
   
     -   **保存到表**，该选项指定保存重播的数据库表。  
   
-5.  选择“按跟踪的顺序重播事件”  或“使用多个线程重播事件”  。 下表列出了这些设置之间的差异。  
+5.  选择“按跟踪的顺序重播事件”或“使用多个线程重播事件”。 下表列出了这些设置之间的差异。  
   
-    |选项|说明|  
+    |选项|描述|  
     |------------|-----------------|  
     |**按跟踪事件的顺序重播事件**|按记录事件的顺序重播事件。 此选项启用调试。|  
     |**使用多个线程重播事件**|此选项使用多个线程重播各个事件，而不考虑其顺序。 此选项用于优化性能。|  
   
 6.  选择 **“显示重播结果”** 以在重播时查看结果。  
   
-7.  还可以单击“高级重播选项”  选项卡以配置以下选项：  
+7.  还可以单击“高级重播选项”选项卡以配置以下选项：  
   
-    -   若要重播所有服务器进程 ID (SPID)，请选择“重播系统 SPID”  。  
+    -   若要重播所有服务器进程 ID (SPID)，请选择“重播系统 SPID”。  
   
     -   若要仅重播属于特定 SPID 的进程，请选择 **“仅重播一个 SPID”** 。 在 **“要重播的 SPID”** 框中，键入 SPID。  
   
-    -   若要重播特定时间段内发生的事件，请选择 **“按日期和时间限制重播”** 。 为“开始时间”  和“结束时间”  选择日期和时间，以指定要在重播中包括的时间段。  
+    -   若要重播特定时间段内发生的事件，请选择 **“按日期和时间限制重播”** 。 为“开始时间”和“结束时间”选择日期和时间，以指定要在重播中包括的时间段。  
   
     -   若要控制重播期间 SQL Server 管理进程的方法，请配置 **“Health Monitor 选项”** 。  
   

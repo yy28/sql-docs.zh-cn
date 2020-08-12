@@ -1,5 +1,6 @@
 ---
 title: 用于 XML 报表数据的元素路径语法 | Microsoft Docs
+description: 了解用于在报表设计器中定义 XML 报表数据路径的元素路径语法和约定。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 967ffe24035094296d467e4a60225f31b1558cc5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5a8404e6b993481202061644e68fa44a830fdca6
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77077658"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85808457"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>用于 XML 报表数据的元素路径语法 (SSRS)
   在报表设计器中，可以通过定义元素路径（区分大小写）来指定 XML 数据源中要用于报表的数据。 元素路径指示如何遍历 XML 数据源中的 XML 层次结构节点及其属性。 若要使用默认元素路径，请将数据集查询或 XML **ElementPath** 的 XML **Query** 保留为空。 从 XML 数据源检索数据时，具有文本值的元素节点和元素节点属性将成为结果集中的列。 运行查询时，节点值和属性将成为行数据。 该列在“报表数据”窗格中显示为数据集字段集合。 本主题介绍元素路径语法。  
@@ -32,7 +33,7 @@ ms.locfileid: "77077658"
 |&#124; （垂直条）|分隔语法项。 只能选择其中一项。|  
 |`[ ]`（方括号）|可选语法项。 不要键入方括号。|  
 |**{ }** （大括号）|分隔语法项的参数。|  
-|[  ...*n*]|指示前面的项可以重复 *n* 次。 匹配项由逗号分隔。|  
+|[...*n*]|指示前面的项可以重复 *n* 次。 匹配项由逗号分隔。|  
   
 ## <a name="syntax"></a>语法  
   
@@ -78,10 +79,10 @@ XMLLocalName :: =
 |**编码**|指示此元素的 **Value** 是编码的 XML，它需要解码并作为此元素的子元素。|  
 |**字段列表**|定义要用于检索数据的元素和属性集。<br /><br /> 如果未指定，则所有属性和子元素都将用作字段。 如果指定了空字段列表 ( **{}** )，则不使用来自该节点的任何字段。<br /><br /> **FieldList** 不可以同时包含 **Value** 以及 **Element** 或 **ElementNode**。|  
 |**字段**|指定作为数据集字段检索的数据。|  
-|**Attribute**|**ElementNode**中的“名称/值”对。 例如，在元素节点“\<Customer ID="1">”中，“ID”是属性，并且“\@ID(Integer)”将返回“1”，表示对应数据字段“ID”中的整数类型。|  
-|**值**|元素的值。 **Value** 只能在元素路径的最后一个 **ElementNode** 中使用。 例如，由于 \<Return> 是一个叶节点，因此如果将其包含于元素路径的结尾处，则 Return {@} 的值将为 Chair   。|  
+|**Attribute**|**ElementNode**中的“名称/值”对。 例如，在元素节点 \<Customer ID="1"> 中，“ID”是属性，并且“\@ID(Integer)”将返回“1”，表示对应数据字段“ID”中的整数类型  。|  
+|**值**|元素的值。 **Value** 只能在元素路径的最后一个 **ElementNode** 中使用。 例如，由于 \<Return> 是一个叶节点，因此如果将其包含于元素路径的结尾处，则 Return {@} 的值将为 Chair 。|  
 |**Element**|命名子元素的值。 例如，Customers {}/Customer {}/LastName 仅检索 LastName 元素的值。|  
-|类型 |用于从此元素创建的字段的可选数据类型。|  
+|类型|用于从此元素创建的字段的可选数据类型。|  
 |**NamespacePrefix**|**NamespacePrefix** 在 XML 查询元素中定义。 如果不存在 XML 查询元素，则将忽略 XML **ElementPath** 中的命名空间。 如果存在 XML 查询元素，则 XML **ElementPath** 具有可选属性 **IgnoreNamespaces**。 如果 IgnoreNamespaces 为 **true**，XML **ElementPath** 和 XML 文档中的命名空间将被忽略。 有关详细信息，请参阅[用于 XML 报表数据的 XML 查询语法 (SSRS)](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md)。|  
   
 ## <a name="example---no-namespaces"></a>示例 - 无命名空间  
@@ -90,7 +91,7 @@ XMLLocalName :: =
 > [!NOTE]  
 >  当元素路径为空时，查询将使用默认元素路径：指向叶节点集合的第一个路径。 在第一个示例中，将元素路径保留为空等效于指定元素路径 /Customers/Customer/Orders/Order。 将在结果集中返回沿该路径分布的所有节点值和属性，并且节点名和属性名将显示为数据集字段。  
   
- **示例 #1**： *空*  
+ **示例 1**：空  
   
 |订单|Qty|ID|FirstName|LastName|Customer.ID|xmlns|  
 |-----------|---------|--------|---------------|--------------|-----------------|-----------|  
@@ -195,7 +196,7 @@ XMLLocalName :: =
   
      `<Query>`  
   
-8.  单击“运行查询(!)”  。  
+8.  单击“运行查询(!)”。  
   
      结果集的以下列中显示 4 行数据： `xmlns`、 `Customer.ID`、 `FirstName`、 `LastName`、 `ID`、 `Qty`、 `Order`。  
   

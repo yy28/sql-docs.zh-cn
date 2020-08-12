@@ -1,5 +1,6 @@
 ---
 title: 卸载现有实例
+description: 本文介绍如何卸载 SQL Server 的独立实例，这也是系统准备，以便可以重新安装 SQL Server。
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -13,17 +14,17 @@ helpviewer_keywords:
 - instances of SQL Server, uninstalling
 - uninstalling SQL Server
 ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 61647a4e0a654d478050268587b2b47fd79fc686
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: fd4e3ee094bca1d27543a92a357f705b0e3d82fe
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78335746"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883726"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>卸载现有 SQL Server 实例（安装程序）
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   本文介绍如何卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的独立实例。 执行本文中提供的步骤，还可以准备系统以便重新安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
@@ -34,7 +35,7 @@ ms.locfileid: "78335746"
 
 - 若要卸载 SQL Server，你必须是拥有“作为服务登录”权限的本地管理员。 
 - 如果计算机具有所需的*最小*物理内存，请将页面文件的大小增至物理内存的两倍。 虚拟内存不足会导致无法完全删除 SQL Server。 
-- 在具有多个 SQL Server 实例的系统上，仅在删除 SQL Server 的最后一个实例后，才会卸载 SQL Server Browser 服务。 可从“控制面板”的“程序和功能”中手动删除 SQL Server Browser 服务   。 
+- 在具有多个 SQL Server 实例的系统上，仅在删除 SQL Server 的最后一个实例后，才会卸载 SQL Server Browser 服务。 可从“控制面板”的“程序和功能”中手动删除 SQL Server Browser 服务 。 
 - 卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会删除在安装过程期间添加的 tempdb 数据文件。 如果带有 tempdb_mssql_*.ndf 名称模式的文件存在于系统数据库目录中，它们会被删除。 
   
 
@@ -55,7 +56,7 @@ ms.locfileid: "78335746"
     > SQL Server Reporting Services 附带 ReportServer 数据库。   
 
  
-1.  停止所有  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务  。 建议先停止所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务，然后再卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件的本地安全组。 活动的连接可能会使卸载过程无法成功完成。  
+1.  停止所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。 建议先停止所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务，然后再卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件的本地安全组。 活动的连接可能会使卸载过程无法成功完成。  
   
 1.  **使用具有适当权限的帐户。** 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户或具有同等权限的帐户登录到服务器。 例如，可以使用本地 Administrators 组的成员帐户登录到服务器。  
   
@@ -65,45 +66,45 @@ ms.locfileid: "78335746"
 
 若要从 Windows 10、Windows Server 2016、Windows Server 2019 及更高版本中卸载 SQL Server，请执行以下步骤： 
 
-1. 若要开始删除过程，请从“开始”菜单导航至“设置”，然后选择“应用”   。 
+1. 若要开始删除过程，请从“开始”菜单导航至“设置”，然后选择“应用” 。 
 1. 在搜索框中搜索 `sql`。 
-1. 选择“Microsoft SQL Server（版本）（位）”  。 例如，`Microsoft SQL Server 2017 (64-bit)` 。
-1. 选择“卸载”  。
+1. 选择“Microsoft SQL Server（版本）（位）”。 例如，`Microsoft SQL Server 2017 (64-bit)`。
+1. 选择“卸载”。
  
     ![卸载 SQL Server](media/uninstall-an-existing-instance-of-sql-server-setup/uninstall-sql-server-windows-10.png)
 
-1. 在 SQL Server 对话框弹出窗口中选择“删除”以启动 Microsoft SQL Server 安装向导  。 
+1. 在 SQL Server 对话框弹出窗口中选择“删除”以启动 Microsoft SQL Server 安装向导。 
 
     ![删除 SQL Server](media/uninstall-an-existing-instance-of-sql-server-setup/remove-sql-2017.png)
   
-1.  在“选择实例”页上，使用下拉框指定要删除的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，或者指定与仅删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共享功能和管理工具相对应的选项。 若要继续操作，请选择“下一步”  。  
+1.  在“选择实例”页上，使用下拉框指定要删除的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，或者指定与仅删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共享功能和管理工具相对应的选项。 若要继续操作，请选择“下一步”。  
   
 1.  在“选择功能”页上，指定要从指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中删除的功能。  
   
 1.  在 **“准备删除”** 页上查看要卸载的组件和功能的列表。 单击 **“删除”** 开始卸载  
  
-1. 刷新“应用和功能”窗口，以验证是否已成功删除 SQL Server 实例，并确定哪些 SQL Server 组件仍然存在（如有）  。 如果需要，也可以通过此窗口删除这些组件。 
+1. 刷新“应用和功能”窗口，以验证是否已成功删除 SQL Server 实例，并确定哪些 SQL Server 组件仍然存在（如有）****。 如果需要，也可以通过此窗口删除这些组件。 
 
 # <a name="windows-2008---2012-r2"></a>[Windows 2008 - 2012 R2](#tab/windows2012)
 
 若要从 Windows Server 2008、Windows Server 2012 和 Windows 2012 R2 卸载 SQL Server，请执行以下步骤： 
 
-1. 若要开始删除过程，请导航至“控制面板”，然后选择“程序和功能”   。
-1. 右键单击“Microsoft SQL Server（版本）（位）”，然后选择“卸载”   。 例如，`Microsoft SQL Server 2012 (64-bit)` 。  
+1. 若要开始删除过程，请导航至“控制面板”，然后选择“程序和功能” 。
+1. 右键单击“Microsoft SQL Server（版本）（位）”，然后选择“卸载” 。 例如，`Microsoft SQL Server 2012 (64-bit)`。  
   
     ![卸载 SQL Server](media/uninstall-an-existing-instance-of-sql-server-setup/uninstall-sql-server-windows-2012.png)
 
-1. 在 SQL Server 对话框弹出窗口中选择“删除”以启动 Microsoft SQL Server 安装向导  。 
+1. 在 SQL Server 对话框弹出窗口中选择“删除”以启动 Microsoft SQL Server 安装向导。 
 
     ![删除 SQL Server](media/uninstall-an-existing-instance-of-sql-server-setup/remove-sql-2012.png)
   
-1.  在“选择实例”页上，使用下拉框指定要删除的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，或者指定与仅删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共享功能和管理工具相对应的选项。 若要继续操作，请选择“下一步”  。  
+1.  在“选择实例”页上，使用下拉框指定要删除的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，或者指定与仅删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共享功能和管理工具相对应的选项。 若要继续操作，请选择“下一步”。  
   
 1.  在“选择功能”页上，指定要从指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中删除的功能。  
   
 1.  在 **“准备删除”** 页上查看要卸载的组件和功能的列表。 单击 **“删除”** 开始卸载  
  
-1. 刷新“程序和功能”窗口，以验证是否已成功删除 SQL Server 实例，并确定哪些 SQL Server 组件仍然存在（如有）  。 如果需要，也可以通过此窗口删除这些组件。 
+1. 刷新“程序和功能”窗口，以验证是否已成功删除 SQL Server 实例，并确定哪些 SQL Server 组件仍然存在（如有）****。 如果需要，也可以通过此窗口删除这些组件。 
 
 ---
 

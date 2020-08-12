@@ -1,5 +1,6 @@
 ---
 title: 卸载 Reporting Services | Microsoft Docs
+description: 本文介绍如何卸载 Reporting Services，这不会删除已创建的内容或已修改的配置。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.assetid: 5c764a00-d4bc-465d-b32e-e4efce052ce4
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 16466f509383ec407dafcd5a9cf61b324a7c4b52
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 40bc0ef1014268a2d6b7d50d29589b1db3aaf093
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "71951568"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883696"
 ---
 # <a name="uninstall-reporting-services"></a>卸载 Reporting Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   卸载 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不会删除您已创建的内容或已修改的配置。 但是，如果存在在卸载完成后您需要的内容，建议您首先生成内容的副本，再开始卸载过程。  
   
@@ -51,7 +52,7 @@ ms.locfileid: "71951568"
   
 1.  在 Windows“控制面板”中，单击 **“程序和功能”** 。  
   
-2.  在“程序和功能”中，选择“Microsoft SQL Server 2016”   。  
+2.  在“程序和功能”中，选择“Microsoft SQL Server 2016” 。  
   
 3.  在卸载向导中，选择包含 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例功能 **RS**的实例。  
   

@@ -8,16 +8,16 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0c5ba08a492be621e4b1f8871bdfcb49983af26d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7b6f4b11848cd0108dec5f3a4e5de0c089a89b41
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79285981"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784346"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>使用 Azure Data Studio 连接到 SQL Server 大数据群集
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 本文介绍如何从 Azure Data Studio 连接到 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]。
 
@@ -47,7 +47,7 @@ ms.locfileid: "79285981"
 
 1. 在“连接类型”中，选择“Microsoft SQL Server”   。
 
-1. 在“服务器名称”文本框中键入为 SQL Server 主实例找到的终结点名称（例如  ： **\<IP_Address\>31433**。 
+1. 在“服务器名称”文本框中键入为 SQL Server 主实例找到的终结点名称（例如\<IP_Address\>,31433 ）。 
 
 1. 选择身份验证类型。 对于在大数据群集中运行的 SQL Server 主实例，仅支持 Windows 身份验证和 SQL 登录   。 
 

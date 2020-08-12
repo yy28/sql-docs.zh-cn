@@ -1,5 +1,6 @@
 ---
 title: TCP/IP 属性（“IP 地址”选项卡）
+description: 了解如何使用“TCP/IP 属性”对话框的“IP 地址”选项卡为 SQL Server 中的特定 IP 地址配置 TCP/IP 协议选项。
 ms.custom: seo-lt-2019
 ms.date: 08/24/2016
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f1afdb9d25d599f32b2efb9d5339ef4afffd6f31
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c68b7a9f1da65862403750e32315ee7168ded6e6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307567"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880300"
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>TCP/IP 属性（“IP 地址”选项卡）
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   使用 **“TCP/IP 属性（‘IP 地址’选项卡）”** 对话框，可以配置特定 IP 地址的 TCP/IP 协议选项。 只有选中 **“IP All”** ，才能一次配置所有地址的 **“TCP 动态端口”** 和 **“TCP 端口”** 。  
   
  更改在重启 SQL Server 后生效。 有关启动和停止 SQL Server Browser 服务的信息，请参阅 [启动和停止 SQL Server Browser 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
@@ -37,7 +38,7 @@ ms.locfileid: "75307567"
  指示该 IP 地址在计算机上处于活动状态。 不适用于 **“IPAll”** 。  
   
  **已启用**  
- 如果 **“TCP/IP 属性(‘协议’选项卡)”** 上的 **“全部侦听”** 属性设为 **“否”** ，则该属性指示 SQL Server 是否侦听 IP 地址。 如果 **“TCP/IP 属性(‘协议’选项卡)”** 上的 **“全部侦听”** 属性设为 **“是”** ，则表示忽略该属性。 不适用于 **“IPAll”** 。  
+ 如果 **“TCP/IP 属性(‘协议’选项卡)”** 上的 **“全部侦听”** 属性设为 **“否”**，则该属性指示 SQL Server 是否侦听 IP 地址。 如果 **“TCP/IP 属性(‘协议’选项卡)”** 上的 **“全部侦听”** 属性设为 **“是”** ，则表示忽略该属性。 不适用于 **“IPAll”** 。  
   
  **IP 地址**  
  查看或更改此连接使用的 IP 地址。 列出计算机使用的 IP 地址以及 IP 环回地址 127.0.0.1。 不适用于 **“IPAll”** 。 该 IP 地址可以为 IPv4 格式或 IPv6 格式。  
@@ -52,10 +53,10 @@ ms.locfileid: "75307567"
   
  数据库引擎可以侦听同一 IP 地址的多个端口，端口以逗号分隔的格式列出：1433,1500,1501。 此字段最多允许 2047 个字符。  
   
- 若要配置单个 IP 地址以侦听多个端口，还必须将“TCP/IP 属性”对话框的“协议”选项卡上的“全部侦听”参数设置为“否”     。 有关详细信息，请参阅 SQL Server 联机丛书中的“如何：将数据库引擎配置为侦听多个 TCP 端口”。  
+ 若要配置单个 IP 地址以侦听多个端口，还必须将“TCP/IP 属性”对话框的“协议”选项卡上的“全部侦听”参数设置为“否”****************。 有关详细信息，请参阅 SQL Server 联机丛书中的“如何：将数据库引擎配置为侦听多个 TCP 端口”。  
   
 ## <a name="adding-or-removing-ip-addresses"></a>添加或删除 IP 地址  
- SQL Server 配置管理器显示安装 SQL Server 时可用的 IP 地址。 如果发生以下情况，可用的 IP 地址也会随之改变：添加或删除网卡、动态分配的 IP 地址过期、重新配置网络结构或计算机的物理位置发生改变（例如便携式计算机在另一座大楼连接到网络）。 若要更改 IP 地址，可以编辑“IP 地址”  框，然后重新启动 SQL Server。  
+ SQL Server 配置管理器显示安装 SQL Server 时可用的 IP 地址。 如果发生以下情况，可用的 IP 地址也会随之改变：添加或删除网卡、动态分配的 IP 地址过期、重新配置网络结构或计算机的物理位置发生改变（例如便携式计算机在另一座大楼连接到网络）。 若要更改 IP 地址，可以编辑“IP 地址”框，然后重新启动 SQL Server。  
   
 ## <a name="additional-topics-in-books-online"></a>联机丛书中的其他主题  
  在 MSDN 中搜索 **配置服务器以侦听特定 TCP 端口（SQL Server 配置管理器）** 和 **将数据库引擎配置为侦听多个 TCP 端口**之类的主题。  

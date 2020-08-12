@@ -1,6 +1,7 @@
 ---
 title: 基于事件结束时间筛选事件
 titleSuffix: SQL Server Profiler
+description: 在跟踪期间按结束时间筛选事件。 了解如何在 SQL Server Profiler 中设置基于事件结束时间的筛选器。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 8372ce58317eead122675f3585be01f5da7eb829
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9e82f5820f418e65e8638ee27898a130ae6e564d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307260"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774817"
 ---
 # <a name="filter-events-based-on-the-event-end-time-sql-server-profiler"></a>基于事件结束时间筛选事件 (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   本主题介绍了如何通过使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]来根据事件结束时间筛选跟踪事件。  
   
 ### <a name="to-filter-events-based-on-the-event-end-time"></a>根据事件结束时间筛选事件  
@@ -30,17 +31,17 @@ ms.locfileid: "75307260"
      将出现“跟踪属性”对话框。 **“跟踪属性”** 对话框。  
   
     > [!NOTE]  
-    >  如果选择“建立连接后立即开始跟踪”  ，则不会显示“跟踪属性”  对话框，而是开始跟踪。 若要关闭此设置，请在“工具”  菜单上，单击“选项”  ，然后清除“建立连接后立即开始跟踪”  复选框。  
+    >  如果选择“建立连接后立即开始跟踪”，则不会显示“跟踪属性”对话框，而是开始跟踪。 若要关闭此设置，请在“工具”菜单上，单击“选项”，然后清除“建立连接后立即开始跟踪”复选框。  
   
 2.  在 **“跟踪属性”** 对话框中，确保选中 **“常规”** 选项卡，然后在 **TraceName** 文本框中输入名称。  
   
-3.  从“使用模板”  列表中选择一个跟踪模板。  
+3.  从“使用模板”列表中选择一个跟踪模板。  
   
 4.  根据需要，指定保存跟踪结果的目标文件或表。  
   
-5.  在“事件选择”  选项卡上，单击“EndTime”  数据列启动“编辑筛选器”  对话框。 也可以右键单击列标题，然后选择“编辑列筛选器”  。  
+5.  在“事件选择”选项卡上，单击“EndTime”数据列启动“编辑筛选器”对话框。 也可以右键单击列标题，然后选择“编辑列筛选器”。  
   
-6.  展开“大于”  或“小于”  ，然后在比较运算符下显示的字段中输入 **datetime** 值。  
+6.  展开“大于”或“小于”，然后在比较运算符下显示的字段中输入 **datetime** 值。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 事件探查器](../../tools/sql-server-profiler/sql-server-profiler.md)   

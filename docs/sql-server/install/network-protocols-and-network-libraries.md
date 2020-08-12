@@ -1,5 +1,6 @@
 ---
 title: 网络协议和网络库 | Microsoft Docs
+description: 可以配置服务器来监视多个网络协议。 可以使用 SQL Server 配置管理器来更改该配置。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,17 +19,17 @@ helpviewer_keywords:
 - network protocols [SQL Server], about network protocols
 - configuration options [SQL Server], libraries
 ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: abdd5e7af707bd566288bd1048eda4874d82311c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bc3f56fe60fdab32a41e61c878b1a3988e265a28
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68126066"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880454"
 ---
 # <a name="network-protocols-and-network-libraries"></a>网络协议和网络库
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   服务器可以同时监听或监视多个网络协议。 但必须对每个协议都进行配置。 如果没有配置某个协议，则服务器将无法监听该协议。 安装完成后，可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器更改这些协议配置。  
   
@@ -51,9 +52,9 @@ ms.locfileid: "68126066"
   
 #### <a name="to-disable-smb"></a>禁用 SMB  
   
-1.  在“开始”  菜单中，指向“设置”  ，然后单击“网络和拨号连接”  。  
+1.  在“开始”菜单中，指向“设置”，然后单击“网络和拨号连接”。  
   
-     右键单击面向 Internet 的连接，然后单击“属性”  。  
+     右键单击面向 Internet 的连接，然后单击“属性”。  
   
 2.  选中 **“Microsoft Networks 客户端”** 复选框，然后单击 **“卸载”** 。  
   
@@ -65,7 +66,7 @@ ms.locfileid: "68126066"
   
 #### <a name="to-disable-smb-on-servers-accessible-from-the-internet"></a>在可通过 Internet 访问的服务器上禁用 SMB  
   
--   在本地连接属性中，使用“传播控制协议/Internet 协议 (TCP/IP) 属性”  对话框删除“Microsoft 网络的文件和打印共享”  和“Microsoft 网络客户端”  。  
+-   在本地连接属性中，使用“传播控制协议/Internet 协议 (TCP/IP) 属性”**** 对话框删除“Microsoft 网络的文件和打印共享”**** 和“Microsoft 网络客户端”****。  
   
 ## <a name="endpoints"></a>终结点  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接引入了一个新概念；在服务器端用 [!INCLUDE[tsql](../../includes/tsql-md.md)]*终结点*。 可以对 [!INCLUDE[tsql](../../includes/tsql-md.md)] 端点授予、撤消和拒绝权限。 默认情况下，所有用户都具备访问端点的权限，除非 sysadmin 组的成员或端点所有者拒绝或撤消了此权限。 GRANT、REVOKE 和 DENY ENDPOINT 语法使用终结点 ID，管理员必须从终结点的目录视图中获取此 ID。  

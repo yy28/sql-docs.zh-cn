@@ -1,5 +1,6 @@
 ---
 title: SQL Server 属性（“高级”选项卡）
+description: 了解“SQL Server 属性”对话框的“高级”选项卡上的选项，例如数据路径、实例 ID 和自定义属性。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 2ffd10fd-bac1-478f-9cff-96ed6c8b787f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a21d6eb31b0edb5ab0cfa56f388b2cf3e3065627
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cabf817c5b2a1be512b93235e274d76abba7f69b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306838"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893342"
 ---
 # <a name="sql-server-properties-advanced-tab"></a>SQL Server 属性（“高级”选项卡）
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   默认情况下， **“高级”** 选项卡中会显示下列属性。 如果定义了自定义属性，则这些属性及其值将显示在此选项卡上。  
   
 ## <a name="options"></a>选项  
@@ -36,7 +37,7 @@ ms.locfileid: "75306838"
  显示发生错误时内存转储的存放位置。  
   
  **错误报告**  
- 当设置为“是”  时，如果发生严重错误，Dr. Watson 程序将把相关信息转发给 [!INCLUDE[msCoName](../../includes/msconame-md.md)]，或转发给错误服务器。 有关错误报告的详细信息，请在联机丛书中搜索主题“错误和使用报告设置”。 若要更改此值，请在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 对象资源管理器中右键单击服务器，再单击“属性”  ，然后单击“**杂项”。服务器设置”** 页。 这些选项将显示在 **“信息报告”** 区域中。  
+ 当设置为“是”时，如果发生严重错误，Dr. Watson 程序将把相关信息转发给 [!INCLUDE[msCoName](../../includes/msconame-md.md)]，或转发给错误服务器。 有关错误报告的详细信息，请在联机丛书中搜索主题“错误和使用报告设置”。 若要更改此值，请在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 对象资源管理器中右键单击服务器，再单击“属性”，然后单击“**杂项”。服务器设置”** 页。 这些选项将显示在 **“信息报告”** 区域中。  
   
  **文件版本**  
  显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可执行文件的版本。  

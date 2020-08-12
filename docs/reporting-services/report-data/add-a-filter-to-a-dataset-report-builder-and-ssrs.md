@@ -1,5 +1,6 @@
 ---
 title: 向数据集添加筛选器（报表生成器）| Microsoft Docs
+description: 了解如何向数据集添加筛选器，用于在从外部数据源检索数据后限制报表中的数据。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: eed37e74-6a43-4d7c-9959-2d5fa6a6aba9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 67fb8bd61f337c4de0476c8a3fdb8265202b0161
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 797d8911fbb1d8b9a99abbf70bff5dde60415f6d
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081656"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811356"
 ---
 # <a name="add-a-filter-to-a-dataset-report-builder-and-ssrs"></a>向数据集添加筛选器（报表生成器和 SSRS）
   向数据集添加筛选器可以在从外部数据源检索数据后限制报表中的数据。 在向数据集添加筛选器后，所有报表部件或数据区域将都只使用与筛选条件匹配的数据。  
@@ -33,7 +34,7 @@ ms.locfileid: "77081656"
   
 3.  单击 **“筛选器”** 。 此时将显示当前筛选器公式的列表。 默认情况下，此列表是空的。  
   
-4.  单击“添加”  。 此时将显示一个新的空白筛选器公式。  
+4.  单击“添加”。 此时将显示一个新的空白筛选器公式。  
   
 5.  在 **“表达式”** 中，键入或选择要筛选的字段的表达式。 若要编辑该表达式，请单击表达式 (*fx*) 按钮。  
   
@@ -51,11 +52,11 @@ ms.locfileid: "77081656"
   
 1.  在报表设计模式下打开一个报表。  
   
-2.  右键单击“报表数据”窗格中的数据集，然后单击“数据集属性”   。 此时将打开 **“数据集属性”** 对话框。  
+2.  右键单击“报表数据”窗格中的数据集，然后单击“数据集属性” 。 此时将打开 **“数据集属性”** 对话框。  
   
 3.  单击 **“筛选器”** 。 此时将显示当前筛选器公式的列表。 默认情况下，此列表是空的。  
   
-4.  单击“添加”  。 此时将显示一个新的空白筛选器公式。  
+4.  单击“添加”。 此时将显示一个新的空白筛选器公式。  
   
 5.  在 **“表达式”** 中，键入或选择要筛选的字段的表达式。 若要编辑该表达式，请单击表达式 (*fx*) 按钮。  
   

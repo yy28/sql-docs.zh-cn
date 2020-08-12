@@ -1,6 +1,7 @@
 ---
 title: 筛选跟踪
 titleSuffix: SQL Server Profiler
+description: 了解如何定义筛选器，以便 SQL Server Profiler 在跟踪过程中收集所需的信息。 了解跟踪筛选器的其他优点。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,15 +12,15 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: d80e5d8156c1322c22ea360dc003e71da3ab27ec
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fdc3178888109ff5a40c66435a9c86f27b5b7b43
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307214"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789994"
 ---
 # <a name="filter-traces-with-sql-server-profiler"></a>使用 SQL Server Profiler 筛选跟踪
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   您可以为 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 跟踪事件的数据列定义筛选器，以便只捕获您感兴趣的事件的信息。 跟踪筛选器可减小跟踪对系统性能的影响，因为跟踪中捕获的事件减少了。 筛选还使得跟踪结果更容易阅读，因为搜索范围中的事件减少了。  
   
  **使用 SQL Server Profiler 筛选跟踪**  

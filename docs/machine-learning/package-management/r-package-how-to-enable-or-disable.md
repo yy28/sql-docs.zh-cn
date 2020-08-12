@@ -2,22 +2,22 @@
 title: 启用或禁用远程 R 包管理
 description: 在 SQL Server 2016 R Services 或 SQL Server 机器学习服务上启用远程 R 包管理（数据库内）
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 06/13/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 250be5c8a4207a43d2e4194c78377bd87880a99c
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 1a18d56d1dcf0733f080da7cf8247421c669a4aa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117980"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757140"
 ---
 # <a name="enable-or-disable-remote-package-management-for-sql-server"></a>启用或禁用 SQL Server 的远程包管理
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 本文介绍如何从客户端工作站或其他 Machine Learning Server 启用 R 包的远程管理。 在 SQL Server 上启用包管理功能后，可以在客户端上使用 RevoScaleR 命令在 SQL Server 上安装包。
 
@@ -41,7 +41,7 @@ ms.locfileid: "81117980"
 
     此命令在包管理所需的 SQL Server 计算机上创建实例级的对象。 它还会重新启动实例的启动板。
 
-    如果未指定实例，将使用默认实例。 如果未指定用户，则使用当前安全上下文。 例如，以下命令使用打开命令提示符的用户的凭据，在 RegisterRExt.exe 路径中的实例上启用包管理：
+    如果未指定实例，将使用默认实例。 如果未指定用户，则使用当前安全上下文。 例如，以下命令使用打开命令提示符的用户的凭据，在默认实例上启用包管理：
 
     `REgisterRExt.exe /install pkgmgmt`
 
@@ -51,7 +51,7 @@ ms.locfileid: "81117980"
    
     此命令将创建一些数据库项目，包括用于控制用户权限的以下数据库角色：`rpkgs-users`、`rpkgs-private` 和 `rpkgs-shared`。
 
-    例如，以下命令在运行 RegisterRExt 的实例上对数据库启用包管理。 如果未指定用户，则使用当前安全上下文。
+    例如，以下命令对默认实例上的数据库启用包管理。 如果未指定用户，则使用当前安全上下文。
 
     `RegisterRExt.exe /install pkgmgmt /database:TestDB`
 

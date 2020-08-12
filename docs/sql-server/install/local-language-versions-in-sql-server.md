@@ -1,5 +1,6 @@
 ---
 title: SQL Server 中的本地语言版本 | Microsoft Docs
+description: 通过使用 Windows 多语言用户界面包设置，英文版的受支持操作系统支持本地化版本的 SQL Server。
 ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql
@@ -7,17 +8,17 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 20b99363-0490-4aa3-9a3d-262f827d81e8
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 4ab490b9c392f10abf4314dd70d760695d13a70f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cfeaf90e3765b108c66cd86fc184b9fcdef8a029
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68126162"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894322"
 ---
 # <a name="local-language-versions-in-sql-server"></a>SQL Server 中的本地语言版本
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持 Windows 操作系统所支持的所有语言。  
   
@@ -77,7 +78,7 @@ ms.locfileid: "68126162"
   
 2.  在 Control Panel 中，打开 **Regional and Language Options**。  
   
-3.  在“高级”  选项卡上，从列表中为“选择一种语言来匹配要使用的非 Unicode 程序的语言版本”  选择一个值。  
+3.  在“高级” **** 选项卡上，从列表中为“选择一种语言来匹配要使用的非 Unicode 程序的语言版本” **** 选择一个值。  
   
      此设置将使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序可以为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装选择最佳默认排序规则。  
   

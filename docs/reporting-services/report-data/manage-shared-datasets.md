@@ -1,5 +1,6 @@
 ---
 title: 管理共享数据集 | Microsoft Docs
+description: 了解如何在 Reporting Services 中管理共享数据集，以便可共享查询来帮助为多个报表提供一致的数据集。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2cbb1fa3-959e-4df6-9887-ebc93cc1b686
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 332103dd9f100a2477b9ae7392bd6d24088261f6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: df22dbab5cf450981f53976fb2a09e6ff08797c8
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67220589"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85808430"
 ---
 # <a name="manage-shared-datasets"></a>管理共享数据集
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，共享数据集从连接到外部数据源的共享数据源中检索数据。 共享数据集提供可共享查询的方法，以便为多个报表提供一组一致的数据。 数据集查询可以包括数据集参数。 您可以配置共享数据集，以便在首次使用时或通过指定计划为特定的参数组合缓存查询结果。 您可以将共享数据集缓存与报表缓存和报表数据馈送结合使用，以便管理对数据源的访问。  
@@ -41,8 +42,8 @@ ms.locfileid: "67220589"
 ### <a name="manage-shared-dataset-item-properties"></a>管理共享数据集项属性  
  下表列出了可为共享数据集项更改的项属性。  
   
-|||  
-|-|-|  
+|属性|描述|  
+|--------|-----------|  
 |编辑名称|更改共享数据集的名称。 来自依赖项的所有引用将继续有效。|  
 |编辑说明|更改共享数据集的说明。|  
 |编辑查询执行超时值|以秒为单位设置查询执行超时值。 零 (0) 秒表示没有超时。确定数据集查询超时之前等待的秒数。若要指定无超时值，则使用 0。 有关详细信息，请参阅[为报表和共享数据集处理设置超时值 (SSRS)](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)。|  
@@ -50,7 +51,7 @@ ms.locfileid: "67220589"
   
  下面的其他共享数据集属性将自动配置：  
   
-|properties|说明|  
+|属性|描述|  
 |--------------|-----------------|  
 |HasDataSourceCredentials|相关联的共享数据源是否将凭据保存在报表服务器上。|  
 |HasUserProfileDependencies|报表在其查询或筛选表达式中是否具有对“用户”全局集合的引用。|  

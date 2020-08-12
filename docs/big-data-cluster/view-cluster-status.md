@@ -5,20 +5,20 @@ description: 本文介绍如何使用 Azure Data Studio、笔记本和 azdata �
 author: yualan
 ms.author: alayu
 ms.reviewer: mikeray
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 45cf5461b9154d397ee5365fd275d2545a3cc376
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5e3c7f2f34f949f16821ad7c1dd6a3c3b0d4681e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73531591"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772827"
 ---
 # <a name="how-to-view-the-status-of-a-big-data-cluster"></a>如何查看大数据群集的状态 
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 本文介绍如何访问服务终结点，以及如何查看 SQL Server 大数据群集组件的状态。 可以同时使用 Azure Data Studio 和 azdata  ，本文会介绍这两种方法。
 
@@ -53,7 +53,9 @@ ms.locfileid: "73531591"
 - Spark 作业监视
 - Spark 资源管理
 
-可以直接单击这些链接。 在访问这些仪表板时，将需要进行身份验证。 对于指标和日志仪表板，请提供在部署时使用环境变量设置的控制器管理员凭据 AZDATA_USERNAME 和 AZDATA_PASSWORD   。 Spark 面板将使用网关 (Knox) 凭据：与 AD 集成的群集中的 AD 标识，或如果在群集中使用基本身份验证，则为用户 root 和 AZDATA_PASSWORD   。 
+可以直接单击这些链接。 在访问这些仪表板时，将需要进行身份验证。 对于指标和日志仪表板，请提供在部署时使用环境变量设置的控制器管理员凭据 AZDATA_USERNAME 和 AZDATA_PASSWORD   。 Spark 仪表板将使用网关 (Knox) 凭据：与 AD 集成的群集中的 AD 标识，或如果在群集中使用基本身份验证，则为 AZDATA_USERNAME 和 AZDATA_PASSWORD 。
+
+[!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 
 ### <a name="cluster-status-notebook"></a><a id="notebook"></a> 群集状态笔记本
 

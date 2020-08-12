@@ -1,6 +1,7 @@
 ---
 title: 分析死锁
 titleSuffix: SQL Server Profiler
+description: 通过在 SQL Server Profiler 中重播和显示要分析的死锁事件，以及通过生成等待图形，确定死锁的原因。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/03/2017
-ms.openlocfilehash: 15d41ae2517a3eadb8305a359f4576fb4407020b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8adc8e6839b6af9765139d0fe26b38cb1d1253c8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307371"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774941"
 ---
 # <a name="analyze-deadlocks-with-sql-server-profiler"></a>使用 SQL Server Profiler 分析死锁
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 确定死锁的原因。 当 SQL Server 中某组资源的两个或多个线程或进程之间存在循环的依赖关系时，将会发生死锁。 使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，可以创建记录、重播和显示死锁事件的跟踪以进行分析。  
   
@@ -30,7 +31,7 @@ ms.locfileid: "75307371"
   
 -   使用 **“文件”** 菜单上的 **“提取 SQL Server 事件”** 选项。  
   
--   通过右键单击特定事件并选择“提取事件数据”  ，也可以提取并保存各个事件。  
+-   通过右键单击特定事件并选择“提取事件数据”，也可以提取并保存各个事件。  
   
 ## <a name="deadlock-graphs"></a>死锁图形  
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 使用死锁等待图形描述死锁。 此死锁等待图形中包含进程节点、资源节点以及表示进程和资源之间关系的边。 等待图形的组件的定义如下表所示：  
@@ -42,7 +43,7 @@ ms.locfileid: "75307371"
  数据库对象。例如，表、索引或行。  
   
  Microsoft Edge  
- 进程和资源之间的关系。 当进程等待资源时，将出现 **request** 边。 当资源等待进程时，将出现 **owner** 边。 边说明中包括了锁模式。 例如，模式：  X。  
+ 进程和资源之间的关系。 当进程等待资源时，将出现 **request** 边。 当资源等待进程时，将出现 **owner** 边。 边说明中包括了锁模式。 例如，模式：X。  
   
 ## <a name="deadlock-process-node"></a>死锁进程节点  
  在等待图形中，进程节点包含有关进程的信息。 下表介绍了进程的组件。  
@@ -56,7 +57,7 @@ ms.locfileid: "75307371"
 |已用日志|进程所使用的日志空间量。|  
 |所有者 ID|正在使用事务并且当前正在等待锁的进程的事务 ID。|  
 |事务描述符|指向描述事务状态的事务描述符的指针。|  
-|输入缓冲区|当前进程的输入缓冲区。定义了事件的类型和正在执行的语句。 可能的值包括：<br /><br /> **语言**<br /><br /> **RPC**<br /><br /> 无 |  
+|输入缓冲区|当前进程的输入缓冲区。定义了事件的类型和正在执行的语句。 可能的值包括：<br /><br /> **语言**<br /><br /> **RPC**<br /><br /> 无|  
 |语句|语句类型。 可能的值包括：<br /><br /> **NOP**<br /><br /> **SELECT**<br /><br /> **UPDATE**<br /><br /> **INSERT**<br /><br /> **DELETE**<br /><br /> **Unknown**|  
   
 ## <a name="deadlock-resource-node"></a>死锁资源节点  

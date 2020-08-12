@@ -1,5 +1,6 @@
 ---
 title: 卸载 Power Pivot for SharePoint | Microsoft Docs
+description: 本文介绍如何卸载 Power Pivot for SharePoint 安装，这是由多个步骤构成的操作。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.assetid: 3941a2f0-0d0c-4d1a-8618-7a6a7751beac
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b39d5f4e33b9ecae8617cb414854d423945637d6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 91b944079d74d13ef7cd3cade08c00f5df9c9f29
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "71952727"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883714"
 ---
 # <a name="uninstall-power-pivot-for-sharepoint"></a>卸载 Power Pivot for SharePoint
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   卸载 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 安装是一个由多个步骤构成的操作，包括准备卸载、从场中删除功能和解决方案以及删除程序文件和注册表设置。  
   
@@ -68,13 +69,13 @@ ms.locfileid: "71952727"
 ##  <a name="step-2-remove-features-and-solutions-from-sharepoint"></a><a name="bkmk_remove"></a> 步骤 2：从 SharePoint 删除功能和解决方案  
  使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具从 SharePoint 中删除 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务和应用程序。  
   
--   你必须是场管理员、Analysis Services 实例上的服务器管理员和场的配置数据库上的“db_owner”  。  
+-   你必须是场管理员、Analysis Services 实例上的服务器管理员和场的配置数据库上的“db_owner”。  
   
 -   使用适合 SharePoint 版本的配置工具版本。 不能对 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 安装使用这两个工具。  
   
 -   验证“SharePoint 管理”服务是否正在运行。  
   
-1.  **运行配置文件：** 注意，仅当 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 安装在本地服务器上时，才会列出这些配置工具。请在“开始”  菜单上，指向“所有程序”  ，依次单击 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、“配置工具”  ，然后单击以下项之一：  
+1.  **运行配置文件：** 注意，仅当 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 安装在本地服务器上时，才会列出这些配置工具。请在“开始” **** 菜单上，指向“所有程序” ****，依次单击 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、“配置工具” ****，然后单击以下项之一：  
   
     -   **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 配置**  
   
@@ -100,7 +101,7 @@ ms.locfileid: "71952727"
   
 6.  单击 **“验证”** 可检查每个操作是否有效。 如果 **“验证”** 不可用，这意味着所有操作都适用于您的系统。  
   
-7.  单击 **“运行”** 执行对此任务有效的所有操作。 只有通过验证检查后， **“运行”** 才可用。 单击“运行”后，出现以下警告，提醒你将在批处理模式下处理操作：“在工具中标记为有效的所有配置设置都将应用于 SharePoint 场  。 是否继续?”  
+7.  单击 **“运行”** 执行对此任务有效的所有操作。 只有通过验证检查后， **“运行”** 才可用。 当你单击“运行”时，出现以下警告，提醒你将在批处理模式下执行操作：“该工具中所有标记为有效的配置设置将应用于 SharePoint 场。 是否继续?”  
   
 8.  单击 **“是”** 继续操作。  
   
@@ -122,9 +123,9 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
     Stsadm -o enumdeployments  
     ```  
   
-3.  检查现有部署的以下信息： **“类型”** 是“收回”或“部署”， **“文件”** 为 powerpivotwebapp.wsp 或 powerpivotfarm.wsp。  
+3.  检查现有部署的以下信息：“类型”是收回或部署，“文件”为 powerpivotwebapp.wsp 或 powerpivotfarm.wsp 。  
   
-4.  对于与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 解决方案有关的部署或收回，请复制“JobId”的 GUID 值，然后将其粘贴到以下命令中（使用 Shell 的“编辑”菜单上的“标记”、“复制”和“粘贴”命令复制该 GUID）  ：  
+4.  对于与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 解决方案有关的部署或收回，请复制“JobId”的 GUID 值，然后将其粘贴到以下命令中（使用 Shell 的“编辑”菜单上的“标记”、“复制”和“粘贴”命令复制该 GUID）：  
   
     ```  
     Stsadm -o canceldeployment -id "<GUID>"  
@@ -139,9 +140,9 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
  可以卸载部分安装而不影响已安装的其他 SQL Server 实例（或同一实例中的功能）。 例如，可以卸载 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 而保留安装的其他组件，例如 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 或数据库引擎。  
   
-1.  从程序列表中选择“Microsoft SQL Server 2014 (64 位)”  。  
+1.  从程序列表中选择“Microsoft SQL Server 2014 (64 位)”。  
   
-2.  单击“卸载/更改”。   
+2.  单击“卸载/更改”。  
   
 3.  单击 **“删除”** 。 这将启动 SQL Server 安装程序。  
   
@@ -152,7 +153,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
 ##  <a name="step-5-verify-uninstall"></a><a name="verify"></a> 步骤 5：验证卸载情况  
   
-1.  在管理中心的“管理服务器上的服务”  中，连接到卸载了 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 的服务器。  
+1.  在管理中心的“管理服务器上的服务” 中，连接到卸载了 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 的服务器。  
   
 2.  -   如果卸载了 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013，请验证“SQL Server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务”不再显示在列表中。  
   
@@ -160,11 +161,11 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
 3.  卸载场中的最后一个 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 服务器后，请执行以下操作：  
   
-    1.  在“应用程序管理”的“管理服务应用程序”  中，验证“ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序”不再显示在列表中。  
+    1.  在“应用程序管理”的“管理服务应用程序” 中，验证“ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序”不再显示在列表中。  
   
-    2.  在“系统设置”的“管理场功能”  中，验证“ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 集成功能”不再出现在该页上。 在“管理场解决方案”  中，验证 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 解决方案不再出现在该页上。  
+    2.  在“系统设置”的“管理场功能” 中，验证“ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 集成功能”不再出现在该页上。 在“管理场解决方案” 中，验证 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 解决方案不再出现在该页上。  
   
-    3.  在“监视”的“配置诊断日志记录”  和“配置使用情况和运行状况数据收集”  中，验证 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 事件和事件类别不再出现。  
+    3.  在“监视”的“配置诊断日志记录”  和“配置使用情况和运行状况数据收集” 中，验证 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 事件和事件类别不再出现。  
   
     4.  在“常规应用程序设置”中，验证“[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理面板”不再出现在该页上。  
   

@@ -1,5 +1,6 @@
 ---
 title: 打开跟踪文件 (SQL Server Profiler)
+description: 了解如何打开包含了在跟踪过程中捕获的事件数据的文件。 开始在 SQL Server Profiler 中打开跟踪文件。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -10,16 +11,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 7350e2f03d20754e57c726ec5db4c6b91a2528d3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 166bb88c60717d0b01ba658d720e00898aade380
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307177"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774795"
 ---
 # <a name="open-a-trace-file-sql-server-profiler"></a>打开跟踪文件 (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 本主题说明如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]打开跟踪文件。  
   

@@ -4,17 +4,17 @@ ms.date: 01/31/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
-ms.description: The web portal of a Reporting Services report server is a web-based experience for viewing reports, mobile reports, KPIs, and navigating through the elements in your report server instance.
+description: Reporting Services 报表服务器的 Web 门户是一种基于 Web 的体验，支持查看报表、移动报表和 KPI 以及在报表服务器实例中的各元素间导航。
 ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 24afa6ec8daa26730ad202d1aad612ba01213bb4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 29181b0830ad767c71e73c709aa7f3eee5a49190
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082508"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759796"
 ---
 # <a name="the-web-portal-of-a-report-server-ssrs-native-mode"></a>报表服务器的 Web 门户（SSRS 本机模式）
 
@@ -67,9 +67,9 @@ Web 门户是一种 Web 应用程序，可通过在浏览器窗口的地址栏�
 
 2. 在 Web 浏览器的地址栏中，键入 Web 门户 URL。
 
-    默认情况下，该 URL 为 https://[ComputerName]/reports  。
+    默认情况下，该 URL 为 https://[ComputerName]/reports。
 
-    报表服务器可能已配置为使用特定的端口。 例如， https://[ComputerName]:80/reports  或 https://[ComputerName]:8080/reports  。
+    报表服务器可能已配置为使用特定的端口。 例如， https://[ComputerName]:80/reports 或 https://[ComputerName]:8080/reports。
 
 ## <a name="grouping-by-categories"></a>按类别分组
 
@@ -84,7 +84,7 @@ Web 门户将项按不同的类别分组。 可用类别如下。
 - “数据源”
 - 资源
 
-通过选择右上方的“视图”  可以控制显示的内容。 如果选择“显示隐藏项”，这些项将以较浅的颜色显示出来。
+通过选择右上方的“视图”可以控制显示的内容。 如果选择“显示隐藏项”，这些项将以较浅的颜色显示出来。
 
 ![ssRSWebPortal-view](../reporting-services/media/ssrswebportal-view.png)
 

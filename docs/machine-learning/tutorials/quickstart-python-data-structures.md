@@ -1,24 +1,25 @@
 ---
 title: 快速入门：Python 数据结构
-description: 在本快速入门中，了解如何在 SQL Server 机器学习服务中使用 Python 处理数据结构和数据对象。
+titleSuffix: SQL machine learning
+description: 在本快速入门中，了解如何使用 SQL 机器学习在 Python 中处理数据结构和数据对象。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2020
+ms.date: 05/21/2020
 ms.topic: quickstart
 author: cawrites
 ms.author: chadam
-ms.reviewer: garye
+ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3023287504cbb7b25e194b53d0957e82405d1ea8
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: ed35820d38ea31ea0b7f8bae9b0a440398d55674
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606689"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784102"
 ---
-# <a name="quickstart-data-structures-and-objects-using-python-in-sql-server-machine-learning-services"></a>快速入门：在 SQL Server 机器学习服务中使用 Python 处理数据结构和对象
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="quickstart-data-structures-and-objects-using-python-with-sql-machine-learning"></a>快速入门：通过 SQL 机器学习使用 Python 时的数据结构和对象
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 本快速入门介绍在 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)中或[大数据群集](../../big-data-cluster/machine-learning-services.md)上使用 Python 时如何使用数据结构和数据类型。 你将了解如何在 Python 与 SQL Server 之间移动数据，以及可能出现的常见问题。
@@ -26,8 +27,11 @@ ms.locfileid: "83606689"
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 本快速入门介绍在 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)中使用 Python 时如何使用数据结构和数据类型。 你将了解如何在 Python 与 SQL Server 之间移动数据，以及可能出现的常见问题。
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+本快速入门介绍在 [Azure SQL 托管实例机器学习服务](/azure/azure-sql/managed-instance/machine-learning-services-overview)中使用 Python 时如何使用数据结构和数据类型。 你将了解如何在 Python 与 Azure SQL 托管实例 之间移动数据，以及可能出现的常见问题。
+::: moniker-end
 
-SQL Server 依赖于 Python 的 pandas 包，该包非常适合处理表格数据。 但是，不能将标量从 Python 传递到 SQL Server 并期望它“正常运行”。 在本快速入门中，你将回顾一些基本的数据结构定义，以便为在 Python 和 SQL Server 之间传递表格数据时可能遇到的其他问题做好准备。
+SQL 机器学习依赖于 Python 的 pandas 包，该包非常适合处理表格数据。 但是，不能将标量从 Python 传递到数据库并期望它“正常运行”。 在本快速入门中，你将回顾一些基本的数据结构定义，以便为在 Python 和数据库之间传递表格数据时可能遇到的其他问题做好准备。
 
 需预先了解的概念包括：
 
@@ -35,10 +39,10 @@ SQL Server 依赖于 Python 的 pandas 包，该包非常适合处理表格数�
 - 数据帧的单列是一个类似于列表的对象，称为“序列”。
 - 数据帧的单个值称为单元格，并由索引访问。
 
-如果数据帧需要表格结构，那么如何将计算的单个结果公开为数据帧？ 一种答案是将单个标量值表示为一个序列，该序列很容易转换为数据帧。 
+如果数据帧需要表格结构，那么如何将计算的单个结果公开为数据帧？ 一种答案是将单个标量值表示为一个序列，该序列很容易转换为数据帧。
 
 > [!NOTE]
-> 返回日期时，SQL 中的 Python 使用 DATETIME，其受限制的日期范围是 1753-01-01(-53690) 到 9999-12-31(2958463)。 
+> 返回日期时，SQL 中的 Python 使用 DATETIME，其受限制的日期范围是 1753-01-01(-53690) 到 9999-12-31(2958463)。
 
 ## <a name="prerequisites"></a>先决条件
 
@@ -50,7 +54,11 @@ SQL Server 依赖于 Python 的 pandas 包，该包非常适合处理表格数�
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 - SQL Server 机器学习服务。 有关如何安装机器学习服务的信息，请参阅 [Windows 安装指南](../install/sql-machine-learning-services-windows-install.md)。 
 ::: moniker-end
-- 你还需要一个工具来运行包含 Python 脚本的 SQL 查询。 可使用任何数据库管理或查询工具运行这些脚本，只要它可以连接到 SQL Server 实例，并运行 T-SQL 查询或存储过程即可。 本快速入门使用 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio)。
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+- Azure SQL 托管实例机器学习服务。 有关如何注册的说明，请参阅 [Azure SQL 托管实例机器学习服务概述](/azure/azure-sql/managed-instance/machine-learning-services-overview)。
+::: moniker-end
+
+- 用于运行包含 Python 脚本的 SQL 查询的工具。 本快速入门使用 [Azure Data Studio](../../azure-data-studio/what-is.md)。
 
 ## <a name="scalar-value-as-a-series"></a>作为序列的标量值
 
@@ -81,7 +89,7 @@ SQL Server 依赖于 Python 的 pandas 包，该包非常适合处理表格数�
    dtype: float64
    ```
 
-1. 要增加序列的长度，可以使用数组添加新值。 
+1. 要增加序列的长度，可以使用数组添加新值。
 
    ```sql
    EXECUTE sp_execute_external_script @language = N'Python'
@@ -100,7 +108,7 @@ SQL Server 依赖于 Python 的 pandas 包，该包非常适合处理表格数�
    **结果**
 
    ```text
-   STDOUT message(s) from external script: 
+   STDOUT message(s) from external script:
    0    0.5
    1    2.0
    dtype: float64
@@ -122,7 +130,7 @@ SQL Server 依赖于 Python 的 pandas 包，该包非常适合处理表格数�
    **结果**
 
    ```text
-   STDOUT message(s) from external script: 
+   STDOUT message(s) from external script:
    0.5
    simple math example 1    0.5
    simple math example 2    0.5
@@ -131,7 +139,7 @@ SQL Server 依赖于 Python 的 pandas 包，该包非常适合处理表格数�
 
 ## <a name="convert-series-to-data-frame"></a>将序列转换为数据帧
 
-将标量数学结果转换为表格结构后，仍需将其转换为 SQL Server 可以处理的格式。
+将标量数学结果转换为表格结构后，仍需将其转换为 SQL 机器学习可以处理的格式。
 
 1. 若要将序列转换为数据帧，请调用 pandas [数据帧](https://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe)方法。
 
@@ -217,12 +225,7 @@ SQL Server 依赖于 Python 的 pandas 包，该包非常适合处理表格数�
 
 ## <a name="next-steps"></a>后续步骤
 
-若要了解如何在 SQL Server 中编写高级 Python 函数，请遵循以下快速入门：
+若要了解如何通过 SQL 机器学习编写高级 Python 函数，请参阅以下快速入门：
 
 > [!div class="nextstepaction"]
-> [使用 SQL Server 机器学习服务编写高级 Python 函数](quickstart-python-functions.md)
-
-有关在 SQL Server 机器学习服务中使用 Python 的详细信息，请参阅以下文章：
-
-- [在 Python 中创建预测模型并对其进行评分](quickstart-python-train-score-model.md)
-- [什么是 SQL Server 机器学习服务（Python 和 R）？](../sql-server-machine-learning-services.md)
+> [编写高级 Python 函数](quickstart-python-functions.md)

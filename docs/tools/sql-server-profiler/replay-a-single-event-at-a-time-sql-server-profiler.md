@@ -1,6 +1,7 @@
 ---
 title: 每次重播一个事件
 titleSuffix: (SQL Server Profiler
+description: 了解如何通过单步执行重播跟踪文件或表，在 SQL Server Profiler 中每次重播一个跟踪事件。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: e8f217e2117e22edbd5f763b71c51cb078d49301
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 151c562d5448d94743ba13a49954cd2e7a5c0547
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307510"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774722"
 ---
 # <a name="replay-a-single-event-at-a-time-sql-server-profiler"></a>每次重播一个事件 (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 本主题介绍如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]每次重播跟踪文件或表中的一个事件。  
   
@@ -32,7 +33,7 @@ ms.locfileid: "75307510"
   
 2.  在 **“重播”** 菜单上，单击 **“步骤”** ，然后连接到要在其上重播跟踪的服务器实例。  
   
-3.  在 **“重播配置”** 对话框中，验证设置，再单击 **“确定”** 。 有关指定“重播配置”  对话框中的设置的详细信息，请参阅 [重播跟踪文件 (SQL Server Profiler)](../../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md) 或 [重播跟踪表 (SQL Server Profiler)](../../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)。  
+3.  在 **“重播配置”** 对话框中，验证设置，再单击 **“确定”** 。 有关指定“重播配置”**** 对话框中的设置的详细信息，请参阅 [重播跟踪文件 (SQL Server Profiler)](../../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md) 或 [重播跟踪表 (SQL Server Profiler)](../../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)。  
   
 4.  若要重播第一个事件，请单击 **“重播配置”** 对话框中的 **“确定”** 。  
   

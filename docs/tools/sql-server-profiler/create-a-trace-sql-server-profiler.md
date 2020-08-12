@@ -1,6 +1,7 @@
 ---
 title: 创建跟踪
 titleSuffix: SQL Server Profiler
+description: 了解如何通过创建跟踪在 SQL Server Profiler 中捕获事件数据。 了解可为跟踪指定的各种选项。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 08/01/2016
-ms.openlocfilehash: 5a5c004bbc7e93720f18df998b989c46ced0188e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c9c3fd13687004c1e632e81819ea25bfac7a3689
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307334"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774884"
 ---
 # <a name="create-a-trace-sql-server-profiler"></a>创建跟踪 (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 本主题介绍如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 来创建跟踪。  
   
@@ -30,7 +31,7 @@ ms.locfileid: "75307334"
   
      此时，将显示 **“跟踪属性”** 对话框。  
   
-    > **注意：** 如果选中 “建立连接后立即开始跟踪”  ，就不会显示 “跟踪属性”  对话框，而是直接开始跟踪。 要关闭此设置，请在“工具”菜单上，单击“选项”，再清除“建立连接后立即开始跟踪”复选框   。  
+    > **注意：** 如果选中 “建立连接后立即开始跟踪” ，就不会显示 “跟踪属性” 对话框，而是直接开始跟踪。 要关闭此设置，请在“工具”菜单上，单击“选项”，再清除“建立连接后立即开始跟踪”复选框。  
   
 2.  在 **“跟踪名称”** 框中，键入跟踪的名称。  
   
@@ -38,9 +39,9 @@ ms.locfileid: "75307334"
   
 4.  若要保存跟踪结果，请执行下列操作之一：  
   
-    -   单击“保存到文件”，将跟踪内容捕获到文件中。  指定 **“设置最大文件大小”** 的值。 默认值为 5 MB。  
+    -   单击“保存到文件”，将跟踪内容捕获到文件中。 指定 **“设置最大文件大小”** 的值。 默认值为 5 MB。  
   
-         或者，选择 **“启用文件滚动更新”** ，以便当文件大小达到最大值时自动创建新文件。 也可以选择 **“服务器处理跟踪数据”** ，由正在运行跟踪的服务而不是客户端应用程序来处理跟踪数据。 在服务器处理跟踪数据时，即使是在压力较大的情况下也不会跳过事件，但是服务器性能可能会受到影响。  
+         或者，选择 **“启用文件滚动更新”** ，以便当文件大小达到最大值时自动创建新文件。 也可以选择 **“服务器处理跟踪数据”**，由正在运行跟踪的服务而不是客户端应用程序来处理跟踪数据。 在服务器处理跟踪数据时，即使是在压力较大的情况下也不会跳过事件，但是服务器性能可能会受到影响。  
   
     -   单击 **“保存到表”** 将跟踪捕获到数据库表中。  
   
@@ -50,7 +51,7 @@ ms.locfileid: "75307334"
   
 5.  根据需要，可以选中 **“启用跟踪停止时间”** 复选框，再指定停止日期和时间。  
   
-6.  若要添加或删除事件、数据列或筛选器，请单击“事件选择”选项卡。  有关详细信息，请参阅：[指定跟踪文件的事件和数据列 (SQL Server Profiler)](../../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)  
+6.  若要添加或删除事件、数据列或筛选器，请单击“事件选择”选项卡。有关详细信息，请参阅：[指定跟踪文件的事件和数据列 (SQL Server Profiler)](../../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)  
   
 7.  单击 **“运行”** 以启动跟踪。  
   

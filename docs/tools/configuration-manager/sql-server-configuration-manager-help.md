@@ -1,5 +1,6 @@
 ---
 title: SQL Server 配置管理器帮助
+description: 熟悉 SQL Server 配置管理器。 了解如何使用它来管理 SQL Server 服务和配置网络连接。
 ms.custom: seo-lt-2019
 ms.date: 02/01/2018
 ms.prod: sql
@@ -13,19 +14,19 @@ ms.assetid: 6e909911-39a6-469b-b22a-3afdfd08a30b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 8ade0d0e0944b01005866fc5c38e50ce45fae0fd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 02926be4321c3f423f33c9b10b810009e65e2731
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306958"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895052"
 ---
 # <a name="sql-server-configuration-manager-help"></a>SQL Server 配置管理器帮助
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器可以配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务和网络连接。 若要创建或管理数据库对象、配置安全性以及编写 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询，请使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 有关 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书。  
 
  > [!TIP]
- > 如果需要在 Linux 上配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请使用 mssql-conf  工具。 有关详细信息，请参阅[使用 mssql-con 工具配置 Linux 上的 SQL Server](../../linux/sql-server-linux-configure-mssql-conf.md)。
+ > 如果需要在 Linux 上配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请使用 mssql-conf 工具。 有关详细信息，请参阅[使用 mssql-con 工具配置 Linux 上的 SQL Server](../../linux/sql-server-linux-configure-mssql-conf.md)。
 
  本节包含了按 F1 后看到的有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器中各对话框的帮助主题。  
   
@@ -55,7 +56,7 @@ ms.locfileid: "75306958"
 -   配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 网络协议  
   
 > [!NOTE]  
->  有关如何配置协议和连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的简短教程，请参阅 [教程：数据库引擎入门](../../relational-databases/tutorial-getting-started-with-the-database-engine.md)。  
+>  有关如何配置协议和连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的简短教程，请参阅[教程：数据库引擎入门](../../relational-databases/tutorial-getting-started-with-the-database-engine.md)。  
   
 ## <a name="sql-server-native-client-configuration"></a>SQL Server Native Client 配置  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 网络库连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器可以完成下列与此计算机上的客户端应用程序相关的任务：  
@@ -70,12 +71,12 @@ ms.locfileid: "75306958"
   
 #### <a name="to-open-sql-server-configuration-manager"></a>打开 SQL Server 配置管理器  
   
--   在“开始”  菜单上，依次指向“所有程序”  、“Microsoft SQL Server”  （版本）、“配置工具”  ，然后单击“SQL Server 配置管理器”  。  
+-   在“开始”**** 菜单上，依次指向“所有程序”****、“Microsoft SQL Server”****（版本）、“配置工具”****，然后单击“SQL Server 配置管理器”****。  
   
   
  **使用 [!INCLUDE[win8](../../includes/win8-md.md)] 访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器**  
   
- 因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理控制台程序的一个管理单元而不是单独的程序，所以，当运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时， [!INCLUDE[win8](../../includes/win8-md.md)]配置管理器不显示为一个应用程序。 要打开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器，请在“搜索”超级按钮中的“应用”下，键入 SQLServerManager12.msc（对于 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]）或 SQLServerManager11.msc（对于 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]），然后按 Enter。  
+ 因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理控制台程序的一个管理单元而不是单独的程序，所以，当运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时， [!INCLUDE[win8](../../includes/win8-md.md)]配置管理器不显示为一个应用程序。 要打开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器，请在“搜索”超级按钮中的“应用”下，键入 SQLServerManager12.msc（对于 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]）或 SQLServerManager11.msc（对于 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]），然后按 Enter    。  
   
 
 ## <a name="see-also"></a>另请参阅  

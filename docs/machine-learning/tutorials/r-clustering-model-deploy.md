@@ -8,28 +8,30 @@ ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d9640ee6040e6906f888486f6b0a1f99bb1d071f
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: a949fc5f17d2e6875eeef7f62ecef065283e3a92
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83607110"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772315"
 ---
 # <a name="tutorial-deploy-a-clustering-model-in-r-with-sql-machine-learning"></a>教程：通过 SQL 机器学习在 R 中部署聚类分析模型
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-此系列教程由四个部分组成，这是第四部分。你将在 SQL Server 机器学习服务中或大数据群集上将在 R 中开发的聚类分析模型部署到 SQL 数据库中。
+此系列教程由四个部分组成，这是第四部分。你将通过 SQL Server 机器学习服务或在大数据群集上将在 R 中开发的聚类分析模型部署到数据库中。
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-此系列教程由四个部分组成，这是第四部分。你将使用 SQL Server 机器学习服务将在 R 中开发的聚类分析模型部署到 SQL 数据库中。
+此系列教程由四个部分组成，这是第四部分。你将使用 SQL Server 机器学习服务将在 R 中开发的聚类分析模型部署到数据库中。
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-此系列教程由四个部分组成，这是第四部分。你将使用 SQL Server R Services 将在 R 中开发的聚类分析模型部署到 SQL 数据库中。
+此系列教程由四个部分组成，这是第四部分。你将使用 SQL Server R Services 将在 R 中开发的聚类分析模型部署到数据库中。
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+此系列教程由四个部分组成，这是第四部分。你将使用 Azure SQL 托管实例机器学习服务将在 R 中开发的聚类分析模型部署到数据库中。
 ::: moniker-end
 
 为了定期执行聚类分析，在新客户注册时，你需要能够从任何应用调用 R 脚本。 为此，可以通过将 R 脚本置于 SQL 存储过程中，在数据库中部署 R 脚本。 由于模型在数据库中执行，因此可以轻松地使用存储在数据库中的数据对其进行训练。
@@ -38,7 +40,7 @@ ms.locfileid: "83607110"
 
 > [!div class="checklist"]
 > * 创建生成模型的存储过程
-> * 在 SQL 数据库中执行聚类分析
+> * 执行聚类分析
 > * 使用聚类分析信息
 
 在[第一部分](r-clustering-model-introduction.md)中，你安装了必备条件并还原了示例数据库。
@@ -139,10 +141,11 @@ EXECUTE sp_execute_external_script
       @language = N'R'
     , @script = N'
 # Define the connection string
+
 connStr <- paste("Driver=SQL Server; Server=", instance_name,
-               "; Database=", database_name,
-               "; Trusted_Connection=true; ",
-                  sep="" );
+                 "; Database=", database_name,
+                 "; uid=Username;pwd=Password; ",
+                 sep="" )
 
 # Input customer data that needs to be classified.
 # This is the result we get from the query.
@@ -178,7 +181,7 @@ END;
 GO
 ```
 
-## <a name="perform-clustering-in-sql-database"></a>在 SQL 数据库中执行聚类分析
+## <a name="perform-clustering"></a>执行聚类分析
 
 创建该存储过程后，请执行以下脚本来执行聚类。
 
@@ -237,7 +240,7 @@ SELECT customer.[c_email_address], customer.c_customer_sk
 在此教程系列的第四部分中，你已了解如何执行以下操作：
 
 * 创建生成模型的存储过程
-* 在 SQL Server 中执行聚类分析
+* 通过 SQL 机器学习执行聚类分析
 * 使用聚类分析信息
 
 若要详细了解如何在机器学习服务中使用 R，请参阅：

@@ -1,5 +1,6 @@
 ---
 title: MSSQLSERVER 属性的协议（“证书”选项卡）
+description: 使用“MSSQLSERVER 协议属性”对话框中的“证书”选项卡来选择 SQL Server 的证书，或者查看证书属性。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,16 +16,16 @@ ms.assetid: 776addd6-25f3-4875-9a71-064035787090
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b19b12a55f1afee35ed351ab6033179c17be89a8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 71740e97a0518e34ffa410a62efe14f96cfaccfc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306372"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881903"
 ---
 # <a name="protocols-for-mssqlserver-properties-certificate-tab"></a>MSSQLSERVER 属性的协议（“证书”选项卡）
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  使用“MSSQLSERVER 协议的属性”  对话框中的“证书”  选项卡可以选择 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 证书，也可以查看证书的属性。 在选择证书之前，所有字段均为空。  
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+  使用“MSSQLSERVER 协议的属性”**** 对话框中的“证书”**** 选项卡可以选择 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 证书，也可以查看证书的属性。 在选择证书之前，所有字段均为空。  
   
  用户的证书存储在本地计算机上。 若要加载供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用的证书，您必须在与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务所用的同一用户帐户下运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器。  
   
@@ -33,7 +34,7 @@ ms.locfileid: "75306372"
  通过它可以访问有关证书的其他详细信息。 只有在 **“证书”** 框中选择某个证书后，此选项才可用。 有关证书详细信息的其他信息，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 文档。  
   
  **Clear**  
- 从“证书”框中删除所选证书。   
+ 从“证书”框中删除所选证书。  
   
  **证书**  
  由安全提供程序确定的证书名称。 选择某个证书可以在属性网格中查看详细信息。  

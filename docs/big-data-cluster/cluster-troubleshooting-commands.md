@@ -5,20 +5,20 @@ description: 本文提供了用于监视 SQL Server 2019 大数据群集并对�
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 08/28/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 49ed75b4986a45dfec25547317e3fe0789671fe4
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: 4d384a1835d902e56030b62897d657c81c0ec3b7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606399"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773673"
 ---
 # <a name="troubleshoot-big-data-clusters-2019-kubernetes"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Kubernetes 疑难解答
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 本文介绍了几个用于监视 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 并对其进行故障排除的实用 Kubernetes 命令。 其中介绍了如何深入了解位于大数据群集中的 Pod 或其他 Kubernetes 项目的详细信息。 本文也涵盖了一些常见任务，例如将文件复制到运行某个 SQL Server 大数据群集服务的容器中或从中进行复制。
 
@@ -118,8 +118,10 @@ kubectl get svc -n mssql-cluster
 |---|---|
 | **master-svc-external** | 提供对主实例的访问权限。<br/>（EXTERNAL-IP、31433 和 SA 用户 ） |
 | **controller-svc-external** | 支持管理群集的工具和客户端。 |
-| **gateway-svc-external** | 提供对 HDFS/Spark 网关的访问权限。<br/>（EXTERNAL-IP 和根用户 ） |
+| **gateway-svc-external** | 提供对 HDFS/Spark 网关的访问权限。<br/>（EXTERNAL-IP 和 `<AZDATA_USERNAME>` 用户）<sup>1</sup>|
 | **appproxy-svc-external** | 支持应用程序部署方案。 |
+
+<sup>1</sup> [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 
 > [!TIP]
 > 这是使用 kubectl 查看服务的一种方法，但也可以使用 `azdata bdc endpoint list` 命令查看这些终结点。 有关详细信息，请参阅[获取大数据群集终结点](deployment-guidance.md#endpoints)。

@@ -1,6 +1,7 @@
 ---
 title: 重播到断点
 titleSuffix: SQL Server Profiler
+description: 通过设置断点使调试更加容易，以便在特定事件处暂停播放。 使用 SQL Server Profiler 在跟踪文件或表中设置断点。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 046f916a5aba5add44c32cb9e761dd1858b86783
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5c8be9d32a60d44007d3e7c20b0b7da8fdb087c6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307444"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789897"
 ---
 # <a name="replay-to-a-breakpoint-sql-server-profiler"></a>重播到断点 (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 本主题说明如何在您要通过使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]进行重播的跟踪文件或表中设置断点。 在重播跟踪之前，在跟踪文件或表中设置断点可以使您在发生特定事件时暂停重播跟踪。 在重播跟踪时使用断点能够支持调试，因为您可以将长跟踪脚本的重播分解为较短的段以便进行增量分析。  
   
@@ -36,7 +37,7 @@ ms.locfileid: "75307444"
   
     -   在 **“重播”** 菜单上，单击 **“切换断点”** 。  
   
-    -   右键单击“事件”，再单击“切换断点”  。  
+    -   右键单击“事件”，再单击“切换断点”。  
   
      选定跟踪事件的旁边将显示一个红色项目符号，表示其为跟踪断点。  
   

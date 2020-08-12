@@ -1,6 +1,7 @@
 ---
 title: 创建 Transact-SQL 脚本来运行跟踪
 titleSuffix: SQL Server Profiler
+description: 了解如何在 SQL Server Profiler 中从现有的跟踪文件或表中创建 Transact-SQL 脚本。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,22 +12,22 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 3324980dd331ed8211c2480415e430ee1fcd0821
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9f34472358f0d0cde586a25374c0de90ab708539
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307299"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774852"
 ---
 # <a name="create-a-transact-sql-script-for-running-a-trace-sql-server-profiler"></a>创建 Transact-SQL 脚本来运行跟踪 (SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   本主题说明了如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]从现有的跟踪文件或表中创建 Transact-SQL 脚本。  
   
 ### <a name="to-create-a-transact-sql-script-to-run-a-trace"></a>创建 Transact-SQL 脚本来运行跟踪  
   
 1.  打开跟踪文件或表。 有关详细信息，请参阅 [打开跟踪文件 (SQL Server Profiler)](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md) 或 [打开跟踪表 (SQL Server Profiler)](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)一起提供的预定义优化模板。  
   
-2.  在“文件”  菜单上，依次指向“导出”  和“脚本跟踪定义”  ，然后单击与你要跟踪的服务器对应的版本。  
+2.  在“文件”**** 菜单上，依次指向“导出”**** 和“脚本跟踪定义”****，然后单击与你要跟踪的服务器对应的版本。  
   
 3.  在 **“另存为”** 对话框中，输入脚本文件名称，然后单击 **“保存”** 。  
   

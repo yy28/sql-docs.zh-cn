@@ -8,19 +8,18 @@ ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1ae2931ca07cdcd6e3f1216ce7adb2551a6e23ae
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: e0c679ce4a146065223123e41cb2935e7d33ad71
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83607030"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784078"
 ---
 # <a name="tutorial-prepare-data-to-train-a-predictive-model-in-r-with-sql-machine-learning"></a>教程：准备数据以通过 SQL 机器学习在 R 中训练预测模型
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 此系列教程由四个部分组成，这是第二部分。你将使用 R 从数据库准备数据。在此系列的后面部分，你将在 SQL Server 机器学习服务中或大数据群集上通过 R 使用该数据训练并部署预测模型。
@@ -31,12 +30,15 @@ ms.locfileid: "83607030"
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 此系列教程由四个部分组成，这是第二部分。你将使用 R 从数据库准备数据。在此系列的后面部分，你将在 SQL Server R Services 中通过 R 使用该数据训练并部署预测模型。
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+此系列教程由四个部分组成，这是第二部分，将使用 R 从数据库准备数据。在此系列的后面部分，将通过 Azure SQL 托管实例机器学习服务使用此数据来训练预测模型并将其部署到 R 中。
+::: moniker-end
 
 本文将指导如何进行以下操作：
 
 > [!div class="checklist"]
 > * 将示例数据库还原成一个数据库
-> * 将数据从 SQL 数据库加载到 R 数据帧中
+> * 将数据库中的数据加载到 R 数据帧中
 > * 将某些列标识为类别列以使用 R 准备数据
 
 在[第一部分](r-predictive-model-introduction.md)中，你了解了如何还原示例数据库。
@@ -51,22 +53,19 @@ ms.locfileid: "83607030"
 
 ## <a name="load-the-data-into-a-data-frame"></a>将数据加载到数据帧中
 
-若要在 R 中使用这些数据，请将数据从 SQL 数据库加载到数据帧 (`rentaldata`) 中。
+若要在 R 中使用这些数据，请将数据库中的数据加载到数据帧 (`rentaldata`) 中。
 
 在 RStudio 中创建新的 RScript 文件并运行以下脚本。 将 **ServerName** 替换为你自己的连接信息。
 
 ```r
 #Define the connection string to connect to the TutorialDB database
-connStr <- "Driver=SQL Server;Server=ServerName;Database=TutorialDB;Trusted_Connection=TRUE"
+connStr <- "Driver=SQL Server;Server=ServerName;Database=TutorialDB;uid=Username;pwd=Password"
+
 
 #Get the data from the table
 library(RODBC)
 
 ch <- odbcDriverConnect(connStr)
-
-#Take a look at the structure of the data and the top rows
-head(rentaldata)
-str(rentaldata)
 
 #Import the data from the table
 rentaldata <- sqlFetch(ch, "dbo.rental_data")
@@ -138,7 +137,7 @@ $ Snow       : Factor w/ 2 levels "0","1": 1 1 1 1 1 1 1 1 1 1 ...
 
 在此教程系列的第二部分中，你已了解如何执行以下操作：
 
-* 将示例数据从 SQL Server 加载到 R 数据帧中
+* 将示例数据加载到 R 数据框中
 * 将某些列标识为类别列以使用 R 准备数据
 
 若要创建使用 TutorialDB 数据库中数据的机器学习模型，请按照本教程系列的第三部分进行操作：

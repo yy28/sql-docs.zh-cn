@@ -1,32 +1,32 @@
 ---
 title: 解释 SQL Server 单元测试结果
+description: 了解如何使用测试结果窗口或 .trx 文件来查看 SQL Server 单元测试结果。 查看如何获取有关结果的详细信息。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: fde3c95b-2f68-483d-a197-0f7161b72fa3
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 1708c6aa8a082cfc06aadf832e0dbf30f2c23e23
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 42ec6c34cad7a14d397965717a9447c9d0e29a4b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75246426"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893828"
 ---
 # <a name="interpreting-sql-server-unit-test-results"></a>解释 SQL Server 单元测试结果
 
-运行 SQL Server 单元测试时，将会自动生成测试结果，将其保存到磁盘并在“测试结果”  窗口中显示摘要信息。 启动测试运行后，“测试结果”  窗口将出现并显示测试运行的进度。 此显示内容包括正在运行的测试和已完成的测试。  
+运行 SQL Server 单元测试时，将会自动生成测试结果，将其保存到磁盘并在“测试结果”窗口中显示摘要信息。 启动测试运行后，“测试结果”窗口将出现并显示测试运行的进度。 此显示内容包括正在运行的测试和已完成的测试。  
   
-若要查看有关某个测试结果的详细信息，请在“测试结果”  窗口中双击该测试结果以显示“测试结果详细信息”  页。 有关测试结果的详细信息，请双击测试结果。  
+若要查看有关某个测试结果的详细信息，请在“测试结果”窗口中双击该测试结果以显示“测试结果详细信息”页。 有关测试结果的详细信息，请双击测试结果。  
   
-有关如何更改“测试结果”  窗口的显示的详细信息，请参阅[如何：在测试窗口中添加或移除列 (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182508(VS.100).aspx)或[如何：在测试窗口中添加或移除列 (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182508.aspx)。  
+有关如何更改“测试结果”**** 窗口的显示的详细信息，请参阅[如何：在测试窗口中添加或移除列 (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182508(VS.100).aspx)或[如何：在测试窗口中添加或移除列 (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182508.aspx)。  
   
 ## <a name="storing-test-results"></a>存储测试结果  
-单元测试的结果将会自动存储在硬盘上文件扩展名为 .trx 的文件中。 .trx 文件是包含测试运行的详细信息的 XML 文件。 您可加载之前的测试运行的 .trx 文件以查看这些测试运行的结果或重新运行之前的测试。 有关详细信息，请参阅[如何：重新运行测试 (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182472(VS.100).aspx)。  
+单元测试的结果将会自动存储在硬盘上文件扩展名为 .trx 的文件中。 .trx 文件是包含测试运行的详细信息的 XML 文件。 您可加载之前的测试运行的 .trx 文件以查看这些测试运行的结果或重新运行之前的测试。 有关详细信息，请参阅[操作说明：重新运行测试 (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182472(VS.100).aspx)。  
   
 > [!NOTE]  
 > 不能远程运行单元测试。  

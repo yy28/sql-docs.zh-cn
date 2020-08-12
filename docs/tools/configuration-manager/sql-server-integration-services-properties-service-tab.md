@@ -1,5 +1,6 @@
 ---
 title: SQL Server Integration Services 属性（“服务”选项卡）
+description: 了解“集成服务属性”对话框中“服务”选项卡上的选项，例如二进制文件路径、主机名以及启动模式。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,16 +12,16 @@ ms.assetid: 37f0acd9-c96f-48fd-9b53-2ca0097af242
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e6b25e14ebc6f757239046987e338d941c3fbbd8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2c1e9452be81789ae6b65db764c6df2a8b565d7d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75304945"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85887779"
 ---
 # <a name="sql-server-integration-services-properties-service-tab"></a>SQL Server Integration Services 属性（“服务”选项卡）
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  使用 **“属性”** 对话框中的“服务”选项卡可以查看或指定下列选项[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  。  
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+  使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]“属性”**对话框中的“服务”选项卡可以查看或指定下列选项** 。  
   
 ## <a name="options"></a>选项  
  **二进制路径**  
@@ -51,9 +52,9 @@ ms.locfileid: "75304945"
   
 -   自动：计算机启动时，此服务将尝试启动。  
   
--   已禁用：此服务无法启动。  
+-   禁用：此服务无法启动。  
   
  **State**  
- 指示此服务是正在运行、已停止还是已禁用。 “...  ”指明状态更改是挂起的。  
+ 指示此服务是正在运行、已停止还是已禁用。 “...”指明状态更改是挂起的。  
   
   

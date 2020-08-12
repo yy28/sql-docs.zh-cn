@@ -5,20 +5,20 @@ description: 对在 Active Directory 域中部署 SQL Server 大数据群集进�
 author: rl-msft
 ms.author: rafidl
 ms.reviewer: mikeray
-ms.date: 03/12/2020
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 69762b5474f72256975af06e6c79d664de283809
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 302731f3f0c37f60c4944b7df44d02b2cfc64a8b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82153254"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772884"
 ---
 # <a name="troubleshoot-sql-server-big-data-cluster-active-directory-integration"></a>对 SQL Server 大数据群集 Active Directory 集成进行故障排除
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 本文介绍了如何对在 Active Directory 模式下部署 SQL Server 大数据群集进行故障排除。
 
@@ -123,9 +123,9 @@ zookeeper-2       2/2     Running   0          32m
 
 ## <a name="cause"></a>原因
 
-在上面的示例中，由于域组的范围设置为本地域，因此部署无法为域用户创建登录名。 使用范围设置为全球域或通用域的组。 [在 Active Directory 模式下部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deploy-active-directory.md) 说明了 AD 组范围要求。
+在上面的示例中，由于域组的范围设置为本地域，因此部署无法为域用户创建登录名。 使用全局或通用范围内的组。 [在 Active Directory 模式下部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deploy-active-directory.md) 说明了 AD 组范围要求。
 
-## <a name="resolution"></a>解决方法
+## <a name="verify"></a>Verify
 
 检查域组 (<`domain-group`>) 的范围。 使用 [get-adgroup](/powershell/module/addsadministration/get-adgroup/)。
 

@@ -1,19 +1,19 @@
 ---
 title: 设置 Web 门户的品牌 | Microsoft Docs
-ms.date: 04/10/2019
+ms.date: 07/01/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
-description: 本文介绍了如何通过品牌包根据业务设置 Web 门户品牌，从而改变 Web 门户的外观。 品牌包已经设计好，所以无需深入了解级联样式表即可进行创建。
+description: 了解如何通过品牌包为业务打造网站门户的品牌外观。 品牌包的设计使你无需深入了解 CSS 知识便可打造专业品牌外观。
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 47fc9ba65aca128a7e812f85c5bd06ca38131cbf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 55b0557f6b6cf1a80219a492d4ce79a897be22ae
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "72251909"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888118"
 ---
 # <a name="branding-the-web-portal"></a>设置 Web 门户的品牌
 
@@ -38,50 +38,62 @@ Reporting Services 的品牌包由三项组成，被打包为一个 zip 文件�
 metadata.xml 文件可以设置品牌包的名称，并且含有 colors.json 和 logo.png 文件的引用项。  
   
 若要更改品牌包的名称，请更改 **SystemResourcePackage** 元素的 **name** 属性。  
-  
+
+```xml
     name="Multicolored example brand"  
+```
   
 你还可以选择在品牌包中包含一张徽标图片。 Contents 元素中会列出此选项。  
   
 不使用徽标文件的示例。  
-  
-    <Contents>  
-      <Item key="colors" path="colors.json" />  
-    </Contents>  
-  
+
+```xml
+<Contents>  
+    <Item key="colors" path="colors.json" />  
+</Contents>  
+```
+
 使用徽标文件的示例。  
   
-    <Contents>  
-      <Item key="colors" path="colors.json" />  
-      <Item key="logo" path="logo.png" />  
-    </Contents>  
-  
+```xml
+<Contents>  
+    <Item key="colors" path="colors.json" />  
+    <Item key="logo" path="logo.png" />  
+</Contents>  
+```
+
 ### <a name="colorsjson"></a>Colors.json
   
 上传品牌包时，服务器会从 colors.json 文件中提取相应的名称/值对，并使用主 LESS 样式表 brand.less 将其合并。 然后对此 LESS 文件进行处理，并且将生成的 CSS 文件提供给客户端。 样式表中的所有颜色都遵循六个字符的颜色十六进制表示形式。  
   
 LESS 样式表中包含了引用预定义 LESS 变量的块，如下所示。  
-  
-    /* primary buttons */   
-    .btn-primary {   
-        color:@primaryButtonColor;   
-        background-color:@primaryButtonBg;   
-    }  
+
+```css
+/* primary buttons */   
+.btn-primary {   
+    color:@primaryButtonColor;   
+    background-color:@primaryButtonBg;   
+}  
+```
   
 与 CSS 语法类似，带有 @symbol 符号前缀的颜色值对 LESS 而言是唯一的。 这些颜色值是变量，变量值由 json 文件设置。  
   
 例如，如果 colors.json 文件具有以下值。  
-  
-    "primary":"#009900",   
-    "primaryContrast":"#ffffff"   
-  
+
+```json
+"primary":"#009900",   
+"primaryContrast":"#ffffff"   
+```
+
 经过处理的输出会查看“\@primaryButtonBg变量，并确保它映射到了名为“primary”的 json 属性（在此示例中是 #009900）。 这样才能输出正确的 CSS。  
-  
+
+```css
     .btn-primary {   
         color:#ffffff;   
         background-color:#009900;   
     }  
-  
+```
+
 所有主要按钮将呈深绿色，而文本呈白色。  
   
 Reporting Services 的 colors.json 文件有两种主要类别，项按这两种类别分组。  
@@ -100,7 +112,8 @@ Reporting Services 的 colors.json 文件有两种主要类别，项按这两种
 |中性第三级|站点设置背景。|  
 |危险/警告/成功消息|这些消息的颜色。|  
 |KPI|对好 (1)，中 (0)，中 (-1) 和无的颜色进行控制。|  
-  
+|||
+
 第一次使用移动报表发布服务器连接到部署了品牌包的服务器时，主题会添加到应用右上角菜单中的可用主题中。  
   
 ![ssRSBrandingMobileReportPublisher](../reporting-services/media/ssrsbrandingmobilereportpublisher.png)  
@@ -134,112 +147,116 @@ Reporting Services 的 colors.json 文件有两种主要类别，项按这两种
 你还可以 **下载** 或 **删除** 包。 删除包后，Web 门户会立即重置为默认品牌。  
   
 ## <a name="metadataxml-example"></a>metadata.xml 示例
-  
-    <?xml version="1.0" encoding="utf-8"?>  
-    <SystemResourcePackage xmlns="https://schemas.microsoft.com/sqlserver/reporting/2016/01/systemresourcepackagemetadata"  
-        type="UniversalBrand"  
-        version="2.0.2"  
-        name="Multicolored example brand"  
-        >  
-        <Contents>  
-            <Item key="colors" path="colors.json" />  
-            <Item key="logo" path="logo.png" />  
-        </Contents>  
-    </SystemResourcePackage>  
-   
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>  
+<SystemResourcePackage xmlns="https://schemas.microsoft.com/sqlserver/reporting/2016/01/systemresourcepackagemetadata"  
+    type="UniversalBrand"  
+    version="2.0.2"  
+    name="Multicolored example brand"  
+    >  
+    <Contents>  
+        <Item key="colors" path="colors.json" />  
+        <Item key="logo" path="logo.png" />  
+    </Contents>  
+</SystemResourcePackage>  
+```
+
 ## <a name="colorsjson-example"></a>colors.json 示例
-  
-    {  
-        "name":"Multicolored example brand",  
-        "version":"1.0",  
-        "interface":{  
-            "primary":"#b31e1e",  
-            "primaryAlt":"#ca0806",  
-            "primaryAlt2":"#621013",  
-            "primaryAlt3":"#e40000",  
-            "primaryAlt4":"#e14e50",  
-            "primaryContrast":"#fff",  
-  
-            "secondary":"#042200",  
-            "secondaryAlt":"#0f4400",  
-            "secondaryAlt2":"#155500",  
-            "secondaryAlt3":"#217700",  
-            "secondaryContrast":"#49e63c",  
-  
-            "neutralPrimary":"#d8edff",  
-            "neutralPrimaryAlt":"#c9e6ff",  
-            "neutralPrimaryAlt2":"#aedaff",  
-            "neutralPrimaryAlt3":"#88c8ff",  
-            "neutralPrimaryContrast":"#0a2b4c",  
-  
-            "neutralSecondary":"#e9d8eb",  
-            "neutralSecondaryAlt":"#d9badc",  
-            "neutralSecondaryAlt2":"#b06cb5",  
-            "neutralSecondaryAlt3":"#a75bac",  
-            "neutralSecondaryContrast":"#250a26",  
-  
-            "neutralTertiary":"#f79220",  
-            "neutralTertiaryAlt":"#f8a54b",  
-            "neutralTertiaryAlt2":"#facc9b",  
-            "neutralTertiaryAlt3":"#fce3c7",  
-            "neutralTertiaryContrast":"#391d00",  
-  
-            "danger":"#ff0000",  
-            "success":"#00ff00",  
-            "warning":"#ff8800",  
-            "info":"#00ff",  
-            "dangerContrast":"#fff",  
-            "successContrast":"#fff",  
-            "warningContrast":"#fff",  
-            "infoContrast":"#fff",  
-  
-            "kpiGood":"#4fb443",  
-            "kpiBad":"#de061a",  
-            "kpiNeutral":"#d9b42c",  
-            "kpiNone":"#333",  
-            "kpiGoodContrast":"#fff",  
-            "kpiBadContrast":"#fff",  
-            "kpiNeutralContrast":"#fff",  
-            "kpiNoneContrast":"#fff"  
-           },  
-           "theme":{  
-            "dataPoints":[  
-                "#0072c6",  
-                "#f68c1f",  
-                "#269657",  
-                "#dd5900",  
-                "#5b3573",  
-                "#22bdef",  
-                "#b4009e",  
-                "#008274",  
-                "#fdc336",  
-                "#ea3c00",  
-                "#00188f",  
-                "#9f9f9f"  
-            ],  
-  
-            "good":"#85ba00",  
-            "bad":"#e90000",  
-            "neutral":"#edb327",  
-            "none":"#333",  
-  
-            "background":"#fff",  
-            "foreground":"#222",  
-            "mapBase":"#00aeef",  
-            "panelBackground":"#f6f6f6",  
-            "panelForeground":"#222",  
-            "panelAccent":"#00aeef",  
-            "tableAccent":"#00aeef",  
-  
-            "altBackground":"#f6f6f6",  
-            "altForeground":"#000",  
-            "altMapBase":"#f68c1f",  
-            "altPanelBackground":"#235378",  
-            "altPanelForeground":"#fff",  
-            "altPanelAccent":"#fdc336",  
-            "altTableAccent":"#fdc336"  
-        }  
+
+```json
+{  
+    "name":"Multicolored example brand",  
+    "version":"1.0",  
+    "interface":{  
+        "primary":"#b31e1e",  
+        "primaryAlt":"#ca0806",  
+        "primaryAlt2":"#621013",  
+        "primaryAlt3":"#e40000",  
+        "primaryAlt4":"#e14e50",  
+        "primaryContrast":"#fff",  
+
+        "secondary":"#042200",  
+        "secondaryAlt":"#0f4400",  
+        "secondaryAlt2":"#155500",  
+        "secondaryAlt3":"#217700",  
+        "secondaryContrast":"#49e63c",  
+
+        "neutralPrimary":"#d8edff",  
+        "neutralPrimaryAlt":"#c9e6ff",  
+        "neutralPrimaryAlt2":"#aedaff",  
+        "neutralPrimaryAlt3":"#88c8ff",  
+        "neutralPrimaryContrast":"#0a2b4c",  
+
+        "neutralSecondary":"#e9d8eb",  
+        "neutralSecondaryAlt":"#d9badc",  
+        "neutralSecondaryAlt2":"#b06cb5",  
+        "neutralSecondaryAlt3":"#a75bac",  
+        "neutralSecondaryContrast":"#250a26",  
+
+        "neutralTertiary":"#f79220",  
+        "neutralTertiaryAlt":"#f8a54b",  
+        "neutralTertiaryAlt2":"#facc9b",  
+        "neutralTertiaryAlt3":"#fce3c7",  
+        "neutralTertiaryContrast":"#391d00",  
+
+        "danger":"#ff0000",  
+        "success":"#00ff00",  
+        "warning":"#ff8800",  
+        "info":"#00ff",  
+        "dangerContrast":"#fff",  
+        "successContrast":"#fff",  
+        "warningContrast":"#fff",  
+        "infoContrast":"#fff",  
+
+        "kpiGood":"#4fb443",  
+        "kpiBad":"#de061a",  
+        "kpiNeutral":"#d9b42c",  
+        "kpiNone":"#333",  
+        "kpiGoodContrast":"#fff",  
+        "kpiBadContrast":"#fff",  
+        "kpiNeutralContrast":"#fff",  
+        "kpiNoneContrast":"#fff"  
+        },  
+        "theme":{  
+        "dataPoints":[  
+            "#0072c6",  
+            "#f68c1f",  
+            "#269657",  
+            "#dd5900",  
+            "#5b3573",  
+            "#22bdef",  
+            "#b4009e",  
+            "#008274",  
+            "#fdc336",  
+            "#ea3c00",  
+            "#00188f",  
+            "#9f9f9f"  
+        ],  
+
+        "good":"#85ba00",  
+        "bad":"#e90000",  
+        "neutral":"#edb327",  
+        "none":"#333",  
+
+        "background":"#fff",  
+        "foreground":"#222",  
+        "mapBase":"#00aeef",  
+        "panelBackground":"#f6f6f6",  
+        "panelForeground":"#222",  
+        "panelAccent":"#00aeef",  
+        "tableAccent":"#00aeef",  
+
+        "altBackground":"#f6f6f6",  
+        "altForeground":"#000",  
+        "altMapBase":"#f68c1f",  
+        "altPanelBackground":"#235378",  
+        "altPanelForeground":"#fff",  
+        "altPanelAccent":"#fdc336",  
+        "altTableAccent":"#fdc336"  
     }  
+}  
+```
 
 ## <a name="next-steps"></a>后续步骤
 
