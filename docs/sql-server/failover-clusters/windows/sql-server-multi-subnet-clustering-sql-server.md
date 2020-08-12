@@ -1,6 +1,6 @@
 ---
 title: SQL Server 多子网群集
-description: 了解如何在多子网环境中配置 SQL Server 故障转移群集实例。
+description: 了解如何在多子网环境中配置 SQL Server 故障转移群集实例，该实例除了提供高可用性之外还提供灾难恢复。
 ms.custom: seo-lt-2019
 ms.date: 09/01/2016
 ms.prod: sql
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e257ead5f858e80095c077643b283645917271be
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 50562836f848834744ceb24365461bc43e8fe949
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75258153"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901149"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>SQL Server 多子网群集 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 多子网故障转移群集是一种配置，其中，每个故障转移群集节点都连接到其他子网或其他子网组。 这些子网可位于同一位置或在地理上分散的地点中。 跨地理上分散的站点进行群集有时称为拉伸群集。 因为没有所有节点都可以访问的共享存储，所以在多个子网上的数据存储之间应该复制数据。 对于数据复制，有多个可用数据的副本。 因此，多子网故障转移群集除了具备高可用性之外，还提供了灾难恢复解决方案。  
   
    

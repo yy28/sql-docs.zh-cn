@@ -1,5 +1,6 @@
 ---
 title: 将 Reporting Services 内容类型添加到 SharePoint 库 | Microsoft Docs
+description: 将“报表生成器报表”、“报表模型”和“报表数据源”内容类型添加到库中后，便可使用“新建”命令，从而可创建对应类型的新文档。
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +10,12 @@ ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d50d7e273be27f6b03d98db40c2da1dc70b23306
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8964906be1f9d055e45c7eacb6699f7ccc87da86
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68887748"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197196"
 ---
 # <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>将 Reporting Services 内容类型添加到 SharePoint 库
 
@@ -22,7 +23,7 @@ ms.locfileid: "68887748"
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供预定义的 SharePoint 内容类型，用于管理共享数据源 (.rsds) 文件、报表模型 (.smdl) 和报表生成器报表定义 (.rdl) 文件。 将 **“报表生成器报表”** 、 **“报表模型”** 和 **“报表数据源”** 内容类型添加到库中将启用 **“新建”** 命令，以便创建对应类型的新文档。
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供预定义的 SharePoint 内容类型，用于管理共享数据源 (.rsds) 文件、报表模型 (.smdl) 和报表生成器报表定义 (.rdl) 文件。 将 **“报表生成器报表”**、 **“报表模型”** 和 **“报表数据源”** 内容类型添加到库中将启用 **“新建”** 命令，以便创建对应类型的新文档。
 
 > [!NOTE]
 > 自 SQL Server 2016 之后，不再提供 Reporting Services 与 SharePoint 的集成这一功能。
@@ -72,7 +73,7 @@ ms.locfileid: "68887748"
   
 5.  刷新浏览器，然后为 **“报表服务器集成功能”** 单击 **“激活”** 。  
   
-     ![](../../reporting-services/report-server-sharepoint/media/rs-reportserver-integration-deactivate.gif)  
+     ![rs-reportserver-integration-deactivate](../../reporting-services/report-server-sharepoint/media/rs-reportserver-integration-deactivate.gif)  
   
 ##  <a name="to-enable-content-type-management-for-a-single-document-library-sharepoint-2013"></a><a name="bkmk_enable_content_management"></a> 为单个文档库启用内容类型管理 (SharePoint 2013)  
   
@@ -92,7 +93,7 @@ ms.locfileid: "68887748"
   
 5.  在 **“内容类型”** 部分中，选择 **“是”** 以允许内容类型管理。  
   
-6.  单击“确定”。   
+6.  单击“确定”。  
   
 ##  <a name="to-add-reporting-services-content-types-sharepoint-2013"></a><a name="bkmk_add_single"></a> 添加 Reporting Services 内容类型 (SharePoint 2013)  
   
@@ -106,24 +107,24 @@ ms.locfileid: "68887748"
   
 5.  在 **“从以下列表中选择网站内容类型”** 中，选择 **“SQL Server Reporting Services 内容类型”** 。  
   
-6.  在 **“可用网站内容类型”** 列表中，单击 **“报表生成器”** ，然后单击 **“添加”** ，将选定内容类型移到 **“要添加的内容类型”** 列表中。  
+6.  在 **“可用网站内容类型”** 列表中，单击 **“报表生成器”**，然后单击 **“添加”** ，将选定内容类型移到 **“要添加的内容类型”** 列表中。  
   
 7.  若要添加“ **报表模型”** 和 **“报表数据源”** 内容类型，请重复执行前面的步骤。  
   
 8.  添加完内容类型后，单击 **“确定”** 。  
   
     > [!NOTE]  
-    >  如果 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 内容类型组“SQL Server Reporting Services 内容类型”在“添加内容类型”页上不可见，则以下条件之一成立   ：  
+    >  如果 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 内容类型组“SQL Server Reporting Services 内容类型”在“添加内容类型”页上不可见，则以下条件之一成立********：  
   
     -   尚未安装用于 SharePoint 产品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序。 有关详细信息，请参阅 [安装或卸载适用于 SharePoint 的 Reporting Services 外接程序](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)。 本主题包括有关安装外接程序和单步执行外接程序的“仅文件”安装以解决问题的信息。  
   
-    -   外接程序已安装，但网站集功能“报表服务器集成功能”未处于活动状态  。 在“站点设置”  中验证网站集功能。  
+    -   外接程序已安装，但网站集功能“报表服务器集成功能”未处于活动状态。 在“站点设置” 中验证网站集功能。  
   
     -   所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 内容类型都已添加到该库中。 如果所有内容类型都是某个库的一部分，则从 **“添加内容类型”** 页中删除该组。 如果您删除一个或多个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 内容类型，则组 **“SQL Server Reporting Services 内容类型”** 将在 **“添加内容类型”** 页上可见。  
   
 ##  <a name="to-enable-content-type-management-for-a-single-document-library-sharepoint-2010"></a><a name="bkmk_enable_content_management_2010"></a> 为单个文档库启用内容类型管理 (SharePoint 2010)  
   
-1.  打开要为其启用多个内容类型的库。 在库菜单栏上，应会看到以下菜单：“新建”  、“上载”  、“操作”  和“设置”  。 如果未看到 **“设置”** ，则说明您没有添加内容类型的权限。  
+1.  打开要为其启用多个内容类型的库。 在库菜单栏上，应会看到以下菜单：“新建”、“上载”、“操作”和“设置”。 如果未看到 **“设置”** ，则说明您没有添加内容类型的权限。  
   
 2.  在 **“库工具”** 功能区上单击 **“库”** 。  
   
@@ -135,7 +136,7 @@ ms.locfileid: "68887748"
   
 5.  在 **“内容类型”** 部分中，选择 **“是”** 以允许内容类型管理。  
   
-6.  单击“确定”。   
+6.  单击“确定”。  
   
 ##  <a name="to-add-report-server-content-types-sharepoint-2010"></a><a name="bkmk_add_single_2010"></a> 添加报表服务器内容类型 (SharePoint 2010)  
   
@@ -149,7 +150,7 @@ ms.locfileid: "68887748"
   
 5.  在 **“选择内容类型”** 部分的 **“从列表选择网站内容类型”** 中，单击箭头选择 **“SQL Server Reporting Services 内容类型”** 。  
   
-6.  在 **“可用网站内容类型”** 列表中，单击 **“报表生成器”** ，然后单击 **“添加”** ，将选定内容类型移到 **“要添加的内容类型”** 列表中。  
+6.  在 **“可用网站内容类型”** 列表中，单击 **“报表生成器”**，然后单击 **“添加”** ，将选定内容类型移到 **“要添加的内容类型”** 列表中。  
   
 7.  若要添加“ **报表模型”** 和 **“报表数据源”** 内容类型，请重复执行前面的步骤。  
   
@@ -159,7 +160,7 @@ ms.locfileid: "68887748"
   
 1.  对于 SQL Server Reporting Services 2008 和 2008 R2 报表服务器，您可以为多个商业智能中心站点启用内容类型和内容管理。  
   
-2.  在 SharePoint 管理中心中，单击 **“常规应用程序设置”** 。 在“SQL Server Reporting Services (2008 和 2008 R2)”部分中，单击“Reporting Services 集成”   。  
+2.  在 SharePoint 管理中心中，单击 **“常规应用程序设置”** 。 在“SQL Server Reporting Services (2008 和 2008 R2)”部分中，单击“Reporting Services 集成” 。  
   
      ![rs_general_app_settings](../../reporting-services/report-server-sharepoint/media/rs-general-app-settings.gif "rs_general_app_settings")  
   
@@ -167,7 +168,7 @@ ms.locfileid: "68887748"
   
      ![rs_general_app_settings_old_integrations](../../reporting-services/report-server-sharepoint/media/rs-general-app-settings-old-integrations.gif "rs_general_app_settings_old_integrations")  
   
-4.  单击“确定”  。  
+4.  单击“确定” 。  
   
 ## <a name="see-also"></a>另请参阅  
  [报表服务器项的 SharePoint 站点和列表权限参考](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)   

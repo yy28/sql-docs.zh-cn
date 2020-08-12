@@ -1,21 +1,21 @@
 ---
 title: 扩展数据库项目部署以分析部署计划
+description: 创建 DeploymentPlanExecutor 部署参与者。 设置参与者，该参与者会记录部署数据库项目时发生的事件。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 9ead8470-93ba-44e3-8848-b59322e37621
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 5e51dddb7635ba0f50dfdd7566722b170be9f48a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 797289f29c9c0eff6a7b9d876d21f7573a546c84
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75242675"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897476"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>演练：扩展数据库项目部署以分析部署计划
 
@@ -29,7 +29,7 @@ ms.locfileid: "75242675"
   
 -   [测试部署参与者](#TestDeploymentContributor)  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
 您需要满足以下条件才能完成本演练：  
   
 -   必须已安装包含 SQL Server Data Tools (SSDT) 且支持 C# 或 VB 开发的 Visual Studio 版本。  
@@ -60,17 +60,17 @@ ms.locfileid: "75242675"
   
 2.  将文件“Class1.cs”重命名为“DeploymentUpdateReportContributor.cs”。  
   
-3.  在解决方案资源管理器中，右键单击项目节点，然后单击“添加引用”  。  
+3.  在解决方案资源管理器中，右键单击项目节点，然后单击“添加引用”。  
   
-4.  在“框架”选项卡上，选择“System.ComponentModel.Composition”  。  
+4.  在“框架”选项卡上，选择“System.ComponentModel.Composition”。  
   
-5.  添加所需的 SQL 引用：右键单击项目节点，然后单击“添加引用”  。 单击“浏览”  ，并导航到 C:\Program Files (x86)\Microsoft SQL Server\110\DAC\Bin  文件夹。 选择“Microsoft.SqlServer.Dac.dll”  、“Microsoft.SqlServer.Dac.Extensions.dll”  和“Microsoft.Data.Tools.Schema.Sql.dll”  条目，单击“添加”  ，然后单击“确定”  。  
+5.  添加所需的 SQL 引用：右键单击项目节点，然后单击“添加引用”。 单击“浏览”，并导航到 C:\Program Files (x86)\Microsoft SQL Server\110\DAC\Bin 文件夹。 选择“Microsoft.SqlServer.Dac.dll”****、“Microsoft.SqlServer.Dac.Extensions.dll”**** 和“Microsoft.Data.Tools.Schema.Sql.dll”**** 条目，单击“添加”****，然后单击“确定”****。  
   
     接下来，开始向类中添加代码。  
   
 #### <a name="to-define-the-deploymentupdatereportcontributor-class"></a>定义 DeploymentUpdateReportContributor 类  
   
-1.  在代码编辑器中，更新 DeploymentUpdateReportContributor.cs 文件以匹配以下  using 语句：  
+1.  在代码编辑器中，更新 DeploymentUpdateReportContributor.cs 文件以匹配以下 using 语句：  
   
     ```csharp  
     using System;  
@@ -522,7 +522,7 @@ ms.locfileid: "75242675"
   
 -   将更改保存到类文件。 帮助器类中引用了大量有用的类型：  
   
-    | 代码区域| 有用的类型|  
+    |代码区域|有用的类型|  
     |-----------------|--------------------|  
     |类成员|[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)、[ModelComparisonResult](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx)、[DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx)|  
     |WriteReport 方法|XmlWriter 和 XmlWriterSettings|  
@@ -534,23 +534,23 @@ ms.locfileid: "75242675"
   
 #### <a name="to-sign-and-build-the-assembly"></a>生成程序集并对其进行签名  
   
-1.  在“项目”  菜单上，单击“MyDeploymentContributor 属性”  。  
+1.  在“项目”菜单上，单击“MyDeploymentContributor 属性”。  
   
 2.  单击“签名”  选项卡。  
   
-3.  单击“对程序集签名”  。  
+3.  单击“对程序集签名” 。  
   
-4.  在“选择强名称密钥文件”  中，单击 **<New>** 。  
+4.  在“选择强名称密钥文件”中，单击 **<New>** 。  
   
-5.  在“创建强名称密钥”  对话框的“密钥文件名称”  中，键入“MyRefKey”  。  
+5.  在“创建强名称密钥”  对话框的“密钥文件名称” 中，键入“MyRefKey” 。  
   
 6.  （可选）可以为强名称密钥文件指定密码。  
   
-7.  单击“确定”。   
+7.  单击“确定”。  
   
-8.  在“文件”  菜单上，单击“全部保存”  。  
+8.  在“文件”  菜单上，单击“全部保存” 。  
   
-9. 在“生成”  菜单中，单击“生成解决方案”  。  
+9. 在“生成”菜单中，单击“生成解决方案”。  
   
 接下来，您必须安装程序集，以便在生成和部署 SQL 项目时加载该程序集。  
   
@@ -561,7 +561,7 @@ ms.locfileid: "75242675"
   
 -   接下来，您要将程序集信息复制到 Extensions 目录中。 Visual Studio 在启动后将标识 %Program Files%\Microsoft SQL Server\110\DAC\Bin\Extensions 目录和子目录中的任何扩展，并使其可供使用：  
   
--   将  MyDeploymentContributor.dll 程序集文件从输出目录复制到 %Program Files%\Microsoft SQL Server\110\DAC\Bin\Extensions 目录。 默认情况下，已编译的 .dll 文件的路径为 YourSolutionPath\YourProjectPath\bin\Debug 或 YourSolutionPath\YourProjectPath\bin\Release。  
+-   将 MyDeploymentContributor.dll 程序集文件从输出目录复制到 %Program Files%\Microsoft SQL Server\110\DAC\Bin\Extensions 目录。 默认情况下，已编译的 .dll 文件的路径为 YourSolutionPath\YourProjectPath\bin\Debug 或 YourSolutionPath\YourProjectPath\bin\Release。  
   
 ## <a name="test-your-deployment-contributor"></a><a name="TestDeploymentContributor"></a>测试部署参与者  
 若要测试部署参与者，您必须执行以下任务：  
@@ -601,7 +601,7 @@ ms.locfileid: "75242675"
     </Project>  
     ```  
   
-4.  在希望运行参与者的任何项目的 .sqlproj 文件内，通过将以下语句添加到 .sqlproj 文件（位于该文件中的 \<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" \/> 节点的后面）中来导入目标文件：  
+4.  在要运行参与者角色的任何项目的 .sqlproj 文件中，通过在 .sqlproj 文件中的 \<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" \/> 节点之后添加以下语句来导入目标文件：  
   
     ```  
     <Import Project="$(MSBuildExtensionsPath)\MyContributors\MyContributors.targets " />  

@@ -1,7 +1,7 @@
 ---
 title: 教程：使用具有安全 enclave 的 Always Encrypted 开发 .NET 应用程序 | Microsoft Docs
 ms.custom: ''
-ms.date: 10/18/2019
+ms.date: 07/09/2020
 ms.reviewer: v-kaywon
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +10,12 @@ ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: karinazhou
 ms.author: v-jizho2
-ms.openlocfilehash: 82ecd3fa04bbab0a1512ede08ebbc8bfaa3011f9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4af6f82c310393871434010480f0bb57bfca670f
+ms.sourcegitcommit: 7ce4a81c1b91239c8871c50f97ecaf387f439f6c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244054"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86217745"
 ---
 # <a name="tutorial-develop-a-net-application-using-always-encrypted-with-secure-enclaves"></a>教程：使用具有安全 enclave 的 Always Encrypted 开发 .NET 应用程序
 
@@ -24,6 +24,9 @@ ms.locfileid: "75244054"
 [!INCLUDE [appliesto-netfx-netcore-xxxx-md](../../../includes/appliesto-netfx-netcore-xxxx-md.md)]
 
 本教程介绍如何开发简单的应用程序，该应用程序可发出使用[具有安全 enclave 的 Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-enclaves.md) 的服务器端安全 enclave 的数据库查询。
+
+> [!NOTE]
+> 具有安全 Enclave 的 Always Encrypted 仅可在 Windows 上使用。
 
 ## <a name="prerequisites"></a>先决条件
 
@@ -43,13 +46,13 @@ ms.locfileid: "75244054"
 
 3. 请确保项目至少定目标到 .NET Framework 4.6 或 .NET Core 2.1。 在“解决方案资源管理器”中，右键单击项目，选择“属性”，然后设置目标框架。
 
-4. 通过转到“工具”  （主菜单）>“NuGet 包管理器”   > “包管理器控制台”  安装以下 NuGet 包。 在“包管理器控制台”中运行以下代码。
+4. 通过转到“工具”（主菜单）>“NuGet 包管理器” > “包管理器控制台”安装以下 NuGet 包。 在“包管理器控制台”中运行以下代码。
 
    ```powershell
    Install-Package Microsoft.Data.SqlClient -Version 1.1.0
    ```
 
-5. 如果使用 Azure Key Vault 来存储列主密钥，通过转到“工具”  （主菜单）>“NuGet 包管理器”   > “包管理器控制台”  安装以下 NuGet 包。 在“包管理器控制台”中运行以下代码。
+5. 如果使用 Azure Key Vault 来存储列主密钥，通过转到“工具”（主菜单）>“NuGet 包管理器” > “包管理器控制台”安装以下 NuGet 包。 在“包管理器控制台”中运行以下代码。
 
    ```powershell
    Install-Package Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider -Version 1.0.0
@@ -64,7 +67,7 @@ ms.locfileid: "75244054"
 
 ## <a name="step-2-implement-your-application-logic"></a>步骤 2：实现应用程序逻辑
 
-应用程序将连接到  [教程：通过 SSMS 开始使用具有安全 enclave 的 Always Encrypted](../../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md) 中的 ContosoHR 数据库，它运行包含“SSN”  列上 `LIKE` 谓词和“Salary”列  上范围比较的查询。
+应用程序将连接到[教程：通过 SSMS 开始使用具有安全 enclave 的 Always Encrypted](../../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md) 中的 ContosoHR 数据库，它运行包含“SSN”列上 `LIKE` 谓词和“Salary”列上范围比较的查询。
 
 1. 将 Program.cs 文件（由 Visual Studio 生成）的内容替换为以下代码。 使用你的服务器名称以及环境的 enclave 证明 URL 更新数据库连接字符串。 此外，也可以更新数据库身份验证设置。
 

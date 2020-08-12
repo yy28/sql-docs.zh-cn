@@ -1,10 +1,11 @@
 ---
 title: 安装故障转移群集前的准备工作 | Microsoft Docs
+description: 本文介绍准备安装 SQL Server 故障转移群集（包括硬件、操作系统和配置）的规划注意事项。
 ms.custom: ''
 ms.date: 08/24/2016
 ms.reviewer: ''
 ms.prod: sql
-ms.technology: install
+ms.technology: high-availability
 ms.topic: conceptual
 helpviewer_keywords:
 - clusters [SQL Server], preinstallation checklist
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5d2fe2d80b0f9d54e877d6bc1be9a05c8c34c584
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f13de472628de7f0bfea12cdac2c001682678a66
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "72517944"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900512"
 ---
 # <a name="before-installing-failover-clustering"></a>安装故障转移群集前的准备工作
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   安装 SQL Server 故障转移群集之前，必须选择运行 SQL Server 的硬件和操作系统。 还必须配置 Windows Server 故障转移群集 (WSFC)，检查网络和安全性，并了解将在故障转移群集上运行的其他软件的注意事项。  
   
  如果 Windows 群集具有本地磁盘驱动器，且同一盘符还在一个或多个群集节点上作为共享驱动器使用，则不能在该驱动器上安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 此限制适用于属于 Windows 故障转移群集实例的服务器上的 SQL Server 故障转移群集实例和单独的实例。
@@ -47,7 +48,7 @@ ms.locfileid: "72517944"
   
     -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序不再安装 .NET Framework 3.5 SP1，但是在较旧版本的 Windows 操作系统上安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时可能需要该软件。 有关详细信息，请参阅 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][发行说明](https://go.microsoft.com/fwlink/?LinkId=296445)。  
   
-    -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Update 包：** 为了避免在安装过程中由于安装 .NET Framework 4 而重新启动计算机， [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 安装程序要求在计算机上安装 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Update。  如果您正在 Windows 7 SP1 或 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] SP2 上安装 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] ，则包括此更新。 如果您在早期的 Windows 操作系统上安装，则从 [Windows Vista 和 Windows Server 2008 上的 Microsoft Update for .NET Framework 4.0](https://go.microsoft.com/fwlink/?LinkId=198093)上下载它。  
+    -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] 更新包：** 为了避免在安装过程中由于安装 .NET Framework 4 而重启计算机，[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 安装程序要求在计算机上安装 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 更新。  如果您正在 Windows 7 SP1 或 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] SP2 上安装 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] ，则包括此更新。 如果您在早期的 Windows 操作系统上安装，则从 [Windows Vista 和 Windows Server 2008 上的 Microsoft Update for .NET Framework 4.0](https://go.microsoft.com/fwlink/?LinkId=198093)上下载它。  
   
     -   .NET Framework 4：安装程序在群集化的操作系统上安装 .NET Framework 4。 为了缩短安装时间，您可以考虑在您运行安装程序之前安装 .NET Framework 4。  
   
@@ -146,7 +147,7 @@ ms.locfileid: "72517944"
   
 -   若要对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]启用 Kerberos 身份验证，请参阅 [知识库中的](https://support.microsoft.com/kb/319723) How to use Kerberos authentication in SQL Server [!INCLUDE[msCoName](../../../includes/msconame-md.md)] （如何在 SQL Server 中使用 Kerberos 身份验证）。  
 
--   SQL Server 故障转移群集实例 (FCI) 要求群集节点加入域。 不支持  使用以下配置： 
+-   SQL Server 故障转移群集实例 (FCI) 要求群集节点加入域。 不支持使用以下配置： 
     *   工作组群集上的 SQL FCI。 
     *   多域群集上的 SQL FCI。   
     *   域和工作组群集上的 SQL FCI。 
@@ -216,7 +217,7 @@ ms.locfileid: "72517944"
   
 1.  在多子网配置中，IP 地址资源依赖关系设置为 OR。 有关详细信息，请参阅[创建新的 SQL Server 故障转移群集（安装程序）](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)  
   
-2.  不支持混合的 AND-OR IP 地址依赖关系。 例如，\<IP1> AND \<IP2> OR \<IP3> 不受支持。  
+2.  不支持混合的 AND-OR IP 地址依赖关系。 例如，不支持 \<IP1> AND \<IP2> OR \<IP3>。  
   
 3.  不支持每个子网多个 IP 地址。  
   

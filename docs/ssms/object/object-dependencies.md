@@ -12,26 +12,26 @@ f1_keywords:
 ms.assetid: c63d1160-3f3d-45df-99be-6fe081125fb5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 82aa0e5ae67d3dbbf4e2a897ba5e49976cfc09a6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bdd7e624fea2f6c225c8839450e1d1d5f91a9de5
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257162"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001923"
 ---
 # <a name="object-dependencies"></a>对象依赖关系
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 一些数据库对象与其他数据库对象存在依赖关系。 例如，视图和存储过程依赖于包含视图或过程返回的数据的表是否存在。 当前对象的“对象依赖关系（‘常规’页）”  列出了该对象正常运行所需的数据库对象和依赖于所选对象的对象。 在其定义中引用了另一个对象并且该定义存储在系统目录中的对象称为“引用实体”  。 被另一对象引用的对象称为“被引用实体”  。  
   
 当前对象的“对象依赖关系（‘高级’页）”  列出了依赖于该对象的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库对象和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 对象。 这些对象可存储于不同的服务器上。  
   
 使用此对话框可在更改或删除所选对象之前了解其依赖关系。  
   
-## <a name="uielement-list"></a>UIElement 列表  
-依赖于 **所选对象> 的对象** _\<_  
+## <a name="ui-element-list"></a>UI 元素列表  
+**依赖 _\<selected object>_ 的对象**  
 单击此按钮将列出依赖于所选对象的对象，以及依赖关系跟踪所涉及的对象。  
   
-**所选对象> 依赖的对象** _\<_   
+**_\<selected object>_ 依赖的对象**   
 单击此按钮将列出所选对象所依赖的并且依赖关系跟踪涉及的对象。  
   
 **依赖项**  

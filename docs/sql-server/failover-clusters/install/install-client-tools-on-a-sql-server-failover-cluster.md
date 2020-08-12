@@ -1,23 +1,24 @@
 ---
 title: 安装客户端工具：故障转移群集
+description: 了解如何在 SQL Server 故障转移实例上安装客户端工具，例如 SQL Server Management Studio。
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.reviewer: ''
 ms.prod: sql
-ms.technology: install
+ms.technology: high-availability
 ms.topic: conceptual
 ms.assetid: 3c82d510-9798-46be-bebb-cac9bef56936
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c4918cdbb99a49bf577f9efad19ed0360c9a4911
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b9f992c50b19d8618f1eacbdbb4a441501de4a61
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75230501"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897679"
 ---
 # <a name="install-client-tools-on-a-sql-server-failover-cluster"></a>在 SQL Server 故障转移群集上安装客户端工具
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   诸如 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 的客户端工具是在同一台计算机上的所有实例间公用的共享功能。 它们与支持的、可并行安装的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本兼容。 在某一时刻，节点上只能存在客户端工具的一个版本。  
   
  如果在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 群集的第一个节点上进行安装时安装了 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 客户端工具，它们将自动添加到稍后可能使用“添加节点”功能添加到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例的任何节点。  
@@ -33,11 +34,11 @@ ms.locfileid: "75230501"
   
 1.  插入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装介质， 然后双击根安装文件夹中的 Setup.exe。 若要从网络共享进行安装，请找到共享中的根文件夹，然后双击 Setup.exe。  
   
-2.  在“安装”  页上，单击“全新” **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]独立安装或向现有安装添加功能**。 请勿单击“新建” **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]故障转移群集安装**。  
+2.  在“安装”页上，单击“全新” **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]独立安装或向现有安装添加功能**。 请勿单击“新建” **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]故障转移群集安装**。  
   
 3.  系统配置检查器将验证计算机的系统状态，然后安装程序继续运行。  
   
-4.  在“安装类型”  页上，单击“执行全新安装” **[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]** 。  
+4.  在“安装类型”页上，单击“执行全新安装” **[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]** 。  
   
 5.  在 **“功能选择”** 页上，选择需要安装的工具，然后按照安装过程的剩余步骤操作。  
   
@@ -45,7 +46,7 @@ ms.locfileid: "75230501"
   
 1.  若要安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 客户端工具和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 联机丛书，请运行以下命令：Setup.exe/q/Action=Install /Features=Tools  
   
-2.  若要只安装基本 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理工具，请运行以下命令：Setup.exe/q/Action=Install Features=SSMS。 这将为 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 、 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]、sqlcmd 实用工具以及 [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)]Powershell 提供程序安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持。  
+2.  若要只安装基本 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理工具，请运行以下命令：Setup.exe/q/Action=Install Features=SSMS。 这将为 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]、[!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)]、sqlcmd 实用工具以及 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 提供程序安装 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 支持。  
   
 3.  若要安装完整的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理工具，请运行以下命令：Setup.exe/q/Action=Install /Features=ADV_SSMS。 有关功能的参数值的详细信息，请参阅 [从命令提示符安装 SQL Server 2016](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)。  
   

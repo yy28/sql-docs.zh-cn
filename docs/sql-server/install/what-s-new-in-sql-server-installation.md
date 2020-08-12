@@ -1,5 +1,6 @@
 ---
 title: SQL Server 安装中的新增功能 | Microsoft Docs
+description: 本文总结了对 SQL Server 安装过程的一些更改，包括 SysPrep 支持和从 SQL Server 2005 升级。
 ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql
@@ -7,17 +8,17 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 9b136b27-4779-4284-904f-b5a1c12bdcc0
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: c42d536f427bba1e0b1642bcc5068bf3cd2d04f0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dcadc3152a98ad1477d702bef8989d9a5e33543f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68045649"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899618"
 ---
 # <a name="what39s-new-in-sql-server-installation"></a>SQL Server 安装中的新增功能
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
  仅 x64 处理器支持安装。 有关详细信息，请参阅[安装 SQL Server 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。
   

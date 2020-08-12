@@ -1,6 +1,6 @@
 ---
-title: 适用于 SQL Server 的 OLE DB 驱动程序的系统要求 | Microsoft Docs
-description: 适用于 SQL Server 的 OLE DB 驱动程序的要求
+title: 适用于 SQL Server 的 OLE DB 驱动程序的系统要求
+description: 列出 OLE DB Driver for SQL Server 的系统需求。
 ms.custom: ''
 ms.date: 03/18/2020
 ms.prod: sql
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - MSOLEDBSQL, system requirements
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 584b5ebddf4f4f48c7fba2ed2c95002c43bfb6e7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9c9bbda0480d4d1e85da3962392fe14a241e4840
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79526832"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393015"
 ---
 # <a name="system-requirements-for-ole-db-driver-for-sql-server"></a>适用于 SQL Server 的 OLE DB 驱动程序的系统要求
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 

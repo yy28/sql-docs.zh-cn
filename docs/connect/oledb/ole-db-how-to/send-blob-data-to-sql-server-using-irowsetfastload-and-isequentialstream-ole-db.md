@@ -2,7 +2,7 @@
 title: 使用 IROWSETFASTLOAD 和 ISEQUENTIALSTREAM 将 BLOB 数据发送到 SQL Server | Microsoft Docs
 description: 使用 IROWSETFASTLOAD 和 ISEQUENTIALSTREAM 将 BLOB 数据发送到 SQL Server
 ms.custom: ''
-ms.date: 06/14/2018
+ms.date: 05/25/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -10,31 +10,33 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 18dc87158bc1a6086cf8406423c123b0789b0f08
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2add5bbc762709122a6cf7c7292fd139c42cd39f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015537"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001487"
 ---
 # <a name="send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db"></a>使用 IROWSETFASTLOAD 和 ISEQUENTIALSTREAM 将 BLOB 数据发送到 SQL SERVER (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   此示例说明如何使用 IRowsetFastLoad 以流的形式发送每行的变长 BLOB 数据。  
   
- 默认情况下，此示例说明如何使用 IRowsetFastLoad 通过内联绑定发送每行的变长 BLOB 数据。 内联 BLOB 数据必须能够容纳于可用内存中。 当 BLOB 数据小于几兆字节时，此方法的性能最佳，因为没有额外的流开销。 对于大于几兆字节的数据，尤其是对于不以块的形式提供的数据，以流的形式发送数据具有更佳的性能。  
+ 默认情况下，此示例说明如何使用 IRowsetFastLoad 通过内联绑定发送每行的变长 BLOB 数据。 内联 BLOB 数据必须能够容纳于可用内存中。 当 BLOB 数据小于几兆字节时，此方法的性能最佳，因为没有额外的流开销。 对于大于几兆字节的数据，尤其是对于不以块的形式提供的数据，流式传输性能更佳。  
   
- 在源代码中，当您取消注释 #define USE_ISEQSTREAM 时，示例将使用 ISequentialStream。 流实现在示例中定义，只需更改 MAX_BLOB 即可发送任意大小的 BLOB 数据。 流数据不必容纳于内存中或以一个块的形式提供。 可以使用 IRowsetFastLoad::InsertRow 来调用此访问接口。 使用 IRowsetFastLoad::InsertRow 将一个指针连同可从流中读取的数据量传递到数据缓冲区（rgBinding.obValue 偏移量）中的流实现。 一些访问接口可能不必知道绑定时的数据长度。 在这种情况下，可以从绑定中忽略此长度。  
+ 在源代码中，当取消注释 `#define USE_ISEQSTREAM` 时，示例将使用 ISequentialStream。 流实现在示例中定义，只需更改 MAX_BLOB 即可发送任意大小的 BLOB 数据。 流数据不必容纳于内存中或以一个块的形式提供。 可以使用 IRowsetFastLoad::InsertRow 来调用此访问接口。 使用 IRowsetFastLoad::InsertRow 将一个指针连同可从流中读取的数据量传递到数据缓冲区（rgBinding.obValue 偏移量）中的流实现。 一些访问接口可能不必知道绑定时的数据长度。 在这种情况下，可以从绑定中忽略此长度。  
   
- 此示例不使用访问接口的流接口将数据写入访问接口。 而是将一个指针传递到访问接口将用来读取数据的流对象。 通常，Microsoft 提供程序（SQLOLEDB、SQLNCLI 和 MSOLEDBSQL）将从对象中读取数据（1024 字节为一个块），直到所有数据得到处理。 SQLOLEDB、SQLNCLI 和 MSOLEDBSQL 都没有完整的实现来允许使用者将数据写入提供程序的流对象。 只有零长度的数据可以通过访问接口的流对象发送。  
+ 此示例不使用提供程序的流接口将数据写入提供程序。 而是将一个指针传递到访问接口将用来读取数据的流对象。 通常，Microsoft 提供程序（SQLOLEDB、SQLNCLI 和 MSOLEDBSQL）将读取数据（1024 字节为一个块）。 提供程序从对象中读取数据，直到所有数据得到处理。 SQLOLEDB、SQLNCLI 和 MSOLEDBSQL 都没有完整的实现来允许使用者将数据写入提供程序的流对象。 只有零长度的数据可以通过访问接口的流对象发送。  
   
- 通过将一个参数绑定为 DBTYPE_IUNKNOWN，可以将使用者实现的 ISequentialStream 对象与行集数据（IRowsetChange::InsertRow、IRowsetChange::SetData）以及参数一起使用。  
+ 可以将使用者实现的 ISequentialStream 对象与行集数据（IRowsetChange::InsertRow、IRowsetChange::SetData）一起使用。 此外，还可以将该对象与参数一起使用，即与参数一起绑定为 DBTYPE_IUNKNOWN。  
   
- 因为 DBTYPE_IUNKNOWN 在绑定中指定为数据类型，所以它必须与列或目标参数的类型匹配。 当通过 ISequentialStream 从行集接口发送数据时，无法进行转换。 对于参数，应避免使用 ICommandWithParameters::SetParameterInfo，而需要指定一个不同的类型来强制转换；这要求访问接口在本地缓存所有 BLOB 数据，以便在发送到 SQL Server 之前对其进行转换。 在本地缓存并转换大型 BLOB 不能提供良好的性能。  
-  
- 有关详细信息，请参阅 [BLOB 对象和 OLE 对象](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)。  
+ 因为 DBTYPE_IUNKNOWN 在绑定中指定为数据类型，所以它必须与列或目标参数的类型匹配。 当通过 ISequentialStream 从行集接口 <a href="#conversion_note"><sup>1</sup></a> 发送数据时，无法进行转换。 对于参数，应避免使用 ICommandWithParameters::SetParameterInfo，并指定其他类型来强制转换。 这样做将要求提供程序在本地缓存所有 BLOB 数据，以便在发送到 SQL Server 之前进行转换。 在本地缓存并转换大型 BLOB 不能提供良好的性能。  
+
+ 有关详细信息，请参阅 [BLOB 对象和 OLE 对象](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)。
+
+ <b id="conversion_note">[1]:</b>虽然无法进行转换，但如果服务器不支持 UTF-8，则仍然可以在 UTF-8 和数据库排序规则代码页之间进行转换。 有关详细信息，请参阅 [OLE DB Driver for SQL Server 中的 UTF-8 支持](../features/utf-8-support-in-oledb-driver-for-sql-server.md)。
   
 > [!IMPORTANT]  
 >  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
@@ -42,16 +44,16 @@ ms.locfileid: "68015537"
 ## <a name="example"></a>示例  
  执行第一个 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 代码列表，以创建该应用程序要使用的表。  
   
- 使用 ole32.lib 和 oleaut32.lib 编译并执行以下 C++ 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，请将连接字符串从 L"(local)" 更改为 L"(local)\\\name"，其中 name 是命名实例。 默认情况下，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保 INCLUDE 环境变量包括含有 msoledbsql.h 的目录。  
+ 使用 ole32.lib 和 oleaut32.lib 编译并执行以下 C++ 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。 要连接到命名实例，请将连接字符串从 L"(local)" 更改为 L"(local)\\\name"，其中 name 是命名实例。 默认情况下，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保 INCLUDE 环境变量包括含有 msoledbsql.h 的目录。  
   
  执行第三个 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 代码列表，以删除该应用程序使用的表。  
   
-```  
+```sql
 use master  
 create table fltest(col1 int, col2 int, col3 image)  
 ```  
   
-```  
+```cpp
 // compile with: ole32.lib oleaut32.lib  
 #include <windows.h>  
   
@@ -479,7 +481,7 @@ void wmain() {
 }  
 ```  
   
-```  
+```sql
 use master  
 drop table fltest  
 ```  

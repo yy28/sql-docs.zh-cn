@@ -1,5 +1,6 @@
 ---
 title: 配置 SQL Server 工具使用情况和诊断数据收集 (CEIP) | Microsoft Docs
+description: 了解 CEIP 从用户处收集的用于改善产品的信息。 查看如何在 SQL Server Data Tools (SSDT) 中选择加入或退出该程序。
 ms.custom: ''
 ms.date: 10/21/2016
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: baf3a205-a6bb-4564-8b64-3a0475bb9273
 author: stevestein
 ms.author: sstein
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 556d60a4c7f2cc8003f6b9a29fa20dad8c5b72ef
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c93a4023ebcdb9716d7e7790ea97c8df186081f9
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68091816"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000423"
 ---
 # <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-tools-ceip"></a>配置 SQL Server 工具使用情况和诊断数据收集 (CEIP)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 了解客户体验改善计划 (CEIP) 如何帮助 Microsoft 确定改善软件的方法。  可以配置工具以随时选择加入或退出。  
   
@@ -42,11 +43,11 @@ ms.locfileid: "68091816"
   
 1.  启动 Visual Studio。  
   
-2.  在“帮助”菜单中，选择“发送反馈”   > “设置”  。  
+2.  在“帮助”菜单中，选择“发送反馈” > “设置”。  
   
-3.  若要禁用 CEIP，请单击“否，我不想参加”  ，然后单击“确定”  。  
+3.  若要禁用 CEIP，请单击“否，我不想参加”，然后单击“确定”。  
   
-     若要启用 CEIP，请单击“是，我愿意参加”  ，然后单击“确定”  。  
+     若要启用 CEIP，请单击“是，我愿意参加”，然后单击“确定”。  
   
 
   
@@ -71,7 +72,7 @@ ms.locfileid: "68091816"
 
   
 > [!CAUTION]  
->  错误编辑注册表可能会严重损坏您的系统。 更改注册表之前，应当备份计算机中的所有重要数据。 如果在应用手动更改之后遇到问题，也可以使用“最近一次的正确配置”启动选项。  
+>  不正确地编辑注册表可能会对系统造成严重损坏。 在更改注册表之前，应备份计算机上任何有价值的数据。 如果在应用手动更改之后遇到问题，也可以使用“最近一次的正确配置”启动选项。  
   
  有关 CEIP 收集、处理或传送的信息的详细信息，请参阅[隐私声明](https://go.microsoft.com/fwlink/?LinkID=868444)。  
  
@@ -86,11 +87,11 @@ ms.locfileid: "68091816"
   
 1.  启动 Visual Studio。  
   
-2.  在“帮助”菜单中，选择“发送反馈”   > “设置”  。  
+2.  在“帮助”菜单中，选择“发送反馈” > “设置”。  
   
-3.  若要禁用 CEIP，请单击“否，我不想参加”  ，然后单击“确定”  。  
+3.  若要禁用 CEIP，请单击“否，我不想参加”，然后单击“确定”。  
   
-     若要启用 CEIP，请单击“是，我愿意参加”  ，然后单击“确定”  。  
+     若要启用 CEIP，请单击“是，我愿意参加”，然后单击“确定”。  
   
 
   
@@ -113,7 +114,7 @@ ms.locfileid: "68091816"
 -   1 表示选择加入  
   
 > [!CAUTION]  
->  错误编辑注册表可能会严重损坏您的系统。 更改注册表之前，应当备份计算机中的所有重要数据。 如果在应用手动更改之后遇到问题，也可以使用“最近一次的正确配置”启动选项。  
+>  不正确地编辑注册表可能会对系统造成严重损坏。 在更改注册表之前，应备份计算机上任何有价值的数据。 如果在应用手动更改之后遇到问题，也可以使用“最近一次的正确配置”启动选项。  
   
  有关 CEIP 收集、处理或传送的信息的详细信息，请参阅[隐私声明](https://go.microsoft.com/fwlink/?LinkID=868444)。  
   
@@ -124,13 +125,13 @@ ms.locfileid: "68091816"
   
 1.  启动工具并打开 Analysis Services 或 Integration Services 的新的或现有项目。  
   
-2.  从“帮助”菜单中，选择“Microsoft SQL Server 客户反馈选项”  。  
+2.  从“帮助”菜单中，选择“Microsoft SQL Server 客户反馈选项” 。  
   
-3.  要关闭 CEIP，单击“否，我不想参加”  。  
+3.  要关闭 CEIP，单击“否，我不想参加” 。  
   
-     要启用 CEIP，请单击“是，我愿意参加”  。  
+     要启用 CEIP，请单击“是，我愿意参加” 。  
   
-4.  单击“确定”。   
+4.  单击“确定”。  
   
  **使用基于注册表的策略或组策略**  
   

@@ -1,10 +1,11 @@
 ---
 title: 重命名故障转移群集实例
+description: 本文介绍如何重命名故障转移群集中的 SQL Server 实例，这与重命名独立实例不同。
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: install
+ms.technology: high-availability
 ms.topic: conceptual
 helpviewer_keywords:
 - clusters [SQL Server], virtual servers
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: af1ec295ef8567496da84819532342164cb269cb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ca8faa59c304f145eb2ac1dc46bab46d368d163b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75230719"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897656"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>重命名 SQL Server 故障转移群集实例
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例包括在故障转移群集中，则重命名虚拟服务器的过程不同于重命名独立实例的过程。 有关详细信息，请参阅 [重命名承载 SQL Server 独立实例的计算机](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)。  
   
  虚拟服务器的名称始终与 SQL 网络名称（SQL 虚拟服务器的网络名称）相同。 尽管您可以更改虚拟服务器的名称，但不能更改实例名。 例如，您可以将名为 VS1\instance1 的虚拟服务器更改为其他名称（例如 SQL35\instance1），但是名称的实例部分 (instance1) 将保持不变。  
@@ -63,7 +64,7 @@ ms.locfileid: "75230719"
 ## <a name="additional-considerations-after-the-renaming-operation"></a>在重命名操作之后的其他注意事项  
  在重命名故障转移群集的网络名称后，需要按照下面的说明进行验证和操作，使 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理和 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]在所有情况下都正常工作。  
   
- **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理服务：** 验证和执行以下针对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理服务的附加操作：  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理服务：验证和执行以下针对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理服务的附加操作：  
   
 -   如果 SQL 代理配置为事件转发，请修复注册表设置。 有关详细信息，请参阅[指定事件转发服务器 (SQL Server Management Studio)](https://msdn.microsoft.com/library/81dfcbe4-3000-4e77-99de-bf85fef63a12)。  
   

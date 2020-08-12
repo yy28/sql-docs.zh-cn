@@ -1,5 +1,6 @@
 ---
 title: 计划 SQL Server 安装 | Microsoft Docs
+description: 可参考本文，规划 SQL Server 的安装。 本文提供了 SQL Server 安装所需资源的链接。
 ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql
@@ -9,17 +10,17 @@ ms.topic: quickstart
 helpviewer_keywords:
 - installing SQL Server, planning
 ms.assetid: b1d56f2f-603f-48f2-b902-c715f14a6db9
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 56adbb10af74ef8e0e71012378b4aa13a2d818d2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ce94f99ac38a6d87dfc39a9ba01ad672f1cd70a0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79428178"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902304"
 ---
 # <a name="planning-a-sql-server-installation"></a>计划 SQL Server 安装
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   若要安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请按下列步骤操作：  
   
@@ -40,7 +41,7 @@ ms.locfileid: "79428178"
  [SQL Server 安装中的新增功能](../../sql-server/install/what-s-new-in-sql-server-installation.md)  
  本文介绍有关这一版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中新增或改进的安装功能的详细信息。  
   
- 安装 [SQL Server 2016 和 2017](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)、[SQL Server 2019](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) 或 [SQL Server on Linux](../../linux/sql-server-linux-setup.md) 的硬件和软件要求。本文列出了安装和运行 SQL Server 实例的最低硬件和软件要求。 。  
+ 安装 [SQL Server 2016 和 2017](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)、[SQL Server 2019](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) 或 [SQL Server on Linux](../../linux/sql-server-linux-setup.md) 的硬件和软件要求。本文列出了安装和运行 SQL Server 实例的最低硬件和软件要求。 .  
   
  [安装 SQL Server 的安全注意事项](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
  本文介绍安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 前和安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 后应考虑的一些最佳安全做法。  

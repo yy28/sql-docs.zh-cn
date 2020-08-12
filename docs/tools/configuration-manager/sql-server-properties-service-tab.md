@@ -1,5 +1,6 @@
 ---
 title: SQL Server 属性（“服务”选项卡）
+description: 了解“MSSQLSERVER 属性”对话框中“服务”选项卡上的选项，例如二进制文件路径、主机名以及启动模式。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: e4ae0c6b-6fd8-4325-b54e-1758fc659958
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b87f54bcfc50249cef1810a728eaa796e7ee3b38
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7fb389b6fd903393539bdffffc3bf0bad3cd27d0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306798"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898962"
 ---
 # <a name="sql-server-properties-service-tab"></a>SQL Server 属性（“服务”选项卡）
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   使用“MSSQLSERVER 属性”对话框上的“服务”选项卡查看或指定下列选项。  
   
 ## <a name="options"></a>选项  
@@ -51,9 +52,9 @@ ms.locfileid: "75306798"
   
 -   自动：计算机启动时，此服务将尝试启动。  
   
--   已禁用：此服务无法启动。  
+-   禁用：此服务无法启动。  
   
  **State**  
- 指示此服务是正在运行、已停止还是已禁用。 “...  ”指明状态更改是挂起的。  
+ 指示此服务是正在运行、已停止还是已禁用。 “...”指明状态更改是挂起的。  
   
   

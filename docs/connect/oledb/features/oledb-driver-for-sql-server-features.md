@@ -14,15 +14,15 @@ helpviewer_keywords:
 - data access [OLE DB Driver for SQL Server], features
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 46f7de1e57686a0f54368407580d90236152d147
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3cb73bb9ea3685793de692ae9cff1508e8a7656c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67989055"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006908"
 ---
 # <a name="ole-db-driver-for-sql-server-features"></a>适用于 SQL Server 的 OLE DB 驱动程序功能
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -100,6 +100,9 @@ ms.locfileid: "67989055"
   
  [适用于 SQL Server 的 OLE DB 驱动程序对 LocalDB 的支持](../../oledb/features/oledb-driver-for-sql-server-support-for-localdb.md)  
  讨论 OLE DB Driver for SQL Server 对 LocalDB 功能的支持。  
+  
+ [使用透明网络 IP 解析](../../oledb/features/using-transparent-network-ip-resolution.md)  
+ 讨论 OLE DB Driver for SQL Server 如何在故障转移群集中支持透明网络 IP 解析。  
   
 ## <a name="see-also"></a>另请参阅  
  [适用于 SQL Server 的 OLE DB 驱动程序](../../oledb/oledb-driver-for-sql-server.md)      

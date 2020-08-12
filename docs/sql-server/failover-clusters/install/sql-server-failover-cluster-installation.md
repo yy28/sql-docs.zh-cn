@@ -1,23 +1,24 @@
 ---
 title: 安装故障转移群集实例
+description: 了解如何安装 SQL Server 故障转移群集。 运行 SQL Server 安装程序以创建并配置故障转移群集实例。
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: install
+ms.technology: high-availability
 ms.topic: conceptual
 ms.assetid: c0e75a7c-85c5-423c-a218-77247bf071aa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c3de22853ccef8bd38c338b05043da7061ffeed0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 574f8f557eab10fa43be721f9b73bfc446b04687
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75230621"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897661"
 ---
 # <a name="sql-server-failover-cluster-installation"></a>SQL Server 故障转移群集安装
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   若要安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集，您必须通过运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序来创建并配置一个故障转移群集实例。  
   
 ## <a name="installing-a-failover-cluster"></a>安装故障转移群集  
@@ -39,9 +40,9 @@ ms.locfileid: "75230621"
   
     -   故障转移群集中的所有节点都必须属于同一平台（可以是 32 位或 64 位平台），并且必须运行相同版本的操作系统。 而且，64 位 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本必须安装在运行 64 位版本的 Windows 操作系统的 64 位硬件上。 此版本中不对故障转移群集提供 WOW64 支持。  
   
-3.  为每个故障转移群集实例指定多个 IP 地址。 您可以为每个子网指定多个 IP 地址。 如果多个 IP 地址在同一子网上， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序会将依赖关系设置为 AND。 如果您正在创建跨多个子网的群集节点，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序将依赖关系设置为 OR。  
+3.  为每个故障转移群集实例指定多个 IP 地址。 可以为每个子网指定多个 IP 地址。 如果多个 IP 地址在同一子网上，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序会将依赖关系设置为 AND。 如果您正在创建跨多个子网的群集节点，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序将依赖关系设置为 OR。  
 
-4.  SQL Server 故障转移群集实例 (FCI) 要求群集节点加入域。 不支持  使用以下配置：
+4.  SQL Server 故障转移群集实例 (FCI) 要求群集节点加入域。 不支持使用以下配置：
     - 工作组群集上的 SQL FCI。 
     - 多域群集上的 SQL FCI。   
     - 域和工作组群集上的 SQL FCI。 

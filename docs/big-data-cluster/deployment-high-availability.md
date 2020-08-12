@@ -9,18 +9,18 @@ ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b614373ee8517c0b0aa369c9793dec323a137044
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 08574ef070803a8612d12e595169bbc00b99b139
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286041"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279456"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>部署高可用性 SQL Server 大数据群集
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-由于 SQL Server 大数据群集是作为容器化应用程序位于 Kubernetes 上，并且使用有状态集和持久存储等功能，因此，此基础结构具有内置的运行状况监视、故障检测和故障转移机制，群集组件可利用这些机制来维护服务运行状况。 为了提高可靠性，还可以将 SQL Server 主实例或 HDFS 名称节点和 Spark 共享服务配置为在高可用性配置中与其他副本一起部署。 监视、故障检测和自动故障转移由大数据群集管理服务（即控制服务）进行管理。 此服务无需用户干预即可执行各种操作：从设置可用性组、配置数据库镜像终结点到将数据库添加到可用性组或故障转移和升级协调等等。 
+由于 SQL Server 大数据群集是作为容器化应用程序位于 Kubernetes 上，并且使用有状态集和持久存储等功能，因此，此基础结构具有内置的运行状况监视、故障检测和故障转移机制，群集组件可利用这些机制来维护服务运行状况。 为了提高可靠性，还可以将 SQL Server 主实例或 HDFS 名称节点和 Spark 共享服务配置为在高可用性配置中与其他副本一起部署。 监视、故障检测和自动故障转移由大数据群集管理服务（即控制服务）进行管理。 无需用户干预即可提供此服务：从设置可用性组、配置数据库镜像终结点到将数据库添加到可用性组或故障转移和升级协调等等。 
 
 下图表示在 SQL Server 大数据群集中部署可用性组的方式：
 

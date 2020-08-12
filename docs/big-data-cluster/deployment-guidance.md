@@ -5,53 +5,51 @@ description: 了解如何在 Kubernetes 上部署 SQL Server 大数据群集。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 828ad42bd6ecdc31d6e1c99a489fb4cbe8548d0e
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.openlocfilehash: 4bca65dbae188c02ddc85bc385f6ada912111efb
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80531085"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159365"
 ---
 # <a name="how-to-deploy-big-data-clusters-2019-on-kubernetes"></a>如何在 Kubernetes 上部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 SQL Server 大数据群集在 Kubernetes 群集上部署为 docker 容器。 下面概述了设置和配置步骤：
 
-- 在单个 VM、VM 群集或 Azure Kubernetes 服务 (AKS) 中设置 Kubernetes 群集。
+- 在 Azure Kubernetes 服务 (AKS)、Red Hat OpenShift 或 Azure Red Hat OpenShift (ARO) 中的单个 VM、VM 群集上设置 Kubernetes 群集。
 - 在自己的客户端计算机上安装群集配置工具 `azdata`。
 - 在 Kubernetes 群集中部署 SQL Server 大数据群集。
 
-## <a name="install-sql-server-2019-big-data-tools"></a>安装 SQL Server 2019 大数据工具
+## <a name="supported-platforms"></a>支持的平台
 
-请先[安装大数据工具](deploy-big-data-tools.md)，然后再部署 SQL Server 2019 大数据群集：
+有关经过验证可用于部署 SQL Server 大数据群集的各种 Kubernetes 平台的完整列表，请参阅[受支持的平台](release-notes-big-data-cluster.md#supported-platforms)。
 
-- `azdata`
-- `kubectl`
-- Azure Data Studio
-- Azure Data Studio 的[数据虚拟化扩展](../azure-data-studio/data-virtualization-extension.md)
+### <a name="sql-server-editions"></a>SQL Server 版本
 
-## <a name="kubernetes-prerequisites"></a><a id="prereqs"></a> Kubernetes 必备条件
+|版本|说明|
+|---------|---------|
+|Enterprise<br/>Standard<br/>开发人员| 大数据群集版本由 SQL Server 主实例的版本确定。 在部署时会默认部署开发人员版。 可在部署后更改版本。 请参阅[配置 SQL Server 主实例](../big-data-cluster/configure-sql-server-master-instance.md)。 |
 
-对于服务器和客户端 (kubectl)，[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 需要的最低 Kubernetes 版本至少为 v1.13。
-
-> [!NOTE]
-> 请注意，客户端和服务器 Kubernetes 版本应在 +1 或 -1 次要版本之内。 有关详细信息，请参阅 [Kubernetes 发行说明和版本偏差 SKU 策略](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew)。
+## <a name="kubernetes"></a><a id="prereqs"></a> Kubernetes
 
 ### <a name="kubernetes-cluster-setup"></a><a id="kubernetes"></a> Kubernetes 群集设置
 
 如果已拥有满足上述必备条件的 Kubernetes 群集，则可以直接跳至[部署步骤](#deploy)。 本节假定你对 Kubernetes 概念有基本的了解。  有关 Kubernetes 的详细信息，请参阅 [Kubernetes 文档](https://kubernetes.io/docs/home)。
 
-可以选择通过以下三种方式中的任意一种部署 Kubernetes：
+可以选择通过以下方式部署 Kubernetes：
 
 | 部署 Kubernetes 的位置： | 说明 | 链接 |
 |---|---|---|
 | **Azure Kubernetes 服务 (AKS)** | Azure 中的托管 Kubernetes 容器服务。 | [说明](deploy-on-aks.md) |
-| 一台或多台计算机 (`kubeadm`)  | 在使用 `kubeadm` 的物理计算机或虚拟机上部署的 Kubernetes 群集 | [说明](deploy-with-kubeadm.md) |
+| 一台或多台计算机 (`kubeadm`) | 在使用 `kubeadm` 的物理计算机或虚拟机上部署的 Kubernetes 群集 | [说明](deploy-with-kubeadm.md) |
+|**Azure Red Hat OpenShift** | 在 Azure 中运行的 OpenShift 托管产品/服务。 | [说明](deploy-openshift.md)|
+|**Red Hat OpenShift**|混合云企业 Kubernetes 应用程序平台。| [说明](deploy-openshift.md)|
 
 > [!TIP]
 > 还可以将 AKS 和大数据群集的部署脚本编写成一个步骤。 有关详细信息，请参阅 [python 脚本](quickstart-big-data-cluster-deploy.md)或 Azure Data Studio [笔记本](notebooks-deploy.md)，了解如何实现此操作。
@@ -75,6 +73,16 @@ kubectl config view
 
 如果在 AKS 中进行部署，则无需进行任何存储设置。 AKS 通过动态预配提供内置的存储类。 可以在部署配置文件中自定义存储类（`default` 或 `managed-premium`）。 内置配置文件使用 `default` 存储类。 如果要在使用 `kubeadm` 部署的 Kubernetes 群集上进行部署，则需要确保有足够的存储来存储所需规模的群集，并对其进行配置以供使用。 如果想要自定义存储的使用方式，应该在继续操作之前执行此操作。 请参阅 [Kubernetes 上的 SQL Server 大数据群集的数据暂留](concept-data-persistence.md)。
 
+## <a name="install-sql-server-2019-big-data-tools"></a>安装 SQL Server 2019 大数据工具
+
+请先[安装大数据工具](deploy-big-data-tools.md)，然后再部署 SQL Server 2019 大数据群集：
+
+- `azdata`
+- `kubectl`
+- Azure Data Studio
+- Azure Data Studio 的[数据虚拟化扩展](../azure-data-studio/data-virtualization-extension.md)
+
+
 ## <a name="deployment-overview"></a><a id="deploy"></a> 部署概述
 
 大多数大数据群集设置都在 JSON 部署配置文件中定义。 在设置期间可以为使用 `kubeadm` 创建的 AKS 和 Kubernetes 群集使用默认部署配置文件，也可以自定义自己的部署配置文件。 出于安全原因，身份验证设置通过环境变量传递。
@@ -94,23 +102,18 @@ JSON 配置文件中定义了大数据群集部署选项。 可以从 `azdata` �
 azdata bdc config list -o table 
 ```
 
-例如，对于 SQL Server 2019 RTM 服务更新 (GDR1) 版本，上述命令返回：
-
-```
-Result
-----------------
-aks-dev-test
-aks-dev-test-ha
-kubeadm-dev-test
-kubeadm-prod
-```
+从 SQL Server 2019 CU5 开始，以下模板可用： 
 
 | 部署配置文件 | Kubernetes 环境 |
 |---|---|
 | `aks-dev-test` | 在 Azure Kubernetes 服务 (AKS) 上部署 SQL Server 大数据群集|
 | `aks-dev-test-ha` | 在 Azure Kubernetes 服务 (AKS) 上部署 SQL Server 大数据群集。 配置任务关键型服务（如 SQL Server 主实例和 HDFS 名称节点）以实现高可用性。|
+| `aro-dev-test`|在 Azure Red Hat OpenShift 上部署 SQL Server 大数据群集，以进行开发和测试。 <br/><br/>在 SQL Server 2019 CU5 中引入。|
+| `aro-dev-test-ha`|在 Red Hat OpenShift 群集上部署具有高可用性的 SQL Server 大数据群集，以进行开发和测试。 <br/><br/>在 SQL Server 2019 CU5 中引入。|
 | `kubeadm-dev-test` | 使用单个或多个物理计算机或虚拟机在使用 kubeadm 创建的 Kubernetes 群集上部署 SQL Server 大数据群集。|
 | `kubeadm-prod`| 使用单个或多个物理计算机或虚拟机在使用 kubeadm 创建的 Kubernetes 群集上部署 SQL Server 大数据群集。 使用此模板使大数据群集服务与 Active Directory 集成。 任务关键型服务（如 SQL Server 主实例和 HDFS 名称节点）通过高可用配置部署。  |
+| `openshift-dev-test`|在 Red Hat OpenShift 群集上部署 SQL Server 大数据群集，以进行开发和测试。 <br/><br/>在 SQL Server 2019 CU5 中引入。|
+| `openshift-prod`|在 Red Hat OpenShift 群集上部署具有高可用性的 SQL Server 大数据群集。 <br/><br/>在 SQL Server 2019 CU5 中引入。|
 
 可以通过运行 `azdata bdc create` 部署大数据群集。 此操作会提示你选择其中某个默认配置，然后指导你完成部署。
 
@@ -127,7 +130,7 @@ azdata bdc create --accept-eula=yes
 
 ## <a name="custom-configurations"></a><a id="customconfig"></a> 自定义配置
 
-还可以自定义部署以适应计划运行的工作负载。 请注意，不能在部署后更改大数据群集服务的规模（副本数）或存储设置，因此，必须仔细规划部署配置以避免容量问题。 要自定义部署，请按以下步骤操作：
+还可以自定义部署以适应计划运行的工作负载。 不能在部署后更改大数据群集服务的规模（副本数）或存储设置，因此，必须仔细规划部署配置以避免容量问题。 要自定义部署，请按以下步骤操作：
 
 1. 首先从与 Kubernetes 环境匹配的标准部署配置文件开始。 可以使用 `azdata bdc config list` 命令来列出它们：
 
@@ -151,7 +154,7 @@ azdata bdc create --accept-eula=yes
    ```
 
    > [!TIP]
-   > 也可以通过在 azdata create bdc 命令中使用 --name 参数，在部署时传入群集名称   。 命令中的参数优先于配置文件中的值。
+   > 也可以通过在 azdata create bdc 命令中使用 --name 参数，在部署时传入群集名称 。 命令中的参数优先于配置文件中的值。
    >
    > 用于查找 JSON 路径的实用工具是 [JSONPath Online Evaluator](https://jsonpath.com/)。
    >
@@ -171,8 +174,8 @@ azdata bdc create --accept-eula=yes
 
 | 环境变量 | 要求 |说明 |
 |---|---|---|
-| `AZDATA_USERNAME` | 必选 |SQL Server 大数据群集管理员的用户名。 具有相同名称的 sysadmin 登录名在 SQL Server 主实例中创建。 最佳安全做法是禁用 `sa` 帐户。 |
-| `AZDATA_PASSWORD` | 必选 |上面创建的用户帐户的密码。 `root` 用户使用相同的密码，用于保护 Knox 网关和 HDFS。 |
+| `AZDATA_USERNAME` | 必须 |SQL Server 大数据群集管理员的用户名。 具有相同名称的 sysadmin 登录名在 SQL Server 主实例中创建。 最佳安全做法是禁用 `sa` 帐户。 <br/><br/>[!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]|
+| `AZDATA_PASSWORD` | 必选 |上面创建的用户帐户的密码。 在 SQL Server 2019 CU5 之前部署的群集上，`root` 用户使用相同的密码来保护 Knox 网关和 HDFS。 |
 | `ACCEPT_EULA`| 首次使用 `azdata` 时为必需项| 设置为“是”。 设置为环境变量时，它将 EULA 同时应用于 SQL Server 和 `azdata`。 如果未设置为环境变量，则可以在第一次使用 `azdata` 命令时将 `--accept-eula=yes` 包含在内。|
 | `DOCKER_USERNAME` | 可选 | 当容器映像存储在专用存储库中时，用于访问容器映像的用户名。 有关如何使用专用 Docker 存储库部署大数据群集的更多详细信息，请参阅[脱机部署](deploy-offline.md)主题。|
 | `DOCKER_PASSWORD` | 可选 |用于访问上述专用存储库的密码。 |
@@ -193,9 +196,9 @@ SET AZDATA_PASSWORD=<password>
 ```
 
 > [!NOTE]
-> 必须将 `root` 用户用于使用上述密码的 Knox 网关。 `root` 是在此基本身份验证（用户名/密码）中唯一受支持的用户。
+> 在 SQL Server 2019 CU5 之前部署的群集上，必须以 `root` 用户身份使用上述密码来保护 Knox 网关。 `root` 是在此基本身份验证（用户名/密码）中唯一受支持的用户。
+> [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 > 若要通过基本身份验证连接到 SQL Server，请使用与 AZDATA_USERNAME 和 AZDATA_PASSWORD [环境变量](#env)相同的值。 
-
 
 设置环境变量后，必须运行 `azdata bdc create` 才能触发部署。 本示例使用上面创建的群集配置文件：
 

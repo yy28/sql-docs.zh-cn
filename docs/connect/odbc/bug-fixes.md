@@ -14,12 +14,12 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: d839caa5bd89e2ae4db4ab797ab4d5ca1967c13a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cf563e5d074f9e4629eb3b9f63304104167394a4
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82153226"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091801"
 ---
 # <a name="list-of-bugs-fixed"></a>已修复的 bug 列表
 
@@ -51,8 +51,8 @@ ms.locfileid: "82153226"
 
 ### <a name="bug-fixes-in-the-msconame-odbc-driver-174-for-ssnoversion"></a>[!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.4 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 bug 修复
 
-- 修复了在启用多个活动的结果集 (MARS) 后出现间歇性挂起的问题
-- 修复了启用异步通知后连接弹性挂起的问题
+- 修复了在驱动程序停止响应的情况下启用多重活动结果集 (MARS) 的间歇性问题
+- 修复了在驱动程序停止响应的情况下启用异步通知的连接复原能力问题
 - 修复了在检索多线程连接尝试的诊断记录时崩溃的问题
 - 修复了在使用 SQL_USER_NAME 和 SQL_DATA_SOURCE_READ_ONLY 调用 SQLGetInfo() 后，重新连接出现“不支持加密”的问题
 - 修复了 Azure Active Directory 交互式身份验证期间的 COM 初始化错误
@@ -94,7 +94,7 @@ ms.locfileid: "82153226"
 
 - 修复了以下 bug：在使用 Kerberos 身份验证时，大容量插入可能会失败并出现“拒绝访问”错误
 - 删除了 2.3.1 以下版本中存在的 unixODBC bug 的解决方法（驱动程序将传递给 unixODBC 的某些缓冲区大小增加了一倍）
-- 修复了使用 ColumnEncryption=enabled 时的连接复原（重新连接）挂起的问题
+- 修复了使用 ColumnEncryption=enabled 时的连接复原（重新连接）停止响应的问题
 - 修复了 DSN 创建 bug：在使用“Active Directory 交互式身份验证”选项时，Azure 身份验证窗口可能会变得无响应 (Windows)
 - 修复了在启用异步执行时 ODBC 关闭（在清除连接句柄时发生）的罕见故障
 - 修复了 SQL 驱动程序在执行较长的存储过程时导致 CPU 使用率高的问题

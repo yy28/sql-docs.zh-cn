@@ -2,7 +2,7 @@
 title: 适用于 SQL Server 的 OLE DB 驱动程序中的 UTF-8 支持 | Microsoft Docs
 description: 适用于 SQL Server 的 OLE DB 驱动程序中的 UTF-8 支持
 ms.custom: ''
-ms.date: 12/12/2019
+ms.date: 05/25/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,27 +10,31 @@ ms.topic: reference
 ms.reviewer: v-kaywon
 ms.author: v-daenge
 author: David-Engel
-ms.openlocfilehash: c18870d1d252ba849e11ce0bd040bbce89bd5855
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d2074ea992872da02a781ef48f633cd8539c931f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928277"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85986446"
 ---
 # <a name="utf-8-support-in-ole-db-driver-for-sql-server"></a>适用于 SQL Server 的 OLE DB 驱动程序中的 UTF-8 支持
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
 Microsoft OLE DB Driver for SQL Server（版本 18.2.1）添加了对 UTF-8 服务器编码的支持。 有关 SQL Server UTF-8 支持的信息，请参阅：
 - [排序规则和 Unicode 支持](../../../relational-databases/collations/collation-and-unicode-support.md)
-- [UTF-8 支持](#ctp23)
+- [UTF-8 支持](../../../relational-databases/collations/collation-and-unicode-support.md#utf8)
 
-> [!IMPORTANT]
-> Microsoft OLE DB Driver for SQL Server 使用 [GetACP](https://docs.microsoft.com/windows/win32/api/winnls/nf-winnls-getacp) 函数确定 DBTYPE_STR 输入缓冲区的编码。 不支持 GetACP 返回 UTF-8 编码的情况。 如果缓冲区需要存储 Unicode 数据，则应将缓冲区数据类型设置为 DBTYPE_WSTR（UTF-16 编码）。
+18.4.0 版驱动程序添加了对 UTF-8 客户端编码的支持（在 Windows 10 中通过“区域设置”下的“所有语言都支持使用 Unicode UTF-8”复选框启用）。
+
+> [!NOTE]  
+> Microsoft OLE DB Driver for SQL Server 使用 [GetACP](https://docs.microsoft.com/windows/win32/api/winnls/nf-winnls-getacp) 函数确定 DBTYPE_STR 输入缓冲区的编码。
+>
+> 从 18.4 版开始，支持 GetACP 返回 UTF-8 编码（在 Windows 10 中通过“区域设置”下的“所有语言都支持使用 Unicode UTF-8”复选框启用）的方案。 在以前的版本中，如果缓冲区需要存储 Unicode 数据，则应将缓冲区数据类型设置为 DBTYPE_WSTR（UTF-16 编码）。
 
 ## <a name="data-insertion-into-a-utf-8-encoded-char-or-varchar-column"></a>将数据插入到 UTF-8 编码的 CHAR 或 VARCHAR 列中
-创建输入参数缓冲区以便进行插入时，使用 [DBBINDING 结构](https://go.microsoft.com/fwlink/?linkid=2071182)的数组描述缓冲区。 每个 DBBINDING 结构将单个参数与使用者的缓冲区关联，并包含数据值的长度和类型等信息。 对于类型 CHAR 的输入参数缓冲区，DBBINDING 结构的 wType  应设置为 DBTYPE_STR。 对于类型 WCHAR 的输入参数缓冲区，DBBINDING 结构的 wType  应设置为 DBTYPE_WSTR。
+创建输入参数缓冲区以便进行插入时，使用 [DBBINDING 结构](https://go.microsoft.com/fwlink/?linkid=2071182)的数组描述缓冲区。 每个 DBBINDING 结构将单个参数与使用者的缓冲区关联，并包含数据值的长度和类型等信息。 对于类型 CHAR 的输入参数缓冲区，DBBINDING 结构的 wType 应设置为 DBTYPE_STR。 对于类型 WCHAR 的输入参数缓冲区，DBBINDING 结构的 wType 应设置为 DBTYPE_WSTR。
 
 执行包含参数的命令时，驱动程序将构造参数数据类型信息。 如果输入缓冲区类型与参数数据类型匹配，则不会在驱动程序中进行任何转换。 否则，驱动程序会将输入参数缓冲区转换为参数数据类型。 用户可以通过调用 [ICommandWithParameters::SetParameterInfo](https://go.microsoft.com/fwlink/?linkid=2071577) 来显式设置参数数据类型。 如果未提供信息，则驱动程序会通过以下方式派生参数数据类型信息：(a) 当语句准备好后，从服务器中检索列元数据，或 (b) 尝试从输入参数数据类型进行默认转换。
 
@@ -44,29 +48,17 @@ Microsoft OLE DB Driver for SQL Server（版本 18.2.1）添加了对 UTF-8 服�
 |DBTYPE_WSTR|DBTYPE_WSTR|服务器从 UTF-16 转换为列排序规则代码页。|无。|
 
 ## <a name="data-retrieval-from-a-utf-8-encoded-char-or-varchar-column"></a>从 UTF-8 编码的 CHAR 或 VARCHAR 列进行数据检索
-为检索到的数据创建缓冲区时，使用 [DBBINDING 结构](https://go.microsoft.com/fwlink/?linkid=2071182)的数组描述缓冲区。 每个 DBBINDING 结构都会关联检索到的行中的单个列。 若要将列数据检索为 CHAR，请将 DBBINDING 结构的 wType  设置为 DBTYPE_STR。 若要将列数据检索为 WCHAR，请将 DBBINDING 结构的 wType  设置为 DBTYPE_WSTR。
+为检索到的数据创建缓冲区时，使用 [DBBINDING 结构](https://go.microsoft.com/fwlink/?linkid=2071182)的数组描述缓冲区。 每个 DBBINDING 结构都会关联检索到的行中的单个列。 若要将列数据检索为 CHAR，请将 DBBINDING 结构的 wType 设置为 DBTYPE_STR。 若要将列数据检索为 WCHAR，请将 DBBINDING 结构的 wType 设置为 DBTYPE_WSTR。
 
 对于结果缓冲区类型指示符 DBTYPE_STR，驱动程序将 UTF-8 编码的数据转换为客户端编码。 用户应确保客户端编码可以代表 UTF-8 列中的数据，否则可能会发生数据丢失。
 
 对于结果缓冲区类型指示符 DBTYPE_WSTR，驱动程序将 UTF-8 编码的数据转换为 UTF-16 编码。
 
-<a name="ctp23"></a>
+## <a name="communication-with-servers-that-dont-support-utf-8"></a>与不支持 UTF-8 的服务器通信
+Microsoft OLE DB Driver for SQL Server 可确保以服务器可以理解的方式向服务器公开数据。 从启用 UTF-8 的客户端插入数据时，驱动程序先将 UTF-8 编码的字符串转换为数据库排序规则代码页，再将代码页发送到服务器。
 
-### <a name="utf-8-support-sql-server-2019-ctp-23"></a>UTF-8 支持 (SQL Server 2019 CTP 2.3)
-
-[!INCLUDE[ss2019](../../../includes/sssqlv15-md.md)] 完全支持广泛使用的 UTF-8 字符编码作为导入或导出编码，或作为文本数据的数据库级或列级排序规则。 `CHAR` 和 `VARCHAR` 数据类型允许使用 UTF-8，并在创建或将对象的排序规则更改为带有 `UTF8` 后缀的排序规则时启用 UTF-8。
-
-例如：将 `LATIN1_GENERAL_100_CI_AS_SC` 更改为 `LATIN1_GENERAL_100_CI_AS_SC_UTF8`。 UTF-8 仅适用于支持增补字符的 Windows 排序规则，如 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中所引入的。 `NCHAR` 和 `NVARCHAR` 仅允许 UTF-16 编码，并保持不变。
-
-此功能可能会节省大量存储空间，具体取决于正在使用的字符集。 例如，使用已启用 UTF-8 的排序规则将带 ASCII（拉丁）字符串的现有列数据类型从 `NCHAR(10)` 更改为 `CHAR(10)`，意味着将减少 50% 的存储需求。 存储需求减少是因为 `NCHAR(10)` 需要 20 个字节进行存储，而 `CHAR(10)` 需要 10 个字节存储相同的 Unicode 字符串。
-
-有关详细信息，请参阅 [排序规则和 Unicode 支持](../../../relational-databases/collations/collation-and-unicode-support.md)。
-
-**CTP 2.1** 现支持在 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 安装期间默认选择 UTF-8 排序规则。
-
-**CTP 2.2** 现支持将 UTF-8 字符编码与 SQL Server 复制结合使用。
-
-**CTP 2.3** 现支持将 UTF-8 字符编码与 BIN2 排序规则 (UTF8_BIN2) 结合使用。
+> [!NOTE]  
+> 只有支持 UTF-8 的服务器才能使用 [ISequentialStream](https://docs.microsoft.com/previous-versions/windows/desktop/ms718035(v=vs.85)) 接口将 UTF-8 编码的数据插入旧版文本列。 有关详细信息，请参阅 [BLOB 和 OLE 对象](../ole-db-blobs/blobs-and-ole-objects.md)。
 
 ## <a name="see-also"></a>另请参阅  
 [适用于 SQL Server 的 OLE DB 驱动程序功能](../../oledb/features/oledb-driver-for-sql-server-features.md) 

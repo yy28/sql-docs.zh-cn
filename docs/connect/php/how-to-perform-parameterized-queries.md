@@ -1,5 +1,6 @@
 ---
-title: 如何：执行参数化查询 | Microsoft Docs
+title: 如何：执行参数化查询
+description: 了解如何在几个步骤内通过 Drivers for PHP for SQL Server 使用参数化查询。
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dc7d0ede-a9b6-4ce2-977e-4d1e7ec2131c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 53669aad61234676bb4b051f577e3a52e5432d61
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1fb2cb13055a53ba12a500b1a552e6fc2cdb431c
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916173"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392805"
 ---
 # <a name="how-to-perform-parameterized-queries"></a>如何：执行参数化查询
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -110,10 +111,10 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-上一个示例使用 **sqlsrv_query** 函数来执行查询。 本功能适合用于执行一次性查询，因为它可进行语句准备和执行。 sqlsrv_prepare/sqlsrv_execute 的组合最适合于使用不同的参数值重复执行查询   。 若要查看使用不同的参数值重复执行查询的示例，请参阅下一个示例。  
+上一个示例使用 **sqlsrv_query** 函数来执行查询。 本功能适合用于执行一次性查询，因为它可进行语句准备和执行。 sqlsrv_prepare/sqlsrv_execute 的组合最适合于使用不同的参数值重复执行查询 。 若要查看使用不同的参数值重复执行查询的示例，请参阅下一个示例。  
   
 ## <a name="example"></a>示例  
-以下示例演示使用 **sqlsrv_prepare** 函数时隐式绑定变量。 此示例将多个销售订单插入到 *Sales.SalesOrderDetail* 表中。 当调用 sqlsrv_prepare 时，$params 数组绑定到语句 $stmt    。 在每次执行将新的销售订单插入到表中的查询时，将使用对应于销售订单详细信息的新值更新 *$params* 数组。 后续查询执行使用新的参数值。  
+以下示例演示使用 **sqlsrv_prepare** 函数时隐式绑定变量。 此示例将多个销售订单插入到 *Sales.SalesOrderDetail* 表中。 当调用 sqlsrv_prepare 时，$params 数组绑定到语句 $stmt 。 在每次执行将新的销售订单插入到表中的查询时，将使用对应于销售订单详细信息的新值更新 *$params* 数组。 后续查询执行使用新的参数值。  
   
 该示例假定已在本地计算机上安装了 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 数据库。 从命令行运行该示例时，所有输出都将写入控制台。  
   

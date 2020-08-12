@@ -1,5 +1,6 @@
 ---
 title: 查看和编辑表中的数据
+description: 了解如何使用数据编辑器查看、编辑和删除现有表中的数据。 了解如何以脚本形式查看更改并将更改保存为脚本文件。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -9,18 +10,17 @@ f1_keywords:
 ms.assetid: bb67ce83-a87a-4e14-84cd-9a5930fe74c8
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 557b5d5c5986b47eab22bb9d70bd8103c5032eeb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7c8321f4f1264b8bf0352f459bde02a07e439dd3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75226763"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895792"
 ---
-# <a name="how-to-view-and-edit-data-in-a-table"></a>如何查看和编辑表中的数据
+# <a name="how-to-view-and-edit-data-in-a-table"></a>如何：查看和编辑表中的数据
 
 您可以使用直观的数据编辑器查看、编辑和删除现有表中的数据。  
   
@@ -35,13 +35,13 @@ ms.locfileid: "75226763"
   
 3.  右键单击“SQL Server 对象资源管理器”中的“Fruits”表，然后选择“查看数据”。  
   
-4.  在数据编辑器中，为 Id 键入 1，为 Perishable 键入 True，然后按 ENTER 键或 TAB 键，将焦点从新行移出以便将其提交到数据库。  
+4.  在数据编辑器中，为 **** Id 键入 **** 1，为 **** Perishable 键入 **** True，然后按 ENTER 键或 TAB 键，将焦点从新行移出以便将其提交到数据库。  
   
-5.  重复上述步骤以便向表中输入  2、  False 和  3、  False。  
+5.  重复上述步骤以便向表中输入 2、False 和 3、False。  
   
     请注意，在您编辑某一行时，始终可以通过按 ESC 键还原对某一单元的更改。  
   
-6.  你可以通过单击工具栏上的“脚本”  按钮，将所做的编辑作为脚本查看。 或者，你可以使用“将脚本保存到文件”  按钮将所做编辑保存到某个 .sql 脚本中以便在以后执行。  
+6.  你可以通过单击工具栏上的“脚本”按钮，将所做的编辑作为脚本查看。 或者，你可以使用“将脚本保存到文件”按钮将所做编辑保存到某个 .sql 脚本中以便在以后执行。  
   
-7.  右键单击“SQL Server 对象资源管理器”中的“Trade”数据库，然后选择“新建查询”。 在编辑器中，键入 `select * from dbo.PerishableFruits` 并按下“执行查询”  按钮以便返回 `PerishableFruits` 视图表示的数据。  
+7.  右键单击“SQL Server 对象资源管理器”中的“Trade”数据库，然后选择“新建查询”。 在编辑器中，键入 `select * from dbo.PerishableFruits` 并按下“执行查询”按钮以便返回 `PerishableFruits` 视图表示的数据。  
   

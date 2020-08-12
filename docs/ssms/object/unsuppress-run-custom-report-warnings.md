@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 0deed900-c910-4d12-aac0-6ab9e39eb068
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7df3354d78d9736f08e412e6da5e200b9ad41858
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: df96d2b9b4f141fb84e373979d122fec62b5c9b0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243505"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001839"
 ---
 # <a name="unsuppress-run-custom-report-warnings"></a>启用运行自定义报表警告
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 对于自定义报表，有两个警告对话框。 本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中取消显示这些对话框。  
   
 默认情况下，在运行自定义报表之前会显示“运行自定义报表”  对话框。 如果选中“请不要再显示此警告”  复选框，将不再显示此对话框。 此外，在默认情况下，如果打开一个自定义报表然后单击链接打开另外一个自定义报表，则也将显示此“运行自定义报表”  对话框。 此对话框显示钻取自定义报表文件的填写路径。 如果选中“请不要再显示此警告”  复选框，将不再显示此对话框。  
@@ -29,21 +29,21 @@ ms.locfileid: "75243505"
   
 #### <a name="to-unsuppress-the-main-custom-report-warning-dialog-box"></a>启用主自定义报表警告对话框  
   
-1.  连接到 \<*Server*>\\<*Share*>|\<*Drive*>\Documents and Settings\\<UserProfile>\Application Data\Microsoft\Microsoft SQL Server\130\Tools\Shell\reports.xml。  
+1.  连接到 \<*Server*>\\<Share>|\<*Drive*>\Documents and Settings\\<UserProfile>\Application Data\Microsoft\Microsoft SQL Server\130\Tools\Shell\reports.xml。  
   
 2.  右键单击 **reports.xml**，再单击“编辑”  。  
   
-3.  将 **<SuppressWarning>true\<\/SuppressWarning> 更改为 <SuppressWarning>false\<\/SuppressWarning>** 。  
+3.  将 <SuppressWarning>true\<\/SuppressWarning> 更改为 <SuppressWarning>false\<\/SuppressWarning>。  
   
 4.  重新启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
 #### <a name="to-unsuppress-the-drill-through-custom-report-warning-dialog-box"></a>启用钻取自定义报表警告对话框  
   
-1.  连接到 \<*Server*>\\<*Share*>|\<*Drive*>\Documents and Settings\\<UserProfile>\Application Data\Microsoft\Microsoft SQL Server\130\Tools\Shell\reports.xml。  
+1.  连接到 \<*Server*>\\<Share>|\<*Drive*>\Documents and Settings\\<UserProfile>\Application Data\Microsoft\Microsoft SQL Server\130\Tools\Shell\reports.xml。  
   
 2.  右键单击 **reports.xml**，再单击“编辑”  。  
   
-3.  将 **<SuppressDrillthroughWarning>true\<\/SuppressDrillthroughWarning> 更改为 <SuppressDrillthroughWarning>false\<\/SuppressDrillthroughWarning>** 。  
+3.  将 <SuppressDrillthroughWarning>true\<\/SuppressDrillthroughWarning>更改为 <SuppressDrillthroughWarning>false\<\/SuppressDrillthroughWarning>。  
   
 4.  重新启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   

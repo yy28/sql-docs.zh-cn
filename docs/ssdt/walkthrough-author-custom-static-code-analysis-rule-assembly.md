@@ -1,21 +1,21 @@
 ---
 title: 创建适用于 SQL Server 的自定义静态代码分析规则程序集
+description: 了解如何创建 SQL Server Code Analysis 规则。 设置规则以在存储过程、触发器和函数中避免使用 WAITFOR DELAY 语句。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: f7b6ed8c-a4e0-4e33-9858-a8aa40aef309
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: d11446e3ef8fade0c4cfe6ec885c40754861fc26
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 31d183a212ea18f681724d06834041b0a50f752c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257032"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896238"
 ---
 # <a name="walkthrough-authoring-a-custom-static-code-analysis-rule-assembly-for-sql-server"></a>有关创建适用于 SQL Server 的自定义静态代码分析规则程序集的演练
 
@@ -532,7 +532,7 @@ ms.locfileid: "75257032"
   
 2. 单击“文件” > “新建” > “项目”。    
   
-3. 在“新建项目”对话框内的“已安装模板”列表中，展开“SQL Server”节点，然后再单击“SQL Server 数据库项目”。  
+3. 在“新建项目”**** 对话框内的“已安装模板”**** 列表中，展开“SQL Server”**** 节点，然后再单击“SQL Server 数据库项目”****。  
   
 4. 在“名称”文本框中，键入 SampleRulesDB，然后单击“确定”。  
   

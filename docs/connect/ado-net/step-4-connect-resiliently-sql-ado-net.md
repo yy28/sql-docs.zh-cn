@@ -1,6 +1,6 @@
 ---
-title: 步骤 4：使用 ADO.NET 弹性连接到 SQL | Microsoft Docs
-description: 介绍如何弹性连接到 SQL
+title: 步骤 4：使用 ADO.NET 弹性连接到 SQL
+description: 了解如何使用重试逻辑提升使用 ADO.NET 的 SQL 数据库的连接复原能力。
 ms.custom: ''
 ms.date: 08/15/2019
 ms.prod: sql
@@ -13,12 +13,12 @@ ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 23b87d6774fb4020b5c7eca3d3f776bbb95fc7fe
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a70b5449d1af02c3b367a204e2e32dfb32281d72
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80918037"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86391762"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-adonet"></a>步骤 4：使用 ADO.NET 弹性连接到 SQL
 

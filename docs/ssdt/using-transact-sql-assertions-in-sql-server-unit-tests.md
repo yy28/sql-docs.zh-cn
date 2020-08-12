@@ -1,21 +1,21 @@
 ---
 title: 在 SQL Server 单元测试中使用 Transact-SQL 断言
+description: 了解 Transact-SQL 断言。 了解何时在 SQL Server 单元测试中使用断言，以及何时使用测试条件并查看断言用法的示例。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 55d8be9c-9282-47d3-be7f-e2c26f00c95e
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: b8feb69dc25d55b279d65904126afd2733160d6f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8ef278073056bbe6958ed61ce415aa2130156edb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243513"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898983"
 ---
 # <a name="using-transact-sql-assertions-in-sql-server-unit-tests"></a>在 SQL Server 单元测试中使用 Transact-SQL 断言
 
@@ -26,15 +26,15 @@ ms.locfileid: "75243513"
 ## <a name="using-transact-sql-assertions"></a>使用 Transact-SQL 断言  
 在决定是使用 Transact\-SQL 断言还是测试条件来验证数据之前，应考虑以下几点。  
   
--    性能。 与首先将数据移动到客户端计算机并在本地处理这些数据相比，在服务器上运行 Transact\-SQL 断言的速度要更快。  
+-   性能。 与首先将数据移动到客户端计算机并在本地处理这些数据相比，在服务器上运行 Transact\-SQL 断言的速度要更快。  
   
--   语言熟悉程度  。 你可能更愿意根据你当前的专业知识来选择具体语言，因此选择 Transact\-SQL 断言、Visual C\# 或 Visual Basic 测试条件。  
+-   语言熟悉程度。 你可能更愿意根据你当前的专业知识来选择具体语言，因此选择 Transact\-SQL 断言、Visual C\# 或 Visual Basic 测试条件。  
   
--   复杂验证  。 在某些情况下，你可以在 Visual C\# 或 Visual Basic 中生成更复杂的测试，并在客户端上验证测试。  
+-   复杂验证。 在某些情况下，你可以在 Visual C\# 或 Visual Basic 中生成更复杂的测试，并在客户端上验证测试。  
   
--   简单性  。 使用预先定义的测试条件通常比在 Transact\-SQL 中撰写等效脚本更为简单。  
+-   简单性。 使用预先定义的测试条件通常比在 Transact\-SQL 中撰写等效脚本更为简单。  
   
--   旧验证库  。 如果已有执行验证的代码，则可以将其用于 SQL Server 单元测试，而不使用测试条件。  
+-   旧验证库。 如果已有执行验证的代码，则可以将其用于 SQL Server 单元测试，而不使用测试条件。  
   
 ## <a name="mark-unit-test-methods-with-the-expected-exception"></a>使用预期异常标记单元测试方法  
 若要用预期异常来标记 SQL Server 单元测试方法，请添加以下属性：  

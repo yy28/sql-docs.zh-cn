@@ -11,17 +11,16 @@ f1_keywords:
 ms.assetid: 1811cb9e-3791-414d-b8c9-1d61657707f8
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 8c1eb1ef3959052fb285c713bf172521b74bc46b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 992ff4f61358f46035f4cbc817491d5968aa6ea1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255355"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004227"
 ---
 # <a name="print-dialog-box"></a>“打印”对话框
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 可通过选择“打印”  对话框中的选项来指定打印文档的方式。  
   
 ## <a name="printer"></a>打印机  
@@ -41,7 +40,7 @@ ms.locfileid: "75255355"
 包括有关所选打印机的任何其他信息。  
   
 **属性**  
-单击此项可打开 \<*打印机名称属性*> 对话框。  
+单击以打开“\<*printer name properties*>”对话框。  
   
 **打印到文件**  
 将文档打印到文件而不是打印到打印机。  

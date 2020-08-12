@@ -1,21 +1,21 @@
 ---
 title: 指定部署前或部署后脚本
+description: 了解如何使用预先部署和后期部署脚本在主部署脚本运行前后执行 Transact-SQL 语句。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 7f78f517-f13d-4f4b-84b9-e804cb490b2c
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 56b69a6b84aa3c529c02690f7e6554e76e46b079
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dbf8067047edf1c3b9b6a837ed12d49cb5d95df1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244267"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901128"
 ---
 # <a name="how-to-specify-predeployment-or-postdeployment-scripts"></a>如何：指定预先部署或后期部署脚本
 
@@ -34,7 +34,7 @@ END
 
 ## <a name="to-add-and-modify-a-pre--or-post-deployment-script"></a>添加和修改预先部署或后期部署脚本  
   
-1.  在“解决方案资源管理器”  中，展开数据库项目以便显示“脚本”文件夹。  
+1.  在“解决方案资源管理器”中，展开数据库项目以便显示“脚本”文件夹。  
   
 2.  右键单击“脚本”文件夹并选择“添加”。  
   

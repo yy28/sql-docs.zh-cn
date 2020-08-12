@@ -1,5 +1,6 @@
 ---
-title: sqlsrv_fetch_array | Microsoft Docs
+title: sqlsrv_fetch_array
+description: SQL Server 的 PHP 驱动程序中的 the sqlsrv_fetch_array 函数的 API 参考。
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - retrieving data, as an array
 - API Reference, sqlsrv_fetch_array
 ms.assetid: 69270b9e-0791-42f4-856d-412da39dea63
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 02b4311348ebbd52e5e8382048449072c84d2e46
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3b3c3f296d0fd2ae05c3b88a08428c3ddb8a5f2c
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015033"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86391802"
 ---
 # <a name="sqlsrv_fetch_array"></a>sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,13 +42,13 @@ sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])
   
 *$fetchType* [可选]：预定义常量。 此参数可以采用下表中列出的值之一：  
   
-|值|说明|  
+|值|描述|  
 |---------|---------------|  
 |SQLSRV_FETCH_NUMERIC|下一行数据将以数值阵列的形式返回。|  
 |SQLSRV_FETCH_ASSOC|下一行数据将以关联阵列的形式返回。 阵列键是结果集中的列名称。|  
 |SQLSRV_FETCH_BOTH|下一行数据将以数值阵列和关联阵列的形式返回。 这是默认值。|  
   
-*row* [可选]：在版本 1.1 中添加。 以下值之一，用于指定要在使用可滚动游标的结果集中访问的行。 （已指定 row 时，必须显式指定 fetchtype，即使指定默认值也是如此。）    
+*row* [可选]：在版本 1.1 中添加。 以下值之一，用于指定要在使用可滚动游标的结果集中访问的行。 （已指定 row 时，必须显式指定 fetchtype，即使指定默认值也是如此。）   
   
 -   SQLSRV_SCROLL_NEXT  
 -   SQLSRV_SCROLL_PRIOR  
@@ -73,7 +74,7 @@ INSERT INTO Production.ProductPhoto (LargePhoto) VALUES (?);
 SELECT SCOPE_IDENTITY()
 ```
   
-如果此语句的 `SELECT SCOPE_IDENTITY()` 部分返回的结果集以关联阵列的形式进行检索，则返回值的键将是空字符串 ("")，因为返回的列没有名称。 若要避免出现上述情形，可以以数值阵列的形式检索该结果，或在 Transact-SQL 语句中为返回的列指定一个名称。 以下方法可用于在 Transact-SQL 中指定一个列名：  
+如果此语句的 `SELECT SCOPE_IDENTITY()` 部分返回的结果集以关联阵列的形式进行检索，则返回值的键将是空字符串 ("")，因为返回的列没有名称。 若要避免出现上述情形，可以以数值阵列的形式检索该结果，或在 Transact-SQL 语句中为返回的列指定一个名称。 以下语句是在 Transact-SQL 中指定一个列名的一种方法：  
   
 ```
 SELECT SCOPE_IDENTITY() AS PictureID
@@ -123,7 +124,7 @@ sqlsrv_close( $conn);
 ## <a name="example"></a>示例  
 以下示例将每一行结果集检索为一个数字索引的阵列。  
   
-该示例将从产品（具有指定日期且库存量 (StockQty) 小于指定值）的 AdventureWorks 数据库的 Purchasing.PurchaseOrderDetail 表中检索产品信息   。  
+该示例将从产品（具有指定日期且库存量 (StockQty) 小于指定值）的 AdventureWorks 数据库的 Purchasing.PurchaseOrderDetail 表中检索产品信息 。  
   
 该示例假定已在本地计算机上安装了 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 数据库。 从命令行运行该示例时，所有输出都将写入控制台。  
   
