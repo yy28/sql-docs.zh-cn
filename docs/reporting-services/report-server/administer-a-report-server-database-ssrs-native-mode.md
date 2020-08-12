@@ -1,5 +1,6 @@
 ---
 title: 管理报表服务器数据库（本机模式）| Microsoft Docs
+description: 了解如何管理 Reporting Services 部署，包括报表服务器数据库的备份和还原，以及如何管理加密密钥。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 97b2e1b5-3869-4766-97b9-9bf206b52262
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 63456df52690b25605bce4f279283f608644f553
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e288b9b92f4fed7f103b3e4f37ed696b76a1f32f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079109"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84548089"
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>管理报表服务器数据库（SSRS 本机模式）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署将两个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关系数据库用作内部存储。 默认情况下，这两个数据库分别命名为 ReportServer 和 ReportServerTempdb。 ReportServerTempdb 随报表服务器主数据库一同创建，用于存储临时数据、会话信息和缓存的报表。  

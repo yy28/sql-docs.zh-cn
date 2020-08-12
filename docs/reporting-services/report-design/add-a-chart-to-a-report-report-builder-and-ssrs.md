@@ -1,5 +1,6 @@
 ---
 title: 向报表添加图表（报表生成器）|Microsoft Docs
+description: 了解在报表生成器中以可视化形式汇总数据时如何向分页报表添加图表。
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,19 +9,19 @@ ms.topic: conceptual
 ms.assetid: a6b595dc-f775-4a53-8554-74a0bf9335ec
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 986871918463e09fe0aec138c75487694faee258
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2ba53f3fa33bdb8b0f09c13b1afa9aba9398ff87
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080797"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779139"
 ---
 # <a name="add-a-chart-to-a-report-report-builder-and-ssrs"></a>向报表添加图表（报表生成器和 SSRS）
   如果要在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表中以可视化格式汇总数据，请使用图表数据区域。 为您要呈现的数据类型选择一种适当的图表类型非常重要。 这将影响数据以图表形式呈现时对数据进行解释的好坏程度。 有关详细信息，请参阅 [图表（报表生成器和 SSRS）](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)。  
   
  将图表数据区域添加到报表中的最简单方式是运行新建图表向导。 该向导提供柱形图、折线图、饼图、条形图和面积图。 对于这些图表类型和其他图表类型，还可以手动添加图表。  
   
- 将图表数据区域添加到设计图面后，可以将数值数据和非数值数据的报表数据集字段拖到图表的“图表数据”窗格中。 单击图表可以显示“图表数据”窗格，并且它具有三个区域（类别组、序列组和值）。  
+ 将图表数据区域添加到设计图面后，可以将数值数据和非数值数据的报表数据集字段拖到图表的“图表数据”窗格中。 单击图表以显示“图表数据”窗格及其三个区域：“序列组”、“类别组”和“值”。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -56,7 +57,7 @@ ms.locfileid: "77080797"
   
 7.  向 **“类别组”** 区域添加分组字段。 将此字段添加到 **“类别组”** 区域时，将自动创建一个分组字段。 每个组都表示序列中的一个数据点。  
   
-8.  若要按类别汇总数据，请右键单击数据字段，然后单击“序列属性”  。 在“类别”框中，从下拉列表中选择类别字段  。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+8.  若要按类别汇总数据，请右键单击数据字段，然后单击“序列属性”。 在“类别”框中，从下拉列表中选择类别字段。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 9. 在 **“主文件夹”** 选项卡上，单击 **“运行”** ，以查看所呈现的报表。  
   

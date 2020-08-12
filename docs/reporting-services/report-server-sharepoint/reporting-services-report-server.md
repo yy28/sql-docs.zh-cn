@@ -1,5 +1,6 @@
 ---
 title: 比较本机和 SharePoint Reporting Services 报表服务器 | Microsoft Docs
+description: 了解 SQL Server Reporting Services 安装的核心部分，其中包含一个处理引擎以及用于添加功能的扩展。
 ms.date: 06/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -7,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f7a75f578c025386966fc4fc7a15c41e7e44e0a7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b884782c7ae1ad7898a2d2ef04de7de18b7c73df
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67038017"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764790"
 ---
 # <a name="comparing-native-and-sharepoint-reporting-services-report-servers"></a>比较本机和 SharePoint Reporting Services 报表服务器
 
@@ -53,12 +54,12 @@ Reporting Services 报表服务器在以下两种部署模式之一下运行：�
 |**自定义安全扩展插件**|是|不能在报表服务器上部署或使用 Reporting Services 自定义安全扩展插件。 报表服务器包括一个特殊用途的安全扩展插件，只要将报表服务器配置为以 SharePoint 集成模式运行，便会使用此插件。 该安全扩展插件是一个内部组件，并且是执行集成操作所必需的组件。|  
 |**配置管理器**|是|**\*\* 重要提示 \*\*** 配置管理器不能用于管理 SharePoint 模式报表服务器。 而是使用 SharePoint 管理中心。|  
 |**Web 门户**|是|无法在 Web 门户中管理 SharePoint 模式。 请使用 SharePoint 应用程序页。 有关详细信息，请参阅 [Reporting Services SharePoint 服务和服务应用程序](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)。|  
-|**链接报表**|是|不是。|  
-|**我的报表**|是|否|  
-|**我的订阅** 和批处理方法。|是|否|  
+|**链接报表**|是|否。|  
+|**我的报表**|“是”|否|  
+|**我的订阅** 和批处理方法。|“是”|否|  
 |**数据警报**|否|是|  
 |**Power View**|否|是<br /><br /> 要求在客户端浏览器中具有 Silverlight。 有关浏览器要求的详细信息，请参阅 [Reporting Services 和 Power View 的浏览器支持](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)|  
-|**.RDL 报表**|是|是<br /><br /> .RDL 报表可以在本机模式或 SharePoint 模式下的 Reporting Services 报表服务器上运行。|  
+|**.RDL 报表**|是|“是”<br /><br /> .RDL 报表可以在本机模式或 SharePoint 模式下的 Reporting Services 报表服务器上运行。|  
 |**.RDLX 报表**|否|是<br /><br /> Power View .RDLX 报表只能在 SharePoint 模式下的 Reporting Services 报表服务器上运行。|  
 |**用于 SharePoint 列表扩展的 SharePoint 用户标记凭据**|否|是|  
 |**用于面向 internet 的部署的 AAM 区域**|否|是|  

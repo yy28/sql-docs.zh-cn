@@ -1,5 +1,6 @@
 ---
 title: 为 SharePoint 跟踪日志 (ULS) 启用 Reporting Services 事件 | Microsoft Docs
+description: 了解如何为 SharePoint 模式下的 Reporting Services 服务器启用将 Reporting Services 事件写入 SharePoint ULS 跟踪日志。
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 07f8cd00781717511bbcaba6e76553cc17d0c5bf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ef8729d35598b59c33a827d77e5e7c5473ead049
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68893243"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547859"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>为 SharePoint 跟踪日志 (ULS) 启用 Reporting Services 事件
 
@@ -100,7 +101,7 @@ Get-SPDiagnosticConfig
 |本地模式呈现||  
 |SOAP 客户端代理||  
 |UI 页||  
-|Power View|写入 **LogClientTraceEvents** API 的日志条目。 这些条目来源于客户端应用程序，包括 Power View（SQL Server Reporting Services 加载项的功能）。<br /><br /> 来自 LogClientTraceEvents API 的所有日志条目将记录在“SQL Server Reporting Services”的“类别”和“Power View”的“区域”下   。<br /><br /> 使用“Power View”区域记录的条目内容由客户端应用程序决定。|  
+|Power View|写入 **LogClientTraceEvents** API 的日志条目。 这些条目来源于客户端应用程序，包括 Power View（SQL Server Reporting Services 加载项的功能）。<br /><br /> 来自 LogClientTraceEvents API 的所有日志条目将记录在“SQL Server Reporting Services”的“类别”和“Power View”的“区域”下********。<br /><br /> 使用“Power View”区域记录的条目内容由客户端应用程序决定。|  
 |报表服务器警报运行时||  
 |报表服务器应用程序域管理器||  
 |报表服务器缓冲响应||  
@@ -124,7 +125,7 @@ Get-SPDiagnosticConfig
 |报表服务器提供程序||  
 |报表服务器呈现||  
 |报表服务器报表预览||  
-|报表服务器资源实用工具|示例条目：<br /><br /> MediumReporting Services starting SKU: Evaluation<br /><br /> MediumEvaluation copy: 180 days left|  
+|报表服务器资源实用工具|示例条目：<br /><br /> MediumReporting Services starting SKU:计算<br /><br /> MediumEvaluation copy:180 days left|  
 |报表服务器运行作业||  
 |报表服务器运行请求||  
 |报表服务器计划||  
@@ -138,7 +139,7 @@ Get-SPDiagnosticConfig
 |共享服务|示例条目：<br /><br /> MediumUpdating ReportingWebServiceApplication<br /><br /> MediumGranting access to content databases.<br /><br /> MediumProvisioning instances for ReportingWebServiceApplication<br /><br /> MediumProcessing service account change for ReportingWebServiceApplication<br /><br /> MediumSetting database permissions.|  
   
 ##  <a name="view-a-log-file-with-powershell"></a><a name="bkmk_powershell"></a> 使用 PowerShell 查看日志文件  
- ![PowerShell 相关内容](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相关内容")可以使用 PowerShell 从 ULS 日志文件中返回 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 相关事件列表。 从 SharePoint 2010 Management Shell 运行以下命令以便从该文件（ULS 日志文件 UESQL11SPOINT-20110606-1530.log）中返回包含“sql server reporting services”的行的筛选后列表  ：  
+ ![PowerShell 相关内容](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相关内容")可以使用 PowerShell 从 ULS 日志文件中返回 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 相关事件列表。 从 SharePoint 2010 Management Shell 运行以下命令以便从该文件（ULS 日志文件 UESQL11SPOINT-20110606-1530.log）中返回包含“sql server reporting services”的行的筛选后列表****：  
   
 ```  
 Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | select-string "sql server reporting services"  

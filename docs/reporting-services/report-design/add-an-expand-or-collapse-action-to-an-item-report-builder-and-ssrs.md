@@ -1,6 +1,6 @@
 ---
 title: 添加展开或折叠操作（报表生成器和 SSRS）| Microsoft Docs
-description: 可以使用户实现以交互方式展开或折叠分页报表中的项，或者展开或折叠与表或矩阵的组关联的行与列。
+description: 允许用户在报表生成器的报表中展开或折叠与表或矩阵的组关联的项、行和列。
 ms.date: 12/19/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 49f07ad6-242b-4861-8fc1-91ca78c36d6c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 776326093518aa33f8f031e4c4d6675791acf82d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 78d67f7d34bd2e146f7f625c1fd8ddb538b3b3eb
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75242550"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681296"
 ---
 # <a name="add-an-expand-or-collapse-action-to-an-item-report-builder--ssrs"></a>为项添加展开或折叠操作（报表生成器和 SSRS）
   可以使用户实现以交互方式展开或折叠分页报表中的项，或者展开或折叠与表或矩阵的组关联的行与列。 若要让用户能够展开或折叠某个项，请设置该项的可见性属性。 设置可见性在 HTML 报表查看器中有效，有时也称为“深化”  操作。  
@@ -49,7 +49,7 @@ ms.locfileid: "75242550"
   
     -   选择 **True** 可以隐藏报表项。  
   
-    -   选择“\<表达式>”打开“表达式”对话框，以创建在运行时要计算的表达式来确定可见性。  
+    -   选择“\<Expression>”打开“表达式”对话框，以便创建在运行时计算的表达式来确定可见性 。  
   
 5.  在“切换项”  下拉框中，选择要向其添加切换图像的文本框名称。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "75242550"
   
 ### <a name="to-add-expand-and-collapse-action-to-a-report-item"></a>为报表项添加展开和折叠操作  
   
-1.  在报表设计视图中，右键单击要显示或隐藏的报表项，然后单击“*报表项> 属性”\<*  。 将打开该报表项的“*报表项> 属性”对话框\<*  。  
+1.  在报表设计视图中，右键单击要显示或隐藏的报表项，然后单击“\<report item> 属性”。 将打开该报表项的“\<report item> 属性”对话框。  
   
 2.  单击 **“可见性”** 。  
   

@@ -1,5 +1,6 @@
 ---
 title: 规划地图报表（报表生成器）| Microsoft Docs
+description: 在报表生成器的分页报表中使用地图，通过在地理背景上展示分析数据来激发行动和见解。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0b90397a154836f41659aba858f55e28502e2741
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a064351ef75698958b3f46e989eb1945625c5066
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082417"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881857"
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>规划地图报表（报表生成器和 SSRS）
 好的报表提供的信息可指导您采取措施或让您洞察实际情况。 若要展示分析数据，如某一地理背景下的总销售额或人口统计，可将地图添加到 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表。 一个地图可以包含多个图层，每个图层都显示由特定类型的空间数据定义的地图元素：代表地点的点、代表路线的线条以及代表区域的多边形。 您可以将分析数据与每个图层上的地图元素相关联。  
@@ -110,9 +111,9 @@ ms.locfileid: "77082417"
 |![rs_MapType_Polygon_Bubble](../../reporting-services/report-design/media/rs-maptype-polygon-bubble.gif "rs_MapType_Polygon_Bubble")|气泡图|Polygon|一个在各区域中心以不同气泡大小显示分析数据的地图，例如，按区域列出的销售数据。<br /><br /> 选项：根据第二个分析字段改变区域颜色以及指定颜色规则。|  
 |![rs_MapType_Line_Basic](../../reporting-services/report-design/media/rs-maptype-line-basic.gif "rs_MapType_Line_Basic")|基本线条图|行|只显示线条的地图，例如，交货路线。<br /><br /> 选项：通过调色板改变颜色或使用一种颜色。|  
 |![rs_MapType_Line_Analytical](../../reporting-services/report-design/media/rs-maptype-line-analytical.gif "rs_MapType_Line_Analytical")|分析线条图|行|线条颜色和宽度发生变化的地图，例如，交货的包装数和按路线的实时度量。<br /><br /> 选项：通过一个分析字段改变线条宽度，通过第二个分析字段改变线条颜色，以及指定颜色规则。|  
-|![rs_MapType_Marker_Basic](../../reporting-services/report-design/media/rs-maptype-marker-basic.gif "rs_MapType_Marker_Basic")|基本标记地图|Point|在每个位置显示一个标记的地图，例如，市县。<br /><br /> 选项：通过调色板改变颜色或使用一种颜色，以及更改标记样式。|  
-|![rs_MapType_Marker_Bubble](../../reporting-services/report-design/media/rs-maptype-marker-bubble.gif "rs_MapType_Marker_Bubble")|气泡标记地图|Point|对每个位置显示一个气泡且气泡大小按一个分析数据字段变化的地图，例如，按市县列出的销售数据。<br /><br /> 选项：根据第二个分析字段改变气泡颜色以及指定颜色规则。|  
-|![rs_MapType_Marker_Analytical](../../reporting-services/report-design/media/rs-maptype-marker-analytical.gif "rs_MapType_Marker_Analytical")|分析标记地图|Point|在每个位置显示一个标记且标记颜色、大小和类型随分析数据发生变化的地图，例如，最畅销的产品、利润范围和折扣策略。<br /><br /> 选项：通过一个分析字段改变标记类型，通过第二个分析字段改变标记大小，通过第三个分析字段改变标记颜色，以及指定颜色规则。|  
+|![rs_MapType_Marker_Basic](../../reporting-services/report-design/media/rs-maptype-marker-basic.gif "rs_MapType_Marker_Basic")|基本标记地图|点|在每个位置显示一个标记的地图，例如，市县。<br /><br /> 选项：通过调色板改变颜色或使用一种颜色，以及更改标记样式。|  
+|![rs_MapType_Marker_Bubble](../../reporting-services/report-design/media/rs-maptype-marker-bubble.gif "rs_MapType_Marker_Bubble")|气泡标记地图|点|对每个位置显示一个气泡且气泡大小按一个分析数据字段变化的地图，例如，按市县列出的销售数据。<br /><br /> 选项：根据第二个分析字段改变气泡颜色以及指定颜色规则。|  
+|![rs_MapType_Marker_Analytical](../../reporting-services/report-design/media/rs-maptype-marker-analytical.gif "rs_MapType_Marker_Analytical")|分析标记地图|点|在每个位置显示一个标记且标记颜色、大小和类型随分析数据发生变化的地图，例如，最畅销的产品、利润范围和折扣策略。<br /><br /> 选项：通过一个分析字段改变标记类型，通过第二个分析字段改变标记大小，通过第三个分析字段改变标记颜色，以及指定颜色规则。|  
   
  在使用“地图”向导添加地图之后，您可以使用“层”向导创建其他层或更改用于层的选项。 有关向导的详细信息，请参阅[地图向导和地图层向导（报表生成器和 SSRS）](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)。  
   

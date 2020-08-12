@@ -1,5 +1,6 @@
 ---
 title: 监视报表服务器性能 | Microsoft Docs
+description: 了解如何监视报表服务器性能以评估服务器活动、监视趋势、诊断瓶颈以及收集有关系统配置的数据。
 ms.date: 06/20/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5d277089fded73524e55d05bbc21078d5df426e3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 67d9f59f1561ce844c3e6a1b6f3e20770e12db6b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67412658"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547939"
 ---
 # <a name="monitoring-report-server-performance"></a>监视报表服务器性能
   使用性能监视工具可监视报表服务器的性能以评估服务器活动，查看趋势，诊断系统瓶颈以及收集可以帮您确定当前系统配置是否充分的数据。 若要优化服务器性能，可指定回收报表服务器应用程序域的频率。 有关详细信息，请参阅 [为报表服务器应用程序配置可用内存](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)。  
@@ -63,12 +64,12 @@ SQL Server 2016 Reporting Services 或更高版本 (SSRS) 包括以下性能对�
   
 -   用于监视计划操作和报表传递的**MSRS 2011 Windows Service** 和 **MSRS 2011 Windows Service SharePoint Mode** to monitor scheduled operations 和 report delivery. 这些性能对象包括一系列用于跟踪报表处理的计数器，这些处理通过计划操作启动。 计划操作包括订阅和传递、报表执行快照以及报表历史记录。  
   
--   ReportServer Service  和 ReportServerSharePoint Service  用于监视与 HTTP 相关的事件和内存管理。 这些计数器是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 专用，用于为报表服务器跟踪与 HTTP 相关的事件，如请求、连接和登录尝试。 此性能对象还包括与内存管理相关的计数器。  
+-   ReportServer Service 和 ReportServerSharePoint Service 用于监视与 HTTP 相关的事件和内存管理。 这些计数器是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 专用，用于为报表服务器跟踪与 HTTP 相关的事件，如请求、连接和登录尝试。 此性能对象还包括与内存管理相关的计数器。  
   
  如果单台计算机上有多个报表服务器实例，则可以同时监视多个实例或分别监视各个实例。 选择要在添加计数器时包括的实例。 有关使用性能控制台 (perfmon.msc) 和添加计数器的详细信息，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 产品文档。  
   
 ## <a name="other-performance-counters"></a>其他性能计数器  
- 自定义 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 性能计数器仅用于 MSRS 2008 Web 服务  、MSRS 2008 Windows 服务  和 ReportServer 服务  。 下列性能对象为报表服务器提供附加的性能监视数据。  
+ 自定义 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 性能计数器仅用于 MSRS 2008 Web 服务、MSRS 2008 Windows 服务和 ReportServer 服务。 下列性能对象为报表服务器提供附加的性能监视数据。  
   
 |性能对象|说明|  
 |------------------------|-----------|  

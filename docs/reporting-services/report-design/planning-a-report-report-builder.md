@@ -1,5 +1,6 @@
 ---
 title: 规划报表（报表生成器）| Microsoft Docs
+description: 规划和创建具有丰富格式的文本的报表，这些文本可在报表生成器中显示销售数据、营销趋势、运营报表或仪表板。
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 79113505-1ce8-4f8c-9260-d861838f7813
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9c65d1db987f5d317b0719ff101012b4db0a5873
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 134f0578e66f39e38efe7cb550c687f75910ac5e
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67038029"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012237"
 ---
 # <a name="planning-a-report-report-builder"></a>规划报表 (报表生成器)
   利用报表生成器可创建多种类型的分页报表。 例如，可以创建显示摘要或详细销售数据、营销和销售趋势的报表、操作报表或面板。 还可以为销售订单、产品目录或套用信函等创建利用丰富格式文本的报表。 所有这些报表都是在报表生成器中使用相同基本构造块的不同组合创建的。 若要创建有用且易于理解的报表，报表生成器可帮助首先进行规划。 开始创建报表之前最好考虑以下几个问题：  

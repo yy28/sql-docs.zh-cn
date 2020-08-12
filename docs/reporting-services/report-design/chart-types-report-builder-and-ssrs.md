@@ -1,5 +1,6 @@
 ---
 title: 图表类型（报表生成器）| Microsoft Docs
+description: 通过独特的图表特征进行选择，以帮助可视化数据集并帮助你在报表生成器中选择适当的图表类型。
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: 57b00017-69ae-4e71-8d78-44744e208ac7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b2d1d58a5a37078021e8ef6c30ed387fe1f2c406
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8f19176d540a547ec4617244835f87b9994d368e
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081734"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681406"
 ---
 # <a name="chart-types-report-builder-and-ssrs"></a>图表类型（报表生成器和 SSRS）
 

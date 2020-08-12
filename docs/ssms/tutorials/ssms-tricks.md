@@ -1,6 +1,6 @@
 ---
 title: 使用 SSMS 的提示和技巧
-description: 了解如何使用 SQL Server Management Studio 注释和取消注释代码、缩进文本、筛选对象资源管理器中的对象、访问 SQL Server 错误日志和查找 SQL Server 实例名称。
+description: 了解如何使用 SQL Server Management Studio 注释和取消注释代码、缩进文本、筛选对象、访问错误日志，以及查找 SQL Server 实例名称。
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - find sql server instance name
 ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: 7a07e4cd77d02e4c62c34e55eedbd3dbf01c8322
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2147baf038b99140bf21ab72695f779c0fe69faf
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245508"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462341"
 ---
 # <a name="tips-and-tricks-for-using-sql-server-management-studio-ssms"></a>使用 SQL Server Management Studio (SSMS) 的提示和技巧
 

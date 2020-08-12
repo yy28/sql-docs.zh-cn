@@ -1,6 +1,6 @@
 ---
 title: SQL Server 移动报表：端到端演练
-description: 在 Reporting Services Web 门户上使用 SQL Server 移动报表发布服务器创建任何屏幕大小的移动报告，并在 Power BI 移动应用程序中查看它们。
+description: 了解如何在 SQL Server 移动报表发布服务器上创建移动报表、在 Reporting Services web 门户上保存报表以及在 Power BI 移动应用中查看报表。
 ms.date: 12/07/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d5ec94bb96832574cec663d38690bec8078db6ff
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5fc718243db6a816fb2a0593131362007facce89
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69028896"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462351"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>SQL Server 移动报表：端到端演练
 在 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] Web 门户上使用 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 创建适用于任何屏幕大小的移动报表，并在 Power BI 移动应用中查看它们。

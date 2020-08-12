@@ -1,5 +1,6 @@
 ---
 title: 添加、更改或删除报表参数（报表生成器）| Microsoft Docs
+description: 通过在报表生成器的分页报表中添加报表参数来选择报表数据、连接相关报表，以及更改报表显示方式。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: d44a8e0a-10cf-4502-9391-09743ffc9bad
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5b07c03980cf1eb2cc7f99ab6d4e6470485bb53f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9c4ab09d50b4d1055d18c5813647a5efee7bf532
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080600"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012255"
 ---
 # <a name="add-change-or-delete-a-report-parameter-report-builder-and-ssrs"></a>添加、更改或删除报表参数（报表生成器和 SSRS）
   报表参数为选择报表数据、连接相关报表以及更改报表显示提供了一种方法。 您可以提供一个默认值和一列可用值，用户可以更改所选值。  

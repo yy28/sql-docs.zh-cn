@@ -1,5 +1,6 @@
 ---
 title: 移动或删除项（报表管理器）| Microsoft Docs
+description: 报表管理器报表服务器将报表及相关项存储在文件夹中。 可以移动或删除项。 报表服务器维护对移动的项的引用。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 980a66c7-a18b-4af7-8954-45726fa517d6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a1be40ed580de1163c0e85e37e7b8ffc1bccc342
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b3b615a45df3d9e45338514423700a706980eee0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65581091"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535495"
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>移动或删除项（报表管理器）
   发布到报表服务器的报表和与报表相关的项将存储在文件夹中。 您可以将这些项移动到不同文件夹，并且报表服务器自动维护对这些项的引用。 在删除项之前，请注意是否有其他项依赖它。  
@@ -66,7 +67,7 @@ ms.locfileid: "65581091"
   
 3.  悬停在该项之上，然后单击下拉箭头。  
   
-4.  在下拉菜单中，单击“删除”  。  
+4.  在下拉菜单中，单击“删除”。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

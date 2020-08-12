@@ -1,5 +1,6 @@
 ---
 title: 添加、移动或删除文本框（报表生成器）| Microsoft Docs
+description: 向表体添加文本框以在报表生成器中显示诸如标题、参数选择、内置字段以及日期之类的信息。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f042cf81-d933-4ac7-9287-c074a46bde98
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9bf0a50378979312991cf7cd149d838f4cbe2a3b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ef2bb2436b448dc06fa68d4df98dfbc4e4ffd200
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081596"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462219"
 ---
 # <a name="add-move-or-delete-a-text-box-report-builder-and-ssrs"></a>添加、移动或删除文本框（报表生成器和 SSRS）
   文本框是 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中最常用的报表项。 您可以向表体添加文本框以显示诸如标题、参数选择、内置字段以及日期之类的信息。  
@@ -63,7 +64,7 @@ ms.locfileid: "77081596"
   
 ## <a name="to-delete-a-text-box"></a>删除文本框  
   
-1.  在报表设计视图中，右键单击文本框内的任意空白区域以选中该文本框，然后单击“删除”  。 此外，也可以单击文本框内的任意空白区域，再按 Delete。  
+1.  在报表设计视图中，右键单击文本框内的任意空白区域以选中该文本框，然后单击“删除”。 此外，也可以单击文本框内的任意空白区域，再按 Delete。  
   
     > [!NOTE]  
     >  如果在文本框中单击并处于编辑模式，请按 ESC 以选择文本框。  

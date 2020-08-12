@@ -1,6 +1,6 @@
 ---
 title: 控制行标题和列标题（报表生成器和 SSRS）| Microsoft Docs
-description: 分页报表中的表、矩阵或列表数据区域可以横向或纵向跨越多个页面。 您可以指定是否在每页上重复显示行标题或列标题。
+description: 了解如何使用分页报表中的表、矩阵或列表数据区域，以在报表生成器中横向或纵向跨越多个页面。
 ms.date: 12/19/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4be6e836-158e-4bc9-8870-7f394d7c7e11
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ce25cfe5d8d84926cb9bc993d075372e3a81d336
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 654ec769905d17534a3896465909a14c41d60b54
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245364"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255340"
 ---
 # <a name="control-row--column-headings-report-builder--ssrs"></a>控制行标题和列标题（报表生成器和 SSRS）
   分页报表中的表、矩阵或列表数据区域可以横向或纵向跨越多个页面。 您可以指定是否在每页上重复显示行标题或列标题。 在交互式呈现器（如 Web 门户或报表预览）中，还可以指定是否冻结行标题或列标题，以便在滚动报表时始终显示标题。 在表或矩阵中，第一行通常包含列标题，用来为每列中的数据加上标签；第一列通常包含行标题，用来为每行中的数据加上标签。 对于嵌套组，您可能需要重复显示包含组标签的初始行标题集和列标题集。 默认情况下，列表数据区域不包含标题。  
@@ -111,7 +111,7 @@ ms.locfileid: "75245364"
   
  ![“行组”窗格：包含静态成员的高级模式](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercelladvanced.gif "“行组”窗格：包含静态成员的高级模式")  
   
- 列出的 tablix 成员包括： **Static**、(**Static**)、Category 和 (**Details**)。 带有括号 () 的 tablix 成员指示没有相应的组头。 若要重复或冻结列标题，请选择上面的 Static tablix 成员，然后在“属性”窗格中设置属性。  
+ 列出的 tablix 成员包括：Static、(Static)、Category 和 (Details)。 带有括号 () 的 tablix 成员指示没有相应的组头。 若要重复或冻结列标题，请选择上面的 Static tablix 成员，然后在“属性”窗格中设置属性。  
   
  [返回页首](#Top)  
   
@@ -138,7 +138,7 @@ ms.locfileid: "75245364"
   
  ![“行组”窗格：不含组标头的高级模式。](../../reporting-services/report-design/media/rs-tableheaderdynamicwithnogroupheadercelladvanced.gif "“行组”窗格：不含组标头的高级模式。")  
   
- 在“行组”窗格中列出了以下 tablix 成员：(**Static**)、(Category)、(**Static**) 和 (**Details**)。 若要重复或冻结列标题，请选择上面的 (**Static**) tablix 成员，然后在“属性”窗格中设置属性。  
+ 在“行组”窗格中，列出了以下 tablix 成员：(Static)、(Category)、(Static) 和 (Details)。 若要重复或冻结列标题，请选择上面的 (**Static**) tablix 成员，然后在“属性”窗格中设置属性。  
   
  [返回页首](#Top)  
   

@@ -1,5 +1,6 @@
 ---
 title: 常用筛选器（报表生成器）| Microsoft Docs
+description: 请考虑这些筛选器示例以及指定用于在报表生成器中创建筛选器的筛选器公式。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cb70d0cd-707b-4de5-b39f-e4eb57d316aa
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d0a096fd9dcb292f1a71b74aaf853abcbd7c02ae
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d091d4b8d49bd1f7a6d0cac04a874bccfba6c2fc
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082306"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779119"
 ---
 # <a name="commonly-used-filters-report-builder-and-ssrs"></a>常用筛选器（报表生成器和 SSRS）
   若要创建筛选器，必须指定一个或多个筛选器公式。 筛选器公式包括表达式、数据类型、运算符和值。 本主题提供了常用筛选器的示例。  
@@ -29,7 +30,7 @@ ms.locfileid: "77082306"
 ## <a name="filter-examples"></a>筛选器示例  
  下表显示使用不同数据类型和不同运算符的筛选器公式的示例。 比较的范围由将为其定义筛选器的报表项确定。 例如，对于为数据集定义的筛选器， **TOP % 10** 表示数据集中前 10% 的值；对于为组定义的筛选器， **TOP % 10** 表示组中前 10% 的值。  
   
-|简单表达式|数据类型|操作员|值|说明|  
+|简单表达式|数据类型|操作员|值|描述|  
 |-----------------------|---------------|--------------|-----------|-----------------|  
 |`[SUM(Quantity)]`|**整数**|**>**|`7`|包括大于 7 的数据值。|  
 |`[SUM(Quantity)]`|**整数**|**前 N 个**|`10`|包括前 10 个数据值。|  

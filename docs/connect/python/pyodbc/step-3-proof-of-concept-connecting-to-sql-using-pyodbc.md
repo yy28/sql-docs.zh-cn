@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4bfd6e52-817d-4f0a-a33d-11466e3f0484
 author: arob98
 ms.author: angrobe
-ms.openlocfilehash: 971f89f9748ab8f31c234f872e817b0b474dcbe0
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 73a57d6ea391d0b1d98c2f86b4c983771d4e2208
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528471"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83808116"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pyodbc"></a>步骤 3：使用 pyodbc 连接到 SQL 的概念证明
 
@@ -62,7 +62,7 @@ while row:
   
 ## <a name="insert-a-row"></a>插入行  
   
-此示例展示了如何安全运行 [INSERT](../../../t-sql/statements/insert-transact-sql.md) 语句，并传递用于保护应用程序免遭 [SQL 注入](../../../relational-databases/tables/primary-and-foreign-key-constraints.md)影响的参数。    
+此示例展示了如何安全地运行 [INSERT](../../../t-sql/statements/insert-transact-sql.md) 语句并传递参数。 参数保护应用程序不进行 [SQL 注入](../../../relational-databases/tables/primary-and-foreign-key-constraints.md)。    
   
   
 ```python

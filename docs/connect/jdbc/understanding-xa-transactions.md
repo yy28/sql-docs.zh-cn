@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9bcf55fd300c977105229473228955581da7cdd3
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: ff48d23727c8dd48048293dd34127b6acbb3f005
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528731"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293992"
 ---
 # <a name="understanding-xa-transactions"></a>了解 XA 事务
 
@@ -60,7 +60,7 @@ ms.locfileid: "81528731"
 如果要同时使用 XA 数据源和 Microsoft 分布式事务处理协调器 (MS DTC) 来处理分布式事务，则需要执行以下步骤。  
 
 > [!NOTE]  
-> JDBC 分布式事务组件包含在 JDBC 驱动程序安装的 xa 目录中。 这些组件包括 xa_install.sql 和 sqljdbc_xa.dll 文件。  
+> JDBC 分布式事务组件包含在 JDBC 驱动程序安装的 xa 目录中。 这些组件包括 xa_install.sql 和 sqljdbc_xa.dll 文件。 如果在不同的客户端上安装了不同版本的 JDBC 驱动程序，则建议在服务器上使用最新的 sqljdbc_xa.dll。  
 
 > [!NOTE]  
 > 从 SQL Server 2019 公共预览版 CTP 2.0 开始，JDBC XA 分布式事务组件包含在 SQL Server 引擎中，可以通过系统存储过程启用或禁用。
@@ -139,19 +139,19 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL<version>.<insta
   
 将为每个开始的事务设置超时值，并且在超时过期后由 SQL Server 回滚该事务。 超时具体取决于这些注册表设置以及用户通过 XAResource.setTransactionTimeout() 指定的设置。 有关如何解释这些超时值的一些示例如下所示：  
   
-- `XADefaultTimeout = 0`、`XAMaxTimeout = 0`
+- `XADefaultTimeout = 0`, `XAMaxTimeout = 0`
   
      意味着不使用默认超时值，并且在客户端上不强制执行最大超时。 在这种情况下，只有在客户端使用 XAResource.setTransactionTimeout 设置超时的情况下，事务才会有超时。  
   
-- `XADefaultTimeout = 60`、`XAMaxTimeout = 0`
+- `XADefaultTimeout = 60`, `XAMaxTimeout = 0`
   
      表示如果客户端不指定任何超时，所有事务的超时都为 60 秒。 如果客户端指定超时，将使用该超时值。 不强制执行最大值超时值。  
   
-- `XADefaultTimeout = 30`、`XAMaxTimeout = 60`
+- `XADefaultTimeout = 30`, `XAMaxTimeout = 60`
   
      表示如果客户端不指定任何超时，所有事务的超时都为 30 秒。 如果客户端指定了任何超时，则只要此时间小于 60 秒（最大值），就将使用它。  
   
-- `XADefaultTimeout = 0`、`XAMaxTimeout = 30`
+- `XADefaultTimeout = 0`, `XAMaxTimeout = 30`
   
      表示如果客户端不指定任何超时，所有事务的超时都为 30 秒（最大值）。 如果客户端指定了任何超时，则只要此时间小于 30 秒（最大值），就将使用它。  
   

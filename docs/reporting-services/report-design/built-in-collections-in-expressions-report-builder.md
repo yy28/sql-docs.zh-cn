@@ -1,6 +1,7 @@
 ---
 title: 表达式中的内置集合（报表生成器）| Microsoft Docs
-ms.date: 03/14/2017
+description: 了解表达式中的内置集合以引用集合，如报表生成器的报表中的参数、字段和数据集。
+ms.date: 3/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-design
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 78d5e3b8-9320-4e4b-a025-e2de3cf7afa7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 73fcabfe163fce811b208861adbde97e4411300b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b5dbc7cf2683f78118087d18b2dd51865bf52f3d
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082199"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880260"
 ---
 # <a name="built-in-collections-in-expressions-report-builder"></a>表达式中的内置集合（报表生成器）
   在报表的表达式中，可以包含对以下内置集合的引用：ReportItems、Parameters、Fields、DataSets、DataSources、Variables 和全局信息的内置字段（如报表名称）。 并非所有集合都显示在 **“表达式”** 对话框中。 DataSets 和 DataSources 集合只有在运行时报表将发布到报表服务器之后才可用。 ReportItems 集合是报表区域中的文本框集合，例如页面或页眉中的文本框。  
@@ -26,12 +27,12 @@ ms.locfileid: "77082199"
 ##  <a name="understanding-built-in-collections"></a><a name="Collections"></a> 了解内置集合  
  下表列出了在您撰写表达式时可用的内置集合。 无论是否能够使用“表达式”对话框以交互方式添加对集合、示例和包含可用的初始化集合值的说明的引用，每行都包括集合的区分大小写编程名称。  
   
-|内置集合|“表达式”对话框中的类别|示例|说明|  
+|内置集合|“表达式”对话框中的类别|示例|描述|  
 |--------------------------|-------------------------------------------|-------------|-----------------|  
 |**全局**|内置字段|`=Globals.ReportName`<br /><br /> `- or -`<br /><br /> `=Globals.PageNumber`|表示对报表有用的全集变量，如报表名称或页码。 始终可用。<br /><br /> 有关详细信息，请参阅[内置的全局和用户引用（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)。|  
 |**用户**|内置字段|`=User.UserID`<br /><br /> - 或 -<br /><br /> `=User.Language`|表示与运行报表的用户有关的数据的集合，如语言设置或用户 ID。 始终可用。<br /><br /> 有关详细信息，请参阅[内置的全局和用户引用（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)。|  
-|**参数**|parameters|`=Parameters("ReportMonth").Value`<br /><br /> - 或 -<br /><br /> `=Parameters!ReportYear.Value`|表示报表参数的集合，每个参数都可为单值或多值参数。 直到处理初始化完成之后才可用。 有关详细信息，请参阅[集合引用（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)。|  
-|**Fields(** *\<Dataset>* **)**|字段|`=Fields!Sales.Value`|表示可用于报表的数据集的字段集合。 将数据从数据源检索到数据集中之后可用。 有关详细信息，请参阅[数据集字段集合引用（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)。|  
+|**参数**|参数|`=Parameters("ReportMonth").Value`<br /><br /> - 或 -<br /><br /> `=Parameters!ReportYear.Value`|表示报表参数的集合，每个参数都可为单值或多值参数。 直到处理初始化完成之后才可用。 有关详细信息，请参阅[集合引用（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)。|  
+|**Fields(** \<Dataset> **)** |字段|`=Fields!Sales.Value`|表示可用于报表的数据集的字段集合。 将数据从数据源检索到数据集中之后可用。 有关详细信息，请参阅[数据集字段集合引用（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)。|  
 |**DataSet**|不显示|`=DataSets("TopEmployees").CommandText`|表示从报表定义的主体中引用的数据集的集合。 不包括仅在页眉或页脚中使用的数据源。 无法在本地预览中使用。 有关详细信息，请参阅 [DataSources 和 DataSets 集合引用（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-datasources-and-datasets-references-report-builder.md)。|  
 |**DataSources**|不显示|`=DataSources("AdventureWorks2012").Type`|表示从报表的主体中引用的数据源集合。 不包括仅在页眉或页脚中使用的数据源。 无法在本地预览中使用。 有关详细信息，请参阅 [DataSources 和 DataSets 集合引用（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-datasources-and-datasets-references-report-builder.md)。|  
 |**变量**|`Variables`|`=Variables!CustomTimeStamp.Value`|表示报表变量和组变量的集合。 有关详细信息，请参阅[报表和组变量集合引用（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md)。|  

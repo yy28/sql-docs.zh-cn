@@ -1,5 +1,6 @@
 ---
 title: 报表服务器内容管理（本机模式）| Microsoft Docs
+description: 了解 Reporting Services 内容管理的 Web 门户和新 Web 门户体验。 通过属性和安全设置管理项目。
 ms.date: 06/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 78fb75acfefce3a1f0c8cb28ea286a028463a56b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 12832f724da36f6359f34fd2fd950ba804619c45
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286381"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547243"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>报表服务器内容管理（SSRS 本机模式）
 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，内容管理是指对报表服务器项进行管理。 通过属性和安全设置，所有项可以彼此独立地进行管理。 可以将任何一项移动到报表服务器文件夹命名空间中的不同位置。 为了有效管理项，您需要了解道内容管理员所执行的任务。 从 SQL Server 2016 Reporting Services 或更高版本 (SSRS) CTP 3.2 开始，[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 门户可用。 本文将介绍 Web 门户和新的 Web 门户体验。  
@@ -42,7 +43,7 @@ ms.locfileid: "79286381"
   
 -   通过制定报表处理计划，并指定哪些报表按需运行，哪些报表应从缓存加载，从而均衡服务器上的报表处理需求。  
   
--   通过使用以下两个预定义的角色提供执行管理任务的权限： **系统管理员** 和 **内容管理员**。 若要有效地管理报表服务器内容，要求您同时分配有这两个角色。  
+-   通过使用以下两个预定义的角色提供执行管理任务的权限：系统管理员和内容管理员。 若要有效地管理报表服务器内容，要求您同时分配有这两个角色。  
   
 用于管理报表服务器内容的工具包括 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或 Web 门户。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 允许您设置默认值和启用功能。 Web 门户用于向用户授予对报表服务器项和操作的访问权限，用于查看和使用报表以及其他内容类型，并用于查看和使用所有共享项和报表分发功能。 Web 门户是更新后的站点，提供了已弃用报表管理器的许多功能。 有关详细信息，请参阅 [Reporting Services 工具](../../reporting-services/tools/reporting-services-tools.md)。  
   
@@ -75,7 +76,7 @@ ms.locfileid: "79286381"
   
 -   共享数据源  
   
--   共享数据集  
+-   共享的数据集  
   
 -   报表部件  
   
@@ -159,11 +160,11 @@ ms.locfileid: "79286381"
   
 |字符|转义值|示例|  
 |---------------|------------------|-------------|  
-|（空格）|[ ]|Firstname Lastname  将变为 Firstname[ ]Lastname |  
-|\（反斜杠）|替换为一个空格字符|DomainName\Username  将变为 DomainName Username |  
-|@（@ 符号）|[at]|username  @hotmail.com 将变为 username  [at]hotmail.com|  
-|&（与号）|[amp]|username@company&company.com 将变为 username[at]company[amp]company.com|  
-|$（美元符号）|[dollar]|User $Name 将变为 User[ ][dollar]Name|  
+|（空格）|[ ]|Firstname Lastname 将变为 Firstname[ ]Lastname|  
+|\（反斜杠）|替换为一个空格字符|DomainName\Username 将变为 DomainName Username|  
+|@（@ 符号）|[at]|username@hotmail.com 将变为 username[at]hotmail.com|  
+|&（与号）|[amp]|username@company&company.com 将变为 username[at]company[amp]company.com  |  
+|$（美元符号）|[dollar]|User $Name  将变为 User[ ][dollar]Name |  
   
  “我的报表”功能是可选的。 安装报表服务器时，默认情况下将禁用“我的报表”功能。 有关启用此功能的详细信息，请参阅 [启用和禁用“我的报表”](../../reporting-services/report-server/enable-and-disable-my-reports.md)。 有关详细信息，请参阅 [保护我的报表](../../reporting-services/security/secure-my-reports.md)。  
   

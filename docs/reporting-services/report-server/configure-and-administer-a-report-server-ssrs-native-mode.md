@@ -1,5 +1,6 @@
 ---
 title: 配置和管理报表服务器（本机模式）| Microsoft Docs
+description: 了解可用于配置 Reporting Services 的方法，并查找有关如何配置组件、功能或服务器功能的文章。
 ms.date: 05/15/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: cfec012b-56f1-4346-9814-247acf22351c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2e38e508d2c6a7447781dd2918b980bcc1ff6003
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 68a37cc93271fc913cc89d2b0e522a81adec443f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082527"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547459"
 ---
 # <a name="configure-and-administer-a-report-server-ssrs-native-mode"></a>配置和管理报表服务器（SSRS 本机模式）
   本文总结了可用于配置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的方法。 它还包含一个主题列表，其中所列的主题说明了如何配置特定的组件、功能或服务器功能。 若要配置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，您可以：  

@@ -1,5 +1,6 @@
 ---
 title: 创建传递扩展插件库 | Microsoft Docs
+description: 了解如何将在 Reporting Services 中创建的传递扩展插件分配到唯一的命名空间，并将其内置于库或程序集文件中。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 63b32f93-4bab-4b07-bd72-39a47aca1cda
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 06b204e9cc3c13492b0ab6815c7d36abdc628d4b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 77bff5683f459317458f270eea663641ca5e2c33
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193874"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529133"
 ---
 # <a name="creating-a-delivery-extension-library"></a>创建传递扩展插件库
   您创建的每个 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 传递扩展插件都应分配到唯一的命名空间并被内置到某个库或程序集文件中。 命名空间的确切名称并不重要，但命名空间必须是唯一的且不能与任何其他扩展插件共享。 您应该为公司的传递扩展插件创建您自己的唯一命名空间。  

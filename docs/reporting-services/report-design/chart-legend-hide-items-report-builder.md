@@ -1,5 +1,6 @@
 ---
 title: 隐藏图表上的图例项（报表生成器）| Microsoft Docs
+description: 了解如何选择在图例中出现的项，以便在报表生成器中显示重要数据。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 92256240-0cd5-4be4-8904-d1e3b93cb6b3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 784258433329832bbff3f8737086ef906eecfd64
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5f745b3eb2c862f4105bcdd872a8915845341942
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081328"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681416"
 ---
 # <a name="chart-legend---hide-items-report-builder"></a>图表图例 - 隐藏项（报表生成器）
 默认情况下，添加到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表中的非形状图的任何序列将在图例中添加为图例项。 对于饼图、圆环图、漏斗图和棱锥图，添加到图表的任何序列将在图例中添加单个数据点。  
@@ -25,7 +26,7 @@ ms.locfileid: "77081328"
   
 ## <a name="to-hide-an-item-from-display-in-the-legend"></a>在图例中隐藏项  
   
-1.  右键单击要隐藏的序列，并选择“序列属性”  。  
+1.  右键单击要隐藏的序列，并选择“序列属性”。  
   
 2.  单击 **“图例”** 。 选择 **“不在图例中显示此序列”** 选项。  
   

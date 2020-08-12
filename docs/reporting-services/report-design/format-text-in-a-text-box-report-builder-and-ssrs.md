@@ -1,5 +1,6 @@
 ---
 title: 设置文本框中文本的格式（报表生成器）| Microsoft Docs
+description: 了解如何设置文本框中文本的格式，以及如何在报表生成器中混合使用占位符文本和静态文本来创建邮件合并或模板。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: df0794b5-96b0-4034-bd17-1be7f31e29db
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f7448ee783e1e4a747942ef774a9106de09487fe
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5c1ea82680da039b9f38c7a3c308fd07bfa1cd89
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079957"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84778899"
 ---
 # <a name="format-text-in-a-text-box-report-builder-and-ssrs"></a>设置文本框中文本的格式（报表生成器和 SSRS）
   可以单独设置文本框中任何一部分文本的格式，并在一个文本框中混合使用占位符文本和静态文本。 这种混合格式并添加占位符文本的功能可使您能够为报表中的文本创建邮件合并或模板。 使用占位符可以单独定义任何表达式并设置其格式。  
@@ -27,7 +28,7 @@ ms.locfileid: "77079957"
   
 2.  在文本框内，选择要为其设置格式的文本。  
   
-3.  右键单击所选文本，然后单击“文本属性”  。  
+3.  右键单击所选文本，然后单击“文本属性”。  
   
 4.  设置格式设置选项。 例如，在 **“常规”** 选项卡上：  
   
@@ -39,7 +40,7 @@ ms.locfileid: "77079957"
   
          **HTML**  ：将所选文本显示为 HTML。 如果占位符的表达式值包含有效的 HTML 标记，则这些标记将呈现为 HTML。 有关详细信息，请参阅[将 HTML 导入报表（报表生成器和 SSRS）](../../reporting-services/report-design/importing-html-into-a-report-report-builder-and-ssrs.md)。  
   
-5.  单击“确定”。   
+5.  单击“确定”。  
   
 6.  对要为其设置格式的其余文本，重复步骤 2 到步骤 5。  
   
@@ -49,15 +50,15 @@ ms.locfileid: "77079957"
   
 2.  在 **“插入”** 选项卡上，单击 **“文本框”** 。 在列表中单击，然后拖动鼠标根据所需大小创建一个文本框。  
   
-3.  在文本框中键入一个标签，如 My Field:  。  
+3.  在文本框中键入一个标签，如 My Field:。  
   
 4.  将字段从数据集拖到文本框中。 此时将为您的字段创建一个占位符。  
   
-5.  对于基本格式设置，请选择占位符文本，然后在 **“开始”** 选项卡上的 **“字体”** 组中，单击其中一个格式设置选项。例如，单击“加粗”  按钮。  
+5.  对于基本格式设置，请选择占位符文本，然后在 **“开始”** 选项卡上的 **“字体”** 组中，单击其中一个格式设置选项。例如，单击“加粗”按钮。  
   
-     要获得更多格式设置选项，请右键单击占位符文本，然后单击“占位符属性”  。  
+     要获得更多格式设置选项，请右键单击占位符文本，然后单击“占位符属性”。  
   
-6.  单击“确定”。  在报表设计视图中，文本框应包含“**My Field**: [*FieldName*]”，其中 *FieldName* 是你的字段的名称。  
+6.  单击“确定”。 在报表设计视图中，文本框应包含“**My Field**: [*FieldName*]”，其中 *FieldName* 是你的字段的名称。  
   
 7.  单击 **“运行”** 。  
   

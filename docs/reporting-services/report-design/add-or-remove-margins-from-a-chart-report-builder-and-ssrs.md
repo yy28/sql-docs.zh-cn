@@ -1,5 +1,6 @@
 ---
 title: 在图表中添加或删除边距（报表生成器）| Microsoft Docs
+description: 在报表生成器中添加或删除柱形图或散点图的边距。 改善分页报表的可读性或外观。
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 91c43f58-5771-4d33-a54d-0e802d2f5cba
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1a5b9d749cbeab7164bd1ca06d0fc8192561931c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 90b6b1e10ded769785b038b03d3f9d4886c4ba96
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081539"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882028"
 ---
 # <a name="add-or-remove-margins-from-a-chart-report-builder-and-ssrs"></a>在图表中添加或删除边距（报表生成器和 SSRS）
 对于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表中的柱形图和散点图，图表会自动在 x 轴结尾处添加侧边距。 在条形图中，图表会自动在 y 轴结尾处添加侧边距。 在所有其他图表类型中，图表都不会添加侧边距。 您无法更改该边距的大小。  
@@ -25,7 +26,7 @@ ms.locfileid: "77081539"
   
 ## <a name="to-enable-or-disable-side-margins"></a>启用或禁用侧边距  
   
-1.  右键单击轴，然后选择“轴属性”  。 将显示“垂直轴属性”  或“水平轴属性”  对话框。  
+1.  右键单击轴，然后选择“轴属性”。 将显示“垂直轴属性”或“水平轴属性”对话框。  
   
 2.  在 **“轴选项”** 页中，设置 **“侧边距”** 属性：  
   

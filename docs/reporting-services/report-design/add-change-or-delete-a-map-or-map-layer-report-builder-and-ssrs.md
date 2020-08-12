@@ -1,5 +1,6 @@
 ---
 title: 添加、更改或删除地图或地图层（报表生成器）| Microsoft Docs
+description: 了解如何在报表生成器中手动或通过地图层向导来添加、删除或更改地图选项。
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -25,12 +26,12 @@ f1_keywords:
 ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9e2330442d2e50b5f62328d831e582a03e1ac202
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 347a55c139a35c7edf0a5fc37e21a2de0736c401
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488244"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681456"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>添加、更改或删除地图或地图层（报表生成器和 SSRS）
   地图是层的集合。 当你向 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表添加一个地图时，就定义了第一个层。 可以使用地图层向导创建其他层。  
@@ -80,7 +81,7 @@ ms.locfileid: "81488244"
     > [!NOTE]  
     >  尽管可以手动添加并配置地图层，我们仍建议您使用地图层向导来添加新层。 若要在“地图”窗格工具栏中启动向导，请单击层向导按钮 (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"))。  
   
-3.  右键单击该层，然后单击“层数据”  。  
+3.  右键单击该层，然后单击“层数据”。  
   
 4.  在 **“使用的空间数据来自”** 中，选择空间数据的源。 选项根据您的选择内容而有所不同。  
   

@@ -1,5 +1,6 @@
 ---
 title: 创建报表历史记录（SharePoint 集成模式下的 Reporting Services）| Microsoft Docs
+description: 在 SharePoint 集成模式下的 Reporting Services 中，了解如何创建报表历史记录，报表历史记录是随着时间变化而创建的报表快照集合。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e57ec746-05ae-4ff6-8e39-6cde87310daa
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4034d7a2892ede43f364d0ebdd105314b6107ff2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1f27689e6f1e573c85c869fda36881a53401084d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580359"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547439"
 ---
 # <a name="create-report-history-reporting-services-in-sharepoint-integrated-mode"></a>创建报表历史记录（SharePoint 集成模式下的 Reporting Services）
   报表历史记录是随着时间变化而创建的报表快照的集合。 每个快照都是报表创建时所生成的报表的副本。 它包含创建快照时该报表当时的布局和数据。 呈现信息不与快照存储在一起。 打开报表历史记录中的快照时，它将在报表查看器 Web 部件中以 HTML 形式打开。 呈现该快照后，您可以将其导出为其他应用程序格式。  

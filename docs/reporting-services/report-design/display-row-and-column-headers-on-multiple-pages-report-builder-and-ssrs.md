@@ -1,6 +1,6 @@
 ---
 title: 在多个页中显示行标题和列标题（报表生成器）| Microsoft Docs
-description: 可以控制跨多个页的 Tablix 数据区域（表、矩阵或列表）的 Reporting Services 分页报表的每页上是否重复行标题和列标题。
+description: 了解如何为在报表生成器中跨多个页的 Tablix 数据区域控制分页报表的每页上的重复行标题和列标题。
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
@@ -8,12 +8,12 @@ ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.date: 12/09/2019
-ms.openlocfilehash: ca1b00d98c71808cd42acb220e7fbf5d1c382555
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a0ece423e7396e2c3aab07cc1882cf1e7f5b09ad
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254595"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84778639"
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>在多个页中显示行标题和列标题（报表生成器和 SSRS）
 

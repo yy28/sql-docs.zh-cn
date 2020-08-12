@@ -1,5 +1,6 @@
 ---
 title: 准备实现数据处理扩展插件 | Microsoft Docs
+description: 了解如何在 Reporting Services 中实现数据处理扩展插件。 了解可用接口以及所需和可选功能。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 698817e4-33da-4eb5-9407-4103e1c35247
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3ae11d41956f37f1a203235abad71639f942ae7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bf7bbaddbe4379c7d56ce7209b6b93eb1b4f6254
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193892"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529155"
 ---
 # <a name="preparing-to-implement-a-data-processing-extension"></a>准备实现数据处理扩展插件
-  在实现 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 数据处理扩展插件之前，应定义要实现的接口。 你可能要提供整个接口组的特定于扩展插件的实现，或者只是要针对某一子集（例如 <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> 和 <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> 接口）提供实现，客户端在其中主要与作为 DataReader 对象的结果集交互，并且使用 [!INCLUDE[ssRS](../../../includes/ssrs.md)] 数据处理扩展插件作为结果集和数据源之间的桥梁。  
+  在实现 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 数据处理扩展插件之前，应定义要实现的接口。 你可能要提供整个接口组的特定于扩展插件的实现，或者只是要针对某一子集（例如 <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> 和 <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> 接口）提供实现，客户端在其中主要与作为 DataReader 对象的结果集交互，并且使用 [!INCLUDE[ssRS](../../../includes/ssrs.md)] 数据处理扩展插件作为结果集和数据源之间的桥梁****。  
   
  然后，您可以通过以下两种方式之一实现数据处理扩展插件：  
   
@@ -27,7 +28,7 @@ ms.locfileid: "63193892"
   
 -   您的数据处理扩展插件类可以实现 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 提供的数据处理扩展插件接口，并且可以选择实现扩展数据处理扩展插件接口。  
   
- 如果您的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 数据处理扩展插件将不支持某一特定的属性或方法，则将该属性或方法作为无操作实现。 如果某一客户端期望特定的行为，则引发 NotSupportedException 异常  。  
+ 如果您的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 数据处理扩展插件将不支持某一特定的属性或方法，则将该属性或方法作为无操作实现。 如果某一客户端期望特定的行为，则引发 NotSupportedException 异常。  
   
 > [!NOTE]  
 >  某一属性或方法的无操作实现只应用于您选择实现的那些接口的属性和方法。 您选择不实现的可选接口应排除在您的数据处理扩展插件程序集之外。 有关某一接口是必需接口还是可选接口的详细信息，请参阅本节后面的表。  
@@ -62,7 +63,7 @@ ms.locfileid: "63193892"
 ## <a name="available-extension-interfaces"></a>可用的扩展插件接口  
  下表介绍可用接口以及实现是必需的还是可选的。  
   
-|接口|说明|实现|  
+|接口|描述|实现|  
 |---------------|-----------------|--------------------|  
 |IDbConnection|表示与某一数据源的唯一会话。 在客户端/服务器数据库系统的情况下，该会话可等效于到服务器的一个网络连接。|必选|  
 |IDbConnectionExtension|表示可由 [!INCLUDE[ssRS](../../../includes/ssrs.md)] 数据处理扩展插件针对安全性和身份验证实现的附加连接属性。|可选|  

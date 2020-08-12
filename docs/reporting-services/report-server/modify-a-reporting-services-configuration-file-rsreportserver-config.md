@@ -1,5 +1,6 @@
 ---
 title: 修改 Reporting Services 配置文件 (RSreportserver.config) | Microsoft Docs
+description: 了解如何在 Reporting Services 中修改配置文件，以添加或配置高级设置。 某些设置供内部使用。 请谨慎继续。
 ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 958ef51f-2699-4cb2-a92e-3b4322e36a30
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e97dff2a6d08207d95b28ce2f9a0cedafd9b6fff
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 315f1129f6c83f36de02efebf4eb4ec58cb4c48f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65581131"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547943"
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>修改 Reporting Services 配置文件 (RSreportserver.config)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将应用程序设置存储在一组配置文件中。 安装程序会为您安装的每个报表服务器实例创建配置文件。 每个文件中的值要么在安装过程中设置，要么在您使用工具和应用程序将服务器配置为执行某个操作时设置。 在某些情况下，必须直接修改文件来添加或配置高级设置。 将配置设置指定为 XML 元素或属性。 如果您了解 XML 和配置文件，则可以使用文本编辑器或代码编辑器来修改可以由用户定义的设置。  

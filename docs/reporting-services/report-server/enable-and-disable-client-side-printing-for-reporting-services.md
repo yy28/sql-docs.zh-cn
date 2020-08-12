@@ -1,5 +1,6 @@
 ---
 title: 启用和禁用 Reporting Services 的客户端打印 | Microsoft Docs
+description: 了解如何启用或禁用在浏览器中查看的 Reporting Services 报表的客户端打印。 默认情况下，客户端打印功能使用 PDF 格式且是启用的。
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ae8d963b599191970497d841a6caa1f73fd920b3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9ffa8d5781eb3ad7eb95a4dc5b360ad51ede6843
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580345"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547469"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>启用和禁用 Reporting Services 的客户端打印
 
@@ -33,10 +34,10 @@ ms.locfileid: "65580345"
   
 |||  
 |-|-|  
-|对于所有浏览器而言，第一个对话框都一样，你可以更改基本布局属性，例如方向。 单击“打印”  时，体验会略有不同，具体取决于所使用的浏览器。|![ssrs_pdfprint_chrome1](../../reporting-services/report-server/media/ssrs-pdfprint-chrome1.png "ssrs_pdfprint_chrome1")|  
+|对于所有浏览器而言，第一个对话框都一样，你可以更改基本布局属性，例如方向。 单击“打印” 时，体验会略有不同，具体取决于所使用的浏览器。|![ssrs_pdfprint_chrome1](../../reporting-services/report-server/media/ssrs-pdfprint-chrome1.png "ssrs_pdfprint_chrome1")|  
 |在 Chrome 中，将打开详细的浏览器打印对话框。   你可以更改打印配置、打印和打开操作系统打印对话框。|![ssrs_pdfprint_chrome2](../../reporting-services/report-server/media/ssrs-pdfprint-chrome2.png "ssrs_pdfprint_chrome2") ![ssrs_pdfprint_chrome3.png](../../reporting-services/report-server/media/ssrs-pdfprint-chrome3-png.png "ssrs_pdfprint_chrome3.png")|  
 |如果安装了 PDF 阅读器应用程序，打印按钮将打开 PDF 文件的预览窗口，以便执行保存或打印功能。||  
-|如果没有安装 PDF 阅读器应用程序，有两种用户体验︰<br /><br /> 报表将自动呈现，并使用浏览器下载进程来下载 PDF 文件。   **注意︰** 报表越复杂，则从单击 **打印** 到看到浏览器下载通知的延时越长。 你也可以通过单击“单击此处查看报表的 PDF”  再次强制下载。<br /><br /> 单击“单击此处查看报表的 PDF”  强制下载 PDF。|![ssrs_pdfprint_firefox2](../../reporting-services/report-server/media/ssrs-pdfprint-firefox2.png "ssrs_pdfprint_firefox2")|  
+|如果没有安装 PDF 阅读器应用程序，有两种用户体验︰<br /><br /> 报表将自动呈现，并使用浏览器下载进程来下载 PDF 文件。   **注意︰** 报表越复杂，则从单击 **打印** 到看到浏览器下载通知的延时越长。 你也可以通过单击“单击此处查看报表的 PDF” 再次强制下载。<br /><br /> 单击“单击此处查看报表的 PDF” 强制下载 PDF。|![ssrs_pdfprint_firefox2](../../reporting-services/report-server/media/ssrs-pdfprint-firefox2.png "ssrs_pdfprint_firefox2")|  
   
 ##  <a name="troubleshoot-client-side-printing"></a><a name="bkmk_troubleshoot_clientsideprinting"></a> 客户端打印故障排除  
  如果报表查看器工具栏上的打印按钮被禁用，请检查以下事项：  
@@ -52,23 +53,23 @@ ms.locfileid: "65580345"
 ##  <a name="enable-and-disable-client-side-printing"></a><a name="bkmk_enable"></a> 启用与禁用客户端打印  
  报表服务器管理员可以通过将报表服务器系统属性 **EnableClientPrinting** 设置为 **false**，以禁用远程打印功能。 这将对该服务器管理的所有报表禁用客户端打印功能。 默认情况下， **EnableClientPrinting** 设置为 **true**。 您可以通过下列方式禁用客户端打印功能：  
   
--   对于本机模式下的报表服务器  ：  
+-   对于本机模式下的报表服务器 ：  
   
     1.  使用管理权限启动 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 。  
   
     2.  连接到 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中的报表服务器实例。  
   
-    3.  右键单击报表服务器节点，然后单击“属性”  。 如果 **“属性”** 选项被禁用，请确认您是在使用管理权限启动 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 。  
+    3.  右键单击报表服务器节点，然后单击“属性”。 如果 **“属性”** 选项被禁用，请确认您是在使用管理权限启动 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 。  
   
-    4.  单击“高级”。   
+    4.  单击“高级”。  
   
     5.  选择 **EnableClientPrinting**中禁用了报表服务器的客户端打印功能。  
   
-    6.  设置为“True”或“False”，然后单击“确定”  。  
+    6.  设置为“True”或“False”，然后单击“确定” 。  
   
          ![ssrs_ssmsproperties_clientprinting](../../reporting-services/report-server/media/ssrs-ssmsproperties-clientprinting.png "ssrs_ssmsproperties_clientprinting")  
   
--   对于 SharePoint 模式报表服务器  ：  
+-   对于 SharePoint 模式报表服务器 ：  
   
     1.  在 SharePoint 管理中心中，单击 **“应用程序管理”** 。  
   
@@ -80,11 +81,11 @@ ms.locfileid: "65580345"
   
     5.  选择 **“启用客户端打印”** 。 **“启用客户端打印”** 选项位于页面的底部附近。  
   
-    6.  单击“确定”。   
+    6.  单击“确定”。  
   
 -   编写脚本或代码，将报表服务器系统属性 **EnableClientPrinting** 设置为 **false.** 。  
   
- 下面的示例脚本说明了一种禁用客户端打印功能的方法。 编译并运行以下 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 代码，将 EnableClientPrinting  属性设置为 False  。 在运行代码后，请重新启动 IIS。  
+ 下面的示例脚本说明了一种禁用客户端打印功能的方法。 编译并运行以下 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 代码，将 EnableClientPrinting 属性设置为 False。 在运行代码后，请重新启动 IIS。  
   
 ### <a name="sample-script"></a>示例脚本  
   

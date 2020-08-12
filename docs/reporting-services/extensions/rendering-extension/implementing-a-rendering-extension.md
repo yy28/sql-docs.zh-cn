@@ -1,5 +1,6 @@
 ---
 title: 实现呈现扩展插件 | Microsoft Docs
+description: 了解如何通过实现呈现扩展插件，将 Reporting Services 报表数据和布局信息转换为设备特定的格式。
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4a5c64f5-2391-4597-ba3f-81d265b23703
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a72144df0f560feb6da0b954cbd7053832d46c87
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d61af9bd987256a2ad293f7f9566fd1a2bcd041e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193691"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529083"
 ---
 # <a name="implementing-a-rendering-extension"></a>实现呈现扩展插件
-  呈现扩展插件是将报表数据和布局信息转换为设备特定格式的报表服务器的组件或模块。 SQL Server Reporting Services 包含六种呈现扩展插件：HTML、Excel、Word、CSV 或 Text、XML、Image 和 PDF。 您可以创建其他呈现扩展插件以便以其他格式生成报表。  
+  呈现扩展插件是将报表数据和布局信息转换为设备特定格式的报表服务器的组件或模块。 SQL Server Reporting Services 包括六个呈现扩展插件：HTML、Excel、Word、CSV 或 Text、XML、Image 和 PDF。 您可以创建其他呈现扩展插件以便以其他格式生成报表。  
   
 > [!NOTE]  
 >  若要确定哪些呈现扩展插件可用，您可以在 RSReportServer.config 文件中查看已安装的扩展插件列表。  

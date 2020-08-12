@@ -1,5 +1,6 @@
 ---
 title: 饼图（报表生成器）| Microsoft Docs
+description: 了解如何在报表生成器中使用饼图和圆环图显示数据占整体的比例。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 536efa9c-c6fb-4cdd-b41f-ff5382910bd7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 99988a882adff55308c9c7e3fe776cd49b7ce275
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 84f2bdbfd565809167be7c3ffe0169a5d4e3b79f
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082436"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255604"
 ---
 # <a name="pie-charts-report-builder-and-ssrs"></a>饼图（报表生成器和 SSRS）
   饼图和圆环图将数据显示为整体的一定比例。 饼图常用于在各组之间进行比较。 饼图和圆环图与棱锥图和漏斗图一起构成了一组称为形状图的图表。 形状图没有轴。 在形状图上放置某数值字段后，该图表将计算每个值相对总计的百分比。 有关形状图的详细信息，请参阅[形状图（报表生成器和 SSRS）](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md)。  

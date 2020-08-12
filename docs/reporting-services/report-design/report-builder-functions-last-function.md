@@ -1,5 +1,6 @@
 ---
 title: Last 函数（报表生成器）| Microsoft Docs
+description: 在报表生成器的指定作用域中应用所有的排序和筛选后，Last 函数返回一组数据中的最后一个值。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 123b78a0-d6c9-4f78-b0e7-73b21854a250
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e1856df527f071c5366be84c8260d16ea92bf087
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 68f4341c6f747ae58f11ce0c210a7ef4fac78997
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081250"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012615"
 ---
 # <a name="report-builder-functions---last-function"></a>报表生成器函数 - Last 函数
   返回指定表达式的给定作用域中的最后一个值。  
@@ -28,7 +29,7 @@ ms.locfileid: "77081250"
 Last(expression, scope)  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *expression*  
  （**Variant** 或 **Binary**）要对其执行聚合的表达式，例如， `=Fields!Fieldname.Value`。  
   

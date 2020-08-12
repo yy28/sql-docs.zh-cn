@@ -1,5 +1,6 @@
 ---
 title: 页面布局和呈现方式（报表生成器）| Microsoft Docs
+description: 在报表生成器中，用页面布局、分页符和纸张大小的呈现扩展插件设计或改进分页报表。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,19 +9,19 @@ ms.topic: conceptual
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ee04e2cef1f4f4681b42ff8ffb4ce549aeae624d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ef2d28282a1fd787585f401e3b532f104cba5e2c
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082446"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012695"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>页面布局和呈现方式（报表生成器和 SSRS）
 阅读有关用于分页报表的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 呈现扩展插件的信息，以便可确定报表的外观按所需方式呈现，包括页面布局、分页符和纸张大小。 
 
  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器中或者报表生成器或报表设计器的预览窗格中查看报表时，报表首先由 HTML 呈现器呈现。 然后，可以将报表导出为不同格式，例如，Excel 或以逗号分隔 (CSV) 的文件。 接着，导出的报表可用于在 Excel 中进行进一步分析，或用作可以导入和使用 CSV 文件的应用程序的数据源。  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包含一组用于将报表导出为不同格式的呈现器。 每个呈现器在呈现报表时都需要应用规则。 当您将报表导出为其他文件格式时（尤其对于像 Adobe Acrobat (PDF) 呈现器这类根据实际页面大小进行分页的呈现器），您可能需要更改报表的布局，以便在应用呈现规则后，导出的报表能够正确地显示和打印。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包含一组用于将报表导出为不同格式的呈现器。 每个呈现器在呈现报表时都会应用规则。 当您将报表导出为其他文件格式时（尤其对于像 Adobe Acrobat (PDF) 呈现器这类根据实际页面大小进行分页的呈现器），您可能需要更改报表的布局，以便在应用呈现规则后，导出的报表能够正确地显示和打印。  
   
  对于导出的报表获得最佳结果通常是一个循环往复的过程：在报表生成器或报表设计器中创作和预览报表，将报表导出为首选的格式，检查导出的报表，然后对报表进行更改。  
     
@@ -45,7 +46,7 @@ ms.locfileid: "77082446"
  报表可以跨越多个页，每个页上都可以有重复的页眉和页脚。 报表可包含图形元素，如图像和线条，并可具有多种基于表达式的字体、颜色和样式。  
   
 ##  <a name="report-sections"></a><a name="ReportSections"></a> 报表区域  
- 报表由三个主要区域组成：页  眉（可选）、页  脚（可选）和表体。 报表的页眉和页脚不是独立的报表区域，而是由放置在表体的顶部和底部的报表项组成  。 页眉和页脚会在报表每一页的顶部和底部重复相同的内容。 您可以在页眉和页脚中放置图像、文本框和线条。 可以在表体中放置任何类型的报表项。  
+ 报表由三个主要区域组成：页眉（可选）、页脚（可选）和表体。 报表的页眉和页脚不是独立的报表区域，而是由放置在表体的顶部和底部的报表项组成**。 页眉和页脚会在报表每一页的顶部和底部重复相同的内容。 您可以在页眉和页脚中放置图像、文本框和线条。 可以在表体中放置任何类型的报表项。  
   
  您可以设置报表项的属性，以便一开始就在页中隐藏或显示该报表项。 可以设置数据区域的行、列或组的可见性属性，并提供切换按钮使用户能以交互方式显示或隐藏报表数据。 还可以使用表达式（包括基于报表参数的表达式）来设置可见性或初始可见性。  
   

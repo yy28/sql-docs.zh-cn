@@ -1,5 +1,6 @@
 ---
 title: Reporting Services 报表服务器（SharePoint 模式） | Microsoft Docs
+description: SharePoint 模式的 Reporting Services Report Server 可在 SharePoint 中运行，以对 Reporting Services 内容类型使用协作和管理功能。
 ms.date: 09/26/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: af25232f5a1603f25814309270813188c05a89fc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 66cd108b1f96e003645510e3a17a3627a45495e4
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68262355"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764880"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Reporting Services 报表服务器（SharePoint 模式）
 
@@ -21,7 +22,7 @@ ms.locfileid: "68262355"
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-  为 SharePoint 模式配置的 Reporting Services 报表服务器可在 SharePoint 产品的部署中运行  。 SharePoint 模式下的报表服务器可针对报表和其他 [!INCLUDE[ssRSnfoversion_md](../../includes/ssrsnoversion-md.md)] 内容类型使用 SharePoint 的协作和管理功能。 SharePoint 模式要求在 SharePoint Web 前端上安装用于 SharePoint 产品的 Reporting Services 外接程序的适当版本。  
+  为 SharePoint 模式配置的 Reporting Services 报表服务器可在 SharePoint 产品的部署中运行。 SharePoint 模式下的报表服务器可针对报表和其他 [!INCLUDE[ssRSnfoversion_md](../../includes/ssrsnoversion-md.md)] 内容类型使用 SharePoint 的协作和管理功能。 SharePoint 模式要求在 SharePoint Web 前端上安装用于 SharePoint 产品的 Reporting Services 外接程序的适当版本。  
   
 > [!NOTE]
 > 自 SQL Server 2016 之后，不再提供 Reporting Services 与 SharePoint 的集成这一功能。
@@ -62,11 +63,11 @@ ms.locfileid: "68262355"
   
 ## <a name="connected-mode-and-local-mode"></a>连接模式和本地模式
 
- SQL Server 2008 R2 版本引入了新的“本地模式”  ，可用于从安装了用于 SharePoint 2010 产品的 Microsoft SQL Server 2008 R2 或更高版本的 Reporting Services 外接程序的 SharePoint 2010 服务器查看报表。  
+ SQL Server 2008 R2 版本引入了新的“本地模式”**，可用于从安装了用于 SharePoint 2010 产品的 Microsoft SQL Server 2008 R2 或更高版本的 Reporting Services 外接程序的 SharePoint 2010 服务器查看报表。  
   
--   本地模式：本地模式允许从 SharePoint 文档库在本地呈现报表，而无需与 Reporting Services 报表服务器集成  。 用于 SharePoint 产品的 Reporting Services 外接程序是必需的，但 Reporting Services 报表服务器不是。 外接程序可以以多种不同的方式进行安装，包括 SharePoint 2010 产品准备工具。 有关本地模式的详细信息，请参阅[报表查看器中的本地模式报表和连接模式报表](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)和[在何处查找用于 SharePoint 产品的 Reporting Services 外接程序](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
+-   *本地模式*：本地模式允许从 SharePoint 文档库在本地呈现报表，而无需与 Reporting Services 报表服务器集成。 用于 SharePoint 产品的 Reporting Services 外接程序是必需的，但 Reporting Services 报表服务器不是。 外接程序可以以多种不同的方式进行安装，包括 SharePoint 2010 产品准备工具。 有关本地模式的详细信息，请参阅[报表查看器中的本地模式报表和连接模式报表](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)和[在何处查找用于 SharePoint 产品的 Reporting Services 外接程序](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
   
--   连接模式：通过使用 SharePoint 管理中心将 Reporting Services 报表服务器集成到 SharePoint 场中，支持连接模式  。 这一与报表服务器的集成可以实现完全的端到端报告，并且提供 SharePoint 2010 的协作功能以及基于服务器的报表服务器功能，包括订阅、快照和基于服务器的处理。  
+-   *连接模式*：通过使用 SharePoint 管理中心将 Reporting Services 报表服务器集成到 SharePoint 场中，支持连接模式。 这一与报表服务器的集成可以实现完全的端到端报告，并且提供 SharePoint 2010 的协作功能以及基于服务器的报表服务器功能，包括订阅、快照和基于服务器的处理。  
   
 ## <a name="unsupported-sharepoint-features"></a>不支持的 sharePoint 功能
 
@@ -126,7 +127,7 @@ ms.locfileid: "68262355"
 
  下表总结了与 Reporting Services SharePoint 模式报表服务器相关的任务：  
   
-|**任务**|**链接**|  
+|**任务**|**链接**。|  
 |--------------|--------------|  
 |在 SharePoint 模式下安装和配置 Reporting Services 的详细步骤。|[安装适用于 SharePoint 2010 的 Reporting Services SharePoint 模式](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)和[向场中添加其他报表服务器](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)。|  
 |通过添加其他报表服务器来横向扩展 Reporting Services SharePoint 部署。|[向场中添加其他报表服务器](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)和 [SharePoint 中 SQL Server BI 功能的部署拓扑](https://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26)。|  

@@ -1,5 +1,6 @@
 ---
 title: Windows 应用程序日志 | Microsoft Docs
+description: 了解如何在由在本地系统上运行报表服务器应用程序生成的应用程序日志中查看事件消息。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 742fd00e-aa6c-4c8a-b58f-c03c489b1699
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f3d51afd8a27786be3c66bfdf935ad8b2e328d36
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5466c8a3e839a6db9438fde3ca7ce295405f3f23
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580926"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547829"
 ---
 # <a name="windows-application-log"></a>Windows 应用程序日志
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将事件消息写入 Windows 应用程序日志。 您可以使用写入应用程序日志的消息信息，找出在本地系统上运行的报表服务器应用程序生成的事件。  
@@ -37,7 +38,7 @@ ms.locfileid: "65580926"
   
  下表对报表服务器写入应用程序事件日志的事件类型进行了说明：  
   
-|事件类型|说明|  
+|事件类型|描述|  
 |----------------|-----------------|  
 |信息|描述成功操作的事件（例如，报表服务器服务的启动时间）。|  
 |警告|指示潜在问题的事件（如磁盘空间不足）。|  

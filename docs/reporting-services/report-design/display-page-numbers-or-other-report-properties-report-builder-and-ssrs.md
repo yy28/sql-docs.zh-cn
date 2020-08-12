@@ -1,5 +1,6 @@
 ---
 title: 显示页码或其他报表属性（报表生成器）| Microsoft Docs
+description: 添加报表的属性（包括页码、文件名和标题），以便在页眉或页脚中显示。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c7d95245-4709-4d04-acb4-59bf71e60d97
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 14496cc4e46118b5421f4d061136f7b1c5b16850
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b5bd98f079ed492a4959597068c1f49a048b74cd
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080488"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689534"
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>显示页码或其他报表属性（报表生成器和 SSRS）
   可以方便地向报表的页眉或页脚添加页码、报表标题、文件名和其他报表属性。 这些属性在“报表数据”窗格的“内置字段”文件夹中存储为字段：  
@@ -47,7 +48,7 @@ ms.locfileid: "77080488"
 1.  在“报表数据”窗格中，展开“内置字段”文件夹。  
   
     > [!NOTE]  
-    >  如果看不到“报表数据”窗格，请在“视图”选项卡上选中“报表数据”  。  
+    >  如果看不到“报表数据”窗格，请在“视图”选项卡上选中“报表数据”。  
   
 2.  将 **“页码”** 字段从“报表数据”窗格拖动到报表表头和表尾。  
   
@@ -58,11 +59,11 @@ ms.locfileid: "77080488"
   
 ### <a name="to-add-the-word-page-before-the-page-number"></a>在页码前添加单词 "Page"  
   
-1.  右键单击包含 [&PageNumber] 的文本框，然后单击“表达式”  。  
+1.  右键单击包含 [&PageNumber] 的文本框，然后单击“表达式”。  
   
-     “为以下项设置表达式: 值”文本框包含表达式 =Globals!PageNumber  。  
+     “为以下项设置表达式: Value”文本框包含表达式 =Globals!PageNumber。  
   
-2.  将光标放在 = 号后，然后键入 "Page " &  。  
+2.  将光标放在 = 号后，然后键入 "Page " &。  
   
      该表达式现在变为 ="Page "&Globals!PageNumber  
   
@@ -72,9 +73,9 @@ ms.locfileid: "77080488"
   
 1.  右键单击包含表达式的文本框，然后单击 **“表达式”** 。  
   
-2.  在表达式的末尾键入 &" of "&  。  
+2.  在表达式的末尾键入 &" of "&。  
   
-3.  在“类别”窗格中，展开“内置字段”，然后双击 TotalPages   。  
+3.  在“类别”窗格中，展开“内置字段”，然后双击 TotalPages 。  
   
      该表达式现在变为 ="Page "&Globals!PageNumber &" of "&Globals!TotalPages  
   

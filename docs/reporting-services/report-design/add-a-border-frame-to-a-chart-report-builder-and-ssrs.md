@@ -1,5 +1,6 @@
 ---
 title: 向图表添加边框（报表生成器）| Microsoft Docs
+description: 了解如何在报表生成器中图表的外部周围使用边框以增强图表的视觉效果。
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ca0c5040-40bb-4cb7-bc2b-5bcbe73858bb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b1e3f4b0c6f4efca4c3bd0b901acd715de0f74f6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 91e84e8ee73c8e0bbedd4df4de4cf19ec627e7dc
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080788"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681576"
 ---
 # <a name="add-a-border-frame-to-a-chart-report-builder-and-ssrs"></a>向图表添加边框（报表生成器和 SSRS）
   若要增强图表的视觉效果，可以考虑在图表的外部周围使用边框。 可以使用 **“图表属性”** 对话框或“属性”窗格来选择边框。 图表的边框不能应用于任何其他数据区域。  
@@ -23,10 +24,10 @@ ms.locfileid: "77080788"
   
 ### <a name="to-apply-a-border-to-a-chart"></a>向图表应用边框  
   
-1.  右键单击图表上的任意位置并选择“图表属性”  。  
+1.  右键单击图表上的任意位置并选择“图表属性”。  
   
     > [!NOTE]  
-    >  如果看不到“图表属性”，请在快捷菜单中指向“图表”，然后选择“图表属性”    。  
+    >  如果看不到“图表属性”，请在快捷菜单中指向“图表”，然后选择“图表属性”  。  
   
 2.  选择 **“边框”** ，然后单击要应用于图表的边框类型。  
   
@@ -35,7 +36,7 @@ ms.locfileid: "77080788"
 4.  （可选）指定将绘制在图表周围作为边框的线条的颜色。  
   
     > [!NOTE]  
-    >  **“线条颜色”** 列表中包括常用颜色。 若要在更多颜色列表中进行选择，请在列表中单击“更多颜色”，或单击列表旁的表达式 (fx) 按钮以打开“表达式”编辑器    。  
+    >  **“线条颜色”** 列表中包括常用颜色。 若要在更多颜色列表中进行选择，请在列表中单击“更多颜色”，或单击列表旁的表达式 (fx) 按钮以打开“表达式”编辑器************。  
   
 5.  （可选）指定边框的宽度。 有效值介于 0.25pt 到 20pt 之间。 可以考虑将边框的大小保持在 1pt 到 3pt 之间，以获得最佳视觉效果。  
   

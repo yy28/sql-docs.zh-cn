@@ -1,5 +1,6 @@
 ---
 title: 报表参数概念（报表生成器）| Microsoft Docs
+description: 了解如何添加参数以链接相关报表、控制报表外观、筛选报表数据或缩小报表生成器中的范围。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: b0aa2159-4e49-4713-8824-5ef9a9edbc62
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e5e7cafdce773969f9e6914a47534f88eb238a4d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e6e6419e43991ff2dfe28ea0e3f6b2033693b9c3
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081075"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681596"
 ---
 # <a name="report-parameters-concepts-report-builder-and-ssrs"></a>报表参数概念（报表生成器和 SSRS）
   您可以向报表添加参数，以便链接相关报表、控制报表外观、筛选报表数据或者将报表的作用域限制为特定的用户或位置。  

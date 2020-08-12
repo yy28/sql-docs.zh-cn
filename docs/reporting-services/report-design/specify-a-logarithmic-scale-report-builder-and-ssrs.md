@@ -1,5 +1,6 @@
 ---
 title: 指定对数刻度（报表生成器）| Microsoft Docs
+description: 通过分页报表中图表上的对数刻度使数据更易于管理，从而改善图表的外观。
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f3092c1c-b128-433d-9a95-983508b2a8d4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 80ddb9e21a3bd61cf9f994cce3d5722ae5fcf3f6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9525e71bf388b6a9265be3a101c03db65c622084
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080927"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83688842"
 ---
 # <a name="specify-a-logarithmic-scale-report-builder-and-ssrs"></a>指定对数刻度（报表生成器和 SSRS）
   如果数据按对数成比例，可能需要考虑在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中的图表上使用对数刻度。 这样做可以使数据更容易管理，因而有助于改善图表的外观。 大多数对数刻度都以 10 为底数。  
@@ -27,11 +28,11 @@ ms.locfileid: "77080927"
   
 ## <a name="to-specify-a-logarithmic-scale"></a>指定对数刻度  
   
-1.  右键单击图表的 y 轴，然后单击“垂直轴属性”  。 随即出现“垂直轴属性”对话框  。  
+1.  右键单击图表的 y 轴，然后单击“垂直轴属性”。 随即出现“垂直轴属性”对话框。  
   
-2.  在“轴选项”中，选择“使用对数刻度”   。  
+2.  在“轴选项”中，选择“使用对数刻度” 。  
   
-3.  在“对数底数”文本框中，键入一个用作对数底数的正值  。 如果不指定任何值，则对数底数采用默认值 10。  
+3.  在“对数底数”文本框中，键入一个用作对数底数的正值。 如果不指定任何值，则对数底数采用默认值 10。  
   
 ## <a name="see-also"></a>另请参阅  
  [设置图表上轴标签的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   

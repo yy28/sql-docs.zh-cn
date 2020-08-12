@@ -1,5 +1,6 @@
 ---
 title: 在滚动报表时保持标题可见（报表生成器）| Microsoft Docs
+description: 在报表生成器中呈现报表之后，冻结行或列标题以防止行和列标签滚动出视野之外。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6d9192a4-fd5c-41ad-b9ef-f88f9496afed
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b727fcffec668fbe854222eeabab6263b82e81cc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d846d6ce9a206dc632dec3033707b645bd7c1b55
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081992"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255486"
 ---
 # <a name="keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs"></a>在滚动报表时保持标题可见（报表生成器和 SSRS）
   呈现报表之后，为防止行和列标签滚动出视野之外，可以冻结行或列标题。  

@@ -1,5 +1,6 @@
 ---
 title: 创建递归层次结构组（报表生成器）| Microsoft Docs
+description: 了解报表生成器中递归层次结构组的用法。 显示组织结构图中的层次结构数据（如员工）。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 06eccab6-4089-46e8-a84f-5bf3bbe0c23b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a1674673e3c009815d04e3c4428244dfc29d0343
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a4fd1197937255ef798d7ead1cd7a39015f34d12
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77078526"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255290"
 ---
 # <a name="creating-recursive-hierarchy-groups-report-builder-and-ssrs"></a>创建递归层次结构组（报表生成器和 SSRS）
 若要在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表中显示递归数据（其中父级和子级之间的关系由数据集中的字段表示），则可以根据子字段设置数据区域组表达式，根据父字段设置 Parent 属性。  

@@ -1,5 +1,6 @@
 ---
 title: 为报表服务器注册服务主体名称 (SPN) | Microsoft Docs
+description: 了解当网络使用 Kerberos 进行身份验证时，如果 Report Server 服务作为域用户运行应如何创建它的 SPN。
 ms.date: 02/12/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: dda91d4f-77cc-4898-ad03-810ece5f8e74
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9bfe7a68dc64d2248b9ff9fc4c0696970f692b60
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5d5f52195deab514d4f7bcc03c77d9cb9a5c69b3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77256420"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544499"
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>为报表服务器注册服务主体名称 (SPN)
   如果要在使用 Kerberos 协议进行相互身份验证的网络中部署 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，并且将报表服务器服务配置为以域用户帐户身份运行，则必须为报表服务器服务创建服务主体名称 (SPN)。  
@@ -41,7 +42,7 @@ Setspn -s http/<computer-name>.<domain-name>:<port> <domain-user-account>
   
  **HTTP** 为服务类。 报表服务器 Web 服务在 HTTP.SYS 中运行。 在为 HTTP 创建 SPN 时，将同时对在 HTTP.SYS（包括承载在 IIS 中的应用程序）中运行的位于同一台计算机上的所有 Web 应用程序授予基于该域用户帐户的票证。 如果这些服务在其他帐户下运行，则身份验证请求将失败。 为避免此问题，请务必将所有 HTTP 应用程序配置为在同一帐户下运行，或考虑为每个应用程序创建主机头，然后为每个主机头单独创建一个 SPN。 配置主机标头时，无论 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置如何都必须更改 DNS。  
   
- 为 \<computername> 和 \<domainname> 指定的值可标识托管报表服务器的计算机的唯一网络地址。 此地址可以是本地主机名，或者完全限定的域名 (FQDN)。 如果只有一个域，可从命令行中省略 \<domainname>  。 \<domain-user-account  > 是报表服务器服务运行时所使用的用户帐户以及必须注册 SPN 的用户帐户。  
+ 为 \<*computername*> 和 \<*domainname*> 指定的值将标识承载 Report Server 的计算机的唯一网络地址。 此地址可以是本地主机名，或者完全限定的域名 (FQDN)。 如果只有一个域，可从命令行中省略 \<*domainname*>。 \<*domain-user-account*> 是 Report Server 服务运行时使用的用户帐户，也是必须注册 SPN 的用户帐户。  
   
 ## <a name="register-an-spn-for-domain-user-account"></a>为域用户帐户注册 SPN  
   

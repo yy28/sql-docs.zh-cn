@@ -1,5 +1,6 @@
 ---
 title: 添加背景图像（报表生成器）| Microsoft Docs
+description: 了解如何在报表定义中嵌入图像，以将图像添加到各种报表项（包括文本框、列表和页眉）。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c777fefb-8695-44a7-b5cd-a18c587583f2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0c8b53c0e259a9a0c99ae1bd06cc9cab9cc14355
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 719201b31c4bbfef138799f6712d33e24c50b725
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081338"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689357"
 ---
 # <a name="add-a-background-image-report-builder-and-ssrs"></a>添加背景图像（报表生成器和 SSRS）
   您可以向报表项（如矩形、文本框、列表、矩阵、表和某些图表部件）或报表区域（如页眉、页脚或表体）添加背景图像。 在“属性”窗格中，可以为报表设计图面上显示 **BackgroundImage** 的任何所选项定义背景图像。 与其他图像相似，背景图像可以是指向报表服务器上的图像的 URL、数据集字段的图像，也可以是报表定义中嵌入的图像。 若要使用在报表中嵌入的图像，您必须首先向报表定义中添加该嵌入图像，然后才能向设计图面中添加该图像。  
@@ -23,10 +24,10 @@ ms.locfileid: "77081338"
   
 ### <a name="to-embed-an-image-in-the-report-definition"></a>在报表定义中嵌入图像  
   
-1.  在“报表数据”窗格中，右键单击“图像”节点，然后单击“添加图像”   。  
+1.  在“报表数据”窗格中，右键单击“图像”节点，然后单击“添加图像” 。  
   
     > [!NOTE]  
-    >  如果“报表数据”窗格不可见，请单击“视图”选项卡上的“报表数据”   。  
+    >  如果“报表数据”窗格不可见，请单击“视图”选项卡上的“报表数据” 。  
   
 2.  导航到您要在报表定义中嵌入的图像，然后单击 **“确定”** 。  
   
@@ -56,7 +57,7 @@ ms.locfileid: "77081338"
   
          将 **“值”** 设置为报表数据集中某个字段的名称。 有关详细信息，请参阅[添加数据绑定图像（报表生成器和 SSRS）](../../reporting-services/report-design/add-a-data-bound-image-report-builder-and-ssrs.md)。  
   
-         对于 MIMEType 或文件格式，为图像选择适当的 MIME 类型，如 .bmp  。  
+         对于 MIMEType 或文件格式，为图像选择适当的 MIME 类型，如 .bmp。  
   
         > [!NOTE]  
         >  仅当 **Source** 属性设置为 **Database**时，MIMEType 才适用。 如果将 **Source** 属性设置为 **External** 或 **Embedded**，则忽略 **MIMEType** 的值。  

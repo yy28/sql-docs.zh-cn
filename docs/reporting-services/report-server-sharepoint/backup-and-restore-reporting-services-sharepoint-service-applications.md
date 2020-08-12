@@ -1,5 +1,6 @@
 ---
 title: 备份和还原 Reporting Services SharePoint 服务应用程序 | Microsoft Docs
+description: 了解如何使用 SharePoint 管理中心或 PowerShell 备份和还原 SQL Server Reporting Services 服务应用程序。
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 93f3eb7db9c00f98d1d4270e9febc105eb6ef6b3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9bf9391bfb9a705379caa6c9f34ae752d2dcc3c6
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574349"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83767091"
 ---
 # <a name="back-up-and-restore-reporting-services-sharepoint-service-applications"></a>备份和还原 Reporting Services SharePoint 服务应用程序
 
@@ -31,7 +32,7 @@ ms.locfileid: "65574349"
 ### <a name="limitations-and-restrictions"></a>限制和局限
 
 > [!NOTE]
->  通过使用 SharePoint 备份和还原功能，可以部分地备份和还原 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序。 **需要执行其他步骤** ，本主题中介绍了这些步骤。 备份过程当前不  备份无人参与的执行帐户 (UEA) 或对 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据库的 Windows 身份验证的加密密钥和凭据。
+>  通过使用 SharePoint 备份和还原功能，可以部分地备份和还原 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序。 **需要执行其他步骤** ，本主题中介绍了这些步骤。 备份过程当前不备份无人参与的执行帐户 (UEA) 或对 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据库的 Windows 身份验证的加密密钥和凭据。
 
 ### <a name="recommendations"></a>建议
   
@@ -65,7 +66,7 @@ ms.locfileid: "65574349"
   
 3.  选择“**下一页**”。  
   
-4.  键入“备份位置:”  的路径，然后选择“开始备份”   
+4.  键入“备份位置:”的路径，然后选择“开始备份”  
   
 5.  重复上述过程，而不是选择服务应用程序，展开 **“共享服务代理”** 节点，然后选择服务应用程序代理。 该应用程序将具有 **“SQL Server Reporting Services 服务应用程序代理”** 类型。  
   
@@ -77,23 +78,23 @@ ms.locfileid: "65574349"
   
 ### <a name="verify-execution-account-and-database-authentication"></a>验证执行帐户和数据库身份验证
 
- **执行帐户** ：验证您的服务应用程序是否正在使用执行帐户：  
+ **执行帐户**：验证你的服务应用程序是否正在使用执行帐户：  
   
 1.  在 SharePoint 管理中心的“应用程序管理”组中，选择“管理服务应用程序”。  
   
-2.  选择你的服务应用程序的名称，然后选择 SharePoint 功能区中的“管理”  。  
+2.  选择你的服务应用程序的名称，然后选择 SharePoint 功能区中的“管理”。  
   
-3.  选择“执行帐户”  。  
+3.  选择“执行帐户”。  
   
 4.  如果配置了执行帐户，则当需要还原服务应用程序备份时，您需要知道凭据。 在知道正确的凭据之前，请不要继续执行备份和还原过程。  
   
- **数据库身份验证** ：验证您的服务应用程序是否正在使用 Windows 身份验证来进行数据库身份验证：  
+ **数据库身份验证**：验证你的服务应用程序是否正在使用 Windows 身份验证来进行数据库身份验证：  
   
 1.  在 SharePoint 管理中心的“应用程序管理”组中，选择“管理服务应用程序”。  
   
-2.  选择你的服务应用程序的名称，然后选择 SharePoint 功能区中的“属性”  。  
+2.  选择你的服务应用程序的名称，然后选择 SharePoint 功能区中的“属性”。  
   
-3.  查看“Reporting Services (SSRS) 服务数据库”  部分。  
+3.  查看“Reporting Services (SSRS) 服务数据库”部分。  
   
 4.  如果配置了 Windows 身份验证，则您需要知道凭据，以便您可以在还原服务应用程序后对其进行配置。 在知道正确的凭据之前，请不要继续执行备份和还原过程。  
   
@@ -111,15 +112,15 @@ ms.locfileid: "65574349"
   
 1.  在 SharePoint 管理中心中，选择“备份和还原”组中的“从备份中还原”。  
   
-2.  在“备份目录位置”  框中键入指向备份文件的路径，然后选择“刷新”  。  
+2.  在“备份目录位置”框中键入指向备份文件的路径，然后选择“刷新”。  
   
-3.  从“顶部组件”  列表中选择服务应用程序备份，然后选择“下一步”  。  
+3.  从“顶部组件”列表中选择服务应用程序备份，然后选择“下一步”。  
   
-4.  选择你的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 应用程序，然后选择“下一步”  。  
+4.  选择你的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 应用程序，然后选择“下一步”。  
   
 5.  在 **“登录名和密码”** 部分中，键入登录名的密码。 登录名框中应填充服务应用程序在备份之前使用的登录名。  
   
-6.  选择“开始还原”  。  
+6.  选择“开始还原”。  
   
 7.  重复上述过程，而不是还原服务应用程序，展开 **“共享服务”** 节点，然后展开 **“共享服务应用程序”** 节点。  
   
@@ -135,30 +136,30 @@ ms.locfileid: "65574349"
 
 ### <a name="configure-the-execution-account-and-database-authentication"></a>配置执行帐户和数据库身份验证
 
- **执行帐户** ：如果您的服务应用程序正在使用执行帐户，请完成一些步骤对它进行配置：  
+ **执行帐户**：如果你的服务应用程序正在使用执行账户，请完成下列步骤对它进行配置：  
   
 1.  在 SharePoint 管理中心的“应用程序管理”组中，选择“管理服务应用程序”。  
   
-2.  选择你的服务应用程序的名称，然后选择 SharePoint 功能区中的“管理”  。  
+2.  选择你的服务应用程序的名称，然后选择 SharePoint 功能区中的“管理”。  
   
-3.  选择“执行帐户”  。  
+3.  选择“执行帐户”。  
   
 4.  键入帐户和密码，然后选中 **“指定执行帐户”** 框。  
   
-5.  选择“确定”  。  
+5.  选择“确定”。  
   
- **数据库身份验证** ：如果您的服务应用程序正在使用 Windows 身份验证来进行数据库身份验证，请完成以下步骤：  
+ **数据库身份验证**：如果你的服务应用程序正在使用 Windows 身份验证来进行数据库身份验证，请完成以下步骤：  
   
 1.  在 SharePoint 管理中心的“应用程序管理”组中，选择“管理服务应用程序”。  
   
-2.  选择你的服务应用程序的名称，然后选择 SharePoint 功能区中的“属性”  。  
+2.  选择你的服务应用程序的名称，然后选择 SharePoint 功能区中的“属性”。  
   
-3.  查看“Reporting Services (SSRS) 服务数据库”  部分。  
+3.  查看“Reporting Services (SSRS) 服务数据库”部分。  
   
 4.  选择 **“Windows 身份验证”** 。  
   
 5.  键入帐户和密码。 如果适当，请选择 **“用作 Windows 凭据”** 。  
   
-6.  选择“确定” 
+6.  选择“确定”
 
 更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)

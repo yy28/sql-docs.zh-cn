@@ -1,5 +1,6 @@
 ---
 title: Reporting Services 中的身份验证 | Microsoft Docs
+description: 了解如何使用窗体身份验证或 IAuthenticationExtension2 接口在 Reporting Services 中扩展身份验证方案。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 103ce1f9-31d8-44bb-b540-2752e4dcf60b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fdf93fe49275f0604606b65b7a8b5f60df0e887e
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 64d22ded480b62a8d963127e32cf35b5e53df9ea
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488581"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529073"
 ---
 # <a name="authentication-in-reporting-services"></a>Reporting Services 中的身份验证
   身份验证是确立用户对某一身份的权限的过程。 您可以使用多种方法来验证某一用户的身份。 最常见的方法是使用密码。 例如，在实现窗体身份验证时，您希望某一实现查询用户的凭据（通常通过请求提供登录名和密码的某些界面），然后根据数据存储区（例如数据库表或配置文件）验证用户。 如果无法验证凭据，该身份验证过程将失败，并且用户将假定匿名身份。  

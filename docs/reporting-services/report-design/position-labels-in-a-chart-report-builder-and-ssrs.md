@@ -1,5 +1,6 @@
 ---
 title: 图表中的位置标签（报表生成器）| Microsoft Docs
+description: 确定要使用的图表类型，以了解如何更改标签在该类型和形状的图表中的位置。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5db74e0b-8be8-4b47-b386-faab56dffa9b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 66083dc0ff720f5b836db0e6f0689c916d2b2fdd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 23969f84491a66d7aedfdb887128fa85aea34742
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082377"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83688654"
 ---
 # <a name="position-labels-in-a-chart-report-builder-and-ssrs"></a>图表中的位置标签（报表生成器和 SSRS）
   由于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表中的每种图表类型都具有不同的形状，因此应将数据点标签放在最佳位置上以免对图表产生干扰。 标签的默认位置因图表类型而异：  
@@ -35,7 +36,7 @@ ms.locfileid: "77082377"
   
 1.  创建一个饼图。  
   
-2.  在设计图面上，右键单击该图表并选择“显示数据标签”  。  
+2.  在设计图面上，右键单击该图表并选择“显示数据标签”。  
   
 3.  打开“属性”窗格。 在 **“视图”** 选项卡上，单击 **“属性”** 。  
   
@@ -49,7 +50,7 @@ ms.locfileid: "77082377"
   
 1.  创建一个漏斗图或棱锥图。  
   
-2.  在设计图面上，右键单击该图表并选择“显示数据标签”  。  
+2.  在设计图面上，右键单击该图表并选择“显示数据标签”。  
   
 3.  打开“属性”窗格。 在 **“视图”** 选项卡上，单击 **“属性”**  
   
@@ -66,7 +67,7 @@ ms.locfileid: "77082377"
   
 1.  创建一个条形图。  
   
-2.  在设计图面上，右键单击该图表并选择“显示数据标签”  。  
+2.  在设计图面上，右键单击该图表并选择“显示数据标签”。  
   
 3.  打开“属性”窗格。 在 **“视图”** 选项卡上，单击 **“属性”**  
   
@@ -82,7 +83,7 @@ ms.locfileid: "77082377"
   
 1.  创建一个面积图、柱形图、折线图或散点图。  
   
-2.  在设计图面上，右键单击该图表并选择“显示数据标签”  。  
+2.  在设计图面上，右键单击该图表并选择“显示数据标签”。  
   
 3.  打开“属性”窗格。 在 **“视图”** 选项卡上，单击 **“属性”**  
   

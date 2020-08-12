@@ -1,5 +1,6 @@
 ---
 title: 设置文本和占位符的格式（报表生成器）| Microsoft Docs
+description: 使用报表生成器中文本或数据区域内的字体、样式、颜色以及对齐方式的格式选项，提高报表的可读性。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ f1_keywords:
 ms.assetid: 26a4baf2-7bc5-4634-b136-552687ffa477
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5c97993b2cc2bd2585bfe6010e6aa4b1cfd59f78
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5e507c40fba6755a0a7a82e3047b2b9b44cbc66d
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079524"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012655"
 ---
 # <a name="formatting-text-and-placeholders-report-builder-and-ssrs"></a>设置文本和占位符的格式（报表生成器和 SSRS）
   文本框可以是数据区域中包含以下内容的报表项或独立单元：文本、计算字段、指向数据库中字段的指针或前面所有三项的组合。 您可以混合字体和颜色、添加加粗和倾斜样式以及使用段落样式（如对齐和悬挂缩进）。 可以设置整个文本框的格式，也可以设置文本框内特定文本、数字、表达式或字段的格式。  
@@ -31,26 +32,26 @@ ms.locfileid: "77079524"
   
  在此图中，文本框本身带有边框，而且所有文本均位于同一文本框内，但文本具有各种不同的格式。  
   
- 若要快速开始使用，请参阅[教程：设置文本格式（报表生成器）](../../reporting-services/tutorial-format-text-report-builder.md)。  
+ 若要快速开始，请参阅[教程：设置文本格式（报表生成器）](../../reporting-services/tutorial-format-text-report-builder.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="creating-placeholder-text-in-a-text-box"></a>在文本框中创建占位符文本  
- 在文本框内定义简单或复杂表达式时，生成的该表达式的用户界面表示形式称为“占位符”  。 可以对单个文本框中的任意多个占位符或部分文本定义颜色、字体、操作和其他行为。  
+ 在文本框内定义简单或复杂表达式时，生成的该表达式的用户界面表示形式称为“占位符” **。 可以对单个文本框中的任意多个占位符或部分文本定义颜色、字体、操作和其他行为。  
   
  占位符的值始终是简单表达式或复杂表达式。 您可以使用下列方法之一来创建表达式，以便向文本框添加占位符：  
   
 -   将 **“报表数据”** 窗格中的字段拖放到文本框中。 如果将表达式拖放到表体的任意其他位置，则将创建包含占位符的新文本框。 该占位符的值将为与已删除字段对应的字段表达式。  
   
--   右键单击文本框中的任意位置，并选择“插入占位符”  。 在 **“占位符属性”** 对话框中，可以将表达式指定为占位符的值。 有关详细信息，请参阅 [“占位符属性”对话框，“常规”（报表生成器和 SSRS）](https://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8)。  
+-   右键单击文本框中的任意位置，并选择“插入占位符”。 在 **“占位符属性”** 对话框中，可以将表达式指定为占位符的值。 有关详细信息，请参阅 [“占位符属性”对话框，“常规”（报表生成器和 SSRS）](https://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8)。  
   
 -   在文本框中键入任何简单或复杂表达式。 例如，如果在文本框中键入 **Name: [Name]** ，则 **[Name]** 文本将作为表示 `=Fields!Name.Value`表达式的占位符显示。  
   
 -   在空文本框中键入以等号 (=) 作为开头的表达式。 将焦点更改到文本框之外时，生成的表达式则转换为可编辑的占位符。 如果文本框不为空，或者在文本框中的任何其他位置插入等号而不作为第一个字符，则将等号视为字符串文字，并且不会创建占位符。 有关定义简单和复杂表达式的详细信息，请参阅[报表中的表达式用法（报表生成器和 SSRS）](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)。  
   
 ## <a name="formatting-placeholders-and-static-text-in-a-text-box"></a>在文本框中设置占位符和静态文本的格式  
- 使用 **“占位符属性”** 对话框可以设置占位符的格式。 只能设置整个占位符的格式，而不能设置部分占位符的格式。 如果要查看基础表达式，则可以将指针停留在占位符上。 通过双击该占位符，或者右键单击该占位符并选择“占位符属性”，可以更改基础表达式  。 还可以使用 **“占位符属性”** 对话框 **“常规”** 中的 **“标签”** 属性来指定用户界面标签。 该标签是在设计时显示的占位符的文本。  
+ 使用 **“占位符属性”** 对话框可以设置占位符的格式。 只能设置整个占位符的格式，而不能设置部分占位符的格式。 如果要查看基础表达式，则可以将指针停留在占位符上。 通过双击该占位符，或者右键单击该占位符并选择“占位符属性”，可以更改基础表达式。 还可以使用 **“占位符属性”** 对话框 **“常规”** 中的 **“标签”** 属性来指定用户界面标签。 该标签是在设计时显示的占位符的文本。  
   
  ![rs_MixedTextnPlaceholder](../../reporting-services/report-design/media/rs-mixedtextnplaceholder.gif "rs_MixedTextnPlaceholder")  
   

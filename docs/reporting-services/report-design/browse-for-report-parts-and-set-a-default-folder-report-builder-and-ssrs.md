@@ -1,5 +1,6 @@
 ---
 title: 浏览查找报表部件和设置默认文件夹（报表生成器）| Microsoft Docs
+description: 了解如何从报表生成器的报表部件库中将现有报表部件（例如表格和图表）添加到报表中。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5cf38068-65d1-4fe8-81f3-a404d8fbc663
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bd07e02d7c36c66fdec007d6c6876e765e39ffc7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7db8a7ec6a9f4340dcbdf03badb0a77cdbc42591
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081467"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84778909"
 ---
 # <a name="browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs"></a>浏览查找报表部件和设置默认文件夹（报表生成器和 SSRS）
 创建 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表的最简单方式是从报表部件库将现有报表部件（如表和图表）添加到你的报表。 将报表部件添加到报表时，还将添加它正常工作所需的所有内容。 例如，显示数据的任何报表部件都依赖于数据集，即对某数据源的查询和连接。 将报表部件添加到报表后，可以根据需要进行修改。  
@@ -48,13 +49,13 @@ ms.locfileid: "77081467"
      例如，若要查找图像，请单击 **“添加条件”** ，然后单击 **“类型”** 。 在下拉框中，选中 **“图像”** 复选框，按 Enter 键，然后单击“搜索”放大镜。  
   
     > [!NOTE]  
-    >  对于“创建者”和“上次修改者”值，搜索用户的用户名，正如它在报表服务器上显示的那样   。  
+    >  对于“创建者”和“上次修改者”值，搜索用户的用户名，正如它在报表服务器上显示的那样 。  
   
 ## <a name="to-set-a-default-folder-for-report-parts"></a>为报表部件设置默认文件夹  
   
 1.  单击 **“报表生成器”** ，然后单击 **“选项”** 。  
   
-2.  在“选项”对话框的“设置”选项卡中，在“默认将报表部件发布到此文件夹”文本框中键入文件夹名称    。  
+2.  在“选项”对话框的“设置”选项卡中，在“默认将报表部件发布到此文件夹”文本框中键入文件夹名称************。  
   
  如果此文件夹不存在且您具有在报表服务器上创建文件夹的权限，报表生成器将创建此文件夹。  
   

@@ -1,5 +1,6 @@
 ---
 title: 表达式（报表生成器）| Microsoft Docs
+description: 使用使你可在报表生成器中检索、显示、筛选数据以及设置数据格式的表达式来控制报表的内容、设计和交互。
 ms.date: 09/06/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 99314c9108ef0af50a3c43d83a5fcb69b9ccf14f
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: d092377531a2391917ccdaae046d456bd3b1f629
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487606"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012235"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>表达式（报表生成器和 SSRS）
   表达式在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中被广泛使用，以便对数据进行检索、计算、显示、分组、排序、筛选、参数化和格式设置。 
@@ -40,7 +41,7 @@ ms.locfileid: "81487606"
   
  您可以使用表达式来指定许多报表项属性的值。 最常见的属性是文本框和占位符文本的值。 通常，如果某一文本框只包含一个表达式，则该表达式是文本框属性的值。 如果某一文本框包含多个表达式，则每个表达式都是该文本框中占位符文本的值。  
   
- 默认情况下，表达式作为“简单表达式”  或“复杂表达式”  出现在报表设计图面上。  
+ 默认情况下，表达式作为“简单表达式”  或“复杂表达式” 出现在报表设计图面上。  
   
 -   **简单** ：包含对内置集合中单个项（例如，数据集字段、参数或内置字段）的引用的简单表达式。 在设计图面上，简单表达式将出现在括号中。 例如， `[FieldName]` 将对应于基础表达式 `=Fields!FieldName.Value`。 当您创建报表布局并且将项从“报表数据”窗格拖到设计图面时，系统将自动为您创建简单表达式。 有关表示不同内置集合的符号的详细信息，请参阅 [了解简单表达式中的前缀符号](#DisplayText)。  
   
@@ -75,7 +76,7 @@ ms.locfileid: "81487606"
   
  下表列出了可以包含在表达式中的引用类型：  
   
-|参考|说明|示例|  
+|参考|描述|示例|  
 |----------------|-----------------|-------------|  
 |[常量](../../reporting-services/report-design/constants-in-expressions-report-builder-and-ssrs.md)|介绍能以交互方式访问需要常量值的属性（例如字体颜色）的常量。|`="Blue"`|  
 |[运算符](../../reporting-services/report-design/operators-in-expressions-report-builder-and-ssrs.md)|描述可用于合并表达式中的引用的运算符。 例如， **&** 运算符用于串联字符串。|`="The report ran at: " & Globals!ExecutionTime & "."`|  

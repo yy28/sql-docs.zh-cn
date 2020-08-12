@@ -1,5 +1,6 @@
 ---
 title: 表、矩阵和列表（报表生成器）| Microsoft Docs
+description: 了解表、矩阵和列表，它们是显示在报表生成器中组织为行和列的分页报表数据的 Tablix 数据区域。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -33,15 +34,15 @@ f1_keywords:
 ms.assetid: 9dcf3fc8-bf9c-4a14-a03d-e78254aa4098
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e3390f952eaa553c144d8dd50e906276d4f96649
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c28f2c267c49f2a31fd07eecdbb9e593237a1835
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080881"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84778069"
 ---
 # <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>表、矩阵和列表（报表生成器和 SSRS）
- 在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 中，表、矩阵和列表是在以行和列形式组织的单元中显示分页报表数据的数据区域  。 单元通常包含文本数据（如文本、日期和数字），但它们还可以包含仪表、图表或报表项（例如图像）。 表、矩阵和列表常常统称为 Tablix 数据区域  。  
+ 在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 中，表、矩阵和列表是在以行和列形式组织的单元中显示分页报表数据的数据区域。 单元通常包含文本数据（如文本、日期和数字），但它们还可以包含仪表、图表或报表项（例如图像）。 表、矩阵和列表常常统称为 Tablix 数据区域。  
   
  表、矩阵和列表模板是在 Tablix 数据区域的基础上建立的，Tablix 数据区域是可以在单元中显示数据的灵活的网格。 在表和矩阵模板中，单元将组织成行和列的形式。 因为模板是一般性的基础 tablix 数据区域的变体，所以，你可以结合模板格式显示数据，并且在你开发报表时更改表、矩阵或列表以便包括其他数据区域的功能。 例如，如果您添加一个表并发现它没有满足您的需要，则可以添加列组以使该表成为矩阵。  
   
@@ -74,7 +75,7 @@ ms.locfileid: "77080881"
   
  ![从工具箱添加的新矩阵，选中](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "从工具箱添加的新矩阵，选中")  
   
- 您可以按行组和列组中的多个字段或表达式对数据进行分组。 在运行时，当组合报表数据和数据区域时，随着为列组添加列和为行组添加行，矩阵将在页面上水平和垂直增长。 矩阵单元显示仅限于单元所属行组和列组的交集的聚合值。 例如，如果您的矩阵具有一个行组（类别）和两个显示销售额之和的列组（区域和年份），则报表中将显示两个单元，其中对于“类别”组中的每个值都显示销售额之和。 单元的作用域是两个交集：类别和区域的交集，以及类别和年份的交集。 矩阵可以包含嵌套组和相邻组。 嵌套组具有父-子关系，相邻组具有对等关系。 您可以添加矩阵内嵌套行组和列组的任何级别和所有级别的小计。  
+ 您可以按行组和列组中的多个字段或表达式对数据进行分组。 在运行时，当组合报表数据和数据区域时，随着为列组添加列和为行组添加行，矩阵将在页面上水平和垂直增长。 矩阵单元显示仅限于单元所属行组和列组的交集的聚合值。 例如，如果您的矩阵具有一个行组（类别）和两个显示销售额之和的列组（区域和年份），则报表中将显示两个单元，其中对于“类别”组中的每个值都显示销售额之和。 单元格的作用域是两个交集：“Category”和“Territory”的交集，以及“Category”和“Year”的交集。 矩阵可以包含嵌套组和相邻组。 嵌套组具有父-子关系，相邻组具有对等关系。 您可以添加矩阵内嵌套行组和列组的任何级别和所有级别的小计。  
   
  为使矩阵数据的外观更具可读性和突出显示要强调的数据，可以合并单元或者水平和垂直拆分，并将格式应用于数据和组标题。  
   

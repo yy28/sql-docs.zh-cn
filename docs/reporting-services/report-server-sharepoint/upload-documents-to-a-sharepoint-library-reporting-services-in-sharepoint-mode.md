@@ -1,5 +1,6 @@
 ---
 title: 将文档上传到 SharePoint 库（SharePoint 模式下的 Reporting Services）| Microsoft Docs
+description: 在 SharePoint 模式下的 SQL Server Reporting Services 中，可以将报表定义和报表模型上传到 SharePoint 库。
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2187cd5f69b49095b085ee6f49241227207842c2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a7a9e0aaf57d3084e6be239cb8fedcdd3d2e9066
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580462"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83767337"
 ---
 # <a name="upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode"></a>将文档上传到 SharePoint 库（SharePoint 模式下的 Reporting Services）
 
@@ -31,7 +32,7 @@ ms.locfileid: "65580462"
 > [!NOTE]  
 >  报表服务器必须配置为使用 SharePoint 模式，且 SharePoint 产品的实例必须安装了 Reporting Services 外接程序，此外接程序提供了从 SharePoint 站点中存储和访问报表服务器项的程序文件。  
   
- 若要将文档上载到库中，您必须拥有站点级别的“添加项”权限。 如果您使用的是默认安全设置，将对拥有“完全控制”级别权限的“所有者”  组成员和拥有“参与讨论”级别权限的“成员”  组授予该权限。  
+ 若要将文档上载到库中，您必须拥有站点级别的“添加项”权限。 如果您使用的是默认安全设置，将对拥有“完全控制”级别权限的“所有者” **** 组成员和拥有“参与讨论”级别权限的“成员” **** 组授予该权限。  
   
 ## <a name="add-a-report-definition-or-report-model-to-a-library"></a>向库中添加报表定义或报表模型
   
@@ -39,7 +40,7 @@ ms.locfileid: "65580462"
   
 2.  在 **“上载”** 菜单中，单击 **“上载文档”** 。  
   
-3.  若要上传单个报表或报表模型文件，请选择报表定义 (.rdl) 或报表模型 (.smdl) 文件，然后单击“确定”  。  
+3.  若要上传单个报表或报表模型文件，请选择报表定义 (.rdl) 或报表模型 (.smdl) 文件，然后单击“确定”。  
   
      如果报表定义使用共享数据源 (.rsds) 文件存储与外部数据源的连接信息，则可以同时上载 .rdl 和 .rsds 文件。 为此，请单击 **“上载多个文档”** ，指定这两个文件，然后单击 **“确定”** 。  
   

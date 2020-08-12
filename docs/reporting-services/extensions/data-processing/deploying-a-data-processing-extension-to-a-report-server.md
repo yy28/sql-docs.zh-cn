@@ -1,5 +1,6 @@
 ---
 title: 如何：向报表服务器部署数据处理扩展插件 | Microsoft Docs
+description: 通过学习将哪些条目添加到哪些配置文件中，了解如何向报表服务器部署数据处理扩展插件。
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e00dface-70f8-434b-9763-8ebee18737d2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3f0b775b53244cd0a428bb4ce4023906d2f5119
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a43b94a4ef45b210ea2f54b0401962e79ca9a489
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63194113"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529579"
 ---
 # <a name="deploying-a-data-processing-extension-to-a-report-server"></a>向报表服务器部署数据处理扩展插件
   报表服务器使用数据处理扩展插件来检索和处理所呈现报表中的数据。 您应将数据处理扩展插件程序集作为私有程序集部署到报表服务器。 还需要在报表服务器配置文件 RSReportServer.config 中生成一个条目。  
@@ -25,7 +26,7 @@ ms.locfileid: "63194113"
   
 #### <a name="to-deploy-a-data-processing-extension-assembly"></a>部署数据处理扩展插件程序集  
   
-1.  将程序集从临时位置复制到您要在其上使用数据处理扩展插件的报表服务器的 bin 目录中。 报表服务器 Bin 目录的默认位置为 %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<Instance Name>\Reporting Services\ReportServer\bin  。  
+1.  将程序集从临时位置复制到您要在其上使用数据处理扩展插件的报表服务器的 bin 目录中。 报表服务器 bin 目录的默认位置为 %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<*Instance Name*>\Reporting Services\ReportServer\bin。  
   
     > [!NOTE]  
     >  此步骤会妨碍升级到较新的 SQL Server 实例。 有关详细信息，请参阅 [Upgrade and Migrate Reporting Services](../../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)。  
@@ -42,15 +43,15 @@ ms.locfileid: "63194113"
     </Extensions>  
     ```  
   
-4.  为数据处理扩展插件添加一个条目。 条目应包含一个具有 Name 和 Type 值的 Extension 元素，可能如下所示    ：  
+4.  为数据处理扩展插件添加一个条目。 条目应包含一个具有 Name 和 Type 值的 Extension 元素，可能如下所示  ：  
   
     ```  
     <Extension Name="ExtensionName" Type="CompanyName.ExtensionName.MyConnectionClass, MyExtensionAssembly" />  
     ```  
   
-     Name 的值是数据处理扩展插件的唯一名称  。 Type 的值是以逗号分隔的列表，包括实现 <xref:Microsoft.ReportingServices.Interfaces.IExtension> 和 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> 接口的类的完全限定命名空间的条目，后跟程序集的名称（不包括 .dll 文件扩展名）。 默认情况下，数据处理扩展插件是可见的。 若要从用户界面（如报表管理器）中隐藏扩展插件，请将 **Visible** 属性添加到 **Extension** 元素，并将其设置为 **false**。  
+     Name 的值是数据处理扩展插件的唯一名称。 Type 的值是以逗号分隔的列表，包括实现 <xref:Microsoft.ReportingServices.Interfaces.IExtension> 和 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> 接口的类的完全限定命名空间的条目，后跟程序集的名称（不包括 .dll 文件扩展名）****。 默认情况下，数据处理扩展插件是可见的。 若要从用户界面（如报表管理器）中隐藏扩展插件，请将 **Visible** 属性添加到 **Extension** 元素，并将其设置为 **false**。  
   
-5.  最后，为自定义程序集添加一个代码组，以便为你的扩展插件授予 FullTrust 权限  。 为此，需要将代码组添加到 rssrvpolicy.config 文件，该文件默认位于 %ProgramFiles%\Microsoft SQL Server\\<MSRS10_50.\<Instance Name>\Reporting Services\ReportServer  。 代码组可能如下所示：  
+5.  最后，为自定义程序集添加一个代码组，以便为你的扩展插件授予 FullTrust 权限。 可以通过将代码组添加到 rssrvpolicy.config 文件来完成此操作。该文件的默认位置为 %ProgramFiles%\Microsoft SQL Server\\<MSRS10_50.\<*Instance Name*>\Reporting Services\ReportServer。 代码组可能如下所示：  
   
     ```  
     <CodeGroup class="UnionCodeGroup"  

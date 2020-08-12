@@ -1,5 +1,6 @@
 ---
 title: 报表服务器服务跟踪日志
+description: 了解 Reporting Services 中的报表服务器跟踪日志，其中包含有关报表服务器服务操作的详细信息。
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -9,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/23/2019
-ms.openlocfilehash: 667f18f449a1f2564c04a03ca593c917a7b46005
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 294639b3fed68acf0bb8b07ea0430a890e97910e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68254867"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541499"
 ---
 # <a name="report-server-service-trace-log"></a>报表服务器服务跟踪日志
 
@@ -30,9 +31,9 @@ ms.locfileid: "68254867"
 
 ## <a name="trace-configuration-settings"></a><a name="bkmk_trace_configuration_settings"></a> 跟踪配置设置
 
-在配置文件 ReportingServicesService.exe.config 中管理跟踪日志行为  。可在以下文件夹路径中找到该配置文件：  
+在配置文件 ReportingServicesService.exe.config 中管理跟踪日志行为。可在以下文件夹路径中找到该配置文件：  
   
- `\Program Files\Microsoft SQL Server\MSRS13.<instance name>\Reporting Services\ReportServer\bin` 列中的一个值匹配。  
+ `\Program Files\Microsoft SQL Server\MSRS13.<instance name>\Reporting Services\ReportServer\bin`.  
   
  下面的示例演示 **RStrace** 设置的 XML 结构。 **DefaultTraceSwitch** 的值确定添加到日志的信息种类。 除了 **Components** 属性以外，各个配置文件 **RStrace** 的值是相同的。  
   
@@ -100,9 +101,9 @@ ms.locfileid: "68254867"
 ## <a name="previous-versions"></a>以前的版本
 
 在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]早期版本中，存在多个跟踪日志文件，每个应用程序一个跟踪日志文件。 以下文件已过时，并且 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本不会再创建它们：
-+ ReportServerWebApp_\<timestamp>.log 
-+ ReportServer_\<timestamp>.log 
-+ ReportServerService_main_\<timestamp>.log 
++ ReportServerWebApp_ *\<timestamp>* .log
++ ReportServer_ *\<timestamp>* .log
++ ReportServerService_main_ *\<timestamp>* .log
   
 ## <a name="see-also"></a>另请参阅
 

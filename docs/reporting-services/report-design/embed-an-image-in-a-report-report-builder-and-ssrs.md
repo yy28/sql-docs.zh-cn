@@ -1,5 +1,6 @@
 ---
 title: 在报表中嵌入图像（报表生成器）| Microsoft Docs
+description: 使图像随时可用于报表。 使用嵌入在报表中并在“报表生成器”的“报表数据”窗格中列出的图像。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: aed77345-5eeb-41f0-96c9-db6b4a11ec6f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: acdbae6c6654494abe5cb498211cfb77cf0ad891
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4a4fe4e15d2d35f55aa6af846492ac81b08394f7
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080441"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255621"
 ---
 # <a name="embed-an-image-in-a-report-report-builder-and-ssrs"></a>在报表中嵌入图像（报表生成器和 SSRS）
   报表中可以包含嵌入图像。 嵌入图像可确保图像对报表始终可用，但会影响报表定义（即定义报表的文件）的大小。 报表中嵌入的图像在“报表数据”窗格中列出。  
@@ -34,7 +35,7 @@ ms.locfileid: "77080441"
   
 3.  在 **“图像属性”** 对话框的 **“常规”** 页中，在 **“名称”** 文本框中键入名称，或接受默认名称。  
   
-4.  （可选）在“工具提示”文本框中，键入当用户将鼠标指针悬停在呈现报表中的图像上时所要显示的文本  。  
+4.  （可选）在“工具提示”文本框中，键入当用户将鼠标指针悬停在呈现报表中的图像上时所要显示的文本****。  
   
 5.  在 **“选择图像源”** 中，选择 **“嵌入”** 。  
   
@@ -56,7 +57,7 @@ ms.locfileid: "77080441"
 2.  在设计图面上选择图像。 **“属性”** 窗格将显示图像属性。  
   
     > [!NOTE]  
-    >  如果“属性”窗格不可见，请单击“视图”选项卡上的“属性”   。  
+    >  如果“属性”窗格不可见，请单击“视图”选项卡上的“属性” 。  
   
 3.  在 **MIMEType** 属性旁边的文本框内单击，并从下拉列表中选择一个新 MIME 类型。  
   

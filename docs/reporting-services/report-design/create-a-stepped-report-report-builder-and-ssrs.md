@@ -1,5 +1,6 @@
 ---
 title: 创建递阶报表（报表生成器）| Microsoft Docs
+description: 了解如何在报表生成器分页报表中的父组下方的同一列中缩进显示详细信息行或子组。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5933c4f0-c713-4ecb-b521-ff46c9c63fff
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dca297ff55b9bd845e6fcb8379dcb7cc7147d32e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 03deafdc14c527caef5cfaeb0517b1aa16f92f9e
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080606"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681536"
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>创建递阶报表（报表生成器和 SSRS）
 递阶报表是一种  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表，可在父组下方的同一列中缩进显示详细信息行或子组，如下例所示：  
@@ -38,9 +39,9 @@ ms.locfileid: "77080606"
   
     1.  单击表中的任意位置以选择该表。 “分组”窗格将显示“行组”窗格中的详细信息组。  
   
-    2.  在“分组”窗格中，右键单击“详细信息”组，指向“添加组”，然后单击“父组”   。  
+    2.  在“分组”窗格中，右键单击“详细信息”组，指向“添加组”，然后单击“父组” 。  
   
-    3.  在“Tablix 组”对话框中，为该组提供一个名称，并键入或从下拉列表中选择组表达式  。 该下拉列表显示了“报表数据”窗格中可用的简单字段表达式。 例如，[PostalCode] 是数据集中 PostalCode 字段的简单字段表达式。  
+    3.  在“Tablix 组”对话框中，为该组提供一个名称，并键入或从下拉列表中选择组表达式。 该下拉列表显示了“报表数据”窗格中可用的简单字段表达式。 例如，[PostalCode] 是数据集中 PostalCode 字段的简单字段表达式。  
   
     4.  选择 **“添加组头”** 。 选择此选项将向组的上方添加一个组标签和组合计的静态行。 同样地，可以选择 **“添加组尾”** 在组的下方添加一个静态行。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -52,7 +53,7 @@ ms.locfileid: "77080606"
   
      ![呈现的分组报表](../../reporting-services/report-design/media/tablereportrendered.gif "呈现的分组报表")  
   
-3.  对于递阶报表，不需要用于显示组实例的第一列。 相反，需要先复制组头单元中的值，再删除组列，然后将该值粘贴到组头行的第一个文本框中。 若要删除组列，请右键单击相应的组列或单元，然后单击“删除列”  。 下图显示了该数据区域在设计图面上可能的外观。  
+3.  对于递阶报表，不需要用于显示组实例的第一列。 相反，需要先复制组头单元中的值，再删除组列，然后将该值粘贴到组头行的第一个文本框中。 若要删除组列，请右键单击相应的组列或单元，然后单击“删除列”。 下图显示了该数据区域在设计图面上可能的外观。  
   
      ![带有组标头行的数据区域](../../reporting-services/report-design/media/tabledataregiongroupheader.gif "带有组标头行的数据区域")  
   
@@ -62,7 +63,7 @@ ms.locfileid: "77080606"
   
     2.  在“属性”窗格的 **“对齐”** 下，展开 **“填充”** 的属性。  
   
-    3.  对于“左”  ，键入一个新的填充值，例如 **.5in**。 填充会在单元中按照您指定的值缩进文本。 默认空白大小为 2 磅。 填充属性的有效值是零或正数，后跟一个大小指示符。  
+    3.  对于“左” ，键入一个新的填充值，例如 **.5in**。 填充会在单元中按照您指定的值缩进文本。 默认空白大小为 2 磅。 填充属性的有效值是零或正数，后跟一个大小指示符。  
   
          大小指示符有：  
   
@@ -88,14 +89,14 @@ ms.locfileid: "77080606"
   
 2.  向报表添加其他组。  
   
-    1.  在“行组”窗格中，右键单击组，再单击“添加组”，然后选择要添加的组的类型  。  
+    1.  在“行组”窗格中，右键单击组，再单击“添加组”，然后选择要添加的组的类型。  
   
         > [!NOTE]  
         >  可以通过若干种方式向数据区域添加组。 有关详细信息，请参阅 [在数据区域中添加或删除组（报表生成器和 SSRS）](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)。  
   
     2.  在 **“Tablix 组”** 对话框中，键入一个名称。  
   
-    3.  在 **“组表达式”** 中，键入一个表达式或选择要用作分组依据的数据集字段。 要创建表达式，请单击表达式 (fx) 按钮打开“表达式”对话框   。  
+    3.  在 **“组表达式”** 中，键入一个表达式或选择要用作分组依据的数据集字段。 要创建表达式，请单击表达式 (fx) 按钮打开“表达式”对话框 。  
   
     4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

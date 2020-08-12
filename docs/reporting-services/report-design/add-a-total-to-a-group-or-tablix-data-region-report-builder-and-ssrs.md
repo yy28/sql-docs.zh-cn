@@ -1,6 +1,6 @@
 ---
 title: 向组或 Tablix 添加总计（报表生成器和 SSRS）| Microsoft Docs
-description: 在 SQL Server Reporting Services 分页报表中，可以在 Tablix 数据区域中为组或整个数据区域添加总计。
+description: 在报表生成器的分页报表中的 tablix 数据区域中为组或整个数据区域添加总计。
 ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: cf1b96c3-7f0f-4c94-ad08-5239c77ccfe4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8ad10f1ee83c4024b45c6d77572d0b935ff92dd5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fa685e0015bc6fb2f416377d050bbd44ba38e9c6
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75242527"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255540"
 ---
 # <a name="add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs"></a>向组或 Tablix 数据区域添加总计（报表生成器和 SSRS）
  在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，可以在 Tablix 数据区域中为组或整个数据区域添加总计。 默认情况下，总计是在应用筛选器之后组或数据区域中的非 Null 数值数据之和。 若要为组添加总计，请在“分组”窗格中单击组快捷菜单上的 **“添加总计”** 。 若要为 Tablix 正文区中的各个单元添加总计，请单击单元快捷菜单上的 **“添加总计”** 。 “添加总计”命令与上下文相关，并且仅支持数字字段  。 根据选择的 Tablix 单元，您可以通过选择 Tablix 正文区中的单元为一个单元添加总计，也可以通过选择 Tablix 行组区或 Tablix 列组区中的单元为整个组添加总计。 有关 Tablix 区域的详细信息，请参阅 [Tablix 数据区域（报表生成器和 SSRS）](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)。  

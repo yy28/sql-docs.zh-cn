@@ -1,5 +1,6 @@
 ---
 title: 将报表查看器 Web 部件添加到网页 | Microsoft Docs
+description: 可以使用报表查看器 Web 部件查看在 SharePoint 集成模式下的 SQL Server Reporting Services 上运行的报表。
 ms.date: 10/05/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -7,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 562c762871db5c29476d10a81ac52dad46f65ad5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bf8f744078ccad4e755cc6d635ba999e0f077574
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65579397"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83767108"
 ---
 # <a name="add-the-report-viewer-web-part-to-a-web-page"></a>将报表查看器 Web 部件添加到网页
 
@@ -27,7 +28,7 @@ ms.locfileid: "65579397"
 > [!NOTE]
 > 本文专门针对用于 SharePoint 产品的 Reporting Services 外接程序附带的 Report Viewer Web 部件。 自 SQL Server 2016 之后，不再提供 Reporting Services 与 SharePoint 的集成这一功能。
 
-若要向网页中添加 Web 部件，则必须拥有站点级别的“添加和自定义页面”权限。 如果使用默认安全设置，此权限将授予拥有“完全控制”级权限的“所有者”  组的成员。
+若要向网页中添加 Web 部件，则必须拥有站点级别的“添加和自定义页面”权限。 如果使用默认安全设置，此权限将授予拥有“完全控制”级权限的“所有者” **** 组的成员。
 
 ## <a name="to-embed-a-report-in-a-web-page"></a>将报表嵌入网页中
 
@@ -35,15 +36,15 @@ ms.locfileid: "65579397"
   
 2.  在 **“站点操作”** 菜单上，单击 **“编辑页面”** 。  
   
-3.  单击“添加 Web 部件”  。  
+3.  单击“添加 Web 部件”。  
   
 4.  在 Web 部件类别列表中，选择 **“杂项”** 类别，然后选择 **“SQL Server Reporting Services 报表查看器”** 。  
   
-5.  单击“添加”  。 Web 部件将添加到区域的顶部。 可以将其拖至区域中的其他位置。  
+5.  单击“添加”。 Web 部件将添加到区域的顶部。 可以将其拖至区域中的其他位置。  
   
 6.  在查看器中，单击 **“单击此处打开工具窗格”** 。  
   
-7.  通过单击“浏览”( **...** ) 按钮，从当前网站集合的任一库中选择报表。 也可以键入报表 URL。 若要确定任一报表的 URL，请右键单击报表并选择“属性”  。 请勿单击报表旁的向下箭头；报表项的“查看属性”页上未指出报表 URL。 如果从“属性”  对话框复制并粘贴 URL，请用空格替换“%20”URL 编码（例如，“Company%20Sales”应为“Company Sales”）。  
+7.  通过单击“浏览”( **...** ) 按钮，从当前网站集合的任一库中选择报表。 也可以键入报表 URL。 若要确定任一报表的 URL，请右键单击报表并选择“属性”。 请勿单击报表旁的向下箭头；报表项的“查看属性”页上未指出报表 URL。 如果从“属性”**** 对话框复制并粘贴 URL，请用空格替换“%20”URL 编码（例如，“Company%20Sales”应为“Company Sales”）。  
   
     > [!NOTE]  
     >  每个报表查看器 Web 部件都包含一个报表。 URL 必须是当前 SharePoint 站点或同一 Web 应用程序或场内站点上的报表的完全限定路径。 URL 必须能解析为包含报表的文档库或文档库内的文件夹。 报表 URL 必须包含 .rdl 文件扩展名。 如果报表依赖的是模型或共享数据源文件，则不必在 URL 中指定这些文件。 报表包含对所需文件的引用。  

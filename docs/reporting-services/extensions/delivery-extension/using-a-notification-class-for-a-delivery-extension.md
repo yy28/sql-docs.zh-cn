@@ -1,5 +1,6 @@
 ---
 title: 将 Notification 类用于传递扩展插件 | Microsoft Docs
+description: 了解传递扩展插件可以如何使用 Notification 类。 此类存储在交付报表时使用的订阅信息。
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 549c40c4-d33d-46c2-9d6a-7bbb671ac67a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ad2792a390597223a98b8606af4cb361d17b9e8d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 20f65f0aeb5e7ab9a74da2b1f3baae574c45f3f2
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193685"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529473"
 ---
 # <a name="using-a-notification-class-for-a-delivery-extension"></a>将通知类用于传递扩展插件
   <xref:Microsoft.ReportingServices.Interfaces.Notification> 类位于 <xref:Microsoft.ReportingServices.Interfaces> 命名空间中，表示传递扩展插件用于传递报表的订阅信息。 <xref:Microsoft.ReportingServices.Interfaces.Notification> 类提供多种属性，这些属性可用于呈现用于传递的报表、确定通知的状态和设置用户数据。  
@@ -33,7 +34,7 @@ ms.locfileid: "63193685"
  有关如何使用 <xref:Microsoft.ReportingServices.Interfaces.Notification> 类的示例，请参阅 [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889)（SQL Server Reporting Services 产品示例）。  
   
 ## <a name="retry-functionality"></a>重试功能  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 允许您为无法立即传递的通知创建重试队列。 在报表服务器调用某一传递扩展插件的 <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.Deliver%2A> 方法后，该传递扩展可以请求报表服务器在以后的某个时间点重试该传递。 如果发生此情况，则报表服务器将把通知置于内部队列中，并且在经过了特定的时间段后重试该传递。 管理员可以使用 MaxNumberOfRetries XML 元素和 PeriodBetweenRetries XML 元素，在 RSReportServer.config 文件的传递扩展插件部分中配置报表服务器执行的重试尝试的最大次数以及两次重试之间的时间段   。 如果传递在以后成功，或者达到最大重试尝试数目，则通知将从重试队列中删除。 如果传递在尝试了最大重试数目后仍失败，则通知将被放弃。  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 允许您为无法立即传递的通知创建重试队列。 在报表服务器调用某一传递扩展插件的 <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.Deliver%2A> 方法后，该传递扩展可以请求报表服务器在以后的某个时间点重试该传递。 如果发生此情况，则报表服务器将把通知置于内部队列中，并且在经过了特定的时间段后重试该传递。 管理员可以使用 MaxNumberOfRetries XML 元素和 PeriodBetweenRetries XML 元素，在 RSReportServer.config 文件的传递扩展插件部分中配置报表服务器执行的重试尝试的最大次数以及两次重试之间的时间段********。 如果传递在以后成功，或者达到最大重试尝试数目，则通知将从重试队列中删除。 如果传递在尝试了最大重试数目后仍失败，则通知将被放弃。  
   
 ## <a name="see-also"></a>另请参阅  
  [实现传递扩展插件](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   

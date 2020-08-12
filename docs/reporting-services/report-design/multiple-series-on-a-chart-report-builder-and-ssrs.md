@@ -1,5 +1,6 @@
 ---
 title: 图表中的多个序列（报表生成器）| Microsoft Docs
+description: 了解如何在报表生成器中显示两个相关数据序列（如价格和数量或收入和税收）时，在图表上使用多个序列。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: b99e4398-1fba-4824-958f-5c75d10485ea
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e976b6b534121b4285438525267b7b15598ef6be
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e11fec8a9565a0fff97b4865de5b83e2d2f53f0a
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082471"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779394"
 ---
 # <a name="multiple-series-on-a-chart-report-builder-and-ssrs"></a>图表中的多个序列（报表生成器和 SSRS）
   当图表中存在多个序列时，必须确定比较这些序列的最佳方式。 可以使用堆积图显示每个序列的相对比例。 如果仅比较两个共享公用类别 (x) 轴的序列，请使用辅助轴。 当显示两个相关数据序列（例如，价格和数量或收入和税收）时，该方法非常有用。 如果图表不可读，请考虑使用多个图表区以增强各序列之间的目视间隔。  
@@ -27,7 +28,7 @@ ms.locfileid: "77082471"
  堆积图通常用于在一个图表区中显示多个序列。 当尝试显示的数据紧密相关时，请考虑使用堆积图。 在一个堆积图中显示的序列最好不超过四个。 如果要比较每个序列在总体中所占的比例，请使用百分比堆积面积图、条形图或柱形图。 这些图表可计算每个序列在相应类别中所占的相对百分比。 有关详细信息，请参阅[分区图（报表生成器和 SSRS）](../../reporting-services/report-design/area-charts-report-builder-and-ssrs.md)、[条形图（报表生成器和 SSRS）](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)和[柱形图（报表生成器和 SSRS）](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)。  
   
 ## <a name="using-the-secondary-axis"></a>使用辅助轴  
- 将新序列添加到图表时，将使用主 x 和 y 轴来绘制该序列。 如果要比较的值采用不同的测量单位，请考虑使用“辅助轴”  ，以便可以在不同的轴上绘制两个序列。 当比较具有不同测量单位的值时，辅助轴将非常有用。 辅助轴是在主轴的另一侧绘制的。 图表仅支持主轴和辅助轴。 辅助轴的属性与主轴相同。 有关详细信息，请参阅[在辅助轴上绘制数据（报表生成器和 SSRS）](../../reporting-services/report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)。  
+ 将新序列添加到图表时，将使用主 x 和 y 轴来绘制该序列。 如果要比较的值采用不同的测量单位，请考虑使用“辅助轴” ** ，以便可以在不同的轴上绘制两个序列。 当比较具有不同测量单位的值时，辅助轴将非常有用。 辅助轴是在主轴的另一侧绘制的。 图表仅支持主轴和辅助轴。 辅助轴的属性与主轴相同。 有关详细信息，请参阅[在辅助轴上绘制数据（报表生成器和 SSRS）](../../reporting-services/report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)。  
   
  如果要显示具有不同数据范围的多个序列，请考虑将这些序列放置到不同的图表区。  
   

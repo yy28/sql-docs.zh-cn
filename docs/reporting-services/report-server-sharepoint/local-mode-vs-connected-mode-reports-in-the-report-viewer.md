@@ -1,5 +1,6 @@
 ---
 title: 报表查看器中的本地模式和连接模式报表对比 | Microsoft Docs
+description: SQL Server Reporting Services 报表可配置为在“本地模式”或“连接模式”下运行。 了解不同模式。
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: be9653d66ef541ebf27cb31c8092b79c2e1bf612
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d21d06182f259451f53fed45ba77a5cbacbb382d
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65579878"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83766985"
 ---
 # <a name="local-mode-vs-connected-mode-reports-in-the-report-viewer"></a>报表查看器中的本地模式和连接模式报表对比
 
@@ -21,7 +22,7 @@ ms.locfileid: "65579878"
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表可配置为在 *“本地模式”* 或 *“连接模式”* 下运行，以利用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器。 您而是可以在数据扩展插件支持本地模式报表时，使用报表查看器直接从 SharePoint 呈现报表。 这种方法称为“本地模式”  。 在之前的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]版本中，SharePoint 场需连接到在 SharePoint 模式下配置的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器，以便报表查看器控件可以呈现报表。 这种方法称为“远程模式”  或“连接模式”  。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表可配置为在 *“本地模式”* 或 *“连接模式”* 下运行，以利用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器。 您而是可以在数据扩展插件支持本地模式报表时，使用报表查看器直接从 SharePoint 呈现报表。 这种方法称为“本地模式” 。 在之前的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]版本中，SharePoint 场需连接到在 SharePoint 模式下配置的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器，以便报表查看器控件可以呈现报表。 这种方法称为“远程模式”  或“连接模式” 。  
 
 > [!NOTE]
 > 自 SQL Server 2016 之后，不再提供 Reporting Services 与 SharePoint 的集成这一功能。
@@ -51,7 +52,7 @@ ms.locfileid: "65579878"
 
  您可以配置 SharePoint 2013 场支持现有的 Access 2010 Web 数据库和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本地模式。 有关详细信息，请参阅 [为 SharePoint Server 2013 中的 Web 数据库安装和配置 Access Services 2010](https://technet.microsoft.com/library/ee748653\(office.15\).aspx)。  
   
- 不可能为 SharePoint 2013 创建新的 Access Web 数据库。 Access 2013 使用在 Access 中内置的新型数据库“Access Web 应用程序”  ，然后将其用作 Web 浏览器中的 SharePoint 应用程序并与他人共享。  
+ 不可能为 SharePoint 2013 创建新的 Access Web 数据库。 Access 2013 使用在 Access 中内置的新型数据库“Access Web 应用程序” ** ，然后将其用作 Web 浏览器中的 SharePoint 应用程序并与他人共享。  
   
  有关详细信息，请参阅以下内容。  
   

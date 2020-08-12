@@ -1,5 +1,6 @@
 ---
 title: 在 SharePoint 网站上部署 SQL Server Reporting Services 报表查看器 Web 部件 | Microsoft Docs
+description: 对于 SQL Server Reporting Services，可以手动将报表查看器自定义 Web 部件添加到 SharePoint 产品中。
 ms.date: 11/15/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -7,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 232338818620069fc31bb57bc29cf07901d0f712
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 49ac20b46c5453c431cb856ad060512b48315262
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77256676"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83767020"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>在 SharePoint 网站上部署 SQL Server Reporting Services 报表查看器 Web 部件
 
@@ -50,7 +51,7 @@ ms.locfileid: "77256676"
 
 本部分演示如何将解决方案包部署到 SharePoint 场。 此任务仅需执行一次。
 
-1. 在 SharePoint Server 上，使用“以管理员身份运行”选项打开 SharePoint 命令行管理程序  。
+1. 在 SharePoint Server 上，使用“以管理员身份运行”选项打开 SharePoint 命令行管理程序。
 
 2. 运行 [Add-SPSolution](https://technet.microsoft.com/library/ff607552(v=office.16).aspx) 以添加场解决方案。
 
@@ -76,17 +77,17 @@ ms.locfileid: "77256676"
 
 ## <a name="activate-feature"></a>激活功能
 
-1. 在 SharePoint 网站中，选择左上角的“齿轮”图标，然后选择“网站设置”   。
+1. 在 SharePoint 网站中，选择左上角的“齿轮”图标，然后选择“网站设置” 。
 
     ![齿轮图标中的“网站设置”。](media/sharepoint-site-settings.png)
 
     默认情况下，通过端口 80 访问 SharePoint Web 应用程序。 这意味着通常可通过输入 https://<computer name> 打开根网站集以访问 SharePoint 网站。
 
-3. 在“网站集管理”中，选择“网站集功能”   。
+3. 在“网站集管理”中，选择“网站集功能” 。
 
-4. 向下滚动页面，直至找到“报表查看器 Web 部件”功能为止  。
+4. 向下滚动页面，直至找到“报表查看器 Web 部件”功能为止。
 
-5. 选择“激活”  。
+5. 选择“激活”。
 
     ![激活报表查看器 Web 部件功能](media/web-part-activiate-feature.png)
 
@@ -104,11 +105,11 @@ Get-SPWebApplication "<web application url>" | Get-SPSite -Limit ALL |
 
 ## <a name="remove-the-solution"></a>删除解决方案
 
-尽管 SharePoint 管理中心提供了解决方案收回，但除非是在系统地解决安装问题或修补部署问题，否则便无需收回 ReportViewerWebPart.wsp 文件  。
+尽管 SharePoint 管理中心提供了解决方案收回，但除非是在系统地解决安装问题或修补部署问题，否则便无需收回 ReportViewerWebPart.wsp 文件****。
 
-1. 在 SharePoint 管理中心的“系统设置”中，选择“管理场解决方案”   。
+1. 在 SharePoint 管理中心的“系统设置”中，选择“管理场解决方案” 。
 
-2. 选择“ReportViewerWebPart.wsp”  。
+2. 选择“ReportViewerWebPart.wsp”。
 
 3. 选择“收回解决方案”。
 
@@ -116,17 +117,17 @@ Get-SPWebApplication "<web application url>" | Get-SPSite -Limit ALL |
 
 收回解决方案不会从 SharePoint 网站内的 Web 部件列表中删除报表查看器 Web 部件。 若要删除报表查看器 Web 部件，请执行以下操作。
 
-1. 在 SharePoint 网站中，选择左上角的“齿轮”图标，然后选择“网站设置”   。
+1. 在 SharePoint 网站中，选择左上角的“齿轮”图标，然后选择“网站设置” 。
 
     ![齿轮图标中的“网站设置”。](media/sharepoint-site-settings.png)
 
     默认情况下，通过端口 80 访问 SharePoint Web 应用程序。 这意味着通常可通过输入 https://<computer name> 打开根网站集以访问 SharePoint 网站。
 
-2. 在“Web 设计器库”下，选择“Web 部件”   。
+2. 在“Web 设计器库”下，选择“Web 部件” 。
 
-3. 选择“ReportViewerNativeMode.dwp”旁边的“编辑图标”   。 它可能没有列在结果的第一页上。
+3. 选择“ReportViewerNativeMode.dwp”旁边的“编辑图标” 。 它可能没有列在结果的第一页上。
 
-4. 选择“删除项”  。
+4. 选择“删除项”。
 
     ![编辑并删除报表查看器本机模式 Web 部件](media/report-viewer-native-mode-edit-delete.png)
 
@@ -148,7 +149,7 @@ Web 部件支持以下语言：
 * 中文（简体 - zh-HANS 和 zh-CHS）
 * 中文（繁体 - zh-HANT 和 zh-CHT）
 
-## <a name="troubleshoot"></a>故障排除
+## <a name="troubleshoot"></a>疑难解答
 
 * 如果已配置 SharePoint 集成模式，则卸载 SSRS 时出错：
 

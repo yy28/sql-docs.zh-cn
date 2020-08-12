@@ -1,5 +1,6 @@
 ---
 title: 设置报表处理属性 | Microsoft Docs
+description: 了解报表服务器中的报表执行属性，这些属性控制如何处理报表以及如何使用 Web 门户为每个报表设置执行属性。
 ms.date: 06/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: b5cbc453-5986-423e-af44-1f243ef3edb1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4a7729e8880e811494e6e1016b827831674cd812
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 62c38e222ede1678d7fd06089897b3a8435aa687
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67140397"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547879"
 ---
 # <a name="set-report-processing-properties"></a>设置报表处理属性
   报表执行属性控制报表的处理方式。 必须为每个报表分别设置执行属性。  
   
- 若要设置报表执行属性，请在 Web 门户中导航到报表，右键单击该报表，然后从下拉菜单中选择“管理”  。
+ 若要设置报表执行属性，请在 Web 门户中导航到报表，右键单击该报表，然后从下拉菜单中选择“管理”****。
   
 ## <a name="report-execution-modes"></a>报表执行模式  
  您既可以按需运行报表，也可以按快照形式运行报表。 以下部分介绍了各种运行方法。  

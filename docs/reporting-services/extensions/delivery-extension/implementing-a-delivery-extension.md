@@ -1,5 +1,6 @@
 ---
 title: 实现传递扩展插件 | Microsoft Docs
+description: 阅读概述，了解如何通过实现自定义传递扩展插件，在 Reporting Services 中扩展传递的功能。
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 600cd229-efcd-480e-8c95-3c3c39ff4e7a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4c0004f844d6914cea330d3a0c7332de783116c7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d0ac797a8dd02a9d854c8bb2783435a087326f48
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193754"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529534"
 ---
 # <a name="implementing-a-delivery-extension"></a>实现传递扩展插件
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使得用户能够创建和发布报表，一旦创建和发布，就可以将报表传递到不同位置。 此外，[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 包括多个传递扩展插件和一个传递 API，它们使得开发人员能够创建其他传递扩展插件，以便在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中进一步扩展传递的功能。  
@@ -39,16 +40,16 @@ ms.locfileid: "63193754"
  介绍传递扩展插件的属性以及如何实现您自己的传递扩展插件类。  
   
  [将通知类用于传递扩展插件](../../../reporting-services/extensions/delivery-extension/using-a-notification-class-for-a-delivery-extension.md)  
- 介绍 Notification 类的属性以及如何在传递扩展插件实现中使用该类  。  
+ 介绍 Notification 类的属性以及如何在传递扩展插件实现中使用该类。  
   
  [将 Setting 类用于传递扩展插件](../../../reporting-services/extensions/delivery-extension/using-the-setting-class-for-a-delivery-extension.md)  
- 介绍 Setting 类的属性以及如何在传递扩展插件实现中使用该类  。  
+ 介绍 Setting 类的属性以及如何在传递扩展插件实现中使用该类。  
   
  [将 Report 类用于传递扩展插件](../../../reporting-services/extensions/delivery-extension/using-the-report-class-for-a-delivery-extension.md)  
- 介绍 Report 类的属性以及如何在传递扩展插件实现中使用该类  。  
+ 介绍 Report 类的属性以及如何在传递扩展插件实现中使用该类。  
   
  [将 RenderedOutputFile 类用于传递扩展插件](../../../reporting-services/extensions/delivery-extension/using-the-renderedoutputfile-class-for-a-delivery-extension.md)  
- 介绍 RenderedOutputFile 类的属性以及如何在传递扩展插件实现中使用该类  。  
+ 介绍 RenderedOutputFile 类的属性以及如何在传递扩展插件实现中使用该类。  
   
  [部署传递扩展插件](../../../reporting-services/extensions/delivery-extension/deploying-a-delivery-extension.md)  
  介绍如何部署传递扩展插件。  

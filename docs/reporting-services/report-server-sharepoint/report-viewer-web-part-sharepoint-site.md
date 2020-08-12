@@ -1,5 +1,6 @@
 ---
 title: SharePoint 站点上的报表查看器 Web 部件 - SSRS | Microsoft Docs
+description: 使用报表查看器自定义 Web 部件可以查看、导航、打印和导出 SharePoint 站点中的 SQL Server Reporting Services 报表。
 ms.date: 02/11/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -7,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2ec6a87467f2ec69164827e0a1ce76ad95180377
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 86e6b09b6bfefaff1d7e15205e4cc5897d3a6ad5
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77256801"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764901"
 ---
 # <a name="report-viewer-web-part-on-a-sharepoint-site---reporting-services"></a>SharePoint 站点上的报表查看器 Web 部件 - Reporting Services
 
@@ -26,7 +27,7 @@ ms.locfileid: "77256801"
 
 报表查看器 Web 部件随附在用于 SharePoint 产品的 Reporting Services 外接程序中。 在 SharePoint 集成模式下，Web 部件特定于报表服务器。 SharePoint 集成模式在 SQL Server 2016 后已弃用。
 
-从 SQL Server 2017 开始，Reporting Services 只有一种安装模式：本机模式  。 可使用页面查看器 Web 部件通过 rs:Embed=true  URL 参数嵌入所有报表类型。 将报表嵌入到 SharePoint 页是一种由客户请求的集成案例，更新的报表查看器 Web 部件可为分页报表启用此方案。
+从 SQL Server 2017 开始，Reporting Services 只有一种安装模式：本机模式。 可使用页面查看器 Web 部件通过 rs:Embed=true URL 参数嵌入所有报表类型。 将报表嵌入到 SharePoint 页是一种由客户请求的集成案例，更新的报表查看器 Web 部件可为分页报表启用此方案。
 
 虽然页面查看器 Web 部件足以将分页报表嵌入到 SharePoint 页，但更新的报表查看器 Web 部件提供了额外的功能。
 
@@ -44,8 +45,8 @@ ms.locfileid: "77256801"
 
 列出的项特定于更新的报表查看器 Web 部件。
 
-* Web 部件只能用于经典  SharePoint 页。
-* 仅支持在报表查看器 Web 部件中嵌入分页 (RDL) 报表。 如果希望嵌入 Power BI 报表或移动报表，则可以使用 rs:Embed=true  URL 参数。
+* Web 部件只能用于经典 SharePoint 页。
+* 仅支持在报表查看器 Web 部件中嵌入分页 (RDL) 报表。 如果希望嵌入 Power BI 报表或移动报表，则可以使用 rs:Embed=true URL 参数。
 
 ## <a name="next-steps"></a>后续步骤
 

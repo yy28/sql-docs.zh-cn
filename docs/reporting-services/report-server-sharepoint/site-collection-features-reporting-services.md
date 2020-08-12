@@ -1,5 +1,6 @@
 ---
 title: Reporting Services 网站集功能 | Microsoft Docs
+description: 了解 SQL Server Reporting Services SharePoint 模式提供的 SharePoint 网站集功能。
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e13654a38738c84095cc284a24fb723aa2b05327
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 052a6893f28d86a7f966edfe2a4b953ccc442e27
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580499"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764704"
 ---
 # <a name="reporting-services-site-collection-features"></a>Reporting Services 网站集功能
 
@@ -30,7 +31,7 @@ Reporting Services SharePoint 模式提供了三个 SharePoint 网站集功能�
 
  下表对 Reporting Services 网站集功能进行了说明。  
   
-|Feature|说明|  
+|功能|描述|  
 |-------------|-----------------|  
 |**报表服务器管理中心功能**|启用用于管理与 Reporting Services 报表服务器的集成的功能。 此功能仅安装和用于 SharePoint 管理中心网站集中。<br /><br /> 在安装了用于 SharePoint 产品的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 加载项之后，报表服务器集成功能将自动在 SharePoint 管理中心网站集中激活。 在某些情况下，你需要手动激活此功能。 若要激活报表服务器功能，请在 SharePoint 管理中心的“站点设置”页中使用 Reporting Services 页。<br /><br /> 用于 SharePoint 产品的外接程序的 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Reporting Services 版本和更高版本将在安装外接程序时为所有现有的网站集激活报表服务器集成功能。 此外，对于新的网站集，此功能将自动激活。|  
 |**报表服务器集成功能**|使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Reporting Services 启用多功能报告<br /><br /> 默认情况下此功能处于活动状态。|  

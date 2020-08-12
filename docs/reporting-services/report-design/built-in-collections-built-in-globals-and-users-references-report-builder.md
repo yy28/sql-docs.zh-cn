@@ -1,5 +1,6 @@
 ---
 title: 内置的全局和用户参考（报表生成器）| Microsoft Docs
+description: 了解可在表达式中使用的值，用于在报表生成器中筛选报表中的结果。
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8dfd41dfbcbd35712fb2e13925b047e4ed2db962
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 23c0167fddf6887d0ff4e25dcfcd9242434b4f66
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082206"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462191"
 ---
 # <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>内置集合 - 内置的全局和用户引用（报表生成器）
   内置字段集合包含 **Globals** 和 **User** 集合，表示处理报表时由 Reporting Services 提供的全局值。 **Globals** 集合提供一些值，例如报表名称、开始处理报表的时间，以及报表表头或表尾的当前页码。 **User** 集合提供用户标识符和语言设置。 这些值在表达式中用于对报表中的结果进行筛选。  
@@ -24,10 +25,10 @@ ms.locfileid: "77082206"
 ## <a name="using-the-globals-collection"></a>使用 Globals 集合  
  **Globals** 集合包含报表的全局变量。 在设计图面上，这些变量显示为带有前缀 &（& 号），例如 `[&ReportName]`。 下表对 **Globals** 集合的成员进行了说明。  
   
-|**成员**|类型 |**说明**|  
+|**成员**|类型|**说明**|  
 |----------------|--------------|---------------------|  
 |ExecutionTime|**DateTime**|报表开始运行的日期和时间。|  
-|PageNumber|**整数**|相对于重置页码的分页符的当前页码。 在报表处理开始时，初始值设置为 1。 对于每个呈现的页，该页码将增 1。<br /><br /> 若要为矩形、数据区域、数据区域组或地图在分页符内对页面进行编号，请在“PageBreak”属性上，将“ResetPageNumber”属性设置为“True”  。 不支持 Tablix 列层次结构组。<br /><br /> PageNumber 只能用于页眉或页脚中的表达式中。|  
+|PageNumber|**整数**|相对于重置页码的分页符的当前页码。 在报表处理开始时，初始值设置为 1。 对于每个呈现的页，该页码将增 1。<br /><br /> 若要为矩形、数据区域、数据区域组或地图在分页符内对页面进行编号，请在“PageBreak”属性上，将“ResetPageNumber”属性设置为“True”****。 不支持 Tablix 列层次结构组。<br /><br /> PageNumber 只能用于页眉或页脚中的表达式中。|  
 |ReportFolder|**字符串**|包含该报表的文件夹的完整路径。 它不包括报表服务器 URL。|  
 |ReportName|**字符串**|报表存储在报表服务器数据库中的名称。|  
 |ReportServerUrl|**字符串**|正在运行该报表的报表服务器的 URL。|  
@@ -42,7 +43,7 @@ ms.locfileid: "77082206"
 ### <a name="renderformat"></a>RenderFormat  
  下表介绍 **RenderFormat**的成员。  
   
-|成员|类型|说明|  
+|成员|类型|描述|  
 |------------|----------|-----------------|  
 |名称|**字符串**|呈现器的名称注册在 RSReportServer 配置文件中。<br /><br /> 在报表处理/呈现周期的特定环节可用。|  
 |IsInteractive|**布尔值**|当前呈现请求是否使用交互式呈现格式。|  
@@ -70,9 +71,9 @@ ms.locfileid: "77082206"
   
  下表对 **User** 集合的成员进行了说明。  
   
-|**成员**|类型 |**说明**|  
+|**成员**|类型|**说明**|  
 |----------------|--------------|---------------------|  
-|**语言**|**字符串**|运行报表的用户的语言。 例如，`en-US` 。|  
+|**语言**|**字符串**|运行报表的用户的语言。 例如，`en-US`。|  
 |**UserID**|**字符串**|运行报表的用户的 ID。 如果您使用的是 Windows 身份验证，则此值为当前用户的域帐户。 此值由 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安全扩展插件确定，此插件可以使用 Windows 身份验证，也可以使用自定义身份验证。|  
  
 ### <a name="using-locale-settings"></a>使用区域设置  

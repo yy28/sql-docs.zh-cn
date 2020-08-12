@@ -1,5 +1,6 @@
 ---
 title: 呈现扩展插件概述 | Microsoft Docs
+description: 查看 Reporting Services 中包含的数据呈现扩展插件。 了解如何添加自定义呈现扩展插件，以生成其他格式的报表。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 909356a0-4709-43e5-b597-33bd9bb22882
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c411048c247224f0d1af95329480f24d9b6ccdad
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dd3bca97b438d683e325194616af123ea9fb8290
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193881"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529423"
 ---
 # <a name="rendering-extensions-overview"></a>呈现扩展插件概述
   呈现扩展插件是将报表数据和布局信息转换为设备特定格式的报表服务器的组件或模块。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 包括七种呈现扩展插件：HTML、Excel、Word、CSV 或 Text、XML、Image 和 PDF。 您可以创建其他呈现扩展插件以便以其他格式生成报表。  
@@ -31,11 +32,11 @@ ms.locfileid: "63193881"
 |**XML**|以 XML 格式呈现报表。 报表在浏览器中打开。 应用于此 XML 输出的其他转换可能是一种经济有效的方法，使您免于开发自己的呈现扩展插件。|  
 |**CSV**|以逗号分隔的格式呈现报表。 报表在与 CSV 文件格式关联的查看工具中打开。|  
 |**IMAGE**|以面向页面的格式呈现报表。 此格式在报表工具栏的“导出”下拉列表中显示为 **TIFF**。|  
-|**PDF**|在 Adobe Acrobat Reader 中呈现报表。 此格式在报表工具栏的“导出”下拉列表中显示为“Acrobat (PDF) 文件”  。|  
+|**PDF**|在 Adobe Acrobat Reader 中呈现报表。 此格式在报表工具栏的“导出”下拉列表中显示为“Acrobat (PDF) 文件”。|  
 |**EXCEL**|在 [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 中呈现报表。|  
 |**WORD**|在 [!INCLUDE[ofprword](../../../includes/ofprword-md.md)] 中呈现报表。|  
-|HTML 4.0（HTML 呈现扩展插件的一部分） |HTML 是用于最初呈现报表的格式。 如果浏览器支持 HTML 4.0，则这是所使用的格式。 否则，使用 HTML 3.2。|  
-|MHTML（HTML 呈现扩展插件的一部分） |以 MHTML 格式呈现报表。 报表在 Internet Explorer 中打开。 此格式在报表工具栏的“导出”下拉列表中显示为“Web 存档”  。|  
+|HTML 4.0（HTML 呈现扩展插件的一部分）|HTML 是用于最初呈现报表的格式。 如果浏览器支持 HTML 4.0，则这是所使用的格式。 否则，使用 HTML 3.2。|  
+|MHTML（HTML 呈现扩展插件的一部分）|以 MHTML 格式呈现报表。 报表在 Internet Explorer 中打开。 此格式在报表工具栏的“导出”下拉列表中显示为“Web 存档”。|  
 |**NULL**|不将报表呈现为特定的格式。 这一呈现扩展插件用于将报表放到缓存中。 空呈现应与计划的执行或传递一起使用。|  
   
  有关建议的格式及其用法的详细信息，请参阅[导出报表（报表生成器和 SSRS）](../../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)。  
@@ -43,7 +44,7 @@ ms.locfileid: "63193881"
  由 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 实现或随 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 提供的每个呈现扩展插件都使用一组通用的接口。 这可确保每个扩展插件实现类似的功能并降低报表服务器核心中的呈现代码的复杂性。  
   
 ## <a name="rendering-object-model"></a>呈现对象模型  
- 当处理报表时，结果是公开的对象模型，称为呈现对象模型 (ROM)。 呈现对象模型是定义已处理报表的内容、布局和数据的各个类的集合。 ROM 可供希望为 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 设计、开发和部署自定义呈现扩展插件的开发人员使用。 当报表服务器处理报表的 XML 定义以及用户定义的报表数据时，将生成 ROM。 当完成处理后，呈现扩展插件使用公共对象模型以定义报表的输出。 ROM 的可用公共类在 Microsoft.ReportingServices.OnDemandReportRendering 命名空间中定义  。  
+ 当处理报表时，结果是公开的对象模型，称为呈现对象模型 (ROM)。 呈现对象模型是定义已处理报表的内容、布局和数据的各个类的集合。 ROM 可供希望为 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 设计、开发和部署自定义呈现扩展插件的开发人员使用。 当报表服务器处理报表的 XML 定义以及用户定义的报表数据时，将生成 ROM。 当完成处理后，呈现扩展插件使用公共对象模型以定义报表的输出。 ROM 的可用公共类在 Microsoft.ReportingServices.OnDemandReportRendering 命名空间中定义。  
   
 ## <a name="writing-custom-rendering-extensions"></a>编写自定义呈现扩展插件  
  在决定创建自定义呈现扩展插件之前，应评估更为简单的替代方法。 可以：  
@@ -52,7 +53,7 @@ ms.locfileid: "63193881"
   
 -   通过将 XSL 转换 (XSLT) 与 XML 呈现格式的输出结合起来，添加自定义格式和演示功能。  
   
- 编写自定义呈现扩展插件的过程困难重重。 呈现扩展插件通常必须支持报表元素的所有可能组合，并要求您实现许许多多的类、接口、方法和属性。 如果必须以未随 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 提供的格式呈现报表，并且决定为呈现扩展插件编写自己的托管代码实现，则呈现扩展插件代码必须实现报表服务器要求的 Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension 接口  。  
+ 编写自定义呈现扩展插件的过程困难重重。 呈现扩展插件通常必须支持报表元素的所有可能组合，并要求您实现许许多多的类、接口、方法和属性。 如果必须以未随 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 提供的格式呈现报表，并且决定为呈现扩展插件编写自己的托管代码实现，则呈现扩展插件代码必须实现报表服务器要求的 Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension 接口****。  
   
  有关 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的补充文档和白皮书，请参阅 [Reporting Services 网站](https://go.microsoft.com/fwlink/?LinkId=19951)上的最新技术资源。  
   

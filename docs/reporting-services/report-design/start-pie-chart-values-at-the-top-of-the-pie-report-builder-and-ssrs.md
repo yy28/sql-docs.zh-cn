@@ -1,5 +1,6 @@
 ---
 title: 从饼图顶部开始绘制饼图值（报表生成器）| Microsoft Docs
+description: 了解如何从图表顶部开始绘制饼图值，而不是从与顶部成 90 度的默认位置开始绘制。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: d0e6fb59-ca4e-4d70-97cb-0ad183da21d3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3f23163da5fc4b23a364646be607167e663187fd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dfdd7600a08a78baa0b70f2048423f1632ebe2db
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080897"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689435"
 ---
 # <a name="start-pie-chart-values-at-the-top-of-the-pie-report-builder-and-ssrs"></a>从饼图顶部开始绘制饼图值（报表生成器和 SSRS）
 默认情况下，在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表的饼图中，数据集中的第一个值从与饼顶部成 90 度的位置开始绘制。 
@@ -22,7 +23,7 @@ ms.locfileid: "77080897"
 
 *图表值从 90 度的位置开始绘制。*
 
-也许你希望第一个值从顶部开始绘制。 
+也许你希望从顶部开始绘制第一个值。 
 
 ![report-builder-pie-chart-start-at-top](../../reporting-services/media/report-builder-pie-chart-start-at-top.png)
 

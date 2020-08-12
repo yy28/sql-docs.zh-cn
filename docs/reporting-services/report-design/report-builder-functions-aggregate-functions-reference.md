@@ -1,5 +1,6 @@
 ---
 title: 聚合函数参考（报表生成器）| Microsoft Docs
+description: 在报表生成器的表达式中使用内置聚合函数，在报表中纳入聚合值。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d5ef615a05648e2a5873e48371b1f1edaf754664
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0c767c4e4feced7f5979cf6b22e90cceef311ca5
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081316"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255730"
 ---
 # <a name="report-builder-functions---aggregate-functions-reference"></a>报表生成器函数 - 聚合函数参考
   若要在报表中包含聚合值，您可以在表达式中使用内置聚合函数。 数值字段的默认聚合函数是 SUM。 您可以编辑表达式，并使用其他内置聚合函数或指定不同的作用域。 作用域标识要用于计算的一组数据。  
@@ -71,19 +72,19 @@ ms.locfileid: "77081316"
   
 |报表中的位置|字段|参数|ReportItems|PageNumber<br /><br /> TotalPages|数据源<br /><br /> 数据集|变量|RenderFormat|  
 |------------------------|------------|----------------|-----------------|-------------------------------|----------------------------|---------------|------------------|  
-|页眉<br /><br /> 页脚|是|是|最多一个<br /><br /> 注释 1|是|是|是|是|  
-|Body|是<br /><br /> 注释 2|是|仅限当前作用域或包含作用域中的项<br /><br /> 注释 3|否|是|是|是|  
+|页眉<br /><br /> 页脚|是|“是”|最多一个<br /><br /> 注释 1|是|是|是|“是”|  
+|Body|是<br /><br /> 注释 2|是|仅限当前作用域或包含作用域中的项<br /><br /> 注释 3|否|是|是|“是”|  
 |报表参数|否|仅限列表中前面的参数<br /><br /> 注释 4|否|否|否|否|否|  
-|字段|是|是|否|否|否|否|否|  
+|字段|是|“是”|否|否|否|否|否|  
 |查询参数|否|是|否|否|否|否|否|  
-|组表达式|是|是|否|否|是|否|否|  
-|排序表达式|是|是|否|否|是|是<br /><br /> 注释 5|否|  
-|筛选表达式|是|是|否|否|是|是<br /><br /> 注释 6|否|  
+|组表达式|是|“是”|否|否|是|否|否|  
+|排序表达式|是|“是”|否|否|是|“是”<br /><br /> 注释 5|否|  
+|筛选表达式|是|“是”|否|否|是|“是”<br /><br /> 注释 6|否|  
 |代码|否|是<br /><br /> 注释 7|否|否|否|否|否|  
 |报表语言|否|是|否|否|否|否|否|  
-|变量|是|是|否|否|是|当前作用域或包含作用域|否|  
-|聚合|是|是|仅在页眉/页脚中|仅在报表项聚合中|是|否|否|  
-|Lookup 函数|是|是|是|否|是|否|否|  
+|变量|是|“是”|否|否|是|当前作用域或包含作用域|否|  
+|聚合|是|“是”|仅在页眉/页脚中|仅在报表项聚合中|是|否|否|  
+|Lookup 函数|是|是|“是”|否|是|否|否|  
   
 -   **注释 1。** ReportItems 必须存在于呈现的报表页中，否则其值为 Null。 如果报表项的可见性取决于计算结果为 False 的表达式，则该页不存在此报表项。  
   
@@ -110,10 +111,10 @@ ms.locfileid: "77081316"
 |-------------|------------------|---------------|--------------------|--------------|-------------------------------------|---------------------------|----------------------|------------------------|  
 |运行值|否|否|否|否|是|否|是|否|  
 |第一个<br /><br /> 最后一个|否|否|否|否|是|否|否|否|  
-|Previous|是|是|是|否|是|否|是|否|  
+|Previous|是|是|“是”|否|是|否|是|否|  
 |Sum 和其他预排序函数|否|否|否|否|是|否|是|否|  
 |ReportItem 聚合|否|否|否|否|否|否|否|否|  
-|Lookup 函数|是|是<br /><br /> 注释 1|是<br /><br /> 注释 1|是<br /><br /> 注释 1|是<br /><br /> 注释 1|是<br /><br /> 注释 1|否|否|  
+|Lookup 函数|是|“是”<br /><br /> 注释 1|是<br /><br /> 注释 1|是<br /><br /> 注释 1|是<br /><br /> 注释 1|是<br /><br /> 注释 1|否|否|  
 |Aggregate 函数|否|否|否|否|否|否|否|否|  
   
 -   **注释 1。** 如果 Lookup 函数未包含在聚合中，则聚合函数仅适用于 Lookup 函数的 *Source* 表达式中。 聚合函数不适用于 Lookup 函数的 *Destination* 表达式或 *Result* 表达式中。  
@@ -173,7 +174,7 @@ ms.locfileid: "77081316"
 ##  <a name="testing-for-scope"></a><a name="TestingforScope"></a> 测试作用域  
  下列内置函数测试报表项的当前上下文，以确定该报表项是否为特定作用域的成员。  
   
-|函数|说明|  
+|函数|描述|  
 |--------------|-----------------|  
 |[InScope](../../reporting-services/report-design/report-builder-functions-inscope-function.md)|指示项的当前实例是否在指定的作用域内。|  
   
@@ -182,7 +183,7 @@ ms.locfileid: "77081316"
 ##  <a name="retrieving-recursive-level"></a><a name="RetrievingRecursiveLevel"></a> 检索递归级别  
  下列内置函数检索处理递归层次结构时的当前级别。 此函数的结果与文本框中的 **Padding** 属性配合使用可以控制递归组可视层次结构的缩进级别。 有关详细信息，请参阅[创建递归层次结构组（报表生成器和 SSRS）](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)。  
   
-|函数|说明|  
+|函数|描述|  
 |--------------|-----------------|  
 |[Level](../../reporting-services/report-design/report-builder-functions-level-function.md)|返回在递归层次结构中的当前深度级别。|  
   

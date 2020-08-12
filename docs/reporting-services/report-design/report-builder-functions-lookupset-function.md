@@ -1,5 +1,6 @@
 ---
 title: LookupSet 函数（报表生成器）| Microsoft Docs
+description: 了解 LookupSet 函数，该函数从包含名称或值对的数据集中返回指定名称的一组匹配值。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f30c2747a384a49282be0208e28d6153570299c7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8c790f63ddec2a30d1381459b37b4cfdf9088389
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081216"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255580"
 ---
 # <a name="report-builder-functions---lookupset-function"></a>报表生成器函数 - LookupSet 函数
   从包含名称/值对的数据集返回指定名称的一组匹配值。  
@@ -30,13 +31,13 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 #### <a name="parameters"></a>参数  
  *source_expression*  
- (**Variant**) 在当前作用域中计算结果并指定要查找的名称或键的表达式。 例如，`=Fields!ID.Value` 。  
+ (**Variant**) 在当前作用域中计算结果并指定要查找的名称或键的表达式。 例如，`=Fields!ID.Value`。  
   
  *destination_expression*  
- (**Variant**) 针对数据集中的每行计算结果并指定要匹配的名称或键的表达式。 例如，`=Fields!CustomerID.Value` 。  
+ (**Variant**) 针对数据集中的每行计算结果并指定要匹配的名称或键的表达式。 例如，`=Fields!CustomerID.Value`。  
   
  *result_expression*  
- (**Variant**) 针对数据集中的行（其中， *source_expression* = *destination_expression*）计算结果并指定要检索的值的表达式。 例如，`=Fields!PhoneNumber.Value` 。  
+ (**Variant**) 针对数据集中的行（其中， *source_expression* = *destination_expression*）计算结果并指定要检索的值的表达式。 例如，`=Fields!PhoneNumber.Value`。  
   
  *数据集 (dataset)*  
  指定报表中数据集的名称的常量。 例如，“ContactInformation”。  

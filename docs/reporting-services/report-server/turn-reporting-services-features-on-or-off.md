@@ -1,5 +1,6 @@
 ---
 title: 打开或关闭 Reporting Services 功能 | Microsoft Docs
+description: 了解如何关闭本机模式中的单个功能 - Reporting Services。 有不同的方法可用来配置功能。
 ms.date: 06/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: b69db02a-43a7-4fdc-ad9b-438d817a7f83
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 67945db1fd131b27b37a7e34853987c38fad8d84
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b66ae216df1b50ee1fa71de8e18f7ee8251e1be4
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67140373"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547869"
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>打开或关闭 Reporting Services 功能
   您可以关闭不用作锁定策略一部分的报表服务器功能，以减小生产报表服务器的攻击面。 在大多数情况下，需要同时运行各种 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能才能使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中提供的所有功能。 但是根据所用的部署模型，您可以禁用不需要的功能。 例如，如果所有报表处理均已配置为预定操作，则可以只启用后台处理。 同样，如果只需要交互式的按需报表，可以只运行报表服务器 Web 服务。  
   
- 本文中的过程展示了如何禁用本机模式 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能。 可以不同的方式配置这些功能，如直接编辑 `RsReportServer.config` 文件或使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中基于策略的管理的“Reporting Services 的外围应用配置”方面。 使用以下链接可以找到说明如何打开或关闭相应功能的步骤：  
+ 本文中的过程展示了如何禁用本机模式 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能。 可以不同的方式配置这些功能，如直接编辑 `RsReportServer.config` 文件或使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中基于策略的管理的“Reporting Services 的外围应用配置”**** 方面。 使用以下链接可以找到说明如何打开或关闭相应功能的步骤：  
   
 -   [报表服务器 Web 服务](#RSWebSvc)  
   
@@ -37,13 +38,13 @@ ms.locfileid: "67140373"
   
 1.  在文本编辑器中打开 `RsReportServer.config` 文件。 有关详细信息，请参阅[修改 Reporting Services 配置文件 (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)。  
   
-2.  若要启用报表服务器 Web 服务，请将 IsWebServiceEnabled  设置为 true  ：  
+2.  若要启用报表服务器 Web 服务，请将 IsWebServiceEnabled 设置为 true：  
   
     ```  
     <IsWebServiceEnabled>true</IsWebServiceEnabled>  
     ```  
   
-3.  若要禁用报表服务器 Web 服务，请将 IsWebServiceEnabled  设置为 false  ：  
+3.  若要禁用报表服务器 Web 服务，请将 IsWebServiceEnabled 设置为 false：  
   
     ```  
     <IsWebServiceEnabled>false</IsWebServiceEnabled>  
@@ -55,7 +56,7 @@ ms.locfileid: "67140373"
   
 1.  打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，然后连接到要配置的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例。  
   
-2.  在“对象资源管理器”中右键单击 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 节点，指向“策略”  ，然后单击“方面”  。  
+2.  在“对象资源管理器”中右键单击 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 节点，指向“策略”，然后单击“方面”。  
   
 3.  在 **“方面”** 列表中，选择 **Reporting Services 的外围应用配置器**。  
   
@@ -104,15 +105,15 @@ ms.locfileid: "67140373"
   
 1.  打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，然后连接到要配置的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例。  
   
-2.  在对象资源管理器中右键单击 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 节点，然后单击“属性”  。  
+2.  在对象资源管理器中右键单击 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 节点，然后单击“属性”。  
   
-3.  在“服务器属性”  对话框中，选择“选择页”  下的“安全性”  。  
+3.  在“服务器属性”对话框中，选择“选择页”下的“安全性”。  
   
-    -   若要启用 Windows 集成安全性，请选中“为报表数据源启用 Windows 集成安全性”  选项。  
+    -   若要启用 Windows 集成安全性，请选中“为报表数据源启用 Windows 集成安全性”选项。  
   
-    -   若要禁用 Windows 集成安全性，请取消选中“为报表数据源启用 Windows 集成安全性”  选项。  
+    -   若要禁用 Windows 集成安全性，请取消选中“为报表数据源启用 Windows 集成安全性”选项。  
   
-4.  选择“确定”  。  
+4.  选择“确定”。  
   
 ## <a name="see-also"></a>另请参阅  
 [Reporting Services 配置管理器（本机节点）](../install-windows/reporting-services-configuration-manager-native-mode.md)

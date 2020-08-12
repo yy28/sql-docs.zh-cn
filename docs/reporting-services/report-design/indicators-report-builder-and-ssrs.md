@@ -1,5 +1,6 @@
 ---
 title: 指示器（报表生成器）| Microsoft Docs
+description: 了解指示器，即在报表生成器的分页报表中提供单个数据值的状态的小型仪表。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ f1_keywords:
 ms.assetid: 2edbd279-be39-4d97-b1b6-ddbc5b17c422
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c2e62ec26c0019e82b3f0e37dbdd9c1539332212
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2b440f82dc7d758e7f6eb17bdf0f13e818348423
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082069"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779509"
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>指示器（报表生成器和 SSRS）
   在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，指示器是以直观的形式提供单个数据值的状态的小型仪表。 表示指示器及其状态的图标十分简单，并且即使在以小尺寸使用时也保持有效的外观。  
@@ -41,7 +42,7 @@ ms.locfileid: "77082069"
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供可按原样使用的内置指示器集和指示器图标，你还可以自定义单独的指示器图标和指示器集以满足需要。  
   
- 有关将指示器用作 KPI 的详细信息，请参阅[教程：向报表添加 KPI（报表生成器）](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)。  
+ 若要详细了解如何将指示器用作 KPI，请参阅[教程：向报表添加 KPI（报表生成器）](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)。  
   
 > [!NOTE]  
 >  您可以将指示器作为报表部件与报表分开发布。 阅读有关 [报表部件](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)的详细信息。  
@@ -87,7 +88,7 @@ ms.locfileid: "77082069"
 ##  <a name="using-indicators-in-tables-and-matrices"></a><a name="UsingIndicatorsInTablesMatrices"></a> 在表和矩阵中使用指示器  
  指示器的简单形状使其很适合在表和矩阵中使用。 指示器甚至在小尺寸下效果也很好。 这使它们可用于报表的详细信息行或组行中。  
   
- 下图显示具有一个表的报表，该表使用方向指示器集“四个箭头(彩色)”  来指示销售额。 报表中的指示器图标配置为使用蓝色阴影来代替默认颜色：红色、黄色和绿色。  
+ 下图显示具有一个表的报表，该表使用方向指示器集“四个箭头(彩色)”来指示销售额。 报表中的指示器图标配置为使用蓝色阴影来代替默认颜色：红色、黄色和绿色。  
   
  ![rs_IndicatorReportBlueArrows](../../reporting-services/report-design/media/rs-indicatorreportbluearrows.gif "rs_IndicatorReportBlueArrows")  
   
@@ -126,7 +127,7 @@ ms.locfileid: "77082069"
   
  无论您是使用百分比还是数字状态度量单位，都可能会发生此情况。 在您使用数字度量单位时更有可能发生此情况，因为您为此度量值提供特定值。 在您对报表数据值进行四舍五入时也更有可能发生此情况，因为这往往会使数据更离散。  
   
- 下面的方案描述当在“3 个箭头(彩色)”  方向指示器中更改由三个状态构成的序列时，将会如何影响数据的可视化。 默认情况下，该序列为：  
+ 下面的方案描述当在“3 个箭头(彩色)”**** 方向指示器中更改由三个状态构成的序列时，将会如何影响数据的可视化。 默认情况下，该序列为：  
   
 1.  红色向下箭头  
   
@@ -136,7 +137,7 @@ ms.locfileid: "77082069"
   
  下面的方案显示对于四个不同的状态序列及其值范围，这些序列是如何影响数据可视化的。  
   
- 在这些方案中，“3 个箭头(彩色)”  指示器使用数字状态度量。  
+ 在这些方案中，“3 个箭头(彩色)”指示器使用数字状态度量。  
   
 |状态序列|起始值|结束值|  
 |--------------------|-----------------|---------------|  

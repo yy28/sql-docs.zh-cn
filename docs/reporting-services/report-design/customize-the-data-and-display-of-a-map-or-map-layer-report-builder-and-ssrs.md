@@ -1,5 +1,6 @@
 ---
 title: 自定义地图或地图层的数据和显示（报表生成器） | Microsoft Docs
+description: 提高用户数据体验，并显示对报表生成器中图例、颜色、标签和分辨率的更改。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -21,12 +22,12 @@ f1_keywords:
 ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 53b1495299dd3a71843ceaa1ad3a43464c374210
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 671ea97546b8b2184ee6d105da2990d9f736d9e1
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080516"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462251"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>自定义地图或地图层的数据和显示（报表生成器和 SSRS）
   在使用向导向 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中添加地图或地图层之后，可能希望更改地图在报表中的显示方式。 可以考虑以下构思来进行改进：  
@@ -67,7 +68,7 @@ ms.locfileid: "77080516"
   
 -   通过指定阴影，提供具有深度的错觉。  
   
- 若要更改这些选项，请右键单击“地图”，然后更改选项。   
+ 若要更改这些选项，请右键单击“地图”，然后更改选项。  
   
 ##  <a name="change-options-for-the-viewport"></a><a name="Viewport"></a> 更改视区的选项  
  使用视区选项可以更改报表中显示的地图的视图。  
@@ -117,11 +118,11 @@ ms.locfileid: "77080516"
  有关层的详细信息，请参阅[添加、更改或删除地图或地图层（报表生成器和 SSRS）](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)。  
   
 ##  <a name="change-data-grouping-for-the-layer"></a><a name="DataGrouping"></a> 更改层的数据分组  
- 您可以自定义为您自己的形状聚合空间数据的方式。 若要设置某一层的组属性，请在“地图”窗格中选择该层，并且在该层的“属性”窗格中，单击“组”，然后单击省略号 (…) 以便打开“组”属性  。 在该对话框中，您可以指定组表达式、创建组变量并且筛选用于分组的数据。  
+ 您可以自定义为您自己的形状聚合空间数据的方式。 若要设置某一层的组属性，请在“地图”窗格中选择该层，并且在该层的“属性”窗格中，单击“组”，然后单击省略号 (…) 以便打开“组”属性****。 在该对话框中，您可以指定组表达式、创建组变量并且筛选用于分组的数据。  
   
  组表达式指定如何为层上的每个地图元素聚合与空间数据具有一定关系的分析数据。 默认情况下，组表达式是为空间数据与分析数据之间的关系指定的一组匹配字段。 例如，对于显示某个国家或地区的城市位置和人口规模的气泡地图，匹配字段必须包括城市名称 [City] 和区域名称 [Region]，因为可能有多个城市具有相同的名称。 相应的组表达式包括两个字段：[City] 和 [Region]。  
   
- 有关详细信息，请参阅 [地图提示：如何将形状文件导入到 SQL Server 中并且聚合空间数据](https://go.microsoft.com/fwlink/?LinkID=214991)。  
+ 有关详细信息，请参阅[地图提示：如何将形状文件导入 SQL Server 并聚合空间数据](https://go.microsoft.com/fwlink/?LinkID=214991)。  
   
 ##  <a name="change-options-for-the-map-elements-on-the-layer"></a><a name="MapElements"></a> 更改层上地图元素的选项  
  地图元素是层上的点、线条或多边形，它们基于空间数据。 对于地图元素，可以设置以下选项。 这些选项适用于层上的所有地图元素，无论这些元素是否为嵌入的元素：  

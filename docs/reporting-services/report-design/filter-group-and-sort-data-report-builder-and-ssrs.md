@@ -1,5 +1,6 @@
 ---
 title: 对数据进行筛选、分组和排序（报表生成器）| Microsoft Docs
+description: 了解如何基于报表生成器报表数据窗格中的数据集字段和参数使用表达式对报表数据进行控制、组织和排序。
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -17,12 +18,12 @@ f1_keywords:
 ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e08a4a43897c1497c81a9e01f010fa99a252130e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: eca67966ff36c2100df7d46f07e150ed6aa32d1c
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080167"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681386"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>对数据进行筛选、分组和排序（报表生成器和 SSRS）
   在报表中，可以使用表达式来帮助对报表数据进行控制、组织和排序。 默认情况下，当您创建数据集和设计报表布局时，报表项的属性会基于数据集字段、参数以及显示在“报表数据”窗格中的其他项自动设置为表达式。 您还可向表或矩阵单元添加交互式排序按钮，以便用户能够通过交互方式，更改组或组内的行的行排序顺序。  
@@ -59,7 +60,7 @@ ms.locfileid: "77080167"
   
  在从外部数据源检索数据之后，您可以向数据集、数据区域和数据区域组（包括详细信息组）添加筛选器。 在运行时应用筛选器的顺序为：先对数据集，再对数据区域，最后对组，并按照组层次结构自上而下的顺序。 在表、矩阵或列表中，对行组、列组和相邻组分别应用各自的筛选器。 在图表中，对类别组和序列组分别应用各自的筛选器。 有关详细信息，请参阅 [添加数据集筛选器、数据区域筛选器和组筛选器（报表生成器和 SSRS）](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)。  
   
- 对于每个筛选器，需要指定一个“筛选器公式”  。 筛选器公式包括数据集字段或表达式，用于指定要筛选的数据、运算符以及要比较的值。 在处理项时，只包括与筛选条件匹配的数据值。  
+ 对于每个筛选器，需要指定一个“筛选器公式” 。 筛选器公式包括数据集字段或表达式，用于指定要筛选的数据、运算符以及要比较的值。 在处理项时，只包括与筛选条件匹配的数据值。  
   
  若要让用户能够控制报表中的数据，可以在筛选表达式中包括相应参数。 有关详细信息，请参阅[集合引用（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)。  
   
@@ -107,7 +108,7 @@ ms.locfileid: "77080167"
   
  所有三种排序类型均可在同一报表中组合使用。 默认情况下，排序顺序取决于数据集查询返回数据的顺序。 排序表达式应用于数据区域和数据区域组。 交互式排序在排序表达式后应用。  
   
- 对于包含聚合函数的表达式，大多数结果不受排序顺序的影响。 聚合函数 First、Last 和 Previous 的返回值会受到排序顺序的影响。 有关详细信息，请参阅 [聚合函数引用（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)。  
+ 对于包含聚合函数的表达式，大多数结果不受排序顺序的影响。 以下聚合函数的返回值受排序顺序影响：First、Last 和 Previous。 有关详细信息，请参阅 [聚合函数引用（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)。  
   
 ### <a name="sorting-data-in-a-dataset-query"></a>在数据集查询中对数据进行排序  
  在数据集查询中包括排序顺序可在为报表检索数据之前对数据进行预排序。 通过在查询中对数据进行排序，排序工作将由数据源而非报表处理器完成。  

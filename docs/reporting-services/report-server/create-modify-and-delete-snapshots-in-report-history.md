@@ -1,5 +1,6 @@
 ---
 title: 创建、修改和删除报表历史记录中的快照 | Microsoft Docs
+description: 了解如何通过添加和删除快照或者修改影响报表历史记录存储的属性在 Reporting Services 中对报表历史记录进行维护。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5aebbbfa-a8db-462d-8ab9-746fad9525f0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 72486193f4171be9fdce9400328bd1c2a199f2c5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4c686ff203b9a080424fb46e50c42a6edefd7655
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580479"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84548029"
 ---
 # <a name="create-modify-and-delete-snapshots-in-report-history"></a>创建、修改和删除报表历史记录中的快照
   报表历史记录是报表快照的集合。 通过添加和删除快照或修改影响报表历史记录存储的属性，可以对报表历史记录进行维护。 您可以手动或按计划创建报表历史记录。  

@@ -1,5 +1,6 @@
 ---
 title: 向报表添加仪表（报表生成器）| Microsoft Docs
+description: 了解如何通过创建仪表数据区域并将报表数据集字段拖动到报表生成器中仪表上的窗格中来以可视化格式汇总数据。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 45da4fef-2b02-40e1-977c-f8f80d87155e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 45f01040e150a613cf49451371fd4e7b742042c1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ebf3648c2292e5d3e83ff753f70b5f430f0ba3bc
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080727"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681546"
 ---
 # <a name="add-a-gauge-to-a-report-report-builder-and-ssrs"></a>向报表添加仪表（报表生成器和 SSRS）
   在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，如果要以可视化格式汇总数据，则可使用仪表数据区域。 将仪表数据区域添加到设计图面后，可以将报表数据集字段拖到仪表的数据窗格中。  
@@ -37,7 +38,7 @@ ms.locfileid: "77080727"
   
 5.  将数据集中的一个字段添加到数据字段放置区。 您只能添加一个字段。 如果要显示多个字段，必须添加其他指针，每个字段一个指针。  
   
-     右键单击仪表刻度，然后选择“刻度属性”  。 为刻度的 **“最小值”** 和 **“最大值”** 分别键入一个值。 有关详细信息，请参阅[设置仪表的最小值或最大值（报表生成器和 SSRS）](../../reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)。  
+     右键单击仪表刻度，然后选择“刻度属性”。 为刻度的 **“最小值”** 和 **“最大值”** 分别键入一个值。 有关详细信息，请参阅[设置仪表的最小值或最大值（报表生成器和 SSRS）](../../reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [嵌套数据区域（报表生成器和 SSRS）](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   

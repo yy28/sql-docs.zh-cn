@@ -1,5 +1,6 @@
 ---
 title: ReportItems 集合参考（报表生成器）| Microsoft Docs
+description: 了解 ReportItems 集合。 报表生成器中的这些文本框包括位于当前范围的页眉、页尾或表体的文本框。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: edc0c75f-0530-4e6d-85aa-3385301bfd00
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e8819e97cbece0ab9682252c3afdedee7d671428
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dbb13f8e3ce8b64b64a8f575dd087a715cd6e5da
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081887"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462321"
 ---
 # <a name="built-in-collections---reportitems-collection-references-report-builder"></a>内置集合 - ReportItems 集合引用（报表生成器）
   **ReportItems** 内置集合是来自报表项（如报表设计图面上的数据区域行或文本框）的文本框集合。 **ReportItems** 集合包括位于表头、表尾或表体的当前作用域中的文本框。 此集合在运行时由报表处理器和报表呈现器确定。 用户查看报表页面时，如果报表处理器连续组合报表数据和报表项布局元素，则当前作用域将随之变化。 可以使用 **ReportItems** 内置集合在每个页面中生成显示首项和尾项的字典样式页面页眉。  
@@ -22,7 +23,7 @@ ms.locfileid: "77081887"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="using-the-reportitems-value-property"></a>使用 ReportItems 值属性  
- **ReportItems** 集合内的项只有一个属性：Value。 **ReportItems** 项的值可用于显示或计算报表中其他字段的数据。 若要访问当前文本框的值，可以使用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 内置全局 Me.Value 或仅使用 Value。 在报表函数（如 First）和聚合函数中使用完全限定语法。  
+ ReportItems 集合内的项只有一个属性：Value。 **ReportItems** 项的值可用于显示或计算报表中其他字段的数据。 若要访问当前文本框的值，可以使用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 内置全局 Me.Value 或仅使用 Value。 在报表函数（如 First）和聚合函数中使用完全限定语法。  
   
  例如：  
   
@@ -30,7 +31,7 @@ ms.locfileid: "77081887"
   
      `=ReportItems!Textbox1.Value`  
   
--   此表达式放置在 ReportItem 文本框的 Color 属性中，当值为 > 0 时以黑色显示文本；否则将以红色显示该值  ：  
+-   此表达式放置在 ReportItem 文本框的 Color 属性中，当值为 > 0 时以黑色显示文本；否则将以红色显示该值****：  
   
      `=IIF(Me.Value > 0,"Black","Red")`  
   

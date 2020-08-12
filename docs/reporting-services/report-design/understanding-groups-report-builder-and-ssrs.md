@@ -1,5 +1,6 @@
 ---
 title: 了解组（报表生成器）| Microsoft Docs
+description: 了解组如何在报表生成器中的分页报表中组织报表数据集视图。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: c32d4d89-45e4-4f77-a3e9-0429f53f9d6f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8a24833de353f4a524dd12f3a37a343fdc1a9151
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 498604b377638981d767e353518b70fe3398c597
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080850"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880307"
 ---
 # <a name="understanding-groups-report-builder-and-ssrs"></a>了解组（报表生成器和 SSRS）
   在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，组是绑定到数据区域的报表数据集中的命名数据集。 基本上，一个组可组织一个报表数据集视图。 数据区域中的所有组都指定相同报表数据集的不同视图。  
@@ -61,7 +62,7 @@ ms.locfileid: "77080850"
 > [!NOTE]  
 >  尽管组在不同数据区域中有不同的名称，但如何创建和使用组的原则是相同的。 在为数据区域创建组时，需要指定一种方式来组织链接到数据区域的数据集中的详细信息数据。 每个数据区域都支持一个用于显示分组数据的组结构。  
   
-### <a name="groups-in-a-tablix-data-region-details-row-and-column-groups"></a>Tablix 数据区域中的组：详细信息组、行组和列组  
+### <a name="groups-in-a-tablix-data-region-details-row-and-column-groups"></a>Tablix 数据区域中的组：“详细信息”、“行”和“列”组  
  如本主题前面所示，Tablix 数据区域使您能够按行或列将数据组织到组中。 但是，行组和列组不是 Tablix 数据区域中唯一可用的组。 此数据区域可以具有以下类型的组：  
   
 -   **详细信息组** 详细信息组包含在报表生成器或报表设计器应用数据集和数据区域筛选器之后报表数据集中的所有数据。 因此，详细信息组是唯一没有组表达式的组。  

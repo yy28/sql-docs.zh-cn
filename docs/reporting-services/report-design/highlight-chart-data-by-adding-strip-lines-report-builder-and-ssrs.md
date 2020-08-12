@@ -1,5 +1,6 @@
 ---
 title: 通过添加带状线突出显示图表数据（报表生成器）| Microsoft Docs
+description: 在水平或垂直范围内使用带状线可提高可读性、突出显示日期或突出显示报表生成器中的特定键范围。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: addd6137-4b6e-4e88-a7e8-9600fcd1ccce
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9fd7c4ee0998f7f0386272130e56bab47303b31c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b06345fef2d2bc813cfd146c8b31a53b54451859
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082095"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84011695"
 ---
 # <a name="highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs"></a>通过添加条带线突出显示图表数据（报表生成器和 SSRS）
   条带线（或条带）是按固定或自定义间隔使图表背景带有阴影的水平或垂直区域。 可以使用条带线执行以下操作：  
@@ -31,23 +32,23 @@ ms.locfileid: "77082095"
   
 ### <a name="to-display-interlaced-strip-lines-at-regular-intervals-on-a-chart"></a>在图表上按固定间隔显示交错条带线  
   
-1.  若要显示水平带状线，请右键单击垂直图表轴，然后单击“垂直轴属性”  。  
+1.  若要显示水平带状线，请右键单击垂直图表轴，然后单击“垂直轴属性”。  
   
-     若要显示垂直带状线，请右键单击水平图表轴，然后单击“水平轴属性”  。  
+     若要显示垂直带状线，请右键单击水平图表轴，然后单击“水平轴属性”。  
   
 2.  选择 **“使用交错”** 选项。 图表上将显示灰色条带线。  
   
-3.  （可选）使用相邻的“颜色”  下拉列表指定带状线的颜色。  
+3.  （可选）使用相邻的“颜色”下拉列表指定带状线的颜色。  
   
 ### <a name="to-display-interlaced-strip-lines-at-custom-intervals-on-a-chart"></a>在图表上按自定义间隔显示交错条带线  
   
-1.  若要显示水平带状线，请右键单击垂直图表轴，然后单击“垂直轴属性”  。  
+1.  若要显示水平带状线，请右键单击垂直图表轴，然后单击“垂直轴属性”。  
   
-     若要显示垂直带状线，请右键单击水平图表轴，然后单击“水平轴属性”  。  
+     若要显示垂直带状线，请右键单击水平图表轴，然后单击“水平轴属性”。  
   
      轴属性将显示在“属性”窗口中。  
   
-2.  在“属性”窗格的“外观”部分的 StripLines 属性中，单击“编辑集合(…)”按钮打开“ChartStripLine 集合编辑器”   。  
+2.  在“属性”窗格的“外观”部分的 StripLines 属性中，单击“编辑集合(…)”按钮打开“ChartStripLine 集合编辑器” 。  
   
 3.  单击 **“添加”** 向集合中添加一个新条带线。  
   

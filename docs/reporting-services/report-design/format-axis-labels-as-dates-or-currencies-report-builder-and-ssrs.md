@@ -1,5 +1,6 @@
 ---
 title: 将轴标签的格式设置为日期或货币（报表生成器）| Microsoft Docs
+description: 设置轴标签的格式并将轴时间间隔的类型设为有效的时间间隔，从而为 x 轴指定日期或时间间隔。
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e9a01a74-2f51-4b35-be3a-a6138568f6cf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f93ab65674436fc0225ba8f8c66b98d12f9b7694
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b65c752c479c86f88679cb01bd328dc2d22cf3be
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080021"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689423"
 ---
 # <a name="format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs"></a>将轴标签的格式设置为日期或货币（报表生成器和 SSRS）
 当在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表的轴上显示格式设置正确的 DateTime 值时，图表会自动将这些值显示为天数。 若要为 x 轴指定日期/时间间隔，如月份或小时间隔，则必须设置轴标签的格式，并要将轴间隔的类型设置为有效的日期或时间间隔。  
@@ -30,11 +31,11 @@ ms.locfileid: "77080021"
   
 ## <a name="to-format-x-axis-labels-as-monthly-intervals"></a>将 X 轴标签的格式设置为月间隔  
   
-1.  右键单击图表的水平轴（或 x 轴），然后选择“水平轴属性”  。  
+1.  右键单击图表的水平轴（或 x 轴），然后选择“水平轴属性”。  
   
-2.  在“水平轴属性”对话框中，选择“数字”   。  
+2.  在“水平轴属性”对话框中，选择“数字” 。  
   
-3.  从 **“类别”** 列表中，选择 **“日期”** 。 从“类型”列表中，选择要应用到 X 轴标签的日期格式  。  
+3.  从 **“类别”** 列表中，选择 **“日期”** 。 从“类型”列表中，选择要应用到 X 轴标签的日期格式。  
   
 4.  选择 **“轴选项”** 。  
   
@@ -47,11 +48,11 @@ ms.locfileid: "77080021"
   
 ## <a name="to-format-y-axis-labels-using-a-currency-format"></a>使用货币格式设置 Y 轴标签的格式  
   
-1.  右键单击图表的垂直轴（或 y 轴），然后选择“垂直轴属性”  。  
+1.  右键单击图表的垂直轴（或 y 轴），然后选择“垂直轴属性”。  
   
-2.  在“垂直轴属性”对话框中，选择“数字”   。  
+2.  在“垂直轴属性”对话框中，选择“数字” 。  
   
-3.  从 **“类别”** 列表中，选择 **“货币”** 。 从“符号”列表中，选择要应用到 Y 轴标签的货币格式  。  
+3.  从 **“类别”** 列表中，选择 **“货币”** 。 从“符号”列表中，选择要应用到 Y 轴标签的货币格式。  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

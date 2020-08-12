@@ -1,5 +1,6 @@
 ---
 title: 发布和重新发布报表部件（报表生成器）| Microsoft Docs
+description: 了解如何在报表生成器的默认位置发布带有已编辑的元数据和默认设置的报表部件。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 92dce484-f39b-403c-9caf-d8772bc3aca3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2ea76e42cb7230bc4195cc8c2dc1615308fa4058
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0c8beab2bdd11e0b8f3b550d46601b5e00069525
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082346"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255220"
 ---
 # <a name="publish-and-republish-report-parts-report-builder-and-ssrs"></a>发布和重新发布报表部件（报表生成器和 SSRS）
   报表部件是单独发布到报表服务器上并且可以在其他分页报表中重复使用的分页报表项。 您可以使用默认设置将报表部件发布到默认位置中，或者，您可以编辑名称和说明之类的报表部件元数据，并且将其保存在报表服务器上的其他位置。 如果您具有正确的权限，还可以将报表部件保存到与报表服务器集成的 SharePoint 站点上。  
@@ -32,7 +33,7 @@ ms.locfileid: "77082346"
   
      否则，单击 **“在发布前查看和修改报表部件”** 。  
   
-3.  编辑报表部件名称和说明：双击名称以便编辑它，然后在“说明”  字段中单击以便添加说明。  
+3.  编辑报表部件的名称和说明：双击名称即可编辑它，单击“说明”字段即可添加说明。  
   
     > [!NOTE]  
     >  最好提供报表部件名称和说明，以便在搜索时帮助用户识别它。 对于整个路径而言，报表部件名称的最大长度是 260 个字符，包括服务器上文件夹的名称，后随报表部件的实际名称。  
@@ -43,13 +44,13 @@ ms.locfileid: "77082346"
   
      在发布报表部件后，对话框将显示哪些报表部件已成功发布，哪些未成功发布。 对于未能发布的报表部件，您可以在 **“发布报表部件”** 对话框中查看详细信息。  
   
-6.  单击“关闭”  。  
+6.  单击“关闭”。  
   
 ## <a name="to-republish-a-report-part"></a>重新发布报表部件  
   
 1.  按照前面的过程发布报表部件。  
   
-2.  在 **“发布报表部件”** 对话框中，如果您单击 **“作为报表部件的新副本发布”** ，则报表生成器将不会保存在服务器的现有报表部件上，而将改为创建另一个报表部件。  
+2.  在 **“发布报表部件”** 对话框中，如果您单击 **“作为报表部件的新副本发布”**，则报表生成器将不会保存在服务器的现有报表部件上，而将改为创建另一个报表部件。  
   
 > [!NOTE]  
 >  如果您将其作为新的报表部件发布，则该报表部件将具有新的唯一 ID。 如果原始报表部件发生更改，它将不再接收更新。  

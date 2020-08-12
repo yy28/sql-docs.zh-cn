@@ -1,5 +1,6 @@
 ---
 title: SQL Server Reporting Services 中的树状图和旭日图 | Microsoft Docs
+description: 了解如何在报表生成器中使用树状图或旭日图以可视方式表示分层数据。
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-design
@@ -9,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/26/2019
-ms.openlocfilehash: fd9ac9ccd0906ee34a66b7144fdd964d05e5f050
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: af294ac47e7523f0b0dba5a57bbf2318bbe8c149
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68259367"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255430"
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Reporting Services 中的树状图和旭日图 
 
@@ -33,7 +34,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 树状�
 > [!NOTE]
 > 在向报表添加图表前，请创建数据源和数据集。  有关示例数据和示例查询，请参阅[示例 AdventureWorks 数据](#bkmk_sample_data)。  
   
-1. 右键单击设计图面，然后选择“插入” > “图表”。 选择“树状图”图标  。
+1. 右键单击设计图面，然后选择“插入” > “图表” 。 选择“树状图”图标。
 
     ![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon")  
 
@@ -41,21 +42,21 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 树状�
   
 3. 从示例数据中添加以下字段︰  
   
-    * 值  ：LineTotal
-    * 类别组  （按下面的顺序）：
+    * **值**：LineTotal
+    * 类别组（按下面的顺序）：
         1. CategoryName
         2. SubcategoryName
-    * 序列组  ：TerritoryName  
+    * **序列组**：TerritoryName  
 
     ![ssrs_treemap_example_properties](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "ssrs_treemap_example_properties")
   
 4. 若要优化常规形状树状图的页面大小，请将图例位置设置为底部。  
   
-5. 若要添加显示子类别和行总计的工具提示，请右键单击“LineTotal”，然后单击“序列属性”   。  
+5. 若要添加显示子类别和行总计的工具提示，请右键单击“LineTotal”，然后单击“序列属性” 。  
   
      ![ssrs_visualization_seriesproperties](../../reporting-services/report-design/media/ssrs-visualization-seriesproperties.png "ssrs_visualization_seriesproperties")  
   
-     将“工具提示”属性设为以下值  ：  
+     将“工具提示”属性设为以下值：  
   
     ```
     =Fields!SubcategoryName.Value &": " &Format(Sum(Fields!LineTotal.Value),"C")  
@@ -63,9 +64,9 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 树状�
   
     有关详细信息，请参阅[显示序列的相关工具提示（报表生成器和 SSRS）](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)。  
   
-6. 将默认图表标题改为“根据区域划分的的销售”  。  
+6. 将默认图表标题改为“根据区域划分的的销售”。  
   
-7. 字体的大小、整体图表区的大小和特定矩形的大小会影响显示的标签值的数目。 要查看更多标签，请将 LineTotal 的“标签字体”属性从默认的 8 磅改为 10 磅     。  
+7. 字体的大小、整体图表区的大小和特定矩形的大小会影响显示的标签值的数目。 要查看更多标签，请将 LineTotal 的“标签字体”属性从默认的 8 磅改为 10 磅   。  
 
 ##  <a name="sunburst-chart"></a><a name="bkmk_sunburst_chart"></a> 旭日图  
 
@@ -78,7 +79,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 树状�
 > [!NOTE]
 > 在向报表添加图表前，请创建数据源和数据集。 有关示例数据和示例查询，请参阅[示例 AdventureWorks 数据](#bkmk_sample_data)。  
   
-1. 右键单击设计图面，然后选择“插入” > “图表”。 选择“旭日图”图标  。
+1. 右键单击设计图面，然后选择“插入” > “图表” 。 选择“旭日图”图标。
 
      ![ssrs_sunburst_icon](../../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon")  
   
@@ -86,20 +87,20 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 树状�
   
 3. 从示例数据中添加以下字段︰  
 
-    * 值  ：LineTotal
-    * 类别组  （按下面的顺序）：
+    * **值**：LineTotal
+    * 类别组（按下面的顺序）：
         1. CategoryName
         2. SubcategoryName
         3. SalesReasonName
-    * 序列组  ：TerritoryName  
+    * **序列组**：TerritoryName  
 
     ![ssrs_treemap_example_properties](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "ssrs_treemap_example_properties")
   
 4. 若要优化常规形状旭日图的页面大小，请将图例位置设置为底部。  
   
-5. 将默认图表标题改为“出于销售原因根据区域划分的销售”  。  
+5. 将默认图表标题改为“出于销售原因根据区域划分的销售”。  
   
-6. 若要将类别组的值作为标签添加到旭日图中，请设置标签属性 Visible = true 和 UseValueAsLabel=False   。<br /><br /> 字体的大小、整体图表区的大小和特定矩形的大小会影响显示的标签值。  要查看更多标签，请将 LineTotal 的“标签字体”属性从默认的 8 磅改为 10 磅     。
+6. 若要将类别组的值作为标签添加到旭日图中，请设置标签属性 Visible = true 和 UseValueAsLabel=False 。<br /><br /> 字体的大小、整体图表区的大小和特定矩形的大小会影响显示的标签值。  要查看更多标签，请将 LineTotal 的“标签字体”属性从默认的 8 磅改为 10 磅   。
 
     ![ssrs_sunburst_linetotalproperties](../../reporting-services/report-design/media/ssrs-sunburst-linetotalproperties.png "ssrs_sunburst_linetotalproperties")
   
@@ -115,15 +116,15 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 树状�
   
 1. **获取数据**。  
   
-     本部分中的查询基于 Adventureworks 数据库，可从 GitHub：[AdventureWorks 2016 完整数据库备份](https://github.com/Microsoft/sql-server-samples/releases)中下载。  
+     此部分中的查询以 AdventureWorks 数据库为依据，可以从 GitHub：[AdventureWorks 2016 完整数据库备份](https://github.com/Microsoft/sql-server-samples/releases)中下载此数据库。  
 
 2. **创建数据源**。  
   
-    1. 在“报表数据”中，右键单击“数据源”，然后选择“添加数据源”    。  
+    1. 在“报表数据”中，右键单击“数据源”，然后选择“添加数据源”  。  
   
-    2. 选择“使用我的报表中嵌入的连接”  。  
+    2. 选择“使用我的报表中嵌入的连接” 。  
   
-    3. 对于连接类型，请选择“Microsoft SQL Server”  。  
+    3. 对于连接类型，请选择“Microsoft SQL Server”。  
   
     4. 输入服务器和数据库的连接字符串。 例如：  
   
@@ -131,19 +132,19 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 树状�
         Data Source=[server name];Initial Catalog=AdventureWorks2016  
         ```  
   
-    5. 要验证连接，请选择“测试连接”按钮，然后选择“确定”   。  
+    5. 要验证连接，请选择“测试连接”按钮，然后选择“确定” 。  
   
      有关创建数据源的详细信息，请参阅[添加和验证数据连接（报表生成器和 SSRS）](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)。  
   
 3. **创建数据集**。  
   
-    1. 在“报表数据”中，右键单击“数据集”，然后选择“添加数据集”    。  
+    1. 在“报表数据”中，右键单击“数据集”，然后选择“添加数据集”  。  
   
-    2. 选择“使用在我的报表中嵌入的数据集”  。  
+    2. 选择“使用在我的报表中嵌入的数据集” 。  
   
     3. 选择所创建的数据源。  
   
-    4. 选择文本查询类型，然后复制以下查询，并将其粘贴到“查询”文本框中   ：  
+    4. 选择文本查询类型，然后复制以下查询，并将其粘贴到“查询”文本框中 ：  
   
         ```sql
         SELECT    Sales.SalesOrderHeader.SalesOrderID, Sales.SalesOrderHeader.OrderDate, Sales.SalesOrderDetail.SalesOrderDetailID, Sales.SalesOrderDetail.ProductID, Sales.SalesOrderDetail.LineTotal,   
@@ -168,7 +169,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 树状�
                                  Sales.SalesOrderHeaderSalesReason.SalesReasonID = Sales.SalesReason.SalesReasonID  
         ```  
   
-    5. 选择“确定”  。  
+    5. 选择“确定”。  
   
      有关创建数据集的详细信息，请参阅[创建共享数据集或嵌入数据集（报表生成器和 SSRS）](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)。  
   
@@ -180,4 +181,4 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 树状�
 
 * [教程：Power BI 中的树状图](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)
 
-* [树形图：面向 Office 的 Microsoft Research 数据可视化应用](https://research.microsoft.com/projects/msrdatavis/treemap.aspx)
+* [树状图：面向 Office 的 Microsoft Research 数据可视化应用程序](https://research.microsoft.com/projects/msrdatavis/treemap.aspx)

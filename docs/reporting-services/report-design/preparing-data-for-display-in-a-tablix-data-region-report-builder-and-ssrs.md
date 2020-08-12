@@ -1,5 +1,6 @@
 ---
 title: 准备要在 Tablix 数据区域中显示的数据（报表生成器）| Microsoft Docs
+description: 了解如何自定义报表生成器中的数据显示，以显示检索到的所有数据或数据的子集。
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: fbb00dc6-7887-480c-b771-cab6fecb8dcc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cf1e776b874a371dceeef8c10306a55efdd1a2ff
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2075475db3bc195517cd92c2771bd4988088b432
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082399"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681506"
 ---
 # <a name="preparing-data-for-display-in-a-tablix-data-region-report-builder-and-ssrs"></a>准备要在 Tablix 数据区域中显示的数据（报表生成器和 SSRS）
   Tablix 数据区域显示来自数据集的数据。 您可以查看从数据集中检索的所有数据，也可以创建筛选器以便仅查看数据子集。 还可以添加条件表达式，以便填充 Null 值或修改对数据集的查询，使其包括定义现有列的排序顺序的列。  

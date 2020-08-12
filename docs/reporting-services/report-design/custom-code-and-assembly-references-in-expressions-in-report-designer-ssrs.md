@@ -1,5 +1,6 @@
 ---
 title: 报表设计器的表达式中的自定义代码和程序集引用 | Microsoft Docs
+description: 了解如何添加对报表中嵌入的自定义代码的引用。 生成并保存到计算机，然后部署到报表生成器中的报表服务器。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ab5e36ce6e76cf0017e7306802544f1b2764af73
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 603207390785ff684167b3b553b31c3b956842c6
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080573"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880767"
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>报表设计器的表达式中的自定义代码和程序集引用 (SSRS)
   您可以添加对报表中嵌入的自定义代码的引用，或添加对生成并保存到您的计算机并且部署到报表服务器的自定义程序集的引用。 对于自定义常量、复杂的函数，或在一个报表中多次使用的函数，可使用嵌入代码。 可以使用自定义代码程序集在一个位置中维护代码，并共享该代码以便由多个报表使用。 自定义代码可包含新的自定义常量、变量、函数或子例程。 可以包含对内置集合（例如，Parameters 集合）的只读引用。 但是，无法将报表数据值集传递给自定义函数；特别要指出的是，不支持自定义聚合。  
@@ -180,7 +181,7 @@ End Function
 ##  <a name="passing-built-in-collections-into-custom-assemblies"></a><a name="collections"></a> 将内置集合传递到自定义程序集  
  如果要将内置集合（如 *Globals* 或 *Parameters* 集合）传递到自定义程序集进行处理，则必须将代码项目中的程序集引用添加到定义内置集合的程序集中并且访问正确的命名空间。 根据您是为运行在报表服务器上的报表（服务器报表）开发自定义程序集，还是为在 .NET 应用程序中本地运行的报表（本地报表）开发自定义程序集，需要引用的程序集会有所不同。 有关详细信息，请参阅下文。  
   
--   **命名空间：** Microsoft.ReportingServices.ReportProcessing.ReportObjectModel  
+-   **命名空间:** Microsoft.ReportingServices.ReportProcessing.ReportObjectModel  
   
 -   **程序集（本地报表）：** Microsoft.ReportingServices.ProcessingObjectModel.dll  
   

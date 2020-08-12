@@ -1,5 +1,6 @@
 ---
 title: 配置 Web 门户 | Microsoft Docs
+description: 了解如何配置 Web 门户应用程序，用于查看报表、管理报表服务器内容以及向用户授予本机模式报表服务器的访问权限。
 ms.date: 05/10/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 962ab17170c69b6225f852f0b625a6cd50fa20d3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 52a6055a3b3c79c08622d89b2931a48eedd14d76
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63308400"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84548049"
 ---
 # <a name="configure-the-web-portal"></a>配置 Web 门户
 
-Web 门户是一种用于查看报表、管理报表服务器内容以及向用户授予本机模式报表服务器访问权限的 Web 前端应用程序。 如果在安装程序中选择“以默认的本机模式配置安装”选项，则可以将 Web 门户与报表服务器 Web 服务一起安装在同一个报表服务器实例中，并可以选择地进行配置  。 还可以在安装完成后配置 Web 门户。 本主题提供有关以下 Web 门户配置方案的信息：
+Web 门户是一种用于查看报表、管理报表服务器内容以及向用户授予本机模式报表服务器访问权限的 Web 前端应用程序。 如果在安装程序中选择“以默认的本机模式配置安装”选项，则可以将 Web 门户与报表服务器 Web 服务一起安装在同一个报表服务器实例中，并可以选择地进行配置****。 还可以在安装完成后配置 Web 门户。 本主题提供有关以下 Web 门户配置方案的信息：
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 若要使用 Web 门户，必须满足下列前提条件：
 
@@ -44,11 +45,11 @@ Web 门户是用户在 Web 浏览器中访问的 Web 应用程序。 因此必�
 
 1. 启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具并连接到报表服务器实例。
 
-2. 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具中，选择“Web 门户 URL”以打开配置 URL 的页面  。
+2. 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具中，选择“Web 门户 URL”以打开配置 URL 的页面。
 
 3. 为 Web 门户输入唯一的虚拟目录名称。
 
-4. 单击“应用”  。
+4. 单击“应用”。
 
 5. 如果使用的是 [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] 或 Windows Server 2008，则可能还需要执行其他步骤才能使用 Web 门户。 有关详细信息，请参阅 [为本地管理配置本机模式报表服务器 (SSRS)](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。
 
@@ -60,7 +61,7 @@ Web 门户是用户在 Web 浏览器中访问的 Web 应用程序。 因此必�
 
 #### <a name="to-configure-a-static-report-server-url"></a>配置静态报表服务器 URL
 
-1. 在文本编辑器中打开 **RSReportServer.config** 文件。 默认情况下，该文件位于 \Program Files\Microsoft SQL Server\MSRS12.\<实例名>\Reporting Services\ReportServer  。  
+1. 在文本编辑器中打开 **RSReportServer.config** 文件。 默认情况下，该文件位于 \Program Files\Microsoft SQL Server\MSRS12.\<*instancename*>\Reporting Services\ReportServer。  
 
 2. 查找 **ReportServerURL**。
 
@@ -80,13 +81,13 @@ Web 门户是用户在 Web 浏览器中访问的 Web 应用程序。 因此必�
 
 2. 打开 Internet Explorer。
 
-3. 输入 Web 门户 URL。 默认情况下，该 URL 为 https://\<your-server-name>/reports，但如果已将 Reporting Services 作为命名实例安装，则默认 URL 将为 https://\<your-server-name>/reports\<_instancename>。
+3. 输入 Web 门户 URL。 默认情况下，该 URL 为 https://\<**your-server-name**>/reports，但如果已将 Reporting Services 作为命名实例安装，则默认 URL 将为 https://\<**your-server-name**>/reports\<**_instancename**>。
 
 4. 选择“站点设置”。 
 
 5. 在 **“常规”** 选项卡上的 **“名称”** 中，将 **SQL Server Reporting Services** 替换为其他名称。
 
-6. 选择“应用”。 
+6. 选择“应用”。
 
 ## <a name="next-steps"></a>后续步骤
 

@@ -1,5 +1,6 @@
 ---
 title: 管理 Reporting Services SharePoint 服务应用程序 | Microsoft Docs
+description: 了解如何在 SharePoint 管理中心中管理 SQL Server Reporting Services 服务应用程序。
 ms.date: 10/05/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6e1b69fc176281e9be65ca7a9766fc8fb270a3de
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5de7b0a5b155c519a7a7d24331fb9ad2dc571e3e
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580090"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764969"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>管理 Reporting Services SharePoint 服务应用程序
 
@@ -34,7 +35,7 @@ ms.locfileid: "65580090"
   
 2.  在服务应用程序名称附近单击或单击 **“类型”** 列，这将选择整行，然后在 SharePoint 功能区上单击 **“属性”** 。  
   
- 有关服务应用程序属性的详细信息，请参阅 [Step 3: Create a Reporting Services Service Application](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication)。  
+ 有关服务应用程序属性的详细信息，请参阅[步骤 3：创建 Reporting Services 服务应用程序](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication)中的“服务应用程序”一节。  
   
 ## <a name="open-service-application-management-pages"></a>打开服务应用程序管理页面
 
@@ -73,7 +74,7 @@ ms.locfileid: "65580090"
   
 |设置|注释|  
 |-------------|--------------|  
-|启用执行日志记录|默认值为 TRUE。<br /><br /> 指定报表服务器是否会生成跟踪日志及指定日志保留的天数。 。 这些日志存储在报表服务器计算机上的 \Microsoft SQL Server\MSSQL.n\ReportServer\Log 文件夹中。 每次重新启动该服务时都要启动新的日志文件。 有关日志文件的详细信息，请参阅 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)|  
+|启用执行日志记录|默认值为 TRUE。<br /><br /> 指定报表服务器是否会生成跟踪日志及指定日志保留的天数。 . 这些日志存储在报表服务器计算机上的 \Microsoft SQL Server\MSSQL.n\ReportServer\Log 文件夹中。 每次重新启动该服务时都要启动新的日志文件。 有关日志文件的详细信息，请参阅 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)|  
 |保留执行日志的天数|默认值为 60 天。|  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 都支持 SharePoint ULS 日志记录。  有关详细信息，请参阅 [为 SharePoint 跟踪日志 (ULS) 启用 Reporting Services 事件](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
@@ -111,8 +112,8 @@ ms.locfileid: "65580090"
   
 |页|说明|  
 |----------|-----------------|  
-|备份加密密钥|1) 在“密码:”和“确认密码:”框中键入密码，然后单击“导出”    。 如果您键入的密码不符合域策略的复杂性要求，将会看到一条警告。<br /><br /> 2) 系统会提示你指定保存密钥文件的位置。 你应该考虑将密钥文件存储在与运行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的计算机不同的计算机上。 默认文件名称与服务应用程序名称相同。|  
-|还原加密密钥|1) 在“文件位置”框中键入或浏览密钥文件 <br /><br /> 2) 在“密码”框中，键入用于备份加密文件的密码  。<br /><br /> 3) 单击“确定” |  
+|备份加密密钥|1) 在“密码:”和“确认密码:”框中键入密码，然后单击“导出”  。 如果您键入的密码不符合域策略的复杂性要求，将会看到一条警告。<br /><br /> 2) 系统会提示你指定保存密钥文件的位置。 你应该考虑将密钥文件存储在与运行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的计算机不同的计算机上。 默认文件名称与服务应用程序名称相同。|  
+|还原加密密钥|1) 在“文件位置”框中键入或浏览密钥文件<br /><br /> 2) 在“密码”框中，键入用于备份加密文件的密码。<br /><br /> 3) 单击“确定”|  
 |更改加密密钥|此操作将创建一个新密钥，并且重新加密您已加密的内容。 如果有很多内容，此操作可能需要几个小时。<br /><br /> 完成更改加密密钥操作后，建议您备份新密钥。|  
 |删除加密的内容|删除的内容无法恢复。<br /><br /> **\*\* 重要提示 \*\*** 删除和重新创建对称密钥的操作不能逆转或撤消。 删除或重新创建该密钥可能对您当前的安装产生重要影响。 如果删除对称密钥，则使用此密钥加密的所有现有数据也将被删除。 删除的数据包括指向外部报表数据源的连接字符串、存储的连接字符串和某些订阅信息。|  
 

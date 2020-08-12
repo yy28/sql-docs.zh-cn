@@ -1,5 +1,6 @@
 ---
 title: 传递扩展插件概述 | Microsoft Docs
+description: 阅读传递扩展插件的概述，可以使用这些扩展插件通过多种方式（例如通过电子邮件或文件共享）来传递 Reporting Services 报表。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a30600a9-bbed-4519-9426-3470ff2982e7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 69dce8309f96988a9d339aefbb684116c0df2eb4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1aca4a83bb117624fdfd5a090c9caab2ff4b7efd
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193779"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529154"
 ---
 # <a name="delivery-extensions-overview"></a>传递扩展插件概述
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使得用户能够创建和发布报表，一旦创建和发布，就可以将报表传递到不同位置。 此外，[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 包括多个传递扩展插件和一个传递 API，它们使得开发人员能够创建其他传递扩展插件，以便在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中进一步扩展传递的功能。  

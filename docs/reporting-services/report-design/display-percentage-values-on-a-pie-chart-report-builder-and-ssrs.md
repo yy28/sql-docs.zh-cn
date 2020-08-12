@@ -1,6 +1,6 @@
 ---
 title: 在饼图上显示百分比值（报表生成器）| Microsoft Docs
-description: 在 Reporting Services 分页报表中，图例默认显示类别。 有时可能需要在图例或饼图扇区中显示百分比。
+description: 了解如何在报表生成器的图例或饼图扇区中显示饼图上的百分比值。
 ms.date: 12/09/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: eb905fc1-5235-4773-a27e-b07be9318be5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1b250f8bffdebeb0cb0f1e68a739bb808cb75abd
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: abacde42f813a00ecc2f48edd8fc71d2b3a83020
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487583"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681396"
 ---
 # <a name="display-percentage-values-on-a-pie-chart-report-builder-and-ssrs"></a>在饼图上显示百分比值（报表生成器和 SSRS）
 在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，图例默认显示类别。 有时可能需要在图例或饼图扇区中显示百分比。   

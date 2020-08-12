@@ -1,5 +1,6 @@
 ---
 title: Lookup 函数（报表生成器）| Microsoft Docs
+description: 使用 Lookup 函数从包含名称或值对的数据集返回指定名称的第一个匹配值。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e60e5bab-b286-4897-9685-9ff12703517d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8ca2ef5b2c605d2eb1ca73d05e897919869a435f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f2a3016bc45537aed393124b6d20f8d4a1656759
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081232"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255720"
 ---
 # <a name="report-builder-functions---lookup-function"></a>报表生成器函数 - Lookup 函数
   从包含名称/值对的数据集返回指定名称的第一个匹配值。  
@@ -30,13 +31,13 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
 #### <a name="parameters"></a>参数  
  *source_expression*  
- (**Variant**) 在当前作用域中计算结果并指定要查找的名称或键的表达式。 例如，`=Fields!ProdID.Value` 。  
+ (**Variant**) 在当前作用域中计算结果并指定要查找的名称或键的表达式。 例如，`=Fields!ProdID.Value`。  
   
  *destination_expression*  
- (**Variant**) 针对数据集中的每行计算结果并指定要匹配的名称或键的表达式。 例如，`=Fields!ProductID.Value` 。  
+ (**Variant**) 针对数据集中的每行计算结果并指定要匹配的名称或键的表达式。 例如，`=Fields!ProductID.Value`。  
   
  *result_expression*  
- (**Variant**) 针对数据集中的行（其中， *source_expression* = *destination_expression*）计算结果并指定要检索的值的表达式。 例如，`=Fields!ProductName.Value` 。  
+ (**Variant**) 针对数据集中的行（其中， *source_expression* = *destination_expression*）计算结果并指定要检索的值的表达式。 例如，`=Fields!ProductName.Value`。  
   
  *数据集 (dataset)*  
  指定报表中数据集的名称的常量。 例如，“Products”。  

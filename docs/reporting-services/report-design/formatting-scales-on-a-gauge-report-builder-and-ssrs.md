@@ -1,5 +1,6 @@
 ---
 title: 设置仪表上刻度的格式（报表生成器）| Microsoft Docs
+description: 了解报表生成器的分页报表中具有上限和下限的仪表刻度数字范围。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0dd65945-3b74-46a6-a794-b33585d565d2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 546af7322a8aeced15c0593fa2c1fdde5af632cc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 235406dc1a6ed138c5d40ef7364bb07b3e4e6ecf
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079634"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84778889"
 ---
 # <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>设置仪表上刻度的格式（报表生成器和 SSRS）
   在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，仪表刻度是仪表上显示的具有上限和下限的数字范围。 为了准确显示仪表指针指向的读数，仪表刻度通常包含仪表标签和刻度线。 仪表刻度通常与一个或多个仪表指针相关联。 同一个仪表中可以具有多个刻度。  
@@ -24,7 +25,7 @@ ms.locfileid: "77079634"
   
  在已包含一个刻度的仪表上添加第二个刻度时，第一个刻度的外观属性将克隆到第二个刻度上。  
   
- 通过右键单击刻度标签或刻度线然后选择“径向刻度属性”或“线性刻度属性”，可以设置刻度的属性   。 每个仪表类型至少包含一个具有相同属性集的刻度。 此外，每个仪表类型还包含其特有的属性：  
+ 通过右键单击刻度标签或刻度线然后选择“径向刻度属性”或“线性刻度属性”，可以设置刻度的属性********。 每个仪表类型至少包含一个具有相同属性集的刻度。 此外，每个仪表类型还包含其特有的属性：  
   
 -   在径向仪表中，可以指定径向刻度的半径、开始角度和扫描角度。  
   

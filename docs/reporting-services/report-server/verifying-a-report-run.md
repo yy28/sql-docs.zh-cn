@@ -1,5 +1,6 @@
 ---
 title: 验证报表运行情况 | Microsoft Docs
+description: 了解如何使用日志文件或者参考报表中显示的状态信息来验证报表管理器中运行的报表。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 18a98f2f-6b40-454e-9b37-568ed1a96458
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cd48861b53b6b7f159d4421bd86bf024838fbaf7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6384697eea05d39431ecd7ec77796101747a59ee
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580077"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547819"
 ---
 # <a name="verifying-a-report-run"></a>验证报表运行情况
   若要查看报表处理状态的有关信息，则可以使用日志文件或参考在报表管理器中随报表显示的状态信息。  
@@ -38,9 +39,9 @@ ms.locfileid: "65580077"
   
 |报表类型|日期和时间信息所在位置|查看信息所需操作|  
 |-----------------------------|-----------------------------------------------|-----------------------------------------------|  
-|作为报表快照运行的报表。|在“内容”页上。 有关详细信息，请参阅[“内容”页（报表管理器）](https://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)。|1) 找到包含该报表的文件夹。<br /><br /> 2) 在“详细信息”视图中设置该文件夹。<br /><br /> 3) 请注意“运行时间”列中的日期和时间  。|  
-|报表历史记录中的快照。|在“历史记录”属性页上。 有关详细信息，请参阅[“快照选项”属性页（报表管理器）](https://msdn.microsoft.com/library/f6641f59-5267-4f57-8957-63b93d1a9679)。|1) 打开该报表。<br /><br /> 2) 单击“属性”页  。<br /><br /> 3) 单击“历史记录”选项卡  。<br /><br /> 4) 请注意“运行时间”列中的日期和时间  。|  
-|缓存的报表。|在用于创建和刷新该缓存报表的计划中。|1) 打开该报表。<br /><br /> 2) 单击“属性”页  。<br /><br /> 3) 单击“执行”选项卡  。<br /><br /> 4) 打开该计划。|  
+|作为报表快照运行的报表。|在“内容”页上。 有关详细信息，请参阅[“内容”页（报表管理器）](https://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)。|1) 找到包含该报表的文件夹。<br /><br /> 2) 在“详细信息”视图中设置该文件夹。<br /><br /> 3) 请注意“运行时间”列中的日期和时间。|  
+|报表历史记录中的快照。|在“历史记录”属性页上。 有关详细信息，请参阅[“快照选项”属性页（报表管理器）](https://msdn.microsoft.com/library/f6641f59-5267-4f57-8957-63b93d1a9679)。|1) 打开该报表。<br /><br /> 2) 单击“属性”页。<br /><br /> 3) 单击“历史记录”选项卡。<br /><br /> 4) 请注意“运行时间”列中的日期和时间。|  
+|缓存的报表。|在用于创建和刷新该缓存报表的计划中。|1) 打开该报表。<br /><br /> 2) 单击“属性”页。<br /><br /> 3) 单击“执行”选项卡。<br /><br /> 4) 打开该计划。|  
   
 ## <a name="see-also"></a>另请参阅  
  [Reporting Services 日志文件和来源](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   

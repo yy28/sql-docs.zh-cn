@@ -1,5 +1,6 @@
 ---
 title: 向报表添加程序集引用 | Microsoft Docs
+description: 了解如何在报表生成器中向报表提供程序集引用，以便报表处理器能够解析名称。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 0a03939e-48ce-4c30-b227-98533f2e0ccb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c9725d51c934172c6c6291b6a7f1592a3ddc057c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8bbad43a5aa0339ccc13002073facf54de729a58
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080679"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681206"
 ---
 # <a name="add-an-assembly-reference-to-a-report-ssrs"></a>向报表添加程序集引用 (SSRS)
   嵌入包含对 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 类的引用的自定义代码时，如果这些类不是 <xref:System.Math> 或 <xref:System.Convert> 中的类，必须提供对报表的程序集引用，以便报表处理器能够解析名称。 有关详细信息，请参阅[向报表添加代码 (SSRS)](../../reporting-services/report-design/add-code-to-a-report-ssrs.md)。  
   
 ### <a name="to-add-an-assembly-reference-to-a-report"></a>向报表添加程序集引用  
   
-1.  在“设计”视图中，右键单击报表边框外的设计图面，然后单击“报表属性”   。  
+1.  在“设计”视图中，右键单击报表边框外的设计图面，然后单击“报表属性” 。  
   
 2.  单击 **“引用”** 。  
   

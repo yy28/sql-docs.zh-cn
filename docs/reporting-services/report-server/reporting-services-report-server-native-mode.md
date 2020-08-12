@@ -1,5 +1,6 @@
 ---
 title: Reporting Services 报表服务器（本机模式）| Microsoft Docs
+description: 了解为本机模式配置的报表服务器，包括管理内容、管理资源以及从报表引用图像资源。
 ms.date: 04/21/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4d4a78281f9e42921f31f8d02c5f167dd13d06d5
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: 2ed406e7bb91f18149b0d42db90ed248de0d86c8
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82086836"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535409"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Reporting Services 报表服务器（本机模式）
   配置为本机模式的报表服务器将作为应用程序服务器运行，并专门通过 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]组件提供所有处理和管理功能。  
@@ -79,7 +80,7 @@ ms.locfileid: "82086836"
   
 -   通过制定报表处理计划，并指定哪些报表按需运行，哪些报表应从缓存加载，从而均衡服务器上的报表处理需求。  
   
- 通过以下两个预定义的角色提供执行管理任务的权限： **系统管理员** 和 **内容管理员**。 若要有效地管理报表服务器内容，要求您同时分配有这两个角色。 有关这些预定义角色的详细信息，请参阅[角色和权限 (Reporting Services)](../../reporting-services/security/roles-and-permissions-reporting-services.md)。  
+ 执行管理任务的权限是通过以下两个预定义的角色提供的：“系统管理员”和“内容管理员”。 若要有效地管理报表服务器内容，要求您同时分配有这两个角色。 有关这些预定义角色的详细信息，请参阅[角色和权限 (Reporting Services)](../../reporting-services/security/roles-and-permissions-reporting-services.md)。  
   
  用于管理报表服务器内容的工具包括 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或 Web 门户。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 允许您设置默认值和启用功能。 Web 门户用于向用户授予对报表服务器项和操作的访问权限，用于查看和使用报表以及其他内容类型，并用于查看和使用所有共享项和报表分发功能。  
   

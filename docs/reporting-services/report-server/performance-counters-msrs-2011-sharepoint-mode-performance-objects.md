@@ -1,5 +1,6 @@
 ---
 title: MSRS 2011 SharePoint 模式性能对象的性能计数器 | Microsoft Docs
+description: 了解 MSRS 2011 Web Service SharePoint Mode 性能对象和 MSRS 2011 Windows Service SharePoint Mode 性能对象的性能计数器。
 ms.date: 06/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +17,12 @@ ms.assetid: 70bf6980-7845-4ab5-8b2a-ebf526d811a6
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 954302809c01769f6d3869e7762917e91cfd8f98
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 50981b1da0addf5bd55e4640653d3471e3aa459d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68892225"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545535"
 ---
 # <a name="performance-counters-msrs-2011-sharepoint-mode-performance-objects"></a>MSRS 2011 SharePoint 模式性能对象的性能计数器
   本主题介绍作为 **SharePoint 模式部署一部分的** MSRS 2011 Web Service SharePoint Mode **和** MSRS 2011 Windows Service SharePoint Mode [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 性能对象的性能计数器。  

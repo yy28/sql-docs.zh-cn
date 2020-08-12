@@ -1,5 +1,6 @@
 ---
 title: 缓存报表 | Microsoft Docs
+description: 了解如何在报表管理器中缓存报表，此操作可加快查看已处理报表的速度（当该报表正在缓存时）。
 ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 146542c3-8efd-4b89-a8d8-77d22896630e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3e94ed2c05d3c23585abde1f2452f491be089e84
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 43a03b47b1d18569f56dae2652144af8c7e11adf
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082556"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84548059"
 ---
 # <a name="caching-reports-ssrs"></a>缓存报表 (SSRS)
   报表服务器可以缓存已处理报表的副本，并在用户打开此报表时返回该副本。 对用户而言，可指示报表为缓存副本的唯一证据是报表的运行日期和时间。 如果日期或时间不是当前的日期或时间，并且报表不是快照，则说明该报表是从缓存中检索的。  

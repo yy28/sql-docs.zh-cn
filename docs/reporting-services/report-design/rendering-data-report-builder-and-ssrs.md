@@ -1,5 +1,6 @@
 ---
 title: 呈现数据（报表生成器）| Microsoft Docs
+description: 了解如何在报表生成器中使用数据呈现器将数据导入数据库或 Excel、进行 XSLT 转换或者数据交换/EDI。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a458fdf9-fb2a-4fee-9fbd-b38f36e91753
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e7645c285ed63ae241fe9df0f5dd468685e5f143
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f073f61cb469c3a31ef475a93920d7beba99a508
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77077000"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012225"
 ---
 # <a name="rendering-data-report-builder-and-ssrs"></a>呈现数据（报表生成器和 SSRS）
   使用 HTML、MHTML、Word、Excel、PDF 或 Image 之类的布局呈现器时，数据和其组织保持不变。 当使用逗号分隔值 (CSV) 或 XML 之类的数据呈现器格式导出时，不会呈现任何可视布局元素。 呈现报表时，CSV 和 XML 会将某些规则应用到表体及其内容。 这些规则用于确定数据在这些格式中的呈现方式。  

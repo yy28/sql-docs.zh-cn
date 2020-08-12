@@ -1,5 +1,6 @@
 ---
 title: Union 函数（报表生成器）| Microsoft Docs
+description: 了解此函数，该函数返回表达式指定的所有非 NULL 数值的并集。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c87e16fe-c12a-4c9d-a9df-7a94e229fd04
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e760971e012e5144176484d921570bdee8097497
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a2c53ba51ebce8d0e3cbb78d7a7e8905cb5537bb
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081125"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689495"
 ---
 # <a name="report-builder-functions---union-function"></a>报表生成器函数 - Union 函数
   返回在给定作用域中计算的、由表达式指定的所有非 Null 数值的联合。  
@@ -28,7 +29,7 @@ ms.locfileid: "77081125"
 Union(expression, scope, recursive)  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *expression*  
  （**SqlGeometry** 或 **SqlGeography**）要对其执行聚合的表达式。  
   

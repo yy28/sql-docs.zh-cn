@@ -1,5 +1,6 @@
 ---
 title: 管理报表部件 | Microsoft Docs
+description: 通过发布、权限和安全性的灵活选项整理多个用户和报表的报表部件。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 241d74d615f9aac2cbe48d084fd2d8e91ea9abbf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 233aa6a48937d26b9e9f9c486f4cda7238245a47
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580110"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689676"
 ---
 # <a name="managing-report-parts"></a>管理报表部件
   报表部件可在分页报表中由多个用户重用，并且可以在多个报表中重用。 用户可以搜索服务器上的报表部件并将其添加到报表中。  用户还可以接收服务器上的报表部件更新通知，以及重新发布报表部件的新版本。 这些报表创作操作可能受 Reporting Services 安全权限的影响和控制。  本主题介绍报表部件在位于服务器上后的属性和行为。  
@@ -47,7 +48,7 @@ ms.locfileid: "65580110"
   
  (*) 表明它是在此版本中新推出的。  
   
-|properties|说明|报表部件<br /><br /> 库搜索条件|  
+|属性|描述|报表部件<br /><br /> 库搜索条件|  
 |--------------|-----------------|---------------------------------------------|  
 |名称|这是用户可在报表部件库中搜索的条件之一。|是|  
 |说明|您可能希望以更方便用户在库中查找的方式组织报表部件名称。 例如，对于涉及销售相关的数据和展示的所有报表部件，您可以搜索以“Sales>>”开头的说明。|是|  

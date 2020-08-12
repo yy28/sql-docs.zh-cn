@@ -1,5 +1,6 @@
 ---
 title: 缓存共享数据集 | Microsoft Docs
+description: 了解如何在 SQL Server 报表管理器中缓存共享数据集，这可以缩短响应时间，并为使用该数据集的报表提供一致的数据。
 ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4acb1bbe-1c04-4979-b893-dc1b1c5039b6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9436fd4963c5c9af86f3ea4ede200952fb6deb59
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0b256074f441dd2160298fe7840af4f6fca13eaf
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082546"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545596"
 ---
 # <a name="cache-shared-datasets-ssrs"></a>缓存共享数据集 (SSRS)
   可以将用于共享数据集的查询结果复制到缓存，以便为多个报表提供一致的数据并且缩短数据集查询的响应时间。 与报表类似，您可以在首次使用时或通过指定一个计划，将共享数据集配置为存入缓存。  

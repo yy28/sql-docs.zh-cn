@@ -1,5 +1,6 @@
 ---
 title: 向报表添加代码 | Microsoft Docs
+description: 了解如何在报表生成器中为你在报表中所拥有的任何表达式调用你自己的自定义代码。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,23 +15,23 @@ helpviewer_keywords:
 ms.assetid: 00ef8fc6-99fe-49b2-8a22-7eb475881dc4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bd2f5d60bacc29a5b7efcf1abb8c1d44429d93f6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9d54e2ce879e78787b9b51d20c8df83367038c7b
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081667"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255680"
 ---
 # <a name="add-code-to-a-report-ssrs"></a>向报表添加代码 (SSRS)
   您可以在任何表达式中调用自己的自定义代码。 可以通过下列两种方式提供代码：  
   
--   直接在报表中使用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 编写的嵌入代码。 如果代码引用非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 或 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 的 <xref:System.Math> <xref:System.Convert>，必须向报表中添加引用。 有关详细信息，请参阅 [向报表添加程序集引用 (SSRS)](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md)。 有关可从代码中使用的其他引用的详细信息，请参阅[报表设计器的表达式中的自定义代码和程序集引用 (SSRS)](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)。  
+-   直接在报表中使用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 编写的嵌入代码。 如果代码引用非 <xref:System.Math> 或 <xref:System.Convert> 的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]，必须向报表中添加引用。 有关详细信息，请参阅 [向报表添加程序集引用 (SSRS)](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md)。 有关可从代码中使用的其他引用的详细信息，请参阅[报表设计器的表达式中的自定义代码和程序集引用 (SSRS)](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)。  
   
 -   使用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]提供自定义代码程序集。 如果提供自定义程序集，则必须同时在创作报表的计算机上和查看报表的报表服务器上安装该自定义程序集。 有关详细信息，请参阅 [Using Custom Assemblies with Reports](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)。  
   
 ### <a name="to-add-embedded-code-to-a-report"></a>向报表添加嵌入代码  
   
-1.  在“设计”视图中，右键单击报表边框外的设计图面，然后单击“报表属性”   。  
+1.  在“设计”视图中，右键单击报表边框外的设计图面，然后单击“报表属性” 。  
   
 2.  单击 **“代码”** 。  
   

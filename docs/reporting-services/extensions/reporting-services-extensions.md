@@ -1,5 +1,6 @@
 ---
 title: Reporting Services 扩展插件 | Microsoft Docs
+description: 了解如何通过自定义报表数据、通知机制和安全系统在 Reporting Services 中扩展数据处理功能。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2bf17ae4-2292-4a58-a1f0-56e99abd9b69
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d0cf0ab94a17883f9721701b13725e34745a7875
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 957b494e9bb581a8d41e0951cec62724e46c7d0d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193811"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524568"
 ---
 # <a name="reporting-services-extensions"></a>Reporting Services 扩展插件
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的模块化体系结构旨在实现可扩展性。 提供了一个托管代码 API，以便您能够轻松地开发、安装和管理由许多 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 组件使用的扩展插件。 可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 创建专用或共享的程序集，并添加新的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能以满足不断发展的业务需要。  

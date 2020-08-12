@@ -1,5 +1,6 @@
 ---
 title: 面积图（报表生成器）| Microsoft Docs
+description: 了解如何使用面积图，它们在报表生成器中将序列显示为一组由线连接的点，并填充线下方的所有区域。
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 245b236d-1d55-4744-b752-80bd133502aa
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 90bc9dd81ce2f005d771c57d5e3f5cdff2743f99
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ff8771593f293cf9195b26a792f1f0667e04f968
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081500"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84778519"
 ---
 # <a name="area-charts-report-builder-and-ssrs"></a>面积图（报表生成器和 SSRS）
   面积图将序列显示为一组由线连接的点，并填充线下方的所有区域。 有关如何向分区图添加数据的详细信息，请参阅 [图表（报表生成器和 SSRS）](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)。  

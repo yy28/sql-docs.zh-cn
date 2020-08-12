@@ -1,5 +1,6 @@
 ---
 title: 向图表添加棱台、浮雕和纹理样式（报表生成器）| Microsoft Docs
+description: 了解如何指定绘制效果（如棱台、浮雕或纹理）以加强报表生成器中图表的视觉效果。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 737cfc80-b39e-497c-817b-b46693deb58f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9bbb097362d2569bcea8a16d451d33d931b82b35
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dc70f46d093336157fbc474abfa63460c42deb41
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77078749"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462311"
 ---
 # <a name="chart-effects---add-bevel-emboss-or-texture-report-builder"></a>图表效果 - 添加棱台、浮雕或纹理（报表生成器）
   当使用某些图表类型时，您可以指定绘制样式以增加图表的视觉效果。 这些绘制效果仅适用于图表的序列。 它们对其他图表元素不起任何作用。  

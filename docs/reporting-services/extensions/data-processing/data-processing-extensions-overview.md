@@ -1,5 +1,6 @@
 ---
 title: 数据处理扩展插件概述 | Microsoft Docs
+description: 查看 Reporting Services 中包含的数据处理扩展插件，并了解如何将自定义数据处理添加到报表服务器。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1d652605-9313-4c75-98b4-ba4dcbbb222d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 67e20d8d0bdcfbb03d0188ac62b4d89bc12b704f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5e9c3407060e22a2be8f74214cd1ba6a44c1487c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63194191"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529671"
 ---
 # <a name="data-processing-extensions-overview"></a>数据处理扩展插件概述
   借助于 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的数据处理扩展插件，您可以连接到数据源并检索数据。 它们还可以充当数据源和数据集之间的桥梁。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 数据处理扩展插件是模仿 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 数据提供程序接口的子集创建的。  

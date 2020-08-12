@@ -1,5 +1,6 @@
 ---
 title: StDevP 函数（报表生成器）| Microsoft Docs
+description: 了解此函数，它返回表达式指定的所有非 Null 数值的总体标准偏差。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: cbcc0b3f-7b6d-4dd7-accb-cb375be8d852
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c46bdc29f93715246401a824cac889f8052101bc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2323683d4e5164d9c73cccca4ee896e7352c8fef
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081138"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83688727"
 ---
 # <a name="report-builder-functions---stdevp-function"></a>报表生成器函数 - StDevP 函数
   返回在给定作用域上下文中计算的，由表达式指定的所有非 Null 数值的总体标准偏差。  
@@ -28,7 +29,7 @@ ms.locfileid: "77081138"
 StDevP(expression, scope, recursive)  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *expression*  
  （**Integer** 或 **Float**）要对其执行聚合的表达式。  
   

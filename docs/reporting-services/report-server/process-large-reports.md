@@ -1,5 +1,6 @@
 ---
 title: 处理大型报表 | Microsoft Docs
+description: 了解如何按照配置、呈现、部署和分发建议在 Report Server 中正确运行大型报表。
 ms.date: 06/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 574fcc9c8e180b75d5d3def6d97798708c40996c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9b263aa61d02c20f55933744449151fa7676bad1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67140254"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544509"
 ---
 # <a name="process-large-reports"></a>处理大型报表
   大型报表将给系统的处理能力带来一定的挑战。若要正确运行大型报表，需要进行特定配置。 除非将大型报表配置为支持分页，否则不应按需运行这些报表。  

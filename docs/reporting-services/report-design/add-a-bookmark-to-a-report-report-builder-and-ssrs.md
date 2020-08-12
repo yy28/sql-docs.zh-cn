@@ -1,5 +1,6 @@
 ---
 title: 向报表添加书签（报表生成器）| Microsoft Docs
+description: 了解如何向报表添加书签以提供内容自定义表格或在报表生成器中提供自定义内部导航链接。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f130562e-5673-40e3-8e01-de7227a21d41
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e95f4fc90e35668270f9a126f284f0b9aef1f107
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e79359d8d9cdfb6af624f86fca5ca2a5648ecb10
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080810"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779499"
 ---
 # <a name="add-a-bookmark-to-a-report-report-builder-and-ssrs"></a>向报表添加书签（报表生成器和 SSRS）
   若要在报表中提供自定义目录或自定义内部导航链接，可以向报表中添加书签或书签链接。 通常情况下，如果要引导用户到报表中的某一位置，例如表、图表以及表或矩阵中显示的唯一组值，可以向该位置添加书签。 可以创建用作书签的字符串；或者，对于组而言，可以将书签设置为组表达式。  
@@ -31,14 +32,14 @@ ms.locfileid: "77080810"
   
 1.  在报表设计视图中，选择要向其添加书签的文本框、图像、图表或其他报表项。 所选项的属性将显示在“属性”窗格中。  
   
-2.  在 **“书签”** 旁的文本框中，键入作为此书签的标签的字符串。 例如，可以键入 **BikePhoto** 作为报表中图像的书签。 此外，也可以单击表达式 (fx) 按钮打开“表达式”对话框，指定一个计算结果为标签的表达式   。 对于组，键入的表达式应为组表达式。  
+2.  在 **“书签”** 旁的文本框中，键入作为此书签的标签的字符串。 例如，可以键入 **BikePhoto** 作为报表中图像的书签。 此外，也可以单击表达式 (fx) 按钮打开“表达式”对话框，指定一个计算结果为标签的表达式 。 对于组，键入的表达式应为组表达式。  
   
     > [!NOTE]  
     >  书签可以为任意字符串，但在报表中必须是唯一的。 如果书签不是唯一的，则指向该书签的链接将跳至第一个匹配书签。  
   
 ### <a name="to-add-a-bookmark-link"></a>添加书签链接  
   
-1.  在“设计”视图中，右键单击要向其添加链接的文本框、图像或图表，然后单击“属性”  。  
+1.  在“设计”视图中，右键单击要向其添加链接的文本框、图像或图表，然后单击“属性”。  
   
 2.  在该报表项的 **“属性”** 对话框中，单击 **“操作”** 。  
   

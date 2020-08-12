@@ -1,5 +1,6 @@
 ---
 title: 如何安装自定义安全扩展插件 | Microsoft Docs
+description: 了解 Reporting Services 2016 引入的新 Web 门户。 了解产生的更改如何影响自定义安全扩展插件的实现。
 ms.date: 07/10/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.assetid: bfa0a35b-ccfb-4279-bae6-106c227c5f16
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9fcef802f6c61b85b4905365bda075a9f11d9e10
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4dfc638f65c66f6ecf5957b80b883ab89337b03e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68223236"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529063"
 ---
 # <a name="how-to-install-custom-security-extensions"></a>如何安装自定义安全扩展插件
 
@@ -51,7 +52,7 @@ public void GetUserInfo(IRSRequestContext requestContext, out IIdentity userIden
 
 ## <a name="deployment-and-configuration"></a>部署和配置
 
-自定义安全扩展插件所需的基本配置与以前的版本相同。 需要对 web.config 和 rsreportserver.config 进行更改：有关详细信息，请参阅[在 Report Server 上配置自定义身份验证或窗体身份验证](../../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)。
+自定义安全扩展插件所需的基本配置与以前的版本相同。 web.config 和 rsreportserver.config 需要更改：有关详细信息，请参阅[在报表服务器上配置自定义身份验证或窗体身份验证](../../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)。
 
 报表管理器不再具有单独的 web.config，此门户将继承与 reportserver 终结点相同的设置。
 

@@ -1,5 +1,6 @@
 ---
 title: 设置图表上图例的格式（报表生成器）| Microsoft Docs
+description: 了解如何在报表生成器中使用“图例属性”对话框或“属性”窗格设置图表上图例的格式。
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -25,12 +26,12 @@ f1_keywords:
 ms.assetid: b035b2e0-ab1e-4a37-bff7-a42d1e914bac
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4b2babeb60f6208761be04e85889206f9ba407e9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cc2f10905bdf80c1853aecefd6783bdc60819a82
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080559"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255320"
 ---
 # <a name="chart-legend---formatting-report-builder"></a>图表图例 - 设置格式（报表生成器）
   图表图例包含对图表中每个类别的说明。 图例始终包含一个或多个图例项，每个图例项包含一个表示序列的彩色框以及一个描述该序列的文本字符串，如下图所示。  
@@ -69,7 +70,7 @@ ms.locfileid: "77080559"
 ## <a name="displaying-legend-items-horizontally"></a>水平显示图例项  
  默认情况下，图例的格式被设置为由一行或多行组成的列表，其中每一行都包含一个图例项。 图例区会展开以容纳图例项的数量。 如果图例无法展开，将显示省略号 (...)。 图例可垂直或水平展开，具体情况取决于指定的图例样式。 可以在 **“图例属性”** 对话框中更改布局样式，或更改分配的空间以显示所有图例项。  
   
- 若要水平显示图例，请将图例停靠到图表的顶部或底部。 这将导致图例水平展开。 还可以将 Layout 属性设置为“行”或“宽表”   。 在“属性”窗格中设置 MaxAutoSize 属性以控制当图例停靠在图表区的顶部或底部时分配给图例的垂直空间。  
+ 若要水平显示图例，请将图例停靠到图表的顶部或底部。 这将导致图例水平展开。 还可以将 Layout 属性设置为“行”或“宽表” 。 在“属性”窗格中设置 MaxAutoSize 属性以控制当图例停靠在图表区的顶部或底部时分配给图例的垂直空间。  
   
 ## <a name="formatting-the-legend-text"></a>设置图例文本的格式  
  可以在 **“图例属性”** 对话框的 **“字体”** 页上更改图例文本的字体、大小、样式和颜色。  

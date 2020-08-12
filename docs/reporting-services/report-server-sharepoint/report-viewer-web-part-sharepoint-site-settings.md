@@ -1,5 +1,6 @@
 ---
 title: 用于报表查看器 Web 部件的 SharePoint 网站设置 - SSRS | Microsoft Docs
+description: 了解如何在 SQL Server 报表服务器的报表查看器 Web 部件中配置 SharePoint 站点设置。
 ms.date: 11/15/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -7,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: jt000
 ms.author: jasontre
-ms.openlocfilehash: 8eadb83c35f69dc2a1dba108e83df93bf614be3e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8673f824762a9c7f6a28cd1232e742aac4428b23
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77256802"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764897"
 ---
 # <a name="sharepoint-site-settings-for-the-report-viewer-web-part---reporting-services"></a>用于报表查看器 Web 部件的 SharePoint 网站设置 - Reporting Services
 
@@ -24,7 +25,7 @@ ms.locfileid: "77256802"
 
 可通过以下操作访问网站设置：
 
-1. 在 SharePoint 网站中，选择左上角的“齿轮”图标，然后选择“网站设置”   。
+1. 在 SharePoint 网站中，选择左上角的“齿轮”图标，然后选择“网站设置” 。
 
     ![齿轮图标中的“网站设置”。](media/sharepoint-site-settings.png)
 

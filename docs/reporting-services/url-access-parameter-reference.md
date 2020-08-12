@@ -1,7 +1,7 @@
 ---
 title: URL 访问参数参考 | Microsoft Docs
 description: 使用本文中的参数作为 URL 的一部分来配置 Reporting Services 报表的外观。
-ms.date: 01/31/2020
+ms.date: 05/22/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0ac67de4831d1785f17029bc6c68fa6f7d8aeb16
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5c975f457238912c16e33a13f1f2ba598c82cac3
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77147376"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859019"
 ---
 # <a name="url-access-parameter-reference"></a>URL 访问参数参考
 
@@ -79,18 +79,21 @@ ms.locfileid: "77147376"
     https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Section=2  
     ```  
   
--   **FindString**：搜索一组特定的文本的报表。
+-   **FindString**：在报表中搜索一组特定的文本并突出显示该文本。
+    
+    > [!IMPORTANT]  
+    >  除非你在 URL 访问字符串中包含 rc:Toolbar=false，否则 rc:FindString 不起作用 。
   
      例如，在本机模式下：
   
     ```  
-    https://myrshost/reportserver?/Sales&rc:FindString=Mountain-400  
+    https://myrshost/reportserver?/Sales&rc:Toolbar=false&rc:FindString=Mountain-400  
     ```  
   
      例如，在 SharePoint 模式下：
   
     ```  
-    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:FindString=Mountain-400  
+    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Toolbar=false&rc:FindString=Mountain-400  
     ```  
   
 -   **StartFind**：指定要搜索的最后部分。 此参数的默认值为报表的最后一页。  
@@ -111,7 +114,7 @@ ms.locfileid: "77147376"
   
 -   **Stylesheet**：指定要应用于 HTML 查看器的样式表。
   
--   **设备信息设置**：以 `rc:tag=value` 形式指定设备信息设置，其中，tag 是特定于当前使用的呈现扩展插件的设备信息设置的名称  。 （请参阅 Format 参数的说明  。）例如，可以使用 IMAGE 呈现扩展插件的 OutputFormat 设备信息设置，向 JPEG 图像呈现报表，方法是在 URL 访问字符串中使用以下参数：`...&rs:Format=IMAGE&rc:OutputFormat=JPEG`  。 有关所有扩展插件特定的设备信息设置的详细信息，请参阅[呈现扩展插件的设备信息设置 (Reporting Services)](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)。
+-   **设备信息设置**：以 `rc:tag=value` 形式指定设备信息设置，其中，tag 是特定于当前使用的呈现扩展插件的设备信息设置的名称。 （请参阅 Format 参数的说明。）例如，可以使用 IMAGE 呈现扩展插件的 OutputFormat 设备信息设置，向 JPEG 图像呈现报表，方法是在 URL 访问字符串中使用以下参数：`...&rs:Format=IMAGE&rc:OutputFormat=JPEG`。 有关所有扩展插件特定的设备信息设置的详细信息，请参阅[呈现扩展插件的设备信息设置 (Reporting Services)](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)。
   
 ##  <a name="report-server-commands-rs"></a><a name="bkmk_reportserver"></a> 报表服务器命令 (rs:)
  报表服务器命令以 *rs:* 为前缀，用于指向报表服务器：
@@ -160,7 +163,7 @@ ms.locfileid: "77147376"
         https://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition  
         ```  
   
-    -   **GetDataSourceContents**：将给定共享数据源的属性显示为 XML。 如果你的浏览器支持 XML，且如果你对于该数据源是具有 Read Contents 权限的用户并已经过身份验证，则将显示数据源定义  。
+    -   **GetDataSourceContents**：将给定共享数据源的属性显示为 XML。 如果你的浏览器支持 XML，且如果你对于该数据源是具有 Read Contents 权限的用户并已经过身份验证，则将显示数据源定义。
   
          例如，在本机模式下：
   
@@ -190,7 +193,7 @@ ms.locfileid: "77147376"
   
     -   **GetComponentDefinition**：显示与已发布的报表项关联的 XML 定义。 您必须对已发布的报表项具有“读取内容”  权限才能使用此值。
   
--    Format：指定呈现和查看报表的格式。 常用值包括：
+-   Format：指定呈现和查看报表的格式。 常用值包括：
   
     -   **HTML5**  
   
@@ -220,7 +223,7 @@ ms.locfileid: "77147376"
   
      默认值是 **HTML5**秒。 有关详细信息，请参阅[使用 URL 访问导出报表](../reporting-services/export-a-report-using-url-access.md)。
   
-     有关完整列表，请参阅报表服务器 rsreportserver.config 文件的 \<Render> 扩展部分  。 有关在何处查找文件的信息，请参阅 [RsReportServer.config 配置文件](../reporting-services/report-server/rsreportserver-config-configuration-file.md)。
+     有关完整列表，请参阅报表服务器 rsreportserver.config 文件的 \<Render> 扩展部分。 有关在何处查找文件的信息，请参阅 [RsReportServer.config 配置文件](../reporting-services/report-server/rsreportserver-config-configuration-file.md)。
   
      例如，若要直接从本机模式报表服务器获取报表的 PDF 副本：
   
@@ -234,7 +237,7 @@ ms.locfileid: "77147376"
     https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/myrereport.rdl&rs:Format=PDF  
     ```  
   
--   ParameterLanguage  ：提供在与浏览器语言无关的 URL 中传递的参数的语言。 默认值为浏览器语言。 该值可以为区域性值，如 **en-us** 或 **de-de**。
+-   ParameterLanguage：提供在与浏览器语言无关的 URL 中传递的参数的语言。 默认值为浏览器语言。 该值可以为区域性值，如 **en-us** 或 **de-de**。
   
      例如在本机模式中，将替代浏览器语言并指定区域性值 de-DE：
   
@@ -250,22 +253,22 @@ ms.locfileid: "77147376"
     https://myrshost/reportserver?/SampleReports/Company Sales&rs:Snapshot=2003-04-07T13:40:02  
     ```  
   
--   PersistStreams  ：呈现单个持久流中的报表。 图像呈现器使用此参数，通过一次传输一块的方式传输呈现的报表。 在 URL 访问字符串中使用此参数后，将相同的 URL 访问字符串用于 *GetNextStream* 参数而非 *PersistStreams* 参数可以获取持久流中的下一个块。 此 URL 命令最终返回 0 字节流，以指明持久流结束。 默认值是 **false**秒。
+-   PersistStreams：呈现单个持久流中的报表。 图像呈现器使用此参数，通过一次传输一块的方式传输呈现的报表。 在 URL 访问字符串中使用此参数后，将相同的 URL 访问字符串用于 *GetNextStream* 参数而非 *PersistStreams* 参数可以获取持久流中的下一个块。 此 URL 命令最终返回 0 字节流，以指明持久流结束。 默认值是 **false**秒。
   
--   GetNextStream  ：在使用 PersistStreams 参数访问的持久流中获取下一个数据块  。 有关详细信息，请参阅 *PersistStreams*的说明。 默认值是 **false**秒。
+-   GetNextStream：在使用 PersistStreams 参数访问的持久流中获取下一个数据块。 有关详细信息，请参阅 *PersistStreams*的说明。 默认值是 **false**秒。
   
--   SessionID  ：指定客户端应用程序和报表服务器之间已建立的活动报表会话。 此参数的值设置为会话标识符。
+-   SessionID：指定客户端应用程序和报表服务器之间已建立的活动报表会话。 此参数的值设置为会话标识符。
   
      您可以将会话 ID 指定为 cookie 或 URL 的一部分。 在报表服务器已配置为不使用会话 cookie 时，没有指定会话 ID 的第一个请求将导致具有某一会话 ID 的重定向。 有关报表服务器会话的详细信息，请参阅[标识执行状态](../reporting-services/report-server-web-service-net-framework-soap-headers/identifying-execution-state.md)。
   
--   ClearSession  ：**true** 值指示报表服务器从报表会话中删除报表。 与经过身份验证的用户相关联的所有报表实例都将从报表会话中删除。 （报表实例定义为使用不同报表参数值运行多次的同一报表。）默认值是 **false**秒。
+-   ClearSession：**true** 值指示报表服务器从报表会话中删除报表。 与经过身份验证的用户相关联的所有报表实例都将从报表会话中删除。 （报表实例定义为使用不同报表参数值运行多次的同一报表。）默认值是 **false**秒。
   
--   ResetSession  ：**true** 值指示报表服务器通过删除报表会话与所有报表快照的关联来重置报表会话。 默认值是 **false**秒。
+-   **ResetSession**： **true** 值指示报表服务器通过删除报表会话与所有报表快照的关联来重置报表会话。 默认值是 **false**秒。
   
--   ShowHideToggle  ：切换报表部分的显示和隐藏状态。 指定用于表示要切换的部分的正整数。
+-   ShowHideToggle：切换报表部分的显示和隐藏状态。 指定用于表示要切换的部分的正整数。
   
 ##  <a name="report-viewer-web-part-commands-rv"></a><a name="bkmk_webpart"></a> 报表查看器 Web 部件命令 (rv:)
- 以下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 保留的报表参数名称用于指向与 SharePoint 集成的报表查看器 Web 部件。 这些参数名称带有 *rv:* 前缀。 报表查看器 Web 部件也接受 rs:ParameterLanguage 参数  。
+ 以下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 保留的报表参数名称用于指向与 SharePoint 集成的报表查看器 Web 部件。 这些参数名称带有 *rv:* 前缀。 报表查看器 Web 部件也接受 rs:ParameterLanguage 参数。
   
 -   **Toolbar**：控制报表查看器 Web 部件的工具栏显示。 默认值是 **Full**秒。 值可以是：
   
@@ -329,31 +332,31 @@ ms.locfileid: "77147376"
     https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:DockToolBar=Bottom  
     ```  
   
--   **ToolBarItemsDisplayMode**：控制显示哪些工具栏项。 这是一个按位枚举值。 若要包括某一工具栏项，请将该项的值添加至总值。 例如，对于无“操作”菜单，请使用 rv:ToolBarItemsDisplayMode=63（或 0x3F），这是 1+2+4+8+16+32   。 对于仅“操作”菜单项，请使用 rv:ToolBarItemsDisplayMode=960（或 0x3C0）   。 默认值是 **-1**，这将包括所有工具栏项。 有效值是：
+-   **ToolBarItemsDisplayMode**：控制显示哪些工具栏项。 这是一个按位枚举值。 若要包括某一工具栏项，请将该项的值添加至总值。 例如，对于无“操作”菜单，请使用 rv:ToolBarItemsDisplayMode=63（或 0x3F），这是 1+2+4+8+16+32。 对于仅“操作”菜单项，请使用 rv:ToolBarItemsDisplayMode=960（或 0x3C0）。 默认值是 **-1**，这将包括所有工具栏项。 有效值是：
   
-    -   **1 (0x1)** ：“后退”按钮   
+    -   **1 (0x1)** ：“后退”按钮  
   
     -   **2 (0x2)** ：文本搜索控件  
   
     -   **4 (0x4)** ：页面导航控件  
   
-    -   **8 (0x8)** ：“刷新”按钮   
+    -   **8 (0x8)** ：“刷新”按钮  
   
-    -   **16 (0x10)** ：“缩放”列表框   
+    -   **16 (0x10)** ：“缩放”列表框  
   
-    -   **32 (0x20)** ：“Atom 馈送”按钮   
+    -   **32 (0x20)** ：“Atom 馈送”按钮  
   
-    -   **64 (0x40)** ：“操作”中的“打印”菜单选项    
+    -   **64 (0x40)** ：“操作”中的“打印”菜单选项   
   
-    -   **128 (0x80)** ：“操作”中的“导出”子菜单    
+    -   **128 (0x80)** ：“操作”中的“导出”子菜单   
   
-    -   **256 (0x100)** ：“操作”中的“使用报表生成器打开”菜单选项    
+    -   **256 (0x100)** ：“操作”中的“使用报表生成器打开”菜单选项   
   
-    -   **512 (0x200)** ：“操作”中的“订阅”菜单选项    
+    -   **512 (0x200)** ：“操作”中的“订阅”菜单选项   
   
-    -   **1024 (0x400)** ：“操作”中的“新建数据警报”菜单选项    
+    -   **1024 (0x400)** ：“操作”中的“新建数据警报”菜单选项   
   
-     例如，在 SharePoint 模式中，仅显示“后退”按钮、文本搜索控件、页面导航控件和“刷新”按钮   ：
+     例如，在 SharePoint 模式中，仅显示“后退”按钮、文本搜索控件、页面导航控件和“刷新”按钮 ：
   
     ```  
     https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ToolBarItemsDisplayMode=15  

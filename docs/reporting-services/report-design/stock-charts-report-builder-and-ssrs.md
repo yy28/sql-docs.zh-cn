@@ -1,5 +1,6 @@
 ---
 title: 股价图（报表生成器）| Microsoft Docs
+description: 在报表生成器中使用线条或三角形等标记显示每个数据点使用多达四个值的财务数据或科学数据。
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f75ca11e-b7f5-4ac0-ba17-fe6f82742dad
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d59677d4259e8e25e8e58c20b461fe25e2f762dc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 40a9ab1568ab2b61a1582f3dfbc62badbd480a1f
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77077120"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012425"
 ---
 # <a name="stock-charts-report-builder-and-ssrs"></a>股价图（报表生成器和 SSRS）
 

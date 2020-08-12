@@ -7,13 +7,13 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seo-lt-2019, seo-mmd-2019
-ms.date: 12/04/2019
-ms.openlocfilehash: 49a5f8e19db65691fe8e521d7ca6a65e828fe6bd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.date: 06/09/2020
+ms.openlocfilehash: f1c17f3a3f3accdbc9fcefa4872100d6a4ee2889
+ms.sourcegitcommit: 60900cdd520ec723102b54ccd27b102bf6c91d25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866020"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84638281"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>配置报表服务器服务帐户（SSRS 配置管理器）
 
@@ -52,15 +52,15 @@ ms.locfileid: "74866020"
   
 2. 在“服务帐户”页上，选择描述您要使用的帐户类型的选项。  
   
-3. 如果选择了一个 Windows 用户帐户，请指定新的帐户名和密码。 帐户名不能超过 20 个字符。  
+3. 如果选择了一个 Windows 用户帐户，请指定新的帐户名和密码。 根据 Windows 用户帐户命名规则，帐户不能超过 20 个字符， 且不能包含特殊字符 " / \ [ ] : ; | = , + * ? < > '。  
   
      如果报表服务器部署在支持 Kerberos 身份验证的网络中，则必须使用指定的域用户帐户注册报表服务器服务主体名称 (SPN)。 有关详细信息，请参阅[为报表服务器注册服务主体名称 (SPN)](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md)。  
   
-4. 单击“应用”  。  
+4. 单击“应用”。  
   
-5. 当系统提示您备份对称密钥时，请键入对称密钥备份的文件名和位置，并键入用于锁定和解锁该文件的密码，然后单击 **“确定”** 。  
+5. 当系统提示您备份对称密钥时，请键入对称密钥备份的文件名和位置，并键入用于锁定和解锁该文件的密码，然后单击 **“确定”**。  
   
-6. 如果报表服务器使用该服务帐户连接到报表服务器数据库，则连接信息更新为使用新的帐户或密码。 更新连接信息要求连接到数据库。 如果出现 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的“数据库连接”  对话框，请输入拥有连接到数据库的权限的凭据，然后单击“确定”  。  
+6. 如果报表服务器使用该服务帐户连接到报表服务器数据库，则连接信息更新为使用新的帐户或密码。 更新连接信息要求连接到数据库。 如果出现 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的“数据库连接”对话框，请输入拥有连接到数据库的权限的凭据，然后单击“确定”。  
   
 7. 当系统提示您还原对称密钥时，请键入在步骤 5 中指定的密码，并单击 **“确定”** 。  
   
@@ -72,9 +72,10 @@ ms.locfileid: "74866020"
   
 |帐户|说明|  
 |-------------|-----------------|  
-|域用户帐户|如果您有一个拥有报表服务器操作所需的最小权限的 Windows 域用户帐户，则应使用此帐户。<br /><br /> 之所以建议使用域帐户，是因为这种帐户可以将报表服务器服务与其他应用程序隔离开。 使用共享帐户（如 Network Service）运行多个应用程序会增加恶意用户控制报表服务器的风险，因为在这种情况下，任何一个应用程序的安全漏洞会很容易扩散到使用同一帐户运行的所有其他应用程序。<br /><br /> 如果使用域用户帐户，并且组织实施了密码过期策略，则必须定期更改密码。 您可能还需要使用此用户帐户注册服务。 有关详细信息，请参阅[为报表服务器注册服务主体名称 (SPN)](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md)。<br /><br /> 避免使用本地 Windows 用户帐户。 本地帐户通常没有足够的权限访问其他计算机上的资源。 有关如何使用本地帐户限制报表服务器功能的详细信息，请参阅本主题中的 [使用本地帐户的注意事项](#localaccounts) 。|  
+|域用户帐户|如果您有一个拥有报表服务器操作所需的最小权限的 Windows 域用户帐户，则应使用此帐户。<br /><br /> 之所以建议使用域帐户，是因为这种帐户可以将报表服务器服务与其他应用程序隔离开。 使用共享帐户（如 Network Service）运行多个应用程序会增加恶意用户控制报表服务器的风险，因为在这种情况下，任何一个应用程序的安全漏洞会很容易扩散到使用同一帐户运行的所有其他应用程序。<br /><br /> 如果使用域用户帐户，并且组织实施了密码过期策略，则必须定期更改密码。 您可能还需要使用此用户帐户注册服务。 有关详细信息，请参阅[为报表服务器注册服务主体名称 (SPN)](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md)。<br /><br /> 避免使用本地 Windows 用户帐户。 本地帐户通常没有足够的权限访问其他计算机上的资源。 有关如何使用本地帐户限制报表服务器功能的详细信息，请参阅本主题中的 [使用本地帐户的注意事项](#localaccounts) 。| 
+| **组托管服务帐户 (gMSA)** | Windows Server 2008 R2 和 Windows 7 中引入了独立托管服务帐户。 它们是提供自动密码管理和简化的 SPN 管理（包括将管理委派给其他管理员）的托管域帐户。 组托管服务帐户在域中提供相同的功能，但在多个服务器上扩展该功能。 |
 |**虚拟服务帐户**|**虚拟服务帐户** 表示 Windows 服务。 它是一个拥有网络登录权限的内置最低特权帐户。 如果没有可用的域用户帐户，或者要避免因密码过期策略而可能导致的任何服务中断，建议使用此帐户。|  
-|**Network Service**|Network Service 是一个拥有网络登录权限的内置最低特权帐户  。 <br /><br /> 如果您选择 **Network Service**，请尝试将使用同一帐户运行的其他服务的数量降到最低。 对于使用同一帐户运行的多个应用程序，如果一个应用程序出现安全漏洞，则所有其他应用程序的安全都会受到影响。|  
+|**Network Service**|Network Service 是一个拥有网络登录权限的内置最低特权帐户。 <br /><br /> 如果您选择 **Network Service**，请尝试将使用同一帐户运行的其他服务的数量降到最低。 对于使用同一帐户运行的多个应用程序，如果一个应用程序出现安全漏洞，则所有其他应用程序的安全都会受到影响。|  
 |**Local Service**|**Local Service** 是一个与经过身份验证的本地 Windows 用户帐户类似的内置帐户。 以 **“Local Service”** 帐户运行的服务将以一个没有凭据的 Null 会话形式访问网络资源。 此帐户不适合于 Intranet 部署方案。因为在此部署方案下，报表服务器必须连接至远程报表服务器数据库或网络域控制器，以在打开报表或处理订阅之前对用户进行身份验证。|  
 |**Local System**|**Local System** 是一个高特权帐户，运行报表服务器时不需要此帐户。 请勿将此帐户用于报表服务器的安装。 此时应选择域帐户或 **Network Service** 。|  
   
@@ -106,7 +107,7 @@ ms.locfileid: "74866020"
 
  更改服务标识将启动一系列事件，其中包括重新启动服务、更新受密码保护的加密密钥、更新 URL 预留以及更新报表服务器数据库连接信息（如果使用该服务帐户来连接报表服务器数据库）。 您可以通过查看页面底部“结果”窗格中的通知来监视这些事件的状态。 如果在此过程中出现错误，可以尝试使用以下方法进行解决：  
   
-- 如果无法还原对称密钥，可以尝试使用“加密密钥”页中的“还原”手动还原它  。 如果这不起作用，可以考虑删除加密的内容。 必须重新创建数据源连接信息和订阅，但其余内容仍然可用。 有关详细信息，请参阅 [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)。  
+- 如果无法还原对称密钥，可以尝试使用“加密密钥”页中的“还原”手动还原它。 如果这不起作用，可以考虑删除加密的内容。 必须重新创建数据源连接信息和订阅，但其余内容仍然可用。 有关详细信息，请参阅 [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)。  
   
 - 如果服务未启动，请使用管理工具中的“服务”控制台应用程序手动重新启动它。  
   

@@ -1,5 +1,6 @@
 ---
 title: 将防火墙配置为允许报表服务器访问 | Microsoft Docs
+description: 了解如何配置 Windows 防火墙，以允许访问通过 URL 访问的报表服务器应用程序和已发布报表。
 ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 04dae07a-a3a4-424c-9bcb-a8000e20dc93
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bbcd96e24d0819cc8403a669c7333bb92d396e05
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 08a80c8307d551813a30becbed6d12507e6b2947
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73593740"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545580"
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>Configure a Firewall for Report Server Access
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 可以通过指定 IP 地址、端口和虚拟目录的 URL 访问报表服务器应用程序和已发布的报表。 如果 Windows 防火墙已开启，配置为报表服务器使用的端口很可能已关闭。 表明端口可能已关闭的迹象为尝试从远程客户端计算机打开 Web 门户时出现空白页，或请求报表后出现空白网页。  
@@ -27,7 +28,7 @@ ms.locfileid: "73593740"
   
  如果要访问外部计算机上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关系数据库，或者如果报表服务器数据库在外部 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上，则必须在外部计算机上打开端口 1433 和 1434。 有关详细信息，请参阅 [为数据库引擎访问配置 Windows 防火墙](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)。 有关默认 Windows 防火墙设置的详细信息，以及有关影响 [!INCLUDE[ssDE](../../includes/ssde-md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的 TCP 端口的说明，请参阅 [配置 Windows 防火墙以允许 SQL Server 访问](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  这些操作说明假定已经配置了服务帐户，创建了报表服务器数据库，并为报表服务器 Web 服务和 Web 门户配置了 URL。 有关详细信息，请参阅 [管理 Reporting Services 本机模式报表服务器](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)。  
   
  您还应验证是否可以通过将本地 Web 浏览器连接到本地报表服务器实例来访问报表服务器。 此步骤可确保您拥有有效的安装。 开始打开端口之前，应验证是否已对安装进行了正确的配置。 若要在 Windows Server 中完成该步骤，还必须将报表服务器站点添加到“受信任的站点”中。 有关详细信息，请参阅 [为本地管理配置本机模式报表服务器 (SSRS)](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
@@ -38,33 +39,33 @@ ms.locfileid: "73593740"
   
 1.  在 **“开始”** 菜单上单击 **“控制面板”** ，单击 **“系统和安全”** ，然后单击 **“Windows 防火墙”** 。 不为“类别”视图配置控制面板，您只需要选择 **“Windows 防火墙”** 。  
   
-2.  单击“高级设置”  。  
+2.  单击“高级设置”。  
   
 3.  单击 **“入站规则”** 。  
   
-4.  在“操作”  窗口中单击“新建规则”  。  
+4.  在“操作”窗口中单击“新建规则”。  
   
 5.  单击 **“端口”** 的 **“规则类型”** 。  
   
-6.  单击“下一步”。   
+6.  单击“下一步”。  
   
 7.  在 **“协议和端口”** 页上，单击 **TCP**。  
   
 8.  选择 **“特定本地端口”** ，然后键入值 **80**。  
   
-9. 单击“下一步”。   
+9. 单击“下一步”。  
   
 10. 在 **“操作”** 页上，单击 **“允许连接”** 。  
   
-11. 单击“下一步”。   
+11. 单击“下一步”。  
   
 12. 在 **“配置文件”** 页上，单击适合您的环境的选项。  
   
-13. 单击“下一步”。   
+13. 单击“下一步”。  
   
-14. 在“名称”页上，输入名称“ReportServer (TCP on port 80)”    
+14. 在“名称”页上，输入名称“ReportServer (TCP on port 80)”   
   
-15. 单击“完成”  。  
+15. 单击“完成”。  
   
 16. 重新启动计算机。  
   

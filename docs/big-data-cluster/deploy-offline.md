@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 15af041e94ac0abfdae13635345de62262a4b086
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a3e437e722665cb156fbd4c1bb474e1d9f095f95
+ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73531975"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84423156"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>执行 SQL Server 大数据群集的脱机部署
 
@@ -54,6 +54,10 @@ ms.locfileid: "73531975"
    ```PowerShell
    docker push <TARGET_DOCKER_REGISTRY>/<TARGET_DOCKER_REPOSITORY>/<SOURCE_IMAGE_NAME>:<TARGET_DOCKER_TAG>
    ```
+ 
+> [!WARNING]
+> 将大数据群集映像推送到专用存储库后，请不要对这些映像进行修改。 使用修改后的映像执行部署将导致不受支持的大数据群集设置。
+
 
 ### <a name="big-data-cluster-container-images"></a><a id="images"></a> 大数据群集容器映像
 
@@ -92,7 +96,7 @@ ms.locfileid: "73531975"
 > [!NOTE]
 > 使用该脚本的先决条件是 Python。 有关如何安装 Python 的详细信息，请参阅 [Python 文档](https://wiki.python.org/moin/BeginnersGuide/Download)。
 
-1. 使用 curl 从 Bash 或 PowerShell 下载脚本  ：
+1. 使用 curl 从 Bash 或 PowerShell 下载脚本：
 
    ```PowerShell
    curl -o push-bdc-images-to-custom-private-repo.py "https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/deployment/offline/push-bdc-images-to-custom-private-repo.py"
@@ -118,7 +122,7 @@ ms.locfileid: "73531975"
 
 ## <a name="install-tools-offline"></a>脱机安装工具
 
-大数据群集部署需要多种工具，包括 Python、`azdata` 和 Kubectl。 通过下列步骤在脱机服务器上安装这些工具。
+大数据群集部署需要多种工具，包括 Python、`azdata` 和 Kubectl 。 通过下列步骤在脱机服务器上安装这些工具。
 
 ### <a name="install-python-offline"></a><a id="python"></a> 脱机安装 python
 
@@ -156,9 +160,9 @@ ms.locfileid: "73531975"
 
 ### <a name="install-kubectl-offline"></a><a id="kubectl"></a> 脱机安装 Kubectl
 
-若要将 Kubectl 安装到脱机计算机，请使用以下步骤  。
+若要将 Kubectl 安装到脱机计算机，请使用以下步骤。
 
-1. 使用 curl 将 Kubectl 下载到所选文件夹   。 有关详细信息，请参阅[使用 curl 安装 Kubectl 二进制](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-curl)。
+1. 使用 curl 将 Kubectl 下载到所选文件夹 。 有关详细信息，请参阅[使用 curl 安装 Kubectl 二进制](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-curl)。
 
 1. 将文件夹复制到目标计算机。
 

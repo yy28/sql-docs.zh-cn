@@ -1,5 +1,6 @@
 ---
 title: 报表和组变量集合参考（报表生成器）| Microsoft Docs
+description: 如果在报表中需要多次使用某个复杂计算，请创建一个具有唯一名称的变量。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -17,12 +18,12 @@ f1_keywords:
 ms.assetid: 4be5b463-3ce2-483d-a3c6-dae752cb543e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 77373c2a1a160c7621f54f3701564eebe1312618
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2ec35aa6399929f90f8e816b8c2d2de50e5cc155
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081451"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83688847"
 ---
 # <a name="built-in-collections---report-and-group-variables-references-report-builder"></a>内置集合 - 报表和组变量引用（报表生成器）
   在报表的表达式中需要多次使用某个复杂计算时，您可能需要创建一个变量。 您可以创建一个报表变量或组变量。 变量名称在报表中必须是唯一的。  
@@ -33,7 +34,7 @@ ms.locfileid: "77081451"
 ## <a name="report-variables"></a>报表变量  
  使用报表变量可保存时间相关的计算的值（例如货币汇率或时间戳），或者保存多次引用的复杂计算的值。 默认情况下，报表变量计算一次即可在报表中的表达式中使用。 报表变量默认为只读。 您可以更改该默认设置以使报表变量成为读写的。 在再次处理该报表之前，报表变量中的值将保留在整个会话中。  
   
- 若要添加报表变量，请打开“报表属性”  对话框，单击“变量”  ，然后提供名称和值。 名称是区分大小写的字符串，以字母开头，不含空格。 名称可以包含字母、数字或下划线 (_)。  
+ 若要添加报表变量，请打开“报表属性”对话框，单击“变量”，然后提供名称和值。 名称是区分大小写的字符串，以字母开头，不含空格。 名称可以包含字母、数字或下划线 (_)。  
   
  若要引用表达式中的变量，请使用全局集合语法，例如 `=Variables!CustomTimeStamp.Value`。 在设计图面上，文本框中的值显示为 `<<Expr>>`。  
   
@@ -41,11 +42,11 @@ ms.locfileid: "77081451"
   
 -   **只读使用** ：设置值一次以便为报表会话创建一个常量，例如创建一个时间戳。  
   
-     因为当用户在报表中翻页时，文本框中的表达式将按需计算，所以，如果用户通过使用“上一页”按钮向前和向后翻页，动态值（例如，包括返回时间的 `Now()` 函数的表达式）可以返回不同的值。 通过将报表变量的值设置为表达式 `=Now()`，然后在表达式中添加变量，可确保整个报表处理过程中使用相同的值。  
+     因为当用户在报表中翻页时，文本框中的表达式将按需计算，所以，如果用户通过使用“上一页”**** 按钮向前和向后翻页，动态值（例如，包括返回时间的 `Now()` 函数的表达式）可以返回不同的值。 通过将报表变量的值设置为表达式 `=Now()`，然后在表达式中添加变量，可确保整个报表处理过程中使用相同的值。  
   
 -   **读写使用** ：设置值一次并在报表会话中序列化该值。 变量的读写选项提供了一个比在报表定义的代码块中使用静态变量更好的选择。  
   
-     如果清除了某一变量的“只读”  选项，则该变量的 Writable 属性将设置为“true”  。 若要从某一表达式更新值，请使用 SetValue 方法，例如 `=Variables!MyVariable.SetValue("123")`。  
+     如果清除了某一变量的“只读”选项，则该变量的 Writable 属性将设置为“true”。 若要从某一表达式更新值，请使用 SetValue 方法，例如 `=Variables!MyVariable.SetValue("123")`。  
   
     > [!NOTE]  
     >  您不能控制报表处理器何时初始化一个变量或何时对更新变量的表达式进行计算。 变量初始化的执行顺序未定义。  

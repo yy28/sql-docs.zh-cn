@@ -1,5 +1,6 @@
 ---
 title: First 函数（报表生成器）| Microsoft Docs
+description: 使用 First 函数返回报表生成器中指定表达式的给定作用域中的第一个值。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: d0914520-30c5-4d63-9b59-8d9342ed63b9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c7dee0fc2085ff370a5c76ece56f9ed54f6e2e4a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9442d6a0812725ab13d9e637e2dd02497b33bd1a
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081269"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779489"
 ---
 # <a name="report-builder-functions---first-function"></a>报表生成器函数 - First 函数
   返回指定表达式的给定作用域中的第一个值。  
@@ -28,7 +29,7 @@ ms.locfileid: "77081269"
 First(expression, scope)  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *expression*  
  （**Variant** 或 **Binary**）要对其执行聚合的表达式，例如， `=Fields!FieldName.Value`。  
   

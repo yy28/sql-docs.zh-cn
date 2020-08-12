@@ -1,5 +1,6 @@
 ---
 title: 将 Report 类用于传递扩展插件 | Microsoft Docs
+description: 了解传递扩展插件如何使用 Report 类，该类在报表服务器、报表名称和其他属性上存储报表 URL。
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1145ac63-eafd-452a-82af-16f85b1676dd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 05196a42af159e06a2b740c5671b2892d8362453
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 544a3c58f7a273a19a2df459e8d834d69afd2f8f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193619"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529453"
 ---
 # <a name="using-the-report-class-for-a-delivery-extension"></a>将 Report 类用于传递扩展插件
   <xref:Microsoft.ReportingServices.Interfaces.Report> 类表示报表服务器数据库中的报表。 任何订阅都与某一特定报表相关联。 该报表包含在通知中。 您的传递扩展插件可以使用作为该通知的一部分的 <xref:Microsoft.ReportingServices.Interfaces.Report> 对象来呈现报表。 <xref:Microsoft.ReportingServices.Interfaces.Report> 对象还包含特定于报表的属性，例如指向报表服务器上的报表的 URL 和报表名称。 这些属性全都可以用作您的传递提供程序的一部分。  

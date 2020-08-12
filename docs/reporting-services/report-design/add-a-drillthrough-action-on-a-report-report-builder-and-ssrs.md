@@ -1,5 +1,6 @@
 ---
 title: 在报表中添加钻取操作（报表生成器）| Microsoft Docs
+description: 通过在文本框、映像或图表上数据点中添加钻取操作链接提高查询性能。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: 153729c4-d01e-4629-b78f-0cfd5a7f83da
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8f2737d0d67851fdcce06a926d8ceb71849aea2c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8540ade9e1c13dac159c20ffade0d5b0c1652071
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080741"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689518"
 ---
 # <a name="add-a-drillthrough-action-on-a-report-report-builder-and-ssrs"></a>在报表中添加钻取操作（报表生成器和 SSRS）
-  单击主报表中的链接时打开的报表称为“钻取报表”  。 此钻取链接启用了一个钻取操作。  
+  单击主报表中的链接时打开的报表称为“钻取报表” 。 此钻取链接启用了一个钻取操作。  
   
  钻取报表必须发布到与主报表相同的报表服务器上，但可位于不同的文件夹中。 可以向具有 **“操作”** 属性的任何项添加钻取链接，例如文本框、图像或图表中的数据点。  
   
@@ -27,7 +28,7 @@ ms.locfileid: "77080741"
   
 ### <a name="to-add-a-drillthrough-action"></a>添加钻取操作  
   
-1.  在“设计”视图中，右键单击要添加链接的文本框、图像或图表，然后单击“属性”  。  
+1.  在“设计”视图中，右键单击要添加链接的文本框、图像或图表，然后单击“属性”。  
   
 2.  在项的 **“属性”** 对话框中，单击 **“操作”** 。  
   
@@ -41,7 +42,7 @@ ms.locfileid: "77080741"
   
 5.  在 **“使用这些参数运行报表”** 中，单击 **“添加”** 。 将向参数网格添加一个新行。  
   
-    -   在“名称”文本框中，单击下拉列表或键入钻取报表中的报表参数名称  。  
+    -   在“名称”文本框中，单击下拉列表或键入钻取报表中的报表参数名称。  
   
         > [!NOTE]  
         >  参数列表中的名称必须与目标报表中的期望参数完全匹配。 例如，参数名称必须大小写格式匹配。 如果名称不匹配，或者并未列出某个预期的参数，则钻取报表将出错。  
@@ -53,7 +54,7 @@ ms.locfileid: "77080741"
   
      有关如何在报表中隐藏参数的信息，请参阅[添加、更改或删除报表参数（报表生成器和 SSRS）](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)。  
   
-6.  （可选）对于文本框，通过更改功能区的“主文件夹”选项卡上的文本颜色和效果有助于向用户指示该文本是一个链接  。  
+6.  （可选）对于文本框，通过更改功能区的“主文件夹”选项卡上的文本颜色和效果有助于向用户指示该文本是一个链接****。  
   
 7.  若要测试该链接，请运行报表，然后单击对其设置此链接的报表项。  
   

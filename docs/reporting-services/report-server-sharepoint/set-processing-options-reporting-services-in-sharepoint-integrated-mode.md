@@ -1,5 +1,6 @@
 ---
 title: 设置处理选项（SharePoint 集成模式下的 Reporting Services）| Microsoft Docs
+description: 在 SharePoint 集成模式下的 SQL Server Reporting Services 中，指定进行数据处理的时间、超时值和其他选项。
 ms.date: 10/05/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 986ae6e89727b0cef59e4d6b3bf7e5d92bd5342b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7b698f7e3d566cd49a0106c0cdf834be894cb92f
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580551"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764778"
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>设置处理选项（SharePoint 集成模式下的 Reporting Services）
 
@@ -46,7 +47,7 @@ ms.locfileid: "65580551"
   
 4.  在 **“数据快照选项”** 中，选择 **“计划数据处理”** 。  
   
-5.  如果有要使用的现有共享计划，请选择 **“根据共享计划”** ，否则请单击 **“根据自定义计划”** ，然后单击 **“配置”** 。  
+5.  如果有要使用的现有共享计划，请选择 **“根据共享计划”** ，否则请单击 **“根据自定义计划”**，然后单击 **“配置”**。  
   
 6.  选择频率、计划以及开始和结束日期，然后单击 **“确定”** 。  
   
@@ -74,7 +75,7 @@ ms.locfileid: "65580551"
   
 2.  单击向下箭头，然后选择 **“管理处理选项”** 。  
   
-3.  如果要使用在报表服务器级指定的值，请在“处理超时”中选择“使用站点默认设置”   。 如果要用无超时或不同的超时值来替代该值，请选择“不对报表处理时间设置超时”或“限制报表处理时间(秒)”   。  
+3.  如果要使用在报表服务器级指定的值，请在“处理超时”中选择“使用站点默认设置” 。 如果要用无超时或不同的超时值来替代该值，请选择“不对报表处理时间设置超时”或“限制报表处理时间(秒)”********。  
   
 ## <a name="set-report-history-options-and-limits"></a>设置报表历史记录选项和限值
   

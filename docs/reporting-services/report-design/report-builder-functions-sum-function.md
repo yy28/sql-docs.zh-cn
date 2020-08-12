@@ -1,5 +1,6 @@
 ---
 title: Sum 函数（报表生成器）| Microsoft Docs
+description: 报表生成器中的 Sum 函数返回由表达式指定的所有非 Null 数值的和。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2b45a024-398d-43b8-9948-b8b23fb674c9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b59a3ba46aaf01ce67b7691f84a560ccd64410fe
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 22db409b3c5e485db27cb828f1769ecdb001b5c8
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081130"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681426"
 ---
 # <a name="report-builder-functions---sum-function"></a>报表生成器函数 - Sum 函数
   返回在给定作用域中计算的、由表达式指定的所有非 Null 数值的和。  
@@ -28,7 +29,7 @@ ms.locfileid: "77081130"
 Sum(expression, scope, recursive)  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *expression*  
  （**Integer** 或 **Float**）要对其执行聚合的表达式。  
   

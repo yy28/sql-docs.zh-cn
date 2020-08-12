@@ -1,5 +1,6 @@
 ---
 title: 呈现数据区域（报表生成器）| Microsoft Docs
+description: 了解报表生成器中数据区域各个部分的分页和呈现行为。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4f3b2c7d-3669-457f-899b-b758d1db3426
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 06eb5ee05e045a2cb6e902030714ebb2f824becc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9db14d568b96599a114616b011383b6aaf14ea7e
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77077015"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462291"
 ---
 # <a name="rendering-data-regions-report-builder-and-ssrs"></a>呈现数据区域（报表生成器和 SSRS）
   除了适用于所有报表项的常规呈现行为外，数据区域还要遵循其他一些分页和呈现行为。 特定于数据区域的呈现规则包括数据区域如何增长，如何呈现特殊的单元（如角单元或标题单元）以及如何呈现从右向左读的数据区域。 本主题将介绍如何呈现数据区域的各个部分。  
@@ -33,7 +34,7 @@ ms.locfileid: "77077015"
  组上的逻辑分页符不会导致外部组标题断开。 例如，假定报表具有国家这一外部组和国家地区这一内部组。 如果在国家地区组的实例之间存在逻辑分页符，则报表的两页上都会显示国家这一外部组。  
   
 #### <a name="repeated-tablix-headers"></a>重复的 Tablix 标题  
- 在“属性”窗格中设置 RepeatWith 属性时，在数据区域内不会改变的项（例如列标题）将会在呈现该部分数据区域的每页上重复显示  。 例如，如果某行数据显示在下一页并且设置了 Repeat With 属性，则列标题也会显示在呈现的页上。  
+ 在“属性”窗格中设置 RepeatWith 属性时，在数据区域内不会改变的项（例如列标题）将会在呈现该部分数据区域的每页上重复显示****。 例如，如果某行数据显示在下一页并且设置了 Repeat With 属性，则列标题也会显示在呈现的页上。  
   
 ### <a name="tablix-corner"></a>Tablix 角  
  左上角称为 Tablix 角。 Tablix 角内可以包含其他报表项，但如果在这种角内插入逻辑分页符，则在呈现 Tablix 数据区域时，将会忽略这些分页符。  

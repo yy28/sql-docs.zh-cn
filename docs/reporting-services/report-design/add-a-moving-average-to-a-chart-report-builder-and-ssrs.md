@@ -1,5 +1,6 @@
 ---
 title: 向图表添加移动平均线（报表生成器）| Microsoft Docs
+description: 了解如何在图表上显示移动平均值公式价格指标，以在报表生成器中确定趋势。
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 166cf9c1-0750-4866-8381-542e4fbfe65a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2cffa994cadf61b9d1d78c2cbe138c736e34b626
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: b2c72f3720b397e20df7daa794e08ef7ca241abf
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488319"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255696"
 ---
 # <a name="add-a-moving-average-to-a-chart-report-builder-and-ssrs"></a>向图表添加移动平均线（报表生成器和 SSRS）
 移动平均值是序列中数据的平均值，它是根据定义的时间段内的数据计算的。 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表中，可以在图表中显示移动平均值来标识明显趋势。  

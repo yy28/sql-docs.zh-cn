@@ -1,5 +1,6 @@
 ---
 title: 添加、移动或删除表、矩阵或列表（报表生成器）| Microsoft Docs
+description: 通过使用“新建表向导”或“新建矩阵向导”在报表生成器中排列表或矩阵数据区域。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4b97c470-cde0-4bb1-a46e-5f5f5553feaa
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 995bfa16d25392e35b9147c021b6bbcaff423a6c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 698ee0d950b701ff864b31a6d786f72beed632f5
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081608"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84011736"
 ---
 # <a name="add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs"></a>添加、移动或删除表、矩阵或列表（报表生成器和 SSRS）
   在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分区报表中，数据区域可显示来自报表数据集的数据。 数据区域包括表、矩阵、列表、图表和仪表。 若要将一个数据区域嵌套到另一个数据区域中，请分别添加每个数据区域，然后将子数据区域拖到父数据区域中。  
@@ -24,7 +25,7 @@ ms.locfileid: "77081608"
   
 1.  在 **“插入”** 选项卡上，单击 **“表”** 或 **“矩阵”** ，然后单击 **“表向导”** 或 **“矩阵向导”** 。  
   
-2.  执行“新建表”或“新建矩阵”向导中的步骤   。  
+2.  执行“新建表”或“新建矩阵”向导中的步骤 。  
   
 3.  在 **“主文件夹”** 选项卡上，单击 **“运行”** ，以查看所呈现的报表。  
   
@@ -44,7 +45,7 @@ ms.locfileid: "77081608"
   
      随即显示一个选择控点和八个大小调整控点。  
   
-     对于嵌套数据区域，在该嵌套数据区域中右键单击，再单击“选择”，然后选择所需的报表项  。 若要验证所选择的报表项，请使用“属性”窗格。 设计图面上所选项的名称显示在“属性”窗格的工具栏中。  
+     对于嵌套数据区域，在该嵌套数据区域中右键单击，再单击“选择”，然后选择所需的报表项。 若要验证所选择的报表项，请使用“属性”窗格。 设计图面上所选项的名称显示在“属性”窗格的工具栏中。  
   
 ## <a name="to-move-a-data-region"></a>移动数据区域  
   
@@ -56,7 +57,7 @@ ms.locfileid: "77081608"
   
 ## <a name="to-delete-a-data-region"></a>删除数据区域  
   
--   选择数据区域，在该数据区域中右键单击，然后单击“删除”  。  
+-   选择数据区域，在该数据区域中右键单击，然后单击“删除”。  
   
 ## <a name="see-also"></a>另请参阅  
  [Tablix 数据区域（报表生成器和 SSRS）](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   

@@ -1,5 +1,6 @@
 ---
 title: 缓存报表（报表管理器）| Microsoft Docs
+description: 了解如何在报表管理器中计划缓存报表的过期时间。 缓存报表可在保持缓存时加快查看速度。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 723d1cb0-c2e7-4763-8690-a6a7a8bbbb90
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2b82d064b379f7c8a43f854204b9fce7337262e4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 67a423a34d0b641e15daf5828748d572e504e329
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574844"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547897"
 ---
 # <a name="cache-a-report-report-manager"></a>如何缓存一个报表（报表管理器）
   提高性能的一种方法是配置报表的缓存属性。 缓存报表后，会在一段时间内保存已呈现报表的副本。 请求该报表的第一个用户必须等到所有处理全部完成后才能查看报表。 以后在缓存期间请求该报表的用户可以立即查看它，因为处理已经完成。  
@@ -44,7 +45,7 @@ ms.locfileid: "65574844"
   
     -   若要将缓存副本配置为按计划过期，请单击“缓存报表的临时副本”。 **按下列计划使报表副本过期。** 单击 **“配置”** ，或选择一个共享计划以控制报表过期时间。  
   
-7.  单击“应用”  。  
+7.  单击“应用”。  
   
 ## <a name="see-also"></a>另请参阅  
  [设置报表处理属性](../../reporting-services/report-server/set-report-processing-properties.md)   

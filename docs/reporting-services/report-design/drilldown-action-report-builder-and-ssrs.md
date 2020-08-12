@@ -1,5 +1,6 @@
 ---
 title: 向下钻取操作（报表生成器）| Microsoft Docs
+description: 通过在文本框上提供加号和减号图标，使进行向下钻取操作的用户能够在报表生成器中以交互方式隐藏和显示项。
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -38,12 +39,12 @@ f1_keywords:
 ms.assetid: 1f8d1ef2-0daf-40c6-9ba7-3b391249bcd4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a0c286663b339171a2536340ca19213879e22091
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0c917e591bf7de47c7d6084d06cf2064904f8b4a
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080470"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462231"
 ---
 # <a name="drilldown-action-report-builder-and-ssrs"></a>深化操作（报表生成器和 SSRS）
 通过在文本框上提供加号和减号图标，使用户能够以交互方式隐藏和显示项。 这称为 *深化* 操作。 对于表或矩阵，可以显示或隐藏静态行和列，或者与组关联的行和列。  

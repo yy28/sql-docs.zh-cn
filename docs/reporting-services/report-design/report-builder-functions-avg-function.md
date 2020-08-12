@@ -1,5 +1,6 @@
 ---
 title: Avg 函数（报表生成器）| Microsoft Docs
+description: 了解分页报表中的 Avg 函数，该函数返回报表生成器中的表达式所指定的全部非 Null 数值的平均值。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f1276c4c-bb44-44c0-a1bf-386a0c340003
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c29c03ea3942f9fd89fd7e148d65a3fe4c8b9f33
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 983d0158582b7ead50ece81eb7f3d67bbe5777ad
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081307"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462391"
 ---
 # <a name="report-builder-functions---avg-function"></a>报表生成器函数 - Avg 函数
 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表中，返回在给定作用域中计算的、由表达式指定的所有非 Null 数值的平均值。  
@@ -28,7 +29,7 @@ ms.locfileid: "77081307"
 Avg(expression, scope, recursive)  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *expression*  
  (**Float**) 要对其执行聚合的表达式。  
   

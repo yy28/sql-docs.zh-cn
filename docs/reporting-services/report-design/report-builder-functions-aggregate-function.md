@@ -1,5 +1,6 @@
 ---
 title: 聚合函数（报表生成器）| Microsoft Docs
+description: 当表达式由数据提供者定义时，聚合函数将返回指定表达式的自定义聚合。
 ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 16ce643f-bbb3-40a5-ba78-7aed73156f3e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0c2590431193fa48bf4467fb30c5abc6cbf5a037
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: aef4411334ee9ca345a5b2f2c8b325c6fd2dae70
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079135"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462411"
 ---
 # <a name="report-builder-functions---aggregate-function"></a>报表生成器函数 - 聚合函数
   按照数据访问接口的定义返回指定表达式的自定义聚合。  
@@ -28,7 +29,7 @@ ms.locfileid: "77079135"
 Aggregate(expression, scope)  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *expression*  
  要对其执行聚合的表达式。 该表达式必须是简单字段引用表达式。  
   
@@ -39,7 +40,7 @@ Aggregate(expression, scope)
  返回类型视数据访问接口而定。 如果数据访问接口不支持此函数或数据不可用，则返回 **Nothing** 。  
   
 ## <a name="remarks"></a>备注  
- **Aggregate** 函数提供一种方式来使用对外部数据源计算的聚合。 是否支持此功能由数据扩展插件决定。 例如，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据处理扩展插件从 MDX 查询中检索平展行集。 结果集中的某些行可能包含在数据源服务器上计算的聚合值。 这些聚合值称为“服务器聚合”  。 若要在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的图形查询设计器中查看服务器聚合，可以使用工具栏上的 **“显示聚合”** 按钮。 有关详细信息，请参阅 [Analysis Services MDX 查询设计器用户界面（报表生成器）](https://msdn.microsoft.com/library/7e288eee-2d37-485e-a6a0-dbba5e041e26)。  
+ **Aggregate** 函数提供一种方式来使用对外部数据源计算的聚合。 是否支持此功能由数据扩展插件决定。 例如，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据处理扩展插件从 MDX 查询中检索平展行集。 结果集中的某些行可能包含在数据源服务器上计算的聚合值。 这些聚合值称为“服务器聚合” 。 若要在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的图形查询设计器中查看服务器聚合，可以使用工具栏上的 **“显示聚合”** 按钮。 有关详细信息，请参阅 [Analysis Services MDX 查询设计器用户界面（报表生成器）](https://msdn.microsoft.com/library/7e288eee-2d37-485e-a6a0-dbba5e041e26)。  
   
  在 Tablix 数据区域的详细信息行中显示聚合和详细信息数据集值的组合时，服务器聚合通常不会包括在内，因为它们不是详细信息数据。 但是，您可能希望显示从该数据集中检索到的所有值，并自定义聚合数据的计算方式和显示方式。  
   

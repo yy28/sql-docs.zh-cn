@@ -1,5 +1,6 @@
 ---
 title: 安全开发 (Reporting Services) | Microsoft Docs
+description: 了解 Reporting Services 使用的代码访问安全性系统，该系统在由管理员定义的严格约束的安全性上下文中运行代码。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 12161a6c-b93b-4312-9d27-0c922561eb9b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7ead476f8aa6d2565c1865a24c2570a68c2b958d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 69d60e4a68deee28c639cc5e100456ef1c9c3552
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193802"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529399"
 ---
 # <a name="secure-development-reporting-services"></a>安全开发 (Reporting Services)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 提供了一个功能强大的安全系统，该系统可以在一个受到严格约束并由管理员定义的安全上下文中运行代码。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 安全系统，该系统也称为“代码访问安全”（或“基于证据的安全”）。 对于代码访问安全性，可以信任用户访问某个资源，但是如果用户执行的代码不受信任，则会拒绝其访问该资源。  

@@ -1,5 +1,6 @@
 ---
 title: 设置报表项（报表生成器）| Microsoft Docs
+description: 了解报表生成器中格式设置如何提高可读性并使报表更具吸引力。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: fdaa402e-4681-4ab8-9b9e-4dbcbb706bac
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2d0433667ba85af242374933a028974d1960416c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 156745486165bd4348e70a81c910aa49fd55a0e1
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079636"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779419"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>设置报表项的格式（报表生成器和 SSRS）
   对报表中的项进行格式设置可以使报表更赏心悦目并增强其可读性。 在报表设计模式下，可以对文本框、文本框中的各项、图像、表达式以及数据进行格式设置。  
@@ -28,9 +29,9 @@ ms.locfileid: "77079636"
   
  C. 包含文本标签和占位符的文本框。  
   
- 通过选择要对其设置格式的项，然后打开该项的“属性”对话框，可以更改格式设置选项。 例如，如果要对整个文本框的内容或文本框中的选定文字设置格式，则只需右键单击该项，再选择“文本框属性”  。 然后，便可应用所需的格式设置样式。  
+ 通过选择要对其设置格式的项，然后打开该项的“属性”对话框，可以更改格式设置选项。 例如，如果要对整个文本框的内容或文本框中的选定文字设置格式，则只需右键单击该项，再选择“文本框属性”****。 然后，便可应用所需的格式设置样式。  
   
- 若要快速开始使用，请参阅[教程：设置文本格式（报表生成器）](../../reporting-services/tutorial-format-text-report-builder.md)。  
+ 若要快速开始，请参阅[教程：设置文本格式（报表生成器）](../../reporting-services/tutorial-format-text-report-builder.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

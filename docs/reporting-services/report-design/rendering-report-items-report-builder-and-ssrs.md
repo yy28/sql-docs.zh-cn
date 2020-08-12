@@ -1,5 +1,6 @@
 ---
 title: 呈现报表项（报表生成器）| Microsoft Docs
+description: 了解报表项（例如数字、大小和位置）如何影响报表生成器中的分页呈现。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 99ebb4dc-41cc-42ac-82dd-a2b0e31155a0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 32bd51cd5dc4419465fac494559dc4d116f796c4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b8256d74c8ed34bee0c94f4b68363c9b87a338a9
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77077018"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462401"
 ---
 # <a name="rendering-report-items-report-builder-and-ssrs"></a>呈现报表项（报表生成器和 SSRS）
   报表项的数量、大小和位置会影响呈现器对表体的分页方式。 下面说明了各种报表项的呈现方式。  

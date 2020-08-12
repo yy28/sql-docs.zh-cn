@@ -1,5 +1,6 @@
 ---
 title: 创建一个递归层次结构组（报表生成器）| Microsoft Docs
+description: 了解如何使用递归层次结构组，通过包含层次结构级别的单个报表数据集，来组织分页报表中的数据。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8b830ba5-4d64-4348-a2b1-76b9338a1462
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2d1a73f72cc267b8a58c70dd4ea958be3560a4fc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9d72c85df464893a4f7e7d6ba1f183a3702aee87
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080546"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681526"
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>创建一个递归层次结构组（报表生成器和 SSRS）
 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表中，递归层次结构组可组织来自包含多个层次结构级别的单个报表数据集的数据。例如，表示组织层次结构中的经理－雇员关系的报告结构。  
@@ -27,13 +28,13 @@ ms.locfileid: "77080546"
   
 1.  在“设计”视图中，添加一个表，然后拖动要显示的数据集字段。 通常，要显示为层次结构的字段位于第一列中。  
   
-2.  右键单击表中的任意位置以选择该表。 “分组”窗格将显示所选表的详细信息组。 在“行组”窗格中，右键单击“详细信息”  ，然后单击“编辑组”  。 此时将打开 **“组属性”** 对话框。  
+2.  右键单击表中的任意位置以选择该表。 “分组”窗格将显示所选表的详细信息组。 在“行组”窗格中，右键单击“详细信息”，然后单击“编辑组”。 此时将打开 **“组属性”** 对话框。  
   
 3.  在 **“组表达式”** 中，单击 **“添加”** 。 此时将在网格中显示一个新行。  
   
 4.  在 **“分组方式”** 列表中，键入或选择要分组的字段。  
   
-5.  单击“高级”。   
+5.  单击“高级”。  
   
 6.  在 **“递归父级”** 列表中，输入或选择要作为分组依据的字段。  
   
@@ -46,15 +47,15 @@ ms.locfileid: "77080546"
 1.  单击包含特定字段的文本框，要向该字段添加缩进级别来显示层次结构格式。 该文本框的属性显示在“属性”窗格中。  
   
     > [!NOTE]  
-    >  如果看不到“属性”窗格，请单击“视图”选项卡上的“属性”。    
+    >  如果看不到“属性”窗格，请单击“视图”选项卡上的“属性”。   
   
-2.  在“属性”窗格中，展开“填充”节点，再单击“左”，然后从下拉列表中选择“\<表达式…>”。  
+2.  在“属性”窗格中，展开“填充”节点，再单击“左”，然后从下拉列表中选择 \<Expression...>  。  
   
 3.  在“表达式”窗格中，键入以下表达式：  
   
      `=CStr(2 + (Level()*10)) + "pt"`  
   
-     “填充”属性需要  nnyy 格式的字符串，其中  nn 是一个数字，而  yy 是度量单位。 该示例表达式将生成一个字符串，该字符串使用 **Level** 函数根据递归级别增加填充的大小。 例如，级别为 1 的行会产生 (2 + (1\*10))=12pt 的填充，而级别为 3 的行会产生 (2 + (3\*10))=32pt 的填充。 有关 **Level** 函数的详细信息，请参阅 [Level](../../reporting-services/report-design/report-builder-functions-level-function.md)。  
+     “填充”属性需要 nnyy 格式的字符串，其中 nn 是一个数字，而 yy 是度量单位。 该示例表达式将生成一个字符串，该字符串使用 **Level** 函数根据递归级别增加填充的大小。 例如，级别为 1 的行会产生 (2 + (1\*10))=12pt 的填充，而级别为 3 的行会产生 (2 + (3\*10))=32pt 的填充。 有关 **Level** 函数的详细信息，请参阅 [Level](../../reporting-services/report-design/report-builder-functions-level-function.md)。  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

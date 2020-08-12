@@ -1,5 +1,6 @@
 ---
 title: 条形图（报表生成器）| Microsoft Docs
+description: 使用条形图水平地显示数据，以在报表生成器中通过有限的开始日期和结束日期来表示数据。
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: db0cf6a0-2114-41d0-ab27-0319e52dee76
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 31749e321ac89d02a046a1bd6d67139bc476c110
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cd0fa20a515850d8ab097ef8e868946d16a0439b
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081485"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255520"
 ---
 # <a name="bar-charts-report-builder-and-ssrs"></a>条形图（报表生成器和 SSRS）
   条形图将序列显示为若干组水平图条。 平面条形图与柱形图密切相关，柱形图将序列显示为多组垂直图条，而范围条形图将序列显示为多组具有不同起点和终点的水平图条。  

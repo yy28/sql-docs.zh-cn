@@ -1,5 +1,6 @@
 ---
 title: 设置报表或文本框的区域设置 (Reporting Services) | Microsoft Docs
+description: 在报表生成器中使用文本框的“语言”属性来提供格式的区域设置，显示因语言和区域而异的数据。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: df115b01-184b-47f0-b5ec-0ad965ff9bee
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c5f31ffe9fc3158cf0c6b1c6ef8a9ba813417e76
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4105c10fba6774275471a1157677badf88c11f5f
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65576764"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779090"
 ---
 # <a name="set-the-locale-for-a-report-or-text-box-reporting-services"></a>设置报表或文本框的区域设置 (Reporting Services)
   报表或文本框的 **“语言”** 属性包含区域设置，该区域设置确定因语言和区域而异的默认报表数据显示格式，例如日期、货币或数值。 文本框的 **“语言”** 属性会覆盖报表的 **“语言”** 属性。 如果不为 **“语言”** 指定值，则 Reporting Services 将使用报表服务器所用操作系统的区域设置来发布报表，或使用报表创作计算机的区域设置来预览报表。  

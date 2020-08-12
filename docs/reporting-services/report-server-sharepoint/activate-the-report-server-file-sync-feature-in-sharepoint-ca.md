@@ -1,5 +1,6 @@
 ---
 title: 在 SharePoint 中激活报表服务器文件同步功能 | Microsoft Docs
+description: Reporting Services 的报表服务器文件同步功能利用 SharePoint 事件处理程序将报表服务器目录与文档库中的项进行同步。
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3a84c906df921bf4702d47e57400b7ad7b9e127f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f5a0b7b6e50e07573c57882339e5fc3c7dd3cb39
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65579447"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83767401"
 ---
 # <a name="activate-the-report-server-file-sync-feature-in-sharepoint"></a>在 SharePoint 中激活报表服务器文件同步功能
 
@@ -28,7 +29,7 @@ ms.locfileid: "65579447"
   
  可对于每个站点（但不在网站集级别）手动激活和停用此功能。  
   
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
  必须安装用于 SharePoint 的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序。 如果未安装该外接程序，则文件同步功能在站点功能列表上将不可见。  
   
@@ -42,10 +43,10 @@ ms.locfileid: "65579447"
   
 3.  在列表中找到 **“报表服务器文件同步”** 。  
   
-4.  单击“激活”  。  
+4.  单击“激活”。  
 
 > [!NOTE]
-> 若要停用报表服务器文件同步功能，可以使用相同的过程，但单击“停用”  。
+> 若要停用报表服务器文件同步功能，可以使用相同的过程，但单击“停用”。
 
 ## <a name="see-also"></a>另请参阅
 

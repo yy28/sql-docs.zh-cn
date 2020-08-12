@@ -1,5 +1,6 @@
 ---
 title: 组表达式示例（报表生成器）| Microsoft Docs
+description: 了解如何按单个字段对数据进行分组，或在报表生成器中创建更复杂的表达式来标识要对其进行分组的数据。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 34cd0249-fc74-4cf2-ba11-7b072992bfd2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0e6378f523b74483ed6f1a459f63aafbfa1fc5ee
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ead7e4c893c667021770df4977244bb509c0d79c
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082096"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012415"
 ---
 # <a name="group-expression-examples-report-builder-and-ssrs"></a>组表达式示例（报表生成器和 SSRS）
   在数据区域中，可以按单个字段对数据进行分组，也可以创建标识要对其进行分组的数据的更复杂表达式。 复杂表达式包含对多个字段或参数、条件语句或自定义代码的引用。 定义数据区域组时，可以将这些表达式添加到 **“组”** 属性中。 有关详细信息，请参阅 [在数据区域中添加或删除组（报表生成器和 SSRS）](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)。  

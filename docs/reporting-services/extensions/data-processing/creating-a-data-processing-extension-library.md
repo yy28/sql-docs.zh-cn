@@ -1,5 +1,6 @@
 ---
 title: 创建数据处理扩展插件库 | Microsoft Docs
+description: 了解如何创建 Reporting Services 数据处理扩展插件。 查看示例代码，并了解需要满足的命名空间和库文件的要求。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 82f4b71b-dd39-467d-8d8c-6771eb2b12de
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7e3c3f4a30b828b889ebfe61617460ff58962fdc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 43dbf019b4721c32f479b5862417e90f8e97f2f1
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63194080"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529143"
 ---
 # <a name="creating-a-data-processing-extension-library"></a>创建数据处理扩展插件库
   您创建的每个 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 数据处理扩展插件都应分配到唯一的命名空间并被内置到某个库或程序集文件中。 命名空间的确切名称并不重要，但命名空间必须是唯一的且不能与任何其他扩展插件共享。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 可以将命名空间 <xref:Microsoft.ReportingServices.DataProcessing> 用于 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 提供的数据处理扩展插件。 您应该为公司的数据处理扩展插件创建您自己的唯一命名空间。  
@@ -49,7 +50,7 @@ namespace CompanyName.ExtensionName
 csc /t:library /out:CompanyName.ExtensionName.dll *.cs /r:System.dll /r:Microsoft.ReportingServices.Interfaces.dll  
 ```  
   
- 下面的代码示例展示了可用于扩展名为 .vb 的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 文件的命令。  
+ 以下代码示例说明可用于扩展名为 .vb 的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 文件的命令。  
   
 ```vb  
 vbc /t:library /out:CompanyName.ExtensionName.dll *.vb /r:System.dll /r:Microsoft.ReportingServices.Interfaces.dll  

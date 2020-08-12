@@ -1,5 +1,6 @@
 ---
 title: 指定轴间隔（报表生成器）| Microsoft Docs
+description: 了解如何设置报表生成器中的轴间隔，以更改图表中类别 (x) 轴上的标签数目和刻度线数目。
 ms.date: 09/02/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ae46712d-a5bf-44c0-9929-e30ccc1e7e33
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7467cc02ec7351edb879da18c20e0cf2af4bb099
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 2b5b3ed27226eda1c2db837df0c16079aeef3262
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487703"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881157"
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>指定轴间隔（报表生成器和 SSRS）
 了解如何设置 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中的轴间隔，以更改图表中类别 (x) 轴上的标签数目和刻度线数目。
@@ -37,11 +38,11 @@ ms.locfileid: "81487703"
 
 ![report-builder-column-chart-preview-x-axis-interval-auto](../../reporting-services/report-design/media/report-builder-column-chart-preview-x-axis-interval-auto.png)
   
-1.  右键单击类别轴，然后单击“水平轴属性”  。   
+1.  右键单击类别轴，然后单击“水平轴属性”。   
 
     ![report-builder-column-chart-x-axis-labels](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-labels.png)
   
-2.  在“水平轴属性”  对话框 >“轴选项”  选项卡中，将“间隔”  设置为“1”  ，以显示每个类别组标签。 若要在 x 轴上显示所有其他类别组标签，请键入 **2**。 
+2.  在“水平轴属性”对话框 >“轴选项”选项卡中，将“间隔”设置为“1”，以显示每个类别组标签。 若要在 x 轴上显示所有其他类别组标签，请键入 **2**。 
 
      ![report-builder-column-chart-x-axis-interval-one](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-interval-one.png)
   
@@ -60,7 +61,7 @@ ms.locfileid: "81487703"
 
 1.  在报表设计视图中，单击图表，然后选择水平轴标签。
 
-3. 在“属性”窗格中，将 LabelInterval 设置为“1”  。
+3. 在“属性”窗格中，将 LabelInterval 设置为“1”。
 
     ![report-builder-column-chart-set-label-interval](../../reporting-services/media/report-builder-column-chart-set-label-interval.png)
 
@@ -78,7 +79,7 @@ ms.locfileid: "81487703"
   
 1.  右键单击要更改的图表轴，然后单击 **“轴属性”** 。 
   
-2.  在“水平轴属性”  对话框 >“轴选项”  选项卡中，将“间隔”  设置为“自动”  。该图表将显示适合该轴的最佳类别标签数。  
+2.  在“水平轴属性”对话框 >“轴选项”选项卡中，将“间隔”设置为“自动”。该图表将显示适合该轴的最佳类别标签数。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

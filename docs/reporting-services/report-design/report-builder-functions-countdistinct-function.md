@@ -1,5 +1,6 @@
 ---
 title: CountDistinct 函数（报表生成器）| Microsoft Docs
+description: 获取在给定作用域上下文中由表达式指定的所有非重复的非 Null 值的计数。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 902c251e-e1e8-41d2-ac20-5bb6138ac410
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ff5931ea437a2b91bf2232472fbf5780153f38cb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f5689e3b1bf4330c8ac0e18d974a48672223fd2a
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081281"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689745"
 ---
 # <a name="report-builder-functions---countdistinct-function"></a>报表生成器函数 - CountDistinct 函数
   返回在给定作用域上下文中计算的，由表达式指定的所有非重复的非 Null 值计数。  
@@ -28,7 +29,7 @@ ms.locfileid: "77081281"
 CountDistinct(expression, scope, recursive)  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *expression*  
  (**Variant**) 要对其执行聚合的表达式。  
   

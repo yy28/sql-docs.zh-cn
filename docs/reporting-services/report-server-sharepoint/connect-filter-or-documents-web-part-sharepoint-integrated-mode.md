@@ -1,5 +1,6 @@
 ---
 title: 将筛选器或文档 Web 部件与 Reporting Services 报表查看器 Web 部件连接 | Microsoft Docs
+description: 对于 SharePoint 产品，学习创建一个包含筛选器 Web 部件或文档 Web 部件和报表查看器 Web 部件的仪表板或 Web 部件页。
 ms.date: 11/26/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -7,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1f513b93852863d7c3c03ac60289d4ba2bdb4b7b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f0e28fe003407c2f60792bcb9df09dc5d3cc6db0
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77256708"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83767079"
 ---
 # <a name="connect-filter-or-documents-web-part-with-a-reporting-services-report-viewer-web-part"></a>将筛选器或文档 Web 部件与 Reporting Services 报表查看器 Web 部件连接
 
@@ -35,19 +36,19 @@ ms.locfileid: "77256708"
   
 2.  在 **“站点操作”** 菜单上，单击 **“编辑页面”** 。  
   
-3.  单击“添加 Web 部件”  。  
+3.  单击“添加 Web 部件”。  
   
-4.  在“所有 Web 部件”  的“杂项”  类别中，选择“SQL Server Reporting Services 报表查看器”  。  
+4.  在“所有 Web 部件”的“杂项”类别中，选择“SQL Server Reporting Services 报表查看器”。  
   
-5.  单击“添加”  。 Web 部件将添加到区域的顶部。  
+5.  单击“添加”。 Web 部件将添加到区域的顶部。  
   
-6.  在同一 Web 部件页或仪表板中的另一区域上，单击“添加 Web 部件”  。  
+6.  在同一 Web 部件页或仪表板中的另一区域上，单击“添加 Web 部件”。  
   
-7.  在“所有 Web 部件”  的“筛选器”  部分，选择一个 Web 部件。  
+7.  在“所有 Web 部件”的“筛选器”部分，选择一个 Web 部件。  
   
-8.  单击“添加”  。 Web 部件将添加到区域的顶部。  
+8.  单击“添加”。 Web 部件将添加到区域的顶部。  
   
-9. 在包含 Web 部件的区域中，单击 Web 部件的“编辑”  菜单，依次指向“连接”  、“发送筛选值到”  ，然后选择“报表查看器”   - 报表名称  。  
+9. 在包含 Web 部件的区域中，单击 Web 部件的“编辑”**** 菜单，依次指向“连接”****、“发送筛选值到”****，然后选择“报表查看器”**** - 报表名称**。  
   
 10. 签入更改并保存此页。  
   
@@ -57,21 +58,21 @@ ms.locfileid: "77256708"
   
 2.  在 **“站点操作”** 菜单上，单击 **“编辑页面”** 。  
   
-3.  单击“添加 Web 部件”  。  
+3.  单击“添加 Web 部件”。  
   
-4.  在“所有 Web 部件”  的“列表和库”  部分中，选择“文档”  。  
+4.  在“所有 Web 部件”的“列表和库”部分中，选择“文档”。  
   
-5.  单击“添加”  。 Web 部件将添加到区域的顶部。  
+5.  单击“添加”。 Web 部件将添加到区域的顶部。  
   
 6.  在工具窗格的底部，单击 **“应用”** ，然后单击 **“确定”** 关闭窗格。  
   
-7.  在同一 Web 部件页或仪表板中的另一区域上，单击“添加 Web 部件”  。  
+7.  在同一 Web 部件页或仪表板中的另一区域上，单击“添加 Web 部件”。  
   
-8.  在“所有 Web 部件”  的“杂项”  类别中，选择“SQL Server Reporting Services 报表查看器”  。  
+8.  在“所有 Web 部件”的“杂项”类别中，选择“SQL Server Reporting Services 报表查看器”。  
   
-9. 单击“添加”  。 Web 部件将添加到区域的顶部。  
+9. 单击“添加”。 Web 部件将添加到区域的顶部。  
   
-10. 在包含 Web 部件的区域中，单击 Web 部件的“编辑”  菜单，依次指向“连接”  、“获取报表定义于”  ，然后选择“文档”  。  
+10. 在包含 Web 部件的区域中，单击 Web 部件的“编辑”菜单，依次指向“连接”、“获取报表定义于”，然后选择“文档”。  
   
 11. 签入更改并保存此页。  
   

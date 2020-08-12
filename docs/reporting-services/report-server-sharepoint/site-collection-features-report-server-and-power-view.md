@@ -1,5 +1,6 @@
 ---
 title: 在 SharePoint 中激活报表服务器和 Power View 集成功能 | Microsoft Docs
+description: 适用于 SharePoint 的 SQL Server Reporting Services 加载项功能通常自动激活。 如需手动激活，请使用这些说明。
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: dce33b0f267dadd8454378fccb72112970553a96
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f96e73135889e94cda9e84a39c8f03b59c39973f
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580507"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764789"
 ---
 # <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>在 SharePoint 中激活报表服务器和 Power View 集成功能
 
@@ -26,7 +27,7 @@ ms.locfileid: "65580507"
 > [!NOTE]
 > 自 SQL Server 2016 之后，不再提供 Reporting Services 与 SharePoint 的集成这一功能。
 
- 如果在安装 SharePoint 产品后安装了用于 SharePoint 2010 产品的 Reporting Services 加载项，则仅对根网站集激活报表服务器集成功能和 Power View 集成功能。 对于其他网站集，你需要手动激活这些功能。 例如，如果有 https://[我的服务器名称]/sites/[网站集名称] 的网站集，需要手动激活 Reporting Services 网站集功能  。  
+ 如果在安装 SharePoint 产品后安装了用于 SharePoint 2010 产品的 Reporting Services 加载项，则仅对根网站集激活报表服务器集成功能和 Power View 集成功能。 对于其他网站集，你需要手动激活这些功能。 例如，如果有 https://[我的服务器名称]/sites/[网站集名称] 的网站集，需要手动激活 Reporting Services 网站集功能****。  
   
  没有根网站集时，Reporting Services 加载项将记录一条类似于以下内容的消息。  
   
@@ -46,7 +47,7 @@ ms.locfileid: "65580507"
   
 5.  在列表中找到 **“报表服务器集成功能”** 或 **“Power View 集成功能”** 。  
   
-6.  单击“激活”  。  
+6.  单击“激活”。  
   
  若要停用这些功能，您可以使用相同的过程，但单击 **“停用”** 而非 **“激活”** 。  
   
@@ -62,7 +63,7 @@ ms.locfileid: "65580507"
   
 5.  在列表中找到 **“报表服务器管理中心功能”** 。  
   
-6.  单击“激活”  。  
+6.  单击“激活”。  
   
  若要停用这些功能，您可以使用相同的过程，但单击 **“停用”** 而非 **“激活”** 。  
   

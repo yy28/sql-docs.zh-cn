@@ -1,5 +1,6 @@
 ---
 title: 与组一起显示组头和组尾（报表生成器）| Microsoft Docs
+description: 了解如何设置属性，用于呈现包含了与 Tablix 数据区域中某个组相关联的动态行的页眉和页脚。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8eb7d648-4df2-491a-96cb-99e55629d617
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ecc2cb9b0b2e425627f73ae87aa3a9e8f5a289b1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 54afbcc4f95fdd0c626b6559437e08c454cd2dd4
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080485"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689256"
 ---
 # <a name="display-headers-and-footers-with-a-group-report-builder-and-ssrs"></a>与组一起显示组头和组尾（报表生成器和 SSRS）
   您可以帮助控制是否在显示与 Tablix 数据区域中某个组相关联的动态行的同时显示静态行，如组头或组尾。  
@@ -25,7 +26,7 @@ ms.locfileid: "77080485"
  可以在“分组”窗格中选择 Tablix 成员，并在“属性”窗格中设置 **KeepWithGroup**、 **KeepTogether**和 **RepeatOnNewPage** 属性。 使用 **KeepWithGroup** 可帮助将组头和组尾与组显示在相同页上。 使用 **KeepTogether** 可帮助将静态成员与组的行或列显示在一起。 使用 **RepeatOnNewPage** 可在以下页上重复显示组头和组尾：其中的每一页至少显示 **KeepWithGroup** 值所指定的行组成员的一个完整实例。 列组成员不支持**RepeatOnNewPage** 。  
   
 > [!NOTE]  
->  KeepWithGroup、KeepTogether和 RepeatOnNewPage 是可通过使用“分组”窗格的“高级模式”设置的组成员属性     。 有关详细信息，请参阅[“分组”窗格（报表生成器）](../../reporting-services/report-design/grouping-pane-report-builder.md)。  
+>  KeepWithGroup、KeepTogether和 RepeatOnNewPage 是可通过使用“分组”窗格的“高级模式”设置的组成员属性   。 有关详细信息，请参阅[“分组”窗格（报表生成器）](../../reporting-services/report-design/grouping-pane-report-builder.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

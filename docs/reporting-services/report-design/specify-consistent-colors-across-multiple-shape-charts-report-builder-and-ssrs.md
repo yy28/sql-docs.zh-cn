@@ -1,5 +1,6 @@
 ---
 title: 对多个形状图指定一致的颜色（报表生成器和 SSRS）| Microsoft Docs
+description: 了解选择形状图的颜色如何导致了将调色板中的每种颜色映射到数据集中的数据点。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: d52f68e9-2ba7-4bff-9053-4089e5164ab4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d9e7b846d17fd6ad86edc45ff7dd4251c098ae1a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d0c02b81c5ce7ea5363cf119c3a3618efd78f2aa
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65578459"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83688968"
 ---
 # <a name="specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs"></a>对多个形状图指定一致的颜色（报表生成器和 SSRS）
   在分页报表的非形状图中， [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 将根据图表中各序列的索引从调色板选择新颜色。 例如，图表中的第一个序列将映射到调色板中的第一个颜色。 但是，对于形状图，该行为则不相同。 在形状图中，调色板中的每个颜色都映射到数据集中的数据点。 例如，数据点 1 映射到调色板中的第一个颜色，数据点 2 映射调色板中的第二个颜色，依此类推。  
@@ -31,13 +32,13 @@ ms.locfileid: "65578459"
   
 1.  单击图表以显示“图表数据”窗格。  
   
-2.  在“类别组”区域中右键单击某一类别，然后单击“类别组属性”   。  
+2.  在“类别组”区域中右键单击某一类别，然后单击“类别组属性” 。  
   
-3.  在“常规”选项卡上的 **“同步其中的组”** 框中，单击要同步其颜色的类别的名称，然后单击 **“确定”** 。  
+3.  在“常规”选项卡上的 **“同步其中的组”** 框中，单击要同步其颜色的类别的名称，然后单击 **“确定”**。  
   
 ## <a name="to-specify-consistent-colors-across-multiple-shape-charts"></a>跨多个形状图指定一致的颜色  
   
-1.  右键单击表体外部区域，然后选择“报表属性”  。  
+1.  右键单击表体外部区域，然后选择“报表属性”。  
   
 2.  在 **“代码”** 中，将以下代码键入到文本框中。  
   
@@ -61,9 +62,9 @@ ms.locfileid: "65578459"
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-4.  右键单击形状图，然后选择“序列属性”  。  
+4.  右键单击形状图，然后选择“序列属性”。  
   
-5.  在“填充”中，单击“表达式”(fx) 按钮可以编辑“颜色”属性的表达式     。  
+5.  在“填充”中，单击“表达式”(fx) 按钮可以编辑“颜色”属性的表达式 。  
   
 6.  键入以下表达式，其中“MyCategoryField”是在 **“类别组”** 区域中显示的字段：  
   

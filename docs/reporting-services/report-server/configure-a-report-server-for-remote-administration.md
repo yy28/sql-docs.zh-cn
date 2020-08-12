@@ -1,5 +1,6 @@
 ---
 title: 配置报表服务器以进行远程管理 | Microsoft Docs
+description: 了解如何通过使用配置工具或者编写自定义代码为本地或远程配置进行 Reporting Services Report Server 实例配置。
 ms.date: 09/14/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8c7f145f-3ac2-4203-8cd6-2a4694395d09
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 48e8662f3547e9e483d67cc4af83e67d355ba664
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4edd8925bffec751d00379c9a9e78cc6d06a62c8
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580417"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545582"
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>配置报表服务器以进行远程管理
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，您可以通过本地或远程方式配置报表服务器实例。 若要配置远程报表服务器实例，可以使用 Reporting Services 配置工具或编写使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows Management Instrumentation (WMI) 提供程序的自定义代码。 Reporting Services 配置工具为 WMI 提供程序提供了一个图形界面，这样您便可以直接配置报表服务器，而不必编写代码。 启动该工具时，可以指定要连接的远程服务器。  
@@ -32,7 +33,7 @@ ms.locfileid: "65580417"
   
  `"The RPC server is unavailable. (Exception from HRESULT: 0x800706BA)".`  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要修改防火墙设置，必须从本地登录，并且您必须是本地 Administrators 组的成员。 不能通过远程连接来修改远程计算机的 Windows 防火墙设置。  
   
  如果要为非管理员用户启用远程管理，则必须为该帐户授予对分布式组件对象模型 (DCOM) 的远程激活权限。 本主题提供了有关配置服务器以供非管理员访问的说明。  
@@ -60,7 +61,7 @@ ms.locfileid: "65580417"
   
 1.  单击 **“开始”** ，依次指向 **“程序”** 、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、 **“配置工具”** ，然后单击 **“SQL Server 配置管理器”** 。  
   
-2.  在左窗格中，展开“SQL Server 网络配置”，然后针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例单击“协议”。  
+2.  在左窗格中，展开“SQL Server 网络配置”，然后针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例单击“协议” 。  
   
 3.  在详细信息窗格中，启用“TCP/IP”和“命名管道”协议，然后重启 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。  
   
@@ -108,7 +109,7 @@ ms.locfileid: "65580417"
   
 9. 键入您的用户帐户名，然后单击 **“确定”** 。  
   
-10. 在“\<用户或组> 权限”的“允许”列中，选择“远程启动”和“远程激活”，然后单击“确定”。  
+10. 在“\<User or Group> 权限”的“允许”列中，选择“远程启动”和“远程激活”，然后单击“确定”    。  
   
 ### <a name="to-set-permissions-on-the-report-server-wmi-namespace-for-non-administrators"></a>为非管理员设置报表服务器 WMI 命名空间的权限  
   
@@ -116,7 +117,7 @@ ms.locfileid: "65580417"
   
 2.  打开“服务和应用程序”文件夹。  
   
-3.  右键单击“WMI 控件”，然后选择“属性”   。  
+3.  右键单击“WMI 控件”，然后选择“属性” 。  
   
 4.  单击 **“安全性”** 。  
   

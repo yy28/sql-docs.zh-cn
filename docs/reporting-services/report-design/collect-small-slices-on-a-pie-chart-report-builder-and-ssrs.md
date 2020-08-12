@@ -1,5 +1,6 @@
 ---
 title: 收集饼图上的小切片（报表生成器） | Microsoft Docs
+description: 了解如何将饼图中的许多小切片收集到报表生成器分页报表中的单个切片中。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 21c2b8cb-b9ca-4bc0-bf49-50ba432562f6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5c318bebf807846aed85f49770498c57a27ef4d3
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 5a4dc5671d5a23448f3549e383b26097026cc021
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487976"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462061"
 ---
 # <a name="collect-small-slices-on-a-pie-chart-report-builder-and-ssrs"></a>收集饼图上的小切片（报表生成器和 SSRS）
 饼图切片过多可能显得混乱。 了解如何将饼图中的许多小切片收集到 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中的单个切片中。
@@ -50,7 +51,7 @@ ms.locfileid: "81487976"
          将 CollectedThreshold 属性设置为 **10**。  
   
         > [!NOTE]  
-        >  如果将 CollectedStyle 设置为 SingleSlice，将 CollectedThreshold 设置为大于 100 的值，并将 CollectedThresholdUsePercent 设置为 True，则图表会引发异常，因为它无法计算百分比    。 要解决此问题，请将 CollectedThreshold 设置为小于 100 的值  。  
+        >  如果将 CollectedStyle 设置为 SingleSlice，将 CollectedThreshold 设置为大于 100 的值，并将 CollectedThresholdUsePercent 设置为 True，则图表会引发异常，因为它无法计算百分比************。 要解决此问题，请将 CollectedThreshold 设置为小于 100 的值。  
   
     -   **按数据值。** 例如，若要将饼图上少于 5000 的切片收集到一个切片：  
   

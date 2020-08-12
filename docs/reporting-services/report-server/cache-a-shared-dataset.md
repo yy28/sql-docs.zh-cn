@@ -1,5 +1,6 @@
 ---
 title: 缓存共享数据集 | Microsoft Docs
+description: 了解如何在报表管理器中计划缓存共享数据集的过期时间。 缓存共享数据集可以改进性能。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c2d8c81a-da1e-4a8a-9845-fff9a0903d24
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7e98e5ffd8970806e2ed92e53c8e82da21387938
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 13b2f1d7af594346a6c9f0ce46a0c412541fcc65
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574771"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547909"
 ---
 # <a name="cache-a-shared-dataset"></a>如何缓存一个共享数据集
   提高性能的一种方法是配置共享数据集的缓存属性。 缓存共享数据集后，会在指定的一段时间内保存查询结果。 第一个向使用该共享数据集的报表发出请求的用户必须等到查询结果和所有处理全部完成后才能查看报表。 以后在缓存期间请求该报表的用户将会体验到性能改进，因为查询和处理已经完成。 还可以指定运行查询的缓存刷新计划，并在指定的缓存过期时间之前一直缓存查询结果。  
@@ -39,7 +40,7 @@ ms.locfileid: "65574771"
   
 6.  选择缓存在 30 分钟后过期的选项。 还可以选择缓存按指定的计划过期。  
   
-7.  单击“应用”  。  
+7.  单击“应用”。  
   
 ## <a name="see-also"></a>另请参阅  
  [管理共享数据集](../../reporting-services/report-data/manage-shared-datasets.md)  

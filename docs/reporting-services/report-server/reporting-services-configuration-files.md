@@ -1,5 +1,6 @@
 ---
 title: Reporting Services 配置文件 | Microsoft Docs
+description: 了解 Reporting Services 在其中存储组件信息的配置文件。 可能需要修改文件以添加或配置高级设置。
 ms.date: 05/30/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 21e5c32f-ad67-4917-b55a-8e21bd64f5a6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b0bd7ad95fcda039c6fd5a9299f4339d35b8a619
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c9a56dd5cb8e26c57f25f458eff96b467df16cf6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67564123"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541459"
 ---
 # <a name="reporting-services-configuration-files"></a>Reporting Services 配置文件
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将组件信息存储在注册表和配置文件中，其中配置文件会在安装过程中复制到文件系统。 配置文件包含仅供内部使用的值和用户定义的值的组合。 可以通过安装程序、配置工具、命令行实用工具以及手动编辑配置文件的方式来指定用户定义的值。  
@@ -47,14 +48,14 @@ C:\Program Files\Microsoft SQL Server Reporting Services\SSRS
   
 |存储位置：|说明|位置|  
 |----------------|-----------------|--------------|  
-|RSReportServer.config|存储报表服务器服务的功能区的配置设置：报表管理器或 Web 门户、报表服务器 Web 服务和后台处理。 有关每项设置的详细信息，请参阅 [RsReportServer.config 配置文件](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)。|\<Installation directory> \Reporting Services \ReportServer|  
+|RSReportServer.config|存储报表服务器服务的功能区域的配置设置：报表管理器或 Web 门户、报表服务器 Web 服务和后台处理。 有关每项设置的详细信息，请参阅 [RsReportServer.config 配置文件](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)。|\<Installation directory> \Reporting Services \ReportServer|  
 |RSSrvPolicy.config|存储服务器扩展插件的代码访问安全策略。 有关此文件的详细信息，请参阅 [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md)。|\<Installation directory> \Reporting Services \ReportServer|  
 |RSMgrPolicy.config|存储 Web 门户的代码访问安全策略。 有关此文件的详细信息，请参阅 [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md)。|\<Installation directory> \Reporting Services \ReportManager|  
 |报表服务器 Web 服务的 Web.config|仅包括 ASP.NET 所需的那些设置。|\<Installation directory> \Reporting Services \ReportServer|  
 |报表管理器的 Web.config|只包括 ASP.NET 所需的设置（如果适用于 SSRS 版本的话）。|\<Installation directory> \Reporting Services \ReportManager|  
 |ReportingServicesService.exe.config|存储用于指定报表服务器服务的跟踪级别和日志记录选项的配置设置。 有关此文件中元素的详细信息，请参阅 [ReportingServicesService Configuration File](../../reporting-services/report-server/reportingservicesservice-configuration-file.md)。|\<Installation directory> \Reporting Services \ReportServer \Bin|  
 |注册表设置|存储用于卸载 Reporting Services 的配置状态和其他设置。 如果要解决安装或配置问题，则可以查看这些设置以获取有关如何配置报表服务器的信息。<br /><br /> 不要直接修改这些设置，因为此操作会使安装无效。|HKEY_LOCAL_MACHINE \SOFTWARE \Microsoft \Microsoft SQL Server \\<InstanceID\> \Setup<br /><br /> **- 和 -**<br /><br /> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\Services\ReportServer|  
-|RSReportDesigner.config|存储报表设计器的配置设置。 有关详细信息，请参阅 [RSReportDesigner Configuration File](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)。|\<drive>:\Program Files \Microsoft Visual Studio 10 \Common7 \IDE \PrivateAssemblies。|  
+|RSReportDesigner.config|存储报表设计器的配置设置。 有关详细信息，请参阅 [RSReportDesigner Configuration File](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)。|\<drive>:\Program Files \Microsoft Visual Studio 10 \Common7 \IDE \PrivateAssemblies.|  
 |RSPreviewPolicy.config|存储报表预览期间使用的服务器扩展插件的代码访问安全策略。 有关此文件的详细信息，请参阅 [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md)。|C:\Program Files\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssembliesr|  
   
 ##  <a name="summary-of-configuration-files-sharepoint-mode"></a><a name="bkmk_config_file_Summary_sharepoint_mode"></a> 配置文件摘要（SharePoint 模式）  
@@ -69,11 +70,11 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
 |存储位置：|说明|位置|  
 |----------------|-----------------|--------------|  
-|RSReportServer.config|存储报表服务器服务的功能区的配置设置：报表管理器或 Web 门户、报表服务器 Web 服务和后台处理。 有关每项设置的详细信息，请参阅 [RsReportServer.config 配置文件](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)。|\<Installation directory> \Reporting Services \ReportServer|  
+|RSReportServer.config|存储报表服务器服务的功能区域的配置设置：报表管理器或 Web 门户、报表服务器 Web 服务和后台处理。 有关每项设置的详细信息，请参阅 [RsReportServer.config 配置文件](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)。|\<Installation directory> \Reporting Services \ReportServer|  
 |RSSrvPolicy.config|存储服务器扩展插件的代码访问安全策略。 有关此文件的详细信息，请参阅 [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md)。|\<Installation directory> \Reporting Services \ReportServer|  
 |报表服务器 Web 服务的 Web.config|只包括 ASP.NET 所需的设置（如果适用于 SSRS 版本的话）。|\<Installation directory> \Reporting Services \ReportServer|  
 |注册表设置|存储用于卸载 Reporting Services 的配置状态和其他设置。 另外还存储每个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序的信息。<br /><br /> 不要直接修改这些设置，因为此操作会使安装无效。|HKEY_LOCAL_MACHINE \SOFTWARE \Microsoft \Microsoft SQL Server \\<InstanceID\> \Setup<br /><br /> 示例实例 ID：MSSQL13.MSSQLSERVER<br /><br /> **- 和 -**<br /><br /> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\Reporting Services\Service Applications|  
-|RSReportDesigner.config|存储报表设计器的配置设置。 有关详细信息，请参阅 [RSReportDesigner Configuration File](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)。|\<drive>:\Program Files \Microsoft Visual Studio 10 \Common7 \IDE \PrivateAssemblies。|  
+|RSReportDesigner.config|存储报表设计器的配置设置。 有关详细信息，请参阅 [RSReportDesigner Configuration File](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)。|\<drive>:\Program Files \Microsoft Visual Studio 10 \Common7 \IDE \PrivateAssemblies.|  
   
 ## <a name="see-also"></a>另请参阅  
  [Reporting Services 报表服务器（本机模式）](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   

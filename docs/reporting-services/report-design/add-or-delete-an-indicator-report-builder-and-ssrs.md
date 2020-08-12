@@ -1,5 +1,6 @@
 ---
 title: 添加或删除指示器（报表生成器）| Microsoft Docs
+description: 了解如何在分页报表中添加或删除指示器以在报表生成器中传达单个数据值的状态。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: a8b1aac1-53ef-47a4-afc0-8fa866c6c480
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 08dd396fc68bae04d973d6b96f67466006642120
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 154faecf24a142578fc236a2cae6330ea7d89a76
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081570"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881258"
 ---
 # <a name="add-or-delete-an-indicator-report-builder-and-ssrs"></a>添加或删除指示器（报表生成器和 SSRS）
-  在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，指示器是以直观的形式提供单个数据值的状态的最小化仪表。 有关它们的详细信息，请参阅 [指示器（报表生成器和 SSRS）](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)。  
+  在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，指示器指的是以直观的形式提供单个数据值的状态的最小仪表。 有关它们的详细信息，请参阅 [指示器（报表生成器和 SSRS）](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)。  
   
  指示器通常放在表或矩阵的单元中，但您也可以通过其自身、与仪表并排或嵌入到仪表中来使用指示器。  
   
@@ -51,17 +52,17 @@ ms.locfileid: "77081570"
   
 5.  在 **“选择指示器样式”** 对话框的左窗格中，单击所需的指示器类型，然后单击指示器集。  
   
-6.  单击“确定”。   
+6.  单击“确定”。  
   
 7.  单击指示器。 将打开 **“仪表数据”** 窗格。  
   
-8.  在“值”  区域的“(未指定)”  下拉列表中，单击要将其值显示为指示器的字段。  
+8.  在“值”区域的“(未指定)”下拉列表中，单击要将其值显示为指示器的字段。  
   
      此指示器配置为使用默认值。 默认情况下，指示器配置为使用百分比作为度量单位，并且百分比范围均匀分布在指示器的各成员之间，指示器提供的值使用最近组的作用域。  
   
 ## <a name="to-delete-an-indicator-to-a-table-or-matrix"></a>从表或矩阵删除指示器  
   
-1.  右键单击要删除的指示器，然后单击“删除”  。  
+1.  右键单击要删除的指示器，然后单击“删除”。  
   
     > [!NOTE]  
     >  指示器可能位于包含其他指示器或仪表的仪表面板内。 如果仪表面板包含多个项，请确保单击该指示器以删除它，而不要删除仪表面板。 如果单击并删除了仪表面板，则将删除该仪表面板以及其中的所有项。  

@@ -1,5 +1,6 @@
 ---
 title: 为报表参数添加、更改或删除默认值 | Microsoft Docs
+description: 使用以下步骤，通过添加、更改或删除报表参数的默认值来自定义报表。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 6a87e069-b3a9-47b6-bcec-afcdd8aff65f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 902d28e7d37524ac0d1649642ca592b20ea5b3cf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 55e1d43bfdea2c01bf4e8f0516bf1554e1258d8d
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65582034"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689280"
 ---
 # <a name="add-change-or-delete-default-values-for-a-report-parameter"></a>为报表参数添加、更改或删除默认值
   创建报表参数后，您可以提供一个默认值列表。 如果所有参数都有有效默认值，报表会在您第一次查看或预览它时自动运行。  
@@ -31,10 +32,10 @@ ms.locfileid: "65582034"
   
 ### <a name="to-add-or-change-the-default-values-for-a-report-parameter"></a>添加或更改报表参数的默认值  
   
-1.  在“报表数据”窗格中，展开 **“参数”** 节点。 右键单击该参数，然后单击“编辑”  。 此时将打开 **“报表参数属性”** 对话框。  
+1.  在“报表数据”窗格中，展开 **“参数”** 节点。 右键单击该参数，然后单击“编辑”。 此时将打开 **“报表参数属性”** 对话框。  
   
     > [!NOTE]  
-    >  如果“报表数据”窗格不可见，请单击“视图”，然后单击“报表数据”   。  
+    >  如果“报表数据”窗格不可见，请单击“视图”，然后单击“报表数据” 。  
   
 2.  单击 **“默认值”** 。  
   
@@ -52,7 +53,7 @@ ms.locfileid: "65582034"
   
 ### <a name="to-remove-the-default-values-for-a-report-parameter"></a>删除报表参数的默认值  
   
-1.  在“报表数据”窗格中，展开 **“参数”** 节点。 右键单击该参数，然后单击“编辑”  。 此时将打开 **“报表参数属性”** 对话框。  
+1.  在“报表数据”窗格中，展开 **“参数”** 节点。 右键单击该参数，然后单击“编辑”。 此时将打开 **“报表参数属性”** 对话框。  
   
 2.  单击 **“默认值”** 。  
   

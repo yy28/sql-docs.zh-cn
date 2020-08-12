@@ -1,5 +1,6 @@
 ---
 title: 向地图添加自定义位置（报表生成器）| Microsoft Docs
+description: 了解如何在报表生成器中向已添加到分页报表的地图添加自定义位置。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: 7d36faae-5bcc-446a-9eba-f42349cafacb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 137b15dc1390ed6b5aef352041d8c9c481db89e0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cf6610f1abb446d27825e8d2e95677100a69184d
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081637"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255670"
 ---
 # <a name="add-custom-locations-to-a-map-report-builder-and-ssrs"></a>向地图添加自定义位置（报表生成器和 SSRS）
   向 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表添加地图之后，可以添加你自己的点位置。  
@@ -36,19 +37,19 @@ ms.locfileid: "77081637"
   
 2.  在工具栏中，单击 **“添加层”** 。  
   
-3.  从下拉列表中，单击“添加点层”  。 将不包含点的点层添加到该地图。 默认情况下，为嵌入的点准备了点层。  
+3.  从下拉列表中，单击“添加点层”。 将不包含点的点层添加到该地图。 默认情况下，为嵌入的点准备了点层。  
   
 ## <a name="to-add-a-custom-point"></a>添加自定义点  
   
 1.  在报表设计图面中，单击该地图以选择它并显示“地图”窗格。  
   
-2.  在“地图”窗格中，右键单击具有类型“嵌入”  的点层，然后单击“添加点”  。 光标将变为十字准线。  
+2.  在“地图”窗格中，右键单击具有类型“嵌入”的点层，然后单击“添加点”。 光标将变为十字准线。  
   
 3.  若要添加点，请单击地图上的某个位置。 在您单击的位置将嵌入的点添加到所选层中。  
   
 ## <a name="to-customize-the-display-for-an-embedded-point"></a>自定义嵌入点的显示方式  
   
-1.  右键单击该点，然后单击“点属性”  。 将打开 **“地图嵌入点属性”** 对话框。  
+1.  右键单击该点，然后单击“点属性”。 将打开 **“地图嵌入点属性”** 对话框。  
   
 2.  单击 **“覆盖此层的点选项”** 。 将在左窗格中显示多个属性页。  
   

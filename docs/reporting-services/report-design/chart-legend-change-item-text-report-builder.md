@@ -1,5 +1,6 @@
 ---
 title: 更改图例项的文本（报表生成器）| Microsoft Docs
+description: 了解如何更改图例项的文本，以显示有关报表生成器中各个数据点的详细信息。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9e82fa34-17ed-494f-b25d-03dcc353a21f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5f592abd3f634865a432b31d2aba4764187b0d86
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7f13d4663cf0d4e27148e77eebc59068e8c36924
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77078698"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681236"
 ---
 # <a name="chart-legend---change-item-text-report-builder"></a>图表图例 - 更改项文本（报表生成器）
   在图表的“值”区域中放入一个字段时，会自动生成一个包含此字段名称的图例项。 对于除形状图以外的其他图表，每个图例项会连接到图表上的单个序列，而对于形状图，图例会连接到单个数据点而不是单个序列。  
@@ -29,13 +30,13 @@ ms.locfileid: "77078698"
   
 ### <a name="to-modify-the-text-that-appears-in-the-legend-on-a-shape-chart"></a>修改在形状图的图例中显示的文本  
   
-1.  右键单击某一序列，或右键单击“值”  区域中的字段，并选择“序列属性”  。  
+1.  右键单击某一序列，或右键单击“值”区域中的字段，并选择“序列属性”。  
   
 2.  单击 **“图例”** ，并在 **“自定义图例文本”** 框中键入关键字。  
   
- 下表提供了用于“自定义图例文本”  属性的特定于图表的关键字示例。 有关关键字的详细信息，请参阅[设置图表上数据点的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)。  
+ 下表提供了用于“自定义图例文本”属性的特定于图表的关键字示例。 有关关键字的详细信息，请参阅[设置图表上数据点的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)。  
   
-|关键字|说明|图例中的显示文本示例|  
+|关键字|描述|图例中的显示文本示例|  
 |-------------|-----------------|---------------------------------------------------|  
 |`#PERCENT{P1}`|显示包含一个小数位的总计值百分比。|85.0%|  
 |`#VALY`|显示数据字段的实际数值。|17000|  
@@ -43,11 +44,11 @@ ms.locfileid: "77078698"
 |`#AXISLABEL (#PERCENT{P0})`|显示类别字段的文本表示形式，后跟每个类别在图表上显示的百分比。|Michael Blythe (85%)|  
   
 > [!NOTE]  
->  仅当“序列组”  区域中没有指定的字段时，才能在运行时计算 #AXISLABEL 关键字。  
+>  仅当“序列组”区域中没有指定的字段时，才能在运行时计算 #AXISLABEL 关键字。  
   
 ### <a name="to-modify-the-text-that-appears-in-the-legend-on-a-non-shape-chart"></a>修改在非形状图的图例中显示的文本  
   
-1.  右键单击某一序列，或右键单击“值”  区域中的字段，并选择“序列属性”  。  
+1.  右键单击某一序列，或右键单击“值”区域中的字段，并选择“序列属性”。  
   
 2.  单击 **“图例”** ，并在 **“自定义图例文本”** 框中键入图例标签。 随即用该文本更新序列。  
   

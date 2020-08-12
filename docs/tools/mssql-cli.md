@@ -11,24 +11,53 @@ ms.reviewer: alayu, sstein, maghan
 ms.custom: tools|mssql-cli
 ms.date: 02/22/2018
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 0363c91021baccb3ed8afd9d9dc41c23f807abac
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 03bc52a6f8941bbc8d04f8f795876b0ca664f08c
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80216446"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462281"
 ---
 # <a name="mssql-cli-command-line-query-tool-for-sql-server-preview"></a>用于 SQL Server 的 mssql-cli 命令行查询工具（预览版）
 
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-mssql-cli 是用于查询 SQL Server 的交互式命令行工具，在 Windows、macOS 或 Linux 上安装它。
+mssql-cli 是用于查询 SQL Server 的交互式命令行工具，可在 Windows、macOS 或 Linux 上进行运行。
 
 ## <a name="install-mssql-cli"></a>安装 mssql-cli
 
-有关详细安装说明，请参阅[安装指南](https://github.com/dbcli/mssql-cli/tree/master/doc/installation)；或者，如果知道 pip，可以通过运行以下命令进行安装：
+有关安装说明的详细信息，请参阅[安装指南](https://github.com/dbcli/mssql-cli/tree/master/doc/installation)。 下面汇总了最常见的安装方案。
+
+### <a name="windows-and-macos-installation"></a>Windows 和 macOS 安装
+
+使用 `pip` 在 Windows 和 macOS 上安装 mssql-cli：
 
 ```$ pip install mssql-cli```
+
+有关更多详细说明，请参阅[安装指南](https://github.com/dbcli/mssql-cli/tree/master/doc/installation)。
+
+### <a name="linux-installation"></a>Linux 安装
+
+注册 Microsoft 存储库后，可通过多个 Linux 分发上的包管理器来安装和升级 mssql-cli。
+
+以下示例适用于 Ubuntu 18.04 (Bionic)，有关其他分发的详细信息和示例，请参阅[安装指南](https://github.com/dbcli/mssql-cli/tree/master/doc/installation)。
+
+```
+# Import the public repository GPG keys
+curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+
+# Register the Microsoft Ubuntu repository
+sudo apt-add-repository https://packages.microsoft.com/ubuntu/18.04/prod
+
+# Update the list of products
+sudo apt-get update
+
+# Install mssql-cli
+sudo apt-get install mssql-cli
+
+# Install missing dependencies
+sudo apt-get install -f
+```
 
 ## <a name="mssql-cli-documentation"></a>mssql-cli 文档
 

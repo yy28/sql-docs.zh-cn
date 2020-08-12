@@ -1,5 +1,6 @@
 ---
 title: Reporting Services 扩展插件库 | Microsoft Docs
+description: 了解 Reporting Services 扩展插件库，即提供对系统功能访问权限的一系列类、接口和值类型。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e8eff470-64d6-41c3-b98b-5ec916c121c3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 592061a8665bf5dad30ab653f20d062bc0a54257
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b533206014bf71ad6f8e737abae2e442d82e375c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193833"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529409"
 ---
 # <a name="reporting-services-extension-library"></a>Reporting Services 扩展插件库
   Reporting Services 扩展插件库是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中包含的一系列类、接口和值类型。 该库提供对系统功能的访问，它是可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 应用程序来扩展 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 组件的基础。  

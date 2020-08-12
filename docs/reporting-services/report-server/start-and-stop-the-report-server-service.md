@@ -1,5 +1,6 @@
 ---
 title: 启动和停止报表服务器服务 | Microsoft Docs
+description: 了解如何启动和停止包含报表服务器 Web 服务、Web 门户和后台处理应用程序的 Windows 服务。
 ms.date: 05/21/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6ec69ac3-27b0-472d-91e1-733af9078ed2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6463dc7e4b17992138a61e6a37277149fccfda68
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b10a0445ab89934be7da2b3da2af9b14cc7d20ee
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66270204"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547889"
 ---
 # <a name="start-and-stop-the-report-server-service"></a>启动和停止报表服务器服务
 
@@ -36,11 +37,11 @@ ms.locfileid: "66270204"
   
 1. 启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具并连接到报表服务器。  
   
-2. 在“报表服务器状态”页上，选择“停止”或“启动”。    
+2. 在“报表服务器状态”页上，选择“停止”或“启动”。   
   
 ## <a name="use-administrative-tools"></a>使用管理工具  
 
-- 在“管理工具”中，打开“服务”，右键单击 SQL Server Reporting Services (MSSQLSERVER)，再选择“停止”或“重新启动”。     
+- 在“管理工具”中，打开“服务”，右键单击 SQL Server Reporting Services (MSSQLSERVER)，再选择“停止”或“重新启动”。    
   
 - 如果正在运行多个实例或报表服务器正在作为命名实例运行，请验证圆括号中的实例名称是否对应于你希望停止或重新启动的报表服务器实例。  
   

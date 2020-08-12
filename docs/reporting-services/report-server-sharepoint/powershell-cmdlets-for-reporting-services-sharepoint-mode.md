@@ -1,5 +1,6 @@
 ---
 title: 用于 Reporting Services SharePoint 模式的 PowerShell cmdlet | Microsoft Docs
+description: 安装了 PowerShell cmdlet 以支持 SQL Server Reporting Services SharePoint 模式，包括安装以及功能和应用程序管理。
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3e415fee08a9723419c7d8a4258fc88670c5e262
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2a92cb1a23c4c1d7062945bc24961a2c37d25950
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68892407"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764931"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>用于 Reporting Services SharePoint 模式的 PowerShell cmdlet
 
@@ -38,7 +39,7 @@ ms.locfileid: "68892407"
   
  如果您在键入 PowerShell 示例时看到类似以下内容的错误消息：  
   
--   Install-SPRSService：无法将项“Install-SPRSService”识别为  
+-   Install-SPRSService：无法将“Install-SPRSService”项识别为  
     cmdlet、函数、脚本文件或可运行程序的名称。 检查名称的拼写，如果包含路径，请验证该路径是否正确，并重试。  
   
  出现以下问题之一：  
@@ -109,7 +110,7 @@ ms.locfileid: "68892407"
 |New-SPRSExtension|向 Reporting Services 服务应用程序注册新的扩展插件。|  
 |Set-SPRSExtension|设置现有 Reporting Services 扩展插件的属性。|  
 |Remove-SPRSExtension|从 Reporting Services 服务应用程序删除扩展插件。|  
-|Get-SPRSExtension|获取一个或多个 Reporting Services 服务应用程序的 Reporting Services 扩展插件。<br /><br /> 有效值是：<br /><br /> <br /><br /> 交付<br /><br /> DeliveryUI<br /><br /> 呈现<br /><br /> data<br /><br /> 安全性<br /><br /> 身份验证<br /><br /> EventProcessing<br /><br /> ReportItems<br /><br /> 设计器<br /><br /> ReportItemDesigner<br /><br /> ReportItemConverter<br /><br /> ReportDefinitionCustomization|  
+|Get-SPRSExtension|获取一个或多个 Reporting Services 服务应用程序的 Reporting Services 扩展插件。<br /><br /> 有效值是：<br /><br /> <br /><br /> 交付<br /><br /> DeliveryUI<br /><br /> 呈现<br /><br /> 数据<br /><br /> 安全性<br /><br /> 身份验证<br /><br /> EventProcessing<br /><br /> ReportItems<br /><br /> 设计器<br /><br /> ReportItemDesigner<br /><br /> ReportItemConverter<br /><br /> ReportDefinitionCustomization|  
 |Get-SPRSSite|基于是否启用了“ReportingService”功能来获取 SharePoint 站点。 默认情况下，将返回启用“ReportingService”功能的站点。|  
   
 ## <a name="basic-samples"></a>基本示例
@@ -290,7 +291,7 @@ Get-SPRSExtension -identity $app -ExtensionType "Data" | select name,extensionty
 ## <a name="next-steps"></a>后续步骤
 
 [使用 PowerShell 更改和列出 Reporting Services 订阅所有者并运行订阅](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
-[核对清单：使用 PowerShell 验证 Power Pivot for SharePoint](https://docs.microsoft.com/analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint)   
+[清单：使用 PowerShell 验证 Power Pivot for SharePoint](https://docs.microsoft.com/analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint)   
 [获取 SQL Server PowerShell 帮助](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
 
 更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)

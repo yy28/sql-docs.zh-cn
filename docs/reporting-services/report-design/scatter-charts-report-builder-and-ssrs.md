@@ -1,5 +1,6 @@
 ---
 title: 散点图（报表生成器）| Microsoft Docs
+description: 了解如何在报表生成器中使用散点图（其中值由图表上的点位置表示），用于比较各个类别的聚合数据。
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2520ae24-0609-4890-807d-3267018aba8e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8d2eb99c0cf155a9ffbc57a5500cc76b057f6731
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5b38cf5b7ed632726fb7a67f6018f35887730f01
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081040"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255350"
 ---
 # <a name="scatter-charts-report-builder-and-ssrs"></a>散点图（报表生成器和 SSRS）
   散点图将序列显示为一组点。 值由点在图表中的位置表示。 类别由图表中的不同标记表示。 散点图通常用于比较跨类别的聚合数据。 有关如何将数据添加到散点图的详细信息，请参阅 [图表（报表生成器和 SSRS）](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  

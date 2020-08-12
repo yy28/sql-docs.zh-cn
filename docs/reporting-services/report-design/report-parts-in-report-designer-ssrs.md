@@ -1,5 +1,6 @@
 ---
 title: 报表设计器中的报表部件 | Microsoft Docs
+description: 将分页报表项单独发布到报表服务器或 SharePoint 站点，以便你和他人能在报表生成器的其他报表中重复使用它们。
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,20 +11,20 @@ f1_keywords:
 ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ec984cbb220bffecfae5a929ddad103780450285
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bba797577c2de63dc50e36e76f2c2b77aaedec66
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081060"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681346"
 ---
 # <a name="report-parts-in-report-designer-ssrs"></a>报表设计器中的报表部件 (SSRS)
 
-  在报表设计器中，在你创建了表、图表和项目中的其他分页报表项后，可以将它们作为“报表部件”  发布到报表服务器或与报表服务器相集成的 SharePoint 站点中，以便你和他人可以在其他报表中重复使用它们。  
+  在报表设计器中，在你创建了表、图表和项目中的其他分页报表项后，可以将它们作为“报表部件”** 发布到报表服务器或与报表服务器相集成的 SharePoint 站点中，以便你和他人可以在其他报表中重复使用它们。  
   
  通常，报表部件在报表设计器中和报表生成器中以相同的方式工作。 若要了解基本功能，请参阅[报表部件（报表生成器和 SSRS）](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)。  
   
- 但在报表设计器中，报表部件在工作方式上还存在一些基本差异。 一个主要的差异就是工作流。 报表生成器支持协作创作：我创建了一个报表部件并发布它。 您可以重复使用、修改和重新发布该报表部件。 在报表设计器中，发布是单向的：我可以从报表设计器发布一个报表部件，而您可以重复使用该部件。 但是，我不能在报表设计器中在报表中重复使用现有的报表部件。 本主题首先快速介绍一下报表部件，然后详细阐述这些差异。  
+ 但在报表设计器中，报表部件在工作方式上还存在一些基本差异。 一个主要的差异就是工作流。 报表生成器启用协同创作：我创建并发布报表部件。 您可以重复使用、修改和重新发布该报表部件。 在报表设计器中，发布是单向的：我可以从报表设计器发布报表部件，你能重用它。 但是，我不能在报表设计器中在报表中重复使用现有的报表部件。 本主题首先快速介绍一下报表部件，然后详细阐述这些差异。  
   
 ##  <a name="life-cycle-of-report-part-publishing"></a><a name="ComponentWorkflow"></a> 报表部件发布的生命周期  
  ![rs_ComponentCreation](../../reporting-services/report-design/media/rs-componentcreation.gif "rs_ComponentCreation")  
@@ -55,7 +56,7 @@ ms.locfileid: "77081060"
   
 -   地图  
   
--   parameters  
+-   参数  
   
 -   矩形  
   

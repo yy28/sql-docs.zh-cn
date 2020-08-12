@@ -1,5 +1,6 @@
 ---
 title: 创建矩阵（报表生成器）| Microsoft Docs
+description: 在矩阵中显示分组数据和摘要信息，矩阵可在报表生成器中提供类似于交叉表和透视表的功能。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,19 +9,19 @@ ms.topic: conceptual
 ms.assetid: 493e63b9-ecd0-4054-97ec-92d84e9b8182
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cd0268916173f4e2b9d3f6c096fceb6787d18487
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3ff46e31fb6329a0ce204f0d432bbbb865e7a107
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77078685"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255310"
 ---
 # <a name="create-a-matrix-report-builder-and-ssrs"></a>创建矩阵（报表生成器和 SSRS）
   使用矩阵可显示分组数据和摘要信息。 您可以按行组和列组中的多个字段或表达式对数据进行分组。 矩阵所提供的功能与交叉表和透视表的功能类似。 在运行时，由于报表数据和数据区域是组合在一起的，所以矩阵在页面上沿水平和垂直方向增长。 矩阵单元中的值显示仅限于单元所属行组和列组的交集的聚合值。 您可以设置行和列的格式以突出显示要强调的数据。 您也可以包括最初隐藏详细信息数据的明细切换，然后用户便可单击该切换以根据需要显示更多或更少的详细信息。  
   
  在最初设计之后，便可继续开发矩阵以改善用户的查看体验。 有关详细信息，请参阅 [控制 Tablix 数据区域在报表页上的显示（报表生成器和 SSRS）](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)。  
   
- 若要快速开始使用列表，请参阅[教程：创建矩阵报表（报表生成器）](../../reporting-services/tutorial-creating-a-matrix-report-report-builder.md)。  
+ 若要快速开始使用矩阵，请参阅[教程：生成矩阵报表（报表生成器）](../../reporting-services/tutorial-creating-a-matrix-report-report-builder.md)。  
   
 > [!NOTE]  
 >  您可以将列表作为报表部件与报表分开发布。 阅读有关 [报表部件（报表生成器和 SSRS）](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)的详细信息。  
@@ -41,11 +42,11 @@ ms.locfileid: "77078685"
   
  通过将数据集字段拖动至“分组”面板的“行组”和“列组”区域来添加组。 您拖动至行组或列组窗格的第一个字段将替换最初的空默认组。 然后便可根据数据为每个单元应用格式设置。  
   
- ![矩阵、Category 行和 Geography 列组](../../reporting-services/report-design/media/rs-basicmatrixdesign.gif "矩阵、Category 行和 Geography 列组")  
+ ![“矩阵”、“类别”行和“地域”列组](../../reporting-services/report-design/media/rs-basicmatrixdesign.gif "“矩阵”、“类别”行和“地域”列组")  
   
  在“预览”中，矩阵将扩展以显示行组和列组值。 单元将显示汇总值，如下图所示。  
   
- ![呈现的矩阵（包含扩展组）预览](../../reporting-services/report-design/media/rs-basicmatrixpreview.gif "呈现的矩阵（包含扩展组）预览")  
+ ![呈现的矩阵（具有扩展组）预览](../../reporting-services/report-design/media/rs-basicmatrixpreview.gif "呈现的矩阵（具有扩展组）预览")  
   
  您开始使用的矩阵为基于 Tablix 数据区域的模板。 不过，您可以继续设计自己矩阵，例如，添加嵌套的或相邻的行组或列组，甚至可以添加详细信息组。 有关详细信息，请参阅[利用 Tablix 数据区域的灵活性（报表生成器和 SSRS）](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)。  
   
