@@ -1,5 +1,6 @@
 ---
 title: Reporting Services 中的新增功能 | Microsoft Docs
+description: 了解 SQL Server Reporting Services 不同版本的新增功能，包括对主要功能区域的更改。
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -9,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 12/05/2019
-ms.openlocfilehash: cb50ca237fb1b9fae87b73fd81a9e6f2426b4775
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 869c2be4422df2361a0522e5b2183e61e43ae797
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079606"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248546"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) 中的新增功能
 
@@ -34,23 +35,23 @@ ms.locfileid: "77079606"
 
 ### <a name="azure-sql-managed-instance-support"></a>Azure SQL 托管实例支持
 
-现在可以在 VM 或数据中心托管的 Azure SQL 托管实例 (MI) 中承载用于 SQL Server Reporting Services (SSRS) 的数据库目录。 仅支持使用数据库凭据连接到 SQL MI。
+现在可以在 VM 或数据中心托管的 Azure SQL 托管实例 (MI) 中承载用于 SQL Server Reporting Services (SSRS) 的数据库目录。 支持仅限于使用数据库凭据连接到 SQL MI。
 
 ### <a name="power-bi-premium-dataset-support"></a>Power BI Premium 数据集支持
 
-可以使用 Microsoft 报表生成器或 SQL Server Data Tools (SSDT) 连接到 Power BI 数据集。 然后，可以使用 SQL Server Analysis Services 连接将这些报表发布到 SSRS 2019。 用户需要使用存储的 Windows 用户名和密码来启用此方案。
+可以使用 Microsoft 报表生成器或 SQL Server 数据工具 (SSDT) 连接到 Power BI 数据集。 然后，可以使用 SQL Server Analysis Services 连接将这些报表发布到 SSRS 2019。 用户需要使用存储的 Windows 用户名和密码来启用方案。
 
-### <a name="alttext-alternative-text-support-for-report-elements"></a>报表元素的 AltText（可选文本）支持
+### <a name="alttext-alternative-text-support-for-report-elements"></a>报表元素支持 AltText（替代文本）
 
-在创作报表时，可以使用工具提示为报表上的每个元素指定文本。 屏幕阅读器技术正确识别这些工具提示。
+在创作报表时，可以使用工具提示为报告中的每个元素指定文本。 屏幕阅读器技术正确识别这些工具提示。
 
 ### <a name="azure-active-directory-application-proxy-support"></a>Azure Active Directory 应用程序代理支持
 
-使用 Azure Active Directory 应用程序代理，你不再需要管理自己的 Web 应用程序代理，即可允许通过 Web 或移动应用进行安全访问。
+使用 Azure Active Directory 应用程序代理，你不再需要管理自己的 Web 应用程序代理即可允许通过 Web 或移动应用进行安全访问。
 
 ### <a name="custom-headers"></a>自定义标头
 
-设置与指定的正则表达式模式匹配的所有 URL 的标头值。 用户可以将自定义标头值更新为有效的 XML，以设置所选请求 URL 的标头值。 管理员可以在 XML 中添加任意数量的标头。 有关详细信息，请参阅“服务器属性高级”页中的[自定义标头](tools/server-properties-advanced-page-reporting-services.md#customheaders)。
+为所有与指定的正则表达式模式匹配的 URL 设置标头值。 用户可以使用有效的 XML 更新自定义标头值，以设置所选请求 URL 的标头值。 管理员可以在 XML 中添加任意数量的标头。 有关详细信息，请参阅“服务器属性高级”页中的[自定义标头](tools/server-properties-advanced-page-reporting-services.md#customheaders)。
 
 ### <a name="transparent-database-encryption"></a>透明数据库加密
 
@@ -58,7 +59,7 @@ SQL Server 2019 现支持适用于企业版和标准版的 SSRS 目录数据库�
 
 ### <a name="microsoft-report-builder-update"></a>Microsoft 报表生成器更新
 
-新发布的报表生成器版本与 2016、2017 和 2019 版本的 Reporting Services 完全兼容。 它还与 Power BI 报表服务器的所有已发布和受支持的版本兼容。
+新发布的报表生成器版本与 Reporting Services 的 2016、2017 和 2019 版本完全兼容。 它还与 Power BI 报表服务器的所有发行版和受支持的版本兼容。
 
 ::: moniker-end
 
@@ -185,7 +186,7 @@ Reporting Services 移动报表是针对各种外形规格进行了优化的专�
 
 **报表嵌入：** 现可结合使用 iframe 和 URL 参数将移动报表和分页报表嵌入其他网页和应用程序中。  
 
-**将报表项固定到 Power BI 仪表板：** 在 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] 中查看报表时，可以选择报表项并将其固定到 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 仪表板。   可以固定的项为图表、仪表面板、映射和映像。 可以：
+**将报表项固定到 Power BI 仪表板：** 在 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]中查看报表时，可以选择报表项并将其固定到 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 仪表板。   可以固定的项为图表、仪表面板、映射和映像。 可以：
 
 1. 选择包含要固定的仪表板的组。
 2. 选择要在其中固定项的仪表板。
@@ -222,7 +223,7 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
 |**启用和禁用订阅**。 新用户界面选项可以快速禁用和启用订阅。 已禁用的订阅将维持自身的其他配置属性（例如计划），并且可以轻松地启用。<br /><br /> ![ssrs-enable-disable-subscriptions](../reporting-services/media/ssrs-enable-disable-subscriptions.png)<br /><br /> 有关详细信息，请参阅 [Disable or Pause Report and Subscription Processing](../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md)。|本机模式|  
 |**订阅说明**。 你现在可以在创建新订阅时提供报表说明，作为订阅属性的一部分。 说明在订阅摘要页中提供。|SharePoint 和本机模式|  
 |**更改订阅所有者**。 增强的用户界面，可以快速更改订阅的所有者。 旧版 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 允许管理员使用脚本来更改订阅所有者。 从 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 版本开始，你可以使用用户界面或脚本更改订阅所有者。 当用户离开组织或者更改其在组织中的角色时，就需要更改订阅所有者，这是一项常规管理任务。|SharePoint 和本机模式|  
-|**文件共享订阅的共享凭据**。 现在，两个工作流与 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 文件共享订阅共存：<br /><br /> 使用此版本中的新增功能，[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 管理员可以配置单个文件共享帐户，该帐户可用于多个订阅。 文件共享帐户在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 本机模式配置管理器“指定文件共享帐户”中配置  。 在“订阅配置”页面上，用户可选择“使用文件共享帐户”  。<br /><br /> 使用目标文件共享的特定凭据配置单独的订阅。<br /><br /> 你还可以混合使用这两种方法，使一些文件共享订阅使用中央文件共享帐户，而其他订阅使用特定的凭据。|本机模式|
+|**文件共享订阅的共享凭据**。 现在，两个工作流与 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 文件共享订阅共存：<br /><br /> 使用此版本中的新增功能，[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 管理员可以配置单个文件共享帐户，该帐户可用于多个订阅。 文件共享帐户在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 本机模式配置管理器“指定文件共享帐户”中配置。 在“订阅配置”页面上，用户可选择“使用文件共享帐户”。<br /><br /> 使用目标文件共享的特定凭据配置单独的订阅。<br /><br /> 你还可以混合使用这两种方法，使一些文件共享订阅使用中央文件共享帐户，而其他订阅使用特定的凭据。|本机模式|
 
 ### <a name="sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT)
 

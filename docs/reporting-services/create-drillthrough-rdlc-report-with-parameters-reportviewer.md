@@ -1,5 +1,6 @@
 ---
 title: 创建带有参数的钻取 (RDLC) 报表 - ReportViewer | Microsoft Docs
+description: 了解如何在本地模式报表中创建带参数的钻取 (RDLC) 报表和查询。
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 628c8775-c62d-45ac-b349-23db86fa4e6c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 21de137cefcfc61e91739ff33b2a9f0de4c3a05f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3cc136efcf016a84325c40e6bbebc2a71741f86e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63194377"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248595"
 ---
 # <a name="create-drillthrough-rdlc-report-with-parameters---reportviewer"></a>创建带有参数的钻取 (RDLC) 报表 - ReportViewer
 [钻取](https://technet.microsoft.com/library/ff519554.aspx) 报表是指用户通过单击其他报表中的链接打开的报表。 钻取报表通常包含某原始汇总报表中所包含的某项的详细信息。 本教程将详细介绍以下在 [本地模式报表](report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)中使用参数和查询创建钻取报表的课程。  

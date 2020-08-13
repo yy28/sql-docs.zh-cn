@@ -20,20 +20,20 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 8267c35e2453873269ae94d1bff331d025a76fd8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4bdf4215b01df0f9011123eb42232bba594554ed
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734638"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180084"
 ---
 # <a name="sysdm_external_script_execution_stats"></a>sys.dm_external_script_execution_stats
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 为每种类型的外部脚本请求返回一行。 外部脚本请求由受支持的外部脚本语言分组。 为每个已注册的外部脚本函数生成一行。 除非是由父进程（如 `rxExec`）发送，否则不会记录任意外部脚本函数。
   
 > [!NOTE]  
-> 此动态管理视图（DMV）仅在已安装并启用支持外部脚本执行的功能时可用。 有关详细信息，请参阅[SQL Server 2017 及更高版本中](../../machine-learning/sql-server-machine-learning-services.md)的[r Services SQL Server 2016](../../machine-learning/r/sql-server-r-services.md)、机器学习服务（R、Python）以及[Azure 托管实例机器学习服务](/azure/azure-sql/managed-instance/machine-learning-services-overview)。
+> 仅当你已安装并启用支持外部脚本执行的功能时，此动态管理视图 (DMV) 才可用。 有关详细信息，请参阅[SQL Server 2016 中的 R Services](../../machine-learning/r/sql-server-r-services.md)、[机器学习服务 (R、Python) 在 SQL Server 2017 和更高版本中](../../machine-learning/sql-server-machine-learning-services.md)以及[Azure 托管实例机器学习服务](/azure/azure-sql/managed-instance/machine-learning-services-overview)。
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -96,7 +96,7 @@ FROM sys.dm_external_script_execution_stats
 WHERE language = 'Python';
 ```  
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 + [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
 + [与执行相关的动态管理视图和函数 (Transact-SQL)](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)

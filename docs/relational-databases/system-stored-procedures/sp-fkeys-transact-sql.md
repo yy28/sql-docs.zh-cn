@@ -1,5 +1,5 @@
 ---
-title: sp_fkeys （Transact-sql） |Microsoft Docs
+title: sp_fkeys (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/08/2017
 ms.prod: sql
@@ -18,11 +18,12 @@ ms.assetid: 18110444-d38d-4cff-90d2-d1fc6236668b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c280be43be2ef4f14e57321cb96420e6cf51eb6
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 18a4a5c25c791122191c07e5bb63a6fc6c32cba0
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012687"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180056"
 ---
 # <a name="sp_fkeys-transact-sql"></a>sp_fkeys (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "86012687"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql  
 sp_fkeys [ @pktable_name = ] 'pktable_name'   
      [ , [ @pktable_owner = ] 'pktable_owner' ]   
      [ , [ @pktable_qualifier = ] 'pktable_qualifier' ]   
@@ -42,17 +43,17 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
      [ , [ @fktable_qualifier = ] 'fktable_qualifier' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  [ @pktable_name =] "*pktable_name*"  
  带主键的表的名称，用于返回目录信息。 *pktable_name*的默认值为**sysname**，默认值为 NULL。 不支持通配符模式匹配。 必须提供此参数或*fktable_name*参数，或同时提供两者。  
   
  [ @pktable_owner =] "*pktable_owner*"  
- 用于返回目录信息的表（带主键）的所有者的名称。 *pktable_owner*的默认值为**sysname**，默认值为 NULL。 不支持通配符模式匹配。 如果未指定*pktable_owner* ，则应用基础 DBMS 的默认表可见性规则。  
+ 表所有者的名称， (用来返回目录信息的主密钥) 。 *pktable_owner*的默认值为**sysname**，默认值为 NULL。 不支持通配符模式匹配。 如果未指定*pktable_owner* ，则应用基础 DBMS 的默认表可见性规则。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果当前用户拥有具有指定名称的表，则返回该表的列。 如果未指定*pktable_owner*并且当前用户没有具有指定*pktable_name*的表，则此过程将查找数据库所有者拥有指定*pktable_name*的表。 如果有，则返回该表的列。  
   
  [ @pktable_qualifier =] "*pktable_qualifier*"  
- 表（带有主键）限定符的名称。 *pktable_qualifier*的默认值为 sysname，默认值为 NULL。 各种 DBMS 产品支持表的三部分命名（*qualifier.owner.name*）。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，限定符表示数据库名称。 在某些产品中，该列表示表所在的数据库环境的服务器名。  
+ 与主键) 限定符 (的表的名称。 *pktable_qualifier*的默认值为 sysname，默认值为 NULL。 各种 DBMS 产品支持表的三部分命名 (*qualifier.owner.name*) 。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，限定符表示数据库名称。 在某些产品中，该列表示表所在的数据库环境的服务器名。  
   
  [ @fktable_name =] "*fktable_name*"  
  用于返回目录信息的表（带外键）的名称。 *fktable_name*的默认值为 sysname，默认值为 NULL。 不支持通配符模式匹配。 必须提供此参数或*pktable_name*参数，或同时提供两者。  
@@ -63,7 +64,7 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果当前用户拥有具有指定名称的表，则返回该表的列。 如果未指定*fktable_owner*并且当前用户没有具有指定*fktable_name*的表，则此过程将查找数据库所有者拥有指定*fktable_name*的表。 如果有，则返回该表的列。  
   
  [ @fktable_qualifier =] "*fktable_qualifier*"  
- 表（带外键）限定符的名称。 *fktable_qualifier*的默认值为**sysname**，默认值为 NULL。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，限定符表示数据库名称。 在某些产品中，该列表示表所在的数据库环境的服务器名。  
+ 使用外键) 限定符 (表的名称。 *fktable_qualifier*的默认值为**sysname**，默认值为 NULL。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，限定符表示数据库名称。 在某些产品中，该列表示表所在的数据库环境的服务器名。  
   
 ## <a name="return-code-values"></a>返回代码值  
  无  
@@ -74,11 +75,11 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
 |-----------------|---------------|-----------------|  
 |PKTABLE_QUALIFIER|**sysname**|表（带主键）限定符的名称。 此字段可以为 NULL。|  
 |PKTABLE_OWNER|**sysname**|表（带主键）所有者的名称。 此字段始终返回值。|  
-|PKTABLE_NAME|**sysname**|表的名称（带有主键）。 此字段始终返回值。|  
+|PKTABLE_NAME|**sysname**|与主键)  (的表的名称。 此字段始终返回值。|  
 |PKCOLUMN_NAME|**sysname**|主键列的名称，针对返回的 TABLE_NAME 的每个列。 此字段始终返回值。|  
 |FKTABLE_QUALIFIER|**sysname**|表（带外键）限定符的名称。 此字段可以为 NULL。|  
 |FKTABLE_OWNER|**sysname**|表（带外键）所有者的名称。 此字段始终返回值。|  
-|FKTABLE_NAME|**sysname**|表的名称（带有外键）。 此字段始终返回值。|  
+|FKTABLE_NAME|**sysname**|带有外键)  (表的名称。 此字段始终返回值。|  
 |FKCOLUMN_NAME|**sysname**|外键列的名称，针对返回的 TABLE_NAME 的每个列。 此字段始终返回值。|  
 |KEY_SEQ|**smallint**|多列主键中列的序列号。 此字段始终返回值。|  
 |UPDATE_RULE|**smallint**|当 SQL 操作是更新操作时应用于外键的操作。  可能的值：<br /> 0=对外键的 CASCADE 更改。<br /> 1=NO ACTION 更改（如果有外键）。<br />   2 = 设置 null <br /> 3 = 设置默认值 |  
@@ -88,7 +89,7 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
   
  返回的结果集按 FKTABLE_QUALIFIER、FKTABLE_OWNER、FKTABLE_NAME 以及 KEY_SEQ 排序。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  可以通过以下方法实现包含带禁用外键的表的应用程序编码：  
   
 -   当使用这些表时，临时禁用约束检查（ALTER TABLE NOCHECK 或 CREATE TABLE NOT FOR REPLICATION），稍后再重新启用它。  

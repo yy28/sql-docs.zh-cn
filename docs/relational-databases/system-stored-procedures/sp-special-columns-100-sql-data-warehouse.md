@@ -13,12 +13,12 @@ ms.assetid: 5774fadc-77cc-46f8-8f9f-a0f9efe95e21
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 848893f9e6c7aeb36299037404a88e9b069c012c
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 6fa35188d803d58717449c2d3bf3c6afd41c5fc3
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197025"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173060"
 ---
 # <a name="sp_special_columns_100-sql-data-warehouse"></a>sp_special_columns_100 (SQL 数据仓库) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "86197025"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 sp_special_columns_100 [ @table_name = ] 'table_name'     
@@ -91,7 +91,7 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
 ## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  以下示例将返回有关特定列的信息，该列唯一标识了 `FactFinance` 表中的行。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 EXEC sp_special_columns_100 @table_name = 'FactFinance';  

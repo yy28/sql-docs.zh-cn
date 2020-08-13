@@ -20,12 +20,12 @@ helpviewer_keywords:
 - Data Transformation Services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 781b58bfa0d2afa3ee981fd591909719e8d1051a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a4a512b91bbac1a84004643de2738468f21ee984
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921933"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248656"
 ---
 # <a name="sql-server-integration-services"></a>SQL Server Integration Services
 
@@ -33,7 +33,7 @@ ms.locfileid: "86921933"
 
 
 
-[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 是用于生成企业级数据集成和数据转换解决方案的平台。 使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 可解决复杂的业务问题，具体表现为：复制或下载文件，加载数据仓库，清除和挖掘数据以及管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 对象和数据。
+SQL Server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 是用于生成企业级数据集成和数据转换解决方案的平台。 使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 可解决复杂的业务问题，具体表现为：复制或下载文件，加载数据仓库，清除和挖掘数据以及管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 对象和数据。
 
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 可以提取和转换来自多种源（如 XML 数据文件、平面文件和关系数据源）的数据，然后将这些数据加载到一个或多个目标。
 

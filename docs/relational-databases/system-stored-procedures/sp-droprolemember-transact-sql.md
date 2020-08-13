@@ -1,5 +1,5 @@
 ---
-title: sp_droprolemember （Transact-sql） |Microsoft Docs
+title: sp_droprolemember (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -18,11 +18,12 @@ ms.assetid: c2f19ab1-e742-4d56-ba8e-8ffd40cf4925
 ms.author: vanto
 author: VanMSFT
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8be7e84ccd80d80c1345adec3450e5bc8e0f4da6
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1ffff6387f2129c2e3bdb2af726e6b87e665554e
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012699"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180066"
 ---
 # <a name="sp_droprolemember-transact-sql"></a>sp_droprolemember (Transact-SQL)
 
@@ -39,19 +40,19 @@ ms.locfileid: "86012699"
 
 ### <a name="syntax-for-both-sql-server-and-azure-sql-database"></a>SQL Server 和 Azure SQL 数据库的语法
 
-```  
+```syntaxsql  
 sp_droprolemember [ @rolename = ] 'role' ,   
      [ @membername = ] 'security_account'  
 ```  
 
 ### <a name="syntax-for-both-azure-sql-data-warehouse-and-parallel-data-warehouse"></a>适用于 Azure SQL 数据仓库和并行数据仓库的语法
 
-```  
+```syntaxsql  
 sp_droprolemember 'role' ,  
      'security_account'  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @rolename = ] 'role'`要从中删除成员的角色的名称。 *role*的值为**sysname**，无默认值。 *角色*必须存在于当前数据库中。  
   
 `[ @membername = ] 'security_account'`要从角色中删除的安全帐户的名称。 *security_account* **sysname**，无默认值。 *security_account*可以是数据库用户、其他数据库角色、windows 登录名或 windows 组。 当前数据库中必须存在*security_account* 。  
@@ -59,7 +60,7 @@ sp_droprolemember 'role' ,
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  sp_droprolemember 通过从 sysmembers 表中删除行来删除数据库角色的成员。 在从角色中删除一个成员后，该成员将失去作为该角色的成员所拥有的任何权限。  
   
  若要删除固定服务器角色的用户，请使用 sp_dropsrvrolemember。 不能删除 public 角色的用户，也不能从任何角色中删除 dbo。  

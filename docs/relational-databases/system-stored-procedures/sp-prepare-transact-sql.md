@@ -1,5 +1,5 @@
 ---
-title: sp_prepare （Transact-sql） |Microsoft Docs
+title: sp_prepare (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 02/28/2018
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: f328c9eb-8211-4863-bafa-347e1bf7bb3f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 695e879b4f6eb5ab54a0d83636bcbef5f9f3c65f
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: d9095536219fc0cdc419a0952217b0eeb2ef19f5
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396016"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173099"
 ---
 # <a name="sp_prepare-transact-sql"></a>sp_prepare (Transact SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -34,11 +34,11 @@ ms.locfileid: "87396016"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql  
 sp_prepare handle OUTPUT, params, stmt, options  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  *柄*  
  是 SQL Server 生成的已*准备的句柄*标识符。 *句柄*是带有**int**返回值的必需参数。  
   
@@ -51,7 +51,7 @@ sp_prepare handle OUTPUT, params, stmt, options
  *options*  
  一个可选参数，它返回游标结果集列的说明。 *选项*需要以下 int 输入值：  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
@@ -59,9 +59,9 @@ sp_prepare handle OUTPUT, params, stmt, options
 A. 下面的示例准备并执行一个简单的语句。  
   
 ```sql  
-DECLARE @P1 int;  
-EXEC sp_prepare @P1 output,   
-    N'@P1 nvarchar(128), @P2 nvarchar(100)',  
+DECLARE @P1 INT;  
+EXEC sp_prepare @P1 OUTPUT,   
+    N'@P1 NVARCHAR(128), @P2 NVARCHAR(100)',  
     N'SELECT database_id, name FROM sys.databases WHERE name=@P1 AND state_desc = @P2';  
 EXEC sp_execute @P1, N'tempdb', N'ONLINE';  
 EXEC sp_unprepare @P1;  
@@ -71,9 +71,9 @@ B. 下面的示例在 AdventureWorks2016 数据库中准备一个语句，然后
 
 ```sql
 -- Prepare query
-DECLARE @P1 int;  
-EXEC sp_prepare @P1 output,   
-    N'@Param int',  
+DECLARE @P1 INT;  
+EXEC sp_prepare @P1 OUTPUT,   
+    N'@Param INT',  
     N'SELECT *
 FROM Sales.SalesOrderDetail AS sod
 INNER JOIN Production.Product AS p ON sod.ProductID = p.ProductID

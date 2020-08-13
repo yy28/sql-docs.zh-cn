@@ -1,5 +1,5 @@
 ---
-title: sys. external_libraries （Transact-sql） |Microsoft Docs
+title: sys. external_libraries (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/25/2020
 ms.prod: sql
@@ -19,15 +19,15 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: a825843a69d9ba2f65f272adba86e6d8656aedde
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b6a24a142deef2283c58e21941293f31479f997b
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750701"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180068"
 ---
 # <a name="sysexternal_libraries-transact-sql"></a>sys.external_libraries (Transact-SQL)  
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 支持管理与外部运行时（如 R、Python 和 Java）相关的包库。
 
@@ -45,9 +45,9 @@ ms.locfileid: "85750701"
 |principal_id |int |拥有此外部库的主体的 ID。 |
 |语言 | sysname | 支持外部库的语言或运行时的名称。 有效值为 "R"、"Python" 和 "Java"。 将来可能会添加其他运行时。|
 |scope |int |0表示公共作用域;1用于专用范围 |  
-|scope_desc |varchar （7） |指示包是公共包还是私有包|
+|scope_desc |varchar (7)  |指示包是公共包还是私有包|
 
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
 
 + [sys.external_library_files](sys-external-library-files-transact-sql.md)  
 + [创建外部库](../../t-sql/statements/create-external-library-transact-sql.md)  

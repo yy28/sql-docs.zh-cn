@@ -1,5 +1,5 @@
 ---
-title: sp_configure （Transact-sql） |Microsoft Docs
+title: sp_configure (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: e8d3284d8231b01b58cc807aeb70c55f5fe18c2b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: dd39c7f2a803dc778f8d29530b63daa46fc4b7e2
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828419"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180246"
 ---
 # <a name="sp_configure-transact-sql"></a>sp_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "82828419"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server  
   
 sp_configure [ [ @configname = ] 'option_name'   
@@ -60,13 +60,13 @@ RECONFIGURE
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @configname = ] 'option_name'`配置选项的名称。 *option_name* 的数据类型为 **varchar(35)**，默认值为 NULL。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]能够识别构成配置名称的任何唯一字符串。 如果未指定该参数，则返回选项的完整列表。  
+`[ @configname = ] 'option_name'`配置选项的名称。 *option_name* 的数据类型为 **varchar(35)** ，默认值为 NULL。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]能够识别构成配置名称的任何唯一字符串。 如果未指定该参数，则返回选项的完整列表。  
   
  有关可用配置选项及其设置的信息，请参阅[服务器配置选项 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
   
 `[ @configvalue = ] 'value'`新的配置设置。 *value* 的数据类型为 **int**，默认值为 NULL。 最大值取决于各个选项。  
   
- 若要查看每个选项的最大值，请参阅**sys.databases**目录视图的**最大**值列。  
+ 若要查看每个选项的最大值，请参阅**sys.configurations**目录视图的**最大**值列。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -78,11 +78,11 @@ RECONFIGURE
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**name**|**nvarchar(35)**|配置选项的名称。|  
-|**短**|**int**|配置选项的最小值。|  
-|**最佳**|**int**|配置选项的最大值。|  
-|**config_value**|**int**|配置选项使用**sp_configure**设置的值（值在**sys.databases**中）。 有关这些选项的详细信息，请参阅[服务器配置选项 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)和[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)。|  
-|**run_value**|**int**|配置选项的当前运行值（ **value_in_use**中的值）。<br /><br /> 有关详细信息，请参阅[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)。|  
+|name|**nvarchar(35)**|配置选项的名称。|  
+|**最小值**|**int**|配置选项的最小值。|  
+|**最大值**|**int**|配置选项的最大值。|  
+|**config_value**|**int**|**Sp_configure**使用 (**sys.configurations**) 中的值将配置选项设置为的值。 有关这些选项的详细信息，请参阅[服务器配置选项 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)和[sys.configurations &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)。|  
+|**run_value**|**int**|配置选项的当前运行值 (**sys.configurations. value_in_use**) 中的值。<br /><br /> 有关详细信息，请参阅[urations &#40;transact-sql&#41;sys.config](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)。|  
   
 ## <a name="remarks"></a>备注  
  使用**sp_configure**显示或更改服务器级设置。 若要更改数据库级别设置，请使用 ALTER DATABASE。 若要更改仅影响当前用户会话的设置，请使用 SET 语句。  
@@ -101,7 +101,7 @@ RECONFIGURE
   
  RECONFIGURE 语句可以动态更新某些选项，而其他选项的更新则需要停止服务器再重新启动才能实现。 例如，"**最小服务器内存**" 和 "**最大服务器**内存" 服务器内存选项在中动态更新， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 因此，你可以更改它们而无需重新启动服务器。 与此相反，重新配置**填充因子**选项的运行值需要重新启动 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。  
   
- 在配置选项上运行重新配置后，可以通过执行**sp_configure "***option_name***"** 来查看是否已动态更新了选项。 对于动态更新的选项， **run_value**和**config_value**列中的值应匹配。 还可以查看**sys.databases**目录视图的**is_dynamic**列，查看哪些选项是动态的。  
+ 在配置选项上运行重新配置后，可以通过执行**sp_configure "***option_name***"** 来查看是否已动态更新了选项。 对于动态更新的选项， **run_value**和**config_value**列中的值应匹配。 还可以通过查看**sys.configurations**目录视图的**is_dynamic**列来查看哪些选项是动态的。  
  
  此更改也会写入 SQL Server 错误日志。
   
@@ -174,8 +174,8 @@ EXEC sp_configure @configname='hadoop connectivity';
  [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
  [&#40;Transact-sql&#41;系统存储过程](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
- [更改数据库作用域配置 &#40;Transact-sql&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)   
- [Soft-NUMA (SQL Server)](../../database-engine/configure-windows/soft-numa-sql-server.md)  
+ [sys.configurations (Transact-SQL)](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
+ [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)   
+ [软件 NUMA (SQL Server)](../../database-engine/configure-windows/soft-numa-sql-server.md)  
   
   

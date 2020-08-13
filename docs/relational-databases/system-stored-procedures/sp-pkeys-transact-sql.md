@@ -1,5 +1,5 @@
 ---
-title: sp_pkeys （Transact-sql） |Microsoft Docs
+title: sp_pkeys (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,11 +17,12 @@ ms.assetid: e614c75d-847b-4726-8f6f-cd18de688eda
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a89ba7886ecca244456b70e9b8dff78b0bea176e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d5e7f0d0d3495abcd716fb5763b29d7e26192f60
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999356"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173170"
 ---
 # <a name="sp_pkeys-transact-sql"></a>sp_pkeys (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "85999356"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
   
 sp_pkeys [ @table_name = ] 'name'       
@@ -40,7 +41,7 @@ sp_pkeys [ @table_name = ] 'name'
     [ , [ @table_qualifier = ] 'qualifier' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  [ @table_name =] "*name*"  
  要返回其信息的表。 *名称*为**sysname**，无默认值。 不支持通配符模式匹配。  
   
@@ -50,7 +51,7 @@ sp_pkeys [ @table_name = ] 'name'
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果当前用户拥有一个具有指定名称的表，则返回该表的列。 如果未指定*所有者*，并且当前用户没有具有指定*名称*的表，则此过程将查找数据库所有者拥有指定*名称*的表。 如果存在，则返回该表的列。  
   
  [ @table_qualifier =] '*限定符*'  
- 是表限定符。 *限定符*的值为**sysname**，默认值为 NULL。 各种 DBMS 产品支持表的三部分命名（_限定符_**。**_所有者_**。**_名称_）。 在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，此列表示数据库名称。 在某些产品中，它表示表所在数据库环境的服务器名称。  
+ 是表限定符。 *限定符*的值为**sysname**，默认值为 NULL。 各种 DBMS 产品支持表的三部分命名 (_限定符_**。**_所有者_**。**_名称_) 。 在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，此列表示数据库名称。 在某些产品中，它表示表所在数据库环境的服务器名称。  
   
 ## <a name="return-code-values"></a>返回代码值  
  无  
@@ -66,7 +67,7 @@ sp_pkeys [ @table_name = ] 'name'
 |KEY_SEQ|**smallint**|多列主键中列的序列号。|  
 |PK_NAME|**sysname**|主键标识符。 如果对数据源不适用，则返回 NULL。|  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  sp_pkeys 返回使用 PRIMARY KEY 约束显式定义的列的信息。 由于不是所有的系统均支持显式命名的主键，因此由网关实现者决定主键的构成。 请注意主键这一术语指的是表的逻辑主键。 应对被列为逻辑主键的每个键定义一个唯一索引。 此唯一索引也会由 sp_statistics 返回。  
   
  存储过程 sp_pkeys 与 ODBC 中的 SQLPrimaryKeys 等价。 返回的结果按 TABLE_QUALIFIER、TABLE_OWNER、TABLE_NAME 和 KEY_SEQ 排序。  
@@ -77,7 +78,7 @@ sp_pkeys [ @table_name = ] 'name'
 ## <a name="examples"></a>示例  
  以下示例检索 `HumanResources.Department` 数据库中 `AdventureWorks2012` 表的主键。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_pkeys @table_name = N'Department'  
@@ -87,10 +88,10 @@ EXEC sp_pkeys @table_name = N'Department'
 ## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  以下示例检索 `DimAccount` 数据库中 `AdventureWorksPDW2012` 表的主键。 它将返回零行，指示表没有主键。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
-EXEC sp_pkeys @table_name = N'DimAccount;  
+EXEC sp_pkeys @table_name = N'DimAccount';  
 ```  
   
 ## <a name="see-also"></a>另请参阅  

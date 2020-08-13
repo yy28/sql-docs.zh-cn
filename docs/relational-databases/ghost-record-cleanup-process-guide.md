@@ -14,12 +14,12 @@ helpviewer_keywords:
 - ghost clean up process
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 557f76e3f54811581e41ad15a5270a0c1e6e4057
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 16c9aa51475b00998b3c7aa9e71529bbbc292464
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83859089"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248156"
 ---
 # <a name="ghost-cleanup-process-guide"></a>虚影清除进程指南
 
@@ -46,7 +46,7 @@ ms.locfileid: "83859089"
 
 ## <a name="disable-the-ghost-cleanup"></a>禁用虚影清除
 
-在具有大量删除记录的高负载系统上，由于页面保留在缓冲池中并生成 IO，虚影清除进程可能会导致性能问题。 在这种情况下，可使用跟踪标志 661 来禁用该进程。 [运行高性能工作负载时的 SQL Server 优化选项](https://support.microsoft.com/help/920093/tuning-options-for-sql-server-when-running-in-high-performance-workloa)中提供关于此操作的详细信息。 但是，禁用该进程会对性能产生影响。
+在具有大量删除记录的高负载系统上，由于页面保留在缓冲池中并生成 IO，虚影清除进程可能会导致性能问题。 在这种情况下，可使用[跟踪标志 661](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 来禁用该进程。 但是，禁用该进程会对性能产生影响。
 
 禁用虚影清除进程可能会导致数据库不必要地增大，并可能导致性能问题。 由于虚影清除进程会删除标记为“虚影”的记录，因此禁用该进程会将这些记录留在页面上，从而阻止 SQL Server 重用此空间。 这转而会强制 SQL Server 将数据添加到新页面，导致数据库文件膨胀，还可能导致[页面拆分](indexes/specify-fill-factor-for-an-index.md)。 在创建执行计划和执行扫描操作时，页面拆分会导致性能问题。 
 

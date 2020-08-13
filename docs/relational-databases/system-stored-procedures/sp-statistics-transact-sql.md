@@ -1,5 +1,5 @@
 ---
-title: sp_statistics （Transact-sql） |Microsoft Docs
+title: sp_statistics (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,11 +18,12 @@ ms.assetid: 0bb6495f-258a-47ec-9f74-fd16671d23b8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0c5e342f64c17919bc370ea1c561ae7ea0f83ff0
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 34d4b7763fd35b2012a90240a4d27fa27018f828
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999872"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173090"
 ---
 # <a name="sp_statistics-transact-sql"></a>sp_statistics (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "85999872"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
   
 sp_statistics [ @table_name = ] 'table_name'    
@@ -44,24 +45,24 @@ sp_statistics [ @table_name = ] 'table_name'
      [ , [ @accuracy = ] 'accuracy' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
 `[ @table_name = ] 'table_name'`指定用于返回目录信息的表。 *table_name* **sysname**，无默认值。 不支持通配符模式匹配。  
   
 `[ @table_owner = ] 'owner'`用于返回目录信息的表的表所有者的名称。 *table_owner*的默认值为**sysname**，默认值为 NULL。 不支持通配符模式匹配。 如果未指定*owner* ，则应用基础 DBMS 的默认表可见性规则。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果当前用户拥有一个具有指定名称的表，则返回该表的索引。 如果未指定*owner* ，并且当前用户没有具有指定*名称*的表，则此过程将查找由数据库所有者拥有的具有指定*名称*的表。 如果存在这样的表，则返回该表的索引。  
   
-`[ @table_qualifier = ] 'qualifier'`表限定符的名称。 *限定符*的值为**sysname**，默认值为 NULL。 各种 DBMS 产品支持表的三部分命名（_限定符_**。**_所有者_**。**_名称_）。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，此参数表示数据库名称。 在某些产品中，该列表示表所在的数据库环境的服务器名。  
+`[ @table_qualifier = ] 'qualifier'`表限定符的名称。 *限定符*的值为**sysname**，默认值为 NULL。 各种 DBMS 产品支持表的三部分命名 (_限定符_**。**_所有者_**。**_名称_) 。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，此参数表示数据库名称。 在某些产品中，该列表示表所在的数据库环境的服务器名。  
   
 `[ @index_name = ] 'index_name'`索引名称。 *index_name*的值为**sysname**，默认值为%。 支持通配符模式匹配。  
   
-`[ @is_unique = ] 'is_unique'`指示是否只返回唯一索引（如果是**Y**）。 *is_unique*为**char （1）**，默认值为**N**。  
+`[ @is_unique = ] 'is_unique'`指示是否只有唯一索引 (要返回的**Y**) 。 *is_unique*为**char (1) **，默认值为**N**。  
   
-`[ @accuracy = ] 'accuracy'`统计信息的基数和页准确性的级别。 *准确性*为**char （1）**，默认值为**Q**。指定**E**以确保统计信息更新，以便基数和页面准确无误。  
+`[ @accuracy = ] 'accuracy'`统计信息的基数和页准确性的级别。 *准确性*为**char (1) **，默认值为**Q**。指定**E**以确保统计信息更新，以便基数和页面准确无误。  
   
- 值**E** （SQL_ENSURE）要求驱动程序无条件检索统计信息。  
+ 值**E** (SQL_ENSURE) 要求驱动程序无条件检索统计信息。  
   
- 值**Q** （SQL_QUICK）要求驱动程序仅在服务器上随时提供基数和页面时才检索它们。 在这种情况下，驱动程序不能保证是最新值。 按照 Open Group 标准编写的应用程序将总是从 ODBC 3.x 兼容驱动程序获得 SQL_QUICK 行为。  
+ 值**Q** (SQL_QUICK) 会要求驱动程序仅在服务器上随时可用时才检索基数和页面。 在这种情况下，驱动程序不能保证是最新值。 按照 Open Group 标准编写的应用程序将总是从 ODBC 3.x 兼容驱动程序获得 SQL_QUICK 行为。  
   
 ## <a name="result-sets"></a>结果集  
   
@@ -73,10 +74,10 @@ sp_statistics [ @table_name = ] 'table_name'
 |**NON_UNIQUE**|**smallint**|NOT NULL。<br /><br /> 0 = 唯一<br /><br /> 1 = 不唯一|  
 |**INDEX_QUALIFIER**|**sysname**|索引所有者名称。 某些 DBMS 产品允许表所有者之外的用户创建索引。 在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，此列始终与**TABLE_NAME**相同。|  
 |**INDEX_NAME**|**sysname**|索引的名称。 该列始终返回值。|  
-|**类型**|**smallint**|此列始终返回值：<br /><br /> 0 = 表的统计信息<br /><br /> 1 = 聚集<br /><br /> 2 = 哈希<br /><br /> 3 = 非聚集|  
+|**TYPE**|**smallint**|此列始终返回值：<br /><br /> 0 = 表的统计信息<br /><br /> 1 = 聚集<br /><br /> 2 = 哈希<br /><br /> 3 = 非聚集|  
 |**SEQ_IN_INDEX**|**smallint**|列在索引中的位置。|  
 |**COLUMN_NAME**|**sysname**|返回的每个**TABLE_NAME**列的列名。 该列始终返回值。|  
-|**归类**|**char （1）**|在排序规则中使用的顺序。 可以是：<br /><br /> A = 升序<br /><br /> D = 降序<br /><br /> NULL = 不适用|  
+|**归类**|**char (1) **|在排序规则中使用的顺序。 可以是：<br /><br /> A = 升序<br /><br /> D = 降序<br /><br /> NULL = 不适用|  
 |**基数**|**int**|表中的行数或索引中的唯一值。|  
 |**页**|**int**|用于存储索引或表的页数。|  
 |**FILTER_CONDITION**|**varchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不返回值。|  
@@ -99,7 +100,7 @@ sp_statistics [ @table_name = ] 'table_name'
 ## <a name="example-sssdwfull-and-sspdw"></a>示例： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  下面的示例返回有关表的信息 `DimEmployee` 。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 EXEC sp_statistics DimEmployee;  

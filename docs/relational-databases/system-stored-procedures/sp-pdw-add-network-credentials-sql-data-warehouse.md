@@ -12,12 +12,12 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: c7be9d3eb55800c2fa5c4f155aff6fd81301490c
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 4a6f551012a744d8659e0f3a4cee83b1fd39fbdf
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197337"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173218"
 ---
 # <a name="sp_pdw_add_network_credentials-sql-data-warehouse"></a>sp_pdw_add_network_credentials (SQL 数据仓库) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "86197337"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpasswordꞌ  
@@ -42,7 +42,7 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpassword�
   
  *target_server_name*定义为 nvarchar (337) 。  
   
- "*user_name*"  
+ 'user_name'  
  指定有权访问目标服务器的 user_name。 如果目标服务器已有凭据，则这些凭据将更新为新凭据。  
   
  *user_name*定义为 nvarchar (513) 。  
@@ -67,7 +67,7 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpassword�
 ### <a name="a-add-credentials-for-performing-a-database-backup"></a>A. 添加用于执行数据库备份的凭据  
  下面的示例将域用户 seattle\david 的用户名和密码凭据与 IP 地址为10.172.63.255 的目标服务器相关联。 用户 seattle\david 对目标服务器具有读/写权限。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]将存储这些凭据，并根据备份和还原操作的需要，使用这些凭据在目标服务器上进行读取和写入。  
   
-```  
+```sql  
 EXEC sp_pdw_add_network_credentials '10.172.63.255', 'seattle\david', '********';  
 ```  
   

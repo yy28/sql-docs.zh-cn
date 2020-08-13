@@ -16,15 +16,15 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 13d5355bd1798af1514d16965059916e42e1ade0
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: dd1359fa3430e45ae54cadacd75f9ee261021b8d
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243750"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173050"
 ---
 # <a name="sp_rxpredict"></a>sp_rxPredict  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly.md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server 2016 Windows only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 为给定输入生成预测值，该输入包含以二进制格式存储在 SQL Server 数据库中的机器学习模型。
 
@@ -38,7 +38,7 @@ ms.locfileid: "87243750"
 sp_rxPredict  ( @model, @input )
 ```
 
-### <a name="arguments"></a>自变量
+### <a name="arguments"></a>参数
 
 **model**
 
@@ -64,7 +64,7 @@ sp_rxPredict  ( @model, @input )
 
 ### <a name="supported-algorithms"></a>支持的算法
 
-若要创建和训练模型，请使用[SQL Server 机器学习服务（r 或 python）](https://docs.microsoft.com/sql/machine-learning/sql-server-machine-learning-services)提供的 R 或 python 支持的算法之一， [SQL Server 2016 R Services](https://docs.microsoft.com/sql/machine-learning/r/sql-server-r-services)、 [SQL Server Machine Learning Server （独立）（R 或 Python）](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone)或[SQL Server 2016 R Server （独立版）](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone?view=sql-server-2016)。
+若要创建和训练模型，请使用支持的 R 或 Python 算法之一， [SQL Server 机器学习服务 (r 或 python) ](https://docs.microsoft.com/sql/machine-learning/sql-server-machine-learning-services)， [SQL Server 2016 R 服务](https://docs.microsoft.com/sql/machine-learning/r/sql-server-r-services)， [SQL Server Machine Learning Server (独立)  (R 或 Python) ](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone)，或[SQL Server 2016 R Server (独立) ](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone?view=sql-server-2016)。
 
 #### <a name="r-revoscaler-models"></a>R： RevoScaleR 模型
 
