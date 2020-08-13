@@ -1,5 +1,6 @@
 ---
 title: XML 编辑器 (SQL Server Management Studio)
+description: 了解如何使用 SQL Server Management Studio XML 编辑器的可视化工具来处理 XML 架构 (XSD)、ADO.NET 数据集和 XML 文档。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ ms.assetid: 0824a5ce-e67b-4b53-98d9-d371faf2d23c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d9b62b35ee3819edcbfcc0fc41f8fa22747d966b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 528293a500c391fa2d7efbcd9fe8a35f6a797f23
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75252934"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87236860"
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>XML 编辑器 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   提供用于处理 XML 架构、ADO.NET 数据集和 XML 文档的一组可视工具。 XML 设计器支持由万维网联合会 (W3C) 定义的 XML 架构定义 (XSD) 语言。 该设计器不支持 DTD（文档类型定义）或其他 XML 架构语言，例如 XDR（XML 数据简化）。  
   
  若要显示该设计器，请向您的项目中添加数据集、XML 架构或 XML 文件，或打开下表中列出的任何类型的文件。  
@@ -35,7 +36,7 @@ ms.locfileid: "75252934"
   
  该设计器提供了以下三种视图（或模式）来处理 XML 文件、XML 架构和数据集：  
   
-|查看|说明|支持的文件类型|  
+|视图|描述|支持的文件类型|  
 |----------|-----------------|--------------------------|  
 |**架构**|用于直观地创建和修改 XML 架构以及 ADO.NET 数据集。|.xsd|  
 |**数据**|用于在结构化数据网格中直观地修改 XML 数据文件。|.xml|  
@@ -82,7 +83,7 @@ ms.locfileid: "75252934"
 ## <a name="data-view"></a>数据视图  
  “数据”视图提供一个可用于修改 .xml 文件的数据网格。 在“数据”视图中只能编辑 XML 文件中的内容（不包括标记和结构）。  
   
- “数据”视图中有两个单独的区域： **“数据表”** 和 **“数据”** 。 “数据表”  区域用于按照嵌套顺序（从最外层到最内层）列出 XML 文件中所定义的关系。 **“数据”** 区域是一个数据网格，会根据“数据表”区域中的所选内容显示数据。  
+ “数据”视图中有两个单独的区域：“数据表”和“数据”。 “数据表”**** 区域用于按照嵌套顺序（从最外层到最内层）列出 XML 文件中所定义的关系。 **“数据”** 区域是一个数据网格，会根据“数据表”区域中的所选内容显示数据。  
   
 > [!NOTE]  
 >  新创建的 XML 文件不包含数据，因此不能在“数据”视图中显示。 另外，有一些 XML 文档实例根本不能调用“数据”视图。 即使系统认为 XML 文件的格式正确，但如果其中的数据不是结构化数据，则在尝试切换到“数据”视图时将生成以下消息：“尽管此文档的格式良好，但它包含了数据视图无法显示的结构”。  

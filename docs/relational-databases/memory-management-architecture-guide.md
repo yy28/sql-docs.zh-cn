@@ -15,12 +15,12 @@ ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12dc8a03cbf65a0c07e9a5985f1ffade813a3e5f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 4681cdb7dbca293501902caec456a3e08eac5ba7
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012143"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243685"
 ---
 # <a name="memory-management-architecture-guide"></a>内存管理体系结构指南
 
@@ -55,7 +55,7 @@ ms.locfileid: "86012143"
 > [!NOTE]
 > 下表包含一个 32 位版本的列，这些版本不再可用。
 
-| |32 位 <sup>1</sup> |64 位|
+|内存策略|32 位 <sup>1</sup> |64 位|
 |-------|-------|-------| 
 |常规内存 |所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本。 最大处理虚拟地址空间限制： <br>- 2 GB<br>- 3 GB，带有 /3gb 引导参数 <sup>2</sup> <br>- 4 GB，在 WOW64 <sup>3</sup>上 |所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本。 最大处理虚拟地址空间限制： <br>- 7 TB，带有 IA64 体系结构（ [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 及更高版本中不支持 IA64）<br>- 操作系统支持的最大值，带有 x64 体系结构 <sup>4</sup>
 |AWE 机制（允许 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在 32 位平台上超过处理虚拟地址空间限制。） |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard、Enterprise 和 Developer 版本：缓冲池支持访问最多 64 GB 的内存。|不适用 <sup>5</sup> |
@@ -121,7 +121,7 @@ ms.locfileid: "86012143"
 |-------|-------|-------|
 |单页分配|否|否，合并到“任意大小”页分配|
 |多页分配|是|否，合并到“任意大小”页分配|
-|CLR 分配|是|是|
+|CLR 分配|是|“是”|
 |线程堆栈内存|是|是|
 |从 Windows 直接分配|是|是|
 

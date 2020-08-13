@@ -8,17 +8,18 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: markingmyname
 ms.author: maghan
 ms.reviewer: carlrab
-ms.date: 05/08/2020
-ms.openlocfilehash: 5ca11e672e91b8d2b8801838c40057d6b2c8fbfd
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.date: 07/22/2020
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || sql-server-previousversions || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 0d4145832aee94a1786308e21ac425081d4d2a88
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151550"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87237848"
 ---
 # <a name="install-sql-server-documentation-to-view-offline-in-ssms"></a>安装 SQL Server 文档以在 SSMS 中进行脱机查看
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 本文介绍如何在 [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) 中下载和查看 SQL Server 脱机内容。 下载脱机内容后，便可在没有 Internet 连接的情况下访问文档（尽管最初下载时还是需要 Internet 连接）。
 
@@ -34,7 +35,7 @@ SQL Server 2012 和更高版本都提供了脱机文档。 虽然可以[联机�
 
 1. 在 SSMS 中，选择“帮助”菜单上的“添加和删除帮助内容”。
 
-   ![帮助查看器中的“添加和删除内容”](../sql-server/media/sql-server-offline-documentation/add-remove-content.png)
+   ![添加和删除帮助内容](../sql-server/media/sql-server-offline-documentation/add-remove-content.png)
 
    帮助查看器随即打开“管理内容”选项卡。
 
@@ -57,6 +58,9 @@ SQL Server 2012 和更高版本都提供了脱机文档。 虽然可以[联机�
    ![SQL Server 2016 丛书已自动更新](../sql-server/media/sql-server-offline-documentation/sql-2016-content.png)
 
 ## <a name="sql-server-2014-offline-content"></a>SQL Server 2014 脱机内容
+
+> [!IMPORTANT]
+> SQL 2014 Transact-SQL 内容只能脱机使用。
 
 以下步骤说明如何加载 SQL Server 2014 的脱机内容。
 
@@ -96,9 +100,6 @@ SQL Server 2012 和更高版本都提供了脱机文档。 虽然可以[联机�
 7. 可以在左侧的内容窗格下搜索“sql server 2014”，验证是否已安装 SQL Server 2014 内容。
 
    ![SQL Server 2014 丛书已自动更新](../sql-server/media/sql-server-offline-documentation/sql-2014-content.png)
-
-> [!Tip]
-> SQL 2014 Transact-SQL 内容只能脱机使用。
 
 ## <a name="sql-server-2012-offline-content"></a>SQL Server 2012 脱机内容
 
@@ -153,7 +154,7 @@ SQL Server 2012 和更高版本都提供了脱机文档。 虽然可以[联机�
 
 帮助查看器随即打开“管理内容”选项卡，并在左窗格中显示已安装的帮助目录。 选择目录中的文章，便可在右窗格显示文章内容。
 
-> [!TIP]
+> [!Important]
 > 如果看不到目录窗格，请在左侧边距上选择“目录”。 选择图钉图标，可使目录窗格保持打开状态。  
 
    ![显示内容的帮助查看器](../sql-server/media/sql-server-offline-documentation/view-offline-all.png)
@@ -170,7 +171,7 @@ SQL Server 2012 和更高版本都提供了脱机文档。 虽然可以[联机�
 
 如需详细了解存档内容和帮助查看器，请参考下面的链接。
 
-- [SQL Server 文档](../sql-server/index.yml?view=sql-server-2016)
-- [SQL Server 2014 文档](../2014/database-engine/install-windows/installation-for-sql-server.md)
-- [SQL Server 早期版本文档](https://docs.microsoft.com/previous-versions/sql/)
+- [SQL Server 联机文档](../sql-server/index.yml?view=sql-server-2016)
+- [SQL Server 2014 联机文档](/sql/2014-toc/)
+- [SQL Server 早期版本联机文档](previous-versions-sql-server.md)
 - [SQL 文档的版本控制系统](../sql-server/versioning-system-monikers-ui-sql-server.md?view=sql-server-2016)

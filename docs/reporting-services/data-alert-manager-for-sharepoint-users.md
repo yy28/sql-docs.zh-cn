@@ -1,5 +1,6 @@
 ---
 title: 适用于 SharePoint 用户的数据警报管理器 | Microsoft Docs
+description: 了解 Reporting Services 如何为 SharePoint 信息工作者提供了数据警报管理器以便管理数据警报。
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ ms.assetid: 7b9281c8-2f8b-48f7-85d8-7a7a596e3c82
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0c0e6085ec4e922619c4f2595c63751e82c5a50a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dbb1dda8e708d08fae32e920406ea2b60fa39496
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571489"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243278"
 ---
 # <a name="data-alert-manager-for-sharepoint-users"></a>SharePoint 用户的数据警报管理器
 
@@ -42,13 +43,13 @@ ms.locfileid: "65571489"
 >  在您可以使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 警报功能之前，管理员必须向您授予权限。 有关所需权限的信息，请参阅 [Reporting Services 数据警报](../reporting-services/reporting-services-data-alerts.md)。  
   
 ##  <a name="view-data-alert-information"></a><a name="ViewingAlerts"></a> 查看数据警报信息  
- 您可以查看在数据警报设计器中创建的数据警报列表。 若要打开数据警报管理器，请右键单击发布到 SharePoint 库的报表。 下图显示了报表右键单击菜单中的“管理数据警报”选项。   
+ 您可以查看在数据警报设计器中创建的数据警报列表。 若要打开数据警报管理器，请右键单击发布到 SharePoint 库的报表。 下图显示了报表右键单击菜单中的“管理数据警报”选项。  
   
  ![从报表上下文菜单打开警报管理器](../reporting-services/media/rs-openalertmanager.gif "从报表上下文菜单打开警报管理器")  
   
  数据警报管理器包括一个表，该表列出警报名称、报表名称、警报定义创建者的姓名、发送警报消息的数目、上次运行警报的时间、上次修改警报定义的时间以及最新警报消息的状态。 如果无法生成或发送警报消息，则状态列将包含有关该错误的信息并且帮助您纠正该警报问题。 有关详细信息，请参阅 [在数据警报管理器中管理我的数据警报](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)。  
   
- 下表在数据警报管理器中显示某个表中的示例数据。 发生错误时，错误消息和日志中条目的标识符 (GUID) 包含在表的“状态”字段中  。  
+ 下表在数据警报管理器中显示某个表中的示例数据。 发生错误时，错误消息和日志中条目的标识符 (GUID) 包含在表的“状态”字段中****。  
   
 |警报名称|报表名称|创建者|发送的警报数|上次运行时间|上次修改时间|状态|  
 |----------------|-----------------|----------------|-----------------|--------------|-------------------|------------|  
@@ -64,7 +65,7 @@ ms.locfileid: "65571489"
   
   
 ##  <a name="edit-data-alerts"></a><a name="EditAlerts"></a> 编辑数据警报  
- 作为信息工作者，从数据警报管理器中打开您的警报定义以便编辑。 您可以编辑您创建的警报定义，但无法编辑其他人创建的警报定义。 右键单击警报定义并单击“编辑”时，“数据警报设计器”随即打开，其中将显示警报定义  。 有关详细信息，请参阅 [数据警报设计器](../reporting-services/data-alert-designer.md) 和 [在警报设计器中编辑数据警报](../reporting-services/edit-a-data-alert-in-alert-designer.md)。  
+ 作为信息工作者，从数据警报管理器中打开您的警报定义以便编辑。 您可以编辑您创建的警报定义，但无法编辑其他人创建的警报定义。 右键单击警报定义并单击“编辑”时，“数据警报设计器”随即打开，其中将显示警报定义。 有关详细信息，请参阅 [数据警报设计器](../reporting-services/data-alert-designer.md) 和 [在警报设计器中编辑数据警报](../reporting-services/edit-a-data-alert-in-alert-designer.md)。  
   
   
 ##  <a name="run-data-alerts"></a><a name="RunAlerts"></a> 运行数据警报  

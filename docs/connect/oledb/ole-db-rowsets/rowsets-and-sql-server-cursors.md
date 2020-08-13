@@ -1,5 +1,5 @@
 ---
-title: 行集和 SQL Server 游标 | Microsoft Docs
+title: 行集和 SQL Server 游标（OLE DB 驱动程序）
 description: 行集和 SQL Server 游标
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - cursors [OLE DB]
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 9ba062c9718203c52659dd0c35fa7bcb76b1a40c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4c87699f389d487354b562fafa8cfab378c2ff0d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67994185"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244148"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>行集和 SQL Server 游标
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -77,7 +77,7 @@ ms.locfileid: "67994185"
 |DBPROP_IMMOBILEROWS|VARIANT_FALSE|无法通过行集更新 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据。 行集只支持向前滚动。 支持相对行定位。 如果针对被引用的列存在索引，则命令文本可以包括 ORDER BY 子句。<br /><br /> DBPROP_IMMOBILEROWS 仅在可以显示由其他会话的命令或由其他用户插入的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 行的行集中可用。 如果试图在其 DBPROP_OTHERINSERT 不能是 VARIANT_TRUE 的任何行集上打开一个该属性设置为 VARIANT_FALSE 的行集，将导致错误。|  
 |DBPROP_REMOVEDELETED|VARIANT_TRUE|无法通过行集更新 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据。 行集只支持向前滚动。 支持相对行定位。 除非受另一个属性约束，否则命令文本可以包含 ORDER BY 子句。|  
   
- 通过 IOpenRowset::OpenRowset 方法，可在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 基表或视图上轻松创建服务器游标支持的 SQL Server OLE DB 驱动程序行集  。 按名称指定表或视图，同时在 rgPropertySets 参数中传递所需的行集属性集  。  
+ 通过 IOpenRowset::OpenRowset 方法，可在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 基表或视图上轻松创建服务器游标支持的 OLE DB Driver for SQL Server 行集。 按名称指定表或视图，同时在 rgPropertySets 参数中传递所需的行集属性集  。  
   
  当使用者需要服务器游标支持行集时，创建行集的命令文本将受到限制。 具体来说，命令文本只能是返回单个行集结果的单个 SELECT 语句，或实现返回单个行集结果的单个 SELECT 语句的存储过程。  
   
@@ -145,12 +145,12 @@ ms.locfileid: "67994185"
   
  对于一组特定的行集属性，将按如下方式确定选择的游标模型。  
   
- 从这组指定的行集属性，获得在以前的表中列出的属性的子集。 根据每个行集属性的必需（T、F）或可选 (-) 标志值，将这些属性划分到两个子组中。 对于每个游标模型，从第一个表开始，并从左向右移动，将两个子组中属性的值与相应列中相应属性的值进行比较。 将选择与必需的属性完全匹配以及与可选的属性有最少不匹配数的游标模型。 如果有多个游标模型，则选择最左侧的游标模型。  
+ 从这组指定的行集属性，获得在以前的表中列出的属性的子集。 根据每个行集属性的必需（T、F）或可选 (-) 标志值，将这些属性划分到两个子组中。 对于每个游标模型，从第一个表开始，并从左向右移动。 将两个子组中属性的值与相应列中相应属性的值进行比较。 将选择与必需的属性完全匹配以及与可选的属性有最少不匹配数的游标模型。 如果有多个游标模型，则选择最左侧的游标模型。  
   
 ## <a name="sql-server-cursor-block-size"></a>SQL Server 游标块大小  
- 当 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 游标支持适用于 SQL Server 的 OLE DB 驱动程序行集时，游标块大小由 IRowset::GetNextRows 或 IRowsetLocate::GetRowsAt 方法的行控点数组参数中的元素数量进行定义   。 该数组中的控点指示的行是游标块的成员。  
+ 当 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 游标支持 OLE DB Driver for SQL Server 行集时，游标块大小由 IRowset::GetNextRows 或 IRowsetLocate::GetRowsAt 方法的行控点数组参数中的元素数量进行定义 。 该数组中的控点指示的行是游标块的成员。  
   
- 对于支持书签的行集，游标块的成员由通过 IRowsetLocate::GetRowsByBookmark 方法检索到的行控点进行定义  。  
+ 对于支持书签的行集，游标块的成员由通过 IRowsetLocate::GetRowsByBookmark 方法检索到的行控点进行定义。  
   
  不管使用什么方法填充行集和形成 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 游标块，游标块都会处于活动状态，直至对行集执行下一个行提取方法。  
   

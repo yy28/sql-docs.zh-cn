@@ -1,7 +1,8 @@
 ---
 title: 配置 Windows 防火墙
+description: 了解如何将 Windows 防火墙配置为允许通过防火墙访问 SQL Server 的实例。
 ms.custom: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 07/22/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -20,17 +21,17 @@ helpviewer_keywords:
 - ports [SQL Server], TCP
 - netsh to open firewall ports
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: f2e73d6acd17e3a77802ecde712a2e18c7d66846
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dce5cf7e83be47bda2bcfef17b4602eb5f2fb49e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528786"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87238354"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 防火墙系统有助于阻止对计算机资源进行未经授权的访问。 如果防火墙已打开但却未正确配置，则可能会阻止连接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
@@ -182,7 +183,7 @@ ms.locfileid: "81528786"
 |-------------|----------|--------------|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] 远程过程调用 (MS RPC)<br /><br /> 由 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 运行时使用。|TCP 端口 135<br /><br /> 请参阅 [端口 135 的特殊注意事项](#BKMK_port_135)|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务在端口 135 上使用 DCOM。 服务控制管理器使用端口 135 执行诸如启动和停止 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务以及将控制请求传送到正在运行的服务等任务。 此端口号无法更改。<br /><br /> 仅当从 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 或自定义应用程序连接到远程 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 服务实例时，才需要打开此端口。|  
   
-有关为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 配置 Windows 防火墙的分步说明，请参阅 [Integration Services 服务 (SSIS 服务)](../../integration-services/service/configure-a-windows-firewall-for-access-to-the-ssis-service.md?view=sql-server-2014)。  
+有关为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 配置 Windows 防火墙的分步说明，请参阅 [Integration Services 服务 (SSIS 服务)](/previous-versions/sql/sql-server-2012/ms137861(v=sql.110))。  
   
 ###  <a name="additional-ports-and-services"></a><a name="BKMK_additional_ports"></a> 其他端口和服务  
 下表列出了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能依赖的一些端口和服务。  

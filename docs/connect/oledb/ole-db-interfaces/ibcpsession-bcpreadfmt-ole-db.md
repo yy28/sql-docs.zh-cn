@@ -1,5 +1,5 @@
 ---
-title: IBCPSession::BCPReadFmt (OLE DB) | Microsoft Docs
+title: IBCPSession::BCPReadFmt（OLE DB 驱动程序）| Microsoft Docs
 description: 使用 IBCPSession::BCPReadFmt 从格式化文件中读取数据 (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - BCPReadFmt method
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 97274315275f11e77c458827740f44906a524ed9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e8df0e8b64795414734c93512a17951f8867c3a8
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015497"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244583"
 ---
 # <a name="ibcpsessionbcpreadfmt-ole-db"></a>IBCPSession::BCPReadFmt (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

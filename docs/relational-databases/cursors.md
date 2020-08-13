@@ -1,5 +1,5 @@
 ---
-title: 游标 | Microsoft Docs
+title: 游标 (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/11/2020
 ms.prod: sql
@@ -19,14 +19,14 @@ ms.assetid: e668b40c-bd4d-4415-850d-20fc4872ee72
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b8a589358edabaf25e3dfcadf9395e7771a965c5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d4bec8b13cd060801e99e4c6cb842c2b0f38c25e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733915"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87236070"
 ---
-# <a name="cursors"></a>游标
+# <a name="sql-server-cursors"></a>SQL Server 游标
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
   关系数据库中的操作会对整个行集起作用。 例如，由 `SELECT` 语句返回的行集包括满足该语句的 `WHERE` 子句中条件的所有行。 这种由语句返回的完整行集称为结果集。 应用程序，特别是交互式联机应用程序，并不总能将整个结果集作为一个单元来有效地处理。 这些应用程序需要一种机制以便每次处理一行或一部分行。 游标就是提供这种机制的对结果集的一种扩展。  
   

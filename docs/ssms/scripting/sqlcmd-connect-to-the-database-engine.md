@@ -1,5 +1,6 @@
 ---
 title: 使用 sqlcmd 连接到数据库引擎
+description: 了解如何选择 sqlcmd 用来与 SQL Server 通信的协议。 选项包括：TCP/IP、命名管道和共享内存。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +19,15 @@ ms.assetid: 74b0fb71-7f8e-4171-9431-d07528532524
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b286c817895cf45c2cdffbb75ef3ccf83fd01ccd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9b64449cb8e63b4295d86023c60cd51cec50084e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243484"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243558"
 ---
 # <a name="sqlcmd---connect-to-the-database-engine"></a>sqlcmd - 连接到数据库引擎
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持客户端使用 TCP/IP 网络协议（默认）和命名管道协议进行通信。 如果客户端正在连接到同一计算机上的[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例，则还可使用 Shared Memory 协议。 通常有三种选择协议的方法。 **sqlcmd** 实用工具使用的协议按下列顺序确定：  
   
 -   **sqlcmd** 使用为连接字符串中指定的协议，如下所述。  

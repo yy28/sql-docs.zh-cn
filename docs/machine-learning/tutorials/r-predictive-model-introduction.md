@@ -8,40 +8,40 @@ ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/26/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 237b8d5ac797b6e17a48bde2fff12de55844755e
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 6114ae9acf3ecdf8444dd6aec657d5c293fc4dae
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83607140"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242304"
 ---
-# <a name="tutorial-prepare-data-to-train-a-predictive-model-in-r-with-sql-machine-learning"></a>教程：准备数据以通过 SQL 机器学习在 R 中训练预测模型。
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="tutorial-develop-a-predictive-model-in-r-with-sql-machine-learning"></a>教程：通过 SQL 机器学习在 R 中开发预测模型
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 此系列教程由四个部分组成。你将在 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)中或[大数据群集](../../big-data-cluster/machine-learning-services.md)上使用 R 和一个机器学习模型来预测雪橇租赁次数。
 ::: moniker-end
-
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 此系列教程由四个部分组成。你将在 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)中使用 R 和一个机器学习模型来预测雪橇租赁次数。
 ::: moniker-end
-
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 此系列教程由四个部分组成。你将在 [SQL Server R Services](../r/sql-server-r-services.md) 中使用 R 和一个机器学习模型来预测雪橇租赁次数。
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+此系列教程由四个部分组成。你将在 [Azure SQL 托管实例机器学习服务](/azure/azure-sql/managed-instance/machine-learning-services-overview)中使用 R 和一个机器学习模型来预测雪橇租赁次数。
 ::: moniker-end
 
 假设你有一家雪橇租赁公司，你希望预测未来某个日期的雪橇租赁次数。 此信息可帮助你准备好库存、人员和设施。
 
-在本系列的第一部分，你将设置必备组件。 在第二和第三部分，你将在某个笔记本中开发一些 R 脚本，以准备数据并训练机器学习模型。 然后，在第三部分，你将使用 T-SQL 存储过程在 SQL Server 中运行这些 R 脚本。
+在本系列的第一部分，你将设置必备组件。 在第二和第三部分，你将在某个笔记本中开发一些 R 脚本，以准备数据并训练机器学习模型。 然后，在第三部分中，将使用 T-SQL 存储过程在数据库中运行这些 R 脚本。
 
 本文将指导如何进行以下操作：
 
 > [!div class="checklist"]
-> * 将示例数据库还原成 SQL Server 
+> * 还原示例数据库 
 
 在[第二部分](r-predictive-model-prepare-data.md)中，你将了解如何将数据从数据库加载到 Python 数据帧中，并在 R 中准备数据。
 
@@ -54,9 +54,16 @@ ms.locfileid: "83607140"
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 * SQL Server 机器学习服务 — 有关如何安装机器学习服务的信息，请参阅 [Windows 安装指南](../install/sql-machine-learning-services-windows-install.md)或 [Linux 安装指南](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)。 还可以[启用 SQL Server 大数据群集上的机器学习服务](../../big-data-cluster/machine-learning-services.md)。
 ::: moniker-end
-
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 * SQL Server 机器学习服务 - 有关如何安装机器学习服务的信息，请参阅 [Windows 安装指南](../install/sql-machine-learning-services-windows-install.md)。 
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+* SQL Server 2016 R Services。 有关如何安装 R Services 的信息，请参阅 [Windows 安装指南](../install/sql-r-services-windows-install.md)。 
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+* Azure SQL 托管实例机器学习服务。 有关如何注册的说明，请参阅 [Azure SQL 托管实例机器学习服务概述](/azure/azure-sql/managed-instance/machine-learning-services-overview)。
+
+* 用于将示例数据库还原到 Azure SQL 托管实例的 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)。
 ::: moniker-end
 
 * R IDE - 此教程使用 [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/)。
@@ -74,6 +81,7 @@ ms.locfileid: "83607140"
 > 如果在大数据群集上使用机器学习服务，请了解如何[将数据库还原成 SQL Server 大数据群集主实例](../../big-data-cluster/data-ingestion-restore-database.md)。
 ::: moniker-end
 
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 1. 下载文件 [TutorialDB.bak](https://sqlchoice.blob.core.windows.net/sqlchoice/static/TutorialDB.bak)。
 
 1. 使用以下详细信息，按 Azure Data Studio 中[从备份文件还原数据库](../../azure-data-studio/tutorial-backup-restore-sql-server.md#restore-a-database-from-a-backup-file)中的说明操作：
@@ -87,20 +95,32 @@ ms.locfileid: "83607140"
    USE TutorialDB;
    SELECT * FROM [dbo].[rental_data];
    ```
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+1. 下载文件 [TutorialDB.bak](https://sqlchoice.blob.core.windows.net/sqlchoice/static/TutorialDB.bak)。
 
-1. 通过运行以下 SQL 命令来启用外部脚本：
+1. 使用以下详细信息，按 SQL Server Management Studio 中的说明[将数据库还原到托管实例](/azure/sql-database/sql-database-managed-instance-get-started-restore)：
 
-    ```sql
-    sp_configure 'external scripts enabled', 1;
-    RECONFIGURE WITH override;
-    ```
+   * 从下载的 **TutorialDB.bak** 文件中导入
+   * 将目标数据库命名为“TutorialDB”
 
+1. 可以通过查询 dbo.rental_data 表来验证是否存在还原的数据集：
+
+   ```sql
+   USE TutorialDB;
+   SELECT * FROM [dbo].[rental_data];
+   ```
+::: moniker-end
+
+## <a name="clean-up-resources"></a>清理资源
+
+如果不打算继续学习本教程，请删除 TutorialDB 数据库。
 ## <a name="next-steps"></a>后续步骤
 
 在本系列教程的第一部分中，你已完成以下步骤：
 
 * 安装必备组件
-* 将示例数据库还原成 SQL Server
+* 还原示例数据库
 
 若要为机器学习模型准备数据，按本系列教程的第二部分进行操作：
 

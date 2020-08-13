@@ -1,5 +1,6 @@
 ---
 title: 第 2 课：修改报表数据源属性 | Microsoft Docs
+description: 了解如何使用 Web 门户来选择要传递给收件人的报表，以及如何修改报表数据源属性。
 ms.date: 05/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,33 +9,33 @@ ms.topic: conceptual
 ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 466415ebd4075afd5dda83e95a498a32b50af453
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1b45f2145efcca54d577db370b436e27c36ce987
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62651706"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87235663"
 ---
-# <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
+# <a name="lesson-2-modifying-the-report-data-source-properties"></a>第 2 课：修改报表数据源属性
 在此 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 教程课程中，你会使用 Web 门户来选择要传递给收件人的报表。 你将定义的数据驱动订阅将分发在 **创建基本表报表（SSRS 教程）** 教程中创建的 [创建基本表报表（SSRS 教程）](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)报表。  在接下来的步骤中，将修改此报表使用的数据源连接信息，以获取数据。 只有使用 **已存储凭据** 访问报表数据源的报表才能通过数据驱动订阅进行分发。 已存储凭据是处理无人参与的报表所必需的。  
   
 您还将修改数据集和报表以便使用参数来筛选 `[Order]` 上的报表，这样，订阅可为特定的顺序和呈现格式输出不同的报表实例。  
   
 ## <a name="to-modify-the-data-source-to-use-stored-credentials"></a><a name="bkmk_modify_datasource"></a>修改数据源以使用存储的凭据  
   
-1.  使用管理员权限浏览到 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 门户，例如，右键单击 Internet Explorer 图标，然后单击“以管理员身份运行”  。  
+1.  使用管理员权限浏览到 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 门户，例如，右键单击 Internet Explorer 图标，然后单击“以管理员身份运行”。  
  
 2.    浏览到 Web 门户 URL。  例如：   
-    `https://<server name>/reports` 列中的一个值匹配。  
+    `https://<server name>/reports`.  
     `https://localhost/reports`
- **注意：** Web 门户 URL 为“Reports”而非“Reportserver”的报表服务器 URL   。  
+ **注意：** Web 门户 URL 为“Reports”而非“Reportserver”的报表服务器 URL 。  
 3.  浏览到包含 **Sales Orders** 报表的文件夹，在该报表的上下文菜单中，单击 **“管理”** 。  
  
  ![ssrs_tutorial_datadriven_manage_report](../reporting-services/media/ssrs-tutorial-datadriven-manage-report.png)
   
-3.  在左窗格中单击“数据源”  。  
+3.  在左窗格中单击“数据源”。  
   
-4.  验证“连接类型”是否为“Microsoft SQL Server”   。  
+4.  验证“连接类型”是否为“Microsoft SQL Server” 。  
   
 5.  验证是否连接字符串如下所示并且它假定示例数据库位于本地数据库服务器上：  
   
@@ -42,23 +43,23 @@ ms.locfileid: "62651706"
     Data source=localhost; initial catalog=AdventureWorks2014  
     ```  
   
-6.  单击“使用以下凭据”  。  
+6.  单击“使用以下凭据”。  
   
-7. 在“凭据类型”中，选择“Windows 用户名和密码”  
+7. 在“凭据类型”中，选择“Windows 用户名和密码” 
 8. 输入用户名（使用 *domain\user* 格式）和密码。 如果你没有访问 AdventureWorks2014 数据库的权限，请指定具有此权限的登录名。  
     
 9. 若要验证是否能连接到数据源，请单击 **“测试连接”** 。  
   
-10. 单击“保存”  。
-11. 单击“取消”   
+10. 单击“ **保存**”。
+11. 单击“取消”  
   
-11. 查看报表以验证报表是否以指定的凭据运行。 。  
+11. 查看报表以验证报表是否以指定的凭据运行。 .  
   
 ## <a name="to-modify-the-adventureworksdataset"></a><a name="bkmk_modify_dataset"></a>修改 AdventureWorksDataset  
  在以下步骤中，你将修改数据集以使用参数基于订单号筛选数据集。
 1.  打开 **Sales Orders** 报表 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]  
   
-2.  右键单击数据集 `AdventureWorksDataset`，然后单击“数据集属性”  。  
+2.  右键单击数据集 `AdventureWorksDataset`，然后单击“数据集属性”。  
     ![ssrs_tutorial_datadriven_datasetproperties](../reporting-services/media/ssrs-tutorial-datadriven-datasetproperties.png)  
 3.  将语句 `WHERE (UPPER(SalesOrderNumber) =UPPER(@OrderNumber) or  @OrderNumber IS NULL)` 添加到 `Group By` 语句之前。 完整查询语法如下所示：  
   
@@ -83,35 +84,35 @@ ms.locfileid: "62651706"
  在以下步骤中，你将向报表添加一个参数。  该报表参数会馈送数据集参数。 
 ## <a name="to-add-a-report-parameter-and-republish-the-report"></a><a name="bkmk_add_reportparameter"></a>添加报表参数并重新发布报表  
   
-1.  在“报表数据”  窗格中，展开参数文件夹，然后双击“Ordernumber”  参数。  它在上一步中向数据集添加参数时自动创建。 单击“新建”  ，然后单击“参数...”   
+1.  在“报表数据”窗格中，展开参数文件夹，然后双击“Ordernumber”参数。  它在上一步中向数据集添加参数时自动创建。 单击“新建”，然后单击“参数...”  
  ![ssrs_tutorial_datadriven_parameter](../reporting-services/media/ssrs-tutorial-datadriven-parameter.png) 
-2.  验证“名称”  是否为 `OrderNumber`。  
+2.  验证“名称”是否为 `OrderNumber`。  
   
 3.  验证“提示”是否为 `OrderNumber`。  
   
-4.  选择“允许空值("")”  。  
+4.  选择“允许空值("")”。  
   
 5.  选择 **“允许 Null 值”** 。  
   
-6.  单击“确定”。   
+6.  单击“确定”。  
   
-7.  单击“预览”选项卡以运行报表  。 请注意报表顶部的参数输入框。 可以：  
+7.  单击“预览”选项卡以运行报表。 请注意报表顶部的参数输入框。 可以：  
   
     -   在不使用参数的情况下单击“查看报表”以便看到完整的报表。  
   
-    -   取消选择“Null”  选项并输入订单号，例如 so71949  ，然后单击“查看报表”  以便只在报表中查看这一个订单。  
+    -   取消选择“Null”**** 选项并输入订单号，例如 so71949**，然后单击“查看报表”**** 以便只在报表中查看这一个订单。  
     ![ssrs_tutorial_datadriven_reportviewer_parameter](../reporting-services/media/ssrs-tutorial-datadriven-reportviewer-parameter.png) 
  
   
 ## <a name="re-deploy-the-report"></a><a name="bkmk_redeploy"></a>重新部署报表  
   
-1.  重新部署报表，以便下一课程中的订阅配置可利用您在本课程中进行的更改。 有关在表教程中使用的项目属性的详细信息，请参阅[第 6 课：添加分组和总计 (Reporting Services)](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md) 中的“将报表发布到报表服务器（可选）”部分。  
+1.  重新部署报表，以便下一课程中的订阅配置可利用您在本课程中进行的更改。 有关在表教程中使用的项目属性的详细信息，请参阅以下课程中的“将报表发布到报表服务器（可选）”部分：[第 6 课：添加分组和总计 &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)。  
   
 2.  在工具栏上，单击 **“生成”** ，然后单击 **“部署教程”** 。  
   
 ## <a name="next-steps"></a>后续步骤  
 + 你已成功地将报表配置为使用已存储凭据获取数据，并且可以使用参数筛选数据。 
-+ 在下一课中，你会使用 Web 门户“数据驱动订阅”页来配置订阅。 请参阅 [第 3 课：定义数据驱动订阅](../reporting-services/lesson-3-defining-a-data-driven-subscription.md)。  
++ 在下一课中，你会使用 Web 门户“数据驱动订阅”页来配置订阅。 请参阅[第 3 课：定义数据驱动订阅](../reporting-services/lesson-3-defining-a-data-driven-subscription.md)。  
   
 ## <a name="see-also"></a>另请参阅  
 [管理报表数据源](../reporting-services/report-data/manage-report-data-sources.md)  

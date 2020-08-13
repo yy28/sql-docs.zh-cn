@@ -1,5 +1,6 @@
 ---
 title: ATOM 设备信息设置 | Microsoft Docs
+description: 了解 Atom 呈现扩展插件的设备信息设置，该插件支持 Atom 馈送名称和要用的字符编码的提交。
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: fe4a56a4-5552-423c-85c1-895e2e212fee
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b2d04fae8687e31df79d72aec2b41bfe67cc1cc3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 274815c98aa15aead103e33de761b8b496212242
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65504111"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242497"
 ---
 # <a name="atom-device-information-settings"></a>ATOM 设备信息设置
   用于 Atom 呈现扩展插件的设备信息设置支持要使用的 Atom 馈送和字符编码的名称的提交。  

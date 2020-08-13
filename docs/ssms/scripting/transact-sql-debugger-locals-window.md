@@ -1,5 +1,6 @@
 ---
 title: “局部变量”窗口
+description: 了解如何使用 Transact-SQL 调试器的“局部变量”窗口显示和修改当前调用堆栈帧中的表达式。
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -13,16 +14,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 70ee1eee120c94e7f851bc37c3becf1983a57d09
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 00c6704418210c0913470688ae4c8d7a55facaf4
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253055"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243734"
 ---
 # <a name="transact-sql-debugger---locals-window"></a>Transact-SQL 调试器 -“局部变量”窗口
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 **“局部变量”** 窗口显示有关 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器的当前作用域中局部表达式的信息。 此作用域设定为在 **“调用堆栈”** 窗口中选择的当前调用堆栈帧。 只有在调试模式下才可以显示局部表达式。  
 
@@ -36,7 +37,7 @@ ms.locfileid: "75253055"
   
  **更改表达式的值**  
   
--   右键单击表达式，然后选择“编辑值”  。  
+-   右键单击表达式，然后选择“编辑值”。  
   
 ## <a name="columns"></a>列  
  **名称**  
@@ -49,7 +50,7 @@ ms.locfileid: "75253055"
   
  **“值”** 单元格中的放大镜图标指示 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器可视化工具可用。 在该列表中，可以指定 **“文本可视化工具”** 、 **“XML 可视化工具”** 或 **“HTML 可视化工具”** 。 若要启动调试器可视化工具，请单击此放大镜图标。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器将打开一个对话框，该对话框以适合相应数据类型的格式显示这些数据。  
   
- 类型   
+ 类型  
  显示表达式的数据类型。  
   
 ## <a name="see-also"></a>另请参阅  

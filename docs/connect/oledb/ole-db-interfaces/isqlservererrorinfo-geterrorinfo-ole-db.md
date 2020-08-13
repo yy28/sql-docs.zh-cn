@@ -1,5 +1,5 @@
 ---
-title: ISQLServerErrorInfo::GetErrorInfo (OLE DB) | Microsoft Docs
+title: ISQLServerErrorInfo::GetErrorInfo（OLE DB 驱动程序）| Microsoft Docs
 description: ISQLServerErrorInfo::GetErrorInfo (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,19 +15,19 @@ helpviewer_keywords:
 - GetErrorInfo method
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 54e9c71ca21647004ea3899306dcb15689dcc3d0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 89a6bab95fa43deb3536e25a7cb99610413b1848
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015440"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244438"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>ISQLServerErrorInfo::GetErrorInfo (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  返回指向包含 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 错误详细信息的 OLE DB Driver for SQL Server SSERRORINFO 结构的指针。  
+  返回一个指针，该指针指向包含 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 错误详细信息的 OLE DB Driver for SQL Server SSERRORINFO 结构。  
   
  OLE DB Driver for SQL Server 定义了 ISQLServerErrorInfo  错误接口。 此接口从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 错误返回详细信息，包括其严重性和状态。  
 

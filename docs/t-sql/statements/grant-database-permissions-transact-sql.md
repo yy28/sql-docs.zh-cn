@@ -20,12 +20,12 @@ ms.assetid: 499e5ed6-945c-4791-ab45-68dec0b9c289
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c421a03bfbafbe8d734ad6d3174e3ea20834606
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 5aca8d2f5135400c80c5943455237c066a7ba424
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86482920"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87236687"
 ---
 # <a name="grant-database-permissions-transact-sql"></a>GRANT 数据库权限 (Transact-SQL)
 
@@ -63,9 +63,9 @@ permission | ALL [ PRIVILEGES ]
 
 permission 指定可对数据库授予的权限。 有关权限的列表，请参阅本主题后面的“备注”部分。
 
-ALL 该选项并不授予全部可能的权限。 授予 ALL 等同于授予下列权限：BACKUP DATABASE、BACKUP LOG、CREATE DATABASE、CREATE DEFAULT、CREATE FUNCTION、CREATE PROCEDURE、CREATE RULE、CREATE TABLE 和 CREATE VIEW。
+ALL 该选项并不授予全部可能的权限。 授予 ALL 等同于授予下列权限：BACKUP DATABASE、BACKUP LOG、CREATE DEFAULT、CREATE FUNCTION、CREATE PROCEDURE、CREATE RULE、CREATE TABLE 和 CREATE VIEW。
 
-PRIVILEGES 包含此参数是为了符合 ISO 标准。 请不要更改 ALL 的行为。
+包含 PRIVILEGES 是为了符合 ANSI-92 标准。 请不要更改 ALL 的行为。
 
 WITH GRANT OPTION 指示该主体还可以向其他主体授予所指定的权限。
 

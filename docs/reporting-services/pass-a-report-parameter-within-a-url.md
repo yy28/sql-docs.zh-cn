@@ -1,5 +1,6 @@
 ---
 title: 在 URL 内传递报表参数 | Microsoft Docs
+description: 了解如何通过在报表 URL 中包含报表参数，将它们直接传递到报表处理引擎。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 551fc19b3d39ef6cf12c5fdd4e77196b0abbb9fe
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2eca700dbe01abdb94ff2b60763db840fc4f3d53
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580840"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242927"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>Pass a Report Parameter Within a URL
   您可以通过在报表 URL 中包含报表参数，将它们传递到报表。 这些 URL 参数不带前缀，因为它们被直接传递到报表处理引擎。  
@@ -27,7 +28,7 @@ ms.locfileid: "65580840"
 > [!IMPORTANT]  
 >  非常重要的一点是，URL 包括用于通过 SharePoint 和 `_vti_bin` HTTP 代理路由请求的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 代理语法。 该代理会向 HTTP 请求中添加某一上下文，该上下文是确保为 SharePoint 模式报表服务器正确执行报表所需要的。  
 >   
->  如果不包含代理语法，则需要给参数加上前缀 rp:  。  
+>  如果不包含代理语法，则需要给参数加上前缀 rp:。  
   
  所有查询参数都可具有对应的报表参数。 通过传递相应报表参数将查询参数传递给报表。 有关详细信息，请参阅[在关系查询设计器中生成查询（报表生成器和 SSRS）](../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)。  
   
@@ -100,7 +101,7 @@ https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/fold
 https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/folder123/team+project+report&teamgrouping2=xgroup&teamgrouping1=ygroup&OrderID=747&OrderID=787&OrderID=12  
 ```  
   
- 以下 URL 示例为本机模式报表服务器传递单个参数 SellStartDate，其值为“7/1/2005”  。  
+ 以下 URL 示例为本机模式报表服务器传递单个参数 SellStartDate，其值为“7/1/2005”。  
   
 ```  
 https://myserver/ReportServer/Pages/ReportViewer.aspx?%2fProduct_and_Sales_Report_AdventureWorks&SellStartDate=7/1/2005  

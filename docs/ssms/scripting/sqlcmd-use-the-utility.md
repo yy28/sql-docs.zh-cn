@@ -1,5 +1,6 @@
 ---
 title: 使用 sqlcmd 实用工具
+description: 了解如何使用 sqlcmd 实用工具实现 Transact-SQL 语句和脚本的临时、交互执行，以及 Transact-SQL 脚本撰写任务的自动执行。
 ms.custom: seo-lt-2019
 ms.date: 06/06/2017
 ms.prod: sql
@@ -17,18 +18,18 @@ ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e41a75e543c325dce4353a512a8396887fe853c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0bd8f259e253083627a32f6f8a8b25b95c9159e5
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79090598"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87237648"
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd - 使用实用工具
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   **sqlcmd** 实用工具是一个命令行实用工具，用于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句和脚本的临时、交互执行以及自动执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本撰写任务。 若要以交互方式使用 **sqlcmd** ，或要生成可使用 **sqlcmd**运行的脚本文件，用户需要了解 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 通常以下列方式使用 **sqlcmd** 实用工具：  
   
--   用户输入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，输入方式与在命令提示符下输入的方式类似。 结果将显示在命令提示符处。 若要打开命令提示符窗口，请在 Windows 搜索中输入“cmd”，然后单击“命令提示符”将其打开  。 在命令提示符处，键入 **sqlcmd** ，后面跟随所需的选项列表。 有关 **sqlcmd**支持的选项的完整列表，请参阅 [sqlcmd 实用工具](../../tools/sqlcmd-utility.md)。  
+-   用户输入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，输入方式与在命令提示符下输入的方式类似。 结果将显示在命令提示符处。 若要打开命令提示符窗口，请在 Windows 搜索中输入“cmd”，然后单击“命令提示符”将其打开。 在命令提示符处，键入 **sqlcmd** ，后面跟随所需的选项列表。 有关 **sqlcmd**支持的选项的完整列表，请参阅 [sqlcmd 实用工具](../../tools/sqlcmd-utility.md)。  
   
 -   用户通过下列方式提交 **sqlcmd** 作业：指定要执行的单个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，或将实用工具指向要执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句所在的文本文件。 输出通常定向到一个文本文件，但也可能在命令提示符处显示。  
   
@@ -40,13 +41,13 @@ ms.locfileid: "79090598"
   
 ## <a name="typically-used-sqlcmd-options"></a>常用 sqlcmd 选项  
   
--   服务器选项 (-S  )，用于标识 sqlcmd[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接到的   的实例。  
+-   服务器选项 (-S)，用于标识 sqlcmd 连接到的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例。  
   
--   身份验证选项（-E、-U 和 -P），用于指定 sqlcmd 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例所使用的凭据。 **注意：** -E 选项为默认选项，无需指定  。  
+-   身份验证选项（-E、-U 和 -P），用于指定 sqlcmd 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例所使用的凭据   。 **注意：** -E 选项为默认选项，无需指定。  
   
--   输入选项（-Q、-q 和 -i），用于标识 sqlcmd 输入的位置     。  
+-   输入选项（-Q、-q 和 -i），用于标识 sqlcmd 输入的位置   。  
   
--   输出选项 (-o)，用于指定 sqlcmd 输出所在的文件   。  
+-   输出选项 (-o)，用于指定 sqlcmd 输出所在的文件 。  
   
 ## <a name="connect-to-the-sqlcmd-utility"></a>连接到 sqlcmd 实用工具  
   
@@ -107,7 +108,7 @@ ms.locfileid: "79090598"
   
  若要清除语句缓存，请键入 **:RESET**。 键入 **^C** 可使 **sqlcmd** 退出。 在发出 **^C** 命令后，还可以用 **^C** 停止语句缓存的执行。  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] sqlcmd **提示符中输入** :ED **sqlcmd** 提示符）。 编辑器将打开，编辑 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句并关闭编辑器后，修改后的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句将显示于命令窗口中。 输入“GO”  以运行修改后的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] sqlcmd **提示符中输入** :ED **sqlcmd** 提示符）。 编辑器将打开，编辑 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句并关闭编辑器后，修改后的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句将显示于命令窗口中。 输入“GO”以运行修改后的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
   
 ## <a name="quoted-strings"></a>带引号的字符串  
  用引号引起来的字符无需任何额外的预处理即可使用。例外，输入两个连续的引号可以将引号插入字符串中。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将这种字符序列视作一个引号。 （但在服务器上会进行转换。）当脚本变量出现在字符串中时，不会展开它们。  
@@ -410,28 +411,6 @@ ms.locfileid: "79090598"
   
     ```  
     :exit(select 100)  
-    @echo off  
-    C:\windowsscript.bat  
-    @echo off  
-  
-    echo Running badscript.sql  
-    sqlcmd -i badscript.sql -b -o out.log  
-    if not errorlevel 1 goto next1  
-    echo == An error occurred   
-  
-    :next1  
-  
-    echo Running goodscript.sql  
-    sqlcmd -i goodscript.sql -b -o out.log  
-    if not errorlevel 1 goto next2  
-    echo == An error occurred   
-  
-    :next2  
-    echo Running returnvalue.sql  
-    sqlcmd -i returnvalue.sql -o out.log  
-    echo SQLCMD returned %errorlevel% to the command shell  
-  
-    :exit  
     ```  
   
 -   C:\windowsscript.bat  

@@ -1,5 +1,5 @@
 ---
-title: 从结果集中提取行 (OLE DB) | Microsoft Docs
+title: 从结果集中提取行（OLE DB 驱动程序）| Microsoft Docs
 description: 使用 OLE DB Driver for SQL Server 从结果集中提取行
 ms.custom: ''
 ms.date: 06/14/2018
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - rows [OLE DB]
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 8aed6ce5eb93c68f22217667fe01306e28d9910e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 26d224012aadbd382ac3db1d66627e2e5b6160fd
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015553"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244705"
 ---
 # <a name="fetch-rows-from-a-result-set-ole-db"></a>从结果集中提取行 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 

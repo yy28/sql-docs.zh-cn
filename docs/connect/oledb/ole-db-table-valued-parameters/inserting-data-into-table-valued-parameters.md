@@ -1,5 +1,5 @@
 ---
-title: 将数据插入表值参数 | Microsoft Docs
+title: 向表值参数中插入数据（OLE DB 驱动程序）| Microsoft Docs
 description: 使用 OLE DB Driver for SQL Server 将数据插入表值参数
 ms.custom: ''
 ms.date: 06/14/2018
@@ -12,24 +12,24 @@ helpviewer_keywords:
 - table-valued parameters, inserting data into
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 064dcfa74cd6471c8c279ef4b08e874097d98d64
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 31cfbbd1afd2e5b249c3f3106aec471965038c86
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67994126"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244152"
 ---
 # <a name="inserting-data-into-table-valued-parameters"></a>向表值参数中插入数据
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  适用于 SQL Server 的 OLE DB 驱动程序支持两种供使用者为表值参数行指定数据的模型：推送模型和请求模型。 提供演示请求模型的示例；请参阅 [SQL Server 数据编程示例](https://msftdpprodsamples.codeplex.com/)。  
+  OLE DB Driver for SQL Server 支持两种供使用者为表值参数行指定数据的模型：推送模型和请求模型。 提供演示请求模型的示例；请参阅 [SQL Server 数据编程示例](https://msftdpprodsamples.codeplex.com/)。  
   
 > [!NOTE]  
 >  表值参数列要么必须在所有行中具有非默认值，要么必须在所有行中具有默认值。 不能在某些行中具有默认值，而在其他行中不具有默认值。 因此，在表值参数绑定中，表值参数行集列数据仅允许状态值 DBSTATUS_S_ISNULL 和 DBSTATUS_S_OK。 DBSTATUS_S_DEFAULT 将导致失败，而绑定的状态值将设置为 DBSTATUS_E_BADSTATUS。  
   
-## <a name="push-model-loads-all-table-valued-paremeter-data-in-memory"></a>推送模型（在内存中加载所有表值参数数据）  
+## <a name="push-model-loads-all-table-valued-parameter-data-in-memory"></a>推送模型（在内存中加载所有表值参数数据）  
  推送模型类似于使用参数集（也即，ICommand::Execute 中的 DBPARAMS 参数）。 仅当在未对 IRowset 接口执行自定义实现的情况下使用表值参数行集对象时，才使用推送模型。 当表值参数行集中的行数较少且预计不会给应用程序带来过量内存压力时，建议使用推送模型。 这比请求模型更简单，因为它向使用者应用程序要求的功能不会超过典型 OLE DB 应用程序中当前常用的功能。  
   
  使用者应在执行命令之前向访问接口提供所有表值参数数据。 为提供数据，使用者为每个表值参数填充一个表值参数行集对象。 表值参数行集对象显示行集 Insert、Set 和 Delete 操作，使用者将使用这些操作来操作表值参数数据。 访问接口在执行时将从该表值参数行集对象中提取数据。  

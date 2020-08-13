@@ -1,5 +1,6 @@
 ---
 title: 使用订阅（Web 门户）| Microsoft Docs
+description: 了解如何使用“订阅”页在 Reporting Services 中列出当前报表的所有订阅。
 ms.date: 01/31/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 09e8ece5-0200-41f2-87c1-9fab19e261be
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 046faa5ff137f62ac2554192012ff0917bfb17e2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d5d936933b96c8d7f5c4c2830707b4a6bb4d9fe2
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76971282"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243546"
 ---
 # <a name="working-with-subscriptions-web-portal"></a>使用订阅（Web 门户）
 
@@ -27,13 +28,13 @@ ms.locfileid: "76971282"
 > 需要启动 SQL Server 代理服务。   
   
 ![管理订阅](../reporting-services/media/working-with-subscriptions-web-portal/ssrs-manage-subscriptions.png)  
-可通过依次选择报表的省略号 (…)、“管理”和“订阅”访问“订阅”页面    。  
+可通过依次选择报表的省略号 (…)、“管理”和“订阅”访问“订阅”页面  。  
   
-从“订阅”页中，可以通过选择“+ 新订阅”  来创建新订阅。 还可以编辑现有订阅，或删除选择的订阅。  
+从“订阅”页中，可以通过选择“+ 新订阅”来创建新订阅。 还可以编辑现有订阅，或删除选择的订阅。  
   
-此页还在“结果”列中提供订阅运行的结果状态  。 如果订阅出错，则需要首先检查结果列以查看消息内容。 
+此页还在“结果”列中提供订阅运行的结果状态。 如果订阅出错，则需要首先检查结果列以查看消息内容。 
 
-还可随时通过选择“订阅”页上的“立即运行”来运行订阅  。
+还可随时通过选择“订阅”页上的“立即运行”来运行订阅。
   
 ## <a name="creating-or-editing-a-subscription"></a>创建或编辑订阅  
 使用“新建订阅”或“编辑订阅”页，可为报表创建新订阅或修改报表的现有订阅。 此页包含的选项取决于您的角色分配。 具有高级权限的用户可以使用附加选项。  
@@ -41,7 +42,7 @@ ms.locfileid: "76971282"
 以无人参与的方式运行的报表支持订阅。 报表必须最起码使用已存储的凭据或不使用凭据。 如果报表使用参数，则必须指定默认值。 如果更改报表执行设置或删除参数属性使用的默认值，订阅可能进入非活动状态。 有关详细信息，请参阅[创建和管理本机模式报表服务器的订阅](subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)。  
   
 ## <a name="type-of-subscription"></a>订阅的类型  
-可以在“标准订阅”与“数据驱动订阅”之间进行选择   。  
+可以在“标准订阅”与“数据驱动订阅”之间进行选择 。  
   
 ![ssRSWebPortal subscriptions3](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions3.png)  
    
@@ -65,7 +66,7 @@ ms.locfileid: "76971282"
 -   文件共享订阅提供了允许您指定目标位置的字段。 您可以将任何报表传递到文件共享位置。 但是，支持交互式功能的报表（包括支持深化以及支持行和列的矩阵报表）将以静态文件的形式呈现。 无法查看静态文件中的深化行和深化列。 必须以通用命名约定 (UNC) 格式指定文件共享名（例如，\mycomputer\public\myreportfiles）。 不能在路径名的末尾包含反斜杠。 报表文件将以基于呈现格式的文件格式进行传递（例如，如果选择 Excel，则报表以 .xlsx 文件格式进行传递）。  有关详细信息，请参阅[创建文件共享订阅](subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md#bkmk_create_fileshare_subscription)。
   
 ## <a name="data-driven-subscription-dataset"></a>数据驱动订阅数据集  
-对于数据驱动订阅，需要定义用于订阅的数据集。 选择“编辑数据集”以提供该信息  。  
+对于数据驱动订阅，需要定义用于订阅的数据集。 选择“编辑数据集”以提供该信息。  
   
 ![ssRSWebPortal subscriptions4](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions4.png)  
   

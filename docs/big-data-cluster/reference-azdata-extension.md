@@ -1,7 +1,7 @@
 ---
-title: azdata context 参考
+title: azdata extension 参考
 titleSuffix: SQL Server big data clusters
-description: azdata context 命令的参考文章。
+description: azdata extension 命令的参考文章。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,14 +9,14 @@ ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8e5113020c9baeb22fb512ee3be7ed735d50aa48
+ms.openlocfilehash: 9e2585a77c3117df8514622728d0f09df93d7bc2
 ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243008"
+ms.locfileid: "87242988"
 ---
-# <a name="azdata-context"></a>azdata context
+# <a name="azdata-extension"></a>azdata extension
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
@@ -25,27 +25,46 @@ ms.locfileid: "87243008"
 ## <a name="commands"></a>命令
 | 命令 | 描述 |
 | --- | --- |
-[azdata context list](#azdata-context-list) | 列出用户配置文件中的可用上下文。
-[azdata context delete](#azdata-context-delete) | 从用户配置文件中删除具有给定命名空间的上下文。
-[azdata context set](#azdata-context-set) | 将具有给定命名空间的上下文设置为用户配置文件中的活动上下文。
-## <a name="azdata-context-list"></a>azdata context list
-可以通过 `azdata context set` 或 `azdata context delete` 来设置或删除任何上下文。 要登录到新的上下文，请使用 `azdata login`。
+[azdata extension add](#azdata-extension-add) | 添加扩展。
+[azdata extension remove](#azdata-extension-remove) | 删除扩展。
+[azdata extension list](#azdata-extension-list) | 列出所有已安装的扩展。
+## <a name="azdata-extension-add"></a>azdata extension add
+添加扩展。
 ```bash
-azdata context list [--active -a] 
-                    
+azdata extension add --source -s 
+                     [--index]  
+                     
+[--pip-proxy]  
+                     
+[--pip-extra-index-urls]  
+                     
+[--yes -y]
 ```
 ### <a name="examples"></a>示例
-列出用户配置文件中的所有可用上下文。
+从 URL 添加扩展。
 ```bash
-azdata context list
+azdata extension add --source https://contoso.com/some_ext-0.0.1-py2.py3-none-any.whl
 ```
-列出用户配置文件中的活动上下文。
+从本地磁盘添加扩展。
 ```bash
-azdata context list --active
+azdata extension add --source ~/some_ext-0.0.1-py2.py3-none-any.whl
 ```
+从本地磁盘添加扩展，并将 pip 代理用于依赖项。
+```bash
+azdata extension add --source ~/some_ext-0.0.1-py2.py3-none-any.whl --pip-proxy https://user:pass@proxy.server:8080
+```
+### <a name="required-parameters"></a>必需的参数
+#### `--source -s`
+磁盘上扩展 wheel 或扩展 URL 的路径
 ### <a name="optional-parameters"></a>可选参数
-#### `--active -a`
-仅列出当前处于活动状态的上下文。
+#### `--index`
+Python 包索引的基 URL（默认值为 https://pypi.org/simple) 。 这应该指向符合 PEP 503（简单存储库 API）的存储库或以相同格式展开的本地目录。
+#### `--pip-proxy`
+用于扩展依赖项的 pip 的代理，格式为 [user:passwd@]proxy.server:port
+#### `--pip-extra-index-urls`
+要使用的包索引的附加 URL 的空格分隔列表。 这应该指向符合 PEP 503（简单存储库 API）的存储库或以相同格式展开的本地目录。
+#### `--yes -y`
+不提示确认。
 ### <a name="global-arguments"></a>全局参数
 #### `--debug`
 提高日志记录详细程度以显示所有调试日志。
@@ -57,20 +76,23 @@ azdata context list --active
 JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org)，获取详细信息和示例。
 #### `--verbose`
 提高日志记录详细程度。 使用 --debug 获取完整的调试日志。
-## <a name="azdata-context-delete"></a>azdata context delete
-如果已删除的上下文处于活动状态，则用户需要设置新的活动上下文。 查看可用于设置或删除 `azdata context list` 的上下文
+## <a name="azdata-extension-remove"></a>azdata extension remove
+删除扩展。
 ```bash
-azdata context delete --namespace -n 
-                      
+azdata extension remove --name -n 
+                        [--yes -y]
 ```
 ### <a name="examples"></a>示例
-从用户配置文件中删除 contextNamespace。
+删除扩展。
 ```bash
-azdata context delete -n contextNamespace
+azdata extension remove --name some-ext
 ```
 ### <a name="required-parameters"></a>必需的参数
-#### `--namespace -n`
-要删除的上下文的命名空间。
+#### `--name -n`
+扩展名
+### <a name="optional-parameters"></a>可选参数
+#### `--yes -y`
+不提示确认。
 ### <a name="global-arguments"></a>全局参数
 #### `--debug`
 提高日志记录详细程度以显示所有调试日志。
@@ -82,20 +104,16 @@ azdata context delete -n contextNamespace
 JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org)，获取详细信息和示例。
 #### `--verbose`
 提高日志记录详细程度。 使用 --debug 获取完整的调试日志。
-## <a name="azdata-context-set"></a>azdata context set
-查看可用于设置 `azdata context list` 的上下文。 如果未列出上下文，则需要登录才能在用户配置文件 `azdata login` 中创建上下文。 登录到的内容将成为活动上下文。 如果登录到多个实体，则可以通过此命令在活动上下文间切换。 查看当前活动上下文 `azdata context list --active`
+## <a name="azdata-extension-list"></a>azdata extension list
+列出所有已安装的扩展。
 ```bash
-azdata context set --namespace -n 
-                   
+azdata extension list 
 ```
 ### <a name="examples"></a>示例
-将上下文命名空间设置为用户配置文件中的活动上下文。
+列出扩展。
 ```bash
-azdata context set -n contextNamespace
+azdata extension list
 ```
-### <a name="required-parameters"></a>必需的参数
-#### `--namespace -n`
-要设置的上下文的命名空间。
 ### <a name="global-arguments"></a>全局参数
 #### `--debug`
 提高日志记录详细程度以显示所有调试日志。

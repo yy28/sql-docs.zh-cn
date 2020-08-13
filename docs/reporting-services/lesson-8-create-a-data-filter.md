@@ -1,5 +1,6 @@
 ---
 title: 第 8 课：创建数据筛选器 | Microsoft Docs
+description: 了解如何创建一个数据筛选器，并将其用于为子报表定义的数据表。 创建基于表的筛选器或查询筛选器用于钻取报表。
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 19ccbdba-e3da-40a4-b652-32c628cf32e5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 991610dacf7a13a467a3058f2bdbcfcc454ee71e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d64d2557945bc7fdd7b602652e23d52c0a052da7
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62512389"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243238"
 ---
 # <a name="lesson-8-create-a-data-filter"></a>第 8 课：创建数据筛选器
 在父报表上添加钻取操作后，接下来将创建一个数据筛选器，用于为子报表定义的数据表。  
@@ -25,7 +26,7 @@ ms.locfileid: "62512389"
   
 -   向子报表中的 tablix 添加一个筛选表达式。  
   
--   创建一个函数，用于从“PurchaseOrderDetail”表中选择未筛选的数据  。  
+-   创建一个函数，用于从“PurchaseOrderDetail”表中选择未筛选的数据。  
   
 -   添加一个事件处理程序，用于将 **PurchaseOrderDetail** DataTable 绑定到子报表。  
   
@@ -33,17 +34,17 @@ ms.locfileid: "62512389"
   
 1.  打开子报表。  
   
-2.  选择 tablix 中的某个列标题，右键单击在该列标题上方显示的灰色单元，然后选择“Tablix 属性”  。  
+2.  选择 tablix 中的某个列标题，右键单击在该列标题上方显示的灰色单元，然后选择“Tablix 属性”。  
   
-3.  在“筛选器”页进行选择，然后选择“添加”   。  
+3.  在“筛选器”页进行选择，然后选择“添加” 。  
   
-4.  在“表达式”字段中，从下拉列表中选择“ProductID”   。 筛选器即应用于此列。  
+4.  在“表达式”字段中，从下拉列表中选择“ProductID” 。 筛选器即应用于此列。  
   
-5.  在“运算符”下拉列表中选择等号 (=) 运算符。  
+5.  在“运算符”下拉列表中选择等号 (=) 运算符 。  
   
-6.  选择“值”字段旁的“表达式”按钮，在“类别”区域中选择“参数”，然后在“值”区域中双击“productid”      。 “为以下项设置表达式: 值”字段现在应包含类似于 =Parameters!productid.Value 的表达式   。  
+6.  选择“值”字段旁的“表达式”按钮，在“类别”区域中选择“参数”，然后在“值”区域中双击“productid”    。 “为以下项设置表达式: 值”字段现在应包含类似于 =Parameters!productid.Value 的表达式。  
   
-7.  选择“确定”，然后在“Tablix 属性”对话框中再次选择“确定”    。  
+7.  选择“确定”，然后在“Tablix 属性”对话框中再次选择“确定”  。  
   
 8.  保存 .rdlc 文件。  
   
@@ -103,11 +104,11 @@ ms.locfileid: "62512389"
   
 1.  在设计器视图中打开 Default.aspx。  
   
-2.  右键单击 ReportViewer 控件，然后选择“属性”  。  
+2.  右键单击 ReportViewer 控件，然后选择“属性”。  
   
-3.  在“属性”页上，选择“事件”图标   。  
+3.  在“属性”页上，选择“事件”图标 。  
   
-4.  双击“钻取”事件  。  
+4.  双击“钻取”事件。  
   
     随后将在代码中添加一个事件处理程序部分，类似于下面这个代码块。  
   
@@ -153,7 +154,7 @@ ms.locfileid: "62512389"
 ## <a name="query-filter"></a>查询筛选器  
 需要完成以下任务才能实现查询筛选器。  
   
--   创建一个函数，用于从“PurchaseOrderDetail”表中选择经过筛选的数据  。  
+-   创建一个函数，用于从“PurchaseOrderDetail”表中选择经过筛选的数据。  
   
 -   添加一个事件处理程序，用于检索参数值并将 **PurchaseOrdeDetail** DataTable 绑定到子报表。  
   
@@ -165,7 +166,7 @@ ms.locfileid: "62512389"
   
     1.  创建一个数据集 **DataSet2**的实例，该数据集在 [第 4 课：定义用于子报表的数据连接和数据表](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md)的步骤 2 中创建。  
   
-    2.  创建一个到 SqlServer 数据库的连接，以执行在 **第 4 课：定义用于子报表的数据连接和 DataTable**中定义的查询。  
+    2.  创建与 SqlServer 数据库的连接以执行查询定义的“第 4 课：定义用于子报表的数据连接和数据表。”  
   
     3.  该查询将包括参数 **productid**，以确保根据在父报表中选择的 **ProductID** 筛选所返回的数据。  
   
@@ -219,11 +220,11 @@ ms.locfileid: "62512389"
   
 1.  在设计器视图中打开 Default.aspx。  
   
-2.  右键单击 ReportViewer 控件，然后选择“属性”  。  
+2.  右键单击 ReportViewer 控件，然后选择“属性”。  
   
-3.  在“属性”窗格上，选择“事件”图标   。  
+3.  在“属性”窗格上，选择“事件”图标 。  
   
-4.  双击“钻取”事件  。  
+4.  双击“钻取”事件。  
   
     随后将在代码中添加一个事件处理程序部分，类似于以下内容。  
   
@@ -287,7 +288,7 @@ ms.locfileid: "62512389"
 6.  保存文件。  
   
 ## <a name="next-task"></a>下一个任务  
-您已成功创建了一个数据筛选器，用于为子报表定义的数据表。 接下来，将生成并运行网站应用程序。 请参阅 [第 9 课：生成并运行应用程序](../reporting-services/lesson-9-build-and-run-the-application.md)。  
+您已成功创建了一个数据筛选器，用于为子报表定义的数据表。 接下来，将生成并运行网站应用程序。 请参阅[第 9 课：生成并运行应用程序](../reporting-services/lesson-9-build-and-run-the-application.md)。  
   
   
   
