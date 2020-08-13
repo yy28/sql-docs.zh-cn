@@ -1,20 +1,20 @@
 ---
 title: SQL Server 早期版本文档
-description: 访问联机和脱机 SQL Server 文档
+description: 如何获取 SQL Server 早期版本的联机和脱机文档，包括 2005、2008、2012 和 2014。
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.date: 05/08/2020
-monikerRange: =sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 9b966a068e1ec95168754cf62d7610aee41b47bb
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.date: 07/24/2020
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || sql-server-previousversions || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 9d2fd489c31ea140f747f90c50976b28f45f0045
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83152109"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248084"
 ---
 # <a name="previous-versions-of-sql-server-documentation"></a>SQL Server 早期版本文档
 
@@ -22,20 +22,18 @@ Microsoft SQL Server 几个较旧版本的文档已存档。 本文介绍如何�
 
 ## <a name="online-documentation"></a>联机文档
 
-多个较旧版本的 SQL Server 都有联机文档。
+若要访问 SQL Server 2005 - 2014 的联机文档，请参阅以下登陆页面：
 
-- [2005 – 2012](https://docs.microsoft.com/previous-versions/sql/)
-- [2014](../2014/2014-toc/index.yml?view=sql-server-2014)
-- [2016 及更高版本](../sql-server/index.yml?view=sql-server-2016)
+- [SQL Server 早期版本文档](https://docs.microsoft.com/previous-versions/sql/)。
 
 ## <a name="offline-documentation"></a>脱机文档
 
-多个较旧版本的 SQL Server 都有脱机文档。
+若要访问 SQL Server 2012 及更高版本的脱机内容，请参阅以下文章：
 
-要访问 SQL Server 版本 2012 及更高版本的脱机文档，请参阅[安装 SQL Server 文档以在 SSMS 中进行脱机查看](sql-server-offline-documentation.md)
+- [安装 SQL Server 文档以在 SSMS 中进行脱机查看](sql-server-offline-documentation.md)。
 
-> [!Tip]
-> SQL 2014 Transact-SQL 内容只能脱机使用。
+> [!IMPORTANT]
+> SQL 2014 Transact-SQL 内容只能[脱机](../sql-server/sql-server-offline-documentation.md#sql-server-2014-offline-content)使用。
 
 ## <a name="lifecycle-policy"></a>生命周期策略
 
@@ -43,9 +41,11 @@ Microsoft SQL Server 几个较旧版本的文档已存档。 本文介绍如何�
 
 - [Microsoft 生命周期策略](https://support.microsoft.com/lifecycle/selectindex)
 
+有关 SQL Server 的支持结束选项的具体指导，请参阅以下文章：
+
+- [SQL Server 终止支持选项](../sql-server/end-of-support/sql-server-end-of-life-overview.md)
+
 ## <a name="next-steps"></a>后续步骤
 
-- [SQL Server 文档](../sql-server/index.yml?view=sql-server-2016)
-- [SQL Server 2014 文档](../2014/2014-toc/index.yml?view=sql-server-2014)。
-- [SQL Server 早期版本文档](https://docs.microsoft.com/previous-versions/sql/)
-- [SQL 文档的版本控制系统](../sql-server/versioning-system-monikers-ui-sql-server.md?view=sql-server-2016)
+- [SQL Server 2016-2019 联机文档](../sql-server/index.yml)
+- [SQL Server 文档导航指南](../sql-server/sql-docs-navigation-guide.md)

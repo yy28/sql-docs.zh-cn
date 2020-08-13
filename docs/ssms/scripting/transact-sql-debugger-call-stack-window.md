@@ -1,5 +1,6 @@
 ---
 title: “调用堆栈”窗口
+description: 了解如何使用 Transact-SQL 调试器的“调用堆栈”窗口查看参数数据类型以及存储过程、函数和触发器的值。
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -13,18 +14,18 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c15e01a9555ceeacbbd741660cd19baba1f6842
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8421e448b36cb1cf4958ef5cfaa1d583a7cca262
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243380"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248014"
 ---
 # <a name="transact-sql-debugger---call-stack-window"></a>Transact-SQL 调试器 -“调用堆栈”窗口
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-**“调用堆栈”** 窗口显示调用堆栈中的模块以及传递给这些模块的任意参数的数据类型和值。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 模块包括存储过程、函数和触发器。 只有在调试模式下才可以显示调用堆栈。  
+“调用堆栈”**** 窗口显示调用堆栈中的模块以及传递给这些模块的任意参数的数据类型和值。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 模块包括存储过程、函数和触发器。 只有在调试模式下才可以显示调用堆栈。  
 
 [!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
 
@@ -38,26 +39,26 @@ ms.locfileid: "75243380"
 
 可以使用以下任一过程使某个堆栈帧成为当前帧：
 
-- 右键单击该堆栈帧，然后单击“切换到帧”  。
+- 右键单击该堆栈帧，然后单击“切换到帧”。
 
 - 双击该堆栈帧。  
 
 **查看当前帧以外的帧的源**
 
-- 右键单击该堆栈帧，然后单击“转到源代码”  。
+- 右键单击该堆栈帧，然后单击“转到源代码”。
 
 ## <a name="stack-frames"></a>堆栈帧
 
 **“调用堆栈”** 窗口中的每一行称为一个堆栈帧，表示一个从 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本文件到模块的调用或从一个模块到另一个模块的调用。 所显示的最下面的堆栈帧指示 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口中最先调用此堆栈的行。 最上面一行指示调试器暂停执行时所在的行，由该窗口左边距中的黄色箭头标出。 中间的每一行指示调用下一个更高堆栈帧的模块和源代码的行号。  
 
-**“局部变量”** 、 **“监视”** 和 **“快速监视”** 窗口中的所有表达式都是基于当前堆栈帧求值的。 查询编辑器窗口显示当前帧的代码。 默认情况下，当前堆栈帧是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器暂停执行时所在的帧。 如果使另一个帧成为当前堆栈帧，则 **“局部变量”** 、 **“监视”** 和 **“快速监视”** 窗口中的表达式将在新帧环境下重新求值，且查询编辑器窗口中显示此新帧的源代码。  
+**“局部变量”** 、 **“监视”** 和 **“快速监视”** 窗口中的所有表达式都是基于当前堆栈帧求值的。 查询编辑器窗口显示当前帧的代码。 默认情况下，当前堆栈帧是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器暂停执行时所在的帧。 如果使另一个帧成为当前堆栈帧，则 **“局部变量”**、 **“监视”** 和 **“快速监视”** 窗口中的表达式将在新帧环境下重新求值，且查询编辑器窗口中显示此新帧的源代码。  
   
 ## <a name="columns"></a>列
 
  **名称**  
  显示有关调用堆栈中某个模块的信息。  
   
- 对于调用堆栈中最下面的一行， **“名称”** 列出查询编辑器源窗口和最先调用此堆栈的行的行号。 对于其他行，“名称”  具有 **Module(Instance.Database)(ParmList) LineNumber** 格式。  
+ 对于调用堆栈中最下面的一行， **“名称”** 列出查询编辑器源窗口和最先调用此堆栈的行的行号。 对于其他行，“名称”具有 **Module(Instance.Database)(ParmList) LineNumber** 格式。  
   
  **模块**  
  存储过程、函数或调用下一个帧的存储过程的名称。  

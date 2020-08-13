@@ -1,20 +1,18 @@
 ---
 title: SQL 文档的版本控制系统
-ms.date: 10/15/2019
+ms.date: 07/22/2020
 ms.prod: sql
-ms.technology: ''
-ms.custom: ''
+ms.technology: release-landing
 ms.topic: conceptual
-ms.reviewer: ''
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||=sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: b343f34e0d7fdc30e2549095f5731d93e863414c
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 7ca82e29d32bfe2721baa619ec37d4c7576a0533
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83150609"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247362"
 ---
 # <a name="versioning-system-for-sql-documentation"></a>SQL 文档的版本控制系统
 
@@ -136,7 +134,7 @@ ms.locfileid: "83150609"
 
 某些文章包含有关多个版本的 SQL Server 信息。 每个常规名字对象都隐藏有版本控制的部分，否则这些部分可能会显示与名字对象的版本不准确、混淆或矛盾的信息。 特殊的“所有 SQL”名字对象将显示所有版本部分，并且可能不会明显显示出不准确的信息。
 
-## <a name="message-the-requested-page-is-not-available-for-moniker"></a><a name="anchor-message-unavailable-for-moniker"></a> 消息：请求的页面不适用于\<名字对象\>
+## <a name="message-the-requested-page-is-not-available-for-moniker"></a><a name="anchor-message-unavailable-for-moniker"></a> 消息：请求的页面不适用于 \<moniker\>
 
 以下方案导致在 :::no-loc text="Docs"::: 网页顶部附近显示信息性消息：
 
@@ -163,10 +161,11 @@ ms.locfileid: "83150609"
     - [SQL Server 的早期版本，2012-2005](../toc/previous-versions-sql-server.md)
 
 - 2014：&nbsp; 版本控制系统为 SQL Server 2014 实现了一半。 可以在版本控制控件中选择 SQL Server 2014，此方法有效。 然而在内部，2014 的文件专门用于 2014 年，就像 2008 年的文件专用于 2008 年一样。
-    - [SQL Server 2014 文档](/sql/2014-toc/books-online-for-sql-server-2014?view=sql-server-2014)
+    - [SQL Server 2014 脱机文档](/sql/sql-server/sql-server-offline-documentation)
 
 - 2016 及更高版本：&nbsp; SQL Server 2016 及更高版本已完全实现版本控制系统。
     - [欢迎使用 2016 及更高版本的 SQL Server 文档](/sql/sql-server/?view=sql-server-2016)
+    - [SQL Server 2016 脱机文档](sql-server-offline-documentation.md)
 
 ## <a name="see-also"></a>另请参阅
 

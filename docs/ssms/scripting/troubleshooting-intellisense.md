@@ -1,6 +1,6 @@
 ---
 title: 确定 IntelliSense 问题 (SSMS)
-description: 了解如何使用 SQL Server Management Studio (SSMS) 排查并确定 Intellisense 问题。
+description: 了解 SQL Server Management Studio (SSMS) 中的 Intellisense 无法按预期工作的情况。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +16,15 @@ ms.assetid: 4b72ffc6-aea2-4e11-ab36-fa2de4d7bcc5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de4491bdeecdc635d12dca7cb0a51426524bdd67
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: be138fabbbca3523ae7a3da1233f15741db7ef3f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75558668"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247327"
 ---
 # <a name="identify-issues-with-intellisense---sql-server-management-studio-ssms"></a>确定 IntelliSense 问题 - SQL Server Management Studio (SSMS)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   在某些情况下，IntelliSense 选项可能无法按预期要求工作。  
   
 ## <a name="conditions-that-affect-intellisense"></a>影响 IntelliSense 的状况  

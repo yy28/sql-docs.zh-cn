@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4ab8501b5b0753143ce5bfe2b289211729c35821
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 28c1d78a4def2b3549957715c754e55b0d91e743
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765458"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246316"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>在 FileTable 中使用目录和路径
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -93,9 +93,8 @@ GO
 ##  <a name="the-is_directory-column-in-the-filetable-schema"></a><a name="is_directory"></a> FileTable 架构中的 is_directory 列  
  下表说明 **is_directory** 列与包含 FileTable 中 FILESTREAM 数据的 **file_stream** 列之间的相互影响：  
   
-||||  
-|-|-|-|  
-|*is_directory* **value**|*file_stream* **value**|**行为**|  
+|is_directory 值|file_stream 值|行为|  
+|-|-|-|    
 |FALSE|Null|这是将被系统定义的约束捕获的无效组合。|  
 |FALSE|\<value>|该项表示一个文件。|  
 |TRUE|Null|该项表示一个目录。|  

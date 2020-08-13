@@ -1,5 +1,6 @@
 ---
 title: 将 sqlcmd 与脚本变量结合使用
+description: 了解如何使用脚本变量来生成可在多个场景中使用的脚本。
 ms.custom: seo-lt-2019
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,18 +19,18 @@ ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3a084f84473dd6394aa0ad09e1730bcdb13e4a22
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9b3628994d100057de864ac1e1188e865d14dca8
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76761611"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246196"
 ---
 # <a name="sqlcmd---use-with-scripting-variables"></a>sqlcmd - 与脚本变量结合使用
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   脚本中使用的变量称为脚本变量。 使用脚本变量，一个脚本可以应用于多个方案中。 例如，如果需要对多台服务器运行单个脚本，则可以用脚本变量来表示服务器名称，而不必为每台服务器修改脚本。 通过更改脚本变量表示的服务器名称，可以在不同的服务器上运行同一脚本。  
   
- 可以使用 setvar  命令显式定义脚本变量，也可以使用 sqlcmd -v  选项隐式定义脚本变量。  
+ 可以使用 setvar 命令显式定义脚本变量，也可以使用 sqlcmd -v 选项隐式定义脚本变量。  
   
  本主题还包含有关使用 **SET**在 Cmd.exe 命令提示符下定义环境变量的示例。  
   
@@ -45,12 +46,12 @@ ms.locfileid: "76761611"
   
 3.  启动**SET X=Y**之前在命令提示符下设置的命令 shell ( **SET X=Y**)  
   
-4.  sqlcmd -v  X=Y  
+4.  sqlcmd -v X=Y  
   
 5.  **:Setvar** X Y  
   
 > [!NOTE]  
->  若要查看环境变量，请在“控制面板”  中打开“系统”  ，然后单击“高级”  选项卡。  
+>  若要查看环境变量，请在“控制面板” 中打开“系统” ，然后单击“高级”  选项卡。  
   
 ## <a name="implicitly-setting-scripting-variables"></a>隐式设置脚本变量  
  使用具有相关 **sqlcmd** 变量的选项启动 **sqlcmd** 时， **sqlcmd** 变量将被隐式设置为使用该选项指定的值。 在下面的示例中，启动 `sqlcmd` 时使用了 `-l` 选项。 这会隐式设置 SQLLOGINTIMEOUT 变量。  
@@ -189,7 +190,7 @@ C:\>sqlcmd -d AdventureWorks2012
 ```
   
 ### <a name="d-using-user-level-environment-variables-within-sqlcmd"></a>D. 在 sqlcmd 中使用用户级环境变量  
- 在下面的示例中，在命令提示符下设置了用户级环境变量 `%Temp%` ，并将其传递给了 `sqlcmd` 输入文件。 若要获取用户级环境变量，请在“控制面板”  中双击“系统”  。 单击 **“高级”** 选项卡，再单击 **“环境变量”** 。  
+ 在下面的示例中，在命令提示符下设置了用户级环境变量 `%Temp%` ，并将其传递给了 `sqlcmd` 输入文件。 若要获取用户级环境变量，请在“控制面板”中双击“系统”。 单击 **“高级”** 选项卡，再单击 **“环境变量”** 。  
   
  下列代码位于输入文件 `c:\testscript.txt`:
 

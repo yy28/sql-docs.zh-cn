@@ -1,5 +1,6 @@
 ---
 title: 使用 Reporting Services 中的 KPI | Microsoft Docs
+description: 了解如何使用 SQL Server Reporting Services 中的 KPI 来轻松度量状态和性能。
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
@@ -7,18 +8,18 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.date: 07/02/2017
-ms.openlocfilehash: dd8dc50b9885bb33df66d152b432092b6ac9868d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b92f19c74e5b5e3215836e174bf895f7cb61c36b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68329359"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247436"
 ---
 # <a name="working-with-kpis-in-reporting-services"></a>使用 Reporting Services 中的 KPI
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-关键绩效指标 (KPI)  是一个视觉提示，用于传达某个目标的进度量。  关键绩效指标对于团队、经理和企业很有价值，可快速评估针对可度量的目标所进行的工作进度。
+关键绩效指标 (KPI) 是一个视觉提示，用于传达某个目标的进度量。  关键绩效指标对于团队、经理和企业很有价值，可快速评估针对可度量的目标所进行的工作进度。
   
 通过使用 SQL Server Reporting Services 中的 KPI，你可以轻松地将以下问题的答案可视化：  
   
@@ -42,7 +43,7 @@ KPI 将只使用共享数据集的第一行数据。 请确保你想要使用的
 可以在报表服务器中的任何文件夹中创建 KPI。  创建 KPI 前，需要考虑 KPI 的正确放置位置。 可以将它放在用户可见、同时可与周围其他报表和 KPI 相关的文件夹中。  
 ## <a name="adding-a-kpi"></a>添加 KPI
   
-在确定 KPI 的位置之后，转到该文件夹并从顶部菜单中选择“新建” > “KPI”。  
+在确定 KPI 的位置之后，转到该文件夹并从顶部菜单中选择“新建” > “KPI” 。  
   
 ![rsCreateKPI1](../reporting-services/media/rscreatekpi1.png)  
   
@@ -52,7 +53,7 @@ KPI 将只使用共享数据集的第一行数据。 请确保你想要使用的
   
 你可以分配静态值，或使用共享数据集的数据。 在创建新的 KPI 时，它将使用一组随机的人工输入数据填充它们。  
   
-| 字段 | 说明 |
+| 字段 | 描述 |
 |-----------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
 | 值格式 | 用于更改要显示的值的格式。 |
 | 值 | 要显示的 KPI 的值。 |
@@ -61,23 +62,23 @@ KPI 将只使用共享数据集的第一行数据。 请确保你想要使用的
 | 趋势集 | 用于图表可视化的逗号分隔的数值。 也可以将其设置为具有表示走向的值的数据集列。 |
 | 相关内容 | 设置钻取链接的功能。 此链接可以是在门户上发布的移动报表或自定义 URL。 |
   
-> **警告**：虽然可以在设计时使用用于“状态”  字段的单词，如果要刷新数据集，还是应当使用数值。 如果使用单词刷新数据集，而不是使用数值，则可能会损坏服务器上的 KPI。  
+> **警告**：虽然可以在设计时使用用于“状态” **** 字段的单词，如果要刷新数据集，还是应当使用数值。 如果使用单词刷新数据集，而不是使用数值，则可能会损坏服务器上的 KPI。  
 >
-> **请注意**：“值”、“目标”和“状态”字段只能从数据集结果的第一行选择一个值    。 但是，“趋势集”  字段中，可以选择反映这种趋势的具体列。  
+> **注意**：“值”、“目标”和“状态”字段只能从数据集结果的第一行选择一个值  。 但是，“趋势集”  字段中，可以选择反映这种趋势的具体列。  
   
 若要使用来自共享数据集的数据，可以执行以下步骤。
   
-1. 将字段下拉框从“手动设置”  ，或“未设置”  ，更改为“数据集字段”  。  
+1. 将字段下拉框从“手动设置” ，或“未设置” ，更改为“数据集字段” 。  
   
     ![rsCreateKPI3](../reporting-services/media/rscreatekpi3.png)  
   
-2. 在数据框中选择省略号 (…)  。 此时会弹出“选择数据集”  屏幕。  
+2. 在数据框中选择省略号 (…)。 此时会弹出“选择数据集”  屏幕。  
   
     ![rsCreateKPI4](../reporting-services/media/rscreatekpi4.png)  
   
 3. 选择包含要显示的数据的数据集。  
   
-4. 选择想要使用的字段。 选择“确定”  。  
+4. 选择想要使用的字段。 选择“确定”。  
   
     ![rsCreateKPI5](../reporting-services/media/rscreatekpi5.png)  
   
@@ -85,13 +86,13 @@ KPI 将只使用共享数据集的第一行数据。 请确保你想要使用的
   
     ![rsCreateKPI6](../reporting-services/media/rscreatekpi6.png)  
   
-6. 选择“应用”。   
+6. 选择“应用”。  
   
     ![rsCreateKPI7](../reporting-services/media/rscreatekpi7.png)
 
 ## <a name="configuring-related-content"></a>配置相关内容
 
-选择“移动报表”  时，可以在对话框中选择目标。
+选择“移动报表”时，可以在对话框中选择目标。
 
    ![移动报表](media/rscreatekpi-related-content-mobile-report.png)
 
@@ -109,11 +110,11 @@ KPI 将只使用共享数据集的第一行数据。 请确保你想要使用的
   
 若要删除 KPI，可以执行以下步骤。
   
-1. 选择要删除的 KPI 的省略号 (…)  。 选择“管理”。   
+1. 选择要删除的 KPI 的省略号 (…)。 选择“管理”。  
   
     ![rsRemoveKPI1](../reporting-services/media/rsremovekpi1.png)  
   
-2. 选择“删除”。  在确认对话框中再次选择“删除”  。  
+2. 选择“删除”。 在确认对话框中再次选择“删除”  。  
   
     ![rsRemoveKPI2](../reporting-services/media/rsremovekpi2.png)  
   

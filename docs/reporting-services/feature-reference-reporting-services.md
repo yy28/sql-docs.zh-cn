@@ -1,5 +1,6 @@
 ---
 title: 功能参考 (Reporting Services) | Microsoft Docs
+description: 了解可用于创建、管理和查看报表的 SQL Server Reporting Services 工具和应用程序。
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 40e4fb9280d7ff9d05412966487997f507fb3dc7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b5b87404b685fe9e5de09f8703d3c06c48371836
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65503090"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247232"
 ---
 # <a name="feature-reference-reporting-services"></a>功能参考 (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 包括几个可用于创建、管理和查看报表的工具和应用程序。 本部分提供了介绍这些工具和应用程序的对话框、网页和向导的特定主题。  
   
- 若要在工具或应用程序运行时访问某个用户界面主题，请在对话框、网页或向导处于打开状态时按 F1 或单击 **“帮助”** 。 有关启动 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 工具的详细信息，请参阅[教程：如何查找和启动 Reporting Services 工具 (SSRS)](../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md)。  
+ 若要在工具或应用程序运行时访问某个用户界面主题，请在对话框、网页或向导处于打开状态时按 F1 或单击 **“帮助”** 。 若要详细了解如何启动 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 工具，请参阅[教程：如何查找并启动 Reporting Services 工具 &#40;SSRS&#41;](../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
  [报表设计器的 F1 帮助](../reporting-services/tools/report-designer-f1-help.md)  

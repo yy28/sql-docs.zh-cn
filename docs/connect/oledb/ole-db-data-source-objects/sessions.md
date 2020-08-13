@@ -1,5 +1,5 @@
 ---
-title: 会话 | Microsoft Docs
+title: 会话（OLE DB 驱动程序）
 description: 适用于 SQL Server 的 OLE DB 驱动程序中的会话
 ms.custom: ''
 ms.date: 06/14/2018
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, sessions
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: bc162e77a7a0dd015f108f6d1fd675a8b78b1ecf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ba9d1dcfbc3ac57d9f24ba78e992443d6d7d6453
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67995187"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244934"
 ---
 # <a name="sessions"></a>会话
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -184,10 +184,10 @@ EXIT:
   
  对于持续创建和释放会话对象的应用程序，连接针对 SQL Server 会话对象的 OLE DB 驱动程序和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例可能会产生很大的开销。 有效管理 OLE DB Driver for SQL Server 会话对象可以使此开销降至最低。 通过维护至少一个会话对象接口的引用，适用于 SQL Server 应用程序的 OLE DB 驱动程序可以使该对象的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接处于活动状态。  
   
- 例如，维护命令创建对象引用池将保持该池中这些会话对象的活动连接。 由于需要会话对象，因此，池维护代码将向需要会话的应用程序方法传递有效的 IDBCreateCommand  接口指针。 当应用程序方法不再需要该会话时，该方法将接口指针返回到池维护代码，而不是释放应用程序对命令创建对象的引用。  
+ 例如，维护命令创建对象引用池将保持该池中这些会话对象的活动连接。 由于需要会话对象，因此，池维护代码将向需要会话的应用程序方法传递有效的 IDBCreateCommand 接口指针。 当应用程序方法不再需要该会话时，该方法将接口指针返回到池维护代码，而不是释放应用程序对命令创建对象的引用。  
   
 > [!NOTE]  
->  在前面的示例中，使用 IDBCreateCommand  接口的原因在于 ICommand  接口实现 GetDBSession  方法，该方法是命令或行集作用域中允许对象确定创建其会话的唯一方法。 因此，只有命令对象才允许应用程序检索可创建其他会话的数据源对象指针。  
+>  在前面的示例中，使用 IDBCreateCommand**** 接口的原因在于 ICommand**** 接口实现 GetDBSession**** 方法，该方法是命令或行集作用域中允许对象确定创建其会话的唯一方法。 因此，只有命令对象才允许应用程序检索可创建其他会话的数据源对象指针。  
   
 ## <a name="see-also"></a>另请参阅  
  [数据源对象 (OLE DB)](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  

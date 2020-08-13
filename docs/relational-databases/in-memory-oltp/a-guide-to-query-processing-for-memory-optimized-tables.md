@@ -12,12 +12,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a6a13f70bfffbdbeba0ba08882c4dcc9b53aaa69
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0c62f1f2ef34bd5ba1a59a642ac8d07db2dbe259
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85668875"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247070"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>内存优化表查询处理指南
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -195,7 +195,7 @@ END
   
  本机编译存储过程在创建时编译，而解释型存储过程在首次执行时编译。 （部分编译（特别是分析和 algebrization）发生在创建时。 但是，对于解释型存储过程，将在首次执行时优化查询计划。）重新编译逻辑相似。 如果服务器已重新启动，本机编译的存储过程将在该过程首次执行时重新编译。 解释型存储过程在计划不再存在于计划高速缓存中时重新编译。 下表对本机编译存储过程和解释型存储过程的编译和重新编译进行了总结：  
   
-||本机编译|使用解释型|  
+|编译类型|本机编译|使用解释型|  
 |-|-----------------------|-----------------|  
 |初始编译|创建时。|首次执行时。|  
 |自动重新编译|在数据库或服务器重新启动后首次执行该过程时。|服务器重新启动时。 或者从计划高速缓存中逐出时（通常是由于架构或状态更改，或者内存压力）。|  

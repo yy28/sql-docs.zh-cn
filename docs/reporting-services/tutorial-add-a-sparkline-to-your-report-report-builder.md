@@ -1,5 +1,6 @@
 ---
 title: 教程：向报表添加迷你图（报表生成器）| Microsoft Docs
+description: 了解如何使用报表生成器在 Reporting Services 分页报表中创建具有迷你图的基本表。
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4dbe5d5afdf507f3edfd68135aa8ee14aee5ae08
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fe0d52f55905721002a1590f54ada84d7732f2a0
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63043078"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245654"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>教程：向报表添加迷你图（报表生成器）
 
@@ -23,7 +24,7 @@ ms.locfileid: "63043078"
   
 ![report-builder-sparkline-final](../reporting-services/media/report-builder-sparkline-final.png)  
      
-本教程的预计学时：30 分钟。  
+完成本教程的估计时间：30 分钟。  
   
 ## <a name="requirements"></a>要求  
 有关要求的详细信息，请参阅[教程先决条件（报表生成器）](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
@@ -32,26 +33,26 @@ ms.locfileid: "63043078"
   
 1.  通过计算机、[Web 门户或 SharePoint 集成模式](../reporting-services/report-builder/start-report-builder.md) 启动报表生成器 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 。  
   
-    将打开“新建报表或数据集”对话框  。  
+    将打开“新建报表或数据集”对话框。  
   
-    如果未出现“新建报表或数据集”对话框，请通过“文件”菜单转至“新建”    。  
+    如果未出现“新建报表或数据集”对话框，请通过“文件”菜单转至“新建”  。  
   
 2.  在左窗格中，确认已选中 **“新建报表”** 。  
   
-3.  在右窗格中，单击“表或矩阵向导”  。  
+3.  在右窗格中，单击“表或矩阵向导”。  
   
-4.  在“选择数据集”页上，单击“创建数据集” > “下一步”。 将打开“选择数据源的连接”  页面。  
+4.  在“选择数据集”页上，单击“创建数据集” > “下一步”  。 将打开“选择数据源的连接”页面。  
   
     > [!NOTE]  
-    > 本教程不需要具体数据；只需要与 SQL Server 数据库连接。 如果已经具有在“数据源连接”下列出的某一数据源连接，则可以选择该连接并且转到步骤 10。  有关详细信息，请参阅[获取数据连接的备选方式（报表生成器）](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
+    > 本教程不需要具体数据；只需要与 SQL Server 数据库连接。 如果已经具有在“数据源连接”下列出的某一数据源连接，则可以选择该连接并且转到步骤 10。 有关详细信息，请参阅[获取数据连接的备选方式（报表生成器）](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
   
 5.  单击 **“新建”** 。 此时将打开 **“数据源属性”** 对话框。  
   
-6.  在“名称”中，键入数据源的名称“Product Sales”   。  
+6.  在“名称”中，键入数据源的名称“Product Sales” 。  
   
-7.  在“选择连接类型”中，确认已选择“Microsoft SQL Server”   。  
+7.  在“选择连接类型”中，确认已选择“Microsoft SQL Server” 。  
   
-8.  在“连接字符串”中，键入以下文本  ：  
+8.  在“连接字符串”中，键入以下文本：  
   
     `Data Source\=<servername>`  
   
@@ -61,15 +62,15 @@ ms.locfileid: "63043078"
   
 10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-    返回至“选择数据源的连接”页  。  
+    返回至“选择数据源的连接”页。  
   
-11. 若要验证是否能连接到数据源，请单击“测试连接”  。  
+11. 若要验证是否能连接到数据源，请单击“测试连接”。  
   
     将显示消息“已成功地创建连接”。  
   
 12. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-13. 单击“下一步”。   
+13. 单击“下一步”。  
   
 ## <a name="2-create-a-query-and-table-layout-in-the-table-wizard"></a><a name="Query"></a>2.在表向导中创建查询和表布局  
 在报表中，可以使用具有预定义查询的共享数据集，也可以创建仅在报表中使用的嵌入数据集。 在本教程中，将创建一个嵌入数据集。  
@@ -79,11 +80,11 @@ ms.locfileid: "63043078"
   
 ### <a name="to-create-a-query-and-table-layout-in-the-table-wizard"></a>在表向导中创建查询和表布局 
   
-1.  在“设计查询”页中，关系查询设计器处于打开状态  。 在本教程中，您将使用基于文本的查询设计器。  
+1.  在“设计查询”页中，关系查询设计器处于打开状态。 在本教程中，您将使用基于文本的查询设计器。  
   
-2.  单击“编辑为文本”  。 基于文本的查询设计器将显示查询窗格和结果窗格。  
+2.  单击“编辑为文本”。 基于文本的查询设计器将显示查询窗格和结果窗格。  
   
-3.  将以下 [!INCLUDE[tsql](../includes/tsql-md.md)] 查询粘贴到“查询”框中  。  
+3.  将以下 [!INCLUDE[tsql](../includes/tsql-md.md)] 查询粘贴到“查询”框中。  
   
     ```  
     SELECT CAST('2015-01-04' AS date) as SalesDate, 'Accessories' as Subcategory,   
@@ -122,21 +123,21 @@ ms.locfileid: "63043078"
   
     该查询运行并显示 **SalesDate**、 **Subcategory**、 **Product**、 **Sales**和 **Quantity**字段的结果集。  
   
-5.  单击“下一步”。   
+5.  单击“下一步”。  
   
-6.  在“排列字段”页上，将 Sales 拖到“值”中    。  
+6.  在“排列字段”页上，将 Sales 拖到“值”中  。  
   
     **Sales** 由 Sum 函数聚合。 值为 [Sum(Sales)]。  
   
-7.  将 Product 拖到“行组”中   。  
+7.  将 Product 拖到“行组”中 。  
   
-8.  将 SalesDate 拖到“列组”中   。  
+8.  将 SalesDate 拖到“列组”中 。  
 
     ![report-builder-sparkline-arrange-fields](../reporting-services/media/report-builder-sparkline-arrange-fields.png)
   
-9. 单击“下一步”。   
+9. 单击“下一步”。  
   
-10. 在“选择布局”页的“选项”下，确认已选择“显示小计和总计”    。  
+10. 在“选择布局”页的“选项”下，确认已选择“显示小计和总计”  。  
   
     向导的“预览”窗格将显示包含有三行的表。 当您运行报表时，每行将按以下方式显示：  
   
@@ -148,41 +149,41 @@ ms.locfileid: "63043078"
     
     ![report-builder-sparkline-choose-layout](../reporting-services/media/report-builder-sparkline-choose-layout.png)
   
-11. 单击“下一步”。   
+11. 单击“下一步”。  
   
-12. 单击“完成”  。  
+12. 单击“完成”。  
   
 14. 表将添加到设计图面中。 此表有三列和三行。  
   
-    在“分组”窗格中查找。 如果未显示“分组”窗格，请在“视图”菜单上，单击“分组”   。 “行组”窗格显示一个行组： **Product**。 “列组”窗格显示一个列组： **SalesDate**。 详细信息数据是由数据集查询检索的所有数据。  
+    在“分组”窗格中查找。 如果未显示“分组”窗格，请在“视图”菜单上，单击“分组” 。 “行组”窗格显示一个行组：“Product”。 “列组”窗格显示一个列组：“SalesDate”。 详细信息数据是由数据集查询检索的所有数据。  
     
     ![report-builder-sparkline-grouping-pane](../reporting-services/media/report-builder-sparkline-grouping-pane.png)
   
 15. 单击 **“运行”** 以预览报表。  
 
 ### <a name="2a-format-data-as-currency"></a><a name="FormatCurrency"></a>2a. 将数据格式设置为货币  
-默认情况下，“Sales”字段的汇总数据显示为常规数字  。 请设置其格式，以使其显示货币形式的数字。 切换“占位符样式”，将格式化的文本框和占位符文本显示为示例值  。  
+默认情况下，“Sales”字段的汇总数据显示为常规数字。 请设置其格式，以使其显示货币形式的数字。 切换“占位符样式”，将格式化的文本框和占位符文本显示为示例值。  
   
 1.  单击 **“设计”** 切换到设计视图。  
   
-2.  单击“SalesDate”列的第二行（位于列标题行下方）中的单元格  。 按住 Ctrl 键并选择包含 `[Sum(Sales)]`的所有单元格。 
+2.  单击“SalesDate”列的第二行（位于列标题行下方）中的单元格。 按住 Ctrl 键并选择包含 `[Sum(Sales)]`的所有单元格。 
 
     ![report-builder-select-sum-sales](../reporting-services/media/report-builder-select-sum-sales.png) 
   
-3.  在“开始”选项卡上的“数字”组中，单击“货币”    。 单元会更改为显示已设置好格式的货币。  
+3.  在“开始”选项卡上的“数字”组中，单击“货币”  。 单元会更改为显示已设置好格式的货币。  
 
     ![report-builder-placeholder-currency](../reporting-services/media/report-builder-placeholder-currency.png)
   
-    如果区域设置为“英语(美国)”，则默认示例文本为 [ **$12,345.00**]。 如果看不到示例货币值，请在“数字”组中单击“占位符样式” > “示例值”。  
+    如果区域设置为“英语(美国)”，则默认示例文本为 [ **$12,345.00**]。 如果看不到示例货币值，请在“数字”组中单击“占位符样式” > “示例值”  。  
     
     ![report-builder-placeholder-value-button](../reporting-services/media/report-builder-placeholder-value-button.png)
    
 ### <a name="2b-optional-format-data-as-dates"></a><a name="FormatDates"></a>2b. （可选）将数据格式设置为日期格式  
-默认情况下，“SalesDate”字段同时显示日期和时间信息  。 您可以设置其格式，使其只显示日期。  
+默认情况下，“SalesDate”字段同时显示日期和时间信息。 您可以设置其格式，使其只显示日期。  
   
 1.  单击包含 `[SalesDate]`的单元格。  
   
-3.  在“开始”选项卡上，转至“数字”组，再转至“日期”    。  
+3.  在“开始”选项卡上，转至“数字”组，再转至“日期”  。  
   
     单元格会显示示例日期 **[2000/1/31]** 。
      
@@ -196,25 +197,25 @@ ms.locfileid: "63043078"
   
 2.  选择表中的“Total”列。  
   
-3.  右键单击，指向“插入列”，然后单击“左”   。  
+3.  右键单击，指向“插入列”，然后单击“左” 。  
 
     ![report-builder-add-column-left](../reporting-services/media/report-builder-add-column-left.png)
   
-4.  在新列中，右键单击 `[Product]` 行中的单元格，选择“插入” > “迷你图”。  
+4.  在新列中，右键单击 `[Product]` 行中的单元格，选择“插入” > “迷你图” 。  
 
     ![report-builder-insert-sparkline](../reporting-services/media/report-builder-insert-sparkline.png)
   
-5.  在“选择迷你图类型”对话框中，确保已选择“列”行中的第一个迷你图，然后单击“确定”    。  
+5.  在“选择迷你图类型”对话框中，确保已选择“列”行中的第一个迷你图，然后单击“确定”  。  
   
 6.  单击要在“图表数据”窗格中显示的迷你图。  
   
-7.  单击“值”框旁边的加号 (+)，然后单击“Sales”  。 
+7.  单击“值”框旁边的加号 (+)，然后单击“Sales”。 
 
     ![report-builder-sparkline-values](../reporting-services/media/report-builder-sparkline-values.png) 
   
-    “Sales”字段中的值现在是迷你图的值  。  
+    “Sales”字段中的值现在是迷你图的值。  
   
-8.  单击“类别组”框旁边的加号 (+)，然后单击“SalesDate”  。  
+8.  单击“类别组”框旁边的加号 (+)，然后单击“SalesDate”。  
   
 9. 单击 **“运行”** 以预览报表。  
   
@@ -229,23 +230,23 @@ ms.locfileid: "63043078"
    
 1.  单击 **“设计”** 返回设计视图。  
   
-2.  右键单击迷你图，然后单击“垂直轴属性”  。  
+2.  右键单击迷你图，然后单击“垂直轴属性”。  
   
-3.  选中“对齐轴”复选框  。 Tablix1 是列表中唯一的选项。  
+3.  选中“对齐轴”复选框。 Tablix1 是列表中唯一的选项。  
   
      该选项设置在各迷你图中条形相对于其他条形的高度。 
   
-4.  单击“确定”。   
+4.  单击“确定”。  
   
-5.  右键单击迷你图，然后单击“水平轴属性”  。  
+5.  右键单击迷你图，然后单击“水平轴属性”。  
   
-6.  选中“对齐轴”复选框  。 Tablix1 是列表中唯一的选项。 
+6.  选中“对齐轴”复选框。 Tablix1 是列表中唯一的选项。 
   
     该选项设置在各迷你图中条形相对于其他条形的宽度。 如果某些迷你图中的条形比其他迷你图少，则这些迷你图将对于缺失的数据具有空白空间。  
   
-7.  单击“确定”。   
+7.  单击“确定”。  
   
-8.  单击“运行”，再次预览报表  。  
+8.  单击“运行”，再次预览报表。  
   
 现在每个迷你图中的所有条形均与其他迷你图中的条形对齐，它们的高度也是相对的。  
   
@@ -262,9 +263,9 @@ ms.locfileid: "63043078"
   
 2.  单击表，灰色条形显示在表的上方和旁边。 这些是列和行的控点
   
-3.  指向列控点之间的行，使光标变为双箭头。 拖动“Product”列，以便产品名称显示在一行中  。  
+3.  指向列控点之间的行，使光标变为双箭头。 拖动“Product”列，以便产品名称显示在一行中。  
   
-4.  单击“运行”以预览报表，并查看报表是否足够宽。   
+4.  单击“运行”以预览报表，并查看报表是否足够宽。  
   
 ## <a name="8-optional-add-a-report-title"></a><a name="Title"></a>8.（可选）添加报表标题  
 报表标题将出现在报表的顶部。 可以将报表标题置于报表表头中或置于表体顶部的文本框中（如果报表未使用表头）。 在本教程中，您将使用自动放置在表体顶部的文本框。  
@@ -273,15 +274,15 @@ ms.locfileid: "63043078"
   
 ### <a name="to-add-a-report-title"></a>添加报表标题  
   
-1.  在设计图面上，单击“单击以添加标题”  。  
+1.  在设计图面上，单击“单击以添加标题”。  
   
-2.  键入“Sales by Date”，然后在文本框外部单击  。  
+2.  键入“Sales by Date”，然后在文本框外部单击。  
   
-3.  选择包含“Product Sales”的文本框  。  
+3.  选择包含“Product Sales”的文本框。  
   
-4.  在“开始”选项卡上，单击“字体”组，转至“颜色”，然后选择“蓝绿色”    。  
+4.  在“开始”选项卡上，单击“字体”组，转至“颜色”，然后选择“蓝绿色”  。  
   
-7.  选择“粗体”  。  
+7.  选择“粗体”。  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -298,9 +299,9 @@ ms.locfileid: "63043078"
   
     此时将显示“正在连接到报表服务器”消息。 当连接完成时，您将看到报表服务器管理员指定为报表默认位置的报表文件夹的内容。  
   
-4.  在“名称”中，用“Product Sales”替换默认名称   。  
+4.  在“名称”中，用“Product Sales”替换默认名称 。  
   
-5.  单击“保存”  。  
+5.  单击“ **保存**”。  
   
 报表即已保存至报表服务器。 您连接的报表服务器的名称将显示在窗口底部的状态栏中。  
   
@@ -308,11 +309,11 @@ ms.locfileid: "63043078"
   
 1.  从 **“报表生成器”** 按钮，单击 **“另存为”** 。  
   
-2.  依次单击“桌面”、“我的文档”或“我的电脑”，并浏览到要保存该报表的文件夹    。  
+2.  依次单击“桌面”、“我的文档”或“我的电脑”，并浏览到要保存该报表的文件夹  。  
   
-3.  在“名称”中，用“Product Sales”替换默认名称   。  
+3.  在“名称”中，用“Product Sales”替换默认名称 。  
   
-4.  单击“保存”  。  
+4.  单击“ **保存**”。  
   
 ## <a name="next-steps"></a>后续步骤  
 

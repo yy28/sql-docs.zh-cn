@@ -1,6 +1,6 @@
 ---
 title: 不同版本支持的功能 - SQL Server Reporting Services | Microsoft Docs
-description: 本主题介绍 SQL Server 各个版本支持的 SQL Server Reporting Services (SSRS) 功能。 可在 180 天的试用期内使用 SQL Server 评估版。
+description: 了解 SQL Server 各个版本支持的 SQL Server Reporting Services (SSRS) 功能。
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 12/16/2019
-ms.openlocfilehash: 96fe1480deed7dad420687b5b3b08a3ea8da2ffd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bbb3196349c648b955e5d27bf1d5fcfdadb9085f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76516598"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246656"
 ---
 # <a name="sql-server-reporting-services-features-supported-by-editions"></a>不同版本支持的 SQL Server Reporting Services 功能
 
@@ -88,10 +88,10 @@ Microsoft 下载中心提供以下软件客户端应用程序。 它们有助于
   
 |工具名称|Enterprise|Standard|Web|Express with Advanced Services|开发人员|  
 |---------------|----------------|--------------|------------------------|-------------|---------------| 
-| 更适用于 Power BI 报表服务器的 Power BI Desktop (.pbix)  | 是，有软件保障 | | | | 是 |
-|[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] （.rdl 和 .rds   ）|是|是|是|是|是|  
-|[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] (.rsmobile  )|是||||是|  
-|用于移动设备的 Power BI 应用（iOS、Windows 10 和 Android）(.rsmobile  )|是||||是|  
+| 更适用于 Power BI 报表服务器的 Power BI Desktop (.pbix) | 是，有软件保障 | | | | 是 |
+|[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] （.rdl 和 .rds ）|是|是|是|是|是|  
+|[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] (.rsmobile)|是||||是|  
+|用于移动设备的 Power BI 应用（iOS、Windows 10 和 Android）(.rsmobile)|是||||是|  
   
 > [!NOTE]  
 > * 上表标识启用这些客户端工具所需的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本。 但是，这些工具可以访问任何 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本上承载的数据。  

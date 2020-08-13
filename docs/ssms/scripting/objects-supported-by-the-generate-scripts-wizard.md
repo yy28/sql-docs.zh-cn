@@ -1,5 +1,6 @@
 ---
 title: 生成脚本向导支持的对象
+description: 查看“生成和发布脚本”向导可帮助你发布的对象类型。
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,28 +11,103 @@ ms.assetid: 071eb2cb-f073-41ca-9f4d-11d3b8803495
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c14ea09d45c59def95f078eb87e72e2a70925892
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a213efd1b0118e4313212b35aad943cbae50db2d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253762"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246404"
 ---
 # <a name="objects-supported-by-the-generate-scripts-wizard"></a>生成脚本向导支持的对象
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   “生成和发布脚本向导”支持 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]所支持的对象的一个子集。  
   
 ## <a name="supported-objects"></a>支持的对象  
  下表列出“生成和发布脚本向导”支持的可发布对象。  
   
-||||||  
-|-|-|-|-|-|  
-|应用程序角色|数据库角色|架构|用户定义聚合|视图*|  
-|Assembly|DEFAULT 约束|存储过程*|用户定义数据类型|XML 架构集合|  
-|CHECK 约束|全文目录|同义词|用户定义函数||  
-|CLR（公共语言运行时）存储过程*|索引|表|用户定义表||  
-|CLR 用户定义函数|规则|用户**|用户定义类型||  
-  
+:::row:::
+    :::column:::
+        应用程序角色
+    :::column-end:::
+    :::column:::
+        数据库角色
+    :::column-end:::
+    :::column:::
+        架构
+    :::column-end:::
+    :::column:::
+        用户定义聚合
+    :::column-end:::
+    :::column:::
+        视图*
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        Assembly
+    :::column-end:::
+    :::column:::
+        DEFAULT 约束
+    :::column-end:::
+    :::column:::
+        存储过程*
+    :::column-end:::
+    :::column:::
+        用户定义数据类型
+    :::column-end:::
+    :::column:::
+        XML 架构集合
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        CHECK 约束
+    :::column-end:::
+    :::column:::
+        全文目录
+    :::column-end:::
+    :::column:::
+        同义词
+    :::column-end:::
+    :::column:::
+        用户定义函数
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        CLR（公共语言运行时）存储过程*
+    :::column-end:::
+    :::column:::
+        索引
+    :::column-end:::
+    :::column:::
+        表
+    :::column-end:::
+    :::column:::
+        用户定义表
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        CLR 用户定义函数
+    :::column-end:::
+    :::column:::
+        规则
+    :::column-end:::
+    :::column:::
+        用户**
+    :::column-end:::
+    :::column:::
+        用户定义类型
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+
  *已发布但未加密。  
   
  **数据库中存在的任何非系统用户将作为角色发布。  

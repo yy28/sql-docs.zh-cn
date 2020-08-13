@@ -1,6 +1,6 @@
 ---
 title: 第 3 课：为表报表定义数据集 | Microsoft Docs
-description: 定义分页报表的数据源后，需要定义数据集。 在 SQL Server Reporting Services 中，在报表中使用的数据包含在数据集中。
+description: 在本课程中，了解如何在 SQL Server Reporting Services (SSRS) 中为表报表定义数据集。
 ms.date: 05/01/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,34 +9,34 @@ ms.topic: conceptual
 ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 25c62e0cd615748a764937d6dc2b8e4c952e59a1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 272787e124616593c90483735afec702f5d4fb18
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244309"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247546"
 ---
 # <a name="lesson-3-define-a-dataset-for-the-table-report---sql-server-reporting-services"></a>第 3 课：定义表报表的数据集 - SQL Server Reporting Services
 
-定义分页报表的数据源后，需要定义数据集。 在 [!INCLUDE[ssrsnoversion](../includes/ssrsnoversion-md.md)] 中，在报表中使用的数据包含在“数据集”中  。 数据集包括一个指向数据源的指针、将由报表使用的查询、计算字段和变量。
+定义分页报表的数据源后，需要定义数据集。 在 [!INCLUDE[ssrsnoversion](../includes/ssrsnoversion-md.md)] 中，在报表中使用的数据包含在“数据集”中。 数据集包括一个指向数据源的指针、将由报表使用的查询、计算字段和变量。
 
 在报表设计器中使用查询设计器来定义数据集。 在本教程中，将创建一个查询，用于从 AdventureWorks2016 数据库中检索销售订单信息。
 
 ## <a name="define-a-transact-sql-query-for-report-data"></a>为报表数据定义 Transact-SQL 查询  
 
-1. 在“报表数据”  窗格中，选择“新建”   > “数据集...”  。“数据集属性”  对话框将打开，并显示“查询”  部分。
+1. 在“报表数据”窗格中，选择“新建” > “数据集...”。“数据集属性”对话框将打开，并显示“查询”部分。
 
     ![vs-data_set_properties_dialog](media/lesson-3-defining-a-dataset-for-the-table-report-reporting-services/vs-dataset-properties-dialog.png)
 
-2. 在“名称”  框中，键入“AdventureWorksDataset”。
+2. 在“名称”框中，键入“AdventureWorksDataset”。
 
-3. 在下面选择“使用在我的报表中嵌入的数据集”  单选按钮。
+3. 在下面选择“使用在我的报表中嵌入的数据集”单选按钮。
 
-4. 从“数据源”  下拉框中，选择“AdventureWorks2016”。
+4. 从“数据源”下拉框中，选择“AdventureWorks2016”。
 
-5. 有关查询类型  ，选择“文本”  单选按钮。
+5. 有关查询类型，选择“文本”单选按钮。
 
-6. 将以下 Transact-SQL 查询键入（或复制并粘贴）到“查询”  文本框中。
+6. 将以下 Transact-SQL 查询键入（或复制并粘贴）到“查询”文本框中。
 
     ```T-SQL
     SELECT
@@ -61,13 +61,13 @@ ms.locfileid: "75244309"
     HAVING ppc.Name = 'Clothing'
     ```
 
-7. （可选）选择“查询设计器”按钮  。 查询将在基于文本的“查询设计器”  中显示。 通过选择“查询设计器”  工具栏上的 ![ssrs_querydesigner_run](media/ssrs-querydesigner-run.png)“运行”  按钮，查看查询的结果。 显示的数据集包含来自 AdventureWorks2016 数据库的四个表的六个字段。 查询利用别名等 Transact-SQL 功能。 例如，SalesOrderHeader 表称为 soh  。
+7. （可选）选择“查询设计器”按钮。 查询将在基于文本的“查询设计器”中显示。 通过选择“查询设计器”工具栏上的 ![ssrs_querydesigner_run](media/ssrs-querydesigner-run.png)“运行”按钮，查看查询的结果。 显示的数据集包含来自 AdventureWorks2016 数据库的四个表的六个字段。 查询利用别名等 Transact-SQL 功能。 例如，SalesOrderHeader 表称为 soh。
 
-8. 选择“确定”  退出“查询设计器”  。
+8. 选择“确定”退出“查询设计器”。
 
-9. 选择“确定”  退出“数据集属性”  对话框。
+9. 选择“确定”退出“数据集属性”对话框。
 
-“报表数据”  窗格将显示 AdventureWorksDataset 数据集和字段。
+“报表数据”窗格将显示 AdventureWorksDataset 数据集和字段。
 
    ![ssrs_adventureworksdataset](media/ssrs-adventureworksdataset.png)
 

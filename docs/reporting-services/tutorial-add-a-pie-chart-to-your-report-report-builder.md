@@ -1,5 +1,6 @@
 ---
 title: 教程：向报表添加饼图（报表生成器）| Microsoft Docs
+description: 了解如何在 Reporting Services 分页报表中创建饼图、添加百分比并将若干小切片合并为一个切片。
 ms.date: 06/15/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b25a2f955ddd630c7093a1dc82a22c2cd0ba41b0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 55cf0d48ebe4cec7063089c1ec025dd4b34bce1b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63041225"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245664"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>教程：向报表添加饼图（报表生成器）
 在本教程中，将在 Reporting Services 分页报表中创建饼图。 添加百分比，并将小切片合并为一个切片。
@@ -29,7 +30,7 @@ ms.locfileid: "63041225"
 > [!NOTE]  
 > 在本教程中，将向导的多个步骤合并为两个过程。 有关如何浏览到报表服务器、添加数据源和添加数据集的分步说明，请参阅这一系列教程中的第一个教程：[教程：创建基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
-本教程的预计学时：10 分钟  
+完成本教程的估计时间：10 分钟  
   
 ## <a name="requirements"></a>要求  
 有关要求的信息，请参阅[教程先决条件（报表生成器）](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
@@ -40,17 +41,17 @@ ms.locfileid: "63041225"
   
 1.  通过计算机、[Web 门户或 SharePoint 集成模式](../reporting-services/report-builder/start-report-builder.md) 启动报表生成器 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 。  
   
-    将打开“新建报表或数据集”对话框  。  
+    将打开“新建报表或数据集”对话框。  
   
-    如果未出现“新建报表或数据集”对话框，请通过“文件”菜单转至“新建”    。  
+    如果未出现“新建报表或数据集”对话框，请通过“文件”菜单转至“新建”  。  
   
 2.  在左窗格中，确认已选中 **“新建报表”** 。  
   
-3.  在右窗格中，单击“图表向导”  。  
+3.  在右窗格中，单击“图表向导”。  
   
-4.  在“选择数据集”页上，单击“创建数据集”，然后单击“下一步”    。  
+4.  在“选择数据集”页上，单击“创建数据集”，然后单击“下一步”  。  
   
-5.  在“选择数据源的连接”页中，选择现有数据源或浏览到报表服务器并选择一个数据源，然后单击“下一步”   。 您可能需要输入用户名和密码。  
+5.  在“选择数据源的连接”页中，选择现有数据源或浏览到报表服务器并选择一个数据源，然后单击“下一步”********。 您可能需要输入用户名和密码。  
   
     > [!NOTE]  
     > 只要您具有足够的权限，则选择哪一个数据源并不重要。 您将不会从数据源中获取数据。 有关详细信息，请参阅[获取数据连接的备选方式（报表生成器）](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
@@ -75,21 +76,21 @@ ms.locfileid: "63041225"
   
 8.  （可选）单击“运行”按钮 ( **!** )，查看要用于图表的数据。  
   
-9. 单击“下一步”。   
+9. 单击“下一步”。  
   
 ## <a name="2-choose-the-chart-type"></a><a name="ChartType"></a>2.选择图表类型  
 可以从各种预定义的图表类型中进行选择。  
 
   
-1.  在“选择图表类型”  页中，单击“饼图”  ，然后单击“下一步”  。 将打开“排列图表字段”  页。  
+1.  在“选择图表类型”页中，单击“饼图”，然后单击“下一步”。 将打开“排列图表字段”页。  
   
-    在“排列图表字段”  页上，将“Product”字段拖到“类别”  窗格中。 类别定义了饼图上的切片数。 在本示例中，将有 8 个切片，每个产品对应一个切片。  
+    在“排列图表字段”页上，将“Product”字段拖到“类别”窗格中。 类别定义了饼图上的切片数。 在本示例中，将有 8 个切片，每个产品对应一个切片。  
   
-2.  将“Sales”字段拖到“值”  窗格中。 Sales 表示子类别的销售量。 “值”  窗格显示 `[Sum(Sales)]`，因为该图表显示的是每个产品的销售总额。  
+2.  将“Sales”字段拖到“值”窗格中。 Sales 表示子类别的销售量。 “值”窗格显示 `[Sum(Sales)]`，因为该图表显示的是每个产品的销售总额。  
   
-3.  单击“下一步”  查看预览。  
+3.  单击“下一步”查看预览。  
   
-5.  单击“完成”  。  
+5.  单击“完成”。  
   
     图表将添加到设计图面中。 看不到饼图的实际值 -- 只能看到 Product 1、Product 2 等，以便了解该图表的显示外观。  
     
@@ -109,15 +110,15 @@ ms.locfileid: "63041225"
   
 1.  切换到报表设计视图。  
   
-2.  右键单击饼图，然后单击“显示数据标签”  。 数据标签会显示在图表上。  
+2.  右键单击饼图，然后单击“显示数据标签”。 数据标签会显示在图表上。  
   
-3.  右键单击标签，然后单击“序列标签属性”  。  
+3.  右键单击标签，然后单击“序列标签属性”。  
   
-4.  在“标签数据”  框中，选择“#PERCENT”  。  
+4.  在“标签数据”框中，选择“#PERCENT”。  
     
-5.  （可选）若要指定标签显示的小数位数，在“标签数据”  框的“#PERCENT”  后面键入 **{Pn}** ，其中 n  为要显示的小数位数。 例如，若不显示小数位数，请键入 **#PERCENT{P0}** 。  
+5.  （可选）若要指定标签显示的小数位数，在“标签数据”**** 框的“#PERCENT”**** 后面键入 **{Pn}**，其中 n** 为要显示的小数位数。 例如，若不显示小数位数，请键入 **#PERCENT{P0}** 。  
 
-6.  若要将值显示为百分比，则 UseValueAsLabel 属性必须为 false。 如果系统提示设置此值，请在“确认操作”  对话框中单击“是”  。  
+6.  若要将值显示为百分比，则 UseValueAsLabel 属性必须为 false。 如果系统提示设置此值，请在“确认操作”对话框中单击“是”。  
   
     > [!NOTE]  
     > 设置百分比格式时，“序列标签属性”对话框中的“数字格式”不起作用。 它将标签的格式设置为百分比，但不会计算每一切片占饼图的百分比。  
@@ -135,21 +136,21 @@ ms.locfileid: "63041225"
 
 1.  切换到报表设计视图。  
   
-2.  如果看不到“属性”窗格，请在“视图”  选项卡的“显示/隐藏”  组中选择“属性”  。  
+2.  如果看不到“属性”窗格，请在“视图”选项卡的“显示/隐藏”组中选择“属性”。  
   
 3.  在设计图面上，单击饼图的任一切片。 序列的属性将显示在“属性”窗格中。  
   
 4.  在 **“常规”** 部分，展开 **CustomAttributes** 节点。  
   
-5.  将“CollectedStyle”  属性设置为“SingleSlice”  。  
+5.  将“CollectedStyle”属性设置为“SingleSlice”。  
 
     ![report-builder-pie-chart-single-slice-property](../reporting-services/media/report-builder-pie-chart-single-slice-property.png)
  
-6.  确保将“CollectedThreshold”  属性设置为“5”。  
+6.  确保将“CollectedThreshold”属性设置为“5”。  
   
-7.  确保将“CollectedThresholdUsePercent”  属性设置为“True”  。  
+7.  确保将“CollectedThresholdUsePercent”属性设置为“True”。  
   
-8.  在“主文件夹”  选项卡上，单击“运行”  以预览报表。  
+8.  在“主文件夹”选项卡上，单击“运行”以预览报表。  
   
 现在，在图例中可看到类别“其他”。 新饼图切片将所有小于 5% 的切片组合成一个占整个饼图 6% 的切片。  
 
@@ -165,7 +166,7 @@ ms.locfileid: "63041225"
 
 2. 选择饼图本身。
 
-3. 在“属性”窗格中，“自定义属性”  下，将“PieStartAngle”从“0”  更改为“270”  。
+3. 在“属性”窗格中，“自定义属性”下，将“PieStartAngle”从“0”更改为“270”。
 
 4. 单击 **“运行”** 以预览报表。
 
@@ -179,7 +180,7 @@ ms.locfileid: "63041225"
   
 1.  在图表中，选择“图表标题”框，然后按 Delete。
 
-2. 在设计图面上，单击“单击以添加标题”  。  
+2. 在设计图面上，单击“单击以添加标题”。  
   
 2.  键入 **Camera and Camcorder Sales**，按 Enter，然后键入 **As a Percentage of Total Sales**，如下所示：  
   
@@ -187,9 +188,9 @@ ms.locfileid: "63041225"
   
     **As a Percentage of Total Sales**  
   
-3.  选择 **Camera and Camcorder Sales**，然后在“开始”  选项卡上的“字体”  部分，单击“加粗”  。  
+3.  选择 **Camera and Camcorder Sales**，然后在“开始”选项卡上的“字体”部分，单击“加粗”。  
   
-4.  选择“As a Percentage of Total Sales”  ，然后在“开始”  选项卡上的“字体”  部分中，将字号设置为“10”  。  
+4.  选择“As a Percentage of Total Sales”，然后在“开始”选项卡上的“字体”部分中，将字号设置为“10”。  
   
 5.  （可选）您可能需要使“标题”文本框更高一些，以容纳两行文本。  
   
@@ -203,11 +204,11 @@ ms.locfileid: "63041225"
   
 1.  切换到报表设计视图。  
   
-2.  在“文件”  菜单上，单击“保存”  。  
+2.  在“文件”菜单上，单击“保存”。  
   
-3.  在“名称”  中，键入“Sales Pie Chart”  。  
+3.  在“名称”中，键入“Sales Pie Chart”。  
   
-4.  单击“保存”  。  
+4.  单击“ **保存**”。  
   
 报表将保存在报表服务器上。  
   

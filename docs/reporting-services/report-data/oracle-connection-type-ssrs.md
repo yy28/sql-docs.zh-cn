@@ -1,5 +1,6 @@
 ---
-title: Oracle 连接类型（报表生成器和 Power BI 报表服务器）| Microsoft Docs
+title: Oracle 连接类型（SSRS 和 Power BI 报表服务器）
+description: 利用本文中有关 Oracle 连接类型的信息，以了解如何生成数据源。
 ms.date: 03/12/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 188e054487099e8db96ded6066b71ad09a49c762
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 32972e17c7dee83c1099cf8826eefe874db9d7dd
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80342733"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246476"
 ---
-# <a name="oracle-connection-type-report-builder--power-bi-report-server--microsoft-docs"></a>Oracle 连接类型（报表生成器和 Power BI 报表服务器）| Microsoft Docs
+# <a name="oracle-connection-type-ssrs--power-bi-report-server"></a>Oracle 连接类型（SSRS 和 Power BI 报表服务器）
 
 若要在报表中使用来自 Oracle 数据库的数据，你必须拥有一个基于 Oracle 类型的报表数据源的数据集。 此内置数据源类型直接使用 Oracle Data Provider，并且需要 Oracle 客户端软件组件。 本文介绍如何下载和安装 Reporting Services、Power BI 报表服务器、报表生成器和 Power BI Desktop 的驱动程序。
 
@@ -25,7 +26,7 @@ ms.locfileid: "80342733"
 
 ## <a name="64-bit-drivers-for-the-report-servers"></a>用于报表服务器的 64 位驱动程序
 
-Power BI 报表服务器和 SQL Server Reporting Services 2016 和更高版本都对分页报表使用 Managed ODP.NET  。 仅在使用 OracleODAC drivers 12.2 及更高版本时才需要以下步骤，因为它们默认安装到新 Oracle 主安装的非计算机范围配置中。 这些步骤假设你已将 ODAC 18.x 文件安装到 c:\oracle64，并且 Oracle.ManagedDataAccess.dll 和 Oracle.DataAccess.dll 的文件版本为 4.122.18.3。
+Power BI 报表服务器和 SQL Server Reporting Services 2016 和更高版本都对分页报表使用 Managed ODP.NET。 仅在使用 OracleODAC drivers 12.2 及更高版本时才需要以下步骤，因为它们默认安装到新 Oracle 主安装的非计算机范围配置中。 这些步骤假设你已将 ODAC 18.x 文件安装到 c:\oracle64，并且 Oracle.ManagedDataAccess.dll 和 Oracle.DataAccess.dll 的文件版本为 4.122.18.3。
 
 1. 在 Oracle 下载网站上，安装 [Oracle 64 位 ODAC Oracle Universal Installer (OUI)](https://www.oracle.com/technetwork/topics/dotnet/downloads/odacdeploy-4242173.html)。 
 2. 向 GAC 注册 ODP.NET 托管客户端：
@@ -37,7 +38,7 @@ Power BI 报表服务器和 SQL Server Reporting Services 2016 和更高版本�
 
 ### <a name="power-bi-reports-use-unmanaged-odpnet"></a>Power BI 报表使用非管理的 ODP.NET
 
-Power BI 报表使用非管理的 ODP.NET  。 请按照以下步骤注册非管理的 ODP.NET：
+Power BI 报表使用非管理的 ODP.NET。 请按照以下步骤注册非管理的 ODP.NET：
 
 1. 向 GAC 注册 ODP.NET 非管理的客户端：
 
@@ -48,7 +49,7 @@ Power BI 报表使用非管理的 ODP.NET  。 请按照以下步骤注册非管
  
 ## <a name="32-bit-drivers-for-report-builder"></a>用于报表生成器的 32 位驱动程序
 
-报表生成器使用“托管的 ODP.NET”来编写分页报表  。 仅在使用 OracleODAC drivers 12.2 及更高版本时才需要以下步骤，因为它们默认安装到新 Oracle 主安装的非计算机范围配置中。 这些步骤假设你已将 ODAC 18.x 文件安装到 c:\oracle32，并且 Oracle.ManagedDataAccess.dll 文件版本为 4.122.18.3。
+报表生成器使用“托管的 ODP.NET”来编写分页报表。 仅在使用 OracleODAC drivers 12.2 及更高版本时才需要以下步骤，因为它们默认安装到新 Oracle 主安装的非计算机范围配置中。 这些步骤假设你已将 ODAC 18.x 文件安装到 c:\oracle32，并且 Oracle.ManagedDataAccess.dll 文件版本为 4.122.18.3。
 
 1. 在 Oracle 下载网站上，安装 [Oracle 32 位 ODAC Oracle Universal Installer (OUI)](https://www.oracle.com/technetwork/topics/dotnet/downloads/odacdev-4242174.html)。
 2. 向 GAC 注册 ODP.NET 托管客户端：
@@ -60,7 +61,7 @@ Power BI 报表使用非管理的 ODP.NET  。 请按照以下步骤注册非管
 
 ## <a name="64-bit-and-32-bit-drivers-for-power-bi-desktop"></a>用于 Power BI Desktop 的 64 位和 32 位驱动程序
 
-Power BI 报表使用非管理的 ODP.NET  。 仅在使用 OracleODAC drivers 12.2 及更高版本时才需要以下步骤，因为它们默认安装到新 Oracle 主安装的非计算机范围配置中。 这些步骤假设你已将 ODAC 18.x 文件安装到 c:\ oracle64（64 位）和 c:\ oracle32（32 位），并且 Oracle.DataAccess.dll 的文件版本为 4.122.18.3。 请按照以下步骤注册非管理的 ODP.NET：
+Power BI 报表使用非管理的 ODP.NET。 仅在使用 OracleODAC drivers 12.2 及更高版本时才需要以下步骤，因为它们默认安装到新 Oracle 主安装的非计算机范围配置中。 这些步骤假设你已将 ODAC 18.x 文件安装到 c:\ oracle64（64 位）和 c:\ oracle32（32 位），并且 Oracle.DataAccess.dll 的文件版本为 4.122.18.3。 请按照以下步骤注册非管理的 ODP.NET：
 
 ### <a name="64-bit-power-bi-desktop"></a>64 位 Power BI Desktop
 

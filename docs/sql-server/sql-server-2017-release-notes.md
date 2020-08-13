@@ -5,21 +5,21 @@ ms.custom: ''
 ms.date: 11/01/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: install
+ms.technology: release-landing
 ms.topic: conceptual
 ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 43e6451f54e55af8e9c782dbab8a23bc753a03bc
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 33d6fd836bd4676e9f178fb5a3c59cc9fba67f80
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001110"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245599"
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 发行说明
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
 本主题介绍 SQL Server 2017 的限制和问题。 如需相关信息，请参阅：
 - [SQL Server 2017 的新增功能](../sql-server/what-s-new-in-sql-server-2017.md)
 - [SQL Server on Linux 发行说明](../linux/sql-server-linux-release-notes.md)
@@ -74,7 +74,7 @@ ms.locfileid: "83001110"
 - **问题及其对客户的影响：** 存储过程 **[catalog].[create_execution]** 的参数 *runincluster*重命名为 *runinscaleout*，以保持一致性和可读性。
 - **解决方法：** 如果现有脚本在 Scale Out 中运行包，必须将参数名称从 runincluster 更改为 runinscaleout，以使脚本在 RC1 中正常运行   。
 
-- **问题及其对客户的影响：** SQL Server Management Studio (SSMS) 17.1 及更早版本无法在 RC1 的 Scale Out 中触发包执行。 错误消息为：“@runincluster 不是过程 create_execution 的参数   。” SSMS 的下一个版本，即版本 17.2 中修复了此问题。 SSMS 的版本 17.2 及更高版本支持 Scale Out 中的新参数名称和包执行。 
+- **问题及其对客户的影响：** SQL Server Management Studio (SSMS) 17.1 及更早版本无法在 RC1 的 Scale Out 中触发包执行。 错误消息为：“\@runincluster 不是过程 create_execution 的参数。” SSMS 的下一个版本，即版本 17.2 中修复了此问题。 SSMS 的版本 17.2 及更高版本支持 Scale Out 中的新参数名称和包执行。 
 - **解决方法：** 在 SSMS 版本 17.2 发布前：
   1. 使用现有版本 SSMS 生成包执行脚本。
   2. 将脚本中 runincluster  参数的名称更改为 runinscaleout  。
@@ -150,7 +150,7 @@ ms.locfileid: "83001110"
 
 ## <a name="more-information"></a>详细信息
 - [SQL Server Reporting Services 发行说明](../reporting-services/release-notes-reporting-services.md)的限制和问题。
-- [机器学习服务的已知问题](../machine-learning/known-issues-for-sql-server-machine-learning-services.md)
+- [机器学习服务的已知问题](../machine-learning/troubleshooting/known-issues-for-sql-server-machine-learning-services.md)
 - [SQL Server 更新中心 - 链接和有关所有受支持版本的信息](https://msdn.microsoft.com/library/ff803383.aspx)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

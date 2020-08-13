@@ -1,5 +1,6 @@
 ---
 title: HTML 查看器和报表工具栏 | Microsoft Docs
+description: 了解 HTML 查看器和报表工具栏，以及如何在报表服务器请求报表时按需查看报表。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 948abaaae630de34f4340370fd2f6f0f4e0a1d34
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 825e169f3819cc19b042715662f4ec554f02d65b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65503066"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247196"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>HTML 查看器和报表工具栏
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供了一个 HTML 查看器，该查看器可用来按需显示从报表服务器请求的报表。 HTML 查看器提供了一个用于以 HTML 格式查看报表的框架。 该查看器包含报表工具栏、参数区域、凭据区域和文档结构图。 HTML 查看器中的报表工具栏包含可用于处理报表的功能（包括导出选项，以便您可以使用 HTML 之外的格式查看报表）。 只有在打开配置为使用参数和文档结构图控件的报表时，才会显示参数区域和文档结构图。  
@@ -37,7 +38,7 @@ ms.locfileid: "65503066"
 |图标或控件||目标|  
 |------------------------------|-|--------|  
 |![页面导航控件](../reporting-services/media/htmlviewer-pagenav.gif "页面导航控件")|**页面导航控件**|打开报表的第一页或最后一页，逐页浏览报表，以及打开报表中的特定页面。 若要查看特定页面，请键入相应的页码，再按 Enter。|  
-|![页面显示控件](../reporting-services/media/htmlviewer-pagesize.gif "页面显示控件")|**页面显示控件**|放大或缩小报表页的大小。 除了按比例更改外，还可以选择“页宽”，以使报表页的水平宽度适应浏览器窗口大小，或选择“整页”，以使报表的垂直高度适应浏览器窗口大小   。 **Internet Explorer 5.5 和更高版本支持** “缩放” [!INCLUDE[msCoName](../includes/msconame-md.md)] 选项。|  
+|![页面显示控件](../reporting-services/media/htmlviewer-pagesize.gif "页面显示控件")|**页面显示控件**|放大或缩小报表页的大小。 除了按比例更改外，还可以选择“页宽”，以使报表页的水平宽度适应浏览器窗口大小，或选择“整页”，以使报表的垂直高度适应浏览器窗口大小********。 **Internet Explorer 5.5 和更高版本支持** “缩放” [!INCLUDE[msCoName](../includes/msconame-md.md)] 选项。|  
 |![搜索字段](../reporting-services/media/htmlviewer-search.gif "搜索字段")|**搜索字段**|通过键入要查找的单词或短语（最长不超过 256 个字符）在报表中搜索内容。 搜索不区分大小写，将从当前选择的页或区域开始。 搜索操作中只包括可见内容。 若要搜索随后出现的相同值，请单击 **“下一个”** 。|  
 |![导出格式](../reporting-services/media/htmlviewer-export.GIF "导出格式")|**导出格式**|打开一个新的浏览器窗口，并以所选的格式呈现报表。 可用的格式由报表服务器上安装的呈现扩展插件决定。 建议打印时采用 TIFF 格式。 单击 **“导出”** 可以按所选格式查看报表。|  
 |![文档结构图图标](../reporting-services/media/htmlviewer-docmap.GIF "文档结构图图标")|**文档结构图图标**|在包含文档结构图的报表中显示或隐藏文档结构图窗格。 文档结构图是一个类似于网站上的导航窗格的报表导航控件。 单击文档结构图中的项，即可导航到特定的组、页或子报表。|  
@@ -63,7 +64,7 @@ ms.locfileid: "65503066"
 |TIFF 文件|在默认的 TIFF 查看器中查看报表。 对于某些 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 客户端，查看器为 Windows 图片与传真查看器。 选择此格式可以按面向页面的布局查看报表。|  
 |Word|在 [!INCLUDE[msCoName](../includes/msconame-md.md)] Word（.docx 文件）中查看报表。|  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  参数是用于选择特定数据的值（具体来说，参数用于完成为报表选择数据的查询或用于筛选结果集）。 报表中常用的参数包括日期、名称和 ID。 在为某个参数指定了值后，报表中将只包含与该值匹配的数据；例如，将根据 Employee ID 参数来显示雇员数据。 参数与报表上的字段相互对应。 指定了参数之后，单击 **“查看报表”** 即可获取相应的数据。  
   
  报表作者可定义对于每个报表都有效的参数值。 报表管理员也可以设置参数值。 若要了解哪些参数值对于您的报表有效，请咨询报表设计者或管理员。  

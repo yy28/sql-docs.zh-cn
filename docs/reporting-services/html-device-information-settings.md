@@ -1,5 +1,6 @@
 ---
 title: HTML 设备信息设置 | Microsoft Docs
+description: 了解可用于以 HTML 格式呈现的各种设备信息设置。
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f505f478-dd6d-444a-957c-34f7cfb98911
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7c0d477364c4920e8220aef96629b24e34650ebb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6d86394f22eabb73c055329b2ad583f589b45ea8
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65503103"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247186"
 ---
 # <a name="html-device-information-settings"></a>HTML 设备信息设置
 下表列出了以 HTML 格式呈现时的设备信息设置。  

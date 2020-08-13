@@ -1,5 +1,6 @@
 ---
 title: Reporting Services 数据警报 | Microsoft Docs
+description: 了解 SQL Server Reporting Services 数据警报如何有助于让你了解到你感兴趣或对你而言重要的报表数据。
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +10,12 @@ ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b1cb553c263bc822d5139d50169241a0f19fdd79
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 7a3d3d4cc792afdef44a6c5ff6684e1e6aa4ff14
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487789"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246676"
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services 数据警报
 
@@ -81,7 +82,7 @@ SQL Server Reporting Services 数据警报是一种数据驱动的警报解决�
 ### <a name="save-data-alert-definitions-and-alerting-metadata"></a>保存数据警报定义和警报元数据  
  当您在 SharePoint 集成模式下安装 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 时，将自动创建 SQL Server 警报数据库。  
   
- 数据警报定义和警报元数据保存在警报数据库中。 默认情况下，该数据库将命名为 ReportingServices\<GUID>_Alerting。  
+ 数据警报定义和警报元数据保存在警报数据库中。 默认情况下，该数据库命名为 ReportingServices\<GUID>_Alerting。  
   
  当您保存数据警报定义时，警报功能将为该警报定义创建一个 SQL Server 代理作业。 作业包含一个作业计划。 该计划基于您在警报定义中定义的重复执行模式。 运行该作业将启动数据警报定义的处理。  
   
@@ -131,7 +132,7 @@ SQL Server Reporting Services 数据警报是一种数据驱动的警报解决�
   
  下表列出了用于数据警报的配置元素、其默认值、说明和位置。  
   
-|设置|默认值|说明|位置|  
+|设置|默认值|描述|位置|  
 |-------------|-------------------|-----------------|--------------|  
 |AlertingCleanupCycleMinutes|20|清理周期开始之间的分钟数。|报表服务器配置文件|  
 |AlertingExecutionLogCleanupMinutes|10080|要保留执行日志条目的分钟数。|报表服务器配置文件|  

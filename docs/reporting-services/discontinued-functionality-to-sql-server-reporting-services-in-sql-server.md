@@ -1,5 +1,6 @@
 ---
 title: SQL Server 2016 Reporting Services (SSRS) 中停止使用的功能
+description: 详细了解 SQL Server 2016 中不再可用的 SQL Server Reporting Services 功能。
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -9,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: seodec18
 ms.date: 04/26/2019
-ms.openlocfilehash: a34b37a2e970c0f7a1a873947d9f8432c0b9733c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0dec5b4ab6d942b448e051c4db54c2e180e4b0ad
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74317855"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246318"
 ---
 # <a name="discontinued-functionality-in-sql-server-2016-reporting-services-ssrs"></a>SQL Server 2016 Reporting Services (SSRS) 中停止使用的功能
 

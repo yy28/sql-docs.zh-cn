@@ -11,12 +11,12 @@ ms.date: 10/02/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 9e50701d0486ee7bc00bf765d2a71cb4de0c0b25
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: cc030aa9036c67b1175a99ef01eab47099b8fc36
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196165"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247296"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>PolyBase Kerberos 连接疑难解答
 
@@ -69,7 +69,7 @@ PolyBase 具有以下包含 Hadoop 群集属性的配置 XML 文件：
 
 这些文件位于：
 
-`\[System Drive\]:{install path}\{instance}\{name}\MSSQL\Binn\PolyBase\Hadoop\conf`
+`\[System Drive\]:{install path}\{MSSQL##.INSTANCENAME}\MSSQL\Binn\PolyBase\Hadoop\conf`
 
 例如，[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的默认位置为 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase\Hadoop\conf`。
 
@@ -97,7 +97,7 @@ PolyBase 具有以下包含 Hadoop 群集属性的配置 XML 文件：
 该工具独立于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 运行，因此更新配置 XML 时无需运行或重启该工具。 若要运行此工具，请在已安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的主机上执行以下命令：
 
 ```cmd
-> cd C:\Program Files\Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase  
+> cd C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase  
 > java -classpath ".\Hadoop\conf;.\Hadoop\*;.\Hadoop\HDP2_2\*" com.microsoft.polybase.client.HdfsBridge {Name Node Address} {Name Node Port} {Service Principal} {Filepath containing Service Principal's Password} {Remote HDFS file path (optional)}
 ```
 
@@ -105,7 +105,7 @@ PolyBase 具有以下包含 Hadoop 群集属性的配置 XML 文件：
 
 | 参数 | 说明|
 | --- | --- |
-| *Name Node Address* | 名称节点的 IP 或 FQDN。 指的是 CREATE EXTERNAL DATA SOURCE T-SQL 中的“LOCATION”参数。|
+| *Name Node Address* | 名称节点的 IP 或 FQDN。 指的是 CREATE EXTERNAL DATA SOURCE T-SQL 中的“LOCATION”参数。 注意：此工具的 SQL Server 2019 版本要求 IP 或 FQDN 前面有 hdfs:\/\/。|
 | *Name Node Port* | 名称节点的端口。 指的是 CREATE EXTERNAL DATA SOURCE T-SQL 中的“LOCATION”参数。 例如，8020。 |
 | *Service Principal* | KDC 的管理服务主体。 匹配 `CREATE DATABASE SCOPED CREDENTIAL` T-SQL 中的“IDENTITY”参数。|
 | *Service Password* | 将密码存储在文件中并在此处传递该文件路径，而非在控制台上键入密码。 该文件的内容应与 `CREATE DATABASE SCOPED CREDENTIAL` T-SQL 中用作“SECRET”参数的内容一致。 |

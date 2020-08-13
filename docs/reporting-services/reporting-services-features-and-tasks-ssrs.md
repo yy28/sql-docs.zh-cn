@@ -1,5 +1,6 @@
 ---
 title: Reporting Services 功能和任务 | Microsoft Docs
+description: 了解如何按报表和报表功能、报表服务器功能和 Reporting Services 产品功能组织 Reporting Services 基础内容。
 ms.date: 12/18/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0cc20225-5784-479c-bfb0-445854111367
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 764eda3b356a42272b5f26790574746f842768ae
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d10c723351b6c32738a02cfadc1a3715896ca03e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081850"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246643"
 ---
 # <a name="reporting-services-features-and-tasks-ssrs"></a>Reporting Services 功能和任务 (SSRS)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 基础内容按报表和报表功能、报表服务器功能和 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 产品功能进行组织。  

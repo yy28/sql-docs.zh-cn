@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: de9ceed1aa019b82bc943a1985f0f251ad82b1fa
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b32c0b24aea8e1a55060b501fd001c1ad7f90b36
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917521"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248017"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Integration Services (SSIS) 包和项目参数
 
@@ -76,10 +76,10 @@ ms.locfileid: "86917521"
  下面的 Transact-SQL 视图和存储过程可用于显示和设置参数值。  
   
  [catalog.execution_parameter_values（SSISDB 数据库）](../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md)（视图）  
- 显示特定执行将使用的实际参数值  
+ 显示特定执行中的实际参数值。
   
  [catalog.get_parameter_values（SSISDB 数据库）](../integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database.md)（存储过程）  
- 解析并显示指定的包和环境引用的实际值  
+ 解析并显示指定的包和环境引用的实际值。
   
  [catalog.object_parameters（SSISDB 数据库）](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md)（视图）  
  显示 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 目录中所有包和项目的参数和属性，包括设计默认值和服务器默认值。  

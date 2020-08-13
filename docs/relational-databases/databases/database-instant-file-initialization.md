@@ -2,7 +2,7 @@
 title: 数据库实例文件初始化
 description: 了解即时文件初始化，并了解如何在 SQL Server 数据库上启用它。
 ms.custom: contperfq4
-ms.date: 05/30/2020
+ms.date: 07/24/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a10e6f9cff886b18b8bc344270516aaf2b5577db
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 20b182186244221c0f8cea2dda86d8f6a269cd50
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756253"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246568"
 ---
 # <a name="database-instant-file-initialization"></a>数据库实例文件初始化
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,6 +37,7 @@ ms.locfileid: "85756253"
 - 还原数据库或文件组。  
 
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，通过即时文件初始化 (IFI) 可以更快执行前面提到的文件操作，因为它会回收已使用的磁盘空间，而不会用零来填充该空间。 相反，新数据写入文件时会覆盖磁盘内容。 日志文件不能立即初始化。
+
 
 ## <a name="enable-instant-file-initialization"></a>启用即时文件初始化
 
@@ -99,5 +100,29 @@ ms.locfileid: "85756253"
     > [!NOTE]
     > 禁用该功能将延长数据文件的分配时间，且只会影响在撤消用户权限后创建的文件或增加的文件部分。
   
+### <a name="se_manage_volume_name-user-right"></a>SE_MANAGE_VOLUME_NAME 用户权限
+
+可在 Windows Administrative Tools、Local Security Policy 小程序中分配 SE_MANAGE_VOLUME_NAME 用户特权 。 在“本地策略”下选择“用户权限分配”并修改“执行卷维护任务”属性  。
+
+## <a name="performance-considerations"></a>性能注意事项
+
+数据库文件初始化过程将零写入进行初始化的文件的新区域。 此过程的持续时间取决于初始化的文件部分的大小以及存储系统的响应时间和容量。 如果初始化需要很长时间，则可能在 SQL Server 错误日志和应用程序日志中看到以下消息。
+
+```
+Msg 5144
+Autogrow of file '%.*ls' in database '%.*ls' was cancelled by user or timed out after %d milliseconds.  Use ALTER DATABASE to set a smaller FILEGROWTH value for this file or to explicitly set a new file size.
+```
+
+```
+Msg 5145
+Autogrow of file '%.*ls' in database '%.*ls' took %d milliseconds.  Consider using ALTER DATABASE to set a smaller FILEGROWTH for this file.
+```
+
+数据库和/或事务日志文件的长时间自动增长可能导致查询性能问题。 这是因为，要求文件自动增长的操作将在文件增长操作期间保留到锁定或闩锁等资源。 可能看到分配页面的闩锁上出现长时间等待。 需要长时间自动增长的操作将显示等待类型 PREEMPTIVE_OS_WRITEFILEGATHER。
+
+
+
+
+
 ## <a name="see-also"></a>另请参阅  
  [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)

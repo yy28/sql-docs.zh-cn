@@ -1,5 +1,6 @@
 ---
 title: 指定命中计数
+description: 了解如何为断点设置命中次数，使调试器在达到命中次数前不会在该断点处中断。
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -15,16 +16,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 03eed65b3295f1b9a1cc5b33de8809ce1d1c5c90
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bdd2924500e7770f4c18b1f50908dd8cc0b437a0
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243539"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245542"
 ---
 # <a name="specify-a-hit-count"></a>指定命中计数
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 断点命中计数是每次到达断点时由 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器递增的计数器。 如果达到指定的命中计数并满足所有指定的断点条件，则调试器将执行为断点指定的操作。  
 
@@ -50,11 +51,11 @@ ms.locfileid: "75243539"
   
 #### <a name="to-specify-a-hit-count"></a>指定命中计数  
   
-1.  在编辑器窗口中，右键单击断点符号，然后单击快捷菜单上的“命中计数”  。  
+1.  在编辑器窗口中，右键单击断点符号，然后单击快捷菜单上的“命中计数”。  
   
      -或-  
   
-     在“断点”  窗口中，右键单击断点符号，然后单击快捷菜单上的“命中计数”  。  
+     在“断点”窗口中，右键单击断点符号，然后单击快捷菜单上的“命中计数”。  
   
 2.  在 **“断点命中计数”** 对话框中，从 **“命中断点时”** 框中选择所需行为。  
   
@@ -64,11 +65,11 @@ ms.locfileid: "75243539"
   
 #### <a name="to-view-or-reset-the-current-hit-count"></a>查看或重置当前命中计数  
   
-1.  在编辑器窗口中，右键单击断点符号，然后单击快捷菜单上的“命中计数”  。  
+1.  在编辑器窗口中，右键单击断点符号，然后单击快捷菜单上的“命中计数”。  
   
      -或-  
   
-     在“断点”  窗口中，右键单击断点符号，然后单击快捷菜单上的“命中计数”  。  
+     在“断点”窗口中，右键单击断点符号，然后单击快捷菜单上的“命中计数”。  
   
 2.  在 **“断点命中计数”** 对话框中， **“当前命中计数:”** 显示在 **“重置”** 按钮的正上方。  
   

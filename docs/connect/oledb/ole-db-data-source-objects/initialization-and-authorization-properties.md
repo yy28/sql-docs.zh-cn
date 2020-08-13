@@ -1,8 +1,8 @@
 ---
-title: 初始化和授权属性 | Microsoft Docs
+title: 初始化和授权属性（OLE DB 驱动程序）| Microsoft Docs
 description: 初始化和授权属性
 ms.custom: ''
-ms.date: 10/11/2019
+ms.date: 01/02/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - initialization properties [OLE DB]
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 28923ccb78e3edfa4de7b7e780195a643ec9914e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1a133b8b259b7746ff6f5e8750f31c5288c88aa9
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "72381865"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244944"
 ---
 # <a name="initialization-and-authorization-properties"></a>初始化和授权属性
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -69,12 +69,14 @@ ms.locfileid: "72381865"
 |SSPROP_INIT_FAILOVERPARTNER|键入：VT_BSTR<br /><br /> R/W：读取/写入<br /><br /> 说明:指定用于数据库镜像的故障转移伙伴的名称。 它是初始化属性，并且只能在初始化之前设置。 在初始化之后，它将返回由主服务器返回的故障转移伙伴（如果有）。<br /><br /> 这允许智能应用程序缓存最新确定的备份服务器，但这样的应用程序应当知道，仅当初次建立（对于池连接则是重置）连接时该信息才会更新，因而在经过长时间的连接后可能会过时。<br /><br /> 建立连接之后，应用程序可以查询该属性，以确定故障转移伙伴的标识。 如果主服务器没有故障转移伙伴，则此属性将返回空字符串。 有关详细信息，请参阅[使用数据库镜像](../../oledb/features/using-database-mirroring.md)。|  
 |SSPROP_INIT_FILENAME|键入：VT_BSTR<br /><br /> R/W：读取/写入<br /><br /> 说明:指定可附加数据库的主文件名。 附加此数据库并使其成为连接的默认数据库。 若要使用 SSPROP_INIT_FILENAME，必须指定该数据库的名称作为初始化属性 DBPROP_INIT_CATALOG 的值。 如果该数据库名称不存在，它将查找在 SSPROP_INIT_FILENAME 中指定的主文件名，并使用在 DBPROP_INIT_CATALOG 中指定的名称来附加该数据库。 如果数据库是以前附加的，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不重新附加它。|  
 |SSPROP_INIT_MARSCONNECTION|键入：VT_BOOL<br /><br /> R/W：读取/写入<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明:指定是否对连接启用多重活动结果集 (MARS)。 必须在与数据库建立连接之前将该选项设置为 true。 有关详细信息，请参阅[使用多个活动的结果集 (MARS)](../../oledb/features/using-multiple-active-result-sets-mars.md)。|  
+|SSPROP_INIT_MULTISUBNETFAILOVER|键入：VT_BOOL<br /><br /> R/W：读取/写入<br /><br/>默认值：VARIANT_FALSE<br /><br />说明:MultiSubnetFailover 可加快 SQL Server 中所有 Always On 可用性组和故障转移群集实例的故障转移速度，并且将显著缩短单子网和多子网 Always On 拓扑的故障转移时间。 在多子网故障转移过程中，客户端将尝试并行进行连接。 有关详细信息，请参阅 [OLE DB Driver for SQL Server 对高可用性和灾难恢复的支持](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。|  
 |SSPROP_INIT_NETWORKADDRESS|键入：VT_BSTR<br /><br /> R/W：读取/写入<br /><br /> 说明:运行由 DBPROP_INIT_DATASOURCE 属性指定的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的服务器的网络地址。|  
 |SSPROP_INIT_NETWORKLIBRARY|键入：VT_BSTR<br /><br /> R/W：读取/写入<br /><br /> 说明:用于与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例通信的网络库 (DLL) 的名称。 该名称不应当包含路径或 .dll 文件扩展名。<br /><br /> 可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 客户端配置实用工具来自定义其默认值。<br /><br /> 注意：此属性仅支持 TCP 和 Named Pipes。 如果该属性在使用时带有前缀，最后将得到导致错误的双前缀，因为该属性用于在内部生成前缀。|  
-|SSPROP_INIT_PACKETSIZE|键入：VT_I4<br /><br /> R/W：读取/写入<br /><br /> 说明:以字节为单位表示的网络数据包大小。 数据包大小属性值必须介于 512 和 32,767 之间。 OLE DB Driver for SQL Server 网络数据包大小的默认值为 4,096。|  
+|SSPROP_INIT_PACKETSIZE|键入：VT_I4<br /><br /> R/W：读取/写入<br /><br /> 说明:表格格式数据流 (TDS) 包大小（以字节计）。 数据包大小属性值必须为 0 或者介于 512 和 32,767 之间。 默认值为 0，这意味着服务器将决定实际的数据包大小。|  
 |SSPROP_INIT_TAGCOLUMNCOLLATION|键入：BOOL<br /><br /> R/W：写入<br /><br /> 默认值：FALSE<br /><br /> 说明:使用服务器端游标时，在数据库更新期间使用。 该属性用从服务器而不是客户端上的代码页获得的排序规则信息来标记数据。 当前，该属性仅供分布式查询进程使用，因为它知道目标数据的排序规则，并能正确转换它。|  
+|SSPROP_INIT_TNIR|键入：VT_BOOL<br /><br /> R/W：读取/写入<br /><br/>默认值：VARIANT_TRUE<br /><br />说明:当存在多个与主机名关联的 IP 时，如果第一个解析的主机名 IP 未响应，TNIR 会影响连接顺序。 TNIR 与 MultiSubnetFailover 交互，以提供其他连接顺序。 有关详细信息，请参阅[使用透明网络 IP 解析](../../oledb/features/using-transparent-network-ip-resolution.md)。|  
 |SSPROP_INIT_TRUST_SERVER_CERTIFICATE<a href="#table1_1"><sup>**1**</sup></a>|键入：VT_BOOL<br /><br /> R/W：读取/写入<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明:用于启用或禁用服务器证书验证。 该属性是读/写属性，但在已建立连接之后尝试设置它将导致错误。<br /><br /> 如果客户端配置为要求进行证书验证，则忽略该属性。 但是，应用程序可以将它与 SSPROP_INIT_ENCRYPT 一起使用，以保证即使将客户端配置为不要求加密，并且客户端上不提供证书，仍然会对应用程序与服务器之间的连接进行加密。<br /><br /> 客户端应用程序可以在打开连接后查询此属性，以确定使用的实际加密和验证设置。<br /><br /> 注意：在不进行证书验证的情况下使用加密可以针对数据包探查提供部分防护，但无法针对中间人攻击进行防护。 它只是允许对发送到服务器的登录名和数据进行加密，而无需验证服务器证书。<br /><br /> 有关详细信息，请参阅[使用加密但不验证](../../oledb/features/using-encryption-without-validation.md)。|  
-|SSPROP_INIT_USEPROCFORPREP|键入：VT_I4<br /><br /> R/W：读取/写入<br /><br /> 默认值：SSPROPVAL_USEPROCFORPREP_ON<br /><br /> 说明:[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 存储过程的用法。 定义 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 临时存储过程的使用，以支持 ICommandPrepare 接口  。 仅当连接到 SQL Server 6.5 时，该属性才有意义。 对于更高版本，将忽略该属性。<br /><br /> SSPROPVAL_USEPROCFORPREP_OFF：准备命令时，不创建临时存储过程。<br /><br /> SSPROPVAL_USEPROCFORPREP_ON：准备命令时，创建临时存储过程。 释放会话时，删除临时存储过程。<br /><br /> SSPROPVAL_USEPROCFORPREP_ON_DROP：准备命令时，创建临时存储过程。 使用 ICommandPrepare::Unprepare 撤销命令时，使用 ICommandText::SetCommandText 为命令对象指定新命令时，或释放对命令的所有应用程序引用时，删除该过程   。|  
+|SSPROP_INIT_USEPROCFORPREP|键入：VT_I4<br /><br /> R/W：读取/写入<br /><br /> 默认值：SSPROPVAL_USEPROCFORPREP_ON<br /><br /> 说明:[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 存储过程的用法。 定义 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 临时存储过程的使用，以支持 ICommandPrepare 接口。 仅当连接到 SQL Server 6.5 时，该属性才有意义。 对于更高版本，将忽略该属性。<br /><br /> SSPROPVAL_USEPROCFORPREP_OFF：准备命令时，不创建临时存储过程。<br /><br /> SSPROPVAL_USEPROCFORPREP_ON：准备命令时，创建临时存储过程。 释放会话时，删除临时存储过程。<br /><br /> SSPROPVAL_USEPROCFORPREP_ON_DROP：准备命令时，创建临时存储过程。 使用 ICommandPrepare::Unprepare 撤销命令时，使用 ICommandText::SetCommandText 为命令对象指定新命令时，或释放对命令的所有应用程序引用时，删除该过程********。|  
 |SSPROP_INIT_WSID|键入：VT_BSTR<br /><br /> R/W：读取/写入<br /><br /> 说明:用于标识工作站的字符串。|  
   
 

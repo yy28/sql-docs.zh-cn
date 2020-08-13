@@ -11,14 +11,14 @@ ms.topic: conceptual
 ms.assetid: d255208f-d486-4ad3-8080-61c6e0261825
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1a003b4817868516c6acfac10df80cafdf044c01
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 12a8a151902bd4f191fbc79f165f936e991a0226
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922296"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244996"
 ---
-# <a name="using-transparent-network-ip-resolution"></a>使用透明网络 IP 解析
+# <a name="using-transparent-network-ip-resolution-with-the-odbc-driver"></a>使用 ODBC Driver 的透明网络 IP 解析
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
 TransparentNetworkIPResolution 是 Microsoft ODBC Driver 13.1 for SQL Server 中提供的现有 MultiSubnetFailover 功能的修订版。如果第一个解析的主机名 IP 未响应，且存在多个与主机名关联的 IP，此功能会影响驱动程序的连接序列。 它与 MultiSubnetFailover 交互，以提供下列三个连接序列：

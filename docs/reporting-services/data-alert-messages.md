@@ -1,5 +1,6 @@
 ---
 title: 数据警报消息 | Microsoft Docs
+description: 了解 SQL Server Reporting Services 数据警报如何通过电子邮件传递两种类型的数据警报消息：具有数据警报结果的消息和具有错误说明的消息。
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +10,12 @@ ms.assetid: 6819720c-d848-4b90-9b51-89501b4f4645
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a9fc49d1d84fc714fca13519abad4fd92c21f08a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6af7f155edba97ea558c7bc6427bb5ef143eea47
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571559"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245159"
 ---
 # <a name="data-alert-messages"></a>数据警报消息
 

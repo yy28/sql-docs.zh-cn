@@ -1,5 +1,6 @@
 ---
 title: Transact-SQL 代码
+description: 了解如何使用 Transact-SQL 调试器控制在数据库引擎查询编辑器窗口中运行哪些 Transact-SQL 语句。
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
@@ -15,16 +16,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1fbd6c6b01d5be8afb3e0e0c70c15363664263eb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d7317f783df8cd8810cb4d2371f8469697bb9a45
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243443"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246175"
 ---
 # <a name="step-through-transact-sql-code"></a>Transact-SQL 代码
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器，您可以控制在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询编辑器窗口中运行哪些 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 语句。 可在各个语句上暂停调试器，然后查看该位置的代码元素的状态。  
 
@@ -62,7 +63,7 @@ ms.locfileid: "75243443"
 |单步执行下一个语句或模块|在  “调试”菜单上单击“单步跳入”  。<br /><br /> 在“调试”  工具栏上单击“单步跳入”  按钮。<br /><br /> 按 F11。|  
 |逐过程执行下一个语句或模块|在  “调试”菜单上单击“单步跳过”  。<br /><br /> 在“调试”  工具栏上单击“单步跳过”  按钮。<br /><br /> 按 F10。|  
 |跳出模块|在  “调试”菜单上单击“单步跳出”  。<br /><br /> 在“调试”  工具栏上单击“单步跳出”  按钮。<br /><br /> 按 Shift+F11。|  
-|运行到当前光标位置|右键单击查询编辑器窗口，然后单击“运行至光标处”  。<br /><br /> 按 Ctrl+F10。|  
+|运行到当前光标位置|右键单击查询编辑器窗口，然后单击“运行至光标处”。<br /><br /> 按 Ctrl+F10。|  
   
 ## <a name="see-also"></a>另请参阅
 

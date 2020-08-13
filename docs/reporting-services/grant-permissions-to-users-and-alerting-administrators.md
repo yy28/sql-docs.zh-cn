@@ -1,5 +1,6 @@
 ---
 title: 向用户和警报管理员授予权限 | Microsoft Docs
+description: 了解如何在 SQL Server Reporting Services (SSRS) 中向用户授予权限并向管理员发出警报。
 ms.date: 08/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +10,12 @@ ms.assetid: 166808e1-ada7-48d2-bda8-8f7c017fb3aa
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: dd6a34e6dbf57eb5080525d7dd0f7d7067484ad9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cc9294e13539f78ac1d45781e9a51f3a8f944d3e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580490"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247217"
 ---
 # <a name="grant-permissions-to-users-and-alerting-administrators"></a>向用户和警报管理员授予权限
 
@@ -39,13 +40,13 @@ ms.locfileid: "65580490"
   
      如果未看到此选项，则表明您没有向他人授予权限所需的足够权限。  
   
-3.  单击“授予权限”  。  
+3.  单击“授予权限”。  
   
-4.  在“用户/组”中，键入要授予权限的用户名、组名或电子邮件地址  。  
+4.  在“用户/组”中，键入要授予权限的用户名、组名或电子邮件地址。  
   
 5.  选择 **“向 SharePoint 组添加用户”** 或 **“直接授予用户权限”** 选项。 根据您是选择 **“向 SharePoint 组添加用户”** 还是选择 **“直接授予用户权限”** ，执行下列操作之一：  
   
-    -   如果选择了“向 SharePoint 组添加用户”，则在下拉列表中选择某一权限级别  。  
+    -   如果选择了“向 SharePoint 组添加用户”，则在下拉列表中选择某一权限级别。  
   
     -   如果您选择了 **“直接授予用户权限”** ，则选择某一权限级别。  
   

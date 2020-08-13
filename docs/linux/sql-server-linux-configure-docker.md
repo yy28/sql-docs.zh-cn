@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 14b0ff1c40ae8e809f7ad5b39e482bd3f76774ec
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 89f68b19a47605e5f2ad9d02abffc6810d8df578
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899647"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245617"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>在 Docker 上配置 SQL Server 容器映像
 
@@ -640,6 +640,14 @@ chown -R 10001:0 <database file dir>
 docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" -e "MSSQL_DATA_DIR=/my/file/path" -v /my/host/path:/my/file/path -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
 ```
 
+## <a name="enable-sql-server-agent"></a><a id="enablesqlagent"></a> 启用 SQL Server 代理
+
+启用 SQL Server 代理，它随 SQL Server 自动启动
+
+```bash
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" -e "MSSQL_AGENT_ENABLED=true" --name sql1 -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
+```
+
 ## <a name="troubleshooting"></a><a id="troubleshooting"></a> 故障排除
 
 以下部分提供关于在容器中运行 SQL Server 的故障排除建议。
@@ -736,9 +744,9 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "M
 
 如果无法连接到在容器中运行的 SQL Server 实例，请尝试以下测试：
 
-- 通过查看 `docker ps -a` 输出的“状态”列，确保 SQL Server 容器正在运行  。 如果未在运行，则使用 `docker start <Container ID>` 启动它。
+- 通过查看 `docker ps -a` 输出的“状态”列，确保 SQL Server 容器正在运行。 如果未在运行，则使用 `docker start <Container ID>` 启动它。
 
-- 如果映射到非默认主机端口（非 1433），请确保在连接字符串中指定端口。 可在 `docker ps -a` 输出的“端口”列中查看端口映射  。 例如，以下命令将 sqlcmd 连接至正在侦听端口 1401 的容器：
+- 如果映射到非默认主机端口（非 1433），请确保在连接字符串中指定端口。 可在 `docker ps -a` 输出的“端口”列中查看端口映射。 例如，以下命令将 sqlcmd 连接至正在侦听端口 1401 的容器：
 
     ```bash
     sqlcmd -S 10.3.2.4,1401 -U SA -P '<YourPassword>'
