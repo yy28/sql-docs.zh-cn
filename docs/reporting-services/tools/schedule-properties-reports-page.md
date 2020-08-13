@@ -1,5 +1,6 @@
 ---
 title: 计划属性（“报表”页）| Microsoft Docs
+description: 了解 SQL Server Management Studio 中的“Reporting Services 计划属性”页面，该页面列出了特定共享计划的所有报表。
 ms.date: 06/30/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: 7db728bd-4b08-43ef-a49a-e8dcdd37cf89
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0e8441dec655398ec530bc95049a339edd9e01ab
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 155df0fc52ffc390a0bf528fb2a907751dbbfe6b
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571407"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916893"
 ---
 # <a name="schedule-properties-reports-page"></a>计划属性（“报表”页）
   使用 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 中的 [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] 计划属性页以查看使用特定共享计划的所有报表的列表。 计划可用于刷新报表快照、生成报表历史记录、触发订阅或使报表的缓存副本过期。 若要了解如何使用计划，请查看报表的属性和订阅信息。  
@@ -25,9 +26,9 @@ ms.locfileid: "65571407"
  若要打开计划属性页：
  1. 启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。
  2. 连接到报表服务器。
- 3. 打开“共享计划”文件夹  。
- 4. 右键单击共享计划，选择“属性”  。
- 5. 单击“报表”  。  
+ 3. 打开“共享计划”文件夹。
+ 4. 右键单击共享计划，选择“属性”。
+ 5. 单击“报表”。  
   
   还可以从 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Web 门户的“站点设置”管理共享计划。
   

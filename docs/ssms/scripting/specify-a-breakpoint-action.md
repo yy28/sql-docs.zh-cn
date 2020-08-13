@@ -1,5 +1,6 @@
 ---
 title: 指定断点操作
+description: 了解如何指定断点操作 - 即在命中断点且满足某些其他条件时 Transact-SQL 调试器要执行的自定义任务。
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -14,16 +15,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d4bffc7742a9833d8715c9479e051cdd732d7596
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bbe5cd84c13c84f8902ac82bd8ef3ef54dc82bda
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253654"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122718"
 ---
 # <a name="specify-a-breakpoint-action"></a>指定断点操作
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 断点 **“命中条件”** 操作指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器针对某个断点执行的自定义任务。 如果达到指定的命中计数并满足所有指定的断点条件，则调试器将执行为断点指定的操作。
 
@@ -41,7 +42,7 @@ ms.locfileid: "75253654"
   
     1.  $ADDRESS 返回在其中设置断点的存储过程或用户定义函数的名称。 如果在编辑器窗口中设置断点，$ADDRESS 将返回正在编辑的脚本文件的名称。 $ADDRESS 和 $FUNCTION 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器中返回相同的信息。  
   
-    2.  $CALLER 返回调用存储过程或函数的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码单元的名称。 如果在编辑器窗口中设置断点，则 $CALLER 返回 \<无可用调用方>。 如果断点位于从编辑器窗口中的代码调用的存储过程或用户定义函数中，$CALLER 将返回正在编辑的文件的名称。 如果断点位于从其他存储过程或函数中调用的存储过程或用户定义函数中，$CALLER 将返回此调用过程或函数的名称。  
+    2.  $CALLER 返回调用存储过程或函数的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码单元的名称。 如果在编辑器窗口中设置断点，则 $CALLER 返回 \<No caller available>。 如果断点位于从编辑器窗口中的代码调用的存储过程或用户定义函数中，$CALLER 将返回正在编辑的文件的名称。 如果断点位于从其他存储过程或函数中调用的存储过程或用户定义函数中，$CALLER 将返回此调用过程或函数的名称。  
   
     3.  $CALLSTACK 返回链中调用当前存储过程或用户定义函数的函数的调用堆栈。 如果在编辑器窗口中设置断点，$CALLSTACK 将返回正在编辑的脚本文件的名称。  
   
@@ -55,11 +56,11 @@ ms.locfileid: "75253654"
   
 #### <a name="to-specify-a-when-hit-action"></a>指定命中条件操作  
   
-1.  在编辑器窗口中，右键单击断点符号，然后在快捷菜单上单击“命中条件”  。  
+1.  在编辑器窗口中，右键单击断点符号，然后在快捷菜单上单击“命中条件”。  
   
      -或-  
   
-     在“断点”  窗口中，右键单击断点符号，然后在快捷菜单上单击“命中条件”  。  
+     在“断点”窗口中，右键单击断点符号，然后在快捷菜单上单击“命中条件”。  
   
 2.  在 **“当命中断点时”** 对话框中，选择您需要的行为：  
   

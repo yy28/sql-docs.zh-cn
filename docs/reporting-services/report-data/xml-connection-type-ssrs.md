@@ -1,5 +1,6 @@
 ---
 title: XML 连接类型 | Microsoft Docs
+description: 了解用于连接到 XML 文档、Web 服务或查询中嵌入的 XML 并从中检索数据的 XML 连接类型。
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9355ac713c502acbbd319ec7bdc9cb035079ca34
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 120e99440b77a27be4f83f8e4355a4ec75cab7bb
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081678"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458494"
 ---
 # <a name="xml-connection-type-ssrs"></a>XML 连接类型 (SSRS)
   若要在报表中包含来自 XML 数据源的数据，则必须拥有一个基于 XML 类型的报表数据源的数据集。 此内置数据源类型基于 XML 数据扩展插件。 使用此数据源类型可连接到 XML 文档、Web 服务、或查询中嵌入的 XML 并从中检索数据。  
@@ -115,12 +116,12 @@ ms.locfileid: "77081678"
   
  有关查询语法的详细信息，请参阅[用于 XML 报表数据的 XML 查询语法 (SSRS)](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md)。  
   
- 有关示例，请参阅 [Reporting Services: Using XML and Web Service Data Sources（Reporting Services：使用 XML 和 Web 服务数据源）](https://go.microsoft.com/fwlink/?LinkId=81654)。  
+ 有关示例，请参阅 [Reporting Services：使用 XML 和 Web 服务数据源](https://go.microsoft.com/fwlink/?LinkId=81654)。  
   
 ### <a name="requirements-for-retrieving-xml-web-service-data"></a>检索 XML Web 服务数据的要求  
  XML 数据处理扩展插件不能检测架构。 因此，您必须通过某种方式来发现哪些 SOAP 方法将检索所需数据。 您还必须了解 Web 服务用于其数据的寻址方案或命名空间。  
   
- 对于 Web 服务，可以提供用于指定调用方法或 SOAP 操作的 \<Query> 元素  。 如果 XML 数据源具有可产生要用于报表的数据的层次结构，则可以将查询留空并使用默认查询。 查询运行时检索的 XML 元素节点值和属性将映射到在报表中使用的数据集字段。  
+ 对于 Web 服务，可以提供用于指定调用方法或 SOAP 操作的 \<**Query**> 元素。 如果 XML 数据源具有可产生要用于报表的数据的层次结构，则可以将查询留空并使用默认查询。 查询运行时检索的 XML 元素节点值和属性将映射到在报表中使用的数据集字段。  
   
 ### <a name="requirements-for-retrieving-xml-document-data"></a>检索 XML 文档数据的要求  
  使用 http 协议时，服务器必须返回 XML 数据，或者 XML 数据必须嵌入 XML **Query** 元素中。 如果您使用 http 协议直接引用 XML 文档，则文档的扩展名必须为 .xml。  

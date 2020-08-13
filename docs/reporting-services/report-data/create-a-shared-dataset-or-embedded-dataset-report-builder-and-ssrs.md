@@ -1,5 +1,6 @@
 ---
 title: 创建共享数据集或嵌入数据集（报表生成器）| Microsoft Docs
+description: 了解如何创建嵌入式数据集和共享数据集以便在各种报表中使用。 若要创建数据集，需要具有嵌入或共享的数据源。
 ms.date: 10/17/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: d1d7bc71-f0e9-4ce5-b3ad-6fee54388a31
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b19b5442731bf52e299450a32cb8536c0f95467f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 76e1482bf441401b02de984529d7fd178d88975c
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081408"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457799"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>创建共享数据集或嵌入数据集（报表生成器和 SSRS）
 可在单个 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 报表中使用嵌入的数据集。 报表服务器上的共享数据集可由多个报表使用，移动和分页皆可。 若要创建数据集，需要具有嵌入或共享的数据源。  
@@ -50,7 +51,7 @@ ms.locfileid: "77081408"
      ![rs_NewSharedDataset](../../reporting-services/report-data/media/rs-newshareddataset.gif "rs_NewSharedDataset")  
   
     > [!NOTE]  
-    >  如果不显示“新建报表或数据集”窗格，则从“报表生成器”按钮中单击“新建”   。  
+    >  如果不显示“新建报表或数据集”窗格，则从“报表生成器”按钮中单击“新建” 。  
   
 2.  在左窗格的 **“创建数据集”** 下，单击 **“共享数据集”** 。  
   
@@ -78,7 +79,7 @@ ms.locfileid: "77081408"
   
 6.  在功能区上，单击 **“数据集属性”** 。  
   
-7.  单击 **“参数”** 。 在此页上，将默认值设置为一个常量或者一个表达式，将该参数标记为只读、可以为 null 或“从查询中省略”  。 有关详细信息，请参阅 [报表参数](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)。  
+7.  单击 **“参数”** 。 在此页上，将默认值设置为一个常量或者一个表达式，将该参数标记为只读、可以为 null 或“从查询中省略”。 有关详细信息，请参阅 [报表参数](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)。  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 

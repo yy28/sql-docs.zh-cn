@@ -1,5 +1,6 @@
 ---
 title: 报表生成器创作环境 | Microsoft Docs
+description: 了解报表生成器，它是一种独立的创作环境，用于创建 Visual Studio 之外的 Reporting Services 分页报表。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: 32be8fcc-e87d-4c45-a644-dff45776a981
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 97a48ed9ee18442f4fc1ea4263282faa3dd1702e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 10ff8bf59ee9f87bac6b9ffa42bb2da8f3403b77
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081906"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86909773"
 ---
 # <a name="report-builder-authoring-environment-ssrs"></a>报表生成器创作环境 (SSRS)
-  报表生成器 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 是独立的创作环境，用于创建 Visual Studio 之外的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表。 设计报表时，您可以指定在何处获取数据、获取哪些数据以及如何显示数据。 当您运行报表时，报表处理器将获取您已经指定的所有信息，检索数据，并将数据与报表布局进行组合以生成报表。 你可以从 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 门户或从 Microsoft 下载中心安装此应用程序。  
+  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 是独立的创作环境，用于创建 Visual Studio 之外的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表。 设计报表时，您可以指定在何处获取数据、获取哪些数据以及如何显示数据。 当您运行报表时，报表处理器将获取您已经指定的所有信息，检索数据，并将数据与报表布局进行组合以生成报表。 你可以从 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 门户或从 Microsoft 下载中心安装此应用程序。  
   
  从 Microsoft 下载中心[Install Report Builder](../../reporting-services/install-windows/install-report-builder.md) 。  
   

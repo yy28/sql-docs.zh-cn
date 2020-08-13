@@ -1,5 +1,6 @@
 ---
 title: 配置编辑器 (SQL Server Management Studio)
+description: 了解如何通过在“选项”对话框中设置选项来自定义 SQL Server Management Studio 编辑器的操作。
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,19 +12,19 @@ ms.assetid: e7c7a8ef-f561-4258-a7b6-c445dba69f87
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c70980653cd23241d0021d85a507e55573cf43b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2fe8cc40b18678e080e97285f5566a3a0de7a73b
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253965"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122868"
 ---
 # <a name="configure-editors-sql-server-management-studio"></a>配置编辑器 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   您可以通过为每个编辑器配置选项，自定义 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 编辑器的操作。  
   
-## <a name="settng-editor-options"></a>设置编辑器选项  
- 通过使用“工具”菜单，然后选择“选项…”以便显示“选项”对话框，可设置大多数编辑器选项    。 在 **“选项”** 对话框中，打开左侧窗格中的 **“文本编辑器”** 节点，以便设置代码和文本编辑选项。 “文本编辑器”下方的节点适用于特定编辑器：  
+## <a name="setting-editor-options"></a>设置编辑器选项  
+ 通过使用“工具”菜单，然后选择“选项…”以便显示“选项”对话框，可设置大多数编辑器选项  。 在 **“选项”** 对话框中，打开左侧窗格中的 **“文本编辑器”** 节点，以便设置代码和文本编辑选项。 “文本编辑器”下方的节点适用于特定编辑器：  
   
 1.  **所有语言** - 使用此节点设置的选项将应用于所有 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 编辑器。 可通过使用其他节点为特定的编辑器设置不同选项，覆盖这些设置。  
   

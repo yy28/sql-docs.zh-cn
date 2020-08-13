@@ -2,7 +2,7 @@
 title: 使用 sqlcmd 进行连接
 description: 了解如何在 Linux 和 macOS 上结合使用 sqlcmd 实用工具与 Microsoft ODBC Driver for SQL Server。
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 06/22/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 628968b7d93b9278eb4aaf6ebca3d03fb3cde102
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: e96d05b14cb9922572ee5f5c9e773f1c7bc35590
+ms.sourcegitcommit: 41ff0446bd8e4380aad40510ad579a3a4e096dfa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632817"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86465304"
 ---
 # <a name="connecting-with-sqlcmd"></a>使用 sqlcmd 进行连接
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "81632817"
   
 以下命令分别演示如何使用 Windows 身份验证 (Kerberos) 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证：
   
-```  
+```console
 sqlcmd -E -Sxxx.xxx.xxx.xxx  
 sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx  
 ```  
@@ -170,22 +170,30 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
   
 可以使用以下替代方法：将参数放入一个文件中，然后可以将其附加到另一个文件。 这将有助于你使用参数文件来替换值。 例如，创建一个名为 `a.sql` 的文件（参数文件），其中包含以下内容：
   
+```console
     :setvar ColumnName object_id  
     :setvar TableName sys.objects  
+```
   
 然后创建一个名为 `b.sql` 的文件，其中包含用于替换的参数：  
   
+```sql
     select $(ColumnName) from $(TableName)  
+```
 
 在命令行下，使用以下命令将 `a.sql` 和 `b.sql` 合并为 `c.sql`：  
   
+```console
     cat a.sql > c.sql 
   
     cat b.sql >> c.sql  
+```
   
 运行 `sqlcmd` 并将 `c.sql` 用作输入文件：  
   
-    slqcmd -S<...> -P<..> -U<..> -I c.sql  
+```console
+    sqlcmd -S<...> -P<..> -U<..> -I c.sql  
+```
 
 - -z password  更改密码。  
   
@@ -203,24 +211,12 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
   
 ## <a name="dsn-support-in-sqlcmd-and-bcp"></a>sqlcmd 和 bcp 中的 DSN 支持
 
-如果指定 -D，则可以在 sqlcmd  或 bcp  `-S` 选项（或 sqlcmd  :Connect 命令）中指定数据源名称 (DSN) 而不是服务器名称。 -D 使 sqlcmd  或 bcp  通过 -S 选项连接到 DSN 中指定的服务器。  
+如果指定 `-D`，则可以在 sqlcmd 或 bcp `-S` 选项（或 sqlcmd :Connect 命令）中指定数据源名称 (DSN) 而不是服务器名称。 `-D` 使 sqlcmd 或 bcp 通过 `-S` 选项连接到 DSN 中指定的服务器。  
   
 系统 DSN 存储在 ODBC SysConfigDir 目录的 `odbc.ini` 文件（即标准安装上的 `/etc/odbc.ini`）中。 用户 DSN 存储在用户主目录 (`~/.odbc.ini`) 的 `.odbc.ini` 中。
-  
-以下项在 Linux 或 macOS 上的 DSN 中受支持：
 
--    ApplicationIntent=ReadOnly  
+有关驱动程序支持的条目列表，请参阅 [DSN 和连接字符串关键字和属性](../dsn-connection-string-attribute.md)。
 
--   Database=  database\_name   
-  
--   Driver=ODBC Driver 11 for SQL Server  或 Driver=ODBC Driver 13 for SQL Server 
-  
--    MultiSubnetFailover=Yes  
-  
--   Server=  server\_name\_or\_IP\_address   
-  
--   **Trusted_Connection=yes**|**no**  
-  
 在 DSN 中，只有 DRIVER 项是必需的；但若要连接到服务器，`sqlcmd` 或 `bcp` 需要 SERVER 项中的值。  
 
 如果在 DSN 和 `sqlcmd` 或 `bcp` 命令行中指定了相同的选项，命令行选项将替代 DSN 中使用的值。 例如，如果 DSN 具有 DATABASE 项且 `sqlcmd` 命令行包含 -d，将使用传递给 -d 的值   。 如果在 DSN 中指定了 Trusted_Connection=yes  ，便会使用 Kerberos 身份验证，并忽略用户名 (-U  ) 和密码 (-P  )（若有）。

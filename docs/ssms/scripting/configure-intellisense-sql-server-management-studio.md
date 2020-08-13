@@ -1,5 +1,6 @@
 ---
 title: 配置 IntelliSense (SQL Server Management Studio)
+description: 默认情况下，大多数 IntelliSense 选项处于启用状态。 了解可如何禁用 IntelliSense 选项，并转而通过菜单命令或击键组合来调用该选项。
 ms.custom: seo-lt-2019
 ms.date: 06/02/2016
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: 3ffc9f31-4efa-4c1a-a033-ed1dc48b065f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3310c432e872ca7819c6d9f60b777d1b077f9f98
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: eaf166e819f062f8b66ab8b171f345cb68515383
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253952"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122853"
 ---
 # <a name="configure-intellisense-sql-server-management-studio"></a>配置 IntelliSense (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   默认情况下，大多数 [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 选项处于启用状态。 您可以禁用 IntelliSense 选项，转而通过菜单命令或基键组合来调用该选项。  
   
 > [!IMPORTANT]  
@@ -36,23 +37,23 @@ ms.locfileid: "75253952"
 >
 >
   
-1.  在“工具”  菜单上，单击“选项”  。  
+1.  在“工具”  菜单上，单击“选项” 。  
   
-2.  展开“文本编辑器”  ，展开“所有语言”  、“Transact-SQL”  或“XML”  ，然后单击“常规”  。  
+2.  展开“文本编辑器”，展开“所有语言”、“Transact-SQL”或“XML”，然后单击“常规”。  
   
 3.  清除不想使用的“语句结束”选项的复选框，然后单击 **“确定”** 。  
   
 ### <a name="to-modify-transact-sql-intellisense-options"></a>修改 Transact-SQL IntelliSense 选项  
   
-1.  在“工具”  菜单上，单击“选项”  。  
+1.  在“工具”  菜单上，单击“选项” 。  
   
-2.  展开“文本编辑器”  ，展开“Transact-SQL”  ，然后单击“IntelliSense”  。  
+2.  展开“文本编辑器”，展开“Transact-SQL”，然后单击“IntelliSense”。  
   
 3.  清除不需要的 IntelliSense 选项的复选框。  
   
 4.  若要更改禁用 IntelliSense 功能时的脚本大小，请从 **“最大脚本大小”** 列表中选择大小。  
   
-5.  若要更改完成列表中的函数名称应用的大小写，请从“内置函数名称的大小写”  列表中选择大小写规范。  
+5.  若要更改完成列表中的函数名称应用的大小写，请从“内置函数名称的大小写”列表中选择大小写规范。  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

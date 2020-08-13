@@ -1,6 +1,7 @@
 ---
 title: 报表故障排除：映射报表（报表生成器）| Microsoft Docs
-ms.date: 01/17/2018
+description: 探索在报表生成器中进行自定义、添加层或发布带有地图的报表时可能导致的情况的故障排除建议。
+ms.date: 07/22/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-design
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 87c034202eb5a4c17fd73e75f881361c04b3b636
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a3dc21f30222704622f86732c11bd5f1db7b46d1
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080838"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112023"
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>报表故障排除：地图报表（报表生成器和 SSRS）
   当你向报表中添加地图或地图层、自定义报表中的现有地图或地图层、预览报表中的地图或发布具有地图的报表时， [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中的地图可能会出现问题。 使用本主题可以帮助解决这些问题。  
@@ -43,7 +44,7 @@ ms.locfileid: "77080838"
   
 1.  将 ESRI .shp 和 .dbf 文件上载或发布到报表服务器。  
   
-2.  在报表中，在“设计”视图的“地图”窗格中，选择具有嵌入数据的层，然后打开 **“层数据”** 属性。 在 **“使用的空间数据来自”** 中，选择 **“链接到 ESRI 形状文件”** ，然后浏览到报表服务器上包含 ESRI 形状文件的文件夹，选择该文件夹，然后单击“确定”。  
+2.  在报表中，在“设计”视图的“地图”窗格中，选择具有嵌入数据的层，然后打开 **“层数据”** 属性。 在 **“使用的空间数据来自”** 中，选择 **“链接到 ESRI 形状文件”**，然后浏览到报表服务器上包含 ESRI 形状文件的文件夹，选择该文件夹，然后单击“确定”。  
   
 3.  保存报表。 您更改的层的嵌入数据已从报表定义中删除。  
   
@@ -136,7 +137,7 @@ ms.locfileid: "77080838"
   
 -   **透明度。** 可以单独为每个地图层指定透明度。 默认的透明度值根据您添加层的方式不同而异。 透明度为 0% 表明该层是不透明的，而没有其他层数据将透过这种方式显示。 若要允许其他数据透过现有层进行显示，请将该值调整为更高的百分比，以提供您所需的效果。  
   
--   **可见性。** 层的可见性为“可见”、“隐藏”或“ZoomBased”，具体根据地图视区的缩放级别而定。    还可以指定最大和最小缩放级别范围。 可见性可以基于一个表达式，该表达式计算为上述三个值之一。  
+-   **可见性。** 层的可见性为“可见”、“隐藏”或“ZoomBased”，具体根据地图视区的缩放级别而定。   还可以指定最大和最小缩放级别范围。 可见性可以基于一个表达式，该表达式计算为上述三个值之一。  
   
     > [!TIP]  
     >  可以针对“地图”窗格中的每层切换可见性。 当您设计每层时，请关闭所有其他层，以确定问题是针对某个单独层，还是针对层间的透明度问题。  
@@ -206,6 +207,6 @@ ms.locfileid: "77080838"
   
 ## <a name="see-also"></a>另请参阅  
  [地图（报表生成器和 SSRS）](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [报表生成器故障排除](https://docs.microsoft.com/sql/reporting-services/troubleshoot-report-builder?view=sql-server-2014)  
+ [报表生成器故障排除](/previous-versions/sql/2014/reporting-services/troubleshoot-report-builder?view=sql-server-2014)  
   
   

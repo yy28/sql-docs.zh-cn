@@ -1,5 +1,6 @@
 ---
 title: 新建共享计划 (Management Studio) | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio 中“新建计划”页上的选项，创建新的共享计划来运行已发布的报表和订阅。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: b2c69586-d98e-4933-827d-f5e6c15c5203
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 61be4b4668b6736d30e28adb30fd16f289fb7c56
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 00ad35697044427b47a07cd9a3b44105ab1d5c8a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65582201"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915553"
 ---
 # <a name="new-shared-schedule-management-studio"></a>新建共享计划 (Management Studio)
   使用此页可以创建一个共享计划来运行已发布的报表和订阅。 共享计划可以用于替代报表特定计划或订阅特定计划。 集中的计划信息与能够暂停和恢复计划操作的功能是共享计划区别于项特定计划的两个关键功能。  
@@ -24,7 +25,7 @@ ms.locfileid: "65582201"
   
  计划处理过程以承载和处理计划的报表服务器的本地时间为准。  
   
- 若要打开此页，请启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，连接到报表服务器，右键单击“共享计划”  ，然后选择“新建计划”  。 若要保存计划，必须运行 SQL Server 代理服务。  
+ 若要打开此页，请启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，连接到报表服务器，右键单击“共享计划”，然后选择“新建计划”。 若要保存计划，必须运行 SQL Server 代理服务。  
   
 > [!NOTE]  
 >  并非在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每个版本中均提供此功能。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2012 各个版本支持的功能](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473) 。  
@@ -43,7 +44,7 @@ ms.locfileid: "65582201"
  **此计划的结束日期**  
  指定此计划的过期日期。  
   
- 类型   
+ 类型  
  指定重复执行模式是主要基于小时、天、周还是月。  
   
  **小时(重复执行模式)**  

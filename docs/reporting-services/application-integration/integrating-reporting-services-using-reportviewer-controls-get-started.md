@@ -2,7 +2,7 @@
 title: 报表查看器控件入门
 description: 报表查看器控件可用来将 Reporting Services RDL 报表集成到 WebForms 和 WinForms 应用。
 ms.custom: seo-lt-2019
-ms.date: 12/12/2019
+ms.date: 06/03/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 01a821c4-2920-400c-be03-93d26c749bb1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d7e1e64bddcdcc7efed701770aea0e97c8e84ec5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a559bdb5b525b8d95c121b8059076d86029a37fd
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241829"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943190"
 ---
 # <a name="integrating-reporting-services-using-the-report-viewer-controls---get-started"></a>使用报表查看器控件集成 Reporting Services - 入门
 
@@ -252,10 +252,18 @@ ms.locfileid: "75241829"
     
 查看器控件是为新型浏览器设计的。 如果浏览器使用 IE 兼容性模式呈现页面，该控件可能无法按预期正常工作。 Intranet 站点可能需要 meta 标记来重写默认浏览器行为。
 
-    ```
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    ```
-      
+```html
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+```
+
+## <a name="nugetorg-pages"></a>NuGet.org 页
+
+下面是指向 NuGet.org 网站上有关 Report Viewer 控件的 WebForm 和 WinForm 版本的文章的链接：
+
+- Microsoft.ReportingServices.ReportViewerControl.WebForms [https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.WebForms/](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.WebForms/)
+- Microsoft.ReportingServices.ReportViewerControl.Winforms [https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.WinForms/](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.WinForms/)
+
+
 ## <a name="feedback"></a>反馈
 
 在 [Reporting Services 论坛](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlreportingservices)上让团队了解问题。

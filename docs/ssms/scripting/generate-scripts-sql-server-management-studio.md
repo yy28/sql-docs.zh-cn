@@ -1,5 +1,6 @@
 ---
 title: 生成脚本
+description: 了解如何使用“生成和发布脚本向导”为多个对象创建 Transact-SQL 脚本，以及如何使用对象资源管理器中的“编写脚本为”菜单为单个对象或多个对象生成脚本。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: scripting
@@ -11,16 +12,16 @@ ms.reviewer: mathoma
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a25249c04d322e2faa4c876b1afd2822896038b6
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 534d4982f46d0d83cb25718646b018dfa662cc35
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151876"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87123121"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>生成脚本 (SQL Server Management Studio)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了两种机制，用于生成 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。 可以使用“生成和发布脚本向导”为多个对象创建脚本  。 还可以通过使用 **“对象资源管理器”** 中的 **“编写脚本为”** 菜单为单个对象或多个对象生成脚本。
 
@@ -48,7 +49,7 @@ ms.locfileid: "83151876"
 
 3. 展开该对象的类别。 例如，展开 **“表”** 或 **“视图”** 节点。
 
-4. 右键单击该对象，指向“编写 \<对象类型> 脚本为”  ，例如，指向“编写表脚本为”  。
+4. 右键单击该对象，指向“编写 \<object type> 脚本为”，例如，指向“编写表脚本为” 。
 
 5. 指向脚本类型，如 **“创建到”** 或 **“更改到”** 。
 
@@ -72,6 +73,6 @@ ms.locfileid: "83151876"
 
 6. 然后，按住 Ctrl 并左键单击第二个要编写脚本的对象。
 
-7. 右键单击所选对象之一，然后选择“编写 \<对象类型> 脚本为”  。
+7. 右键单击所选对象之一，然后选择“编写 \<object type> 脚本为”。
 
     ![“对象资源管理器”](media/generate-scripts-sql-server-management-studio/object-explorer-details.png)

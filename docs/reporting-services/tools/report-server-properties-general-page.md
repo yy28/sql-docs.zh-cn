@@ -1,5 +1,6 @@
 ---
 title: 服务器属性（“常规”页）| Microsoft Docs
+description: 了解“报表服务器属性”页面上的选项。
 ms.date: 06/08/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: 23537d52-4356-450f-a671-5921cef2431f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 71c0d3d28de1a9c63770b37f2bb6013768aaee78
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 718121027064cc44e540ea710097da9added0c0b
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65576171"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916606"
 ---
 # <a name="report-server-properties-general-page"></a>报表服务器属性（“常规”页）
   使用此页可以查看或修改报表管理器中所使用的标题，启用或禁用“我的报表”，为“我的报表”安全性选择角色定义以及启用或禁用客户端打印控件。  
@@ -23,7 +24,7 @@ ms.locfileid: "65576171"
  **若要打开此页，请执行以下操作：**
  1) 开始 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
  2) 连接到报表服务器实例。
- 3) 右键单击报表服务器名称，然后选择“属性”  。  
+ 3) 右键单击报表服务器名称，然后选择“属性”。  
   
  服务器模式决定可以设置哪些服务器属性。 如果要管理配置为 SharePoint 集成模式的报表服务器，则不能启用“我的报表”，也不能为 Web 门户设置标题。  
   
@@ -44,7 +45,7 @@ ms.locfileid: "65576171"
  此属性为只读。 指定报表服务器 Web 服务的 URL。 可在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具中指定此值。 有关详细信息，请参阅[配置 URL（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)。  
   
  **为每个用户启用“我的报表”文件夹**  
- 使“我的报表”  可供用户使用。 此选项仅适用于处于本机模式的报表服务器。  
+ 使“我的报表”可供用户使用。 此选项仅适用于处于本机模式的报表服务器。  
   
  **选择应用于每个“我的报表”文件夹的角色**  
  指定要用于“我的报表”安全性的角色定义。 角色定义标识在每个“我的报表”文件夹中都支持的任务集。  

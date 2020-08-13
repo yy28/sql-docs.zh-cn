@@ -1,32 +1,34 @@
 ---
 title: 下载 SQL Server PowerShell 模块
+description: 了解如何安装 SqlServer PowerShell 模块，该模块提供支持最新 SQL 功能的 cmdlet，并在 SQLPS 模块中包含 cmdlet 的更新版本。
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: carlrab
+ms.reviewer: matteot, aanelson
 ms.custom: ''
-ms.date: 01/23/2020
-ms.openlocfilehash: 99976a12ae76254da5b50c5467df9d9e42fdbbce
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.date: 06/11/2020
+ms.openlocfilehash: 63b91463a265585036416721d1794920e02b9d13
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76920350"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122998"
 ---
 # <a name="install-the-sql-server-powershell-module"></a>安装 SQL Server PowerShell 模块
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-本文提供安装 SqlServer  PowerShell 模块的指导。
+本文提供安装 SqlServer PowerShell 模块的指导。
 
 ## <a name="powershell-modules-for-sql-server"></a>适用于 SQL Server 的 PowerShell 模块
 
 提供两种 SQL Server PowerShell 模块：
 
-- **SqlServer**：SqlServer 模块包括新的 cmdlet，用于支持最新的 SQL 功能。 该模块还包含 SQLPS 中 cmdlet 的更新版本  。 若要下载 SqlServer 模块，请[在 PowerShell 库中转到 SqlServer 模块](https://www.powershellgallery.com/packages/Sqlserver)。
-- **SQLPS**：虽然 SQL Server 安装附带了 SQLPS 模块（用于向后兼容），但该模块不再更新。 最新的 PowerShell 模块是 SqlServer 模块  。
+- **SqlServer**：SqlServer 模块包括新的 cmdlet，用于支持最新的 SQL 功能。 该模块还包含 SQLPS 中 cmdlet 的更新版本。 若要下载 SqlServer 模块，请[在 PowerShell 库中转到 SqlServer 模块](https://www.powershellgallery.com/packages/Sqlserver)。
+
+- **SQLPS**：SQLPS 是 [SQL 代理](sql-server-powershell.md#sql-server-agent)使用 PowerShell 子系统在代理作业步骤中运行代理作业时所使用的模块。
 
 > [!NOTE]
 > PowerShell 库中这些版本的 SqlServer  模块支持版本控制并且要求 PowerShell 5.0 或更高版本。
@@ -38,20 +40,22 @@ ms.locfileid: "76920350"
 
 ## <a name="sql-server-management-studio"></a>SQL Server Management Studio
 
-从版本 17.0 开始，SQL Server Management Studio (SSMS) 不会安装任何 PowerShell 模块。 要在 SSMS 中使用 PowerShell，则必须从 [PowerShell 库](https://www.powershellgallery.com/packages/Sqlserver)安装 SqlServer  模块。
+[SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) 不会安装任何 PowerShell 模块。 要在 SSMS 中使用 PowerShell，则必须从 [PowerShell 库](https://www.powershellgallery.com/packages/Sqlserver)安装 SqlServer  模块。
 
 > [!NOTE]
-> 对于 16.x 版本的 SSMS，SQL Server Management Studio (SSMS) 中包含早期版本的 SqlServer  模块
+> 对于 SSMS 16.x，SQL Server Management Studio (SSMS) 中包含早期版本的 SqlServer 模块
 
 ## <a name="azure-data-studio"></a>Azure Data Studio
 
-Azure Data Studio 不会安装任何一个 PowerShell 模块。 若要将 PowerShell 与 Azure Data Studio 一起使用，请从 [PowerShell 库](https://www.powershellgallery.com/packages/Sqlserver)安装 SqlServer  模块。
+[Azure Data Studio](../azure-data-studio/download-azure-data-studio.md) 不会安装任何一个 PowerShell 模块。 若要将 PowerShell 与 Azure Data Studio 一起使用，请从 [PowerShell 库](https://www.powershellgallery.com/packages/Sqlserver)安装 SqlServer  模块。
 
 可以使用 [PowerShell 扩展](../azure-data-studio/powershell-extension.md)，此扩展在 Azure Data Studio 中提供丰富的 PowerShell 编辑器支持。
 
 ## <a name="installing-or-updating-the-sqlserver-module"></a>安装或更新 SqlServer 模块
 
-要从 PowerShell 库安装 SqlServer  模块，请以管理员身份启用 [PowerShell](https://docs.microsoft.com/powershell/scripting/powershell-scripting) 会话。 还可以以管理员身份启动 Azure Data Studio，并在集成终端的 PowerShell 会话中运行这些命令。
+要从 PowerShell 库安装 SqlServer  模块，请以管理员身份启用 [PowerShell](/powershell/scripting/overview) 会话。 还可以以管理员身份启动 Azure Data Studio，并在集成终端的 PowerShell 会话中运行这些命令。
+
+还可以使用 Install-Module SQLServer -Scope CurrentUser 来运行提升的权限。 此 cmdlet 适用于不是环境管理员的用户。 但是，由于范围限制为当前用户，同一计算机上的其他用户无法使用该模块。
 
 ### <a name="install-the-sqlserver-module"></a>安装 SqlServer 模块
 
@@ -90,7 +94,7 @@ Install-Module -Name SqlServer -AllowClobber
 
 ### <a name="update-the-installed-version-of-the-sqlserver-module"></a>更新 SqlServer 模块的安装版本
 
-当 SqlServer  模块的更新版本可用时，可使用以下命令安装更新版本：
+当 SqlServer 模块的更新版本可用时，可使用以下命令安装更新版本：
 
 ```powershell
 Install-Module -Name SqlServer -AllowClobber
@@ -112,7 +116,7 @@ Get-Module SqlServer -ListAvailable
 Uninstall-module -Name SQLServer -RequiredVersion "<version number>" -AllowClobber
 ```
 
-### <a name="troubleshooting"></a>故障排除
+### <a name="troubleshooting"></a>疑难解答
 
 如果在安装过程中出现问题，请参阅[安装模块文档](https://www.powershellgallery.com/packages/PowerShellGet/2.2.1)和[安装模块参考](https://docs.microsoft.com/powershell/module/powershellget/Install-Module)。
 
@@ -129,7 +133,7 @@ Import-Module SqlServer -Version 21.1.18080
 PowerShell 库中可能提供 SqlServer 模块的预发行（或“预览”）版本。
 
 > [!IMPORTANT]
-> 可通过传递 -AllowPrerelease 切换，使用更新后的 Find-Module 和 Install-Module cmdlet（属于 [PowerShellGet](https://www.powershellgallery.com/packages/PowerShellGet) 模块）找到并安装这些版本。    若要使用这些 cmdlet，请安装 PowerShellGet 模块，然后打开一个新的会话。
+> 可通过传递 -AllowPrerelease 切换，使用更新后的 Find-Module 和 Install-Module cmdlet（属于 [PowerShellGet](https://www.powershellgallery.com/packages/PowerShellGet) 模块）找到并安装这些版本。****** 若要使用这些 cmdlet，请安装 PowerShellGet 模块，然后打开一个新的会话。
 
 ### <a name="to-discover-pre-release-versions-of-the-sqlserver-module"></a>发现 SqlServer 模块的预发行版本
 
@@ -152,3 +156,13 @@ Install-Module SqlServer -RequiredVersion 21.1.18040-preview -AllowPrerelease
 ## <a name="sql-server-powershell-on-linux"></a>Linux 上的 SQL Server PowerShell
 
 若要了解如何在 Linux 上安装 SQL Server PowerShell，请访问[通过 PowerShell Core 管理 Linux 上的 SQL Server](../linux/sql-server-linux-manage-powershell-core.md)。
+
+## <a name="other-modules"></a>其他模块
+
+- [Az.Sql](https://www.powershellgallery.com/packages/Az.Sql/) - Windows PowerShell 和 PowerShell Core 中适用于 Azure 资源管理器的 SQL 服务 cmdlet。
+
+- [SqlServerDsc](https://www.powershellgallery.com/packages/SqlServerDsc/) - 包含 DSC 资源且用于部署和配置 Microsoft SQL Server 的模块。
+
+## <a name="next-steps"></a>后续步骤
+
+[SQL Server PowerShell](sql-server-powershell.md)

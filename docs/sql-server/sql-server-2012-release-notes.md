@@ -2,9 +2,9 @@
 title: SQL Server 2012 发行说明 | Microsoft Docs
 description: 本发行说明文档介绍了在安装 Microsoft SQL Server 2012 或者解决其相关问题之前，应该了解的一些已知问题。
 ms.prod: sql
-ms.technology: install
+ms.technology: release-landing
 ms.custom: ''
-ms.date: 02/01/2017
+ms.date: 07/22/2020
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
 author: rothja
 ms.author: jroth
-monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: d60d53f11096343e96c0c309ba3aeb7bed419856
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+monikerRange: = sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: f07d5ea10fbb762b46dcf47fb15e9acdfe8404a9
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82999397"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111147"
 ---
 # <a name="sql-server-2012-release-notes"></a>SQL Server 2012 发行说明
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
-本发行说明文档介绍了在安装 Microsoft SQL Server 2012 或对其进行故障排除前需要了解的已知问题（[此处下载](https://go.microsoft.com/fwlink/?LinkId=238647)(#单击此处下载)）。 本发行说明文档只能在线下载，而不提供有关的安装介质，并且本文档将定期更新。  
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+本发行说明文档介绍了在安装 [Microsoft SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=238647) 或解决其相关问题之前，应该了解的一些已知问题）。 本发行说明文档只能在线下载，而不提供有关的安装介质，并且本文档将定期更新。  
   
 有关如何开始安装 SQL Server 2012 的信息，请参阅 SQL Server 2012 自述文件。 该自述文档在安装介质上提供，也可从 [自述文件](https://download.microsoft.com/download/3/B/D/3BD9DD65-D3E3-43C3-BB50-0ED850A82AD5/ENU/Readme.htm) (#自述文件) 下载页获得。 您还可以在 [SQL Server 联机丛书](https://go.microsoft.com/fwlink/?LinkId=190948) 中以及 [SQL Server 论坛](https://go.microsoft.com/fwlink/?LinkId=213599)上找到更多的信息。  
   
@@ -62,13 +62,17 @@ ms.locfileid: "82999397"
 ### <a name="13-sql-server-setup-might-fail-while-trying-to-start-the-sql-server-browser-service"></a>1.3 SQL Server 安装程序在试图启动 SQL Server Browser 服务时可能失败  
 **问题：** SQL Server 安装程序在试图启动 SQL Server Browser 服务时可能失败，出现如下错误：  
   
-<pre>The following error has occurred:  
-Service 'SQLBrowser' start request failed. Click 'Retry' to retry the failed action, or click 'Cancel' to cancel this action and continue setup.</pre>  
+```
+The following error has occurred:  
+Service 'SQLBrowser' start request failed. Click 'Retry' to retry the failed action, or click 'Cancel' to cancel this action and continue setup.
+```
   
 或  
   
-<pre>The following error has occurred:  
-SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu32' was cancelled by user after a previous installation failure. The last attempted step: Starting the SQL Server Browser service 'SQLBrowser', and waiting for up to '900' seconds for the process to complete.</pre>  
+```
+The following error has occurred:  
+SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu32' was cancelled by user after a previous installation failure. The last attempted step: Starting the SQL Server Browser service 'SQLBrowser', and waiting for up to '900' seconds for the process to complete.
+```
   
 **解决方法：** 在未能安装 SQL Server 引擎或 Analysis Services 时就会出现此情况。 若要解决该问题，请参考 SQL Server 安装程序日志来解决 SQL Server 引擎和 Analysis Services 失败的问题。 有关详细信息，请参阅查看和阅读 SQL Server 安装程序日志文件。 有关详细信息，请参阅 [查看和读取 SQL Server 安装程序日志文件](../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。  
   
@@ -105,8 +109,10 @@ SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu3
   
 如果这些任务未完成，则在您尝试创建语义索引时，将看到以下错误消息：  
   
-<pre>Msg 41209, Level 16, State 3, Line 1  
-A semantic language statistics database is not registered. Full-text indexes using 'STATISTICAL_SEMANTICS' cannot be created or populated.</pre>  
+```
+Msg 41209, Level 16, State 3, Line 1  
+A semantic language statistics database is not registered. Full-text indexes using 'STATISTICAL_SEMANTICS' cannot be created or populated.
+```
   
 ### <a name="17-installation-prerequisite-handling-during-sql-server-2012-setup"></a>1.7 SQL Server 2012 安装过程中的安装必备组件处理  
 以下各项介绍了 SQL Server 2012 安装过程中的必备组件安装行为：  
@@ -378,9 +384,9 @@ A semantic language statistics database is not registered. Full-text indexes usi
 ### <a name="414-issue-with-date-or-datetime-values-in-unmapped-source-fields-in-excel-during-cleansing-and-matching"></a>4.14 在清理和匹配期间 Excel 中未映射的源字段中 Date 或 DateTime 值的问题  
 **问题**：如果源数据为 Excel 且没有映射包含 Date 或 DateTime 数据类型的值的源字段，在清理和匹配活动期间将发生以下事件   ：  
   
--   以 yyyymmdd 格式显示和导出未映射的 **Date** 值。  
+-   以 yyyy-mm-dd 格式显示和导出未映射的“Date”值。  
   
--   对于未映射的 **DateTime** 值将丢失时间值，且以 yyyymmdd 格式显示和导出它们。  
+-   对于未映射的“DateTime”值，时间值将丢失，并以 yyyy-mm-dd 的格式显示和导出。  
   
 **解决方法：** 你可以在清理活动中的“管理和查看结果”页以及匹配活动中的“匹配”页右下窗格中查看未映射的字段值   。  
   
@@ -464,12 +470,12 @@ A semantic language statistics database is not registered. Full-text indexes usi
 ### <a name="54-an-error-might-occur-when-navigating-in-the-generate-script-wizard"></a>5.4 在生成脚本向导中浏览时可能会出错  
 **问题：** 通过单击“保存或发布脚本”在生成脚本向导中生成脚本后，如果单击“选择选项”或“设置脚本编写选项”进行浏览，再次单击“保存或发布脚本”则可能会导致以下错误     ：  
   
-<pre>
+```
 An exception occurred while executing a Transact-SQL statement or batch. (Microsoft.SqlServer.ConnectionInfo)  
 ------------------------------  
 ADDITIONAL INFORMATION:  
 Invalid object name 'sys.federations'. (Microsoft SQL Server, Error: 208)
-</pre>  
+```
   
 **解决方法：** 关闭后重新打开该生成脚本向导。  
   
@@ -631,9 +637,8 @@ SQL Server 2012 包含 StreamInsight 2.0。 StreamInsight 2.0 要求 Microsoft S
 ## <a name="100-upgrade-advisor"></a><a name="UA"></a>10.0 升级顾问  
   
 ### <a name="101-link-to-install-upgrade-advisor-is-not-enabled-on-chinese-hk-operating-systems"></a>10.1 指向安装升级顾问的链接在中文 (HK) 操作系统上未启用  
-问题：尝试在中文（香港特别行政区）操作系统 (OS) 支持的任何 Windows 版本上安装升级顾问时，可能会发现指向安装升级顾问的链接未启用。  
+问题：尝试在中文（香港特别行政区）操作系统 (OS) 支持的任何 Windows 版本上安装升级顾问时，可能会发现用于安装升级顾问的链接未启用。  
   
 **解决方法**：找到 SQLUA.msi 文件（在你的 SQL Server 2012 介质的 `\1028_CHT_LP\x64\redist\Upgrade Advisor` 或 `\1028_CHT_LP\x86\redist\Upgrade Advisor` 位置，具体取决于你的操作系统体系结构）  。  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
-  

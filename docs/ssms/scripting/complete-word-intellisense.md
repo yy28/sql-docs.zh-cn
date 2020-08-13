@@ -1,5 +1,6 @@
 ---
 title: 完成单词 (IntelliSense)
+description: Microsoft IntelliSense 字词补全功能在键入的内容足以唯一地标识字词后，便可以自动补全要键入的字词，或提供可供选择的可能字词列表。 了解调用此功能的四种方法。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: ee9c43a6-aae9-4cfa-b18e-1da9266fabcd
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7b516e75ce312dbc2970ccb31975d892f7ab98cb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3fb33d179463383e41f73ddba30525ce908e2cb5
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253995"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122878"
 ---
 # <a name="complete-word-intellisense"></a>完成单词 (IntelliSense)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   在您输入足够多的字符来唯一标识变量、命令或函数名后， [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 完成单词选项可以键入该术语的其余部分。  
   
  有四种方式可用来调用完成单词功能：  
@@ -33,7 +34,7 @@ ms.locfileid: "75253995"
   
 -   按 Alt+ 向右键。  
   
--   右键单击文本编辑器，然后单击“完成单词”  。  
+-   右键单击文本编辑器，然后单击“完成单词”。  
   
 -   单击 **“文本编辑器”** 工具栏上的 **“完成单词”** 按钮。  
   

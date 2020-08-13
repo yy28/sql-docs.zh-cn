@@ -1,5 +1,6 @@
 ---
-title: 跟踪驱动程序操作 | Microsoft Docs
+title: 跟踪驱动程序操作
+description: 了解在使用 JDBC Driver for SQL Server 时如何使用跟踪记录详细信息并解决问题。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 91f71543b9fecd994cc2b951758caacd23e8ae1f
-ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.openlocfilehash: b89be9709f04e995ed560e291a5199cebfd2bd75
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81219356"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393125"
 ---
 # <a name="tracing-driver-operation"></a>跟踪驱动程序操作
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "81219356"
   
  下表逐一介绍了公共日志记录类别每个可用的日志记录级别。  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |SEVERE|表示严重故障，为最高日志记录级别。 在 JDBC 驱动程序中，该级别用于报告错误和异常。|  
 |WARNING|指示潜在的问题。|  
@@ -53,7 +54,7 @@ ms.locfileid: "81219356"
   
  下表逐一介绍了内部日志记录类别每个可用的日志记录级别。  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |SEVERE|表示严重故障，为最高日志记录级别。 在 JDBC 驱动程序中，该级别用于报告错误和异常。|  
 |WARNING|指示潜在的问题。|  

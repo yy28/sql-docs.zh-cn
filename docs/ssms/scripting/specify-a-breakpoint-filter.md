@@ -1,5 +1,6 @@
 ---
 title: 指定断点筛选器
+description: 了解如何实现断点筛选器以对断点进行限制，使其只有在指定的计算机、操作系统进程和线程上进行调试时才起作用。
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -13,16 +14,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 070a7ab77a025c2949888582947c805f13710198
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 943168cc640f2a3373ed1baec1018962bf64123d
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253631"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122798"
 ---
 # <a name="specify-a-breakpoint-filter"></a>指定断点筛选器
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 断点筛选器对断点进行限制，使其仅对指定的计算机、操作系统进程和线程执行操作。 断点筛选器通常在调试并行应用程序时使用。
 
@@ -34,11 +35,11 @@ ms.locfileid: "75253631"
   
 #### <a name="to-specify-a-breakpoint-filter"></a>指定断点筛选器  
   
-1.  在“编辑器”窗口中，右键单击断点符号，然后单击快捷菜单上的“筛选器”  。  
+1.  在“编辑器”窗口中，右键单击断点符号，然后单击快捷菜单上的“筛选器”。  
   
      -或-  
   
-     在“断点”  窗口中，右键单击断点符号，然后单击快捷菜单上的“筛选器”  。  
+     在“断点”窗口中，右键单击断点符号，然后单击快捷菜单上的“筛选器”。  
   
 2.  在 **“断点筛选器”** 对话框中，使用 **“筛选器”** 框按名称指定计算机，或者按名称或 ID 编号指定操作系统进程和线程：  
   

@@ -1,5 +1,6 @@
 ---
 title: 打开编辑器 (SQL Server Management Studio)
+description: 了解如何在 SQL Server Management Studio 中打开数据库引擎查询、MDX、DMX 和 XML/A 编辑器。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,27 +11,27 @@ ms.assetid: 5d654a60-d205-49d2-a831-b3d986d60024
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 478f48cbea6bccb1cb66838a34d12689a94cf05a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ab96c21c9ac7d6e8b90564d6759c85744adc27f8
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253780"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122562"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>打开编辑器 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   本主题介绍如何在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]查询、MDX、DMX 或 XML/A 编辑器。 打开后，每个编辑器窗口都在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的中心窗格中显示为一个选项卡。  
   
 ## <a name="before-you-begin"></a>开始之前  
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 支持四种编辑器：用于编辑 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 脚本的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询编辑器、用于编辑使用相应语言的脚本的 DMX 和 MDX 编辑器、以及用于编辑 XML/A 脚本或 XML 文件的 XML/A 编辑器。 任何编辑器都还可以用于编辑文本文件。  
   
 ### <a name="limitations-and-restrictions"></a>限制和局限  
- 如果与其他站点上使用非重复代码页的用户共享文件，则应使用相应的 Unicode 代码页保存文件，以避免读取该文件时出错。 此外，在保存用于 UNIX 或 Macintosh 的文件时，请确保使用相应的文档格式来保存文件。 在 **“文件”** 菜单上，单击 **“另存为”** ，再单击 **“保存”** 按钮旁边向下箭头中的 **“编码保存”** ，然后在 **“行尾”** 下选择 **Unix** 或 **Macintosh**。  
+ 如果与其他站点上使用非重复代码页的用户共享文件，则应使用相应的 Unicode 代码页保存文件，以避免读取该文件时出错。 此外，在保存用于 UNIX 或 Macintosh 的文件时，请确保使用相应的文档格式来保存文件。 在 **“文件”** 菜单上，单击 **“另存为”**，再单击 **“保存”** 按钮旁边向下箭头中的 **“编码保存”** ，然后在 **“行尾”** 下选择 **Unix** 或 **Macintosh**。  
   
 ### <a name="permissions"></a>权限  
  在代码编辑器中执行的操作会受到为您用于登录的身份验证帐户所授予的权限的约束。 例如，如果您使用 Windows 身份验证打开一个 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口，则无法执行引用您的 Windows 登录帐户无权访问的对象的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
   
-## <a name="how-to-open-editors"></a>如何打开编辑器  
+## <a name="how-to-open-editors"></a>如何：打开编辑器  
  本节介绍如何在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中打开各种编辑器。  
   
 ### <a name="using-the-filenew-menu"></a>使用“文件”/“新建”菜单  
@@ -67,12 +68,12 @@ ms.locfileid: "75253780"
 ### <a name="using-object-explorer"></a>使用对象资源管理器  
  在 **“对象资源管理器”** 中：  
   
--   右键单击连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例的服务器节点，然后选择“新建查询”  。 这将打开一个连接到同一 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口，并将该窗口的数据库上下设置为登录帐户的默认数据库。  
+-   右键单击连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例的服务器节点，然后选择“新建查询”。 这将打开一个连接到同一 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口，并将该窗口的数据库上下设置为登录帐户的默认数据库。  
   
--   右键单击一个数据库节点，然后选择“新建查询”  。 这将打开一个连接到同一 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口，并将该窗口的数据库上下文设置为同一数据库。  
+-   右键单击一个数据库节点，然后选择“新建查询”。 这将打开一个连接到同一 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口，并将该窗口的数据库上下文设置为同一数据库。  
   
 ### <a name="using-solution-explorer"></a>使用解决方案资源管理器  
- 在  “解决方案资源管理器”中，展开一个文件夹，右键单击该文件夹中的某一项，再单击  “打开”，也可双击该项或文件。  
+ 在“解决方案资源管理器”中，展开一个文件夹，右键单击该文件夹中的某一项，再单击“打开”，也可双击该项或文件。  
   
 ### <a name="using-template-browser-to-open-the-database-engine-query-editor"></a>使用模板浏览器打开数据库引擎查询编辑器  
   
@@ -80,6 +81,6 @@ ms.locfileid: "75253780"
   
 -   右窗格中将出现 **“模板浏览器”** 窗口。  
   
--   双击一个模板以打开“数据库引擎查询”窗口，窗口中显示该模板的文本。 例如，若要打开 CREATE DATABASE 模板，请打开  “SQL Server 模板”文件夹，再打开  “数据库”文件夹，然后双击  “创建数据库”。  
+-   双击一个模板以打开“数据库引擎查询”窗口，窗口中显示该模板的文本。 例如，若要打开 CREATE DATABASE 模板，请打开“SQL Server 模板”文件夹，再打开“数据库”文件夹，然后双击“创建数据库”。  
   
   

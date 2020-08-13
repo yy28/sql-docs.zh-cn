@@ -1,39 +1,39 @@
 ---
-title: RevoScaleR R 函数库
-description: SQL Server 2016 R Services 中的 RevoScaleR 函数库，以及具有 R 的 SQL Server 机器学习服务简介。
+title: RevoScaleR R 包
+description: RevoScaleR 是 Microsoft 推出的 R 包，支持分布式计算、远程计算上下文和高性能数据科学算法。 还支持数据导入、数据转换、摘要、可视化和分析。 该包在 SQL Server 机器学习服务和 SQL Server 2016 R Services 中提供。
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 11/06/2019
-ms.topic: conceptual
+ms.technology: machine-learning-services
+ms.date: 07/14/2020
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7b24d5499e618a09c4d80e8614b08219e6c6f788
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 2288c1898d9299fb346a80e2cd0a53104e308724
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117430"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406150"
 ---
-# <a name="revoscaler-r-library-in-sql-server"></a>RevoScaleR（SQL Server 中的 R 库）
+# <a name="revoscaler-r-package-in-sql-server-machine-learning-services"></a>RevoScaleR（SQL Server 机器学习服务中的 R 包）
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-RevoScaleR 是 Microsoft 提供的高性能数据科学函数库  。 这些函数支持数据导入、数据转换、摘要、可视化和分析。
+RevoScaleR 是 Microsoft 推出的 R 包，支持分布式计算、远程计算上下文和高性能数据科学算法。 还支持数据导入、数据转换、摘要、可视化和分析。 该包在 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)和 [SQL Server 2016 R Services](sql-server-r-services.md) 中提供。
 
-与基本 R 函数相比，RevoScaleR 操作可针对大型数据集以并行方式在分布式文件系统上执行。 函数可以通过使用分块和在操作完成时重组结果来操作未存入内存的数据集。
+与基本 R 函数相比，RevoScaleR 运算可针对大型数据集以并行方式在分布式文件系统上执行。 函数可以通过使用分块和在操作完成时重组结果来操作未存入内存的数据集。
 
-RevoScaleR 函数用 rx 或 Rx 前缀表示，以便于识别   。
+RevoScaleR 函数用 rx** 或 Rx 前缀表示，以便于识别。
 
 RevoScaleR 可作为分布式数据科学的平台。 例如，可将 RevoScaleR 计算上下文和转换与 [MicrosoftML](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-the-microsoftml-package) 中的最先进算法一起使用。 也可使用 [rxExec](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexec) 并行运行基本 R 函数。
 
 ## <a name="full-reference-documentation"></a>完整参考文档
 
-RevoScaleR 库分布于多种 Microsoft 产品中，但不管你是在 SQL Server 还是在其他产品中获取库，使用情况都是一样的  。 由于函数相同，因此[单个 RevoScaleR 函数的文档](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)仅发布到 Microsoft Machine Learning Server 的 [R 引用](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference)下的一个位置。 如果存在任何特定于产品的行为，这些差异将在函数帮助页中注明。
+多个 Microsoft 产品中都分发有 RevoScaleR 包，但不管是在 SQL Server 还是在其他产品中获取该包，用法都是一样的。 由于函数相同，因此[单个 RevoScaleR 函数的文档](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)仅发布到 Microsoft Machine Learning Server 的 [R 引用](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference)下的一个位置。 如果存在任何特定于产品的行为，这些差异将在函数帮助页中注明。
 
 ## <a name="versions-and-platforms"></a>版本和平台
 
-RevoScaleR 库基于 R 3.4.3，且仅在安装以下 Microsoft 产品或下载之一时才可用  ：
+RevoScaleR 包基于 R 3.4.3，且仅在安装以下 Microsoft 产品或下载之一时才可用：
 
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
 + [SQL Server 机器学习服务](../install/sql-machine-learning-services-windows-install.md)
@@ -41,7 +41,7 @@ RevoScaleR 库基于 R 3.4.3，且仅在安装以下 Microsoft 产品或下载�
 + [Microsoft R Client](set-up-a-data-science-client.md)
 
 > [!NOTE]
-> 完整产品发布版本为 SQL Server 2017（仅限 Windows）。 [SQL Server 2019](../../linux/sql-server-linux-setup-machine-learning.md) 中的 RevoScaleR 同时支持 Windows 和 Linux  。
+> 完整产品发布版本为 SQL Server 2017（仅限 Windows）。 [SQL Server 2019](../../linux/sql-server-linux-setup-machine-learning.md) 中的 RevoScaleR 同时支持 Windows 和 Linux。
 
 ## <a name="functions-by-category"></a>按类别列出函数
 
@@ -49,13 +49,13 @@ RevoScaleR 库基于 R 3.4.3，且仅在安装以下 Microsoft 产品或下载�
 
 ## <a name="1-data-source-and-compute"></a>1 数据源和计算
 
-RevoScaleR 包含用于创建数据源和设置执行计算的位置或计算上下文的函数   。 数据源对象是一个容器，它指定了连接字符串以及你需要的以表、视图或查询格式定义的数据集。 不支持存储过程调用。 下表列出了与 SQL Server 方案相关的函数。
+RevoScaleR 包含用于创建数据源和设置执行计算的位置或计算上下文的函数。 数据源对象是一个容器，它指定了连接字符串以及你需要的以表、视图或查询格式定义的数据集。 不支持存储过程调用。 下表列出了与 SQL Server 方案相关的函数。
 
 在某些情况下，SQL Server 和 R 使用不同的数据类型。 有关 SQL 和 R 数据类型之间的映射的列表，请参阅 [R 到 SQL 数据类型](r-libraries-and-data-types.md)。
 
 | 函数| 说明|
 | ------- | ---------- |
-| [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) |  创建 SQL Server 计算上下文对象以将计算推送到远程实例。 好几个 RevoScaleR 函数都将计算上下文作为参数  。 |
+| [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) |  创建 SQL Server 计算上下文对象以将计算推送到远程实例。 好几个 RevoScaleR 函数都将计算上下文作为参数。 |
 |[rxGetComputeContext/rxSetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) | 获取或设置活动计算上下文。 |
 | [RxSqlServerData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdata) | 基于 SQL Server 查询或表创建数据对象。 |
 | [RxOdbcData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxodbcdata) | 基于 ODBC 连接创建数据源。 |
@@ -68,7 +68,7 @@ RevoScaleR 包含用于创建数据源和设置执行计算的位置或计算上
 
 如果你在实例和数据库上具有所需的权限，则还可以从 R 执行 DDL 语句。 以下函数使用 ODBC 调用执行 DDL 语句或检索数据库架构。
 
-| 函数| 说明|
+| 函数| 描述|
 | ------- | ---------- |
 | [rxSqlServerTableExists 和 rxSqlServerDropTable](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable) | 删除 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 表，或检查是否存在某个数据库表或对象。 |
 | [rxExecuteSQLDDL](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexecutesqlddl) | 执行定义或操作数据库对象的数据定义语言 (DDL) 命令。 此函数无法返回数据，仅用于检索或修改对象架构或元数据。|
@@ -77,7 +77,7 @@ RevoScaleR 包含用于创建数据源和设置执行计算的位置或计算上
 
 创建数据源对象后，可使用该对象将数据加载到其中，转换数据或将新数据写入指定目标。 你还可以根据源中的数据大小将批大小定义为数据源的一部分，并成块移动数据。
 
-| 函数 | 说明 |
+| 函数 | 描述 |
 |----------|-------------|
 | [rxOpen-methods](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxopen-methods) | 检查数据源是否可用、打开或关闭数据源、从源读取数据、向目标写入数据以及关闭数据源。|
 | [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) | 将数据从数据源移动到文件存储或数据帧中。|
@@ -141,9 +141,9 @@ RevoScaleR 包含用于创建数据源和设置执行计算的位置或计算上
 
 ## <a name="how-to-work-with-revoscaler"></a>如何使用 RevoScaleR
 
-可在存储过程中封装的 R 代码中调用 RevoScaleR 中的函数  。 大多数开发者会在本地构建 RevoScaleR 解决方案，然后将已完成的 R 代码迁移到存储过程作为部署练习  。
+可在存储过程中封装的 R 代码中调用 RevoScaleR 中的函数。 大多数开发者会在本地构建 RevoScaleR 解决方案，然后将已完成的 R 代码迁移到存储过程作为部署练习。
 
-在本地运行时，通常可在命令行或 R 开发环境中运行 R 脚本，并使用 RevoScaleR 函数之一指定 SQL Server 计算上下文  。 可将远程计算上下文用于整个代码或单个函数。 例如，你可能希望将模型定型卸载到服务器上以使用最新数据并避免数据移动。
+在本地运行时，通常可在命令行或 R 开发环境中运行 R 脚本，并使用 RevoScaleR 函数之一指定 SQL Server 计算上下文****。 可将远程计算上下文用于整个代码或单个函数。 例如，你可能希望将模型定型卸载到服务器上以使用最新数据并避免数据移动。
 
 准备好将 R 脚本封装在存储过程 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 中时，建议将代码重写为具有明确定义的输入和输出的单个函数。 
 

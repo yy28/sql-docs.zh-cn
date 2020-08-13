@@ -8,12 +8,12 @@ ms.assetid: c1a6b683-15cf-44ae-ac60-ceee63a60aaf
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 17cffe2f1eaf94174301212c6bb926528c56c7d3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f7997b4e7bf9ccf51198e317c2e175f115fa6973
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63225702"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942979"
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>向场中添加另一个报表服务器（SSRS 扩展）
 
@@ -66,13 +66,15 @@ ms.locfileid: "63225702"
 ##  <a name="additional-configuration"></a><a name="bkmk_additional"></a> 附加配置  
  可以优化扩展部署中的单个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务器以仅执行后台处理，从而不与交互式报表执行争用资源。 后台处理包括计划、订阅和数据警报。  
   
- 若要更改单个报表服务器的行为，请在 RSreportServer.config 配置文件中将 \<IsWebServiceEnable> 设置为 false。  
+ 若要更改单个 Report Server 的行为，请在 RSreportServer.config 配置文件中将 \<IsWebServiceEnable> 设为 false 。  
   
- 默认情况下，将配置报表服务器且 \<IsWebServiceEnable> 将设置为 TRUE。 当所有服务器都配置为 TRUE 时，将在场中的所有节点上均衡交互式操作和后台处理的负载。  
+ 默认情况下，配置 Report Server 时 \<IsWebServiceEnable> 设为 TRUE。 当所有服务器都配置为 TRUE 时，将在场中的所有节点上均衡交互式操作和后台处理的负载。  
   
- 如果配置所有报表服务器且 \<IsWebServiceEnable> 设置为 False，则在尝试使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能时将看到类似以下内容的一条错误消息：  
+ 如果配置所有 Report Server 时 \<IsWebServiceEnable> 设为 False，则在尝试使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能时将看到类似以下内容的一条错误消息：  
   
-      The Reporting Services Web Service is not enabled. Configure at least one instance of the Reporting Services SharePoint Service to have <IsWebServiceEnable> set to true. 
+```output
+The Reporting Services Web Service is not enabled. Configure at least one instance of the Reporting Services SharePoint Service to have <IsWebServiceEnable> set to true.
+```
  
  有关详细信息，请参阅[修改 Reporting Services 配置文件 (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
 

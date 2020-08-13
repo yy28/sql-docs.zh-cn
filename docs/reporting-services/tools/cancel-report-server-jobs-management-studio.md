@@ -1,5 +1,6 @@
 ---
 title: 取消报表服务器作业 (Management Studio) | Microsoft Docs
+description: 了解如何使用“取消报表服务器作业”对话框中的选项查看或取消执行中的报表。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,15 +11,15 @@ f1_keywords:
 ms.assetid: 1c5b4975-49e9-4d0b-b298-2638e81edbfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8c433b8fcc0d768b3db48edf8bc56bed6440839a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2da03690f084dbc1ce4cd7c4faf1e1e6cf2cb6d7
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574221"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917980"
 ---
 # <a name="cancel-report-server-jobs-management-studio"></a>取消报表服务器作业 (Management Studio)
-  使用“取消报表服务器作业”  对话框可以查看或取消正在执行的报表。 此对话框显示报表服务器上当前运行的所有作业。 尽管不能暂停或重新启动当前正在处理的作业，但是可以取消需要很长时间才能完成的所有作业或单个作业。  
+  使用“取消报表服务器作业”对话框可以查看或取消正在执行的报表。 此对话框显示报表服务器上当前运行的所有作业。 尽管不能暂停或重新启动当前正在处理的作业，但是可以取消需要很长时间才能完成的所有作业或单个作业。  
   
  可以取消用户作业和系统作业。  
   
@@ -26,7 +27,7 @@ ms.locfileid: "65574221"
   
 -   系统作业是指由报表服务器启动的作业。 系统作业包括计划的报表处理。  
   
- 若要打开此页，请启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，连接到报表服务器，右键单击“作业”，再单击“取消所有作业”   。 还可以打开“作业”，右键单击报表服务器上正在运行的作业，然后选择“取消作业”   。  
+ 若要打开此页，请启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，连接到报表服务器，右键单击“作业”，再单击“取消所有作业” 。 还可以打开“作业”，右键单击报表服务器上正在运行的作业，然后选择“取消作业” 。  
   
  在取消作业之前，可以查看其属性来确定作业的开始时间。 有关详细信息，请参阅[作业属性 (Management Studio)](../../reporting-services/tools/job-properties-management-studio.md)。  
   
@@ -37,7 +38,7 @@ ms.locfileid: "65574221"
  **名称**  
  显示报表的名称。 订阅通过其各自的说明进行标识。  
   
- 类型   
+ 类型  
  有效值为 **User** 和 **System**。  
   
  **Start Time**  

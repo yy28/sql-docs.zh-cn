@@ -1,5 +1,6 @@
 ---
 title: 作业属性 (Management Studio) | Microsoft Docs
+description: 了解 SQL Server Management Studio 中的“作业属性”页，从中可以查看有关报表服务器上作业的信息。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,17 +11,17 @@ f1_keywords:
 ms.assetid: 807ffd0e-9363-4f8f-9c36-c5d746ad19fd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fb1a989876126a57553a1ae833bcf847f9c005bc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8aabf771f7bd87f138e188a41be4b46ed43d2045
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571131"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915563"
 ---
 # <a name="job-properties-management-studio"></a>作业属性 (Management Studio)
-  使用“作业属性”  页可以在取消正在执行的报表或订阅之前查看相关信息。  
+  使用“作业属性”页可以在取消正在执行的报表或订阅之前查看相关信息。  
   
- 若要打开此页，请启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，连接到报表服务器，然后打开 **“作业”** 文件夹。 右键单击正在运行的作业，然后单击“属性”  。  
+ 若要打开此页，请启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，连接到报表服务器，然后打开 **“作业”** 文件夹。 右键单击正在运行的作业，然后单击“属性”。  
   
 > [!NOTE]  
 >  在具有高级服务的 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 中不支持此功能。 运行 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]时，将不会显示该页。  
@@ -30,9 +31,9 @@ ms.locfileid: "65571131"
   
 1.  打开报表服务器文件夹。  
   
-2.  右键单击“作业”，再单击“刷新”   。  
+2.  右键单击“作业”，再单击“刷新” 。  
   
-3.  如果列出了某个作业，请右键单击它，再单击“属性”  。  
+3.  如果列出了某个作业，请右键单击它，再单击“属性”。  
   
 ## <a name="options"></a>选项  
  **作业 ID**  

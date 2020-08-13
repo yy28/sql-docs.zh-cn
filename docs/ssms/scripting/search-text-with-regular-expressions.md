@@ -1,5 +1,6 @@
 ---
 title: 使用正则表达式搜索文本
+description: 了解如何在“查找和替换”对话框的“查找内容”字段中使用正则表达式来指定要匹配的模式。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,32 +17,32 @@ ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 69ce1c16013b9ad27e390ddd91b0655aee2986d5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 44c9350ef8134382a413018bcfde1d36351f808d
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253681"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122768"
 ---
 # <a name="search-text-with-regular-expressions"></a>使用正则表达式搜索文本
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-正则表达式是简明而灵活的表示法，用于查找和替换各种模式的文本。 在 **“查找和替换”对话框的“查找内容”字段中，可以使用一组特定的正则表达式**[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  。  
+正则表达式是简明而灵活的表示法，用于查找和替换各种模式的文本。 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]“查找和替换”对话框的“查找内容”字段中，可以使用一组特定的正则表达式 。  
   
 ## <a name="find-using-regular-expressions"></a>使用正则表达式进行查找  
   
-1.  若要在“快速查找”、“在文件中查找”、“快速替换”或“在文件中替换”操作过程中，在“查找内容”字段中启用正则表达式，请选中“查找选项”下的“使用”，然后选择“正则表达式”         。  
+1.  若要在“快速查找”、“在文件中查找”、“快速替换”或“在文件中替换”操作过程中，在“查找内容”字段中启用正则表达式，请选中“查找选项”下的“使用”，然后选择“正则表达式”********************************。  
   
 2.  **“查找内容”** 字段旁边的 **“引用列表”** 三角形按钮将变为可用状态。 单击此按钮可显示一组最常用的正则表达式。 如果选择了表达式生成器中的某个项，则可将该项插入 **“查找内容”** 字符串。  
   
 > [!NOTE]  
-> **“查找内容”** 字符串中使用的正则表达式与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 编程中的有效正则表达式相比，语法上存在差异。 例如，在“查找和替换”  对话框中，大括号 {} 用于表示带标记的表达式。 所以，表达式“zo{1}”将匹配所有“zo”后带标记 1 的匹配项，如“Alonzo1”和“Gonzo1”。 但在 .NET Framework 中，{} 符号用于表示量词。 因此，表达式“zo{1}”将匹配所有“z”后跟一个“o”的匹配项，如匹配“zone”，但不匹配“zoo”。  
+> **“查找内容”** 字符串中使用的正则表达式与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 编程中的有效正则表达式相比，语法上存在差异。 例如，在“查找和替换”对话框中，大括号 {} 用于表示带标记的表达式。 所以，表达式“zo{1}”将匹配所有“zo”后带标记 1 的匹配项，如“Alonzo1”和“Gonzo1”。 但在 .NET Framework 中，{} 符号用于表示量词。 因此，表达式“zo{1}”将匹配所有“z”后跟一个“o”的匹配项，如匹配“zone”，但不匹配“zoo”。  
   
  下表对 **“引用列表”** 中提供的正则表达式进行了说明。  
   
 |表达式|语法|说明|  
 |----------------|------------|-----------------|  
-|任何单个字符|。|匹配除换行符外的所有单一字符。|  
+|任何单个字符|.|匹配除换行符外的所有单一字符。|  
 |零个或更多|*|匹配零或更多前导表达式的匹配项，执行所有可能的匹配。|  
 |一个或更多|+|匹配至少一个前导表达式的匹配项。|  
 |行首|^|仅匹配行首位置的字符串。|  
@@ -67,9 +68,9 @@ ms.locfileid: "75253681"
 |最少 - 一个或更多|#|匹配一个或更多前导表达式的匹配项，匹配尽可能少的字符。|  
 |重复 n 次|^n|匹配前导表达式的 n 个匹配项。 例如，[0-9]^4 匹配所有四位数序列。|  
 |分组|()|将子表达式分组|  
-|第 n 个标记文本|\n|在 **“查找或替换”** 表达式中，指示匹配第 n 个标记表达式的文本，其中 n 为 1 到 9 之间的数字。<br /><br /> 在“替换”  表达式中，\0 将插入完整的匹配文本。|  
-|右对齐字段|\\(w,n)|在“替换”  表达式中，在宽度至少为 *w* 个字符的字段中，右对齐第 n 个标记表达式。|  
-|左对齐字段|\\(-w,n)|在“替换”  表达式中，在宽度至少为 *w* 个字符的字段中，左对齐第 n 个标记表达式。|  
+|第 n 个标记文本|\n|在 **“查找或替换”** 表达式中，指示匹配第 n 个标记表达式的文本，其中 n 为 1 到 9 之间的数字。<br /><br /> 在“替换”表达式中，\0 将插入完整的匹配文本。|  
+|右对齐字段|\\(w,n)|在“替换”表达式中，在宽度至少为 *w* 个字符的字段中，右对齐第 n 个标记表达式。|  
+|左对齐字段|\\(-w,n)|在“替换”表达式中，在宽度至少为 *w* 个字符的字段中，左对齐第 n 个标记表达式。|  
 |阻止匹配|~(X)|如果在表达式的此处出现 X，则阻止匹配。 例如，real~(ity) 匹配“realty”和“really”中的“real”，但不匹配“reality”中的“real”。|  
 |字母数字字符|:a|匹配表达式 ([a-zA-Z0-9])。|  
 |字母字符|:c|匹配表达式 ([a-zA-Z])。|  
@@ -108,7 +109,7 @@ ms.locfileid: "75253681"
 |不占位标记|:Mn|匹配不占位标记。|  
 |合并标记|:Mc|匹配合并标记。|  
 |封闭标记|:Me|匹配封闭标记。|  
-|数学符号|:Sm|匹配 +、=、~、&#124;、\< 和 >。|  
+|数学符号|:Sm|匹配 +、=、~、&#124;、\<, and >。|  
 |货币符号|:Sc|匹配 $ 和其他货币符号。|  
 |修饰符号|:Sk|匹配修饰符号，如抑扬符、重音符和长音符。|  
 |其他符号|:So|匹配其他符号，如版权符号、段落标记和度数符号。|  

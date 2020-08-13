@@ -1,5 +1,6 @@
 ---
 title: 将 Office 数据连接 (.odc) 用于报表 | Microsoft Docs
+description: 了解如何使用现有 Office 数据连接 (.odc) 文件来为 Reporting Services 报表提供连接信息。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e8d6896d-f886-4390-8b5d-96f0a50c250c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a33b5bae668835ca1dbf52b2e7852c3af731ddfe
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8b8fd87736e84336cc206235dd78aa76576bfdf1
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574951"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458499"
 ---
 # <a name="use-an-office-data-connection-odc-with-reports"></a>将 Office 数据连接 (.odc) 用于报表
   对于局限性方案而言，可以使用现有 Office 数据连接 (.odc) 文件来为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表提供连接信息。 在创建共享数据源时，可用 .odc 文件替代 .rsds 文件。 报表服务器使用 .odc 文件的方式与使用 .rsds 文件的方式相同；它读取文件以获得数据源类型、连接字符串以及凭据信息。  
@@ -52,11 +53,11 @@ ms.locfileid: "65574951"
   
 2.  在 **“数据”** 选项卡上的 **“获取外部数据”** 组中，单击 **“从其他来源”** ，然后单击 **“从数据连接向导”** 。  
   
-3.  选择“其他/高级”，然后单击“下一步”   。  
+3.  选择“其他/高级”，然后单击“下一步” 。  
   
 4.  选择 **“Microsoft OLE DB Provider for SQL Server”** ，然后单击 **“下一步”** 。  
   
-5.  输入服务器名称（默认情况下，该名称是计算机的网络名称）和具有有效登录名及数据库权限的用户帐户。 单击“下一步”。   
+5.  输入服务器名称（默认情况下，该名称是计算机的网络名称）和具有有效登录名及数据库权限的用户帐户。 单击“下一步”。  
   
 6.  选择一个数据库，然后单击 **“确定”** 以关闭 **“数据链接”** 对话框。  
   
@@ -74,7 +75,7 @@ ms.locfileid: "65574951"
   
 2.  在 **“上载”** 菜单中，单击 **“上载文档”** 。  
   
-3.  单击“浏览”  。  
+3.  单击“浏览”。  
   
 4.  选择所创建的 .odc 文件。 默认情况下，.odc 文件位于“我的文档”文件夹的“我的数据源”中。  
   
@@ -90,7 +91,7 @@ ms.locfileid: "65574951"
   
 10. 如果报表使用自定义数据源信息，请单击 **“共享”** 。  
   
-11. 在“数据源链接”中，单击“浏览(...)”按钮   。  
+11. 在“数据源链接”中，单击“浏览(...)”按钮 。  
   
 12. 选择刚上载的 .odc 文件。  
   

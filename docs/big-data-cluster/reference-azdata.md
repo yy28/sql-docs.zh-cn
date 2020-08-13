@@ -5,43 +5,47 @@ description: azdata 命令的参考文章。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 94adabb2ace2f5619abd700b2652aa7d88f3e1aa
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7a3862dca974efc0ef035a0b52edfff39d2f5bcf
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74822344"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942969"
 ---
 # <a name="azdata"></a>azdata
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-本参考文章介绍 `azdata` 命令。
+以下文章提供了 `azdata` 工具中 `sql` 命令的参考。 有关其他 `azdata` 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)。
 
 ## <a name="commands"></a>命令
-|     |     |
+| 命令 | 描述 |
 | --- | --- |
-|[azdata bdc](reference-azdata-bdc.md) | 选择、管理和操作 SQL Server 大数据群集。 |
 |[azdata app](reference-azdata-app.md) | 创建、删除、运行和管理应用程序。 |
+|[azdata bdc](reference-azdata-bdc.md) | 选择、管理和操作 SQL Server 大数据群集。 |
+|[azdata sql](reference-azdata-sql.md) | SQL DB CLI 允许用户通过 T-SQL 与 SQL Server 交互。 |
 [azdata login](#azdata-login) | 登录到群集的控制器终结点，并将其命名空间设置为活动上下文。 若要在登录时使用密码，必须设置 AZDATA_PASSWORD 环境变量。
 [azdata logout](#azdata-logout) | 注销群集。
 |[azdata context](reference-azdata-context.md) | 上下文管理命令。 |
-|[azdata control](reference-azdata-control.md) | 创建、删除和管理控制平面。 |
-|[azdata sql](reference-azdata-sql.md) | SQL DB CLI 允许用户通过 T-SQL 与 SQL Server 交互。 |
+|[azdata extension](reference-azdata-extension.md) | 管理和更新 CLI 扩展。 |
 |[azdata notebook](reference-azdata-notebook.md) | 用于从终端查看、运行和管理笔记本的命令。 |
 ## <a name="azdata-login"></a>azdata login
 部署群集时，它将在部署期间列出控制器终结点，你应该使用该终结点登录。  如果不知道控制器终结点，则可通过在系统上将群集的 kube 配置置于默认位置 <user home>/.kube/config 进行登录，或使用 KUBECONFIG 环境变量（即 export KUBECONFIG=path/to/.kube/config）进行登录。登录时，此群集的命名空间将设置为活动上下文。
 ```bash
 azdata login [--auth] 
              [--endpoint -e]  
-             [--accept-eula -a]  
-             [--namespace -n]  
-             [--username -u]  
-             [--principal -p]
+             
+[--accept-eula -a]  
+             
+[--namespace -n]  
+             
+[--username -u]  
+             
+[--principal -p]
 ```
 ### <a name="examples"></a>示例
 使用基本身份验证登录。
@@ -89,7 +93,7 @@ azdata login -n ClusterName
 #### `--output -o`
 输出格式。  允许的值：json、jsonc、table、tsv。  默认值：json。
 #### `--query -q`
-JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/)，获取详细信息和示例。
+JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org)，获取详细信息和示例。
 #### `--verbose`
 提高日志记录详细程度。 使用 --debug 获取完整的调试日志。
 ## <a name="azdata-logout"></a>azdata logout
@@ -110,7 +114,7 @@ azdata logout
 #### `--output -o`
 输出格式。  允许的值：json、jsonc、table、tsv。  默认值：json。
 #### `--query -q`
-JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/)，获取详细信息和示例。
+JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org)，获取详细信息和示例。
 #### `--verbose`
 提高日志记录详细程度。 使用 --debug 获取完整的调试日志。
 

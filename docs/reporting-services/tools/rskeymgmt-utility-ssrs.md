@@ -1,5 +1,6 @@
 ---
 title: rskeymgmt 实用工具 | Microsoft Docs
+description: 了解有关 reskeymgmt 实用工具的信息，该实用工具管理用于保护敏感报表服务器数据免受未经授权的访问的对称密钥。
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -19,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5ebbda456c402372e7505968414bc044eec87ec4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c3acdc15b2d5eaf5e8e38e0929757fd44157a148
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082155"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916261"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt 实用工具 (SSRS)
-  提取、还原、创建以及删除对称密钥，该密钥用于保护敏感报表服务器数据免受未经授权的访问。 此实用工具还用于将报表服务器实例加入扩展部署。 报表服务器扩展部署是指共享单个报表服务器数据库的多个报表服务器实例  。  
+  提取、还原、创建以及删除对称密钥，该密钥用于保护敏感报表服务器数据免受未经授权的访问。 此实用工具还用于将报表服务器实例加入扩展部署。 报表服务器扩展部署是指共享单个报表服务器数据库的多个报表服务器实例。  
   
 ## <a name="syntax"></a>语法  
   
@@ -73,17 +74,17 @@ rskeymgmt {-?}
  **-j**  
  配置远程报表服务器实例，以共享本地报表服务器实例所用的报表服务器数据库。  
   
- -r  installationID   
+ -r installationID  
  删除特定报表服务器实例的对称密钥信息，从而从扩展部署中删除报表服务器。 *installationID* 是 RSReportserver.config 文件中的 GUID 值。  
   
- -f  file   
+ -f file  
  指定一个指向存储对称密钥备份副本的文件的完全限定路径。  
   
  对于 **rskeymgmt -e**，对称密钥将写入你指定的文件中。  
   
  对于 **rskeymgmt -a**，存储在该文件中的对称密钥值将应用于报表服务器实例。  
   
- -p   password   
+ **-p**  *password*  
  （ **-f**为必需）指定用于备份或应用对称密钥的密码。 该值不能为空。  
   
  **-i**  
@@ -95,13 +96,13 @@ rskeymgmt {-?}
  **-n**  
  指定远程计算机上报表服务器实例的名称。 如果已在默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中安装了报表服务器，则此参数是可选的（ **-n** 的默认值为 MSSQLSERVER）。 如果已按命名实例的形式安装报表服务器，则 **-n** 为必需项。  
   
- -u  useraccount   
+ -u useraccount  
  指定要加入扩展部署的远程计算机上的管理员帐户。 如果未指定帐户，则使用当前用户的凭据。  
   
- -v  password   
+ -v password  
  （ **-u**为必需）指定要加入扩展部署的远程计算机上管理员帐户的密码。  
   
- -t  trace   
+ -t trace  
  将错误消息输出到跟踪日志。 此参数不带值。 有关详细信息，请参阅 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)。  
   
 ## <a name="permissions"></a>权限  
@@ -145,9 +146,9 @@ rskeymgmt -j -m <remotecomputer> -n <namedreportserverinstance> -u <administrato
 >  报表服务器扩展部署是指多个报表服务器实例共享同一报表服务器数据库的部署模型。 任何报表服务器实例，只要将其对称密钥存储在一个报表服务器数据库中，就可以使用该数据库。 例如，如果报表服务器数据库包含三个报表服务器实例的密钥信息，则所有这三个实例均被视为同一扩展部署的成员。  
   
 #### <a name="joining-report-server-instances-on-the-same-computer"></a>联接同一台计算机上的报表服务器实例  
- 可以从安装在同一台计算机上的多个报表服务器实例创建扩展部署。 如果要联接本地安装的报表服务器实例，请不要设置 **-u** 和 **-v** 参数。 仅当联接远程计算机中的实例时才需使用 **-u** 和 **-v** 参数。 如果指定这些参数，您将收到以下错误：“用户凭据不能用于本地连接”。  
+ 可以从安装在同一台计算机上的多个报表服务器实例创建扩展部署。 如果要联接本地安装的报表服务器实例，请不要设置 **-u** 和 **-v** 参数。 仅当联接远程计算机中的实例时才需使用 **-u** 和 **-v** 参数。 如果指定这些参数，你将收到以下错误：“用户凭据无法用于本地连接。”  
   
- 以下示例说明了使用多个本地实例创建扩展部署的语法。 在此示例中，\<initializedinstance> 是已初始化为使用报表服务器数据库的实例名称，而 \<newinstance> 是要添加到部署的实例名称：  
+ 以下示例说明了使用多个本地实例创建扩展部署的语法。 在此示例中，\<**initializedinstance**> 是实例的名称，该实例已初始化为使用报表服务器数据库，而 \<**newinstance**> 是要添加到部署中的实例的名称：  
   
 ```  
 rskeymgmt -j -i <initializedinstance> -m <computer name> -n <newinstance>  
@@ -163,7 +164,7 @@ rskeymgmt -r <installationID>
 ```  
   
 ## <a name="file-location"></a>文件位置  
- Rskeymgmt.exe 位于 **\<*drive*>:\Program Files\Microsoft SQL Server\110\Tools\Binn** 或 **\<*drive*>:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn** 下。 可以在文件系统的任何文件夹中运行此实用工具。  
+ Rskeymgmt.exe 位于 **\<*drive*>:\Program Files\Microsoft SQL Server\110\Tools\Binn** 或 **\<*drive*>:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn**。 可以在文件系统的任何文件夹中运行此实用工具。  
   
 ## <a name="remarks"></a>备注  
  报表服务器对存储的凭据和连接信息进行加密。 公钥和对称密钥可用于对数据进行加密。 要运行报表服务器，报表服务器数据库必须具有有效的密钥。 你可以使用 **rskeymgmt** 来备份、删除或还原密钥。 如果无法还原密钥，此工具将为您提供一种方法，以删除不再使用的加密内容。  

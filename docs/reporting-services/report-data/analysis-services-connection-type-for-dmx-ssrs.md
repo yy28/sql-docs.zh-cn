@@ -1,5 +1,6 @@
 ---
 title: 针对 DMX 的 Analysis Services 连接类型 | Microsoft Docs
+description: 了解 DMX 的 Analysis Services 连接类型，以及如何使用 DMX 查询设计器来构建使用图形元素的 DMX 查询。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2de825e9-6d8a-4128-add0-da15dc6cea3e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 96aa224d6eb9dac6e6f2959010631007ba41a8cd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e44b1872f3962f27666bf68b1f661b9804b8880b
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081438"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458979"
 ---
 # <a name="analysis-services-connection-type-for-dmx-ssrs"></a>针对 DMX 的 Analysis Services 连接类型 (SSRS)
   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据源创建数据集时，如果检测到有效多维数据集，则报表设计器将显示多维表达式 (MDX) 查询设计器。 如果未检测到多维数据集，但有数据挖掘模型可用，则报表设计器将会显示数据挖掘扩展插件 (DMX) 查询设计器。 要在 MDX 和 DMX 设计器之间切换，请单击工具栏上的“命令类型 DMX”（![更改为 DMX 查询语言视图](../../reporting-services/report-data/media/rsqdicon-commandtypedmx.gif "更改为 DMX 查询语言视图")）按钮。 使用 DMX 查询设计器以交互方式生成使用图形元素的 DMX 查询。 若要使用 DMX 查询设计器，指定的数据源必须已具有可提供数据的数据挖掘模型。 查询结果被转换为要在报表中使用的平展行集。  
@@ -32,10 +33,10 @@ ms.locfileid: "77081438"
 ## <a name="design-mode"></a>设计模式  
  DMX 查询设计器将在设计模式下打开。 设计模式包含用于选择单个数据挖掘模型和输入表的图形设计图面，同时还包含用于指定预测查询的网格。 DMX 查询设计器还有其他两种模式：查询模式和结果模式。 在查询模式中，查询窗格取代了设计模式中的网格，您可以在查询窗格中键入 DMX 查询。 在结果模式中，由查询返回的结果集显示在数据网格中。  
   
- 要更改 DMX 查询设计器的模式，请右键单击查询设计图面，并选择“设计”、“查询”或“结果”    。 有关详细信息，请参阅 [Analysis Services DMX 查询设计器用户界面](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)和[从数据挖掘模型 (DMX) 检索数据 (SSRS)](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)。  
+ 要更改 DMX 查询设计器的模式，请右键单击查询设计图面，并选择“设计”、“查询”或“结果”  。 有关详细信息，请参阅 [Analysis Services DMX 查询设计器用户界面](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)和[从数据挖掘模型 (DMX) 检索数据 (SSRS)](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)。  
   
 ## <a name="designing-a-prediction-query"></a>设计预测查询  
- 设计模式的“查询设计”窗格中包含两个窗口： **“挖掘模型”** 和 **“选择输入表”** 。 使用 **“挖掘模型”** 窗口可选择要在查询中使用的挖掘模型。 使用 **“选择输入表”** 窗口可选择预测所基于的表。 如果希望使用单独查询而不是输入表，请在“查询设计”窗格中右键单击，并选择“单独查询”  。 **“单独查询输入”** 窗口将取代 **“选择输入表”** 窗口。  
+ 设计模式的“查询设计”窗格中包含两个窗口：“挖掘模型”和“选择输入表”。 使用 **“挖掘模型”** 窗口可选择要在查询中使用的挖掘模型。 使用 **“选择输入表”** 窗口可选择预测所基于的表。 如果希望使用单独查询而不是输入表，请在“查询设计”窗格中右键单击，并选择“单独查询”。 **“单独查询输入”** 窗口将取代 **“选择输入表”** 窗口。  
   
  在设计模式中，可以将 **“挖掘模型”** 窗口和 **“选择输入表”** 窗口中的字段拖至“网格”窗格中的 **“字段”** 列。 您还可以填充其余列来指定别名、在结果中显示字段、将字段组合在一起以及指定运算符根据给定条件或参数限制字段值。 如果使用的是查询模式，请通过将字段拖至“查询”窗格来生成 DMX 查询。  
   

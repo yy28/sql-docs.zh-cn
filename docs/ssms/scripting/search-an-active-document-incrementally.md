@@ -1,5 +1,6 @@
 ---
 title: 增量搜索活动文档
+description: 了解如何渐进式搜索单个文档或窗口。 键入内容时，渐进式搜索操作会突出显示此时已输入内容的下一个匹配项。 隐藏的文本将忽略。
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,18 +15,18 @@ ms.assetid: 490bb36c-dd43-4219-9e2a-ff27046b9395
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5cb0bea5223e9e9a32fe992939cc5a2ee49eed9b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cf507a3ede4e1ed106c5d443bec0034b54d73fe5
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78261831"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122817"
 ---
 # <a name="search-an-active-document-incrementally"></a>增量搜索活动文档
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   您可以通过输入文字来对单个文档或窗口执行渐进式搜索。 搜索操作会突出显示与在文档或窗口的渐进式搜索过程中输入的字符相匹配的第一个字符集。 渐进式搜索会自动搜索文档或窗口内的所有文字，但隐藏文字除外。  
   
- 对于 **“大小写匹配”** 选项，渐进式搜索将使用上一次搜索的条件。 例如，如果使用“在文件中查找”  对话框跨多个文件执行搜索，并选择“大小写匹配”  ，然后执行渐进式搜索，则此搜索将区分大小写。  
+ 对于 **“大小写匹配”** 选项，渐进式搜索将使用上一次搜索的条件。 例如，如果使用“在文件中查找”**** 对话框跨多个文件执行搜索，并选择“大小写匹配”****，然后执行渐进式搜索，则此搜索将区分大小写。  
   
 ### <a name="to-search-incrementally"></a>执行渐进式搜索  
   

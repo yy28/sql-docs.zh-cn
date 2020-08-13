@@ -2,22 +2,22 @@
 title: 转换 R 和 SQL 数据类型
 description: 查看数据科学和机器学习解决方案中 R 和 SQL Server 之间的隐式和显式数据类型转换。
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 08/08/2019
-ms.topic: conceptual
+ms.technology: machine-learning-services
+ms.date: 07/15/2020
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1f7a6a95033d16e7bc39f07d6b72324e3aea6634
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: bf08045adba7298d5a5b8e261c406915b44effe0
+ms.sourcegitcommit: fd7b268a34562d70d46441f689543ecce7df2e4d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486716"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86411635"
 ---
 # <a name="data-type-mappings-between-r-and-sql-server"></a>R 与 SQL Server 之间的数据类型映射
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 对于在 SQL Server 机器学习服务中的 R 集成功能上运行的 R 解决方案，请查看不支持的数据类型列表，以及在 R 库和 SQL Server 之间传递数据时可能隐式执行的数据类型转换。
 
@@ -41,17 +41,17 @@ SQL Server 2016 R Services 和带有 R 的 SQL Server 机器学习服务与 Micr
 
 |SQL 类型|R 类|RESULT SET 类型|注释|
 |-|-|-|-|
-|**bigint**|`numeric`|**float**||
+|**bigint**|`numeric`|**float**|使用 `sp_execute_external_script` 执行 R 脚本支持将 bigint 数据类型作为输入数据。 但是，因为它们会转换为 R 的数值类型，所以会造成精度损失，其值非常高或具有小数点值。 R 仅支持最多 53 位整数，如果位数更高将开始有精度损失。|
 |**binary(n)**<br /><br /> n <= 8000|`raw`|**varbinary(max)**|仅允许作为输入参数和输出|
 |**bit**|`logical`|**bit**||
-|**char(n)**<br /><br /> n <= 8000|`character`|**varchar(max)**||
+|**char(n)**<br /><br /> n <= 8000|`character`|**varchar(max)**|输入数据帧 (input_data_1) 是在未明确设置 stringsAsFactors 参数的情况下创建的，因此列类型取决于 R 中的 default.stringsAsFactors() |
 |**datetime**|`POSIXct`|**datetime**|表示为 GMT|
 |**date**|`POSIXct`|**datetime**|表示为 GMT|
-|**decimal(p,s)**|`numeric`|**float**||
+|**decimal(p,s)**|`numeric`|**float**|使用 `sp_execute_external_script` 执行 R 脚本支持将 decimal 数据类型作为输入数据。 但是，因为它们会转换为 R 的数值类型，所以会造成精度损失，其值非常高或具有小数点值。 带有 R 脚本的 `sp_execute_external_script` 不支持数据类型的完整范围，它会更改最后几个小数位，尤其是小数部分。|
 |**float**|`numeric`|**float**||
 |**int**|`integer`|**int**||
-|**money**|`numeric`|**float**||
-|**numeric(p,s)**|`numeric`|**float**||
+|**money**|`numeric`|**float**|使用 `sp_execute_external_script` 执行 R 脚本支持将 money 数据类型作为输入数据。 但是，因为它们会转换为 R 的数值类型，所以会造成精度损失，其值非常高或具有小数点值。 有时，美分值会不精确，将发出警告：“警告：无法精确表示的美分值”。  |
+|**numeric(p,s)**|`numeric`|**float**|使用 `sp_execute_external_script` 执行 R 脚本支持将 numeric 数据类型作为输入数据。 但是，因为它们会转换为 R 的数值类型，所以会造成精度损失，其值非常高或具有小数点值。 带有 R 脚本的 `sp_execute_external_script` 不支持数据类型的完整范围，它会更改最后几个小数位，尤其是小数部分。|
 |**real**|`numeric`|**float**||
 |**smalldatetime**|`POSIXct`|**datetime**|表示为 GMT|
 |**smallint**|`integer`|**int**||
@@ -60,8 +60,7 @@ SQL Server 2016 R Services 和带有 R 的 SQL Server 机器学习服务与 Micr
 |**uniqueidentifier**|`character`|**varchar(max)**||
 |**varbinary(n)**<br /><br /> n <= 8000|`raw`|**varbinary(max)**|仅允许作为输入参数和输出|
 |**varbinary(max)**|`raw`|**varbinary(max)**|仅允许作为输入参数和输出|
-|**varchar(n)**<br /><br /> n <= 8000|`character`|**varchar(max)**||
-
+|**varchar(n)**<br /><br /> n <= 8000|`character`|**varchar(max)**|输入数据帧 (input_data_1) 是在未明确设置 stringsAsFactors 参数的情况下创建的，因此列类型取决于 R 中的 default.stringsAsFactors() |
 
 ## <a name="data-types-not-supported-by-r"></a>R 不支持的数据类型
 

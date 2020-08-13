@@ -1,34 +1,34 @@
 ---
 title: 将 Spark 连接到 SQL Server
 titleSuffix: SQL Server big data clusters
-description: 了解如何使用 Spark 中的 MSSQL Spark 连接器对 SQL Server 执行读写操作。
+description: 了解如何使用适用于 SQL Server 和 Azure SQL 的 Apache Spark 连接器读取和写入 SQL Server。
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: shivsood
+ms.reviewer: mikeray
 ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.technology: big-data-cluster
-ms.openlocfilehash: 7c8b8da0912f3c928857dd84b8981fecb10b17da
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.technology: machine-learning-bdc
+ms.openlocfilehash: 3cb36c4bdddfaa97b9b6c08015308799d54cb0dc
+ms.sourcegitcommit: 56f6892b3795da308d226d4b3c5c859ead2e830a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80531109"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86438069"
 ---
-# <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>如何使用 MSSQL Spark 连接器从 Spark 对 SQL Server 执行读写操作
+# <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-apache-spark-connector-for-sql-server-and-azure-sql"></a>如何使用适用于 SQL Server 和 Azure SQL 的 Apache Spark 连接器从 Spark 读取和写入 SQL Server
 
 Spark 中的大容量数据处理是一种关键大数据使用模式，之后会将数据写入 SQL Server 以访问业务线应用程序。 这些使用模式受益于使用关键 SQL 优化并提供高效写入机制的连接器。
 
-本文概述了 MSSQL Spark 连接器接口，以及如何将其实例化以用于非 AD 模式和 AD 模式。 然后，提供示例，说明如何使用 MSSQL Spark 连接器对大数据群集中的以下位置执行读写操作：
+本文概述了适用于 SQL Server 和 Azure SQL 接口的 Apache Spark 连接器，并将其实例化以用于非 AD 模式和 AD 模式。 然后，提供一个示例，说明如何使用适用于 SQL Server 和 Azure SQL 的 Apache Spark 连接器读取和写入大数据群集中的以下位置：
 1. SQL Server 主实例
 1. SQL Server 数据池
 
-   ![MSSQL Spark 连接器示意图](./media/spark-mssql-connector/mssql-spark-connector-diagram.png)
+   ![适用于 SQL Server 和 Azure SQL 关系图的 Apache Spark 连接器](./media/spark-mssql-connector/mssql-spark-connector-diagram.png)
 
-## <a name="mssql-spark-connector-interface"></a>MSSQL Spark 连接器接口
+## <a name="apache-spark-connector-for-sql-server-and-azure-sql-interface"></a>适用于 SQL Server 和 Azure SQL 接口的 Apache Spark 连接器
 
-SQL Server 2019 为大数据群集提供 MSSQL Spark 连接器，该连接器使用 SQL Server 批量写入 API 执行 Spark 到 SQL 的写入操作  。 MSSQL Spark 连接器基于 Spark 数据源 API，并提供熟悉的 Spark JDBC 连接器接口。 有关接口参数，请参阅 [Apache Spark 文档](http://spark.apache.org/docs/latest/sql-data-sources-jdbc.html)。 MSSQL Spark 连接器以 **com.microsoft.sqlserver.jdbc.spark** 这一名称被引用。 MSSQL Spark 连接器支持两种安全模式，以与 SQL Server、非 Active Directory 模式和 Active Directory(AD) 模式连接：
+SQL Server 2019 为大数据群集提供了[适用于 SQL Server 和 Azure SQL 的 Apache Spark 连接器](https://github.com/microsoft/sql-spark-connector)，这些大数据群集使用 SQL Server 批量写入 API 执行 Spark 到 SQL 的写入操作。 适用于 SQL Server 和 Azure SQL 的 Apache Spark 连接器基于 Spark 数据源 API，并提供了熟悉的 Spark JDBC 连接器接口。 有关接口参数，请参阅 [Apache Spark 文档](http://spark.apache.org/docs/latest/sql-data-sources-jdbc.html)。 适用于 SQL Server 和 Azure SQL 的 Apache Spark 连接器由名称 com.microsoft.sqlserver.jdbc.spark 引用。 适用于 SQL Server 和 Azure SQL 的 Apache Spark 连接器支持两种与 SQL Server 连接的安全模式（非 Active Directory 模式和 Active Directory (AD) 模式）：
 ### <a name="non-ad-mode"></a>非 AD 模式：
 在非 AD 模式安全性中，每个用户都有一个用户名和密码，在连接器实例化期间需要将它们作为参数提供，以执行读取和/或写入。
 以下为非 AD 模式的连接器实例化示例：
@@ -70,11 +70,11 @@ writer.save()
 
 | 属性名称 | 可选 | 说明 |
 |---|---|---|
-| **isolationlevel** | 是 | 此参数描述连接的隔离级别。 MSSQL Spark 连接器的默认值为 **READ_COMMITTED** |
+| **isolationlevel** | 是 | 此参数描述连接的隔离级别。 连接器的默认值为 READ_COMMITTED |
 
 连接器使用 SQL Server 批量写入 API。 任何批量写入参数都可由用户作为可选参数进行传递，并可由连接器按原样传递到基础 API。 有关批量写入操作的详细信息，请参阅 [SQLServerBulkCopyOptions]( ../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#sqlserverbulkcopyoptions)。
 
-## <a name="mssql-spark-connector-sample"></a>MSSQL Spark 连接器示例
+## <a name="apache-spark-connector-for-sql-server-and-azure-sql-sample"></a>适用于 SQL Server 和 Azure SQL 示例的 Apache Spark 连接器
 本示例执行以下任务：
 
 - 从 HDFS 读取文件并进行一些基本处理。
@@ -111,7 +111,7 @@ writer.save()
 
 ### <a name="run-the-sample-notebook"></a>运行示例笔记本
 
-若要演示如何将 MSSQL Spark 连接器与非 AD 模式中的此数据配合使用，可下载示例笔记本，在 Azure Data Studio 中打开它，然后运行每个代码块。 有关使用笔记本的详细信息，请参阅[如何在 SQL Server 中使用笔记本](../azure-data-studio/notebooks-guidance.md)。
+若要演示在非 AD 模式下将适用于 SQL Server 和 Azure SQL 的 Apache Spark 连接器与此数据配合使用，可下载示例笔记本，在 Azure Data Studio 中将其打开，然后运行每个代码块。 有关使用笔记本的详细信息，请参阅[如何在 SQL Server 中使用笔记本](../azure-data-studio/notebooks-guidance.md)。
 
 1. 从 PowerShell 或 bash 命令行运行以下命令，以下载“mssql_spark_connector_non_ad_pyspark.ipynb”  示例笔记本：
 
@@ -121,7 +121,7 @@ writer.save()
 
 1. 在 Azure Data Studio 中，打开示例笔记本文件。 验证它是否已连接到大数据群集的 HDFS/Spark 网关。
 
-1. 运行示例中的每个代码单元以查看 MSSQL Spark 连接器的使用情况。
+1. 运行示例中的每个代码单元，以了解适用于 SQL Server 和 Azure SQL 的 Apache Spark 连接器的用法。
 
 ## <a name="next-steps"></a>后续步骤
 

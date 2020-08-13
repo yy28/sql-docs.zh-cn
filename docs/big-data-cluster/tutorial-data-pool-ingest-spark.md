@@ -10,16 +10,16 @@ ms.date: 12/13/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ff4038fd5a09b0776533c2ffa94cb6c1afeb567b
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.openlocfilehash: d87d817f2bc7c23e2df3dd18d55ce21d12304cb4
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80531137"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943209"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>教程：使用 Spark 作业将数据引入 SQL Server 数据池
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 本教程演示如何使用 Spark 作业将数据加载到 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 的[数据池](concept-data-pool.md)。 
 
@@ -111,7 +111,12 @@ ms.locfileid: "80531137"
 2. 创建新笔记本并选择 Spark | Scala 作为内核。
 
 3. 运行 Spark 引入作业
+
    1. 配置 Spark-SQL 连接器参数
+
+    > [!NOTE]
+    > 如果大数据群集通过 Active Directory 集成进行部署，请替换下面的主机名的值，以包含附加到服务名称的 FQDN。 例如 *hostname=master-p-svc.\<domainName>* 。
+
       ```
       import org.apache.spark.sql.types._
       import org.apache.spark.sql.{SparkSession, SaveMode, Row, DataFrame}
@@ -129,7 +134,7 @@ ms.locfileid: "80531137"
       StructField("wcs_web_page_sk",LongType,true), StructField("wcs_user_sk",LongType,true)
       ))
 
-      val hostname = "master-0.master-svc"
+      val hostname = "master-p-svc"
       val port = 1433
       val url = s"jdbc:sqlserver://${hostname}:${port};database=${database};user=${user};password=${password};"
       ```

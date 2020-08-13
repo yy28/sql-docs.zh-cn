@@ -1,5 +1,6 @@
 ---
 title: 使用报表设计器设计报表 | Microsoft Docs
+description: 了解如何使用 SQL Server Reporting Services 中的报表设计器来创建功能齐全的分页报表和报表解决方案。
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4e4cfac1ba56647ae0218242d0fb9228a3e80579
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8f83c1f169706af4a02d1940049d2a1814bc26ca
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286161"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914083"
 ---
 # <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>使用报表设计器设计 Reporting Services 分页报表 (SSRS)
 
@@ -69,7 +70,7 @@ ms.locfileid: "79286161"
   
 -   **添加现有项。** 一个现有报表定义 (.rdl) 将在报表设计器中打开。 从早期版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 打开某一报表或项目可能会将该项目自动升级到当前版本，或者将该报表升级到当前架构。 有关更多信息，请参见 [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md)。  
   
--   导入 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access 报表  。 从 Access 数据库（.mdb、.accdb）或项目 (.adp) 文件中导入所有报表。 报表设计器将数据库或项目文件中的所有报表都转换为 RDL 格式，然后将其保存在报表项目中。 并非 Access 报表的所有功能都转移到报表定义 (.rdl) 文件中。 有关详细信息，请参阅[从 Microsoft Access 导入报表 (Reporting Services)](https://msdn.microsoft.com/library/4f29d5b8-b77d-4714-a84a-05523df55646) 和[支持的 Access 报表功能 (SSRS)](https://msdn.microsoft.com/library/7ffec331-6365-4c13-8e58-b77a48cffb44)。  
+-   导入 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access 报表。 从 Access 数据库（.mdb、.accdb）或项目 (.adp) 文件中导入所有报表。 报表设计器将数据库或项目文件中的所有报表都转换为 RDL 格式，然后将其保存在报表项目中。 并非 Access 报表的所有功能都转移到报表定义 (.rdl) 文件中。 有关详细信息，请参阅[从 Microsoft Access 导入报表 (Reporting Services)](https://msdn.microsoft.com/library/4f29d5b8-b77d-4714-a84a-05523df55646) 和[支持的 Access 报表功能 (SSRS)](https://msdn.microsoft.com/library/7ffec331-6365-4c13-8e58-b77a48cffb44)。  
   
     > [!NOTE]  
     >  若要使用导入功能，必须将 Access 2002 或更高版本与报表设计器安装在同一台计算机上。 在导入 Access 报表时，必须能够使用报表的数据源。  
@@ -85,7 +86,7 @@ ms.locfileid: "79286161"
      有关详细信息，请参阅[报表定义语言 (SSRS)](../../reporting-services/reports/report-definition-language-ssrs.md)。  
   
 ##  <a name="report-parts"></a><a name="bkmk_ReportParts"></a> 报表部件  
- 在报表设计器中，在你创建了表、图表和项目中的其他分页报表项后，可以将它们作为“报表部件”  发布到报表服务器或与报表服务器相集成的 SharePoint 站点中，以便你和他人可以在其他报表中重复使用它们。 有关详细详细信息，请参阅[报表设计器中的报表部件 (SSRS)](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)。  
+ 在报表设计器中，在你创建了表、图表和项目中的其他分页报表项后，可以将它们作为“报表部件”** 发布到报表服务器或与报表服务器相集成的 SharePoint 站点中，以便你和他人可以在其他报表中重复使用它们。 有关详细详细信息，请参阅[报表设计器中的报表部件 (SSRS)](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)。  
   
  可通过使用 **TargetReportPartFolder** 和其他属性，脱离项目中的其他项而单独部署报表部件。 有关详细信息，请参阅[设置部署属性 (Reporting Services)](../../reporting-services/tools/set-deployment-properties-reporting-services.md)。  
   
@@ -99,7 +100,7 @@ ms.locfileid: "79286161"
  使用 **“预览”** 可以验证报表数据和布局设计。 在你预览报表时，报表处理器将对报表定义架构和表达式语法进行验证，然后在 [Output](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_Output) 窗口中列出问题。  
   
 > [!NOTE]  
->  在预览报表时，报表数据将缓存到本地计算机上的文件中。 使用相同的查询、参数和凭据再次预览同一报表时，报表设计器将检索缓存副本，而不是重新运行查询。 数据文件将在报表定义文件所在的同一目录中另存为 \<reportname>.rdl.data  。 关闭报表设计器时，不会删除该文件。  
+>  在预览报表时，报表数据将缓存到本地计算机上的文件中。 使用相同的查询、参数和凭据再次预览同一报表时，报表设计器将检索缓存副本，而不是重新运行查询。 数据文件将在报表定义文件所在的同一目录中另存为 \<reportname>.rdl.data。 关闭报表设计器时，不会删除该文件。  
   
  您可以通过以下方式预览报表：  
   
@@ -118,7 +119,7 @@ ms.locfileid: "79286161"
     > [!NOTE]  
     >  若要使用调试模式，必须设置开始项。 在解决方案资源管理器中右键单击报表项目，再单击 **“属性”** ，然后在 **StartItem**中选择要显示的报表的名称。  
   
-     若要预览项目开始项之外的特定报表，请选择生成报表但不部署该报表的配置（例如，DebugLocal 配置），右键单击报表，再单击 **“运行”** 。 必须选择不部署报表的配置；否则，报表将发布到报表服务器，而不是显示在本地预览窗口中。  
+     若要预览项目开始项之外的特定报表，请选择生成报表但不部署该报表的配置（例如，DebugLocal 配置），右键单击报表，再单击 **“运行”**。 必须选择不部署报表的配置；否则，报表将发布到报表服务器，而不是显示在本地预览窗口中。  
   
 -   **打印预览。**  
   
@@ -168,7 +169,7 @@ ms.locfileid: "79286161"
   
  下表列出了错误级别。  
   
-|错误级别|说明|  
+|错误级别|描述|  
 |-----------------|-----------------|  
 |0|最严重且无法避免的生成错误，将阻止预览和部署报表。|  
 |1|严重的生成错误，会彻底更改报表布局。|  

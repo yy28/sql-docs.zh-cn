@@ -1,5 +1,6 @@
 ---
 title: 语法对的自动匹配
+description: 了解 Query 编辑器（分隔符匹配）、XMLA 查询编辑器（大括号匹配）以及 MDX 和 DMX（括号匹配）中语法对的自动匹配。
 ms.date: 03/01/2017
 ms.prod: sql
 ms.technology: scripting
@@ -11,15 +12,15 @@ ms.assetid: bfc54cda-bfd6-4545-a5b9-f9db2ae13769
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1251b6664266fdd1e4d91519186df95a52e52f35
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d23610ed602133b7c9c218a1da1a678c84954a93
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74834239"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920943"
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>语法对的自动匹配
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   使用自动匹配语法对功能，可获得有关必须以成对方式进行编码的语法元素是否正确配对的即时反馈。 这种匹配在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器中被称为分隔符匹配，在 Analysis Services XMLA 查询编辑器中被称为大括号匹配，而在 MDX 和 DMX 编辑器中则被称为圆括号匹配。  
   
 ## <a name="database-engine-query-editor-delimiter-matching"></a>数据库引擎查询编辑器的分隔符匹配  
@@ -55,17 +56,17 @@ ms.locfileid: "74834239"
   
 -   匹配的开始和结束标记。  
   
--   任何成对的“\<”和“>”尖括号。  
+-   任何“\<" and ">”尖括号对。  
   
--   注释的开头和结尾。  
+-   注释的开始和结束。  
   
--   处理指令的开头和结尾。  
+-   处理指令的开始和结束。  
   
--   CDATA 块的开头和结尾。  
+-   CDATA 块的开始和结束。  
   
--   DTD 声明的开头和结尾。  
+-   DTD 声明的开始和结束。  
   
--   属性的左右引号。  
+-   特性的左引号和右引号。  
   
 ## <a name="mdx-and-dmx-editor-parenthesis-matching"></a>MDX 和 DMX 编辑器的圆括号匹配  
  多维表达式 (MDX) 和数据挖掘表达式 (DMX) 编辑器自动匹配函数中的成对圆括号。

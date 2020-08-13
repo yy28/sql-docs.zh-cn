@@ -1,5 +1,6 @@
 ---
 title: “设计”视图 | Microsoft Docs
+description: 了解如何使用 Reporting Services 报表设计器中的设计视图来排列报表中的报表项。
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6fa378aa-442f-4d2f-beab-02a0fb5cd3ce
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e0e69efeb8f0b7bd0bdd4fbcb1bcb8a934ffdf6c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: db7b82684edf89ef66bd033ab7ca6c673a873d0f
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65577873"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914063"
 ---
 # <a name="design-view"></a>设计视图
 在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 报表设计器中，使用“设计”视图排列报表中的报表项。 设计视图有时称为设计图面或布局视图。  
@@ -51,7 +52,7 @@ ms.locfileid: "65577873"
  页眉和页脚分别位于每一页的顶部和底部。 页眉和页脚可以包含静态文本、图像、线条、矩形、边框、背景色和背景图像。 若要将报表项添加到页眉和页脚，请右键单击设计图面，然后选择“页眉”或“页脚”。 页眉和页脚部分将显示在设计图面上。  
   
 ## <a name="properties-pane"></a>“属性”窗格  
- 使用“属性”窗格可以查看设计图面上当前所选的报表项或“分组”窗格中的当前所选组。 另外，也可以右键单击所选报表项或组，然后单击“属性”打开报表项或组的相应“属性”对话框   。  
+ 使用“属性”窗格可以查看设计图面上当前所选的报表项或“分组”窗格中的当前所选组。 另外，也可以右键单击所选报表项或组，然后单击“属性”打开报表项或组的相应“属性”对话框********。  
   
 ## <a name="see-also"></a>另请参阅  
  [页眉和页脚（报表生成器和 SSRS）](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   

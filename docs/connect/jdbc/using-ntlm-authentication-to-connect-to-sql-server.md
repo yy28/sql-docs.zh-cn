@@ -1,5 +1,6 @@
 ---
-title: 使用 NTLM 身份验证连接到 SQL Server | Microsoft Docs
+title: 使用 NTLM 身份验证连接到 SQL Server
+description: 了解如何通过 JDBC 驱动程序使用 NTLM 身份验证建立 SQL 数据库连接。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -12,18 +13,18 @@ ms.assetid: ''
 author: lilgreenbird
 ms.author: v-susanh
 manager: kenvh
-ms.openlocfilehash: 2fab4794544ada07e0bf5e690da35b72ad6b7421
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 93b4956b70e6e81e215da4fcde61a3a3287b50ec
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69026104"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393145"
 ---
 # <a name="using-ntlm-authentication-to-connect-to-sql-server"></a>使用 NTLM 身份验证连接到 SQL Server
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 允许应用程序使用 authenticationScheme  连接属性，以指明要使用 NTLM v2 身份验证连接到数据库。 
+[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 允许应用程序使用 authenticationScheme**** 连接属性，以指明要使用 NTLM v2 身份验证连接到数据库。 
 
 以下属性也用于 NTLM 身份验证：
 
@@ -32,7 +33,7 @@ ms.locfileid: "69026104"
 - **密码 = 密码**
 - **integratedSecurity = true**
 
-除了 domain  以外，其他属性都是必需的；使用 NTLM  authenticationScheme 属性时，如果缺少任何必需属性，驱动程序都会抛出错误。 
+除了 domain**** 以外，其他属性都是必需的；使用 NTLM**** authenticationScheme 属性时，如果缺少任何必需属性，驱动程序都会抛出错误。 
 
 若要详细了解连接属性，请参阅[设置连接属性](../../connect/jdbc/setting-the-connection-properties.md)。 若要详细了解 Microsoft NTLM 身份验证协议，请参阅 [Microsoft NTLM](https://docs.microsoft.com/windows/desktop/SecAuthN/microsoft-ntlm)。
 
@@ -46,7 +47,7 @@ ms.locfileid: "69026104"
 
 ## <a name="datasource"></a>数据源
 
-使用数据源创建连接时，可以使用 setAuthenticationScheme  、setDomain  和 setServerSpn  （可选）以编程方式设置 NTLM 属性。
+使用数据源创建连接时，可以使用 setAuthenticationScheme、setDomain 和 setServerSpn（可选）以编程方式设置 NTLM 属性。
 
 ```java
 SQLServerDataSource ds = new SQLServerDataSource();
@@ -72,7 +73,7 @@ try (Connection c = ds.getConnection(); Statement s = c.createStatement();
 
 服务主体名称 (SPN) 是客户端用来唯一标识服务实例的名称。
 
-可以使用 serverSpn 连接属性指定 SPN 或让驱动程序生成它（默认）  。 此属性的格式为“MSSQLSvc/fqdn:port\@REALM”，其中 fqdn 是完全限定的域名，port 是端口号，REALM 是用大写字母表示的 SQL Server 领域。 此属性的领域部分是可选的，因为默认领域与 SQL Server 领域相同。
+可以使用 serverSpn 连接属性指定 SPN 或让驱动程序生成它（默认）。 此属性采用“MSSQLSvc/fqdn:port\@REALM”的形式，其中 fqdn 是完全限定的域名，port 是端口号，REALM 是 SQL Server 的领域（采用大写形式）。 此属性的领域部分是可选的，因为默认领域与 SQL Server 领域相同。
 
 例如，SPN 可能如下所示：“MSSQLSvc/some-server.zzz.corp.contoso.com:1433”
 
@@ -83,7 +84,7 @@ try (Connection c = ds.getConnection(); Statement s = c.createStatement();
 > [!NOTE]  
 > serverSpn 连接属性仅受 Microsoft JDBC Driver 4.2 及更高版本支持。
 
-> 在 JDBC 驱动程序版本 6.2 推出前，需要显式设置 serverSpn  。 自版本 6.2 起，驱动程序可以默认生成 serverSpn  ，尽管也能显式使用 serverSpn  。
+> 在 JDBC 驱动程序版本 6.2 推出前，需要显式设置 serverSpn。 自版本 6.2 起，驱动程序可以默认生成 serverSpn，尽管也能显式使用 serverSpn。
 
 ## <a name="security-risks"></a>安全风险
 
@@ -100,7 +101,7 @@ NTLM 协议是一种老旧的身份验证协议，存在各种造成安全风险
 - [使用 SSL 加密进行连接](../../connect/jdbc/connecting-with-ssl-encryption.md)
 
 > [!NOTE]
-> 对于版本 7.4，不支持同时  启用扩展保护和加密。
+> 对于版本 7.4，不支持同时启用扩展保护和加密。
 
 ## <a name="see-also"></a>另请参阅
 

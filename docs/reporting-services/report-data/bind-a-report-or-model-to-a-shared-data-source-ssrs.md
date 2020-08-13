@@ -1,5 +1,6 @@
 ---
 title: 将报表绑定到共享数据源 | Microsoft Docs
+description: 了解如何将报表绑定到在本机模式或 SharePoint 集成模式下运行的报表服务器上的共享数据源。
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 23cc15f2-2883-48e2-bc6c-fa0ab61a2e21
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c5aa5e504c8434d3634b903c08b6a03c0e62345c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c35e3d48167ecba74f18fa0ed13461a5165cec42
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081418"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458919"
 ---
 # <a name="bind-a-report-to-a-shared-data-source-ssrs"></a>将报表绑定到共享数据源 (SSRS)
   在某些情况下，例如将报表从测试服务器移到生产服务器时，最好将文件保存到本地计算机，然后将其上传到其他报表服务器。 将报表上传到新服务器时，需要将其重新绑定到存储在新报表服务器上的共享数据源。 如果不重新绑定报表，在从新报表服务器对其进行访问时，报表将无法正常工作。  
@@ -26,15 +27,15 @@ ms.locfileid: "77081418"
   
 ## <a name="to-bind-a-report-to-a-shared-data-source-on-a-report-server-running-in-native-mode"></a>将报表绑定到在本机模式下运行的报表服务器上的共享数据源  
   
-1.  在 Web 门户中，单击报表磁贴右上角的省略号 (...) >“管理”  。  
+1.  在 Web 门户中，单击报表磁贴右上角的省略号 (...) >“管理”。  
 
 2.  单击 **“数据源”** 。  
   
-3.  单击一个共享数据源  ，然后导航到要绑定报表的数据源。  
+3.  单击一个共享数据源，然后导航到要绑定报表的数据源。  
   
-4.  选择该数据源，然后单击“保存”  。  
+4.  选择该数据源，然后单击“保存”。  
   
-5.  单击“应用”  。  
+5.  单击“应用”。  
   
      此时，报表已绑定到所选择的数据源。  
   
@@ -50,7 +51,7 @@ ms.locfileid: "77081418"
   
 5.  在 **“连接类型”** 区域中，确认已选中 **“共享数据源”** 。  
   
-6.  在“数据源链接”区域中，单击省略号 (...) 按钮  。  
+6.  在“数据源链接”区域中，单击省略号 (...) 按钮。  
   
 7.  找到要使用的数据源。  
   
@@ -58,7 +59,7 @@ ms.locfileid: "77081418"
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-10. 单击“关闭”  。  
+10. 单击“关闭”。  
   
 ## <a name="see-also"></a>另请参阅  
  [将文档上传到 SharePoint 库（SharePoint 模式下的 Reporting Services）](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)   

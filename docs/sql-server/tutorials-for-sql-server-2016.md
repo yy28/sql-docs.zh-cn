@@ -1,23 +1,22 @@
 ---
 title: SQL Server 教程 | Microsoft Docs
-ms.custom: ''
+description: 使用这些 SQL Server 教程，了解新技术和功能。 针对早期 SQL Server 版本的教程通常适用于较新的版本。
 ms.date: 11/01/2017
 ms.prod: sql
-ms.reviewer: ''
-ms.technology: performance
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 95cf7a3b2d7be413df8ddc0f84ff8d71cffffdd0
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 8d86c5a3662417c1af39f12fc3d32167a73912c3
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000627"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913937"
 ---
 # <a name="tutorials-for-sql-server"></a>SQL Server 教程
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 提供有助于了解新技术和功能的教程。 针对早期版本的教程通常也适用于较新版本。 教程中涉及到新功能时，将指示完成此教程所需的最低版本。  
      
 -   如果教程使用 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 数据库之一，则应从 CodePlex 下载并使用最新版本。 有关详细信息，请参阅[适用于 SQL Server 2016 CTP3 的 AdventureWorks 数据库和脚本](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks)。    
@@ -27,7 +26,7 @@ ms.locfileid: "83000627"
  
 ## <a name="current-tutorials"></a>当前教程  
   
-|技术|说明|  
+|技术|描述|  
 |--------------|---------------|  
 |[Analysis Services 教程 (SSAS)](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|了解如何开发和部署 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 表格或多维模型。 还了解如何使用 PowerPivot 之类的工具来分析模型中的数据。|  
 |[数据库引擎教程](../relational-databases/database-engine-tutorials.md)|了解如何连接到数据库引擎实例并生成和运行 Transact-SQL 语句。|  

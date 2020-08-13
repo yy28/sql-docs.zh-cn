@@ -1,5 +1,6 @@
 ---
 title: 为数据区域设置“无数据”消息（报表生成器）| Microsoft Docs
+description: 了解如何设置要在呈现的报表中显示的无数据消息，以代替无数据的数据区域。
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4b194714-46f7-4f0e-9632-7f89d9600762
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 42a2692b0bcc381a54f4578cd1043cb3d865374b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 504c0cffb8522503eba67308d34b3ad4a1333ff8
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081929"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458320"
 ---
 # <a name="set-a-no-data-message-for-a-data-region-report-builder-and-ssrs"></a>为数据区域设置“无数据”消息（报表生成器和 SSRS）
   如果希望指定在呈现的报表中所显示的文本来代替没有数据的数据区域，请为表、矩阵或列表数据区域设置 NoRowsMessage 属性，为图表数据区域设置 NoDataMessage 属性，以及为地图的色阶设置 NoDataText 属性。 运行时，报表处理器会针对报表中每个数据集运行查询，并且该数据集查询可能不生成结果集。 对于绑定到空数据集的数据区域，可以指定显示文本，而不是显示空数据区域。 如果在运行时子报表的数据集中没有数据，则还可以设置子报表的 NoRowsMessage 属性。  
@@ -27,7 +28,7 @@ ms.locfileid: "77081929"
   
 2.  在“属性”窗格的 **NoRowsMessage** 属性字段中，键入要显示为消息的文本。  
   
-     此外，也可以在下拉列表中单击“表达式”以打开“表达式”对话框并创建表达式   。  
+     此外，也可以在下拉列表中单击“表达式”以打开“表达式”对话框并创建表达式 。  
   
 ### <a name="to-set-the-nodatamessage-property-for-a-chart"></a>设置图表的 NoDataMessage 属性  
   
@@ -37,7 +38,7 @@ ms.locfileid: "77081929"
   
 3.  在 **“标题”** 的 **NoDataMessage** 属性字段中，键入要显示为消息的文本。  
   
-     此外，也可以在下拉列表中单击“表达式”以打开“表达式”对话框并创建表达式   。  
+     此外，也可以在下拉列表中单击“表达式”以打开“表达式”对话框并创建表达式 。  
   
 ### <a name="to-set-the-norowsmessage-for-a-subreport"></a>设置子报表的 NoRowsMessage  
   
@@ -45,7 +46,7 @@ ms.locfileid: "77081929"
   
 2.  在“属性”窗格的 **NoRowsMessage** 属性字段中，键入要显示为消息的文本。  
   
-     此外，也可以在下拉列表中单击“表达式”以打开“表达式”对话框并创建表达式   。  
+     此外，也可以在下拉列表中单击“表达式”以打开“表达式”对话框并创建表达式 。  
   
 ### <a name="to-set-the-nodatatext-property-for-a-color-scale-for-a-map"></a>设置地图色阶的 NoDataText 属性  
   
@@ -53,7 +54,7 @@ ms.locfileid: "77081929"
   
 2.  在“属性”窗格的 **NoDataText**中，键入要显示为代表无数据值的颜色的标签的文本。  
   
-     此外，也可以在下拉列表中单击“表达式”以打开“表达式”对话框并创建表达式   。  
+     此外，也可以在下拉列表中单击“表达式”以打开“表达式”对话框并创建表达式 。  
   
 ## <a name="see-also"></a>另请参阅  
  [子报表（报表生成器和 SSRS）](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)   

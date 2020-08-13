@@ -1,5 +1,6 @@
 ---
 title: 插入 Transact-SQL 代码段
+description: 了解如何选择、插入和修改可在数据库引擎查询编辑器中编写新的 Transact-SQL 语句时将其用作起点的 Transact-SQL 代码片段。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: d66c96f4-2e84-4d79-9bfd-3635fdd98425
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 060dd1f05e55bf1de064e5497664077cac9f2903
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 387bb2bf62146503b8c086dd5706697b024846fa
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253833"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122608"
 ---
 # <a name="insert-transact-sql-snippets"></a>插入 Transact-SQL 代码段
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码段是一个模板，您可将其作为在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询编辑器中编写新 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 语句的起点。  
   
 ## <a name="inserting-snippets"></a>插入代码段  
@@ -41,7 +42,7 @@ ms.locfileid: "75253833"
   
     -   在 **“编辑”** 菜单上，指向 **“IntelliSense”** ，然后单击 **“插入代码段”** 。  
   
-    -   单击鼠标右键，然后从快捷菜单中选择“插入代码段”  命令。  
+    -   单击鼠标右键，然后从快捷菜单中选择“插入代码段”命令。  
   
 3.  双击代码段，或从代码段选择器中选择代码段，然后按 Tab 或 Enter。  
   

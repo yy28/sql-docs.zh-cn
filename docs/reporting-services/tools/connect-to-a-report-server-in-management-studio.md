@@ -1,5 +1,6 @@
 ---
 title: 在 Management Studio 中连接到报表服务器 | Microsoft Docs
+description: 了解如何在 SQL Server Management Studio 中使用对象资源管理器连接到 SQL Server 系列中的任何服务器，并以图形方式浏览其内容。
 ms.date: 05/07/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c875ff87-ee7d-443a-a702-bdb4b6c27c6e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 602c939c382bc5946e64340736f73bb88f17c655
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: adcbb82d80fae35889202fe8702a98b6315da100
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574111"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918413"
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>在 Management Studio 中连接到报表服务器
 
@@ -45,56 +46,56 @@ ms.locfileid: "65574111"
 
 ### <a name="to-connect-to-a-native-mode-report-server"></a>连接到本机模式的报表服务器
 
-1. 如果对象资源管理器尚未打开报表服务器，请从“视图”  菜单中选择该服务器。
+1. 如果对象资源管理器尚未打开报表服务器，请从“视图”菜单中选择该服务器。
 
-2. 选择“连接”  查看服务器类型列表，然后选择“Reporting Services”  。
+2. 选择“连接”查看服务器类型列表，然后选择“Reporting Services”。
 
-3. 在 **“连接到服务器”** 对话框中，输入报表服务器实例的名称。 报表服务器实例的名称取决于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 默认情况下，本地报表服务器实例的实例名称就是计算机的名称。 如果将报表服务器作为命名实例进行安装，请使用此语法来指定该服务器：\<servername>[\\<instancename\>]。
+3. 在 **“连接到服务器”** 对话框中，输入报表服务器实例的名称。 报表服务器实例的名称取决于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 默认情况下，本地报表服务器实例的实例名称就是计算机的名称。 如果将报表服务器作为命名实例进行安装，请使用此语法来指定服务器：\<servername>[\\<instancename\>]。
 
-4. 选择“身份验证类型”  。 如果使用的是 Windows 身份验证，则使用凭据进行连接。 如果选择“基本身份验证”或“窗体身份验证”，请键入帐户和密码。  
+4. 选择“身份验证类型”。 如果使用的是 Windows 身份验证，则使用凭据进行连接。 如果选择“基本身份验证”或“窗体身份验证”，请键入帐户和密码。  
   
-5. 选择“连接”  。 此时，相应的报表服务器将显示在对象资源管理器中。  
+5. 选择“连接”。 此时，相应的报表服务器将显示在对象资源管理器中。  
 
 6. 右键单击服务器节点以设置系统属性和服务器默认值。 有关详细信息，请参阅[设置报表服务器属性 (Management Studio)](../../reporting-services/tools/set-report-server-properties-management-studio.md)。
 
 ### <a name="to-connect-to-a-sharepoint-integrated-mode-report-server"></a>连接到 SharePoint 集成模式的报表服务器  
 
-1. 如果对象资源管理器尚未打开报表服务器，请从“视图”  菜单中选择该服务器。
+1. 如果对象资源管理器尚未打开报表服务器，请从“视图”菜单中选择该服务器。
 
-2. 选择“连接”  查看服务器类型列表，然后选择“Reporting Services”  。
+2. 选择“连接”查看服务器类型列表，然后选择“Reporting Services”。
 
 3. 在 **“连接到服务器”** 对话框中，输入指向 SharePoint 站点的 URL。 下例说明了相应的语法：`https://<web server>/sites/<site>`。
 
-4. 选择“身份验证类型”  。 如果使用的是 Windows 身份验证，则必须使用凭据进行连接。 如果选择“基本身份验证”或“窗体身份验证”，请键入帐户和密码。
+4. 选择“身份验证类型”。 如果使用的是 Windows 身份验证，则必须使用凭据进行连接。 如果选择“基本身份验证”或“窗体身份验证”，请键入帐户和密码。
 
-5. 选择“连接”  。 此时，相应的报表服务器将显示在对象资源管理器中。
+5. 选择“连接”。 此时，相应的报表服务器将显示在对象资源管理器中。
 
 6. 右键单击服务器节点以设置系统属性和服务器默认值。 有关详细信息，请参阅[设置报表服务器属性 (Management Studio)](../../reporting-services/tools/set-report-server-properties-management-studio.md)。
 
 ### <a name="to-register-a-report-server"></a>注册报表服务器
 
-1. 如果无法连接到报表服务器，则可能是你没有访问报表服务器的权限，也可能是未注册服务器。 若要注册服务器，请选择“视图”  菜单 > “已注册的服务器”  。
+1. 如果无法连接到报表服务器，则可能是你没有访问报表服务器的权限，也可能是未注册服务器。 若要注册服务器，请选择“视图”菜单 > “已注册的服务器”。
 
-2. 选择“Reporting Services”  图标。
+2. 选择“Reporting Services”图标。
 
-3. 右键单击“Reporting Services”  > “新建”   > “服务器注册”  。 此时，将显示 **“新建服务器注册”** 对话框。
+3. 右键单击“Reporting Services” > “新建” > “服务器注册”。 此时，将显示 **“新建服务器注册”** 对话框。
 
 4. 在 **“服务器名称”** 中，输入一个值。 根据服务器模式指定值：
 
-    - 对于本机模式的报表服务器，请键入报表服务器实例的名称。 报表服务器实例的名称取决于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 默认情况下，本地报表服务器实例的实例名称就是计算机的名称。 如果将报表服务器作为命名实例进行安装，请使用此语法来指定该服务器：\<servername>[\\<instancename\>]。
+    - 对于本机模式的报表服务器，请键入报表服务器实例的名称。 报表服务器实例的名称取决于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 默认情况下，本地报表服务器实例的实例名称就是计算机的名称。 如果将报表服务器作为命名实例进行安装，请使用此语法来指定服务器：\<servername>[\\<instancename\>]。
 
     - 对于在 SharePoint 集成模式下运行的报表服务器，要连接到的服务器是连接报表服务器的 SharePoint 站点。 连接到 SharePoint 站点，以便可以查看权限级别。 这些权限控制对报表服务器内容和操作的访问。 可以指定网站集中的任何站点。 下例说明了相应的语法：`https://mysharepointsite`。
 
-5. 对于“身份验证”  ，请选择报表服务器已经使用的身份验证模式。
+5. 对于“身份验证”，请选择报表服务器已经使用的身份验证模式。
 
-   - 如果使用的是默认安全性，请选择“Windows 身份验证”  。
+   - 如果使用的是默认安全性，请选择“Windows 身份验证”。
    - 如果已安装和部署了自定义的安全扩展插件，请选择 **“窗体身份验证”** 。
    - 如果已将报表服务器配置为使用基本身份验证，请选择 **“基本身份验证”** 。
    - 如果将报表服务器配置为 SharePoint 集成模式，请选择 **“Windows 身份验证”** 。
 
-6. 选择“测试”  ，验证连接是否可用。
+6. 选择“测试”，验证连接是否可用。
 
-7. 出现提示时，选择“确定”  ，然后选择“保存”  。
+7. 出现提示时，选择“确定”，然后选择“保存”。
 
 ## <a name="connection-syntax-and-permissions"></a>连接语法和权限
 

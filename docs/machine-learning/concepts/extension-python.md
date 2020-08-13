@@ -1,27 +1,32 @@
 ---
 title: Python 语言扩展
-description: 了解 SQL Server 机器学习服务中的 Python 代码执行和内置 Python 库。
+description: 了解用于运行外部 Python 脚本（使用 SQL Server 机器学习服务）的 Python 扩展。
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 11/04/2019
+ms.technology: machine-learning-services
+ms.date: 07/14/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1c81434a2ba9d20dd4d39b258534cd9c8bf32222
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 9e9fedafebab6b5353ddb6f2f51bd0c8662377e1
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487576"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406280"
 ---
-# <a name="python-language-extension-in-sql-server"></a>SQL Server 中的 Python 语言扩展
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="python-language-extension-in-sql-server-machine-learning-services"></a>SQL Server 机器学习服务中的 Python 语言扩展
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Python 扩展是关系数据库引擎的 SQL Server 机器学习服务加载项的一部分。 它添加 Python 执行环境、带 Python 3.5 运行时和解释器的 Anaconda 发行版、标准库和工具，以及适用于 Python 的 Microsoft 产品库：[revoscalepy](../python/ref-py-revoscalepy.md) 用于大规模分析，[microsoftml](../python/ref-py-microsoftml.md) 用于机器学习算法。 
+本文介绍用于运行外部 Python 脚本（使用 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)）的 Python 扩展。 扩展添加：
 
-Python 集成作为 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)安装。
+- Python 执行环境
+- 包含 Python 3.5 运行时和解释器的 Anaconda 分发
+- 标准库和工具
+- Microsoft Python 包：
+  - 用于大规模分析的 [revoscalepy](../python/ref-py-revoscalepy.md)。
+  - 用于机器学习算法的 [microsoftml](../python/ref-py-microsoftml.md)。
 
 安装 Python 3.5 运行时和解释器可确保与标准 Python 解决方案近乎完全兼容。 Python 与 SQL Server 在不同的进程中运行，以保证数据库操作不受到影响。
 
@@ -65,7 +70,7 @@ Microsoftml 和 revoscalepy 紧密耦合；microsoftml 中使用的数据源定�
 ![script-in-db-python](../../machine-learning/python/media/script-in-db-python2.png)
 
 1. 对 Python 运行时发出的请求由传递给存储过程的参数 `@language='Python'` 指示。 SQL Server 将此请求发送到 Launchpad 服务。
-在 Linux 中，SQL 使用 Launchpad  服务与每个用户的独立 Launchpad 进程进行通信。 有关详细信息，请参阅[扩展性体系结构关系图](extensibility-framework.md#architecture-diagram)。
+在 Linux 中，SQL 使用 Launchpad 服务与每个用户的独立 Launchpad 进程进行通信。 有关详细信息，请参阅[扩展性体系结构关系图](extensibility-framework.md#architecture-diagram)。
 2. Launchpad 服务启动相应的启动器（在本例中为 PythonLauncher）。
 3. PythonLauncher 启动外部 Python35 进程。
 4. BxlServer 与 Python 运行时协同工作，管理数据交换并存储工作结果。

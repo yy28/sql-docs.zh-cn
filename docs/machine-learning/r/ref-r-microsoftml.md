@@ -1,34 +1,32 @@
 ---
-title: MicrosoftML R 函数库
-description: SQL Server 2016 R Services 和具有 R 的 SQL Server 机器学习服务中的 MicrosoftML 函数库简介。
+title: MicrosoftML R 包
+description: MicrosoftML 是 Microsoft 的一个 R 包，可提供高性能的机器学习算法。 它包括用于定型和转换、评分、文本和图像分析的功能，以及用于从现有数据中派生值的特征提取功能。 该包包含在 SQL Server 机器学习服务和 SQL Server 2016 R Services 中，为大数据提供高性能支持，使用多核处理，支持快速数据流式处理。 此外，MicrosoftML 还包括大量的文本和图像处理转换。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/06/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 450091bba39cf10e551b8da5e62993ca676c64af
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 28f043ea0005f1020581218c358aed559285a5a4
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117440"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406170"
 ---
-# <a name="microsoftml-r-library-in-sql-server"></a>MicrosoftML（SQL Server 中的 R 库）
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="microsoftml-r-package-in-sql-server-machine-learning-services"></a>MicrosoftML（SQL Server 机器学习服务中的 R 包）
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-MicrosoftML 是 Microsoft 的一个 R 函数库，可提供高性能的机器学习算法  。 它包括用于定型和转换、评分、文本和图像分析的功能，以及用于从现有数据中派生值的特征提取功能。
-
-机器学习 API 是由 Microsoft 为内部机器学习应用程序而开发的，经过多年的改进，可使用多核处理和快速数据流式处理来支持大数据的高性能。 此外，MicrosoftML 还包括大量的文本和图像处理转换。
+“MicrosoftML”是 Microsoft 的一个 R 包，可提供高性能的机器学习算法。 它包括用于定型和转换、评分、文本和图像分析的功能，以及用于从现有数据中派生值的特征提取功能。 该包包含在 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)和 [SQL Server 2016 R Services](sql-server-r-services.md) 中，为大数据提供高性能支持，使用多核处理，支持快速数据流式处理。 此外，MicrosoftML 还包括大量的文本和图像处理转换。
 
 ## <a name="full-reference-documentation"></a>完整参考文档
 
-MicrosoftML 库分布于多种 Microsoft 产品中，但不管你是在 SQL Server 还是在其他产品中获取该库，用法都是一样的  。 由于函数相同，因此[单个 RevoScaleR 函数的文档](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)仅发布到 Microsoft Machine Learning Server 的 [R 引用](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference)下的一个位置。 如果存在任何特定于产品的行为，这些差异将在函数帮助页中注明。
+“MicrosoftML”包分布于多种 Microsoft 产品中，但不管是在 SQL Server 还是在其他产品中获取该包，用法都是一样的。 由于函数相同，因此[单个 RevoScaleR 函数的文档](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)仅发布到 Microsoft Machine Learning Server 的 [R 引用](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference)下的一个位置。 如果存在任何特定于产品的行为，这些差异将在函数帮助页中注明。
 
 ## <a name="versions-and-platforms"></a>版本和平台
 
-MicrosoftML 库基于 R 3.4.3，且仅在安装以下 Microsoft 产品或下载之一时才可用  ：
+“MicrosoftML”包基于 R 3.4.3，且仅在安装以下 Microsoft 产品之一或下载时可用：
 
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
 + [SQL Server 机器学习服务](../install/sql-machine-learning-services-windows-install.md)
@@ -36,16 +34,16 @@ MicrosoftML 库基于 R 3.4.3，且仅在安装以下 Microsoft 产品或下载�
 + [Microsoft R Client](set-up-a-data-science-client.md)
 
 > [!NOTE]
-> 完整产品发布版本为 SQL Server 2017（仅限 Windows）。 在 [SQL Server 2019](../../linux/sql-server-linux-setup-machine-learning.md) 中，MicrosoftML 同时支持 Windows 和 Linux  。
+> 完整产品发布版本为 SQL Server 2017（仅限 Windows）。 在 [SQL Server 2019](../../linux/sql-server-linux-setup-machine-learning.md) 中，MicrosoftML 同时支持 Windows 和 Linux。
 
 ## <a name="package-dependencies"></a>包依赖项
 
-对于以下各项，MicrosoftML 中的算法依赖于 [RevoScaleR](ref-r-revoscaler.md)  ：
+对于以下各项，MicrosoftML 中的算法依赖于 [RevoScaleR](ref-r-revoscaler.md)：
 
-+ 数据源对象。 MicrosoftML 函数使用的数据是使用 RevoScaleR 函数创建的   。
-+ 远程计算（将函数执行转移到远程 SQL Server 实例）。 RevoScaleR 库提供用于为 SQL Server 创建和激活远程计算上下文的函数  。
++ 数据源对象。 MicrosoftML 函数使用的数据是使用 RevoScaleR 函数创建的 。
++ 远程计算（将函数执行转移到远程 SQL Server 实例）。 “RevoScaleR”包提供用于创建和激活 SQL Server 远程计算上下文的函数。
 
-在大多数情况下，只要使用 MicrosoftML，就需同时加载这些包  。
+在大多数情况下，只要使用 MicrosoftML，就需同时加载这些包。
 
 ## <a name="functions-by-category"></a>按类别列出函数
 
@@ -138,11 +136,11 @@ MicrosoftML 库基于 R 3.4.3，且仅在安装以下 Microsoft 产品或下载�
 
 ## <a name="how-to-use-microsoftml"></a>如何使用 MicrosoftML
 
-MicrosoftML 中的函数可在封装在存储过程中的代码中调用  。 大多数开发者会在本地构建 MicrosoftML 解决方案，然后将已完成的 R 代码迁移到存储过程作为部署练习  。
+MicrosoftML 中的函数可在封装在存储过程中的代码中调用。 大多数开发者会在本地构建 MicrosoftML 解决方案，然后将已完成的 R 代码迁移到存储过程作为部署练习。
 
-适用于 R 的 MicrosoftML 包在 SQL Server 2017 中安装为“开箱即用”  。 如果升级实例的 R 组件，它还可以与 SQL Server 2016 一起使用：[使用绑定升级 SQL Server 的实例](../install/upgrade-r-and-python.md)
+适用于 R 的 MicrosoftML 包在 SQL Server 2017 中安装为“开箱即用”。 如果升级实例的 R 组件，它还可以与 SQL Server 2016 一起使用：[使用绑定升级 SQL Server 的实例](../install/upgrade-r-and-python.md)
 
-默认情况下不加载此包。 因此首先需加载 MicrosoftML 包，然后在需要使用远程计算上下文/相关连接或数据源对象时加载 RevoScaleR   。 然后，引用所需的各个函数。
+默认情况下不加载此包。 因此首先需加载 MicrosoftML 包，然后在需要使用远程计算上下文/相关连接或数据源对象时加载 RevoScaleR********。 然后，引用所需的各个函数。
 
 ```R
 library(microsoftml);

@@ -1,5 +1,6 @@
 ---
 title: 运行 Transact-SQL 调试器
+description: 了解如何自定义 Transact-SQL 调试器，以及如何使用它调试 Transact-SQL 代码。 可以在另一台计算机上的数据库引擎实例上运行调试器。
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
@@ -22,16 +23,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 471a69f76a9cb663267e6d1b8c5e8c10614912bf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 24fc9e6fd00aa0586630e611ef09568b7bf61cba
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253794"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122810"
 ---
 # <a name="run-the-transact-sql-debugger"></a>运行 Transact-SQL 调试器
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 在打开 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询编辑器窗口之后，即可启动 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 调试器。 然后，您可在调试模式下运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码，直到您停止调试器。 您可以设置选项以自定义调试器的运行方式。
 

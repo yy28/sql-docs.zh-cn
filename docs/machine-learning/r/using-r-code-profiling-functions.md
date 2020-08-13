@@ -1,33 +1,33 @@
 ---
-title: 使用 R 代码分析函数
-description: 通过使用 R 分析函数返回有关内部函数调用的信息，提高性能并在 SQL Server 上更快获得 R 计算结果。
+title: 通过使用 R 代码分析函数提高性能
+description: 通过使用 R 分析函数收集有用的信息以提高性能并在 SQL Server 上更快获得 R 计算结果。 “rprof”函数收集并返回有关内部函数调用的信息。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 12/12/2018
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e03ae1a8c4cdab87f46f63da6271886b4518b5e3
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 16a1ed8df29de58450f87118068e43646c46fd90
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117190"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484623"
 ---
 # <a name="use-r-code-profiling-functions-to-improve-performance"></a>使用 R 代码分析函数提高性能
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 除了使用 SQL Server 资源和工具来监视 R 脚本执行外，还可以使用由其他 R 包提供的性能工具来获取有关内部函数调用的详细信息。 
 
 > [!TIP]
-> 本文提供入门的基本资源。 要查看专家指导，建议参阅[由 Hadley Wickham 编写的《Advanced R》](http://adv-r.had.co.nz)中的“性能”部分  。
+> 本文提供入门的基本资源。 要查看专家指导，建议参阅[由 Hadley Wickham 编写的《Advanced R》](http://adv-r.had.co.nz)中的“性能”部分。
 
 ## <a name="using-rprof"></a>使用 RPROF
 
-[rprof](https://www.rdocumentation.org/packages/utils/versions/3.5.1/topics/Rprof) 是默认加载的基础包 [utils](https://www.rdocumentation.org/packages/utils/versions/3.5.1) 中的一个函数   。 
+[rprof](https://www.rdocumentation.org/packages/utils/versions/3.5.1/topics/Rprof) 是默认加载的基础包 [utils](https://www.rdocumentation.org/packages/utils/versions/3.5.1) 中的一个函数。 
 
-通常，*rprof* 函数会以指定的间隔将调用堆栈写入到一个文件中。 然后，可以使用 [summaryRprof](https://www.rdocumentation.org/packages/utils/versions/3.5.1/topics/summaryRprof) 函数来处理输出文件  。 *rprof* 的一个优点是它会执行采样，从而降低监视对性能造成的影响。
+通常，*rprof* 函数会以指定的间隔将调用堆栈写入到一个文件中。 然后，可以使用 [summaryRprof](https://www.rdocumentation.org/packages/utils/versions/3.5.1/topics/summaryRprof) 函数来处理输出文件。 *rprof* 的一个优点是它会执行采样，从而降低监视对性能造成的影响。
 
 要在代码中使用 R 分析，请调用此函数并指定其参数，包括将写入的日志文件的位置名称。 可以在你的代码中打开或关闭分析。 以下语法说明了基本用法： 
 

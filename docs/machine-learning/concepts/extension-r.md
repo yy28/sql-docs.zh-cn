@@ -1,27 +1,32 @@
 ---
 title: R 语言扩展
-description: 了解 SQL Server R Services 或 SQL Server 机器学习服务中的 R 代码执行和内置 R 库。
+description: 了解使用 SQL Server 机器学习服务和 SQL Server R Services 运行外部 R 脚本时使用的 R 扩展。
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 11/04/2019
+ms.technology: machine-learning-services
+ms.date: 07/14/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c85839d89fbdb2d69752ac989abb40637f9d13ca
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: e51e4121a7e941512a84e3acf577af0ff687f4d7
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487556"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406270"
 ---
-# <a name="r-language-extension-in-sql-server"></a>SQL Server 中的 R 语言扩展
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="r-language-extension-in-sql-server-machine-learning-services"></a>SQL Server 机器学习服务中的 R 语言扩展
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-R 扩展是关系数据库引擎的 SQL Server 机器学习服务加载项的一部分。 它添加 R 执行环境、带标准库和工具的基本 R 发行版以及 Microsoft R 库：[RevoScaleR](../r/ref-r-revoscaler.md) 用于大规模分析，[MicrosoftML](../r/ref-r-microsoftml.md) 用于机器学习算法，其他库用于访问 SQL Server 中的数据或 R 代码。
+本文介绍使用 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)和 [SQL Server 2016 R Services](../r/sql-server-r-services.md) 运行外部 Python 脚本时使用的 R 扩展。 该扩展添加：
 
-R 集成在 [SQL Server R Services](../r/sql-server-r-services.md) 和 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)中可用。
+- R 执行环境
+- 带有标准库和工具的基本 R 发行版
+- Microsoft R 库：
+  - [RevoScaleR](../r/ref-r-revoscaler.md)，用于大规模分析
+  - [MicrosoftML](../r/ref-r-microsoftml.md)，用于机器学习算法
+  - 用于访问 SQL Server 中的数据或 R 代码的其他库
 
 ## <a name="r-components"></a>R 组件
 
@@ -33,7 +38,7 @@ SQL Server 不会修改基本 R 可执行文件，但必须使用安装程序安
 
 Microsoft 为并行和分布式工作负荷添加的 R 包包含以下库。
 
-| 库 | 说明 |
+| 库 | 描述 |
 |---------|-------------|
 | [**RevoScaleR**](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | 支持数据源对象以及数据浏览、操作、转换和可视化。 它支持创建远程计算上下文以及各种可缩放的机器学习模型，例如 **rxLinMod**。 这些 API 已经过优化，可以分析由于过大而无法装入内存的数据集，以及执行分布在多个核心或处理器之间的计算。 RevoScaleR 包还支持使用 XDF 文件格式来加速移动和存储用于分析的数据。 XDF 格式使用纵栏表存储且可移植，可用于加载并处理来自各种来源（包括文本、SPSS 或 ODBC 连接）的数据。 |
 | [**MicrosoftML**](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package) | 包含针对速度和准确性进行了优化的机器学习算法，以及用于处理文本和图像的内联转换。 有关详细信息，请参阅 [SQL Server 中的 MicrosoftML](../r/ref-r-microsoftml.md)。 | 
@@ -59,7 +64,7 @@ Microsoft 为并行和分布式工作负荷添加的 R 包包含以下库。
 ![rsql_indb780-01](../r/media/script_in-db-r.png)
 
 1. 对 R 运行时发出的请求由传递给存储过程 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 的参数 _@language='R'_ 指示。 SQL Server 将此请求发送到 Launchpad 服务。
-在 Linux 中，SQL 使用 Launchpad  服务与每个用户的独立 Launchpad 进程进行通信。 有关详细信息，请参阅[扩展性体系结构关系图](extensibility-framework.md#architecture-diagram)。
+在 Linux 中，SQL 使用 Launchpad 服务与每个用户的独立 Launchpad 进程进行通信。 有关详细信息，请参阅[扩展性体系结构关系图](extensibility-framework.md#architecture-diagram)。
 2. Launchpad 服务启动相应的启动器（在本例中为 RLauncher）。
 3. RLauncher 启动外部 R 进程。
 4. BxlServer 与 R 运行时协同工作，管理与 SQL Server 之间的数据交换并存储工作结果。

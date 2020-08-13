@@ -1,5 +1,6 @@
 ---
 title: IntelliSense (SQL Server Management Studio)
+description: Microsoft IntelliSense 可通过多种方式辅助代码编写。 查看如何使用 IntelliSense 的概述，以及指向提供详细信息的文章的链接。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 7d6b0f60-c6ac-4f71-a9d0-fc3c2ffa7e91
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2117410304632c9ab0e6637eab6c156c18973f4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 66bb25859efcd49f43a61e173156214ff9ca46e6
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253874"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87123108"
 ---
 # <a name="intellisense-sql-server-management-studio"></a>IntelliSense (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的编辑器支持减少键入的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 选项，提供对语法信息的快速访问，还可以更加轻松地查看复杂表达式的分隔符。  
   
 ## <a name="benefits-of-intellisense"></a>IntelliSense 的好处  

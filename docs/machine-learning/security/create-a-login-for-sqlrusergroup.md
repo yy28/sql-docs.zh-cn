@@ -1,22 +1,22 @@
 ---
 title: 为 SQLRUserGroup 创建登录名
-description: 对于使用默示身份验证的环回连接，请在 SQL Server 中为 SQLRUserGroup 创建登录名，以便工作线程帐户可以登录到服务器，将身份转换回调用用户。
+description: 在 SQL Server 中为 SQLRUserGroup 创建登录名，使用默示身份验证登录到服务器，将身份转换回调用用户。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 01/25/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c57a62e954ae8cb0fc52c9a5ead22d418243c0b8
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: f3d7bd23c2a6b218e56f4de57d5b281b34d0687d
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117120"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484624"
 ---
 # <a name="create-a-login-for-sqlrusergroup"></a>为 SQLRUserGroup 创建登录名
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 当脚本中的[环回连接](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/create-a-login)指定了信任连接，且用于执行包含代码的对象的标识是 Windows 用户帐户时，在 [SQL Server](../concepts/security.md#sqlrusergroup) 中为 [SQLRUserGroup](../../machine-learning/concepts/security.md#implied-authentication) 创建登录名  。
 

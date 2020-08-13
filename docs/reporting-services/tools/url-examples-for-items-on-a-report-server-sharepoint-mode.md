@@ -1,5 +1,6 @@
 ---
 title: 用于报表服务器上的项的 URL 示例 - SharePoint 模式 | Microsoft Docs
+description: 查看使用 URL 在 Report Server 上的 SharePoint 站点 Web 层次结构中指定位置的示例。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: af9333214aa10f8c21d8b7eb31b92c261ff155e9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 860cecad6e375098b4f437608b54db515beb1949
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574020"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921463"
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>用于报表服务器上的项的 URL 示例 - SharePoint 模式
   若要将报表和相关项发布到 SharePoint 库，可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 创作工具（如报表设计器）发布内容，或者使用 SharePoint 站点操作来上载内容。  
@@ -29,7 +30,7 @@ ms.locfileid: "65574020"
   
  以下 Web 层次结构元素可用于访问和保护报表服务器内容。 其他对象（如列表和页）不用于访问报表服务器内容，因此未在下表中进行说明。  
   
-|Object|说明|  
+|对象|描述|  
 |------------|-----------------|  
 |SharePoint Web 应用程序|SharePoint Web 应用程序可以作为独立的服务器安装，也可以在包含许多虚拟服务器的场中安装。 Web 应用程序具有 URL（例如，`http:*//servername*`）并且可以包含多个站点。|  
 |站点|站点为 Web 应用程序的父站点或子站点。|  
@@ -56,9 +57,9 @@ ms.locfileid: "65574020"
   
  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 或 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 中，库显示在服务器名之后，例如 `https://*servername/*Shared Documents`。  
   
- 在 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 或 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]中，库显示在站点和子站点之后。 例如，`https://*servername/site/*Documents` 。  
+ 在 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 或 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]中，库显示在站点和子站点之后。 例如，`https://*servername/site/*Documents`。  
   
- 若要查找新的 SharePoint 库或某个不熟悉站点的路径信息，请打开浏览器，然后找到要发布报表的 SharePoint 库。 如果该库为空，则上载任意文件。 右键单击该文件，然后选择“属性”以打开“属性”窗口   。 文件地址中包含发布操作所需的 URL 值。  
+ 若要查找新的 SharePoint 库或某个不熟悉站点的路径信息，请打开浏览器，然后找到要发布报表的 SharePoint 库。 如果该库为空，则上载任意文件。 右键单击该文件，然后选择“属性”以打开“属性”窗口 。 文件地址中包含发布操作所需的 URL 值。  
   
 ### <a name="fully-qualified-urls-for-items-on-a-sharepoint-site"></a>SharePoint 站点上的项的完全限定 URL  
  始终通过完全限定的 URL 对存储在 SharePoint 库中的项进行寻址，这种完全限定的 URL 以 Web 应用程序开头 (`https://*server*`) 作为根节点，并以所引用的文件名结束。  

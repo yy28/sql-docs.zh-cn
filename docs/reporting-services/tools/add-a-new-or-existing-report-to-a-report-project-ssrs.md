@@ -1,5 +1,6 @@
 ---
 title: 向报表项目中添加新报表或现有报表 | Microsoft Docs
+description: 了解如何使用 SQL Server Reporting Services 中的报表向导向报表项目添加新报表或现有报表。
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8bc0bb53-ad8a-464d-bb6a-7fea5fa62c5c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d9afb31b4c2793e7196fda36280fed3d590a32cf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d2bea776af3fd91144adfbc62b0e395550c66752
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77077891"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918003"
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>向报表项目中添加新报表或现有报表 (SSRS)
   在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，你可以通过使用报表向导或通过将新的空白报表添加到项目中来添加新的 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 报表。 也可以添加现有报表。 添加报表后，您可以看到项目 **“报表”** 文件夹下会列出该报表名称。  
@@ -27,7 +28,7 @@ ms.locfileid: "77077891"
   
 ## <a name="to-add-a-new-report-using-the-report-wizard"></a>使用报表向导添加新报表  
   
-1.  在解决方案资源管理器中，右键单击“报表”文件夹，然后单击“添加新报表”  。 将打开 **“报表向导”** 对话框。  
+1.  在解决方案资源管理器中，右键单击“报表”文件夹，然后单击“添加新报表”。 将打开 **“报表向导”** 对话框。  
   
      该向导将指导你逐步完成以下操作：创建数据源，创建带查询的数据集，定义组，指定布局，以及创建报表。 步骤包括：  
   
@@ -45,13 +46,13 @@ ms.locfileid: "77077891"
   
 2.  在 **“模板”** 上单击 **“报表”** 。  
   
-3.  单击“添加”  。  
+3.  单击“添加”。  
   
      一个新的空白报表随即添加到项目中并显示在设计图面上。  
   
 ## <a name="to-add-an-existing-report"></a>添加现有报表  
   
-1.  在“项目”  菜单上单击“添加”  ，然后单击“现有项”   。  
+1.  在“项目”  菜单上单击“添加” ，然后单击“现有项”  。  
   
 2.  浏览到 .rdl 文件所在的位置并选择它，然后单击 **“添加”** 。  
   

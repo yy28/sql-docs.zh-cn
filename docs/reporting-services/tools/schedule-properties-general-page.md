@@ -1,5 +1,6 @@
 ---
 title: 计划属性（“常规”页）| Microsoft Docs
+description: 了解在 SQL Server Management Studio 的 Reporting Services 页上查看或修改共享计划的选项。
 ms.date: 06/11/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: 20e43966-6caf-4972-a2e2-0d9131ac8f51
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a05afd2a99ca8680d5c3d38538a9fcee03d5dc5f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dd34cc584049eb363f6119e1131eaaaa853b3ce4
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571399"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920933"
 ---
 # <a name="schedule-properties-general-page"></a>计划属性（“常规”页）
   使用 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 页中的 [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] 可查看或修改共享计划。 共享计划可以用于替代报表特定计划或订阅特定计划。 将在保存计划之后应用对计划进行的更改。 对计划进行编辑不会影响当前正在进行的作业。 如果要编辑正在使用的计划，则将允许完成从该计划触发的、当前正在处理的所有报表和订阅。  
@@ -27,8 +28,8 @@ ms.locfileid: "65571399"
  若要打开此页，请执行以下操作：
  1) 启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。
  2) 连接到报表服务器。
- 3) 展开“共享计划”文件夹  。
- 4) 右键单击共享计划，并选择“属性”  。  
+ 3) 展开“共享计划”文件夹。
+ 4) 右键单击共享计划，并选择“属性”。  
   
 > [!NOTE]  
 >并非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每个版本均提供此功能；并且在运行不具有此功能的版本时，此页将不会出现。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2017 的各版本和支持的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。  
@@ -43,7 +44,7 @@ ms.locfileid: "65571399"
  **此计划的结束日期**  
  为此计划指定过期日期。  
   
- 类型   
+ 类型  
  指定重复执行模式是主要基于小时、天、周、月还是仅运行一次。  
   
  **小时(重复执行模式)**  

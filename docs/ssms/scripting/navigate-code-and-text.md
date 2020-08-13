@@ -1,5 +1,6 @@
 ---
 title: 代码和文本定位
+description: 了解如何使用各种方法在文档中导航：为某个位置设置书签，以便轻松返回该位置；增量式搜索；使用鼠标和键盘；使用 Go To 命令通过指定某行的行号来转到该行。
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -21,15 +22,15 @@ ms.assetid: f63247ff-9751-4e99-8ee3-0772ad4009d0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4c1a77dfbe88a3018d7ae170675b84461f69a12b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4ac0d91b3d6bc3dd6527063a176b0728f96f144e
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78261832"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122580"
 ---
 # <a name="navigate-code-and-text"></a>代码和文本定位
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   可以使用以下方法在整个文本中移动：  
   
 -   书签。  

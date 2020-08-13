@@ -21,12 +21,12 @@ ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 976fae5e1f906e80248ac11d1f89e889bcbb5e0e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1b41b9a68776a41b9b7aaab480ea749187becf5b
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000524"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122633"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>SQL Server 事务日志体系结构和管理指南
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -95,11 +95,11 @@ ms.locfileid: "86000524"
   
  事务日志是一种回绕的文件。 例如，假设有一个数据库，它包含一个分成四个 VLF 的物理日志文件。 当创建数据库时，逻辑日志文件从物理日志文件的始端开始。 新日志记录被添加到逻辑日志的末端，然后向物理日志的末端扩张。 日志截断将释放记录全部在最小恢复日志序列号 (MinLSN) 之前出现的所有虚拟日志。 MinLSN  是成功进行数据库范围内回滚所需的最早日志记录的日志序列号。 示例数据库中的事务日志的外观与下图所示相似。  
   
- ![tranlog3](../relational-databases/media/tranlog3.gif)  
+ ![说明如何将物理日志文件划分到虚拟日志中](../relational-databases/media/tranlog3.png)  
   
  当逻辑日志的末端到达物理日志文件的末端时，新的日志记录将回绕到物理日志文件的始端。  
   
-![tranlog4](../relational-databases/media/tranlog4.gif)   
+![说明逻辑事务日志在其物理日志文件中的回绕方式](../relational-databases/media/tranlog4.png)   
   
  这个循环不断重复，只要逻辑日志的末端不到达逻辑日志的始端。 如果经常截断旧的日志记录，始终为到下一个检查点前创建的所有新日志记录保留足够的空间，则日志永远不会填满。 但是，如果逻辑日志的末端真的到达了逻辑日志的始端，将发生以下两种情况之一：  
   
@@ -117,11 +117,11 @@ ms.locfileid: "86000524"
   
  下列各图显示了截断前后的事务日志。 第一个图显示了从未截断的事务日志。 当前，逻辑日志使用四个虚拟日志文件。 逻辑日志开始于第一个逻辑日志文件的前面，并结束于虚拟日志 4。 MinLSN 记录位于虚拟日志 3 中。 虚拟日志 1 和虚拟日志 2 仅包含不活动的日志记录。 这些记录可以截断。 虚拟日志 5 仍未使用，不属于当前逻辑日志。  
   
-![tranlog2](../relational-databases/media/tranlog2.gif)  
+![说明事务日志在被截断之前的显示方式](../relational-databases/media/tranlog2.png)  
   
  第二个图显示了日志截断后的情形。 已释放虚拟日志 1 和虚拟日志 2 以供重新使用。 现在，逻辑日志开始于虚拟日志 3 的开头。 虚拟日志 5 仍未使用，它不属于当前逻辑日志。  
   
-![tranlog3](../relational-databases/media/tranlog3.gif)  
+![说明事务日志在被截断之后的显示方式](../relational-databases/media/tranlog3.png)  
   
  除非由于某些原因导致延迟，否则将在以下事件后自动发生日志截断：  
   
@@ -228,7 +228,7 @@ SQL Server 数据库引擎生成自动检查点。 自动检查点之间的间�
 
 下图显示了具有两个活动事务的结束事务日志的简化版本。 检查点记录已压缩成单个记录。
 
-![active_log](../relational-databases/media/active-log.gif) 
+![说明一个结束事务日志，该日志包含两个活动事务和一条压缩的检查点记录](../relational-databases/media/active-log.png) 
 
 LSN 148 是事务日志中的最后一条记录。 在处理 LSN 147 处记录的检查点时，Tran 1 已经提交，而 Tran 2 是唯一的活动事务。 这就使 Tran 2 的第一条日志记录成为执行最后一个检查点时处于活动状态的事务的最旧日志记录。 这使 LSN 142（Tran 2 的开始事务记录）成为 MinLSN。
 

@@ -1,5 +1,6 @@
 ---
 title: 使用 dta 命令提示实用工具
+description: 了解 dta 命令提示实用工具除了包含 SQL Server 数据库引擎优化顾问提供的功能之外，还包含哪些功能。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,17 +12,16 @@ helpviewer_keywords:
 ms.assetid: 30f27f4d-8852-4b12-ba62-57f63e496f1d
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 1c97122d6181470ded13a57c54b0c6d44f830ed6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7d0ffc5d1fa1ba7fa0fbf6b89ce5eea4c8d179c4
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306973"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457489"
 ---
 # <a name="lesson-3-using-the-dta-command-prompt-utility"></a>第 3 课：使用 dta 命令提示实用工具
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 **dta** 命令提示实用工具除了包含数据库引擎优化顾问提供的功能之外，还包含其他功能。  
   
 通过数据库引擎优化顾问 XML 架构，您可以使用自己喜爱的 XML 工具创建实用工具的输入文件。 该架构随 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一起安装，可在 C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd 中找到。  
@@ -40,7 +40,7 @@ ms.locfileid: "75306973"
   
 以下任务将指导你打开命令提示符，启动 **dta** 命令提示实用工具，查看其语法帮助，并优化在 [优化工作负荷](../../tools/dta/lesson-1-1-tuning-a-workload.md)中创建的一个简单工作负荷 MyScript.sql。  
 
-## <a name="prerequisites"></a>必备条件 
+## <a name="prerequisites"></a>先决条件 
 
 若要完成本教程，需要 SQL Server Management Studio、针对运行 SQL Server 的服务器的访问权限以及 AdventureWorks 数据库。
 
@@ -51,12 +51,12 @@ ms.locfileid: "75306973"
 此处提供在 SSMS 中还原数据库的说明：[还原数据库。](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017)
 
   >[!NOTE]
-  > 本教程适用于熟悉使用 SQL Server Management Studio 和基本数据库管理任务的用户。 
+  > 本教程适用于熟悉如何使用 SQL Server Management Studio 和基本数据库管理任务的用户。 
 
 ## <a name="access-dta-command-prompt-utility-help-menu"></a>访问 DTA 命令提示实用工具的“帮助”菜单
   
   
-1.  在“开始”  菜单中，依次指向“所有程序”  、“附件”  ，再单击“命令提示符”  。  
+1.  在“开始”菜单中，依次指向“所有程序”、“附件”，再单击“命令提示符”。  
   
 2.  在命令提示符下，键入以下命令，再按 Enter 键：  
   
@@ -93,7 +93,7 @@ ms.locfileid: "75306973"
 -   [数据库引擎优化顾问](../../relational-databases/performance/database-engine-tuning-advisor.md) 提供有关如何使用此工具执行任务的说明。 
 -   [dta 实用工具](../../tools/dta/dta-utility.md) 提供有关此命令提示实用工具的参考材料和可用于控制此实用工具的操作的可选 XML 文件。  
   
-若要返回教程的起始位置，请参阅 [教程：数据库引擎优化顾问](../../tools/dta/tutorial-database-engine-tuning-advisor.md)。  
+若要返回到教程的起始位置，请参阅[教程：数据库引擎优化顾问](../../tools/dta/tutorial-database-engine-tuning-advisor.md)。  
   
 ## <a name="see-also"></a>另请参阅  
 [数据库引擎教程](../../relational-databases/database-engine-tutorials.md)  

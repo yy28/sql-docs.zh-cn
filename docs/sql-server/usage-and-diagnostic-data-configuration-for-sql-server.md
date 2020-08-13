@@ -1,6 +1,6 @@
 ---
 title: 配置 SQL Server 使用情况和诊断数据收集 (CEIP) | Microsoft Docs
-description: ''
+description: 了解 SQL Server 从用户处收集的用于改善产品的信息。 了解如何配置 SQL Server 以使其不发送此信息。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: 03/27/2019
@@ -8,16 +8,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: configuration
-ms.openlocfilehash: d5248f97b044cb688174171fdb6ef79943851a92
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 76ffe524200c2f8df136074bc089b13e7404d6bd
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69028928"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86901970"
 ---
 # <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-ceip"></a>配置 SQL Server 使用情况和诊断数据收集 (CEIP)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 ## <a name="summary"></a>总结
 
@@ -68,7 +68,7 @@ AND instance_name = '_Total'
 > [!NOTE]
 > 错误和使用情况报告应用程序在 SQL Server 的“配置工具”下列出。 使用此工具，可以 SQL Server 2017 中的相同方式，管理错误报告以及使用情况和诊断数据收集的偏好设置。 错误报告独立于使用情况和诊断数据收集，因此可以与使用情况和诊断数据收集分开启用或禁用。 错误报告收集发送到 Microsoft 的故障转储，其中可能包含[隐私声明](https://go.microsoft.com/fwlink/?LinkID=868444)中所述的敏感信息。
 
-要启动 SQL Server 错误和使用情况报告，请单击或点击“启动”  ，然后在搜索框中搜索“错误”。 将显示 SQL Server 错误和使用情况报告项。 启动此工具后，可以管理为相应计算机上安装的实例和组件收集的使用情况和诊断数据以及严重错误。
+要启动 SQL Server 错误和使用情况报告，请单击或点击“启动”，然后在搜索框中搜索“错误”。 将显示 SQL Server 错误和使用情况报告项。 启动此工具后，可以管理为相应计算机上安装的实例和组件收集的使用情况和诊断数据以及严重错误。
 
 对于付费版本，选中“使用情况报告”复选框可以管理向 Microsoft 发送使用情况和诊断数据。
 
@@ -84,7 +84,7 @@ AND instance_name = '_Total'
     
     注册表项名称 = CustomerFeedback
     
-    条目类型 DWORD：0 表示选择退出；1 表示选择加入
+    注册表项类型 DWORD：0 表示选择退出；1 表示选择加入
     
     {InstanceID} 是指实例类型和实例，如以下示例所示：
 
@@ -98,7 +98,7 @@ AND instance_name = '_Total'
     
     注册表项名称 = CustomerFeedback
     
-    条目类型 DWORD：0 表示选择退出；1 表示选择加入
+    注册表项类型 DWORD：0 表示选择退出；1 表示选择加入
 
 > [!NOTE]
 > {Major Version} 是指 SQL Server 的版本，例如，140 表示 SQL Server 2017
@@ -115,7 +115,7 @@ AND instance_name = '_Total'
 
     注册表项名称 = EnableErrorReporting
 
-    条目类型 DWORD：0 表示选择退出；1 表示选择加入
+    注册表项类型 DWORD：0 表示选择退出；1 表示选择加入
  
     {InstanceID} 是指实例类型和实例，如以下示例所示： 
 
@@ -130,7 +130,7 @@ AND instance_name = '_Total'
 
     注册表项名称 = EnableErrorReporting
 
-    条目类型 DWORD：0 表示选择退出；1 表示选择加入
+    注册表项类型 DWORD：0 表示选择退出；1 表示选择加入
 
 > [!NOTE]
 > {Major Version} 是指 SQL Server 的版本。 例如，“140”是指 SQL Server 2017。

@@ -1,5 +1,6 @@
 ---
 title: 从 SharePoint 站点更新报表数据源的凭据 | Microsoft Docs
+description: 了解如何更新报表中嵌入的数据源和保存在 SharePoint 文档库中的共享数据源。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e0c50b6e-89e7-4b4d-8fe5-c90682c5d1b1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0a9908e340dadeb1108e68ca10f466276c14df23
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 335fdaee0e27a868a889de4ab00b55f06c372e15
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65575437"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458953"
 ---
 # <a name="update-credentials-in-report-data-sources-from-a-sharepoint-site"></a>从 SharePoint 站点更新报表数据源的凭据
   本主题介绍如何更新报表中嵌入的数据源和保存在 SharePoint 文档库中的共享数据源。  
@@ -26,7 +27,7 @@ ms.locfileid: "65575437"
   
 1.  转到保存该报表的 SharePoint 文档库。  
   
-2.  单击针对该报表展开下拉菜单的图标，然后单击“管理数据源”  。  
+2.  单击针对该报表展开下拉菜单的图标，然后单击“管理数据源”。  
   
      此时将打开“管理数据源”页。  
   
@@ -46,7 +47,7 @@ ms.locfileid: "65575437"
   
 7.  键入用户名和密码。  
   
-    -   如果帐户是 Windows 域用户帐户，请按照以下格式指定该帐户：\<域>\\<帐户\>，然后选择“在与数据源建立连接时用作 Windows 凭据”  。  
+    -   如果帐户是 Windows 域用户帐户，请按照以下格式指定该帐户：\<domain>\\<account\>，然后选择“在与数据源建立连接时用作 Windows 凭据”。  
   
     -   如果用户名和密码是数据库凭据，请不要选择 **“在与数据源建立连接时用作 Windows 凭据”** 。 如果数据库服务器支持模拟或委托，则可选择 **“设置此帐户的执行上下文”** 。  
   
@@ -58,7 +59,7 @@ ms.locfileid: "65575437"
   
 1.  转到保存共享数据源的 SharePoint 文档库。  
   
-2.  单击针对共享数据源展开下拉菜单的图标，然后单击“编辑数据源定义”  。  
+2.  单击针对共享数据源展开下拉菜单的图标，然后单击“编辑数据源定义”。  
   
      将打开“数据源”页。  
   
@@ -72,7 +73,7 @@ ms.locfileid: "65575437"
   
 5.  键入用户名和密码。  
   
-    -   如果帐户是 Windows 域用户帐户，请按照以下格式指定该帐户：\<域>\\<帐户\>，然后选择“在与数据源建立连接时用作 Windows 凭据”  。  
+    -   如果帐户是 Windows 域用户帐户，请按照以下格式指定该帐户：\<domain>\\<account\>，然后选择“在与数据源建立连接时用作 Windows 凭据”。  
   
     -   如果用户名和密码是数据库凭据，请不要选择 **“在与数据源建立连接时用作 Windows 凭据”** 。 如果数据库服务器支持模拟或委托，则可选择 **“设置此帐户的执行上下文”** 。  
   

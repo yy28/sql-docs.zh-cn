@@ -1,5 +1,6 @@
 ---
 title: 交互式搜索文档
+description: 了解如何使用“查找和替换”对话框在一个或多个打开的文件或窗口中进行搜索，并在每个匹配项后暂停，以在相应的上下文中查看找到的内容。 还可以执行批量查找操作并以报表格式查看搜索匹配项。
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,22 +15,22 @@ ms.assetid: dae65ac5-67af-45c6-a6e0-952fea26d680
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5bcdb8d269deb90d7c88c0f88a98e55289c89635
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6c6bfdd07a0af13e5b0e8923a7549b3401db485b
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253663"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122804"
 ---
 # <a name="search-documents-interactively"></a>交互式搜索文档
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   使用 **“查找和替换”** 对话框，可以搜索一个或多个打开的文件或窗口，并逐个移动到每个搜索匹配项。 该技术允许您在匹配项周围的文本上下文中检查每个单独的搜索匹配项。 **“查找和替换”** 对话框还提供了执行大容量查找操作和在报表格式中检查搜索匹配项的选项。  
   
 ### <a name="to-search-all-open-documents"></a>搜索所有打开的文档  
   
 1.  打开想要搜索的项。  
   
-2.  在“编辑”  菜单上，指向“查找和替换”  ，再单击“快速查找”  。  
+2.  在“编辑”菜单上，指向“查找和替换”，再单击“快速查找”。  
   
 3.  在 **“查找和替换”** 文本框中，输入要搜索的文本。  
   
@@ -46,7 +47,7 @@ ms.locfileid: "75253663"
   
 #### <a name="to-replace-in-all-active-files-interactively"></a>在所有活动文件中交互式替换  
   
-1.  在“编辑”  菜单上，指向“查找和替换”  ，再单击“快速替换”  。  
+1.  在“编辑”菜单上，指向“查找和替换”，再单击“快速替换”。  
   
 2.  在 **“查找内容”** 框中，输入要搜索的文本。  
   

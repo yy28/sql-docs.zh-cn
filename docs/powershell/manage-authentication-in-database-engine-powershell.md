@@ -1,7 +1,7 @@
 ---
 title: PowerShell：管理身份验证
+description: 了解如何在连接到数据库引擎的实例时使用 SQL Server 身份验证而不是 Windows 身份验证（默认）。
 titleSuffix: SQL Server on Linux
-description: 了解如何使用 PowerShell 管理面向 SQL Server 的 Windows 和 SQL 身份验证。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: ab9212a6-6628-4f08-a38c-d3156e05ddea
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 22c48323aa7570440a3edb06400d9a96e9bd9924
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 13ec62ac5adfd818de429f087f9b5d8dc83bb8a2
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75557958"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919095"
 ---
 # <a name="powershell-manage-authentication-to-sql-server"></a>PowerShell：管理面向 SQL Server 的身份验证
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 默认情况下， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 组件在连接到 [!INCLUDE[ssDE](../includes/ssde-md.md)]实例时使用 Windows 身份验证。 你可以通过定义 PowerShell 虚拟驱动器，或者通过为 Invoke-Sqlcmd 指定 -Username 和 -Password 参数，来使用 SQL Server 身份验证    。  
   

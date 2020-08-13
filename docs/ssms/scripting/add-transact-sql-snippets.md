@@ -1,5 +1,6 @@
 ---
 title: 添加 Transact-SQL 代码段
+description: 了解如何将自己的 Transact-SQL 代码片段添加到 SQL Server 中包括的一组预定义的代码片段中。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,21 +12,21 @@ ms.assetid: 901c7995-8eb5-4d12-8bb0-de0a922b48f8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 52ce47c3402e75ae14fdd9c90abb83481c62e297
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 499cbf0dd9ea2f12e182f678bc61976e31df2504
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80243377"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921343"
 ---
 # <a name="add-transact-sql-snippets"></a>添加 Transact-SQL 代码段
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   您可以将自己的 Transact-SQL 代码段添加到在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中包括的一组预定义的代码段中。  
   
 ## <a name="creating-a-transact-sql-snippet-file"></a>创建 Transact-SQL 代码段文件  
  创建 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码段的第一步是创建具有您的代码段文本的 XML 文件。 该文件必须具有 .snippet 文件扩展名，并且必须满足 [代码段架构](https://go.microsoft.com/fwlink/?LinkId=207504)的要求。 将代码段语言设置为 SQL。  
   
- 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 随附的预定义代码段作为示例。 若要找到预定义的代码段，请打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，选择“工具”  菜单，然后单击“代码段管理器”  。 在 **“语言”** 列表框中选择 **SQL** ，指向 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码段的路径将显示在 **“位置”** 框中。  
+ 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 随附的预定义代码段作为示例。 若要找到预定义的代码段，请打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，选择“工具”菜单，然后单击“代码段管理器”。 在 **“语言”** 列表框中选择 **SQL** ，指向 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码段的路径将显示在 **“位置”** 框中。  
   
 ## <a name="registering-the-code-snippet"></a>注册代码段  
  在创建代码段文件后，使用代码段管理器向 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]注册该代码段。 您可以添加包含多个代码段的文件夹，或者将单独的代码段导入到 **“我的代码段”** 文件夹中。  
@@ -48,7 +49,7 @@ ms.locfileid: "80243377"
   
 2.  选择 **“工具”** 菜单，然后单击 **“代码段管理器”** 。  
   
-3.  单击“导入”按钮。   
+3.  单击“导入”按钮。  
   
 4.  导航到包含您的代码段的文件夹，单击 .snippet 文件，然后单击 **“打开”** 按钮。  
   
@@ -108,9 +109,9 @@ ms.locfileid: "80243377"
   
 3.  选择 **“工具”** 菜单，然后单击 **“代码段管理器”** 。  
   
-4.  单击“导入”按钮。   
+4.  单击“导入”按钮。  
   
-5.  导航到包含 TryCatch.snippet 的文件夹，单击该 TryCatch.snippet 文件，然后单击 **“打开”** 按钮。 “My Code Snippets”文件夹中应有一个 TryCatch 代码片段  。  
+5.  导航到包含 TryCatch.snippet 的文件夹，单击该 TryCatch.snippet 文件，然后单击 **“打开”** 按钮。 “My Code Snippets”文件夹中应有一个 TryCatch 代码片段。  
   
 ## <a name="see-also"></a>另请参阅  
  [插入外侧 Transact-SQL 代码片段](../../relational-databases/scripting/insert-surround-with-transact-sql-snippets.md)  

@@ -9,16 +9,16 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: eb85d1867461ba25bb4fc572634fba443dd14282
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 299182ad45f8c96f4b2f07d38f1b3f366eea7b33
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665365"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923397"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新增功能
 
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 在早期版本的基础上构建，旨在将 SQL Server 发展成一个平台，以提供开发语言、数据类型、本地或云环境以及操作系统选项。
 
@@ -39,7 +39,7 @@ ms.locfileid: "80665365"
 
 ## <a name="data-virtualization-and-big-data-clusters-2019"></a>数据虚拟化和 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]
 
-当代企业通常掌管着庞大的数据资产，这些数据资产由托管在整个公司的孤立数据源中的各种不断增长的数据集组成。 利用 SQL Server 2019 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]，可以从所有数据中获得近乎实时的见解，该群集提供了一个完整的环境来处理包括机器学习和 AI 功能在内的大量数据。
+当代企业通常掌管着庞大的数据资产，这些数据资产由托管在整个公司的孤立数据源中的各种不断增长的数据集组成。 利用 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]，你可以从所有数据中获得近乎实时的见解，该群集提供了一个完整的环境来处理包括机器学习和 AI 功能在内的大量数据。
 
 | 新增功能或更新 | 详细信息 |
 |:---|:---|
@@ -222,7 +222,7 @@ ms.locfileid: "80665365"
 
 |新增功能或更新 | 详细信息 |
 |:---|:---| 
-|新内存设置选项 | 在安装过程中设置“最小服务器内存(MB)”  和“最大服务器内存(MB)”  服务器配置。 请参阅[“数据库引擎配置 - 内存”页](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory)，以及[通过命令提示符安装 SQL Server](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install) 中的 `USESQLRECOMMENDEDMEMORYLIMITS`、`SQLMINMEMORY` 和 `SQLMAXMEMORY` 参数。 建议值遵循[服务器内存配置选项](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually)中的内存配置准则。| 
+|新内存设置选项 | 在安装过程中设置“最小服务器内存(MB)”  和“最大服务器内存(MB)”  服务器配置。 请参阅[“数据库引擎配置 - 内存”页](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory)，以及[通过命令提示符安装 SQL Server](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install) 中的 `USESQLRECOMMENDEDMEMORYLIMITS`、`SQLMINMEMORY` 和 `SQLMAXMEMORY` 参数。 建议值遵循[服务器内存配置选项](../database-engine/configure-windows/server-memory-server-configuration-options.md#manually)中的内存配置准则。| 
 |新并行度设置选项 | 在安装过程中设置“最大并行度”  服务器配置。 有关详细信息，请参阅[“数据库引擎配置 - MaxDOP”页](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop)，以及[通过命令提示符安装 SQL Server](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install) 中的 `SQLMAXDOP` 参数。 默认值遵循[配置服务器配置选项“最大并行度”](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)中的最大并行度准则。| 
 |服务器/CAL 许可证产品密钥的设置警告|如果输入了企业服务器/CAL 许可证产品密钥，且计算机上有 20 多个物理内核，或者在启用超线程时有 40 个逻辑内核，则安装过程中会显示警告。 用户仍然可以确认限制并继续设置，或者输入支持操作系统最大处理器数量的许可证密钥。|
 | &nbsp; | &nbsp; |

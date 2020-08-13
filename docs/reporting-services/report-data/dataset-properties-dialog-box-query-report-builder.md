@@ -1,5 +1,6 @@
 ---
 title: “数据集属性”对话框 ->“查询”（报表生成器）| Microsoft Docs
+description: 了解如何使用报表生成器中“数据集属性”对话框上的“查询”，从报表服务器选择共享数据集或创建嵌入数据集。
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 75432318-0b00-4797-917c-0a2e74f9d951
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e05ae59d963bd9b165d2f6f825955ee276683328
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 14380ba698101c76a84d0b9eef27a4ea31953f2d
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66500455"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458929"
 ---
 # <a name="dataset-properties-dialog-box-query-report-builder"></a>“数据集属性”对话框 -&gt;“查询”（报表生成器）
  
@@ -46,7 +47,7 @@ ms.locfileid: "66500455"
 >  不是任何数据源都支持所有查询类型。 例如，仅数据源类型 **OLE DB** 和 **ODBC** 支持 **Table**。  
   
  **查询**  
- 选中 **Text** 命令类型选项后将显示此选项。 需键入一个查询或通过单击“导入”来导入一个预先存在的查询  。 单击“表达式”  (*fx*) 按钮可编辑表达式。  
+ 选中 **Text** 命令类型选项后将显示此选项。 需键入一个查询或通过单击“导入”来导入一个预先存在的查询。 单击“表达式” (*fx*) 按钮可编辑表达式。  
   
 > [!NOTE]  
 >  如果已使用查询设计器生成了一个查询，则此对话框中将显示该查询的文本。  
@@ -55,13 +56,13 @@ ms.locfileid: "66500455"
 选中 **“表”** 后会显示此选项。 需输入要用作数据集的表的名称。   
   
 **选择或输入存储过程名称**  
-选中“存储过程”命令类型选项后会显示此选项。 需键入或选择要使用的存储过程的名称。 单击“表达式”  (*fx*) 按钮可编辑表达式。   
+选中“存储过程”命令类型选项后会显示此选项。 需键入或选择要使用的存储过程的名称。 单击“表达式” (*fx*) 按钮可编辑表达式。   
   
  **超时（以秒为单位）**  
  键入查询在多长时间后超时（秒）。默认为 30 秒。 **“超时值”** 的值必须为空或大于零。 如果该值为空，则查询将不会超时。  
   
  **刷新字段**  
- 运行查询命令来更新“数据集属性”对话框 ->“字段”页中的字段列表  。  
+ 运行查询命令来更新“数据集属性”对话框 ->“字段”页中的字段列表。  
   
 ## <a name="see-also"></a>另请参阅  
 [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  

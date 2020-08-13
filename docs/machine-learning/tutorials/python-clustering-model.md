@@ -5,29 +5,31 @@ description: 本系列教程由四个部分组成。你将使用 K-Means 在数�
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
-ms.date: 04/15/2020
+ms.date: 05/26/2020
 ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8b3be490a6da01d34f8c762bf9c6cae1a35dbe40
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: e1482824da2d83e56538ce094e74c91cee224867
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606535"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86967748"
 ---
 # <a name="python-tutorial-categorizing-customers-using-k-means-clustering-with-sql-machine-learning"></a>Python 教程：将 K-Means 聚类分析与 SQL 机器学习配合使用，对客户进行聚类分析
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 本系列教程由四个部分组成，引导你使用 Python 在 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)中或在[大数据群集](../../big-data-cluster/machine-learning-services.md)上开发和部署 K-Means 聚类分析模型，以便对客户数据进行聚类分析。
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 本系列教程由四个部分组成，引导你使用 Python 在 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)中开发和部署 K-Means 群集模型，以便对客户数据进行聚类分析。
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+本系列教程由四个部分组成，引导你使用 Python 在 [Azure SQL 托管实例机器学习服务](/azure/azure-sql/managed-instance/machine-learning-services-overview)中开发和部署 K-Means 群集模型，以便对客户数据进行聚类分析。
 ::: moniker-end
 
 在本系列的第一部分中，你将设置本教程的先决条件，然后将示例数据集还原到一个数据库。 在本系列的后续部分中，使用这些数据在 Python 中通过 SQL 机器学习来训练和部署聚类分析模型。
@@ -55,6 +57,11 @@ ms.locfileid: "83606535"
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 * 支持 Python 语言的 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md) - 按照 [Windows 安装指南](../install/sql-machine-learning-services-windows-install.md)中的安装说明进行操作。
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+* Azure SQL 托管实例机器学习服务。 有关如何注册的说明，请参阅 [Azure SQL 托管实例机器学习服务概述](/azure/azure-sql/managed-instance/machine-learning-services-overview)。
+
+* 用于将示例数据库还原到 Azure SQL 托管实例的 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)。
+::: moniker-end
 
 * [Azure Data Studio](../../azure-data-studio/what-is.md)。 你将使用 Azure Data Studio 中同时适用于 Python 和 SQL 的笔记本。 若要详细了解笔记本，请参阅[如何使用 Azure Data Studio 中的笔记本](../../azure-data-studio/sql-notebooks.md)。
 
@@ -72,13 +79,14 @@ ms.locfileid: "83606535"
 
 ## <a name="restore-the-sample-database"></a>还原示例数据库
 
-本教程中使用的示例数据集已保存到 **.bak** 数据库备份文件，以供下载和使用。 此数据集派生自 [事务处理性能委员会 (TPC)](http://www.tpc.org/default.asp) 提供的 [tpcx-bb](http://www.tpc.org/tpcx-bb/default.asp) 数据集。
+本教程中使用的示例数据集已保存到 **.bak** 数据库备份文件，以供下载和使用。 此数据集派生自 [事务处理性能委员会 (TPC)](http://www.tpc.org/) 提供的 [tpcx-bb](http://www.tpc.org/tpcx-bb/default5.asp) 数据集。
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 > [!NOTE]
 > 如果在大数据群集上使用机器学习服务，请了解如何[将数据库还原成 SQL Server 大数据群集主实例](../../big-data-cluster/data-ingestion-restore-database.md)。
 ::: moniker-end
 
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 1. 下载 [tpcxbb_1gb.bak](https://sqlchoice.blob.core.windows.net/sqlchoice/static/tpcxbb_1gb.bak) 文件。
 
 1. 使用以下详细信息，按 Azure Data Studio 中[从备份文件还原数据库](../../azure-data-studio/tutorial-backup-restore-sql-server.md#restore-a-database-from-a-backup-file)中的说明操作：
@@ -92,6 +100,22 @@ ms.locfileid: "83606535"
     USE tpcxbb_1gb;
     SELECT * FROM [dbo].[customer];
     ```
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+1. 下载 [tpcxbb_1gb.bak](https://sqlchoice.blob.core.windows.net/sqlchoice/static/tpcxbb_1gb.bak) 文件。
+
+1. 使用以下详细信息，按 SQL Server Management Studio 中[将数据库还原到托管实例](/azure/sql-database/sql-database-managed-instance-get-started-restore)的说明操作：
+
+   * 从下载的 tpcxbb_1gb.bak 文件导入
+   * 将目标数据库命名为“tpcxbb_1gb”
+
+1. 可以查询 dbo.customer 表验证数据库还原后数据集是否存在：
+
+    ```sql
+    USE tpcxbb_1gb;
+    SELECT * FROM [dbo].[customer];
+    ```
+::: moniker-end
 
 ## <a name="clean-up-resources"></a>清理资源
 

@@ -1,5 +1,6 @@
 ---
 title: “分组”窗格 | Microsoft Docs
+description: 了解 Reporting Services 中“报表”菜单上的“分组”窗格，该窗格显示当前所选 Tablix 数据区域的行组和列组。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 8b4bd0b3-ec97-48f8-8bfb-82a53a2f35a1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0359a53fafa4c738b80d4ad44b3c9babdd534cf7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2d52ef6b9d9ac23afee2f6c9187da0da22ef4dd0
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68892553"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915683"
 ---
 # <a name="grouping-pane"></a>“分组”窗格
 设计 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 报表时，“分组”窗格显示当前所选 Tablix 数据区域的行组和列组。 “分组”窗格对“图表”或“仪表”数据区域不可用。 “分组”窗格由“行组”窗格和“列组”窗格组成。 “分组”窗格有两种模式：默认和高级。 默认模式显示行组和列组的动态成员的层次结构视图。 高级模式同时显示行组和列组的动态及静态成员。 组是来自数据区域显示的报表数据集中的一组命名的数据。 组被组织到包括静态和动态成员的层次结构中。 有关详细信息，请参阅[了解组（报表生成器和 SSRS）](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)。  
   
-  ![ssrs_fyi_note](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png) 如果未显示“分组”窗格，请在“报表”  菜单上单击“分组”  。
+  ![ssrs_fyi_note](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png) 如果未显示“分组”窗格，请在“报表”菜单上单击“分组”。
   
  行组和列组区域中的单元可以是组的静态或动态成员。 静态成员每个组重复一次，并且通常包含标签或总计。 动态成员则每个组实例重复一次，并且通常包含组表达式的唯一值。 在行组区域或列组区域中选择 Tablix 单元时，将在“行组”或“列组”窗格中选择相应的组成员。 反之，如果在“分组”窗格中选择某些组，则将在设计图面上选择与相应组成员关联的相应单元。 有关 Tablix 行和列组区域的详细信息，请参阅 [Tablix 数据区域（报表生成器和 SSRS）](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md)。  
   
@@ -36,7 +37,7 @@ ms.locfileid: "68892553"
 ## <a name="default-mode"></a>默认模式  
  在默认模式中，“行组”窗格和“列组”窗格将显示所有父组、子组和相邻组的层次结构视图。 子组缩进显示在其父组下面。 相邻组以与其同级组相同的缩进程度显示。 下图显示一个 Tablix 数据区域，其中包含嵌套行组和嵌套及相邻的列组。  
   
- ![Tablix、嵌套行组和列组，以及相邻行组和列组](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpane.gif "Tablix、嵌套行组和列组，以及相邻行组和列组")  
+ ![Tablix 数据区域以及嵌套和相邻行组和列组](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpane.gif "Tablix 数据区域以及嵌套和相邻行组和列组")  
   
  “分组”窗格显示相应的行组和列组。 在下图中，在“行组”窗格中已选择基于子类别的组，并在 Tablix 数据区域中选择 [Subcat] 分组单元：  
   
@@ -49,11 +50,11 @@ ms.locfileid: "68892553"
 ## <a name="advanced-mode"></a>“高级模式”  
 在高级模式中，可以查看组的所有静态和动态成员。 选择成员时，“属性”窗口将显示当前所选 **“Tablix 成员”** 的属性。  
   
-![ssrs_fyi_note](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png) 若要切换“高级模式”  ，请在“列组”窗格一侧右键单击向下箭头，然后单击“高级模式”  。  
+![ssrs_fyi_note](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png) 若要切换“高级模式”，请在“列组”窗格一侧右键单击向下箭头，然后单击“高级模式”。  
   
 在大多数情况下，在创建组或添加总计时，将自动设置用于控制静态和动态组行及组列的显示的属性。 
 
-若要编辑默认值，必须在“行组”或“列组”窗格中选择组成员，然后在“属性”窗口中更改属性值。 如果属性窗格不可见，请单击“视图”  菜单中的“属性”  ，或按“F4”  。  以下属性可用：  
+若要编辑默认值，必须在“行组”或“列组”窗格中选择组成员，然后在“属性”窗口中更改属性值。 如果属性窗格不可见，请单击“视图”菜单中的“属性”，或按“F4”。  以下属性可用：  
   
 -   **FixedData**。 布尔值。 适用于外部行标题和列标题。 在诸如 HTML 这样的呈现器中，当垂直滚动时冻结行组区域，或在水平滚动时冻结列组区域。  
   

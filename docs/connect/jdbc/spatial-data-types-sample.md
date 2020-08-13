@@ -1,5 +1,6 @@
 ---
-title: MSSQL JDBC 驱动程序的空间数据类型示例 | Microsoft Docs
+title: JDBC 驱动程序的空间数据类型示例
+description: 此 SQL Server 的 JDBC 驱动程序示例应用程序展示了如何从数据库创建、插入和检索几何和地理空间数据类型。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -9,32 +10,32 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 07f05ee878f1f818e7bf500d053ef5a306477d27
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a04840e69f5fd8557d3c6f42f9a339710c9ebe3a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80909393"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921013"
 ---
 # <a name="spatial-data-types-sample"></a>空间数据类型示例
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 此 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 示例应用程序展示了如何创建、插入和检索空间数据类型（Geometry 和 Geography）。
-  
-此示例的代码文件名为 SpatialDataTypes.java，位于以下位置：  
+
+此示例的代码文件名为 SpatialDataTypes.java，位于以下位置：
 
 ```bash
-\<installation directory>\sqljdbc_<version>\<language>\samples\datatypes  
+\<installation directory>\sqljdbc_<version>\<language>\samples\datatypes
 ```
 
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>要求
 
-若要运行此示例应用程序，必须设置 classpath 以包含 mssql-jdbc jar 文件。 若要详细了解如何设置类路径，请参阅[使用 JDBC 驱动程序](../../connect/jdbc/using-the-jdbc-driver.md)。  
+若要运行此示例应用程序，必须设置 classpath 以包含 mssql-jdbc jar 文件。 若要详细了解如何设置类路径，请参阅[使用 JDBC 驱动程序](using-the-jdbc-driver.md)。
 
-> [!NOTE]  
-> [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供要使用的 mssql-jdbc 类库文件，具体使用哪个文件取决于首选的 Java Runtime Environment (JRE) 设置。 有关选择哪个 JAR 文件的详细信息，请参阅 [JDBC 驱动程序的系统要求](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。  
-  
+> [!NOTE]
+> [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供要使用的 mssql-jdbc 类库文件，具体使用哪个文件取决于首选的 Java Runtime Environment (JRE) 设置。 有关选择哪个 JAR 文件的详细信息，请参阅 [JDBC 驱动程序的系统要求](system-requirements-for-the-jdbc-driver.md)。
+
 ## <a name="example"></a>示例
 
 在下面的示例中，示例代码创建名为 SpatialDataTypesTable_JDBC_Sample 的表，其中包含“Geometry”和“Geography”列。
@@ -95,7 +96,6 @@ public class SpatialDataTypes {
 }
 ```
 
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>另请参阅
 
-[处理 JDBC 数据类型](../../connect/jdbc/working-with-data-types-jdbc.md)  
-  
+[处理 JDBC 数据类型](working-with-data-types-jdbc.md)

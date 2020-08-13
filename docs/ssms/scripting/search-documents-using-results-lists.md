@@ -1,5 +1,6 @@
 ---
 title: 使用结果列表搜索文档
+description: 了解如何在项目、解决方案或文件系统文件夹中包含的所有文件中搜索和替换文本。 匹配项显示在“查找结果 1”窗口中，可以双击匹配项以查看包含该项的行。
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: 275e1b6c-fbd0-4408-af77-35903f90657c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b06660f3bc175e9869d669e7996f31d1a704f9b3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fa62cc76deab4f40f7db63ebd119fc9cd227c72e
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253671"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122800"
 ---
 # <a name="search-documents-using-results-lists"></a>使用结果列表搜索文档
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   使用 **“查找和替换”** 对话框，可以搜索和替换项目或解决方案中或文件系统文件夹中的所有文件中的文本（即使这些文件未在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中打开）。 使用 **“查找和替换”** 对话框执行的搜索返回的匹配项将显示在“查找结果 1”和“查找结果 2”窗口中。这样，您可以查看包含匹配项的行中的完全匹配文本。  
   
 ### <a name="to-search-in-multiple-files"></a>在多个文件中搜索  
@@ -34,7 +35,7 @@ ms.locfileid: "75253671"
   
 3.  在 **“查找范围”** 列表中，单击 **“所有打开的文档”** 、 **“当前项目”** 、 **“整个解决方案”** ，或者键入目录路径。  
   
-4.  在 **“文件类型”** 列表中，选择一个列出的文件扩展名组，或输入要搜索的文件类型的扩展名（由分号分隔）。 使用 \*.\* 可以搜索在“查找范围”  下拉列表中列出的目录中的所有文件。  
+4.  在 **“文件类型”** 列表中，选择一个列出的文件扩展名组，或输入要搜索的文件类型的扩展名（由分号分隔）。 使用 \*.\* 可以搜索在“查找范围”下拉列表中列出的目录中的所有文件。  
   
 5.  选择其余搜索选项以提高搜索的准确性。  
   

@@ -1,23 +1,23 @@
 ---
-title: 扩展并发脚本
+title: 配置并行或并发 R 和 Python 脚本执行
 description: 在用户帐户池中配置并行或并发 R 和 Python 脚本执行以扩展 SQL Server 机器学习服务。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 09/25/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 430af4eb1127ab5b924b2429e166f68e2dffa334
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 525e9d0931b3ff25d4258004680ed158a9baf82d
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118800"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484428"
 ---
 # <a name="scale-concurrent-execution-of-external-scripts-in-sql-server-machine-learning-services"></a>在 SQL Server 机器学习服务中缩放外部脚本的并发执行
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 了解 SQL Server 机器学习服务的辅助角色帐户，以及如何更改默认配置以扩展外部脚本的并发执行数。
 

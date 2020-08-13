@@ -1,5 +1,6 @@
 ---
 title: 报表服务器命令提示实用工具 | Microsoft Docs
+description: 了解用于管理报表服务器的 SQL Server Reporting Services 命令行实用工具。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 68f2f9f4-f894-40ff-a71c-f9756bf4b68c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: db8be061664d720ba3be1a4f66ed05062bb1af21
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 034d051548e3a4ae498128b37a5bbdc8ba75f422
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081919"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914173"
 ---
 # <a name="report-server-command-prompt-utilities-ssrs"></a>报表服务器命令提示实用工具 (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包括几个可用于管理报表服务器的命令行实用工具。 安装报表服务器时将自动安装这些实用工具。  
@@ -32,7 +33,7 @@ ms.locfileid: "77081919"
 |Rskeymgmt 实用工具|rskeymgmt.exe|仅限本机|[rskeymgmt 实用工具](../../reporting-services/tools/rskeymgmt-utility-ssrs.md) 是一个加密密钥管理工具。 使用该工具可以备份、应用、重新创建和删除对称密钥。 您还可以使用此工具将报表服务器实例附加到共享的报表服务器数据库。 可以在数据库恢复操作中使用 Rskeymgmt。 通过应用对称密钥的备份副本，可以在新安装中重用现有数据库。 如果无法恢复密钥，此工具为您提供了一种删除不再使用的加密内容的方法。 若要了解有关密钥管理和敏感数据存储的详细信息，请参阅[存储加密报表服务器数据（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md) 和[配置和管理加密密钥（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)。|  
   
 > [!NOTE]  
->  如果喜欢使用带有图形用户界面的工具，则可以使用 Reporting Services Configuration Manager 来代替 **rsconfig** 和 **rskeymgmt**。  
+>   如果喜欢使用带有图形用户界面的工具，则可以使用 Reporting Services 配置管理器来代替 **rsconfig** 和 **rskeymgmt**。  
   
 ## <a name="see-also"></a>另请参阅  
  [Reporting Services Configuration Manager（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   

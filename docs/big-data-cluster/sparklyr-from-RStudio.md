@@ -5,20 +5,20 @@ description: 在 RStudio 中使用 sparklyr 连接到大数据群集。
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.technology: big-data-cluster
-ms.openlocfilehash: 375993e4fd9506c129e4f98d9ad2193472e03edb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.technology: machine-learning-bdc
+ms.openlocfilehash: e6767d32ae1f6c5f397141d1eddb15a5ec3f94a6
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73531619"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970008"
 ---
 # <a name="use-sparklyr-in-sql-server-big-data-cluster"></a>在 SQL Server 大数据群集中使用 Sparklyr
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Sparklyr 为 Apache Spark 提供 R 接口。 Sparklyr 是 R 开发人员使用 Spark 的常用方法。 本文介绍如何使用 RStudio 在 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 中使用 sparklyr。
 
@@ -49,7 +49,11 @@ Sparklyr 为 Apache Spark 提供 R 接口。 Sparklyr 是 R 开发人员使用 S
 在 RStudio 中，创建 R 脚本并连接到 Spark，如以下示例所示：
 
 > [!TIP]
-> 对于 `<AZDATA_USERNAME>` 和 `<AZDATA_PASSWORD>` 值，请使用在大数据群集部署过程中设置的用户名（如 root）和密码。 有关 `<IP>` 和 `<PORT>` 值，请参阅有关[连接到大数据群集](connect-to-big-data-cluster.md)的文档。
+> 对于 `<AZDATA_USERNAME>` 和 `<AZDATA_PASSWORD>` 值，请使用在大数据群集部署过程中设置的用户名和密码。
+
+[!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
+
+有关 `<IP>` 和 `<PORT>` 值，请参阅有关[连接到大数据群集](connect-to-big-data-cluster.md)的文档。
 
 ```r
 library(sparklyr)
@@ -80,7 +84,7 @@ iris_count
 
 ## <a name="distributed-r-computations"></a>分布式 R 计算
 
-sparklyr 的一项功能是能够使用 [spark_apply](https://spark.rstudio.com/reference/spark_apply/) 来[分布 计算](https://spark.rstudio.com/guides/distributed-r/)。
+sparklyr 的一项功能是能够使用 [spark_apply](https://spark.rstudio.com/guides/distributed-r/#apply-an-r-function-to-a-spark-object) 来[分布 计算](https://spark.rstudio.com/guides/distributed-r/)。
 
 由于大数据群集使用 Livy 连接，因此必须在对“spark_apply”的调用中设置 `packages = FALSE`  。 有关详细信息，请参阅关于分布式 R 计算的 sparklyr 文档的 [Livy 部分](https://spark.rstudio.com/guides/distributed-r/#livy)。 使用此设置，只能在传递给“spark_apply”的 R 代码中使用已安装在 Spark 群集上的 R 包  。 下面的示例对此功能进行了演示：
 

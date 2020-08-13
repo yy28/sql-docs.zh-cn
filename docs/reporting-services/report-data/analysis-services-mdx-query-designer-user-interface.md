@@ -1,5 +1,6 @@
 ---
 title: Analysis Services MDX 查询设计器用户界面 | Microsoft Docs
+description: 了解用于生成多维表达式 (MDX) 查询的 Reporting Services 图形查询设计器。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d9c7c0b3-fce4-4a65-b679-408273e6a925
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 41d02ba0cd1dc9067bd6425895e53d9a949fd0d3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 471c6d3ab92295fccc5cadcee286cc362fab9e8c
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573269"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458939"
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface"></a>Analysis Services MDX 查询设计器用户界面
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了图形查询设计器，可以为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据源生成多维表达式 (MDX) 查询和数据挖掘表达式 (DMX) 查询。 该主题介绍了 MDX 查询设计器。 有关 DMX 查询设计器的详细信息，请参阅 [针对 DMX 的 Analysis Services 连接类型 (SSRS)](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)。  
@@ -47,9 +48,9 @@ ms.locfileid: "65573269"
 |“元数据”窗格|显示在选定多维数据集中定义的度量值、关键绩效指标 (KPI) 和维度的层次列表。|  
 |“计算成员”窗格|显示当前定义的可在查询中使用的计算成员。|  
 |“筛选器”窗格|用于选择维度和相关的层次结构，以筛选源中的数据并限制返回报表的数据。|  
-|“数据”窗格|在从“元数据”窗格向“计算成员”窗格拖动项目时，显示结果集的列标题。 如果选中 **“自动执行”** 按钮，则可自动更新结果集。 。|  
+|“数据”窗格|在从“元数据”窗格向“计算成员”窗格拖动项目时，显示结果集的列标题。 如果选中 **“自动执行”** 按钮，则可自动更新结果集。 .|  
   
- 可以将“元数据”窗格中的维度、度量值和 KPI 以及“计算成员”窗格中的计算成员拖至“数据”窗格。 在“筛选器”窗格中，您可以选择维度和相关的层次结构，并设置筛选器表达式以限制可用于查询的数据。 如果工具栏上的“自动执行”  （![自动执行查询](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "自动执行查询")）切换按钮处于选中状态，那么每当你将元数据对象拖到“数据”窗格时，查询设计器都会运行查询。 可以使用工具栏上的“运行”  （![运行查询](../../reporting-services/report-data/media/rsqdicon-run.gif "运行查询")）按钮来手动运行查询。  
+ 可以将“元数据”窗格中的维度、度量值和 KPI 以及“计算成员”窗格中的计算成员拖至“数据”窗格。 在“筛选器”窗格中，您可以选择维度和相关的层次结构，并设置筛选器表达式以限制可用于查询的数据。 如果工具栏上的“自动执行”****（![自动执行查询](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "自动执行查询")）切换按钮处于选中状态，那么每当你将元数据对象拖到“数据”窗格时，查询设计器都会运行查询。 可以使用工具栏上的“运行”（![运行查询](../../reporting-services/report-data/media/rsqdicon-run.gif "运行查询")）按钮来手动运行查询。  
   
  在此模式下创建 MDX 查询时，下面的附加属性将会自动包含到查询中：  
   
@@ -62,7 +63,7 @@ ms.locfileid: "65573269"
 ### <a name="graphical-mdx-query-designer-toolbar-in-design-mode"></a>设计模式下的图形 MDX 查询设计器工具栏  
  查询设计器工具栏提供了可以帮助您使用图形界面来设计 MDX 查询的按钮。 下表列出了这些按钮及其功能。  
   
-|按钮|说明|  
+|Button|描述|  
 |------------|-----------------|  
 |**编辑为文本**|不可用于此数据源类型。|  
 |**导入**|从文件系统中的报表定义 (.rdl) 文件导入现有查询。 有关详细信息，请参阅 [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。|  
@@ -70,7 +71,7 @@ ms.locfileid: "65573269"
 |![更改为 DMX 查询语言视图](../../reporting-services/report-data/media/rsqdicon-commandtypedmx.gif "更改为 DMX 查询语言视图")|切换到命令类型 DMX。|  
 |![刷新结果数据](../../reporting-services/report-data/media/rsqdicon-refresh.gif "刷新结果数据")|刷新数据源的元数据。|  
 |![添加计算成员](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.gif "添加计算成员")|显示 **“计算成员生成器”** 对话框。|  
-|![切换为显示空单元格](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "切换为显示空单元格")|在“数据”窗格中的显示或不显示空单元格之间切换。 （这等同于在 MDX 中使用 NON EMPTY 子句）。|  
+|![切换显示空单元](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "切换为显示空单元格")|在“数据”窗格中的显示或不显示空单元格之间切换。 （这等同于在 MDX 中使用 NON EMPTY 子句）。|  
 |![自动执行查询](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "自动执行查询")|在每次进行更改时自动运行查询并显示结果。 结果将显示在“数据”窗格中。|  
 |![“显示聚合”按钮](../../reporting-services/report-data/media/rsqdicon-showaggregations.gif "“显示聚合”按钮")|在“数据”窗格中显示聚合。|  
 |![删除](../../reporting-services/report-data/media/rsqdicon-delete.gif "删除")|通过查询在“数据”窗格中删除选定列。|  

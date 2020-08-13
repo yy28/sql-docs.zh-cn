@@ -1,5 +1,6 @@
 ---
 title: 设置报表服务器属性 (Management Studio) | Microsoft Docs
+description: 了解如何在 SQL Server Management Studio 中设置报表服务器系统属性以启用功能或设置服务器默认值。
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1ed0f84b-b12a-4e49-b65c-a11a99f9093f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e2632e93cf325a560434e0833e3bb5a7288f83ef
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 360c2408e7078845d58e28dff42fdf932d5e311a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65578999"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918013"
 ---
 # <a name="set-report-server-properties-management-studio"></a>设置报表服务器属性 (Management Studio)
   可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中设置报表服务器系统属性以启用功能或设置服务器默认值。  
@@ -24,7 +25,7 @@ ms.locfileid: "65578999"
   
 1.  启动 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 并连接到报表服务器实例。  
   
-2.  右键单击报表服务器节点，然后选择“属性”  。 单击 **“高级”** 以打开属性页。 有关各属性的说明，请参阅[服务器属性（“高级”页）- Reporting Services](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md)。  
+2.  右键单击报表服务器节点，然后选择“属性”。 单击 **“高级”** 以打开属性页。 有关各属性的说明，请参阅[服务器属性（“高级”页）- Reporting Services](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [在 Management Studio 中连接到报表服务器](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   

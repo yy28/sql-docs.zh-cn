@@ -1,5 +1,6 @@
 ---
 title: 服务器属性（“日志记录”页）| Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio 中“Reporting Services”页上的选项对报表服务器收集的报表执行数据设置限制。
 ms.date: 06/10/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: b338deab-4868-4951-9f22-0605add2fc95
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9e9286363970b568e0690b622fac6d94c2b01f6b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8b06ebb1151d68b462fa96cd1c7493460209d33d
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571388"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86912393"
 ---
 # <a name="server-properties-logging-page"></a>服务器属性（“日志记录”页）
   使用 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 中的此 [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] 页可以对报表服务器收集的报表执行数据设置限制。 执行数据存储在报表服务器数据库内部。 可以跟踪在本机模式或 SharePoint 集成模式下运行的报表服务器的报表活动。 如果报表服务器是扩展部署的一部分，则报表执行日志会将有关整个部署内所有报表活动的记录保存到一个日志文件中。  
@@ -23,7 +24,7 @@ ms.locfileid: "65571388"
  若要打开此页，请执行以下操作：
  1) 开始 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
  2) 连接到报表服务器。
- 3) 右键单击报表服务器名称，然后选择“属性”  。 
+ 3) 右键单击报表服务器名称，然后选择“属性”。 
  4) 单击 **“日志记录”** 将此页打开。  
   
 ## <a name="options"></a>选项  

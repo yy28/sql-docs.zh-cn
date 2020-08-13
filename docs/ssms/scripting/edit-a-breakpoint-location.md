@@ -1,5 +1,6 @@
 ---
 title: 编辑断点位置
+description: 了解如何将 Transact-SQL 脚本文件中的断点移至脚本中的其他位置或移至其他脚本。
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,16 +15,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 82709b15e729eb972c28b22c0113682464232809
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1ada37fc6ca1b90e65b2cc4531b13c090db05736
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253973"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122945"
 ---
 # <a name="edit-a-breakpoint-location"></a>编辑断点位置
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 断点位置指定断点在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本文件中所处的行和字符位置。 您可以编辑断点位置以将断点移至脚本的其他位置，或移至其他脚本。
 
@@ -33,11 +34,11 @@ ms.locfileid: "75253973"
 
 #### <a name="to-edit-a-breakpoint-location"></a>编辑断点位置
 
-1. 在编辑器窗口中，右键单击断点符号，然后单击快捷菜单上的“位置”  。  
+1. 在编辑器窗口中，右键单击断点符号，然后单击快捷菜单上的“位置”。  
   
      -或-  
   
-     在“断点”  窗口中，右键单击断点符号，然后单击快捷菜单的“位置”  。  
+     在“断点”窗口中，右键单击断点符号，然后单击快捷菜单的“位置”。  
   
 2. 在 **“文件断点”** 对话框中，编辑 **“文件”** 以指定新的文件，编辑 **“行”** 以指定新行，或者编辑 **“字符”** 以指定该行内的新位置。 如果您指定的新文件已经在查询编辑器窗口中打开，则断点会移至该编辑器窗口。 如果文件未打开，则会打开新的编辑器窗口，并在其中载入文件，断点随即移至新的位置。  
   

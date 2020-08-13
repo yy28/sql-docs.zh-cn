@@ -1,5 +1,6 @@
 ---
 title: 在报表设计器中停靠“报表数据”窗格 | Microsoft Docs
+description: 了解如何在 SQL Server Data Tools 的 Reporting Services 报表设计器中查看和停靠“报表数据”窗格，该窗格显示报表数据对象的分层视图。
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: 8b87bb59-6083-44cb-ab34-493855b41585
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e865cb5d12a66a1225a037fdc3a191333de7179c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9e1faf69fd193279e4f914651b483402ff993da3
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080583"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914047"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>在报表设计器中停靠“报表数据”窗格 (SSRS)
   在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]报表设计器中，“报表数据”窗格显示了可在报表中使用的数据对象的层次结构视图（包括数据源、数据集、字段、参数和图像）。 解决方案资源管理器中显示的共享数据源中可嵌入或引用此视图中的数据源。  
   
 ### <a name="to-display-the-report-data-pane"></a>显示“报表数据”窗格  
   
--   在“设计”视图的“视图”菜单中，选择“报表数据”或使用 Ctrl+Alt+D   。
+-   在“设计”视图的“视图”菜单中，选择“报表数据”或使用 Ctrl+Alt+D 。
   
 ### <a name="to-dock-the-report-data-pane"></a>停靠“报表数据”窗格  
   
@@ -32,11 +33,11 @@ ms.locfileid: "77080583"
   
 ### <a name="to-change-the-report-data-pane-from-a-docked-window-to-a-tabbed-window"></a>将“报表数据”窗格从停靠窗口更改为选项卡式窗口  
   
--   右键单击“报表数据”窗格的标题栏，然后单击“停靠为选项卡式文档”  。  
+-   右键单击“报表数据”窗格的标题栏，然后单击“停靠为选项卡式文档”。  
   
 ### <a name="to-change-the-report-data-pane-from-a-tabbed-window-to-a-docked-window"></a>将“报表数据”窗格从选项卡式窗口更改为停靠窗口  
   
--   右键单击“报表数据”选项卡，然后单击“停靠”  。  
+-   右键单击“报表数据”选项卡，然后单击“停靠”。  
   
      若要在两种显示状态之间切换，请双击“报表数据”窗格的标题栏。  
   

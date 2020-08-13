@@ -1,5 +1,6 @@
 ---
 title: Analysis Services 数据库的扩展字段属性 | Microsoft Docs
+description: 了解 Analysis Services 数据库的扩展字段属性，以及如何在报表中包括扩展字段属性值。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: aa0f8b8d8b8ee4cbd3ebdaf70fcb63b9cb5005b9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: beae593bc4673a1fd31d27c5f807553a2b960872
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77077676"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458352"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Analysis Services 数据库的扩展字段属性 (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据处理扩展插件支持扩展字段属性。 扩展字段属性是除字段属性 **Value** 和 **IsMissing** 之外的属性，可用于数据源并受数据处理扩展插件支持。 扩展属性并不作为报表数据集的字段集合的一部分显示在“报表数据”窗格中。 你可以通过编写使用内置 **Fields** 集合按名称指定扩展字段属性值的表达式，来将这些扩展字段属性值包含在报表中。  
@@ -40,11 +41,11 @@ ms.locfileid: "77077676"
   
  下表提供了您可以使用的预定义字段属性的列表：  
   
-|**属性**|类型 |**说明或所需的值**|  
+|**Property**|**Type**|**说明或所需的值**|  
 |------------------|--------------|---------------------------------------|  
 |**值**|**Object**|指定字段的数据值。|  
 |**IsMissing**|**布尔值**|指示是否在结果数据集中找到了该字段。|  
-|**UniqueName**|**字符串**|返回级别的完全限定名称。 例如，某位员工的 **UniqueName** 值可能为 [Employee].[Employee Department].[Department].&[Sales].&[North American Sales Manager].&[272]  。|  
+|**UniqueName**|**字符串**|返回级别的完全限定名称。 例如，某位员工的 **UniqueName** 值可能为 [Employee].[Employee Department].[Department].&[Sales].&[North American Sales Manager].&[272]。|  
 |**BackgroundColor**|**字符串**|返回数据库中为该字段定义的背景颜色。|  
 |**彩色**|**字符串**|返回数据库中为该项定义的前景色。|  
 |**FontFamily**|**字符串**|返回数据库中为该项定义的字体的名称。|  
@@ -126,7 +127,7 @@ CELL PROPERTIES
   
  即使属性是 MDX 选择语句的一部分，它们也不会显示在结果集列中。 尽管如此，使用扩展属性功能仍可将这些数据用于报表。 如果在多维数据集中设置了单元格属性值，可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的 MDX 查询“结果”窗格中双击单元格，并查看单元格属性值。 如果双击第一个包含 1,379 的 Order Count 单元，则会看到一个包含以下单元属性的弹出窗口：  
   
-|properties|值|  
+|属性|值|  
 |--------------|-----------|  
 |CellOrdinal|0|  
 |值|2481|  

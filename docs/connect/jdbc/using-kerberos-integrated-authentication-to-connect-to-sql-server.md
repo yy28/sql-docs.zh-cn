@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4494931e0ee189e785ed057471e5560f4737ecc0
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 8eaa889f12adb2470040cab4c0fba5df295a1cb2
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922314"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916233"
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>使用 Kerberos 集成身份验证连接到 SQL Server
 
@@ -37,13 +37,13 @@ ms.locfileid: "82922314"
 
 ## <a name="remarks"></a>备注
 
-在 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 之前，应用程序可通过使用 integratedSecurity 连接属性并引用 mssql-jdbc_auth-\<version>-\<arch>.dll 来指定集成身份验证（使用 Kerberos 或 NTLM，视可用情况而定），如[生成连接 URL](../../connect/jdbc/building-the-connection-url.md) 中所述   。
+在 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 之前，应用程序可通过使用 integratedSecurity 连接属性并引用 mssql-jdbc_auth-\<version>-\<arch>.dll 来指定集成身份验证（使用 Kerberos 或 NTLM，视可用情况而定），如[生成连接 URL](../../connect/jdbc/building-the-connection-url.md) 中所述 。
 
 从 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 开始，应用程序可使用 authenticationScheme 连接属性指示它希望通过纯 Java Kerberos 实现连接到使用 Kerberos 集成身份验证的数据库  ：
 
 - 如果要选择使用 Krb5LoginModule  的集成身份验证，仍然必须指定 integratedSecurity=true  连接属性。 然后，还可以指定 authenticationScheme=JavaKerberos  连接属性。
 
-- 若要继续通过 mssql-jdbc_auth-\<version>-\<arch>.dll  使用集成身份验证，只需指定 integratedSecurity=true  连接属性（或者可以选择使用 authenticationScheme=NativeAuthentication  ）。
+- 若要继续通过 mssql-jdbc_auth-\<version>-\<arch>.dll 使用集成身份验证，只需指定 integratedSecurity=true 连接属性（或者可以选择使用 authenticationScheme=NativeAuthentication）  。
 
 - 如果指定 authenticationScheme=JavaKerberos  但未同时指定 integratedSecurity=true  ，则驱动程序将忽略 authenticationScheme  连接属性，并希望在连接字符串中找到用户名和密码凭据。
 
@@ -71,7 +71,7 @@ ms.locfileid: "82922314"
 
 有关服务主体名称 (SPN) 的详细信息，请参阅：
 
-- [如何在 SQL Server 中使用 Kerberos 身份验证](https://support.microsoft.com/kb/319723)
+- [为 Kerberos 连接注册服务主体名称](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)
 
 - [对 SQL Server 使用 Kerberos](https://docs.microsoft.com/archive/blogs/sql_protocols/using-kerberos-with-sql-server)
 

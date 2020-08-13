@@ -1,5 +1,6 @@
 ---
 title: SQL Server Reporting Services (SSRS) 中的报表数据简介
+description: 了解有关 SQL Server Reporting Services (SRRS) 中的报表数据的介绍信息，例如如何创建数据源。
 author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.technology: report-data
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 11/18/2019
-ms.openlocfilehash: 6317e8161871d7094486ed8b6178847549d8ab96
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ba53401168c1b16bb4b61186c6883f0612b7ba60
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74190721"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458899"
 ---
 # <a name="intro-to-report-data-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) 中的报表数据简介
 
@@ -41,7 +42,7 @@ ms.locfileid: "74190721"
 
 ##  <a name="defining-terms"></a><a name="BkMk_ReportDataTerms"></a> 定义术语  
   
-- **数据连接。** 也称为“数据源”  。 数据连接包含名称和依赖于连接类型的连接属性。 根据设计，数据源连接不包含凭据。 数据连接不指定从外部数据源中检索哪些数据。 为此，请在创建数据集时指定查询。  
+- **数据连接。** 也称为“数据源”。 数据连接包含名称和依赖于连接类型的连接属性。 根据设计，数据源连接不包含凭据。 数据连接不指定从外部数据源中检索哪些数据。 为此，请在创建数据集时指定查询。  
   
 - **数据源定义。** 包含报表数据源的 XML 表示形式的文件。 在发布报表之后，其数据源作为数据源定义（独立于报表定义）保存在报表服务器或 SharePoint 站点上。 例如，报表服务器管理员可以更新连接字符串或凭据。 在本机报表服务器上，文件类型为 .rds。 在 SharePoint 站点上，文件类型为 .rsds。  
   
@@ -65,7 +66,7 @@ ms.locfileid: "74190721"
   
 - **筛选数据** 可以在查询中或报表中筛选报表数据。 可以使用数据集和查询变量来创建级联参数。 使用级联参数，用户可以缩小选择范围，从数千个选择缩小到一个更易于管理的数字。 您可以基于参数值或者您指定的其他值来筛选表或图表中的数据。  
   
-- **参数** 包含查询变量的数据集查询命令将自动创建匹配的报表参数。 也可以手动创建参数。 当您查看报表时，报表工具栏将显示这些参数。 用户可以选择值，以便控制报表数据或报表外观。 若要为特定用户自定义报表数据，可以创建具有链接到相同报表定义的不同默认值的报表参数集。 还可以使用内置 UserID  字段为不同的用户自定义数据。 有关详细信息，请参阅[报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)和[表达式中的内置集合（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)。  
+- **参数** 包含查询变量的数据集查询命令将自动创建匹配的报表参数。 也可以手动创建参数。 当您查看报表时，报表工具栏将显示这些参数。 用户可以选择值，以便控制报表数据或报表外观。 若要为特定用户自定义报表数据，可以创建具有链接到相同报表定义的不同默认值的报表参数集。 还可以使用内置 UserID 字段为不同的用户自定义数据。 有关详细信息，请参阅[报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)和[表达式中的内置集合（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)。  
   
 - **数据警报** 发布报表后，可以基于报表数据创建警报。 然后，当符合指定的规则时，你将收到该电子邮件。  
   

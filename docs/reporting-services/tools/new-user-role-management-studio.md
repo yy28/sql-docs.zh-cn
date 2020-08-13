@@ -1,5 +1,6 @@
 ---
 title: 新建用户角色 (Management Studio) | Microsoft Docs
+description: 了解如何创建项级角色定义，该定义枚举用户在 SQL Server Management Studio 的“新建用户角色”页中可执行的任务。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: 9f76a235-0b58-479c-8e5b-50588091b71c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 16f083c08a9d82a019ae98a8f9a71d7e596394da
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 853ef460d56f1561b735ccaff1acfb95b6dfc580
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65582181"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913913"
 ---
 # <a name="new-user-role-management-studio"></a>新建用户角色 (Management Studio)
   使用此页可以创建项级角色定义。 项级角色定义是一组任务的命名集合，这些任务用于枚举用户对于文件夹、报表、模型、资源和共享数据源可以执行的任务。 例如，预定义“浏览者”角色就是属于项级角色定义。该角色可以标识报表最终用户在浏览文件夹和查看报表时可能需要执行的各种操作。  

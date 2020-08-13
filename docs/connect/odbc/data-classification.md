@@ -13,12 +13,12 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-makouz
 ms.author: v-makouz
 manager: kenvh
-ms.openlocfilehash: 8f0f821890cabe25a9abb572e453c9846c75ec94
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 63600f98fcf86fb9549c6da91224988ce7483eee
+ms.sourcegitcommit: 41ff0446bd8e4380aad40510ad579a3a4e096dfa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "72041131"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86465314"
 ---
 # <a name="data-classification"></a>数据分类
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]

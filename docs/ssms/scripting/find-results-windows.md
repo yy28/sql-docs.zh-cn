@@ -1,5 +1,6 @@
 ---
 title: “查找结果”窗口
+description: 有两个“查找结果”窗口可用于显示“在文件中查找”和“在文件中替换”操作找到的匹配项。 了解如何显示这些窗口，以及如何显示与匹配项对应的代码文件和行。
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -15,18 +16,18 @@ ms.assetid: 3b68dbb7-26d6-4bc9-bd2c-c27e5dc385c3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 463e2943fbad1b8ad03843d94267c2d0a009104b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ef2063c8d9c5d4645ad96826400e14e9d2eea870
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253841"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122908"
 ---
 # <a name="find-results-windows"></a>“查找结果”窗口
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   两个“查找结果”窗口显示通过使用 **“查找和替换”** 对话框中的 **“在文件中查找”** 或 **“在文件中替换”** 选项卡找到的匹配项。 **“在文件中查找”** 和 **“在文件中替换”** 选项卡中的 **“结果选项”** 命令允许您选择“查找结果”窗口，其中显示找到的所有匹配项。  
   
- 只要找到匹配项，即会自动打开所选的“查找结果”窗口。 若要手动显示“查找结果”窗口，请单击 **“视图”** 菜单上的 **“其他窗口”** ，再单击 **“查找结果 1”** 或 **“查找结果 2”** 。  
+ 只要找到匹配项，即会自动打开所选的“查找结果”窗口。 若要手动显示“查找结果”窗口，请单击 **“视图”** 菜单上的 **“其他窗口”** ，再单击 **“查找结果 1”** 或 **“查找结果 2”**。  
   
  若要显示代码文件并跳转到匹配项所在的行，请双击结果列表中的任意行。 此时，相应的源文件会显示在代码编辑器中，并且插入点位于匹配文本的起始位置。 在编辑器的指示器边距中会显示一个符号，以标记包含匹配项的行，并且状态栏会显示其完整文本。  
   
@@ -43,7 +44,7 @@ ms.locfileid: "75253841"
  转到下一个匹配项所在的行。  
   
  **全部清除**  
- 从“结果”  列表中删除所有匹配项。  
+ 从“结果”列表中删除所有匹配项。  
   
 ## <a name="shortcut-keys"></a>快捷键  
  使用以下快捷键，可以帮助快速浏览找到的匹配项。  

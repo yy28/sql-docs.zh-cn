@@ -1,8 +1,8 @@
 ---
-title: BLOB 和 OLE 对象 | Microsoft Docs
+title: BLOB 和 OLE 对象（OLE DB 驱动程序）| Microsoft Docs
 description: BLOB 和 OLE 对象
 ms.custom: ''
-ms.date: 06/14/2018
+ms.date: 05/25/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -16,27 +16,29 @@ helpviewer_keywords:
 - large data, OLE objects
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 70d3ffccfc9613434b09335944e445a2705b95c3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 54f8b4c38c22bcb32b039d9f0f0887c298051302
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67988668"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942761"
 ---
 # <a name="blobs-and-ole-objects"></a>BLOB 和 OLE 对象
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server 公开 ISequentialStream 接口，以便支持使用者访问  **ntext、text、image、varchar(max)、nvarchar(max)、varbinary(max) 和作为二进制大型对象 (BLOB) 的 xml 数据类型**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]       。 通过对 ISequentialStream 执行 Read 方法，使用者可以用便于管理的方式成块检索大量数据   。  
-  
+  OLE DB Driver for SQL Server 公开 ISequentialStream 接口，以便支持使用者访问作为二进制大型对象 (BLOB) 的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ntext、text<a href="#text_note"><sup>1</sup></a>、image、varchar(max)、nvarchar(max)、varbinary(max) 和 xml 数据类型        。 通过对 ISequentialStream 执行 Read 方法，使用者可以用便于管理的方式成块检索大量数据   。
+
+ <b id="text_note">[1]:</b>只有支持 UTF-8 的服务器才能使用 ISequentialStream 接口将 UTF-8 编码的数据插入旧版文本列。 如果不支持 UTF-8 的服务器尝试这么做，将导致驱动程序发布以下错误消息：“所选的列类型上不支持流式传输”。
+
  有关演示此功能的示例，请参阅[设置大型数据 (OLE DB)](../../oledb/ole-db-how-to/set-large-data-ole-db.md)。  
   
- 当使用者在数据修改绑定的取值函数中提供接口指针时，适用于 SQL Server 的 OLE DB 驱动程序可以使用由使用者实现的 IStorage 接口  。  
+ 当使用者在数据修改绑定的取值函数中提供接口指针时，适用于 SQL Server 的 OLE DB 驱动程序可以使用由使用者实现的 IStorage 接口****。  
   
- 对于大值数据类型，适用于 SQL Server 的 OLE DB 驱动程序检查 IRowset 和 DDL 接口中的类型大小假设  。 具有 varchar、nvarchar 和 varbinary 数据类型且最大大小设置为无限制的列将通过架构行集和返回列数据类型的接口表示为 ISLONG    。  
+ 对于大值数据类型，适用于 SQL Server 的 OLE DB 驱动程序检查 IRowset 和 DDL 接口中的类型大小假设。 具有 varchar、nvarchar 和 varbinary 数据类型且最大大小设置为无限制的列将通过架构行集和返回列数据类型的接口表示为 ISLONG************。  
   
- 适用于 SQL Server 的 OLE DB 驱动程序将 varchar(max)、varbinary(max) 和 nvarchar(max) 类型分别公开为 DBTYPE_STR、DBTYPE_BYTES 和 DBTYPE_WSTR    。  
+ 适用于 SQL Server 的 OLE DB 驱动程序将 varchar(max)、varbinary(max) 和 nvarchar(max) 类型分别公开为 DBTYPE_STR、DBTYPE_BYTES 和 DBTYPE_WSTR  。  
   
  若要使用这些类型，应用程序可以使用以下选项：  
   
@@ -50,7 +52,7 @@ ms.locfileid: "67988668"
   
 ## <a name="storage-object-limitations"></a>存储对象限制  
   
--   OLE DB Driver for SQL Server 只能支持一个打开的存储对象。 尝试打开多个存储对象（以获取对多个 ISequentialStream 接口指针的引用）返回 DBSTATUS_E_CANTCREATE  。  
+-   OLE DB Driver for SQL Server 只能支持一个打开的存储对象。 尝试打开多个存储对象（以获取对多个 ISequentialStream 接口指针的引用）返回 DBSTATUS_E_CANTCREATE。  
   
 -   在适用于 SQL Server 的 OLE DB 驱动程序中，DBPROP_BLOCKINGSTORAGEOBJECTS 只读属性的默认值为 VARIANT_TRUE。 因此，如果存储对象处于活动状态，某些方法（存储对象上的方法除外）将失败，并返回 E_UNEXPECTED。  
   

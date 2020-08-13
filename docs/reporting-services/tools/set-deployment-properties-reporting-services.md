@@ -1,5 +1,6 @@
 ---
 title: 设置部署属性 (Reporting Services) | Microsoft Docs
+description: 了解如何设置 SQL Server Data Tools (SSDT) 或 Visual Studio 使用的部署属性来生成、预览和部署报表。
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: tools
@@ -13,12 +14,12 @@ ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 05/15/2019
-ms.openlocfilehash: 9106c4c45845d1e31d65180c8f0fd979e7e3e14c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 45e168c5fa0e0edcb450ca4f302de2676303b5c3
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66175337"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914885"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>设置部署属性 (Reporting Services)
 
@@ -30,11 +31,11 @@ ms.locfileid: "66175337"
 > 请不要将此功能与 Reporting Services 配置管理器相混淆，后者用于在安装完成后配置 Reporting Services。 有关详细信息，请参阅[配置和管理报表服务器（SSRS 本机模式）](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)。  
 >
 > [!NOTE]  
-> 在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中，从报表服务器项目或解决方案发布报表的操作称为“部署报表”  。  
+> 在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中，从报表服务器项目或解决方案发布报表的操作称为“部署报表”。  
   
 ## <a name="to-set-deployment-properties"></a>设置部署属性
   
-1. 右键单击报表项目，再单击“属性”  。  
+1. 右键单击报表项目，再单击“属性”。  
   
 2. 在项目的 **“属性页”** 对话框中，从 **“配置”** 列表中选择要编辑的配置。 常用的配置有 **DebugLocal**、 **Debug**和 **Release**。  
   
@@ -43,15 +44,15 @@ ms.locfileid: "66175337"
   
 3. 在 **“OutputPath”**  文本框中，键入或粘贴本地文件系统中的路径，以存储在报表生成验证、部署和预览过程中使用的报表定义。 此路径必须与您用于项目的路径不同，并且它是一个相对路径（即项目路径下的一个子文件夹）。  
   
-4. 在“ErrorLevel”   文本框中，键入报告为错误的生成问题的严重性。 在生成报表、数据源或其他项目资源时发生的、严重级别不高于“ErrorLevel”   值的问题会报告为错误；否则，会报告为警告。 任何错误都将导致生成任务失败。 有效的严重级别为 0 到 4（包括这两者）。 默认值为 2。  
+4. 在“ErrorLevel”   文本框中，键入报告为错误的生成问题的严重性。 在生成报表、数据源或其他项目资源时发生的、严重级别不高于“ErrorLevel” ****  值的问题会报告为错误；否则，会报告为警告。 任何错误都将导致生成任务失败。 有效的严重级别为 0 到 4（包括这两者）。 默认值为 2。  
   
      **ErrorLevel** 可用于增加或降低生成的敏感度。 例如，当在部署到 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 报表服务器的过程中生成了一个带有地图的报表时，默认情况下将显示错误，并且报表生成过程失败。 如果您降低 **ErrorLevel** 并从报表中删除地图，则将显示警告并且报表生成过程继续。  
   
-5. 在“StartItem”   列表中，选择在报表项目运行时要在预览窗口或浏览器窗口中显示的报表。  
+5. 在“StartItem” ****  列表中，选择在报表项目运行时要在预览窗口或浏览器窗口中显示的报表。  
   
 6. 在 **OverwriteDataSources** 列表中，选择 **True** 以在每次发布共享数据源时覆盖服务器上的共享数据源，或选择 **False** 以保留服务器上的数据源。  
   
-7. 在“TargetServerVersion”列表中，选择 SQL Server 2016 版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，或者选择“检测版本”，从而自动确定在由“TargetServer URL”属性标识的服务器上安装的版本。 默认值为“SQL Server 2016 或更高版本”  。  
+7. 在“TargetServerVersion”列表中，选择 SQL Server 2016 版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，或者选择“检测版本”，从而自动确定在由“TargetServer URL”属性标识的服务器上安装的版本************。 默认值为“SQL Server 2016 或更高版本” 。  
   
      使用 **TargetServerVersion** 可以自定义生成的报表，这些报表位于在 OutputPath 中指定的路径下，对应于在 **TargetServer URL**中指定的报表服务器版本。  
   
@@ -62,17 +63,17 @@ ms.locfileid: "66175337"
     > [!NOTE]  
     > 对于在本机模式下运行的报表服务器，必须拥有对目标文件夹的 **“发布”** 权限，才能将报表发布到该文件夹。 发布权限通过角色分配提供，此角色分配将用户帐户映射到包括发布操作的角色。 有关详细信息，请参阅 [创建和管理角色分配](../../reporting-services/security/create-and-manage-role-assignments.md)。 对于在 SharePoint 集成模式下运行的报表服务器，必须拥有对 SharePoint 站点的 **“成员”** 或 **“所有者”** 权限。 有关详细信息，请参阅 [报表服务器项的 SharePoint 站点和列表权限参考](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)。  
   
-10. 在 **TargetServerURL** 文本框中，键入目标报表服务器的 URL。 在发布报表之前，必须将此属性设置为有效的报表服务器 URL。 向在本机模式下运行的报表服务器发布时，请使用报表服务器虚拟目录的 URL（例如，http: *//server/reportserver* 或 https: *//server/reportserver*）。 这是报表服务器的虚拟目录，而不是 Web 门户的虚拟目录。  
+10. 在 **TargetServerURL** 文本框中，键入目标报表服务器的 URL。 在发布报表之前，必须将此属性设置为有效的报表服务器 URL。 向在本机模式下运行的报表服务器发布时，请使用报表服务器虚拟目录的 URL（例如，http:*//server/reportserver* 或 https:*//server/reportserver*）。 这是报表服务器的虚拟目录，而不是 Web 门户的虚拟目录。  
   
      发布到在 SharePoint 集成模式下运行的报表服务器时，请使用 SharePoint 顶级站点或子站点的 URL。 如果不指定站点，将使用默认顶级站点（例如 <https://*servername*>、<https://*servername*/*site*> 或 <https://*servername*/*site*/*subsite*>）。  
   
 ## <a name="to-set-configuration-manager-properties"></a>设置配置管理器属性  
   
-1. 右键单击报表项目，再单击“属性”  。  
+1. 右键单击报表项目，再单击“属性”。  
   
 2. 在该项目的 **“属性页”** 对话框中，单击 **“配置管理器”** 。  
   
-3. 在 **“配置管理器”** 对话框中，选择要编辑的配置。 当前有效的配置显示为“活动(***\<配置>***)”。  
+3. 在 **“配置管理器”** 对话框中，选择要编辑的配置。 当前有效的配置显示为“活动(\<configuration>)” **** 。  
   
 4. 在 **“项目上下文”** 中，为解决方案中的每个项目选中或清除 **“生成”** 或 **“部署”** 。  
   

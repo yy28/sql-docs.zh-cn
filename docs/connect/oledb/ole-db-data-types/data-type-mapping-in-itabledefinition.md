@@ -1,5 +1,5 @@
 ---
-title: ITableDefinition 中的数据类型映射 | Microsoft Docs
+title: ITableDefinition 中的数据类型映射（OLE DB 驱动器）| Microsoft Docs
 description: ITableDefinition 中的数据类型映射
 ms.custom: ''
 ms.date: 06/14/2018
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - OLE DB, data types
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: abe874a50e8534291a67393dfaf3485c96405b02
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: af28946406b4bd0fed0c75f85b9e69450dc38434
+ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015849"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86976554"
 ---
 # <a name="data-type-mapping-in-itabledefinition"></a>ITableDefinition 中的数据类型映射
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

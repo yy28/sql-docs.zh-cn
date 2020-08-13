@@ -1,5 +1,6 @@
 ---
 title: 启用、禁用和删除断点
+description: 了解如何使用“断点”窗口查看、删除、禁用和启用断点。
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,16 +13,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 72acf04118e0b3b7f3f205a06d6e93e96bf13ecb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7ce9b445b5340680f53279a3c061f05c8999a5dd
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253916"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122914"
 ---
 # <a name="enable-disable-and-delete-breakpoints"></a>启用、禁用和删除断点
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 若要查看和管理所有打开的断点，可以使用 **“断点”** 窗口。 使用此窗口可以查看断点信息，并且执行一些诸如删除、禁用或启用断点之类的操作。
 
@@ -48,7 +49,7 @@ ms.locfileid: "75253916"
   
  可以使用以下方式之一禁用单个断点：  
   
--   在查询编辑器窗口中，右键单击所需断点，然后单击“禁用断点”  。  
+-   在查询编辑器窗口中，右键单击所需断点，然后单击“禁用断点”。  
   
 -   在“断点”窗口中，清除断点左侧的复选框。  
   
@@ -66,7 +67,7 @@ ms.locfileid: "75253916"
   
  可以使用以下方式之一启用单个断点：  
   
--   在查询编辑器窗口中，右键单击所需断点，然后单击“启用断点”  。  
+-   在查询编辑器窗口中，右键单击所需断点，然后单击“启用断点”。  
   
 -   在“断点”窗口中，单击断点左侧的框。  
   
@@ -84,9 +85,9 @@ ms.locfileid: "75253916"
   
  可以使用以下方式之一删除单个断点：  
   
--   在查询编辑器窗口中，右键单击所需断点，然后单击“删除断点”  。  
+-   在查询编辑器窗口中，右键单击所需断点，然后单击“删除断点”。  
   
--   在断点窗口中，右键单击所需断点，然后在快捷菜单上单击“删除”  。  
+-   在断点窗口中，右键单击所需断点，然后在快捷菜单上单击“删除”。  
   
 -   在“断点”窗口中，选择所需断点，然后按 Delete。  
   
@@ -95,7 +96,7 @@ ms.locfileid: "75253916"
   
  可以使用以下方式之一删除所有断点：  
   
--   在 **“调试”** 菜单上单击 **“删除所有断点”** 。  
+-   在“调试”菜单上单击“删除所有断点” 。  
   
 -   在 **“断点”** 窗口的工具栏上，单击 **“删除所有断点”** 按钮。  
   

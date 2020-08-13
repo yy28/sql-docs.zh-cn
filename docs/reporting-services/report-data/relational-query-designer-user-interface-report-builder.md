@@ -1,5 +1,6 @@
 ---
 title: 关系查询设计器用户界面（报表生成器）| Microsoft Docs
+description: 学习使用图形查询设计器浏览元数据、以交互方式生成查询，并查看查询的结果。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 59889ce4625b8c8748c83fada670551db8584ea6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: faa47b9ac36cc4606b327b1eec0ff73220d58934
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73593380"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86455569"
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>关系查询设计器用户界面（报表生成器）
   报表生成器和 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的报表设计器同时提供了图形查询设计器和基于文本的查询设计器，帮助你创建查询，以指定要从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] relational databases 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] 中为报表数据集检索的数据。 使用图形查询设计器可以浏览元数据、以交互方式生成查询，还可以查看查询结果。 使用基于文本的查询设计器可以查看图形查询设计器生成的查询，也可以修改查询。 您还可以从文件或报表中导入现有的查询。  
@@ -78,7 +79,7 @@ ms.locfileid: "73593380"
   
      使用“报表数据”窗格可查看报表数据集的字段集合。 这些字段表示当您查看报表时可在表、图表及其他报表项中显示的数据。  
   
--   **分组和聚合** ：在查询中切换是否使用分组和聚合。 如果您在添加分组和聚合后禁用分组和聚合功能，则将删除所添加的分组和聚合。 文本“(无)”表示没有使用任何分组和聚合  。 如果您再次启用分组和聚合功能，则将还原之前的分组和聚合。  
+-   **分组和聚合** ：在查询中切换是否使用分组和聚合。 如果您在添加分组和聚合后禁用分组和聚合功能，则将删除所添加的分组和聚合。 文本“(无)”表示没有使用任何分组和聚合。 如果您再次启用分组和聚合功能，则将还原之前的分组和聚合。  
   
 -   **删除字段** ：删除所选的字段。  
   
@@ -93,7 +94,7 @@ ms.locfileid: "73593380"
   
  下表列出各种聚合并提供其简要说明。  
   
-|Aggregate|说明|  
+|聚合|说明|  
 |---------------|-----------------|  
 |Avg|返回组中各值的平均值。 实现 SQL AVG 聚合。|  
 |Count|返回组中项数。 实现 SQL COUNT 聚合。|  
@@ -145,7 +146,7 @@ ms.locfileid: "73593380"
   
 -   **编辑字段** ：打开 **“编辑相关字段”** 对话框，您可以在其中添加和修改表之间的关系。 在左表和右表中选择要联接的字段。 可以将左表和右表中的多个字段联接起来，以便在一个关系中指定多个联接条件。 联接左表和右表的两个字段的名称不必相同。 联接字段的数据类型必须兼容。  
   
--   **删除关系**  删除所选的关系。   
+-   **删除关系**  删除所选的关系。  
   
 -   **上移** 和 **下移** ：在 **“关系”** 列表中向上或向下移动关系。 关系在查询中的放置顺序会影响到查询结果。 关系将按其在 **“关系”** 列表中的显示顺序添加到查询中。  
   
@@ -182,17 +183,17 @@ ms.locfileid: "73593380"
 ### <a name="graphical-query-designer-toolbar"></a>图形查询设计器工具栏  
  关系查询设计器工作栏提供了以下按钮，帮助您指定或查看查询结果。  
   
-|按钮|说明|  
+|Button|描述|  
 |------------|-----------------|  
 |**编辑为文本**|切换到基于文本的查询设计器，可查看自动生成的查询，也可以修改查询。|  
 |**导入**|从文件或报表中导入现有的查询。 支持 .sql 和 .rdl 文件类型。|  
 |**运行查询**|运行查询。 “查询结果”窗格显示结果集。|  
   
 ## <a name="understanding-automatically-generated-queries"></a>了解自动生成的查询  
- 当您在“数据库视图”窗格中选择表和列或存储过程及视图时，查询设计器将从数据库架构中检索主键与外键的基本关系。 通过分析这些关系，查询设计器会检测到两个表之间的关系并将联接添加到查询中。 然后，您即可通过添加分组和聚合、添加或更改关系并添加筛选器来修改查询。 若要查看显示要从中检索数据的列、表之间的联接以及任何分组或聚合的查询文本，请单击 **“编辑为文本”** 。  
+ 当您在“数据库视图”窗格中选择表和列或存储过程及视图时，查询设计器将从数据库架构中检索主键与外键的基本关系。 通过分析这些关系，查询设计器会检测到两个表之间的关系并将联接添加到查询中。 然后，您即可通过添加分组和聚合、添加或更改关系并添加筛选器来修改查询。 若要查看显示要从中检索数据的列、表之间的联接以及任何分组或聚合的查询文本，请单击 **“编辑为文本”**。  
   
 ## <a name="text-based-query-designer"></a>基于文本的查询设计器  
- 若要最大限度地控制查询，请使用基于文本的查询设计器。 若要切换到基于文本的查询设计器，请在工具栏中单击“编辑为文本”  。 在基于文本的查询设计器中编辑查询之后，就不能再使用关系查询设计器了。 随后，查询将始终在基于文本的查询设计器中打开。 有关详细信息，请参阅[基于文本的查询设计器用户界面（报表生成器）](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md)。  
+ 若要最大限度地控制查询，请使用基于文本的查询设计器。 若要切换到基于文本的查询设计器，请在工具栏中单击“编辑为文本”。 在基于文本的查询设计器中编辑查询之后，就不能再使用关系查询设计器了。 随后，查询将始终在基于文本的查询设计器中打开。 有关详细信息，请参阅[基于文本的查询设计器用户界面（报表生成器）](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [查询设计工具 (SSRS)](query-design-tools-ssrs.md)  

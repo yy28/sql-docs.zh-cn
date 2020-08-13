@@ -1,5 +1,6 @@
 ---
 title: SQL Server Data Tools 中的部署和版本支持 (SSDT) | Microsoft Docs
+description: 了解可在 SQL Server Data Tools 中创作和发布报表的支持版本，以及如何设置项目配置和部署属性。
 ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5f055219476507f52894fe7d5b246710e6054a20
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a33626c529d59d9ffa2b80e012dbb325c93b670a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571499"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917956"
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools 中的部署和版本支持 (SSDT)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 支持以下方案：  
@@ -33,7 +34,7 @@ ms.locfileid: "65571499"
   
  首先会生成报表，然后将其在报表设计器中以预览方式呈现，或者部署到报表服务器。  
   
- 可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的“项目属性”  对话框中设置配置属性。  
+ 可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的“项目属性”对话框中设置配置属性。  
   
  生成和部署属性包括：  
   
@@ -43,7 +44,7 @@ ms.locfileid: "65571499"
   
 -   TargetServerVersion 是一个部署属性，它标识安装在目标报表服务器（在 TargetServerURL 属性中指定）上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的预期版本。  
   
- 当你在“项目属性”对话框中指定早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  时，报表不会自动恢复到早期版本。 同样，报表服务器项目可以包含来自两个不同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的报表。 当部署报表服务器项目时，项目中的所有报表都将转换为在 TargetServerVersion 中指定的版本。  
+ 当你在“项目属性”对话框中指定早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 时，报表不会自动恢复到早期版本。 同样，报表服务器项目可以包含来自两个不同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的报表。 当部署报表服务器项目时，项目中的所有报表都将转换为在 TargetServerVersion 中指定的版本。  
   
  您可以将多个项目配置添加到项目中；每个配置用于不同方案，例如，部署到不同版本的报表服务器。 有关详细信息，请参阅[设置部署属性 (Reporting Services)](../../reporting-services/tools/set-deployment-properties-reporting-services.md) 和[“项目属性页”对话框](../../reporting-services/tools/project-property-pages-dialog-box.md)。  
   

@@ -1,30 +1,30 @@
 ---
 title: 扩展性体系结构
-description: 本文介绍用于在 SQL Server 上运行外部脚本（例如 R 或 Python）的扩展性框架的体系结构。
+description: 本文介绍用于在 SQL Server 机器学习服务上运行外部 Python 或 R 脚本的扩展性框架的体系结构。 该脚本在语言运行时环境中作为核心数据库引擎的扩展执行。
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 11/04/2019
+ms.technology: machine-learning-services
+ms.date: 07/14/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 408125a3369d35a28893852a2f674e3e4562b063
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 14611369afe42da2e87aab87d675fd77e710c461
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118820"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406290"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>SQL Server 机器学习服务中的扩展性体系结构 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-SQL Server 具有用于在服务器上运行外部脚本（例如 R 或 Python）的扩展性框架。 该脚本在语言运行时环境中作为核心数据库引擎的扩展执行。
+本文介绍用于在 SQL Server 机器学习服务上运行外部 Python 或 R 脚本的扩展性框架的体系结构。 该脚本在语言运行时环境中作为核心数据库引擎的扩展执行。
 
 ## <a name="background"></a>背景
 
-扩展性框架是在 SQL Server 2016 中引入的，用于支持 R 运行时。 SQL Server 2017 及更高版本支持 Python。
+在 SQL Server 2016 中引入了扩展性框架，用于支持 [R Services](../r/sql-server-r-services.md) 的 R 运行时。 SQL Server 2017 及更高版本支持[机器学习服务](../sql-server-machine-learning-services.md)的 Python。
 
 扩展性框架用于在 SQL Server 与数据科学语言（例如 R 和 Python）之间提供一个接口。 目的是在将数据科学解决方案迁移到生产环境时减少摩擦，以及保护开发过程中公开的数据。 通过在 SQL Server 管理的安全框架内执行受信任的脚本语言，数据库管理员可以在维持安全性的同时允许数据科学家访问企业数据。
 
