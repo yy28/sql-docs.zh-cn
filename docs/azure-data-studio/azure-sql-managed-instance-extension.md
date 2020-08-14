@@ -1,5 +1,5 @@
 ---
-title: Azure SQL 数据库托管实例扩展
+title: Azure SQL 托管实例扩展
 description: 将 Azure Data Studio 与 Azure SQL 托管实例结合使用
 ms.custom: seodec18
 ms.date: 10/07/2019
@@ -10,18 +10,18 @@ ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
 manager: alanyu
-ms.openlocfilehash: 6a406efdd7c07d2740ebf33b6e84cd7d7175fde2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 58c79a367782f040739b23f52e01bec5cb0ed917
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774700"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988600"
 ---
-# <a name="azure-sql-database-managed-instance-dashboard-for-azure-data-studio-preview"></a>用于 Azure Data Studio 的 Azure SQL 数据库托管实例仪表板（预览版）
+# <a name="azure-sql-managed-instance-dashboard-for-azure-data-studio-preview"></a>用于 Azure Data Studio 的 Azure SQL 托管实例仪表板（预览版）
 
-Azure SQL 数据库托管实例扩展提供一个仪表板，用于在 [Azure Data Studio](https://github.com/Microsoft/azuredatastudio) 中使用 [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index)。 此扩展提供以下功能：
+Azure SQL 托管实例扩展提供一个仪表板，它可在 [Azure Data Studio](https://github.com/Microsoft/azuredatastudio) 中与 [Azure SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index)搭配使用。 此扩展提供以下功能：
 
-- 显示托管实例属性，包括 vCore 和已用存储
+- 显示 SQL 托管实例属性，包括 vCore 数和已用存储
 - 监视前两小时的 CPU 和存储使用情况
 - 显示配置警告和优化建议
 - 显示数据库副本的状态
@@ -30,7 +30,7 @@ Azure SQL 数据库托管实例扩展提供一个仪表板，用于在 [Azure Da
 ## <a name="install"></a>安装
 
 可以安装此扩展的正式版本。 按照 [Azure Data Studio 文档](https://docs.microsoft.com/sql/azure-data-studio/extensions)中的步骤进行操作。
-在“扩展”  窗格中，搜索“托管实例”并在此处安装它。 安装之后，会自动向你通知未来的任何扩展更新。
+在“扩展”窗格中，搜索“托管实例”并在此处安装它。 安装之后，会自动向你通知未来的任何扩展更新。
 
 安装扩展后，会在 Azure Data Studio 中看到“托管实例”  选项卡。 在此处可以找到特定于托管实例的信息。
 
@@ -62,7 +62,7 @@ Azure SQL 数据库托管实例扩展提供一个仪表板，用于在 [Azure Da
 - **数据文件限制**。 如果数据文件接近[常规用途服务层级上的文件 I/O 限制](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier)，则可能需要增大文件大小以获得更好的性能。 此问题可能会导致内存压力并降低备份速度。
 - **可用性问题**。 大量虚拟日志文件可能会影响性能。 如果发生进程故障，则此类问题可能会导致常规用途服务层级上的数据库恢复时间较长。
 
-请定期查看这些建议，调查根本原因，并采取措施以纠正任何问题。 Azure SQL 数据库托管实例扩展提供了一些脚本，可以运行这些脚本来缓解报告的某些问题。
+请定期查看这些建议，调查根本原因，并采取措施以纠正任何问题。 SQL 托管实例扩展提供了一些脚本，你可运行它们来缓解报告的某些问题。
 
 ## <a name="replicas"></a>副本
 
@@ -80,11 +80,11 @@ Azure SQL 数据库托管实例扩展提供一个仪表板，用于在 [Azure Da
 
 虽然托管实例会生成大量日志条目，但是大多数日志条目是内部/系统信息。 此外，一些日志条目显示物理数据库名称（`GUID` 值），而不是实际逻辑数据库名称。
 
-Azure SQL 数据库托管实例扩展会基于 [Dimitri Furman 方法](https://techcommunity.microsoft.com/t5/DataCAT/Azure-SQL-DB-Managed-Instance-sp-readmierrorlog/ba-p/305506)筛选出不必要的日志项。 该扩展还显示实际逻辑文件名，而不是物理名称。
+SQL 托管实例扩展会基于 [Dimitri Furman 方法](https://techcommunity.microsoft.com/t5/DataCAT/Azure-SQL-DB-Managed-Instance-sp-readmierrorlog/ba-p/305506)筛选出不必要的日志项。 该扩展还显示实际逻辑文件名，而不是物理名称。
 
 ## <a name="reporting-problems"></a>报告问题
 
-如果 Azure SQL 数据库托管实例扩展遇到任何问题，请转到[扩展 GitHub 项目](https://github.com/JocaPC/AzureDataStudio-Managed-Instance/issues)并报告问题。
+如果在 SQL 托管实例扩展方面遇到任何问题，请转到[扩展 GitHub 项目](https://github.com/JocaPC/AzureDataStudio-Managed-Instance/issues)并报告问题。
 
 ## <a name="code-of-conduct"></a>行为准则
 

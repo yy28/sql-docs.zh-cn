@@ -1,6 +1,6 @@
 ---
 title: 将读取缩放用于可用性组
-description: '关于使用 Always On 可用性组时如何实现读取缩放的说明。 '
+description: 详细了解在使用 Always On 可用性组时如何实现读取扩展，以及如何将分布式可用性组用于地理读取扩展。
 ms.custom: seodec18
 ms.date: 10/24/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 28d9540c331ac5a250acc24abbd173f7ddf87e5f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 540f02a2b58fff4c2800dfcf16908d53935ed82c
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882574"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565536"
 ---
 # <a name="use-read-scale-with-always-on-availability-groups"></a>将读取缩放用于 Always On 可用性组
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

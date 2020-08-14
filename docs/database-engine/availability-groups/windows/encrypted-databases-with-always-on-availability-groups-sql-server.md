@@ -1,6 +1,6 @@
 ---
 title: 将加密数据库添加到可用性组
-description: 将加密（或最近解密的）数据库添加到 Always On 可用性组的步骤。
+description: 了解将加密（或最近解密的）数据库添加到 Always On 可用性组的步骤。
 ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 09eb6ebc-3051-4fff-86a5-93524507b1fc
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 721ac66e8611615b6e2acc54d8fd3b41ff1eaeb8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: aed6a2e94b553bf6a32d46d45ee1fb7af877addf
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894457"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565556"
 ---
 # <a name="add-an-encrypted-database-to-an-always-on-availability-group"></a>将加密数据库添加到 Always On 可用性组
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

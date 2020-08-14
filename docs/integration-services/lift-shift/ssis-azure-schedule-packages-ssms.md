@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 194ad3581252d5baaca6d5bfaf4c8c2272efc610
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9a69ebabab91a9c257e96afb312e5498217bb967
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915293"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864604"
 ---
 # <a name="schedule-the-execution-of-ssis-packages-deployed-in-azure-with-sql-server-management-studio-ssms"></a>使用 SQL Server Management Studio (SSMS) 计划 Azure 中部署的 SSIS 包的执行
 
@@ -23,7 +23,7 @@ ms.locfileid: "86915293"
 
 
 
-可使用 SQL Server Management Studio (SSMS) 计划已部署到 Azure SQL 数据库的 SSIS 包。 本地 SQL Server 和 SQL 数据库托管实例分别包含作为一级 SSIS 作业计划程序的 SQL Server 代理和托管实例代理。 另一方面，SQL 数据库没有内置的一级 SSIS 作业计划程序。 本文介绍的 SSMS 功能提供类似于 SQL Server 代理的熟悉用户界面，用于计划部署到 SQL 数据库的包。
+可使用 SQL Server Management Studio (SSMS) 计划已部署到 Azure SQL 数据库的 SSIS 包。 本地 SQL Server 和 SQL 托管实例分别包含 SQL Server 代理和托管实例代理用作一级 SSIS 作业计划程序。 另一方面，SQL 数据库没有内置的一级 SSIS 作业计划程序。 本文介绍的 SSMS 功能提供类似于 SQL Server 代理的熟悉用户界面，用于计划部署到 SQL 数据库的包。
 
 如果要使用 SQL 数据库来托管 SSIS 目录 `SSISDB`，可使用此 SSMS 功能生成计划 SSIS 包所需的数据工厂管道、活动和触发器。 然后，可在数据工厂中选择性地编辑和扩展这些对象。
 

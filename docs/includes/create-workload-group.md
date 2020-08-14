@@ -41,7 +41,7 @@ IMPORTANCE 对资源池而言是局部性的；同一资源池内重要性不同
 REQUEST_MAX_MEMORY_GRANT_PERCENT = value </br>
 指定单个请求可以从池中获取的最大内存量。 value 是相对于 MAX_MEMORY_PERCENT 指定的资源池大小的百分比  。
 
-value 是一个最大为 [!INCLUDE[ssSQL17](sssql17-md.md)] 的整数，以及一个 [!INCLUDE[ssSDSfull](sssdsfull-md.md)] 托管实例中的以 [!INCLUDE[sql-server-2019](sssqlv15-md.md)] 开头的浮点数  。 默认值为 25。 value 的允许范围是 1 到 100  。
+在 Azure SQL 托管实例中，value 包含一个不超过 [!INCLUDE[ssSQL17](sssql17-md.md)] 的整数和一个以 [!INCLUDE[sql-server-2019](sssqlv15-md.md)] 开头的浮点数。 默认值为 25。 value 的允许范围是 1 到 100  。
 
 > [!IMPORTANT]  
 > 指定的量指的只是查询执行授予内存。

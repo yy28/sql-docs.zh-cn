@@ -27,12 +27,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11f67835fe3cd74b63a9f2921850376ff4805881
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 0ff1117c601cc42d8fa14147df18b90a10fc97bd
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411039"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87987960"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -51,7 +51,7 @@ CREATE LOGIN 参与事务。 如果在事务内执行 CREATE LOGIN 并且该事�
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Azure SQL 数据库<br />单一数据库/弹性池](create-login-transact-sql.md?view=azuresqldb-current)
+        [Azure SQL 数据库](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [Azure SQL<br />托管实例](create-login-transact-sql.md?view=azuresqldb-mi-current)
@@ -284,7 +284,7 @@ CHECK_EXPIRATION = OFF ;
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        \* Azure SQL 数据库<br />单一数据库/弹性池 \*
+        \* Azure SQL 数据库 \*
     :::column-end:::
     :::column:::
         [Azure SQL<br />托管实例](create-login-transact-sql.md?view=azuresqldb-mi-current)
@@ -299,7 +299,7 @@ CHECK_EXPIRATION = OFF ;
 
 &nbsp;
 
-## <a name="azure-sql-database-single-databaseelastic-pool"></a>Azure SQL 数据库单一数据库/弹性池
+## <a name="sql-database"></a>SQL 数据库
 
 ## <a name="syntax"></a>语法
 
@@ -402,7 +402,7 @@ GO
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Azure SQL 数据库<br />单一数据库/弹性池](create-login-transact-sql.md?view=azuresqldb-current)
+        [Azure SQL 数据库](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         \* Azure SQL<br />托管实例 \*
@@ -417,12 +417,12 @@ GO
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Azure SQL 数据库托管实例
+## <a name="azure-sql-managed-instance"></a>Azure SQL 托管实例
 
 ## <a name="syntax"></a>语法
 
 ```syntaxsql
--- Syntax for Azure SQL Database managed instance
+-- Syntax for Azure SQL Managed Instance
 CREATE LOGIN login_name [FROM EXTERNAL PROVIDER] { WITH <option_list> [,..]}
 
 <option_list> ::=
@@ -469,7 +469,7 @@ SID **=** *sid* 用于重新创建登录名。 仅适用于 SQL Server 身份验
 
 默认情况下，在 master 中授予新建 Azure AD 登录名的标准权限为：**CONNECT SQL** 和 **VIEW ANY DATABASE**。
 
-### <a name="sql-database-managed-instance-logins"></a>SQL 数据库托管实例登录名
+### <a name="sql-managed-instance-logins"></a>SQL 托管实例登录名
 
 - 必须具有对服务器的 ALTER ANY LOGIN 权限或固定服务器角色（`securityadmin` 和 `sysadmin` 中的一个）的成员身份。 只有具有针对服务器的 ALTER ANY LOGIN 权限或其中一个角色的成员身份的 Azure Active Directory (Azure AD) 帐户可以执行创建命令。
 - 如果登录名是 SQL 主体，则只有属于 `sysadmin` 角色的登录名才能使用 create 命令来为 Azure AD 帐户创建登录名。
@@ -478,9 +478,9 @@ SID **=** *sid* 用于重新创建登录名。 仅适用于 SQL Server 身份验
 ## <a name="after-creating-a-login"></a>创建登录后
 
 > [!NOTE]
-> 创建后托管实例功能的 Azure AD 管理员已更改。 有关详细信息，请参阅[适用于 MI 的新 Azure AD 管理员功能](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi)。
+> 在创建后，Azure SQL 托管实例功能的 Azure AD 管理员已更改。 有关详细信息，请参阅[适用于 MI 的新 Azure AD 管理员功能](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi)。
 
-创建登录名后，该登录名可以连接到 SQL 数据库托管实例，但只具有授予 public 角色的权限。 考虑执行以下部分活动。
+创建登录名后，该登录名可以连接到托管实例，但只具有授予 public 角色的权限。 考虑执行以下部分活动。
 
 - 若要通过 Azure AD 登录名创建 Azure AD 用户，请参阅 [CREATE USER](../../t-sql/statements/create-user-transact-sql.md)。
 - 若要向数据库中的用户授予权限，请使用 ALTER SERVER ROLE ...ADD MEMBER 语句将用户添加到其中一个内置数据库角色或自定义角色中，或者使用 [GRANT](../../t-sql/statements/grant-transact-sql.md) 语句直接向用户授予权限。 有关详细信息，请参阅[非管理员角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users)、[其他服务器级管理角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) 和 [GRANT](grant-transact-sql.md) 语句。
@@ -601,7 +601,7 @@ GO
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Azure SQL 数据库<br />单一数据库/弹性池](create-login-transact-sql.md?view=azuresqldb-current)
+        [Azure SQL 数据库](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [Azure SQL<br />托管实例](create-login-transact-sql.md?view=azuresqldb-mi-current)
@@ -729,7 +729,7 @@ GO
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Azure SQL 数据库<br />单一数据库/弹性池](create-login-transact-sql.md?view=azuresqldb-current)
+        [Azure SQL 数据库](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [Azure SQL<br />托管实例](create-login-transact-sql.md?view=azuresqldb-mi-current)

@@ -22,12 +22,12 @@ ms.assetid: 8dfb7b16-3dac-4e1e-8c97-adf2aad07830
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: f7e5bfe755ab485b1470f2dfe066165c577de2d1
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 67428f9b61dbca0798ee868b9e89a4bf8fe25332
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381121"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823687"
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -86,7 +86,7 @@ WHERE database_id = DB_ID();
   
  ADDRESS ='next**hop**address' _\_\__  
 
- 对于 Azure SQL 数据库托管实例，`ADDRESS` 必须是本地的。
+ 对于 Azure SQL 托管实例，`ADDRESS` 必须是本地的。
 
  指定此路由的网络地址。 next_hop_address 按以下格式指定 TCP/IP 地址  ：  
   

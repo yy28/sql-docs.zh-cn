@@ -21,18 +21,18 @@ helpviewer_keywords:
 ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 59657ae7be557bfd2c9036f2cba84f3019d4cf0a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 41d77ae1b9c0763fedf2e53610bb3a0be5cd185c
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882074"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823922"
 ---
 # <a name="replication-agent-security-model"></a>复制代理安全性模式
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   用复制代理安全模式可以对复制代理运行和建立连接所用的帐户进行精细粒度的控制：可以为每个代理指定不同的帐户。 有关如何指定帐户的详细信息，请参阅[复制的标识和访问控制](../../../relational-databases/replication/security/identity-and-access-control-replication.md)。  
 
-对于 Azure SQL 数据库托管实例，复制代理安全模式有点不同，因为没有用于运行代理的 Windows 帐户。 而是必须通过 SQL Server 身份验证完成所有操作。 
+对于 Azure SQL 托管实例，复制代理安全模式有点不同，因为没有用于运行代理的 Windows 帐户。 而是必须通过 SQL Server 身份验证完成所有操作。 
   
 > [!IMPORTANT]  
 >  **sysadmin** 固定服务器角色的成员配置复制时，可以配置复制代理来模拟 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理帐户。 不指定复制代理的登录名和密码即可完成此操作；但是不推荐这种方法。 作为最佳安全做法，建议以本主题后面的“代理所需权限”部分中介绍的最小权限来为每个代理指定一个帐户。  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: e6b38724e2cb8fde7fe38a544c3f87fba3cebd45
-ms.sourcegitcommit: 48d60fe6b6991303a88936fb32322c005dfca2d8
+ms.openlocfilehash: 8a415678b777ba6142bab01bced7d7da908b2204
+ms.sourcegitcommit: 68c1dbc465898e20ec95f98cc2f14a8c9cd166a7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85352414"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051106"
 ---
 # <a name="machine-learning-extension-preview-for-azure-data-studio"></a>Azure Data Studio 的机器学习扩展（预览版）
 
@@ -30,6 +30,23 @@ ms.locfileid: "85352414"
 - 适用于 Windows、macOS 或 Linux 的 [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md)。
 
 - [R 3.5](https://www.r-project.org/)（可选）。 当前不支持 3.5 以外的其他版本。 安装 R 3.5 后，需要启用 R 并在[扩展设置](#settings)下指定 R 安装的本地路径。 仅当要管理数据库中的 R 包时，才需要此项。
+
+### <a name="trouble-installing-python-3-from-within-ads"></a>在 ADS 中安装 Python 3 时遇到问题？
+如果尝试安装 Python 3，但收到有关 TLS/SSL 的错误，请添加以下两个可选组件：
+
+示例错误：
+```
+$: ~/0.0.1/bin/python3 -m pip install --user "jupyter>=1.0.0" --extra-index-url https://prose-python-packages.azurewebsites.net
+WARNING: pip is configured with locations that require TLS/SSL, however the ssl module in Python is not available.
+Looking in indexes: https://pypi.org/simple, https://prose-python-packages.azurewebsites.net
+Requirement already satisfied: jupyter
+```
+
+安装以下内容：
+
+- [Homebrew](https://brew.sh)（可选）。 安装 homebrew，然后从命令行运行 `brew update`。
+
+- openssl（可选）。 接下来运行 `brew install openssl`。
 
 ## <a name="install-the-extension"></a>安装扩展
 

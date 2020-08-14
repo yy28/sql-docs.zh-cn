@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: afe2679e29f92d4b222067b6ab3b5220078744e1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dbd46a6a2de2e46841eb8cc7b40542d8073e82c6
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763959"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988637"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>排查连接到 SQL Server 数据库引擎时的问题
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "85763959"
 
 - 本主题不包含有关 SSPI 错误的信息。 有关 SSPI 错误，请参阅 [如何排查“无法生成 SSPI 上下文”错误消息](https://support.microsoft.com/kb/811889)。
 - 本主题不包含有关 Kerberos 错误的信息。 有关帮助，请参阅 [Microsoft Kerberos Configuration Manager for SQL Server](https://www.microsoft.com/download/details.aspx?id=39046)。
-- 本主题不包含有关 SQL Azure 连接的信息。 有关帮助，请参阅[排查 Microsoft Azure SQL 数据库的连接问题](/azure/sql-database/troubleshoot-connectivity-issues-microsoft-azure-sql-database)。
+- 本主题不包含 Azure SQL 数据库连接的相关信息。 有关帮助，请参阅[排查 Microsoft Azure SQL 数据库的连接问题](/azure/sql-database/troubleshoot-connectivity-issues-microsoft-azure-sql-database)。
 
 ## <a name="get-instance-name-from-configuration-manger"></a>在配置管理器中获取实例名称
 

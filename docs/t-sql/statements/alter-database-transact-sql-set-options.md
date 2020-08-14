@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: e06355d91e73430c203711515fb9501caebfd291
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: ea604f3144f371047c00171947c0b7ceaeaa602f
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87331987"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988393"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 选项 (Transact-SQL)
 
@@ -56,7 +56,7 @@ ms.locfileid: "87331987"
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL 数据库<br />单一数据库/弹性池](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
+        [SQL 数据库](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [SQL 数据库<br />托管实例](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
@@ -1465,7 +1465,7 @@ SET QUERY_STORE = ON
         [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* SQL 数据库<br />单一数据库/弹性池 \*_** &nbsp;
+        \* SQL 数据库 \*&nbsp;
     :::column-end:::
     :::column:::
         [SQL 数据库<br />托管实例](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
@@ -1477,7 +1477,7 @@ SET QUERY_STORE = ON
 
 &nbsp;
 
-## <a name="azure-sql-database-single-databaseelastic-pool"></a>Azure SQL 数据库单一数据库/弹性池
+## <a name="sql-database"></a>SQL 数据库
 
 兼容性级别是 `SET` 选项，但在 [ALTER DATABASE 兼容性级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)中进行了说明。
 
@@ -1831,7 +1831,7 @@ READ_WRITE
 控制用户对数据库的访问。
 
 RESTRICTED_USER     
-仅允许 `db_owner` 固定数据库角色的成员以及 `dbcreator` 和 `sysadmin` 固定服务器角色的成员连接到数据库，不过对连接数没有限制。 在 ALTER DATABASE 语句的终止子句所指定的时间范围内，所有数据库连接都将被断开。 在数据库转换到 RESTRICTED_USER 状态后，不合格用户所做的连接尝试将被拒绝。 不能使用 SQL 数据库托管实例修改 RESTRICTED_USER。
+仅允许 `db_owner` 固定数据库角色的成员以及 `dbcreator` 和 `sysadmin` 固定服务器角色的成员连接到数据库，不过对连接数没有限制。 在 ALTER DATABASE 语句的终止子句所指定的时间范围内，所有数据库连接都将被断开。 在数据库转换到 RESTRICTED_USER 状态后，不合格用户所做的连接尝试将被拒绝。 不能使用 SQL 托管实例修改 RESTRICTED_USER。
 
 MULTI_USER     
 所有拥有连接到数据库的相应权限的用户，都允许进行连接。
@@ -2357,10 +2357,10 @@ SET QUERY_STORE = ON
         [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL 数据库<br />单一数据库/弹性池](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
+        [SQL 数据库](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        **_\* SQL 数据库<br />托管实例 \*_** &nbsp;
+        \* SQL 数据库<br />托管实例 \* &nbsp;
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)
@@ -2369,7 +2369,7 @@ SET QUERY_STORE = ON
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Azure SQL 数据库托管实例
+## <a name="azure-sql-managed-instance"></a>Azure SQL 托管实例
 
 兼容性级别是 `SET` 选项，但在 [ALTER DATABASE 兼容性级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)中进行了说明。
 
@@ -2660,7 +2660,7 @@ READ_WRITE
 控制用户对数据库的访问。
 
 RESTRICTED_USER     
-仅允许 `db_owner` 固定数据库角色的成员以及 `dbcreator` 和 `sysadmin` 固定服务器角色的成员连接到数据库，不过对连接数没有限制。 在 ALTER DATABASE 语句的终止子句所指定的时间范围内，所有数据库连接都将被断开。 在数据库转换到 RESTRICTED_USER 状态后，不合格用户所做的连接尝试将被拒绝。 不能使用 SQL 数据库托管实例修改 RESTRICTED_USER。
+仅允许 `db_owner` 固定数据库角色的成员以及 `dbcreator` 和 `sysadmin` 固定服务器角色的成员连接到数据库，不过对连接数没有限制。 在 ALTER DATABASE 语句的终止子句所指定的时间范围内，所有数据库连接都将被断开。 在数据库转换到 RESTRICTED_USER 状态后，不合格用户所做的连接尝试将被拒绝。 不能使用 SQL 托管实例修改 RESTRICTED_USER。
 
 MULTI_USER     
 所有拥有连接到数据库的相应权限的用户，都允许进行连接。
@@ -3151,7 +3151,7 @@ SET QUERY_STORE = ON
         [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL 数据库<br />单一数据库/弹性池](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
+        [SQL 数据库](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [SQL 数据库<br />托管实例](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)

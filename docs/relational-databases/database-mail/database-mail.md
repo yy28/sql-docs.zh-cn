@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 9e4563dd-4799-4b32-a78a-048ea44a44c1
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 27556251ca186661928de29b8a1f6dd4ac0e9fb0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dc3af385e52e998aa8bab2d84fc117987f522ebf
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85694953"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864528"
 ---
 # <a name="database-mail"></a>数据库邮件
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  数据库邮件是一种从 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 或 [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index)发送电子邮件的企业解决方案。 通过使用数据库邮件，数据库应用程序可以向用户发送电子邮件。 邮件中可以包含查询结果，还可以包含来自网络中任何资源的文件。  
+  数据库邮件是一种从 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 或 [Azure SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index)发送电子邮件的企业解决方案。 通过使用数据库邮件，数据库应用程序可以向用户发送电子邮件。 邮件中可以包含查询结果，还可以包含来自网络中任何资源的文件。  
   
 > [!NOTE] 
-> 数据库邮件可在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 和 [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index)中使用，但不可在 Azure SQL 数据库单一实例和弹性池中使用。 
+> 数据库邮件可在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 和 [Azure SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index)中使用，但不可在 Azure SQL 数据库单一实例和弹性池中使用。 
 
 ##  <a name="benefits-of-using-database-mail"></a><a name="Benefits"></a> 使用数据库邮件的优点  
  数据库邮件旨在实现可靠性、灵活性、安全性和兼容性。  

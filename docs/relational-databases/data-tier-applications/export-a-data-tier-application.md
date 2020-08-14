@@ -23,12 +23,12 @@ ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0505a5e6c715558b34d2f1a86e88a0b7b938e7d2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 52a669c7a624b2bb88b9f392cf4ecc71be7d681a
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781708"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823961"
 ---
 # <a name="export-a-data-tier-application"></a>导出数据层应用程序
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "85781708"
 ###  <a name="permissions"></a><a name="Permissions"></a> 权限  
  导出 DAC 至少要求 ALTER ANY LOGIN 和数据库范围内的 VIEW DEFINITION 权限，以及对 **sys.sql_expression_dependencies**具有 SELECT 权限。 导出 DAC 可由 securityadmin 固定服务器角色的成员（也是从其导出 DAC 的数据库中 database_owner 固定数据库角色的成员）完成。 sysadmin 固定服务器角色的成员或名为 **sa** 的内置 SQL Server 系统管理员帐户也可以导出 DAC。
  
-在 Azure SQL DB 上，需要为每个数据库  授予对所有表或特定表的“查看定义”和“选择”权限
+在 Azure SQL 数据库上，需要为每个数据库授予对所有表或特定表的“查看定义”和“选择”权限
 
   
 ##  <a name="using-the-export-data-tier-application-wizard"></a><a name="UsingDeployDACWizard"></a> 使用“导出数据层应用程序向导”  

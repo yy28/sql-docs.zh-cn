@@ -22,12 +22,12 @@ ms.assetid: 1c321680-562e-41f1-8eb1-e7fa5ae45cc5
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: d16fcf886e074fb71a148a7f36741c1c7f0a3f74
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 7147c54dc8641697baf7ee519950ec959bf09b19
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392935"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87822502"
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT (Transact-SQL)
 
@@ -80,7 +80,7 @@ CREATE SERVER AUDIT audit_name
  TO { FILE \| APPLICATION_LOG \| SECURITY_LOG \| URL \| EXTERNAL_MONITOR }：确定审核目标的位置。 选项包括二进制文件、Windows 应用程序日志或 Windows 安全日志。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 写入到 Windows 安全日志。 有关详细信息，请参阅 [将 SQL Server 审核事件写入安全日志](../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md)。  
 
 > [!IMPORTANT]
-> 在 Azure SQL 数据库托管实例中，SQL 审核在服务器一级运行。 位置只能为 `URL` 或 `EXTERNAL_MONITOR`。
+> 在 Azure SQL 托管实例中，SQL 审核功能在服务器层级运行。 位置只能为 `URL` 或 `EXTERNAL_MONITOR`。
   
  FILEPATH ='os_file_path'  
  审核日志的路径。 文件名是基于审核名称和审核 GUID 生成的。  

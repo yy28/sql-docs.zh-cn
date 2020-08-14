@@ -1,6 +1,6 @@
 ---
 title: Azure Key Vault 中客户管理密钥的常见错误
-description: 对透明数据加密 (TDE) 和 Azure Key Vault 中客户管理密钥的常见错误进行故障排除。
+description: 了解如何使用 Azure Key Vault 中的透明数据加密 (TDE) 和客户管理的密钥来识别和解决访问问题及常见错误。
 ms.custom: seo-lt-2019
 helpviewer_keywords:
 - troublshooting, tde akv
@@ -14,16 +14,17 @@ ms.topic: conceptual
 ms.date: 11/06/2019
 ms.author: jaszymas
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 8ec410ba98be0c1893f376daf596a0746983b87d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 16368fe948d2cefeb052d503385c99cedfb097ff
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76909897"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87899008"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>使用 Azure Key Vault 中的客户托管密钥进行透明数据加密的常见错误
 
-[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md.md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
+[!INCLUDE[asdb-asdbmi-asa](../../../includes/applies-to-version/asdb-asdbmi-asa.md)]
+
 本文介绍了如何发现和解决 Azure Key Vault 密钥访问问题，这些问题导致配置为[结合使用透明数据加密 (TDE) 和 Azure Key Vault 中的客户托管密钥](/azure/sql-database/transparent-data-encryption-byok-azure-sql)的数据库变得无法访问。
 
 ## <a name="introduction"></a>介绍

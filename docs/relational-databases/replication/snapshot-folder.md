@@ -13,12 +13,12 @@ ms.assetid: 3eb1b73f-ddb3-4d09-be6e-811c414698e9
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d66be3ee4f5d4a5eb7237dbec55160b4d263d626
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 21fe129f15022532e9e7c8613159cfc7617fd6e4
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767621"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864864"
 ---
 # <a name="snapshot-folder"></a>快照文件夹
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -27,14 +27,14 @@ ms.locfileid: "85767621"
   
 快照文件夹只是指定共享的目录。向此文件夹中执行读写操作的代理必须对其具有足够的访问权限。 有关正确保护文件夹的详细信息，请参阅[保护快照文件夹](../../relational-databases/replication/security/secure-the-snapshot-folder.md)。 在实现复制之前，请测试复制代理是否能够连接到快照文件夹。 以每个代理所使用的帐户登录，再尝试访问快照文件夹。  
 
-对于 Azure SQL 数据库托管实例，快照文件夹必须为 Azure 文件共享。 
+对于 Azure SQL 托管实例，快照文件夹必须为 Azure 文件共享。 
   
 ## <a name="options"></a>选项  
  **快照文件夹**  
  输入用来存储快照文件的文件夹的路径。  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建议您将网络共享作为快照文件夹的位置。 其他计算机上的代理无法访问本地路径（以驱动器号开头的路径，如 C:\\）。  
+> [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建议您将网络共享作为快照文件夹的位置。 其他计算机上的代理无法访问本地路径（以驱动器号开头的路径，如 C:\\）。  
   
 ## <a name="see-also"></a>另请参阅  
  [修改快照选项](../../relational-databases/replication/snapshot-options.md)   

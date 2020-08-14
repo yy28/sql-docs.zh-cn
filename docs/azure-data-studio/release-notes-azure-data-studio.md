@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
 ms.date: 07/17/2020
-ms.openlocfilehash: b064c24ff7717fc5a03ee1413b1e85fbb71530dc
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 4a8f50b7a6558974c79f01f3d157715890beeb82
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411258"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988559"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 发行说明
 
@@ -47,7 +47,7 @@ ms.locfileid: "87411258"
 | 新增了功能教程 | 用户现可从欢迎页面和命令面板中启动一个功能教程，查看“连接 viewlet”、“笔记本 viewlet”和“扩展市场”等常用功能的演练 |
 | 新笔记本功能 | &bull; &nbsp; Markdown 工具栏中的标头支持<br/> &bull; &nbsp; 文本单元格中的并排 Markdown 预览
 | 在查询编辑器中拖放列和表 | 用户现可将连接 viewlet 中的列和表直接拖放到查询编辑器中 |
-| 在活动栏中添加了 Azure 帐户图标 | 更易发现以用于登录 Azure |
+| 在活动栏中添加了 Azure 帐户图标 | 用户现可轻松了解在何处登录到 Azure |
 | 解决了 Bug 和问题 | 若要查看完整的修复内容列表，请参阅 [GitHub 上的 Bug 和问题](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22July+2020+Release%22+is%3Aclosed)。 |
 | &nbsp; | &nbsp; |
 
@@ -60,7 +60,7 @@ ms.locfileid: "87411258"
 
 | 更改 | 详细信息 |
 | :----- | :------ |
-| 向 Azure 门户集成添加了 Azure Data Studio | 用户现在可以通过 Azure SQL DB 连接、Azure Postgres 等途径直接启动 Azure 门户。 |
+| 向 Azure 门户集成添加了 Azure Data Studio | 用户现可通过 Azure SQL 数据库连接和 Azure Postgres 等途径直接转到 Azure 门户。 |
 | 新笔记本功能 | &bull; &nbsp; 新建笔记本工具栏 <br/> &bull; &nbsp; 新建编辑单元格工具栏 <br/> &bull; &nbsp; Python 依赖项向导 UX 更新 <br/> &bull; &nbsp; 缩减了笔记本之间的间距 |
 | 发布 SQL 评估 API 扩展 | 此扩展在 ADS 中添加了 SQL Server 的最佳做法评估。 它公开了 SQL 评估 API（以前仅在 PowerShell SqlServer 模块和 SMO 中可用），让你可评估 SQL Server 实例，并接收 SQL Server 团队对它们的建议。 在[本文](https://docs.microsoft.com/sql/sql-assessment-api/sql-assessment-api-overview?view=sql-server-ver15)中了解 SQL 评估 API 及其功能的详细信息。 |
 | [机器学习扩展改进](https://go.microsoft.com/fwlink/?linkid=2129918) | 现在支持 Azure SQL 托管实例。 |
@@ -489,7 +489,7 @@ ms.locfileid: "87411258"
 
 ### <a name="bug-fixes-november-2018"></a>Bug 修复，2018 年 11 月
 
-- 修复[问题 #2933](https://github.com/Microsoft/azuredatastudio/issues/2933)：丢失到 Azure SQL DB 的连接
+- 修复[问题 #2933](https://github.com/Microsoft/azuredatastudio/issues/2933)：断开与 Azure SQL 数据库的连接
 - 修复[问题 #2914](https://github.com/Microsoft/azuredatastudio/issues/2914)：扩展 OE 数据库节点时的“无效参数”异常
 - 修复[问题 #2935](https://github.com/Microsoft/azuredatastudio/pull/2935)：在查询结果中正确地显示多行消息
 - 修复[问题 #2906](https://github.com/Microsoft/azuredatastudio/pull/2906)：修复表名称包含特殊字符时的“编辑数据”文档名称
@@ -546,7 +546,7 @@ Azure Data Studio（以前为 SQL Operations Studio）的正式发布版。
 | :----- | :------ |
 | 对 SQL Server 2019 预览功能的支持，包括[大数据群集](../big-data-cluster/big-data-cluster-overview.md)支持。 | 连接到 SQL Server 2019 预览版随附的 HDFS/Spark 网关。<br/><br/>浏览 HDFS、上传文件、保存文件和启动有用的操作，例如适用于 CSV 文件的“在笔记本中分析”操作。<br/><br/>从仪表板提交 Spark 作业，或在对象资源管理器中右键单击 HDFS/Spark 连接。 |
 | Azure Data Studio 笔记本。 | 使用集成的笔记本查看器创建或打开笔记本。 在此版本中，笔记本查看器仅支持连接到本地内核和 SQL Server 2019 大数据群集。<br/><br/>使用笔记本中的 PROSE 代码加速器库来了解文件格式和数据类型，以便快速完成数据准备。 |
-| Azure 资源浏览器。 | 利用 Azure 资源浏览器视图，可以浏览 Azure 帐户的数据相关终结点，并在对象资源管理器中创建到它们的连接。 此版本支持 Azure SQL 数据库和服务器。 |
+| Azure 资源浏览器。 | 利用 Azure 资源浏览器视图，可以浏览 Azure 帐户的数据相关终结点，并在对象资源管理器中创建到它们的连接。 此版本支持 Azure SQL 数据库。 |
 | SQL Server PolyBase 创建外部表向导。 | 使用易于使用的向导创建外部表及其支持元数据结构。 此版本支持远程 SQL Server 和 Oracle 服务器。 |
 | &nbsp; | &nbsp; |
 

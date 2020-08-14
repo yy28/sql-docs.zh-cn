@@ -14,12 +14,12 @@ helpviewer_keywords: ''
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 27649f57640f6a4575ab9465525e1a89e504da5b
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 5edf147637d7e9e9ca94c4e1daa53f9beabaeb4f
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113213"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988397"
 ---
 # <a name="title-transact-sql"></a>标题 (Transact-SQL)
 
@@ -38,7 +38,7 @@ ms.locfileid: "87113213"
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL 数据库<br />单一数据库/弹性池](pick-a-product-template.md?view=azuresqldb-current)
+        [SQL 数据库](pick-a-product-template.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [SQL 数据库<br />托管实例](pick-a-product-template.md?view=azuresqldb-mi-current)
@@ -61,7 +61,7 @@ ms.locfileid: "87113213"
         [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* SQL 数据库<br />单一数据库/弹性池 \*_** &nbsp;
+        \* SQL 数据库 \*&nbsp;
     :::column-end:::
     :::column:::
         [SQL 数据库<br />托管实例](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
@@ -73,7 +73,7 @@ ms.locfileid: "87113213"
 
 &nbsp;
 
-## <a name="azure-sql-database-single-databaseelastic-pool"></a>Azure SQL 数据库单一数据库/弹性池
+## <a name="sql-database"></a>SQL 数据库
 
 
 
@@ -85,10 +85,10 @@ ms.locfileid: "87113213"
         [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL 数据库<br />单一数据库/弹性池](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
+        [SQL 数据库](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        **_\* SQL 数据库<br />托管实例 \*_** &nbsp;
+        \* SQL 数据库<br />托管实例 \* &nbsp;
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)
@@ -97,9 +97,7 @@ ms.locfileid: "87113213"
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Azure SQL 数据库托管实例
-
-
+## <a name="azure-sql-managed-instance"></a>Azure SQL 托管实例
 
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
@@ -109,7 +107,7 @@ ms.locfileid: "87113213"
         [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL 数据库<br />单一数据库/弹性池](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
+        [SQL 数据库](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [SQL 数据库<br />托管实例](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)

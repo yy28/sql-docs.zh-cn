@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e0dc290a3e514d8de7a63a6afb4a0ed6453b6107
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 568a3824405798cf7fc23f9dc0b28f6b43d0fff9
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332506"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864408"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -941,7 +941,7 @@ WHERE r.command LIKE 'BACKUP%'
         [SQL Server](backup-transact-sql.md?view=sql-server-2016)
     :::column-end:::
     :::column:::
-        \* SQL 数据库<br />托管实例 \*&nbsp;
+        \* SQL 数据库<br />托管实例 \* &nbsp;
     :::column-end:::
     :::column:::
         [Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)
@@ -950,9 +950,9 @@ WHERE r.command LIKE 'BACKUP%'
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Azure SQL 数据库托管实例
+## <a name="azure-sql-managed-instance"></a>Azure SQL 托管实例
 
-备份 Azure SQL 数据库托管实例中放置/托管的 SQL 数据库。 SQL 数据库[托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)提供自动备份，可让用户创建完整的数据库 `COPY_ONLY` 备份。 不支持差异、日志和文件快照备份。
+备份 Azure SQL 托管实例中放置/托管的 SQL 数据库。 SQL [托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)提供自动备份，允许用户创建完整的数据库 `COPY_ONLY` 备份。 不支持差异、日志和文件快照备份。
 
 ## <a name="syntax"></a>语法
 
@@ -990,12 +990,12 @@ BACKUP DATABASE { database_name | @database_name_var }
 
 ## <a name="arguments"></a>参数
 
-DATABASE 指定一个完整数据库备份。 在数据库备份过程中，托管实例会备份足够多的事务日志，以便在还原备份时生成一致的数据库。
+DATABASE 指定一个完整数据库备份。 在数据库备份过程中，Azure SQL 托管实例会备份足够多的事务日志，以便在还原备份时生成一致的数据库。
 
 > [!IMPORTANT]
-> 在托管实例上创建的数据库备份只能在另一个托管实例上还原。 无法将其还原到 SQL Server 本地实例（类似于无法将 SQL Server 2016 数据库的备份还原到 SQL Server 2012 实例）。
+> 在托管实例上创建的数据库备份只能在另一个 Azure SQL 托管实例上还原。 无法将其还原到 SQL Server 本地实例（类似于无法将 SQL Server 2016 数据库的备份还原到 SQL Server 2012 实例）。
 
-还原由 BACKUP DATABASE（“数据备份”）创建的备份时，将还原整个备份。 若要从 Azure SQL 数据库托管实例自动备份还原，请参阅[将数据库还原为托管实例](/azure/sql-database/sql-database-managed-instance-get-started-restore)。
+还原由 BACKUP DATABASE（“数据备份”）创建的备份时，将还原整个备份。 若要从 SQL 托管实例自动备份还原，请参阅[将数据库还原为托管实例](/azure/sql-database/sql-database-managed-instance-get-started-restore)。
 
 { database_name | @database\_name\_var } 是备份完整的数据库时所用的源数据库。 如果作为变量 (@database\_name\_var) 提供，则可以将此名称指定为字符串常量 (@database\_name\_var=databasename) 或指定为字符串数据类型（ntext 或 text 数据类型除外）的变量。
 
@@ -1097,7 +1097,7 @@ STATS [ = percentage ] 每当另一个 percentage 完成时显示一条消息，
 
 STATS 选项报告截止报告下一个间隔的阈值时的完成百分比。 这是指定百分比的近似值；例如，当 STATS=10 时，如果完成进度为 40%，则该选项可能显示 43%。 对于较大的备份集，这不是问题，因为完成百分比在已完成的 I/O 调用之间变化非常缓慢。
 
-## <a name="limitations-for-sql-database-managed-instance"></a>SQL 数据库托管实例的限制
+## <a name="limitations-for-sql-managed-instance"></a>SQL 托管实例的限制
 
 最大备份带状线大小为 195 GB（最大 blob 大小）。 增加备份命令中的带状线数量以缩小单个带状线大小，将其保持在限制范围内。
 

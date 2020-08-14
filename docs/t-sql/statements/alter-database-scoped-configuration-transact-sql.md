@@ -24,12 +24,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest|| = sqlallproducts-allversions
-ms.openlocfilehash: 3812f2f7e2f41259416147e969ceb90e395b5bbb
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 698048be11f3514762f27c23ec16bf4ef18041a5
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279493"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864478"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -350,7 +350,7 @@ GLOBAL_TEMPORARY_TABLE_AUTO_DROP **=** { **ON** | OFF }
 允许为[全局临时表](../../t-sql/statements/create-table-transact-sql.md#temporary-tables)设置自动删除功能。 默认值为 ON，这意味着如果没有任何会话使用全局临时表，系统会自动删除该表。 如果设置为 OFF，需要使用 DROP TABLE 语句显式删除或将在服务器重启时自动删除该表。
 
 - 使用 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 单一数据库和弹性池，可以在 SQL 数据库服务器的单个用户数据库中设置此选项。
-- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 托管实例中，要在 `TempDB` 中设置此选项且单个用户数据库的设置不起作用。
+- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Azure SQL 托管实例中，此选项在 `TempDB` 中进行设置，且单个用户数据库的设置不起作用。
 
 <a name="lqp"></a>
 

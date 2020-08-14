@@ -12,12 +12,12 @@ ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: db339d9063378b29f6902f7e52e3006ac57295b7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 60acfdfb738542c39c5974691811c482e36b9f9e
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85776079"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863319"
 ---
 # <a name="altering-memory-optimized-tables"></a>更改内存优化表
 
@@ -26,7 +26,7 @@ ms.locfileid: "85776079"
 可以使用 ALTER TABLE 语句来更改内存优化表的架构和索引。 在 SQL Server 2016 和 Azure SQL 数据库中，对内存优化表的 ALTER TABLE 操作属于 OFFLINE，表示操作正在进行时，表格不能用于查询。 数据库应用程序可以继续运行，并且访问该表的任何操作都将被阻止，直到更改过程完成。 可以将多个 ADD、DROP 或 ALTER 操作合并为单个 ALTER TABLE 语句。
 
 > [!IMPORTANT]
-> Azure SQL 数据库托管实例不支持常规用途服务层中的内存优化表。
+> Azure SQL 托管实例不支持常规用途服务层中的内存优化表。
   
 ## <a name="alter-table"></a>ALTER TABLE  
 

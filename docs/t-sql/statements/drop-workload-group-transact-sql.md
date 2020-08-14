@@ -17,12 +17,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: d5aa9af5ae45e962ff130d7de18d62417a0b3987
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 07fb87822e638e879287d556434172f8b436d998
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111037"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864306"
 ---
 # <a name="drop-workload-group-transact-sql"></a>DROP WORKLOAD GROUP (Transact-SQL)
 
@@ -44,7 +44,7 @@ ms.locfileid: "87111037"
 
 &nbsp;
 
-## <a name="sql-server-and-sql-database-managed-instance"></a>SQL Server 和 SQL 数据库托管实例
+## <a name="sql-server-and-sql-managed-instance"></a>SQL Server 和 SQL 托管实例
 
 [!INCLUDE [DROP WORKLOAD GROUP](../../includes/drop-workload-group.md)]
   
@@ -56,7 +56,7 @@ ms.locfileid: "87111037"
         [SQL Server](drop-workload-group-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* SQL 数据库<br />托管实例 \*_** &nbsp;
+        \* SQL 数据库<br />托管实例 \* &nbsp;
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](drop-workload-group-transact-sql.md?view=azure-sqldw-latest)
@@ -65,7 +65,7 @@ ms.locfileid: "87111037"
 
 &nbsp;
 
-##  <a name="sql-server-and-sql-database-managed-instance"></a>SQL Server 和 SQL 数据库托管实例
+##  <a name="sql-server-and-sql-managed-instance"></a>SQL Server 和 SQL 托管实例
 
 [!INCLUDE [DROP WORKLOAD GROUP](../../includes/drop-workload-group.md)]
 

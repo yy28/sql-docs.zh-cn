@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 93085324-ebaa-4e38-aac8-5e57b4b0d36d
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: c1bf9d7182e7547a69e7b5cd634c07ff2130c9cc
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: e3058e60f1ff0ed5ab519cf1ef5873df27faa075
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485543"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87877857"
 ---
 # <a name="dbcc-traceon-transact-sql"></a>DBCC TRACEON (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -64,7 +64,7 @@ WITH NO_INFOMSGS
   
 开启影响查询计划的跟踪标志后，执行 `DBCC FREEPROCCACHE;`，以便使用新的影响计划的行为重新编译缓存计划。
 
-Azure SQL 数据库托管实例支持以下全局跟踪标志：460、2301、2389、2390、2453、2467、7471、8207、9389、10316 和 11024
+Azure SQL 托管实例支持以下全局跟踪标志：460、2301、2389、2390、2453、2467、7471、8207、9389、10316 和 11024
 
 ## <a name="result-sets"></a>结果集  
  DBCC TRACEON 返回以下结果集（消息）：  

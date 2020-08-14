@@ -40,12 +40,12 @@ ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4ba782e0a2eee78e6f308ffee0d493fbac2032ce
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 089265151307a72e2f029d016df216e077c2dd88
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113228"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864330"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 语句 (Transact-SQL)
 
@@ -739,7 +739,7 @@ RESTORE DATABASE Sales
         [SQL Server](restore-statements-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\*SQL 数据库<br />托管实例\*_**
+        _\*SQL 数据库<br />托管实例 \*_ 
     :::column-end:::
     :::column:::
         [Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
@@ -748,7 +748,7 @@ RESTORE DATABASE Sales
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Azure SQL 数据库托管实例
+## <a name="azure-sql-managed-instance"></a>Azure SQL 托管实例
 
 运行此命令，可通过 Azure Blob 存储帐户从完整数据库备份（完整还原）还原整个数据库。
 
@@ -760,7 +760,7 @@ RESTORE DATABASE Sales
 - [RESTORE VERIFYONLY (Transact-SQL)](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)
 
 > [!IMPORTANT]
-> 若要从 Azure SQL 数据库托管实例自动备份还原，请参阅 [SQL 数据库还原](https://docs.microsoft.com/azure/sql-database/sql-database-recovery-using-backups)。
+> 若要从 SQL 托管实例自动备份还原，请参阅 [SQL 数据库还原](https://docs.microsoft.com/azure/sql-database/sql-database-recovery-using-backups)。
 
 ## <a name="syntax"></a>语法
 
@@ -802,17 +802,17 @@ RESTORE 操作是异步的，即使客户端连接中断，还原也会继续运
 - 如果源 .bak 文件中不存在内存优化文件组，则会添加一个，并将其命名为 XTP。 任何现有内存优化文件组都会重命名为 XTP
 - SINGLE_USER 和 RESTRICTED_USER 选项会转换为 MULTI_USER
 
-## <a name="limitations---sql-database-managed-instance"></a>限制 - SQL 数据库托管实例
+## <a name="limitations---sql-managed-instance"></a>限制 - SQL 托管实例
 
 这些限制包括：
 
 - 无法还原包含多个备份集的 .BAK 文件。
 - 无法还原包含多个日志文件的 .BAK 文件。
 - 如果 .bak 中包含 FILESTREAM 数据，则还原将失败。
-- 如果备份中包含的数据库具有活动的内存中对象，则该备份无法还原到常规用途托管实例。
+- 如果备份中包含的数据库具有活动的内存中对象，则该备份无法还原到常规用途性能层。
 - 如果备份包含处于只读模式的数据库，则该备份当前无法还原。 此限制很快就会取消。
 
-有关详细信息，请参阅[托管实例](/azure/sql-database/sql-database-managed-instance)
+有关详细信息，请参阅 [Azure SQL 托管实例](/azure/sql-database/sql-database-managed-instance)
 
 ## <a name="restoring-an-encrypted-database"></a>还原加密数据库
 若要还原已加密的数据库，您必须有权访问用于对数据库进行加密的证书或非对称密钥。 如果没有证书或非对称密钥，数据库将无法还原。 因此，只要需要该备份，就必须保留用于对数据库加密密钥进行加密的证书。 有关详细信息，请参阅 [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)。

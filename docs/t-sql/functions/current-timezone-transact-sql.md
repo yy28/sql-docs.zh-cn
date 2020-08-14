@@ -24,21 +24,21 @@ helpviewer_keywords:
 - CURRENT_TIMEZONE function [SQL Server]
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 760da1491a7fbf4633cb02fe1fea8568e7ab9fa1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fb06761f06f315191234e5166f098182c515cd97
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85684491"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988824"
 ---
 # <a name="current_timezone-transact-sql"></a>CURRENT_TIMEZONE (Transact-SQL)
 
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-此函数返回由服务器或实例观察到的时区的名称。 对于 SQL 数据库托管实例，返回值是根据实例创建期间分配的实例本身的时区返回，而不是根据基础操作系统的时区返回。
+此函数返回由服务器或实例观察到的时区的名称。 对于 SQL 托管实例，返回值基于实例创建期间它本身获得的时区，而不是基于基础操作系统的时区。
   
 > [!NOTE]  
-> 对于单一 SQL 数据库和共用 SQL 数据库，时区始终设置为 UTC，并且 `CURRENT_TIMEZONE` 返回 UTC 时区的名称。
+> 对于 SQL 数据库，时区始终设置为 UTC，`CURRENT_TIMEZONE` 返回 UTC 时区的名称。
   
 ## <a name="syntax"></a>语法  
   
@@ -71,6 +71,6 @@ SELECT CURRENT_TIMEZONE();
   
 ## <a name="see-also"></a>另请参阅
 
-[SQL 数据库托管实例时区](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-timezone)
+[SQL 托管实例时区](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-timezone)
 
 [CURRENT_TIMEZONE_ID()](https://docs.microsoft.com/sql/t-sql/functions/current-timezone-id-transact-sql)

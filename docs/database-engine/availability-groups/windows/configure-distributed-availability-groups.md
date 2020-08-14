@@ -1,6 +1,6 @@
 ---
 title: 配置分布式可用性组
-description: '介绍如何创建和配置 Always On 分布式可用性组。 '
+description: 了解如何使用 Transact-SQL 示例配置分布式可用性组。 还可了解如何查找分布式可用性组的相关信息。
 ms.custom: seodec18
 ms.date: 01/28/2020
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d5bd6d960b30d6c6b261de96ba93ae558e71e866
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 629aceee12a89498d763fde2d3510f69e0cde452
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896133"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565261"
 ---
 # <a name="configure-an-always-on-distributed-availability-group"></a>配置 Always On 分布式可用性组  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "85896133"
 
 有关分布式可用性组的技术概述，请参阅[分布式可用性组](distributed-availability-groups.md)。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 ### <a name="set-the-endpoint-listeners-to-listen-to-all-ip-addresses"></a>设置终结点侦听程序以侦听所有 IP 地址
 
@@ -59,7 +59,7 @@ GO
 ## <a name="create-first-availability-group"></a>创建第一个可用性组
 
 ### <a name="create-the-primary-availability-group-on-the-first-cluster"></a>在第一个群集上创建主要可用性组  
-在第一个 Windows Server 故障转移群集 (WSFC) 上创建可用性组。   在此示例中，将用于数据库 `ag1` 的可用性组命令为 `db1`。 主可用性组的主要副本在分布式可用性组中称为全局主要副本  。 Server1 是此示例中的全局主要副本。        
+在第一个 Windows Server 故障转移群集 (WSFC) 上创建可用性组。   在此示例中，将用于数据库 `ag1` 的可用性组命令为 `db1`。 主可用性组的主要副本在分布式可用性组中称为全局主要副本****。 Server1 是此示例中的全局主要副本。        
   
 ```sql  
 CREATE AVAILABILITY GROUP [ag1]   
@@ -81,10 +81,10 @@ GO
 ```  
   
 >[!NOTE]
->上述示例使用自动种子设定，其中 SEEDING_MODE 设置为 AUTOMATIC，用于副本和分布式可用性组   。 此配置将设置次要副本和次要可用性组自动填充，而无需手动备份和还原主要数据库。  
+>上述示例使用自动种子设定，其中 SEEDING_MODE 设置为 AUTOMATIC，用于副本和分布式可用性组********。 此配置将设置次要副本和次要可用性组自动填充，而无需手动备份和还原主要数据库。  
   
 ### <a name="join-the-secondary-replicas-to-the-primary-availability-group"></a>将次要副本联接到主要可用性组  
-任何次要副本都必须使用 **JOIN** 选项联接到具有 **ALTER AVAILABILITY GROUP** 的可用性组。 由于在此示例中使用了自动种子设定，因此也必须调用具有 GRANT CREATE ANY DATABASE 选项的 ALTER AVAILABILITY GROUP   。 此设置允许可用性组创建数据库并开始从主要副本自动进行种子设定。  
+任何次要副本都必须使用 **JOIN** 选项联接到具有 **ALTER AVAILABILITY GROUP** 的可用性组。 由于在此示例中使用了自动种子设定，因此也必须调用具有 GRANT CREATE ANY DATABASE 选项的 ALTER AVAILABILITY GROUP********。 此设置允许可用性组创建数据库并开始从主要副本自动进行种子设定。  
   
 在此示例中，在次要副本 `server2`上运行以下命令，以联接 `ag1` 可用性组。 允许可用性组在次要副本上创建数据库。  
   
@@ -111,7 +111,7 @@ GO
   
 
 ## <a name="create-second-availability-group"></a>创建第二个可用性组  
- 然后，在第二个 WSFC 上创建次要可用性组 `ag2`。 在这种情况下，不会指定数据库，因为它会自动从主要可用性组进行种子设定。  辅助可用性组的主要副本在分布式可用性组中称为转发器  。 在此示例中，server3 是转发器。 
+ 然后，在第二个 WSFC 上创建次要可用性组 `ag2`。 在这种情况下，不会指定数据库，因为它会自动从主要可用性组进行种子设定。  辅助可用性组的主要副本在分布式可用性组中称为转发器****。 在此示例中，server3 是转发器。 
   
 ```sql  
 CREATE AVAILABILITY GROUP [ag2]   
@@ -153,7 +153,7 @@ GO
 ```  
   
 ## <a name="create-distributed-availability-group-on-first-cluster"></a>在第一个群集上创建分布式可用性组  
- 在第一个 WSFC 上创建分布式可用性组（此示例中命名为 `distributedag` ）。 使用具有 **DISTRIBUTED** 选项的 **CREATE AVAILABILITY GROUP** 命令。 AVAILABILITY GROUP ON 参数指定了成员可用性组、`ag1` 和 `ag2`。  
+ 在第一个 WSFC 上创建分布式可用性组（此示例中命名为 `distributedag` ）。 使用具有 **DISTRIBUTED** 选项的 **CREATE AVAILABILITY GROUP** 命令。 AVAILABILITY GROUP ON 参数指定了成员可用性组、`ag1` 和 `ag2`****。  
   
 ```sql  
 CREATE AVAILABILITY GROUP [distributedag]  
@@ -236,7 +236,7 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];
 
 以下 Transact-SQL 示例演示了对名为 `distributedag` 的分布式可用性组进行故障转移的详细步骤：
 
-1. 若要确保不会丢失任何数据，请停止全局主数据库（即主可用性组的数据库）上的所有事务。 然后，将分布式可用性组设置为同步提交，方法为同时在全局主数据库和转发器上运行以下代码  。   
+1. 若要确保不会丢失任何数据，请停止全局主数据库（即主可用性组的数据库）上的所有事务。 然后，将分布式可用性组设置为同步提交，方法为同时在全局主数据库和转发器上运行以下代码。   
     
       ```sql  
       -- sets the distributed availability group to synchronous commit 
@@ -311,7 +311,7 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];
      INNER JOIN sys.availability_groups ag ON drs.group_id = ag.group_id;
     ```  
 
-    当每个数据库的两个可用性组的 last_hardened_lsn 相同时，可用性组即可进行故障转移  。 如果在一段时间后 last_hardened_lsn 不同，则为了避免数据丢失，请在全局主数据库上运行此命令以故障回复到全局主数据库，然后从第二步重新开始： 
+    当每个数据库的两个可用性组的 last_hardened_lsn 相同时，可用性组即可进行故障转移。 如果在一段时间后 last_hardened_lsn 不同，则为了避免数据丢失，请在全局主数据库上运行此命令以故障回复到全局主数据库，然后从第二步重新开始： 
 
     ```sql
     -- If the last_hardened_lsn is not the same after a period of time, to avoid data loss, 

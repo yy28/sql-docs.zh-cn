@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9068f7e2807c4883dc94094cd67d23ec04cf6a0a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c7936a8f83bf110592e142f0ff7d033233592c64
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915078"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863370"
 ---
 # <a name="ole-db-connection-manager"></a>OLE DB 连接管理器
 
@@ -87,10 +87,10 @@ OLE DB 连接管理器还用于在以使用 C++ 等语言的非托管代码编�
  选择一个数据连接，然后通过选择“删除”  来删除该连接。  
   
 #### <a name="managed-identities-for-azure-resources-authentication"></a>Azure 资源身份验证的托管标识
-在 [Azure 数据工厂中的 Azure-SSIS 集成运行时](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime)上运行 SSIS 包时，可以使用与数据工厂关联的[托管标识](https://docs.microsoft.com/azure/data-factory/connector-azure-sql-database#managed-identity)进行 Azure SQL 数据库（或托管实例）身份验证。 指定的工厂可以使用此标识访问数据库数据或从/向数据库复制数据。
+在 [Azure 数据工厂中的 Azure-SSIS 集成运行时](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime)上运行 SSIS 包时，可以使用与数据工厂关联的[托管标识](https://docs.microsoft.com/azure/data-factory/connector-azure-sql-database#managed-identity)进行 Azure SQL 数据库或托管实例身份验证。 指定的工厂可以使用此标识访问数据库数据或从/向数据库复制数据。
 
 > [!NOTE]
->  使用 Azure Active Directory (Azure AD) 身份验证（包括托管标识身份验证）连接到 Azure SQL 数据库（或托管实例）时，可能遇到与包执行失败或意外行为变更有关的问题。 有关详细信息，请参阅 [Azure AD 功能和限制](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication#azure-ad-features-and-limitations)。
+>  使用 Azure Active Directory (Azure AD) 身份验证（包括托管标识身份验证）连接到 Azure SQL 数据库或托管实例时，可能遇到与包执行失败或意外行为变更有关的问题。 有关详细信息，请参阅 [Azure AD 功能和限制](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication#azure-ad-features-and-limitations)。
 
 要对 Azure SQL 数据库使用托管身份验证，请按照以下步骤配置数据库：
 
@@ -108,7 +108,7 @@ OLE DB 连接管理器还用于在以使用 C++ 等语言的非托管代码编�
     EXEC sp_addrolemember [role name], [your data factory name];
     ```
 
-要对 Azure SQL 数据库托管实例使用托管身份验证，请按照以下步骤配置数据库：
+要对 Azure SQL 托管实例使用托管身份验证，请按照以下步骤配置数据库：
     
 1. 在 Azure 门户上为托管实例[预配 Azure Active Directory 管理员](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance)（如果尚未执行该操作）。 Azure AD 管理员可以是 Azure AD 用户或 Azure AD 组。 如果为具有托管标识的组授予管理员角色，请跳过步骤 2-4。 管理员将拥有对数据库的完全访问权限。
 

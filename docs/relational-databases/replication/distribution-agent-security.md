@@ -15,12 +15,12 @@ ms.assetid: de40cc21-2e58-4464-9be7-b5b90c925e9b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: e664b1d96683d33ea9ffdc7cf38a5de0fe72a84e
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 3322ef185178ab2254066281d9f6f6a6c85611da
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111056"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87862951"
 ---
 # <a name="distribution-agent-security"></a>分发代理安全性
 ::: moniker range=">=sql-server-2016||=sqlallproducts-allversions" 
@@ -161,7 +161,7 @@ Persist Security Info=False;Connection Pooling=True;
  字符串中的大多数选项都特定于正在配置的 DB2 服务器，但是应始终将“将二进制数作为字符处理”  选项设置为 **False**。 需要为“初始目录”  选项指定一个值以标识订阅数据库。 有关详细信息，请参阅 [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [使用 Azure SQL 数据库进行事务复制](/azure/sql-database/sql-database-managed-instance-transactional-replication) [为托管实例配置复制](/azure/sql-database/replication-with-sql-database-managed-instance)
+ [使用 Azure SQL 数据库进行事务复制](/azure/sql-database/sql-database-managed-instance-transactional-replication) [为 Azure SQL 托管实例配置复制](/azure/sql-database/replication-with-sql-database-managed-instance)
 ::: moniker-end
 
 

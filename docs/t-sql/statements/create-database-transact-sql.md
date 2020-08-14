@@ -37,12 +37,12 @@ ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ad86aa823fc10827e8f0d11aaf36ae10fc0622bf
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: aee1c65fb03dcbf192c3f33fc4750bf496b05c77
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112551"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988212"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -61,7 +61,7 @@ ms.locfileid: "87112551"
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL 数据库<br />单一数据库/弹性池](create-database-transact-sql.md?view=azuresqldb-current)
+        [SQL 数据库](create-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [SQL 数据库<br />托管实例](create-database-transact-sql.md?view=azuresqldb-mi-current)
@@ -867,7 +867,7 @@ GO
         [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\*SQL 数据库<br />单一数据库/弹性池\*_**
+        \* SQL 数据库 \*
     :::column-end:::
     :::column:::
         [SQL 数据库<br />托管实例](create-database-transact-sql.md?view=azuresqldb-mi-current)
@@ -882,11 +882,11 @@ GO
 
 &nbsp;
 
-## <a name="azure-sql-database-single-databaseelastic-pool"></a>Azure SQL 数据库单一数据库/弹性池
+## <a name="sql-database"></a>SQL 数据库
 
 ## <a name="overview"></a>概述
 
-在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 单一数据库/弹性池中，此语句可与 Azure SQL 服务器一起使用，以在弹性池中创建单一数据库或数据库。 使用此语句，可以指定数据库名称、排序规则、最大大小、版本、服务目标以及新数据库的弹性池（如果适用）。 它还可用于在弹性池中创建数据库。 此外，它还可用于在其他 SQL 数据库服务器上创建数据库的副本。
+在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，此语句可与 Azure SQL 服务器一起使用，从而创建单一数据库或在弹性池中创建数据库。 使用此语句，可以指定数据库名称、排序规则、最大大小、版本、服务目标以及新数据库的弹性池（如果适用）。 它还可用于在弹性池中创建数据库。 此外，它还可用于在其他 SQL 数据库服务器上创建数据库的副本。
 
 ## <a name="syntax"></a>语法
 
@@ -973,7 +973,7 @@ CATALOG_COLLATION 指定元数据目录的默认排序规则。 *DATABASE_DEFAUL
 
 EDITION 指定数据库的服务层。
 
-单一数据库/弹性池上的单一数据库和入池数据库。 可用值有：'Basic'、'Standard'、'Premium'、'GeneralPurpose'、'BusinessCritical' 和 'Hyperscale'。
+单一数据库和共用数据库。 可用值有：'Basic'、'Standard'、'Premium'、'GeneralPurpose'、'BusinessCritical' 和 'Hyperscale'。
 
 MAXSIZE 指定数据库的最大大小。 MAXSIZE 必须对指定 EDITION（服务层）有效。下面是服务层支持的 MAXSIZE 值和默认值 (D)。
 
@@ -1273,10 +1273,10 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = '
         [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL 数据库<br />单一数据库/弹性池](create-database-transact-sql.md?view=azuresqldb-current)
+        [SQL 数据库](create-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        **_\*SQL 数据库<br />托管实例\*_**
+        _\*SQL 数据库<br />托管实例 \*_ 
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
@@ -1288,11 +1288,11 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = '
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Azure SQL 数据库托管实例
+## <a name="azure-sql-managed-instance"></a>Azure SQL 托管实例
 
 ## <a name="overview"></a>概述
 
-在 Azure SQL 数据库托管实例中，此语句用于创建数据库。 在托管实例上创建数据库时，可以指定数据库名称和排序规则。
+在 Azure SQL 托管实例中，此语句用于创建数据库。 在托管实例上创建数据库时，可以指定数据库名称和排序规则。
 
 ## <a name="syntax"></a>语法
 
@@ -1357,7 +1357,7 @@ CREATE DATABASE TestDB1;
         [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL 数据库<br />单一数据库/弹性池](create-database-transact-sql.md?view=azuresqldb-current)
+        [SQL 数据库](create-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [SQL 数据库<br />托管实例](create-database-transact-sql.md?view=azuresqldb-mi-current)
@@ -1482,7 +1482,7 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
         [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL 数据库<br />单一数据库/弹性池](create-database-transact-sql.md?view=azuresqldb-current)
+        [SQL 数据库](create-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [SQL 数据库<br />托管实例](create-database-transact-sql.md?view=azuresqldb-mi-current)

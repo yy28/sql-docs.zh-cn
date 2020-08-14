@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7d475d33-a776-4776-a174-2c8a4acd476f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 86a7cc5f6a52b0492ceb45a65a4a68c6a0109c3d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1704438e867c5ab0610230f3e64567ea52024921
+ms.sourcegitcommit: 6ab28d954f3a63168463321a8bc6ecced099b247
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85696723"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87790370"
 ---
 # <a name="open-the-odbc-data-source-administrator"></a>打开 ODBC 数据源管理器
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "85696723"
 
 
 > [!NOTE]  
->  对于与 SQL 数据库的 Azure Active Directory 身份验证的连接，请安装最新的驱动程序，如 [ODBC Driver 13.1 for SQL Server](https://www.microsoft.com/download/details.aspx?id=53339)。   
+> 对于与 SQL 数据库的 Azure Active Directory 身份验证的连接，请安装最新的驱动程序，例如 [ODBC Driver 17 for SQL Server](https://aka.ms/downloadmsodbcsql)。  
   
 ## <a name="see-also"></a>另请参阅  
  [检查 ODBC SQL Server 驱动程序版本 (Windows)](../../database-engine/configure-windows/check-the-odbc-sql-server-driver-version-windows.md)  

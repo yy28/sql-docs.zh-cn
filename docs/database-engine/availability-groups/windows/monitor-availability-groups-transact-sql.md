@@ -1,6 +1,6 @@
 ---
 title: 使用 Transact-SQL 监视可用性组 (T-SQL)
-description: 有关如何使用 TRANSACT-SQL (T-SQL) 监视 AlwaysOn 可用性组的说明。
+description: 使用 Transact-SQL SELECT 语句监视 Always On 可用性组及其副本和数据库。
 ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4b21deb3019a2d31c16a61f98ad9a1953ad65174
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 13c92b7783605eb501a73522d0820be9856588a6
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897370"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565537"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>监视可用性组 (Transact-SQL)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

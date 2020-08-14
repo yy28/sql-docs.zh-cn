@@ -46,12 +46,12 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: be5b8f28ec06b48f0f35d8d246ad12ccbc3c8292
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 7c57cfe67bc8407cd02f970ebcf9ddbc92187071
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86481998"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87862935"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -793,7 +793,7 @@ MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED } 适用对象：[!INCLUDE[ssNoV
 
 - 指定 `PAUSED` 可暂停或推迟数据迁移。 有关详细信息，请参阅[暂停和恢复数据迁移 - Stretch Database](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md)。
 
-MEMORY_OPTIMIZED 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]）。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 托管实例不支持内存优化表。
+MEMORY_OPTIMIZED 适用对象：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]）。 Azure SQL 托管实例不支持内存优化表。
 
 ON 值指示表是否为内存优化表。 内存优化表是内存中 OLTP 功能的一部分，用于优化事务处理的性能。 要开始使用内存中 OLTP，请参阅[快速入门 1：可提高 Transact SQL 性能的内存中 OLTP 技术](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)。 有关内存优化表的详细信息，请参阅[内存优化表](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)。
 

@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 123618a84b07aa2215a2666f9d427f669247c5d7
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: f7da670d93de95d06fb7a602332011f9218cdc2b
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411093"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87861968"
 ---
 # <a name="azure-data-studio-faq"></a>Azure Data Studio 常见问题解答
 
@@ -80,14 +80,14 @@ GitHub 上提供了 Azure Data Studio 及其数据提供程序的源代码。 �
 
 |Feature|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Azure 登录|“是”|“是”|
+|Azure 登录|是|是|
 |仪表板|是| |
 |扩展|是| |
 |集成终端|是||
-|“对象资源管理器”|“是”|“是”|
-|对象脚本|“是”|“是”|
+|“对象资源管理器”|是|是|
+|对象脚本|是|是|
 |项目系统|是||
-|从表中选择|“是”|“是”|
+|从表中选择|是|是|
 |源代码管理|是||
 |任务窗格|是||
 |主题|是||
@@ -104,8 +104,8 @@ GitHub 上提供了 Azure Data Studio 及其数据提供程序的源代码。 �
 |:---|:---|:---|
 |图表查看器|是||
 |将结果导出为 CSV、JSON、XLSX|是||
-|IntelliSense|“是”|“是”|
-|代码片段|“是”|“是”|
+|IntelliSense|是|是|
+|代码片段|是|是|
 |显示计划|预览|是|
 |客户端统计信息||是|
 |实时查询统计信息||是|
@@ -120,7 +120,7 @@ GitHub 上提供了 Azure Data Studio 及其数据提供程序的源代码。 �
 
 |Feature|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Windows|“是”|“是”|
+|Windows|是|是|
 |macOS|是||
 |Linux|是||
 
@@ -136,7 +136,7 @@ GitHub 上提供了 Azure Data Studio 及其数据提供程序的源代码。 �
 
 |Feature|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|备份/还原|“是”|“是”|
+|备份/还原|是|是|
 |平面文件导入|预览|是|
 |SQL 代理|预览|是|
 |SQL Profiler|预览|是|
@@ -183,7 +183,7 @@ GitHub 上提供了 Azure Data Studio 及其数据提供程序的源代码。 �
 
 ## <a name="does-azure-data-studio-integrate-with-azure-sql-data-warehouse"></a>Azure Data Studio 是否与 Azure SQL 数据仓库进行了集成？
 
-是的。 Azure Data Studio 对 Azure SQL 数据仓库的支持目前为预览版，同时提供 Azure SQL 数据库管理实例和 SQL Server 2019 大数据。
+是的。 目前以预览版形式提供 Azure Data Studio 对 Azure SQL 数据仓库的支持，同时还提供 Azure SQL 托管实例和 SQL Server 2019 大数据。
 
 ## <a name="why-is-azure-data-studio-important-for-the-new-version-of-sql-server"></a>为何 Azure Data Studio 对于新版本的 SQL Server 而言很重要？
 

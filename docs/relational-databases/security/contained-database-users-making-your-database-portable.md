@@ -15,12 +15,12 @@ ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e297be837d954217aa9197494d6734f53d5a6aa0
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a76bc720df1808290a09e2cec5fad1c0667ae389
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005607"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988795"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>包含的数据库用户 - 使数据库可移植
 
@@ -77,7 +77,7 @@ ms.locfileid: "86005607"
 
 ### <a name="managed-instance"></a>托管实例
 
-在包含的数据库的上下文中，Azure SQL 数据库托管实例的行为类似于本地 SQL Server。 创建包含的用户时，请确保将数据库的上下文从主数据库更改为用户数据库。 此外，在设置包含选项时，不应与用户数据库建立活动连接。 
+在包含的数据库的上下文中，Azure SQL 托管实例的行为与本地 SQL Server 的类似。 创建包含的用户时，请确保将数据库的上下文从主数据库更改为用户数据库。 此外，在设置包含选项时，不应与用户数据库建立活动连接。 
 
 例如： 
 

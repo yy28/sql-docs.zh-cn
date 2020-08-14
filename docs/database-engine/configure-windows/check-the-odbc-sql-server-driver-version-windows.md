@@ -15,12 +15,12 @@ ms.assetid: 43451080-a562-4231-b1d4-1ba35ca0ea79
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 7cfebbf9266bfa97bd17415cd892f20f04869f1d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d127e7400238210d96b95adcba505cb2a1572cdd
+ms.sourcegitcommit: 6ab28d954f3a63168463321a8bc6ecced099b247
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001212"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87790380"
 ---
 # <a name="check-the-odbc-sql-server-driver-version-windows"></a>检查 ODBC SQL Server 驱动程序版本 (Windows)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "86001212"
 
 
 > [!NOTE]  
->  对于与 SQL 数据库的 Azure Active Directory 身份验证的连接，请安装最新的驱动程序，如 [ODBC Driver 13.1 for SQL Server](https://www.microsoft.com/download/details.aspx?id=53339)。   
+>  对于与 SQL 数据库的 Azure Active Directory 身份验证的连接，请安装最新的驱动程序，例如 [ODBC Driver 17 for SQL Server](https://aka.ms/downloadmsodbcsql)。   
 
   
 ## <a name="see-also"></a>另请参阅  

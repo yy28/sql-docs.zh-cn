@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cf911fae5cc8df106cc2a4be9556cf873dd49eaa
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: d4b7c4f52c5d0e70ac6c7f59eebf5fd8a5e47e29
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332476"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864874"
 ---
 # <a name="tempdb-database"></a>tempdb 数据库
 
@@ -39,8 +39,8 @@ ms.locfileid: "87332476"
   > [!NOTE]
   > 每个内部对象至少使用九页；一个 IAM 页，一个八页的区。 有关页和区的详细信息，请参阅[页和区](../../relational-databases/pages-and-extents-architecture-guide.md#pages-and-extents)。
   > [!IMPORTANT]
-  > Azure SQL 数据库单一数据库和弹性池支持存储在 `tempdb` 中并且范围为数据库级别的全局临时表和全局临时存储过程。 全局临时表和全局临时存储过程供同一 Azure SQL 数据库中的所有用户会话共享。 其他 Azure SQL 数据库中的用户会话无法访问全局临时表。 有关详细信息，请参阅[数据库作用域内全局临时表（Azure SQL 数据库）](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database)。 [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)与 SQL Server 支持相同的临时对象。
-  > 对于 Azure SQL 数据库单一数据库和弹性池，仅 master 数据库和 `tempdb` 数据库适用。 有关详细信息，请参阅[什么是 Azure SQL 数据库服务器](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-database-server)。 有关 Azure SQL 数据库单一数据库和弹性池上下文中 `tempdb` 的讨论，请参阅 [Azure SQL 数据库单一数据库和弹性池中的 tempdb 数据库](#tempdb-database-in-sql-database)。 对于 Azure SQL 数据库托管实例，所有系统数据库都适用。
+  > Azure SQL 数据库单一数据库和弹性池支持存储在 `tempdb` 中并且范围为数据库级别的全局临时表和全局临时存储过程。 全局临时表和全局临时存储过程供同一 Azure SQL 数据库中的所有用户会话共享。 其他 Azure SQL 数据库中的用户会话无法访问全局临时表。 有关详细信息，请参阅[数据库作用域内全局临时表（Azure SQL 数据库）](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database)。 [Azure SQL 托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)与 SQL Server 支持相同的临时对象。
+  > 对于 Azure SQL 数据库单一数据库和弹性池，仅 master 数据库和 `tempdb` 数据库适用。 有关详细信息，请参阅[什么是 Azure SQL 数据库服务器](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-database-server)。 有关 Azure SQL 数据库单一数据库和弹性池上下文中 `tempdb` 的讨论，请参阅 [Azure SQL 数据库单一数据库和弹性池中的 tempdb 数据库](#tempdb-database-in-sql-database)。 对于 Azure SQL 托管实例，所有系统数据库都适用。
 
 - 版本存储区  是数据页的集合，它包含支持使用行版本控制的功能所需的数据行。 共有两个版本存储区：公用版本存储区和联机索引生成版本存储区。 版本存储区包含：
   - 由使用已提交读（使用行版本控制隔离或快照隔离事务）的数据库中数据修改事务生成的行版本。  

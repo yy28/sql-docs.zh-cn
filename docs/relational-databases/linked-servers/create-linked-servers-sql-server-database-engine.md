@@ -17,12 +17,12 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: e4252d018df169f6fac238b4cb0b39991f9c8996
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e1bb0bc0ec1b16af3882880ac1d528a8c7907994
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719038"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823736"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>创建链接服务器（SQL Server 数据库引擎）
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -99,7 +99,7 @@ ms.locfileid: "85719038"
      使用远程用户映射 **“本地登录”** 中未定义的用户。 **“远程用户”** 必须是远程服务器中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证登录。  
 
     > [!WARNING]
-    > 在 Azure SQL 数据库托管实例部署中，只能将 SQL Server 用户用作“远程用户”。  
+    > 在托管实例部署中，只能将 SQL Server 用户用作“远程用户”。  
 
      **远程密码**  
      指定远程用户的密码。  

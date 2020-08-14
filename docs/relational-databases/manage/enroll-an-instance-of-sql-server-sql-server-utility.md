@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1e3f26672d208d848a2cf76707fb92d7b72d5e11
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 211b16d4b03439295c4970449ef61855c09addc4
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85776002"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988550"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>注册 SQL Server 的实例（SQL Server 实用工具）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "85776002"
   
 -   UCP 和 SQL Server 的所有托管实例上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户必须对 Active Directory 中的用户具有读取权限。  
   
--   要注册的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例不能是 SQL Azure。  
+-   要注册的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例不能是 Azure SQL 数据库。  
   
  在此版本中，UCP 必须满足以下要求：  
   

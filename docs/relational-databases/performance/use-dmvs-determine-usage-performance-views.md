@@ -1,6 +1,6 @@
 ---
 title: DMV - 视图的使用情况统计信息和性能
-description: 使用 DMV 来确定视图的使用情况统计信息和性能
+description: 了解如何使用动态管理视图 (DMV) sys.dm_exec_query_optimizer_info、sys.views 和 sys.dmv_exec_cached_plans 获取 SQL 查询性能统计信息。
 ms.custom: seo-dt-2019
 author: julieMSFT
 ms.author: jrasnick
@@ -9,12 +9,12 @@ ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
-ms.openlocfilehash: e80ba0a8252881b7447dda721f02fc9c3e545917
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ea5ae310606097b9f25a31337222b941ac963fd0
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165885"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87899549"
 ---
 # <a name="use-dmvs-to-determine-usage-statistics-and-performance-of-views"></a>使用 DMV 来确定视图的使用情况统计信息和性能
 本文介绍了一些方法和脚本，用于获取使用视图的查询的性能相关信息  。 这些脚本的目的是提供在数据库中发现的各种视图的使用指标和性能指标。 

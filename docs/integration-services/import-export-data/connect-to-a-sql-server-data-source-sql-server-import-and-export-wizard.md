@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 386cedbb-fae5-45ce-9363-c4a417f80a2f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 31a3cba341ee6d7ec8aada3bf620ab23ab55bf9f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f50c53d596c73565b3b5e56c27fa59fca0afe708
+ms.sourcegitcommit: 6ab28d954f3a63168463321a8bc6ecced099b247
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920965"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87790350"
 ---
 # <a name="connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard"></a>连接到 SQL Server 数据源（SQL Server 导入和导出向导）
 
@@ -67,7 +67,7 @@ ms.locfileid: "86920965"
 ODBC 驱动程序不在数据源的下拉列表中列出。 若要使用 ODBC 驱动程序连接，首先选择“用于 ODBC 的 .NET Framework 数据提供程序”作为数据源  。 此提供程序充当 ODBC 驱动程序的包装器。
 
 > [!TIP]
-> 获取最新的驱动程序  。 下载[用于 SQL Server 的 Microsoft ODBC Driver 13](https://www.microsoft.com/download/details.aspx?id=53339)。
+> 获取最新的驱动程序  。 下载 [Microsoft ODBC Driver for SQL Server](https://aka.ms/downloadmsodbcsql)。
 
 下面是选择用于 ODBC 的 .NET Framework 数据提供程序后随即显示的常规屏幕。
 

@@ -25,12 +25,12 @@ ms.assetid: 344fc6ce-a008-47c8-a02e-47fae66cc590
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f6e25763f585f063eeb25fd512b65a3e51c070e5
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 5626b98f81bcca2a21902cf0d38f44a256fa73e0
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394662"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988451"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
 
@@ -47,7 +47,7 @@ ms.locfileid: "87394662"
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL 数据库<br />单一数据库/弹性池](alter-user-transact-sql.md?view=azuresqldb-current)
+        [SQL 数据库](alter-user-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [SQL 数据库<br />托管实例](alter-user-transact-sql.md?view=azuresqldb-mi-current)
@@ -222,7 +222,7 @@ GO
         [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\*SQL 数据库<br />单一数据库/弹性池\*_**
+        \* SQL 数据库 \*
     :::column-end:::
     :::column:::
         [SQL 数据库<br />托管实例](alter-user-transact-sql.md?view=azuresqldb-mi-current)
@@ -237,7 +237,7 @@ GO
 
 &nbsp;
 
-## <a name="azure-sql-database-single-databaseelastic-pool"></a>Azure SQL 数据库单一数据库/弹性池
+## <a name="sql-database"></a>SQL 数据库
 
 ## <a name="syntax"></a>语法
 
@@ -407,10 +407,10 @@ GO
         [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL 数据库<br />单一数据库/弹性池](alter-user-transact-sql.md?view=azuresqldb-current)
+        [SQL 数据库](alter-user-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        **_\*SQL 数据库<br />托管实例\*_**
+        _\*SQL 数据库<br />托管实例 \*_ 
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
@@ -422,16 +422,16 @@ GO
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Azure SQL 数据库托管实例
+## <a name="azure-sql-managed-instance"></a>Azure SQL 托管实例
 
 ## <a name="syntax"></a>语法
 
 > [!IMPORTANT]
-> Azure SQL 数据库托管实例应用于具有 Azure AD 登录名的用户时，仅支持以下选项：`DEFAULT_SCHEMA = { schemaName | NULL }` 和 `DEFAULT_LANGUAGE = { NONE | lcid | language name | language alias }`
-> </br> </br> 添加了新的语法扩展，有助于重新映射已迁移到托管实例的数据库中的用户。 ALTER USER 语法有助于将通过 Azure AD 联合并同步的域中的数据库用户映射到 Azure AD 登录名。
+> Azure SQL 托管实例应用于具有 Azure AD 登录名的用户时，仅支持以下选项：`DEFAULT_SCHEMA = { schemaName | NULL }` 和 `DEFAULT_LANGUAGE = { NONE | lcid | language name | language alias }`
+> </br> </br> 添加了新的语法扩展，有助于重新映射已迁移到 Azure SQL 托管实例的数据库中的用户。 ALTER USER 语法有助于将通过 Azure AD 联合并同步的域中的数据库用户映射到 Azure AD 登录名。
 
 ```syntaxsql
--- Syntax for Azure SQL Database managed instance
+-- Syntax for SQL Managed Instance
 ALTER USER userName
  { WITH <set_item> [ ,...n ] | FROM EXTERNAL PROVIDER }
 [;]
@@ -521,7 +521,7 @@ ALTER USER userName
  使用 WITH LOGIN 子句可以将用户重新映射到一个不同的登录名。 不能使用此子句重新映射以下用户：不具有登录名的用户、映射到证书的用户或映射到非对称密钥的用户。 只能重新映射 SQL 用户和 Windows 用户（或组）。 不能使用 WITH LOGIN 子句更改用户类型，例如将 Windows 帐户更改为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 唯一的例外是将 Windows 用户更改为 Azure AD 用户。
 
 > [!NOTE]
-> 以下规则不适用于托管实例上的 Windows 用户，因为我们不支持在托管实例上创建 Windows 登录名。 仅当存在 Azure AD 登录名时，才能使用 WITH LOGIN 选项。
+> 以下规则不适用于 Azure SQL 托管实例上的 Windows 用户，因为我们不支持在 Azure SQL 托管实例上创建 Windows 登录名。 仅当存在 Azure AD 登录名时，才能使用 WITH LOGIN 选项。
 
  如果满足以下条件，则用户的名称会自动重命名为登录名。
 
@@ -540,21 +540,21 @@ ALTER USER userName
 > [!CAUTION]
 > [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]
 
-### <a name="remarks-for-windows-users-in-sql-on-premises-migrated-to-managed-instance"></a>迁移到托管实例的 SQL 本地 Windows 用户的备注
+### <a name="remarks-for-windows-users-in-sql-on-premises-migrated-to-azure-sql-managed-instance"></a>关于迁移到 Azure SQL 托管实例的 SQL 本地 Windows 用户的备注
 
 这些备注适用于作为已通过 Azure AD 联合并同步的 Windows 用户进行身份验证。
 
 > [!NOTE]
-> 创建后托管实例功能的 Azure AD 管理员已更改。 有关详细信息，请参阅[适用于 MI 的新 Azure AD 管理员功能](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi)。
+> 在创建后，Azure SQL 托管实例功能的 Azure AD 管理员已更改。 有关详细信息，请参阅[适用于 MI 的新 Azure AD 管理员功能](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi)。
 
 - 默认情况下，通过用于迁移目的的 ALTER USER 语法的所有版本中的图形 API 来验证映射到 Azure AD 的 Windows 用户或组。
 - 具有别名的本地用户（使用与原始 Windows 帐户不同的名称）将保留别名。
-- 对于 Azure AD 身份验证，LOGIN 参数仅适用于托管实例，不能与 SQL DB 一起使用。
+- 对于 Azure AD 身份验证，LOGIN 参数仅适用于 Azure SQL 托管实例，不能与 SQL 数据库一起使用。
 - 若要查看 Azure AD 主体的登录名，请使用以下命令：`select * from sys.server_principals`。
 - 检查登录名的指示类型是 `E` 还是 `X`。
 - PASSWORD 选项不能用于 Azure AD 用户。
 - 在所有迁移情况下，Windows 用户或组的角色和权限将自动转移到新的 Azure AD 用户或组。
-- 新的语法扩展 FROM EXTERNAL PROVIDER 可用于将 Windows 用户和组从 SQL 本地更改为 Azure AD 用户和组。 使用此扩展时，Windows 域必须通过 Azure AD 联合，且所有 Windows 域成员必须存在于 Azure AD 中。 FROM EXTERNAL PROVIDER 语法适用于托管实例，并且应在以下情况下使用：Windows 用户在原始 SQL 实例上没有登录名，并且需要映射到独立的 Azure AD 数据库用户。
+- 新的语法扩展 FROM EXTERNAL PROVIDER 可用于将 Windows 用户和组从 SQL 本地更改为 Azure AD 用户和组。 使用此扩展时，Windows 域必须通过 Azure AD 联合，且所有 Windows 域成员必须存在于 Azure AD 中。 FROM EXTERNAL PROVIDER 语法适用于 Azure SQL 托管实例，并且应在以下情况下使用：Windows 用户在原始 SQL 实例上没有登录名，并且需要映射到独立的 Azure AD 数据库用户。
 - 在这种情况下，允许的用户名可以是：
 - Widows 用户（域\用户）。
 - Windows 组（MyWidnowsGroup）。
@@ -628,13 +628,13 @@ GO
 
 ### <a name="d-map-the-user-in-the-database-to-an-azure-ad-login-after-migration"></a>D. 迁移后将数据库中的用户映射到 Azure AD 登录名
 
-以下示例将用户 `westus/joe` 重新映射到 Azure AD 用户 `joe@westus.com`。 此示例适用于已存在于托管实例中的登录名。 完成到托管实例的数据库迁移之后，并且想要使用 Azure AD 登录名进行身份验证时，需要执行此操作。
+以下示例将用户 `westus/joe` 重新映射到 Azure AD 用户 `joe@westus.com`。 此示例适用于已存在于托管实例中的登录名。 完成到 Azure SQL 托管实例的数据库迁移之后，并且想要使用 Azure AD 登录名进行身份验证时，需要执行此操作。
 
 ```sql
 ALTER USER [westus/joe] WITH LOGIN = joe@westus.com
 ```
 
-### <a name="e-map-an-old-windows-user-in-the-database-without-a-login-in-managed-instance-to-an-azure-ad-user"></a>E. 将数据库中不具有托管实例中的登录名的旧 Windows 用户映射到 Azure AD 用户
+### <a name="e-map-an-old-windows-user-in-the-database-without-a-login-in-azure-sql-managed-instance-to-an-azure-ad-user"></a>E. 将数据库中在 Azure SQL 托管实例中没有登录名的旧 Windows 用户映射到 Azure AD 用户
 
 以下示例将不具有登录名的用户 `westus/joe` 重新映射到 Azure AD 用户 `joe@westus.com`。 联合用户必须存在于 Azure AD 中。
 
@@ -650,7 +650,7 @@ ALTER USER [westus/joe] FROM EXTERNAL PROVIDER
 ALTER USER [westus/joe] WITH LOGIN = joe@westus.com, name= joe_alias
 ```
 
-### <a name="g-map-a-windows-group-that-was-migrated-in-managed-instance-to-an-azure-ad-group"></a>G. 将托管实例中迁移的 Windows 组映射到 Azure AD 组
+### <a name="g-map-a-windows-group-that-was-migrated-in-azure-sql-managed-instance-to-an-azure-ad-group"></a>G. 将 Azure SQL 托管实例中已迁移的 Windows 组映射到 Azure AD 组
 
 以下示例将旧的本地组 `westus\mygroup` 重新映射到托管实例中的 Azure AD 组 `mygroup`。 组必须存在于 Azure AD 中。
 
@@ -665,7 +665,7 @@ ALTER USER [westus\mygroup] WITH LOGIN = mygroup
 - [包含的数据库](../../relational-databases/databases/contained-databases.md)
 - [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)
 - [sp_migrate_user_to_contained (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)
-- [教程：使用 T-SQL DDL 语法将 SQL Server 本地 Windows 用户和组迁移到 Azure SQL 数据库托管实例](/azure/sql-database/tutorial-managed-instance-azure-active-directory-migration)
+- [教程：使用 T-SQL DDL 语法将 SQL Server 本地 Windows 用户和组迁移到 SQL 托管实例](/azure/sql-database/tutorial-managed-instance-azure-active-directory-migration)
 
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
@@ -675,7 +675,7 @@ ALTER USER [westus\mygroup] WITH LOGIN = mygroup
         [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL 数据库<br />单一数据库/弹性池](alter-user-transact-sql.md?view=azuresqldb-current)
+        [SQL 数据库](alter-user-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [SQL 数据库<br />托管实例](alter-user-transact-sql.md?view=azuresqldb-mi-current)
@@ -800,7 +800,7 @@ GO
         [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL 数据库<br />单一数据库/弹性池](alter-user-transact-sql.md?view=azuresqldb-current)
+        [SQL 数据库](alter-user-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [SQL 数据库<br />托管实例](alter-user-transact-sql.md?view=azuresqldb-mi-current)

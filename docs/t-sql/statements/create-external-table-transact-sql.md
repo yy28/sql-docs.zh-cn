@@ -21,12 +21,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c4660b5f0bd16d4373498e472452b61aa4be3f24
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 29c625eb5b169e1811f880416a027eb3ac32c027
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111173"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864378"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -899,7 +899,7 @@ PolyBase 可以将某些查询计算推送到 Hadoop 以提高查询性能。 �
 
 查询限制：
 
-运行 32 个并发 PolyBase 查询时，每个文件夹中 PolyBase 最多可使用 33000 个文件。 此最大数量包括每个 HDFS 文件夹中的文件和子文件夹。 如果并发度小于 32，用户可以针对 HDFS 中包含超过 33000 个文件的文件夹运行 PolyBase 查询。 建议保持外部文件路径简短，并且每个 HDFS 文件夹不超过 30000 个文件。 当引用太多文件时，可能会发生 Java 虚拟机 (JVM) 内存不足异常。
+建议每个文件夹不超过 30,000 个文件。 如果引用的文件过多，可能会出现 Java 虚拟机 (JVM) 内存不足异常或性能下降的问题。
 
 表宽度限制：
 

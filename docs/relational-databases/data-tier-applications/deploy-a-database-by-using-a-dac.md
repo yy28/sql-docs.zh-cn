@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 11994d1dc3ec931f729c2739a107848464ed7f8b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e93398b38e2fff73e63013fd0bfc1c4bedc31a43
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781697"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988763"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>使用 DAC 部署数据库
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  使用“将数据库部署到 SQL Azure”  向导在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例与 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 服务器之间，或在两台 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]服务器之间部署数据库。  
+  使用“将数据库部署到 Microsoft Azure SQL 数据库”向导在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例与 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 服务器之间，或在两个 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 服务器之间部署数据库。  
   
 ##  <a name="before-you-begin"></a><a name="BeforeBegin"></a> 开始之前  
  该向导使用数据层应用程序 (DAC) BACPAC 存档文件部署数据库对象的数据和定义。 它从源数据库执行 DAC 导出操作，并对目标执行 DAC 导入。  
@@ -68,7 +68,7 @@ ms.locfileid: "85781697"
   
 3.  展开 **“数据库”** 节点。  
   
-4.  右键单击要部署的数据库，选择 “任务”，然后选择“将数据库部署到 SQL Azure…”    
+4.  右键单击要部署的数据库，选择“任务”，然后选择“将数据库部署到 Microsoft Azure SQL 数据库”   
   
 5.  完成向导对话框：  
   

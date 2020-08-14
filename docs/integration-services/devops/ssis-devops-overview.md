@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c89ff705077782d0cf8287f0d1bc010ce609cc72
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 29cef6bf700c6d837c77f02e16debe50e1f1a267
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472473"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823479"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools"></a>SQL Server Integration Services (SSIS) DevOps 工具
 
@@ -95,7 +95,7 @@ cat log.txt
 
 #### <a name="destination-server"></a>目标服务器
 
-目标 SQL 服务器的名称。 它可以是本地 SQL Server、Azure SQL 数据库或 Azure SQL 数据库托管实例的名称。 仅当目标类型为 SSISDB 时，此属性才可见。
+目标 SQL 服务器的名称。 它可以是本地 SQL Server、Azure SQL 数据库或 Azure SQL 托管实例的名称。 仅当目标类型为 SSISDB 时，此属性才可见。
 
 #### <a name="destination-path"></a>目标路径
 
@@ -184,7 +184,7 @@ SSIS 目录配置的内联 JSON。 只有在选择“内联”作为配置文件
 
 #### <a name="target-server"></a>目标服务器
 
-目标 SQL Server 的名称。 它可以是本地 SQL Server、Azure SQL 数据库或 Azure SQL 数据库托管实例的名称。
+目标 SQL Server 的名称。 它可以是本地 SQL Server、Azure SQL 数据库或 Azure SQL 托管实例的名称。
 
 #### <a name="authentication-type"></a>身份验证类型
 

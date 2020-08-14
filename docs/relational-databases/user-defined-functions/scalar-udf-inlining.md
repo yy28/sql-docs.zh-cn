@@ -2,7 +2,7 @@
 title: Microsoft SQL Server 中的标量 UDF 内联 | Microsoft Docs
 description: 标量 UDF 内联功能可提高在 SQL Server（从 SQL Server 2019 开始）中调用标量 UDF 的查询性能。
 ms.custom: ''
-ms.date: 06/23/2020
+ms.date: 08/04/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: b1a8d91cc9da7cb0707211464e53b2cccaf0a111
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: 0d9a618e8170d08250c15c75e83d5d2dbc627447
+ms.sourcegitcommit: 6ab28d954f3a63168463321a8bc6ecced099b247
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435587"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87790300"
 ---
 # <a name="scalar-udf-inlining"></a>标量 UDF 内联
 
@@ -164,6 +164,9 @@ SELECT C_NAME, dbo.customer_category(C_CUSTKEY) FROM CUSTOMER;
 - UDF 不包含多个 RETURN 语句<sup>6</sup>。
 - 不会从 RETURN 语句调用 UDF<sup>6</sup>。
 - UDF 不引用 `STRING_AGG` 函数<sup>6</sup>。 
+- UDF 不引用远程表 <sup>7</sup>。
+- UDF 调用查询不使用 `GROUPING SETS`、`CUBE` 或 `ROLLUP` <sup>7</sup>。
+- UDF 调用查询不包含用作赋值的 UDF 参数的变量（例如 `SELECT @y = 2`、`@x = UDF(@y)`）<sup>7</sup>。
 
 <sup>1</sup> 带变量累计/聚合的 `SELECT` 不支持内联（例如 `SELECT @val += col1 FROM table1`）。
 
@@ -176,6 +179,8 @@ SELECT C_NAME, dbo.customer_category(C_CUSTKEY) FROM CUSTOMER;
 <sup>5</sup>[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU4 中添加的限制
 
 <sup>6</sup>[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5 中添加的限制
+
+<sup>7</sup>[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU6 中添加的限制
 
 > [!NOTE]
 > 有关针对内联资格方案的最新 T-SQL 标量 UDF 内联修复和更改，请参阅知识库文章：[修复：SQL Server 2019 中的标量 UDF 内联问题](https://support.microsoft.com/help/4538581)。

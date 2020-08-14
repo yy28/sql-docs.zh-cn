@@ -10,19 +10,19 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 1276720eb7dcdb83421732164490eeb58ba89c30
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8b3e01fbded713f59832c30eb8cd9d8149e5b469
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915334"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864594"
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>将 SQL Server Integration Services 工作负荷直接迁移到云
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-现在，可将 SQL Server Integration Services (SSIS) 项目、包和工作负荷移到 Azure 云。 在 Azure SQL 数据库的 SSIS 目录 (SSISDB) 或 SQL 数据库托管实例中使用 SQL Server Management Studio (SSMS) 等熟悉的工具来部署、运行和管理 SSIS 项目和包。
+现在，可将 SQL Server Integration Services (SSIS) 项目、包和工作负荷移到 Azure 云。 在 Azure SQL 数据库的 SSIS 目录 (SSISDB) 或 SQL 托管实例中使用 SQL Server Management Studio (SSMS) 等熟悉的工具来部署、运行和管理 SSIS 项目和包。
 
 ## <a name="benefits"></a>优点
 将本地 SSIS 工作负荷移到 Azure 具有以下潜在好处：
@@ -38,7 +38,7 @@ ms.locfileid: "86915334"
 | 位置 | 存储 | 运行时 | 可伸缩性 |
 |---|---|---|---|
 | 本地 | SQL Server | SQL Server 托管的 SSIS 运行时 | SSIS Scale Out（SQL Server 2017 及更高版本中）<br/><br/>自定义解决方案（之前的 SQL Server 版本中） |
-| 在 Azure 上 | SQL 数据库或 SQL 数据库托管实例 | Azure SSIS Integration Runtime（Azure 数据工厂的一个组件） | Azure-SSIS Integration Runtime 的缩放选项 |
+| 在 Azure 上 | SQL 数据库或 SQL 托管实例 | Azure SSIS Integration Runtime（Azure 数据工厂的一个组件） | Azure-SSIS Integration Runtime 的缩放选项 |
 | | | | |
 
 ## <a name="provision-ssis-on-azure"></a>在 Azure 上预配 SSIS

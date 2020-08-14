@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 81fb9b9cb792cf350137a375e7a2e25643656b6e
-ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
+ms.openlocfilehash: 7bf5aa9ee503dff3a00053365485c3ef70cc9247
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "81002848"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823261"
 ---
 # <a name="migrate-on-premises-ssis-workloads-to-ssis-in-adf"></a>将本地 SSIS 工作负载迁移到 ADF 中的 SSIS
 
@@ -36,5 +36,5 @@ ms.locfileid: "81002848"
 
 ## <a name="next-steps"></a>后续步骤
 
-- [将 SSIS 包迁移到 Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages-managed-instance)。
+- [将 SSIS 包迁移到 Azure SQL 托管实例](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages-managed-instance)。
 - [使用 SQL Server Management Studio (SSMS) 将 SSIS 作业迁移到 Azure 数据工厂 (ADF)](https://docs.microsoft.com/azure/data-factory/how-to-migrate-ssis-job-ssms)。

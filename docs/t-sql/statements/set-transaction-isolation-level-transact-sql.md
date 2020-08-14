@@ -27,12 +27,12 @@ ms.assetid: 016fb05e-a702-484b-bd2a-a6eabd0d76fd
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23d39a7b7149f6ac75873389c1ac90c6daca8a90
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 73b805149ca1061c73572d742875fa11d9d81b23
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483916"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931610"
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -86,7 +86,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
 -   如果将 READ_COMMITTED_SNAPSHOT 设置为 OFF（SQL Server 上的默认设置），则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 会使用共享锁防止其他事务在当前事务执行读取操作期间修改行。 共享锁还会阻止语句在其他事务完成之前读取由这些事务修改的行。 共享锁类型确定它将于何时释放。 行锁在处理下一行之前释放。 页锁在读取下一页时释放，表锁在语句完成时释放。  
   
--   如果将 READ_COMMITTED_SNAPSHOT 设置为 ON（SQL Azure 数据库上的默认设置），则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 会使用行版本控制为每个语句提供一个在事务上一致的数据快照，因为该数据在语句开始时就存在。 不使用锁来防止其他事务更新数据。
+-   如果将 READ_COMMITTED_SNAPSHOT 设置为 ON（Azure SQL 数据库上的默认设置），则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 会使用行版本控制为每个语句提供一个在事务上一致的数据快照，因为该数据在语句开始时就存在。 不使用锁来防止其他事务更新数据。
 
 > [!IMPORTANT]  
 > 选择事务隔离级别不影响为保护数据修改而获取的锁。 事务总是在其修改的任何数据上获取排他锁并在事务完成之前持有该锁，不管为该事务设置了什么样的隔离级别。 此外，在 READ_COMMITTED 隔离级别进行的更新使用所选数据行的更新锁，而在 SNAPSHOT 隔离级别进行的更新使用行版本来选择要更新的行。 对于读取操作，事务隔离级别主要定义保护级别，以防受到其他事务所做更改的影响。 有关详细信息，请参阅[事务锁定和行版本控制指南](https://docs.microsoft.com/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)。

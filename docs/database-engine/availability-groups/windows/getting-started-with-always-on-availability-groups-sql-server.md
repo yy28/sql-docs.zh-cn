@@ -1,6 +1,6 @@
 ---
 title: 可用性组入门
-description: 配置 Always On 可用性组所需步骤的清单。
+description: 了解按照步骤该如何配置 SQL Server 实例来支持 Always On 可用性组以及创建、管理和监视可用性组。
 ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 33f2f2d0-79e0-4107-9902-d67019b826aa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2d5232cbf132e8fe84865dea9e64092692757c14
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 8391f41c1024d8bf747aace5acd5571aad4284b2
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362663"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87564965"
 ---
 # <a name="getting-started-with-always-on-availability-groups"></a>AlwaysOn 可用性组入门
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

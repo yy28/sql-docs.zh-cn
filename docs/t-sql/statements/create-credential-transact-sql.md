@@ -24,12 +24,12 @@ ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 4690f82c1ae731a25edce6dbe0b36d7b31d448f2
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 0f87466ebfccaaf69b970386865af68275e83e10
+ms.sourcegitcommit: 95be98587f6a3730ca75a77676dd952c45e4f53a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392825"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88046592"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 
@@ -89,7 +89,7 @@ SECRET ='secret' 指定发送身份验证所需的机密内容。
 
 ## <a name="examples"></a>示例
 
-### <a name="a-basic-example"></a>A. 基本示例
+### <a name="a-creating-a-credential-for-windows-identity"></a>A. 创建用于 Windows 标识的凭据
 
 以下示例创建名为 `AlterEgo` 的凭据。 凭据包含 Windows 用户 `Mary5` 和一个密码。
 
@@ -145,7 +145,7 @@ EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
 
 ### <a name="d-creating-a-credential-using-a-sas-token"></a>D. 使用 SAS 令牌创建凭据
 
-**适用范围**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)以及 Azure SQL 数据库中的托管实例。
+**适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)，以及 Azure SQL 托管实例。
 
 下面的示例使用 SAS 令牌创建共享访问签名凭据。 若要详细了解如何在 Azure 容器上创建存储访问策略和共享访问签名，以及使用共享访问签名创建凭据，请参阅[教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)。
 
@@ -159,6 +159,15 @@ USE master
 CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>] -- this name must match the container path, start with https and must not contain a trailing forward slash.
     WITH IDENTITY='SHARED ACCESS SIGNATURE' -- this is a mandatory string and do not change it.
     , SECRET = 'sharedaccesssignature' -- this is the shared access signature token
+GO
+```
+
+### <a name="e-creating-a-credential-for-managed-identity"></a>E. 创建用于托管标识的凭据
+
+以下示例会创建表示 Azure SQL 或 Azure Synapse 服务的托管标识的凭据。 此情况下，不适合使用密码和机密。
+
+```sql
+CREATE CREDENTIAL ServiceIdentity WITH IDENTITY = 'Managed Identity';
 GO
 ```
 

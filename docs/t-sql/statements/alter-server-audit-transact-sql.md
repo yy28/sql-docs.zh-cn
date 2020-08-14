@@ -20,12 +20,12 @@ ms.assetid: 63426d31-7a5c-4378-aa9e-afcf4f64ceb3
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 8f61833c4c532056d7af9980360e04e9d124854d
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 34a467f81612e88e15b45c055650c961493357dd
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381291"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823492"
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -81,7 +81,7 @@ ALTER SERVER AUDIT audit_name
  确定审核目标的位置。 可用的选项包括二进制文件、Windows 应用程序日志或 Windows 安全日志。  
 
 > [!IMPORTANT]
-> 在 Azure SQL 数据库托管实例中，SQL 审核在服务器一级运行，并在 Azure Blob 存储中存储 `.xel` 文件。
+> 在 Azure SQL 托管实例中，SQL 审核功能在服务器层级运行，并在 Azure Blob 存储中存储 `.xel` 文件。
   
  FILEPATH **= '** os\_file\_path **'**  
  审核记录的路径。 文件名是基于审核名称和审核 GUID 生成的。  

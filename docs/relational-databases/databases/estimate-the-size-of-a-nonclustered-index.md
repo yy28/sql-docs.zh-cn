@@ -21,12 +21,12 @@ ms.assetid: c183b0e4-ef4c-4bfc-8575-5ac219c25b0a
 author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 00132b65b2dc5e21fbc57c376ac005d968871f62
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f7f5c8f910d4fd9d5af81789a62eea86d609ec7a
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85743325"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864498"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>估计非聚集索引的大小
 
@@ -176,13 +176,13 @@ ms.locfileid: "85743325"
   
 4.  计算可变长度数据大小：  
   
-     如果索引键中有可变长度的列（包括在以前的步骤 2.2 中所述的所有必要的聚集索引键列），请确定存储索引行中的这些列需使用的空间：  
+     如果存在可变长度的列（键列或包含列），包括在之前的步骤 2.2 中所述的所有必要的聚集索引键列，请确定存储索引行中的这些列所需的空间：  
   
      ***Variable_Leaf_Size***  = 2 + (***Num_Variable_Leaf_Cols*** x 2) + ***Max_Var_Leaf_Size***  
   
      添加到 ***Max_Var_Key_Size*** 中的字节可用于跟踪每个可变列。此公式假定所有可变长度列均百分之百充满。 如果预计可变长度列占用的存储空间比例较低，则可以按照该比例调整 ***Max_Var_Leaf_Size*** 值，从而对整个表大小得出一个更准确的估计。  
   
-     如果没有可变长度的列，则将 ***Variable_Leaf_Size*** 设置为 0。  
+     如果没有可变长度的列（键列或包含列），则将 Variable_Leaf_Size 设置为 0。  
   
 5.  计算索引行大小：  
   

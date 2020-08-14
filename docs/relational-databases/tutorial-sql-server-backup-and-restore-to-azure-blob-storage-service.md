@@ -11,24 +11,24 @@ ms.topic: quickstart
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 59968cad65f3a80c2d511dad3dc804d151d33095
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 332fde643d285b20c0bd772918f8c9cf1bf578f2
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458039"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864954"
 ---
 # <a name="quickstart-sql-backup-and-restore-to-azure-blob-storage-service"></a>快速入门：将 SQL 备份和还原到 Azure Blob 存储服务
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 本快速入门可帮助你了解如何将备份写入 Azure Blob 存储服务以及如何从中还原。  本文介绍如何创建 Azure Blob 容器，将备份写入 Blob 服务，然后执行还原。
   
 ## <a name="prerequisites"></a>先决条件  
-要完成本快速入门，必须熟悉 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 备份和还原概念以及 T-SQL 语法。  需要 Azure 存储帐户、SQL Server Management Studio (SSMS)、针对运行 SQL Server 的服务器或 Azure SQL 数据库托管实例的访问权限。 此外，用于发出 BACKUP 和 RESTORE 命令的帐户应属于具有“更改任意凭据”权限的 db_backupoperator数据库角色。 
+要完成本快速入门，必须熟悉 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 备份和还原概念以及 T-SQL 语法。  需要 Azure 存储帐户、SQL Server Management Studio (SSMS)，以及对运行 SQL Server 的服务器或 Azure SQL 托管实例的访问权限。 此外，用于发出 BACKUP 和 RESTORE 命令的帐户应属于具有“更改任意凭据”权限的 db_backupoperator数据库角色。 
 
 - 获取免费的 [Azure 帐户](https://azure.microsoft.com/offers/ms-azr-0044p/)。
 - 创建 [Azure 存储帐户](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=portal)。
 - 安装 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
-- 使用通过 [Azure SQL 虚拟机](/azure/sql-database/sql-database-managed-instance-configure-vm)或[点到站点](/azure/sql-database/sql-database-managed-instance-configure-p2s)建立的连接安装 [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) 或部署[托管实例](/azure/sql-database/sql-database-managed-instance-get-started)。
+- 使用通过 [Azure SQL 虚拟机](/azure/sql-database/sql-database-managed-instance-configure-vm)或[点到站点](/azure/sql-database/sql-database-managed-instance-configure-p2s)建立的连接安装 [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) 或部署 [Azure SQL 托管实例](/azure/sql-database/sql-database-managed-instance-get-started)。
 - 将用户帐户分配到 [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) 角色，并授予[更改任意凭据](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql)权限。 
 
 ## <a name="create-azure-blob-container"></a>创建 Azure Blob 容器
@@ -53,7 +53,7 @@ ms.locfileid: "86458039"
 
 1. 启动 [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) 并连接到 SQL Server 实例。
 1. 打开“新建查询”窗口。 
-1. 运行以下 TRANSACT-SQL (T-SQL) 代码来创建测试数据库。 刷新对象资源管理器中的“数据库”节点，查看新数据库 。 Azure SQL 数据库托管实例上新建的数据库会自动启用 TDE，因此需要禁用它才能继续。 
+1. 运行以下 TRANSACT-SQL (T-SQL) 代码来创建测试数据库。 刷新对象资源管理器中的“数据库”节点，查看新数据库 。 SQL 托管实例上新建的数据库会自动启用 TDE，因此需要禁用它才能继续操作。 
 
 ```sql
 USE [master]
@@ -87,7 +87,7 @@ GO
 SELECT * FROM SQLTest
 GO
 
--- Disable TDE for newly-created databases on a managed instance 
+-- Disable TDE for newly-created databases on SQL Managed Instance 
 USE [SQLTestDB];
 GO
 ALTER DATABASE [SQLTestDB] SET ENCRYPTION OFF;

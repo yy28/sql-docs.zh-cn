@@ -16,12 +16,12 @@ ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 0e39946071c85dff0c1e29f6f36e6bafe910f77d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0fba95ecd1553bcd090cbf7ef987728bd17b712d
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774006"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863336"
 ---
 # <a name="configure-publishing-and-distribution"></a>配置发布和分发
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "85774006"
 
 2. 在分发服务器（也是发布服务器）上，执行 [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)，同时对 `@working_directory` 指定用作默认快照文件夹的 UNC 共享。
 
-   对于 SQL 数据库托管实例上的分发服务器，对 `@working_directory` 使用 Azure 存储帐户，对 `@storage_connection_string` 使用存储访问密钥。 
+   对于 SQL 托管实例上的分发服务器，将 Azure 存储帐户用于 `@working_directory`，将存储访问密钥用于 `@storage_connection_string`。 
 
 3. 在发布服务器上执行 [sp_replicationdboption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)。 对 `@dbname` 指定要发布的数据库，对 `@optname` 指定复制类型，并对 `@value` 指定值 `true`。
 
@@ -80,7 +80,7 @@ ms.locfileid: "85774006"
 
 2. 在分发服务器上，执行 [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)，同时对 `@working_directory` 指定用作默认快照文件夹的 UNC 共享。 如果分发服务器在连接到发布服务器时使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，还必须对 `@security_mode` 指定值 `0`，并对 `@login` 和 `@password` 指定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录信息。
 
-   对于 SQL 数据库托管实例上的分发服务器，对 `@working_directory` 使用 Azure 存储帐户，对 `@storage_connection_string` 使用存储访问密钥。 
+   对于 SQL 托管实例上的分发服务器，将 Azure 存储帐户用于 `@working_directory`，将存储访问密钥用于 `@storage_connection_string`。 
 
 3. 在发布服务器上，对 master 数据库执行 [sp_adddistributor (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)。 对 `@password` 指定第 1 步中使用的强密码。 发布服务器在连接到分发服务器时将使用此密码。
 
