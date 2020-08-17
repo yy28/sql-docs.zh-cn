@@ -1,5 +1,6 @@
 ---
-title: sys. database_mirroring_endpoints （Transact-sql） |Microsoft Docs
+description: sys.database_mirroring_endpoints (Transact-SQL)
+title: sys. database_mirroring_endpoints (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: f2285199-97ad-473c-a52d-270044dd862b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ec6735986626463a3e784ca4b87a9d50564d9b81
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 155dce156469f5ee629143b7613bbf5e6c174c71
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895238"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88324063"
 ---
 # <a name="sysdatabase_mirroring_endpoints-transact-sql"></a>sys.database_mirroring_endpoints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,15 +40,15 @@ ms.locfileid: "85895238"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**\<inherited columns>**|-|从**sys.databases**中继承列（有关详细信息，请参阅[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)）。|  
+|**\<inherited columns>**|-|从 **sys.databases** 中继承列 (有关详细信息，请参阅 [transact-sql&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)) 中的 sys.databases &#40;。|  
 |**role**|**tinyint**|镜像角色，为以下值之一：<br /><br /> **0** = 无<br /><br /> **1** = 伙伴<br /><br /> **2** = 见证服务器<br /><br /> **3** = 全部<br /><br /> 注意：此值仅适用于数据库镜像。|  
-|**role_desc**|**nvarchar(60)**|镜像角色的说明，为以下值之一：<br /><br /> **NONE**<br /><br /> **PARTNER**<br /><br /> **见证**<br /><br /> **ALL**<br /><br /> 注意：此值仅适用于数据库镜像。|  
-|**is_encryption_enabled**|**bit**|**1**表示启用了加密。<br /><br /> **0**表示禁用加密。|  
-|**connection_auth**|**tinyint**|连接到此端点所需的连接身份验证的类型，为以下值之一：<br /><br /> **1** -NTLM<br /><br /> **2** -KERBEROS<br /><br /> **3** -协商<br /><br /> **4** -证书<br /><br /> **5** -NTLM，证书<br /><br /> **6** -KERBEROS，证书<br /><br /> **7** -协商，证书<br /><br /> **8**证书，NTLM<br /><br /> **9**证书，KERBEROS<br /><br /> **10** -证书，协商|  
+|**role_desc**|**nvarchar(60)**|镜像角色的说明，为以下值之一：<br /><br /> **NONE**<br /><br /> **PARTNER**<br /><br /> **见证**<br /><br /> ALL<br /><br /> 注意：此值仅适用于数据库镜像。|  
+|**is_encryption_enabled**|**bit**|**1** 表示启用了加密。<br /><br /> **0** 表示禁用加密。|  
+|**connection_auth**|**tinyint**|连接到此端点所需的连接身份验证的类型，为以下值之一：<br /><br /> **1** -NTLM<br /><br /> **2** -KERBEROS<br /><br /> **3** -协商<br /><br /> **4** -证书<br /><br /> **5** -NTLM，证书<br /><br /> **6** -KERBEROS，证书<br /><br /> **7** -协商，证书<br /><br /> **8** 证书，NTLM<br /><br /> **9** 证书，KERBEROS<br /><br /> **10** -证书，协商|  
 |**connection_auth_desc**|**Nvarchar (60)**|连接到此端点所需的身份验证类型的说明，为以下值之一：<br /><br /> NTLM<br /><br /> KERBEROS<br /><br /> NEGOTIATE<br /><br /> CERTIFICATE<br /><br /> NTLM、CERTIFICATE<br /><br /> KERBEROS、CERTIFICATE<br /><br /> NEGOTIATE、CERTIFICATE<br /><br /> CERTIFICATE、NTLM<br /><br /> CERTIFICATE、KERBEROS<br /><br /> CERTIFICATE、NEGOTIATE|  
 |**certificate_id**|**int**|身份验证所用证书的 ID（如果有）。<br /><br /> 0 = 使用 Windows 身份验证。|  
 |**encryption_algorithm**|**tinyint**|加密算法，为以下值之一：<br /><br /> **0** -无<br /><br /> **1** -RC4<br /><br /> **2** -AES<br /><br /> **3** -无，RC4<br /><br /> **4** -无、AES<br /><br /> **5** -RC4、AES<br /><br /> **6** -AES、RC4<br /><br /> **7** -无、RC4、AES<br /><br /> **8** -无、AES、RC4|  
-|**encryption_algorithm_desc**|**nvarchar(60)**|加密算法的说明，为以下值之一：<br /><br /> NONE<br /><br /> RC4<br /><br /> AES<br /><br /> NONE, RC4<br /><br /> NONE, AES<br /><br /> RC4, AES<br /><br /> AES, RC4<br /><br /> NONE, RC4, AES<br /><br /> NONE, AES, RC4|  
+|**encryption_algorithm_desc**|**nvarchar(60)**|加密算法的说明，为以下值之一：<br /><br /> 无<br /><br /> RC4<br /><br /> AES<br /><br /> NONE, RC4<br /><br /> NONE, AES<br /><br /> RC4, AES<br /><br /> AES, RC4<br /><br /> NONE, RC4, AES<br /><br /> NONE, AES, RC4|  
   
 ## <a name="remarks"></a>备注  
   
@@ -62,7 +63,7 @@ ms.locfileid: "85895238"
  [sys.availability_replicas (Transact-SQL)](../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)   
  [sys. database_mirroring &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)   
  [sys. database_mirroring_witnesses &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   
- [数据库镜像端点 &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
+ [数据库镜像终结点 (SQL Server)](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [查询 SQL Server 系统目录常见问题](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

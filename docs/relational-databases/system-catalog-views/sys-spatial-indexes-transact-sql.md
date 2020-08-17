@@ -1,5 +1,6 @@
 ---
-title: sys. spatial_indexes （Transact-sql） |Microsoft Docs
+description: sys.spatial_indexes (Transact-SQL)
+title: sys. spatial_indexes (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 40e967d5-2e8d-45af-bf5e-5251493cf7cb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7aa52b0f559ecae832d0236d534d9752b86a3d20
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b686ab4eb7d8e8ada45a5026dbbaa4e4357db4c4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883760"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88376163"
 ---
 # <a name="sysspatial_indexes-transact-sql"></a>sys.spatial_indexes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,20 +34,20 @@ ms.locfileid: "85883760"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|\<inherited columns>||继承[sys.databases](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)中的列。|  
+|\<inherited columns>||继承 [sys.databases](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)中的列。|  
 |spatial_index_type|**tinyint**|空间索引的类型：<br /><br /> 1 = 几何空间索引<br /><br /> 2 = 地理空间索引|  
 |spatial_index_type_desc|**nvarchar(60)**|空间索引的类型说明：<br /><br /> GEOMETRY = 几何空间索引<br /><br /> GEOGRAPHY = 地理空间索引|  
-|tessellation_scheme|**sysname**|分割方案的名称：<br /><br /> GEOMETRY_GRID、GEOMETRY_AUTO_GRID、<br /><br /> GEOGRAPHY_GRID、GEOGRAPHY_AUTO_GRID<br /><br /> 注意：有关分割方案的信息，请参阅[空间索引概述](../../relational-databases/spatial/spatial-indexes-overview.md)。|  
-|\<inherited columns>||继承[sys.databases](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)中的列。<br /><br /> 继承的列 has_filter 和 filter_definition 显示在特定于空间索引的列之后。|  
+|tessellation_scheme|**sysname**|分割方案的名称：<br /><br /> GEOMETRY_GRID、GEOMETRY_AUTO_GRID、<br /><br /> GEOGRAPHY_GRID、GEOGRAPHY_AUTO_GRID<br /><br /> 注意：有关分割方案的信息，请参阅 [空间索引概述](../../relational-databases/spatial/spatial-indexes-overview.md)。|  
+|\<inherited columns>||继承 [sys.databases](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)中的列。<br /><br /> 继承的列 has_filter 和 filter_definition 显示在特定于空间索引的列之后。|  
   
 ## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
  [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [sys. spatial_index_tessellations &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md)   
- [sys. 索引 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
- [sys. index_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
+ [sys.spatial_index_tessellations (Transact-SQL)](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md)   
+ [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
+ [sys.index_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
  [空间索引概述](../../relational-databases/spatial/spatial-indexes-overview.md)  
   
   

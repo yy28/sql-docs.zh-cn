@@ -1,5 +1,6 @@
 ---
-title: sys. dm_db_index_usage_stats （Transact-sql） |Microsoft Docs
+description: sys.dm_db_index_usage_stats (Transact-SQL)
+title: sys. dm_db_index_usage_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -20,11 +21,12 @@ ms.assetid: d06a001f-0f72-4679-bc2f-66fff7958b86
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b759d19e5c0440a55d6267b820f83354652efd63
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8e5f1f9d5c4e313e81392d83b6d9ffdf98013880
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004241"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88374633"
 ---
 # <a name="sysdm_db_index_usage_stats-transact-sql"></a>sys.dm_db_index_usage_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,10 +36,10 @@ ms.locfileid: "86004241"
  在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，动态管理视图不能公开将影响数据库包含的信息，也不能公开有关用户可以访问的其他数据库的信息。 为了避免公开此信息，每个包含不属于所连接的租户的数据的行都将被筛选掉。  
   
 > [!NOTE]  
->  **sys. dm_db_index_usage_stats**不返回有关内存优化索引的信息。 有关内存优化索引使用的信息，请参阅[&#40;transact-sql&#41;dm_db_xtp_index_stats ](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md)。  
+>  **sys. dm_db_index_usage_stats** 不返回有关内存优化索引的信息。 有关内存优化索引使用的信息，请参阅 [&#40;transact-sql&#41;dm_db_xtp_index_stats ](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md)。  
   
 > [!NOTE]  
->  若要从或调用此视图 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用**dm_pdw_nodes_db_index_usage_stats**。  
+>  若要从或调用此视图 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用 **dm_pdw_nodes_db_index_usage_stats**。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -60,9 +62,9 @@ ms.locfileid: "86004241"
 |**last_system_scan**|**datetime**|系统上次执行扫描的时间。|  
 |**last_system_lookup**|**datetime**|系统上次执行查找的时间。|  
 |**last_system_update**|**datetime**|系统上次执行更新的时间。|  
-|pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
+|pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  由一个查询执行对指定索引所进行的每个单独的搜索、扫描、查找或更新都被计为对该索引的一次使用，并使此视图中的相应计数器递增。 对于由用户提交的查询所引发的操作以及由内部生成的查询所引发的操作（例如为收集统计信息而进行的扫描），都将报告相应的信息。  
   
  **user_updates** 计数器指示由基础表或视图上的插入、更新或删除操作所引起的索引维护级别。 可以使用此视图确定应用程序极少使用的索引。 还可以使用此视图确定引发维护开销的索引。 您可能要删除引发维护开销但不用于查询或只是偶尔用于查询的索引。  
@@ -75,14 +77,14 @@ ms.locfileid: "86004241"
   
 ## <a name="permissions"></a>权限  
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。  
+在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要  **服务器管理员** 或 **Azure Active Directory 管理员** 帐户。  
   
 ## <a name="see-also"></a>另请参阅  
 
  [与索引相关的动态管理视图和函数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_db_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)   
  [sys. dm_db_index_operational_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
- [sys. 索引 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
+ [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [监视和优化性能](../../relational-databases/performance/monitor-and-tune-for-performance.md)  
   

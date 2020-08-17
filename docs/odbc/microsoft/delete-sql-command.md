@@ -1,4 +1,5 @@
 ---
+description: DELETE - SQL 命令
 title: DELETE-SQL 命令 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0d5bd477-626f-4f22-a05a-f531d9f8c5e7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9757fd57d999815964266c035963de1129eaf5e8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7912babb3ae1e0a38e94e6dcab5e775037924559
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303548"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340933"
 ---
 # <a name="delete---sql-command"></a>DELETE - SQL 命令
 标记要删除的记录。  
@@ -33,15 +34,15 @@ DELETE FROM [DatabaseName!]TableName
 ```  
   
 ## <a name="arguments"></a>参数  
- 从 [ *DatabaseName！*]*TableName*  
+ 从 [ *DatabaseName！*] *TableName*  
  指定将记录标记为删除的表。  
   
- *Database!* 如果包含数据库不是使用数据源指定的数据库，则指定包含表的数据库的名称。 如果数据库不是使用数据源指定的数据库，则必须包含包含表的数据库的名称。 在数据库名称后面以及表名之前包含惊叹号（！）分隔符。  
+ *Database!* 如果包含数据库不是使用数据源指定的数据库，则指定包含表的数据库的名称。 如果数据库不是使用数据源指定的数据库，则必须包含包含表的数据库的名称。 将感叹号 (！ ) 分隔符添加到数据库名称之后、表名称之前。  
   
  WHERE *FilterCondition1*[AND &#124; OR *FilterCondition2*...]  
  指定视觉 FoxPro 仅标记某些要删除的记录。  
   
- *FilterCondition*指定要标记为删除的记录必须满足的条件。 您可以根据需要包含多个筛选条件，并将它们与 AND 或 OR 运算符连接。 您也可以使用 NOT 运算符来反转逻辑表达式的值，也可以使用**empty**（）检查空字段。  
+ *FilterCondition* 指定要标记为删除的记录必须满足的条件。 您可以根据需要包含多个筛选条件，并将它们与 AND 或 OR 运算符连接。 您也可以使用 NOT 运算符来反转逻辑表达式的值，也可以使用 **空** 的 ( ) 检查是否有空字段。  
   
 ## <a name="remarks"></a>备注  
  如果设置为 "已删除"，则所有包含作用域的命令都将忽略标记为删除的记录。  

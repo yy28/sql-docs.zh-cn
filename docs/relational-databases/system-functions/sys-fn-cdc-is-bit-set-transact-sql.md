@@ -1,5 +1,6 @@
 ---
-title: sys. fn_cdc_is_bit_set （Transact-sql） |Microsoft Docs
+description: sys.fn_cdc_is_bit_set (Transact-SQL)
+title: sys. fn_cdc_is_bit_set (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 792fe7cf-b3b8-4f25-8329-78d63f0e6921
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b099f578ebe60a7caaf1f0179af549cd42679c11
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ab93830bd9e2b164f5b76412b2b412dc095c6c9c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898372"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88321613"
 ---
 # <a name="sysfn_cdc_is_bit_set-transact-sql"></a>sys.fn_cdc_is_bit_set (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,16 +44,16 @@ sys.fn_cdc_is_bit_set ( position , update_mask )
   
 ## <a name="arguments"></a>参数  
  *置于*  
- 掩码中要检查的序号位置。 *位置*为**int**。  
+ 掩码中要检查的序号位置。 *位置* 为 **int**。  
   
  *update_mask*  
- 标识已更新列的掩码。 *update_mask*为**varbinary （128）**。  
+ 标识已更新列的掩码。 *update_mask* 为 **varbinary (128) **。  
   
 ## <a name="return-type"></a>返回类型  
  **bit**  
   
 ## <a name="remarks"></a>备注  
- 此函数通常用在变更数据查询中，指示列是否已更改。 在此方案中，函数[fn_cdc_get_column_ordinal sys.databases](../../relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql.md)在查询之前使用，以获取所需的列序号。 然后，将**fn_cdc_is_bit_set**应用到返回的每行更改数据，并提供特定于列的信息作为返回的结果集的一部分。  
+ 此函数通常用在变更数据查询中，指示列是否已更改。 在此方案中，函数 [fn_cdc_get_column_ordinal sys.databases](../../relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql.md) 在查询之前使用，以获取所需的列序号。 然后，将**fn_cdc_is_bit_set**应用到返回的每行更改数据，并提供特定于列的信息作为返回的结果集的一部分。  
   
  在确定是否为返回的结果集的所有行更改了列时，我们建议使用此函数，而不是函数[sys.databases fn_cdc_has_column_changed。](../../relational-databases/system-functions/sys-fn-cdc-has-column-changed-transact-sql.md)  
   
@@ -77,7 +78,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [更改数据捕获函数 &#40;Transact-sql&#41;](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)   
+ [变更数据捕获函数 (Transact-SQL)](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)   
  [sys. fn_cdc_get_column_ordinal &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql.md)   
  [sys. fn_cdc_has_column_changed &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-has-column-changed-transact-sql.md)   
  [fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-sql&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   

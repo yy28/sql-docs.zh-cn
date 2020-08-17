@@ -1,4 +1,5 @@
 ---
+description: 使用多维数据集表达式和子多维数据集表达式
 title: 使用多维数据集表达式和子多维数据集表达式 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7c656bdaa0de108ade568a22bbcc734f38d43bfd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b431d82f24e5bf531dfa407d459ff9f36b543160
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893531"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88341123"
 ---
 # <a name="using-cube-and-subcube-expressions"></a>使用多维数据集表达式和子多维数据集表达式
 
@@ -23,7 +24,7 @@ ms.locfileid: "68893531"
 ## <a name="cube-expressions"></a>多维数据集表达式  
  多维数据集表达式包含多维数据集标识符或 CURRENTCUBE 关键字，因此只能是简单表达式。 许多 MDX 语句使用 CURRENTCUBE 关键字标识当前多维数据集上下文，而不要求使用多维数据集标识符。  
   
- 多维数据集标识符在 MDX 语句的 BNF 表示法说明中显示为*Cube_Name* 。  
+ 多维数据集标识符在 MDX 语句的 BNF 表示法说明中显示为 *Cube_Name* 。  
   
  多维数据集表达式可以出现在多个位置。 在 MDX SELECT 语句中，这些表达式指定要在其中检索数据的多维数据集。 在以下的示例查询中，表达式 [Adventure Works] 指的是该名称的多维数据集：  
   
@@ -66,13 +67,13 @@ ms.locfileid: "68893531"
   
  `END SCOPE;`  
   
- 子多维数据集标识符显示为*Subcube_Name*。 在 MDX 语句的 BNF 表示法说明中。  
+ 子多维数据集标识符显示为 *Subcube_Name*。 在 MDX 语句的 BNF 表示法说明中。  
   
 ## <a name="see-also"></a>另请参阅  
  [基本 MDX 查询 &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query)   
  [在 MDX &#40;MDX 中生成子多维数据&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx)   
  [&#40;MDX 创建子多维数据集语句&#41;](../mdx/mdx-data-definition-create-subcube.md)   
- [MDX&#41;&#40;表达式](../mdx/expressions-mdx.md)   
+ [MDX&#41;&#40;表达式 ](../mdx/expressions-mdx.md)   
  [SCOPE 语句 (MDX)](../mdx/mdx-scripting-scope.md)  
   
   

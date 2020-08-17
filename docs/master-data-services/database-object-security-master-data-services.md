@@ -1,4 +1,5 @@
 ---
+description: 数据库对象安全性 (Master Data Services)
 title: 数据库对象安全性
 ms.custom: ''
 ms.date: 03/04/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 656b36f796d05d6ea7533c8c35e4b6ffe9572f99
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: f9b2089b72f11872df0dc0c0b2758fb8272a4c06
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811576"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88344903"
 ---
 # <a name="database-object-security-master-data-services"></a>数据库对象安全性 (Master Data Services)
 
@@ -55,7 +56,7 @@ ms.locfileid: "85811576"
 |将数据从关系临时表加载到相应的 MDS 表中。|stg.udp_name_Relationship|EXECUTE|  
 |查看在数据从临时表插入到 MDS 数据库表时发生的错误。|stg.udp_name_Relationship|SELECT|  
   
- 有关详细信息，请参阅[概述：从表导入数据 &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)。  
+ 有关详细信息，请参阅 [概述：从表导入数据 &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)。  
   
 ##  <a name="validating-data-against-business-rules"></a><a name="rules"></a> 根据业务规则对数据进行验证  
   
@@ -74,7 +75,7 @@ ms.locfileid: "85811576"
   
  有关详细信息，请参阅[删除版本 (Master Data Services)](../master-data-services/delete-a-version-master-data-services.md)。  
   
-##  <a name="immediately-applying-hierarchy-member-permissions"></a><a name="Hierarchy"></a>立即应用层次结构成员权限  
+##  <a name="immediately-applying-hierarchy-member-permissions"></a><a name="Hierarchy"></a> 立即应用层次结构成员权限  
   
 |操作|安全对象|权限|  
 |------------|----------------|-----------------|  
@@ -82,7 +83,7 @@ ms.locfileid: "85811576"
   
  有关详细信息，请参阅[立即应用成员权限 (Master Data Services)](../master-data-services/immediately-apply-member-permissions-master-data-services.md)。  
   
-##  <a name="configuring-system-settings"></a><a name="SysSettings"></a>配置系统设置  
+##  <a name="configuring-system-settings"></a><a name="SysSettings"></a> 配置系统设置  
  可以配置系统设置来控制 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中的行为。 可以在 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中调整这些设置，或者如果具有 UPDATE 访问权限，可以直接在 mdm.tblSystemSetting 数据库表中调整这些设置。 有关详细信息，请参阅[系统设置 (Master Data Services)](../master-data-services/system-settings-master-data-services.md)。  
   
 ## <a name="see-also"></a>另请参阅  

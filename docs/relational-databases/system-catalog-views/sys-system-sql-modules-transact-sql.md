@@ -1,5 +1,6 @@
 ---
-title: sys.system_sql_modules （Transact-sql） |Microsoft Docs
+description: sys.system_sql_modules (Transact-SQL)
+title: sys.system_sql_modules (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,16 +21,17 @@ ms.assetid: ad3548bc-4780-4821-b962-b421d52daed9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2754beba5dba55e1af19a293f9a181a737c229fa
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 67e5958f8219a871ac79cf2348f3c2f26443e983
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999112"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88375793"
 ---
 # <a name="syssystem_sql_modules-transact-sql"></a>sys.system_sql_modules (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  为每个包含 SQL 语言定义模块的系统对象返回一行。 类型为 FN、IF、P、PC、TF 和 V 的系统对象具有关联的 SQL 模块。 若要标识包含对象，可以将此视图加入到[sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)。  
+  为每个包含 SQL 语言定义模块的系统对象返回一行。 类型为 FN、IF、P、PC、TF 和 V 的系统对象具有关联的 SQL 模块。 若要标识包含对象，可以将此视图加入到 [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -49,7 +51,7 @@ ms.locfileid: "85999112"
 ## <a name="see-also"></a>另请参阅  
  [sys.sql_modules (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [sys. all_sql_modules &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-all-sql-modules-transact-sql.md)   
- [Transact-sql&#41;的目录视图 &#40;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [对象目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  
   
   

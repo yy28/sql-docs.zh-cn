@@ -1,4 +1,5 @@
 ---
+description: Paradox 数据类型
 title: Paradox 数据类型 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0c9e5d21-9321-49f8-a055-69459e1c9c85
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a85cf643a6d22b9b2fce15984539d74dc43c62ab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 44494e9945a84f978449b6bab02bd967e40d9a20
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81290927"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340452"
 ---
 # <a name="paradox-data-types"></a>Paradox 数据类型
 ODBC Paradox 驱动程序将 Paradox 数据类型映射到 ODBC SQL 数据类型。 下表列出了所有 Paradox 数据类型，并显示了它们所映射到的 ODBC SQL 数据类型。  
@@ -46,10 +47,10 @@ ODBC Paradox 驱动程序将 Paradox 数据类型映射到 ODBC SQL 数据类型
   
  [1] 仅对 Paradox 版本5有效。*x*。  
   
- [2] 仅对 Paradox 版本4有效。*x*和5。*x*。  
+ [2] 仅对 Paradox 版本4有效。*x* 和5。*x*。  
   
 > [!NOTE]  
->  **SQLGetTypeInfo**返回 ODBC SQL 数据类型。 对于本主题中前面列出的 ODBC SQL 数据类型，支持*Odbc 程序员参考*的附录 D 中的所有转换。  
+>  **SQLGetTypeInfo** 返回 ODBC SQL 数据类型。 对于本主题中前面列出的 ODBC SQL 数据类型，支持 *Odbc 程序员参考* 的附录 D 中的所有转换。  
   
  下表显示了对 Paradox 数据类型的限制。  
   
@@ -57,7 +58,7 @@ ODBC Paradox 驱动程序将 Paradox 数据类型映射到 ODBC SQL 数据类型
 |---------------|-----------------|  
 |字符|创建零或未指定长度的字母数字列实际上将返回255字节的列。|  
 |BYTES|如果使用 Paradox5 驱动程序向二进制列中插入 NULL，则它将更改为0。|  
-|LONG|在 Paradox 5 中，Long 数据类型的 Paradox 驱动程序所支持的最大负值。*x*不是-2 ^ 31 （-2147483648），因为它的长映射到 ODBC 数据类型 SQL_INTEGER。 支持的最大负值值实际上是-2 ^ 31 + 1 （-2147483647）。|  
+|LONG|在 Paradox 5 中，Long 数据类型的 Paradox 驱动程序所支持的最大负值。*x* 不是-2 ^ 31 (-2147483648) ，因为它的长映射到 ODBC 数据类型 SQL_INTEGER。 支持的最大负值值实际上是-2 ^ 31 + 1 (-2147483647) 。|  
 |TIMESTAMP|当 Paradox 驱动程序将某个值插入到时间戳列中后，在随后从列中进行检索时，检索到的值可能会与插入的值不同，因为舍入只需1秒。|  
   
  [数据类型限制](../../odbc/microsoft/data-type-limitations.md)中可以找到更多有关数据类型的限制。

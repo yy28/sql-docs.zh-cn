@@ -1,5 +1,6 @@
 ---
-title: backupfilegroup （Transact-sql） |Microsoft Docs
+description: backupfilegroup (Transact-SQL)
+title: backupfilegroup (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: d26e8fbe-f5c5-4e10-b2bd-0d8e16ea21f9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1494796dd0a57e786abae0c97a7278892aa422e6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dc0f1651c0c5532e387e4b878182a2cb99f66936
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890687"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373933"
 ---
 # <a name="backupfilegroup-transact-sql"></a>backupfilegroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  备份时数据库中的每个文件组在表中占一行。 **backupfilegroup**存储在**msdb**数据库中。  
+  备份时数据库中的每个文件组在表中占一行。 **backupfilegroup** 存储在 **msdb** 数据库中。  
   
 > [!NOTE]  
 >  **Backupfilegroup**表显示了数据库的文件组配置，而不是备份集的配置文件组。 若要确定备份集中是否包含文件，请使用[backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)表的**is_present**列。  
@@ -48,14 +49,14 @@ ms.locfileid: "85890687"
 ## <a name="remarks"></a>备注  
   
 > [!IMPORTANT]  
->  相同的文件组名称可以出现在不同数据库中；但是，每个文件组都有自己的 GUID。 因此， **（backup_set_id、filegroup_guid）** 是标识**backupfilegroup**中的文件组的唯一键。  
+>  相同的文件组名称可以出现在不同数据库中；但是，每个文件组都有自己的 GUID。 因此， ** (backup_set_id，filegroup_guid) ** 是一个唯一键，用于标识 **backupfilegroup**中的文件组。  
   
- 通过 VERIFYONLY 从*BACKUP_DEVICE*还原将用介质集标头中的相应值填充**backupmediaset**表的列。  
+ 通过 VERIFYONLY 从 *BACKUP_DEVICE* 还原将用介质集标头中的相应值填充 **backupmediaset** 表的列。  
   
- 若要减少此表以及其他备份和历史记录表中的行数，请执行[sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)存储过程。  
+ 若要减少此表以及其他备份和历史记录表中的行数，请执行 [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) 存储过程。  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;Transact-sql&#41;备份和还原表](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
+ [&#40;Transact-sql&#41;备份和还原表 ](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
  [backupfile (Transact-SQL)](../../relational-databases/system-tables/backupfile-transact-sql.md)   
  [backupmediafamily (Transact-SQL)](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
  [backupmediaset (Transact-SQL)](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   

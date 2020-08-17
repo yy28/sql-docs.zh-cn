@@ -1,4 +1,5 @@
 ---
+description: 使用加密
 title: 使用加密 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
@@ -20,11 +21,12 @@ ms.assetid: 405e0ed7-50a9-430e-a343-471f54b4af76
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9981601da461fb126024863fc0e794d04195c103
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d3b777922998a4ef8159f0b2e61a2748d0185a53
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008362"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88325364"
 ---
 # <a name="using-encryption"></a>使用加密
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -42,7 +44,7 @@ ms.locfileid: "86008362"
  在 SMO 中，证书由 <xref:Microsoft.SqlServer.Management.Smo.Certificate> 对象表示。 <xref:Microsoft.SqlServer.Management.Smo.Certificate> 对象具有指定公钥、主题名称、有效期以及有关颁发者的信息的属性。 可采用 **Grant**、 **Revoke** 和 **Deny** 方法控制对证书的访问权限。  
   
 ## <a name="example"></a>示例  
- 对于下列代码示例，您必须选择编程环境、编程模板和编程语言才能创建应用程序。 有关详细信息，请参阅[在 Visual Studio .net 中创建 Visual C&#35; SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 对于下列代码示例，您必须选择编程环境、编程模板和编程语言才能创建应用程序。 有关详细信息，请参阅 [在 Visual Studio .net 中创建 Visual C&#35; SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="adding-a-certificate-in-visual-c"></a>在 Visual C# 中添加证书  
  该代码示例使用加密密码创建简单证书。 与其他对象不同，<xref:Microsoft.SqlServer.Management.Smo.Certificate.Create%2A> 方法具有若干种重载。 该示例中所使用的重载将使用加密密码创建一个新证书。  

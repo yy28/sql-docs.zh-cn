@@ -1,4 +1,5 @@
 ---
+description: 从数据库刷新 (OracleToSQL)
 title: 从数据库刷新 (OracleToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: 84492f44-c368-4c75-954d-7307a2d2bbc0
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 694953d914b9811208f2ea143f93e2c91878f07b
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 66bb67e64f3b95b78cdcf78d84145df25a02d4b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933008"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320173"
 ---
 # <a name="refresh-from-database-oracletosql"></a>从数据库刷新 (OracleToSQL)
 **通过 "从数据库刷新**" 对话框，您可以从 Oracle 数据库中选择要刷新的对象。 对话框中的行是根据元数据的状态进行颜色编码的：  
@@ -28,9 +29,9 @@ ms.locfileid: "87933008"
   
 -   如果该对象是 Oracle 数据库中的新对象，则该行为粉红色。  
   
-您可以在 "**项目设置**" 对话框中指定默认对象刷新设置。 有关详细信息，请参阅[项目设置&#40;同步&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-synchronization-oracletosql.md)。  
+您可以在 " **项目设置** " 对话框中指定默认对象刷新设置。 有关详细信息，请参阅 [项目设置&#40;同步&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-synchronization-oracletosql.md)。  
   
-若要访问**从数据库刷新**对话框，请在 Oracle 元数据资源管理器中右键单击对象，然后单击 "**从数据库刷新**"。  
+若要访问 **从数据库刷新** 对话框，请在 Oracle 元数据资源管理器中右键单击对象，然后单击 " **从数据库刷新**"。  
   
 ## <a name="options"></a>选项  
 **折叠 (-) **  
@@ -49,7 +50,7 @@ ms.locfileid: "87933008"
 使用 X 按钮指定不应在 SSMA 中更新所选对象的元数据。  
   
 **图例**  
-显示 "**图例**" 对话框。 图例包含行颜色和元数据状态之间的映射。  
+显示 " **图例** " 对话框。 图例包含行颜色和元数据状态之间的映射。  
   
-若要使 "**图例**" 对话框位于 "**从数据库刷新**" 对话框的顶部，请选中 "**顶部显示**" 复选框。  
+若要使 " **图例** " 对话框位于 " **从数据库刷新** " 对话框的顶部，请选中 " **顶部显示** " 复选框。  
   

@@ -1,5 +1,6 @@
 ---
-title: sys. check_constraints （Transact-sql） |Microsoft Docs
+description: sys.check_constraints (Transact-SQL)
+title: sys. check_constraints (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/28/2017
 ms.prod: sql
@@ -20,21 +21,21 @@ ms.assetid: 940ebc5e-44ba-4dae-8b29-da94f2d1d6c4
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: af931a3ac76186b0ac583155b0d45e4dbe7ed055
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 767714d75fcb885a23899161714695237fcb8149
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718871"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88323853"
 ---
 # <a name="syscheck_constraints-transact-sql"></a>sys.check_constraints (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  对于作为检查约束的每个对象，都包含一个对应的行，其**sys.databases**为 "C"。  
+  对于作为检查约束的每个对象，都包含一个对应的行，其 **sys.databases** 为 "C"。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**\<Columns inherited from sys.objects>**||有关此视图所继承的列的列表，请参阅[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
+|**\<Columns inherited from sys.objects>**||有关此视图所继承的列的列表，请参阅 [sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
 |**is_disabled**|**bit**|禁用 CHECK 约束。|  
 |**is_not_for_replication**|**bit**|创建 CHECK 约束且使用 NOT FOR REPLICATION 选项。|  
 |**is_not_trusted**|**bit**|系统未针对所有行验证 CHECK 约束。|  
@@ -47,7 +48,7 @@ ms.locfileid: "85718871"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;Transact-sql&#41;的对象目录视图](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [对象目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

@@ -1,5 +1,6 @@
 ---
-title: UnknownMember （MDX） |Microsoft Docs
+description: UnknownMember (MDX)
+title: UnknownMember (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a0332b200a74044dcd4e7d8d308923cc4b759738
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0489556836b943ba91d4e17b3a164aeca0c648d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097286"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88341143"
 ---
 # <a name="unknownmember-mdx"></a>UnknownMember (MDX)
 
@@ -43,15 +44,15 @@ Hierarchy_Expression.UnknownMember
   
 -   位于未聚合的属性层次结构的顶级。  
   
--   在自然层次结构的 "**所有**" 级别下的第一个级别。  
+-   在自然层次结构的 " **所有** " 级别下的第一个级别。  
   
 -   位于非自然层次结构的任何一级。  
   
- 如果指定了成员表达式，则**UnknownMember**函数返回指定成员的未知成员子级。 如果指定的成员不存在，该函数将返回空。  
+ 如果指定了成员表达式，则 **UnknownMember** 函数返回指定成员的未知成员子级。 如果指定的成员不存在，该函数将返回空。  
   
- 如果指定了层次结构表达式，则**UnknownMember**函数将在顶级返回未知成员（如果存在）。  
+ 如果指定了层次结构表达式，则 **UnknownMember** 函数将在顶级返回未知成员（如果存在）。  
   
- 如果级别或成员中不存在未知成员，则**UnknownMember**函数将创建 null 成员。  
+ 如果级别或成员中不存在未知成员，则 **UnknownMember** 函数将创建 null 成员。  
   
 > [!NOTE]  
 >  如果层次结构或成员中不存在未知成员，将生成一个错误。  

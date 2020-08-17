@@ -1,5 +1,6 @@
 ---
-title: sys. function_order_columns （Transact-sql） |Microsoft Docs
+description: sys.function_order_columns (Transact-SQL)
+title: sys. function_order_columns (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,31 +20,31 @@ helpviewer_keywords:
 ms.assetid: 29287973-3125-4d35-8ca9-92cb45828854
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 040ed7a26a96e22fe2959159b8d7495c49fc0f63
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 77617e5be43286218fce0b40dbd35825fa8d105a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893775"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88324003"
 ---
 # <a name="sysfunction_order_columns-transact-sql"></a>sys.function_order_columns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  为每个列返回一行，该列是公共语言运行时（CLR）表值函数的**ORDER**表达式的一部分。  
+  为每个列返回一行，该列是公共语言运行时 (CLR) 表值函数的 **顺序** 表达式的一部分。  
 
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|要定义其顺序的对象（CLR 表值函数）的 ID。|  
-|**order_column_id**|**int**|排序列的 ID。 **order_column_id**仅在**object_id**中是唯一的。<br /><br /> **order_column_id**表示此列在排序中的位置。|  
-|**column_id**|**int**|**Object_id**中的列的 ID。<br /><br /> **column_id**仅在**object_id**中是唯一的。|  
+|**order_column_id**|**int**|排序列的 ID。 **order_column_id** 仅在 **object_id**中是唯一的。<br /><br /> **order_column_id** 表示此列在排序中的位置。|  
+|**column_id**|**int**|**Object_id**中的列的 ID。<br /><br /> **column_id** 仅在 **object_id**中是唯一的。|  
 |**is_descending**|**bit**|1 = 排序列采用降序排序。<br /><br /> 0 = 排序列采用升序排序。|  
   
 ## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;Transact-sql&#41;的对象目录视图](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [对象目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

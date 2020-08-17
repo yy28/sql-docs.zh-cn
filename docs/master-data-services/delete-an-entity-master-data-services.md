@@ -1,4 +1,5 @@
 ---
+description: 删除实体 (Master Data Services)
 title: 删除实体
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 71fffb03-38fd-46f0-9e10-6ec75da19ab2
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c605aeb0afd9350243604fe2bbbcabc95e92ba84
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 47ca39e2b4f89cbe834881463784270c195a9ae4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811808"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88345193"
 ---
 # <a name="delete-an-entity-master-data-services"></a>删除实体 (Master Data Services)
 
@@ -34,7 +35,7 @@ ms.locfileid: "85811808"
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 ### <a name="to-delete-an-entity"></a>删除实体  
   

@@ -1,4 +1,5 @@
 ---
+description: 新建项目 (OracleToSQL)
 title: 新项目 (OracleToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -10,15 +11,15 @@ ms.assetid: 16849cfd-050c-4ac7-bd3d-a929aebb5010
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: eb608e61207f32567eca576c2ab9040b1451968a
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: d16a3aee923d7b57e7195799ed26a72571f4d92d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933371"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320533"
 ---
 # <a name="new-project-oracletosql"></a>新建项目 (OracleToSQL)
-使用 "**新建项目**" 对话框创建新的 SSMA 项目。 若要访问 "**新建项目**" 对话框，请在 "**文件**" 菜单上单击 "**新建项目**"。  
+使用 " **新建项目** " 对话框创建新的 SSMA 项目。 若要访问 " **新建项目** " 对话框，请在 " **文件** " 菜单上单击 " **新建项目**"。  
   
 ## <a name="options"></a>选项  
 **名称**  
@@ -36,7 +37,7 @@ ms.locfileid: "87933371"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   

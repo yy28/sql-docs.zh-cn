@@ -1,5 +1,6 @@
 ---
-title: 获取大型数据（Native Client OLE DB 提供程序） |Microsoft Docs
+description: 从 SQL Server Native Client OLE DB 提供程序获取大数据
+title: " (Native Client OLE DB provider) 获取大数据 |Microsoft Docs"
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,17 +17,17 @@ ms.assetid: a31c5632-96aa-483f-a307-004c5149fbc0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 298a442dbb93ca2c0bb95d79e341d712cd3651ea
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 372f8c7c24c94330decd807bef1393a0dfbd7d49
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243678"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88328623"
 ---
 # <a name="getting-large-data-from-a-sql-server-native-client-ole-db-provider"></a>从 SQL Server Native Client OLE DB 提供程序获取大数据
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  通常，使用者应该隔离用来创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本机客户端 OLE DB 提供程序存储对象的代码，该代码用于处理未通过**ISequentialStream**接口指针引用的数据。  
+  通常，使用者应该隔离用来创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本机客户端 OLE DB 提供程序存储对象的代码，该代码用于处理未通过 **ISequentialStream** 接口指针引用的数据。  
   
  本主题涉及可用于以下函数的功能：  
   
@@ -36,7 +37,7 @@ ms.locfileid: "87243678"
   
 -   ICommand::Execute  
   
- 如果将 DBPROP_ACCESSORDER 属性（位于行集属性组中）设置为 DBPROPVAL_AO_SEQUENTIAL 或 DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS 的任一值，则使用者应该只在调用**GetNextRows**方法时提取单行数据，因为 BLOB 数据不进行缓冲。 如果 DBPROP_ACCESSORDER 的值设置为 DBPROPVAL_AO_RANDOM，则使用者可以在 GetNextRows 中提取多行数据****。  
+ 如果行集属性组) 中 (的 DBPROP_ACCESSORDER 属性设置为 DBPROPVAL_AO_SEQUENTIAL 或 DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS 的值之一，则使用者应该只在调用 **GetNextRows** 方法时提取单行数据，因为 BLOB 数据不会被缓冲。 如果 DBPROP_ACCESSORDER 的值设置为 DBPROPVAL_AO_RANDOM，则使用者可以在 GetNextRows 中提取多行数据  。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者请求之前，Native Client OLE DB 提供程序不会从检索大数据 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 使用者应在一个取值函数中绑定所有短 (Short) 数据，然后根据需要使用一个或多个临时取值函数检索大型数据值。  
   
@@ -149,7 +150,7 @@ HRESULT GetUnboundData
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Blob 和 OLE 对象](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
+ [BLOB 和 OLE 对象](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
  [使用大值类型](../../relational-databases/native-client/features/using-large-value-types.md)  
   
   

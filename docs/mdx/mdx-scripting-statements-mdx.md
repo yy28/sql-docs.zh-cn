@@ -1,5 +1,6 @@
 ---
-title: MDX 脚本编写语句（MDX） |Microsoft Docs
+description: MDX 脚本编写语句 (MDX)
+title: Mdx 脚本语句 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5564c73ec8d10b37285c1d3e7e7f65fd295894a8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 633a44f28852898e2638438a5e8395d8d865fca3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893328"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88341463"
 ---
 # <a name="mdx-scripting-statements-mdx"></a>MDX 脚本编写语句 (MDX)
 
@@ -22,7 +23,7 @@ ms.locfileid: "68893328"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|说明|  
+|主题|描述|  
 |-----------|-----------------|  
 |[CALCULATE 语句 (MDX)](../mdx/mdx-scripting-calculate.md)|计算子多维数据集，还可以确定子多维数据集中所包含维度的求解次序。|  
 |[CASE 语句 (MDX)](../mdx/case-statement-mdx.md)|允许您有条件地从多次比较中返回特定值。|  

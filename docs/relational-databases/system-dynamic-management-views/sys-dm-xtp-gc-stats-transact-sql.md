@@ -1,5 +1,6 @@
 ---
-title: sys. dm_xtp_gc_stats （Transact-sql） |Microsoft Docs
+description: sys.dm_xtp_gc_stats (Transact-SQL)
+title: sys. dm_xtp_gc_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: 8287d611-50e3-43e1-ba8d-3e3793d3ba0e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 05a08c554aabdb8e99a756e10e63f5dc3eb82184
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 231f0f8438fa4aa98f97286be5766a5e6aa9dd73
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85648020"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88322729"
 ---
 # <a name="sysdm_xtp_gc_stats-transact-sql"></a>sys.dm_xtp_gc_stats (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   提供有关 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 垃圾回收进程的当前行为的信息（总体统计信息）。  
   
- 行在常规事务处理过程中或是由主垃圾回收线程（称为空闲工作线程）进行垃圾回收。 在用户事务提交后，它取消排队从垃圾回收队列（[sys.databases. dm_xtp_gc_queue_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xtp-gc-queue-stats-transact-sql.md)）中一个工作项。 可以进行垃圾回收但是未由主用户事务访问的任何行都在灰尘角扫描（针对较少访问的索引区域的扫描）过程中由空闲工作线程进行垃圾回收。  
+ 行在常规事务处理过程中或是由主垃圾回收线程（称为空闲工作线程）进行垃圾回收。 当用户事务提交时，它取消排队从垃圾回收队列中一个工作项， ([dm_xtp_gc_queue_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xtp-gc-queue-stats-transact-sql.md)) 。 可以进行垃圾回收但是未由主用户事务访问的任何行都在灰尘角扫描（针对较少访问的索引区域的扫描）过程中由空闲工作线程进行垃圾回收。  
   
  有关详细信息，请参阅[内存中 OLTP&#40;内存中优化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。  
   

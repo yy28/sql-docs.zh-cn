@@ -1,5 +1,6 @@
 ---
-title: + 交集（MDX） |Microsoft Docs
+description: 联合-MDX 运算符引用
+title: +  (MDX)  (联合) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: cd352b95853cc5fe52857a080b6ca2e515f5c013
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 84e6bc2b6b8460b90013ade5f0981af7f0ed8432
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097347"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88341186"
 ---
 # <a name="union---mdx-operator-reference"></a>联合-MDX 运算符引用
 
@@ -35,7 +36,7 @@ Set_Expression + Set_Expression
  一个包含两个指定集的成员的集。  
   
 ## <a name="remarks"></a>备注  
- **+ （Union）** 运算符在功能上等效于[联合 &#40;MDX&#41;](../mdx/union-mdx.md)函数。  
+ **+ (联合) **运算符在功能上等效于[联合 &#40;MDX&#41;](../mdx/union-mdx.md)函数。  
   
 ## <a name="examples"></a>示例  
  下面的示例演示了此运算符的用法。  

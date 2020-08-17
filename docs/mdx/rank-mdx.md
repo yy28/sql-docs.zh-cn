@@ -1,5 +1,6 @@
 ---
-title: Rank （MDX） |Microsoft Docs
+description: Rank (MDX)
+title: " (MDX) 排名 |Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1081cacd0676f4eb0512780e9ddc7641edb99ca1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 391ba9d805684a9fd469d8e6c66727caba71ce70
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68037067"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88341333"
 ---
 # <a name="rank-mdx"></a>Rank (MDX)
 
@@ -38,14 +39,14 @@ Rank(Tuple_Expression, Set_Expression [ ,Numeric Expression ] )
  返回数字的有效数值表达式，通常为单元坐标的多维表达式 (MDX)。  
   
 ## <a name="remarks"></a>备注  
- 如果指定了数值表达式，则**rank**函数通过对元组计算指定的数值表达式来确定指定元组的从1开始的秩。 如果指定了数值表达式，则**rank**函数会将相同的秩分配给具有该集内的重复值的元组。 为值相同的元组分配相同的排名，会影响该集中后续元组的排名。 例如，由以下元组组成的集：`{(a,b), (e,f), (c,d)}`。 元组 `(a,b)` 与元组 `(c,d)` 具有相同的值。 如果元组 `(a,b)` 的排名为 1，则 `(a,b)` 和 `(c,d)` 的排名都为 1。 但元组 `(e,f)` 的排名为 3。 此集中可能没有排名为 2 的元组。  
+ 如果指定了数值表达式，则 **rank** 函数通过对元组计算指定的数值表达式来确定指定元组的从1开始的秩。 如果指定了数值表达式，则 **rank** 函数会将相同的秩分配给具有该集内的重复值的元组。 为值相同的元组分配相同的排名，会影响该集中后续元组的排名。 例如，由以下元组组成的集：`{(a,b), (e,f), (c,d)}`。 元组 `(a,b)` 与元组 `(c,d)` 具有相同的值。 如果元组 `(a,b)` 的排名为 1，则 `(a,b)` 和 `(c,d)` 的排名都为 1。 但元组 `(e,f)` 的排名为 3。 此集中可能没有排名为 2 的元组。  
   
- 如果未指定数值表达式， **Rank**函数将返回指定元组的序号位置（从1开始）。  
+ 如果未指定数值表达式， **Rank** 函数将返回指定元组的序号位置（从1开始）。  
   
  **Rank**函数不会对集进行排序。  
   
 ## <a name="example"></a>示例  
- 以下示例返回包含客户和采购日期的元组集，方法是使用**筛选器**、**非空**的、**项**和**排名**函数来查找每个客户购买的最后日期。  
+ 以下示例返回包含客户和采购日期的元组集，方法是使用 **筛选器**、 **非空**的、 **项**和 **排名** 函数来查找每个客户购买的最后日期。  
   
 ```  
 WITH SET MYROWS AS FILTER  
@@ -62,7 +63,7 @@ MYROWS ON 1
 FROM [Adventure Works]  
 ```  
   
- 下面的示例使用**Order**函数（而不是**排名**函数）根据 "分销商销售额" 度量值对 City 层次结构的成员进行排序，然后按排名顺序显示它们。 通过使用**order**函数对 City 层次结构的成员集进行第一次排序，排序只完成一次，然后在呈现排序顺序之前进行线性扫描。  
+ 下面的示例使用 **Order** 函数（而不是 **排名** 函数）根据 "分销商销售额" 度量值对 City 层次结构的成员进行排序，然后按排名顺序显示它们。 通过使用 **order** 函数对 City 层次结构的成员集进行第一次排序，排序只完成一次，然后在呈现排序顺序之前进行线性扫描。  
   
 ```  
 WITH   
@@ -81,7 +82,7 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;MDX&#41;顺序](../mdx/order-mdx.md)   
+ [&#40;MDX&#41;顺序 ](../mdx/order-mdx.md)   
  [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
   
   

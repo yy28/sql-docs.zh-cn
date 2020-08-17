@@ -1,5 +1,6 @@
 ---
-title: 成员（Set）（MDX） |Microsoft Docs
+description: Members（集）(MDX)
+title: 成员 ( (MDX) ) 集 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d3e5bb14455d2d2ea67c4187e8e1a2a420031944
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0358f20d0aeba0e4d455fabadb6dc1e4361081e5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68138256"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88341393"
 ---
 # <a name="members-set-mdx"></a>Members（集）(MDX)
 
@@ -39,9 +40,9 @@ Level_Expression.Members
  返回级别的有效多维表达式 (MDX)。  
   
 ## <a name="remarks"></a>备注  
- 如果指定了层次结构表达式，则**成员（Set）** 函数将返回指定层次结构中所有成员的集，不包括计算成员。 若要获取层次结构中的所有成员的集合，请使用[AllMembers &#40;MDX&#41;](../mdx/allmembers-mdx.md)函数  
+ 如果指定了层次结构表达式，则 **) 函数 (集成员 ** 将返回指定层次结构中所有成员的集，不包括计算成员。 若要获取层次结构中的所有成员的集合，请使用 [AllMembers &#40;MDX&#41;](../mdx/allmembers-mdx.md) 函数  
   
- 如果指定了级别表达式，则**成员（Set）** 函数将返回指定级别中所有成员的集。  
+ 如果指定了级别表达式，则 **) 函数 (集成员 ** 将返回指定级别中所有成员的集。  
   
 > [!IMPORTANT]  
 >  如果维度仅包含单个可见层次结构，由于在此情况下维度名称将解析为其唯一可见的层次结构，所以既可以通过维度名称也可以通过层次结构名称来引用该层次结构。 例如，因为 Measures.Members 解析为 Measures 维度中唯一的层次结构，所以 Measures.Members 是有效的 MDX 表达式。  

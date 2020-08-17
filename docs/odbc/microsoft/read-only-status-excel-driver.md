@@ -1,5 +1,6 @@
 ---
-title: 只读状态（Excel 驱动程序） |Microsoft Docs
+description: 只读状态（Excel 驱动程序）
+title: Excel 驱动程序)  (只读状态 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ef5d773b-4f8f-4005-b985-84b53d8e9f9b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: eb585d4712b6cac5e09b65ee8e13604763cd0164
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 04a0c5d0cb2c9932d30c0edb900169d8c5e5f82b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304018"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340383"
 ---
 # <a name="read-only-status-excel-driver"></a>只读状态（Excel 驱动程序）
 使用 Microsoft Excel 驱动程序时，默认情况下，数据源表以只读方式打开，并且一次只能由一个用户打开。 但尽管表具有只读状态，但应用程序可以执行 Microsoft Excel 表的插入和更新。  

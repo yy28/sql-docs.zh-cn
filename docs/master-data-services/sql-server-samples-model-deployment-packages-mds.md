@@ -1,4 +1,5 @@
 ---
+description: SQL Server 示例：模型部署包 (MDS)
 title: 模型部署包示例
 ms.custom: ''
 ms.date: 07/28/2017
@@ -13,12 +14,12 @@ keywords:
 ms.assetid: 9b31b7b6-319b-4840-b67d-eb383e7762b1
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 76ef4f409fd5a4072d27cdfa3e4180896534eaa0
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 70375fd359e56081267f2478a582281d96c253eb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811376"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88342373"
 ---
 # <a name="sql-server-examples-model-deployment-packages-mds"></a>SQL Server 示例：模型部署包 (MDS)
 
@@ -29,7 +30,7 @@ ms.locfileid: "85811376"
  有关如何部署示例模型包的说明，请参阅 [部署示例模型和数据](../master-data-services/master-data-services-installation-and-configuration.md#deploySample)。 可以使用 [MDSModelDeploy 工具](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)部署示例模型包。  
   
 > [!IMPORTANT]
->  **中的示例更新[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**  
+>  **中的示例更新 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**  
 > 
 >  示例包已更新为支持以下新功能。  
 > 
@@ -42,7 +43,7 @@ ms.locfileid: "85811376"
 >      有关详细信息，请参阅[创建基于域的属性 (Master Data Services)](../master-data-services/create-a-domain-based-attribute-master-data-services.md)。  
 > -   针对实体更改的需要批准。  
 > 
->      有关详细信息，请参阅[&#40;Master Data Services&#41;所需的批准](../master-data-services/approval-required-master-data-services.md)。  
+>      有关详细信息，请参阅 [&#40;Master Data Services&#41;所需的批准 ](../master-data-services/approval-required-master-data-services.md)。  
 > -   在业务规则中使用 Not 和 Else 运算符  
 > 
 >      有关详细信息，请参阅 [业务规则示例](../master-data-services/business-rule-examples-master-data-services.md)。  

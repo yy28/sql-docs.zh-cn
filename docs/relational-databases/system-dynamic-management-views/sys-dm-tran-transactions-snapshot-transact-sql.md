@@ -1,5 +1,6 @@
 ---
-title: sys. dm_tran_transactions_snapshot （Transact-sql） |Microsoft Docs
+description: sys.dm_tran_transactions_snapshot (Transact-SQL)
+title: sys. dm_tran_transactions_snapshot (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: sql
@@ -20,23 +21,23 @@ ms.assetid: 03f64883-07ad-4092-8be0-31973348c647
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 257878b1995a779f7e6f317864a627eaa27f1e88
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f7497dbdce71e0989cc6bfa06da0acbaea118dbd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718698"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88323733"
 ---
 # <a name="sysdm_tran_transactions_snapshot-transact-sql"></a>sys.dm_tran_transactions_snapshot (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  返回一个虚拟表，用于表示在每个快照事务启动时处于活动状态的事务的**sequence_number** 。 此视图返回的信息有助于您：  
+  返回一个虚拟表，用于表示在每个快照事务启动时处于活动状态的事务的 **sequence_number** 。 此视图返回的信息有助于您：  
   
 -   确定当前的活动快照事务数。  
   
 -   确定特定快照事务忽略的数据修改。 对于在快照事务启动时活动的事务，快照事务将忽略由其进行的所有数据修改，即使在事务提交后也是如此。  
   
- 例如，请考虑以下来自**sys. dm_tran_transactions_snapshot**的输出：  
+ 例如，请考虑以下来自 **sys. dm_tran_transactions_snapshot**的输出：  
   
 ```  
 transaction_sequence_num snapshot_id snapshot_sequence_num  
@@ -69,15 +70,15 @@ transaction_sequence_num snapshot_id snapshot_sequence_num
 ## <a name="permissions"></a>权限
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
+在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要  **服务器管理员** 或 **Azure Active Directory 管理员** 帐户。   
   
 ## <a name="remarks"></a>备注  
- 当快照事务启动时，[!INCLUDE[ssDE](../../includes/ssde-md.md)]会记录此时处于活动状态的所有事务。 **sys. dm_tran_transactions_snapshot**报告所有当前活动的快照事务的此信息。  
+ 当快照事务启动时，[!INCLUDE[ssDE](../../includes/ssde-md.md)]会记录此时处于活动状态的所有事务。 **sys. dm_tran_transactions_snapshot** 报告所有当前活动的快照事务的此信息。  
   
  每个事务都由事务开始时分配的事务序列号标识。 在执行 BEGIN TRANSACTION 或 BEGIN WORK 语句时事务启动。 但是，[!INCLUDE[ssDE](../../includes/ssde-md.md)]通过执行 BEGIN TRANSACTION 或 BEGIN WORK 语句后第一个访问数据的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句来分配事务序列号。 事务序列号以一为增量递增。  
   
 ## <a name="see-also"></a>另请参阅  
- [动态管理视图和函数 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [与事务相关的动态管理视图和函数 (Transact-SQL)](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

@@ -1,5 +1,6 @@
 ---
-title: sys. dm_xtp_system_memory_consumers （Transact-sql） |Microsoft Docs
+description: sys.dm_xtp_system_memory_consumers (Transact-SQL)
+title: sys. dm_xtp_system_memory_consumers (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: 9eb0dd82-7920-42e0-9e50-7ce6e7ecee8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 12cfa8fa0ebde7fe2cb6d1a6e9402a0466a4895f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4dbecba15c5f60c0b3818739ccd842d5a31a66a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85648031"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88322593"
 ---
 # <a name="sysdm_xtp_system_memory_consumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  报告 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 的系统级内存消耗者。 这些使用者的内存来自默认池（当分配在用户线程的上下文中时），或来自内部池（如果分配在系统线程的上下文中）。  
+  报告 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 的系统级内存消耗者。 这些使用者的内存来自默认池 (当分配位于用户线程的上下文中时) 或从内部池 (如果分配在系统线程) 的上下文中。  
   
 ```  
 -- system memory consumers @ instance  
@@ -41,8 +42,8 @@ select * from sys.dm_xtp_system_memory_consumers
 |-----------------|----------|-----------------|  
 |memory_consumer_id|**bigint**|内存消耗者的内部 ID。|  
 |memory_consumer_type|**int**|一个整数，表示具有以下值之一的内存使用者的类型：<br /><br /> 0-不应显示。 聚合两个或多个使用者的内存使用量。<br /><br /> 1-后备链表：跟踪系统后备链表的内存占用情况。<br /><br /> VARHEAP：跟踪长度可变的堆的内存占用情况。<br /><br /> 4-IO 页池：跟踪用于 IO 操作的系统页池的内存占用情况。|  
-|memory_consumer_type_desc|**nvarchar （16）**|对内存消耗者类型的说明：<br /><br /> 0-不应显示。<br /><br /> 1-后备链表<br /><br /> 2 - VARHEAP<br /><br /> 4 - PGPOOL|  
-|memory_consumer_desc|**nvarchar （64）**|对内存消耗者实例的说明：<br /><br /> VARHEAP <br />系统堆。 通用。 当前仅用于分配垃圾收集工作项。<br />- 或 -<br />后备链堆。 后备链在后备链表中包含的项目数达到预先确定的上限（通常约 5,000 项）时使用。<br /><br /> PGPOOL：对于 IO 系统池，有三种不同的大小：系统4K 页面池、系统 64 K 页面池和系统 256 K 页池。|  
+|memory_consumer_type_desc|**nvarchar (16) **|对内存消耗者类型的说明：<br /><br /> 0-不应显示。<br /><br /> 1-后备链表<br /><br /> 2 - VARHEAP<br /><br /> 4 - PGPOOL|  
+|memory_consumer_desc|**nvarchar (64) **|对内存消耗者实例的说明：<br /><br /> VARHEAP <br />系统堆。 通用。 当前仅用于分配垃圾收集工作项。<br />\- 或 -<br />后备链堆。 后备链在后备链表中包含的项目数达到预先确定的上限（通常约 5,000 项）时使用。<br /><br /> PGPOOL：对于 IO 系统池，有三种不同的大小：系统4K 页面池、系统 64 K 页面池和系统 256 K 页池。|  
 |lookaside_id|**bigint**|线程本地后备链内存提供程序的 ID。|  
 |pagepool_id|**bigint**|线程本地页池内存提供程序的 ID。|  
 |allocated_bytes|**bigint**|为此消耗者保留的字节数。|  

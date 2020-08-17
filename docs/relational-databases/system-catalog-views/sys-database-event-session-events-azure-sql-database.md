@@ -1,5 +1,6 @@
 ---
-title: sys. database_event_session_events （Azure SQL Database） |Microsoft Docs
+description: sys.database_event_session_events（Azure SQL 数据库）
+title: database_event_session_events (Azure SQL 数据库) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ ms.assetid: f4c9eb0a-173c-4c66-8dd8-6f7176b2657f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6ab2f62063c87dcf55fdbb52eaaa9f7ba2d075a8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b4cc0cee2b7acea6bbe465f0fc3cef9f40954e0d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913163"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88323353"
 ---
 # <a name="sysdatabase_event_session_events-azure-sql-database"></a>sys.database_event_session_events（Azure SQL 数据库）
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -34,8 +35,8 @@ ms.locfileid: "86913163"
 |name|**sysname**|事件的名称。 不可为 null。|  
 |包|**sysname**|包含事件的事件包的名称。 不可为 null。|  
 |name|**sysname**|包含事件的模块的名称。 不可为 null。|  
-|predicate|**nvarchar （3000）**|应用于事件的谓词表达式。 可以为 Null。|  
-|predicate_xml|**nvarchar （3000）**|应用于事件的 XML 谓词表达式。 可以为 Null。|  
+|predicate|**nvarchar (3000) **|应用于事件的谓词表达式。 可以为 Null。|  
+|predicate_xml|**nvarchar (3000) **|应用于事件的 XML 谓词表达式。 可以为 Null。|  
   
 ## <a name="permissions"></a>权限  
  要求对服务器具有 VIEW DATABASE STATE 权限。  
@@ -43,7 +44,7 @@ ms.locfileid: "86913163"
 ## <a name="remarks"></a>备注  
  此视图具有下列关系基数。  
   
-| From | 收件人 | 关系 |
+| From | 功能 | 关系 |
 | ---- | -- | ------------ |
 |sys. database_event_session_events event_session_id|sys. database_event_sessions event_session_id|多对一|  
   

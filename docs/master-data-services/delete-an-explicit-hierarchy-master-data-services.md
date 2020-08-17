@@ -1,4 +1,5 @@
 ---
+description: 删除显式层次结构 (Master Data Services)
 title: 删除显式层次结构
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4ce177b0-9884-47a2-9cea-212e845dd762
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: d49665fff9fe5821bf5cb38e908202483f2250b5
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: e2ce835a8ac38b13557cc412a83d7f18f2d05e4a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812374"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88345203"
 ---
 # <a name="delete-an-explicit-hierarchy-master-data-services"></a>删除显式层次结构 (Master Data Services)
 
@@ -34,7 +35,7 @@ ms.locfileid: "85812374"
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 ### <a name="to-delete-an-explicit-hierarchy"></a>删除显式层次结构  
   
@@ -44,7 +45,7 @@ ms.locfileid: "85812374"
   
 3.  在“管理实体” **** 页上，从网格中选择包含要删除的显式层次结构的实体所在的行。  
   
-4.  单击 "**显式层次结构**"。  
+4.  单击 " **显式层次结构**"。  
   
 5.  在“管理显式层次结构” **** 页上，单击要删除的显式层次结构。  
   

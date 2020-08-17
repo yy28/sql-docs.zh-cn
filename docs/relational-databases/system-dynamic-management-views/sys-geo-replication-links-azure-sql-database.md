@@ -1,5 +1,6 @@
 ---
-title: sys. geo_replication_links （Azure SQL Database） |Microsoft Docs
+description: sys.geo_replication_links（Azure SQL 数据库）
+title: geo_replication_links (Azure SQL 数据库) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/28/2019
 ms.service: sql-database
@@ -17,12 +18,12 @@ ms.assetid: 58911798-1d60-4f28-87ab-2def2bfc3de7
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: c59f3379d2f210d96b97e497ecb8f332a6f93d2a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d0771578b9d9b478a9f6947fd131abb66b0654d4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85647898"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88322293"
 ---
 # <a name="sysgeo_replication_links-azure-sql-database"></a>sys.geo_replication_links（Azure SQL 数据库）
 
@@ -47,7 +48,7 @@ ms.locfileid: "85647898"
   
 ## <a name="permissions"></a>权限
 
-此视图仅在**master**数据库中适用于服务器级主体登录名。  
+此视图仅在 **master** 数据库中适用于服务器级主体登录名。  
   
 ## <a name="example"></a>示例
 
@@ -67,6 +68,6 @@ FROM sys.geo_replication_links;
 
 ## <a name="see-also"></a>另请参阅
 
- [ALTER DATABASE （Azure SQL 数据库）](../../t-sql/statements/alter-database-azure-sql-database.md)   
+ [ALTER DATABASE（Azure SQL 数据库）](../../t-sql/statements/alter-database-azure-sql-database.md)   
  [dm_geo_replication_link_status &#40;Azure SQL 数据库&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
  [dm_operation_status &#40;Azure SQL 数据库&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)  

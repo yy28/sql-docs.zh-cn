@@ -1,4 +1,5 @@
 ---
+description: 项目设置（类型映射）(OracleToSQL)
 title: 项目设置 (类型映射)  (OracleToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -10,26 +11,26 @@ ms.assetid: 4bb8466e-2199-4f00-8513-b04e9586723d
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: ab1b453fb85d7b9c6ee0cf9a271c1af55a337b4a
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 0facd2ecca0ff6cc0a4bc28fe709a7adfc0c5acf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933178"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320443"
 ---
 # <a name="project-settings-type-mapping-oracletosql"></a>项目设置（类型映射）(OracleToSQL)
-"**项目设置**" 对话框的 "类型映射" 页包含用于自定义 SSMA 将 Oracle 数据类型转换为数据类型的方式的设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+" **项目设置** " 对话框的 "类型映射" 页包含用于自定义 SSMA 将 Oracle 数据类型转换为数据类型的方式的设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
-"类型映射" 页在 "**项目设置**" 和 "**默认项目设置**" 对话框中可用。  
+"类型映射" 页在 " **项目设置** " 和 " **默认项目设置** " 对话框中可用。  
   
--   若要指定所有未来 SSMA 项目的设置，请在 "**工具**" 菜单上单击 "**默认项目设置**"，从 "**迁移目标版本**" 下拉框中选择需要查看或更改其设置的 "迁移项目类型"，然后单击左窗格底部的 "**类型映射**"。  
+-   若要指定所有未来 SSMA 项目的设置，请在 " **工具** " 菜单上单击 " **默认项目设置**"，从 " **迁移目标版本** " 下拉框中选择需要查看或更改其设置的 "迁移项目类型"，然后单击左窗格底部的 " **类型映射** "。  
   
--   若要指定当前项目的设置，请在 "**工具**" 菜单上单击 "**项目设置**"，然后单击左窗格底部的 "**类型映射**"。  
+-   若要指定当前项目的设置，请在 " **工具** " 菜单上单击 " **项目设置**"，然后单击左窗格底部的 " **类型映射** "。  
   
-若要指定当前对象或对象类的设置，请使用主 SSMA 窗口中的 "**类型映射**" 选项卡。  
+若要指定当前对象或对象类的设置，请使用主 SSMA 窗口中的 " **类型映射** " 选项卡。  
   
 ## <a name="options"></a>选项  
-下表显示了 "**类型映射**" 选项卡选项：  
+下表显示了 " **类型映射** " 选项卡选项：  
   
 **源类型**  
 映射的 Oracle 数据类型。  
@@ -48,7 +49,7 @@ ms.locfileid: "87933178"
 **删除**  
 单击此选项可从 "映射" 列表中删除所选的数据类型映射。  
   
-**重置为默认值**  
+重置为默认值  
 单击可将类型映射列表重置为 SSMA 默认值。  
   
 ## <a name="default-type-mappings"></a>默认类型映射  
@@ -97,7 +98,7 @@ ms.locfileid: "87933178"
 |rowid|uniqueidentifier|  
 |signtype|smallint|  
 |smallint|smallint|  
-|字符串|varchar(max)|  
+|string|varchar(max)|  
 |timestamp|datetime2|  
 |带有本地时区的时间戳|datetimeoffset|  
 |带时区的时间戳|datetimeoffset|  
@@ -106,9 +107,9 @@ ms.locfileid: "87933178"
 |varchar2|varchar(max)|  
 |xmltype|xml|  
   
-<sup>*</sup>仅适用于返回值类型映射。  
+<sup>*</sup> 仅适用于返回值类型映射。  
   
-<sup>**</sup>仅适用于参数类型映射。  
+<sup>**</sup> 仅适用于参数类型映射。  
   
 ### <a name="default-column-type-mapping"></a>默认列类型映射  
 下表包含列的默认类型映射。  
@@ -237,7 +238,7 @@ ms.locfileid: "87933178"
 |Number|float [53]|  
 |number [* ... \* ]|数值 [*]|  
 |number [* ... \* ][\*..\*]|数值 [*] [ \* ]|  
-|数字|数值 [38] [0]|  
+|Numeric|数值 [38] [0]|  
 |数值 [* ... \* ]|数值 [*]|  
 |数值 [* ... \* ][\*..\*]|数值 [*] [ \* ]|  
 |nvarchar2 [*。4000]|nvarchar [*]|  

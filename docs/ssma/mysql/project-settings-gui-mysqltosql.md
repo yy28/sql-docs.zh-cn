@@ -1,4 +1,5 @@
 ---
+description: 项目设置 (GUI) (MySQLToSQL)
 title: " (GUI)  (MySQLToSQL) 的项目设置 |Microsoft Docs"
 ms.prod: sql
 ms.custom: ''
@@ -9,30 +10,30 @@ ms.topic: conceptual
 ms.assetid: fd92aa77-21e3-41ac-8f3e-08608a734b7f
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 8da37a73c0a251b5ae11b59b12c688e061e3a0cd
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: aa798c425733282b50b4baeb3140173719fc0bb2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935206"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320563"
 ---
 # <a name="project-settings-gui--mysqltosql"></a>项目设置 (GUI) (MySQLToSQL)
-GUI 项目设置允许您配置数据在 "**数据**" 选项卡上的显示方式，以及是否包括具有评估报告的数据报告。  
+GUI 项目设置允许您配置数据在 " **数据** " 选项卡上的显示方式，以及是否包括具有评估报告的数据报告。  
   
-"**项目设置**" 和 "**默认项目设置**" 对话框中提供了 GUI 窗格。  
+" **项目设置** " 和 " **默认项目设置** " 对话框中提供了 GUI 窗格。  
   
--   使用 "**项目设置**" 对话框可以设置当前项目的用户界面选项。 若要访问 GUI 设置，请在 "**工具**" 菜单上选择 "**项目设置**"，然后单击左窗格底部的 " **GUI** "。  
+-   使用 " **项目设置** " 对话框可以设置当前项目的用户界面选项。 若要访问 GUI 设置，请在 " **工具** " 菜单上选择 " **项目设置**"，然后单击左窗格底部的 " **GUI** "。  
   
--   使用 "**默认项目设置**" 对话框可以为所有项目设置用户界面选项。 若要访问 GUI 设置，请在 "**工具**" 菜单上，选择 "**默认项目设置**"，然后单击左窗格底部的 " **GUI** "。  
+-   使用 " **默认项目设置** " 对话框可以为所有项目设置用户界面选项。 若要访问 GUI 设置，请在 " **工具** " 菜单上，选择 " **默认项目设置**"，然后单击左窗格底部的 " **GUI** "。  
   
 ## <a name="options"></a>选项  
 **源的最大行号**  
-配置在选定源表的 "**数据**" 选项卡上显示的数据的行数。  
+配置在选定源表的 " **数据** " 选项卡上显示的数据的行数。  
   
 **默认值**：100  
   
 **目标的最大行号**  
-配置所选目标表的 "**数据**" 选项卡上显示的数据的行数。  
+配置所选目标表的 " **数据** " 选项卡上显示的数据的行数。  
   
 **默认值**：100  
   

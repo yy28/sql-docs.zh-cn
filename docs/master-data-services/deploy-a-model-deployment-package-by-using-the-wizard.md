@@ -1,5 +1,6 @@
 ---
-title: 部署模型部署包（向导）
+description: 使用向导部署模型部署包
+title: " (向导部署模型部署包) "
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4f65dc60-0ff8-46e6-9988-5bc5b9603ad0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 16e1ff64a2c5178eda70fb681c11a7d7a1b79bc0
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 86170829ee1ae3f5116497f8435bf207edb3d5a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811767"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88344453"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-the-wizard"></a>使用向导部署模型部署包
 
@@ -36,7 +37,7 @@ ms.locfileid: "85811767"
   
 -   模型部署包必须存在。 有关详细信息，请参阅 [使用向导创建模型部署包](../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)。  
   
--   您必须是部署模型的环境中的管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是部署模型的环境中的管理员。 有关详细信息，请参阅 [管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 ### <a name="to-deploy-a-model-deployment-package-of-model-objects-only"></a>仅部署模型对象的模型部署包  
   
@@ -50,7 +51,7 @@ ms.locfileid: "85811767"
   
 5.  找到部署包（.pkg 文件），然后单击“打开”。****  
   
-6.  单击“下一步”。  
+6.  单击 **“下一步”** 。  
   
 7.  在加载包后，单击 **“下一步”**。  
   
@@ -58,7 +59,7 @@ ms.locfileid: "85811767"
   
 9. 单击“完成”**** 以退出向导。  
   
- 注意：  
+ **注意：**  
   
 -   如果包中的订阅视图与现有模型中的订阅视图同名，则显示此警告： **Deployer 订阅视图已重命名**。 另外，视图已创建为 *modelname.subscriptionviewname*。 如果此名称已使用，则不会创建订阅视图。  
   
@@ -75,7 +76,7 @@ ms.locfileid: "85811767"
      在更新模型时，如果该过程在前三个步骤的任意步骤中失败，则该过程将不会继续；但是，已进行的更改将不会回滚。  
   
 ## <a name="next-steps"></a>后续步骤  
- 模型部署包中不包括文件属性以及用户和组权限。 在您部署模型后，必须手动更新这些内容。 有关详情，请参阅：  
+ 模型部署包中不包括文件属性以及用户和组权限。 在您部署模型后，必须手动更新这些内容。 有关详细信息，请参阅：  
   
 -   [分配模型对象权限 (Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   

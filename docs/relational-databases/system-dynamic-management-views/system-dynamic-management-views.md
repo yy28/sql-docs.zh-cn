@@ -1,5 +1,6 @@
 ---
-title: 动态管理视图（Transact-sql） |Microsoft Docs
+description: " (Transact-sql) 的动态管理视图"
+title: 动态管理视图 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/29/2017
 ms.prod: sql
@@ -24,12 +25,12 @@ ms.assetid: cf893ecb-0bf6-4cbf-ac00-8a1099e405b1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fbeef1cf93e9ea2c9556a7f68b550fc2da0c9508
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: a1644a542a7f7c70b3f2293fbd340ddda9474721
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86941749"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88322683"
 ---
 # <a name="system-dynamic-management-views"></a>系统动态管理视图
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,7 +56,7 @@ SELECT wait_type, wait_time_ms
 FROM sys.dm_os_wait_stats;  
 ```  
   
-### <a name="required-permissions"></a>所需的权限  
+### <a name="required-permissions"></a>所需权限  
  查询动态管理视图或函数需要对于对象具有 SELECT 权限以及 VIEW SERVER STATE 或 VIEW DATABASE STATE 权限。 这样您可以有选择地限制用户或登录名对动态管理视图和函数的访问。 为此，首先在 master 中创建用户，然后拒绝该用户对不希望被访问的动态管理视图或函数的 SELECT 权限。 此后，无论该用户的数据库上下文如何，用户都将无法选择这些动态管理视图或函数。  
   
 > [!NOTE]  
@@ -66,7 +67,7 @@ FROM sys.dm_os_wait_stats;
 
 :::row:::
     :::column:::
-        [Always On 可用性组动态管理视图和函数（Transact-sql）](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)
+        [Always On 可用性组动态管理视图和函数 (Transact-sql) ](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)
 
         [与变更数据捕获相关的动态管理视图 (Transact-SQL)](change-data-capture-sys-dm-cdc-errors.md)
 
@@ -122,7 +123,7 @@ FROM sys.dm_os_wait_stats;
 :::row-end:::
 
 ## <a name="see-also"></a>另请参阅  
- [&#40;Transact-sql&#41;授予服务器权限](../../t-sql/statements/grant-server-permissions-transact-sql.md)   
+ [&#40;Transact-sql&#41;授予服务器权限 ](../../t-sql/statements/grant-server-permissions-transact-sql.md)   
  [GRANT 数据库权限 (Transact-SQL)](../../t-sql/statements/grant-database-permissions-transact-sql.md)   
  [Transact-sql&#41;的系统视图 &#40;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   

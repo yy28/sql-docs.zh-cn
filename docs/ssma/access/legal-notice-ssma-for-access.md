@@ -1,4 +1,5 @@
 ---
+description: '法律公告 (SSMA 访问权限) '
 title: 法律公告 (访问) 的 SSMA |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d614b508-48ad-459e-ae86-79ee9d027a73
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 5c15aa77726228d4bb7e55cd450affdfe5e4da42
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: e03216bca40411181135d42c6228591f99758346
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938220"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372883"
 ---
 # <a name="legal-notice-ssma-for-access"></a>法律公告 (SSMA 访问权限) 
 本文档（包括本文档中使用的示例应用程序）仅供参考，并在无任何明示或暗示担保的情况下提供。 本文档中的信息（包括 URL 和其他 Internet 网站引用）如有更改，恕不另行通知。 由于使用本文档而带来的任何风险或后果均由用户自行承担。  

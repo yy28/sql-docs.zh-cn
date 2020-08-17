@@ -1,4 +1,5 @@
 ---
+description: 层次结构成员权限 (Master Data Services)
 title: 层次结构成员权限
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 39470b09370db89cdba3e8c8f26e8b08376c1c07
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 3911b44ee31c0bb4cd4e8b829bf3d8e2c70e9913
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813301"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88344093"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>层次结构成员权限 (Master Data Services)
 
@@ -26,7 +27,7 @@ ms.locfileid: "85813301"
 
   层次结构成员权限是可选的，仅当您希望某个用户对特定成员具有受限的访问权限时才应使用。 如果您未在 **“层次结构成员”** 选项卡上分配权限，则用户的权限仅基于在 **“模型”** 选项卡上分配的权限。  
   
- 在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 用户界面（UI）的 "**层次结构成员**" 选项卡上的 "**用户和组权限**" 功能区域中分配层次结构成员权限。这些权限确定用户在用户界面的 "**资源管理器**" 功能区域中可以访问哪些成员。  
+ 层次结构成员权限在 " [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **层次结构成员**" 选项卡上的 "**用户和组权限**" 功能区域 (UI) 中分配。这些权限确定用户在用户界面的 "**资源管理器**" 功能区域中可以访问哪些成员。  
   
  在 **“层次结构成员”** 选项卡上，每个层次结构均表示为一个树形结构。 将权限分配给树中的节点时，所有子节点都将继承该权限，除非在更低级别显式分配权限。  
   

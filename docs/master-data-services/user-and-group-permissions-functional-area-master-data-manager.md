@@ -1,4 +1,5 @@
 ---
+description: 用户和组权限功能区域（主数据管理器）
 title: 用户和组权限功能区域
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 320d417e-a370-48fc-a05b-444d85fd24c0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c1e4c41bd4edd55fea00d20d89c7d1b944a868d8
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: b487861c462052a20b61bb98ff9579e823396da3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813195"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88342223"
 ---
 # <a name="user-and-group-permissions-functional-area-master-data-manager"></a>用户和组权限功能区域（主数据管理器）
 

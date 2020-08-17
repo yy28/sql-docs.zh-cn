@@ -1,5 +1,6 @@
 ---
-title: SQLDataSources （Visual FoxPro ODBC 驱动程序） |Microsoft Docs
+description: SQLDataSources（Visual FoxPro ODBC 驱动程序）
+title: SQLDataSources (Visual FoxPro ODBC 驱动程序) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 033f8d37-b2dd-4a4e-b93a-70c25b25b72e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c3ba904c023ac49435f7844f79c6e7b4548d4b7b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6aa63909ada70223c5a52e2746210af49d2e511f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81283867"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340273"
 ---
 # <a name="sqldatasources-visual-foxpro-odbc-driver"></a>SQLDataSources（Visual FoxPro ODBC 驱动程序）
 > [!NOTE]  
->  本主题包含特定于 Visual FoxPro ODBC 驱动程序的信息。 有关此函数的常规信息，请参阅[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)中的相应主题。  
+>  本主题包含特定于 Visual FoxPro ODBC 驱动程序的信息。 有关此函数的常规信息，请参阅 [ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)中的相应主题。  
   
  支持：完全  
   

@@ -1,5 +1,6 @@
 ---
-title: SQLGetFunctions （Visual FoxPro ODBC 驱动程序） |Microsoft Docs
+description: SQLGetFunctions（Visual FoxPro ODBC 驱动程序）
+title: SQLGetFunctions (Visual FoxPro ODBC 驱动程序) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 8102932a-88b3-49d8-bf7a-c766f54878c0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: af7ad2368847ff271dcf81759d6fa06b8a79fb0a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: df1413b657ec4631390525a702a625ba480e9f7e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298607"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340113"
 ---
 # <a name="sqlgetfunctions-visual-foxpro-odbc-driver"></a>SQLGetFunctions（Visual FoxPro ODBC 驱动程序）
 > [!NOTE]  
->  本主题包含特定于 Visual FoxPro ODBC 驱动程序的信息。 有关此函数的常规信息，请参阅[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)中的相应主题。  
+>  本主题包含特定于 Visual FoxPro ODBC 驱动程序的信息。 有关此函数的常规信息，请参阅 [ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)中的相应主题。  
   
  支持：完全  
   
@@ -31,7 +32,7 @@ ms.locfileid: "81298607"
   
  Visual FoxPro ODBC 驱动程序支持所有 ODBC API Core 和级别1的函数。 下表指示驱动程序是否支持特定的第2级功能。  
   
-|*函数*|支持|  
+|*Function*|支持|  
 |----------------|---------------|  
 |SQL_API_SQLBROWSECONNECT|否|  
 |SQL_API_SQLCOLUMNPRIVELEGES|否|  

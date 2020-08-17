@@ -1,4 +1,5 @@
 ---
+description: 'SQL Server Native Client (OLE DB 中支持架构行集) '
 title: 架构行集支持 (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,14 +18,14 @@ ms.assetid: a75b4b69-b095-4690-9b31-a2b32a67489e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: faa764aae707ae785c7cfd1cb324427b9a941376
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 5ecbd97ecdd60a65fdc72a55b8669a72e4b37a7a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243864"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88327593"
 ---
-# <a name="schema-rowset-support-in-sql-server-native-client-ole-db"></a>SQL Server Native Client （OLE DB）中的架构行集支持
+# <a name="schema-rowset-support-in-sql-server-native-client-ole-db"></a>SQL Server Native Client (OLE DB 中支持架构行集) 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]在处理分布式查询时，Native Client OLE DB 提供程序还支持从链接服务器返回架构信息 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 。  

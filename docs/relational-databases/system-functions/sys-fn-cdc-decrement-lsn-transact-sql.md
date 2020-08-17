@@ -1,5 +1,6 @@
 ---
-title: sys. fn_cdc_decrement_lsn （Transact-sql） |Microsoft Docs
+description: sys.fn_cdc_decrement_lsn (Transact-SQL)
+title: sys. fn_cdc_decrement_lsn (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 83c182ad-4713-439b-8769-9b7408aec8b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0d3650074475fef2ed74dd589a53c78ce7090676
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6402fabc4904ca8d9c9953d8dddc6f4626d949dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898436"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88321753"
 ---
 # <a name="sysfn_cdc_decrement_lsn-transact-sql"></a>sys.fn_cdc_decrement_lsn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +44,7 @@ sys.fn_cdc_decrement_lsn ( lsn_value )
   
 ## <a name="arguments"></a>参数  
  *lsn_value*  
- LSN 值。 *lsn_value*为**binary （10）**。  
+ LSN 值。 *lsn_value* 是 ** (10) 的二进制 **。  
   
 ## <a name="return-type"></a>返回类型  
  **binary(10)**  
@@ -52,7 +53,7 @@ sys.fn_cdc_decrement_lsn ( lsn_value )
  此函数返回的 LSN 始终小于指定值，并且两个值之间不能存在 LSN 值。  
   
 ## <a name="permissions"></a>权限  
- 需要**公共**数据库角色的成员身份。  
+ 需要 **公共** 数据库角色的成员身份。  
   
 ## <a name="examples"></a>示例  
  下例在一个返回 LSN 值小于最大 LSN 值的更改数据行的查询中，使用 `sys.fn_cdc_decrement_lsn` 来设置 LSN 上限。  

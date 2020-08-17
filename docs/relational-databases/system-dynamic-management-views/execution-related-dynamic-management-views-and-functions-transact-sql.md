@@ -1,5 +1,6 @@
 ---
-title: 与执行相关的动态管理视图和函数（Transact-sql） |Microsoft Docs
+description: 与执行有关的动态管理视图和函数 (Transact-SQL)
+title: " (Transact-sql) 的与执行相关的动态管理视图和函数 |Microsoft Docs"
 ms.custom: ''
 ms.date: 03/27/2019
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: aea07b33-f715-4b61-9d1e-8c77b03e9578
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ba07b5556bc92858b44987899f791290a8b4a082
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: b77497e87725ad65b766038afc1b50094a2363fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942679"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88375113"
 ---
 # <a name="execution-related-dynamic-management-views-and-functions-transact-sql"></a>与执行有关的动态管理视图和函数 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -116,7 +117,7 @@ ms.locfileid: "86942679"
 :::row-end:::
 
 > [!NOTE]  
->  为提供信息，标识了**sys.databases dm_exec_query_transformation_stats**动态管理视图。 不支持。 不保证以后的兼容性。  
+>  为提供信息，标识了 **sys.databases dm_exec_query_transformation_stats** 动态管理视图。 不支持。 不保证以后的兼容性。  
   
 ## <a name="see-also"></a>另请参阅  
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   

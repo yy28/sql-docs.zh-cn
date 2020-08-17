@@ -1,5 +1,6 @@
 ---
-title: sys. assembly_types （Transact-sql） |Microsoft Docs
+description: sys.assembly_types (Transact-SQL)
+title: sys. assembly_types (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,17 +21,17 @@ ms.assetid: 35f0384f-7a6d-41b1-9461-f1406d68f317
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 462d6e5ad7233487d137c1c2295a11b316cec83f
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 907db83580db15e9adbba69a96ebfc673ee80861
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395397"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88324173"
 ---
 # <a name="sysassembly_types-transact-sql"></a>sys.assembly_types (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
-  由 CLR 程序集定义的每个用户定义的类型对应一行。 以下 sys.databases 出现在继承列的列表中（在**rule_object_id**后，请参阅[transact-sql&#41;&#40;的 sys.databases ](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) **assembly_types** 。  
+  由 CLR 程序集定义的每个用户定义的类型对应一行。 以下**sys.databases assembly_types**会出现在继承列的列表中 (在 **) **之后， [&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) rule_object_id 中看到 sys.databases。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -46,6 +47,6 @@ ms.locfileid: "87395397"
   
 ## <a name="see-also"></a>另请参阅  
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [&#40;Transact-sql&#41;的标量类型目录视图](../../relational-databases/system-catalog-views/scalar-types-catalog-views-transact-sql.md)  
+ [&#40;Transact-sql&#41;的标量类型目录视图 ](../../relational-databases/system-catalog-views/scalar-types-catalog-views-transact-sql.md)  
   
   

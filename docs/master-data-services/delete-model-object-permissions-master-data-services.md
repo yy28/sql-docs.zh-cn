@@ -1,4 +1,5 @@
 ---
+description: 删除模型对象权限 (Master Data Services)
 title: 删除模型对象权限
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 859c5952-f600-4940-8064-1afd13f7f6dc
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0a1705e9d94a8b5c4dccb2634fe643dc45624a62
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: abe02163deac7a26e0301e5e7b9a34abadecf3cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811964"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88344773"
 ---
 # <a name="delete-model-object-permissions-master-data-services"></a>删除模型对象权限 (Master Data Services)
 
@@ -32,7 +33,7 @@ ms.locfileid: "85811964"
   
 -   您必须有权访问 **“用户和组权限”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 ### <a name="to-delete-model-object-permissions"></a>删除模型对象权限  
   

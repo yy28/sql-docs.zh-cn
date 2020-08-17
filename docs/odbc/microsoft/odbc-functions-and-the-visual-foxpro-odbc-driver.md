@@ -1,4 +1,5 @@
 ---
+description: ODBC 函数和 Visual FoxPro ODBC 驱动程序
 title: ODBC 函数和 Visual FoxPro ODBC 驱动程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,23 +21,23 @@ helpviewer_keywords:
 ms.assetid: 512f9cee-ffad-439b-b612-b49c34c32658
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 260630321825a695b4f1d701f18fff08551ff673
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 017e66c137f6c0921f3a382c0832598c9415c9e6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363527"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340733"
 ---
 # <a name="odbc-functions-and-the-visual-foxpro-odbc-driver"></a>ODBC 函数和 Visual FoxPro ODBC 驱动程序
 本节中的主题提供了有关 ODBC API 函数的简短摘要，以及任何特定于 Visual FoxPro 的详细信息。  
   
 > [!NOTE]  
->  有关 ODBC 函数的常规信息，请参阅 "ODBC 程序员指南" 中的[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)。  
+>  有关 ODBC 函数的常规信息，请参阅 "ODBC 程序员指南" 中的 [ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md) 。  
   
  ODBC API 函数分为三个主要类别：核心级 API 函数、1级 API 函数和2级 API 函数。  
   
 > [!NOTE]  
->  某些函数的行为方式不同，具体取决于数据源是定义为与[自由表](../../odbc/microsoft/visual-foxpro-terminology.md)（.dbf 文件）的目录的连接还是定义为 Visual FoxPro[数据库](../../odbc/microsoft/visual-foxpro-terminology.md)（dbc 文件）。 仅数据库连接支持某些操作。  
+>  某些函数的行为方式不同，具体取决于数据源是被定义为与 [自由表格](../../odbc/microsoft/visual-foxpro-terminology.md) 目录的连接 ( .dbf 文件) 还是 Visual FoxPro [数据库](../../odbc/microsoft/visual-foxpro-terminology.md) () 。 仅数据库连接支持某些操作。  
   
 ## <a name="core-level-api-support"></a>核心级别 API 支持  
  下表列出了 ODBC 核心级 API 函数。 Visual FoxPro ODBC 驱动程序支持所有这些函数。  
@@ -115,7 +116,7 @@ ms.locfileid: "87363527"
   
 -   [SQLSetPos](../../odbc/microsoft/sqlsetpos-visual-foxpro-odbc-driver.md)  
   
--   [SQLSetScrollOptions](../../odbc/microsoft/sqlsetscrolloptions-visual-foxpro-odbc-driver.md) （部分支持）  
+-   [SQLSetScrollOptions](../../odbc/microsoft/sqlsetscrolloptions-visual-foxpro-odbc-driver.md) (部分支持)   
   
  不支持以下第2级 API 函数：  
   

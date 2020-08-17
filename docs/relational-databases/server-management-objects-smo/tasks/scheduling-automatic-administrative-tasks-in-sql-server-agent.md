@@ -1,4 +1,5 @@
 ---
+description: 在 SQL Server 代理中计划自动管理任务
 title: 在 SQL Server 代理中计划自动管理任务
 ms.custom: seo-dt-2019
 ms.date: 08/06/2017
@@ -15,11 +16,12 @@ ms.assetid: 900242ad-d6a2-48e9-8a1b-f0eea4413c16
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9b455db0d597e4b7affb6da98497ae3638b095e9
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2ca351a2e3a6104a4bcc5c8fb7192d0f00ea6a56
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005977"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88325603"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>在 SQL Server 代理中计划自动管理任务
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -37,9 +39,9 @@ ms.locfileid: "86005977"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理对象位于 <xref:Microsoft.SqlServer.Management.Smo.Agent> 命名空间中。  
   
 ## <a name="examples"></a>示例  
- 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual Studio .net 中创建 Visual C&#35; SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅 [在 Visual Studio .net 中创建 Visual C&#35; SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
-对于使用代理的程序 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，必须包括**using**语句以限定代理命名空间。 在应用程序中的任何声明之前，将语句插入到其他**using**语句之后，例如：
+对于使用代理的程序 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，必须包括 **using** 语句以限定代理命名空间。 在应用程序中的任何声明之前，将语句插入到其他 **using** 语句之后，例如：
   
  ```
 using Microsoft.SqlServer.Management.Smo;

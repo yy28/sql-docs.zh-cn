@@ -1,5 +1,6 @@
 ---
-title: cdc. captured_columns （Transact-sql） |Microsoft Docs
+description: cdc.captured_columns (Transact-SQL)
+title: captured_columns (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 7bb4d408-d764-4ef6-802c-f271c8d39c2a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 42a87821f13ecbfd08f12257a2c2145423eb4a65
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1f97c0f9f8836a1ef0115a93d9cfae882cbaac05
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890639"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88374119"
 ---
 # <a name="cdccaptured_columns-transact-sql"></a>cdc.captured_columns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  为在捕获实例中跟踪的每一列返回一行。 默认情况下，将捕获源表中的所有列。 但是，如果为变更数据捕获启用了源表，则可以通过指定列列表将列包括在捕获范围内或排除在捕获范围之外。 有关详细信息，请参阅[sys.databases&#41;sp_cdc_enable_table &#40;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)。  
+  为在捕获实例中跟踪的每一列返回一行。 默认情况下，将捕获源表中的所有列。 但是，如果为变更数据捕获启用了源表，则可以通过指定列列表将列包括在捕获范围内或排除在捕获范围之外。 有关详细信息，请参阅 [sys.databases&#41;sp_cdc_enable_table &#40;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)。  
   
- 建议不要**直接查询系统表**。 请改为执行[sys.databases. sp_cdc_get_source_columns](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-captured-columns-transact-sql.md)存储过程。  
+ 建议不要 **直接查询系统表**。 请改为执行 [sys.databases. sp_cdc_get_source_columns](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-captured-columns-transact-sql.md) 存储过程。  
    
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  

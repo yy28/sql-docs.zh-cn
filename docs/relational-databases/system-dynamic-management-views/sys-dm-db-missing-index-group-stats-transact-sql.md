@@ -1,5 +1,6 @@
 ---
-title: sys. dm_db_missing_index_group_stats （Transact-sql） |Microsoft Docs
+description: sys.dm_db_missing_index_group_stats (Transact-SQL)
+title: sys. dm_db_missing_index_group_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,12 +22,12 @@ ms.assetid: c2886986-9e07-44ea-a350-feeac05ee4f4
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2879f5678c315d3e3921813a5d26a6c6034aa05f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f38ca7169b502c4d4b1ea31e5c517711792daae9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718816"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88374213"
 ---
 # <a name="sysdm_db_missing_index_group_stats-transact-sql"></a>sys.dm_db_missing_index_group_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "85718816"
 |**last_user_scan**|**datetime**|由可能使用了组中建议索引的用户查询所导致的上次扫描日期和时间。|  
 |**avg_total_user_cost**|**float**|可通过组中的索引减少的用户查询的平均成本。|  
 |**avg_user_impact**|**float**|实现此缺失索引组后，用户查询可能获得的平均百分比收益。 该值表示如果实现此缺失索引组，则查询成本将按此百分比平均下降。|  
-|**system_seeks**|**bigint**|由可能使用了组中建议索引的系统查询（如自动统计信息查询）所导致的查找次数。 有关详细信息，请参阅[Auto Stats 事件类](../../relational-databases/event-classes/auto-stats-event-class.md)。|  
+|**system_seeks**|**bigint**|由可能使用了组中建议索引的系统查询（如自动统计信息查询）所导致的查找次数。 有关详细信息，请参阅 [Auto Stats 事件类](../../relational-databases/event-classes/auto-stats-event-class.md)。|  
 |**system_scans**|**bigint**|由可能使用了组中建议索引的系统查询所导致的扫描次数。|  
 |**last_system_seek**|**datetime**|由可能使用了组中建议索引的系统查询所导致的上次系统查找日期和时间。|  
 |**last_system_scan**|**datetime**|由可能使用了组中建议索引的系统查询所导致的上次系统扫描日期和时间。|  

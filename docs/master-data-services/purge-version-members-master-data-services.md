@@ -1,4 +1,5 @@
 ---
+description: 清除版本成员 (Master Data Services)
 title: 清除版本成员
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: adecce2d-46bb-49ff-8be9-0b31b8dd3cb6
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0dc8e60b6cfe7d729aca36cc5e4a2203cf281129
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 490841c151fc4636e2a5ed8a252de0fb3385c042
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811705"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88342793"
 ---
 # <a name="purge-version-members-master-data-services"></a>清除版本成员 (Master Data Services)
 
@@ -28,7 +29,7 @@ ms.locfileid: "85811705"
   
 -   你必须有权访问“版本管理”功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 ## <a name="to-purge-soft-deleted-members"></a>清除软删除的成员  
   

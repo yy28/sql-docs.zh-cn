@@ -1,4 +1,5 @@
 ---
+description: sys.fn_get_audit_file (Transact-SQL)
 title: sys. fn_get_audit_file (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 02/19/2020
@@ -21,12 +22,12 @@ ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 4d280a00eb9d972cea510ae650c4598561b77fef
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: cda66aed0e3ddea4bcb14bc30ca5805bf943afb4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988782"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88321793"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]    
@@ -45,13 +46,13 @@ fn_get_audit_file ( file_pattern,
   
 ## <a name="arguments"></a>参数  
  *file_pattern*  
- 指定要读取的审核文件集的目录（或路径）和文件名。 类型为**nvarchar (260) **。 
+ 指定要读取的审核文件集的目录（或路径）和文件名。 类型为 **nvarchar (260) **。 
  
  - **SQL Server**：
     
     此参数必须包括路径（驱动器盘符或网络共享）和文件名，可以包含通配符。 单个星号 ( * ) 可用于从审核文件集中收集多个文件。 例如：  
   
-    -   **\<path>\\\***-收集指定位置中的所有审核文件。  
+    -   **\<path>\\\*** -收集指定位置中的所有审核文件。  
   
     -   ** \<path> \ LOGINSAUDIT_ {GUID}***-收集具有指定名称和 GUID 对的所有审核文件。  
   
@@ -61,7 +62,7 @@ fn_get_audit_file ( file_pattern,
  
     此参数用于指定 (包括存储终结点和容器) 的 blob URL。 虽然它不支持星号通配符，但你可以使用部分文件 (blob) 名称前缀 (而不是完整的 blob 名称) 来收集以此前缀开头 (blob) 的多个文件。 例如：
  
-      - **\<Storage_endpoint\>/\<Container\>/\<ServerName\>/\<DatabaseName\>/**-收集特定数据库 (blob) 的所有审核文件。    
+      - **\<Storage_endpoint\>/\<Container\>/\<ServerName\>/\<DatabaseName\>/** -收集特定数据库 (blob) 的所有审核文件。    
       
       - ** \<Storage_endpoint\> / \<Container\> / \<ServerName\> / \<DatabaseName\> / \<AuditName\> / \<CreationDate\> / \<FileName\> . .xel** - (blob) 收集特定的审核文件。
   
@@ -69,7 +70,7 @@ fn_get_audit_file ( file_pattern,
 >  在无文件名模式的情况下传递路径将生成错误。  
   
  *initial_file_name*  
- 指定审核文件集中要开始读取审核记录的特定文件的路径和名称。 类型为**nvarchar (260) **。  
+ 指定审核文件集中要开始读取审核记录的特定文件的路径和名称。 类型为 **nvarchar (260) **。  
   
 > [!NOTE]  
 >  *Initial_file_name*参数必须包含有效条目，或者必须包含默认值 |NULL 值。  
@@ -78,7 +79,7 @@ fn_get_audit_file ( file_pattern,
  指定一个已知位置，该位置包含为 initial_file_name 指定的文件。 使用此参数时，函数将从缓冲区中紧跟指定偏移量之后的第一个记录开始读取。  
   
 > [!NOTE]  
->  *Audit_record_offset*参数必须包含有效条目，或者必须包含默认值 |NULL 值。 类型为**bigint**。  
+>  *Audit_record_offset*参数必须包含有效条目，或者必须包含默认值 |NULL 值。 类型为 **bigint**。  
   
 ## <a name="tables-returned"></a>返回的表  
  下表描述此函数可返回的审核文件内容。  
@@ -102,8 +103,8 @@ fn_get_audit_file ( file_pattern,
 | event_time | **datetime2** | 触发可审核操作的日期和时间。 不可为 null。 |  
 | file_name | **varchar(260)** | 作为记录来源的审核日志文件的路径和名称。 不可为 null。 |
 | is_column_permission | **bit** | 指示是否为列级权限的标志。 不可为 null。 当 permission_bitmask = 0 时返回 0。<br /> 1 = true<br /> 0 = false |
-| object_id | **int** | 发生审核的实体的 ID。 其中包括：<br /> 服务器对象<br /> 数据库<br /> 数据库对象<br /> 架构对象<br /> 不可为 null。 如果实体是服务器本身或者没有在对象级别执行审核，则返回 0。 例如，对于 Authentication，则返回 NULL。 |  
-| object_name | **sysname** | 发生审核的实体的名称。 其中包括：<br /> 服务器对象<br /> 数据库<br /> 数据库对象<br /> 架构对象<br /> 可以为 Null。 如果实体是 Server 自身或者没有在对象级别执行审核，则返回 NULL。 例如，对于 Authentication，则返回 NULL。 |
+| object_id | **int** | 发生审核的实体的 ID。 这包括：<br /> 服务器对象<br /> 数据库<br /> 数据库对象<br /> 架构对象<br /> 不可为 null。 如果实体是服务器本身或者没有在对象级别执行审核，则返回 0。 例如，对于 Authentication，则返回 NULL。 |  
+| object_name | **sysname** | 发生审核的实体的名称。 这包括：<br /> 服务器对象<br /> 数据库<br /> 数据库对象<br /> 架构对象<br /> 可以为 Null。 如果实体是 Server 自身或者没有在对象级别执行审核，则返回 NULL。 例如，对于 Authentication，则返回 NULL。 |
 | permission_bitmask | **varbinary(16)** | 在某些操作中，这是授予、拒绝或撤消的权限。 |
 | response_rows | **bigint** | **适用**于： Azure SQL 数据库和 SQL 托管实例<br /><br /> 在结果集中返回的行数。 |  
 | schema_name | **sysname** | 在其中执行操作的架构上下文。 可以为 Null。 对于在架构外发生的审核，返回 NULL。 |  
@@ -123,8 +124,8 @@ fn_get_audit_file ( file_pattern,
 | target_server_principal_name | **sysname** | 操作的目标登录名。 可以为 Null。 如果不适用，则返回 NULL。 |  
 | target_server_principal_sid | **varbinary** | 目标登录名的 SID。 可以为 Null。 如果不适用，则返回 NULL。 |  
 | transaction_id | **bigint** | **适用**于：仅 SQL Server 从2016开始 () <br /><br /> 用于在一个事务中标识多个审核事件的唯一标识符 |  
-| user_defined_event_id | **smallint** | **适用**于： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更高版本、Azure SQL 数据库和 SQL 托管实例<br /><br /> 作为参数传递给**sp_audit_write**的用户定义事件 id。 对于系统事件为 NULL (默认) 值为**NULL** ，对于用户定义的事件则为非零。 有关详细信息，请参阅[&#40;transact-sql&#41;sp_audit_write ](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md)。 |  
-| user_defined_information | **nvarchar(4000)** | **适用**于： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更高版本、Azure SQL 数据库和 SQL 托管实例<br /><br /> 用于记录用户要使用**sp_audit_write**存储过程在审核日志中记录的任何其他信息。 |  
+| user_defined_event_id | **smallint** | **适用**于： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更高版本、Azure SQL 数据库和 SQL 托管实例<br /><br /> 作为参数传递给 **sp_audit_write**的用户定义事件 id。 对于系统事件为 NULL (默认) 值为**NULL** ，对于用户定义的事件则为非零。 有关详细信息，请参阅 [&#40;transact-sql&#41;sp_audit_write ](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md)。 |  
+| user_defined_information | **nvarchar(4000)** | **适用**于： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更高版本、Azure SQL 数据库和 SQL 托管实例<br /><br /> 用于记录用户要使用 **sp_audit_write** 存储过程在审核日志中记录的任何其他信息。 |  
 
   
 ## <a name="remarks"></a>备注  
@@ -132,8 +133,8 @@ fn_get_audit_file ( file_pattern,
   
 ## <a name="permissions"></a>权限
 
-- **SQL Server**：需要**CONTROL Server**权限。  
-- **AZURE SQL 数据库**：需要**CONTROL Database**权限。     
+- **SQL Server**：需要 **CONTROL Server** 权限。  
+- **AZURE SQL 数据库**：需要 **CONTROL Database** 权限。     
   - 服务器管理员可以访问服务器上所有数据库的审核日志。
   - 非服务器管理员只能从当前数据库访问审核日志。
   - 将跳过不满足上述条件的 blob， (将在查询输出消息) 中显示跳过的 blob 的列表，并且函数将仅返回允许访问的 blob 中的日志。  
@@ -158,7 +159,7 @@ fn_get_audit_file ( file_pattern,
   GO  
   ```  
 
-  此示例从同一文件中读取，但使用其他 T-sql 子句 (**TOP**、 **ORDER BY**和**WHERE**子句来筛选函数返回的审核记录) ：
+  此示例从同一文件中读取，但使用其他 T-sql 子句 (**TOP**、 **ORDER BY**和 **WHERE** 子句来筛选函数返回的审核记录) ：
   
   ```  
   SELECT TOP 10 * FROM sys.fn_get_audit_file ('https://mystorage.blob.core.windows.net/sqldbauditlogs/ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel',default,default)
@@ -176,7 +177,7 @@ fn_get_audit_file ( file_pattern,
 
 有关如何创建审核的完整示例，请参阅 [SQL Server Audit（数据库引擎）](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。
 
-有关设置 Azure SQL 数据库审核的信息，请参阅[SQL 数据库审核入门](https://docs.microsoft.com/azure/sql-database/sql-database-auditing)。
+有关设置 Azure SQL 数据库审核的信息，请参阅 [SQL 数据库审核入门](https://docs.microsoft.com/azure/sql-database/sql-database-auditing)。
   
 ## <a name="see-also"></a>另请参阅  
  [CREATE SERVER AUDIT &#40;Transact-sql&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
