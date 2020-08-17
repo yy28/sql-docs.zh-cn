@@ -1,5 +1,6 @@
 ---
-title: '&lt;（小于）（MDX） |Microsoft Docs'
+description: '&lt; (低于)  (MDX) '
+title: '&lt; (MDX)  (小于) |Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,14 +9,14 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 70a22115250fd525e4451a5aa110fa4bb61da306
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 935b75d17db379d761641d994a06373c8503fffc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905704"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387293"
 ---
-# <a name="lt-less-than-mdx"></a>&lt;（小于）并用
+# <a name="lt-less-than-mdx"></a>&lt; (低于)  (MDX) 
 
 
   执行比较运算，以确定一个多维表达式 (MDX) 的值是否小于另一个 MDX 表达式的值。  

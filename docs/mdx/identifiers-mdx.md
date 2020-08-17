@@ -1,5 +1,6 @@
 ---
-title: 标识符（MDX） |Microsoft Docs
+description: 标识符 (MDX)
+title: 标识符 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c11561ac71aa72469a809ea25297d62133aa93da
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fe8494558f7026355cb25e1415f9269fbeb1bed3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68891212"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387493"
 ---
 # <a name="identifiers-mdx"></a>标识符 (MDX)
 
@@ -34,7 +35,7 @@ ms.locfileid: "68891212"
   
     -   由 Unicode 标准2.0 定义的字母。 除了其他语言的字母字符外，Unicode 定义的字母还包括从 a 到 z 以及从 A 到 Z 的拉丁字符。  
   
-    -   下划线（_）。  
+    -   下划线 (_) 。  
   
 2.  后续字符可以是：  
   
@@ -42,9 +43,9 @@ ms.locfileid: "68891212"
   
     -   基本拉丁字符或其他国家/地区字符中的十进制数字。  
   
-    -   下划线（_）。  
+    -   下划线 (_) 。  
   
-3.  标识符一定不能是 MDX 保留关键字。 MDX 中的保留关键字区分大小写。 有关详细信息，请参阅[保留关键字 &#40;MDX 语法&#41;](../mdx/reserved-keywords-mdx-syntax.md)。  
+3.  标识符一定不能是 MDX 保留关键字。 MDX 中的保留关键字区分大小写。 有关详细信息，请参阅 [保留关键字 &#40;MDX 语法&#41;](../mdx/reserved-keywords-mdx-syntax.md)。  
   
 4.  不允许嵌入空格或特殊字符。  
   
@@ -79,7 +80,7 @@ ms.locfileid: "68891212"
   
 -   当对象的名称或名称中的一部分使用保留关键字时。  
   
-     建议不要将保留关键字用作对象名称。 从早期版本的升级的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]数据库可能包含标识符，这些标识符包含早期版本中未保留的单词，但现在已保留。 必须先更改对象的标识符，才能使用分隔标识符引用对象。  
+     建议不要将保留关键字用作对象名称。 从早期版本的升级的数据库 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 可能包含标识符，这些标识符包含早期版本中未保留的单词，但现在已保留。 必须先更改对象的标识符，才能使用分隔标识符引用对象。  
   
 -   当对象的名称使用未被列为限定标识符的字符时。  
   

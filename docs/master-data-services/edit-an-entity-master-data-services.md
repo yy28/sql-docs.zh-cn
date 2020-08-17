@@ -1,4 +1,5 @@
 ---
+description: 编辑实体 (Master Data Services)
 title: 编辑实体
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6a5b9f14-6dfc-49d7-a771-e96461d4feae
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 484fdb93ac51f353de97333d115aed4591715e9a
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: a95b2515fd8840f3a5dc04b4276bfb0316535619
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813313"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88389543"
 ---
 # <a name="edit-an-entity-master-data-services"></a>编辑实体 (Master Data Services)
 
@@ -30,7 +31,7 @@ ms.locfileid: "85813313"
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 ### <a name="to-edit-an-entity"></a>编辑实体  
   
@@ -56,7 +57,7 @@ ms.locfileid: "85813313"
   
 9. 选中或取消选中“启用数据压缩” **** 复选框。 默认情况下，系统将打开行压缩。  
   
-     有关详细信息，请参阅[数据压缩](../relational-databases/data-compression/data-compression.md)  
+     有关详细信息，请参阅 [数据压缩](../relational-databases/data-compression/data-compression.md)  
   
 ## <a name="status"></a>状态  
  在网格的状态列中显示实体上所执行操作的状态。 单击“保存实体” **** 时，将显示下图，指示实体正在更新。  

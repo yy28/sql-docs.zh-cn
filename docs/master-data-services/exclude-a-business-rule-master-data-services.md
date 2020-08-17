@@ -1,4 +1,5 @@
 ---
+description: 排除业务规则 (Master Data Services)
 title: 排除业务规则
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bdbc9df0-23f7-40b9-8aba-4445c1482580
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7bad539d25afec6da4a706e0986bfd9f4770c899
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: bc69a5cfcd36e96ed6bc0778c72e6a3a09e6fb23
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811906"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88388953"
 ---
 # <a name="exclude-a-business-rule-master-data-services"></a>排除业务规则 (Master Data Services)
 
@@ -30,7 +31,7 @@ ms.locfileid: "85811906"
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 ### <a name="to-exclude-a-business-rule"></a>排除业务规则  
   
@@ -38,7 +39,7 @@ ms.locfileid: "85811906"
   
 2.  从菜单栏中，指向 **“管理”** ，然后单击 **“业务规则”**。  
   
-3.  在 "**业务规则**" 页上，从 "**模型**" 下拉列表中选择一个模型。  
+3.  在 " **业务规则** " 页上，从 " **模型** " 下拉列表中选择一个模型。  
   
 4.  从 **** “实体”下拉列表中选择一个实体。  
   

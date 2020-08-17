@@ -1,4 +1,5 @@
 ---
+description: 对具有稀疏列的表调用 SQLColumns
 title: 对具有稀疏列的表调用 SQLColumns |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -12,11 +13,12 @@ ms.assetid: afd35e13-2370-43c2-9cbc-f8da6248c39c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1a8cf47763d1705821cfc70708595185c21cf23c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 0bdcb60ed1ca0b4c2d0cf3d5294b583a4914dff4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009557"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88382283"
 ---
 # <a name="call-sqlcolumns-on-a-table-with-sparse-columns"></a>对具有稀疏列的表调用 SQLColumns
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -25,7 +27,7 @@ ms.locfileid: "86009557"
   
  此示例不适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前的任何 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本。  
   
- 有关稀疏列功能的详细信息，请参阅[SQL Server Native Client 中的稀疏列支持](../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md)。  
+ 有关稀疏列功能的详细信息，请参阅 [SQL Server Native Client 中的稀疏列支持](../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md)。  
   
 ## <a name="example"></a>示例  
  第一个代码列表是 C++ 源代码。 将“MyServer”更改为有效的服务器名称。 请确保 INCLUDE 环境变量包含包含 sqlncli.msi 的目录。 如果您要将此示例构建为在 64 位操作系统上运行的 32 位应用程序并运行该示例，则必须使用 %windir%\SysWOW64\odbcad32.exe 中的 ODBC 管理器创建 ODBC 数据源。  
@@ -34,7 +36,7 @@ ms.locfileid: "86009557"
   
  使用 /EHsc /D、"UNICODE" 和 odbc32.lib 进行编译。  
   
- 第二个（ [!INCLUDE[tsql](../../includes/tsql-md.md)] ）代码列表删除此示例创建的表。  
+ 第二个 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 代码列表删除此示例创建的表。  
   
 ```  
 // compile with: /EHsc /D "UNICODE" odbc32.lib  

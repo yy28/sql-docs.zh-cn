@@ -1,5 +1,6 @@
 ---
-title: sys. column_store_segments （Transact-sql） |Microsoft Docs
+description: sys.column_store_segments (Transact-SQL)
+title: sys. column_store_segments (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/15/2018
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1253448c-2ec9-4900-ae9f-461d6b51b2ea
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a9b177fe44c3f94e77e2dc1f770d3c617b80c6dd
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: ebc2fe3ce3ddbdd02184e56d3629e8e6ccb0ce03
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442751"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88379223"
 ---
 # <a name="syscolumn_store_segments-transact-sql"></a>sys.column_store_segments (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -38,13 +39,13 @@ ms.locfileid: "87442751"
 |**column_id**|**int**|列存储列的 ID。|  
 |**segment_id**|**int**|行组的 ID。 为实现向后兼容性，即使这是行组 ID，列名仍将继续 segment_id 调用。 使用 <segment_id> 可以唯一地标识段 \<hobt_id, partition_id, column_id> 。|  
 |**version**|**int**|列段格式的版本。|  
-|**encoding_type**|**int**|用于该段的编码类型：<br /><br /> 1 = 不带字典的 VALUE_BASED 非字符串/二进制（与4具有一些内部变体）<br /><br /> 2 = 在字典中具有通用值的 VALUE_HASH_BASED 非字符串/二进制列<br /><br /> 3 = STRING_HASH_BASED 字典中包含通用值的字符串/二进制列<br /><br /> 4 = 不带字典的 STORE_BY_VALUE_BASED 非字符串/二进制<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED 字符串/二进制，无字典<br /><br /> 如果可能，所有编码都利用位打包和长度为长度的编码。|  
+|**encoding_type**|**int**|用于该段的编码类型：<br /><br /> 1 = 不包含字典的 VALUE_BASED 非字符串/二进制文件 (与4相比有一些内部变体) <br /><br /> 2 = 在字典中具有通用值的 VALUE_HASH_BASED 非字符串/二进制列<br /><br /> 3 = STRING_HASH_BASED 字典中包含通用值的字符串/二进制列<br /><br /> 4 = 不带字典的 STORE_BY_VALUE_BASED 非字符串/二进制<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED 字符串/二进制，无字典<br /><br /> 如果可能，所有编码都利用位打包和长度为长度的编码。|  
 |**row_count**|**int**|行组中的行数。|  
 |**has_nulls**|**int**|1 如果列段具有 Null 值。|  
 |**base_id**|**bigint**|如果正在使用编码类型1，则为基值 id。  如果未使用编码类型1，则 base_id 设置为-1。|  
 |**magnitude**|**float**|如果正在使用编码类型1，则为数量级。  如果未使用编码类型1，则数量级设置为-1。|  
 |**primary_dictionary_id**|**int**|值0表示全局字典。 值-1 指示没有为此列创建全局字典。|  
-|**secondary_dictionary_id**|**int**|如果为非零值，则指向当前段（即行组）中此列的本地字典。 值-1 指示此段没有本地字典。|  
+|**secondary_dictionary_id**|**int**|如果为非零值，则指向当前段中此列的本地字典 (即行组) 。 值-1 指示此段没有本地字典。|  
 |**min_data_id**|**bigint**|列段中的最小数据 ID。|  
 |**max_data_id**|**bigint**|列段中的最大数据 ID。|  
 |**null_value**|**bigint**|用于表示 Null 的值。|  
@@ -67,7 +68,7 @@ GO
 ```  
   
 ## <a name="permissions"></a>权限  
- 所有列都要求至少对表具有**VIEW DEFINITION**权限。 以下各列将返回 null，除非用户也具有**SELECT**权限： has_nulls、base_id、数量级、min_data_id、max_data_id 和 null_value。  
+ 所有列都要求至少对表具有 **VIEW DEFINITION** 权限。 以下各列将返回 null，除非用户也具有 **SELECT** 权限： has_nulls、base_id、数量级、min_data_id、max_data_id 和 null_value。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   

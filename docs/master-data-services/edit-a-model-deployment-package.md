@@ -1,4 +1,5 @@
 ---
+description: 编辑模型部署包
 title: 编辑模型部署包
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 6b0fdb7d-83dd-4392-9011-4ae642c471f1
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3de531d906608e32ea505a3a2383c0919b5165d8
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 81c8c6445041321adca7cfbc0761f0c396edb891
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813309"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88389563"
 ---
 # <a name="edit-a-model-deployment-package"></a>编辑模型部署包
 
@@ -30,7 +31,7 @@ ms.locfileid: "85813309"
 ## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 -   您要编辑的模型包必须存在。 有关详细信息，请参阅[部署模型 (Master Data Services)](../master-data-services/deploying-models-master-data-services.md)和[使用向导创建模型部署包](../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)或[使用 MDSModelDeploy 创建模型部署包](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md)。  
   
@@ -40,15 +41,15 @@ ms.locfileid: "85813309"
   
 2.  执行 ModelPackageEditor.exe。  
   
-3.  在模型编辑器向导中，单击 **“浏览”**，移至包含您的包的文件夹，选择一个包，然后单击 **“打开”**。 单击“下一步”。  
+3.  在模型编辑器向导中，单击 **“浏览”**，移至包含您的包的文件夹，选择一个包，然后单击 **“打开”**。 单击 **“下一步”** 。  
   
-4.  选择要部署的实体、派生层次结构、订阅视图或业务规则。 取消选择不想部署的这类项。 单击“下一步”。  
+4.  选择要部署的实体、派生层次结构、订阅视图或业务规则。 取消选择不想部署的这类项。 单击 **“下一步”** 。  
   
 5.  验证要部署的所选内容的列表。 若要更改，请单击 **“返回”** 并重复步骤 4。  
   
 6.  单击“浏览”****，移至要保存部分包的文件夹，然后输入部分包的文件名（使用 .pkg 扩展名）。 单击“ **保存**”。  
   
-7.  单击“完成”。  
+7.  单击“完成”  。  
   
 ## <a name="next-steps"></a>后续步骤  
   

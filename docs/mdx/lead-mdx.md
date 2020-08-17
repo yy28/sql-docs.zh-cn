@@ -1,5 +1,6 @@
 ---
-title: 潜在顾客（MDX） |Microsoft Docs
+description: Lead (MDX)
+title: 潜在 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: cc4d362fbc7656e9427548a352b32d5d8297071e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ca78bdeca6103758d5d102ed8b85eb00b3138e18
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905745"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387323"
 ---
 # <a name="lead-mdx"></a>Lead (MDX)
 
@@ -37,11 +38,11 @@ Member_Expression.Lead( Index )
 ## <a name="remarks"></a>备注  
  级别内的成员位置由属性层次结构的自然顺序决定。 位置的编号从零开始。  
   
- 如果指定的 lead 为零（0），则**导引**函数返回指定的成员。  
+ 如果指定的 lead 为零 (0) ，则 **导引** 函数返回指定的成员。  
   
- 如果指定的 lead 为负数，则该**lead**函数将返回前面的成员。  
+ 如果指定的 lead 为负数，则该 **lead** 函数将返回前面的成员。  
   
- `Lead(1)`等效于[NextMember](../mdx/nextmember-mdx.md)函数。 `Lead(-1)`等效于[PrevMember](../mdx/prevmember-mdx.md)函数。  
+ `Lead(1)` 等效于 [NextMember](../mdx/nextmember-mdx.md) 函数。 `Lead(-1)` 等效于 [PrevMember](../mdx/prevmember-mdx.md) 函数。  
   
  **导引**函数与[lag](../mdx/lag-mdx.md)函数类似，只不过**lag**函数与**导引**函数的方向相反。 也就是说，`Lead(n)` 等效于 `Lag(-n)`。  
   

@@ -1,5 +1,6 @@
 ---
-title: sys. dm_db_mirroring_connections （Transact-sql） |Microsoft Docs
+description: 数据库镜像-sys. dm_db_mirroring_connections
+title: sys. dm_db_mirroring_connections (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e4df91b6-0240-45d0-ae22-cb2c0d52e0b3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 223b940f9568c764885ab214278fc97928cc1b7f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b10aa1339769b49a6bd05fbc96a102583960cd99
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894715"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88374673"
 ---
 # <a name="database-mirroring---sysdm_db_mirroring_connections"></a>数据库镜像-sys. dm_db_mirroring_connections
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,8 +34,8 @@ ms.locfileid: "85894715"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**connection_id**|**uniqueidentifier**|连接的标识符。|  
-|**transport_stream_id**|**uniqueidentifier**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]此连接为 tcp/ip 通信使用的网络接口（SNI）连接的标识符。|  
-|State |**smallint**|连接的当前状态。 可能的值：<br /><br /> 1 = NEW<br /><br /> 2 = CONNECTING<br /><br /> 3 = CONNECTED<br /><br /> 4 = LOGGED_IN<br /><br /> 5 = 已关闭|  
+|**transport_stream_id**|**uniqueidentifier**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]网络接口的标识符 (将此连接所使用的 SNI) 连接用于 tcp/ip 通信。|  
+|State|**smallint**|连接的当前状态。 可能的值：<br /><br /> 1 = NEW<br /><br /> 2 = CONNECTING<br /><br /> 3 = CONNECTED<br /><br /> 4 = LOGGED_IN<br /><br /> 5 = 已关闭|  
 |**state_desc**|**nvarchar(60)**|连接的当前状态。 可能的值：<br /><br /> 新增功能<br /><br /> CONNECTING<br /><br /> CONNECTED<br /><br /> LOGGED_IN<br /><br /> CLOSED|  
 |**connect_time**|**datetime**|打开连接的日期和时间。|  
 |**login_time**|**datetime**|连接登录成功的日期和时间。|  
@@ -73,7 +74,7 @@ ms.locfileid: "85894715"
 |**dm_db_mirroring_connections.connection_id**|**dm_exec_connections.connection_id**|一对一|  
   
 ## <a name="see-also"></a>另请参阅  
- [动态管理视图和函数 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [监视数据库镜像 (SQL Server)](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)  
   
   

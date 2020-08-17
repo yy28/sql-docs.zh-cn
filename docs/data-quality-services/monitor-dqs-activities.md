@@ -1,4 +1,5 @@
 ---
+description: 监视 DQS 活动
 title: 监视 DQS 活动
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 92f0d05b8b7f6bc4e72c70c73d9b93f0e785206d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ea7afe223bdbeb1d6e85347fe34f7d103a39621d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897483"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88353563"
 ---
 # <a name="monitor-dqs-activities"></a>监视 DQS 活动
 
@@ -40,7 +41,7 @@ ms.locfileid: "85897483"
   
 -   您必须对 DQS_MAIN 数据库具有 dqs_administrator 角色才能终止某一活动或者停止活动中的某一进程以及查看 DQS 活动。  
   
-##  <a name="view-dqs-activities"></a><a name="View"></a>查看 DQS 活动  
+##  <a name="view-dqs-activities"></a><a name="View"></a> 查看 DQS 活动  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
   
@@ -104,7 +105,7 @@ ms.locfileid: "85897483"
   
      活动结束时间****：活动的结束日期和时间。  
   
-##  <a name="filter-dqs-activity-information"></a><a name="Filter"></a>筛选 DQS 活动信息  
+##  <a name="filter-dqs-activity-information"></a><a name="Filter"></a> 筛选 DQS 活动信息  
  您可以使用活动监视屏幕中的筛选窗格（**“筛选依据”**、 **“值”**、 **“开始日期”** 和 **“结束日期”**）基于某些筛选条件来筛选和查看所需活动。 筛选活动记录：  
   
 1.  确定筛选条件：是否要基于活动网格（基于值的）中某一列的值和/或基于日期范围筛选活动记录。  
@@ -115,7 +116,7 @@ ms.locfileid: "85897483"
   
 2.  单击 **“刷新活动列表”** 图标可应用筛选，并仅查看已筛选的 DQS 活动。  
   
-##  <a name="view-dqs-activity-details"></a><a name="ActivityDetails"></a>查看 DQS 活动详细信息  
+##  <a name="view-dqs-activity-details"></a><a name="ActivityDetails"></a> 查看 DQS 活动详细信息  
  您可以在活动监视屏幕中查看 DQS 活动的详细信息，例如活动步骤和事件探查器信息。 为此，请执行以下操作：  
   
 1.  在活动网格（位于上部窗格中）中选择某一 DQS 活动。  
@@ -126,7 +127,7 @@ ms.locfileid: "85897483"
   
     -   **事件探查器**：显示当前活动和历史活动的事件探查信息。 对于当前活动，它包含部分但一致的信息。 在您将相应的活动详细信息导出到某一 Excel 文件时，活动的事件探查信息将导出到该 Excel 文件。 导出的 Excel 文件的“事件探查器 - 源”和“事件探查器 - 字段”工作表中提供这些信息********。  
   
-##  <a name="export-dqs-activity-details"></a><a name="Export"></a>导出 DQS 活动详细信息  
+##  <a name="export-dqs-activity-details"></a><a name="Export"></a> 导出 DQS 活动详细信息  
  您可以将监视屏幕中某一活动的活动属性、活动进程和事件探查信息导出到 Excel 文件中。 为此，请执行以下操作：  
   
 1.  在活动网格（位于上部窗格中）中选择某一活动。  
@@ -135,14 +136,14 @@ ms.locfileid: "85897483"
   
 3.  系统会提示您指定要保存的 Excel 文件的名称和位置。 导出的 Excel 文件包含以下工作表：  
   
-    |工作表名称|说明|  
+    |工作表名称|描述|  
     |----------------|-----------------|  
     |活动|包含与活动网格中的活动有关的信息（列）。|  
     |进程|包含与 **“活动步骤”** 选项卡中活动的进程有关的信息（列）。|  
     |事件探查器 - 源|对于 **“清理”** 子类型，包含与活动有关的以下信息：记录、更正记录、更正的记录和无效记录。<br /><br /> 对于 **“知识发现”**、 **“域管理”**、 **“匹配策略”** 和 **“匹配”** 子类型，包含与活动有关的以下信息：记录、值总计、新值、唯一值和新的唯一值。|  
     |事件探查器 - 字段|对于 **“清理”** 和 **“SSIS 清理”** 子类型，包含与活动有关的以下信息：字段、域、更正的值、建议的值、完整性和精确性。<br /><br /> 对于 **“知识发现”**、 **“域管理”**、 **“匹配策略”** 和 **“匹配”** 子类型，包含与活动有关的以下信息：字段、域、新建、唯一、在域中有效和完整性。|  
   
-##  <a name="terminate-a-dqs-activity"></a><a name="Terminate"></a>终止 DQS 活动  
+##  <a name="terminate-a-dqs-activity"></a><a name="Terminate"></a> 终止 DQS 活动  
  DQS 管理员（dqs_administrator 角色）可以终止并非 **“SSIS 清理”** 类型的正在运行（处于活动状态）的活动。 终止某一活动将停止该活动中所有正在运行的进程，并删除与该活动相关的所有内容。 无法撤消此操作。 在活动监视屏幕中终止某一活动等效于在 **的功能区域中正在运行该活动时通过单击** “取消” [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]来取消相应的活动。 终止活动：  
   
 1.  在活动网格（位于上部窗格中）中选择某一正在运行的活动。  
@@ -151,8 +152,8 @@ ms.locfileid: "85897483"
   
 3.  将显示一条用于确认您的操作的消息。 单击 **“是”** 。  
   
-##  <a name="stop-a-process-in-dqs-activity"></a><a name="Stop"></a>停止 DQS 活动中的进程  
- DQS 管理员（dqs_administrator 角色）可以停止并非 **“SSIS 清理”** 类型的活动中正在运行（处于活动状态）的进程。 在活动监视屏幕中停止某一进程等效于在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]的功能区域中停止相应的活动中的进程。 例如，停止清理活动内的计算机辅助清理进程，或停止匹配活动内的匹配进程。 无法从活动监视屏幕重新启动已停止的进程。 您必须从 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]中的相应功能区域重新启动该进程。 在这种情况下，将向 "**活动步骤**" 选项卡中的 "进程" 网格添加一个额外的行。停止的进程状态将继续显示 "**已停止**"。 停止进程：  
+##  <a name="stop-a-process-in-dqs-activity"></a><a name="Stop"></a> 停止 DQS 活动中的进程  
+ DQS 管理员（dqs_administrator 角色）可以停止并非 **“SSIS 清理”** 类型的活动中正在运行（处于活动状态）的进程。 在活动监视屏幕中停止某一进程等效于在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]的功能区域中停止相应的活动中的进程。 例如，停止清理活动内的计算机辅助清理进程，或停止匹配活动内的匹配进程。 无法从活动监视屏幕重新启动已停止的进程。 您必须从 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]中的相应功能区域重新启动该进程。 在这种情况下，将向 " **活动步骤** " 选项卡中的 "进程" 网格添加一个额外的行。停止的进程状态将继续显示 " **已停止**"。 停止进程：  
   
 1.  在活动详细信息网格（位于下部窗格中）中选择某一正在运行的进程。  
   

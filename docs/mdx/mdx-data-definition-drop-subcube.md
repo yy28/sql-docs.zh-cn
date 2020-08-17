@@ -1,5 +1,6 @@
 ---
-title: DROP 子多维数据集语句（MDX） |Microsoft Docs
+description: MDX 数据定义 - DROP SUBCUBE
+title: 删除多维数据集语句 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0c1af84d315b843669a25f385b1e0ec9b7f123dc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 083bcf1f02a8fda49142225c39b8e44dd027dbe2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038148"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387021"
 ---
 # <a name="mdx-data-definition---drop-subcube"></a>MDX 数据定义 - DROP SUBCUBE
 

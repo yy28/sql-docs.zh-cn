@@ -1,4 +1,5 @@
 ---
+description: 编辑和删除索引 (Master Data Services)
 title: 编辑和删除索引
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f8fb2a63-f9ae-4b9d-b26f-2024d9af15c5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0a543cc6c153af6cd40617d4fe7699ccabad8f9a
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: bd01942fd0545b338c43b1711b4d58be9a5052ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812362"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88389473"
 ---
 # <a name="edit-and-delete-an-index-master-data-services"></a>编辑和删除索引 (Master Data Services)
 
@@ -28,13 +29,13 @@ ms.locfileid: "85812362"
   
 -   你必须有权访问“系统管理”功能区域。 有关详细信息，请参阅[功能区域权限 (Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md)。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
  **编辑索引**  
   
 1.  在主数据管理器中，单击“系统管理” ****。  
   
-2.  在 "**管理模型**" 页上，从网格中选择一个模型，然后单击 "**实体**"。  
+2.  在 " **管理模型** " 页上，从网格中选择一个模型，然后单击 " **实体**"。  
   
 3.  在“管理实体” **** 页上，从网格中选择包含要编辑的索引的实体。  
   

@@ -1,5 +1,6 @@
 ---
-title: sys. server_permissions （Transact-sql） |Microsoft Docs
+description: sys.server_permissions (Transact-SQL)
+title: sys. server_permissions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/20/2019
 ms.prod: sql
@@ -20,11 +21,12 @@ ms.assetid: 7d78bf17-6c64-4166-bd0b-9e9e20992136
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fd686ca45bb5830d9abbd7b0e9119007ed4be060
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: a8f0541d743ea7feaa8991c2b085173b4c6e8f40
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091731"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88376933"
 ---
 # <a name="sysserver_permissions-transact-sql"></a>sys.server_permissions (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -39,9 +41,9 @@ ms.locfileid: "86091731"
 |**minor_id**|**int**|存在权限的对象的辅助 ID，根据类进行解释。|  
 |**grantee_principal_id**|**int**|向其授予权限的服务器主体 ID。|  
 |**grantor_principal_id**|**int**|这些权限的授权者的服务器主体 ID。|  
-|**type**|**char （4）**|服务器权限类型。 有关权限类型的列表，请参阅下一个表。|  
+|type|**char (4) **|服务器权限类型。 有关权限类型的列表，请参阅下一个表。|  
 |**permission_name**|**nvarchar(128)**|权限名称。|  
-|State |**char （1）**|权限状态：<br /><br /> D = 拒绝<br /><br /> R = 撤消<br /><br /> G = 授予<br /><br /> W = Grant With Grant 选项|  
+|State|**char (1) **|权限状态：<br /><br /> D = 拒绝<br /><br /> R = 撤消<br /><br /> G = 授予<br /><br /> W = Grant With Grant 选项|  
 |**state_desc**|**nvarchar(60)**|权限状态的说明：<br /><br /> DENY<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
   
 |权限类型|权限名称|适用于安全对象|  
@@ -107,8 +109,8 @@ JOIN sys.server_permissions AS pe
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Transact-sql&#41;&#40;安全目录视图](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [安全性目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [安全对象](../../relational-databases/security/securables.md)   
- [Transact-sql&#41;的目录视图 &#40;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [权限 &#40;数据库引擎&#41;](../../relational-databases/security/permissions-database-engine.md)   
+ [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [权限（数据库引擎）](../../relational-databases/security/permissions-database-engine.md)   
  [权限层次结构（数据库引擎）](../../relational-databases/security/permissions-hierarchy-database-engine.md)  

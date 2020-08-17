@@ -1,5 +1,6 @@
 ---
-title: 当前（MDX） |Microsoft Docs
+description: Current (MDX)
+title: 当前 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 821d517419b90df44b7943a1e0edde12ef667b6e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 105bb306cb84f151024a288f5aa15eb09ddbf5c2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68047119"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387543"
 ---
 # <a name="current-mdx"></a>Current (MDX)
 
@@ -34,7 +35,7 @@ Set_Expression.Current
 ## <a name="remarks"></a>备注  
  迭代过程的每一步中所操作的元组就是当前元组。 **当前**函数返回该元组。 该函数仅在对集执行迭代的过程中有效。  
   
- 遍历集的 MDX 函数包括[生成](../mdx/generate-mdx.md)函数。  
+ 遍历集的 MDX 函数包括 [生成](../mdx/generate-mdx.md) 函数。  
   
 > [!NOTE]  
 >  该函数只能使用已命名的集（使用集别名或定义命名集）。  

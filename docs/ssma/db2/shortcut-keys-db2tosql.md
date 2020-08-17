@@ -1,4 +1,5 @@
 ---
+description: '快捷键 (DB2ToSQL) '
 title: " (DB2ToSQL) 的快捷键 |Microsoft Docs"
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cb20a327-e565-49a3-a5d0-4cc79a48c179
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 51e3533c2c65b6ff8aef4f47fb81201d2a9f48a2
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 0145b286e7d3f93ec491d7506c944b5e7a8fed3e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87936356"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320743"
 ---
 # <a name="shortcut-keys-db2tosql"></a>快捷键 (DB2ToSQL) 
 可以使用键盘快捷方式在 SSMA 应用程序中导航。 有关详细信息，请参阅以下主题。  
@@ -22,5 +23,5 @@ ms.locfileid: "87936356"
 -   [菜单命令和其他快捷键 &#40;DB2ToSQL&#41;](../../ssma/db2/menu-commands-and-other-shortcut-keys-db2tosql.md)  
   
 ## <a name="see-also"></a>另请参阅  
-[SSMA for DB2 &#40;DB2ToSQL&#41;的入门](../../ssma/db2/getting-started-with-ssma-for-db2-db2tosql.md)  
+[SSMA for DB2 &#40;DB2ToSQL&#41;的入门 ](../../ssma/db2/getting-started-with-ssma-for-db2-db2tosql.md)  
   

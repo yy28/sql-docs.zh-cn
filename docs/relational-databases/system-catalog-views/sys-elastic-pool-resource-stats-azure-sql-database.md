@@ -1,4 +1,5 @@
 ---
+description: sys.elastic_pool_resource_stats（Azure SQL 数据库）
 title: sys.elastic_pool_resource_stats
 titleSuffix: Azure SQL Database
 ms.date: 01/28/2019
@@ -18,12 +19,12 @@ author: CarlRabeler
 ms.author: carlrab
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 4c6d2e7cccc7e1aa07327480415c0acd2a3db192
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: 899621325f6299b2faf0e99df3578fdbf5ee8996
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87822828"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88377843"
 ---
 # <a name="syselastic_pool_resource_stats-azure-sql-database"></a>sys.elastic_pool_resource_stats（Azure SQL 数据库）
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "87822828"
   
 ||  
 |-|  
-|**适用**于： [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12。|  
+|**适用**于：  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12。|  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -47,15 +48,15 @@ ms.locfileid: "87822828"
 |**max_session_percent**|**decimal (5，2) **|以基于池的限制的百分比形式表示的最大并发会话（请求）数量。|  
 |**elastic_pool_dtu_limit**|**int**|在该时间间隔内该弹性池的当前最大弹性池 DTU 设置。|  
 |**elastic_pool_storage_limit_mb**|**bigint**|在该时间间隔内该弹性池的当前最大弹性池存储限制设置（以兆字节为单位）。|
-|**avg_allocated_storage_percent**|**decimal (5，2) **|弹性池中所有数据库分配的数据空间百分比。  这是为弹性池分配的数据空间与数据最大大小的比率。  有关详细信息，请参阅[SQL 数据库中的文件空间管理](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|  
+|**avg_allocated_storage_percent**|**decimal (5，2) **|弹性池中所有数据库分配的数据空间百分比。  这是为弹性池分配的数据空间与数据最大大小的比率。  有关详细信息，请参阅 [SQL 数据库中的文件空间管理](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|  
   
 ## <a name="remarks"></a>备注
 
- 此视图存在于 SQL 数据库服务器的 master 数据库中。 您必须连接到 master 数据库才能查询**sys.databases elastic_pool_resource_stats**。  
+ 此视图存在于 SQL 数据库服务器的 master 数据库中。 您必须连接到 master 数据库才能查询 **sys.databases elastic_pool_resource_stats**。  
   
 ## <a name="permissions"></a>权限
 
- 要求具有**dbmanager**角色的成员身份。  
+ 要求具有 **dbmanager** 角色的成员身份。  
   
 ## <a name="examples"></a>示例
 

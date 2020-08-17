@@ -1,4 +1,5 @@
 ---
+description: SSMA 控制台中的命令行选项 (MySQLToSQL)
 title: SSMA 控制台中的命令行选项 (MySQLToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a2310b10-68ad-4285-a08b-c8694cf84416
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c941cca65bd5ccd3a234da7da0aa3b710ecb4ae3
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 51dcd0878e489148471de60d7fa44d76324b40ef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935996"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372713"
 ---
 # <a name="command-line-options-in-ssma-console-mysqltosql"></a>SSMA 控制台中的命令行选项 (MySQLToSQL)
 Microsoft 为你提供了一个强大的 set 命令行选项，用于执行和控制 SSMA 活动。 后续部分将详细介绍相同的内容。  
@@ -129,7 +130,7 @@ Microsoft 为你提供了一个强大的 set 命令行选项，用于执行和�
 ### <a name="secure-password-option--psecurepassword"></a>安全密码选项：-p/securepassword  
 此选项指示服务器连接的加密密码。 它与所有其他选项不同：该选项既不执行任何脚本，也不会在任何与迁移相关的活动中提供帮助，但有助于管理迁移项目中使用的服务器连接的密码加密。  
   
-不能输入任何其他选项或密码作为命令行参数。 否则，会导致错误。 有关详细信息，请参阅[管理密码](managing-passwords-mysqltosql.md)部分。  
+不能输入任何其他选项或密码作为命令行参数。 否则，会导致错误。 有关详细信息，请参阅 [管理密码](managing-passwords-mysqltosql.md) 部分。  
   
 支持以下子选项 `-p/securepassword` ：  
   
@@ -162,21 +163,21 @@ Microsoft 为你提供了一个强大的 set 命令行选项，用于执行和�
   
 `C:\>SSMAforMySQLConsole.EXE -?`  
   
-有关 SSMA 控制台命令行选项的表格显示，请参阅[附录 &#40;MySQLToSQL&#41;](../../ssma/mysql/appendix-1-mysqltosql.md)。  
+有关 SSMA 控制台命令行选项的表格显示，请参阅 [附录 &#40;MySQLToSQL&#41;](../../ssma/mysql/appendix-1-mysqltosql.md)。  
   
 ### <a name="securepassword-help-option--securepassword--help"></a>SecurePassword 帮助选项：-SecurePassword-？/Help  
 显示 SSMA 控制台选项的语法摘要：  
   
 `C:\>SSMAforMySQLConsole.EXE -securepassword -?`  
   
-如要表格显示 SSMA 控制台命令行选项，请参阅[附录-1 &#40;MySQLToSQL&#41;](../../ssma/mysql/appendix-1-mysqltosql.md)  
+如要表格显示 SSMA 控制台命令行选项，请参阅 [附录-1 &#40;MySQLToSQL&#41;](../../ssma/mysql/appendix-1-mysqltosql.md)  
   
 ### <a name="next-step"></a>下一步  
 下一步取决于项目要求：  
   
--   若要指定密码或导出/导入密码，请参阅[管理密码 &#40;MySQLToSQL&#41;](../../ssma/mysql/managing-passwords-mysqltosql.md)。  
+-   若要指定密码或导出/导入密码，请参阅 [管理密码 &#40;MySQLToSQL&#41;](../../ssma/mysql/managing-passwords-mysqltosql.md)。  
   
--   有关生成报表的详细 &#40;，请参阅[&#41;中生成报表](../../ssma/mysql/generating-reports-mysqltosql.md)。  
+-   有关生成报表的详细 &#40;，请参阅 [&#41;中生成报表 ](../../ssma/mysql/generating-reports-mysqltosql.md)。  
   
--   有关控制台中问题的疑难解答，请参阅[排查 &#40;MySQLToSQL&#41;](../../ssma/mysql/troubleshooting-mysqltosql.md)。  
+-   有关控制台中问题的疑难解答，请参阅 [排查 &#40;MySQLToSQL&#41;](../../ssma/mysql/troubleshooting-mysqltosql.md)。  
   

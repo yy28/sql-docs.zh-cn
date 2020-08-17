@@ -1,4 +1,5 @@
 ---
+description: 使用 ODBC 游标库
 title: 使用 ODBC 游标库 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9653f2f8-ccfc-4220-99ef-601dc0fa641c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8c740ed78de51684eac38ad0c54ab2224986018d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: be42c95692537c0479afb7ed492756b8a54ab030
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301398"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386193"
 ---
 # <a name="using-the-odbc-cursor-library"></a>使用 ODBC 游标库
 > [!IMPORTANT]  
@@ -26,20 +27,20 @@ ms.locfileid: "81301398"
   
  若要使用 ODBC 游标库，请执行以下操作：  
   
-1.  使用 SQL_ATTR_ODBC_CURSORS 的*属性*调用**SQLSetConnectAttr** ，以指定如何将游标库用于特定的连接。 可以始终使用游标库（SQL_CUR_USE_ODBC），仅当驱动程序不支持可滚动游标（SQL_CUR_USE_IF_NEEDED）或从未使用（SQL_CUR_USE_DRIVER）时使用。  
+1.  使用 SQL_ATTR_ODBC_CURSORS 的*属性*调用**SQLSetConnectAttr** ，以指定如何将游标库用于特定的连接。 可以始终使用游标库 (SQL_CUR_USE_ODBC) ，仅当驱动程序不支持 (SQL_CUR_USE_IF_NEEDED) 或从不使用 (SQL_CUR_USE_DRIVER) 中的可滚动游标时使用。  
   
-2.  调用**SQLConnect**、 **SQLDriverConnect**或**SQLBrowseConnect**以连接到数据源。  
+2.  调用 **SQLConnect**、 **SQLDriverConnect**或 **SQLBrowseConnect** 以连接到数据源。  
   
-3.  调用**SQLSetStmtAttr**来指定游标类型（SQL_ATTR_CURSOR_TYPE）、并发（SQL_ATTR_CONCURRENCY）和行集大小（SQL_ATTR_ROW_ARRAY_SIZE）。 游标库支持只进游标和静态游标。 只进游标必须是只读的，而静态游标可以是只读的，或者可以使用开放式并发控制比较值。  
+3.  调用 **SQLSetStmtAttr** 来指定游标类型 (SQL_ATTR_CURSOR_TYPE) 、并发 (SQL_ATTR_CONCURRENCY) 和行集大小 (SQL_ATTR_ROW_ARRAY_SIZE) 。 游标库支持只进游标和静态游标。 只进游标必须是只读的，而静态游标可以是只读的，或者可以使用开放式并发控制比较值。  
   
-4.  分配一个或多个行集缓冲区，并调用**SQLBindCol**一次或多次，将这些缓冲区绑定到结果集列。  
+4.  分配一个或多个行集缓冲区，并调用 **SQLBindCol** 一次或多次，将这些缓冲区绑定到结果集列。  
   
-5.  通过执行**SELECT**语句或过程或通过调用目录函数来生成结果集。 如果应用程序将执行定位的 update 语句，则应执行**SELECT FOR update**语句以生成结果集。  
+5.  通过执行 **SELECT** 语句或过程或通过调用目录函数来生成结果集。 如果应用程序将执行定位的 update 语句，则应执行 **SELECT FOR update** 语句以生成结果集。  
   
-6.  调用**SQLFetch**或**SQLFetchScroll**一次或多次以滚动结果集。  
+6.  调用 **SQLFetch** 或 **SQLFetchScroll** 一次或多次以滚动结果集。  
   
- 应用程序可以更改行集缓冲区中的数据值。 若要使用游标库缓存中的数据刷新行集缓冲区，应用程序将调用**SQLFetchScroll** ，并将*FetchOrientation*参数设置为 SQL_FETCH_RELATIVE，并将*FetchOffset*参数设置为0。  
+ 应用程序可以更改行集缓冲区中的数据值。 若要使用游标库缓存中的数据刷新行集缓冲区，应用程序将调用 **SQLFetchScroll** ，并将 *FetchOrientation* 参数设置为 SQL_FETCH_RELATIVE，并将 *FetchOffset* 参数设置为0。  
   
- 若要从未绑定的列中检索数据，应用程序将调用**SQLSetPos** ，将游标定位到所需的行。 然后，它会调用**SQLGetData**来检索数据。  
+ 若要从未绑定的列中检索数据，应用程序将调用 **SQLSetPos** ，将游标定位到所需的行。 然后，它会调用 **SQLGetData** 来检索数据。  
   
- 若要确定从数据源中检索到的行数，应用程序将调用**SQLRowCount**。
+ 若要确定从数据源中检索到的行数，应用程序将调用 **SQLRowCount**。

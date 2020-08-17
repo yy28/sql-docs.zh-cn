@@ -1,5 +1,6 @@
 ---
-title: 表达式（MDX） |Microsoft Docs
+description: 表达式 (MDX)
+title: MDX)  (表达式 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a1dfcdc52bb52652c204e31c28ccf5ec48ca7a00
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 78e1bc6056906130422db0aa69aff60977af1d0e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893588"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387523"
 ---
 # <a name="expressions-mdx"></a>表达式 (MDX)
 
@@ -25,14 +26,14 @@ ms.locfileid: "68893588"
   
  简单表达式可以是下列几种表达式之一：  
   
- Constant  
+ 返回的常量  
  在 MDX 中，常量是表示单个特定值的符号。 字符串、数字和日期值可以呈现为常量。 与数值常量不同，字符串和日期常量必须用单引号 (') 字符分隔开。  
   
  标量函数  
  在 MDX 中，标量函数返回计算上下文内的单个值。 此区别对于理解 MDX 如何解析标量函数很重要，因为不是对单个数据元素计算大多数 MDX 表达式、语句和脚本，而是重复地对一组数据元素（如单元或成员）进行计算。 但在计算标量函数时，函数通常查看单个数据元素。  
   
  对象标识符  
- 由于多维数据的本质，因此 MDX 是面向对象的。 在 MDX 中，对象标识符被视为简单表达式。 有关标识符的详细信息，请参阅[标识符 &#40;MDX&#41;](../mdx/identifiers-mdx.md)。  
+ 由于多维数据的本质，因此 MDX 是面向对象的。 在 MDX 中，对象标识符被视为简单表达式。 有关标识符的详细信息，请参阅 [标识符 &#40;MDX&#41;](../mdx/identifiers-mdx.md)。  
   
  可以从用运算符联接的这些实体的组合生成复杂表达式。  
   
@@ -73,7 +74,7 @@ WHERE [Product].[Category].[Bikes]
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|说明|  
+|主题|描述|  
 |-----------|-----------------|  
 |[使用多维数据集表达式和子多维数据集表达式](../mdx/using-cube-and-subcube-expressions.md)|定义多维数据集和子多维数据集表达式。|  
 |[使用维度表达式](../mdx/using-dimension-expressions.md)|定义维度表达式。|  

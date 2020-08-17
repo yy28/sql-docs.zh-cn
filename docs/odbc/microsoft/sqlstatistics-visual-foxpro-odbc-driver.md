@@ -1,5 +1,6 @@
 ---
-title: SQLStatistics （Visual FoxPro ODBC 驱动程序） |Microsoft Docs
+description: SQLStatistics（Visual FoxPro ODBC 驱动程序）
+title: SQLStatistics (Visual FoxPro ODBC 驱动程序) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: bb48c22f-1fd5-47b4-8eaa-ff69cd431cf9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f225e37fd8bace25c90782d6a35b0eab09ea82cb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4a7da15a03bfcc6bd8d2cef86849264ca44de0bd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306106"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88339933"
 ---
 # <a name="sqlstatistics-visual-foxpro-odbc-driver"></a>SQLStatistics（Visual FoxPro ODBC 驱动程序）
 > [!NOTE]  
->  本主题包含特定于 Visual FoxPro ODBC 驱动程序的信息。 有关此函数的常规信息，请参阅[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)中的相应主题。  
+>  本主题包含特定于 Visual FoxPro ODBC 驱动程序的信息。 有关此函数的常规信息，请参阅 [ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)中的相应主题。  
   
  支持：完全  
   

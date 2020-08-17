@@ -1,4 +1,5 @@
 ---
+description: " (DB2ToSQL 的疑难解答) "
 title: " (DB2ToSQL) 的疑难解答 |Microsoft Docs"
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e88038c6-fd35-479c-a76f-aabd42d2efef
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: b5decdd8ed0f5d2f3c7edab5542ec5348e82fe41
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 5cd7a7bd0da3b0c9804a21cec8a36b91844c2de6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87936238"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320693"
 ---
 # <a name="troubleshooting-db2tosql"></a> (DB2ToSQL 的疑难解答) 
 不太常见的情况是在执行控制台脚本或命令的中间运行迁移问题。  

@@ -1,5 +1,6 @@
 ---
-title: + （字符串串联）（MDX） |Microsoft Docs
+description: '+  (MDX (字符串串联) ) '
+title: +  (MDX)  (字符串串联) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 4d5f2316e3af5ce3c925ef71e1da5baf5bab868d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e92751cb709a93d3d5d8d05ac76361c22bee5fa7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68036854"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386863"
 ---
 # <a name="-string-concatenation-mdx"></a>+（字符串串联）(MDX)
 

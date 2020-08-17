@@ -1,4 +1,5 @@
 ---
+description: 'sys. query_store_runtime_stats (Transact-sql) '
 title: sys. query_store_runtime_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2019
@@ -21,12 +22,12 @@ ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8956eda2e25ecd96df58f863743ae39d0bb88d8f
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: 3ca567df477cf06c6f40e7f9a2d7c8b4964eaa6f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823722"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88377373"
 ---
 # <a name="sysquery_store_runtime_stats-transact-sql"></a>sys. query_store_runtime_stats (Transact-sql) 
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -35,9 +36,9 @@ ms.locfileid: "87823722"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**runtime_stats_id**|**bigint**|表示**plan_id**、 **execution_type**和**runtime_stats_interval_id**的运行时执行统计信息的行标识符。 只有过去运行时统计信息间隔才是唯一的。 对于当前处于活动状态的时间间隔，可能有多个行表示**plan_id**引用的计划的运行时统计信息，并且执行类型由**execution_type**表示。 通常，一行代表刷新到磁盘上的运行时统计信息，而其他 () 表示内存中状态。 因此，若要获取每个间隔的实际状态，需要聚合指标，按**plan_id**、 **execution_type**和**runtime_stats_interval_id**进行分组。<br/>**注意：** Azure SQL 数据仓库将始终返回零 (0) 。|
-|**plan_id**|**bigint**|外键。 联接到[sys.databases&#41;的 query_store_plan &#40;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)。|  
-|**runtime_stats_interval_id**|**bigint**|外键。 联接到[sys.databases&#41;的 query_store_runtime_stats_interval &#40;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)。|  
+|**runtime_stats_id**|**bigint**|表示 **plan_id**、 **execution_type** 和 **runtime_stats_interval_id**的运行时执行统计信息的行标识符。 只有过去运行时统计信息间隔才是唯一的。 对于当前处于活动状态的时间间隔，可能有多个行表示 **plan_id**引用的计划的运行时统计信息，并且执行类型由 **execution_type**表示。 通常，一行代表刷新到磁盘上的运行时统计信息，而其他 () 表示内存中状态。 因此，若要获取每个间隔的实际状态，需要聚合指标，按 **plan_id**、 **execution_type** 和 **runtime_stats_interval_id**进行分组。<br/>**注意：** Azure SQL 数据仓库将始终返回零 (0) 。|
+|**plan_id**|**bigint**|外键。 联接到 [sys.databases&#41;的 query_store_plan &#40;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)。|  
+|**runtime_stats_interval_id**|**bigint**|外键。 联接到 [sys.databases&#41;的 query_store_runtime_stats_interval &#40;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)。|  
 |**execution_type**|**tinyint**|确定查询执行的类型：<br /><br /> 0-常规执行 (成功完成) <br /><br /> 3-客户端启动的已中止执行<br /><br /> 4-异常中止执行|  
 |**execution_type_desc**|**nvarchar(128)**|执行类型字段的文本说明：<br /><br /> 0-常规<br /><br /> 3-已中止<br /><br /> 4-异常|  
 |**first_execution_time**|**datetimeoffset**|查询计划在聚合间隔内的第一次执行时间。 这是指查询执行的结束时间。|  

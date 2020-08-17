@@ -1,5 +1,6 @@
 ---
-title: StdevP （MDX） |Microsoft Docs
+description: StdevP (MDX)
+title: StdevP (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d4560ecbecd5db2e0f93e6910239fde27d54c028
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7b634f6bf6edf71f235458beb35e118165d126e1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68036875"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386923"
 ---
 # <a name="stdevp-mdx"></a>StdevP (MDX)
 
 
-  返回数值表达式用有偏差总体公式（除以*n*）对集求得的总体标准偏差。  
+  返回数值表达式用有偏差总体公式 (除以 *n*) 对集求得的总体标准偏差。  
   
 ## <a name="syntax"></a>语法  
   

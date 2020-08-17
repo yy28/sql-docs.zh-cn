@@ -1,5 +1,6 @@
 ---
-title: StrToMember （MDX） |Microsoft Docs
+description: StrToMember (MDX)
+title: StrToMember (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a78f0664ea561825bb279db47aa3c01fc98bf7dc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 68d2d99bb51412a98919d1ab1626c7a86bd86245
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68036806"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386803"
 ---
 # <a name="strtomember-mdx"></a>StrToMember (MDX)
 
 
-  返回由多维表达式（MDX）格式的字符串指定的成员。  
+  返回由 MDX) 格式字符串 (多维表达式指定的成员。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,7 +42,7 @@ StrToMember(Member_Name [,CONSTRAINED] )
 -   为了更好地理解集和成员之间的差异，请参阅“使用集表达式”和“使用成员表达式”。  
   
 ## <a name="examples"></a>示例  
- 下面的示例使用**StrToMember**函数返回省/市/自治区属性层次结构中的 Bayern 成员的 "分销商销售额" 度量值。 指定字符串提供了限定的成员名称。  
+ 下面的示例使用 **StrToMember** 函数返回省/市/自治区属性层次结构中的 Bayern 成员的 "分销商销售额" 度量值。 指定字符串提供了限定的成员名称。  
   
 ```  
 SELECT {StrToMember ('[Geography].[State-Province].[Bayern]')}  
@@ -51,7 +52,7 @@ FROM [Adventure Works]
   
 ```  
   
- 下面的示例使用**StrToMember**函数返回 Bayern 成员的 "分销商销售额" 度量值。 由于成员名称字符串仅提供了一个未限定的成员名称，因此该查询返回指定成员的第一个实例，而指定成员恰好在 Customer 维度（不与 Reseller Sales 相交）的 Customer Geography 层次结构中。 最佳做法要求指定限定名称以确保获得预期的结果。  
+ 下面的示例使用 **StrToMember** 函数返回 Bayern 成员的 "分销商销售额" 度量值。 由于成员名称字符串仅提供了一个未限定的成员名称，因此该查询返回指定成员的第一个实例，而指定成员恰好在 Customer 维度（不与 Reseller Sales 相交）的 Customer Geography 层次结构中。 最佳做法要求指定限定名称以确保获得预期的结果。  
   
 ```  
 SELECT {StrToMember ('[Bayern]').Parent}  
@@ -61,7 +62,7 @@ FROM [Adventure Works]
   
 ```  
   
- 下面的示例使用**StrToMember**函数返回省/市/自治区属性层次结构中的 Bayern 成员的 "分销商销售额" 度量值。 所提供的成员名称字符串解析为限定的成员名称。  
+ 下面的示例使用 **StrToMember** 函数返回省/市/自治区属性层次结构中的 Bayern 成员的 "分销商销售额" 度量值。 所提供的成员名称字符串解析为限定的成员名称。  
   
 ```  
 SELECT {StrToMember('[Geography].[Geography].[Country].[Germany].FirstChild', CONSTRAINED)}  

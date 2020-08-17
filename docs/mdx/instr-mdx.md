@@ -1,5 +1,6 @@
 ---
-title: Instr （MDX） |Microsoft Docs
+description: Instr (MDX)
+title: Instr (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7d7da3f994ed0741ef7ca6bcbe4d6003eea981c7
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 877fc4658081108e810e404dfc8d4a368c6964ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363407"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387353"
 ---
 # <a name="instr-mdx"></a>Instr (MDX)
 
@@ -26,7 +27,7 @@ ms.locfileid: "87363407"
 InStr([start, ]searched_string, search_string[, compare])  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  *start*  
  （可选）设置每个搜索的起始位置的一个数值表达式。 如果省略此值，则搜索将会在第一个字符位置开始。 如果 start 为 null，则函数返回值未定义。  
   
@@ -37,12 +38,12 @@ InStr([start, ]searched_string, search_string[, compare])
  要对其进行搜索的字符串表达式。  
   
  *比较*  
- （可选）一个整数值。 始终忽略此参数。 定义它是为了与其他语言中的其他**Instr**函数兼容。  
+ （可选）一个整数值。 始终忽略此参数。 定义它是为了与其他语言中的其他 **Instr** 函数兼容。  
   
 ## <a name="return-value"></a>返回值  
  以*string1*开头位置为*string2*的整数值。  
   
- 此外， **InStr**函数返回下表中列出的值，具体取决于条件：  
+ 此外， **InStr** 函数返回下表中列出的值，具体取决于条件：  
   
 |条件|返回值|  
 |---------------|------------------|  
@@ -56,10 +57,10 @@ InStr([start, ]searched_string, search_string[, compare])
 ## <a name="remarks"></a>备注  
   
 > [!WARNING]  
->  **Instr**始终执行不区分大小写的比较。  
+>  **Instr** 始终执行不区分大小写的比较。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用**Instr**函数并显示不同的结果方案。  
+ 下面的示例演示如何使用 **Instr** 函数并显示不同的结果方案。  
   
 ```  
 with   

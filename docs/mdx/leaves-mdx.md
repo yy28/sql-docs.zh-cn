@@ -1,5 +1,6 @@
 ---
-title: 叶（MDX） |Microsoft Docs
+description: Leaves (MDX)
+title: 离开 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d29c77250c23900d74d1969a6c37bc719c89cdd7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7beab859a2953b3eba52e74d97bed5718c59ea90
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905737"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387303"
 ---
 # <a name="leaves-mdx"></a>Leaves (MDX)
 
@@ -34,7 +35,7 @@ Leaves( [ Dimension_expression ] )
 ## <a name="remarks"></a>备注  
  叶成员是由所有属性层次结构中的最低级别交叉联接构成的元组。 已排除了计算成员。  
   
--   如果指定了维度名称，则**叶子**函数将返回包含指定维度的键属性的叶成员的集。  
+-   如果指定了维度名称，则 **叶子** 函数将返回包含指定维度的键属性的叶成员的集。  
   
 -   如果维度与多个度量值组相关联，将使用当前作用域中度量值的维度。  
   

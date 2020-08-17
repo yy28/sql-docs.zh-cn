@@ -1,4 +1,5 @@
 ---
+description: 使用 SSMA for MySQL 控制台 (MySQLToSQL)
 title: 使用 SSMA for MySQL 控制台 (MySQLToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 240aaad1-d65d-4dea-b60b-315cb1ac733d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 757bcd943b1af7c428d666fecacdaf6db7afcae3
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 540f09b2fe8de23b9912dc695e0cf1c9c1d69b86
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935134"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372773"
 ---
 # <a name="working-with-ssma-for-mysql-console-mysqltosql"></a>使用 SSMA for MySQL 控制台 (MySQLToSQL)
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]现在，迁移助手 (SSMA) 的 MySQL 可通过控制台应用程序在命令行上访问。 脚本文件构成应用程序的输入，用于执行命令。 作为控制台应用程序，SSMA 启用了脚本级交互，减少了迁移循环，并扩展了迁移工作量。  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 现在，迁移助手 (SSMA) 的 MySQL 可通过控制台应用程序在命令行上访问。 脚本文件构成应用程序的输入，用于执行命令。 作为控制台应用程序，SSMA 启用了脚本级交互，减少了迁移循环，并扩展了迁移工作量。  
   
 本部分介绍使用 SSMA 控制台应用程序迁移 MySQL 数据库的过程。  
   
@@ -25,14 +26,14 @@ ms.locfileid: "87935134"
   
 |主题|描述|  
 |-|-|  
-|[SSMA for MySQL Console &#40;MySQLToSQL&#41;入门](../../ssma/mysql/getting-started-with-ssma-for-mysql-console-mysqltosql.md)|说明执行控制台应用程序的过程。|  
+|[SSMA for MySQL Console &#40;MySQLToSQL&#41;入门 ](../../ssma/mysql/getting-started-with-ssma-for-mysql-console-mysqltosql.md)|说明执行控制台应用程序的过程。|  
 |[SSMA 控制台中的命令行选项 &#40;MySQLToSQL&#41;](../../ssma/mysql/command-line-options-in-ssma-console-mysqltosql.md)|描述用于操作 SSMA 控制台应用程序的命令行选项和参数。|  
-|[&#40;MySQLToSQL&#41;创建脚本文件](../../ssma/mysql/creating-script-files-mysqltosql.md)|说明如何创建脚本文件。|  
+|[&#40;MySQLToSQL&#41;创建脚本文件 ](../../ssma/mysql/creating-script-files-mysqltosql.md)|说明如何创建脚本文件。|  
 |[创建变量值文件 &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md)|说明如何创建变量值文件。|  
 |[&#40;MySQLToSQL 创建服务器连接文件&#41;](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md)|说明如何创建服务器连接文件。|  
 |[执行 SSMA 控制台 &#40;MySQLToSQL&#41;](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md)|介绍用于运行 SSMA 控制台应用程序的脚本文件命令。|  
 |[使用示例控制台脚本文件 &#40;MySQLToSQL&#41;](../../ssma/mysql/working-with-the-sample-console-script-files-mysqltosql.md)|介绍如何轻松自定义示例文件和产品中提供的脚本|  
-|[&#40;MySQLToSQL&#41;管理密码](../../ssma/mysql/managing-passwords-mysqltosql.md)|介绍密码加密和解密以及导入/导出密码信息。|  
+|[&#40;MySQLToSQL&#41;管理密码 ](../../ssma/mysql/managing-passwords-mysqltosql.md)|介绍密码加密和解密以及导入/导出密码信息。|  
 |[&#40;MySQLToSQL 生成报告&#41;](../../ssma/mysql/generating-reports-mysqltosql.md)|列出用于生成报表的命令。|  
 |[&#40;MySQLToSQL 的疑难解答&#41;](../../ssma/mysql/troubleshooting-mysqltosql.md)|提供有关修复迁移问题的简要信息。|  
   

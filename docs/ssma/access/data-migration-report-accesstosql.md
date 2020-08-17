@@ -1,4 +1,5 @@
 ---
+description: '数据迁移报表 (AccessToSQL) '
 title: 数据迁移报表 (AccessToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: b090b327-cec6-4d9a-a670-8f96e8ff0046
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 0544ba7d4c0a1d2b896cc7667c4386effc070824
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: d7d81b695aaf09fd601b47e67c187676b82f7349
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934030"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88321003"
 ---
 # <a name="data-migration-report-accesstosql"></a>数据迁移报表 (AccessToSQL) 
-在将数据迁移到之后，将显示 "**数据迁移报表**" 对话框 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+在将数据迁移到之后，将显示 " **数据迁移报表** " 对话框 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="options"></a>选项  
 **Status**  

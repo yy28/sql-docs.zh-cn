@@ -1,4 +1,5 @@
 ---
+description: 项目设置（类型映射）(SybaseToSQL)
 title: 项目设置 (类型映射)  (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,21 +10,21 @@ ms.topic: conceptual
 ms.assetid: 2698fb3a-f9e6-4e04-94e0-dad289d7ed0a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 12002496f30d836f01d0b11f4007f63f018266e9
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 99ab880b69d2c06d462ed42ca0a2529ba6bf7bc2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87930725"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372113"
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>项目设置（类型映射）(SybaseToSQL)
-"**项目设置**" 对话框的 "类型映射" 页包含用于自定义 SSMA 将 Sybase 自适应服务器企业 (ASE) 数据类型转换为数据类型的方式的设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+" **项目设置** " 对话框的 "类型映射" 页包含用于自定义 SSMA 将 Sybase 自适应服务器企业 (ASE) 数据类型转换为数据类型的方式的设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
-"类型映射" 页在 "**项目设置**" 和 "**默认项目设置**" 对话框中可用。  
+"类型映射" 页在 " **项目设置** " 和 " **默认项目设置** " 对话框中可用。  
   
--   若要指定所有未来 SSMA 项目的类型映射设置，请在 "**工具**" 菜单上，选择 "**默认项目设置**"，从 "**迁移目标版本**" 下拉菜单中选择需要查看或更改其设置的迁移项目类型，然后选择左窗格底部的 "**类型映射**"。  
+-   若要指定所有未来 SSMA 项目的类型映射设置，请在 " **工具** " 菜单上，选择 " **默认项目设置**"，从 " **迁移目标版本** " 下拉菜单中选择需要查看或更改其设置的迁移项目类型，然后选择左窗格底部的 " **类型映射** "。  
   
--   若要指定当前项目的设置，请在 "**工具**" 菜单上选择 "**项目设置**"，然后在左窗格底部选择 "**类型映射**"。  
+-   若要指定当前项目的设置，请在 " **工具** " 菜单上选择 " **项目设置**"，然后在左窗格底部选择 " **类型映射** "。  
   
 ## <a name="options"></a>选项  
 **源类型**  
@@ -43,7 +44,7 @@ ms.locfileid: "87930725"
 **删除**  
 单击此选项可从 "映射" 列表中删除所选的数据类型映射。  
   
-**重置为默认值**  
+重置为默认值  
 单击可将类型映射列表重置为 SSMA 默认值。  
   
 ## <a name="default-type-mapping"></a>默认类型映射  

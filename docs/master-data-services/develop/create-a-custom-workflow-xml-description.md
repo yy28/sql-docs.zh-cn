@@ -1,4 +1,5 @@
 ---
+description: 创建自定义工作流 - XML 说明
 title: 自定义工作流 XML 说明
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,18 +11,18 @@ ms.topic: reference
 ms.assetid: e267e5f4-38bb-466d-82e8-871eabeec07e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f7c49f9b2831942552844e6bb479d139988d84c7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c12348fc830a187a8d88841c15e25ba726bef968
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897418"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88389783"
 ---
 # <a name="create-a-custom-workflow---xml-description"></a>创建自定义工作流 - XML 说明
 
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-  在中 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] ，当工作流启动时，SQL SERVER MDS Workflow Integration Service 会调用[WorkflowTypeExtender. IWorkflowTypeExtender. StartWorkflow *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130))方法。 此方法将有关触发工作流业务规则的项的元数据和数据作为 XML 块接收。 有关实现工作流处理程序的代码示例，请参阅[自定义工作流示例 &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-example.md)。  
+  在中 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] ，当工作流启动时，SQL SERVER MDS Workflow Integration Service 会调用 [WorkflowTypeExtender. IWorkflowTypeExtender. StartWorkflow *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130)) 方法。 此方法将有关触发工作流业务规则的项的元数据和数据作为 XML 块接收。 有关实现工作流处理程序的代码示例，请参阅[自定义工作流示例 &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-example.md)。  
   
  下面的示例说明发送到工作流处理程序的 XML 可能类似以下形式：  
   
@@ -65,7 +66,7 @@ ms.locfileid: "85897418"
   
  下表描述此 XML 所包含的一些标记：  
   
-|标记|说明|  
+|标记|描述|  
 |---------|-----------------|  
 |\<Type>|在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 的“工作流类型”文本框中输入的文本，用于标识要加载的自定义工作流程序集****。|  
 |\<SendData>|由 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 中的“消息中包括成员数据”复选框控制的一个布尔值****。 如果值为1，则表示 \<MemberData> 发送部分; 否则， \<MemberData> 不会发送部分。|  

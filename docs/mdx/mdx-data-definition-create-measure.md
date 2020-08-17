@@ -1,5 +1,6 @@
 ---
-title: CREATE MEASURE 语句（MDX） |Microsoft Docs
+description: MDX 数据定义 - CREATE MEASURE
+title: CREATE MEASURE 语句 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3bac5d7d067186e2b84277a5c0dc02cd31cba011
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: cdbee6f6ede5e46926f1a8189792d86cf9e99f5b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86967378"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387263"
 ---
 # <a name="mdx-data-definition---create-measure"></a>MDX 数据定义 - CREATE MEASURE
 
@@ -42,9 +43,9 @@ CREATE MEASURE Table_Name[Measure_Name] = DAX_Expression
 ## <a name="remarks"></a>备注  
  *Measure_Name*必须括在方括号中。  
   
- CREATE MEASURE 语句只能在 MDX 脚本定义内使用;请参阅[MdxScript 元素 &#40;ASSL&#41;](https://docs.microsoft.com/analysis-services/assl/objects/mdxscript-element-assl?view=asallproducts-allversions)。  
+ CREATE MEASURE 语句只能在 MDX 脚本定义内使用;请参阅 [MdxScript 元素 &#40;ASSL&#41;](https://docs.microsoft.com/analysis-services/assl/objects/mdxscript-element-assl?view=asallproducts-allversions)。  
   
- 还可以定义供一个查询使用的计算成员。 若要定义只供一个查询使用的计算成员，请在 SELECT 语句中使用 WITH 子句。 有关详细信息，请参阅[在 MDX 中生成度量值](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-building-measures)。  
+ 还可以定义供一个查询使用的计算成员。 若要定义只供一个查询使用的计算成员，请在 SELECT 语句中使用 WITH 子句。 有关详细信息，请参阅 [在 MDX 中生成度量值](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-building-measures)。  
   
 ## <a name="see-also"></a>另请参阅  
  [Mdx 数据定义语句 &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  

@@ -1,4 +1,5 @@
 ---
+description: 'server_resource_stats (Azure SQL 数据库) '
 title: server_resource_stats (Azure SQL 数据库) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/28/2018
@@ -19,19 +20,19 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 716d9703ca684adc653d1f43e674b7d99ae91765
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: ef3f27b814405cf6ca56a47ffcac8dd467f939f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864488"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88376703"
 ---
 # <a name="sysserver_resource_stats-azure-sql-database"></a>server_resource_stats (Azure SQL 数据库) 
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
 返回 Azure SQL 托管实例的 CPU 使用情况、IO 和存储数据。 在五分钟间隔内收集并聚合数据。 其中有一行用于显示每隔 15 秒报告的信息。 返回的数据包括 CPU 使用率、存储大小、IO 利用率和 SKU。 历史数据保留大约 14 天。
 
-根据与数据库关联的 Azure SQL 托管实例版本， **sys.databases server_resource_stats**视图具有不同的定义。 在升级到新的服务器版本时，请考虑这些不同之处和应用程序所需的任何修改。
+根据与数据库关联的 Azure SQL 托管实例版本， **sys.databases server_resource_stats** 视图具有不同的定义。 在升级到新的服务器版本时，请考虑这些不同之处和应用程序所需的任何修改。
  
   
  下表介绍 v12 服务器中可用的列：  
@@ -54,10 +55,10 @@ ms.locfileid: "87864488"
 
  
 > [!TIP]  
->  有关这些限制和服务层的详细信息，请参阅主题[托管实例的服务层](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers)。  
+>  有关这些限制和服务层的详细信息，请参阅主题 [托管实例的服务层](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers)。  
     
 ## <a name="permissions"></a>权限  
- 此视图可用于具有连接到**master**数据库的权限的所有用户角色。  
+ 此视图可用于具有连接到 **master** 数据库的权限的所有用户角色。  
   
 ## <a name="remarks"></a>备注  
  **Sys. server_resource_stats**返回的数据表示为在列) 名称中使用的字节数或兆字节数 (中所述的总大小，而不是 avg_cpu，这表示为运行的服务层/性能级别所允许的最大限制的百分比。  

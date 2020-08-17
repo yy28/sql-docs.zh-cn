@@ -1,4 +1,5 @@
 ---
+description: 附录 - 1 (MySQLToSQL)
 title: 附录 1 (MySQLToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 2d22766d-ff09-420d-ae7c-13b443e28bd0
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 251f340a8999ecec1247d30314af64c3acdca6d3
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: b05a5a6e571179dd5dcd5b1e50368d0b2e16035e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87936148"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320643"
 ---
 # <a name="appendix---1-mysqltosql"></a>附录 - 1 (MySQLToSQL)
 SSMA 控制台命令行选项的快速视图：  
@@ -27,7 +28,7 @@ SSMA 控制台命令行选项的快速视图：
 |4|-x/xmloutput|否|xmloutputfile|此选项表示 XML 格式的控制台输出。 如果未指定此选项，则默认输出为文本格式。<br /><br />如果未指定 xmloutputfile，则将 XML 输出定向到 STDOUT。<br /><br />Xmloutputfile 是以 XML 格式写入控制台输出的文件的名称。|  
 |5|-l/log|否|logfile|有效的文件名。|  
 |6|-e/projectenvironment|否|projectenvironmentfolder|包含 SSMA 项目环境文件的有效文件夹名称。|  
-|7|-p/securepassword|否|-a/add {<server_id> [,.。。n] &#124; all}-c&#124;microsoft.sqlserver.management.common.serverconnection> <服务器-连接文件> [-v&#124;变量 <变量值文件>] [-o/overwrite]<br /><br />or<br /><br />-a/add {<server_id> [,.。。n] &#124; 所有}-s&#124;脚本 <脚本文件> [-v&#124;变量 <变量值文件>] [-o/overwrite]<br /><br />-r/remove {<server_id> [，.。。n] &#124;<br /><br />-l/list<br /><br />-e/export {<服务器 id> [，.。。n] &#124; all} <加密-密码文件><br /><br />-i/import {<服务器 id> [，.。。n] &#124; all} <加密-密码文件>|如果指定此选项，则不能与其他任何选项组合。<br /><br />服务器 id：为服务器 {string} 提供的唯一 ID<br /><br />服务器连接文件：服务器定义文件 (serverconnectionfile 或 scriptfile) 。<br /><br />变量-值文件：它是一个变量定义文件，并在服务器连接文件中使用。<br /><br />加密密码-文件：它是使用用户指定的密码加密的服务器密码文件。|  
+|7|-p/securepassword|否|-a/add {<server_id> [,.。。n] &#124; all}-c&#124;microsoft.sqlserver.management.common.serverconnection> <服务器-连接文件> [-v&#124;变量 <变量值文件>] [-o/overwrite]<br /><br />或<br /><br />-a/add {<server_id> [,.。。n] &#124; 所有}-s&#124;脚本 <脚本文件> [-v&#124;变量 <变量值文件>] [-o/overwrite]<br /><br />-r/remove {<server_id> [，.。。n] &#124;<br /><br />-l/list<br /><br />-e/export {<服务器 id> [，.。。n] &#124; all} <加密-密码文件><br /><br />-i/import {<服务器 id> [，.。。n] &#124; all} <加密-密码文件>|如果指定此选项，则不能与其他任何选项组合。<br /><br />服务器 id：为服务器 {string} 提供的唯一 ID<br /><br />服务器连接文件：服务器定义文件 (serverconnectionfile 或 scriptfile) 。<br /><br />变量-值文件：它是一个变量定义文件，并在服务器连接文件中使用。<br /><br />加密密码-文件：它是使用用户指定的密码加密的服务器密码文件。|  
 |8|-?|否|不适用|不适用|  
   
 ## <a name="see-also"></a>另请参阅  

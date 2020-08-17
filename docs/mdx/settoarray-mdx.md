@@ -1,5 +1,6 @@
 ---
-title: SetToArray （MDX） |Microsoft Docs
+description: SetToArray (MDX)
+title: SetToArray (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c52c2641d21c20c91ec7548cafc969e506801b08
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f5b0c4b39761e25065b2c262943b4ce335fccf6e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68036990"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386973"
 ---
 # <a name="settoarray-mdx"></a>SetToArray (MDX)
 
@@ -50,7 +51,7 @@ SetToArray(Set_Expression1 [ ,Set_Expression2,...n ][ ,Numeric_Expression ] )
 ```  
   
 > [!NOTE]  
->  **SetToArray**函数的返回类型是 VT_ARRAY 的变量类型。 因此， **SetToArray**函数的输出应仅用作用户定义函数的输入。  
+>  **SetToArray**函数的返回类型是 VT_ARRAY 的变量类型。 因此， **SetToArray** 函数的输出应仅用作用户定义函数的输入。  
   
 ## <a name="example"></a>示例  
  下例将返回一个数组。  

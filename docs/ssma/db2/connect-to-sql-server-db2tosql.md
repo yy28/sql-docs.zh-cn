@@ -1,4 +1,5 @@
 ---
+description: '连接到 SQL Server (DB2ToSQL) '
 title: 连接到 SQL Server (DB2ToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,21 +10,21 @@ ms.topic: conceptual
 ms.assetid: bc14a072-8949-4ee0-a4b4-ada55fe8df5c
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: bd1b92f7daa49ea668a37f212f3fa338fbf3f97a
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 8b9d2fc6610ad7a0af9518bd91b270d914e9e622
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937253"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373003"
 ---
 # <a name="connect-to-sql-server-db2tosql"></a>连接到 SQL Server (DB2ToSQL) 
-使用 "**连接到 SQL Server** " 对话框连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 要迁移到的实例。 若要访问 "**连接到 SQL Server** " 对话框，请在 "**文件**" 菜单上，单击 "**连接到 SQL Server**"。  
+使用 " **连接到 SQL Server** " 对话框连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 要迁移到的实例。 若要访问 " **连接到 SQL Server** " 对话框，请在 " **文件** " 菜单上，单击 " **连接到 SQL Server**"。  
   
 ## <a name="options"></a>选项  
 **服务器名称**  
 输入或选择要连接到 SQL Server 的实例。 默认情况下，将显示您最近连接的实例。  
   
--   如果要连接到本地计算机上的默认实例，则可以输入**localhost**或点 (**。**) 。  
+-   如果要连接到本地计算机上的默认实例，则可以输入 **localhost** 或点 (**。**) 。  
   
 -   如果要连接到另一台计算机上的默认实例，请输入计算机的名称。  
   
@@ -32,7 +33,7 @@ ms.locfileid: "87937253"
 **服务器端口**  
 如果的实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 未配置为接受默认端口 (1433) 上的连接，请输入端口号。 否则，请将此值留空。  
   
-**数据库**  
+**Database**  
 指定要将对象和数据迁移到的数据库。 当重新连接到时，此选项不可用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 **身份验证**  
@@ -45,11 +46,11 @@ ms.locfileid: "87937253"
 如果使用的是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，请输入该实例上的登录名的密码 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果使用的是 Windows 身份验证，则此选项不可用。  
   
 **加密连接**  
-如果希望安全地连接到 SQL Server，请通过选中 "**加密连接**" 复选框来使用加密连接。  
+如果希望安全地连接到 SQL Server，请通过选中 " **加密连接** " 复选框来使用加密连接。  
   
 **信任服务器证书**  
-如果要使用此选项，请选中 "**信任服务器证书**" 复选框。  
+如果要使用此选项，请选中 " **信任服务器证书** " 复选框。  
   
 > [!NOTE]  
-> 若要启用**信任服务器证书**，必须将 "加密" 设置为**True**。  
+> 若要启用 **信任服务器证书**，必须将 "加密" 设置为 **True**。  
   

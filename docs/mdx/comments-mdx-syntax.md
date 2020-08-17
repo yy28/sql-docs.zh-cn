@@ -1,5 +1,6 @@
 ---
-title: 注释（MDX 语法） |Microsoft Docs
+description: 注释（MDX 语法）
+title: " (MDX 语法) 的注释 |Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1ffcb57a48c7d6e265daa786912cfd37f0b43754
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8fa1312e361bf0ef673254c0eb804ed7b8b7ca7b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68001525"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387669"
 ---
 # <a name="comments-mdx-syntax"></a>注释（MDX 语法）
 
@@ -29,13 +30,13 @@ ms.locfileid: "68001525"
  MDX 支持三种类型的注释字符：  
   
  //（双正斜杠）  
- 这些注释字符可与要运行的代码在同一行上，也可单独成一行。 从双正斜杠开始到行尾均为注释部分。 对于多行注释，每个注释行的开始都必须出现双正斜杠。 有关详细信息，请参阅[&#41; &#40;MDX&#41;&#40;注释](../mdx/comment-mdx-double-slash.md)。  
+ 这些注释字符可与要运行的代码在同一行上，也可单独成一行。 从双正斜杠开始到行尾均为注释部分。 对于多行注释，每个注释行的开始都必须出现双正斜杠。 有关详细信息，请参阅 [&#41; &#40;MDX&#41;&#40;注释 ](../mdx/comment-mdx-double-slash.md)。  
   
  --（双连字符）  
- 这些注释字符可与要运行的代码在同一行上，也可单独成一行。 从双连字符开始到行尾均为注释部分。 对于多行注释，每个注释行的开始都必须出现双连字符。 有关详细信息，请参阅[--&#40;注释&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)。  
+ 这些注释字符可与要运行的代码在同一行上，也可单独成一行。 从双连字符开始到行尾均为注释部分。 对于多行注释，每个注释行的开始都必须出现双连字符。 有关详细信息，请参阅 [--&#40;注释&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)。  
   
- /* ...\*/（正斜杠-星号字符对）  
- 这种注释字符可在要运行的代码行中使用，可以单独成行，也可以位于可执行代码中。 从打开的注释对（/\*）到结束注释对（\*/）的所有内容都被视为注释的一部分。 对于多行注释，打开注释字符对（/\*）必须开始注释，并且结束注释字符对（\*/）必须结束注释。 注释的任何行中均不能出现其他注释字符。 有关详细信息，请参阅[/* .。。/ \*（注释）](../mdx/comment-mdx.md)。  
+ /* ... \*/ (正斜杠-星号字符对)   
+ 这种注释字符可在要运行的代码行中使用，可以单独成行，也可以位于可执行代码中。 从打开的注释对 (/ \*) 到结束注释对 (/) 的所有内容 \* 都被视为注释的一部分。 对于多行注释，打开注释字符对 (/ \*) 必须开始注释，并且结束注释字符对 (\* /) 必须结束注释。 注释的任何行中均不能出现其他注释字符。 有关详细信息，请参阅 [/* ... \*)  (注释 ](../mdx/comment-mdx.md)。  
   
 ## <a name="example"></a>示例  
  以下查询说明上述三种注释的示例：  

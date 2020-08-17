@@ -1,5 +1,6 @@
 ---
-title: sys. edge_constraints （Transact-sql） |Microsoft Docs
+description: 'sys. edge_constraints (Transact-sql) '
+title: sys. edge_constraints (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/17/2018
 ms.prod: sql
@@ -20,21 +21,21 @@ ms.assetid: 0f782d2f-7126-46ab-85b7-bcba44862231
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b05b73b3de7cc9707a89830d56bb54f1dc33c6f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7ceea1b9ad0c7995240187518522633de4ace1c9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919724"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88377833"
 ---
-# <a name="sysedge_constraints-transact-sql"></a>sys. edge_constraints （Transact-sql）
+# <a name="sysedge_constraints-transact-sql"></a>sys. edge_constraints (Transact-sql) 
 [!INCLUDE[sqlserver2019](../../includes/applies-to-version/sqlserver2019.md)]
 
 对于作为边缘约束的每个对象都包含一行。 
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**\<Columns inherited from sys.objects>**||有关此视图所继承的列的列表，请参阅[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
+|**\<Columns inherited from sys.objects>**||有关此视图所继承的列的列表，请参阅 [sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
 |**is_disabled**|**bit**|1 = Edge 约束为禁用。<br /><br /> 0 = 启用边缘约束。|  
 |**is_not_trusted**|**bit**|1 = 系统未验证边缘约束。<br /><br /> 0 = 边缘约束已由系统验证。|  
 |**delete_referential_action**|**tinyint**|在此边缘约束上定义的引用操作。<br /><br />0 = 不执行任何操作。|  
