@@ -1,0 +1,7 @@
+- name: Docs
+  tocHref: /azure/
+  topicHref: /sql/index
+  items:
+    - name: SQL 机器学习
+      tocHref: /azure/sql-database/
+      topicHref: /sql/machine-learning/
