@@ -1,5 +1,6 @@
 ---
-title: 数据定义语句（DMX） |Microsoft Docs
+description: '数据定义语句 (DMX) '
+title: 数据定义语句 (DMX) |Microsoft Docs
 ms.date: 10/23/2019
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7c9646fa7e2ba438bb2f2b57ac37b2ceca5a957c
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 020dd7baa05a6b02c7acea681343361c559c7c22
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969838"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88413883"
 ---
 # <a name="dmx-statements---data-definition"></a>DMX 语句 - 数据定义 
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]

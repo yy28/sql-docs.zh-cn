@@ -1,5 +1,6 @@
 ---
-title: '* Crossjoin（MDX） |Microsoft Docs'
+description: 交叉结合-MDX 运算符引用
+title: '*  (MDX)  (交叉结合) |Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2f8377acec8f213c423de5d19d8859c8b3d93a06
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c957b72736fa8038f01175e3c65898a85704a56b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68047138"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88413143"
 ---
 # <a name="crossjoin----mdx-operator-reference"></a>交叉结合-MDX 运算符引用
 
@@ -35,7 +36,7 @@ Set_Expression * Set_Expression
  一个包含两个指定参数的叉积的集。  
   
 ## <a name="remarks"></a>备注  
- （交叉结合）运算符在功能上等效于[交叉结合](../mdx/crossjoin-mdx.md)函数。 ** \* **  
+ ** \* (交叉结合) **运算符在功能上等效于[交叉结合](../mdx/crossjoin-mdx.md)函数。  
   
 ## <a name="examples"></a>示例  
  下面的示例演示了此运算符的用法。  

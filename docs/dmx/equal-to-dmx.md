@@ -1,5 +1,6 @@
 ---
-title: = （等于）（DMX） |Microsoft Docs
+description: =（等于）(DMX)
+title: = (等于)  (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e7cc8176094ec49627018975b9e25fe5c30e12ca
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: ba57583c8af1b739335abc27c33eaaf2ea54dc1f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971706"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88413354"
 ---
 # <a name="-equal-to-dmx"></a>=（等于）(DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]

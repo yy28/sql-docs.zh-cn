@@ -1,5 +1,6 @@
 ---
-title: TopPercent （MDX） |Microsoft Docs
+description: TopPercent (MDX)
+title: TopPercent (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: dcb01ae9771f748ad62faba37cea103f1c7acc8c
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 5f0ae1e59a46c03300018f3243926bb30cef0398
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362647"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412854"
 ---
 # <a name="toppercent-mdx"></a>TopPercent (MDX)
 
@@ -35,7 +36,7 @@ TopPercent(Set_Expression, Percentage, Numeric_Expression)
  有效的数值表达式，指定要返回的元组的百分比。  
   
 > [!IMPORTANT]  
->  *百分比*需要为正值;负值会生成错误。  
+>  *百分比*  需要为正值;负值会生成错误。  
   
  *Numeric_Expression*  
  返回数字的有效数值表达式，通常为单元坐标的多维表达式 (MDX)。  
@@ -44,12 +45,12 @@ TopPercent(Set_Expression, Percentage, Numeric_Expression)
  **TopPercent**函数计算指定数值表达式对指定集求得的总和，并按降序对集进行排序。 然后，该函数返回具有最高值的元素，其总合计值的累积百分比至少是指定的百分比。 该函数返回累积合计至少达到指定百分比的最小子集。 返回的元素按从大到小的顺序排序。  
   
 > [!WARNING]  
->  如果*Numeric_Expression*返回任何负值，则**TopPercent**仅返回一（1）行。  
+>  如果 *Numeric_Expression*  返回任何负值，则 **TopPercent** 只返回一个 (1) 行。  
 >   
 >  请参阅针对此行为的详细演示的第二个示例。  
   
 > [!IMPORTANT]  
->  与[BottomPercent](../mdx/bottompercent-mdx.md)函数一样， **TopPercent**函数始终中断层次结构。  
+>  与 [BottomPercent](../mdx/bottompercent-mdx.md) 函数一样， **TopPercent** 函数始终中断层次结构。  
   
 ## <a name="example"></a>示例  
  下面的示例返回对于“自行车”类别，帮助实现前 10% 的分销商销售额的最佳城市。 结果将按降序排序，并且从具有最高销售额的城市开始。  
@@ -67,7 +68,7 @@ WHERE([Product].[Product Categories].[Bikes])
   
  上面的表达式生成以下结果：  
   
-|城市|Reseller Sales Amount|  
+|City|Reseller Sales Amount|  
 |-|---------------------------|  
 |Toronto|$3508904.84|  
 |London|$1521530.09|  
@@ -89,7 +90,7 @@ WHERE([Product].[Product Categories].[Bikes])
 ```  
   
 ## <a name="example"></a>示例  
- 下面的演练将帮助了解*Numeric_Expression*中的负值的影响。 首先，将生成一些可展示该行为的上下文。  
+ 下面的演练将帮助了解 *Numeric_Expression*中的负值的影响。 首先，将生成一些可展示该行为的上下文。  
   
  下面的查询将返回一个表，由分销商的“Sales Amount”、“Total Product Cost”和“Gross Profit”构成，并且按利润的降序排序。 请注意，对于利润仅存在负值；因此，最小的利润损失将出现在最顶部。  
   
@@ -104,12 +105,12 @@ FROM [Adventure Works]
   
 |观光自行车|Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|  
 |-|---------------------------|---------------------------------|---------------------------|  
-|Touring-2000 Blue, 50|$157444.56|$163112.57|（$5668.01）|  
-|旅行-2000 蓝，46|$321027.03|$333021.50|（$11994.47）|  
-|Touring-3000 Blue, 62|$87773.61|$100133.52|（$12359.91）|  
+|Touring-2000 Blue, 50|$157444.56|$163112.57| ($5668.01) |  
+|旅行-2000 蓝，46|$321027.03|$333021.50| ($11994.47) |  
+|Touring-3000 Blue, 62|$87773.61|$100133.52| ($12359.91) |  
 |...|...|...|...|  
-|旅行-1000 黄色，46|$1016312.83|$1234454.27|（$218141.44）|  
-|Touring-1000 Yellow, 60|$1184363.30|$1443407.51|（$259044.21）|  
+|旅行-1000 黄色，46|$1016312.83|$1234454.27| ($218141.44) |  
+|Touring-1000 Yellow, 60|$1184363.30|$1443407.51| ($259044.21) |  
   
  现在，如果要求您按利润展示前 100% 的自行车，则编写如下查询：  
   
@@ -120,11 +121,11 @@ FROM [Adventure Works]
   
 ```  
   
- 请注意，查询要求百分之百 (100%)；这意味着应返回所有行。 但是，由于*Numeric_Expression*中有负值，因此只返回一行。  
+ 请注意，查询要求百分之百 (100%)；这意味着应返回所有行。 但是，由于 *Numeric_Expression* 中有负值，因此只返回一行。  
   
 |观光自行车|Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|  
 |-|---------------------------|---------------------------------|---------------------------|  
-|Touring-2000 Blue, 50|$157444.56|$163112.57|（$5668.01）|  
+|Touring-2000 Blue, 50|$157444.56|$163112.57| ($5668.01) |  
   
 ## <a name="see-also"></a>另请参阅  
  [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  

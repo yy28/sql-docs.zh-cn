@@ -1,5 +1,6 @@
 ---
-title: 拆分（DMX） |Microsoft Docs
+description: （除）(DMX)
+title: " (将)  (DMX) |Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 01d9c838e8b7a40d19a59997ae670eee19e6309b
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 2249701d074f12e0fc4dc3383d2e62b31ac275f6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969848"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88414063"
 ---
 # <a name="divide-dmx"></a>（除）(DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]

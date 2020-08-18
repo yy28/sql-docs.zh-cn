@@ -1,4 +1,5 @@
 ---
+description: DROP TABLE 命令
 title: DROP TABLE 命令 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bc50459b-8861-4889-84a9-129ae9065aa8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 779c519f720027aea3a6f6cf2587d3c6e0b59b52
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9f383740584ca524c732172ee363f7ffb393c30c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303418"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412563"
 ---
 # <a name="drop-table-command"></a>DROP TABLE 命令
 从使用数据源指定的数据库中删除表，并将其从磁盘中删除。  
@@ -49,5 +50,5 @@ DROP TABLE TableName | FileName | ?
   
 |ODBC 语法|数据源|Visual FoxPro 语法|  
 |-----------------|-----------------|--------------------------|  
-|删除表*基-表名*|数据库（dbc 文件）|删除表*TableName*删除|  
-||可用表（.dbf 文件）的目录|ERASE *dbfName*<br /><br /> ERASE *cdxName*<br /><br /> ERASE *fptName*|
+|删除表 *基-表名*|数据库 ( dbc 文件) |删除表 *TableName* 删除|  
+||可用表目录 ( .dbf 文件) |ERASE *dbfName*<br /><br /> ERASE *cdxName*<br /><br /> ERASE *fptName*|

@@ -1,5 +1,6 @@
 ---
-title: 创建挖掘结构（DMX） |Microsoft Docs
+description: CREATE MINING STRUCTURE (DMX)
+title: " (DMX) 创建挖掘结构 |Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: efe160fc3bb50f80b70c0d510eedd880f985f9b9
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 06f013ccb5c33dfbaba2fe0a0e102a448c17e036
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971796"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88414023"
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
-  在数据库中创建新的挖掘结构，并根据需要定义定型和测试分区。 创建挖掘结构后，可以使用[ALTER 挖掘 structure &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md)语句将模型添加到挖掘结构中。  
+  在数据库中创建新的挖掘结构，并根据需要定义定型和测试分区。 创建挖掘结构后，可以使用 [ALTER 挖掘 structure &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md) 语句将模型添加到挖掘结构中。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,7 +35,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
 ```  
   
 ## <a name="arguments"></a>参数  
- *构造*  
+ *structure*  
  结构的唯一名称。  
   
  *列定义列表*  
@@ -106,7 +107,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
  可以为一个列定义多个建模标志值。 但是，一个列只能有一个内容类型和数据类型。  
   
 ### <a name="column-relationships"></a>列关系  
- 您可以向任何列定义语句中添加子句，以说明两个列之间的关系。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]支持使用以下 \<column relationship> 子句。  
+ 您可以向任何列定义语句中添加子句，以说明两个列之间的关系。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支持使用以下 \<column relationship> 子句。  
   
  **相关**  
  指示值的层次结构。 RELATED TO 列的目标可以是嵌套表的键列、事例行中具有离散值的列或另一个包含 RELATED TO 子句并指示更深层次结构的列。  
@@ -131,13 +132,13 @@ WITH HOLDOUT (2000 CASES OR 20 PERCENT)
  维持种子控制随机将事例分配给定型数据集或测试数据集这一过程的起点。 通过设置维持种子，可以确保该分区可重复执行。 如果没有指定维持种子，则 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 使用挖掘结构的名称来创建种子。 如果重命名结构，则种子值会更改。 维持种子参数可以与一个或多个其他维持参数一起使用。  
   
 > [!NOTE]  
->  由于分区信息与定型数据缓存在一起，若要使用维持，必须确保将挖掘结构的**CacheMode**属性设置为**KeepTrainingData**。 在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中，新的挖掘结构的默认设置即是如此。 对于包含维持分区的现有挖掘结构，将**CacheMode**属性更改为**ClearTrainingCases**将不会影响任何已处理的挖掘模型。 但是，如果未 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> 设置为**KeepTrainingData**，则维持参数将不起作用。 这意味着所有源数据都用于定型而没有提供测试集。 分区定义是使用结构进行缓存的；如果清理了定型事例的缓存，则同时将清理测试数据的缓存以及维持集的定义。  
+>  由于分区信息与定型数据缓存在一起，若要使用维持，必须确保将挖掘结构的 **CacheMode** 属性设置为 **KeepTrainingData**。 在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中，新的挖掘结构的默认设置即是如此。 对于包含维持分区的现有挖掘结构，将 **CacheMode** 属性更改为 **ClearTrainingCases** 将不会影响任何已处理的挖掘模型。 但是，如果未 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> 设置为 **KeepTrainingData**，则维持参数将不起作用。 这意味着所有源数据都用于定型而没有提供测试集。 分区定义是使用结构进行缓存的；如果清理了定型事例的缓存，则同时将清理测试数据的缓存以及维持集的定义。  
   
 ## <a name="examples"></a>示例  
  下面的示例演示如何使用 DMX 创建包含维持的挖掘结构。  
   
 ### <a name="example-1-adding-a-structure-with-no-training-set"></a>示例 1：添加不含定型集的结构  
- 下面的示例创建新的名为 `New Mailing` 的挖掘结构，并且不创建任何关联的挖掘模型，也不使用维持。 若要了解如何向结构中添加挖掘模型，请参阅[ALTER 挖掘 structure &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md)。  
+ 下面的示例创建新的名为 `New Mailing` 的挖掘结构，并且不创建任何关联的挖掘模型，也不使用维持。 若要了解如何向结构中添加挖掘模型，请参阅 [ALTER 挖掘 structure &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md)。  
   
 ```  
 CREATE MINING STRUCTURE [New Mailing]  

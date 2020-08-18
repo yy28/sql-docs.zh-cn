@@ -1,5 +1,6 @@
 ---
-title: DMX 教程（Analysis Services 数据挖掘） |Microsoft Docs
+description: DMX 教程（Analysis Services - 数据挖掘）
+title: DMX 教程 (Analysis Services 数据挖掘) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 4fcf803bb76bfb894faa75e6e51180cc25434abe
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 8974b18cf666382d5be395f5b52b87fccae29aff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969807"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88413394"
 ---
 # <a name="dmx-tutorials-analysis-services---data-mining"></a>DMX 教程（Analysis Services - 数据挖掘）
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]

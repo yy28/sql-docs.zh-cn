@@ -1,5 +1,6 @@
 ---
-title: SELECT DISTINCT FROM &lt; model &gt; （DMX） |Microsoft Docs
+description: '选择不同于 &lt; 模型 &gt; (DMX) '
+title: 选择不同于 &lt; 模型 &gt; (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,14 +9,14 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3413ec29cb2f1f3e710a1d52037161094ab713ce
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 3a8c65f6d0321ae74d18d32bd3c5208bbc2df5b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970617"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88413263"
 ---
-# <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM &lt; model &gt; （DMX）
+# <a name="select-distinct-from-ltmodel-gt-dmx"></a>选择不同于 &lt; 模型 &gt; (DMX) 
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   返回模型中所选列的所有可能状态。 所返回的值会因指定列包含离散值、离散化数值或连续数值而有所变化。  
@@ -62,7 +63,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
 |连续|列中各值的中点。|  
   
 ## <a name="discrete-column-example"></a>离散列示例  
- 下面的代码示例基于 `[TM Decision Tree]` 您在[数据挖掘基础教程](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)中创建的模型。 查询返回离散列 `Gender` 中存在的唯一值。  
+ 下面的代码示例基于 `[TM Decision Tree]` 您在 [数据挖掘基础教程](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)中创建的模型。 查询返回离散列 `Gender` 中存在的唯一值。  
   
 ```  
 SELECT DISTINCT [Gender]  
@@ -99,10 +100,10 @@ FROM [TM Decision Tree]
  查询还返回一行表示缺失值的 Null 值。  
   
 ## <a name="discretized-column-example"></a>离散化列示例  
- 下面的代码示例返回算法为 [`Yearly Income]` 列创建的所有存储桶的中点值、最大值和最小值。 若要重新生成此示例的结果，则必须创建一个与 `[Targeted Mailing]` 相同的新挖掘结构。 在向导中，将列的内容类型 `Yearly Income` 从**连续**更改为**离散**化。  
+ 下面的代码示例返回算法为 [`Yearly Income]` 列创建的所有存储桶的中点值、最大值和最小值。 若要重新生成此示例的结果，则必须创建一个与 `[Targeted Mailing]` 相同的新挖掘结构。 在向导中，将列的内容类型 `Yearly Income` 从 **连续** 更改为 **离散**化。  
   
 > [!NOTE]  
->  您还可以更改在基础挖掘教程中创建的挖掘模型，以离散化挖掘结构列 [`Yearly Income]`。 有关如何执行此操作的信息，请参阅[更改挖掘模型中列的离散](https://docs.microsoft.com/analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model)化。 但是，当您更改列的离散化时，系统会强制要求重新处理挖掘结构，这将会更改您使用该结构生成的其他模型的结果。  
+>  您还可以更改在基础挖掘教程中创建的挖掘模型，以离散化挖掘结构列 [`Yearly Income]`。 有关如何执行此操作的信息，请参阅 [更改挖掘模型中列的离散](https://docs.microsoft.com/analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model)化。 但是，当您更改列的离散化时，系统会强制要求重新处理挖掘结构，这将会更改您使用该结构生成的其他模型的结果。  
   
 ```  
 SELECT DISTINCT [Yearly Income] AS [Bucket Average],   
