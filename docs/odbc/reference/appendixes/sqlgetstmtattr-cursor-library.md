@@ -1,5 +1,6 @@
 ---
-title: SQLGetStmtAttr （游标库） |Microsoft Docs
+description: SQLGetStmtAttr（游标库）
+title: SQLGetStmtAttr (游标库) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 6c34e1ef-4273-4afb-a7d3-f9017ab69c5e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a9b29d21c166751f5a57b7951cb6c028861cb501
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 1181347636bd687dcf9ac32d48e14134fef808d9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362947"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411123"
 ---
 # <a name="sqlgetstmtattr-cursor-library"></a>SQLGetStmtAttr（游标库）
 > [!IMPORTANT]  
 >  此功能将在 Windows 的将来版本中删除。 避免在新的开发工作中使用此功能，并计划修改当前使用此功能的应用程序。 Microsoft 建议使用驱动程序的游标功能。  
   
- 本主题讨论如何在游标库中使用**SQLGetStmtAttr**函数。 有关**SQLGetStmtAttr**的常规信息，请参阅[SQLGetStmtAttr 函数](../../../odbc/reference/syntax/sqlgetstmtattr-function.md)。  
+ 本主题讨论如何在游标库中使用 **SQLGetStmtAttr** 函数。 有关 **SQLGetStmtAttr**的常规信息，请参阅 [SQLGetStmtAttr 函数](../../../odbc/reference/syntax/sqlgetstmtattr-function.md)。  
   
- 游标库支持**SQLGetStmtAttr**的以下语句属性：  
+ 游标库支持 **SQLGetStmtAttr**的以下语句属性：  
 
 :::row:::
     :::column:::

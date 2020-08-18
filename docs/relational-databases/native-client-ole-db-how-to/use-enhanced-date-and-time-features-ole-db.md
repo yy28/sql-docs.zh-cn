@@ -1,5 +1,6 @@
 ---
-title: 使用增强的日期和时间功能（Native Client OLE DB 提供程序）
+description: '使用 SQL Server Native Client (OLE DB 中的增强日期和时间功能) '
+title: '使用增强的日期和时间功能 (Native Client OLE DB 提供程序) '
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,22 +12,22 @@ ms.assetid: 50f98cab-8c80-43c5-bc9a-5d2f95f67f17
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 950f4d25cfdcd4bb8aee320ebfec8b6fd1b9c82b
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 2df45f8cc716af1aaa8aafeccaafe95cda87eaa3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396506"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88407973"
 ---
-# <a name="use-enhanced-date-and-time-features-in-sql-server-native-client-ole-db"></a>在 SQL Server Native Client （OLE DB）中使用增强的日期和时间功能
+# <a name="use-enhanced-date-and-time-features-in-sql-server-native-client-ole-db"></a>使用 SQL Server Native Client (OLE DB 中的增强日期和时间功能) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  此示例显示如何使用 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中引入的日期/时间功能。 此示例使用四种新的日期和时间类型（date**** time****、datetime2**** 和 datetimeoffset****）执行带有参数的命令并检索行集结果。  
+  此示例显示如何使用 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中引入的日期/时间功能。 此示例使用四种新的日期和时间类型（date  time  、datetime2  和 datetimeoffset  ）执行带有参数的命令并检索行集结果。  
   
  此示例要求使用 AdventureWorks 示例数据库，其可从 [Microsoft SQL Server 示例和社区项目](https://go.microsoft.com/fwlink/?LinkID=85384)主页下载。  
   
 > [!IMPORTANT]  
->  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，则应通过[Win32 加密 API](https://go.microsoft.com/fwlink/?LinkId=64532)对其进行加密。  
+>  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
   
 ## <a name="example"></a>示例  
  第一个 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 代码列表创建此示例要使用的存储过程。  
