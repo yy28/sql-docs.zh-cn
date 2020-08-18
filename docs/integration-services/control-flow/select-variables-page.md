@@ -1,4 +1,5 @@
 ---
+description: “选择变量”页
 title: “选择变量”页 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e62083ec-d127-48ea-aaa4-cca6017a29cb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a9527c0d73ed47e893e51e8e192c170a310172e4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1eec7f57655dd86ef62ee8cef40f2c2a9454a8f2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921115"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88349303"
 ---
 # <a name="select-variables-page"></a>“选择变量”页
 
@@ -29,7 +30,7 @@ ms.locfileid: "86921115"
 
   在配置脚本任务或脚本组件时，可以使用 **“选择变量”** 对话框为 **ReadOnlyVariables** 和 **ReadWriteVariables** 属性选择一个或多个变量。  
   
- 若要打开“选择变量”对话框，请在“脚本转换编辑器”对话框的“脚本”页上的“自定义属性”下，找到 ReadOnlyVariables 或 ReadWriteVariables 属性，然后单击与该属性关联的省略号 (…) 按钮       。  
+ 若要打开“选择变量”对话框，请在“脚本转换编辑器”对话框的“脚本”页上的“自定义属性”下，找到 ReadOnlyVariables 或 ReadWriteVariables 属性，然后单击与该属性关联的省略号 (…) 按钮************************。  
   
 ## <a name="options"></a>选项  
  选择框  
@@ -38,7 +39,7 @@ ms.locfileid: "86921115"
  **名称**  
  指定变量的名称。  
   
- 类型   
+ **类型**  
  指定变量的数据类型。  
   
 ## <a name="see-also"></a>另请参阅  

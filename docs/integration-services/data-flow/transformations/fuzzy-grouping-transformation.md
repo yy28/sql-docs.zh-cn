@@ -1,4 +1,5 @@
 ---
+description: 模糊分组转换
 title: 模糊分组转换 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -28,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c4e00be6f692bd3e4bec21acec6c2de6359622b7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e69c2b63e617e37fcd4dec1b7589e9b1808fefce
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919320"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88348440"
 ---
 # <a name="fuzzy-grouping-transformation"></a>模糊分组转换
 
@@ -43,7 +44,7 @@ ms.locfileid: "86919320"
   模糊分组转换执行数据清理任务，它首先查找可能重复的数据行，然后选择要在对数据进行标准化的过程中使用的规范数据行。  
   
 > [!NOTE]  
->  有关模糊分组转换（包括性能和内存限制）的详细信息，请参阅白皮书 [SQL Server Integration Services 2005 中的模糊查找和模糊分组](https://go.microsoft.com/fwlink/?LinkId=96604)。  
+>   有关模糊分组转换（包括性能和内存限制）的详细信息，请参阅白皮书 [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604)（SQL Server Integration Services 2005 中的模糊查找和模糊分组）。  
   
  模糊分组转换要求与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例建立连接，以创建该转换算法完成工作所需的临时 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表。 该连接必须解析为有权在数据库中创建表的用户。  
   
@@ -109,7 +110,7 @@ ms.locfileid: "86919320"
   
 ### <a name="options"></a>选项  
  **“无缓存”**  
- 使用列表框选择现有的 OLE DB 连接管理器，或使用“新建”按钮创建新的连接。   
+ 使用列表框选择现有的 OLE DB 连接管理器，或使用“新建”按钮创建新的连接。****  
   
  **新建**  
  通过使用“配置 OLE DB 连接管理器”  对话框创建新的连接。  
@@ -128,7 +129,7 @@ ms.locfileid: "86919320"
  选择是否在转换的输出中包含输入列。 用于分组的所有列将自动复制到输出中。 通过选中此列可以包含其他列。  
   
  **输入列**  
- 选择先前在“可用输入列”  列表中选中的一个输入列。  
+ 选择先前在“可用输入列”**** 列表中选中的一个输入列。  
   
  **输出别名**  
  为相应的输出列输入一个描述性名称。 默认情况下，输出列名称与输入列名称相同。  
@@ -148,9 +149,9 @@ ms.locfileid: "86919320"
  **数字**  
  指定比较列数据时前导数字和尾随数字的重要性。 例如，如果前导数字重要，则“123 Main Street”将不会与“456 Main Street”分组在一起。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
-|**Neither**|前导数字和尾随数字都不重要。|  
+|**两者均未选中**|前导数字和尾随数字都不重要。|  
 |**Leading**|只有前导数字重要。|  
 |**Trailing**|只有尾随数字重要。|  
 |**LeadingAndTrailing**|前导数字和尾随数字都重要。|  

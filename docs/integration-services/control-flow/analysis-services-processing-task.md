@@ -1,4 +1,5 @@
 ---
+description: Analysis Services 处理任务
 title: Analysis Services 处理任务 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9c39fdf1f63084d7f1340dae6b11f17124a52138
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2287bb2e429eba74f7ca98dcdf2b18b8d11cfda2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86908553"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88349983"
 ---
 # <a name="analysis-services-processing-task"></a>Analysis Services 处理任务
 
@@ -82,7 +83,7 @@ ms.locfileid: "86908553"
 -   <xref:Microsoft.DataTransformationServices.Tasks.DTSProcessingTask.DTSProcessingTask>  
   
 ## <a name="analysis-services-processing-task-editor-general-page"></a>Analysis Services 处理任务编辑器（“常规”页）
-  可以使用“Analysis Services 处理任务编辑器”对话框的“常规”页，对 Analysis Services 处理任务进行命名和说明   。  
+  可以使用“Analysis Services 处理任务编辑器”对话框的“常规”页，对 Analysis Services 处理任务进行命名和说明 。  
   
 ### <a name="options"></a>选项  
  **名称**  
@@ -109,7 +110,7 @@ ms.locfileid: "86908553"
   
 ### <a name="options"></a>选项  
  **Analysis Services 连接管理器**  
- 从列表中选择现有的 Analysis Services 连接管理器，或单击  “新建”以创建新的连接管理器。  
+ 从列表中选择现有的 Analysis Services 连接管理器，或单击****“新建”以创建新的连接管理器。  
   
  **新建**  
  创建新的 Analysis Services 连接管理器。  
@@ -118,10 +119,10 @@ ms.locfileid: "86908553"
   
  **对象列表**  
  
-|properties|说明|  
+|属性|说明|  
 |--------------|-----------------|  
 |**Object Name**|列出指定对象的名称。|  
-|类型 |列出指定对象的类型。|  
+|**类型**|列出指定对象的类型。|  
 |**处理选项**|从列表中选择处理选项。<br /><br /> **相关主题**：[处理多维模型 (Analysis Services)](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
 |**设置**|列出指定对象的处理设置。|  
   
@@ -129,7 +130,7 @@ ms.locfileid: "86908553"
  将 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象添加到列表中。  
   
  **删除**  
- 选择对象，再单击“删除”  。  
+ 选择对象，再单击“删除”****。  
   
  **影响分析**  
  对所选对象进行影响分析。  
@@ -138,7 +139,7 @@ ms.locfileid: "86908553"
   
  **批设置摘要**  
  
-|properties|说明|  
+|属性|描述|  
 |--------------|-----------------|  
 |**处理顺序**|指定是按顺序处理对象还是按批处理对象；如果使用并行处理，则指定要并发处理的对象数。|  
 |**事务模式**|指定按顺序处理时的事务模式。|  

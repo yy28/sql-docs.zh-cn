@@ -1,4 +1,5 @@
 ---
+description: FTP 连接管理器
 title: FTP 连接管理器 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c4f43455-29ca-44ba-ac7f-ea729b1daf93
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bb0b1a81a495639aa170b2047df3dd517fac1716
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6aac44dfdbbe1c88965ff7aa37249651d3f7c199
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918937"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88350913"
 ---
 # <a name="ftp-connection-manager"></a>FTP 连接管理器
 
@@ -79,7 +80,7 @@ ms.locfileid: "86918937"
  指定用来连接的 FTP 服务器的端口号。 此属性的默认值为 **21**。  
   
  **用户名**  
- 提供用于访问 FTP 服务器的用户名。 此属性的默认值为“匿名”。   
+ 提供用于访问 FTP 服务器的用户名。 此属性的默认值为“匿名”。 ****  
   
  **密码**  
  提供用于访问 FTP 服务器的密码。  
@@ -88,7 +89,7 @@ ms.locfileid: "86918937"
  指定任务超时之前经过的秒数。如果值为 **0** ，则表示不限制时间。 此属性的默认值为 **60**。  
   
  **使用被动模式**  
- 指定是由服务器还是由客户端启动连接。 服务器使用主动模式启动连接，客户端使用被动模式启动连接。 此属性的默认值为“主动模式”。   
+ 指定是由服务器还是由客户端启动连接。 服务器使用主动模式启动连接，客户端使用被动模式启动连接。 此属性的默认值为“主动模式”。 ****  
   
  **重试**  
  指定任务尝试连接的次数。 如果值为 **0** ，则表示不限制尝试次数。  
@@ -97,7 +98,7 @@ ms.locfileid: "86918937"
  提供传输数据的块区大小 (KB)。  
   
  **测试连接**  
- 在配置 FTP 连接管理器后，请通过单击“测试连接”  确认该连接是否正常。  
+ 在配置 FTP 连接管理器后，请通过单击“测试连接”**** 确认该连接是否正常。  
   
 ## <a name="see-also"></a>另请参阅  
  [FTP 任务](../../integration-services/control-flow/ftp-task.md)   

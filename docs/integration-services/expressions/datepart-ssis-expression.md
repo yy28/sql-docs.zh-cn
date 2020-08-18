@@ -1,4 +1,5 @@
 ---
+description: DATEPART（SSIS 表达式）
 title: DATEPART（SSIS 表达式）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3e590094-fc49-4144-805f-fdc1bf2fe509
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d8a87b6ca0118d181c21e46620a3cfd5e4c050d2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3d4509e356193391b903b764771dca170c06026d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923965"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88348243"
 ---
 # <a name="datepart-ssis-expression"></a>DATEPART（SSIS 表达式）
 
@@ -44,7 +45,7 @@ DATEPART(datepart, date)
 ## <a name="result-types"></a>结果类型  
  DT_I4  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  如果此参数为空，则 DATEPART 返回的结果为空。  
   
  日期文字必须显式转换为日期数据类型之一。 有关详细信息，请参阅 [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)。  
@@ -53,14 +54,14 @@ DATEPART(datepart, date)
   
 |datepart|缩写形式|  
 |--------------|-------------------|  
-|年龄|yy、yyyy|  
-|季度|qq、q|  
-|月份|mm、m|  
+|Year|yy、yyyy|  
+|Quarter|qq、q|  
+|Month|mm、m|  
 |Dayofyear|dy、y|  
-|日期|dd、d|  
-|Week|wk、ww|  
+|天|dd、d|  
+|周|wk、ww|  
 |星期|dw|  
-|Hour|Hh|  
+|小时|Hh|  
 |Minute|mi、n|  
 |秒|ss、s|  
 |Millisecond|Ms|  

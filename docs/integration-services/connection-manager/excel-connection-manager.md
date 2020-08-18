@@ -1,4 +1,5 @@
 ---
+description: Excel 连接管理器
 title: Excel 连接管理器 | Microsoft Docs
 ms.date: 04/02/2018
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 667419f2-74fb-4b50-b963-9197d1368cda
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fdac3f09fa3b92d7babd9c43f5a71adc4191ac7e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 53d3ab2b085058cb81ce679e5da5a44ea1deb293
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923713"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88351153"
 ---
 # <a name="excel-connection-manager"></a>Excel 连接管理器
 
@@ -61,7 +62,7 @@ ms.locfileid: "86923713"
  键入一个现有或新的 Excel 工作簿文件的路径和文件名。  
    
  **“浏览”**  
- 使用“打开”对话框导航到 Excel 文件所在的文件夹或要创建新文件的文件夹  。  
+ 使用“打开”对话框导航到 Excel 文件所在的文件夹或要创建新文件的文件夹****。  
   
  **Excel 版本**  
  指定用于创建文件的 Microsoft Excel 的版本。  
@@ -71,11 +72,11 @@ ms.locfileid: "86923713"
 
 ## <a name="solution-to-import-data-with-mixed-data-types-from-excel"></a>从 Excel 导入混合数据类型的数据的解决方案
 
-如果使用包含混合数据类型的数据，则默认情况下，Excel 驱动程序将读取前 8 行（由 TypeGuessRows  注册表项配置）。 Excel 驱动程序将基于前 8 行数据，尝试推测每列的数据类型。 例如，如果 Excel 数据源在一列中包含数字和文本，则在前 8 行包含数字的情况下，驱动程序可能会基于前 8 行确定列中的数据为整数类型。 在这种情况下，SSIS 将跳过文本值，并将其作为 NULL 导入到目标。
+如果使用包含混合数据类型的数据，则默认情况下，Excel 驱动程序将读取前 8 行（由 TypeGuessRows**** 注册表项配置）。 Excel 驱动程序将基于前 8 行数据，尝试推测每列的数据类型。 例如，如果 Excel 数据源在一列中包含数字和文本，则在前 8 行包含数字的情况下，驱动程序可能会基于前 8 行确定列中的数据为整数类型。 在这种情况下，SSIS 将跳过文本值，并将其作为 NULL 导入到目标。
 
 若要解决此问题，可以尝试以下解决方法之一：
 
-* 将 Excel 文件中的 Excel 列类型更改为“文本”  。
+* 将 Excel 文件中的 Excel 列类型更改为“文本”****。
 * 将 IMEX 扩展属性添加到连接字符串，以替代驱动程序的默认行为。 将“;IMEX=1”扩展属性添加到连接字符串的末尾时，Excel 会将所有数据视为文本。 请参阅以下示例：
     
   ```ACE OLEDB connection string:

@@ -1,4 +1,5 @@
 ---
+description: 函数（SSIS 表达式）
 title: 函数（SSIS 表达式）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e9a41a31-94f4-46a4-b737-c707dd59ce48
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 72f03d8d53e9d85b9b274ad1ac821fdfc79a6f24
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e0d2644192f6c38b98aaeec134b540ac269560d0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917005"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88348133"
 ---
 # <a name="functions-ssis-expression"></a>函数（SSIS 表达式）
 
@@ -42,7 +43,7 @@ ms.locfileid: "86917005"
   
  表达式语言提供了下列数学函数。  
   
-|函数|说明|  
+|函数|描述|  
 |--------------|-----------------|  
 |[ABS（SSIS 表达式）](../../integration-services/expressions/abs-ssis-expression.md)|返回数值表达式的绝对值。|  
 |[EXP（SSIS 表达式）](../../integration-services/expressions/exp-ssis-expression.md)|返回指定表达式以 e 为底的指数。|  
@@ -51,14 +52,14 @@ ms.locfileid: "86917005"
 |[LN（SSIS 表达式）](../../integration-services/expressions/ln-ssis-expression.md)|返回数值表达式的自然对数。|  
 |[LOG（SSIS 表达式）](../../integration-services/expressions/log-ssis-expression.md)|返回数值表达式以 10 为底的对数。|  
 |[POWER（SSIS 表达式）](../../integration-services/expressions/power-ssis-expression.md)|返回对数值表达式进行幂运算的结果。|  
-|[ROUND（SSIS 表达式）](../../integration-services/expressions/round-ssis-expression.md)|返回舍入到指定长度或精度的数值表达式。 。|  
+|[ROUND（SSIS 表达式）](../../integration-services/expressions/round-ssis-expression.md)|返回舍入到指定长度或精度的数值表达式。 .|  
 |[SIGN（SSIS 表达式）](../../integration-services/expressions/sign-ssis-expression.md)|返回数值表达式的正号 (+)、负号 (-) 或零 (0)。|  
 |[SQUARE（SSIS 表达式）](../../integration-services/expressions/square-ssis-expression.md)|返回数值表达式的平方。|  
 |[SQRT（SSIS 表达式）](../../integration-services/expressions/sqrt-ssis-expression.md)|返回数值表达式的平方根。|  
   
  表达式计算器提供了下列字符串函数。  
   
-|函数|说明|  
+|函数|描述|  
 |--------------|-----------------|  
 |[CODEPOINT（SSIS 表达式）](../../integration-services/expressions/codepoint-ssis-expression.md)|返回字符表达式最左端字符的 Unicode 代码值。|  
 |[FINDSTRING（SSIS 表达式）](../../integration-services/expressions/findstring-ssis-expression.md)|返回表达式中指定出现的字符串从 1 开始的索引。|  
@@ -78,7 +79,7 @@ ms.locfileid: "86917005"
   
  表达式计算器提供了下列日期和时间函数。  
   
-|函数|说明|  
+|函数|描述|  
 |--------------|-----------------|  
 |[DATEADD（SSIS 表达式）](../../integration-services/expressions/dateadd-ssis-expression.md)|通过将指定日期与一个日期或时间间隔相加，返回一个新的 DT_DBTIMESTAMP 值。|  
 |[DATEDIFF（SSIS 表达式）](../../integration-services/expressions/datediff-ssis-expression.md)|返回两个指定日期之间所跨的日期和时间边界的数目。|  
@@ -91,7 +92,7 @@ ms.locfileid: "86917005"
   
  表达式计算器提供了下列空函数。  
   
-|函数|说明|  
+|函数|描述|  
 |--------------|-----------------|  
 |[ISNULL（SSIS 表达式）](../../integration-services/expressions/isnull-ssis-expression.md)|根据表达式是否为空，返回一个布尔值结果。|  
 |[NULL（SSIS 表达式）](../../integration-services/expressions/null-ssis-expression.md)|返回请求的数据类型的 Null 值。|  

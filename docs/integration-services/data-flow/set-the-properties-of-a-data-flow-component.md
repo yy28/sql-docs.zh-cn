@@ -1,4 +1,5 @@
 ---
+description: 设置数据流组件的属性
 title: 设置数据流组件的属性 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ae953f5267c9facc141c823941fae645a5d05e0e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c7799b5d2f5f541b6713821dccbec820697371ed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917803"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88348943"
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>设置数据流组件的属性
 
@@ -28,9 +29,9 @@ ms.locfileid: "86917803"
   
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的组件编辑器。 这些编辑器仅包含每个数据流组件的自定义属性。  
   
--   “属性”  窗口列出每个元素的组件级自定义属性以及所有数据流元素通用的属性。  
+-   “属性”**** 窗口列出每个元素的组件级自定义属性以及所有数据流元素通用的属性。  
   
--   通过 **“高级编辑器”** 对话框可以访问每个组件的自定义属性。 通过“高级编辑器”对话框，还可以访问所有数据流组件通用的属性，包括输入属性、输出属性、错误输出属性、列属性和外部列属性  。  
+-   通过 **“高级编辑器”** 对话框可以访问每个组件的自定义属性。 通过“高级编辑器”对话框，还可以访问所有数据流组件通用的属性，包括输入属性、输出属性、错误输出属性、列属性和外部列属性。  
   
 ## <a name="set-the-properties-of-a-data-flow-component-with-a-component-editor"></a>使用组件编辑器设置数据流组件的属性  
   
@@ -38,7 +39,7 @@ ms.locfileid: "86917803"
   
 2.  在解决方案资源管理器中，双击该包将其打开。  
   
-3.  单击“控制流”  选项卡，然后双击数据流任务，此任务包含带有要查看和修改属性的组件的数据流。  
+3.  单击“控制流”**** 选项卡，然后双击数据流任务，此任务包含带有要查看和修改属性的组件的数据流。  
   
 4.  双击数据流组件。  
   
@@ -52,9 +53,9 @@ ms.locfileid: "86917803"
   
 2.  在解决方案资源管理器中，双击该包将其打开。  
   
-3.  单击“控制流”  选项卡，然后双击包含要查看和修改其属性的组件的数据流任务。  
+3.  单击“控制流”**** 选项卡，然后双击包含要查看和修改其属性的组件的数据流任务。  
   
-4.  双击数据流组件，然后单击“属性”  。  
+4.  双击数据流组件，然后单击“属性”****。  
   
 5.  查看或修改属性值，然后关闭 **“属性”** 窗口。  
   
@@ -69,26 +70,26 @@ ms.locfileid: "86917803"
   
 2.  在解决方案资源管理器中，双击该包将其打开。  
   
-3.  单击“控制流”  选项卡，然后双击包含要查看或修改的组件的数据流任务。  
+3.  单击“控制流”**** 选项卡，然后双击包含要查看或修改的组件的数据流任务。  
   
-4.  在数据流设计器中，右键单击数据流组件，然后单击“显示高级编辑器”  。  
+4.  在数据流设计器中，右键单击数据流组件，然后单击“显示高级编辑器”****。  
   
     > [!NOTE]  
-    >  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，支持多个输入的数据流组件不能使用“高级编辑器”  。  
+    >   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，支持多个输入的数据流组件不能使用 **“高级编辑器”**。  
   
 5.  在 **“高级编辑器”** 对话框中，执行下列任意步骤：  
   
     -   若要查看和指定组件使用的连接，请单击 **“连接管理器”** 选项卡。  
   
         > [!NOTE]  
-        >  “连接管理器”  选项卡仅对使用连接管理器连接到数据源（如文件和数据库）的数据流组件可用  
+        >  **“连接管理器”** 选项卡仅对使用连接管理器连接到数据源（如文件和数据库）的数据流组件可用。  
   
-    -   若要查看和修改组件级属性，请单击“组件属性”选项卡  。  
+    -   若要查看和修改组件级属性，请单击“组件属性”选项卡****。  
   
     -   若要查看和修改外部列和可用输出之间的映射，请单击 **“列映射”** 选项卡。  
   
         > [!NOTE]  
-        >  “列映射”  选项卡仅在查看或编辑源或者目标时可用。  
+        >  **“列映射”** 选项卡仅在查看或编辑源或者目标时可用。  
   
     -   若要查看可用输入列的列表并更新输出列的名称，请单击 **“输入列”** 选项卡。  
   
@@ -102,7 +103,7 @@ ms.locfileid: "86917803"
   
 6.  查看或修改属性值。  
   
-7.  单击“确定”。   
+7.  单击“确定”。  
   
 8.  若要保存已更新的包，请在 **“文件”** 菜单中单击 **“保存选定项”** 。  
 
@@ -127,18 +128,18 @@ ms.locfileid: "86917803"
   
  下表介绍了数据流中的组件的属性。 其中某些属性的值是只读的，由数据流引擎在运行时分配。  
   
-|properties|数据类型|说明|  
+|属性|数据类型|说明|  
 |--------------|---------------|-----------------|  
 |ComponentClassID|String|组件的 CLSID。|  
 |ContactInfo|String|组件开发人员的联系信息。|  
 |说明|String|对数据流组件的说明。 此属性的默认值是数据流组件的名称。|  
 |ID|Integer|唯一标识此组件实例的值。|  
 |IdentificationString|String|标识组件。|  
-|IsDefaultLocale|Boolean|指示组件是否使用其所属的数据流任务的区域设置。|  
+|IsDefaultLocale|布尔|指示组件是否使用其所属的数据流任务的区域设置。|  
 |LocaleID|Integer|包运行时数据流组件使用的区域设置。 数据流组件可以使用所有 Windows 区域设置。|  
 |名称|String|数据流组件的名称。|  
 |PipelineVersion|Integer|将某组件设计为要在其中执行的数据流任务的版本。|  
-|UsesDispositions|Boolean|指示组件是否有错误输出。|  
+|UsesDispositions|布尔|指示组件是否有错误输出。|  
 |ValidateExternalMetadata|Boolean|指示外部列的元数据是否经过验证。 此属性的默认值为 **True**。|  
 |版本|Integer|组件的版本。|  
   
@@ -147,18 +148,18 @@ ms.locfileid: "86917803"
   
  下表描述了数据流中的组件的输入属性。 其中某些属性的值是只读的，由数据流引擎在运行时分配。  
   
-|properties|数据类型|说明|  
+|属性|数据类型|说明|  
 |--------------|---------------|-----------------|  
 |说明|String|输入的说明。|  
 |ErrorOrTruncationOperation|String|一个可选字符串，它指定处理行时可以发生的错误或截断的类型。|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|用于指定错误的处理方式的值。 具体的值为 **Fail component**、 **Ignore failure**和 **Redirect row**。|  
-|HasSideEffects|Boolean|指示当组件没有附加到下游组件并且 **RunInOptimizedMode** 为 **true**时，是否可以从数据流的执行计划中删除该组件。|  
+|HasSideEffects|布尔|指示当组件没有附加到下游组件并且 **RunInOptimizedMode** 为 **true**时，是否可以从数据流的执行计划中删除该组件。|  
 |ID|Integer|用于唯一标识输入的值。|  
 |IdentificationString|String|用于标识输入的字符串。|  
-|IsSorted|Boolean|指示输入中的数据是否已排序。|  
+|IsSorted|布尔|指示输入中的数据是否已排序。|  
 |名称|String|输入的名称。|  
 |SourceLocale|Integer|输入数据的区域设置 ID (LCID)。|  
-|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|用于确定组件如何处理在处理行时发生的截断的值。 。 具体的值为 **Fail component**、 **Ignore failure**和 **Redirect row**。|  
+|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|用于确定组件如何处理在处理行时发生的截断的值。 . 具体的值为 **Fail component**、 **Ignore failure**和 **Redirect row**。|  
   
  目标以及某些转换不支持错误输出，这些组件的 ErrorRowDisposition 和 TruncationRowDisposition 属性是只读的。  
   
@@ -167,7 +168,7 @@ ms.locfileid: "86917803"
   
  下表描述了数据流中的组件的输入列属性。 其中某些属性的值是只读的，由数据流引擎在运行时分配。  
   
-|properties|数据类型|说明|  
+|属性|数据类型|说明|  
 |--------------|---------------|-----------------|  
 |ComparisonFlags|Integer|一组标志，用于指定数据类型为 character 的列的比较方式。 有关详细信息，请参阅 [Comparing String Data](../../integration-services/data-flow/comparing-string-data.md)。|  
 |说明|String|对输入列的说明。|  
@@ -191,18 +192,18 @@ ms.locfileid: "86917803"
   
  下表描述了数据流中的组件的输出属性。 其中某些属性的值是只读的，由数据流引擎在运行时分配。  
   
-|properties|数据类型|说明|  
+|属性|数据类型|说明|  
 |--------------|---------------|-----------------|  
-|DeleteOutputOnPathDetached|Boolean|用于确定当输出与路径分离时数据流引擎是否将其删除的值。|  
+|DeleteOutputOnPathDetached|布尔|用于确定当输出与路径分离时数据流引擎是否将其删除的值。|  
 |说明|String|对输出的说明。|  
 |ErrorOrTruncationOperation|String|一个可选字符串，它指定处理行时可以发生的错误或截断的类型。|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|用于指定错误的处理方式的值。 具体的值为 **Fail component**、 **Ignore failure**和 **Redirect row**。|  
 |ExclusionGroup|Integer|用于标识一组互斥输出的值。|  
-|HasSideEffects|Boolean|用于指示当组件没有附加到上游组件并且 **RunInOptimizedMode** 为 **true**时是否可以从数据流的执行计划中删除该组件的值。|  
+|HasSideEffects|布尔|用于指示当组件没有附加到上游组件并且 **RunInOptimizedMode** 为 **true**时是否可以从数据流的执行计划中删除该组件的值。|  
 |ID|Integer|用于唯一标识输出的值。|  
 |IdentificationString|String|用于标识输出的字符串。|  
-|IsErrorOut|Boolean|指示输出是否为错误输出。|  
-|IsSorted|Boolean|指示输出是否已排序。 默认值为 **False**。<br /><br /> **\*\* 重要提示\*\*** 将 IsSorted 属性的值设置为 True 时，不会对数据进行排序   。 此属性仅向下游组件提示数据之前已经过排序。 有关详细信息，请参阅 [为合并转换和合并联接转换排序数据](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)。|  
+|IsErrorOut|布尔|指示输出是否为错误输出。|  
+|IsSorted|布尔|指示输出是否已排序。 默认值为 **False**。<br /><br /> **\*\* 重要提示\*\*** 将 IsSorted 属性的值设置为 True 时，不会对数据进行排序 。 此属性仅向下游组件提示数据之前已经过排序。 有关详细信息，请参阅 [为合并转换和合并联接转换排序数据](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)。|  
 |名称|String|输出的名称。|  
 |SynchronousInputID|Integer|与输出同步的输入的 ID。|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|用于确定组件如何处理在处理行时发生的截断的值。 具体的值为 **Fail component**、 **Ignore failure**和 **Redirect row**。|  
@@ -212,7 +213,7 @@ ms.locfileid: "86917803"
   
  下表描述了数据流中的组件的输出列属性。 其中某些属性的值是只读的，由数据流引擎在运行时分配。  
   
-|properties|数据类型|说明|  
+|属性|数据类型|说明|  
 |--------------|---------------|-----------------|  
 |ComparisonFlags|Integer|一组标志，用于指定数据类型为 character 的列的比较方式。 有关详细信息，请参阅 [Comparing String Data](../../integration-services/data-flow/comparing-string-data.md)。|  
 |说明|String|对输出列的说明。|  
@@ -235,7 +236,7 @@ ms.locfileid: "86917803"
   
  下表描述了数据流中的组件的外部元数据列属性。 其中某些属性的值是只读的，由数据流引擎在运行时分配。  
   
-|properties|数据类型|说明|  
+|属性|数据类型|说明|  
 |--------------|---------------|-----------------|  
 |说明|String|对外部列的说明。|  
 |ID|Integer|用于唯一标识列的值。|  
@@ -249,12 +250,12 @@ ms.locfileid: "86917803"
   
  下表描述了输出列和外部元数据列的数据类型属性。  
   
-|properties|数据类型|说明|  
+|属性|数据类型|说明|  
 |--------------|---------------|-----------------|  
 |CodePage|Integer|指定非 Unicode 字符串数据的代码页。|  
 |数据类型|Integer（枚举）|列的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型。 有关详细信息，请参阅 [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)。|  
 |长度|Integer|以字符计的列的长度。|  
-|Precision|Integer|数字列的精度。|  
+|精度|Integer|数字列的精度。|  
 |缩放|Integer|数字列的小数位数。|  
 
 ## <a name="custom-properties-of-data-flow-components"></a>数据流组件的自定义属性
@@ -278,7 +279,7 @@ ms.locfileid: "86917803"
   
 -   [ODBC 目标自定义属性](../../integration-services/data-flow/odbc-destination-custom-properties.md)  
   
--   [ODBC 源自定义属性](../../integration-services/data-flow/odbc-source-custom-properties.md)  
+-   [ODBC Source Custom Properties](../../integration-services/data-flow/odbc-source-custom-properties.md)  
   
 -   [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md)OLE DB 自定义属性  
   
@@ -313,9 +314,9 @@ ms.locfileid: "86917803"
   
 6.  双击该转换打开其对话框。  
   
-7.  在左窗格中，展开“变量”显示系统变量和用户定义的变量，然后展开“列”显示转换输入列。    
+7.  在左窗格中，展开“变量”显示系统变量和用户定义的变量，然后展开“列”显示转换输入列。********  
   
-8.  在右窗格中，展开“数学函数”、“字符串函数”、“日期/时间函数”、“NULL 函数”、“类型转换”和“运算符”，访问表达式语法提供的函数、转换和运算符。        
+8.  在右窗格中，展开“数学函数”、“字符串函数”、“日期/时间函数”、“NULL 函数”、“类型转换”和“运算符”，访问表达式语法提供的函数、转换和运算符。************************  
   
 9. 根据转换的类型，可以执行下列某项操作来生成表达式：  
   
@@ -324,9 +325,9 @@ ms.locfileid: "86917803"
     -   在 **“派生列转换编辑器”** 对话框中，将变量、列、函数、运算符和转换拖到 **“表达式”** 列中。 另外，您还可以直接在 **“表达式”** 列中键入表达式。  
   
         > [!NOTE]  
-        >  当焦点离开“条件”列或“表达式”列时，表达式文本可能会突出显示，指示表达式语法不正确。    
+        >   当焦点离开 **“条件”** 列或 **“表达式”** 列时，表达式文本可能会突出显示，指示表达式语法不正确。  
   
-10. 单击 **“确定”** 退出对话框。  
+10. 单击 **“确定”**，退出对话框。  
   
     > [!NOTE]  
     >  如果该表达式无效，则会出现一个警告，描述表达式中的语法错误。  
@@ -338,15 +339,15 @@ ms.locfileid: "86917803"
   
  可以使用属性表达式为包的每个已部署的实例自定义配置。 也可以使用属性表达式来为包指定运行时约束，方法是将 **/set** 选项与 **dtexec** 命令提示实用工具一起使用。 例如，可以约束排序转换使用的 **MaximumThreads** ，或约束模糊分组和模糊查找转换的 **MaxMemoryUsage** 。 如果无约束，则这些转换可能会在内存中高速缓存大量数据。  
   
- 若要为本主题中列出的数据流对象的其中一个属性指定属性表达式，请在设计器的 **“控制流”** 图面上选择该数据流任务，或选择设计器的 **“数据流”** 选项卡但不选择任何单个组件或路径，以此方式显示数据流任务的 **“属性”** 窗口。 选择“表达式”  属性，然后单击省略号 (...) 以显示“属性表达式编辑器”  对话框。 下拉“属性”  列表以选择某个属性，然后在“表达式”  文本框中键入一个表达式，或者单击省略号 (...) 以显示“表达式生成器”  对话框。  
+ 若要为本主题中列出的数据流对象的其中一个属性指定属性表达式，请在设计器的 **“控制流”** 图面上选择该数据流任务，或选择设计器的 **“数据流”** 选项卡但不选择任何单个组件或路径，以此方式显示数据流任务的 **“属性”** 窗口。 选择“表达式”**** 属性，然后单击省略号 (...) 以显示“属性表达式编辑器”**** 对话框。 下拉“属性”**** 列表以选择某个属性，然后在“表达式”**** 文本框中键入一个表达式，或者单击省略号 (...) 以显示“表达式生成器”**** 对话框。  
   
- **“属性”** 列表仅显示那些已位于设计器的 **“数据流”** 图面上的数据流对象的可用属性。 因此，不能使用 **“属性”** 列表来查看那些支持属性表达式的数据流对象的所有可能的属性。 例如，如果已将 ADO NET 源放置在设计器图面上，则“属性”  列表包含 **[ADO NET Source].[SqlCommand]** 属性的条目。 该列表还显示了数据流任务自身的许多属性。  
+ **“属性”** 列表仅显示那些已位于设计器的 **“数据流”** 图面上的数据流对象的可用属性。 因此，不能使用 **“属性”** 列表来查看那些支持属性表达式的数据流对象的所有可能的属性。 例如，如果已将 ADO NET 源放置在设计器图面上，则“属性”**** 列表包含 **[ADO NET Source].[SqlCommand]** 属性的条目。 该列表还显示了数据流任务自身的许多属性。  
  
  下面的列表中的属性值可以使用属性表达式来指定。  
   
 ### <a name="data-flow-sources"></a>数据流源  
   
-|数据流对象|properties|  
+|数据流对象|属性|  
 |----------------------|--------------|  
 |ADO NET 源|TableOrViewName 属性<br /><br /> SqlCommand 属性|  
 |XML 源|XMLData 属性<br /><br /> XMLSchemaDefinition 属性|  
@@ -354,7 +355,7 @@ ms.locfileid: "86917803"
 ### <a name="data-flow-transformations"></a>数据流转换  
  有关这些自定义属性的详细信息，请参阅 [Transformation Custom Properties](../../integration-services/data-flow/transformations/transformation-custom-properties.md)。  
   
-|数据流对象|properties|  
+|数据流对象|属性|  
 |----------------------|--------------|  
 |有条件拆分转换|FriendlyExpression 属性|  
 |派生列转换|FriendlyExpression 属性|  
@@ -370,7 +371,7 @@ ms.locfileid: "86917803"
   
 ### <a name="data-flow-destinations"></a>数据流目标  
   
-|数据流对象|properties|  
+|数据流对象|属性|  
 |----------------------|--------------|  
 |ADO NET 目标|TableOrViewName 属性<br /><br /> BatchSize 属性<br /><br /> CommandTimeout 属性|  
 |平面文件目标|Header 属性|  

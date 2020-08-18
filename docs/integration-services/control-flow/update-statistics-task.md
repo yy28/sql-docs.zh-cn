@@ -1,4 +1,5 @@
 ---
+description: “更新统计信息”任务
 title: “更新统计信息”任务 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0247483b-f092-4511-8fa8-3610108bd1bc
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d367886273ade6efab0c5d26017ed3ae6f5cd35b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0ed05c62844c8531b119454d2465e8212e1ae270
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913829"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88349353"
 ---
 # <a name="update-statistics-task"></a>“更新统计信息”任务
 
@@ -33,7 +34,7 @@ ms.locfileid: "86913829"
   
  此任务封装 UPDATE STATISTICS 语句，其中包括下列参数和子句：  
   
--   table_name 或 view_name 参数   。  
+-   table_name 或 view_name 参数****。  
   
 -   如果更新应用于所有统计信息，则暗示使用 WITH ALL 子句。  
   
@@ -41,7 +42,7 @@ ms.locfileid: "86913829"
   
 -   如果更新仅应用于索引，则包含 WITH INDEX 子句。  
   
- 如果“更新统计信息”任务更新多个数据库中的统计信息，则它将运行多个 UPDATE STATISTICS 语句，每个语句用于一个表或视图。 UPDATE STATISTICS 的所有实例均使用相同的子句，但使用不同的 table_name 或 view_name 值   。 有关详细信息，请参阅 [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md) 和 [UPDATE STATISTICS (Transact-SQL)](../../t-sql/statements/update-statistics-transact-sql.md)。  
+ 如果“更新统计信息”任务更新多个数据库中的统计信息，则它将运行多个 UPDATE STATISTICS 语句，每个语句用于一个表或视图。 UPDATE STATISTICS 的所有实例均使用相同的子句，但使用不同的 table_name 或 view_name 值****。 有关详细信息，请参阅 [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md) 和 [UPDATE STATISTICS (Transact-SQL)](../../t-sql/statements/update-statistics-transact-sql.md)。  
   
 > [!IMPORTANT]  
 >  此任务创建它所运行的 Transact-SQL 语句花费的时间与它更新的统计信息数成正比。 如果配置此任务来更新具有大量索引的数据库中所有表和视图中的统计信息，或更新多个数据库中的统计信息，则任务将花费相当长的时间来生成 Transact-SQL 语句。  

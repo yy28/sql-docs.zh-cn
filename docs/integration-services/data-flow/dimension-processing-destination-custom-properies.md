@@ -1,4 +1,5 @@
 ---
+description: 维度处理目标自定义属性
 title: 维度处理目标自定义属性 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9700f663-53f2-49b6-b1ef-92c7b752d6a1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 09b9d0512fb92bcc5564dd107d5c6d7a91b2dc4f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6cc1b502a64a30b5035b95b7d36207bc1cc281d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916703"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88348993"
 ---
 # <a name="dimension-processing-destination-custom-properies"></a>维度处理目标自定义属性
 
@@ -26,7 +27,7 @@ ms.locfileid: "86916703"
   
  下表介绍了纬度处理目标的自定义属性。 所有属性均可读/写。  
   
-|properties|数据类型|说明|  
+|属性|数据类型|说明|  
 |--------------|---------------|-----------------|  
 |ASConnectionString|String|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的实例或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的连接字符串。|  
 |KeyDuplicate|Integer（枚举）|UseDefaultConfiguration 为 **False**时，指示如何处理重复键错误的值。 可能的值有 **IgnoreError** (0)、 **ReportAndContinue** (1) 和 **ReportAndStop** (2)。 此属性的默认值为 **IgnoreError** (0)。|  
@@ -38,7 +39,7 @@ ms.locfileid: "86916703"
 |NullKeyConvertedToUnknown|Integer（枚举）|当 UseDefaultConfiguration 为 **False**时，指示如何处理 null 键转换为未知值。 可能的值有 **IgnoreError** (0)、 **ReportAndContinue** (1) 和 **ReportAndStop** (2)。 此属性的默认值为 **IgnoreError** (0)。|  
 |NullKeyNotAllowed|Integer（枚举）|UseDefaultConfiguration 为 **False**时，指示如何处理不允许的 null 的值。 可能的值有 **IgnoreError** (0)、 **ReportAndContinue** (1) 和 **ReportAndStop** (2)。 此属性的默认值为 **IgnoreError** (0)。|  
 |ProcessType|Integer（枚举）|转换使用的维度处理类型。 值有 **ProcessAdd** (1)（增量）、 **ProcessFull** (0) 和 **ProcessUpdate** (2)。|  
-|UseDefaultConfiguration|Boolean|一个指定转换是否使用默认错误配置的值。 如果此属性为 **False**，则转换包含有关错误处理的信息。|  
+|UseDefaultConfiguration|布尔|一个指定转换是否使用默认错误配置的值。 如果此属性为 **False**，则转换包含有关错误处理的信息。|  
   
  维度处理目标的输入和输入列没有自定义属性。  
   

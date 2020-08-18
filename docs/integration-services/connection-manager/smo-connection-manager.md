@@ -1,4 +1,5 @@
 ---
+description: SMO 连接管理器
 title: SMO 连接管理器 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d273f1fb-a6a8-4f2f-a5ff-55c2e3de4723
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cfa304fa19b8d2f259a0cad77d4c25b5d81aa8be
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0b89d916df89535bcd48fd383714457d6bcbc494
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922893"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88350273"
 ---
 # <a name="smo-connection-manager"></a>SMO 连接管理器
 
@@ -30,7 +31,7 @@ ms.locfileid: "86922893"
 
   SMO 连接管理器使得包能够连接到 SQL 管理对象 (SMO) 服务器。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括的传输任务使用 SMO 连接管理器。 例如，传输 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的传输登录任务使用 SMO 连接管理器。  
   
- 将 SMO 连接管理器添加到包时，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 会创建将在运行时决定 SMO 连接的连接管理器，设置该连接管理器的属性，并将该连接管理器添加到包上的“连接”集合  。 该连接管理器的 **ConnectionManagerType** 属性设置为 **SMOServer**。  
+ 将 SMO 连接管理器添加到包时，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 会创建将在运行时决定 SMO 连接的连接管理器，设置该连接管理器的属性，并将该连接管理器添加到包上的“连接”集合****。 该连接管理器的 **ConnectionManagerType** 属性设置为 **SMOServer**。  
   
  可以按下列方式配置 SMO 连接管理器：  
   

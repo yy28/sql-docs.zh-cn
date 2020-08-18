@@ -1,4 +1,5 @@
 ---
+description: “项目属性”对话框
 title: “项目属性”对话框 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: d5cf52f5-1fe2-438a-98a3-fe117360acf8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3f8abf0faafe21b01c34875968cac43c501f951a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 25b6f01f5966f7d157fd76bd5082567a95854fbc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922603"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88351603"
 ---
 # <a name="project-properties-dialog-box"></a>“项目属性”对话框
 
@@ -49,7 +50,7 @@ ms.locfileid: "86922603"
   
 4.  展开包含您要设置其属性的项目的文件夹。  
   
-5.  右键单击该项目，然后单击“属性”  。  
+5.  右键单击该项目，然后单击“属性”****。  
   
 ##  <a name="set-the-options-on-the-general-page"></a><a name="general"></a> 设置“常规”页上的选项  
  使用“常规”页查看项目属性。  
@@ -73,12 +74,12 @@ ms.locfileid: "86922603"
  使用 **“权限”** 页可以查看和设置项目的显式权限。  
   
  浏览  
- 使用“浏览所有主体”对话框，单击“浏览”选择要为其设置权限的用户和角色。  
+ 使用“浏览所有主体”**** 对话框，单击“浏览”**** 选择要为其设置权限的用户和角色。  
   
  **名称**  
  列出用户或角色的名称。  
   
- 类型   
+ **类型**  
  列出用户或角色的类型。  
   
  **权限**  
@@ -88,9 +89,9 @@ ms.locfileid: "86922603"
  列出授予权限的用户或角色。  
   
  **授予**  
- 选择“授予”  时，为所选用户或角色授予权限。  
+ 选择“授予”**** 时，为所选用户或角色授予权限。  
   
  **拒绝**  
- 选择“拒绝”  时，为所选用户或角色拒绝权限。  
+ 选择“拒绝”**** 时，为所选用户或角色拒绝权限。  
   
   

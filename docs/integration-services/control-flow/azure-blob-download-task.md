@@ -1,4 +1,5 @@
 ---
+description: Azure Blob 下载任务
 title: Azure Blob 下载任务 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2019
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 8a63bf44-71be-456d-9a5c-be7c31aff065
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f16ae336c0fd01253bc45439cb3202e3501d6dda
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6437172ce0336938ad17a8b49bdb81e6fc4a0177
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919649"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88350023"
 ---
 # <a name="azure-blob-download-task"></a>Azure Blob 下载任务
 
@@ -27,13 +28,13 @@ ms.locfileid: "86919649"
 
 Azure Blob 下载任务启用了一个 SSIS 包来从 Azure blob 存储区下载文件。
 
-若要添加 **Azure Blob 下载任务**，可将其拖放到 SSIS 设计器，然后双击或右键单击“编辑”，以查看以下“Azure Blob 下载任务编辑器”对话框   。  
+若要添加 **Azure Blob 下载任务**，可将其拖放到 SSIS 设计器，然后双击或右键单击“编辑”，以查看以下“Azure Blob 下载任务编辑器”对话框********。  
   
- “Azure Blob 下载任务”  是[适用于 Azure 的 SQL Server Integration Services (SSIS) 功能包](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)组件。  
+ “Azure Blob 下载任务”**** 是[适用于 Azure 的 SQL Server Integration Services (SSIS) 功能包](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)组件。  
   
  下表提供了此对话框中的字段说明。  
 
-|**字段**|**说明**|  
+|字段|**说明**|  
 |---|---|
 |AzureStorageConnection|选择一个现有的 Azure 存储连接管理器或创建一个新的连接管理器，用于引用指向在其中托管 blob 文件的 Azure 存储帐户。|  
 |BlobContainer|指定包含要下载的 blob 文件的 blob 容器的名称。|  

@@ -1,4 +1,5 @@
 ---
+description: 文件连接管理器
 title: 文件连接管理器 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 019078bc-44ee-4975-9169-0f9a89e3f3be
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 11c5a2404ec0c5dd8a51f09b1b96a4b5518231ae
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 982ff5a4a48c22de9521d2df5d56cd31919794f5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920785"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88351433"
 ---
 # <a name="file-connection-manager"></a>文件连接管理器
 
@@ -38,7 +39,7 @@ ms.locfileid: "86920785"
   
  下表列出了 **FileUsageType**的值。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**0**|文件连接管理器使用现有文件。|  
 |**1**|文件连接管理器创建文件。|  
@@ -59,7 +60,7 @@ ms.locfileid: "86920785"
   
 -   指定文件或文件夹。  
   
- 通过在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的“属性”窗口中指定表达式，可以设置文件连接管理器的 ConnectionString 属性。 但为了避免在使用表达式指定文件或文件夹时出现验证错误，请在“文件连接管理器编辑器”  中，为“文件/文件夹”  添加文件或文件夹路径。  
+ 通过在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的“属性”窗口中指定表达式，可以设置文件连接管理器的 ConnectionString 属性。 但为了避免在使用表达式指定文件或文件夹时出现验证错误，请在“文件连接管理器编辑器”中，为“文件/文件夹”添加文件或文件夹路径。  
   
  可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
@@ -71,15 +72,15 @@ ms.locfileid: "86920785"
   可以使用 **“文件连接管理器编辑器”** 对话框指定用于连接文件或文件夹的属性。  
   
 > [!NOTE]  
->  通过在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的“属性”窗口中指定表达式，可以设置文件连接管理器的 ConnectionString 属性。 但为了避免在使用表达式指定文件或文件夹时出现验证错误，请在“文件连接管理器编辑器”  中，为“文件/文件夹”  添加文件或文件夹路径。  
+>  通过在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的“属性”窗口中指定表达式，可以设置文件连接管理器的 ConnectionString 属性。 但为了避免在使用表达式指定文件或文件夹时出现验证错误，请在“文件连接管理器编辑器”中，为“文件/文件夹”添加文件或文件夹路径。  
   
  若要了解有关文件连接管理器的详细信息，请参阅 [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)。  
   
 ### <a name="options"></a>选项  
  **使用类型**  
- 指定“文件连接管理器”是连接到现有文件或文件夹，还是创建新的文件或文件夹。   
+ 指定“文件连接管理器”是连接到现有文件或文件夹，还是创建新的文件或文件夹。****  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |创建文件|在运行时创建新文件。|  
 |现有文件|使用现有文件。|  
@@ -87,11 +88,11 @@ ms.locfileid: "86920785"
 |现有文件夹|使用现有文件夹。|  
   
  **文件/文件夹**  
- 对于“文件”  ，请指定要使用的文件。  
+ 对于“文件”****，请指定要使用的文件。  
   
- 对于 **“文件夹”** ，请指定要使用的文件夹。  
+ 对于 **“文件夹”**，请指定要使用的文件夹。  
   
  **“浏览”**  
- 通过使用“选择文件”  或“查找文件夹”  对话框选择文件或文件夹。  
+ 通过使用“选择文件”**** 或“查找文件夹”**** 对话框选择文件或文件夹。  
   
   

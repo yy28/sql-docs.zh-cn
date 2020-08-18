@@ -1,4 +1,5 @@
 ---
+description: SAP BW 源
 title: SAP BW 源 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 894d94e277f1304a5d9d1e1986e5f769fbc5f4e9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0506eb531462702870ef726b585dd5f07c1d4db4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917813"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88349023"
 ---
 # <a name="sap-bw-source"></a>SAP BW 源
 
@@ -48,37 +49,37 @@ ms.locfileid: "86917813"
   
 1.  通过 SAP GUI 登录 SAP Netweaver BW，输入事务代码 SM59，创建一个 RFC 目标：  
   
-    1.  对于“连接类型”，选择“TCP/IP”   。  
+    1.  对于“连接类型”，选择“TCP/IP”********。  
   
-    2.  对于 **“激活类型”** ，选择 **“注册服务器程序”** 。  
+    2.  对于 **“激活类型”**，选择 **“注册服务器程序”**。  
   
-    3.  对于“与目标系统的通信类型”  ，选择“非 Unicode (非活动 MDMP 设置)”  。  
+    3.  对于“与目标系统的通信类型”****，选择“非 Unicode (非活动 MDMP 设置)”****。  
   
     4.  分配适当的程序 ID。  
   
 2.  创建 Open Hub 目标：  
   
-    1.  转到 Administrator Workbench（事务代码 RSA1），在左窗格中选择  “Open Hub 目标”。  
+    1.  转到 Administrator Workbench（事务代码 RSA1），在左窗格中选择****“Open Hub 目标”。  
   
-    2.  在中间窗格中，右键单击 InfoArea，然后选择  “创建 Open Hub 目标”。  
+    2.  在中间窗格中，右键单击 InfoArea，然后选择****“创建 Open Hub 目标”。  
   
-    3.  对于 **“目标类型”** ，选择 **“第三方工具”** ，然后输入之前创建的 RFC 目标。  
+    3.  对于 **“目标类型”**，选择 **“第三方工具”**，然后输入之前创建的 RFC 目标。  
   
     4.  保存并激活新的 Open Hub 目标。  
   
 3.  创建数据传输进程 (DTP)：  
   
-    1.  在 InfoArea 的中间窗格中，右键单击之前创建的目标，然后选择  “创建数据传输进程”。  
+    1.  在 InfoArea 的中间窗格中，右键单击之前创建的目标，然后选择****“创建数据传输进程”。  
   
     2.  配置、保存并激活 DTP。  
   
-    3.  在菜单中单击 **“转到”** ，然后单击 **“批管理器设置”** 。  
+    3.  在菜单中单击 **“转到”**，然后单击 **“批管理器设置”**。  
   
     4.  对于串行处理，将 **“进程数”** 更新为 1。  
   
 4.  创建进程链：  
   
-    1.  配置进程链时，选择 **“使用元数据链或 API 启动”** 作为 **“启动进程”** 的 **“计划选项”** ，然后添加之前创建的 DTP 作为下一节点。  
+    1.  配置进程链时，选择 **“使用元数据链或 API 启动”** 作为 **“启动进程”** 的 **“计划选项”**，然后添加之前创建的 DTP 作为下一节点。  
   
     2.  保存并激活进程链。  
   
@@ -104,11 +105,11 @@ ms.locfileid: "86917813"
   
 -   根据所选择的数据提取方法，提供以下额外信息：  
   
-    -   对于  “P - 触发进程链”选项，提供网关主机名称、网关服务名称、RFC 目标的程序 ID 和进程链的名称。  
+    -   对于****“P - 触发进程链”选项，提供网关主机名称、网关服务名称、RFC 目标的程序 ID 和进程链的名称。  
   
-    -   对于  “W - 等待通知”选项，提供网关主机名称、网关服务器名称和 RFC 目标的程序 ID。 还可以指定超时时间（以秒为单位）。 超时是源收到通知前的最长等待时间。  
+    -   对于****“W - 等待通知”选项，提供网关主机名称、网关服务器名称和 RFC 目标的程序 ID。 还可以指定超时时间（以秒为单位）。 超时是源收到通知前的最长等待时间。  
   
-    -   对于“E - 仅提取”  选项，提供请求 ID。  
+    -   对于“E - 仅提取”**** 选项，提供请求 ID。  
   
 -   指定字符串转换规则。 （例如，根据 SAP Netweaver BW 是否为 Unicode 转换所有字符串，或者将所有字符串转换为 **varchar** 或 **nvarchar**）。  
   

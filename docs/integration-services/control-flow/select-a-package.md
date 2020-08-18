@@ -1,4 +1,5 @@
 ---
+description: 选择包
 title: 选择包 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 92b47a2b-21b5-460a-885d-6cc4bb567249
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1045623c5eabe80a66a9320cb8425b47788d950d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ce10dbf39c92754b2fbc2879041e98094dc06ceb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921143"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88349933"
 ---
 # <a name="select-a-package"></a>选择包
 
@@ -32,7 +33,7 @@ ms.locfileid: "86921143"
  **位置**  
  指定包的位置。 此属性具有下表所列的选项。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|将位置设置为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。 选择此值将显示以下动态选项： **Server**、 **Use Windows Authentication**、 **Use SQL Server Authentication**、 **User name**和 **Password**。|  
 |DTSX 文件|将位置设置为 DTSX 文件。 选择此值将显示动态选项 **File name**。|  
@@ -60,7 +61,7 @@ ms.locfileid: "86921143"
   
 ### <a name="location--dtsx-file"></a>位置 = DTSX 文件  
  **文件名**  
- 提供包的路径，或单击浏览按钮“(…)”并查找包  。  
+ 提供包的路径，或单击浏览按钮“(…)”并查找包。  
   
 ## <a name="see-also"></a>另请参阅  
  [消息队列任务](../../integration-services/control-flow/message-queue-task.md)  
