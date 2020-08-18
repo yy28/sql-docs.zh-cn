@@ -1,5 +1,6 @@
 ---
-title: MSsubscriber_schedule （Transact-sql） |Microsoft Docs
+description: MSsubscriber_schedule (Transact-SQL)
+title: MSsubscriber_schedule (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ff428306-0ef4-49a3-b536-07ccdf6e2196
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c5b4a3ac4c00dcb90d62961554d7bc4d12911f6f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dc347249ecda20c1f753c0e5f2b098ed3f5f1a49
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889368"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492699"
 ---
 # <a name="mssubscriber_schedule-transact-sql"></a>MSsubscriber_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "85889368"
 |**订阅服务器**|**sysname**|订阅服务器的名称。|  
 |**agent_type**|**smallint**|代理的类型：<br /><br /> 0 = 分发代理。<br /><br /> 1 = 合并代理。|  
 |**frequency_type**|**int**|调度分发代理的频率：<br /><br /> **1** = 一次。<br /><br /> **2** = 按需。<br /><br /> **4** = 每天。<br /><br /> **8** = 每周。<br /><br /> **16** = 每月。<br /><br /> **32** = 每月相对的。<br /><br /> **64** = Autostart。<br /><br /> **128** = 重复。|  
-|**frequency_interval**|**int**|要应用于**frequency_type**设置的频率的值。|  
+|**frequency_interval**|**int**|要应用于 **frequency_type**设置的频率的值。|  
 |**frequency_relative_interval**|**int**|分发代理的日期：<br /><br /> **1** = 第一个。<br /><br /> **2** = 秒。<br /><br /> **4** = 第三个。<br /><br /> **8** = 第四个。<br /><br /> **16** = 最后。|  
 |**frequency_recurrence_factor**|**int**|**Frequency_type**使用的重复因子。|  
 |**frequency_subday**|**int**|在定义的周期内的重新调度频率：<br /><br /> **1** = 一次。<br /><br /> **2** = 秒。<br /><br /> **4** = 分钟。<br /><br /> **8** = 小时。|  
@@ -49,7 +50,7 @@ ms.locfileid: "85889368"
 |**active_end_date**|**int**|停止计划分发代理的日期，格式为 YYYYMMDD。|  
   
 ## <a name="see-also"></a>另请参阅  
- [Transact-sql&#41;&#40;复制表](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;复制表 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图 (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

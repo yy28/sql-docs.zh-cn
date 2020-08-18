@@ -1,5 +1,6 @@
 ---
-title: 与公共语言运行时相关的动态管理视图（Transact-sql） |Microsoft Docs
+description: 与公共语言运行时有关的动态管理视图 (Transact-SQL)
+title: 与公共语言运行时相关的动态管理视图 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 57e79c45-ff47-4885-bdf5-aecf29891ab3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7e0cb76aa8d1b3aa24787aeb93ae1b264b8fa04a
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 310b5ecfabb90b65edfffd035404171da075ff4a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942406"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460471"
 ---
 # <a name="common-language-runtime-related-dynamic-management-views-transact-sql"></a>与公共语言运行时有关的动态管理视图 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

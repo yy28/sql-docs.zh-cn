@@ -1,4 +1,5 @@
 ---
+description: 驱动程序版本方案
 title: 驱动程序版本方案 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e4a8d9d7-8aba-48ab-8be6-1a6129adfb8f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 864a8bd892315b060fc6fcf42dbe69dfea61ae59
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0414da00ffc5a220e3bf6b13837880b1116f58eb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303448"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412723"
 ---
 # <a name="driver-version-scheme"></a>驱动程序版本方案
 > [!IMPORTANT]  
@@ -35,7 +36,7 @@ ms.locfileid: "81303448"
 |2.5|2.573.2927|Visual Studio 6.0 和 MDAC 2。0|  
 |2.5 更新|2.573.3513|SQL Server 7。0<br /><br /> SQL Server 6.5 SP5|  
   
- Build 2.00.6235 （版本1）是 Microsoft ODBC Driver for Oracle 的第一个版本。 第一版发布后，采用新的命名约定。  
+ 版本 1)  (生成2.00.6235 是 Microsoft ODBC Driver for Oracle 的第一个版本。 第一版发布后，采用新的命名约定。  
   
  例如，可以将2.73.7283.03 划分为以下不同的组件：  
   

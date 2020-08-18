@@ -1,4 +1,5 @@
 ---
+description: 从存储过程返回数组参数
 title: 从存储过程返回数组参数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2018069b-da5d-4cee-a971-991897d4f7b5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bc998dadc0e0c4a4bfe054bfd1d40296bc176393
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a6b18921e027e16f322c47da9757ef9c8ee7f1aa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81292857"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449279"
 ---
 # <a name="returning-array-parameters-from-stored-procedures"></a>从存储过程返回数组参数
 > [!IMPORTANT]  
@@ -35,7 +36,7 @@ ms.locfileid: "81292857"
 ```  
   
 > [!NOTE]  
->  \<Max-记录请求> 参数必须大于或等于结果集中出现的行数。 否则，Oracle 返回由驱动程序传递给用户的错误。  
+>  \<max-records-requested>参数必须大于或等于结果集中出现的行数。 否则，Oracle 返回由驱动程序传递给用户的错误。  
 >   
 >  PL/SQL 记录不能用作数组参数。 每个 array 参数只能表示数据库表中的一个列。  
   
@@ -135,7 +136,7 @@ END SimplePackage;
     {call SimplePackage.Proc2( 5 , {resultset 5, ao_Arg2}, {resultset 5, ao_Arg3} ) }  
     ```  
   
- 确保你的应用程序使用[SQLMoreResults](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md) API 提取所有结果集。 有关详细信息，请参阅*ODBC 程序员参考*。  
+ 确保你的应用程序使用 [SQLMoreResults](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md) API 提取所有结果集。 有关详细信息，请参阅 *ODBC 程序员参考*。  
   
 > [!NOTE]  
 >  在 Oracle 版本2.0 的 ODBC 驱动程序中，返回 PL/SQL 数组的 Oracle 函数不能用于返回结果集。

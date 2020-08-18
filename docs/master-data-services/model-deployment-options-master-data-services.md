@@ -1,4 +1,5 @@
 ---
+description: 模型部署选项 (Master Data Services)
 title: 模型部署选项
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cf1b17b4-47d5-4eba-83f9-fb0555806867
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b4de75b7f5cc65fa3d7a080f3317630a9af4d53a
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: d6b2c29038934034c39ea7699328504d418989d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813263"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471901"
 ---
 # <a name="model-deployment-options-master-data-services"></a>模型部署选项 (Master Data Services)
 

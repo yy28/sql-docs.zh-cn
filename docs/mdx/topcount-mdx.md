@@ -1,5 +1,6 @@
 ---
-title: TopCount （MDX） |Microsoft Docs
+description: TopCount (MDX)
+title: TopCount (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e0f607f3111c150bff3d5dc562c77901a381bedc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b7d917963d8500e06bf9d2adcd1057e72e50512a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68036603"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412873"
 ---
 # <a name="topcount-mdx"></a>TopCount (MDX)
 
@@ -38,12 +39,12 @@ TopCount(Set_Expression,Count [ ,Numeric_Expression ] )
  返回数字的有效数值表达式，通常为单元坐标的多维表达式 (MDX)。  
   
 ## <a name="remarks"></a>备注  
- 如果指定了数值表达式，则**TopCount**函数将根据由数值表达式指定的值（根据指定集进行计算），按降序对指定集指定的集内的元组进行排序。 对集进行排序后， **TopCount**函数将返回指定数量的具有最高值的元组。  
+ 如果指定了数值表达式，则 **TopCount** 函数将根据由数值表达式指定的值（根据指定集进行计算），按降序对指定集指定的集内的元组进行排序。 对集进行排序后， **TopCount** 函数将返回指定数量的具有最高值的元组。  
   
 > [!IMPORTANT]  
->  与[BottomCount](../mdx/bottomcount-mdx.md)函数一样， **TopCount**函数始终中断层次结构。  
+>  与 [BottomCount](../mdx/bottomcount-mdx.md) 函数一样， **TopCount** 函数始终中断层次结构。  
   
- 如果未指定数值表达式，则函数将以自然顺序返回成员集，而不进行任何排序，行为类似于[Head （MDX）](../mdx/head-mdx.md)函数。  
+ 如果未指定数值表达式，则函数将以自然顺序返回成员集，而不进行任何排序，行为类似于 [Head (MDX) ](../mdx/head-mdx.md) 函数。  
   
 ## <a name="examples"></a>示例  
  下面的示例按 Internet Sales Amount 返回前 10 个日期：  

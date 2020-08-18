@@ -1,5 +1,6 @@
 ---
-title: 从模型中选择 &lt; &gt; （DMX） |Microsoft Docs
+description: '从模型中选择 &lt; &gt; (DMX) '
+title: 从模型中选择 &lt; &gt; (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,14 +9,14 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 43a7157c5ec7889b2f8cb7018423d909f3db3cb7
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 6244581b4d9a383c2d09af351c5fbe3149207ebd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970515"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471966"
 ---
-# <a name="select-from-ltmodelgt-dmx"></a>从模型中选择 &lt; &gt; （DMX）
+# <a name="select-from-ltmodelgt-dmx"></a>从模型中选择 &lt; &gt; (DMX) 
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   执行空预测联接，并为指定列返回一个或多个最可能的值。 创建预测时只使用来自挖掘模型的内容。  
@@ -56,7 +57,7 @@ SELECT ([Bike Buyer]) FROM [TM_Naive_Bayes]
 ```  
   
 ## <a name="time-series-example"></a>时间序列示例  
- 以下示例对预测模型中的 Amount 列执行预测，并返回接下来的四个时间步长。 Model Region 列将 bike models 和 regions 组合为一个标识符。 查询使用[PredictTimeSeries &#40;DMX&#41;](../dmx/predicttimeseries-dmx.md)函数执行预测。  
+ 以下示例对预测模型中的 Amount 列执行预测，并返回接下来的四个时间步长。 Model Region 列将 bike models 和 regions 组合为一个标识符。 查询使用 [PredictTimeSeries &#40;DMX&#41;](../dmx/predicttimeseries-dmx.md) 函数执行预测。  
   
 ```  
 SELECT [Model Region], PredictTimeSeries(Amount, 4)   

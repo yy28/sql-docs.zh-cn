@@ -1,4 +1,5 @@
 ---
+description: 数据迁移设置 (SybaseToSQL)
 title: 数据迁移设置 (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,23 +10,23 @@ ms.topic: conceptual
 ms.assetid: 94d7a083-2dbc-4e3d-94dd-92b7ff9d0c2d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 42ec7a228aa317f1427dae14cf95631341645bc8
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 1d86fbfceefd3f0a4fba6f3bb86a071736e12c54
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87931767"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492231"
 ---
 # <a name="data-migration-settings-sybasetosql"></a>数据迁移设置 (SybaseToSQL)
   
 ## <a name="data-migration-settings"></a>数据迁移设置  
-**数据迁移设置**允许用户编写自定义查询以进行数据迁移。  
+**数据迁移设置** 允许用户编写自定义查询以进行数据迁移。  
   
--   当 "**扩展数据迁移选项**" 设置为 "**显示**" 时，此选项卡可用，在项目设置中设置为 "**隐藏**" 时，此选项卡处于隐藏状态。 有关项目迁移设置的详细信息，请参阅[项目设置 (迁移) ](https://msdn.microsoft.com/82f8857f-7ab1-4738-ab6e-b1e95ea94924) 。  
+-   当 " **扩展数据迁移选项** " 设置为 " **显示** " 时，此选项卡可用，在项目设置中设置为 " **隐藏** " 时，此选项卡处于隐藏状态。 有关项目迁移设置的详细信息，请参阅 [项目设置 (迁移) ](https://msdn.microsoft.com/82f8857f-7ab1-4738-ab6e-b1e95ea94924) 。  
   
--   自定义 SQL 语句的分析将在表节点的 "**数据迁移设置**" 选项卡中实现。  
+-   自定义 SQL 语句的分析将在表节点的 " **数据迁移设置** " 选项卡中实现。  
   
--   以下是**数据迁移设置**即中可用的两个复选框：  
+-   以下是 **数据迁移设置** 即中可用的两个复选框：  
   
     1.  截断 SQL Server 表  
   
@@ -43,13 +44,13 @@ ms.locfileid: "87931767"
   
     1.  默认情况下，此 textbox 处于未选中状态。  
   
-    2.  如果选中此文本框，则允许用户修改显示的**select**语句。  
+    2.  如果选中此文本框，则允许用户修改显示的 **select** 语句。  
   
 即提供了两个按钮：  
   
--   **应用：** 单击 "**应用**" 以应用已更改的设置。  
+-   **应用：** 单击 " **应用** " 以应用已更改的设置。  
   
--   **取消：** 单击 "**取消**" 以还原在进行更改之前显示的设置。  
+-   **取消：** 单击 " **取消** " 以还原在进行更改之前显示的设置。  
   
 ## <a name="see-also"></a>另请参阅  
 [将 Sybase 数据迁移到 SQL Server/SQL Azure](https://msdn.microsoft.com/54a39f5e-9250-4387-a3ae-eae47c799811)  

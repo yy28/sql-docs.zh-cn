@@ -1,5 +1,6 @@
 ---
-title: sys. server_events （Transact-sql） |Microsoft Docs
+description: sys.server_events (Transact-SQL)
+title: sys. server_events (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 996f6c9b-6426-4847-95d9-6b77541422be
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0f5e753b2d5db8d75739f8e65c909f593f8b6e77
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 32c5057f8bc61cc3e27e0d67b9da6b515cec21e5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894953"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460552"
 ---
 # <a name="sysserver_events-transact-sql"></a>sys.server_events (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "85894953"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|要激发的服务器级事件通知或服务器级 DDL 触发器的 ID。|  
-|**type**|**int**|导致激发事件通知或 DDL 触发器的事件的类型。|  
+|type|**int**|导致激发事件通知或 DDL 触发器的事件的类型。|  
 |**type_desc**|**nvarchar(60)**|对导致激发 DDL 触发器或事件通知的事件的说明。|  
 |**event_group_type**|**int**|要对其创建触发器或事件通知的事件组，如果未对事件组中创建触发器或事件通知，则为 Null。|  
 |**event_group_type_desc**|**nvarchar(60)**|要对其创建触发器或事件通知的事件组的说明，如果未对事件组创建触发器或事件通知，则为 Null。|  
@@ -44,7 +45,7 @@ ms.locfileid: "85894953"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;Transact-sql&#41;的对象目录视图](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [对象目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

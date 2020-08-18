@@ -1,4 +1,5 @@
 ---
+description: 数据迁移设置 (MySQLToSQL)
 title: 数据迁移设置 (MySQLToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,23 +10,23 @@ ms.topic: conceptual
 ms.assetid: 9c396df4-5676-4f32-9c57-70d4f15f9b7a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c8e673a4a12952303cb9b355698ed15742c9a704
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 3dbf44933ae4abe26f5dacfc79bad0d971bfe5ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935633"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492440"
 ---
 # <a name="data-migration-settings-mysqltosql"></a>数据迁移设置 (MySQLToSQL)
   
 ## <a name="data-migration-settings"></a>数据迁移设置  
-**数据迁移设置**允许用户编写自定义查询以进行数据迁移。  
+**数据迁移设置** 允许用户编写自定义查询以进行数据迁移。  
   
--   当 "**扩展数据迁移选项**" 设置为 "**显示**" 时，此选项卡可用，在项目设置中设置为 "**隐藏**" 时，此选项卡处于隐藏状态。 有关项目迁移设置的详细信息，请参阅[项目设置 (迁移) ](https://msdn.microsoft.com/2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9) 。  
+-   当 " **扩展数据迁移选项** " 设置为 " **显示** " 时，此选项卡可用，在项目设置中设置为 " **隐藏** " 时，此选项卡处于隐藏状态。 有关项目迁移设置的详细信息，请参阅 [项目设置 (迁移) ](https://msdn.microsoft.com/2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9) 。  
   
--   自定义 SQL 语句的分析将在表节点的 "**数据迁移设置**" 选项卡中实现。  
+-   自定义 SQL 语句的分析将在表节点的 " **数据迁移设置** " 选项卡中实现。  
   
--   以下是**数据迁移设置**即中可用的两个复选框：  
+-   以下是 **数据迁移设置** 即中可用的两个复选框：  
   
     1.  截断 SQL Server 表  
   
@@ -43,13 +44,13 @@ ms.locfileid: "87935633"
   
     1.  默认情况下，此 textbox 处于未选中状态。  
   
-    2.  如果选中此文本框，则允许用户修改显示的**select**语句。  
+    2.  如果选中此文本框，则允许用户修改显示的 **select** 语句。  
   
 即提供了两个按钮：  
   
--   **应用：** 单击 "**应用**" 以应用已更改的设置。  
+-   **应用：** 单击 " **应用** " 以应用已更改的设置。  
   
--   **取消：** 单击 "**取消**" 以还原在进行更改之前显示的设置。  
+-   **取消：** 单击 " **取消** " 以还原在进行更改之前显示的设置。  
   
 ## <a name="see-also"></a>另请参阅  
 [将 MySQL 数据迁移到 SQL Server/SQL Azure](https://msdn.microsoft.com/a6a7f4d6-68aa-4a38-93bf-53eba0d7dc82)  

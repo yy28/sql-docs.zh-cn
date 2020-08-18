@@ -1,5 +1,6 @@
 ---
-title: 层次结构集合（ADO MD） |Microsoft Docs
+description: 层次结构集合 (ADO MD)
+title: 层次结构集合 (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,30 +17,30 @@ helpviewer_keywords:
 ms.assetid: bef0fcb1-8060-4faa-84f0-3d52e9c4526f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f7d8605b52ead95433548095015497b6b42220d8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 81161819bd03b4261a0da321579f6df32dd824ea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82753977"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440999"
 ---
 # <a name="hierarchies-collection-ado-md"></a>层次结构集合 (ADO MD)
-包含维度中的[层次结构](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)对象集。  
+包含维度中的 [层次结构](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md) 对象集。  
   
 ## <a name="remarks"></a>备注  
- **层次结构**是标准 ADO 集合。 通过集合的属性和方法，你可以执行以下操作：  
+ **层次结构** 是标准 ADO 集合。 通过集合的属性和方法，你可以执行以下操作：  
   
--   获取集合中具有[Count](../../../ado/reference/ado-api/count-property-ado.md)属性的对象的数目。  
+-   获取集合中具有 [Count](../../../ado/reference/ado-api/count-property-ado.md) 属性的对象的数目。  
   
--   返回集合中具有默认[项](../../../ado/reference/ado-api/item-property-ado.md)属性的对象。  
+-   返回集合中具有默认 [项](../../../ado/reference/ado-api/item-property-ado.md) 属性的对象。  
   
--   用[Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)方法更新集合中的对象。  
+-   用 [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) 方法更新集合中的对象。  
   
  本部分包含以下主题。  
   
 -   [属性、方法和事件](../../../ado/reference/ado-md-api/hierarchies-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [目录示例（VB）](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
- [Dimension 对象（ADO MD）](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)   
+ [ (VB 的目录示例) ](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
+ [维度对象 (ADO MD) ](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)   
  [层次结构对象 (ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)

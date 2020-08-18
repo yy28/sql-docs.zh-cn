@@ -1,5 +1,6 @@
 ---
-title: SQLSetConnectOption （Access 驱动程序） |Microsoft Docs
+description: SQLSetConnectOption（Access 驱动程序）
+title: SQLSetConnectOption (Access 驱动程序) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 58399bc4-d0b1-4eaa-a474-c92b2d5855ea
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8e5f15575d34031d9886219af5677b4fc5f1d5aa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a007693a59c190a29bf9895446e916d5c232bb9f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301530"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483310"
 ---
 # <a name="sqlsetconnectoption-access-driver"></a>SQLSetConnectOption（Access 驱动程序）
 > [!NOTE]  
->  本主题提供特定于访问驱动程序的信息。 有关此函数的常规信息，请参阅[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)中的相应主题。  
+>  本主题提供特定于访问驱动程序的信息。 有关此函数的常规信息，请参阅 [ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)中的相应主题。  
   
-|fOption|注释|  
+|fOption|评论|  
 |-------------|-------------|  
 |SQL_ACCESS_MODE|SQL_ACCESS_MODE fOption 可以设置为 SQL_MODE_READ_ONLY 或 SQL_MODE_READ_WRITE。 但是，如果 SQL_ACCESS_MODE 设置为 SQL_MODE_READ_ONLY，驱动程序不会阻止更新。|  
 |SQL_AUTOCOMMIT|使用 Microsoft Access 驱动程序时，可以将 SQL_AUTOCOMMIT 选项设置为 SQL_AUTOCOMMIT_ON 或 SQL_AUTOCOMMIT_OFF，因为 Microsoft Access 驱动程序支持事务 [1]。|  

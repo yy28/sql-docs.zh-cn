@@ -1,4 +1,5 @@
 ---
+description: 使用成员函数
 title: 使用成员函数 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,19 +9,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 54f600eb020472f93067f7b9fe1e867f2730d670
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4cec35f8d09d671b3b426ff5ac9e18797df716ed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097102"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491404"
 ---
 # <a name="using-member-functions"></a>使用成员函数
 
 
   成员函数是返回成员的多维表达式 (MDX) 函数。 与元组函数和集函数一样，成员函数对协商 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中的多维结构至关重要。  
   
- 在 MDX 中的许多成员函数中，最重要的是**CurrentMember**函数，用于确定层次结构上的当前成员。 下面的查询演示了如何使用它以及**Parent**、**祖先**和**Prevmember**函数：  
+ 在 MDX 中的许多成员函数中，最重要的是 **CurrentMember** 函数，用于确定层次结构上的当前成员。 下面的查询演示了如何使用它以及 **Parent**、 **祖先**和 **Prevmember** 函数：  
   
  `WITH`  
   

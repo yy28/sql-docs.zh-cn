@@ -1,5 +1,6 @@
 ---
-title: sys. trace_subclass_values （Transact-sql） |Microsoft Docs
+description: sys.trace_subclass_values (Transact-SQL)
+title: sys. trace_subclass_values (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,27 +20,27 @@ helpviewer_keywords:
 ms.assetid: 542b19ca-61c8-41ca-aa2e-0aba8906cc24
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f388aedf28a919428560089be50df184973dc056
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2c13e9d2f1ce861a2240495f504e945141a01c12
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901748"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88400263"
 ---
 # <a name="systrace_subclass_values-transact-sql"></a>sys.trace_subclass_values (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **Sys.databases. trace_subclass_values**目录视图包含一个命名列值列表。 在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的给定版本中，这些子类值不变。  
   
- 有关支持的跟踪事件的完整列表，请参阅[SQL Server 事件类引用](../../relational-databases/event-classes/sql-server-event-class-reference.md)。  
+ 有关支持的跟踪事件的完整列表，请参阅 [SQL Server 事件类引用](../../relational-databases/event-classes/sql-server-event-class-reference.md)。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 请改用扩展事件目录视图。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**trace_event_id**|**smallint**|跟踪事件的 ID。 此参数也在**trace_events sys.databases**目录视图中。|  
-|**trace_column_id**|**smallint**|用于枚举的跟踪列的 ID。 此参数也在**trace_columns sys.databases**目录视图中。|  
+|**trace_event_id**|**smallint**|跟踪事件的 ID。 此参数也在 **trace_events sys.databases** 目录视图中。|  
+|**trace_column_id**|**smallint**|用于枚举的跟踪列的 ID。 此参数也在 **trace_columns sys.databases** 目录视图中。|  
 |**subclass_name**|**nvarchar(128)**|列值的含义。|  
 |**subclass_value**|**smallint**|列值。|  
   
@@ -47,7 +48,7 @@ ms.locfileid: "85901748"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;Transact-sql&#41;的对象目录视图](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [对象目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-traces-transact-sql.md)   
  [sys. trace_categories &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-trace-categories-transact-sql.md)   
  [sys. trace_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-trace-columns-transact-sql.md)   

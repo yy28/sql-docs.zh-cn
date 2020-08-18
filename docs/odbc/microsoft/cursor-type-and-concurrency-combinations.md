@@ -1,4 +1,5 @@
 ---
+description: 游标类型和并发组合
 title: 游标类型和并发组合 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: db63d610-f86f-4029-9d66-fed616c8a818
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b6397b5d675546bf41102f037b68c0022bec74df
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ae82825f7b5c6f670e111b859ee02ab4ab875626
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81280767"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412894"
 ---
 # <a name="cursor-type-and-concurrency-combinations"></a>游标类型和并发组合
 > [!IMPORTANT]  
@@ -28,13 +29,13 @@ ms.locfileid: "81280767"
   
  游标类型控制向用户提供的游标的功能。 并发选项控制结果集的更新和锁定行为。  
   
-|游标类型|并发（允许值）|  
+|游标类型|并发 (允许的值) |  
 |-----------------|------------------------------------|  
 |SQL_CURSOR_FORWARD_ONLY|SQL_CONCUR_READ_ONLY|  
 |SQL_CURSOR_STATIC|SQL_CONCUR_READ_ONLY|  
 |SQL_CURSOR_KEYSET_DRIVEN<sup>[1]</sup>|SQL_CONCUR_READ_ONLY SQL_CONCUR_LOCK<sup>[2]</sup> SQL_CONCUR_VALUES|  
   
- <sup>[1]</sup>请参阅[使用由键集驱动的游标的限制](../../odbc/microsoft/limitations-of-using-keyset-driven-cursors.md)。  
+ <sup>[1]</sup> 请参阅 [使用由键集驱动的游标的限制](../../odbc/microsoft/limitations-of-using-keyset-driven-cursors.md)。  
   
  仅当 SQL_AUTOCOMMIT 连接选项设置为 SQL_AUTOCOMMIT_OFF 时，才支持<sup>[2]</sup> SQL_CONCUR_LOCK。  
   

@@ -1,5 +1,6 @@
 ---
-title: sys. sp_cdc_cleanup_change_table （Transact-sql） |Microsoft Docs
+description: sys.sp_cdc_cleanup_change_table (Transact-SQL)
+title: sys. sp_cdc_cleanup_change_table (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,17 +21,17 @@ helpviewer_keywords:
 ms.assetid: 02295794-397d-4445-a3e3-971b25e7068d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ac10ff9accd4cac39caef8139406319701026e79
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fe0e83a4a74be15c405da6b9a95456b71b46e2c2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891171"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492857"
 ---
 # <a name="syssp_cdc_cleanup_change_table-transact-sql"></a>sys.sp_cdc_cleanup_change_table (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  基于指定的*low_water_mark*值从当前数据库的更改表中删除行。 此存储过程是为需要直接管理更改表清除进程的用户提供的。 但是，由于此过程会影响更改表中数据的所有使用者，因而应多加小心。  
+  基于指定的 *low_water_mark* 值从当前数据库的更改表中删除行。 此存储过程是为需要直接管理更改表清除进程的用户提供的。 但是，由于此过程会影响更改表中数据的所有使用者，因而应多加小心。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,20 +49,20 @@ sys.sp_cdc_cleanup_change_table
  [ @capture_instance =] "*capture_instance*"  
  与更改表关联的捕获实例的名称。 *capture_instance* **sysname**，无默认值，且不能为 NULL。  
   
- *capture_instance*必须命名当前数据库中存在的捕获实例。  
+ *capture_instance* 必须命名当前数据库中存在的捕获实例。  
   
  [ @low_water_mark =] *low_water_mark*  
- 日志序列号（LSN），用作*捕获实例*的新低水印。 *low_water_mark*为**binary （10）**，无默认值。  
+ 是 (LSN) 的日志序列号，将用作 *捕获实例*的新低水印。 *low_water_mark* 是 **二进制 (10) **，无默认值。  
   
- 如果该值为非空值，则它必须显示为[cdc. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)表中的当前项的 start_lsn 值。 如果 cdc.lsn_time_mapping 中的其他条目共享与新的低水印所标识的条目相同的提交时间，则选择与该组条目关联的最小 LSN 作为低水印。  
+ 如果该值为非空值，则它必须显示为 [cdc. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) 表中的当前项的 start_lsn 值。 如果 cdc.lsn_time_mapping 中的其他条目共享与新的低水印所标识的条目相同的提交时间，则选择与该组条目关联的最小 LSN 作为低水印。  
   
  如果将值显式设置为 NULL，则*捕获实例*的当前*低水印*用于定义清理操作的上限。  
   
  [ @threshold =] '*删除阈值*'  
- 清除时可以使用一条语句删除的删除项的最大数量。 *delete_threshold*为**bigint**，默认值为5000。  
+ 清除时可以使用一条语句删除的删除项的最大数量。 *delete_threshold* 为 **bigint**，默认值为5000。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="result-sets"></a>结果集  
  无  
@@ -69,7 +70,7 @@ sys.sp_cdc_cleanup_change_table
 ## <a name="remarks"></a>备注  
  sys.sp_cdc_cleanup_change_table 执行以下操作：  
   
-1.  如果 @low_water_mark 参数不为 NULL，则会将*捕获实例*的 start_lsn 的值设置为新的*低水位线*。  
+1.  如果 @low_water_mark 参数不为 NULL，则会将 *捕获实例* 的 start_lsn 的值设置为新的 *低水位线*。  
   
     > [!NOTE]  
     >  新的低水印可能不是在存储过程调用中指定的低水印。 如果 cdc.lsn_time_mapping 表中的其他条目共享相同的提交时间，则在这组条目中表示的最小 start_lsn 将被选为调整后的低水印。 如果 @low_water_mark 参数为 NULL 或者当前低水印大于新的低水印，则捕获实例的 start_lsn 值将保持不变。  

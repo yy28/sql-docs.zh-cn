@@ -1,4 +1,5 @@
 ---
+description: 全局设置（测试程序）(SybaseToSQL)
 title: 全局设置 (测试人员)  (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,17 +10,17 @@ ms.topic: conceptual
 ms.assetid: 6f0b9cea-5a24-4e42-8bbf-c4516b00da23
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: f1ebf6d1122db6b28b13c33320dabef520a40f5a
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: c03a52c837d2f07e5a6027b181a2047a5f53add6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87931284"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492173"
 ---
 # <a name="global-settings-tester-sybasetosql"></a>全局设置（测试程序）(SybaseToSQL)
-使用 "**全局设置**" 对话框的 "测试器" 页可以指定 SSMA 测试器的设置。  
+使用 " **全局设置** " 对话框的 "测试器" 页可以指定 SSMA 测试器的设置。  
   
-若要访问测试人员设置，请在 "**工具**" 菜单上选择 "**全局设置**"，然后单击左窗格底部的 "**测试**器"。  
+若要访问测试人员设置，请在 " **工具** " 菜单上选择 " **全局设置**"，然后单击左窗格底部的 " **测试** 器"。  
   
 ## <a name="options"></a>选项  
 **可测试对象分析**  
@@ -42,10 +43,10 @@ ms.locfileid: "87931284"
   
 4.  询问用户表比较失败  
   
-默认选项设置为：**始终删除**。  
+默认选项设置为： **始终删除**。  
   
 **执行数据回滚**  
-此设置指定在运行每个测试用例后是否执行回滚操作。 默认选项设置为 "**否**"。  
+此设置指定在运行每个测试用例后是否执行回滚操作。 默认选项设置为 " **否**"。  
   
 此设置可使用以下选项：  
   

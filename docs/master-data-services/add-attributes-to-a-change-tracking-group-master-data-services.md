@@ -1,4 +1,5 @@
 ---
+description: 向更改跟踪组添加属性 (Master Data Services)
 title: 将属性添加到更改跟踪组
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e153eb5f-70ca-4c6f-89d8-1f937ed3917d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: d9e277fb7609879c9baa1efc347773b855163b3b
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 154dc5a555e97d4de56f3a40981aad71e64fe22c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812459"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491486"
 ---
 # <a name="add-attributes-to-a-change-tracking-group-master-data-services"></a>向更改跟踪组添加属性 (Master Data Services)
 
@@ -35,7 +36,7 @@ ms.locfileid: "85812459"
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 -   要添加到更改跟踪组的属性必须存在。 有关详细信息，请参阅 [创建文本属性 (Master Data Services)](../master-data-services/create-a-text-attribute-master-data-services.md)。  
   

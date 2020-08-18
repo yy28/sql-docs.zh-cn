@@ -1,5 +1,6 @@
 ---
-title: syscollector_execution_log （Transact-sql） |Microsoft Docs
+description: syscollector_execution_log (Transact-SQL)
+title: syscollector_execution_log (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 11554d64-0426-42ce-b7ce-5591f67864d2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: abf2ee225f23e055d8208a792aee3b006c21dce3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4e7640d652a9123417907f803a7a28e7b97a8bdd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896442"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88399723"
 ---
 # <a name="syscollector_execution_log-transact-sql"></a>syscollector_execution_log (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,14 +46,14 @@ ms.locfileid: "85896442"
 |package_id|**uniqueidentifier**|标识生成此日志的收集组或包。 可以为 Null。|  
 |package_name|**nvarchar(4000)**|生成此日志的包的名称。 可以为 Null。|  
 |package_execution_id|**uniqueidentifier**|提供指向 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 日志表的链接。 可以为 Null。|  
-|failure_message|**nvarchar(2048)**|收集组或包失败时该组件的最新错误消息。 可以为 Null。 若要获取更详细的错误信息，请使用[fn_syscollector_get_execution_details &#40;transact-sql&#41;](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md)函数。|  
+|failure_message|**nvarchar(2048)**|收集组或包失败时该组件的最新错误消息。 可以为 Null。 若要获取更详细的错误信息，请使用 [fn_syscollector_get_execution_details &#40;transact-sql&#41;](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md) 函数。|  
   
 ## <a name="permissions"></a>权限  
  需要拥有 dc_operator 的 SELECT 权限。  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;Transact-sql&#41;的数据收集器存储过程](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [&#40;Transact-sql&#41;的数据收集器视图](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
- [数据收集](../../relational-databases/data-collection/data-collection.md)  
+ [数据收集器存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的数据收集器视图 ](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
+ [“数据收集”](../../relational-databases/data-collection/data-collection.md)  
   
   

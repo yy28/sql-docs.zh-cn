@@ -1,4 +1,5 @@
 ---
+description: 附录 A：ODBC 错误代码
 title: 附录 A： ODBC 错误代码 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: c06902e4-721d-42e2-b818-05f0e18e4ce0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: af288cf9f0564f6fe0dbef14f66143667120c656
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a587578ba74cd2ed36a919953000190a6274b62d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307518"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411543"
 ---
 # <a name="appendix-a-odbc-error-codes"></a>附录 A：ODBC 错误代码
-本主题讨论 ODBC 3 的 SQLSTATE 值。*x*。 有关 ODBC 3 的详细信息。*x* SQLSTATE 值，请参阅[SQLSTATE 映射](../../../odbc/reference/develop-app/sqlstate-mappings.md)。  
+本主题讨论 ODBC 3 的 SQLSTATE 值。*x*。 有关 ODBC 3 的详细信息。*x* SQLSTATE 值，请参阅 [SQLSTATE 映射](../../../odbc/reference/develop-app/sqlstate-mappings.md)。  
   
- **SQLGetDiagRec**或**SQLGetDiagField**按开放式组*数据管理：结构化查询语言（SQL），版本 2* （1995年3月）定义的方式返回 SQLSTATE 值。 SQLSTATE 值是包含五个字符的字符串。 下表列出了驱动程序可以为**SQLGetDiagRec**返回的 SQLSTATE 值。  
+ **SQLGetDiagRec** 或 **SQLGetDiagField** 按 *结构化查询语言 (SQL) ，版本 2* (1995 3 月) 的数据管理值返回 SQLSTATE 值。 SQLSTATE 值是包含五个字符的字符串。 下表列出了驱动程序可以为 **SQLGetDiagRec**返回的 SQLSTATE 值。  
   
  为 SQLSTATE 返回的字符串值由两个字符组成，后跟一个三字符子类值。 类值 "01" 表示警告，并伴随返回代码 SQL_SUCCESS_WITH_INFO。 "01" 之外的类值（类 "IM" 除外）表示错误，并伴随返回值 SQL_ERROR。 类 "IM" 特定于派生自 ODBC 本身实现的警告和错误。 任何类中的子类值 "000" 表示该 SQLSTATE 没有子类。 类和子类值的分配由 SQL-92 定义。  
   
@@ -49,7 +50,7 @@ ms.locfileid: "81307518"
 |01S09|关键字无效|**SQLDriverConnect**|  
 |07001|参数数目错误|**SQLExecDirect**<br /><br /> **SQLExecute**|  
 |07002|COUNT 字段不正确|**SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLParamData**|  
-|07005|预定义语句不是*游标规范*|**SQLColAttribute**<br /><br /> **SQLDescribeCol**|  
+|07005|预定义语句不是 *游标规范*|**SQLColAttribute**<br /><br /> **SQLDescribeCol**|  
 |07006|受限制的数据类型属性冲突|**SQLBindCol**<br /><br /> **SQLBindParameter**<br /><br /> **SQLBulkOperations**<br /><br /> **SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLExtendedFetch**<br /><br /> **SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**<br /><br /> **SQLParamData**<br /><br /> **SQLPutData**<br /><br /> **SQLSetPos**|  
 |07009|描述符索引无效|**SQLBindCol**<br /><br /> **SQLBindParameter**<br /><br /> **SQLBulkOperations**<br /><br /> **SQLColAttribute**<br /><br /> **SQLDescribeCol**<br /><br /> **SQLDescribeParam**<br /><br /> **SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**<br /><br /> **SQLGetDescField**<br /><br /> **SQLGetDescRec**<br /><br /> **SQLParamData**<br /><br /> **SQLSetDescField**<br /><br /> **SQLSetDescRecSQLSetPos**|  
 |07S01|默认参数的使用无效|**SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLParamData**<br /><br /> **SQLPutData**|  
@@ -138,9 +139,9 @@ ms.locfileid: "81307518"
 |IM001|驱动程序不支持此功能|除之外的所有 ODBC 函数：<br /><br /> **SQLAllocHandle**<br /><br /> **SQLDataSources**<br /><br /> **SQLDrivers**<br /><br /> **SQLFreeHandle**<br /><br /> **SQLGetFunctions**|  
 |IM002|找不到数据源名称，未指定默认驱动程序|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  
 |IM003|无法加载指定的驱动程序|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  
-|IM004|SQL_HANDLE_ENV 上驱动程序的**SQLAllocHandle**失败|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  
-|IM005|SQL_HANDLE_DBC 上驱动程序的**SQLAllocHandle**失败|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  
-|IM006|驱动程序的**SQLSetConnectAttr**失败|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  
+|IM004|SQL_HANDLE_ENV 上驱动程序的 **SQLAllocHandle** 失败|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  
+|IM005|SQL_HANDLE_DBC 上驱动程序的 **SQLAllocHandle** 失败|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  
+|IM006|驱动程序的 **SQLSetConnectAttr** 失败|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  
 |IM007|未指定数据源或驱动程序;已禁止对话|**SQLDriverConnect**|  
 |IM008|对话框失败|**SQLDriverConnect**|  
 |IM009|无法加载转换 DLL|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**<br /><br /> **SQLSetConnectAttr**|  

@@ -1,4 +1,5 @@
 ---
+description: 环境、连接和语句属性
 title: 环境、连接和语句属性 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,22 +15,22 @@ helpviewer_keywords:
 ms.assetid: 9e15b276-3b7a-428a-b72f-a3ddfe1ba1ce
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 86cecaf0b82c7b6d15b3f37262507d2cff0c3c10
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6bc37e05f2c8847ff9a4828a5d2e9e7456732a41
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300927"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482950"
 ---
 # <a name="environment-connection-and-statement-attributes"></a>环境、连接和语句属性
 ODBC 定义了与环境、连接或语句相关联的许多属性。  
   
- 环境特性会影响整个环境，例如是否启用连接池。 环境特性是通过**SQLSetEnvAttr**设置的，并检索**SQLGetEnvAttr**。  
+ 环境特性会影响整个环境，例如是否启用连接池。 环境特性是通过 **SQLSetEnvAttr** 设置的，并检索 **SQLGetEnvAttr**。  
   
- 连接属性分别影响每个连接，例如当尝试在超时之前连接到数据源时，驱动程序应等待的时间。连接属性通过**SQLSetConnectAttr**设置，并检索**SQLGetConnectAttr**。 有关连接属性的详细信息，请参阅[连接属性](../../../odbc/reference/develop-app/connection-attributes.md)。  
+ 连接属性分别影响每个连接，例如当尝试在超时之前连接到数据源时，驱动程序应等待的时间。连接属性通过 **SQLSetConnectAttr** 设置，并检索 **SQLGetConnectAttr**。 有关连接属性的详细信息，请参阅 [连接属性](../../../odbc/reference/develop-app/connection-attributes.md)。  
   
- 语句属性分别影响每个语句，例如是否应异步执行语句。 语句特性是通过**SQLSetStmtAttr**设置的，并检索**SQLGetStmtAttr**。 有些语句特性是只读属性，无法设置。 例如，SQL_ATTR_ROW_NUMBER 语句特性用于检索游标中的当前行号，则为只读。 有关语句特性的详细信息，请参阅[语句特性](../../../odbc/reference/develop-app/statement-attributes.md)。  
+ 语句属性分别影响每个语句，例如是否应异步执行语句。 语句特性是通过 **SQLSetStmtAttr** 设置的，并检索 **SQLGetStmtAttr**。 有些语句特性是只读属性，无法设置。 例如，SQL_ATTR_ROW_NUMBER 语句特性用于检索游标中的当前行号，则为只读。 有关语句特性的详细信息，请参阅 [语句特性](../../../odbc/reference/develop-app/statement-attributes.md)。  
   
- 除了 ODBC 定义的属性以外，驱动程序还可以定义自己的连接和语句属性。 驱动程序定义的属性必须注册到开放组，以确保两个驱动程序供应商不会将相同的整数值分配给不同的专有属性。 有关详细信息，请参阅[驱动程序特定的数据类型、描述符类型、信息类型、诊断类型和属性](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md)。  
+ 除了 ODBC 定义的属性以外，驱动程序还可以定义自己的连接和语句属性。 驱动程序定义的属性必须注册到开放组，以确保两个驱动程序供应商不会将相同的整数值分配给不同的专有属性。 有关详细信息，请参阅 [驱动程序特定的数据类型、描述符类型、信息类型、诊断类型和属性](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md)。  
   
- 有关属性的完整列表，请参阅[SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md)、 [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)和[SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)。 大多数属性还在其影响的 ODBC 函数说明中进行了介绍。
+ 有关属性的完整列表，请参阅 [SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md)、 [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)和 [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)。 大多数属性还在其影响的 ODBC 函数说明中进行了介绍。

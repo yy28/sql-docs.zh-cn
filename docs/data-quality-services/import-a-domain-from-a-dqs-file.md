@@ -1,4 +1,5 @@
 ---
+description: 从 .dqs 文件导入域
 title: 从 .dqs 文件导入域
 ms.date: 03/01/2017
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: fabd88b0-22b3-4543-a993-6d5b202ded80
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 0ea84af0d6587399d1b5610a3b8cf6da31909cb4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c1d597c8ab750b5debe221d2cf68c231143736b4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883160"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491511"
 ---
 # <a name="import-a-domain-from-a-dqs-file"></a>从 .dqs 文件导入域
 
@@ -36,7 +37,7 @@ ms.locfileid: "85883160"
 ####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  您必须具有 DQS_MAIN 数据库的 dqs_kb_editor 或 dqs_administrator 角色，才能从 .dqs 数据文件导入域。  
   
-##  <a name="import-a-domain-from-a-dqs-file"></a><a name="Import"></a>从 dqs 文件导入域  
+##  <a name="import-a-domain-from-a-dqs-file"></a><a name="Import"></a> 从 dqs 文件导入域  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
   

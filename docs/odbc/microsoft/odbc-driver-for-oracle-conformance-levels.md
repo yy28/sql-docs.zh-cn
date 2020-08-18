@@ -1,4 +1,5 @@
 ---
+description: Oracle ODBC 驱动程序一致性级别
 title: Oracle 一致性级别的 ODBC 驱动程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2ad2ef7a-a86f-4a77-b12c-bbd5a3499dac
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 41b696dfcdd57d07ec58e59040499bc11543f1e4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a800d2f11bebd550bbe83f2d9257cad0018289a3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298137"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449349"
 ---
 # <a name="odbc-driver-for-oracle-conformance-levels"></a>Oracle ODBC 驱动程序一致性级别
 > [!IMPORTANT]  
@@ -30,8 +31,8 @@ ms.locfileid: "81298137"
   
  本部分包含以下主题。  
   
--   [API 一致性级别（Oracle 的 ODCB 驱动程序）](../../odbc/microsoft/api-conformance-level-odbc-driver-for-oracle.md)  
+-   [Oracle)  (ODCB 驱动程序的 API 一致性级别 ](../../odbc/microsoft/api-conformance-level-odbc-driver-for-oracle.md)  
   
--   [支持的选项（适用于 Oracle 的 ODCB 驱动程序）](../../odbc/microsoft/supported-options-odbc-driver-for-oracle.md)  
+-   [Oracle)  (ODCB 驱动程序支持的选项 ](../../odbc/microsoft/supported-options-odbc-driver-for-oracle.md)  
   
--   [SQL 一致性级别（Oracle 的 ODCB 驱动程序）](../../odbc/microsoft/sql-conformance-levels-odbc-driver-for-oracle.md)
+-   [Oracle)  (ODCB 驱动程序的 SQL 一致性级别 ](../../odbc/microsoft/sql-conformance-levels-odbc-driver-for-oracle.md)

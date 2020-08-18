@@ -1,5 +1,6 @@
 ---
-title: sys. pdw_materialized_view_mappings （Transact-sql） |Microsoft Docs
+description: 'sys. pdw_materialized_view_mappings (Transact-sql) '
+title: sys. pdw_materialized_view_mappings (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2019
 ms.prod: sql
@@ -12,14 +13,14 @@ ms.assetid: d62b0e25-3226-4f87-a10a-b3a0d9555e19
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: bf5146b885839b88268b5ffbd6fe642503523655
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 0ee83b26439397066806c50ba6e3056042f628a9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395793"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460590"
 ---
-# <a name="syspdw_materialized_view_mappings-transact-sql"></a>sys. pdw_materialized_view_mappings （Transact-sql）  
+# <a name="syspdw_materialized_view_mappings-transact-sql"></a>sys. pdw_materialized_view_mappings (Transact-sql)   
 
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
@@ -29,8 +30,8 @@ Physical_name 和 object_id 的列构成此目录视图的键。
   
 |列名|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|physical_name |**nvarchar （36）**|具体化视图的物理名称。|  
-|object_id  |**int**|具体化视图的对象 ID。 请参阅[sys.databases （transact-sql）](/sql/relational-databases/system-catalog-views/sys-objects-transact-sql?view=azure-sqldw-latest)。| 
+|physical_name |**nvarchar (36) **|具体化视图的物理名称。|  
+|object_id  |**int**|具体化视图的对象 ID。 请参阅 [sys.databases (transact-sql) ](/sql/relational-databases/system-catalog-views/sys-objects-transact-sql?view=azure-sqldw-latest)。| 
 
 ## <a name="permissions"></a>权限
 
