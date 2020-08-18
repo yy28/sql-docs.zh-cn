@@ -1,4 +1,5 @@
 ---
+description: JSON 函数 (Transact-SQL)
 title: JSON 函数 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2020
@@ -12,12 +13,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: c857d57f26c22e0f4eb9346e2925d493ec5e4541
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 06bf0965714c893d5b7684335edbb191e86ee77a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394194"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88364323"
 ---
 # <a name="json-functions-transact-sql"></a>JSON 函数 (Transact-SQL)
 
@@ -25,7 +26,7 @@ ms.locfileid: "87394194"
 
 使用本部分中的页面上介绍的函数可验证或更改 JSON 文本，或是提取简单或复杂值。  
   
-|函数|说明|  
+|函数|描述|  
 |--------------|-----------------|  
 |[ISJSON](../../t-sql/functions/isjson-transact-sql.md)|测试字符串是否包含有效 JSON。|  
 |[JSON_VALUE](../../t-sql/functions/json-value-transact-sql.md)|从 JSON 字符串中提取标量值。|  
