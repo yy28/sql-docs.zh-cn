@@ -1,5 +1,6 @@
 ---
-title: sys. bandwidth_usage （Azure SQL Database） |Microsoft Docs
+description: sys.bandwidth_usage (Azure SQL Database)
+title: bandwidth_usage (Azure SQL 数据库) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/28/2019
 ms.service: sql-database
@@ -19,12 +20,12 @@ ms.assetid: 43ed8435-f059-4907-b5c0-193a258b394a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 54151b817b443d43f64e119841a7b69df7436d93
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d39486a513e012fc53e66c408145bbf148696ff2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752922"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88402523"
 ---
 # <a name="sysbandwidth_usage-azure-sql-database"></a>sys.bandwidth_usage (Azure SQL Database)
 
@@ -50,13 +51,13 @@ ms.locfileid: "85752922"
   
 ## <a name="permissions"></a>权限
 
- 此视图仅在**master**数据库中适用于服务器级主体登录名。  
+ 此视图仅在 **master** 数据库中适用于服务器级主体登录名。  
   
 ## <a name="remarks"></a>备注  
   
 ### <a name="external-and-internal-classes"></a>External 和 Internal 类别
 
- 对于在给定时间使用的每个数据库， **sys.databases bandwidth_usage**视图返回显示类和带宽使用方向的行。 下例列举给定数据库可能公开的数据。 在此示例中，时间为 2012-04-21 17:00: 00，即发生在高峰时段。 数据库名称为 Db1。 在此示例中， **bandwidth_usage sys.databases**为入口和出口方向以及外部和内部类的四个组合返回了一行，如下所示：  
+ 对于在给定时间使用的每个数据库， **sys.databases bandwidth_usage** 视图返回显示类和带宽使用方向的行。 下例列举给定数据库可能公开的数据。 在此示例中，时间为 2012-04-21 17:00: 00，即发生在高峰时段。 数据库名称为 Db1。 在此示例中， **bandwidth_usage sys.databases** 为入口和出口方向以及外部和内部类的四个组合返回了一行，如下所示：  
   
 |time|database_name|direction|class|time_period|quantity|  
 |----------|--------------------|---------------|-----------|------------------|--------------|  

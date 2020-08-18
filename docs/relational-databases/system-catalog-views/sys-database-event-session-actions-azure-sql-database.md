@@ -1,5 +1,6 @@
 ---
-title: sys. database_event_session_actions （Azure SQL Database） |Microsoft Docs
+description: sys.database_event_session_actions（Azure SQL 数据库）
+title: database_event_session_actions (Azure SQL 数据库) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ ms.assetid: 32494df1-7ab7-4b88-a858-6b1021d67433
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2171403f78fe3de84223e24ef189fd08c53fd88
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a9a1e5219efbd773568f401404d9ea8b481a328f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920706"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88401643"
 ---
 # <a name="sysdatabase_event_session_actions-azure-sql-database"></a>sys.database_event_session_actions（Azure SQL 数据库）
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "86920706"
 ## <a name="remarks"></a>备注  
  此视图具有下列关系基数。  
   
-| From | 收件人 | 关系 |
+| From | 功能 | 关系 |
 | ---- | -- | ------------ |
 |sys. database_event_session_actions event_session_id|sys.sys. database_event_sessions。 event_session_id|多对一|  
 |sys. database_event_session_actions event_id<br /><br /> sys. database_event_session_actions event_session_id|sys. database_event_session_events event_session_id<br /><br /> sys. database_event_session_events event_id|多对一|  
