@@ -1,5 +1,6 @@
 ---
-title: 更新（DMX） |Microsoft Docs
+description: UPDATE (DMX)
+title: 更新 DMX)  (|Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f77d71eab284b695171e923cfe53b53575d45d94
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: d74a59aaea079a5d3c1945b92813f6d276591b78
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971533"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88394873"
 ---
 # <a name="update-dmx"></a>UPDATE (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
-  更改数据挖掘模型中的**NODE_CAPTION**列。  
+  更改数据挖掘模型中的 **NODE_CAPTION** 列。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,13 +35,13 @@ SET NODE_CAPTION='new caption'
  模型标识符。  
   
  *新标题*  
- 一个包含**NODE_CAPTION**列的新名称的字符串。  
+ 一个包含 **NODE_CAPTION** 列的新名称的字符串。  
   
  *条件表达式*  
  可选。 一个限制条件，用于限制从列列表返回的值。  
   
 ## <a name="examples"></a>示例  
- 在下面的示例中， **UPDATE**语句将群集的默认名称更改 `Cluster 1` `001` 为更具描述性的名称 `Likely Customers` 。  
+ 在下面的示例中， **UPDATE** 语句将群集的默认名称更改 `Cluster 1` `001` 为更具描述性的名称 `Likely Customers` 。  
   
 ```  
 UPDATE [TM Clustering].CONTENT  
