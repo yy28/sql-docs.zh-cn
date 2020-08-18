@@ -1,4 +1,5 @@
 ---
+description: 使用 WMI 提供程序管理服务和网络设置
 title: 使用 WMI 提供程序管理服务和网络设置
 ms.custom: seo-dt-2019
 ms.date: 08/06/2017
@@ -16,11 +17,12 @@ ms.assetid: ef8c3986-1098-4f21-b03a-f1f6bdb51c26
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 83c0d3894958af7e199632903c93af11e9ddd8ea
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 9c6021e6867272d865f0b1c5b95852c55929880e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998027"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88403703"
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>使用 WMI 提供程序管理服务和网络设置
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -30,10 +32,10 @@ ms.locfileid: "85998027"
  <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> 对象的运行与通过 <xref:Microsoft.SqlServer.Management.Smo.Server> 对象建立的与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的连接无关，而是使用 Windows 凭据连接到 WMI 服务。  
   
 ## <a name="example"></a>示例  
-若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual Studio .net 中创建 Visual C&#35; SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅 [在 Visual Studio .net 中创建 Visual C&#35; SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
 
   
- 对于使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wmi 提供程序的程序，必须包括**Imports**语句以限定 wmi 命名空间。 请在应用程序的其他 **Imports** 语句之后、任何声明之前插入该语句，例如：  
+ 对于使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wmi 提供程序的程序，必须包括 **Imports** 语句以限定 wmi 命名空间。 请在应用程序的其他 **Imports** 语句之后、任何声明之前插入该语句，例如：  
   
  `Imports Microsoft.SqlServer.Management.Smo`  
   

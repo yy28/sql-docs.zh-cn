@@ -1,4 +1,5 @@
 ---
+description: 实现全文搜索
 title: 实现全文搜索
 ms.custom: seo-dt-2019
 ms.date: 08/06/2017
@@ -13,11 +14,12 @@ ms.assetid: 9ce9ad9c-f671-4760-90b5-e0c8ca051473
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5660303c542bc77691d0d0f370d8614450a983dc
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 788e26bd9526399580b0f24aa74fdaca05ef5b24
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008976"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88403823"
 ---
 # <a name="implementing-full-text-search"></a>实现全文搜索
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -29,7 +31,7 @@ ms.locfileid: "86008976"
  首先，通过调用 <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog> 构造函数并指定目录名称，为数据库创建全文目录。 其次，通过调用该构造函数并指定要为其创建全文索引的表，创建全文索引。 接着，通过使用 <xref:Microsoft.SqlServer.Management.Smo.FullTextIndexColumn> 对象并提供表中列的名称，可以为全文索引添加索引列。 然后，为已创建的目录设置 <xref:Microsoft.SqlServer.Management.Smo.FullTextIndex.CatalogName%2A> 属性。 最后，调用 <xref:Microsoft.SqlServer.Management.Smo.FullTextIndex.Create%2A> 方法并为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例创建全文索引。  
   
 ## <a name="example"></a>示例  
- 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual Studio .net 中创建 Visual C&#35; SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅 [在 Visual Studio .net 中创建 Visual C&#35; SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="creating-a-full-text-search-service-in-visual-basic"></a>在 Visual Basic 中创建全文搜索服务  
  此代码示例为 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 示例数据库中的 `ProductCategory` 表创建全文搜索目录。 然后，它会为 `ProductCategory` 表中的 Name 列创建全文搜索索引。 全文搜索索引要求已为该列定义唯一索引。  

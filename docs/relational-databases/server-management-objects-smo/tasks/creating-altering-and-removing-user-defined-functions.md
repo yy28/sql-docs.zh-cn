@@ -1,4 +1,5 @@
 ---
+description: 创建、更改和删除用户定义函数
 title: 创建、更改和删除用户定义函数
 ms.custom: seo-dt-2019
 ms.date: 08/06/2017
@@ -13,11 +14,12 @@ ms.assetid: 0ebebd3b-0775-41c2-989d-aa4cf81af12a
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6243fdefcd5e145abc86cc148d8362d616286a47
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 34ca2b972b27e34cf3cc0f5705de3fe9fa1ffb74
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001253"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88403843"
 ---
 # <a name="creating-altering-and-removing-user-defined-functions"></a>创建、更改和删除用户定义函数
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -30,7 +32,7 @@ ms.locfileid: "86001253"
  当 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> 对象引用 .NET 程序集时，您必须通过创建 <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly> 对象并将其添加到 <xref:Microsoft.SqlServer.Management.Smo.SqlAssemblyCollection> 对象（属于 <xref:Microsoft.SqlServer.Management.Smo.Database> 对象）来注册该程序集。  
   
 ## <a name="example"></a>示例  
- 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual Studio .net 中创建 Visual C&#35; SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅 [在 Visual Studio .net 中创建 Visual C&#35; SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="creating-a-scalar-user-defined-function-in-visual-basic"></a>在 Visual Basic 中创建标量用户定义函数  
  此代码示例说明如何在 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 中创建和删除具有 <xref:System.DateTime> 输入对象参数和整数返回类型的标量用户定义函数。 此用户定义函数是对 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 数据库创建的。 该示例创建了用户定义函数 ISOweek，此函数带有一个日期参数，用于计算 ISO 周号。 要使此函数能正确计算，必须在调用此函数之前将数据库 DATEFIRST 选项设置为 1。  
