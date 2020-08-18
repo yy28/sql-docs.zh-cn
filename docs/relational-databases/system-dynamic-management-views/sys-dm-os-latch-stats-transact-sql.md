@@ -1,5 +1,6 @@
 ---
-title: sys. dm_os_latch_stats （Transact-sql） |Microsoft Docs
+description: sys.dm_os_latch_stats (Transact-SQL)
+title: sys. dm_os_latch_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dc310a735c55bc2cdd248597a6cffe1d6f874d4f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 59624b04e417f2b1b7713adec784abca60303504
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754143"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88398523"
 ---
 # <a name="sysdm_os_latch_stats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "85754143"
 返回有关按类组织的所有闩锁等待的信息。 
   
 > [!NOTE]  
-> 若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称**dm_pdw_nodes_os_latch_stats**。  
+> 若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称 **dm_pdw_nodes_os_latch_stats**。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -39,11 +40,11 @@ ms.locfileid: "85754143"
 |waiting_requests_count|**bigint**|此类中的闩锁等待的个数。 此计数器在闩锁等待启动时递增。|  
 |wait_time_ms|**bigint**|此类中闩锁的总计等待时间（毫秒）。<br /><br /> **注意：** 此列每五分钟更新一次，在闩锁等待期间，在闩锁等待结束时进行更新。|  
 |max_wait_time_ms|**bigint**|内存对象已等待此闩锁的最大时间。 如果此值异常高，则可能指示有内部死锁。|  
-|pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
+|pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   
 ## <a name="permissions"></a>权限  
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
+在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要  **服务器管理员** 或 **Azure Active Directory 管理员** 帐户。   
   
 ## <a name="remarks"></a>备注  
  通过检查不同闩锁类的相对等待数和等待时间，sys.dm_os_latch_stats 可以用来标识闩锁争用源。 在某些情况中，可能能够解决或减少闩锁争用。 但是，在某些情况下可能需要与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 客户支持服务部门联系。  
@@ -60,7 +61,7 @@ GO
 > [!NOTE]  
 >  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重新启动，则这些统计信息不会持久化。 自从上次统计信息重置以来，或自从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动以来，所有数据都是累积的。  
   
-## <a name="latches"></a><a name="latches"></a>栓  
+## <a name="latches"></a><a name="latches"></a> 栓  
  闩锁是类似于锁的内部轻型同步对象，由各种 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件使用。 闩锁主要用于在操作（如缓冲区或文件访问）期间同步数据库页。 每个闩锁与单个分配单元关联。 
   
  由于闩锁由冲突模式中的另一个线程持有，所以当无法立即满足闩锁请求时，就会发生闩锁等待。 与锁不同，在操作之后，甚至在写入操作中，会立即释放闩锁。  
@@ -164,7 +165,7 @@ GO
 |SERVICE_BROKER_MAP_MANAGER|仅限内部使用。|  
 |SERVICE_BROKER_HOST_NAME|仅限内部使用。|  
 |SERVICE_BROKER_READ_CACHE|仅限内部使用。|  
-|SERVICE_BROKER_WAITFOR_MANAGER| 用于同步等待队列的实例级别映射。 每个数据库 ID、数据库版本和队列 ID 元组存在一个队列。 当许多连接为时，可能会出现此类闩锁的争用（接收）等待状态;调用 WAITFOR （RECEIVE）;超过 WAITFOR 超时;接收消息;提交或回滚包含 WAITFOR （RECEIVE）的事务;可以通过减少 WAITFOR （接收）等待状态中的线程数来减少争用。 |  
+|SERVICE_BROKER_WAITFOR_MANAGER| 用于同步等待队列的实例级别映射。 每个数据库 ID、数据库版本和队列 ID 元组存在一个队列。 如果有多个连接，则会发生此类闩锁的争用：在 WAITFOR (接收) 等待状态;调用 WAITFOR (接收) ;超过 WAITFOR 超时;接收消息;提交或回滚包含 WAITFOR (接收) 的事务;可以通过减少 WAITFOR (接收) 等待状态中的线程数来减少争用。 |  
 |SERVICE_BROKER_WAITFOR_TRANSACTION_DATA|仅限内部使用。|  
 |SERVICE_BROKER_TRANSMISSION_TRANSACTION_DATA|仅限内部使用。|  
 |SERVICE_BROKER_TRANSPORT|仅限内部使用。|  

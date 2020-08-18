@@ -1,4 +1,5 @@
 ---
+description: 'sys. dm_pdw_waits (Transact-sql) '
 title: sys. dm_pdw_waits (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -12,12 +13,12 @@ ms.assetid: 5130e498-1c77-4ae3-a80b-9aae396494e9
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 6111ce07ecb3de932ff4cb12cf6d7c53d5a1be6d
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 1214a5e7f4d6d64d739440f0ecebf35d39a81dd8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197010"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88397833"
 ---
 # <a name="sysdm_pdw_waits-transact-sql"></a>sys. dm_pdw_waits (Transact-sql) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "86197010"
 |-----------------|---------------|-----------------|-----------|  
 |wait_id|**bigint**|与等待状态关联的唯一数字 id。<br /><br /> 此视图的键。|系统中所有等待的唯一。|  
 |session_id|**nvarchar(32)**|发生等待状态的会话的 ID。|请参阅 dm_pdw_exec_sessions sys.databases 中的 session_id [&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)。|  
-|类型|**nvarchar(255)**|此项表示的等待类型。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
+|type|**nvarchar(255)**|此项表示的等待类型。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |object_type|**nvarchar(255)**|受等待影响的对象的类型。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |object_name|**nvarchar (386) **|受等待影响的指定对象的名称或 GUID。||  
 |request_id|**nvarchar(32)**|发生等待状态的请求的 ID。|请参阅 dm_pdw_exec_requests sys.databases 中的 request_id [&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)。|  

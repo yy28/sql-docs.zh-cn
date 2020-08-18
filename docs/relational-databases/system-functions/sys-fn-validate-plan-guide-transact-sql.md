@@ -1,5 +1,6 @@
 ---
-title: sys. fn_validate_plan_guide （Transact-sql） |Microsoft Docs
+description: sys.fn_validate_plan_guide (Transact-SQL)
+title: sys. fn_validate_plan_guide (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 3af8b47a-936d-4411-91d1-d2d16dda5623
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8ddc9e534b5f0e434dd9c0ca980da82eddb8006a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b19a3cd2f2ee449780127682555f1ae77fabd5d0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898269"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88396893"
 ---
 # <a name="sysfn_validate_plan_guide-transact-sql"></a>sys.fn_validate_plan_guide (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +45,7 @@ sys.fn_validate_plan_guide ( plan_guide_id )
   
 ## <a name="arguments"></a>参数  
  *plan_guide_id*  
- 是在[plan_guides](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)目录视图中报告的计划指南的 ID。 *plan_guide_id*为**int** ，无默认值。  
+ 是在 [plan_guides](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md) 目录视图中报告的计划指南的 ID。 *plan_guide_id* 为 **int** ，无默认值。  
   
 ## <a name="table-returned"></a>返回的表  
   
@@ -53,7 +54,7 @@ sys.fn_validate_plan_guide ( plan_guide_id )
 |msgnum|**int**|错误消息的 ID。|  
 |severity|**tinyint**|消息的严重级别，在 1 到 25 之间。|  
 |state|**smallint**|错误的状态号，用于指示发生错误的代码位置。|  
-|message|**nvarchar(2048)**|错误的消息正文。|  
+|消息|**nvarchar(2048)**|错误的消息正文。|  
   
 ## <a name="permissions"></a>权限  
  OBJECT 作用域的计划指南要求对被引用的对象具有 VIEW DEFINITION 或 ALTER 权限，并要求具有编译计划指南中提供的查询或批处理的权限。 例如，如果批处理包含 SELECT 语句，则需要具有对被引用对象的 SELECT 权限。  

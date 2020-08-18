@@ -1,5 +1,6 @@
 ---
-title: FileTableRootPath （Transact-sql） |Microsoft Docs
+description: FileTableRootPath (Transact-SQL)
+title: FileTableRootPath (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0cba908a-c85c-4b09-b16a-df1cb333c629
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1311ddfe90beafa3f3d89b27e510eac34aa5ae94
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 713b0612ecbe67669955290a3abbb47732fe82b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734401"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88397193"
 ---
 # <a name="filetablerootpath-transact-sql"></a>FileTableRootPath (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,14 +37,14 @@ ms.locfileid: "85734401"
 FileTableRootPath ( [ '[schema_name.]FileTable_name' ], @option )  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  *FileTable_name*  
- FileTable 的名称。 *FileTable_name*的类型为**nvarchar**。 这是一个可选参数。 默认值为当前数据库。 指定*schema_name*也是可选的。 可以将 NULL 传递给*FileTable_name*以使用默认参数值  
+ FileTable 的名称。 *FileTable_name* 的类型为 **nvarchar**。 这是一个可选参数。 默认值为当前数据库。 指定 *schema_name* 也是可选的。 可以将 NULL 传递给 *FileTable_name* 以使用默认参数值  
   
  *\@选*  
  一个整数表达式，定义路径的服务器组件应如何进行格式化。 * \@ 选项*可以具有以下值之一：  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**0**|返回转换为 NetBIOS 格式的服务器名称，例如：<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDatabase`<br /><br /> 这是默认值。|  
 |**1**|返回未经转换的服务器名称，例如：<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDatabase`|  
@@ -52,21 +53,21 @@ FileTableRootPath ( [ '[schema_name.]FileTable_name' ], @option )
 ## <a name="return-type"></a>返回类型  
  **nvarchar(4000)**  
   
- 当数据库属于 Always On 可用性组时， **FileTableRootPath**函数将返回虚拟网络名称（VNN），而不是计算机名。  
+ 当数据库属于 Always On 可用性组时， **FileTableRootPath** 函数将返回虚拟网络名称 (VNN) ，而不是计算机名。  
   
 ## <a name="general-remarks"></a>一般备注  
- 如果满足以下条件之一， **FileTableRootPath**函数将返回 NULL：  
+ 如果满足以下条件之一， **FileTableRootPath** 函数将返回 NULL：  
   
 -   *FileTable_name*的值无效。  
   
 -   调用方没有足够的权限引用指定表或当前数据库。  
   
--   没有为当前数据库设置*database_directory*的 FILESTREAM 选项。  
+-   没有为当前数据库设置 *database_directory* 的 FILESTREAM 选项。  
   
  有关详细信息，请参阅 [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)。  
   
-## <a name="best-practices"></a>最佳实践  
- 若要使代码和应用程序独立于当前的计算机和数据库，应避免编写依赖于绝对文件路径的代码。 相反，在运行时获取文件的完整路径，方法是将**FileTableRootPath**和**GetFileNamespacePath**函数一起使用，如下面的示例中所示。 默认情况下， **GetFileNamespacePath** 函数返回数据库根路径下的文件的相对路径。  
+## <a name="best-practices"></a>最佳方案  
+ 若要使代码和应用程序独立于当前的计算机和数据库，应避免编写依赖于绝对文件路径的代码。 相反，在运行时获取文件的完整路径，方法是将 **FileTableRootPath** 和 **GetFileNamespacePath** 函数一起使用，如下面的示例中所示。 默认情况下， **GetFileNamespacePath** 函数返回数据库根路径下的文件的相对路径。  
   
 ```sql  
 USE MyDocumentDatabase;  
@@ -87,10 +88,10 @@ WHERE Name = N'document.docx';
   
 -   拥有 FileTable 的 SELECT 权限以获取特定 FileTable 的根路径。  
   
--   **db_datareader**或更高权限以获取当前数据库的根路径。  
+-   **db_datareader** 或更高权限以获取当前数据库的根路径。  
   
 ## <a name="examples"></a>示例  
- 下面的示例演示如何调用**FileTableRootPath**函数。  
+ 下面的示例演示如何调用 **FileTableRootPath** 函数。  
   
 ```  
 USE MyDocumentDatabase;  

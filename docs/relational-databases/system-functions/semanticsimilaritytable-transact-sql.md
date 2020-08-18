@@ -1,5 +1,6 @@
 ---
-title: semanticsimilaritytable （Transact-sql） |Microsoft Docs
+description: semanticsimilaritytable (Transact-SQL)
+title: semanticsimilaritytable (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b49d40ab-7552-438b-ad67-6237dcccb75b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 759ac2b464bbdee2a0199afe540f00c7695381a9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4866c5002fce3540014b9ad0c94ccd7b20a0e235
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764274"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88397273"
 ---
 # <a name="semanticsimilaritytable-transact-sql"></a>semanticsimilaritytable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +45,7 @@ SEMANTICSIMILARITYTABLE
     )  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>形参  
+##  <a name="arguments"></a><a name="Arguments"></a> 参数  
  **table**  
  启用全文和语义索引的表的名称。  
   
@@ -53,7 +54,7 @@ SEMANTICSIMILARITYTABLE
  **column**  
  应为其返回结果的索引列的名称。 列必须启用语义索引。  
   
- column_list   
+ column_list  
  指示由逗号分隔并括在括号中的多个列。 所有列都必须启用语义索引。  
   
  **\***  
@@ -77,12 +78,12 @@ SEMANTICSIMILARITYTABLE
 |**分值**|**实际上**|一个相对值，用来表示此文档与所有其他相似文档的相似程度。<br /><br /> 该值是范围 [0.0, 1.0] 中的小数值，较高的得分表示非常匹配，1.0 是最理想的得分。|  
   
 ## <a name="general-remarks"></a>一般备注  
- 有关详细信息，请参阅[通过语义搜索查找相似和相关文档](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)。  
+ 有关详细信息，请参阅 [通过语义搜索查找相似和相关文档](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)。  
   
 ## <a name="limitations-and-restrictions"></a>限制和局限  
  不能跨列查询相似的文档。 **SEMANTICSIMILARITYTABLE**函数只从与源列相同的列中检索类似的文档，由**source_key**参数标识。  
   
-## <a name="metadata"></a>元数据  
+## <a name="metadata"></a>Metadata  
  有关语义相似性的提取和填充的信息和状态，请查询以下动态管理视图：  
   
 -   [sys.dm_db_fts_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-fts-index-physical-stats-transact-sql.md)  

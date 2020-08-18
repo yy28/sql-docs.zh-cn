@@ -1,5 +1,6 @@
 ---
-title: + 测量（DMX） |Microsoft Docs
+description: '+  (DMX (正值) ) '
+title: +  (DMX)  (正值) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 15ad0b4e96eed91830f1d27c324671bc74bf25ed
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 302417d6214bc27b834b4341c1edc9ede792ec7d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971584"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88395833"
 ---
 # <a name="-positive-dmx"></a>+（正值）(DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
