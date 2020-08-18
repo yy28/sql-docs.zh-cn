@@ -1,4 +1,5 @@
 ---
+description: 修改分区方案
 title: 修改分区方案 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.assetid: 515de63f-dfc5-434d-9adb-f3b5992f745a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50498877a1d26adf50f4af466301b7dc7da7b9f7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bc39ec02fe5059bb8b1ae561be732244cbb07791
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787527"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88327173"
 ---
 # <a name="modify-a-partition-scheme"></a>修改分区方案
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -64,9 +65,9 @@ ms.locfileid: "85787527"
   
 3.  单击加号以便展开 **“分区方案”** 文件夹。  
   
-4.  右键单击要删除的分区方案，然后选择“删除”  。  
+4.  右键单击要删除的分区方案，然后选择“删除”****。  
   
-5.  在 **“删除对象”** 对话框中，确保已选择正确的分区方案，然后单击 **“确定”** 。  
+5.  在 **“删除对象”** 对话框中，确保已选择正确的分区方案，然后单击 **“确定”**。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -76,7 +77,7 @@ ms.locfileid: "85787527"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     USE AdventureWorks2012;  

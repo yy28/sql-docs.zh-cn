@@ -1,4 +1,5 @@
 ---
+description: 序列属性（“常规”页）
 title: 序列属性（“常规”页）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: 0187f413-cdf0-48a2-b2e6-9b3578cd5811
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d5614e25efc21f4c3b4f4f54249bc26397acbfa3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c85265a8461fae5060ac7c8cdbffaf38ce8e9ee3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725900"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88325851"
 ---
 # <a name="sequence-properties-general-page"></a>序列属性（“常规”页）
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "85725900"
   
  有关同时使用 **CREATE SEQUENCE** 和 **NEXT VALUE FOR** 函数的信息，请参阅 [序列号](../../relational-databases/sequence-numbers/sequence-numbers.md)。  
   
- 访问此页的方法有如下两种：在对象资源管理器中右键单击“序列”  ，再单击“新建序列”  ，或者右键单击现有序列，再单击“属性”  。 如果右键单击现有序列，再单击“属性”  ，则以下某些选项是不可编辑的。 要更改序列选项，请使用 [ALTER SEQUENCE (Transact-SQL)](../../t-sql/statements/alter-sequence-transact-sql.md) 语句，或删除并重新创建序列对象。  
+ 访问此页的方法有如下两种：在对象资源管理器中右键单击“序列”****，再单击“新建序列”****，或者右键单击现有序列，再单击“属性”****。 如果右键单击现有序列，再单击“属性”****，则以下某些选项是不可编辑的。 要更改序列选项，请使用 [ALTER SEQUENCE (Transact-SQL)](../../t-sql/statements/alter-sequence-transact-sql.md) 语句，或删除并重新创建序列对象。  
   
 ## <a name="options"></a>选项  
  **序列名称**  
@@ -52,7 +53,7 @@ ms.locfileid: "85725900"
 -   基于这些类型之一的任何用户定义数据类型（别名类型）。  
   
  **精度**  
- 对于“十进制”**decimal**或“数值”  数据类型，请指定精度。 （小数位数始终为 0。）  
+ 对于“十进制”**decimal**或“数值”**** 数据类型，请指定精度。 （小数位数始终为 0。）  
   
  **起始值**  
  将由序列对象返回的第一个值。 **START** 值必须是小于或等于序列对象的最大值并大于或等于其最小值的值。 新序列对象的默认起始值是升序序列对象的最小值和降序序列对象的最大值。  

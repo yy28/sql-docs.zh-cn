@@ -1,4 +1,5 @@
 ---
+description: DB_ID (Transact-SQL)
 title: DB_ID (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/13/2019
@@ -23,12 +24,12 @@ ms.assetid: 7b3aef89-a6fd-4144-b468-bf87ebf381b8
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 35b2dd7756d50d2f69fece370330c35e614e33ef
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 6742ad9d5dae61ffcdbefe5d8f66bcbe8cd5078e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112487"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88310933"
 ---
 # <a name="db_id-transact-sql"></a>DB_ID (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,7 +47,7 @@ DB_ID ( [ 'database_name' ] )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
-'database_name'   
+'database_name'  
 将返回其数据库 ID 号 `DB_ID` 的数据库的名称。 如果对 `DB_ID` 的调用省略 database_name，则 `DB_ID` 返回当前数据库的 ID。
   
 ## <a name="return-types"></a>返回类型
@@ -56,10 +57,10 @@ DB_ID ( [ 'database_name' ] )
 `DB_ID` 仅可用于返回 Azure SQL 数据库中当前数据库的数据库标识符。 如果指定的数据库名称不是当前数据库，则返回 NULL。
 
 > [!NOTE]
-> 与 Azure SQL 数据库一起使用时，`DB_ID` 可能不会返回从 sys.databases 查询 `database_id` 得到的相同结果。 如果 `DB_ID` 的调用方将结果与其他 sys  视图进行比较，应改为查询 sys.databases  。
+> 与 Azure SQL 数据库一起使用时，`DB_ID` 可能不会返回从 sys.databases**** 查询 `database_id` 得到的相同结果。 如果 `DB_ID` 的调用方将结果与其他 sys**** 视图进行比较，应改为查询 sys.databases****。
   
 ## <a name="permissions"></a>权限  
-如果 `DB_ID` 的调用方不具有特定的非 master 或非 tempdb 数据库，则至少需要 `ALTER ANY DATABASE` 或 `VIEW ANY DATABASE` 服务器级权限才能看到相应的 `DB_ID` 行。 对于 master 数据库，`DB_ID` 至少需要 `CREATE DATABASE` 权限。 调用方连接的数据库将始终出现在 sys.databases 中  。
+如果 `DB_ID` 的调用方不具有特定的非 master 或非 tempdb 数据库，则至少需要 `ALTER ANY DATABASE` 或 `VIEW ANY DATABASE` 服务器级权限才能看到相应的 `DB_ID` 行********。 对于 master 数据库，`DB_ID` 至少需要 `CREATE DATABASE` 权限****。 调用方连接的数据库将始终出现在 sys.databases 中****。
   
 > [!IMPORTANT]  
 >  默认情况下，公共角色具有 `VIEW ANY DATABASE` 权限，允许所有登录名查看数据库信息。 若要防止登录名检测数据库，则需 `REVOKE` 公共登录名的 `VIEW ANY DATABASE` 权限或 `DENY` 个人登录名的 `VIEW ANY DATABASE` 权限。  

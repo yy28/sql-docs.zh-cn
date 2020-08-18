@@ -1,4 +1,5 @@
 ---
+description: 第 2 课：配置数据库对象的权限
 title: 教程：配置对数据库对象的权限
 ms.custom: seo-lt-2019
 ms.date: 07/31/2018
@@ -12,12 +13,12 @@ ms.assetid: f964b66a-ec32-44c2-a185-6a0f173bfa22
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 991bdef702b1ed298bb492172ef65c6d25d5d0ab
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 195390d76716bcad18df884491fa07335c70665b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75244746"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88306640"
 ---
 # <a name="lesson-2-configure-permissions-on-database-objects"></a>第 2 课：配置数据库对象的权限
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "75244746"
 - 安装 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
 
 如果不能访问 SQL Server 实例，请从以下链接选择平台。 如果选择 SQL 身份验证，请使用 SQL Server 登录凭据。
--  Windows：[下载 SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
+- **Windows**：[下载 SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
 - **macOS**：[在 Docker 上下载 SQL Server 2017](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)。
 
 [!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
@@ -44,10 +45,10 @@ ms.locfileid: "75244746"
   
 ### <a name="create-a-new-windows-account"></a>创建新的 Windows 帐户  
   
-1.  单击“开始”后，单击“运行”，在“打开”框中，键入“%SystemRoot%\system32\compmgmt.msc /s”，再单击“确定”打开“计算机管理”程序。      
-2.  在“系统工具”下，展开“本地用户和组”，右键单击“用户”，再单击“新建用户”。        
-3.  在“用户名”框中，键入“Mary”。      
-4.  在“密码”和“确认密码”框中，键入强密码，再单击“创建”创建新的本地 Windows 用户。     
+1.  单击“开始”后，单击“运行”，在“打开”框中，键入“%SystemRoot%\system32\compmgmt.msc /s”，再单击“确定”打开“计算机管理”程序。******************** 
+2.  在“系统工具”下，展开“本地用户和组”，右键单击“用户”，再单击“新建用户”。****************    
+3.  在“用户名”框中，键入“Mary”。********    
+4.  在“密码”和“确认密码”框中，键入强密码，再单击“创建”创建新的本地 Windows 用户。************  
   
 ### <a name="create-a-sql-login"></a>创建 SQL 登录名  
 

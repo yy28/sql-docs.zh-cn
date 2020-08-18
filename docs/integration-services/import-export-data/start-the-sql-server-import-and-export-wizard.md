@@ -1,4 +1,5 @@
 ---
+description: 启动 SQL Server 导入和导出向导
 title: 启动 SQL Server 导入和导出向导
 titleSuffix: Integration Services (SSIS)
 ms.prod: sql
@@ -15,12 +16,12 @@ ms.author: chugu
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 11/18/2019
-ms.openlocfilehash: a80b12db0f303ee82f91be9e3eb60c975396063e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: adbb8eee477e9f021c011b91e586492e64747851
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914343"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88346573"
 ---
 # <a name="start-the-sql-server-import-and-export-wizard"></a>启动 SQL Server 导入和导出向导
 
@@ -49,7 +50,7 @@ ms.locfileid: "86914343"
 
 ### <a name="start-the-sql-server-import-and-export-wizard-from-the-start-menu"></a>从“开始”菜单启动 SQL Server 导入和导出向导
 
-1. 在“开始”菜单上，查找并展开 Microsoft SQL Server 20xx   。
+1. 在“开始”菜单上，查找并展开 Microsoft SQL Server 20xx********。
 2. 单击以下选项之一。
     - **SQL Server 20xx 导入和导出数据 (64 位)**
     - **SQL Server 20xx 导入和导出数据 (32 位)**
@@ -65,10 +66,10 @@ ms.locfileid: "86914343"
 在命令提示符窗口中，从以下位置之一运行 **DTSWizard.exe** 。
 
 - **C:\Program Files\Microsoft SQL Server\140\DTS\Binn**（对于 64 位版本）。
-  - 140 = SQL Server 2017  。  此值取决于所拥有的 SQL Server 的版本。
+  - 140 = SQL Server 2017**。  此值取决于所拥有的 SQL Server 的版本。
 
 - **C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn**（对于 32 位版本）。
-  - 140 = SQL Server 2017  。  此值取决于所拥有的 SQL Server 的版本。
+  - 140 = SQL Server 2017**。  此值取决于所拥有的 SQL Server 的版本。
 
 运行 64 位版本的向导，除非你知道数据源需要 32 位数据访问接口。
 
@@ -102,13 +103,13 @@ ms.locfileid: "86914343"
 
  在具有 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的 Visual Studio 中，在 Integration Services 项目打开的情况下，执行以下列操作之一。
 
-- 在“项目”  菜单上，单击“SSIS 导入和导出向导”  。
+- 在“项目” **** 菜单上，单击“SSIS 导入和导出向导” ****。
 
    ![启动向导项目](../../integration-services/import-export-data/media/start-wizard-project.png)
 
    \- 或 -
 
-- 在解决方案资源管理器中，右键单击“SSIS 包”  文件夹，再单击“SSIS 导入和导出向导”  。
+- 在解决方案资源管理器中，右键单击“SSIS 包” **** 文件夹，再单击“SSIS 导入和导出向导” ****。
 
     ![启动向导包](../../integration-services/import-export-data/media/start-wizard-packages.png)
 
@@ -123,9 +124,9 @@ ms.locfileid: "86914343"
 > [!TIP]
 > 从向导的任何页面或对话框中点击 F1 键，可查看当前页的相关文档。   
 
-## <a name="whats-next"></a>下一步是什么？
+## <a name="whats-next"></a>下一步操作
 
-当你启动向导时，第一页是“欢迎使用 SQL Server 导入和导出向导”  。 不必在此页上执行任何操作。 有关详细信息，请参阅 [欢迎使用 SQL Server 导入和导出向导](../../integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md)。  
+当你启动向导时，第一页是“欢迎使用 SQL Server 导入和导出向导” ****。 不必在此页上执行任何操作。 有关详细信息，请参阅 [欢迎使用 SQL Server 导入和导出向导](../../integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md)。  
   
 ## <a name="related-tasks-and-content"></a>相关任务和内容
 

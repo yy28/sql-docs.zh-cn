@@ -1,4 +1,5 @@
 ---
+description: '||（逻辑或）（SSIS 表达式）'
 title: '||（逻辑或）（SSIS 表达式） | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a3c07c09-f121-4187-9617-b01adcf843c4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 72e8bb24671524b77585d4a3e151eab9bc225a85
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b613adbf102e1103506e6d86efb3bf87d81d72eb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86907983"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88347543"
 ---
 # <a name="-logical-or-ssis-expression"></a>||（逻辑或）（SSIS 表达式）
 
@@ -42,17 +43,17 @@ boolean_expression1 || boolean_expression2
 ## <a name="result-types"></a>结果类型  
  DT_BOOL  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  下表显示了 || 运算符的结果。  
   
-|结果|表达式|表达式|  
+|结果|表达式|Expression|  
 |------------|----------------|----------------|  
 |TRUE|TRUE|TRUE|  
-|TRUE|TRUE|FALSE|  
+|TRUE|true|FALSE|  
 |FALSE|FALSE|FALSE|  
 |Null|Null|Null|  
 |TRUE|Null|TRUE|  
-|Null|Null|FALSE|  
+|Null|Null|false|  
   
 ## <a name="ssis-expression-examples"></a>SSIS 表达式示例  
  该示例使用 **StandardCost** 和 **ListPrice** 列。 如果 **StandardCost** 列的值小于 300 或者 **ListPrice** 列的值大于 500，则该示例计算结果为 TRUE。  

@@ -1,4 +1,5 @@
 ---
+description: SQL Server 导入和导出向导中的步骤
 title: SQL Server 导入和导出向导中的步骤 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/29/2020
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 816fb1bd-7bb9-450d-ad65-e4c2d02eaff8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ee20fb7253e42a0bc6bf28f7beb790342ea6c581
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5799d85c7978505503fcbd56aa85eb693da6665e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922851"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88346433"
 ---
 # <a name="steps-in-the-sql-server-import-and-export-wizard"></a>SQL Server 导入和导出向导中的步骤
 
@@ -32,13 +33,13 @@ ms.locfileid: "86922851"
 
 |步骤|向导页面|  
 |----------|------------------|  
-|**欢迎使用**<br />不必在此页上执行任何操作。|[欢迎使用 SQL Server 导入和导出向导](../../integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md)|  
+|**欢迎**<br />不必在此页上执行任何操作。|[欢迎使用 SQL Server 导入和导出向导](../../integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md)|  
 |**选择数据源**。|[选择数据源](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)|  
 |**选择数据目标**。|[选择目标](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)|  
 |**配置目标**。 （可选步骤）<br /><br /> -   创建新的目标数据库。<br />-   如果要将数据复制到文本文件，请配置附加设置。|[创建数据库](../../integration-services/import-export-data/create-database-sql-server-import-and-export-wizard.md)<br /><br />[配置平面文件目标](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md)|  
 |**指定要复制的内容。**|[指定表复制或查询](../../integration-services/import-export-data/specify-table-copy-or-query-sql-server-import-and-export-wizard.md)<br /><br />[选择源表和源视图](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md)<br /><br />[提供源查询](../../integration-services/import-export-data/provide-a-source-query-sql-server-import-and-export-wizard.md)|  
 |**配置复制操作**。 （可选步骤）<br /><br /> -   创建新的目标表。<br />-   确定当向导不知道如何在所选源和目标之间映射数据类型时应执行的操作。<br />-   查看源和目标之间的列映射。<br />-   处理转换源和目标之间的数据类型时发生的问题。<br />-   预览要复制的数据。|[Create Table SQL 语句](../../integration-services/import-export-data/create-table-sql-statement-sql-server-import-and-export-wizard.md)<br /><br />[转换类型时不进行转换检查](../../integration-services/import-export-data/convert-types-without-conversion-checking-sql-server-import-and-export-wizard.md)<br /><br />[列映射](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md)<br /><br />[查看数据类型映射](../../integration-services/import-export-data/review-data-type-mapping-sql-server-import-and-export-wizard.md)<br /><br />[“列转换详细信息”对话框](../../integration-services/import-export-data/column-conversion-details-dialog-box-sql-server-import-and-export-wizard.md)<br /><br />[“预览数据”对话框](../../integration-services/import-export-data/preview-data-dialog-box-sql-server-import-and-export-wizard.md)|  
-|**复制数据。**<br /><br /> （可选）将设置另存为 SQL Server Integration Services (SSIS) 包。|[保存并运行包](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md)<br /><br />[保存 SSIS 包](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md)<br /><br />[完成向导](../../integration-services/import-export-data/complete-the-wizard-sql-server-import-and-export-wizard.md)<br /><br />[执行操作](../../integration-services/import-export-data/performing-operation-sql-server-import-and-export-wizard.md)|  
+|**复制数据。**<br /><br /> （可选）将设置另存为 SQL Server Integration Services (SSIS) 包。|[保存并运行包](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md)<br /><br />[保存 SSIS 包](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md)<br /><br />[完成向导](../../integration-services/import-export-data/complete-the-wizard-sql-server-import-and-export-wizard.md)<br /><br />[正在执行操作](../../integration-services/import-export-data/performing-operation-sql-server-import-and-export-wizard.md)|  
 
 > [!TIP]
 > 从向导的任何页面或对话框中点击 F1 键，可查看当前页的相关文档。

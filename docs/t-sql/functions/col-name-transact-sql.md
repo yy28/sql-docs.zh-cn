@@ -1,4 +1,5 @@
 ---
+description: COL_NAME (Transact-SQL)
 title: COL_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -21,12 +22,12 @@ ms.assetid: 214144ab-f2bc-4052-83cf-caf0a85c4cc6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7299e1d02130bddac3bd50c7fd8deafd2bdeeb7
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 5e84aa9dca9780bf5f5b10b8fb302ef91115fd91
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111999"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88311173"
 ---
 # <a name="col_name-transact-sql"></a>COL_NAME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,11 +45,11 @@ COL_NAME ( table_id , column_id )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
-table_id   
-包含该列的表的标识号。 table_id 自变量具有一个 int 数据类型   。
+table_id**  
+包含该列的表的标识号。 table_id 自变量具有一个 int 数据类型******。
   
-column_id   
-列的标识号。 column_id 自变量具有一个 int 数据类型   。
+column_id  
+列的标识号。 column_id 自变量具有一个 int 数据类型******。
   
 ## <a name="return-types"></a>返回类型
 **sysname**
@@ -59,7 +60,7 @@ column_id
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，用户只能查看其所拥有的安全对象的元数据，或者已对其授予权限的安全对象的元数据。 这意味着，如果用户对该对象没有正确的权限，那些发出元数据的内置函数（如 `COL_NAME`）则可能会返回 NULL。 有关详细信息，请参阅[元数据可见性配置](../../relational-databases/security/metadata-visibility-configuration.md)。
   
 ## <a name="remarks"></a>备注  
-table_id 和 column_id 参数共同产生一个列名称字符串   。
+table_id 和 column_id 参数共同产生一个列名称字符串****。
   
 有关获取表和列标识号的详细信息，请参阅 [OBJECT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md)。
   

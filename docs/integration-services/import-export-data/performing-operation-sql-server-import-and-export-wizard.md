@@ -1,4 +1,5 @@
 ---
+description: 正在执行操作（SQL Server 导入和导出向导）
 title: 执行操作（SQL Server 导入和导出向导）| Microsoft Docs
 ms.custom: ''
 ms.date: 01/11/2017
@@ -11,32 +12,32 @@ f1_keywords:
 ms.assetid: 83259509-71d6-4a64-a7f2-4e9603b30bd4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7c9749d32a0e08a6b755db739bb226540b519b85
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1ce2552519eeecb654478f522d3dd3b8880d2697
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917631"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88347273"
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>正在执行操作（SQL Server 导入和导出向导）
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-查看在向导中所做的选择，并单击“完成向导”页中的“完成”之后   ，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导将显示“执行操作”  。 在此页上，会看到在前页配置的操作的进度和结果。 不必在此页上执行任何操作。
+查看在向导中所做的选择，并单击“完成向导”页中的“完成”之后********，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导将显示“执行操作”****。 在此页上，会看到在前页配置的操作的进度和结果。 不必在此页上执行任何操作。
 
 ## <a name="screen-shot---operation-in-progress"></a>屏幕截图 - 正在进行中的操作 
- 以下屏幕快照显示操作进行过程中，向导的“执行操作”页  。  
+ 以下屏幕快照显示操作进行过程中，向导的“执行操作”页 **** 。  
   
  ![导入和导出向导的执行操作页](../../integration-services/import-export-data/media/performing-operation1.png "导入和导出向导的执行操作页")  
 
 ## <a name="screen-shot---operation-completed"></a>屏幕截图 - 已完成的操作 
- 以下屏幕快照显示操作完成后，向导的“执行操作”页  。 单击“消息”列中的项  可获取有关相应步骤的详细信息。  
+ 以下屏幕快照显示操作完成后，向导的“执行操作”页 **** 。 单击“消息”列中的项 **** 可获取有关相应步骤的详细信息。  
   
  ![导入和导出向导的执行操作页](../../integration-services/import-export-data/media/performing-operation2.png "导入和导出向导的执行操作页")  
   
 ## <a name="watch-the-progress-of-the-operation"></a>监视操作的进度
- **Action**  
+ **操作**  
  显示操作的每个步骤。  
   
  **Status**  
@@ -47,12 +48,12 @@ ms.locfileid: "86917631"
 
 ## <a name="interrupt-the-operation-or-save-the-results"></a>中断操作或保存结果
  **Stop**  
- 在必要时单击“停止”  按钮即可中断操作。  
+ 在必要时单击“停止” **** 按钮即可中断操作。  
   
  **Report**  
  查看结果报表，将报表保存到文件，将报表复制到剪贴板或通过电子邮件发送报表。  
   
-## <a name="whats-next"></a>下一步是什么？  
+## <a name="whats-next"></a>下一步操作  
  运行并成功完成了配置的操作后，即表示已完成运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导。  
 -   若要立即运行该操作，可以打开所选目标，以查看向导复制的数据。  
 -   如果保存了由向导创建的 SSIS 包，则可以在 SQL Server Data Tools 中打开该包，对其进行自定义和重复使用。 有关如何自定义已保存的包和稍后再次运行该包的信息，请参阅 [保存 SSIS 包](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md)。

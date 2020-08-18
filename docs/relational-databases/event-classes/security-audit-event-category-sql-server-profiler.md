@@ -1,4 +1,5 @@
 ---
+description: Security Audit 事件类别 (SQL Server Profiler)
 title: 安全审核事件类别 - 配置文件
 ms.date: 06/03/2020
 ms.prod: sql
@@ -14,12 +15,12 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: c7f92e7c56cd6b13527d1d2e658dd04f51c4988f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a1e6bcb89b8206f34c8438f6ebab2ef983210057
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726202"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88330433"
 ---
 # <a name="security-audit-event-category-sql-server-profiler"></a>Security Audit 事件类别 (SQL Server Profiler)
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "85726202"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|说明|  
+|主题|描述|  
 |-----------|-----------------|  
 |[Audit Add DB User 事件类](../../relational-databases/event-classes/audit-add-db-user-event-class.md)|指示已在数据库中添加或删除作为数据库用户的登录名。|  
 |[Audit Add Login to Server Role 事件类](../../relational-databases/event-classes/audit-add-login-to-server-role-event-class.md)|指示已在固定服务器角色中添加或删除登录名。|  

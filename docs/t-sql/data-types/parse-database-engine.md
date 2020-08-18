@@ -1,4 +1,5 @@
 ---
+description: Parse（数据库引擎）
 title: Parse（数据库引擎）| Microsoft Docs
 ms.custom: ''
 ms.date: 07/22/2017
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: b37e28b6-6e2e-470a-945b-ce5252da743a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e024024726ab6366b6dbb3580f1c27367195c130
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 78ff3df45fd3d835d273d2f00f4d7ddf65170a62
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86548522"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88311503"
 ---
 # <a name="parse-database-engine"></a>Parse（数据库引擎）
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
-Parse 将 hierarchyid 的规范字符串表示形式转换为 hierarchyid 值   。 当发生从字符串类型到 hierarchyid 的转换时，将隐式调用 Parse  。 作用与 [ToString](../../t-sql/data-types/tostring-database-engine.md) 相反。 Parse() 是静态方法。
+Parse 将 hierarchyid 的规范字符串表示形式转换为 hierarchyid 值********。 当发生从字符串类型到 hierarchyid 的转换时，将隐式调用 Parse****。 作用与 [ToString](../../t-sql/data-types/tostring-database-engine.md) 相反。 Parse() 是静态方法。
   
 ## <a name="syntax"></a>语法  
   
@@ -47,18 +48,18 @@ static SqlHierarchyId Parse ( SqlString input )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
-input   
+*input*  
 [!INCLUDE[tsql](../../includes/tsql-md.md)]：要转换的字符数据类型值。
   
 CLR：要计算的字符串值。
   
 ## <a name="return-types"></a>返回类型  
-SQL Server 返回类型：hierarchyid 
+SQL Server 返回类型：hierarchyid****
   
-CLR 返回类型：SqlHierarchyId 
+CLR 返回类型：SqlHierarchyId****
   
-## <a name="remarks"></a>备注  
-如果 Parse 收到的值不是 hierarchyid 的有效字符串表示形式，则会引发异常  。 例如，如果 char 数据类型包含尾随空格，则会引发异常  。
+## <a name="remarks"></a>注解  
+如果 Parse 收到的值不是 hierarchyid 的有效字符串表示形式，则会引发异常****。 例如，如果 char 数据类型包含尾随空格，则会引发异常****。
   
 ## <a name="examples"></a>示例  
   

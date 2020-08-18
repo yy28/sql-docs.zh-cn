@@ -1,4 +1,5 @@
 ---
+description: COL_LENGTH (Transact-SQL)
 title: COL_LENGTH (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: cf891206-c49f-40eb-858e-eefd2b638a33
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4a03934759aa32ca9c852eef0588d9cec17b0983
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: a46720f3752e5588221a3af686d2449554dc0fe4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110983"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88310923"
 ---
 # <a name="col_length-transact-sql"></a>COL_LENGTH (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,10 +45,10 @@ COL_LENGTH ( 'table' , 'column' )
 
 ## <a name="arguments"></a>参数
 **'** *table* **'**  
-要确定其列长度信息的表的名称。 table 是 nvarchar 类型的表达式   。
+要确定其列长度信息的表的名称。 table 是 nvarchar 类型的表达式******。
   
 **'** *column* **'**  
-要确定其长度的列名称。 column 是 nvarchar 类型的表达式   。
+要确定其长度的列名称。 column 是 nvarchar 类型的表达式******。
   
 ## <a name="return-type"></a>返回类型
 **smallint**
@@ -58,7 +59,7 @@ COL_LENGTH ( 'table' , 'column' )
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，用户只能查看其所拥有的安全对象的元数据，或者已对其授予权限的安全对象的元数据。 这意味着，如果用户对该对象没有正确的权限，那些发出元数据的内置函数（如 COL_LENGTH）则可能会返回 NULL。 有关详细信息，请参阅[元数据可见性配置](../../relational-databases/security/metadata-visibility-configuration.md)。
   
 ## <a name="remarks"></a>备注  
-对于使用 max 说明符 (varchar(max)) 声明的 varchar 列，COL_LENGTH 将返回值 -1    。
+对于使用 max 说明符 (varchar(max)) 声明的 varchar 列，COL_LENGTH 将返回值 -1************。
   
 ## <a name="examples"></a>示例  
 此示例将显示类型为 `varchar(40)` 和 `nvarchar(40)` 的列的返回值：

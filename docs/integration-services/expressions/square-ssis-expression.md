@@ -1,4 +1,5 @@
 ---
+description: SQUARE（SSIS 表达式）
 title: SQUARE（SSIS 表达式）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cecf1bb2-3d55-40a6-9688-ed67bcc150b4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f4894a3fea551a6ca428920910900164d7f94a62
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 314c6c36b7a7de24065e1051086158823feff46a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913495"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88348093"
 ---
 # <a name="square-ssis-expression"></a>SQUARE（SSIS 表达式）
 
@@ -41,7 +42,7 @@ SQUARE(numeric_expression)
 ## <a name="result-types"></a>结果类型  
  DT_R8  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  如果参数为空，SQUARE 将返回空结果。  
   
  执行 SQUARE 操作前，参数会转换为 DT_R8 数据类型。  

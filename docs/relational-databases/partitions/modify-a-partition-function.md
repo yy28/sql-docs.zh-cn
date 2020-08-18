@@ -1,4 +1,5 @@
 ---
+description: 修改分区函数
 title: 修改分区函数 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.assetid: ae5bfc09-f27a-4ea9-9518-485278b11674
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0124f027ce4b3293afe754acfd5ad19354372cb9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2717bf5791cd5f057a57da6693e05700c9045e3c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787533"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88326903"
 ---
 # <a name="modify-a-partition-function"></a>修改分区函数
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -81,9 +82,9 @@ ms.locfileid: "85787533"
   
 2.  展开 **“分区函数”** 文件夹。  
   
-3.  右键单击要删除的分区函数，然后选择  “删除”。  
+3.  右键单击要删除的分区函数，然后选择****“删除”。  
   
-4.  在 **“删除对象”** 对话框中，确保已选择正确的分区函数，然后单击 **“确定”** 。  
+4.  在 **“删除对象”** 对话框中，确保已选择正确的分区函数，然后单击 **“确定”**。  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -93,7 +94,7 @@ ms.locfileid: "85787533"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     -- Look for a previous version of the partition function "myRangePF1" and deletes it if it is found.  
@@ -118,7 +119,7 @@ ms.locfileid: "85787533"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     -- Look for a previous version of the partition function "myRangePF1" and deletes it if it is found.  

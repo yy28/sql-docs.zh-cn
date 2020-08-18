@@ -1,4 +1,5 @@
 ---
+description: FILE_IDEX (Transact-SQL)
 title: FILE_IDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 7532fea5-ee5e-4edd-b98b-111a7ba56c8e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 63bfdc72ea7a8a71c0f96292902356b3a07702ee
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 741244f7f2c7e1bc3f7bfe3d169d2efdbd3e11e4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112464"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88310023"
 ---
 # <a name="file_idex-transact-sql"></a>FILE_IDEX (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,16 +46,16 @@ FILE_IDEX ( file_name )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- file_name   
-类型为 sysname  的表达式，它返回文件名称的文件 ID 值“FILE_IDEX”。 
+ file_name  
+类型为 sysname**** 的表达式，它返回文件名称的文件 ID 值“FILE_IDEX”。 
   
 ## <a name="return-types"></a>返回类型  
 **int**  
   
-出现错误时，返回 NULL   
+出现错误时，返回 NULL****  
   
-## <a name="remarks"></a>备注  
-file_name  对应于 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) 或 [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) 目录视图中的 name  列中所显示的逻辑文件名。  
+## <a name="remarks"></a>注解  
+file_name** 对应于 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) 或 [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) 目录视图中的 name**** 列中所显示的逻辑文件名。  
   
 在 SELECT 列表、WHERE 子句或支持使用表达式的任何位置使用 `FILE_IDEX`。 有关详细信息，请参阅[表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)。  
   

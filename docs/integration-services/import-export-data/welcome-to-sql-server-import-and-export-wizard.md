@@ -1,4 +1,5 @@
 ---
+description: 欢迎使用 SQL Server 导入和导出向导
 title: 欢迎使用 SQL Server 导入和导出向导 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/15/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 8a56d80d-8e31-4542-87cc-a41b3fdd5a7d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7a18a16353ff2d015bdd5f19c59c6cf9d7fd279b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9d872657de8cb28a64d709eb458cffa7b6569a53
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922842"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88346203"
 ---
 # <a name="welcome-to-sql-server-import-and-export-wizard"></a>欢迎使用 SQL Server 导入和导出向导
 
@@ -41,8 +42,8 @@ ms.locfileid: "86922842"
 **不再显示此起始页。**  
  下次运行向导时跳过欢迎页。  
   
-## <a name="whats-next"></a>下一步是什么？  
- 欢迎页之后，下一页是“选择数据源”  。 在此页上，需提供有关数据源以及如何连接到它的信息。 有关详细信息，请参阅 [选择数据源](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)。
+## <a name="whats-next"></a>下一步操作  
+ 欢迎页之后，下一页是“选择数据源” ****。 在此页上，需提供有关数据源以及如何连接到它的信息。 有关详细信息，请参阅 [选择数据源](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)。
 
 ## <a name="related-tasks-and-content"></a><a name="related"></a>相关任务和内容  
  以下是一些其他的基本任务。

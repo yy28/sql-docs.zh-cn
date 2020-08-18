@@ -1,4 +1,5 @@
 ---
+description: DROP SENSITIVITY CLASSIFICATION (Transact-SQL)
 title: DROP SENSITIVITY CLASSIFICATION (Transact-SQL) | Microsoft Docs
 ms.date: 03/25/2019
 ms.reviewer: ''
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - information types
 - data classification
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d70e4a10601ab7c9171ddccf41a9ab9e5b2395c7
-ms.sourcegitcommit: bc10ec0be5ddfc5f0bc220a9ac36c77dd6b80f1d
+ms.openlocfilehash: 347573e5eb507ca1e607382e2df0dd07763f7689
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87544311"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88304558"
 ---
 # <a name="drop-sensitivity-classification-transact-sql"></a>DROP SENSITIVITY CLASSIFICATION (Transact-SQL)
 [!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]
@@ -50,14 +51,14 @@ DROP SENSITIVITY CLASSIFICATION FROM
 
 ## <a name="arguments"></a>参数  
 
-object_name  ([schema_name.]table_name.column_name)
+object_name ([schema_name.]table_name.column_name)
 
 是从中删除分类的数据库列的名称。 目前仅支持列分类。
-    - schema_name  （可选）- 是已分类的列所属架构的名称。
+    - schema_name（可选）- 是已分类的列所属架构的名称。
     - *table_name* - 是已分类的列所属表的名称。
-    - column_name  - 是从中删除分类的列的名称。
+    - column_name** - 是从中删除分类的列的名称。
 
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
 
 - 可以使用单个“DROP SENSITIVITY CLASSIFICATION”语句删除多个对象分类。
 

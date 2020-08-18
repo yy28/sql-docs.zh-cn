@@ -1,4 +1,5 @@
 ---
+description: 订阅，同步历史记录
 title: 订阅，同步历史记录 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -14,12 +15,12 @@ ms.assetid: 85f666f6-14ee-4f19-b385-e5cc508aabe4
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: b82300ff328470f0b195796385f29e651a1998b9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: db40c8e3848ee5dac3d770e77629555ea87814b3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729327"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88326013"
 ---
 # <a name="subscription-synchronization-history"></a>订阅，同步历史记录
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "85729327"
   
 -   正在重试  
   
--   正在运行  
+-   运行  
   
  **Start Time**  
  会话的开始时间。  

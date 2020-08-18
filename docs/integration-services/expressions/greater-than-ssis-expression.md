@@ -1,4 +1,5 @@
 ---
+description: '&gt;（大于）（SSIS 表达式）'
 title: '&gt;（大于）（SSIS 表达式）| Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2e22efa3-eeb1-4984-a95c-9bccdcf98892
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 99a15645e037e578e1594142b9869ef5d92860af
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 45c1cc7d9c5c77141bcbe75ebef9ff056347d5aa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916958"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88348193"
 ---
 # <a name="gt-greater-than-ssis-expression"></a>&gt;（大于）（SSIS 表达式）
 
@@ -47,7 +48,7 @@ expression1 > expression2
 ## <a name="result-types"></a>结果类型  
  DT_BOOL  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  如果比较中的任一表达式为空，则比较结果为空。 如果两个表达式都为空，则结果为空。  
   
  表达式集， *expression1* 和 *expression2*，必须遵守下列规则之一：  

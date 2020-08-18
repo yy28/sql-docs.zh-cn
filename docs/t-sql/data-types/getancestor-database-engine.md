@@ -1,4 +1,5 @@
 ---
+description: GetAncestor（数据库引擎）
 title: GetAncestor（数据库引擎）| Microsoft Docs
 ms.custom: ''
 ms.date: 07/22/2017
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: b96a986f-d5e4-4034-8013-de7974594ee9
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a6bbdeb7e8f54bbdb02d7daff3b08f83bf0a98d1
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: e377a022c4a027c64008b2a09ff58f2d7d27112c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554492"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88311733"
 ---
 # <a name="getancestor-database-engine"></a>GetAncestor（数据库引擎）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-返回表示 this 的第 n 个祖先的 hierarchyid    。
+返回表示 this 的第 n 个祖先的 hierarchyid********。
   
 ## <a name="syntax"></a>语法  
   
@@ -36,23 +37,23 @@ ms.locfileid: "86554492"
 child.GetAncestor ( n )   
 ```  
   
-```sql
+```syntaxsql
 -- CLR syntax  
 SqlHierarchyId GetAncestor ( int n )  
-```  
-  
+```
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
 *n*  
-int，表示在层次结构中上升的级别数  。
+int，表示在层次结构中上升的级别数****。
   
 ## <a name="return-types"></a>返回类型
-SQL Server 返回类型：hierarchyid 
+SQL Server 返回类型：hierarchyid****
   
-CLR 返回类型：SqlHierarchyId 
+CLR 返回类型：SqlHierarchyId****
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
 用于测试输出中的每个节点是否将当前节点作为指定级别的祖先。
   
 如果传递的数字大于 [GetLevel()](../../t-sql/data-types/getlevel-database-engine.md)，则返回 NULL。

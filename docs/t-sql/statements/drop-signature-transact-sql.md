@@ -1,4 +1,5 @@
 ---
+description: DROP SIGNATURE (Transact-SQL)
 title: DROP SIGNATURE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 8a1fd8c5-0e75-4b2f-9d3c-c296bed56cc7
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1fe1402f5d0f71a36ac6e2c7ae83e5d645d804d9
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 64a4c28705c80d68bd6f7499f059b1d0ca7f6846
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485439"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88304569"
 ---
 # <a name="drop-signature-transact-sql"></a>DROP SIGNATURE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -51,16 +52,16 @@ DROP [ COUNTER ] SIGNATURE FROM module_name
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- module_name   
+ module_name  
  存储过程、函数、程序集或触发器的名称。  
   
- CERTIFICATE cert_name   
+ CERTIFICATE cert_name  
  用于对存储过程、函数、程序集或触发器进行签名的证书的名称。  
   
- ASYMMETRIC KEY Asym_key_name   
+ ASYMMETRIC KEY Asym_key_name  
  用于对存储过程、函数、程序集或触发器进行签名的非对称密钥的名称。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  可以在 sys.crypt_properties 目录视图中看到有关签名的信息。  
   
 ## <a name="permissions"></a>权限  

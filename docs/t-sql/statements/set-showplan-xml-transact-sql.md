@@ -1,4 +1,5 @@
 ---
+description: SET SHOWPLAN_XML (Transact-SQL)
 title: SET SHOWPLAN_XML (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2018
@@ -24,12 +25,12 @@ ms.assetid: a467a1b3-10a5-43c4-9085-13d8aed549c9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c76ef14e97a44b2e33c816c678700e9f4496ae2d
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: c9ba02ca79db2e79f14483e632eaa6fa77c3d4a0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87397041"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88304685"
 ---
 # <a name="set-showplan_xml-transact-sql"></a>SET SHOWPLAN_XML (Transact-SQL)
 
@@ -45,13 +46,15 @@ ms.locfileid: "87397041"
 SET SHOWPLAN_XML { ON | OFF }
 ```
 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="remarks"></a>备注
 
 SET SHOWPLAN_XML 的设置是在执行或运行时设置的，而不是在分析时设置的。
 
 如果 SET SHOWPLAN_XML 为 ON，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将在不执行语句的情况下返回每个语句的执行计划信息。不会执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 将该选项设置为 ON 以后，将返回有关所有后续 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的执行计划信息，直到将该选项设置为 OFF 为止。 例如，如果在 SET SHOWPLAN_XML 为 ON 时执行 CREATE TABLE 语句，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将从涉及同一个表的后续 SELECT 语句返回错误信息：指定的表不存在。 因此，对此表的后续引用将失败。 如果 SET SHOWPLAN_XML 为 OFF，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将执行语句，但不生成报表。
 
-SET SHOWPLAN_XML 可以为应用程序（如 **sqlcmd** 实用工具）将输出返回为 **nvarchar(max)** ，其中 XML 输出随后将由其他工具用来显示和处理查询计划信息。
+SET SHOWPLAN_XML 可以为应用程序（如 **sqlcmd** 实用工具）将输出返回为 **nvarchar(max)**，其中 XML 输出随后将由其他工具用来显示和处理查询计划信息。
 
 > [!NOTE]
 > 动态管理视图 **sys.dm_exec_query_plan** 将使用 **xml** 数据类型返回与 SET SHOWPLAN XML 相同的信息。 该信息是从 **sys.dm_exec_query_plan** 的 **query_plan** 列返回的。 有关详细信息，请参阅 [sys.dm_exec_query_plan (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)。
@@ -61,7 +64,7 @@ SET SHOWPLAN_XML 可以为应用程序（如 **sqlcmd** 实用工具）将输出
 SET SHOWPLAN_XML 将返回一组 XML 文档信息。 SET SHOWPLAN_XML ON 语句之后的每个批处理都将在单个文档输出中得到反映。 每个文档都包含批处理中语句的文本，后跟执行步骤的详细信息。 该文档可以显示估计的开销、行数、访问的索引数、执行的运算符的类型、联接次序以及有关执行计划的详细信息。
 
 > [!NOTE]
-> 如果在  **中选择了“包括实际的执行计划”，则该 SET 选项不会生成 XML 显示计划输出**[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 请在使用该 SET 选项之前清除“包括实际的执行计划”按钮  。
+> 如果在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中选择了“包括实际的执行计划”，则该 SET 选项不会生成 XML 显示计划输出****。 请在使用该 SET 选项之前清除“包括实际的执行计划”按钮****。
 
 ### <a name="location-of-showplan-output"></a>显示计划输出的位置
 
@@ -83,7 +86,7 @@ SET SHOWPLAN_XML 将返回一组 XML 文档信息。 SET SHOWPLAN_XML ON 语句�
 
 - 对于包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句引用的对象（如表、视图等）的所有数据库，具有 SHOWPLAN 权限。
 
-对于其他所有语句，如 DDL、USE database_name、SET、DECLARE、动态 SQL 等，只需要具有执行  *语句的相应权限*[!INCLUDE[tsql](../../includes/tsql-md.md)]。
+对于其他所有语句，如 DDL、USE database_name、SET、DECLARE、动态 SQL 等，只需要具有执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的相应权限  。
 
 ## <a name="examples"></a>示例
 

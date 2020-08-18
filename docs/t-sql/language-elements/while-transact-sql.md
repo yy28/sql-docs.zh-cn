@@ -1,4 +1,5 @@
 ---
+description: WHILE (Transact-SQL)
 title: WHILE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -22,12 +23,12 @@ ms.assetid: 52dd29ab-25d7-4fd3-a960-ac55c30c9ea9
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f11e2a6261976b3e96533647d37fcad3a1eaa792
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 78b7ac5ab0a9b65e50059f45e5bdca5e4219bf11
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915289"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88307331"
 ---
 # <a name="while-transact-sql"></a>WHILE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -59,9 +60,9 @@ WHILE Boolean_expression
 
 ## <a name="arguments"></a>参数
  *Boolean_expression*  
- 返回 TRUE 或 FALSE 的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)   。 如果布尔表达式中含有 SELECT 语句，则必须用括号将 SELECT 语句括起来。  
+ 返回 TRUE 或 FALSE 的[表达式](../../t-sql/language-elements/expressions-transact-sql.md) 。 如果布尔表达式中含有 SELECT 语句，则必须用括号将 SELECT 语句括起来。  
   
- {sql_statement*statement_block}*  |    
+ {sql_statement | statement_block}   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或用语句块定义的语句分组。 若要定义语句块，请使用控制流关键字 BEGIN 和 END。  
   
  BREAK  
@@ -70,7 +71,7 @@ WHILE Boolean_expression
  CONTINUE  
  使 WHILE 循环重新开始执行，忽略 CONTINUE 关键字后面的任何语句。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  如果嵌套了两个或多个 WHILE 循环，则内层的 BREAK 将退出到下一个外层循环。 将首先运行内层循环结束之后的所有语句，然后重新开始下一个外层循环。  
   
 ## <a name="examples"></a>示例  

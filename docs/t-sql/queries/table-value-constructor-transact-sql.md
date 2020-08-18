@@ -1,4 +1,5 @@
 ---
+description: 表值构造函数 (Transact-SQL)
 title: 表值构造函数 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/23/2019
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e57cd31d-140e-422f-8178-2761c27b9deb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7e7fe813ca74c5f8bfd8a7746a05613d95d3373c
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 9ac95b5d2fc71636ca55a29e0d82a2a35f13b816
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555530"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88306748"
 ---
 # <a name="table-value-constructor-transact-sql"></a>表值构造函数 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -67,7 +68,7 @@ VALUES ( <row value expression list> ) [ ,...n ]
   
 - 使用派生表  
   
-- 通过使用 [bcp 实用工具](../../tools/bcp-utility.md)、.NET [SqlBulkCopy 类](/dotnet/api/system.data.sqlclient.sqlbulkcopy)、[OPENROWSET (BULK ...)](../../t-sql/functions/openrowset-transact-sql.md) 或 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)语句批量导入数据   
+- 通过使用 [bcp 实用工具](../../tools/bcp-utility.md)、.NET [SqlBulkCopy 类](/dotnet/api/system.data.sqlclient.sqlbulkcopy)、[OPENROWSET (BULK ...)](../../t-sql/functions/openrowset-transact-sql.md) 或 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)语句批量导入数据****  
   
  只允许单个标量值作为行值表达式。 涉及多列的子查询不允许作为行值表达式。 例如，以下代码导致语法错误，因为第三个行值表达式列表包含具有多列的子查询。  
   
@@ -96,7 +97,7 @@ GO
 ```  
   
 ## <a name="data-types"></a>数据类型  
- 在多行 INSERT 语句中指定的值遵循 UNION ALL 语法的数据类型约定属性。 这会导致不匹配类型隐式转换到更高[优先级](../../t-sql/data-types/data-type-precedence-transact-sql.md)的类型。 如果此转换不是所支持的隐式转换，则返回错误。 例如，以下语句将整数值和字符值插入到类型为 char 的列中  。  
+ 在多行 INSERT 语句中指定的值遵循 UNION ALL 语法的数据类型约定属性。 这会导致不匹配类型隐式转换到更高[优先级](../../t-sql/data-types/data-type-precedence-transact-sql.md)的类型。 如果此转换不是所支持的隐式转换，则返回错误。 例如，以下语句将整数值和字符值插入到类型为 char 的列中****。  
   
 ```sql
 CREATE TABLE dbo.t (a int, b char);  

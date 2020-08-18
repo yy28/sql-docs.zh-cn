@@ -1,4 +1,5 @@
 ---
+description: CHECKSUM_AGG (Transact-SQL)
 title: CHECKSUM_AGG (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: cdede70c-4eb5-4c92-98ab-b07787ab7222
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7b01f8dd8ed2b460a347ef2f80fb1f2f6eef9ffe
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 6190b42e9e52f9f20e9ad645c0169f08dc7694a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113110"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88311123"
 ---
 # <a name="checksum_agg-transact-sql"></a>CHECKSUM_AGG (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,9 +53,9 @@ DISTINCT
 整数[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 `CHECKSUM_AGG` 不允许使用聚合函数或子查询。
   
 ## <a name="return-types"></a>返回类型
-将所有表达式值的校验和作为 int 类型返回   。
+将所有表达式值的校验和作为 int 类型返回******。
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
 `CHECKSUM_AGG` 可以检测表中的更改。
   
 `CHECKSUM_AGG` 结果不取决于表中行的顺序。 此外，`CHECKSUM_AGG` 函数允许使用 `DISTINCT` 关键字和 `GROUP BY` 子句。
@@ -64,7 +65,7 @@ DISTINCT
 `CHECKSUM_AGG` 具有类似于其他聚合函数的功能。 有关详细信息，请参阅[聚合函数 (Transact-SQL)](../../t-sql/functions/aggregate-functions-transact-sql.md)。
   
 ## <a name="examples"></a>示例  
-这些示例使用 `CHECKSUM_AGG` 检测 `Quantity` 数据库中 `ProductInventory` 表的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 列中的更改。
+这些示例使用 `CHECKSUM_AGG` 检测 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中 `ProductInventory` 表的 `Quantity` 列中的更改。
   
 ```sql
 --Get the checksum value before the column value is changed.  

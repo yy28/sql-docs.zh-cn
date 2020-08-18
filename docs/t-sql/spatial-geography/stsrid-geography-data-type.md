@@ -1,4 +1,5 @@
 ---
+description: STSrid（geography 数据类型）
 title: STSrid（geography 数据类型）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 6b04f5a7-2e69-4d34-901e-b61ba6ca9c14
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 57c580706f5a8a7c9fec02ca7675b6733cd9dddf
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: bc6f88b25a67e3d8904ea7823324111e60576ab7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555326"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88305834"
 ---
 # <a name="stsrid-geography-data-type"></a>STSrid（geography 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  STSrid 是一个表示该实例的空间引用标识符 (SRID) 的整数  。  
+  STSrid 是一个表示该实例的空间引用标识符 (SRID) 的整数****。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,11 +40,11 @@ ms.locfileid: "86555326"
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>返回类型
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型：int   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型：int  
   
- CLR 类型：SqlInt32   
+ CLR 类型：SqlInt32****  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  此属性可以进行修改。  
   
 ## <a name="examples"></a>示例  

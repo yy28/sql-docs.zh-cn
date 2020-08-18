@@ -1,4 +1,5 @@
 ---
+description: DBCC OUTPUTBUFFER (Transact-SQL)
 title: DBCC OUTPUTBUFFER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/16/2017
@@ -21,17 +22,17 @@ helpviewer_keywords:
 ms.assetid: e912a06d-9fde-4e26-b057-801255d79504
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: d89ceb8e32310ab732c4dc87bebda9011593ab5d
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 567f303b2ebd78fab3f6803ad2490ca1dc059e2b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484819"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88311253"
 ---
 # <a name="dbcc-outputbuffer-transact-sql"></a>DBCC OUTPUTBUFFER (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-以十六进制和 ASCII 格式返回指定 session_id 的当前输出缓冲区  。
+以十六进制和 ASCII 格式返回指定 session_id 的当前输出缓冲区**。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -47,9 +48,9 @@ DBCC OUTPUTBUFFER ( session_id [ , request_id ])
  *session_id*  
  与各活动主连接关联的会话 ID。  
   
- request_id   
+ request_id  
  要在当前会话中搜索的精确请求（批）。  
- 下面的查询返回 request_id  ：  
+ 下面的查询返回 request_id**：  
   
 ```sql
 SELECT request_id   
@@ -64,7 +65,7 @@ WHERE session_id = @@spid;
  取消严重级别从 0 到 10 的所有信息性消息。  
   
 ## <a name="remarks"></a>备注  
-DBCC OUTPUTBUFFER 显示发送到指定客户端 (session_id) 的结果  。 对于不包含输出流的进程，则返回错误消息。
+DBCC OUTPUTBUFFER 显示发送到指定客户端 (session_id) 的结果**。 对于不包含输出流的进程，则返回错误消息。
   
 若要显示所执行的、其返回的结果由 DBCC OUTPUTBUFFER 所显示的语句，请执行 DBCC INPUTBUFFER。
   

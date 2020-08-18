@@ -1,4 +1,5 @@
 ---
+description: SET 语句 (Transact-SQL)
 title: SET 语句 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -25,12 +26,12 @@ ms.assetid: f7e107f8-0fcf-408b-b30f-da2323eeb714
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azure-sqldw-latest ||= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 20cf6e1c3c98a99898a7b302980d76cef327be5d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dd292426814dee01488150ba2bac7707dd0e5d13
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70228496"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88303938"
 ---
 # <a name="set-statements-transact-sql"></a>SET 语句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -58,13 +59,13 @@ ms.locfileid: "70228496"
   - SET PARSEONLY
   - 和 SET QUOTED_IDENTIFIER  
   
-- 如果是在存储过程或触发器中运行 SET 语句，则存储过程或触发器返回控制后，将恢复 SET 选项的值。 同样，如果是在使用 sp_executesql 或 EXECUTE 运行的动态 SQL 字符串中指定 SET 语句，则从在动态 SQL 字符串中指定的批处理返回控制后，将恢复 SET 选项的值  。  
+- 如果是在存储过程或触发器中运行 SET 语句，则存储过程或触发器返回控制后，将恢复 SET 选项的值。 同样，如果是在使用 sp_executesql 或 EXECUTE 运行的动态 SQL 字符串中指定 SET 语句，则从在动态 SQL 字符串中指定的批处理返回控制后，将恢复 SET 选项的值****。  
   
 - 存储过程使用执行时指定的 SET 设置执行，但 SET ANSI_NULLS 和 SET QUOTED_IDENTIFIER 除外。 指定 SET ANSI_NULLS 或 SET QUOTED_IDENTIFIER 的存储过程使用创建存储过程时指定的设置。 如果在存储过程内使用任何 SET 设置，则该设置将被忽略。  
   
-- sp_configure 的 user options 设置允许服务器范围的设置，并可以跨多个数据库运行   。 此设置的行为还类似于显式 SET 语句，只是后者发生在登录时。  
+- sp_configure 的 user options 设置允许服务器范围的设置，并可以跨多个数据库运行********。 此设置的行为还类似于显式 SET 语句，只是后者发生在登录时。  
   
-- 使用 ALTER DATABASE 设置的数据库设置仅在数据库级有效，并且仅在显式设置时有效。 数据库设置优先于使用 sp_configure 设置的实例选项设置  。  
+- 使用 ALTER DATABASE 设置的数据库设置仅在数据库级有效，并且仅在显式设置时有效。 数据库设置优先于使用 sp_configure 设置的实例选项设置****。  
   
 - 如果 SET 语句使用 ON 和 OFF 时，则可为一个语句指定多个 SET 选项。
   
@@ -73,7 +74,7 @@ ms.locfileid: "70228496"
   
      例如，`SET QUOTED_IDENTIFIER, ANSI_NULLS ON` 可将 QUOTED_IDENTIFIER 和 ANSI_NULLS 设置为 ON。  
   
-- SET 语句设置优先于使用 ALTER DATABASE 设置的等价数据库选项设置。 例如，SET ANSI_NULLS 语句中指定的值将覆盖 ANSI_NULL 的数据库设置。 此外，如果用户在连接到数据库时依据的值是因为先前使用 sp_configure user options 设置而生效的，或者所依据的值适用于所有 ODBC 和 OLE/DB 连接，则一些连接设置将自动设置为 ON  。  
+- SET 语句设置优先于使用 ALTER DATABASE 设置的等价数据库选项设置。 例如，SET ANSI_NULLS 语句中指定的值将覆盖 ANSI_NULL 的数据库设置。 此外，如果用户在连接到数据库时依据的值是因为先前使用 sp_configure user options 设置而生效的，或者所依据的值适用于所有 ODBC 和 OLE/DB 连接，则一些连接设置将自动设置为 ON****。  
   
 - ALTER、CREATE 和 DROP DATABASE 语句不提供 SET LOCK_TIMEOUT 设置。  
   
@@ -83,7 +84,7 @@ ms.locfileid: "70228496"
   
 - 多个活动的结果集 (MARS) 请求共享一个全局状态，该状态包含最新会话 SET 选项设置。 每个请求执行时都可以修改 SET 选项。 更改特定于设置这些更改所在的请求上下文，不影响其他并发 MARS 请求。 但是，请求执行完成后，新的 SET 选项会被复制到全局会话状态。 在此更改之后，同一会话中执行的新请求将使用这些新的 SET 选项设置。  
   
-- 当从批处理或其他存储过程运行某个存储过程时，运行该存储过程时使用的选项值，就是在包含该存储过程的数据库中设置的选项值。 例如，存储过程 db1.dbo.sp1 调用存储过程 db2.dbo.sp2 时，执行存储过程 sp1 时将使用数据库 db1 的当前兼容级别设置，执行存储过程 sp2 时将使用数据库 db2 的当前兼容级别设置       。  
+- 当从批处理或其他存储过程运行某个存储过程时，运行该存储过程时使用的选项值，就是在包含该存储过程的数据库中设置的选项值。 例如，存储过程 db1.dbo.sp1 调用存储过程 db2.dbo.sp2 时，执行存储过程 sp1 时将使用数据库 db1 的当前兼容级别设置，执行存储过程 sp2 时将使用数据库 db2 的当前兼容级别设置************************。  
   
 - 如果 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句关注的对象驻留在多个数据库中，则将对该语句应用当前数据库上下文和当前连接上下文。 在这种情况下，如果 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句在批处理中，则当前连接上下文是 USE 语句定义的数据库；如果 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句在存储过程中，则连接上下文是包含该存储过程的数据库。  
   

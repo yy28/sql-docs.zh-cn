@@ -1,4 +1,5 @@
 ---
+description: 筛选跟踪
 title: 筛选跟踪 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6d5677de166b1bfff58c64665901ce814a7448fa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d6ba791898d86f9e51baa9bd516e8a6752a94254
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751006"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88325101"
 ---
 # <a name="filter-a-trace"></a>筛选跟踪
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -61,14 +62,14 @@ ms.locfileid: "85751006"
   
  筛选器可用性取决于数据列。 某些数据列无法筛选。 可筛选的数据列只能使用部分关系运算符进行筛选，如下表所示。  
   
-|关系运算符|运算符|说明|  
+|关系运算符|运算符|描述|  
 |-------------------------|---------------------|-----------------|  
 |Like|LIKE|指定跟踪事件数据必须类似于输入文本。 允许使用多个值。|  
 |不类似于|不类似于|指定跟踪事件数据不能与输入文本类似。 允许使用多个值。|  
 |等于|=|指定跟踪事件数据必须等于输入的值。 允许使用多个值。|  
 |不等于|<>|指定跟踪事件数据不能等于输入的值。 允许使用多个值。|  
 |大于|>|指定跟踪事件数据必须大于输入的值。|  
-|大于或等于|>=|指定跟踪事件数据必须大于或等于输入的值。|  
+|大于等于|>=|指定跟踪事件数据必须大于或等于输入的值。|  
 |小于|<|指定跟踪事件数据必须小于输入的值。|  
 |小于或等于|<=|指定跟踪事件数据必须小于或等于输入的值。|  
   
@@ -76,13 +77,13 @@ ms.locfileid: "85751006"
   
 |数据列|关系运算符|  
 |------------------|--------------------------|  
-|ApplicationName |LIKE、NOT LIKE|  
+|ApplicationName|LIKE、NOT LIKE|  
 |**BigintData1**|=, <>, >=, <=|  
 |**BigintData2**|=, <>, >=, <=|  
 |**BinaryData**|使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 筛选此数据列中的事件。 有关详细信息，请参阅 [使用 SQL Server Profiler 筛选跟踪](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)。|  
 |**ClientProcessID**|=, <>, >=, <=|  
 |**ColumnPermissions**|=, <>, >=, <=|  
-|CPU |=, <>, >=, <=|  
+|**CPU**|=, <>, >=, <=|  
 |**DatabaseID**|=, <>, >=, <=|  
 |**DatabaseName**|LIKE、NOT LIKE|  
 |**DBUserName**|LIKE、NOT LIKE|  
@@ -134,7 +135,7 @@ ms.locfileid: "85751006"
 |**TargetUserName**|LIKE、NOT LIKE|  
 |**TextData** *|LIKE、NOT LIKE|  
 |**TransactionID**|=, <>, >=, <=|  
-|类型 |=, <>, >=, <=|  
+|**类型**|=, <>, >=, <=|  
 |**Writes**|=, <>, >=, <=|  
 |**XactSequence**|=, <>, >=, <=|  
   
@@ -154,7 +155,7 @@ ms.locfileid: "85751006"
   
  [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)  
   
- [sp_addlinkedsrvlogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)  
+ [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)  
   
  [sp_addlogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)  
   
