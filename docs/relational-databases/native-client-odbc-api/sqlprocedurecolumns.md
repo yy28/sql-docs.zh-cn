@@ -1,4 +1,5 @@
 ---
+description: SQLProcedureColumns
 title: SQLProcedureColumns |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -14,24 +15,25 @@ ms.assetid: 6671e180-0072-4de5-90f5-314306d2ba9c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 748e5df362231c4871b3777436d755227d2ec1b8
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: fc569bdb7eab6ce35a68d66829510c23373c25ac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011154"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424019"
 ---
 # <a name="sqlprocedurecolumns"></a>SQLProcedureColumns
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  **SQLProcedureColumns**返回一个报告所有存储过程的返回值属性的行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+  **SQLProcedureColumns** 返回一个报告所有存储过程的返回值属性的行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
- **SQLProcedureColumns**返回 SQL_SUCCESS *CatalogName*、 *SchemaName*、 *ProcName*或*ColumnName*参数是否存在值。 当在这些参数中使用了无效值时， **SQLFetch**将返回 SQL_NO_DATA。  
+ **SQLProcedureColumns** 返回 SQL_SUCCESS *CatalogName*、 *SchemaName*、 *ProcName*或 *ColumnName* 参数是否存在值。 当在这些参数中使用了无效值时， **SQLFetch**将返回 SQL_NO_DATA。  
   
- 可以对静态服务器游标执行**SQLProcedureColumns** 。 尝试对可更新的（动态或键集）游标执行**SQLProcedureColumns**时，将返回 SQL_SUCCESS_WITH_INFO，指示游标类型已更改。  
+ 可以对静态服务器游标执行**SQLProcedureColumns** 。 尝试对可更新的 (动态或键集) 游标执行 **SQLProcedureColumns** 将返回 SQL_SUCCESS_WITH_INFO，指示游标类型已更改。  
   
- 下表列出了结果集返回的列，以及如何通过 Native Client ODBC 驱动程序扩展这些列来处理**udt**和**xml**数据类型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ：  
+ 下表列出了结果集返回的列，以及如何通过 Native Client ODBC 驱动程序扩展这些列来处理 **udt** 和 **xml** 数据类型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ：  
   
-|列名称|说明|  
+|列名称|描述|  
 |-----------------|-----------------|  
 |SS_UDT_CATALOG_NAME|返回包含 UDT（用户定义类型）的目录的名称。|  
 |SS_UDT_SCHEMA_NAME|返回包含 UDT 的架构的名称。|  
@@ -65,15 +67,15 @@ ms.locfileid: "86011154"
   
  为了符合 ODBC 规范，SS_TYPE_CATALOG_NAME 和 SS_TYPE_SCHEMA_NAME 的显示位置位于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本中添加的所有驱动程序特定列之前，ODBC 自身托管的所有列之后。  
   
- 有关表值参数的详细信息，请参阅[ODBC&#41;&#40;表值参数](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
+ 有关表值参数的详细信息，请参阅 [ODBC&#41;&#40;表值参数 ](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
   
 ## <a name="sqlprocedurecolumns-support-for-enhanced-date-and-time-features"></a>SQLProcedureColumns 对日期和时间增强功能的支持  
- 有关为日期/时间类型返回的值，请参阅[目录元数据](../../relational-databases/native-client-odbc-date-time/metadata-catalog.md)。  
+ 有关为日期/时间类型返回的值，请参阅 [目录元数据](../../relational-databases/native-client-odbc-date-time/metadata-catalog.md)。  
   
- 有关更多常规信息，请参阅[ODBC&#41;&#40;日期和时间改进](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
+ 有关更多常规信息，请参阅 [ODBC&#41;&#40;日期和时间改进 ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
 ## <a name="sqlprocedurecolumns-support-for-large-clr-udts"></a>SQLProcedureColumns 对大型 CLR UDT 的支持  
- **SQLProcedureColumns**支持大型 CLR 用户定义类型（udt）。 有关详细信息，请参阅[&#40;ODBC&#41;的大型 CLR 用户定义类型](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
+ **SQLProcedureColumns** 支持 (udt) 的大型 CLR 用户定义类型。 有关详细信息，请参阅 [&#40;ODBC&#41;的大型 CLR 用户定义类型 ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLProcedureColumns 函数](https://go.microsoft.com/fwlink/?LinkId=59363)   

@@ -1,4 +1,5 @@
 ---
+description: 从 .dqs 文件导入知识库
 title: 从 .dqs 文件导入知识库
 ms.date: 03/01/2017
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9b9786fe-9e80-429a-afcb-dc3b3dd6f0b0
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: eb9487a3f633aa60dcfd66557d3fb9d33f62ad54
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c6be16bf484f3b5f6f55afaaacbeda8d2bb6d341
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895431"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491549"
 ---
 # <a name="import-a-knowledge-base-from-a-dqs-file"></a>从 .dqs 文件导入知识库
 
@@ -38,7 +39,7 @@ ms.locfileid: "85895431"
 ####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  您必须对 DQS_MAIN 数据库具有 dqs_kb_editor 或 dqs_administrator 角色，才能从 .dqs 数据文件导入知识库。  
   
-##  <a name="import-a-knowledge-base-from-a-dqs-file"></a><a name="Import"></a>从 dqs 文件导入知识库  
+##  <a name="import-a-knowledge-base-from-a-dqs-file"></a><a name="Import"></a> 从 dqs 文件导入知识库  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
   
@@ -50,13 +51,13 @@ ms.locfileid: "85895431"
   
 5.  对于 **“选择数据文件”**，单击 **“浏览”**。  
   
-6.  在 **“从数据文件导入”** 对话框中，转到包含要导入的 .dqs 文件的文件夹，然后单击该文件的名称。 单击“打开” 。  
+6.  在 **“从数据文件导入”** 对话框中，转到包含要导入的 .dqs 文件的文件夹，然后单击该文件的名称。 单击“打开”。  
   
 7.  验证 **“域”** 列表中显示正确的知识库和域。  
   
 8.  选择要执行的活动，然后单击 **“创建”**。  
   
-9. 在 **“导入知识库”** 对话框中，验证状态行是否指示导入已完成。 单击 **“确定”** 。  
+9. 在 **“导入知识库”** 对话框中，验证状态行是否指示导入已完成。 单击“确定”。  
   
 10. 完成知识发现、域管理或需要执行的匹配策略任务，然后单击 **“完成”**。  
   

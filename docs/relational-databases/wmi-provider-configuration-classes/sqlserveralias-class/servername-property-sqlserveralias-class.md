@@ -1,5 +1,6 @@
 ---
-title: ServerName 属性（SqlServerAlias）
+description: ServerName 属性（SqlServerAlias 类）
+title: 'ServerName 属性 (SqlServerAlias) '
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 58c82b19-b548-42fa-9c5a-059b606da097
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2933791b9fef30a49340a5781cdbeec9305fac69
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7a4ef5a8d80f97136bc6313254d07a1a89ffe2ab
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888445"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472774"
 ---
 # <a name="servername-property-sqlserveralias-class"></a>ServerName 属性（SqlServerAlias 类）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -36,8 +37,8 @@ object.ServerName [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- *object*  
- 一个表示别名的[SqlServerAlias 类](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md)对象 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
+ 对象  
+ 一个表示别名的 [SqlServerAlias 类](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md) 对象 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  一个指定服务器连接别名引用的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称的字符串值。  

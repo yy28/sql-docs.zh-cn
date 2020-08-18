@@ -1,5 +1,6 @@
 ---
-title: sys.sys列（Transact-sql） |Microsoft Docs
+description: sys.syscolumns (Transact-SQL)
+title: " (Transact-sql) sys.sys列 |Microsoft Docs"
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,12 +22,12 @@ ms.assetid: 863fd87b-ff33-4ac5-9aa9-df21140681da
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c8dcf0f88fed4ef48cc90a6057a757a205d9e56b
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 7f16d1975d4e8ac872c8c8d625b935b738fbfdb8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396059"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423361"
 ---
 # <a name="syssyscolumns-transact-sql"></a>sys.syscolumns (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -58,11 +59,11 @@ ms.locfileid: "87396059"
 |**autoval**|varbinary(8000)****|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**offset**|**smallint**|此列所在行的偏移量。|  
 |**collationid**|**int**|列的排序规则的 ID。 对于非字符列，此值为 NULL。|  
-|**status**|**tinyint**|用于说明列或参数的属性的位图：<br /><br /> 0x08 = 列允许空值。<br /><br /> 0x10 = 在添加**varchar**或**varbinary**列后，ANSI 填充已生效。 为**varchar**保留尾随空格，并保留**varbinary**列的尾随零。<br /><br /> 0x40 = 参数为 OUTPUT 参数。<br /><br /> 0x80 = 列为标识列。|  
-|**type**|**tinyint**|**Sys**中的物理存储类型。**类型**。|  
+|**status**|**tinyint**|用于说明列或参数的属性的位图：<br /><br /> 0x08 = 列允许空值。<br /><br /> 0x10 = 在添加 **varchar** 或 **varbinary** 列后，ANSI 填充已生效。 为 **varchar** 保留尾随空格，并保留 **varbinary** 列的尾随零。<br /><br /> 0x40 = 参数为 OUTPUT 参数。<br /><br /> 0x80 = 列为标识列。|  
+|type|**tinyint**|**Sys**中的物理存储类型。**类型**。|  
 |**usertype**|**smallint**|**Sys.databases 类型**的用户定义数据类型的 ID。 如果数据类型的数字超过 32,767，则溢出或返回 NULL。|  
 |**printfmt**|**varchar(255)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**prec**|**smallint**|此列的精度级别。<br /><br /> -1 = **xml**或大值类型。|  
+|**prec**|**smallint**|此列的精度级别。<br /><br /> -1 = **xml** 或大值类型。|  
 |**scale**|**int**|此列的小数位数。<br /><br /> NULL = 数据类型不是数值。|  
 |**iscomputed**|**int**|指示列是否为计算列的标志：<br /><br /> 0 = 非计算列。<br /><br /> 1 = 计算列。|  
 |**isoutparam**|**int**|指示过程参数是否为输出参数：<br /><br /> 1 = True<br /><br /> 0 = False|  

@@ -1,4 +1,5 @@
 ---
+description: 创建变量值文件 (SybaseToSQL)
 title: 创建变量值文件 (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 395be464-4b19-44f7-91e5-b8876d6743dc
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: d995562f1b62e04629861d1d562b9ed50e8c5db3
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 71c6a40db00734c487ff8de5e97bcd4d7c7b5d4e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87931869"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492266"
 ---
 # <a name="creating-variable-value-files-sybasetosql"></a>创建变量值文件 (SybaseToSQL)
-变量值文件是一个 XML 文件，其中包含命令的参数值（例如），这是经常从一台服务器迁移到另一台服务器的源服务器或目标服务器名称。 当发生大量的数据库迁移时，将在主脚本文件中创建多个用于存储每个源服务器的值的变量文件，并在命令行上使用 **-v**开关来引用这些文件。 这有助于在包含多个变量文件中的变量值的几个脚本文件中维护静态值。  
+变量值文件是一个 XML 文件，其中包含命令的参数值（例如），这是经常从一台服务器迁移到另一台服务器的源服务器或目标服务器名称。 当发生大量的数据库迁移时，将在主脚本文件中创建多个用于存储每个源服务器的值的变量文件，并在命令行上使用 **-v** 开关来引用这些文件。 这有助于在包含多个变量文件中的变量值的几个脚本文件中维护静态值。  
   
 > [!NOTE]  
 > 1.  变量名称以 $ (美元) 符号为前缀并带有后缀。 如果变量值文件中没有为变量赋值，则在分析脚本文件时将遇到错误，从而导致控制台执行过程停止。  
@@ -90,8 +91,8 @@ ms.locfileid: "87931869"
 用户可以根据 "架构" 文件夹中提供的架构定义文件 ConsoleScriptVariablesSchema 来轻松地验证其变量值文件 **。**  
   
 ## <a name="next-step"></a>下一步  
-操作控制台的下一步是[&#40;SybaseToSQL 创建服务器连接文件&#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)  
+操作控制台的下一步是 [&#40;SybaseToSQL 创建服务器连接文件&#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)  
   
 ## <a name="see-also"></a>另请参阅  
-[ (Sybase) 创建服务器文件](https://msdn.microsoft.com/35ef396f-9f98-429d-9fc5-4f413d08fb37)  
+[ (Sybase) 创建服务器文件 ](https://msdn.microsoft.com/35ef396f-9f98-429d-9fc5-4f413d08fb37)  
   

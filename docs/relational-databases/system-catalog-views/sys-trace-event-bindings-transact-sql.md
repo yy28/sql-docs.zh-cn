@@ -1,5 +1,6 @@
 ---
-title: sys. trace_event_bindings （Transact-sql） |Microsoft Docs
+description: sys.trace_event_bindings (Transact-SQL)
+title: sys. trace_event_bindings (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,33 +20,33 @@ helpviewer_keywords:
 ms.assetid: 22f534e1-4ed6-4b3e-9ead-1d1001a1b0f5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 10d27989dd5f6fe224d3fc8a70da27634b70ce32
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8e658148706de82ba382ca6acae4e1b02014ce92
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883602"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460534"
 ---
 # <a name="systrace_event_bindings-transact-sql"></a>sys.trace_event_bindings (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **Sys. trace_event_bindings**目录视图包含事件和列的所有可能的用法组合的列表。 对于 " **trace_event_id** " 列中列出的每个事件，所有可用列都列在 " **trace_column_id** " 列中。 每当发生给定事件时，并不是所有可用列都被填充。 在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的给定版本中，这些值不变。  
   
- 有关支持的跟踪事件的完整列表，请参阅[SQL Server 事件类引用](../../relational-databases/event-classes/sql-server-event-class-reference.md)。  
+ 有关支持的跟踪事件的完整列表，请参阅 [SQL Server 事件类引用](../../relational-databases/event-classes/sql-server-event-class-reference.md)。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 请改用扩展事件目录视图。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**trace_event_id**|**smallint**|跟踪事件的 ID。 此列也位于**trace_events sys.databases**目录视图中。|  
-|**trace_column_id**|**smallint**|跟踪列的 ID。 此列也位于**trace_columns sys.databases**目录视图中。|  
+|**trace_event_id**|**smallint**|跟踪事件的 ID。 此列也位于 **trace_events sys.databases** 目录视图中。|  
+|**trace_column_id**|**smallint**|跟踪列的 ID。 此列也位于 **trace_columns sys.databases** 目录视图中。|  
   
 ## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;Transact-sql&#41;的对象目录视图](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [对象目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-traces-transact-sql.md)   
  [sys. trace_categories &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-trace-categories-transact-sql.md)   
  [sys. trace_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-trace-columns-transact-sql.md)   

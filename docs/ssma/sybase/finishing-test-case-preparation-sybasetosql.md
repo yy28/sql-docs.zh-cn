@@ -1,4 +1,5 @@
 ---
+description: 完成测试用例准备 (SybaseToSQL)
 title: 完成测试用例准备 (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,54 +12,54 @@ helpviewer_keywords:
 ms.assetid: 8b2a49b0-4296-4f3f-9e56-323aa6a6fa8e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: bbc833070b127d885bf223340a1c5e35388f9cdb
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: a1a3c415e8c13bf0ed1eaf4c75baf0230544964c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87931622"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492218"
 ---
 # <a name="finishing-test-case-preparation-sybasetosql"></a>完成测试用例准备 (SybaseToSQL)
 向导的最后一页显示测试用例说明以及有关测试中涉及的对象的信息。 此外，在此页上，您可以设置测试执行选项。  
   
 **测试用例信息**部分显示了测试用例的名称和说明。  
   
-"**测试对象**" 部分包含按对象类型分组的已测试对象的命名列表。  
+" **测试对象** " 部分包含按对象类型分组的已测试对象的命名列表。  
   
-"**受影响的对象**" 部分显示指定的对象列表，这些对象在经过测试的对象执行后应比较数据更改。  
+" **受影响的对象** " 部分显示指定的对象列表，这些对象在经过测试的对象执行后应比较数据更改。  
   
 ## <a name="test-case-settings"></a>测试用例设置  
-在 "**测试用例设置**" 部分中，可以设置以下执行测试选项：  
+在 " **测试用例设置** " 部分中，可以设置以下执行测试选项：  
   
 ### <a name="stop-test-execution-after-first-failure"></a>在第一次失败后停止测试执行  
 指定在测试执行过程中发生错误时中断测试。  
   
 -   如果选择 **"是"**，则在发生错误时，测试执行将中断。  
   
--   如果选择 "**否**"，则在出现错误后将继续执行测试。  
+-   如果选择 " **否**"，则在出现错误后将继续执行测试。  
   
 ### <a name="perform-data-rollback"></a>执行数据回滚  
 在测试执行后启用自动数据回滚。  
   
 -   如果选择 **"是"**，则在执行测试后将丢失数据更改。  
   
--   如果选择 "**否**"，则将保存所有测试执行数据更改。  
+-   如果选择 " **否**"，则将保存所有测试执行数据更改。  
   
 ### <a name="auxiliary-tables-saving-mode"></a>辅助表保存模式  
-定义在测试执行过程中创建的辅助表的保存模式。 请参阅[运行测试用例](../../ssma/sybase/running-test-cases-sybasetosql.md)中的辅助表的说明 &#40;SybaseToSQL&#41;主题。  
+定义在测试执行过程中创建的辅助表的保存模式。 请参阅 [运行测试用例 ](../../ssma/sybase/running-test-cases-sybasetosql.md) 中的辅助表的说明 &#40;SybaseToSQL&#41;主题。  
   
--   如果选择 "**始终保存**"，则将始终存储辅助表数据以供以后使用。  
+-   如果选择 " **始终保存**"，则将始终存储辅助表数据以供以后使用。  
   
--   如果选择 "**如果表比较失败**，则仅在发生错误时才存储辅助表数据"。  
+-   如果选择 " **如果表比较失败**，则仅在发生错误时才存储辅助表数据"。  
   
--   如果选择 "**始终删除**"，则测试执行后将始终删除辅助表。  
+-   如果选择 " **始终删除**"，则测试执行后将始终删除辅助表。  
   
--   如果选择 "**在表比较失败时询问用户**"，则在发生错误时，用户可以选择必要的操作。  
+-   如果选择 " **在表比较失败时询问用户**"，则在发生错误时，用户可以选择必要的操作。  
   
-单击 "**完成**" 按钮，将准备好的测试用例保存到[使用测试存储库 &#40;SybaseToSQL&#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md)。  
+单击 " **完成** " 按钮，将准备好的测试用例保存到 [使用测试存储库 &#40;SybaseToSQL&#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md)。  
   
 ## <a name="see-also"></a>另请参阅  
 [使用测试存储库 &#40;SybaseToSQL&#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md)  
-[&#40;SybaseToSQL&#41;运行测试用例](../../ssma/sybase/running-test-cases-sybasetosql.md)  
+[&#40;SybaseToSQL&#41;运行测试用例 ](../../ssma/sybase/running-test-cases-sybasetosql.md)  
 [测试迁移的数据库对象 &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

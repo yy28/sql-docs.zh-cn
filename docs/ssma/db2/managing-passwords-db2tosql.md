@@ -1,4 +1,5 @@
 ---
+description: " (DB2ToSQL) 管理密码"
 title: " (DB2ToSQL) 管理密码 |Microsoft Docs"
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 56d546e3-8747-4169-aace-693302667e94
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: af41c1a9eed355d75d5bd3e48886845b9a3069d1
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 25a6063863355fe40f36ab00bf7473d5d3d690d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87936675"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472476"
 ---
 # <a name="managing-passwords-db2tosql"></a> (DB2ToSQL) 管理密码
 本部分介绍如何保护数据库密码，以及如何在服务器之间导入或导出数据库密码：  
@@ -97,9 +98,9 @@ SSMA 允许保护数据库的密码。
 ## <a name="exporting-or-importing-encrypted-passwords"></a>导出或导入加密的密码  
 SSMA 控制台应用程序允许将本地计算机上的文件中存在的加密数据库密码导出到受保护的文件，反之亦然。 它有助于独立加密密码计算机。
 
-_导出功能_从本地受保护的存储读取服务器 id 和密码。 然后，系统会将 id 和密码保存在加密文件中。 系统将提示用户输入安全文件的密码。 请确保输入的密码长度为8个或更多个字符。 此安全文件可在不同的计算机之间移植。
+_导出功能_ 从本地受保护的存储读取服务器 id 和密码。 然后，系统会将 id 和密码保存在加密文件中。 系统将提示用户输入安全文件的密码。 请确保输入的密码长度为8个或更多个字符。 此安全文件可在不同的计算机之间移植。
 
-_导入功能_从安全文件中读取服务器 id 和密码信息。 系统将提示用户输入安全文件的密码，并将该信息附加到本地受保护的存储中。  
+_导入功能_ 从安全文件中读取服务器 id 和密码信息。 系统将提示用户输入安全文件的密码，并将该信息附加到本地受保护的存储中。  
 
 ### <a name="export-example"></a>导出示例
 
