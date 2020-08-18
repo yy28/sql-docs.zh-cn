@@ -1,4 +1,5 @@
 ---
+description: SET FIPS_FLAGGER (Transact-SQL)
 title: SET FIPS_FLAGGER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e82f6bee-6cf6-4061-be22-9ad2e8e9d3d6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fcbc4df284ef9fdd6467cf5bbe52e91c5c98da18
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: d915f45f9b73b6701ac0994ec87bcf31acb999bd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484653"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88356853"
 ---
 # <a name="set-fips_flagger-transact-sql"></a>SET FIPS_FLAGGER (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,17 +48,17 @@ SET FIPS_FLAGGER ( 'level' |  OFF )
  **'** *level* **'**  
  对 FIPS 127-2 标准的遵从级别，将检查所有数据库操作是否达到该级别。 如果数据库操作与选定的 ISO 标准级别冲突，则 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将生成一个警告。  
   
- level 必须为以下值之一  。  
+ level 必须为以下值之一**。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |ENTRY|检查是否遵从 ISO 入门级标准。|  
 |FULL|检查是否遵从 ISO 完全级标准。|  
 |INTERMEDIATE|检查是否遵从 ISO 中间级标准。|  
 |OFF|不检查是否遵从标准。|  
   
-## <a name="remarks"></a>备注  
- `SET FIPS_FLAGGER` 的设置是在分析时设置，而不是在执行或运行时设置。 在分析时进行设置意味着：SET 语句只要出现在批处理或存储过程中即生效，与代码执行实际上是否到达该点无关；并且 `SET` 语句在任何语句执行之前生效。 例如，假设 `SET` 语句在 `IF...ELSE` 语句块中，而在执行过程中从未到达过该语句块，但由于分析了 `SET` 语句块，因此 `IF...ELSE` 语句仍生效。  
+## <a name="remarks"></a>注解  
+ `SET FIPS_FLAGGER` 的设置是在分析时设置，而不是在执行或运行时设置。 在分析时进行设置意味着：SET 语句只要出现在批处理或存储过程中即生效，与代码执行实际上是否到达该点无关；并且 `SET` 语句在任何语句执行之前生效。 例如，假设 `SET` 语句在 `IF...ELSE` 语句块中，而在执行过程中从未到达过该语句块，但由于分析了 `IF...ELSE` 语句块，因此 `SET` 语句仍生效。  
   
  如果在存储过程中设置 `SET FIPS_FLAGGER`，则从存储过程返回控制后将还原 `SET FIPS_FLAGGER` 的值。 因此，动态 SQL 中指定的 `SET FIPS_FLAGGER` 语句对动态 SQL 语句之后的任何语句无效。  
   

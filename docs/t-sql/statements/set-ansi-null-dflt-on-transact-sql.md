@@ -1,4 +1,5 @@
 ---
+description: SET ANSI_NULL_DFLT_ON (Transact-SQL)
 title: SET ANSI_NULL_DFLT_ON (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/04/2017
@@ -24,12 +25,12 @@ ms.assetid: 8c925924-a466-4c8b-aeb2-7e0d341f32db
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c4c4c864ba43d695a88080a77887a015dde7903c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 4f37d1ecc339d531204195788cc6fd7bdf6d0c8c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002448"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88357413"
 ---
 # <a name="set-ansi_null_dflt_on-transact-sql"></a>SET ANSI_NULL_DFLT_ON (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,10 +53,12 @@ SET ANSI_NULL_DFLT_ON {ON | OFF}
 SET ANSI_NULL_DFLT_ON ON
 ```
 
-## <a name="remarks"></a>备注  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>备注
  仅当在 CREATE TABLE 和 ALTER TABLE 语句中没有指定列的为空性时，该设置才能影响新列的为空性。 SET ANSI_NULL_DFLT_ON 为 ON 时，如果没有显式指定列的为空性状态，则使用 ALTER TABLE 和 CREATE TABLE 语句创建的新列可以使用空值。 SET ANSI_NULL_DFLT_ON 对使用显式 NULL 或 NOT NULL 创建的列无效。  
   
- 不能同时将 SET ANSI_NULL_DFLT_OFF 和 SET ANSI_NULL_DFLT_ON 设置为 ON。 如果将一个选项设置为 ON，则将另一个选项设置为 OFF。 因此，可以将 ANSI_NULL_DFLT_OFF 或 ANSI_NULL_DFLT_ON 设置为 ON，或者将二者都设置为 OFF。 如果有一个选项为 ON，则该设置（SET ANSI_NULL_DFLT_OFF 或 SET ANSI_NULL_DFLT_ON）生效。 如果将这两个选项都设置为 OFF，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将使用 **sys.databases** 目录视图中 [is_ansi_null_default_on](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 列的值。  
+ 不能同时将 SET ANSI_NULL_DFLT_OFF 和 SET ANSI_NULL_DFLT_ON 设置为 ON。 如果将一个选项设置为 ON，则将另一个选项设置为 OFF。 因此，可以将 ANSI_NULL_DFLT_OFF 或 ANSI_NULL_DFLT_ON 设置为 ON，或者将二者都设置为 OFF。 如果有一个选项为 ON，则该设置（SET ANSI_NULL_DFLT_OFF 或 SET ANSI_NULL_DFLT_ON）生效。 如果将这两个选项都设置为 OFF，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将使用 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图中 **is_ansi_null_default_on** 列的值。  
   
  为使 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本在含有不同为空性设置的数据库中获得更可靠的操作，最好始终在 CREATE TABLE 和 ALTER TABLE 语句中指定 NULL 或 NOT NULL。  
   
@@ -69,7 +72,7 @@ SET ANSI_NULL_DFLT_ON ON
   
  要查看此设置的当前设置，请运行以下查询。  
   
-```  
+```sql  
 DECLARE @ANSI_NULL_DFLT_ON VARCHAR(3) = 'OFF';  
 IF ( (1024 & @@OPTIONS) = 1024 ) SET @ANSI_NULL_DFLT_ON = 'ON';  
 SELECT @ANSI_NULL_DFLT_ON AS ANSI_NULL_DFLT_ON;  
@@ -80,9 +83,9 @@ SELECT @ANSI_NULL_DFLT_ON AS ANSI_NULL_DFLT_ON;
  要求 **公共** 角色具有成员身份。  
   
 ## <a name="examples"></a>示例  
- 以下示例显示当 `SET ANSI_NULL_DFLT_ON`ANSI null default**数据库选项在两种设置下时，对** 的影响。  
+ 以下示例显示当 **ANSI null default** 数据库选项在两种设置下时，对 `SET ANSI_NULL_DFLT_ON` 的影响。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
   

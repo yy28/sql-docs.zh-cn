@@ -1,4 +1,5 @@
 ---
+description: “文件夹属性”对话框
 title: “文件夹属性”对话框 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/26/2016
@@ -14,12 +15,12 @@ f1_keywords:
 ms.assetid: d9a2bfae-fcc8-46be-b588-4a9db03f7e45
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 334105bde7936543fd1dba3167fd61e1b440fd5e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 29fb988b6c326f9c6bb6ef39d5d1fc031d12f908
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922643"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88351903"
 ---
 # <a name="folder-properties-dialog-box"></a>“文件夹属性”对话框
 
@@ -30,11 +31,11 @@ ms.locfileid: "86922643"
   
 ## <a name="to-set-folder-description-and-permissions"></a>设置文件夹说明和权限  
   
-1.  右键单击该文件夹并选择“属性”。   
+1.  右键单击该文件夹并选择“属性”。****  
   
 2.  在 **“常规”** 页上，选择 **“常规”** 下的 **“说明”** ，然后输入可选说明。  
   
-3.  在 **“权限”** 页上，单击 **“浏览...”** ，选择一个或多个数据库主体，然后单击 **“确定”** 。  
+3.  在 **“权限”** 页上，单击 **“浏览...”**，选择一个或多个数据库主体，然后单击 **“确定”**。  
   
 4.  在 **“登录名或角色”** 下选择一个名称，然后在 **“权限”** 下指定相应的权限。  
   

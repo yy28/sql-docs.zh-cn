@@ -1,4 +1,5 @@
 ---
+description: OPEN MASTER KEY (Transact-SQL)
 title: OPEN MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -29,12 +30,12 @@ ms.assetid: 1674753e-ca1e-4913-9ba4-b442e7106121
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb4ebb2171035977ca746ecd175844fc2ba93739
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 4dd0041d5be957a6dd78b8ba0e1ae382fc60fade
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485144"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88358193"
 ---
 # <a name="open-master-key-transact-sql"></a>OPEN MASTER KEY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,7 +56,7 @@ OPEN MASTER KEY DECRYPTION BY PASSWORD = 'password'
  '*password*'  
  对数据库主密钥加密的密码。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  如果数据库主密钥使用服务主密钥进行加密，则在需要此数据库主密钥进行解密或加密时，它将自动打开。 在这种情况下，不必使用 **OPEN MASTER KEY** 语句。  
   
  当数据库第一次附加或还原到新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例时，数据库主密钥（由服务主密钥加密）的副本尚未存储在服务器中。 必须使用 **OPEN MASTER KEY** 语句解密数据库主密钥 (DMK)。 一旦 DMK 解密后，通过使用 **ALTER MASTER KEY REGENERATE** 语句向服务器提供 DMK（使用服务主密钥 (SMK) 加密）的副本，即可拥有将来启用自动解密的选项。 当数据库已从较早版本升级后，应重新生成 DMK 以使用更新的 AES 算法。 有关重新生成 DMK 的详细信息，请参阅 [ALTER MASTER KEY (Transact-SQL)](../../t-sql/statements/alter-master-key-transact-sql.md)。 重新生成 DMK 密钥以升级到 AES 所需的时间取决于 DMK 保护的对象数。 重新生成 DMK 密钥以升级到 AES 只在必需时执行一次，不影响将来作为密钥循环策略的一部分而重新生成的过程。  

@@ -1,4 +1,5 @@
 ---
+description: SET DATEFORMAT (Transact-SQL)
 title: SET DATEFORMAT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -27,17 +28,17 @@ ms.assetid: da217878-7ec4-477e-aa13-604073c948f8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8983c1ffb63fae634fe86ffa8b90707d7242d014
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 9d7a2c4feb97c534dcef80c851e1df0ae2721a44
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484648"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88357143"
 ---
 # <a name="set-dateformat-transact-sql"></a>SET DATEFORMAT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  设置用于解释日期字符串的月、日和年日期部分的顺序。 这些字符串属于类型“date”、“smalldatetime”、“datetime”、“datetime2”或“datetimeoffset”      。  
+  设置用于解释日期字符串的月、日和年日期部分的顺序。 这些字符串属于类型“date”、“smalldatetime”、“datetime”、“datetime2”或“datetimeoffset”********************。  
   
  有关所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 日期和时间数据类型及函数的概述，请参阅[日期和时间数据类型及函数 (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。  
   
@@ -55,10 +56,10 @@ SET DATEFORMAT { format | @format_var }
  *format* |  **@** _format_var_  
  日期部分的顺序。 有效参数为 **mdy**、**dmy**、**ymd**、**ydm**、**myd** 和 **dym**。 可以是 Unicode，也可以是转换为 Unicode 的双字节字符集 (DBCS)。 美国英语默认值为 **mdy**。 有关所有支持语言的默认 DATEFORMAT，请参阅 [sp_helplanguage (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)。  
   
-## <a name="remarks"></a>备注  
- “date”、“datetime2”和“datetimeoffset”数据类型不支持 DATEFORMAT“ydm”     。  
+## <a name="remarks"></a>注解  
+ “date”、“datetime2”和“datetimeoffset”数据类型不支持 DATEFORMAT“ydm”****************。  
   
- DATEFORMAT 设置可能会对日期数据类型的字符串进行不同的解释，具体取决于字符串格式。 例如，“datetime”和“smalldatetime”的解释可能与“date”、“datetime2”或“datetimeoffset”不一致      。 在字符串转换为数据库的日期值时，DATEFORMAT 会影响字符串的解释。 它不会影响日期数据类型值的显示，也不会影响数据库中的存储格式。  
+ DATEFORMAT 设置可能会对日期数据类型的字符串进行不同的解释，具体取决于字符串格式。 例如，“datetime”和“smalldatetime”的解释可能与“date”、“datetime2”或“datetimeoffset”不一致********************。 在字符串转换为数据库的日期值时，DATEFORMAT 会影响字符串的解释。 它不会影响日期数据类型值的显示，也不会影响数据库中的存储格式。  
   
  某些字符串格式（例如 ISO 8601）的解释与 DATEFORMAT 设置无关。  
   

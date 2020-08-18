@@ -1,4 +1,5 @@
 ---
+description: SESSION_USER (Transact-SQL)
 title: SESSION_USER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -23,12 +24,12 @@ ms.assetid: 3dbe8532-31b6-4862-8b2a-e58b00b964de
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 82172de7034ad8579d4e1952ca23dae8f7002be1
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 5a69a4d5f7cd7153b6acd4b6d487fbb2a201deb1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112323"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88362813"
 ---
 # <a name="session_user-transact-sql"></a>SESSION_USER (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +49,7 @@ SESSION_USER
 ## <a name="return-types"></a>返回类型
  **nvarchar(128)**  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  SESSION_USER 可在 CREATE TABLE 或 ALTER TABLE 语句中与 DEFAULT 约束一起使用，或者将它用作任何标准函数。 如果没有指定默认值，可以将 SESSION_USER 插入表中。 此函数没有参数。 SESSION_USER 可以在查询中使用。  
   
  如果在切换上下文之后调用 SESSION_USER，SESSION_USER 将返回模拟上下文的用户名。  

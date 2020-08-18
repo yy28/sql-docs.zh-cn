@@ -1,4 +1,5 @@
 ---
+description: VERIFYSIGNEDBYCERT (Transact-SQL)
 title: VERIFYSIGNEDBYCERT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 4e041f33-60c4-4190-91c7-220d51dd6c8f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2d214adb3915ab7d4df137c23cc7bcea31bb9b51
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 433ff155da65471abe8b3ebde3df437b0a3f55ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112207"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88362053"
 ---
 # <a name="verifysignedbycert-transact-sql"></a>VERIFYSIGNEDBYCERT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,22 +48,22 @@ VerifySignedByCert( Cert_ID , signed_data , signature )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- Cert_ID   
- 数据库中证书的 ID。 Cert_ID 的数据类型为 int   。  
+ Cert_ID  
+ 数据库中证书的 ID。 Cert_ID 的数据类型为 int******。  
   
- signed_data   
- 类型为 nvarchar、char、varchar 或 nchar 的变量，上述类型包含已使用证书进行签名的数据     。  
+ signed_data**  
+ 类型为 nvarchar、char、varchar 或 nchar 的变量，上述类型包含已使用证书进行签名的数据****************。  
   
- signature   
- 附加到已签名数据中的签名。 signature 的数据类型为 varbinary   。  
+ *签名*  
+ 附加到已签名数据中的签名。 signature 的数据类型为 varbinary******。  
   
 ## <a name="return-types"></a>返回类型  
  **int**  
   
  如果已签名的数据未更改，则返回 1；否则返回 0。  
   
-## <a name="remarks"></a>备注  
- VerifySignedBycert 使用指定证书的公钥对数据的签名进行解密，并将解密所得到的值与数据新计算出的 MD5 哈希值进行比较  。 如果值匹配，则确认签名有效。  
+## <a name="remarks"></a>注解  
+ VerifySignedBycert 使用指定证书的公钥对数据的签名进行解密，并将解密所得到的值与数据新计算出的 MD5 哈希值进行比较****。 如果值匹配，则确认签名有效。  
   
 ## <a name="permissions"></a>权限  
  需要对证书拥有 VIEW DEFINITION 权限。  

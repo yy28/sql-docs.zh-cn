@@ -1,4 +1,5 @@
 ---
+description: DROP FULLTEXT CATALOG (Transact-SQL)
 title: DROP FULLTEXT CATALOG (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: b54efb0b-400b-49ce-923b-ce20a2a12255
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f9d5d286ca13d0160ea88c784af4262c0ef70f35
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 09ccdc16a00b60c5f6f0e2e70f2378a9a098048a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483395"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88358603"
 ---
 # <a name="drop-fulltext-catalog-transact-sql"></a>DROP FULLTEXT CATALOG (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,11 +46,11 @@ DROP FULLTEXT CATALOG catalog_name
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- catalog_name   
- 要删除的目录名。 如果 catalog_name 不存在，则   将返回一个错误，并且不执行 DROP 操作[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 要使该命令成功执行，不能将全文目录的文件组标记为 OFFLINE 或 READONLY。  
+ catalog_name  
+ 要删除的目录名。 如果 catalog_name 不存在，则 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回一个错误，并且不执行 DROP 操作**。 要使该命令成功执行，不能将全文目录的文件组标记为 OFFLINE 或 READONLY。  
   
 ## <a name="permissions"></a>权限  
- 用户必须对全文目录有 DROP 权限，或者是 db_owner 或 db_ddladmin 固定数据库角色的成员   。  
+ 用户必须对全文目录有 DROP 权限，或者是 db_owner 或 db_ddladmin 固定数据库角色的成员********。  
   
 ## <a name="see-also"></a>另请参阅  
  [sys.fulltext_catalogs (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   

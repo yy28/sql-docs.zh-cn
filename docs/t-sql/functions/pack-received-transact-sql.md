@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;PACK_RECEIVED (Transact-SQL)'
 title: '@@PACK_RECEIVED (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5c0b3d36-bfad-4f0b-abb8-e8f6391b32cd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 235308a339c1e1e668a2243acfadefeb1323480f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 3fea7af807dee5ff6307817992fe2f034ca00e78
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110363"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88363483"
 ---
 # <a name="x40x40pack_received-transact-sql"></a>&#x40;&#x40;PACK_RECEIVED (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,8 +45,8 @@ ms.locfileid: "87110363"
 ## <a name="return-types"></a>返回类型
  **integer**  
   
-## <a name="remarks"></a>备注  
- 若要显示包含多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 统计信息（包括发送和接收的数据包）的报表，请运行 sp_monitor  。  
+## <a name="remarks"></a>注解  
+ 若要显示包含多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 统计信息（包括发送和接收的数据包）的报表，请运行 sp_monitor****。  
   
 ## <a name="examples"></a>示例  
  下面的示例说明了 `@@PACK_RECEIVED` 的用法：  

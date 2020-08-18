@@ -1,4 +1,5 @@
 ---
+description: RECEIVE (Transact-SQL)
 title: RECEIVE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 45ad55bdf67be6dae67a69994320f9cf282a7beb
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: ab5a7dc7dd87c518a070b123145acad020efeb89
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485412"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88357343"
 ---
 # <a name="receive-transact-sql"></a>RECEIVE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -65,74 +66,74 @@ ms.locfileid: "86485412"
  WAITFOR  
  指定如果当前没有出现任何消息，则 RECEIVE 语句将等待消息到达队列。  
   
- TOP( n )   
+ TOP( n )**  
  指定要返回的最大消息数。 如果未指定此子句，则返回所有满足语句条件的消息。  
   
  \*  
  指定结果集包含队列中的所有列。  
   
- column_name   
+ column_name  
  要包含在结果集中的列的名称。  
   
  *expression*  
  列名、常量、函数或由运算符连接的列名、常量和函数的任意组合。  
   
- column_alias   
+ column_alias  
  用于替换结果集中的列名的可选名称。  
   
  FROM  
  指定包含要检索的消息的队列。  
   
  *database_name*  
- 包含从中接收消息的队列的数据库的名称。 如果未提供 database_name，则默认为当前数据库  。  
+ 包含从中接收消息的队列的数据库的名称。 如果未提供 database_name，则默认为当前数据库**。  
   
  *schema_name*  
- 从中接收消息的队列所属架构的名称。 如果未提供 schema_name，则默认为当前用户的默认架构  。  
+ 从中接收消息的队列所属架构的名称。 如果未提供 schema_name，则默认为当前用户的默认架构**。  
   
- queue_name   
+ queue_name  
  从中接收消息的队列的名称。  
   
- INTO table_variable   
+ INTO table_variable**  
  指定 RECEIVE 将消息放入到的表变量。 表变量具有的列数必须与消息中的列数相同。 表变量中每列的数据类型必须可隐式转换为消息中对应列的数据类型。 如果未指定 INTO，则消息将作为结果集返回。  
   
  WHERE  
  指定用于已收到的消息的会话或会话组。 如果省略，则从下一个可用会话组返回消息。  
   
- conversation_handle = conversation_handle   
- 指定用于已收到的消息的会话。 提供的“会话句柄”必须是 uniqueidentifer，或属于可转换为 uniqueidentifier 的类型    。  
+ conversation_handle = conversation_handle**  
+ 指定用于已收到的消息的会话。 提供的“会话句柄”必须是 uniqueidentifer，或属于可转换为 uniqueidentifier 的类型**********。  
   
- conversation_group_id = conversation_group_id   
- 指定用于已收到的消息的会话组。 提供的“会话组 ID”必须是 uniqueidentifer，或属于可转换为 uniqueidentifier 的类型    。  
+ conversation_group_id = conversation_group_id**  
+ 指定用于已收到的消息的会话组。 提供的“会话组 ID”必须是 uniqueidentifer，或属于可转换为 uniqueidentifier 的类型**********。  
   
- TIMEOUT timeout   
- 指定语句等待消息的时间（以毫秒为单位）。 此子句只能与 WAITFOR 子句一起使用。 如果未指定该子句，或者超时值为 1，则等待时间将为无限长  。 如果超时时间已到，RECEIVE 将返回一个空结果集。  
+ TIMEOUT timeout**  
+ 指定语句等待消息的时间（以毫秒为单位）。 此子句只能与 WAITFOR 子句一起使用。 如果未指定该子句，或者超时值为 1，则等待时间将为无限长****。 如果超时时间已到，RECEIVE 将返回一个空结果集。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
   
 > [!IMPORTANT]  
 >  如果 RECEIVE 语句不是批处理或存储过程中的第一个语句，则必须用分号 (;) 终止前面的语句。  
   
- RECEIVE 语句将从队列读取消息并返回结果集。 结果集由零行或多行组成，每行均包含一条消息。 如果未使用 INTO 子句，并且 column_specifier 没有为局部变量分配值，则该语句将结果集返回到调用程序  。  
+ RECEIVE 语句将从队列读取消息并返回结果集。 结果集由零行或多行组成，每行均包含一条消息。 如果未使用 INTO 子句，并且 column_specifier 没有为局部变量分配值，则该语句将结果集返回到调用程序**。  
   
- RECEIVE 语句返回的消息可以为不同的消息类型。 应用程序可使用 message_type_name 列将每条消息路由到用来处理关联消息类型的代码  。 有两类消息类型：  
+ RECEIVE 语句返回的消息可以为不同的消息类型。 应用程序可使用 message_type_name 列将每条消息路由到用来处理关联消息类型的代码****。 有两类消息类型：  
   
 -   使用 CREATE MESSAGE TYPE 语句创建的应用程序定义消息类型。 会话中允许的应用程序定义消息类型集由为该会话指定的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 约定定义。  
   
 -   返回状态信息或错误信息的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 系统消息。  
   
- RECEIVE 语句将从队列中删除已收到的消息，但队列指定消息保持时除外。 当队列的 RETENTION 设置为 ON 时，RECEIVE 语句将 status 列更新为 0，并使消息留在队列中   。 当包含 RECEIVE 语句的事务回滚时，对该事务中的队列的所有更改也会随之回滚，并将消息返回到队列。  
+ RECEIVE 语句将从队列中删除已收到的消息，但队列指定消息保持时除外。 当队列的 RETENTION 设置为 ON 时，RECEIVE 语句将 status 列更新为 0，并使消息留在队列中********。 当包含 RECEIVE 语句的事务回滚时，对该事务中的队列的所有更改也会随之回滚，并将消息返回到队列。  
   
- RECEIVE 语句返回的所有消息都属于同一会话组 RECEIVE 语句锁定返回的消息所属的会话组，直到包含该语句的事务完成为止。 RECEIVE 语句将返回“状态”为 1 的消息   。 将 RECEIVE 语句返回的结果集进行隐式排序：  
+ RECEIVE 语句返回的所有消息都属于同一会话组 RECEIVE 语句锁定返回的消息所属的会话组，直到包含该语句的事务完成为止。 RECEIVE 语句将返回“状态”为 1 的消息********。 将 RECEIVE 语句返回的结果集进行隐式排序：  
   
 -   如果来自多个会话的消息均符合 WHERE 子句的条件，则 RECEIVE 语句将先返回来自一个会话的所有消息，然后再返回任何其他会话的消息。 将按优先级降序对这些会话进行处理。  
   
--   对于给定的会话，RECEIVE 语句将按 message_sequence_number 的升序返回消息  。  
+-   对于给定的会话，RECEIVE 语句将按 message_sequence_number 的升序返回消息****。  
   
- RECEIVE 语句的 WHERE 子句只能包含一个使用 conversation_handle 或 conversation_group_id 的搜索条件   。 搜索条件不能包含队列中的一个或多个其他列。 conversation_handle 或 conversation_group_id 不能为表达式   。 返回的消息集取决于在 WHERE 子句中指定的条件。  
+ RECEIVE 语句的 WHERE 子句只能包含一个使用 conversation_handle 或 conversation_group_id 的搜索条件********。 搜索条件不能包含队列中的一个或多个其他列。 conversation_handle 或 conversation_group_id 不能为表达式********。 返回的消息集取决于在 WHERE 子句中指定的条件。  
   
--   如果指定了 conversation_handle，则 RECEIVE 将从指定会话中返回在队列中可用的所有消息  。  
+-   如果指定了 conversation_handle，则 RECEIVE 将从指定会话中返回在队列中可用的所有消息****。  
   
--   如果指定了 conversation_group_id，则 RECEIVE 将从属于指定会话组成员的任何会话中返回队列中可用的所有消息  。  
+-   如果指定了 conversation_group_id，则 RECEIVE 将从属于指定会话组成员的任何会话中返回队列中可用的所有消息****。  
   
 -   如果没有 WHERE 子句，则 RECEIVE 会确定使用哪些会话组：  
   
@@ -159,19 +160,19 @@ ms.locfileid: "86485412"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**status**|**tinyint**|消息的状态。 对于由 RECEIVE 命令返回的消息，其状态始终为 0  。 队列中的消息可以包含下列值之一：<br /><br /> 0=就绪 1=已收到消息 2=尚未完成 3=已保留发送的消息    |  
+|**status**|**tinyint**|消息的状态。 对于由 RECEIVE 命令返回的消息，其状态始终为 0****。 队列中的消息可以包含下列值之一：<br /><br /> 0=就绪 1=已收到消息 2=尚未完成 3=已保留发送的消息****************|  
 |**priority**|**tinyint**|应用于消息的会话优先级。|  
 |**queuing_order**|**bigint**|消息在队列中的序号。|  
 |**conversation_group_id**|**uniqueidentifier**|此消息所属会话组的标识符。|  
 |**conversation_handle**|**uniqueidentifier**|此消息所属会话的句柄。|  
 |**message_sequence_number**|**bigint**|消息在会话中的序列号。|  
-|service_name |**nvarchar(512)**|要进行会话的服务的名称。|  
+|**service_name**|**nvarchar(512)**|要进行会话的服务的名称。|  
 |**service_id**|**int**|要进行会话的服务的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象标识符。|  
 |**service_contract_name**|**nvarchar(256)**|会话遵循的约定的名称。|  
 |**service_contract_id**|**int**|会话遵循的约定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象标识符。|  
-|message_type_name |**nvarchar(256)**|用于说明消息格式的消息类型的名称。 消息可以是应用程序消息类型，也可以是 Broker 系统消息。|  
+|**message_type_name**|**nvarchar(256)**|用于说明消息格式的消息类型的名称。 消息可以是应用程序消息类型，也可以是 Broker 系统消息。|  
 |**message_type_id**|**int**|对消息进行说明的消息类型的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象标识符。|  
-|**validation**|**nchar(2)**|对消息所用的验证。<br /><br /> E=Empty N=None X=XML   |  
+|**validation**|**nchar(2)**|对消息所用的验证。<br /><br /> E=Empty N=None X=XML************|  
 |**message_body**|**varbinary(MAX)**|消息的内容。|  
   
 ## <a name="permissions"></a>权限  

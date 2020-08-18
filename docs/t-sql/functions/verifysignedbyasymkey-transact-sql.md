@@ -1,4 +1,5 @@
 ---
+description: VERIFYSIGNEDBYASYMKEY (Transact-SQL)
 title: VERIFYSIGNEDBYASYMKEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 9f7c6e0b-5ba4-4dbb-994d-5bd59f4908de
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8404d41f9447eeafd30788c482abd7279c6b6c46
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 0257bd8b66a915ec5d7f0b59e3aa85f197f38867
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112218"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88362243"
 ---
 # <a name="verifysignedbyasymkey-transact-sql"></a>VERIFYSIGNEDBYASYMKEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,22 +47,22 @@ VerifySignedByAsymKey( Asym_Key_ID , clear_text , signature )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- Asym_Key_ID   
+ Asym_Key_ID  
  数据库中非对称密钥证书的 ID。  
   
- clear_text   
+ clear_text  
  正在验证的明文数据。  
   
- signature   
- 附加到已签名数据中的签名。 signature 的数据类型为 varbinary   。  
+ *签名*  
+ 附加到已签名数据中的签名。 signature 的数据类型为 varbinary******。  
   
 ## <a name="return-types"></a>返回类型  
  **int**  
   
  如果签名匹配，则返回 1；否则返回 0。  
   
-## <a name="remarks"></a>备注  
- VerifySignedByAsymKey 使用指定的非对称密钥的公钥对数据的签名进行解密，并将解密所得到的值与数据新计算出的 MD5 哈希值进行比较  。 如果值匹配，则确认签名有效。  
+## <a name="remarks"></a>注解  
+ VerifySignedByAsymKey 使用指定的非对称密钥的公钥对数据的签名进行解密，并将解密所得到的值与数据新计算出的 MD5 哈希值进行比较****。 如果值匹配，则确认签名有效。  
   
 ## <a name="permissions"></a>权限  
  要求对非对称密钥具有 VIEW DEFINITION 权限。  

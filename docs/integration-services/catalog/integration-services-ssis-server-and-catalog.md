@@ -1,4 +1,5 @@
 ---
+description: Integration Services (SSIS) 服务器和目录
 title: Integration Services (SSIS) 服务器和目录 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6d667bba-7c25-492a-8f4d-70ebaca28f40
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 37acf59a44c561e43f6c1dc6dbcb4f26cd06918e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 99ea39318e06ba7fbaa6cf3e1147382bb1184a83
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922612"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88351843"
 ---
 # <a name="integration-services-ssis-server-and-catalog"></a>Integration Services (SSIS) 服务器和目录
 
@@ -36,7 +37,7 @@ ms.locfileid: "86922612"
  若要大致了解 SSISDB 目录功能，请参阅 [SSIS 目录](../../integration-services/catalog/ssis-catalog.md)。  
   
 ## <a name="high-availability"></a>高可用性  
- 像其他用户数据库一样，SSISDB 数据库不支持数据库镜像和复制  。 若要详细了解镜像和复制，请参阅[数据库镜像 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
+ 像其他用户数据库一样，SSISDB 数据库不支持数据库镜像和复制****。 若要详细了解镜像和复制，请参阅[数据库镜像 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
   
  还可以利用 SSIS 和 Always On 可用性组，提供高可用性的 SSISDB 及其内容。 有关详细信息，请参阅[对 SSIS 目录 (SSISDB) 使用 Always On](ssis-catalog.md#always-on-for-ssis-catalog-ssisdb)。 另请参阅 blogs.msdn.com 上 Matt Masson 的博客文章[结合使用 SSIS 和 Always On](https://go.microsoft.com/fwlink/?LinkId=255873)。  
   

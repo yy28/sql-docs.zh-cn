@@ -1,4 +1,5 @@
 ---
+description: OPEN SYMMETRIC KEY (Transact-SQL)
 title: OPEN SYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ff019a7c-c373-46c7-ac43-ffb7e2ee60b3
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0855dd1c7e57827d99bdeaa78813fa54b75e2fb8
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: cdcee07d25c05ca8571071dfe8f98b00c9259f9c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484488"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88357853"
 ---
 # <a name="open-symmetric-key-transact-sql"></a>OPEN SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,25 +52,25 @@ OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- Key_name   
+ Key_name  
  要打开的对称密钥的名称。  
   
- CERTIFICATE certificate_name   
+ CERTIFICATE certificate_name  
  证书的名称，该证书的私钥将用于解密对称密钥。  
   
- ASYMMETRIC KEY asym_key_name   
+ ASYMMETRIC KEY asym_key_name  
  非对称密钥的名称，该密钥的私钥将用于解密对称密钥。  
   
- WITH PASSWORD ='password'   
+ WITH PASSWORD ='password'  
  用于解密证书或非对称密钥的私钥的密码。  
   
  SYMMETRIC KEY *decrypting_key_name*  
  对称密钥的名称，该密钥将用于解密正在打开的对称密钥。  
   
- PASSWORD ='password'   
+ PASSWORD ='password'  
  用于保护对称密钥的密码。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  打开的对称密钥将绑定到会话而不是安全上下文。 打开的密钥将持续有效，直到它显式关闭或会话终止。 如果您打开一个对称密钥然后切换上下文，则该密钥将保持打开状态并在模拟的上下文中可用。 可以在 [sys.openkeys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-openkeys-transact-sql.md) 目录视图中查看有关打开的对称密钥的信息。  
   
  如果对称密钥由另一个密钥加密，则必须首先打开该密钥。  

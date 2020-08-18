@@ -1,4 +1,5 @@
 ---
+description: STSymDifference（geometry 数据类型）
 title: STSymDifference（geometry 数据类型）| Microsoft Docs
 ms.custom: ''
 ms.date: 02/06/2020
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1d4cf35a-ca89-4aa4-ae30-e61a0ff18b53
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: a6924bec676d8de525e29c8f124774b41edf0a2d
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 1a419562b8326cbdceee2be888c538e61bbedac3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554571"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88359623"
 ---
 # <a name="stsymdifference-geometry-data-type"></a>STSymDifference（geometry 数据类型）
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,12 +44,12 @@ ms.locfileid: "86554571"
  调用 `STSymDifference()` 的实例以外的另一个 **geometry** 实例。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry****  
   
- CLR 返回类型：SqlGeometry   
+ CLR 返回类型：SqlGeometry****  
   
-## <a name="remarks"></a>备注  
- 如果 geometry 实例的空间引用 ID (SRID) 不匹配，则此方法始终返回 null  。 只有在输入实例包含圆弧线段时，结果才会包含圆弧线段。  
+## <a name="remarks"></a>注解  
+ 如果 geometry 实例的空间引用 ID (SRID) 不匹配，则此方法始终返回 null****。 只有在输入实例包含圆弧线段时，结果才会包含圆弧线段。  
   
 ## <a name="examples"></a>示例  
   

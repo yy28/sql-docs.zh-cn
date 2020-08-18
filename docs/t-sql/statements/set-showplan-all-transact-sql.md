@@ -1,4 +1,5 @@
 ---
+description: SET SHOWPLAN_ALL (Transact-SQL)
 title: SET SHOWPLAN_ALL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/16/2020
@@ -26,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: a500b682-bae4-470f-9e00-47de905b851b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f6be25893400c5aca52d81c86710042b24979a5f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 01361c4ed6acb7a0a1ea41c5048a6d8eb41dd283
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765713"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88356883"
 ---
 # <a name="set-showplan_all-transact-sql"></a>SET SHOWPLAN_ALL (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +48,9 @@ ms.locfileid: "85765713"
 SET SHOWPLAN_ALL { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>备注  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>备注
  SET SHOWPLAN_ALL 的设置是在执行或运行时设置，而不是在分析时设置。  
   
  如果 `SET SHOWPLAN_ALL` 为 ON，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回每个语句的执行信息但不执行语句，并且 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句不会执行。 在将此选项设置为 ON 后，将始终返回有关所有后续 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的信息，直到将该选项设置为 OFF 为止。 例如，如果在 `SET SHOWPLAN_ALL` 为 ON 时执行 CREATE TABLE 语句，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将从涉及同一个表的后续 SELECT 语句返回错误信息，告知用户指定的表不存在。 因此，对此表的后续引用将失败。 如果 SET SHOWPLAN_ALL 为 OFF，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将执行语句，但不生成报表。  

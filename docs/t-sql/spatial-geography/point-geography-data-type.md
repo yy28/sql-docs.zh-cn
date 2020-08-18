@@ -1,4 +1,5 @@
 ---
+description: Point（geography 数据类型）
 title: Point（geography 数据类型）| Microsoft Docs
 ms.custom: ''
 ms.date: 10/10/2019
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0dc6f422-7aae-4016-b7f4-3289fa8f989c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 04db3c6617669010f63e173415de0ebf6b7a3dca
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: f833aeaa63838281eaff92c0dfe1e9fed799cdb4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86556149"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88360323"
 ---
 # <a name="point-geography-data-type"></a>Point（geography 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,7 +54,7 @@ Point ( Lat, Long, SRID )
 >  Point（地理数据类型）方法的参数具有与 WKT 相反的坐标。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
   
  CLR 返回类型：**SqlGeography**  
   

@@ -1,4 +1,5 @@
 ---
+description: STRING_AGG (Transact-SQL)
 title: STRING_AGG (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/19/2017
@@ -16,12 +17,12 @@ ms.assetid: 8860ef3f-142f-4cca-aa64-87a123e91206
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f7b87c06324bf168c9dce7441f14c78d89833f24
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 3b8a92c7776251547934799b68f3dc6cf7ada2b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111313"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88362493"
 ---
 # <a name="string_agg-transact-sql"></a>STRING_AGG (Transact-SQL)
 
@@ -50,7 +51,7 @@ STRING_AGG ( expression, separator ) [ <order_clause> ]
 是任何类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 串联期间，表达式被转换为 `NVARCHAR` 或 `VARCHAR` 类型。 非字符串类型被转换为 `NVARCHAR` 类型。
 
 separator   
-是 [ 或 ](../../t-sql/language-elements/expressions-transact-sql.md) 类型的`NVARCHAR`表达式`VARCHAR`，用作串联字符串的分隔符。 可以是文本或变量。 
+是 `NVARCHAR` 或 `VARCHAR` 类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)，用作串联字符串的分隔符。 可以是文本或变量。 
 
 <order_clause>   
 使用 `WITHIN GROUP` 子句有选择性地指定串联结果的顺序：
@@ -74,7 +75,7 @@ WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 |VARCHAR(1...8000) |VARCHAR(8000) |
 |int, bigint, smallint, tinyint, numeric, float, real, bit, decimal, smallmoney, money, datetime, datetime2, |NVARCHAR(4000) |
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 `STRING_AGG` 是一个聚合函数，用于提取行中的所有表达式，并将这些表达式串联成一个字符串。 表达式值隐式转换为字符串类型，然后串联在一起。 隐式转换为字符串的过程遵循现有的数据类型转换规则。 有关数据类型转换的详细信息，请参阅 [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)。 
 
@@ -101,11 +102,11 @@ FROM Person.Person;
 |--- |
 |Syed <br />Catherine <br />Kim <br />Kim <br />Kim <br />Hazem <br />... | 
 
-结果中不返回 `NULL` 单元格中的 `name` 值。   
+结果中不返回 `name` 单元格中的 `NULL` 值。   
 
 > [!NOTE]  
-> 如果使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查询编辑器，“结果显示为网格”选项无法实现回车符  。 可切换到“结果显示为文本”，以便正确查看结果集  。       
-> 默认情况下，“结果显示为文本”截断为 256 个字符。 若要增加此限制，请更改“每个列中显示的最大字符数”选项  。
+> 如果使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查询编辑器，“结果显示为网格”选项无法实现回车符。 可切换到“结果显示为文本”，以便正确查看结果集****。       
+> 默认情况下，“结果显示为文本”截断为 256 个字符。 若要增加此限制，请更改“每个列中显示的最大字符数”选项。
 
 ### <a name="b-generate-list-of-names-separated-with-comma-without-null-values"></a>B. 生成使用逗号分隔且不带 NULL 值的姓名列表
 
@@ -144,7 +145,7 @@ FROM Person.Person;
 |Ken Sánchez (Feb  8 2003 12:00AM) <br />Terri Duffy (Feb 24 2002 12:00AM) <br />Roberto Tamburello (Dec  5 2001 12:00AM) <br />Rob Walters (Dec 29 2001 12:00AM) <br />... |
 
 > [!NOTE]  
-> 如果使用 Management Studio 查询编辑器，“结果显示为网格”选项无法实现回车符  。 可切换到“结果显示为文本”，以便正确查看结果集  。
+> 如果使用 Management Studio 查询编辑器，“结果显示为网格”选项无法实现回车符****。 可切换到“结果显示为文本”，以便正确查看结果集****。
 
 ### <a name="d-return-news-articles-with-related-tags"></a>D. 返回带有相关标记的新闻文章
 
@@ -167,7 +168,7 @@ GROUP BY a.articleId, title;
 |177 |狗继续比猫更受人喜爱 |民意调查,动物|
 
 > [!NOTE]
-> 如果 `GROUP BY` 函数不是 `STRING_AGG` 列表中的唯一项，则需要子句 `SELECT`。
+> 如果 `STRING_AGG` 函数不是 `SELECT` 列表中的唯一项，则需要子句 `GROUP BY`。
 
 ### <a name="e-generate-list-of-emails-per-towns"></a>E. 生成按城市分类的电子邮件列表
 
@@ -189,7 +190,7 @@ GROUP BY City;
 > [!NOTE]
 > 将显示剪裁后的结果。
 
-|城市 |emails |
+|City |emails |
 |--- |--- |
 |Ballard|paige28@adventure-works.com;joshua24@adventure-works.com;javier12@adventure-works.com;...|
 |Baltimore|gilbert9@adventure-works.com|
@@ -223,7 +224,7 @@ GROUP BY City;
 > [!NOTE]
 > 将显示剪裁后的结果。
 
-|城市 |emails |
+|City |emails |
 |--- |--- |
 |Barstow|kristen4@adventure-works.com
 |Basingstoke Hants|dale10@adventure-works.com;heidi9@adventure-works.com

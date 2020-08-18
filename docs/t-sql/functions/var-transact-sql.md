@@ -1,4 +1,5 @@
 ---
+description: VAR (Transact-SQL)
 title: VAR (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -20,12 +21,12 @@ ms.assetid: 71dfc339-16c8-42f9-8555-ad45400f7f9b
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7a7e64d73c44bf76d45dd672970f1216f88412c6
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 45c786bf165a26fe4e5d4b9f2461a98615af655d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111304"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88362473"
 ---
 # <a name="var-transact-sql"></a>VAR (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "87111304"
   
 ## <a name="syntax"></a>语法  
   
-```    
+```syntaxsql    
 -- Aggregate Function Syntax   
 VAR ( [ ALL | DISTINCT ] expression )  
   
@@ -54,7 +55,7 @@ VAR ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
  指定考虑每一个唯一值。  
   
  *expression*  
- 是精确或近似数值数据类型类别（bit 数据类型除外）的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)  。 不允许使用聚合函数和子查询。  
+ 是精确或近似数值数据类型类别（bit 数据类型除外）的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)****。 不允许使用聚合函数和子查询。  
   
  OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_ **)**  
  partition_by_clause 将 FROM 子句生成的结果集划分为要应用函数的分区  。 如果未指定，则此函数将查询结果集的所有行视为单个组。 _order\_by\_clause_ 确定执行操作的逻辑顺序。 _order\_by\_clause_ 是必需的。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。  
@@ -62,7 +63,7 @@ VAR ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 ## <a name="return-types"></a>返回类型  
  **float**  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  如果 VAR 用于 SELECT 语句中的所有项目，则结果集中的每个值都包含在计算中。 VAR 只可用于数字列。 Null 值会被忽略。  
   
  VAR 不与 OVER 和 ORDER BY 子句配合使用时为确定性函数。 与 OVER 和 ORDER BY 子句一同指定时，它具有不确定性。 有关详细信息，请参阅 [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。  
@@ -70,9 +71,9 @@ VAR ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 ## <a name="examples"></a>示例  
   
 ### <a name="a-using-var"></a>A. 使用 VAR  
- 以下示例将返回 `SalesPerson` 数据库的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 表中所有奖金值的方差。  
+ 以下示例将返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `SalesPerson` 表中所有奖金值的方差。  
   
-```  
+```sql  
 SELECT VAR(Bonus)  
 FROM Sales.SalesPerson;  
 GO  
@@ -83,7 +84,7 @@ GO
 ### <a name="b-using-var"></a>B. 使用 VAR  
  以下示例返回表 `dbo.FactSalesQuota` 中的销售配额值的统计方差。 第一列中包含所有非重复值的方差，第二列中包含所有值（包括任何重复值）的方差。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT VAR(DISTINCT SalesAmountQuota)AS Distinct_Values, VAR(SalesAmountQuota) AS All_Values  
@@ -101,7 +102,7 @@ Distinct_Values   All_Values
 ### <a name="c-using-var-with-over"></a>C. 在 OVER 中使用 VAR  
  以下示例返回日历年中每季度的销售配额值的统计方差。 请注意，OVER 子句中的 ORDER BY 对统计方差进行排序，SELECT 语句中的 ORDER BY 则对结果集进行排序。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT CalendarYear AS Year, CalendarQuarter AS Quarter, SalesAmountQuota AS SalesQuota,  

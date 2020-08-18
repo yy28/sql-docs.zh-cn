@@ -1,4 +1,5 @@
 ---
+description: DROP STATISTICS (Transact-SQL)
 title: DROP STATISTICS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/22/2016
@@ -24,12 +25,12 @@ ms.assetid: 222806b7-4e45-445b-8cd0-bd5461f3ca4a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d10b55c020bcd037f82eb841fba549c17a707992
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 0da570526f14e6055883ce93838c2f2acfa68eac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483944"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88358853"
 ---
 # <a name="drop-statistics-transact-sql"></a>DROP STATISTICS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -56,13 +57,13 @@ DROP STATISTICS [ schema_name . ] table_name.statistics_name
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- table*view* |    
+ table | view  
  其删除统计信息的目标表或索引视图的名称。 表和视图的名称必须符合[数据库标识符](../../relational-databases/databases/database-identifiers.md)规则。 可以选择是否指定表或视图所有者名称。  
   
  *statistics_name*  
  要删除的统计信息组的名称。 统计信息名称必须符合有关标识符的规则。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  删除统计信息时，请谨慎从事。 这样做可能会影响查询优化器选择的执行计划。  
   
  不能使用 DROP STATISTICS 删除有关索引的统计信息。 统计信息的保留时间与索引存在的时间相同。  
@@ -77,7 +78,7 @@ DROP STATISTICS [ schema_name . ] table_name.statistics_name
 ### <a name="a-dropping-statistics-from-a-table"></a>A. 从表中删除统计信息  
  以下示例将删除两个表的统计信息组（集合）。 `VendorCredit` 表的 `Vendor` 统计信息组（集合）和 `CustomerTotal` 表的 `SalesOrderHeader` 统计信息（集合）将被删除。  
   
-```  
+```sql  
 -- Create the statistics groups.  
 USE AdventureWorks2012;  
 GO  
@@ -89,18 +90,16 @@ CREATE STATISTICS CustomerTotal
     WITH FULLSCAN;  
 GO  
 DROP STATISTICS Purchasing.Vendor.VendorCredit, Sales.SalesOrderHeader.CustomerTotal;  
-  
 ```  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="b-dropping-statistics-from-a-table"></a>B. 从表中删除统计信息  
- 以下示例从表 `CustomerStats1` 中删除 `Customer` 统计信息。  
+ 以下示例从表 `Customer` 中删除 `CustomerStats1` 统计信息。  
   
-```  
+```sql  
 DROP STATISTICS Customer.CustomerStats1;  
 DROP STATISTICS dbo.Customer.CustomerStats1;  
-  
 ```  
   
 ## <a name="see-also"></a>另请参阅  
