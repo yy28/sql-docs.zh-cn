@@ -1,5 +1,6 @@
 ---
-title: sys.databases （Transact-sql） |Microsoft Docs
+description: sys.indexes (Transact-SQL)
+title: sys. 索引 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 02/12/2020
 ms.prod: sql
@@ -20,11 +21,12 @@ ms.assetid: 066bd9ac-6554-4297-88fe-d740de1f94a8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bfb93efd6495757e284fe5bb3df3cdb1b0c344e4
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f88a1b69ab7cac3d9ea59a613a187268e53e97a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002731"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88401393"
 ---
 # <a name="sysindexes-transact-sql"></a>sys.indexes (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,12 +36,12 @@ ms.locfileid: "86002731"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|该索引所属对象的 ID。|  
-|name|**sysname**|索引的名称。 **名称**仅在对象中是唯一的。<br /><br /> NULL = 堆|  
-|**index_id**|**int**|索引的 ID。 **index_id**仅在对象中是唯一的。<br /><br /> 0 = 堆<br /><br /> 1 = 聚集索引<br /><br /> > 1 = 非聚集索引|  
-|**type**|**tinyint**|索引的类型：<br /><br /> 0 = 堆<br /><br /> 1 = 聚集<br /><br /> 2 = 非聚集<br /><br /> 3 = XML<br /><br /> 4 = 空间<br /><br /> 5 = 聚集列存储索引。 **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。<br /><br /> 6 = 非聚集列存储索引。 **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 7 = 非聚集哈希索引。 **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。|  
-|**type_desc**|**nvarchar(60)**|索引类型的说明：<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> XML<br /><br /> SPATIAL<br /><br /> 聚集列存储-**适用**于： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和更高版本。<br /><br /> 非聚集列存储-**适用于**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更高版本。<br /><br /> 非聚集哈希：仅内存优化表支持非聚集哈希索引。 sys.hash_indexes 视图显示当前哈希索引和哈希属性。 有关详细信息，请参阅[sys.databases&#41;hash_indexes &#40;](../../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md)。 **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。|  
+|name|**sysname**|索引的名称。 **名称** 仅在对象中是唯一的。<br /><br /> NULL = 堆|  
+|**index_id**|**int**|索引的 ID。 **index_id** 仅在对象中是唯一的。<br /><br /> 0 = 堆<br /><br /> 1 = 聚集索引<br /><br /> > 1 = 非聚集索引|  
+|type|**tinyint**|索引的类型：<br /><br /> 0 = 堆<br /><br /> 1 = 聚集<br /><br /> 2 = 非聚集<br /><br /> 3 = XML<br /><br /> 4 = 空间<br /><br /> 5 = 聚集列存储索引。 **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。<br /><br /> 6 = 非聚集列存储索引。 **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 7 = 非聚集哈希索引。 **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。|  
+|**type_desc**|**nvarchar(60)**|索引类型的说明：<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> XML<br /><br /> SPATIAL<br /><br /> 聚集列存储- **适用**于： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和更高版本。<br /><br /> 非聚集列存储- **适用于**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更高版本。<br /><br /> 非聚集哈希：仅内存优化表支持非聚集哈希索引。 sys.hash_indexes 视图显示当前哈希索引和哈希属性。 有关详细信息，请参阅 [sys.databases&#41;hash_indexes &#40;](../../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md)。 **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。|  
 |**is_unique**|**bit**|1 = 索引是唯一的。<br /><br /> 0 = 索引不是唯一的。<br /><br /> 对于聚集列存储索引始终为 0。|  
-|**data_space_id**|**int**|此索引的数据空间的 ID。 数据空间是文件组或分区方案。<br /><br /> 0 = **object_id**是表值函数或内存中索引。|  
+|**data_space_id**|**int**|此索引的数据空间的 ID。 数据空间是文件组或分区方案。<br /><br /> 0 = **object_id** 是表值函数或内存中索引。|  
 |**ignore_dup_key**|**bit**|1 = IGNORE_DUP_KEY 是 ON。<br /><br /> 0 = IGNORE_DUP_KEY 是 OFF。|  
 |**is_primary_key**|**bit**|1 = 索引是 PRIMARY KEY 约束的一部分。<br /><br /> 对于聚集列存储索引始终为 0。|  
 |**is_unique_constraint**|**bit**|1 = 索引是 UNIQUE 约束的一部分。<br /><br /> 对于聚集列存储索引始终为 0。|  
@@ -55,7 +57,7 @@ ms.locfileid: "86002731"
 |**optimize_for_sequential_key**|**bit**|1 = 索引已启用上一页插入优化。<br><br>0 = 默认值。 索引已禁用上一页插入优化。|
 
 > [!NOTE]
-> 只有 2019 SQL Server CTP 3.1 和更高版本中支持**optimize_for_sequential_key**位。
+> 只有 2019 SQL Server CTP 3.1 和更高版本中支持 **optimize_for_sequential_key** 位。
   
 ## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
@@ -87,13 +89,13 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;Transact-sql&#41;的对象目录视图](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Transact-sql&#41;的目录视图 &#40;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [sys. index_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
- [sys.xml_indexes &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)   
+ [对象目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [sys.index_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
+ [sys.xml_indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)   
  [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys. key_constraints &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)   
- [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
+ [sys.filegroups (Transact-SQL)](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
  [sys. partition_schemes &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-partition-schemes-transact-sql.md)   
  [查询 SQL Server 系统目录常见问题](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [内存中 OLTP（内存中优化）](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  

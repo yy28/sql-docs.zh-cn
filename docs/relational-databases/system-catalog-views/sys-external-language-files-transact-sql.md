@@ -1,5 +1,6 @@
 ---
-title: sys. external_language_files （Transact-sql）-SQL Server |Microsoft Docs
+description: sys. external_language_files (Transact-sql) -SQL Server
+title: sys. external_language_files (Transact-sql) -SQL Server |Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2019
 ms.prod: sql
@@ -19,14 +20,14 @@ ms.author: negust
 ms.reviewer: dphansen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e90925354a9a48d3a2b0ff8e789d940ece6cb476
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fe6da94cc085e14667ee0518452fc6043eed60e9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751738"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88401063"
 ---
-# <a name="sysexternal_language_files-transact-sql"></a>sys. external_language_files （Transact-sql）
+# <a name="sysexternal_language_files-transact-sql"></a>sys. external_language_files (Transact-sql) 
 [!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
 
 此目录视图提供数据库中的外部语言扩展文件的列表。 “R”和“Python”是保留名称，不能使用这些特定名称创建外部语言   。
@@ -41,13 +42,13 @@ ms.locfileid: "85751738"
 |------|------|------|
 |external_language_id |int | 外部语言的 ID|
 |内容|varbinary(max) |外部语言扩展文件的内容|
-|file_name|nvarchar （有）|语言扩展文件的名称|
+|file_name|nvarchar (266) |语言扩展文件的名称|
 |平台|tinyint|安装 SQL Server 的主机平台的 ID|
 |platform_desc |nvarchar(60)|主机平台的名称。 有效值为 "WINDOWS"、"LINUX"。|
 |parameters|nvarchar(4000)|外部语言 prameters|
 |environment_variables |nvarchar(4000)|外部语言环境变量|
 
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
 
 + [sys.external_languages](sys-external-languages-transact-sql.md)  
 + [创建外部语言](../../t-sql/statements/create-external-language-transact-sql.md)  

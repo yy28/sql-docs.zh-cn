@@ -1,5 +1,6 @@
 ---
-title: sys. dm_exec_distributed_requests （Transact-sql） |Microsoft Docs
+description: sys.dm_exec_distributed_requests (Transact-SQL)
+title: sys. dm_exec_distributed_requests (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,12 +23,12 @@ ms.assetid: c041d416-d8c6-435e-a563-6a310abd33e3
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 52a1ee453d0a516bc2dc1fd42dcd4439272d844c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f0f878ef98d0935920db9b4abedbc753d10124a0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821127"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88398763"
 ---
 # <a name="sysdm_exec_distributed_requests-transact-sql"></a>sys.dm_exec_distributed_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -39,16 +40,16 @@ ms.locfileid: "82821127"
 |列名|数据类型|说明|范围|  
 |-----------------|---------------|-----------------|-----------|  
 |sql_handle|**varbinary(64)**|此视图的键。 与请求关联的唯一数字 id。|系统中所有请求都是唯一的。|  
-|execution_id|**nvarchar （32**|与运行此查询的会话相关联的唯一数字 id。||  
-|状态|**nvarchar （32**|请求的当前状态。|"挂起"、"授权"、"AcquireSystemResources"、"正在初始化"、"计划"、"正在分析"、"AquireResources"、"正在运行"、"正在取消"、"完成"、"失败"、"已取消"。|  
-|error_id|**nvarchar （36）**|与请求关联的错误的唯一 id （如果有）。|如果未发生错误，则设置为 NULL。|  
+|execution_id|**nvarchar (32**|与运行此查询的会话相关联的唯一数字 id。||  
+|状态|**nvarchar (32**|请求的当前状态。|"挂起"、"授权"、"AcquireSystemResources"、"正在初始化"、"计划"、"正在分析"、"AquireResources"、"正在运行"、"正在取消"、"完成"、"失败"、"已取消"。|  
+|error_id|**nvarchar (36) **|与请求关联的错误的唯一 id （如果有）。|如果未发生错误，则设置为 NULL。|  
 |start_time|**datetime**|开始执行请求的时间。|对于排队请求，为 0;否则，有效的日期时间小于或等于当前时间。|  
 |end_time|**datetime**|引擎完成编译请求的时间。|对于排队或活动的请求为 Null;否则，有效的日期时间小于或等于当前时间。|  
 |total_elapsed_time|**int**|自请求开始后执行所用的时间（以毫秒为单位）。|介于0与 start_time 与 end_time 之间的差异。如果 total_elapsed_time 超过整数的最大值，则 total_elapsed_time 将继续作为最大值。 此条件将生成警告 "已超过最大值。" 最大值（以毫秒为单位）等效于24.8 天。|  
   
 ## <a name="see-also"></a>另请参阅  
  [通过动态管理视图进行 PolyBase 故障排除](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
- [动态管理视图和函数 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [与数据库相关的动态管理视图 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

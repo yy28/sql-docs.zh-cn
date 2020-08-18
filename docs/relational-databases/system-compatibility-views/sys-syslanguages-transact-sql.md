@@ -1,5 +1,6 @@
 ---
-title: sys.sys语言（Transact-sql） |Microsoft Docs
+description: sys.syslanguages (Transact-SQL)
+title: " (Transact-sql) sys.sys语言 |Microsoft Docs"
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,11 +22,12 @@ ms.assetid: f216d1cd-997c-42f0-a737-abbdfcd88383
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 62491475c51fcfc879415bb53f3d5cb08447a427
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e5a5cde7f76b77c0c6f06da61227350b7649373e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012207"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88399763"
 ---
 # <a name="syssyslanguages-transact-sql"></a>sys.syslanguages (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -77,9 +79,9 @@ ms.locfileid: "86012207"
 |爱沙尼亚语|1061|1061|  
 |拉脱维亚语|1062|1062|  
 |立陶宛语|1063|1063|  
-|葡萄牙语(巴西)|1046|1046|  
+|葡萄牙语（巴西）|1046|1046|  
 |繁体中文|1028|1028|  
-|韩语|1042|1042|  
+|朝鲜语|1042|1042|  
 |简体中文|2052|2052|  
 |阿拉伯语|1025|1025|  
 |泰语|1054|1054|  

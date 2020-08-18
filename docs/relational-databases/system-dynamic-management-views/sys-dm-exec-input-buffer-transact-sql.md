@@ -1,5 +1,6 @@
 ---
-title: sys. dm_exec_input_buffer （Transact-sql） |Microsoft Docs
+description: 'sys. dm_exec_input_buffer (Transact-sql) '
+title: sys. dm_exec_input_buffer (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/14/2019
 ms.prod: sql
@@ -20,14 +21,14 @@ ms.assetid: fb34a560-bde9-4ad9-aa96-0d4baa4fc104
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 05ec724effbabfeec11d113e46fd11c4daec0688
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 281854c00ba5a1c09bde0ed754e8a10c6dafa5ea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821063"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88398633"
 ---
-# <a name="sysdm_exec_input_buffer-transact-sql"></a>sys. dm_exec_input_buffer （Transact-sql）
+# <a name="sysdm_exec_input_buffer-transact-sql"></a>sys. dm_exec_input_buffer (Transact-sql) 
 
 [!INCLUDE[tsql-appliesto-2014sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2014sp2-asdb-xxxx-xxx-md.md)]
 
@@ -41,19 +42,19 @@ sys.dm_exec_input_buffer ( session_id , request_id )
 
 ## <a name="arguments"></a>参数
 
-*session_id*要查找的批处理的会话 ID。 *session_id*为**smallint**。 可以从以下动态管理对象中获取*session_id* ：
+*session_id* 要查找的批处理的会话 ID。 *session_id* 为 **smallint**。 可以从以下动态管理对象中获取*session_id* ：
 
 - [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)
 - [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)
 - [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)
 
-*request_id*从[dm_exec_requests sys.databases](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)request_id。 *request_id*是**int**。
+*request_id* 从 [dm_exec_requests sys.databases](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)request_id。 *request_id* 是 **int**。
 
 ## <a name="table-returned"></a>返回的表
 
 |列名称|数据类型|说明|
 |-----------------|---------------|-----------------|
-|event_type |**nvarchar(256)**|给定 spid 在输入缓冲区中的事件类型。|
+|event_type|**nvarchar(256)**|给定 spid 在输入缓冲区中的事件类型。|
 |**parameters**|**smallint**|为语句提供的所有参数。|
 |**event_info**|**nvarchar(max)**|给定 spid 的输入缓冲区中的语句文本。|
 
@@ -62,12 +63,12 @@ sys.dm_exec_input_buffer ( session_id , request_id )
 在上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，如果用户具有 VIEW SERVER STATE 权限，则用户将在实例上看到所有正在执行的会话 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; 否则，用户将只看到当前会话。
 
 > [!IMPORTANT]
-> 在不使用 VIEW SERVER STATE 权限 SQL Server Management Studio 的情况下（例如在触发器、存储过程或函数中）对 SQL Server 运行此 DMV 会引发对 master 数据库的权限错误。
+> 在不使用 VIEW SERVER STATE 权限的情况下，在 SQL Server SQL Server Management Studio 之外运行此 DMV (如在触发器、存储过程或函数) 中，将在 master 数据库上引发权限错误。
 
 在上 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ，如果用户是数据库所有者，则用户将看到上的所有正在执行的会话 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ; 否则，用户将只看到当前会话。
 
 > [!IMPORTANT]
-> 在不带所有者权限的 Azure SQL 数据库 SQL Server Management Studio （如触发器、存储过程或函数）中运行此 DMV 会引发对 master 数据库的权限错误。
+> 在不带所有者权限的 Azure SQL 数据库 SQL Server Management Studio 上运行此 DMV (例如，在触发器、存储过程或函数中，) 会引发对 master 数据库的权限错误。
 
 ## <a name="remarks"></a>备注
 
@@ -77,7 +78,7 @@ sys.dm_exec_input_buffer ( session_id , request_id )
 
 ### <a name="a-simple-example"></a>A. 简单示例
 
-下面的示例演示如何将会话 ID （SPID）和请求 ID 传递到函数。
+下面的示例演示如何向函数传递 (SPID) 和请求 ID 的会话 ID。
 
 ```sql
 SELECT * FROM sys.dm_exec_input_buffer (52, 0);

@@ -1,5 +1,6 @@
 ---
-title: sys. dm_column_store_object_pool （Transact-sql） |Microsoft Docs
+description: 'sys. dm_column_store_object_pool (Transact-sql) '
+title: sys. dm_column_store_object_pool (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -13,13 +14,14 @@ ms.assetid: a8a58ca7-0a7d-4786-bfd9-e8894bd345dd
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 720eebdbc1898d0b3ce34fb9a2205c41d4898dd2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8e9034e786c2e03038f808e8d5d7d2fe183362d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012906"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88399516"
 ---
-# <a name="sysdm_column_store_object_pool-transact-sql"></a>sys. dm_column_store_object_pool （Transact-sql）
+# <a name="sysdm_column_store_object_pool-transact-sql"></a>sys. dm_column_store_object_pool (Transact-sql) 
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
  返回列存储索引对象的不同类型的对象内存池用法的计数。  
@@ -33,7 +35,7 @@ ms.locfileid: "86012906"
 |`column_id`|`int`|列存储列的 ID。 对于 DELETE_BITMAP，此值为 NULL。| 
 |`row_group_id`|`int`|行组的 ID。|
 |`object_type`|`smallint`|1 = COLUMN_SEGMENT<br /><br /> 2 = COLUMN_SEGMENT_PRIMARY_DICTIONARY<br /><br /> 3 = COLUMN_SEGMENT_SECONDARY_DICTIONARY<br /><br /> 4 = COLUMN_SEGMENT_BULKINSERT_DICTIONARY<br /><br /> 5 = COLUMN_SEGMENT_DELETE_BITMAP|  
-|`object_type_desc`|`nvarchar(60)`|COLUMN_SEGMENT-列段。 `object_id`是段 ID。 段将一个行组中的所有值存储在一个行组中。 例如，如果表有10列，则每个行组有10个列段。 <br /><br /> COLUMN_SEGMENT_PRIMARY_DICTIONARY-一个全局字典，其中包含表中所有列段的查找信息。<br /><br /> COLUMN_SEGMENT_SECONDARY_DICTIONARY-与一个列关联的本地字典。<br /><br /> COLUMN_SEGMENT_BULKINSERT_DICTIONARY-全局字典的其他表示形式。 这提供了值的反向查找 dictionary_id。 用于在元组移动器或大容量加载过程中创建压缩段。<br /><br /> COLUMN_SEGMENT_DELETE_BITMAP-跟踪段删除的位图。 每个分区都有一个删除位图。|  
+|`object_type_desc`|`nvarchar(60)`|COLUMN_SEGMENT-列段。 `object_id` 是段 ID。 段将一个行组中的所有值存储在一个行组中。 例如，如果表有10列，则每个行组有10个列段。 <br /><br /> COLUMN_SEGMENT_PRIMARY_DICTIONARY-一个全局字典，其中包含表中所有列段的查找信息。<br /><br /> COLUMN_SEGMENT_SECONDARY_DICTIONARY-与一个列关联的本地字典。<br /><br /> COLUMN_SEGMENT_BULKINSERT_DICTIONARY-全局字典的其他表示形式。 这提供了值的反向查找 dictionary_id。 用于在元组移动器或大容量加载过程中创建压缩段。<br /><br /> COLUMN_SEGMENT_DELETE_BITMAP-跟踪段删除的位图。 每个分区都有一个删除位图。|  
 |`access_count`|`int`|对此对象的读或写访问次数。|  
 |`memory_used_in_bytes`|`bigint`|对象池中此对象使用的内存。|  
 |`object_load_time`|`datetime`|Object_id 进入对象池时的时钟时间。|  
@@ -41,14 +43,14 @@ ms.locfileid: "86012906"
 ## <a name="permissions"></a>权限  
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
+在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要  **服务器管理员** 或 **Azure Active Directory 管理员** 帐户。   
  
 ## <a name="see-also"></a>另请参阅  
   
  [与索引相关的动态管理视图和函数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_db_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)   
  [sys. dm_db_index_operational_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
- [sys. 索引 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
+ [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [监视和优化性能](../../relational-databases/performance/monitor-and-tune-for-performance.md)  
   

@@ -1,5 +1,6 @@
 ---
-title: sys. dm_filestream_non_transacted_handles （Transact-sql） |Microsoft Docs
+description: sys.dm_filestream_non_transacted_handles (Transact-SQL)
+title: sys. dm_filestream_non_transacted_handles (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 507ec125-67dc-450a-9081-94cde5444a92
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a2380091f44c4a78930cb3769e15b9cc9c176857
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d38b5e210e5a9c7a0b75d2ecb619ae84a61373e4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898881"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88398733"
 ---
 # <a name="sysdm_filestream_non_transacted_handles-transact-sql"></a>sys.dm_filestream_non_transacted_handles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,11 +35,11 @@ ms.locfileid: "85898881"
   
  有关详细信息，请参阅 [管理 FileTables](../../relational-databases/blob/manage-filetables.md)。  
   
-|**列**|**Type**|**说明**|  
+|**列**|**类型**|**说明**|  
 |----------------|--------------|---------------------|  
 |database_id|int|与句柄关联的数据库的 ID。|  
 |object_id|int|与句柄关联的 FileTable 的对象 ID。|  
-|handle_id|int|唯一的句柄上下文标识符。 由[sp_kill_filestream_non_transacted_handles &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md)存储过程用于终止特定句柄。|  
+|handle_id|int|唯一的句柄上下文标识符。 由 [sp_kill_filestream_non_transacted_handles &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md) 存储过程用于终止特定句柄。|  
 |file_object_type|int|句柄的类型。 此类型指示句柄针对其打开的层次结构的级别，即：数据库或项。|  
 |file_object_type_desc|nvarchar(120)|"未定义"，<br />"SERVER_ROOT"，<br />"DATABASE_ROOT"，<br />"TABLE_ROOT"，<br />"TABLE_ITEM"|  
 |correlation_process_id|varbinary(8)|包含发起请求的进程的唯一标识符。|  
@@ -49,7 +50,7 @@ ms.locfileid: "85898881"
 |current_workitem_type|int|此句柄当前正在由哪一状态处理。|  
 |current_workitem_type_desc|nvarchar(120)|"NoSetWorkItemType",<br />"FFtPreCreateWorkitem",<br />"FFtGetPhysicalFileNameWorkitem",<br />"FFtPostCreateWorkitem",<br />"FFtPreCleanupWorkitem",<br />"FFtPostCleanupWorkitem",<br />"FFtPreCloseWorkitem",<br />"FFtQueryDirectoryWorkItem",<br />"FFtQueryInfoWorkItem",<br />"FFtQueryVolumeInfoWorkItem",<br />"FFtSetInfoWorkitem",<br />"FFtWriteCompletionWorkitem"|  
 |fcb_id|bigint|FileTable 文件控制块 ID。|  
-|item_id|varbinary （892）|文件或目录的项 ID。 对于服务器根句柄可能为 Null。|  
+|item_id|varbinary (892) |文件或目录的项 ID。 对于服务器根句柄可能为 Null。|  
 |is_directory|bit|这是一个目录。|  
 |item_name|nvarchar(512)|项的名称。|  
 |opened_file_name|nvarchar(512)|最初请求要打开的路径。|  

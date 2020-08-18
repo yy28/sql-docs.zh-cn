@@ -1,5 +1,6 @@
 ---
-title: sys. pdw_materialized_view_column_distribution_properties （Transact-sql）
+description: 'sys. pdw_materialized_view_column_distribution_properties (Transact-sql) '
+title: 'sys. pdw_materialized_view_column_distribution_properties (Transact-sql) '
 ms.custom: seo-dt-2019
 ms.date: 07/03/2019
 ms.prod: sql
@@ -12,14 +13,14 @@ ms.assetid: d62b0e25-3226-4f87-a10a-b3a0d9555e19
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 5d5bc07ec3d00ec486d219aaab8980647c6ebfa7
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 2e881f982f3fba0e2af1ea977c2b18531fbad88f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394112"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88400283"
 ---
-# <a name="syspdw_materialized_view_column_distribution_properties-transact-sql"></a>sys. pdw_materialized_view_column_distribution_properties （Transact-sql） 
+# <a name="syspdw_materialized_view_column_distribution_properties-transact-sql"></a>sys. pdw_materialized_view_column_distribution_properties (Transact-sql)  
 
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 

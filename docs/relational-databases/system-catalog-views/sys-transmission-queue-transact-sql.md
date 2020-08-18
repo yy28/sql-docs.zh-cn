@@ -1,5 +1,6 @@
 ---
-title: sys. transmission_queue （Transact-sql） |Microsoft Docs
+description: sys.transmission_queue (Transact-SQL)
+title: sys. transmission_queue (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f3515d1a-be8f-4a27-8058-8865f0919838
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 775dde0940802962cfdae09c55749fec751d5b6c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9e3fbd63f399b54af919fd791f33e5d6f7b75a93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897716"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88400293"
 ---
 # <a name="systransmission_queue-transact-sql"></a>sys.transmission_queue (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "85897716"
 |**is_end_of_dialog**|**bit**|此消息是否是会话消息的结尾。 不可为 NULL。<br /><br /> 0 = 不是会话消息的结尾。<br /><br /> 1 = 是会话消息的结尾。<br /><br /> 不可为 NULL。|  
 |**message_body**|**varbinary(max)**|此消息的正文。 可以为 null.|  
 |**transmission_status**|**nvarchar(4000)**|此消息位于队列中的原因。 这通常是一条错误消息，说明未能发送该消息的原因。 如果为空白，则尚未发送此消息。 可以为 null.|  
-|**大事**|**tinyint**|为此消息指定的优先级。 不可为 NULL。|  
+|**priority**|**tinyint**|为此消息指定的优先级。 不可为 NULL。|  
   
 ## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  

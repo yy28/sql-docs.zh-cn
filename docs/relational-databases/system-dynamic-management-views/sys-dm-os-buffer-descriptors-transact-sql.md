@@ -1,5 +1,6 @@
 ---
-title: sys. dm_os_buffer_descriptors （Transact-sql） |Microsoft Docs
+description: sys.dm_os_buffer_descriptors (Transact-SQL)
+title: sys. dm_os_buffer_descriptors (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/14/2017
 ms.prod: sql
@@ -20,21 +21,21 @@ ms.assetid: 012aab95-8888-4f35-9ea3-b5dff6e3f60f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 61a84a655bced5a053f47d0aae1493ec80dd9ff8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: da01a45d1c55af134774ec7313e541d9fdc4ea4d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787020"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88398743"
 ---
 # <a name="sysdm_os_buffer_descriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  返回有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 缓冲池中当前所有数据页的信息。 可以使用该视图的输出，根据数据库、对象或类型来确定缓冲池内数据库页的分布。 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，此动态管理视图还返回有关缓冲池扩展文件中的数据页的信息。 有关详细信息，请参阅[缓冲池扩展](../../database-engine/configure-windows/buffer-pool-extension.md)。  
+  返回有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 缓冲池中当前所有数据页的信息。 可以使用该视图的输出，根据数据库、对象或类型来确定缓冲池内数据库页的分布。 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，此动态管理视图还返回有关缓冲池扩展文件中的数据页的信息。 有关详细信息，请参阅 [缓冲池扩展](../../database-engine/configure-windows/buffer-pool-extension.md)。  
   
  当从磁盘读取数据页时，该数据页被复制到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 缓冲池并被缓存以供重复使用。 每个缓存的数据页都有一个缓冲描述符。 缓冲描述符唯一地标识 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中当前缓存的每个数据页。 sys.dm_os_buffer_descriptors 返回所有用户数据库和系统数据库的缓存页。 这包括与 Resource 数据库相关联的页。  
   
-> **注意：** 若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称**dm_pdw_nodes_os_buffer_descriptors**。  
+> **注意：** 若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称 **dm_pdw_nodes_os_buffer_descriptors**。  
 
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -50,17 +51,17 @@ ms.locfileid: "85787020"
 |numa_node|**int**|缓冲区的非一致性内存访问节点。 可以为 Null。|  
 |read_microsec|**bigint**|将此页读入缓冲区所需的实际时间（微秒）。 重用缓冲区时重置该数值。 可以为 Null。|  
 |is_in_bpool_extension|**bit**|1 = 页在缓冲池扩展中。 可以为 Null。|  
-|pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
+|pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   
 ## <a name="permissions"></a>权限  
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
+在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要  **服务器管理员** 或 **Azure Active Directory 管理员** 帐户。   
    
 ## <a name="remarks"></a>备注  
  sys. dm_os_buffer_descriptors 返回资源数据库正在使用的页。 sys. dm_os_buffer_descriptors 不返回有关免费或被盗页面的信息，也不返回有关在读取时出错的页的信息。  
   
-|From|功能|开|关系|  
+|From|功能|启用|关系|  
 |----------|--------|--------|------------------|  
 |sys.dm_os_buffer_descriptors|sys.databases|database_id|多对一|  
 |sys.dm_os_buffer_descriptors|\<userdb>.sys. allocation_units|allocation_unit_id|多对一|  
@@ -113,7 +114,7 @@ ORDER BY cached_pages_count DESC;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
+ [sys.allocation_units (Transact-SQL)](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  
  [&#40;Transact-sql 的与操作系统相关的动态管理视图 SQL Server&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [Resource 数据库](../../relational-databases/databases/resource-database.md)   

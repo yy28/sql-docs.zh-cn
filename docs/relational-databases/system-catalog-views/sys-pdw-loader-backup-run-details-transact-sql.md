@@ -1,4 +1,5 @@
 ---
+description: 'sys. pdw_loader_backup_run_details (Transact-sql) '
 title: sys. pdw_loader_backup_run_details (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -12,17 +13,17 @@ ms.assetid: 04fc004f-ee15-4d7a-be08-78357aa99b55
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 0a0837b713f5c17f9bfb0357b9b1d999a1338e71
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: d42094beb9b29cc620007bb1d590a6fa8dc33987
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197181"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88400523"
 ---
 # <a name="syspdw_loader_backup_run_details-transact-sql"></a>sys. pdw_loader_backup_run_details (Transact-sql) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  包含更详细的信息，而不仅仅是[pdw_loader_backup_runs sys.databases 中的信息 &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)，与中的正在进行和已完成的备份 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 、还原和加载操作有关的备份和还原操作有关 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 。 信息在两次系统重启之间仍会保留。  
+  包含更详细的信息，而不仅仅是 [pdw_loader_backup_runs sys.databases 中的信息 &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)，与中的正在进行和已完成的备份 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 、还原和加载操作有关的备份和还原操作有关 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 。 信息在两次系统重启之间仍会保留。  
   
 |列名|数据类型|说明|范围|  
 |-----------------|---------------|-----------------|-----------|  

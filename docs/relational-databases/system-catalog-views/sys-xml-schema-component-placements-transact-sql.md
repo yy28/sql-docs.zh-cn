@@ -1,5 +1,6 @@
 ---
-title: sys.xml_schema_component_placements （Transact-sql） |Microsoft Docs
+description: sys.xml_schema_component_placements (Transact-SQL)
+title: sys.xml_schema_component_placements (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,12 +20,12 @@ ms.assetid: 2d3c8828-e4b3-423d-bf11-990464c1341b
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: f63f2eee6898a3b20eeef21804f3ef3441ddc1c8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b4b971fe631671d193340fc3c68b8e4e235c178f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900612"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88400703"
 ---
 # <a name="sysxml_schema_component_placements-transact-sql"></a>sys.xml_schema_component_placements (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,13 +40,13 @@ ms.locfileid: "85900612"
 |**is_default_fixed**|**bit**|1 = 默认值为固定值。 不能在 XML 实例中覆盖此值。<br /><br /> 0 = 可以覆盖该值。（默认）|  
 |**min_occurrences**|**int**|所放置的组件的最小出现次数。|  
 |**max_occurrences**|**int**|所放置的组件的最大出现次数。|  
-|**default_value**|**nvarchar （4000）**|如果提供值，则该值为默认值。 如果未提供默认值，则为 NULL。|  
+|**default_value**|**nvarchar (4000) **|如果提供值，则该值为默认值。 如果未提供默认值，则为 NULL。|  
   
 ## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [Transact-sql&#41;的目录视图 &#40;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [XML 架构 &#40;XML 类型系统&#41; 目录视图 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
   
   

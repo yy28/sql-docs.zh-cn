@@ -1,5 +1,6 @@
 ---
-title: sys. dm_exec_distributed_sql_requests （Transact-sql） |Microsoft Docs
+description: sys.dm_exec_distributed_sql_requests (Transact-SQL)
+title: sys. dm_exec_distributed_sql_requests (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,12 +23,12 @@ ms.assetid: d065dc01-35d4-472f-9554-53ac41e7d104
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0bfaaa65c08155263c15a1e4e4ddf17c20913e66
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fdda8279e49c5e1884cbd539e1a3158431e53b41
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827971"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88398843"
 ---
 # <a name="sysdm_exec_distributed_sql_requests-transact-sql"></a>sys.dm_exec_distributed_sql_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "82827971"
 |compute_node_id|**int**|此步骤表示的操作的类型。|请参阅 dm_exec_compute_nodes sys.databases 中的 compute_node_id [&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)。|  
 |distribution_id|**int**|步骤的执行位置。|对于在节点范围内运行的请求，将设置为-1，而不是分布范围。|  
 |状态|**nvarchar(32)**|此步骤的状态|活动、已取消、已完成、失败、排队|  
-|error_id|**nvarchar （36）**|与此步骤关联的错误的唯一 id （如果有）|请参阅[dm_exec_compute_node_errors &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md)的 id，如果未发生错误，则为 NULL。|  
+|error_id|**nvarchar (36) **|与此步骤关联的错误的唯一 id （如果有）|请参阅 [dm_exec_compute_node_errors &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md)的 id，如果未发生错误，则为 NULL。|  
 |start_time|**datetime**|步骤开始执行的时间|小于或等于当前时间，大于或等于此步骤所属的查询 end_compile_time。|  
 |end_time|**datetime**|此步骤完成执行、已取消或失败的时间。|小于或等于当前时间，大于或等于 start_time，则将设置为 NULL 以查看当前正在执行或已排队的步骤。|  
 |total_elapsed_time|**int**|执行查询步骤的总时间（毫秒）|介于0与 end_time 与 start_time 之间的差异。 对于排队步骤，为0。|  
@@ -51,7 +52,7 @@ ms.locfileid: "82827971"
   
 ## <a name="see-also"></a>另请参阅  
  [通过动态管理视图进行 PolyBase 故障排除](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
- [动态管理视图和函数 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [与数据库相关的动态管理视图 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

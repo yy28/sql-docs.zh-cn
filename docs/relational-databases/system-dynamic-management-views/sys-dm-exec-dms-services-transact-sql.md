@@ -1,5 +1,6 @@
 ---
-title: sys. dm_exec_dms_services （Transact-sql） |Microsoft Docs
+description: sys.dm_exec_dms_services (Transact-SQL)
+title: sys. dm_exec_dms_services (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -22,12 +23,12 @@ ms.assetid: 6ac47eef-4293-46b8-8555-07a614837504
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d1b3171f1b5405cc251d15759ad6f6a7a134fadb
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 818debc4c3db7c43f5c0e0613885e6a3d18c69ab
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821249"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88398683"
 ---
 # <a name="sysdm_exec_dms_services-transact-sql"></a>sys.dm_exec_dms_services (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -37,13 +38,13 @@ ms.locfileid: "82821249"
 |列名|数据类型|说明|范围|  
 |-----------------|---------------|-----------------|-----------|  
 |dms_core_id|`int`|与 DMS 核心关联的唯一数字 id。 此视图的键。|唯一 ID。|  
-|compute_node_id|`int`|此 DMS 服务正在其上运行的节点的 ID|请参阅 dm_exec_compute_nodes sys.databases 中的*compute_node_id* [&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)。|  
+|compute_node_id|`int`|此 DMS 服务正在其上运行的节点的 ID|请参阅 dm_exec_compute_nodes sys.databases 中的 *compute_node_id* [&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)。|  
 |状态|`nvarchar(32)`|DMS 服务的当前状态||
 |compute_pool_id|`int`|池的唯一标识符。|
 
 ## <a name="see-also"></a>另请参阅  
  [通过动态管理视图进行 PolyBase 故障排除](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
- [动态管理视图和函数 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [与数据库相关的动态管理视图 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

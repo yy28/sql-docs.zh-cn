@@ -1,5 +1,6 @@
 ---
-title: sys.xml_indexes （Transact-sql） |Microsoft Docs
+description: sys.xml_indexes (Transact-SQL)
+title: sys.xml_indexes (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3408de72-b067-4fda-b5d5-8e856dfd9db3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d4d0b42472bdaf8d634dd75d9bb8ca8bcd5a1847
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2dcbefc1a9ea50841a7807002e31d236130eb038
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896772"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88400403"
 ---
 # <a name="sysxml_indexes-transact-sql"></a>sys.xml_indexes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,9 +34,9 @@ ms.locfileid: "85896772"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**\<inherited columns>**||继承[sys.databases](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)中的列。|  
+|**\<inherited columns>**||继承 [sys.databases](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)中的列。|  
 |**using_xml_index_id**|**int**|NULL = 主 XML 索引。<br /><br /> Nonnull = 辅助 XML 索引。<br /><br /> Nonnull 是对主 XML 索引的自我联接引用。|  
-|**secondary_type**|**char （1）**|辅助索引的类型说明：<br /><br /> P = PATH 辅助 XML 索引<br /><br /> V = VALUE 辅助 XML 索引<br /><br /> R = PROPERTY 辅助 XML 索引<br /><br /> NULL = 主 XML 索引|  
+|**secondary_type**|**char (1) **|辅助索引的类型说明：<br /><br /> P = PATH 辅助 XML 索引<br /><br /> V = VALUE 辅助 XML 索引<br /><br /> R = PROPERTY 辅助 XML 索引<br /><br /> NULL = 主 XML 索引|  
 |**secondary_type_desc**|**nvarchar(60)**|辅助索引的类型说明：<br /><br /> PATH = PATH 辅助 XML 索引<br /><br /> VALUE = VALUE 辅助 XML 索引<br /><br /> PROPERTY = PROPERTY 辅助 xml 索引。<br /><br /> NULL = 主 XML 索引|  
 |**xml_index_type**|**tinyint**|索引类型：<br /><br /> 0 = 主 XML 索引<br /><br /> 1 = 辅助 XML 索引<br /><br /> 2 = 选择性 XML 索引<br /><br /> 3 = 辅助选择性 XML 索引|  
 |**xml_index_type_description**|**nvarchar(60)**|索引类型的说明：<br /><br /> PRIMARY_XML<br /><br /> 辅助 XML 索引<br /><br /> 选择性 XML 索引<br /><br /> 辅助选择性 XML 索引|  
@@ -45,7 +46,7 @@ ms.locfileid: "85896772"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [Transact-sql&#41;的目录视图 &#40;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [对象目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  
   
   
