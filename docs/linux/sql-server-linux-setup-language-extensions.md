@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 29c0d209ada9ea624c588b4510191b8ae8b7e91c
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 24a203a45fac725a95402010531185705b3af5cd
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522869"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178260"
 ---
 # <a name="install-sql-server-language-extensions-on-linux"></a>在 Linux 上安装 SQL Server 语言扩展
 
-[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
+[!INCLUDE [SQL Server 2019 - Linux](../includes/applies-to-version/sqlserver2019-linux.md)]
 
 语言扩展是数据库引擎的附加产品。 尽管可以[同时安装数据库引擎和语言扩展](#install-all)，但最好先安装并配置 SQL Server 数据库引擎，以便在添加更多组件之前解决所有问题。 
 
