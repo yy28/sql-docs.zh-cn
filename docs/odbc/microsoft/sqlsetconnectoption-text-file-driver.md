@@ -1,5 +1,6 @@
 ---
-title: SQLSetConnectOption （文本文件驱动程序） |Microsoft Docs
+description: SQLSetConnectOption（文本文件驱动程序）
+title: SQLSetConnectOption (文本文件驱动程序) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: b631a20c-2f60-4102-a61d-93b8780a4620
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6442134086ea6fe15b393b87d6c80019a076be2a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2247c6692da4ad88a51a69107f5f104df95eb96f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306132"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411623"
 ---
 # <a name="sqlsetconnectoption-text-file-driver"></a>SQLSetConnectOption（文本文件驱动程序）
 > [!NOTE]  
->  本主题提供特定于文本文件驱动程序的信息。 有关此函数的常规信息，请参阅[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)中的相应主题。  
+>  本主题提供特定于文本文件驱动程序的信息。 有关此函数的常规信息，请参阅 [ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)中的相应主题。  
   
-|fOption|注释|  
+|fOption|评论|  
 |-------------|-------------|  
 |SQL_ACCESS_MODE|SQL_ACCESS_MODE fOption 可以设置为 SQL_MODE_READ_ONLY 或 SQL_MODE_READ_WRITE。 但是，如果 SQL_ACCESS_MODE 设置为 SQL_MODE_READ_ONLY，驱动程序不会阻止更新。|  
-|SQL_AUTOCOMMIT|文本驱动程序只支持将 SQL_AUTOCOMMIT 设置为 ON （默认状态），因为它们不支持事务。|  
+|SQL_AUTOCOMMIT|文本驱动程序仅支持 SQL_AUTOCOMMIT 设置为 (默认状态) ，因为它们不支持事务。|  
 |SQL_CURRENT_QUALIFIER|支持。|  
 |SQL_LOGIN_TIMEOUT|不支持。|  
 |SQL_OPT_TRACE|支持。|  

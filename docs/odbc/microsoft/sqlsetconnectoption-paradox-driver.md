@@ -1,5 +1,6 @@
 ---
-title: SQLSetConnectOption （Paradox 驱动程序） |Microsoft Docs
+description: SQLSetConnectOption（Paradox 驱动程序）
+title: SQLSetConnectOption (Paradox 驱动程序) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: 050ee2be-594e-4dbd-af67-8b6aae756cd1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 06a90a83e2cbf24e6e85a67d961684c230bca924
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 650c23ac038c3dd937bd25731499fa75127e696c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301488"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411633"
 ---
 # <a name="sqlsetconnectoption-paradox-driver"></a>SQLSetConnectOption（Paradox 驱动程序）
 > [!NOTE]  
->  本主题提供了特定于驱动程序的信息。 有关此函数的常规信息，请参阅[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)中的相应主题。  
+>  本主题提供了特定于驱动程序的信息。 有关此函数的常规信息，请参阅 [ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)中的相应主题。  
   
-|fOption|注释|  
+|fOption|评论|  
 |-------------|-------------|  
 |SQL_ACCESS_MODE|SQL_ACCESS_MODE fOption 可以设置为 SQL_MODE_READ_ONLY 或 SQL_MODE_READ_WRITE。 但是，如果 SQL_ACCESS_MODE 设置为 SQL_MODE_READ_ONLY，驱动程序不会阻止更新。|  
-|SQL_AUTOCOMMIT|Paradox 驱动程序只支持将 SQL_AUTOCOMMIT 设置为 ON （默认状态），因为它们不支持事务。|  
+|SQL_AUTOCOMMIT|Paradox 驱动程序仅支持 SQL_AUTOCOMMIT 设置为 (默认状态) 上，因为它们不支持事务。|  
 |SQL_CURRENT_QUALIFIER|支持。|  
 |SQL_LOGIN_TIMEOUT|不支持。|  
 |SQL_OPT_TRACE|支持。|  

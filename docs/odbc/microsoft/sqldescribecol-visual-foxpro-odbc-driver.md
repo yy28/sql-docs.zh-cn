@@ -1,5 +1,6 @@
 ---
-title: SQLDescribeCol （Visual FoxPro ODBC 驱动程序） |Microsoft Docs
+description: SQLDescribeCol（Visual FoxPro ODBC 驱动程序）
+title: SQLDescribeCol (Visual FoxPro ODBC 驱动程序) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: a8d06507-8376-42b5-b09f-338a77cea131
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d41ecca15b7c363782f4b7b4f59bac9efc5d4d3c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e20b951bfd6f01d1664c7e0c73f1efeeafa57903
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81283849"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411843"
 ---
 # <a name="sqldescribecol-visual-foxpro-odbc-driver"></a>SQLDescribeCol（Visual FoxPro ODBC 驱动程序）
 > [!NOTE]  
->  本主题包含特定于 Visual FoxPro ODBC 驱动程序的信息。 有关此函数的常规信息，请参阅[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)中的相应主题。  
+>  本主题包含特定于 Visual FoxPro ODBC 驱动程序的信息。 有关此函数的常规信息，请参阅 [ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)中的相应主题。  
   
  支持：完全  
   
