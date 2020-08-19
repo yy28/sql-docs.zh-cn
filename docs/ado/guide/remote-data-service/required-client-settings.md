@@ -1,4 +1,5 @@
 ---
+description: 必需的客户端设置
 title: 必需的客户端设置 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,30 +13,30 @@ helpviewer_keywords:
 ms.assetid: e776b4e3-fcc4-4bfb-a7e8-5ffae1d83833
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9ec52c594cb058ef8359c39d696d47d4cd3dd127
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8d21cf3f08b284ed2642f9567ae86909fb35579b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749386"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452019"
 ---
 # <a name="required-client-settings"></a>必需的客户端设置
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件（有关详细信息，请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)）。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 指定以下设置以使用自定义**DataFactory**处理程序。  
+ 指定以下设置以使用自定义 **DataFactory** 处理程序。  
   
--   在[连接对象（ado）](../../../ado/reference/ado-api/connection-object-ado.md)对象[提供程序属性（ado）](../../../ado/reference/ado-api/provider-property-ado.md)属性或**连接**对象连接字符串 "**Provider**=" 关键字中指定 "provider = MS Remote"。  
+-   在 [连接对象 (ado) ](../../../ado/reference/ado-api/connection-object-ado.md) 对象 [提供程序属性 (ado) ](../../../ado/reference/ado-api/provider-property-ado.md) 属性或 **连接** 对象连接字符串 "**Provider**=" 关键字中指定 "provider = MS Remote"。  
   
--   将[CursorLocation 属性（ADO）](../../../ado/reference/ado-api/cursorlocation-property-ado.md)属性设置为**adUseClient**。  
+-   将 [ (ADO) ](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 属性的 "CursorLocation" 属性设置为 " **adUseClient**"。  
   
--   指定要在[DataControl 对象（RDS）](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象的**处理程序**属性或[记录集对象（ADO）](../../../ado/reference/ado-api/recordset-object-ado.md)对象的连接字符串 "**handler**=" 关键字中使用的处理程序的名称。 （您不能在**连接**对象的连接字符串中设置处理程序。）  
+-   在 DataControl 对象中指定要在对象中使用的处理程序的名称 [ (RDS) ](../../../ado/reference/rds-api/datacontrol-object-rds.md) 对象的 **处理程序** 属性或 [记录集对象 (ADO) ](../../../ado/reference/ado-api/recordset-object-ado.md) 对象的连接字符串 "**handler**=" 关键字。  (无法在 **连接** 对象连接字符串中设置处理程序。 )   
   
- RDS 在名为 MSDFMAP 的服务器上提供了一个默认的处理程序 **。处理程序**。 （默认自定义文件被命名为 MSDFMAP。INI。）  
+ RDS 在名为 MSDFMAP 的服务器上提供了一个默认的处理程序 **。处理程序**。  (默认的自定义文件命名为 MSDFMAP.INI。 )   
   
  **示例**  
   
- 假定 MSDFMAP 中的以下部分 **。INI**和数据源名称 advworks-srv01 是以前定义的：  
+ 假设之前已定义 **MSDFMAP.INI** 和数据源名称 advworks-srv01 中的以下部分：  
   
 ```console
 [connect CustomerDataBase]  
@@ -66,9 +67,9 @@ Dim rs as New ADODB.Recordset
 rs.CursorLocation = adUseClient  
 ```  
   
- 指定[处理程序属性（RDS）](../../../ado/reference/rds-api/handler-property-rds.md)属性或关键字;[Provider 属性（ADO）](../../../ado/reference/ado-api/provider-property-ado.md)属性或关键字;和*CustomerById*和*CustomerDatabase*标识符。 然后打开**Recordset**对象  
+  (RDS) 属性或关键字指定 [处理程序属性 ](../../../ado/reference/rds-api/handler-property-rds.md) ，则为; [提供程序属性 (ADO) ](../../../ado/reference/ado-api/provider-property-ado.md) 属性或关键字;和 *CustomerById* 和 *CustomerDatabase* 标识符。 然后打开 **Recordset** 对象  
   
- rs-232c.打开 "CustomerById （4）"，"Handler = MSDFMAP"。处理程序; "& _  
+ rs-232c.打开 "CustomerById (4) "、"Handler = MSDFMAP"。处理程序; "& _  
   
 ```vb
 "Provider=MS Remote;Data Source=CustomerDatabase;" & _  

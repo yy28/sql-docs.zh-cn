@@ -1,4 +1,5 @@
 ---
+description: 参数数据类型
 title: 参数数据类型 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,15 +15,15 @@ ms.assetid: fd7e99d8-d26a-408c-9733-6ffccde99f75
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: ''
-ms.openlocfilehash: f29bb70937df32e03480c13c7ef739eb273f15eb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0114f0cff269d35ddf1e93c653c46bcc8d863a29
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303578"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483240"
 ---
 # <a name="parameter-data-types"></a>参数数据类型
-尽管使用**SQLBindParameter**指定的每个参数都是使用 sql 数据类型定义的，但 sql 语句中的参数没有内部数据类型。 因此，仅当参数标记的数据类型可以从语句中的另一个操作数推断出来时，才可以将其包含在 SQL 语句中。 例如，在算术表达式中，例如？ + COLUMN1，可以从 COLUMN1 所表示的命名列的数据类型推断出参数的数据类型。 如果无法确定数据类型，则应用程序不能使用参数标记。  
+尽管使用 **SQLBindParameter** 指定的每个参数都是使用 sql 数据类型定义的，但 sql 语句中的参数没有内部数据类型。 因此，仅当参数标记的数据类型可以从语句中的另一个操作数推断出来时，才可以将其包含在 SQL 语句中。 例如，在算术表达式中，例如？ + COLUMN1，可以从 COLUMN1 所表示的命名列的数据类型推断出参数的数据类型。 如果无法确定数据类型，则应用程序不能使用参数标记。  
   
  下表说明了根据 SQL-92 如何确定多种类型参数的数据类型。 有关使用其他 SQL 子句时推断参数类型的更全面的规范，请参阅 SQL-92 规范。  
   

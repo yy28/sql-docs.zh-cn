@@ -1,4 +1,5 @@
 ---
+description: STMPolyFromText（geometry 数据类型）
 title: STMPolyFromText（geometry 数据类型）| Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f087a61c-f063-4fb8-8f1c-251a2fed76a1
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 015de9248eb9e3af834a2c595abc8efdc2fc3794
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: aeced0be88d4be33cf5bd46debac8dd455609e1d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554972"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445036"
 ---
 # <a name="stmpolyfromtext-geometry-data-type"></a>STMPolyFromText（geometry 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,21 +40,21 @@ STMPolyFromText ( 'multipolygon_tagged_text' , SRID )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- multipolygon_tagged_text   
- 希望返回的 **geometryMultiPolygon** 实例的 WKT 表示形式。 multipolygon_tagged_text 是一个 nvarchar(max) 表达式   。  
+ multipolygon_tagged_text**  
+ 希望返回的 **geometryMultiPolygon** 实例的 WKT 表示形式。 multipolygon_tagged_text 是一个 nvarchar(max) 表达式******。  
   
  SRID   
- 一个 int 表达式，表示希望返回的 geometryMultiPolygon 实例的空间引用 ID (SRID)   。  
+ 一个 int 表达式，表示希望返回的 geometryMultiPolygon 实例的空间引用 ID (SRID)********。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry****  
   
  CLR 返回类型：**Sql Geometry**  
   
- OGC 类型：MultiPolygon   
+ OGC 类型：MultiPolygon****  
   
-## <a name="remarks"></a>备注  
- 如果输入的格式不正确，此方法将引发 FormatException  。  
+## <a name="remarks"></a>注解  
+ 如果输入的格式不正确，此方法将引发 FormatException****。  
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `STMPolyFromText()` 创建 `geometry` 实例。  

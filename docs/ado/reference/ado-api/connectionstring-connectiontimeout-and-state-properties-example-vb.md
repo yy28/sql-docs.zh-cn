@@ -1,5 +1,6 @@
 ---
-title: 连接属性示例（VB） |Microsoft Docs
+description: 'ConnectionString、ConnectionTimeout 和 State 属性示例 (VB) '
+title: " (VB) 的连接属性示例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: 4de7336a-b5ea-43f1-b750-5fa302b5b756
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 861db15ef9e47bc814aff445b8b8887df5df7a7c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9d1da11bab0ba3858eac13f8a1e32259d376f672
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762648"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444479"
 ---
-# <a name="connectionstring-connectiontimeout-and-state-properties-example-vb"></a>ConnectionString、ConnectionTimeout 和 State 属性示例（VB）
-此示例演示使用[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)属性打开[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象的不同方法。 它还使用[ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)属性设置连接超时期限，并使用[state](../../../ado/reference/ado-api/state-property-ado.md)属性来检查连接状态。 运行此过程需要 GetState 函数。  
+# <a name="connectionstring-connectiontimeout-and-state-properties-example-vb"></a>ConnectionString、ConnectionTimeout 和 State 属性示例 (VB) 
+此示例演示使用 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) 属性打开 [连接](../../../ado/reference/ado-api/connection-object-ado.md) 对象的不同方法。 它还使用 [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md) 属性设置连接超时期限，并使用 [state](../../../ado/reference/ado-api/state-property-ado.md) 属性来检查连接状态。 运行此过程需要 GetState 函数。  
   
 > [!NOTE]
->  如果要连接到支持 Windows 身份验证的数据源提供程序，应在连接字符串中指定**Trusted_Connection = yes**或**集成安全性 = SSPI**而不是用户 ID 和密码信息。  
+>  如果要连接到支持 Windows 身份验证的数据源提供程序，应在连接字符串中指定 **Trusted_Connection = yes** 或 **集成安全性 = SSPI** 而不是用户 ID 和密码信息。  
   
 ```  
 'BeginConnectionStringVB  
@@ -127,7 +128,7 @@ End Function
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Connection 对象（ADO）](../../../ado/reference/ado-api/connection-object-ado.md)   
- [ConnectionString 属性（ADO）](../../../ado/reference/ado-api/connectionstring-property-ado.md)   
- [ConnectionTimeout 属性（ADO）](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)   
+ [ADO) 的连接对象 (](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [ (ADO) 的 ConnectionString 属性 ](../../../ado/reference/ado-api/connectionstring-property-ado.md)   
+ [ConnectionTimeout 属性 (ADO) ](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)   
  [State 属性 (ADO)](../../../ado/reference/ado-api/state-property-ado.md)

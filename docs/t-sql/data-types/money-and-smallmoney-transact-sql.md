@@ -1,4 +1,5 @@
 ---
+description: money 和 smallmoney (Transact-SQL)
 title: money 和 smallmoney (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/22/2017
@@ -24,12 +25,12 @@ ms.assetid: 57861137-89ea-4b89-b361-390597d7bccc
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e8c8cc9b8d7b923dd4ef60f5c90b734fc9deb41b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c8e5f56358030a75e7be4943f8790766e036e6a0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008010"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468282"
 ---
 # <a name="money-and-smallmoney-transact-sql"></a>money 和 smallmoney (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,10 +41,10 @@ ms.locfileid: "86008010"
   
 |数据类型|范围|存储|  
 |---|---|---|
-|**money**|-922,337,203,685,477.5808 到 922,337,203,685,477.5807（对于 Informatica，为 -922,337,203,685,477.58<br />到 922,337,203,685,477.58。  Informatica 仅支持两位小数，而不是四位。）|8 字节|  
+|**money**|-922,337,203,685,477.5808 到 922,337,203,685,477.5807（对于 Informatica，为 -922,337,203,685,477.58<br />到 922,337,203,685,477.58。  Informatica 仅支持两位小数，而不是四位。）|8 个字节|  
 |**smallmoney**|-214,748.3648 到 214,748.3647|4 个字节|  
   
-money 和 smallmoney 数据类型精确到它们所代表的货币单位的万分之一   。 对于 Informatica，money 和 smallmoney 数据类型精确到它们所代表的货币单位的百分之一   。
+money 和 smallmoney 数据类型精确到它们所代表的货币单位的万分之一********。 对于 Informatica，money 和 smallmoney 数据类型精确到它们所代表的货币单位的百分之一********。
   
 用句点分隔局部货币单位（如美分）和总体货币单位。 例如，2.15 表示 2 美元 15 美分。
   
@@ -56,7 +57,7 @@ money 和 smallmoney 数据类型精确到它们所代表的货币单位的万�
 ## <a name="converting-money-data"></a>转换 money 数据
 如果将整型数据类型转换为 **money**，则假设采用货币单位。 例如，整数值 4 被转换为相当于 4 个货币单位的 **money** 值。
   
-下面的示例分别将 smallmoney 和 money 值转换为 varchar 和 decimal 数据类型     。
+下面的示例分别将 smallmoney 和 money 值转换为 varchar 和 decimal 数据类型****************。
   
 ```sql
 DECLARE @mymoney_sm smallmoney = 3148.29,  

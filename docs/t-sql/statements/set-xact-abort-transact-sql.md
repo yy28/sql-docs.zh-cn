@@ -1,4 +1,5 @@
 ---
+description: SET XACT_ABORT (Transact-SQL)
 title: SET XACT_ABORT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/03/2019
@@ -26,19 +27,19 @@ ms.assetid: cbcaa433-58f2-4dc3-a077-27273bef65b5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7a4eeff8a2ee64a318931fad63d74bb4cd780c49
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b745de81c42af218c71c1b99e02369fad3feb797
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85990358"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444618"
 ---
 # <a name="set-xact_abort-transact-sql"></a>SET XACT_ABORT (Transact-SQL)
 
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 > [!NOTE]
-> THROW 语句执行 SET XACT_ABORT   。 RAISERROR 则不执行  。 新应用程序应使用 THROW 而不是 RAISERROR   。
+> THROW 语句执行 SET XACT_ABORT********。 RAISERROR 则不执行****。 新应用程序应使用 THROW 而不是 RAISERROR   。
 
 指定当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语句出现运行时错误时，[!INCLUDE[tsql](../../includes/tsql-md.md)] 是否自动回滚当前事务。
 
@@ -49,6 +50,8 @@ ms.locfileid: "85990358"
 ```syntaxsql
 SET XACT_ABORT { ON | OFF }
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="remarks"></a>备注
 

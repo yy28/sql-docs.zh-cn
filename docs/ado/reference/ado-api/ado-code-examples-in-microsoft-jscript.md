@@ -1,4 +1,5 @@
 ---
+description: Microsoft JScript 中的 ADO 代码示例
 title: Microsoft JScript 中的 ADO 代码示例 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 228b978d-eef1-4e30-928a-005b2f77ef14
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: db537a1d7fb8d5a440145c298a6ce524965a12b0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4bc7e233b109266a7918576dadb24631cbb210d5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760583"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451519"
 ---
 # <a name="ado-code-examples-in-microsoft-jscript"></a>Microsoft JScript 中的 ADO 代码示例
 使用以下代码示例来了解如何在使用 JScript 编写时使用 ADO 方法、属性和事件。  
@@ -39,7 +40,7 @@ ms.locfileid: "82760583"
   
 -   [GetRows 方法示例](../../../ado/reference/ado-api/getrows-method-example-vb.md)  
   
-## <a name="properties"></a>属性  
+## <a name="properties"></a>“属性”  
   
 -   [AbsolutePage、PageCount 和 PageSize 属性示例](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-jscript.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: 确保足够的 TempDB 空间
 title: 确保 TempDB 空间充足 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 09130db1-6248-4234-a1e5-a9c8e1622c06
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a783c6b6cecbd1fb4139d0ffd3af1a960347f968
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a84bec7cbd7a79fadf4ea5b11d486e7daf6aa9ab
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749574"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452189"
 ---
 # <a name="ensuring-sufficient-tempdb-space"></a>确保足够的 TempDB 空间
-如果处理需要在 Microsoft SQL Server 6.5 上处理空间的[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象时出现错误，则可能需要增加 TempDB 的大小。 （某些查询需要临时处理空间; 例如，使用 ORDER BY 子句的查询需要对**记录集**进行排序，这需要一些临时空间。）  
+如果处理需要在 Microsoft SQL Server 6.5 上处理空间的 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md) 对象时出现错误，则可能需要增加 TempDB 的大小。  (某些查询需要临时处理空间;例如，使用 ORDER BY 子句的查询需要对 **记录集**进行排序，这需要一些临时空间。 )   
   
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件（有关详细信息，请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)）。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
 > [!IMPORTANT]
 >  请在执行操作之前通读此过程，因为扩展设备后，不能轻松地对其进行收缩。  
@@ -35,23 +36,23 @@ ms.locfileid: "82749574"
   
 1.  启动 Microsoft SQL Server Enterprise 管理器 "，打开服务器树，然后打开" 数据库设备 "树。  
   
-2.  选择要展开的（物理）设备（例如 Master），然后双击设备以打开 "**编辑数据库设备**" 对话框。  
+2.  选择要展开的 (物理) 设备，如 "Master"，然后双击该设备以打开 " **编辑数据库设备** " 对话框。  
   
      此对话框显示当前数据库正在使用的空间量。  
   
-3.  在 "**大小**" 框中，将设备提高到所需的容量（例如，50 mb 的硬盘空间）。  
+3.  在 " **大小** " 框中，将设备提高到所需的量 (例如，50 MB (mb) 硬盘空间) 。  
   
-4.  单击 "**立即更改**" 以增加（逻辑） TempDB 可扩展到的空间量。  
+4.  单击 " **立即更改** " 以增加 (逻辑) TempDB 可以扩展到的空间量。  
   
-5.  打开服务器上的 "数据库" 树，然后双击 " **TempDB** " 以打开 "**编辑数据库**" 对话框。 "**数据库**" 选项卡列出当前分配给 TempDB 的空间量（**数据大小**）。 默认情况下，此值为 2 MB。  
+5.  打开服务器上的 "数据库" 树，然后双击 " **TempDB** " 以打开 " **编辑数据库** " 对话框。 " **数据库** " 选项卡列出了当前分配给 TempDB (**数据大小**) 的空间量。 默认情况下，此值为 2 MB。  
   
-6.  在 "**大小**" 组下，单击 "**展开**"。 此图显示了每个物理设备上可用和已分配的空间。 褐紫红色颜色栏表示可用空间。  
+6.  在 " **大小** " 组下，单击 " **展开**"。 此图显示了每个物理设备上可用和已分配的空间。 褐紫红色颜色栏表示可用空间。  
   
-7.  选择要在 "**大小（MB）** " 框中显示可用大小的**日志设备**，如 "Master"。  
+7.  选择 **日志设备**，如 "Master"，以在 " **大小 (MB) ** " 框中显示可用大小。  
   
-8.  单击 "**立即扩展**" 可将该空间分配给 TempDB 数据库。  
+8.  单击 " **立即扩展** " 可将该空间分配给 TempDB 数据库。  
   
-     "**编辑数据库**" 对话框显示 TempDB 的新分配大小。  
+     " **编辑数据库** " 对话框显示 TempDB 的新分配大小。  
   
  有关此主题的详细信息，请在 Microsoft SQL Server Enterprise 管理器帮助文件中搜索 "展开数据库对话框"。  
   

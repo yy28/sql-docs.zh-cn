@@ -1,4 +1,5 @@
 ---
+description: 使用 ODBC 源提取数据
 title: 使用 ODBC 源提取数据 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 10f25703-49a2-4d45-abab-6b4da2a57ba5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d32d104426b76be32510fc3737763d6436a0c816
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6684e36201e20ee84821f25694dd8326915aaf46
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86906537"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430859"
 ---
 # <a name="extract-data-by-using-the-odbc-source"></a>使用 ODBC 源提取数据
 
@@ -50,7 +51,7 @@ ms.locfileid: "86906537"
   
 9. 若要配置错误输出，请单击 **“错误输出”** 。  
   
-10. 单击“确定”。   
+10. 单击“确定”。  
   
 11. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   

@@ -1,4 +1,5 @@
 ---
+description: Oracle Connection Manager
 title: Oracle Connection Manager | Microsoft Docs
 ms.custom: ''
 ms.date: 08/14/2019
@@ -9,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0df21d12c9a7d29957d004517a3a6de3e93a8221
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 428ca450371e452081d548a64e26dba2bd29b3b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915636"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430739"
 ---
 # <a name="oracle-connection-manager"></a>Oracle Connection Manager
 
@@ -22,11 +23,11 @@ ms.locfileid: "86915636"
 
 Oracle Connection Manager 用于启用包，以便从 Oracle Database 中提取数据，并将数据加载到 Oracle Database 中。
 
-Oracle Connection Manager 的“ConnectionManagerType”  属性设置为“ORACLE”  。
+Oracle Connection Manager 的“ConnectionManagerType”**** 属性设置为“ORACLE”****。
 
 ## <a name="configuring-the-oracle-connection-manager"></a>配置 Oracle Connection Manager
 
-Oracle Connection Manager 配置更改在运行时由 Integration Services 解析。 使用“Oracle Connection Manager 编辑器”  对话框，可以添加对 Oracle 数据源的连接。
+Oracle Connection Manager 配置更改在运行时由 Integration Services 解析。 使用“Oracle Connection Manager 编辑器”**** 对话框，可以添加对 Oracle 数据源的连接。
 
 ![连接管理器](media/oracle-connection-manager.png)
 
@@ -61,8 +62,8 @@ Oracle Connection Manager 配置更改在运行时由 Integration Services 解�
 - **使用 Windows 身份验证**：选择此选项可以使用 Windows 身份验证。
 
 - **使用 Oracle 身份验证**：选择此选项可以使用 Oracle Database 身份验证。 如果使用此身份验证，请按照以下方式输入 Oracle 凭据：  
-    **用户名**：键入用于连接到 Oracle Database 的用户名。  
-    **密码**：键入“用户名”字段中输入的用户的 Oracle Database 密码。
+    用户名：键入用于连接到 Oracle Database 的用户名。  
+    密码：键入“用户名”字段中输入的用户的 Oracle Database 密码。
 
 > [!NOTE]
 >
@@ -70,7 +71,7 @@ Oracle Connection Manager 配置更改在运行时由 Integration Services 解�
 
 **测试连接**
 
-单击“测试连接”  ，以验证所提供的信息是否正确。 如果输入的信息可以连接到 Oracle Database，就会看到消息“测试连接成功”  。
+单击“测试连接”****，以验证所提供的信息是否正确。 如果输入的信息可以连接到 Oracle Database，就会看到消息“测试连接成功”****。
 
 ### <a name="custom-properties"></a>自定义属性
 
@@ -82,11 +83,11 @@ Oracle Connection Manager 中有以下自定义连接管理器属性：
 
 - **OracleHome64**：指定在 64 位模式下运行时，连接器要使用的 64 位 Oracle 主目录名称或文件夹。 (可选)
 
-自定义属性未在 Oracle Connection Manager 编辑器中列出。 若要设置 OracleHome  和 OracleHome64  属性，请执行以下操作：
+自定义属性未在 Oracle Connection Manager 编辑器中列出。 若要设置 OracleHome**** 和 OracleHome64**** 属性，请执行以下操作：
 
-1. 在“连接管理器”区域中，右键单击要使用的 Oracle Connection Manager，再选择“属性”  。
+1. 在“连接管理器”区域中，右键单击要使用的 Oracle Connection Manager，再选择“属性”****。
 
-2. 在“属性”  窗格中，将“OracleHome”  或“OracleHome64”  属性设置为 Oracle 主目录的完整路径。
+2. 在“属性”**** 窗格中，将“OracleHome”**** 或“OracleHome64”**** 属性设置为 Oracle 主目录的完整路径。
 
 ## <a name="next-steps"></a>后续步骤
 

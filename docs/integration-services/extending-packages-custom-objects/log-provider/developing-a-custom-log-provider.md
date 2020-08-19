@@ -1,4 +1,5 @@
 ---
+description: 开发自定义日志提供程序
 title: 开发自定义日志提供程序 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3f715b95-7074-4f5c-8ae2-246998052e78
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 41da6c13c50ded80c5388da1b38dad582084b3c5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e69139c38d87c1a61a61b774efdd80db49ea8181
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916408"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430489"
 ---
 # <a name="developing-a-custom-log-provider"></a>开发自定义日志提供程序
 
@@ -45,7 +46,7 @@ ms.locfileid: "86916408"
  [为自定义日志提供程序开发用户界面](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-user-interface-for-a-custom-log-provider.md)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 不支持自定义日志提供程序的自定义用户界面。  
   
-## <a name="related-topics"></a>相关主题  
+## <a name="related-topics"></a>“相关主题”  
   
 ### <a name="information-common-to-all-custom-objects"></a>所有自定义对象的通用信息  
  有关可以在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中创建的所有类型自定义对象的通用信息，请参阅以下主题：  

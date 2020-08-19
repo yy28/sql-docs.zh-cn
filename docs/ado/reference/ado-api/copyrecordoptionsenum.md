@@ -1,4 +1,5 @@
 ---
+description: CopyRecordOptionsEnum
 title: CopyRecordOptionsEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,25 +16,25 @@ helpviewer_keywords:
 ms.assetid: 2fa4eec5-d50b-4fd3-8ae7-40af441ba12b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8dc32a3cfad89e479b2541819b7ff6ad1bb1a4ed
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8cb5b72579313f538ca763079787f2aba640d692
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760253"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444369"
 ---
 # <a name="copyrecordoptionsenum"></a>CopyRecordOptionsEnum
-指定[CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md)方法的行为。  
+指定 [CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md) 方法的行为。  
   
-|返回的常量|值|说明|  
+|返回的常量|值|描述|  
 |--------------|-----------|-----------------|  
-|**adCopyAllowEmulation**|4|指示在以下情况下，*源*提供程序将尝试使用下载和上载操作来模拟副本：由于*目标*位于其他服务器上，或由不同于*源*的提供程序提供服务。 请注意，不同的提供程序功能可能会影响性能或丢失数据。|  
+|**adCopyAllowEmulation**|4|指示在以下情况下， *源* 提供程序将尝试使用下载和上载操作来模拟副本：由于 *目标*位于其他服务器上，或由不同于 *源*的提供程序提供服务。 请注意，不同的提供程序功能可能会影响性能或丢失数据。|  
 |**adCopyNonRecursive**|2|将当前目录（但不是其任何子目录）复制到目标。 复制操作不是递归的。|  
-|**adCopyOverWrite**|1|如果*目标*指向现有文件或目录，则覆盖文件或目录。|  
+|**adCopyOverWrite**|1|如果 *目标* 指向现有文件或目录，则覆盖文件或目录。|  
 |**adCopyUnspecified**|-1|默认。 执行默认复制操作：如果目标文件或目录已存在，则操作将失败，并且操作将以递归方式进行复制。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
  这些常量没有 ADO/WFC 等效项。  
   
-## <a name="applies-to"></a>应用于  
+## <a name="applies-to"></a>适用于  
  [CopyRecord 方法 (ADO)](../../../ado/reference/ado-api/copyrecord-method-ado.md)

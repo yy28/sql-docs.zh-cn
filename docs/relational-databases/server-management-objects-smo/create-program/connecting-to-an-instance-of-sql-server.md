@@ -1,4 +1,5 @@
 ---
+description: 连接到 SQL Server 实例
 title: 连接到 SQL Server 的实例 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
@@ -16,16 +17,17 @@ ms.assetid: ad3cf354-b2e3-468b-b986-1232e375fd84
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e2bcbea3415d26de6146609c1493a2c86781bc8b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 32e004da26b8cba5df8b44e4fbef3fd90967cdfc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006384"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490445"
 ---
 # <a name="connecting-to-an-instance-of-sql-server"></a>连接到 SQL Server 实例
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]管理对象（SMO）应用程序中的第一个编程步骤是创建对象的实例 <xref:Microsoft.SqlServer.Management.Smo.Server> ，并建立与实例的连接 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]管理对象 (SMO) 应用程序中的第一个编程步骤是创建对象的实例 <xref:Microsoft.SqlServer.Management.Smo.Server> ，并建立与实例的连接 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
  您可以创建 <xref:Microsoft.SqlServer.Management.Smo.Server> 对象的实例并且以三种方式建立与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例的连接。 第一种方式是使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象变量提供连接信息。 第二种方式是通过显式设置 <xref:Microsoft.SqlServer.Management.Smo.Server> 对象属性，提供连接信息。 第三种方式是将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称传递到 <xref:Microsoft.SqlServer.Management.Smo.Server> 对象构造函数中。 
   
@@ -63,7 +65,7 @@ ms.locfileid: "86006384"
 -   必须在将连接传递到任何 RMO 编程对象前调用 <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Connect%2A> 方法。  
   
 ## <a name="examples"></a>示例  
-若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual Studio .net 中创建 Visual C&#35; SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅  [在 Visual Studio .net 中创建 Visual C&#35; SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="connecting-to-the-local-instance-of-sql-server-by-using-windows-authentication-in-visual-basic"></a>通过在 Visual Basic 中使用 Windows 身份验证连接到 SQL Server 的本地实例  
  连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的本地实例并不要求大量代码。 而是依赖于身份验证方法和服务器的默认设置。 要求检索数据的第一个操作将导致创建连接。  
@@ -98,7 +100,7 @@ Console.WriteLine(srv.Information.Version);
 ## <a name="connecting-to-a-remote-instance-of-sql-server-by-using-windows-authentication-in-visual-basic"></a>通过在 Visual Basic 中使用 Windows 身份验证连接到 SQL Server 的远程实例  
  在您通过使用 Windows 身份验证连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例时，不必指定身份验证类型。 默认情况下使用 Windows 身份验证。  
   
- 此示例是 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 通过使用 Windows 身份验证连接到远程实例的 .net 代码。 字符串变量*strServer*包含远程实例的名称。  
+ 此示例是 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 通过使用 Windows 身份验证连接到远程实例的 .net 代码。 字符串变量 *strServer* 包含远程实例的名称。  
   
 ```VBNET   
 'Connect to a remote instance of SQL Server.
@@ -113,7 +115,7 @@ Console.WriteLine(srv.Information.Version)
 ## <a name="connecting-to-a-remote-instance-of-sql-server-by-using-windows-authentication-in-visual-c"></a>通过在 Visual C# 中使用 Windows 身份验证连接到 SQL Server 的远程实例  
  在您通过使用 Windows 身份验证连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例时，不必指定身份验证类型。 默认情况下使用 Windows 身份验证。  
   
- 此示例是 Visual C# .NET 代码，它通过使用 Windows 身份验证连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的远程实例。 字符串变量*strServer*包含远程实例的名称。  
+ 此示例是 Visual C# .NET 代码，它通过使用 Windows 身份验证连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的远程实例。 字符串变量 *strServer* 包含远程实例的名称。  
   
 ```csharp  
 {   
@@ -130,7 +132,7 @@ Console.WriteLine(srv.Information.Version);
 ## <a name="connecting-to-an-instance-of-sql-server-by-using-sql-server-authentication-in-visual-basic"></a>通过在 Visual Basic 中使用 SQL Server 身份验证连接到 SQL Server 的实例  
  在您通过使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例时，必须指定身份验证类型。 此示例演示声明 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象变量的替代方法，从而使连接信息可以重复使用。  
   
- 示例是 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .net 代码，演示如何连接到远程，并且*vPassword*包含登录名和密码。  
+ 示例是 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .net 代码，演示如何连接到远程，并且 *vPassword* 包含登录名和密码。  
   
 ```VBNET  
 ' compile with:   
@@ -178,7 +180,7 @@ End Class
 ## <a name="connecting-to-an-instance-of-sql-server-by-using-sql-server-authentication-in-visual-c"></a>通过在 Visual C# 中使用 SQL Server 身份验证连接到 SQL Server 的实例  
  在您通过使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例时，必须指定身份验证类型。 此示例演示声明 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象变量的替代方法，从而使连接信息可以重复使用。  
   
- 该示例是 Visual c # .NET 代码，演示如何连接到远程，并且*vPassword*包含登录名和密码。  
+ 该示例是 Visual c # .NET 代码，演示如何连接到远程，并且 *vPassword* 包含登录名和密码。  
   
 ```csharp  
 // compile with:   

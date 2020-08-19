@@ -1,4 +1,5 @@
 ---
+description: 在自定义任务中添加对调试的支持
 title: 在自定义任务中添加对调试的支持 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 7f06e49b-0b60-4e81-97da-d32dc248264a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cf8461adf02267d433a12543208d48fea00ff953
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 23abaf34f5bec9ecab8e506a123e9e9a1ec4f81f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916398"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430449"
 ---
 # <a name="adding-support-for-debugging-in-a-custom-task"></a>在自定义任务中添加对调试的支持
 
@@ -37,7 +38,7 @@ ms.locfileid: "86916398"
   
  自定义任务开发人员可利用此体系结构，使用 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> 接口及其父接口 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> 创建自定义断点目标。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> 接口定义运行时引擎与用于创建和管理自定义断点位置或目标的任务之间的交互。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> 接口提供由运行时引擎调用以通知任务挂起或继续执行的方法和属性。  
   
- 断点位置或目标是任务执行过程中可挂起处理的点。 用户可以从“设置断点”  对话框中可用的断点位置中选择。 例如，除了默认断点选项以外，Foreach 循环容器还提供“在每次循环迭代开始时断开”选项。  
+ 断点位置或目标是任务执行过程中可挂起处理的点。 用户可以从“设置断点”**** 对话框中可用的断点位置中选择。 例如，除了默认断点选项以外，Foreach 循环容器还提供“在每次循环迭代开始时断开”选项。  
   
  当任务在执行过程中到达一个断点目标时，它会评估该断点目标，以确定是否已启用断点。 启用断点表明用户希望执行在该断点处停止。 如果启用了断点，则任务会向运行时引擎引发 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A> 事件。 运行时引擎通过调用包中正在运行的每个任务的 **Suspend** 方法来响应该事件。 当运行时调用挂起任务的 **ResumeExecution** 方法时，任务将继续执行。  
   

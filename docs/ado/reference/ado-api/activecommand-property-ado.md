@@ -1,5 +1,6 @@
 ---
-title: ActiveCommand 属性（ADO） |Microsoft Docs
+description: ActiveCommand 属性 (ADO)
+title: " (ADO) 的 ActiveCommand 属性 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fb4088d5-5968-42d6-aeaa-3955046bb4da
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b89876366c80d20bde110da9e9d86414873e86bc
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 38c0a0955e934b4f303937d978f739e00ac6c120
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747477"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451739"
 ---
 # <a name="activecommand-property-ado"></a>ActiveCommand 属性 (ADO)
 指示创建关联[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象的[命令](../../../ado/reference/ado-api/command-object-ado.md)对象。  
@@ -31,15 +32,15 @@ ms.locfileid: "82747477"
 ## <a name="remarks"></a>备注  
  **ActiveCommand**属性是只读的。  
   
- 如果未使用**命令**对象创建当前**记录集**，则返回**Null**对象引用。  
+ 如果未使用 **命令** 对象创建当前 **记录集**，则返回 **Null** 对象引用。  
   
  当只给定生成的**记录集**对象时，使用此属性可查找关联的**命令**对象。  
   
-## <a name="applies-to"></a>应用于  
+## <a name="applies-to"></a>适用于  
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [ActiveCommand 属性示例（VB）](../../../ado/reference/ado-api/activecommand-property-example-vb.md)   
- [ActiveCommand 属性示例（JScript）](../../../ado/reference/ado-api/activecommand-property-example-jscript.md)   
- [ActiveCommand 属性示例（VC + +）](../../../ado/reference/ado-api/activecommand-property-example-vc.md)   
+ [ActiveCommand 属性示例 (VB) ](../../../ado/reference/ado-api/activecommand-property-example-vb.md)   
+ [ActiveCommand 属性示例 (JScript) ](../../../ado/reference/ado-api/activecommand-property-example-jscript.md)   
+ [ActiveCommand 属性示例 (VC + +) ](../../../ado/reference/ado-api/activecommand-property-example-vc.md)   
  [命令对象 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)

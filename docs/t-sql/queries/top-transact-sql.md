@@ -1,4 +1,5 @@
 ---
+description: TOP (Transact-SQL)
 title: TOP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -21,12 +22,12 @@ ms.assetid: da983c0a-06c5-4cf8-a6a4-7f9d66f34f2c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ce9c31baedb0b423e93e96080ea6697c553e549e
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 7dbaf282383bfeb83efc1b7ccf6f74ad90ed1764
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555855"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445293"
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -62,7 +63,7 @@ ms.locfileid: "86555855"
 指定要返回的行数的数值表达式。 如果指定 PERCENT，*expression* 会隐式转换为 **float** 值。 否则，*expression* 会转换为 **bigint**。  
   
 PERCENT  
-指示查询只返回结果集中前 expression% 的行  。 小数部分的值向上舍入到下一个整数值。  
+指示查询只返回结果集中前 expression% 的行**。 小数部分的值向上舍入到下一个整数值。  
   
 WITH TIES  
 返回与有限结果集中的最后一个位置相关联的两行或更多行。 必须将此参数用于 **ORDER BY** 子句。 **WITH TIES** 可能会导致返回的行数多于在 *expression* 中指定的值。 例如，如果 *expression* 设置为 5，而 2 个其他行与第 5 行中 **ORDER BY** 列的值匹配，则结果集将包含 7 行。  
@@ -76,7 +77,7 @@ WITH TIES
   
 使用 TOP（或 OFFSET 和 FETCH）而非 SET ROWCOUNT 限制返回的行数。 这些方法之所以优于使用 SET ROWCOUNT，原因包括以下各项：  
   
--   作为 SELECT 语句的一部分，查询优化器在查询优化期间可能会考虑 TOP 或 FETCH 子句中 expression 的值  。 由于在运行查询的语句外部使用 SET ROWCOUNT，不会在查询计划中考虑它的值。  
+-   作为 SELECT 语句的一部分，查询优化器在查询优化期间可能会考虑 TOP 或 FETCH 子句中 expression 的值**。 由于在运行查询的语句外部使用 SET ROWCOUNT，不会在查询计划中考虑它的值。  
   
 ## <a name="compatibility-support"></a>兼容性支持  
 为了向后兼容，括号在 SELECT 语句中是可选的。 我们建议在 SELECT 语句中始终为 TOP 使用括号。 这样做可与要求在 INSERT、UPDATE、MERGE 和 DELETE 语句中使用它的做法保持一致。 
@@ -139,7 +140,7 @@ GO
   
 通过在嵌套 select 操作中使用 TOP 和 ORDER BY，可确保将 ORDER BY 子句的结果应用于 TOP 子句，而不对 UNION 运算的结果排序。  
   
- 下面是结果集：  
+ 下面是结果集。  
   
  ```
  Model         Color      Price  
@@ -230,7 +231,7 @@ GO
 ###  <a name="limiting-the-rows-affected-by-delete-insert-or-update"></a><a name="DML"></a>限制受 DELETE、INSERT 或 UPDATE 影响的行  
   
 #### <a name="a-using-top-to-limit-the-number-of-rows-deleted"></a>A. 使用 TOP 限制删除的行数  
-如果将 TOP (*n*) 子句用于 DELETE，将针对未定义的选定 *n* 行执行删除操作。 也即，DELETE 语句选择满足 WHERE 子句中定义的条件的任何数目 (n) 的行  。 下面的示例从 `20` 表中删除其到期日期早于 2002 年 7 月 1 日的 `PurchaseOrderDetail` 行。  
+如果将 TOP (*n*) 子句用于 DELETE，将针对未定义的选定 *n* 行执行删除操作。 也即，DELETE 语句选择满足 WHERE 子句中定义的条件的任何数目 (n) 的行**。 下面的示例从 `20` 表中删除其到期日期早于 2002 年 7 月 1 日的 `PurchaseOrderDetail` 行。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -296,7 +297,7 @@ GO
 ```  
   
 #### <a name="c-using-top-to-limit-the-number-of-rows-updated"></a>C. 使用 TOP 限制更新的行数  
-以下示例使用 TOP 子句更新表中的行。 如果将 TOP (*n*) 子句用于 UPDATE，将针对未定义数量的行运行更新操作。 也即，UPDATE 语句选择满足 WHERE 子句中定义的条件的任何数目 (n) 的行  。 下列示例将 10 个客户从一位销售人员分配给了另一位。  
+以下示例使用 TOP 子句更新表中的行。 如果将 TOP (*n*) 子句用于 UPDATE，将针对未定义数量的行运行更新操作。 也即，UPDATE 语句选择满足 WHERE 子句中定义的条件的任何数目 (n) 的行**。 下列示例将 10 个客户从一位销售人员分配给了另一位。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -320,7 +321,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 下列示例将返回匹配查询条件的前 31 行。 **ORDER BY** 子句可确保所返回的 31 行是按字母顺序排序的 `LastName` 列的前 31 行。  
   
-使用 TOP，且不指定关联  。  
+使用 TOP，且不指定关联****。  
   
 ```sql  
 SELECT TOP (31) FirstName, LastName   

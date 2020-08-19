@@ -1,4 +1,5 @@
 ---
+description: STMPointFromWKB（geometry 数据类型）
 title: STMPointFromWKB（geometry 数据类型）| Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 01d4117f-01a0-4bc3-8762-7382a1cdbd6c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: f538896347f5ca9148b422d992450314a6cde50f
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: a80aba8159be4697861ee9d80bcf2a18f7c59c8a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552785"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444999"
 ---
 # <a name="stmpointfromwkb-geometry-data-type"></a>STMPointFromWKB（geometry 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,21 +40,21 @@ STMPointFromWKB ( 'WKB_multipoint' , SRID )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- WKB_multipoint   
- 希望返回的 **geometryMultiPoint** 实例的 WKB 表示形式。 WKB_multipoint 是一个 varbinary(max) 表达式   。  
+ WKB_multipoint**  
+ 希望返回的 **geometryMultiPoint** 实例的 WKB 表示形式。 WKB_multipoint 是一个 varbinary(max) 表达式******。  
   
  SRID   
- 一个 int 表达式，表示希望返回的 geometryMultiPoint 实例的空间引用 ID (SRID)   。  
+ 一个 int 表达式，表示希望返回的 geometryMultiPoint 实例的空间引用 ID (SRID)********。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry****  
   
- CLR 返回类型：SqlGeometry   
+ CLR 返回类型：SqlGeometry****  
   
- OGC 类型：MultiPoint   
+ OGC 类型：MultiPoint****  
   
-## <a name="remarks"></a>备注  
- 如果输入的格式不正确，此方法将引发 FormatException  。  
+## <a name="remarks"></a>注解  
+ 如果输入的格式不正确，此方法将引发 FormatException****。  
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `STMPointFromWKB()` 创建 `geometry` 实例。  

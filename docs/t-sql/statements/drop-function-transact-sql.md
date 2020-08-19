@@ -1,4 +1,5 @@
 ---
+description: DROP FUNCTION (Transact-SQL)
 title: DROP FUNCTION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/11/2020
@@ -22,12 +23,12 @@ ms.assetid: ee5ad283-9e44-4109-902f-0ce12669ee11
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3d0f955bbb373c48f55b9769485354050c2c86a3
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 4dfb731f2ce4bd0ed1beeea64aacf071267a7efb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396746"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444621"
 ---
 # <a name="drop-function-transact-sql"></a>DROP FUNCTION (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,17 +56,19 @@ DROP FUNCTION [IF EXISTS] [ schema_name. ] function_name
 ```  
    
   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>参数
  *IF EXISTS*    
- 只有在函数已存在时才对其进行有条件地删除。 在 [!INCLUDE[ssnoversion_md](../../includes/ssnoversion-md.md)] 中以及从 [!INCLUDE[sssds_md](../../includes/sssds-md.md)] 2016 开始可用。
+ 只有在函数已存在时才对其进行有条件地删除。 在 [!INCLUDE[sssds_md](../../includes/sssds-md.md)] 中以及从 [!INCLUDE[ssnoversion_md](../../includes/ssnoversion-md.md)] 2016 开始可用。
   
  *schema_name*  
  用户定义函数所属的架构的名称。  
   
- function_name   
+ function_name  
  要删除的用户定义函数的名称。 可以选择是否指定架构名称。 不能指定服务器名称和数据库名称。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  如果数据库中存在引用 DROP FUNCTION 的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数或视图并且这些函数或视图通过使用 SCHEMABINDING 创建，或者存在引用该函数的计算列、CHECK 约束或 DEFAULT 约束，则 DROP FUNCTION 将失败。  
   
  如果存在引用此函数并且已生成索引的计算列，则 DROP FUNCTION 将失败。  
@@ -76,7 +79,7 @@ DROP FUNCTION [IF EXISTS] [ schema_name. ] function_name
 ## <a name="examples"></a>示例  
   
 ### <a name="a-dropping-a-function"></a>A. 删除函数  
- 以下示例从 `fn_SalesByStore` 示例数据库的 `Sales` 架构中删除 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 用户定义函数。 若要创建此函数，请参阅 [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md) 中的示例 B。  
+ 以下示例从 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 示例数据库的 `Sales` 架构中删除 `fn_SalesByStore` 用户定义函数。 若要创建此函数，请参阅 [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md) 中的示例 B。  
   
 ```  
 DROP FUNCTION Sales.fn_SalesByStore;  

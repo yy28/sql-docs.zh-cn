@@ -1,5 +1,6 @@
 ---
-title: 变更数据捕获表（Transact-sql） |Microsoft Docs
+description: 变更数据捕获表 (Transact-SQL)
+title: 更改数据捕获表 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ dev_langs:
 ms.assetid: a4372d0b-50ca-4e58-80f6-2ed3cb52a84a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c61cc87f293b589f9c3726fcff5c3408774f34bf
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 38f2be3efcb798897849f249e63287ed6c49e496
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890589"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469056"
 ---
 # <a name="change-data-capture-tables-transact-sql"></a>变更数据捕获表 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "85890589"
  返回变更数据捕获代理作业的配置参数。  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;Transact-sql&#41;的变更数据捕获存储过程](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   
+ [更改数据捕获存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   
  [变更数据捕获函数 (Transact-SQL)](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)  
   
   

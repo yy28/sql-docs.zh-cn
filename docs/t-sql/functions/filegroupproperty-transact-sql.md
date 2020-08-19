@@ -1,4 +1,5 @@
 ---
+description: FILEGROUPPROPERTY (Transact-SQL)
 title: FILEGROUPPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b3a930e6-df05-4034-929c-f681f5f6fc6e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 48c0d9a2a3b83256e8ae32a13d615e3a36b10ccb
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 5992e56da8ae602d2e681265b63b52f6415f9374
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111542"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468008"
 ---
 # <a name="filegroupproperty-transact-sql"></a>FILEGROUPPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,11 +44,11 @@ FILEGROUPPROPERTY ( filegroup_name, property )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- filegroup_name   
-类型为 sysname  的表达式，它表示要为 `FILEGROUPPROPERTY` 返回命名的属性信息的文件组名称。  
+ filegroup_name  
+类型为 sysname**** 的表达式，它表示要为 `FILEGROUPPROPERTY` 返回命名的属性信息的文件组名称。  
   
  *property*  
-类型为 varchar(128)  的表达式，它返回文件组属性的名称。 Property  可以返回下列值之一：  
+类型为 varchar(128)**** 的表达式，它返回文件组属性的名称。 Property** 可以返回下列值之一：  
   
 |值|说明|返回的值|  
 |-----------|-----------------|--------------------|  
@@ -59,10 +60,10 @@ FILEGROUPPROPERTY ( filegroup_name, property )
 **int**  
   
 ## <a name="remarks"></a>备注  
-filegroup_name  与 sys.filegroups  目录视图中的 name  列相对应。  
+filegroup_name** 与 sys.filegroups**** 目录视图中的 name**** 列相对应。  
   
 ## <a name="examples"></a>示例  
-此示例返回 `IsDefault` 数据库中主文件组的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 属性设置。  
+此示例返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中主文件组的 `IsDefault` 属性设置。  
   
 ```  
 SELECT FILEGROUPPROPERTY('PRIMARY', 'IsDefault') AS 'Default Filegroup';  

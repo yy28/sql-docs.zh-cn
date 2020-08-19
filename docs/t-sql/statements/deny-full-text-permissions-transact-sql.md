@@ -1,4 +1,5 @@
 ---
+description: DENY 全文权限 (Transact-SQL)
 title: DENY 全文权限 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/15/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d86e9a1d-0938-4ec2-a169-2d0564f3642e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 296f30c5e8a6f8b296f09c5e9360ad4e81b7d2bf
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 226ee1104f6be9bb50bfbcc87c774f05170abbd5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484808"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444699"
 ---
 # <a name="deny-full-text-permissions-transact-sql"></a>DENY 全文权限 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,16 +51,16 @@ DENY permission [ ,...n ] ON
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- permission   
+ permission  
  权限的名称。 本主题后面的“备注”部分中介绍了不同权限与安全对象之间的有效映射。  
   
- ON FULLTEXT CATALOG ::full-text_catalog_name    
- 指定要对其拒绝权限的全文目录。 需要使用作用域限定符 ::  。  
+ ON FULLTEXT CATALOG ::full-text_catalog_name__****  
+ 指定要对其拒绝权限的全文目录。 需要使用作用域限定符 ::。  
   
- ON FULLTEXT STOPLIST ::full-text_stoplist_name    
- 指定要对其拒绝权限的全文非索引字表。 需要使用作用域限定符 ::  。  
+ ON FULLTEXT STOPLIST ::full-text_stoplist_name****__  
+ 指定要对其拒绝权限的全文非索引字表。 需要使用作用域限定符 ::。  
   
- database_principal   
+ database_principal  
  指定要对其拒绝权限的主体。 下列类型作之一：  
   
 -   数据库用户  
@@ -81,7 +82,7 @@ DENY permission [ ,...n ] ON
  CASCADE  
  指示要拒绝的权限也会被对此主体授予该权限的其他主体拒绝。  
   
- denying_principal   
+ denying_principal**  
  指定一个主体，执行该查询的主体从该主体获得拒绝授予该权限的权利。 下列类型作之一：  
   
 -   数据库用户  

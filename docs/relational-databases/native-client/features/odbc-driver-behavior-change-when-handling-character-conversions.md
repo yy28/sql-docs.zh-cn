@@ -1,4 +1,5 @@
 ---
+description: 处理字符转换时 ODBC 驱动程序行为的变化
 title: ODBC 更改处理 char 转换
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,16 +11,17 @@ ms.assetid: 682a232a-bf89-4849-88a1-95b2fbac1467
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0bce5fa58dfb665d3c4fe23f417a8585a4ec8eb6
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 48c2230327a92a560291aacbf802ae775b99fe8f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009043"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498878"
 ---
 # <a name="odbc-driver-behavior-change-when-handling-character-conversions"></a>处理字符转换时 ODBC 驱动程序行为的变化
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]Native CLIENT ODBC 驱动程序（SQLNCLI11.dll）更改了它的执行方式，即 SQL_WCHAR * （NCHAR/nvarchar/nvarchar （max））和 SQL_CHAR \* （CHAR/VARCHAR/NARCHAR （max））转换。 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2012 Native Client ODBC 驱动程序时，ODBC 函数（如 SQLGetData、SQLBindCol、SQLBindParameter）返回 (-4) SQL_NO_TOTAL 作为长度/指示符参数。 以前版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序返回的长度值可能不正确。  
+  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] ( # A0) 的 Native CLIENT ODBC 驱动程序更改了它的实现方式 SQL_WCHAR * (NCHAR/nvarchar/nvarchar (max) # A6 和 SQL_CHAR (\* CHAR/VARCHAR/NARCHAR (max) # A10 转换。 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2012 Native Client ODBC 驱动程序时，ODBC 函数（如 SQLGetData、SQLBindCol、SQLBindParameter）返回 (-4) SQL_NO_TOTAL 作为长度/指示符参数。 以前版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序返回的长度值可能不正确。  
   
 ## <a name="sqlgetdata-behavior"></a>SQLGetData 行为  
  许多 Windows 函数允许指定缓冲区大小为 0，且返回的长度为返回的数据大小。 以下模式对于 Windows 程序员很常见：  
@@ -32,7 +34,7 @@ pBuffer = new BYTE[iSize];   // Allocate buffer
 GetMyFavoriteAPI(pBuffer, &iSize);   // Retrieve actual data  
 ```  
   
- 但是，不应在此方案中使用**SQLGetData** 。 不应使用以下模式：  
+ 但是，不应在此方案中使用 **SQLGetData** 。 不应使用以下模式：  
   
 ```  
 // bad  
@@ -43,22 +45,22 @@ pBuffer = new WCHAR[(iSize/sizeof(WCHAR)) + 1];   // Allocate buffer
 SQLGetData(hstmt, SQL_W_CHAR, ...., (SQLPOINTER*)pBuffer, iSize, &iSize);   // Retrieve data  
 ```  
   
- 只能调用**SQLGetData**来检索实际数据块。 不支持使用**SQLGetData**获取数据大小。  
+ 只能调用**SQLGetData**来检索实际数据块。 不支持使用 **SQLGetData** 获取数据大小。  
   
- 下面说明当您使用不正确的模式时驱动程序变化的影响。 此应用程序查询**varchar**列并作为 Unicode （SQL_UNICODE/SQL_WCHAR）绑定：  
+ 下面说明当您使用不正确的模式时驱动程序变化的影响。 此应用程序查询 **varchar** 列，并将其绑定为 Unicode (SQL_UNICODE/SQL_WCHAR) ：  
   
- Query`select convert(varchar(36), '123')`  
+ Query  `select convert(varchar(36), '123')`  
   
 ```  
 SQLGetData(hstmt, SQL_WCHAR, ....., (SQLPOINTER*) 0x1, 0 , &iSize);   // Attempting to determine storage size needed  
 ```  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序版本|长度或指示符的结果|说明|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序版本|长度或指示符的结果|描述|  
 |-----------------------------------------------------------------|---------------------------------|-----------------|  
 |[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Native Client 或更早版本|6|驱动程序错误地假定将 CHAR 转换为 WCHAR 可以通过长度 * 2 来实现。|  
-|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client（版本 11.0.2100.60）或更高版本|-4 (SQL_NO_TOTAL)|该驱动程序不再假设从 CHAR 转换为 WCHAR 或 WCHAR 转换为 CHAR 的操作是一（乘） \* 2 或（除法）/2 操作。<br /><br /> 调用**SQLGetData**将不再返回预期转换的长度。 驱动程序检测 CHAR 和 WCHAR 之间的转换并返回 (-4) SQL_NO_TOTAL 替代可能不正确的 *2 或 /2 行为。|  
+|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client（版本 11.0.2100.60）或更高版本|-4 (SQL_NO_TOTAL)|该驱动程序不再假设从 CHAR 转换为 WCHAR 或 WCHAR 到 CHAR 是 (乘法) \* 2 或 (除以) /2 操作。<br /><br /> 调用 **SQLGetData** 将不再返回预期转换的长度。 驱动程序检测 CHAR 和 WCHAR 之间的转换并返回 (-4) SQL_NO_TOTAL 替代可能不正确的 *2 或 /2 行为。|  
   
- 使用**SQLGetData**检索数据块。 （所示的伪代码：）  
+ 使用 **SQLGetData** 检索数据块。 （所示的伪代码：）  
   
 ```  
 while( (SQL_SUCCESS or SQL_SUCCESS_WITH_INFO) == SQLFetch(...) ) {  
@@ -76,19 +78,19 @@ while( (SQL_SUCCESS or SQL_SUCCESS_WITH_INFO) == SQLFetch(...) ) {
 ```  
   
 ## <a name="sqlbindcol-behavior"></a>SQLBindCol 行为  
- Query`select convert(varchar(36), '1234567890')`  
+ Query  `select convert(varchar(36), '1234567890')`  
   
 ```  
 SQLBindCol(... SQL_W_CHAR, ...)   // Only bound a buffer of WCHAR[4] - Expecting String Data Right Truncation behavior  
 ```  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序版本|长度或指示符的结果|说明|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序版本|长度或指示符的结果|描述|  
 |-----------------------------------------------------------------|---------------------------------|-----------------|  
-|[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Native Client 或更早版本|20|**SQLFetch**报告数据右侧存在截断情况。<br /><br /> 长度为返回的数据长度而非存储的数据长度（假定 *2 CHAR 到 WCHAR 的转换对于符号可能不正确）。<br /><br /> 缓冲区中存储的数据为 123 \ 0。 缓冲区被保证为以 NULL 结束。|  
-|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client（版本 11.0.2100.60）或更高版本|-4 (SQL_NO_TOTAL)|**SQLFetch**报告数据右侧存在截断情况。<br /><br /> 长度指示 -4 (SQL_NO_TOTAL)，因为数据的其余部分未转换。<br /><br /> 缓冲区中存储的数据为 123\0。 - 缓冲区被保证为以 NULL 结束。|  
+|[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Native Client 或更早版本|20|**SQLFetch** 报告数据右侧存在截断情况。<br /><br /> 长度为返回的数据长度而非存储的数据长度（假定 *2 CHAR 到 WCHAR 的转换对于符号可能不正确）。<br /><br /> 缓冲区中存储的数据为 123 \ 0。 缓冲区被保证为以 NULL 结束。|  
+|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client（版本 11.0.2100.60）或更高版本|-4 (SQL_NO_TOTAL)|**SQLFetch** 报告数据右侧存在截断情况。<br /><br /> 长度指示 -4 (SQL_NO_TOTAL)，因为数据的其余部分未转换。<br /><br /> 缓冲区中存储的数据为 123\0。 - 缓冲区被保证为以 NULL 结束。|  
   
 ## <a name="sqlbindparameter-output-parameter-behavior"></a>SQLBindParameter（OUTPUT 参数行为）  
- Query`create procedure spTest @p1 varchar(max) OUTPUT`  
+ Query  `create procedure spTest @p1 varchar(max) OUTPUT`  
   
  `select @p1 = replicate('B', 1234)`  
   
@@ -96,17 +98,17 @@ SQLBindCol(... SQL_W_CHAR, ...)   // Only bound a buffer of WCHAR[4] - Expecting
 SQLBindParameter(... SQL_W_CHAR, ...)   // Only bind up to first 64 characters  
 ```  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序版本|长度或指示符的结果|说明|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序版本|长度或指示符的结果|描述|  
 |-----------------------------------------------------------------|---------------------------------|-----------------|  
-|[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Native Client 或更早版本|2468|**SQLFetch**返回的数据不可用。<br /><br /> **SQLMoreResults**返回的数据不可用。<br /><br /> 长度指示从服务器返回的数据大小而非缓冲区中存储的数据大小。<br /><br /> 原始缓冲区包含 63 个字节和 NULL 结束符。 缓冲区被保证为以 NULL 结束。|  
-|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client（版本 11.0.2100.60）或更高版本|-4 (SQL_NO_TOTAL)|**SQLFetch**返回的数据不可用。<br /><br /> **SQLMoreResults**返回的数据不可用。<br /><br /> 长度指示 (-4) SQL_NO_TOTAL，因为数据的其余部分未转换。<br /><br /> 原始缓冲区包含 63 个字节和 NULL 结束符。 缓冲区被保证为以 NULL 结束。|  
+|[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Native Client 或更早版本|2468|**SQLFetch** 返回的数据不可用。<br /><br /> **SQLMoreResults** 返回的数据不可用。<br /><br /> 长度指示从服务器返回的数据大小而非缓冲区中存储的数据大小。<br /><br /> 原始缓冲区包含 63 个字节和 NULL 结束符。 缓冲区被保证为以 NULL 结束。|  
+|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client（版本 11.0.2100.60）或更高版本|-4 (SQL_NO_TOTAL)|**SQLFetch** 返回的数据不可用。<br /><br /> **SQLMoreResults** 返回的数据不可用。<br /><br /> 长度指示 (-4) SQL_NO_TOTAL，因为数据的其余部分未转换。<br /><br /> 原始缓冲区包含 63 个字节和 NULL 结束符。 缓冲区被保证为以 NULL 结束。|  
   
 ## <a name="performing-char-and-wchar-conversions"></a>执行 CHAR 和 WCHAR 转换  
- [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client ODBC 驱动程序提供几种执行 CHAR 和 WCHAR 转换的方式。 逻辑类似于处理 blob （varchar （max）、nvarchar （max）、...）：  
+ [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client ODBC 驱动程序提供几种执行 CHAR 和 WCHAR 转换的方式。 逻辑类似于操作 blob (varchar (max) 、nvarchar (max) ... ) ：  
   
--   绑定到**SQLBindCol**或**SQLBindParameter**时，数据会保存或截断到指定的缓冲区中。  
+-   绑定到 **SQLBindCol** 或 **SQLBindParameter**时，数据会保存或截断到指定的缓冲区中。  
   
--   如果未绑定，则可以通过使用**SQLGetData**和**SQLParamData**在块区中检索数据。  
+-   如果未绑定，则可以通过使用 **SQLGetData** 和 **SQLParamData**在块区中检索数据。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server Native Client 功能](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  

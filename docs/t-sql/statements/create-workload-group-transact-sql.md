@@ -1,4 +1,5 @@
 ---
+description: CREATE WORKLOAD GROUP (Transact-SQL)
 title: CREATE WORKLOAD GROUP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/27/2020
@@ -19,12 +20,12 @@ helpviewer_keywords:
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: 5c6d645a07e98563d7014ca1aed0658696b54b54
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 67106682f9302c7849b8f5523e88aa1dd2aa4475
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864360"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444736"
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 
@@ -154,7 +155,7 @@ IMPORTANCE = { LOW \| BELOW_NORMAL \| NORMAL \| ABOVE_NORMAL \| HIGH }</br>
 在工作负荷组设置的重要性是工作负荷组中所有请求的默认重要性。 用户还可以在分类器级别设置重要性，这可能会覆盖工作负荷组的重要性设置。 这允许对工作负荷组内请求的重要性进行区分，以便更快地访问非保留资源。 当工作负荷组 min_percentage_resource 的总和小于 100 时，将根据重要性分配非保留资源。
 
 QUERY_EXECUTION_TIMEOUT_SEC = value</br>     
-指定查询在取消之前可以执行的最长时间（以秒为单位）。 value 必须为 0 或一个正整数。 value 的默认设置为 0，查询永不超时。QUERY_EXECUTION_TIMEOUT_SEC 在查询处于运行状态时而不是在查询加入队列时进行计数。
+指定查询在取消之前可以执行的最长时间（以秒为单位）。 value 必须为 0 或一个正整数  。 value 的默认设置为 0，查询永不超时。QUERY_EXECUTION_TIMEOUT_SEC 在查询处于运行状态时而不是在查询加入队列时进行计数。
 
 ## <a name="remarks"></a>备注
 

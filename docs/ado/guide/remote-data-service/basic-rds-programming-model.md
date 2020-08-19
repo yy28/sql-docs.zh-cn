@@ -1,4 +1,5 @@
 ---
+description: 基本的 RDS 编程模型
 title: 基本 RDS 编程模型 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,30 +13,30 @@ helpviewer_keywords:
 ms.assetid: 0bdd236b-edff-4aac-94c3-93e1465ca6c5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 441d3f9f2de12e269839c3561dd0d202121018be
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5c29bb00ed7cf8ff914373f026d252880d6bdbb5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750187"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452309"
 ---
 # <a name="basic-rds-programming-model"></a>基本的 RDS 编程模型
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件（有关详细信息，请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)）。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
  RDS 解决了在以下环境中存在的应用程序：客户端应用程序指定将在服务器上执行的程序以及返回所需信息所需的参数。 服务器上调用的程序将获得对指定数据源的访问权限、检索信息，还可以选择处理数据，然后将生成的信息以可以轻松使用的形式返回到客户端应用程序。 RDS 提供了执行以下一系列操作的方法：  
   
--   指定要在服务器上调用的程序，并获取从客户端引用该程序的方法。 （此引用有时称为*代理*。 它表示远程服务器程序。 客户端应用程序将 "调用" 代理程序，就像它是本地程序一样，但是它实际上调用远程服务器程序。）  
+-   指定要在服务器上调用的程序，并获取从客户端引用该程序的方法。  (此引用有时称为 *代理*。 它表示远程服务器程序。 客户端应用程序将 "调用" 代理程序，就像它是本地程序一样，但是它实际上调用远程服务器程序。 )   
   
--   调用服务器程序。 将参数传递给用于标识数据源和要发出的命令的服务器程序。 （服务器程序实际使用 ADO 获取对数据源的访问权限。 ADO 使用给定的参数之一进行连接，然后发出在另一个参数中指定的命令。）  
+-   调用服务器程序。 将参数传递给用于标识数据源和要发出的命令的服务器程序。  (服务器程序实际使用 ADO 获取对数据源的访问权限。 ADO 使用给定的参数之一进行连接，然后发出在其他参数中指定的命令。 )   
   
--   服务器程序从数据源中获取[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。 或者，在服务器上处理**Recordset**对象。  
+-   服务器程序从数据源中获取 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md) 对象。 或者，在服务器上处理 **Recordset** 对象。  
   
--   服务器程序将最终的**记录集**对象返回到客户端应用程序。  
+-   服务器程序将最终的 **记录集** 对象返回到客户端应用程序。  
   
--   在客户端上，**记录集**对象将被置于可由视觉对象轻松使用的窗体中。  
+-   在客户端上， **记录集** 对象将被置于可由视觉对象轻松使用的窗体中。  
   
--   对**Recordset**对象的任何修改都将发送回服务器程序，该程序使用这些修改来更新数据源。  
+-   对 **Recordset** 对象的任何修改都将发送回服务器程序，该程序使用这些修改来更新数据源。  
   
  此编程模型包含某些便利功能。 如果你不需要复杂的服务器程序来访问数据源，并且如果提供所需的连接和命令参数，则 RDS 将使用简单的默认服务器程序自动检索指定的数据。  
   
@@ -47,7 +48,7 @@ ms.locfileid: "82750187"
  [RDS 编程模型详细信息](../../../ado/guide/remote-data-service/rds-programming-model-in-detail.md)   
  [RDS 方案](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [RDS 教程](../../../ado/guide/remote-data-service/rds-tutorial.md)   
- [Recordset 对象（ADO）](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [ADO)  (Recordset 对象 ](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [RDS 使用情况和安全性](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
 
 

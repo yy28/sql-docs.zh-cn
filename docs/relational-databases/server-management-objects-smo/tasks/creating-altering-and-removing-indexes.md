@@ -1,4 +1,5 @@
 ---
+description: 创建、更改和删除索引
 title: 创建、更改和删除索引
 ms.custom: seo-dt-2019
 ms.date: 01/11/2019
@@ -13,11 +14,12 @@ ms.assetid: ad1befa5-46e0-4895-b9d3-42852e07607b
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b2b269a2f23cc81478309d8ccfa7f89f6b60f742
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 7f872e67dd113118497daee1d9af4ae97fe6592e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001309"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490371"
 ---
 # <a name="creating-altering-and-removing-indexes"></a>创建、更改和删除索引
 
@@ -28,7 +30,7 @@ ms.locfileid: "86001309"
  可以通过指定 <xref:Microsoft.SqlServer.Management.Smo.Index.IsXmlIndex%2A> 对象的 <xref:Microsoft.SqlServer.Management.Smo.Index> 属性对 XML 列创建索引。  
   
 ## <a name="examples"></a>示例  
- 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual Studio .net 中创建 Visual C&#35; SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅 [在 Visual Studio .net 中创建 Visual C&#35; SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="creating-a-non-clustered-composite-index-in-visual-basic"></a>在 Visual Basic 中创建非聚集组合索引  
  此代码示例演示如何创建组合的非聚集索引。 对于复合索引，请将超过多个列添加到索引中。 <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A>对于非聚集索引，将属性设置为**False** 。  
@@ -187,7 +189,7 @@ $idx.Drop();
 ```  
   
 ## <a name="creating-an-xml-index-in-visual-basic"></a>在 Visual Basic 中创建 XML 索引  
- 此代码示例演示如何对 XML 数据类型创建 XML 索引。 XML 数据类型是一个名为 MySampleCollection 的 XML 架构集合，它是在[使用 XML 架构](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md)中创建的。 XML 索引具有一些限制，其中一个限制是 XML 索引必须是对已具有聚集主键的表创建的。  
+ 此代码示例演示如何对 XML 数据类型创建 XML 索引。 XML 数据类型是一个名为 MySampleCollection 的 XML 架构集合，它是在 [使用 XML 架构](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md)中创建的。 XML 索引具有一些限制，其中一个限制是 XML 索引必须是对已具有聚集主键的表创建的。  
   
 ```  
 ' /r:Microsoft.SqlServer.Smo.dll  
@@ -250,7 +252,7 @@ End Class
 ```  
   
 ## <a name="creating-an-xml-index-in-visual-c"></a>在 Visual C# 中创建 XML 索引  
- 此代码示例演示如何对 XML 数据类型创建 XML 索引。 XML 数据类型是一个名为 MySampleCollection 的 XML 架构集合，它是在[使用 XML 架构](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md)中创建的。 XML 索引具有一些限制，其中一个限制是 XML 索引必须是对已具有聚集主键的表创建的。  
+ 此代码示例演示如何对 XML 数据类型创建 XML 索引。 XML 数据类型是一个名为 MySampleCollection 的 XML 架构集合，它是在 [使用 XML 架构](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md)中创建的。 XML 索引具有一些限制，其中一个限制是 XML 索引必须是对已具有聚集主键的表创建的。  
   
 ```  
 // /r:Microsoft.SqlServer.Smo.dll  
@@ -313,7 +315,7 @@ public class A {
 ```  
   
 ## <a name="creating-an-xml-index-in-powershell"></a>在 PowerShell 中创建 XML 索引  
- 此代码示例演示如何对 XML 数据类型创建 XML 索引。 XML 数据类型是一个名为 MySampleCollection 的 XML 架构集合，它是在[使用 XML 架构](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md)中创建的。 XML 索引具有一些限制，其中一个限制是 XML 索引必须是对已具有聚集主键的表创建的。  
+ 此代码示例演示如何对 XML 数据类型创建 XML 索引。 XML 数据类型是一个名为 MySampleCollection 的 XML 架构集合，它是在 [使用 XML 架构](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md)中创建的。 XML 索引具有一些限制，其中一个限制是 XML 索引必须是对已具有聚集主键的表创建的。  
   
 ```  
 # Set the path context to the local, default instance of SQL Server and get a reference to adventureworks2012  

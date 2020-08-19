@@ -1,4 +1,5 @@
 ---
+description: ~ （位非）（SSIS 表达式）
 title: ~（位非）（SSIS 表达式）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e4413ddd-0d0e-40c3-9c76-b5ce323218ec
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c64bc1c2e2a6814450d7857480c2e0c8f094ff3e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ae8fa8bb0aae6700d1082e52385c7d162c193b84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923483"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430609"
 ---
 # <a name="-bitwise-not-ssis-expression"></a>~ （位非）（SSIS 表达式）
 
@@ -37,12 +38,12 @@ ms.locfileid: "86923483"
   
 ## <a name="arguments"></a>参数  
  *integer_expression*  
- 整数数据类型的任何有效表达式。 integer  _expression  是一个整数，该整数转换为二进制数以进行位运算。 有关详细信息，请参阅 [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)。  
+ 整数数据类型的任何有效表达式。 integer**_expression** 是一个整数，该整数转换为二进制数以进行位运算。 有关详细信息，请参阅 [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)。  
   
 ## <a name="result-types"></a>结果类型  
- 返回 integer_expression  数据类型。  
+ 返回 integer_expression** 数据类型。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  无  
   
 ## <a name="expression-examples"></a>表达式示例  

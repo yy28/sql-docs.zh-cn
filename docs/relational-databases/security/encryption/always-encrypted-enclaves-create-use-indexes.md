@@ -1,4 +1,5 @@
 ---
+description: 对使用具有安全 enclave 的 Always Encrypted 的列创建和使用索引
 title: 对使用具有安全 enclave 的 Always Encrypted 的列创建和使用索引 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/30/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6fa36eeebc1f93ed0a2855627943d04dba8e3d7d
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 420e2bc398bbaa75c21130b2f9b8e8024d33fd83
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411413"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490488"
 ---
 # <a name="create-and-use-indexes-on-columns-using-always-encrypted-with-secure-enclaves"></a>对使用具有安全 enclave 的 Always Encrypted 的列创建和使用索引
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -68,7 +69,7 @@ ms.locfileid: "87411413"
 
 这种方法可用于：
  - 确保使用随机加密且已启用 enclave 的列上存在的索引对无权访问纯文本键和数据的应用程序和用户是透明的。 
- - 确保对加密列创建索引不会中断现有查询。 如果应用程序对包含加密列的表发出查询，而无需有权访问键，应用程序可以在 DBA 创建索引后继续运行，而无需有权访问键。 例如，假设一个应用程序对包含加密列的“Employees”表运行以下查询  。 DBA 尚未对任何加密列创建索引。
+ - 确保对加密列创建索引不会中断现有查询。 如果应用程序对包含加密列的表发出查询，而无需有权访问键，应用程序可以在 DBA 创建索引后继续运行，而无需有权访问键。 例如，假设一个应用程序对包含加密列的“Employees”表运行以下查询****。 DBA 尚未对任何加密列创建索引。
 
    ```sql
    DELETE FROM [dbo].[Employees] WHERE [EmployeeID] = 1;

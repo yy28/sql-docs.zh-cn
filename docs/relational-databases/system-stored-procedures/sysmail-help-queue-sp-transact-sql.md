@@ -1,5 +1,6 @@
 ---
-title: sysmail_help_queue_sp （Transact-sql） |Microsoft Docs
+description: sysmail_help_queue_sp (Transact-SQL)
+title: sysmail_help_queue_sp (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4f47e06875d2076e4ae9510d7cb1c5bf5f706c45
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2cda00932e9cca82ef93be1b4c00a8aabd583737
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890879"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469127"
 ---
 # <a name="sysmail_help_queue_sp-transact-sql"></a>sysmail_help_queue_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,26 +40,26 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @queue_type = ] 'queue_type'`可选参数删除指定为*queue_type*的类型的电子邮件。 *queue_type*为**nvarchar （6）** ，无默认值。 有效条目为 "**邮件**" 和 "**状态**"。  
+`[ @queue_type = ] 'queue_type'` 可选参数删除指定为 *queue_type*的类型的电子邮件。 *queue_type* 的 ** (6) 为 nvarchar ** ，无默认值。 有效条目为 " **邮件** " 和 " **状态**"。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="result-set"></a>结果集  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**queue_type**|**nvarchar （6）**|队列的类型。 可能的值为 "**邮件**" 和 "**状态**"。|  
+|**queue_type**|**nvarchar (6) **|队列的类型。 可能的值为 " **邮件** " 和 " **状态**"。|  
 |**length**|**int**|指定队列中邮件项的数量。|  
-|State |**nvarchar （64）**|监视器的状态。 可能的值为**非活动状态**（队列处于非活动状态）、已**通知**（队列已通知发生接收）和**RECEIVES_OCCURRING** （队列正在接收）。|  
+|State|**nvarchar (64) **|监视器的状态。 可能的值为 **非活动状态** (队列处于非活动状态) ， **通知** (队列收到) 接收 **，RECEIVES_OCCURRING () ** 队列。|  
 |**last_empty_rowset_time**|**型**|上次队列为空的日期和时间。 采用军用时间格式和 GMT 时区。|  
 |**last_activated_time**|**型**|上次激活队列的日期和时间。 采用军用时间格式和 GMT 时区。|  
   
 ## <a name="remarks"></a>备注  
- 在对数据库邮件进行故障排除时，使用**sysmail_help_queue_sp**来查看队列中有多少项、队列的状态以及上次激活的时间。  
+ 在对数据库邮件进行故障排除时，使用 **sysmail_help_queue_sp** 来查看队列中有多少项、队列的状态以及上次激活的时间。  
   
 ## <a name="permissions"></a>权限  
- 默认情况下，只有**sysadmin**固定服务器角色的成员才能访问此过程。  
+ 默认情况下，只有 **sysadmin** 固定服务器角色的成员才能访问此过程。  
   
 ## <a name="examples"></a>示例  
  以下示例返回邮件队列和状态队列。  

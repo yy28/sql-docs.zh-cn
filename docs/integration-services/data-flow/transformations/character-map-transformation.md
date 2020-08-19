@@ -1,4 +1,5 @@
 ---
+description: 字符映射表转换
 title: 字符映射表转换 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 46d4833b6879330e62b89470b8a542f8f6ed910e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 84e3e3593e2a3cbee72d6df5cc7565bb908a8b53
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922442"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430709"
 ---
 # <a name="character-map-transformation"></a>字符映射表转换
 
@@ -41,7 +42,7 @@ ms.locfileid: "86922442"
 ## <a name="mapping-operations"></a>映射操作  
  下表说明了字符映射表转换支持的映射操作。  
   
-|Operation|说明|  
+|操作|说明|  
 |---------------|-----------------|  
 |Byte reversal|反转字节顺序。|  
 |Full width|将半角字符映射到全角字符。|  
@@ -88,7 +89,7 @@ ms.locfileid: "86922442"
 -   [为合并转换和合并联接转换排序数据](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="character-map-transformation-editor"></a>字符映射表转换编辑器
-  可以使用“字符映射表转换编辑器”  对话框，选择要应用到列数据的字符串函数，以及指定映射是就地更改还是添加为新列。  
+  可以使用“字符映射表转换编辑器”**** 对话框，选择要应用到列数据的字符串函数，以及指定映射是就地更改还是添加为新列。  
   
 ### <a name="options"></a>选项  
  **可用输入列**  

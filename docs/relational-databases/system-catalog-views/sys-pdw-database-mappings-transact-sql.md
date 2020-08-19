@@ -1,5 +1,6 @@
 ---
-title: sys. pdw_database_mappings （Transact-sql） |Microsoft Docs
+description: 'sys. pdw_database_mappings (Transact-sql) '
+title: sys. pdw_database_mappings (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/17/2017
 ms.prod: sql
@@ -12,22 +13,22 @@ ms.assetid: 4ae2c71e-dd56-41ea-a16b-64936175b459
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 013a6bcbba5e7647db1bec04204f8e8fec710c16
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: c406f00d6ee9848ab5f09631d77436ef6b6dbddf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396082"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490272"
 ---
-# <a name="syspdw_database_mappings-transact-sql"></a>sys. pdw_database_mappings （Transact-sql）
+# <a name="syspdw_database_mappings-transact-sql"></a>sys. pdw_database_mappings (Transact-sql) 
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
-  将数据库的**database_id**映射到计算节点上使用的物理名称，并提供系统上数据库所有者的**主体 id** 。 将**sys. pdw_database_mappings**连接到**sys.databases**和**pdw_nodes_pdw_physical_databases**。  
+  将数据库的 **database_id**映射到计算节点上使用的物理名称，并提供系统上数据库所有者的 **主体 id** 。 将 **sys. pdw_database_mappings** 连接到 **sys.databases** 和 **pdw_nodes_pdw_physical_databases**。  
   
 |列名|数据类型|说明|范围|  
 |-----------------|---------------|-----------------|-----------|  
-|physical_name|**nvarchar （36）**|计算节点上数据库的物理名称。<br /><br /> **physical_name**和**database_id**构成此视图的键。||  
-|database_id|**int**|数据库的对象 ID。 请参阅[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)。<br /><br /> **physical_name**和**database_id**构成此视图的键。||  
+|physical_name|**nvarchar (36) **|计算节点上数据库的物理名称。<br /><br /> **physical_name** 和 **database_id** 构成此视图的键。||  
+|database_id|**int**|数据库的对象 ID。 请参阅 [sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)。<br /><br /> **physical_name** 和 **database_id** 构成此视图的键。||  
   
 ## <a name="examples-sspdw"></a>示例：[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  下面的示例将 pdw_database_mappings sys.databases 联接到其他系统表，以显示数据库的映射方式。  

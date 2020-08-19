@@ -1,4 +1,5 @@
 ---
+description: STIsEmpty（geometry 数据类型）
 title: STIsEmpty（geometry 数据类型）| Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: dcbd6ae1-5d63-485f-9d58-28bfd504524e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: f541f5420409293080eeb07bd1bbfc54f28ef504
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 1a03f368cbb462abf668af25a0c01c662f1ec199
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555313"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445052"
 ---
 # <a name="stisempty-geometry-data-type"></a>STIsEmpty（geometry 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-如果 geometry 实例为空，则返回 1  。 如果 geometry 实例不为空，则返回 0  。
+如果 geometry 实例为空，则返回 1****。 如果 geometry 实例不为空，则返回 0****。
   
 ## <a name="syntax"></a>语法  
   
@@ -39,9 +40,9 @@ ms.locfileid: "86555313"
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>返回类型
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit****  
   
- CLR 返回类型：SqlBoolean   
+ CLR 返回类型：SqlBoolean****  
   
 ## <a name="examples"></a>示例  
  下面的示例创建一个空的 `geometry` 实例并使用 `STIsEmpty()` 来测试该实例是否为空。  

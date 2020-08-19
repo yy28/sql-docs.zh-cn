@@ -1,5 +1,6 @@
 ---
-title: sys. database_firewall_rules （Azure SQL Database） |Microsoft Docs
+description: sys.database_firewall_rules (Azure SQL Database)
+title: database_firewall_rules (Azure SQL 数据库) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.service: sql-database
@@ -19,12 +20,12 @@ ms.assetid: 2e821593-3b9f-43d6-a99b-1ceffe177faf
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d14ae77b15121b1344d3881f8966d6a707f71fa6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 49a48533c800093090465819610052009633839f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784991"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475448"
 ---
 # <a name="sysdatabase_firewall_rules-azure-sql-database"></a>sys.database_firewall_rules (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -35,18 +36,18 @@ ms.locfileid: "85784991"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|id|**整数**|数据库级防火墙设置的标识符。|  
-|name|**NVARCHAR （128）**|您选择用来描述和区分数据库级防火墙设置的名称。|  
-|start_ip_address|**VARCHAR （45）**|数据库级防火墙设置范围内的最低 IP 地址。 等于或大于此值的 IP 地址可能尝试连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 实例。 可能的最低 IP 地址为 `0.0.0.0`。|  
-|end_ip_address|**VARCHAR （45）**|防火墙设置范围内的最高 IP 地址。 等于或小于此值的 IP 地址可能尝试连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 实例。 可能的最高 IP 地址为 `255.255.255.255`。<br /><br /> 注意：如果此字段和**start_ip_address**字段都等于，则允许 Azure 连接尝试 `0.0.0.0` 。|  
+|id|**INTEGER**|数据库级防火墙设置的标识符。|  
+|name|**NVARCHAR (128) **|您选择用来描述和区分数据库级防火墙设置的名称。|  
+|start_ip_address|**VARCHAR (45) **|数据库级防火墙设置范围内的最低 IP 地址。 等于或大于此值的 IP 地址可能尝试连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 实例。 可能的最低 IP 地址为 `0.0.0.0`。|  
+|end_ip_address|**VARCHAR (45) **|防火墙设置范围内的最高 IP 地址。 等于或小于此值的 IP 地址可能尝试连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 实例。 可能的最高 IP 地址为 `255.255.255.255`。<br /><br /> 注意：如果此字段和 **start_ip_address** 字段都等于，则允许 Azure 连接尝试 `0.0.0.0` 。|  
 |create_date|**型**|创建数据库级防火墙设置时的 UTC 日期和时间。|  
 |modify_date|**型**|上次修改数据库级防火墙设置时的 UTC 日期和时间。|  
   
 ## <a name="remarks"></a>备注  
- 若要返回与 Microsoft Azure SQL 数据库关联的服务器级防火墙设置的相关信息，请使用[sys. firewall_rules （AZURE SQL Database）](../../relational-databases/system-catalog-views/sys-firewall-rules-azure-sql-database.md)。  
+ 若要返回有关与 Microsoft Azure SQL 数据库关联的服务器级防火墙设置的信息，请使用 [ (AZURE SQL Database) 的 firewall_rules ](../../relational-databases/system-catalog-views/sys-firewall-rules-azure-sql-database.md)。  
   
 ## <a name="permissions"></a>权限  
- 此视图在**master**数据库和每个用户数据库中可用。 为具有连接到数据库的权限的所有用户提供对此视图的只读访问权限。  
+ 此视图在 **master** 数据库和每个用户数据库中可用。 为具有连接到数据库的权限的所有用户提供对此视图的只读访问权限。  
   
 ## <a name="see-also"></a>另请参阅
 [sp_set_database_firewall_rule（Azure SQL 数据库）](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)  

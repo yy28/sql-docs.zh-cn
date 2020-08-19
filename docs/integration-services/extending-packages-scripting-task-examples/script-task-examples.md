@@ -1,4 +1,5 @@
 ---
+description: 脚本任务示例
 title: 脚本任务示例 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b0dd77ee-ee11-4cd9-87aa-61dd67f2fe1c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fa626ad14f1b7f467c84557ea22fcd12d95b3ca3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f001a8b784af159efff980a4fa1ca966af0892e5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914108"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430379"
 ---
 # <a name="script-task-examples"></a>脚本任务示例
 
@@ -41,7 +42,7 @@ ms.locfileid: "86914108"
  [使用脚本任务检测空平面文件](../../integration-services/extending-packages-scripting-task-examples/detecting-an-empty-flat-file-with-the-script-task.md)  
  检查平面文件以确定该文件是否包含数据行，并将结果保存到变量以用于控制流分支。  
   
- [使用脚本任务为 ForEach 循环收集列表](../../integration-services/extending-packages-scripting-task-examples/gathering-a-list-for-the-foreach-loop-with-the-script-task.md)  
+ [使用脚本任务为 Foreach 循环收集列表](../../integration-services/extending-packages-scripting-task-examples/gathering-a-list-for-the-foreach-loop-with-the-script-task.md)  
  收集满足用户指定条件的文件的列表，并填充变量以供 Foreach 源变量枚举器将来使用。  
   
  [使用脚本任务查询 Active Directory](../../integration-services/extending-packages-scripting-task-examples/querying-the-active-directory-with-the-script-task.md)  

@@ -1,4 +1,5 @@
 ---
+description: 值包含配置文件请求选项（数据事件探查任务）
 title: 值包含配置文件请求选项（数据事件探查任务）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ca94da82-a4c9-4e87-9cba-c2d85bd31f01
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0bebe29e50ad4adaa6152eaef17de64a926433c8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2c30a5e35a3c3e5b8e127a317e6d44880dee2e7f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913823"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430929"
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>值包含配置文件请求选项（数据事件探查任务）
 
@@ -55,7 +56,7 @@ ms.locfileid: "86913823"
 -   当包含强度的值为 1.0，而 **SupersetColumnsKeyThreshold** 设置为 **Exact**时。  
   
 ## <a name="request-properties-options"></a>请求属性选项  
- 对于 **“值包含配置文件请求”** ， **“请求属性”** 窗格显示下面的选项组：  
+ 对于 **“值包含配置文件请求”**， **“请求属性”** 窗格显示下面的选项组：  
   
 -   **Data**，它包含 **SubsetTableOrView**、 **SupersetTableOrView**和 **InclusionColumns** 选项  
   
@@ -131,7 +132,7 @@ ms.locfileid: "86913823"
   
 |值|说明|  
 |-----------|-----------------|  
-|无 |不指定阈值。 不管键强度值如何，都会报告键强度。|  
+|**无**|不指定阈值。 不管键强度值如何，都会报告键强度。|  
 |**Specified**|使用 **InclusionStrengthThreshold**中指定的阈值。 只有在包含强度大于阈值时才报告该包含强度。|  
 |**Exact**|不指定阈值。 只有在子集值完全包含在超集值中时才报告包含强度。|  
   
@@ -145,7 +146,7 @@ ms.locfileid: "86913823"
   
 |值|说明|  
 |-----------|-----------------|  
-|无 |不指定阈值。 报告包含强度时不考虑超集列的键强度。|  
+|**无**|不指定阈值。 报告包含强度时不考虑超集列的键强度。|  
 |**Specified**|使用 **SupersetColumnsKeyThreshold**中指定的阈值。 只有在超集列的键强度大于阈值时才报告包含强度。|  
 |**Exact**|不指定阈值。 只有在超集列为超集表中的确切键时才报告包含强度。|  
   

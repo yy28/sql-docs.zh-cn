@@ -1,4 +1,5 @@
 ---
+description: sys.dm_external_script_execution_stats
 title: sys. dm_external_script_execution_stats |Microsoft Docs
 ms.custom: ''
 ms.date: 06/25/2020
@@ -20,12 +21,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 4bdf4215b01df0f9011123eb42232bba594554ed
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 9c8244de0efc2bdd3dc506e5e1ebcddcd4843dea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180084"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489909"
 ---
 # <a name="sysdm_external_script_execution_stats"></a>sys.dm_external_script_execution_stats
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "88180084"
 为每种类型的外部脚本请求返回一行。 外部脚本请求由受支持的外部脚本语言分组。 为每个已注册的外部脚本函数生成一行。 除非是由父进程（如 `rxExec`）发送，否则不会记录任意外部脚本函数。
   
 > [!NOTE]  
-> 仅当你已安装并启用支持外部脚本执行的功能时，此动态管理视图 (DMV) 才可用。 有关详细信息，请参阅[SQL Server 2016 中的 R Services](../../machine-learning/r/sql-server-r-services.md)、[机器学习服务 (R、Python) 在 SQL Server 2017 和更高版本中](../../machine-learning/sql-server-machine-learning-services.md)以及[Azure 托管实例机器学习服务](/azure/azure-sql/managed-instance/machine-learning-services-overview)。
+> 仅当你已安装并启用支持外部脚本执行的功能时，此动态管理视图 (DMV) 才可用。 有关详细信息，请参阅 [SQL Server 2016 中的 R Services](../../machine-learning/r/sql-server-r-services.md)、 [机器学习服务 (R、Python) 在 SQL Server 2017 和更高版本中](../../machine-learning/sql-server-machine-learning-services.md) 以及 [Azure 托管实例机器学习服务](/azure/azure-sql/managed-instance/machine-learning-services-overview)。
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  

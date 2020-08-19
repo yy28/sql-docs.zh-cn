@@ -1,4 +1,5 @@
 ---
+description: 使用 SSIS 部署包
 title: 使用 SSIS 部署包 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/20/2018
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9d6636cbd74f31448381b1f6cb2c3dd3826324a5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4ba92220b368e1ef7ee1218d972e6113e1378d27
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916632"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430649"
 ---
 # <a name="deploy-packages-with-ssis"></a>使用 SSIS 部署包
 
@@ -52,21 +53,21 @@ ms.locfileid: "86916632"
 熟悉 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中的新工具、控件和功能的最好方法，就是使用它们。 本教程将引导您完成创建 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目再将包和其他所需文件添加到项目的步骤。 完成项目后，将创建部署捆绑，将该捆绑复制到目标计算机，然后在目标计算机上安装包。    
     
 ## <a name="prerequisites"></a>先决条件    
-本教程适用于已经熟悉基本的文件系统操作，但对 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中的新功能认识有限的用户。 为了更好地理解基本的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 概念（将在本教程中使用它们），你可能会发现首先学习完下列 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 教程很有用：[SSIS 如何创建 ETL 包](../integration-services/ssis-how-to-create-an-etl-package.md)。    
+本教程适用于已经熟悉基本的文件系统操作，但对 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中的新功能认识有限的用户。 为了更好地理解将在本教程中使用的基本 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 概念，可能会发现先完成以下 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 教程很有用： [SSIS 如何创建 ETL 包](../integration-services/ssis-how-to-create-an-etl-package.md)。    
     
 ### <a name="on-the-source-computer"></a>在源计算机上
 
-将在其上创建部署捆绑的计算机必须安装下列组件： 
+将在其上创建部署捆绑的计算机必须安装下列组件：****
 
 - SQL Server。 （从[SQL Server 下载](https://www.microsoft.com/sql-server/sql-server-downloads)下载 SQL Server 的免费评估版或开发人员版。）
 
 - 示例数据、已完成的包、配置和自述文件。 要将示例数据和课程包下载为 Zip 文件，请参阅 [SQL Server Integration Services 教程文件](https://www.microsoft.com/download/details.aspx?id=56827)。 为了防止意外更改发生，zip 文件中的大部分文件都是只读文件。 若要将输出写入到文件或更改输出，必须在文件属性中禁用只读属性。
 
--   AdventureWorks2014 示例数据库  。 要下载 AdventureWorks2014 数据库，请从 [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)（AdventureWorks 示例数据库）下载 `AdventureWorks2014.bak`，并还原备份。  
+-   AdventureWorks2014 示例数据库****。 要下载 AdventureWorks2014 数据库，请从 [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)（AdventureWorks 示例数据库）下载 `AdventureWorks2014.bak`，并还原备份****。  
 
 -   必须具有在 AdventureWorks 数据库中创建和删除表的权限。
     
--   [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)。    
+-   [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) 。    
     
 ### <a name="on-the-destination-computer"></a>在目标计算机上
 
@@ -76,11 +77,11 @@ ms.locfileid: "86916632"
 
 - 示例数据、已完成的包、配置和自述文件。 要将示例数据和课程包下载为 Zip 文件，请参阅 [SQL Server Integration Services 教程文件](https://www.microsoft.com/download/details.aspx?id=56827)。 为了防止意外更改发生，zip 文件中的大部分文件都是只读文件。 若要将输出写入到文件或更改输出，必须在文件属性中禁用只读属性。
 
--   AdventureWorks2014 示例数据库  。 要下载 AdventureWorks2014 数据库，请从 [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)（AdventureWorks 示例数据库）下载 `AdventureWorks2014.bak`，并还原备份。  
+-   AdventureWorks2014 示例数据库****。 要下载 AdventureWorks2014 数据库，请从 [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)（AdventureWorks 示例数据库）下载 `AdventureWorks2014.bak`，并还原备份****。  
     
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。    
     
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]。 若要安装 SSIS，请参阅[安装 Integration Services](install-windows/install-integration-services.md)。
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. 若要安装 SSIS，请参阅[安装 Integration Services](install-windows/install-integration-services.md)。
     
 -   必须具有在 AdventureWorks 数据库中创建和删除表以及在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中运行 SSIS 包的权限。    
     

@@ -1,4 +1,5 @@
 ---
+description: ::（作用域解析）(Transact-SQL)
 title: ::（作用域解析）(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -12,17 +13,17 @@ dev_langs:
 ms.assetid: 764d8f91-957b-4037-997b-a9b6b533c504
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ff16ec709e8ed3cf7e0d6a4b129641d1e553a11a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1372950c3262f86ca1b0d85ca7026d6560f4afb2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68072287"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459270"
 ---
 # <a name="-scope-resolution-transact-sql"></a>::（作用域解析）(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  作用域解析运算符 :: 提供对复合数据类型的静态成员的访问  。 复合数据类型是指包含多个简单数据类型和方法的数据类型。 复合数据类型包括内置的 CLR 类型和自定义 SQLCLR 用户定义类型 (UDT)。  
+  作用域解析运算符 :: 提供对复合数据类型的静态成员的访问****。 复合数据类型是指包含多个简单数据类型和方法的数据类型。 复合数据类型包括内置的 CLR 类型和自定义 SQLCLR 用户定义类型 (UDT)。  
   
 ## <a name="examples"></a>示例  
  下面的示例演示如何使用作用域解析运算符访问 `GetRoot()` 类型的 `hierarchyid` 成员。  

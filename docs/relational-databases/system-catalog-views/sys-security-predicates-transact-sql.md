@@ -1,5 +1,6 @@
 ---
-title: sys. security_predicates （Transact-sql） |Microsoft Docs
+description: 'sys. security_predicates (Transact-sql) '
+title: sys. security_predicates (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,14 +22,14 @@ ms.assetid: c7a2f28c-98da-463d-8b8a-8e5619e2c6a6
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 80ca5a060d464562b9b97d2931082af98f3df785
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: c2ba8b6c9c4a2fc2f6b3beb562edfac0728678fe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395227"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490126"
 ---
-# <a name="syssecurity_predicates-transact-sql"></a>sys. security_predicates （Transact-sql）
+# <a name="syssecurity_predicates-transact-sql"></a>sys. security_predicates (Transact-sql) 
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   为数据库中的每个安全谓词返回一行。  
@@ -45,7 +46,7 @@ ms.locfileid: "87395227"
 |operation_desc|**nvarchar(60)**|为谓词指定的操作类型：<br /><br /> Null<br /><br /> 插入后<br /><br /> AFTER UPDATE<br /><br /> 更新前<br /><br /> 删除之前|  
   
 ## <a name="permissions"></a>权限  
- 具有 "**更改任意安全策略**" 权限的主体有权访问此目录视图中的所有对象以及对该对象具有**view DEFINITION**的任何人。  
+ 具有 " **更改任意安全策略** " 权限的主体有权访问此目录视图中的所有对象以及对该对象具有 **view DEFINITION** 的任何人。  
   
 ## <a name="see-also"></a>另请参阅  
  [行级安全性](../../relational-databases/security/row-level-security.md)   

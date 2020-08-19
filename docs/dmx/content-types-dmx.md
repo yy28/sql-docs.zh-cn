@@ -1,5 +1,6 @@
 ---
-title: 内容类型（DMX） |Microsoft Docs
+description: 内容类型 (DMX)
+title: 内容类型 (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9a0c44e0ea90b253cee5564a327d49c34c1ae78a
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: b4d69b516a06bd6d68c3f85e82b18be774ada0f9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969888"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431099"
 ---
 # <a name="content-types-dmx"></a>内容类型 (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -22,7 +23,7 @@ ms.locfileid: "86969888"
   
  每种算法可支持特定的内容类型。 例如，[!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes 算法不能使用连续列。 若要在 [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes 模型中使用连续列，必须对列中的数据进行离散化处理。 有些算法要求提供特定的内容类型才能正常工作。 例如，[!INCLUDE[msCoName](../includes/msconame-md.md)] 时序算法要求一个 Key Time 列来标识收集数据的时间。  
   
- 有关支持的内容类型的完整说明 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，请参阅[&#40;数据挖掘&#41;的内容类型](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)。  
+ 有关支持的内容类型的完整说明 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，请参阅 [&#40;数据挖掘&#41;的内容类型 ](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)。  
   
 ## <a name="see-also"></a>另请参阅  
  [数据挖掘算法 &#40;Analysis Services 数据挖掘&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
@@ -32,7 +33,7 @@ ms.locfileid: "86969888"
  [数据挖掘扩展插件 &#40;DMX&#41; 运算符引用](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [数据挖掘扩展插件 &#40;DMX&#41; 语句参考](../dmx/data-mining-extensions-dmx-statements.md)   
  [数据挖掘扩展插件 &#40;DMX&#41; 语法约定](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [&#40;DMX&#41;的常规预测函数](../dmx/general-prediction-functions-dmx.md)   
+ [&#40;DMX&#41;的常规预测函数 ](../dmx/general-prediction-functions-dmx.md)   
  [DMX 预测查询的结构和用法](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [了解 DMX Select 语句](../dmx/understanding-the-dmx-select-statement.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: 开发自定义 ForEach 枚举器
 title: 开发自定义 ForEach 枚举器 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bffe26e0-1b9a-47ad-bae6-6b708cb4cf4f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5ec0861b846f3f741bbdada7d8b07d94fae1d64a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a5a46ee0c16bba35c5153032784b6ce7ccde7721
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923953"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430559"
 ---
 # <a name="developing-a-custom-foreach-enumerator"></a>开发自定义 ForEach 枚举器
 
@@ -42,7 +43,7 @@ ms.locfileid: "86923953"
  [为自定义 ForEach 枚举器开发用户界面](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-user-interface-for-a-custom-foreach-enumerator.md)  
  介绍如何实现用户界面类，以及用于配置自定义 Foreach 枚举器的窗体。  
   
-## <a name="related-topics"></a>相关主题  
+## <a name="related-topics"></a>“相关主题”  
   
 ### <a name="information-common-to-all-custom-objects"></a>所有自定义对象的通用信息  
  有关可以在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中创建的所有类型自定义对象的通用信息，请参阅以下主题：  

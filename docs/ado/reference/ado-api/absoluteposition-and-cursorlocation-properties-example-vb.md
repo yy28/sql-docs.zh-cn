@@ -1,5 +1,6 @@
 ---
-title: AbsolutePosition 和 CursorLocation 属性示例（VB） |Microsoft Docs
+description: 'AbsolutePosition 和 CursorLocation 属性示例 (VB) '
+title: AbsolutePosition 和 CursorLocation 属性示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: c4755799-c60a-4b5e-a01f-b85dd0e0a7f9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 34ccef63f898063abd4e87332285bd81c1e4a845
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 409d54437c8f43ce3b2f42e42fe8abe67f77d964
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764578"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451769"
 ---
-# <a name="absoluteposition-and-cursorlocation-properties-example-vb"></a>AbsolutePosition 和 CursorLocation 属性示例（VB）
-此示例演示[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)属性如何跟踪枚举[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)的所有记录的循环的进度。 它通过将光标设置为客户端光标来使用[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)属性来启用**AbsolutePosition**属性。  
+# <a name="absoluteposition-and-cursorlocation-properties-example-vb"></a>AbsolutePosition 和 CursorLocation 属性示例 (VB) 
+此示例演示 [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) 属性如何跟踪枚举 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md)的所有记录的循环的进度。 它通过将光标设置为客户端光标来使用 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 属性来启用 **AbsolutePosition** 属性。  
   
 ```  
 'BeginAbsolutePositionVB  
@@ -92,6 +93,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [AbsolutePosition 属性（ADO）](../../../ado/reference/ado-api/absoluteposition-property-ado.md)   
- [CursorLocation 属性（ADO）](../../../ado/reference/ado-api/cursorlocation-property-ado.md)   
+ [AbsolutePosition 属性 (ADO) ](../../../ado/reference/ado-api/absoluteposition-property-ado.md)   
+ [CursorLocation 属性 (ADO) ](../../../ado/reference/ado-api/cursorlocation-property-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
