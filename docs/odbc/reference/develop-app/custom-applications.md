@@ -1,4 +1,5 @@
 ---
+description: 自定义应用程序
 title: 自定义应用程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f28178d9-ecd6-4e8c-9644-9bb624999dcb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: df00a748ee4d5e3a63b32c95449417a1057b58e1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 56829c72264ba128554af0534e8a6bfa16254142
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305278"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429389"
 ---
 # <a name="custom-applications"></a>自定义应用程序
 自定义应用程序通常会对几个 Dbms 执行特定任务。 例如，应用程序可能检索单个 DBMS 中的数据并生成报告，或者可以在多个 Dbms 之间传输数据。 这些应用程序的常见之处在于，这些 Dbms 是在编写应用程序之前已知的，在应用程序的整个生命周期内不太可能更改。  

@@ -1,5 +1,6 @@
 ---
-title: Views Delete 方法示例（VB） |Microsoft Docs
+description: 视图 Delete 方法示例 (VB)
+title: Views Delete 方法示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 17df2a83-4166-4df8-8c17-0a33aaac8582
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 14328c2db8bf15f98a751cd6a43d31e7489a6c63
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 887b558b3bff61a571a2333719164ba3e577782b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82752950"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439279"
 ---
 # <a name="views-delete-method-example-vb"></a>视图 Delete 方法示例 (VB)
-下面的代码演示如何使用[delete](../../../ado/reference/adox-api/delete-method-adox-collections.md)方法从目录中删除视图。  
+下面的代码演示如何使用 [delete](../../../ado/reference/adox-api/delete-method-adox-collections.md) 方法从目录中删除视图。  
   
 ```  
 ' BeginDeleteViewVB  
@@ -54,5 +55,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Delete 方法（ADOX 集合）](../../../ado/reference/adox-api/delete-method-adox-collections.md)   
+ [删除方法 (ADOX 集合) ](../../../ado/reference/adox-api/delete-method-adox-collections.md)   
  [视图集合 (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

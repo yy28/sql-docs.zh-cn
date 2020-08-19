@@ -1,5 +1,6 @@
 ---
-title: InternetTimeout 属性示例（VB） |Microsoft Docs
+description: InternetTimeout 属性示例 (VB)
+title: InternetTimeout 属性示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: b35d2f4a-449c-4170-aab6-9ff88c890043
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5ae038b3c4b438dfaed1f627c8f257e61a22f782
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0b2d5e2b34c5a82d222ee7018d0751cb7ec5f092
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82751956"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438939"
 ---
 # <a name="internettimeout-property-example-vb"></a>InternetTimeout 属性示例 (VB)
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件（有关详细信息，请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)）。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 此示例演示[InternetTimeout](../../../ado/reference/rds-api/internettimeout-property-rds.md)属性，该属性存在于[DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)和 "[空间](../../../ado/reference/rds-api/dataspace-object-rds.md)" 对象上。 此示例使用**DataControl**对象并将超时设置为20秒。  
+ 此示例演示 [InternetTimeout](../../../ado/reference/rds-api/internettimeout-property-rds.md) 属性，该属性存在于 [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 和 " [空间](../../../ado/reference/rds-api/dataspace-object-rds.md) " 对象上。 此示例使用 **DataControl** 对象并将超时设置为20秒。  
   
 ```  
 'BeginInternetTimeoutVB  
@@ -76,8 +77,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [DataControl 对象（RDS）](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [空间对象（RDS）](../../../ado/reference/rds-api/dataspace-object-rds.md)   
+ [DataControl 对象 (RDS) ](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
+ [ (RDS) 的空间对象 ](../../../ado/reference/rds-api/dataspace-object-rds.md)   
  [InternetTimeout 属性 (RDS)](../../../ado/reference/rds-api/internettimeout-property-rds.md)
 
 

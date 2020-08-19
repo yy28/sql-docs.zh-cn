@@ -1,5 +1,6 @@
 ---
-title: Connect 属性示例（VBScript） |Microsoft Docs
+description: Connect 属性示例 (VBScript)
+title: " (VBScript) 连接属性示例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 06297993-fe72-4446-aa76-3b8bc25444f6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cee201d56361d18ded5fbef1c2c36051c34ecdc8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f7b854f8d5b84883d28915af629c2af67036b718
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746266"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439219"
 ---
 # <a name="connect-property-example-vbscript"></a>Connect 属性示例 (VBScript)
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件（有关详细信息，请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)）。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 此代码显示了如何在设计时设置[连接](../../../ado/reference/rds-api/connect-property-rds.md)属性：  
+ 此代码显示了如何在设计时设置 [连接](../../../ado/reference/rds-api/connect-property-rds.md) 属性：  
   
 ```  
 <OBJECT CLASSID="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33" ID="ADC1">  
@@ -37,9 +38,9 @@ ms.locfileid: "82746266"
 </OBJECT>  
 ```  
   
- 下面的示例演示如何在运行时在 VBScript 代码中设置**连接**属性。  
+ 下面的示例演示如何在运行时在 VBScript 代码中设置 **连接** 属性。  
   
- 若要测试此示例，请 \< 在普通 HTML 文档中剪切并粘贴 Body> 和/Body> 标记之间的代码， \< 并将其命名为**ConnectVBS**。 ASP 脚本将标识您的服务器。  
+ 若要测试此示例，请 \<Body> \</Body> 在普通 HTML 文档中剪切并粘贴和标记之间的代码，并将其命名为 **ConnectVBS**。 ASP 脚本将标识您的服务器。  
   
 ```  
 <!-- BeginConnectVBS -->  

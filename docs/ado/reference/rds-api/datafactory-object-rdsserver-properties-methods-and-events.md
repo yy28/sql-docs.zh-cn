@@ -1,5 +1,6 @@
 ---
-title: DataFactory 对象（RDSServer）属性、方法和事件 |Microsoft Docs
+description: DataFactory 对象 (RDSServer) 属性、方法和事件
+title: DataFactory 对象 (RDSServer) 属性、方法和事件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,32 +13,32 @@ helpviewer_keywords:
 ms.assetid: 36a1f49b-91f4-44f4-b6e2-52fc7ed06d7e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2ac5645910a4b5339e696d793c167222b80cc6c3
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 43143be9bbe538059da8fac1bb44dedbb4b2ad64
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942851"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439109"
 ---
 # <a name="datafactory-object-rdsserver-properties-methods-and-events"></a>DataFactory 对象 (RDSServer) 属性、方法和事件
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件（有关详细信息，请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)）。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
 ## <a name="properties"></a>“属性”  
  无。  
   
 ## <a name="methods"></a>方法  
   
-|方法|说明|  
+|方法|描述|  
 |-|-|  
 |[ConvertToString 方法 (RDS)](../../../ado/reference/rds-api/converttostring-method-rds.md)|将记录集转换为 MIME64 字符串。|  
 |[CreateRecordset 方法 (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)|创建并返回一个空的记录集。|  
-|[Execute 方法 (RDS)](../../../ado/reference/rds-api/execute-method-rds.md)|执行请求并创建高级数据行集（用于 ADO 2.5 或更高版本）。|  
-|[Execute21 方法 (RDS)](../../../ado/reference/rds-api/execute21-method-rds.md)|执行请求并创建高级数据行集（以便与 ADO 2.1 一起使用）。|  
+|[Execute 方法 (RDS)](../../../ado/reference/rds-api/execute-method-rds.md)|执行请求并创建高级数据行集 (以便与 ADO 2.5 或更高版本一起使用) 。|  
+|[Execute21 方法 (RDS)](../../../ado/reference/rds-api/execute21-method-rds.md)|执行请求并创建高级数据行集 (以便与 ADO 2.1) 一起使用。|  
 |[Query 方法 (RDS)](../../../ado/reference/rds-api/query-method-rds.md)|执行请求并创建高级数据行集。|  
 |[SubmitChanges 方法 (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)|如果记录集包含挂起的更改，则此方法会将它们提交到连接字符串中标识的数据库。|  
-|[Synchronize 方法 (RDS)](../../../ado/reference/rds-api/synchronize-method-rds.md)|使用连接字符串指定的数据库同步给定的记录集（用于 ADO 2.5 或更高版本）。|  
-|[Synchronize21 方法 (RDS)](../../../ado/reference/rds-api/synchronize21-method-rds.md)|将给定的记录集与连接字符串指定的数据库同步（以便与 ADO 2.1 一起使用）。|  
+|[Synchronize 方法 (RDS)](../../../ado/reference/rds-api/synchronize-method-rds.md)|使用连接字符串指定的数据库同步给定的记录集， (用于 ADO 2.5 或更高版本) 。|  
+|[Synchronize21 方法 (RDS)](../../../ado/reference/rds-api/synchronize21-method-rds.md)|使用连接字符串指定的数据库同步给定的记录集， (用于 ADO 2.1) 。|  
   
 ## <a name="events"></a>事件  
  无。  

@@ -1,4 +1,5 @@
 ---
+description: 数据流
 title: 数据流 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 757015f38213730973ec67c014f5b17d00fbce0b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fa3fff63528c11e57c6517393c28a5deb2acfcfe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916833"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430959"
 ---
 # <a name="data-flow"></a>数据流
 
@@ -184,7 +185,7 @@ ms.locfileid: "86916833"
 ### <a name="inputs"></a>输入  
  目标和转换具有输入。 输入包含一个或多个输入列，如果数据流组件已配置为使用外部列，则输入列可引用外部列。 输入可配置为监视和控制数据流，例如，可指定在出现错误时组件是应失败，忽略错误，还是将错误行重定向至错误输出。 还可为输入指派说明，或更新输入名称。 在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中，使用 **“高级编辑器”** 对话框对输入进行配置。 有关 **“高级编辑器”** 的详细信息，请参阅 [Integration Services User Interface](../../integration-services/integration-services-user-interface.md)。  
   
-### <a name="outputs"></a>Outputs  
+### <a name="outputs"></a>输出  
  源和转换始终具有输出。 输出包含一个或多个输出列，如果数据流组件已配置为使用外部列，则输出列可引用外部列。 可对输出进行配置以提供对数据的下游处理有用的信息。 例如，可指示输出是否已排序。 还可为输出提供说明或更新输出名称。 在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中，使用 **“高级编辑器”** 对话框对输出进行配置。  
   
 ### <a name="error-outputs"></a>错误输出  
@@ -193,7 +194,7 @@ ms.locfileid: "86916833"
  有关详细信息，请参阅 [数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)。  
   
 ### <a name="columns"></a>列  
- 输入、输出和错误输出是列的集合。 每一列都可配置并且根据列类型（输入、输出或外部），[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 会为列提供不同的属性。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供 3 种不同的列属性设置方法：编程方式、使用组件特定对话框，或使用“高级编辑器”  对话框。  
+ 输入、输出和错误输出是列的集合。 每一列都可配置并且根据列类型（输入、输出或外部），[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 会为列提供不同的属性。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供 3 种不同的列属性设置方法：编程方式、使用组件特定对话框，或使用“高级编辑器”对话框。  
   
 ## <a name="paths"></a>路径  
  路径连接数据流组件。 在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中，可以查看和修改路径属性，查看路径开始点的输出元数据，以及将数据查看器附加到路径。  

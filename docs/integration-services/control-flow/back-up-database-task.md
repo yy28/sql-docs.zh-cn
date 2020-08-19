@@ -1,4 +1,5 @@
 ---
+description: “备份数据库”任务
 title: “备份数据库”任务 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b8839d71-13b7-41f2-a434-cb95020e79d7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d10f1ceab3ddb56ae8edbd06b2226fad2646c586
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 291a9fd0e0138eeb7b304e673f404163217f9ae5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918867"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431069"
 ---
 # <a name="back-up-database-task"></a>“备份数据库”任务
 
@@ -39,9 +40,9 @@ ms.locfileid: "86918867"
   
 |恢复模式|数据库|数据库差异|事务日志|文件或文件差异|  
 |--------------------|--------------|---------------------------|---------------------|-------------------------------|  
-|简单|必选|可选|不支持|不支持|  
-|完全|必选|可选|必选|可选|  
-|大容量日志|必选|可选|必选|可选|  
+|简单|必需|可选|不支持|不支持|  
+|完全|必需|可选|必需|可选|  
+|大容量日志|必需|可选|必需|可选|  
   
  “备份数据库”任务封装 Transact-SQL BACKUP 语句。 有关详细信息，请参阅 [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)。  
   

@@ -1,5 +1,6 @@
 ---
-title: PrimaryKey 和 Unique 属性示例（VB） |Microsoft Docs
+description: PrimaryKey 和 Unique 属性示例 (VB)
+title: PrimaryKey 和 Unique 属性示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f536acac-06ea-4b39-bfba-ee9902b01615
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d38097ed2765eacfafafc980133594750a99d57e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1be519ab53b346eee06c45664c512677f5d8628c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763728"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439679"
 ---
 # <a name="primarykey-and-unique-properties-example-vb"></a>PrimaryKey 和 Unique 属性示例 (VB)
 此示例演示[索引](../../../ado/reference/adox-api/index-object-adox.md)的[PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md)和[唯一](../../../ado/reference/adox-api/unique-property-adox.md)属性。 此代码创建一个具有两列的新表。 **PrimaryKey**和**Unique**属性用于使一列成为不允许重复值的主键。  
@@ -113,6 +114,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Index 对象（ADOX）](../../../ado/reference/adox-api/index-object-adox.md)   
- [PrimaryKey 属性（ADOX）](../../../ado/reference/adox-api/primarykey-property-adox.md)   
+ [索引对象 (ADOX) ](../../../ado/reference/adox-api/index-object-adox.md)   
+ [PrimaryKey 属性 (ADOX) ](../../../ado/reference/adox-api/primarykey-property-adox.md)   
  [Unique 属性 (ADOX)](../../../ado/reference/adox-api/unique-property-adox.md)

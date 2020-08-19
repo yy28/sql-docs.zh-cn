@@ -1,5 +1,6 @@
 ---
-title: URL 属性示例（VBScript） |Microsoft Docs
+description: URL 属性示例 (VBScript)
+title: " (VBScript) 的 URL 属性示例 |Microsoft Docs"
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 6ae5ac50-c88c-4262-b7ab-f2b3de382a0b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6bfe2b4ecedc43ef5b8a01706981fb0704605594
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 25a0460aa93c51f841719b1318e1413a2dcf0d99
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750516"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438539"
 ---
 # <a name="url-property-example-vbscript"></a>URL 属性示例 (VBScript)
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件（有关详细信息，请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)）。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 下面的代码演示如何在客户端上设置**URL**属性以指定一个 .asp 文件，该文件随后会处理对数据源所做的更改。  
+ 下面的代码演示如何在客户端上设置 **URL** 属性以指定一个 .asp 文件，该文件随后会处理对数据源所做的更改。  
   
 ```  
 <!-- BeginURLClientVBS -->  
@@ -100,7 +101,7 @@ End Sub
 <!-- EndURLClientVBS -->  
 ```  
   
- 位于**URLServerVBS**中的服务器端代码将更新的**记录集**提交到数据源。  
+ 位于 **URLServerVBS** 中的服务器端代码将更新的 **记录集** 提交到数据源。  
   
 ```  
 <!-- BeginURLServerVBS -->  

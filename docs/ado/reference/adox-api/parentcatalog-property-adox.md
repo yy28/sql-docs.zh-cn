@@ -1,5 +1,6 @@
 ---
-title: ParentCatalog 属性（ADOX） |Microsoft Docs
+description: ParentCatalog 属性 (ADOX)
+title: ParentCatalog 属性 (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -40,25 +41,25 @@ helpviewer_keywords:
 ms.assetid: a0bb2ed8-d4cb-4f92-8de7-769bbe0e6273
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c4d3874ea1289dd086d70f06434adc666691f521
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 93d15cdac3d8f7a47c74a783d176d806271f68a3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943179"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439719"
 ---
 # <a name="parentcatalog-property-adox"></a>ParentCatalog 属性 (ADOX)
 指定表、用户或列对象的父目录，以提供对特定于访问接口的属性的访问。  
   
 ## <a name="settings-and-return-values"></a>设置和返回值  
- 设置并返回[目录](../../../ado/reference/adox-api/catalog-object-adox.md)对象。 将**ParentCatalog**设置为打开的**目录**后，便可以在将表或列追加到**目录**集合之前访问特定于提供程序的属性。  
+ 设置并返回 [目录](../../../ado/reference/adox-api/catalog-object-adox.md) 对象。 将 **ParentCatalog** 设置为打开的 **目录** 后，便可以在将表或列追加到 **目录** 集合之前访问特定于提供程序的属性。  
   
 ## <a name="remarks"></a>备注  
- 某些数据访问接口允许仅在创建时写入特定于提供程序的属性值：也就是说，将表或列追加到其**目录**集合中。 若要在将这些对象附加到**目录**之前访问这些属性，请先在**ParentCatalog**属性中指定**目录**。  
+ 某些数据访问接口允许仅在创建时写入特定于提供程序的属性值：也就是说，将表或列追加到其 **目录** 集合中。 若要在将这些对象附加到**目录**之前访问这些属性，请先在**ParentCatalog**属性中指定**目录**。  
   
  将表或列追加到与**ParentCatalog**不同的**目录**时出错。  
   
-## <a name="applies-to"></a>应用到  
+## <a name="applies-to"></a>适用于  
 
 :::row:::
     :::column:::

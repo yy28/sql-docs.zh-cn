@@ -1,4 +1,5 @@
 ---
+description: 使用 OLE DB 源提取数据
 title: 使用 OLE DB 源提取数据 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4ca6eeb5-b60e-4b81-86dd-0674be8ae8d8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 190762cad4b58f5a1c127a664b901530dbaee68a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 15e55ec942331ef14458aad461c5b7c9432b0d6e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914403"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430839"
 ---
 # <a name="extract-data-by-using-the-ole-db-source"></a>使用 OLE DB 源提取数据
 
@@ -64,7 +65,7 @@ ms.locfileid: "86914403"
   
 10. 可以单击 **“预览”** ，查看最多 200 行 OLE DB 源所提取的数据。  
   
-11. 单击“确定”。   
+11. 单击“确定”。  
   
 12. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   

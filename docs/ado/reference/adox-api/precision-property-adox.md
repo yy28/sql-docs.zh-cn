@@ -1,5 +1,6 @@
 ---
-title: Precision 属性（ADOX） |Microsoft Docs
+description: Precision 属性 (ADOX)
+title: 精度属性 (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -19,28 +20,28 @@ helpviewer_keywords:
 ms.assetid: 0e0ecbbf-d7de-49d4-a128-5a519ecd54ba
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 67512b74e4c2b869cb7b1f9397462ce5566557a8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 82df9a1dcd53fa5f64f59e7fd86262a03ae5f8aa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763718"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439699"
 ---
 # <a name="precision-property-adox"></a>Precision 属性 (ADOX)
-指示[列](../../../ado/reference/adox-api/column-object-adox.md)中数据值的最大精度。  
+指示 [列](../../../ado/reference/adox-api/column-object-adox.md)中数据值的最大精度。  
   
 ## <a name="settings-and-return-values"></a>设置和返回值  
- 设置并返回一个**Long**值，该值为[类型](../../../ado/reference/adox-api/type-property-column-adox.md)属性为数值类型时列中数据值的最大精度。 对于所有其他数据类型，将忽略**精度**。  
+ 设置并返回一个 **Long** 值，该值为 [类型](../../../ado/reference/adox-api/type-property-column-adox.md) 属性为数值类型时列中数据值的最大精度。 对于所有其他数据类型，将忽略**精度**。  
   
 ## <a name="remarks"></a>备注  
  默认值为零 (**0**)。  
   
- 对于已追加到集合的[列](../../../ado/reference/adox-api/column-object-adox.md)对象，此属性是只读的。  
+ 对于已追加到集合的 [列](../../../ado/reference/adox-api/column-object-adox.md) 对象，此属性是只读的。  
   
-## <a name="applies-to"></a>应用于  
+## <a name="applies-to"></a>适用于  
  [列对象 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [ADOX 代码示例： NumericScale 和 Precision 属性示例（VB）](../../../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md)   
- [Type 属性（列）（ADOX）](../../../ado/reference/adox-api/type-property-column-adox.md)   
+ [ADOX 代码示例： NumericScale 和 Precision 属性示例 (VB) ](../../../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md)   
+ [ (ADOX)  (列的类型属性) ](../../../ado/reference/adox-api/type-property-column-adox.md)   
  [列对象 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)

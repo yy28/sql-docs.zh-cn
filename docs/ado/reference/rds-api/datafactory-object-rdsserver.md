@@ -1,5 +1,6 @@
 ---
-title: DataFactory 对象（RDSServer） |Microsoft Docs
+description: DataFactory 对象 (RDSServer)
+title: DataFactory 对象 (RDSServer) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,28 +14,28 @@ helpviewer_keywords:
 ms.assetid: e75240c2-b749-471e-b6ea-98cae232efbe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 38b07258488539638729c55cef65770b0788a1c8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8a27d7911b00e5172941245ef5dcd587345aa1fc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82752619"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439099"
 ---
 # <a name="datafactory-object-rdsserver"></a>DataFactory 对象 (RDSServer)
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件（有关详细信息，请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)）。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
  此默认服务器端业务对象实现为客户端应用程序提供对指定数据源的读/写数据访问的方法。  
   
  **RDSServer. DataFactory**对象设计为接收客户端请求的服务器端自动化对象。 在 Internet 实现中，它驻留在 Web 服务器上，由 ADISAPI 组件实例化。 **RDSServer. DataFactory**对象提供对指定数据源的读写访问权限，但不包含任何验证或业务规则逻辑。  
   
- 如果使用在**RDSServer. DataFactory**和 RDS 中都可用的方法。 [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象，远程数据服务使用**RDS。** 默认情况下，DataControl 版本。 默认情况下，使用的是一个基本的编程方案，其中， **RDSServer DataFactory**用作泛型服务器端业务对象。  
+ 如果使用在 **RDSServer. DataFactory** 和 RDS 中都可用的方法。 [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 对象，远程数据服务使用 **RDS。** 默认情况下，DataControl 版本。 默认情况下，使用的是一个基本的编程方案，其中， **RDSServer DataFactory** 用作泛型服务器端业务对象。  
   
  如果你希望你的 Web 应用程序处理特定于任务的服务器端处理，则可以使用自定义业务对象替换**RDSServer. DataFactory。**  
   
- 你可以创建调用**RDSServer. DataFactory**方法的服务器端业务对象，例如[Query](../../../ado/reference/rds-api/query-method-rds.md)和[CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md)。 如果要将功能添加到业务对象，但要利用现有远程数据服务技术，这会很有帮助。  
+ 你可以创建调用 **RDSServer. DataFactory** 方法的服务器端业务对象，例如 [Query](../../../ado/reference/rds-api/query-method-rds.md) 和 [CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md)。 如果要将功能添加到业务对象，但要利用现有远程数据服务技术，这会很有帮助。  
   
- 对于在客户端运行的脚本， **DataFactory**对象是不安全的。  
+ 对于在客户端运行的脚本， **DataFactory** 对象是不安全的。  
   
  **DataFactory**对象的类 ID 是9381D8F5-0288-11D0-9501-00AA00B911A5。  
   

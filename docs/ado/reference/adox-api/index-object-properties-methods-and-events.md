@@ -1,4 +1,5 @@
 ---
+description: 索引对象属性、方法和事件
 title: 索引对象属性、方法和事件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6f4e92e1-e7cb-45d8-aa86-cd749474f825
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b581a3c953d666d771ccdc80d06cdcc951cd60bd
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 060c6bb1ec99ba2a8fa758d320cb57780601cf58
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762728"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439929"
 ---
 # <a name="index-object-properties-methods-and-events"></a>索引对象属性、方法和事件
 ## <a name="propertiescollections"></a>属性/集合  

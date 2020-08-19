@@ -1,5 +1,6 @@
 ---
-title: ConvertToString 方法示例（VBScript） |Microsoft Docs
+description: ConvertToString 方法示例 (VBScript)
+title: ConvertToString 方法示例 (VBScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: edd0a01c-1a1b-4b91-9966-2529e244abae
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: abfaba4a4ef4a67bb4b5970bf347674814caab13
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5d30d0268d974f8ab4cac2238ec8672c9948dcaf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762678"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439178"
 ---
 # <a name="converttostring-method-example-vbscript"></a>ConvertToString 方法示例 (VBScript)
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件（有关详细信息，请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)）。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 下面的示例演示如何使用**RDSServer. DataFactory ConvertToString**方法将**记录集**转换为 MIME 编码的字符串。 然后，它会显示字符串如何转换回**记录集**。 剪切下面的代码并将其粘贴到记事本或其他文本编辑器中，并将其保存为**ConvertToString**。  
+ 下面的示例演示如何使用**RDSServer. DataFactory ConvertToString**方法将**记录集**转换为 MIME 编码的字符串。 然后，它会显示字符串如何转换回 **记录集**。 剪切下面的代码并将其粘贴到记事本或其他文本编辑器中，并将其保存为 **ConvertToString.htm**。  
   
 ```  
 <!-- BeginConvertToStringVBS -->  
@@ -94,7 +95,7 @@ MIME Encoded RS: <BR>
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ConvertToString 方法（RDS）](../../../ado/reference/rds-api/converttostring-method-rds.md)   
+ [ConvertToString 方法 (RDS) ](../../../ado/reference/rds-api/converttostring-method-rds.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
 
 

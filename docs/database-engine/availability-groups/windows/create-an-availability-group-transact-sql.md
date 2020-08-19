@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b6ca67706406b74d9579dd234cee6df15959d5b8
-ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
+ms.openlocfilehash: 214a1e1aedf3fcc07fa9bcb3367dc43968ea2e72
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565248"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431279"
 ---
 # <a name="create-an-always-on-availability-group-using-transact-sql-t-sql"></a>使用 Transact-SQL (T-SQL) 创建 Always On 可用性组
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "87565248"
   
     1.  下面的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 示例创建这些数据库并且将它们更改为使用完整恢复模式：  
   
-        ```  
+        ```sql  
         -- Create sample databases:  
         CREATE DATABASE MyDb1;  
         GO  
@@ -102,18 +102,17 @@ ms.locfileid: "87565248"
   
     2.  下面的代码示例创建 *MyDb1* 和 *MyDb2*的完整数据库备份。 此代码示例使用虚构的备份共享 \\\\*FILESERVER*\\*SQLbackups*。  
   
-        ```  
+        ```sql  
         -- Backup sample databases:  
         BACKUP DATABASE MyDb1   
         TO DISK = N'\\FILESERVER\SQLbackups\MyDb1.bak'   
-            WITH FORMAT  
+            WITH FORMAT;  
         GO  
   
         BACKUP DATABASE MyDb2   
         TO DISK = N'\\FILESERVER\SQLbackups\MyDb2.bak'   
-            WITH FORMAT  
+            WITH FORMAT;  
         GO  
-  
         ```  
   
  [[示例顶部]](#ExampleConfigAGWinAuth)  
@@ -130,26 +129,24 @@ ms.locfileid: "87565248"
   
 1.  在你计划创建可用性组的服务器实例（这是 *上名为* 的实例）上创建名为 `AgHostInstance` dbm_endpoint `COMPUTER01`的数据库镜像端点。 此端点使用端口 7022。 请注意，您要在其上创建可用性组的服务器实例将承载主副本。  
   
-    ```  
+    ```sql  
     -- Create endpoint on server instance that hosts the primary replica:  
     CREATE ENDPOINT dbm_endpoint  
         STATE=STARTED   
         AS TCP (LISTENER_PORT=7022)   
-        FOR DATABASE_MIRRORING (ROLE=ALL)  
+        FOR DATABASE_MIRRORING (ROLE=ALL);  
     GO  
-  
     ```  
   
 2.  在将承载辅助副本的服务器实例（这是 *上的默认服务器实例）上创建端点* dbm_endpoint `COMPUTER02`。 此端点使用端口 5022。  
   
-    ```  
+    ```sql  
     -- Create endpoint on server instance that hosts the secondary replica:   
     CREATE ENDPOINT dbm_endpoint  
         STATE=STARTED   
         AS TCP (LISTENER_PORT=5022)   
-        FOR DATABASE_MIRRORING (ROLE=ALL)  
+        FOR DATABASE_MIRRORING (ROLE=ALL);  
     GO  
-  
     ```  
   
 3.  > [!NOTE]  
@@ -159,7 +156,7 @@ ms.locfileid: "87565248"
   
      下面的代码示例说明用于创建一个登录名并且向该登录名授予针对某一端点的权限的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句。 远程服务器实例的域帐户在此处表示为 *domain_name*\\*user_name*。  
   
-    ```  
+    ```sql  
     -- If necessary, create a login for the service account, domain_name\user_name  
     -- of the server instance that will host the other replica:  
     USE master;  
@@ -176,9 +173,8 @@ ms.locfileid: "87565248"
   
      下面的代码示例在创建了示例数据库 *MyDb1* 和 *MyDb2* 的服务器实例上创建名为 *MyAG*的可用性组。 首先指定 `AgHostInstance`COMPUTER01 *上的本地服务器实例* 。 该实例将承载初始的主副本。 指定远程服务器实例（ *COMPUTER02*上的默认服务器实例）承载辅助副本。 将两个可用性副本配置为使用异步提交模式和手动故障转移（对于异步提交副本，手动故障转移意味着强制故障转移可能造成数据丢失）。  
   
-    ```  
-  
-              -- Create the availability group, MyAG:   
+    ```sql
+    -- Create the availability group, MyAG:   
     CREATE AVAILABILITY GROUP MyAG   
        FOR   
           DATABASE MyDB1, MyDB2   
@@ -204,7 +200,7 @@ ms.locfileid: "87565248"
   
      下面的代码示例将 `COMPUTER02` 上的辅助副本联接到 `MyAG` 可用性组。  
   
-    ```  
+    ```sql 
     -- On the server instance that hosts the secondary replica,   
     -- join the secondary replica to the availability group:  
     ALTER AVAILABILITY GROUP MyAG JOIN;  
@@ -215,19 +211,18 @@ ms.locfileid: "87565248"
   
      以下代码示例通过使用 RESTORE WITH NORECOVERY 还原数据库备份来创建 *MyDb1* 和 *MyDb2* 辅助数据库。  
   
-    ```  
+    ```sql 
     -- On the server instance that hosts the secondary replica,   
     -- Restore database backups using the WITH NORECOVERY option:  
     RESTORE DATABASE MyDb1   
         FROM DISK = N'\\FILESERVER\SQLbackups\MyDb1.bak'   
-        WITH NORECOVERY  
+        WITH NORECOVERY;  
     GO  
   
     RESTORE DATABASE MyDb2   
         FROM DISK = N'\\FILESERVER\SQLbackups\MyDb2.bak'   
-        WITH NORECOVERY  
-    GO  
-  
+        WITH NORECOVERY;  
+    GO 
     ```  
   
 7.  在承载主副本的服务器实例上，备份每个主数据库上的事务日志。  
@@ -237,19 +232,18 @@ ms.locfileid: "87565248"
   
      下面的代码示例在 MyDb1 和 MyDb2 上创建一个事务日志备份。  
   
-    ```  
+    ```sql  
     -- On the server instance that hosts the primary replica,   
     -- Backup the transaction log on each primary database:  
     BACKUP LOG MyDb1   
     TO DISK = N'\\FILESERVER\SQLbackups\MyDb1.bak'   
-        WITH NOFORMAT  
+        WITH NOFORMAT;  
     GO  
   
     BACKUP LOG MyDb2   
     TO DISK = N'\\FILESERVER\SQLbackups\MyDb2.bak'   
-        WITHNOFORMAT  
-    GO  
-  
+        WITHNOFORMAT;  
+    GO
     ```  
   
     > [!TIP]  
@@ -262,16 +256,16 @@ ms.locfileid: "87565248"
     > [!IMPORTANT]  
     >  在您准备真实的辅助数据库时，需要应用您从其创建了辅助数据库的数据库备份之后发生的每个日志备份，从最早的开始并且始终使用 RESTORE WITH NORECOVERY。 当然，如果您还原完整和差异数据库备份，则只需应用在差异备份后发生的日志备份。  
   
-    ```  
+    ```sql  
     -- Restore the transaction log on each secondary database,  
     -- using the WITH NORECOVERY option:  
     RESTORE LOG MyDb1   
         FROM DISK = N'\\FILESERVER\SQLbackups\MyDb1.bak'   
-        WITH FILE=1, NORECOVERY  
+        WITH FILE=1, NORECOVERY;  
     GO  
     RESTORE LOG MyDb2   
         FROM DISK = N'\\FILESERVER\SQLbackups\MyDb2.bak'   
-        WITH FILE=1, NORECOVERY  
+        WITH FILE=1, NORECOVERY;  
     GO  
     ```  
   
@@ -279,7 +273,7 @@ ms.locfileid: "87565248"
   
      下面的代码示例依次将 *MyDb1* 辅助数据库和 *MyDb2* 辅助数据库联接到 *MyAG* 可用性组。  
   
-    ```  
+    ```sql  
     -- On the server instance that hosts the secondary replica,   
     -- join each secondary database to the availability group:  
     ALTER DATABASE MyDb1 SET HADR AVAILABILITY GROUP = MyAG;  
@@ -287,7 +281,6 @@ ms.locfileid: "87565248"
   
     ALTER DATABASE MyDb2 SET HADR AVAILABILITY GROUP = MyAG;  
     GO  
-  
     ```  
   
 ###  <a name="complete-code-example-for-sample-configuration-procedure"></a><a name="CompleteCodeExample"></a> 示例配置过程的完整代码示例  
@@ -313,7 +306,7 @@ ms.locfileid: "87565248"
 > [!NOTE]  
 >  有关创建可用性组的其他 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 代码示例，请参阅 [CREATE AVAILABILITY GROUP (Transact-SQL);](../../../t-sql/statements/create-availability-group-transact-sql.md)  
   
-```  
+```sql  
 -- on the server instance that will host the primary replica,   
 -- create sample databases:  
 CREATE DATABASE MyDb1;  
@@ -329,26 +322,26 @@ GO
 -- Backup sample databases:  
 BACKUP DATABASE MyDb1   
 TO DISK = N'\\FILESERVER\SQLbackups\MyDb1.bak'   
-    WITH FORMAT  
+    WITH FORMAT;  
 GO  
   
 BACKUP DATABASE MyDb2   
 TO DISK = N'\\FILESERVER\SQLbackups\MyDb2.bak'   
-    WITH FORMAT  
+    WITH FORMAT;  
 GO  
   
 -- Create the endpoint on the server instance that will host the primary replica:  
 CREATE ENDPOINT dbm_endpoint  
     STATE=STARTED   
     AS TCP (LISTENER_PORT=7022)   
-    FOR DATABASE_MIRRORING (ROLE=ALL)  
+    FOR DATABASE_MIRRORING (ROLE=ALL);  
 GO  
   
 -- Create the endpoint on the server instance that will host the secondary replica:   
 CREATE ENDPOINT dbm_endpoint  
     STATE=STARTED   
     AS TCP (LISTENER_PORT=7022)   
-    FOR DATABASE_MIRRORING (ROLE=ALL)  
+    FOR DATABASE_MIRRORING (ROLE=ALL);  
 GO  
   
 -- If both service accounts run under the same domain account, skip this step. Otherwise,   
@@ -406,18 +399,18 @@ GO
 -- Restore database backups onto this server instance, using RESTORE WITH NORECOVERY:  
 RESTORE DATABASE MyDb1   
     FROM DISK = N'\\FILESERVER\SQLbackups\MyDb1.bak'   
-    WITH NORECOVERY  
+    WITH NORECOVERY;  
 GO  
   
 RESTORE DATABASE MyDb2   
     FROM DISK = N'\\FILESERVER\SQLbackups\MyDb2.bak'   
-    WITH NORECOVERY  
+    WITH NORECOVERY;  
 GO  
   
 -- Back up the transaction log on each primary database:  
 BACKUP LOG MyDb1   
 TO DISK = N'\\FILESERVER\SQLbackups\MyDb1.bak'   
-    WITH NOFORMAT  
+    WITH NOFORMAT;  
 GO  
   
 BACKUP LOG MyDb2   
@@ -429,11 +422,11 @@ GO
 -- using the WITH NORECOVERY option:  
 RESTORE LOG MyDb1   
     FROM DISK = N'\\FILESERVER\SQLbackups\MyDb1.bak'   
-    WITH FILE=1, NORECOVERY  
+    WITH FILE=1, NORECOVERY;  
 GO  
 RESTORE LOG MyDb2   
     FROM DISK = N'\\FILESERVER\SQLbackups\MyDb2.bak'   
-    WITH FILE=1, NORECOVERY  
+    WITH FILE=1, NORECOVERY;  
 GO  
   
 -- On the server instance that hosts the secondary replica,   
@@ -443,7 +436,6 @@ GO
   
 ALTER DATABASE MyDb2 SET HADR AVAILABILITY GROUP = MyAG;  
 GO  
-  
 ```  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  

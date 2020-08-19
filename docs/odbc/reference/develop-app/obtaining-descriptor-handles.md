@@ -1,4 +1,5 @@
 ---
+description: 获取描述符句柄
 title: 获取描述符句柄 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 936f983f-c7e9-43f3-97ea-dd4b1bbf4654
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c17b693080c2727d2ee788b74f247d86d7a3cb27
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c46ce0bff7240c121c6c56a5c3cd1b19769afb04
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302342"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429199"
 ---
 # <a name="obtaining-descriptor-handles"></a>获取描述符句柄
-应用程序将所有显式分配的描述符的句柄获取为对**SQLAllocHandle**的调用的输出参数。 隐式分配的描述符的句柄通过调用**SQLGetStmtAttr**获取。
+应用程序将所有显式分配的描述符的句柄获取为对 **SQLAllocHandle**的调用的输出参数。 隐式分配的描述符的句柄通过调用 **SQLGetStmtAttr**获取。

@@ -1,5 +1,6 @@
 ---
-title: Views Append 方法示例（VB） |Microsoft Docs
+description: 视图 Append 方法示例 (VB)
+title: " (VB) 查看 Append 方法示例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b5b4c082-ac29-4f49-a8b8-e21b554c9b0d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e9fe8ce0f7db1057bf31506478ee423907ac12bc
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a481db1f6b185c082dc26cc8ede030938bbfce9b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82752998"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439319"
 ---
 # <a name="views-append-method-example-vb"></a>视图 Append 方法示例 (VB)
-下面的代码演示如何使用[命令](../../../ado/reference/ado-api/command-object-ado.md)对象和[Views](../../../ado/reference/adox-api/views-collection-adox.md)集合[Append](../../../ado/reference/adox-api/append-method-adox-views.md)方法在基础数据源中创建新视图。  
+下面的代码演示如何使用 [命令](../../../ado/reference/ado-api/command-object-ado.md) 对象和 [Views](../../../ado/reference/adox-api/views-collection-adox.md) 集合 [Append](../../../ado/reference/adox-api/append-method-adox-views.md) 方法在基础数据源中创建新视图。  
   
 ```  
 ' BeginCreateViewVB  
@@ -62,8 +63,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ActiveConnection 属性（ADOX）](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Append 方法（ADOX 视图）](../../../ado/reference/adox-api/append-method-adox-views.md)   
- [目录对象（ADOX）](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [视图对象（ADOX）](../../../ado/reference/adox-api/view-object-adox.md)   
+ [ActiveConnection 属性 (ADOX) ](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
+ [) 的 Append 视图 (追加方法 ](../../../ado/reference/adox-api/append-method-adox-views.md)   
+ [目录对象 (ADOX) ](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [视图对象 (ADOX) ](../../../ado/reference/adox-api/view-object-adox.md)   
  [视图集合 (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

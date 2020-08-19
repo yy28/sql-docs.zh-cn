@@ -1,5 +1,6 @@
 ---
-title: 设置 RDS。DataControl 服务器并绑定到 HTML 表（VBScript） |Microsoft Docs
+description: 'FilterColumn、FilterCriterion、FilterValue、SortColumn 和 SortDirection 属性和 Reset 方法示例 (VBScript) '
+title: 设置 RDS。DataControl 服务器并绑定到 HTML 表 (VBScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -19,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 8a74802f-34d6-4676-bf94-07df5f8bff66
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 53bc8926ea400f2ba73a2bbe412c284aec2273c5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 800534bb36014d3c2e9f733aee23173fbdd28b01
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82752122"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439009"
 ---
-# <a name="filtercolumn-filtercriterion-filtervalue-sortcolumn-and-sortdirection-properties-and-reset-method-example-vbscript"></a>FilterColumn、FilterCriterion、FilterValue、SortColumn 和 SortDirection 属性和 Reset 方法示例（VBScript）
+# <a name="filtercolumn-filtercriterion-filtervalue-sortcolumn-and-sortdirection-properties-and-reset-method-example-vbscript"></a>FilterColumn、FilterCriterion、FilterValue、SortColumn 和 SortDirection 属性和 Reset 方法示例 (VBScript) 
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件（有关详细信息，请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)）。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 下面的代码演示如何设置[RDS。](../../../ado/reference/rds-api/datacontrol-object-rds.md)Designtime 上的 DataControl**服务器**参数，并使用数据源将其绑定到可识别数据的 HTML 表。 剪切下面的代码并将其粘贴到记事本或其他文本编辑器中，并将其保存为**FilterColumnVBS**。  
+ 下面的代码演示如何设置 [RDS。](../../../ado/reference/rds-api/datacontrol-object-rds.md)Designtime 上的 DataControl **服务器** 参数，并使用数据源将其绑定到可识别数据的 HTML 表。 剪切下面的代码并将其粘贴到记事本或其他文本编辑器中，并将其保存为 **FilterColumnVBS**。  
   
 ```  
 <!-- BeginFilterColumnVBS -->  
@@ -204,12 +205,12 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [DataControl 对象（RDS）](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [FilterColumn 属性（RDS）](../../../ado/reference/rds-api/filtercolumn-property-rds.md)   
- [FilterCriterion 属性（RDS）](../../../ado/reference/rds-api/filtercriterion-property-rds.md)   
- [FilterValue 属性（RDS）](../../../ado/reference/rds-api/filtervalue-property-rds.md)   
- [Reset 方法（RDS）](../../../ado/reference/rds-api/reset-method-rds.md)   
- [SortColumn 属性（RDS）](../../../ado/reference/rds-api/sortcolumn-property-rds.md)   
+ [DataControl 对象 (RDS) ](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
+ [FilterColumn 属性 (RDS) ](../../../ado/reference/rds-api/filtercolumn-property-rds.md)   
+ [FilterCriterion 属性 (RDS) ](../../../ado/reference/rds-api/filtercriterion-property-rds.md)   
+ [FilterValue 属性 (RDS) ](../../../ado/reference/rds-api/filtervalue-property-rds.md)   
+ [在 RDS)  (重置方法 ](../../../ado/reference/rds-api/reset-method-rds.md)   
+ [SortColumn 属性 (RDS) ](../../../ado/reference/rds-api/sortcolumn-property-rds.md)   
  [SortDirection 属性 (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)
 
 

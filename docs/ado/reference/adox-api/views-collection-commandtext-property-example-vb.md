@@ -1,5 +1,6 @@
 ---
-title: Views 集合，CommandText 属性示例（VB） |Microsoft Docs
+description: 视图集合、CommandText 属性示例 (VB)
+title: Views 集合、CommandText 属性示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: a05a0190-352d-44ff-9488-0c94e9fb656e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e2c125f77f2ba93f10e8ba855a0105cfb42ca415
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 492c385252085b440c536081e569a4a732f10c32
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746531"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439289"
 ---
 # <a name="views-collection-commandtext-property-example-vb"></a>视图集合、CommandText 属性示例 (VB)
-下面的代码演示如何使用[命令](../../../ado/reference/adox-api/command-property-adox.md)属性更新视图的文本。  
+下面的代码演示如何使用 [命令](../../../ado/reference/adox-api/command-property-adox.md) 属性更新视图的文本。  
   
 ```  
 ' BeginViewsCollectionVB  
@@ -77,8 +78,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ActiveConnection 属性（ADOX）](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [目录对象（ADOX）](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Command 属性（ADOX）](../../../ado/reference/adox-api/command-property-adox.md)   
- [视图对象（ADOX）](../../../ado/reference/adox-api/view-object-adox.md)   
+ [ActiveConnection 属性 (ADOX) ](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
+ [目录对象 (ADOX) ](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Command 属性 (ADOX) ](../../../ado/reference/adox-api/command-property-adox.md)   
+ [视图对象 (ADOX) ](../../../ado/reference/adox-api/view-object-adox.md)   
  [视图集合 (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

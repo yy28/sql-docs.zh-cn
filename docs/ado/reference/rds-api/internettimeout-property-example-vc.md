@@ -1,5 +1,6 @@
 ---
-title: InternetTimeout 属性示例（VC + +） |Microsoft Docs
+description: InternetTimeout 属性示例 (VC++)
+title: InternetTimeout 属性示例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 88b6d05c-d4eb-4ab1-bbe2-95d146237f94
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 13c9b2da5a9835946bc963af317c1c274232bd9c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4a567da551fbadc89ca28e8df169b0149b780897
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82755531"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438929"
 ---
 # <a name="internettimeout-property-example-vc"></a>InternetTimeout 属性示例 (VC++)
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件（有关详细信息，请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)）。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 此示例演示[InternetTimeout](../../../ado/reference/rds-api/internettimeout-property-rds.md)属性，该属性存在于[DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)和 "[空间](../../../ado/reference/rds-api/dataspace-object-rds.md)" 对象上。 在这种情况下，将在**DataControl**对象上演示**InternetTimeout**属性，并将超时设置为20秒。  
+ 此示例演示 [InternetTimeout](../../../ado/reference/rds-api/internettimeout-property-rds.md) 属性，该属性存在于 [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 和 " [空间](../../../ado/reference/rds-api/dataspace-object-rds.md) " 对象上。 在这种情况下，将在**DataControl**对象上演示**InternetTimeout**属性，并将超时设置为20秒。  
   
 ```cpp
 // BeginInternetTimeoutCpp  

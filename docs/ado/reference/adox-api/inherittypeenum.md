@@ -1,4 +1,5 @@
 ---
+description: InheritTypeEnum
 title: InheritTypeEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: c2f6ce79-c4b3-4d40-ac95-21025208f991
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f420d7d49ad24188f5210001af1209427478f3f6
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: dfa4d6c15cc7d26dbfe964947bd09a04e2f75128
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746673"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439849"
 ---
 # <a name="inherittypeenum"></a>InheritTypeEnum
-指定对象如何继承具有[SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)的权限集。  
+指定对象如何继承具有 [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)的权限集。  
   
-|返回的常量|值|说明|  
+|返回的常量|值|描述|  
 |--------------|-----------|-----------------|  
 |**adInheritBoth**|3|对象和主对象所包含的其他容器都继承该条目。|  
 |**adInheritContainers**|2|主对象包含的其他容器继承该条目。|  
@@ -33,5 +34,5 @@ ms.locfileid: "82746673"
 |**adInheritNoPropagate**|4|**AdInheritObjects**和**adInheritContainers**标志不会传播到继承的项。|  
 |**adInheritObjects**|1|容器中的非容器对象将继承权限。|  
   
-## <a name="applies-to"></a>应用于  
+## <a name="applies-to"></a>适用于  
  [SetPermissions 方法 (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)

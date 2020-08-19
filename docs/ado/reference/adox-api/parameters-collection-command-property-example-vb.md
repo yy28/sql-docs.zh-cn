@@ -1,5 +1,6 @@
 ---
-title: Parameters 集合、Command 属性示例（VB） |Microsoft Docs
+description: 参数集合、Command 属性示例 (VB)
+title: 参数集合、Command 属性示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7df1089e-69b7-476e-9244-19947c087351
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4feb9c7ec12bbf560c874b15389adcd3a7eec04a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c82fc6388f1a7ad6582cc91ab2589afda2912f6a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763778"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439739"
 ---
 # <a name="parameters-collection-command-property-example-vb"></a>参数集合、Command 属性示例 (VB)
-下面的代码演示如何将[command](../../../ado/reference/adox-api/command-property-adox.md)属性与[command](../../../ado/reference/ado-api/command-object-ado.md)对象结合使用来检索过程的参数信息。  
+下面的代码演示如何将 [command](../../../ado/reference/adox-api/command-property-adox.md) 属性与 [command](../../../ado/reference/ado-api/command-object-ado.md) 对象结合使用来检索过程的参数信息。  
   
 ```  
 ' BeginParametersVB  
@@ -76,8 +77,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ActiveConnection 属性（ADOX）](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [目录对象（ADOX）](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Command 属性（ADOX）](../../../ado/reference/adox-api/command-property-adox.md)   
- [Procedure 对象（ADOX）](../../../ado/reference/adox-api/procedure-object-adox.md)   
+ [ActiveConnection 属性 (ADOX) ](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
+ [目录对象 (ADOX) ](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Command 属性 (ADOX) ](../../../ado/reference/adox-api/command-property-adox.md)   
+ [过程对象 (ADOX) ](../../../ado/reference/adox-api/procedure-object-adox.md)   
  [过程集合 (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)

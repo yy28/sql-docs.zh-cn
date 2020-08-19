@@ -1,5 +1,6 @@
 ---
-title: SortOrder 属性（ADOX） |Microsoft Docs
+description: SortOrder 属性 (ADOX)
+title: 排序 (ADOX) 的属性 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -19,26 +20,26 @@ helpviewer_keywords:
 ms.assetid: 04510b19-9cb2-4895-b23b-f7790123eb04
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2026bcae8e0923159f6fb1044ab379d439993400
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7fdc1c5aad0b07f19dc3f1b98b58ca322f7ae577
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762788"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439509"
 ---
 # <a name="sortorder-property-adox"></a>SortOrder 属性 (ADOX)
-指示列的排序顺序（仅限索引列）。  
+指示列 (仅) 索引列的排序顺序。  
   
 ## <a name="settings-and-return-values"></a>设置和返回值  
- 设置并返回一个**Long**值，该值可以是[SortOrderEnum](../../../ado/reference/adox-api/sortorderenum.md)常数之一。 默认值为**adSortAscending**。  
+ 设置并返回一个 **Long** 值，该值可以是 [SortOrderEnum](../../../ado/reference/adox-api/sortorderenum.md) 常数之一。 默认值为 **adSortAscending**。  
   
 ## <a name="remarks"></a>备注  
  此属性仅适用于[索引](../../../ado/reference/adox-api/index-object-adox.md)的[Columns](../../../ado/reference/adox-api/columns-collection-adox.md)集合中的[列](../../../ado/reference/adox-api/column-object-adox.md)对象。  
   
-## <a name="applies-to"></a>应用于  
+## <a name="applies-to"></a>适用于  
  [列对象 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [SortOrder 属性示例（VB）](../../../ado/reference/adox-api/sortorder-property-example-vb.md)   
- [列集合（ADOX）](../../../ado/reference/adox-api/columns-collection-adox.md)   
+ [SortOrder 属性示例 (VB) ](../../../ado/reference/adox-api/sortorder-property-example-vb.md)   
+ [列集合 (ADOX) ](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [索引对象 (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)

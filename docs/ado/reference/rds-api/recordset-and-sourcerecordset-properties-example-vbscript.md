@@ -1,5 +1,6 @@
 ---
-title: Recordset 和 SourceRecordset 属性示例（VBScript） |Microsoft Docs
+description: Recordset 和 SourceRecordset 属性示例 (VBScript)
+title: 记录集和 SourceRecordset 属性示例 (VBScript) |Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,20 +16,20 @@ helpviewer_keywords:
 ms.assetid: 95175316-cd10-4cf7-96ba-2a226fd97701
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 64f83c8e7d8a281ff8bd9124d693d365cafd9181
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d2c047ed21662335368f85273ad8c52bf4f5e70f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82751109"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438739"
 ---
 # <a name="recordset-and-sourcerecordset-properties-example-vbscript"></a>Recordset 和 SourceRecordset 属性示例 (VBScript)
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件（有关详细信息，请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)）。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 下面的示例演示如何在运行时设置[RDSServer](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)的默认业务对象的必需参数。  
+ 下面的示例演示如何在运行时设置 [RDSServer](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) 的默认业务对象的必需参数。  
   
- 若要测试此示例，请将此代码剪切并粘贴到 \< \< 常规 HTML 文档中的 Body> 和/Body> 标记之间，并将其命名为**RecordsetVBS**。 ASP 脚本将标识您的服务器。  
+ 若要测试此示例，请 \<Body> \</Body> 在普通 HTML 文档中的和标记之间剪切并粘贴此代码，并将其命名为 **RecordsetVBS**。 ASP 脚本将标识您的服务器。  
   
 ```  
 <!-- BeginRecordSetVBS -->  
@@ -128,7 +129,7 @@ CLASSID="CLSID:BD96C556-65A3-11D0-983A-00C04FC29E36">
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [DataFactory 对象（RDSServer）](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
+ [DataFactory 对象 (RDSServer) ](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
  [Recordset、SourceRecordset 属性 (RDS)](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)
 
 

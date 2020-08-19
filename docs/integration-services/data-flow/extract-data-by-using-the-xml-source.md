@@ -1,4 +1,5 @@
 ---
+description: 使用 XML 源提取数据
 title: 使用 XML 源提取数据 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5d5be54c-2b7e-4957-9193-c5ea5c5d6d15
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2199bfc8ae7d6605dcf7ed92a8749683e17d3fd9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f3cd306d2cf6097fdb5e178f92e41d45de198783
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916866"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430829"
 ---
 # <a name="extract-data-by-using-the-xml-source"></a>使用 XML 源提取数据
 
@@ -42,9 +43,9 @@ ms.locfileid: "86916866"
   
     -   对于 **“XML 文件位置”** 访问模式，单击 **“浏览”** 找到包含该 XML 文件的文件夹。  
   
-    -   对于“来自变量的 XML 文件”访问模式，选择包含 XML 文件路径的用户定义变量。   
+    -   对于“来自变量的 XML 文件”访问模式，选择包含 XML 文件路径的用户定义变量。****  
   
-    -   对于“来自变量的 XML 数据”访问模式，选择包含 XML 数据的用户定义变量。   
+    -   对于“来自变量的 XML 数据”访问模式，选择包含 XML 数据的用户定义变量。****  
   
     > [!NOTE]  
     >  这些变量必须在包含该 XML 源的数据流任务的作用域内定义，或者在包的作用域内定义；此外，变量的数据类型必须为字符串。  
@@ -61,7 +62,7 @@ ms.locfileid: "86916866"
   
 9. 若要配置错误输出，请单击 **“错误输出”** 。 有关详细信息，请参阅 [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md)。  
   
-10. 单击“确定”。   
+10. 单击“确定”。  
   
 11. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   

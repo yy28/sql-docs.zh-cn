@@ -1,5 +1,6 @@
 ---
-title: CancelUpdate 方法示例（VBScript） |Microsoft Docs
+description: CancelUpdate 方法示例 (VBScript)
+title: CancelUpdate 方法示例 (VBScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: c23912f0-1288-4727-8fb4-f643b8811cf7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d560233efc7623a390fbd2fc63e8add5f26cd157
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 21d940642388c516ddf9c0048e255e441b9076b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746419"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439239"
 ---
 # <a name="cancelupdate-method-example-vbscript"></a>CancelUpdate 方法示例 (VBScript)
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件（有关详细信息，请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)）。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 若要测试此示例，请将此代码剪切并粘贴到 \< \< 常规 HTML 文档中的 Body> 和/Body> 标记之间，并将其命名为**CancelUpdateVBS**。 ASP 脚本将标识您的 internet 服务器。 你将需要编辑服务器的名称，以反映你自己的设置。 只需将连接字符串中的值从 MyServer 更改为 SQL Server 安装的名称即可。  
+ 若要测试此示例，请 \<Body> \</Body> 在普通 HTML 文档中的和标记之间剪切并粘贴此代码，并将其命名为 **CancelUpdateVBS**。 ASP 脚本将标识您的 internet 服务器。 你将需要编辑服务器的名称，以反映你自己的设置。 只需将连接字符串中的值从 MyServer 更改为 SQL Server 安装的名称即可。  
   
 ```  
 <!-- BeginCancelUpdateVBS -->  

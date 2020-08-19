@@ -1,5 +1,6 @@
 ---
-title: Name 属性（ADOX） |Microsoft Docs
+description: Name 属性 (ADOX)
+title: 名称属性 (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -41,30 +42,30 @@ helpviewer_keywords:
 ms.assetid: 81b92baf-b6b9-4f4e-9f33-4503795518cd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 24d86b384a1eb2916e488c17c99e4b9b5962dd1a
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: dbd0d9088ea39d604c53c462448ae1c94b3a9052
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942719"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439779"
 ---
 # <a name="name-property-adox"></a>Name 属性 (ADOX)
 指示对象的名称。  
   
 ## <a name="settings-and-return-values"></a>设置和返回值  
- 设置或返回一个**字符串**值。  
+ 设置或返回一个 **字符串** 值。  
   
 ## <a name="remarks"></a>备注  
  名称在集合中不必是唯一的。  
   
- **Name**属性对[列](../../../ado/reference/adox-api/column-object-adox.md)、[组](../../../ado/reference/adox-api/group-object-adox.md)、[键](../../../ado/reference/adox-api/key-object-adox.md)、[索引](../../../ado/reference/adox-api/index-object-adox.md)、[表](../../../ado/reference/adox-api/table-object-adox.md)和[用户](../../../ado/reference/adox-api/user-object-adox.md)对象是可读/写的。 "**名称**" 属性在 "[目录](../../../ado/reference/adox-api/catalog-object-adox.md)"、"[过程](../../../ado/reference/adox-api/procedure-object-adox.md)" 和 "[视图](../../../ado/reference/adox-api/view-object-adox.md)" 对象上是只读的。  
+ **Name**属性对[列](../../../ado/reference/adox-api/column-object-adox.md)、[组](../../../ado/reference/adox-api/group-object-adox.md)、[键](../../../ado/reference/adox-api/key-object-adox.md)、[索引](../../../ado/reference/adox-api/index-object-adox.md)、[表](../../../ado/reference/adox-api/table-object-adox.md)和[用户](../../../ado/reference/adox-api/user-object-adox.md)对象是可读/写的。 " **名称** " 属性在 " [目录](../../../ado/reference/adox-api/catalog-object-adox.md)"、" [过程](../../../ado/reference/adox-api/procedure-object-adox.md)" 和 " [视图](../../../ado/reference/adox-api/view-object-adox.md) " 对象上是只读的。  
   
- 对于读/写对象（**列**、**组**、**键**、**索引**、**表**和**用户**对象），默认值为空字符串（""）。  
+ 对于读/写对象 (**列**、 **组**、 **键**、 **索引**、 **表** 和 **用户** 对象) ，默认值为空字符串 ( "" ) 。  
   
 > [!NOTE]
->  对于键，此属性在已追加到集合的**键**对象上是只读的。 对于表，对于已追加到集合的**表**对象，此属性是只读的。  
+>  对于键，此属性在已追加到集合的 **键** 对象上是只读的。 对于表，对于已追加到集合的 **表** 对象，此属性是只读的。  
   
-## <a name="applies-to"></a>应用到  
+## <a name="applies-to"></a>适用于  
 
 :::row:::
     :::column:::
@@ -85,6 +86,6 @@ ms.locfileid: "86942719"
 :::row-end:::
 
 ## <a name="see-also"></a>另请参阅  
- [列和表追加方法，Name 属性示例（VB）](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
- [键 Append 方法、Key Type、RelatedColumn、RelatedTable 和 UpdateRule 属性示例（VB）](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [列和表追加方法、Name 属性示例 (VB) ](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
+ [键 Append 方法、Key Type、RelatedColumn、RelatedTable 和 UpdateRule Properties Example (VB) ](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [ParentCatalog 属性示例 (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)

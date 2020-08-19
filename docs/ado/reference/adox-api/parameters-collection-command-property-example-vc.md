@@ -1,5 +1,6 @@
 ---
-title: Parameters 集合、Command 属性示例（VC + +） |Microsoft Docs
+description: 参数集合、Command 属性示例 (VC++)
+title: 参数集合、Command 属性示例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 8636fa08-b3db-4e9a-a918-585e76dd59c8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aa623c7141c7c9fe0a9cacc00ed35cf686108511
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ff45d33d57d77fc3e8a3e13621cfb2bfb0af4afa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763768"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439729"
 ---
 # <a name="parameters-collection-command-property-example-vc"></a>参数集合、Command 属性示例 (VC++)
-下面的代码演示如何将[command](../../../ado/reference/adox-api/command-property-adox.md)属性与[command](../../../ado/reference/ado-api/command-object-ado.md)对象结合使用来检索过程的参数信息。  
+下面的代码演示如何将 [command](../../../ado/reference/adox-api/command-property-adox.md) 属性与 [command](../../../ado/reference/ado-api/command-object-ado.md) 对象结合使用来检索过程的参数信息。  
   
 ```  
 // BeginProcedureParametersCpp.cpp  

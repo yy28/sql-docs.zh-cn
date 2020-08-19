@@ -1,4 +1,5 @@
 ---
+description: 缓存的位置
 title: 缓存的位置 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 240d6162-4da6-4b1f-96c7-f379f4ecb16f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 13510332ae8bfab07a13d7831f9f74a048551214
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 29a0c5507c1b8f581d85b0524784f8ccf1695a5f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81288615"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429619"
 ---
 # <a name="location-of-cache"></a>缓存的位置
 > [!IMPORTANT]  
@@ -28,4 +29,4 @@ ms.locfileid: "81288615"
  游标库将数据缓存在内存中，在 Windows®临时文件中。 这会限制游标库只能由可用磁盘空间处理的结果集的大小。 当要缓存的数据在游标库缓存末尾插入时，将使用临时文件。 而是添加要缓存的数据，以取代缓存中最后保存的数据块。 上次保存的数据块保存在临时文件中。 如果游标库异常终止，例如当电源发生故障时，它可以将 Windows 临时文件保留在磁盘上。 它们命名为 ~ CTT*nnnn*，并在当前目录中创建。  
   
 > [!NOTE]  
->  如果 Microsoft® WindowsNT®中的游标库尝试缓存当前目录中的临时文件中的数据，而应用程序从只读共享或光盘（如 Microsoft 基础类库示例）运行，则将返回 SQLSTATE HY000 （一般错误-无法创建文件缓冲区）。
+>  如果 Microsoft® WindowsNT®中的游标库尝试缓存当前目录中的临时文件中的数据，而该应用程序是从只读共享还是 compact 磁盘 (如 Microsoft 基础类库示例) ，则 SQLSTATE HY000 (常规错误-无法创建文件缓冲区) 将返回。

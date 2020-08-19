@@ -1,4 +1,5 @@
 ---
+description: RuleEnum
 title: RuleEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,22 +16,22 @@ helpviewer_keywords:
 ms.assetid: 738fd3ff-3daf-483d-a0b9-88bef1be54c1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c04bbd079de68891cf271ff2ea668696e29a4394
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 87460f060af7f3367147dd56f6bb599d260d09be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762798"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439539"
 ---
 # <a name="ruleenum"></a>RuleEnum
-指定删除[密钥](../../../ado/reference/adox-api/key-object-adox.md)时要遵循的规则。  
+指定删除 [密钥](../../../ado/reference/adox-api/key-object-adox.md) 时要遵循的规则。  
   
-|返回的常量|值|说明|  
+|返回的常量|值|描述|  
 |--------------|-----------|-----------------|  
 |**adRICascade**|1|级联更改。|  
 |**adRINone**|0|默认。 不执行任何操作。|  
 |**adRISetDefault**|3|"外键值" 设置为默认值。|  
 |**adRISetNull**|2|外键值设置为 null。|  
   
-## <a name="applies-to"></a>应用于  
+## <a name="applies-to"></a>适用于  
  [DeleteRule 属性 (ADOX)](../../../ado/reference/adox-api/deleterule-property-adox.md)

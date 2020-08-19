@@ -1,5 +1,6 @@
 ---
-title: 空间对象（RDS） |Microsoft Docs
+description: DataSpace 对象 (RDS)
+title: " (RDS) 的空间对象 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,35 +14,35 @@ helpviewer_keywords:
 ms.assetid: 9194bffa-5bdf-4dff-af86-f7158c23bfa7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8e0340eb56ec2b72c0f917f33a639ed5227d2c0b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: bb24cdf6acbe58891177dfc84d6c1e341699b129
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82752562"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439059"
 ---
 # <a name="dataspace-object-rds"></a>DataSpace 对象 (RDS)
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件（有关详细信息，请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)）。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
  创建位于中间层上的自定义业务对象的客户端代理。  
   
- 远程数据服务需要业务对象代理，以便客户端组件可以与位于中间层的业务对象通信。 代理有助于跨进程或计算机边界对应用程序的[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)数据进行打包、unpackaging 和传输（封送处理）。  
+ 远程数据服务需要业务对象代理，以便客户端组件可以与位于中间层的业务对象通信。 通过代理，unpackaging 和传输 (跨进程或计算机边界封送处理应用程序的 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md) 数据) 。  
   
- 远程数据服务使用**RDS。** 用于创建业务对象代理的空间对象的[CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md)方法。 每次创建业务对象代理中间层业务对象对应项的实例时，都会动态创建该代理。 远程数据服务支持以下协议： HTTP、HTTPS （HTTP 安全套接字）、DCOM 和进程内（客户端组件和业务对象驻留在同一台计算机上）。  
-  
-> [!NOTE]
->  Rds 时，RDS 的行为方式为 "无状态" **。空间**对象使用 HTTP 或 HTTPS 协议。 也就是说，在服务器返回响应后，任何有关客户端请求的内部信息都将被丢弃。  
+ 远程数据服务使用 **RDS。** 用于创建业务对象代理的空间对象的 [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) 方法。 每次创建业务对象代理中间层业务对象对应项的实例时，都会动态创建该代理。 远程数据服务支持以下协议： HTTP、HTTPS (HTTP 安全套接字) 、DCOM 和进程内 (客户端组件以及业务对象驻留在同一台计算机上) 。  
   
 > [!NOTE]
->  尽管业务对象在业务对象代理的生存期内似乎存在，但只有在将响应发送到请求之后，业务对象才会实际存在。 发出请求时（即，在业务对象上调用方法），代理将打开到服务器的新连接，并且服务器会创建业务对象的新实例。 业务对象响应请求后，服务器会销毁业务对象并关闭连接。  
+>  Rds 时，RDS 的行为方式为 "无状态" **。空间** 对象使用 HTTP 或 HTTPS 协议。 也就是说，在服务器返回响应后，任何有关客户端请求的内部信息都将被丢弃。  
+  
+> [!NOTE]
+>  尽管业务对象在业务对象代理的生存期内似乎存在，但只有在将响应发送到请求之后，业务对象才会实际存在。 发出请求时 (即，将对业务对象) 调用方法，代理将打开与服务器的新连接，并且服务器将创建业务对象的新实例。 业务对象响应请求后，服务器会销毁业务对象并关闭连接。  
   
 > [!NOTE]
 >  此行为意味着不能使用业务对象属性或变量将数据从一个请求传递到另一个请求。 必须使用某种其他机制（如文件或方法参数）来持久保存状态数据。  
   
- RDS 的类 ID **。空间**对象为 BD96C556-65A3-11D0-983A-00C04FC29E36。  
+ RDS 的类 ID **。空间** 对象为 BD96C556-65A3-11D0-983A-00C04FC29E36。  
   
- 对于脚本编写，"**空间**" 对象是安全的。  
+ 对于脚本编写，" **空间** " 对象是安全的。  
   
  本部分包含以下主题。  
   

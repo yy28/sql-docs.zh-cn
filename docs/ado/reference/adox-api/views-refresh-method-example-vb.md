@@ -1,5 +1,6 @@
 ---
-title: Views Refresh 方法示例（VB） |Microsoft Docs
+description: 视图 Refresh 方法示例 (VB)
+title: " (VB) 的视图刷新方法示例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cdad2d66-6ade-40dc-9e74-e40cfa9bc127
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c4b807bbadb5a9b4c8278be8ae895cd6ce4309c0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3112670df34b0e74e359ef0e514d9acdc8620788
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82752935"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439269"
 ---
 # <a name="views-refresh-method-example-vb"></a>视图 Refresh 方法示例 (VB)
 下面的代码演示如何刷新[目录](../../../ado/reference/adox-api/catalog-object-adox.md)的[Views](../../../ado/reference/adox-api/views-collection-adox.md)集合。 这是必需的，才能访问**目录**中的[视图](../../../ado/reference/adox-api/view-object-adox.md)对象。  
@@ -56,5 +57,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Refresh 方法（ADO）](../../../ado/reference/ado-api/refresh-method-ado.md)   
+ [ (ADO 的 Refresh 方法) ](../../../ado/reference/ado-api/refresh-method-ado.md)   
  [视图集合 (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

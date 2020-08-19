@@ -1,5 +1,6 @@
 ---
-title: 在表之间创建新的外键关系示例（VB） |Microsoft Docs
+description: 项 Append 方法、项 Type、RelatedColumn、RelatedTable 和 UpdateRule 属性示例 (VB)
+title: 在两个表之间创建新的外键关系 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 13b5b1c3-6af6-439e-bb65-976578ba6bc2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 87cae622b8c25a37bb5d2de833ca98e044f36351
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ab6a3130f0c1d2d87fa5f56f7096db4aaf943037
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746629"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439829"
 ---
 # <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vb"></a>项 Append 方法、项 Type、RelatedColumn、RelatedTable 和 UpdateRule 属性示例 (VB)
-下面的代码演示如何在名为**Customers**和**Orders**的两个现有表之间创建新的外键关系。  
+下面的代码演示如何在名为 **Customers** 和 **Orders**的两个现有表之间创建新的外键关系。  
   
 ```  
 ' BeginCreateKeyVB  
@@ -73,17 +74,17 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Append 方法（ADOX 列）](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append 方法（ADOX 键）](../../../ado/reference/adox-api/append-method-adox-keys.md)   
- [目录对象（ADOX）](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [列对象（ADOX）](../../../ado/reference/adox-api/column-object-adox.md)   
- [列集合（ADOX）](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [Key 对象（ADOX）](../../../ado/reference/adox-api/key-object-adox.md)   
- [键集合（ADOX）](../../../ado/reference/adox-api/keys-collection-adox.md)   
- [Name 属性（ADOX）](../../../ado/reference/adox-api/name-property-adox.md)   
- [RelatedColumn 属性（ADOX）](../../../ado/reference/adox-api/relatedcolumn-property-adox.md)   
- [RelatedTable 属性（ADOX）](../../../ado/reference/adox-api/relatedtable-property-adox.md)   
- [Table 对象（ADOX）](../../../ado/reference/adox-api/table-object-adox.md)   
- [表集合（ADOX）](../../../ado/reference/adox-api/tables-collection-adox.md)   
- [Type 属性（Key）（ADOX）](../../../ado/reference/adox-api/type-property-key-adox.md)   
+ [Append 列 (追加方法) ](../../../ado/reference/adox-api/append-method-adox-columns.md)   
+ [追加方法 (ADOX 密钥) ](../../../ado/reference/adox-api/append-method-adox-keys.md)   
+ [目录对象 (ADOX) ](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [列对象 (ADOX) ](../../../ado/reference/adox-api/column-object-adox.md)   
+ [列集合 (ADOX) ](../../../ado/reference/adox-api/columns-collection-adox.md)   
+ [关键对象 (ADOX) ](../../../ado/reference/adox-api/key-object-adox.md)   
+ [项集合 (ADOX) ](../../../ado/reference/adox-api/keys-collection-adox.md)   
+ [名称属性 (ADOX) ](../../../ado/reference/adox-api/name-property-adox.md)   
+ [RelatedColumn 属性 (ADOX) ](../../../ado/reference/adox-api/relatedcolumn-property-adox.md)   
+ [RelatedTable 属性 (ADOX) ](../../../ado/reference/adox-api/relatedtable-property-adox.md)   
+ [Table 对象 (ADOX) ](../../../ado/reference/adox-api/table-object-adox.md)   
+ [表集合 (ADOX) ](../../../ado/reference/adox-api/tables-collection-adox.md)   
+ [ (ADOX) 类型属性 (键) ](../../../ado/reference/adox-api/type-property-key-adox.md)   
  [UpdateRule 属性 (ADOX)](../../../ado/reference/adox-api/updaterule-property-adox.md)

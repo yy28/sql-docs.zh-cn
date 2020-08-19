@@ -1,4 +1,5 @@
 ---
+description: 绑定参数的数组
 title: 绑定参数数组 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,21 +15,21 @@ helpviewer_keywords:
 ms.assetid: 037afe23-052d-4f3a-8aa7-45302b199ad0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 73cfcde89e89edb87a4955cf0854c66a01d81e6f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 529ea49d2697ffcf7b89217746420ab5cb298890
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81283397"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429479"
 ---
 # <a name="binding-arrays-of-parameters"></a>绑定参数的数组
 使用参数数组的应用程序将数组绑定到 SQL 语句中的参数。 有两种绑定样式：  
   
--   将数组绑定到每个参数。 每个数据结构（数组）都包含单个参数的所有数据。 这称为按*列绑定*，因为它将一个值的列绑定到一个参数。  
+-   将数组绑定到每个参数。 每个数据结构 (数组) 包含单个参数的所有数据。 这称为按 *列绑定* ，因为它将一个值的列绑定到一个参数。  
   
--   定义一个结构来保存整组参数的参数数据，并绑定这些结构的数组。 每个数据结构包含单个 SQL 语句的数据。 这称为按*行绑定*，因为它绑定了一行参数。  
+-   定义一个结构来保存整组参数的参数数据，并绑定这些结构的数组。 每个数据结构包含单个 SQL 语句的数据。 这称为按 *行绑定* ，因为它绑定了一行参数。  
   
- 当应用程序将单个变量绑定到参数时，它会调用**SQLBindParameter**将数组绑定到参数。 唯一的区别是传递的地址是数组地址，而不是单变量地址。 应用程序设置 SQL_ATTR_PARAM_BIND_TYPE 语句特性来指定它是使用列（默认值）还是按行绑定。 是使用按列绑定还是按行绑定，在很大程度上取决于应用程序首选项。 根据处理器访问内存的方式，按行绑定可能会更快。 但是，除了大量的参数行以外，差别可能会忽略不计。  
+ 当应用程序将单个变量绑定到参数时，它会调用 **SQLBindParameter** 将数组绑定到参数。 唯一的区别是传递的地址是数组地址，而不是单变量地址。 应用程序设置 SQL_ATTR_PARAM_BIND_TYPE 语句特性来指定它是在默认) 还是按行绑定 (使用列。 是使用按列绑定还是按行绑定，在很大程度上取决于应用程序首选项。 根据处理器访问内存的方式，按行绑定可能会更快。 但是，除了大量的参数行以外，差别可能会忽略不计。  
   
 ## <a name="column-wise-binding"></a>按列绑定  
  使用按列绑定时，应用程序将一个或两个数组绑定到要为其提供数据的每个参数。 第一个数组保存数据值，第二个数组保存长度/指示器缓冲区。 每个数组包含的元素数量与参数的值相同。  

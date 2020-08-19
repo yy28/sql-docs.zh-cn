@@ -1,5 +1,6 @@
 ---
-title: PrimaryKey 和 Unique 属性示例（VC + +） |Microsoft Docs
+description: PrimaryKey 和 Unique 属性示例 (VC++)
+title: PrimaryKey 和 Unique 属性示例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d51814a2-ff7d-48ed-b719-99776da2091a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 13fbb034f1b8d41c0455482663b625dcb0475d62
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 215e45631f223e68d2933c103c3503d0564d416c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763708"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439669"
 ---
 # <a name="primarykey-and-unique-properties-example-vc"></a>PrimaryKey 和 Unique 属性示例 (VC++)
 此示例演示[索引](../../../ado/reference/adox-api/index-object-adox.md)的[PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md)和[唯一](../../../ado/reference/adox-api/unique-property-adox.md)属性。 此代码创建一个具有两列的新表。 **PrimaryKey**和**Unique**属性用于使一列成为不允许重复值的主键。  

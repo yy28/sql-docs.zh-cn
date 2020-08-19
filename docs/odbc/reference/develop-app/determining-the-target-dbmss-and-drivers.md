@@ -1,4 +1,5 @@
 ---
+description: 确定目标 DBMS 和驱动程序
 title: 确定目标 Dbms 和驱动程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 23bee0f6-e12a-4598-b34e-df11a8086829
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f8811e4d289a8fc89c2c3773aab973df523025f5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8dfbc11e96577e9027d1cc6e17701a82b89061be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305868"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429319"
 ---
 # <a name="determining-the-target-dbmss-and-drivers"></a>确定目标 DBMS 和驱动程序
 要考虑的下一个问题是，应用程序的目标 Dbms 是什么，哪些驱动程序可支持这些 Dbms？ 由于一般应用程序的互操作性很高，因此目标 Dbms 的问题最适用于自定义应用程序和垂直应用程序。 但是，目标驱动程序的问题适用于所有应用程序，因为驱动程序的速度、质量、功能支持和可用性多种多样。 此外，如果驱动程序要随应用程序一起重新分发，则需要考虑许可计划的成本和可用性。  

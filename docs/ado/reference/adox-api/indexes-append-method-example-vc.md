@@ -1,5 +1,6 @@
 ---
-title: 索引 Append 方法示例（VC + +） |Microsoft Docs
+description: 索引 Append 方法示例 (VC++)
+title: " (VC + +) 的索引 Append 方法示例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 33c559c4-4db7-4850-9309-2743a7ae5521
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 77624629aeb68381729f891f74f57a980f71a589
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3b70e539902fb2a3b43c732f7c8ead6b047818ee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763868"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439919"
 ---
 # <a name="indexes-append-method-example-vc"></a>索引 Append 方法示例 (VC++)
 下面的代码演示如何创建新的索引。 索引在表中的两列上。  

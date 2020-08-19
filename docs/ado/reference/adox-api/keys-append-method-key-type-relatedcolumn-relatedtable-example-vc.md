@@ -1,5 +1,6 @@
 ---
-title: 创建新的外键示例（VC + +） |Microsoft Docs
+description: 项 Append 追法、项 Type、RelatedColumn、RelatedTable 和 UpdateRule 属性示例 (VC++)
+title: " (VC + +) 创建新的外键示例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -19,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 28495b8f-18dc-482c-995d-a120f6ae2006
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 260c29c18f6d8c95cbca6e06c25ebf05fceeec64
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 078e3078f57dea91cd5f73b6cce504545771f59e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763857"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439819"
 ---
 # <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vc"></a>项 Append 追法、项 Type、RelatedColumn、RelatedTable 和 UpdateRule 属性示例 (VC++)
-下面的代码演示如何创建新的外键。 它假定存在两个表（客户和订单）。  
+下面的代码演示如何创建新的外键。 它假定 (客户和订单) 存在两个表。  
   
 ```  
 // BeginCreateKeyCpp.cpp  
