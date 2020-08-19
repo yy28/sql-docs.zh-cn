@@ -1,4 +1,5 @@
 ---
+description: STRING_ESCAPE (Transact-SQL)
 title: STRING_ESCAPE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/25/2016
@@ -18,38 +19,38 @@ ms.assetid: 2163bc7a-3816-4304-9c40-8954804f5465
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: b2d9e783ba7ea6c73059a7b37c5df2be5b702984
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 393b1a79d12c3280013f609d9a62924359ad57e8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110304"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417153"
 ---
 # <a name="string_escape-transact-sql"></a>STRING_ESCAPE (Transact-SQL)
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
-对文本中的特殊字符进行转义并返回有转义字符的文本。 STRING_ESCAPE 是 SQL Server 2016 中引入的一个确定性的函数  。 
+对文本中的特殊字符进行转义并返回有转义字符的文本。 STRING_ESCAPE 是 SQL Server 2016 中引入的一个确定性的函数****。 
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
-```sql
+```syntaxsql
 STRING_ESCAPE( text , type )  
 ```  
 
 ## <a name="arguments"></a>参数
 
  *text*  
- 表示应转义对象的 nvarchar  [表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
+ 表示应转义对象的 nvarchar ****[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
- type   
+ *type*  
  对将要应用的规则进行转义。 目前支持的值是 `'json'`。  
   
 ## <a name="return-types"></a>返回类型
 
- 带有已转义的特殊和控制字符的 nvarchar(max) 文本  。 当前，STRING_ESCAPE 仅能对下表中的 JSON 特殊字符进行转义  。  
+ 带有已转义的特殊和控制字符的 nvarchar(max) 文本****。 当前，STRING_ESCAPE 仅能对下表中的 JSON 特殊字符进行转义****。  
   
 |特殊字符|编码的序列|  
 |-----------------------|----------------------|  
@@ -57,9 +58,9 @@ STRING_ESCAPE( text , type )
 |反斜线号 (\\)| \\\\ |  
 |斜线号 (/)|\\/|  
 |退格键|\b|  
-|换页符|\f|  
-|新建行|\n|  
-|回车符|\r|  
+|换页|\f|  
+|换行|\n|  
+|回车|\r|  
 |水平制表符|\t|  
   
 |控制字符|编码的序列|  

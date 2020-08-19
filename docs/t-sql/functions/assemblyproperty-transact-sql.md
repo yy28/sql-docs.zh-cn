@@ -1,4 +1,5 @@
 ---
+description: ASSEMBLYPROPERTY (Transact-SQL)
 title: ASSEMBLYPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: cf03d1b1-724c-48bf-a8df-3fe2586b150a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 50fd500a3ce7248b60e423df662b5d9eeda2cef5
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 9e466b8d66760704ce7ee90028210dfa5dfabc22
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113137"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417473"
 ---
 # <a name="assemblyproperty-transact-sql"></a>ASSEMBLYPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,16 +42,16 @@ ASSEMBLYPROPERTY('assembly_name', 'property_name')
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
-assembly_name   
+assembly_name  
 程序集的名称。
   
-property_name   
-要检索其有关信息的属性的名称。 property_name 可以具有下列值之一  ：
+property_name  
+要检索其有关信息的属性的名称。 property_name 可以具有下列值之一**：
   
-|值|说明|  
+|值|描述|  
 |---|---|
 |**CultureInfo**|程序集的区域设置。|  
-|**PublicKey**|程序集的公钥或公钥令牌。|  
+|PublicKey|程序集的公钥或公钥令牌。|  
 |**MvID**|由编译器生成的完整的程序集版本标识号。|  
 |**VersionMajor**|由四部分组成的程序集版本标识号的主要组成部分（第一部分）。|  
 |**VersionMinor**|由四部分组成的程序集版本标识号的次要组成部分（第二部分）。|  
@@ -64,7 +65,7 @@ property_name
 **sql_variant**
   
 ## <a name="examples"></a>示例  
-此示例假定在 `HelloWorld` 数据库中注册了 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 程序集。 有关详细信息，请参阅 [Hello World 示例](https://msdn.microsoft.com/library/fed6c358-f5ee-4d4c-9ad6-089778383ba7)。
+此示例假定在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中注册了 `HelloWorld` 程序集。 有关详细信息，请参阅 [Hello World 示例](https://msdn.microsoft.com/library/fed6c358-f5ee-4d4c-9ad6-089778383ba7)。
   
 ```sql
 USE AdventureWorks2012;  

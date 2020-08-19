@@ -1,4 +1,5 @@
 ---
+description: 保留关键字 (Transact-SQL)
 title: 保留关键字 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: ed8b3e27-6796-40f0-aef3-0cac5e0e2418
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f963294781eea57c7957000d0daa1d149be3cd89
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 70b2e52af1ae87f4cacdb2189609c3ead2e3bc4e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396339"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417103"
 ---
 # <a name="reserved-keywords-transact-sql"></a>保留关键字 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -67,7 +68,7 @@ ms.locfileid: "87396339"
 :::row-end:::  
 :::row:::
     :::column:::
-        和
+        AND
     :::column-end:::
     :::column:::
         FILLFACTOR
@@ -122,7 +123,7 @@ ms.locfileid: "87396339"
 :::row-end:::  
 :::row:::
     :::column:::
-        备份
+        BACKUP
     :::column-end:::
     :::column:::
         FROM
@@ -348,7 +349,7 @@ ms.locfileid: "87396339"
         KEY
     :::column-end:::
     :::column:::
-        关机
+        SHUTDOWN
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -447,7 +448,7 @@ ms.locfileid: "87396339"
         NONCLUSTERED
     :::column-end:::
     :::column:::
-        返回页首
+        TOP
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -598,7 +599,7 @@ ms.locfileid: "87396339"
         DROP
     :::column-end:::
     :::column:::
-        或
+        OR
     :::column-end:::
     :::column:::
         VALUES
@@ -628,7 +629,7 @@ ms.locfileid: "87396339"
 :::row-end:::  
 :::row:::
     :::column:::
-        END
+        End
     :::column-end:::
     :::column:::
         OVER
@@ -683,7 +684,7 @@ ms.locfileid: "87396339"
 :::row-end:::  
 :::row:::
     :::column:::
-        在运行 CREATE 语句前执行
+        EXECUTE
     :::column-end:::
     :::column:::
         PRIMARY
@@ -715,11 +716,11 @@ ms.locfileid: "87396339"
 :::row-end:::
 
   
-下表列出了 Azure SQL 数据仓库  专用的保留关键字。
+下表列出了 Azure SQL 数据仓库**** 专用的保留关键字。
   
 :::row:::
     :::column:::
-        LABEL 
+        **LABEL**
     :::column-end:::
 :::row-end:::
 
@@ -770,10 +771,10 @@ ms.locfileid: "87396339"
 :::row-end:::  
 :::row:::
     :::column:::
-        **ADD**
+        **添加**
     :::column-end:::
     :::column:::
-        EXTERNAL 
+        EXTERNAL
     :::column-end:::
     :::column:::
         **PASCAL**
@@ -781,7 +782,7 @@ ms.locfileid: "87396339"
 :::row-end:::  
 :::row:::
     :::column:::
-        **ALL**
+        ALL
     :::column-end:::
     :::column:::
         **EXTRACT**
@@ -825,7 +826,7 @@ ms.locfileid: "87396339"
 :::row-end:::  
 :::row:::
     :::column:::
-        **ANY**
+        ANY
     :::column-end:::
     :::column:::
         **FLOAT**
@@ -982,7 +983,7 @@ ms.locfileid: "87396339"
         **CASCADE**
     :::column-end:::
     :::column:::
-        HOUR 
+        HOUR
     :::column-end:::
     :::column:::
         **SCHEMA**
@@ -1271,7 +1272,7 @@ ms.locfileid: "87396339"
         **LIKE**
     :::column-end:::
     :::column:::
-        TIMEZONE_HOUR 
+        **TIMEZONE_HOUR**
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -1282,7 +1283,7 @@ ms.locfileid: "87396339"
         **LOCAL**
     :::column-end:::
     :::column:::
-        TIMEZONE_MINUTE 
+        **TIMEZONE_MINUTE**
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -1293,7 +1294,7 @@ ms.locfileid: "87396339"
         **LOWER**
     :::column-end:::
     :::column:::
-        TO 
+        TO
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -1331,10 +1332,10 @@ ms.locfileid: "87396339"
 :::row-end:::  
 :::row:::
     :::column:::
-        **DATE**
+        DATE
     :::column-end:::
     :::column:::
-        MINUTE 
+        MINUTE
     :::column-end:::
     :::column:::
         **TRANSLATION**
@@ -1375,7 +1376,7 @@ ms.locfileid: "87396339"
 :::row-end:::  
 :::row:::
     :::column:::
-        **DECIMAL**
+        DECIMAL
     :::column-end:::
     :::column:::
         **NATIONAL**
@@ -1392,7 +1393,7 @@ ms.locfileid: "87396339"
         **NATURAL**
     :::column-end:::
     :::column:::
-        UNKNOWN 
+        **未知**
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -1944,7 +1945,7 @@ ms.locfileid: "87396339"
         MATCH
     :::column-end:::
     :::column:::
-        STATE
+        状态
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -2175,7 +2176,7 @@ ms.locfileid: "87396339"
         OCCURRENCES_REGEX
     :::column-end:::
     :::column:::
-        TRUE
+        true
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -2455,7 +2456,7 @@ ms.locfileid: "87396339"
 :::row-end:::  
 :::row:::
     :::column:::
-        FALSE
+        false
     :::column-end:::
     :::column:::
         READS
@@ -2469,7 +2470,7 @@ ms.locfileid: "87396339"
         FILTER
     :::column-end:::
     :::column:::
-        real
+        REAL
     :::column-end:::
     :::column:::
         XMLEXISTS

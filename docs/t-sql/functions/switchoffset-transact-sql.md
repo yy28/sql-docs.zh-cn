@@ -1,4 +1,5 @@
 ---
+description: SWITCHOFFSET (Transact-SQL)
 title: SWITCHOFFSET (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/02/2015
@@ -24,17 +25,17 @@ ms.assetid: 32a48e36-0aa4-4260-9fe9-cae9197d16c5
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2d6b5595e0a6489919768ab5a4ba9e21d04f7837
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: f8cffc510ca7d089be5326abf3d3823807b416e6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112823"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417193"
 ---
 # <a name="switchoffset-transact-sql"></a>SWITCHOFFSET (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  返回从存储的时区偏移量变为指定的新时区偏移量时得到的 datetimeoffset 值  。  
+  返回从存储的时区偏移量变为指定的新时区偏移量时得到的 datetimeoffset 值****。  
   
  有关所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 日期和时间数据类型及函数的概述，请参阅[日期和时间数据类型及函数 (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。  
   
@@ -49,19 +50,19 @@ SWITCHOFFSET ( DATETIMEOFFSET, time_zone )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- DATETIMEOFFSET   
- 是一个可以解析为 datetimeoffset(n) 值的表达式  。  
+ DATETIMEOFFSET  
+ 是一个可以解析为 datetimeoffset(n) 值的表达式****。  
   
- time_zone   
+ time_zone  
  是一个格式为 [+|-]TZH:TZM 的字符串，或是一个表示时区偏移量的带符号的整数（分钟数），假定它能够感知夏时制并作出相应的调整。  
   
 ## <a name="return-type"></a>返回类型  
- 具有 DATETIMEOFFSET 参数小数精度的 datetimeoffset   。  
+ 具有 DATETIMEOFFSET 参数小数精度的 datetimeoffset******。  
   
-## <a name="remarks"></a>备注  
- 使用 SWITCHOFFSET 可选择与最初存储的时区偏移量不同的时区偏移量的 datetimeoffset 值  。 SWITCHOFFSET 不会更新存储的 time_zone 值  。  
+## <a name="remarks"></a>注解  
+ 使用 SWITCHOFFSET 可选择与最初存储的时区偏移量不同的时区偏移量的 datetimeoffset 值****。 SWITCHOFFSET 不会更新存储的 time_zone 值**。  
   
- SWITCHOFFSET 可用于更新 datetimeoffset 列  。  
+ SWITCHOFFSET 可用于更新 datetimeoffset 列****。  
   
  将 SWITCHOFFSET 用于函数 GETDATE() 可能导致查询运行缓慢。 这是因为查询优化器无法获取 datetime 值的准确基数估计值。 要解决此问题，请使用 OPTION (RECOMPILE) 查询提示以强制查询优化器在下次执行同一查询时重新编译查询计划。 优化器将得到准确的基数估计值并生成更高效的查询计划。 有关 RECOMPILE 查询提示的详细信息，请参阅[查询提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)。  
   

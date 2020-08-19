@@ -1,4 +1,5 @@
 ---
+description: APPROX_COUNT_DISTINCT (Transact-SQL)
 title: APPROX_COUNT_DISTINCT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/12/2019
@@ -14,12 +15,12 @@ dev_langs:
 author: joesackmsft
 ms.author: josack
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 08beac97cd70045f073be53cfeb93e9d1e4ad67f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: e77c9cb851921db306e52594b49d472902f36563
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113152"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417523"
 ---
 # <a name="approx_count_distinct-transact-sql"></a>APPROX_COUNT_DISTINCT (Transact-SQL)
 
@@ -50,7 +51,7 @@ APPROX_COUNT_DISTINCT ( expression )
 `APPROX_COUNT_DISTINCT( expression )` 计算组中每行的表达式，并返回组中唯一非空值的近似数。 此函数旨在跨响应速度比绝对精度更为关键的大型数据集进行聚合。  
 
 `APPROX_COUNT_DISTINCT` 专用于大数据方案，更适合以下情形：
-- 访问包含数百万行或更多行的数据集，且 
+- 访问包含数百万行或更多行的数据集，且**
 - 聚合包含多个非重复值的一个或多个列
 
 此函数实现可保证最多 2% 的错误率，概率在 97% 内。 

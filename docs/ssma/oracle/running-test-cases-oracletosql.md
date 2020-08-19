@@ -1,4 +1,5 @@
 ---
+description: 运行测试用例 (OracleToSQL)
 title: " (OracleToSQL) 运行测试用例 |Microsoft Docs"
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 429ad47c63393696492d8eb22919749ed03cd71b
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 9d44b04aba4d1ea1fa437bbd3b957178b361a4db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933048"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418433"
 ---
 # <a name="running-test-cases-oracletosql"></a>运行测试用例 (OracleToSQL)
 当 SSMA 测试人员运行测试用例时，它将执行选择用于测试的对象，并创建有关验证结果的报表。 如果两个平台上的结果相同，则测试已成功。 Oracle 和之间对象的对应关系 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 根据当前 SSMA 项目的架构映射设置来确定。  
@@ -27,9 +28,9 @@ ms.locfileid: "87933048"
   
 1.  单击“运行”**** 按钮。  
   
-2.  在 "**连接到 Oracle** " 对话框中，输入连接信息，然后单击 "**连接**"。  
+2.  在 " **连接到 Oracle** " 对话框中，输入连接信息，然后单击 " **连接**"。  
   
-测试完成后，将创建测试用例报表。 单击 "**报表**" 按钮以查看[测试用例报表](viewing-test-case-reports-oracletosql.md)。 测试 (测试用例报告) 的结果会自动存储在[测试结果存储库](using-test-repositories-oracletosql.md)中供以后使用。  
+测试完成后，将创建测试用例报表。 单击 " **报表** " 按钮以查看 [测试用例报表](viewing-test-case-reports-oracletosql.md)。 测试 (测试用例报告) 的结果会自动存储在 [测试结果存储库](using-test-repositories-oracletosql.md) 中供以后使用。  
   
 ## <a name="test-case-execution-steps"></a>测试用例执行步骤  
   
@@ -72,13 +73,13 @@ SSMA 测试人员检查测试开始之前是否满足所有先决条件。 如�
 在此步骤中，SSMA 测试人员调用为测试选择的每个对象，比较结果，并显示报表。  
   
 ### <a name="finalization"></a>定稿  
-在终止 SSMA 测试过程中，将清理在**初始化**步骤中创建的辅助对象。  
+在终止 SSMA 测试过程中，将清理在 **初始化** 步骤中创建的辅助对象。  
   
 ## <a name="next-step"></a>下一步  
 [查看测试用例报表 &#40;OracleToSQL&#41;](../../ssma/oracle/viewing-test-case-reports-oracletosql.md)  
   
 ## <a name="see-also"></a>另请参阅  
-[选择并配置要测试 &#40;OracleToSQL&#41;的对象](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
+[选择并配置要测试 &#40;OracleToSQL&#41;的对象 ](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
 [选择并配置受影响的对象 &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
 [测试迁移的数据库对象 &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

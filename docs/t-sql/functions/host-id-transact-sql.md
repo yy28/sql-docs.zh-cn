@@ -1,4 +1,5 @@
 ---
+description: HOST_ID (Transact-SQL)
 title: HOST_ID (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 36ba56d4-20d7-4cd1-aa2a-e40a6c0a4e39
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f3d7d2a5093f92d614a40d4d91e76849ba8ed0bb
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 80d5129d2b3165c69b4738414ad5354a324cded1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113499"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417323"
 ---
 # <a name="host_id-transact-sql"></a>HOST_ID (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +47,7 @@ HOST_ID ()
 ## <a name="return-types"></a>返回类型
  **char(10)**  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  当该参数对系统函数可选时，则采用当前数据库、主机、服务器用户或数据库用户。 内置函数后面必须跟括号。  
   
  系统函数可以在选择列表、WHERE 子句和任何允许使用表达式的地方使用。  

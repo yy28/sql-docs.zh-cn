@@ -1,4 +1,5 @@
 ---
+description: ASYMKEYPROPERTY (Transact-SQL)
 title: ASYMKEYPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a30581f2-e1b1-4996-93e6-527ff96b7c42
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2cef30d8155c0a44820b9ab639c2a28964b02f76
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: e2ebd38bae5c1a2ad001f03e9ff2a192bf95a0de
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112172"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417483"
 ---
 # <a name="asymkeyproperty-transact-sql"></a>ASYMKEYPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,14 +41,14 @@ ASYMKEYPROPERTY (Key_ID , 'algorithm_desc' | 'string_sid' | 'sid')
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
-Key_ID   
-数据库中非对称密钥的 Key_ID。 如果仅知道密钥名称，请使用 ASYMKEY_ID 查找 Key_ID。 Key_ID 为 int 数据类型   。
+Key_ID  
+数据库中非对称密钥的 Key_ID。 如果仅知道密钥名称，请使用 ASYMKEY_ID 查找 Key_ID。 Key_ID 为 int 数据类型******。
   
 **'** algorithm_desc **'**  
 指定输出应返回非对称密钥的算法说明。 仅适用于从 EKM 模块创建的非对称密钥。
   
-'string_sid'    
-指定输出应以 nvarchar() 格式返回非对称密钥的 SID  。
+'string_sid'   
+指定输出应以 nvarchar() 格式返回非对称密钥的 SID****。
   
 **'** sid **'**  
 指定输出应以二进制格式返回非对称密钥的 SID。

@@ -1,4 +1,5 @@
 ---
+description: 使用测试存储库 (SybaseToSQL)
 title: 使用测试存储库 (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: c359c25c-db2a-4a20-afa9-62d87a62df72
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: ba0879ca35e40d7ea2d1466db97cabd3cb6abd18
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: b05dac0ec74bb6c0cd9c9e99d8bb631b0a242eb3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934548"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418243"
 ---
 # <a name="using-test-repositories-sybasetosql"></a>使用测试存储库 (SybaseToSQL)
 SSMA 测试储存库存储 SSMA 测试程序测试用例和测试结果以供以后使用。 存储库数据保存在**ssmatesterdb_syb**数据库的架构**ssma_sybase_utilities**的 SQL Server 表**TestCaseRepository**和**RunTestCaseResultRepository**中。  
   
 以下按钮在 "测试用例的存储库" 对话框中可用：  
   
--   单击 "**刷新**" 按钮刷新测试用例或测试结果列表。  
+-   单击 " **刷新** " 按钮刷新测试用例或测试结果列表。  
   
--   单击 "**关闭**" 按钮以关闭 "测试用例的存储库" 对话框。  
+-   单击 " **关闭** " 按钮以关闭 "测试用例的存储库" 对话框。  
   
 ## <a name="test-cases-repository"></a>测试用例存储库  
 可以通过单击 "测试**程序" 菜单上的 "** **测试用例 ...** " 来查看测试用例存储库。 然后，SSMA 会在 "**测试用**例" 页上显示包含已保存测试用例的列表的 "**测试用例**" 对话框窗口。  
@@ -42,22 +43,22 @@ SSMA 测试储存库存储 SSMA 测试程序测试用例和测试结果以供以
   
 "测试用例" 页上提供了以下按钮：  
   
--   单击 "**添加**" 按钮运行测试用例向导并创建一个新测试。  
+-   单击 " **添加** " 按钮运行测试用例向导并创建一个新测试。  
   
--   单击 "**删除**" 按钮可从存储库中删除选定的测试。删除测试用例时，还将删除所有相关的测试结果。  
+-   单击 " **删除** " 按钮可从存储库中删除选定的测试。删除测试用例时，还将删除所有相关的测试结果。  
   
--   单击 "**编辑**" 按钮以运行测试用例向导并更改所选测试。  
+-   单击 " **编辑** " 按钮以运行测试用例向导并更改所选测试。  
   
--   单击 "**运行**" 按钮以打开 "[正在运行的测试用例" &#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md) "对话框并执行所选测试。  
+-   单击 " **运行** " 按钮以打开 " [正在运行的测试用例" &#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md) "对话框并执行所选测试。  
   
 ## <a name="test-results-repository"></a>测试结果存储库  
 您可以在 "**测试用例**" 窗口的 "**测试结果**" 页上查看测试结果存储库。 通过单击 "**测试**器" 菜单上的 "**测试结果 ...** " 打开它。  
   
-可以在**测试结果**页上使用两个筛选器：  
+可以在 **测试结果** 页上使用两个筛选器：  
   
--   测试用例名称筛选器：允许选择测试结果（按测试用例名称）。 此筛选器的**所有测试用例**值都允许显示所有测试用例的测试结果。  
+-   测试用例名称筛选器：允许选择测试结果（按测试用例名称）。 此筛选器的 **所有测试用例** 值都允许显示所有测试用例的测试结果。  
   
--   测试用例执行日期筛选器：按保存日期筛选测试结果。此筛选器的 "**所有期间**" 值允许显示任何保存日期的测试结果。  
+-   测试用例执行日期筛选器：按保存日期筛选测试结果。此筛选器的 " **所有期间** " 值允许显示任何保存日期的测试结果。  
   
 以下有关测试结果的信息将显示在网格中。  
   
@@ -69,11 +70,11 @@ SSMA 测试储存库存储 SSMA 测试程序测试用例和测试结果以供以
   
 "测试结果" 页上提供了以下按钮：  
   
--   单击 "**查看**" 按钮以打开 "[查看测试用例" 报表 &#40;](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md)当前测试用例结果的 SybaseToSQL&#41;。  
+-   单击 " **查看** " 按钮以打开 " [查看测试用例" 报表 &#40;](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md) 当前测试用例结果的 SybaseToSQL&#41;。  
   
--   单击 "**删除**" 按钮以删除选定的测试结果  
+-   单击 " **删除** " 按钮以删除选定的测试结果  
   
 ## <a name="see-also"></a>另请参阅  
-[&#40;SybaseToSQL&#41;运行测试用例](../../ssma/sybase/running-test-cases-sybasetosql.md)  
+[&#40;SybaseToSQL&#41;运行测试用例 ](../../ssma/sybase/running-test-cases-sybasetosql.md)  
 [测试迁移的数据库对象 &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

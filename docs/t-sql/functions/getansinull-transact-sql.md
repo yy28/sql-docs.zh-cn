@@ -1,4 +1,5 @@
 ---
+description: GETANSINULL (Transact-SQL)
 title: GETANSINULL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 189399e4-428d-4902-b3a8-94f07fdefc6a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8b464037ffb914b78dc95edbf33676820e849ca1
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: cbf0f888ba02a2e523fccadf473c675186086159
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111527"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417353"
 ---
 # <a name="getansinull-transact-sql"></a>GETANSINULL (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,8 +45,8 @@ GETANSINULL ( [ 'database' ] )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- 'database'   
- 为其返回为空性信息的数据库的名称。 *database 可以是 char  ，也可以是 nchar  。 如果是 char，则数据库隐式转换为 nchar    。  
+ 'database'  
+ 为其返回为空性信息的数据库的名称。 *database 可以是 char****，也可以是 nchar****。 如果是 char，则数据库隐式转换为 nchar**********。  
   
 ## <a name="return-types"></a>返回类型  
  **int**  
@@ -55,7 +56,7 @@ GETANSINULL ( [ 'database' ] )
   
  若要启用 ANSI NULL 默认行为，则必须设置下列条件之一:  
   
--   ALTER DATABASE database_name SET ANSI_NULL_DEFAULT ON   
+-   ALTER DATABASE database_name SET ANSI_NULL_DEFAULT ON**  
   
 -   SET ANSI_NULL_DFLT_ON ON  
   

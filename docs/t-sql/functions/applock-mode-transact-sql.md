@@ -1,4 +1,5 @@
 ---
+description: APPLOCK_MODE (Transact-SQL)
 title: APPLOCK_MODE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: e43d4917-77f1-45cc-b231-68ba7fee3385
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d3d171d77cf3462eb68893f4ac5f6230d73b8b11
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 9f7433be40f2a0a08ae075edfc3eaa9bd3252dca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113181"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417503"
 ---
 # <a name="applock_mode-transact-sql"></a>APPLOCK_MODE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,14 +44,14 @@ APPLOCK_MODE( 'database_principal' , 'resource_name' , 'lock_owner' )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
-'database_principal'   
-可将对数据库中对象的权限授予它们的用户、角色或应用程序角色。 若要成功调用函数，该函数调用方必须是 database_principal、dbo 或 db_owner 固定数据库角色的成员  。
+'database_principal'  
+可将对数据库中对象的权限授予它们的用户、角色或应用程序角色。 若要成功调用函数，该函数调用方必须是 database_principal、dbo 或 db_owner 固定数据库角色的成员**。
   
-'resource_name'   
-由客户端应用程序指定的锁资源名称。 应用程序必须确保唯一的资源名称。 指定的名称经过内部哈希运算后成为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 锁管理器可内部存储的值。 resource_name 为 nvarchar(255)，无默认值   。 resource_name 使用二进制比较并区分大小写，无论当前数据库的排序规则设置为何  。
+'resource_name'  
+由客户端应用程序指定的锁资源名称。 应用程序必须确保唯一的资源名称。 指定的名称经过内部哈希运算后成为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 锁管理器可内部存储的值。 resource_name 为 nvarchar(255)，无默认值。 resource_name 使用二进制比较并区分大小写，无论当前数据库的排序规则设置为何**。
   
-'lock_owner'   
-锁的所有者，它是请求锁时所指定的 lock_owner 值  。 lock_owner 为 nvarchar(32)，值可以是 Transaction（默认值）或 Session     。
+'lock_owner'  
+锁的所有者，它是请求锁时所指定的 lock_owner 值**。 lock_owner 为 nvarchar(32)，值可以是 Transaction（默认值）或 Session**************。
   
 ## <a name="return-types"></a>返回类型
 **nvarchar(32)**
@@ -60,14 +61,14 @@ APPLOCK_MODE( 'database_principal' , 'resource_name' , 'lock_owner' )
   
 ||||  
 |-|-|-|  
-|**NoLock**|**Update**|**\*SharedIntentExclusive**|  
+|**NoLock**|**更新**|**\*SharedIntentExclusive**|  
 |**IntentShared**|**IntentExclusive**|**\*UpdateIntentExclusive**|  
-|**Shared**|**排他**||  
+|**共享**|**独占**||  
   
 *该锁模式是其他锁模式的组合，并且 sp_getapplock 无法显式获取它。
   
 ## <a name="function-properties"></a>函数属性
-**Nondeterministic**
+**不具有确定性**
   
 **Nonindexable**
   

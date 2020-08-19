@@ -1,4 +1,5 @@
 ---
+description: ^（位异或）(Transact-SQL)
 title: ^（位异或）(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/10/2017
@@ -25,12 +26,12 @@ ms.assetid: f38f0ad4-46d0-40ea-9851-0f928fda5293
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e9014cd3bb989f853ab7ffddb4f030a3e8c202f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fe64aa29987ee280a79afd66faed94cbbc89540e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86902190"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417173"
 ---
 # <a name="-bitwise-exclusive-or-transact-sql"></a>^（位异或）(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -64,7 +65,7 @@ expression ^ expression
 ## <a name="remarks"></a>备注  
  通过从两个表达式中取对应的位，^ 位运算符对两个表达式执行按位逻辑异或运算。 如果在输入表达式的正在被解析的对应位中，任意一位（但不是两个位）的值为 1，则结果中该位的值被设置为 1。 如果相对应的两个位的值都为 0 或者都为 1，那么结果中该位的值被清除为 0。  
   
- 如果左侧和右侧的表达式具有不同的整数数据类型（例如，左侧的表达式的数据类型为 smallint，右侧的表达式的数据类型为 int），则会将较小数据类型的参数转换为较大数据类型。 在本例中，smallint 表达式转换为 int。  
+ 如果左侧和右侧的表达式具有不同的整数数据类型（例如，左侧的表达式的数据类型为 smallint，右侧的表达式的数据类型为 int），则会将较小数据类型的参数转换为较大数据类型。 此示例中，smallint 表达式转换成了 int。  
   
 ## <a name="examples"></a>示例  
  以下示例创建一个表，其中使用 int 数据类型存储原始值，并将两个值插入一行。  

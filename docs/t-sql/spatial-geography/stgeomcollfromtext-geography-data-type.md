@@ -1,4 +1,5 @@
 ---
+description: STGeomCollFromText（geography 数据类型）
 title: STGeomCollFromText（geography 数据类型）| Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2017
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: a5b3c344-1045-43a4-82fa-47f6206a288e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: d72d49a08deb05bc5e5750e98493047257c6f2ed
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 6caf71740ca5c62e50af582df1a3d6f3866f6ec8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86556100"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88416953"
 ---
 # <a name="stgeomcollfromtext-geography-data-type"></a>STGeomCollFromText（geography 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-从开放地理空间信息联盟 (OGC) 熟知文本 (WKT) 表示形式返回 geography 实例，增加了该实例传递的任何 Z（标高）和 M（度量）值  。
+从开放地理空间信息联盟 (OGC) 熟知文本 (WKT) 表示形式返回 geography 实例，增加了该实例传递的任何 Z（标高）和 M（度量）值。
   
 ## <a name="syntax"></a>语法  
   
@@ -39,21 +40,21 @@ STGeomCollFromText ( 'geometrycollection_tagged_text' , SRID )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- geometrycollection_tagged_text   
- 希望返回的 geography 实例的 WKT 表示形式  。 geometrycollection_tagged_text 是一个 nvarchar(max) 表达式   。  
+ geometrycollection_tagged_text**  
+ 希望返回的 geography 实例的 WKT 表示形式****。 geometrycollection_tagged_text 是一个 nvarchar(max) 表达式******。  
   
  SRID   
- 一个 int 表达式，表示希望返回的 geography 实例的空间引用 ID (SRID)   。  
+ 一个 int 表达式，表示希望返回的 geography 实例的空间引用 ID (SRID)********。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
   
- CLR 返回类型：SqlGeography   
+ CLR 返回类型：SqlGeography  
   
 ## <a name="remarks"></a>备注  
- STGeomCollFromText() 返回的 geography 实例的 OGC 类型设置为相应的 WKT 输入  。  
+ STGeomCollFromText() 返回的 geography 实例的 OGC 类型设置为相应的 WKT 输入****。  
   
- 如果输入无效，此方法将引发 ArgumentException  。  
+ 如果输入无效，此方法将引发 ArgumentException****。  
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `STGeomCollFromText()` 创建 `geography` 实例。  

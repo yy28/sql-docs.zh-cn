@@ -1,4 +1,5 @@
 ---
+description: SELECT 示例 (Transact-SQL)
 title: SELECT 示例 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -30,12 +31,12 @@ helpviewer_keywords:
 ms.assetid: 9b9caa3d-e7d0-42e1-b60b-a5572142186c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c800fb0a56351854b6e922a7ab79d86ee9cb5aa2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 035210bd3dcba6b8344402d28a3950caa14dbf1b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85705950"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417053"
 ---
 # <a name="select-examples-transact-sql"></a>SELECT 示例 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -81,7 +82,7 @@ ms.locfileid: "85705950"
 ## <a name="e-using-correlated-subqueries"></a>E. 使用相关子查询
 相关子查询依赖于外部查询来查询其值。 该查询能为外部查询可能选择的每一行各重复执行一次。
 
-第一个示例展示了语义等效的查询，以说明使用 `EXISTS` 关键字和 `IN` 关键字的区别。 两个都是有效子查询示例，用于检索产品型号为长袖标志运动衫且 `ProductModelID` 编号在 `Product` 和 `ProductModel` 两个表中相匹配的每种产品名称的实例。  
+第一个示例展示了语义等效的查询，以说明使用 `EXISTS` 关键字和 `IN` 关键字的区别。 两个都是有效子查询示例，用于检索产品型号为长袖标志运动衫且 `ProductModelID` 编号在 `Product` 和 `ProductModel` 两个表中相匹配的每种产品名称的实例。   
   
  [!code-sql[Select#SelectExamples9](../../t-sql/queries/codesnippet/tsql/select-examples-transact_9.sql)]  
   
@@ -182,7 +183,7 @@ GO
   
  [!code-sql[Select#SelectExamples48](../../t-sql/queries/codesnippet/tsql/select-examples-transact_26.sql)]  
   
-## <a name="q-using-select-into-with-union"></a>Q. 将 SELECT INTO 与 UNION 一起使用  
+## <a name="q-using-select-into-with-union"></a>问： 将 SELECT INTO 与 UNION 一起使用  
  在下面的示例中，第二个 `INTO` 语句中的 `SELECT` 子句指定名为 `ProductResults` 的表保存 `ProductModel` 和 `Gloves` 表中的指定列的并集（最终结果集）。 注意，`Gloves` 表是由第一个 `SELECT` 语句创建的。  
   
  [!code-sql[Select#SelectExamples49](../../t-sql/queries/codesnippet/tsql/select-examples-transact_27.sql)]  

@@ -1,4 +1,5 @@
 ---
+description: OPENQUERY (Transact-SQL)
 title: OPENQUERY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: b805e976-f025-4be1-bcb0-3a57b0c57717
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 9f4a7ce873c59268255a3ecd073e49d53877f12c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: fcabdb207b1e15994323731c30c1a3516222c899
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112870"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417213"
 ---
 # <a name="openquery-transact-sql"></a>OPENQUERY (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,13 +46,13 @@ OPENQUERY ( linked_server ,'query' )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- linked_server   
+ linked_server**  
  表示链接服务器名称的标识符。  
   
- ' query '     
+ ' query '  
  在链接服务器中执行的查询字符串。 该字符串的最大长度为 8 KB。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  OPENQUERY 不接受其参数的变量。  
   
  OPENQUERY 不能用于对链接服务器执行扩展存储过程。 但是，通过使用四部分名称，可以在链接服务器上执行扩展存储过程。 例如：  

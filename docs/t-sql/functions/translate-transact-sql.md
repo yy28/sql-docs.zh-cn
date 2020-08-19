@@ -1,4 +1,5 @@
 ---
+description: TRANSLATE (Transact-SQL)
 title: TRANSLATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/16/2020
@@ -16,12 +17,12 @@ ms.assetid: 0426fa90-ef6d-4d19-8207-02ee59f74aec
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e1fbd5285ff4b794ea90ad3f8513e24ac166c0be
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 49a16c2b5f18eeda3a6abd1396650131543ead4f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112594"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417133"
 ---
 # <a name="translate-transact-sql"></a>TRANSLATE (Transact-SQL)
 
@@ -39,19 +40,19 @@ TRANSLATE ( inputString, characters, translations)
 
 ## <a name="arguments"></a>参数
 
- inputString  是要搜索的字符串[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 inputString 可以是任何字符数据类型（nvarchar、varchar、nchar、char）  。
+ inputString** 是要搜索的字符串[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 inputString 可以是任何字符数据类型（nvarchar、varchar、nchar、char）**。
 
-  characters 是一个包含应替换字符的字符串[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 字符可以是任何字符数据类型  。
+ ** characters 是一个包含应替换字符的字符串[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 字符可以是任何字符数据类型**。
 
- translations 是一个包含替换字符的字符串[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 转换必须与字符的数据类型和长度相同   。
+** translations 是一个包含替换字符的字符串[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 转换必须与字符的数据类型和长度相同****。
 
 ## <a name="return-types"></a>返回类型
 
 返回与 `inputString`（第二个参数中的字符被替换为第三个参数中的匹配字符）具有相同数据类型的字符表达式。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-如果字符和转换表达式长度不同，则 `TRANSLATE` 将返回错误   。 如果任何参数为 NULL，`TRANSLATE` 将返回 NULL。  
+如果字符和转换表达式长度不同，则 `TRANSLATE` 将返回错误****。 如果任何参数为 NULL，`TRANSLATE` 将返回 NULL。  
 
 `TRANSLATE` 函数行为类似于使用多个 [REPLACE](../../t-sql/functions/replace-transact-sql.md) 函数。 但是，`TRANSLATE` 不会在 `inputString` 中多次替换字符。 `characters` 参数中的单个值可以替换 `inputString` 中的多个字符。 
 
@@ -115,7 +116,7 @@ SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
-|Point  |坐标 |  
+|点  |坐标 |  
 |---------|--------- |
 |(137.4  72.3) |[137.4,72.3] |
 
@@ -126,7 +127,7 @@ SELECT TRANSLATE('abcdef','abc','bcd') AS Translated,
        REPLACE(REPLACE(REPLACE('abcdef','a','b'),'b','c'),'c','d') AS Replaced;
 ```
 
-结果有：
+其结果是：
 
 | 已转换 | 已替换 |  
 | ---------|--------- |

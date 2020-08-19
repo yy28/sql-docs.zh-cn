@@ -1,4 +1,5 @@
 ---
+description: RANK (Transact-SQL)
 title: RANK (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/25/2016
@@ -21,12 +22,12 @@ ms.assetid: 2d96f6d2-5db7-4b3c-a63e-213c58e4af55
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 02992a05dbfc58cb6fd186960c294d353c403c57
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 6b8ae33ca5572aa27ae17659dff9dbe5acd9e862
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110862"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417303"
 ---
 # <a name="rank-transact-sql"></a>RANK (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,7 +51,7 @@ RANK ( ) OVER ( [ partition_by_clause ] order_by_clause )
 
 ## <a name="arguments"></a>参数
  OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_ **)**  
- partition_by_clause 将 FROM 子句生成的结果集划分为要应用函数的分区。 如果未指定，则此函数将查询结果集的所有行视为单个组。 _order\_by\_clause_ 在应用函数之前确定数据的顺序。 需要 order_by_clause。 不能为 RANK 函数指定 OVER 子句的 \<rows or range clause/>。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。  
+ partition_by_clause 将 FROM 子句生成的结果集划分为要应用函数的分区  。 如果未指定，则此函数将查询结果集的所有行视为单个组。 _order\_by\_clause_ 在应用函数之前确定数据的顺序。 需要 order_by_clause。 不能为 RANK 函数指定 OVER 子句的 \<rows or range clause/>。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
 ## <a name="return-types"></a>返回类型  
  **bigint**  

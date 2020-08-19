@@ -1,4 +1,5 @@
 ---
+description: OBJECT_ID (Transact-SQL)
 title: OBJECT_ID (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -26,12 +27,12 @@ ms.assetid: f89286db-440f-4218-a828-30881ce3077a
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f2ae4289776787d2e91b3c9c911629b38ced975d
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 34139155f6d5e7f58657a5f8e8adf6ac2d4ecbf3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112675"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417243"
 ---
 # <a name="object_id-transact-sql"></a>OBJECT_ID (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,10 +55,10 @@ OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]
 
 ## <a name="arguments"></a>参数
  **'** *object_name* **'**  
- 要使用的对象。 object_name 为 varchar 或 nvarchar    。 如果 object_name 为 varchar，则它会隐式转换为 nvarchar    。 可以选择是否指定数据库和架构名称。  
+ 要使用的对象。 object_name 为 varchar 或 nvarchar**********。 如果 object_name 为 varchar，则它会隐式转换为 nvarchar**********。 可以选择是否指定数据库和架构名称。  
   
  **'** *object_type* **'**  
- 架构范围的对象类型。 object_type 为 varchar 或 nvarchar    。 如果 object_type 为 varchar，则它会隐式转换为 nvarchar    。 有关对象类型的列表，请参阅 [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 中的 type 列  。  
+ 架构范围的对象类型。 object_type 为 varchar 或 nvarchar**********。 如果 object_type 为 varchar，则它会隐式转换为 nvarchar**********。 有关对象类型的列表，请参阅 [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 中的 type 列****。  
   
 ## <a name="return-types"></a>返回类型  
  **int**  
@@ -69,10 +70,10 @@ OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]
   
  用户只能查看符合如下条件的安全对象的元数据：该安全对象为该用户所有，或已授予该用户对该安全对象的权限。 也就是说，如果用户对该对象没有任何权限，则那些会生成元数据的内置函数（如 OBJECT_ID）可能返回 NULL。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  当该参数对系统函数可选时，则采用当前数据库、主机、服务器用户或数据库用户。 内置函数后面必须跟括号。  
   
- 当指定临时表名时，除非当前数据库为 tempdb，否则必须在该临时表名之前加上数据库名称  。 例如：`SELECT OBJECT_ID('tempdb..#mytemptable')`。  
+ 当指定临时表名时，除非当前数据库为 tempdb，否则必须在该临时表名之前加上数据库名称****。 例如：`SELECT OBJECT_ID('tempdb..#mytemptable')`。  
   
  系统函数可以在选择列表、WHERE 子句和任何允许使用表达式的地方使用。 有关详细信息，请参阅[表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md) 和 [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)。  
   
@@ -103,7 +104,7 @@ GO
  以下示例使用 [sys.dm_db_index_operational_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md) 函数返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中 `Person.Address` 表的所有索引和分区信息。  
   
 > [!IMPORTANT]  
->  在使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数 DB_ID 和 OBJECT_ID 返回参数值时，请始终确保返回有效的 ID。 如果找不到数据库或对象的名称，例如相应名称不存在或拼写不正确，则两个函数都会返回 NULL。 sys.dm_db_index_operational_stats 函数将 NULL 解释为指定所有数据库或所有对象的通配符值  。 由于这可能是无心之举，所以此部分中的示例说明了确定数据库 ID 和对象 ID 的安全方法。  
+>  在使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数 DB_ID 和 OBJECT_ID 返回参数值时，请始终确保返回有效的 ID。 如果找不到数据库或对象的名称，例如相应名称不存在或拼写不正确，则两个函数都会返回 NULL。 **sys.dm_db_index_operational_stats** 函数将 NULL 解释为指定所有数据库或所有对象的通配符值。 由于这可能是无心之举，所以此部分中的示例说明了确定数据库 ID 和对象 ID 的安全方法。  
   
 ```  
 DECLARE @db_id int;  
@@ -127,7 +128,7 @@ GO
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-returning-the-object-id-for-a-specified-object"></a>D:返回指定对象的对象 ID  
+### <a name="d-returning-the-object-id-for-a-specified-object"></a>D：返回指定对象的对象 ID  
  以下示例返回 [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] 数据库中 `FactFinance` 表的对象 ID。  
   
 ```  

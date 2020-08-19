@@ -1,4 +1,5 @@
 ---
+description: KEY_GUID (Transact-SQL)
 title: KEY_GUID (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9246c7b2-7098-42c4-a222-cbf30267c46a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1fbddf97fc08ffe0b200b1affa7258cc2746e0ca
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 306930c6d66db06f36554dd1ab49bf70d586017a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111945"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417283"
 ---
 # <a name="key_guid-transact-sql"></a>KEY_GUID (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -49,7 +50,7 @@ Key_GUID( 'Key_Name' )
 ## <a name="return-types"></a>返回类型  
  **uniqueidentifier**  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  如果创建密钥时指定了标识值，则其 GUID 为该标识值的 MD5 哈希。 如果未指定标识值，则服务器生成 GUID。  
   
  如果密钥为临时密钥，则密钥名称必须以数字符号 (#) 开头。  

@@ -1,4 +1,5 @@
 ---
+description: 'SSMA 中的新 GUI 功能 (SybaseToSQL) '
 title: SSMA For Sybase (SybaseToSQL) 中的新 GUI 功能 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d3c60e8c-f0a7-4590-8ece-c68ceaeaea4a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 70074acc0f3d3d1a586303cc6f9fd39afb2a7ef0
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 3573e93126679b3d675ece84f216875c54dd5c1f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934619"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418293"
 ---
 # <a name="new-gui-features-in-ssma-for-sybase-sybasetosql"></a>SSMA 中的新 GUI 功能 (SybaseToSQL) 
 本章介绍 SSMA 用户界面的新增功能。  

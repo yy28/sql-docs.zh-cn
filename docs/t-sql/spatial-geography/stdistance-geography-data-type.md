@@ -1,4 +1,5 @@
 ---
+description: STDistance（geography 数据类型）
 title: STDistance（geography 数据类型）| Microsoft Docs
 ms.custom: ''
 ms.date: 11/19/2019
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 063d8722-e019-4d3d-8fcf-dbf5325823e7
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 795fa917f598ed1dd477916f42808d4abb0c8a69
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: a20279a70d2e68e1cb4b34eb36ffe7de633518a4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555152"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88416993"
 ---
 # <a name="stdistance-geography-data-type"></a>STDistance（geography 数据类型）
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,20 +43,20 @@ ms.locfileid: "86555152"
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- other_geography   
- 另一个 geography 实例，将度量该实例与调用 STDistance() 的实例之间的距离  。 如果 other_geography 是一个空集，则 STDistance() 返回 null  。  
+ other_geography**  
+ 另一个 geography 实例，将度量该实例与调用 STDistance() 的实例之间的距离****。 如果 other_geography 是一个空集，则 STDistance() 返回 null**。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：float   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：float****  
   
- CLR 返回类型：SqlDouble   
+ CLR 返回类型：SqlDouble****  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  结果以空间数据的[空间引用标识符 (SRID)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md) 定义的度量单位表示。
-如果 geography 实例的空间引用 ID (SRID) 不匹配，则 STDistance() 始终返回 null   。  
+如果 geography 实例的空间引用 ID (SRID) 不匹配，则 STDistance() 始终返回 null******。  
   
 > [!NOTE]  
->  geography 数据类型上用于计算面积或距离的方法将根据在该方法中使用的实例的 SRID 返回不同结果  。 有关 SRID 的详细信息，请参阅[空间引用标识符 (SRID)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)。  
+>  geography 数据类型上用于计算面积或距离的方法将根据在该方法中使用的实例的 SRID 返回不同结果****。 有关 SRID 的详细信息，请参阅[空间引用标识符 (SRID)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)。  
   
 ## <a name="examples"></a>示例  
  以下示例查找两个 **geography** 实例之间的距离。  
@@ -69,6 +70,6 @@ SELECT @g.STDistance(@h);
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [地理实例上的 OGC 方法](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [地域实例上的 OGC 方法](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

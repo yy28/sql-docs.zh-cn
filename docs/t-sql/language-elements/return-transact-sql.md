@@ -1,4 +1,5 @@
 ---
+description: RETURN (Transact-SQL)
 title: RETURN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 1d9c8247-fd89-4544-be9c-01c95b745db0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 89ccceece9d5d84faaae9b63c6846bfbd351f666
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6ea26a56bf28b555123bf456d607f79e7e443597
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915603"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417083"
 ---
 # <a name="return-transact-sql"></a>RETURN (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,12 +53,12 @@ RETURN [ integer_expression ]
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>返回类型
- 可以选择返回 int  。  
+ 可以选择返回 int****。  
   
 > [!NOTE]  
 >  除非另外说明，否则所有系统存储过程都将返回一个 0 值。 此值表示成功，非 0 值表示失败。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  如果用于存储过程，RETURN 不能返回 null 值。 如果某个过程试图返回空值（例如，使用 @status，而 @status 为 NULL），则将生成警告消息并返回 0 值。  
   
  在执行了当前过程的 batch 或过程中，返回状态值可包含在后续 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中，但必须按以下格式输入：`EXECUTE @return_status = <procedure_name>`。  

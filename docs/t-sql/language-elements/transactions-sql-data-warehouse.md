@@ -1,4 +1,5 @@
 ---
+description: 事务（SQL 数据仓库）
 title: 事务（SQL 数据仓库）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 87e5e593-a121-4428-9d3c-3af876224e35
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: ac7b9a500bb87dca74082c9d16874131eb82402d
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 4e2912d3bb0608a105c4f68c857b2ea679a86c2f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197412"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417063"
 ---
 # <a name="transactions-sql-data-warehouse"></a>事务（SQL 数据仓库）
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -26,9 +27,9 @@ ms.locfileid: "86197412"
   
  事务的起点和终点取决于 AUTOCOMMIT 设置以及 BEGIN TRANSACTION、COMMIT 和 ROLLBACK 语句。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 支持下列事务类型：  
   
--   显式事务从 BEGIN TRANSACTION 语句开始，到 COMMIT 或 ROLLBACK 语句为止  。  
+-   显式事务从 BEGIN TRANSACTION 语句开始，到 COMMIT 或 ROLLBACK 语句为止**。  
   
--   自动提交事务在会话中自动启动，但不会从 BEGIN TRANSACTION 语句开始  。 AUTOCOMMIT 设置为 ON 时，每个语句都在事务中运行，并且无需显式 COMMIT 或 ROLLBACK。 AUTOCOMMIT 设置为 OFF 时，需要 COMMIT 或 ROLLBACK 语句来确定事务的结果。 在 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 中，自动提交事务会在 COMMIT 或 ROLLBACK 语句或 SET AUTOCOMMIT OFF 语句后立刻开始。  
+-   自动提交事务在会话中自动启动，但不会从 BEGIN TRANSACTION 语句开始**。 AUTOCOMMIT 设置为 ON 时，每个语句都在事务中运行，并且无需显式 COMMIT 或 ROLLBACK。 AUTOCOMMIT 设置为 OFF 时，需要 COMMIT 或 ROLLBACK 语句来确定事务的结果。 在 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 中，自动提交事务会在 COMMIT 或 ROLLBACK 语句或 SET AUTOCOMMIT OFF 语句后立刻开始。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,7 +53,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
  ROLLBACK [ WORK ]  
  将事务回滚到事务的起点。 事务的任何更改都不会提交到数据库。 ROLLBACK 语句等同于 ROLLBACK WORK、ROLLBACK TRAN 和 ROLLBACK TRANSACTION。  
   
- SET AUTOCOMMIT { ON | OFF }   
+ SET AUTOCOMMIT { ON | OFF }****  
  确定事务的启动和结束方式。  
   
  ON  
@@ -65,7 +66,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
   
  AUTOCOMMIT 为 ON 时，运行另一个 SET AUTOCOMMIT ON 语句将不起作用。 同样，AUTOCOMMIT 为 OFF 时，运行另一个 SET AUTOCOMMIT OFF 将不起作用。  
   
- SET IMPLICIT_TRANSACTIONS { ON | OFF }   
+ SET IMPLICIT_TRANSACTIONS { ON | OFF }****  
  这会切换为与 SET AUTOCOMMIT 相同的模式。 如果设置为 ON，SET IMPLICIT_TRANSACTIONS 将连接设置为隐式事务模式。 如果设置为 OFF，则使连接恢复为自动提交模式。  有关详细信息，请参阅 [SET IMPLICIT_TRANSACTIONS (Transact-SQL)](../../t-sql/statements/set-implicit-transactions-transact-sql.md)。  
   
 ## <a name="permissions"></a>权限  
@@ -78,7 +79,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
   
  如果运行时语句错误以外的错误使显式事务无法成功完成，[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 将自动回滚事务并释放该事物占用的所有资源。 例如，如果客户端与 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 实例的网络连接中断或客户端已注销应用程序，那么当网络向实例通知该中断后，该连接的所有未提交事务均会被回滚。  
   
- 如果批处理中出现运行时语句错误，[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 的行为将与设置为 ON 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XACT_ABORT 的行为一致，并且整个事务都将回滚   。 有关 XACT_ABORT 设置的详细信息，请参阅 [SET XACT_ABORT (Transact-SQL)](https://msdn.microsoft.com/library/ms188792.aspx)  。  
+ 如果批处理中出现运行时语句错误，[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 的行为将与设置为 ON 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XACT_ABORT 的行为一致，并且整个事务都将回滚********。 有关 XACT_ABORT 设置的详细信息，请参阅 [SET XACT_ABORT (Transact-SQL)](https://msdn.microsoft.com/library/ms188792.aspx)****。  
   
 ## <a name="general-remarks"></a>一般备注  
  给定时间内，一个会话只能运行一个事务；不支持保存点和嵌套事务。  
@@ -103,7 +104,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
   
 ### <a name="a-using-an-explicit-transaction"></a>A. 使用显式事务  
   
-```  
+```sql  
 BEGIN TRANSACTION;  
 DELETE FROM HumanResources.JobCandidate  
     WHERE JobCandidateID = 13;  
@@ -113,8 +114,8 @@ COMMIT;
 ### <a name="b-rolling-back-a-transaction"></a>B. 回滚事务  
  以下示例显示了回滚事务的效果。  在此示例中，ROLLBACK 语句将回滚 INSERT 语句，但已创建的表仍会存在。  
   
-```  
-CREATE TABLE ValueTable (id int);  
+```sql  
+CREATE TABLE ValueTable (id INT);  
 BEGIN TRANSACTION;  
        INSERT INTO ValueTable VALUES(1);  
        INSERT INTO ValueTable VALUES(2);  
@@ -124,21 +125,21 @@ ROLLBACK;
 ### <a name="c-setting-autocommit"></a>C. 设置 AUTOCOMMIT  
  下面的示例将 AUTOCOMMIT 设置设为 `ON`。  
   
-```  
+```sql  
 SET AUTOCOMMIT ON;  
 ```  
   
  下面的示例将 AUTOCOMMIT 设置设为 `OFF`。  
   
-```  
+```sql  
 SET AUTOCOMMIT OFF;  
 ```  
   
 ### <a name="d-using-an-implicit-multi-statement-transaction"></a>D. 使用隐式多语句事务  
   
-```  
+```sql  
 SET AUTOCOMMIT OFF;  
-CREATE TABLE ValueTable (id int);  
+CREATE TABLE ValueTable (id INT);  
 INSERT INTO ValueTable VALUES(1);  
 INSERT INTO ValueTable VALUES(2);  
 COMMIT;  

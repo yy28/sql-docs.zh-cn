@@ -1,4 +1,5 @@
 ---
+description: " (Azure SQL 数据库的项目设置 )  (SybaseToSQL) "
 title: " (Azure SQL 数据库 )  (SybaseToSQL) 的项目设置 |Microsoft Docs"
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,21 +10,21 @@ ms.topic: conceptual
 ms.assetid: 57002374-0d4d-43c1-b4e9-cbec02355a9c
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: b79d4e94126676e128d803176463b314348ed8a1
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 39a099eb243d767d18402bcd6baeb6280dbeaad4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87930918"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418273"
 ---
 # <a name="project-settings-azure-sql-database--sybasetosql"></a> (Azure SQL 数据库的项目设置 )  (SybaseToSQL) 
 利用 Azure SQL 数据库项目设置，你可以配置要添加到连接对话框中的 Azure SQL 数据库数据库后缀，还允许在 Azure SQL 数据库连接中实施检测信号机制。  
   
-"**项目设置**" 和 "**默认项目设置**" 对话框中提供了 "Azure SQL 数据库" 窗格。  
+" **项目设置** " 和 " **默认项目设置** " 对话框中提供了 "Azure SQL 数据库" 窗格。  
   
--   使用 "项目设置" 对话框可以设置当前项目的配置选项。 若要访问 Azure SQL 数据库设置，请在 "**工具**" 菜单上选择 "**项目设置**"，单击左侧窗格底部的 "**常规**"，然后选择 " **Azure sql 数据库**"。  
+-   使用 "项目设置" 对话框可以设置当前项目的配置选项。 若要访问 Azure SQL 数据库设置，请在 " **工具** " 菜单上选择 " **项目设置**"，单击左侧窗格底部的 " **常规** "，然后选择 " **Azure sql 数据库**"。  
   
--   使用 "默认项目设置" 对话框可以为所有项目设置配置选项。 若要访问 Azure SQL 数据库设置，请在 "**工具**" 菜单上选择 " **DefaultProject 设置**"，单击左侧窗格底部的 "**常规**"，然后选择 " **Azure sql 数据库**"。  
+-   使用 "默认项目设置" 对话框可以为所有项目设置配置选项。 若要访问 Azure SQL 数据库设置，请在 " **工具** " 菜单上选择 " **DefaultProject 设置**"，单击左侧窗格底部的 " **常规** "，然后选择 " **Azure sql 数据库**"。  
   
 ## <a name="connectivity"></a>连接  
 **检测信号间隔**  

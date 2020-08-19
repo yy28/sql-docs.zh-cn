@@ -1,4 +1,5 @@
 ---
+description: ASIN (Transact-SQL)
 title: ASIN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -20,17 +21,17 @@ ms.assetid: 6256dd7d-83d5-486e-a933-1d59afc7e417
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 79988d91775fb7ae1bda2734148e434e5c161723
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 43905f174185f45cb2d56d3e9325bf0098cfb4e5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113146"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417543"
 ---
 # <a name="asin-transact-sql"></a>ASIN (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-一个函数，返回以弧度表示的角，其正弦为指定的 float 表达式  。 也称为反正弦  。
+一个函数，返回以弧度表示的角，其正弦为指定的 float 表达式****。 也称为反正弦。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -44,13 +45,13 @@ ASIN ( float_expression )
 
 ## <a name="arguments"></a>参数
 *float_expression*  
-float 类型或可隐式转换为 float 类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)  。 仅介于 -1.00 到 1.00 之间的值有效。 对于超出此范围的值，将返回 NULL 且 ASIN 将报告域错误。
+float 类型或可隐式转换为 float 类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)****。 仅介于 -1.00 到 1.00 之间的值有效。 对于超出此范围的值，将返回 NULL 且 ASIN 将报告域错误。
   
 ## <a name="return-types"></a>返回类型
 **float**
   
 ## <a name="examples"></a>示例  
-此示例采用 float 表达式并返回指定角的 ASIN 值  。
+此示例采用 float 表达式并返回指定角的 ASIN 值****。
   
 ```sql
 /* The first value will be -1.01. This fails because the value is   

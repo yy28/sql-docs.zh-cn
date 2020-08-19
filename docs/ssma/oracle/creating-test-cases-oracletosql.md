@@ -1,4 +1,5 @@
 ---
+description: 创建测试用例 (OracleToSQL)
 title: " (OracleToSQL) 创建测试用例 |Microsoft Docs"
 ms.prod: sql
 ms.custom: ''
@@ -12,12 +13,12 @@ ms.assetid: 22f38901-ec35-4707-a911-784e6ad8dafb
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 270d904c11df5ab28062cd83672071319ca6f17f
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 4f7183089fd67f413515034a557e4b73388f950f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934950"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418383"
 ---
 # <a name="creating-test-cases-oracletosql"></a>创建测试用例 (OracleToSQL)
 使用测试用例向导创建测试。 通过此向导，您可以通过选择已测试和已验证的对象并指定测试参数来创建测试用例。  
@@ -32,9 +33,9 @@ ms.locfileid: "87934950"
 ## <a name="overview-of-creating-test-cases-using-the-wizard"></a>使用向导创建测试用例概述  
 创建测试用例的过程包括以下五个步骤：  
   
-1.  [&#40;OracleToSQL&#41;初始化测试用例](../../ssma/oracle/initializing-test-cases-oracletosql.md)  
+1.  [&#40;OracleToSQL&#41;初始化测试用例 ](../../ssma/oracle/initializing-test-cases-oracletosql.md)  
   
-2.  [选择并配置要测试 &#40;OracleToSQL&#41;的对象](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
+2.  [选择并配置要测试 &#40;OracleToSQL&#41;的对象 ](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
   
 3.  [选择并配置受影响的对象 &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
   

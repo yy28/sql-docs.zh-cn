@@ -1,4 +1,5 @@
 ---
+description: HAS_PERMS_BY_NAME (Transact-SQL)
 title: HAS_PERMS_BY_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/29/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7ca0bb9b4fb03cc3f567c6c642a3593d23963993
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: e2fa743ae09dc8a09a8edbc8e4a6e3b5cf8415db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113522"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417343"
 ---
 # <a name="has_perms_by_name-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,34 +48,34 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- securable   
- 安全对象的名称。 如果安全对象是服务器本身，则此值应设置为 NULL。 securable 是 sysname 类型的标量表达式   。 没有默认值。  
+ securable  
+ 安全对象的名称。 如果安全对象是服务器本身，则此值应设置为 NULL。 securable 是 sysname 类型的标量表达式******。 没有默认值。  
   
  *securable_class*  
- 测试权限的安全对象的类名。 securable_class 是 nvarchar(60) 类型的标量表达式   。  
+ 测试权限的安全对象的类名。 securable_class 是 nvarchar(60) 类型的标量表达式******。  
   
- 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，securable_class 参数必须设置为以下值之一：DATABASE、OBJECT、ROLE、SCHEMA 或 USER      。  
+ 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，securable_class 参数必须设置为以下值之一：DATABASE、OBJECT、ROLE、SCHEMA 或 USER********************。  
   
- permission   
- 类型为 sysname 的非空标量表达式，表示要检查的权限名称  。 没有默认值。 权限名称 ANY 是通配符。  
+ permission  
+ 类型为 sysname 的非空标量表达式，表示要检查的权限名称****。 没有默认值。 权限名称 ANY 是通配符。  
   
  *sub-securable*  
- 类型为 sysname 的可选标量表达式，表示测试权限的安全对象子实体的名称  。 默认值为 NULL。  
+ 类型为 sysname 的可选标量表达式，表示测试权限的安全对象子实体的名称****。 默认值为 NULL。  
   
 > [!NOTE]  
->  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 及更高版本中，子安全对象不能使用 '[sub name]' 形式的括号    。 请改用 **'** _sub name_ **'** 。  
+>  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 及更高版本中，子安全对象不能使用 '[sub name]' 形式的括号****__****。 请改用 **'** _sub name_ **'** 。  
   
  *sub-securable_class*  
- 类型为 nvarchar(60) 的可选标量表达式，表示测试权限的安全对象子实体的类  。 默认值为 NULL。  
+ 类型为 nvarchar(60) 的可选标量表达式，表示测试权限的安全对象子实体的类****。 默认值为 NULL。  
   
- 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，只有在 securable_class 参数设置为 OBJECT 时 sub-securable_class 参数才有效  。 如果 securable_class 参数设置为 OBJECT，则 sub-securable_class 参数必须设置为 COLUMN   。  
+ 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，只有在 securable_class 参数设置为 OBJECT 时 sub-securable_class 参数才有效****。 如果 securable_class 参数设置为 OBJECT，则 sub-securable_class 参数必须设置为 COLUMN********。  
   
 ## <a name="return-types"></a>返回类型  
  **int**  
   
  如果查询失败，则返回 NULL。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  此内置函数将测试当前主体对于指定的安全对象是否具有特定的有效权限。 如果用户具有针对安全对象的有效权限，HAS_PERMS_BY_NAME 返回 1；如果用户不具有针对安全对象的有效权限，返回 0；如果安全对象类或权限无效，返回 NULL。 有效权限可以是下列任意一种：  
   
 -   直接授予主体并且不被拒绝的权限。  

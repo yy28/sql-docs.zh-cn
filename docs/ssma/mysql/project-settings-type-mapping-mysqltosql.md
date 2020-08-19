@@ -1,4 +1,5 @@
 ---
+description: 项目设置（类型映射）(MySQLToSQL)
 title: 项目设置 (类型映射)  (MySQLToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 79c86ee63638dcc520aa9bb590b8a616172cb1e4
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: a6f4bc99caceeb7011c932c86e636304941c459c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935172"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418483"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>项目设置（类型映射）(MySQLToSQL)
 "类型映射项目设置" 允许您为 SSMA 项目设置默认的类型映射。  
@@ -23,7 +24,7 @@ ms.locfileid: "87935172"
   
 -   使用 "项目设置" 对话框可以设置当前项目的配置选项。 若要访问类型映射设置，请在 "工具" 菜单上选择 "项目设置"，然后单击左窗格中的 "类型映射"。  
   
--   使用 "默认项目设置" 对话框可以为所有项目设置配置选项。 若要访问类型映射设置，请在 "工具" 菜单上，选择 "默认项目设置"，从 "**迁移目标版本**" 下拉框中选择需要查看其设置的 "迁移项目类型"，然后单击左窗格中的 "类型映射"。  
+-   使用 "默认项目设置" 对话框可以为所有项目设置配置选项。 若要访问类型映射设置，请在 "工具" 菜单上，选择 "默认项目设置"，从 " **迁移目标版本** " 下拉框中选择需要查看其设置的 "迁移项目类型"，然后单击左窗格中的 "类型映射"。  
   
 ## <a name="options"></a>选项  
   
@@ -68,7 +69,7 @@ ms.locfileid: "87935172"
 |blob [0 .0]|varbinary [1]|  
 |blob [2. 8000]|varbinary [*]|  
 |blob [8001]|varbinary(max)|  
-|布尔|bit|  
+|bool|bit|  
 |boolean|bit|  
 |char|nchar [1]|  
 |char 字节|binary [1]|  

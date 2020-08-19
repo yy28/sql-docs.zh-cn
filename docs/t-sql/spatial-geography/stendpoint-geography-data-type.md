@@ -1,4 +1,5 @@
 ---
+description: STEndPoint（geography 数据类型）
 title: STEndPoint（geography 数据类型）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 8974cd07-8ec4-4126-8fc2-fdcf322ccedd
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 475b5e99cd7628992e90a2921c0bd726f8f69560
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 9e7b33ea60599dc5920d15df18177a34bcdde07c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554397"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88416973"
 ---
 # <a name="stendpoint-geography-data-type"></a>STEndPoint（geography 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  返回 geography 实例的终点  。  
+  返回 geography 实例的终点****。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,16 +40,16 @@ ms.locfileid: "86554397"
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>返回类型
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
   
- CLR 返回类型：SqlGeography   
+ CLR 返回类型：SqlGeography  
   
- 开放地理空间信息联盟 (OGC) 类型：Point   
+ 开放地理空间信息联盟 (OGC) 类型：Point****  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  STEndPoint() 等效于 [STPointN](../../t-sql/spatial-geography/stpointn-geography-data-type.md)`(x.STNumPoints``())`。  
   
- 如果针对空 geography 实例调用此方法，则此方法返回 Null  。  
+ 如果针对空 geography 实例调用此方法，则此方法返回 Null****。  
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `LineString` 创建 `STGeomFromText()` 实例，并使用 `STEndPoint()` 检索 `LineString` 的终点。  
@@ -60,6 +61,6 @@ SELECT @g.STEndPoint().ToString();
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [地理实例上的 OGC 方法](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [地域实例上的 OGC 方法](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

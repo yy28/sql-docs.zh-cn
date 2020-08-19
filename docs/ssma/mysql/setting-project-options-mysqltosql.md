@@ -1,4 +1,5 @@
 ---
+description: 设置项目选项 (MySQLToSQL)
 title: " (MySQLToSQL) 设置项目选项 |Microsoft Docs"
 ms.prod: sql
 ms.custom: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 08820d88-e157-4d49-9401-38580dd7ec2d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: cf8ac834b014fe49a851d3887fb36e29f59e069e
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 642d6df01fc5855ece9bd06ea2860de076f754bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935125"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418423"
 ---
 # <a name="setting-project-options-mysqltosql"></a>设置项目选项 (MySQLToSQL)
 对于每个 SSMA 项目，可以设置项目级别的选项。 这些选项指定如何转换对象、迁移数据的方式以及源数据类型映射到目标数据类型的方式。  在将对象转换为 SQL Server 或 SQL Azure 或将数据迁移到 SQL Server 或 SQL Azure 之前，请验证配置选项是否适用于该项目。  
@@ -38,13 +39,13 @@ SSMA 有五组项目设置：
   
 可以通过以下四种方式配置项目设置：  
   
--   默认值  
+-   默认  
   
 -   乐观  
   
 -   完全  
   
--   自定义  
+-   “自定义”  
   
 对于大多数用户，建议使用默认模式。 乐观模式将保留最新的 MySQL 语法，并且更易于阅读。 但是，保持当前语法可能不准确。 如果 MySQL 语法必须转换为等效的 SQL Server 或 SQL Azure 语法，则完整模式将执行最完整的转换。 但是，生成的代码可能更难以读取。 在 "自定义" 模式下，可以设置选项。  
   
@@ -67,11 +68,11 @@ SSMA 有五组项目设置：
   
 **设置默认项目选项**  
   
-1.  在 "**工具**" 菜单上，单击 "**默认项目设置**"。  
+1.  在 " **工具** " 菜单上，单击 " **默认项目设置**"。  
   
-2.  在 "**默认项目设置**" 对话框中，使用以下过程之一：  
+2.  在 " **默认项目设置** " 对话框中，使用以下过程之一：  
   
-    1.  从 "**迁移目标版本**" 下拉框中选择 "需要查看或更改其设置" 的 "迁移项目类型"，单击左侧窗格底部的 "**常规**"，然后选择 "**转换" 或 "迁移" 或 SQL Azure**选项。  
+    1.  从 " **迁移目标版本** " 下拉框中选择 "需要查看或更改其设置" 的 "迁移项目类型"，单击左侧窗格底部的 " **常规** "，然后选择 " **转换" 或 "迁移" 或 SQL Azure** 选项。  
   
     2.  若要选择预定义模式，请从 "**模式**" 下拉框中选择 "**默认**"、"**乐观**" 或 "**完整**"。  
   
@@ -83,7 +84,7 @@ SSMA 有五组项目设置：
   
 **为当前项目自定义设置**  
   
-1.  在 "**工具**" 菜单上，单击 " **ProjectSettings**"。  
+1.  在 " **工具** " 菜单上，单击 " **ProjectSettings**"。  
   
 2.  在 " **ProjectSettings** " 对话框中，使用以下过程之一：  
   
@@ -96,10 +97,10 @@ SSMA 有五组项目设置：
 ## <a name="next-step"></a>下一步  
 迁移的下一步取决于你的项目需求：  
   
--   若要自定义源和目标数据类型的映射，请参阅[&#40;MySQLToSQL 映射 MySQL 和 SQL Server 数据类型&#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
+-   若要自定义源和目标数据类型的映射，请参阅 [&#40;MySQLToSQL 映射 MySQL 和 SQL Server 数据类型&#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
   
--   否则，你可以将 MySQL 数据库对象定义转换为 SQL Server 或 SQL Azure 对象定义。 有关详细信息，请参阅将[MySQL 数据库转换 &#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
+-   否则，你可以将 MySQL 数据库对象定义转换为 SQL Server 或 SQL Azure 对象定义。 有关详细信息，请参阅将 [MySQL 数据库转换 &#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
 ## <a name="see-also"></a>另请参阅  
-[&#40;MySQLToSQL&#41;映射 MySQL 和 SQL Server 数据类型](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
+[&#40;MySQLToSQL&#41;映射 MySQL 和 SQL Server 数据类型 ](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
   

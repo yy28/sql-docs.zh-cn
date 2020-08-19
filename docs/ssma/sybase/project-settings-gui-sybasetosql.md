@@ -1,4 +1,5 @@
 ---
+description: 项目设置 (GUI) (SybaseToSQL)
 title: " (GUI)  (SybaseToSQL) 的项目设置 |Microsoft Docs"
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,30 +10,30 @@ ms.topic: conceptual
 ms.assetid: cbd6ddc9-8abd-4fa9-bffd-631e54894ce8
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c709be1a8f455e4d2e50f60c3b31ba182192803c
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 2361f480d5f148140caa8e4fcbcb4d22374d9e04
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87930779"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418253"
 ---
 # <a name="project-settings-gui-sybasetosql"></a>项目设置 (GUI) (SybaseToSQL)
-GUI 项目设置允许您配置数据在 "**数据**" 选项卡上的显示方式，以及是否在转换后显示评估报告。  
+GUI 项目设置允许您配置数据在 " **数据** " 选项卡上的显示方式，以及是否在转换后显示评估报告。  
   
-"**项目设置**" 和 "**默认项目设置**" 对话框中提供了 GUI 窗格。  
+" **项目设置** " 和 " **默认项目设置** " 对话框中提供了 GUI 窗格。  
   
--   使用 "**项目设置**" 对话框可以设置当前项目的用户界面选项。 若要访问 GUI 设置，请在 "**工具**" 菜单上选择 "**项目设置**"，然后单击左窗格底部的 " **GUI** "。  
+-   使用 " **项目设置** " 对话框可以设置当前项目的用户界面选项。 若要访问 GUI 设置，请在 " **工具** " 菜单上选择 " **项目设置**"，然后单击左窗格底部的 " **GUI** "。  
   
--   使用 "**默认项目设置**" 对话框可以为所有项目设置用户界面选项。 若要访问 GUI 设置，请在 "**工具**" 菜单上，选择 "**默认项目设置**"，从 "**迁移目标版本**" 下拉框中选择需要查看或更改其设置的迁移项目类型，然后单击左窗格底部的 " **GUI** "。  
+-   使用 " **默认项目设置** " 对话框可以为所有项目设置用户界面选项。 若要访问 GUI 设置，请在 " **工具** " 菜单上，选择 " **默认项目设置**"，从 " **迁移目标版本** " 下拉框中选择需要查看或更改其设置的迁移项目类型，然后单击左窗格底部的 " **GUI** "。  
   
 ## <a name="options"></a>选项  
 **源的最大行号**  
-配置在选定源表的 "**数据**" 选项卡上显示的数据的行数。  
+配置在选定源表的 " **数据** " 选项卡上显示的数据的行数。  
   
 **默认值**：100  
   
 **目标的最大行号**  
-配置所选目标表的 "**数据**" 选项卡上显示的数据的行数。  
+配置所选目标表的 " **数据** " 选项卡上显示的数据的行数。  
   
 **默认值**：100  
   

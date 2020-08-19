@@ -1,4 +1,5 @@
 ---
+description: POWER (Transact-SQL)
 title: POWER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -18,12 +19,12 @@ ms.assetid: 0fd34494-90b9-4559-8011-a8c1b9f40239
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c11afa07f04e01919b51daf92025ed5d82902ee7
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 857ad909b2f471edaebf661ccab4cca0077bc099
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111896"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417313"
 ---
 # <a name="power-transact-sql"></a>POWER (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,13 +43,13 @@ POWER ( float_expression , y )
 
 ## <a name="arguments"></a>参数
  *float_expression*  
- float 类型或能隐式转换为 float 类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)   。  
+ float 类型或能隐式转换为 float 类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md) 。  
   
  *y*  
- 要将 float_expression 提升到的幂  。 y 可以是精确或近似数值数据类型类别（bit 数据类型除外）的表达式   。  
+ 要将 float_expression 提升到的幂**。 y 可以是精确或近似数值数据类型类别（bit 数据类型除外）的表达式******。  
   
 ## <a name="return-types"></a>返回类型  
- 返回类型取决于 float_expression 的输入类型  ：
+ 返回类型取决于 float_expression 的输入类型**：
  
 |输入类型|返回类型|  
 |----------|-----------|  
@@ -85,7 +86,7 @@ Result1                Result2
 ```  
   
 ### <a name="b-using-power-to-show-results-of-data-type-conversion"></a>B. 使用 POWER 显示数据类型转换的结果  
- 以下示例演示 float_expression 如何保留会返回意外结果的数据类型  。  
+ 以下示例演示 float_expression 如何保留会返回意外结果的数据类型**。  
   
 ```  
 SELECT   
@@ -151,7 +152,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-using-power-to-return-the-cube-of-a-number"></a>D：使用 POWER 返回一个数字的立方  
- 下例演示将返回 `POWER` 的 3 次幂的 `2.0` 结果。  
+ 下例演示将返回 `2.0` 的 3 次幂的 `POWER` 结果。  
   
 ```  
 SELECT POWER(2.0, 3);  

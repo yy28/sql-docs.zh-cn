@@ -1,4 +1,5 @@
 ---
+description: 转换设置 (MySQLToSQL)
 title: MySQLToSQL) 的转换设置 (|Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f551cf6e-1575-4206-9cca-975b5b43a6b8
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c34a379f2bd4fd47c31a4b664e8f56cc1ffba2be
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 7547984e97bb47a640c162743fe0b069b38f7dff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935821"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418463"
 ---
 # <a name="conversion-settings-mysqltosql"></a>转换设置 (MySQLToSQL)
 **"设置"** 选项卡允许用户设置节点级别设置。 选项卡将在以下元数据库节点上提供：  
@@ -30,7 +31,7 @@ ms.locfileid: "87935821"
 -   表节点  
   
 ## <a name="specifications"></a>规格  
-"**设置**" 选项卡有两个用户设置，即。：  
+" **设置** " 选项卡有两个用户设置，即。：  
   
 1.  函数转换  
   
@@ -40,7 +41,7 @@ ms.locfileid: "87935821"
   
 > [!NOTE]  
 > -   用户所做的更改将作为单独的首选项文件保存在 "项目" 工作区中。  
-> -   此文件的扩展名将为**ccprefs**。  
+> -   此文件的扩展名将为 **ccprefs**。  
   
 1.  **函数转换设置：**  
   
@@ -56,7 +57,7 @@ ms.locfileid: "87935821"
   
     2.  根据设置，函数将转换为函数或存储过程。  
   
-    3.  单击 "**应用**" 按钮后，用户所做的设置将保存在级联首选项文件中。  
+    3.  单击 " **应用** " 按钮后，用户所做的设置将保存在级联首选项文件中。  
   
 2.  **表转换设置：**  
   
@@ -70,9 +71,9 @@ ms.locfileid: "87935821"
   
         -   根据项目设置进行转换  
   
-    2.  如果**是 "Yes"**，则此设置禁止在目标表上创建 ROWID 辅助列。  
+    2.  如果 **是 "Yes"**，则此设置禁止在目标表上创建 ROWID 辅助列。  
   
-    3.  单击 "**应用**" 按钮后，用户所做的设置将保存在级联首选项文件中。  
+    3.  单击 " **应用** " 按钮后，用户所做的设置将保存在级联首选项文件中。  
   
 ## <a name="see-also"></a>另请参阅  
 [ ()  (MySQL 转换为 SQL 的项目设置) ](https://msdn.microsoft.com/7ad5fe44-6445-4ba8-a457-5af792631f11)  

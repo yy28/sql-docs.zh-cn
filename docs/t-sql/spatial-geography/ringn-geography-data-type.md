@@ -1,4 +1,5 @@
 ---
+description: RingN（geography 数据类型）
 title: RingN（geography 数据类型）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,38 +18,37 @@ helpviewer_keywords:
 ms.assetid: 30f47275-2727-4d22-bbec-c0c54bcb3ac2
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 420fe265e6871fe02d4f3dc62936b5de9d0da3de
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 58325135db25b79d7c38fb3447f6b7e5bfd8c89a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555832"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417013"
 ---
 # <a name="ringn-geography-data-type"></a>RingN（geography 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  返回 geography 实例的指定环：`1 ≤ n ≤ NumRings()`。  
+  返回 geography 实例的指定环：`1 ≤ n ≤ NumRings()`****。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-.RingN (expression )  
-```  
-  
+```syntaxsql
+.RingN (expression )
+```
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
  *expression*  
- 一个 int 表达式，其值介于 1 与 polygon 实例中的环数之间   。  
+ 一个 int 表达式，其值介于 1 与 polygon 实例中的环数之间********。  
   
 ## <a name="return-value"></a>返回值  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
   
- CLR 返回类型：SqlGeography   
+ CLR 返回类型：SqlGeography  
   
 ## <a name="remarks"></a>备注  
- 如果环索引 n 的值小于 1，此方法引发 ArgumentOutOfRangeException   。 该环索引的值必须大于或等于 1，而且应当小于或等于 `NumRings()` 返回的数字。  
+ 如果环索引 n 的值小于 1，此方法引发 ArgumentOutOfRangeException********。 该环索引的值必须大于或等于 1，而且应当小于或等于 `NumRings()` 返回的数字。  
   
 ## <a name="examples"></a>示例  
  下面的示例创建一个具有两个环的 `Polygon` 实例并返回第二个环。  

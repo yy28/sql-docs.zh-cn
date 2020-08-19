@@ -1,4 +1,5 @@
 ---
+description: ShortestLineTo（geography 数据类型）
 title: ShortestLineTo（geography 数据类型）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 9d7c9885-5d1b-49ae-af31-5ef9fb8acaba
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 167db7fb7dd3dc03c4b1a1f6b819af2b8e09150d
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: a68db46f790d16f8472fdb5850c10eb7a6de9399
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555822"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417003"
 ---
 # <a name="shortestlineto-geography-data-type"></a>ShortestLineTo（geography 数据类型）
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
-  返回一个包含两个点的 LineString 实例，这两个点表示两个 geography 实例之间的最短距离   。 返回的 LineString 实例长度是两个 geography 实例之间的距离   。  
+  返回一个包含两个点的 LineString 实例，这两个点表示两个 geography 实例之间的最短距离********。 返回的 LineString 实例长度是两个 geography 实例之间的距离********。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,15 +41,15 @@ ms.locfileid: "86555822"
 
 ## <a name="arguments"></a>参数
  *geography_other*  
- 指定第二个 geography 实例，调用 geography 实例尝试确定与该实例之间的最短距离   。  
+ 指定第二个 geography 实例，调用 geography 实例尝试确定与该实例之间的最短距离********。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
   
- CLR 返回类型：SqlGeography   
+ CLR 返回类型：SqlGeography  
   
 ## <a name="remarks"></a>备注  
- 该方法返回一个 LineString 实例，它包含的端点位于所比较的两个不相交 geography 实例的边界上   。 返回的 LineString 长度等于两个 geography 实例之间的最短距离   。 当两个 geography 实例彼此相交时，将返回空 LineString 实例   。  
+ 该方法返回一个 LineString 实例，它包含的端点位于所比较的两个不相交 geography 实例的边界上********。 返回的 LineString 长度等于两个 geography 实例之间的最短距离********。 当两个 geography 实例彼此相交时，将返回空 LineString 实例********。  
   
 ## <a name="examples"></a>示例  
   

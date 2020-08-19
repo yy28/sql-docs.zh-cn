@@ -1,4 +1,5 @@
 ---
+description: BETWEEN (Transact-SQL)
 title: BETWEEN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/28/2017
@@ -23,12 +24,12 @@ ms.assetid: a5d5b050-203e-4355-ac85-e08ef5ca7823
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f5d3108c49eb60a478c375e2afed320ee965361d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 709af562247c040508627527c299ee6f5181da49
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919905"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417183"
 ---
 # <a name="between-transact-sql"></a>BETWEEN (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,30 +47,30 @@ test_expression [ NOT ] BETWEEN begin_expression AND end_expression
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- test_expression   
- 要在由 begin_expression 和 end_expression 定义的范围内测试的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)   。 test_expression 的数据类型必须与 begin_expression 和 end_expression 的数据类型相同    。  
+ test_expression**  
+ 要在由 begin_expression 和 end_expression 定义的范围内测试的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)****。 test_expression 的数据类型必须与 begin_expression 和 end_expression 的数据类型相同******。  
   
  NOT  
  指定谓词的结果被取反。  
   
- begin_expression   
- 为任何有效的表达式。 begin_expression 的数据类型必须与 test_expression 和 end_expression 的数据类型相同    。  
+ begin_expression**  
+ 为任何有效的表达式。 begin_expression 的数据类型必须与 test_expression 和 end_expression 的数据类型相同******。  
   
- end_expression   
- 为任何有效的表达式。 end_expression 的数据类型必须与 test_expression 和 begin_expression 的数据类型相同    。  
+ end_expression**  
+ 为任何有效的表达式。 end_expression 的数据类型必须与 test_expression 和 begin_expression 的数据类型相同******。  
   
- 和  
- 充当一个占位符，用于指示 test_expression 应该在 begin_expression 和 end_expression 指定的范围内    。  
+ AND  
+ 充当一个占位符，用于指示 test_expression 应该在 begin_expression 和 end_expression 指定的范围内******。  
   
 ## <a name="result-types"></a>结果类型  
  **布尔值**  
   
 ## <a name="result-value"></a>结果值  
- 如果 test_expression 的值大于或等于 begin_expression 的值，并且小于或等于 end_expression 的值，则 BETWEEN 返回 TRUE     。  
+ 如果 test_expression 的值大于或等于 begin_expression 的值，并且小于或等于 end_expression 的值，则 BETWEEN 返回 TRUE**********。  
   
- 如果 test_expression 的值小于 begin_expression 的值，或大于 end_expression 的值，则 NOT BETWEEN 返回 TRUE     。  
+ 如果 test_expression 的值小于 begin_expression 的值，或大于 end_expression 的值，则 NOT BETWEEN 返回 TRUE**********。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  若要指定排他范围，请使用大于 (>) 和小于 (<) 运算符。 如果任何 BETWEEN 或 NOT BETWEEN 谓词的输入为 NULL，则结果为 UNKNOWN。  
   
 ## <a name="examples"></a>示例  
@@ -160,8 +161,8 @@ ORDER BY ep.Rate;
 GO  
 ```  
   
-### <a name="d-using-between-with-datetime-values"></a>D. 使用带有日期时间值的 BETWEEN  
- 以下示例检索 datetime 值介于 **和**（含）之间的行`'20011212'``'20020105'`。  
+### <a name="d-using-between-with-datetime-values"></a>D. 使用带有日期时间值的 BETWEEN   
+ 以下示例检索 datetime 值介于 `'20011212'` 和 `'20020105'`（含）之间的行****。  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -180,7 +181,7 @@ WHERE RateChangeDate BETWEEN '20011212' AND '20020105';
  4           2002-01-05 00:00:00.000  
  ```  
  
- 由于指定查询中的日期值和  **列中存储的 datetime 值时未指定日期的时间部分，因此该查询将检索预期行**`RateChangeDate`。 未指定时间部分时，将默认使用 12:00 A.M。 请注意，若某行的时间部分晚于 2002-01-05 12:00 A.M.， 则由于它处于范围之外，因此此查询不返回该行。  
+ 由于指定查询中的日期值和 `RateChangeDate` 列中存储的 datetime 值时未指定日期的时间部分，因此该查询将检索预期行****。 未指定时间部分时，将默认使用 12:00 A.M。 请注意，若某行的时间部分晚于 2002-01-05 12:00 A.M.， 则由于它处于范围之外，因此此查询不返回该行。  
   
   
 ## <a name="see-also"></a>另请参阅  

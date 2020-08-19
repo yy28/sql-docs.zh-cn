@@ -1,4 +1,5 @@
 ---
+description: 逻辑函数 - IIF (Transact-SQL)
 title: IIF (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e3ccf8ed-1cec-43ac-90b7-d8597c24b050
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cda1db97174190f27f2de801c751045bffb61793
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 1b84e5749e7e217442e618d998cecf504d5be046
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112928"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417253"
 ---
 # <a name="logical-functions---iif-transact-sql"></a>逻辑函数 - IIF (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,17 +47,17 @@ IIF ( boolean_expression, true_value, false_value )
   
  如果此参数不是布尔表达式，则引发一个语法错误。  
   
- true_value   
- boolean_expression 计算结果为 true 时要返回的值  。  
+ true_value  
+ boolean_expression 计算结果为 true 时要返回的值**。  
   
- false_value   
- boolean_expression 计算结果为 false 时要返回的值  。  
+ false_value  
+ boolean_expression 计算结果为 false 时要返回的值**。  
   
 ## <a name="return-types"></a>返回类型  
- 从 true_value 和 false_value 的类型中返回优先级最高的数据类型   。 有关详细信息，请参阅[数据类型优先级 (Transact-SQL)](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
+ 从 true_value 和 false_value 的类型中返回优先级最高的数据类型****。 有关详细信息，请参阅[数据类型优先级 (Transact-SQL)](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
   
-## <a name="remarks"></a>备注  
- IIF 是一种用于编写 CASE 表达式的快速方法。 它将传递的布尔表达式计算为第一个参数，然后根据计算结果返回其他两个参数之一。 也即，如果布尔表达式为 true，则返回 true_value；如果布尔表达式为 false 或未知，则返回 false_value   。 true_value 和 false_value 可以是任何类型   。 适用于布尔表达式、null 处理和返回类型的 CASE 表达式的相同规则也适用于 IIF。 有关详细信息，请参阅 [CASE (Transact-SQL)](../../t-sql/language-elements/case-transact-sql.md)。  
+## <a name="remarks"></a>注解  
+ IIF 是一种用于编写 CASE 表达式的快速方法。 它将传递的布尔表达式计算为第一个参数，然后根据计算结果返回其他两个参数之一。 也即，如果布尔表达式为 true，则返回 true_value；如果布尔表达式为 false 或未知，则返回 false_value****。 true_value 和 false_value 可以是任何类型****。 适用于布尔表达式、null 处理和返回类型的 CASE 表达式的相同规则也适用于 IIF。 有关详细信息，请参阅 [CASE (Transact-SQL)](../../t-sql/language-elements/case-transact-sql.md)。  
   
  IIF 转换为 CASE 这一事实也影响此函数的行为的其他方面。 因为 CASE 表达式最多可嵌套 10 层，所以 IIF 语句最多也只能嵌套 10 层。 此外，IIF 将作为语义上等同的 CASE 表达式对其他服务器远程执行，且具备远程执行的 CASE 表达式的所有行为。  
   

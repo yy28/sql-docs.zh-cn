@@ -1,4 +1,5 @@
 ---
+description: DBCC CLONEDATABASE (Transact-SQL)
 title: DBCC CLONEDATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/23/2019
@@ -37,12 +38,12 @@ ms.assetid: ''
 author: bluefooted
 ms.author: pamela
 manager: amitban
-ms.openlocfilehash: 453d514ba879c4567d16cca0acafc793bf721f48
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: b273762ea8218106a35a23f02f95d1b156b50ae9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485056"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417673"
 ---
 # <a name="dbcc-clonedatabase-transact-sql"></a>DBCC CLONEDATABASE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -117,7 +118,7 @@ Cannot insert duplicate key row in object <system table> with unique index 'inde
 ```
 
 > [!IMPORTANT]
-> 如果有列存储索引，请参阅[在克隆数据库上使用列存储索引优化查询的注意事项](https://techcommunity.microsoft.com/t5/SQL-Server/Considerations-when-tuning-your-queries-with-columnstore-indexes/ba-p/385294)对列存储索引进行更新，然后再运行 DBCC CLONEDATABASE 命令  。  自 SQL Server 2019 起，上文中所述的手动步骤将不再是必需的，因为 **DBCC CLONEDATABASE** 命令会自动收集此信息。
+> 如果有列存储索引，请参阅[在克隆数据库上使用列存储索引优化查询的注意事项](https://techcommunity.microsoft.com/t5/SQL-Server/Considerations-when-tuning-your-queries-with-columnstore-indexes/ba-p/385294)对列存储索引进行更新，然后再运行 DBCC CLONEDATABASE 命令****。  自 SQL Server 2019 起，上文中所述的手动步骤将不再是必需的，因为 **DBCC CLONEDATABASE** 命令会自动收集此信息。
 
 <a name="ctp23"></a>
 
@@ -160,7 +161,7 @@ DBCC CLONEDATABASE 使用源数据库的内部数据库快照来实现执行复�
 - PARTITION SCHEME
 - PROCEDURE   
 > [!NOTE]   
-> 从 [!INCLUDE[tsql](../../includes/tsql-md.md)] SP2 开始，所有版本均支持 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 过程。 从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3 开始支持 CLR 过程。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始支持本机编译过程。  
+> 从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 开始，所有版本均支持 [!INCLUDE[tsql](../../includes/tsql-md.md)] 过程。 从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3 开始支持 CLR 过程。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始支持本机编译过程。  
 
 - QUERY STORE（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始支持）   
 > [!NOTE]   
@@ -177,7 +178,7 @@ DBCC CLONEDATABASE 使用源数据库的内部数据库快照来实现执行复�
 - MEMORY OPTIMIZED TABLES（仅限 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 和更高版本）。
 - FILESTREAM AND FILETABLE OBJECTS（从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 及更高版本开始支持）。 
 - TRIGGER
-- 类型
+- TYPE
 - UPGRADED DB
 - USER
 - VIEW
