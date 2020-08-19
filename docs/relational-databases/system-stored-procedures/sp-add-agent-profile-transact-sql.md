@@ -1,5 +1,6 @@
 ---
-title: sp_add_agent_profile （Transact-sql） |Microsoft Docs
+description: sp_add_agent_profile (Transact-SQL)
+title: sp_add_agent_profile (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5c246a33-2c21-4a77-9c2a-a2c9f0c5dda1
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: de61da8e636ff3f6e38dac6fe85d45eaff75df3c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 379e418cbca4b93fe38bf640f62cd357ef6b5a48
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783873"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419391"
 ---
 # <a name="sp_add_agent_profile-transact-sql"></a>sp_add_agent_profile (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,12 +42,12 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
     [ , [ @default= ] default ]  
 ```  
   
-## <a name="arguments"></a>自变量  
-`[ @profile_id = ] profile_id`与新插入的配置文件关联的 ID。 *profile_id*为**int** ，并且是一个可选的 OUTPUT 参数。 如果指定该 ID，则值将设置为新的配置文件 ID。  
+## <a name="arguments"></a>参数  
+`[ @profile_id = ] profile_id` 与新插入的配置文件关联的 ID。 *profile_id* 为 **int** ，并且是一个可选的 OUTPUT 参数。 如果指定该 ID，则值将设置为新的配置文件 ID。  
   
-`[ @profile_name = ] 'profile_name'`配置文件的名称。 *profile_name* **sysname**，无默认值。  
+`[ @profile_name = ] 'profile_name'` 配置文件的名称。 *profile_name* **sysname**，无默认值。  
   
-`[ @agent_type = ] 'agent_type'`复制代理的类型。 *agent_type*是**int**，没有默认值，可以是下列值之一。  
+`[ @agent_type = ] 'agent_type'` 复制代理的类型。 *agent_type* 是 **int**，没有默认值，可以是下列值之一。  
   
 |值|说明|  
 |-----------|-----------------|  
@@ -56,26 +57,26 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
 |**4**|合并代理|  
 |**9**|队列读取器代理|  
   
-`[ @profile_type = ] profile_type`配置文件的类型。*profile_type*的值为**int**，默认值为**1**。  
+`[ @profile_type = ] profile_type` 配置文件的类型。*profile_type* 的值为 **int**，默认值为 **1**。  
   
- **0**指示系统配置文件。 **1**表示自定义配置文件。 只能使用此存储过程创建自定义配置文件;因此，唯一有效的值是**1**。 仅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 创建系统配置文件。  
+ **0** 指示系统配置文件。 **1** 表示自定义配置文件。 只能使用此存储过程创建自定义配置文件;因此，唯一有效的值是 **1**。 仅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 创建系统配置文件。  
   
-`[ @description = ] 'description'`配置文件的说明。 *description*的值为**nvarchar （3000）**，无默认值。  
+`[ @description = ] 'description'` 配置文件的说明。 *描述* 为 **nvarchar (3000) **，无默认值。  
   
-`[ @default = ] default`指示配置文件是否为*agent_type * ** 的默认值。 *默认值*为**bit**，默认值为**0**。 **1**指示要添加的配置文件将成为*agent_type*指定的代理的新默认配置文件。  
+`[ @default = ] default`指示配置文件是否为*agent_type * ** 的默认值。 *默认值* 为 **bit**，默认值为 **0**。 **1** 指示要添加的配置文件将成为 *agent_type*指定的代理的新默认配置文件。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- **sp_add_agent_profile**用于快照复制、事务复制和合并复制。  
+ **sp_add_agent_profile** 用于快照复制、事务复制和合并复制。  
   
- 自定义代理配置文件与默认代理参数值一起添加。 使用[sp_change_agent_parameter &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-change-agent-parameter-transact-sql.md)更改这些默认值或[sp_add_agent_parameter &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)添加其他参数。  
+ 自定义代理配置文件与默认代理参数值一起添加。 使用 [sp_change_agent_parameter &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-change-agent-parameter-transact-sql.md) 更改这些默认值或 [sp_add_agent_parameter &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md) 添加其他参数。  
   
- 执行**sp_add_agent_profile**时，将为新的自定义配置文件在[MSagent_profiles &#40;transact-sql&#41;](../../relational-databases/system-tables/msagent-profiles-transact-sql.md)表中添加一行，并将此配置文件的关联默认参数添加到[MSagent_parameters &#40;transact-sql&#41;](../../relational-databases/system-tables/msagent-parameters-transact-sql.md)表中。  
+ 执行 **sp_add_agent_profile** 时，将为新的自定义配置文件在 [MSagent_profiles &#40;transact-sql&#41;](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) 表中添加一行，并将此配置文件的关联默认参数添加到 [MSagent_parameters &#40;transact-sql&#41;](../../relational-databases/system-tables/msagent-parameters-transact-sql.md) 表中。  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员才能**sp_add_agent_profile**执行。  
+ 只有 **sysadmin** 固定服务器角色的成员才能 **sp_add_agent_profile**执行。  
   
 ## <a name="see-also"></a>另请参阅  
  [使用复制代理配置文件](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   

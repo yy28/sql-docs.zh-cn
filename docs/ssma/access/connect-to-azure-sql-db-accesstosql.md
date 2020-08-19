@@ -1,4 +1,5 @@
 ---
+description: '连接到 Azure SQL 数据库 (AccessToSQL) '
 title: " (AccessToSQL) 连接到 Azure SQL 数据库 |Microsoft Docs"
 ms.prod: sql
 ms.date: 01/19/2017
@@ -10,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: bf44b236-d9be-41ae-a5fd-bd73038e505f
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: f67bb072ce30117ebab93c3165545b13b6513df9
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 15882852544113881b52f3641e0c85ec684add22
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938866"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418563"
 ---
 # <a name="connect-to-azure-sql-database-accesstosql"></a>连接到 Azure SQL 数据库 (AccessToSQL) 
 使用 "连接到 SQL Azure" 对话框连接到要迁移的 Azure SQL 数据库中的数据库。  
   
-若要访问此对话框，请在 "**文件**" 菜单上，选择 "**连接到 SQL Azure**"。 如果以前已连接，则该命令将**重新连接到 SQL Azure。**  
+若要访问此对话框，请在 " **文件** " 菜单上，选择 " **连接到 SQL Azure**"。 如果以前已连接，则该命令将 **重新连接到 SQL Azure。**  
   
 ## <a name="options"></a>选项  
 **服务器名称**  
   
 选择或输入用于连接到 SQL Azure 的服务器名称。  
   
-**数据库**  
+**Database**  
   
-选择，输入或**浏览**数据库名称。  
+选择，输入或 **浏览** 数据库名称。  
   
 > [!IMPORTANT]  
 > SSMA for Access 不支持连接到 SQL Azure 中的 master 数据库。  
@@ -53,7 +54,7 @@ SSMA 建议将加密连接 SQL Azure。
   
 2.  如果没有数据库，则显示两个菜单项  
   
-    1.  ** (找不到任何数据库) 该数据库**处于禁用状态并始终灰显  
+    1.  ** (找不到任何数据库) 该数据库 ** 处于禁用状态并始终灰显  
   
     2.  创建始终启用的**新数据库**，使用户能够创建新数据库。 单击此菜单项时，将显示 "创建数据库" 对话框，其中包含数据库名称和大小。  
   

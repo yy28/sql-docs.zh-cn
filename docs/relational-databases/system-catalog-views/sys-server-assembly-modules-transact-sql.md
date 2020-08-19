@@ -1,5 +1,6 @@
 ---
-title: sys. server_assembly_modules （Transact-sql） |Microsoft Docs
+description: sys.server_assembly_modules (Transact-SQL)
+title: sys. server_assembly_modules (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -19,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: af799e38-2d16-49b2-bcf5-6f9199af899e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cfbeafd7ef52674adbd8fc6898baf663373b91a9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a1ba39407b55520c91b6a7714ec587a2fc886460
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887885"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419961"
 ---
 # <a name="sysserver_assembly_modules-transact-sql"></a>sys.server_assembly_modules (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  类型为 TA 的服务器级别触发器的每个程序集模块在表中对应一行。 此视图将程序集触发器映射到基础 CLR 实现。 可以将此关系联接到**sys.databases server_triggers**。 该程序集必须加载到**master**数据库中。 元组 (object_id) 是该关系的键。  
+  类型为 TA 的服务器级别触发器的每个程序集模块在表中对应一行。 此视图将程序集触发器映射到基础 CLR 实现。 可以将此关系联接到 **sys.databases server_triggers**。 该程序集必须加载到 **master** 数据库中。 元组 (object_id) 是该关系的键。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -43,7 +44,7 @@ ms.locfileid: "85887885"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [Transact-sql&#41;的目录视图 &#40;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [对象目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  
   
   

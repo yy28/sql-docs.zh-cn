@@ -1,4 +1,5 @@
 ---
+description: " (Azure SQL 数据库的项目设置)  (AccessToSQL) "
 title: " (Azure SQL 数据库)  (AccessToSQL) 的项目设置 |Microsoft Docs"
 ms.prod: sql
 ms.custom: ''
@@ -12,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: bbb8a204-d0e4-4f0b-9709-271feb1f136e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 3dd47039f6bbfaa15eb16776487191a66a17db59
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 9954fe012158526e87bd30512b13eca0314bc00e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937576"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418543"
 ---
 # <a name="project-settings-azure-sql-database-accesstosql"></a> (Azure SQL 数据库的项目设置)  (AccessToSQL) 
 通过 SQL Azure 项目设置，你可以配置要添加到连接对话框中的 Azure SQL 数据库后缀，还允许在 SQL Azure 连接中实现检测信号机制。  
   
-"SQL Azure" 窗格在 "**项目设置**" 和 "**默认项目设置**" 对话框中可用。  
+"SQL Azure" 窗格在 " **项目设置** " 和 " **默认项目设置** " 对话框中可用。  
   
--   使用 "项目设置" 对话框可以设置当前项目的配置选项。 若要访问 SQL Azure 设置，请在 "**工具**" 菜单上选择 "**项目设置**"，单击左侧窗格底部的 "**常规**"，然后选择 " **SQL Azure**"。  
+-   使用 "项目设置" 对话框可以设置当前项目的配置选项。 若要访问 SQL Azure 设置，请在 " **工具** " 菜单上选择 " **项目设置**"，单击左侧窗格底部的 " **常规** "，然后选择 " **SQL Azure**"。  
   
--   使用 "默认项目设置" 对话框可以为所有项目设置配置选项。 若要访问 SQL Azure 设置，请在 "**工具**" 菜单上选择 " **DefaultProject 设置**"，在 "**迁移目标版本**" 组合框中选择 "SQL Azure" 项目类型以访问 SQL Azure 窗格中的设置，单击左窗格底部的 "**常规**"，然后选择 " **SQL Azure**"。  
+-   使用 "默认项目设置" 对话框可以为所有项目设置配置选项。 若要访问 SQL Azure 设置，请在 " **工具** " 菜单上选择 " **DefaultProject 设置**"，在 " **迁移目标版本** " 组合框中选择 "SQL Azure" 项目类型以访问 SQL Azure 窗格中的设置，单击左窗格底部的 " **常规** "，然后选择 " **SQL Azure**"。  
   
 ## <a name="options"></a>选项  
   

@@ -1,5 +1,6 @@
 ---
-title: sys. dm_repl_traninfo （Transact-sql） |Microsoft Docs
+description: sys.dm_repl_traninfo (Transact-SQL)
+title: sys. dm_repl_traninfo (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9602f889c7074bcb8b0f6493168226bc6786c5d6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 13688621c4547f5bc49be2d2385d20973b85f7e9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898667"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419591"
 ---
 # <a name="sysdm_repl_traninfo-transact-sql"></a>sys.dm_repl_traninfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,25 +38,25 @@ ms.locfileid: "85898667"
 |**comp_range_address**|**varbinary(8)**|定义必须跳过的部分回滚范围。|  
 |**textinfo_address**|**varbinary(8)**|缓存的文本信息结构的内存中的地址。|  
 |**fsinfo_address**|**varbinary(8)**|缓存的文件流信息结构的内存中的地址。|  
-|**begin_lsn**|**nvarchar （64）**|事务的开始日志记录的日志序列号 (LSN)。|  
-|**commit_lsn**|**nvarchar （64）**|事务的提交日志记录的 LSN。|  
+|**begin_lsn**|**nvarchar (64) **|事务的开始日志记录的日志序列号 (LSN)。|  
+|**commit_lsn**|**nvarchar (64) **|事务的提交日志记录的 LSN。|  
 |**dbid**|**smallint**|数据库 ID。|  
 |**各**|**int**|事务中复制的命令的 ID。|  
-|**xdesid**|**nvarchar （64）**|事务 ID。|  
+|**xdesid**|**nvarchar (64) **|事务 ID。|  
 |**artcache_table_address**|**varbinary(8)**|上次用于该事务的缓存的项目表结构的内存中的地址。|  
-|服务器|**nvarchar （514）**|服务器名称。|  
+|服务器|**nvarchar (514) **|服务器名称。|  
 |**server_len_in_bytes**|**smallint**|服务器名称的字符长度（字节）。|  
-|**database**|**nvarchar （514）**|数据库名称。|  
+|**database**|**nvarchar (514) **|数据库名称。|  
 |**db_len_in_bytes**|**smallint**|数据库名称的字符长度（字节）。|  
-|**发出**|**nvarchar （514）**|发起事务的服务器的名称。|  
+|**发出**|**nvarchar (514) **|发起事务的服务器的名称。|  
 |**originator_len_in_bytes**|**smallint**|发起事务的服务器的字符长度（字节）。|  
-|**orig_db**|**nvarchar （514）**|发起事务的数据库的名称。|  
+|**orig_db**|**nvarchar (514) **|发起事务的数据库的名称。|  
 |**orig_db_len_in_bytes**|**smallint**|发起事务的数据库的字符长度（字节）。|  
 |**cmds_in_tran**|**int**|当前事务中复制的命令数，用于确定应何时提交逻辑事务。|  
 |**is_boundedupdate_singleton**|**tinyint**|指定唯一列更新是否仅影响单行。|  
-|**begin_update_lsn**|**nvarchar （64）**|唯一列更新中使用的 LSN。|  
-|**delete_lsn**|**nvarchar （64）**|要作为更新的一部分删除的 LSN。|  
-|**last_end_lsn**|**nvarchar （64）**|逻辑事务中的最后一个 LSN。|  
+|**begin_update_lsn**|**nvarchar (64) **|唯一列更新中使用的 LSN。|  
+|**delete_lsn**|**nvarchar (64) **|要作为更新的一部分删除的 LSN。|  
+|**last_end_lsn**|**nvarchar (64) **|逻辑事务中的最后一个 LSN。|  
 |**fcomplete**|**tinyint**|指定命令是否为部分更新。|  
 |**fcompensated**|**tinyint**|指定事务是否包含在部分回滚中。|  
 |**fprocessingtext**|**tinyint**|指定事务是否包含二进制大型数据类型列。|  
@@ -74,7 +75,7 @@ ms.locfileid: "85898667"
  仅为项目缓存中当前加载的复制数据库对象或启用了变更数据捕获的表返回信息。  
   
 ## <a name="see-also"></a>另请参阅  
- [动态管理视图和函数 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [与复制相关的动态管理视图 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)   
  [与变更数据捕获相关的动态管理视图 (Transact-SQL)](https://msdn.microsoft.com/library/2a771d7d-693a-4f56-9227-02cd00e0e200)  
   

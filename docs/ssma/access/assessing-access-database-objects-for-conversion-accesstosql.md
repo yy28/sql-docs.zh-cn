@@ -1,4 +1,5 @@
 ---
+description: '评估 Access 数据库对象的转换 (AccessToSQL) '
 title: 评估 Access 数据库对象的 AccessToSQL) 的转换 (|Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8b9e23d6-da62-437a-8c05-8ad2628b9441
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: d45df17f82bf52d6d059b2efbf69a39cedb949f0
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 6bf9144249bc8707bce9c812da19a07bacc43c68
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934078"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418603"
 ---
 # <a name="assessing-access-database-objects-for-conversion-accesstosql"></a>评估 Access 数据库对象的转换 (AccessToSQL) 
 在加载对象并将数据迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 之前，你应该确定要成功完成多少迁移，以及转换可能需要多长时间。 SSMA 可以创建一个评估报告，该报告显示已成功转换为的对象的百分比， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 语法和时间估计来执行迁移。 SSMA 还使你能够查看导致转换失败的特定问题。  
@@ -37,9 +38,9 @@ ms.locfileid: "87934078"
   
 2.  若要省略单个对象，请清除不想评估的对象旁边的复选框。  
   
-3.  右键单击 "**数据库**"，然后选择 "**创建报表**"。  
+3.  右键单击 " **数据库**"，然后选择 " **创建报表**"。  
   
-    您还可以通过右键单击对象，然后选择 "**创建报表**" 来分析各个对象。  
+    您还可以通过右键单击对象，然后选择 " **创建报表**" 来分析各个对象。  
   
     SSMA 在窗口底部的状态栏中显示进度。 如果 "输出" 窗格可见，还会在 "输出" 窗格中看到消息。  
   
@@ -54,7 +55,7 @@ ms.locfileid: "87934078"
   
 -   "消息" 窗格显示转换的错误、警告和信息性消息，以及执行迁移和各个错误更正步骤的时间估算。  
   
-您应更正错误，然后再次运行评估报告或转换架构。 若要查找错误，请单击 "消息" 窗格中的 "**错误**" 按钮，然后展开每个错误以查看出现错误的对象的列表。 如果单击 "消息" 窗格中的对象，则该对象的所有错误和警告将显示在 "详细信息" 窗格中。  
+您应更正错误，然后再次运行评估报告或转换架构。 若要查找错误，请单击 "消息" 窗格中的 " **错误** " 按钮，然后展开每个错误以查看出现错误的对象的列表。 如果单击 "消息" 窗格中的对象，则该对象的所有错误和警告将显示在 "详细信息" 窗格中。  
   
 ## <a name="next-step"></a>下一步  
 [转换 Access 数据库对象](converting-access-database-objects-accesstosql.md)  

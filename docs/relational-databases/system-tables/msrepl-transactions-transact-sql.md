@@ -1,5 +1,6 @@
 ---
-title: MSrepl_transactions （Transact-sql） |Microsoft Docs
+description: MSrepl_transactions (Transact-SQL)
+title: MSrepl_transactions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: d325288d-47ae-4488-8799-122f7ab43459
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 28d7b5b18eab04d4cdd80cee1a5b853531c5cc01
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 86374a7f826f710ad7eb22a5ec16e8d5941f3c11
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889491"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419101"
 ---
 # <a name="msrepl_transactions-transact-sql"></a>MSrepl_transactions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  每个复制的事务在**MSrepl_transactions**表中各占一行。 此表存储在分发数据库中。  
+  每个复制的事务在 **MSrepl_transactions** 表中各占一行。 此表存储在分发数据库中。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -37,7 +38,7 @@ ms.locfileid: "85889491"
 |**entry_time**|**datetime**|事务进入分发数据库的时间。|  
   
 ## <a name="see-also"></a>另请参阅  
- [Transact-sql&#41;&#40;复制表](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;复制表 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图 (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

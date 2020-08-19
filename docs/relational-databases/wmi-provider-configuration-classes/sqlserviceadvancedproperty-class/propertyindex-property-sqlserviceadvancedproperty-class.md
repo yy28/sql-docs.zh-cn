@@ -1,5 +1,6 @@
 ---
-title: PropertyIndex 属性（SqlServiceAdvancedProperty）
+description: PropertyIndex 属性（SqlServiceAdvancedProperty 类）
+title: 'PropertyIndex 属性 (SqlServiceAdvancedProperty) '
 ms.custom: seo-lt-2019
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b18b45a2-e187-44f5-a8c9-26fd9828b6c6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f36e1beffa864edefc8dd156375deddd74718fe4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6fa6b6e50524e567f97c0475210c059fbdc88ec0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880546"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418683"
 ---
 # <a name="propertyindex-property-sqlserviceadvancedproperty-class"></a>PropertyIndex 属性（SqlServiceAdvancedProperty 类）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -36,11 +37,11 @@ object.PropertyIndex [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- *object*  
+ 对象  
  一个表示高级属性的 [SqlServiceAdvancedProperty 类](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
- 一个**uint32**值，用于指定属于所引用服务的高级属性数组中的高级属性的位置。  
+ 一个 **uint32** 值，用于指定属于所引用服务的高级属性数组中的高级属性的位置。  
   
 ## <a name="remarks"></a>备注  
   

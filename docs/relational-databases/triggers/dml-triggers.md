@@ -1,4 +1,5 @@
 ---
+description: DML 触发器
 title: DML 触发器 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ ms.assetid: 298eafca-e01f-4707-8c29-c75546fcd6b0
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e1475b0b2145d40f22760edb5a23e040cb9fef58
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 27776324d94176619c25acbeefb3b6bd901d8a2a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757597"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418931"
 ---
 # <a name="dml-triggers"></a>DML 触发器
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -63,7 +64,7 @@ ms.locfileid: "85757597"
 |执行|晚于：<br /><br /> 约束处理<br /><br /> 声明性引用操作<br /><br /> 创建**插入的** 和 **删除的** 表<br /><br /> 触发操作|之前：约束处理<br /><br /> 代替：触发操作<br /><br /> 之后：创建  **插入的** 和 **删除的** 表|  
 |执行顺序|可指定第一个和最后一个执行|不适用|  
 |**插入的**和 **删除的**表中的 **varchar(max)** 、 **nvarchar(max)** 和 **varbinary(max)** 列引用|允许|允许|  
-|**插入的**和 **删除的**表中的 **text** 、 **ntext** 和 **image** 列引用。|不允许|允许|  
+|**插入的**和 **删除的**表中的 **text** 、 **ntext** 和 **image** 列引用。|不允许|然后用户才能访问|  
   
  CLR 触发器  
  CLR 触发器可以是 AFTER 触发器或 INSTEAD OF 触发器。 CLR 触发器还可以是 DDL 触发器。 CLR 触发器将执行在托管代码（在 .NET Framework 中创建并在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中上载的程序集的成员）中编写的方法，而不用执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]存储过程。  

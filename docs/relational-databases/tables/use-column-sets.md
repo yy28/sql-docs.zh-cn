@@ -1,4 +1,5 @@
 ---
+description: 使用列集
 title: 使用列集 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2015
@@ -14,12 +15,12 @@ ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a45bfb98fa5b8d5a9ce5c640d07c3c13ab7d5284
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 6082c8ffbdf2a2eaba1d24f64a85cfcbed393984
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396166"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418971"
 ---
 # <a name="use-column-sets"></a>使用列集
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -110,9 +111,9 @@ GO
  在本示例中，没有为 `i`列指定值，但插入了 `0` 值。  
   
 ## <a name="using-the-sql_variant-data-type"></a>使用 sql_variant 数据类型  
- **sql_variant** 日期类型可以存储多种不同的数据类型，如 **int** **char** 和 **date**。 列集会输出数据类型信息（例如与 **sql_variant** 值关联的小数位数、精度以及区域设置信息）作为生成的 XML 列中的属性。 如果尝试在自定义生成的 XML 语句中将这些属性作为对列集的插入或更新操作的输入提供，则其中一些属性是必需的，并会为一些属性分配默认值。 下表列出数据类型以及在未提供值时服务器所生成的默认值。  
+ **sql_variant** 日期类型可以存储多种不同的数据类型，如 **int****char** 和 **date**。 列集会输出数据类型信息（例如与 **sql_variant** 值关联的小数位数、精度以及区域设置信息）作为生成的 XML 列中的属性。 如果尝试在自定义生成的 XML 语句中将这些属性作为对列集的插入或更新操作的输入提供，则其中一些属性是必需的，并会为一些属性分配默认值。 下表列出数据类型以及在未提供值时服务器所生成的默认值。  
   
-|数据类型|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|最大长度|Precision|缩放|  
+|数据类型|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|最大长度|精度|缩放|  
 |---------------|----------------|-----------------------|-------------------------|---------------|--------------------|---------------|-----------|  
 |**char**、 **varchar**、 **binary**|-1|'Default'|0|0|8000|不适用**|不适用|  
 |**nvarchar**|-1|'Default'|0|0|4000|不适用|不适用|  

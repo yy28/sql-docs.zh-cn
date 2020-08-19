@@ -1,4 +1,5 @@
 ---
+description: '访问清单架构 (AccessToSQL) '
 title: 访问清单架构 (AccessToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -36,18 +37,18 @@ helpviewer_keywords:
 ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: caf6c1045b02a84cf2dec0aba56c5c1c050277c1
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 593c36c193b95d1484f3d478018992ea130d5417
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934148"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418633"
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>访问清单架构 (AccessToSQL) 
 以下各节描述了在将访问架构导出到时由 SSMA 创建的表 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="databases"></a>数据库  
-数据库元数据将导出到**SSMA_Access_InventoryDatabases**表。 此表包含以下列：  
+数据库元数据将导出到 **SSMA_Access_InventoryDatabases** 表。 此表包含以下列：  
   
 |列名|数据类型|说明|  
 |---------------|-------------|---------------|  
@@ -72,7 +73,7 @@ ms.locfileid: "87934148"
 |**QueryTimeout**|**int**|数据库的已配置 ODBC 查询超时值（以秒为单位）。 默认值为 60 秒。|  
   
 ## <a name="tables"></a>表  
-表元数据将导出到**SSMA_Access_InventoryTables**表。 此表包含以下列：  
+表元数据将导出到 **SSMA_Access_InventoryTables** 表。 此表包含以下列：  
   
 |列名|数据类型|说明|  
 |---------------|-------------|---------------|  
@@ -85,23 +86,23 @@ ms.locfileid: "87934148"
 |**ExternalSource**|**nvarchar(4000)**|与表关联的数据源（如果有）。 如果表已链接，则它具有在此字段中指定的外部数据源。|  
   
 ## <a name="columns"></a>列  
-列元数据将导出到**SSMA_Access_InventoryColumns**表。 此表包含以下列：  
+列元数据将导出到 **SSMA_Access_InventoryColumns** 表。 此表包含以下列：  
   
 |列名|数据类型|说明|  
 |---------------|-------------|---------------|  
 |**数据库 ID**|**uniqueidentifier**|标识包含此列的数据库。|  
 |**TableId**|**uniqueidentifier**|标识包含此列的表。|  
-|**ColumnId**|**int**|用于标识列的递增整数。 **ColumnId**是表的主键。|  
+|**ColumnId**|**int**|用于标识列的递增整数。 **ColumnId** 是表的主键。|  
 |**ColumnName**|**nvarchar(4000)**|列的名称。|  
 |**IsNullable**|**bit**|指定列是否可以包含 null 值。 如果值为1，则列可以包含 null 值。 如果该值为0，则列不能包含 null 值。 请注意，验证规则还可用于防止 null 值。|  
-|**DataType**|**nvarchar(4000)**|列的访问数据类型，例如**文本**或**Long**。|  
+|**DataType**|**nvarchar(4000)**|列的访问数据类型，例如 **文本** 或 **Long**。|  
 |**IsAutoIncrement**|**bit**|指定列是否自动增加整数值。 如果值为1，则整数会自动递增。|  
 |**序号**|**smallint**|表中列的顺序（从零开始）。|  
 |**值**|**nvarchar(4000)**|列的默认值。|  
 |**有效性**|**nvarchar(4000)**|用于验证在列中添加或更新的数据的规则。|  
   
 ## <a name="indexes"></a>索引  
-索引元数据将导出到**SSMA_Access_InventoryIndexes**表。 此表包含以下列：  
+索引元数据将导出到 **SSMA_Access_InventoryIndexes** 表。 此表包含以下列：  
   
 |列名|数据类型|说明|  
 |---------------|-------------|---------------|  
@@ -115,7 +116,7 @@ ms.locfileid: "87934148"
 |**IsClustered**|**bit**|指定索引是否为聚集索引。 聚集索引对数据的物理存储重新排序。 一个表只能有一个聚集索引。|  
   
 ## <a name="foreign-keys"></a>Foreign Keys  
-外键元数据将导出到**SSMA_Access_InventoryForeignKeys**表。 此表包含以下列：  
+外键元数据将导出到 **SSMA_Access_InventoryForeignKeys** 表。 此表包含以下列：  
   
 |列名|数据类型|说明|  
 |---------------|-------------|---------------|  
@@ -131,7 +132,7 @@ ms.locfileid: "87934148"
 |**IsEnforced**|**bit**|指定强制实施外键约束。|  
   
 ## <a name="queries"></a>查询  
-查询元数据将导出到**SSMA_Access_InventoryQueries**表。 此表包含以下列：  
+查询元数据将导出到 **SSMA_Access_InventoryQueries** 表。 此表包含以下列：  
   
 |列名|数据类型|说明|  
 |---------------|-------------|---------------|  
@@ -140,11 +141,11 @@ ms.locfileid: "87934148"
 |**QueryName**|**nvarchar(4000)**|查询的名称。|  
 |**QueryText**|**nvarchar(4000)**|SQL 查询代码，如 SELECT 语句。|  
 |**IsUpdateable**|**bit**|指定查询是可更新还是只读。|  
-|**QueryType**|**nvarchar(4000)**|指定查询的类型，例如**Select**或**SetOperation**。|  
+|**QueryType**|**nvarchar(4000)**|指定查询的类型，例如 **Select** 或 **SetOperation**。|  
 |**ExternalSource**|**nvarchar(4000)**|如果查询引用外部数据源，则这是查询使用的连接字符串。|  
   
 ## <a name="forms"></a>窗体  
-表单元数据将导出到**SSMA_Access_InventoryForms**表。 此表包含以下列：  
+表单元数据将导出到 **SSMA_Access_InventoryForms** 表。 此表包含以下列：  
   
 |列名|数据类型|说明|  
 |---------------|-------------|---------------|  
@@ -153,7 +154,7 @@ ms.locfileid: "87934148"
 |**FormName**|**nvarchar(4000)**|窗体的名称。|  
   
 ## <a name="macros"></a>宏  
-宏元数据将导出到**SSMA_Access_InventoryMacros**表。 此表包含以下列：  
+宏元数据将导出到 **SSMA_Access_InventoryMacros** 表。 此表包含以下列：  
   
 |列名|数据类型|说明|  
 |---------------|-------------|---------------|  
@@ -162,7 +163,7 @@ ms.locfileid: "87934148"
 |**MacroName**|**nvarchar(4000)**|宏的名称。|  
   
 ## <a name="reports"></a>报表  
-报表元数据将导出到**SSMA_Access_InventoryReports**表。 此表包含以下列：  
+报表元数据将导出到 **SSMA_Access_InventoryReports** 表。 此表包含以下列：  
   
 |列名|数据类型|说明|  
 |---------------|-------------|---------------|  
@@ -171,7 +172,7 @@ ms.locfileid: "87934148"
 |**ReportName**|**nvarchar(4000)**|报表的名称。|  
   
 ## <a name="modules"></a>模块  
-模块元数据将导出到**SSMA_Access_InventoryModules**表。 此表包含以下列：  
+模块元数据将导出到 **SSMA_Access_InventoryModules** 表。 此表包含以下列：  
   
 |列名|数据类型|说明|  
 |---------------|-------------|---------------|  

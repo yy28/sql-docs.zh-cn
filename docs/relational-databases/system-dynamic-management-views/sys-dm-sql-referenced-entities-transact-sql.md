@@ -1,5 +1,6 @@
 ---
-title: sys. dm_sql_referenced_entities （Transact-sql） |Microsoft Docs
+description: sys.dm_sql_referenced_entities (Transact-SQL)
+title: sys. dm_sql_referenced_entities (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/01/2019
 ms.prod: sql
@@ -20,18 +21,18 @@ ms.assetid: 077111cb-b860-4d61-916f-bac5d532912f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5acf2b0afd2285025112d6e3f224a5f44241a0b8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f219091eb016dddbf0f38932146a57cbd0a0a7b3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85634937"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419601"
 ---
 # <a name="sysdm_sql_referenced_entities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-为中指定的引用实体的定义中的名称引用的每个用户定义实体返回一行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 当一个用户定义的实体（称为 "*被引用的实体*"）出现在另一个用户定义实体（称为 "*引用实体*"）的持久化 SQL 表达式中时，将创建两个实体之间的依赖关系。 例如，如果存储过程是指定的引用实体，则此函数会返回该存储过程中引用的所有用户定义实体，例如表、视图、用户定义类型 (UDT) 或其他存储过程。  
+为中指定的引用实体的定义中的名称引用的每个用户定义实体返回一行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 当一个用户定义的实体（称为 " *被引用的实体*"）出现在另一个用户定义实体（称为 " *引用实体*"）的持久化 SQL 表达式中时，将创建两个实体之间的依赖关系。 例如，如果存储过程是指定的引用实体，则此函数会返回该存储过程中引用的所有用户定义实体，例如表、视图、用户定义类型 (UDT) 或其他存储过程。  
   
  可以使用此动态管理函数报告指定的引用实体引用的以下类型的实体：  
   
@@ -64,24 +65,24 @@ sys.dm_sql_referenced_entities (
 }  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  [ *schema_name*。 ] *referencing_entity_name*  
  是引用实体的名称。 当引用类为 OBJECT 时，需要*schema_name* 。  
   
- *schema_name. referencing_entity_name*为**nvarchar （517）**。  
+ *schema_name referencing_entity_name* 为 **nvarchar (517) **。  
   
  *<referencing_class>* ：： = {OBJECT |DATABASE_DDL_TRIGGER |SERVER_DDL_TRIGGER}  
  指定的引用实体的类。 每个语句只能指定一个类。  
   
- *<referencing_class>* 为**nvarchar （60）**。  
+ *<referencing_class>* 为 **nvarchar (60) **。  
   
 ## <a name="table-returned"></a>返回的表  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |referencing_minor_id|**int**|引用实体为列时的列 ID；否则为 0。 不可为 null。|  
-|referenced_server_name|**sysname**|被引用的实体的服务器的名称。<br /><br /> 此列是为通过指定由四个部分组成的有效名称所生成的跨服务器依赖关系填充的。 有关多部分名称的信息，请参阅[Transact-sql 语法约定 &#40;transact-sql&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。<br /><br /> 对于非绑定到架构的依赖关系，如果引用实体时没有指定由四个部分组成的名称，此列为 NULL。<br /><br /> 对于绑定到架构的实体，此值为 NULL，因为它们必须位于同一个数据库中，因此只能使用由两个部分组成的名称（*schema*）来定义它们。|  
-|referenced_database_name|**sysname**|被引用的实体的数据库的名称。<br /><br /> 此列是为通过指定由三个部分或四个部分组成的有效名称生成的跨数据库或跨服务器引用填充的。<br /><br /> 对于非绑定到架构的引用，当使用由一个部分或两个部分组成的名称指定时，此列为 NULL。<br /><br /> 对于绑定到架构的实体，此值为 NULL，因为它们必须位于同一个数据库中，因此只能使用由两个部分组成的名称（*schema*）来定义它们。|  
+|referenced_server_name|**sysname**|被引用的实体的服务器的名称。<br /><br /> 此列是为通过指定由四个部分组成的有效名称所生成的跨服务器依赖关系填充的。 有关多部分名称的信息，请参阅 [Transact-sql 语法约定 &#40;transact-sql&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。<br /><br /> 对于非绑定到架构的依赖关系，如果引用实体时没有指定由四个部分组成的名称，此列为 NULL。<br /><br /> 对于绑定到架构的实体，此值为 NULL，因为它们必须在同一数据库中，因此只能使用由两部分组成 (*schema*) 名称进行定义。|  
+|referenced_database_name|**sysname**|被引用的实体的数据库的名称。<br /><br /> 此列是为通过指定由三个部分或四个部分组成的有效名称生成的跨数据库或跨服务器引用填充的。<br /><br /> 对于非绑定到架构的引用，当使用由一个部分或两个部分组成的名称指定时，此列为 NULL。<br /><br /> 对于绑定到架构的实体，此值为 NULL，因为它们必须在同一数据库中，因此只能使用由两部分组成 (*schema*) 名称进行定义。|  
 |referenced_schema_name|**sysname**|被引用的实体所属的架构。<br /><br /> 对于非绑定到架构的引用，如果实体被引用时没有指定架构名称，此列为 NULL。<br /><br /> 对于绑定到架构的引用，此列永远不会为 NULL。|  
 |referenced_entity_name|**sysname**|被引用的实体的名称。 不可为 null。|  
 |referenced_minor_name|**sysname**|引用的实体是列时是列名；否则是 NULL。 例如，referenced_minor_name 在列出所引用的实体自身的行中是 NULL。<br /><br /> 当列在引用实体中按名称标识时，或者当 SELECT * 语句中使用了父实体时，被引用的实体为列。|  
@@ -90,16 +91,16 @@ sys.dm_sql_referenced_entities (
 |referenced_class|**tinyint**|被引用的实体的类。<br /><br /> 1 = 对象或列<br /><br /> 6 = 类型<br /><br /> 10 = XML 架构集合<br /><br /> 21 = 分区函数|  
 |referenced_class_desc|**nvarchar(60)**|对被引用的实体的类的说明。<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION|  
 |is_caller_dependent|**bit**|指示被引用的实体的架构绑定发生于运行时，因此实体 ID 的解析依赖于调用方的架构。 当被引用的实体为存储过程、扩展存储过程或在 EXECUTE 语句中调用的用户定义函数时，将会出现这种情况。<br /><br /> 1 = 被引用的实体依赖调用方并在运行时解析。 在这种情况下，referenced_id 为 NULL。<br /><br /> 0 = 被引用的实体 ID 不依赖调用方。 对于绑定到架构的引用、显式指定架构名称的跨数据库和跨服务器的引用，始终为 0。 例如，对格式为 `EXEC MyDatabase.MySchema.MyProc` 的实体的引用不依赖于调用方。 但是，格式为 `EXEC MyDatabase..MyProc` 的引用依赖调用方。|  
-|is_ambiguous|**bit**|指示引用不明确，可在运行时解析为用户定义函数、用户定义类型（UDT）或对**xml**类型的列的 xquery 引用。 例如，假定语句 `SELECT Sales.GetOrder() FROM Sales.MySales` 是在存储过程中定义的。 在执行存储过程之前，并不知道 `Sales.GetOrder()` 是 `Sales` 架构中的用户定义函数还是带有名为 `Sales` 的方法、类型为 UDT 且名为 `GetOrder()` 的列。<br /><br /> 1 = 引用的是用户定义函数还是使用用户定义类型 (UDT) 方法的列，这一点是不明确的。<br /><br /> 0 = 引用是明确的，或者在调用函数时可以成功绑定实体。<br /><br /> 对于绑定到架构的引用始终为 0。|  
+|is_ambiguous|**bit**|指示引用不明确，可在运行时解析为用户定义函数、用户定义类型 (UDT) 或对 **xml**类型的列的 xquery 引用。 例如，假定语句 `SELECT Sales.GetOrder() FROM Sales.MySales` 是在存储过程中定义的。 在执行存储过程之前，并不知道 `Sales.GetOrder()` 是 `Sales` 架构中的用户定义函数还是带有名为 `Sales` 的方法、类型为 UDT 且名为 `GetOrder()` 的列。<br /><br /> 1 = 引用的是用户定义函数还是使用用户定义类型 (UDT) 方法的列，这一点是不明确的。<br /><br /> 0 = 引用是明确的，或者在调用函数时可以成功绑定实体。<br /><br /> 对于绑定到架构的引用始终为 0。|  
 |is_selected|**bit**|1 = 选中了对象或列。|  
 |is_updated|**bit**|1 = 修改了对象或列。|  
 |is_select_all|**bit**|1 = 对象用于 SELECT * 子句中（仅限对象级）。|  
 |is_all_columns_found|**bit**|1 = 可以找到对象的所有列依赖关系。<br /><br /> 0 = 找不到对象的列依赖关系。|
-|is_insert_all|**bit**|1 = 在没有列列表的 INSERT 语句中使用对象（仅限对象级别）。<br /><br />此列是在 SQL Server 2016 中添加的。|  
+|is_insert_all|**bit**|1 = 对象用于不包含列列表的 INSERT 语句 (仅限对象级) 。<br /><br />此列是在 SQL Server 2016 中添加的。|  
 |is_incomplete|**bit**|1 = 对象或列有绑定错误且不完整。<br /><br />此列已添加到 SQL Server 2016 SP2 中。|
 | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>例外  
  在满足以下任一条件时将返回空的结果集：  
   
 -   指定了系统对象。  
@@ -122,15 +123,15 @@ sys.dm_sql_referenced_entities (
 |实体类型|引用实体|被引用的实体|  
 |-----------------|------------------------|-----------------------|  
 |表|是*|是|  
-|视图|是|是|  
+|查看|是|是|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程**|是|是|  
 |CLR 存储过程|否|是|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 用户定义函数|是|是|  
 |CLR 用户定义函数|否|是|  
 |CLR 触发器（DML 和 DDL）|否|否|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 触发器|是|No|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 数据库级 DDL 触发器|是|No|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 服务器级 DDL 触发器|是|No|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 触发器|是|否|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 数据库级 DDL 触发器|是|否|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 服务器级 DDL 触发器|是|否|  
 |扩展的存储过程|否|是|  
 |队列|否|是|  
 |同义词|否|是|  
@@ -139,7 +140,7 @@ sys.dm_sql_referenced_entities (
 |分区函数|否|是|  
 | &nbsp; | &nbsp; | &nbsp; |
 
- \*仅当表引用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 计算列、CHECK 约束或 DEFAULT 约束的定义中的模块、用户定义类型或 XML 架构集合时，才会将该表作为引用实体进行跟踪。  
+ \* 仅当表引用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 计算列、CHECK 约束或 DEFAULT 约束的定义中的模块、用户定义类型或 XML 架构集合时，才会将该表作为引用实体进行跟踪。  
   
  ** 整数值大于 1 的带编号的存储过程将不会作为引用实体或被引用的实体进行跟踪。  
   

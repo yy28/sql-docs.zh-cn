@@ -1,5 +1,6 @@
 ---
-title: sys. query_store_runtime_stats_interval （Transact-sql） |Microsoft Docs
+description: 'sys. query_store_runtime_stats_interval (Transact-sql) '
+title: sys. query_store_runtime_stats_interval (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/23/2019
 ms.prod: sql
@@ -21,14 +22,14 @@ ms.assetid: 2be83785-0569-41a3-88c8-59bfa0932e6e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 12855ba6b035e2034bc3654249714d945ef37d71
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: a03329d3985188dee30acb36220f4f335c9e4e73
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395128"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420001"
 ---
-# <a name="sysquery_store_runtime_stats_interval-transact-sql"></a>sys. query_store_runtime_stats_interval （Transact-sql）
+# <a name="sysquery_store_runtime_stats_interval-transact-sql"></a>sys. query_store_runtime_stats_interval (Transact-sql) 
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   包含有关查询的运行时执行统计信息收集到的每个间隔的开始和结束时间的信息。  
@@ -41,7 +42,7 @@ ms.locfileid: "87395128"
 |**comment**|**nvarchar(32)**|始终为 NULL。|
   
 ## <a name="permissions"></a>权限  
- 需要**VIEW DATABASE STATE**权限。  
+ 需要 **VIEW DATABASE STATE** 权限。  
   
 ## <a name="see-also"></a>另请参阅  
  [sys. database_query_store_options &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   

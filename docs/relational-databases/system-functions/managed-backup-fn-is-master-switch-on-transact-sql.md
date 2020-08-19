@@ -1,5 +1,6 @@
 ---
-title: managed_backup fn_is_master_switch_on （Transact-sql） |Microsoft Docs
+description: 'managed_backup fn_is_master_switch_on (Transact-sql) '
+title: managed_backup fn_is_master_switch_on (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,13 +21,14 @@ helpviewer_keywords:
 ms.assetid: e8c2108d-b104-46cb-9645-a15f46112c86
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a697cff22257c49774c91dc0b5c646034e34fba1
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: b73778128e18d2937e2866ba697ab297698f6574
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053413"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419471"
 ---
-# <a name="managed_backupfn_is_master_switch_on-transact-sql"></a>managed_backup fn_is_master_switch_on （Transact-sql）
+# <a name="managed_backupfn_is_master_switch_on-transact-sql"></a>managed_backup fn_is_master_switch_on (Transact-sql) 
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   返回 SQL Server 实例上 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 操作的状态。  
@@ -42,8 +44,8 @@ ms.locfileid: "86053413"
 managed_backup.fn_is_master_switch_on ()  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>形参  
- None  
+##  <a name="arguments"></a><a name="Arguments"></a> 参数  
+ 无  
   
 ## <a name="return-type"></a>返回类型  
  **小段**  

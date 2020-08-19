@@ -1,5 +1,6 @@
 ---
-title: sys. fulltext_languages （Transact-sql） |Microsoft Docs
+description: sys.fulltext_languages (Transact-SQL)
+title: sys. fulltext_languages (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,27 +22,27 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 545b729a5d89a258c38d7eb180ee2f3400ebd67c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ab4f793c243671edeaf2684d40b87c40cddaf8cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764713"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420161"
 ---
 # <a name="sysfulltext_languages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中注册了断字符的每种语言在此目录视图中均存在对应的一行。 每一行都显示了语言的 LCID 和名称。 为语言注册断字符后，其其他语言资源（词干分析器、干扰词（非索引字）和同义词库文件）将可用于全文索引/查询操作。 可以在全文查询和全文索引语句中指定**name**或**lcid**的值 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。  
+  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中注册了断字符的每种语言在此目录视图中均存在对应的一行。 每一行都显示了语言的 LCID 和名称。 为语言注册断字符后，其其他语言资源（词干分析器、干扰词 (非索引字) 和同义词库文件）将可用于全文索引/查询操作。 可以在全文查询和全文索引语句中指定 **name** 或 **lcid** 的值 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。  
    
 |列|数据类型|说明|  
 |------------|---------------|-----------------|  
 |**lcid**|**int**|语言的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 区域设置标识符 (LCID)。|  
-|name|**sysname**|是[sys.sys语言](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)的别名值，该别名与**lcid**的值或数字 lcid 的字符串表示形式相对应。|  
+|name|**sysname**|是 [sys.sys语言](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 的别名值，该别名与 **lcid** 的值或数字 lcid 的字符串表示形式相对应。|  
   
 ## <a name="values-returned-for-default-languages"></a>针对默认语言返回的值  
  下表显示在默认情况下为其注册了断字符的语言的值。  
   
-|语言|LCID|  
+|Language|LCID|  
 |--------------|----------|  
 |阿拉伯语|1025|  
 |孟加拉语（印度）|1093|  
@@ -67,7 +68,7 @@ ms.locfileid: "85764713"
 |意大利语|1040|  
 |日语|1041|  
 |卡纳达语|1099|  
-|韩语|1042|  
+|朝鲜语|1042|  
 |拉脱维亚语|1062|  
 |立陶宛语|1063|  
 |马来语（马来西亚）|1086|  
@@ -76,7 +77,7 @@ ms.locfileid: "85764713"
 |中立|0|  
 |挪威语（博克马尔语）|1044|  
 |**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 波兰语|1045|  
-|葡萄牙语(巴西)|1046|  
+|葡萄牙语（巴西）|1046|  
 |葡萄牙语(葡萄牙)|2070|  
 |旁遮普语|1094|  
 |罗马尼亚语|1048|  
@@ -98,7 +99,7 @@ ms.locfileid: "85764713"
 |越南语|1066|  
   
 ## <a name="remarks"></a>备注  
- 若要更新在全文搜索中注册的语言的列表，请使用[sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)"**update_languages**"。  
+ 若要更新在全文搜索中注册的语言的列表，请使用 [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)"**update_languages**"。  
   
 ## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  

@@ -1,5 +1,6 @@
 ---
-title: sysmail_delete_profile_sp （Transact-sql） |Microsoft Docs
+description: sysmail_delete_profile_sp (Transact-SQL)
+title: sysmail_delete_profile_sp (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 71998653-4a02-446d-b6f7-50646a29e8a2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7662330df991745bf46126beb9ce5b7964353246
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 58139a6b9f0471d499c1419f33be28e6a8bbc5f3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890942"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419421"
 ---
 # <a name="sysmail_delete_profile_sp-transact-sql"></a>sysmail_delete_profile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,12 +40,12 @@ sysmail_delete_profile_sp  { [ @profile_id = ] profile_id | [ @profile_name = ] 
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @profile_id = ] profile_id`要删除的配置文件的配置文件 id。 *profile_id*的值为**int**，默认值为 NULL。 必须指定*profile_id*或*profile_name* 。  
+`[ @profile_id = ] profile_id` 要删除的配置文件的配置文件 id。 *profile_id* 的值为 **int**，默认值为 NULL。 必须指定 *profile_id* 或 *profile_name* 。  
   
-`[ @profile_name = ] 'profile_name'`要删除的配置文件的名称。 *profile_name*的默认值为**sysname**，默认值为 NULL。 必须指定*profile_id*或*profile_name* 。  
+`[ @profile_name = ] 'profile_name'` 要删除的配置文件的名称。 *profile_name* 的默认值为 **sysname**，默认值为 NULL。 必须指定 *profile_id* 或 *profile_name* 。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="result-sets"></a>结果集  
  无  
@@ -52,12 +53,12 @@ sysmail_delete_profile_sp  { [ @profile_id = ] profile_id | [ @profile_name = ] 
 ## <a name="remarks"></a>备注  
  删除配置文件不会删除配置文件使用的帐户。  
   
- 此存储过程删除配置文件时，不考虑用户是否有权访问该配置文件。 删除用户的默认专用配置文件或**msdb**数据库的默认公共配置文件时，请小心。 如果没有可用的默认配置文件， **sp_send_dbmail**需要配置文件的名称作为参数。 因此，删除默认配置文件可能会导致对**sp_send_dbmail**的调用失败。 有关详细信息，请参阅[&#40;transact-sql&#41;sp_send_dbmail ](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md)。  
+ 此存储过程删除配置文件时，不考虑用户是否有权访问该配置文件。 删除用户的默认专用配置文件或 **msdb** 数据库的默认公共配置文件时，请小心。 如果没有可用的默认配置文件， **sp_send_dbmail** 需要配置文件的名称作为参数。 因此，删除默认配置文件可能会导致对 **sp_send_dbmail** 的调用失败。 有关详细信息，请参阅 [&#40;transact-sql&#41;sp_send_dbmail ](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md)。  
   
- 存储过程**sysmail_delete_profile_sp**在**msdb**数据库中，由**dbo**架构拥有。 如果当前数据库不是**msdb**，则必须使用由三部分组成的名称来执行该过程。  
+ 存储过程 **sysmail_delete_profile_sp** 在 **msdb** 数据库中，由 **dbo** 架构拥有。 如果当前数据库不是 **msdb**，则必须使用由三部分组成的名称来执行该过程。  
   
 ## <a name="permissions"></a>权限  
- 此过程的执行权限默认授予**sysadmin**固定服务器角色的成员。  
+ 此过程的执行权限默认授予 **sysadmin** 固定服务器角色的成员。  
   
 ## <a name="examples"></a>示例  
  以下示例将删除名为 `AdventureWorks Administrator` 的配置文件。  

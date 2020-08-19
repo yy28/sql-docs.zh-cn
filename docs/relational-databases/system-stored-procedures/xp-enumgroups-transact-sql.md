@@ -1,5 +1,6 @@
 ---
-title: xp_enumgroups （Transact-sql） |Microsoft Docs
+description: xp_enumgroups (Transact-SQL)
+title: xp_enumgroups (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0bd3ed36-e260-469c-a5ff-b033fb9ea59d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c83ca09ff6e519420a8a4f8d077d9b855d9459f4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ae1a698c5b33780417e74d27f20462b6e1e6e4f5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890786"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419281"
 ---
 # <a name="xp_enumgroups-transact-sql"></a>xp_enumgroups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ xp_enumgroups [ 'domain_name' ]
   
 ## <a name="arguments"></a>参数  
  **"** *domain_name* **"**  
- 要枚举其全局组列表的 Windows 域的名称。 *domain_name*的默认值为**sysname**，默认值为 NULL。  
+ 要枚举其全局组列表的 Windows 域的名称。 *domain_name* 的默认值为 **sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -53,7 +54,7 @@ xp_enumgroups [ 'domain_name' ]
 |**comment**|**sysname**|Windows 提供的 Windows 组的说明|  
   
 ## <a name="remarks"></a>备注  
- 如果*domain_name*是运行实例的基于 Windows 的计算机的名称 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，或者未指定域名，则**xp_enumgroups**从运行的计算机枚举本地组 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+ 如果 *domain_name* 是运行实例的基于 Windows 的计算机的名称 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，或者未指定域名，则 **xp_enumgroups** 从运行的计算机枚举本地组 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
  **xp_enumgroups**当的实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 Windows 98 上运行时，不能使用 xp_enumgroups。  
   
@@ -70,8 +71,8 @@ EXEC xp_enumgroups 'sales';
 ## <a name="see-also"></a>另请参阅  
  [sp_grantlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [sp_revokelogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
- [&#40;Transact-sql&#41;系统存储过程](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [&#40;Transact-sql&#41;的常规扩展存储过程](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;系统存储过程 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的常规扩展存储过程 ](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
  [xp_loginconfig &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/xp-loginconfig-transact-sql.md)   
  [xp_logininfo &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/xp-logininfo-transact-sql.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: 设置用于全文筛选器后台程序启动器的服务帐户
 title: 设置用于全文筛选器后台程序启动器的服务帐户
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 4603d4a14461bb05576a6f6ffe34db4968223718
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: db5d05ce1b3712eebbd77d34e8ae0b380e18dcbf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85628941"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420371"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>设置用于全文筛选器后台程序启动器的服务帐户
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,13 +34,13 @@ SQL 全文筛选器后台程序启动器服务是可识别实例的服务，它�
 
 ##  <a name="set-the-service-account"></a><a name="setting"></a> 设置服务帐户  
   
-1.  在“开始”菜单上，指向“所有程序”、展开 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]，再单击“SQL Server 2016 配置管理器”。  
+1.  在“开始”菜单上，指向“所有程序”、展开 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]，再单击“SQL Server 2016 配置管理器”。************  
   
-2.  在“SQL Server 配置管理器”  中，单击“SQL Server 服务”  ，右键单击“SQL 全文筛选器后台程序启动器” **（** _实例名称_ **）** ，然后单击“属性”  。  
+2.  在“SQL Server 配置管理器”中，单击“SQL Server 服务”，右键单击“SQL 全文筛选器后台程序启动器” **（** _实例名称_ **）** ，然后单击“属性”。  
   
-3.  单击此对话框的“登录”  选项卡，选择或输入一个帐户，该帐户用于运行由 SQL 全文筛选器后台程序启动器服务启动的每个进程。  
+3.  单击此对话框的“登录”**** 选项卡，选择或输入一个帐户，该帐户用于运行由 SQL 全文筛选器后台程序启动器服务启动的每个进程。  
   
-4.  关闭此对话框之后，单击“重新启动”  以重新启动 SQL 全文筛选器后台程序启动器服务。  
+4.  关闭此对话框之后，单击“重新启动”**** 以重新启动 SQL 全文筛选器后台程序启动器服务。  
   
 ![SQL 全文筛选器后台程序启动器进程属性](../../relational-databases/search/media/sql-full-text-filter-daemon-launch-process-properties.png)
   

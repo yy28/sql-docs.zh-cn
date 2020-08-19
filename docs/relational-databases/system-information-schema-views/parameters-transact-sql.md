@@ -1,5 +1,6 @@
 ---
-title: PARAMETERS （Transact-sql） |Microsoft Docs
+description: PARAMETERS (Transact-SQL)
+title: 参数 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -19,11 +20,12 @@ ms.assetid: 06ded0ca-7d21-4400-864a-b801e855b257
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3ba42e693487fdf2bc9c7cb9565ee2448d6b3f9b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: cf2d4b38a1bf29b129345c35f5d9bbb1e9a3c5f6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000438"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419381"
 ---
 # <a name="parameters-transact-sql"></a>PARAMETERS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,40 +36,40 @@ ms.locfileid: "86000438"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**SPECIFIC_CATALOG**|**nvarchar （** 128 **）**|以此为参数的例程的目录名称。|  
-|**SPECIFIC_SCHEMA**|**nvarchar （** 128 **）**|以此为参数的例程的架构名称。<br /><br /> <strong> \* \* 重要 \* 说明 \* </strong>不要使用 INFORMATION_SCHEMA 视图来确定对象的架构。 INFORMATION_SCHEMA 视图仅表示对象的元数据的子集。 查找对象架构的唯一可靠方法是查询 sys.databases 目录视图。|  
-|**SPECIFIC_NAME**|**nvarchar （** 128 **）**|以此为参数的例程的名称。|  
+|**SPECIFIC_CATALOG**|**nvarchar (** 128 **) **|以此为参数的例程的目录名称。|  
+|**SPECIFIC_SCHEMA**|**nvarchar (** 128 **) **|以此为参数的例程的架构名称。<br /><br /> <strong> \* \* 重要 \* 说明 \* </strong>不要使用 INFORMATION_SCHEMA 视图来确定对象的架构。 INFORMATION_SCHEMA 视图仅表示对象的元数据的子集。 查找对象架构的唯一可靠方法是查询 sys.databases 目录视图。|  
+|**SPECIFIC_NAME**|**nvarchar (** 128 **) **|以此为参数的例程的名称。|  
 |**ORDINAL_POSITION**|**int**|参数的序号位置从 1 开始。 对于函数的返回值，则为 0。|  
-|**PARAMETER_MODE**|**nvarchar （** 10 **）**|如果是输入参数，则返回 IN；如果是输出参数，则返回 OUT；如果是输入/输出参数，则返回 INOUT。|  
-|**IS_RESULT**|**nvarchar （** 10 **）**|如果指示作为函数的例程的结果，则返回 YES。 否则，返回 NO。|  
-|**AS_LOCATOR**|**nvarchar （** 10 **）**|如果声明为定位器，则返回 YES。 否则，返回 NO。|  
-|**PARAMETER_NAME**|**nvarchar （** 128 **）**|参数的名称。 如果该名称对应于函数的返回值，则为 NULL。|  
-|**DATA_TYPE**|**nvarchar （** 128 **）**|系统提供的数据类型。|  
-|**CHARACTER_MAXIMUM_LENGTH**|**int**|二进制或字符数据类型的最大长度（字符）。<br /><br /> 对于**xml**和大值类型的数据，为-1。 否则，返回 NULL。|  
-|**CHARACTER_OCTET_LENGTH**|**int**|二进制或字符数据类型的最大长度（字节）。<br /><br /> 对于**xml**和大值类型的数据，为-1。 否则，返回 NULL。|  
-|**COLLATION_CATALOG**|**nvarchar （** 128 **）**|始终返回 NULL。|  
-|**COLLATION_SCHEMA**|**nvarchar （** 128 **）**|始终返回 NULL。|  
-|**COLLATION_NAME**|**nvarchar （** 128 **）**|参数排序规则的名称。 如果不是一种字符类型，则返回 NULL。|  
-|**CHARACTER_SET_CATALOG**|**nvarchar （** 128 **）**|参数字符集的编录名称。 如果不是一种字符类型，则返回 NULL。|  
-|**CHARACTER_SET_SCHEMA**|**nvarchar （** 128 **）**|始终返回 NULL。|  
-|**CHARACTER_SET_NAME**|**nvarchar （** 128 **）**|参数字符集的名称。 如果不是一种字符类型，则返回 NULL。|  
+|**PARAMETER_MODE**|**nvarchar (** 10 **) **|如果是输入参数，则返回 IN；如果是输出参数，则返回 OUT；如果是输入/输出参数，则返回 INOUT。|  
+|**IS_RESULT**|**nvarchar (** 10 **) **|如果指示作为函数的例程的结果，则返回 YES。 否则，返回 NO。|  
+|**AS_LOCATOR**|**nvarchar (** 10 **) **|如果声明为定位器，则返回 YES。 否则，返回 NO。|  
+|**PARAMETER_NAME**|**nvarchar (** 128 **) **|参数的名称。 如果该名称对应于函数的返回值，则为 NULL。|  
+|**DATA_TYPE**|**nvarchar (** 128 **) **|系统提供的数据类型。|  
+|**CHARACTER_MAXIMUM_LENGTH**|**int**|二进制或字符数据类型的最大长度（字符）。<br /><br /> 对于 **xml** 和大值类型的数据，为-1。 否则，返回 NULL。|  
+|**CHARACTER_OCTET_LENGTH**|**int**|二进制或字符数据类型的最大长度（字节）。<br /><br /> 对于 **xml** 和大值类型的数据，为-1。 否则，返回 NULL。|  
+|**COLLATION_CATALOG**|**nvarchar (** 128 **) **|始终返回 NULL。|  
+|**COLLATION_SCHEMA**|**nvarchar (** 128 **) **|始终返回 NULL。|  
+|**COLLATION_NAME**|**nvarchar (** 128 **) **|参数排序规则的名称。 如果不是一种字符类型，则返回 NULL。|  
+|**CHARACTER_SET_CATALOG**|**nvarchar (** 128 **) **|参数字符集的编录名称。 如果不是一种字符类型，则返回 NULL。|  
+|**CHARACTER_SET_SCHEMA**|**nvarchar (** 128 **) **|始终返回 NULL。|  
+|**CHARACTER_SET_NAME**|**nvarchar (** 128 **) **|参数字符集的名称。 如果不是一种字符类型，则返回 NULL。|  
 |**NUMERIC_PRECISION**|**tinyint**|近似数字数据、精确数字数据、整数数据或货币数据的精度。 否则，返回 NULL。|  
 |**NUMERIC_PRECISION_RADIX**|**smallint**|近似数字数据、精确数字数据、整数数据或货币数据的精度基数。 否则，返回 NULL。|  
 |**NUMERIC_SCALE**|**tinyint**|近似数字数据、精确数字数据、整数数据或货币数据的小数位数。 否则，返回 NULL。|  
-|**DATETIME_PRECISION**|**smallint**|如果参数类型为**datetime**或**smalldatetime**，则精度（以秒为单位）。 否则，返回 NULL。|  
-|**INTERVAL_TYPE**|**nvarchar （** 30 **）**|NULL。 保留供将来使用。|  
-|**INTERVAL_PRECISION**|**smallint**|NULL。 保留供将来使用。|  
-|**USER_DEFINED_TYPE_CATALOG**|**nvarchar （** 128 **）**|NULL。 保留供将来使用。|  
-|**USER_DEFINED_TYPE_SCHEMA**|**nvarchar （** 128 **）**|NULL。 保留供将来使用。|  
-|**USER_DEFINED_TYPE_NAME**|**nvarchar （** 128 **）**|NULL。 保留供将来使用。|  
-|**SCOPE_CATALOG**|**nvarchar （** 128 **）**|NULL。 保留供将来使用。|  
-|**SCOPE_SCHEMA**|**nvarchar （** 128 **）**|NULL。 保留供将来使用。|  
-|**SCOPE_NAME**|**nvarchar （** 128 **）**|NULL。 保留供将来使用。|  
+|**DATETIME_PRECISION**|**smallint**|如果参数类型为 **datetime** 或 **smalldatetime**，则精度（以秒为单位）。 否则，返回 NULL。|  
+|**INTERVAL_TYPE**|**nvarchar (** 30 **) **|NULL。 留待将来使用。|  
+|**INTERVAL_PRECISION**|**smallint**|NULL。 留待将来使用。|  
+|**USER_DEFINED_TYPE_CATALOG**|**nvarchar (** 128 **) **|NULL。 留待将来使用。|  
+|**USER_DEFINED_TYPE_SCHEMA**|**nvarchar (** 128 **) **|NULL。 留待将来使用。|  
+|**USER_DEFINED_TYPE_NAME**|**nvarchar (** 128 **) **|NULL。 留待将来使用。|  
+|**SCOPE_CATALOG**|**nvarchar (** 128 **) **|NULL。 留待将来使用。|  
+|**SCOPE_SCHEMA**|**nvarchar (** 128 **) **|NULL。 留待将来使用。|  
+|**SCOPE_NAME**|**nvarchar (** 128 **) **|NULL。 留待将来使用。|  
   
 ## <a name="see-also"></a>另请参阅  
  [Transact-sql&#41;的系统视图 &#40;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
- [&#40;Transact-sql&#41;的信息架构视图](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
- [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
+ [&#40;Transact-sql&#41;的信息架构视图 ](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
+ [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys.parameters (Transact-SQL)](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)  
   

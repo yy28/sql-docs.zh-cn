@@ -1,5 +1,6 @@
 ---
-title: managed_backup fn_get_health_status （Transact-sql） |Microsoft Docs
+description: 'managed_backup fn_get_health_status (Transact-sql) '
+title: managed_backup fn_get_health_status (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,13 +21,14 @@ helpviewer_keywords:
 ms.assetid: b376711d-444a-4b5e-b483-8df323b4e31f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f5f155837f1e5dd9057c376152ceae56bce33d74
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 4aa10efc95af42c7793fb37b49a72061353b0ee0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053430"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419551"
 ---
-# <a name="managed_backupfn_get_health_status-transact-sql"></a>managed_backup fn_get_health_status （Transact-sql）
+# <a name="managed_backupfn_get_health_status-transact-sql"></a>managed_backup fn_get_health_status (Transact-sql) 
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   返回 0 行、一行或多行的表，行中是扩展事件在指定的一段时间内报告的错误总数。  
@@ -42,7 +44,7 @@ ms.locfileid: "86053430"
 managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 'time_2')  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>形参  
+##  <a name="arguments"></a><a name="Arguments"></a> 参数  
  [@begin_time]  
  计算错误总数的起始时间。  @begin_time参数为日期时间。 默认值为 NULL。 当值为 NULL 时，此函数将处理当前时间最长 30 分钟之前报告的事件。  
   
@@ -61,13 +63,13 @@ managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 
 |number_of_backup_loops|int|备份代理扫描所有配置了 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的数据库的次数。|  
 |number_of_retention_loops|int|扫描数据库以评估所设置的保持期的次数。|  
   
-## <a name="best-practices"></a>最佳实践  
- 这些聚合的计数可用于监视系统运行状况。 例如，如果 number_of_retention_loops 列在 30 分钟内为 0，则保持管理可能占用较长时间，甚至没有正常工作。 非零错误列可能表示有问题，应检查扩展事件日志以了解任何问题。 或者，使用存储过程**sp_get_backup_diagnostics managed_backup**获取扩展事件的列表以查找错误的详细信息。  
+## <a name="best-practices"></a>最佳方案  
+ 这些聚合的计数可用于监视系统运行状况。 例如，如果 number_of_retention_loops 列在 30 分钟内为 0，则保持管理可能占用较长时间，甚至没有正常工作。 非零错误列可能表示有问题，应检查扩展事件日志以了解任何问题。 或者，使用存储过程 **sp_get_backup_diagnostics managed_backup** 获取扩展事件的列表以查找错误的详细信息。  
   
 ## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>权限  
- 需要对函数的**SELECT**权限。  
+ 需要对函数的 **SELECT** 权限。  
   
 ## <a name="examples"></a>示例  
   

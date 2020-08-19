@@ -1,5 +1,6 @@
 ---
-title: 域（Transact-sql） |Microsoft Docs
+description: DOMAINS (Transact-SQL)
+title: 域 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ ms.assetid: f0b734d5-816f-4b10-a60c-615931b515c2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1c47c9e1f03436923332a6f3beee49a0b4a6ef43
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4ae71f473dfce95d78b8ec4be60c31e73ea4f0d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85647480"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419371"
 ---
 # <a name="domains-transact-sql"></a>DOMAINS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,30 +36,30 @@ ms.locfileid: "85647480"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**DOMAIN_CATALOG**|**nvarchar （** 128 **）**|包含该别名数据类型的数据库。|  
-|**DOMAIN_SCHEMA**|**nvarchar （** 128 **）**|包含别名数据类型的架构名称。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** 不要使用 INFORMATION_SCHEMA 视图来确定数据类型的架构。 查找类型的架构的唯一可靠方式是使用 TYPEPROPERTY 函数。|  
+|**DOMAIN_CATALOG**|**nvarchar (** 128 **) **|包含该别名数据类型的数据库。|  
+|**DOMAIN_SCHEMA**|**nvarchar (** 128 **) **|包含别名数据类型的架构名称。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** 不要使用 INFORMATION_SCHEMA 视图来确定数据类型的架构。 查找类型的架构的唯一可靠方式是使用 TYPEPROPERTY 函数。|  
 |**DOMAIN_NAME**|**sysname**|别名数据类型。|  
 |**DATA_TYPE**|**sysname**|系统提供的数据类型。|  
-|**CHARACTER_MAXIMUM_LENGTH**|**int**|二进制数据、字符数据或文本和图像数据的最大长度（字符）。<br /><br /> 对于**xml**和大值类型的数据，为-1。 否则，返回 NULL。 有关详细信息，请参阅[数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)。|  
-|**CHARACTER_OCTET_LENGTH**|**int**|二进制数据、字符数据或文本和图像数据的最大长度（字节）。<br /><br /> 对于**xml**和大值类型的数据，为-1。 否则，返回 NULL。|  
-|**COLLATION_CATALOG**|**varchar （** 6 **）**|始终返回 NULL。|  
-|**COLLATION_SCHEMA**|**varchar （** 3 **）**|始终返回 NULL。|  
-|**COLLATION_NAME**|**nvarchar （** 128 **）**|如果列为字符数据或**文本**数据类型，则返回排序顺序的唯一名称。 否则，返回 NULL。|  
-|**CHARACTER_SET_CATALOG**|**varchar （** 6 **）**|返回**master**。 如果该列是字符数据或**文本**数据类型，则指示字符集所在的数据库。 否则，返回 NULL。|  
-|**CHARACTER_SET_SCHEMA**|**varchar （** 3 **）**|始终返回 NULL。|  
-|**CHARACTER_SET_NAME**|**nvarchar （** 128 **）**|如果此列为字符数据或**文本**数据类型，则返回字符集的唯一名称。 否则，返回 NULL。|  
+|**CHARACTER_MAXIMUM_LENGTH**|**int**|二进制数据、字符数据或文本和图像数据的最大长度（字符）。<br /><br /> 对于 **xml** 和大值类型的数据，为-1。 否则，返回 NULL。 有关详细信息，请参阅[数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)。|  
+|**CHARACTER_OCTET_LENGTH**|**int**|二进制数据、字符数据或文本和图像数据的最大长度（字节）。<br /><br /> 对于 **xml** 和大值类型的数据，为-1。 否则，返回 NULL。|  
+|**COLLATION_CATALOG**|**varchar (** 6 **) **|始终返回 NULL。|  
+|**COLLATION_SCHEMA**|**varchar (** 3 **) **|始终返回 NULL。|  
+|**COLLATION_NAME**|**nvarchar (** 128 **) **|如果列为字符数据或 **文本** 数据类型，则返回排序顺序的唯一名称。 否则，返回 NULL。|  
+|**CHARACTER_SET_CATALOG**|**varchar (** 6 **) **|返回 **master**。 如果该列是字符数据或 **文本** 数据类型，则指示字符集所在的数据库。 否则，返回 NULL。|  
+|**CHARACTER_SET_SCHEMA**|**varchar (** 3 **) **|始终返回 NULL。|  
+|**CHARACTER_SET_NAME**|**nvarchar (** 128 **) **|如果此列为字符数据或 **文本** 数据类型，则返回字符集的唯一名称。 否则，返回 NULL。|  
 |**NUMERIC_PRECISION**|**tinyint**|近似数字数据、精确数字数据、整数数据或货币数据的精度。 否则，返回 NULL。|  
 |**NUMERIC_PRECISION_RADIX**|**smallint**|近似数字数据、精确数字数据、整数数据或货币数据的精度基数。 否则，返回 NULL。|  
 |**NUMERIC_SCALE**|**tinyint**|近似数字数据、精确数字数据、整数数据或货币数据的小数位数。 否则，返回 NULL。|  
 |**DATETIME_PRECISION**|**smallint**|**Datetime**和 ISO **interval**数据类型的子类型代码。 对于其他数据类型，该列返回 NULL。|  
-|**DOMAIN_DEFAULT**|**nvarchar （** 4000 **）**|定义语句的实际文本 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。|  
+|**DOMAIN_DEFAULT**|**nvarchar (** 4000 **) **|定义语句的实际文本 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。|  
   
 ## <a name="see-also"></a>另请参阅  
  [Transact-sql&#41;的系统视图 &#40;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
- [&#40;Transact-sql&#41;的信息架构视图](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;的信息架构视图 ](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys.sys字符集 &#40;Transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-syscharsets-transact-sql.md)   
  [sys.sql_modules (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
- [sys.configurations &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
+ [sys.configurations (Transact-SQL)](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
  [sys.types (Transact-SQL)](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)  
   
   

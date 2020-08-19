@@ -1,5 +1,6 @@
 ---
-title: MSpublications （Transact-sql） |Microsoft Docs
+description: MSpublications (Transact-SQL)
+title: MSpublications (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 7a0b3457-7265-4f24-a255-7f055d908f20
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b26ba7da6099f402aa8902a6ce2dafda8a4d2d71
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 99cf9a95cb61cc0efcd40c29019c038248b6102d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889585"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419131"
 ---
 # <a name="mspublications-transact-sql"></a>MSpublications (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  发布服务器复制的每个发布在**MSpublications**表中各占一行。 此表存储在分发数据库中。  
+  发布服务器复制的每个发布在 **MSpublications** 表中各占一行。 此表存储在分发数据库中。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -42,17 +43,17 @@ ms.locfileid: "85889585"
 |**allow_push**|**bit**|指示是否可为给定发布创建推送订阅。|  
 |**allow_pull**|**bit**|指示是否可为给定发布创建请求订阅。|  
 |**allow_anonymous**|**bit**|指示是否可为给定发布创建匿名订阅。|  
-|**2008**|**nvarchar(255)**|发布的说明。|  
-|**vendor_name**|**nvarchar （100）**|供应商的名称（如果发布服务器不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库）。|  
+|description|**nvarchar(255)**|发布的说明。|  
+|**vendor_name**|**nvarchar (100) **|供应商的名称（如果发布服务器不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库）。|  
 |**保留**|**int**|发布的保持期（以小时为单位）。|  
-|**sync_method**|**int**|同步方法包括：<br /><br /> **0** = 本机（生成所有表的本机模式大容量复制输出）。<br /><br /> **1** = 字符（生成所有表的字符模式大容量复制输出）。<br /><br /> **3** = 并发（生成所有表的本机模式大容量复制输出，但在快照过程中并不锁定表）。<br /><br /> **4** = Concurrent_c （生成所有表的字符模式大容量复制输出，但在快照过程中并不锁定表）<br /><br /> 值**3**和**4**可用于事务复制和合并复制，但不适用于快照复制。|  
-|**allow_subscription_copy**|**bit**|启用或禁用对订阅此发布的订阅数据库的复制功能。 **0**表示禁用复制， **1**表示启用复制。|  
+|**sync_method**|**int**|同步方法包括：<br /><br /> **0** = 本机 (生成) 的所有表的本机模式大容量复制输出。<br /><br /> **1** = 字符 (生成) 的所有表的字符模式大容量复制输出。<br /><br /> **3** = 并发 (生成所有表的本机模式大容量复制输出，但在快照) 期间不锁定表。<br /><br /> **4** = Concurrent_c (生成所有表的字符模式大容量复制输出，但在快照过程中并不锁定表) <br /><br /> 值 **3** 和 **4** 可用于事务复制和合并复制，但不适用于快照复制。|  
+|**allow_subscription_copy**|**bit**|启用或禁用对订阅此发布的订阅数据库的复制功能。 **0** 表示禁用复制， **1** 表示启用复制。|  
 |**thirdparty_options**|**int**|指定是否禁止在中的复制文件夹中显示发布 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ：<br /><br /> **0** = 在的 Replication 文件夹中显示异类发布 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。<br /><br /> **1** = 禁止在的 Replication 文件夹中显示异类发布 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。|  
 |**allow_queued_tran**|**bit**|指定发布是否允许排队更新：<br /><br /> **0 =** 发布未排队。<br /><br /> **1** = 发布已排队。|  
 |**options**|**int**|没有此版本的信息。|  
   
 ## <a name="see-also"></a>另请参阅  
- [Transact-sql&#41;&#40;复制表](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;复制表 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图 (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: 创建 CHECK 约束
 title: 创建 CHECK 约束 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/28/2017
@@ -17,12 +18,12 @@ ms.assetid: b8756304-9454-4d39-996a-64516831b7df
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b3c631e4c733c87662ab1a582f1388913f0c2b3f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 177caf959cd9f957525dd50a0b63a0dc2b304115
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753837"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419041"
 ---
 # <a name="create-check-constraints"></a>创建 CHECK 约束
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,9 +53,9 @@ ms.locfileid: "85753837"
   
 #### <a name="to-create-a-new-check-constraint"></a>创建新的 CHECK 约束  
   
-1.  在  “对象资源管理器”中，展开要为其添加 CHECK 约束的表，右键单击  “约束”，然后单击  “新建约束”。  
+1.  在****“对象资源管理器”中，展开要为其添加 CHECK 约束的表，右键单击****“约束”，然后单击****“新建约束”。  
   
-2.  在“CHECK 约束”对话框中，单击“表达式”字段，然后单击省略号 (…)    。  
+2.  在“CHECK 约束”对话框中，单击“表达式”字段，然后单击省略号 (…)************。  
   
 3.  在 **“CHECK 约束表达式”** 对话框中，键入 CHECK 约束的 SQL 表达式。 例如，若要将 `SellEndDate` 表的 `Product` 列中的条目限制为大于等于 `SellStartDate` 列中的日期的值，或者为 NULL 值，则键入：  
   
@@ -71,19 +72,19 @@ ms.locfileid: "85753837"
     > [!NOTE]  
     >  确保将任何非数字约束值包含在单引号 (') 中。  
   
-4.  单击“确定”。   
+4.  单击“确定”。  
   
-5.  在  “标识”类别中，您可以更改 CHECK 约束的名称并且为该约束添加说明（扩展属性）。  
+5.  在****“标识”类别中，您可以更改 CHECK 约束的名称并且为该约束添加说明（扩展属性）。  
   
 6.  在 **“表设计器”** 类别中，您可以设置何时强制约束。  
   
-    |**发件人：**|**在以下字段中选择“是”：**|  
+    |更改为：|**在以下字段中选择“是”：**|  
     |-------------|---------------------------------------------|  
     |对在创建约束前存在的数据测试约束|**在创建或启用时检查现有数据**|  
     |在此表上发生复制操作时强制约束|**强制用于复制**|  
     |在此表中插入或更新行时强制约束|**强制用于 INSERT 和 UPDATE**|  
   
-7.  单击“关闭”  。  
+7.  单击“关闭”。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -93,7 +94,7 @@ ms.locfileid: "85753837"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     ALTER TABLE dbo.DocExc   

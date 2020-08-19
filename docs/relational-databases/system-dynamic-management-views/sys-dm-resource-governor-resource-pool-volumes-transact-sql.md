@@ -1,5 +1,6 @@
 ---
-title: sys. dm_resource_governor_resource_pool_volumes （Transact-sql） |Microsoft Docs
+description: 'sys. dm_resource_governor_resource_pool_volumes (Transact-sql) '
+title: sys. dm_resource_governor_resource_pool_volumes (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -19,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: fa692e56-c561-4533-97c5-bc12c600553f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 73a99b7db59061df8b01c5baffacb22a0ab4c83d
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 62a75a411eafb74268f98d2ccfc8d56e95bb835b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442729"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419621"
 ---
-# <a name="sysdm_resource_governor_resource_pool_volumes-transact-sql"></a>sys. dm_resource_governor_resource_pool_volumes （Transact-sql）
+# <a name="sysdm_resource_governor_resource_pool_volumes-transact-sql"></a>sys. dm_resource_governor_resource_pool_volumes (Transact-sql) 
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-  对于每个磁盘卷返回有关当前资源池 IO 统计信息的信息。 此信息也可在[sys. dm_resource_governor_resource_pools &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)中的资源池级别使用。  
+  对于每个磁盘卷返回有关当前资源池 IO 统计信息的信息。 此信息也可在 [sys. dm_resource_governor_resource_pools &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)中的资源池级别使用。  
   
   
 |列名称|数据类型|说明|  
@@ -56,7 +57,7 @@ ms.locfileid: "87442729"
 ## <a name="permissions"></a>权限  
  需要 VIEW SERVER STATE 权限。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [sys. dm_resource_governor_workload_groups &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
  [sys. resource_governor_resource_pools &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)   

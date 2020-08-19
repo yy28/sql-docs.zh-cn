@@ -1,5 +1,6 @@
 ---
-title: VIEWS （Transact-sql） |Microsoft Docs
+description: VIEWS (Transact-SQL)
+title: Transact-sql)  (视图 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -19,11 +20,12 @@ ms.assetid: 6119bc94-0b22-45d4-a34b-967afd810a9d
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9aca4edc4d2b30eba8fe37467698f80b0c4ab5f4
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 62d997975ba961466c800d289c0a07e3e1f7a887
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006192"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419361"
 ---
 # <a name="views-transact-sql"></a>VIEWS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,16 +36,16 @@ ms.locfileid: "86006192"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CATALOG**|**nvarchar （** 128 **）**|视图限定符。|  
-|**TABLE_SCHEMA**|**nvarchar （** 128 **）**|包含该视图的架构名称。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** 只是查找对象架构的可靠方法是查询 sys.databases 目录视图。|  
-|**TABLE_NAME**|**nvarchar （** 128 **）**|视图名。|  
-|**VIEW_DEFINITION**|**nvarchar （** 4000 **）**|如果定义的长度大于**nvarchar （** 4000 **）**，则此列为 NULL。 否则，该列是视图定义文本。|  
-|**CHECK_OPTION**|**varchar （** 7 **）**|WITH CHECK OPTION 的类型。 如果最初的视图是使用 WITH CHECK OPTION 创建的，那么就为 CASCADE。 否则，返回 NONE。|  
-|**IS_UPDATABLE**|**varchar （** 2 **）**|指定视图是否可更新。 始终返回 NO。|  
+|**TABLE_CATALOG**|**nvarchar (** 128 **) **|视图限定符。|  
+|**TABLE_SCHEMA**|**nvarchar (** 128 **) **|包含该视图的架构名称。<br /><br /> **&#42;&#42; 重要 &#42;&#42;**  只是查找对象架构的可靠方法是查询 sys.databases 目录视图。|  
+|**TABLE_NAME**|**nvarchar (** 128 **) **|视图名。|  
+|**VIEW_DEFINITION**|**nvarchar (** 4000 **) **|如果定义的长度大于 **nvarchar (** 4000 **) **，则此列为 NULL。 否则，该列是视图定义文本。|  
+|**CHECK_OPTION**|**varchar (** 7 **) **|WITH CHECK OPTION 的类型。 如果最初的视图是使用 WITH CHECK OPTION 创建的，那么就为 CASCADE。 否则，返回 NONE。|  
+|**IS_UPDATABLE**|**varchar (** 2 **) **|指定视图是否可更新。 始终返回 NO。|  
   
 ## <a name="see-also"></a>另请参阅  
  [Transact-sql&#41;的系统视图 &#40;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
- [&#40;Transact-sql&#41;的信息架构视图](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;的信息架构视图 ](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys.sql_modules (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [sys.views (Transact-SQL)](../../relational-databases/system-catalog-views/sys-views-transact-sql.md)  
   

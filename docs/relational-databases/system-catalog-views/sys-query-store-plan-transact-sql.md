@@ -1,5 +1,6 @@
 ---
-title: sys. query_store_plan （Transact-sql） |Microsoft Docs
+description: sys.query_store_plan (Transact-SQL)
+title: sys. query_store_plan (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/23/2019
 ms.prod: sql
@@ -21,12 +22,12 @@ ms.assetid: b4d05439-6360-45db-b1cd-794f4a64935e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 25272b586e84b498cfaa9da17a772692dad6f48a
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 355cd29ab98fd93dbee853532bf82f2c875fddf3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87393982"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420051"
 ---
 # <a name="sysquery_store_plan-transact-sql"></a>sys.query_store_plan (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -36,26 +37,26 @@ ms.locfileid: "87393982"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|
 |**plan_id**|**bigint**|主密钥。|  
-|**query_id**|**bigint**|外键。 联接到[sys.databases&#41;的 query_store_query &#40;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)。|  
-|**plan_group_id**|**bigint**|计划组的 ID。 游标查询通常需要多个（填充和提取）计划。 填充和提取一起编译的计划位于同一个组中。<br /><br /> 0表示计划不在组中。|  
+|**query_id**|**bigint**|外键。 联接到 [sys.databases&#41;的 query_store_query &#40;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)。|  
+|**plan_group_id**|**bigint**|计划组的 ID。 游标查询通常需要多 (填充和提取) 计划。 填充和提取一起编译的计划位于同一个组中。<br /><br /> 0表示计划不在组中。|  
 |**engine_version**|**nvarchar(32)**|用于以 **"主版本. 内部版本. 修订版本"** 格式编译计划的引擎版本。|  
 |**compatibility_level**|**smallint**|查询中引用的数据库的数据库兼容级别。|  
-|**query_plan_hash**|**binary （8）**|单个计划的 MD5 哈希。|  
+|**query_plan_hash**|**二进制 (8) **|单个计划的 MD5 哈希。|  
 |**query_plan**|**nvarchar(max)**|查询计划的显示计划 XML。|  
-|**is_online_index_plan**|**bit**|在联机索引生成过程中使用了 Plan。 <br/>**注意：** Azure SQL 数据仓库将始终返回零（0）。|  
-|**is_trivial_plan**|**bit**|计划是一个简单的计划（查询优化器的阶段0中的输出）。 <br/>**注意：** Azure SQL 数据仓库将始终返回零（0）。|  
-|**is_parallel_plan**|**bit**|计划是并行的。 <br/>**注意：** Azure SQL 数据仓库将始终返回一（1）。|  
-|**is_forced_plan**|**bit**|当用户执行存储过程**sys. sp_query_store_force_plan**时，计划标记为 "强制"。 强制机制*并不保证*确切地将此计划用于**query_id**引用的查询。 计划强制再次编译查询，并通常为**plan_id**所引用的计划生成完全相同或类似的计划。 如果计划强制不成功，则**force_failure_count**会递增，并且**last_force_failure_reason**会按失败原因进行填充。 <br/>**注意：** Azure SQL 数据仓库将始终返回零（0）。|  
-|**is_natively_compiled**|**bit**|计划包括本机编译的内存优化过程。 （0 = FALSE，1 = TRUE）。 <br/>**注意：** Azure SQL 数据仓库将始终返回零（0）。|  
-|**force_failure_count**|**bigint**|强制此计划失败的次数。 仅当重新编译查询（*而不是每次执行*时）时，它才会递增。 每次将**is_plan_forced**从**FALSE**更改为**TRUE**时，它都会重置为0。 <br/>**注意：** Azure SQL 数据仓库将始终返回零（0）。|  
-|**last_force_failure_reason**|**int**|计划强制失败的原因。<br /><br /> 0：无故障，否则导致强制失败的错误的错误号<br /><br /> 8637： ONLINE_INDEX_BUILD<br /><br /> 8683： INVALID_STARJOIN<br /><br /> 8684： TIME_OUT<br /><br /> 8689： NO_DB<br /><br /> 8690： HINT_CONFLICT<br /><br /> 8691： SETOPT_CONFLICT<br /><br /> 8694： DQ_NO_FORCING_SUPPORTED<br /><br /> 8698： NO_PLAN<br /><br /> 8712： NO_INDEX<br /><br /> 8713： VIEW_COMPILE_FAILED<br /><br /> \<other value>： GENERAL_FAILURE <br/>**注意：** Azure SQL 数据仓库将始终返回零（0）。|  
-|**last_force_failure_reason_desc**|**nvarchar(128)**|Last_force_failure_reason_desc 的文本说明。<br /><br /> ONLINE_INDEX_BUILD：查询在目标表具有正在联机生成的索引时尝试修改数据<br /><br /> INVALID_STARJOIN：计划包含无效的 StarJoin 规范<br /><br /> TIME_OUT：优化器在搜索由强制计划指定的计划时超出了允许的操作数<br /><br /> NO_DB：在计划中指定的数据库不存在<br /><br /> HINT_CONFLICT：无法编译查询，因为计划与查询提示冲突<br /><br /> DQ_NO_FORCING_SUPPORTED：无法执行查询，因为计划与分布式查询或全文操作的使用冲突。<br /><br /> NO_PLAN：查询处理器无法生成查询计划，因为无法验证强制计划是否对查询有效<br /><br /> NO_INDEX：计划中指定的索引已不存在<br /><br /> VIEW_COMPILE_FAILED：由于在计划中引用的索引视图中存在问题，无法强制执行查询计划<br /><br /> GENERAL_FAILURE：常规强制错误（未涉及以上原因） <br/>**注意：** Azure SQL 数据仓库将始终返回*NONE*。|  
+|**is_online_index_plan**|**bit**|在联机索引生成过程中使用了 Plan。 <br/>**注意：** Azure SQL 数据仓库将始终返回零 (0) 。|  
+|**is_trivial_plan**|**bit**|计划是查询优化器) 的阶段0中 (输出的普通计划。 <br/>**注意：** Azure SQL 数据仓库将始终返回零 (0) 。|  
+|**is_parallel_plan**|**bit**|计划是并行的。 <br/>**注意：** Azure SQL 数据仓库将始终返回一 (1) 。|  
+|**is_forced_plan**|**bit**|当用户执行存储过程 **sys. sp_query_store_force_plan**时，计划标记为 "强制"。 强制机制 *并不保证* 确切地将此计划用于 **query_id**引用的查询。 计划强制再次编译查询，并通常为 **plan_id**所引用的计划生成完全相同或类似的计划。 如果计划强制不成功，则 **force_failure_count** 会递增，并且 **last_force_failure_reason** 会按失败原因进行填充。 <br/>**注意：** Azure SQL 数据仓库将始终返回零 (0) 。|  
+|**is_natively_compiled**|**bit**|计划包括本机编译的内存优化过程。  (0 = FALSE，1 = TRUE) 。 <br/>**注意：** Azure SQL 数据仓库将始终返回零 (0) 。|  
+|**force_failure_count**|**bigint**|强制此计划失败的次数。 仅当重新编译查询时，它才会递增 (*不会在每次执行*) 时递增。 每次将 **is_plan_forced** 从 **FALSE** 更改为 **TRUE**时，它都会重置为0。 <br/>**注意：** Azure SQL 数据仓库将始终返回零 (0) 。|  
+|**last_force_failure_reason**|**int**|计划强制失败的原因。<br /><br /> 0：无故障，否则导致强制失败的错误的错误号<br /><br /> 8637： ONLINE_INDEX_BUILD<br /><br /> 8683： INVALID_STARJOIN<br /><br /> 8684： TIME_OUT<br /><br /> 8689： NO_DB<br /><br /> 8690： HINT_CONFLICT<br /><br /> 8691： SETOPT_CONFLICT<br /><br /> 8694： DQ_NO_FORCING_SUPPORTED<br /><br /> 8698： NO_PLAN<br /><br /> 8712： NO_INDEX<br /><br /> 8713： VIEW_COMPILE_FAILED<br /><br /> \<other value>： GENERAL_FAILURE <br/>**注意：** Azure SQL 数据仓库将始终返回零 (0) 。|  
+|**last_force_failure_reason_desc**|**nvarchar(128)**|Last_force_failure_reason_desc 的文本说明。<br /><br /> ONLINE_INDEX_BUILD：查询在目标表具有正在联机生成的索引时尝试修改数据<br /><br /> INVALID_STARJOIN：计划包含无效的 StarJoin 规范<br /><br /> TIME_OUT：优化器在搜索由强制计划指定的计划时超出了允许的操作数<br /><br /> NO_DB：在计划中指定的数据库不存在<br /><br /> HINT_CONFLICT：无法编译查询，因为计划与查询提示冲突<br /><br /> DQ_NO_FORCING_SUPPORTED：无法执行查询，因为计划与分布式查询或全文操作的使用冲突。<br /><br /> NO_PLAN：查询处理器无法生成查询计划，因为无法验证强制计划是否对查询有效<br /><br /> NO_INDEX：计划中指定的索引已不存在<br /><br /> VIEW_COMPILE_FAILED：由于在计划中引用的索引视图中存在问题，无法强制执行查询计划<br /><br /> GENERAL_FAILURE：上述原因未涵盖 (常规强制错误)  <br/>**注意：** Azure SQL 数据仓库将始终返回 *NONE*。|  
 |**count_compiles**|**bigint**|规划编译统计信息。|  
 |**initial_compile_start_time**|**datetimeoffset**|规划编译统计信息。|  
 |**last_compile_start_time**|**datetimeoffset**|规划编译统计信息。|  
 |**last_execution_time**|**datetimeoffset**|上次执行时间是指查询/计划的最后结束时间。|  
-|**avg_compile_duration**|**float**|规划编译统计信息。 <br/>**注意：** Azure SQL 数据仓库将始终返回零（0）。|  
-|**last_compile_duration**|**bigint**|规划编译统计信息。 <br/>**注意：** Azure SQL 数据仓库将始终返回零（0）。|  
+|**avg_compile_duration**|**float**|规划编译统计信息。 <br/>**注意：** Azure SQL 数据仓库将始终返回零 (0) 。|  
+|**last_compile_duration**|**bigint**|规划编译统计信息。 <br/>**注意：** Azure SQL 数据仓库将始终返回零 (0) 。|  
 |**plan_forcing_type**|**int**|计划强制类型。<br /><br />0：无<br /><br />1：手动<br /><br />2：自动|  
 |**plan_forcing_type_desc**|**nvarchar(60)**|Plan_forcing_type 的文本说明。<br /><br />无：无计划强制<br /><br />手动：由用户强制执行的计划<br /><br />自动：由自动优化强制执行计划|  
 
@@ -83,7 +84,7 @@ ms.locfileid: "87393982"
 * 格式不正确的计划 XML
 
 ## <a name="permissions"></a>权限  
- 需要**VIEW DATABASE STATE**权限。  
+ 需要 **VIEW DATABASE STATE** 权限。  
   
 ## <a name="see-also"></a>另请参阅  
  [sys. database_query_store_options &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   

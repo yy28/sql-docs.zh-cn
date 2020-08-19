@@ -1,5 +1,6 @@
 ---
-title: sys. dm_hadr_instance_node_map （Transact-sql） |Microsoft Docs
+description: sys.dm_hadr_instance_node_map (Transact-SQL)
+title: sys. dm_hadr_instance_node_map (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,17 +21,17 @@ helpviewer_keywords:
 ms.assetid: ccfaf62c-9f87-43cf-a5e7-8942e91dd041
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 32001d88c17358406b5b855cbb698c9d2686e40f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 26e070d66fee1c7555d5448cace35318c6e4de66
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760257"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419711"
 ---
 # <a name="sysdm_hadr_instance_node_map-transact-sql"></a>sys.dm_hadr_instance_node_map (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 承载联接到其 Always On 可用性组的可用性副本的每个实例，将返回承载该服务器实例的 Windows Server 故障转移群集（WSFC）节点的名称。 此动态管理视图具有以下用法：  
+  对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 承载联接到其 Always On 可用性组的可用性副本的每个实例，将返回承载该服务器实例的 Windows Server 故障转移群集 (WSFC) 节点的名称。 此动态管理视图具有以下用法：  
   
 -   此动态管理视图对于检测包含承载于同一 WSFC 节点上的多个可用性副本的可用性组很有用，这是一个不受支持的配置，如果可用性组的配置不正确，则在进行 FCI 故障转移后可能出现此配置。 有关详细信息，请参阅[故障转移群集和 AlwaysOn 可用性组 (SQL Server)](../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)。  
   
@@ -47,7 +48,7 @@ ms.locfileid: "85760257"
   
 ## <a name="see-also"></a>另请参阅  
  [Always On 可用性组动态管理视图和函数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
- [Always On 可用性组目录视图 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
+ [AlwaysOn 可用性组目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
  [&#40;Transact-sql 监视可用性组&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [AlwaysOn 可用性组 (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
   

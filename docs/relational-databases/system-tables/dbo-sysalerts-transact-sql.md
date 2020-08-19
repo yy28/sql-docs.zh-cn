@@ -1,5 +1,6 @@
 ---
-title: dbo.sys警报（Transact-sql） |Microsoft Docs
+description: dbo.sysalerts (Transact-SQL)
+title: " (Transact-sql) dbo.sys警报 |Microsoft Docs"
 ms.custom: ''
 ms.date: 10/24/2016
 ms.prod: sql
@@ -19,28 +20,28 @@ helpviewer_keywords:
 ms.assetid: a2c2f50d-61f3-4951-996a-add5ad092cc2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6113a7d05c7128df4b7691bd7f72d09ba8f0548b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 509e401f70aadc8f4dc2eb625fb5b9cf1dcda5d8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890530"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419241"
 ---
 # <a name="dbosysalerts-transact-sql"></a>dbo.sysalerts (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  每个警报在表中各占一行。 警报是为响应事件而发送的消息。 警报可向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 环境之外转发消息，警报可以是电子邮件或寻呼消息。 警报还可以生成任务。  该表存储在**msdb**数据库中。
+  每个警报在表中各占一行。 警报是为响应事件而发送的消息。 警报可向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 环境之外转发消息，警报可以是电子邮件或寻呼消息。 警报还可以生成任务。  该表存储在 **msdb** 数据库中。
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|警报 ID。|  
 |name|**sysname**|警报名称。|  
-|**event_source**|**nvarchar （100）**|事件源：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
-|**event_category_id**|**int**|保留供将来使用。|  
-|**event_id**|**int**|保留供将来使用。|  
-|**message_id**|**int**|用户定义的消息 ID 或对触发此警报的**sysmessages**消息的引用。|  
+|**event_source**|**nvarchar (100) **|事件源：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
+|**event_category_id**|**int**|留待将来使用。|  
+|**event_id**|**int**|留待将来使用。|  
+|**message_id**|**int**|用户定义的消息 ID 或对触发此警报的 **sysmessages** 消息的引用。|  
 |severity |**int**|触发此警报的严重级别。|  
-|**能够**|**tinyint**|警报的状态：<br /><br /> **0** = 禁用。<br /><br /> **1** = 已启用。|  
+|**enabled**|**tinyint**|警报的状态：<br /><br /> **0** = 禁用。<br /><br /> **1** = 已启用。|  
 |**delay_between_responses**|**int**|此警报的两个通知间的等待时间（以秒为单位）。|  
 |**last_occurrence_date**|**int**|警报的上次发生（日期）。|  
 |**last_occurrence_time**|**int**|警报的上次发生（时间）。|  
@@ -49,10 +50,10 @@ ms.locfileid: "85890530"
 |**notification_message**|**nvarchar(512)**|与警报一起发送的其他信息。|  
 |**include_event_description**|**tinyint**|表示是否通过电子邮件、寻呼程序或 Net send 发送事件描述的位掩码。 有关值，请参阅下图。|  
 |**database_name**|**nvarchar(512)**|此警报必须在其中发生才能触发该警报的数据库。|  
-|**event_description_keyword**|**nvarchar （100）**|为触发警报而必须匹配的错误模式。|  
+|**event_description_keyword**|**nvarchar (100) **|为触发警报而必须匹配的错误模式。|  
 |**occurrence_count**|**int**|此警报的发生次数。|  
-|**count_reset_date**|**int**|Day （date） count 将重置为**0**。|  
-|**count_reset_time**|**int**|时间计数将重置为**0**。|  
+|**count_reset_date**|**int**|日期 (日期) 计数将重置为 **0**。|  
+|**count_reset_time**|**int**|时间计数将重置为 **0**。|  
 |**job_id**|**uniqueidentifier**|此警报发生时执行的任务的 ID。|  
 |**has_notification**|**int**|警报发生时接收电子邮件通知的操作员数。|  
 |**flag**|**int**|保留。|  

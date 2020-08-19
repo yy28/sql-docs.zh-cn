@@ -1,5 +1,6 @@
 ---
-title: sys. dm_os_loaded_modules （Transact-sql） |Microsoft Docs
+description: sys.dm_os_loaded_modules (Transact-SQL)
+title: sys. dm_os_loaded_modules (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 56c7743a-b568-4943-bd3b-73c57d9d641c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ecf9858f1cc37290cf9079470498d3ad1ecbdc84
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d5678c74d6fbbb703e6f6fd0a93b205bc2903059
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898766"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419681"
 ---
 # <a name="sysdm_os_loaded_modules-transact-sql"></a>sys.dm_os_loaded_modules (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,13 +32,13 @@ ms.locfileid: "85898766"
   针对每个加载到服务器地址空间的模块返回一行。  
   
 > [!NOTE]  
->  若要从调用此 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称**dm_pdw_nodes_os_loaded_modules**。  
+>  若要从调用此 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称 **dm_pdw_nodes_os_loaded_modules**。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**base_address**|**varbinary(8)**|进程中的模块的地址。|  
-|**file_version**|**varchar （23）**|文件的版本。 按如下格式显示：<br /><br /> x.x:x.x|  
-|**product_version**|**varchar （23）**|产品的版本。 按如下格式显示：<br /><br /> x.x:x.x|  
+|**file_version**|**varchar (23) **|文件的版本。 按如下格式显示：<br /><br /> x.x:x.x|  
+|**product_version**|**varchar (23) **|产品的版本。 按如下格式显示：<br /><br /> x.x:x.x|  
 |**debug.exe**|**bit**|1 = 模块是调试版本的已加载模块。|  
 |**patched**|**bit**|1 = 模块已得到修补。|  
 |**早期**|**bit**|1 = 模块是预发行版本的已加载模块。|  
@@ -45,15 +46,15 @@ ms.locfileid: "85898766"
 |**special_build**|**bit**|1 = 模块是特殊版本的已加载模块。|  
 |language|**int**|模块的版本信息语言。|  
 |**上市公司**|**nvarchar(256)**|创建模块的公司的名称。|  
-|**2008**|**nvarchar(256)**|模块的说明。|  
+|description|**nvarchar(256)**|模块的说明。|  
 |**name**|**nvarchar(255)**|模块的名称。 包括模块的完整路径。|  
-|**pdw_node_id**|**int**|适用于  ：[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
+|pdw_node_id|**int**|适用于：[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   
 ## <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
 ## <a name="see-also"></a>另请参阅  
- [动态管理视图和函数 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [&#40;Transact-sql 的与操作系统相关的动态管理视图 SQL Server&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   

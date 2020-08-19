@@ -1,5 +1,6 @@
 ---
-title: sysmail_help_profile_sp （Transact-sql） |Microsoft Docs
+description: sysmail_help_profile_sp (Transact-SQL)
+title: sysmail_help_profile_sp (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: d7169a8e-92b1-49eb-9124-3b2f69755ddb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 947038e26a4367425576261594befff032f6eeea
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 372f2309176b9fcf9cbb36fbcaf89d710393bb44
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122723"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419291"
 ---
 # <a name="sysmail_help_profile_sp-transact-sql"></a>sysmail_help_profile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   列出有关一个或多个邮件配置文件的信息。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,9 +40,9 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @profile_id = ] profile_id`要为其返回信息的配置文件 id。 *profile_id*的值为**int**，默认值为 NULL。  
+`[ @profile_id = ] profile_id` 要为其返回信息的配置文件 id。 *profile_id* 的值为 **int**，默认值为 NULL。  
   
-`[ @profile_name = ] 'profile_name'`要为其返回信息的配置文件名称。 *profile_name*的默认值为**sysname**，默认值为 NULL。  
+`[ @profile_name = ] 'profile_name'` 要为其返回信息的配置文件名称。 *profile_name* 的默认值为 **sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -56,12 +57,12 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
 |description|**nvarchar(256)**|配置文件的说明。|  
   
 ## <a name="remarks"></a>备注  
- 指定配置文件名称或配置文件 id 时， **sysmail_help_profile_sp**返回有关该配置文件的信息。 否则， **sysmail_help_profile_sp**返回有关实例中的每个配置文件的信息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+ 指定配置文件名称或配置文件 id 时， **sysmail_help_profile_sp** 返回有关该配置文件的信息。 否则， **sysmail_help_profile_sp** 返回有关实例中的每个配置文件的信息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
- 存储过程**sysmail_help_profile_sp**在**msdb**数据库中，由**dbo**架构拥有。 如果当前数据库不是**msdb**，则必须使用由三部分组成的名称来执行该过程。  
+ 存储过程 **sysmail_help_profile_sp** 在 **msdb** 数据库中，由 **dbo** 架构拥有。 如果当前数据库不是 **msdb**，则必须使用由三部分组成的名称来执行该过程。  
   
 ## <a name="permissions"></a>权限  
- 此过程的执行权限默认授予**sysadmin**固定服务器角色的成员。  
+ 此过程的执行权限默认授予 **sysadmin** 固定服务器角色的成员。  
   
 ## <a name="examples"></a>示例  
  **A. 列出所有配置文件**  

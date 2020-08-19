@@ -1,4 +1,5 @@
 ---
+description: '转换 DB2 架构 (DB2ToSQL) '
 title: 转换 DB2 架构 (DB2ToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7947efc3-ca86-4ec5-87ce-7603059c75a0
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 13afcabf85515b211d8493990a59950dc97d72f5
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 9dbf89c8027737a02d4eded9dc2e743e683b65e4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933908"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418553"
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>转换 DB2 架构 (DB2ToSQL) 
 连接到 DB2、连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并设置项目和数据映射选项后，可以将 DB2 数据库对象转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库对象。  
@@ -25,7 +26,7 @@ ms.locfileid: "87933908"
 在转换过程中，SSMA 会将输出消息打印到 "输出" 窗格，并将错误消息打印到 "错误列表" 窗格。 使用输出和错误信息来确定是否必须修改 DB2 数据库或转换过程以获取所需的转换结果。  
   
 ## <a name="setting-conversion-options"></a>设置转换选项  
-转换对象之前，请在 "**项目设置**" 对话框中查看项目转换选项。 使用此对话框，可以设置 SSMA 如何转换函数和全局变量。 有关详细信息，请参阅[DB2ToSQL&#41;&#40;转换&#41; &#40;项目设置](../../ssma/db2/project-settings-conversion-db2tosql.md)。  
+转换对象之前，请在 " **项目设置** " 对话框中查看项目转换选项。 使用此对话框，可以设置 SSMA 如何转换函数和全局变量。 有关详细信息，请参阅 [DB2ToSQL&#41;&#40;转换&#41; &#40;项目设置 ](../../ssma/db2/project-settings-conversion-db2tosql.md)。  
   
 ## <a name="conversion-results"></a>转换结果  
 下表显示转换了哪些 DB2 对象以及生成的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象：  
@@ -80,15 +81,15 @@ ms.locfileid: "87933908"
 |事务控制|未映射。|  
   
 ## <a name="converting-db2-database-objects"></a>转换 DB2 数据库对象  
-若要转换 DB2 数据库对象，请首先选择要转换的对象，然后让 SSMA 执行转换。 若要在转换过程中查看输出消息，请在 "**视图**" 菜单上选择 "**输出**"。  
+若要转换 DB2 数据库对象，请首先选择要转换的对象，然后让 SSMA 执行转换。 若要在转换过程中查看输出消息，请在 " **视图** " 菜单上选择 " **输出**"。  
   
 **将 DB2 对象转换为 SQL Server 语法**  
   
-1.  在 DB2 元数据资源管理器中，展开 DB2 服务器，然后展开 "**架构**"。  
+1.  在 DB2 元数据资源管理器中，展开 DB2 服务器，然后展开 " **架构**"。  
   
 2.  选择要转换的对象：  
   
-    -   若要转换所有架构，请选中 "**架构**" 旁边的复选框。  
+    -   若要转换所有架构，请选中 " **架构**" 旁边的复选框。  
   
     -   若要转换或省略数据库，请选中该架构名称旁边的复选框。  
   
@@ -96,18 +97,18 @@ ms.locfileid: "87933908"
   
     -   若要转换或省略单个对象，请展开 category 文件夹，然后选中或清除该对象旁边的复选框。  
   
-3.  若要转换所有选定的对象，请右键单击 "**架构**"，然后选择 "**转换架构**"。  
+3.  若要转换所有选定的对象，请右键单击 " **架构** "，然后选择 " **转换架构**"。  
   
-    您还可以通过右键单击对象或其父文件夹，然后选择 "**转换架构**"，来转换各个对象或对象类别。  
+    您还可以通过右键单击对象或其父文件夹，然后选择 " **转换架构**"，来转换各个对象或对象类别。  
   
 ## <a name="viewing-conversion-problems"></a>查看转换问题  
 某些 DB2 对象可能不会转换。 您可以通过查看摘要转换报告来确定转换成功率。  
   
 **查看摘要报表**  
   
-1.  在 DB2 元数据资源管理器中，选择 "**架构**"。  
+1.  在 DB2 元数据资源管理器中，选择 " **架构**"。  
   
-2.  在右侧窗格中，选择 "**报表**" 选项卡。  
+2.  在右侧窗格中，选择 " **报表** " 选项卡。  
   
     此报表显示已评估或转换的所有数据库对象的摘要评估报告。 您还可以查看单个对象的摘要报表：  
   
@@ -119,7 +120,7 @@ ms.locfileid: "87933908"
   
 **查看各个转换问题**  
   
-1.  在 DB2 元数据资源管理器中，展开 "**架构**"。  
+1.  在 DB2 元数据资源管理器中，展开 " **架构**"。  
   
 2.  展开显示红色错误图标的架构。  
   
@@ -127,13 +128,13 @@ ms.locfileid: "87933908"
   
 4.  选择包含红色错误图标的对象。  
   
-5.  在右侧窗格中，单击 "**报表**" 选项卡。  
+5.  在右侧窗格中，单击 " **报表** " 选项卡。  
   
-6.  在 "**报表**" 选项卡的顶部是一个下拉列表。 如果列表显示 "**统计信息**"，请将所选内容更改为 "**源**"。  
+6.  在 " **报表** " 选项卡的顶部是一个下拉列表。 如果列表显示 " **统计信息**"，请将所选内容更改为 " **源**"。  
   
     SSMA 将显示源代码，并将多个按钮直接显示在代码上方。  
   
-7.  单击 "**下一问题**" 按钮。 这是一个红色的错误图标，其中有一个指向右侧的箭头。  
+7.  单击 " **下一问题** " 按钮。 这是一个红色的错误图标，其中有一个指向右侧的箭头。  
   
     SSMA 将突出显示在当前对象中找到的第一个有问题的源代码。  
   
@@ -141,12 +142,12 @@ ms.locfileid: "87933908"
   
 -   您可以在 " **SQL** " 选项卡上修改过程的源代码。  
   
--   您可以修改 DB2 数据库中的对象，以删除或修改有问题的代码。 若要将更新的代码加载到 SSMA 中，必须更新元数据。 有关详细信息，请参阅[连接到 DB2 数据库 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)。  
+-   您可以修改 DB2 数据库中的对象，以删除或修改有问题的代码。 若要将更新的代码加载到 SSMA 中，必须更新元数据。 有关详细信息，请参阅 [连接到 DB2 数据库 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)。  
   
 -   可以从迁移中排除对象。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "元数据资源管理器" 和 "DB2 元数据资源管理器" 中，清除项旁的复选框，然后将对象加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] db2 并从 DB2 迁移数据。  
   
 ## <a name="next-step"></a>下一步  
-迁移过程的下一步是将已[转换的对象加载到 SQL Server 中](https://msdn.microsoft.com/f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3)。  
+迁移过程的下一步是将已 [转换的对象加载到 SQL Server 中](https://msdn.microsoft.com/f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3)。  
   
 ## <a name="see-also"></a>另请参阅  
 [将 DB2 数据迁移到 SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  

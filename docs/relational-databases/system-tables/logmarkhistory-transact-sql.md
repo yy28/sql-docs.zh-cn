@@ -1,5 +1,6 @@
 ---
-title: logmarkhistory （Transact-sql） |Microsoft Docs
+description: logmarkhistory (Transact-SQL)
+title: logmarkhistory (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,25 +18,25 @@ helpviewer_keywords:
 ms.assetid: 5c1becc5-f34e-4869-bf69-dfafab684540
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0b295105b76711e0e7305374cdd0ce380cd3abea
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d52c161baa58924a21966ed4c354fa614e677062
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890111"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419151"
 ---
 # <a name="logmarkhistory-transact-sql"></a>logmarkhistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  每个已提交的标记事务在表中占一行。 该表存储在**msdb**数据库中。  
+  每个已提交的标记事务在表中占一行。 该表存储在 **msdb** 数据库中。  
   
 
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**nvarchar(128)**|标记事务出现的本地数据库。|  
 |**mark_name**|**nvarchar(128)**|用户提供的标记事务名。|  
-|**2008**|**nvarchar(255)**|用户提供的标记事务说明。 可以为 NULL。|  
-|**user_name**|**nvarchar(128)**|执行标记事务的数据库用户名。 可以为 NULL。|  
+|description|**nvarchar(255)**|用户提供的标记事务说明。 可以为 NULL。|  
+|user_name|**nvarchar(128)**|执行标记事务的数据库用户名。 可以为 NULL。|  
 |**lsn**|**numeric(25,0)**|出现标记的事务记录的日志序列号。|  
 |**mark_time**|**datetime**|提交标记事务的时间（本地时间）。|  
   

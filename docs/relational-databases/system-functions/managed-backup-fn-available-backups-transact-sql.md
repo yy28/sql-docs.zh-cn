@@ -1,5 +1,6 @@
 ---
-title: managed_backup fn_available_backups （Transact-sql） |Microsoft Docs
+description: 'managed_backup fn_available_backups (Transact-sql) '
+title: managed_backup fn_available_backups (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,13 +21,14 @@ helpviewer_keywords:
 ms.assetid: 7aa84474-16e5-49bd-a703-c8d1408ef107
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8c9cbad2124420f62f50c8497fcc5baa21720634
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 23c7f7cb176bf91494b41cf8b81435b287d261fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052883"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419531"
 ---
-# <a name="managed_backupfn_available_backups-transact-sql"></a>managed_backup fn_available_backups （Transact-sql）
+# <a name="managed_backupfn_available_backups-transact-sql"></a>managed_backup fn_available_backups (Transact-sql) 
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   返回一个表格，其中包含 0 行、一行或多行的指定数据库可用备份文件。 返回的备份文件是由 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 创建的备份。  
@@ -39,9 +41,9 @@ ms.locfileid: "86052883"
 managed_backup.fn_available_backups ([@database_name = ] 'database name')  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>形参  
+##  <a name="arguments"></a><a name="Arguments"></a> 参数  
  @database_name  
- 数据库的名称。 @database_name为 NVARCHAR （512）。  
+ 数据库的名称。 @database_name为 NVARCHAR (512) 。  
   
 ## <a name="table-returned"></a>返回的表  
  此表已启用唯一的聚集约束（database_guid、backup_start_date、first_lsn 和 backup_type）。   
@@ -51,7 +53,7 @@ managed_backup.fn_available_backups ([@database_name = ] 'database name')
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |Backup_path|NVARCHAR(260) COLLATE Latin1_General_CI_AS_KS_WS|备份文件的 URL。|  
-|backup_type|NVARCHAR （6）|用于数据库备份的 "数据库" 日志备份|  
+|backup_type|NVARCHAR (6) |用于数据库备份的 "数据库" 日志备份|  
 |expiration_date|DATETIME|预期删除此文件的日期。 这是基于将数据库恢复到指定保持期内某一时间点的能力设置的。|  
 |database_guid|UNIQUEIDENTIFIER|指定数据库的 GUID 值。  GUID 唯一地标识一个数据库。|  
 |first_lsn|NUMERIC(25, 0)|备份集中第一条或最早的日志记录的日志序列号。 可以为 NULL。|  
@@ -70,7 +72,7 @@ managed_backup.fn_available_backups ([@database_name = ] 'database name')
 ## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>权限  
- 需要对此函数的**SELECT**权限。  
+ 需要对此函数的 **SELECT** 权限。  
   
 ## <a name="examples"></a>示例  
  以下示例列出了通过 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 数据库 "MyDB" 备份的所有可用备份  

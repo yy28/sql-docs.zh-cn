@@ -1,5 +1,6 @@
 ---
-title: xp_logevent （Transact-sql） |Microsoft Docs
+description: xp_logevent (Transact-SQL)
+title: xp_logevent (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7b379ad0-5b12-4d2e-9c52-62465df1fdbd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 08fbf39390a7a81fc3ce3e8563c3699ba77b833c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7001b9d29a96dd192e044ddfe779b8f39a581a94
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890762"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419271"
 ---
 # <a name="xp_logevent-transact-sql"></a>xp_logevent (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,14 +40,14 @@ xp_logevent { error_number , 'message' } [ , 'severity' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- error_number   
+ error_number  
  用户定义错误号，该值大于 50,000。 最大值为 2147483647 (2^31 - 1)。  
   
  **"** *message* **"**  
  最多 2048 个字符的字符串。  
   
  **"** *严重性* **"**  
- 以下三个字符串之一：INFORMATIONAL、WARNING 或 ERROR。 *严重性*为可选，默认值为 "信息"。  
+ 以下三个字符串之一：INFORMATIONAL、WARNING 或 ERROR。 *严重性* 为可选，默认值为 "信息"。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -79,7 +80,7 @@ EXEC xp_logevent 60000, @@MESSAGE, informational;
 ## <a name="see-also"></a>另请参阅  
  [PRINT (Transact-SQL)](../../t-sql/language-elements/print-transact-sql.md)   
  [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)   
- [&#40;Transact-sql&#41;系统存储过程](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [&#40;Transact-sql&#41;的常规扩展存储过程](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)  
+ [&#40;Transact-sql&#41;系统存储过程 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的常规扩展存储过程 ](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)  
   
   

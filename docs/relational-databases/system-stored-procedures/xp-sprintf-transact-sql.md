@@ -1,5 +1,6 @@
 ---
-title: xp_sprintf （Transact-sql） |Microsoft Docs
+description: xp_sprintf (Transact-SQL)
+title: xp_sprintf (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/09/2020
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1eedd65c-03cc-4eab-b76e-04684fdfec52
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 157b027580592f2d4663788911530c282bebfcc4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3bd830fc35da8604538d0d70171988e218ee5200
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755527"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419191"
 ---
 # <a name="xp_sprintf-transact-sql"></a>xp_sprintf (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,13 +42,13 @@ xp_sprintf { string OUTPUT , format }
   
 ## <a name="arguments"></a>参数  
  *string*  
- 接收输出的**varchar**变量。  
+ 接收输出的 **varchar** 变量。  
   
  OUTPUT  
  如果指定，则将变量值放在输出参数中。  
   
  *format*  
- 带有*参数*值占位符的格式字符串，类似于 C 语言的**sprintf**函数所支持的值。 目前仅支持 %s 格式参数。  
+ 带有 *参数* 值占位符的格式字符串，类似于 C 语言的 **sprintf** 函数所支持的值。 目前仅支持 %s 格式参数。  
   
  argument   
  字符串，代表相应格式参数的值。  
@@ -59,7 +60,7 @@ xp_sprintf { string OUTPUT , format }
  0（成功）或 1（失败）  
   
 ## <a name="result-sets"></a>结果集  
- **xp_sprintf**返回以下消息：  
+ **xp_sprintf** 返回以下消息：  
   
  `The command(s) completed successfully.`  
   
@@ -67,8 +68,8 @@ xp_sprintf { string OUTPUT , format }
  要求 **公共** 角色具有成员身份。  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;Transact-sql&#41;系统存储过程](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [&#40;Transact-sql&#41;的常规扩展存储过程](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;系统存储过程 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的常规扩展存储过程 ](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
  [xp_sscanf &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/xp-sscanf-transact-sql.md)  
   
   

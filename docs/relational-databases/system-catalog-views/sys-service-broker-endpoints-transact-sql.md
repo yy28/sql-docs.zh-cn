@@ -1,5 +1,6 @@
 ---
-title: sys. service_broker_endpoints （Transact-sql） |Microsoft Docs
+description: sys.service_broker_endpoints (Transact-SQL)
+title: sys. service_broker_endpoints (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6979ec9b-0043-411e-aafb-0226fa26c5ba
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 86a7fb5a83fe8e12f6721328e69c45e40e57eb46
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1fd6a01ea9b6936edc90a64e70a2c310750d2b85
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897898"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419951"
 ---
 # <a name="sysservice_broker_endpoints-transact-sql"></a>sys.service_broker_endpoints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,10 +34,10 @@ ms.locfileid: "85897898"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**\<inherited columns>**|**--**|从 sys.databases 中继承列[&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)。|  
-|**is_message_forwarding_enabled**|**bit**|端点支持消息转发。 最初设置为**0** （禁用）。 不可为 NULL。|  
-|**message_forwarding_size**|**int**|允许用于转发消息的**tempdb**空间的最大兆字节数。 最初设置为**10**。 不可为 NULL。|  
-|**connection_auth**|**tinyint**|连接到此端点所需的连接身份验证的类型，为以下值之一：<br /><br /> **1** -NTLM<br /><br /> **2** -KERBEROS<br /><br /> **3** -协商<br /><br /> **4** -证书<br /><br /> **5** -NTLM，证书<br /><br /> **6** -KERBEROS，证书<br /><br /> **7** -协商，证书<br /><br /> **8**证书，NTLM<br /><br /> **9**证书，KERBEROS<br /><br /> **10** -证书，协商<br /><br /> 不可为 NULL。|  
+|**\<inherited columns>**|**--**|从 sys.databases 中继承列 [&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)。|  
+|**is_message_forwarding_enabled**|**bit**|端点支持消息转发。 这最初设置为 **0** (禁用) 。 不可为 NULL。|  
+|**message_forwarding_size**|**int**|允许用于转发消息的 **tempdb** 空间的最大兆字节数。 最初设置为 **10**。 不可为 NULL。|  
+|**connection_auth**|**tinyint**|连接到此端点所需的连接身份验证的类型，为以下值之一：<br /><br /> **1** -NTLM<br /><br /> **2** -KERBEROS<br /><br /> **3** -协商<br /><br /> **4** -证书<br /><br /> **5** -NTLM，证书<br /><br /> **6** -KERBEROS，证书<br /><br /> **7** -协商，证书<br /><br /> **8** 证书，NTLM<br /><br /> **9** 证书，KERBEROS<br /><br /> **10** -证书，协商<br /><br /> 不可为 NULL。|  
 |**connection_auth_desc**|**nvarchar(60)**|连接到此端点所需的连接身份验证类型的说明，可以是下列值之一：<br /><br /> NTLM<br /><br /> KERBEROS<br /><br /> NEGOTIATE<br /><br /> CERTIFICATE<br /><br /> NTLM、CERTIFICATE<br /><br /> KERBEROS、CERTIFICATE<br /><br /> NEGOTIATE、CERTIFICATE<br /><br /> CERTIFICATE、NTLM<br /><br /> CERTIFICATE、KERBEROS<br /><br /> CERTIFICATE、NEGOTIATE<br /><br /> 可以为 null.|  
 |**certificate_id**|**int**|身份验证所用证书的 ID（如果有）。<br /><br /> 0 = 使用 Windows 身份验证。|  
 |**encryption_algorithm**|**tinyint**|加密算法。 下面是可能的值及其说明和相应的 DDL 选项。<br /><br /> **0** ：无。 对应的 DDL 选项：已禁用。<br /><br /> **1** ： RC4。 对应的 DDL 选项： {必需 &#124; 必需的算法 RC4}。<br /><br /> **2** ： AES。 对应的 DDL 选项：所需的算法 AES。<br /><br /> **3** ：无，RC4。 对应的 DDL 选项： {支持的 &#124; 支持的算法 RC4}。<br /><br /> **4** ： NONE、AES。 对应的 DDL 选项：支持的算法 AES。<br /><br /> **5** ： RC4、AES。 对应的 DDL 选项：必需的算法 RC4 AES。<br /><br /> **6** ： AES、RC4。 对应的 DDL 选项： Required 算法 AES RC4。<br /><br /> **7** ：无、RC4、AES。 对应的 DDL 选项：支持的算法 RC4 AES。<br /><br /> **8** ：无、AES、RC4。 对应的 DDL 选项：支持的算法 AES RC4。<br /><br /> 不可为 NULL。|  

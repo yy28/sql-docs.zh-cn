@@ -1,5 +1,6 @@
 ---
-title: sys. dm_db_objects_disabled_on_compatibility_level_change （Transact-sql） |Microsoft Docs
+description: sys.dm_db_objects_disabled_on_compatibility_level_change (Transact-SQL)
+title: sys. dm_db_objects_disabled_on_compatibility_level_change (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,12 +21,12 @@ ms.assetid: a5d70064-0330-48b9-b853-01eba50755d0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 76dc2cd3bf7d1cc250948286b2bfc69efea2485e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 10abd1a344912dd88fbfec60ecd307f80a5373cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85634996"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419831"
 ---
 # <a name="spatial-data---sysdm_db_objects_disabled_on_compatibility_level_change"></a>空间数据-sys. dm_db_objects_disabled_on_compatibility_level_change
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "85634996"
 sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )   
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>形参  
+##  <a name="arguments"></a><a name="Arguments"></a> 参数  
  *compatibility_level*  
  标识要设置的兼容级别的**int** 。  
   
@@ -113,11 +114,11 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 ### <a name="behavior-of-the-disabled-objects"></a>已禁用对象的行为  
  **索引**  
   
- 如果聚集索引处于禁用状态，或者如果强制非聚集索引，则会引发以下错误： "查询处理器无法生成计划，因为索引 '%. \*ls ' 的表或视图 '%. \*ls ' 已禁用。 " 若要重新启用这些对象，请在升级后通过**对 ... 调用 ALTER INDEX 来重建索引。重新生成**。  
+ 如果聚集索引处于禁用状态，或者如果强制非聚集索引，则会引发以下错误： "查询处理器无法生成计划，因为索引 '%. \*ls ' 的表或视图 '%. \*ls ' 已禁用。 " 若要重新启用这些对象，请在升级后通过 **对 ... 调用 ALTER INDEX 来重建索引。重新生成**。  
   
  **堆**  
   
- 如果使用具有已禁用堆的表，则会引发以下错误。 若要重新启用这些对象，请在升级后通过调用**ALTER INDEX ALL ON .。。重新生成**。  
+ 如果使用具有已禁用堆的表，则会引发以下错误。 若要重新启用这些对象，请在升级后通过调用 **ALTER INDEX ALL ON .。。重新生成**。  
   
 ```  
 // ErrorNumber: 8674  
@@ -134,7 +135,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
  **检查约束和外键**  
   
- 禁用的检查约束和外键不会引发错误。 但修改行时，不强制执行约束。 若要重新启用这些对象，请在升级后通过调用**ALTER TABLE .。。CHECK 约束**。  
+ 禁用的检查约束和外键不会引发错误。 但修改行时，不强制执行约束。 若要重新启用这些对象，请在升级后通过调用 **ALTER TABLE .。。CHECK 约束**。  
   
  **持久化计算列**  
   
@@ -146,7 +147,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
  需要拥有 VIEW DATABASE STATE 权限。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示了对**sys.databases dm_db_objects_disabled_on_compatibility_level_change**的查询，以查找受更改兼容级别为120的对象。  
+ 下面的示例演示了对 **sys.databases dm_db_objects_disabled_on_compatibility_level_change** 的查询，以查找受更改兼容级别为120的对象。  
   
 ```sql  
 SELECT * FROM sys.dm_db_objects_disabled_on_compatibility_level_change(120);  

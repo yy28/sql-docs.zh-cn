@@ -1,4 +1,5 @@
 ---
+description: 'sys. pdw_nodes_column_store_segments (Transact-sql) '
 title: 'sys. pdw_nodes_column_store_segments (Transact-sql) '
 ms.custom: seo-dt-2019
 ms.date: 03/28/2018
@@ -13,12 +14,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: jrj
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: fc1e04718ea9db16d3b0c2a1cc59b14f906c6f31
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 45dc1cfc39b1287078e29c139b157a3e23ee3922
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197189"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420041"
 ---
 # <a name="syspdw_nodes_column_store_segments-transact-sql"></a>sys. pdw_nodes_column_store_segments (Transact-sql) 
 
@@ -44,7 +45,7 @@ ms.locfileid: "86197189"
 | **max_data_id**             | **bigint** | 列段中的最大数据 ID。                       |
 | **null_value**              | **bigint** | 用于表示 Null 的值。                               |
 | **on_disk_size**            | **bigint** | 段大小（字节）。                                    |
-| **pdw_node_id**             | **int**    | 节点的唯一标识符 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。 |
+| pdw_node_id             | **int**    | 节点的唯一标识符 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。 |
 | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
@@ -82,7 +83,7 @@ ORDER BY    table_nm
 
 ## <a name="permissions"></a>权限
 
-需要 VIEW SERVER STATE 权限****。
+需要 VIEW SERVER STATE 权限  。
 
 ## <a name="see-also"></a>另请参阅
 

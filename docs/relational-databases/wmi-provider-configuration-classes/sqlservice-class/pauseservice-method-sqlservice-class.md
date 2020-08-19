@@ -1,5 +1,6 @@
 ---
-title: PauseService 方法（SqlService）
+description: PauseService 方法（SqlService 类）
+title: 'PauseService 方法 (SqlService) '
 ms.custom: seo-lt-2019
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5c3a8feb-58b8-4385-b4c8-bf33cf4d276d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b40beb0c20bf9100d01aa58739bc911e4068a266
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 946ac67a84cf0dd5e6de83d7a3ff5a1a71eb2cb8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880574"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418693"
 ---
 # <a name="pauseservice-method-sqlservice-class"></a>PauseService 方法（SqlService 类）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +37,7 @@ object.PauseService()
 ```  
   
 ## <a name="parts"></a>组成部分  
- *object*  
+ 对象  
  一个表示服务的 [SqlService 类](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

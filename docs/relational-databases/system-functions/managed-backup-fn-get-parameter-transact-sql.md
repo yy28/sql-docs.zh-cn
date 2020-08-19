@@ -1,5 +1,6 @@
 ---
-title: managed_backup fn_get_parameter （Transact-sql） |Microsoft Docs
+description: 'managed_backup fn_get_parameter (Transact-sql) '
+title: managed_backup fn_get_parameter (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/03/2016
 ms.prod: sql
@@ -20,13 +21,14 @@ helpviewer_keywords:
 ms.assetid: ed94e54d-4516-4806-a8ce-f013d3a04122
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 63894f891d633e5b8c2f32f32b1be6573bb97baa
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: da8c646cca92a5ef25fd12322fd8a6bd222a1c9e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053423"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419511"
 ---
-# <a name="managed_backupfn_get_parameter-transact-sql"></a>managed_backup fn_get_parameter （Transact-sql）
+# <a name="managed_backupfn_get_parameter-transact-sql"></a>managed_backup fn_get_parameter (Transact-sql) 
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   返回包含 0 行、1 行或多行参数和值对的表。  
@@ -43,9 +45,9 @@ ms.locfileid: "86053423"
 managed_backup.fn_get_parameter ('parameter_name' | '' | NULL )  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>形参  
+##  <a name="arguments"></a><a name="Arguments"></a> 参数  
  parameter_name  
- 参数的名称。 parameter_name 为**NVARCHAR （128）**。 如果提供 NULL 或空字符串作为函数的参数，则该函数将返回所有已配置智能管理参数的名称/值对。  
+ 参数的名称。 parameter_name ** (128) 为 NVARCHAR **。 如果提供 NULL 或空字符串作为函数的参数，则该函数将返回所有已配置智能管理参数的名称/值对。  
   
 ## <a name="table-returned"></a>返回的表  
   

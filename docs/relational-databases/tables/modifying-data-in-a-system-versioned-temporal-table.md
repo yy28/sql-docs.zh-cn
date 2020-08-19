@@ -1,4 +1,5 @@
 ---
+description: 在系统版本控制的临时表中修改数据
 title: 在系统版本控制的临时表中修改数据 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/28/2016
@@ -11,12 +12,12 @@ ms.assetid: 5f398470-c531-47b5-84d5-7c67c27df6e5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a0860b822341fb3c974fbdd80726082cd3b1abbf
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 654648ba7206c3d5ce01a715a0ee24eae2d3212b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555265"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419001"
 ---
 # <a name="modifying-data-in-a-system-versioned-temporal-table"></a>修改由系统控制版本的时态表中的数据
 
@@ -36,7 +37,7 @@ ms.locfileid: "86555265"
 
   ```sql
   -- Insert with column list and without period columns
-  INSERT INTO [dbo].[Department]0
+  INSERT INTO [dbo].[Department]
     (  [DeptID]
           , [DeptName]
           , [ManagerID]

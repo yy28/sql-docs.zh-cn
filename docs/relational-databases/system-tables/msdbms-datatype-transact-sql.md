@@ -1,5 +1,6 @@
 ---
-title: MSdbms_datatype （Transact-sql） |Microsoft Docs
+description: MSdbms_datatype (Transact-SQL)
+title: MSdbms_datatype (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,23 +18,23 @@ helpviewer_keywords:
 ms.assetid: 606168cc-79a8-442f-ab43-936f8f884d72
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 62efb2fa9bf434af4cb9b237b133d3f705eaa7eb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3fcda5b5d0283f764fa2347b51d8f34dfb4cc53e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890027"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419111"
 ---
 # <a name="msdbms_datatype-transact-sql"></a>MSdbms_datatype (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSdbms_datatype**表包含在异类数据库复制中用作发布服务器或订阅服务器的每个受支持的数据库管理系统（DBMS）的本机数据类型的完整列表。 该表存储在**msdb**数据库中。  
+  **MSdbms_datatype**表包含每个受支持的数据库管理系统上的本机数据类型的完整列表 (DBMS) 用作异类数据库复制中的发布服务器或订阅服务器。 该表存储在 **msdb** 数据库中。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**datatype_id**|**int**|标识每个唯一的数据类型。|  
 |**dbms_id**|**int**|标识数据类型所属的 DBMS。|  
-|**type**|**sysname**|数据类型名称（本机）。|  
+|type|**sysname**|数据类型名称（本机）。|  
 |**createparams**|**int**|说明哪一长度、精度和小数位数组合适用于每种数据类型的位图，包括：<br /><br /> **0x1** = 精度。<br /><br /> **0x2** = SCALE。<br /><br /> **0x4** = LENGTH。|  
   
 ## <a name="remarks"></a>备注  
@@ -42,7 +43,7 @@ ms.locfileid: "85890027"
 ## <a name="see-also"></a>另请参阅  
  [异类数据库复制](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [指定 Oracle 发布服务器的数据类型映射](../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md)   
- [Transact-sql&#41;&#40;复制表](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;复制表 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图 (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

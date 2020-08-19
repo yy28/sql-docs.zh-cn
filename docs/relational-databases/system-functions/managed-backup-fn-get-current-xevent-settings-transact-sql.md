@@ -1,5 +1,6 @@
 ---
-title: managed_backup fn_get_current_xevent_settings （Transact-sql） |Microsoft Docs
+description: 'managed_backup fn_get_current_xevent_settings (Transact-sql) '
+title: managed_backup fn_get_current_xevent_settings (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,13 +21,14 @@ helpviewer_keywords:
 ms.assetid: 95d3adaa-bb9d-4833-b8b4-3d9fd4f9c82a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: cff78d30f768360c55b212742770d8caded6f5ee
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 164038c2009f273ae922e65c922c1d962a72b7d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053443"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419521"
 ---
-# <a name="managed_backupfn_get_current_xevent_settings-transact-sql"></a>managed_backup fn_get_current_xevent_settings （Transact-sql）
+# <a name="managed_backupfn_get_current_xevent_settings-transact-sql"></a>managed_backup fn_get_current_xevent_settings (Transact-sql) 
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   为智能管理支持的每个扩展事件类型返回 1 行。  
@@ -41,7 +43,7 @@ ms.locfileid: "86053443"
 smart_admin.fn_get_current_xevent_settings ()   
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>形参  
+##  <a name="arguments"></a><a name="Arguments"></a> 参数  
  此函数没有任何参数。  
   
 ## <a name="table-returned"></a>返回的表  
@@ -50,13 +52,13 @@ smart_admin.fn_get_current_xevent_settings ()
 |列名|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |Event_name|NVARCHAR(128)|扩展事件类型|  
-|is_configurable|NVARCHAR(128)|如果事件可配置，则此值设置为**True** ，否则设置为**False**。|  
+|is_configurable|NVARCHAR(128)|如果事件可配置，则此值设置为 **True** ，否则设置为 **False**。|  
 |is_enabled|NVARCHAR(128)|如果启用了事件，则此项设置为 True；否则设置为 False。 使用 smart_admin.sp_set_parameter 启用调试事件。|  
   
 ## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>权限  
- 需要对函数的**SELECT**权限。  
+ 需要对函数的 **SELECT** 权限。  
   
 ## <a name="examples"></a>示例  
  以下示例返回所有扩展事件及其当前的状态。  

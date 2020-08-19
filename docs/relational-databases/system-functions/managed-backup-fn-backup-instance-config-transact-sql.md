@@ -1,5 +1,6 @@
 ---
-title: managed_backup fn_backup_instance_config （Transact-sql） |Microsoft Docs
+description: 'managed_backup fn_backup_instance_config (Transact-sql) '
+title: managed_backup fn_backup_instance_config (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,13 +21,14 @@ helpviewer_keywords:
 ms.assetid: 2382a547-c0c9-4e1d-87c9-d8526192eb5a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ec61c7797a707b3c0d6dd41c0d2e36fb4cc0a945
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: a65649b7b565475eebd69bcadf4ac28bef707d7b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052770"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419561"
 ---
-# <a name="managed_backupfn_backup_instance_config-transact-sql"></a>managed_backup fn_backup_instance_config （Transact-sql）
+# <a name="managed_backupfn_backup_instance_config-transact-sql"></a>managed_backup fn_backup_instance_config (Transact-sql) 
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   返回 1 行，其中是 SQL Server 实例的 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 默认配置设置。  
@@ -42,8 +44,8 @@ ms.locfileid: "86052770"
 managed_backup.fn_backup_db_config ()  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>形参  
- None  
+##  <a name="arguments"></a><a name="Arguments"></a> 参数  
+ 无  
   
 ## <a name="table-returned"></a>返回的表  
   
@@ -52,15 +54,15 @@ managed_backup.fn_backup_db_config ()
 |is_smart_backup_enabled|INT|[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 启用时显示 1，[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 禁用时显示 0。|  
 |credential_name|SYSNAME|用于向存储进行身份验证的默认 SQL 凭据。|  
 |retention_days|INT|在实例级别设置的默认保持期。|  
-|storage_url|NVARCHAR （1024）|在实例级别设置的默认存储帐户 URL。|  
+|storage_url|NVARCHAR (1024) |在实例级别设置的默认存储帐户 URL。|  
 |encryption_algorithm|SYSNAME|加密算法的名称。 如果未指定加密，则设置为 NULL。|  
-|encryptor_type|NVARCHAR （32）|使用的加密程序的类型：证书或非对称密钥。 如果未指定加密程序，则设置为 NULL。|  
+|encryptor_type|NVARCHAR (32) |使用的加密程序的类型：证书或非对称密钥。 如果未指定加密程序，则设置为 NULL。|  
 |encryptor_name|SYSNAME|证书或非对称密钥的名称。 如果未指定名称，则设置为 NULL|  
   
 ## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>权限  
- 要求具有**ALTER ANY CREDENTIAL**权限的**db_backupoperator**数据库角色的成员身份。 不应拒绝用户**查看任何定义**权限。  
+ 要求具有**ALTER ANY CREDENTIAL**权限的**db_backupoperator**数据库角色的成员身份。 不应拒绝用户 **查看任何定义** 权限。  
   
 ## <a name="examples"></a>示例  
  下例返回所在实例上的 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的默认配置设置：  

@@ -1,5 +1,6 @@
 ---
-title: xp_sqlmaint （Transact-sql） |Microsoft Docs
+description: xp_sqlmaint (Transact-SQL)
+title: xp_sqlmaint (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: bda66e1b-6bbd-49be-b86e-37efc920e912
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 08db9ea2487f51267e7c1f1e4bac4fd807b59fcd
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: cfe66be84a9f631422c624eaf65152569d0405bd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890710"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419181"
 ---
 # <a name="xp_sqlmaint-transact-sql"></a>xp_sqlmaint (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,15 +44,15 @@ xp_sqlmaint 'switch_string'
   
 ## <a name="arguments"></a>参数  
  **"** *switch_string* **"**  
- 一个字符串，其中包含**sqlmaint**实用工具开关。 开关及其值之间必须以空格分隔。  
+ 一个字符串，其中包含 **sqlmaint** 实用工具开关。 开关及其值之间必须以空格分隔。  
   
- **-？** 开关对于**xp_sqlmaint**无效。  
+ **-？** 开关对于 **xp_sqlmaint**无效。  
   
 ## <a name="return-code-values"></a>返回代码值  
- 无。 如果**sqlmaint**实用程序失败，将返回错误。  
+ 无。 如果 **sqlmaint** 实用程序失败，将返回错误。  
   
 ## <a name="remarks"></a>备注  
- 如果使用 SQL Server 身份验证登录的用户调用此过程，则在执行之前，将使用 **-U "***login_id***"** 和 **-P "***password***"** 开关进行*switch_string* 。 如果用户已登录 Windows 身份验证，则*switch_string*传递，而不会更改为**sqlmaint**。  
+ 如果使用 SQL Server 身份验证登录的用户调用此过程，则在执行之前，将使用 **-U "***login_id***"** 和 **-P "***password***"** 开关进行 *switch_string* 。 如果用户已登录 Windows 身份验证，则 *switch_string* 传递，而不会更改为 **sqlmaint**。  
   
 ## <a name="permissions"></a>权限  
  要求具有 **sysadmin** 固定服务器角色的成员身份。  

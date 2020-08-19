@@ -1,5 +1,6 @@
 ---
-title: syscollector_collection_sets （Transact-sql） |Microsoft Docs
+description: syscollector_collection_sets (Transact-SQL)
+title: syscollector_collection_sets (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: db0def92-f25b-45da-9709-eab972b33800
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b65cbb9596ff25e334609e978fdf61a89be41db4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 902a8f7513bf30194ec40d7d27714e98f47b2cac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896781"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419881"
 ---
 # <a name="syscollector_collection_sets-transact-sql"></a>syscollector_collection_sets (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "85896781"
 |logging_level|**smallint**|指定日志记录级别（0、1 或 2）。 不可为 null。|  
 |days_until_expiration|**smallint**|收集的数据保存在管理数据仓库中的天数。 不可为 null。|  
 |description|**nvarchar(4000)**|描述收集组。 可以为 Null。|  
-|dump_on_any_error|**bit**|打开（1）或关闭（0），指示是否 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 在出现任何错误时创建转储文件。 不可为 null。|  
+|dump_on_any_error|**bit**|打开 (1) 或关闭 (0) ，以指示是否 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 在出现任何错误时创建转储文件。 不可为 null。|  
 |dump_on_codes|**nvarchar(max)**|包含用于触发转储文件的 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 错误代码的列表。 可以为 Null。|  
   
 ## <a name="permissions"></a>权限  
@@ -56,8 +57,8 @@ ms.locfileid: "85896781"
  数据收集器 API 只允许您更改或删除您所创建的收集组。 不能修改或删除随系统提供的收集组。 不过，您仍可以启用或禁用系统收集组，还可以更改其配置。  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;Transact-sql&#41;的数据收集器存储过程](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [&#40;Transact-sql&#41;的数据收集器视图](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
- [数据收集](../../relational-databases/data-collection/data-collection.md)  
+ [数据收集器存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的数据收集器视图 ](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
+ [“数据收集”](../../relational-databases/data-collection/data-collection.md)  
   
   

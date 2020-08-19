@@ -1,4 +1,5 @@
 ---
+description: 使用数据类型
 title: 使用数据类型 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
@@ -16,11 +17,12 @@ ms.assetid: 1e0e736a-c709-4d89-aeb2-b32dcfd641fa
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 533ea37ebfca2188d1fdf90e804f72d340240573
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 99ac0e206244404d1f4155acdd10c0a35df6e719
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008632"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420301"
 ---
 # <a name="working-with-data-types"></a>使用数据类型
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -49,7 +51,7 @@ ms.locfileid: "86008632"
   
 -   在对象构造函数中内联指定 <xref:Microsoft.SqlServer.Management.Smo.DataType>。  
   
--   使用类的静态成员之一 <xref:Microsoft.SqlServer.Management.Smo.DataType> ，例如**Int**。实际上，这将返回对象的实例 <xref:Microsoft.SqlServer.Management.Smo.DataType> 。  
+-   使用类的静态成员之一 <xref:Microsoft.SqlServer.Management.Smo.DataType> ，例如 **Int**。实际上，这将返回对象的实例 <xref:Microsoft.SqlServer.Management.Smo.DataType> 。  
   
  <xref:Microsoft.SqlServer.Management.Smo.DataType> 对象具有定义数据类型的几个属性。 例如，<xref:Microsoft.SqlServer.Management.Smo.SqlDataType> 属性指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型。 在 <xref:Microsoft.SqlServer.Management.Smo.SqlDataType> 枚举中列出了表示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型的常量值。 这是指诸如 **varchar**、 **nchar**、 **currency**、 **integer**、 **float**和 **datetime**这样的数据类型。  
   
@@ -60,7 +62,7 @@ ms.locfileid: "86008632"
  <xref:Microsoft.SqlServer.Management.Smo.SqlDataType> 枚举包含 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持的所有数据类型的列表。  
   
 ## <a name="examples"></a>示例  
-若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual Studio .net 中创建 Visual C&#35; SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅 [在 Visual Studio .net 中创建 Visual C&#35; SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
   
 ## <a name="constructing-a-datatype-object-with-the-specification-in-the-constructor-in-visual-basic"></a>使用 Visual Basic 中构造函数的规范构造 DataType 对象  

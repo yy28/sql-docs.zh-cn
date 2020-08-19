@@ -1,5 +1,6 @@
 ---
-title: sp_add_alert （Transact-sql） |Microsoft Docs
+description: sp_add_alert (Transact-SQL)
+title: sp_add_alert (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8d2bdee46efa339776a3d6baf92e616c56026c0b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dd4c19f3cbe2525bf9b968e1d314767217f62129
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880025"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419311"
 ---
 # <a name="sp_add_alert-transact-sql"></a>sp_add_alert (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,18 +54,18 @@ sp_add_alert [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @name = ] 'name'`警报的名称。 该名称显示在为响应警报而发送的电子邮件或寻呼消息中。 它必须唯一，并且可以包含百分号（ **%** ）字符。 *名称*为**sysname**，无默认值。  
+`[ @name = ] 'name'` 警报的名称。 该名称显示在为响应警报而发送的电子邮件或寻呼消息中。 它必须唯一，并且可以包含 (**%**) 字符的百分比。 *名称* 为 **sysname**，无默认值。  
   
-`[ @message_id = ] message_id`定义警报的消息错误号。 （它通常与**sysmessages**表中的错误号相对应。）*message_id*的值为**int**，默认值为**0**。 如果使用*严重性*来定义警报，则*message_id*必须为**0**或 NULL。  
+`[ @message_id = ] message_id` 定义警报的消息错误号。  (它通常与 **sysmessages** 表中的错误号相对应。 ) *message_id* 的值为 **int**，默认值为 **0**。 如果使用 *严重性* 来定义警报，则 *message_id* 必须为 **0** 或 NULL。  
   
 > [!NOTE]  
->  只有写入 Microsoft Windows 应用程序日志的**sysmessages**错误才会导致发送警报。  
+>  只有写入 Microsoft Windows 应用程序日志的 **sysmessages** 错误才会导致发送警报。  
   
-`[ @severity = ] severity`定义警报的严重级别（从**1**到**25**）。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysmessages**表中存储的所有消息都以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 指定的严重性发送到 Windows 应用程序日志，则会导致发送警报。 *严重性*为**int**，默认值为0。 如果使用*message_id*来定义警报，则*严重性*必须为**0**。  
+`[ @severity = ] severity` 严重性级别 (**1** 到 **25** 个) 来定义警报。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysmessages** 表中存储的所有消息都以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 指定的严重性发送到 Windows 应用程序日志，则会导致发送警报。 *严重性* 为 **int**，默认值为0。 如果使用 *message_id* 来定义警报，则 *严重性* 必须为 **0**。  
   
-`[ @enabled = ] enabled`指示警报的当前状态。 *enabled*为**tinyint**，默认值为1（已启用）。 如果为**0**，则不启用警报，也不触发警报。  
+`[ @enabled = ] enabled` 指示警报的当前状态。 *enabled* 为 **tinyint**，默认值为 1 (启用) 。 如果为 **0**，则不启用警报，也不触发警报。  
   
-`[ @delay_between_responses = ] delay_between_responses`警报响应之间的等待时间（以秒为单位）。 *delay_between_responses*的值为**int**，默认值为**0**，这意味着响应之间不等待（每次出现警报时都生成响应）。 响应可以为下面的一种或两种形式：  
+`[ @delay_between_responses = ] delay_between_responses` 警报响应之间的等待时间（以秒为单位）。 *delay_between_responses*的值为 **int**，默认值为 **0**，这意味着在每次出现警报时都不会等待响应 (生成响应) 。 响应可以为下面的一种或两种形式：  
   
 -   通过电子邮件或寻呼发送的一个或多个通知。  
   
@@ -72,34 +73,34 @@ sp_add_alert [ @name = ] 'name'
   
  例如，当警报在短时间内重复产生时，通过设置该值就有可能避免发送重复的电子邮件。  
   
-`[ @notification_message = ] 'notification_message'`作为电子邮件、 **net send**或寻呼通知的一部分发送给操作员的可选附加消息。 *notification_message*为**nvarchar （512）**，默认值为 NULL。 指定*notification_message*可用于添加特定注释，如补救过程。  
+`[ @notification_message = ] 'notification_message'` 作为电子邮件、 **net send**或寻呼通知的一部分发送给操作员的可选附加消息。 *notification_message* 为 **nvarchar (512) **，默认值为 NULL。 指定 *notification_message* 可用于添加特定注释，如补救过程。  
   
-`[ @include_event_description_in = ] include_event_description_in`错误的说明是否 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 应作为通知消息的一部分包含。 *include_event_description_in*为**tinyint**，默认值为**5** （电子邮件和**网络发送**），并且可以将这些值中的一个或多个与**or**逻辑运算符组合在一起。  
+`[ @include_event_description_in = ] include_event_description_in` 错误的说明是否 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 应作为通知消息的一部分包含。 *include_event_description_in*为 **tinyint**，默认值为 **5** (电子邮件和 **net send**) ，并且可以将这些值中的一个或多个与 **or** 逻辑运算符组合在一起。  
   
 > [!IMPORTANT]
->  在未来版本的中，将从代理中删除寻呼程序和**net send**选项 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 请避免在新的开发工作中使用这些功能，并考虑修改当前使用这些功能的应用程序。  
+>  在 **的未来版本中，将从** 代理中删除寻呼程序和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] net send [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]选项。 请避免在新的开发工作中使用这些功能，并考虑修改当前使用这些功能的应用程序。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
-|**0**|None|  
+|**0**|无|  
 |**1**|电子邮件|  
 |**2**|寻呼机|  
 |**4**|**net send**|  
   
-`[ @database_name = ] 'database'`必须发生错误才能触发警报的数据库。 如果未提供*数据库*，则会触发警报，而不考虑错误发生的位置。 *数据库*为**sysname**。 不允许用方括号 ([ ]) 将名称括起来。 默认值为 NULL。  
+`[ @database_name = ] 'database'` 必须发生错误才能触发警报的数据库。 如果未提供 *数据库*，则会触发警报，而不考虑错误发生的位置。 *数据库* 为 **sysname**。 不允许用方括号 ([ ]) 将名称括起来。 默认值为 NULL。  
   
-`[ @event_description_keyword = ] 'event_description_keyword_pattern'`错误说明所需的字符序列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] LIKE 表达式模式匹配字符。 *event_description_keyword_pattern*为**nvarchar （100）**，默认值为 NULL。 此参数适用于筛选对象名称（例如 **% customer_table%**）。  
+`[ @event_description_keyword = ] 'event_description_keyword_pattern'` 错误说明所需的字符序列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] LIKE 表达式模式匹配字符。 *event_description_keyword_pattern* 为 **nvarchar (100) **，默认值为 NULL。 此参数用于筛选对象名称，例如 **% customer_table%**)  (。  
   
-`[ @job_id = ] job_id`为了响应此警报而运行的作业的标识号。 *job_id*的值为**uniqueidentifier**，默认值为 NULL。  
+`[ @job_id = ] job_id` 为了响应此警报而运行的作业的标识号。 *job_id* 的值为 **uniqueidentifier**，默认值为 NULL。  
   
-`[ @job_name = ] 'job_name'`为响应此警报而执行的作业的名称。 *job_name*的默认值为**sysname**，默认值为 NULL。  
+`[ @job_name = ] 'job_name'` 为响应此警报而执行的作业的名称。 *job_name*的默认值为 **sysname**，默认值为 NULL。  
   
 > [!NOTE]  
->  必须指定*job_id*或*job_name* ，但不能同时指定两者。  
+>  必须指定 *job_id* 或 *job_name* ，但不能同时指定两者。  
   
-`[ @raise_snmp_trap = ] raise_snmp_trap`在版本7.0 中未实现 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *raise_snmp_trap*为**tinyint**，默认值为0。  
+`[ @raise_snmp_trap = ] raise_snmp_trap` 在版本7.0 中未实现 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *raise_snmp_trap* 为 **tinyint**，默认值为0。  
   
-`[ @performance_condition = ] 'performance_condition'`以 "*itemcomparatorvalue*" 格式表示的值。 *performance_condition*的默认值为**nvarchar （512）** ，默认值为 NULL，其中包含这些元素。  
+`[ @performance_condition = ] 'performance_condition'` 以 "*itemcomparatorvalue*" 格式表示的值。 *performance_condition* 为 **nvarchar (512) ** ，默认值为 NULL，其中包含这些元素。  
   
 |格式元素|描述|  
 |--------------------|-----------------|  
@@ -107,14 +108,14 @@ sp_add_alert [ @name = ] 'name'
 |*比较运算符*|以下运算符之一： >、< 或 =|  
 |*值*|计数器的数值|  
   
-`[ @category_name = ] 'category'`警报类别的名称。 *category 的类型*为**sysname**，默认值为 NULL。  
+`[ @category_name = ] 'category'` 警报类别的名称。 *category 的类型* 为 **sysname**，默认值为 NULL。  
   
-`[ @wmi_namespace = ] 'wmi_namespace'`要查询事件的 WMI 命名空间。 *wmi_namespace*的默认值为**sysname**，默认值为 NULL。 只支持本地服务器上的命名空间。  
+`[ @wmi_namespace = ] 'wmi_namespace'` 要查询事件的 WMI 命名空间。 *wmi_namespace* 的默认值为 **sysname**，默认值为 NULL。 只支持本地服务器上的命名空间。  
   
-`[ @wmi_query = ] 'wmi_query'`指定警报的 WMI 事件的查询。 *wmi_query*为**nvarchar （512）**，默认值为 NULL。  
+`[ @wmi_query = ] 'wmi_query'` 指定警报的 WMI 事件的查询。 *wmi_query* 为 **nvarchar (512) **，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="result-sets"></a>结果集  
  无  
@@ -124,7 +125,7 @@ sp_add_alert [ @name = ] 'name'
   
  在下列情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 应用程序产生的错误/消息将发送到 Windows 应用程序日志，并因此引发警报：  
   
--   严重性19或更高**的 sys. 消息**错误  
+-   严重性19或更高 **的 sys. 消息** 错误  
   
 -   任何使用 WITH LOG 语法调用的 RAISERROR 语句  
   
