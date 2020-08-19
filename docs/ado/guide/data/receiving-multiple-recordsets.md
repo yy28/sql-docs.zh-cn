@@ -1,4 +1,5 @@
 ---
+description: 接收多个记录集
 title: 接收多个记录集 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 2a7ad7a6-f00d-4355-b0b5-d0ab957b0566
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 12aa80b918d11dad07119a26da3da8f27ef82cdb
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d5aad021e1d6003ba3c8d30915f1648f57124984
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759103"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453009"
 ---
 # <a name="receiving-multiple-recordsets"></a>接收多个记录集
-[适用于 SQL Server 的 Microsoft OLE DB 提供程序](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)支持为包含多个 sql 语句的单个命令返回多个**记录集**对象，每个 Sql 语句一个**记录集**。 返回**记录集**的顺序遵循 SQL 语句在命令文本中的放置顺序。  
+[适用于 SQL Server 的 Microsoft OLE DB 提供程序](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)支持为包含多个 sql 语句的单个命令返回多个**记录集**对象，每个 Sql 语句一个**记录集**。 返回 **记录集**的顺序遵循 SQL 语句在命令文本中的放置顺序。  
   
- 当命令包含 COMPUTE 子句时，适用于 SQL Server 的 Microsoft OLE DB 提供程序也会向 ADO 返回多个结果集。 例如，包含以下 SQL 语句的命令将在两个**记录集**对象中返回结果：一个用于行集（*ProductID*、 *ProductName*、*单价*），另一个用于表中所有产品的平均价格。  
+ 当命令包含 COMPUTE 子句时，适用于 SQL Server 的 Microsoft OLE DB 提供程序也会向 ADO 返回多个结果集。 例如，包含以下 SQL 语句的命令将在两个 **记录集** 对象中返回结果：一个用于 (*ProductID*、 *ProductName*、 *单价*) 的行集，另一个用于表中所有产品的平均价格。  
   
 ```  
 SELECT ProductID, ProductName, UnitPrice   
@@ -31,6 +32,6 @@ SELECT ProductID, ProductName, UnitPrice
   COMPUTE AVG(UnitPrice)  
 ```  
   
- 可以使用**NextRecordset**方法枚举两个对象。  
+ 可以使用 **NextRecordset** 方法枚举两个对象。  
   
- 有关详细信息，请参阅[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)。
+ 有关详细信息，请参阅 [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)。

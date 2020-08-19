@@ -1,4 +1,5 @@
 ---
+description: 备份和还原 DQS 数据库
 title: 备份和还原 DQS 数据库
 ms.date: 03/01/2017
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 5df48172681fef1ea75735702915ac1beedabee1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 03b58daec9def4e902e111719353110bfad1d69b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897561"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449972"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>备份和还原 DQS 数据库
 
@@ -72,7 +73,7 @@ ms.locfileid: "85897561"
   
     ```  
   
-12. 按 F5 执行这些语句。 检查 "**结果**" 窗格以验证语句是否已成功执行。  
+12. 按 F5 执行这些语句。 检查 " **结果** " 窗格以验证语句是否已成功执行。  
   
 ## <a name="see-also"></a>另请参阅  
  [管理 DQS 数据库](../data-quality-services/manage-dqs-databases.md)  

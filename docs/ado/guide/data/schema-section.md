@@ -1,4 +1,5 @@
 ---
+description: 架构部分
 title: Schema 部分 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ac6e524-2c92-48e8-b871-0a4b5c8fda18
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8222b697fec7d0dd5bd1f32425cf48761f25308e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2b7d3a82231e31771a6f01dc558feebdc98dcbe1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760893"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452889"
 ---
 # <a name="schema-section"></a>架构部分
 架构部分是必需的。 如前面的示例所示，ADO 写出了有关每个列的详细元数据，以尽可能多地保留数据值的语义。 但是，若要在 XML 中加载，ADO 只需要列的名称及其所属的行集。 下面是最小架构的示例：  
@@ -62,7 +63,7 @@ ms.locfileid: "82760893"
 </s:Schema>  
 ```  
   
- 然后，在 "数据" 部分中，行将使用 name 属性（而非 rs： name）来引用该列：  
+ 然后，在 "数据" 部分中，行将使用 name 属性， (不是 rs： name) 以引用该列：  
   
 ```  
 "<row s1="1" s2="Speedy Express" s3="(503) 555-9831"/>  
@@ -98,7 +99,7 @@ ms.locfileid: "82760893"
  同样，由于 `CompanyName` 在前面的示例中没有为定义的别名，因此 `CompanyName` 必须在整个文档中一致地使用。  
   
 ## <a name="data-types"></a>数据类型  
- 您可以向具有 dt： type 属性的列应用数据类型。 有关允许的 XML 类型的权威性指南，请参阅[W3C xml-data 规范](http://www.w3.org/TR/1998/NOTE-XML-data/)的 "数据类型" 部分。 可以通过两种方式指定数据类型：直接在列定义本身上指定 dt： type 特性，或使用 s:datatype 构造作为列定义的嵌套元素。 例如，  
+ 您可以向具有 dt： type 属性的列应用数据类型。 有关允许的 XML 类型的权威性指南，请参阅 [W3C xml-data 规范](http://www.w3.org/TR/1998/NOTE-XML-data/)的 "数据类型" 部分。 可以通过两种方式指定数据类型：直接在列定义本身上指定 dt： type 特性，或使用 s:datatype 构造作为列定义的嵌套元素。 例如，  
   
 ```  
 <s:AttributeType name="Phone" >  
@@ -114,7 +115,7 @@ ms.locfileid: "82760893"
   
  如果完全从行定义中省略 dt： type 属性，则默认情况下，该列的类型将为可变长度字符串。  
   
- 如果你有比类型名称（例如 dt： maxLength）更多的类型信息，则使用 s:datatype 子元素会使其更易于阅读。 但这只是一种约定，不是必需的。  
+ 如果你的类型信息比类型名称多 (例如，dt： maxLength) ，则使用 s:datatype 子元素可更方便地使用它。 但这只是一种约定，不是必需的。  
   
  下面的示例演示如何在架构中包含类型信息。  
   
@@ -141,7 +142,7 @@ ms.locfileid: "82760893"
  在第二个示例中，使用了 rs： fixedlength 属性。 将 rs： fixedlength 属性设置为 true 的列意味着数据必须具有架构中定义的长度。 在这种情况下，title_id 的有效值为 "123456"，因为它是 "123"。 但是，"123" 无效，因为其长度为3，而不是6。 有关 fixedlength 属性的更完整说明，请参阅 OLE DB 程序员指南。  
   
 ## <a name="handling-nulls"></a>处理 Null 值  
- Null 值由 rs： maybenull 属性处理。 如果此特性设置为 true，则列的内容可以包含 null 值。 此外，如果在数据行中找不到该列，则从行集读取数据的用户将从 IRowset：：（）获取 null 状态。 请考虑运货商表中的以下列定义。  
+ Null 值由 rs： maybenull 属性处理。 如果此特性设置为 true，则列的内容可以包含 null 值。 此外，如果在数据行中找不到该列，则从行集读取数据的用户将从 IRowset：： ( # A1 获取 null 状态。 请考虑运货商表中的以下列定义。  
   
 ```  
 <s:AttributeType name="ShipperID">  
@@ -170,7 +171,7 @@ ms.locfileid: "82760893"
 <z:row ShipperID="1" CompanyName=""/>  
 ```  
   
- 对于前面的行，持久性提供程序将为这两个列返回 OLE DB 状态 DBSTATUS_S_OK。 `CompanyName`在此示例中，只是 "" （长度为零的字符串）。  
+ 对于前面的行，持久性提供程序将为这两个列返回 OLE DB 状态 DBSTATUS_S_OK。 `CompanyName`在此示例中，只需 "" (零长度字符串) 。  
   
  有关可用于 OLE DB 的 XML 文档架构中的 OLE DB 构造的详细信息，请参阅 "urn： schema-microsoft com：行集" 的定义和 OLE DB 程序员指南。  
   

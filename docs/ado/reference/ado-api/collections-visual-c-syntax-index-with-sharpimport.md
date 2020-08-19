@@ -1,5 +1,6 @@
 ---
-title: '集合（Visual C++ 语法索引与 #import） |Microsoft Docs'
+description: '集合 (Visual C++ 语法索引与 #import 的) '
+title: 集合 (#import) 的 Visual C++ 语法索引 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: 36fbca8e-1884-44b5-806b-d15e30f42fe6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9142282c2ee2cda5a2b545a3ef164581403ccba3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 58f7761cc67cd1320594988ba50bfcc79bcfc0d9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758813"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450909"
 ---
-# <a name="collections-visual-c-syntax-index-with-import"></a>集合（#import Visual C++ 语法索引）
+# <a name="collections-visual-c-syntax-index-with-import"></a>集合 (Visual C++ 语法索引与 #import 的) 
 了解集合继承某些常用方法和属性很有用。  
   
- 所有集合都继承**Count**属性和**Refresh**方法，所有集合都添加了**Item**属性。 **Errors**集合添加**Clear**方法。 **Parameters**集合继承了**append**和**delete**方法，而**字段**集合添加了**append**、 **delete**和**Update**方法。  
+ 所有集合都继承 **Count** 属性和 **Refresh** 方法，所有集合都添加了 **Item** 属性。 **Errors**集合添加**Clear**方法。 **Parameters**集合继承了**append**和**delete**方法，而**字段**集合添加了**append**、 **delete**和**Update**方法。  
   
 ## <a name="properties-collection"></a>Properties 集合  
   
@@ -97,7 +98,7 @@ PropertyPtr GetItem( const _variant_t & Index ); __declspec(property(get=GetItem
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Errors 集合（ADO）](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [Fields 集合（ADO）](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Parameters 集合（ADO）](../../../ado/reference/ado-api/parameters-collection-ado.md)   
+ [ADO)  (收集 ](../../../ado/reference/ado-api/errors-collection-ado.md)   
+ [字段集合 (ADO) ](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [ADO) 的参数集合 (](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [属性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

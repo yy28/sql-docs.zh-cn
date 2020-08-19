@@ -1,4 +1,5 @@
 ---
+description: Shape APPEND 子句
 title: Shape APPEND 子句 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d26f83985ce74edc0581ff9ff8fee31d5064c7e5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f2a04e532256de30295f2179f7b15386bceaa8b3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760863"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452859"
 ---
 # <a name="shape-append-clause"></a>Shape APPEND 子句
-Shape command APPEND 子句向**记录集**追加一列或多列。 通常，这些列是章节列，它们引用子**记录集**。  
+Shape command APPEND 子句向 **记录集**追加一列或多列。 通常，这些列是章节列，它们引用子 **记录集**。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,16 +35,16 @@ SHAPE [parent-command [[AS] parent-alias]] APPEND column-list
  此子句的组成部分如下所示：  
   
  *parent-command*  
- 零或以下值之一（可以完全省略*父命令*）：  
+ 零个或以下 (可以完全省略 *父命令*) ：  
   
--   括在大括号（""）中的提供程序命令 {} ，该命令返回**记录集**对象。 将向基础数据提供程序发出命令，其语法取决于提供程序的要求。 这通常是 SQL 语言，尽管 ADO 不需要任何特定的查询语言。  
+-   括在大括号中的提供程序命令 ( " {} " ) 返回 **记录集** 对象。 将向基础数据提供程序发出命令，其语法取决于提供程序的要求。 这通常是 SQL 语言，尽管 ADO 不需要任何特定的查询语言。  
   
 -   嵌入在括号内的另一个 shape 命令。  
   
 -   TABLE 关键字，后跟数据提供程序中表的名称。  
   
  *父-别名*  
- 引用父**记录集**的可选别名。  
+ 引用父 **记录集**的可选别名。  
   
  *列列表*  
  以下一项或多项操作：  
@@ -54,7 +55,7 @@ SHAPE [parent-command [[AS] parent-alias]] APPEND column-list
   
 -   使用 NEW 子句创建的新列。  
   
--   章节列。 章节列定义括在括号中（"（）"）。 请参阅以下语法。  
+-   章节列。 章节列定义括在括号中， ( " ( # A2" ) 中。 请参阅以下语法。  
   
 ```  
 SHAPE [parent-command [[AS] parent-alias]]  
@@ -66,16 +67,16 @@ SHAPE [parent-command [[AS] parent-alias]]
   
 ## <a name="remarks"></a>备注  
  *子记录集*  
- -   括在大括号（""）中的提供程序命令 {} ，该命令返回**记录集**对象。 将向基础数据提供程序发出命令，其语法取决于提供程序的要求。 这通常是 SQL 语言，尽管 ADO 不需要任何特定的查询语言。  
+ -   括在大括号中的提供程序命令 ( " {} " ) 返回 **记录集** 对象。 将向基础数据提供程序发出命令，其语法取决于提供程序的要求。 这通常是 SQL 语言，尽管 ADO 不需要任何特定的查询语言。  
   
 -   嵌入在括号内的另一个 shape 命令。  
   
--   现有整形**记录集**的名称。  
+-   现有整形 **记录集**的名称。  
   
 -   TABLE 关键字，后跟数据提供程序中表的名称。  
   
  *子别名*  
- 引用子**记录集**的别名。  
+ 引用子 **记录集**的别名。  
   
  *父列*  
  *父-命令*返回的**记录集中**的列。  
@@ -84,7 +85,7 @@ SHAPE [parent-command [[AS] parent-alias]]
  *子命令*返回的**记录集中**的列。  
   
  *param-数字*  
- 请参阅[参数化命令的操作](../../../ado/guide/data/operation-of-parameterized-commands.md)。  
+ 请参阅 [参数化命令的操作](../../../ado/guide/data/operation-of-parameterized-commands.md)。  
   
  *章节-别名*  
  引用追加到父级的章节列的别名。  
@@ -102,13 +103,13 @@ SHAPE [parent-command [[AS] parent-alias]]
 SHAPE {select * from t1} APPEND ({select * from t2} RELATE k1 TO k2)  
 ```  
   
- 形状将执行两个命令： `select * from t1` 和（ `select * from t2 RELATE k1 TO k2)` 。 如果用户提供了一个由多个提供程序命令（用分号分隔）组成的复合命令，则形状无法区分差别。 因此，在下面的 SHAPE 命令中，  
+ 形状将执行两个命令： `select * from t1` 和 (`select * from t2 RELATE k1 TO k2)` 。 如果用户提供了一个由多个提供程序命令（用分号分隔）组成的复合命令，则形状无法区分差别。 因此，在下面的 SHAPE 命令中，  
   
 ```  
 SHAPE {select * from t1; drop table t1} APPEND ({select * from t2} RELATE k1 TO k2)  
 ```  
   
- 形状执行 `select * from t1; drop table t1` 和（ `select * from t2 RELATE k1 TO k2),` `drop table t1` 在此示例中，不认识到是一个单独的，而是危险的提供程序命令。 应用程序必须始终验证用户输入，以防发生此类潜在的黑客攻击。  
+ `select * from t1; drop table t1` `select * from t2 RELATE k1 TO k2),` 在此示例中，形状执行并 (未实现， `drop table t1` 这种情况下是一种危险的、提供程序命令。 应用程序必须始终验证用户输入，以防发生此类潜在的黑客攻击。  
   
  本部分包含以下主题。  
   

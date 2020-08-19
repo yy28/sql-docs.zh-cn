@@ -1,5 +1,6 @@
 ---
-title: 使用 IRowsetFastLoad 大容量复制数据（Native Client OLE DB 提供程序） |Microsoft Docs
+description: 使用 IRowsetFastLoad (的批量复制数据 OLE DB) 在 SQL Server Native Client 中
+title: 使用 IRowsetFastLoad 大容量复制数据 (Native Client OLE DB 提供程序) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,42 +17,42 @@ ms.assetid: 0b8908d1-fd6d-47a9-9e30-514cee8f60c8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6a898f45d80a266b0d385b73832312e9046b157b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 1a2586a6f3a741f81cb30756006c5a2b4ae84b02
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247896"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448465"
 ---
-# <a name="bulk-copy-data-using-irowsetfastload-ole-db-in--sql-server-native-client"></a>使用 IRowsetFastLoad 中的批量复制数据（OLE DB） SQL Server Native Client
+# <a name="bulk-copy-data-using-irowsetfastload-ole-db-in--sql-server-native-client"></a>使用 IRowsetFastLoad (的批量复制数据 OLE DB) 在 SQL Server Native Client 中
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   此示例说明如何使用 IRowsetFastLoad 将记录大容量复制到表中。  
   
- 通过将特定于 SQLOLEDB 提供程序的属性 SSPROP_ENABLEFASTLOAD 设置为 VARIANT_TRUE，使用者将其对大容量复制的需要通知 SQLOLEDB。 通过在数据源上设置该属性，使用者创建 SQLOLEDB 会话。 新会话允许使用者访问 IRowsetFastLoad****。  
+ 通过将特定于 SQLOLEDB 提供程序的属性 SSPROP_ENABLEFASTLOAD 设置为 VARIANT_TRUE，使用者将其对大容量复制的需要通知 SQLOLEDB。 通过在数据源上设置该属性，使用者创建 SQLOLEDB 会话。 新会话允许使用者访问 IRowsetFastLoad  。  
   
- 可以参考完整示例，该示例演示了使用 IRowsetFastLoad 将记录大容量复制到表中的过程****。 在此示例中，将 10 条记录添加到表 IRFLTable 中****。 需要在数据库中创建表**IRFLTable** 。  
+ 可以参考完整示例，该示例演示了使用 IRowsetFastLoad 将记录大容量复制到表中的过程  。 在此示例中，将 10 条记录添加到表 IRFLTable 中  。 需要在数据库中创建表 IRFLTable  。  
   
  此示例要求使用 AdventureWorks 示例数据库，其可从 [Microsoft SQL Server 示例和社区项目](https://go.microsoft.com/fwlink/?LinkID=85384)主页下载。  
   
 > [!IMPORTANT]  
->  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，则应通过[Win32 加密 API](https://go.microsoft.com/fwlink/?LinkId=64532)对其进行加密。  
+>  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
   
 ### <a name="to-bulk-copy-data-into-a-sql-server-table"></a>将数据大容量复制到 SQL Server 表中  
   
 1.  建立与数据源的连接。  
   
-2.  将特定于 SQLOLEDB 提供程序的数据源属性 SSPROP_ENABLEFASTLOAD 设置为 VARIANT_TRUE。 通过将该属性设置为 VARIANT_TRUE，新创建的会话将允许使用者访问 IRowsetFastLoad****。  
+2.  将特定于 SQLOLEDB 提供程序的数据源属性 SSPROP_ENABLEFASTLOAD 设置为 VARIANT_TRUE。 通过将该属性设置为 VARIANT_TRUE，新创建的会话将允许使用者访问 IRowsetFastLoad  。  
   
-3.  创建请求 IOpenRowset**** 接口的会话。  
+3.  创建请求 IOpenRowset  接口的会话。  
   
-4.  调用 IOpenRowset::OpenRowset 以打开包括表（将使用大容量复制操作复制其中数据）中所有行的行集****。  
+4.  调用 IOpenRowset::OpenRowset 以打开包括表（将使用大容量复制操作复制其中数据）中所有行的行集  。  
   
-5.  执行需要的绑定，并使用 IAccessor::CreateAccessor**** 创建取值函数。  
+5.  执行需要的绑定，并使用 IAccessor::CreateAccessor  创建取值函数。  
   
 6.  设置内存缓冲区，用于将数据从其复制到表中。  
   
-7.  调用 IRowsetFastLoad::InsertRow**** 将数据大容量复制到表中。  
+7.  调用 IRowsetFastLoad::InsertRow  将数据大容量复制到表中。  
 
 ## <a name="example"></a>示例  
  在此示例中，将 10 条记录添加到表 IRFLTable 中。 您需要在数据库中创建表 IRFLTable。 IA64 平台不支持此示例。  

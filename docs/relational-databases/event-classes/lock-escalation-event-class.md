@@ -1,4 +1,5 @@
 ---
+description: Lock:Escalation 事件类
 title: Lock:Escalation 事件类 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: d253b44c-7600-4afa-a3a7-03cc937c6a4b
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ec405817bc9ce89dd150adfcc2887ba2c703d556
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c1a4185e9234d9ee0a19acc0dfba0879c31ccfc3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737210"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448656"
 ---
 # <a name="lockescalation-event-class"></a>Lock:Escalation 事件类
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "85737210"
   
 |数据列名称|数据类型|说明|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|ApplicationName |**nvarchar**|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
+|ApplicationName|**nvarchar**|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
 |**ClientProcessID**|**int**|主机为运行该客户端应用程序的进程分配的 ID。 如果客户端提供了客户端进程 ID，则填充此数据列。|9|是|  
 |**DatabaseID**|**int**|获取锁所在的数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 数据列而且服务器可用，则 **ServerName** 将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
 |**DatabaseName**|**nvarchar**|发生升级的数据库的名称。|35|是|  
@@ -57,7 +58,7 @@ ms.locfileid: "85737210"
 |**StartTime**|**datetime**|该事件（如果存在）的启动时间。|14|是|  
 |**TextData**|**ntext**|导致锁升级的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的文本。|1|是|  
 |**TransactionID**|**bigint**|系统分配的事务 ID。|4|是|  
-|类型 |**int**|锁升级粒度：<br /><br /> 1 = NULL_RESOURCE<br /><br /> 2 = DATABASE<br /><br /> 3 = FILE<br /><br /> 5 = OBJECT（表级别）<br /><br /> 6 = PAGE<br /><br /> 7 = KEY<br /><br /> 8 = EXTENT<br /><br /> 9 = RID<br /><br /> 10 = APPLICATION<br /><br /> 11 = METADATA<br /><br /> 12 = HOBT<br /><br /> 13 = ALLOCATION_UNIT|57|是|  
+|**类型**|**int**|锁升级粒度：<br /><br /> 1 = NULL_RESOURCE<br /><br /> 2 = DATABASE<br /><br /> 3 = FILE<br /><br /> 5 = OBJECT（表级别）<br /><br /> 6 = PAGE<br /><br /> 7 = KEY<br /><br /> 8 = EXTENT<br /><br /> 9 = RID<br /><br /> 10 = APPLICATION<br /><br /> 11 = METADATA<br /><br /> 12 = HOBT<br /><br /> 13 = ALLOCATION_UNIT|57|是|  
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `sp_trace_create` 过程创建跟踪，使用 `sp_trace_setevent` 将锁升级列添加到跟踪，然后使用 `sp_trace_setstatus` 启动跟踪。 在如 `EXEC sp_trace_setevent @TraceID, 60, 22, 1`的语句中，数字 `60` 指示升级事件类， `22` 指示 **ObjectID** 列， `1` 将跟踪事件设置为 ON。  

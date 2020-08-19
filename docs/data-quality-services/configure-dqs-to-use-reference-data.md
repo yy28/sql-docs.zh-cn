@@ -1,4 +1,5 @@
 ---
+description: 将 DQS 配置为使用引用数据
 title: 将 DQS 配置为使用引用数据
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: fae745e7-57a7-4cbc-8979-56ea8e392e4e
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 0e7a33369516adf7a7fdae9f0047ff7f434e9c16
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b20f19032a298805c8958d269adffd8a9600a58a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894201"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449943"
 ---
 # <a name="configure-dqs-to-use-reference-data"></a>将 DQS 配置为使用引用数据
 
@@ -32,7 +33,7 @@ ms.locfileid: "85894201"
 ## <a name="before-you-begin"></a>开始之前  
   
 ###  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
- 若要使用来自市场的引用数据，您必须具有有效的市场帐户密钥。 有关创建 Marketplace 帐户密钥的详细信息，请参阅[创建帐户](https://go.microsoft.com/fwlink/?LinkId=212936)（ https://go.microsoft.com/fwlink/?LinkId=212936) 。 还可以通过单击 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中 **“管理”** 下的 **“配置”** ，然后单击 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] “引用数据” **选项卡下的** “创建 DataMarket 帐户 ID” **，在** 中创建市场帐户密钥。  
+ 若要使用来自市场的引用数据，您必须具有有效的市场帐户密钥。 有关创建 Marketplace 帐户密钥的详细信息，请参阅 [创建帐户](https://go.microsoft.com/fwlink/?LinkId=212936) (https://go.microsoft.com/fwlink/?LinkId=212936) 。 还可以通过单击 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中 **“管理”** 下的 **“配置”** ，然后单击 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] “引用数据” **选项卡下的** “创建 DataMarket 帐户 ID” **，在** 中创建市场帐户密钥。  
   
 ###  <a name="security"></a><a name="Security"></a> Security  
   
@@ -51,7 +52,7 @@ ms.locfileid: "85894201"
   
  您现在可以在 DQS 中使用为指定的市场帐户密钥订阅的来自市场的引用数据服务。  
   
-##  <a name="configure-dqs-to-use-reference-data-from-direct-online-third-party-reference-data-providers"></a><a name="ThirdParty"></a>将 DQS 配置为使用来自直接联机第三方引用数据提供程序的引用数据  
+##  <a name="configure-dqs-to-use-reference-data-from-direct-online-third-party-reference-data-providers"></a><a name="ThirdParty"></a> 将 DQS 配置为使用来自直接联机第三方引用数据提供程序的引用数据  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
   
@@ -69,7 +70,7 @@ ms.locfileid: "85894201"
   
     3.  在 **“类别”** 框中，键入新的直接引用数据服务提供程序提供的数据类别。  
   
-    4.  在“架构”框中，指定一个架构，此架构定义要从直接引用数据服务提供程序中使用的字段（列名称）的字符串。 字段名称不能包含空格，且字段应该用逗号进行分隔。 例如： `FirstName, LastName, City, State`。  
+    4.  在“架构”框中，指定一个架构，此架构定义要从直接引用数据服务提供程序中使用的字段（列名称）的字符串。 字段名称不能包含空格，且字段应该用逗号进行分隔。 例如：`FirstName, LastName, City, State`。  
   
     5.  在 **URI** 框中，键入直接引用数据服务提供程序的 URI。 DQS 中仅允许安全 URI（地址以 “https://” 开头）。  
   
@@ -81,7 +82,7 @@ ms.locfileid: "85894201"
   
  您现在可以在 DQS 中使用新配置的直接联机第三方引用数据服务提供程序提供的引用数据服务。  
   
-##  <a name="follow-up-after-configuring-dqs-to-use-reference-data"></a><a name="FollowUp"></a>跟进：在将 DQS 配置为使用引用数据后  
+##  <a name="follow-up-after-configuring-dqs-to-use-reference-data"></a><a name="FollowUp"></a> 跟进：在将 DQS 配置为使用引用数据后  
  现在您必须将所需的知识库域映射到您刚配置的数据提供程序所提供的引用数据。 若要执行此操作，请参阅[将域或复合域附加到引用数据](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)。  
   
   

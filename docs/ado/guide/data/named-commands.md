@@ -1,4 +1,5 @@
 ---
+description: 命名命令
 title: 命名命令 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5a0ec8f9-5ba3-4f9f-b80d-2073aa049586
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b630d589cf20039a72091fb526302d3652f8ed31
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 607142ec89a1032fe42bab87c0dfad0f2a276387
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765608"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453149"
 ---
 # <a name="named-commands"></a>命名命令
-[创建和执行一个简单的命令](../../../ado/guide/data/creating-and-executing-a-simple-command.md)将显示执行命令的一种方法。 还有另一种方法：可以将其设置为命名命令，然后在**连接**对象上直接调用此命名的命令（分配给**Command**对象的**ActiveConnection**属性）。 命名命令意味着将名称分配给**命令**对象的**name**属性。 例如，  
+[创建和执行一个简单的命令](../../../ado/guide/data/creating-and-executing-a-simple-command.md) 将显示执行命令的一种方法。 还有另一种方法：你可以将其设置为命名命令，然后在**连接**对象上直接调用此命名命令 (分配给**Command**对象的**ActiveConnection**属性) 。 命名命令意味着将名称分配给**命令**对象的**name**属性。 例如，  
   
 ```  
 objCmd.Name = "GetCustomers"  
@@ -29,7 +30,7 @@ objCmd.ActiveConnection = objConn
 objConn.GetCustomers objRs  
 ```  
   
- 命名的命令的行为就像它是**连接**对象上的 "自定义方法"。 此命令的结果将作为此 "自定义方法" 的 out 参数返回。  
+ 命名的命令的行为就像它是 **连接** 对象上的 "自定义方法"。 此命令的结果将作为此 "自定义方法" 的 out 参数返回。  
   
  下面的示例演示了此功能。  
   

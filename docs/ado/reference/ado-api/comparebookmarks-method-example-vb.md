@@ -1,5 +1,6 @@
 ---
-title: CompareBookmarks 方法示例（VB） |Microsoft Docs
+description: CompareBookmarks 方法示例 (VB)
+title: CompareBookmarks 方法示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f156aa48-bfc2-40d1-962b-7b08855776c6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3d2eb2d5db5fe7c1803e32413fd214993444e494
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 40382c77198a50a08ec41101fbda9c1aafcae08c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760353"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450784"
 ---
 # <a name="comparebookmarks-method-example-vb"></a>CompareBookmarks 方法示例 (VB)
-此示例演示了[CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)方法。 除非特定书签是特殊的，否则不需要书签的相对值。  
+此示例演示了 [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) 方法。 除非特定书签是特殊的，否则不需要书签的相对值。  
   
  将从***作者***表派生的[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)的随机行指定为搜索的目标。 然后显示相对于该目标的每行的位置。  
   
@@ -133,6 +134,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [CompareBookmarks 方法（ADO）](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)   
+ [CompareBookmarks 方法 (ADO) ](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)   
  [CompareEnum](../../../ado/reference/ado-api/compareenum.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

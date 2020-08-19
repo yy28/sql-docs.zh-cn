@@ -1,4 +1,5 @@
 ---
+description: 调用级别接口
 title: 调用级接口 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 42257bb6-0bf1-4533-a4ef-4a6dd2aecb18
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4288a278f745d533c92d3d45892753ef1a74c2b3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ad1e89f945dbb739c4c20103fc2330cbf4e562b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306538"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448955"
 ---
 # <a name="call-level-interfaces"></a>调用级别接口
-向 DBMS 发送 SQL 语句的最后一种方法是通过调用级别接口（CLI）。 调用级别接口提供可由应用程序调用的 DBMS 函数库。 因此，调用级别接口并不是尝试将 SQL 与另一种编程语言混合使用，而是类似于大多数程序员习惯使用的例程库，如 C 中的字符串、i/o 或数学库。请注意，支持嵌入的 SQL 的 Dbms 已经具有调用级别接口，即对预编译器生成的调用。 但是，这些调用未记录，如有更改，恕不另行通知。  
+向 DBMS 发送 SQL 语句的最后一种方法是通过调用级别接口 (CLI) 。 调用级别接口提供可由应用程序调用的 DBMS 函数库。 因此，调用级别接口并不是尝试将 SQL 与另一种编程语言混合使用，而是类似于大多数程序员习惯使用的例程库，如 C 中的字符串、i/o 或数学库。请注意，支持嵌入的 SQL 的 Dbms 已经具有调用级别接口，即对预编译器生成的调用。 但是，这些调用未记录，如有更改，恕不另行通知。  
   
- 调用级别接口通常用于客户端/服务器体系结构，在该体系结构中，应用程序（客户端）驻留在一台计算机上，DBMS （服务器）驻留在另一台计算机上。 应用程序在本地系统上调用 CLI 函数，这些调用通过网络发送到 DBMS 进行处理。  
+ 调用级别接口通常用于客户端/服务器体系结构，在该体系结构中，客户端)  (的应用程序位于一台计算机上，而服务器)  (服务器驻留在另一台计算机上。 应用程序在本地系统上调用 CLI 函数，这些调用通过网络发送到 DBMS 进行处理。  
   
  调用级别接口类似于动态 SQL，因为 SQL 语句在运行时会传递给 DBMS 以进行处理，但它不同于嵌入的 SQL 作为一个整体，因为没有嵌入的 SQL 语句，也不需要预编译器。  
   

@@ -1,4 +1,5 @@
 ---
+description: 静态游标
 title: 静态游标 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: cce93ace-c4ed-4c6c-940c-28a50ff2fd12
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4baacc48beffda2d83a23ce24d3a31c314da5841
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 396083b57ad12b3cf5e917416272ec636696e91a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760823"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452819"
 ---
 # <a name="static-cursors"></a>静态游标
 静态游标始终显示第一次打开游标时的结果集。 静态游标是只读的或读/写的，并提供向前和向后滚动，具体取决于实现。 静态游标通常不会检测在打开游标后对结果集的成员资格、顺序或值所做的更改。 尽管不需要，但静态游标可检测其自己的更新、删除和插入。  
   
  静态游标从不检测其他更新、删除和插入操作。 例如，假定静态游标提取行，然后另一个应用程序将更新该行。 如果应用程序通过静态游标重新提取行，尽管更改由其他应用程序执行，但看到的值将保持不变。 支持所有类型的滚动，但提供程序可能支持或不支持书签。  
   
- 如果您的应用程序不需要检测数据更改并且需要滚动，则静态游标是最佳选择。 使用**AdOpenStatic CursorTypeEnum**指示要在 ADO 中使用静态游标。  
+ 如果您的应用程序不需要检测数据更改并且需要滚动，则静态游标是最佳选择。 使用 **AdOpenStatic CursorTypeEnum** 指示要在 ADO 中使用静态游标。  
   
 ## <a name="see-also"></a>另请参阅  
  [只进游标](../../../ado/guide/data/forward-only-cursors.md)   

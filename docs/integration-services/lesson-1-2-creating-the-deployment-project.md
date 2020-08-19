@@ -1,4 +1,5 @@
 ---
+description: 第 1-2 课 - 创建部署项目
 title: 步骤 2：创建部署项目 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 59990fe2-7036-4e9c-8efc-6ece9e66eda7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e202a3b3429057418456618a08d7333994199a36
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 025e601dfb6f062246d1edcb1799c1daf2b69886
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917404"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449661"
 ---
 # <a name="lesson-1-2---creating-the-deployment-project"></a>第 1-2 课 - 创建部署项目
 
@@ -26,21 +27,21 @@ ms.locfileid: "86917404"
   
 ### <a name="to-create-the-integration-services-project"></a>创建 Integration Services 项目  
   
-1.  单击“开始”  ，依次指向“所有程序”  和“Microsoft SQL Server”  ，然后依次单击“SQL Server”和“SQL Server Data Tools”  。  
+1.  单击“开始”****，依次指向“所有程序”**** 和“Microsoft SQL Server”****，然后依次单击“SQL Server”和“SQL Server Data Tools”****。  
   
-2.  在“文件”  菜单上，指向“新建”  ，然后单击“项目”  创建新的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目。  
+2.  在“文件”**** 菜单上，指向“新建”****，然后单击“项目”**** 创建新的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目。  
   
-3.  在“新建项目”对话框的“模板”窗格中，选择“Integration Services 项目”。  
+3.  在“新建项目”**** 对话框的“模板”**** 窗格中，选择“Integration Services 项目”****。  
   
-4.  在“名称”  框中，将默认名称更改为“Deployment Tutorial”  。 或者，清除“创建解决方案的目录”  复选框。  
+4.  在“名称”**** 框中，将默认名称更改为“Deployment Tutorial”****。 或者，清除“创建解决方案的目录”**** 复选框。  
   
-5.  接受默认位置，或单击“浏览”  找到要使用的文件夹。  
+5.  接受默认位置，或单击“浏览”**** 找到要使用的文件夹。  
   
-6.  在“项目位置”  对话框中，单击文件夹，再单击“打开”  。  
+6.  在“项目位置”**** 对话框中，单击文件夹，再单击“打开”****。  
   
-7.  单击“确定”。   
+7.  单击“确定”。  
   
-8.  默认情况下，将创建一个名为 Package.dtsx 的空包，并将该包添加到项目中。 但是您将不使用此包；相反您将现有的包添加到项目。 由于项目中的所有包都包括在部署中，因此您应该删除 Package.dtsx。 若要删除它，右键单击它，再单击“删除”  。  
+8.  默认情况下，将创建一个名为 Package.dtsx 的空包，并将该包添加到项目中。 但是您将不使用此包；相反您将现有的包添加到项目。 由于项目中的所有包都包括在部署中，因此您应该删除 Package.dtsx。 若要删除它，右键单击它，再单击“删除”****。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
 [步骤 3：添加包和其他文件](../integration-services/lesson-1-3-adding-packages-and-other-files.md)  

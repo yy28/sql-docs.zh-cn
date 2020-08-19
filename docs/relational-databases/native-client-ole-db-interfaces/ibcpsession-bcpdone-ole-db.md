@@ -1,5 +1,6 @@
 ---
-title: IBCPSession：： BCPDone （Native Client OLE DB 提供程序） |Microsoft Docs
+description: 'IBCPSession：： BCPDone (Native Client OLE DB 提供程序) '
+title: IBCPSession：： BCPDone (Native Client OLE DB 提供程序) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,14 +17,14 @@ ms.assetid: 19cd6e55-432a-450e-a15c-54d50eb53dee
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6198a144513c68c6ebe939f92f8c144186117835
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: d4cb691b8271e0903fb31253b3ab6cbcdc7007ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247754"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448385"
 ---
-# <a name="ibcpsessionbcpdone-native-client-ole-db-provider"></a>IBCPSession：： BCPDone （Native Client OLE DB 提供程序）
+# <a name="ibcpsessionbcpdone-native-client-ole-db-provider"></a>IBCPSession：： BCPDone (Native Client OLE DB 提供程序) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   提交要发送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的剩余行。  
@@ -36,17 +37,17 @@ HRESULT BCPDone(void);
 ```  
   
 ## <a name="remarks"></a>备注  
- 在调用 BCPDone 方法之后，不能对 [IBCPSession](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md) 接口调用其他操作****。 唯一的可能性是调用 [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) 方法以启动新的大容量复制操作。 这类似于调用 [IRowsetFastLoad::Commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md) 方法。  
+ 在调用 BCPDone 方法之后，不能对 [IBCPSession](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md) 接口调用其他操作  。 唯一的可能性是调用 [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) 方法以启动新的大容量复制操作。 这类似于调用 [IRowsetFastLoad::Commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md) 方法。  
   
 ## <a name="return-code-values"></a>返回代码值  
  S_OK  
  方法成功。  
   
  E_UNEXPECTED  
- 意外调用了该方法。 例如，在调用该方法之前，未调用 BCPInit 方法****。  
+ 意外调用了该方法。 例如，在调用该方法之前，未调用 BCPInit 方法  。  
   
 ## <a name="example"></a>示例  
- 该示例演示如何使用 IBCPSession 接口****。  
+ 该示例演示如何使用 IBCPSession 接口  。  
   
  在运行此示例之前，必须执行以下 [!INCLUDE[tsql](../../includes/tsql-md.md)]：  
   
@@ -64,7 +65,7 @@ insert into fltest values (4, 4, 0xFAD)
   
  可以通过以下命令，使用 BCP 将此数据添加回表中：  
   
- bcp master..fltest in outfile.dat -n -T -S** server** **  
+ bcp master..fltest in outfile.dat -n -T -S  server   
   
  当编译此示例时，您需要指定 sqlncli11.lib。  
   

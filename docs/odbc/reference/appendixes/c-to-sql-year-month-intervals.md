@@ -1,4 +1,5 @@
 ---
+description: 从 C 到 SQL：年月间隔
 title: 从 C 到 SQL：年的间隔 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: a0eb7b55-9db0-4375-9210-bddec4593880
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2ec7bfda0015883c8470dd453c7ae5de9bfd6cec
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ffd9a3f7f14ff6af93f15521738bebdbc63a8f58
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306608"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449019"
 ---
 # <a name="c-to-sql-year-month-intervals"></a>从 C 到 SQL：年月间隔
 每月间隔 ODBC C 数据类型的标识符为：  
   
  SQL_C_INTERVAL_MONTH SQL_C_INTERVAL_YEAR SQL_C_INTERVAL_YEAR_TO_MONTH  
   
- 下表显示了可转换年月间隔 C 数据的 ODBC SQL 数据类型。 有关表中的列和字词的说明，请参阅[将数据从 C 转换为 SQL 数据类型](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)。  
+ 下表显示了可转换年月间隔 C 数据的 ODBC SQL 数据类型。 有关表中的列和字词的说明，请参阅 [将数据从 C 转换为 SQL 数据类型](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)。  
   
 |SQL 类型标识符|测试|SQLSTATE|  
 |-------------------------|----------|--------------|  
@@ -38,7 +39,7 @@ ms.locfileid: "81306608"
   
  [a] 所有 C 间隔数据类型都可以转换为字符数据类型。  
   
- [b] 如果间隔结构中的类型字段导致间隔为单个字段（SQL_YEAR 或 SQL_MONTH），则可以将 interval C 类型转换为任何精确数值（SQL_TINYINT、SQL_SMALLINT、SQL_INTEGER、SQL_BIGINT、SQL_DECIMAL 或 SQL_NUMERIC）。  
+ [b] 如果间隔结构中的 "类型" 字段的间隔是 (SQL_YEAR 或 SQL_MONTH) 的单个字段，则可以将 "间隔 C 类型" 转换为任何精确数值 (SQL_TINYINT、SQL_SMALLINT、SQL_INTEGER、SQL_BIGINT、SQL_DECIMAL 或 SQL_NUMERIC) 。  
   
  Interval C 类型的默认转换为相应的年-月间隔 SQL 类型。  
   

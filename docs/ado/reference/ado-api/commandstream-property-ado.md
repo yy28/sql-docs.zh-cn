@@ -1,5 +1,6 @@
 ---
-title: CommandStream 属性（ADO） |Microsoft Docs
+description: CommandStream 属性 (ADO)
+title: " (ADO) 的 CommandStream 属性 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,32 +16,32 @@ helpviewer_keywords:
 ms.assetid: f78f61b6-87e0-48dc-961e-83d0e20da58e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 20d2cb62b51a73066da242b3446a4d991f3bc79b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 07a16b00a4ec4381dc1dfa07fc57c2b599ed5ba1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760396"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450839"
 ---
 # <a name="commandstream-property-ado"></a>CommandStream 属性 (ADO)
-指示用作[命令](../../../ado/reference/ado-api/command-object-ado.md)对象的输入的流。  
+指示用作 [命令](../../../ado/reference/ado-api/command-object-ado.md) 对象的输入的流。  
   
 ## <a name="settings-and-return-values"></a>设置和返回值  
- 设置或返回用作**命令**对象输入的流。 此流的格式特定于提供程序;有关详细信息，请参阅提供程序的文档。 此属性类似于[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)属性，该属性用于指定**命令**输入的字符串。  
+ 设置或返回用作 **命令** 对象输入的流。 此流的格式特定于提供程序;有关详细信息，请参阅提供程序的文档。 此属性类似于 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) 属性，该属性用于指定 **命令**输入的字符串。  
   
 ## <a name="remarks"></a>备注  
- **CommandStream**和**CommandText**互相排斥。 当用户设置**CommandStream**属性时， **CommandText**属性将设置为空字符串（""）。 如果用户设置**CommandText**属性，则**CommandStream**属性将设置为**Nothing**。  
+ **CommandStream** 和 **CommandText** 互相排斥。 当用户设置 **CommandStream** 属性时， **CommandText** 属性将设置为空字符串 ( "" ) 。 如果用户设置 **CommandText** 属性，则 **CommandStream** 属性将设置为 **Nothing**。  
   
- 命令的行为。**参数**和**命令。 Prepare**方法由提供程序定义。 流中的参数值无法刷新。  
+ 命令的行为。 **参数** 和 **命令。 Prepare** 方法由提供程序定义。 流中的参数值无法刷新。  
   
- 输入流不能用于返回**命令**源的其他 ADO 对象。 例如，如果将[记录](../../../ado/reference/ado-api/recordset-object-ado.md)集的[源](../../../ado/reference/ado-api/source-property-ado-recordset.md)设置为将流作为其输入的**命令**对象，则**记录集。源**继续返回**CommandText**属性，该属性包含空字符串（""），而不是**CommandStream**属性的流内容。  
+ 输入流不能用于返回 **命令**源的其他 ADO 对象。 例如，如果将[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)的[源](../../../ado/reference/ado-api/source-property-ado-recordset.md)设置为将流作为其输入的**命令**对象，则**记录集。源**继续返回**CommandText**属性，该属性包含一个空字符串 ( "" ) ，而不是**CommandStream**属性的流内容。  
   
- 使用命令流（由**CommandStream**指定）时， [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md)属性唯一的有效[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)值为**adCmdText**和**adCmdUnknown**。 其他任何值会导致错误。  
+ 使用**CommandStream**) 指定 (的命令流时， [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md)属性的唯一有效[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)值为**adCmdText**和**adCmdUnknown**。 其他任何值会导致错误。  
   
-## <a name="applies-to"></a>应用于  
+## <a name="applies-to"></a>适用于  
  [命令对象 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [CommandText 属性（ADO）](../../../ado/reference/ado-api/commandtext-property-ado.md)   
+ [ (ADO) 的 CommandText 属性 ](../../../ado/reference/ado-api/commandtext-property-ado.md)   
  [方言属性](../../../ado/reference/ado-api/dialect-property.md)   
  [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)

@@ -1,4 +1,5 @@
 ---
+description: 数据整理所需的提供程序
 title: 数据整理所需的提供程序 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: d49d48d2-ac2d-4c11-895c-5a149b444620
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: abda9d7a275ce100636efa58430009dd430fac0b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e17ebe5f5e8deab776b88ce66df8636a28212394
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760943"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452939"
 ---
 # <a name="required-providers-for-data-shaping"></a>数据整理所需的提供程序
-数据定形通常需要两个提供程序。 OLE DB 的服务提供商、[数据定形服务](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)提供数据定形功能，数据访问接口（例如 SQL Server 的 OLE DB 提供程序）提供数据行来填充形状的[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
+数据定形通常需要两个提供程序。 OLE DB 的服务提供商、 [数据定形服务](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)提供数据定形功能，数据访问接口（例如 SQL Server 的 OLE DB 提供程序）提供数据行来填充形状的 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
   
- 可以将服务提供程序（MSDataShape）的名称指定为[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象[提供程序](../../../ado/reference/ado-api/provider-property-ado.md)属性的值或连接字符串关键字 "provider = MSDataShape;"。  
+ 可以将服务提供程序 (MSDataShape) 的名称指定为 [连接](../../../ado/reference/ado-api/connection-object-ado.md) 对象 [提供程序](../../../ado/reference/ado-api/provider-property-ado.md) 属性的值或连接字符串关键字 "provider = MSDataShape;"。  
   
  可以将数据提供程序的名称指定为**数据提供程序**动态属性的值，该属性将添加到 OLE DB 的数据定形服务或连接字符串关键字 "**data provider =** _Provider_" 的**连接**对象[属性](../../../ado/reference/ado-api/properties-collection-ado.md)集合中。  
   
- 如果未填充**记录集**，则不需要任何数据提供程序（例如，在使用 NEW 关键字创建列的虚构**记录集中**）。 在这种情况下，请指定 "**Data Provider =** none;"。  
+ 如果未填充**记录集**，则不需要任何数据提供程序 (例如，如在创建**Recordset**列时使用新关键字) 创建的集。 在这种情况下，请指定 "**Data Provider =** none;"。  
   
 ## <a name="example"></a>示例  
   

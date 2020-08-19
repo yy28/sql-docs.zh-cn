@@ -1,4 +1,5 @@
 ---
+description: 保存到 XML DOM 对象
 title: 正在保存到 XML DOM 对象 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4d20fd28-aaf8-4232-83ce-f9d1e5f93dae
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2360d9886fa718034bdf3fcc4ed1cacd459b2788
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c608abbae59244e2d0982328534b1cabcf1b903e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760903"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452899"
 ---
 # <a name="saving-to-the-xml-dom-object"></a>保存到 XML DOM 对象
 可以将 XML 格式的记录集保存到 MSXML DOM 对象的实例，如以下 Visual Basic 代码所示：  

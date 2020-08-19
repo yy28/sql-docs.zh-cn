@@ -1,5 +1,6 @@
 ---
-title: 使用大型 CLR Udt （Native Client OLE DB 提供程序）
+description: '在 SQL Server Native Client (OLE DB 中使用大型 CLR Udt) '
+title: " (Native Client OLE DB 提供程序中使用大型 CLR Udt) "
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,17 +12,17 @@ ms.assetid: 30f59c11-3bca-41be-8bd7-0d1efaf1f0be
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 60f8978fa0dedfe40a3d48b7796bc4d0fb1359c7
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 6cec1e6076820e8d41feb077db417b168e80b05c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396881"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448447"
 ---
-# <a name="use-large-clr-udts--in-sql-server-native-client-ole-db"></a>在 SQL Server Native Client （OLE DB）中使用大型 CLR Udt
+# <a name="use-large-clr-udts--in-sql-server-native-client-ole-db"></a>在 SQL Server Native Client (OLE DB 中使用大型 CLR Udt) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  此示例演示如何从结果集中提取具有大型用户定义类型的行。 有关详细信息，请参阅[大型 CLR 用户定义类型 &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md)。 此示例适用于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本。  
+  此示例演示如何从结果集中提取具有大型用户定义类型的行。 有关详细信息，请参阅[大型 CLR 用户定义类型 (OLE DB)](../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md)。 此示例适用于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本。  
   
 ## <a name="example"></a>示例  
  此示例包含两个项目。 其中一个项目基于 C# 源代码创建一个程序集 (DLL)。 该程序集包含 CLR 类型。 数据库中将添加一个表。 表中的列将为程序集中定义的类型。 默认情况下，此示例将使用 master 数据库。 第二个项目是一个本机 C 应用程序，用来读取表中的数据。  
@@ -30,7 +31,7 @@ ms.locfileid: "87396881"
   
  执行第二个 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 代码列表，以将该程序集添加到 master 数据库。  
   
- 使用 ole32.lib 和 oleaut32.lib 编译并执行第三个 (C++) 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，请将连接字符串从 L "（local）" 更改为 L "（local） \\ \name"，其中 name 为命名实例。 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保 INCLUDE 环境变量包含包含 sqlncli.msi 的目录。  
+ 使用 ole32.lib 和 oleaut32.lib 编译并执行第三个 (C++) 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 要连接到命名实例，请将连接字符串从 L"(local)" 更改为 L"(local)\\\name"，其中 name 是命名实例。 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保 INCLUDE 环境变量包含包含 sqlncli.msi 的目录。  
   
  执行第四个 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 代码列表，以从 master 数据库删除该程序集。  
   

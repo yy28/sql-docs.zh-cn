@@ -1,5 +1,6 @@
 ---
-title: OLE DB 提供程序（ADO） |Microsoft Docs
+description: OLE DB 提供程序 (ADO)
+title: ADO) OLE DB 提供程序 (|Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6e0488c3-934d-4976-99dc-65c580dc7a3c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1a50ad68f7a4b40d008bd6d60b6d24e1984428e1
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 227c3ead2744c475a54f129078b5674587ae3849
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759133"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453119"
 ---
 # <a name="ole-db-providers-ado"></a>OLE DB 提供程序 (ADO)
 OLE DB 定义一组 COM 接口，以使应用程序能够统一访问存储在不同信息源中的数据。 此方法允许数据源通过支持适用于数据源的 DBMS 功能量的接口来共享其数据。 按照设计，OLE DB 的高性能体系结构基于基于组件的灵活服务模型的使用方式。 OLE DB 只需要满足特定任务所需的组件数量，而不是在应用程序和数据之间采用指定数目的中间层。  

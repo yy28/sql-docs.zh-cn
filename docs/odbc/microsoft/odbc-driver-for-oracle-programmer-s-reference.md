@@ -1,4 +1,5 @@
 ---
+description: 用于 Oracle 程序员&#39;s 参考的 ODBC 驱动程序
 title: 用于 Oracle 程序员&#39;s 参考的 ODBC 驱动程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: d70e79a1-6403-49ad-8713-eda6e8aa287e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 763c9892836b262f308b82ef96794a03dc33fd12
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b409446da085e0d35b9f3580ba7da8df22ef6f03
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298117"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449339"
 ---
 # <a name="odbc-driver-for-oracle-programmer39s-reference"></a>用于 Oracle 程序员&#39;s 参考的 ODBC 驱动程序
 > [!IMPORTANT]  
 >  此功能将在 Windows 的将来版本中删除。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 请改用 Oracle 提供的 ODBC 驱动程序。  
   
- 本部分包括以下主题：  
+ 本节包括下列主题：  
   
 -   [连接字符串格式和属性](../../odbc/microsoft/connection-string-format-and-attributes.md)  
   

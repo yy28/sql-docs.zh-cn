@@ -1,5 +1,6 @@
 ---
-title: 存储过程（Oracle ODBC 驱动程序） |Microsoft Docs
+description: 存储过程（Oracle ODBC 驱动程序）
+title: Oracle)  (ODBC 驱动程序的存储过程 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: de0e1214-b9d8-4afc-8fc0-e8b9c4c648f6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9ed0dadb81f31492f0dca8801a8ba925a81eacdb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 825a8b5bb454c0402d22ed8ba811ed6f046b9758
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299177"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449119"
 ---
 # <a name="stored-procedures-odbc-driver-for-oracle"></a>存储过程（Oracle ODBC 驱动程序）
 > [!IMPORTANT]  
 >  此功能将在 Windows 的将来版本中删除。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 请改用 Oracle 提供的 ODBC 驱动程序。  
   
- 本部分包括以下主题：  
+ 本节包括下列主题：  
   
 -   [存储过程参数限制](../../odbc/microsoft/stored-procedure-parameter-limitations.md)  
   

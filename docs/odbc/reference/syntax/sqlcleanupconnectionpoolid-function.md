@@ -1,4 +1,5 @@
 ---
+description: SQLCleanupConnectionPoolID 函数
 title: SQLCleanupConnectionPoolID 函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 1fc61908-e003-4587-b91a-32f40569fb99
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a74a92cc05ecd41e99ff87642c7fe3ee527e0c98
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 12046405d10c41796b8ad989f746aaac242f430d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301317"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448837"
 ---
 # <a name="sqlcleanupconnectionpoolid-function"></a>SQLCleanupConnectionPoolID 函数
 **度**  
  引入的版本： ODBC 3.81 标准符合性： ODBC  
   
  **摘要**  
- **SQLCleanupConnectionPoolID**通知驱动程序池 ID 已超时。如果与该池 ID 相关联的池中的所有连接超时，则池 ID 可能会超时。有关连接超时的详细信息，请参阅[Microsoft 数据访问组件中的池](https://msdn.microsoft.com/library/ms810829.aspx)。  
+ **SQLCleanupConnectionPoolID** 通知驱动程序池 ID 已超时。如果与该池 ID 相关联的池中的所有连接超时，则池 ID 可能会超时。有关连接超时的详细信息，请参阅 [Microsoft 数据访问组件中的池](https://msdn.microsoft.com/library/ms810829.aspx) 。  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,7 +47,7 @@ SQLRETURN  SQLCleanupConnectionPoolID (
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR 或 SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>诊断  
- 驱动程序管理器将不处理从**SQLCleanupConnectionPoolID**返回的诊断信息。  
+ 驱动程序管理器将不处理从 **SQLCleanupConnectionPoolID**返回的诊断信息。  
   
  应用程序无法接收驱动程序返回的错误消息。  
   

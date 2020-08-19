@@ -1,4 +1,5 @@
 ---
+description: 使用存储过程时撤销和授予权限
 title: 使用存储过程时撤消和授予权限 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 24070039-03ab-4623-a681-6308802eb399
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 469e6f0fdc6794e3bd163844e43821798aa4a617
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ad59f18f040dd1fefec606c99e3cce5f1002c22a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303983"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449269"
 ---
 # <a name="revoking-and-granting-rights-when-using-stored-procedures"></a>使用存储过程时撤销和授予权限
 > [!IMPORTANT]  
@@ -32,4 +33,4 @@ ms.locfileid: "81303983"
   
  szErrorMsg = "[Microsoft] [ODBC driver for Oracle] 语法错误或访问冲突"  
   
- 在这种情况下，对 Oracle OCI function Odessp （）的调用将失败，但必须要实现默认参数。 修改基础表权限之后，必须重新编译该存储过程，然后再次运行该存储过程。
+ 在这种情况下，对 Oracle OCI 函数 Odessp ( 的调用将失败，但为了实现默认参数，这是必需的。 修改基础表权限之后，必须重新编译该存储过程，然后再次运行该存储过程。

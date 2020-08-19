@@ -1,5 +1,6 @@
 ---
-title: Sum （MDX） |Microsoft Docs
+description: Sum (MDX)
+title: Sum (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: eb4e9d55ef2228404dd9113170066e4a3612a0a1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f65525836157f5ac106cfa7ba0d5458689583def
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68036672"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449619"
 ---
 # <a name="sum-mdx"></a>Sum (MDX)
 
@@ -66,7 +67,7 @@ SELECT Measures.x ON 0
 FROM [Adventure Works]  
 ```  
   
- 下面的示例使用 WITH MEMBER 关键字和**SUM**函数在 "度量值" 维度中定义计算成员，该计算成员包含 "地域" 维度中 "国家/地区" 属性层次结构的 "分销商销售额" 度量美国值的总和。  
+ 下面的示例使用 WITH MEMBER 关键字和 **SUM** 函数在 "度量值" 维度中定义计算成员，该计算成员包含 "地域" 维度中 "国家/地区" 属性层次结构的 "分销商销售额" 度量美国值的总和。  
   
 ```  
 WITH MEMBER Measures.NorthAmerica AS SUM   

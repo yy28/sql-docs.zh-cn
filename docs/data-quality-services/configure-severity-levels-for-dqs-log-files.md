@@ -1,4 +1,5 @@
 ---
+description: 为 DQS 日志文件配置严重级别
 title: 为 DQS 日志文件配置严重级别
 ms.date: 03/01/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 068ae31abe61fac86d740fe3e03787fd32dde465
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6a23806f7b7def561d7cecc8e1592772c5675f58
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894220"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449909"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>为 DQS 日志文件配置严重级别
 
@@ -49,14 +50,14 @@ ms.locfileid: "85894220"
 ####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  您必须具有 DQS_MAIN 数据库的 dqs_administrator 角色，才能配置日志严重性设置。  
   
-##  <a name="configure-severity-levels-at-activity-level"></a><a name="ConfigureActivity"></a>在活动级别配置严重级别  
+##  <a name="configure-severity-levels-at-activity-level"></a><a name="ConfigureActivity"></a> 在活动级别配置严重级别  
  您可以在 DQS 中为以下活动配置日志严重性设置：域管理、知识发现、匹配策略、数据清理、数据匹配和引用数据服务。 为此，请执行以下操作：  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
   
 2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中，单击 **“配置”**。  
   
-3.  接下来，单击 "**日志设置**" 选项卡。列出了以下 DQS 活动，你可以为其选择严重性级别：**域管理**、**知识发现**、**清理项目（Ex）**、**匹配策略和匹配项目**以及**RDS**。  
+3.  接下来，单击 " **日志设置** " 选项卡。列出了以下 DQS 活动，你可以为其选择严重性级别： " **域管理**"、" **知识发现**"、" **清理项目" (Ex) **、 **匹配策略和匹配项目**"和" **RDS**"。  
   
 4.  对于某一 DQS 活动，选择您要记入日志的严重级别。 您可以选择下列级别之一： **“严重”**、 **“错误”**、 **“警告”**、 **“信息”** 和 **“调试”**。 例如，对于知识发现活动，如果您只希望将严重消息写入 DQS 日志文件，则在下拉列表中对 **“知识发现”** 活动选择 **“严重”** 。  
   
@@ -65,7 +66,7 @@ ms.locfileid: "85894220"
   
 5.  单击“关闭”。  
   
-##  <a name="configure-severity-levels-at-module-level-advanced"></a><a name="ConfigureModule"></a>在模块级别配置严重级别（高级）  
+##  <a name="configure-severity-levels-at-module-level-advanced"></a><a name="ConfigureModule"></a> 在模块级别配置严重级别 (Advanced)   
  通过 **“日志设置”** 选项卡中的 **“高级”** 部分，您可以在模块级别配置日志严重性设置。 模块是在 DQS 中的某一特性内实现不同功能的 DQS 系统程序集。 例如，域管理活动包含不同功能，例如定义域规则、定义规则条件、为复合域定义跨域规则等。  
   
  有时，活动级别的粒度级别是不足够的。 您可能要调查某个活动内的特定模块中发生的问题。 它有助于选择在模块级别配置日志严重级别，以便更准确地隔离和跟踪问题。  

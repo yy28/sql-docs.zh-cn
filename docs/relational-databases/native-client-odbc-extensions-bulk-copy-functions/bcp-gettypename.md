@@ -1,4 +1,5 @@
 ---
+description: bcp_gettypename
 title: bcp_gettypename |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -18,11 +19,12 @@ ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b443a3ecd3e96740939a1cbef3f2a732a129d9a8
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d8956677e62c3f4a824e704c0905c7970cf9e913
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010097"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448562"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +40,7 @@ RETCODE bcp_gettypename (
         DBBOOL fIsMaxType);  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  *token*  
  指示 BCP 类型标记的值。  
   
@@ -48,7 +50,7 @@ RETCODE bcp_gettypename (
 ## <a name="returns"></a>返回  
  一个字符串，其中包含与 BCP 类型对应的 SQL 类型名称。 如果指定了无效的 BCP 类型，则返回空字符串。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  BCP 类型标记在 sqlncli.h 头文件和 sqlncli11.lib 库中定义。  
   
  下表指定了可能的 BCP 类型、这些类型是否是 max 类型以及预期的输出。  
@@ -79,11 +81,11 @@ RETCODE bcp_gettypename (
 |**SQLDATETIMN**|任一个|**datetime-null**|  
 |**SQLMONEYN**|任一个|**money-null**|  
 |**SQLFLTN**|任一个|**float-null**|  
-|**SQLAOPSUM**|任一个|**长度**|  
+|**SQLAOPSUM**|任一个|**Sum**|  
 |**SQLAOPAVG**|任一个|**Avg**|  
-|**SQLAOPCNT**|任一个|“计数”|  
-|**SQLAOPMIN**|任一个|**最小值**|  
-|**SQLAOPMAX**|任一个|**最大值**|  
+|**SQLAOPCNT**|任一个|**Count**|  
+|**SQLAOPMIN**|任一个|**Min**|  
+|**SQLAOPMAX**|任一个|**Max**|  
 |**SQLDATETIM4**|任一个|**smalldatetime**|  
 |**SQLMONEY4**|任一个|**Smallmoney**|  
 |**SQLFLT4**|任一个|**实际上**|  
@@ -107,9 +109,9 @@ RETCODE bcp_gettypename (
 |**SQLUDT**|任一个|**Udt**|  
   
 ## <a name="bcp_gettypename-support-for-enhanced-date-and-time-features"></a>bcp_gettypename 对日期和时间增强功能的支持  
- 有关日期/时间类型的令牌参数值，请参阅 sqlncli.msi [OLE DB 和 ODBC&#41;的增强日期和时间 &#40;类型的大容量复制更改](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)中表的 "Type in" 列。 返回值位于“文件存储类型”列的对应行中。  
+ 有关日期/时间类型的令牌参数值，请参阅 sqlncli.msi [OLE DB 和 ODBC&#41;的增强日期和时间 &#40;类型的大容量复制更改 ](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)中表的 "Type in" 列。 返回值位于“文件存储类型”列的对应行中。  
   
- 有关详细信息，请参阅[ODBC&#41;&#40;日期和时间改进](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
+ 有关详细信息，请参阅 [ODBC&#41;&#40;日期和时间改进 ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [大容量复制函数](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

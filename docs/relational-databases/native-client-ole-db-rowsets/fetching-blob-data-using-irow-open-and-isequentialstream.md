@@ -1,4 +1,5 @@
 ---
+description: 使用 IRow：： Open 和 ISequentialStream 提取 BLOB 数据
 title: BLOB、IRow：： Open、ISequentialStream
 ms.custom: ''
 ms.date: 03/06/2017
@@ -16,19 +17,19 @@ ms.assetid: 439b3976-84e7-4d11-8dba-f668adbc9159
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f986e195b0f2545c6fbf1f1af1a0a94d8e79abc
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 4d3329b336bb5f302a950aa5ea03d9896239dea2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243632"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448361"
 ---
 # <a name="fetching-blob-data-by-using-irowopen-and-isequentialstream"></a>使用 IRow：： Open 和 ISequentialStream 提取 BLOB 数据
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  IRow::Open 只支持打开 DBGUID_STREAM 和 DBGUID_NULL 对象类型****。  
+  IRow::Open 只支持打开 DBGUID_STREAM 和 DBGUID_NULL 对象类型  。  
   
- 以下函数使用 IRow::Open**** 和 ISequentialStream**** 提取大型数据。  
+ 以下函数使用 IRow::Open  和 ISequentialStream  提取大型数据。  
   
 ```cpp
 void InitializeAndExecuteCommand()  
@@ -79,7 +80,7 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
 }  
 ```  
   
- 大型数据可使用 ISequentialStream**** 接口进行绑定或检索。 对于绑定列，状态标志指示是否通过设置 DBSTATUS_S_TRUNCATED 来截断数据。  
+ 大型数据可使用 ISequentialStream  接口进行绑定或检索。 对于绑定列，状态标志指示是否通过设置 DBSTATUS_S_TRUNCATED 来截断数据。  
   
 ## <a name="see-also"></a>另请参阅  
  [使用 IRow 提取 BLOB 数据](https://msdn.microsoft.com/library/badbd6ac-20aa-4891-a14f-48d38e7f30de)  

@@ -1,4 +1,5 @@
 ---
+description: 将参数传递给命名命令
 title: 将参数传递给命名命令 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 36e0cdbe-7f50-40f5-af0d-700f5d8dc75a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: afa230584bd7ee93d56f814a998c886e433a9417
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fa6ac56c3bb3e632ace019a2c8b2a97c96262421
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764768"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453069"
 ---
 # <a name="passing-parameters-to-a-named-command"></a>将参数传递给命名命令
-正如命令的结果作为命名命令的*out*变量传递外，参数化命令的参数可以作为*in*变量传入命名命令。  
+正如命令的结果作为命名命令的 *out* 变量传递外，参数化命令的参数可以作为 *in* 变量传入命名命令。  
   
- 下面的代码示例尝试检索客户（其**CustomerID**为 "ALKFI"）在 Northwind 数据库中所下的所有订单。 在调用命名命令时，将提供**CustomerID**的值。  
+ 下面的代码示例尝试检索客户（其 **CustomerID** 为 "ALKFI"）在 Northwind 数据库中所下的所有订单。 在调用命名命令时，将提供 **CustomerID** 的值。  
   
 ```  
 Const DS = "MySqlServer"  
@@ -82,7 +83,7 @@ Set objComm = Nothing
 objConn.GetOrdersOf 12345, objRs  
 ```  
   
- -将导致数据类型不匹配的错误，因为所需的输入参数为**字符串**类型，而不是**整数**类型。  
+ -将导致数据类型不匹配的错误，因为所需的输入参数为 **字符串** 类型，而不是 **整数** 类型。  
   
  以下调用  
   

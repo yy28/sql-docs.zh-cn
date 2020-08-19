@@ -1,4 +1,5 @@
 ---
+description: 从 C 到 SQL：时间
 title: 从 C 到 SQL：时间 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: a8da43c9-d9a5-45e5-bd9a-1dd633db2ee0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 264ce7751072b79163923f0c141542680f7b02bb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e1711d6a5acffa73a640a0e25f647c53b3daa868
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304758"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449039"
 ---
 # <a name="c-to-sql-time"></a>从 C 到 SQL：时间
 ODBC C 数据类型的时间的标识符为：  
   
  SQL_C_TYPE_TIME  
   
- 下表显示了可将时间 C 数据转换到的 ODBC SQL 数据类型。 有关表中的列和字词的说明，请参阅[将数据从 C 转换为 SQL 数据类型](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)。  
+ 下表显示了可将时间 C 数据转换到的 ODBC SQL 数据类型。 有关表中的列和字词的说明，请参阅 [将数据从 C 转换为 SQL 数据类型](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)。  
   
 |SQL 类型标识符|测试|SQLSTATE|  
 |-------------------------|----------|--------------|  
@@ -37,7 +38,7 @@ ODBC C 数据类型的时间的标识符为：
   
  [a] 时间戳的日期部分设置为当前日期，时间戳的秒小数部分设置为零。  
   
- 有关 SQL_C_TYPE_TIME 结构中的有效值的信息，请参阅本附录前面的[C 数据类型](../../../odbc/reference/appendixes/c-data-types.md)。  
+ 有关 SQL_C_TYPE_TIME 结构中的有效值的信息，请参阅本附录前面的 [C 数据类型](../../../odbc/reference/appendixes/c-data-types.md)。  
   
  将时间 C 数据转换为字符 SQL 数据时，生成的字符数据的格式为 "*hh*：*mm*：*ss*"。  
   

@@ -1,4 +1,5 @@
 ---
+description: Integration Services (SSIS) 变量
 title: Integration Services (SSIS) 变量 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d4ee6dda0fbd91649a085cfda429ea3e554a83d4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c27f3936edfc031f336b487d90e185a56d366363
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917477"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449762"
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services (SSIS) 变量
 
@@ -81,7 +82,7 @@ ms.locfileid: "86917477"
  有关变量的实际使用情况的详细信息，请参阅 [在包中使用变量](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
   
 ## <a name="properties-of-variables"></a>变量属性  
- 你可通过在“变量”窗口或“属性”窗口中设置以下属性来配置用户定义变量   。 某些属性仅在“属性”窗口中提供。  
+ 你可通过在“变量”窗口或“属性”窗口中设置以下属性来配置用户定义变量********。 某些属性仅在“属性”窗口中提供。  
   
 > [!NOTE]  
 >  对系统变量唯一可配置的选项是指定变量在更改值时是否引发事件。  
@@ -99,7 +100,7 @@ ms.locfileid: "86917477"
  指定变量名称。  
   
  **Namespace**  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了两个命名空间：User 和 System   。 默认情况下，自定义变量位于 **User** 命名空间中，系统变量位于 **System** 命名空间中。 你可以为用户定义变量创建其他命名空间，并可以更改 **User** 命名空间的名称，但不能更改 **System** 命名空间的名称，也不能向 **System** 命名空间添加变量或将系统变量分配给其他命名空间。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了两个命名空间：User 和 System********。 默认情况下，自定义变量位于 **User** 命名空间中，系统变量位于 **System** 命名空间中。 你可以为用户定义变量创建其他命名空间，并可以更改 **User** 命名空间的名称，但不能更改 **System** 命名空间的名称，也不能向 **System** 命名空间添加变量或将系统变量分配给其他命名空间。  
   
 **RaiseChangedEvent**  
  将此属性设置为 **True**时，变量值的改变将会引发 **OnVariableValueChanged** 事件。  
@@ -109,7 +110,7 @@ ms.locfileid: "86917477"
   
 **范围**    
  > [!NOTE]  
->  可通过单击“变量”窗口中的“移动变量”来更改此属性设置   。  
+>   可通过单击 **“变量”** 窗口中的 **“移动变量”** 来更改此属性设置。  
   
  变量在包的作用域内或者包中的容器、任务或事件处理程序的作用域内创建。 因为包容器位于容器层次结构的顶部，所以包作用域内的变量所起作用类似于全局变量，而且这些变量可由包中所有容器使用。 同样，在 For 循环容器等容器的范围内定义的变量可由 For 循环容器中所有任务或容器使用。  
   
@@ -135,7 +136,7 @@ ms.locfileid: "86917477"
 
 | 数据类型 | 默认值 |
 |---|---|
-| Boolean | False |
+| 布尔 | False |
 | 数字和二进制数据类型 | 0（零） |
 | 字符型和字符串数据类型 | (空字符串) |
 | Object | System.Object |
@@ -147,7 +148,7 @@ ms.locfileid: "86917477"
   
 **ValueType**    
  > [!NOTE]  
->  此属性值出现在“变量”窗口中的“数据类型”列中   。  
+>   此属性值出现在 **“变量”** 窗口中的 **“数据类型”** 列中。  
   
  指定变量值的数据类型。  
 
@@ -186,7 +187,7 @@ ms.locfileid: "86917477"
   
 5.  在 **“变量”** 窗口中，单击 **“添加变量”** 图标。 新的变量将添加到该列表中。  
   
-6.  也可以单击 **“网格选项”** 图标，选择要在 **“变量网格选项”** 对话框中显示的其他列，然后单击 **“确定”** 。  
+6.  也可以单击 **“网格选项”** 图标，选择要在 **“变量网格选项”** 对话框中显示的其他列，然后单击 **“确定”**。  
   
 7.  或者，设置变量属性。 有关详细信息，请参阅 [设置用户定义变量的属性](https://msdn.microsoft.com/library/f98ddbec-f668-4dba-a768-44ac3ae0536f)定义。  
   
@@ -222,9 +223,9 @@ ms.locfileid: "86917477"
   
 3.  在 **SSIS** 菜单上单击 **“变量”** 。 您可以通过将 View.Variables 命令映射到在 **“选项”** 对话框的 **“键盘”** 页上选择的组合键来显示 **“变量”** 窗口。  
   
-4.  选择要删除的变量，然后单击 **“删除变量”** 。  
+4.  选择要删除的变量，然后单击 **“删除变量”**。  
   
-     如果在“变量”窗口中没有看到该变量，请单击“网格选项”，然后选择“显示所有作用域的变量”   。  
+     如果在“变量”窗口中没有看到该变量，请单击“网格选项”，然后选择“显示所有作用域的变量” 。  
   
 5.  如果 **“确认删除变量”** 对话框打开，请单击 **“是”** 确认删除。  
   
@@ -238,9 +239,9 @@ ms.locfileid: "86917477"
   
 3.  在 **SSIS** 菜单上单击 **“变量”** 。 您可以通过将 View.Variables 命令映射到在 **“选项”** 对话框的 **“键盘”** 页上选择的组合键来显示 **“变量”** 窗口。  
   
-4.  选择该变量，然后单击 **“移动变量”** 。  
+4.  选择该变量，然后单击 **“移动变量”**。  
   
-     如果在“变量”窗口中没有看到该变量，请单击“网格选项”，然后选择“显示所有作用域的变量”   。  
+     如果在“变量”窗口中没有看到该变量，请单击“网格选项”，然后选择“显示所有作用域的变量” 。  
   
 5.  在 **“选择新作用域”** 对话框中，选择包或包中的容器、任务或事件处理程序，以更改变量作用域。  
   
@@ -251,14 +252,14 @@ ms.locfileid: "86917477"
   
 -   “变量”窗口。  
   
--   属性窗口。 “属性”  窗口中列出了用于配置“变量”  窗口中不可用变量的属性：Description、EvaluateAsExpression、Expression、ReadOnly、ValueType 和 IncludeInDebugDump。  
+-   属性窗口。 “属性”**** 窗口中列出了用于配置“变量”**** 窗口中不可用变量的属性：Description、EvaluateAsExpression、Expression、ReadOnly、ValueType 和 IncludeInDebugDump。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 还提供了一组无法更新属性的系统变量，但 RaiseChangedEvent 属性例外。  
   
 ### <a name="set-expressions-on-variables"></a>对变量设置表达式  
   
- 使用  “属性”窗口对用户定义变量设置表达式时：  
+ 使用****“属性”窗口对用户定义变量设置表达式时：  
   
 -   可通过 Value 属性或 Expression 属性来设置变量的值。 默认情况下，EvaluateAsExpression 属性设置为 **False** ，变量的值由 Value property 属性进行设置。 若要使用表达式来设置值，必须首先将 EvaluateAsExpression 设置为 **True**，然后在 Expression property 属性中提供一个表达式。 Value 属性自动设置为该表达式的计算结果。  
   
@@ -266,9 +267,9 @@ ms.locfileid: "86917477"
   
 -   通过变量的 **“属性”** 窗口，可以访问 **“表达式生成器”** 对话框。 使用该工具可以生成、验证和计算表达式。 有关详细信息，请参阅[表达式生成器](../integration-services/expressions/expression-builder.md)和 [Integration Services (SSIS) 表达式](../integration-services/expressions/integration-services-ssis-expressions.md)。  
   
- 使用  “变量”窗口对用户定义变量设置表达式时：  
+ 使用****“变量”窗口对用户定义变量设置表达式时：  
   
--   若要使用表达式来设置变量值，首先请确认变量数据类型与表达式的计算结果一致，然后在 **“变量”** 窗口的 **“表达式”** 列中提供表达式。 “属性”  窗口中的 EvaluateAsExpression 属性会自动设置为 **True**。  
+-   若要使用表达式来设置变量值，首先请确认变量数据类型与表达式的计算结果一致，然后在 **“变量”** 窗口的 **“表达式”** 列中提供表达式。 “属性”**** 窗口中的 EvaluateAsExpression 属性会自动设置为 **True**。  
   
 -   如果为变量指定了表达式，则该变量旁边将显示一个特殊图标标记。 这个特殊的图标标记还显示在设置有表达式的连接管理器和任务旁边。  
   
@@ -290,9 +291,9 @@ ms.locfileid: "86917477"
   
      您可以通过将 View.Variables 命令映射到在 **“选项”** 对话框的 **“键盘”** 页上选择的组合键来显示 **“变量”** 窗口。  
   
-4.  或者，在 **“变量”** 窗口中单击 **“网格选项”** ，然后选择要出现在 **“变量”** 窗口中的列，并选择要应用到变量列表的筛选器。  
+4.  或者，在 **“变量”** 窗口中单击 **“网格选项”**，然后选择要出现在 **“变量”** 窗口中的列，并选择要应用到变量列表的筛选器。  
   
-5.  在列表中选择变量，然后更新 **“名称”** 、 **“数据类型”** 、 **“值”** 、 **“命名空间”** 、 **“引发更改事件”** 、 **“描述”** 和 **“表达式”** 列的值。  
+5.  在列表中选择变量，然后更新 **“名称”**、 **“数据类型”**、 **“值”**、 **“命名空间”**、 **“引发更改事件”**、 **“描述”** 和 **“表达式”** 列的值。  
   
 6.  在列表中选择变量，然后单击 **“移动变量”** 以更改作用域。  
   
@@ -312,7 +313,7 @@ ms.locfileid: "86917477"
   
 6.  单击要修改其属性的变量。  
   
-7.  在  “属性”窗口中，更改读/写变量属性。 对于用户定义的变量而言，某些属性为可读/只读。  
+7.  在****“属性”窗口中，更改读/写变量属性。 对于用户定义的变量而言，某些属性为可读/只读。  
   
      有关属性的详细信息，请参阅 [Integration Services (SSIS) 变量](../integration-services/integration-services-ssis-variables.md)。  
   

@@ -1,4 +1,5 @@
 ---
+description: 执行具有 ODBC 调用和进程输出的 SQL Server Native Client 存储过程
 title: 存储过程、ODBC 调用、输出
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,17 +15,17 @@ ms.assetid: 921a24d1-ea09-4a3c-980a-4dcbd0a43d31
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f5aa77741211b7f0fd1a118621aac9c8bf911902
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 934e25540b7d5b96f803c776d8ddda3fc8c29473
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248174"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448448"
 ---
 # <a name="execute-sql-server-native-client-stored-procedure-with-odbc-call-and-process-output"></a>执行具有 ODBC 调用和进程输出的 SQL Server Native Client 存储过程
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 存储过程可具有整数返回代码和输出参数。 返回代码和输出参数位于从服务器发送的最后一个数据包中，因此直到行集完全释放时它们才可供应用程序使用。 如果命令返回多个结果，则输出参数数据在 IMultipleResults::GetResult 返回 DB_S_NORESULT 时或 IMultipleResults 接口完全释放时（以二者中最先发生的为准）可用********。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 存储过程可具有整数返回代码和输出参数。 返回代码和输出参数位于从服务器发送的最后一个数据包中，因此直到行集完全释放时它们才可供应用程序使用。 如果命令返回多个结果，则输出参数数据在 IMultipleResults::GetResult 返回 DB_S_NORESULT 时或 IMultipleResults 接口完全释放时（以二者中最先发生的为准）可用   。  
   
 > [!IMPORTANT]  
 >  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) 对它们加密。  
@@ -35,13 +36,13 @@ ms.locfileid: "87248174"
   
 2.  通过使用 DBBINDING 结构数组创建一组绑定（每个参数标记一个）。  
   
-3.  通过使用 IAccessor::CreateAccessor**** 方法为定义的参数创建取值函数。 CreateAccessor 从一组绑定创建取值函数****。  
+3.  使用 IAccessor::CreateAccessor  方法，为定义的参数创建取值函数。 CreateAccessor 从一组绑定创建取值函数  。  
   
 4.  填写 DBPARAMS 结构。  
   
-5.  调用 Execute 命令（在这种情况下是调用存储过程）****。  
+5.  调用 Execute 命令（在这种情况下是调用存储过程）  。  
   
-6.  使用 IRowset::Release**** 方法，处理并释放行集。  
+6.  使用 IRowset::Release  方法，处理并释放行集。  
   
 7.  处理从存储过程接收的返回代码和输出参数值。  
   

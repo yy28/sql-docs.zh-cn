@@ -1,4 +1,5 @@
 ---
+description: 创建复合域
 title: 创建复合域
 ms.date: 11/22/2011
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 4af1fc255fd5691b3caaf3f5ce92a28740d1b7b1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2ea7a9297f7a2f5e05a23bcab32b10922847882b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900487"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449889"
 ---
 # <a name="create-a-composite-domain"></a>创建复合域
 
@@ -69,7 +70,7 @@ ms.locfileid: "85900487"
   
 6.  在 **“域列表”** 中，选择将成为复合域一部分的域，然后单击右箭头将它们移至 **“复合域中的域”** 表中。  
   
-7.  单击 **“确定”** 。  
+7.  单击“确定”。  
   
 ##  <a name="set-composite-domain-properties"></a><a name="CompositeDomainProperties"></a> 设置复合域属性  
   
@@ -77,7 +78,7 @@ ms.locfileid: "85900487"
   
 2.  在 **“域列表”** 中，选择将成为复合域一部分的域，然后单击右箭头将它们移至 **“复合域中的域”** 表中。 这是可添加到您创建的复合域中的单一域列表。 只能使用已创建但尚未添加到现有复合域中的那些单一域。 无法将单一域添加到知识库中的多个复合域，并且一个复合域无法添加到另一个复合域中。  
   
-3.  单击 **“高级”** 。  
+3.  单击“高级”。  
   
 4.  请为 **“分析方法”** 选择下列选项之一：  
   
@@ -91,7 +92,7 @@ ms.locfileid: "85900487"
   
 6.  单击 **“完成”** 以完成域管理活动，如 [结束域管理活动](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)中所述。  
   
-##  <a name="follow-up-after-creating-a-composite-domain"></a><a name="FollowUp"></a>跟进：在创建复合域后  
+##  <a name="follow-up-after-creating-a-composite-domain"></a><a name="FollowUp"></a> 跟进：在创建复合域后  
  在创建复合域后，您可以对域执行其他域管理任务，可以执行知识发现以便向域添加知识，或者可以向域添加匹配策略。 有关详细信息，请参阅[执行知识发现](../data-quality-services/perform-knowledge-discovery.md)、[管理域](../data-quality-services/managing-a-domain.md)或[创建匹配策略](../data-quality-services/create-a-matching-policy.md)。  
   
 ##  <a name="knowledge-based-parsing"></a><a name="KnowledgeBaseParsing"></a> Knowledge-Based Parsing  

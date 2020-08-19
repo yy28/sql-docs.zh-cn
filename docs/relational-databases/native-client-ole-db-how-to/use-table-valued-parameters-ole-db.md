@@ -1,5 +1,6 @@
 ---
-title: 使用表值参数（Native Client OLE DB 提供程序）
+description: '使用 SQL Server Native Client (OLE DB 中的表值参数) '
+title: " (Native Client OLE DB 提供程序使用表值参数) "
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,14 +12,14 @@ ms.assetid: 18cb684f-c307-4fda-a2ab-8b638416c3f0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 02f9960443d9ff9c5b3eb82577cf12180376b9e7
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 4d8e35803c71047f73faac83cb79f309cf803a27
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394072"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448429"
 ---
-# <a name="use-table-valued-parameters-in-sql-server-native-client-ole-db"></a>在 SQL Server Native Client （OLE DB）中使用表值参数
+# <a name="use-table-valued-parameters-in-sql-server-native-client-ole-db"></a>使用 SQL Server Native Client (OLE DB 中的表值参数) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   此示例适用于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本。 该示例将执行以下操作：  
@@ -33,7 +34,7 @@ ms.locfileid: "87394072"
   
 -   显示 SQLNCLI11 错误的错误处理。  
   
- 有关表值参数的详细信息，请参阅[表值参数 &#40;SQL Server Native Client&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)。  
+ 有关表值参数的详细信息，请参阅 [表值参数 &#40;SQL Server Native Client&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)。  
   
 ## <a name="example"></a>示例  
  第一个 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 代码列表创建该示例使用的数据库。  
@@ -42,7 +43,7 @@ ms.locfileid: "87394072"
   
  将第三个代码列表放入名为 OLEDBUtils.hpp 的文件。  
   
- 使用 ole32.lib 和 oleaut32.lib 编译并执行第四个 (C++) 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，请将连接字符串从 L "（local）" 更改为 L "（local） \\ \name"，其中 name 为命名实例。 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保 INCLUDE 环境变量包含包含 sqlncli.msi 的目录。  
+ 使用 ole32.lib 和 oleaut32.lib 编译并执行第四个 (C++) 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 要连接到命名实例，请将连接字符串从 L"(local)" 更改为 L"(local)\\\name"，其中 name 是命名实例。 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保 INCLUDE 环境变量包含包含 sqlncli.msi 的目录。  
   
  第五个 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 代码列表创建该示例使用的数据库。  
   

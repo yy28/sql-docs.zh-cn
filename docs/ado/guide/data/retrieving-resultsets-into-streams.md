@@ -1,4 +1,5 @@
 ---
+description: 检索流中的结果集
 title: 检索流中的结果集 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 996c1321-c926-4f57-8297-85c8c20de974
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b20363f3ffae96750046ab98bd623ea44d68a8e2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 53dcb66eb2abb311b1114928a8696c6502454770
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760923"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452919"
 ---
 # <a name="retrieving-resultsets-into-streams"></a>检索流中的结果集
-ADO 不必接收传统**记录集**对象中的结果，而是可以将查询结果检索到流中。 ADO**流**对象（或支持 COM **IStream**接口的其他对象（如 ASP**请求**和**响应**对象）可用于包含这些结果。 此功能的一种用途是检索 XML 格式的结果。 例如，使用 SQL Server，可以通过多种方式返回 XML 结果，例如，使用带有 SQL SELECT 查询的 FOR XML 子句或使用 XPath 查询。  
+ADO 不必接收传统 **记录集** 对象中的结果，而是可以将查询结果检索到流中。 ADO **流** 对象 (或支持 COM **IStream** 接口的其他对象，如 ASP **请求** 和 **响应** 对象) 可用于包含这些结果。 此功能的一种用途是检索 XML 格式的结果。 例如，使用 SQL Server，可以通过多种方式返回 XML 结果，例如，使用带有 SQL SELECT 查询的 FOR XML 子句或使用 XPath 查询。  
   
  若要以流格式而不是在**记录集中**接收查询结果，必须将**ExecuteOptionEnum**中的**adExecuteStream**常量指定为**命令**对象的**Execute**方法的参数。 如果提供程序支持此功能，则在执行时将在流中返回结果。 可能需要在代码执行之前指定其他特定于访问接口的属性。 例如，对于 SQL Server 的 Microsoft OLE DB 提供程序，必须指定**Command**对象的**properties**集合中的**Output Stream**之类的属性。 有关与此功能相关的 SQL Server 特定的动态属性的详细信息，请参阅 SQL Server 联机丛书中与 XML 相关的属性。  
   
@@ -156,7 +157,7 @@ FOR XML [RAW|AUTO|EXPLICIT]
 SELECT * FROM PRODUCTS ORDER BY PRODUCTNAME FOR XML AUTO  
 ```  
   
- 此命令可以在字符串中指定，如前面所示，分配给**CommandText**，或指定给**CommandStream**的 XML 模板查询的形式。 有关 XML 模板查询的详细信息，请参阅 ADO 中的[命令流](../../../ado/guide/data/command-streams.md)或使用 SQL Server 联机丛书中的命令输入流。  
+ 此命令可以在字符串中指定，如前面所示，分配给 **CommandText**，或指定给 **CommandStream**的 XML 模板查询的形式。 有关 XML 模板查询的详细信息，请参阅 ADO 中的 [命令流](../../../ado/guide/data/command-streams.md) 或使用 SQL Server 联机丛书中的命令输入流。  
   
  作为 XML 模板查询，FOR XML 查询如下所示：  
   

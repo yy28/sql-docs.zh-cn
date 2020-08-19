@@ -1,4 +1,5 @@
 ---
+description: 将 Visual FoxPro 数据导入到 Microsoft Access
 title: 将 Visual FoxPro 数据导入 Microsoft Access |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a3591295-0a76-4e3c-b4fa-8bd4f1cde705
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 90ac16bbdbaf7f4dd29e14e66cf5b9dc666057f4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 38440ca61b8af951f201978013d30529b75a452b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302439"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449529"
 ---
 # <a name="importing-visual-foxpro-data-into-microsoft-access"></a>将 Visual FoxPro 数据导入到 Microsoft Access
 您可以使用 "导入" 选项将存储在 Visual FoxPro 数据库中的数据导入到 Microsoft Access 数据库中。  
@@ -40,4 +41,4 @@ ms.locfileid: "81302439"
   
  现在可以使用 Microsoft Access 来处理导入的视觉 FoxPro 表中的数据。 导入的数据是 Visual FoxPro 中存储的数据的快照;对导入的数据所做的更改不会发送回 Visual FoxPro 数据源。  
   
- 如果希望在 Microsoft Access 中做出更改以更改 Visual FoxPro 数据源上的数据，请参阅[从 Microsoft Access 查询和更新 Visual Foxpro 数据](../../odbc/microsoft/querying-and-updating-visual-foxpro-data-from-microsoft-access.md)。
+ 如果希望在 Microsoft Access 中做出更改以更改 Visual FoxPro 数据源上的数据，请参阅 [从 Microsoft Access 查询和更新 Visual Foxpro 数据](../../odbc/microsoft/querying-and-updating-visual-foxpro-data-from-microsoft-access.md)。

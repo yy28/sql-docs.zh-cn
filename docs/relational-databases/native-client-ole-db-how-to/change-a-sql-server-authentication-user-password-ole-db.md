@@ -1,5 +1,6 @@
 ---
-title: SQL 身份验证用户密码（OLE DB）
+description: '更改 SQL Server Native Client Authentication 用户密码 (OLE DB) '
+title: 'SQL 身份验证用户密码 (OLE DB) '
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,20 +12,20 @@ ms.assetid: 1ed37ded-5671-46a4-b609-eea886dfae20
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 41d15be4184152741c8e2a6c98efacb1cffcac33
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b12d8dd78c32ba0ea7c98e555f35d8831de9320b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247879"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448457"
 ---
-# <a name="change-a-sql-server-native-client-authentication-user-password-ole-db"></a>更改 SQL Server Native Client 身份验证用户密码（OLE DB）
+# <a name="change-a-sql-server-native-client-authentication-user-password-ole-db"></a>更改 SQL Server Native Client Authentication 用户密码 (OLE DB) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   此示例显示如何使用 OLE DB 更改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证下的用户帐户密码。  
   
 > [!IMPORTANT]  
->  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，则应通过[Win32 加密 API](https://go.microsoft.com/fwlink/?LinkId=64532)对其进行加密。  
+>  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
   
 ## <a name="example"></a>示例  
  在生成示例前，请更新 C++ 代码以指定用户 ID、旧密码和新密码。  
