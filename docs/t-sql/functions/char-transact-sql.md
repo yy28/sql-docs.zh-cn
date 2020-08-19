@@ -1,4 +1,5 @@
 ---
+description: CHAR (Transact-SQL)
 title: CHAR (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/19/2018
@@ -27,17 +28,17 @@ ms.assetid: 955afe94-539c-465d-af22-16ec45da432a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: af2e71a4b4851e61176235b5615f0b7adbd553e2
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: ba9bec3ce34e9d7aebc204c183f5ec24d92b065a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112157"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88367123"
 ---
 # <a name="char-transact-sql"></a>CHAR (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-此函数将 int ASCII 代码转换为字符值  。
+此函数将 int ASCII 代码转换为字符值****。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -59,14 +60,14 @@ CHAR ( integer_expression )
 ## <a name="return-types"></a>返回类型
 **char(1)**
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
 使用 `CHAR` 可将控制字符插入字符字符串中。 此表显示了一些常用的控制字符。
   
 |控制字符|值|  
 |---|---|
 |选项卡|**char(9)**|  
 |换行|**char(10)**|  
-|回车符|**char(13)**|  
+|回车|**char(13)**|  
   
 ## <a name="examples"></a>示例  
   

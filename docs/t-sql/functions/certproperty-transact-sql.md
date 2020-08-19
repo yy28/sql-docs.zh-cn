@@ -1,4 +1,5 @@
 ---
+description: CERTPROPERTY (Transact-SQL)
 title: CERTPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 966c09aa-bc4e-45b0-ba53-c8381871f638
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0323bb93388010c1ba9c20176893674aff03760a
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: bbba412b97f88d52afa9a304c3cbbb101f74772b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112162"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88367273"
 ---
 # <a name="certproperty-transact-sql"></a>CERTPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,39 +47,39 @@ CertProperty ( Cert_ID , '<PropertyName>' )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
-Cert_ID   
+Cert_ID  
 int 数据类型的证书 ID 值。
   
-Expiry_Date   
+Expiry_Date**  
 证书过期日期。
   
-Start_Date   
+Start_Date  
 证书开始生效的日期。
   
-Issuer_Name   
+Issuer_Name  
 证书颁发者的名称。
   
-Cert_Serial_Number   
+Cert_Serial_Number  
 证书序列号。
   
 *主题*  
 证书主题。
   
- SID   
+ *SID*  
 证书 SID。 这也是映射到该证书的所有登录或用户的 SID。
   
-String_SID   
+String_SID**  
 字符串形式的证书的 SID。 这也是映射到该证书的所有登录或用户的 SID。
   
 ## <a name="return-types"></a>返回类型
 必须以单引号括起属性规范。
   
-返回类型取决于在函数调用中指定的属性。 返回类型 sql_variant 包装所有返回值  。
--   Expiry_Date 和 Start_Date 返回 datetime    。  
--   Cert_Serial_Number、Issuer_Name、String_SID 和 Subject 全部都返回 nvarchar      。  
--   SID 返回 varbinary   。  
+返回类型取决于在函数调用中指定的属性。 返回类型 sql_variant 包装所有返回值****。
+-   Expiry_Date 和 Start_Date 返回 datetime********。  
+-   Cert_Serial_Number、Issuer_Name、String_SID 和 Subject 全部都返回 nvarchar************。  
+-   SID 返回 varbinary******。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
 请参阅 [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md) 目录视图中的证书信息。
   
 ## <a name="permissions"></a>权限  

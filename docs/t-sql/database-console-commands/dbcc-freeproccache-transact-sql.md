@@ -1,4 +1,5 @@
 ---
+description: DBCC FREEPROCCACHE (Transact-SQL)
 title: DBCC FREEPROCCACHE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/13/2017
@@ -25,12 +26,12 @@ ms.assetid: 0e09d210-6f23-4129-aedb-3d56b2980683
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 84f0dd9a38f118d71ca7417e2a241a03426e6753
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: d8b3b9733500dc56f4994dd13fd42939b0885a02
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483538"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88367783"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -60,21 +61,21 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- ( { plan_handle | sql_handle | pool_name } )     
-plan_handle 用于唯一标识已执行并且其计划驻留在计划缓存中的批处理的查询计划  。 plan_handle 为 varbinary(64)，可以从下列动态管理对象中获得计划句柄   ：  
+ ( { plan_handle | sql_handle | pool_name } )    
+plan_handle 用于唯一标识已执行并且其计划驻留在计划缓存中的批处理的查询计划**。 plan_handle 为 varbinary(64)，可以从下列动态管理对象中获得计划句柄******：  
  -   [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
  -   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
  -   [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
  -   [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
 
-sql_handle 是要清除的批处理的 SQL 句柄  。 sql_handle 为 varbinary(64)，可以从下列动态管理对象中获得计划句柄   ：  
+sql_handle 是要清除的批处理的 SQL 句柄**。 sql_handle 为 varbinary(64)，可以从下列动态管理对象中获得计划句柄******：  
  -   [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
  -   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
  -   [sys.dm_exec_cursors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)  
  -   [sys.dm_exec_xml_handles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)  
  -   [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
 
-pool_name 是资源调控器资源池的名称  。 pool_name 的数据类型为 sysname，可通过查询 [sys.dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md) 动态管理视图获得此参数   。  
+pool_name 是资源调控器资源池的名称**。 pool_name 的数据类型为 sysname，可通过查询 [sys.dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md) 动态管理视图获得此参数******。  
  若要将资源调控器工作负荷组与资源池相关联，请查询 [sys.dm_resource_governor_workload_groups](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md) 动态管理视图。 有关会话的工作负荷组的信息，请查询 [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) 动态管理视图。  
 
   
@@ -90,7 +91,7 @@ pool_name 是资源调控器资源池的名称  。 pool_name 的数据类型为
 > [!NOTE]
 > 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，使用 `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` 清除范围内数据库的过程（计划）缓存。
 
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
 小心使用 DBCC FREEPROCCACHE 清除计划高速缓存。 清除过程（计划）缓存会逐出所有计划，并且传入查询执行将编译新计划，而不是重复使用任何以前缓存的计划。 
 
 由于新编译数量增加，这可能导致查询性能骤降。 对于计划缓存中每个已清除的缓存存储区，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志将包含以下信息性消息：“由于 'DBCC FREEPROCCACHE' 或 'DBCC FREESYSTEMCACHE' 操作，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 经历了 '%s' 缓存存储区(计划缓存的一部分)的 %d 次刷新。” 每隔五分钟，只要缓存在这段时间间隔内得到刷新，此消息就记录一次。
@@ -98,9 +99,9 @@ pool_name 是资源调控器资源池的名称  。 pool_name 的数据类型为
 以下重新配置操作也将清除过程缓存：
 -   访问检查缓存存储桶计数  
 -   访问检查缓存配额  
--   clr enabled  
+-   CLR 已启用  
 -   并行的开销阈值  
--   cross db ownership chaining  
+-   跨数据库所有权链接  
 -   索引创建内存  
 -   最大并行度  
 -   max server memory  
@@ -180,7 +181,7 @@ DBCC FREEPROCCACHE WITH NO_INFOMSGS;
 ```  
   
 ### <a name="c-clearing-all-cache-entries-associated-with-a-resource-pool"></a>C. 清除与资源池相关联的所有高速缓存条目  
-以下示例清除与指定资源池相关联的所有高速缓存条目。 `sys.dm_resource_governor_resource_pools` 视图首先被查询，以便获取 pool_name 的值  。
+以下示例清除与指定资源池相关联的所有高速缓存条目。 `sys.dm_resource_governor_resource_pools` 视图首先被查询，以便获取 pool_name 的值**。
   
 ```sql  
 SELECT * FROM sys.dm_resource_governor_resource_pools;  

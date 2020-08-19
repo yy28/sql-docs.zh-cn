@@ -1,4 +1,5 @@
 ---
+description: ENCRYPTBYKEY (Transact-SQL)
 title: ENCRYPTBYKEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 0e11f8c5-f79d-46c1-ab11-b68ef05d6787
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: da36a011f2999527218e668755a8c1d10c9ce692
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c90d864c80c3e54b8ea0cf1e1efcc51881e9eb80
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112970"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88366463"
 ---
 # <a name="encryptbykey-transact-sql"></a>ENCRYPTBYKEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,35 +47,35 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- key_GUID   
- 用于加密 cleartext 的密钥的 GUID  。 Uniqueidentifier  。  
+ key_GUID  
+ 用于加密 cleartext 的密钥的 GUID**。 Uniqueidentifier。  
   
- 'cleartext'   
+ 'cleartext'  
  要使用密钥加密的数据。  
   
  @cleartext  
- 类型为 nvarchar、char、varchar、binary、varbinary 或 nchar 的变量，其中包含要使用密钥加密的数据       。  
+ 类型为 nvarchar、char、varchar、binary、varbinary 或 nchar 的变量，其中包含要使用密钥加密的数据************************。  
   
- add_authenticator   
- 指示是否将验证器与 cleartext 一起加密  。 在使用验证器时必须为 1。 int  。  
+ add_authenticator  
+ 指示是否将验证器与 cleartext 一起加密**。 在使用验证器时必须为 1。 int。  
   
  @add_authenticator  
- 指示是否将验证器与 cleartext 一起加密  。 在使用验证器时必须为 1。 int  。  
+ 指示是否将验证器与 cleartext 一起加密**。 在使用验证器时必须为 1。 int。  
   
- authenticator   
- 从中派生验证器的数据。 sysname  。  
+ authenticator  
+ 从中派生验证器的数据。 sysname。  
   
  @authenticator  
  包含用于派生验证器的数据的变量。  
   
 ## <a name="return-types"></a>返回类型  
- varbinary（最大大小为 8000 个字节）  。  
+ varbinary（最大大小为 8000 个字节）。  
   
  如果密钥未打开，如果密钥不存在，或者如果密钥是不推荐使用的 RC4 密钥且数据库不处于兼容性级别 110 或更高级别，则返回 NULL。  
  
- 如果 cleartext 值为 NULL，则返回 NULL  。
+ 如果 cleartext 值为 NULL，则返回 NULL**。
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  EncryptByKey 使用对称密钥。 该密钥必须打开。 如果在当前会话中已打开该对称密钥，则无需在查询上下文中再次打开它。  
   
  验证器有助于禁止对加密字段进行整个值替换。 例如，请考虑下面的工资单数据表。  

@@ -1,4 +1,5 @@
 ---
+description: CERTENCODED (Transact-SQL)
 title: CERTENCODED (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 677a0719-7b9a-4f0b-bc61-41634563f924
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a82e5c9a18f1bb21ac58d3158395881ee973a9a5
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: df0a107d49fb04588fb5f607058f57a94fdcc5bc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111666"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88367353"
 ---
 # <a name="certencoded-transact-sql"></a>CERTENCODED (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,22 +39,22 @@ CERTENCODED ( cert_id )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
-cert_id   
-证书的 certificate_id  。 在 sys. 证书中找到此值；[CERT_ID (Transact-SQL)](../../t-sql/functions/cert-id-transact-sql.md) 函数也将返回该值。 cert_id 为 int 数据类型   。
+cert_id  
+证书的 certificate_id****。 在 sys. 证书中找到此值；[CERT_ID (Transact-SQL)](../../t-sql/functions/cert-id-transact-sql.md) 函数也将返回该值。 cert_id 为 int 数据类型******。
   
 ## <a name="return-types"></a>返回类型
 **varbinary**
   
 ## <a name="remarks"></a>备注  
-同时使用 CERTENCODED 和 CERTPRIVATEKEY 以二进制格式返回证书的其他部分   。
+同时使用 CERTENCODED 和 CERTPRIVATEKEY 以二进制格式返回证书的其他部分********。
   
 ## <a name="permissions"></a>权限  
-CERTENCODED 向用户开放使用  。
+CERTENCODED 向用户开放使用****。
   
 ## <a name="examples"></a>示例  
   
 ### <a name="simple-example"></a>简单示例  
-此示例创建一个名为 `Shipping04` 的证书，然后使用 CERTENCODED 函数返回该证书的二进制编码  。 此示例将该证书的到期日期设置为 2040 年 10 月 31 日。
+此示例创建一个名为 `Shipping04` 的证书，然后使用 CERTENCODED 函数返回该证书的二进制编码****。 此示例将该证书的到期日期设置为 2040 年 10 月 31 日。
   
 ```sql
 CREATE DATABASE TEST1;

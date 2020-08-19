@@ -1,4 +1,5 @@
 ---
+description: CEILING (Transact-SQL)
 title: CEILING (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -20,12 +21,12 @@ ms.assetid: e736b43a-9457-4781-95a4-4bcf9d4fc46a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a694ae6ff15e043023f2506cfe027a8218c160f4
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: f166e322f37ab4c78e8871bdcaae5e203711a17f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112114"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88367573"
 ---
 # <a name="ceiling-transact-sql"></a>CEILING (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,10 +45,10 @@ CEILING ( numeric_expression )
 
 ## <a name="arguments"></a>参数
 *numeric_expression*  
-精确数值或近似数值数据类型类别的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 针对此函数，bit 数据类型无效  。
+精确数值或近似数值数据类型类别的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 针对此函数，bit 数据类型无效****。
   
 ## <a name="return-types"></a>返回类型
-返回与 numeric_expression 相同类型的值  。
+返回与 numeric_expression 相同类型的值**。
   
 ## <a name="examples"></a>示例  
 此示例显示为 CEILING 函数输入的正数、负数和零值。
