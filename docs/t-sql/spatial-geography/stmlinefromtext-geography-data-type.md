@@ -1,4 +1,5 @@
 ---
+description: STMLineFromText（geography 数据类型）
 title: STMLineFromText（geography 数据类型）| Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2017
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 66dfd722-a9bd-45d3-9788-f1946dd23e17
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 38f600215710efc1886e93a8eb4941f6996f195e
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: e4d58095c8db69a84562d13a30be317a06948ed4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86556058"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445142"
 ---
 # <a name="stmlinefromtext-geography-data-type"></a>STMLineFromText（geography 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-从开放地理空间信息联盟 (OGC) 熟知文本 (WKT) 表示形式返回 geography 实例，增加了该实例传递的任何 Z（标高）和 M（度量）值  。
+从开放地理空间信息联盟 (OGC) 熟知文本 (WKT) 表示形式返回 geography 实例，增加了该实例传递的任何 Z（标高）和 M（度量）值。
   
 ## <a name="syntax"></a>语法  
   
@@ -40,20 +41,20 @@ STMLineFromText ( 'multilinestring_tagged_text' , SRID )
 
 ## <a name="arguments"></a>参数
  *multilinestring_tagged_text*  
- 希望返回的 geographyMultiLineString 实例的 WKT 表示形式  。 multilinestring_tagged_text 是一个 nvarchar(max) 表达式   。  
+ 希望返回的 geographyMultiLineString 实例的 WKT 表示形式****。 multilinestring_tagged_text 是一个 nvarchar(max) 表达式******。  
   
  SRID   
- 一个 int 表达式，表示希望返回的 geographyMultiLineString 实例的空间引用 ID (SRID)   。  
+ 一个 int 表达式，表示希望返回的 geographyMultiLineString 实例的空间引用 ID (SRID)********。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
   
- CLR 返回类型：SqlGeography   
+ CLR 返回类型：SqlGeography  
   
- OGC 类型：MultiLineString   
+ OGC 类型：MultiLineString****  
   
-## <a name="remarks"></a>备注  
- 如果输入的格式不正确，此方法将引发 FormatException  。  
+## <a name="remarks"></a>注解  
+ 如果输入的格式不正确，此方法将引发 FormatException****。  
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `STMLineFromText()` 创建 `geography` 实例。  

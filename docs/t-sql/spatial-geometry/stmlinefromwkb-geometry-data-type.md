@@ -1,4 +1,5 @@
 ---
+description: STMLineFromWKB（geometry 数据类型）
 title: STMLineFromWKB（geometry 数据类型）| Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 00a8a8e7-11d6-47a0-b971-00e60f7877ce
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: b0d9da3d43d82cce37ce12b60c84572af7541f2b
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 675a76c43e34367586c1042aaa830679940223a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554982"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445013"
 ---
 # <a name="stmlinefromwkb-geometry-data-type"></a>STMLineFromWKB（geometry 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-从开放地理空间信息联盟 (OGC) 已知二进制 (WKB) 表示形式中返回 geometryMultiLineString 实例  。
+从开放地理空间信息联盟 (OGC) 已知二进制 (WKB) 表示形式中返回 geometryMultiLineString 实例****。
   
 ## <a name="syntax"></a>语法  
   
@@ -39,21 +40,21 @@ STMLineFromWKB ( 'WKB_multilinestring' , SRID )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- WKB_multilinestring   
- 要返回的 geometryMultiLineString 实例的 WKB 表示形式  。 WKB_multilinestring 是一个 varbinary (max) 表达式   。  
+ WKB_multilinestring**  
+ 要返回的 geometryMultiLineString 实例的 WKB 表示形式****。 WKB_multilinestring 是一个 varbinary (max) 表达式******。  
   
  SRID   
- 一个 int 表达式，表示要返回的 geometryMultiLineString 实例的空间引用 ID (SRID)   。  
+ 一个 int 表达式，表示要返回的 geometryMultiLineString 实例的空间引用 ID (SRID)********。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry****  
   
- CLR 返回类型：SqlGeometry   
+ CLR 返回类型：SqlGeometry****  
   
- OGC 类型：MultiLineString   
+ OGC 类型：MultiLineString****  
   
-## <a name="remarks"></a>备注  
- 如果输入的格式不正确，此方法将引发 FormatException  。  
+## <a name="remarks"></a>注解  
+ 如果输入的格式不正确，此方法将引发 FormatException****。  
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `STMLineFromWKB()` 创建 `geometry` 实例。  

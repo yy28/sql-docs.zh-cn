@@ -1,4 +1,5 @@
 ---
+description: 对复制禁用 CHECK 约束
 title: 对复制禁用 CHECK 约束 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ ms.assetid: af98fc70-24dd-4bd3-a0a3-f701dfa67b2c
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 880fa9e59f431156651db0ff37695ec6aaa41eac
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: f5a231db58bca07596f63698d5e02a07638c3b02
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394439"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446475"
 ---
 # <a name="disable-check-constraints-for-replication"></a>对复制禁用 CHECK 约束
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -44,11 +45,11 @@ ms.locfileid: "87394439"
   
 1.  在 **“对象资源管理器”** 中，展开具有要修改的 CHECK 约束的表，再展开 **“约束”** 文件夹。  
   
-2.  右键单击要修改的 CHECK 约束，然后单击 **“修改”** 。  
+2.  右键单击要修改的 CHECK 约束，然后单击 **“修改”**。  
   
-3.  在 **“CHECK 约束”** 对话框中的 **“表设计器”** ，对 **“强制用于复制”** 选择 **“否”** 值。  
+3.  在 **“CHECK 约束”** 对话框中的 **“表设计器”**，对 **“强制用于复制”** 选择 **“否”** 值。  
   
-4.  单击“关闭”  。  
+4.  单击“关闭”。  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -58,7 +59,7 @@ ms.locfileid: "87394439"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 第一个示例创建包含一个 IDENTITY 列的表和表中的一个 CHECK 约束。 然后，该示例删除该约束，并通过指定 NOT FOR REPLICATION 子句重新创建约束。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 第一个示例创建包含一个 IDENTITY 列的表和表中的一个 CHECK 约束。 然后，该示例删除该约束，并通过指定 NOT FOR REPLICATION 子句重新创建约束。  
   
     ```  
     USE AdventureWorks2012;  

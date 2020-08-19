@@ -1,4 +1,5 @@
 ---
+description: OPENJSON (Transact-SQL)
 title: OPENJSON (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2020
@@ -17,12 +18,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 27f83649fc0549854fa131bf1a859f0c20ebf65c
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 2f91b160ed5fc6dbab1c9d7ec225b479dc6b82d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394782"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445659"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
 
@@ -64,8 +65,6 @@ OPENJSON( jsonExpression [ , path ] )  [ <with_clause> ]
 ![OPENJSON TVF 中的 WITH 子句的语法](../../relational-databases/json/media/openjson-shema-syntax.png "OPENJSON WITH 语法")
 
 with_clause 包含 **OPENJSON** 要返回的列及其类型的列表。 默认情况下，**OPENJSON** 将 jsonExpression 中的键与 with_clause 中的列名进行匹配（在此情况下，匹配键意味着它区分大小写）。 如果列名与键名称不匹配，则可以提供可选的 column_path，它是在 jsonExpression 中引用键的 [JSON 路径表达式](../../relational-databases/json/json-path-expressions-sql-server.md) 。 
-
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
 

@@ -1,4 +1,5 @@
 ---
+description: STIsValid（geography 数据类型）
 title: STIsValid（geography 数据类型）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 1bfe787f-ddf0-4fc7-af6a-570a58faab23
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 4549b317f3b6948fd72e0c5c2856255b8a6bd507
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: a75d380ce9eed834f24eee2d8e643f3abd5748b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86556099"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445168"
 ---
 # <a name="stisvalid-geography-data-type"></a>STIsValid（geography 数据类型）
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   根据 **geography** 实例的开放地理空间信息联盟 (OGC) 类型，如果可确定该实例的格式正确并将其识别为有效地理对象，则返回 true。 如果 **geography** 实例格式不正确，则返回 false。 此方法是精确方法。  
   
- 这种 geography 数据类型方法支持大于半球的 FullGlobe 实例或空间实例  。  
+ 这种 geography 数据类型方法支持大于半球的 FullGlobe 实例或空间实例。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,12 +39,12 @@ ms.locfileid: "86556099"
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>返回类型
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit****  
   
- CLR 返回类型：**SqlBoolean**  
+ CLR 返回类型：SqlBoolean****  
   
-## <a name="remarks"></a>备注  
- geography 实例的 OGC 类型可通过调用 [STGeometryType()](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md) 来确定。  
+## <a name="remarks"></a>注解  
+ geography 实例的 OGC 类型可通过调用 [STGeometryType()](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md) 来确定****。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 只生成有效的 **geography** 实例，但允许存储和检索无效的实例。 可使用 `MakeValid()` 方法检索表示无效实例的相同点集的有效实例。  
   
@@ -59,6 +60,6 @@ DECLARE @g geography
 ## <a name="see-also"></a>另请参阅  
  [STGeometryType（geography 数据类型）](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md)   
  [MakeValid（geography 数据类型）](../../t-sql/spatial-geography/makevalid-geography-data-type.md)   
- [地理实例上的 OGC 方法](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [Geography 实例上的 OGC 方法](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

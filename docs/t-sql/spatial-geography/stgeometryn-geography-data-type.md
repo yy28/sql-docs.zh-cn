@@ -1,4 +1,5 @@
 ---
+description: STGeometryN（geography 数据类型）
 title: STGeometryN（geography 数据类型）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 53755f69-cd50-475b-b3b8-a1a9157cf03a
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 1deed4d716bbee62dac425a9d71780aec445602e
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 812a5e63f21de77028c1f00a08f1819c5a07be13
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555761"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445239"
 ---
 # <a name="stgeometryn-geography-data-type"></a>STGeometryN（geography 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,15 +43,15 @@ ms.locfileid: "86555761"
  一个 **int** 表达式，其值介于 1 和 **GeometryCollection** 中的 **geography** 实例数之间。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
   
- CLR 返回类型：SqlGeography   
+ CLR 返回类型：SqlGeography  
   
 ## <a name="remarks"></a>备注  
  如果参数大于 [STNumGeometries()](../../t-sql/spatial-geography/stnumgeometries-geography-data-type.md) 的结果，则此方法返回 null；如果 *expression* 参数小于 1，则将引发 **ArgumentOutOfRangeException**。  
   
 ## <a name="examples"></a>示例  
- 以下示例创建 `MultiPoint``geography` 实例并使用 `STGeometryN()` 查找 GeometryCollection 的第二个 `geography` 实例  。  
+ 以下示例创建 `MultiPoint``geography` 实例并使用 `STGeometryN()` 查找 GeometryCollection 的第二个 `geography` 实例****。  
   
 ```  
 DECLARE @g geography;  
@@ -59,6 +60,6 @@ SELECT @g.STGeometryN(2).ToString();
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [地理实例上的 OGC 方法](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [Geography 实例上的 OGC 方法](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

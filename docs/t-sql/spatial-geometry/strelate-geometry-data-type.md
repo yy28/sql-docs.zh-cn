@@ -1,4 +1,5 @@
 ---
+description: STRelate（geometry 数据类型）
 title: STRelate（geometry 数据类型）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9dcb5f58-35ab-4bb3-86ee-2d29eefba6d3
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 6d884f29122b9b8afda3c994cba4a07290bb059b
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: e427ca859bf6e1e861ed58bb7fdc4ab2dc869fc1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555614"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444965"
 ---
 # <a name="strelate-geometry-data-type"></a>STRelate（geometry 数据类型）
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,18 +41,18 @@ ms.locfileid: "86555614"
 
 ## <a name="arguments"></a>参数
  *other_geometry*  
- 将与调用 `STRelate()` 的实例进行比较的另一个 geometry 实例。  
+ 将与调用 `STRelate()` 的实例进行比较的另一个 geometry 实例****。  
   
  *intersection_pattern_matrix*  
  两个 **geometry** 实例间的 DE-9IM 模式矩阵设备的 **nchar(9)** 类型编码可接受值字符串。  
   
-## <a name="remarks"></a>备注  
- 如果 geometry 实例的空间引用 ID (SRID) 不匹配，则此方法始终返回 null  。 如果矩阵格式不正确，此方法将引发 **ArgumentException**。  
+## <a name="remarks"></a>注解  
+ 如果 geometry 实例的空间引用 ID (SRID) 不匹配，则此方法始终返回 null****。 如果矩阵格式不正确，此方法将引发 **ArgumentException**。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit****  
   
- CLR 返回类型：SqlBoolean   
+ CLR 返回类型：SqlBoolean****  
   
 ## <a name="examples"></a>示例  
  以下示例在显式 DE-9IM 模式下使用 `STRelate()` 来测试两个 **geometry** 实例是否在空间上不相联。  

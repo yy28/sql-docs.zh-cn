@@ -1,5 +1,6 @@
 ---
-title: IHsyscolumns （Transact-sql） |Microsoft Docs
+description: IHsyscolumns (Transact-SQL)
+title: IHsyscolumns (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 263452f1-9708-48f0-9536-402a89e7f5bf
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 38522539230fd35aca058f9a26b53a3f4baa682b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 264aea54b51140d7d571a7312bf9947de7589eeb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889185"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446529"
 ---
 # <a name="ihsyscolumns-transact-sql"></a>IHsyscolumns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,14 +47,14 @@ ms.locfileid: "85889185"
 |**colstat**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**cdefault**|**int**|此列默认的 ID。|  
 |**域名**|**int**|此列的规则的 ID 或 CHECK 约束的 ID。|  
-|**数字**|**int**|对过程分组时的子过程号（**0**表示表示条目）。|  
+|**数字**|**int**|将过程分组时的子过程数字 (**0**) 的表示项。|  
 |**colorder**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**autoval**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**offset**|**int**|此列显示在该行中的偏移量。|  
 |**collationid**|**int**|列排序规则的 ID。 对于基于非字符的列为 NULL。|  
 |language|**int**|列的语言标识符。|  
-|**status**|**int**|用于描述列或参数的属性的位图：<br /><br /> **0x08** = 列允许 null 值。<br /><br /> **0x10** = 在添加**varchar**或**varbinary**列后，ANSI 填充已生效。 为**varchar**保留尾随空格，并保留**varbinary**列的尾随零。<br /><br /> **0x40** = 参数是输出参数。<br /><br /> **0x80** = 列是标识列。|  
-|**type**|**int**|[&#40;transact-sql&#41;sys.sys类型](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md)的物理存储类型。|  
+|**status**|**int**|用于描述列或参数的属性的位图：<br /><br /> **0x08** = 列允许 null 值。<br /><br /> **0x10** = 在添加 **varchar** 或 **varbinary** 列后，ANSI 填充已生效。 为 **varchar** 保留尾随空格，并保留 **varbinary** 列的尾随零。<br /><br /> **0x40** = 参数是输出参数。<br /><br /> **0x80** = 列是标识列。|  
+|type|**int**|[&#40;transact-sql&#41;sys.sys类型](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md)的物理存储类型。|  
 |**usertype**|**tinyint**|[&#40;transact-sql&#41;sys.sys类型](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md)中的用户定义数据类型的 ID。|  
 |**printfmt**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**prec**|**int**|此列的精度级别。|  
@@ -66,8 +67,8 @@ ms.locfileid: "85889185"
   
 ## <a name="see-also"></a>另请参阅  
  [异类数据库复制](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
- [Transact-sql&#41;&#40;复制表](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Transact-sql&#41;&#40;复制视图](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;复制表 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;复制视图 ](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)  
   
   

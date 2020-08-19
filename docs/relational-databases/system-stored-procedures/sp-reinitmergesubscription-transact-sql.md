@@ -1,5 +1,6 @@
 ---
-title: sp_reinitmergesubscription （Transact-sql） |Microsoft Docs
+description: sp_reinitmergesubscription (Transact-SQL)
+title: sp_reinitmergesubscription (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 249a4048-e885-48e0-a92a-6577f59de751
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fbdcd6435b9fab8e65c39b97a6aaa1ac69a1e9dc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8712640a1f5f1b2dd53e49d09610dd30b192b4cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901406"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446842"
 ---
 # <a name="sp_reinitmergesubscription-transact-sql"></a>sp_reinitmergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,19 +41,19 @@ sp_reinitmergesubscription [ [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @publication = ] 'publication'`发布的名称。 *发布*为**sysname**，默认值为**all**。  
+`[ @publication = ] 'publication'` 发布的名称。 *发布* 为 **sysname**，默认值为 **all**。  
   
-`[ @subscriber = ] 'subscriber'`订阅服务器的名称。 *订阅服务器*的值为**sysname**，默认值为**all**。  
+`[ @subscriber = ] 'subscriber'` 订阅服务器的名称。 *订阅服务器* 的值为 **sysname**，默认值为 **all**。  
   
-`[ @subscriber_db = ] 'subscriber_db'`订阅服务器数据库的名称。 *subscriber_db*的值为**sysname**，默认值为**all**。  
+`[ @subscriber_db = ] 'subscriber_db'` 订阅服务器数据库的名称。 *subscriber_db* 的值为 **sysname**，默认值为 **all**。  
   
-`[ @upload_first = ] 'upload_first'`在重新初始化订阅之前是否上载订阅服务器上的更改。 *upload_first*为**nvarchar （5）**，默认值为 FALSE。 如果**为 true**，则在重新初始化订阅之前上载更改。 如果**为 false**，则不上载更改。  
+`[ @upload_first = ] 'upload_first'` 在重新初始化订阅之前是否上载订阅服务器上的更改。 *upload_first* 为 **nvarchar (5) **，默认值为 FALSE。 如果 **为 true**，则在重新初始化订阅之前上载更改。 如果 **为 false**，则不上载更改。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- **sp_reinitmergesubscription**用于合并复制。  
+ **sp_reinitmergesubscription** 用于合并复制。  
   
  可从发布服务器调用**sp_reinitmergesubscription**以重新初始化合并订阅。 建议同时重新运行快照代理。  
   
@@ -65,7 +66,7 @@ sp_reinitmergesubscription [ [ @publication = ] 'publication'
  [!code-sql[HowTo#sp_reinitmergepushsubwithupload](../../relational-databases/replication/codesnippet/tsql/sp-reinitmergesubscripti_2.sql)]  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_reinitmergesubscription**。  
+ 只有 **sysadmin** 固定服务器角色的成员或 **db_owner** 固定数据库角色的成员才能执行 **sp_reinitmergesubscription**。  
   
 ## <a name="see-also"></a>另请参阅  
  [重新初始化订阅](../../relational-databases/replication/reinitialize-subscriptions.md)   

@@ -1,4 +1,5 @@
 ---
+description: DENY 程序集权限 (Transact-SQL)
 title: DENY 程序集权限 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: be0896b3-f793-44c9-9390-1c6e58f33b2b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 657f932df77506dee1e99e77aa4ab37f89125e07
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 1905b2a0c2eaa017249ac9ab7f86a6523c4366c2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484975"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444713"
 ---
 # <a name="deny-assembly-permissions-transact-sql"></a>DENY 程序集权限 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,13 +46,13 @@ DENY { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- permission   
+ permission  
  指定可拒绝授予程序集的权限。 如下所列。  
   
- ON ASSEMBLY ::assembly_name    
+ ON ASSEMBLY ::assembly_name****__  
  指定拒绝将其权限授予他人的程序集。 需要使用作用域限定符“::”。  
   
- database_principal   
+ database_principal  
  指定要对其拒绝权限的主体。 下列类型作之一：  
   
 -   数据库用户  
@@ -73,7 +74,7 @@ DENY { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
  CASCADE  
  指示要拒绝的权限也会被对此主体授予该权限的其他主体拒绝。  
   
- denying_principal   
+ denying_principal**  
  指定一个主体，执行该查询的主体从该主体获得拒绝授予该权限的权利。 下列类型作之一：  
   
 -   数据库用户  
@@ -92,7 +93,7 @@ DENY { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
   
 -   未映射到服务器主体的数据库用户。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  程序集是一个数据库级的安全对象，包含于权限层次结构中作为其父级的数据库中。 下面列出了可拒绝授予程序集的最特定和最受限的权限，以及隐含这些权限的更常用权限。  
   
 |程序集权限|程序集权限隐含的权限|数据库权限隐含的权限|  

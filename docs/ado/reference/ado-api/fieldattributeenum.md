@@ -1,4 +1,5 @@
 ---
+description: FieldAttributeEnum
 title: FieldAttributeEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 6e34d886-005a-40dc-bd5c-6adcbf81e5cd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 89de6b52bd7987a2bdd2b8bee8e5c58b38d6074f
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: fd8910f07b5f30170e8addd90fa41ab3299fbda5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242697"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443759"
 ---
 # <a name="fieldattributeenum"></a>FieldAttributeEnum
-指定[Field](../../../ado/reference/ado-api/field-object.md)对象的一个或多个属性。  
+指定 [Field](../../../ado/reference/ado-api/field-object.md) 对象的一个或多个属性。  
   
 |返回的常量|值|描述|  
 |--------------|-----------|-----------------|  
@@ -35,11 +36,11 @@ ms.locfileid: "87242697"
 |**adFldIsDefaultStream**|0x20000|指示字段包含由记录表示的资源的默认流。 例如，默认流可以是网站上的根文件夹（在指定根 URL 时自动提供）的 HTML 内容。|  
 |**adFldIsNullable**|0x20|指示该字段接受 null 值。|  
 |**adFldIsRowURL**|0x10000|指示此字段包含从记录表示的数据存储区中对资源进行命名的 URL。|  
-|**adFldLong**|0x80|指示该字段是长二进制字段。 还指示你可以使用[AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)和[GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md)方法。|  
+|**adFldLong**|0x80|指示该字段是长二进制字段。 还指示你可以使用 [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) 和 [GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) 方法。|  
 |**adFldMayBeNull**|0x40|指示您可以从该字段中读取 null 值。|  
 |**adFldMayDefer**|0x2|指示字段已延迟，即，字段值不是从数据源中检索整个记录，而只是在显式访问字段值时进行检索。|  
-|**adFldNegativeScale**|0x4000|指示该字段表示来自支持负值刻度值的列的数值。 小数位数由[NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)属性指定。|  
-|**adFldRowID**|0x100|指示字段包含不能写入的持久性行标识符，并且除标识行（如记录号、唯一标识符等）外，没有任何有意义的值。|  
+|**adFldNegativeScale**|0x4000|指示该字段表示来自支持负值刻度值的列的数值。 小数位数由 [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) 属性指定。|  
+|**adFldRowID**|0x100|指示字段包含不能写入的持久性行标识符，并且除标识行 (（如记录号、唯一标识符) 等）之外没有有意义的值。|  
 |**adFldRowVersion**|0x200|指示字段包含某些用于跟踪更新的时间戳或日期戳。|  
 |**adFldUnknownUpdatable**|0x8|指示提供程序无法确定是否可以写入字段。|  
 |**adFldUnspecified**|-1 0xFFFFFFFF|指示提供程序未指定字段特性。|  

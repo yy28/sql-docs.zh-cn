@@ -1,4 +1,5 @@
 ---
+description: DROP EVENT NOTIFICATION (Transact-SQL)
 title: DROP EVENT NOTIFICATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 0ffd8f47-4ea3-4238-9e73-c318df710cf7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 22621d34994c7c137b741ad01086d7226608584d
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 9c3faeeac400e02f9cb01fcfc4af66c2ee5fe09d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484538"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444669"
 ---
 # <a name="drop-event-notification-transact-sql"></a>DROP EVENT NOTIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,10 +57,10 @@ ON { SERVER | DATABASE | QUEUE queue_name }
  DATABASE  
  指示将事件通知的作用域应用于当前数据库。 如果在创建事件通知时指定了 DATABASE，则必须指定 DATABASE。  
   
- QUEUE queue_name   
- 指示将事件通知的作用域应用于由 queue_name 指定的队列  。 如果在创建事件通知时指定了 QUEUE，则必须指定 QUEUE。 queue_name 为队列名称，该参数也必须指定  。  
+ QUEUE queue_name**  
+ 指示将事件通知的作用域应用于由 queue_name 指定的队列**。 如果在创建事件通知时指定了 QUEUE，则必须指定 QUEUE。 queue_name 为队列名称，该参数也必须指定**。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  如果事件通知在事务中激发并在同一事务中删除，则发送事件通知实例，然后删除事件通知。  
   
 ## <a name="permissions"></a>权限  

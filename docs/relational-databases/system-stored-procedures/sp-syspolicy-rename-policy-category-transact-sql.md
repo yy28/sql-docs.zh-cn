@@ -1,5 +1,6 @@
 ---
-title: sp_syspolicy_rename_policy_category （Transact-sql） |Microsoft Docs
+description: sp_syspolicy_rename_policy_category (Transact-SQL)
+title: sp_syspolicy_rename_policy_category (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8a9c4a3a-91e8-435e-b721-e0293c92be3e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d1098b01a4be513d2f81d15a1cb11c370cfa7f00
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b350a19bb19defbd1510f7ce13a82729c2cbe779
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892706"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446739"
 ---
 # <a name="sp_syspolicy_rename_policy_category-transact-sql"></a>sp_syspolicy_rename_policy_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,19 +41,19 @@ sp_syspolicy_rename_policy_category { [ @name = ] 'name' | [ @policy_category_id
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @name = ] 'name'`要重命名的策略类别的名称。 *name*为**sysname**，如果*policy_category_id*为 NULL，则必须指定。  
+`[ @name = ] 'name'` 要重命名的策略类别的名称。 *name* 为 **sysname**，如果 *policy_category_id* 为 NULL，则必须指定。  
   
-`[ @policy_category_id = ] policy_category_id`要重命名的策略类别的标识符。 *policy_category_id*为**int**，并且如果*name*为 NULL，则必须指定。  
+`[ @policy_category_id = ] policy_category_id` 要重命名的策略类别的标识符。 *policy_category_id* 为 **int**，并且如果 *name* 为 NULL，则必须指定。  
   
-`[ @new_name = ] 'new_name'`策略类别的新名称。 *new_name* **sysname**，并且是必需的。 不能为 NULL 或空字符串。  
+`[ @new_name = ] 'new_name'` 策略类别的新名称。 *new_name* **sysname**，并且是必需的。 不能为 NULL 或空字符串。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
  您必须在 msdb 系统数据库的上下文中运行 sp_syspolicy_rename_policy_category。  
   
- 必须为 "*名称*" 或 " *policy_category_id*" 指定值。 两者不能均为 NULL。 若要获取这些值，请查询 msdb.dbo.syspolicy_policy_categories 系统视图。  
+ 必须为 " *名称* " 或 " *policy_category_id*" 指定值。 两者不能均为 NULL。 若要获取这些值，请查询 msdb.dbo.syspolicy_policy_categories 系统视图。  
   
 ## <a name="permissions"></a>权限  
  要求具有 PolicyAdministratorRole 固定数据库角色的成员身份。  

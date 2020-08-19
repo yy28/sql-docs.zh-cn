@@ -1,5 +1,6 @@
 ---
-title: IHpublishercolumnindexes （Transact-sql） |Microsoft Docs
+description: IHpublishercolumnindexes (Transact-SQL)
+title: IHpublishercolumnindexes (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 95b95a1d-b502-4838-825f-82a456487e25
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b1a5a045bb2e1024a9ccaf953621ea0e3c926adf
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0efc9145416e468756bbe861e2e3d36631cd25bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890272"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446570"
 ---
 # <a name="ihpublishercolumnindexes-transact-sql"></a>IHpublishercolumnindexes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,13 +34,13 @@ ms.locfileid: "85890272"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**publishercolumn_id**|**int**|使用关联索引标识[IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md)中的列。|  
-|**publisherindex_id**|**int**|标识与列关联的[IHpublisherindexes](../../relational-databases/system-tables/ihpublisherindexes-transact-sql.md)表中的索引。|  
+|**publishercolumn_id**|**int**|使用关联索引标识 [IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md) 中的列。|  
+|**publisherindex_id**|**int**|标识与列关联的 [IHpublisherindexes](../../relational-databases/system-tables/ihpublisherindexes-transact-sql.md) 表中的索引。|  
 |**indid**|**int**|指示列在已发布表中的位置。|  
   
 ## <a name="see-also"></a>另请参阅  
  [异类数据库复制](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
- [Transact-sql&#41;&#40;复制表](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;复制表 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图 (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

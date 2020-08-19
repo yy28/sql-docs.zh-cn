@@ -1,4 +1,5 @@
 ---
+description: FilterGroupEnum
 title: FilterGroupEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: b22e725e-84bd-4286-a070-290c278c3783
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b7b6a8d449d27539100f467da1eea19ec42e0a72
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f8d3c510cfd9fa6c4a28f78005021465b9b0917b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764508"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443659"
 ---
 # <a name="filtergroupenum"></a>FilterGroupEnum
-指定要从[记录集中](../../../ado/reference/ado-api/recordset-object-ado.md)筛选的一组记录。  
+指定要从 [记录集中](../../../ado/reference/ado-api/recordset-object-ado.md)筛选的一组记录。  
   
-|返回的常量|值|说明|  
+|返回的常量|值|描述|  
 |--------------|-----------|-----------------|  
-|**adFilterAffectedRecords**|2|用于仅查看受上次[删除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)、重新[同步](../../../ado/reference/ado-api/resync-method.md)、 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)或[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)调用影响的记录的筛选器。|  
+|**adFilterAffectedRecords**|2|用于仅查看受上次 [删除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)、重新 [同步](../../../ado/reference/ado-api/resync-method.md)、 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)或 [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) 调用影响的记录的筛选器。|  
 |**adFilterConflictingRecords**|5|用于查看上次批处理更新失败的记录的筛选器。|  
 |**adFilterFetchedRecords**|3|用于查看当前缓存中的记录的筛选器，即，最后一次调用的结果是从数据库中检索记录。|  
 |**adFilterNone**|0|删除当前筛选器并还原所有记录以供查看。|  
@@ -44,5 +45,5 @@ ms.locfileid: "82764508"
 |AdoEnums. FilterGroup|  
 |AdoEnums.FilterGroup.PENDINGRECORDS|  
   
-## <a name="applies-to"></a>应用于  
+## <a name="applies-to"></a>适用于  
  [Filter 属性](../../../ado/reference/ado-api/filter-property.md)

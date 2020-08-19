@@ -1,5 +1,6 @@
 ---
-title: SqlServiceType 属性（SqlService）
+description: SqlServiceType 属性（SqlService 类）
+title: 'SqlServiceType 属性 (SqlService) '
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: dbff2968-3011-41d6-a141-52d814af0213
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6818c721d6f555ea2cf8e03aa7ed664fe10c04cd
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 91c54b33387dec747aca2c5b9c274bb709057821
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888333"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446136"
 ---
 # <a name="sqlservicetype-property-sqlservice-class"></a>SqlServiceType 属性（SqlService 类）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +37,7 @@ object.SqlServiceType [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- *object*  
+ 对象  
  一个表示服务的 [SqlService 类](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

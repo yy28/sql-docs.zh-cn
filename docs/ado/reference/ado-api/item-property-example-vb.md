@@ -1,5 +1,6 @@
 ---
-title: Item 属性示例（VB） |Microsoft Docs
+description: Item 属性示例 (VB)
+title: Item 属性示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: b4476603-691b-4081-8797-a3d0b331dce5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0b9929c6c8547836131df61ae2d2576fae5aee38
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4ff98b6c2fe1dbb6da0131bf1a1d539fdfb74649
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765468"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443389"
 ---
 # <a name="item-property-example-vb"></a>Item 属性示例 (VB)
-此示例演示[Item](../../../ado/reference/ado-api/item-property-ado.md)属性如何访问集合的成员。 此示例使用参数化命令打开***Pubs***数据库的***Authors***表。  
+此示例演示 [Item](../../../ado/reference/ado-api/item-property-ado.md) 属性如何访问集合的成员。 此示例使用参数化命令打开***Pubs***数据库的***Authors***表。  
   
- 对于数据库发出的命令中的参数，可通过索引和名称从[命令](../../../ado/reference/ado-api/command-object-ado.md)对象的[参数](../../../ado/reference/ado-api/parameters-collection-ado.md)集合进行访问。 然后，将根据索引和名称从该对象的[字段](../../../ado/reference/ado-api/fields-collection-ado.md)集合访问返回的[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)的字段。  
+ 对于数据库发出的命令中的参数，可通过索引和名称从 [命令](../../../ado/reference/ado-api/command-object-ado.md) 对象的 [参数](../../../ado/reference/ado-api/parameters-collection-ado.md) 集合进行访问。 然后，将根据索引和名称从该对象的[字段](../../../ado/reference/ado-api/fields-collection-ado.md)集合访问返回的[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)的字段。  
   
 ```  
 'BeginItemVB  
@@ -135,8 +136,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Command 对象（ADO）](../../../ado/reference/ado-api/command-object-ado.md)   
- [Fields 集合（ADO）](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Item 属性（ADO）](../../../ado/reference/ado-api/item-property-ado.md)   
- [Parameters 集合（ADO）](../../../ado/reference/ado-api/parameters-collection-ado.md)   
+ [ADO) 的命令对象 (](../../../ado/reference/ado-api/command-object-ado.md)   
+ [字段集合 (ADO) ](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [项属性 (ADO) ](../../../ado/reference/ado-api/item-property-ado.md)   
+ [ADO) 的参数集合 (](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

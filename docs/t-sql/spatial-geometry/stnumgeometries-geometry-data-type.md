@@ -1,4 +1,5 @@
 ---
+description: STNumGeometries（geometry 数据类型）
 title: STNumGeometries（geometry 数据类型）| Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9402b03d-3039-42ca-ac59-f96b7f1a48de
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 3911bb969378088a18aa635bb42e2f40f9686b1e
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 8ef4aa6a47bdb974803d111a023b473c0c49cf0b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555317"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444933"
 ---
 # <a name="stnumgeometries-geometry-data-type"></a>STNumGeometries（geometry 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,15 +40,15 @@ ms.locfileid: "86555317"
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>返回类型
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：int   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：int****  
   
- CLR 返回类型：SqlInt32   
+ CLR 返回类型：SqlInt32****  
   
-## <a name="remarks"></a>备注  
- 如果 geometry 实例不是 MultiPoint、MultiLineString、MultiPolygon 或 GeometryCollection 实例，则此方法返回 1；如果 geometry 实例为空，则返回 0       。  
+## <a name="remarks"></a>注解  
+ 如果 geometry 实例不是 MultiPoint、MultiLineString、MultiPolygon 或 GeometryCollection 实例，则此方法返回 1；如果 geometry 实例为空，则返回 0************************。  
   
 > [!NOTE]  
->  如果 GeometryCollection 嵌套了空元素，则 `STNumGeometries()` 不会返回 0。 虽然 GeometryCollection 实例中的元素为空，但该实例本身不是空集  。  
+>  如果 GeometryCollection 嵌套了空元素，则 `STNumGeometries()` 不会返回 0****。 虽然 GeometryCollection 实例中的元素为空，但该实例本身不是空集****。  
   
   
 

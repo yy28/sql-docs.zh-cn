@@ -1,4 +1,5 @@
 ---
+description: OPENDATASOURCE (Transact-SQL)
 title: OPENDATASOURCE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/26/2019
@@ -23,12 +24,12 @@ ms.assetid: 5510b846-9cde-4687-8798-be9a273aad31
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 0efa5662c4ba7110f9e699baf6289ed9c2789fce
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: a10994ac46bc1070304823dd5ae698a5b94c017d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112882"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445637"
 ---
 # <a name="opendatasource-transact-sql"></a>OPENDATASOURCE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -47,15 +48,15 @@ OPENDATASOURCE ( 'provider_name', 'init_string' )
 
 ## <a name="arguments"></a>参数
  '*provider_name*'  
- 注册为用于访问数据源的 OLE DB 访问接口的 PROGID 的名称。 provider_name 的数据类型为 char，并且没有默认值   。  
+ 注册为用于访问数据源的 OLE DB 访问接口的 PROGID 的名称。 provider_name 的数据类型为 char，并且没有默认值******。  
 
  > [!IMPORTANT]
  > 以前的 Microsoft OLE DB Provider for SQL Server (SQLOLEDB) 和 SQL Server Native Client OLEDB 提供程序 (SQLNCLI) 仍然不推荐使用，不建议在新的开发工作中使用它们。 相反，请使用新的 [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL)，其将使用最新的服务器功能进行更新。
  
  '*init_string*'  
- 连接字符串，该字符串将要传递给目标提供程序的 IDataInitialize 接口。 提供程序字符串语法是以关键字值对为基础的，这些关键字值对由分号隔开，例如：“keyword1**value；keyword2**value”  =    =   。  
+ 连接字符串，该字符串将要传递给目标提供程序的 IDataInitialize 接口。 提供程序字符串语法是以关键字值对为基础的，这些关键字值对由分号隔开，例如：“keyword1=value；keyword2=value”  。  
   
- 若要了解提供程序上支持的特定关键字值对，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Data Access SDK。 该文档定义了基本语法。 下表列出了 init_string 参数中最常用的关键字  。  
+ 若要了解提供程序上支持的特定关键字值对，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Data Access SDK。 该文档定义了基本语法。 下表列出了 init_string 参数中最常用的关键字**。  
   
 |关键字|OLE DB 属性|有效值和说明|  
 |-------------|---------------------|----------------------------------|  
@@ -68,7 +69,7 @@ OPENDATASOURCE ( 'provider_name', 'init_string' )
 |目录|DBPROP_INIT_CATALOG|连接到数据源时的初始或默认的目录名称。|  
 |集成安全性|DBPROP_AUTH_INTEGRATED|SSPI，指定 Windows 身份验证|  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
 `OPENROWSET` 始终继承实例排序规则，而不考虑列的排序规则集。
 
 仅当 DisallowAdhocAccess 注册表选项针对指定的提供程序显式设置为 0，并且启用 Ad Hoc Distributed Queries 高级配置选项时，`OPENDATASOURCE` 才可用于访问 OLE DB 数据源中的远程数据。 如果未设置这些选项，则默认行为不允许即席访问。  
@@ -82,7 +83,7 @@ OPENDATASOURCE ( 'provider_name', 'init_string' )
   
 每个提供程序的连接要求与创建链接服务器时的参数要求相似。 [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 一文中列出了很多常见提供程序的详细信息。  
   
-`OPENDATASOURCE` 子句中对 `OPENQUERY`、`OPENROWSET` 或 `FROM` 的任何调用与对用作更新目标的这些函数的任何调用都是分开独立计算的，即使为两个调用提供的参数相同也是如此。 具体而言，应用到上述任一调用的结果的筛选器或联接条件不会影响其他调用的结果。  
+`FROM` 子句中对 `OPENDATASOURCE`、`OPENQUERY` 或 `OPENROWSET` 的任何调用与对用作更新目标的这些函数的任何调用都是分开独立计算的，即使为两个调用提供的参数相同也是如此。 具体而言，应用到上述任一调用的结果的筛选器或联接条件不会影响其他调用的结果。  
   
 ## <a name="permissions"></a>权限  
  任何用户都可以执行 OPENDATASOURCE。 用于连接到远程服务器的权限由连接字符串确定。  
@@ -90,7 +91,7 @@ OPENDATASOURCE ( 'provider_name', 'init_string' )
 ## <a name="examples"></a>示例  
 
 ### <a name="a-using-opendatasource-with-select-and-the-sql-server-ole-db-driver"></a>A. 将 OPENDATASOURCE 与 SELECT 和 SQL Server OLE DB 驱动程序配合使用  
- 以下示例使用 [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) 访问远程服务器 `HumanResources.Department` 上 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中的 `Seattle1` 表。 使用 `SELECT` 语句定义返回的行集。 访问接口字符串包含 `Server` 和 `Trusted_Connection` 关键字。 这些关键字由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB 驱动程序识别。  
+ 以下示例使用 [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) 访问远程服务器 `Seattle1` 上 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中的 `HumanResources.Department` 表。 使用 `SELECT` 语句定义返回的行集。 访问接口字符串包含 `Server` 和 `Trusted_Connection` 关键字。 这些关键字由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB 驱动程序识别。  
   
 ```sql  
 SELECT GroupName, Name, DepartmentID  

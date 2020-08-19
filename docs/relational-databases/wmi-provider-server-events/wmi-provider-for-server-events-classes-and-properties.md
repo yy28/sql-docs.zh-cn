@@ -1,4 +1,5 @@
 ---
+description: WMI Provider for Server Events 类和属性
 title: WMI Provider for Server Events 类和属性
 ms.custom: ''
 ms.date: 03/03/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e2916cd7-a3ed-41e6-97b4-2ee060754cbe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 000aafb6c7fa7d0c78c0fa5a5596727b8736caad
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f57bfbda8864ef04d79d09ea2483fbf940de255a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888149"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446109"
 ---
 # <a name="wmi-provider-for-server-events-classes-and-properties"></a>WMI Provider for Server Events 类和属性
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -29,10 +30,10 @@ ms.locfileid: "85888149"
   
  或者，您可以引用在处发布的事件架构 [https://schemas.microsoft.com/sqlserver](https://go.microsoft.com/fwlink/?linkid=43100) 。  
   
- 例如，通过引用 ALTER_DATABASE 事件，您将了解其父事件 DDL_SERVER_LEVEL_EVENTS，其属性为**TSQLCommand**和**DatabaseName**。 此事件还继承属性**SQLInstance**、 **PostTime**、 **ComputerName**、 **SPID**和**LoginName**。 该事件没有子事件。  
+ 例如，通过引用 ALTER_DATABASE 事件，您将了解其父事件 DDL_SERVER_LEVEL_EVENTS，其属性为 **TSQLCommand** 和 **DatabaseName**。 此事件还继承属性 **SQLInstance**、 **PostTime**、 **ComputerName**、 **SPID**和 **LoginName**。 该事件没有子事件。  
   
 > [!NOTE]  
->  执行 DDL 式操作的系统存储过程还可以激发事件通知。 测试您的事件通知以确定它们是否响应运行的系统存储过程。 例如，CREATE TYPE 语句和**sp_addtype**存储过程都将激发在 CREATE_TYPE 事件上创建的事件通知。 有关详细信息，请参阅[DDL 事件](../../relational-databases/triggers/ddl-events.md)。  
+>  执行 DDL 式操作的系统存储过程还可以激发事件通知。 测试您的事件通知以确定它们是否响应运行的系统存储过程。 例如，CREATE TYPE 语句和 **sp_addtype** 存储过程都将激发在 CREATE_TYPE 事件上创建的事件通知。 有关详细信息，请参阅 [DDL 事件](../../relational-databases/triggers/ddl-events.md)。  
   
  **数据定义语言事件和事件组**  
   

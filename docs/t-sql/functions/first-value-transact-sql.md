@@ -1,4 +1,5 @@
 ---
+description: FIRST_VALUE (Transact-SQL)
 title: FIRST_VALUE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/10/2016
@@ -19,12 +20,12 @@ ms.assetid: 1990c3c7-dad2-48db-b2cd-3e8bd2c49d17
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5299ca65f1e47a76d7fa525b7210747be431d7c4
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 87c0804ba925600aabe2ac0487befd8cf5bf9363
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396949"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445779"
 ---
 # <a name="first_value-transact-sql"></a>FIRST_VALUE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,10 +46,10 @@ FIRST_VALUE ( [scalar_expression ] )
 
 ## <a name="arguments"></a>参数
  *scalar_expression*  
- 是要返回的值。 scalar_expression 可以是产生单个值的列、子查询或其他任意表达式  。 不允许使用其他分析函数。  
+ 是要返回的值。 scalar_expression 可以是产生单个值的列、子查询或其他任意表达式**。 不允许使用其他分析函数。  
   
  OVER **(** [ *partition_by_clause* ] *order_by_clause* [ *rows_range_clause* ] **)**  
- partition_by_clause 将 FROM 子句生成的结果集划分为要应用函数的分区  。 如果未指定，则此函数将查询结果集的所有行视为单个组。 order_by_clause 确定执行操作的逻辑顺序  。 需要 order_by_clause  。 rows_range_clause 通过指定起点和终点，限制分区中的行数  。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。  
+ partition_by_clause 将 FROM 子句生成的结果集划分为要应用函数的分区  。 如果未指定，则此函数将查询结果集的所有行视为单个组。 order_by_clause 确定执行操作的逻辑顺序。 需要 order_by_clause。 rows_range_clause 通过指定起点和终点，限制分区中的行数  。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
 ## <a name="return-types"></a>返回类型  
  是与 scalar_expression 相同的类型  。  

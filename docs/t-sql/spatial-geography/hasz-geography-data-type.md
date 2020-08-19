@@ -1,4 +1,5 @@
 ---
+description: HasZ（geography 数据类型）
 title: HasZ（geography 数据类型）| Microsoft Docs
 ms.custom: ''
 ms.date: 05/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4c5e1669-a987-4dda-9ebf-f573ce615c34
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: e8717241af662ddf199cba189cdfe5449d1962db
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: d5c30e42c40287a808a43f7f3de6c93174ac5c0e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555417"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445256"
 ---
 # <a name="hasz-geography-data-type"></a>HasZ（geography 数据类型）
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,9 +40,9 @@ ms.locfileid: "86555417"
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>返回类型
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit****  
   
- CLR 返回类型：Boolean   
+ CLR 返回类型：Boolean****  
   
 ## <a name="remarks"></a>备注  
   

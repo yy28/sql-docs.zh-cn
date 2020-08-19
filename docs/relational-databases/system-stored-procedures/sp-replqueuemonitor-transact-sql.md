@@ -1,5 +1,6 @@
 ---
-title: sp_replqueuemonitor （Transact-sql） |Microsoft Docs
+description: sp_replqueuemonitor (Transact-SQL)
+title: sp_replqueuemonitor (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6909a3f1-43a2-4df5-a6a5-9e6f347ac841
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 73b999f1f6ee2ba49209f5763be6bb42e777ef78
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b8b0f11e5b0f62c1e874dbeba947ea136f7ee274
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85626928"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446829"
 ---
 # <a name="sp_replqueuemonitor-transact-sql"></a>sp_replqueuemonitor (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,34 +41,34 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
     [ , [ @queuetype = ] 'queuetype' ]  
 ```  
   
-## <a name="arguments"></a>自变量  
-`[ @publisher = ] 'publisher'`发布服务器的名称。 *发布服务器*的**sysname**，默认值为 NULL。 必须将该服务器配置为用于发布。 NULL 表示所有发布服务器。  
+## <a name="arguments"></a>参数  
+`[ @publisher = ] 'publisher'` 发布服务器的名称。 *发布服务器* 的 **sysname**，默认值为 NULL。 必须将该服务器配置为用于发布。 NULL 表示所有发布服务器。  
   
-`[ @publisherdb = ] 'publisher_db' ]`发布数据库的名称。 *publisher_db*的默认值为**sysname**，默认值为 NULL。 NULL 表示所有发布数据库。  
+`[ @publisherdb = ] 'publisher_db' ]` 发布数据库的名称。 *publisher_db* 的默认值为 **sysname**，默认值为 NULL。 NULL 表示所有发布数据库。  
   
-`[ @publication = ] 'publication' ]`发布的名称。 *发布*为**sysname**，默认值为 NULL。 NULL 表示所有发布。   
+`[ @publication = ] 'publication' ]` 发布的名称。 *发布*为 **sysname**，默认值为 NULL。 NULL 表示所有发布。   
   
-`[ @tranid = ] 'tranid' ]`事务 ID。 *tranid*的值为**sysname**，默认值为 NULL。 NULL 表示所有事务。  
+`[ @tranid = ] 'tranid' ]` 事务 ID。 *tranid*的值为 **sysname**，默认值为 NULL。 NULL 表示所有事务。  
   
-`[ @queuetype = ] 'queuetype' ]`存储事务的队列类型。 *queuetype*的数据值为**tinyint** ，默认值为**0**，可以是下列值之一。  
+`[ @queuetype = ] 'queuetype' ]` 存储事务的队列类型。 *queuetype* 的数据值为 **tinyint** ，默认值为 **0**，可以是下列值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**0**|所有队列类型|  
 |**1**|消息队列|  
-|**2**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使|  
+|**2**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使|  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- **sp_replqueuemonitor**用于快照复制或带有排队更新订阅的事务复制。 不显示不包含 SQL 命令的队列消息，也不显示作为跨越式 SQL 命令的一部分的队列消息。  
+ **sp_replqueuemonitor** 用于快照复制或带有排队更新订阅的事务复制。 不显示不包含 SQL 命令的队列消息，也不显示作为跨越式 SQL 命令的一部分的队列消息。  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_replqueuemonitor**。  
+ 只有 **sysadmin** 固定服务器角色的成员或 **db_owner** 固定数据库角色的成员才能执行 **sp_replqueuemonitor**。  
   
 ## <a name="see-also"></a>另请参阅  
- [事务复制的可更新订阅](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
+ [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

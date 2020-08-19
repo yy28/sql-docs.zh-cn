@@ -1,4 +1,5 @@
 ---
+description: ALTER PARTITION FUNCTION (Transact-SQL)
 title: ALTER PARTITION FUNCTION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 70866dac-0a8f-4235-8108-51547949ada4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a8751da646792fc170b017039d6e5d1465e8b5ed
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: efac16278bec7099024cb5f9e7cc2480013728cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381271"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444884"
 ---
 # <a name="alter-partition-function-transact-sql"></a>ALTER PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,11 +58,11 @@ ALTER PARTITION FUNCTION partition_function_name()
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
-partition_function_name   
+partition_function_name**  
 要修改的分区函数的名称。  
   
-SPLIT RANGE ( boundary_value )   
-在分区函数中添加一个分区。 boundary_value 确定新分区的范围，因此它必须不同于分区函数的现有边界范围  。 根据 boundary_value，[!INCLUDE[ssDE](../../includes/ssde-md.md)]将某个现有范围拆分为两个范围  。 在这两个范围中，具有新 boundary_value  的范围是新分区。  
+SPLIT RANGE ( boundary_value )**  
+在分区函数中添加一个分区。 boundary_value 确定新分区的范围，因此它必须不同于分区函数的现有边界范围**。 根据 boundary_value，[!INCLUDE[ssDE](../../includes/ssde-md.md)]将某个现有范围拆分为两个范围**。 在这两个范围中，具有新 boundary_value** 的范围是新分区。  
   
 文件组必须处于联机状态， 并且使用分区函数作为 NEXT USED 来保存新分区的分区方案必须标记该文件组。 CREATE PARTITION SCHEME 语句将文件组分配给分区。 CREATE PARTITION FUNCTION 语句创建的分区数少于用于保存分区的文件组。 CREATE PARTITION SCHEME 语句可能会留出比所需文件组数量更多的文件组。 如果发生这种情况，最终就会有未分配的文件组。 此外，分区方案会将其中一个文件组标记为 NEXT USED。 该文件组用于保存新的分区。 如果分区方案未将任何文件组标记为 NEXT USED，则必须使用 ALTER PARTITION SCHEME 语句。 
 
@@ -70,10 +71,10 @@ ALTER PARTITION SCHEME 语句可以添加文件组，也可以选择现有文件
 如果在同一文件组创建所有分区，则最初自动将该文件组分配为 NEXT USED 文件组。 但是，在运行拆分操作后，将不再有选定的 NEXT USED 文件组。 可以使用 ALTER PARTITION SCHEME 将文件组显式分配为 NEXT USED 文件组，否则后续的拆分操作将失败。  
   
 > [!NOTE]  
->  列存储索引限制：如果表中存在列存储索引，则只能拆分空的分区。 需要先删除或禁用此列存储索引才能执行此操作。  
+>  列存储索引限制：当表上存在列存储索引时，仅可拆分空分区。 需要先删除或禁用此列存储索引才能执行此操作。  
   
-MERGE [ RANGE ( boundary_value) ]   
-删除一个分区并将该分区中存在的所有值都合并到某个剩余分区中。 RANGE (boundary_value) 必须是一个现有边界值，已删除分区中的值将合并到该值中  。 如果最初保存 boundary_value  的文件组没有被剩余分区使用，也没有使用 NEXT USED 属性进行标记，此参数将从分区方案中删除该文件组。 合并的分区位于最初不保存 boundary_value  的文件组中。 boundary_value 是一个可以引用变量（包括用户定义类型变量）或函数（包括用户定义函数）的常量表达式  。 它无法引用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 表达式。 boundary_value  必须匹配或可隐式转换为其对应分区列的数据类型。 另外，在隐式转换期间，如果 boundary_value  值的大小和比例与其对应的 input_parameter_type  不匹配，也不能截断它。  
+MERGE [ RANGE ( boundary_value) ]**  
+删除一个分区并将该分区中存在的所有值都合并到某个剩余分区中。 RANGE (boundary_value) 必须是一个现有边界值，已删除分区中的值将合并到该值中**。 如果最初保存 boundary_value** 的文件组没有被剩余分区使用，也没有使用 NEXT USED 属性进行标记，此参数将从分区方案中删除该文件组。 合并的分区位于最初不保存 boundary_value** 的文件组中。 boundary_value 是一个可以引用变量（包括用户定义类型变量）或函数（包括用户定义函数）的常量表达式**。 它无法引用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 表达式。 boundary_value** 必须匹配或可隐式转换为其对应分区列的数据类型。 另外，在隐式转换期间，如果 boundary_value** 值的大小和比例与其对应的 input_parameter_type** 不匹配，也不能截断它。  
   
 > [!NOTE]  
 >  列存储索引限制：不能合并包含列存储索引的两个非空分区。 需要先删除或禁用此列存储索引才能执行此操作  

@@ -1,4 +1,5 @@
 ---
+description: -=（减法赋值）(Transact-SQL)
 title: -=（减法赋值）(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -22,12 +23,12 @@ ms.assetid: 2a2056b5-1dfa-4ea8-8cfc-6331a2f94da9
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9eda430651a7894fe55e1ab626d579cd8a9d4a22
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: b7afd8322e6f5388c9000bbed4521121de38448d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395900"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445368"
 ---
 # <a name="--subtraction-assignment-transact-sql"></a>-=（减法赋值）(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,12 +45,12 @@ expression -= expression
 
 ## <a name="arguments"></a>参数
  *expression*  
- 数值类别中任意数据类型（bit 数据类型除外）的任何有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)  。  
+ 数值类别中任意数据类型（bit 数据类型除外）的任何有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)****。  
   
 ## <a name="result-types"></a>结果类型  
  返回优先级较高的参数的数据类型。 有关详细信息，请参阅[数据类型优先级 (Transact-SQL)](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  有关详细信息，请参阅 [-（减法）(Transact-SQL)](../../t-sql/language-elements/subtract-transact-sql.md)。  
   
 ## <a name="see-also"></a>另请参阅  

@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;NESTLEVEL (Transact-SQL)'
 title: '@@NESTLEVEL (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 09/17/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8c0b2134-8616-44f6-addc-6583c432fb62
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: b161917c13cba013b06a292493b58dca23e35b97
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: a6c28eca6f0496e8e66deef9a26aa4e7ef45ea81
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110906"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445727"
 ---
 # <a name="x40x40nestlevel-transact-sql"></a>&#x40;&#x40;NESTLEVEL (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "87110906"
 ## <a name="remarks"></a>备注  
  每次一个存储过程通过引用公共语言运行时 (CLR) 例程、类型或聚合来调用另一个存储过程或执行托管代码时，嵌套级别都会增加。 超过最大级数 32 时，事务即被终止。  
   
- 在 @NESTLEVEL 字符串中执行 @[!INCLUDE[tsql](../../includes/tsql-md.md)] 时，返回的值为 1 + 当前嵌套级别。 使用 sp_executesql 动态执行 @@NESTLEVEL 时，返回的值为 2 + 当前嵌套级别。  
+ 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 字符串中执行 @@NESTLEVEL 时，返回的值为 1 + 当前嵌套级别。 使用 sp_executesql 动态执行 @@NESTLEVEL 时，返回的值为 2 + 当前嵌套级别。  
   
 ## <a name="examples"></a>示例  
   

@@ -1,4 +1,5 @@
 ---
+description: 创建 DML 触发器
 title: 创建 DML 触发器 | Microsoft Docs
 ms.custom: ''
 ms.date: 09/01/2017
@@ -19,12 +20,12 @@ ms.assetid: b2b52258-642b-462e-8e0f-18c09d2eccf4
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6248223fd2901a02e7aed494ea6a8a305e1f56ce
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: aace4785289cd041b72c98a880ac38741bf0d641
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757672"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446343"
 ---
 # <a name="create-dml-triggers"></a>创建 DML 触发器
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -49,11 +50,11 @@ ms.locfileid: "85757672"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
   
-2.  展开 **“数据库”** ，展开 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库，展开 **“表”** ，然后展开表 **Purchasing.PurchaseOrderHeader**。  
+2.  展开 **“数据库”**，展开 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库，展开 **“表”** ，然后展开表 **Purchasing.PurchaseOrderHeader**。  
   
-3.  右键单击“触发器”，然后选择“新建触发器”   。  
+3.  右键单击“触发器”，然后选择“新建触发器”********。  
   
-4.  在 **“查询”** 菜单上，单击 **“指定模板参数的值”** 。 或者，你可以按下 (Ctrl-Shift-M) 以便打开“指定模板参数的值”  对话框。  
+4.  在 **“查询”** 菜单上，单击 **“指定模板参数的值”** 。 或者，你可以按下 (Ctrl-Shift-M) 以便打开“指定模板参数的值”**** 对话框。  
   
 5.  在 **“指定模板参数的值”** 对话框中，输入下列所示的参数值。  
   
@@ -67,7 +68,7 @@ ms.locfileid: "85757672"
     |Table_Name|PurchaseOrderDetail|  
     |Data_Modification_Statement|从列表中删除 UPDATE 和 DELETE。|  
   
-6.  单击“确定”。   
+6.  单击“确定”。  
   
 7.  在 **“查询编辑器”** 中，使用以下语句替换注释 `-- Insert statements for trigger here` ：  
   
@@ -93,11 +94,11 @@ ms.locfileid: "85757672"
     END;  
     ```  
   
-8.  若要验证语法是否有效，请在 **“查询”** 菜单上单击 **“分析”** 。 如果返回错误消息，则请将该语句与上述信息进行比较，视需要进行更正并且重复此步骤。  
+8.  若要验证语法是否有效，请在 **“查询”** 菜单上单击 **“分析”**。 如果返回错误消息，则请将该语句与上述信息进行比较，视需要进行更正并且重复此步骤。  
   
-9. 若要创建 DML 触发器，请在 **“查询”** 菜单上单击 **“执行”** 。 该 DML 触发器作为数据库中的对象创建。  
+9. 若要创建 DML 触发器，请在 **“查询”** 菜单上单击 **“执行”**。 该 DML 触发器作为数据库中的对象创建。  
   
-10. 若要查看在“对象资源管理器”中列出的 DML 触发器，请右键单击“触发器”，然后选择“刷新”   。  
+10. 若要查看在“对象资源管理器”中列出的 DML 触发器，请右键单击“触发器”，然后选择“刷新”********。  
 
  [开始之前](#Top)  
   
@@ -107,7 +108,7 @@ ms.locfileid: "85757672"
   
 2.  从 **“文件”** 菜单中，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例将创建与上面相同的存储的 DML 触发器。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例将创建与上面相同的存储的 DML 触发器。  
   
     ```sql  
     -- Trigger valid for multirow and single row inserts  

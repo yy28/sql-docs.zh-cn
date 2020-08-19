@@ -1,5 +1,6 @@
 ---
-title: sp_revokedbaccess （Transact-sql） |Microsoft Docs
+description: sp_revokedbaccess (Transact-SQL)
+title: sp_revokedbaccess (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c997cfa1-539d-485c-a664-9c6f76bfe0c2
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cec7eb26b749328d5bbf0f95f74a0de3b0f30a07
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: cd16821bcbac3c814a7b164fa16501bca7a8f523
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901357"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446774"
 ---
 # <a name="sp_revokedbaccess-transact-sql"></a>sp_revokedbaccess (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85901357"
   从当前数据库中删除数据库用户。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]改用[DROP USER](../../t-sql/statements/drop-user-transact-sql.md) 。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 改用 [DROP USER](../../t-sql/statements/drop-user-transact-sql.md) 。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,7 +43,7 @@ sp_revokedbaccess [ @name_in_db = ] 'name'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @name_in_db = ] 'name'`要删除的数据库用户的名称。 *名称*是**sysname** ，无默认值。 *name*可以是服务器登录名、windows 登录名或 windows 组名，并且必须存在于当前数据库中。 当您指定 Windows 登录或 Windows 组时，请指定其在数据库中所使用的名称。  
+`[ @name_in_db = ] 'name'` 要删除的数据库用户的名称。 *名称* 是 **sysname** ，无默认值。 *name* 可以是服务器登录名、windows 登录名或 windows 组名，并且必须存在于当前数据库中。 当您指定 Windows 登录或 Windows 组时，请指定其在数据库中所使用的名称。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -50,7 +51,7 @@ sp_revokedbaccess [ @name_in_db = ] 'name'
 ## <a name="remarks"></a>备注  
  删除数据库用户时，依赖于该用户的权限和别名也会删除。  
   
- **sp_revokedbaccess**只能从当前数据库中删除数据库用户。 删除在当前数据库中拥有对象的数据库用户之前，您必须转移对象的所有权，或者将这些对象从数据库中删除。 有关详细信息，请参阅 [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md)。  
+ **sp_revokedbaccess** 只能从当前数据库中删除数据库用户。 删除在当前数据库中拥有对象的数据库用户之前，您必须转移对象的所有权，或者将这些对象从数据库中删除。 有关详细信息，请参阅 [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md)。  
   
  不能在用户定义的事务中执行**sp_revokedbaccess** 。  
   
@@ -67,8 +68,8 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [安全存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [&#40;Transact-sql&#41;系统存储过程](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [DROP USER &#40;Transact-sql&#41;](../../t-sql/statements/drop-user-transact-sql.md)   
+ [&#40;Transact-sql&#41;系统存储过程 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [DROP USER (Transact-SQL)](../../t-sql/statements/drop-user-transact-sql.md)   
  [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md)  
   
   

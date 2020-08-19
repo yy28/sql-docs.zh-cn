@@ -1,4 +1,5 @@
 ---
+description: STWithin（geography 数据类型）
 title: STWithin（geography 数据类型）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6fc745cc-7976-418a-a89a-c267e64ab3a2
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 04889706ac49652dbc01225c2d8e6bcf8c7347f3
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: ee911fe55a486d74d56df0481b91448221edbb55
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554352"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445126"
 ---
 # <a name="stwithin-geography-data-type"></a>STWithin（geography 数据类型）
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
-  如果 geography 实例在空间上包含在另一个 geography 实例中，则返回 1；否则，返回 0   。  
+  如果 geography 实例在空间上包含在另一个 geography 实例中，则返回 1；否则，返回 0********。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,16 +37,16 @@ ms.locfileid: "86554352"
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- other_geography   
- 与对其调用 `STWithin()` 的实例进行比较的其他 geography 实例。  
+ other_geography**  
+ 与对其调用 `STWithin()` 的实例进行比较的其他 geography 实例****。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit****  
   
- CLR 返回类型：SqlBoolean   
+ CLR 返回类型：SqlBoolean****  
   
-## <a name="remarks"></a>备注  
- 如果 geography 实例的空间引用 ID (SRID) 不匹配，则此方法始终返回 null  。  
+## <a name="remarks"></a>注解  
+ 如果 geography 实例的空间引用 ID (SRID) 不匹配，则此方法始终返回 null****。  
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `STWithin()` 来测试两个 `geography` 实例，以查看第一个实例是否完全包含在第二个实例中。  

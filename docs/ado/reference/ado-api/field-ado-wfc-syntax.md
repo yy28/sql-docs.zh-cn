@@ -1,5 +1,6 @@
 ---
-title: Field （ADO-WFC 语法） |Microsoft Docs
+description: 字段（ADO - WFC 语法）
+title: 字段 (ADO-WFC 语法) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7e01cb24-2338-4f92-ad46-8d97248e1a4d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a1c4167b033163c8106a31070a83d044eb8e8fe7
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b9f3c2e1cd7d64255b0bae2d8085a499530e7476
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757073"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443779"
 ---
 # <a name="field-ado---wfc-syntax"></a>字段（ADO - WFC 语法）
 ## <a name="package-commswfcdata"></a>包 .com. 数据  
@@ -44,7 +45,7 @@ public com.ms.com.IUnknown getDataFormat()
 public void setDataFormat(com.ms.com.IUnknown format)  
 ```  
   
- （有关详细信息，请参阅 IDataFormat 接口的文档。）  
+  (有关详细信息，请参阅 IDataFormat 接口的文档。 )   
   
 ```  
 public int getDefinedSize()  
@@ -68,9 +69,9 @@ public AdoProperties getProperties()
   
  ADO/WFC 使用**getValue**方法实现**Value**属性，该方法返回变量对象;和**setValue**方法，该方法采用变量作为参数。 变体在某些语言（如 Microsoft Visual Basic）中效率高。  
   
- 除了**Value**属性，ADO/WFC 还提供使用 Java 数据类型获取和设置**字段**对象内容的*访问器*方法。 这些方法中的大多数都具有格式为**获取**_数据_类型或**设置**_数据类型_的名称。  
+ 除了**Value**属性，ADO/WFC 还提供使用 Java 数据类型获取和设置**字段**对象内容的*访问器*方法。 这些方法中的大多数都具有格式为 **获取**_数据_ 类型或 **设置**_数据类型_的名称。  
   
- 有两个值得注意的异常：其中一个**getObject**方法返回强制转换为指定类的对象。 没有**getNull**属性;相反，有一个**isNull**属性，它返回一个布尔值，指示该字段是否为 null。  
+ 有两个值得注意的异常：其中一个 **getObject** 方法返回强制转换为指定类的对象。 没有 **getNull** 属性;相反，有一个 **isNull** 属性，它返回一个布尔值，指示该字段是否为 null。  
   
 ```  
 public native boolean getBoolean();  

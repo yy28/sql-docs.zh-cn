@@ -1,4 +1,5 @@
 ---
+description: FILEPROPERTY (Transact-SQL)
 title: FILEPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: b82244ed-d623-431f-aa06-8017349d847f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bebbaff7f4a09732705bc7168ca034f8f99a3e2c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: f05d17efce6b568d5abd2cc81f3a7954f19fb34e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111531"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445749"
 ---
 # <a name="fileproperty-transact-sql"></a>FILEPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,11 +47,11 @@ FILEPROPERTY ( file_name , property )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- file_name   
- 包含与将为之返回属性信息的当前数据库相关联的文件名的表达式。 file_name 是 nchar(128)   。  
+ file_name  
+ 包含与将为之返回属性信息的当前数据库相关联的文件名的表达式。 file_name 是 nchar(128)******。  
   
  *property*  
- 包含将返回的文件属性名的表达式。 property 是 varchar(128)，可以是下列值之一   。  
+ 包含将返回的文件属性名的表达式。 property 是 varchar(128)，可以是下列值之一******。  
   
 |值|说明|返回的值|  
 |-----------|-----------------|--------------------|  
@@ -63,7 +64,7 @@ FILEPROPERTY ( file_name , property )
  **int**  
   
 ## <a name="remarks"></a>备注  
- file_name 与 sys.master_files 或 sys.database_files 目录视图中的 name 列相对应     。  
+ file_name 与 sys.master_files 或 sys.database_files 目录视图中的 name 列相对应**************。  
   
 ## <a name="examples"></a>示例  
  以下示例返回 `IsPrimaryFile` 数据库中的 `AdventureWorks_Data` 文件名的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 属性的设置。  

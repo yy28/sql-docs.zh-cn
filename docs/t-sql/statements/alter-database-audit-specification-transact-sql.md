@@ -1,4 +1,5 @@
 ---
+description: ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL)
 title: ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 85f4e7e6-a330-4de0-9048-64f386ccc314
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f4262b850a2afc9799c15d3a4155c9ab85432366
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: 5c4eef4555867208ae71b0495dfd9393c2459ca3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301936"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444936"
 ---
 # <a name="alter-database-audit-specification-transact-sql"></a>ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,34 +60,34 @@ ALTER DATABASE AUDIT SPECIFICATION audit_specification_name
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- audit_specification_name   
+ audit_specification_name**  
  审核规范的名称。  
   
- audit_name   
+ audit_name**  
  应用此规范的审核的名称。  
   
- audit_action_specification   
+ audit_action_specification**  
  一个或多个数据库级别可审核操作的名称。 要获取审核操作组列表，请参阅 [SQL Server 审核操作组和操作](../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)。  
   
- audit_action_group_name   
+ audit_action_group_name**  
  一个或多个数据库级别可审核操作组的名称。 要获取审核操作组列表，请参阅 [SQL Server 审核操作组和操作](../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)。  
   
- class   
+ *class*  
  安全对象上的类名（如果适用）。  
   
- securable   
+ securable  
  应用审核操作或审核操作组的数据库中的表、视图或其他安全对象。 有关详细信息，请参阅 [Securables](../../relational-databases/security/securables.md)。  
   
  *column*  
  安全对象上的列名（如果适用）。  
   
- principal   
+ principal  
  应用审核操作或审核操作组的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 主体的名称。 有关详细信息，请参阅[主体（数据库引擎）](../../relational-databases/security/authentication-access/principals-database-engine.md)。  
   
- WITH ( STATE  **{ ON | OFF } )** **=**   
+ WITH ( STATE = { ON | OFF } )************  
  允许或禁止审核收集此审核规范的记录。 审核规范状态更改必须在用户事务之外进行，并且从 ON 转换到 OFF 时，审核规范的同一语句中不能有其他更改。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  数据库审核规范是驻留在给定数据库中的非安全对象。 必须将审核规范的状态设置为 OFF 选项，以便更改数据库审核规范。 使用 STATE=OFF 以外的任何选项启用审核后，如果执行 ALTER DATABASE AUDIT SPECIFICATION，将接收到错误消息。 有关详细信息，请参阅 [tempdb Database](../../relational-databases/databases/tempdb-database.md)。  
   
 ## <a name="permissions"></a>权限  
@@ -95,7 +96,7 @@ ALTER DATABASE AUDIT SPECIFICATION audit_specification_name
  创建数据库审核规范后，具有 CONTROL SERVER 或 ALTER ANY DATABASE AUDIT 权限的主体、sysadmin 帐户或对审核具有明确访问权限的主体即可查看该规范。  
   
 ## <a name="examples"></a>示例  
- 下面的示例针对称为 `HIPAA_Audit_DB_Specification` 的 `SELECT` 审核更改称为 `dbo` 的数据库审核规范，该规范审核 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户发出的 `HIPAA_Audit` 语句。  
+ 下面的示例针对称为 `HIPAA_Audit_DB_Specification` 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 审核更改称为 `SELECT` 的数据库审核规范，该规范审核 `dbo` 用户发出的 `HIPAA_Audit` 语句。  
   
 ```  
 ALTER DATABASE AUDIT SPECIFICATION HIPAA_Audit_DB_Specification  

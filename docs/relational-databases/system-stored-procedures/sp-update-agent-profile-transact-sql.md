@@ -1,5 +1,6 @@
 ---
-title: sp_update_agent_profile （Transact-sql） |Microsoft Docs
+description: sp_update_agent_profile (Transact-SQL)
+title: sp_update_agent_profile (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cc81f227-0df3-4151-bb4d-4f45ea997b71
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a529df241a5d827c277f3a39110ae04697a13e17
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4695c5fdf07748937fdd1380170626e21942fd11
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891395"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446680"
 ---
 # <a name="sp_update_agent_profile-transact-sql"></a>sp_update_agent_profile (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,9 +38,9 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @agent_type = ] 'agent_type'`代理的类型。 *agent_type*是**int**，没有默认值，可以是下列值之一。  
+`[ @agent_type = ] 'agent_type'` 代理的类型。 *agent_type* 是 **int**，没有默认值，可以是下列值之一。  
   
-|值|说明|  
+|Value|说明|  
 |-----------|-----------------|  
 |**1**|快照代理。|  
 |**2**|日志读取器代理。|  
@@ -47,18 +48,18 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
 |**4**|合并代理。|  
 |**9**|队列读取器代理。|  
   
-`[ @agent_id = ] 'agent_id'`代理的 ID。 *agent_id*为**int**，没有默认值。  
+`[ @agent_id = ] 'agent_id'` 代理的 ID。 *agent_id* 为 **int**，没有默认值。  
   
-`[ @profile_id = ] 'profile_id'`代理应使用的配置文件的 ID。 *profile_id*为**int**，没有默认值。 若要查看为每个代理定义的配置文件的列表，请使用[&#40;transact-sql&#41;sp_help_agent_profile ](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)。 有关系统配置文件的详细信息，请参阅[复制代理配置文件](../../relational-databases/replication/agents/replication-agent-profiles.md)。  
+`[ @profile_id = ] 'profile_id'` 代理应使用的配置文件的 ID。 *profile_id* 为 **int**，没有默认值。 若要查看为每个代理定义的配置文件的列表，请使用 [&#40;transact-sql&#41;sp_help_agent_profile ](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)。 有关系统配置文件的详细信息，请参阅 [复制代理配置文件](../../relational-databases/replication/agents/replication-agent-profiles.md)。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- **sp_update_agent_profile**在所有类型的复制中使用。  
+ **sp_update_agent_profile** 在所有类型的复制中使用。  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员才能**sp_update_agent_profile**执行。  
+ 只有 **sysadmin** 固定服务器角色的成员才能 **sp_update_agent_profile**执行。  
   
 ## <a name="see-also"></a>另请参阅  
  [复制代理配置文件](../../relational-databases/replication/agents/replication-agent-profiles.md)   

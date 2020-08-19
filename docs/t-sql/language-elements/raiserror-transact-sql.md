@@ -1,4 +1,5 @@
 ---
+description: RAISERROR (Transact-SQL)
 title: RAISERROR (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/21/2017
@@ -29,12 +30,12 @@ ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 691a92eedf5c6ca9681d435d1180c51871504dc4
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: efe7c892d5fbf369f0bf7f4bd9e63ffa5de16faa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394736"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445479"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -164,9 +165,9 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
   
 |值|说明|  
 |-----------|-----------------|  
-|LOG|在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例的错误日志和应用程序日志中记录错误。 记录到错误日志的错误目前被限定为最多 440 字节。 只有 sysadmin 固定服务器角色成员或具有 ALTER TRACE 权限的用户才能指定 WITH LOG。<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
-|NOWAIT|将消息立即发送给客户端。<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
-|SETERROR|将 @@ERROR 值和 ERROR_NUMBER 值设置为 msg_id 或 50000，不用考虑严重级别。 <br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
+|LOG|在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例的错误日志和应用程序日志中记录错误。 记录到错误日志的错误目前被限定为最多 440 字节。 只有 sysadmin 固定服务器角色成员或具有 ALTER TRACE 权限的用户才能指定 WITH LOG。<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
+|NOWAIT|将消息立即发送给客户端。<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
+|SETERROR|将 @@ERROR 值和 ERROR_NUMBER 值设置为 msg_id 或 50000，不用考虑严重级别。 <br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
   
 ## <a name="remarks"></a>备注  
  RAISERROR 生成的错误与[!INCLUDE[ssDE](../../includes/ssde-md.md)]代码生成的错误的运行方式相同。 RAISERROR 指定的值由 ERROR_LINE、ERROR_MESSAGE、ERROR_NUMBER、ERROR_PROCEDURE、ERROR_SEVERITY、ERROR_STATE 以及 @@ERROR 等系统函数来报告。 当 RAISERROR 在严重级别为 11 或更高的情况下在 TRY 块中运行，它便会将控制传输至关联的 CATCH 块。 如果 RAISERROR 在下列情况下运行，便会将错误返回到调用方：  

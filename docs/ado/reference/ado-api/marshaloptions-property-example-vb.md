@@ -1,5 +1,6 @@
 ---
-title: MarshalOptions 属性示例（VB） |Microsoft Docs
+description: MarshalOptions 属性示例 (VB)
+title: MarshalOptions 属性示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ae576b2c-65aa-4838-872a-85e618806dc8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cedf7562c1ab0bc5c7582aec7e7409cb18cf256a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6004df68918c166e3964cb10222b2117210430c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82754385"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443309"
 ---
 # <a name="marshaloptions-property-example-vb"></a>MarshalOptions 属性示例 (VB)
-此示例使用[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)属性来指定要发送回服务器的行-所有行或只是修改的行。  
+此示例使用 [MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md) 属性来指定要发送回服务器的行-所有行或只是修改的行。  
   
 ```  
 'BeginMarshalOptionsVB  
@@ -132,5 +133,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [MarshalOptions 属性（ADO）](../../../ado/reference/ado-api/marshaloptions-property-ado.md)   
+ [MarshalOptions 属性 (ADO) ](../../../ado/reference/ado-api/marshaloptions-property-ado.md)   
  [MarshalOptionsEnum](../../../ado/reference/ado-api/marshaloptionsenum.md)

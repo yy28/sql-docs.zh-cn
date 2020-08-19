@@ -1,4 +1,5 @@
 ---
+description: 字段集合属性、方法和事件
 title: Fields 集合属性、方法和事件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 8cc13e41-7ed8-40df-9a74-5bf846c14c06
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8c3b2c2ab04bc5b552c9854c4aa2bed1ac57896a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6c0e77444c95e90344ba1fc3786b8b5307c86b22
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762548"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443719"
 ---
 # <a name="fields-collection-properties-methods-and-events"></a>字段集合属性、方法和事件
-## <a name="properties"></a>属性  
+## <a name="properties"></a>“属性”  
  [Count 属性](../../../ado/reference/ado-api/count-property-ado.md)  
   
  [Item 属性](../../../ado/reference/ado-api/item-property-ado.md)  

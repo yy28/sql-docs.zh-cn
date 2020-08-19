@@ -1,4 +1,5 @@
 ---
+description: ClientNetworkProtocolProperty 类
 title: ClientNetworkProtocolProperty 类
 ms.custom: ''
 ms.date: 03/04/2017
@@ -16,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: a6e8adb5-2ffd-4c49-b9e4-9a1e459ff7b4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7a1abedd3b0cbd11e94387694c5535bffc2fa7ff
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2bf2dece4c745cadf1fc53c46bae9169010632f3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881042"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446299"
 ---
 # <a name="clientnetworkprotocolproperty-class"></a>ClientNetworkProtocolProperty 类
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [ClientNetworkProtocolProperty 类](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md)表示客户端网络协议的属性。  
   
- 借助[ClientNetworkProtocolProperty 类](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md)，您可以执行以下任务：  
+ 借助 [ClientNetworkProtocolProperty 类](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md)，您可以执行以下任务：  
   
 -   设置一个用于从属性列表选择客户端网络协议属性的索引值。  
   

@@ -1,4 +1,5 @@
 ---
+description: GetRowsOptionEnum
 title: GetRowsOptionEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: adc109b9-79f4-4946-a5eb-658e22e9a8a5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7b1c38e266cc84816a4ad751112d5744edf3e3e4
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 76926e0190ad8cfe1d7451d89182a365a6c59993
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758753"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443539"
 ---
 # <a name="getrowsoptionenum"></a>GetRowsOptionEnum
-指定要从[记录集中](../../../ado/reference/ado-api/recordset-object-ado.md)检索的记录数。  
+指定要从 [记录集中](../../../ado/reference/ado-api/recordset-object-ado.md)检索的记录数。  
   
-|返回的常量|值|说明|  
+|返回的常量|值|描述|  
 |--------------|-----------|-----------------|  
 |**adGetRowsRest**|-1|从当前位置或由[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)方法的*Start*参数指定的书签检索记录**集中**的其余记录。|  
   
@@ -36,5 +37,5 @@ ms.locfileid: "82758753"
 |--------------|  
 |AdoEnums. GetRowsOption|  
   
-## <a name="applies-to"></a>应用于  
+## <a name="applies-to"></a>适用于  
  [GetRows 方法 (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)

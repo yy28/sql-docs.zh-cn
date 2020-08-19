@@ -1,4 +1,5 @@
 ---
+description: 删除 CHECK 约束
 title: 删除 CHECK 约束 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/28/2017
@@ -17,12 +18,12 @@ ms.assetid: 5f86c1a6-f5fa-4e77-a892-f6ae96fc0ab3
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df79eff52be0377bf769f106c8a6753a054b786d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 557c791f0457ef31c1bf5aeca51787f2200a70ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85768381"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446444"
 ---
 # <a name="delete-check-constraints"></a>删除 CHECK 约束
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,9 +55,9 @@ ms.locfileid: "85768381"
   
 1.  在 **“对象资源管理器”** 中，展开具有 CHECK 约束的表。  
   
-2.  展开  **“约束”** 。  
+2.  展开  **“约束”**。  
   
-3.  右键单击该约束，然后单击“删除”  。  
+3.  右键单击该约束，然后单击“删除”****。  
   
 4.  在 **“删除对象”** 对话框中，单击 **“确定”** 。  
   
@@ -68,7 +69,7 @@ ms.locfileid: "85768381"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     ALTER TABLE dbo.DocExc   

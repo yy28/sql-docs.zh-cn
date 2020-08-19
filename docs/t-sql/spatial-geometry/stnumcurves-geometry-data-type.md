@@ -1,4 +1,5 @@
 ---
+description: STNumCurves（geometry 数据类型）
 title: STNumCurves（geometry 数据类型）| Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -14,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 20c2fa0b-656b-4519-b34c-cc8f094290d4
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 95e43dfb8bad1dfc505fb65a28674f813418f5d4
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: fe3418284131577051e48f8300bd89df2abc0ec1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555950"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444947"
 ---
 # <a name="stnumcurves-geometry-data-type"></a>STNumCurves（geometry 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-当 **geometry** 实例是一维空间数据类型时，此方法返回该实例中的曲线数。 一维空间数据类型包括 LineString、CircularString 和 CompoundCurve    。 `STNumCurves`() 仅适用于简单类型；它不适用于 **MultiLineString** 之类的 **geometry** 集合。
+当 **geometry** 实例是一维空间数据类型时，此方法返回该实例中的曲线数。 一维空间数据类型包括 LineString、CircularString 和 CompoundCurve************。 `STNumCurves`() 仅适用于简单类型；它不适用于 **MultiLineString** 之类的 **geometry** 集合。
   
 ## <a name="syntax"></a>语法  
   
@@ -36,11 +37,11 @@ ms.locfileid: "86555950"
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>返回类型
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry****  
   
- CLR 返回类型：SqlGeometry   
+ CLR 返回类型：SqlGeometry****  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  空的一维 **geometry** 实例返回 0。 当 **geometry** 实例不是一维实例或为未初始化的实例时，将返回 **NULL**。  
   
 ## <a name="examples"></a>示例  

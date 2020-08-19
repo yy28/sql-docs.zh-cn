@@ -1,5 +1,6 @@
 ---
-title: sp_restoremergeidentityrange （Transact-sql） |Microsoft Docs
+description: sp_restoremergeidentityrange (Transact-SQL)
+title: sp_restoremergeidentityrange (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7923e422-2748-40c0-b5a8-6410c48d5b70
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3051a630fe797e6856f110348af945a681bb83ad
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1858ef748ebf063fe3e541542003f46861821eeb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899257"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446803"
 ---
 # <a name="sp_restoremergeidentityrange-transact-sql"></a>sp_restoremergeidentityrange (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,20 +39,20 @@ sp_restoremergeidentityrange [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @publication = ] 'publication'`发布的名称。 *发布*为**sysname**，默认值为**all**。 如果指定了此参数，则只还原该发布的标识范围。  
+`[ @publication = ] 'publication'` 发布的名称。 *发布* 为 **sysname**，默认值为 **all**。 如果指定了此参数，则只还原该发布的标识范围。  
   
-`[ @article = ] 'article'`项目的名称。 *项目*的值为**sysname**，默认值为**all**。 如果指定了此参数，则只还原该项目的标识范围。  
+`[ @article = ] 'article'` 项目的名称。 *项目* 的值为 **sysname**，默认值为 **all**。 如果指定了此参数，则只还原该项目的标识范围。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- **sp_restoremergeidentityrange**用于合并复制。  
+ **sp_restoremergeidentityrange** 用于合并复制。  
   
  **sp_restoremergeidentityrange**从分发服务器获取最大标识范围分配信息，并更新使用自动标识范围管理的项目[MSmerge_identity_range_allocations &#40;transact-sql&#41;](../../relational-databases/system-tables/msmerge-identity-range-allocations-transact-sql.md)的**max_used**列中的值。  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_restoremergeidentityrange**。  
+ 只有 **sysadmin** 固定服务器角色的成员或 **db_owner** 固定数据库角色的成员才能执行 **sp_restoremergeidentityrange**。  
   
 ## <a name="see-also"></a>另请参阅  
  [sp_addmergearticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   

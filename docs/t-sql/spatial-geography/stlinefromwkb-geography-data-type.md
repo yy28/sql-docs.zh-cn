@@ -1,4 +1,5 @@
 ---
+description: STLineFromWKB（geography 数据类型）
 title: STLineFromWKB（geography 数据类型）| Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2017
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 8ac2b772-6673-4ba1-a7ab-3b4b5841560b
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: a11b2e6c50e452d56001591d297922f6e2a65ca0
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: e90b8b95cfeee90bc6e582dc5a587d49ca313d40
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86556082"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445202"
 ---
 # <a name="stlinefromwkb-geography-data-type"></a>STLineFromWKB（geography 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-从开放地理空间信息联盟 (OGC) 熟知二进制 (WKB) 表示形式返回 LineString geography 实例  。
+从开放地理空间信息联盟 (OGC) 熟知二进制 (WKB) 表示形式返回 LineString geography 实例****。
   
 ## <a name="syntax"></a>语法  
   
@@ -40,20 +41,20 @@ STLineFromWKB ( 'WKB_linestring' , SRID )
 
 ## <a name="arguments"></a>参数
  *WKB_linestring*  
- 希望返回的 LineString geography 实例的 WKB 表示形式  。 WKB_linestring 是一个 varbinary(max) 表达式   。  
+ 希望返回的 LineString geography 实例的 WKB 表示形式****。 WKB_linestring 是一个 varbinary(max) 表达式******。  
   
  SRID   
- 一个 int 表达式，表示希望返回的 LineString geography 实例的空间引用 ID (SRID)   。  
+ 一个 int 表达式，表示希望返回的 LineString geography 实例的空间引用 ID (SRID)********。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
   
- CLR 返回类型：SqlGeography   
+ CLR 返回类型：SqlGeography  
   
- OGC 类型：LineString   
+ OGC 类型：LineString****  
   
-## <a name="remarks"></a>备注  
- 如果输入的格式不正确，此方法将引发 FormatException  。  
+## <a name="remarks"></a>注解  
+ 如果输入的格式不正确，此方法将引发 FormatException****。  
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `STLineFromWKB()` 创建 `geography` 实例。  

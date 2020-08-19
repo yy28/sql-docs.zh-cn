@@ -1,4 +1,5 @@
 ---
+description: EXP (Transact-SQL)
 title: EXP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -19,17 +20,17 @@ ms.assetid: 5a9b8c52-6fb6-4e33-8b02-a878785b2f51
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 949a07ae18a46101ea7ae905812aa5cd2072c37a
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: a866a13a9abf74781e114a1fab4928a0c2cb1042
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111573"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445797"
 ---
 # <a name="exp-transact-sql"></a>EXP (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  返回指定的 float 表达式的指数值  。  
+  返回指定的 float 表达式的指数值****。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,17 +44,17 @@ EXP ( float_expression )
 
 ## <a name="arguments"></a>参数
  *float_expression*  
- float 类型或能隐式转换为 float 类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)   。  
+ float 类型或能隐式转换为 float 类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md) 。  
   
 ## <a name="return-types"></a>返回类型  
  **float**  
   
-## <a name="remarks"></a>备注  
- 常量 e (2.718281…) 是自然对数的底数  。  
+## <a name="remarks"></a>注解  
+ 常量 e (2.718281…) 是自然对数的底数****。  
   
- 数字的指数是常量 e 使用该数字进行幂运算  。 例如，EXP(1.0) = e^1.0 = 2.71828182845905，而 EXP(10) = e^10 = 22026.4657948067。  
+ 一个数字的指数是常量 **e** 的该数字次幂。 例如，EXP(1.0) = e^1.0 = 2.71828182845905，而 EXP(10) = e^10 = 22026.4657948067。  
   
- 数字的自然对数的指数是数字本身：EXP (LOG (n)) = n   。 数字的指数的自然对数是数字本身：LOG (EXP (n)) = n   。  
+ 数字的自然对数的指数是数字本身：EXP (LOG (n)) = n****。 数字的指数的自然对数是数字本身：LOG (EXP (n)) = n****。  
   
 ## <a name="examples"></a>示例  
   

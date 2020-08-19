@@ -1,5 +1,6 @@
 ---
-title: 记录记录集的移动记录指针示例（VBScript） |Microsoft Docs
+description: 'MoveFirst、MoveLast、MoveNext 和 MovePrevious 方法示例 (VBScript) '
+title: 将记录集的记录指针移 (VBScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 911aa1dd-2786-4f34-992c-bb2fbdabcbdf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8a1abb3ffd43a18df869385ddbbd374992a3f715
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ba0b69a87f11104888edcfb588d2633414b5a5ff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762458"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443169"
 ---
-# <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vbscript"></a>MoveFirst、MoveLast、MoveNext 和 MovePrevious 方法示例（VBScript）
-此示例使用[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)和[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)方法基于提供的命令移动记录[集](../../../ado/reference/ado-api/recordset-object-ado.md)的记录指针。  
+# <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vbscript"></a>MoveFirst、MoveLast、MoveNext 和 MovePrevious 方法示例 (VBScript) 
+此示例使用 [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)和 [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) 方法基于提供的命令移动记录 [集](../../../ado/reference/ado-api/recordset-object-ado.md) 的记录指针。  
   
- 将以下代码剪切并粘贴到记事本或其他文本编辑器中，并将其保存为**MoveFirstVBS**。 您可以在任何浏览器中查看结果。  
+ 将以下代码剪切并粘贴到记事本或其他文本编辑器中，并将其保存为 **MoveFirstVBS**。 您可以在任何浏览器中查看结果。  
   
 ```  
 <!-- BeginMoveFirstVBS -->  
@@ -184,5 +185,5 @@ ms.locfileid: "82762458"
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [MoveFirst、MoveLast、MoveNext 和 MovePrevious 方法（ADO）](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
+ [MoveFirst、MoveLast、MoveNext 和 MovePrevious 方法 (ADO) ](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

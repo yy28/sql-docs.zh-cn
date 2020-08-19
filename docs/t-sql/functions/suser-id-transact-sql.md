@@ -1,4 +1,5 @@
 ---
+description: SUSER_ID (Transact-SQL)
 title: SUSER_ID (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/07/2018
@@ -23,12 +24,12 @@ ms.assetid: 348911ab-b0b6-4867-aee7-e6f42e053a4a
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a9328a48066848228533866547590a2e0e803df2
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 8a05992f921eadfc59e28cb21e3ada3594368b73
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110773"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445546"
 ---
 # <a name="suser_id-transact-sql"></a>SUSER_ID (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -51,15 +52,15 @@ SUSER_ID ( [ 'login' ] )
 
 ## <a name="arguments"></a>参数
  **'** *login* **'**  
- 用户的登录名。 login  是 **nchar**。 如果 login  指定为 **char**，则 login  会隐式转换为 **nchar**。 login 可以是有权限连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名或 Windows 用户或组。 如果未指定 login  ，则返回当前用户的登录标识号。 如果此参数包含词 NULL，将返回 NULL。  
+ 用户的登录名。 login** 是 **nchar**。 如果 login** 指定为 **char**，则 login** 会隐式转换为 **nchar**。 login** 可以是有权限连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名或 Windows 用户或组。 如果未指定 login**，则返回当前用户的登录标识号。 如果此参数包含词 NULL，将返回 NULL。  
   
 ## <a name="return-types"></a>返回类型  
  **int**  
   
 ## <a name="remarks"></a>备注  
- SUSER_ID 仅为已经在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中显式提供的登录名返回标识号。 此 ID 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中用于跟踪所有权和权限。 此 ID 不等同于 SUSER_SID 返回的登录名的 SID。 如果 login 是 SQL Server 登录名，则 SID 映射到 GUID  。 如果 login 是 Windows 登录名或 Windows 组，则 SID 映射到 Windows 安全标识符  。  
+ SUSER_ID 仅为已经在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中显式提供的登录名返回标识号。 此 ID 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中用于跟踪所有权和权限。 此 ID 不等同于 SUSER_SID 返回的登录名的 SID。 如果 login 是 SQL Server 登录名，则 SID 映射到 GUID**。 如果 login 是 Windows 登录名或 Windows 组，则 SID 映射到 Windows 安全标识符**。  
   
- SUSER_SID 只返回在 syslogins 系统表中有条目的登录名的 SUID  。  
+ SUSER_SID 只返回在 syslogins 系统表中有条目的登录名的 SUID****。  
   
  系统函数可以在选择列表、WHERE 子句和任何允许使用表达式的地方使用，并且后面必须始终跟随圆括号，即使未指定任何参数。  
   

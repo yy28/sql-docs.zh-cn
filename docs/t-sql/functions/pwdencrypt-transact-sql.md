@@ -1,4 +1,5 @@
 ---
+description: PWDENCRYPT (Transact-SQL)
 title: PWDENCRYPT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 333e9a43-1099-4b9b-b941-4b0b016f47f3
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6341652a8d7ea7ef4f27cecac4a8764a2f464e8d
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 0b25d123f34de28d64e39e3593f918e01eada30b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111409"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445589"
 ---
 # <a name="pwdencrypt-transact-sql"></a>PWDENCRYPT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,8 +44,8 @@ PWDENCRYPT ( 'password' )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- password   
- 要加密的密码。 password 的数据类型为 sysname   。  
+ *password*  
+ 要加密的密码。 password 的数据类型为 sysname******。  
   
 ## <a name="return-types"></a>返回类型  
  **varbinary(128)**  

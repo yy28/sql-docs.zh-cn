@@ -1,4 +1,5 @@
 ---
+description: ROUND (Transact-SQL)
 title: ROUND (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/14/2017
@@ -19,12 +20,12 @@ ms.assetid: 23921ed6-dd6a-4c9e-8c32-91c0d44fe4b7
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bdad5fc75a968a918b603ff118d7f2344379008d
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 36917cc26189938e06f36d41559b2339344217c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110804"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445599"
 ---
 # <a name="round-transact-sql"></a>ROUND (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,13 +45,13 @@ ROUND ( numeric_expression , length [ ,function ] )
 
 ## <a name="arguments"></a>参数
  *numeric_expression*  
- 是精确或近似数值数据类型类别（bit 数据类型除外）的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)  。  
+ 是精确或近似数值数据类型类别（bit 数据类型除外）的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)****。  
   
  *length*  
- 它是 numeric_expression 的舍入精度  。 length 必须是 tinyint、smallint 或 int 类型的表达式     。如果 length 为正数，则将 numeric_expression 舍入到 length 指定的小数位数    。 如果 length 为负数，则将 numeric_expression 小数点左边部分舍入到 length 指定的长度    。  
+ 它是 numeric_expression 的舍入精度**。 length 必须是 tinyint、smallint 或 int 类型的表达式  。如果 length 为正数，则将 numeric_expression 舍入到 length 指定的小数位数  。 如果 length 为负数，则将 numeric_expression 小数点左边部分舍入到 length 指定的长度******。  
   
  *函数*  
- 要执行的操作的类型。 function 的数据类型必须是 tinyint、smallint 或 int     。如果 function 省略或其值为 0（默认值），则对 numeric_expression   进行舍入。 如果指定了 0 以外的值，则将截断 numeric_expression  。  
+ 要执行的操作的类型。 function 的数据类型必须是 tinyint、smallint 或 int  。如果 function 省略或其值为 0（默认值），则对 numeric_expression  进行舍入。 如果指定了 0 以外的值，则将截断 numeric_expression**。  
   
 ## <a name="return-types"></a>返回类型  
  返回以下数据类型。  
@@ -62,17 +63,17 @@ ROUND ( numeric_expression , length [ ,function ] )
 |**int**|**int**|  
 |**bigint**|**bigint**|  
 |**decimal** 和 **numeric** 类别 (p, s)|**decimal(p, s)**|  
-|money 和 smallmoney 类别  |**money**|  
-|float 和 real 类别  |**float**|  
+|money 和 smallmoney 类别********|**money**|  
+|float 和 real 类别********|**float**|  
   
-## <a name="remarks"></a>备注  
- ROUND 始终返回一个值。 如果 length 为负数，并且大于小数点前的数字个数，则 ROUND 将返回 0  。  
+## <a name="remarks"></a>注解  
+ ROUND 始终返回一个值。 如果 length 为负数，并且大于小数点前的数字个数，则 ROUND 将返回 0**。  
   
 |示例|结果|  
 |-------------|------------|  
 |ROUND(748.58, -4)|0|  
   
- 如果 length 为负数，则无论什么数据类型，ROUND 都将返回一个舍入的 numeric_expression   。  
+ 如果 length 为负数，则无论什么数据类型，ROUND 都将返回一个舍入的 numeric_expression****。  
   
 |示例|结果|  
 |--------------|------------|  

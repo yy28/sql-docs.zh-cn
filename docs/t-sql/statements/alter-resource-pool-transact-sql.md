@@ -1,4 +1,5 @@
 ---
+description: ALTER RESOURCE POOL (Transact-SQL)
 title: ALTER RESOURCE POOL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/01/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9c1c4cfb-0e3b-4f01-bf57-3fce94c7d1d4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a51d04f848e86c5b8dc242cd959aef6da393aa38
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 17b7e78f6d5a57b15aa2bde0eaba68b86ae53fc5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381141"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444870"
 ---
 # <a name="alter-resource-pool-transact-sql"></a>ALTER RESOURCE POOL (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +63,7 @@ ALTER RESOURCE POOL { pool_name | "default" }
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- {  pool_name | "default"  }  
+ { pool_name | "default" }  
  是现有用户定义资源池或安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时创建的默认资源池的名称。  
   
  与 ALTER RESOURCE POOL 一起使用时，"default" 必须用引号 ("") 引起来或用方括号 ([]) 括起来，以免与系统保留字 DEFAULT 冲突。 有关详细信息，请参阅 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)。  
@@ -70,16 +71,16 @@ ALTER RESOURCE POOL { pool_name | "default" }
 > [!NOTE]  
 >  预定义工作负荷组和资源池都使用小写名称，例如“default”。 对于使用区分大小写排序规则的服务器，应当注意这一点。 使用不区分大小写排序规则的服务器（例如 SQL_Latin1_General_CP1_CI_AS）会将“default”和“Default”视为相同。  
   
- MIN_CPU_PERCENT = value   
- 指定在出现 CPU 争用时资源池中的所有请求保证能接收的平均 CPU 带宽。 value 为整数且默认设置为 0  。 value 的允许范围是 0 到 100  。  
+ MIN_CPU_PERCENT = value  
+ 指定在出现 CPU 争用时资源池中的所有请求保证能接收的平均 CPU 带宽。 value 为整数且默认设置为 0。 value 的允许范围是 0 到 100。  
   
- MAX_CPU_PERCENT =value   
- 指定在存在 CPU 争用时资源池中的所有请求将接收的最大平均 CPU 带宽。 value 为整数且默认设置为 100  。 value 的允许范围是 1 到 100  。  
+ MAX_CPU_PERCENT =value  
+ 指定在存在 CPU 争用时资源池中的所有请求将接收的最大平均 CPU 带宽。 value 为整数且默认设置为 100。 value 的允许范围是 1 到 100。  
   
- CAP_CPU_PERCENT = value   
+ CAP_CPU_PERCENT =value  
  **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。  
   
- 为资源池中的请求指定目标最大 CPU 容量。 value 为整数且默认设置为 100  。 value 的允许范围是 1 到 100  。  
+ 为资源池中的请求指定目标最大 CPU 容量。 value 为整数且默认设置为 100。 value 的允许范围是 1 到 100。  
   
 > [!NOTE]  
 >  由于 CPU 治理的统计特性，你可能会注意到偶尔会出现超过 CAP_CPU_PERCENT 中指定值的峰值。  
@@ -101,25 +102,25 @@ INNER JOIN sys.dm_os_schedulers AS sc
       AND sc.scheduler_id < 1048576;  
 ```  
   
- MIN_MEMORY_PERCENT = value   
- 指定为此资源池保留的、不能与其他资源池共享的最小内存量。 value 为整数且默认设置为 0  。 value 的允许范围是 0 到 100  。  
+ MIN_MEMORY_PERCENT =value  
+ 指定为此资源池保留的、不能与其他资源池共享的最小内存量。 value 为整数且默认设置为 0。 value 的允许范围是 0 到 100。  
   
- MAX_MEMORY_PERCENT =value   
- 指定此资源池中的请求可使用的总服务器内存量。 value 为整数且默认设置为 100  。 value 的允许范围是 1 到 100  。  
+ MAX_MEMORY_PERCENT =value  
+ 指定此资源池中的请求可使用的总服务器内存量。 value 为整数且默认设置为 100。 value 的允许范围是 1 到 100。  
   
- MIN_IOPS_PER_VOLUME = value   
+ MIN_IOPS_PER_VOLUME =value  
  **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。  
   
- 指定为资源池保留的每个磁盘卷每秒的最小 I/O 操作数 (IOPS)。 value 的允许范围是 0 到 2^31-1 (2,147,483,647)  。 指定 0 表示池没有最小值阈值。  
+ 指定为资源池保留的每个磁盘卷每秒的最小 I/O 操作数 (IOPS)。 value 的允许范围是 0 到 2^31-1 (2,147,483,647)。 指定 0 表示池没有最小值阈值。  
   
- MAX_IOPS_PER_VOLUME = value   
+ MAX_IOPS_PER_VOLUME =value  
  **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。  
   
- 指定可用于该资源池的每个磁盘卷每秒的最大 I/O 操作数 (IOPS)。 value 的允许范围是 0 到 2^31-1 (2,147,483,647)  。 指定 0 表示为池设置无限制的阈值。 默认值为 0。  
+ 指定可用于该资源池的每个磁盘卷每秒的最大 I/O 操作数 (IOPS)。 value 的允许范围是 0 到 2^31-1 (2,147,483,647)。 指定 0 表示为池设置无限制的阈值。 默认值为 0。  
   
  如果池的 MAX_IOPS_PER_VOLUME 设置为 0，则该池根本不受管控，可以采用系统中的所有 IOPS，即使其他池设置了 MIN_IOPS_PER_VOLUME 也是如此。 对于这种情况，我们建议您在希望管控此池的 IO 时将此池的 MAX_IOPS_PER_VOLUME 值设置为较高的数字（例如，最大值 2^31-1）。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  MAX_CPU_PERCENT 和 MAX_MEMORY_PERCENT 必须分别大于或等于 MIN_CPU_PERCENT 和 MIN_MEMORY_PERCENT。  
   
  如果可以，MAX_CPU_PERCENT 可使用高于 MAX_CPU_PERCENT 值的 CPU 容量。 虽然可能有高于 CAP_CPU_PERCENT 的周期峰值，但即使有额外的 CPU 容量可用，工作负载也不应延时超过 CAP_CPU_PERCENT。  
@@ -128,7 +129,7 @@ INNER JOIN sys.dm_os_schedulers AS sc
   
  建议您在熟悉资源调控器状态之后再执行 DDL 语句。 有关详细信息，请参阅 [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)。  
   
- 在更改计划影响到设置时，只有在执行 DBCC FREEPROCCACHE (pool_name) 后，新设置才会在之前已缓存的计划中生效，其中 pool_name 是 Resource Governor 资源池的名称   。  
+ 在更改计划影响到设置时，只有在执行 DBCC FREEPROCCACHE (pool_name) 后，新设置才会在之前已缓存的计划中生效，其中 pool_name 是 Resource Governor 资源池的名称****。  
   
 -   如果将 AFFINITY 从多个计划程序更改为单个计划程序，则不需要执行 DBCC FREEPROCCACHE，因为并行计划可以在串行模式中运行。 但是，它可能不如编译为串行计划的计划那么有效。  
   

@@ -1,5 +1,6 @@
 ---
-title: IsolationLevel 和 Mode 属性示例（VB） |Microsoft Docs
+description: 'IsolationLevel 和 Mode Properties (VB) '
+title: IsolationLevel 和 Mode Properties (VB) 的示例 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 3382fd41-0aa1-4091-97d3-624403111e07
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 893e60a87a59c882a361317af6bced3aabd7c3c7
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: acbf64eca7aa7b0ccbd943d261968f8a70c8f9e1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758673"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443439"
 ---
-# <a name="isolationlevel-and-mode-properties-example-vb"></a>IsolationLevel 和 Mode 属性示例（VB）
-此示例使用[Mode](../../../ado/reference/ado-api/mode-property-ado.md)属性打开独占连接，使用[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)属性打开在其他事务隔离中执行的事务。  
+# <a name="isolationlevel-and-mode-properties-example-vb"></a>IsolationLevel 和 Mode Properties (VB) 
+此示例使用 [Mode](../../../ado/reference/ado-api/mode-property-ado.md) 属性打开独占连接，使用 [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) 属性打开在其他事务隔离中执行的事务。  
   
 ```  
 'BeginIsolationLevelVB  
@@ -116,6 +117,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Connection 对象（ADO）](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [ADO) 的连接对象 (](../../../ado/reference/ado-api/connection-object-ado.md)   
  [IsolationLevel 属性](../../../ado/reference/ado-api/isolationlevel-property.md)   
  [Mode 属性 (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)

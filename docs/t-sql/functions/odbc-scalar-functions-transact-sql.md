@@ -1,4 +1,5 @@
 ---
+description: ODBC 标量函数 (Transact-SQL)
 title: ODBC 标量函数 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -52,17 +53,17 @@ ms.assetid: a0df1ac2-6699-4ac0-8f79-f362f23496f1
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ebe21e82e6065aa28e4967b7d2f4d13f0fafe9d6
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 4ce160465056b18c7f6f347b0587603dd489fa06
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003828"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445682"
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>ODBC 标量函数 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  可以在 [ 语句中使用 ](https://go.microsoft.com/fwlink/?LinkID=88579)ODBC 标量函数[!INCLUDE[tsql](../../includes/tsql-md.md)]。 这些语句由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 解释。 它们可以用在存储过程和用户定义函数中。 这些函数包括字符串函数、数值函数、时间函数、日期函数、时间间隔函数和系统函数。  
+  可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中使用 [ODBC 标量函数](https://go.microsoft.com/fwlink/?LinkID=88579)。 这些语句由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 解释。 它们可以用在存储过程和用户定义函数中。 这些函数包括字符串函数、数值函数、时间函数、日期函数、时间间隔函数和系统函数。  
   
 ## <a name="usage"></a>使用情况  
  `SELECT {fn <function_name> [ (<argument>,....n) ] }`  

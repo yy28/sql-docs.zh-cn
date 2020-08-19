@@ -1,5 +1,6 @@
 ---
-title: Item 属性（ADO） |Microsoft Docs
+description: Item 属性 (ADO)
+title: ADO)  (项属性 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -45,12 +46,12 @@ helpviewer_keywords:
 ms.assetid: e11484bb-c5c7-42d8-9bb8-21572125d727
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2bc6cb28823a2b8faf79e4bf44fb405446e12514
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: d2581d0834325d56daa8ea1043ac3915942961eb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242657"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443399"
 ---
 # <a name="item-property-ado"></a>Item 属性 (ADO)
 按名称或序号指示集合中的特定成员。  
@@ -65,11 +66,11 @@ Set object = collection.Item ( Index )
  返回对象引用。  
   
 ## <a name="parameters"></a>参数  
- *Index*  
+ *索引*  
  **变量**表达式，计算结果为集合中对象的名称或序号。  
   
 ## <a name="remarks"></a>备注  
- 使用**Item**属性返回集合中的特定对象。 如果**项**在与*Index*参数对应的集合中找不到对象，则会发生错误。 此外，某些集合不支持命名对象;对于这些集合，必须使用序号引用。  
+ 使用 **Item** 属性返回集合中的特定对象。 如果 **项** 在与 *Index* 参数对应的集合中找不到对象，则会发生错误。 此外，某些集合不支持命名对象;对于这些集合，必须使用序号引用。  
   
  **Item**属性是所有集合的默认属性;因此，以下语法形式可互换：  
   
@@ -78,7 +79,7 @@ collection.Item (Index)
 collection (Index)  
 ```  
   
-## <a name="applies-to"></a>应用到  
+## <a name="applies-to"></a>适用于  
 
 :::row:::
     :::column:::
@@ -109,5 +110,5 @@ collection (Index)
 :::row-end:::
 
 ## <a name="see-also"></a>另请参阅  
- [Item 属性示例（VB）](../../../ado/reference/ado-api/item-property-example-vb.md)   
+ [Item 属性示例 (VB) ](../../../ado/reference/ado-api/item-property-example-vb.md)   
  [Item 属性示例 (VC++)](../../../ado/reference/ado-api/item-property-example-vc.md)   

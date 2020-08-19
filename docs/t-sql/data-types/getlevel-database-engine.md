@@ -1,4 +1,5 @@
 ---
+description: GetLevel（数据库引擎）
 title: GetLevel（数据库引擎）| Microsoft Docs
 ms.custom: ''
 ms.date: 07/22/2017
@@ -17,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: 81577d7e-8ff6-4e73-b7f4-94c03d4921e7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f205c91f7375e52a944dbcc18c026edb9712d944
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: d2a8f93d51cd61e9a6a7654472fabbab95475913
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554464"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445916"
 ---
 # <a name="getlevel-database-engine"></a>GetLevel（数据库引擎）
 
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-返回一个表示节点 this 在树中的深度的整数  。
+返回一个表示节点 this 在树中的深度的整数**。
   
 ## <a name="syntax"></a>语法  
   
@@ -45,9 +46,9 @@ SqlInt16 GetLevel ( )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>返回类型  
-SQL Server 返回类型：smallint 
+SQL Server 返回类型：smallint****
   
-CLR 返回类型：SqlInt16 
+CLR 返回类型：SqlInt16****
   
 ## <a name="remarks"></a>备注  
 用于确定一个或多个节点的级别或者筛选指定级别的成员的节点。 层次结构的根节点为级别 0。
@@ -57,7 +58,7 @@ GetLevel 对于广度优先搜索索引有用。 有关详细信息，请参阅[
 ## <a name="examples"></a>示例  
   
 ### <a name="a-returning-the-hierarchy-level-as-a-column"></a>A. 将层次结构级别返回为列  
-下面的示例返回 hierarchyid 的文本表示形式，然后将层次结构级别作为表中所有行的 EmpLevel 列返回   ：
+下面的示例返回 hierarchyid 的文本表示形式，然后将层次结构级别作为表中所有行的 EmpLevel 列返回********：
   
 ```sql
 SELECT OrgNode.ToString() AS Text_OrgNode,   

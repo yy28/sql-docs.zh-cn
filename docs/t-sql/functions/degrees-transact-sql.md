@@ -1,4 +1,5 @@
 ---
+description: DEGREES (Transact-SQL)
 title: DEGREES (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -19,12 +20,12 @@ ms.assetid: 5208de3c-90a3-4f59-a7e3-10b01bf285bb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b14fefc451ec334815e8921294616ad67a3a8913
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 4eba677197f76a27ed76d10a4a413e7de2a311b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113552"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445798"
 ---
 # <a name="degrees-transact-sql"></a>DEGREES (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,10 +44,10 @@ DEGREES ( numeric_expression )
 
 ## <a name="arguments"></a>参数
  *numeric_expression*  
-精确数值或近似数值数据类型类别（bit 数据类型除外）的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)  。  
+精确数值或近似数值数据类型类别（bit 数据类型除外）的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)****。  
   
 ## <a name="return-code-values"></a>返回代码值  
-返回数据类型与 numeric_expression 的数据类型匹配的值  。  
+返回数据类型与 numeric_expression 的数据类型匹配的值**。  
   
 ## <a name="examples"></a>示例  
 此示例返回按 PI/2 弧度表示的角的度数。  

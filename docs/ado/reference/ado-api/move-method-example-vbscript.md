@@ -1,5 +1,6 @@
 ---
-title: Move 方法示例（VBScript） |Microsoft Docs
+description: Move 方法示例 (VBScript)
+title: " (VBScript) 移动方法示例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 29ec4b95-8986-4970-943f-3da3ecb207a2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 23db96e87538227691f00548c47c2f3d1858349b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d16881ba6ee448ab8efda506e506b0a7f3bde02c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762478"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443219"
 ---
 # <a name="move-method-example-vbscript"></a>Move 方法示例 (VBScript)
-此示例使用[Move](../../../ado/reference/ado-api/move-method-ado.md)方法根据用户输入来定位记录指针。  
+此示例使用 [Move](../../../ado/reference/ado-api/move-method-ado.md) 方法根据用户输入来定位记录指针。  
   
- 在 Active Server Page （ASP）中使用以下示例。 若要查看此完全功能的示例，您必须具有位于 C:\Program Files\Microsoft 平台 SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb 的数据源 Advworks-srv01 （与 SDK 一起安装），或编辑代码示例中的路径以反映此文件的实际位置。 这是一个 Microsoft Access 数据库文件。  
+ 在 (ASP) 的活动服务器页中使用以下示例。 若要查看此完全功能的示例，必须使用位于 C:\Program Files\Microsoft 平台 SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb 的 SDK) 安装数据源 (Advworks-srv01，或编辑示例代码中的路径以反映此文件的实际位置。 这是一个 Microsoft Access 数据库文件。  
   
- 使用 "**查找**" 找到文件 Adovbs，并将其放入计划使用的目录中。 剪切下面的代码并将其粘贴到记事本或其他文本编辑器中，并将其保存为**MoveVBS**。 您可以在任何浏览器中查看结果。  
+ 使用 " **查找** " 找到文件 Adovbs，并将其放入计划使用的目录中。 剪切下面的代码并将其粘贴到记事本或其他文本编辑器中，并将其保存为 **MoveVBS**。 您可以在任何浏览器中查看结果。  
   
  尝试输入字母或非整数以查看错误处理工作。  
   
@@ -183,5 +184,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Move 方法（ADO）](../../../ado/reference/ado-api/move-method-ado.md)   
+ [ADO (移动方法) ](../../../ado/reference/ado-api/move-method-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

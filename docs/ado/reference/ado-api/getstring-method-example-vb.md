@@ -1,5 +1,6 @@
 ---
-title: GetString 方法示例（VB） |Microsoft Docs
+description: GetString 方法示例 (VB)
+title: GetString 方法示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 14c96d71-46a8-4782-b474-80ce348e8bff
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7f73ae3fa0600bad94493ab08c6248ee422cdb56
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c6b680c3a386629721c7e3256a69ec305d98af5d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758733"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443499"
 ---
 # <a name="getstring-method-example-vb"></a>GetString 方法示例 (VB)
-此示例演示了[GetString](../../../ado/reference/ado-api/getstring-method-ado.md)方法。  
+此示例演示了 [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) 方法。  
   
- 假设您正在调试数据访问问题，并想要一种快速、简单的方式来打印小型[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)的当前内容。  
+ 假设您正在调试数据访问问题，并想要一种快速、简单的方式来打印小型 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md)的当前内容。  
   
 ```  
 'BeginGetStringVB  
@@ -102,5 +103,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [GetString 方法（ADO）](../../../ado/reference/ado-api/getstring-method-ado.md)   
+ [GetString 方法 (ADO) ](../../../ado/reference/ado-api/getstring-method-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

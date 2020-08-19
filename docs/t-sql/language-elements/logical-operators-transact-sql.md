@@ -1,4 +1,5 @@
 ---
+description: 逻辑运算符 (Transact-SQL)
 title: 逻辑运算符 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -19,23 +20,23 @@ helpviewer_keywords:
 ms.assetid: edd92f08-76fb-4fd7-a4b6-8520d6a81df1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 55057a5cf385468fc7e01d813e451ac152c31c92
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1fe06931370c3c97598ed2b9789b1e692a3980ac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85706300"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445453"
 ---
 # <a name="logical-operators-transact-sql"></a>逻辑运算符 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  逻辑运算符对某些条件进行测试，以获得其真实情况。 逻辑运算符和比较运算符一样，返回带有 TRUE、FALSE 或 UNKNOWN 值的布尔数据类型  。  
+  逻辑运算符对某些条件进行测试，以获得其真实情况。 逻辑运算符和比较运算符一样，返回带有 TRUE、FALSE 或 UNKNOWN 值的布尔数据类型****。  
   
-|操作员|含义|  
+|运算符|含义|  
 |--------------|-------------|  
 |[ALL](../../t-sql/language-elements/all-transact-sql.md)|如果一组的比较都为 TRUE，那么就为 TRUE。|  
 |[AND](../../t-sql/language-elements/and-transact-sql.md)|如果两个布尔表达式都为 TRUE，那么就为 TRUE。|  
-|[ANY](../../t-sql/language-elements/any-transact-sql.md)|如果一组的比较中任何一个为 TRUE，那么就为 TRUE。|  
+|ANY|如果一组的比较中任何一个为 TRUE，那么就为 TRUE。|  
 |[BETWEEN](../../t-sql/language-elements/between-transact-sql.md)|如果操作数在某个范围之内，那么就为 TRUE。|  
 |[EXISTS](../../t-sql/language-elements/exists-transact-sql.md)|如果子查询包含一些行，那么就为 TRUE。|  
 |[IN](../../t-sql/language-elements/in-transact-sql.md)|如果操作数等于表达式列表中的一个，那么就为 TRUE。|  

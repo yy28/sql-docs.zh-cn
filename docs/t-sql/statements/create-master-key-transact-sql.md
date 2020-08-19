@@ -1,4 +1,5 @@
 ---
+description: CREATE MASTER KEY (Transact-SQL)
 title: CREATE MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/12/2019
@@ -24,12 +25,12 @@ ms.assetid: 1710a305-1a4f-48ec-836c-11ffd0356d76
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2bd067638bdcf9ee624fa714334ff8c8a78c0e69
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 1f9a640dff75d54a4377f512b3a1e17200f48377
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393205"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444899"
 ---
 # <a name="create-master-key-transact-sql"></a>CREATE MASTER KEY (Transact-SQL)
 
@@ -50,9 +51,9 @@ CREATE MASTER KEY [ ENCRYPTION BY PASSWORD ='password' ]
 
 ## <a name="arguments"></a>参数
 
-PASSWORD ='password' 是用于加密数据库主密钥的密码  。 password 必须符合运行  *实例的计算机的 Windows 密码策略要求*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 password 在 *和*  中是可选的[!INCLUDE[ssSDS](../../includes/sssds-md.md)][!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]。
+PASSWORD ='password' 是用于加密数据库主密钥的密码**。 password 必须符合运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的 Windows 密码策略要求。 password 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]和 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 中是可选的**。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 数据库主密钥是指用于保护证书私钥的对称密钥以及数据库中存在的非对称密钥。 当创建主密钥时，会使用 AES_256 算法以及用户提供的密码对其进行加密。 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 中，不使用 Triple DES 算法。 若要启用主密钥的自动解密功能，请使用服务主密钥对该主密钥的副本进行加密，并将副本存储在数据库和 master 中。 通常，每当主密钥更改时，便会在不进行提示的情况下更新存储在 master 中的副本。 可以使用 [ALTER MASTER KEY](../../t-sql/statements/alter-master-key-transact-sql.md) 的 DROP ENCRYPTION BY SERVICE MASTER KEY 选项对该默认行为进行更改。 必须使用 [OPEN MASTER KEY](../../t-sql/statements/open-master-key-transact-sql.md) 语句和密码打开未使用服务主密钥进行加密的主密钥。
 
@@ -84,10 +85,10 @@ GO
 
 ## <a name="see-also"></a>另请参阅
 
-- [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)
+- [sys.symmetric_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)
 - [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
 - [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md)
-- [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)
-- [DROP MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-master-key-transact-sql.md)
-- [CLOSE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/close-master-key-transact-sql.md)
+- [ALTER MASTER KEY (Transact-SQL)](../../t-sql/statements/alter-master-key-transact-sql.md)
+- [DROP MASTER KEY (Transact-SQL)](../../t-sql/statements/drop-master-key-transact-sql.md)
+- [CLOSE MASTER KEY (Transact-SQL)](../../t-sql/statements/close-master-key-transact-sql.md)
 - [加密层次结构](../../relational-databases/security/encryption/encryption-hierarchy.md)

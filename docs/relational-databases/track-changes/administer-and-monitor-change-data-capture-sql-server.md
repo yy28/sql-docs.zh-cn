@@ -1,4 +1,5 @@
 ---
+description: 管理和监视变更数据捕获 (SQL Server)
 title: 管理和监视变更数据捕获
 ms.date: 01/02/2019
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 327adcd406e4fa79591529265acc2d6b23b3a044
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dfc040c4157cfd44a27a0b05a3bef42a1591aa2e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889171"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446378"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>管理和监视变更数据捕获 (SQL Server)
 
@@ -172,7 +173,7 @@ SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions 
     GO  
     ```  
   
-3. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，展开 **“管理”** ，然后展开 **“数据收集”** 。 右键单击“CDC 性能数据收集器”，然后单击“启动数据收集组”   。  
+3. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，展开 **“管理”**，然后展开 **“数据收集”**。 右键单击“CDC 性能数据收集器”，然后单击“启动数据收集组”********。  
   
 4. 在步骤 1 配置的数据仓库中，找到表 custom_snapshots.cdc_log_scan_data。 该表提供日志扫描会话中的数据的历史快照。 此数据可以用于分析与时间有关的滞后时间、吞吐量和其他性能度量值。  
 

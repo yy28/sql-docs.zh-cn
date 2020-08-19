@@ -1,5 +1,6 @@
 ---
-title: Move 方法示例（VC + +） |Microsoft Docs
+description: Move 方法示例 (VC++)
+title: " (VC + +) 移动方法示例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0e08af60-f668-4092-8b6a-9e8b6db90448
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 400af9af904820e05da2de3a1a0aabd3f3458ca8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4b37c4ef22e44f1b7686d7b0313b07531f85540a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762468"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443209"
 ---
 # <a name="move-method-example-vc"></a>Move 方法示例 (VC++)
-此示例使用[Move](../../../ado/reference/ado-api/move-method-ado.md)方法基于用户输入定位记录指针。  
+此示例使用 [Move](../../../ado/reference/ado-api/move-method-ado.md) 方法基于用户输入定位记录指针。  
   
 ## <a name="example"></a>示例  
   

@@ -1,4 +1,5 @@
 ---
+description: STLineFromText（geography 数据类型）
 title: STLineFromText（geography 数据类型）| Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2017
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: e0c05bde-077d-4ce2-b4ec-8861db9b996d
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 5a18ea2d855cd40c15eb3659a782a706139f7a4f
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: e4eaf35bb927fc876725a134f50b74bf73e5c48f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552452"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445153"
 ---
 # <a name="stlinefromtext-geography-data-type"></a>STLineFromText（geography 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-从开放地理空间信息联盟 (OGC) 熟知文本 (WKT) 表示形式返回 geography 实例，增加了该实例传递的任何 Z（标高）和 M（度量）值  。
+从开放地理空间信息联盟 (OGC) 熟知文本 (WKT) 表示形式返回 geography 实例，增加了该实例传递的任何 Z（标高）和 M（度量）值。
   
 ## <a name="syntax"></a>语法  
   
@@ -39,21 +40,21 @@ STLineFromText ( 'linestring_tagged_text' , SRID )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- linestring_tagged_text   
- 希望返回的 geographyLineString 实例的 WKT 表示形式  。 linestring_tagged_text 是一个 nvarchar(max) 表达式   。  
+ linestring_tagged_text**  
+ 希望返回的 geographyLineString 实例的 WKT 表示形式****。 linestring_tagged_text 是一个 nvarchar(max) 表达式******。  
   
  SRID   
- 一个 int 表达式，表示希望返回的 geographyLineString 实例的空间引用 ID (SRID)   。  
+ 一个 int 表达式，表示希望返回的 geographyLineString 实例的空间引用 ID (SRID)********。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
   
- CLR 返回类型：SqlGeography   
+ CLR 返回类型：SqlGeography  
   
- OGC 类型：LineString   
+ OGC 类型：LineString****  
   
-## <a name="remarks"></a>备注  
- 如果输入的格式不正确，此方法将引发 FormatException  。  
+## <a name="remarks"></a>注解  
+ 如果输入的格式不正确，此方法将引发 FormatException****。  
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `STLineFromText()` 创建 `geography` 实例。  

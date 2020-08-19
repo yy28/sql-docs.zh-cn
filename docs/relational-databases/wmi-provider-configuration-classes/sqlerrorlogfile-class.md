@@ -1,4 +1,5 @@
 ---
+description: SqlErrorLogFile 类
 title: SqlErrorLogFile 类
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: reference
 ms.assetid: 2b83ae4a-c0d4-414c-b6e5-a41ec7c13159
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 186ceb700a09436ba7bc44934b28627480fa0454
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 63937cb2d7a3aaf3994712aa493097597cd26c53
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442498"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446445"
 ---
 # <a name="sqlerrorlogfile-class"></a>SqlErrorLogFile 类
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -39,13 +40,13 @@ class SQLErrorLogFile
 ## <a name="properties"></a>属性  
  SQLErrorLogFile 类定义以下属性。  
   
-| Property | 描述 |
+| 属性 | 描述 |
 | -------- | ----------- |
 |ArchiveNumber|数据类型： **uint32**<br /><br /> 访问类型：只读<br /><br /> <br /><br /> 日志文件的存档号。|  
-|InstanceName|数据类型：**字符串**<br /><br /> 访问类型：只读<br /><br /> 限定符：键<br /><br /> <br /><br /> 日志文件所在的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|  
+|InstanceName|数据类型： **字符串**<br /><br /> 访问类型：只读<br /><br /> 限定符：键<br /><br /> <br /><br /> 日志文件所在的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|  
 |LastModified|数据类型： **datetime**<br /><br /> 访问类型：只读<br /><br /> <br /><br /> 上次修改日志文件的日期。|  
 |LogFileSize|数据类型： **uint32**<br /><br /> 访问类型：只读<br /><br /> <br /><br /> 日志文件大小（字节）。|  
-|“属性”|数据类型：**字符串**<br /><br /> 访问类型：只读<br /><br /> 限定符：键<br /><br /> <br /><br /> 日志文件名。|  
+|名称|数据类型： **字符串**<br /><br /> 访问类型：只读<br /><br /> 限定符：键<br /><br /> <br /><br /> 日志文件名。|  
   
 ## <a name="remarks"></a>备注  
   
@@ -76,7 +77,7 @@ Next
 ```  
   
 ## <a name="comments"></a>注释  
- 如果 WQL 语句中未提供*InstanceName* ，则查询将返回默认实例的信息。 例如，以下 WQL 语句将返回与来自默认实例 (MSSQLSERVER) 的所有日志文件有关的信息。  
+ 如果 WQL 语句中未提供 *InstanceName* ，则查询将返回默认实例的信息。 例如，以下 WQL 语句将返回与来自默认实例 (MSSQLSERVER) 的所有日志文件有关的信息。  
   
 ```  
 "SELECT * FROM SqlErrorLogFile"  
@@ -85,16 +86,16 @@ Next
 ## <a name="security"></a>安全性  
  若要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过 WMI 连接到日志文件，您必须在本地和远程计算机上都具有以下权限：  
   
--   对**Root\Microsoft\SqlServer\ComputerManagement10** WMI 命名空间的读取访问权限。 默认情况下，每个人都可以通过“启用帐户”权限获得读取权限。  
+-   对 **Root\Microsoft\SqlServer\ComputerManagement10** WMI 命名空间的读取访问权限。 默认情况下，每个人都可以通过“启用帐户”权限获得读取权限。  
   
     > [!NOTE]  
-    >  有关如何验证 WMI 权限的信息，请参阅主题中的 "[查看脱机日志文件](../../relational-databases/logs/view-offline-log-files.md)" 的 "安全性" 部分。  
+    >  有关如何验证 WMI 权限的信息，请参阅主题中的 " [查看脱机日志文件](../../relational-databases/logs/view-offline-log-files.md)" 的 "安全性" 部分。  
   
--   包含错误日志的文件夹的读取权限。 默认情况下，错误日志位于以下路径中（其中 \<*Drive> * 表示安装了的驱动器 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ， \<*InstanceName*> 是实例的名称 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ）：  
+-   包含错误日志的文件夹的读取权限。 默认情况下，错误日志位于以下路径中 (其中 \<*Drive> * 表示你安装的驱动器 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ， \<*InstanceName*> 是) 实例的名称 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ：  
   
      ** \<Drive> ： \PROGRAM Files\Microsoft SQL Server\MSSQL11** **。 \<InstanceName>\MSSQL\Log**  
   
- 如果您在通过防火墙进行连接，则请确保在防火墙中针对远程目标计算机上的 WMI 设置例外。 有关详细信息，请参阅[从 Windows Vista 远程连接到 WMI](https://go.microsoft.com/fwlink/?LinkId=178848)。  
+ 如果您在通过防火墙进行连接，则请确保在防火墙中针对远程目标计算机上的 WMI 设置例外。 有关详细信息，请参阅 [从 Windows Vista 远程连接到 WMI](https://go.microsoft.com/fwlink/?LinkId=178848)。  
   
 ## <a name="see-also"></a>另请参阅  
  [SqlErrorLogEvent 类](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogevent-class.md)   

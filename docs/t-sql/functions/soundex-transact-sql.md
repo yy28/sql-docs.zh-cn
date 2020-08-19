@@ -1,4 +1,5 @@
 ---
+description: SOUNDEX (Transact-SQL)
 title: SOUNDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ ms.assetid: 8f1ed34e-8467-4512-a211-e0f43dee6584
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 95b62f8f0a3d81055900b3c304f5939c6f0f845c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 2a3150d58bf9785bf865bbaa7ed8bd030900b23f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112276"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445566"
 ---
 # <a name="soundex-transact-sql"></a>SOUNDEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,13 +47,13 @@ SOUNDEX ( character_expression )
 
 ## <a name="arguments"></a>参数
  *character_expression*  
- 字符数据的字母数字[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 character_expression 可以是常量、变量或列  。  
+ 字符数据的字母数字[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 character_expression 可以是常量、变量或列。  
   
 ## <a name="return-types"></a>返回类型  
  **varchar**  
   
 ## <a name="remarks"></a>备注  
- SOUNDEX 会根据字符串的发音，将字母数字字符串转换成一个由四个字符组成的代码。 该代码的第一个字符是 character_expression 的第一个字符，已转换为大写  。 代码的第二个字符到第四个字符是表示表达式中的字母的数字。 除非字母 A、E、I、O、U、H、W 和 Y 是字符串的首字母，否则将忽略这些字母。 如果需要生成一个四字符代码，将在末尾添加零。 有关 SOUNDEX 代码的详细信息，请参阅 [Soundex 索引系统](https://www.archives.gov/research/census/soundex.html)。  
+ SOUNDEX 会根据字符串的发音，将字母数字字符串转换成一个由四个字符组成的代码。 该代码的第一个字符是 character_expression 的第一个字符，已转换为大写**。 代码的第二个字符到第四个字符是表示表达式中的字母的数字。 除非字母 A、E、I、O、U、H、W 和 Y 是字符串的首字母，否则将忽略这些字母。 如果需要生成一个四字符代码，将在末尾添加零。 有关 SOUNDEX 代码的详细信息，请参阅 [Soundex 索引系统](https://www.archives.gov/research/census/soundex.html)。  
   
  可比较不同字符串中的 SOUNDEX 代码以查看这些字符串发音的相似度。 DIFFERENCE 函数在两个字符串上执行一个 SOUNDEX，并返回一个整数，表示这些字符串的 SOUNDEX 代码的相似度。  
   

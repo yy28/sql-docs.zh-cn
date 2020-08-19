@@ -1,5 +1,6 @@
 ---
-title: dbo.sysdownloadlist （Transact-sql） |Microsoft Docs
+description: dbo.sysdownloadlist (Transact-SQL)
+title: dbo.sysdownloadlist (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 71087a4c-e829-488e-aa7d-a9476e2b4779
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ad996430a5286f95b83e18a5a6d4bd7efff18ec6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0240d13b1f787eb9b0356b1443f8401477176d0a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890513"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446646"
 ---
 # <a name="dbosysdownloadlist-transact-sql"></a>dbo.sysdownloadlist (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "85890513"
 |-----------------|---------------|-----------------|  
 |**instance_id**|**int**|对提供行的自然插入顺序的列进行标识。|  
 |**source_server**|**sysname**|源服务器的名称。|  
-|**operation_code**|**tinyint**|作业的操作代码：<br /><br /> **1** = INS （插入）<br /><br /> **2** = UPD （更新）<br /><br /> **3** = DEL （删除）<br /><br /> **4** = 开始<br /><br /> **5** = 停止|  
+|**operation_code**|**tinyint**|作业的操作代码：<br /><br /> **1** = INS (插入) <br /><br /> **2** = UPD (更新) <br /><br /> **3** = DEL (delete) <br /><br /> **4** = 开始<br /><br /> **5** = 停止|  
 |**object_type**|**tinyint**|对象类型代码。|  
 |**object_id** <sup>1</sup>|**uniqueidentifier**|对象标识号。|  
 |**target_server**|**sysname**|目标服务器的名称。|  
@@ -45,6 +46,6 @@ ms.locfileid: "85890513"
 |**status**|**tinyint**|作业的状态：<br /><br /> **0** = 尚未下载<br /><br /> **1** = 已成功下载|  
 |**deleted_object_name**|**sysname**|删除的对象的名称。|  
   
- <sup>1</sup> **object_id**列的值可以是 **-1**，如果**operation_code**列是 DELETE 值，则对应于值 ALL。  
+ <sup>1</sup> **object_id** 列的值可以是 **-1**，如果 **operation_code** 列是 DELETE 值，则对应于值 ALL。  
   
   

@@ -1,5 +1,6 @@
 ---
-title: 记录记录集的移动记录指针示例（VB） |Microsoft Docs
+description: 'MoveFirst、MoveLast、MoveNext 和 MovePrevious 方法示例 (VB) '
+title: " (VB) 的记录集的移动记录指针示例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 31d3b083-c677-423e-8d26-a212eaeea281
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a4f0d0394e660bc691b4e13a2971d9d3181bbcee
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 38725ffc91ff14d45c8f7d3fa1fb65825833f797
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758623"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443189"
 ---
-# <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vb"></a>MoveFirst、MoveLast、MoveNext 和 MovePrevious 方法示例（VB）
-此示例使用[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)和[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)方法基于提供的命令移动记录[集](../../../ado/reference/ado-api/recordset-object-ado.md)的记录指针。 此过程需要 MoveAny 过程才能运行。  
+# <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vb"></a>MoveFirst、MoveLast、MoveNext 和 MovePrevious 方法示例 (VB) 
+此示例使用 [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)和 [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) 方法基于提供的命令移动记录 [集](../../../ado/reference/ado-api/recordset-object-ado.md) 的记录指针。 此过程需要 MoveAny 过程才能运行。  
   
 ```  
 'BeginMoveFirstVB  
@@ -124,5 +125,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [MoveFirst、MoveLast、MoveNext 和 MovePrevious 方法（ADO）](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
+ [MoveFirst、MoveLast、MoveNext 和 MovePrevious 方法 (ADO) ](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

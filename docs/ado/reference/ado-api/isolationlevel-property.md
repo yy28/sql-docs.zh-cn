@@ -1,4 +1,5 @@
 ---
+description: IsolationLevel 属性
 title: IsolationLevel 属性 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,30 +16,30 @@ helpviewer_keywords:
 ms.assetid: ea84e4b2-fbf2-4eef-b9ce-796b22e21800
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ea8d538dbd5c4c06cb770a983a2733bb2f27e6b2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: be8a10877a617a2c2fec2e76de04d3d482cfa71f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758653"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443419"
 ---
 # <a name="isolationlevel-property"></a>IsolationLevel 属性
-指示[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象的隔离级别。  
+指示 [连接](../../../ado/reference/ado-api/connection-object-ado.md) 对象的隔离级别。  
   
 ## <a name="settings-and-return-values"></a>设置和返回值  
- 设置或返回一个[IsolationLevelEnum](../../../ado/reference/ado-api/isolationlevelenum.md)值。 默认值为**adXactReadCommitted**。  
+ 设置或返回一个 [IsolationLevelEnum](../../../ado/reference/ado-api/isolationlevelenum.md) 值。 默认值为 **adXactReadCommitted**。  
   
 ## <a name="remarks"></a>备注  
- 使用**IsolationLevel**属性可以设置**连接**对象的隔离级别。 直到下一次调用[BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)方法时，此设置才会生效。 如果请求的隔离级别不可用，则提供程序可能返回下一个更高的隔离级别，而不更新**IsolationLevel**属性。  
+ 使用 **IsolationLevel** 属性可以设置 **连接** 对象的隔离级别。 直到下一次调用 [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) 方法时，此设置才会生效。 如果请求的隔离级别不可用，则提供程序可能返回下一个更高的隔离级别，而不更新 **IsolationLevel** 属性。  
   
  **IsolationLevel**属性是可读/写的。  
   
 > [!NOTE]
->  **远程数据服务使用情况**使用客户端**连接**对象时，只能将**IsolationLevel**属性设置为**adXactUnspecified**。 由于用户在客户端缓存上使用断开连接的**记录集**对象，因此可能会出现多用户问题。 例如，当两个不同的用户尝试更新同一记录时，远程数据服务只允许将记录更新到 "win" 的用户。 第二个用户的更新请求将失败并出现错误。  
+>  **远程数据服务使用情况** 使用客户端 **连接** 对象时，只能将 **IsolationLevel** 属性设置为 **adXactUnspecified**。 由于用户在客户端缓存上使用断开连接的 **记录集** 对象，因此可能会出现多用户问题。 例如，当两个不同的用户尝试更新同一记录时，远程数据服务只允许将记录更新到 "win" 的用户。 第二个用户的更新请求将失败并出现错误。  
   
-## <a name="applies-to"></a>应用于  
+## <a name="applies-to"></a>适用于  
  [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [IsolationLevel 和 Mode 属性示例（VB）](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vb.md)   
- [IsolationLevel 和 Mode 属性示例（VC + +）](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vc.md)   
+ [IsolationLevel 和 Mode Properties (VB) ](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vb.md)   
+ [IsolationLevel 和 Mode Properties (VC + +) ](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vc.md)   

@@ -1,5 +1,6 @@
 ---
-title: Find 方法示例（VC + +） |Microsoft Docs
+description: Find 方法示例 (VC++)
+title: Find 方法示例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 594c51cb-1157-4417-802b-d91b875ba020
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 73ba054b583fb9930cc62d18ff9e8e28a20720e9
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 43037237ecba87b099c6e74b32f0a78c914a72f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760093"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443638"
 ---
 # <a name="find-method-example-vc"></a>Find 方法示例 (VC++)
-此示例使用[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)对象的[Find](../../../ado/reference/ado-api/find-method-ado.md)方法来查找和计算**Pubs**数据库中业务标题的数目。 该示例假定基础提供程序不支持类似的功能。  
+此示例使用 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) 对象的 [Find](../../../ado/reference/ado-api/find-method-ado.md) 方法来查找和计算 **Pubs** 数据库中业务标题的数目。 该示例假定基础提供程序不支持类似的功能。  
   
 ```  
 // BeginFindCpp.cpp  
@@ -155,5 +156,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Find 方法（ADO）](../../../ado/reference/ado-api/find-method-ado.md)   
+ [Find 方法 (ADO) ](../../../ado/reference/ado-api/find-method-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

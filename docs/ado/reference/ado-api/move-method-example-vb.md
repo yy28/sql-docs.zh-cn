@@ -1,5 +1,6 @@
 ---
-title: Move 方法示例（VB） |Microsoft Docs
+description: Move 方法示例 (VB)
+title: " (VB) 移动方法示例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 55eb797a-0205-40d2-a797-55b216d1d3bb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 37befcf2e00ad4b3555e114a2c7584ae31e6ca64
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ab6ea1b3a3b8f4d8ffa125bbc37a5e61dc7e1f96
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762488"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443229"
 ---
 # <a name="move-method-example-vb"></a>Move 方法示例 (VB)
-此示例使用[Move](../../../ado/reference/ado-api/move-method-ado.md)方法基于用户输入定位记录指针。  
+此示例使用 [Move](../../../ado/reference/ado-api/move-method-ado.md) 方法基于用户输入定位记录指针。  
   
 ```  
 'BeginMoveVB  
@@ -127,5 +128,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Move 方法（ADO）](../../../ado/reference/ado-api/move-method-ado.md)   
+ [ADO (移动方法) ](../../../ado/reference/ado-api/move-method-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

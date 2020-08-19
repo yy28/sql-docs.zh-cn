@@ -1,5 +1,6 @@
 ---
-title: sys. sp_cdc_get_ddl_history （Transact-sql） |Microsoft Docs
+description: sys.sp_cdc_get_ddl_history (Transact-SQL)
+title: sys. sp_cdc_get_ddl_history (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 4dee5e2e-d7e5-4fea-8037-a4c05c969b3a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c72e4a325c8374c3d08ae00cc5af6898d5e206f2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f9835c61aeb1f11b57250465697187cfcc6501f8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891099"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446642"
 ---
 # <a name="syssp_cdc_get_ddl_history-transact-sql"></a>sys.sp_cdc_get_ddl_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +45,7 @@ sys.sp_cdc_get_ddl_history [ @capture_instance = ] 'capture_instance'
   
 ## <a name="arguments"></a>参数  
  [ @capture_instance =] "*capture_instance*"  
- 与源表关联的捕获实例的名称。 *capture_instance*为**sysname** ，且不能为 NULL。  
+ 与源表关联的捕获实例的名称。 *capture_instance* 为 **sysname** ，且不能为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -62,7 +63,7 @@ sys.sp_cdc_get_ddl_history [ @capture_instance = ] 'capture_instance'
 |ddl_time|**datetime**|与 DDL 更改关联的时间。|  
   
 ## <a name="remarks"></a>备注  
- 对更改源表列结构的源表（如添加或删除列，或更改现有列的数据类型）进行的 DDL 修改会在[ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md)表中进行维护。 您可使用此存储过程报告以上更改。 当捕获进程读取日志中的 DDL 事务时，将向 cdc.ddl_history 中添加项。  
+ 对更改源表列结构的源表（如添加或删除列，或更改现有列的数据类型）进行的 DDL 修改会在 [ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) 表中进行维护。 您可使用此存储过程报告以上更改。 当捕获进程读取日志中的 DDL 事务时，将向 cdc.ddl_history 中添加项。  
   
 ## <a name="permissions"></a>权限  
  要求拥有 db_owner 固定数据库角色的成员身份以返回针对数据库中所有捕获实例的行。 对于所有其他用户，要求对源表中的所有已捕获列具有 SELECT 权限；如果已定义捕获实例的访问控制角色，则还要求具有该数据库角色的成员身份。  

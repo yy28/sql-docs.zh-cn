@@ -1,4 +1,5 @@
 ---
+description: STGeomCollFromWKB（geography 数据类型）
 title: STGeomCollFromWKB（geography 数据类型）| Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2017
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: bbed028c-9cd6-4236-b5e5-8e914a21f2e4
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 4ec65b0dd5ccae1a727d10b83ff51e06c0d29084
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 9baf6072500531d5500aca1cc00e771d1650c9dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555412"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445262"
 ---
 # <a name="stgeomcollfromwkb-geography-data-type"></a>STGeomCollFromWKB（geography 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-从开放地理空间信息联盟 (OGC) 已知二进制 (WKB) 表示形式中返回 GeometryCollection 实例  。
+从开放地理空间信息联盟 (OGC) 已知二进制 (WKB) 表示形式中返回 GeometryCollection 实例****。
   
 ## <a name="syntax"></a>语法  
   
@@ -39,21 +40,21 @@ STGeomCollFromWKB ( 'WKB_geometrycollection' , SRID )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- WKB_geometrycollection   
- 希望返回的 GeometryCollection 实例的 WKB 表示形式  。 WKB_geometrycollection 是一个 varbinary(max) 表达式   。  
+ WKB_geometrycollection**  
+ 希望返回的 GeometryCollection 实例的 WKB 表示形式。 WKB_geometrycollection 是一个 varbinary(max) 表达式******。  
   
  SRID   
- 一个 int 表达式，表示希望返回的 GeometryCollection 实例的空间引用 ID (SRID)   。  
+ 一个 int 表达式，表示希望返回的 GeometryCollection 实例的空间引用 ID (SRID)********。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
   
- CLR 返回类型：SqlGeography   
+ CLR 返回类型：SqlGeography  
   
 ## <a name="remarks"></a>备注  
- STGeomCollFromWKB() 返回的 geography 实例的 OGC 类型设为 GeometryCollection、MultiPolygon、MultiLineString 或 MultiPoint，具体取决于相应的 WKB 输入      。  
+ STGeomCollFromWKB() 返回的 geography 实例的 OGC 类型设为 GeometryCollection、MultiPolygon、MultiLineString 或 MultiPoint，具体取决于相应的 WKB 输入********************。  
   
- 如果输入的格式不正确，此方法将引发 FormatException 异常  。  
+ 如果输入的格式不正确，此方法将引发 FormatException 异常****。  
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `STGeomCollFromWKB()` 创建 `geography` 实例。  

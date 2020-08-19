@@ -1,4 +1,5 @@
 ---
+description: STPointN（geometry 数据类型）
 title: STPointN（geometry 数据类型）| Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8f0bb3b7-5cd9-42c2-b9f8-f04628653bd0
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: eced8c5e3c7d42abf8974af1efc9202bd30bed27
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 751fc973188d7fe12ea0034a14c4620808912545
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554895"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444916"
 ---
 # <a name="stpointn-geometry-data-type"></a>STPointN（geometry 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,18 +44,18 @@ ms.locfileid: "86554895"
  一个 **int** 表达式，其值介于 1 和 **geometry** 实例中的点数之间。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry****  
   
- CLR 返回类型：SqlGeometry   
+ CLR 返回类型：SqlGeometry****  
   
- 开放地理空间信息联盟 (OGC) 类型：Point   
+ 开放地理空间信息联盟 (OGC) 类型：Point****  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  如果 **geometry** 实例是用户创建的，则 `STPointN()` 返回由 *expression* 通过按照点的原始输入顺序对点进行排序而指定的点。  
   
  如果 **geometry** 实例是系统构建的，则 `STPointN()` 返回由 *expression* 通过按照点的输出顺序对所有点进行排序而指定的点，点的排序顺序为：首先按几何图形，然后按几何图形中的环（如果适用），最后按环中的点。 此顺序是确定的。  
   
- 如果使用小于 1 的值来调用此方法，则会引发 ArgumentOutOfRangeException  。  
+ 如果使用小于 1 的值来调用此方法，则会引发 ArgumentOutOfRangeException****。  
   
  如果使用大于实例中点数的值来调用此方法，则返回 Null。  
   

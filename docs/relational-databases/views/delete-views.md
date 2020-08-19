@@ -1,4 +1,5 @@
 ---
+description: 删除视图
 title: 删除视图 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ ms.assetid: 6823c7f8-06ca-4bda-8482-7092f03d52a0
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b210ef94888369eddb5956aabdf5444dbc67b66d
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 4616d7224ab7697eebdca78e935c96521ccedd3d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396706"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446345"
 ---
 # <a name="delete-views"></a>删除视图
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -60,7 +61,7 @@ ms.locfileid: "87396706"
   
 1.  在 **“对象资源管理器”** 中，展开包含要删除的视图的数据库，然后展开 **“视图”** 文件夹。  
   
-2.  右键单击要删除的视图，然后单击“删除”  。  
+2.  右键单击要删除的视图，然后单击“删除”****。  
   
 3.  在 **“删除对象”** 对话框中，单击 **“确定”** 。  
   
@@ -75,7 +76,7 @@ ms.locfileid: "87396706"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 仅在视图存在时，该示例才删除指定的视图。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 仅在视图存在时，该示例才删除指定的视图。  
   
     ```  
     USE AdventureWorks2012 ;  

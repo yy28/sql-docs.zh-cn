@@ -1,4 +1,5 @@
 ---
+description: 删除唯一约束
 title: 删除唯一约束 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/12/2016
@@ -17,12 +18,12 @@ ms.assetid: 71e563fc-f5d7-4c2e-a42f-f0695a831f32
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5bcd1b8b4cd08a3bb2cb0c8700c82de8d7657779
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 95234d86bc68c063d90226bb23e09533bea446ae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002106"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446417"
 ---
 # <a name="delete-unique-constraints"></a>删除唯一约束
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -52,23 +53,23 @@ ms.locfileid: "86002106"
   
 #### <a name="to-delete-a-unique-constraint-using-object-explorer"></a>使用对象资源管理器删除唯一约束  
   
-1.  在对象资源管理器中，展开包含唯一约束的表，再展开 **“约束”** 。  
+1.  在对象资源管理器中，展开包含唯一约束的表，再展开 **“约束”**。  
   
-2.  右键单击该键，然后选择“删除”  。  
+2.  右键单击该键，然后选择“删除”****。  
   
-3.  在 **“删除对象”** 对话框中，确认指定了正确的键，然后单击 **“确定”** 。  
+3.  在 **“删除对象”** 对话框中，确认指定了正确的键，然后单击 **“确定”**。  
   
 #### <a name="to-delete-a-unique-constraint-using-table-designer"></a>使用表设计器删除唯一约束  
   
-1.  在“对象资源管理器”  中，右键单击具有唯一约束的表，然后单击“设计”  。  
+1.  在“对象资源管理器”**** 中，右键单击具有唯一约束的表，然后单击“设计”****。  
   
-2.  在“表设计器”  菜单上，单击“索引/键”  。  
+2.  在“表设计器”菜单上，单击“索引/键”。  
   
-3.  在“索引/键”  对话框中，从“选定的主键/唯一键和索引”  列表中选择唯一键。  
+3.  在“索引/键”**** 对话框中，从“选定的主键/唯一键和索引”**** 列表中选择唯一键。  
   
 4.  单击 **“删除”** 。  
   
-5.  在“文件”菜单上，单击“保存表名称”    。  
+5.  在“文件”菜单上，单击“保存表名称”******** __。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -78,7 +79,7 @@ ms.locfileid: "86002106"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     -- Return the name of unique constraint.  

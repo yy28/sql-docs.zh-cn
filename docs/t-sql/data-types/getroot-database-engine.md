@@ -1,4 +1,5 @@
 ---
+description: GetRoot（数据库引擎）
 title: GetRoot（数据库引擎）| Microsoft Docs
 ms.custom: ''
 ms.date: 07/22/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 240b70f1-eeda-44ab-b4bb-9e4af80fa7c0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4dfb1988f2f1405b2e69459824ee47983295ad31
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: cdefe46b9e2baa546b76375af4c6a2272fe1f584
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86556199"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445914"
 ---
 # <a name="getroot-database-engine"></a>GetRoot（数据库引擎）
 
@@ -45,9 +46,9 @@ static SqlHierarchyId GetRoot ( )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>返回类型  
-SQL Server 返回类型：hierarchyid 
+SQL Server 返回类型：hierarchyid****
   
-CLR 返回类型：SqlHierarchyId 
+CLR 返回类型：SqlHierarchyId****
   
 ## <a name="remarks"></a>备注  
 用于确定层次结构树中的根节点。

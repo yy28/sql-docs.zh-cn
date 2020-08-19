@@ -1,5 +1,6 @@
 ---
-title: sp_syspolicy_purge_health_state （Transact-sql） |Microsoft Docs
+description: sp_syspolicy_purge_health_state (Transact-SQL)
+title: sp_syspolicy_purge_health_state (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4ba4aa91-4c19-41c7-b70d-5fd9d0e89a5e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6c07d71e2ab4c9fe39882476eef25674718a17c7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a01ee9be75223a081d19a9b71eb4d69ec150235c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85639565"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446744"
 ---
 # <a name="sp_syspolicy_purge_health_state-transact-sql"></a>sp_syspolicy_purge_health_state (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,13 +39,13 @@ ms.locfileid: "85639565"
 sp_syspolicy_purge_health_state [ @target_tree_root_with_id = ] 'target_tree_root_with_id'  
 ```  
   
-## <a name="arguments"></a>自变量  
-`[ @target_tree_root_with_id = ] 'target_tree_root_with_id'`表示要在其中清除运行状况状态对象资源管理器中的节点。 *target_tree_root_with_id*的值为**nvarchar （400）**，默认值为 NULL。  
+## <a name="arguments"></a>参数  
+`[ @target_tree_root_with_id = ] 'target_tree_root_with_id'` 表示要在其中清除运行状况状态对象资源管理器中的节点。 *target_tree_root_with_id* 为 **nvarchar (400) **，默认值为 NULL。  
   
  您可以从 msdb.dbo.syspolicy_system_health_state 系统视图的 target_query_expression_with_id 列指定值。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
  您必须在 msdb 系统数据库的上下文中运行 sp_syspolicy_purge_health_state。  

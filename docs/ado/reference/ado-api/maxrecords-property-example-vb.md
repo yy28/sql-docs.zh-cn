@@ -1,5 +1,6 @@
 ---
-title: MaxRecords 属性示例（VB） |Microsoft Docs
+description: MaxRecords 属性示例 (VB)
+title: MaxRecords 属性示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 630a3be4-7a87-41cf-997e-8bb50d89db1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 38812977823e514b63a558640df86c08265257df
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 023519763173c26465cef568345990221b4a0e1a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82754371"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443279"
 ---
 # <a name="maxrecords-property-example-vb"></a>MaxRecords 属性示例 (VB)
-此示例使用[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)属性打开一个[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，其中包含***标题***表中的10个最昂贵的标题。  
+此示例使用 [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) 属性打开一个 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md) ，其中包含 ***标题*** 表中的10个最昂贵的标题。  
   
 ```  
 'BeginMaxRecordsVB  
@@ -88,5 +89,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [MaxRecords 属性（ADO）](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
+ [MaxRecords 属性 (ADO) ](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

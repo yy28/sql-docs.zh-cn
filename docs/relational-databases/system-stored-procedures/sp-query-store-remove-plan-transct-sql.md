@@ -1,5 +1,6 @@
 ---
-title: sp_query_store_remove_plan （Transct） |Microsoft Docs
+description: sp_query_store_remove_plan (Transct-SQL)
+title: sp_query_store_remove_plan (Transct-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2016
 ms.prod: sql
@@ -21,11 +22,12 @@ ms.assetid: 88734726-135b-4b61-9f3f-f568c1fbece6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cbc49d5c3644a71149a07946d116b2e379fab500
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f6cd042c81a54bd6b3777693214182b1ebad9f25
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012641"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446864"
 ---
 # <a name="sp_query_store_remove_plan-transct-sql"></a>sp_query_store_remove_plan (Transct-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -41,16 +43,16 @@ ms.locfileid: "86012641"
 sp_query_store_remove_plan [ @plan_id = ] plan_id [;]  
 ```  
   
-## <a name="arguments"></a>自变量  
-`[ @plan_id = ] plan_id`要删除的查询计划的 id。 *plan_id*是**bigint**，无默认值。  
+## <a name="arguments"></a>参数  
+`[ @plan_id = ] plan_id` 要删除的查询计划的 id。 *plan_id* 是 **bigint**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
   
 ## <a name="permissions"></a>权限  
- 要求对数据库具有**ALTER**权限。
+ 要求对数据库具有 **ALTER** 权限。
   
 ## <a name="examples"></a>示例  
  下面的示例返回有关查询存储中的查询的信息。  

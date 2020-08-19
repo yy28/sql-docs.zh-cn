@@ -1,5 +1,6 @@
 ---
-title: dbo.sys类别（Transact-sql） |Microsoft Docs
+description: dbo.syscategories (Transact-SQL)
+title: " (Transact-sql) 的 dbo.sys类别 |Microsoft Docs"
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: eb2cb75c-dc58-4a5b-b329-664e9fe20ce0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 92d4883df378521af717266c31a0decfaa403c5a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1c4a0fd7272a859672b70742a8c79eb1ac6690a4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890540"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446677"
 ---
 # <a name="dbosyscategories-transact-sql"></a>dbo.syscategories (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  包含 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 用于组织作业、警报和操作员的类别。 该表存储在**msdb**数据库中。  
+  包含 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 用于组织作业、警报和操作员的类别。 该表存储在 **msdb** 数据库中。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  

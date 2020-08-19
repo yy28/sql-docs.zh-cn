@@ -1,5 +1,6 @@
 ---
-title: sp_reinitpullsubscription （Transact-sql） |Microsoft Docs
+description: sp_reinitpullsubscription (Transact-SQL)
+title: sp_reinitpullsubscription (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7d9abe49-ce92-47f3-82c9-aea749518c91
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d9a581803d232f704dd27592a354c6331660ac03
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 74a3aa00a5b298639b1e643842af1d834a664d58
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751698"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446839"
 ---
 # <a name="sp_reinitpullsubscription-transact-sql"></a>sp_reinitpullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,18 +39,18 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
         , [ @publication = ] 'publication'  
 ```  
   
-## <a name="arguments"></a>自变量  
-`[ @publisher = ] 'publisher'`发布服务器的名称。 *发布服务器*的**sysname**，无默认值。  
+## <a name="arguments"></a>参数  
+`[ @publisher = ] 'publisher'` 发布服务器的名称。 *发布服务器* 的 **sysname**，无默认值。  
   
-`[ @publisher_db = ] 'publisher_db'`发布服务器数据库的名称。 *publisher_db* **sysname**，无默认值。  
+`[ @publisher_db = ] 'publisher_db'` 发布服务器数据库的名称。 *publisher_db* **sysname**，无默认值。  
   
-`[ @publication = ] 'publication'`发布的名称。 *发布*为**sysname**，默认值为 all，表示将所有订阅标记为要重新初始化。  
+`[ @publication = ] 'publication'` 发布的名称。 *发布* 为 **sysname**，默认值为 all，表示将所有订阅标记为要重新初始化。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- **sp_reinitpullsubscription**用于事务复制。  
+ **sp_reinitpullsubscription** 用于事务复制。  
   
  对等事务复制不支持**sp_reinitpullsubscription** 。  
   
@@ -57,13 +58,13 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
   
  不能从订阅服务器重新初始化使用值为**false**的** \@ immediate_sync**创建的发布的订阅。  
   
- 您可以通过在订阅服务器上执行**sp_reinitpullsubscription**或在发布服务器上执行**sp_reinitsubscription**来重新初始化请求订阅。  
+ 您可以通过在订阅服务器上执行 **sp_reinitpullsubscription** 或在发布服务器上执行 **sp_reinitsubscription** 来重新初始化请求订阅。  
   
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_reinitpullsub](../../relational-databases/replication/codesnippet/tsql/sp-reinitpullsubscriptio_1.sql)]  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_reinitpullsubscription**。  
+ 只有 **sysadmin** 固定服务器角色的成员或 **db_owner** 固定数据库角色的成员才能执行 **sp_reinitpullsubscription**。  
   
 ## <a name="see-also"></a>另请参阅  
  [重新初始化订阅](../../relational-databases/replication/reinitialize-a-subscription.md)   

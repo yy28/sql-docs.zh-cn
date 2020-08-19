@@ -1,4 +1,5 @@
 ---
+description: NEWID (Transact-SQL)
 title: NEWID (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/29/2017
@@ -19,39 +20,41 @@ ms.assetid: f7014e60-96d5-457e-afc3-72b60ba20c0f
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fff840992f0b24af961acb069268cb41c550da2a
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: b478b8ea685a5e8cf5399c5ca429936be9a18784
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87397096"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445697"
 ---
 # <a name="newid-transact-sql"></a>NEWID (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-  创建 uniqueidentifier 类型的唯一值  。  
+创建 uniqueidentifier 类型的唯一值****。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
+```syntaxsql 
 NEWID ( )  
 ```  
   
-## <a name="return-types"></a>返回类型  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>返回类型
  **uniqueidentifier**  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  `NEWID()` 遵从 RFC4122。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-using-the-newid-function-with-a-variable"></a>A. 对变量使用 NEWID 函数  
- 以下示例使用 `NEWID()` 对声明为 uniqueidentifier 数据类型的变量赋值  。 在测试 uniqueidentifier 数据类型变量的值之前，先打印该值  。  
+ 以下示例使用 `NEWID()` 对声明为 uniqueidentifier 数据类型的变量赋值****。 在测试 uniqueidentifier 数据类型变量的值之前，先打印该值****。  
   
-```  
+```sql
 -- Creating a local variable with DECLARE/SET syntax.  
 DECLARE @myid uniqueidentifier  
 SET @myid = NEWID()  
@@ -69,11 +72,11 @@ Value of @myid is: 6F9619FF-8B86-D011-B42D-00C04FC964FF
   
 ### <a name="b-using-newid-in-a-create-table-statement"></a>B. 在 CREATE TABLE 语句中使用 NEWID  
   
-适用范围：  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
   
- 以下示例创建数据类型为 uniqueidentifier 的 `cust` 表，并使用 NEWID 作为默认值填充该表  。 为 `NEWID()` 赋予默认值时，每个新行和现有行均对 `CustomerID` 列具有唯一值。  
+ 以下示例创建数据类型为 uniqueidentifier 的 `cust` 表，并使用 NEWID 作为默认值填充该表****。 为 `NEWID()` 赋予默认值时，每个新行和现有行均对 `CustomerID` 列具有唯一值。  
   
-```  
+```sql
 -- Creating a table using NEWID for uniqueidentifier data type.  
 CREATE TABLE cust  
 (  
@@ -92,24 +95,24 @@ CREATE TABLE cust
 GO  
 -- Inserting 5 rows into cust table.  
 INSERT cust  
-(CustomerID, Company, ContactName, Address, City, StateProvince,   
+(Company, ContactName, Address, City, StateProvince,   
  PostalCode, CountryRegion, Telephone, Fax)  
 VALUES  
- (NEWID(), 'Wartian Herkku', 'Pirkko Koskitalo', 'Torikatu 38', 'Oulu', NULL,  
+ ('Wartian Herkku', 'Pirkko Koskitalo', 'Torikatu 38', 'Oulu', NULL,  
  '90110', 'Finland', '981-443655', '981-443655')  
-,(NEWID(), 'Wellington Importadora', 'Paula Parente', 'Rua do Mercado, 12', 'Resende', 'SP',  
+,('Wellington Importadora', 'Paula Parente', 'Rua do Mercado, 12', 'Resende', 'SP',  
  '08737-363', 'Brasil', '(14) 555-8122', '')  
-,(NEWID(), 'Cactus Comidas para Ilevar', 'Patricio Simpson', 'Cerrito 333', 'Buenos Aires', NULL,   
+,('Cactus Comidas para Ilevar', 'Patricio Simpson', 'Cerrito 333', 'Buenos Aires', NULL,   
  '1010', 'Argentina', '(1) 135-5555', '(1) 135-4892')  
-,(NEWID(), 'Ernst Handel', 'Roland Mendel', 'Kirchgasse 6', 'Graz', NULL,  
+,('Ernst Handel', 'Roland Mendel', 'Kirchgasse 6', 'Graz', NULL,  
  '8010', 'Austria', '7675-3425', '7675-3426')  
-,(NEWID(), 'Maison Dewey', 'Catherine Dewey', 'Rue Joseph-Bens 532', 'Bruxelles', NULL,  
+,('Maison Dewey', 'Catherine Dewey', 'Rue Joseph-Bens 532', 'Bruxelles', NULL,  
  'B-1180', 'Belgium', '(02) 201 24 67', '(02) 201 24 68');  
-GO  
+GO
 ```  
   
 ### <a name="c-using-uniqueidentifier-and-variable-assignment"></a>C. 使用 uniqueidentifier 和变量赋值  
- 以下示例将名为 `@myid` 的局部变量声明为 uniqueidentifier 数据类型的变量  。 然后使用 `SET` 语句为该变量赋值。  
+ 以下示例将名为 `@myid` 的局部变量声明为 uniqueidentifier 数据类型的变量****。 然后使用 `SET` 语句为该变量赋值。  
   
 ```  
 DECLARE @myid uniqueidentifier ;  
