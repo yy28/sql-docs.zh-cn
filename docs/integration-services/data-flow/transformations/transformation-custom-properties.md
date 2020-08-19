@@ -1,4 +1,5 @@
 ---
+description: Transformation Custom Properties
 title: 转换自定义属性 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -41,12 +42,12 @@ helpviewer_keywords:
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fb2e93d5266b28ad7be189cd14034aca49abc3a1
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 1219bf8b502d7e91194b3413910aa7ae16ec09c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472497"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425689"
 ---
 # <a name="transformation-custom-properties"></a>Transformation Custom Properties
 
@@ -210,7 +211,7 @@ ms.locfileid: "87472497"
   
 |properties|数据类型|说明|  
 |--------------|---------------|-----------------|  
-|FastParse|Boolean|该值用于指示列是使用 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供的不区分区域设置的较快分析例程，还是使用标准的区分区域设置的分析例程。 此属性的默认值为 **False**。 有关详细信息，请参阅 [Fast Parse](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) 和 [Standard Parse](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)。 。<br /><br /> 注意：此属性在数据转换编辑器  中未提供，但可通过“高级编辑器”  进行设置。|  
+|FastParse|Boolean|该值用于指示列是使用 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供的不区分区域设置的较快分析例程，还是使用标准的区分区域设置的分析例程。 此属性的默认值为 **False**。 有关详细信息，请参阅 [Fast Parse](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) 和 [Standard Parse](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)。 .<br /><br /> 注意：此属性在数据转换编辑器  中未提供，但可通过“高级编辑器”  进行设置。|  
 |SourceInputColumnLineageId|Integer|作为输出列的源的输入列的 **LineageID** 。|  
   
  数据转换的输入、输入列和输出不包含自定义属性。  

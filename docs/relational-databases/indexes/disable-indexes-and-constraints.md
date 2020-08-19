@@ -1,4 +1,5 @@
 ---
+description: 禁用索引和约束
 title: 禁用索引和约束 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2017
@@ -24,12 +25,12 @@ ms.assetid: 2198f1af-fa44-47e9-92df-f4fde322ba18
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f6a012fc4aca38401a7476b759a9a13995dad87b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 464b8069b09af65c86521878803fdf1bd7744548
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629781"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424169"
 ---
 # <a name="disable-indexes-and-constraints"></a>禁用索引和约束
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -105,9 +106,9 @@ ms.locfileid: "85629781"
   
 4.  单击加号以便展开 **“索引”** 文件夹。  
   
-5.  右键单击要禁用的索引，然后选择  “禁用”。  
+5.  右键单击要禁用的索引，然后选择****“禁用”。  
   
-6.  在 **“禁用索引”** 对话框中，确认正确的索引位于 **“要禁用的索引”** 网格中，然后单击 **“确定”** 。  
+6.  在 **“禁用索引”** 对话框中，确认正确的索引位于 **“要禁用的索引”** 网格中，然后单击 **“确定”**。  
   
 #### <a name="to-disable-all-indexes-on-a-table"></a>禁用表的所有索引  
   
@@ -117,9 +118,9 @@ ms.locfileid: "85629781"
   
 3.  单击加号以便展开您要禁用索引的表。  
   
-4.  右键单击  “索引”文件夹，然后选择  “全部禁用”。  
+4.  右键单击****“索引”文件夹，然后选择****“全部禁用”。  
   
-5.  在 **“禁用索引”** 对话框中，确认正确的索引位于 **“要禁用的索引”** 网格中，然后单击 **“确定”** 。 若要从 **“要禁用的索引”** 网格中删除索引，请选择该索引，再按 Delete 键。  
+5.  在 **“禁用索引”** 对话框中，确认正确的索引位于 **“要禁用的索引”** 网格中，然后单击 **“确定”**。 若要从 **“要禁用的索引”** 网格中删除索引，请选择该索引，再按 Delete 键。  
   
  在 **“禁用索引”** 对话框中将提供以下信息：  
   
@@ -130,7 +131,7 @@ ms.locfileid: "85629781"
  显示创建索引的表或视图的名称。  
   
  **索引类型**  
- 显示索引的类型：  “聚集”、  “非聚集”、  “空间”或  ”XML”。  
+ 显示索引的类型：****“聚集”、****“非聚集”、****“空间”或 ****”XML”。  
   
  **Status**  
  显示禁用操作的状态。 执行之后可能的值包括：  
@@ -139,7 +140,7 @@ ms.locfileid: "85629781"
   
      执行之前， **“状态”** 为空白。  
   
--   **正在进行**  
+-   **正在学习**  
   
      禁用索引操作已启动，但尚未完成。  
   
@@ -170,7 +171,7 @@ ms.locfileid: "85629781"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     USE AdventureWorks2012;  
@@ -187,7 +188,7 @@ ms.locfileid: "85629781"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     USE AdventureWorks2012;  

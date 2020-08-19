@@ -1,4 +1,5 @@
 ---
+description: SET IMPLICIT_TRANSACTIONS (Transact-SQL)
 title: SET IMPLICIT_TRANSACTIONS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -24,12 +25,12 @@ ms.assetid: a300ac43-e4c0-4329-8b79-a1a05e63370a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e2ca06a2b34d0c4823ad6e548ddba58f0c5589d9
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 992a1fd5e6129666cae7413cb461a51285fb5973
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110271"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426549"
 ---
 # <a name="set-implicit_transactions-transact-sql"></a>SET IMPLICIT_TRANSACTIONS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,7 +45,9 @@ ms.locfileid: "87110271"
 SET IMPLICIT_TRANSACTIONS { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>备注  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>备注
  为 ON 时，系统处于“隐式”事务模式。 这意味着如果 @@TRANCOUNT = 0，下列任一 Transact-SQL 语句都会开始新事务。 这等同于先执行一个不可见的 BEGIN TRANSACTION：  
 
 :::row:::

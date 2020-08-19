@@ -1,4 +1,5 @@
 ---
+description: 延迟的缓冲区
 title: 延迟的缓冲区 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 02c9a75c-2103-4f68-a1db-e31f7e0f1f03
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f34c6d3d886a0a75c309dc4f5c71f5c7ba3df447
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 320271c39c735eafcfb1d59d26e7d0400eaa6e6c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305978"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424699"
 ---
 # <a name="deferred-buffers"></a>延迟的缓冲区
-*延迟缓冲区*是指在函数调用中指定一个时间*后*在某个时间使用该值的缓冲区。 例如，使用**SQLBindParameter**可将数据缓冲区与 SQL 语句*中的参数*相关联。 应用程序指定参数号，并传递缓冲区的地址、字节长度和类型。 驱动程序将保存此信息，但不检查缓冲区的内容。 稍后，当应用程序执行该语句时，驱动程序会检索信息，并使用它检索参数数据并将其发送到数据源。 因此，缓冲区中的数据输入将延迟。 由于延迟缓冲区是在一个函数中指定并在另一个函数中使用的，因此，当驱动程序仍预期存在延迟缓冲区时，它是一个应用程序编程错误，有关详细信息，请参阅本节后面的[分配和释放缓冲区](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md)。  
+*延迟缓冲区*是指在函数调用中指定一个时间*后*在某个时间使用该值的缓冲区。 例如，使用 **SQLBindParameter** 可将数据缓冲区与 SQL 语句 *中的参数* 相关联。 应用程序指定参数号，并传递缓冲区的地址、字节长度和类型。 驱动程序将保存此信息，但不检查缓冲区的内容。 稍后，当应用程序执行该语句时，驱动程序会检索信息，并使用它检索参数数据并将其发送到数据源。 因此，缓冲区中的数据输入将延迟。 由于延迟缓冲区是在一个函数中指定并在另一个函数中使用的，因此，当驱动程序仍预期存在延迟缓冲区时，它是一个应用程序编程错误，有关详细信息，请参阅本节后面的 [分配和释放缓冲区](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md)。  
   
- 输入和输出缓冲区都可以推迟。 下表总结了延迟缓冲区的用法。 请注意，绑定到结果集列的延迟缓冲区是通过**SQLBindCol**指定的，并且绑定到 SQL 语句参数的延迟缓冲区是通过**SQLBindParameter**指定的。  
+ 输入和输出缓冲区都可以推迟。 下表总结了延迟缓冲区的用法。 请注意，绑定到结果集列的延迟缓冲区是通过 **SQLBindCol**指定的，并且绑定到 SQL 语句参数的延迟缓冲区是通过 **SQLBindParameter**指定的。  
   
 |缓冲区使用|类型|指定的|使用者|  
 |----------------|----------|--------------------|-------------|  

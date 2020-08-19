@@ -1,4 +1,5 @@
 ---
+description: Oracle 补充日志记录脚本
 title: Oracle 补充日志记录脚本 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5e6ee618-b89b-46c7-92ad-4fc5ef7b777a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f2c2a71afd526aa177490c817631dd9cd1f5fdc2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ec1835467ed0fb3ac23d570d26d8416cd83521b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86901145"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425989"
 ---
 # <a name="oracle-supplemental-logging-script"></a>Oracle 补充日志记录脚本
 
@@ -37,7 +38,7 @@ ms.locfileid: "86901145"
  **另存为**  
  将脚本保存到文本文件中。 这在 Oracle 数据库管理员 (DBA) 需要检查和执行补充日志记录脚本时很有用，程序会让您将该脚本保存到一个文本文件，您在以后可以通过电子邮件或其他方式将该文件发送给 Oracle DBA 以便执行（通过使用 SQL*Plus Oracle 实用工具或用于在 Oracle 数据库上运行脚本的其他工具）。  
   
- **Copy**  
+ **复制**  
  将脚本复制到剪贴板。 在就绪后，在 Oracle 数据库管理员 (DBA) 需要检查和执行补充日志记录脚本时，您可以将该脚本粘贴到您需要的任何位置。  
   
 ## <a name="see-also"></a>另请参阅  

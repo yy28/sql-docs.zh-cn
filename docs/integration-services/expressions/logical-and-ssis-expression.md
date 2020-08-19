@@ -1,4 +1,5 @@
 ---
+description: '&amp;&amp;（逻辑与）（SSIS 表达式）'
 title: '&amp;&amp;（逻辑与）（SSIS 表达式）| Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a8cb3517-d5d1-4861-9f04-905c719185ff
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 01e82c8971ae89580fa9613e3e9f94de11b6b4ac
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: abb14eae98abaad9ebaaf70331abd42300ee4eee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914469"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425399"
 ---
 # <a name="ampamp-logical-and-ssis-expression"></a>&amp;&amp;（逻辑与）（SSIS 表达式）
 
@@ -45,14 +46,14 @@ boolean_expression1 && boolean_expression2
 ## <a name="remarks"></a>备注  
  下表显示 && 运算符的结果。  
   
-|结果|表达式|表达式|  
+|结果|表达式|Expression|  
 |------------|----------------|----------------|  
-|TRUE|TRUE|TRUE|  
-|FALSE|TRUE|FALSE|  
+|TRUE|TRUE|true|  
+|false|true|FALSE|  
 |FALSE|FALSE|FALSE|  
 |Null|Null|Null|  
-|Null|Null|TRUE|  
-|FALSE|Null|FALSE|  
+|Null|Null|true|  
+|false|Null|false|  
   
 ## <a name="expression-examples"></a>表达式示例  
  该示例使用 **StandardCost** 和 **ListPrice** 列。 如果 **StandardCost** 列的值小于 300，并且 **ListPrice** 列的值大于 500，则该示例计算结果为 TRUE。  

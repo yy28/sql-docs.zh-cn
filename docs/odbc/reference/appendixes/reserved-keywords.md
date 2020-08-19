@@ -1,4 +1,5 @@
 ---
+description: 保留关键字
 title: 保留关键字 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3c83df20d95b9fe968b7c1c01cd8a9031043c8ad
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: a469e48f9de46453f60cfcbb468110dfb1f5d9dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362982"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424979"
 ---
 # <a name="reserved-keywords"></a>保留关键字
-保留了下列关键字以用于 ODBC 函数调用。 这些词不会限制最低 SQL 语法;但是，为了确保与支持核心 SQL 语法的驱动程序兼容，应用程序应避免使用这些关键字中的任何一个。 #**Define**值 SQL_ODBC_KEYWORDS 包含这些关键字的以逗号分隔的列表。  
+保留了下列关键字以用于 ODBC 函数调用。 这些词不会限制最低 SQL 语法;但是，为了确保与支持核心 SQL 语法的驱动程序兼容，应用程序应避免使用这些关键字中的任何一个。 #**Define** 值 SQL_ODBC_KEYWORDS 包含这些关键字的以逗号分隔的列表。  
 
 :::row:::
     :::column:::
@@ -90,7 +91,7 @@ ms.locfileid: "87362982"
         DEFAULT  
         DEFERRABLE  
         DEFERRED  
-        DELETE  
+        删除  
         DESC  
         DESCRIBE  
         DESCRIPTOR  
@@ -111,7 +112,7 @@ ms.locfileid: "87362982"
         EXISTS  
         EXTERNAL  
         EXTRACT  
-        FALSE  
+        false  
         FETCH  
         FIRST  
         FLOAT  
@@ -161,10 +162,10 @@ ms.locfileid: "87362982"
         LOWER  
         MATCH  
         MAX  
-        最小值  
+        MIN  
         MINUTE  
         MODULE  
-        MONTH  
+        月  
         NAMES  
         NATIONAL  
         NATURAL  
@@ -184,7 +185,7 @@ ms.locfileid: "87362982"
         ONLY  
         OPEN  
         OPTION  
-        或  
+        OR  
         ORDER  
         OUTER  
         OUTPUT  
@@ -246,7 +247,7 @@ ms.locfileid: "87362982"
         TRANSLATE  
         TRANSLATION  
         TRIM  
-        TRUE  
+        true  
         UNION  
         UNIQUE  
         UNKNOWN  
@@ -266,7 +267,7 @@ ms.locfileid: "87362982"
         WITH  
         WORK  
         WRITE  
-        YEAR  
+        年  
         ZONE  
     :::column-end:::
 :::row-end:::

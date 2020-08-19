@@ -1,4 +1,5 @@
 ---
+description: 通过使用检查点重新启动包
 title: 使用检查点重启包 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: de6329a45f43d27dfcabb05252a17eb0ed3c6a2e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 090e89467a7916295abdc31305cbe993872ade60
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919161"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425239"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>通过使用检查点重新启动包
 
@@ -57,7 +58,7 @@ ms.locfileid: "86919161"
   
  下表列出了可设置为实现检查点的包属性。  
   
-|properties|说明|  
+|属性|说明|  
 |--------------|-----------------|  
 |CheckpointFileName|指定检查点文件的名称。|  
 |CheckpointUsage|指定是否使用检查点。|  
@@ -72,7 +73,7 @@ ms.locfileid: "86919161"
   
 |值|说明|  
 |-----------|-----------------|  
-|**从不**|指定不使用检查点文件，包从包工作流的起点开始运行。|  
+|**Never**|指定不使用检查点文件，包从包工作流的起点开始运行。|  
 |**始终**|指定始终使用检查点文件，包从上一次执行失败的点重新启动。 如果找不到检查点文件，则包失败。|  
 |**IfExists**|指定如果存在检查点文件则使用该文件。 如果检查点文件存在，则包从上一次执行失败的点重新启动；如果检查点文件不存在，则包从包工作流的起点开始运行。|  
   
@@ -89,7 +90,7 @@ ms.locfileid: "86919161"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开要配置的包所在的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。  
   
-2.  在“解决方案资源管理器”  中，双击该包将其打开。  
+2.  在“解决方案资源管理器”中，双击该包将其打开。  
   
 3.  单击 **“控制流”** 选项卡。  
   
@@ -110,7 +111,7 @@ ms.locfileid: "86919161"
   
 8.  配置包可以从中重新启动的任务和容器。  
   
-    -   右键单击任务或容器，然后单击“属性”  。  
+    -   右键单击任务或容器，然后单击“属性”****。  
   
     -   将每个所选任务和容器的 FailPackageOnFailure 属性设置为 **True** 。  
     

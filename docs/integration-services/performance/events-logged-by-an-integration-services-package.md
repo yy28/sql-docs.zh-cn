@@ -1,4 +1,5 @@
 ---
+description: Integration Services 包记录的事件
 title: Integration Services 包记录的事件 | Microsoft Docs
 ms.custom: supportability
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 55a0951a-46f3-4f0f-9972-74cec9cc26b7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cd247b193540076a1d0f922e94e752b1ea0456bb
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 44f3efa30bc33bd7a8b9bc5057d2877be62f8f8a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919137"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425179"
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>Integration Services 包记录的事件
 
@@ -39,7 +40,7 @@ ms.locfileid: "86919137"
 > [!NOTE]  
 >  即使未对包启用日志记录，包也会记录下表中的消息。  
   
-|事件 ID|符号名称|文本|说明|  
+|事件 ID|符号名称|文本|备注|  
 |--------------|-------------------|----------|-----------|  
 |12288|DTS_MSG_PACKAGESTART|包“”已开始运行。|包已开始运行。|  
 |12289|DTS_MSG_PACKAGESUCCESS|包“”已成功完成。|包已运行成功且不再运行。|  
@@ -59,7 +60,7 @@ ms.locfileid: "86919137"
   
 ### <a name="messages-about-the-stages-of-package-execution"></a>有关包执行阶段的消息  
   
-|事件 ID|符号名称|文本|说明|  
+|事件 ID|符号名称|文本|备注|  
 |--------------|-------------------|----------|-----------|  
 |12544|DTS_MSG_EVENTLOGENTRY|事件名称: %1%r 消息: %9%r 操作员: %2%r 源名称: %3%r 源 ID: %4%r 执行 ID: %5%r 开始时间: %6%r 结束时间: %7%r 数据代码: %8|将包日志记录配置为记入应用程序事件日志时，各种消息都会使用这种通用格式。|  
 |12556|DTS_MSG_EVENTLOGENTRY_PACKAGESTART|事件名称: %1%r 消息: %9%r 操作员: %2%r 源名称: %3%r 源 ID: %4%r 执行 ID: %5%r 开始时间: %6%r 结束时间: %7%r 数据代码: %8|包已启动。|  
@@ -72,7 +73,7 @@ ms.locfileid: "86919137"
 ### <a name="messages-about-events-that-occur"></a>有关发生的事件的消息  
  下表仅列出属于事件结果的部分消息。 有关 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用的错误、警告和信息性消息的更全面的列表，请参阅 [Integration Services 错误和消息引用](../../integration-services/integration-services-error-and-message-reference.md)。  
   
-|事件 ID|符号名称|文本|说明|  
+|事件 ID|符号名称|文本|备注|  
 |--------------|-------------------|----------|-----------|  
 |12251|DTS_MSG_EVENTLOGENTRY_TASKFAILED|事件名称: %1%r 消息: %9%r 操作员: %2%r 源名称: %3%r 源 ID: %4%r 执行 ID: %5%r 开始时间: %6%r 结束时间: %7%r 数据代码: %8|任务失败。|  
 |12250|DTS_MSG_EVENTLOGENTRY_ERROR|事件名称: %1%r 消息: %9%r 操作员: %2%r 源名称: %3%r 源 ID: %4%r 执行 ID: %5%r 开始时间: %6%r 结束时间: %7%r 数据代码: %8|此消息用于报告产生了一个错误。|  
@@ -100,9 +101,9 @@ ms.locfileid: "86919137"
   
 5.  在 **“日志事件”** 窗口中查看日志项。  
   
-6.  （可选）单击要复制的日志项，右键单击，然后单击“复制”  。  
+6.  （可选）单击要复制的日志项，右键单击，然后单击“复制”****。  
   
-7.  （可选）双击日志项，然后在“日志条目”对话框中，查看单个日志项的详细信息。   
+7.  （可选）双击日志项，然后在“日志条目”对话框中，查看单个日志项的详细信息。****  
   
 8.  在 **“日志条目”** 对话框中，单击向上和向下键头，以显示上一个或下一个日志项，并单击复制图标以复制该日志项。  
   

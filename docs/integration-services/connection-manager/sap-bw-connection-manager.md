@@ -1,4 +1,5 @@
 ---
+description: SAP BW 连接管理器
 title: SAP BW 连接管理器 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 - sql13.dts.designer.sapbwconnectionmanager.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c619db7e6386bb31b39b7a347f319ae45ddfacbc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6a67889df1635e2654adc80151e33a1c137985d0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921433"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425999"
 ---
 # <a name="sap-bw-connection-manager"></a>SAP BW 连接管理器
 
@@ -72,9 +73,9 @@ ms.locfileid: "86921433"
   
     -   双击 SAP BW 连接管理器。  
   
-         -或-  
+         - 或 -  
   
-    -   右键单击 SAP BW 连接管理器，然后选择“编辑”。   
+    -   右键单击 SAP BW 连接管理器，然后选择“编辑”。****  
   
 ### <a name="options"></a>选项  
   
@@ -96,19 +97,19 @@ ms.locfileid: "86921433"
  **使用单一应用程序服务器**  
  连接到单一应用程序服务器。  
   
- 若要连接到一组负载平衡的服务器，请改用“使用负载平衡”  选项。  
+ 若要连接到一组负载平衡的服务器，请改用“使用负载平衡”**** 选项。  
   
  **主机**  
  如果连接到单一应用程序服务器，请指定主机名。  
   
 > [!NOTE]  
->  只有在已选择“使用单一应用程序服务器”  选项的情况下，此选项才可用。  
+>   只有在已选择 **“使用单一应用程序服务器”** 选项的情况下，此选项才可用。  
   
  **系统编号**  
  如果连接到单一应用程序服务器，请指定系统编号。  
   
 > [!NOTE]  
->  只有在已选择“使用单一应用程序服务器”  选项的情况下，此选项才可用。  
+>   只有在已选择 **“使用单一应用程序服务器”** 选项的情况下，此选项才可用。  
   
  **使用负载平衡**  
  连接到一组负载平衡的服务器。  
@@ -119,19 +120,19 @@ ms.locfileid: "86921433"
  要连接一组负载平衡的服务器，请指定消息服务器的名称。  
   
 > [!NOTE]  
->  只有在已选择“使用负载平衡”选项的情况下，此选项才可用。   
+>  只有在已选择“使用负载平衡”选项的情况下，此选项才可用。****  
   
- **分组**  
+ **组**  
  要连接一组负载平衡的服务器，请指定服务器组名称。  
   
 > [!NOTE]  
->  只有在已选择“使用负载平衡”选项的情况下，此选项才可用。   
+>  只有在已选择“使用负载平衡”选项的情况下，此选项才可用。****  
   
- SID   
+ **SID**  
  要连接一组负载平衡的服务器，请指定连接的“系统 ID”。  
   
 > [!NOTE]  
->  只有在已选择“使用负载平衡”选项的情况下，此选项才可用。   
+>  只有在已选择“使用负载平衡”选项的情况下，此选项才可用。****  
   
  **日志目录**  
  启用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 组件的日志记录。  

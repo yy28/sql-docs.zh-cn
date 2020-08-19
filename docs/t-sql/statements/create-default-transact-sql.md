@@ -1,4 +1,5 @@
 ---
+description: CREATE DEFAULT (Transact-SQL)
 title: CREATE DEFAULT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/25/2015
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 08475db4-7d90-486a-814c-01a99d783d41
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 361963d6836cb4c4b89c62f8ca1481b292bc803e
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 8d1001196c5b4e88c105f0fa7e0355e97e3ee884
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392755"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426779"
 ---
 # <a name="create-default-transact-sql"></a>CREATE DEFAULT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,22 +53,22 @@ AS constant_expression [ ; ]
 *schema_name*  
  default 所属架构的名称。  
   
-default_name   
+default_name**  
  default 的名称。 默认值名称必须遵守[标识符](../../relational-databases/databases/database-identifiers.md)规则。 可以选择是否指定默认值所有者名称。  
   
-constant_expression   
-只包含常量值的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)（不得包含任何列或其他数据库对象的名称）。 可以使用任何常量、内置函数或数学表达式，除非它们包含别名数据类型。 不得使用用户定义的函数。 将字符和日期常量放在单引号 ('  ) 中；不需要将货币、整数和浮点常量放在引号内。 二进制数据必须以 0x 开头，货币数据必须以美元符号 ($) 开头。 默认值必须与列数据类型兼容。  
+constant_expression  
+只包含常量值的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)（不得包含任何列或其他数据库对象的名称）。 可以使用任何常量、内置函数或数学表达式，除非它们包含别名数据类型。 不得使用用户定义的函数。 将字符和日期常量放在单引号 ('****) 中；不需要将货币、整数和浮点常量放在引号内。 二进制数据必须以 0x 开头，货币数据必须以美元符号 ($) 开头。 默认值必须与列数据类型兼容。  
   
 ## <a name="remarks"></a>备注  
- 只能在当前数据库中创建 default 名称。 按照架构，在数据库内默认值名称必须是唯一的。 创建 default 时，使用 sp_bindefault  将它绑定到列或别名数据类型。  
+ 只能在当前数据库中创建 default 名称。 按照架构，在数据库内默认值名称必须是唯一的。 创建 default 时，使用 sp_bindefault**** 将它绑定到列或别名数据类型。  
   
- 如果 default 与其绑定到的列不兼容，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 便会在尝试插入 default 值时生成错误消息。 例如，N/A 无法用作数值  列的 default。  
+ 如果 default 与其绑定到的列不兼容，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 便会在尝试插入 default 值时生成错误消息。 例如，N/A 无法用作数值**** 列的 default。  
   
  如果 default 值对于它绑定到的列而言太长，值便会遭截断。  
   
  无法在单个批处理中结合使用 CREATE DEFAULT 语句与其他 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
   
- 必须先删除 default，然后才能创建同名的新 default。 此外，必须先通过执行 sp_unbindefault  来解除绑定 default，然后才能删除它。  
+ 必须先删除 default，然后才能创建同名的新 default。 此外，必须先通过执行 sp_unbindefault**** 来解除绑定 default，然后才能删除它。  
   
  如果列同时有默认值以及与之关联的规则，则默认值不能违反该规则。 永远不会插入与规则冲突的默认值，每次试图插入这样的默认值时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 都会生成错误消息。  
   
@@ -81,10 +82,10 @@ constant_expression
   
 |列定义|没有输入项，没有默认值|没有输入项，有默认值|输入 NULL，没有默认值|输入 NULL，有默认值|  
 |-----------------------|--------------------------|-----------------------|----------------------------|-------------------------|  
-|**NULL**|Null|default|Null|Null|  
-|**NOT NULL**|错误|default|error|error|  
+|**NULL**|Null|默认值|Null|Null|  
+|**NOT NULL**|错误|默认值|error|error|  
   
- 若要重命名默认值，请使用 sp_rename  。 若要获得默认值的报告，请使用 sp_help  。  
+ 若要重命名默认值，请使用 sp_rename****。 若要获得默认值的报告，请使用 sp_help****。  
   
 ## <a name="permissions"></a>权限  
  若要使用 CREATE DEFAULT，用户至少必须在当前数据库中拥有 CREATE DEFAULT 权限，并对在其中创建 default 的架构拥有 ALTER 权限。  

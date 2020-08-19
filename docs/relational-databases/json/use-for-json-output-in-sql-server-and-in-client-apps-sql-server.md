@@ -1,4 +1,5 @@
 ---
+description: 在 SQL Server 和客户端应用中使用 FOR JSON 输出 (SQL Server)
 title: 在 SQL Server 和客户端应用中使用 FOR JSON 输出
 ms.date: 06/03/2020
 ms.prod: sql
@@ -13,17 +14,17 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 882a5e5aaee3bacf6d27866d388f161a59c0086b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0c5382b9a4db71cffc86ee1a9d5520adda63d6fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755742"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424149"
 ---
 # <a name="use-for-json-output-in-sql-server-and-in-client-apps-sql-server"></a>在 SQL Server 和客户端应用中使用 FOR JSON 输出 (SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-下面的示例演示了在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或客户端应用中使用 FOR JSON 子句或其 JSON 输出的几种方式。  
+下面的示例演示了在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或客户端应用中使用 FOR JSON 子句或其 JSON 输出的几种方式****。  
   
 ## <a name="use-for-json-output-in-sql-server-variables"></a>在 SQL Server 变量中使用 FOR JSON 输出  
 FOR JSON 子句的输出类型为 NVARCHAR(MAX)，因此可以将它赋给任何变量，如下面的示例中所示。  

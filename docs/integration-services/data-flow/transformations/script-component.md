@@ -1,4 +1,5 @@
 ---
+description: 脚本组件
 title: 脚本组件 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e26918f5b545068ad5e121452dc704f7d72abe35
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9fdad63c6b5d97d9b6b8193babc67ad8a57a32f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919503"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425739"
 ---
 # <a name="script-component"></a>脚本组件
 
@@ -205,7 +206,7 @@ ms.locfileid: "86919503"
  **属性**  
  查看和修改脚本转换的属性。 显示的许多属性是只读的。 您可以修改以下属性：  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**说明**|说明脚本转换的用途。|  
 |**LocaleID**|指定区域设置，以便为排序以及日期和时间转换提供区域特定的信息。|  

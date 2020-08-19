@@ -1,4 +1,5 @@
 ---
+description: catalog.set_customized_logging_level_value
 title: catalog.set_customized_logging_level_value | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: d83fb763-c7c6-4e20-bd10-0f995598b198
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e0eb4147d63c18b910405d3f9b7db3939d44c28f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3f5e101e0413381a2b633e758e0d67a0c4c8167b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912882"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425149"
 ---
 # <a name="catalogset_customized_logging_level_value"></a>catalog.set_customized_logging_level_value 
 
@@ -32,22 +33,22 @@ catalog.set_customized_logging_level_value [ @level_name = ] level_name
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @level_name = ] level_name   
+ [ @level_name = ] level_name**  
  现有自定义日志记录级别的名称。  
   
- level_name 为 nvarchar(128)   。  
+ level_name 为 nvarchar(128)******。  
   
- [ @property_name = ] property_name   
- 要更改的属性的名称。 有效值为 PROFILE 和 EVENTS   。  
+ [ @property_name = ] property_name**  
+ 要更改的属性的名称。 有效值为 PROFILE 和 EVENTS********。  
   
- property_name 为 nvarchar(128)   。  
+ property_name 为 nvarchar(128)******。  
   
- [ @property_value = ] property_value   
+ [ @property_value = ] property_value**  
  指定自定义日志记录级别的指定属性的新值。  
   
  有关配置文件和事件的有效值列表，请参阅 [catalog.create_customized_logging_level](../../integration-services/system-stored-procedures/catalog-create-customized-logging-level.md)。  
   
- property_value 为 bigint   。  
+ property_value 为 bigint******。  
   
 ## <a name="remarks"></a>备注  
   

@@ -1,5 +1,6 @@
 ---
-title: CalculationPassValue （MDX） |Microsoft Docs
+description: CalculationPassValue (MDX)
+title: CalculationPassValue (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ae667d2cecb65f2525aaf855d3d1b70d40a59b21
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 98d30326b709f7bd651b7941e48d412a7b875ffd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68016872"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425039"
 ---
 # <a name="calculationpassvalue-mdx"></a>CalculationPassValue (MDX)
 
@@ -41,10 +42,10 @@ CalculationPassValue(String_Expression ,Pass_Value [, ABSOLUTE | RELATIVE [,ALL]
  指定计算传递数的有效数值表达式。  
   
  ABSOLUTE  
- 一个访问标志值，指定*Pass_Value*参数包含计算传递的从零开始的索引。 如果未指定访问标志值，则 ABSOLUTE 将作为默认访问标志值。  
+ 一个访问标志值，指定 *Pass_Value* 参数包含计算传递的从零开始的索引。 如果未指定访问标志值，则 ABSOLUTE 将作为默认访问标志值。  
   
  RELATIVE  
- 一个访问标志值，指定*Pass_Value*参数包含触发计算计算传递的相对偏移量。 如果偏移量解析为某个小于 0 的计算传递索引，则使用计算传递 0，并且不会出错。  
+ 一个访问标志值，指定 *Pass_Value* 参数包含触发计算计算传递的相对偏移量。 如果偏移量解析为某个小于 0 的计算传递索引，则使用计算传递 0，并且不会出错。  
   
  ALL  
  如果设置此标志，则除了存储引擎加载的值外，其余值均为空值。 如果未设置此标志，则聚合这些值而不进行任何计算。  
@@ -54,10 +55,10 @@ CalculationPassValue(String_Expression ,Pass_Value [, ABSOLUTE | RELATIVE [,ALL]
   
  如果提供了字符串表达式，则函数通过计算指定计算传递中的指定 MDX 字符串表达式，并根据需要通过访问标志和访问标志修饰符进行修改来返回字符串值 *。*  
   
- 利用中[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的自动递归解决方法，此函数不太实用。  
+ 利用中的自动递归解决方法 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，此函数不太实用。  
   
 > [!NOTE]  
->  只有管理员才能在 MDX 脚本中使用**CalculationPassValue**函数。 如果在不具有管理员特权的角色上下文中运行包含此函数的 MDX 脚本，则会发生错误。  
+>  只有管理员才能在 MDX 脚本中使用 **CalculationPassValue** 函数。 如果在不具有管理员特权的角色上下文中运行包含此函数的 MDX 脚本，则会发生错误。  
   
 ## <a name="see-also"></a>另请参阅  
  [CalculationCurrentPass &#40;MDX&#41;](../mdx/calculationcurrentpass-mdx.md)   

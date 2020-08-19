@@ -1,4 +1,5 @@
 ---
+description: 在运行时构造的 SQL 语句
 title: 在运行时构造的 SQL 语句 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f6554486-d49c-436a-82e3-4c158d26acd8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 795335be2a2a3aab1be6dac26bf6d213161fe42e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fff9f7a4e579ce4e1d1177b8f5fa67f7d13a4fdc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301968"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424549"
 ---
 # <a name="sql-statements-constructed-at-run-time"></a>在运行时构造的 SQL 语句
 执行即席分析的应用程序通常会在运行时生成 SQL 语句。 例如，电子表格可能允许用户选择要从中检索数据的列：  
@@ -70,6 +71,6 @@ int main() {
   
  通常在运行时构造 SQL 语句的另一类应用程序是应用程序开发环境。 但是，它们构造的语句在生成的应用程序中进行了硬编码，它们通常可以进行优化和测试。  
   
- 在运行时构造 SQL 语句的应用程序可以为用户提供极大的灵活性。 正如前面的示例所示，该示例甚至不**支持在运行**时构造 SQL 语句这样的常见**操作，而**是在运行时构造 SQL 语句，这比硬编码语句要复杂得多。 而且，测试此类应用程序会产生问题，因为它们可以构造任意数量的 SQL 语句。  
+ 在运行时构造 SQL 语句的应用程序可以为用户提供极大的灵活性。 正如前面的示例所示，该示例甚至不 **支持在运行** 时构造 SQL 语句这样的常见 **操作，而** 是在运行时构造 SQL 语句，这比硬编码语句要复杂得多。 而且，测试此类应用程序会产生问题，因为它们可以构造任意数量的 SQL 语句。  
   
  在运行时构造 SQL 语句的一个潜在缺点是，使用硬编码语句构造语句所用的时间要多得多。 幸运的是，这种情况并不是很重要。 此类应用程序通常是用户界面密集型，与用户输入条件的时间相比，应用程序用来构造 SQL 语句的时间通常较小。

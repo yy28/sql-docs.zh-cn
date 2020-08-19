@@ -1,4 +1,5 @@
 ---
+description: “重新组织索引”任务
 title: “重新组织索引”任务 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9ed87861-e5c3-4fcd-8760-d112f4c0af0c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 74e3b6d54dfddc976080a5a530d89905524887bc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d94d1cd62cc9fb8e367b112690de8331b6e2e5c1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921161"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425929"
 ---
 # <a name="reorganize-index-task"></a>“重新组织索引”任务
 
@@ -30,7 +31,7 @@ ms.locfileid: "86921161"
 
   “重新组织索引”任务重新组织 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库表和视图中的索引。 有关管理索引的详细信息，请参阅 [重新组织和重新生成索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)。  
   
- 通过使用“重新组织索引”任务，包可以重新组织单个数据库或多个数据库中的索引。 如果此任务仅重新组织单个数据库中的索引，则可以选择任务要重新组织其索引的视图或表。 “重新组织索引”任务还包含压缩大型对象数据的选项。 大型对象数据指具有 **image**、 **text**、 **ntext**、 **varchar(max)** 、 **nvarchar(max)** 、 **varbinary(max)** 或 **xml** 数据类型的数据。 有关详细信息，请参阅[数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)。  
+ 通过使用“重新组织索引”任务，包可以重新组织单个数据库或多个数据库中的索引。 如果此任务仅重新组织单个数据库中的索引，则可以选择任务要重新组织其索引的视图或表。 “重新组织索引”任务还包含压缩大型对象数据的选项。 大型对象数据指具有 **image**、 **text**、 **ntext**、 **varchar(max)**、 **nvarchar(max)**、 **varbinary(max)** 或 **xml** 数据类型的数据。 有关详细信息，请参阅[数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)。  
   
  “重新组织索引”任务封装了 Transact-SQL ALTER INDEX 语句。 如果选择压缩大型对象数据，则该语句使用 REORGANIZE WITH (LOB_COMPACTION = ON) 子句，否则 LOB_COMPACTION 将设置为 OFF。 有关详细信息，请参阅 [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)。  
   

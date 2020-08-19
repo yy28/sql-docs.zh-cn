@@ -1,4 +1,5 @@
 ---
+description: WMI 连接管理器
 title: WMI 连接管理器 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fbfa4ba7-3d0d-4d6b-94ad-50741a88d03d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0efcca67f53415d34cd8522fa4a59a4ddd2dab79
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0bb36af50d48fb0155c85a1662b4dd4780f3f03d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918231"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425949"
 ---
 # <a name="wmi-connection-manager"></a>WMI 连接管理器
 
@@ -30,7 +31,7 @@ ms.locfileid: "86918231"
 
   WMI 连接管理器使得包可以使用 Windows Management Instrumentation (WMI) 来管理企业环境中的信息。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的 Web 服务任务使用 WMI 连接管理器。  
   
- 将 WMI 连接管理器添加到包时，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 会创建将在运行时决定 WMI 连接的连接管理器，设置该连接管理器的属性，并将该连接管理器添加到包的 Connections 集合  。 该连接管理器的 **ConnectionManagerType** 属性设置为 **WMI**。  
+ 将 WMI 连接管理器添加到包时，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 会创建将在运行时决定 WMI 连接的连接管理器，设置该连接管理器的属性，并将该连接管理器添加到包的 Connections 集合****。 该连接管理器的 **ConnectionManagerType** 属性设置为 **WMI**。  
   
 ## <a name="configuration-of-the-wmi-connection-manager"></a>配置 WMI 连接管理器  
  可按下列方式配置 WMI 连接管理器：  
@@ -48,7 +49,7 @@ ms.locfileid: "86918231"
  有关以编程方式配置连接管理器的信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以编程方式添加连接](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)项目。  
   
 ## <a name="wmi-connection-manager-editor"></a>WMI 连接管理器编辑器
-  可以使用“WMI 连接管理器”  对话框指定到服务器的 Microsoft Windows Management Instrumentation (WMI) 连接。  
+  可以使用“WMI 连接管理器”**** 对话框指定到服务器的 Microsoft Windows Management Instrumentation (WMI) 连接。  
   
  若要了解有关 WMI 连接管理器的详细信息，请参阅 [WMI Connection Manager](../../integration-services/connection-manager/wmi-connection-manager.md)。  
   
@@ -59,7 +60,7 @@ ms.locfileid: "86918231"
  **说明**  
  描述连接管理器。 最好按照连接管理器的用途对其进行说明，使包的说明一目了然，且更便于维护。  
   
- **服务器名称**  
+ 服务器名称  
  提供要进行 WMI 连接的服务器的名称。  
   
  **Namespace**  
@@ -74,7 +75,7 @@ ms.locfileid: "86918231"
  **密码**  
  如果不使用 Windows 身份验证，则必须提供连接所用的密码。  
   
- **Test**  
+ **测试**  
  测试连接管理器设置。  
   
 ## <a name="see-also"></a>另请参阅  

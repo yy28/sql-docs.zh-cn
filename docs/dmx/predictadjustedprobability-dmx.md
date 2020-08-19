@@ -1,5 +1,6 @@
 ---
-title: PredictAdjustedProbability （DMX） |Microsoft Docs
+description: PredictAdjustedProbability (DMX)
+title: PredictAdjustedProbability (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 735df047307f78c238fbf29669f0e0b1e0933e37
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: e923e96aec1f001818f5dcff300de0d13af2f5a5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971552"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426179"
 ---
 # <a name="predictadjustedprobability-dmx"></a>PredictAdjustedProbability (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -27,14 +28,14 @@ ms.locfileid: "86971552"
 PredictAdjustedProbability(<scalar column reference>, [<predicted state>])  
 ```  
   
-## <a name="applies-to"></a>应用到  
+## <a name="applies-to"></a>适用于  
  标量列。  
   
 ## <a name="return-type"></a>返回类型  
  一个标量值。  
   
 ## <a name="remarks"></a>备注  
- 如果未提供预测状态，将使用具有最大可预测概率的状态，不包括缺少状态存储桶。 若要包含缺少的状态存储桶，请将设置 \<predicted state> 为**INCLUDE_NULL**。  
+ 如果未提供预测状态，将使用具有最大可预测概率的状态，不包括缺少状态存储桶。 若要包含缺少的状态存储桶，请将设置 \<predicted state> 为 **INCLUDE_NULL**。  
   
  若要为缺少的状态返回调整后的概率，请将设置 \<predicted state> 为 NULL。  
   
@@ -60,6 +61,6 @@ NATURAL PREDICTION JOIN
 ## <a name="see-also"></a>另请参阅  
  [数据挖掘扩展插件 &#40;DMX&#41; 函数参考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [函数 &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [&#40;DMX&#41;的常规预测函数](../dmx/general-prediction-functions-dmx.md)  
+ [&#40;DMX&#41;的常规预测函数 ](../dmx/general-prediction-functions-dmx.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Union All 转换
 title: Union All 转换 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 942e4b90-9c41-4e9c-a6f3-80b3afe57f2f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 45b21ea454e7c40f7af28863802d1678b3095d50
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9cb32c68f05e4be6b25d0fc20ae088aa6760bfd6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920326"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425619"
 ---
 # <a name="union-all-transformation"></a>Union All 转换
 
@@ -56,7 +57,7 @@ ms.locfileid: "86920326"
   可以使用 **“Union All 转换编辑器”** 对话框，将多个输入行集合并到单个输出行集中。 通过在数据流中包含 Union All 转换，可以从多个数据流合并数据、通过嵌套 Union All 转换来创建复杂数据集、以及在更正数据中的错误之后重新合并行。  
   
 ### <a name="options"></a>选项  
- **输出列的名称**  
+ **输出列名称**  
  为每一列键入一个别名。 默认值为第一个（引用）输入中输入列的名称；不过，您也可以任选一个唯一的描述性名称。  
   
  **Union All 输入 1**  
@@ -66,6 +67,6 @@ ms.locfileid: "86920326"
  从第二个或其他输入中可用输入列的列表中选择。 映射的列的元数据必须匹配。  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [使用 Union All 转换来合并数据](../../../integration-services/data-flow/transformations/merge-data-by-using-the-union-all-transformation.md)  
+ [通过使用 Union All 转换来合并数据](../../../integration-services/data-flow/transformations/merge-data-by-using-the-union-all-transformation.md)  
   
   

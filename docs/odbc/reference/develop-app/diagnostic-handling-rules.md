@@ -1,4 +1,5 @@
 ---
+description: 诊断处理规则
 title: 诊断处理规则 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 74387c3a-d6b3-4c35-b209-b9612602b20a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9f7f9d19a5a369e9da0efbc0d62f8e556b0597c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3112f6db31a4369ec880e31a7bb8be6e15071bed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305838"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424659"
 ---
 # <a name="diagnostic-handling-rules"></a>诊断处理规则
-以下规则控制**SQLGetDiagRec**和**SQLGetDiagField**中的诊断处理。  
+以下规则控制 **SQLGetDiagRec** 和 **SQLGetDiagField**中的诊断处理。  
   
  对于所有 ODBC 组件：  
   
@@ -51,9 +52,9 @@ ms.locfileid: "81305838"
   
  对于与驱动程序管理器进行交互的 ODBC 组件：  
   
--   必须初始化**SQLGetDiagRec**和**SQLGetDiagField**的输出参数。  
+-   必须初始化 **SQLGetDiagRec** 和 **SQLGetDiagField**的输出参数。  
   
--   调用该函数时，必须将诊断信息格式化并返回到**SQLGetDiagRec**和**SQLGetDiagField**的输出参数。  
+-   调用该函数时，必须将诊断信息格式化并返回到 **SQLGetDiagRec** 和 **SQLGetDiagField** 的输出参数。  
   
  对于除驱动程序管理器之外的一个 ODBC 组件：  
   

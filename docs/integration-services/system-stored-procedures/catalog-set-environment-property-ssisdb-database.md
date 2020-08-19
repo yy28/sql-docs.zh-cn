@@ -1,4 +1,5 @@
 ---
+description: catalog.set_environment_property（SSISDB 数据库）
 title: catalog.set_environment_property（SSISDB 数据库）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: a345675b-d32e-4624-96cf-ec656730b114
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 71d673ddb0ebb66b22cee7651bc74bd44cf7e089
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ba69c12d93b683afa8d11669523153dc6d79d0c6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912881"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425139"
 ---
 # <a name="catalogset_environment_property-ssisdb-database"></a>catalog.set_environment_property（SSISDB 数据库）
 
@@ -42,11 +43,11 @@ catalog.set_environment_property [ @folder_name = ] folder_name
  [ @environment_name = ] environment_name   
  环境的名称。 environment_name 为 nvarchar(128)   。  
   
- [ @property_name = ] property_name   
- 环境属性的名称。 property_name 为 nvarchar(128)   。  
+ [ @property_name = ] property_name**  
+ 环境属性的名称。 property_name 为 nvarchar(128)******。  
   
- [ @property_value = ] property_value   
- 环境属性的值。 property_value 为 nvarchar(1024)   。  
+ [ @property_value = ] property_value**  
+ 环境属性的值。 property_value 为 nvarchar(1024)******。  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）  

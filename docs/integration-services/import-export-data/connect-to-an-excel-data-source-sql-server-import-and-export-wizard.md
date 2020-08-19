@@ -1,4 +1,5 @@
 ---
+description: 连接到 Excel 数据源（SQL Server 导入和导出向导）
 title: 连接到 Excel 数据源（SQL Server 导入和导出向导）| Microsoft Docs
 ms.custom: ''
 ms.date: 04/02/2018
@@ -9,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 43fbaca0-36d8-4583-9056-af7010209b87
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3a017d8de23da9297062e1d232ea86ad2aabb25a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 39ff753dec9f3f918fbd21dea3b04306feba307a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919993"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425299"
 ---
 # <a name="connect-to-an-excel-data-source-sql-server-import-and-export-wizard"></a>连接到 Excel 数据源（SQL Server 导入和导出向导）
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-本文介绍如何从 SQL Server 导入和导出向导的“选择数据源”页或“选择目标”页连接到 Microsoft Excel 数据源    。
+本文介绍如何从 SQL Server 导入和导出向导的“选择数据源”页或“选择目标”页连接到 Microsoft Excel 数据源************。
 
 下面的屏幕截图显示到 Microsoft Excel 工作簿的示例连接。
 
@@ -42,10 +43,10 @@ ms.locfileid: "86919993"
 -   针对本地计算机上的文件，指定 **C:\\MyData.xlsx**。
 -   针对网络共享上的文件，指定 **\\\\Sales\\Database\\Northwind.xlsx**。
 
-或单击 **“浏览”** 。  
+或单击 **“浏览”**。  
   
  **“浏览”**  
- 通过使用“打开”  对话框定位电子表格。  
+ 通过使用“打开”**** 对话框定位电子表格。  
 
 > [!NOTE]
 > 该向导无法打开受密码保护的 Excel 文件。

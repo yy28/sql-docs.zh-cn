@@ -1,4 +1,5 @@
 ---
+description: catalog.executions（SSISDB 数据库）
 title: catalog.executions（SSISDB 数据库）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 879f13b0-331d-4dee-a079-edfaca11ae5b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 33a7603502d1b43ea7cfdd1fa5f9c84720705ade
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 438d551f45447b0b03b075576af9cffb2bde8a36
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912546"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425099"
 ---
 # <a name="catalogexecutions-ssisdb-database"></a>catalog.executions（SSISDB 数据库）
 
@@ -34,7 +35,7 @@ ms.locfileid: "86912546"
 |execution_id|**bigint**|执行实例的唯一标识符 (ID)。|  
 |folder_name|**sysname(nvarchar(128))**|包含项目的文件夹的名称。|  
 |project_name|**sysname(nvarchar(128))**|项目的名称。|  
-|package_name|nvarchar(260) |在执行过程中启动的第一个包的名称。|  
+|package_name|**nvarchar(260)**|在执行过程中启动的第一个包的名称。|  
 |reference_id|**bigint**|执行实例引用的环境。|  
 |reference_type|**char(1)**|指示环境是可以位于与项目相同的文件夹中（相对引用），还是位于其他文件夹中（绝对引用）中。 如果值为 `R`，则通过使用相对引用定位环境。 如果值为 `A`，则通过使用绝对引用定位环境。|  
 |environment_folder_name|**nvarchar(128)**|包含环境的文件夹的名称。|  
@@ -45,7 +46,7 @@ ms.locfileid: "86912546"
 |use32bitruntime|**bit**|指示是否应使用 32 位运行时在 64 位操作系统上运行包。 如果值为 `1`则使用 32 位运行时进行执行。 如果值为 `0`，则使用 64 位运行库来运行执行过程。|  
 |object_type|**smallint**|对象的类型。 该对象可能是一个项目 (`20`) 或包 (`30`)。|  
 |object_id|**bigint**|操作影响的对象的 ID。|  
-|status|**int**|操作状态。 可能的值是已创建 (`1`)、正在运行 (`2`)、已取消 (`3`)、失败 (`4`)、挂起 (`5`)、意外结束 (`6`)、已成功 (`7`)、停止 (`8`) 和已完成 (`9`)。|  
+|状态|**int**|操作的状态。 可能的值是已创建 (`1`)、正在运行 (`2`)、已取消 (`3`)、失败 (`4`)、挂起 (`5`)、意外结束 (`6`)、已成功 (`7`)、停止 (`8`) 和已完成 (`9`)。|  
 |start_time|**datetimeoffset**|启动执行实例的时间。|  
 |end_time|**datetimeoffsset**|结束执行实例的时间。|  
 |caller_sid|**varbinary(85)**|如果是使用 Windows 身份验证进行登录的，则为用户的安全 ID (SID)。|  

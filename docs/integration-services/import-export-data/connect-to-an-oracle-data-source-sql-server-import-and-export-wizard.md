@@ -1,4 +1,5 @@
 ---
+description: 连接到 Oracle 数据源（SQL Server 导入和导出向导）
 title: 连接到 Oracle 数据源（SQL Server 导入和导出向导）| Microsoft Docs
 ms.custom: ''
 ms.date: 06/29/2020
@@ -9,25 +10,25 @@ ms.topic: conceptual
 ms.assetid: b0bd1f5a-34dd-4be3-9ac8-f9f87727781b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 202527022ccc78a4f0c89bb3cfbfe775ecde207b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 589010cedb022bfdaf22590eaeb92bea76b54420
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914111"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425269"
 ---
 # <a name="connect-to-an-oracle-data-source-sql-server-import-and-export-wizard"></a>连接到 Oracle 数据源（SQL Server 导入和导出向导）
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-本主题介绍如何从 SQL Server 导入和导出向导的“选择数据源”或“选择目标”页连接到 Oracle 数据源    。 有多种数据提供程序可用来连接 Oracle。
+本主题介绍如何从 SQL Server 导入和导出向导的“选择数据源”或“选择目标”页连接到 Oracle 数据源************。 有多种数据提供程序可用来连接 Oracle。
 
 > [!IMPORTANT]
 > 此 Microsoft 文章不涵盖 Oracle 数据库连接相关详细要求和先决条件。 本文假定已安装 Oracle 客户端软件，并且可以成功连接目标 Oracle 数据库。 有关详细信息，请咨询 Oracle 数据库管理员或参阅 Oracle 文档。
 
 ## <a name="connect-to-oracle-with-the-net-framework-data-provider-for-oracle"></a>使用用于 Oracle 的 .NET Framework 数据提供程序连接到 Oracle
-在向导的“选择数据源”页或“选择目标”页上选择用于 Oracle 的 .NET Framework 数据提供程序之后，页面显示用于提供程序的选项的分组列表    。 其中许多是不友好名称和不熟悉的设置。 幸运的是，只需提供两条或三条信息。 可以忽略其他设置的默认值。
+在向导的“选择数据源”页或“选择目标”页上选择用于 Oracle 的 .NET Framework 数据提供程序之后，页面显示用于提供程序的选项的分组列表************。 其中许多是不友好名称和不熟悉的设置。 幸运的是，只需提供两条或三条信息。 可以忽略其他设置的默认值。
 
 > [!NOTE]
 > 无论 Oracle 是源还是目标，此数据提供程序的连接选项都相同。 也就是说，在向导的“选择数据源”页和“选择目标”页上看到的选项是相同的   。
@@ -35,15 +36,15 @@ ms.locfileid: "86914111"
 |必填信息|用于 Oracle 的 .Net Framework 数据提供程序属性|
 |---|---|
 |服务器名称|**数据源**|
-|身份验证（登录）信息|“用户 ID”和“密码”或“集成安全性”   |
+|身份验证（登录）信息|“用户 ID”和“密码”或“集成安全性”************|
 |||
 
-无须在列表的“ConnectionString”字段中输入连接字符串  。 为 Oracle 服务器名称（“数据源”）输入单个值和登录信息后，向导会根据单个属性及其值组合出连接字符串  。 
+无须在列表的“ConnectionString”字段中输入连接字符串****。 为 Oracle 服务器名称（“数据源”）输入单个值和登录信息后，向导会根据单个属性及其值组合出连接字符串****。 
 
 ![使用 .NET 提供程序连接到 Oracle](../../integration-services/import-export-data/media/connect-to-oracle-with-net-provider.jpg)
 
 ## <a name="connect-to-oracle-with-the-microsoft-odbc-driver-for-oracle"></a>使用用于 Oracle 的 Microsoft ODBC 驱动程序连接到 Oracle
-ODBC 驱动程序不在数据源的下拉列表中列出。 要使用 ODBC 驱动程序连接，请首先在“选择数据源”页或“选择目标”页上选择“用于ODBC 的 .NET Framework 数据提供程序”作为数据源    。 此提供程序充当 ODBC 驱动程序的包装器。
+ODBC 驱动程序不在数据源的下拉列表中列出。 要使用 ODBC 驱动程序连接，请首先在“选择数据源”页或“选择目标”页上选择“用于ODBC 的 .NET Framework 数据提供程序”作为数据源************。 此提供程序充当 ODBC 驱动程序的包装器。
 
 下面是选择用于 ODBC 的 .NET Framework 数据提供程序后随即显示的常规屏幕。
 
@@ -60,12 +61,12 @@ ODBC 驱动程序不在数据源的下拉列表中列出。 要使用 ODBC 驱�
 > 获取有关组合出正确连接字符串的帮助。 或提供现有 DSN（数据源名称）或新建一个，而不是提供连接字符串。 有关这些选项的详细信息，请参阅[连接到 ODBC 数据源](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)。
 
 **驱动程序**  
-用于 Oracle 的 Microsoft ODBC  驱动程序的名称。
+用于 Oracle 的 Microsoft ODBC**** 驱动程序的名称。
 
 **Server**  
 Oracle 服务器的名称。 
 
-Uid 和 Pwd      
+Uid 和 Pwd********   
 要连接的用户 ID 和密码。
 
 ### <a name="connection-string-format"></a>连接字符串格式

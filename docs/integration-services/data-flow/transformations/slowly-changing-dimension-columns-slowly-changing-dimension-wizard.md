@@ -1,4 +1,5 @@
 ---
+description: 渐变维度列（渐变维度向导）
 title: 渐变维度列（渐变维度向导）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 36de99d5-5368-48e0-b876-17e9c6862c6c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 92ae77d412ad318a01b437382b6d4557811c2b33
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8b27c9c0e575775449d2f3a25c5a20bd6667b5cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919474"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425719"
 ---
 # <a name="slowly-changing-dimension-columns-slowly-changing-dimension-wizard"></a>渐变维度列（渐变维度向导）
 
@@ -33,10 +34,10 @@ ms.locfileid: "86919474"
  从列表中选择维度列。  
   
  **更改类型**  
- 选择“固定的属性”，或从两种变化的属性类型中选择一种类型。  在不需要更改列中的值时，请使用 **“固定的属性”** ；设置后， [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 会将更改视为错误。 若要使用更改后的值覆盖现有的值，请使用 **“变化的属性”** 。 若要在新记录中保存更改后的值，并将以前的记录标记为已过时，请使用 **“历史属性”** 。  
+ 选择“固定的属性”，或从两种变化的属性类型中选择一种类型。**** 在不需要更改列中的值时，请使用 **“固定的属性”** ；设置后， [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 会将更改视为错误。 若要使用更改后的值覆盖现有的值，请使用 **“变化的属性”** 。 若要在新记录中保存更改后的值，并将以前的记录标记为已过时，请使用 **“历史属性”** 。  
   
  **删除**  
- 选择一个维度列，通过单击“删除”可以将其从映射列的列表中删除。   
+ 选择一个维度列，通过单击“删除”可以将其从映射列的列表中删除。****  
   
 ## <a name="see-also"></a>另请参阅  
  [使用渐变维度向导配置输出](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  

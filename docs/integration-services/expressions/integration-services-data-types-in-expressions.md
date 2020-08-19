@@ -1,4 +1,5 @@
 ---
+description: 表达式中的 Integration Services 数据类型
 title: 表达式中的 Integration Services 数据类型 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ae5e95da6599c4af10513ec72194671ba71561b2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f1812ac61d34e5d2d25738cffed0b5caf117ee82
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914561"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425529"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>表达式中的 Integration Services 数据类型
 
@@ -32,7 +33,7 @@ ms.locfileid: "86914561"
   
  有关 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型和 Variant 数据类型到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型的映射的详细信息，请参阅 [集成服务数据类型](../../integration-services/data-flow/integration-services-data-types.md)。  
   
-## <a name="literals"></a>文字  
+## <a name="literals"></a>文本  
  此外，表达式还可以包含字符串、布尔值和数值。 有关将数值转换为数值 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型的详细信息，请参阅[文字 (SSIS)](../../integration-services/expressions/numeric-string-and-boolean-literals.md)。  
   
 ## <a name="strings"></a>字符串  
@@ -84,7 +85,7 @@ ms.locfileid: "86914561"
 >   
 >  若要避免错误或意外结果，不应编写依赖 **True** 和 **False**为特定数值的代码。 如果可能，应将布尔变量的使用限制为与其设计意图对应的逻辑值。  
   
- 有关详情，请参阅以下主题：  
+ 有关详细信息，请参阅下列主题：  
   
 -   [==（等于）（SSIS 表达式）](../../integration-services/expressions/equal-ssis-expression.md)  
   

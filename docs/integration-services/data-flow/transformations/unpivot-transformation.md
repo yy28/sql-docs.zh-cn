@@ -1,4 +1,5 @@
 ---
+description: 逆透视转换
 title: 逆透视转换 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f635c64b-a9c5-4f11-9c40-9cd9d5298c5d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d0a0d34a154b9b92258424718bb7cd62e4ed295e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e4dd81bf33b43f4adf73225faa199fd9c5f792fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914863"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425629"
 ---
 # <a name="unpivot-transformation"></a>逆透视转换
 
@@ -61,7 +62,7 @@ ms.locfileid: "86914863"
   可以使用 **“逆透视转换编辑器”** 对话框，选择要透视到行中的列以及指定数据列和新的透视值输出列。  
   
 > [!NOTE]  
->  本主题围绕 [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md) 中所述的“逆透视”应用场景，举例说明各选项的使用方法。  
+>   本主题围绕 [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md) 中所述的“逆透视”应用场景，举例说明各选项的使用方法。  
   
 ### <a name="options"></a>选项  
  **可用输入列**  

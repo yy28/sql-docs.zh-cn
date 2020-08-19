@@ -1,5 +1,6 @@
 ---
-title: PredictAssociation （DMX） |Microsoft Docs
+description: PredictAssociation (DMX)
+title: PredictAssociation (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a834c87c3febf0554ad07334000d62f1f9a93fee
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: b94af0ab8da71e5bf978852fd884d46b460715bc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86968141"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426149"
 ---
 # <a name="predictassociation-dmx"></a>PredictAssociation (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -29,21 +30,21 @@ ms.locfileid: "86968141"
 PredictAssociation(<table column reference>, option1, option2, n ...)  
 ```  
   
-## <a name="applies-to"></a>应用到  
+## <a name="applies-to"></a>适用于  
  包含可预测的嵌套表（包括关联和某些分类算法）的算法。 支持嵌套表的分类算法包括 [!INCLUDE[msCoName](../includes/msconame-md.md)] 决策树、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes 和 [!INCLUDE[msCoName](../includes/msconame-md.md)] 神经网络算法。  
   
 ## <a name="return-type"></a>返回类型  
  \<table expression>  
   
 ## <a name="remarks"></a>备注  
- **PredictAssociation**函数的选项包括 EXCLUDE_NULL、INCLUDE_NULL、包含、异（默认）、INPUT_ONLY、INCLUDE_STATISTICS 和 INCLUDE_NODE_ID。  
+ **PredictAssociation**函数的选项包括 EXCLUDE_NULL、INCLUDE_NULL、非独占 (默认) 、INPUT_ONLY、INCLUDE_STATISTICS 和 INCLUDE_NODE_ID。  
   
 > [!NOTE]  
 >  INCLUSIVE、EXCLUSIVE、INPUT_ONLY 和 INCLUDE_STATISTICS 只适用于表列引用；EXCLUDE_NULL 和 INCLUDE_NULL 只适用于标量列引用。  
   
- INCLUDE_STATISTICS 仅返回 **$Probability**和 **$AdjustedProbability**。  
+ INCLUDE_STATISTICS 仅返回 **$Probability** 和 **$AdjustedProbability**。  
   
- 如果指定了数字参数*n* ，则**PredictAssociation**函数将根据概率返回前 n 个最可能的值：  
+ 如果指定了数字参数 *n* ，则 **PredictAssociation** 函数将根据概率返回前 n 个最可能的值：  
   
 ```  
 PredictAssociation(colref, [$AdjustedProbability], n)  
@@ -52,7 +53,7 @@ PredictAssociation(colref, [$AdjustedProbability], n)
  如果包括 **$AdjustedProbability**，则该语句将返回基于 **$AdjustedProbability**的前*n*个值。  
   
 ## <a name="examples"></a>示例  
- 下面的示例使用**PredictAssociation**函数返回艾德公司数据库中最有可能一起销售的四个产品。  
+ 下面的示例使用 **PredictAssociation** 函数返回艾德公司数据库中最有可能一起销售的四个产品。  
   
 ```  
 SELECT  
@@ -79,6 +80,6 @@ SHAPE {
 ## <a name="see-also"></a>另请参阅  
  [数据挖掘扩展插件 &#40;DMX&#41; 函数参考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [函数 &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [&#40;DMX&#41;的常规预测函数](../dmx/general-prediction-functions-dmx.md)  
+ [&#40;DMX&#41;的常规预测函数 ](../dmx/general-prediction-functions-dmx.md)  
   
   

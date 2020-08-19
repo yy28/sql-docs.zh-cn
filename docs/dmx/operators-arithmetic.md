@@ -1,5 +1,6 @@
 ---
-title: 算术运算符（DMX） |Microsoft Docs
+description: 算术运算符 (DMX)
+title: 算术运算符 (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,21 +9,21 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c01879c7b99b1cc9c184513c1e95ec174d8f39d7
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 77b9f300859b6ce1250ed9d36a33a88a3dd12fe1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971595"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426189"
 ---
 # <a name="operators---arithmetic"></a>运算符 - 算术
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
-  可以在数据挖掘扩展插件（DMX）中使用算术运算符来实现中的算术计算 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，包括加、减、乘和除。  
+  可以在数据挖掘扩展插件中使用算术运算符， (DMX) 中的算术计算 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] （包括加、减、乘和除）。  
   
  下表标识了 DMX 支持的算术运算符。  
   
-|运算符|说明|  
+|操作员|描述|  
 |--------------|-----------------|  
 |[+ &#40;添加&#41; &#40;DMX&#41;](../dmx/add-dmx.md)|将两个数相加。|  
 |[-&#40;减去&#41; &#40;DMX&#41;](../dmx/subtract-dmx.md)|从一个数中减去另一个数。|  
@@ -44,8 +45,8 @@ ms.locfileid: "86971595"
  [数据挖掘扩展插件 &#40;DMX&#41; 语句参考](../dmx/data-mining-extensions-dmx-statements.md)   
  [数据挖掘扩展插件 &#40;DMX&#41; 语法约定](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [&#40;DMX&#41; 语法元素的数据挖掘扩展插件](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [&#40;DMX&#41;的表达式](../dmx/expressions-dmx.md)   
- [&#40;DMX&#41;的常规预测函数](../dmx/general-prediction-functions-dmx.md)   
+ [&#40;DMX&#41;的表达式 ](../dmx/expressions-dmx.md)   
+ [&#40;DMX&#41;的常规预测函数 ](../dmx/general-prediction-functions-dmx.md)   
  [运算符 &#40;DMX&#41;](../dmx/operators-dmx.md)   
  [DMX 预测查询的结构和用法](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [了解 DMX Select 语句](../dmx/understanding-the-dmx-select-statement.md)  

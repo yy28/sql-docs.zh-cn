@@ -1,4 +1,5 @@
 ---
+description: GRANT 类型权限 (Transact-SQL)
 title: GRANT 类型权限 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 14bd2fb3-1446-49c0-be87-c6a670317ed0
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4e03489c066d4ed25f5d3b15ba30e0ac24a4623b
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 1b9130d9da029cdd759a672de680270f0e2fb27b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484481"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426559"
 ---
 # <a name="grant-type-permissions-transact-sql"></a>GRANT 类型权限 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -65,7 +66,7 @@ GRANT permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
  WITH GRANT OPTION  
  指示该主体还可以向其他主体授予所指定的权限。  
   
- AS \<database_principal> 指定一个主体，执行该查询的主体从该主体获得授予该权限的权利。  
+ AS \<database_principal>：指定一个主体，执行该查询的主体从中获得授予权限的权利。  
   
  Database_user  
  指定数据库用户。  

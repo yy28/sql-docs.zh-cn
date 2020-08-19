@@ -1,4 +1,5 @@
 ---
+description: ALTER SERVICE (Transact-SQL)
 title: ALTER SERVICE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2b4608f7-bb2e-4246-aa29-b52c55995b3a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ed739b0994f6637729c2edf6a2f2da26097fbe44
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 8a99076d994a9866c9b6a0d0b6b434dcf30a04d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380960"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426789"
 ---
 # <a name="alter-service-transact-sql"></a>ALTER SERVICE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -51,10 +52,10 @@ ALTER SERVICE service_name
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- service_name   
+ service_name  
  要更改的服务的名称。 不能指定服务器、数据库和架构名称。  
   
- ON QUEUE [ schema_name.   ] queue_name   
+ ON QUEUE [ schema_name.__**** ] queue_name**  
  为此服务指定新队列。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 将此服务的所有消息从当前队列移动到新队列。  
   
  ADD CONTRACT *contract_name*  
@@ -69,7 +70,7 @@ ALTER SERVICE service_name
  若要更改服务的 AUTHORIZATION，请使用 ALTER AUTHORIZATION 语句。  
   
 ## <a name="permissions"></a>权限  
- 默认情况下，服务所有者、db_ddladmin 或 db_owner 固定数据库角色的成员以及 sysadmin 固定服务器角色的成员拥有更改服务的权限    。  
+ 默认情况下，服务所有者、db_ddladmin 或 db_owner 固定数据库角色的成员以及 sysadmin 固定服务器角色的成员拥有更改服务的权限************。  
   
 ## <a name="examples"></a>示例  
   

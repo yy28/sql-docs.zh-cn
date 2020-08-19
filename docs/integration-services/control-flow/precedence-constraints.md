@@ -1,4 +1,5 @@
 ---
+description: 优先约束
 title: 优先约束 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ba2b9f0e9dbf23eea54da531305553db712ad677
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ee2c1ffab719566875a7c9f7f6090a12aef5675f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921179"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425909"
 ---
 # <a name="precedence-constraints"></a>优先约束
 
@@ -94,9 +95,9 @@ ms.locfileid: "86921179"
   
      **“优先约束编辑器”** 将打开。  
   
-5.  在“求值运算”下拉列表中，选择求值运算。   
+5.  在“求值运算”下拉列表中，选择求值运算。****  
   
-6.  在“值”下拉列表中，选择优先可执行文件的执行结果。   
+6.  在“值”下拉列表中，选择优先可执行文件的执行结果。****  
   
 7.  如果求值运算使用表达式，请在 **“表达式”** 框中键入表达式，并单击 **“测试”** 来计算该表达式。  
   
@@ -105,7 +106,7 @@ ms.locfileid: "86921179"
   
 8.  如果将多个任务或容器连接到受约束的可执行文件，选择 **“逻辑与”** 可以指定前面所有可执行文件的执行结果必须为 **true**。 选择 **“逻辑或”** 可以指定只有一个执行结果的值必须为 **true**。  
   
-9. 单击 **“确定”** ，关闭 **“优先约束编辑器”** 。  
+9. 单击 **“确定”** ，关闭 **“优先约束编辑器”**。  
   
 10. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
 
@@ -114,16 +115,16 @@ ms.locfileid: "86921179"
   
 ### <a name="options"></a>选项  
  **求值运算**  
- 指定优先约束使用的求值运算。 运算包括：“约束”  、“表达式”  、“表达式和约束”  和“表达式或约束”  。  
+ 指定优先约束使用的求值运算。 运算包括：“约束”、“表达式”、“表达式和约束”和“表达式或约束”。  
   
  **值**  
- 指定约束值：“成功”  、“失败”  或“完成”  。  
+ 指定约束值：“成功”、“失败”或“完成”。  
   
 > [!NOTE]  
->  优先约束线的含义：绿色表示“成功”，突出显示表示“失败”，蓝色表示“完成”    。  
+>   优先约束线的含义：绿色表示 **“成功”**，突出显示表示 **“失败”**，蓝色表示 **“完成”**。  
   
  **表达式**  
- 如果使用运算“表达式”  、“表达式和约束”  或“表达式或约束”  ，则键入一个表达式或启动表达式生成器来创建表达式。 表达式的计算结果必须为布尔值。  
+ 如果使用运算“表达式”****、“表达式和约束”**** 或“表达式或约束”****，则键入一个表达式或启动表达式生成器来创建表达式。 表达式的计算结果必须为布尔值。  
   
  **Test**  
  验证表达式。  
@@ -146,15 +147,15 @@ ms.locfileid: "86921179"
   
 2.  在解决方案资源管理器中，双击该包将其打开。  
   
-3.  单击 **“控制流”** 选项卡。在“控制流”选项卡的设计图面上，右键单击优先约束，再单击“属性”。   在“属性”窗口中修改属性值。  
+3.  单击 **“控制流”** 选项卡。在“控制流”选项卡的设计图面上，右键单击优先约束，再单击“属性”。  在“属性”窗口中修改属性值。  
   
-4.  在“属性”窗口中，设置优先约束的下列读/写属性：   
+4.  在“属性”窗口中，设置优先约束的下列读/写属性：****  
   
     |读/写属性|配置操作|  
     |--------------------------|--------------------------|  
     |说明|提供说明。|  
     |EvalOp|选择一个求值运算。 如果选择了 **Expression**、 **ExpressionAndConstant**或 **ExpressionOrConstant** 运算，则可指定一个表达式。|  
-    |表达式|如果求值运算包含 and 表达式，则请提供一个表达式。 表达式的计算结果必须为布尔值。 有关表达式语言的详细信息，请参阅 [Integration Services (SSIS) 表达式](../../integration-services/expressions/integration-services-ssis-expressions.md)。|  
+    |Expression|如果求值运算包含 and 表达式，则请提供一个表达式。 表达式的计算结果必须为布尔值。 有关表达式语言的详细信息，请参阅 [Integration Services (SSIS) 表达式](../../integration-services/expressions/integration-services-ssis-expressions.md)。|  
     |LogicalAnd|设置 **LogicalAnd** ，以指定当有多个可执行文件优先于并且链接到受约束的可执行文件时，是否将此优先约束与其他优先约束一起计算。|  
     |名称|更新优先约束的名称。|  
     |ShowAnnotation|指定要使用的批注类型。 选择 **Never** 可以禁用批注；选择 **AsNeeded** 可以启用按需批注；选择 **ConstraintName** 可以使用 Name 属性的值自动进行批注；选择 **ConstraintDescription** 可以使用 Description 属性的值自动进行批注；选择 **ConstraintOptions** 可以使用 Value 和 Expression 属性的值自动进行批注。|  
@@ -172,7 +173,7 @@ ms.locfileid: "86921179"
   
 3.  单击 **“控制流”** 选项卡。  
   
-4.  在“控制流”  选项卡的设计图面上，右键单击优先约束，然后单击“成功”  、“失败”  或“完成”  。  
+4.  在“控制流”**** 选项卡的设计图面上，右键单击优先约束，然后单击“成功”****、“失败”**** 或“完成”****。  
   
 5.  若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
 
@@ -201,13 +202,13 @@ ms.locfileid: "86921179"
   
 3.  单击 **“控制流”** 选项卡。  
   
-4.  在“控制流”选项卡的设计图面上双击优先约束。  **“优先约束编辑器”** 将打开。  
+4.  在“控制流”选项卡的设计图面上双击优先约束。**** **“优先约束编辑器”** 将打开。  
   
-5.  在 **“求值运算”** 列表中选择 **“表达式”** 、 **“表达式和约束”** 或者 **“表达式或约束”** 。  
+5.  在 **“求值运算”** 列表中选择 **“表达式”**、 **“表达式和约束”** 或者 **“表达式或约束”** 。  
   
 6.  在 **“表达式”** 文本框中键入表达式，或启动表达式生成器来创建表达式。  
   
-7.  若要验证表达式语法，请单击 **“测试”** 。  
+7.  若要验证表达式语法，请单击 **“测试”**。  
   
 8.  若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
  
@@ -217,12 +218,12 @@ ms.locfileid: "86921179"
 |求值运算|约束的计算结果为|表达式的计算结果为|受约束的可执行文件运行|  
 |--------------------------|-----------------------------|-----------------------------|---------------------------------|  
 |约束|True|空值|True|  
-|约束|False|空值|False|  
-|表达式|空值|True|True|  
-|表达式|空值|False|False|  
+|约束|错误|空值|错误|  
+|Expression|空值|True|True|  
+|Expression|空值|False|False|  
 |约束和表达式|True|True|True|  
 |约束和表达式|True|False|False|  
-|约束和表达式|False|True|False|  
+|约束和表达式|False|True|错误|  
 |约束和表达式|False|False|False|  
 |约束或表达式|True|True|True|  
 |约束或表达式|True|False|True|  
@@ -233,29 +234,29 @@ ms.locfileid: "86921179"
 ## <a name="complex-constraint-scenarios-with-multiple-precedence-constraints"></a>具有多个优先约束的复杂约束方案 
 一个优先约束连接两个可执行文件：两个任务、两个容器或一个任务和一个容器。 它们被称为优先可执行文件和受约束的可执行文件。 受约束的可执行文件可具有多个优先约束。 有关详细信息，请参阅 [优先约束](../../integration-services/control-flow/precedence-constraints.md)。  
   
- 对约束进行分组以组合成复杂的约束方案，可使您在包中实现复杂的控制流。 例如，在下图中，一个 **Success** 约束将任务 D 链接到任务 A，一个 **Failure** 约束将任务 D 链接到任务 B，而一个 **Success** 约束将任务 D 链接到任务 C。 任务 D 和任务 A 之间、任务 D 和任务 B 之间，以及任务 D 和任务 C 之间的优先约束参与逻辑与  关系。 因此，任务 A 必须运行成功，任务 B 必须失败，并且任务 C 必须运行成功才能运行任务 D。  
+ 对约束进行分组以组合成复杂的约束方案，可使您在包中实现复杂的控制流。 例如，在下图中，一个 **Success** 约束将任务 D 链接到任务 A，一个 **Failure** 约束将任务 D 链接到任务 B，而一个 **Success** 约束将任务 D 链接到任务 C。 任务 D 和任务 A 之间、任务 D 和任务 B 之间，以及任务 D 和任务 C 之间的优先约束参与逻辑与 ** 关系。 因此，任务 A 必须运行成功，任务 B 必须失败，并且任务 C 必须运行成功才能运行任务 D。  
   
  ![按优先约束链接的任务](../../integration-services/control-flow/media/precedenceconstraints.gif "按优先约束链接的任务")  
   
 ### <a name="logicaland-property"></a>LogicalAnd 属性  
  如果任务或容器具有多个约束，则 **LogicalAnd** 属性指定一个优先约束是单独计算还是与其他约束一起计算。  
   
- 可以使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中的“优先约束编辑器”  设置 **LogicalAnd** 属性，也可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 提供的“属性”窗口中设置。  
+ 可以使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中的“优先约束编辑器”**** 设置 **LogicalAnd** 属性，也可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 提供的“属性”窗口中设置。  
 
 ## <a name="set-the-default-value-for-precedence-constraints"></a>设置优先约束的默认值  
 首次使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器时，优先约束的默认值为 **Success**。 按照下列步骤将 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器配置为使用不同的优先约束默认值。
   
 1.  打开 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。  
   
-2.  在“工具”  菜单上，单击“选项”  。  
+2.  在“工具”  菜单上，单击“选项” 。  
   
-3.  在 **“选项”** 对话框中，展开 **“商业智能设计器”** ，再展开 **“Integration Services 设计器”** 。  
+3.  在 **“选项”** 对话框中，展开 **“商业智能设计器”** ，再展开 **“Integration Services 设计器”**。  
   
-4.  单击 **“控制流自动连接”** ，并选择 **“将新形状连接到默认选中的形状”** 。  
+4.  单击 **“控制流自动连接”** ，并选择 **“将新形状连接到默认选中的形状”**。  
   
-5.  在下拉列表中，选择“对新形状使用‘失败’约束”或“对新形状使用‘完成’约束”。    
+5.  在下拉列表中，选择“对新形状使用‘失败’约束”或“对新形状使用‘完成’约束”。********  
   
-6.  单击“确定”。   
+6.  单击“确定”。  
   
 ## <a name="create-a-default-precedence-constraint"></a>创建默认优先约束  
   

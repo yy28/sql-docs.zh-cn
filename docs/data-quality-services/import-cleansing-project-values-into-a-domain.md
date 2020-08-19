@@ -1,4 +1,5 @@
 ---
+description: 将清理项目值导入到域中
 title: 将清理项目值导入到域中
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 8688d5d20f1b5ac600e75327725ab18e9f8dba1b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 06600482f843ecf014b5ec8648bc8079c871be6a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892392"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426349"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>将清理项目值导入到域中
 
@@ -58,7 +59,7 @@ ms.locfileid: "85892392"
   
     -   如果选择 **“从‘新建’选项卡中添加值”** ，则除了 **“正确”** 和 **“已更正”** 选项卡中的值之外，还将导入新建选项卡中的值。  
   
-    -   单击 **“确定”** 。  
+    -   单击“确定”。  
   
 6.  您将返回到 **“域值”** 选项卡；在值成功导入后，将显示一条消息。 **“值”** 表中将显示已导入的值，因此也是首次进入域中的值。  
   
@@ -68,7 +69,7 @@ ms.locfileid: "85892392"
   
 9. 若要搜索特定字符串，在 **“查找”** 文本框中输入该字符串。 单击向上或向下箭头可以逐一查看满足搜索条件的值。 这些值将突出显示为黄色。  
   
-10. 单击“完成”。  
+10. 单击“完成”  。  
   
     > [!NOTE]  
     >   有关使用 **“域值”** 选项卡上的值的详细信息，请参阅 [Change Domain Values](../data-quality-services/change-domain-values.md)。  

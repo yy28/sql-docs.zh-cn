@@ -1,4 +1,5 @@
 ---
+description: ^（位异或）（SSIS 表达式）
 title: ^（位异或）（SSIS 表达式）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 6ac53cab-29c4-4835-9f87-371b058b2f38
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 64e9e58118ab2922f73b5c4dbb1047f12ab02c7e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8887ddc1b7b7fab04a510d856f22e90723858f51
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923503"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425579"
 ---
 # <a name="-bitwise-exclusive-or-ssis-expression"></a>^（位异或）（SSIS 表达式）
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  对两个整数值执行“位异或”运算。 它会将第一个操作数的每一位与第二个操作数中对应的每一位进行比较。 如果一位是 0，另一对应位是 1，则相应结果位设置为 1。 如果两位都是 0 或两位都是 1，则相应结果位设置为 0。  
+  对两个整数值执行“位异或”运算。 它会将第一个操作数的每一位与第二个操作数中对应的每一位进行比较。 如果一个位是 0，另一个位是 1，则相应的结果位将设置为 1。 如果两位都是 0 或两位都是 1，则相应结果位设置为 0。  
   
  两个条件必须都为有符号的整数数据类型，或都为无符号的整数数据类型。  
   

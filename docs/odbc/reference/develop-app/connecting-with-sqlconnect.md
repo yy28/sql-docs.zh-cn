@@ -1,4 +1,5 @@
 ---
+description: 使用 SQLConnect 连接
 title: 与 SQLConnect 连接 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: b16319d2-2c2c-4341-abb5-caa9e17362b4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 25c1dca7324f73f6aacf472fb225a09424c73d3a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 96667de75dfbe9c521b5f5e74ec4c1b366da725d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294647"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424829"
 ---
 # <a name="connecting-with-sqlconnect"></a>使用 SQLConnect 连接
-**SQLConnect**是最简单的连接函数。 它需要数据源名称，并接受可选的用户 ID 和密码。 它适用于对数据源名称进行硬编码且不需要用户 ID 或密码的应用程序。 它也适用于想要控制自己的 "外观" 或没有用户界面的应用程序。 此类应用程序可以使用**SQLDataSources**生成数据源的列表、提示用户输入数据源、用户 ID 和密码，然后调用**SQLConnect**。  
+**SQLConnect** 是最简单的连接函数。 它需要数据源名称，并接受可选的用户 ID 和密码。 它适用于对数据源名称进行硬编码且不需要用户 ID 或密码的应用程序。 它也适用于想要控制自己的 "外观" 或没有用户界面的应用程序。 此类应用程序可以使用 **SQLDataSources**生成数据源的列表、提示用户输入数据源、用户 ID 和密码，然后调用 **SQLConnect**。  
   
  下面的示例使用名为 Northwind 的 DSN 连接到 Northwind 数据库，并检索 Employees 表中所有记录的所有名字和姓氏字段。  
   

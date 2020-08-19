@@ -1,4 +1,5 @@
 ---
+description: SQL Server Compact Edition 连接管理器
 title: SQL Server Compact Edition 连接管理器 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: ba627d4d-41f4-49fc-a921-f534cde67770
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 777c360fd17082c06ff9aa4b0356ff3a95cbd332
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ae61fcfcec740ee26a7fc2a57c0e03b0141e6e10
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917203"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425939"
 ---
 # <a name="sql-server-compact-edition-connection-manager"></a>SQL Server Compact Edition 连接管理器
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 连接管理器使包能够连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 数据库。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包括的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Compact 目标使用该连接管理器将数据加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 数据库中的表。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 连接管理器使包能够连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 数据库。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 目标使用该连接管理器将数据加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 数据库中的表。  
   
 > [!NOTE]  
 >  在 64 位计算机上，必须以 32 位模式运行连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 数据源的包。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用于连接到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Compact 数据源的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact Provider 只在 32 位版本中提供。  
@@ -63,7 +64,7 @@ ms.locfileid: "86917203"
  输入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 数据库的路径和文件名。  
   
  **“浏览”**  
- 通过使用“选择 SQL Server Compact Edition 数据库”对话框找到所需的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 数据库文件。  
+ 通过使用“选择 SQL Server Compact Edition 数据库”**** 对话框找到所需的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 数据库文件。  
   
  **输入数据库密码**  
  输入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 数据库的密码。  
@@ -96,7 +97,7 @@ ms.locfileid: "86917203"
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 数据库的最大大小 (MB)。  
   
  **模式**  
- 指定打开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 数据库的文件模式。 此属性的默认值为 **“读写”** 。  
+ 指定打开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 数据库的文件模式。 此属性的默认值为 **“读写”**。  
   
  “模式”选项包含四个值，如下表所述：  
   
@@ -104,7 +105,7 @@ ms.locfileid: "86917203"
 |-----------|-----------------|  
 |**只读**|指定对数据库的只读访问。|  
 |**“读写”**|指定对数据库的读/写权限。|  
-|**排他**|指定对数据库的排他访问。|  
+|**独占**|指定对数据库的排他访问。|  
 |**共享读取**|指定其他用户可以同时读取该数据库。|  
   
  **Persist Security Info**  

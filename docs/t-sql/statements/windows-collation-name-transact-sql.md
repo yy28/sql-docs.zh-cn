@@ -1,4 +1,5 @@
 ---
+description: Windows 排序规则名称 (Transact-SQL)
 title: Windows 排序规则名称 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2019
@@ -18,12 +19,12 @@ ms.assetid: acceef84-2c68-46e2-a021-be019b7ab14e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cfe6578107f87eddb62f5f31efd93778f8c2af96
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 2a95152ded1edc82ea153c40b6f9df68c1d3dea7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484034"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426519"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Windows 排序规则名称 (Transact-SQL)
 
@@ -54,32 +55,32 @@ CollationDesignator_<ComparisonStyle>
 指定 Windows 排序规则使用的基本排序规则。 基本排序规则包括以下内容：
 
 - 指定按字典排序时应用的排序和比较规则。 排序规则基于字母表或语言。
-- 用于存储 varchar  数据 的代码页。
+- 用于存储 varchar**** 数据 的代码页。
 
 一些示例如下：
 
 - Latin1\_General 或法语：都使用代码页 1252。
 - 土耳其语：使用代码页 1254。
 
-CaseSensitivity   
-CI 指定不区分大小写，CS 指定区分大小写   。
+CaseSensitivity  
+CI 指定不区分大小写，CS 指定区分大小写********。
 
 *AccentSensitivity*  
-AI 指定不区分重音，AS 指定区分重音   。
+AI 指定不区分重音，AS 指定区分重音********。
 
-KanatypeSensitive   
-省略此选项指定不区分假名类型，KS 指定区分假名类型  。
+KanatypeSensitive**  
+省略此选项指定不区分假名类型，KS 指定区分假名类型****。
 
-WidthSensitivity   
-省略此选项指定不区分全半角，WS 指定区分全半角  。
+WidthSensitivity**  
+省略此选项指定不区分全半角，WS 指定区分全半角****。
 
-VariationSelectorSensitivity   
-- 适用范围：从  **开始**[!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
+VariationSelectorSensitivity**  
+- **适用对象**：自 [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 起 
 
-- 省略此选项指定区分不区分选择器，VSS 指定区分区分选择器  。
+- 省略此选项指定区分不区分选择器，VSS 指定区分区分选择器****。
 
 **UTF8**  
-- 适用范围：从  **开始**[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
+- **适用对象**：自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起   
 
 - 指定用于符合条件的数据类型的 UTF-8 编码。 有关详细信息，请参阅 [排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)。
 
@@ -138,10 +139,10 @@ SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 |Windows 区域设置|排序规则版本 100|排序规则版本 90|
 |--------------------|---------------------------|--------------------------|
 |阿尔萨斯语（法国）|Latin1_General_100_|不可用|
-|阿姆哈拉语（埃塞俄比亚）|Latin1_General_100_|不可用|
+|阿姆哈拉语(埃塞俄比亚)|Latin1_General_100_|不可用|
 |亚美尼亚语（亚美尼亚）|Cyrillic_General_100_|不可用|
-|阿萨姆语（印度）|Assamese_100_ <sup>1</sup>|不可用|
-|孟加拉语（孟加拉国）|Bengali_100_<sup>1</sup>|不可用|
+|阿萨姆语(印度)|Assamese_100_ <sup>1</sup>|不可用|
+|孟加拉语(孟加拉)|Bengali_100_<sup>1</sup>|不可用|
 |巴什基尔语（俄罗斯）|Bashkir_100_|不可用|
 |巴斯克语（巴斯克）|Latin1_General_100_|不可用|
 |孟加拉语（印度）|Bengali_100_<sup>1</sup>|不可用|
@@ -155,13 +156,13 @@ SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 |克罗地亚语（波斯尼亚和黑塞哥维那，拉丁语）|Croatian_100_|不可用|
 |达里语（阿富汗）|Dari_100_|不可用|
 |英语（印度）|Latin1_General_100_|不可用|
-|英语（马来西亚）|Latin1_General_100_|不可用|
+|英语(马来西亚)|Latin1_General_100_|不可用|
 |英语（新加坡）|Latin1_General_100_|不可用|
 |菲律宾语（菲律宾）|Latin1_General_100_|不可用|
 |弗里西亚语（荷兰）|Frisian_100_|不可用|
 |格鲁吉亚语（格鲁吉亚）|Cyrillic_General_100_|不可用|
 |格陵兰语（格陵兰）|Danish_Greenlandic_100_|不可用|
-|古吉拉特语（印度）|Indic_General_100_<sup>1</sup>|Indic_General_90_|
+|古吉拉特语(印度)|Indic_General_100_<sup>1</sup>|Indic_General_90_|
 |豪撒语（尼日利亚，拉丁语）|Latin1_General_100_|不可用|
 |印地语（印度）|Indic_General_100_<sup>1</sup>|Indic_General_90_|
 |伊博语（尼日利亚）|Latin1_General_100_|不可用|
@@ -170,19 +171,19 @@ SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 |爱尔兰语（爱尔兰）|Latin1_General_100_|不可用|
 |日语（日本 XJIS）|Japanese_XJIS_100_|Japanese_90_、Japanese_|
 |日语（日本）|Japanese_Bushu_Kakusu_100_|不可用|
-|卡纳达语（印度）|Indic_General_100_<sup>1</sup>|Indic_General_90_|
-|高棉语（柬埔寨）|Khmer_100_<sup>1</sup>|不可用|
+|卡纳达语(印度)|Indic_General_100_<sup>1</sup>|Indic_General_90_|
+|高棉语(柬埔寨)|Khmer_100_<sup>1</sup>|不可用|
 |基切语（危地马拉）|Modern_Spanish_100_|不可用|
 |卢旺达语（卢旺达）|Latin1_General_100_|不可用|
-|孔卡尼语（印度）|Indic_General_100_<sup>1</sup>|Indic_General_90_|
+|孔卡尼语(印度)|Indic_General_100_<sup>1</sup>|Indic_General_90_|
 |老挝语（老挝人民民主共和国）|Lao_100_<sup>1</sup>|不可用|
 |下索布语（德国）|Latin1_General_100_|不可用|
 |卢森堡语（卢森堡）|Latin1_General_100_|不可用|
-|马拉雅拉姆语（印度）|Indic_General_100_<sup>1</sup>|不可用|
+|马拉雅拉姆语(印度)|Indic_General_100_<sup>1</sup>|不可用|
 |马耳他语（马耳他）|Maltese_100_|不可用|
 |毛利语（新西兰）|Maori_100_|不可用|
 |马普丹冈语（智利）|Mapudungan_100_|不可用|
-|马拉地语（印度）|Indic_General_100_<sup>1</sup>|Indic_General_90_|
+|马拉地语(印度)|Indic_General_100_<sup>1</sup>|Indic_General_90_|
 |莫霍克语（加拿大）|Mohawk_100_|不可用|
 |蒙古语（中国）|Cyrillic_General_100_|不可用|
 |尼泊尔语（尼泊尔）|Nepali_100_<sup>1</sup>|不可用|
@@ -192,7 +193,7 @@ SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 |奥里亚语（印度）|Indic_General_100_<sup>1</sup>|不可用|
 |普什图语（阿富汗）|Pashto_100_<sup>1</sup>|不可用|
 |波斯语（伊朗）|Persian_100_|不可用|
-|旁遮普语（印度）|Indic_General_100_<sup>1</sup>|Indic_General_90_|
+|旁遮普语(印度)|Indic_General_100_<sup>1</sup>|Indic_General_90_|
 |克丘亚语（玻利维亚）|Latin1_General_100_|不可用|
 |克丘亚语（厄瓜多尔）|Latin1_General_100_|不可用|
 |克丘亚语（秘鲁）|Latin1_General_100_|不可用|
@@ -213,7 +214,7 @@ SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 |塞尔维亚语（塞尔维亚，拉丁语）|Serbian_Latin_100_|不可用|
 |巴索托语/北索托语（南非）|Latin1_General_100_|不可用|
 |茨瓦纳语/博茨瓦纳（南非）|Latin1_General_100_|不可用|
-|僧伽罗语（斯里兰卡）|Indic_General_100_<sup>1</sup>|不可用|
+|僧伽罗语(斯里兰卡)|Indic_General_100_<sup>1</sup>|不可用|
 |斯瓦希里语（肯尼亚）|Latin1_General_100_|不可用|
 |叙利亚语（叙利亚）|Syriac_100_<sup>1</sup>|Syriac_90_|
 |塔吉克语（塔吉克斯坦）|Cyrillic_General_100_|不可用|

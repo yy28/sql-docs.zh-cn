@@ -1,4 +1,5 @@
 ---
+description: 选择维度表和键（渐变维度向导）
 title: 选择维度表和键（渐变维度向导）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 01e0495f-de35-4607-ba19-0539e801e8fd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 48d0d57c66a05a28a41de37b6bea0867fbe2c8e5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5d49d23a670ae5de5b0084acb90758201cbeff74
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919485"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425749"
 ---
 # <a name="select-a-dimension-table-and-keys-slowly-changing-dimension-wizard"></a>选择维度表和键（渐变维度向导）
 
@@ -30,13 +31,13 @@ ms.locfileid: "86919485"
   
 ## <a name="options"></a>选项  
  **“ODBC 目标编辑器”**  
- 从列表中选择现有 OLE DB 连接管理器，或者单击“新建”  创建 OLE DB 连接管理器。  
+ 从列表中选择现有 OLE DB 连接管理器，或者单击“新建”**** 创建 OLE DB 连接管理器。  
   
 > [!NOTE]  
 >  渐变维度向导仅支持 OLE DB 连接管理器，并且仅支持与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的连接。  
   
  **新建**  
- 使用“配置 OLE DB 连接管理器”  对话框可以选择现有的连接管理器，或者单击“新建”  创建新的 OLE DB 连接。  
+ 使用“配置 OLE DB 连接管理器”**** 对话框可以选择现有的连接管理器，或者单击“新建”**** 创建新的 OLE DB 连接。  
   
  **“表或视图”**  
  从该列表中选择表或视图。  

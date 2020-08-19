@@ -1,4 +1,5 @@
 ---
+description: 描述符字段的初始化
 title: 描述符字段的初始化 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1da157cb-8ea9-4a56-983b-1c45650217c5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e4ed6479a60f1d0695107c216b2f0c94a55f68ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2537e5e74c600c72368e46bda7640b881d9a34df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300117"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424649"
 ---
 # <a name="initialization-of-descriptor-fields"></a>描述符字段的初始化
-如果分配了应用程序行说明符，则其字段将接收[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)中所示的初始值。 SQL_DESC_TYPE 字段的初始值为 SQL_DEFAULT。 这为显示到应用程序的数据库数据提供了标准处理。 应用程序通过设置描述符记录的字段，可以指定不同的数据处理方式。  
+如果分配了应用程序行说明符，则其字段将接收 [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)中所示的初始值。 SQL_DESC_TYPE 字段的初始值为 SQL_DEFAULT。 这为显示到应用程序的数据库数据提供了标准处理。 应用程序通过设置描述符记录的字段，可以指定不同的数据处理方式。  
   
  描述符标头中 SQL_DESC_ARRAY_SIZE 的初始值为1。 应用程序可以修改此字段以启用多行提取。  
   

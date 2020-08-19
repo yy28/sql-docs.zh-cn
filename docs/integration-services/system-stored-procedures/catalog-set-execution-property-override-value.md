@@ -1,4 +1,5 @@
 ---
+description: catalog.set_execution_property_override_value
 title: catalog.set_execution_property_override_value | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 37cb3c01-f4c0-4978-8e40-a975456def5a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3a009f23b1c6ca3520793a7c1f947afe0ff0516a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1d68015c56a6b5552ebee72f661c879c26aef4a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912823"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425079"
 ---
 # <a name="catalogset_execution_property_override_value"></a>catalog.set_execution_property_override_value 
 
@@ -36,20 +37,20 @@ catalog.set_execution_property_override_value [ @execution_id = execution_id
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @execution_id = ] execution_id   
- 执行实例的唯一标识符。 execution_id 为 bigint   。  
+ [ @execution_id = ] execution_id  
+ 执行实例的唯一标识符。 execution_id 为 bigint。  
   
  [ @property_path = ] *property_path*  
- 指向包中属性的路径。 *property_path* 为 **nvarchar(4000)** 。  
+ 指向包中属性的路径。 *property_path* 为 **nvarchar(4000)**。  
   
- [ @property_value = ] property_value   
+ [ @property_value = ] property_value**  
  要赋给该属性的覆盖值。 *property_value* 为 **nvarchar(max)** 。  
   
- [ @sensitive = ] sensitive   
+ [ @sensitive = ] sensitive**  
  当值为 1 时，属性是敏感的并在存储时加密。 当值为 0 时，属性是不敏感的并以纯文本形式存储值。 *sensitive* 参数为 **bit**。  
   
 ## <a name="remarks"></a>备注  
- 此过程执行的功能与“执行包”对话框上“高级”选项卡中的“属性重写”部分执行的功能相同。 该属性的路径从包任务的“包路径”  属性派生。  
+ 此过程执行的功能与“执行包”**** 对话框上“高级”**** 选项卡中的“属性重写”**** 部分执行的功能相同。 该属性的路径从包任务的“包路径”**** 属性派生。  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）  

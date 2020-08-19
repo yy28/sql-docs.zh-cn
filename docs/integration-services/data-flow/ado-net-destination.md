@@ -1,4 +1,5 @@
 ---
+description: ADO NET 目标
 title: ADO NET 目标 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5ab34cf592628a92f2dcf536e2eda400aecf80ad
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1c1864f1a0a5e57a025f90d1219b8068656f87d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920858"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425899"
 ---
 # <a name="ado-net-destination"></a>ADO NET 目标
 
@@ -131,7 +132,7 @@ ms.locfileid: "86920858"
  查看可用目标列的列表。 使用拖放操作可以将表中的可用目标列映射到输入列。  
   
  **输入列**  
- 查看选定的输入列。 可选择“\<ignore>”从输出中排除列以删除映射。  
+ 查看选定的输入列。 可以通过选择 \<ignore> 以从输出中排除列来移除映射。  
   
  **目标列**  
  查看每个可用目标列，而不管是否已对其进行映射。  

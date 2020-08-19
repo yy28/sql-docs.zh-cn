@@ -1,4 +1,5 @@
 ---
+description: SQL Server 目标
 title: SQL Server 目标 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 278cfb16ddc6c00fba9570d7912a6d5fa3a31727
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: dbd48bf2dee8268fa87209ab3d4283938961c918
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917763"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425799"
 ---
 # <a name="sql-server-destination"></a>SQL Server 目标
 
@@ -39,7 +40,7 @@ ms.locfileid: "86917763"
  如果用户所执行的包中包括 SQL Server 目标，则用户需要“创建全局对象”权限。 通过使用从 **“管理工具”** 菜单打开的本地安全策略工具，可以将此权限授予用户。 如果在执行使用 SQL Server 目标的包时收到错误消息，请确保运行包的帐户拥有“创建全局对象”权限。  
   
 ## <a name="bulk-inserts"></a>大容量插入  
- 如果尝试使用 SQL Server 目标向远程 SQL Server 数据库中大容量加载数据，可能会看到如下错误消息：“已获得 OLE DB 记录。 源：“Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client”结果:0x80040E14 说明:“由于无法打开 SSIS 文件映射对象‘Global\DTSQLIMPORT’，无法进行大容量加载。 操作系统错误代码为 2 （系统找不到指定的文件。）。 请确保您是通过 Windows 安全性访问本地服务器的。”  
+ 如果尝试使用 SQL Server 目标向远程 SQL Server 数据库中大容量加载数据，您将看到如下错误消息：已获得 OLE DB 记录。 源: “Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client” Hresult: 0x80040E14 说明:“由于无法打开 SSIS 文件映射对象 ‘Global\DTSQLIMPORT’，无法进行大容量加载。 操作系统错误代码为 2 （系统找不到指定的文件。）。 请确保您是通过 Windows 安全性访问本地服务器的。”  
   
  此 SQL Server 目标将数据插入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的速度与使用“大容量插入”任务时一样快；但使用 SQL Server 目标可以在数据加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中之前，对列数据应用转换。  
   
@@ -127,13 +128,13 @@ ms.locfileid: "86917763"
   
 ### <a name="options"></a>选项  
  **“无缓存”**  
- 从列表中选择现有连接，或通过单击“新建”  创建一个新连接。  
+ 从列表中选择现有连接，或通过单击“新建”**** 创建一个新连接。  
   
  **新建**  
  通过使用“配置 OLE DB 连接管理器”  对话框创建新的连接。  
   
  **使用表或视图**  
- 从列表中选择现有的表或视图，或单击“新建”  创建新的连接。  
+ 从列表中选择现有的表或视图，或单击“新建”**** 创建新的连接。  
   
  **新建**  
  通过使用“创建表”  对话框创建一个新表。  
@@ -183,19 +184,19 @@ ms.locfileid: "86917763"
  指定要插入的第一行。 此属性的默认值为 **-1**，表示尚未分配值。  
   
 > [!NOTE]  
->  如果在 **“SQL 目标编辑器”** 中清空此文本框，则表示不希望为此属性分配值。 请在“属性”  窗口、“高级编辑器”  和对象模型中使用 -1。  
+>  如果在 **“SQL 目标编辑器”** 中清空此文本框，则表示不希望为此属性分配值。 请在“属性”**** 窗口、“高级编辑器”**** 和对象模型中使用 -1。  
   
  **末行**  
  指定要插入的最后一行。 此属性的默认值为 **-1**，表示尚未分配值。  
   
 > [!NOTE]  
->  如果在 **“SQL 目标编辑器”** 中清空此文本框，则表示不希望为此属性分配值。 请在“属性”  窗口、“高级编辑器”  和对象模型中使用 -1。  
+>  如果在 **“SQL 目标编辑器”** 中清空此文本框，则表示不希望为此属性分配值。 请在“属性”**** 窗口、“高级编辑器”**** 和对象模型中使用 -1。  
   
  **最大错误数**  
  指定在大容量插入任务停止之前可以发生的错误数量。 此属性的默认值为 **-1**，表示尚未分配值。  
   
 > [!NOTE]  
->  如果在 **“SQL 目标编辑器”** 中清空此文本框，则表示不希望为此属性分配值。 请在“属性”  窗口、“高级编辑器”  和对象模型中使用 -1。  
+>  如果在 **“SQL 目标编辑器”** 中清空此文本框，则表示不希望为此属性分配值。 请在“属性”**** 窗口、“高级编辑器”**** 和对象模型中使用 -1。  
   
  **超时**  
  指定在大容量插入任务因超时而停止之前等待的秒数。  

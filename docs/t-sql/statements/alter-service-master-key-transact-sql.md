@@ -1,4 +1,5 @@
 ---
+description: ALTER SERVICE MASTER KEY (Transact-SQL)
 title: ALTER SERVICE MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: a1e9be0e-4115-47d8-9d3a-3316d876a35e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9cc3706e371f1c9c4fcc031fd4665459e65937ca
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 53526aa2ba6a59b623382aa1c47b11443759756b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381111"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426819"
 ---
 # <a name="alter-service-master-key-transact-sql"></a>ALTER SERVICE MASTER KEY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -64,25 +65,25 @@ ALTER SERVICE MASTER KEY
  REGENERATE  
  指示应当重新生成服务主密钥。  
   
- OLD_ACCOUNT ='account_name' ****  
+ OLD_ACCOUNT ='account_name'**********  
  指定旧的 Windows 服务帐户的名称。  
   
 > [!WARNING]  
 >  此选项已过时。 请勿使用。 请改用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器。  
   
- OLD_PASSWORD ='password' ****  
+ OLD_PASSWORD ='password'**********  
  指定旧的 Windows 服务帐户的密码。  
   
 > [!WARNING]  
 >  此选项已过时。 请勿使用。 请改用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器。  
   
- NEW_ACCOUNT ='account_name' ****  
+ NEW_ACCOUNT ='account_name'**********  
  指定新的 Windows 服务帐户的名称。  
   
 > [!WARNING]  
 >  此选项已过时。 请勿使用。 请改用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器。  
   
- NEW_PASSWORD ='password' ****  
+ NEW_PASSWORD ='password'**********  
  指定新的 Windows 服务帐户的密码。  
   
 > [!WARNING]  

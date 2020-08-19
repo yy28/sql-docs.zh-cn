@@ -1,4 +1,5 @@
 ---
+description: catalog.set_execution_parameter_value（SSISDB 数据库）
 title: catalog.set_execution_parameter_value（SSISDB 数据库）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: da59f45f073f579a02b84727fad0e5ffef3faec5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7cc721f7f3568303d9fbb9f9a5f0724f8548207d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912833"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425109"
 ---
 # <a name="catalogset_execution_parameter_value-ssisdb-database"></a>catalog.set_execution_parameter_value（SSISDB 数据库）
 
@@ -38,8 +39,8 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @execution_id = ] execution_id   
- 执行实例的唯一标识符。 execution_id 为 bigint   。  
+ [ @execution_id = ] execution_id  
+ 执行实例的唯一标识符。 execution_id 为 bigint。  
   
  [ @object_type = ] *object_type*  
  参数的类型。  
@@ -65,10 +66,10 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
  *object_type* 为 **smallint**。  
   
  [ @parameter_name = ] *parameter_name*  
- 参数的名称。 parameter_name  为 nvarchar(128)  。  
+ 参数的名称。 parameter_name** 为 nvarchar(128)****。  
   
  [ @parameter_value = ] *parameter_value*  
- 参数值。 parameter_value  为 sql_variant  。  
+ 参数值。 parameter_value** 为 sql_variant****。  
   
 ## <a name="remarks"></a>备注  
  要查找用于给定执行的参数值，请查询 catalog.execution_parameter_values 视图。  
