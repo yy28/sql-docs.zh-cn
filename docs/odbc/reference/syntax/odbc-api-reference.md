@@ -1,4 +1,5 @@
 ---
+description: ODBC API 参考
 title: ODBC API 参考 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,12 +12,12 @@ apitype: dllExport
 ms.assetid: b7a49774-f458-44ce-9a04-a0457501405b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6065db0ea99efaec11190902ec9268db63a6d255
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1627838d3f34f8092dce2806a1b1d8f885b9bf6a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298931"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476178"
 ---
 # <a name="odbc-api-reference"></a>ODBC API 参考
 本节中的主题按字母顺序描述每个 ODBC 函数。 每个函数都定义为 C 编程语言函数。 说明包括：  
@@ -41,7 +42,7 @@ ms.locfileid: "81298931"
   
 -   对相关函数的引用  
   
- 标准 CLI 一致性级别可以是下列其中一项： ISO 92、开放式组、ODBC 或已弃用。 标记为符合 ISO 92 的函数也会显示在打开的组版本1中，因为打开的组是 ISO 92 的纯粹超集。 标记为符合打开组的函数也会显示在 ODBC 3 中。*x*，因为 ODBC 3。*x*是开放组版本1的纯超集。 标记为符合 ODBC 标准的函数会出现在标准中。 ODBC 3 中弃用了标记为已弃用的函数。*x*。  
+ 标准 CLI 一致性级别可以是下列其中一项： ISO 92、开放式组、ODBC 或已弃用。 标记为符合 ISO 92 的函数也会显示在打开的组版本1中，因为打开的组是 ISO 92 的纯粹超集。 标记为符合打开组的函数也会显示在 ODBC 3 中。*x*，因为 ODBC 3。*x* 是开放组版本1的纯超集。 标记为符合 ODBC 标准的函数会出现在标准中。 ODBC 3 中弃用了标记为已弃用的函数。*x*。  
   
  [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)函数说明中描述了诊断信息的处理。 包含与 SQLSTATE 值相关联的文本用于提供条件说明，但并不用于规定特定文本。  
   

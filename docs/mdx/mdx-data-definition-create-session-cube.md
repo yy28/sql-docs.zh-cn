@@ -1,5 +1,6 @@
 ---
-title: CREATE SESSION CUBE 语句（MDX） |Microsoft Docs
+description: MDX 数据定义 - CREATE SESSION CUBE
+title: " (MDX) 创建会话 CUBE 语句 |Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ac95afcebcf07a5d691db5f2599b3290b9587d44
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 33cdbc4a018245249771ff350227d13f4e0f772e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038358"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483870"
 ---
 # <a name="mdx-data-definition---create-session-cube"></a>MDX 数据定义 - CREATE SESSION CUBE
 
@@ -101,13 +102,13 @@ CREATE SESSION CUBE session_cube_name FROM <cube list> (<param list>)
  dimension_name  
  会话多维数据集中的维度的名称。  
   
- FROM \<dim from 子句>  
+ FROM \<dim from clause>  
  该规范仅对于派生维度定义有效。  
   
  NOT_RELATED_TO_FACTS  
  该规范仅对于派生维度定义有效。  
   
- \<级别类型>  
+ \<level type>  
  该规范仅对于派生维度定义有效。  
   
 ## <a name="remarks"></a>备注  

@@ -1,4 +1,5 @@
 ---
+description: LocalDBDeleteInstance 函数
 title: LocalDBDeleteInstance 函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ apitype: DLLExport
 ms.assetid: 37cb2a7e-672a-4223-b6f3-a94d7b8d58cd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 70e6244254c221ff12c37c04d83bf294b41acfec
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 89342916f850745113136a88769be5f9b0ff13f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789490"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475858"
 ---
 # <a name="localdbdeleteinstance-function"></a>LocalDBDeleteInstance 函数
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +42,7 @@ HRESULT LocalDBDeleteInstance(
  *pInstanceName*  
  [输入] 要删除的 LocalDB 实例的名称。  
   
- dwFlags**  
+ dwFlags   
  [输入] 保留供将来使用。 当前应设置为 0。  
   
 ## <a name="returns"></a>返回  
@@ -91,7 +92,7 @@ HRESULT LocalDBDeleteInstance(
  发生了意外错误。 有关详细信息，请参阅事件日志。  
   
 ## <a name="remarks"></a>备注  
- 有关使用 LocalDB API 的代码示例，请参阅[SQL Server Express LocalDB 引用](../../relational-databases/sql-server-express-localdb-reference.md)。  
+ 有关使用 LocalDB API 的代码示例，请参阅 [SQL Server Express LocalDB 引用](../../relational-databases/sql-server-express-localdb-reference.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server Express LocalDB 标头信息和版本信息](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  

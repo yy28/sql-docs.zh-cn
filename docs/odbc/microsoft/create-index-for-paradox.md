@@ -1,4 +1,5 @@
 ---
+description: Paradox 的 CREATE INDEX
 title: 为 Paradox 创建索引 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6472bd69-b931-4bc2-a9bf-f1873ed4cdfe
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2e68484efdc5194f93f2acab31973377d9c66f1c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c0274f3f7cfdb79bf64e3616b16b7f3383063e07
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81280907"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483640"
 ---
 # <a name="create-index-for-paradox"></a>Paradox 的 CREATE INDEX
 ODBC Paradox 驱动程序的 CREATE INDEX 语句的语法为：  
@@ -27,13 +28,13 @@ ODBC Paradox 驱动程序的 CREATE INDEX 语句的语法为：
   
  **ON** *table name*  
   
- **（** *列标识符*[**ASC**]  
+ ** (** *列标识符* [**ASC**]  
   
- [**，** *列标识符*[**ASC**] ...]**)**  
+ [**，** *列标识符* [**ASC**] ...]**) **  
   
- ODBC Paradox 驱动程序不支持用于 CREATE INDEX 语句的 ODBC SQL 语法中的**DESC**关键字。 *表名*参数可以指定表的完整路径。  
+ ODBC Paradox 驱动程序不支持用于 CREATE INDEX 语句的 ODBC SQL 语法中的 **DESC** 关键字。 *表名*参数可以指定表的完整路径。  
   
- 如果指定关键字**UNIQUE** ，则 ODBC Paradox 驱动程序将创建唯一索引。 第一个唯一索引创建为主索引。 这是一个名为 "*表名*" 的 Paradox 主密钥文件。像素. 主索引受到下列限制：  
+ 如果指定关键字 **UNIQUE** ，则 ODBC Paradox 驱动程序将创建唯一索引。 第一个唯一索引创建为主索引。 这是一个名为 " *表名*" 的 Paradox 主密钥文件。像素. 主索引受到下列限制：  
   
 -   必须先创建主索引，然后才能将任何行添加到表中。  
   
@@ -41,15 +42,15 @@ ODBC Paradox 驱动程序的 CREATE INDEX 语句的语法为：
   
 -   每个表只允许有一个主索引。  
   
--   如果表上未定义主索引，则 Paradox 驱动程序无法更新表。 （请注意，对于空表，即使表中未定义唯一索引，也不能进行更新。）  
+-   如果表上未定义主索引，则 Paradox 驱动程序无法更新表。  (请注意，对于空表，这并不是这样，即使表中未定义唯一索引，也可以对其进行更新。 )   
   
--   主索引的*索引名称*参数必须与表的基名称相同，因为 Paradox 是必需的。  
+-   主索引的 *索引名称* 参数必须与表的基名称相同，因为 Paradox 是必需的。  
   
- 如果省略关键字**UNIQUE** ，则 ODBC Paradox 驱动程序将创建一个不唯一的索引。 这包含两个名为 "*表名*" 的 Paradox 辅助索引文件。X*nn*和*表名称*。Y*nn*，其中*nn*是表中的列号。 非唯一索引受到以下限制：  
+ 如果省略关键字 **UNIQUE** ，则 ODBC Paradox 驱动程序将创建一个不唯一的索引。 这包含两个名为 " *表名*" 的 Paradox 辅助索引文件。X*nn* 和 *表名称*。Y*nn*，其中 *nn* 是表中的列号。 非唯一索引受到以下限制：  
   
 -   在为表创建非唯一索引之前，该表必须存在主索引。  
   
--   对于 Paradox 3。*x*：除主索引之外的任何索引（唯一或非唯一）的*索引名称*参数必须与列名称相同。 对于 Paradox 4。*x*和5。*x*，此类索引的名称可以是（但不一定）与列名称相同。  
+-   对于 Paradox 3。*x* (唯一或非唯一) 以外的任何索引的 *索引名称* 参数必须与列名称相同。 对于 Paradox 4。*x* 和5。*x*，此类索引的名称可以是（但不一定）与列名称相同。  
   
 -   只能为非唯一索引指定一列。  
   

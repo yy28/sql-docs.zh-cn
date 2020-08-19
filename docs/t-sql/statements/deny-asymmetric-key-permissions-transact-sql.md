@@ -1,4 +1,5 @@
 ---
+description: DENY 非对称密钥权限 (Transact-SQL)
 title: DENY 非对称密钥权限 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: dd7d8cd5-536b-460c-ab5b-cb4752bbdfaa
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 37093e542ad865025ceb7d87c382cfb94c52cee8
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: d678397ca184e6b94925ec43d0f07f3e6368f614
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484950"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444737"
 ---
 # <a name="deny-asymmetric-key-permissions-transact-sql"></a>DENY 非对称密钥权限 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,13 +49,13 @@ DENY { permission  [ ,...n ] }
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- permission   
+ permission  
  指定可拒绝授予非对称密钥的权限。 如下所列。  
   
- ON ASYMMETRIC KEY ::asymmetric_key_name    
+ ON ASYMMETRIC KEY ::asymmetric_key_name  
  指定拒绝将其权限授予他人的非对称密钥。 需要使用作用域限定符“::”。  
   
- database_principal   
+ database_principal  
  指定要对其拒绝权限的主体。 下列类型作之一：  
   
 -   数据库用户  
@@ -76,7 +77,7 @@ DENY { permission  [ ,...n ] }
  CASCADE  
  指示要拒绝的权限也会被对此主体授予该权限的其他主体拒绝。  
   
- denying_principal   
+ denying_principal**  
  指定一个主体，执行该查询的主体从该主体获得拒绝授予该权限的权利。 下列类型作之一：  
   
 -   数据库用户  
@@ -95,7 +96,7 @@ DENY { permission  [ ,...n ] }
   
 -   未映射到服务器主体的数据库用户。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  非对称密钥是一个数据库级的安全对象，包含于权限层次结构中作为其父级的数据库中。 下面列出了可授予非对称密钥的最特定和最受限的权限，以及隐含这些权限的更常用权限。  
   
 |非对称密钥权限|非对称密钥权限隐含的权限|数据库权限隐含的权限|  

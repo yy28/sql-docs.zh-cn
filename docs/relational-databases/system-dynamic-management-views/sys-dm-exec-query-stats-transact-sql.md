@@ -1,4 +1,5 @@
 ---
+description: sys.dm_exec_query_stats (Transact-SQL)
 title: sys. dm_exec_query_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/30/2019
@@ -20,12 +21,12 @@ ms.assetid: eb7b58b8-3508-4114-97c2-d877bcb12964
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f73452beb45c9f5df4b806d937043f22c5c0dbe1
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 12ef4ff17b243a674911a9611517529bbe0ce0dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865315"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489969"
 ---
 # <a name="sysdm_exec_query_stats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,8 +34,8 @@ ms.locfileid: "87865315"
 返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中缓存查询计划的聚合性能统计信息。 缓存计划中的每个查询语句在该视图中对应一行，并且行的生存期与计划本身相关联。 在从缓存删除计划时，也将从该视图中删除对应行。  
   
 > [!NOTE]
-> - 每次执行时， **sys.databases dm_exec_query_stats**的结果可能会有所不同，因为数据只反映完成的查询，而不是仍在进行中的查询。
-> - 若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称**dm_pdw_nodes_exec_query_stats**。    
+> - 每次执行时， **sys.databases dm_exec_query_stats**  的结果可能会有所不同，因为数据只反映完成的查询，而不是仍在进行中的查询。
+> - 若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称 **dm_pdw_nodes_exec_query_stats**。    
 
   
 |列名称|数据类型|说明|  
@@ -115,18 +116,18 @@ ms.locfileid: "87865315"
 |**last_spills**|**bigint**|上次执行查询时溢出的页数。<br /><br /> **适用**于：从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|  
 |**min_spills**|**bigint**|此查询在一次执行期间溢出的最小页数。<br /><br /> **适用**于：从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|  
 |**max_spills**|**bigint**|此查询在一次执行期间溢出的最大页数。<br /><br /> **适用**于：从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|  
-|pdw_node_id|**int**|此分发所在的节点的标识符。<br /><br /> **适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
+|pdw_node_id|**int**|此分发所在的节点的标识符。<br /><br /> **适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
 |**total_page_server_reads**|**bigint**|此计划自编译以来执行的远程页面服务器读取的总次数。<br /><br /> **适用于：** Azure SQL Database 超大规模 |  
 |**last_page_server_reads**|**bigint**|上次执行计划时所执行的远程页面服务器读取次数。<br /><br /> **适用于：** Azure SQL Database 超大规模 |  
 |**min_page_server_reads**|**bigint**|此计划在单次执行期间所执行的最少远程页面服务器读取次数。<br /><br /> **适用于：** Azure SQL Database 超大规模 |  
 |**max_page_server_reads**|**bigint**|此计划在单次执行期间所执行的远程页面服务器读取次数上限。<br /><br /> **适用于：** Azure SQL Database 超大规模 |  
 > [!NOTE]
-> <sup>1</sup>对于启用统计信息收集时的本机编译的存储过程，以毫秒为单位收集工作线程时间。 如果查询执行的时间不到1毫秒，则该值将为0。  
+> <sup>1</sup> 对于启用统计信息收集时的本机编译的存储过程，以毫秒为单位收集工作线程时间。 如果查询执行的时间不到1毫秒，则该值将为0。  
   
 ## <a name="permissions"></a>权限  
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
+在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要  **服务器管理员** 或 **Azure Active Directory 管理员** 帐户。   
    
 ## <a name="remarks"></a>备注  
  查询完成后，将更新该视图中的统计信息。  

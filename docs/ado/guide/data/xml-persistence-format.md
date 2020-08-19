@@ -1,4 +1,5 @@
 ---
+description: XML 暂留格式
 title: XML 持久性格式 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eb3abca1aabccd45bc76c4ec0ee5742531c47e28
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7a014addf2d3ff6c7b02ed9abc103cdbd7b2ecb8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748318"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452509"
 ---
 # <a name="xml-persistence-format"></a>XML 暂留格式
 ADO 对 XML 流使用 UTF-8 编码。  
@@ -66,9 +67,9 @@ xmlns:z="#RowsetSchema">
   
  该架构显示命名空间、架构部分和数据部分的声明。 Schema 部分包含行、ShipperID、公司名称和电话的定义。  
   
- 架构定义符合[W3C XML 数据规范](http://www.w3.org/TR/1998/NOTE-XML-data/)，并且可以进行完全验证（但 Internet Explorer 5 不会进行验证）。 对于记录集持久性，XML 数据是目前唯一受支持的架构格式。  
+ 架构定义符合 [W3C XML 数据规范](http://www.w3.org/TR/1998/NOTE-XML-data/) ，并且可以进行完全验证 (但在 Internet Explorer 5) 中不会进行验证。 对于记录集持久性，XML 数据是目前唯一受支持的架构格式。  
   
- Data 节包含三行，其中包含有关货主的信息。 对于空行集，data 节可以为空，但 \< rs： data> 标记必须存在。 如果没有数据，则可以将标记简写编写为 \< rs： data/>。 以 "rs" 为前缀的任何标记均表示它位于 urn：架构-microsoft-com：行集定义的命名空间中。  
+ Data 节包含三行，其中包含有关货主的信息。 对于空行集，data 节可以为空，但 \<rs:data> 标记必须存在。 不带数据的情况下，您只需编写一个标记简写即可 \<rs:data/> 。 以 "rs" 为前缀的任何标记均表示它位于 urn：架构-microsoft-com：行集定义的命名空间中。  
   
 ## <a name="see-also"></a>另请参阅  
  [以 XML 格式保留记录](../../../ado/guide/data/persisting-records-in-xml-format.md)

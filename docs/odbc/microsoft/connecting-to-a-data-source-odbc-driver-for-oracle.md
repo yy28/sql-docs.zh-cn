@@ -1,5 +1,6 @@
 ---
-title: 连接到数据源（用于 Oracle 的 ODBC 驱动程序） |Microsoft Docs
+description: 连接到数据源（Oracle ODBC 驱动程序）
+title: " (ODBC Driver for Oracle) 连接到数据源 |Microsoft Docs"
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f724a9c5-342a-4f4e-a030-ec34f7378eaf
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6ef567c9e3c7b63e7f5044de699750de856f3e52
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6951dd89f3ad1a311d93aca460c61dc7317b2f30
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81281297"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483660"
 ---
 # <a name="connecting-to-a-data-source-odbc-driver-for-oracle"></a>连接到数据源（Oracle ODBC 驱动程序）
 > [!IMPORTANT]  
@@ -28,7 +29,7 @@ ms.locfileid: "81281297"
   
  连接到数据源的一种常用方法是通过 "数据源" 对话框。 如果 ODBC 应用程序设置为使用对话框，则会显示该对话框，并提示您输入适当的数据源连接信息。  
   
- 你还可以使用[连接字符串](../../odbc/microsoft/connection-string-format-and-attributes.md)连接到数据源。  
+ 你还可以使用 [连接字符串](../../odbc/microsoft/connection-string-format-and-attributes.md)连接到数据源。  
   
 ### <a name="to-connect-to-a-data-source-using-a-dialog-box"></a>使用对话框连接到数据源  
   

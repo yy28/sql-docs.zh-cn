@@ -1,4 +1,5 @@
 ---
+description: LocalDBGetInstanceInfo 函数
 title: LocalDBGetInstanceInfo 函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ apitype: DLLExport
 ms.assetid: 231706f5-26c6-42eb-ab47-315df6b8f824
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b392098091a3a439271a6f01a28ae152405e17b7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f33e9f820eebd80680b4c2c631f30d74ca0f79da
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789503"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475856"
 ---
 # <a name="localdbgetinstanceinfo-function"></a>LocalDBGetInstanceInfo 函数
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -93,7 +94,7 @@ HRESULT LocalDBGetInstanceInfo(
  [输出] 要存储有关 LocalDB 实例信息的缓冲区。  
   
  *dwInstanceInfoSize*  
- 送保存*InstanceInfo*缓冲区的大小。  
+ 送保存 *InstanceInfo* 缓冲区的大小。  
   
 ## <a name="returns"></a>返回  
  S_OK  
@@ -127,9 +128,9 @@ HRESULT LocalDBGetInstanceInfo(
  发生了意外错误。 有关详细信息，请参阅事件日志。  
   
 ## <a name="details"></a>详细信息  
- 介绍**结构**大小参数（*lpInstanceInfoSize*）背后的基本原理是使 API 能够返回不同版本的**LocalDBInstanceInfostruct**，从而有效地实现向前和向后兼容性。  
+ 引入 **结构** 大小参数 (*lpInstanceInfoSize*) 的基本原理是使 API 能够返回不同版本的 **LocalDBInstanceInfostruct**，从而有效地实现向前和向后兼容性。  
   
- 如果**结构**大小参数（*lpInstanceInfoSize*）与已知版本的**LocalDBInstanceInfostruct**的大小匹配，则返回该**结构**的版本。 否则，返回 LOCALDB_ERROR_INVALID_PARAMETER。  
+ 如果 **struct** size 参数 (*LpInstanceInfoSize*) 与 **LocalDBInstanceInfostruct**的已知版本大小匹配，则返回该 **结构** 的版本。 否则，返回 LOCALDB_ERROR_INVALID_PARAMETER。  
   
  **LocalDBGetInstanceInfo** API 用法的典型示例如下所示：  
   
@@ -139,7 +140,7 @@ LocalDBInstanceInfo(L"Test", &ii, sizeof(LocalDBInstanceInfo));
   
 ```  
   
- 有关使用 LocalDB API 的代码示例，请参阅[SQL Server Express LocalDB 引用](../../relational-databases/sql-server-express-localdb-reference.md)。  
+ 有关使用 LocalDB API 的代码示例，请参阅 [SQL Server Express LocalDB 引用](../../relational-databases/sql-server-express-localdb-reference.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server Express LocalDB 标头信息和版本信息](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  

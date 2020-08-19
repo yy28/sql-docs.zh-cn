@@ -1,4 +1,5 @@
 ---
+description: 限制
 title: 限制 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b8d71c2a-23c8-4e9b-b5f7-aca51c5a4721
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 92605f083cb0e49381b7d309e05b2c93944d3c36
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d7fe340faaf8841b0674c8c2e7031a2d00cd78db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302691"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483500"
 ---
 # <a name="limitations"></a>限制
 本部分介绍 ODBC 桌面数据库驱动程序在以下主题方面的限制：  
@@ -39,9 +40,9 @@ ms.locfileid: "81302691"
 |||[LIKE 谓词](../../odbc/microsoft/like-predicate-limitations.md)|  
 |||[NOT NULL](../../odbc/microsoft/not-null-limitations.md)|  
 |||[ORDER BY 子句](../../odbc/microsoft/order-by-clause-limitations.md)|  
-|||[表名称](../../odbc/microsoft/table-name-limitations.md)|  
+|||[表名](../../odbc/microsoft/table-name-limitations.md)|  
 |||[表引用](../../odbc/microsoft/table-references-limitations.md)|  
-|||[视图](../../odbc/microsoft/views-limitations.md)|  
+|||[Views](../../odbc/microsoft/views-limitations.md)|  
 |||[WHERE 子句](../../odbc/microsoft/where-clause-limitations.md)|  
 |||[WHERE CURRENT of 子句](../../odbc/microsoft/where-current-of-clause-limitations.md)|  
 |||[字符串](../../odbc/microsoft/string-limitations.md)|

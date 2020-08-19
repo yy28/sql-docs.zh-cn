@@ -1,4 +1,5 @@
 ---
+description: / (Division) (Transact-SQL)
 title: (Division) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,12 +21,12 @@ ms.assetid: 1d69893b-e5c3-441d-8dd8-0e5eb872ecfc
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ffecf5a297864765b7ce995ce9b39d1cbff97644
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: da987dbea422db8ab6e26ce9b84ff55b5d5abb2e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394162"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459387"
 ---
 # <a name="-division-transact-sql"></a>/ (Division) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,16 +44,16 @@ dividend / divisor
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- *被除数*  
- 被除数的数值表达式。 dividend 可以是具有数值数据类型类别中任一数据类型（datetime 和 smalldatetime 数据类型除外）的任何有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md) 。  
+ *dividend*  
+ 被除数的数值表达式。 dividend 可以是具有数值数据类型类别中任一数据类型（datetime 和 smalldatetime 数据类型除外）的任何有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)**********。  
   
- *除数*  
- 除数的数值表达式。 divisor 可以是具有数值数据类型类别中任一数据类型（datetime 和 smalldatetime 数据类型除外）的任何有效表达式    。  
+ *divisor*  
+ 除数的数值表达式。 divisor 可以是具有数值数据类型类别中任一数据类型（datetime 和 smalldatetime 数据类型除外）的任何有效表达式**********。  
   
 ## <a name="result-types"></a>结果类型  
  返回优先级较高的参数的数据类型。 有关详细信息，请参阅[数据类型优先级 (Transact-SQL)](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
   
- 如果整数的 divisor 除以整数的 dividend，其结果是一个整数，小数部分被截断   。  
+ 如果整数的 divisor 除以整数的 dividend，其结果是一个整数，小数部分被截断****。  
   
 ## <a name="remarks"></a>备注  
  / 运算符返回的实际值是用第一个表达式除以第二个表达式所得的商。  

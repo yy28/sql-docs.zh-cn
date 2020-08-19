@@ -1,4 +1,5 @@
 ---
+description: CREATE SERVER AUDIT SPECIFICATION (Transact-SQL)
 title: CREATE SERVER AUDIT SPECIFICATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: db77fa77-fedb-40ac-83e6-06343063e518
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6cc72e48eea68aa97323fc30bdad083fd79d391e
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: c398b8a3ae8204e202954f667db1c99dc08a477a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392945"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444819"
 ---
 # <a name="create-server-audit-specification-transact-sql"></a>CREATE SERVER AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -48,19 +49,19 @@ FOR SERVER AUDIT audit_name
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- audit_specification_name   
+ audit_specification_name**  
  服务器审核规范的名称。  
   
- audit_name   
+ audit_name**  
  应用此规范的审核的名称。  
   
- audit_action_group_name   
+ audit_action_group_name**  
  服务器级别可审核操作组的名称。 要获取审核操作组列表，请参阅 [SQL Server 审核操作组和操作](../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)。  
   
- WITH ( STATE  **{ ON | OFF } )** **=**   
+ WITH ( STATE = { ON | OFF } )************  
  允许或禁止审核收集此审核规范的记录。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  审核必须已存在，才能为它创建服务器审核规范。 服务器审核规范在创建之后处于禁用状态。  
   
 ## <a name="permissions"></a>权限  

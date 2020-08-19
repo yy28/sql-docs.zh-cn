@@ -1,5 +1,6 @@
 ---
-title: 除（MDX） |Microsoft Docs
+description: 除 (MDX)
+title: 除以 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6184aa9d932355cd935a9131848ec27895faea5f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0999df34ff817131e890afade89fc5daad85796b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68049306"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484010"
 ---
 # <a name="divide-mdx"></a>除 (MDX)
 

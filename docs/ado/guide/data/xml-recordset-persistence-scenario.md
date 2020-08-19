@@ -1,4 +1,5 @@
 ---
+description: XML 记录集暂留方案
 title: XML 记录集持久性方案 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 353d569a-043a-4397-9ee6-564c4af8d5f6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4a1110db8505a2a721c3503e51276cfb895fb965
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2c61663a1fc88f4e8efe464da0220df22133bdc2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748305"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452499"
 ---
 # <a name="xml-recordset-persistence-scenario"></a>XML 记录集暂留方案
-在此方案中，您将创建一个 Active Server Pages （ASP）应用程序，该应用程序将记录集对象的内容直接保存到 ASP 响应对象。  
+在这种情况下，你将创建一个 (ASP) 应用程序的活动服务器页面，该应用程序将记录集对象的内容直接保存到 ASP 响应对象。  
   
 > [!NOTE]
->  此方案要求服务器上安装了 Internet information Server 5.0 （IIS）或更高版本。  
+>  此方案要求服务器将 Internet Information Server 5.0 (IIS) 或更高版本。  
   
- 返回的记录集使用[DataControl 对象（RDS）](../../../ado/reference/rds-api/datacontrol-object-rds.md)显示在 Internet Explorer 中。  
+ 在 Internet Explorer 中，使用 [DataControl 对象 (RDS) ](../../../ado/reference/rds-api/datacontrol-object-rds.md)来显示返回的记录集。  
   
  若要创建此方案，需要执行以下步骤：  
   
@@ -38,7 +39,7 @@ ms.locfileid: "82748305"
 -   接收并显示数据  
   
 ## <a name="step-1-set-up-the-application"></a>步骤1：设置应用程序  
- 使用脚本权限创建名为 "XMLPersist" 的 IIS 虚拟目录。 在虚拟目录指向的文件夹中创建两个新的文本文件，一个名为 "XMLResponse"，另一个名为 "Default .htm"。  
+ 使用脚本权限创建名为 "XMLPersist" 的 IIS 虚拟目录。 在虚拟目录指向的文件夹中创建两个新的文本文件，一个名为 "XMLResponse"，另一个名为 "Default.htm"。  
   
 ## <a name="step-2-get-the-data"></a>步骤2：获取数据  
  在此步骤中，你将编写用于打开 ADO 记录集的代码，并准备将其发送到客户端。 使用文本编辑器（如记事本）打开文件 XMLResponse，并插入以下代码。  
@@ -84,12 +85,12 @@ ms.locfileid: "82748305"
 %>  
 ```  
   
- 请注意，ASP 响应对象被指定为记录集[保存方法](../../../ado/reference/ado-api/save-method.md)的目标。 Save 方法的目标可以是支持 IStream 接口的任何对象，例如 ADO[流对象（ado）](../../../ado/reference/ado-api/stream-object-ado.md)或包含记录集保存到的完整路径的文件名称。  
+ 请注意，ASP 响应对象被指定为记录集 [保存方法](../../../ado/reference/ado-api/save-method.md)的目标。 Save 方法的目标可以是支持 IStream 接口的任何对象，例如 ADO [Stream 对象 (ado) ](../../../ado/reference/ado-api/stream-object-ado.md)，或包含要将记录集保存到的完整路径的文件名称。  
   
  在转到下一步之前，保存并关闭 XMLResponse。 同时将 adovbs 文件从默认 ADO 库安装文件夹复制到保存 XMLResponse 文件的相同文件夹中。  
   
 ## <a name="step-4-receive-and-display-the-data"></a>步骤4：接收并显示数据  
- 在此步骤中，你将创建一个包含嵌入的[DataControl 对象（RDS）](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象的 HTML 文件，该对象指向 XMLResponse 文件以获取记录集。 使用文本编辑器（如记事本）打开默认 .htm 并添加以下代码。 将 URL 中的 "sqlserver" 替换为服务器的名称。  
+ 在此步骤中，将创建一个 HTML 文件，其中包含嵌入的 [DataControl 对象 (RDS) ](../../../ado/reference/rds-api/datacontrol-object-rds.md) 对象，该对象指向 XMLResponse 文件以获取记录集。 使用文本编辑器（如记事本）打开 default.htm，然后添加以下代码。 将 URL 中的 "sqlserver" 替换为服务器的名称。  
   
 ```  
 <HTML>  
@@ -110,7 +111,7 @@ ms.locfileid: "82748305"
 </HTML>  
 ```  
   
- 关闭默认的 .htm 文件，并将其保存到保存 XMLResponse 的相同文件夹中。 使用 Internet Explorer 4.0 或更高版本，打开 URL https://*sqlserver*/XMLPersist/default.htm 并观察结果。 数据显示在绑定的 DHTML 表中。 现在打开 URL https:// *sqlserver* /XMLPersist/XMLResponse.asp 并观察结果。 将显示 XML。  
+ 关闭 default.htm 文件，并将其保存到保存 XMLResponse 的同一文件夹中。 使用 Internet Explorer 4.0 或更高版本，打开 URL https://*sqlserver*/XMLPersist/default.htm 并观察结果。 数据显示在绑定的 DHTML 表中。 现在打开 URL https:// *sqlserver* /XMLPersist/XMLResponse.asp 并观察结果。 将显示 XML。  
   
 ## <a name="see-also"></a>另请参阅  
  [Save 方法](../../../ado/reference/ado-api/save-method.md)   

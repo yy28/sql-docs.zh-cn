@@ -1,4 +1,5 @@
 ---
+description: 通讯簿应用程序的系统要求
 title: 通讯簿应用程序的系统要求 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,25 +14,25 @@ helpviewer_keywords:
 ms.assetid: da385405-1c9a-478b-9bf6-fba70015324c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8aec1ebbb5d83829431e1045e746c99f1569dc48
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0c2eb347c7bd4b4bd39e6d85690e9646784077ae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764628"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451889"
 ---
 # <a name="system-requirements-for-the-address-book-application"></a>通讯簿应用程序的系统要求
 若要设置通讯簿示例应用程序，需要满足以下软件和数据库要求：  
   
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件（有关详细信息，请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)）。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
 ## <a name="software-requirements"></a>软件要求  
  运行此 Web 应用程序的服务器计算机软件要求包括：  
   
 -   Microsoft Windows NT® Server 4.0 Service Pack 3 或更高版本，或者 Microsoft Windows®2000服务器。  
   
--   Microsoft Internet Information Services （IIS）版本3.0 或更高版本，以及 Active Server Pages。  
+-   Microsoft Internet Information Services (IIS) 版本3.0 或更高版本，以及 Active Server Pages。  
   
  运行此 Web 应用程序的客户端计算机软件要求包括：  
   
@@ -46,13 +47,13 @@ ms.locfileid: "82764628"
   
 -   用于创建数据库并在其中填充示例数据的权限。  
   
--   通过企业管理器或 ISQL 实用程序（在 SQL Server 7.0 中称为查询分析器）来验证填充的数据。  
+-   通过企业管理器或 ISQL 实用程序在 SQL Server 7.0) 中 (名为 Query Analyzer 的已填充数据的验证。  
   
  如果你没有权限，则数据库管理员可能需要设置系统，并向你授予对数据库的访问权限，或者为你设置数据库。  
   
 ## <a name="see-also"></a>另请参阅  
  [运行通讯簿 SQL 脚本](../../../ado/guide/remote-data-service/running-the-address-book-sql-script.md)   
- [DataControl 对象（RDS）](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
+ [DataControl 对象 (RDS) ](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [运行通讯簿示例应用程序](../../../ado/guide/remote-data-service/running-the-address-book-sample-application.md)
 
 

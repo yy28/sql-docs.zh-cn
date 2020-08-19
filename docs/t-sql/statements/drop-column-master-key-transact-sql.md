@@ -1,4 +1,5 @@
 ---
+description: DROP COLUMN MASTER KEY (Transact-SQL)
 title: DROP COLUMN MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/15/2019
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: fd5e77c8-a3ae-4795-bb46-b322c0500041
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 69d223d694c1a53c36db976c6dbf38b386d18951
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: abff6ef56417f78194970a04fd863f8c599bddb9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110633"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444684"
 ---
 # <a name="drop-column-master-key-transact-sql"></a>DROP COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -41,14 +42,14 @@ DROP COLUMN MASTER KEY key_name;
 ```  
 
 ## <a name="arguments"></a>参数
- key_name   
+ key_name  
  列主密钥名称。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解
  只有在没有任何使用列主密钥加密的列加密密钥值的情况下，才能删除列主密钥。 若要删除列加密密钥值，请使用 [DROP COLUMN ENCRYPTION KEY](../../t-sql/statements/drop-column-encryption-key-transact-sql.md) 语句。  
   
 ## <a name="permissions"></a>权限  
- 需要对数据库具有 ALTER ANY COLUMN MASTER KEY 权限  。  
+ 需要对数据库具有 ALTER ANY COLUMN MASTER KEY 权限****。  
   
 ## <a name="examples"></a>示例  
   

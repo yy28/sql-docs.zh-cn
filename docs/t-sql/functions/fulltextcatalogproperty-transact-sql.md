@@ -1,4 +1,5 @@
 ---
+description: FULLTEXTCATALOGPROPERTY (Transact-SQL)
 title: FULLTEXTCATALOGPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f841dc79-2044-4863-aff0-56b8bb61f250
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bcf1047008c59844630aa0391f798ddf751c4e89
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c6e8c856b81bd4ff4ab03c988af1edf6a8b3ac43
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110971"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468001"
 ---
 # <a name="fulltextcatalogproperty-transact-sql"></a>FULLTEXTCATALOGPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +46,7 @@ FULLTEXTCATALOGPROPERTY ('catalog_name' ,'property')
 ## <a name="arguments"></a>参数
   
 > [!NOTE]  
->  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中将删除以下属性：LogSize 和 PopulateStatus   。 应避免在新的开发工作中使用这些属性，并着手修改当前使用上述任意属性的应用程序。  
+>  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中将删除以下属性：LogSize 和 PopulateStatus********。 应避免在新的开发工作中使用这些属性，并着手修改当前使用上述任意属性的应用程序。  
   
 _catalog\_name_  
 包含全文目录名称的表达式。  
@@ -53,7 +54,7 @@ _catalog\_name_
 _property_  
 包含全文目录属性名称的表达式。 下表列出了这些属性，并提供对返回的信息的说明。  
   
-|properties|说明|  
+|属性|说明|  
 |--------------|-----------------|  
 |**AccentSensitivity**|区分重音设置。<br /><br /> 0 = 不区分重音<br /><br /> 1 = 区分重音|  
 |**IndexSize**|全文目录的逻辑大小 (MB)。 包括语义关键字短语和文档相似性索引的大小。<br /><br /> 有关详细信息，请参阅本主题后面的“备注”。|  
