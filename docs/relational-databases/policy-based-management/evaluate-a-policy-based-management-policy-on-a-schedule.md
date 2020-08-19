@@ -1,4 +1,5 @@
 ---
+description: 定期评估基于策略的管理策略
 title: 定期评估基于策略的管理策略 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bea09522-ff47-4037-ab55-a98ea7c10099
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5ef43c8e973d9d3695d900d40e3ed92c1e5ec27c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 79e16f9a39e235f7ceed5a77e55d03f4c5efed72
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749446"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88381183"
 ---
 # <a name="evaluate-a-policy-based-management-policy-on-a-schedule"></a>定期评估基于策略的管理策略
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,13 +49,13 @@ ms.locfileid: "85749446"
   
 2.  单击加号以便展开 **“管理”** 文件夹。  
   
-3.  单击加号以便展开 **“策略管理”** 。  
+3.  单击加号以便展开 **“策略管理”**。  
   
 4.  单击加号以便展开 **“策略”** 文件夹。  
   
-5.  右键单击要评估其计划的策略，然后选择“属性”  。  
+5.  右键单击要评估其计划的策略，然后选择“属性”****。  
   
-6.  在“打开策略 - policy_name”对话框的“评估模式”列表中，选择“按计划”     。  
+6.  在“打开策略 - policy_name”对话框的“评估模式”列表中，选择“按计划” 。  
   
 7.  在 **“计划”** 中，单击 **“选取”** 指定现有的计划，或 **“新建”** 创建新的计划。  
   

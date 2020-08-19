@@ -1,4 +1,5 @@
 ---
+description: Audit Add Member to DB Role 事件类
 title: Audit Add Member to DB Role 事件类 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: a5ac46b6-765b-4424-b6c7-4d5a1b898d65
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: daea91039b7166036a105fa55b3951fcfda04ea6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: deb927a3cc76cbb30c6c7e3b39562decb2c2a66a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85635706"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88384873"
 ---
 # <a name="audit-add-member-to-db-role-event-class"></a>Audit Add Member to DB Role 事件类
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "85635706"
   
 |数据列名称|数据类型|说明|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|ApplicationName |**nvarchar**|与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例建立连接的客户端应用程序的名称。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
+|ApplicationName|**nvarchar**|与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例建立连接的客户端应用程序的名称。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
 |**ClientProcessID**|**int**|主机为运行该客户端应用程序的进程分配的 ID。 如果客户端提供了客户端进程 ID，则填充此数据列。|9|是|  
 |**DatabaseID**|**int**|由 USE *database* 语句指定的数据库的 ID；如果未对给定实例发出 USE *database* 语句，则为默认数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 数据列而且服务器可用，则 **ServerName** 将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
 |**DatabaseName**|**nvarchar**|已修改角色成员身份的数据库的名称。|35|是|  

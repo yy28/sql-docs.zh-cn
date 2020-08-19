@@ -1,4 +1,5 @@
 ---
+description: 层次结构数据 (SQL Server)
 title: 层次结构数据 (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/04/2019
@@ -18,18 +19,18 @@ ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 137557b633b80067205be1cdea9f0b7c6cfd82bb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1638e581a384f79842109c83352fc7292fa15de7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85640772"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88382523"
 ---
 # <a name="hierarchical-data-sql-server"></a>层次结构数据 (SQL Server)
 
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 
-  内置的 **hierarchyid** 数据类型使存储和查询层次结构数据变得更为容易。 针对表示树（最常见的层次结构数据类型）对**hierarchyid** 进行了优化。  
+  内置的 hierarchyid**** 数据类型使存储和查询层次结构数据变得更为容易。 针对表示树（最常见的层次结构数据类型）对**hierarchyid** 进行了优化。  
   
  层次结构数据定义为一组通过层次结构关系互相关联的数据项。 在层次结构关系中，一个数据项是另一个项的父级。 通常存储在数据库中的层次结构数据示例包括以下内容：  
   
@@ -325,7 +326,7 @@ GO
   
   
 #### <a name="example-using-a-serializable-transaction"></a>使用可序列化事务的示例  
- Org_BreadthFirst 索引可确保确定 \@last_child 使用范围查找。 除了应用程序可能需要检查的其他错误情况之外，插入后出现重复键冲突表示试图添加具有同一 ID 的多个雇员，因此必须重新计算 \@last_child。 以下代码计算可序列化事务中的新节点值：  
+ Org_BreadthFirst 索引可确保确定 \@last_child 使用范围查找********。 除了应用程序可能需要检查的其他错误情况之外，插入后出现重复键冲突表示试图添加具有同一 ID 的多个雇员，因此必须重新计算 \@last_child。 以下代码计算可序列化事务中的新节点值：  
   
 ```sql
 CREATE TABLE Org_T2  
@@ -512,7 +513,7 @@ WHERE OrgNode = dbo.CommonAncestor(@h1, @h2) ;
   
   
 ###  <a name="moving-subtrees"></a><a name="BKMK_MovingSubtrees"></a> 移动子树  
- 另一项常用操作是移动子树。 下面的过程采用 \@oldMgr 的子树作为参数，使其（包括 \@oldMgr）成为 \@newMgr的子树。  
+ 另一项常用操作是移动子树。 下面的过程采用 \@oldMgr 的子树作为参数，使其（包括 \@oldMgr）成为 \@newMgr的子树  。  
   
 ```sql
 CREATE PROCEDURE MoveOrg(@oldMgr nvarchar(256), @newMgr nvarchar(256) )  
@@ -540,7 +541,7 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [hierarchyid 数据类型方法引用](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)   
- [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
+ [教程：使用 hierarchyid 数据类型](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
  [hierarchyid (Transact-SQL)](../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
   
   

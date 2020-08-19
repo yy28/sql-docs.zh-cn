@@ -1,4 +1,5 @@
 ---
+description: FT:Crawl Aborted 事件类
 title: FT:Crawl Aborted 事件类 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,16 +13,16 @@ ms.assetid: eead8ea6-5051-4689-ab30-4dfbfda01fb9
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 45b8532a83614fa8b45ccff4af8452c3ff36cf79
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7b1e35188537099313ed22c79f4ef5fd13c19124
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85642207"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88383983"
 ---
 # <a name="ftcrawl-aborted-event-class"></a>FT:Crawl Aborted 事件类
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  **FT:Crawl Aborted** 事件类指示全文爬网过程中遇到异常。 该错误通常导致全文爬网停止。 有关更多详细的错误信息，请查看 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 事件日志或爬网日志。  
+  FT:Crawl Aborted**** 事件类指示全文爬网过程中遇到的异常。 该错误通常导致全文爬网停止。 有关更多详细的错误信息，请查看 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 事件日志或爬网日志。  
   
 ## <a name="ftcrawl-aborted-event-class-data-columns"></a>FT:Crawl Aborted 事件类的数据列  
   

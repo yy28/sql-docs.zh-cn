@@ -1,4 +1,5 @@
 ---
+description: Showplan XML Statistics Profile 事件类
 title: Showplan XML Statistics Profile 事件类 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 77e8ca69-d98a-4acd-9d6a-f825bf079d84
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d54c21b5eba94bab12292ca856a5b00fc60c8d74
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d575705919219b038c3fd98126c0b751bf496a57
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717769"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88383957"
 ---
 # <a name="showplan-xml-statistics-profile-event-class"></a>Showplan XML Statistics Profile 事件类
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

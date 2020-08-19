@@ -1,4 +1,5 @@
 ---
+description: Audit Database Principal Management 事件类
 title: Audit Database Principal Management 事件类 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,22 +13,22 @@ ms.assetid: 594eec78-677c-4500-ae9b-e400abf6f39c
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 33477cc0d9a975f1938d3358b38437b2298d2978
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e38d4da6ff664cfb0b781aeca9e0f50f16e518dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85630224"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88384493"
 ---
 # <a name="audit-database-principal-management-event-class"></a>Audit Database Principal Management 事件类
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  当从数据库创建、更改或删除主体（如用户）时，会发生 **Audit Database Principal Management** 事件类。  
+  当从数据库创建、更改或删除主体（如用户）时，会发生 Audit Database Principal Management 事件类****。  
   
 ## <a name="audit-database-principal-management-event-class-data-columns"></a>Audit Database Principal Management 事件类的数据列  
   
 |数据列名称|数据类型|说明|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|ApplicationName |**nvarchar**|与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例建立连接的客户端应用程序的名称。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
+|ApplicationName|**nvarchar**|与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例建立连接的客户端应用程序的名称。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
 |**DatabaseID**|**int**|由 USE *database* 语句指定的数据库的 ID；如果未对给定实例发出 USE *database* 语句，则为默认数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 数据列而且服务器可用，则 **ServerName** 将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
 |**DatabaseName**|**nvarchar**|正在其中运行用户语句的数据库的名称。|35|是|  
 |**DBUserName**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户名。|40|是|  

@@ -1,4 +1,5 @@
 ---
+description: “结果详细视图”对话框
 title: “结果详细视图”对话框 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,16 +14,16 @@ f1_keywords:
 ms.assetid: 366f0ff8-722a-40a9-934f-854147e4933d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5b9681bc22ea07ed3bed1d218ba752c2d4d6a666
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 38102297ee7ac0a29bbe37e83d1bfe834d9faaa4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716844"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88380733"
 ---
 # <a name="results-detailed-view-dialog-box"></a>“结果详细视图”对话框
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  使用 **“评估策略”** 对话框运行策略并单击 **“评估”** 后，此对话框显示策略评估结果。 此对话框是只读的，可帮助您了解属性表达式的哪个部分可能失败。  
+  使用“评估策略”**** 对话框运行策略并单击“评估”**** 后，此对话框显示策略评估结果。 此对话框是只读的，可帮助您了解属性表达式的哪个部分可能失败。  
   
 ## <a name="options"></a>选项  
  **AndOr**  
@@ -31,7 +32,7 @@ ms.locfileid: "85716844"
  **结果**  
  表示属性表达式成功或失败的图标。  
   
- **字段**  
+ 字段  
  所模拟的方面的属性。  
   
  **“运算符”**  
@@ -46,7 +47,7 @@ ms.locfileid: "85716844"
  **策略说明**  
  策略的说明。  
   
- **更多帮助**  
+ **其他帮助**  
  单击超链接可打开与此策略有关的网页。 更多帮助超链接是在创建策略时配置的，可能为空或不可用。  
   
 ## <a name="see-also"></a>另请参阅  
