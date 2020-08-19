@@ -1,4 +1,5 @@
 ---
+description: CREATE SERVER ROLE (Transact-SQL)
 title: CREATE SERVER ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/02/2016
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 30c92f80-f7f6-4a84-ae89-16e69add0de6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8c4b791e77ceea4de4a39245adcaf95cc37aec62
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 61a2e779e61d76f81c4ec818b2f07e4f1cd628b4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392925"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88416843"
 ---
 # <a name="create-server-role-transact-sql"></a>CREATE SERVER ROLE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,13 +48,13 @@ CREATE SERVER ROLE role_name [ AUTHORIZATION server_principal ]
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- role_name   
+ role_name  
  待创建的服务器角色的名称。  
   
- AUTHORIZATION server_principal   
+ AUTHORIZATION server_principal**  
  将拥有新服务器角色的登录名。 如果未指定登录名，则执行 CREATE SERVER ROLE 的登录名将拥有该服务器角色。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  服务器角色是服务器级别的安全对象。 创建服务器角色后，使用 GRANT、DENY 和 REVOKE 配置角色的服务器级别权限。 若要在数据库角色中添加登录名或从中删除登录名，请使用 [ALTER SERVER ROLE (Transact-SQL)](../../t-sql/statements/alter-server-role-transact-sql.md)。 若要删除服务器角色，请使用 [DROP SERVER ROLE (Transact SQL)](../../t-sql/statements/drop-server-role-transact-sql.md)。 有关详细信息，请参阅 [ys.server_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)。  
   
  可通过查询 [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) 和 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 目录视图查看服务器角色。  

@@ -1,4 +1,5 @@
 ---
+description: STEnvelope（geometry 数据类型）
 title: STEnvelope（geometry 数据类型）| Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 781d22e9-38df-4c23-836f-6dd0bdef49c5
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 87146a39fda67da157c48abed2b06dab926e7194
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 57a21436791e9517bcea8912fbc66f96abd1f491
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554672"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88416883"
 ---
 # <a name="stenvelope-geometry-data-type"></a>STEnvelope（geometry 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,9 +40,9 @@ STEnvelope ( )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>返回类型
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry****  
   
- CLR 返回类型：SqlGeometry   
+ CLR 返回类型：SqlGeometry****  
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `STGeomFromText()` 创建从 (0,0) 到 (2,3) 的 `LineString` 实例，并使用 `STEnvelope()` 返回 `LineString` 的边界框。  
