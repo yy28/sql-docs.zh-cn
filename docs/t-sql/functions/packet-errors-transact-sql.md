@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;PACKET_ERRORS (Transact-SQL)'
 title: '@@PACKET_ERRORS (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 09/18/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: f7da1b80-5cbe-42fa-be71-40c6af16383a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0358171ab4a149820b469ffb49b754a6d004f27f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 214f6cff39f520de9a155625f910486cbf237ffa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110352"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88363473"
 ---
 # <a name="x40x40packet_errors-transact-sql"></a>&#x40;&#x40;PACKET_ERRORS (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,8 +48,8 @@ ms.locfileid: "87110352"
 ## <a name="return-types"></a>返回类型
  **integer**  
   
-## <a name="remarks"></a>备注  
- 要显示包含多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 统计信息（包括数据包错误）的报表，请运行 sp_monitor  。  
+## <a name="remarks"></a>注解  
+ 要显示包含多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 统计信息（包括数据包错误）的报表，请运行 sp_monitor****。  
   
 ## <a name="examples"></a>示例  
  下面的示例显示了使用 `@@PACKET_ERRORS`。  

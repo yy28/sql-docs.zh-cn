@@ -1,4 +1,5 @@
 ---
+description: 复合运算符 (Transact-SQL)
 title: 复合运算符 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5072fe91-02d3-42a7-831f-756eff714a17
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6fe313e317a2d57bbb8547f66ccac6f44eaad264
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e42ce0876a6354056ae13daea43878a231bd5306
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922945"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88361803"
 ---
 # <a name="compound-operators-transact-sql"></a>复合运算符 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "86922945"
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 提供了以下复合运算符：  
   
-|操作员|详细信息链接|操作|  
+|运算符|详细信息链接|操作|  
 |--------------|------------------------------|------------|  
 |+=|[+=（加法赋值）(Transact-SQL)](../../t-sql/language-elements/add-equals-transact-sql.md)|将原始值加上一定的量，并将原始值设置为结果。|  
 |-=|[-=（减法赋值）(Transact-SQL)](../../t-sql/language-elements/subtract-equals-transact-sql.md)|将原始值减去一定的量，并将原始值设置为结果。|  
@@ -38,7 +39,7 @@ ms.locfileid: "86922945"
 |%=|[取模赋值 (Transact-SQL)](../../t-sql/language-elements/modulo-equals-transact-sql.md)|将原始值除以一定的量，并将原始值设置为余数。|  
 |&=|[&=（位与赋值）(Transact-SQL)](../../t-sql/language-elements/bitwise-and-equals-transact-sql.md)|对原始值执行位与运算，并将原始值设置为结果。|  
 |^=|[^=（位异或赋值）(Transact-SQL)](../../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)|对原始值执行位异或运算，并将原始值设置为结果。|  
-|&#124;=|[&#124;=（位或赋值）(Transact-SQL)](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)|对原始值执行位或运算，并将原始值设置为结果。|  
+|&#124;=|[&#124;=（位异或赋值）(Transact-SQL)](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)|对原始值执行位或运算，并将原始值设置为结果。|  
   
 ## <a name="syntax"></a>语法  
   
@@ -56,7 +57,7 @@ expression operator expression
 ## <a name="result-types"></a>结果类型  
  返回优先级较高的参数的数据类型。 有关详细信息，请参阅[数据类型优先级 (Transact-SQL)](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  有关详细信息，请参阅与每个运算符相关的主题。  
   
 ## <a name="examples"></a>示例  

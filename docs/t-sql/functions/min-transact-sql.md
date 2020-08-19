@@ -1,4 +1,5 @@
 ---
+description: MIN (Transact-SQL)
 title: MIN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -20,17 +21,17 @@ ms.assetid: 56cf6ec5-34f5-47e3-a402-7129039d4429
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0a22e8ff95677c51faeec59b19e0c6321abb9e77
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 0223be182fc7e29466f0a8a676cea6dc94eb915b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112912"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88364093"
 ---
 # <a name="min-transact-sql"></a>MIN (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  返回表达式中的最小值。 后面可以跟随 [OVER 子句](../../t-sql/queries/select-over-clause-transact-sql.md)。  
+  在表达式中返回最小值。 后面可以跟随 [OVER 子句](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,17 +56,17 @@ MIN ( [ ALL ] expression ) OVER ( [ <partition_by_clause> ] [ <order_by_clause> 
  指定考虑每一个唯一值。 DISTINCT 对于 MIN 无意义，使用它仅仅是为了符合 ISO 标准。  
   
  *expression*  
- 常量、列名、函数以及算术运算符、位运算符和字符串运算符的任意组合。 MIN 可用于 numeric、char、varchar、uniqueidentifier 或 datetime 列，但不能用于 bit 列       。 不允许使用聚合函数和子查询。  
+ 常量、列名、函数以及算术运算符、位运算符和字符串运算符的任意组合。 MIN 可用于 numeric、char、varchar、uniqueidentifier 或 datetime 列，但不能用于 bit 列************************。 不允许使用聚合函数和子查询。  
   
  有关详细信息，请参阅[表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
  OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_ **)**  
- partition_by_clause 将 FROM 子句生成的结果集划分为要应用函数的分区  。 如果未指定，则此函数将查询结果集的所有行视为单个组。 order_by_clause 确定执行操作的逻辑顺序  。 需要 order_by_clause  。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。  
+ partition_by_clause 将 FROM 子句生成的结果集划分为要应用函数的分区  。 如果未指定，则此函数将查询结果集的所有行视为单个组。 order_by_clause 确定执行操作的逻辑顺序。 需要 order_by_clause**。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
 ## <a name="return-types"></a>返回类型  
- 返回与 expression 相同的值  。  
+ 返回与 expression 相同的值**。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  MIN 忽略任何 Null 值。  
   
  对于字符数据列，MIN 查找排序序列的最低值。  
@@ -94,7 +95,7 @@ GO
  ```  
   
 ### <a name="b-using-the-over-clause"></a>B. 使用 OVER 子句  
- 以下示例将 MIN、MAX、AVG 和 COUNT 函数与 OVER 子句结合使用，以便为 `HumanResources.Department` 数据库的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 表中的每个部门提供聚合值。  
+ 以下示例将 MIN、MAX、AVG 和 COUNT 函数与 OVER 子句结合使用，以便为 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `HumanResources.Department` 表中的每个部门提供聚合值。  
   
 ```  
 SELECT DISTINCT Name  

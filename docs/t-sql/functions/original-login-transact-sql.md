@@ -1,4 +1,5 @@
 ---
+description: ORIGINAL_LOGIN (Transact-SQL)
 title: ORIGINAL_LOGIN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: ddfb0991-cde3-4b97-a5b7-ee450133f160
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 04a86234b478ccc27011d7549f3610a031451cf9
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: f2df0bdf310b0096d1bad89d6815ed4dd1aa65bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110371"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88363813"
 ---
 # <a name="original_login-transact-sql"></a>ORIGINAL_LOGIN (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -55,7 +56,7 @@ ORIGINAL_LOGIN( )
  以下示例将当前会话的执行上下文从语句的调用方切换到 `login1`。 函数 `SUSER_SNAME` 和 `ORIGINAL_LOGIN` 用于返回当前会话用户（上下文切换到的用户）和原始登录帐户。 
  
   >[!NOTE]
-  > 尽管 Azure SQL 数据库上支持 ORIGINAL_LOGIN 函数，但由于 Azure SQL 数据库上不支持 Execute as LOGIN，因此以下脚本将失败  。 
+  > 尽管 Azure SQL 数据库上支持 ORIGINAL_LOGIN 函数，但由于 Azure SQL 数据库上不支持 Execute as LOGIN，因此以下脚本将失败**。 
   
 ```  
 USE AdventureWorks2012;  

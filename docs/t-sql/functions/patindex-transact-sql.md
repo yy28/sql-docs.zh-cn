@@ -1,4 +1,5 @@
 ---
+description: PATINDEX (Transact-SQL)
 title: PATINDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/19/2016
@@ -22,12 +23,12 @@ ms.assetid: c0dfb17f-2230-4e36-98da-a9b630bab656
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12f1f710a78c6dcd059fbae5078b0b643296700e
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c4d2ee21a4b2c2975fcead1e883cb28459c608dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111424"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88363373"
 ---
 # <a name="patindex-transact-sql"></a>PATINDEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,33 +47,33 @@ PATINDEX ( '%pattern%' , expression )
 
 ## <a name="arguments"></a>参数
  *pattern*  
- 包含要查找的序列的字符表达式。 可以使用通配符；但 pattern 之前和之后必须有 % 字符（搜索第一个或最后一个字符时除外）  。 pattern 是字符串数据类型类别的表达式  。 pattern最多包含 8000 个字符  。
+ 包含要查找的序列的字符表达式。 可以使用通配符；但 pattern 之前和之后必须有 % 字符（搜索第一个或最后一个字符时除外）**。 pattern 是字符串数据类型类别的表达式**。 pattern最多包含 8000 个字符**。
 
  > [!NOTE]
  > 虽然传统正则表达式在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中不受本机支持，但可以使用各种通配符表达式来实现类似的复杂模式匹配。 有关通配符语法的更多详细信息，请参阅[字符串运算符](../../t-sql/language-elements/string-operators-transact-sql.md)文档。
   
  *expression*  
- 是一个[expression](../../t-sql/language-elements/expressions-transact-sql.md)，通常是针对指定模式搜索的列。 expression 是字符串数据类型类别的表达式  。  
+ 是一个[expression](../../t-sql/language-elements/expressions-transact-sql.md)，通常是针对指定模式搜索的列。 expression 是字符串数据类型类别的表达式**。  
   
 ## <a name="return-types"></a>返回类型  
-bigint（如果 expression 的数据类型为 varchar(max) 或 nvarchar(max)）；否则为 int      。  
+bigint（如果 expression 的数据类型为 varchar(max) 或 nvarchar(max)）；否则为 int******************。  
   
-## <a name="remarks"></a>备注  
-如果 pattern 或 expression 为 NULL，则 PATINDEX 返回 NULL   。  
+## <a name="remarks"></a>注解  
+如果 pattern 或 expression 为 NULL，则 PATINDEX 返回 NULL****。  
  
 PATINDEX 的起始位置为 1。
  
 PATINDEX 基于输入的排序规则执行比较。 若要以指定排序规则进行比较，则可以使用 COLLATE 将显式排序规则应用于输入。  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>补充字符（代理项对）  
-在使用 SC 排序规则时，返回值将 expression 参数中的任何 UTF-16 代理项对计为一个字符  。 有关详细信息，请参阅 [排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)。  
+在使用 SC 排序规则时，返回值将 expression 参数中的任何 UTF-16 代理项对计为一个字符**。 有关详细信息，请参阅 [排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)。  
   
-0x0000 (char(0)) 是 Windows 排序规则中未定义的字符，不能包括在 PATINDEX 中  。  
+0x0000 (char(0)) 是 Windows 排序规则中未定义的字符，不能包括在 PATINDEX 中****。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-simple-patindex-example"></a>A. 简单 PATINDEX 示例  
- 以下示例检查字符 `interesting data` 起始位置的短字符串 (`ter`)。  
+ 以下示例检查字符 `ter` 起始位置的短字符串 (`interesting data`)。  
   
 ```sql  
 SELECT position = PATINDEX('%ter%', 'interesting data');  
@@ -87,7 +88,7 @@ position
 ```
   
 ### <a name="b-using-a-pattern-with-patindex"></a>B. 在 PATINDEX 中使用模式  
-以下示例查找模式 `ensure` 在 `DocumentSummary` 数据库的 `Document` 表中 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 列特定行中的开始位置。  
+以下示例查找模式 `ensure` 在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `DocumentSummary` 表中 `Document` 列特定行中的开始位置。  
   
 ```sql  
 SELECT position = PATINDEX('%ensure%',DocumentSummary)  
@@ -157,7 +158,7 @@ position
 ```
 
 ### <a name="f-using-a-variable-to-specify-the-pattern"></a>F. 使用变量指定模式  
-下面的示例使用变量将值传递到 pattern 参数  。 此示例使用 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库。  
+下面的示例使用变量将值传递到 pattern 参数**。 此示例使用 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库。  
   
 ```sql  
 DECLARE @MyValue VARCHAR(10) = 'safety';   
