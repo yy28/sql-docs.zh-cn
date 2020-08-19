@@ -1,4 +1,5 @@
 ---
+description: Windows 中的 ODBC
 title: Windows 中的 ODBC |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 98e61767-12ed-4aec-816e-639bd9c27b31
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: de5f78f55f7242e0762d9b7cffb6dfe41c83d1dd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f2d72dbc75387e01b9b966d6e39da5775de7cbbc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81282525"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429139"
 ---
 # <a name="odbc-in-windows"></a>Windows 中的 ODBC
 以下各项仅适用于在 Microsoft® Windows NT®/Windows 2000 和 Microsoft Windows®95/98 操作系统中运行的 ODBC。  

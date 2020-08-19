@@ -1,4 +1,5 @@
 ---
+description: 查看用户定义函数
 title: 查看用户定义函数 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -19,12 +20,12 @@ ms.assetid: a45dfab5-6384-4311-b935-2e23a70c5c10
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 081be4045a04ac665a83d8fabf8f12e6e0abc7c8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 70cb57fd62b62e10aeb1d68d708a7504265e4e97
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727063"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460189"
 ---
 # <a name="view-user-defined-functions"></a>查看用户定义函数
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -68,9 +69,9 @@ ms.locfileid: "85727063"
   
     -   Aggregate 函数  
   
-4.  右键单击要查看其属性的函数，然后选择“属性”  。  
+4.  右键单击要查看其属性的函数，然后选择“属性”****。  
 
-     “函数属性 - function_name”对话框中将显示以下属性   。  
+     “函数属性 - function_name”对话框中将显示以下属性**** __。  
   
      **Database**  
      包含此函数的数据库的名称。  
@@ -160,7 +161,7 @@ ms.locfileid: "85727063"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     USE AdventureWorks2012;  

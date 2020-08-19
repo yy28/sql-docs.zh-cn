@@ -1,5 +1,6 @@
 ---
-title: SetDefaults 方法（ClientSettings）
+description: ClientSettings 类 - SetDefaults 方法
+title: 'SetDefaults 方法 (ClientSettings) '
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 056508f3-a5c8-467c-a196-dc1ef1f5178f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fd88ef9b93dd20a7cf77e70dddb8a2733ee5a4ea
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 862e03c447e6c7e0c80318b89bcd9cbf5ecd92aa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888862"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460140"
 ---
 # <a name="clientsettings-class---setdefaults-method"></a>ClientSettings 类 - SetDefaults 方法
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,12 +37,12 @@ object.SetDefaults(OverwriteAll)
 ```  
   
 ## <a name="parts"></a>组成部分  
- *object*  
+ 对象  
  一个**ClientSettings**表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端实例的 ClientSettings 对象。  
   
 #### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |*OverwriteAll*|一个指定是否覆盖 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端实例的现有值的布尔值。 若要覆盖现有数据，**则为 true** ;如果不覆盖现有数据，则**为 false** 。|  
   

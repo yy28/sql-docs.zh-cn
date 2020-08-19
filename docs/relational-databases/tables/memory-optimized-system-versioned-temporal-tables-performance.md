@@ -1,4 +1,5 @@
 ---
+description: 系统版本控制的内存优化临时表的性能
 title: 系统版本控制的内存优化临时表的性能 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/28/2016
@@ -11,12 +12,12 @@ ms.assetid: 2e110984-7703-4806-a24b-b41e8c3018c6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bdb3feaead360c65760cb4e6ae996990c1d6bba9
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: dc57f67eae06d549ce518b57c0468b2303bcef99
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552615"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460197"
 ---
 # <a name="memory-optimized-system-versioned-temporal-tables-performance"></a>系统版本控制的内存优化临时表的性能
 
@@ -28,7 +29,7 @@ ms.locfileid: "86552615"
 - 每个更新和删除操作都将记录到内部内存优化历史记录表中，因此，如果你的工作负荷大规模使用这两项操作，可能会存在意外的内存消耗。 因此，建议你注意以下事项：
 
   - 不要从当前表执行大规模删除操作，通过清理空间来增加可用的 RAM。 请考虑分批删除数据并通过调用 [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md)在两个批次之间手动调用数据刷新，或者在 **SYSTEM_VERSIONING = OFF**时删除数据。
-  - 不要一次性执行大规模的表更新操作，因为这样做所产生的内存消耗可能是更新非时态内存优化表所需内存量的两倍。 双倍的内存消耗只是暂时的，因为数据刷新任务会定期执行，以使计划边界内内部临时表的内存消耗保持稳定状态（约为当前时态表内存消耗的 10%）。 建议分批或在 SYSTEM_VERSIONING = OFF  时执行大规模的更新操作，如使用更新操作来设置新添加列的默认值。
+  - 不要一次性执行大规模的表更新操作，因为这样做所产生的内存消耗可能是更新非时态内存优化表所需内存量的两倍。 双倍的内存消耗只是暂时的，因为数据刷新任务会定期执行，以使计划边界内内部临时表的内存消耗保持稳定状态（约为当前时态表内存消耗的 10%）。 建议分批或在 SYSTEM_VERSIONING = OFF**** 时执行大规模的更新操作，如使用更新操作来设置新添加列的默认值。
 
 - 数据刷新任务的激活时间段无法进行配置，但是你可以通过调用 [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md)时删除数据。
 - 请考虑将群集列存储用作基于磁盘的历史记录表的存储选项，特别是在你计划对历史数据使用聚合或开窗函数运行分析查询时。 在这种情况下，群集列存储将成为历史记录表的最佳选择，因为它不仅提供良好的数据压缩，还具有“插入友好”的行为，可与历史记录数据的生成方式保持协调。

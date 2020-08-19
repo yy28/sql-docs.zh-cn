@@ -1,5 +1,6 @@
 ---
-title: sys. dm_exec_trigger_stats （Transact-sql） |Microsoft Docs
+description: sys.dm_exec_trigger_stats (Transact-SQL)
+title: sys. dm_exec_trigger_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2019
 ms.prod: sql
@@ -20,12 +21,12 @@ ms.assetid: 863498b4-849c-434d-b748-837411458738
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 97f86ba0da21561604b30a2936b27fc3904c01ef
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 219706736c4377c500e79f383a140f7241b46cd8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734626"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490184"
 ---
 # <a name="sysdm_exec_trigger_stats-transact-sql"></a>sys.dm_exec_trigger_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,8 +39,8 @@ ms.locfileid: "85734626"
 |object_id|**int**|触发器的对象标识号。|  
 |type|**char(2)**|对象的类型：<br /><br /> TA = 程序集 (CLR) 触发器<br /><br /> TR = SQL 触发器|  
 |**Type_desc**|**nvarchar(60)**|对对象类型的说明：<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
-|**sql_handle**|**varbinary(64)**|这可以用来与从该触发器内执行的**dm_exec_query_stats**中的查询相关联。|  
-|**plan_handle**|**varbinary(64)**|内存中计划的标识符。 该标识符是瞬态的，仅当计划保留在缓存中时，它才保持不变。 此值可用于**sys.databases dm_exec_cached_plans**动态管理视图。|  
+|**sql_handle**|**varbinary(64)**|这可以用来与从该触发器内执行的 **dm_exec_query_stats** 中的查询相关联。|  
+|**plan_handle**|**varbinary(64)**|内存中计划的标识符。 该标识符是瞬态的，仅当计划保留在缓存中时，它才保持不变。 此值可用于 **sys.databases dm_exec_cached_plans** 动态管理视图。|  
 |**cached_time**|**datetime**|触发器添加到缓存的时间。|  
 |**last_execution_time**|**datetime**|上次执行触发器的时间。|  
 |**execution_count**|**bigint**|触发器自上次编译以来所执行的次数。|  
@@ -81,7 +82,7 @@ ms.locfileid: "85734626"
 ## <a name="permissions"></a>权限  
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
+在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要  **服务器管理员** 或 **Azure Active Directory 管理员** 帐户。   
   
 ## <a name="examples"></a>示例  
  以下示例返回有关按平均占用时间衡量的前五个触发器的信息。  

@@ -1,4 +1,5 @@
 ---
+description: 第 2 课：创建和管理层次结构表中的数据
 title: 第 2 课：创建和管理层次结构表中的数据 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 95f55cff-4abb-4c08-97b3-e3ae5e8b24e2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: b54f60e71344bc04271378fbd84214b31bd9503c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0a774ce3918388e8df23de43a01b8b0930f9336d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85692497"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460219"
 ---
 # <a name="lesson-2-create-and-manage-data-in-a-hierarchical-table"></a>第 2 课：创建和管理层次结构表中的数据
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 在第 1 课中，你修改了一个现有表以使用 **hierarchyid** 数据类型，并采用现有数据的表示形式填充 **hierarchyid** 列。 在本课程中，您将由新表开始，使用分层方法插入数据。 然后，您将使用分层方法查询和操作数据。 
 
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
 若要完成本教程，需要 SQL Server Management Studio、针对运行 SQL Server 的服务器的访问权限以及 AdventureWorks 数据库。
 
 - 安装 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
@@ -292,7 +293,7 @@ AdventureWorks2017 有 8 名在市场营销部门工作的雇员。 雇员的层
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 重新组织层次结构是一项常见的维护任务。 在此任务中，使用包含 [GetReparentedValue](../../t-sql/data-types/getreparentedvalue-database-engine.md) 方法的 UPDATE 语句首先将一行移到层次结构的新位置。 然后，我们会将整个子树移到一个新位置。  
   
-`GetReparentedValue` 方法使用两个参数。 第一个参数用于描述要修改的层次结构部分。 例如，如果层次结构为 **/1/4/2/3/** ，希望更改 **/1/4/** 部分，将层次结构变为 **/2/1/2/3/** ，后两个节点 (**2/3/** ) 保持不变，则必须提供要更改的节点 ( **/1/4/** ) 作为第一个参数。 第二个参数提供新的层次结构级别，在示例中为 **/2/1/** 。 这两个参数无须包含相同的级别数。  
+`GetReparentedValue` 方法使用两个参数。 第一个参数用于描述要修改的层次结构部分。 例如，如果层次结构为 **/1/4/2/3/** ，希望更改 **/1/4/** 部分，将层次结构变为 **/2/1/2/3/**，后两个节点 (**2/3/**) 保持不变，则必须提供要更改的节点 (**/1/4/**) 作为第一个参数。 第二个参数提供新的层次结构级别，在示例中为 **/2/1/**。 这两个参数无须包含相同的级别数。  
   
 ### <a name="move-a-single-row-to-a-new-location-in-the-hierarchy"></a>将一行移到层次结构中的新位置上  
   
@@ -322,7 +323,7 @@ AdventureWorks2017 有 8 名在市场营销部门工作的雇员。 雇员的层
     GO  
     ```  
   
-    现在，Wanida 位于节点 **/3/1/** 。  
+    现在，Wanida 位于节点 **/3/1/**。  
   
 ### <a name="reorganize-a-section-of-a-hierarchy"></a>重新组织层次结构中的某一部分  
   
@@ -333,7 +334,7 @@ AdventureWorks2017 有 8 名在市场营销部门工作的雇员。 雇员的层
     GO  
     ```  
   
-2.  现在，Kevin 向 Wanida 报告，Wanida 向 Jill 报告，而 Jill 向 David 报告。 也就是说，Kevin 位于级别 **/3/1/1/** 。 若要将 Jill 的所有下属都移到一位新经理之下，需要将 **OrgNode** 为 **/3/** 的所有节点更新为新值。 执行下列代码以便将 Wanida 更新为向 Sariya 负责，但 Kevin 仍向 Wanida 负责：  
+2.  现在，Kevin 向 Wanida 报告，Wanida 向 Jill 报告，而 Jill 向 David 报告。 也就是说，Kevin 位于级别 **/3/1/1/**。 若要将 Jill 的所有下属都移到一位新经理之下，需要将 **OrgNode** 为 **/3/** 的所有节点更新为新值。 执行下列代码以便将 Wanida 更新为向 Sariya 负责，但 Kevin 仍向 Wanida 负责：  
   
     ```sql  
     DECLARE @OldParent hierarchyid, @NewParent hierarchyid  

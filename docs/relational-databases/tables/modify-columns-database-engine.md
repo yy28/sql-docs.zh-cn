@@ -1,4 +1,5 @@
 ---
+description: 修改列（数据库引擎）
 title: 修改列（数据库引擎）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ ms.assetid: b67b95c5-61ef-4bd8-9a3e-1640eb7583ac
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: baf0b580ab18334fcffbbe6b16ddd9e04cf42290
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 0f306dd339ed7e91a1d54195dc32346c9139c809
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394489"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460209"
 ---
 # <a name="modify-columns-database-engine"></a>修改列（数据库引擎）
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -53,13 +54,13 @@ ms.locfileid: "87394489"
   
 #### <a name="to-modify-the-data-type-of-a-column"></a>修改列的数据类型  
   
-1.  在“对象资源管理器”  中，右键单击要更改其小数位数的列所在的表，再单击“设计”  。  
+1.  在“对象资源管理器”**** 中，右键单击要更改其小数位数的列所在的表，再单击“设计”****。  
   
 2.  选择要修改其数据类型的列。  
   
-3.  在“列属性”  选项卡中，单击“数据类型”  属性的网格单元格，再从下拉列表中选择新的数据类型。  
+3.  在“列属性”**** 选项卡中，单击“数据类型”**** 属性的网格单元格，再从下拉列表中选择新的数据类型。  
   
-4.  在“文件”  菜单上，单击“保存”  以保存表名  。  
+4.  在“文件”菜单上，单击“保存表名称”********__。  
   
 > [!NOTE]  
 >  当您修改列的数据类型时，即使已为所选数据类型指定其他长度，表设计器也会使用该数据类型的默认长度。 在指定数据类型之后，始终需要将数据类型长度设置为所需的值。  
@@ -75,7 +76,7 @@ ms.locfileid: "87394489"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```sql  
     CREATE TABLE dbo.doc_exy (column_a INT ) ;  

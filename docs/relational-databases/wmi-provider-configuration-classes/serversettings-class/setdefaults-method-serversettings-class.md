@@ -1,5 +1,6 @@
 ---
-title: SetDefaults 方法（ServerSettings）
+description: SetDefaults 方法（ServerSettings 类）
+title: 'SetDefaults 方法 (ServerSettings) '
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 76e4cfab-4b15-4da4-bb2f-8aac6f927f79
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4c1f7670aa0e90f848c3f66e65df104181541dee
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3d3dcfae6dc8f4871ffc5b14ef47fb5508b7f01c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880726"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460079"
 ---
 # <a name="setdefaults-method-serversettings-class"></a>SetDefaults 方法（ServerSettings 类）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -36,17 +37,17 @@ object.SetDefaults(OverwriteAll)
 ```  
   
 ## <a name="parts"></a>组成部分  
- *object*  
- 一个表示客户端实例的[ServerSettings 类](../../../relational-databases/wmi-provider-configuration-classes/serversettings-class/serversettings-class.md)对象 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
+ 对象  
+ 一个表示客户端实例的 [ServerSettings 类](../../../relational-databases/wmi-provider-configuration-classes/serversettings-class/serversettings-class.md) 对象 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 #### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
-|*OverwriteAll*|指定是否覆盖实例上的现有值的布尔值 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ：如果要覆盖现有数据，则为**true** ; 否则为**false** 。|  
+|*OverwriteAll*|指定是否覆盖实例上的现有值的布尔值 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ：如果要覆盖现有数据，则为 **true** ; 否则为 **false** 。|  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
- U**int32**值，如果服务已成功修改，则为 0; 如果不支持该请求，则为 1; 其他任何数字表示出现错误。  
+ U**int32** 值，如果服务已成功修改，则为 0; 如果不支持该请求，则为 1; 其他任何数字表示出现错误。  
   
 ## <a name="remarks"></a>备注  
   

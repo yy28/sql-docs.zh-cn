@@ -1,4 +1,5 @@
 ---
+description: 'sys. pdw_nodes_columns (Transact-sql) '
 title: sys. pdw_nodes_columns (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -12,12 +13,12 @@ ms.assetid: 268c77b7-1d71-4197-a2ed-5e2b2b8fc260
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 1b5e9e05e65a7121f30bfc0fc296229e943a8cd9
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 32cd66ea386f2b07d910c9371c66036a4e162dfd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197391"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490224"
 ---
 # <a name="syspdw_nodes_columns-transact-sql"></a>sys. pdw_nodes_columns (Transact-sql) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "86197391"
 |system_type_id|**tinyint**|列的系统类型的 ID。||  
 |user_type_id|**int**|用户定义的列类型的 ID。||  
 |max_length|**smallint**|列的最大长度（字节）。|对于不支持的列类型，包含-1 (无效) 。|  
-|精度|**tinyint**|如果基于数值，则为该列的精度；否则为 0。||  
+|精准率|**tinyint**|如果基于数值，则为该列的精度；否则为 0。||  
 |scale|**tinyint**|如果基于数值，则为列的小数位数；否则为 0。||  
 |collation_name|**sysname**|如果基于字符，则为该列排序规则的名称；否则为 NULL。||  
 |is_nullable|**bit**|1 = 列可为空。||  

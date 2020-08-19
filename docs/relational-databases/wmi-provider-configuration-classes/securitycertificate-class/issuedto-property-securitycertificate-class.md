@@ -1,5 +1,6 @@
 ---
-title: IssuedTo 属性（SecurityCertificate）
+description: IssuedTo 属性（SecurityCertificate 类）
+title: 'IssuedTo 属性 (SecurityCertificate) '
 ms.custom: seo-lt-2019
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 47a4fcc7-6e8c-4ea2-a68a-f2789151c25f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 235609e2018dfb9e8aac5f9eb017cb639d46de54
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fe913eeae76f9b069502caa55249eb0a785a86ef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880934"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460111"
 ---
 # <a name="issuedto-property-securitycertificate-class"></a>IssuedTo 属性（SecurityCertificate 类）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +37,7 @@ object.IssuedTo [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- *object*  
+ 对象  
  一个表示安全证书的 [SecurityCertificate 类](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
