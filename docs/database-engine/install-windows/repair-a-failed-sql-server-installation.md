@@ -1,4 +1,5 @@
 ---
+description: 修复失败的 SQL Server 安装
 title: 修复失败的 SQL Server 安装 | Microsoft Docs
 deescription: This article describes the scenarios where you can try a repair operation to fix failed SQL Server installation.
 ms.custom: ''
@@ -11,12 +12,12 @@ ms.assetid: 90c11b28-892b-44d6-978e-0eee48c75b7d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3ba82179f31d8e6cef2e3e318187c26f448e8219
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b350c746d498dbaeb63f952f1ca172d4ffeaefff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900318"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88395873"
 ---
 # <a name="repair-a-failed-sql-server-installation"></a>修复失败的 SQL Server 安装
 
@@ -63,7 +64,7 @@ ms.locfileid: "85900318"
   
 4. 将运行安装程序支持规则和文件例程，以确保您的系统上安装了必备组件，并且计算机能够通过安装程序验证规则。 单击 **“确定”** 或 **“安装”** 以继续操作。 
   
-5. 在“选择实例”页上选择要修复的实例，然后单击 **“下一步”** 继续操作。 
+5. 在“ 选择实例 ”页上选择要修复的实例，然后单击“ **下一步** ”继续操作。 
   
 6. 将运行修复规则以验证修复操作。 若要继续，请单击 **“下一步”** 。 
   

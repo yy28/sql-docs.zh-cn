@@ -1,4 +1,5 @@
 ---
+description: 事务锁定和行版本控制指南
 title: 事务锁定和行版本控制指南
 ms.custom: seo-dt-2019
 ms.date: 03/10/2020
@@ -19,12 +20,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d1323c8736934a46fdb4ef8c4d8752364f8ae38d
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 12d986004250f40acb9dc99d225fc30c015ac734
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87239307"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88403053"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>事务锁定和行版本控制指南
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -1343,9 +1344,9 @@ BEGIN TRANSACTION
   
  **Version Store Size (KB)** 。 监视所有版本存储区的大小 (KB)。 此信息有助于确定版本存储区在 tempdb 数据库中所需的空间大小。 监视计数器一段时间，可以获得有用的信息来估计在 tempdb 数据库中所需的额外空间。  
   
- `Version Generation rate (KB/s)` 列中的一个值匹配。 监视所有版本存储区中的版本生成速率（KB/秒）。  
+ `Version Generation rate (KB/s)`. 监视所有版本存储区中的版本生成速率（KB/秒）。  
   
- `Version Cleanup rate (KB/s)` 列中的一个值匹配。 监视所有版本存储区中的版本清除速率（KB/秒）。  
+ `Version Cleanup rate (KB/s)`. 监视所有版本存储区中的版本清除速率（KB/秒）。  
   
 > [!NOTE]  
 > Version Generation rate (KB/s) 和 Version Cleanup rate (KB/s) 的信息可以用于预测 tempdb 空间要求。  
@@ -1362,11 +1363,11 @@ BEGIN TRANSACTION
   
  **Transactions**。 监视活动事务的总数， 不包括系统事务。  
   
- `Snapshot Transactions` 列中的一个值匹配。 监视活动快照事务的总数。  
+ `Snapshot Transactions`. 监视活动快照事务的总数。  
   
- `Update Snapshot Transactions` 列中的一个值匹配。 监视执行更新操作的活动快照事务的总数。  
+ `Update Snapshot Transactions`. 监视执行更新操作的活动快照事务的总数。  
   
- `NonSnapshot Version Transactions` 列中的一个值匹配。 监视生成版本记录的活动非快照事务的总数。  
+ `NonSnapshot Version Transactions`. 监视生成版本记录的活动非快照事务的总数。  
   
 > [!NOTE]  
 > Update Snapshot Transactions 与 NonSnapshot Version Transactions 之和表示参与版本生成的事务的总数。 Snapshot Transactions 与 Update Snapshot Transactions 之差表示只读快照事务数。  

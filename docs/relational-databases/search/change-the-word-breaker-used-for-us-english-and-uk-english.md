@@ -1,4 +1,5 @@
 ---
+description: Change the Word Breaker Used for US English and UK English
 title: 更改用于美国英语和英国英语的断字符 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7bb7151b0a36267fa1cd9cad24432f5d72f96b11
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 2da7ecd383b1db1ef9a66b3ac3fb75ef9fbf8723
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934336"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88403873"
 ---
 # <a name="change-the-word-breaker-used-for-us-english-and-uk-english"></a>Change the Word Breaker Used for US English and UK English
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "87934336"
   
 #### <a name="to-switch-from-the-current-version-of-the-us-english-word-breaker-to-the-previous-version"></a>从当前版本的美国英语断字符切换到以前的版本  
   
-1.  在注册表中，导航到以下节点：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**。  
+1.  在注册表中，导航到以下节点：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID。  
   
 2.  使用以下步骤添加 COM ClassID 的新键，用于 LCID 1033 的以前美国英语的断字符和词干分析器接口：  
   
@@ -50,15 +51,15 @@ ms.locfileid: "87934336"
   
 3.  在注册表中，导航到以下节点：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\enu**。  
   
-4.  将 **WBreakerClass** 键值更新为 **{188D6CC5-CB03-4C01-912E-47D21295D77E}** 。  
+4.  将 **WBreakerClass** 键值更新为 **{188D6CC5-CB03-4C01-912E-47D21295D77E}**。  
   
-5.  将 **StemmerClass** 键值更新为 **{EEED4C20-7F1B-11CE-BE57-00AA0051FE20}** 。  
+5.  将 **StemmerClass** 键值更新为 **{EEED4C20-7F1B-11CE-BE57-00AA0051FE20}**。  
   
 6.  重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
 
 #### <a name="to-switch-from-the-current-version-of-the-uk-english-word-breaker-to-the-previous-version"></a>从当前版本的英国英语断字符切换到以前的版本  
   
-1.  在注册表中，导航到以下节点：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**。  
+1.  在注册表中，导航到以下节点：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID。  
   
 2.  使用以下步骤添加 COM ClassID 的新键，用于 LCID 2057 的以前英国英语的断字符和词干分析器接口：  
   
@@ -72,9 +73,9 @@ ms.locfileid: "87934336"
   
 3.  在注册表中，导航到以下节点：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng**。  
   
-4.  将 **WBreakerClass** 键值更新为 **{173C97E2-AEBE-437C-9445-01B237ABF2F6}** 。  
+4.  将 **WBreakerClass** 键值更新为 **{173C97E2-AEBE-437C-9445-01B237ABF2F6}**。  
   
-5.  将 **StemmerClass** 键值更新 **{D99F7670-7F1A-11CE-BE57-00AA0051FE20}** 。  
+5.  将 **StemmerClass** 键值更新 **{D99F7670-7F1A-11CE-BE57-00AA0051FE20}**。  
   
 6.  重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
@@ -82,7 +83,7 @@ ms.locfileid: "87934336"
   
 #### <a name="to-switch-back-from-the-previous-version-of-the-us-english-word-breaker-to-the-current-version"></a>从以前版本的美国英语断字符切换回当前版本  
   
-1.  在注册表中，导航到以下节点：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**。  
+1.  在注册表中，导航到以下节点：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID。  
   
 2.  如果以下键不存在，则使用以下步骤添加 COM ClassID 的新键，用于 LCID 1033 的当前美国英语的断字符和词干分析器接口：  
   
@@ -96,15 +97,15 @@ ms.locfileid: "87934336"
   
 3.  在注册表中，导航到以下节点：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng**。  
   
-4.  将 **WBreakerClass** 键值更新为 **{9faed859-0b30-4434-ae65-412e14a16fb8}** 。  
+4.  将 **WBreakerClass** 键值更新为 **{9faed859-0b30-4434-ae65-412e14a16fb8}**。  
   
-5.  将 **StemmerClass** 键值更新为 **{e1e5ef84-c4a6-4e50-8188-99aef3de2659}** 。  
+5.  将 **StemmerClass** 键值更新为 **{e1e5ef84-c4a6-4e50-8188-99aef3de2659}**。  
   
 6.  重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 #### <a name="to-switch-back-from-the-previous-version-of-the-uk-english-word-breaker-to-the-current-version"></a>从以前版本的英国英语断字符切换回当前版本  
   
-1.  在注册表中，导航到以下节点：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**。  
+1.  在注册表中，导航到以下节点：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID。  
   
 2.  如果以下键不存在，则使用以下步骤添加 COM ClassID 的新键，用于 LCID 2057 的当前英国英语的断字符和词干分析器接口：  
   
@@ -118,9 +119,9 @@ ms.locfileid: "87934336"
   
 3.  在注册表中，导航到以下节点：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng**。  
   
-4.  将 **WBreakerClass** 键值更新为 **{9faed859-0b30-4434-ae65-412e14a16fb8}** 。  
+4.  将 **WBreakerClass** 键值更新为 **{9faed859-0b30-4434-ae65-412e14a16fb8}**。  
   
-5.  将 **StemmerClass** 键值更新为 **{e1e5ef84-c4a6-4e50-8188-99aef3de2659}** 。  
+5.  将 **StemmerClass** 键值更新为 **{e1e5ef84-c4a6-4e50-8188-99aef3de2659}**。  
   
 6.  重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   

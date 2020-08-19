@@ -1,4 +1,5 @@
 ---
+description: 使用 CDC 服务
 title: 使用 CDC 服务 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 4fc8edad-e16e-432f-a8ca-75f9a27444f3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6885167d84654866dcb9c1f433f5f11aaee77031
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e591992c3e03162ecdbb928b7ce41ced3037f5ac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921443"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88394493"
 ---
 # <a name="work-with-cdc-services"></a>使用 CDC 服务
 
@@ -30,7 +31,7 @@ ms.locfileid: "86921443"
  **准备 SQL Server**  
  从 CDC 服务配置控制台右侧的 **“操作”** 窗格中选择此选项。  
   
- 还可以右键单击“本地 CDC 服务”  ，然后选择“准备 SQL Server”  。  
+ 还可以右键单击“本地 CDC 服务”****，然后选择“准备 SQL Server”****。  
   
  “为 Oracle CDC 准备 SQL Server 实例”对话框随即将会打开。  
   
@@ -39,7 +40,7 @@ ms.locfileid: "86921443"
  **创建新的 CDC 服务**  
  从 CDC 服务配置控制台右侧的 **“操作”** 窗格中，单击 **“新建服务”** 。  
   
- 还可以右键单击“本地 CDC 服务”  ，然后选择“新建服务”  。  
+ 还可以右键单击“本地 CDC 服务”****，然后选择“新建服务”****。  
   
  “新建 Oracle CDC 服务”对话框将打开。  
   

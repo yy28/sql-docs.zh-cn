@@ -1,4 +1,5 @@
 ---
+description: 安装和配置语义搜索
 title: 安装和配置语义搜索 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 50686881f950d16fb0fc7b5f8bb2dc5a3c63c1c1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 089d8f5a3c39cd29e04a342e19c29bfbafc7b712
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629387"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88404073"
 ---
 # <a name="install-and-configure-semantic-search"></a>安装和配置语义搜索
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +37,7 @@ GO
 ```  
   
 ###  <a name="install-semantic-search"></a><a name="BasicsSemanticSearch"></a> 安装语义搜索  
- 若要安装语义搜索，在 SQL Server 安装过程中，请在“要安装的功能”页上选择“全文和语义提取搜索”。    
+ 若要安装语义搜索，在 SQL Server 安装过程中，请在“要安装的功能”页上选择“全文和语义提取搜索”。********  
   
  统计语义搜索依赖于全文搜索。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的这两个可选功能是一起安装的。  
   

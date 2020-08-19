@@ -1,4 +1,5 @@
 ---
+description: 生成镜像表和 CDC 捕获实例
 title: 生成镜像表和 CDC 捕获实例 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 260c1617-eecc-4007-a84d-3c5778ce46b6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f5b462a03b15042c6fbb801b121bb04a07b7966b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9f8340ef153f815d3073edaf4f9a13e99e1e9f67
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921584"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88394803"
 ---
 # <a name="generate-mirror-tables-and-cdc-capture-instances"></a>生成镜像表和 CDC 捕获实例
 

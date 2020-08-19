@@ -1,4 +1,5 @@
 ---
+description: “浏览所有主体”对话框
 title: “浏览所有主体”对话框 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,19 +13,19 @@ f1_keywords:
 ms.assetid: f11d2c5e-ee05-45f3-8dc2-0feb99b2f76f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 618f5e013e8875f13b06bcabfe8b0c1456af0aba
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f5ec280020b966a1d23b5ebb9dfb2c740692a6d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922653"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88394963"
 ---
 # <a name="browse-all-principals-dialog-box"></a>“浏览所有主体”对话框
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  使用“浏览所有主体”对话框选择数据库主体，以更改所选项目或所选文件夹中包含的所有项目的主体权限  。  
+  使用“浏览所有主体”对话框选择数据库主体，以更改所选项目或所选文件夹中包含的所有项目的主体权限。  
   
  **您希望做什么？**  
   
@@ -42,11 +43,11 @@ ms.locfileid: "86922653"
   
 3.  展开 **“SSISDB”** 节点。  
   
-4.  要更改所选文件夹中包含的所有项目的主体权限，请右键单击该文件夹，然后单击“属性”  。  
+4.  要更改所选文件夹中包含的所有项目的主体权限，请右键单击该文件夹，然后单击“属性”。  
   
-     要更改所选文件的主体权限，请扩展包含该项目的文件夹，右键单击该项目，然后单击“属性”  。  
+     要更改所选文件的主体权限，请扩展包含该项目的文件夹，右键单击该项目，然后单击“属性”。  
   
-5.  选择 **“权限”** 页，然后单击 **“浏览”** 。  
+5.  选择 **“权限”** 页，然后单击 **“浏览”**。  
   
 ##  <a name="configure-the-options"></a><a name="options"></a> 配置选项  
  此页显示来自 SSISDB 数据库的目录视图 sys.database_principals 的主体。  
@@ -54,15 +55,15 @@ ms.locfileid: "86922653"
  选择主体后，在您单击 **“确定”** 并且关闭 **“浏览所有主体”** 对话框时，会将这些主体添加到父对话框的 **“权限”** 页上的 **“登录名或角色”** 列表中。 在将主体添加到 **“登录名或角色”** 列表后，您可以更改该主体对所选项目的权限。  
   
  **选择列**  
- 选择此选项可以将主体添加到父对话框的“权限”页上的“登录名或角色”   列表中。  
+ 选择此选项可以将主体添加到父对话框的“权限”页上的“登录名或角色”******** 列表中。  
   
  **图标列**  
- 与主体的  “类型”相对应的图标。  
+ 与主体的****“类型”相对应的图标。  
   
  **名称**  
  主体的名称。  
   
- 类型   
+ **类型**  
  主体的类型。 常见类型如下：  
   
 -   SQL 用户  

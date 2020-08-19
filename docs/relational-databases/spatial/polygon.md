@@ -1,4 +1,5 @@
 ---
+description: Polygon
 title: Polygon | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3522345ce61af05d3934bff0fb240f8b5100987a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 61062aae61a7653ea226ee56ecca51f0d99bb11a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85666901"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88403173"
 ---
 # <a name="polygon"></a>Polygon
 
@@ -47,9 +48,9 @@ ms.locfileid: "85666901"
  已接受的 **Polygon** 实例是可以在不引发异常的情况下存储到 **geometry** 或 **geography** 变量中的实例。 下面是一些已接受的 **Polygon** 实例：  
   
 -   空的 **Polygon** 实例  
--   包含一个可接受外部环 (LineString) 和零个或多个可接受内部环 (LineString) 的 Polygon 实例  
+-   包含一个可接受外部环 (LineString****) 和零个或多个可接受内部环 (LineString****) 的 Polygon**** 实例  
   
-为了让环 (LineString  ) 可接受，必须满足以下条件。  
+为了让环 (LineString****) 可接受，必须满足以下条件。  
   
 -   **LineString** 实例必须是已接受的实例。  
 -   **LineString** 实例至少必须有四个点。  

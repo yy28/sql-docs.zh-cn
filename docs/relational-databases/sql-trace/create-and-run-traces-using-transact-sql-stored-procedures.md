@@ -1,4 +1,5 @@
 ---
+description: 使用 Transact-SQL 存储过程创建和运行跟踪
 title: 使用 Transact-SQL 存储过程创建和运行跟踪
 ms.custom: seo-dt-2019
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 80347417-338d-4bea-8885-91fae5181cfe
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ae33b8b69f3c6da6e6ad86a554c5eb0bf7af9535
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: eac3736784845b5dbae102bd91aa824b203a7ab8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751035"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88402473"
 ---
 # <a name="create-and-run-traces-using-transact-sql-stored-procedures"></a>使用 Transact-SQL 存储过程创建和运行跟踪
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "85751035"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|说明|  
+|主题|描述|  
 |-----------|-----------------|  
 |[优化 SQL 跟踪](../../relational-databases/sql-trace/optimize-sql-trace.md)|说明如何降低跟踪对系统性能的影响。|  
 |[筛选跟踪](../../relational-databases/sql-trace/filter-a-trace.md)|介绍使用筛选器进行跟踪。|  
