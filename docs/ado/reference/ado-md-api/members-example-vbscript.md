@@ -1,5 +1,6 @@
 ---
-title: 成员示例（VBScript） |Microsoft Docs
+description: 成员示例 (VBScript)
+title: 成员示例 (VBScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 87bbd4ad-bb1a-4123-93ef-99ef47fd970b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3064c920c8d18e702541138de9f2151f5d8fbb03
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e1da649b752739f9e36fe22ac2c3e61d8b4fba14
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765089"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440849"
 ---
 # <a name="members-example-vbscript"></a>成员示例 (VBScript)
 此示例使用 MDX 查询字符串来检索 OLAP 数据，并使用多维度单元集的列跨越功能将生成的单元格写入 HTML 表结构。  

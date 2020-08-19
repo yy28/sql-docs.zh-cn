@@ -1,5 +1,6 @@
 ---
-title: Optimize 属性示例（VC + +） |Microsoft Docs
+description: Optimize 属性示例 (VC++)
+title: " (VC + +) 优化属性示例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: cb335455-b027-4f66-868d-d0d8b2175de1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bc8268f65e8bd7206ff0be1423785e1862147bed
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9f7db7d9ed14c91caf2551ef350833a67788920b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762070"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442879"
 ---
 # <a name="optimize-property-example-vc"></a>Optimize 属性示例 (VC++)
-此示例演示[字段](../../../ado/reference/ado-api/field-object.md)对象动态**优化**属性。 不会为**Pubs**数据库中**作者**表的**zip**字段编制索引。 将 "**压缩**" 字段中的 "[优化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)" 属性设置为 " **True** " 可授予 ADO 生成索引，从而提高[Find](../../../ado/reference/ado-api/find-method-ado.md)方法的性能。  
+此示例演示 [字段](../../../ado/reference/ado-api/field-object.md) 对象动态 **优化** 属性。 不会为**Pubs**数据库中**作者**表的**zip**字段编制索引。 将 "**压缩**" 字段中的 "[优化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)" 属性设置为 " **True** " 可授予 ADO 生成索引，从而提高[Find](../../../ado/reference/ado-api/find-method-ado.md)方法的性能。  
   
 ## <a name="example"></a>示例  
   

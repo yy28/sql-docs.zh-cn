@@ -1,4 +1,5 @@
 ---
+description: ADOX 枚举常量
 title: ADOX 枚举常量 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,29 +13,29 @@ helpviewer_keywords:
 ms.assetid: 9d91f511-d46f-44ef-97ef-77bf93836186
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 84a03af49152bc305f62aceb149d904ef0acf9a0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 555c1a83946cdb764f77085b31e83935e4fa2a2d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764138"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440589"
 ---
 # <a name="adox-enumerated-constants"></a>ADOX 枚举常量
 为了协助调试，ADOX 枚举常量会列出每个常量的值。 不过，此值是纯粹的建议，可能会因 ADOX 的一个版本而发生变化。 你的代码只应依赖于枚举常量的名称，而不是实际值。  
   
  定义下面的枚举常数。  
   
-|枚举|说明|  
+|枚举|描述|  
 |-----------------|-----------------|  
-|[ActionEnum](../../../ado/reference/adox-api/actionenum.md)|指定在调用**SetPermissions**时要执行的操作的类型。|  
+|[ActionEnum](../../../ado/reference/adox-api/actionenum.md)|指定在调用 **SetPermissions** 时要执行的操作的类型。|  
 |[AllowNullsEnum](../../../ado/reference/adox-api/allownullsenum.md)|指定是否为具有 null 值的记录编制索引。|  
-|[ColumnAttributesEnum](../../../ado/reference/adox-api/columnattributesenum.md)|指定**列**的特征。|  
-|[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)|指定**字段**、**参数**或**属性**的数据类型。|  
-|[InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md)|指定对象如何继承具有**SetPermissions**的权限集。|  
-|[KeyTypeEnum](../../../ado/reference/adox-api/keytypeenum.md)|指定**键**的类型： primary、foreign 或 unique。|  
+|[ColumnAttributesEnum](../../../ado/reference/adox-api/columnattributesenum.md)|指定 **列**的特征。|  
+|[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)|指定 **字段**、 **参数**或 **属性**的数据类型。|  
+|[InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md)|指定对象如何继承具有 **SetPermissions**的权限集。|  
+|[KeyTypeEnum](../../../ado/reference/adox-api/keytypeenum.md)|指定 **键**的类型： primary、foreign 或 unique。|  
 |[ObjectTypeEnum](../../../ado/reference/adox-api/objecttypeenum.md)|指定要为其设置权限或所有权的数据库对象的类型。|  
 |[RightsEnum](../../../ado/reference/adox-api/rightsenum.md)|指定组或用户对对象的权限。|  
-|[RuleEnum](../../../ado/reference/adox-api/ruleenum.md)|指定删除**密钥**时要遵循的规则。|  
+|[RuleEnum](../../../ado/reference/adox-api/ruleenum.md)|指定删除 **密钥** 时要遵循的规则。|  
 |[SortOrderEnum](../../../ado/reference/adox-api/sortorderenum.md)|指定索引列的排序顺序。|  
   
 ## <a name="see-also"></a>另请参阅  

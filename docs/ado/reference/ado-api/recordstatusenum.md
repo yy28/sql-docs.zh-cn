@@ -1,4 +1,5 @@
 ---
+description: RecordStatusEnum
 title: RecordStatusEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 506fdd70-4452-4e83-95d5-c94311988dfa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f84f43a90479064c2a95d407b7f816fd48c1c679
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0d48e9538fb8ec4f0dac8c3a17457b04b0ace963
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82756754"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442381"
 ---
 # <a name="recordstatusenum"></a>RecordStatusEnum
-指定有关批更新和其他批量操作的记录的[状态](../../../ado/reference/ado-api/status-property-ado-recordset.md)。  
+指定有关批更新和其他批量操作的记录的 [状态](../../../ado/reference/ado-api/status-property-ado-recordset.md) 。  
   
-|返回的常量|值|说明|  
+|返回的常量|值|描述|  
 |--------------|-----------|-----------------|  
 |**adRecCanceled**|0x100|指示未保存记录，因为该操作已取消。|  
 |**adRecCantRelease**|0x400|指示未保存新记录，因为现有记录已锁定。|  
@@ -72,5 +73,5 @@ ms.locfileid: "82756754"
 |AdoEnums.RecordStatus.SCHEMAVIOLATION|  
 |AdoEnums.RecordStatus.UNMODIFIED|  
   
-## <a name="applies-to"></a>应用于  
+## <a name="applies-to"></a>适用于  
  [Status 属性 （ADO 记录集）](../../../ado/reference/ado-api/status-property-ado-recordset.md)

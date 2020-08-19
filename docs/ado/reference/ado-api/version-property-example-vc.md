@@ -1,5 +1,6 @@
 ---
-title: Version 属性示例（VC + +） |Microsoft Docs
+description: Version 属性示例 (VC++)
+title: " (VC + +) 的版本属性示例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2440b6ff-2536-497c-a5f4-41db0cf1945e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5b2ed55f02e3cbabfa1e14aadf7c53d923d85523
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7ddac29da277027f1cc89a8c078ac4d072c369b6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758593"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441539"
 ---
 # <a name="version-property-example-vc"></a>Version 属性示例 (VC++)
 此示例使用[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象的[Version](../../../ado/reference/ado-api/version-property-ado.md)属性显示当前 ADO 版本。 它还使用几个动态属性来显示：  
@@ -35,7 +36,7 @@ ms.locfileid: "82758593"
 -   ODBC 驱动程序名称和版本。  
   
 > [!NOTE]
->  如果要连接到支持 Windows 身份验证的数据源提供程序，应在连接字符串中指定**Trusted_Connection = yes**或**集成安全性 = SSPI**而不是用户 ID 和密码信息。  
+>  如果要连接到支持 Windows 身份验证的数据源提供程序，应在连接字符串中指定 **Trusted_Connection = yes** 或 **集成安全性 = SSPI** 而不是用户 ID 和密码信息。  
   
 ```  
 // BeginVersionCpp.cpp  
@@ -135,5 +136,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Connection 对象（ADO）](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [ADO) 的连接对象 (](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Version 属性 (ADO)](../../../ado/reference/ado-api/version-property-ado.md)

@@ -1,5 +1,6 @@
 ---
-title: Level 对象（ADO MD） |Microsoft Docs
+description: 级别对象 (ADO MD)
+title: Level Object (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 37815869-ed30-45fd-9aea-0a986c1b305c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e1ee7ad05f05d2eb77d7d705200c52ddf3f01146
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: cdfcf6cb1411ae4f9ece9b917b5ecb1b76718766
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82753850"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440949"
 ---
 # <a name="level-object-ado-md"></a>级别对象 (ADO MD)
 包含一组成员，其中每个成员在层次结构中具有相同的级别。  
   
 ## <a name="remarks"></a>备注  
- 使用**Level**对象的集合和属性，可以执行以下操作：  
+ 使用 **Level** 对象的集合和属性，可以执行以下操作：  
   
 -   标识具有[Name](../../../ado/reference/ado-md-api/name-property-ado-md.md)和[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)属性的**级别**。  
   
@@ -36,17 +37,17 @@ ms.locfileid: "82753850"
   
 -   返回组成[成员](../../../ado/reference/ado-md-api/members-collection-ado-md.md)集合的**级别**的[成员](../../../ado/reference/ado-md-api/member-object-ado-md.md)对象。  
   
--   从**级别**的根返回[深度](../../../ado/reference/ado-md-api/depth-property-ado-md.md)属性的级别数。  
+-   从 **级别** 的根返回 [深度](../../../ado/reference/ado-md-api/depth-property-ado-md.md) 属性的级别数。  
   
--   使用标准 ADO [Properties](../../../ado/reference/ado-api/properties-collection-ado.md)集合获取有关**Level**对象的其他信息。  
+-   使用标准 ADO [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) 集合获取有关 **Level** 对象的其他信息。  
   
  **Properties**集合包含提供程序提供的属性。 下表列出了可用的属性。 实际属性列表可能有所不同，具体取决于提供程序的实现。 有关可用属性的更完整列表，请参阅提供程序的文档。  
   
-|“属性”|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |CatalogName|此多维数据集所属的目录的名称。|  
 |CubeName|多维数据集的名称。|  
-|说明|级别的有意义的说明。|  
+|描述|级别的有意义的说明。|  
 |DimensionUniqueName|[维度](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)的明确名称。|  
 |HierarchyUniqueName|层次结构的明确名称。|  
 |LevelCaption|与级别关联的标签或标题。|  
@@ -63,8 +64,8 @@ ms.locfileid: "82753850"
 -   [属性、方法和事件](../../../ado/reference/ado-md-api/level-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [CubeDef 示例（VBScript）](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)   
- [层次结构对象（ADO MD）](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)   
- [级别集合（ADO MD）](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)   
- [成员集合（ADO MD）](../../../ado/reference/ado-md-api/members-collection-ado-md.md)   
+ [VBScript) 的 CubeDef 示例 (](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)   
+ [层次结构对象 (ADO MD) ](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)   
+ [级别收集 (ADO MD) ](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)   
+ [成员集合 (ADO MD) ](../../../ado/reference/ado-md-api/members-collection-ado-md.md)   
  [属性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

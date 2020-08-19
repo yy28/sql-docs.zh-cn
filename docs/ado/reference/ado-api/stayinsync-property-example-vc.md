@@ -1,5 +1,6 @@
 ---
-title: StayInSync 属性示例（VC + +） |Microsoft Docs
+description: StayInSync 属性示例 (VC++)
+title: StayInSync 属性示例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3a5db5f0-094b-46e1-939b-d9fa9417a406
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4e8b3c6da84e0b439671adcc4516acde22fd2adf
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 20145847731b831bcfb21ca27c0229b064e33286
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759663"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441889"
 ---
 # <a name="stayinsync-property-example-vc"></a>StayInSync 属性示例 (VC++)
-此示例演示了[StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)属性如何便于访问分层[记录集中](../../../ado/reference/ado-api/recordset-object-ado.md)的行。  
+此示例演示了 [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) 属性如何便于访问分层 [记录集中](../../../ado/reference/ado-api/recordset-object-ado.md)的行。  
   
  外部循环显示每个作者的名字和姓氏、省/市/自治区和标识。 每行的追加的**记录集**将从[Fields](../../../ado/reference/ado-api/fields-collection-ado.md)集合中检索并在父**记录集**移动到新行时由**StayInSync**属性自动分配给**rstTitleAuthor** 。 内部循环显示追加的记录集中每一行的四个字段。  
   
@@ -144,6 +145,6 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Fields 集合（ADO）](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Recordset 对象（ADO）](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [字段集合 (ADO) ](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [ADO)  (Recordset 对象 ](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [StayInSync 属性](../../../ado/reference/ado-api/stayinsync-property.md)

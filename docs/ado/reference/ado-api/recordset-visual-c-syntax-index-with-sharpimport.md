@@ -1,5 +1,6 @@
 ---
-title: '记录集（Visual C++ 语法索引与 #import） |Microsoft Docs'
+description: '#Import (Visual C++ 语法索引的记录集) '
+title: 记录集 (#import) 的 Visual C++ 语法索引 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: fe41da71-b607-4329-94da-60964b8efcdc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 59e2205ccedd2b68194a92d30291e225ab7cc0b5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b4fd33dedfaa68b77cfb1dcb71e8931f3b8f496f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761845"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442399"
 ---
-# <a name="recordset-visual-c-syntax-index-with-import"></a>Recordset （#import Visual C++ 语法索引）
+# <a name="recordset-visual-c-syntax-index-with-import"></a>#Import (Visual C++ 语法索引的记录集) 
 ## <a name="methods"></a>方法  
   
 ```  

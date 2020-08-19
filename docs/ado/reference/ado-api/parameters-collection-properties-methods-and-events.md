@@ -1,4 +1,5 @@
 ---
+description: 参数集合属性、方法和事件
 title: 参数集合属性、方法和事件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 63b3f9a3-1c36-4d06-a6b0-49b5eb5adf06
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b0bfbb7129cd4937052e919f4282e3303a29de29
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: cb315cfe0a46e3d3c5ba6bbf4f34044ae0f8fa9a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763378"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442799"
 ---
 # <a name="parameters-collection-properties-methods-and-events"></a>参数集合属性、方法和事件
-## <a name="properties"></a>属性  
+## <a name="properties"></a>“属性”  
  [Count 属性](../../../ado/reference/ado-api/count-property-ado.md)  
   
  [Item 属性](../../../ado/reference/ado-api/item-property-ado.md)  

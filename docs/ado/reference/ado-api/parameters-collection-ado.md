@@ -1,5 +1,6 @@
 ---
-title: Parameters 集合（ADO） |Microsoft Docs
+description: 参数集合 (ADO)
+title: ADO)  (参数集合 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 497cae10-3913-422a-9753-dcbb0a639b1b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e087c769fe84e79ca9a41c33912f150249ab2cd9
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 70a3554ed1ef0c94965e340f303cc3208c1962fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763388"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442759"
 ---
 # <a name="parameters-collection-ado"></a>参数集合 (ADO)
 包含[Command](../../../ado/reference/ado-api/command-object-ado.md)对象的所有[参数](../../../ado/reference/ado-api/parameter-object.md)对象。  
@@ -34,15 +35,15 @@ ms.locfileid: "82763388"
   
  如果尚未定义自己的**参数**对象，并且在调用**Refresh**方法之前访问**参数**集合，则 ADO 将自动调用方法并为您填充集合。  
   
- 如果知道与要调用的存储过程或参数化查询相关联的参数的属性，则可以最大程度地减少对提供程序的调用以提高性能。 使用[CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md)方法创建具有相应属性设置的**参数**对象，并使用[Append](../../../ado/reference/ado-api/append-method-ado.md)方法将它们添加到**Parameters**集合。 这使你可以设置和返回参数值，而无需调用提供程序来获取参数信息。 如果要写入未提供参数信息的提供程序，则必须使用此方法手动填充**参数**集合，以便能够使用参数。 如有必要，请使用[Delete](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)方法从**Parameters**集合中删除**参数**对象。  
+ 如果知道与要调用的存储过程或参数化查询相关联的参数的属性，则可以最大程度地减少对提供程序的调用以提高性能。 使用 [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) 方法创建具有相应属性设置的 **参数** 对象，并使用 [Append](../../../ado/reference/ado-api/append-method-ado.md) 方法将它们添加到 **Parameters** 集合。 这使你可以设置和返回参数值，而无需调用提供程序来获取参数信息。 如果要写入未提供参数信息的提供程序，则必须使用此方法手动填充 **参数** 集合，以便能够使用参数。 如有必要，请使用[Delete](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)方法从**Parameters**集合中删除**参数**对象。  
   
- 记录**集**关闭时，**记录集**的**参数**集合中的对象不在范围内（因而变为不可用）。  
+ **记录**集的**参数**集合中的对象超出范围 (因此关闭**记录集**时将变为不可用) 。  
   
- 使用**命令**调用存储过程时，将检索存储过程的返回值/输出参数，如下所示：  
+ 使用 **命令**调用存储过程时，将检索存储过程的返回值/输出参数，如下所示：  
   
 1.  调用没有参数的存储过程时，应在对**命令**对象调用**Execute**方法之前调用**parameters**集合上的**Refresh**方法。  
   
-2.  当使用参数调用存储过程并将参数显式追加到带**Append**的**parameters**集合时，应将返回值/输出参数追加到**parameters**集合。 必须首先将返回值追加到**Parameters**集合。 使用**Append**将其他参数以定义顺序添加到**参数**集合中。 例如，存储过程 SPWithParam 有两个参数。 第一个参数*InParam*是定义为 adVarChar （20）的输入参数，第二个参数*OutParam*是定义为 adVarChar （20）的输出参数。 可以通过以下代码检索返回值/输出参数。  
+2.  当使用参数调用存储过程并将参数显式追加到带**Append**的**parameters**集合时，应将返回值/输出参数追加到**parameters**集合。 必须首先将返回值追加到 **Parameters** 集合。 使用 **Append** 将其他参数以定义顺序添加到 **参数** 集合中。 例如，存储过程 SPWithParam 有两个参数。 第一个参数 *InParam*是定义为 adVarChar (20) 的输入参数，第二个参数 *OutParam*是定义为 adVarChar (20) 的输出参数。 可以通过以下代码检索返回值/输出参数。  
   
     ```vb
     ' Open Connection Conn  
@@ -63,7 +64,7 @@ ms.locfileid: "82763388"
   
     ```  
   
-3.  当使用参数调用存储过程并通过对**parameters**集合调用**Item**方法来配置参数时，可以从**parameters**集合中检索存储过程的返回值/输出参数。 例如，存储过程 SPWithParam 有两个参数。 第一个参数*InParam*是定义为 adVarChar （20）的输入参数，第二个参数*OutParam*是定义为 adVarChar （20）的输出参数。 可以通过以下代码检索返回值/输出参数。  
+3.  当使用参数调用存储过程并通过对**parameters**集合调用**Item**方法来配置参数时，可以从**parameters**集合中检索存储过程的返回值/输出参数。 例如，存储过程 SPWithParam 有两个参数。 第一个参数 *InParam*是定义为 adVarChar (20) 的输入参数，第二个参数 *OutParam*是定义为 adVarChar (20) 的输出参数。 可以通过以下代码检索返回值/输出参数。  
   
     ```vb
     ' Open Connection Conn  
@@ -85,6 +86,6 @@ ms.locfileid: "82763388"
 -   [参数集合属性、方法和事件](../../../ado/reference/ado-api/parameters-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [Append 方法（ADO）](../../../ado/reference/ado-api/append-method-ado.md)   
- [CreateParameter 方法（ADO）](../../../ado/reference/ado-api/createparameter-method-ado.md)   
+ [ADO (追加方法) ](../../../ado/reference/ado-api/append-method-ado.md)   
+ [CreateParameter 方法 (ADO) ](../../../ado/reference/ado-api/createparameter-method-ado.md)   
  [参数对象](../../../ado/reference/ado-api/parameter-object.md)

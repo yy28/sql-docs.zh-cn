@@ -1,5 +1,6 @@
 ---
-title: 参数（ADO-WFC 语法） |Microsoft Docs
+description: 参数（ADO - WFC 语法）
+title: 参数 (ADO-WFC 语法) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d00d1e1e-14b1-41a2-a00f-2a3cb7396f15
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5c3d60374102b92249062cbc705dc55c6d217537
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6fc5226da0ceeefc6ae961b2a3d358d1dc1955b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765448"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442819"
 ---
 # <a name="parameter-ado---wfc-syntax"></a>参数（ADO - WFC 语法）
 ## <a name="package-commswfcdata"></a>包 .com. 数据  
@@ -69,9 +70,9 @@ public AdoProperties getProperties()
   
  ADO/WFC 使用**getValue**方法实现**Value**属性，该方法返回变量对象;和**setValue**方法，该方法采用变量作为参数。 变体在某些语言（如 Microsoft Visual Basic）中效率高。  
   
- 除了**Value**属性，ADO/WFC 还提供使用 Java 数据类型获取和设置**参数**对象内容的*访问器*方法。 这些方法中的大多数都具有格式为**获取**_数据_类型或**设置**_数据类型_的名称。  
+ 除了**Value**属性，ADO/WFC 还提供使用 Java 数据类型获取和设置**参数**对象内容的*访问器*方法。 这些方法中的大多数都具有格式为 **获取**_数据_ 类型或 **设置**_数据类型_的名称。  
   
- 有一个值得注意的例外：没有**getNull**属性;相反，有一个**isNull**属性，它返回一个布尔值，指示该字段是否为 null。  
+ 有一个值得注意的例外：没有 **getNull** 属性;相反，有一个 **isNull** 属性，它返回一个布尔值，指示该字段是否为 null。  
   
 ```  
 public boolean getBoolean()  

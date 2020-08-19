@@ -1,5 +1,6 @@
 ---
-title: Provider 和 DefaultDatabase 属性示例（VB） |Microsoft Docs
+description: 'Provider 和 DefaultDatabase Properties (VB) '
+title: Provider 和 DefaultDatabase 属性示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 677e1dbe-bcf6-4028-a62c-e99b1c88bf7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d1c72fd2e84bfe8c39570181a7f975c70140d91c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: db5e40a1f82f95e7b4d78f4e6e3ce7703305abb0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759923"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442589"
 ---
-# <a name="provider-and-defaultdatabase-properties-example-vb"></a>Provider 和 DefaultDatabase 属性示例（VB）
-此示例通过使用不同的提供程序打开三个[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象来演示[提供程序](../../../ado/reference/ado-api/provider-property-ado.md)的属性。 它还使用[DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md)属性设置 Microsoft ODBC 提供程序的默认数据库。  
+# <a name="provider-and-defaultdatabase-properties-example-vb"></a>Provider 和 DefaultDatabase Properties (VB) 
+此示例通过使用不同的提供程序打开三个[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象来演示[提供程序](../../../ado/reference/ado-api/provider-property-ado.md)的属性。 它还使用 [DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) 属性设置 Microsoft ODBC 提供程序的默认数据库。  
   
 > [!NOTE]
->  如果要连接到支持 Windows 身份验证的数据源提供程序，应在连接字符串中指定**Trusted_Connection = yes**或**集成安全性 = SSPI**而不是用户 ID 和密码信息。  
+>  如果要连接到支持 Windows 身份验证的数据源提供程序，应在连接字符串中指定 **Trusted_Connection = yes** 或 **集成安全性 = SSPI** 而不是用户 ID 和密码信息。  
   
 ```  
 'BeginProviderVB  
@@ -105,6 +106,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Connection 对象（ADO）](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [ADO) 的连接对象 (](../../../ado/reference/ado-api/connection-object-ado.md)   
  [DefaultDatabase 属性](../../../ado/reference/ado-api/defaultdatabase-property.md)   
  [Provider 属性 (ADO)](../../../ado/reference/ado-api/provider-property-ado.md)

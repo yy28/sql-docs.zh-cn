@@ -1,5 +1,6 @@
 ---
-title: Save 和 Open 方法示例（VB） |Microsoft Docs
+description: Save 和 Open 方法示例 (VB)
+title: " (VB) 保存并打开方法示例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: ddccdf58-9c57-4c9b-8b7f-0cf193f955fb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 37237094c3778fad9c45a2ccad3eebdce02a62bc
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 048fbb83c8a6b9de150642f6094a1f07e0c1e11e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82755931"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442219"
 ---
 # <a name="save-and-open-methods-example-vb"></a>Save 和 Open 方法示例 (VB)
-这三个示例演示如何将[Save](../../../ado/reference/ado-api/save-method.md)和[Open](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法一起使用。  
+这三个示例演示如何将 [Save](../../../ado/reference/ado-api/save-method.md) 和 [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) 方法一起使用。  
   
- 假设您正在出差，并希望从数据库中获取表。 在开始之前，你可以访问作为[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)的数据，并将其保存为可传送的形式。 到达目标后，可将**记录集**作为本地、断开连接的**记录集**访问。 对**记录集**进行更改，然后再次保存。 最后，当您返回 home 时，您将再次连接到该数据库，并将其更新为对您的路上所做的更改。  
+ 假设您正在出差，并希望从数据库中获取表。 在开始之前，你可以访问作为 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md) 的数据，并将其保存为可传送的形式。 到达目标后，可将 **记录集** 作为本地、断开连接的 **记录集**访问。 对 **记录集**进行更改，然后再次保存。 最后，当您返回 home 时，您将再次连接到该数据库，并将其更新为对您的路上所做的更改。  
   
- 首先，访问并保存***Authors***表。  
+ 首先，访问并保存 ***Authors*** 表。  
   
 ```  
 'BeginSaveVB  
@@ -84,7 +85,7 @@ End Sub
 'EndSaveVB  
 ```  
   
- 此时，您已到达目标位置。 您将作为本地、断开连接的**记录集**访问***作者***表。 你必须在用于访问保存的文件的计算机上具有**MSPersist**提供程序，a:\Pubs.xml。  
+ 此时，您已到达目标位置。 您将作为本地、断开连接的**记录集**访问***作者***表。 你必须在用于访问保存的文件的计算机上具有 **MSPersist** 提供程序，a:\Pubs.xml。  
   
 ```  
 Attribute VB_Name = "Save"  
@@ -97,7 +98,7 @@ Attribute VB_Name = "Save"
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Open 方法（ADO 记录集）](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Recordset 对象（ADO）](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [ADO 记录集 (打开方法) ](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
+ [ADO)  (Recordset 对象 ](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [有关记录集持久性的详细信息](../../../ado/guide/data/more-about-recordset-persistence.md)   
  [Save 方法](../../../ado/reference/ado-api/save-method.md)

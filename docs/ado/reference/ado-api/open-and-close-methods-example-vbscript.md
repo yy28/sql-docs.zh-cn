@@ -1,5 +1,6 @@
 ---
-title: Open 和 Close 方法示例（VBScript） |Microsoft Docs
+description: Open 和 Close 方法示例 (VBScript)
+title: " (VBScript) 的打开和关闭方法示例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 66eca011-e258-4d8f-bd67-e017bcf0871b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 04273e3aec32e45b49e1ad9addc3cd9467579bf3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: bb26a778e3d484ba024a5a38564d9e3abc0a3ef0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762265"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442999"
 ---
 # <a name="open-and-close-methods-example-vbscript"></a>Open 和 Close 方法示例 (VBScript)
 此示例使用已打开的[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)和[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象上的[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)和[关闭](../../../ado/reference/ado-api/close-method-ado.md)方法。  
   
- 在 Active Server Page （ASP）中使用以下示例。 使用 "**查找**" 找到文件 Adovbs，并将其放入计划使用的目录中。 将以下代码剪切并粘贴到记事本或其他文本编辑器中，并将其保存为**OpenVBS**。 您可以在任何浏览器中查看结果。  
+ 在 (ASP) 的活动服务器页中使用以下示例。 使用 " **查找** " 找到文件 Adovbs，并将其放入计划使用的目录中。 将以下代码剪切并粘贴到记事本或其他文本编辑器中，并将其保存为 **OpenVBS**。 您可以在任何浏览器中查看结果。  
   
 ```  
 <!-- BeginOpenVBS -->  
@@ -162,8 +163,8 @@ BODY {
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Close 方法（ADO）](../../../ado/reference/ado-api/close-method-ado.md)   
- [Connection 对象（ADO）](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Open 方法（ADO 连接）](../../../ado/reference/ado-api/open-method-ado-connection.md)   
- [Open 方法（ADO 记录集）](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
+ [ADO (关闭方法) ](../../../ado/reference/ado-api/close-method-ado.md)   
+ [ADO) 的连接对象 (](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [开放式方法 (ADO 连接) ](../../../ado/reference/ado-api/open-method-ado-connection.md)   
+ [ADO 记录集 (打开方法) ](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

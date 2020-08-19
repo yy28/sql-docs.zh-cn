@@ -1,5 +1,6 @@
 ---
-title: Value 属性示例（VB） |Microsoft Docs
+description: Value 属性示例 (VB)
+title: 值属性示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2d4fe651-ef09-461b-8884-a70b6af4362e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ef7f31068c6ced2aab693756987ebccc1feaedca
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: bb8c23168cb68438b2f8a74359f14b05795ad913
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759433"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441579"
 ---
 # <a name="value-property-example-vb"></a>Value 属性示例 (VB)
 此示例通过显示 " ***Employees*** " 表的字段和属性值，来演示包含[字段](../../../ado/reference/ado-api/field-object.md)和[属性](../../../ado/reference/ado-api/property-object-ado.md)对象的[Value](../../../ado/reference/ado-api/value-property-ado.md)属性。  
@@ -102,5 +103,5 @@ End Sub
   
 ## <a name="see-also"></a>另请参阅  
  [Field 对象](../../../ado/reference/ado-api/field-object.md)   
- [Property 对象（ADO）](../../../ado/reference/ado-api/property-object-ado.md)   
+ [ADO (属性对象) ](../../../ado/reference/ado-api/property-object-ado.md)   
  [Value 属性 (ADO)](../../../ado/reference/ado-api/value-property-ado.md)

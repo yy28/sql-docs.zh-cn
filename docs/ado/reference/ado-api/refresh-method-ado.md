@@ -1,5 +1,6 @@
 ---
-title: Refresh 方法（ADO） |Microsoft Docs
+description: Refresh 方法 (ADO)
+title: " (ADO) 刷新方法 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 089b7ca7-684f-4259-8032-5bd1ecc54426
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0688fc8b45f444ca8c711f3229623484fa2139a8
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 83a6153e0017dafb0ac48c27aebc49c51c9b22d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242577"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442349"
 ---
 # <a name="refresh-method-ado"></a>Refresh 方法 (ADO)
 更新集合中的对象，以反映提供程序提供的和特定于提供程序的对象。  
@@ -45,12 +46,12 @@ collection.Refresh
  如果在调用**Refresh**方法之前访问**参数**集合，则 ADO 将自动调用方法并填充集合。  
   
 > [!NOTE]
->  如果使用**Refresh**方法从提供程序中获取参数信息，并返回一个或多个可变长度的数据类型[参数](../../../ado/reference/ado-api/parameter-object.md)对象，则 ADO 可能会根据其最大可能大小为参数分配内存，这将导致执行过程中出错。 在调用[Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)方法以防止错误之前，应显式设置这些参数的[大小](../../../ado/reference/ado-api/size-property-ado-parameter.md)属性。  
+>  如果使用 **Refresh** 方法从提供程序中获取参数信息，并返回一个或多个可变长度的数据类型 [参数](../../../ado/reference/ado-api/parameter-object.md) 对象，则 ADO 可能会根据其最大可能大小为参数分配内存，这将导致执行过程中出错。 在调用[Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)方法以防止错误之前，应显式设置这些参数的[大小](../../../ado/reference/ado-api/size-property-ado-parameter.md)属性。  
   
 ### <a name="fields"></a>字段  
- 对[字段](../../../ado/reference/ado-api/fields-collection-ado.md)集合使用**Refresh**方法不会产生任何效果。 若要从基础数据库结构中检索更改，必须使用[Requery](../../../ado/reference/ado-api/requery-method.md)方法，如果[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)对象不支持书签，则必须使用[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)方法。  
+ 对[字段](../../../ado/reference/ado-api/fields-collection-ado.md)集合使用**Refresh**方法不会产生任何效果。 若要从基础数据库结构中检索更改，必须使用 [Requery](../../../ado/reference/ado-api/requery-method.md) 方法，如果 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) 对象不支持书签，则必须使用 [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) 方法。  
   
-### <a name="properties"></a>属性  
+### <a name="properties"></a>“属性”  
  对某些对象的**Properties**集合使用**Refresh**方法将使用提供程序公开的动态属性来填充集合。 这些属性提供了有关特定于提供程序的功能的信息，而不是 ADO 支持的内置属性。  
   
 ## <a name="applies-to"></a>适用于  
@@ -84,7 +85,7 @@ collection.Refresh
 :::row-end:::
 
 ## <a name="see-also"></a>另请参阅  
- [Refresh 方法示例（VB）](../../../ado/reference/ado-api/refresh-method-example-vb.md)   
- [Refresh 方法示例（VC + +）](../../../ado/reference/ado-api/refresh-method-example-vc.md)   
- [Count 属性（ADO）](../../../ado/reference/ado-api/count-property-ado.md)   
+ [ (VB) Refresh 方法示例 ](../../../ado/reference/ado-api/refresh-method-example-vb.md)   
+ [ (VC + +) 的 Refresh 方法示例 ](../../../ado/reference/ado-api/refresh-method-example-vc.md)   
+ [ADO)  (计数属性 ](../../../ado/reference/ado-api/count-property-ado.md)   
  [Refresh 方法 (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)

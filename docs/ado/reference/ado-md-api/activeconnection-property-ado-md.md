@@ -1,5 +1,6 @@
 ---
-title: ActiveConnection 属性（ADO MD） |Microsoft Docs
+description: ActiveConnection 属性 (ADO MD)
+title: ActiveConnection 属性 (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,21 +18,21 @@ helpviewer_keywords:
 ms.assetid: 2509b32c-a995-4364-9152-d8c83129bdd8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5e504b442116f0a137d40a0932b00e51753deae5
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 3f226f9687f1bce3def616739f43f4d283d019ea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243148"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441439"
 ---
 # <a name="activeconnection-property-ado-md"></a>ActiveConnection 属性 (ADO MD)
-指示当前单元集或目录当前属于哪个 ADO[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。  
+指示当前单元集或目录当前属于哪个 ADO [连接](../../../ado/reference/ado-api/connection-object-ado.md) 对象。  
   
 ## <a name="settings-and-return-values"></a>设置和返回值  
- 设置或返回一个**变量**，该变量包含定义连接或**连接**对象的字符串。 默认值为空。  
+ 设置或返回一个 **变量** ，该变量包含定义连接或 **连接** 对象的字符串。 默认值为空。  
   
 ## <a name="remarks"></a>备注  
- 可将此属性设置为有效的 ADO**连接**对象或有效的连接字符串。 如果将此属性设置为连接字符串，则提供程序将使用此定义创建新的**连接**对象，并打开连接。  
+ 可将此属性设置为有效的 ADO **连接** 对象或有效的连接字符串。 如果将此属性设置为连接字符串，则提供程序将使用此定义创建新的 **连接** 对象，并打开连接。  
   
  如果使用[open](../../../ado/reference/ado-md-api/open-method-ado-md.md)方法的*ActiveConnection*参数打开[单元集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)对象，则**ActiveConnection**属性将继承参数的值。  
   
@@ -42,9 +43,9 @@ ms.locfileid: "87243148"
  如果尝试更改打开的**单元集**对象的**ActiveConnection**属性，则会发生错误。  
   
 > [!NOTE]
->  在 Visual Basic 中，在将**ActiveConnection**属性设置为**连接**对象时，请记住使用**Set**关键字。 如果省略**Set**关键字，则实际上是将**ActiveConnection**属性设置为与**连接**对象的默认属性**ConnectionString**相等。 代码将正常运行;但是，你将创建一个与数据源的其他连接，这可能会对性能产生负面影响。  
+>  在 Visual Basic 中，在将**ActiveConnection**属性设置为**连接**对象时，请记住使用**Set**关键字。 如果省略 **Set** 关键字，则实际上是将 **ActiveConnection** 属性设置为与 **连接** 对象的默认属性 **ConnectionString**相等。 代码将正常运行;但是，你将创建一个与数据源的其他连接，这可能会对性能产生负面影响。  
   
- 使用 MSOLAP 数据访问接口时，将连接字符串中的数据源设置为服务器名称，并将初始目录设置为数据源中目录的名称。 若要连接到与服务器断开连接的多维数据集文件，请将该位置设置为的完整路径。.CUB 文件。 在任一情况下，请将提供程序设置为提供程序名称。 例如，以下字符串使用 MSOLAP 提供程序连接到名为**Servername**的服务器上名为 Bobs-sfpreviewcluster Video Store 的目录：  
+ 使用 MSOLAP 数据访问接口时，将连接字符串中的数据源设置为服务器名称，并将初始目录设置为数据源中目录的名称。 若要连接到与服务器断开连接的多维数据集文件，请将该位置设置为的完整路径。.CUB 文件。 在任一情况下，请将提供程序设置为提供程序名称。 例如，以下字符串使用 MSOLAP 提供程序连接到名为 **Servername**的服务器上名为 Bobs-sfpreviewcluster Video Store 的目录：  
   
 ```  
 "Data Source=Servername;Initial Catalog=Bobs Video Store;Provider=msolap"  
@@ -68,6 +69,6 @@ ms.locfileid: "87243148"
 :::row-end:::
 
 ## <a name="see-also"></a>另请参阅  
- [单元集示例（VB）](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
- [Connection 对象（ADO）](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [ (VB) 单元集示例 ](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
+ [ADO) 的连接对象 (](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Open 方法 (ADO MD)](../../../ado/reference/ado-md-api/open-method-ado-md.md)

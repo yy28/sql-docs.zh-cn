@@ -1,5 +1,6 @@
 ---
-title: WillChangeRecord 和 RecordChangeComplete 事件（ADO） |Microsoft Docs
+description: WillChangeRecord 和 RecordChangeComplete 事件 (ADO)
+title: WillChangeRecord 和 RecordChangeComplete 事件 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: cbc369fd-63af-4a7d-96ae-efa91b78ca69
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c34aa614b7e152f21479e09a16fd2ed9d22febfc
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0a6cb124e51c232b0a3a26e9eb84316e3bde7ecd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764478"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441519"
 ---
 # <a name="willchangerecord-and-recordchangecomplete-events-ado"></a>WillChangeRecord 和 RecordChangeComplete 事件 (ADO)
-在[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)的一个或多个记录（行）更改之前调用**WillChangeRecord**事件。 在一个或多个记录发生更改后调用**RecordChangeComplete**事件。  
+**WillChangeRecord**事件将在[记录集](../../../ado/reference/ado-api/recordset-object-ado.md))  (行中的一个或多个记录发生更改之前调用。 在一个或多个记录发生更改后调用 **RecordChangeComplete** 事件。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,27 +39,27 @@ RecordChangeCompleteadReason, cRecords, pError, adStatus, pRecordset
   
 #### <a name="parameters"></a>参数  
  *adReason*  
- 一个[EventReasonEnum](../../../ado/reference/ado-api/eventreasonenum.md)值，该值指定此事件的原因。 其值可以是**adRsnAddNew**、 **adRsnDelete**、 **adRsnUpdate**、 **adRsnUndoUpdate**、 **adRsnUndoAddNew**、 **adRsnUndoDelete**或**adRsnFirstChange**。  
+ 一个 [EventReasonEnum](../../../ado/reference/ado-api/eventreasonenum.md) 值，该值指定此事件的原因。 其值可以是 **adRsnAddNew**、 **adRsnDelete**、 **adRsnUpdate**、 **adRsnUndoUpdate**、 **adRsnUndoAddNew**、 **adRsnUndoDelete**或 **adRsnFirstChange**。  
   
  *cRecords*  
- **长整型**值，指示更改（受影响）的记录数。  
+ 一个 **长整型** 值，指示 (影响) 的记录更改的数目。  
   
  *pError*  
- 一个[错误](../../../ado/reference/ado-api/error-object.md)对象。 它描述了*adStatus*的值为**adStatusErrorsOccurred**时所发生的错误;否则，不会设置。  
+ 一个 [错误](../../../ado/reference/ado-api/error-object.md) 对象。 它描述了 *adStatus* 的值为 **adStatusErrorsOccurred**时所发生的错误;否则，不会设置。  
   
  *adStatus*  
  [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md)状态值。  
   
- 调用**WillChangeRecord**时，如果导致事件的操作成功，则将此参数设置为**adStatusOK** 。 如果此事件无法请求取消挂起操作，则将其设置为**adStatusCantDeny** 。  
+ 调用 **WillChangeRecord** 时，如果导致事件的操作成功，则将此参数设置为 **adStatusOK** 。 如果此事件无法请求取消挂起操作，则将其设置为 **adStatusCantDeny** 。  
   
- 调用**RecordChangeComplete**时，如果导致事件的操作成功，则此参数设置为**adStatusOK** ; 如果操作失败，则设置为**adStatusErrorsOccurred** 。  
+ 调用 **RecordChangeComplete** 时，如果导致事件的操作成功，则此参数设置为 **adStatusOK** ; 如果操作失败，则设置为 **adStatusErrorsOccurred** 。  
   
- 在**WillChangeRecord**返回之前，将此参数设置为**adStatusCancel** ，以请求取消引发此事件的操作，或将此参数设置为**adStatusUnwantedEvent**以阻止后续通知。  
+ 在 **WillChangeRecord** 返回之前，将此参数设置为 **adStatusCancel** ，以请求取消引发此事件的操作，或将此参数设置为 **adStatusUnwantedEvent** 以阻止后续通知。  
   
- 在**RecordChangeComplete**返回之前，将此参数设置为**adStatusUnwantedEvent** ，以防止后续通知。  
+ 在 **RecordChangeComplete** 返回之前，将此参数设置为 **adStatusUnwantedEvent** ，以防止后续通知。  
   
  *pRecordset*  
- **记录集**对象。 发生此事件的**记录集**。  
+ **记录集**对象。 发生此事件的 **记录集** 。  
   
 ## <a name="remarks"></a>备注  
  由于以下**记录集**操作，行中第一个已更改的字段可能发生**WillChangeRecord**或**RecordChangeComplete**事件： [Update](../../../ado/reference/ado-api/update-method.md)、 [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)、 [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)、 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)、 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)和[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)。 **记录集** [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)的值确定导致事件发生的操作。  
@@ -68,5 +69,5 @@ RecordChangeCompleteadReason, cRecords, pError, adStatus, pRecordset
  必须为每个可能的**adReason**值将**adStatus**参数设置为**adStatusUnwantedEvent** ，以完全停止包含**adReason**参数的任何事件的事件通知。  
   
 ## <a name="see-also"></a>另请参阅  
- [ADO 事件模型示例（VC + +）](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
+ [ (VC + + 的 ADO 事件模型示例) ](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO 事件处理程序摘要](../../../ado/guide/data/ado-event-handler-summary.md)

@@ -1,4 +1,5 @@
 ---
+description: ParameterDirectionEnum
 title: ParameterDirectionEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: c66aa6e6-d4f0-4f0f-9640-e08ae6cfdef3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c109ea1c44fc44a4cdbb585e2c612ebf8c9b2909
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 8c586b4e7ce2e18411d147e8aafb4eb144e01e6f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242603"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442779"
 ---
 # <a name="parameterdirectionenum"></a>ParameterDirectionEnum
-指定[参数](../../../ado/reference/ado-api/parameter-object.md)是否表示输入参数、输出参数、输入参数和输出参数，或存储过程的返回值。  
+指定 [参数](../../../ado/reference/ado-api/parameter-object.md) 是否表示输入参数、输出参数、输入参数和输出参数，或存储过程的返回值。  
   
 |返回的常量|值|描述|  
 |--------------|-----------|-----------------|  

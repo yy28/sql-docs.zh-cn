@@ -1,5 +1,6 @@
 ---
-title: OpenSchema 方法示例（VC + +） |Microsoft Docs
+description: OpenSchema 方法示例 (VC++)
+title: OpenSchema 方法示例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6f3da460-0f49-41e0-999d-a754ec1d887e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 50228f2cf6f8564be500f671de797dfbff0aa7c1
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3cb43e4ac4774963e79abadc6413882e1d0bce98
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762118"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442929"
 ---
 # <a name="openschema-method-example-vc"></a>OpenSchema 方法示例 (VC++)
-此示例使用[OpenSchema](../../../ado/reference/ado-api/openschema-method.md)方法来显示***Pubs***数据库中每个表的名称和类型。  
+此示例使用 [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) 方法来显示 ***Pubs*** 数据库中每个表的名称和类型。  
   
 ```  
 // OpenSchemaMethodExample.cpp  

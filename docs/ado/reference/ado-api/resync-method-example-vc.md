@@ -1,5 +1,6 @@
 ---
-title: Resync 方法示例（VC + +） |Microsoft Docs
+description: Resync 方法示例 (VC++)
+title: " (VC + +) 的 Resync 方法示例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d34dfd26-9ca7-4c9c-a918-396f05fecca9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7f777d3b7af34fe29e9794bb470ba90e71b8b9dd
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e846743090f84419d824f60de47edb0f0060d509
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82756349"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442279"
 ---
 # <a name="resync-method-example-vc"></a>Resync 方法示例 (VC++)
-此示例演示如何使用[Resync](../../../ado/reference/ado-api/resync-method.md)方法刷新静态记录集中的数据。  
+此示例演示如何使用 [Resync](../../../ado/reference/ado-api/resync-method.md) 方法刷新静态记录集中的数据。  
   
 ```  
 // Resync_Method_Sample.cpp  

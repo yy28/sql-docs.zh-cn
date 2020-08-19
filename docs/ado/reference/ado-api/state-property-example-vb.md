@@ -1,5 +1,6 @@
 ---
-title: State 属性示例（VB） |Microsoft Docs
+description: State 属性示例 (VB)
+title: 状态属性示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9da6db50-d9bb-47e1-ae8b-be3c9b88cf9a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e03f64c5f5312bc6f3f0409cb5b701e854919b0e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0ee0adf7b308ada45eee0c21c44f2a38a2e8a0b4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759743"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441969"
 ---
 # <a name="state-property-example-vb"></a>State 属性示例 (VB)
-此示例使用[State](../../../ado/reference/ado-api/state-property-ado.md)属性来显示异步连接正在打开的消息和正在执行的异步命令。  
+此示例使用 [State](../../../ado/reference/ado-api/state-property-ado.md) 属性来显示异步连接正在打开的消息和正在执行的异步命令。  
   
 ```  
 'BeginStateVB  
@@ -108,5 +109,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Recordset 对象（ADO）](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [ADO)  (Recordset 对象 ](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [State 属性 (ADO)](../../../ado/reference/ado-api/state-property-ado.md)

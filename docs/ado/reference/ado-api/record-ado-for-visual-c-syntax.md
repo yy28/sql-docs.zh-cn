@@ -1,5 +1,6 @@
 ---
-title: 记录（适用于 Visual C++ 语法的 ADO） |Microsoft Docs
+description: 记录（ADO for Visual C++ 语法）
+title: 记录 Visual C++ 语法 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c4ce8532-a4d8-4f74-9488-9389b6695958
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6899059b58ef755e8561bdf26973e7ef7b0d6253
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: be4addb8a8a774a8128e721de9052ca5351959f2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82754226"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442519"
 ---
 # <a name="record-ado-for-visual-c-syntax"></a>记录（ADO for Visual C++ 语法）
 ## <a name="methods"></a>方法  

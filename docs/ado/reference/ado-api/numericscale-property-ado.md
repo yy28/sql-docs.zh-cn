@@ -1,5 +1,6 @@
 ---
-title: NumericScale 属性（ADO） |Microsoft Docs
+description: NumericScale 属性 (ADO)
+title: " (ADO) 的 NumericScale 属性 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,27 +17,27 @@ helpviewer_keywords:
 ms.assetid: 29a02992-64be-4fcd-be13-445cba205893
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 38a44aeac4a2238e7d0087ec458df9f77086aa0c
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ce13556c013c527ec16f183001b6042ed501398d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242627"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443049"
 ---
 # <a name="numericscale-property-ado"></a>NumericScale 属性 (ADO)
-指示[参数](../../../ado/reference/ado-api/parameter-object.md)或[字段](../../../ado/reference/ado-api/field-object.md)对象中数值的小数位数。  
+指示 [参数](../../../ado/reference/ado-api/parameter-object.md) 或 [字段](../../../ado/reference/ado-api/field-object.md) 对象中数值的小数位数。  
   
 ## <a name="settings-and-return-values"></a>设置和返回值  
- 设置或返回一个**字节**值，该值指示将对数值解析成的小数位数。  
+ 设置或返回一个 **字节** 值，该值指示将对数值解析成的小数位数。  
   
 ## <a name="remarks"></a>备注  
- 使用**NumericScale**属性可确定小数点右边的位数，将用来表示数值**参数**或**字段**对象的值。  
+ 使用 **NumericScale** 属性可确定小数点右边的位数，将用来表示数值 **参数** 或 **字段** 对象的值。  
   
- 对于**参数**对象， **NumericScale**属性是可读/写的。  
+ 对于 **参数** 对象， **NumericScale** 属性是可读/写的。  
   
- 对于**字段**对象， **NumericScale**通常是只读的。 但是，对于已追加到[记录](../../../ado/reference/ado-api/record-object-ado.md)的[字段](../../../ado/reference/ado-api/fields-collection-ado.md)集合的新**字段**对象， **NumericScale**仅在指定了**字段**的[值](../../../ado/reference/ado-api/value-property-ado.md)属性并且数据提供程序已通过调用[Fields](../../../ado/reference/ado-api/fields-collection-ado.md)集合的[Update](../../../ado/reference/ado-api/update-method.md)方法成功添加了新**字段**之后，才是可读/写的。  
+ 对于 **字段**对象， **NumericScale** 通常是只读的。 但是，对于已追加到[记录](../../../ado/reference/ado-api/record-object-ado.md)的[字段](../../../ado/reference/ado-api/fields-collection-ado.md)集合的新**字段**对象， **NumericScale**仅在指定了**字段**的[值](../../../ado/reference/ado-api/value-property-ado.md)属性并且数据提供程序已通过调用[Fields](../../../ado/reference/ado-api/fields-collection-ado.md)集合的[Update](../../../ado/reference/ado-api/update-method.md)方法成功添加了新**字段**之后，才是可读/写的。  
   
-## <a name="applies-to"></a>应用到  
+## <a name="applies-to"></a>适用于  
 
 :::row:::
     :::column:::
@@ -48,6 +49,6 @@ ms.locfileid: "87242627"
 :::row-end:::
 
 ## <a name="see-also"></a>另请参阅  
- [NumericScale 和 Precision 属性示例（VB）](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vb.md)   
- [NumericScale 和 Precision 属性示例（VC + +）](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vc.md)   
+ [NumericScale 和 Precision 属性示例 (VB) ](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vb.md)   
+ [NumericScale 和 Precision 属性示例 (VC + +) ](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vc.md)   
  [Precision 属性 (ADO)](../../../ado/reference/ado-api/precision-property-ado.md)

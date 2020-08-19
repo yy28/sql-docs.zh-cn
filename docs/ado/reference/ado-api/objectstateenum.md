@@ -1,4 +1,5 @@
 ---
+description: ObjectStateEnum
 title: ObjectStateEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 32746558-097b-4749-989e-519aadf7e3f4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b6b8c5c9a593177155f2f22d7dba4e38515e0dce
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 0c387240e36225f03c8ba1287618ab59a98fb63c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472603"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443019"
 ---
 # <a name="objectstateenum"></a>ObjectStateEnum
 指定对象是打开还是关闭，连接到数据源，执行命令，或检索数据。  

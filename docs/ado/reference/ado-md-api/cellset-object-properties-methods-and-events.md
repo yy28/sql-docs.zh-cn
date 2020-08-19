@@ -1,4 +1,5 @@
 ---
+description: 单元集对象属性、方法和事件
 title: 单元集对象属性、方法和事件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fb303e33-5a85-4e4e-81db-acaaa6f53799
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 15b599884fffff5e9d6c289165b21a1d6f40b7a6
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 40c897057efa549ba88d876b5ef923a89fb886f3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761755"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441189"
 ---
 # <a name="cellset-object-properties-methods-and-events"></a>单元集对象属性、方法和事件
 ## <a name="propertiescollections"></a>属性/集合  
@@ -27,7 +28,7 @@ ms.locfileid: "82761755"
   
  [FilterAxis 属性](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md)  
   
- [Item 属性（集）](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)  
+ [项属性 (单元集) ](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)  
   
  [Properties 集合](../../../ado/reference/ado-api/properties-collection-ado.md)  
   

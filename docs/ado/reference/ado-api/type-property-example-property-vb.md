@@ -1,5 +1,6 @@
 ---
-title: Type 属性示例（属性）（VB） |Microsoft Docs
+description: Type 属性示例（属性）(VB)
+title: Type 属性示例 (属性)  (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 2ee8e4c5-1d66-4a77-8892-6dad7e07e611
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b2308d02f5e220a315cfa97d3b24172fccc5d5bf
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3f9c49ba9456af1f602fa5d2f399fc5172a5f1a4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82755597"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441689"
 ---
 # <a name="type-property-example-property-vb"></a>Type 属性示例（属性）(VB)
-此示例演示了[Type](../../../ado/reference/ado-api/type-property-ado.md)属性。 它是一种用于列出集合名称和类型的实用工具的模型，如[属性](../../../ado/reference/ado-api/properties-collection-ado.md)、[字段](../../../ado/reference/ado-api/fields-collection-ado.md)等。  
+此示例演示了 [Type](../../../ado/reference/ado-api/type-property-ado.md) 属性。 它是一种用于列出集合名称和类型的实用工具的模型，如 [属性](../../../ado/reference/ado-api/properties-collection-ado.md)、 [字段](../../../ado/reference/ado-api/fields-collection-ado.md)等。  
   
- 不需要打开[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)来访问其**Properties**集合;当实例化**Recordset**对象时，它们就会存在。 但是，如果将[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)属性设置为**adUseClient** ，则会将多个动态属性添加到**Recordset**对象的**properties**集合，使示例更有趣一些。 为了举例说明，我们显式使用[Item](../../../ado/reference/ado-api/item-property-ado.md)属性来访问每个[属性](../../../ado/reference/ado-api/property-object-ado.md)对象。  
+ 不需要打开 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md) 来访问其 **Properties** 集合;当实例化 **Recordset** 对象时，它们就会存在。 但是，如果将 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 属性设置为 **adUseClient** ，则会将多个动态属性添加到 **Recordset** 对象的 **properties** 集合，使示例更有趣一些。 为了举例说明，我们显式使用 [Item](../../../ado/reference/ado-api/item-property-ado.md) 属性来访问每个 [属性](../../../ado/reference/ado-api/property-object-ado.md) 对象。  
   
 ```  
 'BeginTypePropertyVB  
@@ -148,5 +149,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Property 对象（ADO）](../../../ado/reference/ado-api/property-object-ado.md)   
+ [ADO (属性对象) ](../../../ado/reference/ado-api/property-object-ado.md)   
  [Type 属性 (ADO)](../../../ado/reference/ado-api/type-property-ado.md)

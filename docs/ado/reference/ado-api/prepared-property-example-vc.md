@@ -1,5 +1,6 @@
 ---
-title: 已准备的属性示例（VC + +） |Microsoft Docs
+description: Prepared 属性示例 (VC++)
+title: " (VC + +) 的已准备属性示例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f697ac1a-f125-42b5-bbf6-762a7fa30ae3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f2820f149c079a20e79297d98c1f265031a77ca7
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d05e220717ad88ad52340d368a3b54a85365621d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761926"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442669"
 ---
 # <a name="prepared-property-example-vc"></a>Prepared 属性示例 (VC++)
 此示例通过打开两个[命令](../../../ado/reference/ado-api/command-object-ado.md)对象（一项已准备，一个未准备）来演示已[准备](../../../ado/reference/ado-api/prepared-property-ado.md)的属性。  
@@ -144,5 +145,5 @@ void PrintComError(_com_error &e) {
 **未准备就绪：0.016 秒**  
 **准备就绪：0.016 秒**   
 ## <a name="see-also"></a>另请参阅  
- [Command 对象（ADO）](../../../ado/reference/ado-api/command-object-ado.md)   
+ [ADO) 的命令对象 (](../../../ado/reference/ado-api/command-object-ado.md)   
  [Prepared 属性 (ADO)](../../../ado/reference/ado-api/prepared-property-ado.md)

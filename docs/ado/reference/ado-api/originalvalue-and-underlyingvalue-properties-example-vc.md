@@ -1,5 +1,6 @@
 ---
-title: OriginalValue 和 UnderlyingValue 属性示例（VC + +） |Microsoft Docs
+description: 'OriginalValue 和 UnderlyingValue 属性示例 (VC + +) '
+title: OriginalValue 和 UnderlyingValue 属性示例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: c5762ad2-f43b-453d-b44a-9c70210eb00f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 142688ccbbd4e086592d419970a1c543e2211abc
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6b4db7c5b7fdbd25687f37cc3c04101b25b9e997
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762040"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442889"
 ---
-# <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>OriginalValue 和 UnderlyingValue 属性示例（VC + +）
-此示例演示[OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)和[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)属性，如果记录的基础数据在[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)批处理更新期间发生了更改，则显示一条消息。  
+# <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>OriginalValue 和 UnderlyingValue 属性示例 (VC + +) 
+此示例演示 [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) 和 [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) 属性，如果记录的基础数据在 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md) 批处理更新期间发生了更改，则显示一条消息。  
   
 ## <a name="example"></a>示例  
   
@@ -220,6 +221,6 @@ void PrintComError(_com_error &e) {
 **原始值：心理学**   
 **基础值：社会学**    
 ## <a name="see-also"></a>另请参阅  
- [OriginalValue 属性（ADO）](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
- [Recordset 对象（ADO）](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [OriginalValue 属性 (ADO) ](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
+ [ADO)  (Recordset 对象 ](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [UnderlyingValue 属性](../../../ado/reference/ado-api/underlyingvalue-property.md)

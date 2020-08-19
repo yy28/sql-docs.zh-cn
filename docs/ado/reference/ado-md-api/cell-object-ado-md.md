@@ -1,5 +1,6 @@
 ---
-title: Cell Object （ADO MD） |Microsoft Docs
+description: 单元对象 (ADO MD)
+title: Cell Object (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dcc2f044-b785-4a29-9bc5-b673f66eedf9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d309ba98c1e50d8eb6fbe47fb9452f8ea7df35ba
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a6cb4d32a4a527cce7bc69eb39f8829bbf5cf58a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761795"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441239"
 ---
 # <a name="cell-object-ado-md"></a>单元对象 (ADO MD)
 表示单元集内包含的轴坐标相交处的数据。  
@@ -28,7 +29,7 @@ ms.locfileid: "82761795"
 ## <a name="remarks"></a>备注  
  单元[集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)对象的[Item](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)属性返回**Cell**对象。  
   
- 使用**Cell**对象的集合和属性，可以执行以下操作：  
+ 使用 **Cell** 对象的集合和属性，可以执行以下操作：  
   
 -   返回具有[值](../../../ado/reference/ado-md-api/value-property-ado-md.md)属性的**单元**中的数据。  
   
@@ -42,7 +43,7 @@ ms.locfileid: "82761795"
   
  **Properties**集合包含提供程序提供的属性。 下表列出了可用的属性。 实际属性列表可能有所不同，具体取决于提供程序的实现。 有关可用属性的更完整列表，请参阅提供程序的文档。  
   
-|“属性”|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |BackColor|显示单元格时使用的背景色。|  
 |FontFlags|字体上的位掩码细节效果。|  
@@ -56,7 +57,7 @@ ms.locfileid: "82761795"
 -   [属性、方法和事件](../../../ado/reference/ado-md-api/cell-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [轴示例（VBScript）](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
- [单元集对象（ADO MD）](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)   
- [位置集合（ADO MD）](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)   
+ [ (VBScript) 的轴示例 ](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
+ [单元集对象 (ADO MD) ](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)   
+ [位置集合 (ADO MD) ](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)   
  [属性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

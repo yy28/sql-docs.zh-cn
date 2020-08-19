@@ -1,4 +1,5 @@
 ---
+description: PositionEnum
 title: PositionEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,21 +16,21 @@ helpviewer_keywords:
 ms.assetid: e69af0a5-3405-4b72-9c6e-6b188ff746fd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6a61dae9888628302da3326a1465f4182c49e39c
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 326fc4f1b9b77c8a4470fedc7d55f2d379aff6f3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243218"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442709"
 ---
 # <a name="positionenum"></a>PositionEnum
-指定记录指针在[记录集中](../../../ado/reference/ado-api/recordset-object-ado.md)的当前位置。  
+指定记录指针在 [记录集中](../../../ado/reference/ado-api/recordset-object-ado.md)的当前位置。  
   
 |返回的常量|值|描述|  
 |--------------|-----------|-----------------|  
-|**adPosBOF**|-2|指示当前记录指针处于 BOF （即[bof](../../../ado/reference/ado-api/bof-eof-properties-ado.md)属性为**True**）。|  
-|**adPosEOF**|-3|指示当前记录指针位于 EOF （即[eof](../../../ado/reference/ado-api/bof-eof-properties-ado.md)属性为**True**）。|  
-|**adPosUnknown**|-1|指示**记录集**为空，当前位置未知，或者提供程序不支持[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)或[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)属性。|  
+|**adPosBOF**|-2|指示当前记录指针处于 BOF (也就是说， [bof](../../../ado/reference/ado-api/bof-eof-properties-ado.md) 属性为 **True**) 。|  
+|**adPosEOF**|-3|指示当前记录指针位于 EOF (即， [eof](../../../ado/reference/ado-api/bof-eof-properties-ado.md) 属性为 **True**) 。|  
+|**adPosUnknown**|-1|指示 **记录集** 为空，当前位置未知，或者提供程序不支持 [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md) 或 [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) 属性。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
  Package： **.com. 数据**  

@@ -1,5 +1,6 @@
 ---
-title: Version 属性示例（VB） |Microsoft Docs
+description: Version 属性示例 (VB)
+title: 版本属性示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 708efd50-2905-4168-b7e4-91b2e9b23539
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7392a6cf04ee2951cb0d9064d9321f75bb2db395
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 839137cb2787ec35f8a49d6f66a8577e4d9d959a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758613"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441549"
 ---
 # <a name="version-property-example-vb"></a>Version 属性示例 (VB)
 此示例使用[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象的[Version](../../../ado/reference/ado-api/version-property-ado.md)属性显示当前 ADO 版本。 它还使用几个动态属性来显示：  
@@ -78,5 +79,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Connection 对象（ADO）](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [ADO) 的连接对象 (](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Version 属性 (ADO)](../../../ado/reference/ado-api/version-property-ado.md)

@@ -1,5 +1,6 @@
 ---
-title: Status 属性示例（记录集）（VB） |Microsoft Docs
+description: Status 属性示例（记录集）(VB)
+title: Status 属性示例 (Recordset)  (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e37b4d46-380d-4615-b4bb-e1a7b0851771
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d2789a69b9ac96e3dbe42ab3828d5afe49fc387a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 83ee7fc06923a4e0010fab835ea05e00768cbb94
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759693"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441919"
 ---
 # <a name="status-property-example-recordset-vb"></a>Status 属性示例（记录集）(VB)
-此示例使用[Status](../../../ado/reference/ado-api/status-property-ado-recordset.md)属性来显示批处理操作中修改了哪些记录，然后才能进行批处理更新。  
+此示例使用 [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) 属性来显示批处理操作中修改了哪些记录，然后才能进行批处理更新。  
   
 ```  
 'BeginStatusRecordsetVB  

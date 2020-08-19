@@ -1,4 +1,5 @@
 ---
+description: ADO MD 对象模型
 title: ADO MD 对象模型 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6242b374-091b-406f-827a-c0dcd3e1967a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 69536f73c26a51debe4e53ea123c8b73fcd0488e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: acd8895c8fa727d3be71712c575e3edaee445ec6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765268"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441369"
 ---
 # <a name="ado-md-object-model"></a>ADO MD 对象模型
 本主题介绍如何在 ADO MD 中表示和相关对象。  
@@ -38,6 +39,6 @@ ms.locfileid: "82765268"
  [ADO MD 方法](../../../ado/reference/ado-md-api/ado-md-methods.md)   
  [ADO MD 对象](../../../ado/reference/ado-md-api/ado-md-objects.md)   
  [ADO MD 属性](../../../ado/reference/ado-md-api/ado-md-properties.md)   
- [ADO （多维）（ADO MD）](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
+ [ADO (多维)  (ADO MD) ](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
  [多维架构和数据的概述](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   
  [使用多维数据](../../../ado/guide/multidimensional/working-with-multidimensional-data.md)

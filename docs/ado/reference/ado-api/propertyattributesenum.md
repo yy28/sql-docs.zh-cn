@@ -1,4 +1,5 @@
 ---
+description: PropertyAttributesEnum
 title: PropertyAttributesEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 96a01955-a6b4-4cbf-9c73-52bcd1e9fb25
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dcb17116d7332e9afb359a7dd47d69cb3eb75df4
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: bac29c74bf70e29828fe8ec238839cd64e78fd7a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759933"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442559"
 ---
 # <a name="propertyattributesenum"></a>PropertyAttributesEnum
-指定[属性](../../../ado/reference/ado-api/property-object-ado.md)对象的特性。  
+指定 [属性](../../../ado/reference/ado-api/property-object-ado.md) 对象的特性。  
   
-|返回的常量|值|说明|  
+|返回的常量|值|描述|  
 |--------------|-----------|-----------------|  
 |**adPropNotSupported**|0|指示该提供程序不支持该属性。|  
 |**adPropRequired**|1|指示在初始化数据源之前，用户必须为此属性指定一个值。|  
@@ -44,5 +45,5 @@ ms.locfileid: "82759933"
 |AdoEnums. PropertyAttributes. READ|  
 |AdoEnums. PropertyAttributes|  
   
-## <a name="applies-to"></a>应用于  
+## <a name="applies-to"></a>适用于  
  [Attributes 属性 (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)

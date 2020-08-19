@@ -1,5 +1,6 @@
 ---
-title: Type 属性示例（字段）（VB） |Microsoft Docs
+description: Type 属性示例（字段）(VB)
+title: Type 属性示例 ( (VB) ) 字段 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: accb72f5-a3bd-4a7e-92b6-6da0783b4b75
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1d3f13b0f76884f4b5e0077bdebef0c009d7b546
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 94eeb6eb22e72b6db45d178c9d19ced33009be8e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765348"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441719"
 ---
 # <a name="type-property-example-field-vb"></a>Type 属性示例（字段）(VB)
 此示例通过显示与***Employees***表中所有[Field](../../../ado/reference/ado-api/field-object.md)对象的[Type](../../../ado/reference/ado-api/type-property-ado.md)属性值相对应的常量的名称，演示了[type](../../../ado/reference/ado-api/type-property-ado.md)属性。 运行此过程需要 FieldType 函数。  

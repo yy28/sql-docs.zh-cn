@@ -1,4 +1,5 @@
 ---
+description: ParameterAttributesEnum
 title: ParameterAttributesEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 7ef6c728-5eda-4bde-8052-02d2db1d2cfe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 174cbfc9ded88e4c5465ef640a23d17c9edb5ac6
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e97ec8a7b969311cec0a535a69a259c495d93f0e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763408"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442769"
 ---
 # <a name="parameterattributesenum"></a>ParameterAttributesEnum
-指定[参数](../../../ado/reference/ado-api/parameter-object.md)对象的特性。  
+指定 [参数](../../../ado/reference/ado-api/parameter-object.md) 对象的特性。  
   
-|返回的常量|值|说明|  
+|返回的常量|值|描述|  
 |--------------|-----------|-----------------|  
 |**adParamSigned**|16|指示参数接受有符号的值。|  
 |**adParamNullable**|64|指示参数接受 null 值。|  
@@ -40,5 +41,5 @@ ms.locfileid: "82763408"
 |AdoEnums.ParameterAttributes.NULLABLE|  
 |AdoEnums.ParameterAttributes.LONG|  
   
-## <a name="applies-to"></a>应用于  
+## <a name="applies-to"></a>适用于  
  [Attributes 属性 (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)

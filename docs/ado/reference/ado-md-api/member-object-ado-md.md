@@ -1,5 +1,6 @@
 ---
-title: 成员对象（ADO MD） |Microsoft Docs
+description: 成员对象 (ADO MD)
+title: 成员对象 (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3dedf755-0741-4c3f-8b4e-bff8ff8809c8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d4d512d651c8162124c935ffdb260c4abe4ecb14
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6e0797a4d273c51b950e3973d1864480755a20d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82753211"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440919"
 ---
 # <a name="member-object-ado-md"></a>成员对象 (ADO MD)
 表示多维数据集中某一级别的成员、某一级别的某个成员的子级或沿某个单元集的一个位置的成员。  
@@ -46,7 +47,7 @@ ms.locfileid: "82753211"
   
 -   使用[ChildCount](../../../ado/reference/ado-md-api/childcount-property-ado-md.md)属性计算**成员**的子级。  
   
--   使用标准 ADO [Properties](../../../ado/reference/ado-api/properties-collection-ado.md)集合获取有关**Level**对象的其他信息。  
+-   使用标准 ADO [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) 集合获取有关 **Level** 对象的其他信息。  
   
  通过在[轴](../../../ado/reference/ado-md-api/axis-object-ado-md.md)上**放置某个位置**的**成员**的集合和属性，您可以执行以下操作：  
   
@@ -62,25 +63,25 @@ ms.locfileid: "82753211"
   
 -   使用[DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md)属性可确定在此**成员**之后的**轴**上是否至少有一个子元素。  
   
--   使用[ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)属性来确定此**成员**的父级是否与紧前面的**成员**的父级相同。  
+-   使用 [ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md) 属性来确定此 **成员** 的父级是否与紧前面的 **成员**的父级相同。  
   
--   使用标准 ADO [Properties](../../../ado/reference/ado-api/properties-collection-ado.md)集合获取有关**Level**对象的其他信息。  
+-   使用标准 ADO [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) 集合获取有关 **Level** 对象的其他信息。  
   
  **Properties**集合包含提供程序提供的属性。 下表列出了可用的属性。 实际属性列表可能有所不同，具体取决于提供程序的实现。 有关可用属性的更完整列表，请参阅提供程序的文档。  
   
-|“属性”|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |CatalogName|此多维数据集所属的目录的名称。|  
 |ChildrenCardinality|成员具有的子级的个数。|  
 |CubeName|多维数据集的名称。|  
-|说明|成员的有意义的说明。|  
+|描述|成员的有意义的说明。|  
 |DimensionUniqueName|[维度](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)的明确名称。|  
 |HierarchyUniqueName|层次结构的明确名称。|  
 |LevelNumber|层次结构的级别与根之间的距离。|  
 |LevelUniqueName|级别的明确名称。|  
 |MemberCaption|与成员相关的标签或标题。|  
 |MemberGUID|成员的 GUID。|  
-|MemberName|成员的名称。|  
+|MemberName|成员名。|  
 |MemberOrdinal|成员的序号。|  
 |MemberType|成员的类型。|  
 |MemberUniqueName|成员的明确名称。|  
@@ -94,6 +95,6 @@ ms.locfileid: "82753211"
 -   [属性、方法和事件](../../../ado/reference/ado-md-api/member-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [目录示例（VB）](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
- [成员集合（ADO MD）](../../../ado/reference/ado-md-api/members-collection-ado-md.md)   
+ [ (VB 的目录示例) ](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
+ [成员集合 (ADO MD) ](../../../ado/reference/ado-md-api/members-collection-ado-md.md)   
  [属性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
