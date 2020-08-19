@@ -1,4 +1,5 @@
 ---
+description: 使用数据源
 title: 使用数据源 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: d5550619-22b2-4b16-bd08-fbabb6554c40
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: df9b09e4c5519e0fff44902bd83b8e3d92a67ca8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 162f1c2bf8d75757ac2c29d60f675ac07ba8b00d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81286537"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428829"
 ---
 # <a name="using-data-sources"></a>使用数据源
-数据源通常由最终用户或技术人员使用称为*ODBC 管理员*的程序创建。 ODBC 管理器提示用户提供要使用的驱动程序，然后调用该驱动程序。 驱动程序将显示一个对话框，该对话框请求连接到数据源所需的信息。 用户输入信息后，该驱动程序会将其存储在系统中。  
+数据源通常由最终用户或技术人员使用称为 *ODBC 管理员*的程序创建。 ODBC 管理器提示用户提供要使用的驱动程序，然后调用该驱动程序。 驱动程序将显示一个对话框，该对话框请求连接到数据源所需的信息。 用户输入信息后，该驱动程序会将其存储在系统中。  
   
  稍后，应用程序将调用驱动程序管理器，并向其传递计算机数据源的名称或包含文件数据源的文件的路径。 在传递计算机数据源名称时，驱动程序管理器会搜索系统以查找数据源使用的驱动程序。 然后，它会加载驱动程序并将数据源名称传递给它。 驱动程序使用数据源名称来查找连接到数据源所需的信息。 最后，它连接到数据源，通常会提示用户输入通常不会存储的用户 ID 和密码。  
   

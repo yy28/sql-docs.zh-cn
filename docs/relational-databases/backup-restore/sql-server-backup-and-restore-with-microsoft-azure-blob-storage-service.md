@@ -1,4 +1,5 @@
 ---
+description: 使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原
 title: 使用 Azure blob 存储备份和还原
 storage: Learn about SQL Server backup to and restore from Azure Blob storage, including the benefits of using Azure Blob storage to store SQL Server backups.
 ms.custom: seo-lt-2019
@@ -11,12 +12,12 @@ ms.topic: conceptual
 ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e24d91db6845d862b88457d72f2f4bc04c9062d4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 41c11b596017f9dfeab7d62cfbe517e764f733ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786465"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428919"
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "85786465"
   
 ## <a name="benefits-of-using-the-microsoft-azure-blob-service-for-ssnoversion-backups"></a>将 Microsoft Azure Blob 服务用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份的好处  
   
--   灵活、可靠、无限制的站点外存储：在 Microsoft Azure Blob 服务上存储备份是一种方便、灵活、易于访问的站点外备选方法。 为您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份创建站点外存储就像修改您的现有脚本/作业一样简单。 站点外存储位置通常应远离生产数据库位置，以防止出现同时影响站点外和生产数据库位置的一个灾难。 通过选择地理复制 Blob 存储区，您在发生可能影响整个区域的灾难时多了一层额外的保护。 此外，备份副本随时随地可用，并可以轻松访问它们来执行还原。  
+-   灵活、可靠、无限制的站点外存储：在 Microsoft Azure Blob 服务上存储备份是一种方便、灵活、易于访问的站点外备选方法。 为您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份创建站点外存储就像修改您的现有脚本/作业一样简单。 场外存储通常应当远离生产数据库位置，以防止某个灾难可能同时影响场外和生产数据库位置。 通过选择地理复制 Blob 存储区，您在发生可能影响整个区域的灾难时多了一层额外的保护。 此外，备份副本随时随地可用，并可以轻松访问它们来执行还原。  
   
     > [!IMPORTANT]  
     >  在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]中使用块 blob 可以条带化备份集，支持对大小高达 12.8 TB 的文件进行备份。  
@@ -47,11 +48,11 @@ ms.locfileid: "85786465"
   
 -   无硬件管理开销：没有有关 Microsoft Azure 服务的硬件管理开销。 Microsoft Azure 服务管理硬件并支持地理复制以提供冗余和防止硬件故障。  
   
--   当前对于在 Microsoft Azure 虚拟机中运行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，可以通过创建附加的磁盘来备份到 Microsoft Azure Blob 存储服务。 但是，对于可以附加到 Microsoft Azure 虚拟机的磁盘数有限制。 限制值为：超大实例最多使用 16 个磁盘，较小的实例可使用的磁盘则更少。 通过允许直接备份到 Microsoft Azure Blob 存储区，你可以绕过 16 个磁盘的限制。  
+-   当前对于在 Microsoft Azure 虚拟机中运行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，可以通过创建附加的磁盘来备份到 Microsoft Azure Blob 存储服务。 但是，对于可以附加到 Microsoft Azure 虚拟机的磁盘数有限制。 对特大实例的限制为 16 个磁盘；对较小实例的磁盘限制数更少。 通过允许直接备份到 Microsoft Azure Blob 存储区，你可以绕过 16 个磁盘的限制。  
   
      此外，目前存储在 Microsoft Azure Blob 存储服务中的备份文件直接可用于本地 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或在 Microsoft Azure 虚拟机中运行的其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，而无需进行数据库附加/分离或下载并附加 VHD。  
   
--   成本优势：仅对使用的服务付费。 可以作为经济合算的站点外备份存档方案。 有关详细信息和链接，请参阅 [Microsoft Azure 计费注意事项](#Billing) 一节。  
+-   成本优势：仅对使用的服务付费。 作为场外和备份存档方式可能更加划算。 有关详细信息和链接，请参阅 [Microsoft Azure 计费注意事项](#Billing) 一节。  
   
 ##  <a name="microsoft-azure-billing-considerations"></a><a name="Billing"></a> Microsoft Azure 计费注意事项：  
  了解 Microsoft Azure 存储成本使你能够预测在 Microsoft Azure 中创建和存储备份的成本。  
@@ -70,6 +71,6 @@ ms.locfileid: "85786465"
 
 [教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)
 
-[SQL Server 的 URL 备份](../../relational-databases/backup-restore/sql-server-backup-to-url.md)  
+[SQL Server 备份到 URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)  
   
   

@@ -1,5 +1,6 @@
 ---
-title: 数据源类型 |微软文档
+description: 数据源的类型
+title: 数据源的类型 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: a5e3f966-3357-4827-afbc-6153682d26bc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 69ac838bebcbe9581cf2424a99b6b503af526fe7
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: 46662096833dddf4a094282ad453a7a0696f28b4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81286729"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428849"
 ---
 # <a name="types-of-data-sources"></a>数据源的类型
-有两种类型的数据源：计算机数据源和文件数据源。 尽管两者都包含有关数据源的类似信息，但它们在存储此信息的方式上有所不同。 由于这些差异，它们以某种不同的方式使用。  
+有两种类型的数据源：计算机数据源和文件数据源。 尽管两者都包含与数据源相关的类似信息，但它们的存储方式有所不同。 由于存在这些差异，因此在不同的礼节中使用它们。  
   
  本部分包含以下主题。  
   

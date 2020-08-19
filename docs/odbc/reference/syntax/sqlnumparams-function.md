@@ -1,4 +1,5 @@
 ---
+description: SQLNumParams 函数
 title: SQLNumParams 函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,19 +21,19 @@ helpviewer_keywords:
 ms.assetid: dbf2da44-253b-4094-bd6b-29bafc23c7a3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1a968e6c7bc7c502d507072f0d7fd70c12c46901
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b3bba7f30b682e2c310c8bba47849e543c8684e5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306938"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428909"
 ---
 # <a name="sqlnumparams-function"></a>SQLNumParams 函数
 **度**  
  引入的版本： ODBC 1.0 标准符合性： ISO 92  
   
  **摘要**  
- **SQLNumParams**返回 SQL 语句中参数的数目。  
+ **SQLNumParams** 返回 SQL 语句中参数的数目。  
   
 ## <a name="syntax"></a>语法  
   
@@ -54,35 +55,35 @@ SQLRETURN SQLNumParams(
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_STILL_EXECUTING、SQL_ERROR 或 SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>诊断  
- 当**SQLNumParams**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO 时，可以通过使用*HandleType*的 SQL_HANDLE_STMT 和*StatementHandle*的*句柄*调用**SQLGetDiagRec**来获取关联的 SQLSTATE 值。 下表列出了通常由**SQLNumParams**返回的 SQLSTATE 值，并对该函数的上下文中的每个值进行了说明："（DM）" 表示法位于驱动程序管理器返回的 SQLSTATEs 的说明之前。 除非另有说明，否则与每个 SQLSTATE 值相关联的返回代码将 SQL_ERROR。  
+ 当**SQLNumParams**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO 时，可以通过使用*HandleType*的 SQL_HANDLE_STMT 和*StatementHandle*的*句柄*调用**SQLGetDiagRec**来获取关联的 SQLSTATE 值。 下表列出了通常由 **SQLNumParams** 返回的 SQLSTATE 值，并对该函数的上下文中的每个值进行了说明：表示法 " (DM) " 位于驱动程序管理器返回的 SQLSTATEs 的说明之前。 除非另有说明，否则与每个 SQLSTATE 值相关联的返回代码将 SQL_ERROR。  
   
-|SQLSTATE|错误|说明|  
+|SQLSTATE|错误|描述|  
 |--------------|-----------|-----------------|  
-|01000|一般警告|驱动程序特定的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
+|01000|一般警告|驱动程序特定的信息性消息。  (函数返回 SQL_SUCCESS_WITH_INFO。 ) |  
 |08S01|通信链接失败|在函数完成处理之前，驱动程序与连接到的数据源之间的通信链接失败。|  
-|HY000|常规错误|发生了一个错误，该错误没有特定的 SQLSTATE，没有为其定义实现特定的 SQLSTATE。 MessageText 缓冲区中的**SQLGetDiagRec**返回的错误消息描述了错误及其原因。 * \**|  
+|HY000|常规错误|发生了一个错误，该错误没有特定的 SQLSTATE，没有为其定义实现特定的 SQLSTATE。 * \* MessageText*缓冲区中的**SQLGetDiagRec**返回的错误消息描述了错误及其原因。|  
 |HY001|内存分配错误|驱动程序无法分配支持执行或完成此函数所需的内存。|  
-|HY008|操作已取消|已为*StatementHandle*启用异步处理。 **SQLNumParams**函数在完成执行前调用，在*StatementHandle*上调用**SQLCancel**或**SQLCancelHandle** ;然后，在*StatementHandle*中再次调用**SQLNumParams**函数。<br /><br /> 或者，在执行完**SQLNumParams**函数之前，从多线程应用程序中的另一个线程调用*StatementHandle*上的**SQLCancel**或**SQLCancelHandle** 。|  
-|HY010|函数序列错误|（DM）在为*StatementHandle*调用**SQLPrepare**或**SQLExecDirect**之前调用了函数。<br /><br /> （DM）为与*StatementHandle*关联的连接句柄调用了异步执行的函数。 调用**SQLNumParams**函数时，此异步函数仍在执行。<br /><br /> （DM）为*StatementHandle*调用了异步执行的函数（而不是此函数），并且在调用此函数时仍在执行。<br /><br /> （DM） **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**或**SQLSetPos**调用了*StatementHandle*并返回 SQL_NEED_DATA。 在为所有执行时数据参数或列发送数据之前，将调用此函数。|  
+|HY008|操作已取消|已为 *StatementHandle*启用异步处理。 **SQLNumParams**函数在完成执行前调用，在*StatementHandle*上调用**SQLCancel**或**SQLCancelHandle** ;然后，在*StatementHandle*中再次调用**SQLNumParams**函数。<br /><br /> 或者，在执行完**SQLNumParams**函数之前，从多线程应用程序中的另一个线程调用*StatementHandle*上的**SQLCancel**或**SQLCancelHandle** 。|  
+|HY010|函数序列错误| (DM) 在为*StatementHandle*调用**SQLPrepare**或**SQLExecDirect**之前调用了函数。<br /><br />  (DM) 为与 *StatementHandle*关联的连接句柄调用了异步执行函数。 调用 **SQLNumParams** 函数时，此异步函数仍在执行。<br /><br />  (DM) 异步执行的函数 (不是为 *StatementHandle* 调用了这一) ，并且在调用此函数时仍在执行。<br /><br />  (DM) 为*StatementHandle*调用**SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**或**SQLSetPos** ，并返回 SQL_NEED_DATA。 在为所有执行时数据参数或列发送数据之前，将调用此函数。|  
 |HY013|内存管理错误|未能处理函数调用，原因可能是由于内存不足而无法访问基础内存对象。|  
-|HY117|由于未知的事务状态，连接被挂起。 仅允许断开连接和只读函数。|（DM）有关挂起状态的详细信息，请参阅[SQLEndTran 函数](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
-|HYT01|连接超时已过期|连接超时期限在数据源响应请求之前过期。 连接超时期限通过**SQLSetConnectAttr**设置，SQL_ATTR_CONNECTION_TIMEOUT。|  
-|IM001|驱动程序不支持此功能|（DM）与*StatementHandle*关联的驱动程序不支持该函数。|  
+|HY117|由于未知的事务状态，连接被挂起。 仅允许断开连接和只读函数。| (DM) 有关挂起状态的详细信息，请参阅 [SQLEndTran 函数](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
+|HYT01|连接超时已过期|连接超时期限在数据源响应请求之前过期。 连接超时期限通过 **SQLSetConnectAttr**设置，SQL_ATTR_CONNECTION_TIMEOUT。|  
+|IM001|驱动程序不支持此功能| (DM) 与 *StatementHandle* 关联的驱动程序不支持该函数。|  
 |IM017|在异步通知模式下禁用轮询|无论何时使用通知模型，都将禁用轮询。|  
-|IM018|尚未调用**SQLCompleteAsync**来完成此句柄上先前的异步操作。|如果句柄上的上一个函数调用返回 SQL_STILL_EXECUTING 并且启用了通知模式，则必须在句柄上调用**SQLCompleteAsync** ，以执行后处理并完成操作。|  
+|IM018|尚未调用**SQLCompleteAsync**来完成此句柄上先前的异步操作。|如果句柄上的上一个函数调用返回 SQL_STILL_EXECUTING 并且启用了通知模式，则必须在句柄上调用 **SQLCompleteAsync** ，以执行后处理并完成操作。|  
   
-## <a name="comments"></a>说明  
+## <a name="comments"></a>注释  
  只有在调用**SQLPrepare**之后，才能调用**SQLNumParams** 。  
   
- 如果与*StatementHandle*关联的语句不包含参数，则**SQLNumParams**将 **ParameterCountPtr*设置为0。  
+ 如果与 *StatementHandle* 关联的语句不包含参数，则 **SQLNumParams** 将 **ParameterCountPtr* 设置为0。  
   
  **SQLNumParams**返回的参数数目与 IPD 的 SQL_DESC_COUNT 字段的值相同。  
   
- 有关详细信息，请参阅[描述参数](../../../odbc/reference/develop-app/describing-parameters.md)。  
+ 有关详细信息，请参阅 [描述参数](../../../odbc/reference/develop-app/describing-parameters.md)。  
   
 ## <a name="related-functions"></a>相关函数  
   
-|有关以下方面的信息|查看|  
+|有关以下方面的信息|请参阅|  
 |---------------------------|---------|  
 |将缓冲区绑定到参数|[SQLBindParameter 函数](../../../odbc/reference/syntax/sqlbindparameter-function.md)|  
 |在语句中返回有关参数的信息|[SQLDescribeParam 函数](../../../odbc/reference/syntax/sqldescribeparam-function.md)|  
