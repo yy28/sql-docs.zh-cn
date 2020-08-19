@@ -1,4 +1,5 @@
 ---
+description: 游标位置的重要性
 title: 游标位置的重要性 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 70ef5b1c-0459-41a1-b796-031f61a29a8a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7f5e960aa4ccc71079b8c06690665af74cffd0ab
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: acfb19f341bef22a9922e075d144026b9ef5f29d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759063"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452719"
 ---
 # <a name="the-significance-of-cursor-location"></a>游标位置的重要性
-每个游标都使用临时资源来保存其数据。 这些资源可以是内存、磁盘分页文件、临时磁盘文件，甚至可以是数据库中的临时存储。 当这些资源位于客户端计算机上时，游标称为*客户端*游标。 当这些资源位于服务器上时，游标称为*服务器端*游标。  
+每个游标都使用临时资源来保存其数据。 这些资源可以是内存、磁盘分页文件、临时磁盘文件，甚至可以是数据库中的临时存储。 当这些资源位于客户端计算机上时，游标称为 *客户端* 游标。 当这些资源位于服务器上时，游标称为 *服务器端* 游标。  
   
 ## <a name="client-side-cursors"></a>客户端游标  
  在 ADO 中，使用**AdUseClient CursorLocationEnum**调用客户端游标。 使用非键集客户端游标，服务器会将整个结果集发送到客户端计算机。 客户端计算机提供游标和结果集所需的临时资源并对其进行管理。 客户端应用程序可以浏览整个结果集来确定所需的行。  

@@ -1,5 +1,6 @@
 ---
-title: sys.sys用户（Transact-sql） |Microsoft Docs
+description: sys.sysusers (Transact-SQL)
+title: sys.sys用户 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,12 +22,12 @@ ms.assetid: 5f0e6a8d-c983-44f6-97e9-aab5bff67d18
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae0f80f4d77e04906b60549270763d3f2b0881c1
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: f661bc590652958924892fdb083707c1c3d654b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87393010"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490064"
 ---
 # <a name="syssysusers-transact-sql"></a>sys.sysusers (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -41,13 +42,13 @@ ms.locfileid: "87393010"
 |**uid**|**smallint**|用户 ID，在此数据库中是唯一的。<br /><br /> 1 = 数据库所有者<br /><br /> 如果用户数和角色数超过 32,767，则发生溢出或返回 NULL。|  
 |**status**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |name|**sysname**|用户名或组名，在此数据库中是唯一的。|  
-|**sid**|**varbinary （85）**|此项的安全性标识符。|  
+|**sid**|**varbinary (85) **|此项的安全性标识符。|  
 |**作用**|**varbinary(2048)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**createdate**|**datetime**|帐户的添加日期。|  
 |**updatedate**|**datetime**|帐户的上次更改日期。|  
 |**altuid**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 如果用户数和角色数超过 32,767，则发生溢出或返回 NULL。|  
-|password|**varbinary(256)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**gid**|**smallint**|此用户所属的组 ID。 如果**uid**与**gid**相同，则此项定义一个组。 如果组和用户的总数超过 32,767，则发生溢出或返回 NULL。|  
+|**password**|**varbinary(256)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**gid**|**smallint**|此用户所属的组 ID。 如果 **uid** 与 **gid**相同，则此项定义一个组。 如果组和用户的总数超过 32,767，则发生溢出或返回 NULL。|  
 |**environ**|**varchar(255)**|保留。|  
 |**hasdbaccess**|**int**|1 = 帐户具有数据库访问权。|  
 |**islogin**|**int**|1 = 帐户是具有登录帐户的 Windows 组、Windows 用户或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户。|  

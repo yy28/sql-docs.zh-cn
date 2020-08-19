@@ -1,4 +1,5 @@
 ---
+description: TYPE_NAME (Transact-SQL)
 title: TYPE_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ ms.assetid: e4075a2e-5f70-440f-986b-9ec8434e07c1
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da4c194a533f53704b5979dd88587869a1c67fb7
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: def376308310d249dfe65f0a66d38095e67733eb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112603"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459488"
 ---
 # <a name="type_name-transact-sql"></a>TYPE_NAME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,8 +46,8 @@ TYPE_NAME ( type_id )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- type_id   
- 要使用的类型的 ID。 type_id 的数据类型为 int，它可以引用调用方有权访问的任意架构中的类型   。  
+ type_id  
+ 要使用的类型的 ID。 type_id 的数据类型为 int，它可以引用调用方有权访问的任意架构中的类型******。  
   
 ## <a name="return-types"></a>返回类型  
  **sysname**  
@@ -57,14 +58,14 @@ TYPE_NAME ( type_id )
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，用户只能查看其拥有的安全对象的元数据，或者已对其授予权限的安全对象的元数据。 也就是说，如果用户对该对象没有任何权限，则某些会产生元数据的内置函数（如 TYPE_NAME）可能返回 NULL。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="remarks"></a>备注  
- 当 type_id 无效或当调用方没有足够权限引用类型时，TYPE_NAME 将返回 NULL  。  
+ 当 type_id 无效或当调用方没有足够权限引用类型时，TYPE_NAME 将返回 NULL**。  
   
- TYPE_NAME 既可用于系统数据类型，也可用于用户定义数据类型。 类型可以包含在任意架构中，但是始终返回一个未限定的类型名称。 这表示名称不具有 schema.   前缀。  
+ TYPE_NAME 既可用于系统数据类型，也可用于用户定义数据类型。 类型可以包含在任意架构中，但是始终返回一个未限定的类型名称。 这表示名称不具有 schema.__**** 前缀开头。  
   
  系统函数可以在选择列表、WHERE 子句和任何允许使用表达式的地方使用。 有关详细信息，请参阅[表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md) 和 [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)。  
   
 ## <a name="examples"></a>示例  
- 以下示例针对 `Vendor` 数据库的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 表中的每列返回对象名称、列名以及类型名称。  
+ 以下示例针对 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的 `Vendor` 表中的每列返回对象名称、列名以及类型名称。  
   
 ```  
 SELECT o.name AS obj_name, c.name AS col_name,  
@@ -94,7 +95,7 @@ Vendor          PurchasingWebServiceURL  nvarchar
 ```  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 下面的示例返回具有 `TYPE ID` ID 的数据类型的 `1`。  
+ 下面的示例返回具有 `1` ID 的数据类型的 `TYPE ID`。  
   
 ```  
 SELECT TYPE_NAME(36) AS Type36, TYPE_NAME(239) AS Type239;  

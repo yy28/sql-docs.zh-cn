@@ -1,5 +1,6 @@
 ---
-title: 非空（MDX） |Microsoft Docs
+description: NonEmpty (MDX)
+title: 不 (MDX) 为空 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 45daf970f69322cad36bbe5419bf1dc8cc8009b9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b887988327908f128633349de52f39a17d1e0978
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68088345"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483720"
 ---
 # <a name="nonempty-mdx"></a>NonEmpty (MDX)
 
@@ -35,16 +36,16 @@ NONEMPTY(set_expression1 [,set_expression2])
  返回集的有效多维表达式 (MDX)。  
   
 ## <a name="remarks"></a>备注  
- 此函数返回位于第一个指定集中并且在对第二个集中的元组求值时不为空的元组。 非**空**函数会考虑计算并保留重复元组。 如果未提供第二个集，将在多维数据集中属性层次结构和度量值的成员的当前坐标上下文中对表达式求值。  
+ 此函数返回位于第一个指定集中并且在对第二个集中的元组求值时不为空的元组。 非 **空** 函数会考虑计算并保留重复元组。 如果未提供第二个集，将在多维数据集中属性层次结构和度量值的成员的当前坐标上下文中对表达式求值。  
   
 > [!NOTE]  
->  使用此函数，而不是已弃用的[NonEmptyCrossjoin &#40;MDX&#41;](../mdx/nonemptycrossjoin-mdx.md)函数。  
+>  使用此函数，而不是已弃用的 [NonEmptyCrossjoin &#40;MDX&#41;](../mdx/nonemptycrossjoin-mdx.md) 函数。  
   
 > [!IMPORTANT]  
 >  非空是元组所引用的单元的特征，而不是元组本身的特征。  
   
 ## <a name="examples"></a>示例  
- 下面的查询显示一个简单的非**空示例，返回**在7月1日2001上对 Internet 销售金额具有非 null 值的所有客户：  
+ 下面的查询显示一个简单的非 **空示例，返回**在7月1日2001上对 Internet 销售金额具有非 null 值的所有客户：  
   
  `SELECT [Measures].[Internet Sales Amount] ON 0,`  
   
@@ -60,7 +61,7 @@ NONEMPTY(set_expression1 [,set_expression2])
   
  `FROM [Adventure Works]`  
   
- 以下示例返回包含客户和采购日期的元组集，使用**筛选器**函数和非**空**函数来查找每个客户的最后一次购买日期：  
+ 以下示例返回包含客户和采购日期的元组集，使用 **筛选器** 函数和非 **空** 函数来查找每个客户的最后一次购买日期：  
   
  `WITH SET MYROWS AS FILTER`  
   

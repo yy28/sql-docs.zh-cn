@@ -1,4 +1,5 @@
 ---
+description: XSLT 转换
 title: XSLT 转换 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1a46196e-839f-4734-a59e-2c64609ffb9e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8556576656d4b6eb6ba5e38216a78074cd1f9fc4
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 13326277c0be8abbf7c2d7d623233b34ad2ed348
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748203"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452479"
 ---
 # <a name="xslt-transformations"></a>XSLT 转换
 XSLT 可应用于生成的 XML，以将其转换为另一种格式。 了解 ADO 中的 XML 格式可帮助开发 XSLT 模板，从而将其转换为更易于用户使用的形式。  

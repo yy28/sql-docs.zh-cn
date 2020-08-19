@@ -1,4 +1,5 @@
 ---
+description: 步骤 3：填充字段列表框
 title: 步骤3：填充 "字段" 列表框 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 315c32dc-aeb1-4629-b30e-87b44e8f84d1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2ecedd516891e2f99a800da452573717f211ff60
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d3a7378cfdce29094f5ae4271b9fe7bff7516753
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760793"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452789"
 ---
 # <a name="step-3-populate-the-fields-list-box"></a>步骤 3：填充字段列表框
 若要填充 "字段" 列表框，请将以下代码插入到的 Click 事件处理程序中 `lstMain` ：  
@@ -50,7 +51,7 @@ End Sub
   
  与中所选资源相对应的行 `lstMain` 成为的当前行 `grs` 。 然后，"详细信息" 列表框将被清除，并以的 `rec` 当前行 `grs` 作为源打开。  
   
- 如果资源是由[RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)指定的集合记录，则 `rs` 会在记录的子级上打开本地记录集。然后， `lstDetails` 将用的行中的值填充 `rs` 。  
+ 如果资源是由 [RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)指定的集合记录，则 `rs` 会在记录的子级上打开本地记录集。然后， `lstDetails` 将用的行中的值填充 `rs` 。  
   
  如果资源是简单记录， `recFields` 则调用。 有关的详细信息 `recFields` ，请参阅下一步。  
   

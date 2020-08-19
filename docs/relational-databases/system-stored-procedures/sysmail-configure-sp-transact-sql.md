@@ -1,5 +1,6 @@
 ---
-title: sysmail_configure_sp （Transact-sql） |Microsoft Docs
+description: sysmail_configure_sp (Transact-SQL)
+title: sysmail_configure_sp (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 73b33c56-2bff-446a-b495-ae198ad74db1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: df5b364408b012a186ca090b6d3a6d7de77119cf
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 28506e30d5f2d253410cca319f22ae620a2c33a0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122273"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469128"
 ---
 # <a name="sysmail_configure_sp-transact-sql"></a>sysmail_configure_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  更改数据库邮件的配置设置。 使用**sysmail_configure_sp**指定的配置设置适用于整个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
+  更改数据库邮件的配置设置。 使用 **sysmail_configure_sp** 指定的配置设置适用于整个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -51,7 +52,7 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
  参数的说明。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="result-sets"></a>结果集  
  无  
@@ -69,10 +70,10 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
 |*ProhibitedExtensions*|一组以逗号分隔的扩展名，具有这些扩展名的文件不能作为电子邮件附件发送。|**exe,dll,vbs,js**|  
 |*Logginglevel.information*|指定数据库邮件日志中要记录的消息。 以下数值之一：<br /><br /> 1 - 表示正常模式。 仅记录错误。<br /><br /> 2 - 表示扩展模式。 记录错误、警告和信息性消息。<br /><br /> 3 - 表示详细模式。 记录错误、警告、信息性消息、成功消息和其他内部消息。 该模式用于进行故障排除。|**2**|  
   
- 存储过程**sysmail_configure_sp**在**msdb**数据库中，由**dbo**架构拥有。 如果当前数据库不是**msdb**，则必须使用由三部分组成的名称来执行该过程。  
+ 存储过程 **sysmail_configure_sp** 在 **msdb** 数据库中，由 **dbo** 架构拥有。 如果当前数据库不是 **msdb**，则必须使用由三部分组成的名称来执行该过程。  
   
 ## <a name="permissions"></a>权限  
- 此过程的执行权限默认授予**sysadmin**固定服务器角色的成员。  
+ 此过程的执行权限默认授予 **sysadmin** 固定服务器角色的成员。  
   
 ## <a name="examples"></a>示例  
  **A. 设置数据库邮件，使其重试每个帐户 10 次**  

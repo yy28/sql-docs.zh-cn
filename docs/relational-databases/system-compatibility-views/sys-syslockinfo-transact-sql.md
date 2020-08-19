@@ -1,5 +1,6 @@
 ---
-title: sys.syslockinfo （Transact-sql） |Microsoft Docs
+description: sys.syslockinfo (Transact-SQL)
+title: sys.syslockinfo (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: d8cae434-807a-473e-b94f-f7a0e1b2daf0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 412cb7de4772c568247c90b568e9730814543db6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9714fab678f8466daf76d5963e1383b5e7d2dc52
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896605"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490052"
 ---
 # <a name="syssyslockinfo-transact-sql"></a>sys.syslockinfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,12 +37,12 @@ ms.locfileid: "85896605"
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
 > [!IMPORTANT]  
->  此功能与早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 有所不同。 有关详细信息，请参阅[SQL Server 2016 中数据库引擎功能的重大更改](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)。  
+>  此功能与早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 有所不同。 有关详细信息，请参阅 [SQL Server 2016 中数据库引擎功能的重大更改](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**rsc_text**|**nchar(32)**|锁资源的文本化描述。 包含资源名称的一部分。|  
-|**rsc_bin**|**binary(16)**|二进制锁资源。 包含锁管理器中所含的实际锁资源。 对于知道用于生成其自己的格式化锁资源的锁资源格式，以及如何在**syslockinfo**上执行自联接的工具，将包括此列。|  
+|**rsc_bin**|**binary(16)**|二进制锁资源。 包含锁管理器中所含的实际锁资源。 对于知道用于生成其自己的格式化锁资源的锁资源格式，以及如何在 **syslockinfo**上执行自联接的工具，将包括此列。|  
 |**rsc_valblk**|**binary(16)**|锁值块。 有些资源类型可以在特定的锁资源中包含附加数据，锁管理器不对这类锁资源进行哈希运算以决定具体某个锁资源的所有关系。 例如，页锁不归具体的对象 ID 所有。 但是，对于锁升级和出于其他目的， 页锁的对象 ID 可以包括在锁值块中。|  
 |**rsc_dbid**|**smallint**|与资源关联的数据库 ID。|  
 |**rsc_indid**|**smallint**|与资源关联的索引 ID（如果适合）。|  

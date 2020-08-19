@@ -1,4 +1,5 @@
 ---
+description: 基于文件的驱动程序
 title: 基于文件的驱动程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d92e0c5c-d176-4282-bbe1-d449e2223d50
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 223bd838754f1d656ac71ae37926389097af3ea1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 770e8560c540e8423aebf0a79c0e8ee5c124c8e3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306660"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429079"
 ---
 # <a name="file-based-drivers"></a>基于文件的驱动程序
-基于文件的驱动程序与数据源（如 dBASE）一起使用，这些数据源不提供独立的数据库引擎供驱动程序使用。 这些驱动程序直接访问物理数据，必须实现数据库引擎才能处理 SQL 语句。 作为标准做法，基于文件的驱动程序中的数据库引擎实现由最低 SQL 一致性级别定义的 ODBC SQL 子集;有关此一致性级别中的 SQL 语句的列表，请参阅[附录 C： Sql 语法](../../odbc/reference/appendixes/appendix-c-sql-grammar.md)。  
+基于文件的驱动程序与数据源（如 dBASE）一起使用，这些数据源不提供独立的数据库引擎供驱动程序使用。 这些驱动程序直接访问物理数据，必须实现数据库引擎才能处理 SQL 语句。 作为标准做法，基于文件的驱动程序中的数据库引擎实现由最低 SQL 一致性级别定义的 ODBC SQL 子集;有关此一致性级别中的 SQL 语句的列表，请参阅 [附录 C： Sql 语法](../../odbc/reference/appendixes/appendix-c-sql-grammar.md)。  
   
  在比较基于文件的驱动程序和基于 DBMS 的驱动程序时，基于文件的驱动程序更难写入，这是因为数据库引擎组件、配置不太复杂，因为没有网络片段，而且功能更强大，因为很少有用户编写的数据库引擎的功能与数据库公司生成的功能功能强大。  
   

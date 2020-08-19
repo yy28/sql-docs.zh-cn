@@ -1,4 +1,5 @@
 ---
+description: IS NULL (Transact-SQL)
 title: IS NULL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -32,12 +33,12 @@ ms.assetid: cdc45cd8-e9b6-4648-8417-892fbeab15af
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 327c641ff7d5ec9fabf67f2d8f1f9cf7231e7e49
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 38add99e2bbb16aa0d71394317a06c4850fe21a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555857"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459186"
 ---
 # <a name="is-null-transact-sql"></a>IS NULL (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -65,9 +66,9 @@ expression IS [ NOT ] NULL
  **布尔值**  
   
 ## <a name="return-code-values"></a>返回代码值  
- 如果 expression 的值为 NULL，则 IS NULL 返回 TRUE；否则，返回 FALSE  。  
+ 如果 expression 的值为 NULL，则 IS NULL 返回 TRUE；否则，返回 FALSE**。  
   
- 如果 expression 的值为 NULL，则 IS NOT NULL 返回 FALSE；否则，返回 TRUE  。  
+ 如果 expression 的值为 NULL，则 IS NOT NULL 返回 FALSE；否则，返回 TRUE**。  
   
 ## <a name="remarks"></a>备注  
  若要确定表达式是否为 NULL，请使用 IS NULL 或 IS NOT NULL，而不要使用比较运算符（如 = 或 !=）。 如果有一个参数为 NULL 或两个参数都为 NULL，比较运算符将返回 UNKNOWN。  

@@ -1,4 +1,5 @@
 ---
+description: PARSE (Transact-SQL)
 title: PARSE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/05/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6a2dbf10-f692-471b-9458-24d246963049
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 36649527ab73d15de4c811bcbe5c3234980e6a86
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 7dac50281c264412e288fe3fce25fda84d99b659
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111433"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459623"
 ---
 # <a name="parse-transact-sql"></a>PARSE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,18 +42,18 @@ PARSE ( string_value AS data_type [ USING culture ] )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- string_value   
- nvarchar(4000) 值，表示要解析为指定数据类型的格式化值  。  
+ string_value  
+ nvarchar(4000) 值，表示要解析为指定数据类型的格式化值****。  
   
- string_value 必须为所请求的数据类型的表示形式，否则 PARSE 将引发错误  。  
+ string_value 必须为所请求的数据类型的表示形式，否则 PARSE 将引发错误**。  
   
- data_type   
+ data_type  
  表示结果的所请求数据类型的文本值。  
   
- *区域性*  
- 可选字符串，它标识对 string_value 进行格式化的区域性  。  
+ *culture*  
+ 可选字符串，它标识对 string_value 进行格式化的区域性**。  
   
- 如果未提供 culture 参数，则使用当前会话的语言  。 可以使用 SET LANGUAGE 语句隐式或显式设置此语言。 culture 接受 .NET Framework 支持的任何区域性；它不局限于  *显式支持的语言*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果 culture 参数无效，PARSE 将引发错误  。  
+ 如果未提供 culture 参数，则使用当前会话的语言**。 可以使用 SET LANGUAGE 语句隐式或显式设置此语言。 culture 接受 .NET Framework 支持的任何区域性；它不局限于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 显式支持的语言**。 如果 culture 参数无效，PARSE 将引发错误**。  
   
 ## <a name="return-types"></a>返回类型  
  返回转换为所请求的数据类型的表达式的结果。  
@@ -72,7 +73,7 @@ PARSE ( string_value AS data_type [ USING culture ] )
   
  **有关 data_type 参数的详细信息**  
   
- data_type 参数的值局限于下表中显示的类型以及样式  。 提供的样式信息有助于确定允许使用哪些类型的模式。 有关样式的详细信息，请参阅 System.Globalization.NumberStyles 和 DateTimeStyles 枚举的 .NET Framework 文档   。  
+ data_type 参数的值局限于下表中显示的类型以及样式**。 提供的样式信息有助于确定允许使用哪些类型的模式。 有关样式的详细信息，请参阅 System.Globalization.NumberStyles 和 DateTimeStyles 枚举的 .NET Framework 文档********。  
   
 |类别|类型|.NET Framework 类型|使用的样式|  
 |--------------|----------|-------------------------|-----------------|  
@@ -80,12 +81,12 @@ PARSE ( string_value AS data_type [ USING culture ] )
 |Numeric|int|Int32|NumberStyles.Number|  
 |Numeric|smallint|Int16|NumberStyles.Number|  
 |Numeric|tinyint|Byte|NumberStyles.Number|  
-|Numeric|Decimal|Decimal|NumberStyles.Number|  
-|Numeric|numeric|Decimal|NumberStyles.Number|  
+|Numeric|Decimal|小数|NumberStyles.Number|  
+|Numeric|numeric|小数|NumberStyles.Number|  
 |Numeric|FLOAT|Double|NumberStyles.Float|  
 |Numeric|real|Single|NumberStyles.Float|  
-|Numeric|smallmoney|Decimal|NumberStyles.Currency|  
-|Numeric|money|Decimal|NumberStyles.Currency|  
+|Numeric|smallmoney|小数|NumberStyles.Currency|  
+|Numeric|money|小数|NumberStyles.Currency|  
 |日期和时间|date|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |日期和时间|time|TimeSpan|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |日期和时间|datetime|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  

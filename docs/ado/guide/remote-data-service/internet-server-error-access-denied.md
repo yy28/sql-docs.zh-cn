@@ -1,4 +1,5 @@
 ---
+description: Internet 服务器错误：拒绝访问
 title: Internet 服务器错误：访问被拒绝 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,22 +13,22 @@ helpviewer_keywords:
 ms.assetid: e5b43cfa-da8d-430d-a2ab-5443dda47a16
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 93761afa168d8b6b2cd06cf5e1360d54fa5177c6
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 970c9c09946cebe74684e6aecc997e56213b1a97
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749501"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452169"
 ---
 # <a name="internet-server-error-access-denied"></a>Internet 服务器错误：拒绝访问
-如果出现此错误，则通常意味着 Microsoft Internet Information Services （IIS）返回了以下状态：  
+如果收到此错误，则通常意味着 Microsoft Internet Information Services (IIS) 返回以下状态：  
   
  HTTP_STATUS_DENIED 401  
   
- 请确保 IIS 访问的目录具有适当的权限。 RDS 可以与在三种密码身份验证模式中的任何一种模式下运行的 IIS Web 服务器进行通信：匿名、基本或 NT 质询/响应（称为 Windows 2000 中的集成 Windows 身份验证）。 此外，如果 Web 服务器是 Windows NT/Windows 2000 计算机，则它必须具有对数据源计算机的权限。  
+ 请确保 IIS 访问的目录具有适当的权限。 RDS 可以与在以下三种密码身份验证模式之一中运行的 IIS Web 服务器进行通信：匿名、基本或 NT 质询/响应 (称为 Windows 2000) 中的集成 Windows 身份验证。 此外，如果 Web 服务器是 Windows NT/Windows 2000 计算机，则它必须具有对数据源计算机的权限。  
   
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件（有关详细信息，请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)）。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
 ## <a name="see-also"></a>另请参阅  
  [RDS 基础知识](../../../ado/guide/remote-data-service/rds-fundamentals.md)

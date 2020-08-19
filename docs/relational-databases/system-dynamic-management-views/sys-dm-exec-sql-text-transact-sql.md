@@ -1,5 +1,6 @@
 ---
-title: sys. dm_exec_sql_text （Transact-sql） |Microsoft Docs
+description: sys.dm_exec_sql_text (Transact-SQL)
+title: sys. dm_exec_sql_text (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/20/2017
 ms.prod: sql
@@ -20,17 +21,17 @@ ms.assetid: 61b8ad6a-bf80-490c-92db-58dfdff22a24
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7ee50d943daf4f5970c162788659092ad31ef8c6
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 89f03e4acfa124189bbabd59bebdc2eb7869fdc9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943096"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489945"
 ---
 # <a name="sysdm_exec_sql_text-transact-sql"></a>sys.dm_exec_sql_text (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  返回由指定*sql_handle*标识的 SQL 批处理的文本。 该表值函数将替换系统函数 **fn_get_sql**。  
+  返回由指定 *sql_handle*标识的 SQL 批处理的文本。 该表值函数将替换系统函数 **fn_get_sql**。  
   
  
 ## <a name="syntax"></a>语法  
@@ -41,9 +42,9 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
   
 ## <a name="arguments"></a>参数  
 *sql_handle*  
-是一个标记，用于唯一标识已执行或当前正在执行的批处理。 *sql_handle*为**varbinary （64）**。 
+是一个标记，用于唯一标识已执行或当前正在执行的批处理。 *sql_handle* 为 **varbinary (64) **。 
 
-可以从以下动态管理对象中获取*sql_handle* ：  
+可以从以下动态管理对象中获取 *sql_handle* ：  
   
 -   [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
   
@@ -58,9 +59,9 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
 -   [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)  
   
 *plan_handle*  
-是一个标记，用于唯一标识已执行并且其计划驻留在计划缓存中或当前正在执行的批处理的查询执行计划。 *plan_handle*为**varbinary （64）**。   
+是一个标记，用于唯一标识已执行并且其计划驻留在计划缓存中或当前正在执行的批处理的查询执行计划。 *plan_handle* 为 **varbinary (64) **。   
 
-可以从以下动态管理对象中获取*plan_handle* ：    
+可以从以下动态管理对象中获取 *plan_handle* ：    
   
 -   [sys.dm_exec_cached_plans (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
   
@@ -78,9 +79,9 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
 |-----------------|---------------|-----------------|  
 |**dbid**|**smallint**|数据库的 ID。<br /><br /> 对于临时和预定义 SQL 语句，指编译这些语句时所在的数据库的 ID。|  
 |**objectid**|**int**|对象的 ID。<br /><br /> 对于临时和预定义 SQL 语句为 NULL。|  
-|**数字**|**smallint**|对于带编号的存储过程，此列返回存储过程的编号。 有关详细信息，请参阅[sys.databases&#41;numbered_procedures &#40;](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md)。<br /><br /> 对于临时和预定义 SQL 语句为 NULL。|  
+|**数字**|**smallint**|对于带编号的存储过程，此列返回存储过程的编号。 有关详细信息，请参阅 [sys.databases&#41;numbered_procedures &#40;](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md)。<br /><br /> 对于临时和预定义 SQL 语句为 NULL。|  
 |**过**|**bit**|1 = SQL 文本已加密。<br /><br /> 0 = SQL 文本未加密。|  
-|**text**|**nvarchar （max** **）**|SQL 查询的文本。<br /><br /> 对于已加密对象为 NULL。|  
+|**text**|**nvarchar (max** **) **|SQL 查询的文本。<br /><br /> 对于已加密对象为 NULL。|  
   
 ## <a name="permissions"></a>权限  
  要求具有对服务器的 `VIEW SERVER STATE` 权限。  
@@ -93,7 +94,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
 计划句柄是派生自整个批处理的已编译计划的一个哈希值。 
 
 > [!NOTE]
-> 无法根据即席查询*sql_handle*确定**dbid** 。 若要确定适用于即席查询的**dbid** ，请改用*plan_handle* 。
+> 无法根据即席查询*sql_handle*确定**dbid** 。 若要确定适用于即席查询的 **dbid** ，请改用 *plan_handle* 。
   
 ## <a name="examples"></a>示例 
 
@@ -110,7 +111,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
         WAITFOR DELAY '00:02:00';
       ```
       
-  2.  使用**交叉应用**。  
+  2.  使用 **交叉应用**。  
     将使用**跨应用**将**dm_exec_requests**中的 sql_handle 传递给**dm_exec_sql_text sys.databases** 。 打开一个新的查询窗口，并传递步骤1中标识的 spid。 在此示例中，spid 的行为是 `59` 。
 
         ```sql
@@ -120,8 +121,8 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
         WHERE session_id = 59 -- modify this value with your actual spid
          ```      
  
-  2.  直接传递**sql_handle** 。  
-从**dm_exec_requests sys.databases**获取**sql_handle** 。 然后，将**sql_handle**直接传递到**sys.databases。 dm_exec_sql_text**。 打开一个新的查询窗口，并将步骤1中标识的 spid 传递到**sys.databases. dm_exec_requests**。 在此示例中，spid 的行为是 `59` 。 然后将返回的**sql_handle**作为参数传递给**sys.databases。 dm_exec_sql_text**。
+  2.  直接传递 **sql_handle** 。  
+从**dm_exec_requests sys.databases**获取**sql_handle** 。 然后，将 **sql_handle** 直接传递到 **sys.databases。 dm_exec_sql_text**。 打开一个新的查询窗口，并将步骤1中标识的 spid 传递到 **sys.databases. dm_exec_requests**。 在此示例中，spid 的行为是 `59` 。 然后将返回的 **sql_handle** 作为参数传递给 **sys.databases。 dm_exec_sql_text**。
 
         ```sql
         -- acquire sql_handle

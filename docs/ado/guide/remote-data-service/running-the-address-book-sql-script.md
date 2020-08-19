@@ -1,4 +1,5 @@
 ---
+description: 运行通讯簿 SQL 脚本
 title: 运行通讯簿 SQL 脚本 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 409b3f8b-0ced-4867-acbe-b245dcdf6702
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 133ff64f2c15fefac072ecfa28a7f772cea4f465
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 17ea6bc39986239f0dc7c16c245bc08807b3f207
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758973"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451989"
 ---
 # <a name="running-the-address-book-sql-script"></a>运行通讯簿 SQL 脚本
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件（有关详细信息，请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)）。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 必须使用 ISQL/查询分析器命令行实用工具或 SQL Server Enterprise 管理器来运行包含的 SQL 脚本（Sampleemp）：  
+ 必须使用 ISQL/查询分析器命令行实用工具或 SQL Server Enterprise 管理器来运行包含的 SQL 脚本 (Sampleemp) ：  
   
 -   在默认设备上创建新的数据库 AddrBookDB。  
   
@@ -40,33 +41,33 @@ ms.locfileid: "82758973"
   
 #### <a name="to-run-the-sampleempsql-script-in-microsoft-sql-server-65"></a>在 Microsoft SQL Server 6.5 中运行 Sampleemp 脚本  
   
-1.  单击 "**开始**"，指向 "**程序**"，然后指向**Microsoft SQL Server 6.5**"。 单击 " **SQL 企业管理器**"。  
+1.  单击 " **开始**"，指向 " **程序**"，然后指向 **Microsoft SQL Server 6.5**"。 单击 " **SQL 企业管理器**"。  
   
-2.  从 "**工具**" 菜单中，单击 " **SQL 查询工具**"。  
+2.  从 " **工具** " 菜单中，单击 " **SQL 查询工具**"。  
   
-3.  单击 "**加载 SQL 脚本**" 并浏览到 c:\Platform SDK\Samples\DataAccess\RDS\AddressBook。  
+3.  单击 " **加载 SQL 脚本** " 并浏览到 c:\Platform SDK\Samples\DataAccess\RDS\AddressBook。  
   
 4.  选择 Sampleemp 文件。 单击“打开”。  
   
-5.  单击 "**执行查询**" 按钮（工具栏上的绿色箭头）。  
+5.  单击 " **执行查询** " 按钮， (工具栏上的绿色箭头) 。  
   
-6.  执行后，关闭**查询**和**企业管理器**窗口。  
+6.  执行后，关闭 **查询** 和 **企业管理器** 窗口。  
   
 #### <a name="to-run-the-sampleempsql-script-in-microsoft-sql-server-70"></a>在 Microsoft SQL Server 7.0 中运行 Sampleemp 脚本  
   
-1.  单击 "**开始**"，指向 "**程序**"，然后指向**Microsoft SQL Server 7.0**"。 单击 "**企业管理器**"。  
+1.  单击 " **开始**"，指向 " **程序**"，然后指向 **Microsoft SQL Server 7.0**"。 单击 " **企业管理器**"。  
   
 2.  确保在企业管理器中从已注册的服务器列表中选择要使用的 SQL Server。  
   
-3.  从 "**工具**" 菜单中，单击 " **SQL Server 查询分析器**"。  
+3.  从 " **工具** " 菜单中，单击 " **SQL Server 查询分析器**"。  
   
-4.  单击 "**加载 SQL 脚本**" 按钮（工具栏上的打开文件夹）并浏览到 c:\Platform SDK\Samples\DataAccess\RDS\AddressBook。  
+4.  单击工具栏上的 " **加载 SQL 脚本** " 按钮 (打开的文件夹) 并浏览到 c:\Platform SDK\Samples\DataAccess\RDS\AddressBook。  
   
 5.  选择 Sampleemp 文件。 单击“打开”。  
   
-6.  单击 "**执行查询**" 按钮（工具栏上的绿色箭头）或**F5**。  
+6.  单击工具栏上的绿色箭头 (" **执行查询** " 按钮) 或按 **F5**。  
   
-7.  执行后，关闭**查询**、**查询分析器**和**企业管理器**窗口。  
+7.  执行后，关闭 **查询**、 **查询分析器**和 **企业管理器** 窗口。  
   
 ## <a name="see-also"></a>另请参阅  
  [运行通讯簿示例应用程序](../../../ado/guide/remote-data-service/running-the-address-book-sample-application.md)

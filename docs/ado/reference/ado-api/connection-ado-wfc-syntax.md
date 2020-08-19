@@ -1,5 +1,6 @@
 ---
-title: 连接（ADO-WFC 语法） |Microsoft Docs
+description: 连接（ADO - WFC 语法）
+title: 连接 (ADO-WFC 语法) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8cfc35bb-91e2-47da-ad4c-982e9162cd51
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b8602b170d4c067744fd002a98c949b8d0836d2e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4a9d467a2ab9073bd287fd0cf6a3fc36c60cabda
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760303"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444519"
 ---
 # <a name="connection-ado---wfc-syntax"></a>连接（ADO - WFC 语法）
 ## <a name="package-commswfcdata"></a>包 .com. 数据  
@@ -44,7 +45,7 @@ public int executeUpdate(String commandText)
 public int executeUpdate(String commandText, int options)  
 ```  
   
- **ExecuteUpdate**方法是一种特殊的 case 方法，该方法使用某些参数调用基础 ADO **execute**方法。 **ExecuteUpdate**方法不支持返回**Recordset**对象，因此将使用**AdoEnums**修改**execute**方法的*options*参数。 **Execute**方法完成后，其更新的*RecordsAffected*参数会传递回**executeUpdate**方法，该方法最终返回为**int**。  
+ **ExecuteUpdate**方法是一种特殊的 case 方法，该方法使用某些参数调用基础 ADO **execute**方法。 **ExecuteUpdate**方法不支持返回**Recordset**对象，因此，**执行**方法的*options*参数使用**AdoEnums.ExecuteOptions**进行修改。 **Execute**方法完成后，其更新的*RecordsAffected*参数会传递回**executeUpdate**方法，该方法最终返回为**int**。  
   
 ```  
 public void open()   
@@ -58,7 +59,7 @@ public Recordset openSchema(int schema)
 public Recordset openSchema(int schema, Object[] restrictions)  
 ```  
   
-### <a name="properties"></a>属性  
+### <a name="properties"></a>“属性”  
   
 ```  
 public int getAttributes()  
@@ -86,7 +87,7 @@ public com.ms.wfc.data.Errors getErrors()
 ```  
   
 ### <a name="events"></a>事件  
- 有关 ADO/WFC 事件的详细信息，请参阅[按语言的 Ado 事件实例化](../../../ado/guide/data/ado-event-instantiation-by-language.md)。  
+ 有关 ADO/WFC 事件的详细信息，请参阅 [按语言的 Ado 事件实例化](../../../ado/guide/data/ado-event-instantiation-by-language.md)。  
   
 ```  
 public void addOnBeginTransComplete(ConnectionEventHandler handler)  

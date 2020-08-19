@@ -1,5 +1,6 @@
 ---
-title: sysmail_start_sp （Transact-sql） |Microsoft Docs
+description: sysmail_start_sp (Transact-SQL)
+title: sysmail_start_sp (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 25fd7bb6-cfdd-463f-bea8-c6fcb805d3f5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e2986749f21982e5eee75772e794a9461545b967
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4c0a4bda3849a5863ce5ed87e25cafdc7983f49f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890832"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469097"
 ---
 # <a name="sysmail_start_sp-transact-sql"></a>sysmail_start_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,10 +40,10 @@ sysmail_start_sp
 ```  
   
 ## <a name="arguments"></a>参数  
- None  
+ 无  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="result-sets"></a>结果集  
  无  
@@ -50,18 +51,18 @@ sysmail_start_sp
 ## <a name="remarks"></a>备注  
  数据库邮件未启用或未随 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一起安装。 使用数据库邮件配置向导可以启用并安装数据库邮件对象。  
   
- 此存储过程位于**msdb**数据库中。 该存储过程将启动保存待发消息请求的数据库邮件队列，并对外部程序启用 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 激活。  
+ 此存储过程位于 **msdb** 数据库中。 该存储过程将启动保存待发消息请求的数据库邮件队列，并对外部程序启用 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 激活。  
   
- 此队列启动后，数据库邮件外部程序即可处理消息。 使用此过程，可以在使用**sysmail_stop_sp**存储过程停止队列后重新启动队列。  
+ 此队列启动后，数据库邮件外部程序即可处理消息。 使用此过程，可以在使用 **sysmail_stop_sp** 存储过程停止队列后重新启动队列。  
   
 > [!NOTE]  
 >  此存储过程只启动数据库邮件的队列。 它不会激活数据库中的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 消息传递功能。  
   
 ## <a name="permissions"></a>权限  
- 此过程的执行权限默认授予**sysadmin**固定服务器角色的成员。  
+ 此过程的执行权限默认授予 **sysadmin** 固定服务器角色的成员。  
   
 ## <a name="examples"></a>示例  
- 下面的示例演示如何在**msdb**数据库中开始数据库邮件。 该示例假设数据库邮件已启用。  
+ 下面的示例演示如何在 **msdb** 数据库中开始数据库邮件。 该示例假设数据库邮件已启用。  
   
 ```  
 USE msdb ;  

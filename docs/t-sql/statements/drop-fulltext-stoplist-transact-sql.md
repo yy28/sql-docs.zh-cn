@@ -1,4 +1,5 @@
 ---
+description: DROP FULLTEXT STOPLIST (Transact-SQL)
 title: DROP FULLTEXT STOPLIST (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 3ee2a2bb-1dfb-4e7c-90e9-9d917cd84a15
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e7ecfcce3c2805091bd605d5870c85d948d0619e
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 5fd3fa5c464fee0f1ed96084700483159596302b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484367"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444602"
 ---
 # <a name="drop-fulltext-stoplist-transact-sql"></a>DROP FULLTEXT STOPLIST (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -49,10 +50,10 @@ DROP FULLTEXT STOPLIST stoplist_name
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- stoplist_name   
+ stoplist_name**  
  要从数据库中删除的全文本非索引字表的名称。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  如果有任何全文索引引用了已删除的全文本非索引字表，则 DROP FULLTEXT STOPLIST 会失败。  
   
 ## <a name="permissions"></a>权限  

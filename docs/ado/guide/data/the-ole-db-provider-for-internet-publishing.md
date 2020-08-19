@@ -1,4 +1,5 @@
 ---
+description: 用于 Internet 发布的 OLE DB 提供程序
 title: 用于 Internet 发布的 OLE DB 提供程序 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 4869aafa-7401-4ce1-93ce-45406a60274f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 813b7e108f375fdbd22ba10761678907aea912f6
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d7203dd65a652cfdc71c088777ac9dd42d1da098
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759053"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452729"
 ---
 # <a name="the-ole-db-provider-for-internet-publishing"></a>用于 Internet 发布的 OLE DB 提供程序
-ADO[记录](../../../ado/reference/ado-api/record-object-ado.md)和[流](../../../ado/reference/ado-api/stream-object-ado.md)对象可以与用于 Internet 发布的 Microsoft OLE DB 提供程序（internet 发布提供程序）结合使用，以访问和操作资源，如 Microsoft FrontPage 提供的 Web 文件夹或文件。 使用 ADO，你可以将**记录**、**流**或[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)的源指定为 URL。 然后，可以上传、下载、移动、复制和删除资源，或直接操作资源属性。  
+ADO [记录](../../../ado/reference/ado-api/record-object-ado.md) 和 [流](../../../ado/reference/ado-api/stream-object-ado.md) 对象可与 microsoft OLE DB 提供商一起使用，以便 Internet 发布 (internet 发布提供程序) 访问和操作资源，如 Microsoft FrontPage 提供的 Web 文件夹或文件。 使用 ADO，你可以将 **记录**、 **流**或 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md) 的源指定为 URL。 然后，可以上传、下载、移动、复制和删除资源，或直接操作资源属性。  
   
- 有关将**记录**和**流**与 internet 发布提供程序一起使用的示例代码，请参阅[internet 发布方案](../../../ado/guide/data/internet-publishing-scenario.md)。  
+ 有关将 **记录** 和 **流** 与 internet 发布提供程序一起使用的示例代码，请参阅 [internet 发布方案](../../../ado/guide/data/internet-publishing-scenario.md)。  
   
  Internet 发布提供程序随 Microsoft Windows 2000 一起安装。 更早版本的 Internet 发布提供程序也可用于 Microsoft Office 2000 和 Microsoft Internet Explorer 5.0。  
   
@@ -38,7 +39,7 @@ ADO[记录](../../../ado/reference/ado-api/record-object-ado.md)和[流](../../.
     objConn.Open "URL=https://servername"  
     ```  
   
--   为连接字符串的*Provider*关键字指定 Msdaipp。 例如：  
+-   为连接字符串的 *Provider* 关键字指定 Msdaipp。 例如：  
   
     ```  
     objConn.Open "provider=MSDAIPP.DSO;data source=https://servername"  
@@ -52,6 +53,6 @@ ADO[记录](../../../ado/reference/ado-api/record-object-ado.md)和[流](../../.
     ```  
   
 > [!NOTE]
->  如果 Msdaipp 是使用*提供程序*连接字符串关键字或**提供程序**属性显式指定为提供程序的值，则不能在连接字符串中使用 "URL ="。 如果这样做，则会发生错误。 相反，只需按前面所示指定 URL。  
+>  如果 Msdaipp 是使用 *提供程序* 连接字符串关键字或 **提供程序** 属性显式指定为提供程序的值，则不能在连接字符串中使用 "URL ="。 如果这样做，则会发生错误。 相反，只需按前面所示指定 URL。  
   
- 有关 Internet 发布提供程序的更多特定信息，请参阅[用于 Internet 发布的 Microsoft OLE DB 提供程序](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)，或与用于 internet 发布的 OLE DB 提供程序的源应用程序一起提供的提供程序文档： Windows 2000、Office 2000 或 internet Explorer 5.0。
+ 有关 Internet 发布提供程序的更多特定信息，请参阅 [用于 Internet 发布的 Microsoft OLE DB 提供程序](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)，或与用于 internet 发布的 OLE DB 提供程序的源应用程序一起提供的提供程序文档： Windows 2000、Office 2000 或 internet Explorer 5.0。

@@ -1,4 +1,5 @@
 ---
+description: Visual Basic 数据整理示例
 title: 数据定形 Visual Basic 示例 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d95dd499-19e2-4ce7-b16e-f56a04a9519c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1c370f09ada37f67e32231e58c70d2bb0bfd4c51
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: da0fc3bcc0af5aa4c4477c91f66e2ce1f2b2d7e0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763018"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452559"
 ---
 # <a name="visual-basic-example-of-data-shaping"></a>Visual Basic 数据整理示例
 ```  
@@ -96,10 +97,10 @@ End Function
   
 2.  在 Visual Studio 的 "**项目**" 菜单中选择**组件**  
   
-3.  从 "**组件**" 弹出窗口中选择 "Microsoft 层次结构 FlexGrid Control 6.0 （OLEDB）"，然后单击 "**保存**"。  
+3.  从 " **组件** " 弹出窗口中选择 "Microsoft 层次结构 FlexGrid Control 6.0 (OLEDB) "，然后单击 " **保存**"。  
   
 4.  从 "Visual Basic" 工作区的 "工具箱" 窗格中，双击 "FlexGrid" 控件。 将此实例的名称更改为 MSHFLEXGRID。  
   
-5.  复制上面的代码并将其粘贴到**代码**页中，以替换任何现有代码。  
+5.  复制上面的代码并将其粘贴到 **代码** 页中，以替换任何现有代码。  
   
 6.  从 "**运行**" 菜单中选择 "**启动**" 以执行应用程序。

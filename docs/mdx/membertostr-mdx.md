@@ -1,5 +1,6 @@
 ---
-title: MemberToStr （MDX） |Microsoft Docs
+description: MemberToStr (MDX)
+title: MemberToStr (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9a33aede54557491dea50a557ed581929c5383e4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6217120c7e6d5ee55670be3d902a9ea99333273f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68001466"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483800"
 ---
 # <a name="membertostr-mdx"></a>MemberToStr (MDX)
 
 
-  返回与指定成员对应的多维表达式（MDX）格式的字符串。  
+  返回与指定成员相对应 (MDX) 格式字符串的多维表达式。  
   
 ## <a name="syntax"></a>语法  
   

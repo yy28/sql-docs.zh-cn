@@ -1,4 +1,5 @@
 ---
+description: 用于 OLE DB 的 Microsoft 游标服务
 title: 用于 OLE DB 的 Microsoft 游标服务 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 1ac3bd9b-2d45-4cc8-88ec-bd8a218cfb49
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e3b36ebd9ce3af6769e87dbc4cf826713288b722
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f3646ec86f76fcba2f6b82759a4784de7d463279
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759083"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452739"
 ---
 # <a name="the-microsoft-cursor-service-for-ole-db"></a>用于 OLE DB 的 Microsoft 游标服务
-选择客户端游标时，或将**CursorLocation**属性设置为**adUseClient**时，将调用 OLE DB 的 Microsoft 游标服务。 你可能还会看到对 "客户端游标引擎" 的引用，这在 ADO 上下文中本质上是相同的。 此服务对数据提供程序的游标支持函数进行了补充。 因此，你可以从所有数据访问接口感知相对统一的功能。  
+选择客户端游标时，或将 **CursorLocation** 属性设置为 **adUseClient**时，将调用 OLE DB 的 Microsoft 游标服务。 你可能还会看到对 "客户端游标引擎" 的引用，这在 ADO 上下文中本质上是相同的。 此服务对数据提供程序的游标支持函数进行了补充。 因此，你可以从所有数据访问接口感知相对统一的功能。  
   
- OLE DB 的游标服务使动态属性可用，并增强特定方法的行为。 例如，通过 "**优化**动态属性"，可以创建临时索引以简化特定操作，例如**Find**方法。  
+ OLE DB 的游标服务使动态属性可用，并增强特定方法的行为。 例如，通过 " **优化** 动态属性"，可以创建临时索引以简化特定操作，例如 **Find** 方法。  
   
  在所有情况下，游标服务都支持批处理更新。 当数据访问接口只能提供不太好的游标（如静态游标）时，它还会模拟更有功能的游标类型（如动态游标）。  
   
 ## <a name="see-also"></a>另请参阅  
- [适用于 OLE DB 的 Microsoft 游标服务（ADO 服务组件）](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)
+ [用于 OLE DB (ADO 服务组件的 Microsoft 游标服务) ](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)

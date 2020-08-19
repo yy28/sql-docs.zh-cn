@@ -1,4 +1,5 @@
 ---
+description: 备份和还原使用 Always Encrypted 的数据库
 title: 备份和还原使用 Always Encrypted 的数据库 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/30/2019
@@ -10,12 +11,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bb529b9cc518cd7802dfdbbddba8b88e399dbcba
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ff78b0f657e70a16051531f1a0bea3fdc5cfe7d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85627383"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475515"
 ---
 # <a name="backup-and-restore-databases-using-always-encrypted"></a>备份和还原使用 Always Encrypted 的数据库 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "85627383"
 如果在不同服务器上或是采用不同名称还原数据库，则不需要执行任何特殊操作，即可使应用程序可以在目标数据库中查询加密数据，因为这两个数据库中的密钥相同。
 
 有关如何备份和还原数据库的详细信息，请参阅：
-- [备份概述 (SQL Server)](../../backup-restore/backup-overview-sql-server.md)
+- [Backup Overview (SQL Server)](../../backup-restore/backup-overview-sql-server.md)
 - [将数据库还原到托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started-restore)
 
 ## <a name="next-steps"></a>后续步骤

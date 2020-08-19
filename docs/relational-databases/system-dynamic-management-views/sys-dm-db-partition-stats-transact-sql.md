@@ -1,5 +1,6 @@
 ---
-title: sys. dm_db_partition_stats （Transact-sql） |Microsoft Docs
+description: sys.dm_db_partition_stats (Transact-SQL)
+title: sys. dm_db_partition_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/28/2020
 ms.prod: sql
@@ -20,11 +21,12 @@ ms.assetid: 9db9d184-b3a2-421e-a804-b18ebcb099b7
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 191dc00caa5ab39d3a3adf7882aa3bb88ea0d3f3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: eddc690043c541c3726c66bba40f4a81d188e91a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011629"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489994"
 ---
 # <a name="sysdm_db_partition_stats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,7 +34,7 @@ ms.locfileid: "86011629"
   返回当前数据库中每个分区的页和行计数信息。  
   
 > [!NOTE]  
-> 若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称**dm_pdw_nodes_db_partition_stats**。 Dm_pdw_nodes_db_partition_stats sys.databases 中的 partition_id 不同于 Azure SQL 数据仓库的 sys.databases 目录视图中的 partition_id。
+> 若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称 **dm_pdw_nodes_db_partition_stats**。 Dm_pdw_nodes_db_partition_stats sys.databases 中的 partition_id 不同于 Azure SQL 数据仓库的 sys.databases 目录视图中的 partition_id。
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -40,7 +42,7 @@ ms.locfileid: "86011629"
 |object_id|**int**|包含该分区的表或索引视图的对象 ID。|  
 |**index_id**|**int**|包含该分区的堆或索引的 ID。<br /><br /> 0 = 堆<br /><br /> 1 = 聚集索引。<br /><br /> > 1 = 非聚集索引|  
 |**partition_number**|**int**|索引或堆中从 1 开始的分区号。|  
-|**in_row_data_page_count**|**bigint**|分区中存储行内数据所用的页数。 如果分区是堆的一部分，则该值为堆中的数据页数。 如果分区是索引的一部分，则该值为叶级别中的页数。 （B 树中的非叶页不包含在计数中。）在这两种情况下，不包括 IAM （索引分配映射）页。 对于 xVelocity 内存优化列存储索引，始终为 0。|  
+|**in_row_data_page_count**|**bigint**|分区中存储行内数据所用的页数。 如果分区是堆的一部分，则该值为堆中的数据页数。 如果分区是索引的一部分，则该值为叶级别中的页数。 B 树中的 (非叶级页不包含在计数中。在任何一种情况下，都不会 ) IAM (索引分配映射) 。 对于 xVelocity 内存优化列存储索引，始终为 0。|  
 |**in_row_used_page_count**|**bigint**|用于存储和管理分区中的行内数据的总页数。 该计数包括非叶 B 树页、IAM 页以及 **in_row_data_page_count** 列包含的全部页。 对列存储索引始终为 0。|  
 |**in_row_reserved_page_count**|**bigint**|为存储和管理该分区中的行内数据而保留的总页数，包括已使用的和未使用的页。 对列存储索引始终为 0。|  
 |**lob_used_page_count**|**bigint**|用于存储和管理分区中的行外 **text**、**ntext**、**image**、**varchar(max)**、**nvarchar(max)**、**varbinary(max)** 和 **xml** 列的页数。 包含 IAM 页。<br /><br /> 用于存储和管理分区中的列存储索引的 LOB 总数。|  
@@ -50,10 +52,10 @@ ms.locfileid: "86011629"
 |**used_page_count**|**bigint**|用于分区的总页数。 计算为**in_row_used_page_count**  +  **lob_used_page_count**  +  **row_overflow_used_page_count**。|  
 |**reserved_page_count**|**bigint**|为分区保留的总页数。 计算为**in_row_reserved_page_count**  +  **lob_reserved_page_count**  +  **row_overflow_reserved_page_count**。|  
 |**row_count**|**bigint**|分区中的大约行数。|  
-|**pdw_node_id**|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
-|**distribution_id**|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 与分布关联的唯一数字 id。|  
+|pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
+|distribution_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 与分布关联的唯一数字 id。|  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  **sys.dm_db_partition_stats** 显示用于存储和管理数据库中全部分区的行内数据 LOB 数据和行溢出数据的空间的有关信息。 每个分区对应一行。  
   
  作为输出数据依据的计数缓存在内存中，或存储在磁盘中的各种系统表中。  
@@ -65,7 +67,7 @@ ms.locfileid: "86011629"
  可以通过求全部相关分区计数的和来获取单个表或单个索引的总计数。  
   
 ## <a name="permissions"></a>权限  
- 要求 `VIEW DATABASE STATE` 和 `VIEW DEFINITION` 权限查询**sys.databases dm_db_partition_stats**动态管理视图。 有关动态管理视图权限的详细信息，请参阅[&#40;transact-sql&#41;中的动态管理视图和函数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)。  
+ 要求 `VIEW DATABASE STATE` 和 `VIEW DEFINITION` 权限查询 **sys.databases dm_db_partition_stats** 动态管理视图。 有关动态管理视图权限的详细信息，请参阅 [&#40;transact-sql&#41;中的动态管理视图和函数 ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)。  
   
 ## <a name="examples"></a>示例  
   
@@ -104,7 +106,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [动态管理视图和函数 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [与数据库相关的动态管理视图 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

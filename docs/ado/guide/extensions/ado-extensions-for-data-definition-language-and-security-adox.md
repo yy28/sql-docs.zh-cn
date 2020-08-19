@@ -1,5 +1,6 @@
 ---
-title: 数据定义语言和安全性（ADOX）的 ADO 扩展 |Microsoft Docs
+description: 数据定义语言和安全性的 ADO 扩展 (ADOX)
+title: 数据定义语言和安全性的 ADO 扩展 (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c6579b5b-a93e-48c5-8847-743fc4590cd2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e5932a53218913ef91687744f819a5e67a3ae699
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 505acc976f47d7888d941fa90af2482aa0049554
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748200"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452469"
 ---
 # <a name="ado-extensions-for-data-definition-language-and-security-adox"></a>数据定义语言和安全性的 ADO 扩展 (ADOX)
 本部分包含以下主题。  

@@ -1,4 +1,5 @@
 ---
+description: T-SQL 教程：创建和查询数据库对象
 title: T-SQL 教程：创建和查询数据库对象 |Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2018
@@ -10,12 +11,12 @@ ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5a8691ed6a84fce3eb12c8e13b2235356486c42f
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 3a489da04d7a65bf854cebf06e8103e22c1abc12
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248696"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459169"
 ---
 # <a name="lesson-1-create-and-query-database-objects"></a>第 1 课：创建和查询数据库对象
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "87248696"
   
 若要在 [!INCLUDE[tsql](../includes/tsql-md.md)] 中运行 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]语句，请打开 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 并连接到 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]的实例。  
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 若要完成本教程，需要 SQL Server Management Studio 以及针对 SQL Server 实例的访问权限。 
 
 - 安装 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。

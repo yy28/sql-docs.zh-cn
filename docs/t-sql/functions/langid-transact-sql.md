@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;LANGID (Transact-SQL)'
 title: '@@LANGID (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 09/18/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 7a0fc089-2a48-4a81-9d78-2aaedb540d37
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6098c5fc8eab31bd567390656d27cc13a5862086
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 0443c0e73593b68b2a1084fbff2fccd7739beebe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110930"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459709"
 ---
 # <a name="x40x40langid-transact-sql"></a>&#x40;&#x40;LANGID (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "87110930"
  **smallint**  
   
 ## <a name="remarks"></a>备注  
- 若要查看有关语言设置的信息（包括语言 ID 号），可不带指定参数运行 sp_helplanguage  。  
+ 若要查看有关语言设置的信息（包括语言 ID 号），可不带指定参数运行 sp_helplanguage****。  
   
 ## <a name="examples"></a>示例  
  以下示例将当前会话的语言设置为 `Italian`，然后使用 `@@LANGID` 返回意大利语的 ID。  

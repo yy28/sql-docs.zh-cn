@@ -1,5 +1,6 @@
 ---
-title: AddNew 方法示例（JScript） |Microsoft Docs
+description: AddNew 方法示例 (JScript)
+title: " (JScript) 的 AddNew 方法示例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: eabdd278-6576-4be7-9315-fb79cb8ef678
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d3943b06e623eca2e90a3a5a3aeefaf2dede83bb
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3c1e4ca8f4019153620494a3b6d945d9fdb75338
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760633"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451569"
 ---
 # <a name="addnew-method-example-jscript"></a>AddNew 方法示例 (JScript)
-此示例使用[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)方法创建具有指定名称的新记录。 剪切下面的代码并将其粘贴到记事本或其他文本编辑器中，并将其保存为**AddNewJS**。  
+此示例使用 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) 方法创建具有指定名称的新记录。 剪切下面的代码并将其粘贴到记事本或其他文本编辑器中，并将其保存为 **AddNewJS**。  
   
 ```  
 <!-- BeginAddNewJS -->  
@@ -135,5 +136,5 @@ body {
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [AddNew 方法（ADO）](../../../ado/reference/ado-api/addnew-method-ado.md)   
+ [AddNew 方法 (ADO) ](../../../ado/reference/ado-api/addnew-method-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

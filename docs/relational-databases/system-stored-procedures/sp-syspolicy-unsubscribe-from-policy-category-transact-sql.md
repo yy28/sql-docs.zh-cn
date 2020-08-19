@@ -1,5 +1,6 @@
 ---
-title: sp_syspolicy_unsubscribe_from_policy_category （Transact-sql） |Microsoft Docs
+description: sp_syspolicy_unsubscribe_from_policy_category (Transact-SQL)
+title: sp_syspolicy_unsubscribe_from_policy_category (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 47abab63-e605-40e8-a54e-2241e2e01afd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c1ec70cea37a8cfcb0b017a98989d00c445860d8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4591c3b20702923d7f9ea418951b8510977dc840
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891460"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469133"
 ---
 # <a name="sp_syspolicy_unsubscribe_from_policy_category-transact-sql"></a>sp_syspolicy_unsubscribe_from_policy_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,12 +40,12 @@ sp_syspolicy_unsubscribe_from_policy_category [ @policy_category = ] 'policy_cat
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @policy_category = ] 'policy_category'`要删除的策略类别订阅的名称。 *policy_category* **sysname**，并且是必需的。  
+`[ @policy_category = ] 'policy_category'` 要删除的策略类别订阅的名称。 *policy_category* **sysname**，并且是必需的。  
   
- 若要获取*policy_category*的值，请在 "系统" 视图 policy_policy_categories 查询 msdb.dbo.sys。  
+ 若要获取 *policy_category*的值，请在 "系统" 视图 policy_policy_categories 查询 msdb.dbo.sys。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
  您必须在要删除策略类别订阅的数据库的上下文中运行 sp_syspolicy_unsubscribe_from_policy_category。  

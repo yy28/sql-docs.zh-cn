@@ -1,4 +1,5 @@
 ---
+description: CURSOR_STATUS (Transact-SQL)
 title: CURSOR_STATUS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3a4a840e-04f8-43bd-aada-35d78c3cb6b0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 63c1513e044b825ed3ffa036b1e7014e0e4d4a6f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: ab7cbb48d371236d23d90de2347349318369f274
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112123"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459817"
 ---
 # <a name="cursor_status-transact-sql"></a>CURSOR_STATUS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +51,7 @@ CURSOR_STATUS
 'local'  
 指定一个常量，该常量用于指示游标源是一个本地游标名。
   
-'cursor_name'   
+'cursor_name'  
 游标的名称。 游标名必须符合[数据库标识符规则](../../relational-databases/databases/database-identifiers.md)。
   
 'global'  
@@ -59,8 +60,8 @@ CURSOR_STATUS
 'variable'  
 指定一个常量，该常量用于指示游标的源是一个本地变量。
   
-'cursor_variable'   
-游标变量的名称。 必须使用 cursor 数据类型定义游标变量  。
+'cursor_variable'  
+游标变量的名称。 必须使用 cursor 数据类型定义游标变量****。
   
 ## <a name="return-types"></a>返回类型
 **smallint**
@@ -73,7 +74,7 @@ CURSOR_STATUS
 |-2|不适用。|可能性如下：<br /><br /> 先前调用的过程未向此 OUTPUT 变量分配任何游标。<br /><br /> 先前分配的过程向此 OUTPUT 变量分配了一个游标，但在过程结束时，游标处于关闭状态。 因此，游标被释放，并且没有返回调用过程。<br /><br /> 未向已声明的游标变量分配任何游标。|  
 |-3|具有指定名称的游标不存在。|具有指定名称的游标变量不存在，或者即使存在这样一个游标变量，则该游标变量未分配到任何游标。|  
   
-\* 动态游标从不返回此结果。
+* 动态游标从不返回此结果。
   
 ## <a name="examples"></a>示例  
 此示例使用 `CURSOR_STATUS` 函数显示游标在声明后、打开后和关闭后的状态。

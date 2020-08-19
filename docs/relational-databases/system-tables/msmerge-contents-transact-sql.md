@@ -1,5 +1,6 @@
 ---
-title: MSmerge_contents （Transact-sql） |Microsoft Docs
+description: MSmerge_contents (Transact-SQL)
+title: MSmerge_contents (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,33 +18,33 @@ helpviewer_keywords:
 ms.assetid: 8d68a61a-683f-4b20-92f9-c0a8d9ba0ad1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 147e1c2843fc88bbeed4d23e0119cec0f4575ac3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 81320e7cc5301577369d6d3d89cbfb53f77b0e6e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889860"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469090"
 ---
 # <a name="msmerge_contents-transact-sql"></a>MSmerge_contents (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  自发布以来，当前数据库中修改的每行在**MSmerge_contents**表中各占一行。 合并过程使用此表来确定已更改的行。 该表存储在发布数据库和订阅数据库中。  
+  自发布以来，当前数据库中修改的每行在 **MSmerge_contents** 表中各占一行。 合并过程使用此表来确定已更改的行。 该表存储在发布数据库和订阅数据库中。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**tablenick**|**int**|已发布表的别名。|  
 |**rowguid**|**uniqueidentifier**|给定行的行标识符。|  
-|**产生**|**bigint**|由**tablenick**和**rowguid**标识的行的生成。|  
+|**产生**|**bigint**|由 **tablenick** 和 **rowguid**标识的行的生成。|  
 |**partchangegen**|**bigint**|与上次数据更改相关联的代（不论行是否属于已筛选发布，这些更改都可能已经发生）。|  
-|**衍生**|**varbinary （501）**|用于维护此行的更改历史记录的订阅服务器的别名和版本号对。|  
-|**colvl**|**varbinary （7489）**|列版本信息。|  
+|**衍生**|**varbinary (501) **|用于维护此行的更改历史记录的订阅服务器的别名和版本号对。|  
+|**colvl**|**varbinary (7489) **|列版本信息。|  
 |**marker**|**uniqueidentifier**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**logical_record_parent_rowguid**|**uniqueidentifier**|标识逻辑记录中每个对应子行**MSmerge_contents** （通过**rowguid**）的顶级父行。|  
-|**logical_record_lineage**|**varbinary （501）**|用于维护逻辑记录中的顶级父行的更改的历史记录的订阅服务器的别名、版本号对。 对于逻辑记录中的所有子行，此值为 NULL。|  
+|**logical_record_parent_rowguid**|**uniqueidentifier**|通过**rowguid**) 为逻辑记录中的每个对应子行标识**MSmerge_contents** (中的顶级父行。|  
+|**logical_record_lineage**|**varbinary (501) **|用于维护逻辑记录中的顶级父行的更改的历史记录的订阅服务器的别名、版本号对。 对于逻辑记录中的所有子行，此值为 NULL。|  
 |**logical_relation_change_gen**|**bigint**|与导致逻辑记录重新调整的上次更改相关联的代（即将现有行移入或移出逻辑记录）。|  
   
 ## <a name="see-also"></a>另请参阅  
- [Transact-sql&#41;&#40;复制表](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;复制表 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图 (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

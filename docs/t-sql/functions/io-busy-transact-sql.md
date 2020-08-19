@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;IO_BUSY (Transact-SQL)'
 title: '@@IO_BUSY (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 09/18/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 3c26770c-41ae-4e34-8c82-7bef920ffbca
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 37829d42f4133e374a71eb92be9d82c610addfa5
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: a1e8dc46be875a7bd3dbdc31014455c76fa6d510
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111492"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459727"
 ---
 # <a name="x40x40io_busy-transact-sql"></a>&#x40;&#x40;IO_BUSY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +55,7 @@ ms.locfileid: "87111492"
  若要显示包含几种 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 统计信息的报告，请运行 sp_monitor。  
   
 ## <a name="examples"></a>示例  
- 下面的示例返回在开始时间和当前时间之间 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已经用于执行输入/输出操作的毫秒数。 为了避免将值转换为微秒时出现算术溢出，此示例将其中一个值转换为 float 数据类型  。  
+ 下面的示例返回在开始时间和当前时间之间 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已经用于执行输入/输出操作的毫秒数。 为了避免将值转换为微秒时出现算术溢出，此示例将其中一个值转换为 float 数据类型****。  
   
 ```  
 SELECT @@IO_BUSY*@@TIMETICKS AS 'IO microseconds',   

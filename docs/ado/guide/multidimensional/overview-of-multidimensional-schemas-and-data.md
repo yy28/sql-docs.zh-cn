@@ -1,4 +1,5 @@
 ---
+description: 多维架构和数据的概述
 title: 多维架构和数据概述 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a4a2f6dbd2c5d075bb888e61bb01e1094c8ef5c0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 449bfe5056cdf96f86b5371731c2d1c0b00ba31e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748082"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452419"
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>多维架构和数据的概述
 ## <a name="understanding-multidimensional-schemas"></a>了解多维架构  
- ADO MD 中的中央元数据对象是*多维数据集*，它由一组结构化的相关维度、层次结构、级别和成员组成。  
+ ADO MD 中的中央元数据对象是 *多维数据集*，它由一组结构化的相关维度、层次结构、级别和成员组成。  
   
  *维度*是多维数据库中独立的数据类别，派生自业务实体。 维度通常包含要用作数据库度量值的查询条件的项。  
   
@@ -31,7 +32,7 @@ ms.locfileid: "82748082"
   
  *成员*是维度中的数据项。 通常，使用成员创建标题或描述数据库的度量值。  
   
- 多维数据集由 ADO MD 中的[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)对象表示。 维度、层次结构、级别和成员还由其对应的 ADO MD 对象表示：[维度](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)、[层次结构](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)、[级别](../../../ado/reference/ado-md-api/level-object-ado-md.md)和[成员](../../../ado/reference/ado-md-api/member-object-ado-md.md)。  
+ 多维数据集由 ADO MD 中的 [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) 对象表示。 维度、层次结构、级别和成员还由其对应的 ADO MD 对象表示： [维度](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)、 [层次结构](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)、 [级别](../../../ado/reference/ado-md-api/level-object-ado-md.md)和 [成员](../../../ado/reference/ado-md-api/member-object-ado-md.md)。  
   
 ### <a name="dimensions"></a>维度  
  多维数据集的维度依赖于要在数据库中建模的业务实体和数据类型。 通常，每个维度都是独立的入口点或用于选择数据的机制。  
@@ -58,15 +59,15 @@ Hamburg, Munich, Stuttgart}
   
  每个级别都有一组成员，如下所示：  
   
--   世界`= {All}`  
+-   世界 `= {All}`  
   
--   洲`= {North America, Europe}`  
+-   洲 `= {North America, Europe}`  
   
--   （`= {Canada, USA, UK, Germany}`  
+-   （ `= {Canada, USA, UK, Germany}`  
   
--   区域`= {Canada-East, Canada-West, USA-NE, USA-NW, USA-SE, USA-SW, England, Ireland, Scotland, Wales, Germany-North, Germany-South}`  
+-   区域 `= {Canada-East, Canada-West, USA-NE, USA-NW, USA-SE, USA-SW, England, Ireland, Scotland, Wales, Germany-North, Germany-South}`  
   
--   城市`= {Ottawa, Toronto, Vancouver, Calgary, Seattle, Boise, Los Angeles, Houston, Shreveport, Miami, Boston, New York, London, Dover, Glasgow, Edinburgh, Cardiff, Pembroke, Belfast, Derry, Berlin, Hamburg, Munich, Stuttgart}`  
+-   城市 `= {Ottawa, Toronto, Vancouver, Calgary, Seattle, Boise, Los Angeles, Houston, Shreveport, Miami, Boston, New York, London, Dover, Glasgow, Edinburgh, Cardiff, Pembroke, Belfast, Derry, Berlin, Hamburg, Munich, Stuttgart}`  
   
 ### <a name="members"></a>成员  
  层次结构的叶级别的成员没有子级，根级别的成员没有父项。 所有其他成员至少具有一个父级和至少一个子成员。 例如，地域维度中的层次结构树的部分遍历产生以下父子关系：  
@@ -85,7 +86,7 @@ Hamburg, Munich, Stuttgart}
   
 ## <a name="see-also"></a>另请参阅  
  [ADO MD 对象模型](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
- [ADO （多维）（ADO MD）](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
+ [ADO (多维)  (ADO MD) ](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
  [用 ADO MD 进行编程](../../../ado/guide/multidimensional/programming-with-ado-md.md)   
  [使用 ADO 与 ADO MD](../../../ado/guide/multidimensional/using-ado-with-ado-md.md)   
  [使用多维数据](../../../ado/guide/multidimensional/working-with-multidimensional-data.md)

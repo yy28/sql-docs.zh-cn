@@ -1,4 +1,5 @@
 ---
+description: LOG10 (Transact-SQL)
 title: LOG10 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -21,17 +22,17 @@ ms.assetid: 1eb7fb34-1937-4a39-a936-f5c0c7c7e06f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7f468b4fb5ca3a0b24a91170e735793c40b4fc71
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 4b4ceb286ddb1e90ebd5bd703a741f34a6cdd8bd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111499"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467971"
 ---
 # <a name="log10-transact-sql"></a>LOG10 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  返回指定 float 表达式的以 10 为底的对数  。  
+  返回指定 float 表达式的以 10 为底的对数****。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,13 +46,13 @@ LOG10 ( float_expression )
 
 ## <a name="arguments"></a>参数
  *float_expression*  
- float 类型或能隐式转换为 float 类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)   。  
+ float 类型或能隐式转换为 float 类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md) 。  
   
 ## <a name="return-types"></a>返回类型  
  **float**  
   
 ## <a name="remarks"></a>备注  
- LOG10 和 POWER 函数彼此反向相关。 例如，10 ^ LOG10(n) = n   。  
+ LOG10 和 POWER 函数互为反函数。 例如，10 ^ LOG10(n) = n 。  
   
 ## <a name="examples"></a>示例  
   

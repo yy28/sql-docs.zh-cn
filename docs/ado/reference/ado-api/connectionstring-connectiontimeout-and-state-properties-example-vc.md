@@ -1,5 +1,6 @@
 ---
-title: 连接属性示例（VC + +） |Microsoft Docs
+description: 'ConnectionString、ConnectionTimeout 和 State 属性示例 (VC + +) '
+title: " (VC + +) 的连接属性示例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: c6bd2609-4c49-462f-a1aa-7bee0f615adb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3f70a5e98a34811af2b6d2b173da3f6c4215682d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4b0281b569a6bfaf4f28d6958011ab3efacb4221
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762638"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444459"
 ---
-# <a name="connectionstring-connectiontimeout-and-state-properties-example-vc"></a>ConnectionString、ConnectionTimeout 和 State 属性示例（VC + +）
-此示例演示使用[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)属性打开[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象的不同方法。 它还使用[ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)属性设置连接超时期限，并使用[state](../../../ado/reference/ado-api/state-property-ado.md)属性来检查连接状态。 运行此过程需要 GetState 函数。  
+# <a name="connectionstring-connectiontimeout-and-state-properties-example-vc"></a>ConnectionString、ConnectionTimeout 和 State 属性示例 (VC + +) 
+此示例演示使用 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) 属性打开 [连接](../../../ado/reference/ado-api/connection-object-ado.md) 对象的不同方法。 它还使用 [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md) 属性设置连接超时期限，并使用 [state](../../../ado/reference/ado-api/state-property-ado.md) 属性来检查连接状态。 运行此过程需要 GetState 函数。  
   
 > [!NOTE]
->  如果要连接到支持 Windows 身份验证的数据源提供程序，应在连接字符串中指定**Trusted_Connection = yes**或**集成安全性 = SSPI**而不是用户 ID 和密码信息。  
+>  如果要连接到支持 Windows 身份验证的数据源提供程序，应在连接字符串中指定 **Trusted_Connection = yes** 或 **集成安全性 = SSPI** 而不是用户 ID 和密码信息。  
   
 ```  
 // ConnectionStringSampleCpp.cpp  
@@ -167,7 +168,7 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Connection 对象（ADO）](../../../ado/reference/ado-api/connection-object-ado.md)   
- [ConnectionString 属性（ADO）](../../../ado/reference/ado-api/connectionstring-property-ado.md)   
- [ConnectionTimeout 属性（ADO）](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)   
+ [ADO) 的连接对象 (](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [ (ADO) 的 ConnectionString 属性 ](../../../ado/reference/ado-api/connectionstring-property-ado.md)   
+ [ConnectionTimeout 属性 (ADO) ](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)   
  [State 属性 (ADO)](../../../ado/reference/ado-api/state-property-ado.md)

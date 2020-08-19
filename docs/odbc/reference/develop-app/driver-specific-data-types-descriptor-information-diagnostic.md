@@ -1,4 +1,5 @@
 ---
+description: 特定于驱动程序的数据类型、描述符类型、信息类型、诊断类型和属性
 title: 特定于驱动程序的类型-数据、描述符、信息、诊断 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ad4c76d3-5191-4262-b47c-5dd1d19d1154
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 19bb2dd113fbeae871892ea510713c638c886e5a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9a0ac3fd67e07f23f14420ee46ccda5cd409f87a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305759"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483000"
 ---
 # <a name="driver-specific-data-types-descriptor-types-information-types-diagnostic-types-and-attributes"></a>特定于驱动程序的数据类型、描述符类型、信息类型、诊断类型和属性
 驱动程序可以为以下各项分配特定于驱动程序的值：  
@@ -36,7 +37,7 @@ ms.locfileid: "81305759"
   
  对于上述每个项，有两组值：保留供 ODBC 使用的值，以及保留供驱动程序使用的值。 在实现驱动程序特定的值之前，驱动程序编写器必须为打开的组中的每个特定于驱动程序的类型、字段或属性请求一个值。 对于新的驱动程序开发，请使用下表中所述的范围。 如果使用的值不在下面所述的范围内，ODBC 3.8 驱动程序管理器将不会生成错误。 但是，如果收到的未知值不在范围内，驱动程序管理器的更高版本可能会生成错误。  
   
- 当这些值中的任何一个传递到 ODBC 函数时，驱动程序必须检查该值是否有效。 对于应用于其他驱动程序的特定于驱动程序的值，驱动程序将返回 SQLSTATE HYC00 （未实现可选功能）。  
+ 当这些值中的任何一个传递到 ODBC 函数时，驱动程序必须检查该值是否有效。 驱动程序返回 SQLSTATE HYC00 (可选功能，该功能未实现适用于其他驱动程序的特定于驱动程序的值) 。  
   
  从 ODBC 3.8 开始，驱动程序编写器可以分配保留范围内的特定于驱动程序的属性。  
   
@@ -53,7 +54,7 @@ ms.locfileid: "81305759"
 |语句特性|SQLINTEGER|0x00004000|0x00007FFF|SQL_DRIVER_STATEMENT_ATTR_BASE|  
   
 > [!NOTE]  
->  驱动程序文档中必须描述特定于驱动程序的数据类型、描述符字段、诊断字段、信息类型、语句特性和连接属性。 当这些值中的任何一个传递到 ODBC 函数时，驱动程序必须检查该值是否有效。 对于应用于其他驱动程序的特定于驱动程序的值，驱动程序将返回 SQLSTATE HYC00 （未实现可选功能）。  
+>  驱动程序文档中必须描述特定于驱动程序的数据类型、描述符字段、诊断字段、信息类型、语句特性和连接属性。 当这些值中的任何一个传递到 ODBC 函数时，驱动程序必须检查该值是否有效。 驱动程序返回 SQLSTATE HYC00 (可选功能，该功能未实现适用于其他驱动程序的特定于驱动程序的值) 。  
   
  定义基值是为了促进驱动程序开发。 例如，可以采用以下格式定义驱动程序特定的诊断属性：  
   

@@ -1,5 +1,6 @@
 ---
-title: Count 属性（ADO） |Microsoft Docs
+description: Count 属性 (ADO)
+title: ADO)  (计数属性 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,27 +16,27 @@ helpviewer_keywords:
 ms.assetid: da9ccd1f-d402-41a2-940c-45556fc5340d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ecf53c6743e20ec3fe960d10dd16f5577a7d69f0
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: cc0e15e4f5157e28eb35325f09fa5f27a1540d6d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242747"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444349"
 ---
 # <a name="count-property-ado"></a>Count 属性 (ADO)
 指示集合中的对象数。  
   
 ## <a name="return-value"></a>返回值  
- 返回一个**长整型**值。  
+ 返回一个 **长整型** 值。  
   
 ## <a name="remarks"></a>备注  
- 使用**Count**属性来确定给定集合中有多少个对象。  
+ 使用 **Count** 属性来确定给定集合中有多少个对象。  
   
- 由于集合成员的编号以零开始，因此，您始终应始终从零个成员开始编写循环，并以**Count**属性的值减1结束。 如果使用的是 Microsoft Visual Basic 并且想要循环遍历集合的成员而不检查**Count**属性，请使用**For Each .。。下一个**命令。  
+ 由于集合成员的编号以零开始，因此，您始终应始终从零个成员开始编写循环，并以 **Count** 属性的值减1结束。 如果使用的是 Microsoft Visual Basic 并且想要循环遍历集合的成员而不检查 **Count** 属性，请使用 **For Each .。。下一个** 命令。  
   
- 如果**Count**属性为零，则集合中不存在任何对象。  
+ 如果 **Count** 属性为零，则集合中不存在任何对象。  
   
-## <a name="applies-to"></a>应用到  
+## <a name="applies-to"></a>适用于  
 
 :::row:::
     :::column:::
@@ -66,6 +67,6 @@ ms.locfileid: "87242747"
 :::row-end:::
 
 ## <a name="see-also"></a>另请参阅  
- [Count 属性示例（VB）](../../../ado/reference/ado-api/count-property-example-vb.md)   
- [Count 属性示例（VC + +）](../../../ado/reference/ado-api/count-property-example-vc.md)   
+ [Count 属性示例 (VB) ](../../../ado/reference/ado-api/count-property-example-vb.md)   
+ ["计数" 属性示例 (VC + +) ](../../../ado/reference/ado-api/count-property-example-vc.md)   
  [Refresh 方法 (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)

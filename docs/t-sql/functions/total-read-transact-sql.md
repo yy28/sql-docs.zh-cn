@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;TOTAL_READ (Transact-SQL)'
 title: '@@TOTAL_READ (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 09/17/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: b505fbe9-9569-4f3d-80b9-b64b5109ac98
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 2d812089875ef00b035e30ce98627c8b46462b31
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 6c301570941c451709d4574663dc71c6b7632ef6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110707"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459485"
 ---
 # <a name="x40x40total_read-transact-sql"></a>&#x40;&#x40;TOTAL_READ (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +49,7 @@ ms.locfileid: "87110707"
  **integer**  
   
 ## <a name="remarks"></a>备注  
- 要显示包含多项 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 统计信息（包括读写活动）的报表，请运行 sp_monitor  。  
+ 要显示包含多项 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 统计信息（包括读写活动）的报表，请运行 sp_monitor****。  
   
 ## <a name="examples"></a>示例  
  以下示例显示了如何返回到当前日期和时间为止的磁盘读写总次数的过程。  

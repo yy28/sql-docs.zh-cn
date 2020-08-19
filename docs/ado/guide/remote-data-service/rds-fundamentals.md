@@ -1,4 +1,5 @@
 ---
+description: RDS 基础知识
 title: RDS 基础 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: a676f0a7-7d17-45db-87c1-3fc78627465f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c164ea2b4f54f78a416eea4ae5ca282f6c390484
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a6263acd1a51aa73ab004103eb6a7315626335ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764718"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452129"
 ---
 # <a name="rds-fundamentals"></a>RDS 基础知识
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件（有关详细信息，请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)）。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
  以下主题介绍了 RDS。  
   

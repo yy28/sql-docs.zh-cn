@@ -1,5 +1,6 @@
 ---
-title: Var （MDX） |Microsoft Docs
+description: Var (MDX)
+title: Var (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 96bb307607792a3846ee6566027457a05ce3b905
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 46aad9a9b7c328d23680df3c74bcf09a465b868d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68037935"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483710"
 ---
 # <a name="var-mdx"></a>Var (MDX)
 
 
-  返回数值表达式用无偏差总体公式（除以*n*）对集求得的样本方差。  
+  返回数值表达式对集求得的样本方差（使用无偏差总体公式 (除以 *n*) 。  
   
 ## <a name="syntax"></a>语法  
   

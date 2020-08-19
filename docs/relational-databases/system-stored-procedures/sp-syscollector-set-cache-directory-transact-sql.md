@@ -1,5 +1,6 @@
 ---
-title: sp_syscollector_set_cache_directory （Transact-sql） |Microsoft Docs
+description: sp_syscollector_set_cache_directory (Transact-SQL)
+title: sp_syscollector_set_cache_directory (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: df56d5a5-8961-494f-a745-d752ca63805a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dd2a18570770f8a7eeecc1fc9b15c7cacf3e3eb4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dd4f3a049a0433ed41c9ebb1f82f6f16f6222544
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892866"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469184"
 ---
 # <a name="sp_syscollector_set_cache_directory-transact-sql"></a>sp_syscollector_set_cache_directory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,13 +41,13 @@ sp_syscollector_set_cache_directory [ @cache_directory = ] 'cache_directory'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @cache_directory = ] 'cache_directory'`文件系统中临时存储所收集数据的目录。 *cache_directory*为**nvarchar （255）**，默认值为 NULL。 如果未指定值，则使用默认临时 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目录。  
+`[ @cache_directory = ] 'cache_directory'` 文件系统中临时存储所收集数据的目录。 *cache_directory* 为 **nvarchar (255) **，默认值为 NULL。 如果未指定值，则使用默认临时 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目录。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="remarks"></a>备注  
- 在更改缓存目录配置之前，必须禁用数据收集器。 如果数据收集器处于启用状态，此存储过程将失败。 有关详细信息，请参阅[启用或禁用数据收集](../../relational-databases/data-collection/enable-or-disable-data-collection.md)和[管理数据收集](../../relational-databases/data-collection/manage-data-collection.md)。  
+ 在更改缓存目录配置之前，必须禁用数据收集器。 如果数据收集器处于启用状态，此存储过程将失败。 有关详细信息，请参阅 [启用或禁用数据收集](../../relational-databases/data-collection/enable-or-disable-data-collection.md)和 [管理数据收集](../../relational-databases/data-collection/manage-data-collection.md)。  
   
  指定的目录不需要在执行 sp_syscollector_set_cache_directory 时存在;但是，在创建目录之前，无法成功缓存和上载数据。 我们建议您在执行此存储过程之前先创建目录。  
   
@@ -68,7 +69,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;Transact-sql&#41;的数据收集器存储过程](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [数据收集器存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [sp_syscollector_set_cache_window (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-window-transact-sql.md)  
   
   

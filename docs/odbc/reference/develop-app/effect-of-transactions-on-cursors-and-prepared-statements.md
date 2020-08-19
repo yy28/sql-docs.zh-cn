@@ -1,4 +1,5 @@
 ---
+description: 对游标和已准备语句的事务影响
 title: 事务对游标和预定义语句的影响 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 523e22a2-7b53-4c25-97c1-ef0284aec76e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ef3cb4095410b8ccb03b0a138f65b8df2cfb1a4b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 248865b70115a64f73ce93dbd966dac94db61a0a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300467"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482970"
 ---
 # <a name="effect-of-transactions-on-cursors-and-prepared-statements"></a>对游标和已准备语句的事务影响
 提交或回滚事务会对游标和访问计划产生以下影响：  
@@ -41,20 +42,20 @@ ms.locfileid: "81300467"
   
 3.  当用户突出显示订单时，将在报表2的销售订单中创建行的结果集。  
   
-4.  当用户更新行时，调用**SQLExecute**以执行已准备就绪的已定位 update 语句。  
+4.  当用户更新行时，调用 **SQLExecute** 以执行已准备就绪的已定位 update 语句。  
   
-5.  调用**SQLEndTran**以提交定位的 update 语句。  
+5.  调用 **SQLEndTran** 以提交定位的 update 语句。  
   
- 由于数据源的行为，对步骤5中的**SQLEndTran**的调用会使其关闭语句1和2上的游标，并删除所有语句的访问计划。 应用程序必须重新创建语句1和2，才能重新创建结果集并 reprepare 语句3上的语句。  
+ 由于数据源的行为，对步骤5中的 **SQLEndTran** 的调用会使其关闭语句1和2上的游标，并删除所有语句的访问计划。 应用程序必须重新创建语句1和2，才能重新创建结果集并 reprepare 语句3上的语句。  
   
- 在自动提交模式下， **SQLEndTran**提交事务以外的其他函数：  
+ 在自动提交模式下， **SQLEndTran** 提交事务以外的其他函数：  
   
--   **SQLExecute**或**SQLExecDirect**在前面的示例中，在步骤4中对**SQLExecute**的调用将提交事务。 这会导致数据源关闭语句1和2上的游标，并删除该连接上所有语句上的访问计划。  
+-   **SQLExecute** 或 **SQLExecDirect** 在前面的示例中，在步骤4中对 **SQLExecute** 的调用将提交事务。 这会导致数据源关闭语句1和2上的游标，并删除该连接上所有语句上的访问计划。  
   
 -   前面的示例中的**SQLBulkOperations**或**SQLSetPos**假设在步骤4中，应用程序使用语句2上的 SQL_UPDATE 选项调用**SQLSetPos** ，而不是在语句3上执行定位的 UPDATE 语句。 这会提交一个事务，并导致数据源关闭语句1和2上的游标，并放弃该连接上的所有访问计划。  
   
--   **SQLCloseCursor**在前面的示例中，假设当用户突出显示不同的销售订单时，应用程序会在为新销售订单创建行的结果之前，在语句2上调用**SQLCloseCursor** 。 对**SQLCloseCursor**的调用将提交创建行结果集的**SELECT**语句，并导致数据源在语句1上关闭游标，然后放弃该连接上的所有访问计划。  
+-   **SQLCloseCursor** 在前面的示例中，假设当用户突出显示不同的销售订单时，应用程序会在为新销售订单创建行的结果之前，在语句2上调用 **SQLCloseCursor** 。 对 **SQLCloseCursor** 的调用将提交创建行结果集的 **SELECT** 语句，并导致数据源在语句1上关闭游标，然后放弃该连接上的所有访问计划。  
   
  应用程序（尤其是基于屏幕的应用程序，用户在其中滚动结果集并更新或删除行）必须小心地围绕此行为编写代码。  
   
- 若要确定提交或回滚事务时数据源的行为方式，应用程序需要使用 SQL_CURSOR_COMMIT_BEHAVIOR 和 SQL_CURSOR_ROLLBACK_BEHAVIOR 选项调用**SQLGetInfo** 。
+ 若要确定提交或回滚事务时数据源的行为方式，应用程序需要使用 SQL_CURSOR_COMMIT_BEHAVIOR 和 SQL_CURSOR_ROLLBACK_BEHAVIOR 选项调用 **SQLGetInfo** 。

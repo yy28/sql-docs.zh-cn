@@ -1,4 +1,5 @@
 ---
+description: 'sys. pdw_nodes_partitions (Transact-sql) '
 title: sys. pdw_nodes_partitions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -12,12 +13,12 @@ ms.assetid: b4216752-4813-4b2c-b259-7d8ffc6cc190
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 32c64ad5faab1ef262cd754201cac40e4a076619
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: b13e5da130d7b122f9b79e1996ea3fdb0792e25a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197362"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475376"
 ---
 # <a name="syspdw_nodes_partitions-transact-sql"></a>sys. pdw_nodes_partitions (Transact-sql) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -43,9 +44,9 @@ ms.locfileid: "86197362"
 
 ### <a name="example-a-display-rows-in-each-partition-within-each-distribution"></a>示例 A：显示每个分布区中每个分区的行 
 
-**适用于：** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+**适用于：** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
  
-若要显示每个分布区中每个分区的行数，请使用[DBCC PDW_SHOWPARTITIONSTATS (SQL Server PDW) ](../../t-sql/database-console-commands/dbcc-pdw-showpartitionstats-transact-sql.md) 。
+若要显示每个分布区中每个分区的行数，请使用 [DBCC PDW_SHOWPARTITIONSTATS (SQL Server PDW) ](../../t-sql/database-console-commands/dbcc-pdw-showpartitionstats-transact-sql.md) 。
 
 ### <a name="example-b-uses-system-views-to-view-rows-in-each-partition-of-each-distribution-of-a-table"></a>示例 B：使用系统视图查看表的每个分布区中每个分区的行
 

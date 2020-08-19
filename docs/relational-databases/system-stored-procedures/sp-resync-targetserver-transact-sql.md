@@ -1,5 +1,6 @@
 ---
-title: sp_resync_targetserver （Transact-sql） |Microsoft Docs
+description: sp_resync_targetserver (Transact-SQL)
+title: sp_resync_targetserver (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 40e44df7-d3e3-44ee-b149-08aba629a21f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 868e203866890c1f13405ddc7ed3949487e821da
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 858c2ffe0740c43892ff2245047823c9cecbd12a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899247"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469199"
 ---
 # <a name="sp_resync_targetserver-transact-sql"></a>sp_resync_targetserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,19 +41,19 @@ sp_resync_targetserver
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @server_name = ] 'server'`要重新同步的服务器的名称。 *server* 的数据类型为 **sysname**，无默认值。 如果指定**all** ，则会重新同步所有目标服务器。  
+`[ @server_name = ] 'server'` 要重新同步的服务器的名称。 *server* 的数据类型为 **sysname**，无默认值。 如果指定 **all** ，则会重新同步所有目标服务器。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="result-sets"></a>结果集  
- 报告**sp_post_msx_operation**操作的结果。  
+ 报告 **sp_post_msx_operation** 操作的结果。  
   
 ## <a name="remarks"></a>备注  
- **sp_resync_targetserver**删除目标服务器的当前说明集，并为要下载的目标服务器发布新的一组指令。 新指令集中包括一条删除所有多服务器作业的指令，随后是当前以该服务器为目标的每个作业的插入指令。  
+ **sp_resync_targetserver** 删除目标服务器的当前说明集，并为要下载的目标服务器发布新的一组指令。 新指令集中包括一条删除所有多服务器作业的指令，随后是当前以该服务器为目标的每个作业的插入指令。  
   
 ## <a name="permissions"></a>权限  
- 默认情况下， **sysadmin**固定服务器角色的成员执行此过程的权限。  
+ 默认情况下， **sysadmin** 固定服务器角色的成员执行此过程的权限。  
   
 ## <a name="examples"></a>示例  
  以下示例重新同步 `SEATTLE1` 目标服务器。  

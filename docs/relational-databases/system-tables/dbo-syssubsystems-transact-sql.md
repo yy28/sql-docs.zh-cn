@@ -1,5 +1,6 @@
 ---
-title: dbo.sys子系统（Transact-sql） |Microsoft Docs
+description: dbo.syssubsystems (Transact-SQL)
+title: dbo.sys子系统 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 114b3d55-1ad6-4777-b868-8ef0c86ba596
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7de71454c59ede4bfea182ea605a0e9d59da2c00
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f208311142cd5f58efdbda884d0e336de70e37c2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890366"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469091"
 ---
 # <a name="dbosyssubsystems-transact-sql"></a>dbo.syssubsystems (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,11 +45,11 @@ ms.locfileid: "85890366"
 |**max_worker_threads**|**int**|给定子系统的最大并发步骤数。|  
   
 ## <a name="remarks"></a>备注  
- 只有**sysadmin**固定服务器角色的成员才能访问此表。  
+ 只有 **sysadmin** 固定服务器角色的成员才能访问此表。  
   
 ## <a name="see-also"></a>另请参阅  
  [dbo.sysproxysubsystem &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysproxysubsystem-transact-sql.md)   
- [&#40;Transact-sql 的dbo.sys代理&#41;](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md)   
+ [ &#40;Transact-sql 的dbo.sys代理&#41;](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md)   
  [sys.messages (Transact-SQL)](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)  
   
   

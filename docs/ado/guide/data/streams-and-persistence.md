@@ -1,4 +1,5 @@
 ---
+description: 流和暂留
 title: 流和持久性 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,24 +14,24 @@ helpviewer_keywords:
 ms.assetid: ad5bf52c-fd10-4cfa-bf7d-fcedcaa41eea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3e7c47c668bc2b64a511e316396da913d5dcb930
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 869c5ef7380c315b60d2cbf6ad11f0cf638a0d7f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760753"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452769"
 ---
 # <a name="streams-and-persistence"></a>流和暂留
 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)对象[保存](../../../ado/reference/ado-api/save-method.md)方法存储或*保留*文件中的**记录集**，而[Open](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法则从该文件还原**记录集**。  
   
- 使用 ADO 2.7 或更高版本，**保存**和**打开**方法也可以将**记录集**保存到[流](../../../ado/reference/ado-api/stream-object-ado.md)对象。 当使用远程数据服务（RDS）和 Active Server Pages （ASP）时，此功能特别有用。  
+ 使用 ADO 2.7 或更高版本， **保存** 和 **打开** 方法也可以将 **记录集** 保存到 [流](../../../ado/reference/ado-api/stream-object-ado.md) 对象。 使用远程数据服务时，此功能尤其有用 (RDS) 和 Active Server Pages (ASP) 。  
   
  有关如何在 ASP 页上自行使用持久性的详细信息，请参阅当前 ASP 文档。  
   
- 下面是一些演示如何使用**流**对象和持久性的方案。  
+ 下面是一些演示如何使用 **流** 对象和持久性的方案。  
   
 ## <a name="scenario-1"></a>方案 1  
- 此方案只是将**记录集**保存到文件，然后保存到**流**中。 然后，它会将保存的流打开到另一个**记录集中**。  
+ 此方案只是将 **记录集** 保存到文件，然后保存到 **流**中。 然后，它会将保存的流打开到另一个 **记录集中**。  
   
 ```  
 Dim rs1 As ADODB.Recordset  
@@ -50,7 +51,7 @@ rs2.Open stm
 ```  
   
 ## <a name="scenario-2"></a>方案 2  
- 此方案将**记录集**保存到 XML 格式的**流**中。 然后，它会将**流**读入一个字符串，可以检查、操作或显示该字符串。  
+ 此方案将 **记录集** 保存到 XML 格式的 **流** 中。 然后，它会将 **流** 读入一个字符串，可以检查、操作或显示该字符串。  
   
 ```  
 Dim rs As ADODB.Recordset  
@@ -76,7 +77,7 @@ strRst = stm.ReadText(adReadAll)
 ```  
   
 ## <a name="scenario-3"></a>方案 3  
- 此示例代码演示了 ASP 代码将**记录集**作为 XML 直接保存到**响应**对象：  
+ 此示例代码演示了 ASP 代码将 **记录集** 作为 XML 直接保存到 **响应** 对象：  
   
 ```  
 ...  
@@ -100,11 +101,11 @@ Set rs = nothing
 ```  
   
 ## <a name="scenario-4"></a>方案 4  
- 在此方案中，ASP 代码会将 ADTG 格式的**记录集**内容写入客户端。 [适用于 OLE DB 的 Microsoft 游标服务](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)可以使用此数据创建断开连接的**记录集**。  
+ 在此方案中，ASP 代码会将 ADTG 格式的 **记录集** 内容写入客户端。 [适用于 OLE DB 的 Microsoft 游标服务](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)可以使用此数据创建断开连接的**记录集**。  
   
- RDS [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)， [URL](../../../ado/reference/rds-api/url-property-rds.md)上的新属性指向生成**记录集**的 .asp 页面。 这意味着，可以使用服务器端[DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)对象或用户编写业务对象来获取**记录集**对象。 这大大简化了 RDS 编程模型。  
+ RDS [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)， [URL](../../../ado/reference/rds-api/url-property-rds.md)上的新属性指向生成 **记录集**的 .asp 页面。 这意味着，可以使用服务器端[DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)对象或用户编写业务对象来获取**记录集**对象。 这大大简化了 RDS 编程模型。  
   
- 服务器端代码，名为https://server/directory/recordset.asp:  
+ 服务器端代码，名为 https://server/directory/recordset.asp:  
   
 ```  
 <%  
@@ -147,7 +148,7 @@ rs.Save response, adPersistADTG
 </HTML>  
 ```  
   
- 开发人员还可以选择在客户端上使用**Recordset**对象：  
+ 开发人员还可以选择在客户端上使用 **Recordset** 对象：  
   
 ```  
 ...  
@@ -161,6 +162,6 @@ function GetRs()
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Open 方法（ADO 记录集）](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Record 对象（ADO）](../../../ado/reference/ado-api/record-object-ado.md)   
+ [ADO 记录集 (打开方法) ](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
+ [ (ADO 记录对象) ](../../../ado/reference/ado-api/record-object-ado.md)   
  [Save 方法](../../../ado/reference/ado-api/save-method.md)

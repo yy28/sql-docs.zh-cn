@@ -1,5 +1,6 @@
 ---
-title: '- 负极（MDX） |Microsoft Docs'
+description: '-  (MDX)  (负数) '
+title: '-  (MDX)  (负) |Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3221a54c8bedd67c28e1bf1f353f2cf7414829ca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8550e75d4f0807263678fc7badec8c8a0be52cfd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68088374"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483731"
 ---
 # <a name="--negative-mdx"></a>-（负号）(MDX)
 

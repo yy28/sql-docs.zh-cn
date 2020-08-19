@@ -1,4 +1,5 @@
 ---
+description: DROP SEQUENCE (Transact-SQL)
 title: DROP SEQUENCE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/11/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c25772d3-61af-4aa7-b58b-a6f67a793e3d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ab35c07f176e3ae25303eb7693b8c2292b793559
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 7c880111b104abc2de1b1d4d6c8f3cc3e672ef91
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483612"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444586"
 ---
 # <a name="drop-sequence-transact-sql"></a>DROP SEQUENCE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,8 +43,8 @@ DROP SEQUENCE [ IF EXISTS ] { database_name.schema_name.sequence_name | schema_n
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- IF EXISTS   
- 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）  。  
+ IF EXISTS  
+ 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。  
   
  只有在序列已存在时才对其进行有条件地删除。  
   
@@ -53,10 +54,10 @@ DROP SEQUENCE [ IF EXISTS ] { database_name.schema_name.sequence_name | schema_n
  *schema_name*  
  序列对象所属架构的名称。  
   
- sequence_name   
- 要删除的序列的名称。 类型为 sysname  。  
+ sequence_name  
+ 要删除的序列的名称。 类型为 sysname。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  在生成编号后，序列对象与其生成的编号之间没有延续关系，因此可以删除序列对象，即使生成的编号仍在使用。  
   
  当序列对象由存储过程或触发器引用时，可以删除序列对象，因为序列对象未绑定到架构上。 如果序列对象是作为表中的默认值引用的，则无法删除序列对象。 错误消息将列出引用序列的对象。  

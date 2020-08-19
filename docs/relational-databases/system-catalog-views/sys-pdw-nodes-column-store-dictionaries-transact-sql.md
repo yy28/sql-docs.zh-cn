@@ -1,4 +1,5 @@
 ---
+description: 'sys. pdw_nodes_column_store_dictionaries (Transact-sql) '
 title: 'sys. pdw_nodes_column_store_dictionaries (Transact-sql) '
 ms.date: 03/03/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ ms.assetid: 7ae1c2e4-45c0-4880-a692-1f299fbcfd19
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: bc82a44fcd536b53b2e49851806262a0bdd230ef
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: c0510e37a1d3dc2feb537bc64c0e2cb5f3e56414
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197172"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475393"
 ---
 # <a name="syspdw_nodes_column_store_dictionaries-transact-sql"></a>sys. pdw_nodes_column_store_dictionaries (Transact-sql) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -31,18 +32,18 @@ ms.locfileid: "86197172"
 |**column_id**|**int**|列存储列的 ID。|  
 |**dictionary_id**|**int**|字典的 ID。|  
 |**version**|**int**|字典格式的版本。|  
-|**type**|**int**|字典类型：<br /><br /> 1-包含**int**值的哈希字典<br /><br /> 2-未使用<br /><br /> 3-包含字符串值的哈希字典<br /><br /> 包含**浮点**值的4哈希字典|  
+|type|**int**|字典类型：<br /><br /> 1-包含 **int** 值的哈希字典<br /><br /> 2-未使用<br /><br /> 3-包含字符串值的哈希字典<br /><br /> 包含 **浮点** 值的4哈希字典|  
 |**last_id**|**int**|字典中的最后一个数据 ID。|  
 |**entry_count**|**bigint**|字典中的条目数。|  
 |**on_disc_size**|**bigint**|字典大小（以字节为单位）。|  
-|**pdw_node_id**|**int**|节点的唯一标识符 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。|  
+|pdw_node_id|**int**|节点的唯一标识符 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。|  
   
 ## <a name="permissions"></a>权限  
  需要 `VIEW SERVER STATE` 权限。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL 数据仓库和并行数据仓库目录视图](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
- [&#40;Transact-sql&#41;创建列存储索引](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
+ [&#40;Transact-sql&#41;创建列存储索引 ](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
  [sys. pdw_nodes_column_store_segments &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   
  [sys. pdw_nodes_column_store_row_groups &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)  
   

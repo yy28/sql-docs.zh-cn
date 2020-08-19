@@ -1,4 +1,5 @@
 ---
+description: DATETIMEFROMPARTS (Transact-SQL)
 title: DATETIMEFROMPARTS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/29/2017
@@ -18,17 +19,17 @@ ms.assetid: 6008148b-bf75-4c98-9392-68a89fa0711c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 36fcbfe6f61d2414a6cd51f2ac43e3380c2411dd
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 8cbaaa9bee836ea21aa1eb47a48ef00d9c430976
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396934"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459797"
 ---
 # <a name="datetimefromparts-transact-sql"></a>DATETIMEFROMPARTS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-此函数对指定日期和时间参数返回 datetime 值  。
+此函数对指定日期和时间参数返回 datetime 值****。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -44,29 +45,29 @@ DATETIMEFROMPARTS ( year, month, day, hour, minute, seconds, milliseconds )
 *year*  
 指定年份的整数表达式。
   
-month   
+*month*  
 指定月份的整数表达式。
   
-day   
+*day*  
 指定日期的整数表达式。
   
-hour   
+hour  
 指定小时的整数表达式。
   
-minute   
+minute  
 指定分钟的整数表达式。
   
 *seconds*  
 指定秒数的整数表达式。
   
-milliseconds   
+milliseconds  
 指定毫秒数的整数表达式。
   
 ## <a name="return-types"></a>返回类型
 **datetime**
   
 ## <a name="remarks"></a>备注  
-`DATETIMEFROMPARTS` 返回完全初始化的 datetime 值  。 如果至少有一个必需参数具有无效值，`DATETIMEFROMPARTS` 将引发错误。 如果至少有一个必需参数具有 NULL 值，则 `DATETIMEFROMPARTS` 返回 NULL。
+`DATETIMEFROMPARTS` 返回完全初始化的 datetime 值****。 如果至少有一个必需参数具有无效值，`DATETIMEFROMPARTS` 将引发错误。 如果至少有一个必需参数具有 NULL 值，则 `DATETIMEFROMPARTS` 返回 NULL。
   
 此函数支持在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 及更高版本的服务器上远程执行。 但不支持在版本低于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的服务器上远程执行。
   

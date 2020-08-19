@@ -1,4 +1,5 @@
 ---
+description: 自定义文件 Logs 部分
 title: 自定义文件日志部分 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: a368e264-865c-41ee-be00-d9097255c2ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3be02570fbff1efd9adb091c121d4eb1a8782817
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 365b57f174f289317a7e8b3e09fe0c29b051ef64
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749959"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452249"
 ---
 # <a name="customization-file-logs-section"></a>自定义文件 Logs 部分
-"**日志**" 部分包含一个日志文件条目，该条目指定在**DataFactory**操作过程中记录错误的文件的名称。  
+" **日志** " 部分包含一个日志文件条目，该条目指定在 **DataFactory**操作过程中记录错误的文件的名称。  
   
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件（有关详细信息，请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)）。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
 ## <a name="syntax"></a>语法  
  日志文件条目的格式如下：  
@@ -38,10 +39,10 @@ FileName
   
 ## <a name="remarks"></a>备注  
   
-|组成部分|说明|  
+|组成部分|描述|  
 |----------|-----------------|  
 |**err**|指示这是一个日志文件项的文字字符串。|  
-|*FileName*|完整的路径和文件名。 典型文件名为**c:\msdfmap.log**。|  
+|*FileName*|完整的路径和文件名。 典型文件名为 **c:\msdfmap.log**。|  
   
  日志文件将包含每个错误的用户名、HRESULT、日期和时间。  
   

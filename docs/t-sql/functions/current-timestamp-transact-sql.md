@@ -1,4 +1,5 @@
 ---
+description: CURRENT_TIMESTAMP (Transact-SQL)
 title: CURRENT_TIMESTAMP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -31,24 +32,24 @@ ms.assetid: c724d9cc-7b1f-4c71-bdf5-08bc52b33afc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1777a033358b350c676fbb79aa81677f0907bbd0
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 89ea4e2a54cee32d742dd0e3c2b9607a589f0b35
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112131"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468136"
 ---
 # <a name="current_timestamp-transact-sql"></a>CURRENT_TIMESTAMP (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-此函数返回当前数据库系统时间戳，返回值的类型为 datetime，并且不含数据库时区偏移量  。 `CURRENT_TIMESTAMP` 从运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的操作系统中获得此值。
+此函数返回当前数据库系统时间戳，返回值的类型为 datetime，并且不含数据库时区偏移量****。 `CURRENT_TIMESTAMP` 从运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的操作系统中获得此值。
   
 > [!NOTE]  
 >  `SYSDATETIME` 和 `SYSUTCDATE` 采用秒的小数部分精度度量，因此其精度比 `GETDATE` 和 `GETUTCDATE` 的精度更高。 `SYSDATETIMEOFFSET` 函数包含系统时区偏移量。 可向任意日期和时间类型的变量分配 `SYSDATETIME`、`SYSUTCDATE` 和 `SYSDATETIMEOFFSET`。  
   
 此函数是 ANSI SQL，等价于 [GETDATE](../../t-sql/functions/getdate-transact-sql.md)。
   
-有关所有 [ 日期和时间数据类型及函数的概述，请参阅](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)日期和时间数据类型及函数[!INCLUDE[tsql](../../includes/tsql-md.md)]。
+有关所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 日期和时间数据类型及函数的概述，请参阅[日期和时间数据类型及函数](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -67,9 +68,9 @@ CURRENT_TIMESTAMP
 **datetime**
   
 ## <a name="remarks"></a>备注  
-[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句可以在能引用 datetime 表达式的所有位置引用 `CURRENT_TIMESTAMP`  。
+[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句可以在能引用 datetime 表达式的所有位置引用 `CURRENT_TIMESTAMP`****。
   
-`CURRENT_TIMESTAMP` 是非确定性函数。 引用该列的视图和表达式无法进行索引。
+`CURRENT_TIMESTAMP` 是非确定性的函数。 引用该列的视图和表达式无法进行索引。
   
 ## <a name="examples"></a>示例  
 以下示例使用六个返回当前日期和时间值的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统函数来返回日期和/或时间。 这些示例连续返回值，因此，它们的秒小数部分可能有所不同。 注意：返回的实际值可反映出执行的时间/时间。

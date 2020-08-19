@@ -1,4 +1,5 @@
 ---
+description: ORIGINAL_DB_NAME (Transact-SQL)
 title: ORIGINAL_DB_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 7dadc40a-1287-4f31-8487-434ee477144d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 889cdb18a323e64cf1b94bcde57eaf77c37e89d4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c22913dfea659c94b3e780d86272aabf55ccbd2b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892551"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459612"
 ---
 # <a name="original_db_name-transact-sql"></a>ORIGINAL_DB_NAME (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  返回由用户在数据库连接字符串中指定的数据库名称。 使用 sqlcmd-d  选项 (USE database  ) 指定此数据库。 也可以使用开放式数据库连接 (ODBC) 数据源表达式 (initial catalog =databasename  ) 来指定此数据库。  
+  返回由用户在数据库连接字符串中指定的数据库名称。 使用 sqlcmd-d**** 选项 (USE database**) 指定此数据库。 也可以使用开放式数据库连接 (ODBC) 数据源表达式 (initial catalog =databasename**) 来指定此数据库。  
   
  该数据库与默认用户数据库不同。  
   
@@ -35,11 +36,12 @@ ms.locfileid: "85892551"
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
+```syntaxsql
 ORIGINAL_DB_NAME ()  
-```  
-  
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="remarks"></a>备注  
  如果未指定初始数据库，该函数将返回一个空字符串。  
   

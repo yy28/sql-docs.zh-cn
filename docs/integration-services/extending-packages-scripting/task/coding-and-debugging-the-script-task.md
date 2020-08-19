@@ -1,4 +1,5 @@
 ---
+description: 脚本任务的编码和调试
 title: 脚本任务的编码和调试 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,24 +22,24 @@ helpviewer_keywords:
 ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2ccf1b65fdbdd5493dd5e62e9e19b90fb72d8746
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 203c87b39165330d7d58106c4a4d888af11e9751
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915173"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430279"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>脚本任务的编码和调试
 
 [!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  在“脚本任务编辑器”  中配置完脚本任务后，即可在脚本任务开发环境中编写自己的自定义代码。  
+  在“脚本任务编辑器”**** 中配置完脚本任务后，即可在脚本任务开发环境中编写自己的自定义代码。  
   
 ## <a name="script-task-development-environment"></a>脚本任务开发环境  
  脚本任务将 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 用作脚本自身的开发环境。  
   
- 脚本代码以 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 编写。 在“脚本任务编辑器”中设置 **ScriptLanguage** 属性可指定脚本语言。 如果您倾向于使用其他编程语言，您可以用您选择的语言开发自定义程序集，然后通过脚本任务中的代码调用其功能。  
+ 脚本代码以 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 编写。 在“脚本任务编辑器”**** 中设置 **ScriptLanguage** 属性可指定脚本语言。 如果您倾向于使用其他编程语言，您可以用您选择的语言开发自定义程序集，然后通过脚本任务中的代码调用其功能。  
   
  您在脚本任务中创建的脚本存储在包定义中。 由于没有单独的脚本文件， 因此，使用脚本任务不会影响包部署。  
   
