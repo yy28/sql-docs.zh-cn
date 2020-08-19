@@ -1,5 +1,6 @@
 ---
-title: = （等于）（MDX） |Microsoft Docs
+description: =（等于）(MDX)
+title: = (等于)  (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 189facb54de244ff220b41ec08c8b02faf5a2c27
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5ec3cbcb928926d02dd6597116f8ce9af00bf8e4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68139315"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494930"
 ---
 # <a name="-equal-to-mdx"></a>=（等于）(MDX)
 
@@ -21,7 +22,7 @@ ms.locfileid: "68139315"
   执行比较运算，以确定一个多维表达式 (MDX) 的值是否等于另一个 MDX 表达式的值。  
   
 > [!NOTE]  
->  若要比较对象，请使用[&#40;MDX&#41;](../mdx/is-mdx.md)运算符。 例如，检查查询轴上的当前成员是否为特定成员时，使用 IS 运算符。  
+>  若要比较对象，请使用 [&#40;MDX&#41;](../mdx/is-mdx.md) 运算符。 例如，检查查询轴上的当前成员是否为特定成员时，使用 IS 运算符。  
   
 ## <a name="syntax"></a>语法  
   

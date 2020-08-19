@@ -1,5 +1,6 @@
 ---
-title: VarP （MDX） |Microsoft Docs
+description: VarP (MDX)
+title: VarP (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: bb28851863864520a67cacbb2cb9a2a84d9fd6a1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c850ba60ac9900228c6adaa03aa97b46b1abddf1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68135058"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429719"
 ---
 # <a name="varp-mdx"></a>VarP (MDX)
 
 
-  返回数值表达式用有偏差总体公式（除以*n*-1）对集求得的总体方差。  
+  返回数值表达式对集求得的总体方差，使用有偏差总体公式 (除以 *n-1*) 。  
   
 ## <a name="syntax"></a>语法  
   

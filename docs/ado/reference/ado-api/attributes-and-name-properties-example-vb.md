@@ -1,5 +1,6 @@
 ---
-title: 特性和名称属性示例（VB） |Microsoft Docs
+description: Attributes 和 Name 属性示例 (VB)
+title: 属性和名称属性示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 258bdce3-1819-44a2-9217-105879c789ef
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d6993ea70496673d3aae23e4a4b6c5982637a5f8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ed744b6cb39b37958de8dcd6cb4dd6dde8b2a9a8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762925"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451219"
 ---
 # <a name="attributes-and-name-properties-example-vb"></a>Attributes 和 Name 属性示例 (VB)
-此示例显示[连接](../../../ado/reference/ado-api/connection-object-ado.md)、[字段](../../../ado/reference/ado-api/field-object.md)和[属性](../../../ado/reference/ado-api/property-object-ado.md)对象的 "[属性](../../../ado/reference/ado-api/attributes-property-ado.md)" 属性的值。 它使用[name](../../../ado/reference/ado-api/name-property-ado.md)属性来显示每个**字段**和**属性**对象的名称。  
+此示例显示[连接](../../../ado/reference/ado-api/connection-object-ado.md)、[字段](../../../ado/reference/ado-api/field-object.md)和[属性](../../../ado/reference/ado-api/property-object-ado.md)对象的 "[属性](../../../ado/reference/ado-api/attributes-property-ado.md)" 属性的值。 它使用 [name](../../../ado/reference/ado-api/name-property-ado.md) 属性来显示每个 **字段** 和 **属性** 对象的名称。  
   
 ```  
 ' BeginAttributesVB  
@@ -127,8 +128,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Attributes 属性（ADO）](../../../ado/reference/ado-api/attributes-property-ado.md)   
- [Connection 对象（ADO）](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [ADO)  (特性属性 ](../../../ado/reference/ado-api/attributes-property-ado.md)   
+ [ADO) 的连接对象 (](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Field 对象](../../../ado/reference/ado-api/field-object.md)   
- [Name 属性（ADO）](../../../ado/reference/ado-api/name-property-ado.md)   
+ [ADO)  (名称属性 ](../../../ado/reference/ado-api/name-property-ado.md)   
  [属性对象 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)

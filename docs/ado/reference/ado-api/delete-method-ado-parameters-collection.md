@@ -1,5 +1,6 @@
 ---
-title: Delete 方法（ADO 参数集合） |Microsoft Docs
+description: Delete 方法（ADO 参数集合）
+title: 删除方法 (ADO 参数集合) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 160c575e-df63-4ade-a2d3-5fd8f72e70cc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 19fb69e51e04a2e15c60767981bc32e4dfe77141
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a76353f62fc2b30ea8e7eae16c97469027a98110
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757373"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444159"
 ---
 # <a name="delete-method-ado-parameters-collection"></a>Delete 方法（ADO 参数集合）
-从[参数](../../../ado/reference/ado-api/parameters-collection-ado.md)集合中删除对象。  
+从 [参数](../../../ado/reference/ado-api/parameters-collection-ado.md) 集合中删除对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,15 +36,15 @@ Parameters.Delete Index
   
 #### <a name="parameters"></a>参数  
  *索引*  
- 一个**字符串**值，其中包含要删除的对象的名称，或该对象在集合中的序号位置（索引）。  
+ 一个 **字符串** 值，其中包含要删除的对象的名称，或该对象在集合中 (索引) 的序号位置。  
   
 ## <a name="remarks"></a>备注  
- 通过对集合使用**Delete**方法，您可以删除集合中的某个对象。 此方法仅可用于[Command](../../../ado/reference/ado-api/command-object-ado.md)对象的**Parameters**集合。 在调用**Delete**方法时，必须使用[参数](../../../ado/reference/ado-api/parameter-object.md)对象的[Name](../../../ado/reference/ado-api/name-property-ado.md)属性或其集合索引-对象变量不是有效的参数。  
+ 通过对集合使用 **Delete** 方法，您可以删除集合中的某个对象。 此方法仅可用于[Command](../../../ado/reference/ado-api/command-object-ado.md)对象的**Parameters**集合。 在调用**Delete**方法时，必须使用[参数](../../../ado/reference/ado-api/parameter-object.md)对象的[Name](../../../ado/reference/ado-api/name-property-ado.md)属性或其集合索引-对象变量不是有效的参数。  
   
-## <a name="applies-to"></a>应用于  
+## <a name="applies-to"></a>适用于  
  [参数集合 (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [Delete 方法（ADO 字段集合）](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)   
- [Delete 方法（ADO 记录集）](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
+ [ (ADO 字段集合的 Delete 方法) ](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)   
+ [ADO 记录集 (Delete 方法) ](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
  [DeleteRecord 方法 (ADO)](../../../ado/reference/ado-api/deleterecord-method-ado.md)

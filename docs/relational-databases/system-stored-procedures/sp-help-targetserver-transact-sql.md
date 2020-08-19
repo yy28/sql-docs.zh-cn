@@ -1,5 +1,6 @@
 ---
-title: sp_help_targetserver （Transact-sql） |Microsoft Docs
+description: sp_help_targetserver (Transact-SQL)
+title: sp_help_targetserver (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f841d3bd-901a-4980-ad0b-1c6eeba3f717
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a8b29b5d7698fdaceced322e30048c6c789f076e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b997402b52469342ebd8a034f6fb306dc389cee0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891674"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485970"
 ---
 # <a name="sp_help_targetserver-transact-sql"></a>sp_help_targetserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,13 +41,13 @@ sp_help_targetserver
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @server_name = ] 'server_name'`要返回其信息的服务器的名称。 *server_name*为**nvarchar （30）**，默认值为 NULL。  
+`[ @server_name = ] 'server_name'` 要返回其信息的服务器的名称。 *server_name* 为 **nvarchar (30) **，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="result-sets"></a>结果集  
- 如果未指定*server_name* ， **sp_help_targetserver**返回此结果集。  
+ 如果未指定 *server_name* ， **sp_help_targetserver** 返回此结果集。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -57,9 +58,9 @@ sp_help_targetserver
 |**enlist_date**|**datetime**|指定的服务器的登记日期。|  
 |**last_poll_date**|**datetime**|上一次为作业轮询服务器的日期。|  
 |**status**|**int**|指定的服务器的状态。|  
-|**unread_instructions**|**int**|指示服务器是否有未读指令。 如果已下载所有行，则此列为**0**。|  
+|**unread_instructions**|**int**|指示服务器是否有未读指令。 如果已下载所有行，则此列为 **0**。|  
 |**local_time**|**datetime**|目标服务器上的本地日期和时间，基于主服务器上一次轮询时目标服务器上的本地时间。|  
-|**enlisted_by_nt_user**|**nvarchar （100）**|登记了目标服务器的 Microsoft Windows 用户。|  
+|**enlisted_by_nt_user**|**nvarchar (100) **|登记了目标服务器的 Microsoft Windows 用户。|  
 |**poll_interval**|**int**|目标服务器为下载作业和上载作业状态而对 Master SQLServerAgent 服务进行轮询的频率（秒）。|  
   
 ## <a name="permissions"></a>权限  

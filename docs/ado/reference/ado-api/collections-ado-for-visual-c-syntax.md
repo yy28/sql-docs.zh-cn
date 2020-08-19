@@ -1,5 +1,6 @@
 ---
-title: 集合（ADO for Visual C++ 语法） |Microsoft Docs
+description: 集合（ADO for Visual C++ 语法）
+title: Visual C++ 语法) 的 ADO (集合 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6a0109a0-f2d9-4f7c-8e1e-42763f9acaea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dc708e467c226440b861057b0498ed3bd80135d1
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b3740b6ff922204d7f68f507c75011819de8ccfc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748879"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450929"
 ---
 # <a name="collections-ado-for-visual-c-syntax"></a>集合（ADO for Visual C++ 语法）
 ## <a name="parameters"></a>参数  
@@ -43,7 +44,7 @@ Refresh(void);
   
 -   [Refresh 方法 (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-### <a name="properties"></a>属性  
+### <a name="properties"></a>“属性”  
   
 ```  
 get_Count(long *c);  
@@ -74,7 +75,7 @@ Refresh(void);
   
 -   [Refresh 方法 (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-### <a name="properties"></a>属性  
+### <a name="properties"></a>“属性”  
   
 ```  
 get_Count(long *c);  
@@ -102,7 +103,7 @@ Refresh(void);
   
 -   [Refresh 方法 (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-### <a name="properties"></a>属性  
+### <a name="properties"></a>“属性”  
   
 ```  
 get_Count(long *c);  
@@ -127,7 +128,7 @@ Refresh(void);
   
 -   [Refresh 方法 (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-### <a name="properties"></a>属性  
+### <a name="properties"></a>“属性”  
   
 ```  
 get_Count(long *c);  
@@ -141,7 +142,7 @@ get_Item(VARIANT Index, ADOProperty **ppvObject);
 -   [Item 属性 (ADO)](../../../ado/reference/ado-api/item-property-ado.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [Errors 集合（ADO）](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [Fields 集合（ADO）](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Parameters 集合（ADO）](../../../ado/reference/ado-api/parameters-collection-ado.md)   
+ [ADO)  (收集 ](../../../ado/reference/ado-api/errors-collection-ado.md)   
+ [字段集合 (ADO) ](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [ADO) 的参数集合 (](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [属性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

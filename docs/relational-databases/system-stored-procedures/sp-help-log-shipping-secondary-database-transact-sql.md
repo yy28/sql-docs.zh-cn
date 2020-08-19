@@ -1,5 +1,6 @@
 ---
-title: sp_help_log_shipping_secondary_database （Transact-sql） |Microsoft Docs
+description: sp_help_log_shipping_secondary_database (Transact-SQL)
+title: sp_help_log_shipping_secondary_database (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 11ce42ca-d3f1-44c8-9cac-214ca8896b9a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 215ad3a4a38abd962f43756ecb4c724c625f251d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ac291d5c829c1ddc4022a7d0d59f65348daa859a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893632"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485990"
 ---
 # <a name="sp_help_log_shipping_secondary_database-transact-sql"></a>sp_help_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,16 +44,16 @@ sp_help_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @secondary_database = ] 'secondary_database'`辅助数据库的名称。 *secondary_database* **sysname**，无默认值。  
+`[ @secondary_database = ] 'secondary_database'` 辅助数据库的名称。 *secondary_database* **sysname**，无默认值。  
   
-`[ @secondary_id = ] 'secondary_id'`日志传送配置中辅助服务器的 ID。 *secondary_id*为**uniqueidentifier** ，且不能为 NULL。  
+`[ @secondary_id = ] 'secondary_id'` 日志传送配置中辅助服务器的 ID。 *secondary_id* 为 **uniqueidentifier** ，且不能为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
 ## <a name="result-sets"></a>结果集  
   
-|列名称|说明|  
+|列名称|描述|  
 |-----------------|-----------------|  
 |**secondary_id**|日志传送配置中辅助服务器的 ID。|  
 |**primary_server**|日志传送配置中 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]主实例的名称。|  
@@ -85,12 +86,12 @@ sp_help_log_shipping_secondary_database
 |**last_restored_latency**|在主数据库上创建日志备份的时间与在辅助数据库上还原日志备份的时间间隔（分钟）。<br /><br /> 初始值为 NULL。|  
   
 ## <a name="remarks"></a>备注  
- 如果包含*secondary_database*参数，则结果集将包含有关该辅助数据库的信息;如果包括*secondary_id*参数，则结果集将包含与该辅助 id 相关联的所有辅助数据库的相关信息。  
+ 如果包含 *secondary_database* 参数，则结果集将包含有关该辅助数据库的信息;如果包括 *secondary_id* 参数，则结果集将包含与该辅助 id 相关联的所有辅助数据库的相关信息。  
   
  必须从辅助服务器上的**master**数据库运行**sp_help_log_shipping_secondary_database** 。  
   
 ## <a name="permissions"></a>权限  
- 只有**sysadmin**固定服务器角色的成员才能运行此过程。  
+ 只有 **sysadmin** 固定服务器角色的成员才能运行此过程。  
   
 ## <a name="see-also"></a>另请参阅  
  [sp_help_log_shipping_secondary_primary &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql.md)   

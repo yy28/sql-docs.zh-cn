@@ -1,5 +1,6 @@
 ---
-title: 执行、再次查询和清除方法示例（VC + +） |Microsoft Docs
+description: '执行、再次查询和清除方法示例 (VC + +) '
+title: " (VC + +) 执行、再次查询和清除方法示例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ada6acc1-82eb-4cfa-8f2f-617a916ffd8d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 451aed8a69562578cfaa68f18c692613995a6e0e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a57cf16ebd90d762803d9a23027651d4b7ddc9b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760143"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443849"
 ---
-# <a name="execute-requery-and-clear-methods-example-vc"></a>执行、再次查询和清除方法示例（VC + +）
-此示例演示从[命令](../../../ado/reference/ado-api/command-object-ado.md)对象和[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象运行时的**Execute**方法。 它还使用[Requery](../../../ado/reference/ado-api/requery-method.md)方法检索[记录集中](../../../ado/reference/ado-api/recordset-object-ado.md)的当前数据，并使用[clear](../../../ado/reference/ado-api/clear-method-ado.md)方法清除[错误](../../../ado/reference/ado-api/errors-collection-ado.md)集合的内容。 要运行此示例，需要 ExecuteCommand 和 PrintOutput 函数。  
+# <a name="execute-requery-and-clear-methods-example-vc"></a>执行、再次查询和清除方法示例 (VC + +) 
+此示例演示从[命令](../../../ado/reference/ado-api/command-object-ado.md)对象和[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象运行时的**Execute**方法。 它还使用 [Requery](../../../ado/reference/ado-api/requery-method.md) 方法检索 [记录集中](../../../ado/reference/ado-api/recordset-object-ado.md)的当前数据，并使用 [clear](../../../ado/reference/ado-api/clear-method-ado.md) 方法清除 [错误](../../../ado/reference/ado-api/errors-collection-ado.md) 集合的内容。 要运行此示例，需要 ExecuteCommand 和 PrintOutput 函数。  
   
 ```  
 // Execute_Requery_Clear_Method_Sample.cpp  
@@ -188,10 +189,10 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Clear 方法（ADO）](../../../ado/reference/ado-api/clear-method-ado.md)   
- [Command 对象（ADO）](../../../ado/reference/ado-api/command-object-ado.md)   
- [Connection 对象（ADO）](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Errors 集合（ADO）](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [Execute 方法（ADO 命令）](../../../ado/reference/ado-api/execute-method-ado-command.md)   
- [Execute 方法（ADO 连接）](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
+ [ADO)  (Clear 方法 ](../../../ado/reference/ado-api/clear-method-ado.md)   
+ [ADO) 的命令对象 (](../../../ado/reference/ado-api/command-object-ado.md)   
+ [ADO) 的连接对象 (](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [ADO)  (收集 ](../../../ado/reference/ado-api/errors-collection-ado.md)   
+ [ADO 命令 (执行方法) ](../../../ado/reference/ado-api/execute-method-ado-command.md)   
+ [ADO 连接 (执行方法) ](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
  [Requery 方法](../../../ado/reference/ado-api/requery-method.md)

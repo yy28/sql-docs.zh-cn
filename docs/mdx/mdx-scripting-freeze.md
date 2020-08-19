@@ -1,5 +1,6 @@
 ---
-title: 冻结语句（MDX） |Microsoft Docs
+description: FREEZE 语句 (MDX)
+title: " (MDX) 冻结语句 |Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 4738dab411fe55808034a6d9d81a16994089ea74
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 41c71987fec932b2693740792a8d86e200fcf526
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68138289"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429739"
 ---
 # <a name="mdx-scripting---freeze"></a>MDX 脚本 - FREEZE
 
@@ -44,7 +45,7 @@ B = 3
   
  此时，A 和 B 都等于 3。  
   
- 现在，我们插入了**冻结**函数以锁定子多维数据集中的单元：  
+ 现在，我们插入了 **冻结** 函数以锁定子多维数据集中的单元：  
   
 ```  
 B = 2;  

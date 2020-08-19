@@ -1,5 +1,6 @@
 ---
-title: Clone 方法示例（VB） |Microsoft Docs
+description: Clone 方法示例 (VB)
+title: Clone 方法示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 64cb1753-e074-4a2d-8b74-7c35f3f6f64d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4d42d0d9fb4cfc0a46c703e9f7f8be213d5a1a0b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7b58f1f0de4bf3a001d990e34a6f284a3940641b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749030"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450969"
 ---
 # <a name="clone-method-example-vb"></a>Clone 方法示例 (VB)
-此示例使用[Clone](../../../ado/reference/ado-api/clone-method-ado.md)方法创建[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)的副本，然后让用户单独定位每个副本的记录指针。  
+此示例使用 [Clone](../../../ado/reference/ado-api/clone-method-ado.md) 方法创建 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md) 的副本，然后让用户单独定位每个副本的记录指针。  
   
 ```  
 'BeginCloneVB  
@@ -128,5 +129,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Clone 方法（ADO）](../../../ado/reference/ado-api/clone-method-ado.md)   
+ [ADO)  (克隆方法 ](../../../ado/reference/ado-api/clone-method-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

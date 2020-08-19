@@ -1,5 +1,6 @@
 ---
-title: Error 对象属性示例（VB） |Microsoft Docs
+description: 'Description、HelpContext、"帮助"、"NativeError"、"Number"、"Source" 和 "SQLState Properties" 示例 (VB) '
+title: 错误对象属性示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -20,14 +21,14 @@ helpviewer_keywords:
 ms.assetid: 5c728458-d85c-497c-afcf-2cfa36c3342a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f12456e8331739d665eb14ba3553e4f4f1d36ce3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a1047e2335932de243acd2940446bf2ad0e24316
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757273"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444089"
 ---
-# <a name="description-helpcontext-helpfile-nativeerror-number-source-and-sqlstate-properties-example-vb"></a>Description、HelpContext、帮助，NativeError、Number、Source 和 SQLState 属性示例（VB）
+# <a name="description-helpcontext-helpfile-nativeerror-number-source-and-sqlstate-properties-example-vb"></a>Description、HelpContext、"帮助"、"NativeError"、"Number"、"Source" 和 "SQLState Properties" 示例 (VB) 
 此示例将触发错误，对其进行捕获，并显示生成的[error](../../../ado/reference/ado-api/error-object.md)对象的[Description](../../../ado/reference/ado-api/description-property.md)、 [HelpContext](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)、[帮助](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)程序、 [NativeError](../../../ado/reference/ado-api/nativeerror-property-ado.md)、 [Number](../../../ado/reference/ado-api/number-property-ado.md)、 [Source](../../../ado/reference/ado-api/source-property-ado-error.md)和[SQLState](../../../ado/reference/ado-api/sqlstate-property.md)属性。  
   
 ```  
@@ -79,7 +80,7 @@ End Sub
  [Error 对象](../../../ado/reference/ado-api/error-object.md)   
  [HelpContext，帮助的属性](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)   
  [HelpContext，帮助的属性](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)   
- [NativeError 属性（ADO）](../../../ado/reference/ado-api/nativeerror-property-ado.md)   
- [Number 属性（ADO）](../../../ado/reference/ado-api/number-property-ado.md)   
- [Source 属性（ADO 错误）](../../../ado/reference/ado-api/source-property-ado-error.md)   
+ [NativeError 属性 (ADO) ](../../../ado/reference/ado-api/nativeerror-property-ado.md)   
+ [ADO (的数字属性) ](../../../ado/reference/ado-api/number-property-ado.md)   
+ [ (ADO 错误的源属性) ](../../../ado/reference/ado-api/source-property-ado-error.md)   
  [SQLState 属性](../../../ado/reference/ado-api/sqlstate-property.md)

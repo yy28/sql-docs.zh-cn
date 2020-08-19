@@ -1,4 +1,5 @@
 ---
+description: SET CONTEXT_INFO (Transact-SQL)
 title: SET CONTEXT_INFO (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a0b7b9f3-dbda-4350-a274-bd9ecd5c0a74
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e5deb7adf0be9de47cdd05e04280a1eb8b9f6678
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: bb9e8487303cb2d718eddc2052b453c55b520d97
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484671"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88414903"
 ---
 # <a name="set-context_info-transact-sql"></a>SET CONTEXT_INFO (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -49,7 +50,7 @@ SET CONTEXT_INFO { binary_str | @binary_var }
  **@** *binary_var*  
  **varbinary** 或 **binary** 变量，保存用于与当前会话或连接关联的上下文值。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  检索当前会话的上下文信息的首选方式是使用 CONTEXT_INFO 函数。 会话上下文信息也存储在以下系统视图的 **context_info** 列中：  
   
 -   **sys.dm_exec_requests**  

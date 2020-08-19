@@ -1,5 +1,6 @@
 ---
-title: MSpeer_topologyresponse （Transact-sql） |Microsoft Docs
+description: MSpeer_topologyresponse (Transact-SQL)
+title: MSpeer_topologyresponse (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -18,11 +19,12 @@ ms.assetid: 1bc5c0c6-c432-405c-89fd-e953d173a247
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d485e2942d9f941c3ea064f531f83d6314c6bc8e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6968280bf74e0dd191377affc3dc7750636f3413
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002692"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423311"
 ---
 # <a name="mspeer_topologyresponse-transact-sql"></a>MSpeer_topologyresponse (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +33,7 @@ ms.locfileid: "86002692"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|request_id|**int**|标识[MSpeer_topologyrequest](../../relational-databases/system-tables/mspeer-topologyrequest-transact-sql.md)表中的拓扑状态请求条目。|  
+|request_id|**int**|标识 [MSpeer_topologyrequest](../../relational-databases/system-tables/mspeer-topologyrequest-transact-sql.md) 表中的拓扑状态请求条目。|  
 |peer|**sysname**|生成响应的服务器实例的名称。|  
 |peer_version|**int**|指定发布服务器的版本号。|  
 |peer_db|**sysname**|生成响应的对等方的订阅数据库。|  
@@ -41,7 +43,7 @@ ms.locfileid: "86002692"
 |connection_info|**xml**|有关响应请求的节点的信息。|  
   
 ## <a name="see-also"></a>另请参阅  
- [Transact-sql&#41;&#40;复制表](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;复制表 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图 (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

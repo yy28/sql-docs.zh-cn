@@ -1,5 +1,6 @@
 ---
-title: LinRegPoint （MDX） |Microsoft Docs
+description: LinRegPoint (MDX)
+title: LinRegPoint (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3719071beca4dbd8cc991befbb7b2b74f8982c89
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f298d58b14f3005b86f8fa7773a4faef1c94c79
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905577"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429839"
 ---
 # <a name="linregpoint-mdx"></a>LinRegPoint (MDX)
 
 
-  对集进行线性回归计算，并返回回归线公式 y = ax + b 中*y 截距*的值，以指定 x 的特定值。  
+  对集进行线性回归计算，并返回回归线公式 y = ax + b 中 *y 截距* 的值，以指定 x 的特定值。  
   
 ## <a name="syntax"></a>语法  
   

@@ -1,4 +1,5 @@
 ---
+description: TODATETIMEOFFSET (Transact-SQL)
 title: TODATETIMEOFFSET (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/22/2019
@@ -24,17 +25,17 @@ ms.assetid: b5fafc08-efd4-4a3b-a0b3-068981a0a685
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 897ecb64fff2d9ab765ba5a5a20be96c05dd5a8a
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: b5274a17e4de005c3947aba96956b62b5d200409
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110731"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459529"
 ---
 # <a name="todatetimeoffset-transact-sql"></a>TODATETIMEOFFSET (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  返回从 datetime2 表达式转换的 datetimeoffset 值   。  
+  返回从 datetime2 表达式转换的 datetimeoffset 值********。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,19 +49,19 @@ TODATETIMEOFFSET ( expression , time_zone )
 
 ## <a name="arguments"></a>参数
  *expression*  
- 一个解析为 [datetime2](../../t-sql/language-elements/expressions-transact-sql.md) 值的[表达式](../../t-sql/data-types/datetime2-transact-sql.md)。  
+ 一个解析为 [datetime2](../../t-sql/data-types/datetime2-transact-sql.md) 值的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
 > [!NOTE]  
->  该表达式的类型不能为 text、ntext 或 image，因为这些类型无法隐式转换为 varchar 或 nvarchar      。  
+>  该表达式的类型不能为 text、ntext 或 image，因为这些类型无法隐式转换为 varchar 或 nvarchar********************。  
   
- time_zone   
+ time_zone  
  是表示时区偏移量（分钟）（如果为整数）的表达式，例如 -120；或表示小时和分钟数的表达式（如果为字符串），例如“+13.00”。 范围为 +14 到 -14（小时）。 该表达式被解释为指定 time_zone 的本地时间。  
   
 > [!NOTE]  
 >  如果表达式是字符串，其格式必须为 {+|-}TZH:THM。  
   
 ## <a name="return-type"></a>返回类型  
- datetimeoffset  。 小数精度与 datetime 参数相同  。  
+ datetimeoffset。 小数精度与 datetime 参数相同**。  
   
 ## <a name="examples"></a>示例  
   

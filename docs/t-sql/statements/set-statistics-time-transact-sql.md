@@ -1,4 +1,5 @@
 ---
+description: SET STATISTICS TIME (Transact-SQL)
 title: SET STATISTICS TIME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: eec2e1cd-a29d-4cf3-a271-be9d61506f15
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 12e5acfd9436a4295ded63e7db8572dd27ce6e39
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4d6a735e68b49216ea1e9f5604000cef2243c6ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765670"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88414813"
 ---
 # <a name="set-statistics-time-transact-sql"></a>SET STATISTICS TIME (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,14 +46,16 @@ ms.locfileid: "85765670"
 SET STATISTICS TIME { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>备注  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>备注
  当 SET STATISTICS TIME 为 ON 时，会显示语句的时间统计信息。 为 OFF 时，不显示时间统计信息。  
   
  SET STATISTICS TIME 的设置是在执行或运行时设置，而不是在分析时设置。  
   
- Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不能在纤程模式下提供准确的统计信息，而纤程模式在启用“轻型池”配置选项时激活  。  
+ Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不能在纤程模式下提供准确的统计信息，而纤程模式在启用“轻型池”配置选项时激活****。  
   
- 只有当使用 SET STATISTICS TIME ON 执行查询时才更新 sysprocesses 表中的 cpu 列   。 当 SET STATISTICS TIME 为 OFF 时，将返回 0  。  
+ 只有当使用 SET STATISTICS TIME ON 执行查询时才更新 sysprocesses 表中的 cpu 列********。 当 SET STATISTICS TIME 为 OFF 时，将返回 0****。  
   
  ON 和 OFF 设置还影响 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 内的“当前活动的进程信息视图”中的 CPU 列。  
   

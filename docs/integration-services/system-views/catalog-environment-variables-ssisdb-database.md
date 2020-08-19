@@ -1,4 +1,5 @@
 ---
+description: catalog.environment_variables（SSISDB 数据库）
 title: catalog.environment_variables（SSISDB 数据库）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 45f5aacd-505a-443b-8fc2-c7929e78cff8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: de22e52f25658f467ed21952b1eb32356e4ff5af
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b76045d5f901fa1444fd016d1c7673f46170332d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912655"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495311"
 ---
 # <a name="catalogenvironment_variables-ssisdb-database"></a>catalog.environment_variables（SSISDB 数据库）
 
@@ -36,7 +37,7 @@ ms.locfileid: "86912655"
 |sensitive|**bit**|当值为 `1` 时，变量是敏感的并在存储时加密。 当值为 `0` 时，变量是不敏感的并以纯文本形式存储值。|  
 |值|**sql_variant**|环境变量的值。 当 sensitive 为 `0` 时，显示纯文本值。 当 sensitive 为 `1` 时，显示 **NULL** 值。|  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  此视图对于目录中的每个环境变量显示一行。  
   
 ## <a name="permissions"></a>权限  

@@ -1,4 +1,5 @@
 ---
+description: InstanceOf（geography 数据类型）
 title: InstanceOf（geography 数据类型）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1eaed0e4-1c72-45a9-9926-5b513335cf33
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 09d468b4f39ba50a0c195287961f3c3dc76e0ccd
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 384539d8978dd8ae169ae5cfb2b7b5abcf394686
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552919"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422381"
 ---
 # <a name="instanceof-geography-data-type"></a>InstanceOf（geography 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,9 +44,9 @@ ms.locfileid: "86552919"
 **nvarchar(4000)** 字符串，用于指定 **geography** 类型层次结构中公开的 16 个类型之一。  
   
 ## <a name="return-types"></a>返回类型  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit   
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit****  
   
-CLR 返回类型：**SqlBoolean**  
+CLR 返回类型：SqlBoolean****  
   
 ## <a name="remarks"></a>备注  
 如果 **geography** 实例的类型与指定的类型相同，或者指定的类型是该实例类型的上级，则返回 1；否则，返回 0。  

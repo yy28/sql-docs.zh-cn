@@ -1,4 +1,5 @@
 ---
+description: '@@TEXTSIZE (Transact-SQL)'
 title: '@@TEXTSIZE (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 09/18/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 4308a7b9-8e8f-49e9-8246-8224e32f4953
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: d216563a1e4e666ba7b9a15bdf412de0a7d91d5b
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 349ef2067c50a9955643c02cb8ba5226a1f15ddc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110292"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422561"
 ---
 # <a name="x40x40textsize-transact-sql"></a>@@TEXTSIZE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "87110292"
  **integer**  
   
 ## <a name="examples"></a>示例  
- 下面的示例使用 `SELECT` 语句来显示使用 `@@TEXTSIZE` 语句更改前后的 `SET``TEXTSIZE` 值。  
+ 下面的示例使用 `SELECT` 语句来显示使用 `SET``TEXTSIZE` 语句更改前后的 `@@TEXTSIZE` 值。  
   
 ```  
 -- Set the TEXTSIZE option to the default size of 4096 bytes.  

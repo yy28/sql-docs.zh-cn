@@ -1,4 +1,5 @@
 ---
+description: 运行测试用例 (SybaseToSQL)
 title: " (SybaseToSQL) 运行测试用例 |Microsoft Docs"
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 195ffdef-cfde-4bf4-a3ae-e7402bb07972
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: d828142d83f21cf38663241d593fe197b9715592
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: ea2b250f59a29a16bc77ad23e28b0823461a8ace
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87930478"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468750"
 ---
 # <a name="running-test-cases-sybasetosql"></a>运行测试用例 (SybaseToSQL)
 当 SSMA 测试人员运行测试用例时，它将执行选择用于测试的对象，并创建有关验证结果的报表。 如果两个平台上的结果相同，则测试已成功。 Sybase 和之间对象的对应关系 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 根据当前 SSMA 项目的架构映射设置来确定。  
@@ -28,9 +29,9 @@ ms.locfileid: "87930478"
   
 1.  单击“运行”**** 按钮。  
   
-2.  在 "**连接到 Sybase** " 对话框中，输入连接信息，然后单击 "**连接**"。  
+2.  在 " **连接到 Sybase** " 对话框中，输入连接信息，然后单击 " **连接**"。  
   
-测试完成后，将创建测试用例报表。 单击 "**报告**" 按钮以查看[查看测试用例报表 &#40;SybaseToSQL&#41;](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md)"。 测试 (测试用例报告) 的结果会自动存储在[使用测试存储库 &#40;SybaseToSQL&#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md)以供以后使用。  
+测试完成后，将创建测试用例报表。 单击 " **报告** " 按钮以查看 [查看测试用例报表 &#40;SybaseToSQL&#41;](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md)"。 测试 (测试用例报告) 的结果会自动存储在 [使用测试存储库 &#40;SybaseToSQL&#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md) 以供以后使用。  
   
 ## <a name="test-case-execution-steps"></a>测试用例执行步骤  
   
@@ -38,7 +39,7 @@ ms.locfileid: "87930478"
 SSMA 测试人员检查测试开始之前是否满足所有先决条件。 如果未满足某些条件，则会显示错误消息。  
   
 ### <a name="initialization"></a>初始化  
-在此步骤中，SSMA 测试器会在 Sybase 和)  (表、触发器和视图中创建辅助对象 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果表比较模式**仅更改**，则它们允许跟踪在受影响的表中所做的更改。  
+在此步骤中，SSMA 测试器会在 Sybase 和)  (表、触发器和视图中创建辅助对象 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果表比较模式 **仅更改**，则它们允许跟踪在受影响的表中所做的更改。  
   
 假定验证的表名为 USER_TABLE。 对于此类表，将在 Sybase 中创建以下辅助对象。  
   
@@ -64,13 +65,13 @@ SSMA 测试人员检查测试开始之前是否满足所有先决条件。 如�
 在此步骤中，SSMA 测试人员调用为测试选择的每个对象，比较结果，并显示报表。  
   
 ### <a name="finalization"></a>定稿  
-在终止 SSMA 测试过程中，将清理在**初始化**步骤中创建的辅助对象。  
+在终止 SSMA 测试过程中，将清理在 **初始化** 步骤中创建的辅助对象。  
   
 ## <a name="next-step"></a>下一步  
 [查看测试用例报表 &#40;SybaseToSQL&#41;](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md)  
   
 ## <a name="see-also"></a>另请参阅  
-[选择并配置要测试 &#40;SybaseToSQL&#41;的对象](../../ssma/sybase/selecting-and-configuring-objects-to-test-sybasetosql.md)  
+[选择并配置要测试 &#40;SybaseToSQL&#41;的对象 ](../../ssma/sybase/selecting-and-configuring-objects-to-test-sybasetosql.md)  
 [选择并配置受影响的对象 &#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md)  
 [测试迁移的数据库对象 &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

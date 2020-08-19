@@ -1,5 +1,6 @@
 ---
-title: 游标编程详细信息（ODBC） |Microsoft Docs
+description: 游标编程详细信息 (ODBC)
+title: ODBC)  (的游标编程详细信息 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,11 +17,12 @@ ms.assetid: 6bae29c4-7f49-419c-8712-90db734f992e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a095cecfc790dc98edf2de174a3d492b25683db5
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 59e71b9d5c091be993207dbd04d08a418c58fe28
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006583"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423889"
 ---
 # <a name="cursor-programming-details-odbc"></a>游标编程详细信息 (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +35,7 @@ ms.locfileid: "86006583"
   
 -   [通过 ODBC 游标使用自动提取](../../../relational-databases/native-client-odbc-cursors/programming/using-autofetch-with-odbc-cursors.md)  
   
--   [ODBC&#41;&#40;快速只进游标](../../../relational-databases/native-client-odbc-cursors/programming/fast-forward-only-cursors-odbc.md)  
+-   [ODBC&#41;&#40;快速只进游标 ](../../../relational-databases/native-client-odbc-cursors/programming/fast-forward-only-cursors-odbc.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [使用游标 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  

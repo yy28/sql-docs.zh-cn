@@ -1,5 +1,6 @@
 ---
-title: 执行、再次查询和清除方法示例（JScript） |Microsoft Docs
+description: '执行、再次查询和清除方法示例 (JScript) '
+title: " (JScript) 执行、再次查询和清除方法示例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 51a87e91-c9d9-4e49-af47-79cce2c4cfe0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4c5ca02f8f3ca6b8b525bdc3fb7875c3f1638640
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f30dfef8bcfb769dd124f2501143eac6e619315c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82754966"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443879"
 ---
-# <a name="execute-requery-and-clear-methods-example-jscript"></a>执行、再次查询和清除方法示例（JScript）
-此示例演示从[命令](../../../ado/reference/ado-api/command-object-ado.md)对象和[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象运行时的**Execute**方法。 它还使用[Requery](../../../ado/reference/ado-api/requery-method.md)方法检索[记录集中](../../../ado/reference/ado-api/recordset-object-ado.md)的当前数据，并使用[clear](../../../ado/reference/ado-api/clear-method-ado.md)方法清除[错误](../../../ado/reference/ado-api/errors-collection-ado.md)集合的内容。 （通过[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)的[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)属性的**连接**对象来访问**Errors**集合。）将该文件命名为**ExecuteJS**。  
+# <a name="execute-requery-and-clear-methods-example-jscript"></a>执行、再次查询和清除方法示例 (JScript) 
+此示例演示从[命令](../../../ado/reference/ado-api/command-object-ado.md)对象和[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象运行时的**Execute**方法。 它还使用 [Requery](../../../ado/reference/ado-api/requery-method.md) 方法检索 [记录集中](../../../ado/reference/ado-api/recordset-object-ado.md)的当前数据，并使用 [clear](../../../ado/reference/ado-api/clear-method-ado.md) 方法清除 [错误](../../../ado/reference/ado-api/errors-collection-ado.md) 集合的内容。  (通过[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)的[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)属性的**连接**对象来访问**Errors**集合。 ) 将文件命名为**ExecuteJS**。  
   
 ```  
 <!-- BeginExecuteJS -->  
@@ -179,11 +180,11 @@ BODY {
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Clear 方法（ADO）](../../../ado/reference/ado-api/clear-method-ado.md)   
- [Command 对象（ADO）](../../../ado/reference/ado-api/command-object-ado.md)   
- [Connection 对象（ADO）](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [ADO)  (Clear 方法 ](../../../ado/reference/ado-api/clear-method-ado.md)   
+ [ADO) 的命令对象 (](../../../ado/reference/ado-api/command-object-ado.md)   
+ [ADO) 的连接对象 (](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Error 对象](../../../ado/reference/ado-api/error-object.md)   
- [Execute 方法（ADO 命令）](../../../ado/reference/ado-api/execute-method-ado-command.md)   
- [Execute 方法（ADO 连接）](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
- [Recordset 对象（ADO）](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [ADO 命令 (执行方法) ](../../../ado/reference/ado-api/execute-method-ado-command.md)   
+ [ADO 连接 (执行方法) ](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
+ [ADO)  (Recordset 对象 ](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Requery 方法](../../../ado/reference/ado-api/requery-method.md)

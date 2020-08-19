@@ -1,4 +1,5 @@
 ---
+description: IsValidDetailed（geography 数据类型）
 title: IsValidDetailed（geography 数据类型）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f5f0b753-c825-43ce-987d-98655d8d8702
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 9022b3a86910ac8430b408de30dee3dfbcca4254
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 6e272d607592660c123a25847143a4aeff075fc7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555192"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422351"
 ---
 # <a name="isvaliddetailed-geography-data-type"></a>IsValidDetailed（geography 数据类型）
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,9 +40,9 @@ ms.locfileid: "86555192"
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>返回类型
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：nvarchar(max)   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：nvarchar(max)****  
   
- CLR 返回类型：string   
+ CLR 返回类型：string****  
   
 ## <a name="remarks"></a>备注  
  下表包含可能的返回值：  
@@ -67,7 +68,7 @@ ms.locfileid: "86555192"
 |24416|因为在曲线 {0} 中，从点 {1} 开始的边或者是直线，或者是具有对跖端点的退化弧，所以无效。|  
   
 ## <a name="examples"></a>示例  
- 以下无效空间对象示例阐释了 IsValidDetailed() 方法的行为  。  
+ 以下无效空间对象示例阐释了 IsValidDetailed() 方法的行为****。  
   
 ```sql  
 DECLARE @p GEOGRAPHY = 'Polygon((2 2, 4 4, 4 2, 2 4, 2 2))'  

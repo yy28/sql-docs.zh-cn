@@ -1,5 +1,6 @@
 ---
-title: ActiveCommand 属性示例（VC + +） |Microsoft Docs
+description: ActiveCommand 属性示例 (VC++)
+title: ActiveCommand 属性示例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 8269ea29-912a-4d20-9360-f48b3746081f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f0f0b39b26fb349222a3ad04cd1414d9cf3ddafe
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c36744944fb88be4da22642246b54908809145cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760763"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451709"
 ---
 # <a name="activecommand-property-example-vc"></a>ActiveCommand 属性示例 (VC++)
-此示例演示了[ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md)属性。  
+此示例演示了 [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) 属性。  
   
- 为子程序提供了一个[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象，该对象的**ActiveCommand**属性用于显示创建该**记录集**的命令文本和参数。  
+ 为子程序提供了一个 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md) 对象，该对象的 **ActiveCommand** 属性用于显示创建该 **记录集**的命令文本和参数。  
   
 ## <a name="example"></a>示例  
   
@@ -221,5 +222,5 @@ Name = 'Anne  Ringer'
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ActiveCommand 属性（ADO）](../../../ado/reference/ado-api/activecommand-property-ado.md)   
+ [ActiveCommand 属性 (ADO) ](../../../ado/reference/ado-api/activecommand-property-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

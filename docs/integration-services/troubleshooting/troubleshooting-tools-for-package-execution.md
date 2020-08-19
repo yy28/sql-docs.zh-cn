@@ -1,4 +1,5 @@
 ---
+description: 对包执行进行故障排除的工具
 title: 包执行的疑难解答工具 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/26/2016
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 61f56bdae1fa0c9b8830e3dbd1f3614c793358d3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 246051704ba28a34cebac4672606fbddeaf4bba0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913724"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495127"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>对包执行进行故障排除的工具
 

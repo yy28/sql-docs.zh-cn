@@ -1,4 +1,5 @@
 ---
+description: SAP BW 源编辑器（“列”页）
 title: SAP BW 源编辑器（“列”页）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,19 +13,19 @@ f1_keywords:
 ms.assetid: c2ec8bb7-be9b-4783-ad88-32512de784b0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 60b888d1a17d56c41b586a0ffa0d2b869aa2ab4f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: dab03a43269739bbf77101f8ded9dac68ff2b8f3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923212"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495738"
 ---
 # <a name="sap-bw-source-editor-columns-page"></a>SAP BW 源编辑器（“列”页）
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  使用“SAP BW 源编辑器”的“列”页将输出列映射到每个外部（源）列。  
+  使用“SAP BW 源编辑器”**** 的“列”**** 页将输出列映射到每个外部（源）列。  
   
  若要了解 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的 SAP BW 源组件的详细信息，请参阅 [SAP BW 源](../../integration-services/data-flow/sap-bw-source.md)。  
   
@@ -38,7 +39,7 @@ ms.locfileid: "86923212"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开包含 SAP BW 源的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。  
   
-2.  在“数据流”  选项卡上，双击“SAP BW 源”。  
+2.  在“数据流”选项卡上，双击“SAP BW 源”。  
   
 3.  在 **“SAP BW 源编辑器”** 中单击 **“列”** ，以打开编辑器的 **“列”** 页。  
   

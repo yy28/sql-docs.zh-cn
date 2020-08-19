@@ -1,4 +1,5 @@
 ---
+description: 描述符字段
 title: 描述符字段 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f38623c8-fdd4-4601-b1f0-97c593d31177
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d363c3e42a97c5d520c1a693ebed935b202b7247
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 56ca1fa7d558101774d10c8daa530fa32f3f7d21
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362557"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476729"
 ---
 # <a name="descriptor-fields"></a>描述符字段
-描述符包含完全描述列或参数的*标头*和*记录*字段。  
+描述符包含完全描述列或参数的 *标头* 和 *记录* 字段。  
   
  描述符包含以下标头字段的单个副本。 更改标题字段将影响所有列或参数。  
 
@@ -81,7 +82,7 @@ ms.locfileid: "87362557"
     :::column-end:::
 :::row-end:::
 
- 许多语句特性对应于描述符的标头字段。 通过调用**SQLSetStmtAttr**来设置这些属性，并通过调用**SQLSetDescField**设置相应的描述符标头字段具有相同的效果。 这同样适用于**SQLGetStmtAttr**和**SQLGetDescField**，这两个参数都检索相同的信息。 调用语句函数而不是描述符函数的优点是不需要检索描述符句柄。  
+ 许多语句特性对应于描述符的标头字段。 通过调用 **SQLSetStmtAttr** 来设置这些属性，并通过调用 **SQLSetDescField** 设置相应的描述符标头字段具有相同的效果。 这同样适用于 **SQLGetStmtAttr** 和 **SQLGetDescField**，这两个参数都检索相同的信息。 调用语句函数而不是描述符函数的优点是不需要检索描述符句柄。  
   
  可以通过设置语句特性来设置以下标头字段：  
 

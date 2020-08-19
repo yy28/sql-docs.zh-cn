@@ -1,4 +1,5 @@
 ---
+description: STPolyFromWKB（geography 数据类型）
 title: STPolyFromWKB（geography 数据类型）| Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2017
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: d236e0ea-dabe-4341-a6eb-ecc210d1f056
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 1f83894fc743a9d1d9c779dc44c1243eb27696da
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: caa7913e9971a11413933ad2998f0d6042c9f4ca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555328"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422331"
 ---
 # <a name="stpolyfromwkb-geography-data-type"></a>STPolyFromWKB（geography 数据类型）
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-从开放地理空间信息联盟 (OGC) 已知二进制 (WKB) 表示形式返回 geographyPolygon 实例  。
+从开放地理空间信息联盟 (OGC) 已知二进制 (WKB) 表示形式返回 geographyPolygon 实例****。
   
 ## <a name="syntax"></a>语法  
   
@@ -39,21 +40,21 @@ STPolyFromWKB ( 'WKB_polygon' , SRID )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- WKB_polygon   
- 希望返回的 geographyPolygon 实例的 WKB 表示形式  。 WKB_polygon 是一个 varbinary(max) 表达式   。  
+ WKB_polygon**  
+ 希望返回的 geographyPolygon 实例的 WKB 表示形式****。 WKB_polygon 是一个 varbinary(max) 表达式******。  
   
  SRID   
- 一个 int 表达式，表示希望返回的 geographyPolygon 实例的空间引用 ID (SRID)   。  
+ 一个 int 表达式，表示希望返回的 geographyPolygon 实例的空间引用 ID (SRID)********。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
   
- CLR 返回类型：SqlGeography   
+ CLR 返回类型：SqlGeography  
   
- OGC 类型：Polygon   
+ OGC 类型：Polygon****  
   
 ## <a name="remarks"></a>备注  
- 如果输入的格式不正确，此方法将引发 FormatException  。  
+ 如果输入的格式不正确，此方法将引发 FormatException****。  
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `STPolyFromWKB()` 创建 `geography` 实例。  

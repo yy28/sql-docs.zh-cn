@@ -1,5 +1,6 @@
 ---
-title: EOS 和 LineSeparator 属性和 SkipLine 方法示例（VB） |Microsoft Docs
+description: 'LineSeparator 属性和 SkipLine 方法示例 (VB) '
+title: LineSeparator 属性和 SkipLine 方法示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 77ce3042-9ebc-44ba-a4ff-0f1b1fd4a9c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c4998ffe368a9f7773474514a7d53922d1b6cb36
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3265cf082790da2b9be844bd58b7af466cb45a18
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765538"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444019"
 ---
-# <a name="eos-and-lineseparator-properties-and-skipline-method-example-vb"></a>EOS 和 LineSeparator 属性和 SkipLine 方法示例（VB）
-此示例演示如何一次对一行的文本流进行操作。 显示将线条分隔符从默认回车符/换行符（**adCRLF**）更改为简单换行（**adLF**）或回车符（**adCR**）的效果。  
+# <a name="eos-and-lineseparator-properties-and-skipline-method-example-vb"></a>LineSeparator 属性和 SkipLine 方法示例 (VB) 
+此示例演示如何一次对一行的文本流进行操作。 会显示将线条分隔符从默认回车符/换行符 (**adCRLF**) 更改为简单 (**adLF**) 或回车符 (**adCR**) 的效果。  
   
 ```  
 'BeginSkipLineVB  
@@ -114,5 +115,5 @@ End Sub
   
 ## <a name="see-also"></a>另请参阅  
  [EOS 属性](../../../ado/reference/ado-api/eos-property.md)   
- [LineSeparator 属性（ADO）](../../../ado/reference/ado-api/lineseparator-property-ado.md)   
+ [LineSeparator 属性 (ADO) ](../../../ado/reference/ado-api/lineseparator-property-ado.md)   
  [SkipLine 方法](../../../ado/reference/ado-api/skipline-method.md)

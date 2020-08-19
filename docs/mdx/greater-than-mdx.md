@@ -1,5 +1,6 @@
 ---
-title: '&gt;（大于）（MDX） |Microsoft Docs'
+description: '&gt; (大于)  (MDX) '
+title: '&gt; (大于)  (MDX) |Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,14 +9,14 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: bb4f04e623096857cce9dd27f0cddc77f6a59798
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 54be7523c074b2242bd740ec0b1665eb8dfb81fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67906028"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429939"
 ---
-# <a name="gt-greater-than-mdx"></a>&gt;（大于）并用
+# <a name="gt-greater-than-mdx"></a>&gt; (大于)  (MDX) 
 
 
   执行比较运算，以确定一个多维表达式 (MDX) 的值是否大于另一个 MDX 表达式的值。  

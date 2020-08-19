@@ -1,4 +1,5 @@
 ---
+description: ADO API 参考
 title: ADO API 参考 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: bfd96a4b-c913-45aa-9e4c-ec86ac364f3a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ee4fc69164dcfc5d19643fc9e6ce496a5b3489c6
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 760510fba2f7a06a28e0c0804670d609b8ddc91d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760593"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451529"
 ---
 # <a name="ado-api-reference"></a>ADO API 参考
-ADO 文档的本节包含有关每个 ADO 对象、集合、属性、动态属性、方法、事件和枚举的主题。 此外，它还包含要与 Microsoft Visual C++ 和 Windows 基础类（WFC）一起使用的 ADO 语法索引的列表。  
+ADO 文档的本节包含有关每个 ADO 对象、集合、属性、动态属性、方法、事件和枚举的主题。 此外，它还包含一个 ADO 语法索引列表，该列表将与 Microsoft Visual C++ 和 Windows 基础类 (WFC) 一起使用。  
   
  有关详细信息，请在索引中搜索特定主题，或参阅下列主题：  
   
@@ -46,7 +47,7 @@ ADO 文档的本节包含有关每个 ADO 对象、集合、属性、动态属�
   
 ## <a name="see-also"></a>另请参阅  
  [附录 D： ADO 示例](../../../ado/guide/appendixes/appendix-d-ado-samples.md)   
- [Microsoft ActiveX 数据对象（ADO）](../../../ado/microsoft-activex-data-objects-ado.md)   
+ [Microsoft ActiveX 数据对象 (ADO) ](../../../ado/microsoft-activex-data-objects-ado.md)   
  [附录 C：用 ADO 编程](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md)   
  [附录 A：提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)   
  [ADO 历史记录](../../../ado/guide/ado-history.md)

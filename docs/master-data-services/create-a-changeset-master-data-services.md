@@ -1,4 +1,5 @@
 ---
+description: 创建变更集 (Master Data Services)
 title: 创建变更集
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cfad6f1c-9125-4896-b5f5-a4b9f9593cc4
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: db37dd8b4eed5c887cfceceb382fe57aa0d2fc33
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: ea6b6f0da9dc2660b91cd6432331256854a1d80c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812439"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495035"
 ---
 # <a name="create-a-changeset-master-data-services"></a>创建变更集 (Master Data Services)
 
@@ -25,7 +26,7 @@ ms.locfileid: "85812439"
   
 ## <a name="prerequisites"></a>先决条件  
   
--   你必须有权访问“资源管理器”功能区域。 有关详细信息，请参阅[功能区域权限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)  
+-   你必须有权访问“资源管理器”功能区域。 有关详细信息，请参阅 [功能区域权限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)  
   
 -   你必须至少拥有实体或其属性之一的读取访问权限。  
   

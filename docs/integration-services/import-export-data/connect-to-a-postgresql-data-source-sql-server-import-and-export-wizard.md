@@ -1,4 +1,5 @@
 ---
+description: 连接到 PostgreSQL 数据源（SQL Server 导入和导出向导）
 title: 连接到 PostgreSQL 数据源（SQL Server 导入和导出向导）| Microsoft Docs
 ms.custom: ''
 ms.date: 06/29/2020
@@ -9,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: b7a75a72-b267-444f-9eb8-d23eb333fc35
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5fdb7545f2dc8bf5d27b26e54bf76b0307aad235
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 023c791e27fba3c26ac3ccd9778f0beee44536b9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921379"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495590"
 ---
 # <a name="connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard"></a>连接到 PostgreSQL 数据源（SQL Server 导入和导出向导）
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-本主题向你介绍如何从 SQL Server 导入和导出向导的“选择数据源”页或“选择目标”页连接到 PostgreSQL 数据源    。 
+本主题向你介绍如何从 SQL Server 导入和导出向导的“选择数据源”页或“选择目标”页连接到 PostgreSQL 数据源************。 
 
 > [!IMPORTANT]
 > 连接到 PostgreSQL 数据库的详细需求和先决条件不在此 Microsoft 文章的范围之内。 本文假定已安装了 PostgreSQL 客户端软件，并且已成功连接到目标 PostgreSQL 数据库。 有关详细信息，请咨询 PostgreSQL 数据库管理员或参阅 PostgreSQL 文档。
@@ -37,7 +38,7 @@ ms.locfileid: "86921379"
 或者从此 FTP 站点直接下载用于最新版 PostgreSQL ODBC 驱动程序 (psqlODBC) 的 Windows 安装程序：[https://www.postgresql.org/ftp/odbc/versions/msi/](https://www.postgresql.org/ftp/odbc/versions/msi/)。 从 .zip 文件中提取文件并运行 .msi 文件。
 
 ## <a name="connect-to-postgresql-with-the-postgresql-odbc-driver-psqlodbc"></a>使用 PostgreSQL ODBC 驱动程序 (psqlODBC) 连接到 PostgreSQL
-ODBC 驱动程序不在数据源的下拉列表中列出。 要使用 ODBC 驱动程序连接，请首先在“选择数据源”页或“选择目标”页上选择“用于ODBC 的 .NET Framework 数据提供程序”作为数据源    。 此提供程序充当 ODBC 驱动程序的包装器。
+ODBC 驱动程序不在数据源的下拉列表中列出。 要使用 ODBC 驱动程序连接，请首先在“选择数据源”页或“选择目标”页上选择“用于ODBC 的 .NET Framework 数据提供程序”作为数据源************。 此提供程序充当 ODBC 驱动程序的包装器。
 
 下面是选择用于 ODBC 的 .NET Framework 数据提供程序后随即显示的常规屏幕。
 
@@ -54,19 +55,19 @@ ODBC 驱动程序不在数据源的下拉列表中列出。 要使用 ODBC 驱�
 > 获取有关组合出正确连接字符串的帮助。 或提供现有 DSN（数据源名称）或新建一个，而不是提供连接字符串。 有关这些选项的详细信息，请参阅[连接到 ODBC 数据源](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)。
 
 **驱动程序**  
-ODBC 驱动程序的名称 - 可以为 PostgreSQL ODBC Driver(UNICODE) 或 PostgreSQL ODBC Driver(ANSI)   。
+ODBC 驱动程序的名称 - 可以为 PostgreSQL ODBC Driver(UNICODE) 或 PostgreSQL ODBC Driver(ANSI)********。
 
 **Server**  
 PostgreSQL 服务器的名称。 
 
-端口   
+**端口**  
 用于连接到 PostgreSQL 服务器的端口。
 
 **Database**  
 PostgreSQL 数据库的名称。
 
-Uid 和 Pwd      
-要连接的 UID（用户 ID）和密码   。
+Uid 和 Pwd********   
+要连接的 UID（用户 ID）和密码********。
 
 ### <a name="connection-string-format"></a>连接字符串格式
 以下是典型连接字符串的格式。 

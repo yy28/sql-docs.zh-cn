@@ -1,5 +1,6 @@
 ---
-title: BottomPercent （MDX） |Microsoft Docs
+description: BottomPercent (MDX)
+title: BottomPercent (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: cbcf9086cedc9221c39832bd0b7d55e5f0814c7f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1b3ce341526270335564e9f67ccb89612854e098
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68016909"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494971"
 ---
 # <a name="bottompercent-mdx"></a>BottomPercent (MDX)
 
@@ -31,7 +32,7 @@ BottomPercent(Set_Expression, Percentage, Numeric_Expression)
  *Set_Expression*  
  返回集的有效多维表达式 (MDX)。  
   
- *一定*  
+ *百分比*  
  有效的数值表达式，指定要返回的元组的百分比。  
   
  *Numeric_Expression*  

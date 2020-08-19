@@ -1,4 +1,5 @@
 ---
+description: 使用 RDS 与 ODBC 连接池
 title: 将 RDS 与 ODBC 连接池一起使用 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: e8b912c1-da5b-4e85-a000-1e6648a94237
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0e94670162c1d9c120786bfc08ed8d5f8cf59972
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 440a1947d5424840ec99f9e4da7ae03266c7ac04
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764598"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451859"
 ---
 # <a name="using-rds-with-odbc-connection-pooling"></a>使用 RDS 与 ODBC 连接池
-如果使用的是 ODBC 数据源，可以使用 Internet Information Services （IIS）中的连接池选项来实现客户端负载的高性能处理。 连接池是用于连接的资源管理器，用于维护经常使用的连接的打开状态。  
+如果正在使用 ODBC 数据源，可以使用 Internet Information Services (IIS) 中的连接池选项来实现客户端负载的高性能处理。 连接池是用于连接的资源管理器，用于维护经常使用的连接的打开状态。  
   
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件（有关详细信息，请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)）。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件 (参阅 Windows 8 和 [Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416) ，以了解更多详细信息) 。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到 [WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
  若要启用连接池，请参阅 Internet Information Services 文档。  
   
@@ -71,7 +72,7 @@ ms.locfileid: "82764598"
   
  如果所有 SQL 服务器都是从 Web 服务器访问的，则需要在 Web 服务器计算机上运行 SQL Server 的客户端配置实用程序。 以下步骤将更改从此 IIS Web 服务器建立的所有 SQL Server 连接的默认网络库，以使用 TCP/IP 套接字网络库。  
   
-### <a name="to-configure-the-web-server-all-sql-servers"></a>配置 Web 服务器（所有 SQL server）  
+### <a name="to-configure-the-web-server-all-sql-servers"></a>若要配置 Web 服务器 (所有 SQL server)   
   
 ### <a name="for-microsoft-sql-server-65"></a>对于 Microsoft SQL Server 6.5：  
   
@@ -95,7 +96,7 @@ ms.locfileid: "82764598"
   
  如果从 Web 服务器访问特定的 SQL Server，则需要在 Web 服务器计算机上运行 SQL Server 客户端配置实用程序。 若要更改特定 SQL Server 连接的网络库，请按如下所示在 Web 服务器计算机上配置 SQL Server 客户端软件。  
   
-### <a name="to-configure-the-web-server-a-specific-sql-server"></a>配置 Web 服务器（特定 SQL Server）  
+### <a name="to-configure-the-web-server-a-specific-sql-server"></a>若要配置 Web 服务器 (特定的 SQL Server)   
   
 ### <a name="for-microsoft-sql-server-65"></a>对于 Microsoft SQL Server 6.5：  
   

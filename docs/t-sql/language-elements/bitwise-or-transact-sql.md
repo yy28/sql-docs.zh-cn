@@ -1,4 +1,5 @@
 ---
+description: '|（位或）(Transact-SQL)'
 title: '|（位或） (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/10/2017
@@ -23,12 +24,12 @@ ms.assetid: 86a3b87f-9688-4eaf-a552-29f1b01d880a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 97bc42320852484c81959dc7530c53c79104cab3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5dce8843b20df446172db47a8d07fdb0ecf4b296
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923773"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459432"
 ---
 # <a name="-bitwise-or-transact-sql"></a>|（位或）(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,21 +48,21 @@ expression | expression
 
 ## <a name="arguments"></a>参数
  *expression*  
- 整数数据类型类别、bit、binary 或 varbinary 数据类型的任何有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)    。 对于位运算，expression 被视为二进制数字  。  
+ 整数数据类型类别、bit、binary 或 varbinary 数据类型的任何有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)************。 对于位运算，expression 被视为二进制数字。  
   
 > [!NOTE]  
->  位运算中，只有一个 expression 可以是 binary 或 varbinary 数据类型    。  
+>  位运算中，只有一个 expression 可以是 binary 或 varbinary 数据类型 。  
   
 ## <a name="result-types"></a>结果类型  
- 如果输入值为 int，则返回 int，如果输入值为 smallint，则返回 smallint，或者如果输入值为 tinyint，则返回 tinyint       。  
+ 如果输入值为 int，则返回 int，如果输入值为 smallint，则返回 smallint，或者如果输入值为 tinyint，则返回 tinyint************************。  
   
 ## <a name="remarks"></a>备注  
  位运算符 | 取两个表达式的每个对应位，在两个表达式之间执行逻辑位或运算。 如果在输入表达式中有一个位为 1 或两个位均为 1（对于正在解析的当前位），那么结果中的位将被设置为 1；如果输入表达式中的两个位都不为 1，则结果中的位将被设置为 0。  
   
- 如果左侧和右侧的表达式具有不同的整数数据类型（例如，左侧的表达式的数据类型为 smallint，右侧的表达式的数据类型为 int），则会将较小数据类型的参数转换为较大数据类型     。 此示例中，smallint  表达式  转换成了 int  。  
+ 如果左侧和右侧的表达式具有不同的整数数据类型（例如，左侧的表达式的数据类型为 smallint，右侧的表达式的数据类型为 int），则会将较小数据类型的参数转换为较大数据类型。 此示例中，smallint 表达式转换成了 int。  
   
 ## <a name="examples"></a>示例  
- 以下示例将创建一个包含 int 数据类型的表以显示原始的值，并将该表放入一个行中  。  
+ 以下示例将创建一个包含 int 数据类型的表以显示原始的值，并将该表放入一个行中****。  
   
 ```sql  
 CREATE TABLE bitwise (  
@@ -72,7 +73,7 @@ INSERT bitwise VALUES (170, 75);
 GO  
 ```  
   
- 以下查询对 a_int_value 列和 b_int_value 列执行位或运算   。  
+ 以下查询对 a_int_value 列和 b_int_value 列执行位或运算********。  
   
 ```  
 SELECT a_int_value | b_int_value  
@@ -89,7 +90,7 @@ GO
 (1 row(s) affected)  
 ```  
   
- 170（以下的 a_int_value 或 `A`）的二进制表示形式为 `0000 0000 1010 1010`。 75（以下的 b_int_value 或 `B`）的二进制表示形式为 `0000 0000 0100 1011`。 对这两个值执行位或运算产生的二进制结果为 `0000 0000 1110 1011`，即十进制数 235。  
+ 170（以下的 a_int_value 或 `A`）的二进制表示形式为 `0000 0000 1010 1010`****。 75（以下的 b_int_value 或 `B`）的二进制表示形式为 `0000 0000 0100 1011`****。 对这两个值执行位或运算产生的二进制结果为 `0000 0000 1110 1011`，即十进制数 235。  
   
 ```  
 (A | B)  

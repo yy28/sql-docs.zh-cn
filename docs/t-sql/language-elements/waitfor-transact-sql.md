@@ -1,4 +1,5 @@
 ---
+description: WAITFOR (Transact-SQL)
 title: WAITFOR (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -26,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 8e896e73-af27-4cae-a725-7a156733f3bd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 87fc7c86277292cbce61e1a8f66b38b80b580996
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ea7d90c70b68111e6ed9f1f63986c955f7bb1055
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922977"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459187"
 ---
 # <a name="waitfor-transact-sql"></a>WAITFOR (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -60,27 +61,27 @@ WAITFOR
  可以继续执行批处理、存储过程或事务之前必须经过的指定时段，最长可为 24 小时。  
   
  '*time_to_pass*'  
- 等待的时段。 time_to_pass 可以以“datetime”数据格式指定，也可以指定为局部变量   。 不能指定日期；因此，不允许指定“datetime”值的日期部分  。 time_to_pass 将被格式化为 hh:mm[[:ss].mss]  。
+ 等待的时段。 time_to_pass 可以以“datetime”数据格式指定，也可以指定为局部变量******。 不能指定日期；因此，不允许指定“datetime”值的日期部分****。 time_to_pass 将被格式化为 hh:mm[[:ss].mss]**。
   
  TIME  
  指定的运行批处理、存储过程或事务的时间。  
   
  '*time_to_execute*'  
- WAITFOR 语句完成的时间。 可以使用“datetime”数据格式指定 time_to_execute，也可以将其指定为局部变量   。 不能指定日期；因此，不允许指定“datetime”值的日期部分  。 time_to_execute 将被格式化为 hh:mm[[:ss].mss]，并且可以选择包括 1900-01-01 的日期  。
+ WAITFOR 语句完成的时间。 可以使用“datetime”数据格式指定 time_to_execute，也可以将其指定为局部变量******。 不能指定日期；因此，不允许指定“datetime”值的日期部分****。 time_to_execute 将被格式化为 hh:mm[[:ss].mss]，并且可以选择包括 1900-01-01 的日期**。
   
  *receive_statement*  
  有效的 RECEIVE 语句。  
   
 > [!IMPORTANT]  
->  包含 receive_statement 的 WAITFOR 仅适用于  *消息*[!INCLUDE[ssSB](../../includes/sssb-md.md)]。 有关详细信息，请参阅 [RECEIVE (Transact-SQL)](../../t-sql/statements/receive-transact-sql.md)。  
+>  包含 receive_statement 的 WAITFOR 仅适用于 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 消息**。 有关详细信息，请参阅 [RECEIVE (Transact-SQL)](../../t-sql/statements/receive-transact-sql.md)。  
   
  *get_conversation_group_statement*  
  有效的 GET CONVERSATION GROUP 语句。  
   
 > [!IMPORTANT]  
->  包含 get_conversation_group_statement 的 WAITFOR 仅适用于  *消息*[!INCLUDE[ssSB](../../includes/sssb-md.md)]。 有关详细信息，请参阅 [GET CONVERSATION GROUP (Transact-SQL)](../../t-sql/statements/get-conversation-group-transact-sql.md)。  
+>  包含 get_conversation_group_statement 的 WAITFOR 仅适用于 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 消息**。 有关详细信息，请参阅 [GET CONVERSATION GROUP (Transact-SQL)](../../t-sql/statements/get-conversation-group-transact-sql.md)。  
   
- TIMEOUT timeout   
+ TIMEOUT timeout**  
  指定消息到达队列前等待的时间（以毫秒为单位）。  
   
 > [!IMPORTANT]  
@@ -89,7 +90,7 @@ WAITFOR
 ## <a name="remarks"></a>备注  
  执行 WAITFOR 语句时，事务正在运行，并且其他请求不能在同一事务下运行。  
   
- 实际的时间延迟可能与 time_to_pass、time_to_execute 或 timeout 中指定的时间不同，它依赖于服务器的活动级别    。 计划 WAITFOR 语句线程时，计时器开始计时。 如果服务器忙碌，则可能不会立即计划线程；因此，时间延迟可能比指定的时间要长。  
+ 实际的时间延迟可能与 time_to_pass、time_to_execute 或 timeout 中指定的时间不同，它依赖于服务器的活动级别******。 计划 WAITFOR 语句线程时，计时器开始计时。 如果服务器忙碌，则可能不会立即计划线程；因此，时间延迟可能比指定的时间要长。  
   
  WAITFOR 不更改查询的语义。 如果查询不能返回任何行，WAITFOR 将一直等待，或等到满足 TIMEOUT 条件（如果已指定）。  
   
@@ -109,7 +110,7 @@ WAITFOR
 ## <a name="examples"></a>示例  
   
 ### <a name="a-using-waitfor-time"></a>A. 使用 WAITFOR TIME  
- 下面的示例在晚上 10:20 在 msdb 数据库中执行 `sp_update_job` 存储过程。 (`22:20`)。  
+ 下面的示例在晚上 10:20 在 msdb 数据库中执行 `sp_update_job` 存储过程。 (`22:20`).  
   
 ```  
 EXECUTE sp_add_job @job_name = 'TestJob';  

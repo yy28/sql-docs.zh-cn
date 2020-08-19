@@ -1,5 +1,6 @@
 ---
-title: AddNew 方法示例（VB） |Microsoft Docs
+description: AddNew 方法示例 (VB)
+title: 在 VB)  (AddNew 方法示例 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d439e097-65f3-471d-8799-5a1263beb3c1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 573679e173f97840ccffee9ad93d73cf0075b4b0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0f2f61a78102fa4905f80cf9706ed31930eab982
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760623"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451559"
 ---
 # <a name="addnew-method-example-vb"></a>AddNew 方法示例 (VB)
-此示例使用[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)方法创建具有指定名称的新记录。  
+此示例使用 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) 方法创建具有指定名称的新记录。  
   
 ```  
 'BeginAddNewVB  
@@ -108,5 +109,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [AddNew 方法（ADO）](../../../ado/reference/ado-api/addnew-method-ado.md)   
+ [AddNew 方法 (ADO) ](../../../ado/reference/ado-api/addnew-method-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

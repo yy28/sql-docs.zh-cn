@@ -1,5 +1,6 @@
 ---
-title: ActualSize 和 DefinedSize 属性示例（JScript） |Microsoft Docs
+description: ActualSize 和 DefinedSize 属性示例 (JScript)
+title: ActualSize 和 DefinedSize 属性示例 (JScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 23575e70-2304-43b4-b8be-99d9a6842589
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b2282aa7df82f7bb7b42c1ab9e37b3c2a2cf94bc
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: bbe2180d9f63f7dff8fa7398b3f037ea662b32d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760733"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451659"
 ---
 # <a name="actualsize-and-definedsize-properties-example-jscript"></a>ActualSize 和 DefinedSize 属性示例 (JScript)
-此示例使用[ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)和[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)属性来显示字段的定义大小和实际大小。 剪切下面的代码并将其粘贴到记事本或其他文本编辑器中，并将其保存为**ActualSizeJS**。  
+此示例使用 [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) 和 [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) 属性来显示字段的定义大小和实际大小。 剪切下面的代码并将其粘贴到记事本或其他文本编辑器中，并将其保存为 **ActualSizeJS**。  
   
 ```  
 <!-- BeginActualSizeJS -->  
@@ -131,6 +132,6 @@ body {
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ActualSize 属性（ADO）](../../../ado/reference/ado-api/actualsize-property-ado.md)   
+ [ActualSize 属性 (ADO) ](../../../ado/reference/ado-api/actualsize-property-ado.md)   
  [DefinedSize 属性](../../../ado/reference/ado-api/definedsize-property.md)   
  [字段对象](../../../ado/reference/ado-api/field-object.md)

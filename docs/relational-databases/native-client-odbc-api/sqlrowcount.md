@@ -1,4 +1,5 @@
 ---
+description: SQLRowCount
 title: SQLRowCount |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,16 +15,17 @@ ms.assetid: 967ed3d4-3d31-4485-ac92-027076ebc829
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 662b275e01223726bac7605fdf18fab123dd6231
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 11156b3b3080c537f1fb65eee081632ce7f3c1e3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002383"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423959"
 ---
 # <a name="sqlrowcount"></a>SQLRowCount
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  当参数值的数组绑定到语句执行时，如果参数值的任意行在语句执行中生成错误条件，则**SQLRowCount**将返回 SQL_ERROR。 不通过函数的*RowCountPtr*参数返回值。  
+  当参数值的数组绑定到语句执行时，如果参数值的任意行在语句执行中生成错误条件，则 **SQLRowCount** 将返回 SQL_ERROR。 不通过函数的 *RowCountPtr* 参数返回值。  
   
  应用程序可以利用 SQL_ATTR_PARAMS_PROCESSED_PTR 语句属性捕获在错误发生之前已处理的参数个数。  
   

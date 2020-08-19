@@ -1,4 +1,5 @@
 ---
+description: 存储过程（Integration Services 目录）
 title: 存储过程（Integration Services 目录）| Microsoft Docs
 ms.custom: ''
 ms.date: 12/16/2016
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a6ccd884-108f-4fb6-95ad-00b9cb65d5d6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9b9169d79a724d5d4a9d79f32d611e5b6faa4f0a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c5b0f5c9dad9633950d0c0fd8698d3f658d9d390
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912713"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495337"
 ---
 # <a name="stored-procedures-integration-services-catalog"></a>存储过程（Integration Services 目录）
 
@@ -28,7 +29,7 @@ ms.locfileid: "86912713"
 
   本节介绍可用于管理已部署到 [!INCLUDE[tsql](../../includes/tsql-md.md)] 实例的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储过程。  
   
- 调用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 存储过程以添加、删除、修改或指定存储在 SSISDB  目录中的对象。  
+ 调用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 存储过程以添加、删除、修改或指定存储在 SSISDB**** 目录中的对象。  
   
  目录的默认名称为 SSISDB。 目录中存储的对象包括项目、包、参数环境和操作历史记录。  
   

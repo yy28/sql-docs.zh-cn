@@ -1,4 +1,5 @@
 ---
+description: Visual C++ 中的 ADO 代码示例
 title: Visual C++ 中的 ADO 代码示例 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: af30b764-398f-4918-aaa7-3952226cf544
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ac6e639001c84142604ca54664784922da05d682
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 94821a930458d9b3a9c9deed6e9dd076243bae1d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760563"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451489"
 ---
 # <a name="ado-code-examples-in-visual-c"></a>Visual C++ 中的 ADO 代码示例
 使用以下代码示例来了解如何在 Microsoft Visual C++ 中写入时使用 ADO 方法、属性和事件。  
@@ -75,7 +76,7 @@ ms.locfileid: "82760563"
   
 -   [UpdateBatch 和 CancelBatch 方法示例](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vc.md)  
   
-## <a name="properties"></a>属性  
+## <a name="properties"></a>“属性”  
   
 -   [AbsolutePage、PageCount 和 PageSize 属性示例](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vc.md)  
   
@@ -133,9 +134,9 @@ ms.locfileid: "82760563"
   
 -   [StayInSync 属性示例](../../../ado/reference/ado-api/stayinsync-property-example-vc.md)  
   
--   [Type 属性示例（字段）](../../../ado/reference/ado-api/status-property-example-vc.md)  
+-   [ (字段的 Type 属性示例) ](../../../ado/reference/ado-api/status-property-example-vc.md)  
   
--   [Type 属性示例（属性）](../../../ado/reference/ado-api/type-property-example-property-vc.md)  
+-   [Type 属性示例 (属性) ](../../../ado/reference/ado-api/type-property-example-property-vc.md)  
   
 -   [Value 属性示例](../../../ado/reference/ado-api/value-property-example-vc.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: catalog.get_parameter_values（SSISDB 数据库）
 title: catalog.get_parameter_values（SSISDB 数据库）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 5b1aeaf7-c938-4aef-bafc-e4d7a82eb578
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 947b8607c54e3cb2022b32be0f68bab0dc53ffee
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 349a68fa94cfb479c6c3823b2b295a3a65498692
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913007"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495393"
 ---
 # <a name="catalogget_parameter_values-ssisdb-database"></a>catalog.get_parameter_values（SSISDB 数据库）
 
@@ -43,8 +44,8 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
  [ @project_name = ] project_name   
  参数所在的项目的名称。 *project_name* 为 **nvarchar(128)** 。  
   
- [ @package_name = ] package_name   
- 包的名称。 指定包名称，以便从特定包中检索所有项目参数和参数。 package_name  为 nvarchar(260)  。  
+ [ @package_name = ] package_name**  
+ 包的名称。 指定包名称，以便从特定包中检索所有项目参数和参数。 package_name** 为 nvarchar(260)****。  
   
  [ @reference_id = ] reference_id   
  环境引用的唯一标识符。 此参数是可选的。 reference_id 为 bigint   。  
@@ -62,11 +63,11 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
 |parameter_name|**sysname**|参数的名称。|  
 |parameter_value|**sql_variant**|参数值。|  
 |sensitive|**bit**|当值为 `1` 时，参数值是敏感的。 当值为 `0` 时，参数值是不敏感的。|  
-|必填|**bit**|如果值为 `1`，则需要参数值才能开始执行。 如果值为 `0`，则不需要参数值即可开始执行。|  
+|必需|**bit**|如果值为 `1`，则需要参数值才能开始执行。 如果值为 `0`，则不需要参数值即可开始执行。|  
 |value_set|**bit**|如果值为 `1`，则已分配参数值。 如果值为 `0`，则尚未分配参数值。|  
   
 > [!NOTE]  
->  以纯文本形式显示文本值。 将显示 NULL  来替代敏感值。  
+>  以纯文本形式显示文本值。 将显示 NULL**** 来替代敏感值。  
   
 ## <a name="permissions"></a>权限  
  此存储过程需要下列权限之一：  

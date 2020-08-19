@@ -1,5 +1,6 @@
 ---
-title: 计算语句（MDX） |Microsoft Docs
+description: CALCULATE 语句 (MDX)
+title: 计算 (MDX) 的语句 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a873c2a6a60e3e6283c3c24fa4b9d28757e57ffb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6ec4d0e86c2719613527ec7ea8206f980deebc3a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893355"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429759"
 ---
 # <a name="mdx-scripting---calculate"></a>MDX 脚本 - CALCULATE
 
@@ -33,7 +34,7 @@ CALCULATE
 ## <a name="remarks"></a>备注  
  使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 创建多维数据集时，CALCULATE 语句会自动作为第一个语句包含在 多维数据集的 MDX 脚本中。 CALCULATE 语句通知多维数据集中的每个单元从粒度较小的单元开始聚合。 聚合单元后，如果随后使用表达式填充粒度较小的单元，则会影响粒度较大的单元的聚合值。 您几乎总是希望这种聚合发生，但您可以删除它或使其他语句在此语句之前执行。  
   
- CALCULATE 语句无法包含在 MDX 脚本的嵌套子多维数据集中。 嵌套的子多维数据集是使用 SCOPE 语句定义的。 有关 SCOPE 语句的详细信息，请参阅[Scope 语句 &#40;MDX&#41;](../mdx/mdx-scripting-scope.md)。  
+ CALCULATE 语句无法包含在 MDX 脚本的嵌套子多维数据集中。 嵌套的子多维数据集是使用 SCOPE 语句定义的。 有关 SCOPE 语句的详细信息，请参阅 [Scope 语句 &#40;MDX&#41;](../mdx/mdx-scripting-scope.md)。  
   
 > [!NOTE]  
 >  不对计算成员进行聚合。  

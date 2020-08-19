@@ -1,4 +1,5 @@
 ---
+description: ADO 代码示例 VBScript
 title: ADO 代码示例 VBScript |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 78bb9a95-7ac4-44b6-818b-d1787f952ed7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3289f97d4dd7d397d7eb4378e63ff0e6928d5524
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 68a63c48615dabb7bc33e71818e4e03eee214b4e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762958"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451499"
 ---
 # <a name="ado-code-examples-vbscript"></a>ADO 代码示例 VBScript
-使用以下代码示例来了解如何在 Microsoft® Visual Basic®脚本编写版（VBScript）中编写时使用 ADO 方法。  
+使用以下代码示例来了解如何在 Microsoft® Visual Basic®脚本编写版 (VBScript) 中编写时使用 ADO 方法。  
   
 > [!NOTE]
 >  从开头到末尾将整个代码示例粘贴到代码编辑器中。 如果使用了部分示例或段落格式丢失，则示例可能无法正常运行。  
