@@ -1,4 +1,5 @@
 ---
+description: 数字类型
 title: 数字类型 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/22/2017
@@ -13,17 +14,17 @@ ms.assetid: c11686eb-80b9-444c-bf1b-36ebad653df1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80f17bcd7ddeb9128ba38bc1c70edac270a7dd99
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 46818bdad18116ec89c1d83dad93229f4b571fa5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87391964"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88368823"
 ---
 # <a name="numeric-types"></a>数字类型
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持以下数字类型  。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持以下数字类型****。
   
 ## <a name="in-this-section"></a>在本节中
 
