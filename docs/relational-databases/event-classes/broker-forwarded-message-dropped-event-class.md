@@ -1,4 +1,5 @@
 ---
+description: Broker:Forwarded Message Dropped 事件类
 title: Broker:Forwarded Message Dropped 事件类 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2019
@@ -12,12 +13,12 @@ ms.assetid: ec242d0b-77b0-45f5-8b12-186a14b173a8
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11ac4c7c86b2add288271d56b91f7d9ab0848476
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6fe9b893b04f48a582e0ff0125c1fc33b77a16f5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715413"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88409863"
 ---
 # <a name="brokerforwarded-message-dropped-event-class"></a>Broker:Forwarded Message Dropped 事件类
 
@@ -49,7 +50,7 @@ ms.locfileid: "85715413"
 |ObjectId|**int**|转发的消息的生存时间值。|22|否|  
 |ObjectName|**nvarchar**|所转发消息的消息 ID。|34|否|  
 |OwnerName|**nvarchar**|消息目标的 Broker 实例标识符。|37|否|  
-|RoleName|**nvarchar**|会话句柄的角色。 可取值为：<br /><br /> -Initiator。 此 Broker 发起了该会话。<br /><br /> -Target。 此 Broker 是会话的目标。|38|否|  
+|RoleName|**nvarchar**|会话句柄的角色。 下列其中一项：<br /><br /> -Initiator。 此 Broker 发起了该会话。<br /><br /> -Target。 此 Broker 是会话的目标。|38|否|  
 |ServerName|**nvarchar**|所跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|否|  
 |严重性|**int**|事件中文本的严重级别号。|29|否|  
 |SPID|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为客户端所关联的进程分配的服务器进程 ID。|12|是|  

@@ -1,4 +1,5 @@
 ---
+description: 列存储索引 - 查询性能
 title: 列存储索引 - 查询性能 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/11/2019
@@ -11,12 +12,12 @@ ms.assetid: 83acbcc4-c51e-439e-ac48-6d4048eba189
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5310aa282e269e94fa394f529a680d778d662577
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f2e5fe98b5ec7d6fc141b41869e0caef7f6cb665
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007496"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88408793"
 ---
 # <a name="columnstore-indexes---query-performance"></a>列存储索引 - 查询性能
 
@@ -128,9 +129,9 @@ ms.locfileid: "86007496"
 -  聚合列不是字符串列。
 -  聚合列不是虚拟列。 
 -  输入和输出数据类型必须是以下类型之一，并且必须适合 64 位。
-    -  `tinyint`、`int`、`bigint`、`smallint`、`bit`
+    -  `tinyint`, `int`, `bigint`, `smallint`, `bit`
     -  精度 <= 18 的 `smallmoney`、`money`、`decimal` 和 `numeric`
-    -  `smalldate`、`date`、`datetime`、`datetime2`、`time`
+    -  `smalldate`, `date`, `datetime`, `datetime2`, `time`
     
  通过在对缓存友好的执行中对压缩/编码数据进行高效聚合并利用 SIMD 可进一步加快聚合下推速度    
     

@@ -1,4 +1,5 @@
 ---
+description: 新建发布向导
 title: 新建发布向导 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -40,14 +41,14 @@ helpviewer_keywords:
 ms.assetid: 57d65d16-90d1-4b4c-b68e-6418a7064e76
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b4585af3758327ea21834918a89142d8101b8745
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 679534bfdd567a0bbe48e43188d846b99e16e860
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85721225"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88405823"
 ---
-# <a name="new-publication-wizard"></a>New Publication Wizard
+# <a name="new-publication-wizard"></a>新建发布向导
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   本节介绍新建发布向导中的以下页的相关信息：  
   
@@ -63,7 +64,7 @@ ms.locfileid: "85721225"
   
 -   [代理安全性（新建发布向导）](../../relational-databases/replication/agent-security-new-publication-wizard.md)  
   
--   [项目](../../relational-databases/replication/articles.md)  
+-   [文章](../../relational-databases/replication/articles.md)  
   
 -   [项目问题](../../relational-databases/replication/article-issues.md)  
   
