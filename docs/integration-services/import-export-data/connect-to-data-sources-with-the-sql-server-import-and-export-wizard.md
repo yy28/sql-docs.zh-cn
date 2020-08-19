@@ -1,4 +1,5 @@
 ---
+description: 使用 SQL Server 导入和导出向导连接到数据源
 title: 连接到数据源（SQL Server 导入和导出向导）| Microsoft Docs
 ms.custom: ''
 ms.date: 02/15/2017
@@ -9,21 +10,21 @@ ms.topic: conceptual
 ms.assetid: fd726506-54b7-433b-bf70-3642235b7b31
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 94c0c2d183943c4fbbc2cbf0170120c3f9d680e0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 17edb259e987dc7d6b3892171c62e79d91b2f5c9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922423"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88391473"
 ---
 # <a name="connect-to-data-sources-with-the-sql-server-import-and-export-wizard"></a>使用 SQL Server 导入和导出向导连接到数据源
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-本部分中的主题说明如何在运行 SQL Server 导入和导出向导时连接到多个常用的数据源。 用户需要在向导的“选择数据源”  和“选择目标”  页上为数据源提供连接信息。
+本部分中的主题说明如何在运行 SQL Server 导入和导出向导时连接到多个常用的数据源。 用户需要在向导的“选择数据源”**** 和“选择目标”**** 页上为数据源提供连接信息。
 
-本部分中的主题仅介绍如何从向导的“选择数据源”和“选择目标”页**连接到数据源**。 如需其他信息，请参阅[相关任务和内容](#related)。
+本部分中的主题仅介绍如何从向导的“选择数据源”**** 和“选择目标”**** 页**连接到数据源**。 如需其他信息，请参阅[相关任务和内容](#related)。
 
 ## <a name="connect-to-a-commonly-used-data-source"></a>连接到常用数据源
 单击链接详细了解如何连接到以下常用数据源之一。
@@ -31,7 +32,7 @@ ms.locfileid: "86922423"
 -   [Oracle](../../integration-services/import-export-data/connect-to-an-oracle-data-source-sql-server-import-and-export-wizard.md)
 -   [平面文件（文本文件）](../../integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md)
 -   [Excel](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)
--   [Access](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md)
+-   [访问](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md)
 -   [Azure Blob 存储](../../integration-services/import-export-data/connect-to-azure-blob-storage-sql-server-import-and-export-wizard.md)
 -   [ODBC](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)
 -   [PostgreSQL](../../integration-services/import-export-data/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard.md)

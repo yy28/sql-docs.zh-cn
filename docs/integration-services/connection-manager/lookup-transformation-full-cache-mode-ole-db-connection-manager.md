@@ -1,4 +1,5 @@
 ---
+description: 查找转换完全缓存模式 - OLE DB 连接管理器
 title: 查找转换完全缓存模式 - OLE DB 连接管理器 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c1b663d20972a8c4a788c9a12f6b9b5dcdf01307
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: df4cde828997d68b15869000f111a99479369e55
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923116"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88394203"
 ---
 # <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>查找转换完全缓存模式 - OLE DB 连接管理器
 
@@ -43,29 +44,29 @@ ms.locfileid: "86923116"
   
 4.  双击源或前一转换以配置组件。  
   
-5.  双击查找转换，在“查找转换编辑器”  的“常规”  页上，选择“完全缓存”  。  
+5.  双击查找转换，在“查找转换编辑器”**** 的“常规”**** 页上，选择“完全缓存”****。  
   
-6.  在 **“连接类型”** 区域，选择 **“OLE DB 连接管理器”** 。  
+6.  在 **“连接类型”** 区域，选择 **“OLE DB 连接管理器”**。  
   
 7.  在 **“指定如何处理无匹配项的行”** 列表中，为没有匹配项的行选择一个错误处理选项。  
   
-8.  在“连接”页上，从 **“OLE DB 连接管理器”** 列表中选择一个连接管理器，或单击 **“新建”** 创建一个新的连接管理器。 有关详细信息，请参阅 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)。  
+8.  在 “连接” 页上，从 **“OLE DB 连接管理器”** 列表中选择一个连接管理器，或单击 **“新建”** 创建一个新的连接管理器。 有关详细信息，请参阅 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)。  
   
 9. 执行下列任务之一：  
   
-    -   单击 **“使用表或视图”** ，然后选择一个表或视图，或单击 **“新建”** 创建表或视图。  
+    -   单击 **“使用表或视图”**，然后选择一个表或视图，或单击 **“新建”** 创建表或视图。  
   
-         -或-  
+         - 或 -  
   
-    -   单击 **“使用 SQL 查询的结果”** ，然后在 **“SQL 命令”** 窗口中生成查询，或者单击 **“生成查询”** ，使用 **查询生成器** 提供的图形工具生成查询。  
+    -   单击 **“使用 SQL 查询的结果”**，然后在 **“SQL 命令”** 窗口中生成查询，或者单击 **“生成查询”** ，使用 **查询生成器** 提供的图形工具生成查询。  
   
-         -或-  
+         - 或 -  
   
     -   或者，单击 **“浏览”** ，从文件中导入 SQL 语句。  
   
-     若要验证 SQL 查询，请单击 **“分析查询”** 。  
+     若要验证 SQL 查询，请单击 **“分析查询”**。  
   
-     若要查看数据的示例，请单击 **“预览”** 。  
+     若要查看数据的示例，请单击 **“预览”**。  
   
 10. 单击 **“列”** 页，然后将至少一列从 **“可用输入列”** 列表中拖动到 **“可用查找列”** 列表中的列。  
   

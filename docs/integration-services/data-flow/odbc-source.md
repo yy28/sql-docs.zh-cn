@@ -1,4 +1,5 @@
 ---
+description: ODBC 源
 title: ODBC 源 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ f1_keywords:
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7382675ca38ecaabd685d68e0dc31f09e94be6ad
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 800c3e0b8af863cd7947e6847d3c8fe2e1ccab44
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914970"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88392113"
 ---
 # <a name="odbc-source"></a>ODBC 源
 
@@ -56,7 +57,7 @@ ms.locfileid: "86914970"
  有关 ODBC 源支持的数据类型的信息，请参阅开放式数据库连接 (ODBC) 连接器。  
   
 ## <a name="extract-options"></a>提取选项  
- ODBC 源在“批处理”  或“逐行”  模式下操作。 使用的模式由 **FetchMethod** 属性确定。 下表对这些模式进行了说明。  
+ ODBC 源在“批处理”**** 或“逐行”**** 模式下操作。 使用的模式由 **FetchMethod** 属性确定。 下表对这些模式进行了说明。  
   
 -   **批处理**：组件将基于发现的 ODBC 访问接口功能尝试使用最高效的提取方法。 对于大多数现今的 ODBC 提供程序，这是具有数组绑定的 SQLFetchScroll（其中，数组大小由 **BatchSize** 属性确定）。 如果选择“批处理”  并且提供程序不支持此方法，则 ODBC 目标将自动切换到“逐行”  模式。  
   
@@ -79,7 +80,7 @@ ms.locfileid: "86914970"
   
  打开 **“高级编辑器”** 对话框：  
   
--   在您的 **项目的** “数据流” [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 屏幕上，右键单击 ODBC 源，然后选择 **“显示高级编辑器”** 。  
+-   在您的 **项目的** “数据流” [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 屏幕上，右键单击 ODBC 源，然后选择 **“显示高级编辑器”**。  
   
  有关可在“高级编辑器”对话框中设置的属性的详细信息，请参阅 [ODBC Source Custom Properties](../../integration-services/data-flow/odbc-source-custom-properties.md)。  
   
@@ -87,7 +88,7 @@ ms.locfileid: "86914970"
   
 -   [使用 ODBC 源提取数据](../../integration-services/data-flow/extract-data-by-using-the-odbc-source.md)  
   
--   [ODBC 源自定义属性](../../integration-services/data-flow/odbc-source-custom-properties.md)  
+-   [ODBC Source Custom Properties](../../integration-services/data-flow/odbc-source-custom-properties.md)  
   
 ## <a name="odbc-source-editor-connection-manager-page"></a>ODBC 源编辑器（“连接管理器”页）
   可以使用 **“ODBC 源编辑器”** 对话框的 **“连接管理器”** 页，为源选择 ODBC 连接管理器。 使用此页还可以选择数据库中的表或视图。  
@@ -97,7 +98,7 @@ ms.locfileid: "86914970"
   
 -   在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，打开具有 ODBC 源的 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 包。  
   
--   在“数据流”  选项卡上，双击 ODBC 源。  
+-   在“数据流”**** 选项卡上，双击 ODBC 源。  
   
 ### <a name="options"></a>选项  
   
@@ -124,16 +125,16 @@ ms.locfileid: "86914970"
  单击 **“预览”** ，查看从选定的表或视图中提取的最多前 200 行数据。  
   
 ## <a name="odbc-source-editor-columns-page"></a>ODBC 源编辑器（“列”页）
-  可以使用“ODBC 源编辑器”对话框的“列”页，将输出列映射到每个外部（源）列   。  
+  可以使用“ODBC 源编辑器”对话框的“列”页，将输出列映射到每个外部（源）列********。  
   
 ### <a name="task-list"></a>任务列表  
  **打开“ODBC 源编辑器”的“列”页**  
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，打开具有 ODBC 源的 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 包。  
   
-2.  在“数据流”  选项卡上，双击 ODBC 源。  
+2.  在“数据流”**** 选项卡上，双击 ODBC 源。  
   
-3.  在 **“ODBC 源编辑器”** 中，单击 **“列”** 。  
+3.  在 **“ODBC 源编辑器”** 中，单击 **“列”**。  
   
 ### <a name="options"></a>选项  
   
@@ -156,9 +157,9 @@ ms.locfileid: "86914970"
   
 -   在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，打开具有 ODBC 源的 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 包。  
   
--   在“数据流”  选项卡上，双击 ODBC 源。  
+-   在“数据流”**** 选项卡上，双击 ODBC 源。  
   
--   在 **“ODBC 源编辑器”** 中，单击 **“错误输出”** 。  
+-   在 **“ODBC 源编辑器”** 中，单击 **“错误输出”**。  
   
 ### <a name="options"></a>选项  
   
@@ -174,7 +175,7 @@ ms.locfileid: "86914970"
 #### <a name="truncation"></a>截断  
  选择 ODBC 源应该如何处理流中的截断：忽略失败、重定向行或使组件失败。  
   
-#### <a name="description"></a>说明  
+#### <a name="description"></a>描述  
  未使用。  
   
 #### <a name="set-this-value-to-selected-cells"></a>将此值设置到选定的单元格  

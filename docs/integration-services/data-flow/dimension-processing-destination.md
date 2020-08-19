@@ -1,4 +1,5 @@
 ---
+description: 维度处理目标
 title: 维度处理目标 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 4c49bb95-7259-42f4-a785-bb6aaf5f8566
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f3458ea4fd1a8c82896fd1c06a76ee4bfd8074bb
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5531a102eb4ec24fde1c9693c8f9939eb63b4335
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916709"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88392633"
 ---
 # <a name="dimension-processing-destination"></a>维度处理目标
 
@@ -58,26 +59,26 @@ ms.locfileid: "86916709"
  有关如何设置属性的详细信息，请参阅 [设置数据流组件的属性](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
   
 ## <a name="dimension-processing-destination-editor-connection-manager-page"></a>维度处理目标编辑器（“连接管理器”页）
-  可以使用“维度处理目标编辑器”对话框的“连接管理器”页面指定与   项目或  **实例之间的连接**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。  
+  可以使用“维度处理目标编辑器”对话框的“连接管理器”页面指定与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例之间的连接********。  
   
 ### <a name="options"></a>选项  
  **“ODBC 目标编辑器”**  
- 从列表中选择现有连接管理器，或单击“新建”  创建新的连接管理器。  
+ 从列表中选择现有连接管理器，或单击“新建”**** 创建新的连接管理器。  
   
  **新建**  
- 通过使用“添加 Analysis Services 连接管理器”  对话框创建一个新连接。  
+ 通过使用“添加 Analysis Services 连接管理器”**** 对话框创建一个新连接。  
   
  **可用维度列表**  
  选择要处理的维度。  
   
  **处理方法**  
- 选择要应用于列表中选定维度的处理方法。 此选项的默认值为 **“完全”** 。  
+ 选择要应用于列表中选定维度的处理方法。 此选项的默认值为 **“完全”**。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**添加(增量式)**|对维度执行增量处理。|  
 |**完整**|对维度执行完全处理。|  
-|**Update**|对维度执行更新处理。|  
+|**更新**|对维度执行更新处理。|  
   
 ## <a name="dimension-processing-destination-editor-mappings-page"></a>维度处理目标编辑器（“映射”页）
   可以使用 **“维度处理目标编辑器”** 对话框的 **“映射”** 页，将输入列映射到维度列。  
@@ -105,7 +106,7 @@ ms.locfileid: "86916709"
  **键错误操作**  
  指定如何处理包含不可接受的键值的记录。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**ConvertToUnknown**|将不适用的键值转换为 **UnknownMember** 值。|  
 |**DiscardRecord**|放弃记录。|  
@@ -117,12 +118,12 @@ ms.locfileid: "86916709"
  指定在出现错误时应停止处理。  
   
  **错误数**  
- 指定应停止处理的错误阈值（如果选择了“出错时停止”  ）。  
+ 指定应停止处理的错误阈值（如果选择了“出错时停止”****）。  
   
  **出错时要执行的操作**  
- 指定在达到错误阈值时执行的操作（如果选择了“出错时停止”  ）。  
+ 指定在达到错误阈值时执行的操作（如果选择了“出错时停止”****）。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**StopProcessing**|停止处理。|  
 |**StopLogging**|停止记录错误。|  
@@ -130,7 +131,7 @@ ms.locfileid: "86916709"
  **找不到键**  
  指定在出现“找不到键”错误时执行的操作。 默认情况下，此值为 **ReportAndContinue**。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**IgnoreError**|忽略错误并继续处理。|  
 |**ReportAndContinue**|报告错误并继续处理。|  
@@ -139,7 +140,7 @@ ms.locfileid: "86916709"
  **重复键**  
  指定在出现“重复键”错误时执行的操作。 默认情况下，此值为 **IgnoreError**。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**IgnoreError**|忽略错误并继续处理。|  
 |**ReportAndContinue**|报告错误并继续处理。|  
@@ -148,7 +149,7 @@ ms.locfileid: "86916709"
  **空键转换为未知键**  
  指定在将空键转换为 **UnknownMember** 值后所采取的操作。 默认情况下，此值为 **IgnoreError**。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**IgnoreError**|忽略错误并继续处理。|  
 |**ReportAndContinue**|报告错误并继续处理。|  
@@ -157,14 +158,14 @@ ms.locfileid: "86916709"
  **不允许空键**  
  指定在不允许空键而又遇到空键时执行的操作。 默认情况下，此值为 **ReportAndContinue**。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**IgnoreError**|忽略错误并继续处理。|  
 |**ReportAndContinue**|报告错误并继续处理。|  
 |**ReportAndStop**|报告错误并停止处理。|  
   
  **错误日志路径**  
- 键入错误日志的路径，或单击浏览 (...) 按钮以选择目标  。  
+ 键入错误日志的路径，或单击浏览 (...) 按钮以选择目标****。  
   
  **浏览(...)**  
  选择错误日志的路径。  

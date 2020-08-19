@@ -1,4 +1,5 @@
 ---
+description: 审核转换
 title: 审核转换 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2e0f716564eee0d867081576a36eba81735966c5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e04af79dc2020a2273717785fca57aac5e4de451
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915736"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88392273"
 ---
 # <a name="audit-transformation"></a>审核转换
 
@@ -33,7 +34,7 @@ ms.locfileid: "86915736"
 ## <a name="system-variables"></a>系统变量  
  下表介绍了审核转换可以使用的系统变量。  
   
-|系统变量|索引|说明|  
+|系统变量|索引|描述|  
 |---------------------|-----------|-----------------|  
 |**ExecutionInstanceGUID**|0|标识包的执行实例的 GUID。|  
 |**PackageID**|1|包的唯一标识符。|  
@@ -70,7 +71,7 @@ ms.locfileid: "86915736"
  **审核类型**  
  选择用于提供审核信息的可用系统变量。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**执行实例 GUID**|插入唯一标识包的执行实例的 GUID。|  
 |**包 ID**|插入唯一标识包的 GUID。|  

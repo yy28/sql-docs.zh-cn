@@ -1,4 +1,5 @@
 ---
+description: Attunity Oracle 更改数据捕获的已知错误和解决方法
 title: Attunity Oracle 更改数据捕获的已知错误和解决方法 | Microsoft Docs
 ms.date: 07/23/2019
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.technology: ''
 ms.topic: reference
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ee1e8f3ae65b4a906d42a4b00644456d89f9b900
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c6841092edcb5eac4005d0a068f31c768aedf5bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71713422"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88394383"
 ---
 # <a name="known-errors-and-resolutions-with-change-data-capture-for-oracle-by-attunity"></a>Attunity Oracle 更改数据捕获的已知错误和解决方法
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md)]
@@ -96,7 +97,7 @@ ms.locfileid: "71713422"
 
 ### <a name="management-console"></a>管理控制台
 
-当 CDC 实例在左窗格中突出显示时，你会在 Oracle 更改数据捕获设计器管理控制台中记录的“状态”消息中看到错误  。 
+当 CDC 实例在左窗格中突出显示时，你会在 Oracle 更改数据捕获设计器管理控制台中记录的“状态”消息中看到错误****。 
 
 ### <a name="query-trace-table"></a>查询跟踪表
 
@@ -104,27 +105,27 @@ ms.locfileid: "71713422"
 
 ### <a name="save-output-from-basic-logging"></a>保存基本日志记录的输出 
 
-若要捕获诊断，请在 Oracle 更改数据捕获管理控制台的“状态”选项卡上选择“收集诊断”  。 
+若要捕获诊断，请在 Oracle 更改数据捕获管理控制台的“状态”选项卡上选择“收集诊断”****。 
 
 ![“收集诊断”链接](media/known-issues-resolutions-with-cdc-for-oracle-attunity/collect-diagnostics.png)
 
-选择开始时间和日志文件的位置。 然后选择“创建”以启动诊断收集  。 
+选择开始时间和日志文件的位置。 然后选择“创建”以启动诊断收集****。 
 
 ![“收集诊断”链接](media/known-issues-resolutions-with-cdc-for-oracle-attunity/start-diagnostics.png)
 
 ### <a name="detailed-errors"></a>详细错误
 
-可提高实例收集的跟踪级别，并重复该方案以收集更详细的日志记录。 为此，请在“操作”下选择“属性”，然后在“高级”选项卡的“高级设置”网格中添加新属性     。将属性的名称设置为 `trace`，然后将值设置为 `SOURCE`。 
+可提高实例收集的跟踪级别，并重复该方案以收集更详细的日志记录。 为此，请在“操作”下选择“属性”，然后在“高级”选项卡的“高级设置”网格中添加新属性   。将属性的名称设置为 `trace`，然后将值设置为 `SOURCE`。 
 
 ![“收集诊断”链接](media/known-issues-resolutions-with-cdc-for-oracle-attunity/properties.png)
 
-重现该错误，然后选择“收集诊断”选项以收集日志  。 
+重现该错误，然后选择“收集诊断”选项以收集日志****。 
 
 ![“收集诊断”链接](media/known-issues-resolutions-with-cdc-for-oracle-attunity/collect-diagnostics.png)
 
 ## <a name="ora-00942-table-of-view-does-not-exist"></a>ORA-00942 表视图不存在 
 
-这是 CDC 实例的“状态”消息字段中显示的常见错误  。 该实例进行了多次重试，因此状态图标会暂时变为绿色，但随后会失败，并显示红色感叹号和“意外”状态。 
+这是 CDC 实例的“状态”消息字段中显示的常见错误****。 该实例进行了多次重试，因此状态图标会暂时变为绿色，但随后会失败，并显示红色感叹号和“意外”状态。 
 
 ![Oracle 错误](media/known-issues-resolutions-with-cdc-for-oracle-attunity/oracle-error.png)
 
@@ -150,7 +151,7 @@ ms.locfileid: "71713422"
 
 安装程序文件文件夹 `C:\Program Files\Change Data Capture for Oracle by Attunity\Attunity.SqlServer.XdbCdcDesigner.chm` 中包含的帮助文件详细列出了所有必需的权限。  有关完整列表，请参阅 .chm 文件中标题为“连接到 Oracle 源数据库”的页面。
 
-可通过在左窗格中选择 CDCInstance 并在“CDC 设计器”窗口最右侧的“操作”窗格中选择“属性”按钮来设置用户帐户  。 可从属性对话框页面更改 Oracle 日志挖掘身份验证帐户。
+可通过在左窗格中选择 CDCInstance 并在“CDC 设计器”窗口最右侧的“操作”窗格中选择“属性”按钮来设置用户帐户****。 可从属性对话框页面更改 Oracle 日志挖掘身份验证帐户。
 
 ![Oracle 错误](media/known-issues-resolutions-with-cdc-for-oracle-attunity/oracle-connection.png)
 

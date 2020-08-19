@@ -1,4 +1,5 @@
 ---
+description: Integration Services 设计器选项的“常规”页
 title: Integration Services 设计器选项的“常规”页 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: d695690a-923b-4036-945e-7621e8651deb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 70f263d2df8e81f379857c88615b6056bc884b81
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9dfbe2a36695d3fcb776d9993243f9210df8082c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914710"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88391113"
 ---
 # <a name="general-page-of-integration-services-designers-options"></a>Integration Services 设计器选项的“常规”页
 
@@ -26,13 +27,13 @@ ms.locfileid: "86914710"
 
   使用 **“选项”** 对话框中 **“Integration Services 设计器”** 页的 **“常规”** 页，可以指定用于加载、显示和升级包的选项。  
   
- 若要打开 **“常规”** 页，请在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，单击 **“工具”** 菜单上的 **“选项”** ，展开 **“商业智能设计器”** ，然后选择 **“Integration Services 设计器”** 。  
+ 若要打开 **“常规”** 页，请在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，单击 **“工具”** 菜单上的 **“选项”**，展开 **“商业智能设计器”**，然后选择 **“Integration Services 设计器”**。  
   
 ## <a name="options"></a>选项  
  **加载包时检查数字签名**  
  选择让 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 在加载包时检查数字签名。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 仅会检查数字签名是否存在、是否有效，并且是否来自可靠来源。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 不会检查包经过签名后是否发生过更改。  
   
- 如果你设置 **BlockedSignatureStates** 注册表值，则此注册表值会替代“加载包时检查数字签名”  选项。 有关详细信息，请参阅 [通过设置注册表值实现签名策略](../integration-services/packages/implement-a-signing-policy-by-setting-a-registry-value.md)。  
+ 如果你设置 **BlockedSignatureStates** 注册表值，则此注册表值会替代“加载包时检查数字签名” **** 选项。 有关详细信息，请参阅 [通过设置注册表值实现签名策略](../integration-services/packages/implement-a-signing-policy-by-setting-a-registry-value.md)。  
   
  有关数字证书和包的详细信息，请参阅 [使用数字签名标识包的源](../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md)。  
   
@@ -50,7 +51,7 @@ ms.locfileid: "86914710"
   
 -   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] OLE DB 访问接口  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client{2}  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client  
   
  [!INCLUDE[ssIS](../includes/ssis-md.md)] 包升级向导仅更新存储在连接管理器中的连接字符串。 向导不会更新通过使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 表达式语言或在脚本任务中使用代码动态构造的连接字符串。  
   

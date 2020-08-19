@@ -1,4 +1,5 @@
 ---
+description: Encrypt
 title: dtutil 实用工具 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d200856e098317f3158c2ace61c8e7cbb0001e88
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ae472556993fafc52719fcf929bf88c35098e196
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917103"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88392153"
 ---
 # <a name="dtutil-utility"></a>Encrypt
 
@@ -85,7 +86,7 @@ ms.locfileid: "86917103"
 dtutil /option [value] [/option [value]]...  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
   
 |选项|说明|  
 |------------|-----------------|  
@@ -120,7 +121,7 @@ dtutil /option [value] [/option [value]]...
 ## <a name="dtutil-exit-codes"></a>dtutil 退出代码  
  如果检测到语法错误、使用了错误参数或指定了无效的选项组合，**dtutil** 将设置退出代码以向你发出警报。 否则，该实用工具将报告“操作已成功完成”。下表列出了 **dtutil** 实用工具在退出时可以设置的值。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |0|已成功执行此实用工具。|  
 |1|此实用工具已失败。|  

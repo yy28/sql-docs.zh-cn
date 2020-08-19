@@ -1,4 +1,5 @@
 ---
+description: 标识符 (SSIS)
 title: 标识符 (SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2ae07f10db51458fed1836a4f815107a27c55304
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 34d66b1dd07bfc167c71c97de51474cc6c63dd2d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914567"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88391223"
 ---
 # <a name="identifiers-ssis"></a>标识符 (SSIS)
 
@@ -97,7 +98,7 @@ ms.locfileid: "86914567"
   
 -   后面的字符可以是在 Unicode 标准 2.0 中定义的字母或数字、下划线 (_) 以及字符 \@、$ 和 #。  
   
- 如果变量名中包含以上所列之外的字符，则必须将变量用方括号括起来。 例如，带有空格的变量名必须括在方括号内。 \@ 字符后面紧跟左括号。 例如，My Name  变量被引用为 \@[My Name]。 如果变量名和方括号间包含空格，则无效。  
+ 如果变量名中包含以上所列之外的字符，则必须将变量用方括号括起来。 例如，带有空格的变量名必须括在方括号内。 \@ 字符后面紧跟左括号。 例如，My Name 变量被引用为 \@[My Name]。 如果变量名和方括号间包含空格，则无效。  
   
 > [!NOTE]  
 >  用户定义的变量名和系统变量名区分大小写。  

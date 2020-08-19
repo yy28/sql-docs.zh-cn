@@ -1,4 +1,5 @@
 ---
+description: “清除维护”任务
 title: “清除维护”任务 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 73ad3cd6-9a6d-44cf-905f-c56aa658bf42
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7a25aa0d58500f5a51a1ae64983d6d4f8f221f97
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7b24e6085e255e6e6a66d499b6c23e4cba91cf7a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915413"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88392543"
 ---
 # <a name="maintenance-cleanup-task"></a>“清除维护”任务
 
@@ -36,7 +37,7 @@ ms.locfileid: "86915413"
   
  通常，需要删除不再需要的旧文件，并且可以将“清除维护”任务配置为删除已达到指定时限的文件。 例如，可以将任务配置为删除时限超过四周的文件。 可以使用日、周、月或年来指定要删除的文件的时限。 如果不指定要删除的文件的最小时限，则删除所有指定类型的文件。  
   
- 与更早版本的“清除维护”任务相比，该任务的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本不自动删除指定目录的子目录中的文件。 此约束减少了可能利用“清除维护”任务的功能来恶意删除文件的任何攻击的可攻击面。 若要删除一级子文件夹，必须通过选中“清除维护任务”对话框的“包括一级子文件夹”选项来显式选择执行此操作   。  
+ 与更早版本的“清除维护”任务相比，该任务的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本不自动删除指定目录的子目录中的文件。 此约束减少了可能利用“清除维护”任务的功能来恶意删除文件的任何攻击的可攻击面。 若要删除一级子文件夹，必须通过选中“清除维护任务”对话框的“包括一级子文件夹”选项来显式选择执行此操作********。  
   
 ## <a name="configuration-of-the-maintenance-cleanup-task"></a>“维护清除”任务的配置  
  可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器来设置属性。 此任务位于 **设计器中** “工具箱” **的** “维护计划中的任务” [!INCLUDE[ssIS](../../includes/ssis-md.md)] 部分。  

@@ -1,4 +1,5 @@
 ---
+description: 函数依赖关系配置文件请求选项（数据事件探查任务）
 title: 函数依赖关系配置文件请求选项（数据事件探查任务）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6eb853aa-8016-490c-be4f-06ab8d7f5021
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b2f4f0f63aa108f16a8649007c200d8f93261367
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1fa83e2b75860730f4e3d9b419a2ca8ca374ba31
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918203"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88393423"
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>函数依赖关系配置文件请求选项（数据事件探查任务）
 
@@ -32,7 +33,7 @@ ms.locfileid: "86918203"
  有关如何使用数据事件探查任务的详细信息，请参阅 [设置数据事件探查任务](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)。 有关如何使用数据配置文件查看器分析数据事件探查任务输出的详细信息，请参阅 [数据配置文件查看器](../../integration-services/control-flow/data-profile-viewer.md)。  
   
 ## <a name="understanding-the-selection-of-determinant-and-dependent-columns"></a>了解如何选择决定列和依赖列  
- “函数依赖关系配置文件请求”  计算决定端列或列集（在 **DeterminantColumns** 属性中指定）对依赖端列（在 **DependentColumn** 属性中指定）的值的决定程度。 例如，美国的州列在函数关系上应依赖于美国邮政编码列。 也就是说，如果邮政编码（决定列）为 98052，则州（依赖列）应始终为华盛顿。  
+ “函数依赖关系配置文件请求”**** 计算决定端列或列集（在 **DeterminantColumns** 属性中指定）对依赖端列（在 **DependentColumn** 属性中指定）的值的决定程度。 例如，美国的州列在函数关系上应依赖于美国邮政编码列。 也就是说，如果邮政编码（决定列）为 98052，则州（依赖列）应始终为华盛顿。  
   
  可以在 **DeterminantColumns** 属性中指定一个列或列集作为决定端。 例如，假定有一个包含列 A、B 和 C 的示例表，则您可以在 **DeterminantColumns** 属性中进行以下选择：  
   
@@ -46,7 +47,7 @@ ms.locfileid: "86918203"
 >  如果选择 **(\*)** ，则此选项可能会导致大量计算并降低任务性能。 但是，如果任务找到满足函数依赖关系阈值的子集，则它不会再分析其他的组合。 例如，在上述示例表中，如果任务确定列 C 为决定列，则不会再继续分析组合候选列。  
   
 ## <a name="request-properties-options"></a>请求属性选项  
- 对于 **“函数依赖关系配置文件请求”** ， **“请求属性”** 窗格将显示以下选项组：  
+ 对于 **“函数依赖关系配置文件请求”**， **“请求属性”** 窗格将显示以下选项组：  
   
 -   **Data**，它包含 **DeterminantColumns** 选项和 **DependentColumn** 选项  
   
@@ -96,7 +97,7 @@ ms.locfileid: "86918203"
   
  如果选择 **DictionarySort**，还可以选择下表中列出的任意选项组合。 默认情况下，不会选择这些附加选项中的任何一个。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**IgnoreCase**|指定比较是否区分大小写字母。 如果设置了此选项，字符串比较会忽略大小写。 例如，"ABC" 和 "abc" 没有区别。|  
 |**IgnoreNonSpace**|指定比较是否区分空格字符和标注字符。 如果设置了此选项，则比较会忽略标注字符。 例如，“Ã¥”等于“a”。|  
@@ -113,7 +114,7 @@ ms.locfileid: "86918203"
   
 |值|说明|  
 |-----------|-----------------|  
-|无 |不指定阈值。 不管函数依赖关系强度值如何，都会报告函数依赖关系强度。|  
+|**无**|不指定阈值。 不管函数依赖关系强度值如何，都会报告函数依赖关系强度。|  
 |**Specified**|使用 **FDStrengthThreshold**中指定的阈值。 仅当函数依赖关系强度大于阈值时，才会报告函数依赖关系强度。|  
 |**Exact**|不指定阈值。 仅当选定列之间具有完全匹配的函数依赖关系时，才会报告函数依赖关系强度。|  
   
