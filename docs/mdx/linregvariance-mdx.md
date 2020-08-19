@@ -1,5 +1,6 @@
 ---
-title: LinRegVariance （MDX） |Microsoft Docs
+description: LinRegVariance (MDX)
+title: LinRegVariance (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b45328614bbefe730c815f528e82f220ad0093e9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bd223530c0b184dd723abbb68c2acccd1240d870
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905515"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477029"
 ---
 # <a name="linregvariance-mdx"></a>LinRegVariance (MDX)
 
@@ -44,7 +45,7 @@ LinRegVariance(Set_Expression, Numeric_Expression_y [ ,Numeric_Expression_x ] ] 
   
  **LinRegVariance**函数对第一个数值表达式求值，以获得 y 轴的值。 然后，该函数根据第二个数值表达式计算指定集（如果已指定），以获得 X 轴的值。 如果未指定第二个数值表达式，则该函数使用指定集中的单元的当前上下文作为 X 轴的值。 不指定 x 轴参数经常与 Time 维度一起使用。  
   
- 获取点集后， **LinRegVariance**函数将返回描述线性方程与点的拟合度的统计方差。  
+ 获取点集后， **LinRegVariance** 函数将返回描述线性方程与点的拟合度的统计方差。  
   
 > [!NOTE]  
 >  **LinRegVariance**函数将忽略空单元或包含文本或逻辑值的单元。 但是，该函数将包含值为零的单元。  

@@ -1,5 +1,6 @@
 ---
-title: CREATE 子多维数据集语句（MDX） |Microsoft Docs
+description: MDX 数据定义 - CREATE SUBCUBE
+title: " (MDX) 创建子多维数据集语句 |Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1034d96ce0d683d38139636d53471d23581807a1
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 24f8ade9255543fcb1d2c23b7959a5def93b21dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362797"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477019"
 ---
 # <a name="mdx-data-definition---create-subcube"></a>MDX 数据定义 - CREATE SUBCUBE
 
@@ -28,7 +29,7 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
                                                   | NON VISUAL ( Select_Statement )  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  *Cube_Name*  
  为受限的多维数据集或透视提供名称的有效字符串表达式，该名称将作为子多维数据集的名称。  
   
@@ -52,10 +53,10 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
   
  删除子多维数据集时，也会删除在该子多维数据集的上下文中创建的会话对象。  
   
- 有关子多维数据的详细信息，请参阅[在 mdx 中生成子多维数据 &#40;mdx&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx)。  
+ 有关子多维数据的详细信息，请参阅 [在 mdx 中生成子多维数据 &#40;mdx&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx)。  
   
 ## <a name="example"></a>示例  
- 下例创建了一个子多维数据集，将表观多维数据集空间限制为与加拿大关联的成员。 然后，它使用**MEMBERS**函数返回 Geography 用户定义的层次结构的国家/地区级别的所有成员-仅返回加拿大国家/地区。  
+ 下例创建了一个子多维数据集，将表观多维数据集空间限制为与加拿大关联的成员。 然后，它使用 **MEMBERS** 函数返回 Geography 用户定义的层次结构的国家/地区级别的所有成员-仅返回加拿大国家/地区。  
   
 ```  
 CREATE SUBCUBE [Adventure Works] AS  
@@ -89,7 +90,7 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
  生成下列结果：  
   
-|业务类型 + 类别|All Products|配件|Clothing|  
+|业务类型 + 类别|All Products|Accessories|Clothing|  
 |-|-|-|-|  
 |All Resellers|$2031079.39|$506,172.45|$1,524,906.93|  
 |Value Added Reseller|$767388.52|$175,002.81|$592,385.71|  
@@ -117,7 +118,7 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
  生成以下不同的结果：  
   
-|业务类型 + 类别|All Products|配件|Clothing|  
+|业务类型 + 类别|All Products|Accessories|Clothing|  
 |-|-|-|-|  
 |All Resellers|$80,450,596.98|$571,297.93|$1,777,840.84|  
 |Value Added Reseller|$34,967,517.33|$175,002.81|$592,385.71|  
@@ -128,7 +129,7 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
 ## <a name="see-also"></a>另请参阅  
  [MDX &#40;Analysis Services 中的关键概念&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
  [Mdx 脚本语句 &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)   
- [&#40;MDX&#41;删除子多维数据集语句](../mdx/mdx-data-definition-drop-subcube.md)   
+ [&#40;MDX&#41;删除子多维数据集语句 ](../mdx/mdx-data-definition-drop-subcube.md)   
  [SELECT 语句 (MDX)](../mdx/mdx-data-manipulation-select.md)  
   
   

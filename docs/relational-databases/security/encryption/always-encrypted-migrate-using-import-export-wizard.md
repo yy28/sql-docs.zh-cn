@@ -1,4 +1,5 @@
 ---
+description: 通过 SQL Server 导入和导出向导在使用 Always Encrypted 的列之间迁移数据
 title: 通过 SQL Server 导入和导出向导在使用 Always Encrypted 的列之间迁移数据 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/31/2019
@@ -16,12 +17,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 42898b255427c5f3d870a21e17e2cdeb17039919
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 89592db85cd95996274484d17fd968d70a552373
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85627318"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423371"
 ---
 # <a name="migrate-data-to-or-from-columns-using-always-encrypted-with-sql-server-import-and-export-wizard"></a>通过 SQL Server 导入和导出向导在使用 Always Encrypted 的列之间迁移数据 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "85627318"
 若要确保 SQL Server 导入和导出向导可以加密和解密数据，需要为源数据库连接和目标数据库连接启用 Always Encrypted，并且需要有权访问用于保护源和目标数据库列中数据的密钥。 有关详细信息，请参阅[为数据库连接启用和禁用 Always Encrypted](#enable-and-disable-always-encrypted-for-a-database-connection) 和[在迁移过程中加密或解密数据的权限](#permissions-for-encrypting-or-decrypting-data-during-migration)。
 
 ### <a name="keep-data-encrypted-during-migration"></a>使数据在迁移过程中保持加密
-如果要将数据从源 SQL Server 数据库中的加密列复制到相同或其他 SQL Server 数据库中的加密列，并且目标列使用与源列完全  相同的架构（包括相同数据类型、加密类型和列加密密钥），则可以配置 SQL Server 导入和导出向导，以便从源列中检索已加密文本，并将加密数据（已加密文本）插入目标 SQL Server 数据库中的加密列。 
+如果要将数据从源 SQL Server 数据库中的加密列复制到相同或其他 SQL Server 数据库中的加密列，并且目标列使用与源列完全**** 相同的架构（包括相同数据类型、加密类型和列加密密钥），则可以配置 SQL Server 导入和导出向导，以便从源列中检索已加密文本，并将加密数据（已加密文本）插入目标 SQL Server 数据库中的加密列。 
 
 对于此方案，可以使用支持 SQL Server 的任何数据提供程序连接到源或目标 SQL Server 数据库。 如果使用的提供程序支持 Always Encrypted 连接到目标数据库，则需要确保为数据库连接禁用 Always Encrypted。 有关详细信息，请参阅[为数据库连接启用和禁用 Always Encrypted](#enable-and-disable-always-encrypted-for-a-database-connection)。
 
@@ -69,14 +70,14 @@ SQL Server 导入和导出向导中的以下数据提供程序支持 Always Encr
 
 ## <a name="permissions-for-encrypting-or-decrypting-data-during-migration"></a>在迁移过程中加密或解密数据的权限
 
-若要加密或解密 SQL Server 源或目标数据库中存储的数据，需要源数据库中的“查看任意列主密钥定义”  和“查看任意列加密密钥定义”  权限。
+若要加密或解密 SQL Server 源或目标数据库中存储的数据，需要源数据库中的“查看任意列主密钥定义”** 和“查看任意列加密密钥定义”** 权限。
 
 还需要有权访问为存储要加密或解密的数据的列配置的列主密钥：
 
 - **证书存储 - 本地计算机** - 必须对用作列主密钥的证书具有读取访问权限，或者是计算机上的管理员。
-- Azure Key Vault  - 需要包含列主密钥的保管库上的 get  、unwrapKey  和 verify  权限。
-- 密钥存储提供程序(CNG)  - 所需权限和凭据；使用密钥存储或密钥时可能会提示你，具体取决于存储和 KSP 配置。
-- 加密服务提供程序(CAPI)  - 所需权限和凭据；使用密钥存储或密钥时可能会提示你，具体取决于存储和 CSP 配置。
+- Azure Key Vault  - 需要包含列主密钥的保管库上的 get、unwrapKey 和 verify 权限。
+- 密钥存储提供程序(CNG)**** - 所需权限和凭据；使用密钥存储或密钥时可能会提示你，具体取决于存储和 KSP 配置。
+- 加密服务提供程序(CAPI)**** - 所需权限和凭据；使用密钥存储或密钥时可能会提示你，具体取决于存储和 CSP 配置。
 有关详细信息，请参阅 [创建并存储列主密钥 (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)。
 
 ## <a name="next-steps"></a>后续步骤

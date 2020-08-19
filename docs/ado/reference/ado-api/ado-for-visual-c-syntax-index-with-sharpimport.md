@@ -1,4 +1,5 @@
 ---
+description: 'ADO for Visual C++ 语法索引与 #import'
 title: 'ADO for Visual C++ 语法索引与 #import |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 5930ccd2-5bab-448a-b0bf-773b8a83e87c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 88be8dbcee4633fc8c0014088c7996f95f3e2f73
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f93ee0d10c3de2bbfe36673c6b521c0f38111ff2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747281"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451399"
 ---
 # <a name="ado-for-visual-c-syntax-index-with-import"></a>ADO for Visual C++ 语法索引与 #import
-此索引是基于 Microsoft Visual C++ 和 **#import**指令的 ADO 语言参考的交叉引用。  
+此索引是基于 Microsoft Visual C++ 和 **#import** 指令的 ADO 语言参考的交叉引用。  
   
- 此特定索引是通过使用针对 ADO 的 **#import**指令编译程序来派生的，然后重新格式化生成的 \* .tlh 文件。 仅保留有关方法、属性和事件的信息。 为每个属性声明的替代语法按相应的 " `__declspec(property...)` " 指令列出。  
+ 此特定索引是通过使用针对 ADO 的 **#import** 指令编译程序来派生的，然后重新格式化生成的 \* .tlh 文件。 仅保留有关方法、属性和事件的信息。 为每个属性声明的替代语法按相应的 " `__declspec(property...)` " 指令列出。  
   
- 强烈建议阅读[VISUAL C++ ADO 编程](../../../ado/guide/appendixes/visual-c-ado-programming.md)以获取详细信息。  
+ 强烈建议阅读 [VISUAL C++ ADO 编程](../../../ado/guide/appendixes/visual-c-ado-programming.md) 以获取详细信息。  
   
  对于以下元素，列出了 **#import** Visual C++ 中的方法和属性语法：  
   

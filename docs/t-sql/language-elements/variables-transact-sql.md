@@ -1,4 +1,5 @@
 ---
+description: 变量 (Transact-SQL)
 title: 变量 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/12/2017
@@ -13,12 +14,12 @@ ms.assetid: f372ae86-a003-40af-92de-fa52e3eea13f
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: abbfbd518796041c18f9bfe97522791c2ddf5f1f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b4eed82330e1a70ddbe269f3a0be845199b4931d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000722"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459245"
 ---
 # <a name="variables-transact-sql"></a>变量 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,7 +31,7 @@ Transact-SQL 局部变量是可以保存单个特定类型数据值的对象。 
 * 保存存储过程返回代码要返回的数据值或函数返回值。
 
 > [!NOTE]
-> 一些 Transact-SQL 系统函数的名称以两个 at  符号 (\@\@) 开头。 尽管在旧版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，\@\@函数称为全局变量，但它们不是变量，不具有等同于变量的行为。 \@\@函数是系统函数，语法遵循函数规则。
+> 一些 Transact-SQL 系统函数的名称以两个 at 符号 (\@\@) 开头。 尽管在旧版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，\@\@函数称为全局变量，但它们不是变量，不具有等同于变量的行为。 \@\@函数是系统函数，语法遵循函数规则。
 
 > [!NOTE]
 > 不能在视图中使用变量。
@@ -88,13 +89,13 @@ DECLARE 语句通过以下操作初始化 Transact-SQL 变量：
 * 指定系统提供的或用户定义的数据类型和长度。 对于数值变量还指定精度和小数位数。 对于 XML 类型的变量，可以指定一个可选的架构集合。
 * 将值设置为 NULL。
 
-例如，下面的 DECLARE语句创建名为 \@mycounter 且数据类型为 int 的局部变量。  
+例如，下面的 DECLARE**** 语句创建名为 \@mycounter**** 且数据类型为 int 的局部变量。  
 ```sql
 DECLARE @MyCounter int;
 ```
 若要声明多个局部变量，请在定义的第一个局部变量后使用一个逗号，然后指定下一个局部变量名称和数据类型。
 
-例如，下面的 DECLARE 语句创建了三个局部变量，分别名为 \@LastName、\@FirstName 和 \@StateProvince，并将每个变量都初始化为 NULL：  
+例如，下面的 DECLARE**** 语句创建了三个局部变量，分别名为 \@LastName****、\@FirstName**** 和 \@StateProvince****，并将每个变量都初始化为 NULL：  
 ```sql
 DECLARE @LastName nvarchar(30), @FirstName nvarchar(20), @StateProvince nchar(2);
 ```

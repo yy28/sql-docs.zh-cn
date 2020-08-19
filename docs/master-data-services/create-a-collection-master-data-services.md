@@ -1,4 +1,5 @@
 ---
+description: 创建集合 (Master Data Services)
 title: 创建集合
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3d4f152c-863c-4385-bca9-a9fcd0402e1f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 112adceba92c705cf545f6f4a67771c3d31292cd
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 7a5566592be79b54d4beda1c814500aa166c2404
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812414"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495031"
 ---
 # <a name="create-a-collection-master-data-services"></a>创建集合 (Master Data Services)
 
@@ -51,7 +52,7 @@ ms.locfileid: "85812414"
   
 8.  还可以在 **“说明”** 框中键入对集合的说明。  
   
-9. 单击 **“确定”** 。  
+9. 单击“确定”。  
   
 ## <a name="next-steps"></a>后续步骤  
   

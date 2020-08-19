@@ -1,4 +1,5 @@
 ---
+description: EventReasonEnum
 title: EventReasonEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,29 +16,29 @@ helpviewer_keywords:
 ms.assetid: 7d4a5496-ec2d-4936-b36a-7049a82be4b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 94b36cbab5ffe7c22f4d1941e61af8fabc8b9973
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 0dc0c811f989b0fd91c47827718d1d8480ddb769
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242727"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443919"
 ---
 # <a name="eventreasonenum"></a>EventReasonEnum
 指定导致事件发生的原因。  
   
-|返回的常量|值|说明|  
+|返回的常量|值|描述|  
 |--------------|-----------|-----------------|  
 |**adRsnAddNew**|1|操作已添加一条新记录。|  
-|**adRsnClose**|9|操作关闭了**记录集**。|  
+|**adRsnClose**|9|操作关闭了 **记录集**。|  
 |**adRsnDelete**|2|操作删除了记录。|  
 |**adRsnFirstChange**|11|操作对记录进行第一次更改。|  
-|**adRsnMove**|10|操作在记录**集中**移动记录指针。|  
-|**adRsnMoveFirst**|12|操作将记录指针移动到记录**集中**的第一条记录。|  
-|**adRsnMoveLast**|15|操作将记录指针移动到记录**集中**的最后一条记录。|  
-|**adRsnMoveNext**|13|操作将记录指针移动到记录**集中**的下一条记录。|  
-|**adRsnMovePrevious**|14|操作将记录指针移动到记录**集中**的上一个记录。|  
-|**adRsnRequery**|7|操作将重新查询[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。|  
-|**adRsnResynch**|8|操作将**记录集**与数据库重新同步。|  
+|**adRsnMove**|10|操作在记录 **集中**移动记录指针。|  
+|**adRsnMoveFirst**|12|操作将记录指针移动到记录 **集中**的第一条记录。|  
+|**adRsnMoveLast**|15|操作将记录指针移动到记录 **集中**的最后一条记录。|  
+|**adRsnMoveNext**|13|操作将记录指针移动到记录 **集中**的下一条记录。|  
+|**adRsnMovePrevious**|14|操作将记录指针移动到记录 **集中**的上一个记录。|  
+|**adRsnRequery**|7|操作将重新查询 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。|  
+|**adRsnResynch**|8|操作将 **记录集** 与数据库重新同步。|  
 |**adRsnUndoAddNew**|5|操作反转了新记录的添加。|  
 |**adRsnUndoDelete**|6|操作已反转记录的删除。|  
 |**adRsnUndoUpdate**|4|操作反转了记录的更新。|  
@@ -64,7 +65,7 @@ ms.locfileid: "87242727"
 |AdoEnums.EventReason.UNDOUPDATE|  
 |AdoEnums. EventReason. UPDATE|  
   
-## <a name="applies-to"></a>应用到  
+## <a name="applies-to"></a>适用于  
 
 :::row:::
     :::column:::

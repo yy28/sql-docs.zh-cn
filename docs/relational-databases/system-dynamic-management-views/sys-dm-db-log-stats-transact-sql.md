@@ -1,5 +1,6 @@
 ---
-title: sys. dm_db_log_stats （Transact-sql） |Microsoft Docs
+description: sys.dm_db_log_stats (Transact-SQL)
+title: sys. dm_db_log_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ ms.assetid: ''
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 25488898f7f8c6fb56ea75bc62480aefea171b59
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b70d0b23a55584bb866c278086bec7f437cedd2a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829469"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423271"
 ---
 # <a name="sysdm_db_log_stats-transact-sql"></a>sys.dm_db_log_stats (Transact-SQL)   
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -41,9 +42,9 @@ ms.locfileid: "82829469"
   
 ## <a name="arguments"></a>参数  
 
-*database_id* |NULL |**默认值**
+*database_id* |NULL | **默认值**
 
-数据库的 ID。 `database_id` 为 `int`。 有效的输入包括数据库的 ID 号、 `NULL` 或 `DEFAULT` 。 默认值为 `NULL`。 `NULL`和在 `DEFAULT` 当前数据库的上下文中是等效值。  
+数据库的 ID。 `database_id` 为 `int`。 有效的输入包括数据库的 ID 号、 `NULL` 或 `DEFAULT` 。 默认值为 `NULL`。 `NULL` 和在 `DEFAULT` 当前数据库的上下文中是等效值。  
 可以指定内置函数 [DB_ID](../../t-sql/functions/db-id-transact-sql.md)。 如果在 `DB_ID` 不指定数据库名称的情况下使用，则当前数据库的兼容级别必须为90或更高。
 
   
@@ -53,23 +54,23 @@ ms.locfileid: "82829469"
 |-----------------|---------------|-----------------|  
 |database_id    |**int**    |数据库 ID |  
 |recovery_model |**nvarchar(60)**   |   数据库的恢复模式。 可能的值包括： <br /> SIMPLE<br /> BULK_LOGGED <br /> FULL |  
-|log_min_lsn    |**nvarchar(24)**   |   事务日志中的当前开始[日志序列号（LSN）](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) 。|  
-|log_end_lsn    |**nvarchar(24)**   |   事务日志中最后一个日志记录的[日志序列号（LSN）](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) 。|  
-|current_vlf_sequence_number    |**bigint** |   执行时的当前[虚拟日志文件（VLF）](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)序列号。|  
-|current_vlf_size_mb    |**float**  |   当前[虚拟日志文件（VLF）](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)的大小（以 MB 为单位）。|   
-|total_vlf_count    |**bigint** |   事务日志中的[虚拟日志文件（vlf）](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)总数。 |  
+|log_min_lsn    |**nvarchar(24)**   |   事务日志中 [ (LSN) 的当前开始日志序列号 ](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) 。|  
+|log_end_lsn    |**nvarchar(24)**   |   事务日志中最后一个日志记录[ (LSN) 的日志序列号](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)。|  
+|current_vlf_sequence_number    |**bigint** |   当前 [虚拟日志文件 (](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) 在执行时 VLF) 序列号。|  
+|current_vlf_size_mb    |**float**  |   当前 [虚拟日志文件 (VLF) ](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) 大小（以 MB 为单位）。|   
+|total_vlf_count    |**bigint** |   事务日志中 [ (vlf) 的虚拟日志文件 ](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) 总数。 |  
 |total_log_size_mb  |**float**  |   总事务日志大小（MB）。 |  
-|active_vlf_count   |**bigint** |   事务日志中活动[虚拟日志文件（vlf）](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)的总数。|  
+|active_vlf_count   |**bigint** |   事务日志中 [ (vlf) 的活动虚拟日志文件 ](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) 总数。|  
 |active_log_size_mb |**float**  |   活动事务日志总大小（MB）。|  
-|log_truncation_holdup_reason   |**nvarchar(60)**   |   日志截断暂留原因。 该值与 `log_reuse_wait_desc` 的列相同 `sys.databases` 。  （有关这些值的更详细说明，请参阅[事务日志](../../relational-databases/logs/the-transaction-log-sql-server.md)）。 <br />可能的值包括： <br />NOTHING<br />CHECKPOINT<br />LOG_BACKUP<br />ACTIVE_BACKUP_OR_RESTORE<br />ACTIVE_TRANSACTION<br />DATABASE_MIRRORING<br />复制<br />DATABASE_SNAPSHOT_CREATION<br />LOG_SCAN<br />AVAILABILITY_REPLICA<br />OLDEST_PAGE<br />XTP_CHECKPOINT<br />其他暂时性 |  
+|log_truncation_holdup_reason   |**nvarchar(60)**   |   日志截断暂留原因。 该值与  `log_reuse_wait_desc` 的列相同 `sys.databases` 。  有关这些值的更详细说明，请参阅 [事务日志](../../relational-databases/logs/the-transaction-log-sql-server.md)) 的 (。 <br />可能的值包括： <br />NOTHING<br />CHECKPOINT<br />LOG_BACKUP<br />ACTIVE_BACKUP_OR_RESTORE<br />ACTIVE_TRANSACTION<br />DATABASE_MIRRORING<br />复制<br />DATABASE_SNAPSHOT_CREATION<br />LOG_SCAN<br />AVAILABILITY_REPLICA<br />OLDEST_PAGE<br />XTP_CHECKPOINT<br />其他暂时性 |  
 |log_backup_time    |**datetime**   |   上次事务日志备份时间。|   
-|log_backup_lsn |**nvarchar(24)**   |   上次事务日志备份[日志序列号（LSN）](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)。|   
-|log_since_last_log_backup_mb   |**float**  |   自上次事务日志备份[日志序列号（LSN）](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)以来的日志大小（MB）。|  
-|log_checkpoint_lsn |**nvarchar(24)**   |   最后一个检查点[日志序列号（LSN）](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)。|  
-|log_since_last_checkpoint_mb   |**float**  |   自上次检查点[日志序列号（LSN）](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)后的日志大小（MB）。|  
-|log_recovery_lsn   |**nvarchar(24)**   |   数据库的恢复[日志序列号（LSN）](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) 。 如果在 `log_recovery_lsn` 检查点 lsn 之前出现， `log_recovery_lsn` 则是最早的活动事务 LSN，否则 `log_recovery_lsn` 是检查点 lsn。|  
-|log_recovery_size_mb   |**float**  |   日志大小（MB），因为日志恢复[日志序列号（LSN）](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)。|  
-|recovery_vlf_count |**bigint** |   故障转移或服务器重新启动时要恢复的[虚拟日志文件（vlf）](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)总数。 |  
+|log_backup_lsn |**nvarchar(24)**   |   上次事务日志备份 [日志序列号 (LSN) ](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)。|   
+|log_since_last_log_backup_mb   |**float**  |   自上一次事务日志备份日志序列号后，日志大小（MB） [)  (LSN ](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)。|  
+|log_checkpoint_lsn |**nvarchar(24)**   |   LSN)  (的最后一个检查点 [日志序列号 ](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)。|  
+|log_since_last_checkpoint_mb   |**float**  |   自上次检查点 [日志序列号 (LSN) ](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)后的日志大小（MB）。|  
+|log_recovery_lsn   |**nvarchar(24)**   |   数据库 [ (LSN) 的恢复日志序列号 ](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) 。 如果在 `log_recovery_lsn` 检查点 lsn 之前出现， `log_recovery_lsn` 则是最早的活动事务 LSN，否则 `log_recovery_lsn` 是检查点 lsn。|  
+|log_recovery_size_mb   |**float**  |   日志大小（MB），因为日志恢复 [日志序列号 (LSN) ](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)。|  
+|recovery_vlf_count |**bigint** |   在故障转移或服务器重新启动时， (要恢复 [) 的虚拟日志文件 ](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) 的总数。 |  
 
 
 ## <a name="remarks"></a>备注
@@ -100,8 +101,8 @@ CROSS APPLY sys.dm_db_log_stats(s.database_id);
 ```
 
 ## <a name="see-also"></a>另请参阅  
-[动态管理视图和函数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+[动态管理视图和函数 (Transact-SQL)](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
 [与数据库相关的动态管理视图 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
-[sys. dm_db_log_space_usage &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
-[sys.dm_db_log_info (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)    
+[sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
+[sys.dm_db_log_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)    
   

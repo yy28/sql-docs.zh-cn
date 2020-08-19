@@ -1,4 +1,5 @@
 ---
+description: 在包中使用批注
 title: 在包中使用批注 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 48c8ed9a-b10d-490c-9ba7-4b77aa44e3dd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 56bc48040555dbcc7a48f1ec6d1e6d7422a53aaa
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5e25927358f87c63c2c7d6dcbfb92b565d02994e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913703"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495110"
 ---
 # <a name="use-annotations-in-packages"></a>在包中使用批注
 
@@ -40,19 +41,19 @@ ms.locfileid: "86913703"
   
 2.  在解决方案资源管理器中，双击该包将其打开。  
   
-3.  在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中，右键单击“控制流”  、“数据流”  或“事件处理程序”  选项卡上设计图面的任意处，再单击“添加批注”  。 选项卡的设计图面上将出现文本块。  
+3.  在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中，右键单击“控制流”****、“数据流”**** 或“事件处理程序”**** 选项卡上设计图面的任意处，再单击“添加批注”****。 选项卡的设计图面上将出现文本块。  
   
 4.  添加文本。  
   
     > [!NOTE]  
     >  如果未添加文本，则单击文本块外部时此文本块会被删除。  
   
-5.  若要更改批注中的文本大小或格式，请右键单击该批注，然后单击“设置文本批注字体”  。  
+5.  若要更改批注中的文本大小或格式，请右键单击该批注，然后单击“设置文本批注字体”****。  
   
 6.  若要添加其他文本行，请按 Enter。  
   
      在添加其他文本行时，批注框的大小会自动增加。  
   
-7.  若要向组添加批注，请右键单击该批注，然后单击“组”  。  
+7.  若要向组添加批注，请右键单击该批注，然后单击“组”****。  
   
-8.  若要保存更新后的包，请单击 **“文件”** 菜单中的 **“全部保存”** 。  
+8.  若要保存更新后的包，请单击 **“文件”** 菜单中的 **“全部保存”**。  

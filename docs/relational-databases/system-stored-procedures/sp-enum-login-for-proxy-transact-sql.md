@@ -1,5 +1,6 @@
 ---
-title: sp_enum_login_for_proxy （Transact-sql） |Microsoft Docs
+description: sp_enum_login_for_proxy (Transact-SQL)
+title: sp_enum_login_for_proxy (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: cd65937894956ff008a08ea6f15222d6d020ba2e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7707843979bd0c741ade8e4ae6759d265eb13d06
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891955"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486043"
 ---
 # <a name="sp_enum_login_for_proxy-transact-sql"></a>sp_enum_login_for_proxy (Transact-SQL)
 
@@ -42,14 +43,14 @@ sp_enum_login_for_proxy
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @name = ] 'name'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]要列出其代理的主体、登录名、服务器角色或**msdb**数据库角色的名称。 名称为**nvarchar （256）**，默认值为 NULL。  
+`[ @name = ] 'name'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]要列出其代理的主体、登录名、服务器角色或**msdb**数据库角色的名称。 名称为 **nvarchar (256) **，默认值为 NULL。  
   
-`[ @proxy_id = ] id`要列出其信息的代理的代理标识号。 *Proxy_id*的值为**int**，默认值为 NULL。 可以指定*id*或*proxy_name* 。  
+`[ @proxy_id = ] id` 要列出其信息的代理的代理标识号。 *Proxy_id*的值为**int**，默认值为 NULL。 可以指定 *id* 或 *proxy_name* 。  
   
-`[ @proxy_name = ] 'proxy_name'`要列出其信息的代理的名称。 *Proxy_name*的值为**sysname**，默认值为 NULL。 可以指定*id*或*proxy_name* 。  
+`[ @proxy_name = ] 'proxy_name'` 要列出其信息的代理的名称。 *Proxy_name*的值为**sysname**，默认值为 NULL。 可以指定 *id* 或 *proxy_name* 。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功）或**1** （失败）  
+ **0** (成功) 或 **1** (失败)   
   
 ## <a name="result-sets"></a>结果集  
   
@@ -62,16 +63,16 @@ sp_enum_login_for_proxy
 | &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="remarks"></a>备注  
- 如果未提供任何参数， **sp_enum_login_for_proxy**会列出有关每个代理的实例中所有登录名的信息。  
+ 如果未提供任何参数， **sp_enum_login_for_proxy** 会列出有关每个代理的实例中所有登录名的信息。  
   
- 当提供代理 id 或代理名称时， **sp_enum_login_for_proxy**会列出有权访问代理的登录名。 如果提供了登录名， **sp_enum_login_for_proxy**会列出登录名有权访问的代理。  
+ 当提供代理 id 或代理名称时， **sp_enum_login_for_proxy** 会列出有权访问代理的登录名。 如果提供了登录名， **sp_enum_login_for_proxy** 会列出登录名有权访问的代理。  
   
  当同时提供代理信息和登录名时，如果指定的登录有权访问指定的代理，则结果集将返回一行。  
   
- 此存储过程位于**msdb**中。  
+ 此存储过程位于 **msdb**中。  
   
 ## <a name="permissions"></a>权限  
- 此过程的执行权限默认授予**sysadmin**固定服务器角色的成员。  
+ 此过程的执行权限默认授予 **sysadmin** 固定服务器角色的成员。  
   
 ## <a name="examples"></a>示例  
   

@@ -1,4 +1,5 @@
 ---
+description: ADORecordsetConstruction 接口
 title: ADORecordsetConstruction 接口 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 23ee532329e8104d3a0e02c9547d9ca7813b42a2
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 3dd1000dce8308ada4044eb9f043097f8767a9c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242817"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451319"
 ---
 # <a name="adorecordsetconstruction-interface"></a>ADORecordsetConstruction 接口
 **ADORecordsetConstruction**接口用于从 c/c + + 应用程序中的 OLE DB**行**集对象构造 ADO**记录集**对象。  
@@ -42,9 +43,9 @@ ms.locfileid: "87242817"
  无。  
   
 ## <a name="remarks"></a>备注  
- 给定一个 OLE DB**行集**对象（ `pRowset` ），将 ADO**记录集**对象（）的构造 `adoRs` 分为以下三个基本操作：  
+ 给定 OLE DB **行集** 对象 (`pRowset`) 时，ADO **记录集** 对象的构造 (`adoRs`) 数量到以下三个基本操作：  
   
-1.  创建 ADO**记录集**对象：  
+1.  创建 ADO **记录集** 对象：  
   
     ```  
     Recordset20Ptr adoRs;  
@@ -79,5 +80,5 @@ ms.locfileid: "87242817"
  **UUID：** 00000283-0000-0010-8000-00AA006D2EA4  
   
 ## <a name="see-also"></a>另请参阅  
- [Recordset 对象（ADO）](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [ADO)  (Recordset 对象 ](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Rowset 属性 (ADO)](../../../ado/reference/ado-api/rowset-property-ado.md)

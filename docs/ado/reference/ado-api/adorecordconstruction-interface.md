@@ -1,4 +1,5 @@
 ---
+description: ADORecordConstruction 接口
 title: ADORecordConstruction 接口 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4dca796e9ba3c353d48fd3620c34a141c35a3fe8
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a52b8006ed97809690ec874c27e20ee8f1b05d0f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242827"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451329"
 ---
 # <a name="adorecordconstruction-interface"></a>ADORecordConstruction 接口
 **ADORecordConstruction**接口用于从 c/c + + 应用程序中的 OLE DB**行**对象构造 ADO**记录**对象。  
@@ -41,9 +42,9 @@ ms.locfileid: "87242827"
  无。  
   
 ## <a name="remarks"></a>备注  
- 给定一个 OLE DB**行**对象（ `pRow` ），即 ADO **Record**对象（）的构造 `adoR` ，其中包含以下三个基本操作：  
+ 给定一个 OLE DB **Row** 对象 (`pRow`) ， () 的 ADO **Record** 对象的构造 `adoR` ，并将其分为以下三个基本操作：  
   
-1.  创建 ADO**记录**对象：  
+1.  创建 ADO **记录** 对象：  
   
     ```  
     _RecordPtr adoR;  
@@ -68,7 +69,7 @@ ms.locfileid: "87242827"
   
  生成的**adoR**对象现在表示从 OLE DB**行**对象构造的 ADO**记录**对象。  
   
- ADO**记录**对象还可以从 OLE DB**行**对象的容器构造。  
+ ADO **记录** 对象还可以从 OLE DB **行** 对象的容器构造。  
   
 ## <a name="requirements"></a>要求  
  **版本：** ADO 2.0 及更高版本  

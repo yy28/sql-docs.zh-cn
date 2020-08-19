@@ -1,5 +1,6 @@
 ---
-title: 准备和执行语句（ODBC） |Microsoft Docs
+description: 准备和执行语句 (ODBC)
+title: " (ODBC) 准备和执行语句 |Microsoft Docs"
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -14,11 +15,12 @@ ms.assetid: 0adecc63-4da5-486c-bc48-09a004a2fae6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2ae98d59558738e4bcff979b38e341dd852661f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 7a00b92a059014ff36ee1e0b473285641ef107c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009462"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423767"
 ---
 # <a name="prepare-and-execute-a-statement-odbc"></a>准备和执行语句 (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -26,27 +28,27 @@ ms.locfileid: "86009462"
     
 ### <a name="to-prepare-a-statement-once-and-then-execute-it-multiple-times"></a>准备一次语句，然后多次执行它  
   
-1.  调用[SQLPrepare 函数](https://go.microsoft.com/fwlink/?LinkId=59360)可准备语句。  
+1.  调用 [SQLPrepare 函数](https://go.microsoft.com/fwlink/?LinkId=59360) 可准备语句。  
   
-2.  也可以调用[SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404)来确定预定义语句中的参数数量。  
+2.  也可以调用 [SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404) 来确定预定义语句中的参数数量。  
   
 3.  （可选）对于预定义语句中的每个参数：  
   
-    -   调用[SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md)以获取参数信息。  
+    -   调用 [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md) 以获取参数信息。  
   
-    -   使用[SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md)将每个参数绑定到程序变量。 设置任何执行时数据参数。  
+    -   使用 [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md)将每个参数绑定到程序变量。 设置任何执行时数据参数。  
   
 4.  对于每次执行预定义语句：  
   
     -   如果语句有参数标记，请将数据值放到绑定参数缓冲区中。  
   
-    -   调用[SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400)以执行预定义语句。  
+    -   调用 [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) 以执行预定义语句。  
   
-    -   如果使用执行时数据输入参数，则[SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400)将返回 SQL_NEED_DATA。 使用[SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405)和[SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md)以区块形式发送数据。  
+    -   如果使用执行时数据输入参数，则 [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) 将返回 SQL_NEED_DATA。 使用 [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) 和 [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md)以区块形式发送数据。  
   
 ### <a name="to-prepare-a-statement-with-column-wise-parameter-binding"></a>用按列参数绑定预定义语句  
   
-1.  调用[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)设置以下属性：  
+1.  调用 [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) 设置以下属性：  
   
     -   将 SQL_ATTR_PARAMSET_SIZE 设置为参数集 (S) 的数目。  
   
@@ -58,7 +60,7 @@ ms.locfileid: "86009462"
   
 2.  调用 SQLPrepare 以准备语句。  
   
-3.  也可以调用[SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404)来确定预定义语句中的参数数量。  
+3.  也可以调用 [SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404) 来确定预定义语句中的参数数量。  
   
 4.  （可选）对于预定义语句中的每个参数，调用 SQLDescribeParam 以获取参数信息。  
   
@@ -90,7 +92,7 @@ ms.locfileid: "86009462"
   
     -   第二部分是 SQLINTEGER 变量，以包含状态指示器。  
   
-2.  调用[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)设置以下属性：  
+2.  调用 [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) 设置以下属性：  
   
     -   将 SQL_ATTR_PARAMSET_SIZE 设置为参数集 (S) 的数目。  
   
@@ -113,6 +115,6 @@ ms.locfileid: "86009462"
     -   如果使用执行时数据输入参数，则 SQLExecute 返回 SQL_NEED_DATA。 使用 SQLParamData 和 SQLPutData 以区块形式发送数据。  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;ODBC&#41;执行查询操作指南主题](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
+ [&#40;ODBC&#41;执行查询操作指南主题 ](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
   

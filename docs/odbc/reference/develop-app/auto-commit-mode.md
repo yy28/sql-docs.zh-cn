@@ -1,4 +1,5 @@
 ---
+description: 自动提交模式
 title: 自动提交模式 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c8de5b60-d147-492d-b601-2eeae8511d00
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6f19053eec7a48eba7a51425b01744f3acd10015
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: af4b532a2163f0c30a3bdb792cfada6bdf806c43
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285107"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476889"
 ---
 # <a name="auto-commit-mode"></a>自动提交模式
 *在自动提交模式下，* 每个数据库操作都是在执行时提交的事务。 此模式适用于由单个 SQL 语句组成的多个实际事务。 不需要分隔或指定完成这些事务。 在不支持事务的数据库中，自动提交模式是唯一受支持的模式。 在这种情况下，在执行语句时，将提交语句，而且无法回滚语句;因此，它们始终处于自动提交模式。  

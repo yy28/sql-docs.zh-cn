@@ -1,5 +1,6 @@
 ---
-title: Avg （MDX） |Microsoft Docs
+description: Avg (MDX)
+title: Avg (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: aa8817e35a589def4631bd455637d05fc62d3a0f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e5cac19b597139274502d455fb5f8f4e5087c8a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017011"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477059"
 ---
 # <a name="avg-mdx"></a>Avg (MDX)
 
@@ -35,19 +36,19 @@ Avg( Set_Expression [ , Numeric_Expression ] )
  返回数字的有效数值表达式，通常为单元坐标的多维表达式 (MDX)。  
   
 ## <a name="remarks"></a>备注  
- 如果指定了一组空元组或空集，则**Avg**函数将返回空值。  
+ 如果指定了一组空元组或空集，则 **Avg** 函数将返回空值。  
   
  **Avg**函数通过首先计算指定集中单元的值之和来计算指定集中单元的非空值的平均值，然后将计算所得的和除以指定集内的非空单元计数。  
   
 > [!NOTE]  
 >  计算一组数值的平均值时，[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将忽略 Null 值。  
   
- 如果未指定特定的数值表达式（通常为度量值），则**Avg**函数将计算当前查询上下文中每个度量值的平均值。 如果提供了特定的度量值，则**Avg**函数首先计算该集的度量值，然后该函数基于指定的度量值计算平均值。  
+ 如果指定的数值表达式通常 (未指定度量值) ，则 **Avg** 函数将在当前查询上下文中计算每个度量值的平均值。 如果提供了特定的度量值，则 **Avg** 函数首先计算该集的度量值，然后该函数基于指定的度量值计算平均值。  
   
 > [!NOTE]  
->  在计算成员语句中使用**CurrentMember**函数时，必须指定数值表达式，因为在此类查询上下文中不存在当前坐标的默认度量值。  
+>  在计算成员语句中使用 **CurrentMember** 函数时，必须指定数值表达式，因为在此类查询上下文中不存在当前坐标的默认度量值。  
   
- 若要强制包含空单元格，应用程序必须使用[CoalesceEmpty](../mdx/coalesceempty-mdx.md)函数，或指定有效的*Numeric_Expression* ，为空值提供值零（0）。 有关空单元的详细信息，请参阅 OLE DB 文档。  
+ 若要强制包含空单元格，应用程序必须使用 [CoalesceEmpty](../mdx/coalesceempty-mdx.md) 函数，或指定有效的 *Numeric_Expression* ，为空值提供零 (0) 的值。 有关空单元的详细信息，请参阅 OLE DB 文档。  
   
 ## <a name="examples"></a>示例  
  下面的示例对指定集返回度量值的平均值。 请注意，指定度量值可以是指定集的成员的默认度量值，也可以是指定的度量值。  
@@ -80,7 +81,7 @@ Avg( Set_Expression [ , Numeric_Expression ] )
   
  `WHERE ([Geography].[Geography].[NW Region Avg])`  
   
- 下面的示例返回`Measures.[Gross Profit Margin]`度量值的每日平均值，该度量值是通过来自**艾德公司**的2003会计年度中每个月的几天计算得出的。 **Avg**函数计算`[Ship Date].[Fiscal Time]`层次结构每个月中包含的一组天数中的平均值。 第一种形式的计算演示 Avg 将未记录任何销售额的天数从平均值计算中排除的默认行为，第二种形式的计算演示如何将没有销售额的天数包含在平均值计算中。  
+ 下面的示例返回度量值的每日平均值 `Measures.[Gross Profit Margin]` ，该度量值是通过来自 **艾德公司** 的2003会计年度中每个月的几天计算得出的。 **Avg**函数计算层次结构每个月中包含的一组天数中的平均值 `[Ship Date].[Fiscal Time]` 。 第一种形式的计算演示 Avg 将未记录任何销售额的天数从平均值计算中排除的默认行为，第二种形式的计算演示如何将没有销售额的天数包含在平均值计算中。  
   
  `WITH MEMBER Measures.[Avg Gross Profit Margin] AS`  
   
@@ -126,7 +127,7 @@ Avg( Set_Expression [ , Numeric_Expression ] )
   
  `WHERE([Product].[Product Categories].[Product].&[344])`  
   
- 下面的示例返回`Measures.[Gross Profit Margin]`度量值的日平均值，该度量值是通过来自**艾德公司**的每个学期的每个半2003期计算得出的。  
+ 下面的示例返回度量值的日平均值 `Measures.[Gross Profit Margin]` ，该度量值是通过来自 **艾德公司** 的每个学期的每个半2003期计算得出的。  
   
 ```  
 WITH MEMBER Measures.[Avg Gross Profit Margin] AS  

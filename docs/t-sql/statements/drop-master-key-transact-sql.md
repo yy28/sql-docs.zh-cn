@@ -1,4 +1,5 @@
 ---
+description: DROP MASTER KEY (Transact-SQL)
 title: DROP MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -24,12 +25,12 @@ ms.assetid: 5ccef797-408f-4964-80da-965d8e1ccba7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6722becf2b18b1c81576b6f3173be2474e94cc73
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 78c981c7ecefa48ed38dee3d523ff2fbf991504e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68044127"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88415573"
 ---
 # <a name="drop-master-key-transact-sql"></a>DROP MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -47,7 +48,7 @@ DROP MASTER KEY
 ## <a name="arguments"></a>参数  
  该语句不带任何参数。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  如果数据库中的任何私钥都受主密钥保护，则删除操作将会失败。  
   
 ## <a name="permissions"></a>权限  

@@ -1,5 +1,6 @@
 ---
-title: Append 和 CreateParameter 方法示例（VC + +） |Microsoft Docs
+description: '附加和 CreateParameter 方法示例 (VC + +) '
+title: 追加和 CreateParameter 方法示例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b57d144c-0a34-49c8-94cf-e5981edfcca6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0abc0742f3313e127d3c0478d9be600b0e02d908
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 832981161e0fcc6ec297186975de33c027cc694f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746989"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451269"
 ---
-# <a name="append-and-createparameter-methods-example-vc"></a>Append 和 CreateParameter 方法示例（VC + +）
-此示例使用[Append](../../../ado/reference/ado-api/append-method-ado.md)和[CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md)方法执行具有输入参数的存储过程。  
+# <a name="append-and-createparameter-methods-example-vc"></a>附加和 CreateParameter 方法示例 (VC + +) 
+此示例使用 [Append](../../../ado/reference/ado-api/append-method-ado.md) 和 [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) 方法执行具有输入参数的存储过程。  
   
 ## <a name="example"></a>示例  
   
@@ -203,5 +204,5 @@ Authors with 25 percent royalty
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Append 方法（ADO）](../../../ado/reference/ado-api/append-method-ado.md)   
+ [ADO (追加方法) ](../../../ado/reference/ado-api/append-method-ado.md)   
  [CreateParameter 方法 (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)

@@ -1,4 +1,5 @@
 ---
+description: SHUTDOWN (Transact-SQL)
 title: SHUTDOWN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: c8b03ff9-688c-4fe8-86e8-bd6bd401c9a4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: db543ba464af2c71ba3390cb4574797713b8c764
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8d3d0bc74e2d928b81e00947095aa992669bcb54
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918768"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459254"
 ---
 # <a name="shutdown-transact-sql"></a>SHUTDOWN (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,32 +52,32 @@ SHUTDOWN [ WITH NOWAIT ]
 ## <a name="remarks"></a>备注  
  除非使用 WITHNOWAIT 选项，否则 SHUTDOWN 通过下列操作关闭 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]：  
   
-1.  禁用登录（sysadmin 和 serveradmin 固定服务器角色成员除外）   。  
+1.  禁用登录（sysadmin 和 serveradmin 固定服务器角色成员除外）********。  
   
     > [!NOTE]  
-    >  若要显示当前所有用户的列表，请运行 sp_who  。  
+    >  若要显示当前所有用户的列表，请运行 sp_who****。  
   
-2.  等待当前正在运行的 Transact-SQL 语句或存储过程完成。 若要显示所有活动进程和锁的列表，请分别执行 sp_who 和 sp_lock   。  
+2.  等待当前正在运行的 Transact-SQL 语句或存储过程完成。 若要显示所有活动进程和锁的列表，请分别执行 sp_who 和 sp_lock********。  
   
 3.  在每个数据库中插入检查点。  
   
- 当 sysadmin 固定服务器角色成员重启 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，使用 SHUTDOWN 语句可以将所需的自动恢复工作量减到最少。  
+ 当 sysadmin 固定服务器角色成员重启 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，使用 SHUTDOWN 语句可以将所需的自动恢复工作量减到最少****。  
   
  还可以使用其他工具和方法停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 每个工具或方法都在所有数据库内执行检查点。 您可以从数据缓存中刷新已提交的数据，然后停止服务器：  
   
 -   通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器。  
   
--   通过在命令提示符处针对默认实例运行 net stop mssqlserver，或在命令提示符处针对命名实例运行 net stop mssql$ instancename    。  
+-   通过在命令提示符处针对默认实例运行 net stop mssqlserver，或在命令提示符处针对命名实例运行 net stop mssql$ instancename********__。  
   
 -   使用“控制面板”中的“服务”应用程序。  
   
- 如果是从命令提示符下启动 sqlservr.exe，按 Ctrl+C 可以关闭 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 然而，按 Ctrl+C 键将不插入检查点。  
+ 如果是从命令提示符下启动 sqlservr.exe，按 Ctrl+C 可以关闭 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]****。 然而，按 Ctrl+C 键将不插入检查点。  
   
 > [!NOTE]  
 >  使用上述任何方法停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 都会向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发送 `SERVICE_CONTROL_STOP` 消息。  
   
 ## <a name="permissions"></a>权限  
- SHUTDOWN 权限分配给 sysadmin 和 serveradmin 固定服务器角色的成员，且不可转让   。  
+ SHUTDOWN 权限分配给 sysadmin 和 serveradmin 固定服务器角色的成员，且不可转让********。  
   
 ## <a name="see-also"></a>另请参阅  
  [检查点 (Transact-SQL)](../../t-sql/language-elements/checkpoint-transact-sql.md)   

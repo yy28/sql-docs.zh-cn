@@ -1,5 +1,6 @@
 ---
-title: sp_clean_db_file_free_space （Transact-sql） |Microsoft Docs
+description: sp_clean_db_file_free_space (Transact-SQL)
+title: sp_clean_db_file_free_space (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: 3eb53a67-969d-4cb8-9681-b1c8e6fd55b6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d8c45d25dd63149145fc732642b873bc4e7a6193
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 834521f77db142d8aba63f5638df05bd83b64811
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122339"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486174"
 ---
 # <a name="sp_clean_db_file_free_space-transact-sql"></a>sp_clean_db_file_free_space (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   删除因 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据修改例程而留在数据库页上的残留信息。 sp_clean_db_file_free_space 仅清除数据库的一个文件中的所有页。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,26 +43,26 @@ sp_clean_db_file_free_space
 ```  
   
 ## <a name="arguments"></a>参数  
- @dbname= '*database_name*'  
- 要清理的数据库的名称。 *dbname*为**sysname** ，且不能为 NULL。  
+ @dbname = '*database_name*'  
+ 要清理的数据库的名称。 *dbname* 为 **sysname** ，且不能为 NULL。  
   
- @fileid= '*file_number*'  
- 要清理的数据文件 ID。 *file_number*为**int** ，且不能为 NULL。  
+ @fileid = '*file_number*'  
+ 要清理的数据文件 ID。 *file_number* 为 **int** ，且不能为 NULL。  
   
- @cleaning_delay= '*delay_in_seconds*'  
- 指定各次页清理之间的延迟间隔。 这会有助于减轻对 I/O 系统的影响。 *delay_in_seconds*的**整数为 int** ，默认值为0。  
+ @cleaning_delay = '*delay_in_seconds*'  
+ 指定各次页清理之间的延迟间隔。 这会有助于减轻对 I/O 系统的影响。 *delay_in_seconds* 的 **整数为 int** ，默认值为0。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
 ## <a name="remarks"></a>备注  
- 对表的删除操作或更新操作会引发行的移动，通过删除对行的引用可立即释放页上的空间。 但是，在某些情况下，该行仍然作为虚影记录而保留在数据页上。 后台进程定期清除虚影记录。 不会在响应查询时返回该残留数据 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。 但是，在数据或备份文件的物理安全性面临风险的环境中，可以使用 `sp_clean_db_file_free_space` 清除这些虚影记录。 若要同时对所有数据库文件执行此操作，请使用[sp_clean_db_free_space （transact-sql）](../../relational-databases/system-stored-procedures/sp-clean-db-free-space-transact-sql.md)。 
+ 对表的删除操作或更新操作会引发行的移动，通过删除对行的引用可立即释放页上的空间。 但是，在某些情况下，该行仍然作为虚影记录而保留在数据页上。 后台进程定期清除虚影记录。 不会在响应查询时返回该残留数据 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。 但是，在数据或备份文件的物理安全性面临风险的环境中，可以使用 `sp_clean_db_file_free_space` 清除这些虚影记录。 若要同时对所有数据库文件执行此操作，请使用 [sp_clean_db_free_space (transact-sql) ](../../relational-databases/system-stored-procedures/sp-clean-db-free-space-transact-sql.md)。 
   
  运行 sp_clean_db_file_free_space 所需的时间依文件大小、磁盘的可用空间和容量而定。 由于运行 `sp_clean_db_file_free_space` 会显著影响 i/o 活动，因此我们建议您在正常运行时间之外运行此过程。  
   
  在运行之前 `sp_clean_db_file_free_space` ，我们建议您创建完整数据库备份。  
   
- 相关的[sp_clean_db_free_space](../../relational-databases/system-stored-procedures/sp-clean-db-free-space-transact-sql.md)存储过程将清除数据库中的所有文件。  
+ 相关的 [sp_clean_db_free_space](../../relational-databases/system-stored-procedures/sp-clean-db-free-space-transact-sql.md) 存储过程将清除数据库中的所有文件。  
   
 ## <a name="permissions"></a>权限  
  要求具有数据库角色的成员身份 `db_owner` 。  

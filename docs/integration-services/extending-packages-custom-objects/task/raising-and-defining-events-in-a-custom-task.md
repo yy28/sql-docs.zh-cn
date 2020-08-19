@@ -1,4 +1,5 @@
 ---
+description: 在自定义任务中引发和定义事件
 title: 在自定义任务中引发和定义事件 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: e0898aa1-e90c-4c4e-99d4-708a76efddfd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7a0cdd94e6ad739b24eccc5ce466a4e916850674
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 69f2f6c7f27f4a199ff96661595bb03b3eaafb62
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916302"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477347"
 ---
 # <a name="raising-and-defining-events-in-a-custom-task"></a>在自定义任务中引发和定义事件
 
@@ -47,7 +48,7 @@ ms.locfileid: "86916302"
   
  下面的代码示例介绍了自定义任务的 **InitializeTask** 方法，在该自定义任务中，创建了两个自定义事件并设置了其属性。 然后，将新事件添加到 <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos> 集合。  
   
- 第一个自定义事件的事件名为  “**OnBeforeIncrement**”，说明为  “**更新初始值后触发**”。 下一个参数为 **true** 值，指示此事件应允许创建用于处理事件的事件处理程序容器。 事件处理程序是一个可向任务提供包和服务中的结构的容器，像其他诸如包、序列、ForLoop 和 ForEachLoop 的其他容器一样。 当 *allowEventHandlers* 参数为 **true** 时，会为该事件创建 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 对象。 为事件定义的所有参数现在均可在 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 的变量集合中用于 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>。  
+ 第一个自定义事件的事件名为** “**OnBeforeIncrement**”，说明为**“**更新初始值后触发**”。 下一个参数为 **true** 值，指示此事件应允许创建用于处理事件的事件处理程序容器。 事件处理程序是一个可向任务提供包和服务中的结构的容器，像其他诸如包、序列、ForLoop 和 ForEachLoop 的其他容器一样。 当 *allowEventHandlers* 参数为 **true** 时，会为该事件创建 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 对象。 为事件定义的所有参数现在均可在 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 的变量集合中用于 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>。  
   
 ```csharp  
 public override void InitializeTask(Connections connections,  

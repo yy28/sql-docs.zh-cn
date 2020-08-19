@@ -1,5 +1,6 @@
 ---
-title: Cancel 方法示例（VB） |Microsoft Docs
+description: Cancel 方法示例 (VB)
+title: 取消方法示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5c0530ad-68d0-4cba-b1af-9386d566c7c5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 614fd4adfd531ca7d47b7b7ffdfa912c141e06c5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 65f6583206ce48a0f2ee2508e369ce6256b4cdaa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763548"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451039"
 ---
 # <a name="cancel-method-example-vb"></a>Cancel 方法示例 (VB)
-此示例使用[cancel](../../../ado/reference/ado-api/cancel-method-ado.md)方法来取消对[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象执行的命令（如果连接繁忙）。  
+此示例使用 [cancel](../../../ado/reference/ado-api/cancel-method-ado.md) 方法来取消对 [连接](../../../ado/reference/ado-api/connection-object-ado.md) 对象执行的命令（如果连接繁忙）。  
   
 ```  
 'BeginCancelVB  
@@ -103,5 +104,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Cancel 方法（ADO）](../../../ado/reference/ado-api/cancel-method-ado.md)   
+ [ADO (取消方法) ](../../../ado/reference/ado-api/cancel-method-ado.md)   
  [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

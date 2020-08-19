@@ -1,5 +1,6 @@
 ---
-title: MDX 运算符参考（MDX） |Microsoft Docs
+description: MDX 运算符参考 (MDX)
+title: Mdx 运算符引用 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c026da3551448faf7cf204dbdde1e794d5b12967
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c6fe11ee3022c07560435b13a72273962ba6a4b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68033916"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429769"
 ---
 # <a name="mdx-operator-reference-mdx"></a>MDX 运算符参考 (MDX)
 
@@ -22,13 +23,13 @@ ms.locfileid: "68033916"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|说明|  
+|主题|描述|  
 |-----------|-----------------|  
 |[--（注释）(MDX)](../mdx/comment-mdx-operator-reference.md)|表示用户提供的注释文本。|  
 |[-&#40;除&#41; &#40;MDX&#41;](../mdx/except-mdx-operator.md)|执行一个集运算，以返回两个集之间的不同项并删除重复成员。|  
 |[-&#40;消极&#41; &#40;MDX&#41;](../mdx/negative-mdx.md)|执行一元运算，以返回数值表达式的负值。|  
 |[-&#40;减去&#41; &#40;MDX&#41;](../mdx/subtract-mdx.md)|执行一个算术运算，将一个数减去另一个数。|  
-|[MDX&#41;&#42; &#40;交叉结合&#41; &#40;](../mdx/crossjoin-mdx-operator-reference.md)|执行一个集运算以返回两个集的叉积。|  
+|[ MDX&#41;&#42; &#40;交叉结合&#41; &#40;](../mdx/crossjoin-mdx-operator-reference.md)|执行一个集运算以返回两个集的叉积。|  
 |[&#41; &#40;MDX&#42; &#40;相乘&#41;](../mdx/multiply-mdx.md)|执行两个数相乘的算术运算。|  
 |[&#40;除以&#41; &#40;MDX&#41;](../mdx/divide-mdx-operator-reference.md)|执行算术运算，将一个数除以另一个数。|  
 |[^ &#40;Power&#41; &#40;MDX&#41;](../mdx/power-mdx.md)|执行以一个数为底、另一个数为幂求值的算术运算。|  

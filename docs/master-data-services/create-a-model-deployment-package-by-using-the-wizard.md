@@ -1,4 +1,5 @@
 ---
+description: 使用向导创建模型部署包
 title: 使用向导创建模型部署包
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b24ec4c2-1378-4c72-ac69-4ec2647030f0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 8d754308b968d5222704eb1264da71d0efbeb39b
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 7c776d67ebf49e39ae3593d9ac570fe251abb728
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811802"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477069"
 ---
 # <a name="create-a-model-deployment-package-by-using-the-wizard"></a>使用向导创建模型部署包
 
@@ -32,7 +33,7 @@ ms.locfileid: "85811802"
   
 -   在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序中，您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 -   模型对于您要创建的包必须存在。 有关详细信息，请参阅[创建模型 (Master Data Services)](../master-data-services/create-a-model-master-data-services.md)。  
   
@@ -46,9 +47,9 @@ ms.locfileid: "85811802"
   
 4.  在 **“创建包”** 页上，从 **“模型”** 列表中选择一个模型。  
   
-5.  单击“下一步”。  
+5.  单击 **“下一步”** 。  
   
-6.  单击“下载”。  
+6.  单击“下载”  。  
   
 7.  保存文件。  
   

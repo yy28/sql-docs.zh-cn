@@ -1,5 +1,6 @@
 ---
-title: '&gt;= （大于或等于）（MDX） |Microsoft Docs'
+description: '&gt;= (大于或等于)  (MDX) '
+title: '&gt;= (大于或等于)  (MDX) |Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,14 +9,14 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0e8599378367dd47bd5858c09327795a25852105
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1e9ce7d9f7e372ac9193751c258af63ba6f300fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68005848"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429929"
 ---
-# <a name="gt-greater-than-or-equal-to-mdx"></a>&gt;= （大于或等于）（MDX）
+# <a name="gt-greater-than-or-equal-to-mdx"></a>&gt;= (大于或等于)  (MDX) 
 
 
   执行比较运算，以确定一个多维表达式 (MDX) 的值是否大于等于另一个 MDX 表达式的值。  

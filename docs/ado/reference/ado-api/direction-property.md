@@ -1,4 +1,5 @@
 ---
+description: Direction 属性
 title: Direction 属性 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,28 +16,28 @@ helpviewer_keywords:
 ms.assetid: d5732578-3434-4dcd-a9f7-db1abd1b3b94
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2e3f098c0f0351a4439b9bb6fb6256209ea3e1ad
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 37987e58829b1b6957b4fe1de440aaeb4aae1763
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757173"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444049"
 ---
 # <a name="direction-property"></a>Direction 属性
-指示[参数](../../../ado/reference/ado-api/parameter-object.md)是表示输入参数、输出参数、输入参数还是输出参数，如果参数是来自存储过程的返回值，则为。  
+指示 [参数](../../../ado/reference/ado-api/parameter-object.md) 是表示输入参数、输出参数、输入参数还是输出参数，如果参数是来自存储过程的返回值，则为。  
   
 ## <a name="settings-and-return-values"></a>设置和返回值  
- 设置或返回一个[ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md)值。  
+ 设置或返回一个 [ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md) 值。  
   
 ## <a name="remarks"></a>备注  
- 使用 "**方向**" 属性可以指定如何在过程中传递参数。 **Direction**属性是可读/写的;这使你可以使用不返回此信息的提供程序，或者在不希望 ADO 对提供程序进行额外调用以检索参数信息时设置此信息。  
+ 使用 " **方向** " 属性可以指定如何在过程中传递参数。 **Direction**属性是可读/写的;这使你可以使用不返回此信息的提供程序，或者在不希望 ADO 对提供程序进行额外调用以检索参数信息时设置此信息。  
   
- 并非所有提供程序都可以确定其存储过程中的参数的方向。 在这些情况下，必须在执行查询之前设置 "**方向**" 属性。  
+ 并非所有提供程序都可以确定其存储过程中的参数的方向。 在这些情况下，必须在执行查询之前设置 " **方向** " 属性。  
   
-## <a name="applies-to"></a>应用于  
+## <a name="applies-to"></a>适用于  
  [参数对象](../../../ado/reference/ado-api/parameter-object.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [ActiveConnection、CommandText、CommandTimeout、CommandType、Size 和 Direction 属性示例（VB）](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
- [ActiveConnection、CommandText、CommandTimeout、CommandType、Size 和 Direction 属性示例（VC + +）](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
- [ActiveConnection、CommandText、CommandTimeout、CommandType、Size 和 Direction 属性示例（JScript）](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)
+ [ActiveConnection、CommandText、CommandTimeout、CommandType、Size 和 Direction 属性示例 (VB) ](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
+ [ActiveConnection、CommandText、CommandTimeout、CommandType、Size 和 Direction 属性示例 (VC + +) ](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
+ [ActiveConnection、CommandText、CommandTimeout、CommandType、Size 和 Direction 属性示例 (JScript) ](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)

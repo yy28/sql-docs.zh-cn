@@ -1,4 +1,5 @@
 ---
+description: catalog.clear_object_parameter_value（SSISDB 数据库）
 title: catalog.clear_object_parameter_value（SSISDB 数据库）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: dcbbb714-a051-4805-9e2b-2c2fb647c890
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3f9da77639358fbf154057789f8840cdefc1350d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 16435fdd9ccb57b648f8073290ead5eca6ae393b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86904436"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477169"
 ---
 # <a name="catalogclear_object_parameter_value-ssisdb-database"></a>catalog.clear_object_parameter_value（SSISDB 数据库）
 
@@ -47,10 +48,10 @@ catalog.clear_object_parameter [ @folder_name = ] folder_name
  对象的类型。 有效值包括 `20`（对应于项目）和 `30`（对应于包）。 *object_type* 为 **smallInt**。  
   
  [ \@ object _name = ] *object _name*  
- 包的名称。 *object _name* 为 **nvarchar(260)** 。  
+ 包的名称。 *object _name* 为 **nvarchar(260)**。  
   
  [ \@parameter_ name = ] *parameter_name*  
- 参数的名称。 *parameter_ name* 为 **nvarchar(128)** 。  
+ 参数的名称。 *parameter_ name* 为 **nvarchar(128)**。  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）  

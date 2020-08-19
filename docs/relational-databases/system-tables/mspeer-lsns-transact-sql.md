@@ -1,5 +1,6 @@
 ---
-title: MSpeer_lsns （Transact-sql） |Microsoft Docs
+description: MSpeer_lsns (Transact-SQL)
+title: MSpeer_lsns (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,24 +18,24 @@ helpviewer_keywords:
 ms.assetid: 0ba33907-601b-4c3d-8099-2663f680a161
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 231653b004da7e3429f81997500f2ece51e77f8b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 144f824c92dfb94c0b86ad1265d659ef42c648d8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889666"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469025"
 ---
 # <a name="mspeer_lsns-transact-sql"></a>MSpeer_lsns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **Mspeer_lsns**表用于将每个事务映射到对等复制拓扑中的订阅。 此表存储在采用对等复制拓扑的每个发布数据库中，以及对等发布的所有订阅服务器的订阅数据库中。 有关这种类型的事务复制拓扑的详细信息，请参阅[对等事务复制](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)。 该表存储在发布数据库中。  
+  **Mspeer_lsns**表用于将每个事务映射到对等复制拓扑中的订阅。 此表存储在采用对等复制拓扑的每个发布数据库中，以及对等发布的所有订阅服务器的订阅数据库中。 有关这种类型的事务复制拓扑的详细信息，请参阅 [对等事务复制](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)。 该表存储在发布数据库中。  
   
 ## <a name="definition"></a>定义  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|标识对等 LSN。|  
-|**last_updated**|**datetime**|上次更新行的**日期时间**。|  
+|**last_updated**|**datetime**|上次更新行的 **日期时间** 。|  
 |**发出**|**sysname**|发起事务的发布服务器的名称。|  
 |**originator_db**|**sysname**|从中产生事务的数据库的名称。|  
 |**originator_publication**|**sysname**|发起事务的发布的名称。|  
@@ -45,7 +46,7 @@ ms.locfileid: "85889666"
 |**originator_id**|**smallint**|标识拓扑中的每个节点以进行冲突检测。 有关详细信息，请参阅 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)。|  
   
 ## <a name="see-also"></a>另请参阅  
- [Transact-sql&#41;&#40;复制表](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;复制表 ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图 (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

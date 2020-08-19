@@ -1,4 +1,5 @@
 ---
+description: 添加发布服务器
 title: 添加发布服务器 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ ms.assetid: 4b57e298-655f-42c2-82bc-25cdad94a194
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: bd972c1825deb947537473096653fc33e07a92fa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1ce82548d63c88565a48d3930c3a7b9a40884413
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726094"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423621"
 ---
 # <a name="add-publisher"></a>添加发布服务器
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "85726094"
   
 -   **添加 Oracle 发布服务器...**  
   
-     使用“连接到服务器”对话框连接到与 Oracle 发布服务器关联的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分发服务器  。  
+     使用“连接到服务器”对话框连接到与 Oracle 发布服务器关联的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分发服务器****。  
   
 -   **指定分发服务器并添加其发布服务器...**  
   
@@ -51,10 +52,10 @@ ms.locfileid: "85726094"
  通过在对话框顶部的网格中选择发布服务器并单击 **“删除”** ，可以从要添加的发布服务器的列表中删除发布服务器。  
   
 > [!NOTE]  
->  此按钮不能用来删除已经显示在复制监视器中的发布服务器。 若要删除已经显示的发布服务器，请在复制监视器的左窗格中右键单击该发布服务器，再单击 **“删除”** 。  
+>  此按钮不能用来删除已经显示在复制监视器中的发布服务器。 若要删除已经显示的发布服务器，请在复制监视器的左窗格中右键单击该发布服务器，再单击 **“删除”**。  
   
  **复制监视器启动时自动连接**  
- 选择此项可以使复制监视器自动连接到分发服务器，并检索在该对话框顶部网格中所选发布服务器的状态信息。 如果清除了此复选框，则必须在启动复制监视器后手动进行连接：在复制监视器左窗格中右键单击发布服务器，然后单击 **“连接”** 。  
+ 选择此项可以使复制监视器自动连接到分发服务器，并检索在该对话框顶部网格中所选发布服务器的状态信息。 如果清除了此复选框，则必须在启动复制监视器后手动进行连接：在复制监视器左窗格中右键单击发布服务器，然后单击 **“连接”**。  
   
  **自动刷新此发布服务器及其发布的状态**  
  选择此项可以使复制监视器自动刷新在该对话框顶部网格中所选发布服务器的状态。 如果选择了此选项，复制监视器将轮询分发服务器，以获取发布服务器及其发布的状态信息。 轮询间隔是由 **“刷新速率”** 选项设置的。 有关在复制监视器中刷新的详细信息，请参阅[缓存、刷新和复制监视器性能](../../relational-databases/replication/monitor/caching-refresh-and-replication-monitor-performance.md)。  
@@ -63,7 +64,7 @@ ms.locfileid: "85726094"
  输入一个值（秒），指定复制监视器对分发服务器的轮询频率（以了解状态信息）。 值越小表示轮询越频繁，如果监视大量的发布服务器，则可能会影响分发服务器的性能。 建议您测试系统，以确定一个适当的值。 如果在复制监视器的任意详细信息窗口中选择 **“自动刷新”** ，则也将使用 **“刷新速率”** 设置。  
   
  **在以下组中显示此发布服务器**  
- 从该列表中选择某个发布服务器组。 该发布服务器显示在左窗格中此组下面。 通过组可以组织发布服务器，而且对复制的功能没有任何影响。 如果没有定义任何组或者希望创建新组，请单击 **“新建组”** 。  
+ 从该列表中选择某个发布服务器组。 该发布服务器显示在左窗格中此组下面。 通过组可以组织发布服务器，而且对复制的功能没有任何影响。 如果没有定义任何组或者希望创建新组，请单击 **“新建组”**。  
   
  **新建组**  
  单击此项可创建新的发布服务器组。 发布服务器组提供了在复制监视器内组织发布服务器的简便方法。 组既不影响数据的复制，也不影响复制拓扑中服务器之间的关系。  

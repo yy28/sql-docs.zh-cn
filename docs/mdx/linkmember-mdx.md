@@ -1,5 +1,6 @@
 ---
-title: LinkMember （MDX） |Microsoft Docs
+description: LinkMember (MDX)
+title: LinkMember (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8a00388e067878d9c2165cbae6844f8020b7c63e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 81d8d87caa0c844bd2754ba2d044936d43f8d48a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905606"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429859"
 ---
 # <a name="linkmember-mdx"></a>LinkMember (MDX)
 
@@ -38,7 +39,7 @@ LinkMember(Member_Expression, Hierarchy_Expression)
  **LinkMember**函数返回指定层次结构中的成员，该成员与相关层次结构中指定成员的每个级别上的键值相匹配。 每个级别上的属性必须具有相同的键基数和数据类型。 在非自然层次结构中，如果某属性的键值有多个匹配项，结果将是错误的或不确定。  
   
 ## <a name="examples"></a>示例  
- 下面的示例使用**LinkMember**函数来返回艾德工作多维数据集中的默认度量值，该度量值为 date 的2002年7月1日成员的祖先。  
+ 下面的示例使用 **LinkMember** 函数来返回艾德工作多维数据集中的默认度量值，该度量值为 date 的2002年7月1日成员的祖先。  
   
 ```  
 SELECT  Hierarchize  

@@ -1,5 +1,6 @@
 ---
-title: ADO 事件模型示例（VC + +） |Microsoft Docs
+description: ADO 事件模型示例 (VC++)
+title: ADO 事件模型示例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bce894f1e0cce8c8d8800b2633924f9cc5bc6bd9
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2bdb668584a0a725add4decc0bd64217d5dacbb5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747343"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451429"
 ---
 # <a name="ado-events-model-example-vc"></a>ADO 事件模型示例 (VC++)
-[Ado 事件实例化](../../../ado/guide/data/ado-event-instantiation-by-language.md)的 Visual C++ 部分通过语言提供有关如何实例化 ADO 事件模型的一般说明。 下面是在由 **#import**指令创建的环境中实例化事件模型的特定示例。  
+[Ado 事件实例化](../../../ado/guide/data/ado-event-instantiation-by-language.md)的 Visual C++ 部分通过语言提供有关如何实例化 ADO 事件模型的一般说明。 下面是在由 **#import** 指令创建的环境中实例化事件模型的特定示例。  
   
- 一般说明使用**adoint**作为方法签名的参考。 但是，一般说明中的一些详细信息会因使用 **#import**指令而略有不同：  
+ 一般说明使用 **adoint** 作为方法签名的参考。 但是，一般说明中的一些详细信息会因使用 **#import** 指令而略有不同：  
   
 -   **#Import**指令可将**typedef**、方法签名数据类型和修饰符解析为其基本格式。  
   
@@ -38,7 +39,7 @@ ms.locfileid: "82747343"
   
 -   你可能想要对 QueryInterface、AddRef 和 Release 的更可靠的实现进行编码。  
   
--   **__Uuidof （）** 指令广泛用于获取接口 id。  
+-   **__Uuidof ( # B1**指令广泛用于获取接口 id。  
   
  最后，该示例包含一些工作代码。  
   

@@ -1,4 +1,5 @@
 ---
+description: catalog.move_environment（SSISDB 数据库）
 title: catalog.move_environment（SSISDB 数据库）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: b3fb5242-3c4c-4a87-b3e5-beb22fbab053
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 128970f410897b9c9797b27a6d1e3af28407f1f5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2c8fd91f3b37aa410ca3aa86d2825c27a78e1217
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912975"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430089"
 ---
 # <a name="catalogmove_environment-ssisdb-database"></a>catalog.move_environment（SSISDB 数据库）
 
@@ -36,13 +37,13 @@ catalog.move_environment [ @source_folder = ] source_folder
   
 ## <a name="arguments"></a>参数  
  [ @source_folder = ] *source_folder*  
- 此环境在移动之前所在的源文件夹的名称。 *source_folder* 为 **nvarchar(128)** 。  
+ 此环境在移动之前所在的源文件夹的名称。 *source_folder* 为 **nvarchar(128)**。  
   
  [ @environment_name = ] environment_name   
  要移动的环境的名称。 environment_name 为 nvarchar(128)   。  
   
  [ @destination_folder = ] *destination_folder*  
- 此环境在移动之后所在的目标文件夹的名称。 *destination_folder* 为 **nvarchar(128)** 。  
+ 此环境在移动之后所在的目标文件夹的名称。 *destination_folder* 为 **nvarchar(128)**。  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）  
@@ -68,7 +69,7 @@ catalog.move_environment [ @source_folder = ] source_folder
   
 -   用户没有相应的权限  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  在移动过程中，项目中的环境引用未遵循此环境。 必须相应地更新环境引用。 即使通过移动环境损坏了环境引用，此存储过程也会成功。 在此存储过程完成之后，必须更新环境引用。  
   
 > [!NOTE]  

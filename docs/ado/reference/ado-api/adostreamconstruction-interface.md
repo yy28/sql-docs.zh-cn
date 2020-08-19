@@ -1,4 +1,5 @@
 ---
+description: ADOStreamConstruction 接口
 title: ADOStreamConstruction 接口 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 92f5a939-3e1a-4b14-a9dd-90e6ce2dec74
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 75af8d899c4fb0b97f4ee09795888ef773999b60
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: f911be2784e849c8feb271127e2a83ed1ce90c4f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242807"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451309"
 ---
 # <a name="adostreamconstruction-interface"></a>ADOStreamConstruction 接口
 **ADOStreamConstruction**接口用于从 c/c + + 应用程序中的 OLE DB **ISTREAM**对象构造 ADO**流**对象。  
@@ -29,7 +30,7 @@ ms.locfileid: "87242807"
   
 |属性|描述|  
 |-|-|  
-|[流](../../../ado/reference/ado-api/stream-property.md)|读/写。 获取/设置 OLE DB**流**对象。|  
+|[流](../../../ado/reference/ado-api/stream-property.md)|读/写。 获取/设置 OLE DB **流** 对象。|  
   
 ## <a name="methods"></a>方法  
  无。  
@@ -38,9 +39,9 @@ ms.locfileid: "87242807"
  无。  
   
 ## <a name="remarks"></a>备注  
- 给定一个 OLE DB **IStream**对象（ `pStream` ），将 ADO**流**对象（）的构造 `adoStr` 分为以下三个基本操作：  
+ 给定 OLE DB **IStream** 对象 (`pStream`) ，将 ADO **流** 对象的构造 (`adoStr`) 数量，以执行以下三个基本操作：  
   
-1.  创建 ADO**流**对象：  
+1.  创建 ADO **流** 对象：  
   
     ```  
     Stream20Ptr adoStr;  
